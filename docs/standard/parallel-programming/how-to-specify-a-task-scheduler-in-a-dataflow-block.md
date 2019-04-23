@@ -13,10 +13,10 @@ ms.assetid: 27ece374-ed5b-49ef-9cec-b20db34a65e8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 681c0f1f918c8991ed2544189488d1ea25547834
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345847"
 ---
 # <a name="how-to-specify-a-task-scheduler-in-a-dataflow-block"></a>方法: データフロー ブロックのタスク スケジューラを指定する

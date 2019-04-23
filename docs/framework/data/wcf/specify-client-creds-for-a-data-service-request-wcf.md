@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WCF Data Services, customizing requests
 ms.assetid: 1632f9af-e45f-4363-9222-03823daa8e28
 ms.openlocfilehash: ca2ed1fcf113e06535c8900e5836eb64f9b23958
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59518137"
 ---
 # <a name="how-to-specify-client-credentials-for-a-data-service-request-wcf-data-services"></a>方法: データ サービス クライアントの資格情報要求 (WCF Data Services) を指定します。

@@ -3,12 +3,12 @@ title: 式ツリーの説明
 description: 式ツリーについて、また、外部実行のためのアルゴリズム変換と実行前のコード検査で式ツリーがいかに役立つかについて説明します。
 ms.date: 06/20/2016
 ms.assetid: bbcdd339-86eb-4ae5-9911-4c214a39a92d
-ms.openlocfilehash: 3bad826bb58ff361688d3e13497343661e7edbd3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 012ea0dec85e6fba7581f4bc46a5e78da8c64708
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613422"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481432"
 ---
 # <a name="expression-trees-explained"></a>式ツリーの説明
 
@@ -23,7 +23,6 @@ ms.locfileid: "59613422"
 ```csharp
 var sum = 1 + 2;
 ```
-
 この式ツリーを分析すると、ツリーにはいくつかのノードが含まれています。
 最も外側のノードは、代入 (`var sum = 1 + 2;`) ありの変数宣言ステートメントです。この最も外側のノードには、いくつかの子ノードが含まれています。変数の宣言、代入演算子、そして等号の右側を表す式です。 この式は、さらに加算演算と加算の左右のオペランドを表す式に分割されます。
 

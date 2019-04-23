@@ -9,10 +9,10 @@ helpviewer_keywords:
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
 ms.openlocfilehash: 382d2aeff98b7d48dbae07dadb04ed644c3f4449
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427306"
 ---
 # <a name="federation"></a>フェデレーション

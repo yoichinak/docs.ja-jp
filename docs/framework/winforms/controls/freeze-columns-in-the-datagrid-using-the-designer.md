@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: 87412dd2-478f-4751-af87-dafc591fc215
 ms.openlocfilehash: 397a2c5a7879be8c1bef7e04e72cf675f25d0fb8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344313"
 ---
 # <a name="how-to-freeze-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を固定する
@@ -39,8 +39,8 @@ ms.locfileid: "59344313"
 
 - <xref:System.Windows.Forms.DataGridView>
 - <xref:System.Windows.Forms.DataGridViewColumn.Frozen%2A?displayProperty=nameWithType>
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を追加および削除する](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列の並べ替えを有効にする](enable-column-reordering-in-the-datagrid-using-the-designer.md)
+- [方法: 追加して、デザイナーを使用して Windows フォーム DataGridView コントロールで列を削除](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView コントロール内の列の並べ替えを有効にします。](enable-column-reordering-in-the-datagrid-using-the-designer.md)
 - [方法: グローバリゼーション用の Windows フォームで右から左のテキストを表示します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))
-- [方法: Windows フォーム アプリケーション プロジェクトを作成します。](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォーム アプリケーション プロジェクトの作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [方法: Windows フォームにコントロールを追加します。](how-to-add-controls-to-windows-forms.md)

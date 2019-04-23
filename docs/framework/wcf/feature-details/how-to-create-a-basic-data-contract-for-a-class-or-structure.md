@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data contracts [WCF], creating for a class or structure
 ms.assetid: bc464889-3070-4a2f-91d2-e788a0f686a7
 ms.openlocfilehash: 4e5e6b77cdb13c17557f176a37fbb9e7d42ab667
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59346003"
 ---
 # <a name="how-to-create-a-basic-data-contract-for-a-class-or-structure"></a>方法: クラスまたは構造体に基本的なデータ コントラクトを作成する
@@ -42,4 +42,4 @@ ms.locfileid: "59346003"
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
 - [チュートリアル入門](../../../../docs/framework/wcf/getting-started-tutorial.md)
-- [作業の開始](../../../../docs/framework/wcf/samples/getting-started-sample.md)
+- [はじめに](../../../../docs/framework/wcf/samples/getting-started-sample.md)

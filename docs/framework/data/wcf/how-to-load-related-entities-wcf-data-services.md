@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
 ms.openlocfilehash: 75e1d583d2a4d519619a440800cdeb1403fedac2
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517513"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>方法: 関連エンティティ (WCF Data Services) を読み込む

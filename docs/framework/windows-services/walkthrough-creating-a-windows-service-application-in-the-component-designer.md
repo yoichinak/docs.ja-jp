@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
 ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59518033"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>チュートリアル: Windows サービス アプリを作成する

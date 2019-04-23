@@ -3,10 +3,10 @@ title: SQL Server のインプロセス固有の ADO.NET の動作
 ms.date: 03/30/2017
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
 ms.openlocfilehash: 0c227e1177e59b3421297e80510d1a7077f7f165
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344846"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>SQL Server のインプロセス固有の ADO.NET の動作
@@ -16,7 +16,7 @@ ms.locfileid: "59344846"
   
  **SQL Server オンライン ブック**  
   
-1. [ADO.NET に対する SQL Server インプロセス固有の拡張機能](https://go.microsoft.com/fwlink/?LinkId=115403)  
+1. [SQL Server のインプロセス固有の拡張 ADO.NET](https://go.microsoft.com/fwlink/?LinkId=115403)  
   
 ## <a name="see-also"></a>関連項目
 

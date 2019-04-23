@@ -4,12 +4,12 @@ description: .NET Core ランタイムの動作を制御する必要がある高
 author: mjrousos
 ms.date: 12/21/2018
 ms.custom: seodec18
-ms.openlocfilehash: 27717cd68d2ef7c19289a9e06f99bb8767f2f582
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 53cdc13d5a356a2975182c58374a0e9c6639ec17
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654056"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59481146"
 ---
 # <a name="write-a-custom-net-core-host-to-control-the-net-runtime-from-your-native-code"></a>ネイティブ コードから .NET ランタイムを制御するカスタム .NET Core ホストを作成する
 
@@ -68,8 +68,10 @@ CoreCLR ライブラリを読み込んだ後、次の手順は、`GetProcAddress
 
 共通プロパティには次があります。
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` これはランタイムが既定で解決できるアセンブリ パスのリストです (Windows の場合は ';' で、Linux の場合は ':' で区切られます)。 一部のホストでは、アセンブリを一覧表示するマニフェストがハードコードされており、それを読み込むことができます。 他のホストの場合、このリストにある特定の場所にライブラリが置かれます (*coreclr.dll* の隣など)。
-* `APP_PATHS` これは、信頼されるプラットフォーム アセンブリ (TPA) リストでアセンブリが見つからない場合、アセンブリを探すパスのリストです。 TPA リストの場合、読み込まれるアセンブリをホスト側でより細かく制御できるため、ホストで読み込み、列挙するアセンブリを明示的に決定することがホストにとってはベスト プラクティスです。 ただし、実行時にパスを探る必要がある場合、このプロパティでそれに対処できます。
+* `TRUSTED_PLATFORM_ASSEMBLIES`
+  これはランタイムが既定で解決できるアセンブリ パスのリストです (Windows の場合は ";" で、Linux の場合は ":" で区切られます)。 一部のホストでは、アセンブリを一覧表示するマニフェストがハードコードされており、それを読み込むことができます。 他のホストの場合、このリストにある特定の場所にライブラリが置かれます (*coreclr.dll* の隣など)。
+* `APP_PATHS`
+  これは、信頼されるプラットフォーム アセンブリ (TPA) リストでアセンブリが見つからない場合、アセンブリを探すパスのリストです。 TPA リストの場合、読み込まれるアセンブリをホスト側でより細かく制御できるため、ホストで読み込み、列挙するアセンブリを明示的に決定することがホストにとってはベスト プラクティスです。 ただし、実行時にパスを探る必要がある場合、このプロパティでそれに対処できます。
 *  `APP_NI_PATHS` このリストは、ネイティブ イメージを探すパスであることを除き、APP_PATHS と似ています。
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` このプロパティは、p/invoke で呼び出されたネイティブ ライブラリを探すときにローダーが調べるパスの一覧です。
 *  `PLATFORM_RESOURCE_ROOTS` このリストには、(カルチャ固有の下位ディレクトリで) リソース サテライト アセンブリを探すパスが含まれています。
@@ -114,7 +116,7 @@ int hr = executeAssembly(
 
 [!code-cpp[CoreClrHost#6](~/samples/core/hosting/HostWithCoreClrHost/src/SampleHost.cpp#6)]
 
-`FreeLibrary` (Windows の場合) または `dlclose` (Linux/Mac の場合) を利用し、必ず CoreCLR ライブラリをアンロードしてください。
+CoreCLR では、再初期化またはアンロードはサポートされていません。 `coreclr_initialize` を再度呼び出したり、CoreCLR ライブラリをアンロードしたりしないでください。
 
 ## <a name="create-a-host-using-mscoreeh"></a>Mscoree.h を使用してホストを作成する
 
@@ -164,8 +166,10 @@ AppDomain フラグは、セキュリティと相互運用に関連する AppDom
 
 共通 AppDomain プロパティ:
 
-* `TRUSTED_PLATFORM_ASSEMBLIES` これはアセンブリ パスの一覧です (Windows は `;` で、Linux/Mac は `:` で区切られています)。これに対して AppDomain は読み込みに優先順位を設定し、完全信頼を与えます (部分信頼ドメインでも)。 .NET Framework シナリオの GAC と同様に、このリストには 'Framework' アセンブリとその他の信頼されるモジュールを含めます。 目的に応じて、このリストの *coreclr.dll* の隣にライブラリが置かれるホストもあれば、ハードコーディングされたマニフェストに信頼されるアセンブリが一覧表示されるホストもあります。
-* `APP_PATHS` これは、信頼されるプラットフォーム アセンブリ (TPA) リストでアセンブリが見つからない場合、アセンブリを探すパスのリストです。 TPA リストの場合、読み込まれるアセンブリをホスト側でより細かく制御できるため、ホストで読み込み、列挙するアセンブリを明示的に決定することがホストにとってはベスト プラクティスです。 ただし、実行時にパスを探る必要がある場合、このプロパティでそれに対処できます。
+* `TRUSTED_PLATFORM_ASSEMBLIES`
+  これはアセンブリ パスの一覧です (Windows では `;` で、Linux/Mac では `:` で区切られています)。AppDomain ではこれらを優先的に読み込み、完全に信頼する必要があります (部分的に信頼されたドメイン内であっても)。 .NET Framework シナリオの GAC と同様に、このリストには 'Framework' アセンブリとその他の信頼されるモジュールを含めます。 目的に応じて、このリストの *coreclr.dll* の隣にライブラリが置かれるホストもあれば、ハードコーディングされたマニフェストに信頼されるアセンブリが一覧表示されるホストもあります。
+* `APP_PATHS`
+  これは、信頼されるプラットフォーム アセンブリ (TPA) リストでアセンブリが見つからない場合、アセンブリを探すパスのリストです。 TPA リストの場合、読み込まれるアセンブリをホスト側でより細かく制御できるため、ホストで読み込み、列挙するアセンブリを明示的に決定することがホストにとってはベスト プラクティスです。 ただし、実行時にパスを探る必要がある場合、このプロパティでそれに対処できます。
 *  `APP_NI_PATHS` このリストは、ネイティブ イメージを探すパスであることを除き、APP_PATHS とよく似ています。
 *  `NATIVE_DLL_SEARCH_DIRECTORIES` このプロパティは、p/invoke で呼び出されたネイティブ DLL を探すときにローダーが調べるパスの一覧です。
 *  `PLATFORM_RESOURCE_ROOTS` このリストには、(カルチャ固有の下位ディレクトリで) リソース サテライト アセンブリを探すパスが含まれています。
@@ -202,6 +206,8 @@ hr = runtimeHost->CreateDelegate(
 最後に、ホストはそれ自体のクリーンアップを行います。AppDomain をアンロードし、ランタイムを停止し、`ICLRRuntimeHost4` 参照を解放します。
 
 [!code-cpp[NetCoreHost#9](~/samples/core/hosting/HostWithMscoree/host.cpp#9)]
+
+CoreCLR では、アンロードはサポートされていません。 CoreCLR ライブラリをアンロードしないでください。
 
 ## <a name="conclusion"></a>まとめ
 ホストがビルドされたら、コマンド ラインから実行し、ホストが期待する引数を渡すことでテストできます (mscoree サンプル アプリで実行するマネージド アプリなど)。 実行するホストの .NET Core アプリを指定するとき、`dotnet build` により生成された .dll を使用してください。 自己完結型アプリケーションのために `dotnet publish` で生成された実行可能ファイル (.exe ファイル) が実質的に既定の .NET Core ホストになります (メインライン シナリオでコマンド ラインから直接、アプリを起動できるように)。ユーザー コードがコンパイルされ、同じ名前の dll が作られます。

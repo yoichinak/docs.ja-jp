@@ -8,12 +8,12 @@ helpviewer_keywords:
 - errorreport compiler option [C#]
 - /errorreport compiler option [C#]
 ms.assetid: bd0e7493-b79d-4369-9c3f-ba26ebdfbedf
-ms.openlocfilehash: 27c7500a3d33ec17680896f21f0e44d98fee94c9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4797f35a3738955f620fad7a93f8695685d21057
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54638471"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59345093"
 ---
 # <a name="-errorreport-c-compiler-options"></a>-errorreport (C# コンパイラ オプション)
 このオプションは、C# 内部コンパイラ エラーを Microsoft に報告する方法として便利です。  
@@ -40,7 +40,7 @@ ms.locfileid: "54638471"
  **send**  
  内部コンパイラ エラーのレポートをマイクロソフトに自動的に送信します。 このオプションを有効にするには、まずマイクロソフトのデータ収集ポリシーに同意する必要があります。 コンピューターで **-errorreport:send** を初めて指定すると、マイクロソフトのデータ収集ポリシーが記載されている Web サイトが表示されます。  
     
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  コンパイラがソース コード ファイルを処理できないと、内部コンパイラ エラー (ICE: Internal Compiler Error) が発生します。 ICE が発生した場合、コードの修正に利用できる出力ファイルや診断は生成されません。  
   
  以前のリリースでは、ICE が発生した場合、マイクロソフト製品サポート サービスに連絡して問題を報告することを推奨していました。 **-errorreport** を使用すると、ICE 情報を Visual C# チームに提供できます。 エラー レポートは、今後リリースされるコンパイラの機能向上に役立ちます。  
@@ -51,13 +51,13 @@ ms.locfileid: "54638471"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  プロジェクトの **[プロパティ]** ページを開きます。 詳細については、「[Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)」([ビルド] ページ (プロジェクト デザイナー) (C#)) を参照してください。  
+1. プロジェクトの **[プロパティ]** ページを開きます。 詳細については、「[Build Page, Project Designer (C#)](/visualstudio/ide/reference/build-page-project-designer-csharp)」([ビルド] ページ (プロジェクト デザイナー) (C#)) を参照してください。  
   
-2.  **[ビルド]** プロパティ ページをクリックします。  
+2. **[ビルド]** プロパティ ページをクリックします。  
   
-3.  **[詳細設定]** ボタンをクリックします。  
+3. **[詳細設定]** ボタンをクリックします。  
   
-4.  **[内部コンパイル エラー報告]** プロパティを変更します。  
+4. **[内部コンパイル エラー報告]** プロパティを変更します。  
   
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.ErrorReport%2A>」を参照してください。  
   

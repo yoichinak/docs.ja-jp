@@ -3,12 +3,12 @@ title: null 許容参照型を使用して設計する
 description: この高度なチュートリアルでは、null 許容参照型の概要について説明します。 参照値で null がいつ許容されるかに関する設計意図を表すことで、コンパイラで null が許容されるようにします。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 57f738771a6f1d2cebe7af546d06ac7d7289a338
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56443251"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427293"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>チュートリアル: null 許容参照型で既存のコードを移行する
 
@@ -24,7 +24,7 @@ C# 8 には **null 許容参照型**が導入されています。これは、nu
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 ベータ コンパイラも実行されるようにします。 C# 8 ベータ コンパイラは、[Visual Studio 2019 Preview 2 以降](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview)、または [.NET Core 3.0 Preview 2](https://dotnet.microsoft.com/download/dotnet-core/3.0) で利用できます。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 ベータ コンパイラも実行されるようにします。 C# 8 ベータ コンパイラは、[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) または最新の [.NET Core 3.0 プレビュー](https://dotnet.microsoft.com/download/dotnet-core/3.0)で利用できます。
 
 このチュートリアルでは、.NET と、C# と Visual Studio または .NET Core CLI のいずれかに精通していることを前提としています。
 
@@ -81,7 +81,7 @@ public class NewsStoryViewModel
 
 [!code-csharp[StarterCreateNewsItem](~/samples/csharp/tutorials/nullable-reference-migration/start/SimpleFeedReader/Services/NewsService.cs#CreateNewsItem)]
 
-上記のコード ブロックでは多くのことが行われています。 このアプリケーションでは、[AutoMapper](http://automapper.org/) NuGet パッケージを使用して、`ISyndicationItem` からニュース項目を作成しています。 ニュース記事の項目が構築され、その 1 つのステートメントでプロパティが設定されることはわかっています。 つまり、`NewsStoryViewModel` の設計では、これらのプロパティが `null` 値になってはならないことが示されています。 これらのプロパティは、**null 非許容参照型**にする必要があります。 それが、元の設計意図を最も適切に表しています。 実際、すべての `NewsStoryViewModel` は、null 以外の値で正しくインスタンス化されて "*います*"。 これにより、次の初期化コードが有効な修正になります。
+上記のコード ブロックでは多くのことが行われています。 このアプリケーションでは、[AutoMapper](https://automapper.org/) NuGet パッケージを使用して、`ISyndicationItem` からニュース項目を作成しています。 ニュース記事の項目が構築され、その 1 つのステートメントでプロパティが設定されることはわかっています。 つまり、`NewsStoryViewModel` の設計では、これらのプロパティが `null` 値になってはならないことが示されています。 これらのプロパティは、**null 非許容参照型**にする必要があります。 それが、元の設計意図を最も適切に表しています。 実際、すべての `NewsStoryViewModel` は、null 以外の値で正しくインスタンス化されて "*います*"。 これにより、次の初期化コードが有効な修正になります。
 
 ```csharp
 public class NewsStoryViewModel

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Visual Basic code, documenting with XML
 ms.assetid: a0d35dc7-c5f9-4d74-92ff-a1c6f28d5235
 ms.openlocfilehash: 6b9fe9994b7bdf2259dcdb1ecef906e0f9955c8f
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480626"
 ---
 # <a name="documenting-your-code-with-xml-visual-basic"></a>XML の使用によるコードのドキュメントの作成 (Visual Basic)
@@ -45,11 +45,11 @@ XML ドキュメントの先頭`'''`します。 これらのコメントの処�
 
 - [XML ファイルの処理](../../../visual-basic/programming-guide/program-structure/processing-the-xml-file.md)
 
-- [方法: XML ドキュメントを作成する](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [方法: XML ドキュメントを作成します。](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 
 - [Visual Studio の XML ツール](/visualstudio/xml-tools/xml-tools-in-visual-studio)
 
 ## <a name="see-also"></a>関連項目
 
 - [Visual Basic でのアプリケーションの開発](../../../visual-basic/developing-apps/index.md)
-- [Visual Basic のプログラミング ガイド](../../../visual-basic/programming-guide/index.md)
+- [Visual Basic プログラミング ガイド](../../../visual-basic/programming-guide/index.md)

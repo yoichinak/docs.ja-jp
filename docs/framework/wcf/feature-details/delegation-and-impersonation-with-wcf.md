@@ -9,10 +9,10 @@ helpviewer_keywords:
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
 ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345522"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF の委任と偽装
@@ -37,9 +37,9 @@ ms.locfileid: "59345522"
 ### <a name="cached-token-impersonation"></a>キャッシュされたトークンの偽装  
  キャッシュされたトークンの偽装は、以下で実行できます。  
   
--   <xref:System.ServiceModel.WSHttpBinding>、 <xref:System.ServiceModel.WSDualHttpBinding>、および<xref:System.ServiceModel.NetTcpBinding>Windows クライアント資格情報を使用します。  
+-   Windows クライアント資格情報を使用する<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>、および <xref:System.ServiceModel.NetTcpBinding> 。  
   
--   <xref:System.ServiceModel.BasicHttpBinding> <xref:System.ServiceModel.BasicHttpSecurityMode>に設定、<xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential>資格情報、またはクライアントが、サービスが有効な Windows アカウントにマップできるユーザー名資格情報を提示して標準的な他のバインド。  
+-   <xref:System.ServiceModel.BasicHttpBinding> が <xref:System.ServiceModel.BasicHttpSecurityMode> 資格情報に設定された <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 。または、サービスが有効な Windows アカウントにマップできるユーザー名資格情報をクライアントが提示する、その他の標準バインディング。  
   
 -   <xref:System.ServiceModel.Channels.CustomBinding> が `requireCancellation` に設定された Windows クライアント資格情報を使用する `true`  (このプロパティは、<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters>、および <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters> の各クラスで使用できます)。セキュリティで保護されたメッセージ交換をバインディングで使用する場合は、`requireCancellation` プロパティを `true` に設定することも必要です。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59345522"
 ### <a name="s4u-based-impersonation"></a>S4U ベースの偽装  
  S4U ベースの偽装は、以下で実行できます。  
   
--   <xref:System.ServiceModel.WSHttpBinding>、 <xref:System.ServiceModel.WSDualHttpBinding>、および<xref:System.ServiceModel.NetTcpBinding>サービスが有効な Windows アカウントにマップできる証明書クライアント資格情報を使用します。  
+-   サービスが有効な Windows アカウントにマップできる証明書クライアント資格情報を使用する<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>、および <xref:System.ServiceModel.NetTcpBinding> 。  
   
 -   <xref:System.ServiceModel.Channels.CustomBinding> プロパティが `requireCancellation` に設定された Windows クライアント資格情報を使用する `false`。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59345522"
   
  キャッシュされたトークンを使用して偽装するときに、サービスが取得する偽装レベルを次の表に示します。  
   
-|`AllowedImpersonationLevel` 値|サービスには `SeImpersonatePrivilege`|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークン `ImpersonationLevel`|  
+|`AllowedImpersonationLevel` の値|サービスに `SeImpersonatePrivilege`がある|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークンの `ImpersonationLevel`|  
 |---------------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
 |Anonymous|[はい]|N/A|偽装|  
 |Anonymous|いいえ|N/A|識別|  
@@ -125,17 +125,17 @@ ms.locfileid: "59345522"
 ## <a name="impersonation-level-obtained-from-user-name-credentials-and-cached-token-impersonation"></a>ユーザー名資格情報とキャッシュされたトークンの偽装から取得する偽装レベル  
  そのユーザー名とパスワード、サービスを渡すことによって、クライアントにより、設定と同じですが、そのユーザーとしてログオンするための WCF、`AllowedImpersonationLevel`プロパティを<xref:System.Security.Principal.TokenImpersonationLevel.Delegation>します。 (`AllowedImpersonationLevel` は、<xref:System.ServiceModel.Security.WindowsClientCredential> クラスと <xref:System.ServiceModel.Security.HttpDigestClientCredential> クラスで使用できます)。サービスがユーザー名資格情報を受け取るときに取得する偽装レベルを次の表に示します。  
   
-|`AllowedImpersonationLevel`|サービスには `SeImpersonatePrivilege`|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークン `ImpersonationLevel`|  
+|`AllowedImpersonationLevel`|サービスに `SeImpersonatePrivilege`がある|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークンの `ImpersonationLevel`|  
 |---------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|適用なし|[はい]|[はい]|処理の代行|  
+|N/A|[はい]|[はい]|処理の代行|  
 |N/A|[はい]|いいえ|偽装|  
 |適用なし|いいえ|N/A|識別|  
   
 ## <a name="impersonation-level-obtained-from-s4u-based-impersonation"></a>S4U ベースの偽装から取得する偽装レベル  
   
-|サービスには `SeTcbPrivilege`|サービスには `SeImpersonatePrivilege`|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークン `ImpersonationLevel`|  
+|サービスに `SeTcbPrivilege`がある|サービスに `SeImpersonatePrivilege`がある|サービスとクライアントに処理を代行する機能がある|キャッシュされたトークンの `ImpersonationLevel`|  
 |----------------------------------|------------------------------------------|--------------------------------------------------|---------------------------------------|  
-|はい|[はい]|N/A|偽装|  
+|[はい]|[はい]|N/A|偽装|  
 |[はい]|いいえ|N/A|識別|  
 |いいえ|N/A|N/A|識別|  
   
@@ -222,5 +222,5 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
 - <xref:System.Security.Principal.TokenImpersonationLevel.Identification>
 - [トランスポート セキュリティでの偽装の使用](../../../../docs/framework/wcf/feature-details/using-impersonation-with-transport-security.md)
 - [クライアントの偽装](../../../../docs/framework/wcf/samples/impersonating-the-client.md)
-- [方法: サービスでクライアントに偽装する](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [方法: サービスでのクライアントを偽装します。](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)

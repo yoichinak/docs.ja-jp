@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6f5ff56a-a57e-49d7-8ae9-bbed697e42e3
 ms.openlocfilehash: 80b7df4922e1398c7290e769e53627a1d46ebc83
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344177"
 ---
 # <a name="date-and-time-data"></a>日付と時刻のデータ
@@ -21,7 +21,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
   
  **SQL Server オンライン ブック**  
   
-1. [日時データの使用](https://go.microsoft.com/fwlink/?LinkID=98361)  
+1. [日付と時刻のデータの使用](https://go.microsoft.com/fwlink/?LinkID=98361)  
   
 ## <a name="datetime-data-types-introduced-in-sql-server-2008"></a>SQL Server 2008 で導入された日付/時刻データ型  
  次の表は、新しい日付と時刻のデータ型の説明です。  
@@ -99,7 +99,7 @@ SQL Server 2008 では、日付と時刻の情報を扱うための新しいデ�
 >  時刻の値が 0 と 24 の間にない場合は、<xref:System.ArgumentException> がスローされます。  
   
 ### <a name="creating-parameters"></a>パラメーターの作成  
- 作成することができます、<xref:System.Data.SqlClient.SqlParameter>オブジェクトまたは追加することで、コンス トラクターを使用して、<xref:System.Data.SqlClient.SqlCommand><xref:System.Data.SqlClient.SqlCommand.Parameters%2A>呼び出してコレクション、`Add`のメソッド、 <xref:System.Data.SqlClient.SqlParameterCollection>。 `Add` メソッドは、入力としてコンストラクター引数または既存のパラメーター オブジェクトを受け取ります。  
+ <xref:System.Data.SqlClient.SqlParameter> オブジェクトは、そのコンストラクターを使って作成できるほか、<xref:System.Data.SqlClient.SqlCommand> の <xref:System.Data.SqlClient.SqlCommand.Parameters%2A> メソッドを呼び出して、`Add`<xref:System.Data.SqlClient.SqlParameterCollection> コレクションにそれを追加することによって作成することもできます。 `Add` メソッドは、入力としてコンストラクター引数または既存のパラメーター オブジェクトを受け取ります。  
   
  このトピックの次のセクションでは、日付と時刻のパラメーターを指定する方法の例を示します。 パラメーターの使用方法の例については、次を参照してください。[構成パラメーターとパラメーターのデータ型](../../../../../docs/framework/data/adonet/configuring-parameters-and-parameter-data-types.md)と[DataAdapter パラメーター](../../../../../docs/framework/data/adonet/dataadapter-parameters.md)します。  
   
@@ -235,9 +235,9 @@ command.Parameters.AddWithValue( _
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[日付と時刻のデータ型および関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Transact-SQL の日付と時刻のデータ型および関数の概要について説明します。|  
-|[日時データの使用](https://go.microsoft.com/fwlink/?LinkId=98361)|日付と時刻のデータ型と関数の情報、および使用例を示します。|  
-|[データ型 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008 のシステム データ型について説明します。|  
+|[日付と時刻のデータ型および関数 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=98360)|Transact-SQL の日付と時刻のデータ型および関数の概要について説明します。|  
+|[日付と時刻のデータの使用](https://go.microsoft.com/fwlink/?LinkId=98361)|日付と時刻のデータ型と関数の情報、および使用例を示します。|  
+|[データ型 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=98362)|SQL Server 2008 のシステム データ型について説明します。|  
   
 ## <a name="see-also"></a>関連項目
 

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517110"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>データ サービスの更新 (WCF Data Services)
