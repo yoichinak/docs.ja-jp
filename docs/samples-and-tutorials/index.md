@@ -5,10 +5,10 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
 ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330819"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
@@ -25,7 +25,7 @@ ms.locfileid: "59330819"
 
 ### <a name="tutorials"></a>チュートリアル
 
-**[CLI ツールを使用する .NET Core コンソール アプリの作成:手順ガイド](../core/tutorials/using-with-xplat-cli.md)**
+**[CLI ツールを使用する .NET Core コンソール アプリの作成: 手順ガイド](../core/tutorials/using-with-xplat-cli.md)**
 
 このガイドでは、.NET Core CLI ツールを使用してクロスプラットフォーム コンソール アプリを作成する方法を説明します。 基本的なコンソール アプリから始めて、最終的にテストを含む複数プロジェクトまで拡張します。 段階的に機能を追加し、作業を進めながらナレッジを構築します。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/console-apps)は、GitHub の dotnet/samples リポジトリにあります。
 
@@ -41,7 +41,7 @@ ms.locfileid: "59330819"
 
 ### <a name="samples"></a>サンプル
 
-**[Iterators](../csharp/iterators.md)**
+**[反復子](../csharp/iterators.md)**
 
 このサンプルは、C# 反復子の作成と使用のための構文および機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/iterators)は、GitHub の dotnet/samples リポジトリにあります。
 
@@ -57,7 +57,7 @@ ms.locfileid: "59330819"
 
 このサンプルは、式ツリーを使用して解決できる問題の多くを示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/csharp/expression-trees)は、GitHub の dotnet/samples リポジトリにあります。
 
-**LINQ サンプル**
+**LINQ のサンプル**
 
 この一連のサンプルは、統合言語クエリ (LINQ) の多くの機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/linq/csharp)は、GitHub の dotnet/samples リポジトリにあります。
 

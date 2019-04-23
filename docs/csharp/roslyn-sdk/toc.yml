@@ -1,48 +1,25 @@
-items:
 - name: .NET Compiler Platform SDK (Roslyn API)
   href: index.md
   items:
-  - name: コンパイラ API モデルを理解する
-    href: compiler-api-model.md
-  - name: 構文の使用
-    href: work-with-syntax.md
-  - name: セマンティクスの使用
-    href: work-with-semantics.md
-  - name: ワークスペースの使用
-    href: work-with-workspace.md
-  - name: 構文ビジュアライザーでコードを調べる
-    href: syntax-visualizer.md
-  - name: クイック スタート
-    items:
-    - name: 構文の解析
-      href: get-started/syntax-analysis.md
-    - name: セマンティック解析
-      href: get-started/semantic-analysis.md
-    - name: 構文の変換
-      href: get-started/syntax-transformation.md
-  - name: チュートリアル
-    items:
-    - name: 最初のアナライザーとコード修正を作成する
-      href: tutorials/how-to-write-csharp-analyzer-code-fix.md
-    - name: カスタム アナライザーとコード修正の記述を開始する
-  - name: チュートリアル
-    items:
-    - name: 最初のアナライザーをビルドする
-    - name: 最初のコード修正をビルドする
-    - name: アナライザーを VSIX としてデプロイする
-    - name: アナライザーを NuGet パッケージとしてデプロイする
-- name: サンプル
-  items:
-  - name: 非同期パッケージ
-  - name: コンソールの分類子
-  - name: 自動プロパティへの変換
-  - name: フォーム ソリューション
-  - name: プロパティの変更を通知する実装
-  - name: const の作成
-  - name: ハウツー ガイド
-ms.openlocfilehash: cd4a028bc393f99ef3da5277430276b1094682a8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470323"
+    - name: コンパイラ API モデルを理解する
+      href: compiler-api-model.md
+    - name: 構文の使用
+      href: work-with-syntax.md
+    - name: セマンティクスの使用
+      href: work-with-semantics.md
+    - name: ワークスペースの使用
+      href: work-with-workspace.md
+    - name: 構文ビジュアライザーでコードを調べる
+      href: syntax-visualizer.md
+    - name: クイック スタート
+      items:
+        - name: 構文の解析
+          href: get-started/syntax-analysis.md
+        - name: セマンティック解析
+          href: get-started/semantic-analysis.md
+        - name: 構文の変換
+          href: get-started/syntax-transformation.md
+    - name: チュートリアル
+      items:
+        - name: 最初のアナライザーとコード修正を作成する
+          href: tutorials/how-to-write-csharp-analyzer-code-fix.md

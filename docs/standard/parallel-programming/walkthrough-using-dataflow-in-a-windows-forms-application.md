@@ -10,10 +10,10 @@ ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344378"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>チュートリアル: Windows フォーム アプリケーションでのデータフローの使用
@@ -35,7 +35,7 @@ ms.locfileid: "59344378"
   
 -   [ユーザー インターフェイスへのデータフロー ネットワークの接続](#ui)  
   
--   [完全な例](#complete)  
+-   [コード例全体](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>Windows フォーム アプリケーションの作成  

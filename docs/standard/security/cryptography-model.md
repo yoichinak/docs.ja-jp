@@ -9,10 +9,10 @@ ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343871"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework の暗号モデル
@@ -42,7 +42,7 @@ ms.locfileid: "59343871"
   
 5. <xref:System.Security.Cryptography.TripleDES>  
   
- <xref:System.Security.Cryptography.Aes> 2 つのクラスによって継承される:<xref:System.Security.Cryptography.AesCryptoServiceProvider>と<xref:System.Security.Cryptography.AesManaged>します。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> クラスは Aes の Windows 暗号化 API (CAPI) 実装のラッパーですが、<xref:System.Security.Cryptography.AesManaged> クラスは全体がマネージド コードで書かれています。 さらに、マネージド実装と CAPI 実装に加え、3 つ目の実装、Cryptography Next Generation (CNG) もあります。 CNG アルゴリズムの例が <xref:System.Security.Cryptography.ECDiffieHellmanCng> です。 CNG アルゴリズムは、Windows Vista 以降のバージョンで利用可能です。  
+ <xref:System.Security.Cryptography.Aes> は、<xref:System.Security.Cryptography.AesCryptoServiceProvider> と <xref:System.Security.Cryptography.AesManaged> の 2 つのクラスによって継承されます。 <xref:System.Security.Cryptography.AesCryptoServiceProvider> クラスは Aes の Windows 暗号化 API (CAPI) 実装のラッパーですが、<xref:System.Security.Cryptography.AesManaged> クラスは全体がマネージド コードで書かれています。 さらに、マネージド実装と CAPI 実装に加え、3 つ目の実装、Cryptography Next Generation (CNG) もあります。 CNG アルゴリズムの例が <xref:System.Security.Cryptography.ECDiffieHellmanCng> です。 CNG アルゴリズムは、Windows Vista 以降のバージョンで利用可能です。  
   
  ご自身にとって最適な実装を選択できます。  マネージド実装は、.NET Framework をサポートするすべてのプラットフォームで利用できます。  CAPI 実装は、以前のオペレーティング システムで使用可能ですが、開発中止となっています。 CNG はまさに最新の実装であり、新しい開発が行われます。 ただし、マネージド実装は連邦情報処理規格 (FIPS: Federal Information Processing Standard) に認定されておらず、ラッパー クラスよりも低速である場合があります。  
   
@@ -89,4 +89,4 @@ ms.locfileid: "59343871"
   
 ## <a name="see-also"></a>関連項目
 
-- [暗号化サービス](../../../docs/standard/security/cryptographic-services.md)
+- [Cryptographic Services](../../../docs/standard/security/cryptographic-services.md)

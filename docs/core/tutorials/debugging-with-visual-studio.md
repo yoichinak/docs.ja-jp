@@ -3,12 +3,12 @@ title: Visual Studio 2017 を使用して Hello World .NET Core アプリケー�
 description: C# または Visual Basic で記述された Hello World アプリを、Visual Studio 2017 を使用してデバッグする方法についてご説明します。
 ms.date: 12/15/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: 268a0d47b63b8d6baa25305296395d7d8a86729e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 9b2375443c9947a32fcccea062642103601d5010
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463424"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610718"
 ---
 # <a name="debug-your-c-or-visual-basic-net-core-hello-world-application-using-visual-studio-2017"></a>Visual Studio 2017 を使用して C# または Visual Basic .NET Core の Hello World アプリケーションをデバッグする
 
@@ -154,6 +154,7 @@ ms.locfileid: "58463424"
    ```vb
    ? String.IsNullOrEmpty(name)
    ```
+
   ![ステートメントが実行された後で値 true を返す [イミディエイト ウィンドウ] - Visual Basic](./media/debugging-with-visual-studio/vb-immediate-window-output.png)
 
 1. ツール バーの **[続行]** を選んで、プログラムの実行を続けます。

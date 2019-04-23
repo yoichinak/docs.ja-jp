@@ -10,14 +10,14 @@ helpviewer_keywords:
 - hosting [WPF], visual objects in Win32 code
 ms.assetid: f0e1600c-3217-43d5-875d-1864fa7fe628
 ms.openlocfilehash: b260f96246f0d9e5447b74a05e1396bfef176197
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111463"
 ---
 # <a name="tutorial-hosting-visual-objects-in-a-win32-application"></a>チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションを作成するための豊富な環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]、コードがありますを追加すると効率的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]機能をアプリケーションにコードを書き直すではなく。 サポートを提供する[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションでは、同時に使用されるグラフィックス サブシステム[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内のオブジェクトをホストするためのメカニズムを提供、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]、コードがありますを追加すると効率的[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]機能をアプリケーションにコードを書き直すではなく。 サポートを提供する[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションでは、同時に使用されるグラフィックス サブシステム[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]内のオブジェクトをホストするためのメカニズムを提供、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。  
   
  このチュートリアルは、サンプル アプリケーションを記述する方法を説明します[Win32 の相互運用性サンプルによるヒット テストの](https://go.microsoft.com/fwlink/?LinkID=159995)、そのホスト[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]visual オブジェクト、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。  
 

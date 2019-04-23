@@ -3,11 +3,11 @@ title: IPv6 および Teredo を使用した NAT トラバーサル
 ms.date: 03/30/2017
 ms.assetid: 568cd245-3300-49ef-a995-d81bf845d961
 ms.openlocfilehash: f617dc8912091576727b90da1e9efb9ebd5f9bda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59170770"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768177"
 ---
 # <a name="nat-traversal-using-ipv6-and-teredo"></a>IPv6 および Teredo を使用した NAT トラバーサル
 ネットワーク アドレス変換 (NAT) トラバーサルをサポートする機能強化が行われました。 これらの変更は、IPv6 および Teredo での使用を想定して設計されていますが、他の IP トンネリング テクノロジにも適用されます。 これらの拡張機能は、<xref:System.Net> および関連する名前空間のクラスに影響します。  

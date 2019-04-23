@@ -25,10 +25,10 @@ helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], showing separator bars
 ms.assetid: aa5f19bb-b545-4378-bfa6-36ba592f0d7c
 ms.openlocfilehash: 458347df7e17aabc1e9e21d66ad1b5a96200fe28
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59198557"
 ---
 # <a name="how-to-add-enhancements-to-toolstripmenuitems"></a>方法: ToolStripMenuItems に拡張機能を追加する

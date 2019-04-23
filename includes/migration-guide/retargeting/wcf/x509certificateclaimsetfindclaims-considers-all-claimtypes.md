@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: fe5dfa0b8866debd8a6091a264e251f2fd2e4dca
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234499"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804410"
 ---
 ### <a name="x509certificateclaimsetfindclaims-considers-all-claimtypes"></a>X509CertificateClaimSet.FindClaims は、すべての claimTypes を考慮します
 

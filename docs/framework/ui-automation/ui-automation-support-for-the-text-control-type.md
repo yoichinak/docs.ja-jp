@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103780"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>UI オートメーションによる Text コントロール型のサポート
@@ -73,7 +73,7 @@ ms.locfileid: "59103780"
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのテキスト コントロールでサポートされなければならない [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|サポート|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextSelectionChangedEvent>|必要|なし|  
 |<xref:System.Windows.Automation.TextPatternIdentifiers.TextChangedEvent>|必須|なし|  

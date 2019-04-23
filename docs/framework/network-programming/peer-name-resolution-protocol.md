@@ -2,12 +2,12 @@
 title: Peer Name Resolution Protocol
 ms.date: 03/30/2017
 ms.assetid: 11940511-c124-4d91-ae31-d4ed6e81ee58
-ms.openlocfilehash: 9f1850ff3a42526de988df032c39aaa916987d25
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4473ccb01349d2697ba512861aa505d5e363ab19
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54662661"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59119068"
 ---
 # <a name="peer-name-resolution-protocol"></a>Peer Name Resolution Protocol
 ピアツーピア環境において、ピアは特定の名前解決システムを使用して、互いのネットワーク上の場所 (アドレス、プロトコル、およびポート) をその名前や他の識別子から解決します。 これまで、ドメイン ネーム システム (DNS) でのピア名の解決は、本質的に一時的な接続やその他の不具合によって複雑化していました。  
@@ -47,6 +47,7 @@ ms.locfileid: "54662661"
 -   <xref:System.Net.PeerToPeer.PeerNameResolver>:解決の同期および非同期のメソッドなど、ピア名をネットワーク エンドポイントに解決するためのプロセスを定義します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.PeerResolvers>
 - <xref:System.Net.PeerToPeer>
 - [ネットワーク プログラミングのサンプル](../../../docs/framework/network-programming/network-programming-samples.md)

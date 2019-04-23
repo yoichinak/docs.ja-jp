@@ -5,10 +5,10 @@ ms.assetid: fb854070-248b-46cf-9dab-c322e2b4d624
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9e0ec1ed73148b319217a70cc3be99b486be2f8e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208294"
 ---
 # <a name="subtypes-element-net-native"></a>\<Subtypes > 要素 (.NET ネイティブ)
@@ -60,7 +60,7 @@ ms.locfileid: "59208294"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<型 >](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  
  `<Subtypes>` 要素は、それを含む型のすべてのサブタイプにポリシーを適用します。 派生型および基底クラスに異なるポリシーを適用する場合に使用します。  

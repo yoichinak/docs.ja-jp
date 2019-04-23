@@ -3,11 +3,11 @@ title: HttpsTransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: e78aa8c6-b53b-4105-a900-d3e7a39670f2
 ms.openlocfilehash: 8bf6df7d49c88cc93caacb92cebc23a297046e1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59084636"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973955"
 ---
 # <a name="httpstransportbindingelement"></a>HttpsTransportBindingElement
 HttpsTransportBindingElement  

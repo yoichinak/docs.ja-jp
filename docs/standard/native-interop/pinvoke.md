@@ -4,12 +4,12 @@ description: .NET で P/Invoke を介してネイティブ関数を呼び出す�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 4836096e12f6c3d317daa5da91566ab472053ede
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 1a5f2f9d13429f84d5b5bb58d36f015004fb746b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409238"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59517864"
 ---
 # <a name="platform-invoke-pinvoke"></a>プラットフォーム呼び出し (P/Invoke)
 
@@ -24,7 +24,7 @@ public class Program {
 
     // Import user32.dll (containing the function we need) and define
     // the method corresponding to the native function.
-    [DllImport("user32.dll")]
+    [DllImport("user32.dll", CharSet = CharSet.Unicode, SetLastError = true)]
     public static extern int MessageBox(IntPtr hWnd, String text, String caption, int options);
 
     public static void Main(string[] args) {
@@ -37,7 +37,7 @@ public class Program {
 上の例は単純ですが、マネージド コードからアンマネージド 関数を呼び出すために必要なことを示しています。 この例の手順を説明します。
 
 *   1 行目は、必要なすべての項目を保持する名前空間 `System.Runtime.InteropServices` のステートメントの使用を示しています。
-*   7 行目で `DllImport` 属性を導入しています。 この属性は、ランタイムにアンマネージ DLL を読み込むように伝えるため、きわめて重要です。 渡された文字列は、ターゲット関数が入っている DLL です。
+*   7 行目で `DllImport` 属性を導入しています。 この属性は、ランタイムにアンマネージ DLL を読み込むように伝えるため、きわめて重要です。 渡された文字列は、ターゲット関数が入っている DLL です。 さらに、文字列のマーシャリングに使用する[文字セット](./charset.md)を指定します。 最後に、この関数が [SetLastError](/windows/desktop/api/errhandlingapi/nf-errhandlingapi-setlasterror) を呼び出し、ランタイムでそのエラー コードをキャプチャしてユーザーが <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error?displayProperty=nameWithType> を介して取得できるように指定します。
 *   8 行目は、P/Invoke 作業の最も重要な箇所です。 ここでは、アンマネージドと**正確に同じシグネチャ**を持つマネージド メソッドを定義しています。 宣言には新しいキーワード `extern` があることがわかります。これはランタイムに、これが外部メソッドであり、それを呼び出したときに、ランタイムが `DllImport` 属性に指定された DLL からそれを見つける必要があることを伝えます。
 
 例の残りの部分は、その他のマネージド メソッドと同じように、メソッドを呼び出しているだけです。
@@ -237,7 +237,6 @@ namespace PInvokeSamples {
 ```
 
 前述の例のどちらも、パラメーターに依存し、どちらの場合もパラメーターは、マネージド型として指定されています。 ランタイムは、"正しいこと" を実行し、これらを他方の側で同等のものに処理します。 型をネイティブ コードにマーシャリングする方法については、「[Type marshalling (型のマーシャリング)](type-marshalling.md)」を参照してください。
-
 
 ## <a name="more-resources"></a>その他のリソース
 

@@ -4,12 +4,12 @@ description: マイクロサービスの世界における分散データ管理�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: f92410f2742ec1cbcb08d13614700eab348aa646
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3e683044ea6a31116f1e7da6d690fc32ad87bd76
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463372"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613704"
 ---
 # <a name="challenges-and-solutions-for-distributed-data-management"></a>分散データ管理に関する課題と解決策
 
@@ -86,28 +86,28 @@ Basket テーブルは Basket マイクロサービスによって所有され�
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **CAP 定理** \
-  [https://en.wikipedia.org/wiki/CAP_theorem](https://en.wikipedia.org/wiki/CAP_theorem)
+  <https://en.wikipedia.org/wiki/CAP_theorem>
 
 - **最終的な整合性** \
-  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+  <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **データ整合性の概要** \
-  [https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/dn589800(v=pandp.10)>
 
 - **Martin Fowler。コマンド クエリ責務分離 (CQRS)** \
-  [https://martinfowler.com/bliki/CQRS.html](https://martinfowler.com/bliki/CQRS.html)
+  <https://martinfowler.com/bliki/CQRS.html>
 
 - **具体化されたビュー** \
-  [https://docs.microsoft.com/azure/architecture/patterns/materialized-view](https://docs.microsoft.com/azure/architecture/patterns/materialized-view)
+  <https://docs.microsoft.com/azure/architecture/patterns/materialized-view>
 
 - **Charles Row。ACID とBASE:データベース トランザクション処理での pH のシフト** \
-  [https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/](https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/)
+  <https://www.dataversity.net/acid-vs-base-the-shifting-ph-of-database-transaction-processing/>
 
 - **補正トランザクション** \
-  [https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction](https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction)
+  <https://docs.microsoft.com/azure/architecture/patterns/compensating-transaction>
 
 - **Udi Dahan。サービス指向のコンポジション** \
-  [http://udidahan.com/2014/07/30/service-oriented-composition-with-video/](http://udidahan.com/2014/07/30/service-oriented-composition-with-video/)
+  <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
 >[!div class="step-by-step"]
 >[前へ](logical-versus-physical-architecture.md)

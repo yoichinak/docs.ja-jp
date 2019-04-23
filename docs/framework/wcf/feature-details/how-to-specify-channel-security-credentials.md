@@ -3,17 +3,17 @@ title: '方法: チャネルのセキュリティ資格情報を指定する'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297981"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>方法: チャネルのセキュリティ資格情報を指定する
 Windows Communication Foundation (WCF) サービス モニカーでは、COM アプリケーションで WCF サービスを呼び出すができます。 ほとんどの WCF サービスでは、クライアント認証と承認のための資格情報を指定する必要があります。 WCF クライアントから WCF サービスを呼び出すときに、マネージ コードで、またはアプリケーション構成ファイルで、これらの資格情報を指定できます。 COM アプリケーションから WCF サービスを呼び出すときに使用できます、<xref:System.ServiceModel.ComIntegration.IChannelCredentials>資格情報を指定するインターフェイス。 ここでは、<xref:System.ServiceModel.ComIntegration.IChannelCredentials> インターフェイスを使用して資格情報を指定するさまざまな方法を説明します。  
   
 > [!NOTE]
->  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> IDispatch ベースのインターフェイスは、Visual Studio 環境での IntelliSense 機能は取得されません。  
+>  <xref:System.ServiceModel.ComIntegration.IChannelCredentials> は IDispatch ベースのインターフェイスです。Visual Studio 環境で IntelliSense 機能を取得することはできません。  
   
  この記事で定義されている WCF サービスを使用する、[メッセージ セキュリティ サンプル](../../../../docs/framework/wcf/samples/message-security-sample.md)します。  
   
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
   
 7. Visual Basic アプリケーションを実行し、結果を確認します。  
   
-     Visual Basic アプリケーションに Add(3,4) の結果を示すメッセージ ボックスが表示されます。 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> または<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29>の代わりに使用することができますも<xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29>クライアント証明書を設定します。  
+     Visual Basic アプリケーションに Add(3,4) の結果を示すメッセージ ボックスが表示されます。 <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromFile%28System.String%2CSystem.String%2CSystem.String%29> または <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStoreByName%28System.String%2CSystem.String%2CSystem.String%29> を <xref:System.ServiceModel.ComIntegration.IChannelCredentials.SetClientCertificateFromStore%28System.String%2CSystem.String%2CSystem.String%2CSystem.Object%29> の代わりに使用して、クライアント証明書を設定することもできます。  
   
     ```  
     monikerProxy.ChannelCredentials.SetClientCertificateFromFile "C:\MyClientCert.pfx", "password", "DefaultKeySet"  
@@ -134,7 +134,7 @@ Windows Communication Foundation (WCF) サービス モニカーでは、COM ア
 ## <a name="see-also"></a>関連項目
 
 - [フェデレーション](../../../../docs/framework/wcf/feature-details/federation.md)
-- [方法: フェデレーション サービスで資格情報を設定する](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
-- [方法: フェデレーション クライアントを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
+- [方法: フェデレーション サービスで資格情報を構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [方法: フェデレーション クライアントを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-federated-client.md)
 - [メッセージのセキュリティ](../../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [バインディングとセキュリティ](../../../../docs/framework/wcf/feature-details/bindings-and-security.md)

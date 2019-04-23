@@ -5,10 +5,10 @@ helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
 ms.openlocfilehash: 4342b3d6219f0c996264bb7ed190b1204338ba64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185537"
 ---
 # <a name="hosting-services"></a>ホスティング サービス
@@ -34,7 +34,7 @@ ms.locfileid: "59185537"
  IIS でホストされるサービスは HTTP トランスポートしか使用できません。 IIS 5.1 の実装では、 [!INCLUDE[wxp](../../../includes/wxp-md.md)]にいくつかの制限がありました。 WCF サービスの上の IIS 5.1 によって提供されるメッセージに基づくアクティベーション[!INCLUDE[wxp](../../../includes/wxp-md.md)]からの通信にポート 80 を使用して同じコンピューター上の他の自己ホスト型 WCF サービスをブロックします。 WCF サービスは、他のアプリケーションによってホストされている場合と同じ AppDomain/アプリケーション プール/ワーカー プロセスで実行できる[!INCLUDE[iis601](../../../includes/iis601-md.md)]で[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]します。 WCF と[!INCLUDE[iis601](../../../includes/iis601-md.md)]カーネル モードの HTTP スタック (HTTP.sys) を使用して両方[!INCLUDE[iis601](../../../includes/iis601-md.md)]IIS 5.1 とは異なり、同じマシンで実行されている他の自己ホスト型 WCF サービスとポート 80 を共有することができます。  
   
 #### <a name="windows-process-activation-service-was"></a>Windows プロセス アクティブ化サービス (WAS)  
- Windows プロセス アクティブ化サービス (WAS) とは、 [!INCLUDE[lserver](../../../includes/lserver-md.md)] でも使用できる [!INCLUDE[wv](../../../includes/wv-md.md)]用の新しいプロセス アクティブ化機構です。 よく知られている [!INCLUDE[iis601](../../../includes/iis601-md.md)] のプロセス モデル (アプリケーション プールとメッセージ ベースのプロセス アクティベーション) とホスト機能 (迅速な障害保護、状態の監視、プロセスのリサイクルなど) はそのままですが、HTTP に対する依存性がアクティベーション アーキテクチャから解消されています。 [!INCLUDE[iisver](../../../includes/iisver-md.md)] WAS を使用して、HTTP 経由でメッセージ ベースのアクティブ化を実現します。 その他の WCF コンポーネントは、WCF がサポートするその他のプロトコル経由で、TCP、MSMQ、名前付きパイプなど、メッセージ ベースのライセンス認証を提供する WAS にも接続します。 これにより、IIS のプロセスのリサイクル、迅速な障害保護、一般的な構成システムなど、これまで HTTP ベースのアプリケーションのみで利用可能だった IIS 機能を、通信プロトコルを使用するアプリケーションでも使用できるようになりました。  
+ Windows プロセス アクティブ化サービス (WAS) とは、 [!INCLUDE[lserver](../../../includes/lserver-md.md)] でも使用できる [!INCLUDE[wv](../../../includes/wv-md.md)]用の新しいプロセス アクティブ化機構です。 よく知られている [!INCLUDE[iis601](../../../includes/iis601-md.md)] のプロセス モデル (アプリケーション プールとメッセージ ベースのプロセス アクティベーション) とホスト機能 (迅速な障害保護、状態の監視、プロセスのリサイクルなど) はそのままですが、HTTP に対する依存性がアクティベーション アーキテクチャから解消されています。 [!INCLUDE[iisver](../../../includes/iisver-md.md)] では、WAS を使用して HTTP 経由でのメッセージ ベースのアクティベーションを実現しています。 その他の WCF コンポーネントは、WCF がサポートするその他のプロトコル経由で、TCP、MSMQ、名前付きパイプなど、メッセージ ベースのライセンス認証を提供する WAS にも接続します。 これにより、IIS のプロセスのリサイクル、迅速な障害保護、一般的な構成システムなど、これまで HTTP ベースのアプリケーションのみで利用可能だった IIS 機能を、通信プロトコルを使用するアプリケーションでも使用できるようになりました。  
   
  このホスト オプションでは、WAS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 構成する方法の詳細についてをホストしていたは、次を参照してください。[方法。WAS で WCF サービスをホスト](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59185537"
 |-------------------------|----------------------|----------------------------------|  
 |マネージド アプリケーション ("自己ホスト")|コンソール アプリケーションを開発時に使用します。<br />豊富な WinForm と[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]サービスにアクセスするクライアント アプリケーション。|柔軟です。<br />展開が容易です。<br />-サービスのエンタープライズ ソリューションです。|  
 |Windows サービス (従来 NT サービスと呼ばれていたもの)|-IIS の外部でホストされている実行時間の長い WCF サービス。|サービス プロセスの有効期間がないメッセージがアクティブ化、オペレーティング システムによって制御されます。<br />-Windows のすべてのバージョンでサポートされています。<br />-セキュリティで保護された環境。|  
-|IIS 5.1, [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-実行する WCF サービスのと並行して[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]HTTP プロトコルを使用してインターネット上のコンテンツ。|-プロセスのリサイクルします。<br />-アイドル シャット ダウンします。<br />-正常性の監視を処理します。<br />-メッセージ ベースのアクティブ化します。<br />-HTTP のみ。|  
+|IIS 5.1、 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-実行する WCF サービスのと並行して[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]HTTP プロトコルを使用してインターネット上のコンテンツ。|-プロセスのリサイクルします。<br />-アイドル シャット ダウンします。<br />-正常性の監視を処理します。<br />-メッセージ ベースのアクティブ化します。<br />-HTTP のみ。|  
 |Windows プロセス アクティブ化サービス (WAS)|-さまざまなトランスポート プロトコルを使用してインターネットに IIS をインストールしなくても、WCF サービスを実行します。|IIS は必要ありません。<br />-プロセスのリサイクルします。<br />-アイドル シャット ダウンします。<br />-正常性の監視を処理します。<br />-メッセージ ベースのアクティブ化します。<br />-HTTP、TCP、名前付きパイプ、および MSMQ で動作します。|  
 |IIS 7.0|-実行する WCF サービスを[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]コンテンツ。<br />-さまざまなトランスポート プロトコルを使用して、インターネット上の WCF サービスを実行します。|-が利点があります。<br />統合[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]および IIS コンテンツ。|  
   
@@ -66,7 +66,7 @@ ms.locfileid: "59185537"
 - [システム要件](../../../docs/framework/wcf/wcf-system-requirements.md)
 - [基本的なプログラミング ライフサイクル](../../../docs/framework/wcf/basic-programming-lifecycle.md)
 - [サービス コントラクトの実装](../../../docs/framework/wcf/implementing-service-contracts.md)
-- [方法: IIS で WCF サービスをホストする](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
-- [方法: WAS で WCF サービスをホストする](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
-- [方法: マネージド Windows サービスで WCF サービスをホストする](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
-- [方法: マネージド アプリケーションで WCF サービスをホストする](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [方法: IIS で WCF サービスをホストします。](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-iis.md)
+- [方法: WAS で WCF サービスをホストします。](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)
+- [方法: マネージ Windows サービスでの WCF サービスをホストします。](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)
+- [方法: マネージ アプリケーションで WCF サービスをホストします。](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)

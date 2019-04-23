@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Panel control [WPF], width properties of elements
 ms.assetid: 6ee04a9d-63f0-4f5b-a406-0a8cd4c35729
 ms.openlocfilehash: a5ed67ba20176398a863a1e9826b1eab71b182f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096876"
 ---
 # <a name="how-to-set-the-width-properties-of-an-element"></a>方法: 要素の Width プロパティを設定する

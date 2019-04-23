@@ -10,10 +10,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
 ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59204953"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>方法: カーディナル スプラインを描画する

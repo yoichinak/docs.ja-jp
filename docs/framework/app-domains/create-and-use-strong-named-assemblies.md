@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8ee49009915273cc1e16917805f1801268ca0d26
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47198892"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59300698"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>厳密な名前付きアセンブリの作成と使用
 
@@ -34,17 +34,17 @@ ms.locfileid: "47198892"
 
 次のシナリオは、厳密な名前のアセンブリに署名した後にそれをその名前で参照するプロセスの概要を示しています。
 
-1.  アセンブリ A は、次のいずれかの方法を使用して厳密な名前で作成されます。
+1. アセンブリ A は、次のいずれかの方法を使用して厳密な名前で作成されます。
 
     -   Visual Studio など、厳密な名前の作成をサポートする開発環境を使用する。
 
     -   [厳密名ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用して暗号化キー ペアを作成し、コマンド ライン コンパイラまたは[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) のいずれかを使用してそのキー ペアをアセンブリに割り当てる。 Windows ソフトウェア開発キット (SDK) には、Sn.exe と Al.exe の両方が用意されています。
 
-2.  開発環境またはツールは、アセンブリのマニフェストを含むファイルのハッシュに、開発者の秘密キーで署名します。 このデジタル署名は、アセンブリ A のマニフェストを含むポータブル実行可能 (PE) ファイルに格納されます。
+2. 開発環境またはツールは、アセンブリのマニフェストを含むファイルのハッシュに、開発者の秘密キーで署名します。 このデジタル署名は、アセンブリ A のマニフェストを含むポータブル実行可能 (PE) ファイルに格納されます。
 
-3.  アセンブリ B はアセンブリ A のコンシューマーです。アセンブリ B のマニフェストの参照セクションには、アセンブリ A の公開キーを表すトークンが含まれています。 トークンは完全な公開キーの一部であり、スペースを節約するために、キー自体ではなくこれが使用されます。
+3. アセンブリ B はアセンブリ A のコンシューマーです。アセンブリ B のマニフェストの参照セクションには、アセンブリ A の公開キーを表すトークンが含まれています。 トークンは完全な公開キーの一部であり、スペースを節約するために、キー自体ではなくこれが使用されます。
 
-4.  共通言語ランタイムは、アセンブリがグローバル アセンブリ キャッシュに入れられる際に、厳密な名前の署名を確認します。 実行時に厳密な名前でバインドするとき、共通言語ランタイムは、アセンブリ B のマニフェストに格納されているキーと、アセンブリ A の厳密な名前を生成するために使用されたキーを比較します。 .NET Framework のセキュリティ チェックに合格してバインドが成功すると、アセンブリ B は、アセンブリ A のビットが改ざんされていないことと、これらのビットが実際にアセンブリ A の開発者からのものであることが保証されます。
+4. 共通言語ランタイムは、アセンブリがグローバル アセンブリ キャッシュに入れられる際に、厳密な名前の署名を確認します。 実行時に厳密な名前でバインドするとき、共通言語ランタイムは、アセンブリ B のマニフェストに格納されているキーと、アセンブリ A の厳密な名前を生成するために使用されたキーを比較します。 .NET Framework のセキュリティ チェックに合格してバインドが成功すると、アセンブリ B は、アセンブリ A のビットが改ざんされていないことと、これらのビットが実際にアセンブリ A の開発者からのものであることが保証されます。
 
 > [!NOTE]
 > このシナリオは、信頼の問題を扱っていません。 厳密な名前に加えて、完全な Microsoft Authenticode 署名をアセンブリに持たせることができます。 Authenticode 署名には、信頼を確立するための証明書が含まれます。 厳密な名前を使用すると、コードにこのように署名する必要がないということに注意してください。 厳密な名前は、一意の ID を提供するだけです。
@@ -63,16 +63,16 @@ ms.locfileid: "47198892"
 
 -   遅延署名されていない。
 
-この機能は、個々のアプリケーションに対して、またはコンピューターに対して無効にすることができます。 「[方法: 厳密な名前のバイパス機能を無効にする](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)」を参照してください。
+この機能は、個々のアプリケーションに対して、またはコンピューターに対して無効にすることができます。 「[方法:厳密な名前のバイパス機能を無効にする](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)」を参照してください。
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[方法: 公開キーと秘密キーのキー ペアを作成する](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|署名とアセンブリの暗号化キー ペアを作成する方法について説明します。|
 |[方法: 厳密な名前でアセンブリに署名する](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|厳密な名前のアセンブリを作成する方法について説明します。|
 |[拡張された厳密な名前付け](../../../docs/framework/app-domains/enhanced-strong-naming.md)|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] での厳密な名前の拡張について説明します。|
-|[方法 : 厳密な名前のアセンブリを参照する](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|コンパイル時または実行時に厳密な名前のアセンブリでタイプまたはリソースを参照する方法について説明します。|
+|[方法: 厳密な名前のアセンブリを参照する](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|コンパイル時または実行時に厳密な名前のアセンブリでタイプまたはリソースを参照する方法について説明します。|
 |[方法: 厳密な名前のバイパス機能を無効にする](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|厳密な名前の署名の検証をバイパスする機能を無効にする方法について説明します。 すべてのまたは特定のアプリケーションに対して、この機能を無効にすることができます。|
 |[アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)|単一ファイル アセンブリおよびマルチファイル アセンブリの概要を示します。|
 |[Visual Studio 内でアセンブリに遅延署名する方法](/visualstudio/ide/managing-assembly-and-manifest-signing#how-to-sign-an-assembly-in-visual-studio)|アセンブリを作成した後に厳密な名前でアセンブリに署名する方法について説明します。|

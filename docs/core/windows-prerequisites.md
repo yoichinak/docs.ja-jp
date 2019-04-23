@@ -1,13 +1,14 @@
 ---
 title: Windows における .NET Core の前提条件
 description: Windows コンピューターで .NET Core アプリケーションを開発および実行する場合に必要な依存関係について説明します。
-ms.date: 12/14/2018
-ms.openlocfilehash: 2209c6e74413204c38ba54ffc538846f27d0bdf6
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.custom: updateeachvsrelease
+ms.date: 04/08/2019
+ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656116"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59313711"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows における .NET Core の前提条件
 
@@ -56,15 +57,15 @@ ms.locfileid: "53656116"
 > [!NOTE]
 > **Windows 8.1 以前のバージョン、または Windows Server 2012 R2 以前のバージョンの場合:**
 >
-> Windows のインストールが最新であり、Windows Update から修正プログラム [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) をインストールしていることを確認してください。 この更新プログラムがインストールされていない場合は、.NET Core アプリケーションを起動するときに、次のようなエラーが表示されます。`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> Windows のインストールが最新であり、Windows Update から修正プログラム [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) をインストールしていることを確認してください。 この更新プログラムがインストールされていない場合は、.NET Core アプリケーションを起動するときに、次のようなエラーが表示されます。 `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **Windows 7 または Windows Server 2008 R2 の場合:**
 >
 > KB2999226 に加え、[KB2533623](https://support.microsoft.com/en-us/help/2533623/microsoft-security-advisory-insecure-library-loading-could-allow-remot) もインストールされていることを確認します。 この更新プログラムがインストールされていない場合は、.NET Core アプリケーションを起動するときに、次のようなエラーが表示されます。`The library hostfxr.dll was found, but loading it from C:\<path_to_app>\hostfxr.dll failed`
 
-## <a name="prerequisites-for-net-core-30-preview-1"></a>.NET Core 3.0 Preview 1 の前提条件
+## <a name="prerequisites-for-net-core-30-preview-3"></a>.NET Core 3.0 Preview 3 の前提条件
 
-.NET Core 3.0 Preview 1 の前提条件は、.NET Core の他のバージョンと同じです。 ただし、Visual Studio を使用して .NET Core 3.0 プロジェクトを作成する場合は、[Visual Studio 2019 Preview](https://visualstudio.microsoft.com/vs/preview/) を使用する必要があります。 Visual Studio 2019 Preview は、Visual Studio の他のバージョンと競合することなく、side-by-side でインストールできます。
+.NET Core 3.0 Preview 3 の前提条件は、.NET Core の他のバージョンと同じです。 ただし、Visual Studio を使用して .NET Core 3.0 プロジェクトを作成する場合は、[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) を使用する必要があります。 Visual Studio 2019 は、Visual Studio の他のバージョンと競合することなく、side-by-side でインストールできます。
 
 ## <a name="prerequisites-with-visual-studio-2017"></a>Visual Studio 2017 の前提条件
     
@@ -72,7 +73,7 @@ ms.locfileid: "53656116"
 
 Visual Studio 2017 での変更の詳細については、[リリース ノート](/visualstudio/releasenotes/vs2017-relnotes)を参照してください。
 
-# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
+# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
 
 Visual Studio 2017 で .NET Core 2.2 SDK を使用して .NET Core アプリを開発するには:
 
@@ -100,7 +101,7 @@ Visual Studio が .NET Core 2.2 SDK で構成されている場合は、次の�
 * .NET Core 1.x および 2.x プロジェクトを .NET Core 2.2 に再ターゲットし、ビルドし、実行する。
 * .NET Core 2.2 の新しいプロジェクトを作成する。
 
-# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
 
 Visual Studio で .NET Core 1.x アプリを開発するには、(**[その他のツールセット]** セクションで) **[.NET Core クロスプラットフォームの開発]** ワークロードを選択して、[Visual Studio 2017 をダウンロードしてインストール](/visualstudio/install/install-visual-studio)します。
 
@@ -122,7 +123,7 @@ Visual Studio で .NET Core 1.x アプリを開発するには、(**[その他�
 >
 > * **[ヘルプ]** メニューの **[About Microsoft Visual Studio]** (Microsoft Visual Studio のバージョン情報) を選択します。
 > * **[Microsoft Visual Studio のバージョン情報]** ダイアログで、バージョン番号を確認します。
->   * .NET Core 3.0 Preview 1 アプリの場合は、Visual Studio 2019 Preview 1 以降です。
+>   * .NET Core 3.0 Preview 3 アプリの場合は、Visual Studio 2019 バージョン 16.0 以降です。
 >   * .NET Core 2.2 アプリの場合は、Visual Studio 2017 バージョン 15.9 以降です。
 >   * .NET Core 2.1 アプリの場合は、Visual Studio 2017 バージョン 15.7 以降です。
 >   * .NET Core 1.x アプリの場合は、Visual Studio 2017 バージョン 15.0 以降です。

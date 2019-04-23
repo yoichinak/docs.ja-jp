@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 09476da0-8d4c-4a4c-b969-649519dfb438
 ms.openlocfilehash: cafd8685f34537f8efb372967dc45682afbe8fa0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306379"
 ---
 # <a name="walkthrough-inheriting-from-a-windows-forms-control-with-visual-c"></a>チュートリアル: Visual C# による Windows フォーム コントロールからの継承\#
@@ -135,7 +135,7 @@ ms.locfileid: "59306379"
   
 11. **[デバッグ]** メニューの **[デバッグの開始]** をクリックします。  
   
-     `Form1` 表示されます。  
+     `Form1` が表示されます。  
   
 12. [`valueButton1`] をクリックします。  
   
@@ -143,5 +143,5 @@ ms.locfileid: "59306379"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [チュートリアル: Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [チュートリアル: ビジュアルを含む複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - GDI+, positioning images
 ms.assetid: 09f0c07a-19c0-43b4-90a2-862a10545ce8
 ms.openlocfilehash: b5f98e7bdef9ff8ed0a4cd0e040cb92a31f30503
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188449"
 ---
 # <a name="drawing-positioning-and-cloning-images-in-gdi"></a>GDI+ でのイメージの描画、配置、およびクローン作成
@@ -53,6 +53,6 @@ ms.locfileid: "59188449"
   
 ## <a name="see-also"></a>関連項目
 
-- [イメージ、ビットマップ、およびメタファイル](images-bitmaps-and-metafiles.md)
-- [方法: 描画する Graphics オブジェクトを作成する](how-to-create-graphics-objects-for-drawing.md)
+- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
+- [方法: 描画の Graphics オブジェクトを作成します。](how-to-create-graphics-objects-for-drawing.md)
 - [イメージ、ビットマップ、アイコン、およびメタファイルの操作](working-with-images-bitmaps-icons-and-metafiles.md)

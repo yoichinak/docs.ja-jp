@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307744"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>方法: Windows フォーム上の複数のコントロールを配置する
@@ -31,11 +31,11 @@ Windows ベースのアプリケーションのユーザー インターフェ�
 ## <a name="see-also"></a>関連項目
 
 - [Windows フォーム コントロール](index.md)
-- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: Windows フォームにコントロールを追加します。](how-to-add-controls-to-windows-forms.md)
 - [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
 - [Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)
-- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
-- [チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
-- [チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
-- [方法: 既存のコントロールを別の親に再配置する](how-to-reassign-existing-controls-to-a-different-parent.md)
+- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [チュートリアル: TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)
+- [チュートリアル: FlowLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)
+- [方法: 既存のコントロールを別の親に再配置します。](how-to-reassign-existing-controls-to-a-different-parent.md)

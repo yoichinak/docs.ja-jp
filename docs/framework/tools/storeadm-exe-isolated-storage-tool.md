@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b81202b8-d91d-4b23-9c53-4a112f74a44a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 13640e508dafe28b53f4254656afe744b90a2eb2
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 906d9d4dfd1c1082a4b49b7143f590967dcc7fd0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491478"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59092268"
 ---
 # <a name="storeadmexe-isolated-storage-tool"></a>Storeadm.exe (分離ストレージ ツール)
 分離ストレージ ツールは、現在のユーザーに関するすべての既存ストアの一覧表示または削除を行います。  
@@ -61,6 +61,7 @@ storeadm [/list][/machine][/remove][/roaming][/quiet]
  ユーザーに対してローミングが実際に有効になっているかどうかは、Storeadm.exe の管理に影響を与えません。 オプションを指定せずに Storeadm.exe を実行した場合、すべてのアクションがローカル ストアに適用されます。 **/roaming** オプションを指定した場合は、すべてのアクションが、ローミングできるストアに適用されます。 **/machine** オプションを指定してこのツールを実行すると、すべてのアクションがコンピューター ストアに適用されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ツール](../../../docs/framework/tools/index.md)
 - [分離ストレージ](../../../docs/standard/io/isolated-storage.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

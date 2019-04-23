@@ -6,16 +6,16 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sort mode
 ms.assetid: 43715887-2df9-4da7-bcf1-b9c7c842b2bf
 ms.openlocfilehash: b8f6048946d367dd79b1ce0d23d84446ffdb1115
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106667"
 ---
 # <a name="column-sort-modes-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロール内の列の並べ替えモード
 <xref:System.Windows.Forms.DataGridView> 列では、次の 3 つの並べ替えモードがあります。 使用して各列の並べ替えモードを指定、<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A>プロパティは、次のいずれかに設定することができる列の<xref:System.Windows.Forms.DataGridViewColumnSortMode>列挙値。  
   
-|`DataGridViewColumnSortMode` 値|説明|  
+|`DataGridViewColumnSortMode` の値|説明|  
 |----------------------------------------|-----------------|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>|テキスト ボックスの列の既定値します。 選択範囲の列ヘッダーは使用しないと、列ヘッダーをクリックすると、自動的に並べ替えます、<xref:System.Windows.Forms.DataGridView>この列で並べ替え順序を示すグリフを表示します。|  
 |<xref:System.Windows.Forms.DataGridViewColumnSortMode.NotSortable>|非テキスト ボックスの列の既定値します。 プログラムでこの列を並べ替えることができます。ただし、ものではありません、並べ替えのため、並べ替えグリフの領域が予約されていません。|  
@@ -67,5 +67,5 @@ ms.locfileid: "59106667"
 - <xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumnHeaderCell.SortGlyphDirection%2A?displayProperty=nameWithType>
 - [Windows フォームの DataGridView コントロールでのデータの並べ替え](sorting-data-in-the-windows-forms-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロール内の列の並べ替えモードを設定する](set-the-sort-modes-for-columns-wf-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロールの並べ替え機能をカスタマイズする](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)
+- [方法: Windows フォームの DataGridView コントロール内の列の並べ替えモードを設定します。](set-the-sort-modes-for-columns-wf-datagridview-control.md)
+- [方法: Windows フォームの DataGridView コントロールでの並べ替えをカスタマイズします。](how-to-customize-sorting-in-the-windows-forms-datagridview-control.md)

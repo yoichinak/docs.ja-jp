@@ -5,10 +5,10 @@ f1_keywords:
 - vbrApplicationLog_ExhaustedPossibleStreamNames
 ms.assetid: 33994f52-8efb-4790-a459-033e5c1db632
 ms.openlocfilehash: 540ff3fbba72d33b2efaa58ad7a8019628f5e83f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344755"
 ---
 # <a name="unable-to-obtain-a-stream-for-the-log"></a>ログのストリームを取得できません

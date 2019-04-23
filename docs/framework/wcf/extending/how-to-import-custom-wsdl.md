@@ -3,10 +3,10 @@ title: '方法: カスタム WSDL をインポートする'
 ms.date: 03/30/2017
 ms.assetid: ddc3718d-ce60-44f6-92af-a5c67477dd99
 ms.openlocfilehash: d9a4609f08a95bbecca81aa6667102a0e4a73c67
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303792"
 ---
 # <a name="how-to-import-custom-wsdl"></a>方法: カスタム WSDL をインポートする

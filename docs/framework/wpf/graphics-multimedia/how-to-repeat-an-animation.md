@@ -8,10 +8,10 @@ helpviewer_keywords:
 - animation [WPF], repeating
 ms.assetid: e6f3b068-eeeb-47fd-8d40-8848c31f1e1e
 ms.openlocfilehash: a80f72b0e67c13890d4befcbd5ab7c4a92a93fe7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150541"
 ---
 # <a name="how-to-repeat-an-animation"></a>方法: アニメーションを反復する
@@ -32,6 +32,6 @@ ms.locfileid: "59150541"
 
 - [反復サイクル中にアニメーション値を累積する](how-to-accumulate-animation-values-during-repeat-cycles.md)
 - [タイムラインを自動的に反転するかどうかを指定する](how-to-specify-whether-a-timeline-automatically-reverses.md)
-- [アニメーションおよびタイミングに関する「方法」トピック](animation-and-timing-how-to-topics.md)
+- [アニメーションとタイミングに関するトピック](animation-and-timing-how-to-topics.md)
 - [アニメーションの概要](animation-overview.md)
 - [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)

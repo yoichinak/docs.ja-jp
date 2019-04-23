@@ -3,12 +3,12 @@ title: null 許容参照型を使用して設計する
 description: この高度なチュートリアルでは、null 許容参照型の概要について説明します。 参照値で null がいつ許容されるかに関する設計意図を表すことで、コンパイラで null が許容されるようにします。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 7f071dedd2e7a611b08a3fd37a7c0b3182be049b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846585"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296148"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>チュートリアル: null 許容参照型と null 非許容参照型を使用して設計意図をもっと明確に示す
 
@@ -24,7 +24,7 @@ C# 8 には **null 許容参照型**が導入されています。これは、nu
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 ベータ コンパイラも実行されるようにします。 C# 8 ベータ コンパイラは、[Visual Studio 2019 Preview 4](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019+preview) または [.NET Core 3.0 Preview 3](https://dotnet.microsoft.com/download/dotnet-core/3.0) で利用できます。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 ベータ コンパイラも実行されるようにします。 C# 8 ベータ コンパイラは、[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) または最新の [.NET Core 3.0 プレビュー](https://dotnet.microsoft.com/download/dotnet-core/3.0)で利用できます。
 
 このチュートリアルでは、.NET と、C# と Visual Studio または .NET Core CLI のいずれかに精通していることを前提としています。
 
@@ -45,7 +45,6 @@ C# 8 には **null 許容参照型**が導入されています。これは、nu
 
 > [!NOTE]
 > C# 8 が (プレビュー モードではなく) リリースされると、`NullableContextOptions` 要素は新しいプロジェクト テンプレートによって追加されるようになります。 それまでは、手動で追加する必要があります。
-
 
 ### <a name="design-the-types-for-the-application"></a>アプリケーション用の型を設計する
 

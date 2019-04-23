@@ -1,12 +1,12 @@
 ---
-title: <routing> (行中)  <serviceBehavior>
+title: <routing> の <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
 ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202509"
 ---
 # <a name="routing-of-servicebehavior"></a>\<ルーティング > の\<serviceBehavior >

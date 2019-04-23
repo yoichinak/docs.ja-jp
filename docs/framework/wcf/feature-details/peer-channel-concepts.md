@@ -3,10 +3,10 @@ title: ピア チャネルの概要
 ms.date: 03/30/2017
 ms.assetid: 379c2c0b-a44f-4423-9480-4739e7f18614
 ms.openlocfilehash: 8955f6ab18e7fddac2f99b30be38532781c7ae21
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140948"
 ---
 # <a name="peer-channel-concepts"></a>ピア チャネルの概要

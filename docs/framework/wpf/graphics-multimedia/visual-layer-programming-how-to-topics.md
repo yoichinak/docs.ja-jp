@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual layer [WPF]
 ms.assetid: ac550423-60a3-43e6-a0bc-d65ef026e0cb
 ms.openlocfilehash: f41f9cf2b6deb30f5f1960cfab6e898f7032901e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142689"
 ---
 # <a name="visual-layer-programming-how-to-topics"></a>ビジュアル層プログラミングに関する「方法」トピック

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - interfaces [Visual Basic], creating
 ms.assetid: ded82af2-9f52-4232-98ef-fe458180f112
 ms.openlocfilehash: faed4d3c9498938e022daf821dd0aefbcbcf2e8d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322031"
 ---
 # <a name="walkthrough-creating-and-implementing-interfaces-visual-basic"></a>チュートリアル: 作成するインターフェイスと実装 (Visual Basic)

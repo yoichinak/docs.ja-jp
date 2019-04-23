@@ -11,11 +11,11 @@ helpviewer_keywords:
 - getting [WPF], return values of page functions
 ms.assetid: 75470af6-256c-4c46-87e7-705080723a1c
 ms.openlocfilehash: 054ffe16690425e118fcac481b2a5ff63f9450f2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59125069"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973305"
 ---
 # <a name="how-to-get-the-return-value-of-a-page-function"></a>方法: ページ関数の戻り値を取得する
 この例では、ページ関数によって返される結果を取得する方法を示します。  

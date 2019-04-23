@@ -5,10 +5,10 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111411"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
@@ -16,7 +16,7 @@ ms.locfileid: "59111411"
   
 <a name="Improved_Quality_and_Performance_of_Text"></a>   
 ## <a name="improved-quality-and-performance-of-text"></a>テキストに関する品質とパフォーマンスの向上  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のテキストは、テキストのわかりやすさと読みやすさを高める [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] を使用して描画されます。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 開発したソフトウェア テクノロジ[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]ラップトップや Pocket PC の画面、フラット パネル モニターなどの既存の Lcd (液晶ディスプレイ) 上のテキストの読みやすさを向上します。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] これにより、ピクセルの小数部の配置の文字でより忠実実際の形状に表示されるテキストをサブピクセル レンダリングを使用します。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] での [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] のもう 1 つの改良点は、y 方向のアンチエイリアシングです。これにより、テキスト文字の緩やかな曲線部の上下が滑らかになります。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] の機能の詳細については、「[ClearType の概要](cleartype-overview.md)」をご覧ください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のテキストは、テキストのわかりやすさと読みやすさを高める [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] を使用して描画されます。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、ラップトップや Pocket PC の画面、フラット パネル モニターなど、既存の LCD (液晶ディスプレイ) でのテキストの読みやすさを向上させるために [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] が開発したソフトウェア テクノロジです。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、ピクセルの画素レベルで文字を表示調整することで実際の形状を忠実に再現したテキストを表示できる、サブピクセル レンダリングを採用しています。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] での [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] のもう 1 つの改良点は、y 方向のアンチエイリアシングです。これにより、テキスト文字の緩やかな曲線部の上下が滑らかになります。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] の機能の詳細については、「[ClearType の概要](cleartype-overview.md)」をご覧ください。  
   
  ![ClearType y 方向アンチエイリアシングを含むテキスト](./media/typography-in-wpf/text-y-direction-antialiasing.gif)  
 ClearType の y 方向アンチエイリアシングを適用したテキスト  
@@ -43,7 +43,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
 <a name="Enhanced_International_Text_Support"></a>   
 ## <a name="enhanced-international-text-support"></a>国際対応テキストのサポートの強化  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 次の機能を提供することで、国際対応テキストのサポートを示します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、次の機能を提供することで、国際対応テキストのサポートを強化しています。  
   
 -   すべての書記体系における、適用可能な単位を使用した自動行間隔設定。  
   
@@ -53,7 +53,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>フォントのサポートの強化  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 次の機能を提供することで強化されたフォントのサポートを提供します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、次の機能を提供することで、フォントのサポートを強化しています。  
   
 -   すべてのテキストに対応する Unicode。 フォントの動作や選択に文字セットやコードページが不要になりました。  
   
@@ -71,7 +71,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>新しいテキスト API (アプリケーション プログラミング インターフェイス)  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] いくつかのテキストを提供します。[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]開発者がアプリケーションでテキストを含めるときに使用します。 これらの [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] は、次の 3 つのカテゴリに分類されます。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、開発者がアプリケーションにテキストを含めるときに使用できるいくつかのテキスト [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を提供します。 これらの [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] は、次の 3 つのカテゴリに分類されます。  
   
 -   **レイアウトとユーザー インターフェイス**:  [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] に対応した一般的なテキスト コントロールです。  
   
@@ -83,7 +83,7 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
  最上位レベルの機能、テキスト[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]一般的な提供[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]などのコントロール<xref:System.Windows.Controls.Label>、 <xref:System.Windows.Controls.TextBlock>、および<xref:System.Windows.Controls.TextBox>します。 これらのコントロールは、アプリケーション内に基本的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 要素を提供し、テキストの表示や操作を簡単に実行できるようにします。 などのコントロール<xref:System.Windows.Controls.RichTextBox>と<xref:System.Windows.Controls.PasswordBox>より高度なのメッセージまたは専用のテキスト処理を有効にします。 などのクラスと<xref:System.Windows.Documents.TextRange>、 <xref:System.Windows.Documents.TextSelection>、および<xref:System.Windows.Documents.TextPointer>便利なテキスト操作を有効にします。 これら[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]コントロールなどのプロパティを提供<xref:System.Windows.Controls.Control.FontFamily%2A>、 <xref:System.Windows.Controls.Control.FontSize%2A>、および<xref:System.Windows.Controls.Control.FontStyle%2A>テキストを表示するために使用されるフォントを制御できます。  
   
 #### <a name="using-bitmap-effects-transforms-and-text-effects"></a>ビットマップ効果、変換、テキスト効果の使用  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ビットマップ効果、変換、およびテキスト効果などの機能を利用して、ひきつけるテキストを作成することができます。 テキストに標準タイプのドロップ シャドウ効果を適用した例を次に示します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、ビットマップ効果、変換、テキスト効果などの機能を利用して、人の目をひきつけるテキストを作成できます。 テキストに標準タイプのドロップ シャドウ効果を適用した例を次に示します。  
   
  ![テキストの影のぼかしを&#61;0.25](./media/typography-in-wpf/drop-shadow-text-effect.jpg) 
   
@@ -156,5 +156,5 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
 - [OpenType フォントの機能](opentype-font-features.md)
 - [書式設定されたテキストの描画](drawing-formatted-text.md)
 - [テキストの高度な書式設定](advanced-text-formatting.md)
-- [テキスト](optimizing-performance-text.md)
+- [[テキスト]](optimizing-performance-text.md)
 - [Microsoft の文字体裁](https://docs.microsoft.com/typography/)

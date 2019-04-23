@@ -5,10 +5,10 @@ ms.assetid: 9cf47c5b-0bb2-45df-9437-61cd7e7c2f4d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ebb3283d089f4e823db051cd7ee450a1df6b866e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096941"
 ---
 # <a name="mitigation-custom-imessagefilterprefiltermessage-implementations"></a>軽減策: カスタムの IMessageFilter.PreFilterMessage 実装

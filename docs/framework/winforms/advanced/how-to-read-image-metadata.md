@@ -9,10 +9,10 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173616"
 ---
 # <a name="how-to-read-image-metadata"></a>方法: イメージ メタデータを読み取る
@@ -40,7 +40,7 @@ ms.locfileid: "59173616"
   
 |数値|説明|  
 |-------------------|-----------------|  
-|1|A `Byte`|  
+|1|`Byte`。|  
 |2|配列の`Byte`ascii 形式でエンコードされたオブジェクト|  
 |3|16 ビット整数|  
 |4|32 ビット整数|  
@@ -125,5 +125,5 @@ ms.locfileid: "59173616"
   
 ## <a name="see-also"></a>関連項目
 
-- [イメージ、ビットマップ、およびメタファイル](images-bitmaps-and-metafiles.md)
+- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
 - [イメージ、ビットマップ、アイコン、およびメタファイルの操作](working-with-images-bitmaps-icons-and-metafiles.md)

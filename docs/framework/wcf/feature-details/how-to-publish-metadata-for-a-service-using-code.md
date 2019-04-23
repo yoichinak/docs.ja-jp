@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 51407e6d-4d87-42d5-be7c-9887b8652006
 ms.openlocfilehash: 870142724321629d6dbeccd4118b814283901776
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297968"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-code"></a>方法: コードを使用してサービスのメタデータを公開する
@@ -43,7 +43,7 @@ ms.locfileid: "59297968"
      [!code-csharp[htPublishMetadataCode#4](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#4)]
      [!code-vb[htPublishMetadataCode#4](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#4)]  
   
-4. 設定、<xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A>プロパティを `true.`  
+4. <xref:System.ServiceModel.Description.ServiceMetadataBehavior.HttpGetEnabled%2A> プロパティを `true.` に設定します。  
   
      [!code-csharp[htPublishMetadataCode#5](../../../../samples/snippets/csharp/VS_Snippets_CFX/htpublishmetadatacode/cs/program.cs#5)]
      [!code-vb[htPublishMetadataCode#5](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htpublishmetadatacode/vb/program.vb#5)]  
@@ -88,8 +88,8 @@ ms.locfileid: "59297968"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: マネージド アプリケーションで WCF サービスをホストする](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [方法: マネージ アプリケーションで WCF サービスをホストします。](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [自己ホスト](../../../../docs/framework/wcf/samples/self-host.md)
 - [メタデータ アーキテクチャの概要](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [メタデータを使用する](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [方法: 構成ファイルを使用してサービスのメタデータを公開する](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)
+- [方法: 構成ファイルを使用してサービスのメタデータを公開します。](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-a-configuration-file.md)

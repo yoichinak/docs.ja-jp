@@ -1,4 +1,12 @@
-### <a name="wf-serializes-expressionsliterallttgt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF による Expressions.Literal&lt;T&gt; DateTimes のシリアル化の方法が変わった (カスタム XAML パーサーが機能しなくなる)
+---
+ms.openlocfilehash: 335647f899c79eff22e313fa40b2e2a73e7cfff0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804352"
+---
+### <a name="wf-serializes-expressionsliteralt-datetimes-differently-now-breaks-custom-xaml-parsers"></a>WF による Expressions.Literal\<T> DateTimes のシリアル化の方法が変わった (カスタム XAML パーサーが機能しなくなる)
 
 |   |   |
 |---|---|
@@ -7,4 +15,3 @@
 |スコープ|エッジ|
 |Version|4.5|
 |型|ランタイム|
-

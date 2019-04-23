@@ -5,10 +5,10 @@ f1_keywords:
 - vbrAppModel_NoStartupForm
 ms.assetid: 8e04af49-4bef-49de-a7ec-e407e9873da7
 ms.openlocfilehash: 2bbae640ca65c95411cae24a9506fe2076b62cba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296473"
 ---
 # <a name="a-startup-form-has-not-been-specified"></a>スタートアップ フォームが指定されていません。

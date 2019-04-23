@@ -8,10 +8,10 @@ helpviewer_keywords:
 - certificates [WCF], referencing X.509 certificates
 ms.assetid: a6de1c63-e450-4640-ad08-ad7302dbfbfc
 ms.openlocfilehash: bd911b1586f7f4a4816efa32480ef99ca12404f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176203"
 ---
 # <a name="how-to-consistently-reference-x509-certificates"></a>方法: 一貫性を保って X.509 証明書を参照する

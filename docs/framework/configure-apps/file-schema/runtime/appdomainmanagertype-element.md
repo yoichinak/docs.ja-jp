@@ -8,10 +8,10 @@ ms.assetid: ae8d5a7e-e7f7-47f7-98d9-455cc243a322
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7aa13d26ac11ed624caa4c9704325f2d604418bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164217"
 ---
 # <a name="appdomainmanagertype-element"></a>\<appDomainManagerType > 要素

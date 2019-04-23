@@ -1,5 +1,5 @@
 ---
-title: <remove> 要素の<listeners>の <source>
+title: <remove> の <listeners> の <source> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sources/source/listeners/remove
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - <remove> element for <listeners> for <source>
 ms.assetid: 3ff6b578-273d-407f-b07f-8251f1f9f5d0
 ms.openlocfilehash: 4809c471deb51e0560b438b5a2c8849daad34ca0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120134"
 ---
 # <a name="remove-element-for-listeners-for-source"></a>\<削除 > 要素の\<リスナー > の\<ソース >

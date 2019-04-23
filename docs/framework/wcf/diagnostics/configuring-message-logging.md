@@ -5,10 +5,10 @@ helpviewer_keywords:
 - message logging [WCF]
 ms.assetid: 0ff4c857-8f09-4b85-9dc0-89084706e4c9
 ms.openlocfilehash: e1d4c91ee282233e862ae14bf8d650ab2a754462
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112087"
 ---
 # <a name="configuring-message-logging"></a>メッセージ ログの構成
@@ -78,7 +78,7 @@ ms.locfileid: "59112087"
  このレイヤーで記録されるメッセージは、ネットワーク上での転送に向けてエンコードできる状態になっているもの、および転送後にデコードできる状態になっているものです。 フィルターを定義した場合は、そのフィルターと一致するメッセージだけが記録されます。 それ以外の場合は、トランスポート レイヤーのすべてのメッセージが記録されます。 このレイヤーでは、信頼できるメッセージング メッセージを含むすべてのインフラストラクチャ メッセージが記録されます。 ストリーム メッセージの場合は、ヘッダーだけが記録されます。 また、セキュリティで保護されたメッセージも、HTTPS などのセキュリティで保護されたトランスポートを使用している場合を除き、暗号化された状態でこのレベルで記録されます。  
   
 ### <a name="malformed-level"></a>不正レベル  
- 形式が正しくないメッセージは、処理のいずれかの段階にある WCF スタックによって拒否されたメッセージです。 正しくないメッセージは、そのままの状態で記録されます。暗号化されていれば、暗号化されたままで、適切でない XML も、そのままになります。 `maxSizeOfMessageToLog` CDATA として記録されるメッセージのサイズを定義します。 `maxSizeOfMessageToLog` の既定値は 256 K です。 この属性の詳細については、その他のオプションを参照してください。  
+ 形式が正しくないメッセージは、処理のいずれかの段階にある WCF スタックによって拒否されたメッセージです。 正しくないメッセージは、そのままの状態で記録されます。暗号化されていれば、暗号化されたままで、適切でない XML も、そのままになります。 `maxSizeOfMessageToLog` は、CDATA として記録されるメッセージのサイズを定義します。 `maxSizeOfMessageToLog` の既定値は 256 K です。 この属性の詳細については、その他のオプションを参照してください。  
   
 ### <a name="other-options"></a>その他のオプション  
  ログ レベルに加えて、次のオプションを指定することができます。  

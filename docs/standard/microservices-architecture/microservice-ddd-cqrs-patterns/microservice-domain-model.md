@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 7df274e90d5466581b6f93fe210b6c9310815833
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 5c2ac880462851dd18735ced189b3641a759c8ca
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465894"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613058"
 ---
 # <a name="design-a-microservice-domain-model"></a>マイクロサービス ドメイン モデルの設計
 
@@ -58,13 +58,13 @@ Martin Fowler は、投稿した [AnemicDomainModel](https://martinfowler.com/bl
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **DevIQ。ドメイン エンティティ** \
-  [https://deviq.com/entity/](https://deviq.com/entity/)
+  <https://deviq.com/entity/>
 
 - **Martin Fowler。ドメイン モデル** \
-  [https://martinfowler.com/eaaCatalog/domainModel.html](https://martinfowler.com/eaaCatalog/domainModel.html)
+  <https://martinfowler.com/eaaCatalog/domainModel.html>
 
 - **Martin Fowler。貧血症ドメイン モデル** \
-  [https://martinfowler.com/bliki/AnemicDomainModel.html](https://martinfowler.com/bliki/AnemicDomainModel.html)
+  <https://martinfowler.com/bliki/AnemicDomainModel.html>
 
 ### <a name="the-value-object-pattern"></a>値オブジェクト パターン
 
@@ -83,16 +83,16 @@ EF Core 2.0 には、後で詳しく説明しているように、値オブジ�
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **Martin Fowler。値オブジェクト パターン** \
-  [https://martinfowler.com/bliki/ValueObject.html](https://martinfowler.com/bliki/ValueObject.html)
+  <https://martinfowler.com/bliki/ValueObject.html>
 
 - **値オブジェクト** \
-  [https://deviq.com/value-object/](https://deviq.com/value-object/)
+  <https://deviq.com/value-object/>
 
 - **テスト駆動型開発での値オブジェクト** \
   [https://leanpub.com/tdd-ebook/read\#leanpub-auto-value-objects](https://leanpub.com/tdd-ebook/read#leanpub-auto-value-objects)
 
 - **Eric Evans。Domain-Driven Design:Tackling Complexity in the Heart of Software (ドメイン駆動設計: ソフトウェア中心部の複雑さへの取り組み)。** (書籍、値オブジェクトについての記載あり) \
-  [https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/](https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/)
+  <https://www.amazon.com/Domain-Driven-Design-Tackling-Complexity-Software/dp/0321125215/>
 
 ### <a name="the-aggregate-pattern"></a>集約パターン
 
@@ -145,13 +145,13 @@ public class Order : Entity, IAggregateRoot
   <http://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_3.pdf>
 
 - **Sergey Grybniak。DDD 戦術的デザイン パターン** \
-  [https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part](https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part)
+  <https://www.codeproject.com/Articles/1164363/Domain-Driven-Design-Tactical-Design-Patterns-Part>
 
 - **Chris Richardson。集約を使用したトランザクション マイクロサービスの開発** \
-  [https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson](https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson)
+  <https://www.infoq.com/articles/microservices-aggregates-events-cqrs-part-1-richardson>
 
 - **DevIQ。集約パターン** \
-  [https://deviq.com/aggregate-pattern/](https://deviq.com/aggregate-pattern/)
+  <https://deviq.com/aggregate-pattern/>
 
 >[!div class="step-by-step"]
 >[前へ](ddd-oriented-microservice.md)

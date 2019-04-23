@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Panel control [WPF], height properties of elements
 ms.assetid: 5ab9e781-dbb8-469a-a3c8-cf38ce312647
 ms.openlocfilehash: fb655630336c3b69afdc726a2e3c5a2cb8838667
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59221588"
 ---
 # <a name="how-to-set-the-height-properties-of-an-element"></a>方法: 要素の Height プロパティを設定する

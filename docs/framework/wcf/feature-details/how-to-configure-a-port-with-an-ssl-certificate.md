@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: b8abcc8e-a5f5-4317-aca5-01e3c40ab24d
 ms.openlocfilehash: d709123895f361c1d2268a218b4163c8d195e1b4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345587"
 ---
 # <a name="how-to-configure-a-port-with-an-ssl-certificate"></a>方法: SSL 証明書を使用してポートを構成する

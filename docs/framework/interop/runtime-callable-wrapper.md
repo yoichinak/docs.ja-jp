@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 7e542583-1e31-4e10-b523-8cf2f29cb4a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1962815b8e294b1321320ce500554046d05f4c8f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: 5a4a2f59ee81ac7884050f588d9bd437977490e9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654134"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59210139"
 ---
 # <a name="runtime-callable-wrapper"></a>ランタイム呼び出し可能ラッパー
 共通言語ランタイムは、ランタイム呼び出し可能ラッパー (RCW) と呼ばれるプロキシを介して COM オブジェクトを公開します。 .NET クライアントでは RCW が普通のオブジェクトとして示されますが、その主な機能は、.NET クライアントと COM オブジェクトの間で呼び出しをマーシャリングすることです。  
@@ -25,8 +25,7 @@ ms.locfileid: "58654134"
 次の図は、ランタイム呼び出し可能ラッパー経由で COM オブジェクトにアクセスするプロセスを示しています。
 
  ![RCW 経由で COM オブジェクトにアクセスするプロセス。](./media/runtime-callable-wrapper/runtime-callable-wrapper.gif)  
-   
-  
+
  ランタイムは、タイプ ライブラリから派生したメタデータを使用して、呼び出される COM オブジェクトとそのオブジェクトのラッパーの両方を作成します。 各 RCW は、ラップする COM オブジェクトでインターフェイス ポインターのキャッシュを保持し、RCW が不要になった時点で、COM オブジェクトでのその参照を解放します。 ランタイムは、RCW でのガベージ コレクションを実行します。  
   
  RCW は、他のさまざまなアクティビティも実行しますが、ラップされたオブジェクトのために、マネージド コードとアンマネージド コードの間でデータをマーシャリングします。 具体的には、RCW はクライアントとサーバーの間でデータの異なる表現が渡されるとき、常にメソッド引数やメソッドの戻り値のマーシャリングを提供します。  
@@ -60,6 +59,7 @@ ms.locfileid: "58654134"
 |**IEnumVARIANT**|列挙をサポートする COM 型がコレクションとして扱われることを可能にします。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [COM ラッパー](com-wrappers.md)
 - [COM 呼び出し可能ラッパー](com-callable-wrapper.md)
 - [タイプ ライブラリからアセンブリへの変換の要約](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/k83zzh38(v=vs.100))

@@ -3,10 +3,10 @@ title: SQL Server でのデータの暗号化
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
 ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102168"
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server でのデータの暗号化
@@ -36,5 +36,5 @@ SQL Server には、証明書、非対称キー、対称キーのいずれかを
 - [SQL Server での認証](../../../../../docs/framework/data/adonet/sql/authentication-in-sql-server.md)
 - [SQL Server のサーバー ロールとデータベース ロール](../../../../../docs/framework/data/adonet/sql/server-and-database-roles-in-sql-server.md)
 - [SQL Server における所有権とユーザーとスキーマの分離](../../../../../docs/framework/data/adonet/sql/ownership-and-user-schema-separation-in-sql-server.md)
-- [SQL Server の承認と権限](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
+- [SQL Server の承認とアクセス許可](../../../../../docs/framework/data/adonet/sql/authorization-and-permissions-in-sql-server.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

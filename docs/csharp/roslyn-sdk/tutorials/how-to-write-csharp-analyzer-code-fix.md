@@ -3,12 +3,12 @@ title: 'チュートリアル: 最初のアナライザーとコード修正を�
 description: このチュートリアルでは、.NET Compiler SDK (Roslyn API) を使用してアナライザーとコード修正を作成する手順を詳しく説明します。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 665dac9d36933c35be19cc826b8b4dc614c38ed2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677178"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427501"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>チュートリアル: 最初のアナライザーとコード修正を作成する
 

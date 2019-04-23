@@ -10,10 +10,10 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107069"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>パフォーマンスの最適化:レイアウトとデザイン
@@ -57,7 +57,7 @@ ms.locfileid: "59107069"
 ### <a name="build-your-tree-top-down"></a>ツリーはトップダウンで作成する  
  論理ツリーのノードが追加または削除されると、ノードの親とそのすべての子でプロパティの無効化が行われます。 このため、常にトップダウンの作成パターンに従って、検証済みのノードで無駄に無効化が行われないようにする必要があります。 次の表は、ツリーを作成する場合とボトムアップ ツリーが 150 レベルの深さを 1 つを上から下への実行速度の違いを示しています。<xref:System.Windows.Controls.TextBlock>と<xref:System.Windows.Controls.DockPanel>各レベル。  
   
-|**アクション**|**ツリーの作成 (ミリ秒)**|**レンダリング-ツリー作成 (ミリ秒) にはが含まれています**|  
+|**動作**|**ツリーの作成 (ミリ秒)**|**レンダリング-ツリーの作成を含む (ミリ秒)**|  
 |----------------|---------------------------------|-------------------------------------------------|  
 |ボトムアップ|366|454|  
 |トップダウン|11|96|  
@@ -77,7 +77,7 @@ ms.locfileid: "59107069"
 - [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
 - [オブジェクトの動作](optimizing-performance-object-behavior.md)
 - [アプリケーション リソース](optimizing-performance-application-resources.md)
-- [テキスト](optimizing-performance-text.md)
+- [[テキスト]](optimizing-performance-text.md)
 - [データ バインディング](optimizing-performance-data-binding.md)
 - [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)
 - [レイアウト](layout.md)

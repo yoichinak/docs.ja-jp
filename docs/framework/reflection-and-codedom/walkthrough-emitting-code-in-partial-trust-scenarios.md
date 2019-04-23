@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c2c5acf5cad41dba46b9f711ee842200ae86cc9b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54712575"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59299476"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>チュートリアル: 部分信頼シナリオにおけるコード出力
 リフレクション出力は、完全信頼または部分信頼において同じ API セットを使用しますが、部分的に信頼されるコードでは実行する機能によって特定のアクセス許可が必要になります。 リフレクション出力には、匿名でホストされる動的メソッドという機能があります。この機能は、透過的セキュリティ アセンブリによって部分信頼で使用されます。  
@@ -59,12 +59,12 @@ ms.locfileid: "54712575"
   
 ##### <a name="to-create-an-application-domain-with-partial-trust"></a>部分信頼でアプリケーション ドメインを作成するには  
   
-1.  サンドボックス化されたアプリケーション ドメイン内のアセンブリに付与するアクセス許可セットを作成します。 ここでは、インターネット ゾーンのアクセス許可セットを使用します。  
+1. サンドボックス化されたアプリケーション ドメイン内のアセンブリに付与するアクセス許可セットを作成します。 ここでは、インターネット ゾーンのアクセス許可セットを使用します。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#2)]
      [!code-vb[HowToEmitCodeInPartialTrust#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#2)]  
   
-2.  アプリケーション ドメインをアプリケーション パスで初期化するため、<xref:System.AppDomainSetup> オブジェクトを作成します。  
+2. アプリケーション ドメインをアプリケーション パスで初期化するため、<xref:System.AppDomainSetup> オブジェクトを作成します。  
   
     > [!IMPORTANT]
     >  単純にするため、このコード例では現在のフォルダーを使用します。 実際にインターネットから取得されたコードを実行する場合は、信頼できないコード用の別のフォルダーを使用してください。詳細については、「[How to:Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 (方法: サンドボックスで部分信頼コードを実行する) を参照してください。  
@@ -72,7 +72,7 @@ ms.locfileid: "54712575"
      [!code-csharp[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#3)]
      [!code-vb[HowToEmitCodeInPartialTrust#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#3)]  
   
-3.  アプリケーション ドメインで実行されるすべてのアセンブリについて、アプリケーション ドメイン設定情報、および許可セットを指定して、アプリケーション ドメインを作成します。  
+3. アプリケーション ドメインで実行されるすべてのアセンブリについて、アプリケーション ドメイン設定情報、および許可セットを指定して、アプリケーション ドメインを作成します。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
@@ -89,7 +89,7 @@ ms.locfileid: "54712575"
   
 ##### <a name="to-create-an-application-domain-with-partial-trust-plus-rma"></a>RMA を設定した部分信頼でアプリケーション ドメインを作成するには  
   
-1.  <xref:System.Security.Permissions.ReflectionPermission> (RMA) フラグを指定した新しい <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> オブジェクトを作成し、<xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> メソッドを使用して、許可セットにアクセス許可を追加します。  
+1. <xref:System.Security.Permissions.ReflectionPermission> (RMA) フラグを指定した新しい <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> オブジェクトを作成し、<xref:System.Security.PermissionSet.SetPermission%2A?displayProperty=nameWithType> メソッドを使用して、許可セットにアクセス許可を追加します。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#7)]
      [!code-vb[HowToEmitCodeInPartialTrust#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#7)]  
@@ -99,7 +99,7 @@ ms.locfileid: "54712575"
     > [!NOTE]
     >  RMA は、匿名でホストされる動的メソッドの 1 つの機能です。 通常の動的メソッドが JIT 参照範囲チェックをスキップした場合、出力コードには完全信頼が必要です。  
   
-2.  アプリケーション ドメイン設定情報、および許可セットを指定して、アプリケーション ドメインを作成します。  
+2. アプリケーション ドメイン設定情報、および許可セットを指定して、アプリケーション ドメインを作成します。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#8)]
      [!code-vb[HowToEmitCodeInPartialTrust#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#8)]  
@@ -110,24 +110,24 @@ ms.locfileid: "54712575"
   
 #### <a name="to-define-and-execute-a-method-in-an-application-domain"></a>アプリケーション ドメインでメソッドを定義して実行するには  
   
-1.  <xref:System.MarshalByRefObject> から派生するクラスを定義します。 これにより、他のアプリケーション ドメインにクラスのインスタンスを作成し、アプリケーション ドメインの境界を越えてメソッドを呼び出すことができます。 この例のクラスの名前は `Worker` です。  
+1. <xref:System.MarshalByRefObject> から派生するクラスを定義します。 これにより、他のアプリケーション ドメインにクラスのインスタンスを作成し、アプリケーション ドメインの境界を越えてメソッドを呼び出すことができます。 この例のクラスの名前は `Worker` です。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#10)]
      [!code-vb[HowToEmitCodeInPartialTrust#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#10)]  
   
-2.  実行するコードを含むパブリック メソッドを定義します。 この例では、コードは単純な動的メソッドを出力し、メソッドを実行するためのデリゲートを作成して、デリゲートを呼び出します。  
+2. 実行するコードを含むパブリック メソッドを定義します。 この例では、コードは単純な動的メソッドを出力し、メソッドを実行するためのデリゲートを作成して、デリゲートを呼び出します。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#11)]
      [!code-vb[HowToEmitCodeInPartialTrust#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#11)]  
   
-3.  メイン プログラムで、アセンブリの表示名を取得します。 この名前は、サンドボックス化されたアプリケーション ドメインで `Worker` クラスのインスタンスを作成するときに使用します。  
+3. メイン プログラムで、アセンブリの表示名を取得します。 この名前は、サンドボックス化されたアプリケーション ドメインで `Worker` クラスのインスタンスを作成するときに使用します。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#14)]
      [!code-vb[HowToEmitCodeInPartialTrust#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#14)]  
   
-4.  メイン プログラムでは、このチュートリアルの[最初の手順](#Setting_up)で説明したとおり、サンドボックス化されたアプリケーション ドメインを作成します。 `Internet` メソッドはパブリック メソッドのみを使用するため、`SimpleEmitDemo` アクセス許可セットに任意のアクセス許可を追加しないでください。  
+4. メイン プログラムでは、このチュートリアルの[最初の手順](#Setting_up)で説明したとおり、サンドボックス化されたアプリケーション ドメインを作成します。 `Internet` メソッドはパブリック メソッドのみを使用するため、`SimpleEmitDemo` アクセス許可セットに任意のアクセス許可を追加しないでください。  
   
-5.  メイン プログラムで、サンドボックス化されたアプリケーション ドメインに `Worker` クラスのインスタンスを作成します。  
+5. メイン プログラムで、サンドボックス化されたアプリケーション ドメインに `Worker` クラスのインスタンスを作成します。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#12)]
      [!code-vb[HowToEmitCodeInPartialTrust#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#12)]  
@@ -137,7 +137,7 @@ ms.locfileid: "54712575"
     > [!NOTE]
     >  Visual Studio でこのコードを使用する場合は、名前空間を含むようにクラスの名前を変更する必要があります。 既定では、名前空間がプロジェクト名になります。 たとえば、プロジェクト名が "PartialTrust" である場合、クラス名は "PartialTrust.Worker" にする必要があります。  
   
-6.  `SimpleEmitDemo` メソッドを呼び出すコードを追加します。 呼び出しはアプリケーションのドメイン境界を越えてマーシャリングされ、コードはサンドボックス化されたアプリケーション ドメインで実行されます。  
+6. `SimpleEmitDemo` メソッドを呼び出すコードを追加します。 呼び出しはアプリケーションのドメイン境界を越えてマーシャリングされ、コードはサンドボックス化されたアプリケーション ドメインで実行されます。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#13)]
      [!code-vb[HowToEmitCodeInPartialTrust#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#13)]  
@@ -212,5 +212,6 @@ ms.locfileid: "54712575"
 -   このコード例を Visual Studio でビルドする場合は、クラスを <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> メソッドに渡すときに、名前空間を含むようにクラスの名前を変更する必要があります。 既定では、名前空間がプロジェクト名になります。 たとえば、プロジェクト名が "PartialTrust" である場合、クラス名は "PartialTrust.Worker" にする必要があります。  
   
 ## <a name="see-also"></a>関連項目
+
 - [リフレクション出力のセキュリティ関連事項](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)
 - [方法: サンドボックスで部分信頼コードを実行する](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)

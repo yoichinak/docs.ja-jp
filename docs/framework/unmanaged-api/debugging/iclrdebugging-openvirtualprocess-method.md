@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59122578"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess メソッド
@@ -74,7 +74,7 @@ HRESULT OpenVirtualProcess(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_POINTER|`pDataTarget` `null`します。|  
+|E_POINTER|`pDataTarget` は `null`です。|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)コールバックがエラーを返しますまたは、有効なハンドルは実現されません。|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` このバージョンのランタイムの必要なデータ ターゲットのインターフェイスを実装しません。|  
 |CORDBG_E_NOT_CLR|指定されたモジュールが CLR モジュールではありません。 メモリが破損している、モジュールが使用できないか、CLR のバージョンが shim バージョンより新しいために、CLR モジュールを検出できない場合にも、この HRESULT が返されます。|  
@@ -94,9 +94,9 @@ HRESULT OpenVirtualProcess(
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v40plus](../../../../includes/net-current-v40plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)

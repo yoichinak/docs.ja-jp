@@ -2,12 +2,12 @@
 title: IPv6 の有効化と無効化
 ms.date: 03/30/2017
 ms.assetid: 6408d3ef-c9ba-49d9-b15e-fe74bd3ef031
-ms.openlocfilehash: 75c452216a5f4a74792d641a840f53e4423ab92f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 73dee0cb57674c8a2fa4ba2246162870ab1e3a10
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543764"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59083687"
 ---
 # <a name="enabling-and-disabling-ipv6"></a>IPv6 の有効化と無効化
 IPv6 プロトコルを使用するには、IPv6 をサポートしているオペレーティング システムのバージョンを実行していることを確認し、オペレーティング システムとネットワーク クラスが正しく構成されていることを確認してください。  
@@ -17,9 +17,9 @@ IPv6 プロトコルを使用するには、IPv6 をサポートしているオ�
   
 |オペレーティング システムが IPv6 に対応しているか|ネットワーク クラスが IPv6 に対応しているか|説明|  
 |-------------------------------------|---------------------------------------|-----------------|  
-|×|×|IPv6 アドレスを解析できます。|  
-|×|はい|IPv6 アドレスを解析できます。|  
-|はい|×|IPv6 アドレスを解析し、旧式マークが付けられていない名前解決のメソッドを使用して、IPv6 アドレスを解決できます。|  
+|いいえ|いいえ|IPv6 アドレスを解析できます。|  
+|いいえ|はい|IPv6 アドレスを解析できます。|  
+|はい|いいえ|IPv6 アドレスを解析し、旧式マークが付けられていない名前解決のメソッドを使用して、IPv6 アドレスを解決できます。|  
 |はい|はい|IPv6 アドレスを解析し、旧式マークが付けられているものも含め、すべてのメソッドを使用して IPv6 アドレスを解決できます。|  
   
  System.Net 名前空間のすべてのクラスに対して IPv6 のサポートを有効にするには、コンピューターの構成ファイルまたはアプリケーションの構成ファイルを変更する必要があることに注意してください。 アプリケーション構成ファイルは、コンピューターの構成ファイルよりも優先されます。  
@@ -45,6 +45,7 @@ IPv6 プロトコルを使用するには、IPv6 をサポートしているオ�
  .NET Framework バージョン 2.0 以降では、Windows が IPv6 をサポートしている場合、<xref:System.Net.Dns?displayProperty=nameWithType> クラスのメンバー (<xref:System.Net.Dns.GetHostEntry%2A?displayProperty=nameWithType> メソッドなど) が 1 つの制限付きで IPv6 アドレスを返します。 DNS <xref:System.Net.Dns?displayProperty=nameWithType> の古いメンバー (<xref:System.Net.Dns.Resolve%2A?displayProperty=nameWithType> メソッドなど) は、構成ファイル内の ipv6 enabled 設定の値を読み取り、認識します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [インターネット プロトコル バージョン 6](../../../docs/framework/network-programming/internet-protocol-version-6.md)
 - [ソケット](../../../docs/framework/network-programming/sockets.md)
 - [ネットワーク設定スキーマ](../../../docs/framework/configure-apps/file-schema/network/index.md)

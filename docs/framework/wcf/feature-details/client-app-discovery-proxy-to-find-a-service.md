@@ -3,10 +3,10 @@ title: '方法: 探索プロキシを使用してサービスを検索するク�
 ms.date: 03/30/2017
 ms.assetid: 62b41a75-cf40-4c52-a842-a5f1c70e247f
 ms.openlocfilehash: 12b3fa03a1f259df8ee8c970463fa9ccee7267fa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321004"
 ---
 # <a name="how-to-implement-a-client-application-that-uses-the-discovery-proxy-to-find-a-service"></a>方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する
@@ -284,5 +284,5 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>関連項目
 
 - [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [方法: 探索プロキシを実装する](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
-- [方法: 探索プロキシで登録される探索可能なサービスの実装する](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [方法: 探索プロキシを実装します。](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)
+- [方法: 探索プロキシで登録される探索可能なサービスを実装します。](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)

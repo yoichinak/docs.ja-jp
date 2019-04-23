@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: a5b3e325c13d2f56532ebc6ebb5c259d565a4952
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235723"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804359"
 ---
 ### <a name="xmlschemaexception-now-sets-line-positions-properly"></a>XmlSchemaException で行位置が正しく設定されるようになった
 

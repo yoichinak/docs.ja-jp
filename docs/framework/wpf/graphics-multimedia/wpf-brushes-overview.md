@@ -8,10 +8,10 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132211"
 ---
 # <a name="wpf-brushes-overview"></a>WPF のブラシの概要
@@ -170,5 +170,5 @@ VisualBrush を使用して描画された四角形
 - [ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)
 - [ImageBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160005)
 - [VisualBrush のサンプル](https://go.microsoft.com/fwlink/?LinkID=160049)
-- [方法のトピック](brushes-how-to-topics.md)
+- [方法トピック](brushes-how-to-topics.md)
 - [パフォーマンスに関するその他の推奨事項](../advanced/optimizing-performance-other-recommendations.md)

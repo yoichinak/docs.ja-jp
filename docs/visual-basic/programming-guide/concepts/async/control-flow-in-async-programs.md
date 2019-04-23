@@ -3,10 +3,10 @@ title: (Visual Basic) の非同期プログラムにおける制御フロー
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
 ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300932"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>(Visual Basic) の非同期プログラムにおける制御フロー
@@ -19,9 +19,9 @@ ms.locfileid: "59300932"
   
  次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。 この例には、次の 2 つのメソッドが含まれています。  
   
--   `startButton_Click`を呼び出す`AccessTheWebAsync`結果を表示します。  
+-   `startButton_Click` を呼び出して結果を表示する `AccessTheWebAsync`。  
   
--   `AccessTheWebAsync`を文字列として web サイトのコンテンツをダウンロードして、文字列の長さを返します。 `AccessTheWebAsync` 非同期を使用して<xref:System.Net.Http.HttpClient>メソッド、<xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29>コンテンツをダウンロードします。  
+-   Web サイトのコンテンツを文字列としてダウンロードして、その文字列の長さを返す `AccessTheWebAsync`。 `AccessTheWebAsync` は、非同期 <xref:System.Net.Http.HttpClient> メソッドである <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を使用してコンテンツをダウンロードします。  
   
  番号付き表示行はプログラム全体で重要なポイントを示し、プログラムがどのように実行され、マークされている各ポイントで何が発生するかを理解するために役立ちます。 表示行には「1」から「6」までのラベルが付けられています。 このラベルは、プログラムがこれらのコード行に到達する順序を表します。  
   
@@ -287,7 +287,7 @@ Dim urlContents As String = Await getStringTask
  await 式は `AccessTheWebAsync` が制御を返すまで `client.GetStringAsync` を中断します。 その間、コントロールは `AccessTheWebAsync` の呼び出し元である `startButton_Click` に戻されます。  
   
 > [!NOTE]
->  通常、直ちに非同期メソッドへの呼び出しの待機状態となります。 たとえば、次の割り当てが作成し、それを待機する前のコードを置き換えることができます`getStringTask`: `Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
+>  通常、直ちに非同期メソッドへの呼び出しの待機状態となります。 たとえば、次の割り当てで、`getStringTask` を作成してそれを待機する前のコードを置き換えることができます: `Dim urlContents As String = Await client.GetStringAsync("https://msdn.microsoft.com")`  
 >   
 >  このトピックでは、await 演算子が後で適用され、プログラムでの制御フローを示す出力行を格納します。  
   
@@ -334,7 +334,7 @@ FIVE:  Back in AccessTheWebAsync.
   
  ![手順 5.](../../../../csharp/programming-guide/concepts/async/media/asynctrace-five.png "AsyncTrace-FIVE")  
   
- `AccessTheWebAsync` 実行を完了すると、および制御が戻ります`startButton_Click`完了を待機していた。  
+ `AccessTheWebAsync` は完了するまで実行され、完了を待機していた `startButton_Click` に制御が戻ります。  
   
 ### <a name="step-six"></a>手順 6.  
  `AccessTheWebAsync` が終了を通知すると、処理は `startButton_Async` の await ステートメントを越えて続行できます。 実際、プログラムはそれ以上行うことがありません。  
@@ -363,4 +363,4 @@ Dim contentLength As Integer = Await getLengthTask
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)
 - [非同期の戻り値の型 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/async-return-types.md)
 - [チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [「Async Sample:非同期プログラムにおける制御フロー (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Async Sample:非同期プログラムにおける制御フロー (C#および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)

@@ -3,10 +3,10 @@ title: System.ServiceModel.ManualFlowThrottleLimitReached
 ms.date: 03/30/2017
 ms.assetid: 9aba851f-1830-493b-8e3e-60f454eb923e
 ms.openlocfilehash: fb69c3c737a0e77b05e08ab8d8282069feb069bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095686"
 ---
 # <a name="systemservicemodelmanualflowthrottlelimitreached"></a>System.ServiceModel.ManualFlowThrottleLimitReached

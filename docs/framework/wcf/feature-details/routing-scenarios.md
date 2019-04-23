@@ -5,10 +5,10 @@ helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
 ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223828"
 ---
 # <a name="routing-scenarios"></a>ルーティング シナリオ
@@ -70,7 +70,7 @@ ms.locfileid: "59223828"
   
  [方法: サービス データのパーティション分割](../../../../docs/framework/wcf/feature-details/how-to-service-data-partitioning.md)  
   
- [方法: 動的な更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
+ [方法: 動的更新](../../../../docs/framework/wcf/feature-details/how-to-dynamic-update.md)  
   
  [方法: エラー処理](../../../../docs/framework/wcf/feature-details/how-to-error-handling.md)  
   

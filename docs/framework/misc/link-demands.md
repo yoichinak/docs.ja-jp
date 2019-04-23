@@ -17,10 +17,10 @@ ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2ba3172b1a82c0a9f624a49eb63a193dd29faac1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166992"
 ---
 # <a name="link-demands"></a>リンク確認要求

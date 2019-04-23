@@ -9,10 +9,10 @@ ms.author: ronpet
 ms.date: 04/05/2019
 ms.custom: seoapril2019
 ms.openlocfilehash: 5c502c3832ca9afc30599d47d0890fae168fa998
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130970"
 ---
 # <a name="get-started-with-c"></a>C\# の使用を開始する
@@ -31,7 +31,7 @@ ms.locfileid: "59130970"
 
    このトピックでは、単純な Hello World アプリケーションを作成して実行した後、やや対話的な Hello World アプリケーションとして実行するための修正を行います。 アプリケーションのビルドと実行が完了したら、[デバッグ](../../core/tutorials/debugging-with-visual-studio.md)方法と[発行](../../core/tutorials/publishing-with-visual-studio.md)方法も学習することで、.NET Core でサポートされている任意のプラットフォームでアプリケーションを実行できるようにします。
 
-* [Visual Studio 2017 の C# および .NET Core を使用したクラス ライブラリの構築](../../core/tutorials/library-with-visual-studio.md)
+* [Visual Studio 2017 での C# と .NET Core を使用したクラス ライブラリの構築](../../core/tutorials/library-with-visual-studio.md)
 
    クラス ライブラリを使用して、別のアプリケーションから呼び出すことができる型と型のメンバーを定義できます。 このトピックでは、文字列が大文字で始まるかどうかを決定する単一のメソッドがあるクラス ライブラリを作成できます。 ライブラリの構築が完了したら、[単体テスト](../../core/tutorials/testing-library-with-visual-studio.md)を開発して、それが期待どおりに動作することを確認した後、[そのライブラリを使用したいアプリケーション](../../core/tutorials/consuming-library-with-visual-studio.md)で使用できるようにします。
 

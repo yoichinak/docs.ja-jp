@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], defining properties in code
 ms.assetid: c2eb8277-a842-4d99-89a9-647b901a0434
 ms.openlocfilehash: 905578454b0bc6b5e74202d15c91645fed0fd461
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143248"
 ---
 # <a name="defining-a-property-in-windows-forms-controls"></a>Windows フォーム コントロールのプロパティの定義

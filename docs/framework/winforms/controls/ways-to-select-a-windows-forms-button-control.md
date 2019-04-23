@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Button control [Windows Forms], selecting
 ms.assetid: fe2fc058-5118-4f70-b264-6147d64a7a8d
 ms.openlocfilehash: f2881646a05d257044c6461f822a4c35a225f8c8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223291"
 ---
 # <a name="ways-to-select-a-windows-forms-button-control"></a>Windows フォームの Button コントロールを選択する方法
@@ -31,5 +31,5 @@ ms.locfileid: "59223291"
 ## <a name="see-also"></a>関連項目
 
 - [Button コントロールの概要](button-control-overview-windows-forms.md)
-- [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: Windows フォームのボタン クリックに応答するには](how-to-respond-to-windows-forms-button-clicks.md)
 - [Button コントロール](button-control-windows-forms.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - composite controls [Windows Forms], creating
 ms.assetid: 79c9cf05-5ab6-4a18-886d-88a64748b098
 ms.openlocfilehash: 8bb630d3fb7e064935440439f2f07816e87c77dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317013"
 ---
 # <a name="how-to-author-composite-controls"></a>方法: 複合コントロールを作成する
@@ -81,9 +81,9 @@ ms.locfileid: "59317013"
 ## <a name="see-also"></a>関連項目
 
 - [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)
-- [チュートリアル: Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
-- [チュートリアル: Visual Basic による Windows フォーム コントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
-- [チュートリアル: Visual C# による Windows フォーム コントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [チュートリアル: ビジュアルを含む複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)
+- [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)
+- [チュートリアル: ビジュアルを含む Windows フォーム コントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
 - [コントロールの種類に関するアドバイス](control-type-recommendations.md)
-- [方法: Windows フォームのコントロールを作成する](how-to-author-controls-for-windows-forms.md)
+- [方法: Windows フォームのコントロールの作成](how-to-author-controls-for-windows-forms.md)
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

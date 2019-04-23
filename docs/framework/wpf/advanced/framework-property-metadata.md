@@ -6,10 +6,10 @@ helpviewer_keywords:
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
 ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314699"
 ---
 # <a name="framework-property-metadata"></a>フレームワーク プロパティ メタデータ
@@ -27,7 +27,7 @@ ms.locfileid: "59314699"
   
 -   要素の親要素に影響するレイアウト プロパティ (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>)。 既定ではこれらのフラグが設定される場所の例をいくつかは<xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType>と<xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>します。  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>. 既定では、依存関係プロパティは値を継承しません。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 一部のコントロール合成シナリオに必要なビジュアル ツリーにも移動する継承のパスを使用できます。  
+-   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>。 既定では、依存関係プロパティは値を継承しません。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 一部のコントロール合成シナリオに必要なビジュアル ツリーにも移動する継承のパスを使用できます。  
   
     > [!NOTE]
     >  プロパティ値のコンテキストにおける "継承" という用語は、依存関係プロパティに固有の事項を意味します。つまり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティ システムの WPF フレームワーク レベルの機能によって、実際の依存関係プロパティ値を子要素が親要素から継承できることを意味します。 派生型を通じたマネージド コードの型およびメンバーの継承とは直接関係はありません。 詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。  

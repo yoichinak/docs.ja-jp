@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Windows Communication Foundation, requirements
 ms.assetid: c43918db-9a36-426c-9e8a-e1bd6688a5b7
 ms.openlocfilehash: 5bd681b5f0be45526a3448ecf4afcf6ccbd41c98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099938"
 ---
 # <a name="wcf-system-requirements"></a>WCF システム要件
@@ -26,4 +26,4 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
 - [概念](../../../docs/framework/wcf/conceptual-overview.md)
 - [基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)
 - [WCF 機能の詳細](../../../docs/framework/wcf/feature-details/index.md)
-- [ガイドラインと最適な使用方法](../../../docs/framework/wcf/guidelines-and-best-practices.md)
+- [ガイドラインとベスト プラクティス](../../../docs/framework/wcf/guidelines-and-best-practices.md)

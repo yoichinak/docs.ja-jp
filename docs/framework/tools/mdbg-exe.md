@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 28a3f509-07e2-4dbe-81df-874c5e969cc4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3daf0a1cf2d1ae55780a16612aa33a0fdb70a52b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: e5320bc6c5105c95d63b1888e1adbc2ecf1bc5fb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55282036"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59200000"
 ---
 # <a name="mdbgexe-net-framework-command-line-debugger"></a>MDbg.exe (.NET Framework コマンド ライン デバッガー)
 .NET Framework コマンド ライン デバッガーは、.NET Framework 共通言語ランタイムを対象としたプログラムに含まれるバグの検索と修復について、ツールの販売元とアプリケーション開発者を支援するツールです。 このツールは、ランタイムのデバッグ API を使用してデバッグ サービスを提供します。 MDbg.exe を使用してもマネージド コードのデバッグしか実行できません。アンマネージド コードのデバッグはサポートされていません。  
@@ -85,7 +85,7 @@ MDbg [ProgramName[arguments]] [options]
 |**w** **[here]** [`-v`] [`-c` *depth*] [*threadID*]|スタック フレームのデバッグ情報を表示します。<br /><br /> -   `-v` オプションを指定すると、表示された各スタック フレームの詳細情報が表示されます。<br />-   `depth` に数値を指定すると、表示するフレームの数を制限できます。 すべてのフレームを表示するには、**all** コマンドを使用します。 既定値は 100 です。<br />-   *threadID* パラメーターを指定すると、スタックに関連付けるスレッドを制御できます。 既定値は、現在のスレッドのみです。 すべてのスレッドを取得するには、**all** コマンドを使用します。|  
 |**x** [`-c`*numSymbols*] [*module*[`!`*pattern*]]|モジュールの `pattern` に一致する関数を表示します。<br /><br /> *numSymbols* を指定すると、出力が指定した数に制限されます。 `!` (正規表現を示す) が *pattern* に対して指定されていない場合は、すべての関数が表示されます。 *module* が指定されていない場合は、読み込まれたすべてのモジュールが表示されます。 **break** コマンドを使用してブレークポイントを設定するには、シンボル (*~#*) を使用します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  デバッグするアプリケーションをコンパイルするときは、コンパイラ固有のフラグを使用します。このフラグによって、コンパイラがデバッグ シンボルを生成します。 コンパイラ固有のフラグの詳細については、コンパイラのドキュメントを参照してください。 最適化したアプリケーションでもデバッグはできますが、一部のデバッグ情報が欠落しています。 たとえば、ローカル変数の多くを表示できなくなり、ソース行も不正確になります。  
   
  アプリケーションをコンパイルした後、コマンド プロンプトに「**mdbg**」と入力してデバッグ セッションを開始します。例を次に示します。  
@@ -105,5 +105,6 @@ mdbg>
  デバッガーが起動したら、前のセクションで説明したコマンドと引数を使用します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ツール](../../../docs/framework/tools/index.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

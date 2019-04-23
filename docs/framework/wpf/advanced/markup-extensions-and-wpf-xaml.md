@@ -16,10 +16,10 @@ helpviewer_keywords:
 - DynamicResource markup extensions [WPF]
 ms.assetid: 618dc745-8b14-4886-833f-486d2254bb78
 ms.openlocfilehash: 46539f0cfdcc478e2f5e4cd7aecf16ac059e6332
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148097"
 ---
 # <a name="markup-extensions-and-wpf-xaml"></a>マークアップ拡張機能と WPF XAML
@@ -41,13 +41,13 @@ ms.locfileid: "59148097"
 ## <a name="xaml-defined-markup-extensions"></a>XAML で定義されたマークアップ拡張機能  
  XAML の WPF 実装に固有ではなく、言語としての XAML の組み込みまたは機能の実装であるマークアップ拡張がいくつか存在します。 これらのマークアップ拡張は、一般的な .NET Framework XAML サービスの一部として System.Xaml アセンブリで実装され、XAML 言語の XAML 名前空間内にあります。 これらのマークアップ拡張は、一般的なマークアップの使用方法では、通常、`x:` プレフィックスで識別できます。 <xref:System.Windows.Markup.MarkupExtension> (もは System.Xaml で定義されている) 基本クラスには、すべてのマークアップ拡張機能が XAML リーダーと XAML ライター、WPF XAML でなどでサポートするために使用するパターンが用意されています。  
   
--   `x:Type` 提供、<xref:System.Type>名前付きの型のオブジェクト。 この機能は、スタイルとテンプレートで最もよく使用されます。 詳細については、「[x:Type マークアップ拡張機能](../../xaml-services/x-type-markup-extension.md)」を参照してください。  
+-   `x:Type` は、名前を指定した型の <xref:System.Type> オブジェクトを提供します。 この機能は、スタイルとテンプレートで最もよく使用されます。 詳細については、「[x:Type マークアップ拡張機能](../../xaml-services/x-type-markup-extension.md)」を参照してください。  
   
--   `x:Static` 静的な値を生成します。 この値は、直接的にはターゲット プロパティの値の型ではなくても、その型に評価することができる値型コード エンティティから生成されます。 詳細については、「[x:Static マークアップ拡張機能](../../xaml-services/x-static-markup-extension.md)」を参照してください。  
+-   `x:Static` は、静的な値を生成します。 この値は、直接的にはターゲット プロパティの値の型ではなくても、その型に評価することができる値型コード エンティティから生成されます。 詳細については、「[x:Static マークアップ拡張機能](../../xaml-services/x-static-markup-extension.md)」を参照してください。  
   
--   `x:Null` 指定します`null`プロパティの値として、属性またはプロパティ要素の値に使用できます。 詳細については、「[x:Null マークアップ拡張機能](../../xaml-services/x-null-markup-extension.md)」を参照してください。  
+-   `x:Null` は、プロパティの値として `null` を指定し、属性またはプロパティ要素の値として使用できます。 詳細については、「[x:Null マークアップ拡張機能](../../xaml-services/x-null-markup-extension.md)」を参照してください。  
   
--   `x:Array` XAML 構文で、コレクションのサポートは、WPF 基本要素によって提供される、コントロール モデルは意図的に使用される場合の一般的な配列の作成のサポートを提供します。 詳細については、「[x:Array Markup Extension](../../xaml-services/x-array-markup-extension.md)」を参照してください。  
+-   `x:Array` は、XAML 構文での一般的な配列の作成をサポートします。WPF 基本要素とコントロール モデルで提供されているコレクションのサポートをあえて使用しない場合に使用します。 詳細については、「[x:Array Markup Extension](../../xaml-services/x-array-markup-extension.md)」を参照してください。  
   
 > [!NOTE]
 >  `x:` プレフィックスは、XAML 言語の組み込みに対する標準的な XAML 名前空間マッピングのために、XAML ファイルまたは稼働環境のルート要素で使用します。 たとえば、WPF アプリケーション用の Visual Studio テンプレートがこれを使用して XAML ファイルを開始`x:`マッピングします。 独自の XAML 名前空間マッピングに別のプレフィックス トークンを選ぶこともできますが、このドキュメントでは、WPF の既定の名前空間や、特定のフレームワークに関連のないその他の XAML 名前空間ではなく、XAML 言語の XAML 名前空間の一部として定義されているエンティティを識別する手段として、既定の `x:` マッピングを想定します。  
@@ -56,19 +56,19 @@ ms.locfileid: "59148097"
 ## <a name="wpf-specific-markup-extensions"></a>WPF 固有のマークアップ拡張  
  WPF プログラミングで使用される最も一般的なマークアップ拡張には、リソースの参照をサポートするもの (`StaticResource` と `DynamicResource`) と、データ バインディングをサポートするもの (`Binding`) があります。  
   
--   `StaticResource` 定義済みのリソースの値を代入することによって、プロパティの値を提供します。 `StaticResource` の評価は、最終的には XAML の読み込み時に行われます。実行時にオブジェクト グラフにアクセスすることはできません。 詳細については、「[StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)」を参照してください。  
+-   `StaticResource` は、既に定義されているリソースの値を代入することによって、プロパティの値を提供します。 `StaticResource` の評価は、最終的には XAML の読み込み時に行われます。実行時にオブジェクト グラフにアクセスすることはできません。 詳細については、「[StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)」を参照してください。  
   
--   `DynamicResource` リソースへの実行時参照にするには、その値を遅らせることで、プロパティの値を提供します。 動的リソース参照では、そのようなリソースがアクセスされるたびに、強制的に新しいルックアップが行われます。実行時にオブジェクト グラフにアクセスすることもできます。 このようなアクセスを実現するために、`DynamicResource` の概念が、WPF プロパティ システムの依存関係プロパティと、評価された式によってサポートされます。 したがって、`DynamicResource` は、依存関係プロパティ ターゲットにのみ使用できます。 詳細については、「[DynamicResource のマークアップ拡張機能](dynamicresource-markup-extension.md)」を参照してください。  
+-   `DynamicResource` は、プロパティの値がリソースに対する実行時参照になるように延期することによって、プロパティの値を提供します。 動的リソース参照では、そのようなリソースがアクセスされるたびに、強制的に新しいルックアップが行われます。実行時にオブジェクト グラフにアクセスすることもできます。 このようなアクセスを実現するために、`DynamicResource` の概念が、WPF プロパティ システムの依存関係プロパティと、評価された式によってサポートされます。 したがって、`DynamicResource` は、依存関係プロパティ ターゲットにのみ使用できます。 詳細については、「[DynamicResource のマークアップ拡張機能](dynamicresource-markup-extension.md)」を参照してください。  
   
--   `Binding` データ バインドの実行時に親オブジェクトに適用されるデータ コンテキストを使用して、プロパティの値を提供します。 このマークアップ拡張は、データ バインディングを指定するためにかなりの量のインライン構文を使用できるため、比較的複雑です。 詳細については、「[バインディングのマークアップ拡張機能](binding-markup-extension.md)」を参照してください。  
+-   `Binding` は、実行時に親オブジェクトに適用されるデータ コンテキストを使用して、データ バインディングされた値をプロパティに提供します。 このマークアップ拡張は、データ バインディングを指定するためにかなりの量のインライン構文を使用できるため、比較的複雑です。 詳細については、「[バインディングのマークアップ拡張機能](binding-markup-extension.md)」を参照してください。  
   
 -   `RelativeSource` ソース情報を提供する<xref:System.Windows.Data.Binding>実行時のオブジェクト ツリーで、いくつかの可能なリレーションシップを移動することができます。 これにより、周囲のオブジェクト ツリーに関する完全な知識がなくても、多目的のテンプレートで作成されるバインド、またはコードで作成されるバインドに対して、特殊なソースを指定することができます。 詳細については、「[RelativeSource のマークアップ拡張機能](relativesource-markupextension.md)」を参照してください。  
   
--   `TemplateBinding` テンプレートを使用するクラスのオブジェクト モデル定義のプロパティから取得したテンプレートのプロパティの値を使用するコントロール テンプレートを使用できます。 つまり、テンプレート定義内のプロパティが、テンプレートを適用する場合にのみ存在するコンテキストにアクセスできます。 詳細については、「[TemplateBinding のマークアップ拡張機能](templatebinding-markup-extension.md)」を参照してください。 `TemplateBinding` の実際の使用方法の詳細については、「[ControlTemplate を使用したスタイル設定のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)」を参照してください。  
+-   `TemplateBinding` により、コントロール テンプレートがテンプレート プロパティの値を使用できるようになります。それらの値は、テンプレートを使用するクラスのオブジェクト モデルで定義されたプロパティから取られます。 つまり、テンプレート定義内のプロパティが、テンプレートを適用する場合にのみ存在するコンテキストにアクセスできます。 詳細については、「[TemplateBinding のマークアップ拡張機能](templatebinding-markup-extension.md)」を参照してください。 `TemplateBinding` の実際の使用方法の詳細については、「[ControlTemplate を使用したスタイル設定のサンプル](https://github.com/Microsoft/WPF-Samples/tree/master/Styles%20&%20Templates/IntroToStylingAndTemplating)」を参照してください。  
   
--   `ColorConvertedBitmap` 比較的高度なイメージング シナリオをサポートしています。 詳細については、「[ColorConvertedBitmap のマークアップ拡張機能](colorconvertedbitmap-markup-extension.md)」を参照してください。  
+-   `ColorConvertedBitmap` は、比較的高度なイメージング シナリオをサポートします。 詳細については、「[ColorConvertedBitmap のマークアップ拡張機能](colorconvertedbitmap-markup-extension.md)」を参照してください。  
   
--   `ComponentResourceKey` `ThemeDictionary`リソースとカスタム コントロールに同梱されているテーマの特にさまざまなリソースのルックアップをサポートします。 詳細については、「[ComponentResourceKey マークアップ拡張機能](componentresourcekey-markup-extension.md)」、「[ThemeDictionary のマークアップ拡張機能](themedictionary-markup-extension.md)」、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。  
+-   `ComponentResourceKey` と `ThemeDictionary` は、リソースのルックアップをサポートします。特に、カスタム コントロールでパッケージ化されるリソースとテーマを対象としています。 詳細については、「[ComponentResourceKey マークアップ拡張機能](componentresourcekey-markup-extension.md)」、「[ThemeDictionary のマークアップ拡張機能](themedictionary-markup-extension.md)」、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。  
   
 <a name="StarExtension"></a>   
 ## <a name="extension-classes"></a>*Extension クラス  
@@ -119,9 +119,9 @@ ms.locfileid: "59148097"
 ## <a name="see-also"></a>関連項目
 
 - [XAML の概要 (WPF)](xaml-overview-wpf.md)
-- [XAML 名前空間 (x:)言語機能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Namespace (x:)言語機能](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML 拡張機能](wpf-xaml-extensions.md)
 - [StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)
 - [バインドのマークアップ拡張機能](binding-markup-extension.md)
-- [DynamicResource のマークアップ拡張機能](dynamicresource-markup-extension.md)
+- [DynamicResource マークアップ拡張](dynamicresource-markup-extension.md)
 - [x:Type マークアップ拡張機能](../../xaml-services/x-type-markup-extension.md)

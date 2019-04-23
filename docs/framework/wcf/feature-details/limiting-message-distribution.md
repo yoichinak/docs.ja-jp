@@ -3,10 +3,10 @@ title: メッセージ配布の制限
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
 ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130222"
 ---
 # <a name="limiting-message-distribution"></a>メッセージ配布の制限
@@ -20,9 +20,9 @@ ms.locfileid: "59130222"
 -   コード スニペットと関連情報については、次を参照してください。、[ピア チャネルのブログ](https://go.microsoft.com/fwlink/?LinkID=114531)します。  
   
 ## <a name="message-propagation-filter"></a>メッセージ伝達フィルター  
- `MessagePropagationFilter` メッセージの洪水、メッセージやその他の特定のシナリオの内容の伝達を判断する場合に特にのカスタマイズされたコントロールを使用できます。 このフィルターにより、ノードを通過する各メッセージを伝達するかどうかが決定されます。 これは、メッシュ内の他の場所から送信され、使用しているノードで受信したメッセージと、使用しているアプリケーションで作成したメッセージの両方に適用されます。 フィルターはメッセージとその発信元の両方にアクセスできるため、利用できるすべての情報に基づいてメッセージを転送するか、破棄するかを決定します。  
+ `MessagePropagationFilter` は、特にメッセージの内容や他の特定のシナリオによってメッセージを伝達するかどうかを決定する場合など、メッセージの大量転送の制御をカスタマイズするために使用できます。 このフィルターにより、ノードを通過する各メッセージを伝達するかどうかが決定されます。 これは、メッシュ内の他の場所から送信され、使用しているノードで受信したメッセージと、使用しているアプリケーションで作成したメッセージの両方に適用されます。 フィルターはメッセージとその発信元の両方にアクセスできるため、利用できるすべての情報に基づいてメッセージを転送するか、破棄するかを決定します。  
   
- <xref:System.ServiceModel.PeerMessagePropagationFilter> 1 つの関数を持つ抽象基本クラスは、<xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A>します。 メソッド呼び出しの最初の引数には、メッセージの完全なコピーを渡します。 このメッセージに対して行われた変更が実際のメッセージに影響することはありません。 このメソッド呼び出しの最後の引数は、メッセージの送信元 (`PeerMessageOrigination.Local` または `PeerMessageOrigination.Remote`) を識別します。 このメソッドの具体的な実装は、メッセージの転送先 (ローカル アプリケーション (<xref:System.ServiceModel.PeerMessagePropagation>)、リモート クライアント (`Local`)、ローカル アプリケーションとリモート クライアントの両方 (`Remote`)、どちらにも転送しない (`LocalAndRemote`)) を示す `None` 列挙体から定数を返す必要があります。 このフィルターは、対応する `PeerNode` オブジェクトにアクセスし、`PeerNode.MessagePropagationFilter` プロパティで伝達フィルター派生クラスのインスタンスを指定することによって適用できます。 ピア チャネルを開く前に、伝達フィルターがアタッチされていることを確認してください。  
+ <xref:System.ServiceModel.PeerMessagePropagationFilter> は、単一の関数 <xref:System.ServiceModel.PeerMessagePropagationFilter.ShouldMessagePropagate%2A> を持つ抽象基本クラスです。 メソッド呼び出しの最初の引数には、メッセージの完全なコピーを渡します。 このメッセージに対して行われた変更が実際のメッセージに影響することはありません。 このメソッド呼び出しの最後の引数は、メッセージの送信元 (`PeerMessageOrigination.Local` または `PeerMessageOrigination.Remote`) を識別します。 このメソッドの具体的な実装は、メッセージの転送先 (ローカル アプリケーション (<xref:System.ServiceModel.PeerMessagePropagation>)、リモート クライアント (`Local`)、ローカル アプリケーションとリモート クライアントの両方 (`Remote`)、どちらにも転送しない (`LocalAndRemote`)) を示す `None` 列挙体から定数を返す必要があります。 このフィルターは、対応する `PeerNode` オブジェクトにアクセスし、`PeerNode.MessagePropagationFilter` プロパティで伝達フィルター派生クラスのインスタンスを指定することによって適用できます。 ピア チャネルを開く前に、伝達フィルターがアタッチされていることを確認してください。  
   
 -   コード スニペットと関連情報については、次を参照してください。、[ピア チャネルのブログ](https://go.microsoft.com/fwlink/?LinkID=114532)します。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "59130222"
   
  これらの質問の回答は、ホップ数、メッセージ伝達フィルター、ローカル フィルター、直接接続のいずれを使用するかを決定するのに役立ちます。 次の一般的なガイドラインを考慮してください。  
   
--   **誰**  
+-   **誰が**  
   
     -   *個々 のノード*:ローカル フィルターまたは直接接続します。  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59130222"
   
     -   *メッシュの複雑なサブセット*:MessagePropagationFilter します。  
   
--   **頻度**  
+-   **どのくらいの頻度**  
   
     -   *頻度の高い*:直接接続 PeerHopCount、MessagePropagationFilter をします。  
   

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 5efb1c53-1484-43d6-aa8a-f4861b99bb8a
 ms.openlocfilehash: 306c042fe432f0c087ceb1b5ff6b5aec0fe0bbc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327309"
 ---
 # <a name="walkthrough-arranging-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの配置
@@ -151,9 +151,9 @@ ms.locfileid: "59327309"
 
 - <xref:System.Windows.Forms.Integration.ElementHost>
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
-- [方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
-- [方法: デザイン時にフォームの端に合わせてコントロールを配置する](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
-- [チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
+- [方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール](../controls/how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [方法: デザイン時にコントロールをフォームの端を揃える](../controls/how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)
+- [チュートリアル: スナップ線を使用して Windows フォーム コントロールの配置](../controls/walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)
 - [移行と相互運用性](../../wpf/advanced/migration-and-interoperability.md)
 - [WPF コントロールの使用](using-wpf-controls.md)
 - [Visual Studio で XAML をデザインする](/visualstudio/designers/designing-xaml-in-visual-studio)

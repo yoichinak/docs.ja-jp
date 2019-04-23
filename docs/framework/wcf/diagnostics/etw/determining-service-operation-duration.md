@@ -3,11 +3,11 @@ title: サービス操作の実行時間の確認
 ms.date: 03/30/2017
 ms.assetid: e8a93a2c-2c20-48b3-8986-57e90e9aa908
 ms.openlocfilehash: fd7dec5784f50a0613b574822a31202a859b34c6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299034"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772780"
 ---
 # <a name="determining-service-operation-duration"></a>サービス操作の実行時間の確認
 Windows Communication Foundation (WCF) アプリケーションの分析トレースが有効な場合、サービス操作の実行中は、イベント ログを調べることで簡単に決定されます。  ここでは、サービス操作の実行にかかる時間を確認する方法を示します。  

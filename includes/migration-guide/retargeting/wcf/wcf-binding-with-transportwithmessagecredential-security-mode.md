@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 2359dafb9042c13ae75e644d4ea655f53c14e95e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234423"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804407"
 ---
 ### <a name="wcf-binding-with-the-transportwithmessagecredential-security-mode"></a>TransportWithMessageCredential セキュリティ モードを使用する WCF バインド
 

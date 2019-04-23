@@ -6,16 +6,16 @@ dev_langs:
 - vb
 ms.assetid: c34f531d-4b9b-4071-b2d7-342c402aa586
 ms.openlocfilehash: 57f51ada00bf24617ca3e295a010aae64f0aa849
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196139"
 ---
 # <a name="datarow-deletion"></a>DataRow の削除
 2 つのメソッドを使用して削除できます、<xref:System.Data.DataRow>オブジェクトから、<xref:System.Data.DataTable>オブジェクト:**削除**のメソッド、<xref:System.Data.DataRowCollection>オブジェクト、および<xref:System.Data.DataRow.Delete%2A>のメソッド、 **DataRow**オブジェクト。 一方、<xref:System.Data.DataRowCollection.Remove%2A>メソッドの削除、 **DataRow**から、 **DataRowCollection**、<xref:System.Data.DataRow.Delete%2A>メソッドは、行の削除をマークするだけです。 実際の削除は、アプリケーションを呼び出すときに発生します。、 **AcceptChanges**メソッド。 <xref:System.Data.DataRow.Delete%2A> を使用すると、行を実際に削除する前に、削除対象としてどの行がマークされているかをプログラムによってチェックできます。 削除対象としてマークされている行の <xref:System.Data.DataRow.RowState%2A> プロパティは、<xref:System.Data.DataRow.Delete%2A> に設定されています。  
   
- <xref:System.Data.DataRow.Delete%2A> オブジェクトを反復処理している間は、foreach ループで <xref:System.Data.DataRowCollection.Remove%2A> も <xref:System.Data.DataRowCollection> も呼び出すことはできません。 <xref:System.Data.DataRow.Delete%2A> <xref:System.Data.DataRowCollection.Remove%2A>コレクションの状態を変更します。  
+ <xref:System.Data.DataRow.Delete%2A> オブジェクトを反復処理している間は、foreach ループで <xref:System.Data.DataRowCollection.Remove%2A> も <xref:System.Data.DataRowCollection> も呼び出すことはできません。 <xref:System.Data.DataRow.Delete%2A> または <xref:System.Data.DataRowCollection.Remove%2A> はコレクションの状態を変更します。  
   
  使用する場合、<xref:System.Data.DataSet>または**DataTable**と組み合わせて、 **DataAdapter**とリレーショナル データ ソース、使用、**削除**のメソッド、 **DataRow**行を削除します。 **削除**メソッドとしての行をマークする**Deleted**で、**データセット**または**DataTable**は削除されません。 代わりに、 **DataAdapter**としてマークされている行を検出する**Deleted**が実行されます、 **DeleteCommand**メソッドは、データ ソースで行を削除します。 行のできますし、完全に削除するを使用して、 **AcceptChanges**メソッド。 使用する場合**削除**行を削除する、行は、テーブルから完全に削除されますが、 **DataAdapter**データ ソースの行は削除されません。  
   

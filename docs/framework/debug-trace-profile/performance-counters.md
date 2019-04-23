@@ -9,10 +9,10 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184809"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework のパフォーマンス カウンター
@@ -253,5 +253,5 @@ for (int i = 0; i < Array.Length; i++)
   
 ## <a name="see-also"></a>関連項目
 
-- [[パフォーマンス カウンター]](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)
 - [ランタイム プロファイリング](../../../docs/framework/debug-trace-profile/runtime-profiling.md)

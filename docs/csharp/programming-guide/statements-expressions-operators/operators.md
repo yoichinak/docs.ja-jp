@@ -8,10 +8,10 @@ helpviewer_keywords:
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
 ms.openlocfilehash: 0b2af8c41bc6411d2665d2cf37bd48040fc8d8dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307474"
 ---
 # <a name="operators-c-programming-guide"></a>演算子 (C# プログラミング ガイド)
@@ -77,7 +77,7 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |[/](../../../csharp/language-reference/operators/arithmetic-operators.md#division-operator-)|除算記号|  
 |[%](../../../csharp/language-reference/operators/arithmetic-operators.md#remainder-operator-)|剰余。|  
   
- **加法演算子**  
+ **加算演算子**  
   
 |正規表現|説明|  
 |----------------|-----------------|  
@@ -86,7 +86,7 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
   
  **シフト演算子**  
   
-|式|説明|  
+|正規表現|説明|  
 |----------------|-----------------|  
 |x [<\<](../../../csharp/language-reference/operators/left-shift-operator.md) y|左シフト。|  
 |x [>>](../../../csharp/language-reference/operators/right-shift-operator.md) y|右シフト。|  
@@ -121,7 +121,7 @@ C# では、 *演算子* は式またはステートメントの中で 1 つ以�
 |Null 合体演算子|x [??](../../../csharp/language-reference/operators/null-coalescing-operator.md) Y|x が null の場合は y と評価され、それ以外の場合は x と評価されます。|  
 |条件|x [?](../../../csharp/language-reference/operators/conditional-operator.md) y : z|x が true の場合は y と評価され、x が false の場合は z と評価されます。|  
   
- **代入演算子と匿名関数**  
+ **代入演算子と匿名演算子**  
   
 |正規表現|説明|  
 |----------------|-----------------|  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30439
 ms.assetid: 0a842906-3bc5-4946-8a37-3e3da883ef63
 ms.openlocfilehash: 4f801337c07d6b3829aa6e0c535c434d8bd672b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307666"
 ---
 # <a name="constant-expression-not-representable-in-type-typename"></a>型で表現できない定数式 '\<typename >'

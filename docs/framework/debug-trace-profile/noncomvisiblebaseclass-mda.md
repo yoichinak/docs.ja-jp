@@ -12,10 +12,10 @@ ms.assetid: 9ec1af27-604b-477e-9ee2-e833eb10d3ce
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: eb0810a9e0ffce825abecc87eb2698920209d86f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171809"
 ---
 # <a name="noncomvisiblebaseclass-mda"></a>nonComVisibleBaseClass MDA

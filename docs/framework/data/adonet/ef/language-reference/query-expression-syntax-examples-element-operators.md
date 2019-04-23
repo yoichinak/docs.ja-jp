@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 32268fe2-de18-4065-8060-f250def83837
 ms.openlocfilehash: 1b73e22e79c665763390561a1e48b2583ec6cd27
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59215509"
 ---
 # <a name="query-expression-syntax-examples-element-operators"></a>クエリ式の構文例:要素演算子

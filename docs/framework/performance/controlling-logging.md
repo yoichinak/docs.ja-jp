@@ -7,10 +7,10 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312099"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework のログ記録の制御
@@ -53,9 +53,9 @@ Provider                                 GUID
   
     -   `-p` パラメーターはプロバイダーの GUID を識別します。  
   
-    -   `0x1CCBD` 発生するイベントのカテゴリを指定します。  
+    -   `0x1CCBD` は、発生するイベントのカテゴリを指定しています。  
   
-    -   `0x5` (この場合は、verbose (5)) でのログ記録のレベルを設定します。  
+    -   `0x5` は、ログ レベルを設定しています (この場合は詳細 (5))。  
   
     -   `-ets` パラメーターは、コマンドをイベント トレース セッションに送信するように指定します。  
   

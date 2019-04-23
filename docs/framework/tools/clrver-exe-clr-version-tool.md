@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: cbc2ee86-bdc8-4a65-a8f1-ba23bce3a699
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e5543e49ea44c20a536a7097277b246d4041522a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 28ac90eadcc7a13fe946aabf17973ebc602c9d4a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54735436"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59084597"
 ---
 # <a name="clrverexe-clr-version-tool"></a>Clrver.exe (CLR バージョン ツール)
 CLR バージョン ツール (Clrver.exe) は、コンピューターにインストールされている共通言語ランタイム (CLR: Common Language Runtime) のすべてのバージョンを報告します。  
@@ -35,7 +35,7 @@ clrver [option]
 |*pid*|指定したプロセス ID (PID) のプロセスで使用されている CLR のバージョンを表示します。|  
 |`-?`|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  オプションを指定せずに Clrver.exe を呼び出した場合、インストールされている CLR のすべてのバージョンが表示されます。 別のユーザーの PID を指定する場合、バージョン情報を取得するには、管理アクセス許可が必要です。  
   
 > [!NOTE]
@@ -57,5 +57,6 @@ clrver [option]
  `Clrver -all`  
   
 ## <a name="see-also"></a>関連項目
+
 - [ツール](../../../docs/framework/tools/index.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

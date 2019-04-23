@@ -12,10 +12,10 @@ helpviewer_keywords:
 - WebRequest class, asynchronous access
 ms.assetid: 735d3fce-f80c-437f-b02c-5c47f5739674
 ms.openlocfilehash: b812db3259cbd2313cdf172950f51ab34679b460
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59208567"
 ---
 # <a name="making-asynchronous-requests"></a>非同期要求を行う

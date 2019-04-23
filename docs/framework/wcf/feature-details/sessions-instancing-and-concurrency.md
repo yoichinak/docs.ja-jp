@@ -3,10 +3,10 @@ title: セッション、インスタンス化、およびコンカレンシー
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229070"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>セッション、インスタンス化、およびコンカレンシー
@@ -29,11 +29,11 @@ ms.locfileid: "59229070"
   
  慣れている場合、<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>クラス[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーションと機能を提供、可能性があります、その種のセッションと WCF のセッションの間の次の相違点に注意してください。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは常にサーバーによって開始されます。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、常にサーバーによって開始される。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションには、暗黙的に順序付けします。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、暗黙的に順序付けされない。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、要求間で、一般的なデータ ストレージ機構を提供します。  
+-   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、要求全体について一般的なデータ ストレージ機構を提供する。  
   
  クライアント アプリケーションとサービス アプリケーションでは、異なる方法でセッションと対話します。 クライアント アプリケーションはセッションを開始し、セッション内で送信されてきたメッセージの受信と処理を行います。 サービス アプリケーションでは、動作を追加するための機能拡張ポイントとしてセッションを使用できます。 これは <xref:System.ServiceModel.InstanceContext> を直接操作する、またはカスタムのインスタンス コンテキスト プロバイダーを実装することで可能になります。  
   
@@ -110,8 +110,8 @@ public class CalculatorService : ICalculatorConcurrency
 ## <a name="see-also"></a>関連項目
 
 - [セッションの使用](../../../../docs/framework/wcf/using-sessions.md)
-- [方法: セッションを必要とするサービスを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
-- [方法: サービスのインスタンス化を制御する](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
+- [方法: セッションを必要とするサービスを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)
+- [方法: サービスのインスタンス化の制御します。](../../../../docs/framework/wcf/feature-details/how-to-control-service-instancing.md)
 - [コンカレンシー](../../../../docs/framework/wcf/samples/concurrency.md)
-- ["インスタンス化"](../../../../docs/framework/wcf/samples/instancing.md)
+- [インスタンス化](../../../../docs/framework/wcf/samples/instancing.md)
 - [セッション](../../../../docs/framework/wcf/samples/session.md)

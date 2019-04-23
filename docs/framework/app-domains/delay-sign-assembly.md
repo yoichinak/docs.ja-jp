@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d300e17-5bf1-4360-97da-2aa55efd9070
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a833bb0f412407d1f18793c356d4c207716eb101
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fc955ca892a8a0e5d15710b76a6a1c798ad4ecf5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54632622"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59334056"
 ---
 # <a name="delay-signing-an-assembly"></a>アセンブリへの遅延署名
 組織には、開発者が日常的にアクセスしない厳重に保護されたキーのペアがある場合があります。 公開キーは広く使用可能ですが、秘密キーへのアクセスは少数のユーザーに限定されます。 厳密な名前のアセンブリを開発すると、厳密な名前のターゲット アセンブリを参照する各アセンブリに、そのターゲット アセンブリに厳密な名前を指定するために使用する公開キーのトークンが含まれています。 この場合、開発プロセスで、公開キーを使用できる必要があります。  
@@ -28,9 +28,9 @@ ms.locfileid: "54632622"
   
  次の手順は、アセンブリの遅延署名のプロセスを簡単に示したものです。  
   
-1.  最終的な署名を行う組織のキー ペアの公開キー部分を取得します。 通常、このキーは、[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] によって提供された[厳密な名前ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用して作成できる .snk ファイルの形式です。  
+1. 最終的な署名を行う組織のキー ペアの公開キー部分を取得します。 通常、このキーは、[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] によって提供された[厳密な名前ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用して作成できる .snk ファイルの形式です。  
   
-2.  <xref:System.Reflection> から次の 2 つのカスタム属性を含むアセンブリのソース コードに注釈を付けます。  
+2. <xref:System.Reflection> から次の 2 つのカスタム属性を含むアセンブリのソース コードに注釈を付けます。  
   
     -   公開キーをパラメーターとして含むファイルの名前を、そのコンストラクターに渡す <xref:System.Reflection.AssemblyKeyFileAttribute>。  
   
@@ -40,9 +40,9 @@ ms.locfileid: "54632622"
          [!code-csharp[AssemblyDelaySignAttribute#4](../../../samples/snippets/csharp/VS_Snippets_CLR/AssemblyDelaySignAttribute/cs/source2.cs#4)]
          [!code-vb[AssemblyDelaySignAttribute#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/AssemblyDelaySignAttribute/vb/source2.vb#4)]  
   
-3.  コンパイラは、アセンブリ マニフェストに公開キーを挿入し、完全に厳密な名前の署名のために PE ファイルの領域を確保します。 このアセンブリを参照する他のアセンブリがキーを取得して自身のアセンブリ参照に格納できるように、アセンブリのビルド中に実際の公開キーが格納されている必要があります。  
+3. コンパイラは、アセンブリ マニフェストに公開キーを挿入し、完全に厳密な名前の署名のために PE ファイルの領域を確保します。 このアセンブリを参照する他のアセンブリがキーを取得して自身のアセンブリ参照に格納できるように、アセンブリのビルド中に実際の公開キーが格納されている必要があります。  
   
-4.  アセンブリには有効な厳密な名前の署名がないため、その署名の検証をオフにする必要があります。 これは、厳密な名前ツールで **–Vr** オプションを使用して行うことができます。  
+4. アセンブリには有効な厳密な名前の署名がないため、その署名の検証をオフにする必要があります。 これは、厳密な名前ツールで **–Vr** オプションを使用して行うことができます。  
   
      次の例では、`myAssembly.dll` と呼ばれるアセンブリの検証をオフにしています。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "54632622"
     > [!NOTE]
     >  64 ビット コンピューターの Visual Studio を使用した開発中に、遅延署名を使用して、**Any CPU** のアセンブリをコンパイルする場合は、**-Vr** オプションを 2 回適用しなければならない場合があります。 (Visual Studio では、**Any CPU** は**プラットフォーム ターゲット**のビルド プロパティの値です。コマンド ラインからコンパイルする場合は、これが既定です。)コマンド ラインまたはファイル エクスプローラーからアプリケーションを実行する場合は、64 ビット バージョンの [Sn.exe (厳密な名前ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用して、アセンブリに **-Vr** オプションを適用します。 設計時に Visual Studio にアセンブリを読み込む (たとえば、アプリケーションの他のアセンブリで使用されているコンポーネントがアセンブリに含まれている) 場合は、32 ビット バージョンの厳密な名前ツールを使用してください。 これは、Just-In-Time (JIT) コンパイラが、コマンド ラインからアセンブリを実行する場合には 64 ビットのネイティブ コードに、設計時の環境にアセンブリを読み込む場合には 32 ビットのネイティブ コードにアセンブリをコンパイルするためです。  
   
-5.  後ほど (通常は出荷の直前)、厳密な名前ツールで **–R** オプションを使用して実際に厳密な名前の署名を行うため、組織の署名機関にアセンブリを送信します。  
+5. 後ほど (通常は出荷の直前)、厳密な名前ツールで **–R** オプションを使用して実際に厳密な名前の署名を行うため、組織の署名機関にアセンブリを送信します。  
   
      キー ペア `sgKey.snk` を使用して厳密な名前で `myAssembly.dll` というアセンブリに署名する例を、次に示します。  
   
@@ -73,6 +73,7 @@ ms.locfileid: "54632622"
     ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)
 - [方法: 公開キーと秘密キーのキー ペアを作成する](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)
 - [Sn.exe (厳密名ツール)](../../../docs/framework/tools/sn-exe-strong-name-tool.md)

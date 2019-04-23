@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], C#
 ms.assetid: 45007ac6-cf07-4be7-bc38-3f0ef962faf9
 ms.openlocfilehash: 9a4913f635204aac2214d97225c7b8147c6fe9ab
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326607"
 ---
 # <a name="how-to-add-multiple-sets-of-settings-to-your-application-in-c"></a>方法: C 言語でアプリケーションに複数の設定セットを追加します。\#

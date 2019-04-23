@@ -7,10 +7,10 @@ helpviewer_keywords:
 - memoryCache element
 ms.assetid: 182a622f-f7cf-472d-9d0b-451d2fd94525
 ms.openlocfilehash: dbb46e7cf2580635add9d3100c8177c99cbae6bd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126816"
 ---
 # <a name="memorycache-element-cache-settings"></a>\<memoryCache > 要素 (キャッシュ設定)
@@ -31,7 +31,7 @@ ms.locfileid: "59126816"
 ```  
   
 ## <a name="type"></a>型  
- <xref:System.Runtime.Caching.MemoryCache> クラスの新しいインスタンスを初期化します。  
+ <xref:System.Runtime.Caching.MemoryCache> クラス。  
   
 ## <a name="attributes-and-elements"></a>属性および要素  
  以降のセクションでは、属性、子要素、および親要素について説明します。  

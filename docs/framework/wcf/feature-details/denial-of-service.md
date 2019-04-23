@@ -5,10 +5,10 @@ helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
 ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228882"
 ---
 # <a name="denial-of-service"></a>サービス拒否
@@ -28,13 +28,13 @@ ms.locfileid: "59228882"
   
  軽減策:次のプロパティを使用して、<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>クラス。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A>:、期限付きの最大数を制御`SecurityContextToken`サーバーが後にキャッシュする秒`SPNego`または`SSL`ネゴシエーション。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A> : `SecurityContextToken` または `SPNego` ネゴシエーションの後にサーバーがキャッシュする、期限付きの `SSL` の最大数を制御します。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A>: の有効期間を制御、`SecurityContextTokens`を次のサーバーの問題`SPNego`または`SSL`ネゴシエーション。 サーバーは、この期間の `SecurityContextToken` をキャッシュします。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A> : `SecurityContextTokens` または `SPNego` ネゴシエーションに続いてサーバーが発行する `SSL` の有効期限を制御します。 サーバーは、この期間の `SecurityContextToken` をキャッシュします。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: するアプリケーション メッセージが処理されていないが、サーバーで確立されているセキュリティで保護されたメッセージ交換の最大数を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: サーバーで確立されているが、そのアプリケーション メッセージが処理されていない、セキュリティで保護されたメッセージ交換の最大数を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A>: サービスがメッセージ交換用のクライアントからアプリケーション メッセージを受信せず、セキュリティで保護されたメッセージ交換を維持する。 最大時間を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
+-   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A> : サービスが、セキュリティで保護されたメッセージ交換を、その当事者のクライアントからのアプリケーション メッセージを受信しなくても確立したままにする最長時間を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding または二重カスタム バインディングにクライアント認証が必要になる  
  既定では、<xref:System.ServiceModel.WSDualHttpBinding> のセキュリティは有効になっています。 ただし、<xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> プロパティを <xref:System.ServiceModel.MessageCredentialType.None> に設定してクライアント認証を無効にすると、第 3 のサービスで悪質なユーザーからサービス拒否攻撃を受ける可能性があります。 これは、悪質なクライアントが、メッセージ ストリームを第 3 のサービスに送信するようサービスに指示できるためです。  
@@ -87,4 +87,4 @@ ms.locfileid: "59228882"
 - [サービス拒否](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [リプレイ攻撃](../../../../docs/framework/wcf/feature-details/replay-attacks.md)
 - [改変](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [サポートされていないシナリオ](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [サポートされていないシナリオ:](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

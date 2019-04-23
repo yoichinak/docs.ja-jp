@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - request cache policies
 ms.assetid: 39c15e40-586b-4ac9-9cce-146f74b7e545
-ms.openlocfilehash: 11f36065c02c5ec513e66bff2541536e9290b5c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3da60366ec1a8e2e0242cf78e0418fe76e18da68
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54563562"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59226574"
 ---
 # <a name="how-to-set-cache-policy-for-a-request"></a>方法: 要求のキャッシュ ポリシーを設定する
 次の例では、要求のキャッシュ ポリシーの設定方法を示します。 入力の例は、`http://www.contoso.com/` などの URI です。  
@@ -106,6 +106,7 @@ End Namespace
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ネットワーク アプリケーションのキャッシュ管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [キャッシュ ポリシー](../../../docs/framework/network-programming/cache-policy.md)
 - [場所ベースのキャッシュ ポリシー](../../../docs/framework/network-programming/location-based-cache-policies.md)

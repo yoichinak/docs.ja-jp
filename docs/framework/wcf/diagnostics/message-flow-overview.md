@@ -3,11 +3,11 @@ title: メッセージ フローの概要
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312645"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772665"
 ---
 # <a name="message-flow-overview"></a>メッセージ フローの概要
 相互接続されたサービスを持つ分散システムでは、サービス間の因果関係を調べる必要があります。 状態監視、トラブルシューティング、根本原因分析などの重要なシナリオをサポートするには、要求フローに含まれるさまざまなコンポーネントを理解することが重要です。 .NET Framework 4 では、多様なサービス間でトレースを関連付けることができるように、次の機能のサポートが追加されています。

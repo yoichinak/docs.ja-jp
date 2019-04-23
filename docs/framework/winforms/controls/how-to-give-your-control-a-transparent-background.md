@@ -7,10 +7,10 @@ helpviewer_keywords:
 - transparency [Windows Forms], Windows Forms custom controls
 ms.assetid: 32433e63-f4e9-4305-9857-6de3edeb944a
 ms.openlocfilehash: 671075973793d7fbf0b70ce77428a0a632305b9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206097"
 ---
 # <a name="how-to-give-your-control-a-transparent-background"></a>方法: コントロールに透明な背景を指定する
@@ -24,11 +24,11 @@ ms.locfileid: "59206097"
   
 ### <a name="to-give-your-control-a-transparent-backcolor"></a>コントロールに透明な背景を設定するには  
   
--   [プロパティ] ウィンドウで、選択、<xref:System.Windows.Forms.ButtonBase.BackColor%2A>プロパティに設定 <xref:System.Drawing.Color.Transparent%2A>  
+-   [プロパティ] ウィンドウで <xref:System.Windows.Forms.ButtonBase.BackColor%2A> プロパティを選択し、 <xref:System.Drawing.Color.Transparent%2A>に設定します。  
   
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Drawing.Color.FromArgb%2A>
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
 - [マネージド グラフィックス クラスの使用](../advanced/using-managed-graphics-classes.md)
-- [方法: 不透明な直線および半透明な直線を描画する](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)
+- [方法: 不透明な直線および半透明な直線を描画します。](../advanced/how-to-draw-opaque-and-semitransparent-lines.md)

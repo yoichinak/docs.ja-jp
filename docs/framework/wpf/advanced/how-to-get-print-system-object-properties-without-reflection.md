@@ -8,10 +8,10 @@ helpviewer_keywords:
 - PrintSystemObject [WPF], getting properties
 ms.assetid: 43560f28-183d-41c1-b9d1-de7c2552273e
 ms.openlocfilehash: bb906dafd98e75708764b5f0f009900719f6a475
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335200"
 ---
 # <a name="how-to-get-print-system-object-properties-without-reflection"></a>方法: リフレクションを使用せずに印刷システム オブジェクトのプロパティを取得する

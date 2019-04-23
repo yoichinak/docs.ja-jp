@@ -3,12 +3,12 @@ title: 非同期ストリームの生成と使用
 description: この高度なチュートリアルでは、非同期ストリームの生成と使用により、非同期で生成できるデータ シーケンスをより自然な方法で操作するシナリオを示します。
 ms.date: 02/10/2019
 ms.custom: mvc
-ms.openlocfilehash: c8be9cf4b83e3dd72232279e7c15dcba639c2058
-ms.sourcegitcommit: bef803e2025642df39f2f1e046767d89031e0304
+ms.openlocfilehash: 0fa7c778ca9ce0f0124fcc520dd4de65f2f92ea8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56306003"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59308550"
 ---
 # <a name="tutorial-generate-and-consume-async-streams-using-c-80-and-net-core-30"></a>チュートリアル: C#8.0 および .NET Core 3.0 を使用して非同期ストリームを生成および使用する
 
@@ -23,7 +23,7 @@ C#8.0 では、データ ストリーム内の要素を非同期で取得また�
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 ベータ コンパイラーも実行されるようにします。 C# 8 ベータ コンパイラは、[Visual Studio 2019 Preview 1](https://visualstudio.microsoft.com/vs/preview/) または [.NET Core 3.0 Preview 1 SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 以降で利用できます。 非同期ストリームは .NET Core 3.0 Preview 1 で初めて利用可能になります。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 ベータ コンパイラーも実行されるようにします。 C# 8 ベータ コンパイラは、[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) または最新の [.NET Core 3.0 プレビュー SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 以降で利用できます。 非同期ストリームは .NET Core 3.0 Preview 1 で初めて利用可能になります。
 
 [GitHub アクセス トークン](https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/#creating-a-token)を作成して、GitHub GraphQL エンドポイントにアクセスできるようにする必要があります。 GitHub アクセス トークンに対して次のアクセス許可を選択します。
 

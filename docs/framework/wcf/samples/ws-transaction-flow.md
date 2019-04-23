@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Transactions
 ms.assetid: f8eecbcf-990a-4dbb-b29b-c3f9e3b396bd
 ms.openlocfilehash: cde5599734dbeb450e10b2b74cf035b41129d653
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296096"
 ---
 # <a name="ws-transaction-flow"></a>WS トランザクション フロー
@@ -188,7 +188,7 @@ Console.WriteLine("Transaction committed");
   
 -   2 番目の `Subtract` 要求は、`TransactionScopeOption.Suppress` オプションと共に宣言された新しいトランザクション スコープ内で実行されます。 これによって、クライアントの最初の外側トランザクションが抑制されます。また、新しいトランザクションがサービスにフローされることはありません。 この方法を使用すると、クライアントは、トランザクションをサービスにフローすることが必要ない場合に、このことを行わないように明示的に指定できます。 サービスのアクションは、新しい独立したトランザクションのスコープ内で発生します。  
   
--   `Multiply`クライアントでの定義の生成されたため、要求がサービスにトランザクションをフローしません、`ICalculator`インターフェイスが含まれています、<xref:System.ServiceModel.TransactionFlowAttribute>に設定<xref:System.ServiceModel.TransactionFlowOption>`NotAllowed`します。  
+-   `Multiply` 要求はトランザクションをサービスにフローしません。クライアントで生成された `ICalculator` インターフェイスの定義には <xref:System.ServiceModel.TransactionFlowAttribute><xref:System.ServiceModel.TransactionFlowOption> に設定された `NotAllowed` が含まれているためです。  
   
 -   `Divide` 要求は、トランザクションをサービスにフローしません。同様に、クライアントで生成された `ICalculator` インターフェイスの定義には `TransactionFlowAttribute` が含まれていないためです。 このときも、サービスのアクションは別の新しい独立したトランザクションのスコープ内で実行されます。  
   
@@ -225,7 +225,7 @@ Press <ENTER> to terminate the service.
   
 1. C# または Visual Basic .NET のバージョンのソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)  
   
-2. SQL Server Express Edition または SQL Server がインストールされ、接続文字列が、サービスのアプリケーション構成ファイルで正しく設定されていることを確認します。 データベースを使用せずに、サンプルを実行するには設定、`usingSql`サービスのアプリケーション構成ファイル内の値 `false`  
+2. SQL Server Express Edition または SQL Server がインストールされ、接続文字列が、サービスのアプリケーション構成ファイルで正しく設定されていることを確認します。 データベースを使用せずにサンプルを実行するには、サービスのアプリケーション構成ファイルで `usingSql` の値を `false` に設定します。  
   
 3. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   

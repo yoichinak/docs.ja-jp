@@ -15,10 +15,10 @@ helpviewer_keywords:
 - resources [WPF], references to
 ms.assetid: d119d00c-3afb-48d6-87a0-c4da4f83dee5
 ms.openlocfilehash: 443ea9ad56d13d26191231104ce3998b2691fc34
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188644"
 ---
 # <a name="dependency-properties-overview"></a>依存関係プロパティの概要
@@ -36,7 +36,7 @@ Windows Presentation Foundation (WPF) には、型の[プロパティ](../../../
 SDK リファレンスで、プロパティのマネージド リファレンス ページの「依存関係プロパティの情報」セクションの有無によって、どのプロパティが依存関係プロパティかを特定できます。 「依存関係プロパティの情報」セクションにはその依存関係プロパティの <xref:System.Windows.DependencyProperty> 識別子フィールドへのリンクがあり、そのプロパティに設定されるメタデータ オプションのリスト、クラスごとのオーバーライド情報、およびその他の詳細も示されています。
 
 ## <a name="dependency-properties-back-clr-properties"></a>依存関係プロパティによる CLR プロパティの補足
-依存関係プロパティおよび WPF プロパティ システムは、プライベート フィールドでプロパティをサポートする標準パターンの代替実装として、プロパティをサポートする型を提供することによって、プロパティ機能を拡張します。 この型の名前は <xref:System.Windows.DependencyProperty> です。 WPF プロパティ システムを定義するその他の重要な型は <xref:System.Windows.DependencyObject> です。 <xref:System.Windows.DependencyObject> 登録および依存関係プロパティを所有できる基本クラスを定義します。
+依存関係プロパティおよび WPF プロパティ システムは、プライベート フィールドでプロパティをサポートする標準パターンの代替実装として、プロパティをサポートする型を提供することによって、プロパティ機能を拡張します。 この型の名前は <xref:System.Windows.DependencyProperty> です。 WPF プロパティ システムを定義するその他の重要な型は <xref:System.Windows.DependencyObject> です。 <xref:System.Windows.DependencyObject> は、依存関係プロパティを登録および所有できる基本クラスを定義します。
 
 依存関係プロパティで使用される用語を次に示します。
 
@@ -91,7 +91,7 @@ XAML は、プロパティを設定するためのさまざまな構文形式を
 
 - [スタイル](#styles)
 
-- [Animations](#animations)
+- [アニメーション](#animations)
 
 - [メタデータのオーバーライド](#metadata-overrides)
 

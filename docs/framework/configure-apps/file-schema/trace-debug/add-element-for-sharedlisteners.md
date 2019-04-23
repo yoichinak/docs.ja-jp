@@ -1,5 +1,5 @@
 ---
-title: <add> 要素 <sharedListeners>
+title: <sharedListeners> の <add> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/sharedListeners/add
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095634"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<追加 > 要素の\<上 sharedListeners >
@@ -49,7 +49,7 @@ ms.locfileid: "59095634"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<フィルター >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|`sharedListeners` コレクションのリスナーにフィルターを追加します。|  
+|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/trace-debug/filter-element-for-add-for-sharedlisteners.md)|`sharedListeners` コレクションのリスナーにフィルターを追加します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -80,7 +80,7 @@ ms.locfileid: "59095634"
  この要素は、マシン構成ファイル (Machine.config) と、アプリケーション構成ファイルで使用できます。  
   
 ## <a name="example"></a>例  
- 次の例は、使用する方法を示します`<add>`要素を追加する、<xref:System.Diagnostics.TextWriterTraceListener>`textListener`を`sharedListeners`コレクション。   `textListener` 名前で追加、`Listeners`トレース ソースのコレクション`TraceSourceApp`します。 `textListener`ファイル myListener.log にリスナーがトレース出力を書き込みます。  
+ 次の例は、使用する方法を示します`<add>`要素を追加する、 <xref:System.Diagnostics.TextWriterTraceListener> `textListener`を`sharedListeners`コレクション。   `textListener` 名前で追加、`Listeners`トレース ソースのコレクション`TraceSourceApp`します。 `textListener`ファイル myListener.log にリスナーがトレース出力を書き込みます。  
   
 ```xml  
 <configuration>  

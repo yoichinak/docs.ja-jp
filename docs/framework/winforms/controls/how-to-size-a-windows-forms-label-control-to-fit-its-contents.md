@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Label control [Windows Forms], sizing to fit contents
 ms.assetid: 99648964-63b2-438c-980e-d24103ad602b
 ms.openlocfilehash: 110aab0c0826bb4b06e22158afd6af37b5406be4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312190"
 ---
 # <a name="how-to-size-a-windows-forms-label-control-to-fit-its-contents"></a>方法: Windows フォーム Label コントロールのサイズを内容に合わせて変更する
@@ -26,6 +26,6 @@ Windows フォーム<xref:System.Windows.Forms.Label>コントロールは 1 行
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: Windows フォームの Label コントロールでアクセス キーを作成する](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [方法: Windows フォームの Label コントロールでのアクセス キーを作成します。](how-to-create-access-keys-with-windows-forms-label-controls.md)
 - [Label コントロールの概要](label-control-overview-windows-forms.md)
 - [Label コントロール](label-control-windows-forms.md)

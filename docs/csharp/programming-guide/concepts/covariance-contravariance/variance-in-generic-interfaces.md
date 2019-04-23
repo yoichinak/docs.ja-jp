@@ -1,17 +1,19 @@
 ---
 title: ジェネリック インターフェイスの分散 (C#)
-ms.date: 07/20/2015
+ms.date: 04/10/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: ffe437fc88722b9f38aa2fde6cdd87ed2e2060be
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469549"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59480782"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>ジェネリック インターフェイスの分散 (C#)
 
-.NET Framework 4 では、既存のいくつかのジェネリック インターフェイスに対して、分散のサポートが導入されています。 分散のサポートにより、これらのインターフェイスを実装するクラスの暗黙的な変換が可能になりました。 次のインターフェイスは、新たにバリアントになりました。
+.NET Framework 4 では、既存のいくつかのジェネリック インターフェイスに対して、分散のサポートが導入されています。 分散のサポートにより、これらのインターフェイスを実装するクラスの暗黙的な変換が可能になりました。 
+
+.NET Framework 4 以降では、次のインターフェイスがバリアントです。
 
 - <xref:System.Collections.Generic.IEnumerable%601> (T は共変です)
 
@@ -27,6 +29,12 @@ ms.locfileid: "57469549"
 
 - <xref:System.IComparable%601> (T は反変です)
 
+.NET Framework 4.5 以降では、次のインターフェイスがバリアントです。
+
+- <xref:System.Collections.Generic.IReadOnlyList%601> (T は反変です)
+
+- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T は反変です)
+
 共変性により、メソッドの戻り値の型の派生を、インターフェイスのジェネリック型パラメーターで定義されている型よりも強くすることができます。 ここでは、共変性機能について説明するために、`IEnumerable<Object>` および `IEnumerable<String>` というジェネリック インターフェイスについて考えます。 `IEnumerable<String>` インターフェイスは、`IEnumerable<Object>` インターフェイスを継承しません。 ただし、`String` 型は `Object` 型を継承します。場合によっては、これらのインターフェイスのオブジェクトを、相互に割り当てる必要が生じることもあるでしょう。 これを次のコード例に示します。
 
 ```csharp
@@ -34,7 +42,7 @@ IEnumerable<String> strings = new List<String>();
 IEnumerable<Object> objects = strings;
 ```
 
-以前のバージョンの .NET Framework では、`Option Strict On` を使用した C# でこのコードを実行すると、コンパイル エラーが発生しましたが、 今後は、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスが共変になったので、上記の例のように、`objects` の代わりに `strings` を使用できるようになりました。
+.NET Framework の以前のバージョンでは、C# ではこのコードを実行するとコンパイル エラーが発生し、Visual Basic では `Option Strict` がオンの場合にエラーが発生します。 今後は、<xref:System.Collections.Generic.IEnumerable%601> インターフェイスが共変になったので、上記の例のように、`objects` の代わりに `strings` を使用できるようになりました。
 
 反変性により、メソッドの引数の型の派生を、インターフェイスのジェネリック パラメーターで指定されている型よりも弱くすることができます。 ここでは、反変性について説明するために、`BaseClass` クラスのインスタンスを比較するための `BaseComparer` クラスを作成した場合について考えます。 `BaseComparer` クラスは、`IEqualityComparer<BaseClass>` インターフェイスを実装します。 <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスが反変になったので、`BaseComparer` を使用して、`BaseClass` クラスを継承するクラスのインスタンスを比較することができます。 これを次のコード例に示します。
 

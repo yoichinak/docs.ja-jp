@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59179999"
 ---
 # <a name="geometry-overview"></a>ジオメトリの概要
@@ -223,7 +223,7 @@ PathGeometry
 - <xref:System.Windows.Media.GeometryDrawing>
 - [2D グラフィックスとイメージング](../advanced/optimizing-performance-2d-graphics-and-imaging.md)
 - [パス マークアップ構文](path-markup-syntax.md)
-- [方法のトピック](geometries-how-to-topics.md)
+- [方法トピック](geometries-how-to-topics.md)
 - [アニメーションの概要](animation-overview.md)
 - [WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)
 - [Drawing オブジェクトの概要](drawing-objects-overview.md)

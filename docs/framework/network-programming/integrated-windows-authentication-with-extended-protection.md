@@ -2,12 +2,12 @@
 title: 統合 Windows 認証と拡張保護
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 93156ab346d97259030b001d3a4d8ca4612f48c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54591618"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59325723"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>統合 Windows 認証と拡張保護
 <xref:System.Net> 名前空間および関連名前空間の <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream>、および関連クラスによる統合 Windows 認証の処理方法に影響を与える、機能強化が行われました。 セキュリティ強化のため、拡張保護のサポートが追加されました。  
@@ -25,17 +25,17 @@ ms.locfileid: "54591618"
   
  全体的な目標は次のとおりです。  
   
-1.  拡張保護をサポートするためにクライアントが更新された場合、アプリケーションがチャネル バインディングとサービス バインディングの情報をサポートされるすべての認証プロトコルに提供する必要があります。 チャネル バインディング情報は、バインドするチャネル (TLS) がある場合にのみ提供できます。 サービス バインディング情報は、常に提供される必要があります。  
+1. 拡張保護をサポートするためにクライアントが更新された場合、アプリケーションがチャネル バインディングとサービス バインディングの情報をサポートされるすべての認証プロトコルに提供する必要があります。 チャネル バインディング情報は、バインドするチャネル (TLS) がある場合にのみ提供できます。 サービス バインディング情報は、常に提供される必要があります。  
   
-2.  正しく構成されている更新されたサーバーは、チャネル バインディング情報およびサービス バインディング情報がクライアントの認証トークンにある場合にそれを検証し、チャネル バインディングが一致しない場合は、認証の試行を拒否する場合があります。 展開シナリオによっては、サーバーはチャネル バインディング、サービス バインディングの一方または両方の検証ができます。  
+2. 正しく構成されている更新されたサーバーは、チャネル バインディング情報およびサービス バインディング情報がクライアントの認証トークンにある場合にそれを検証し、チャネル バインディングが一致しない場合は、認証の試行を拒否する場合があります。 展開シナリオによっては、サーバーはチャネル バインディング、サービス バインディングの一方または両方の検証ができます。  
   
-3.  更新されたサーバーには、ポリシーに基づいて、チャネル バインディング情報を含まない下位クライアントの要求を承認または拒否することができます。  
+3. 更新されたサーバーには、ポリシーに基づいて、チャネル バインディング情報を含まない下位クライアントの要求を承認または拒否することができます。  
   
  拡張保護で使用される情報は、次の 2 つの部分の一方または両方で構成されます。  
   
-1.  チャネル バインディング トークンまたは CBT。  
+1. チャネル バインディング トークンまたは CBT。  
   
-2.  サービス プリンシパル名 (SPN) 形式でのサービス バインディング情報。  
+2. サービス プリンシパル名 (SPN) 形式でのサービス バインディング情報。  
   
  サービス バインディング情報は、特定のサービス エンドポイントを認証するクライアントの意思表示です。 これは、次のプロパティを使用してクライアントからサーバーに伝達されます。  
   
@@ -122,11 +122,11 @@ ms.locfileid: "54591618"
   
  この構成では、セキュリティで保護された外部チャネル経由でサーバーに要求が作成されると、その外部チャネルがチャネル バインディングに対して照会されます。 このチャネル バインディングは、認証 BLOB でチャネル バインディングが一致することを検証する認証の SSPI 呼び出しに渡されます。 考えられる結果は 3 つあります。  
   
-1.  サーバーの基本のオペレーティング システムが拡張保護をサポートしません。 要求がアプリケーションに公開されず、権限がないという応答 (401) がクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
+1. サーバーの基本のオペレーティング システムが拡張保護をサポートしません。 要求がアプリケーションに公開されず、権限がないという応答 (401) がクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
   
-2.  SSPI 呼び出しの失敗は、クライアントが外部チャネルから取得した予期される値と一致しなかったチャネル バインディングを指定したか、またはサーバーで拡張保護ポリシーが <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> に設定された場合に、クライアントがチャネル バインディングの提供に失敗したことを示します。 どちらの場合も、要求はアプリケーションに公開されず、権限がないという応答 (401) がクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
+2. SSPI 呼び出しの失敗は、クライアントが外部チャネルから取得した予期される値と一致しなかったチャネル バインディングを指定したか、またはサーバーで拡張保護ポリシーが <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> に設定された場合に、クライアントがチャネル バインディングの提供に失敗したことを示します。 どちらの場合も、要求はアプリケーションに公開されず、権限がないという応答 (401) がクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
   
-3.  クライアントは正しいチャネル バインディングを指定します。または、サーバーで拡張保護ポリシーが <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> で構成されているため、チャネル バインディングを指定せずにクライアントは接続することができます。要求は処理のためにアプリケーションに返されます。 サービス名チェックは自動的に実行されません。 アプリケーションは、<xref:System.Net.HttpListenerRequest.ServiceName%2A> プロパティを使用して独自のサービス名の検証を実行するように選択できますが、こうした状況では冗長です。  
+3. クライアントは正しいチャネル バインディングを指定します。または、サーバーで拡張保護ポリシーが <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> で構成されているため、チャネル バインディングを指定せずにクライアントは接続することができます。要求は処理のためにアプリケーションに返されます。 サービス名チェックは自動的に実行されません。 アプリケーションは、<xref:System.Net.HttpListenerRequest.ServiceName%2A> プロパティを使用して独自のサービス名の検証を実行するように選択できますが、こうした状況では冗長です。  
   
  アプリケーションが独自の SSPI 呼び出しを作成して、HTTP 要求の本体内でやり取りされた BLOB に基づいて認証を実行し、チャネル バインディングをサポートする場合は、チャネル バインディングをネイティブ Win32 [AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 関数に渡すため、<xref:System.Net.HttpListener> を使用して、セキュリティで保護された外部チャネルから、期待されるチャネル バインディングを取得する必要があります。 これを行うには、<xref:System.Net.HttpListenerRequest.TransportContext%2A> プロパティを使用して <xref:System.Net.TransportContext.GetChannelBinding%2A> メソッドを呼び出して CBT を取得します。 エンドポイント バインディングのみがサポートされます。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBindingKind.Endpoint> 以外のものが指定されると、<xref:System.NotSupportedException> がスローされます。 基本のオペレーティング システムがチャネル バインディングをサポートしている場合、<xref:System.Net.TransportContext.GetChannelBinding%2A> メソッドがポインターをラップする <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding><xref:System.Runtime.InteropServices.SafeHandle> を、[AcceptSecurityContext](https://go.microsoft.com/fwlink/?LinkId=147021) 関数に `pInput` パラメーターで渡される SecBuffer 構造体の pvBuffer メンバーとして渡すのに適したチャネル バインディングに返します。 <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding.Size%2A> プロパティには、チャネル バインディングの長さ (バイト単位) が含まれます。 基本のオペレーティング システムがチャネル バインディングをサポートしていない場合、関数は `null` を返します。  
   
@@ -136,18 +136,19 @@ ms.locfileid: "54591618"
   
  この構成では、セキュリティで保護された外部チャネルなしでサーバーに対して要求が作成された場合に、認証は通常、チャネル バインディングのチェックなしで実行されます。 認証に成功した場合、クライアントが提供したサービス名に対してコンテキストが照会され、許容されるサービス名のリストに照らして検証されます。 考えられる結果は 4 つあります。  
   
-1.  サーバーの基本のオペレーティング システムが拡張保護をサポートしません。 要求がアプリケーションに公開されず、権限がないという応答 (401) がクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
+1. サーバーの基本のオペレーティング システムが拡張保護をサポートしません。 要求がアプリケーションに公開されず、権限がないという応答 (401) がクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
   
-2.  クライアントの基本のオペレーティング システムが拡張保護をサポートしません。 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 構成では、認証の試行が成功し、要求がアプリケーションに返されます。 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 構成では、認証の試行は失敗します。 要求がアプリケーションに公開されず、権限がないという応答 (401) がクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
+2. クライアントの基本のオペレーティング システムが拡張保護をサポートしません。 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.WhenSupported> 構成では、認証の試行が成功し、要求がアプリケーションに返されます。 <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement.Always> 構成では、認証の試行は失敗します。 要求がアプリケーションに公開されず、権限がないという応答 (401) がクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
   
-3.  クライアントの基本のオペレーティング システムは拡張保護をサポートしますが、アプリケーションはサービス バインディングを指定しませんでした。 要求がアプリケーションに公開されず、権限がないという応答 (401) がクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
+3. クライアントの基本のオペレーティング システムは拡張保護をサポートしますが、アプリケーションはサービス バインディングを指定しませんでした。 要求がアプリケーションに公開されず、権限がないという応答 (401) がクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
   
-4.  クライアントはサービス バインディングを指定しました。 サービス バインディングは、許可されているサービス バインディングのリストと比較されます。 一致すると、要求がアプリケーションに返されます。 そうでない場合、要求がアプリケーションに公開されず、権限がないという応答 (401) が自動的にクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
+4. クライアントはサービス バインディングを指定しました。 サービス バインディングは、許可されているサービス バインディングのリストと比較されます。 一致すると、要求がアプリケーションに返されます。 そうでない場合、要求がアプリケーションに公開されず、権限がないという応答 (401) が自動的にクライアントに返されます。 失敗の理由を明らかにするメッセージが <xref:System.Net.HttpListener> トレース ソースに記録されます。  
   
  許容されるサービス名の許可リストを使用するこの単純な方法が不十分な場合、アプリケーションは <xref:System.Net.HttpListenerRequest.ServiceName%2A> プロパティのクエリを実行することで、独自のサービス名の検証を提供できます。 上記の 1 および 2 の場合、プロパティは `null` を返します。 3 の場合、空の文字列を返します。 4 の場合、クライアントによって指定されたサービス名が返されます。  
   
  これらの拡張保護機能は、サーバー アプリケーションによって、他の種類の要求での認証に使用したり、信頼されたプロキシが使用されている場合に使用することもできます。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Security.Authentication.ExtendedProtection>
 - <xref:System.Security.Authentication.ExtendedProtection.Configuration>

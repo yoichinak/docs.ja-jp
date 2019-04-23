@@ -5,10 +5,10 @@ ms.assetid: 57c614e5-18a9-4e87-bfd5-d0fe3396a192
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c304606a27552e604bf40953f49a30a794026281
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150749"
 ---
 # <a name="namespace-element-net-native"></a>\<Namespace > 要素 (.NET ネイティブ)
@@ -66,16 +66,16 @@ ms.locfileid: "59150749"
 |要素|説明|  
 |-------------|-----------------|  
 |`<Namespace>`|親名前空間内のすべての型にランタイム リフレクション ポリシーを適用します。|  
-|[\<型 >](../../../docs/framework/net-native/type-element-net-native.md)|型にリフレクション ポリシーを適用します。|  
-|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型にリフレクション ポリシーを適用します。|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型にリフレクション ポリシーを適用します。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型にリフレクション ポリシーを適用します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<アプリケーション >](../../../docs/framework/net-native/application-element-net-native.md)|実行時にリフレクションで使用可能なメタデータを持つ、アプリケーション全体の型と型のメンバーのコンテナーとして機能します。 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 要素は、0 個以上の [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素を持つことができます。|  
-|[\<アセンブリ >](../../../docs/framework/net-native/assembly-element-net-native.md)|指定したアセンブリ内のすべての型にランタイム リフレクション ポリシーを適用します。|  
-|[\<ライブラリ >](../../../docs/framework/net-native/library-element-net-native.md)|実行時にリフレクションに使用可能なメタデータを持つ型と型のメンバーを含むアセンブリを定義します。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素は、0 または 1 個の [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素を持つことができます。|  
+|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|実行時にリフレクションで使用可能なメタデータを持つ、アプリケーション全体の型と型のメンバーのコンテナーとして機能します。 [\<Application>](../../../docs/framework/net-native/application-element-net-native.md) 要素は、0 個以上の [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素を持つことができます。|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|指定したアセンブリ内のすべての型にランタイム リフレクション ポリシーを適用します。|  
+|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|実行時にリフレクションに使用可能なメタデータを持つ型と型のメンバーを含むアセンブリを定義します。 [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素は、0 または 1 個の [\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md) 要素を持つことができます。|  
 |`<Namespace>`|親名前空間内のすべての型にリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 96c13903-ccb6-4a0e-ab6a-8ca955ca314d
 ms.openlocfilehash: 702d88f844f00b86e64404bd100fd6b3d34971c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211232"
 ---
 # <a name="retrieving-objects-from-the-identity-cache"></a>ID キャッシュからのオブジェクトの取得
@@ -30,7 +30,7 @@ ms.locfileid: "59211232"
   
  これらの一般的な形式では、`Function1`、`Function2`、および `predicate` が次のように定義されます。  
   
- `Function1` 次のいずれかになります。  
+ `Function1` は、次のいずれかになります。  
   
 -   <xref:System.Linq.Queryable.Where%2A>  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59211232"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `Function2` 次のいずれかになります。  
+ `Function2` は、次のいずれかになります。  
   
 -   <xref:System.Linq.Queryable.First%2A>  
   
@@ -52,7 +52,7 @@ ms.locfileid: "59211232"
   
 -   <xref:System.Linq.Queryable.SingleOrDefault%2A>  
   
- `predicate` 定数値に、オブジェクトの主キー プロパティを設定する式を指定する必要があります。 オブジェクトのプライマリ キーが複数のプロパティで定義されている場合は、それぞれのプライマリ キー プロパティが定数値に設定されている必要があります。 `predicate` に使用する必要がある形式の例を次に示します。  
+ `predicate` は、オブジェクトのプライマリ キー プロパティが定数値に設定された式である必要があります。 オブジェクトのプライマリ キーが複数のプロパティで定義されている場合は、それぞれのプライマリ キー プロパティが定数値に設定されている必要があります。 `predicate` に使用する必要がある形式の例を次に示します。  
   
 -   `c => c.PK == constant_value`  
   

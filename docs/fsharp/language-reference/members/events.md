@@ -3,10 +3,10 @@ title: イベント
 description: 学習方法F#イベントには、GUI プログラミングの重要なユーザー アクションと関数の呼び出しを関連付けることが有効にします。
 ms.date: 05/16/2016
 ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227003"
 ---
 # <a name="events"></a>イベント
@@ -175,7 +175,7 @@ Application.Run(appForm)
 ## <a name="see-also"></a>関連項目
 
 - [メンバー](index.md)
-- [イベントの処理と発生](../../../../docs/standard/events/index.md)
+- [処理とイベントの発生](../../../../docs/standard/events/index.md)
 - [ラムダ式:`fun`キーワード](../functions/lambda-expressions-the-fun-keyword.md)
 - [Control.Event モジュール](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event-module-%5bfsharp%5d)
 - [Control.Event&#60;' T&#62;クラス](https://msdn.microsoft.com/visualfsharpdocs/conceptual/control.event%5b%27t%5d-class-%5bfsharp%5d)

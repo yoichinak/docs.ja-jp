@@ -1,12 +1,12 @@
 ---
-title: <security> (行中)  <msmqIntegrationBinding>
+title: <security> の <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: ae5c68a8-14a2-4c6e-b9e0-3e94e3e9135e
 ms.openlocfilehash: 8d79523db2a1567283b934abbd3de1adbbe6b0b5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125789"
 ---
 # <a name="security-of-msmqintegrationbinding"></a>\<セキュリティ > の\<msmqIntegrationBinding >

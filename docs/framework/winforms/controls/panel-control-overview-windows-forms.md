@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086365"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel コントロールの概要 (Windows フォーム)
@@ -27,5 +27,5 @@ Windows フォーム<xref:System.Windows.Forms.Panel>コントロールを使用
 
 - <xref:System.Windows.Forms.Panel>
 - [GroupBox コントロール](groupbox-control-windows-forms.md)
-- [方法: デザイナーを使用して Windows フォーム Panel コントロールでコントロールをグループ化する](group-controls-with-wf-panel-control-using-the-designer.md)
-- [方法: デザイナーを使って Windows フォーム パネルの背景を設定する](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)
+- [方法: コントロール デザイナーを使用して Windows フォーム Panel コントロールをグループ](group-controls-with-wf-panel-control-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム パネルの背景を設定します。](how-to-set-the-background-of-a-windows-forms-panel-using-the-designer.md)

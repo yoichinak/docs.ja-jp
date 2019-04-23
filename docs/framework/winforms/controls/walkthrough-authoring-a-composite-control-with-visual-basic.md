@@ -14,10 +14,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f50e270e-4db2-409a-8319-6db6ca5c7daf
 ms.openlocfilehash: 6404e5933f886578b4ad8afd0d3da324541fc3f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299983"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-basic"></a>チュートリアル: Visual Basic による複合コントロールの作成
@@ -35,7 +35,7 @@ ms.locfileid: "59299983"
   
 2. Visual Basic プロジェクトのリストから選択、 **Windows コントロール ライブラリ**プロジェクト テンプレート、型`ctlClockLib`で、**名前**ボックスし、順にクリックします **[ok]**。  
   
-     プロジェクト名 `ctlClockLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、次の 2 つのアセンブリがという名前のコンポーネントを提供`ctlClock`を指定することができます、`ctlClock`を使用してコンポーネント `ctlClockLib.ctlClock.`  
+     プロジェクト名 `ctlClockLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、`ctlClock` という名前のコンポーネントが 2 つのアセンブリに含まれている場合、`ctlClockLib.ctlClock.` を使用して目的の `ctlClock` コンポーネントを指定できます。  
   
 3. ソリューション エクスプローラーで、**[UserControl1.vb]** を右クリックし、**[名前の変更]** をクリックします。 ファイル名を `ctlClock.vb` に変更します。 コード要素 "UserControl1" へのすべての参照の名前を変更するかどうかをたずねられたら、**[はい]** をクリックします。  
   
@@ -59,8 +59,8 @@ ms.locfileid: "59299983"
   
     |プロパティ|変更後の値|  
     |--------------|---------------|  
-    |**名前**|`lblDisplay`|  
-    |**テキスト**|`(blank space)`|  
+    |**Name**|`lblDisplay`|  
+    |**Text**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -244,8 +244,8 @@ ms.locfileid: "59299983"
   
     |プロパティ|設定|  
     |--------------|-------------|  
-    |**名前**|`lblAlarm`|  
-    |**テキスト**|**警告!**|  
+    |**Name**|`lblAlarm`|  
+    |**Text**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Visible**|`False`|  
   
@@ -358,10 +358,10 @@ ms.locfileid: "59299983"
   
     |コントロール|プロパティ|[値]|  
     |-------------|--------------|-----------|  
-    |`label1`|**テキスト**|`(blank space)`|  
-    ||**名前**|`lblTest`|  
-    |`dateTimePicker1`|**名前**|`dtpTest`|  
-    ||**形式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    |`label1`|**Text**|`(blank space)`|  
+    ||**Name**|`lblTest`|  
+    |`dateTimePicker1`|**Name**|`dtpTest`|  
+    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 12. デザイナーで **[dtpTest]** をダブルクリックします。  
   
@@ -398,5 +398,5 @@ ms.locfileid: "59299983"
 ## <a name="see-also"></a>関連項目
 
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)
-- [方法: 複合コントロールを作成する](how-to-author-composite-controls.md)
-- [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [方法: 複合コントロールを作成](how-to-author-composite-controls.md)
+- [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)

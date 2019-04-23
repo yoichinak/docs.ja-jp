@@ -8,10 +8,10 @@ helpviewer_keywords:
 - tables [WPF], creating programmatically
 ms.assetid: e3ca88f3-6e94-4b61-82fc-42104c10b761
 ms.openlocfilehash: 315154b37218c0a6845f0a46149fc056780ee650
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172628"
 ---
 # <a name="how-to-build-a-table-programmatically"></a>方法: プログラムによってテーブルをビルドする

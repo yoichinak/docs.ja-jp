@@ -6,10 +6,10 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340491"
 ---
 # <a name="multimedia-overview"></a>マルチメディアの概要
@@ -77,11 +77,11 @@ ms.locfileid: "59340491"
   
  <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>と<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>プロパティは、メディアの再生を制御する唯一の方法ではありません。 Clock モードで、クロックを制御できます、<xref:System.Windows.Controls.MediaElement>対話型の制御メソッドが制御し、<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>は<xref:System.Windows.Controls.MediaState.Manual>します。 <xref:System.Windows.Controls.MediaElement> 次の優先順位を評価することによって、この制御の競合を処理します。  
   
-1. <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>. メディアがアンロードされているときに有効です。 これにより、既定では、すべてのメディア リソースが解放される場合でも、<xref:System.Windows.Media.MediaClock>に関連付けられている、<xref:System.Windows.Controls.MediaElement>します。  
+1. <xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>。 メディアがアンロードされているときに有効です。 これにより、既定では、すべてのメディア リソースが解放される場合でも、<xref:System.Windows.Media.MediaClock>に関連付けられている、<xref:System.Windows.Controls.MediaElement>します。  
   
-2. <xref:System.Windows.Media.MediaClock>. メディアがある場合、<xref:System.Windows.Controls.MediaElement.Clock%2A>します。 メディアが読み込まれる場合、<xref:System.Windows.Media.MediaClock>限り有効になります、<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>は<xref:System.Windows.Controls.MediaState.Manual>します。 Clock モードは、常の読み込み動作をオーバーライド、<xref:System.Windows.Controls.MediaElement>します。  
+2. <xref:System.Windows.Media.MediaClock>。 メディアがある場合、<xref:System.Windows.Controls.MediaElement.Clock%2A>します。 メディアが読み込まれる場合、<xref:System.Windows.Media.MediaClock>限り有効になります、<xref:System.Windows.Controls.MediaElement.UnloadedBehavior%2A>は<xref:System.Windows.Controls.MediaState.Manual>します。 Clock モードは、常の読み込み動作をオーバーライド、<xref:System.Windows.Controls.MediaElement>します。  
   
-3. <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>. メディアが読み込まれているときに有効です。  
+3. <xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>。 メディアが読み込まれているときに有効です。  
   
 4. 対話型の制御メソッド。 場合に発生<xref:System.Windows.Controls.MediaElement.LoadedBehavior%2A>は<xref:System.Windows.Controls.MediaState.Manual>します。 使用できる制御メソッドは<xref:System.Windows.Controls.MediaElement.Play%2A>、 <xref:System.Windows.Controls.MediaElement.Pause%2A>、 <xref:System.Windows.Controls.MediaElement.Close%2A>、および<xref:System.Windows.Controls.MediaElement.Stop%2A>します。  
   
@@ -99,9 +99,9 @@ ms.locfileid: "59340491"
 ### <a name="controlling-mediaplayer"></a>Media Player の制御  
  <xref:System.Windows.Media.MediaPlayer>はステートレスであるメディアの再生を制御する方法は 2 つです。  
   
-1. 対話型の制御メソッド。 Independent モードのときに (`null`<xref:System.Windows.Media.MediaPlayer.Clock%2A>プロパティ)。  
+1. 対話型の制御メソッド。 Independent モードのときに (`null` <xref:System.Windows.Media.MediaPlayer.Clock%2A>プロパティ)。  
   
-2. <xref:System.Windows.Media.MediaClock>. メディアがある場合、<xref:System.Windows.Media.MediaPlayer.Clock%2A>します。  
+2. <xref:System.Windows.Media.MediaClock>。 メディアがある場合、<xref:System.Windows.Media.MediaPlayer.Clock%2A>します。  
   
 ### <a name="displaying-a-mediaplayer"></a>MediaPlayer の表示  
  技術的には、<xref:System.Windows.Media.MediaPlayer>物理的に表したものがあるないために、表示されることはできません。 ただしでメディアを存在させる使用できますが、<xref:System.Windows.Media.Drawing>を使用して、<xref:System.Windows.Media.VideoDrawing>クラス。 次の例では、使用、<xref:System.Windows.Media.VideoDrawing>メディアを表示します。  
@@ -114,4 +114,4 @@ ms.locfileid: "59340491"
 
 - <xref:System.Windows.Media.DrawingGroup>
 - [レイアウト](../advanced/layout.md)
-- [方法のトピック](audio-and-video-how-to-topics.md)
+- [方法トピック](audio-and-video-how-to-topics.md)

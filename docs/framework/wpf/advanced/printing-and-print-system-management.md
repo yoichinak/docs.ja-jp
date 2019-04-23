@@ -6,10 +6,10 @@ helpviewer_keywords:
 - print system management [WPF]
 ms.assetid: 637911b3-0c78-4493-a4fb-91db56d767cd
 ms.openlocfilehash: 6c91661db92b31e291ede46a509acf8e7bc4b34d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59181754"
 ---
 # <a name="printing-and-print-system-management"></a>印刷および印刷システムの管理
@@ -19,7 +19,7 @@ ms.locfileid: "59181754"
  [印刷の概要](printing-overview.md)  
  新しい印刷パスの詳細については、[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]します。  
   
- [方法のトピック](printing-how-to-topics.md)  
+ [方法トピック](printing-how-to-topics.md)  
  一連の新しい印刷パスを使用する方法を示す記事と[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]します。  
   
 ## <a name="see-also"></a>関連項目

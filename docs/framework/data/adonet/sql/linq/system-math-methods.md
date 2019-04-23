@@ -3,14 +3,14 @@ title: System.Math メソッド
 ms.date: 03/30/2017
 ms.assetid: 0f299521-6f41-4720-bd70-67c93fc50948
 ms.openlocfilehash: 1dae31b30962505c07c198f3bd35fceb8f400efb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141714"
 ---
 # <a name="systemmath-methods"></a>System.Math メソッド
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 次をサポートしていません<xref:System.Math>メソッド。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、次の <xref:System.Math> メソッドをサポートしていません。  
   
 -   <xref:System.Math.DivRem%28System.Int32%2CSystem.Int32%2CSystem.Int32%40%29?displayProperty=nameWithType>  
   
@@ -23,7 +23,7 @@ ms.locfileid: "59141714"
   
  SQL では、`ROUND` 関数は常に、0 から遠ざかる方向に丸めを実行します。 したがって、2.5 は 3 に丸められます。これは、2 に丸められる .NET Framework とは対照的です。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL に渡す`ROUND`セマンティクスと銀行型丸めを実装しません。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、SQL の `ROUND` セマンティクスに到達するため、銀行型丸めを実装しようとしません。  
   
 ## <a name="see-also"></a>関連項目
 

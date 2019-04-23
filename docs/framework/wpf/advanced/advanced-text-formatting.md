@@ -10,10 +10,10 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085728"
 ---
 # <a name="advanced-text-formatting"></a>テキストの高度な書式設定
@@ -30,7 +30,7 @@ Windows Presentation Foundation (WPF) は、堅牢な一連の[!INCLUDE[TLA#tla_
   
 <a name="section1"></a>   
 ## <a name="advanced-text-formatting"></a>テキストの高度な書式設定  
- テキストのレイアウトと[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]でコントロールを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションに簡単に書式設定されたテキストを追加するための書式設定のプロパティを提供します。 これらのコントロールでは、テキストの表示を処理するさまざまなプロパティが公開されます。書体、大きさ、色などです。 通常の状況では、これらのコントロールはアプリケーションの大半のテキスト表示を処理できます。 しかしながら、一部の高度なシナリオでは、テキスト表示と同様にテキスト保存を制御する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] この目的のためのエンジンの書式設定、拡張可能なテキストを提供します。  
+ テキストのレイアウトと[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]でコントロールを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションに簡単に書式設定されたテキストを追加するための書式設定のプロパティを提供します。 これらのコントロールでは、テキストの表示を処理するさまざまなプロパティが公開されます。書体、大きさ、色などです。 通常の状況では、これらのコントロールはアプリケーションの大半のテキスト表示を処理できます。 しかしながら、一部の高度なシナリオでは、テキスト表示と同様にテキスト保存を制御する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、その目的のための拡張テキスト書式設定エンジンを提供します。  
   
  高度なテキストを書式設定機能がある[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]エンジン、テキスト ストア、テキスト ラン、書式設定と書式設定プロパティのテキストで構成されます。 テキストの書式設定エンジン、<xref:System.Windows.Media.TextFormatting.TextFormatter>プレゼンテーションに使用するテキスト行を作成します。 これは、行の書式設定プロセスを開始し、テキスト フォーマッタを呼び出すことによって実現されます<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>します。 テキスト フォーマッタは、テキスト ストアからテキスト ランを取得しますを呼び出し、ストアの<xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>メソッド。 <xref:System.Windows.Media.TextFormatting.TextRun>オブジェクトを形成し<xref:System.Windows.Media.TextFormatting.TextLine>テキスト フォーマッタによりオブジェクト検査または表示するため、アプリケーションが与えられます。  
   

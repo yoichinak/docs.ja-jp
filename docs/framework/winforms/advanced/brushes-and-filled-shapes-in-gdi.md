@@ -14,10 +14,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
 ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115311"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ でのブラシと塗りつぶされた図形
@@ -83,5 +83,5 @@ ms.locfileid: "59115311"
 - <xref:System.Drawing.TextureBrush?displayProperty=nameWithType>
 - <xref:System.Drawing.Drawing2D.LinearGradientBrush?displayProperty=nameWithType>
 - [直線、曲線、および図形](lines-curves-and-shapes.md)
-- [方法: Windows フォームに塗りつぶした四角形を描画する](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
-- [方法: Windows フォームに塗りつぶした楕円を描画する](how-to-draw-a-filled-ellipse-on-a-windows-form.md)
+- [方法: Windows フォームに塗りつぶした四角形を描画します。](how-to-draw-a-filled-rectangle-on-a-windows-form.md)
+- [方法: Windows フォームに塗りつぶした楕円を描画します。](how-to-draw-a-filled-ellipse-on-a-windows-form.md)

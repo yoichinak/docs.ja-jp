@@ -2,12 +2,12 @@
 title: 'チュートリアル: Async と Await を使用した Web へのアクセス (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: f06bf93f1de4de2aa70c761e1bfb101d4dde48a2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53127148"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59306730"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>チュートリアル: Async と Await を使用した Web へのアクセス (C#)
 
@@ -17,34 +17,34 @@ async/await 機能を使用することで、非同期プログラムをより�
 
 このチュートリアルは、Web サイトの一覧でのバイト数の合計を計算する同期 Windows Presentation Foundation (WPF) アプリケーションから開始します。 その後、新しい機能を使用して、アプリケーションを非同期ソリューションに変換します。
 
-自分でアプリケーションを作成しない場合は、[非同期サンプル: Web へのアクセスのチュートリアル (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) をダウンロードできます。
+自分でアプリケーションを作成しない場合は、[非同期サンプル:Web へのアクセスのチュートリアル (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f) をダウンロードできます。
 
 > [!NOTE]
 > この例を実行するには、コンピューターに Visual Studio 2012 以降および .NET Framework 4.5 以降がインストールされている必要があります。
 
 ## <a name="create-a-wpf-application"></a>WPF アプリケーションを作成する
 
-1.  Visual Studio を起動します。
+1. Visual Studio を起動します。
 
-2.  メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
+2. メニュー バーで、**[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** を選択します。
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3.  **[インストールされたテンプレート]** ウィンドウで、[Visual C#] をクリックし、プロジェクトの種類の一覧で **[WPF アプリケーション]** をクリックします。
+3. **[インストールされたテンプレート]** ウィンドウで、[Visual C#] をクリックし、プロジェクトの種類の一覧で **[WPF アプリケーション]** をクリックします。
 
-4.  **[名前]** ボックスに「`AsyncExampleWPF`」と入力して、**[OK]** を選択します。
+4. **[名前]** ボックスに「`AsyncExampleWPF`」と入力して、**[OK]** を選択します。
 
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。
 
 ## <a name="design-a-simple-wpf-mainwindow"></a>単純な WPF MainWindow をデザインする
 
-1.  Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。
+1. Visual Studio コード エディターで、 **[MainWindow.xaml]** タブをクリックします。
 
-2.  **[ツールボックス]** ウィンドウが表示されていない場合は、**[表示]** メニューを開き、**[ツールボックス]** をクリックします。
+2. **[ツールボックス]** ウィンドウが表示されていない場合は、**[表示]** メニューを開き、**[ツールボックス]** をクリックします。
 
-3.  **[Button]** コントロールと **[TextBox]** コントロールを **[MainWindow]** ウィンドウに追加します。
+3. **[Button]** コントロールと **[TextBox]** コントロールを **[MainWindow]** ウィンドウに追加します。
 
-4.  **[TextBox]** コントロールを強調表示し、**[プロパティ]** ウィンドウで次の値を設定します。
+4. **[TextBox]** コントロールを強調表示し、**[プロパティ]** ウィンドウで次の値を設定します。
 
     -   **[Name]** プロパティを `resultsTextBox` に設定します。
 
@@ -54,37 +54,37 @@ async/await 機能を使用することで、非同期プログラムをより�
 
     -   **[テキスト]** タブで、Lucida Console や Global Monospace などの等幅フォントを指定します。
 
-5.  **[Button]** コントロールを強調表示し、**[プロパティ]** ウィンドウで次の値を設定します。
+5. **[Button]** コントロールを強調表示し、**[プロパティ]** ウィンドウで次の値を設定します。
 
     -   **[Name]** プロパティを `startButton` に設定します。
 
     -   **[Content]** プロパティの値を **[Button]** から **[Start]** に変更します。
 
-6.  テキスト ボックスとボタンの位置を調整し、両方が **[MainWindow]** ウィンドウ内に表示されるようにします。
+6. テキスト ボックスとボタンの位置を調整し、両方が **[MainWindow]** ウィンドウ内に表示されるようにします。
 
      WPF XAML デザイナーについて詳しくは、「[XAML デザイナーを使用した UI の作成](/visualstudio/designers/creating-a-ui-by-using-xaml-designer-in-visual-studio)」をご覧ください。
 
 ## <a name="add-a-reference"></a>参照を追加する
 
-1.  **ソリューション エクスプローラー**で、プロジェクトの名前を強調表示します。
+1. **ソリューション エクスプローラー**で、プロジェクトの名前を強調表示します。
 
-2.  メニュー バーで、**[プロジェクト]** > **[参照の追加]** の順に選択します。
+2. メニュー バーで、**[プロジェクト]** > **[参照の追加]** の順に選択します。
 
      **[参照マネージャー]** ダイアログ ボックスが表示されます。
 
-3.  ダイアログ ボックスの上部で、プロジェクトのターゲットが .NET Framework 4.5 以上であることを確認します。
+3. ダイアログ ボックスの上部で、プロジェクトのターゲットが .NET Framework 4.5 以上であることを確認します。
 
-4.  **[アセンブリ]** カテゴリで、**[フレームワーク]** を選択します (選択されていない場合)。
+4. **[アセンブリ]** カテゴリで、**[フレームワーク]** を選択します (選択されていない場合)。
 
-5.  名前の一覧で、**[System.Net.Http]** のチェック ボックスをオンにします。
+5. 名前の一覧で、**[System.Net.Http]** のチェック ボックスをオンにします。
 
-6.  **[OK]** をクリックしてダイアログ ボックスを閉じます。
+6. **[OK]** をクリックしてダイアログ ボックスを閉じます。
 
 ## <a name="add-necessary-using-directives"></a>ディレクティブを使用して必要なものを追加する
 
-1.  **ソリューション エクスプローラー**で MainWindow.xaml.cs のショートカット メニューを開き、**[コードの表示]** を選択します。
+1. **ソリューション エクスプローラー**で MainWindow.xaml.cs のショートカット メニューを開き、**[コードの表示]** を選択します。
 
-2.  次の `using` ディレクティブが含まれていない場合は、コード ファイルの先頭に追加します。
+2. 次の `using` ディレクティブが含まれていない場合は、コード ファイルの先頭に追加します。
 
     ```csharp
     using System.Net.Http;
@@ -94,9 +94,9 @@ async/await 機能を使用することで、非同期プログラムをより�
 
 ## <a name="create-a-synchronous-app"></a>同期アプリを作成する
 
-1.  デザイン ウィンドウの MainWindow.xaml で、**[Start]** ボタンをダブルクリックして、MainWindow.xaml.cs に `startButton_Click` イベント ハンドラーを作成します。
+1. デザイン ウィンドウの MainWindow.xaml で、**[Start]** ボタンをダブルクリックして、MainWindow.xaml.cs に `startButton_Click` イベント ハンドラーを作成します。
 
-2.  MainWindow.xaml.cs で、次のコードを `startButton_Click` の本文にコピーします。
+2. MainWindow.xaml.cs で、次のコードを `startButton_Click` の本文にコピーします。
 
     ```csharp
     resultsTextBox.Clear();
@@ -106,15 +106,15 @@ async/await 機能を使用することで、非同期プログラムをより�
 
     このコードは、`SumPageSizes` アプリケーションを実行するメソッドを呼び出し、`startButton_Click` に制御が戻るとメッセージを表示します。
 
-3.  同期ソリューションのコードには、次の 4 つのメソッドが含まれています。
+3. 同期ソリューションのコードには、次の 4 つのメソッドが含まれています。
 
-    -   `SumPageSizes` は、`SetUpURLList` から Web ページ URL のリストを取得し、`GetURLContents` と `DisplayResults` を呼び出して各 URL を処理します。
+    -   `SumPageSizes`は、`SetUpURLList` から Web ページ URL のリストを取得し、`GetURLContents` と `DisplayResults` を呼び出して各 URL を処理します。
 
-    -   `SetUpURLList` は、Web アドレスのリストを作成して返します。
+    -   `SetUpURLList`は、Web アドレスのリストを作成して返します。
 
-    -   `GetURLContents` は、各 Web サイトのコンテンツをダウンロードし、バイト配列としてそのコンテンツを返します。
+    -   `GetURLContents`は、各 Web サイトのコンテンツをダウンロードし、バイト配列としてそのコンテンツを返します。
 
-    -   `DisplayResults` は、各 URL のバイト配列内のバイト数を表示します。
+    -   `DisplayResults`は、各 URL のバイト配列内のバイト数を表示します。
 
     次の 4 つのメソッドをコピーし、それを MainWindow.xaml.cs の `startButton_Click` イベント ハンドラーの下に貼り付けます。
 
@@ -222,7 +222,7 @@ Control returned to startButton_Click.
 
 ## <a name="convert-geturlcontents-to-an-asynchronous-method"></a>GetURLContents を非同期メソッドに変換する
 
-1.  同期ソリューションを非同期ソリューションに変換する際に、最初に取りかかるのに最適な場所は、`GetURLContents` 内です。その理由は、<xref:System.Net.HttpWebRequest> の <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドおよび <xref:System.IO.Stream> の <xref:System.IO.Stream.CopyTo%2A> メソッドへの呼び出しで、アプリケーションが Web にアクセスするためです。 .NET Framework には両方のメソッドの非同期バージョンが用意されているため、変換は簡単です。
+1. 同期ソリューションを非同期ソリューションに変換する際に、最初に取りかかるのに最適な場所は、`GetURLContents` 内です。その理由は、<xref:System.Net.HttpWebRequest> の <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドおよび <xref:System.IO.Stream> の <xref:System.IO.Stream.CopyTo%2A> メソッドへの呼び出しで、アプリケーションが Web にアクセスするためです。 .NET Framework には両方のメソッドの非同期バージョンが用意されているため、変換は簡単です。
 
      `GetURLContents` で使用されているメソッドの詳細については、「<xref:System.Net.WebRequest>」を参照してください。
 
@@ -235,7 +235,7 @@ Control returned to startButton_Click.
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2.  `GetResponseAsync` は、<xref:System.Threading.Tasks.Task%601> を返します。 この場合、*タスク戻り変数*の `TResult` の型は <xref:System.Net.WebResponse> です。 このタスクは、要求されたデータのダウンロードが完了し、タスクが最後まで実行された後に、実際の `WebResponse` オブジェクトを生成するという約束です。
+2. `GetResponseAsync` は <xref:System.Threading.Tasks.Task%601> を返します。 この場合、*タスク戻り変数*の `TResult` の型は <xref:System.Net.WebResponse> です。 このタスクは、要求されたデータのダウンロードが完了し、タスクが最後まで実行された後に、実際の `WebResponse` オブジェクトを生成するという約束です。
 
      タスクから `WebResponse` 値を取得するには、次のコードに示すように、[await](../../../../csharp/language-reference/keywords/await.md) (C#) 演算子を `GetResponseAsync` への呼び出しに適用します。
 
@@ -254,9 +254,9 @@ Control returned to startButton_Click.
 
      `webReq.GetResponseAsync` への呼び出しによって、`Task(Of WebResponse)` または `Task<WebResponse>` が返されます。 その後、`WebResponse` 値を取得するため、タスクに await 演算子が適用されます。
 
-     非同期メソッドにタスクの完了に依存しない処理がある場合、メソッドはこれら 2 つのステートメントの間、つまり非同期メソッドへの呼び出しから、`await` 演算子の適用までの間にその処理を続行することができます。 この例については、「[方法: Async と Await を使用して複数の Web 要求を並列実行する (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)」および「[方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)」を参照してください。
+     非同期メソッドにタスクの完了に依存しない処理がある場合、メソッドはこれら 2 つのステートメントの間、つまり非同期メソッドへの呼び出しから、`await` 演算子の適用までの間にその処理を続行することができます。 たとえば、「[方法:async と await を使用して複数の Web 要求を並列実行する (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)」と「[方法:Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)」を参照してください。
 
-3.  前の手順で `await` 演算子を追加したため、コンパイラ エラーが発生します。 この演算子は、[async](../../../../csharp/language-reference/keywords/async.md) 修飾子でマークされているメソッドでのみ使用できます。 `CopyTo` への呼び出しを `CopyToAsync` への呼び出しに置き換える変換手順を繰り返す間は、エラーを無視してください。
+3. 前の手順で `await` 演算子を追加したため、コンパイラ エラーが発生します。 この演算子は、[async](../../../../csharp/language-reference/keywords/async.md) 修飾子でマークされているメソッドでのみ使用できます。 `CopyTo` への呼び出しを `CopyToAsync` への呼び出しに置き換える変換手順を繰り返す間は、エラーを無視してください。
 
     -   呼び出されるメソッドの名前を <xref:System.IO.Stream.CopyToAsync%2A> に変更します。
 
@@ -277,13 +277,13 @@ Control returned to startButton_Click.
         //await copyTask;
         ```
 
-4.  `GetURLContents` 内で必要な作業として残っているのは、メソッド シグネチャの調整のみです。 `await` 演算子は、[async](../../../../csharp/language-reference/keywords/async.md) 修飾子でマークされているメソッドでのみ使用できます。 次のコードに示すように、修飾子を追加し、メソッドを*非同期メソッド*としてマークします。
+4. `GetURLContents` 内で必要な作業として残っているのは、メソッド シグネチャの調整のみです。 `await` 演算子は、[async](../../../../csharp/language-reference/keywords/async.md) 修飾子でマークされているメソッドでのみ使用できます。 次のコードに示すように、修飾子を追加し、メソッドを*非同期メソッド*としてマークします。
 
     ```csharp
     private async byte[] GetURLContents(string url)
     ```
 
-5.  C# での非同期メソッドの戻り値の型は、<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、または `void` のみを指定できます。 通常、`void` の戻り値の型は、`void` を必要とする非同期イベント ハンドラーでのみ使用します。 それ以外のケースでは、完成したメソッドに、T 型の値を返す [return](../../../../csharp/language-reference/keywords/return.md) ステートメントが含まれる場合は `Task(T)` を使用し、完成したメソッドが意味のある値を返さない場合は `Task` を使用します。 戻り値の型 `Task` は、"Task(void)" を意味するものと考えることができます。
+5. C# での非同期メソッドの戻り値の型は、<xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、または `void` のみを指定できます。 通常、`void` の戻り値の型は、`void` を必要とする非同期イベント ハンドラーでのみ使用します。 それ以外のケースでは、完成したメソッドに、T 型の値を返す [return](../../../../csharp/language-reference/keywords/return.md) ステートメントが含まれる場合は `Task(T)` を使用し、完成したメソッドが意味のある値を返さない場合は `Task` を使用します。 戻り値の型 `Task` は、"Task(void)" を意味するものと考えることができます。
 
      詳しくは、「[非同期の戻り値の型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)」をご覧ください。
 
@@ -303,7 +303,7 @@ Control returned to startButton_Click.
 
 ## <a name="convert-sumpagesizes-to-an-asynchronous-method"></a>SumPageSizes を非同期メソッドに変換する
 
-1.  `SumPageSizes` に対して、前述した手順を繰り返します。 まずは、`GetURLContents` への呼び出しを非同期呼び出しに変更します。
+1. `SumPageSizes` に対して、前述した手順を繰り返します。 まずは、`GetURLContents` への呼び出しを非同期呼び出しに変更します。
 
     -   呼び出されるメソッドの名前を `GetURLContents` から `GetURLContentsAsync` に変更します (まだ変更していない場合)。
 
@@ -324,7 +324,7 @@ Control returned to startButton_Click.
     //byte[] urlContents = await getContentsTask;
     ```
 
-2.  メソッドのシグネチャに、次の変更を加えます。
+2. メソッドのシグネチャに、次の変更を加えます。
 
     -   メソッドを `async` 修飾子でマークします。
 
@@ -342,9 +342,9 @@ Control returned to startButton_Click.
 
 ## <a name="convert-startbuttonclick-to-an-asynchronous-method"></a>startButton_Click を非同期メソッドに変換する
 
-1.  イベント ハンドラーで、呼び出されるメソッドの名前を `SumPageSizes` から `SumPageSizesAsync` に変更します (まだ変更していない場合)。
+1. イベント ハンドラーで、呼び出されるメソッドの名前を `SumPageSizes` から `SumPageSizesAsync` に変更します (まだ変更していない場合)。
 
-2.  `SumPageSizesAsync` は非同期メソッドであるため、結果を待機するイベント ハンドラーのコードを変更します。
+2. `SumPageSizesAsync` は非同期メソッドであるため、結果を待機するイベント ハンドラーのコードを変更します。
 
      `SumPageSizesAsync` への呼び出しは、`GetURLContentsAsync` の `CopyToAsync` への呼び出しに似ています。 この呼び出しによって、`Task(T)` ではなく `Task` が返されます。
 
@@ -359,7 +359,7 @@ Control returned to startButton_Click.
     //await sumTask;
     ```
 
-3.  誤って操作が再入することを避けるために、次のステートメントを `startButton_Click` の先頭に追加して **[Start]** ボタンを無効にします。
+3. 誤って操作が再入することを避けるために、次のステートメントを `startButton_Click` の先頭に追加して **[Start]** ボタンを無効にします。
 
     ```csharp
     // Disable the button until the operation is complete.
@@ -375,7 +375,7 @@ Control returned to startButton_Click.
 
      再入について詳しくは、「[非同期アプリにおける再入の処理 (C#)](../../../../csharp/programming-guide/concepts/async/handling-reentrancy-in-async-apps.md)」をご覧ください。
 
-4.  最後に、`async` 修飾子を宣言に追加し、イベント ハンドラーが `SumPagSizesAsync` を待機できるようにします。
+4. 最後に、`async` 修飾子を宣言に追加し、イベント ハンドラーが `SumPagSizesAsync` を待機できるようにします。
 
     ```csharp
     private async void startButton_Click(object sender, RoutedEventArgs e)
@@ -387,9 +387,9 @@ Control returned to startButton_Click.
 
 ## <a name="test-the-asynchronous-solution"></a>非同期ソリューションをテストする
 
-1.  **F5** キーを押してプログラムを実行し、**[スタート]** を複数回クリックします。
+1. **F5** キーを押してプログラムを実行し、**[スタート]** を複数回クリックします。
 
-2.  同期ソリューションの出力に似た出力が表示されます。 ただし、次の相違点に注意してください。
+2. 同期ソリューションの出力に似た出力が表示されます。 ただし、次の相違点に注意してください。
 
     -   処理の完了後に、すべての結果が同時に表示されることはありません。 たとえば、両方のプログラムの `startButton_Click` には、テキスト ボックスをクリアする行が含まれています。 この目的は、実行ごとにテキスト ボックスをクリアすることです。1 つの結果セットが表示された後に、もう一度 **[Start]** ボタンをクリックすると、テキスト ボックスがクリアされます。 同期バージョンでは、2 回目のカウントが表示される直前、ダウンロードが完了して UI スレッドが他の処理を実行できる状態になったときにテキスト ボックスがクリアされます。 非同期バージョンでは、**[Start]** ボタンをクリックした直後にテキスト ボックスがクリアされます。
 
@@ -397,7 +397,7 @@ Control returned to startButton_Click.
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>GetURLContentsAsync メソッドを .NET Framework メソッドに置き換える
 
-1.  .NET Framework 4.5 では、使用できる非同期メソッドが数多く用意されています。 その 1 つである、<xref:System.Net.Http.HttpClient> の <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> メソッドは、このチュートリアルに必要な処理だけを実行します。 これを、前述の手順で作成した `GetURLContentsAsync` メソッドの代わりに使用できます。
+1. .NET Framework 4.5 では、使用できる非同期メソッドが数多く用意されています。 その 1 つである、<xref:System.Net.Http.HttpClient> の <xref:System.Net.Http.HttpClient.GetByteArrayAsync%28System.String%29> メソッドは、このチュートリアルに必要な処理だけを実行します。 これを、前述の手順で作成した `GetURLContentsAsync` メソッドの代わりに使用できます。
 
      まずは、`SumPageSizesAsync` メソッドに `HttpClient` オブジェクトを作成します。 次の宣言をメソッドの先頭に追加します。
 
@@ -408,15 +408,15 @@ Control returned to startButton_Click.
         new HttpClient() { MaxResponseContentBufferSize = 1000000 };
     ```
 
-2.  `SumPageSizesAsync,` で、`GetURLContentsAsync` メソッドへの呼び出しを `HttpClient` メソッドへの呼び出しに置き換えます。
+2. `SumPageSizesAsync,` で、`GetURLContentsAsync` メソッドへの呼び出しを `HttpClient` メソッドへの呼び出しに置き換えます。
 
     ```csharp
     byte[] urlContents = await client.GetByteArrayAsync(url);
     ```
 
-3.  記述した `GetURLContentsAsync` メソッドを削除するかコメント アウトします。
+3. 記述した `GetURLContentsAsync` メソッドを削除するかコメント アウトします。
 
-4.  **F5** キーを押してプログラムを実行し、**[スタート]** を複数回クリックします。
+4. **F5** キーを押してプログラムを実行し、**[スタート]** を複数回クリックします。
 
      このバージョンのプロジェクトの動作は、「非同期ソリューションをテストするには」の手順で説明している動作と同じですが、さらに少ない手間で作成できます。
 
@@ -690,11 +690,11 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>関連項目
 
-- [非同期サンプル: Web へのアクセスのチュートリアル (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [非同期のサンプル:Web へのアクセスのチュートリアル (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)
 - [Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [非同期の戻り値の型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [タスク ベースの非同期プログラミング (TAP)](https://www.microsoft.com/en-us/download/details.aspx?id=19957)
 - [方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)](../../../../csharp/programming-guide/concepts/async/how-to-extend-the-async-walkthrough-by-using-task-whenall.md)
-- [方法: async と await を使用して複数の Web 要求を並列実行する](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)
+- [方法: async と await を使用して複数の Web 要求を並列実行する (C#)](../../../../csharp/programming-guide/concepts/async/how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md)

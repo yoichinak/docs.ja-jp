@@ -5,10 +5,10 @@ ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162699"
 ---
 # <a name="type-element-net-native"></a>\<型 > 要素 (.NET ネイティブ)
@@ -65,28 +65,28 @@ ms.locfileid: "59162699"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<AttributeImplies >](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|含んでいる型が属性の場合は、その属性が適用されるコード要素の実行時ポリシーを定義します。|  
-|[\<イベント >](../../../docs/framework/net-native/event-element-net-native.md)|この型に属するイベントにリフレクション ポリシーを適用します。|  
-|[\<フィールド >](../../../docs/framework/net-native/field-element-net-native.md)|この型に属するフィールドにリフレクション ポリシーを適用します。|  
-|[\<GenericParameter >](../../../docs/framework/net-native/genericparameter-element-net-native.md)|ジェネリック型のパラメーターの型にポリシーを適用します。|  
+|[\<AttributeImplies>](../../../docs/framework/net-native/attributeimplies-element-net-native.md)|含んでいる型が属性の場合は、その属性が適用されるコード要素の実行時ポリシーを定義します。|  
+|[\<Event>](../../../docs/framework/net-native/event-element-net-native.md)|この型に属するイベントにリフレクション ポリシーを適用します。|  
+|[\<Field>](../../../docs/framework/net-native/field-element-net-native.md)|この型に属するフィールドにリフレクション ポリシーを適用します。|  
+|[\<GenericParameter>](../../../docs/framework/net-native/genericparameter-element-net-native.md)|ジェネリック型のパラメーターの型にポリシーを適用します。|  
 |[\<ImpliesType>](../../../docs/framework/net-native/impliestype-element-net-native.md)|型にポリシーを適用します (それを含む `<Type>` 要素により表される型にそのポリシーが適用されている場合)。|  
-|[\<メソッド >](../../../docs/framework/net-native/method-element-net-native.md)|この型に属するメソッドにリフレクション ポリシーを適用します。|  
-|[\<MethodInstantiation >](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|この型に属する構築されたジェネリック メソッドにリフレクション ポリシーを適用します。|  
-|[\<プロパティ >](../../../docs/framework/net-native/property-element-net-native.md)|この型に属するプロパティにリフレクション ポリシーを適用します。|  
-|[\<Subtypes >](../../../docs/framework/net-native/subtypes-element-net-native.md)|それを含む型から継承されたすべてのクラスに実行時ポリシーを適用します。|  
+|[\<Method>](../../../docs/framework/net-native/method-element-net-native.md)|この型に属するメソッドにリフレクション ポリシーを適用します。|  
+|[\<MethodInstantiation>](../../../docs/framework/net-native/methodinstantiation-element-net-native.md)|この型に属する構築されたジェネリック メソッドにリフレクション ポリシーを適用します。|  
+|[\<Property>](../../../docs/framework/net-native/property-element-net-native.md)|この型に属するプロパティにリフレクション ポリシーを適用します。|  
+|[\<Subtypes>](../../../docs/framework/net-native/subtypes-element-net-native.md)|それを含む型から継承されたすべてのクラスに実行時ポリシーを適用します。|  
 |`<Type>`|入れ子になった型にリフレクション ポリシーを適用します。|  
-|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型にリフレクション ポリシーを適用します。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型にリフレクション ポリシーを適用します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<アプリケーション >](../../../docs/framework/net-native/application-element-net-native.md)|実行時にリフレクションで使用可能なメタデータを持つ、アプリケーション全体の型と型のメンバーのコンテナーとして機能します。|  
-|[\<アセンブリ >](../../../docs/framework/net-native/assembly-element-net-native.md)|指定したアセンブリ内のすべての型にリフレクション ポリシーを適用します。|  
-|[\<ライブラリ >](../../../docs/framework/net-native/library-element-net-native.md)|実行時にリフレクションに使用可能なメタデータを持つ型と型のメンバーを含むアセンブリを定義します。|  
-|[\<Namespace >](../../../docs/framework/net-native/namespace-element-net-native.md)|名前空間内のすべての型にリフレクション ポリシーを適用します。|  
+|[\<Application>](../../../docs/framework/net-native/application-element-net-native.md)|実行時にリフレクションで使用可能なメタデータを持つ、アプリケーション全体の型と型のメンバーのコンテナーとして機能します。|  
+|[\<Assembly>](../../../docs/framework/net-native/assembly-element-net-native.md)|指定したアセンブリ内のすべての型にリフレクション ポリシーを適用します。|  
+|[\<Library>](../../../docs/framework/net-native/library-element-net-native.md)|実行時にリフレクションに使用可能なメタデータを持つ型と型のメンバーを含むアセンブリを定義します。|  
+|[\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md)|名前空間内のすべての型にリフレクション ポリシーを適用します。|  
 |`<Type>`|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
-|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  
  リフレクション、シリアル化、および相互運用属性はすべて省略可能です。 いずれも存在しない場合、`<Type>` 要素は、その子型が個々のメンバーのポリシーを定義するコンテナーとして機能します。  

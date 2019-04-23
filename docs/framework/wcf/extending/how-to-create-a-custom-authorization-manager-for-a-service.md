@@ -9,10 +9,10 @@ helpviewer_keywords:
 - OperationRequirement class
 ms.assetid: 6214afde-44c1-4bf5-ba07-5ad6493620ea
 ms.openlocfilehash: e3d0143cd68bc94c6ff07e65ca5a3c8971b45f23
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337839"
 ---
 # <a name="how-to-create-a-custom-authorization-manager-for-a-service"></a>方法: サービスで使用するカスタム承認マネージャーを作成する

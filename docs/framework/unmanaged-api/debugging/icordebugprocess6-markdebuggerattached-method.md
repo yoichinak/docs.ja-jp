@@ -5,10 +5,10 @@ ms.assetid: bf94f090-5265-4112-8e57-5b4e20e070d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 15e2e94ac4e30fbdb375175148a5b448c51821f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128025"
 ---
 # <a name="icordebugprocess6markdebuggerattached-method"></a>ICorDebugProcess6::MarkDebuggerAttached メソッド
@@ -24,7 +24,7 @@ HRESULT MarkDebuggerAttached(
   
 ## <a name="parameters"></a>パラメーター  
  `fIsAttached`  
- `true` 場合、<xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType>メソッドは、デバッガーが接続されているを指定する必要があります`false`それ以外の場合。  
+ `true` メソッドが、デバッガーが接続されていることを示す必要がある場合は、<xref:System.Diagnostics.Debugger.IsAttached%2A?displayProperty=nameWithType>。それ以外の場合は、`false`。  
   
 ## <a name="return-value"></a>戻り値  
  メソッドは、次の表に記載されている値を返す場合があります。  
@@ -47,9 +47,9 @@ HRESULT MarkDebuggerAttached(
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_46_native](../../../../includes/net-46-native-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 
 - [ICorDebugProcess6 インターフェイス](../../../../docs/framework/unmanaged-api/debugging/icordebugprocess6-interface.md)
-- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

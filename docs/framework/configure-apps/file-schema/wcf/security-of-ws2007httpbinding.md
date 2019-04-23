@@ -1,12 +1,12 @@
 ---
-title: <security> (行中)  <ws2007HttpBinding>
+title: <security> の <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
 ms.openlocfilehash: bac8b9c4af812e924296008fa81227d181b30c0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170847"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<セキュリティ > の\<ws2007HttpBinding >
@@ -66,7 +66,7 @@ ms.locfileid: "59170847"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|HTTP トランスポート アプリケーションのセキュリティで保護されたバインド。|  
+|[\<ws2007HttpBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)|HTTP トランスポート アプリケーションのセキュリティで保護されたバインド。|  
   
 ## <a name="remarks"></a>Remarks  
  この要素は、WS-* 仕様を実装するサービスと相互運用するようにデザインされています。 このバインディングのトランスポート セキュリティは、SSL (Secure Sockets Layer) over HTTP または HTTPS です。  

@@ -12,10 +12,10 @@ helpviewer_keywords:
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
 ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151555"
 ---
 # <a name="how-to-configure-network-tracing"></a>方法: ネットワークのトレースを構成する

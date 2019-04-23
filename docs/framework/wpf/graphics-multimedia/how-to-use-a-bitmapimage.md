@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [WPF], using a BitmapImage in
 ms.assetid: 5a5733aa-396d-4d72-b0c3-77f8c25d9a42
 ms.openlocfilehash: fa5842040876754d5f0d358258f1eab7d09d79c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111580"
 ---
 # <a name="how-to-use-a-bitmapimage"></a>方法: BitmapImage を使用します。

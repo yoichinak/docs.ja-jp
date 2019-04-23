@@ -3,10 +3,10 @@ title: TryCatch を使用した Flowchart アクティビティでのエラー�
 ms.date: 03/30/2017
 ms.assetid: 50922964-bfe0-4ba8-9422-0e7220d514fd
 ms.openlocfilehash: 81bfeb911658a6f363a9f0f95ecc7db68a02dbe2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331261"
 ---
 # <a name="fault-handling-in-a-flowchart-activity-using-trycatch"></a>TryCatch を使用した Flowchart アクティビティでのエラー処理
@@ -23,7 +23,7 @@ ms.locfileid: "59331261"
 
  `CreateFlowchartWithFaults` アクティビティでは、<xref:System.Activities.Statements.FlowSwitch%601> 引数を有効にする `promoCode` アクティビティを使用し、次の式を使って割引率を計算します。
 
-|値 `promoCode`|割引率 (%)|
+|`promoCode` の値|割引率 (%)|
 |--------------------------|--------------------|
 |Single|10|
 |MNK|16|

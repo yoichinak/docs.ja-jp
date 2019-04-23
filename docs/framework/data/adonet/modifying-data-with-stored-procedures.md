@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 7d8e9a46-1af6-4a02-bf61-969d77ae07e0
 ms.openlocfilehash: 7dfd4f07ba0a0473975d87c7cd166635473344a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149332"
 ---
 # <a name="modifying-data-with-stored-procedures"></a>ストアド プロシージャでのデータの変更

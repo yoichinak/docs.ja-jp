@@ -12,10 +12,10 @@ ms.assetid: 26ada5af-175c-4576-931a-9f07fa1723e9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1e904d452b9f4a1b172d35984b752c0d97228338
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480951"
 ---
 # <a name="bindingfailure-mda"></a>bindingFailure MDA
@@ -52,7 +52,7 @@ ms.locfileid: "59480951"
 
 - 前の手順で確認した内容に基づいて、原因を解決します。 使用できる解決オプションは、次のとおりです。
 
-  - 要求されたアセンブリをグローバル アセンブリ キャッシュにインストールし、 <xref:System.Reflection.Assembly.Load%2A> id を使用してアセンブリを読み込むメソッド。
+  - 要求されたアセンブリをグローバル アセンブリ キャッシュにインストールし、 <xref:System.Reflection.Assembly.Load%2A> メソッドを呼び出して ID でアセンブリを読み込みます。
 
   - 要求されたアセンブリをアプリケーション ディレクトリにコピーし、<xref:System.Reflection.Assembly.Load%2A> メソッドを呼び出して ID でアセンブリを読み込みます。
 

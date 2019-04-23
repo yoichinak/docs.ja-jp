@@ -5,10 +5,10 @@ ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d82ed3299f967457fe967d096a238da6143751a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219162"
 ---
 # <a name="axlauthenticodetimestamperinfo-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造体

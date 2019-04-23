@@ -6,23 +6,23 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 0a75566fdb6222157ecda12a50fd78e22f92fcb4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 869eeab6515340b2f1884ab7206979e83654a10b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53245733"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59328245"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true および false 演算子 (C# リファレンス)
 
 `true` 演算子は、オペランドが確実に true であることを示す[ブール](bool.md)値 `true` を返します。 `false` 演算子は、オペランドが確実に false であることを示す `bool` 値 `true` を返します。 `true` および `false` 演算子が互いに補完することは保証されていません。 つまり、`true` と `false` 演算子の両方が同じオペランドに対して `bool` 値 `false` を返す場合があります。 ある型でこの 2 つの演算子の 1 つを定義する場合は、もう 1 つの演算子も定義する必要があります。
 
-`true` と `false` 演算子が定義された型によって、[論理 OR 演算子](../operators/or-operator.md) `|` または[論理 AND 演算子](../operators/and-operator.md) `&` が特定の方法で[オーバーロード](operator.md)される場合、[条件付き論理 OR 演算子](../operators/conditional-or-operator.md) `||` または [条件付き論理 AND 演算子](../operators/conditional-and-operator.md) `&&` を、それぞれ、その型のオペランドに対して評価することができます。 詳細については、「[C# 言語仕様](../language-specification/index.md)」の[ユーザー定義型条件論理演算子](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)に関するセクションを参照してください。
+`true` と `false` 演算子が定義された型によって、[論理 OR 演算子](../operators/boolean-logical-operators.md#logical-or-operator-) `|` または[論理 AND 演算子](../operators/boolean-logical-operators.md#logical-and-operator-) `&` が特定の方法で[オーバーロード](operator.md)される場合、[条件付き論理 OR 演算子](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) `||` または [条件付き論理 AND 演算子](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) `&&` を、それぞれ、その型のオペランドに対して評価することができます。 詳細については、「[C# 言語仕様](../language-specification/index.md)」の[ユーザー定義型条件論理演算子](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)に関するセクションを参照してください。
 
 `true` 演算子が定義された型は、[if](if-else.md)、[do](do.md)、[while](while.md)、および [for](for.md) ステートメントと、[条件演算子 `?:`](../operators/conditional-operator.md) の制御条件式の結果の型にすることができます。 詳細については、「[C# 言語仕様](../language-specification/index.md)」の[ブール型の式](~/_csharplang/spec/expressions.md#boolean-expressions)に関するセクションを参照してください。
 
 > [!TIP]
-> 3 値ロジックをサポートする必要がある場合は、`bool?` 型を使用します。たとえば、3 値ロジック型をサポートするデータベースを操作する場合などです。 詳細については、「[Null 許容型の使用](../../programming-guide/nullable-types/using-nullable-types.md)」の記事の「[bool? 型](../../programming-guide/nullable-types/using-nullable-types.md#the-bool-type)」セクションを参照してください。
+> 3 値ロジックをサポートする必要がある場合は、`bool?` 型を使用します。たとえば、3 値ブール型をサポートするデータベースを操作する場合などです。 C# には、`bool?` オペランドを使用して 3 値ロジックをサポートする `&` および `|` 演算子があります。 詳細については、「[Boolean logical operators (ブール論理演算子)](../operators/boolean-logical-operators.md)」記事の「[Nullable Boolean logical operators (null 許容論理演算子)](../operators/boolean-logical-operators.md#nullable-boolean-logical-operators)」セクションを参照してください。
 
 次の例では、`true` と `false` 演算子の両方を定義する型を示します。 さらに、論理 AND 演算子 `&` をオーバーロードして、演算子 `&&` もその型のオペランドで評価できるようにします。
 

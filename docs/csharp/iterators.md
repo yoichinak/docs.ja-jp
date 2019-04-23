@@ -3,16 +3,16 @@ title: Iterators
 description: 組み込み C# の反復子を使用して、独自のカスタム反復子メソッドを作成する方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: 5cf36f45-f91a-4fca-a0b7-87f233e108e9
-ms.openlocfilehash: f1be4e9a8b67f0e71615c730af4316253224b888
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.openlocfilehash: e816af698a39a4b44aefa92017efdbc9e3c8cc1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59155221"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613435"
 ---
 # <a name="iterators"></a>Iterators
 
-プログラムを記述するうえで、ほとんどのプログラムに必要になるのがコレクションの反復処理です。 反復処理が必要な場合は、コレクション内のすべての項目を調べるコードを記述します。 
+プログラムを記述するうえで、ほとんどのプログラムに必要になるのがコレクションの反復処理です。 反復処理が必要な場合は、コレクション内のすべての項目を調べるコードを記述します。
 
 また、クラスの要素に対して反復子を生成するメソッドである、反復子メソッドも作成することになります。 反復子メソッドは以下のような目的に使用できます。
 
@@ -28,7 +28,7 @@ C# 言語には、上記の両方のシナリオに対応するための機能�
 ## <a name="iterating-with-foreach"></a>foreach を使用した反復処理
 
 コレクションの列挙処理は単純です。`foreach` キーワードによってコレクション内の要素ごとに埋め込みステートメントを 1 回実行し、コレクションを列挙します。
- 
+
 ```csharp
 foreach (var item in collection)
 {
@@ -42,7 +42,7 @@ foreach (var item in collection)
 
 ## <a name="enumeration-sources-with-iterator-methods"></a>反復子メソッドを使用した列挙型のソース
 
-C# 言語のもう 1 つの優れた機能を利用することで、列挙型用のソースを作成するメソッドを構築できます。 このようなメソッドを、"*反復子メソッド*" と呼びます。 反復子メソッドでは、要求があった場合にオブジェクトがどのようなシーケンスで生成されるかを定義します。 反復子メソッドを定義するには、`yield return` コンテキスト キーワードを使用します。 
+C# 言語のもう 1 つの優れた機能を利用することで、列挙型用のソースを作成するメソッドを構築できます。 このようなメソッドを、"*反復子メソッド*" と呼びます。 反復子メソッドでは、要求があった場合にオブジェクトがどのようなシーケンスで生成されるかを定義します。 反復子メソッドを定義するには、`yield return` コンテキスト キーワードを使用します。
 
 次のメソッドを記述することで、0 ～ 9 の整数からなるシーケンスを生成できます。
 
@@ -82,9 +82,9 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-    
+
     index = 100;
     while (index++ < 110)
         yield return index;
@@ -113,12 +113,12 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
-    // generates a compile time error: 
+
+    // generates a compile time error:
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
-    return items;  
+    return items;
 }
 ```
 
@@ -132,15 +132,15 @@ public IEnumerable<int> GetSingleDigitNumbers()
     int index = 0;
     while (index++ < 10)
         yield return index;
-        
+
     yield return 50;
-   
+
     var items = new int[] {100, 101, 102, 103, 104, 105, 106, 107, 108, 109 };
     foreach (var item in items)
         yield return item;
 }
 ```
- 
+
 反復子メソッドを 2 つの異なるメソッドに分割することが正解となる場合もあります。 つまり、`return` を使用するメソッドと `yield return` を使用するメソッドの 2 つです。 ブール型の引数を基に、空のコレクションまたは最初の 5 つの奇数を返す必要があるような場合を考えてみてください。 この処理は、次の 2 つのメソッドとして記述できます。
 
 ```csharp
@@ -160,12 +160,12 @@ private IEnumerable<int> IteratorMethod()
             yield return index;
 }
 ```
- 
+
 上記のメソッドを見てみましょう。 1 つ目のメソッドでは、標準の `return` ステートメントを使用して空のコレクションまたは 2 つ目のメソッドで作成された反復子のいずれかを返します。 2 つ目のメソッドでは、`yield return` ステートメントを使用して要求されたシーケンスを作成します。
 
 ## <a name="deeper-dive-into-foreach"></a>`foreach` の詳細
 
-`foreach` ステートメントは、`IEnumerable<T>` および `IEnumerator<T>` インターフェイスを使用してコレクションの全要素を反復処理する標準的な表現形式に展開されます。 また、開発者の不適切なリソース管理によって生じるエラーを最小化する効果もあります。 
+`foreach` ステートメントは、`IEnumerable<T>` および `IEnumerator<T>` インターフェイスを使用してコレクションの全要素を反復処理する標準的な表現形式に展開されます。 また、開発者の不適切なリソース管理によって生じるエラーを最小化する効果もあります。
 
 最初の例に登場する `foreach` ループは、コンパイラによって次のコンストラクトに似たコードに変換されます。
 
@@ -198,14 +198,14 @@ while (enumerator.MoveNext())
 ```csharp
 {
     var enumerator = collection.GetEnumerator();
-    try 
+    try
     {
         while (enumerator.MoveNext())
         {
             var item = enumerator.Current;
             Console.WriteLine(item.ToString());
         }
-    } finally 
+    } finally
     {
         // dispose of enumerator.
     }
@@ -215,26 +215,27 @@ while (enumerator.MoveNext())
 列挙子が破棄される場合、その方法は `enumerator` の型の特性によって異なります。 一般的なケースでは、`finally` 句は次のように展開されます。
 
 ```csharp
-finally 
+finally
 {
    (enumerator as IDisposable)?.Dispose();
-} 
+}
 ```
 
 ただし、`enumerator` の型がシール型で、`enumerator` から `IDisposable` への暗黙的な型変換がない場合、`finally` 句は空のブロックに展開されます。
+
 ```csharp
-finally 
+finally
 {
-} 
+}
 ```
 
 `enumerator` から `IDisposable` への暗黙的な型変換があり、`enumerator` が null 非許容の値型である場合、`finally` 句は次のように展開されます。
 
 ```csharp
-finally 
+finally
 {
    ((IDisposable)enumerator).Dispose();
-} 
+}
 ```
 
-さいわいなことに、これらの詳細をすべて覚えておく必要はありません。 このような微妙な差異は、いずれも `foreach` ステートメントによって処理されます。 コンパイラでは、これらすべてのコンストラクトに対して正しいコードが生成されます。 
+さいわいなことに、これらの詳細をすべて覚えておく必要はありません。 このような微妙な差異は、いずれも `foreach` ステートメントによって処理されます。 コンパイラでは、これらすべてのコンストラクトに対して正しいコードが生成されます。

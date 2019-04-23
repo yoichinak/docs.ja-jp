@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4b40e12c7cb077d6ef128d4ee1aada6086cb9c1d
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846468"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59313373"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 .NET Framework は言語に依存しません。 つまり、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL、Windows PowerShell など、.NET Framework を対象とする多くの言語の 1 つを開発に使用できます。 .NET Framework 用に開発されたクラス ライブラリの型とメンバーには、最初に記述された言語を知らなくてもアクセスできます。元の言語の規則に従う必要もありません。 コンポーネントを開発しているのであれば、コンポーネントの言語にかかわらず、すべての .NET Framework アプリからそのコンポーネントにアクセスできます。  
@@ -517,13 +517,13 @@ ms.locfileid: "57846468"
   
  CLS 準拠のコンポーネントを作成するには:  
   
-1.  <xref:System.CLSCompliantAttribute> を使用して、CLS 準拠としてアセンブリをマークします。  
+1. <xref:System.CLSCompliantAttribute> を使用して、CLS 準拠としてアセンブリをマークします。  
   
-2.  アセンブリ内の CLS に準拠していない公開された型を、非準拠としてマークします。  
+2. アセンブリ内の CLS に準拠していない公開された型を、非準拠としてマークします。  
   
-3.  CLS 準拠の型の公開されたメンバーを、非準拠としてマークします。  
+3. CLS 準拠の型の公開されたメンバーを、非準拠としてマークします。  
   
-4.  CLS 非準拠メンバーの CLS 準拠の代替を指定します。  
+4. CLS 非準拠メンバーの CLS 準拠の代替を指定します。  
   
  非準拠の型とメンバーすべてを正常にマークした場合、非準拠の警告は出力されません。 ただし、どのメンバーが CLS に準拠していないかを提示し、CLS 準拠の代替を製品ドキュメントに示すことをお勧めします。  
   

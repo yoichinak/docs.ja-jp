@@ -3,10 +3,10 @@ title: '方法: 構成ファイルを使用してサービスのメタデータ�
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295537"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>方法: 構成ファイルを使用してサービスのメタデータを公開する
@@ -98,7 +98,7 @@ namespace Metadata.Samples
 
 3. `<behavior>`要素に `<serviceBehaviors>` 要素を追加し、`name` 要素の `<behavior>` 属性に値を指定します。  
 
-4. `<serviceMetadata>` 要素を `<behavior>` 要素に追加します。 `httpGetEnabled` 属性を `true` に設定し、`policyVersion` 属性を Policy15 に設定します。 `httpGetEnabled` HTTP GET 要求からのメタデータ要求に応答するサービスを使用します。 `policyVersion` メタデータを生成するときに、Ws-policy 1.5 に準拠するようにサービスに通知します。  
+4. `<serviceMetadata>` 要素を `<behavior>` 要素に追加します。 `httpGetEnabled` 属性を `true` に設定し、`policyVersion` 属性を Policy15 に設定します。 `httpGetEnabled` により、サービスは HTTP GET 要求からのメタデータ要求に応答できるようになります。 `policyVersion` は、サービスに対して、WS-Policy 1.5 準拠でメタデータを生成するように指示します。  
 
 5. 次のコード例に示すように、`behaviorConfiguration` 要素に `<service>` 属性を追加し、手順 1. で追加した `name` 要素の `<behavior>` 属性を指定します。  
   
@@ -140,13 +140,13 @@ namespace Metadata.Samples
   
 7. 前の手順で追加したメタデータ エンドポイントについて、`binding` 属性に次のいずれかの値を設定します。  
   
-    -   `mexHttpBinding` HTTP 公開の場合、  
+    -   HTTP 公開の場合、`mexHttpBinding`  
   
-    -   `mexHttpsBinding` HTTPS 公開の場合、  
+    -   HTTPS 公開の場合、`mexHttpsBinding`  
   
-    -   `mexNamedPipeBinding` 名前付きパイプ公開の場合、  
+    -   名前付きパイプ公開の場合、`mexNamedPipeBinding`  
   
-    -   `mexTcpBinding` TCP 公開の場合、  
+    -   TCP 公開の場合、`mexTcpBinding`  
   
 8. 前の手順で追加したメタデータ エンドポイントについて、次のいずれかに等しいアドレスを設定します。  
   
@@ -256,8 +256,8 @@ namespace Metadata.Samples
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.Description.ServiceMetadataBehavior>
-- [方法: マネージド アプリケーションで WCF サービスをホストする](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
+- [方法: マネージ アプリケーションで WCF サービスをホストします。](../../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)
 - [自己ホスト](../../../../docs/framework/wcf/samples/self-host.md)
 - [メタデータ アーキテクチャの概要](../../../../docs/framework/wcf/feature-details/metadata-architecture-overview.md)
 - [メタデータを使用する](../../../../docs/framework/wcf/feature-details/using-metadata.md)
-- [方法: コードを使用してサービスのメタデータを公開する](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)
+- [方法: コードを使用してサービスのメタデータを公開します。](../../../../docs/framework/wcf/feature-details/how-to-publish-metadata-for-a-service-using-code.md)

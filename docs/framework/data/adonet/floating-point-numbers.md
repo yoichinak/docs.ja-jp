@@ -3,10 +3,10 @@ title: 浮動小数点数
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
 ms.openlocfilehash: aae7bd2ea6b5ba7bc9c69b99c93b62ba7a413d59
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102519"
 ---
 # <a name="floating-point-numbers"></a>浮動小数点数

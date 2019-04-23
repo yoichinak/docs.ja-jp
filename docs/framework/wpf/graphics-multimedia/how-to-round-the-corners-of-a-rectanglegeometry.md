@@ -8,10 +8,10 @@ helpviewer_keywords:
 - rounding corners of RectangleGeometry objects [WPF]
 ms.assetid: 926644bc-1357-4c0b-ac81-694bd090ae87
 ms.openlocfilehash: eb2f173bedb903e12b2795264c684524cfa09825
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089134"
 ---
 # <a name="how-to-round-the-corners-of-a-rectanglegeometry"></a>方法: RectangleGeometry の角に丸みを付ける

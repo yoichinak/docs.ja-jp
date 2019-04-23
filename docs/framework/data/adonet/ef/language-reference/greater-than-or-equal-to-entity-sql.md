@@ -3,10 +3,10 @@ title: '>= (より大きいまたは等しい) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 70780ac4-0123-4da8-b731-8af856daffe3
 ms.openlocfilehash: b5a8a834c325cca38e2c106ca3f8ee829dd699b2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317143"
 ---
 # <a name="-greater-than-or-equal-to-entity-sql"></a>> = (より大きいまたは等しい) (Entity SQL)
@@ -23,7 +23,7 @@ expression >= expression
  任意の有効な式。 両方の式とも、暗黙的に変換可能なデータ型でなければなりません。  
   
 ## <a name="result-types"></a>戻り値の型  
- `true` 左の式が右の式以上の値を持つ場合それ以外の場合、`false`します。  
+ 左の式の値が右の式の値以上である場合は`true` 、そうでない場合は `false`。  
   
 ## <a name="example"></a>例  
  次の Entity SQL クエリは「>=」比較演算子を使用して 2 つの式を比較し、左の式の値が右の式の値以上であるかどうかを判別します。 このクエリは、AdventureWorks Sales Model に基づいています。 このクエリをコンパイルして実行するには、次の手順を実行します。  

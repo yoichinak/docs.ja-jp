@@ -11,10 +11,10 @@ helpviewer_keywords:
 - listening for events
 ms.assetid: b688effa-b3e8-4b05-944d-05ed89a245aa
 ms.openlocfilehash: 9c5308192ca122e9c25fa8e845f2b8f89345dda8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59168468"
 ---
 # <a name="subscribe-to-ui-automation-events"></a>UI オートメーション イベントのサブスクライブ

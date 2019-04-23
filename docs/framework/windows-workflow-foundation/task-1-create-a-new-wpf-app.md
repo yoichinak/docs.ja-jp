@@ -3,10 +3,10 @@ title: タスク 1:新しい Windows Presentation Foundation アプリケーシ�
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320380"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>タスク 1:新しい Windows Presentation Foundation アプリケーションの作成
@@ -45,4 +45,4 @@ ms.locfileid: "59320380"
 ## <a name="see-also"></a>関連項目
 
 - [ワークフロー デザイナーのホスト変更](rehosting-the-workflow-designer.md)
-- [タスク 2:ワークフロー デザイナーのホスティング](task-2-host-the-workflow-designer.md)
+- [タスク 2:ワークフロー デザイナーをホスティングします。](task-2-host-the-workflow-designer.md)

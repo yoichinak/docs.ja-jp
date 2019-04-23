@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: f5d93d76ab3409d4d4c1870cfef94cac59f9475c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234010"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774068"
 ---
 ### <a name="privatefontcollectionaddfontfile-method-releases-font-resources"></a>PrivateFontCollection.AddFontFile メソッドが Font リソースを解放する
 

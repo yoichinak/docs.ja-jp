@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 94044a31-de90-479b-935a-8159b4ae5c5a
 ms.openlocfilehash: 3e58c6f2849ed9714b3356662dae313ab9d11696
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134005"
 ---
 # <a name="how-to-bracket-data-submissions-by-using-transactions"></a>方法: データ送信をトランザクションで囲む

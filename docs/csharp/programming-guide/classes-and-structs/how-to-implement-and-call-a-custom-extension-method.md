@@ -5,29 +5,29 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: e4b77bf0a44ce58db632e0c58982dba7178f9272
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 2d3f6ec66a13638f0106537ad8b21bff801a53b3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203429"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59303337"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>方法: カスタム拡張メソッドを実装して呼び出す (C# プログラミング ガイド)
 このトピックでは、あらゆる .NET 型を対象に独自の拡張メソッドを実装する方法について説明します。 クライアント コードで拡張メソッドを使用するには、拡張メソッドが格納されている DLL への参照を追加し、拡張メソッドが定義されている名前空間を指定する [using](../../../csharp/language-reference/keywords/using-directive.md) ディレクティブを追加します。  
   
 ## <a name="to-define-and-call-the-extension-method"></a>拡張メソッドを定義して呼び出すには  
   
-1.  拡張メソッドを格納するための静的[クラス](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)を定義します。  
+1. 拡張メソッドを格納するための静的[クラス](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)を定義します。  
   
      このクラスは、クライアント コードから参照できる必要があります。 アクセシビリティの規則の詳細については、「[アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)」を参照してください。  
   
-2.  拡張メソッドを静的メソッドとして実装します。メソッドの可視性は、包含クラスと同レベル以上を指定します。  
+2. 拡張メソッドを静的メソッドとして実装します。メソッドの可視性は、包含クラスと同レベル以上を指定します。  
   
-3.  メソッドの最初のパラメーターでは、メソッドが操作する型を指定します。型名の前には [this](../../../csharp/language-reference/keywords/this.md) 修飾子を付加します。  
+3. メソッドの最初のパラメーターでは、メソッドが操作する型を指定します。型名の前には [this](../../../csharp/language-reference/keywords/this.md) 修飾子を付加します。  
   
-4.  呼び出し元のコードで、`using` ディレクティブを追加して、拡張メソッドのクラスを含む[名前空間](../../../csharp/language-reference/keywords/namespace.md)を指定します。  
+4. 呼び出し元のコードで、`using` ディレクティブを追加して、拡張メソッドのクラスを含む[名前空間](../../../csharp/language-reference/keywords/namespace.md)を指定します。  
   
-5.  型のインスタンス メソッドと同じようにメソッドを呼び出します。  
+5. 型のインスタンス メソッドと同じようにメソッドを呼び出します。  
   
      呼び出し元のコードでは最初のパラメーターを指定しません。これは演算子を適用する型を表すものであり、コンパイラはオブジェクトの型を既に認識しているためです。 指定する必要があるのは、2 番目から `n` 番目のパラメーターの引数だけです。  
   

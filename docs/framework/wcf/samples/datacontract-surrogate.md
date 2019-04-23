@@ -3,11 +3,11 @@ title: DataContract サロゲート
 ms.date: 03/30/2017
 ms.assetid: b0188f3c-00a9-4cf0-a887-a2284c8fb014
 ms.openlocfilehash: a56fbcabfacf146142f7b0c0623325cc8e69c29a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59312632"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769100"
 ---
 # <a name="datacontract-surrogate"></a>DataContract サロゲート
 このサンプルでは、シリアル化、逆シリアル化、スキーマのエクスポート、スキーマのインポートなどのプロセスを、データ コントラクト サロゲート クラスを使用してカスタマイズする方法を示します。 このサンプルでは、クライアントとサーバーのシナリオは、データをシリアル化し、Windows Communication Foundation (WCF) クライアントとサービス間で送信する場所でサロゲートを使用する方法を示します。  

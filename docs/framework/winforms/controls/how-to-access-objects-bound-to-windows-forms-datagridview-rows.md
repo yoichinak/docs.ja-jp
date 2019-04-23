@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], accessing objects bound to rows
 ms.assetid: 0e05748f-4403-4eb8-8b2f-b098108181b5
 ms.openlocfilehash: 50882ab9a1a498bf8f76381e3f4aac53876abbb8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59217407"
 ---
 # <a name="how-to-access-objects-bound-to-windows-forms-datagridview-rows"></a>方法: Windows フォームの DataGridView 行にバインドされたオブジェクトにアクセスする
@@ -39,7 +39,7 @@ ms.locfileid: "59217407"
   
 -   System アセンブリおよび System.Windows.Forms アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ この例をコマンドラインから Visual Basic または Visual C# にビルドする方法の詳細については、[コマンドラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -47,4 +47,4 @@ ms.locfileid: "59217407"
 - <xref:System.Windows.Forms.DataGridViewRow>
 - <xref:System.Windows.Forms.DataGridViewRow.DataBoundItem%2A?displayProperty=nameWithType>
 - [Windows フォーム DataGridView コントロールでのデータの表示](displaying-data-in-the-windows-forms-datagridview-control.md)
-- [方法: オブジェクトを Windows フォーム DataGridView コントロールにバインドする](how-to-bind-objects-to-windows-forms-datagridview-controls.md)
+- [方法: オブジェクトを Windows フォーム DataGridView コントロールにバインドします。](how-to-bind-objects-to-windows-forms-datagridview-controls.md)

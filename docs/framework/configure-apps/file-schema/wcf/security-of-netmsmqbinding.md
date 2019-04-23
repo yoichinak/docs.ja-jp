@@ -1,12 +1,12 @@
 ---
-title: <security> (行中)  <netMsmqBinding>
+title: <security> の <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
 ms.openlocfilehash: acb4d04663d841a9b494153caa180855959c145e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59206513"
 ---
 # <a name="security-of-netmsmqbinding"></a>\<セキュリティ > の\<netMsmqBinding >

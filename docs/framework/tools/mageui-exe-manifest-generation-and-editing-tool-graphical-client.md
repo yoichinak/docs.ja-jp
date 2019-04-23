@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - MageUI.exe
 ms.assetid: f9e130a6-8117-49c4-839c-c988f641dc14
-ms.openlocfilehash: 7b0135e4fc655b0efc3140e388f75ac8f45193cf
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 029e4983ef270bb5272ad0bf541ee34febd9399c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219764"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59222342"
 ---
 # <a name="mageuiexe-manifest-generation-and-editing-tool-graphical-client"></a>MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)
 
@@ -191,6 +191,7 @@ MageUI.exe でサポートされている機能は、コマンド ライン ツ�
 |**マニフェストの選択**|アプリケーション マニフェストを選択できます。 アプリケーション マニフェストを選択すると、このページの他のすべてのフィールドの値が設定されます。|  
   
 ## <a name="see-also"></a>関連項目
+
 - [ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)
 - [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)
 - [Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)

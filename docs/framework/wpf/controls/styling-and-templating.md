@@ -16,14 +16,14 @@ helpviewer_keywords:
 - styles [WPF], event triggers
 ms.assetid: 481765e5-5467-4a75-9f7b-e10e2ac410d9
 ms.openlocfilehash: 3fae4993a13b02ad998668f644a80ba7c07196fa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132297"
 ---
 # <a name="styling-and-templating"></a>スタイルとテンプレート
-[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] スタイルとテンプレートは、一連の開発者および設計者は、視覚的に説得力のある効果を作成して、それらの製品の一貫した外観を作成できるようにする機能 (スタイル、テンプレート、トリガー、およびストーリー ボード) を参照してください。 開発者や設計者は、アプリケーション単位で広範囲に外観をカスタマイズできますが、アプリケーション内およびアプリケーション間で外観の保守および共有を可能にするには、強力なスタイルとテンプレートのモデルが必要です。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] そのモデルを提供します。  
+[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]スタイルとテンプレートは、開発者および設計者が視覚的に説得力のある効果を作成し、製品の一貫した外観を作成できる、一連の機能 (スタイル、テンプレート、トリガー、およびストーリーボード) を表します。 開発者や設計者は、アプリケーション単位で広範囲に外観をカスタマイズできますが、アプリケーション内およびアプリケーション間で外観の保守および共有を可能にするには、強力なスタイルとテンプレートのモデルが必要です。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] はそのモデルを提供します。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のスタイル モデルの他の機能は、表示とロジックの分離です。 つまり、設計者は、開発者が C# や Visual Basic を使用してプログラミング ロジックについて作業するのと同時に [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] のみを使用してアプリケーションの外観について作業できます。  
   
@@ -199,5 +199,5 @@ ms.locfileid: "59132297"
 ## <a name="see-also"></a>関連項目
 
 - [WPF におけるパッケージの URI](../app-development/pack-uris-in-wpf.md)
-- [方法: ControlTemplate によって生成された要素を検索する](how-to-find-controltemplate-generated-elements.md)
+- [方法: ControlTemplate によって生成された要素を検索します。](how-to-find-controltemplate-generated-elements.md)
 - [DataTemplate によって生成された要素を検索する](../data/how-to-find-datatemplate-generated-elements.md)

@@ -7,10 +7,10 @@ description: .NET で、C#、Visual Basic、および F# を使用して任意�
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
 ms.openlocfilehash: 61b3e6f2aae2ad2633f82360b227a876f685fcc1
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427488"
 ---
 <!-- markdownlint-disable MD033 -->
@@ -77,7 +77,7 @@ ms.locfileid: "59427488"
         <h1>.NET ドキュメント</h1>
         <ul class="pivots">
             <li>
-                <a data-default="true" href="#docs">Docs</a>
+                <a data-default="true" href="#docs">ドキュメント</a>
                 <ul id="docs">
                     <li>
                         <a href="#getstarted">開始するには</a>
@@ -153,7 +153,7 @@ ms.locfileid: "59427488"
                                             </div>
                                             <div class="cardText">
                                                 <h3><a href="/xamarin">Xamarin</a></h3>
-                                                <p><a href="/xamarin/cross-platform">プラットフォーム間の開発</a></p>
+                                                <p><a href="/xamarin/cross-platform">クロスプラットフォーム開発</a></p>
                                                 <p><a href="/xamarin/ios">Xamarin.iOS のガイド</a></p>
                                                 <p><a href="/xamarin/android">Xamarin.Android のガイド</a></p>
                                                 <p><a href="/xamarin/xamarin-forms">Xamarin.Forms のガイド</a></p>
@@ -434,7 +434,7 @@ ms.locfileid: "59427488"
                         </ul>
                     </li>
                     <li>
-                        <a href="#mobile">携帯</a>
+                        <a href="#mobile">モバイル</a>
                         <ul id="mobile" class="cardsC">
                             <li>
                                 <a href="/xamarin/ios">
@@ -663,7 +663,7 @@ ms.locfileid: "59427488"
                         </ul>
                     </li>
                     <li>
-                        <a href="#ml-ai">機械学習と AI</a>
+                        <a href="#ml-ai">Machine Learning と AI</a>
                         <ul id="ml-ai" class="cardsC">
                             <li>
                                 <a href="/dotnet/machine-learning">

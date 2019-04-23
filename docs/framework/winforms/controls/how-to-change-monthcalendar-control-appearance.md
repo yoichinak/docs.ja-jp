@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
 ms.openlocfilehash: 233143099996759cc006b3f28b984938554a0d18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199922"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>方法: Windows フォームの MonthCalendar コントロールの外観を変更する
@@ -106,6 +106,6 @@ Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロール�
 ## <a name="see-also"></a>関連項目
 
 - [MonthCalendar コントロール](monthcalendar-control-windows-forms.md)
-- [方法: Windows フォームの MonthCalendar コントロールで日付の範囲を選択する](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
-- [方法: Windows フォームの MonthCalendar コントロールを使用して特定の日付を太字で表示する](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
-- [方法: Windows フォームの MonthCalendar コントロールで複数の月を表示する](display-more-than-one-month-wf-monthcalendar-control.md)
+- [方法: Windows フォームの MonthCalendar コントロールで日付の範囲を選択します。](how-to-select-a-range-of-dates-in-the-windows-forms-monthcalendar-control.md)
+- [方法: 特定の日で、Windows で太字で表示フォームの MonthCalendar コントロール](display-specific-days-in-bold-with-wf-monthcalendar-control.md)
+- [方法: Windows フォームの MonthCalendar コントロールにおいて複数の月を表示します。](display-more-than-one-month-wf-monthcalendar-control.md)

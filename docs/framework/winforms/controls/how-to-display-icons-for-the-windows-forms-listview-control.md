@@ -12,10 +12,10 @@ helpviewer_keywords:
 - list views [Windows Forms], displaying icons
 ms.assetid: 9d577542-8595-429b-99e5-078770ec9d35
 ms.openlocfilehash: 8e4ae744eecbe894767114179dd63651828b191b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318612"
 ---
 # <a name="how-to-display-icons-for-the-windows-forms-listview-control"></a>方法: Windows フォーム ListView コントロールのアイコンを表示する
@@ -40,7 +40,7 @@ Windows フォーム<xref:System.Windows.Forms.ListView>コントロールは、
 ## <a name="see-also"></a>関連項目
 
 - [ListView コントロールの概要](listview-control-overview-windows-forms.md)
-- [方法: Windows フォーム ListView コントロールで項目を追加および削除する](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
-- [方法: Windows フォーム ListView コントロールに列を追加する](how-to-add-columns-to-the-windows-forms-listview-control.md)
-- [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加する](add-custom-information-to-a-treeview-or-listview-control-wf.md)
+- [方法: Windows フォーム ListView コントロールで項目追加および削除](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [方法: Windows フォーム ListView コントロールに列を追加します。](how-to-add-columns-to-the-windows-forms-listview-control.md)
+- [方法: TreeView コントロールまたは ListView コントロール (Windows フォーム) にカスタム情報を追加します。](add-custom-information-to-a-treeview-or-listview-control-wf.md)
 - [ImageList コンポーネント](imagelist-component-windows-forms.md)

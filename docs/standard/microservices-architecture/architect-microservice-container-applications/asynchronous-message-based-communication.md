@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 4285c37c90b01424de70a2ac4dd75d5d9c63dac0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 105daed3bca03571caea92fdbd1d6c6f56b24fef
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465569"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59614078"
 ---
 # <a name="asynchronous-message-based-communication"></a>メッセージベースの非同期通信
 
@@ -86,25 +86,25 @@ ms.locfileid: "58465569"
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **イベント駆動型メッセージング** \
-  [http://soapatterns.org/design_patterns/event_driven_messaging](http://soapatterns.org/design_patterns/event_driven_messaging)
+  <http://soapatterns.org/design_patterns/event_driven_messaging>
 
 - **発行/サブスクライブ チャネル** \
-  [https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html](https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html)
+  <https://www.enterpriseintegrationpatterns.com/patterns/messaging/PublishSubscribeChannel.html>
 
 - **Udi Dahan。CQRS の明確化** \
-  [http://udidahan.com/2009/12/09/clarified-cqrs/](http://udidahan.com/2009/12/09/clarified-cqrs/)
+  <http://udidahan.com/2009/12/09/clarified-cqrs/>
 
 - **コマンド クエリ責務分離 (CQRS)** \
-  [https://docs.microsoft.com/azure/architecture/patterns/cqrs](https://docs.microsoft.com/azure/architecture/patterns/cqrs)
+  <https://docs.microsoft.com/azure/architecture/patterns/cqrs>
 
 - **境界コンテキスト間の通信** \
-  [https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)](https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10))
+  <https://docs.microsoft.com/previous-versions/msp-n-p/jj591572(v=pandp.10)>
 
 - **最終的な整合性** \
-  [https://en.wikipedia.org/wiki/Eventual_consistency](https://en.wikipedia.org/wiki/Eventual_consistency)
+  <https://en.wikipedia.org/wiki/Eventual_consistency>
 
 - **Jimmy Bogard。復元性を目指したリファクタリング: 結合の評価** \
-  [https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/](https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/)
+  <https://jimmybogard.com/refactoring-towards-resilience-evaluating-coupling/>
 
 > [!div class="step-by-step"]
 > [前へ](communication-in-microservice-architecture.md)

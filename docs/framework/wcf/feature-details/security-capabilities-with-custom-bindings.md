@@ -3,10 +3,10 @@ title: カスタム バインドを使用したセキュリティ機能
 ms.date: 03/30/2017
 ms.assetid: a2425679-484a-4e6c-9c98-7da7304f1516
 ms.openlocfilehash: 25d203fa706eeb0d0ccf1eaf4367ffa5bd7b83aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157275"
 ---
 # <a name="security-capabilities-with-custom-bindings"></a>カスタム バインドを使用したセキュリティ機能
@@ -16,34 +16,34 @@ ms.locfileid: "59157275"
  [SecurityBindingElement 認証モード](../../../../docs/framework/wcf/feature-details/securitybindingelement-authentication-modes.md)  
  カスタム バインドで使用できる認証モードについて説明します。  
   
- [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
+ [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)  
  セキュリティ要素を使用してカスタム バインドを作成するための基本手順について説明します。  
   
- [方法: 指定した認証モード用の SecurityBindingElement を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
+ [方法: 指定した認証モード用の SecurityBindingElement を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-securitybindingelement-for-a-specified-authentication-mode.md)  
  指定した認証モード用のセキュリティ要素を作成する方法について説明します。  
   
- [方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にする](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
+ [方法: WSFederationHttpBinding のセキュリティで保護されたセッションを無効にします。](../../../../docs/framework/wcf/feature-details/how-to-disable-secure-sessions-on-a-wsfederationhttpbinding.md)  
  フェデレーション サービスを作成する際に、セキュリティで保護されたセッションを無効にする方法について説明します。  
   
- [方法: メッセージ リプレイ検出を有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
+ [方法: メッセージ リプレイ検出を有効にします。](../../../../docs/framework/wcf/feature-details/how-to-enable-message-replay-detection.md)  
  リプレイ攻撃の発生を確認する方法について説明します。  
   
- [方法: サポート資格情報を作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
+ [方法: サポート資格情報を作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-supporting-credential.md)  
  必要な場合に、サービスにサポート資格情報を提供する方法について説明します。  
   
- [方法: 署名確認を設定する](../../../../docs/framework/wcf/feature-details/how-to-set-up-a-signature-confirmation.md)  
+ [方法: 署名確認を設定します。](../../../../docs/framework/wcf/feature-details/how-to-set-up-a-signature-confirmation.md)  
  メッセージにデジタル署名する際に署名を確認する手順について説明します。  
   
- [方法: 時刻のずれの最大値を設定する](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
+ [方法: 最大クロックのずれを設定](../../../../docs/framework/wcf/feature-details/how-to-set-a-max-clock-skew.md)  
  サービスとクライアント間で許容される最大の時刻のずれを設定する方法について説明します。  
   
- [方法: デジタル署名の暗号化を無効にする](../../../../docs/framework/wcf/feature-details/how-to-disable-encryption-of-digital-signatures.md)  
+ [方法: デジタル署名の暗号化を無効にします。](../../../../docs/framework/wcf/feature-details/how-to-disable-encryption-of-digital-signatures.md)  
  デジタル署名の暗号化を無効にするとどのようなパフォーマンス上の利点があるかを説明します。  
   
 ## <a name="reference"></a>参照  
  <xref:System.ServiceModel.Channels.SecurityBindingElement>  
   
- [\<セキュリティ >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
+ [\<security>](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)  
   
 ## <a name="related-sections"></a>関連項目  
  [保護レベルの理解](../../../../docs/framework/wcf/understanding-protection-level.md)  

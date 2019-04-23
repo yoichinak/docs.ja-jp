@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
 ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59294809"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>方法: ステート マシン ワークフローの作成
@@ -191,8 +191,8 @@ ms.locfileid: "59294809"
 
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Windows Workflow Foundation プログラミングの新機能](programming.md)
+- [Windows Workflow Foundation プログラミング](programming.md)
 - [ワークフローの設計](designing-workflows.md)
 - [チュートリアル入門](getting-started-tutorial.md)
-- [方法: アクティビティを作成する](how-to-create-an-activity.md)
-- [方法: ワークフローを実行する](how-to-run-a-workflow.md)
+- [方法: アクティビティを作成します。](how-to-create-an-activity.md)
+- [方法: ワークフローを実行します。](how-to-run-a-workflow.md)

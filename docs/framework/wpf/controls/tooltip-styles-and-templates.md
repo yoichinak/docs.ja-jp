@@ -10,10 +10,10 @@ helpviewer_keywords:
 - templates [WPF], ToolTip
 ms.assetid: 405fe385-4de9-49ee-a448-d8f4d1f740dd
 ms.openlocfilehash: 24def466509c12eb69307de139e83dd5a1ed5ce4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211622"
 ---
 # <a name="tooltip-styles-and-templates"></a>ToolTip のスタイルとテンプレート

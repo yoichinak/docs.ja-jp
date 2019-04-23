@@ -8,10 +8,10 @@ dev_langs:
 - VB
 ms.assetid: 67bf05b7-1d08-4911-83b7-a45d0b036fc3
 ms.openlocfilehash: a1908339460191fcb81d03d45c56dd57b2cf4c4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228394"
 ---
 # <a name="tutorial-define-a-windows-communication-foundation-service-contract"></a>チュートリアル: Windows Communication Foundation サービス コントラクトを定義します。

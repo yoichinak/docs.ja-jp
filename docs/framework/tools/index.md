@@ -10,10 +10,10 @@ ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311956"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
@@ -98,7 +98,7 @@ ms.locfileid: "59311956"
  [Resgen.exe (リソース ファイル ジェネレーター)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md)  
  テキスト ファイル (.txt または .restext) と XML ベースのリソース形式ファイル (.resx) を、共通言語ランタイムのバイナリ ファイル (.resources) に変換します。このバイナリ ファイルは、ランタイム バイナリ実行可能ファイルに埋め込んだり、サテライト アセンブリにコンパイルしたりできます。  
   
- [SecAnnotate.exe (.NET セキュリティ アノテーター ツール)](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  
+ [SecAnnotate.exe (.NET Security Annotator ツール)](../../../docs/framework/tools/secannotate-exe-net-security-annotator-tool.md)  
  アセンブリの SecurityCritical 部分と SecuritySafeCritical 部分を識別します。 アセンブリの `SecurityCritical` 部分と `SecuritySafeCritical` 部分を識別します。  
   
  [SignTool.exe (署名ツール)](../../../docs/framework/tools/signtool-exe.md)  

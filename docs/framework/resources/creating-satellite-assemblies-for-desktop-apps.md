@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 8d5c6044-2919-41d2-8321-274706b295ac
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 719f71f42ac7b0c376525ab3a316a986af0b0f43
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 1aecd8e6dcec73ba4dc45d4bf8f365503888687e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678799"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59295992"
 ---
 # <a name="creating-satellite-assemblies-for-desktop-apps"></a>デスクトップ アプリケーションに対するサテライト アセンブリの作成
 リソース ファイルはローカライズされたアプリケーションの中心的な役割を果たします。 これを使用することで、アプリケーションでは、ユーザー固有の言語とカルチャで文字列、イメージ、およびその他のデータを表示し、ユーザー固有の言語またはカルチャ用のリソースが使用できない場合には代替データを提供できるようになります。 .NET Framework ではハブ アンド スポーク モデルを使用して、ローカライズされたリソースを見つけて取得します。 ハブはニュートラルまたは既定のカルチャと呼ばれる、単一カルチャ用のリソースとローカライズできない実行可能コードを含むメイン アセンブリです。 既定のカルチャはアプリケーションで使用されるフォールバック カルチャです。これは、ローカライズされたリソースが使用できない場合に使用されます。 アプリケーションの既定のカルチャにカルチャを指定するために <xref:System.Resources.NeutralResourcesLanguageAttribute> 属性を使用します。 各スポークは、単一のローカライズされたカルチャ用のリソースを含むがコードは含まないサテライト アセンブリに接続します。 サテライト アセンブリはメイン アセンブリには含まれないため、アプリケーションのメイン アセンブリを置換しなくても、特定のカルチャに対応するリソースを簡単に更新または置換できます。  
@@ -52,10 +52,11 @@ ms.locfileid: "54678799"
   
 -   サテライト アセンブリのカルチャに関する情報は、アセンブリのメタデータに含まれている必要があります。 サテライト アセンブリのメタデータにカルチャ名を格納するには、サテライト アセンブリにリソースを埋め込むために [Assembly Linker](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用する際に `/culture` オプションを指定します。  
   
- [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)内にインストールしないアプリケーションについて、サンプルのディレクトリ構造と位置に関する要件を次の図に示します。 拡張子が .txt および .resources の項目は、最終的なアプリケーションには付属していません。 それらは、最終的なサテライト リソース アセンブリを作成するために使用する中間リソース ファイルです。 この例では、.txt ファイルを .resx ファイルに置き換えることができます。 詳細については、「[リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)」を参照してください。  
+ [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)内にインストールしないアプリケーションについて、サンプルのディレクトリ構造と位置に関する要件を次の図に示します。 拡張子が .txt および .resources の項目は、最終的なアプリケーションには付属していません。 それらは、最終的なサテライト リソース アセンブリを作成するために使用する中間リソース ファイルです。 この例では、.txt ファイルを .resx ファイルに置き換えることができます。 詳細については、「[リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)」を参照してください。 
+ 
+ 次の図は、サテライト アセンブリ ディレクトリを示しています。
   
- ![サテライト アセンブリ](../../../docs/framework/resources/media/satelliteassemblydir.gif "satelliteassemblydir")  
-サテライト アセンブリ ディレクトリ  
+ ![カルチャのサブディレクトリがローカライズされたサテライト アセンブリ ディレクトリ](./media/creating-satellite-assemblies-for-desktop-apps/satellite-assembly-directory.gif)
   
 ## <a name="compiling-satellite-assemblies"></a>コンパイル (サテライト アセンブリの)  
  バイナリ .resources ファイルにリソースを含む XML ファイル (.resx) または、テキスト ファイルをコンパイルするために [リソース ファイル ジェネレーター (Resgen.exe)](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用します。 その後、サテライト アセンブリに .resources ファイルをコンパイルするために [アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) を使用します。 Al.exe は、指定された .resources ファイルからアセンブリを作成します。 サテライト アセンブリにはリソースのみを含めることができます。実行可能コードを含めることはできません。  
@@ -87,14 +88,14 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
 ## <a name="satellite-assemblies-an-example"></a>サテライト アセンブリ:例  
  ローカライズされたあいさつ文を含むメッセージ ボックスを表示する "Hello world" の簡単な例を以下に示します。 この例には、英語 (米国)、フランス語 (フランス)、ロシア語 (ロシア) のカルチャ用のリソースが含まれており、そのフォールバック カルチャは英語です。 例を作成するには、次の手順を実行します。  
   
-1.  既定のカルチャのリソースを含める Greeting.resx または Greeting.txt という名前のリソース ファイルを作成します。 値が "Hello world!" の `HelloString` という名前の 1 つの文字列を このファイルに格納します。  
+1. 既定のカルチャのリソースを含める Greeting.resx または Greeting.txt という名前のリソース ファイルを作成します。 値が "Hello world!" の `HelloString` という名前の 1 つの文字列を このファイルに格納します。  
   
-2.  英語 (en) がアプリケーションの既定のカルチャであることを示すには、次の <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 属性をアプリケーションの AssemblyInfo ファイル、またはアプリケーションのメイン アセンブリにコンパイルされるメイン ソース コード ファイルに追加します。  
+2. 英語 (en) がアプリケーションの既定のカルチャであることを示すには、次の <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 属性をアプリケーションの AssemblyInfo ファイル、またはアプリケーションのメイン アセンブリにコンパイルされるメイン ソース コード ファイルに追加します。  
   
      [!code-csharp[Conceptual.Resources.Locating#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.locating/cs/assemblyinfo.cs#2)]
      [!code-vb[Conceptual.Resources.Locating#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.locating/vb/assemblyinfo.vb#2)]  
   
-3.  次のように、アプリケーションに他のカルチャ (en-US、fr-FR および ru-RU) のサポートを追加します。  
+3. 次のように、アプリケーションに他のカルチャ (en-US、fr-FR および ru-RU) のサポートを追加します。  
   
     -   en-US、つまり、英語 (米国) カルチャをサポートするには、Greeting.en-US.resx または Greeting.en-US.txt という名前のリソース ファイルを作成し、値が "Hi world!" の `HelloString` という名前の 1 つの文字列を格納します。  
   
@@ -102,7 +103,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
     -   ru-RU、つまり、ロシア語 (ロシア) カルチャをサポートするには、Greeting.ru-RU.resx または Greeting.ru-RU.txt という名前のリソース ファイルを作成し、値が "Всем привет!" の `HelloString` という名前の 1 つの文字列を格納します。  
   
-4.  [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して、バイナリ .resources ファイルに各テキストまたは XML リソース ファイルをコンパイルします。 出力は、.resx ファイルまたは .txt ファイルと同じルート ファイル名を持つファイル セットです。ただし、拡張子は .resources になります。 Visual Studio で例を作成する場合は、コンパイル プロセスが自動的に処理されます。 Visual Studio を使用していない場合は、次のコマンドを実行して .resx ファイルを .resources ファイルにコンパイルします。  
+4. [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して、バイナリ .resources ファイルに各テキストまたは XML リソース ファイルをコンパイルします。 出力は、.resx ファイルまたは .txt ファイルと同じルート ファイル名を持つファイル セットです。ただし、拡張子は .resources になります。 Visual Studio で例を作成する場合は、コンパイル プロセスが自動的に処理されます。 Visual Studio を使用していない場合は、次のコマンドを実行して .resx ファイルを .resources ファイルにコンパイルします。  
   
     ```console
     resgen Greeting.resx  
@@ -113,7 +114,7 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
   
      リソースが XML ファイルではなく、テキスト ファイルにある場合は、.resx 拡張子を .txt に置き換えます。  
   
-5.  アプリケーションのメイン アセンブリに、既定のカルチャのリソースと一緒に次のソース コードをコンパイルします。  
+5. アプリケーションのメイン アセンブリに、既定のカルチャのリソースと一緒に次のソース コードをコンパイルします。  
   
     > [!IMPORTANT]
     >  Visual Studio ではなく、コマンド ラインを使用して例を作成する場合は、<xref:System.Resources.ResourceManager> クラス コンストラクターの呼び出しを `ResourceManager rm = new ResourceManager("Greetings", typeof(Example).Assembly);` に変更する必要があります。  
@@ -133,9 +134,9 @@ al -target:lib -embed:strings.de.resources -culture:de -out:Example.resources.dl
     vbc Example.vb -res:Greeting.resources  
     ```  
   
-6.  アプリケーションでサポートされているそれぞれのローカライズされたカルチャのメイン アプリケーション ディレクトリに、サブディレクトリを作成します。 en-US、fr-FR および ru-RU サブディレクトリを作成する必要があります。 Visual Studio では、コンパイル プロセスの一環として、これらのサブディレクトリが自動的に作成されます。  
+6. アプリケーションでサポートされているそれぞれのローカライズされたカルチャのメイン アプリケーション ディレクトリに、サブディレクトリを作成します。 en-US、fr-FR および ru-RU サブディレクトリを作成する必要があります。 Visual Studio では、コンパイル プロセスの一環として、これらのサブディレクトリが自動的に作成されます。  
   
-7.  個々のカルチャ固有の .resources ファイルをサテライト アセンブリに埋め込み、適切なディレクトリに保存します。 各 .resources ファイルでこれを行う場合のコマンドは次のようになります。  
+7. 個々のカルチャ固有の .resources ファイルをサテライト アセンブリに埋め込み、適切なディレクトリに保存します。 各 .resources ファイルでこれを行う場合のコマンドは次のようになります。  
   
     ```console
     al -target:lib -embed:Greeting.culture.resources -culture:culture -out:culture\Example.resources.dll  
@@ -202,7 +203,7 @@ gacutil -i:StringLibrary.resources.dll
 ### <a name="resources-in-the-global-assembly-cache-an-example"></a>グローバル アセンブリ キャッシュのリソース:例  
  次の例では、.NET Framework クラス ライブラリのメソッドを使用して、リソース ファイルからローカライズされたあいさつ文を抽出して返します。 ライブラリとそのリソースはグローバル アセンブリ キャッシュに登録されます。 例には、英語 (米国)、フランス語 (フランス)、ロシア語 (ロシア)、および英語カルチャ用のリソースが含まれています。 英語は既定のカルチャです。そのリソースはメイン アセンブリに格納されます。 この例では、最初に公開キーでライブラリとそのサテライト アセンブリに遅延署名してから、公開/秘密キーのペアで再署名します。 例を作成するには、次の手順を実行します。  
   
-1.  Visual Studio を使用していない場合は、次の[厳密な名前ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) コマンドを使用して、ResKey.snk という名前の公開/秘密キーのペアを作成します。  
+1. Visual Studio を使用していない場合は、次の[厳密な名前ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) コマンドを使用して、ResKey.snk という名前の公開/秘密キーのペアを作成します。  
   
     ```console
     sn –k ResKey.snk  
@@ -210,20 +211,20 @@ gacutil -i:StringLibrary.resources.dll
   
      Visual Studio を使用している場合は、プロジェクトの **[プロパティ]** ダイアログ ボックスの **[署名]** タブを使用して、キー ファイルを生成します。  
   
-2.  次の[厳密な名前ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) コマンドを使用して、PublicKey.snk という名前の公開キー ファイルを作成します。  
+2. 次の[厳密な名前ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) コマンドを使用して、PublicKey.snk という名前の公開キー ファイルを作成します。  
   
     ```console
     sn –p ResKey.snk PublicKey.snk  
     ```  
   
-3.  既定のカルチャのリソースを含める Strings.resx という名前のリソース ファイルを作成します。 値が "How do you do?" の `Greeting` という名前の 1 つの文字列を そのファイルに格納します。  
+3. 既定のカルチャのリソースを含める Strings.resx という名前のリソース ファイルを作成します。 値が "How do you do?" の `Greeting` という名前の 1 つの文字列を そのファイルに格納します。  
   
-4.  "en" がアプリケーションの既定のカルチャであることを示すには、次の <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 属性をアプリケーションの AssemblyInfo ファイル、またはアプリケーションのメイン アセンブリにコンパイルされるメイン ソース ファイルに追加します。  
+4. "en" がアプリケーションの既定のカルチャであることを示すには、次の <xref:System.Resources.NeutralResourcesLanguageAttribute?displayProperty=nameWithType> 属性をアプリケーションの AssemblyInfo ファイル、またはアプリケーションのメイン アセンブリにコンパイルされるメイン ソース ファイルに追加します。  
   
      [!code-csharp[Conceptual.Resources.Satellites#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.satellites/cs/stringlibrary.cs#2)]
      [!code-vb[Conceptual.Resources.Satellites#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.satellites/vb/stringlibrary.vb#2)]  
   
-5.  次のように、アプリケーションに他のカルチャ (en-US、fr-FR および ru-RU カルチャ) のサポートを追加します。  
+5. 次のように、アプリケーションに他のカルチャ (en-US、fr-FR および ru-RU カルチャ) のサポートを追加します。  
   
     -   "en-US"、つまり、英語 (米国) カルチャをサポートするには、Strings.en-US.resx または Strings.en-US.txt という名前のリソース ファイルを作成し、値が "Hello!" の `Greeting` という名前の 1 つの文字列をそのファイルに格納します。  
   
@@ -231,7 +232,7 @@ gacutil -i:StringLibrary.resources.dll
   
     -   "ru-RU"、つまり、ロシア語 (ロシア) カルチャをサポートするには、Strings.ru-RU.resx または Strings.ru-RU.txt という名前のリソース ファイルを作成し、値が "Привет!" の `Greeting` という名前の 1 つの文字列をそのファイルに格納します。  
   
-6.  [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して、バイナリ .resources ファイルに各テキストまたは XML リソース ファイルをコンパイルします。 出力は、.resx ファイルまたは .txt ファイルと同じルート ファイル名を持つファイル セットです。ただし、拡張子は .resources になります。 Visual Studio で例を作成する場合は、コンパイル プロセスが自動的に処理されます。 Visual Studio を使用していない場合は、次のコマンドを実行して .resx ファイルを .resources ファイルにコンパイルします。  
+6. [Resgen.exe](../../../docs/framework/tools/resgen-exe-resource-file-generator.md) を使用して、バイナリ .resources ファイルに各テキストまたは XML リソース ファイルをコンパイルします。 出力は、.resx ファイルまたは .txt ファイルと同じルート ファイル名を持つファイル セットです。ただし、拡張子は .resources になります。 Visual Studio で例を作成する場合は、コンパイル プロセスが自動的に処理されます。 Visual Studio を使用していない場合は、次のコマンドを実行して .resx ファイルを .resources ファイルにコンパイルします。  
   
     ```console
     resgen filename  
@@ -239,7 +240,7 @@ gacutil -i:StringLibrary.resources.dll
   
      ここで、*filename* は .resx ファイルまたはテキスト ファイルの省略可能なパス、ファイル名、および拡張子です。  
   
-7.  StringLibrary.dll という名前の遅延署名されたライブラリ アセンブリに、既定のカルチャのリソースと一緒に StringLibrary.vb または StringLibrary.cs の次のソース コードをコンパイルします。  
+7. StringLibrary.dll という名前の遅延署名されたライブラリ アセンブリに、既定のカルチャのリソースと一緒に StringLibrary.vb または StringLibrary.cs の次のソース コードをコンパイルします。  
   
     > [!IMPORTANT]
     >  Visual Studio ではなく、コマンド ラインを使用して例を作成する場合は、<xref:System.Resources.ResourceManager> クラス コンストラクターの呼び出しを `ResourceManager rm = new ResourceManager("Strings",` `typeof(Example).Assembly);` に変更する必要があります。  
@@ -259,7 +260,7 @@ gacutil -i:StringLibrary.resources.dll
     vbc -t:library -resource:Strings.resources -delaysign+ -keyfile:publickey.snk StringLibrary.vb  
     ```  
   
-8.  アプリケーションでサポートされているそれぞれのローカライズされたカルチャのメイン アプリケーション ディレクトリに、サブディレクトリを作成します。 en-US、fr-FR および ru-RU サブディレクトリを作成する必要があります。 Visual Studio では、コンパイル プロセスの一環として、これらのサブディレクトリが自動的に作成されます。 すべてのサテライト アセンブリが同じファイル名を持つため、公開/秘密キーのペアで署名されるまで個々のカルチャ固有のサテライト アセンブリを格納するためにはサブディレクトリが使用されます。  
+8. アプリケーションでサポートされているそれぞれのローカライズされたカルチャのメイン アプリケーション ディレクトリに、サブディレクトリを作成します。 en-US、fr-FR および ru-RU サブディレクトリを作成する必要があります。 Visual Studio では、コンパイル プロセスの一環として、これらのサブディレクトリが自動的に作成されます。 すべてのサテライト アセンブリが同じファイル名を持つため、公開/秘密キーのペアで署名されるまで個々のカルチャ固有のサテライト アセンブリを格納するためにはサブディレクトリが使用されます。  
   
 9. 個々のカルチャ固有の .resources ファイルを遅延署名されたサテライト アセンブリに埋め込み、適切なディレクトリに保存します。 各 .resources ファイルでこれを行う場合のコマンドは次のようになります。  
   
@@ -309,6 +310,7 @@ gacutil -i:StringLibrary.resources.dll
 14. Example.exe を実行します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [リソースのパッケージ化と配置](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)
 - [アセンブリへの遅延署名](../../../docs/framework/app-domains/delay-sign-assembly.md)
 - [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)

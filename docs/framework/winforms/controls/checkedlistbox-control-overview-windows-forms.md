@@ -9,10 +9,10 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229057"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox コントロールの概要 (Windows フォーム)
@@ -27,4 +27,4 @@ Windows フォーム<xref:System.Windows.Forms.CheckedListBox>コントロール
 - <xref:System.Windows.Forms.ListControl.DataSource%2A?displayProperty=nameWithType>
 - [ListBox コントロールの概要](listbox-control-overview-windows-forms.md)
 - [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)
-- [方法: Windows フォーム CheckedListBox コントロールでオンになっている項目を判断する](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)
+- [方法: Windows フォーム CheckedListBox コントロールでチェックされた項目を決定します。](how-to-determine-checked-items-in-the-windows-forms-checkedlistbox-control.md)

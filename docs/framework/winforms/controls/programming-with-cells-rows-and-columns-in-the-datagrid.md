@@ -9,32 +9,32 @@ helpviewer_keywords:
 - rows [Windows Forms], data grids
 ms.assetid: 0d76f7e4-4149-42c6-9118-bb37d6669dc5
 ms.openlocfilehash: 085fcd0114742e787c8cbcaabf89a354b0e3e830
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144626"
 ---
 # <a name="programming-with-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールのセル、行、および列を使用したプログラミング
 このセクションでは、セル、行、および列オブジェクトを含む、さまざまなプログラミング タスクについて説明するトピックを示します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: Windows フォーム DataGridView コントロールの各セルにツールヒントを追加する](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
+ [方法: Windows フォームの DataGridView コントロールの個々 のセルにツールヒントを追加します。](add-tooltips-to-individual-cells-in-a-wf-datagridview-control.md)  
  処理する方法について説明します、<xref:System.Windows.Forms.DataGridView.CellFormatting>個々 のセルに異なるヒントを提供するイベントです。  
   
- [方法: Windows フォーム DataGridView コントロールのセルの変更に基づいてカスタム動作を実行する](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
+ [方法: Windows フォーム DataGridView コントロールのセルの変更に基づくカスタム動作を実行します。](perform-a-custom-action-based-on-changes-in-a-cell-of-a-datagrid.md)  
  処理する方法について説明します、<xref:System.Windows.Forms.DataGridView.CellValueChanged>と<xref:System.Windows.Forms.DataGridView.CellStateChanged>イベント。  
   
- [方法: Windows フォームの DataGridView コントロールのバンドを操作する](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
+ [方法: Windows フォームの DataGridView コントロールのバンドを操作します。](how-to-manipulate-bands-in-the-windows-forms-datagridview-control.md)  
  型のオブジェクトを使用したプログラミング方法について説明します<xref:System.Windows.Forms.DataGridViewBand>行と列の基本型です。  
   
- [方法: Windows フォームの DataGridView コントロールの行を操作する](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
+ [方法: Windows フォームの DataGridView コントロールの行を操作します。](how-to-manipulate-rows-in-the-windows-forms-datagridview-control.md)  
  型のオブジェクトを使用したプログラミング方法について説明します`DataGridViewRow`します。  
   
- [方法: Windows フォーム DataGridView コントロールの列を操作する](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
+ [方法: Windows フォームの DataGridView コントロール内の列を操作します。](how-to-manipulate-columns-in-the-windows-forms-datagridview-control.md)  
  型のオブジェクトを使用したプログラミング方法について説明します`DataGridViewColumn`します。  
   
- [方法: Windows フォーム DataGridView コントロールのイメージ列を操作する](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
+ [方法: Windows フォーム DataGridView コントロールでイメージの列の使用します。](how-to-work-with-image-columns-in-the-windows-forms-datagridview-control.md)  
  使用したプログラミング方法について説明します、`DataGridViewImageColumn`クラス。  
   
 ## <a name="reference"></a>参照  

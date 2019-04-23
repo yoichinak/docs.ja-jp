@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c5f1882c37861fe7dd7997348dc51e30ce2950e
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 29f29da6f5a95181abfd4540b017561115d59284
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218542"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59314751"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>方法: プライマリ相互運用機能アセンブリを登録する
 
@@ -36,7 +36,7 @@ ms.locfileid: "56218542"
 
 ## <a name="to-register-a-primary-interop-assembly"></a>プライマリ相互運用機能アセンブリを登録する方法
 
-1.  コマンド プロンプトで、次のコマンドを入力します。
+1. コマンド プロンプトで、次のコマンドを入力します。
 
      **regasm** *assemblyname*
 

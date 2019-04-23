@@ -11,12 +11,12 @@ helpviewer_keywords:
 - ServiceInstaller class, security context
 ms.assetid: 02187c7b-dbf2-45f2-96c2-e11010225a22
 author: ghogen
-ms.openlocfilehash: 9adcb39504cc2b5189f0c65cc5603c149d1483f7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68fd5d705cb2f38e00e90c211111ff34d23f3b10
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54572618"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59335811"
 ---
 # <a name="how-to-specify-the-security-context-for-services"></a>方法: サービスのセキュリティ コンテキストを指定する
 既定では、サービスはログインしているユーザーのセキュリティ コンテキストとは異なるセキュリティ コンテキストで実行します。 サービスは `LocalSystem` という名前の既定のシステム アカウントのコンテキストで実行し、このコンテキストはサービスに対してユーザーとは異なるシステム リソースへのアクセス特権を付与します。 この動作を変更し、サービスの実行が異なるユーザー アカウントで行われるように指定することができます。  
@@ -35,16 +35,17 @@ ms.locfileid: "54572618"
   
 ### <a name="to-specify-the-security-context-for-a-service"></a>サービスのセキュリティ コンテキストを指定するには  
   
-1.  サービスの作成後、必要なインストーラーを追加します。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」を参照してください。  
+1. サービスの作成後、必要なインストーラーを追加します。 詳細については、「[方法 :サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)」を参照してください。  
   
-2.  デザイナーで、`ProjectInstaller` クラスにアクセスし、対象となるサービスのサービス プロセス インストーラーをクリックします。  
+2. デザイナーで、`ProjectInstaller` クラスにアクセスし、対象となるサービスのサービス プロセス インストーラーをクリックします。  
   
     > [!NOTE]
     >  すべてのサービス アプリケーションについて、`ProjectInstaller` クラスには少なくとも 2 つのインストール コンポーネントがあります。プロジェクト内のすべてのサービスに対するプロセスをインストールするものと、アプリケーションに含まれるサービスごとに 1 つのインストーラーです。 このインスタンスでは、<xref:System.ServiceProcess.ServiceProcessInstaller> を選びます。  
   
-3.  **[プロパティ]** ウィンドウで、<xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> を適切な値に設定します。  
+3. **[プロパティ]** ウィンドウで、<xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> を適切な値に設定します。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [方法: サービス アプリケーションにインストーラーを追加する](../../../docs/framework/windows-services/how-to-add-installers-to-your-service-application.md)
 - [方法: Windows サービスを作成する](../../../docs/framework/windows-services/how-to-create-windows-services.md)

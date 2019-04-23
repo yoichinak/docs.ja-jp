@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/20/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 79b8abd0fb01062900b2ae4e14c02d8844bb6ef9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 49770672ebcff98d8779a888372b5c9f40a55b1d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295979"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611810"
 ---
 # <a name="tutorial-predict-prices-using-a-regression-learner-with-mlnet"></a>チュートリアル: 回帰ラーナーと ML.NET を使用して料金を予測する
 
@@ -148,7 +148,7 @@ public static ITransformer Train(MLContext mlContext, string dataPath)
 
 ## <a name="load-and-transform-data"></a>データを読み込んで変換する
 
-[LoadFromTextFile メソッド](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) の `MLContext.Data.LoadFromTextFile` ラッパーを使用して、データを読み込みます。 <xref:Microsoft.Data.DataView.IDataView> が返されます。 
+[LoadFromTextFile メソッド](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) の `MLContext.Data.LoadFromTextFile` ラッパーを使用して、データを読み込みます。 <xref:Microsoft.Data.DataView.IDataView> が返されます。
 
 `Transforms` の入力および出力として、`DataView` は基本的なデータ パイプラインの種類であり、`LINQ` の `IEnumerable` と同等です。
 
@@ -231,6 +231,7 @@ private static void Evaluate(MLContext mlContext, ITransformer model)
 
 }
 ```
+
 `Evaluate` メソッドは次のタスクを実行します。
 
 * テスト データ セットを読み込む。
@@ -302,12 +303,12 @@ private static void TestSinglePrediction(MLContext mlContext)
 `model` は多数のデータ行を操作する `transformer` ですが、よくある運用シナリオとして個々の例に対する予測のニーズがあります。 <xref:Microsoft.ML.PredictionEngine%602> は、`CreatePredictionEngine` メソッドから返されるラッパーです。 次の行を追加して、`PredictionEngine` を `TestSinglePrediction` メソッドの次の行として作成しましょう。
 
 [!code-csharp[MakePredictionEngine](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#22 "Create the PredictionFunction")]
-  
+
 このチュートリアルでは、このクラス内の 1 つのテスト用の旅行を使用します。 モデルを試行するために後で他のシナリオを追加できます。 `TaxiTrip` のインスタンスを作成して、`TestSinglePrediction` メソッドでコストのトレーニング済みモデルの予測をテストするために、旅行を追加します。
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#23 "Create test data for single prediction")]
 
- これを使用して、タクシー運賃データの 1 つのインスタンスに基づいて料金を予測することができます。 予測を取得するには、データに対して <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> を使用します。 入力データは文字列であり、モデルには、特徴付けが含まれることに注意してください。 トレーニングと予測の間は、パイプラインが同期されます。 予測のために前処理/特徴付けのコードを特別に記述する必要はなく、同じ API によってバッチと 1 回限りの予測の両方が処理されます。
+これを使用して、タクシー運賃データの 1 つのインスタンスに基づいて料金を予測することができます。 予測を取得するには、データに対して <xref:Microsoft.ML.PredictionEngine%602.Predict%2A> を使用します。 入力データは文字列であり、モデルには、特徴付けが含まれることに注意してください。 トレーニングと予測の間は、パイプラインが同期されます。 予測のために前処理/特徴付けのコードを特別に記述する必要はなく、同じ API によってバッチと 1 回限りの予測の両方が処理されます。
 
 [!code-csharp[Predict](~/samples/machine-learning/tutorials/TaxiFarePrediction/Program.cs#24 "Create a prediction of taxi fare")]
 
@@ -322,6 +323,7 @@ private static void TestSinglePrediction(MLContext mlContext)
 ## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、次の作業を行う方法を学びました。
+
 > [!div class="checklist"]
 > * 問題を把握する
 > * 適切な機械学習タスクを選択する
@@ -334,5 +336,6 @@ private static void TestSinglePrediction(MLContext mlContext)
 > * モデルを使用して予測を行う
 
 さらに詳しく学習するには、次のチュートリアルに進んでください。
+
 > [!div class="nextstepaction"]
 > [アヤメのクラスタリング](iris-clustering.md)

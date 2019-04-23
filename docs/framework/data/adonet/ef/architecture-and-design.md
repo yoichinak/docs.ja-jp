@@ -3,10 +3,10 @@ title: アーキテクチャとデザイン
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307575"
 ---
 # <a name="architecture-and-design"></a>アーキテクチャとデザイン
@@ -389,7 +389,7 @@ All(input, x) => Not Exists(Filter(input, not(x))
 ```  
   
 ### <a name="dbnotexpression"></a>DbNotExpression  
- 場合によっては、入力式を使用して DbNotExpression の変換を折りたたむことができます。 例えば:  
+ 場合によっては、入力式を使用して DbNotExpression の変換を折りたたむことができます。 例:  
   
 ```  
 Not(IsNull(a)) =>  "a IS NOT NULL"  

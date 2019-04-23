@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], sorting contents
 ms.assetid: c268e387-3d1d-4d86-a940-19f6673c8d06
 ms.openlocfilehash: bd26d396c238bfc53858320b8f4487df84b3436a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312580"
 ---
 # <a name="how-to-sort-the-contents-of-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールを並べ替える
@@ -32,6 +32,6 @@ Windows フォーム コントロールでは、データ バインドされる�
 - <xref:System.Windows.Forms.ListBox>
 - <xref:System.Windows.Forms.CheckedListBox>
 - [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)
-- [方法: Windows フォームの ComboBox、ListBox、または CheckedListBox コントロールに項目を追加または削除する](add-and-remove-items-from-a-wf-combobox.md)
+- [方法: 追加および削除項目、Windows からフォーム ComboBox、ListBox、または CheckedListBox コントロール](add-and-remove-items-from-a-wf-combobox.md)
 - [ListBox の代わりに Windows フォーム ComboBox を使用する場合](when-to-use-a-windows-forms-combobox-instead-of-a-listbox.md)
 - [オプションのリストを表示するための Windows フォーム コントロール](windows-forms-controls-used-to-list-options.md)

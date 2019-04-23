@@ -3,10 +3,10 @@ title: '方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough �
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331885"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張します。
@@ -75,7 +75,7 @@ ms.locfileid: "59331885"
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. `Task.WhenAll` をタスクのコレクション `downloadTasks` に適用します。 `Task.WhenAll` タスクのコレクション内のすべてのタスクが完了したときに終了する 1 つのタスクを返します。  
+4. `Task.WhenAll` をタスクのコレクション `downloadTasks` に適用します。 `Task.WhenAll` は、タスクのコレクションのすべてのタスクが完了すると完了する、単一のタスクを返します。  
   
      次の例では、`Await` 式は、`WhenAll` によって返される単一のタスクが完了するのを待機します。 式は、各整数がダウンロードされたサイトの長さである、整数の配列に評価します。 `SumPageSizesAsync` の、前の手順で追加したコードの直後に、次のコードを追加します。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "59331885"
     Dim downloadTasks As Task(Of Integer)() = downloadTasksQuery.ToArray()  
     ```  
   
-4. 次に、`Task.WhenAll` をタスクのコレクション `downloadTasks` に適用します。 `Task.WhenAll` タスクのコレクション内のすべてのタスクが完了したときに終了する 1 つのタスクを返します。  
+4. 次に、`Task.WhenAll` をタスクのコレクション `downloadTasks` に適用します。 `Task.WhenAll` は、タスクのコレクションのすべてのタスクが完了すると完了する、単一のタスクを返します。  
   
      次の例では、`Await` 式は、`WhenAll` によって返される単一のタスクが完了するのを待機します。 完了すると、`Await` 式は、各整数がダウンロードされたサイトの長さである、整数の配列に評価します。 `SumPageSizesAsync` の、前の手順で追加したコードの直後に、次のコードを追加します。  
   

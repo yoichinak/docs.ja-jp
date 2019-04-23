@@ -9,10 +9,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], read-only columns
 ms.assetid: 2bb73ebb-1a55-4362-9fda-e50574c087d5
 ms.openlocfilehash: 2a4ca0a718373c56f77e8f3c45a9d6ee6d76a081
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59171926"
 ---
 # <a name="how-to-make-columns-read-only-in-the-windows-forms-datagridview-control"></a>方法: Windows フォームの DataGridView コントロールで列を読み取り専用にする
@@ -40,4 +40,4 @@ ms.locfileid: "59171926"
 - <xref:System.Windows.Forms.DataGridView.Columns%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridViewColumn.ReadOnly%2A?displayProperty=nameWithType>
 - [Windows フォーム DataGridView コントロールでの列、行、およびセルの基本機能](basic-column-row-and-cell-features-wf-datagridview-control.md)
-- [方法: Windows フォーム DataGridView コントロールで行が追加および削除されないようにする](prevent-row-addition-and-deletion-datagridview.md)
+- [方法: Windows フォームの DataGridView コントロールで行の追加および削除を防ぐ](prevent-row-addition-and-deletion-datagridview.md)

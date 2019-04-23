@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ProtectionLevel property
 ms.assetid: 0c034608-a1ac-4007-8287-b1382eaa8bf2
 ms.openlocfilehash: 90fb844931c3af54367d0e7c14a766636cdcc71a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096050"
 ---
 # <a name="understanding-protection-level"></a>保護レベルの理解
@@ -28,11 +28,11 @@ ms.locfileid: "59096050"
   
 -   メッセージのどの部分の保護にも、3 つの基本レベルがあります。 このプロパティは、必ず、<xref:System.Net.Security.ProtectionLevel> 列挙値の 1 つに設定されます。 以下に、これらの値を保護の弱いものから順に示します。  
   
-    -   `None`.  
+    -   `None`。  
   
-    -   `Sign`. 保護された部分はデジタル署名されます。 これによって、保護されたメッセージ部分に対する改ざんが確実に検出されます。  
+    -   `Sign`。 保護された部分はデジタル署名されます。 これによって、保護されたメッセージ部分に対する改ざんが確実に検出されます。  
   
-    -   `EncryptAndSign`. メッセージ部分は、署名される前に機密性を保証するために暗号化されます。  
+    -   `EncryptAndSign`。 メッセージ部分は、署名される前に機密性を保証するために暗号化されます。  
   
 -   専用の保護要件を設定する*アプリケーション データ*この機能を使用します。 たとえば、WS-Addressing ヘッダーは、インフラストラクチャ データであるため、`ProtectionLevel` の影響を受けません。  
   
@@ -104,6 +104,6 @@ ms.locfileid: "59096050"
 - <xref:System.ServiceModel.MessageBodyMemberAttribute>
 - <xref:System.Net.Security.ProtectionLevel>
 - [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
-- [方法: ProtectionLevel プロパティを設定する](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [方法: ProtectionLevel プロパティを設定します。](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [コントラクトおよびサービスのエラーの指定と処理](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [メッセージ コントラクトの使用](../../../docs/framework/wcf/feature-details/using-message-contracts.md)

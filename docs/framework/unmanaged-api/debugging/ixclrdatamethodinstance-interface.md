@@ -16,10 +16,10 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: f62cbdc4b3e73f0c27492f7ed20b35378654d399
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152959"
 ---
 # <a name="ixclrdatamethodinstance-interface"></a>IXCLRDataMethodInstance インターフェイス
@@ -44,9 +44,9 @@ ms.locfileid: "59152959"
 **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
-**.NET Framework のバージョン: ** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+**.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
 
 ## <a name="see-also"></a>関連項目
 
 - [デバッグ](../../../../docs/framework/unmanaged-api/debugging/index.md)
-- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

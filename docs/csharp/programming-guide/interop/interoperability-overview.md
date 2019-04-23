@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: 160403b938a95ae5bb03703f73fa906de5fc3ded
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410759"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59337553"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>相互運用性の概要 (C# プログラミング ガイド)
 C# マネージド コードとアンマネージド コード間で相互運用を可能にする方法について説明します。  
@@ -33,26 +33,26 @@ C# マネージド コードとアンマネージド コード間で相互運用
 ## <a name="exposing-com-components-to-c"></a>C\# への COM コンポーネントの公開
  C# プロジェクトから COM コンポーネントを使用することができます。 一般的な手順は次のとおりです。  
   
-1.  使用する COM コンポーネントを探して登録します。 regsvr32.exe を使用して、COM DLL の登録または登録解除を行います。  
+1. 使用する COM コンポーネントを探して登録します。 regsvr32.exe を使用して、COM DLL の登録または登録解除を行います。  
   
-2.  プロジェクトに、COM コンポーネントまたはタイプ ライブラリへの参照を追加します。  
+2. プロジェクトに、COM コンポーネントまたはタイプ ライブラリへの参照を追加します。  
   
      参照を追加する際、Visual Studio は [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) を使用します。これにより、タイプ ライブラリを入力として取得し、.NET Framework 相互運用アセンブリを出力します。 このアセンブリは、ランタイム呼び出し可能ラッパー (RCW) とも呼ばれ、タイプ ライブラリ内の COM クラスとインターフェイスをラップする、マネージド クラスとインターフェイスを含みます。 Visual Studio は、生成されたアセンブリへの参照をプロジェクトに追加します。  
   
-3.  RCW で定義されているクラスのインスタンスを作成します。 これにより、COM オブジェクトのインスタンスが作成されます。  
+3. RCW で定義されているクラスのインスタンスを作成します。 これにより、COM オブジェクトのインスタンスが作成されます。  
   
-4.  他のマネージド オブジェクトを使用するときと同様に、オブジェクトを使用します。 オブジェクトがガベージ コレクションによって解放されるとき、COM オブジェクトのインスタンスもメモリから解放されます。  
+4. 他のマネージド オブジェクトを使用するときと同様に、オブジェクトを使用します。 オブジェクトがガベージ コレクションによって解放されるとき、COM オブジェクトのインスタンスもメモリから解放されます。  
   
  詳細については、「[.NET Framework への COM コンポーネントの公開](../../../../docs/framework/interop/exposing-com-components.md)」を参照してください。  
   
 ## <a name="exposing-c-to-com"></a>COM への C# の公開  
  COM クライアントは、適切に公開されている C# 型を使用できます。 C# 型を公開する基本的な手順は次のとおりです。  
   
-1.  C# プロジェクトに相互運用属性を追加します。  
+1. C# プロジェクトに相互運用属性を追加します。  
   
      アセンブリ COM は、Visual C# プロジェクト プロパティを変更することで参照できるようになります。 詳細については、「[[アセンブリ情報] ダイアログ ボックス](/visualstudio/ide/reference/assembly-information-dialog-box)」を参照してください。  
   
-2.  COM タイプ ライブラリを生成し、COM の使用状況に登録します。  
+2. COM タイプ ライブラリを生成し、COM の使用状況に登録します。  
   
      Visual C# プロジェクト プロパティを変更して、C# アセンブリが COM 相互運用に自動的に登録されるようにできます。 Visual Studio は `/tlb` コマンド ライン スイッチを使用して [Regasm.exe (アセンブリ登録ツール)](../../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md) を使用します。これにより、マネージド アセンブリが入力として取得され、タイプ ライブラリを生成できます。 タイプ ライブラリは、アセンブリ内の `public` 型を記述し、レジストリ エントリを追加することで、COM クライアントがマネージド クラスを作成できるようにします。  
   

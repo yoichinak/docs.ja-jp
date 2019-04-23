@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 061d98b2-baa7-4336-8ad2-c14de8134d91
 ms.openlocfilehash: efb7b86c3add99e596e6798c8267c09689899d56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231579"
 ---
 # <a name="what-you-can-do-with-linq-to-sql"></a>LINQ to SQL の主な機能
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] SQL 開発者として期待するすべての主要機能をサポートしています。 情報の照会、テーブルへの情報の挿入、およびテーブルの情報の更新と削除を行うことができます。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、SQL 開発者が期待するすべての主要な機能に対応しています。 情報の照会、テーブルへの情報の挿入、およびテーブルの情報の更新と削除を行うことができます。  
   
 ## <a name="selecting"></a>選択  
- 選択 (*射影*) は、 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] クエリを任意のプログラミング言語で記述し、そのクエリを実行して結果を取得することにより実現されます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 自体は変換に慣れている SQL の操作に必要なすべての操作です。 詳細については、「[LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)」を参照してください。  
+ 選択 (*射影*) は、 [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] クエリを任意のプログラミング言語で記述し、そのクエリを実行して結果を取得することにより実現されます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 自体は、必要なすべての操作を、使い慣れた SQL の操作に変換します。 詳細については、「 [LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/index.md)」を参照してください。  
   
  次の例では、ロンドン在住の顧客の会社名を取得し、コンソール ウィンドウに表示します。  
   
@@ -43,7 +43,7 @@ ms.locfileid: "59231579"
  項目を `Delete` (削除) するには、項目を所属先のコレクションから削除してから、 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> の <xref:System.Data.Linq.DataContext> を呼び出して、変更をコミットします。  
   
 > [!NOTE]
->  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 連鎖削除操作を認識しません。 制約を含むテーブルの行を削除する場合を参照してください[方法。データベースから行を削除](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)します。  
+>  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は連鎖削除操作を認識しません。 制約を含むテーブルの行を削除する場合を参照してください[方法。データベースから行を削除](../../../../../../docs/framework/data/adonet/sql/linq/how-to-delete-rows-from-the-database.md)します。  
   
  次の例では、 `CustomerID` が `98128` の顧客をデータベースから取得します。 次に、顧客の行が取得されたことを確認した後で、 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> を呼び出して、このオブジェクトをコレクションから削除します。 最後に、 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> を呼び出して、削除をデータベースに転送します。  
   
@@ -54,4 +54,4 @@ ms.locfileid: "59231579"
 
 - [プログラミング ガイド](../../../../../../docs/framework/data/adonet/sql/linq/programming-guide.md)
 - [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)
-- [作業の開始](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)

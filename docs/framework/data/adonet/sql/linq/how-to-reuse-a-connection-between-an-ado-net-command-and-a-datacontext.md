@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 7e26c7eb-c18a-43b5-a8f0-28fd8b04b0f0
 ms.openlocfilehash: 47e1e45cfe693e3569c343f1058ce2d610af96dd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163151"
 ---
 # <a name="how-to-reuse-a-connection-between-an-adonet-command-and-a-datacontext"></a>方法: ADO.NET コマンドおよび DataContext 間の接続を再利用する

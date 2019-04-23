@@ -1,12 +1,12 @@
 ---
-title: <transport> (行中)  <ws2007HttpBinding>
+title: <transport> の <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 692befa3-8b0b-4ec5-b601-755874e98eb0
 ms.openlocfilehash: a1540b53d4af76141c1daee60a6bddbbecd9d6da
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153869"
 ---
 # <a name="transport-of-ws2007httpbinding"></a>\<トランスポート > の\<ws2007HttpBinding >
@@ -70,7 +70,7 @@ HTTP トランスポートの認証設定を定義します。
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|セキュリティ機能を表す、 [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)要素。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-ws2007httpbinding.md)|セキュリティ機能を表す、 [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)要素。|  
   
 ## <a name="see-also"></a>関連項目
 

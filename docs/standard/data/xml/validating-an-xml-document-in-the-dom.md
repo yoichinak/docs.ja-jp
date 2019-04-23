@@ -10,10 +10,10 @@ ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298423"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM における XML ドキュメントの検証

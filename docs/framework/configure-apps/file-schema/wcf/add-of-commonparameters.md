@@ -1,12 +1,12 @@
 ---
-title: <add> (行中)  <commonParameters>
+title: <add> の <commonParameters>
 ms.date: 03/30/2017
 ms.assetid: 3713bf25-20c8-455f-bb85-de46b6487932
 ms.openlocfilehash: 6aaba3f82966ad4496e6edaae06b5d7a8aef3863
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199486"
 ---
 # <a name="add-of-commonparameters"></a>\<add> of \<commonParameters>

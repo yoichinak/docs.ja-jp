@@ -3,10 +3,10 @@ title: ADO.NET アプリケーションのセキュリティ保護
 ms.date: 03/30/2017
 ms.assetid: 005a1d43-6ee5-471e-ad98-1d30a44d49d5
 ms.openlocfilehash: 32d3de15242aaf9cfacd9371289a5a0a675f884b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149384"
 ---
 # <a name="securing-adonet-applications"></a>ADO.NET アプリケーションのセキュリティ保護

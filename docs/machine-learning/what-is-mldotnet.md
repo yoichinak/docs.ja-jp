@@ -5,12 +5,12 @@ author: cjgronlund
 ms.custom: seodec18
 ms.topic: overview
 ms.date: 03/01/2019
-ms.openlocfilehash: 6ba4719c830c8b0344a38dad4b86d38cc323e972
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 3f5d44e90ba705195deba54ef658668488cdb0f7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57466948"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59200367"
 ---
 # <a name="what-is-mlnet-and-how-do-i-understand-machine-learning-basics"></a>ML.NET と Machine Learning の基本を理解する方法について
 
@@ -24,7 +24,6 @@ ML.NET は無料、オープンソース、クロスプラットフォームの�
 機械学習とは、コンピューターが既存のデータを使用し、将来の動作、結果および傾向を予測するデータ サイエンス テクニックです。 機械学習を使用すると、明示的にプログラミングをしなくても、コンピューターに学習させることが可能です。
 
 機械学習の予測でアプリおよびデバイスはより賢くなります。 オンライン ショッピングのとき、機械学習は購入履歴に基づいて他の製品も勧めます。 クレジット カードを読み取るとき、不正行為を検出するために、機械学習はそのトランザクションをデータベースのトランザクションと比較します。 ロボット掃除機で部屋を掃除するとき、機械学習は作業が完了したかを判断します。
-
 
 ## <a name="short-videos-on-data-science"></a>データ サイエンスに関する短いビデオ 
 

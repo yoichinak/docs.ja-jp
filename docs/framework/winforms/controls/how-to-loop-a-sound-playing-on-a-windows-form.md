@@ -11,10 +11,10 @@ helpviewer_keywords:
 - playing sounds [Windows Forms], looping
 ms.assetid: ea95dd46-10a3-46c0-8263-4b205f00df7f
 ms.openlocfilehash: a74acbbbcb5646a35de54a6000a0feae30f145a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188514"
 ---
 # <a name="how-to-loop-a-sound-playing-on-a-windows-form"></a>方法: Windows フォームでサウンドの再生をループする
@@ -31,7 +31,7 @@ ms.locfileid: "59188514"
   
 -   ファイル名 `"c:\Windows\Media\chimes.wav"` を有効なファイル名に置き換えます。  
   
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ この例をコマンドラインから Visual Basic または Visual C# にビルドする方法の詳細については、[コマンドラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  ファイルの操作は、適切な例外処理ブロックで囲む必要があります。  
@@ -56,5 +56,5 @@ ms.locfileid: "59188514"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Media.SoundPlayer.PlayLooping%2A>
-- [方法: Windows フォームからサウンドを再生する](how-to-play-a-sound-from-a-windows-form.md)
+- [方法: Windows フォームからサウンドを再生します。](how-to-play-a-sound-from-a-windows-form.md)
 - [SoundPlayer クラスの概要](soundplayer-class-overview.md)

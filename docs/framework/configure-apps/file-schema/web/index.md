@@ -10,10 +10,10 @@ helpviewer_keywords:
 - configuration schema [.NET Framework], Web settings
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
 ms.openlocfilehash: 1f0241b65c915dd5703ceea97dd5b07f88832003
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113062"
 ---
 # <a name="web-settings-schema"></a>Web 設定スキーマ
@@ -25,15 +25,15 @@ Web 設定は、CPU と、ASP.NET ホスト層によって管理されている�
   
  Web 設定は、machine.config ファイル、ルート、Web.config ファイル、アプリケーション レベルの Web.config ファイルなどの他の構成ファイルでは使用されません。  
   
- [\<configuration > 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
+ [\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)  
   
- [\<system.web > 要素 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)  
+ [\<system.web> 要素 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)  
   
- [\<applicationPool > 要素 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)  
+ [\<applicationPool> 要素 (Web 設定)](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)  
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<system.web>](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET ホスト層が使用する情報が含まれています。|  
+|[\<system.web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET ホスト層が使用する情報が含まれています。|  
 |[\<applicationPool>](../../../../../docs/framework/configure-apps/file-schema/web/applicationpool-element-web-settings.md)|CPU と、ASP.NET ホスト層によって管理されているプロセス全体の動作に適用される CPU および ASP.NET 設定の実行レベルを指定します。|  
   
 ## <a name="see-also"></a>関連項目

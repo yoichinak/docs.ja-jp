@@ -3,10 +3,10 @@ title: Entity Framework データ プロバイダーの作成
 ms.date: 03/30/2017
 ms.assetid: 092e88c4-a301-453a-b5c3-5740c6575a9f
 ms.openlocfilehash: 2aa27475c28bed521c636139b19454b0720960ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228745"
 ---
 # <a name="writing-an-entity-framework-data-provider"></a>Entity Framework データ プロバイダーの作成

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195060"
 ---
 # <a name="sending-and-receiving-faults"></a>エラーの送受信
@@ -51,15 +51,15 @@ SOAP エラーは、エラー状態情報をサービスからクライアント
   
 -   <xref:System.ServiceModel.CommunicationException>  
   
- <xref:System.TimeoutException> オブジェクトは、操作が指定されたタイムアウト期間を超えた場合にスローされます。  
+ <xref:System.TimeoutException> オブジェクトは、操作が、指定されたタイムアウト期間を超えた場合にスローされます。  
   
- <xref:System.ServiceModel.CommunicationException> オブジェクトは、サービスまたはクライアントのいずれかの回復可能な通信エラー条件がある場合にスローされます。  
+ <xref:System.ServiceModel.CommunicationException> オブジェクトは、回復可能な通信エラー状態がサービスまたはクライアントで発生した場合にスローされます。  
   
  <xref:System.ServiceModel.CommunicationException> クラスには、<xref:System.ServiceModel.FaultException> および一般的な <xref:System.ServiceModel.FaultException%601> 型という 2 つの重要な派生型があります。  
   
- <xref:System.ServiceModel.FaultException> リスナーが受信するエラーを想定または操作コントラクトで指定されていないときに例外がスローされます。通常このときに発生しますが、アプリケーションのデバッグし、サービスが、<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>プロパティに設定`true`します。  
+ <xref:System.ServiceModel.FaultException> 例外は、予期しないエラーまたは操作コントラクト内に指定されていないエラーをリスナーが受信した場合にスローされます。この例外は、通常、サービスの <xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType> プロパティを `true` に設定してアプリケーションをデバッグしている場合に発生します。  
   
- <xref:System.ServiceModel.FaultException%601> 操作コントラクトで指定されているエラーは、双方向の操作に対する応答で受信された場合、クライアントで例外がスローされます (を持つメソッドは、<xref:System.ServiceModel.OperationContractAttribute>属性<xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A>に設定`false`)。  
+ <xref:System.ServiceModel.FaultException%601> 例外は、操作コントラクト内に指定されたエラーが、双方向操作 (つまり、<xref:System.ServiceModel.OperationContractAttribute> に <xref:System.ServiceModel.OperationContractAttribute.IsOneWay%2A> が設定されている `false` 属性を持つメソッド) への応答で受信された場合に、クライアントでスローされます。  
   
 > [!NOTE]
 >  WCF サービスは、発生した場合、<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>または<xref:System.ServiceModel.Description.ServiceDebugBehavior.IncludeExceptionDetailInFaults%2A?displayProperty=nameWithType>プロパティに設定`true`として宣言されていないは、クライアントでこの<xref:System.ServiceModel.FaultException%601>型の<xref:System.ServiceModel.ExceptionDetail>します。 クライアントは、この特定のエラーをキャッチするか、<xref:System.ServiceModel.FaultException> の catch ブロックで処理できます。  
@@ -110,4 +110,4 @@ SOAP エラーは、エラー状態情報をサービスからクライアント
 - <xref:System.ServiceModel.FaultException%601>
 - <xref:System.ServiceModel.CommunicationException?displayProperty=nameWithType>
 - [予期される例外](../../../docs/framework/wcf/samples/expected-exceptions.md)
-- [close と abort を使用して WCF クライアントのリソースを解放する](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)
+- [閉じるを使用し、WCF クライアントのリソースを解放する中止](../../../docs/framework/wcf/samples/use-close-abort-release-wcf-client-resources.md)

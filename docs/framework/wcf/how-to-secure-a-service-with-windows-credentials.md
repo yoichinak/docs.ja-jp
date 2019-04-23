@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: d171b5ca-96ef-47ff-800c-c138023cf76e
 ms.openlocfilehash: 5fb175bdd255af1b506dacb973a778b1f6f515f9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329350"
 ---
 # <a name="how-to-secure-a-service-with-windows-credentials"></a>方法: Windows 資格情報でサービスをセキュリティで保護する
@@ -151,6 +151,6 @@ ms.locfileid: "59329350"
 
 - <xref:System.ServiceModel.WSHttpBinding>
 - [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [方法: クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
+- [方法: クライアントを作成します。](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)
 - [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
 - [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - binding configuration [WCF]
 ms.assetid: 99a85fd8-f7eb-4a84-a93e-7721b37d415c
 ms.openlocfilehash: 009011100af86e315aa41beb822b1448e2f21b25
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150450"
 ---
 # <a name="configuring-bindings-for-windows-communication-foundation-services"></a>Windows Communication Foundation サービスのバインディングの構成
@@ -58,7 +58,7 @@ ms.locfileid: "59150450"
 </service>  
 ```  
   
- この例では、`name` 属性は、構成がどのサービス型に対するものであるかを示します。 `HelloWorld` コントラクトを使用してコードでサービスを作成すると、そのサービスは、この例の構成に定義されているすべてのエンドポイントと共に初期化されます。 アセンブリが 1 つのサービス コントラクトを実装している場合、`name`サービスでのみ使用可能な型を使用するために属性を省略できます。 属性は、文字列は、の形式である必要があります。 `Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null`  
+ この例では、`name` 属性は、構成がどのサービス型に対するものであるかを示します。 `HelloWorld` コントラクトを使用してコードでサービスを作成すると、そのサービスは、この例の構成に定義されているすべてのエンドポイントと共に初期化されます。 アセンブリが 1 つのサービス コントラクトを実装している場合、`name`サービスでのみ使用可能な型を使用するために属性を省略できます。 この属性が受け取る文字列は、`Namespace.Class, AssemblyName, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null` の形式で指定される必要があります。  
   
  `address` 属性では、他のエンドポイントがこのサービスと通信するために使用する URI を指定します。 この URI は、絶対パスでも相対パスでもかまいません。 相対アドレスを指定すると、ホストは、そのバインディングで使用されるトランスポート スキームに適したベース アドレスを提供します。 アドレスが構成されていない場合、ベース アドレスはそのエンドポイントのアドレスと見なされます。  
   

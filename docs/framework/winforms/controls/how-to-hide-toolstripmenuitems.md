@@ -13,10 +13,10 @@ helpviewer_keywords:
 - hiding menu items
 ms.assetid: 418a768f-808a-44cd-8cef-f4e161883621
 ms.openlocfilehash: dc9daa945f2a546548f2cc6ea033378bd9ceff93
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127427"
 ---
 # <a name="how-to-hide-toolstripmenuitems"></a>方法: ToolStripMenuItems を非表示にする
@@ -43,4 +43,4 @@ ms.locfileid: "59127427"
 - <xref:System.Windows.Forms.ToolStripItem.Visible%2A>
 - <xref:System.Windows.Forms.MenuStrip>
 - [MenuStrip コントロールの概要](menustrip-control-overview-windows-forms.md)
-- [方法: ToolStripMenuItems を無効にする](how-to-disable-toolstripmenuitems.md)
+- [方法: ToolStripMenuItems を無効にします。](how-to-disable-toolstripmenuitems.md)

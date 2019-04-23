@@ -3,10 +3,10 @@ title: -target:appcontainerexe (C# コンパイラ オプション)
 ms.date: 07/20/2015
 ms.assetid: e7e62229-23ea-4e53-bef5-380d951bf95f
 ms.openlocfilehash: b3819c0582c414e1f1e3b75ab5bfe517873a1eb3
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59311072"
 ---
 # <a name="-targetappcontainerexe-c-compiler-options"></a>-target:appcontainerexe (C# コンパイラ オプション)

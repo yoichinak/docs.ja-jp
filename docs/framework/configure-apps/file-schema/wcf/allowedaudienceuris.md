@@ -3,10 +3,10 @@ title: <allowedAudienceUris>
 ms.date: 03/30/2017
 ms.assetid: 0f4dc73d-d95d-4193-9755-7df4cf2b8e1c
 ms.openlocfilehash: f758fc8e0934f56f9593246497d8aba5084c4a79
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143352"
 ---
 # <a name="allowedaudienceuris"></a>\<allowedAudienceUris>
@@ -70,4 +70,4 @@ ms.locfileid: "59143352"
 - [\<add>](../../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)
 - [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [サービスおよびクライアントのセキュリティ保護](../../../../../docs/framework/wcf/feature-details/securing-services-and-clients.md)
-- [方法: フェデレーション サービスで資格情報を設定する](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)
+- [方法: フェデレーション サービスで資格情報を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)

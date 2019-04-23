@@ -10,10 +10,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], using hatch brushes
 ms.assetid: 9c8300ff-187b-404f-af1f-ebd499f5b16f
 ms.openlocfilehash: f5399c4151b335090f4b93be041375b8c2781afa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59118119"
 ---
 # <a name="how-to-fill-a-shape-with-a-hatch-pattern"></a>方法: ハッチ パターンで図形を塗りつぶす
@@ -42,7 +42,7 @@ ms.locfileid: "59118119"
  [!code-vb[System.Drawing.UsingABrush#41](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.UsingABrush/VB/Class1.vb#41)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs>`e`、はのパラメーター、<xref:System.Windows.Forms.Control.Paint>イベント ハンドラー。  
+ 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> イベント ハンドラーのパラメーターである `e`<xref:System.Windows.Forms.Control.Paint> を必要とします。  
   
 ## <a name="see-also"></a>関連項目
 

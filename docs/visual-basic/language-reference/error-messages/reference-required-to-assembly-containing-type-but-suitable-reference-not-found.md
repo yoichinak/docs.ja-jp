@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 ms.openlocfilehash: 9868598b32ae17ef5bfb5dd738f8a7541515f5ec
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310672"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>参照アセンブリが必要です '\<assemblyidentity >' 型を含む'\<typename >'、プロジェクトの間であいまいさのため、適切な参照が見つかりませんでしたが、\<projectname1 >' と '\<projectname2 >'
@@ -32,7 +32,7 @@ ms.locfileid: "59310672"
 ## <a name="see-also"></a>関連項目
 
 - [プロジェクト内の参照の管理](/visualstudio/ide/managing-references-in-a-project)
-- [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
+- [宣言された要素の参照](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)
 
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)
-- [Troubleshooting Broken References](/visualstudio/ide/troubleshooting-broken-references)
+- [壊れた参照のトラブルシューティング](/visualstudio/ide/troubleshooting-broken-references)

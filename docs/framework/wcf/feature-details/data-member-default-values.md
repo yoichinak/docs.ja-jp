@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
 ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59185693"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973721"
 ---
 # <a name="data-member-default-values"></a>データ メンバーの既定値
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]、型の概念がある*既定値*します。 たとえば、参照型の既定値は `null` で、整数型の既定値は 0 です。 しかし、データ メンバーが既定値に設定されている場合は、シリアル化されたデータからそのデータ メンバーを省略することが望ましいことがあります。 それは、メンバーが既定値に設定されているために実際の値をシリアル化する必要がなく、パフォーマンスの点で有利だからです。  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30698
 ms.assetid: 3b77b7e3-8b17-40de-b4e1-05e4b9b325ad
 ms.openlocfilehash: e6e7590c10c2234e2bbe2f39a00428494105caae
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340010"
 ---
 # <a name="unable-to-write-temporary-file-because-temporary-path-is-not-available"></a>一時パスが使用できないため、一時ファイルを書き込めません。
@@ -27,4 +27,4 @@ Visual Basic では、一時ファイルの格納場所のパスを特定でき�
   
 ## <a name="see-also"></a>関連項目
 
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [ご意見](/visualstudio/ide/talk-to-us)

@@ -1,13 +1,13 @@
 ---
 title: C# 7.1 の新機能
 description: C# 7.1 の新機能の概要。
-ms.date: 08/16/2017
-ms.openlocfilehash: 565db102284424f9d8f6fa04ec9c74b52c9da0e6
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.date: 04/09/2019
+ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728655"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480964"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 の新機能
 
@@ -23,6 +23,8 @@ C# 7.1 では、[言語バージョン選択](../language-reference/configure-la
   - ターゲットの種類を推論できるとき、既定の値式で既定のリテラル式を使用できます。
 * [推論されたタプル要素の名前](#inferred-tuple-element-names)
   - タプル要素の名前は、多くの場合、タプル初期化から推論できます。
+* [ジェネリック型パラメーターのパターン マッチ](#pattern-matching-on-generic-type-parameters)
+  - 型がジェネリック型パラメーターである変数にパターン マッチ式を使用できます。
 
 最後に、コンパイラには、[参照アセンブリ生成](#reference-assembly-generation)を制御する 2 つのオプション、`/refout` と `/refonly` があります。
 
@@ -60,7 +62,7 @@ static async Task Main()
 }
 ```
 
-プログラミング ガイドの [async main](../programming-guide/main-and-command-args/index.md) トピックに詳細があります。
+プログラミング ガイドの [async main](../programming-guide/main-and-command-args/index.md) の記事に詳細があります。
 
 ## <a name="default-literal-expressions"></a>既定のリテラル式
 
@@ -77,7 +79,7 @@ Func<string, bool> whereClause = default(Func<string, bool>);
 Func<string, bool> whereClause = default;
 ```
 
-この拡張の詳細は、C# プログラミング ガイドの[既定の値式](../programming-guide/statements-expressions-operators/default-value-expressions.md)に関するトピックにあります。
+この拡張の詳細は、C# プログラミング ガイドの[既定の値式](../programming-guide/statements-expressions-operators/default-value-expressions.md)に関する記事にあります。
 
 この拡張では、[既定のキーワード](../language-reference/keywords/default.md)の解析ルールも一部変更されています。
 
@@ -99,9 +101,13 @@ string label = "Colors used in the map";
 var pair = (count, label); // element names are "count" and "label"
 ```
 
-この機能の詳細については、[タプル](../tuples.md)に関するトピックを参照してください。
+この機能の詳細については、[タプル](../tuples.md)に関する記事を参照してください。
+
+## <a name="pattern-matching-on-generic-type-parameters"></a>ジェネリック型パラメーターのパターン マッチ
+
+C#7.1 以降では、`is` 型パターンと `switch` 型パターンのパターン式は、ジェネリック型パラメーターの型を持つことができます。 これは `struct` 型か `class` 型のいずれかである可能性がある型を確認し、ボックス化を回避するときに最も役立ちます。
 
 ## <a name="reference-assembly-generation"></a>参照アセンブリ生成
 
 *参照専用アセンブリ*を生成する新しい 2 つのコンパイラ オプション [/refout](../language-reference/compiler-options/refout-compiler-option.md) と [/refonly](../language-reference/compiler-options/refonly-compiler-option.md) があります。
-リンク先のトピックには、オプションと参照アセンブリに関する詳細があります。
+リンク先の記事には、オプションと参照アセンブリに関する詳細があります。

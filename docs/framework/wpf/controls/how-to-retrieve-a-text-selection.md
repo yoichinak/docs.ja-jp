@@ -10,10 +10,10 @@ helpviewer_keywords:
 - retrieving text [WPF]
 ms.assetid: d5793172-1e11-4a39-9be0-73f336ed858d
 ms.openlocfilehash: b7f0b9ee02a7ace717787fc8eeb6e15649829a49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224586"
 ---
 # <a name="how-to-retrieve-a-text-selection"></a>方法: テキスト選択を取得する

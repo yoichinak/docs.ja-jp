@@ -3,10 +3,10 @@ title: <discoveryClientSettings>
 ms.date: 03/30/2017
 ms.assetid: 02e1b823-a8bb-4074-90d5-8599f71e8f9d
 ms.openlocfilehash: 0b014a9d797ded61949a374486824ee3ebc34661
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136254"
 ---
 # <a name="discoveryclientsettings"></a>\<discoveryClientSettings>

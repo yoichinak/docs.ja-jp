@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: eab5af7e-76fa-434d-9d36-873e995cee05
 ms.openlocfilehash: 32a37fb3cc2b93046bea133f351185638b0d7545
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163164"
 ---
 # <a name="cancelrequestedqueries"></a>\<cancelRequestedQueries>
@@ -52,9 +52,9 @@ ms.locfileid: "59163164"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ワークフロー >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|識別される特定のワークフローのすべてのクエリを格納する構成要素、 **activityDefinitionId**プロパティ。|  
+|[\<workflow>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/workflow.md)|識別される特定のワークフローのすべてのクエリを格納する構成要素、 **activityDefinitionId**プロパティ。|  
   
 ## <a name="see-also"></a>関連項目
 
-- [ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

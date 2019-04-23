@@ -4,10 +4,10 @@ description: カスタム AI ソリューションの作成と、.NET アプリ�
 ms.custom: seodec18
 ms.date: 03/01/2019
 ms.openlocfilehash: c8d1258629f777cd8bced47e4b956c9cf100a682
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427584"
 ---
 # <a name="net-machine-learning-how-to-guides---mlnet"></a>.NET の機械学習に関するハウツー ガイド - ML.NET

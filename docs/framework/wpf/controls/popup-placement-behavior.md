@@ -8,10 +8,10 @@ helpviewer_keywords:
 - positioning popups [WPF]
 ms.assetid: fbf642e9-f670-4efd-a7af-a67468a1c8e1
 ms.openlocfilehash: 911c2064e34ed8d0a341ffd9a52f852eab677e0a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161501"
 ---
 # <a name="popup-placement-behavior"></a>ポップアップの配置動作

@@ -3,10 +3,10 @@ title: ORDER BY (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c0b61572-ecee-41eb-9d7f-74132ec8a26c
 ms.openlocfilehash: 4cf65637603fd6c20a33b1ae6ecd8b6ded36a246
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328479"
 ---
 # <a name="order-by-entity-sql"></a>ORDER BY (Entity SQL)

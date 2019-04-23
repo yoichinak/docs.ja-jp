@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
 ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517839"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>方法: IIS で実行されている WCF データ サービスを開発します。

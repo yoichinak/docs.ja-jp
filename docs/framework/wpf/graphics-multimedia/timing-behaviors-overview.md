@@ -6,10 +6,10 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129598"
 ---
 # <a name="timing-behaviors-overview"></a>タイミング動作の概要
@@ -42,7 +42,7 @@ ms.locfileid: "59129598"
 |----------|-----------------|----------------|-|-|-|  
 |単純継続時間|タイムラインが順方向の反復を 1 回完了するのに要する時間の長さ。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>||||  
 |1 回の繰り返し|タイムラインにする場合とすると、再生にかかる時間の長さ、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>プロパティが true の場合、旧バージョンと 1 回再生します。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>, <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>||||  
-|アクティブ期間|タイムラインで指定されたすべての繰り返しを完了するにかかる時間の長さ、<xref:System.Windows.Media.Animation.RepeatBehavior>プロパティ。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>では、 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>では、 <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
+|アクティブ期間|タイムラインで指定されたすべての繰り返しを完了するにかかる時間の長さ、<xref:System.Windows.Media.Animation.RepeatBehavior>プロパティ。|<xref:System.Windows.Media.Animation.Timeline.Duration%2A>、 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>、 <xref:System.Windows.Media.Animation.RepeatBehavior>||||  
   
 <a name="duration"></a>   
 ### <a name="the-duration-property"></a>Duration プロパティ  
@@ -127,5 +127,5 @@ ms.locfileid: "59129598"
 - [アニメーションの概要](animation-overview.md)
 - [アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)
 - [タイミング イベントの概要](timing-events-overview.md)
-- [方法のトピック](animation-and-timing-how-to-topics.md)
+- [方法トピック](animation-and-timing-how-to-topics.md)
 - [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)

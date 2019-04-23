@@ -1,12 +1,12 @@
 ---
-title: <security> (行中)  <customBinding>
+title: <security> の <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 243a5148-bbd1-447f-a8a5-6e7792c0a3f1
 ms.openlocfilehash: ffe791d495a4e06c9649dd0c37d0fd010e2c64bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182040"
 ---
 # <a name="security-of-custombinding"></a>\<セキュリティ > の\<customBinding >
@@ -175,5 +175,5 @@ ms.locfileid: "59182040"
 - [バインディングの拡張](../../../../../docs/framework/wcf/extending/extending-bindings.md)
 - [カスタム バインディング](../../../../../docs/framework/wcf/extending/custom-bindings.md)
 - [\<customBinding>](../../../../../docs/framework/configure-apps/file-schema/wcf/custombinding.md)
-- [方法: SecurityBindingElement を使用してカスタム バインドを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
-- [カスタム バインディング セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)
+- [方法: SecurityBindingElement を使用してカスタム バインディングを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-binding-using-the-securitybindingelement.md)
+- [カスタム バインド セキュリティ](../../../../../docs/framework/wcf/samples/custom-binding-security.md)

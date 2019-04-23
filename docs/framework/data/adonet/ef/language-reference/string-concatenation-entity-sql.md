@@ -3,10 +3,10 @@ title: + (文字列連結)(Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 580130fa-6c7c-4f76-a47d-d22c27ccadf6
 ms.openlocfilehash: 5f2c031218a9e533889c696bc592e73a27b51d06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329766"
 ---
 # <a name="-string-concatenation-entity-sql"></a>+ (文字列連結) (Entity SQL)

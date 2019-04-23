@@ -3,10 +3,10 @@ title: 1 秒あたりの失敗した呼び出し
 ms.date: 03/30/2017
 ms.assetid: 81c88073-8e32-4520-a71a-2c56b71ee515
 ms.openlocfilehash: 5b7569b6a00757fbb863b90b25b44815a349ab07
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59115519"
 ---
 # <a name="calls-faulted-per-second"></a>1 秒あたりの失敗した呼び出し

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d70b502f-6a15-4120-b4fe-500b173ad9cc
 ms.openlocfilehash: 234b3059f9109c23b8ecae4da37e15f7f094fbd1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203237"
 ---
 # <a name="expressions-in-linq-to-entities-queries"></a>LINQ to Entities クエリ内の式

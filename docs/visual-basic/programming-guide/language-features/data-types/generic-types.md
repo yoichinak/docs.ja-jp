@@ -37,10 +37,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
 ms.openlocfilehash: 768f7704851a5f54f4b4a7535fe2584e20bfaa0f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301231"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic におけるジェネリック型 (Visual Basic)
@@ -91,7 +91,7 @@ ms.locfileid: "59301231"
   
 -   **タイプ セーフ。** ジェネリック型では、コンパイル時に型がチェックされます。 一方、 `Object` に基づく型はすべてのデータ型を受け入れるので、入力したデータ型が受け入れられる型かどうかをチェックするコードを記述する必要があります。 ジェネリック型を使うと、型の不一致は実行する前にコンパイラで検出できます。  
   
--   **パフォーマンス。** それぞれが特定の 1 つのデータ型に特化されるので、データを *ボックス化* したり、 *unボックス化* したりする必要がありません。 `Object` に基づいて操作を実行する場合、入力したデータ型をボックス化して `Object` に変換したり、出力時にデータのボックス化を解除したりする必要があります。 ボックス化とボックス化解除は、パフォーマンスを低下させます。  
+-   **パフォーマンス。** それぞれが特定の 1 つのデータ型に特化されるので、データを *ボックス化* したり、 *ボックス化を解除* したりする必要がありません。 `Object` に基づいて操作を実行する場合、入力したデータ型をボックス化して `Object` に変換したり、出力時にデータのボックス化を解除したりする必要があります。 ボックス化とボックス化解除は、パフォーマンスを低下させます。  
   
      また、 `Object` に基づく型は遅延バインディングでもあります。つまり、この型のメンバーにアクセスするには、実行時に余分なコードが必要になります。 これも、パフォーマンスを低下させます。  
   
@@ -152,10 +152,10 @@ ms.locfileid: "59301231"
 - [型文字](../../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)
 - [値型と参照型](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)
 - [Visual Basic における型変換](../../../../visual-basic/programming-guide/language-features/data-types/type-conversions.md)
-- [データ型のトラブルシューティング](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
+- [トラブルシューティング (データ型)](../../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)
 - [データの種類](../../../../visual-basic/language-reference/data-types/index.md)
 - [Of](../../../../visual-basic/language-reference/statements/of-clause.md)
 - [As](../../../../visual-basic/language-reference/statements/as-clause.md)
-- [Object データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
+- [Object 型](../../../../visual-basic/language-reference/data-types/object-data-type.md)
 - [共変性と反変性](../../concepts/covariance-contravariance/index.md)
 - [反復子](../../../../visual-basic/programming-guide/concepts/iterators.md)

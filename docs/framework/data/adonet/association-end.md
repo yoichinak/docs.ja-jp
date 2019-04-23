@@ -3,10 +3,10 @@ title: アソシエーション End
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
 ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108291"
 ---
 # <a name="association-end"></a>アソシエーション End
@@ -37,4 +37,4 @@ ms.locfileid: "59108291"
 ## <a name="see-also"></a>関連項目
 
 - [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [エンティティ データ モデル](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

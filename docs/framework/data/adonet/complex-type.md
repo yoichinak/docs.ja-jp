@@ -3,10 +3,10 @@ title: 複合型
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
 ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160811"
 ---
 # <a name="complex-type"></a>複合型
@@ -40,4 +40,4 @@ A*複合型*豊富な構造化されたプロパティを定義するための�
 ## <a name="see-also"></a>関連項目
 
 - [Entity Data Model キーの概念](../../../../docs/framework/data/adonet/entity-data-model-key-concepts.md)
-- [エンティティ データ モデル](../../../../docs/framework/data/adonet/entity-data-model.md)
+- [Entity Data Model](../../../../docs/framework/data/adonet/entity-data-model.md)

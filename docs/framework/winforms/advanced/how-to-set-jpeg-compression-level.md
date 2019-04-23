@@ -9,10 +9,10 @@ helpviewer_keywords:
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
 ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130677"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>方法: JPEG 圧縮レベルの設定
@@ -131,6 +131,6 @@ End Function
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: エンコーダーがサポートするパラメーターの確認](how-to-determine-the-parameters-supported-by-an-encoder.md)
+- [方法: エンコーダーがサポートするパラメーターを確認します。](how-to-determine-the-parameters-supported-by-an-encoder.md)
 - [ビットマップの種類](types-of-bitmaps.md)
 - [マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用](using-image-encoders-and-decoders-in-managed-gdi.md)

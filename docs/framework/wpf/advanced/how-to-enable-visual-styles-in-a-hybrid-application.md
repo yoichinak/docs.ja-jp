@@ -9,10 +9,10 @@ helpviewer_keywords:
 - visual styles [Windows Forms]
 ms.assetid: 95de9b9c-d804-405c-b2d1-49a88c1e0fe1
 ms.openlocfilehash: 7aa5208a4f378408a01a08a2f4c9dbf2edfa5243
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323604"
 ---
 # <a name="how-to-enable-visual-styles-in-a-hybrid-application"></a>方法: ハイブリッド アプリケーションで視覚スタイルを有効にする

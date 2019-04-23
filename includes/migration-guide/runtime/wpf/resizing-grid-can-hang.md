@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 2e870b8d7b8ed986863632f947223946a6604f89
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 63101fb127c84de21d165994bba85a2753e97344
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58761468"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59236608"
 ---
 ### <a name="resizing-a-grid-can-hang"></a>グリッドのサイズを変更すると、ハングする可能性がある
 
@@ -15,4 +15,3 @@ ms.locfileid: "58761468"
 |スコープ|エッジ|
 |Version|4.7|
 |型|ランタイム|
-

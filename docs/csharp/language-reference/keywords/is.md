@@ -1,19 +1,19 @@
 ---
 title: is - C# リファレンス
 ms.custom: seodec18
-ms.date: 02/17/2017
+ms.date: 04/09/2019
 f1_keywords:
 - is_CSharpKeyword
 - is
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: a391449afd53b28ae4293865314275782d6e9505
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977054"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480834"
 ---
 # <a name="is-c-reference"></a>is (C# リファレンス)
 
@@ -47,11 +47,11 @@ ms.locfileid: "56977054"
 
 [!code-csharp[is#3](../../../../samples/snippets/csharp/language-reference/keywords/is/is3.cs#3)]
 
-式が常に `true` または `false` のいずれかになることが判明している場合は、`is` キーワードによってコンパイル時に警告が生成されます。 参照変換、ボックス変換、アンボックス変換のみが考慮され、ユーザー定義の変換や型の [implicit](implicit.md) および [explicit](explicit.md) 演算子によって定義された変換は無視されます。 次の例では、コンパイル時に変換結果が判明しているため、警告が生成されます。 `int` から `long` および `double` への変換の `is` 式では、変換が [implicit](implicit.md) 演算子によって処理されるため、false が返される点に注意してください。
+式が常に `true` または `false` のいずれかになることが判明している場合は、`is` キーワードによってコンパイル時に警告が生成されます。 参照変換、ボックス変換、アンボックス変換のみが考慮され、ユーザー定義の変換や型の [implicit](implicit.md) および [explicit](explicit.md) 演算子によって定義された変換は無視されます。 次の例では、コンパイル時に変換結果が判明しているため、警告が生成されます。 `int` から `long` および `double` への変換の `is` 式では、変換が [implicit](implicit.md) 演算子によって処理されるため、false が返されます。
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` には、匿名メソッドとラムダ式を除き、値を返すどのような式でも指定できます。 次の例では、`is` を使用してメソッド呼び出しの戻り値を評価しています。   
+`expr` 匿名メソッドまたはラムダ式にすることはできません。 値を返す他の式を使用することもできます。 次の例では、`is` を使用してメソッド呼び出しの戻り値を評価しています。   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 C# 7.0 以降では、[型パターン](#type)によるパターン マッチングを使用することで、`is` ステートメントを用いたより簡潔なコードを記述できます。
@@ -66,7 +66,7 @@ C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference
 
 - [var パターン](#var): 照合が常に成功し、式の値が新しいローカル変数にバインドされます。 
 
-### <a name="type" />型パターン</a>
+### <a name="a-nametype-type-pattern"></a><a name="type" />型パターン
 
 型パターンを使用してパターン マッチングを実行すると、式を指定された型に変換できるかどうかが `is` によってテストされ、変換できる場合はその型の変数にキャストされます。 `is` ステートメントのわかりやすい拡張機能であり、型の評価および変換を簡潔に記述できます。 `is` 型パターンの一般的な形式は次のとおりです。
 
@@ -85,6 +85,8 @@ C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference
 - *expr* のコンパイル時の型が *type* の基底クラスであり、*expr* の実行時の型が *type* または *type* から派生した型である。 変数の "*コンパイル時の型*" とは、その変数の宣言で定義されている型です。 変数の "*実行時の型*" とは、その変数に代入されているインスタンスの型です。
 
 - *expr* が、*type* インターフェイスを実装する型のインスタンスである。
+
+C#7.1 以降、*expr* はジェネリック型パラメーターとその制約によって定義されるコンパイル時型を持つことができます。 
 
 *expr* が `true` で `is` が `if` ステートメントと共に使用されている場合は *varname* への代入が行われ、そのローカル スコープは `if` ステートメント内に限定されます。
 
@@ -142,17 +144,15 @@ C# 7.0 以降では、`is` および [switch](../../../csharp/language-reference
  
 ### <a name="var" /> var パターン</a>
 
-var パターンによるパターン マッチは常に成功します。 構文は次のとおりです
+var パターンとのパターン マッチは、常に null 以外の式に対して成功します。*expr* が `null` の場合、`is` 式は `false` です。 *expr* の null 以外の値は、常に *expr* の実行時の型と同じ型のローカル変数に割り当てられます。  構文は次のとおりです。
 
 ```csharp 
    expr is var varname
 ```
 
-ここで *expr* の値は常に *varname* というローカル変数に代入されます。 *varname* は *expr* と同じ型の静的変数です。 次の例では、var パターンを使用して式を `obj` という変数に代入しています。 その後、`obj` の値と型が表示されます。
+次の例では、var パターンを使用して式を `obj` という変数に代入しています。 その後、`obj` の値と型が表示されます。
 
 [!code-csharp[is#8](../../../../samples/snippets/csharp/language-reference/keywords/is/is-var-pattern8.cs#8)]
-
-*expr* が `null` である場合も `is` 式は true となり、`null` が *varname* に代入される点に注意してください。 
 
 ## <a name="c-language-specification"></a>C# 言語仕様
   

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
 ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340400"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>方法: ContextMenuOpening イベントを処理する

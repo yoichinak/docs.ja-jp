@@ -10,10 +10,10 @@ helpviewer_keywords:
 - data binding [WPF], filtering data in views
 ms.assetid: c76e8606-4cc4-45a8-9110-e2ec66dc6afd
 ms.openlocfilehash: a31c07e6be26f67cc29813a14745ecf4a83ab98a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147473"
 ---
 # <a name="how-to-filter-data-in-a-view"></a>方法: ビュー内のデータをフィルター処理する
@@ -53,4 +53,4 @@ ms.locfileid: "59147473"
 - <xref:System.Windows.Data.BindingListCollectionView.CustomFilter%2A>
 - [データ バインディングの概要](data-binding-overview.md)
 - [ビュー内のデータの並べ替え](how-to-sort-data-in-a-view.md)
-- [方法のトピック](data-binding-how-to-topics.md)
+- [方法トピック](data-binding-how-to-topics.md)

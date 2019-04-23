@@ -3,11 +3,11 @@ title: チャネル クラス
 ms.date: 03/30/2017
 ms.assetid: d9fae2ca-209c-4341-a0f5-6b79d1a67776
 ms.openlocfilehash: f60a3946617b0994db1ba9e9ddf43be863be81f9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59128844"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59767449"
 ---
 # <a name="channel-class"></a>チャネル クラス
 チャネル  

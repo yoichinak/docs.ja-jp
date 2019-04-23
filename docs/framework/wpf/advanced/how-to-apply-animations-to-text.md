@@ -6,10 +6,10 @@ helpviewer_keywords:
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
 ms.openlocfilehash: 38aa432fecc5b5e10d8eb90be9c1c596728ed613
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108213"
 ---
 # <a name="how-to-apply-animations-to-text"></a>方法: アニメーションをテキストに適用する

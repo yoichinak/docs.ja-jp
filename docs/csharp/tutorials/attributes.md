@@ -4,12 +4,12 @@ description: C# での属性の機能について説明します。
 author: mgroves
 ms.date: 03/06/2017
 ms.assetid: b152cf36-76e4-43a5-b805-1a1952e53b79
-ms.openlocfilehash: e744f3585fe7be02fb8bdd25f559a12a88b61730
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3141c1bf7ddcf3fd3426290428f9eeeb54b3c872
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975603"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59481232"
 ---
 # <a name="using-attributes-in-c"></a>C\# での属性の使用
 
@@ -147,4 +147,4 @@ C# の既定では、属性クラスを作成した場合、その属性は可�
 
 ## <a name="summary"></a>まとめ
 
-属性は、C# に宣言的な機能を提供します。 ただし、コードのメタデータの一種であり、それ自体では処理を実行しません。
+属性によって C# に宣言機能が追加されますが、それらはメタデータ形式のコードであり、単独では機能しません。

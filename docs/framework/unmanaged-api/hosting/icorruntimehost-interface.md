@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec893c898a6cd4abffd525056ed0d0169fcbb288
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184783"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost インターフェイス
@@ -64,7 +64,7 @@ ms.locfileid: "59184783"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.AppDomain>
-- [ホスト](../../../../docs/framework/unmanaged-api/hosting/index.md)
+- [ホスティング](../../../../docs/framework/unmanaged-api/hosting/index.md)
 - [ICLRRuntimeHost インターフェイス](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)
 - [ランタイム ホスト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/a51xd4ze(v=vs.100))
 - [ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/hosting-interfaces.md)

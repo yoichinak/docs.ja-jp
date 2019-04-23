@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 02ce6699-49b5-4a0b-b0d5-1003c491232e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 333bd8c1793e4982b11208aa1a547e78fe680bb3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 061b5aa2208a73f6a53bc5eaee056410256ac6ac
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628852"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59213130"
 ---
 # <a name="mgmtclassgenexe-management-strongly-typed-class-generator"></a>Mgmtclassgen.exe (厳密型クラス ジェネレーター)
 厳密型クラス ジェネレーター (Mgmtclassgen.exe) ツールを使用すると、指定した WMI (Windows Management Instrumentation) クラスに対して、事前バインディングされたマネージド クラスをすばやく生成できます。 生成されたクラスを使用すると、WMI クラスのインスタンスにアクセスするために書く必要のあるコードを簡略化できます。  
@@ -45,7 +45,7 @@ WMIClass [options]
 |**/u**  *user name*|**/m** オプションで指定したコンピューターにログオンするときに使用するユーザー名を指定します。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  Mgmtclassgen.exe は、<xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType> メソッドを使用します。 したがって、任意のカスタム コード プロバイダーを使用して、C#、Visual Basic、および JScript 以外のマネージド言語でコードを生成できます。  
   
  生成されたクラスは、それらのクラスを生成する目的となったスキーマにバインドされます。 基になるスキーマが変更された場合に、その変更をこのスキーマに反映するには、クラスを生成し直す必要があります。  
@@ -151,6 +151,7 @@ public class App
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Management>
 - <xref:System.Management.ManagementClass.GetStronglyTypedClassCode%2A?displayProperty=nameWithType>
 - <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType>

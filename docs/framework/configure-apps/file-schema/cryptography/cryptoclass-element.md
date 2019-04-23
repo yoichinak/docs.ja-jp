@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <cryptoClass> element
 ms.assetid: 03db52ef-010e-44ea-b6fd-b9c900ecad50
 ms.openlocfilehash: da78140806ab8dbe7b7cb5e321e82755774ff25d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103819"
 ---
 # <a name="cryptoclass-element"></a>\<cryptoClass > 要素
@@ -78,6 +78,6 @@ ms.locfileid: "59103819"
 ## <a name="see-also"></a>関連項目
 
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [暗号設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
-- [暗号化サービス](../../../../../docs/standard/security/cryptographic-services.md)
+- [暗号化設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/cryptography/index.md)
+- [Cryptographic Services](../../../../../docs/standard/security/cryptographic-services.md)
 - [暗号化クラスの設定](../../../../../docs/framework/configure-apps/configure-cryptography-classes.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - mouse [Windows Forms], detecting movement on toolbars
 ms.assetid: d38b5082-aba7-4f6c-841b-bd9714e307fd
 ms.openlocfilehash: 09fd9f2f9b8cc44b6c04b829bf2854bea4aa8cf7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59220047"
 ---
 # <a name="how-to-detect-when-the-mouse-pointer-is-over-a-toolstripitem"></a>方法: マウス ポインターが ToolStripItem 上にあることを検出する

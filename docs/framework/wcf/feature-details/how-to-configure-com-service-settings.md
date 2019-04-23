@@ -5,10 +5,10 @@ helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
 ms.openlocfilehash: dd5625fd3f2c0cc2e1e2a261b091a029cd4226ed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195840"
 ---
 # <a name="how-to-configure-com-service-settings"></a>方法: COM+ サービス設定を構成する

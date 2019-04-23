@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 6e3fb8b5-373b-4f9e-ab03-a22693df8e91
 ms.openlocfilehash: 42463249a6636e625729f90fc31fa7589ef7ef74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120030"
 ---
 # <a name="generating-commands-with-commandbuilders"></a>CommandBuilder でのコマンドの生成

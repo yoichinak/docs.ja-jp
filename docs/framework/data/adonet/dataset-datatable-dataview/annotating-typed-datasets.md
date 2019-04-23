@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f82aaa62-321e-4c8a-b51b-9d1114700170
 ms.openlocfilehash: d8a1a12a4d8ab5e6f4b0fe6ad6c2a3759aa65aa9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085130"
 ---
 # <a name="annotating-typed-datasets"></a>型指定された DataSet の注釈
@@ -55,7 +55,7 @@ ms.locfileid: "59085130"
   
 |nullValue の値|説明|  
 |---------------------|-----------------|  
-|*Replacement Value*|返される値を指定します。 返された値は要素の型と一致する必要があります。 たとえば、整数型フィールドが null の場合に 0 を返すために `nullValue="0"` を使用します。|  
+|*置換値*|返される値を指定します。 返された値は要素の型と一致する必要があります。 たとえば、整数型フィールドが null の場合に 0 を返すために `nullValue="0"` を使用します。|  
 |**_throw**|例外をスローします。 既定値です。|  
 |**_null**|プリミティブ型が見つかった場合は、null 参照を返すか、例外をスローします。|  
 |**_empty**|文字列を返す**String.Empty**、それ以外の場合、空のコンス トラクターから作成されたオブジェクトを返します。 プリミティブ型が見つかった場合、例外をスローします。|  
@@ -69,7 +69,7 @@ ms.locfileid: "59085130"
 |**DataRowCollection**|TableName|typedPlural|  
 |**DataRow**|TableNameRow|typedName|  
 |**DataColumn**|DataTable.ColumnNameColumn<br /><br /> DataRow.ColumnName|typedName|  
-|**プロパティ**|PropertyName|typedName|  
+|**Property**|PropertyName|typedName|  
 |**子**アクセサー|GetChildTableNameRows|typedChildren|  
 |**親**アクセサー|TableNameRow|typedParent|  
 |**データセット**イベント|TableNameRowChangeEvent<br /><br /> TableNameRowChangeEventHandler|typedName|  

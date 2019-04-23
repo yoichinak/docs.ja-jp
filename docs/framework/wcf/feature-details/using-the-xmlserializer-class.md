@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
 ms.openlocfilehash: 29ce9b165c3823d7d06008431294f67716ccf8e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105444"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer クラスの使用
@@ -129,7 +129,7 @@ Windows Communication Foundation (WCF) は、2 つの別のシリアル化テク
  同じグローバル要素宣言の規則が、従来のデータセット型に適用されます。 `XmlRootAttribute` は、カスタム コードによって追加されたグローバル要素宣言をオーバーライドできません。これには、スキーマ プロバイダー メソッドを使用して `XmlSchemaSet` に追加された場合と、従来のデータセット型に対して `GetSchema` を使用して追加された場合があります。  
   
 ### <a name="ixmlserializable-element-types"></a>IXmlSerializable 要素型  
- `IXmlSerializable` 要素の型があるか、`IsAny`プロパティに設定`true`か返すスキーマ プロバイダー メソッドが`null`します。  
+ `IXmlSerializable` 要素型には、`IsAny` に設定された `true` プロパティか、`null` を返すスキーマ プロバイダー メソッドのいずれかが含まれています。  
   
  要素型のシリアル化と逆シリアル化は、コンテンツ型のシリアル化と逆シリアル化に非常に似ています。 ただし、重要な違いがいくつかあります。  
   
@@ -141,7 +141,7 @@ Windows Communication Foundation (WCF) は、2 つの別のシリアル化テク
   
 -   構築時にルート名と名前空間を指定せずにトップ レベルで要素型をシリアル化した場合、<xref:System.Runtime.Serialization.XmlObjectSerializer.WriteStartObject%2A> と <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteEndObject%2A> では基本的に何も実行されず、<xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObjectContent%2A> によって `WriteXml` が呼び出されます。 このモードでは、シリアル化されるオブジェクトは `null` にできず、ポリモーフィックに割り当てることができません。 また、オブジェクト グラフの保存を有効化できず、`NetDataContractSerializer` も使用できません。  
   
--   構築時にルート名と名前空間を指定せずにトップ レベルで要素型を逆シリアル化したときに、要素の先頭を検出できた場合は、<xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> が `true` を返します。 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> `verifyObjectName`パラメーターに設定`true`と同様に動作`IsStartObject`オブジェクトを実際に読み取る前にします。 `ReadObject` 制御が渡されます`ReadXml`メソッド。  
+-   構築時にルート名と名前空間を指定せずにトップ レベルで要素型を逆シリアル化したときに、要素の先頭を検出できた場合は、<xref:System.Runtime.Serialization.XmlObjectSerializer.IsStartObject%2A> が `true` を返します。 <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> パラメーターが `verifyObjectName` に設定されている `true` は、実際にオブジェクトを読み取る前の動作が `IsStartObject` と同様です。 その後、`ReadObject` は制御を `ReadXml` メソッドに渡します。  
   
  要素型の場合も、エクスポートされるスキーマは、前のセクションで説明した `XmlElement` 型に対するスキーマと同じです。ただし、スキーマ プロバイダー メソッドは、コンテンツ型と同様、追加のスキーマを <xref:System.Xml.Schema.XmlSchemaSet> に追加できます。 要素型には `XmlRootAttribute` 属性を使用することはできないので、グローバル要素宣言は要素型に対して出力されません。  
   
@@ -213,4 +213,4 @@ Windows Communication Foundation (WCF) は、2 つの別のシリアル化テク
 - <xref:System.ServiceModel.MessageHeaderArrayAttribute>
 - [サービス コントラクトでのデータ転送の指定](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)
 - [データ コントラクトの使用](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)
-- [方法: XmlSerializer を使用する WCF クライアント アプリケーションの起動時間を短縮する](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)
+- [方法: アプリケーション起動時間の WCF クライアント、XmlSerializer を使用して向上させる](../../../../docs/framework/wcf/feature-details/startup-time-of-wcf-client-applications-using-the-xmlserializer.md)

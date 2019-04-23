@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b134b4c875a2360712d14bc0b6c11ad0e13a89e4
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477480"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59178881"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (リソース ファイル ジェネレーター)
 リソース ファイル ジェネレーター (Resgen.exe) は、テキスト (.txt または .restext) ファイルおよび XML ベースのリソース形式 (.resx) ファイルを共通言語ランタイムのバイナリ (.resources) ファイルに変換します。この .resources ファイルは、ランタイム バイナリ実行可能ファイルまたはサテライト アセンブリに埋め込むことができます。 「[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)」をご覧ください。  
@@ -330,6 +330,7 @@ resgen StringResources.txt /str:vb,,StringResources
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ツール](../../../docs/framework/tools/index.md)
 - [デスクトップ アプリケーションのリソース](../../../docs/framework/resources/index.md)
 - [リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)

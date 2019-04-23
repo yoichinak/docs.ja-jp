@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341908"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>方法: システム リソース (Visual Basic) を破棄します。

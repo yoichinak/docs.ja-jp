@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
 ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106237"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar コントロールの概要 (Windows フォーム)

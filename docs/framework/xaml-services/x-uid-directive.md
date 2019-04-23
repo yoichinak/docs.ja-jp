@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Uid attribute [XAML Services]
 ms.assetid: 81defade-483b-4a89-b76d-9b25bba34010
 ms.openlocfilehash: c8f0580c987b87193b5b6a38559043e50fc7cb89
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152517"
 ---
 # <a name="xuid-directive"></a>x:Uid ディレクティブ

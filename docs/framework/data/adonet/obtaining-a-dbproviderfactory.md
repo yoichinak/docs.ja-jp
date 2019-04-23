@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: a16e4a4d-6a5b-45db-8635-19570e4572ae
 ms.openlocfilehash: c84229dc1c32217099eb7ed8b90accc04cc66148
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097409"
 ---
 # <a name="obtaining-a-dbproviderfactory"></a>DbProviderFactory の取得
@@ -41,7 +41,7 @@ ms.locfileid: "59097409"
   
 |列の序数|列名|サンプルの出力|説明|  
 |--------------------|-----------------|--------------------|-----------------|  
-|0|**名前**|SqlClient Data Provider|データ プロバイダーの読み取り可能な名前|  
+|0|**Name**|SqlClient Data Provider|データ プロバイダーの読み取り可能な名前|  
 |1|**説明**|.Net Framework Data Provider for SqlServer|データ プロバイダーの読み取り可能な説明|  
 |2|**InvariantName**|System.Data.SqlClient|プログラムでデータ プロバイダーの参照に使用できる名前|  
 |3|**AssemblyQualifiedName**|System.Data.SqlClient.SqlClientFactory, System.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|オブジェクトをインスタンス化するための十分な情報を保持している、ファクトリ クラスの完全修飾名|  

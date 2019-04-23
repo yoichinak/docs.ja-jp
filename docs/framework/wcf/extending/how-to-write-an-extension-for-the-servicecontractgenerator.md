@@ -3,10 +3,10 @@ title: '方法: ServiceContractGenerator の拡張を記述する'
 ms.date: 03/30/2017
 ms.assetid: 876ca823-bd16-4bdf-9e0f-02092df90e51
 ms.openlocfilehash: c9e10efccf0d51e6b78aace1296d227a78a9f91d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340621"
 ---
 # <a name="how-to-write-an-extension-for-the-servicecontractgenerator"></a>方法: ServiceContractGenerator の拡張を記述する
@@ -96,9 +96,9 @@ ms.locfileid: "59340621"
        throw new Exception("There were errors during code compilation.");  
     ```  
   
-7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> 特定のコントラクトを実装するには、各コントラクト動作を自動的に呼び出される<xref:System.ServiceModel.Description.IServiceContractGenerationExtension>します。 その後、渡された <xref:System.ServiceModel.Description.ServiceContractGenerationContext> をこのメソッドで変更できます。 この例では、コメントが追加されています。  
+7. <xref:System.ServiceModel.Description.IServiceContractGenerationExtension.GenerateContract%28System.ServiceModel.Description.ServiceContractGenerationContext%29> を実装する特定のコントラクトのコントラクト動作ごとに、<xref:System.ServiceModel.Description.IServiceContractGenerationExtension> が自動的に呼び出されます。 その後、渡された <xref:System.ServiceModel.Description.ServiceContractGenerationContext> をこのメソッドで変更できます。 この例では、コメントが追加されています。  
   
 ## <a name="see-also"></a>関連項目
 
 - [メタデータ](../../../../docs/framework/wcf/feature-details/metadata.md)
-- [方法: カスタム WSDL をインポートする](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)
+- [方法: カスタム WSDL をインポートします。](../../../../docs/framework/wcf/extending/how-to-import-custom-wsdl.md)

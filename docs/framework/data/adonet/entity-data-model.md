@@ -3,10 +3,10 @@ title: エンティティ データ モデル
 ms.date: 03/30/2017
 ms.assetid: 2dda3d5b-4582-4ba0-a91d-fcd7a1498137
 ms.openlocfilehash: 8e96890d97f652295a3fdb67c48ec37710280eec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197920"
 ---
 # <a name="entity-data-model"></a>エンティティ データ モデル
@@ -31,7 +31,7 @@ Entity Data Model (EDM) は、格納される形式に関係なく、データ�
   
  [アソシエーション End の多重度](../../../../docs/framework/data/adonet/association-end-multiplicity.md)  
   
- [関連付けセット](../../../../docs/framework/data/adonet/association-set.md)  
+ [アソシエーション セット](../../../../docs/framework/data/adonet/association-set.md)  
   
  [アソシエーション セット End](../../../../docs/framework/data/adonet/association-set-end.md)  
   
@@ -57,7 +57,7 @@ Entity Data Model (EDM) は、格納される形式に関係なく、データ�
   
  [ナビゲーション プロパティ](../../../../docs/framework/data/adonet/navigation-property.md)  
   
- [property](../../../../docs/framework/data/adonet/property.md)  
+ [プロパティ](../../../../docs/framework/data/adonet/property.md)  
   
  [参照整合性制約](../../../../docs/framework/data/adonet/referential-integrity-constraint.md)  
   

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Internet, sockets
 ms.assetid: 10d22735-bd37-42c1-a2be-c1932f979a7d
 ms.openlocfilehash: 4a1b18f2c31bf8dad8cf32e2e5205cf3008e7b18
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59136046"
 ---
 # <a name="sockets"></a>ソケット

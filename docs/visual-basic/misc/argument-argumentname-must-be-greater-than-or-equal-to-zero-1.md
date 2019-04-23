@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_GEZero1
 ms.assetid: 6f54fdc6-e263-4b2f-a66f-f206f3a59818
 ms.openlocfilehash: e161ee7d7bbdb009c5d257715779ed28786867dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312866"
 ---
 # <a name="argument-argumentname-must-be-greater-than-or-equal-to-zero"></a>引数\<argumentname > 0 以上にする必要があります

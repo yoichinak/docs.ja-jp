@@ -11,10 +11,10 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121967"
 ---
 # <a name="how-to-print-a-windows-form"></a>方法: Windows フォームを印刷する
@@ -40,5 +40,5 @@ ms.locfileid: "59121967"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Drawing.Printing.PrintDocument>
-- [方法: GDI+ を使用してイメージをレンダリングする](how-to-render-images-with-gdi.md)
-- [方法: Windows フォームでグラフィックスを印刷する](how-to-print-graphics-in-windows-forms.md)
+- [方法: GDI + を使用したイメージをレンダリングします。](how-to-render-images-with-gdi.md)
+- [方法: Windows フォームでグラフィックスを印刷します。](how-to-print-graphics-in-windows-forms.md)

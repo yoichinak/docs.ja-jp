@@ -1,5 +1,5 @@
 ---
-title: <clear> ConnectionManagement (ネットワーク設定) の要素
+title: connectionManagement の <clear> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.net/connectionManagement/clear
@@ -11,10 +11,10 @@ helpviewer_keywords:
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 ms.openlocfilehash: 733c70b0575de7e2635afaab58ad48591f035fc0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124996"
 ---
 # <a name="clear-element-for-connectionmanagement-network-settings"></a>\<クリア > connectionManagement (ネットワーク設定) の要素

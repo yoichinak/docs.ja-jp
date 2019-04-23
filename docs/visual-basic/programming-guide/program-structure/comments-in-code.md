@@ -15,10 +15,10 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343013"
 ---
 # <a name="comments-in-code-visual-basic"></a>コード内のコメント (Visual Basic)
@@ -62,7 +62,7 @@ ms.locfileid: "59343013"
 ## <a name="see-also"></a>関連項目
 
 - [XML コメントによるコードの文書化の基本的な本能」](https://msdn.microsoft.com/magazine/dd722812.aspx)
-- [方法: XML ドキュメントを作成する](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
+- [方法: XML ドキュメントを作成します。](../../../visual-basic/programming-guide/program-structure/how-to-create-xml-documentation.md)
 - [XML のコメント用タグ](../../../visual-basic/language-reference/xmldoc/index.md)
 - [プログラム構造とコード規則](../../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)
 - [REM ステートメント](../../../visual-basic/language-reference/statements/rem-statement.md)

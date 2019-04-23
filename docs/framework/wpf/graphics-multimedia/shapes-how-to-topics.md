@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Shape types [WPF]
 ms.assetid: 91a371f1-81e4-40da-ad61-ec24167152e6
 ms.openlocfilehash: d304a411a92272315506a08a714ae1a5f9b6a000
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150164"
 ---
 # <a name="shapes-how-to-topics"></a>図形に関する「方法」トピック

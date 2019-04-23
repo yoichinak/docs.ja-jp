@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335668"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>方法: WIF を使用してクレーム対応 ASP.NET MVC Web アプリケーションをビルドする
@@ -218,4 +218,4 @@ ms.locfileid: "59335668"
   
 ## <a name="related-items"></a>関連項目  
   
--   [方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションをビルドする](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+-   [方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションを構築します。](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 9b66a7d372c76ac1675e55713bd5655e213e68fe
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.openlocfilehash: d2d4b191ed4cb8f2f8b9b0a34fe99e65d4596a72
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633622"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613565"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>enum 型の代わりに Enumeration クラスを使用する
 
@@ -85,25 +85,25 @@ public abstract class CardType : Enumeration
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **列挙型は悪 — 更新** \
-  [https://www.planetgeek.ch/2009/07/01/enums-are-evil/](https://www.planetgeek.ch/2009/07/01/enums-are-evil/)
+  <https://www.planetgeek.ch/2009/07/01/enums-are-evil/>
 
 - **Daniel Hardman。列挙型で広がる病気 — そしてその治療方法** \
-  [https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/](https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/)
+  <https://codecraft.co/2012/10/29/how-enums-spread-disease-and-how-to-cure-it/>
 
 - **Jimmy Bogard。列挙型クラス** \
-  [https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/](https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/)
+  <https://lostechies.com/jimmybogard/2008/08/12/enumeration-classes/>
 
 - **Steve Smith。C# の列挙型の代替** \
-  [https://ardalis.com/enum-alternatives-in-c](https://ardalis.com/enum-alternatives-in-c)
+  <https://ardalis.com/enum-alternatives-in-c>
 
 - **Enumeration.cs。** eShopOnContainers の基底列挙型クラス \
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/Enumeration.cs>
 
 - **CardType.cs**。 eShopOnContainers のサンプル列挙型クラス。 \
-  [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs)
+  <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/AggregatesModel/BuyerAggregate/CardType.cs>
     
 - **SmartEnum**. Ardalis - .NET で厳密に型指定されたスマートな列挙型を生成するためのクラス。 \
-  [https://www.nuget.org/packages/Ardalis.SmartEnum/](https://www.nuget.org/packages/Ardalis.SmartEnum/)
+  <https://www.nuget.org/packages/Ardalis.SmartEnum/>
 
 >[!div class="step-by-step"]
 >[前へ](implement-value-objects.md)

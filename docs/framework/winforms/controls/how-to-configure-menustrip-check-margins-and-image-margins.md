@@ -10,10 +10,10 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], configuring check and image margins
 ms.assetid: 45a9075d-4bea-4ce2-9b2c-7619aa39f8ce
 ms.openlocfilehash: 09de1a9ca4be1c4ebfb0e13e800c09753bd04f11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134993"
 ---
 # <a name="how-to-configure-menustrip-check-margins-and-image-margins"></a>方法: MenuStrip のチェックの余白とイメージの余白を設定する
@@ -30,7 +30,7 @@ ms.locfileid: "59134993"
   
 -   System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 この例は、新しいプロジェクトにコードを貼り付けることによって Visual Studio で構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -38,4 +38,4 @@ ms.locfileid: "59134993"
 - <xref:System.Windows.Forms.ContextMenuStrip>
 - <xref:System.Windows.Forms.ToolStripDropDown>
 - [ToolStrip コントロール](toolstrip-control-windows-forms.md)
-- [方法: ContextMenuStrip コントロールでチェックの余白とイメージの余白を有効にする](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)
+- [方法: ContextMenuStrip コントロールでチェックの余白とイメージを有効にします。](how-to-enable-check-margins-and-image-margins-in-contextmenustrip-controls.md)

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], ToolStripStatusLabel
 ms.assetid: 099bc74a-a29f-4f15-af0d-7c517ef50c7e
 ms.openlocfilehash: abda20e9add4691fd3ced2a4cf688dc25cca7530
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194111"
 ---
 # <a name="toolstripstatuslabel-control"></a>ToolStripStatusLabel コントロール

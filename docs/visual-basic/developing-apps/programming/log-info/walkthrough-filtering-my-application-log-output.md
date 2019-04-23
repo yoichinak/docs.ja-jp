@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: f38217a5385b9d736eaa744a73024f210eb8f553
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 25d2177eed9ef83ba8f2575668e72dc21c2cd43f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58829386"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59298397"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>チュートリアル: My.Application.Log の出力のフィルター処理 (Visual Basic)
 このチュートリアルでは、`My.Application.Log` オブジェクトの既定のログ フィルター処理を変更して、`Log` オブジェクトからリスナーに渡される情報や、リスナーによって記述される情報を制御する方法について説明します。 構成情報はアプリケーションの構成ファイルに保存されるため、ロギングの動作はアプリケーションをビルドした後でも変更できます。  
@@ -21,17 +21,17 @@ ms.locfileid: "58829386"
   
 #### <a name="to-build-the-sample-application"></a>サンプル アプリケーションをビルドするには  
   
-1.  新しい Visual Basic Windows アプリケーション プロジェクトを開きます。  
+1. 新しい Visual Basic Windows アプリケーション プロジェクトを開きます。  
   
-2.  Form1 に Button1 という名前のボタンを追加します。  
+2. Form1 に Button1 という名前のボタンを追加します。  
   
-3.  Button1 の <xref:System.Windows.Forms.Control.Click> イベント ハンドラーで、次のコードを追加します。  
+3. Button1 の <xref:System.Windows.Forms.Control.Click> イベント ハンドラーで、次のコードを追加します。  
   
      [!code-vb[VbVbcnMyApplicationLogFiltering#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyApplicationLogFiltering/VB/Form1.vb#1)]  
   
-4.  デバッガーでアプリケーションを実行します。  
+4. デバッガーでアプリケーションを実行します。  
   
-5.  **[Button1]** を押します。  
+5. **[Button1]** を押します。  
   
      アプリケーションは、アプリケーションのデバッグ出力とログ ファイルに次の情報を書き込みます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "58829386"
   
      `DefaultSource Error: 2 : Error in the application.`  
   
-6.  アプリケーションを終了します。  
+6. アプリケーションを終了します。  
   
      アプリケーションのデバッグ出力ウィンドウを表示する方法について詳しくは、「[出力ウィンドウ](/visualstudio/ide/reference/output-window)」をご覧ください。 アプリケーションのログ ファイルの場所については、「[チュートリアル:My.Application.Log による情報の書き込み先の確認](../../../../visual-basic/developing-apps/programming/log-info/walkthrough-determining-where-my-application-log-writes-information.md)」を参照してください。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "58829386"
   
 #### <a name="to-log-only-activity-tracing-events"></a>アクティビティ トレース イベントだけを記録するには  
   
-1.  **ソリューション エクスプローラー**で app.config を右クリックし、**[開く]** を選択します。  
+1. **ソリューション エクスプローラー**で app.config を右クリックし、**[開く]** を選択します。  
   
      - または -  
   
@@ -83,15 +83,15 @@ ms.locfileid: "58829386"
   
     3.  **[追加]** をクリックします。  
   
-2.  最上位の `<configuration>` セクション内の `<system.diagnostics>` セクションで、`<switches>` セクションを見つけます。  
+2. 最上位の `<configuration>` セクション内の `<system.diagnostics>` セクションで、`<switches>` セクションを見つけます。  
   
-3.  スイッチのコレクションに `DefaultSwitch` を追加する要素を見つけます。 これは次のような要素です。  
+3. スイッチのコレクションに `DefaultSwitch` を追加する要素を見つけます。 これは次のような要素です。  
   
      `<add name="DefaultSwitch" value="Information" />`  
   
-4.  `value` 属性の値を "ActivityTracing" に変更します。  
+4. `value` 属性の値を "ActivityTracing" に変更します。  
   
-5.  app.config ファイルの内容は次の XML のようになります。  
+5. app.config ファイルの内容は次の XML のようになります。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -120,9 +120,9 @@ ms.locfileid: "58829386"
     </configuration>  
     ```  
   
-6.  デバッガーでアプリケーションを実行します。  
+6. デバッガーでアプリケーションを実行します。  
   
-7.  **[Button1]** を押します。  
+7. **[Button1]** を押します。  
   
      アプリケーションは、アプリケーションのデバッグ出力とログ ファイルに次の情報を書き込みます。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "58829386"
   
      `DefaultSource Stop: 5 : Leaving Button1_Click`  
   
-8.  アプリケーションを終了します。  
+8. アプリケーションを終了します。  
   
 9. `value` 属性の値を "Information" に戻します。  
   
@@ -146,7 +146,7 @@ ms.locfileid: "58829386"
   
 #### <a name="to-log-only-activity-tracing-events"></a>アクティビティ トレース イベントだけを記録するには  
   
-1.  **ソリューション エクスプローラー**で app.config を右クリックし、**[開く]** を選択します。  
+1. **ソリューション エクスプローラー**で app.config を右クリックし、**[開く]** を選択します。  
   
      - または -  
   
@@ -158,11 +158,11 @@ ms.locfileid: "58829386"
   
     3.  **[追加]** をクリックします。  
   
-2.  **ソリューション エクスプローラー**で app.config を右クリックします。 **[開く]** をクリックします。  
+2. **ソリューション エクスプローラー**で app.config を右クリックします。 **[開く]** をクリックします。  
   
-3.  `<sources>` セクション内にある、`name` 属性が "DefaultSource" の `<source>` セクションで、`<listeners>` セクションを見つけます。 `<sources>` セクションは、最上位の `<configuration>` セクション内の `<system.diagnostics>` セクションにあります。  
+3. `<sources>` セクション内にある、`name` 属性が "DefaultSource" の `<source>` セクションで、`<listeners>` セクションを見つけます。 `<sources>` セクションは、最上位の `<configuration>` セクション内の `<system.diagnostics>` セクションにあります。  
   
-4.  `<listeners>` セクションに次の要素を追加します。  
+4. `<listeners>` セクションに次の要素を追加します。  
   
     ```xml  
     <!-- Remove the default debug listener. -->  
@@ -171,9 +171,9 @@ ms.locfileid: "58829386"
     <add name="NewDefault"/>  
     ```  
   
-5.  最上位の `<sharedListeners>` セクション内の `<system.diagnostics>` セクションで、 `<configuration>` セクションを見つけます。  
+5. 最上位の `<sharedListeners>` セクション内の `<system.diagnostics>` セクションで、 `<configuration>` セクションを見つけます。  
   
-6.  その `<sharedListeners>` セクションに次の要素を追加します。  
+6. その `<sharedListeners>` セクションに次の要素を追加します。  
   
     ```xml  
     <add name="NewDefault"   
@@ -188,7 +188,7 @@ ms.locfileid: "58829386"
   
      <xref:System.Diagnostics.EventTypeFilter> フィルターは <xref:System.Diagnostics.SourceLevels> 列挙値の 1 つをその `initializeData` 属性として取ります。  
   
-7.  app.config ファイルの内容は次の XML のようになります。  
+7. app.config ファイルの内容は次の XML のようになります。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -229,7 +229,7 @@ ms.locfileid: "58829386"
     </configuration>  
     ```  
   
-8.  デバッガーでアプリケーションを実行します。  
+8. デバッガーでアプリケーションを実行します。  
   
 9. **[Button1]** を押します。  
   

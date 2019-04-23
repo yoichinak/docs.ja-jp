@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 1c943ac93e629da069b594291cd55a952e18742c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 353e50de65f21930ebe0bef9e239e1e333403676
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464399"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612044"
 ---
 # <a name="domain-events-design-and-implementation"></a>ドメイン イベント: 設計と実装
 
@@ -347,37 +347,37 @@ public class ValidateOrAddBuyerAggregateWhenOrderStartedDomainEventHandler
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Greg Young。ドメイン イベントとは** \
-  [http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/](http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/)
+  <http://codebetter.com/gregyoung/2010/04/11/what-is-a-domain-event/>
 
 - **Jan Stenberg。ドメイン イベントと最終的な整合性** \
-  [https://www.infoq.com/news/2015/09/domain-events-consistency](https://www.infoq.com/news/2015/09/domain-events-consistency)
+  <https://www.infoq.com/news/2015/09/domain-events-consistency>
 
 - **Jimmy Bogard。よりよいドメイン イベント パターン** \
-  [https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/](https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/)
+  <https://lostechies.com/jimmybogard/2014/05/13/a-better-domain-events-pattern/>
 
 - **Vaughn Vernon。効果的な集約設計パート II:集約処理の連携** \
   [https://dddcommunity.org/wp-content/uploads/files/pdf\_articles/Vernon\_2011\_2.pdf](https://dddcommunity.org/wp-content/uploads/files/pdf_articles/Vernon_2011_2.pdf)
 
 - **Jimmy Bogard。ドメインの強化:ドメイン イベント** \
-  [https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/](https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/)
+  <https://lostechies.com/jimmybogard/2010/04/08/strengthening-your-domain-domain-events/>
 
 - **Tony Truong。ドメイン イベント パターンの例** \
-  [https://www.tonytruong.net/domain-events-pattern-example/](https://www.tonytruong.net/domain-events-pattern-example/)
+  <https://www.tonytruong.net/domain-events-pattern-example/>
 
 - **Udi Dahan。完全にカプセル化されたドメイン モデルを作成する方法** \
-  [http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/](http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/)
+  <http://udidahan.com/2008/02/29/how-to-create-fully-encapsulated-domain-models/>
 
 - **Udi Dahan。ドメイン イベント – テイク 2** \
-  [http://udidahan.com/2008/08/25/domain-events-take-2/](http://udidahan.com/2008/08/25/domain-events-take-2/%20)
+  <http://udidahan.com/2008/08/25/domain-events-take-2/>
 
 - **Udi Dahan。ドメイン イベント – 救済** \
-  [http://udidahan.com/2009/06/14/domain-events-salvation/](http://udidahan.com/2009/06/14/domain-events-salvation/)
+  <http://udidahan.com/2009/06/14/domain-events-salvation/>
 
 - **Jan Kronquist。ドメイン イベントを発行しないで返す** \
-  [https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/](https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/)
+  <https://blog.jayway.com/2013/06/20/dont-publish-domain-events-return-them/>
 
 - **Cesar de la Torre。DDD およびマイクロサービス アーキテクチャでのドメイン イベントとDDD の統合イベントとマイクロサービス アーキテクチャ** \
-  [https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/](https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/)
+  <https://blogs.msdn.microsoft.com/cesardelatorre/2017/02/07/domain-events-vs-integration-events-in-domain-driven-design-and-microservices-architectures/>
 
 >[!div class="step-by-step"]
 >[前へ](client-side-validation.md)

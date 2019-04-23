@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b8e2cab36c1dd990a1bf848067e7ae81baeb9ed8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355052"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59309486"
 ---
 # <a name="com-callable-wrapper"></a>COM 呼び出し可能ラッパー
 
@@ -27,7 +27,7 @@ COM クライアントが .NET オブジェクトを呼び出すと、共通言�
 
 ランタイムは、サービスを要求している COM クライアントの数に関係なく、1 つのマネージド オブジェクトに対して 1 つの CCW を作成します。 次の図に示すように、複数の COM クライアントが、INew インターフェイスを公開する CCW への参照を保持できます。 CCW は、INew インターフェイスを実装するマネージド オブジェクトへの 1 つの参照を保持し、ガベージ コレクションされます。 COM クライアントと .NET クライアントは、同一のマネージド オブジェジェクトに対して同時に要求できます。
 
-![COM 呼び出し可能ラッパー](./media/ccw.gif "ccw")COM 呼び出し可能ラッパー経由の .NET オブジェクト アクセス
+![INew を公開する CCW への参照を保持している複数の COM クライアント。](./media/com-callable-wrapper/com-callable-wrapper-clients.gif)
 
 CCW は、.NET Framework. 内で実行されている他のクラスからは見えません。 CCW の主な目的は、マネージド コードとアンマネージド コードの間の呼び出しをマーシャリングすることですが、CCW は、CCW にラップされているマネージド オブジェクトのオブジェクト ID やオブジェクトの有効期間の管理も行います。
 
@@ -45,11 +45,11 @@ CCW は、パブリックで COM から参照できるすべてのインター�
 
 このシームレスなアプローチを実現するために、CCW は **IUnknown** や **IDispatch** などの従来の COM インターフェイスを製造します。 次の図が示すように、CCW は、ラップしている .NET オブジェクトの 1 つの参照を保持します。 COM クライアントと .NET オブジェクトの両方は、CCW のプロキシとスタブ構築を介して相互に対話します。
 
-![COM インターフェイス](./media/ccwwithinterfaces.gif "ccwwithinterfaces") COM インターフェイスおよび COM 呼び出し可能ラッパー
+![CCW が COM インターフェイスを製造する方法を示す図。](./media/com-callable-wrapper/com-callable-wrapper-interfaces.gif)
 
 マネージド環境でクラスによって明示的実装されるインターフェイスを公開するだけでなく、.NET Framework は、オブジェクトの代わりに、次の表にリストされている COM インターフェイスの実装を提供します。 .NET クラスは、これらのインターフェイスの独自の実装を提供することで、既定の動作をオーバーライドできます。 ただし、ランタイムは **IUnknown** と **IDispatch** インターフェイス実装を常に提供します。
 
-|インターフェイス|説明|
+|Interface|説明|
 |---------------|-----------------|
 |**IDispatch**|型への遅延バインディングのメカニズムを提供します。|
 |**IErrorInfo**|エラー、そのソース、ヘルプ ファイル、ヘルプ コンテキスト、およびエラーを定義したインターフェイスの GUID (.NET クラスでは常に **GUID_NULL**) に関する説明文を示します。|
@@ -60,7 +60,7 @@ CCW は、パブリックで COM から参照できるすべてのインター�
 
  マネージド クラスは、次の表で説明されている COM インターフェイスを提供することもできます。
 
-|インターフェイス|説明|
+|Interface|説明|
 |---------------|-----------------|
 |(\_*classname*) クラス インターフェイス|マネージド オブジェクトで明示的に公開されている、すべてのパブリック インターフェイス、メソッド、プロパティ、およびフィールドを公開する、ランタイムによって公開され、明示的に定義されていない、インターフェイス、|
 |**IConnectionPoint** と **IConnectionPointContainer**|デリゲート ベースのソース イベント (イベント サブスクライバーを登録するためのインターフェイス) を供給するオブジェクトのインターフェイス。|
@@ -98,8 +98,7 @@ public class Mammal
 }
 ```
 
-COM クライアントは、`_Mammal` という名前のクラス インターフェイスへのポインターを取得できます。これについては、[タイプ ライブラリ エクスポーター (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) ツールで生成されるタイプ ライブラリで説明されています。 
-  `Mammal` クラスが 1 つ以上のインターフェイスを実装した場合、それらのインターフェイスはコクラスの下に表示されます。
+COM クライアントは、`_Mammal` という名前のクラス インターフェイスへのポインターを取得できます。これについては、[タイプ ライブラリ エクスポーター (Tlbexp.exe)](../tools/tlbexp-exe-type-library-exporter.md) ツールで生成されるタイプ ライブラリで説明されています。 `Mammal` クラスが 1 つ以上のインターフェイスを実装した場合、それらのインターフェイスはコクラスの下に表示されます。
 
 ```
 [odl, uuid(…), hidden, dual, nonextensible, oleautomation]
@@ -122,8 +121,7 @@ coclass Mammal
 }
 ```
 
-クラス インターフェイスの生成はオプションです。 既定では、COM 相互運用が、タイプ ライブラリにエクスポートするクラスごとにディスパッチ専用インターフェイスを生成します。 
-  <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> をクラスに適用することによって、このインターフェイスの自動作成を防止または変更することができます。 クラス インターフェイスにより、マネージド クラスを COM に公開するタスクを軽減できますが、その使用は制限されています。
+クラス インターフェイスの生成はオプションです。 既定では、COM 相互運用が、タイプ ライブラリにエクスポートするクラスごとにディスパッチ専用インターフェイスを生成します。 <xref:System.Runtime.InteropServices.ClassInterfaceAttribute> をクラスに適用することによって、このインターフェイスの自動作成を防止または変更することができます。 クラス インターフェイスにより、マネージド クラスを COM に公開するタスクを軽減できますが、その使用は制限されています。
 
 > [!CAUTION]
 > 独自のものを明示的に定義する代わりにクラス インターフェイスを使用すると、マネージド クラスの将来のバージョン管理が複雑になることがあります。 クラス インターフェイスを使用する前に、次のガイドラインを参照してください。
@@ -201,5 +199,5 @@ public class LoanApp
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [COM ラッパー](com-wrappers.md)
 - [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)
-- [要件 (相互運用のための .NET 型の)](qualifying-net-types-for-interoperation.md)
+- [相互運用のための .NET 型の要件](qualifying-net-types-for-interoperation.md)
 - [ランタイム呼び出し可能ラッパー](runtime-callable-wrapper.md)

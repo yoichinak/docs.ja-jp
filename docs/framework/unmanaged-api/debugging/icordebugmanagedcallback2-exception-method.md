@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f8952b34781045089945e7e72e179e88300b5fdd
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103351"
 ---
 # <a name="icordebugmanagedcallback2exception-method"></a>ICorDebugManagedCallback2::Exception メソッド
@@ -66,7 +66,7 @@ HRESULT Exception (
   
  特定のフレームとのオフセットによって決定されます、`dwEventType`パラメーターとして次のとおりです。  
   
-|値 `dwEventType`|値 `pFrame`|値 `nOffset`|  
+|`dwEventType` の値|`pFrame` の値|`nOffset` の値|  
 |----------------------------|-----------------------|------------------------|  
 |DEBUG_EXCEPTION_FIRST_CHANCE|例外をスローしたフレーム。|フレーム内の命令ポインター。|  
 |DEBUG_EXCEPTION_USER_FIRST_CHANCE|スローされた例外のポイントに最も近いユーザー コード フレーム。|フレーム内の命令ポインター。|  
@@ -80,7 +80,7 @@ HRESULT Exception (
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344872"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>カスタム複合デザイナー - Workflow Items Presenter
@@ -32,15 +32,15 @@ ms.locfileid: "59344872"
 ## <a name="sample-highlights"></a>サンプルの詳細
  このサンプルのコードには、次の内容が表示されます。
 
--   アクティビティ デザイナーは、用に構成されています。  `Parallel`
+-   デザイナーをビルドするアクティビティは `Parallel` です。
 
 -   <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> を使用してカスタム アクティビティ デザイナーを作成します。 次の点に注意してください。
 
-    -   `ModelItem.Branches` にバインドする WPF のデータ バインドの使用に注意してください。 `ModelItem` プロパティは、 `WorkflowElementDesigner` 、デザイナーをこの場合、使用されている、基になるオブジェクトを参照する、`Parallel`します。
+    -   `ModelItem.Branches` にバインドする WPF のデータ バインドの使用に注意してください。 `ModelItem` は、デザイナーが使用されている、基になるオブジェクト (この例では `WorkflowElementDesigner`) を参照する `Parallel` のプロパティです。
 
     -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> は、コレクション内の個々の項目間にビジュアル表示を配置するために使用できます。
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> コレクション内の項目のレイアウトを判別提供できるテンプレートです。 この例では、水平方向のスタック パネルが使用されます。
+    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> は、コレクション内の項目のレイアウトを決定するために提供できるテンプレートです。 この例では、水平方向のスタック パネルが使用されます。
 
  このコード例を次に示します。
 

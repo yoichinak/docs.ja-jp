@@ -7,12 +7,12 @@ dev_langs:
 - vb
 ms.technology: dotnet-standard
 ms.assetid: 2dbed1bc-86f5-43cd-9a57-adbb1c5efba4
-ms.openlocfilehash: 40ba9b2dcc7321c81ee3f03112e677363c37a5f9
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 79b74090a5a443c944df94f9df1c3f4d283df02f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723310"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59214742"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 
@@ -1632,7 +1632,6 @@ using System;
 [CLSCompliant(false)] public class BaseClass
 {}
 
-
 public class BaseCollection<T> where T : BaseClass
 {}
 // Attempting to compile the example displays the following output:
@@ -1644,7 +1643,6 @@ Assembly: CLSCompliant(True)>
 
 <CLSCompliant(False)> Public Class BaseClass
 End Class
-
 
 Public Class BaseCollection(Of T As BaseClass)
 End Class
@@ -1763,7 +1761,6 @@ End Class
 using System;
 
 [assembly:CLSCompliant(true)]
-
 
 public class Number<T> where T : struct
 {
@@ -1893,7 +1890,6 @@ Public Class C1(Of T)
    Protected Sub M1(n As C1(Of Integer).N)   ' Not CLS-compliant - C1<int>.N not
                                              ' accessible from within C1(Of T) in all
    End Sub                                   ' languages
-
 
    Protected Sub M2(n As C1(Of T).N)     ' CLS-compliant – C1(Of T).N accessible
    End Sub                               ' inside C1(Of T)

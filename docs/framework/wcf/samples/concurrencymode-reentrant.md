@@ -3,11 +3,11 @@ title: ConcurrencyMode 再入
 ms.date: 03/30/2017
 ms.assetid: b2046c38-53d8-4a6c-a084-d6c7091d92b1
 ms.openlocfilehash: 2170b029f1cb4a85a1b2688fc1143ffcd1682fe6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59299827"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769694"
 ---
 # <a name="concurrencymode-reentrant"></a>ConcurrencyMode 再入
 このサンプルでは、サービス実装で ConcurrencyMode.Reentrant を使用する必要性と影響を示します。 ConcurrencyMode.Reentrant は、サービス (またはコールバック) が指定された時間で処理するメッセージが 1 つだけであることを示します (`ConcurencyMode.Single` に似ています)。 Windows Communication Foundation (WCF) のロックをスレッド セーフを確保する、`InstanceContext`他のメッセージを処理しないようにメッセージを処理します。 再入モードの場合、サービスが呼び出しの送信を行う直前に `InstanceContext` のロックが解除されます。これによりその後の呼び出しが可能になり (サンプルに示すように再入可能になり)、次回サービスに呼び出しが届いたときにロックされます。 この動作を示すために、サンプルでは、クライアントとサービスが双方向コントラクトを使用してメッセージを相互に送信する方法を示します。  

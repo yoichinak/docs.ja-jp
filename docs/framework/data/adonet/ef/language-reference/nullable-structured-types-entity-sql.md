@@ -3,10 +3,10 @@ title: NULL 値が許容される構造化型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
 ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127856"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>NULL 値が許容される構造化型 (Entity SQL)

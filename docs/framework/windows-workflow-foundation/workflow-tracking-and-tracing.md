@@ -5,10 +5,10 @@ helpviewer_keywords:
 - programming [WF], tracking and tracing
 ms.assetid: b965ded6-370a-483d-8790-f794f65b137e
 ms.openlocfilehash: dbc5c0b51024c7b88b8c6cd9a052addd74e6f7e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191030"
 ---
 # <a name="workflow-tracking-and-tracing"></a>ワークフロー追跡とトレース
@@ -22,9 +22,9 @@ Windows ワークフロー追跡は、ワークフローの実行を確認でき
   
  プログラミング モデルを理解するには、追跡インフラストラクチャの主要コンポーネントに関するトピックの説明を参照してください。  
   
--   <xref:System.Activities.Tracking.TrackingRecord> ワークフロー ランタイムから出力されるオブジェクト。 詳細については、次を参照してください。[追跡レコード](tracking-records.md)します。  
+-   <xref:System.Activities.Tracking.TrackingRecord> オブジェクトは、ワークフロー ランタイムから取得します。 詳細については、次を参照してください。[追跡レコード](tracking-records.md)します。  
   
--   <xref:System.Activities.Tracking.TrackingParticipant> オブジェクトがサブスクライブする<xref:System.Activities.Tracking.TrackingRecord>オブジェクト。 追跡参加要素には、<xref:System.Activities.Tracking.TrackingRecord> オブジェクトのペイロードを処理するロジックがありません (たとえば、ファイルに書き込むことができるなど)。 詳細については、次を参照してください。[追跡参加要素](tracking-participants.md)します。  
+-   <xref:System.Activities.Tracking.TrackingParticipant> オブジェクトは <xref:System.Activities.Tracking.TrackingRecord> オブジェクトに定期受信します。 追跡参加要素には、<xref:System.Activities.Tracking.TrackingRecord> オブジェクトのペイロードを処理するロジックがありません (たとえば、ファイルに書き込むことができるなど)。 詳細については、次を参照してください。[追跡参加要素](tracking-participants.md)します。  
   
 -   <xref:System.Activities.Tracking.TrackingProfile> オブジェクトは、ワークフロー インスタンスから出力された追跡レコードをフィルター処理します。 詳細については、次を参照してください。[追跡プロファイル](tracking-profiles.md)します。  
   

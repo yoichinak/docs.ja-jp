@@ -10,10 +10,10 @@ helpviewer_keywords:
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
 ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59139426"
 ---
 # <a name="optimizing-performance-application-resources"></a>パフォーマンスの最適化:アプリケーション リソース
@@ -50,6 +50,6 @@ ms.locfileid: "59139426"
 - [レイアウトとデザイン](optimizing-performance-layout-and-design.md)
 - [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
 - [オブジェクトの動作](optimizing-performance-object-behavior.md)
-- [テキスト](optimizing-performance-text.md)
+- [[テキスト]](optimizing-performance-text.md)
 - [データ バインディング](optimizing-performance-data-binding.md)
 - [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)

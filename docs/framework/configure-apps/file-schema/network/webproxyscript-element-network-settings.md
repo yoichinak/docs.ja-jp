@@ -9,10 +9,10 @@ helpviewer_keywords:
 - webProxyScript element
 ms.assetid: a13c26db-6218-4af3-9696-38f24b23bfac
 ms.openlocfilehash: e73ba86cc17fa51cbf4030f2304ab9141fcc0f26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59218668"
 ---
 # <a name="webproxyscript-element-network-settings"></a>\<webProxyScript > 要素 (ネットワーク設定)
@@ -47,7 +47,7 @@ Web プロキシを検出するために使用するスクリプトの特性を�
   
 |要素|説明|  
 |-------------|-----------------|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
   

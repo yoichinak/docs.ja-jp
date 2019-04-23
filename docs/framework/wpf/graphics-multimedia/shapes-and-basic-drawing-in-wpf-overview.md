@@ -13,16 +13,16 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189134"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF での図形と基本描画の概要
 このトピックを使用して描画する方法の概要を示します<xref:System.Windows.Shapes.Shape>オブジェクト。 A<xref:System.Windows.Shapes.Shape>の種類は、<xref:System.Windows.UIElement>画面に図形を描画することができます。 UI 要素であるため<xref:System.Windows.Shapes.Shape>オブジェクトは内で使用できる<xref:System.Windows.Controls.Panel>要素とほとんどのコントロール。  
   
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] グラフィックスとレンダリング サービスへのアクセスの複数のレイヤーを提供します。 最上位のレイヤー<xref:System.Windows.Shapes.Shape>オブジェクトは、簡単に使用し、レイアウトへの参加など、多くの便利な機能を提供、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]イベント システム。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、グラフィックス サービスやレンダリング サービスへのアクセスのレイヤーがいくつか用意されています。 最上位のレイヤー<xref:System.Windows.Shapes.Shape>オブジェクトは、簡単に使用し、レイアウトへの参加など、多くの便利な機能を提供、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]イベント システム。  
 
 <a name="shapes"></a>   
 ## <a name="shape-objects"></a>図形オブジェクト  

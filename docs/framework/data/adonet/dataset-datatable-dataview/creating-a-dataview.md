@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b1cc02d1-23b1-4439-a998-0da1899f3442
 ms.openlocfilehash: 05122f7c980c4b7dfdb27eec73464a4f0556ba99
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096681"
 ---
 # <a name="creating-a-dataview"></a>DataView の作成
@@ -49,7 +49,7 @@ DataView custDV = custDS.Tables["Customers"].DefaultView;
 
 - <xref:System.Data.DataTable>
 - <xref:System.Data.DataView>
-- [DataView](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
+- [DataViews](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)
 - [データの並べ替えとフィルター処理](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)
 - [DataTables](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/datatables.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

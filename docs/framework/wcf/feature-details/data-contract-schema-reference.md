@@ -5,10 +5,10 @@ helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
 ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59131938"
 ---
 # <a name="data-contract-schema-reference"></a>データ コントラクト スキーマの参照
@@ -54,15 +54,15 @@ ms.locfileid: "59131938"
   
 |目次|Schema|  
 |--------------|------------|  
-|`include`|サポートされています。 `DataContractSerializer` xs をサポートしています。 含めると xs:import します。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|  
+|`include`|サポートされています。 `DataContractSerializer` では xs:include と xs:import がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|  
 |`redefine`|禁止。 セキュリティ上の理由により、 `xs:redefine` では、 `DataContractSerializer` の使用が禁止されています。 `x:redefine` では、 `schemaLocation` を後続させる必要があります。 状況によっては、DataContract を使用する Svcutil.exe では、 `schemaLocation`の使用が制限されます。|  
-|`import`|サポートされています。 `DataContractSerializer` サポート`xs:include`と`xs:import`します。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|  
+|`import`|サポートされています。 `DataContractSerializer` では、 `xs:include` と `xs:import`がサポートされています。 ただし、メタデータをローカル ファイルから読み込む場合、Svcutil.exe では、後続の `xs:include/@schemaLocation` 参照と `xs:import/@location` 参照が制限されます。 この場合、 `include` ではなく帯域外機構を通じてスキーマ ファイルの一覧を渡す必要があります。 `include`されたスキーマ ドキュメントは無視されます。|  
 |`simpleType`|サポートされています。 `xs:simpleType` のセクションを参照してください。|  
 |`complexType`|サポートされます。データ コントラクトにマッピングされます。 `xs:complexType` のセクションを参照してください。|  
-|`group`|無視されます。 `DataContractSerializer` 使用をサポートしていません`xs:group`、 `xs:attributeGroup`、および`xs:attribute`します。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
-|`attributeGroup`|無視されます。 `DataContractSerializer` 使用をサポートしていません`xs:group`、 `xs:attributeGroup`、および`xs:attribute`します。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
+|`group`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
+|`attributeGroup`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
 |`element`|サポートされています。 グローバル要素宣言 (GED) を参照してください。|  
-|`attribute`|無視されます。 `DataContractSerializer` 使用をサポートしていません`xs:group`、 `xs:attributeGroup`、および`xs:attribute`します。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
+|`attribute`|無視されます。 `DataContractSerializer` では、 `xs:group`、 `xs:attributeGroup`、および `xs:attribute`の使用はサポートされていません。 これらの宣言は `xs:schema`の子として無視され、 `complexType` やその他のサポートされている構文内から参照できません。|  
 |`notation`|無視されます。|  
   
 ## <a name="complex-types--xscomplextype"></a>複合型 – \<xs:complexType >  
@@ -118,7 +118,7 @@ ms.locfileid: "59131938"
 ## <a name="elements--xselement"></a>要素 – \<xs:element >  
   
 ### <a name="general-information"></a>一般情報  
- `<xs:element>` 次のコンテキストで発生することができます。  
+ `<xs:element>` は、次の構文で発生します。  
   
 -   `<xs:sequence>`内で発生し、通常 (コレクション以外) のデータ コントラクトのデータ メンバーを表すことができます。 この場合、 `maxOccurs` 属性は 1 にする必要があります (値 0 は使用できません)。  
   
@@ -329,7 +329,7 @@ public enum MyEnum
 ```  
   
 ### <a name="xslist"></a>\<xs:list>  
- `DataContractSerializer` マークされた列挙型のマップ`System.FlagsAttribute`に`xs:list`から派生した`xs:string`します。 これ以外の `xs:list` のバリエーションはサポートされません。  
+ `DataContractSerializer` は、 `System.FlagsAttribute` によってマークされた列挙型を、 `xs:list` から派生した `xs:string`にマッピングします。 これ以外の `xs:list` のバリエーションはサポートされません。  
   
 ### <a name="xslist-attributes"></a>\<xs:list >: 属性  
   
@@ -475,20 +475,20 @@ public class Employee : Person
   
 |XSD 型|.NET 型|  
 |--------------|---------------|  
-|`anyType`|<xref:System.Object>.|  
+|`anyType`|<xref:System.Object>。|  
 |`anySimpleType`|<xref:System.String>.|  
 |`duration`|<xref:System.TimeSpan>.|  
-|`dateTime`|<xref:System.DateTime>.|  
-|`dateTimeOffset`|<xref:System.DateTime> <xref:System.TimeSpan>のオフセット。 後の「DateTimeOffset のシリアル化」を参照してください。|  
+|`dateTime`|<xref:System.DateTime>。|  
+|`dateTimeOffset`|オフセットの<xref:System.DateTime> および <xref:System.TimeSpan> 。 後の「DateTimeOffset のシリアル化」を参照してください。|  
 |`time`|<xref:System.String>.|  
 |`date`|<xref:System.String>.|  
 |`gYearMonth`|<xref:System.String>.|  
 |`gYear`|<xref:System.String>.|  
 |`gMonthDay`|<xref:System.String>.|  
 |`gDay`|<xref:System.String>.|  
-|`gMonth`|<xref:System.String>.|  
+|`gMonth`|<xref:System.String>。|  
 |`boolean`|<xref:System.Boolean>|  
-|`base64Binary`|<xref:System.Byte> 配列。|  
+|`base64Binary`|<xref:System.Byte> 配列|  
 |`hexBinary`|<xref:System.String>.|  
 |`float`|<xref:System.Single>.|  
 |`double`|<xref:System.Double>.|  
@@ -523,7 +523,7 @@ public class Employee : Person
 |`positiveInteger`|<xref:System.Int64>.|  
   
 ## <a name="iserializable-types-mapping"></a>ISerializable 型のマッピング  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 では、永続性の確保やデータ転送のためにオブジェクトをシリアル化する一般的な機構として <xref:System.Runtime.Serialization.ISerializable> が導入されました。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を実装したり、アプリケーション間で受け渡したりできる、さまざまな `ISerializable` 型があります。 <xref:System.Runtime.Serialization.DataContractSerializer> 自然のサポートが提供`ISerializable`クラス。 `DataContractSerializer` は、型の QName (修飾名) のみが異なり、事実上プロパティ コレクションである `ISerializable` 実装スキーマ型をマッピングします。 たとえば、`DataContractSerializer`マップ<xref:System.Exception>で次の XSD 型を `http://schemas.datacontract.org/2004/07/System` 名前空間。  
+ [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 では、永続性の確保やデータ転送のためにオブジェクトをシリアル化する一般的な機構として <xref:System.Runtime.Serialization.ISerializable> が導入されました。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を実装したり、アプリケーション間で受け渡したりできる、さまざまな `ISerializable` 型があります。 <xref:System.Runtime.Serialization.DataContractSerializer> は、当然ながら `ISerializable` クラスをサポートします。 `DataContractSerializer` は、型の QName (修飾名) のみが異なり、事実上プロパティ コレクションである `ISerializable` 実装スキーマ型をマッピングします。 たとえば、`DataContractSerializer`マップ<xref:System.Exception>で次の XSD 型を `http://schemas.datacontract.org/2004/07/System` 名前空間。  
   
 ```xml  
 <xs:complexType name="Exception">  
@@ -609,14 +609,14 @@ public class Employee : Person
   
  ここで次の点に注意します。  
   
--   `ser:char` 型の Unicode 文字を表す導入<xref:System.Char>します。  
+-   `ser:char` を導入して、型 <xref:System.Char>の Unicode 文字を表現します。  
   
 -   `valuespace` の `xs:duration` を順序付きセットに縮小し、 <xref:System.TimeSpan>にマッピングできるようにします。  
   
--   `FactoryType` 派生した型からエクスポートされたスキーマで使用される、<xref:System.Runtime.Serialization.ISerializable>します。  
+-   `FactoryType` から派生した型からエクスポートされたスキーマで <xref:System.Runtime.Serialization.ISerializable>を使用します。  
   
 ## <a name="importing-non-datacontract-schemas"></a>非 DataContract スキーマのインポート  
- `DataContractSerializer` `ImportXmlTypes`に準拠しないスキーマのインポートを許可するオプション、 `DataContractSerializer` XSD プロファイル (を参照してください、<xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A>プロパティ)。 このオプションを `true` に設定すると、非準拠スキーマ型を受け入れ、それを次の実装 ( <xref:System.Xml.Serialization.IXmlSerializable> の配列をラップする <xref:System.Xml.XmlNode> ) にマッピングできるようになります (クラス名のみ異なります)。  
+ `DataContractSerializer` には、 `ImportXmlTypes` XSD プロファイルに準拠しないスキーマのインポートを可能にする `DataContractSerializer` オプションがあります (「 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> プロパティ」を参照してください)。 このオプションを `true` に設定すると、非準拠スキーマ型を受け入れ、それを次の実装 ( <xref:System.Xml.Serialization.IXmlSerializable> の配列をラップする <xref:System.Xml.XmlNode> ) にマッピングできるようになります (クラス名のみ異なります)。  
   
 ```csharp  
 [GeneratedCodeAttribute("System.Runtime.Serialization", "3.0.0.0")]  

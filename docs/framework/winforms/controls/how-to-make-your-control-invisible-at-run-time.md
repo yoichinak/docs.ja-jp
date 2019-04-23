@@ -12,10 +12,10 @@ helpviewer_keywords:
 - run time [Windows Forms], making controls invisible
 ms.assetid: 69eb2e72-32f5-4f79-a157-c2c5f60c1628
 ms.openlocfilehash: e9af529541a40a951d6defea180dbbef04c8f3be
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345899"
 ---
 # <a name="how-to-make-your-control-invisible-at-run-time"></a>方法: 実行時にコントロールを非表示にする
@@ -43,4 +43,4 @@ ms.locfileid: "59345899"
 
 - <xref:System.Windows.Forms.Control.Visible%2A>
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
-- [方法: コントロールに透明な背景を指定する](how-to-give-your-control-a-transparent-background.md)
+- [方法: コントロールに透明な背景を提供します。](how-to-give-your-control-a-transparent-background.md)

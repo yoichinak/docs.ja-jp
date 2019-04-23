@@ -9,10 +9,10 @@ helpviewer_keywords:
 - typography [WPF], drawing text to control backgrounds
 ms.assetid: 686d8fba-f61c-4974-a871-c635d67a7f69
 ms.openlocfilehash: 76449c88f9a720741c8ed61255e04a40e6a8613f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128454"
 ---
 # <a name="how-to-draw-text-to-a-controls-background"></a>方法: コントロールの背景にテキストを描画する

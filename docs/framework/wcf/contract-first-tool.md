@@ -3,11 +3,11 @@ title: コントラクト優先ツール
 ms.date: 03/30/2017
 ms.assetid: 0a880690-f460-4475-a5f4-9f91ce08fcc6
 ms.openlocfilehash: ad0566eaff08d27e8368f091388adda7376a37ef
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58819620"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978914"
 ---
 # <a name="contract-first-tool"></a>コントラクト優先ツール
 サービス コントラクトは、多くの場合、既存のサービスから作成する必要があります。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、コントラクト優先ツールを使用して、データ コントラクト クラスを既存のサービスから自動的に作成できます。 コントラクト優先ツールを使用するには、XML スキーマ定義ファイル (XSD) をローカルにダウンロードする必要があります。ツールは、HTTP 経由でリモート データ コントラクトをインポートすることはできません。

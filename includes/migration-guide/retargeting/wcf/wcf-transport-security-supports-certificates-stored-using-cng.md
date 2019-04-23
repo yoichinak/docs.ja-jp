@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: b57e0acb03a99f33460a7b6c880280b37e01a17b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234926"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804430"
 ---
 ### <a name="wcf-transport-security-supports-certificates-stored-using-cng"></a>WCF トランスポート セキュリティで CNG を使用して格納される証明書をサポート
 

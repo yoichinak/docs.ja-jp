@@ -10,10 +10,10 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: c4b60637-4c0a-44c2-a103-f66dff887936
 ms.openlocfilehash: cc8f8c620516a943d6d70187e19b72f5a2a99888
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301335"
 ---
 # <a name="how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time"></a>方法: デザイン時に Windows フォームのコントロールにツールヒントを設定する
@@ -79,5 +79,5 @@ ms.locfileid: "59301335"
 ## <a name="see-also"></a>関連項目
 
 - [ToolTip コンポーネントの概要](tooltip-component-overview-windows-forms.md)
-- [方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更する](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
+- [方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更します。](how-to-change-the-delay-of-the-windows-forms-tooltip-component.md)
 - [ToolTip コンポーネント](tooltip-component-windows-forms.md)

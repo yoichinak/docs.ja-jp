@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe1d35f091eb98ca0080a73283d7e158e2ae26eb
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409446"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59315765"
 ---
 # <a name="default-marshaling-behavior"></a>既定のマーシャリングの動作
 相互運用マーシャリングは、メソッドのパラメーターに関連付けられたデータが、マネージド メモリとアンマネージド メモリの間で渡されるときに、どのように動作するかを指示する規則に従って機能します。 これらの組み込みの規則は、データ型の変換などのマーシャリング動作、呼び出し先が渡されたデータを変更してその変更を呼び出し元にこ返すことが可能かどうか、およびどのような状況のときにマーシャラーがパフォーマンスの最適化を実現するかを制御します。  
@@ -64,11 +64,11 @@ BSTR MethodOne (BSTR b) {
   
  インターフェイスが既知のオブジェクトからのものではない場合、マーシャラーは以下を実行します。  
   
-1.  マーシャラーは **IProvideClassInfo2** インターフェイスのためにオブジェクトのクエリを実行します。 提供された場合、マーシャラーは、**IProvideClassInfo2.GetGUID** から返される CLSID を使用して、インターフェイスを提供するコクラスを識別します。 CLSID によって、マーシャラーは、アセンブリが事前に登録されている場合にレジストリからラッパーを見つけることができます。  
+1. マーシャラーは **IProvideClassInfo2** インターフェイスのためにオブジェクトのクエリを実行します。 提供された場合、マーシャラーは、**IProvideClassInfo2.GetGUID** から返される CLSID を使用して、インターフェイスを提供するコクラスを識別します。 CLSID によって、マーシャラーは、アセンブリが事前に登録されている場合にレジストリからラッパーを見つけることができます。  
   
-2.  マーシャラーは **IProvideClassInfo** インターフェイスのためにインターフェイスのクエリを実行します。 提供された場合、マーシャラーは、**IProvideClassInfo.GetClassinfo** から返される **ITypeInfo** を使用して、インターフェイスを公開するクラスの CLSID を決定します。 マーシャラーは、CLSID を使用して、ラッパーのメタデータを見つけることができます。  
+2. マーシャラーは **IProvideClassInfo** インターフェイスのためにインターフェイスのクエリを実行します。 提供された場合、マーシャラーは、**IProvideClassInfo.GetClassinfo** から返される **ITypeInfo** を使用して、インターフェイスを公開するクラスの CLSID を決定します。 マーシャラーは、CLSID を使用して、ラッパーのメタデータを見つけることができます。  
   
-3.  マーシャラーは、まだクラスを識別できない場合には、**System.__ComObject** と呼ばれるジェネリック ラッパー クラスを使用してインターフェイスをラップします。  
+3. マーシャラーは、まだクラスを識別できない場合には、**System.__ComObject** と呼ばれるジェネリック ラッパー クラスを使用してインターフェイスをラップします。  
   
 ## <a name="default-marshaling-for-delegates"></a>デリゲートに対する既定のマーシャリング  
  マネージド デリゲートは、呼び出し元のメカニズムに基づいて、COM インターフェイスまたは関数ポインターとしてマーシャリングされます。  
@@ -440,6 +440,7 @@ interface IValueTypes : IDispatch {
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Blittable 型と非 Blittable 型](blittable-and-non-blittable-types.md)
 - [コピーと固定](copying-and-pinning.md)
 - [配列に対する既定のマーシャリング](default-marshaling-for-arrays.md)

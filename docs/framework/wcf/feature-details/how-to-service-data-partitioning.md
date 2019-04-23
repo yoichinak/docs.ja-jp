@@ -3,10 +3,10 @@ title: '方法: サービス データのパーティション分割'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
 ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59300386"
 ---
 # <a name="how-to-service-data-partitioning"></a>方法: サービス データのパーティション分割

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
 ms.openlocfilehash: f616436671da449e4f7b47c0a5d0c1b576584a1a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312307"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>方法: Windows フォーム ListView コントロールの項目をグループ化する
@@ -63,4 +63,4 @@ ListView の項目をグループ化
 - <xref:System.Windows.Forms.ListViewGroup>
 - [ListView コントロール](listview-control-windows-forms.md)
 - [ListView コントロールの概要](listview-control-overview-windows-forms.md)
-- [方法: Windows フォーム ListView コントロールで項目を追加および削除する](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)
+- [方法: Windows フォーム ListView コントロールで項目追加および削除](how-to-add-and-remove-items-with-the-windows-forms-listview-control.md)

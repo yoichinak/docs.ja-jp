@@ -8,10 +8,10 @@ helpviewer_keywords:
 - metadata [WPF], dependency properties
 ms.assetid: 1fbada8e-4867-4ed1-8d97-62c07dad7ebc
 ms.openlocfilehash: 9adcd19ea48d62f4fdcab3380252ae8ec8398296
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315687"
 ---
 # <a name="dependency-property-value-precedence"></a>依存関係プロパティ値の優先順位
@@ -51,11 +51,11 @@ ms.locfileid: "59315687"
   
     2.  プロパティ セット (通常を通じて[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性) で、<xref:System.Windows.FrameworkElement.TemplatedParent%2A>テンプレート。  
   
-5. **暗黙的なスタイル。** `Style` プロパティのみに適用されます。 `Style` プロパティは、その要素の型と一致するキーを持つスタイル リソースによって設定されます。 そのスタイル リソースは、ページまたはアプリケーション内に存在する必要があります。暗黙的スタイル リソースの参照はテーマまでは及びません。  
+5. **暗黙的スタイル。** `Style` プロパティのみに適用されます。 `Style` プロパティは、その要素の型と一致するキーを持つスタイル リソースによって設定されます。 そのスタイル リソースは、ページまたはアプリケーション内に存在する必要があります。暗黙的スタイル リソースの参照はテーマまでは及びません。  
   
 6. **スタイルのトリガー。** ページまたはアプリケーションに含まれるスタイル内のトリガー (これらのスタイルは、明示的スタイルまたは暗黙的スタイルどちらの場合もありますが、優先順位の低い既定スタイルではありません)。  
   
-7. **テンプレートにトリガーされます。** スタイル内のテンプレートまたは直接適用されたテンプレートからのトリガーです。  
+7. **テンプレートのトリガー。** スタイル内のテンプレートまたは直接適用されたテンプレートからのトリガーです。  
   
 8. **スタイルのセッター。** 値から、<xref:System.Windows.Setter>ページまたはアプリケーションからのスタイル内。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "59315687"
   
 10. **継承。** いくつかの依存関係プロパティは親要素から子要素に値を継承するので、アプリケーション全体で各要素に値を明示的に設定する必要はありません。 詳しくは、「[プロパティ値の継承](property-value-inheritance.md)」をご覧ください。  
   
-11. **依存関係プロパティ メタデータの既定値。** どの依存関係プロパティも、その特定のプロパティがプロパティ システムに登録されるときに設定される既定値を持つことができます。 また、依存関係プロパティを継承する派生クラスには、型ごとにそのメタデータ (既定値を含む) をオーバーライドするオプションがあります。 詳しくは、「[依存関係プロパティのメタデータ](dependency-property-metadata.md)」をご覧ください。 継承は既定値の前にチェックされるため、継承されるプロパティの場合、親要素の既定値の方が子要素より優先されます。  その結果、継承可能なプロパティがどこでも設定されていない場合は、ルートまたは親で指定されている既定値が、子要素の既定値の代わりに使われます。  
+11. **依存関係プロパティのメタデータの既定値。** どの依存関係プロパティも、その特定のプロパティがプロパティ システムに登録されるときに設定される既定値を持つことができます。 また、依存関係プロパティを継承する派生クラスには、型ごとにそのメタデータ (既定値を含む) をオーバーライドするオプションがあります。 詳しくは、「[依存関係プロパティのメタデータ](dependency-property-metadata.md)」をご覧ください。 継承は既定値の前にチェックされるため、継承されるプロパティの場合、親要素の既定値の方が子要素より優先されます。  その結果、継承可能なプロパティがどこでも設定されていない場合は、ルートまたは親で指定されている既定値が、子要素の既定値の代わりに使われます。  
   
 <a name="templatedparent"></a>   
 ## <a name="templatedparent"></a>TemplatedParent  
@@ -77,9 +77,9 @@ ms.locfileid: "59315687"
 ## <a name="the-style-property"></a>スタイル プロパティ  
  1 つを除くすべての可能な依存関係プロパティに適用される前に説明した参照の順序は、:<xref:System.Windows.FrameworkElement.Style%2A>プロパティ。 <xref:System.Windows.FrameworkElement.Style%2A>プロパティは、そのことはできません自体スタイル設定するため、優先順位の項目 5 ~ 8 は適用されません。 また、アニメーション化または強制型変換<xref:System.Windows.FrameworkElement.Style%2A>はお勧めしません (アニメーション化と<xref:System.Windows.FrameworkElement.Style%2A>カスタム アニメーション クラスが必要になります)。 これにより、3 つの方法を<xref:System.Windows.FrameworkElement.Style%2A>プロパティを設定することがあります。  
   
--   **明示的なスタイル。** <xref:System.Windows.FrameworkElement.Style%2A>プロパティは直接設定します。 ほとんどの場合、スタイルはインラインでは定義されず、代わりにリソースとして明示的なキーにより参照されます。 この場合、スタイル プロパティ自体は、ローカル値と同じように扱われます (優先順位の項目 3)。  
+-   **明示的スタイル。** <xref:System.Windows.FrameworkElement.Style%2A>プロパティは直接設定します。 ほとんどの場合、スタイルはインラインでは定義されず、代わりにリソースとして明示的なキーにより参照されます。 この場合、スタイル プロパティ自体は、ローカル値と同じように扱われます (優先順位の項目 3)。  
   
--   **暗黙的なスタイル。** <xref:System.Windows.FrameworkElement.Style%2A>プロパティは直接設定されません。 ただし、<xref:System.Windows.FrameworkElement.Style%2A>リソース参照シーケンス (ページ、アプリケーション) のいくつかのレベルで存在しに適用されるスタイルは、型と一致するリソース キーを使用して、キーになります。 ここで、<xref:System.Windows.FrameworkElement.Style%2A>プロパティ自体は、項目 5 としてシーケンスで識別される優先順位で動作します。 使用して、この条件を検出できる<xref:System.Windows.DependencyPropertyHelper>に対して、<xref:System.Windows.FrameworkElement.Style%2A>プロパティと探して<xref:System.Windows.BaseValueSource.ImplicitStyleReference>結果にします。  
+-   **暗黙的スタイル。** <xref:System.Windows.FrameworkElement.Style%2A>プロパティは直接設定されません。 ただし、<xref:System.Windows.FrameworkElement.Style%2A>リソース参照シーケンス (ページ、アプリケーション) のいくつかのレベルで存在しに適用されるスタイルは、型と一致するリソース キーを使用して、キーになります。 ここで、<xref:System.Windows.FrameworkElement.Style%2A>プロパティ自体は、項目 5 としてシーケンスで識別される優先順位で動作します。 使用して、この条件を検出できる<xref:System.Windows.DependencyPropertyHelper>に対して、<xref:System.Windows.FrameworkElement.Style%2A>プロパティと探して<xref:System.Windows.BaseValueSource.ImplicitStyleReference>結果にします。  
   
 -   **既定のスタイル** (別称**テーマ スタイル**)。 <xref:System.Windows.FrameworkElement.Style%2A>プロパティを直接設定されていないととして実際に読み取られます`null`実行時までです。 この場合、スタイルは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プレゼンテーション エンジンの一部である実行時テーマ評価によって決定されます。  
   

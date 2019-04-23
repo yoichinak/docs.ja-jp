@@ -8,10 +8,10 @@ helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
 ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331521"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>サービス コントラクトでのデータ転送の指定
@@ -432,7 +432,7 @@ End Class
 ## <a name="specifying-the-use-and-style"></a>Use と Style の指定  
  Web サービス記述言語 (WSDL: Web Services Description Language) を使用してサービスを記述するときは、一般にドキュメントとリモート プロシージャ コール (RPC: Remote Procedure Call) の 2 つのスタイルが使用されます。 ドキュメント スタイルでは、スキーマを使用してメッセージ本文全体が記述されます。WSDL では、該当するスキーマの中の要素を参照して、メッセージ本文のさまざまな部分を記述します。 RPC スタイルでは、WSDL は、要素ではなく、メッセージの各部を表すスキーマ型を参照します。 場合によっては、これらのスタイルのいずれかを手動で選択することが必要になります。 これを行うには、<xref:System.ServiceModel.DataContractFormatAttribute> 属性を適用し、`Style` プロパティを設定するか (<xref:System.Runtime.Serialization.DataContractSerializer> を使用している場合)、`Style` 属性の <xref:System.ServiceModel.XmlSerializerFormatAttribute> を設定します (<xref:System.Xml.Serialization.XmlSerializer> を使用している場合)。  
   
- また、<xref:System.Xml.Serialization.XmlSerializer> はシリアル化された XML の形式を 2 とおり (`Literal` および `Encoded`) サポートしています。 `Literal` 最も一般に受け入れられたフォームであり、唯一の形式は、<xref:System.Runtime.Serialization.DataContractSerializer>をサポートしています。 `Encoded` SOAP 仕様のセクション 5 に記載されたレガシ フォームは、新しいサービスは推奨されません。 `Encoded` モードに切り替えるには、`Use` 属性の <xref:System.ServiceModel.XmlSerializerFormatAttribute> プロパティを `Encoded` に設定します。  
+ また、<xref:System.Xml.Serialization.XmlSerializer> はシリアル化された XML の形式を 2 とおり (`Literal` および `Encoded`) サポートしています。 `Literal` は最も一般に受け入れられたフォームであり、<xref:System.Runtime.Serialization.DataContractSerializer> がサポートする唯一のフォームです。 `Encoded` は SOAP 仕様のセクション 5 に記載されたレガシ フォームであり、新しいサービスにはお勧めしません。 `Encoded` モードに切り替えるには、`Use` 属性の <xref:System.ServiceModel.XmlSerializerFormatAttribute> プロパティを `Encoded` に設定します。  
   
  ほとんどの場合、`Style` プロパティと `Use` プロパティの既定の設定は変更しないでください。  
   
@@ -577,5 +577,5 @@ Dim serviceHost As ServiceHost = New ServiceHost(GetType(IDataService))
 ## <a name="see-also"></a>関連項目
 
 - [XmlSerializer クラスの使用](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)
-- [方法: ストリーミングを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
-- [方法: クラスまたは構造体に基本的なデータ コントラクトを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)
+- [方法: ストリーミングを有効にします。](../../../../docs/framework/wcf/feature-details/how-to-enable-streaming.md)
+- [方法: クラスまたは構造体に基本的なデータ コントラクトを作成します。](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-data-contract-for-a-class-or-structure.md)

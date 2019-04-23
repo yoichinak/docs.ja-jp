@@ -3,10 +3,10 @@ title: WCF でのキュー
 ms.date: 03/30/2017
 ms.assetid: e98d76ba-1acf-42cd-b137-0f8214661112
 ms.openlocfilehash: 502f1ad74cd4bd6294db11a3e48f4c41068704ae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128766"
 ---
 # <a name="queuing-in-wcf"></a>WCF でのキュー
@@ -50,7 +50,7 @@ ms.locfileid: "59128766"
   
 -   `ExactlyOnce`:設定すると`true`(既定)、キューに置かれたチャネルにより、メッセージ配信される場合は、重複していないこと。 また、メッセージが失われないようにすることもできます。 メッセージを配信できない場合、またはメッセージを配信する前にメッセージの有効期間 (TTL: Time To Live) が切れた場合、失敗したメッセージが配信エラー理由と共に配信不能キューに記録されます。 `false` に設定した場合、キューに置かれたチャネルにより、メッセージの転送が試行されます。 この場合、必要に応じて配信不能キューを選択できます。  
   
--   `Durable:` 設定すると`true`(既定)、キューに置かれたチャネルにより、ディスク上にある MSMQ がメッセージを永続的格納します。 したがって、MSMQ サービスを停止して再起動した場合、ディスク上のメッセージがターゲット キューに転送されるか、サービスに配信されます。 `false` に設定した場合、メッセージは揮発性ストアに格納され、MSMQ サービスを停止して再起動すると、メッセージは失われます。  
+-   `Durable:` `true` (既定) に設定した場合、キューに置かれたチャネルによって、MSMQ がメッセージをディスクに永続的に格納することが保証されます。 したがって、MSMQ サービスを停止して再起動した場合、ディスク上のメッセージがターゲット キューに転送されるか、サービスに配信されます。 `false` に設定した場合、メッセージは揮発性ストアに格納され、MSMQ サービスを停止して再起動すると、メッセージは失われます。  
   
  `ExactlyOnce` の信頼できる転送を実現するために、MSMQ ではトランザクション キューを使用する必要があります。 また、MSMQ では、トランザクションがトランザクション キューから読み取られる必要があります。 このため、`NetMsmqBinding` を使用する場合、`ExactlyOnce` を `true` に設定したときは、メッセージの送受信にトランザクションが必要なことに注意してください。 同様に、ベスト エフォート保証を使用する場合 (`ExactlyOnce` が `false` の場合など) および揮発性メッセージングを行う場合、MSMQ で非トランザクション キューを使用する必要があります。 このため、`ExactlyOnce` を `false` に設定するか、または Durable を `false` に設定した場合、トランザクションを使用して送受信できません。  
   
@@ -78,7 +78,7 @@ ms.locfileid: "59128766"
   
  トランスポート セキュリティに加えて、実際の SOAP メッセージはメッセージ セキュリティでも保護できます。 詳細については、次を参照してください。[メッセージ セキュリティを使用してメッセージをセキュリティで保護する](../../../../docs/framework/wcf/feature-details/securing-messages-using-message-security.md)します。  
   
- `MsmqTransportSecurity` 2 つのプロパティも公開`MsmqEncryptionAlgorithm`と`MsmqHashAlgorithm`します。 このプロパティは、キュー間の転送でメッセージを暗号化するために、または署名をハッシュするために選択できる異なるアルゴリズムの列挙体です。  
+ また、`MsmqTransportSecurity` は、2 つのプロパティ `MsmqEncryptionAlgorithm` と `MsmqHashAlgorithm` を公開します。 このプロパティは、キュー間の転送でメッセージを暗号化するために、または署名をハッシュするために選択できる異なるアルゴリズムの列挙体です。  
   
 #### <a name="other-properties"></a>その他のプロパティ  
  上記のプロパティに加えて、次の MSMQ 固有のプロパティがバインディングで公開されます。  
@@ -105,9 +105,9 @@ ms.locfileid: "59128766"
 ### <a name="sample-code"></a>サンプル コード  
  MSMQ を使用する WCF サービスを書き込む方法の手順については、次のトピックを参照してください。  
   
--   [方法: WCF エンドポイントとメッセージ キュー アプリケーションを使用してメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
+-   [方法: WCF エンドポイントとメッセージ キュー アプリケーションでメッセージを交換](../../../../docs/framework/wcf/feature-details/how-to-exchange-messages-with-wcf-endpoints-and-message-queuing-applications.md)  
   
--   [方法: WCF エンドポイントを使用してキューに置かれたメッセージを交換する](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
+-   [方法: WCF エンドポイントとキューに置かれたメッセージを交換します。](../../../../docs/framework/wcf/feature-details/how-to-exchange-queued-messages-with-wcf-endpoints.md)  
   
  WCF での MSMQ の使用を示す完全なコード サンプルについては、次のトピックを参照してください。  
   

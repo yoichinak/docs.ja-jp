@@ -11,10 +11,10 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: a09f4985-9f0d-48c8-b183-83d67a3dfe5f
 ms.openlocfilehash: 2e4c40d6c71a254d5f40ea42788608e10c5872a7
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517175"
 ---
 # <a name="query-projections-wcf-data-services"></a>クエリ射影 (WCF Data Services)

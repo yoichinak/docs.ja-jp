@@ -9,10 +9,10 @@ ms.assetid: 73a6c582-b9d7-4fa7-9a05-6d931e1f3de8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fabf7983a1887fb318bfb8d111b3911f4d90c545
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345171"
 ---
 # <a name="how-to-transform-a-node-fragment"></a>方法: ノード フラグメントを変換する

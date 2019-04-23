@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0845c4d493cb3c750931a0ae2ad92b628a255c0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202717"
 ---
 # <a name="couninitializecor-function"></a>CoUninitializeCor 関数
-`CoUninitializeCor` 古い形式です。  
+`CoUninitializeCor` は互換性のために残されています。  
   
 ## <a name="syntax"></a>構文  
   

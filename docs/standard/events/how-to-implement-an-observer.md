@@ -12,10 +12,10 @@ ms.assetid: 8ecfa9f5-b500-473d-bcf0-5652ffb1e53d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b410b9381246cef2e61086e333c4c5b07646a575
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301062"
 ---
 # <a name="how-to-implement-an-observer"></a>方法: オブザーバーを実装する
@@ -54,4 +54,4 @@ ms.locfileid: "59301062"
 - <xref:System.IObserver%601>
 - [オブサーバー デザイン パターン](../../../docs/standard/events/observer-design-pattern.md)
 - [方法: プロバイダーを実装する](../../../docs/standard/events/how-to-implement-a-provider.md)
-- [オブサーバー デザイン パターンのベスト プラクティス](../../../docs/standard/events/observer-design-pattern-best-practices.md)
+- [オブザーバー デザイン パターンのベスト プラクティス](../../../docs/standard/events/observer-design-pattern-best-practices.md)

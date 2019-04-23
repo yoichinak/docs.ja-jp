@@ -3,10 +3,10 @@ title: <host>
 ms.date: 03/30/2017
 ms.assetid: be566d55-9d50-4b2e-985d-52a5cc26cbbb
 ms.openlocfilehash: 3d1f7774f61060880a5c3b0327bdd6c2cc4dd74e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103000"
 ---
 # <a name="host"></a>\<host>
@@ -55,4 +55,4 @@ ms.locfileid: "59103000"
 
 - <xref:System.ServiceModel.Configuration.HostElement>
 - <xref:System.ServiceModel.ServiceHost>
-- [ホスト](../../../../../docs/framework/wcf/feature-details/hosting.md)
+- [ホスティング](../../../../../docs/framework/wcf/feature-details/hosting.md)

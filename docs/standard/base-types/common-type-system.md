@@ -20,10 +20,10 @@ author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
 ms.openlocfilehash: d973ec68486ca46a38819ce9972c789b156d878b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59096265"
 ---
 # <a name="common-type-system"></a>共通型システム
@@ -61,7 +61,7 @@ ms.locfileid: "59096265"
   
 -   [構造体](#Structures)  
   
--   [列挙](#Enumerations)  
+-   [列挙型](#Enumerations)  
   
 -   [インターフェイス](#Interfaces)  
   

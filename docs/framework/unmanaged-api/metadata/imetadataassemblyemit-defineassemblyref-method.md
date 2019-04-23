@@ -18,10 +18,10 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e480c408c10eb9e135f260426750f7747e5d8ce5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59117353"
 ---
 # <a name="imetadataassemblyemitdefineassemblyref-method"></a>IMetaDataAssemblyEmit::DefineAssemblyRef メソッド
@@ -56,7 +56,7 @@ HRESULT DefineAssemblyRef (
  [in]参照アセンブリのバージョン、プラットフォーム、ロケール情報を含む ASSEMBLYMETADATA インスタンス。  
   
  `pbHashValue`  
- [in]参照先のアセンブリに関連付けられたデータをハッシュします。 省略可能です。  
+ [in]参照先のアセンブリに関連付けられたデータをハッシュします。 任意。  
   
  `cbHashValue`  
  [in]バイト サイズ`pbHashValue`します。  
@@ -79,7 +79,7 @@ HRESULT DefineAssemblyRef (
   
  **ライブラリ:** MsCorEE.dll にリソースとして使用  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

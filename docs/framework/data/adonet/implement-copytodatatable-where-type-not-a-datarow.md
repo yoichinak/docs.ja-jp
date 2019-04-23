@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: b27b52cf-6172-485f-a75c-70ff9c5a2bd4
 ms.openlocfilehash: 120b4bf22e310bee73ba006cfe5a060d0ecd9d65
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338944"
 ---
 # <a name="how-to-implement-copytodatatablet-where-the-generic-type-t-is-not-a-datarow"></a>方法: 実装 CopyToDataTable\<T > ジェネリック型 T が DataRow ではありません

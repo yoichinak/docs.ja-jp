@@ -3,11 +3,11 @@ title: 拡張保護ポリシー
 ms.date: 03/30/2017
 ms.assetid: e2616a10-317e-4c34-8023-0c015a80a82f
 ms.openlocfilehash: 645b48b3c7ce3daaaedac372ba5ba6fd5edfc8f8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59328752"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768424"
 ---
 # <a name="extended-protection-policy"></a>拡張保護ポリシー
 拡張保護は、man-in-the-middle (MITM) 攻撃に対するセキュリティ イニシアチブです。 MITM 攻撃はセキュリティの脅威です。MITM は、クライアントの資格情報を取得し、その資格情報をサーバーに転送します。  

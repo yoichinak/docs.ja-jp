@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: d90b1e39-9115-4f2a-81c0-05e7e74e5580
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32b68078306c2cf7ffe07870de9c4e3150adafe9
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: dc8395492992c22da3c635f0de010516127f9be4
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843190"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612863"
 ---
 # <a name="specifying-fully-qualified-type-names"></a>完全修飾型名の指定
 
@@ -186,6 +186,7 @@ com.microsoft.crypto, Culture="", PublicKeyToken=a5d015c7d5a0b012
 com.microsoft.crypto, Culture=en, PublicKeyToken=a5d015c7d5a0b012,
     Version=1.0.0.0
 ```
+
 ## <a name="specifying-generic-types"></a>ジェネリック型の指定
 
 SimpleTypeSpec\`NUMBER は、ジェネリック型パラメーター が 1 ～ *n* であるオープン ジェネリック型を表します。 たとえば、オープン ジェネリック型 List\<T> またはクローズ ジェネリック型 List\<String> に対する参照を取得するには、``Type.GetType("System.Collections.Generic.List`1")`` を使用します。ジェネリック型 Dictionary\<TKey,TValue> に対する参照を取得するには、``Type.GetType("System.Collections.Generic.Dictionary`2")`` を使用します。

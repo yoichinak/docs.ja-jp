@@ -3,10 +3,10 @@ title: 配信不能キュー
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334095"
 ---
 # <a name="dead-letter-queues"></a>配信不能キュー
@@ -24,7 +24,7 @@ ms.locfileid: "59334095"
 
  `NetMsmqBinding` バインディングの配信不能キューは、次のプロパティとして表されます。
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> プロパティ、クライアントで必要な配信不能キューの種類を表します。 この列挙体には、次の値があります。
+-   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> プロパティは、クライアントが必要とする配信不能キューの種類を表します。 この列挙体には、次の値があります。
 
 -   `None`:クライアントでは、配信不能キューは必要ありません。
 
@@ -32,7 +32,7 @@ ms.locfileid: "59334095"
 
 -   `Custom`:カスタム配信不能キューを使用して指定、<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>プロパティは、配信不能メッセージの格納に使用されます。 この機能は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。 同じコンピューターで実行されている他のアプリケーションとキューを共有するのではなく、そのアプリケーション専用の配信不能キューが必要な場合に、この値を使用します。
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> 配信不能メッセージ キューとして使用する特定のキューを表現するプロパティです。 このプロパティは [!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
+-   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> プロパティは、配信不能キューとして使用される特定のキューを表します。 このプロパティは [!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
 
  このサンプルでは、クライアントがトランザクションのスコープ内からメッセージをまとめてサービスに送信しますが、メッセージの "有効期間" には意図的に小さい値 (約 2 秒) を指定しています。 さらに、有効期限切れのメッセージを入れるために使用するカスタムの配信不能キューを指定します。
 

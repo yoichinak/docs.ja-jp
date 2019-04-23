@@ -3,10 +3,10 @@ title: インターネット インフォメーション サービスのホス�
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59328960"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>インターネット インフォメーション サービスのホスティング手順

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c8329832-bf66-4064-9034-bf39f153fc2d
 ms.openlocfilehash: a94864563491b5bd2d50a6df59858f4b7235fd75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314881"
 ---
 # <a name="accessing-services-using-a-client"></a>クライアントを使用したサービスへのアクセス
@@ -96,9 +96,9 @@ ms.locfileid: "59314881"
 ## <a name="see-also"></a>関連項目
 
 - [双方向サービス](../../../../docs/framework/wcf/feature-details/duplex-services.md)
-- [方法: 一方向コントラクトと要求/応答コントラクトを使用してサービスにアクセスする](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
-- [方法: 双方向コントラクトを使用してサービスにアクセスする](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
-- [方法: WSE 3.0 サービスにアクセスする](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
-- [方法: ChannelFactory を使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
-- [方法: サービス操作を非同期に呼び出す](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
+- [方法: 一方向のサービスにアクセスし、要求/応答コントラクト](../../../../docs/framework/wcf/feature-details/how-to-access-wcf-services-with-one-way-and-request-reply-contracts.md)
+- [方法: Access Services と双方向コントラクト](../../../../docs/framework/wcf/feature-details/how-to-access-services-with-a-duplex-contract.md)
+- [方法: WSE 3.0 にアクセス サービス](../../../../docs/framework/wcf/feature-details/how-to-access-a-wse-3-0-service-with-a-wcf-client.md)
+- [方法: ChannelFactory を使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-channelfactory.md)
+- [方法: サービス操作を非同期的に呼び出す](../../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)
 - [中間層クライアント アプリケーション](../../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)

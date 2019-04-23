@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Grid control [WPF], sharing sizing data of rows
 ms.assetid: a0535a6f-ff04-4b25-9912-7dd856e11044
 ms.openlocfilehash: d5ab2ac612d55c8cbc34ae6d7d9d63b9f8aa23e7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190341"
 ---
 # <a name="how-to-share-sizing-properties-between-grids"></a>方法: グリッド間でサイズ設定プロパティを共有する

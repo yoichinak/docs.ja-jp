@@ -6,10 +6,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], changing
 ms.assetid: 5da91272-ad7e-49e7-9d1f-eb64439a1e4d
 ms.openlocfilehash: 6421171072f72764927b1a449c0257a29e8e82d6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326555"
 ---
 # <a name="how-to-change-the-value-of-an-existing-setting-at-design-time"></a>方法: 設計時に既存の設定の値を変更する
@@ -34,5 +34,5 @@ Visual Studio を使用して、プロジェクト内の既存の設定値を編
 ## <a name="see-also"></a>関連項目
 
 - [アプリケーション設定とユーザー設定の使用](using-application-settings-and-user-settings.md)
-- [方法: 設計時に新しい設定を作成する](how-to-create-a-new-setting-at-design-time.md)
+- [方法: デザイン時に新しい設定を作成します。](how-to-create-a-new-setting-at-design-time.md)
 - [アプリケーション設定の概要](application-settings-overview.md)

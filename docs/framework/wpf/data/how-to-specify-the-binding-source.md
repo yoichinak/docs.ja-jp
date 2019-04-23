@@ -10,10 +10,10 @@ helpviewer_keywords:
 - binding sources [WPF]
 ms.assetid: 55d47757-2648-4a52-987f-b767953f168c
 ms.openlocfilehash: 8c866502300c50e00f1393b9e3fb64099f027c43
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59222303"
 ---
 # <a name="how-to-specify-the-binding-source"></a>方法: バインディング ソースを指定する
@@ -50,4 +50,4 @@ ms.locfileid: "59222303"
 - [プロパティ値の継承](../advanced/property-value-inheritance.md)
 - [データ バインディングの概要](data-binding-overview.md)
 - [バインディング宣言の概要](binding-declarations-overview.md)
-- [方法のトピック](data-binding-how-to-topics.md)
+- [方法トピック](data-binding-how-to-topics.md)

@@ -1,13 +1,13 @@
 ---
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
-ms.date: 09/22/2017
-ms.openlocfilehash: e196be28f622873359153f32c5dd9b0b5a514c0f
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.date: 04/08/2019
+ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654654"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611095"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -15,7 +15,7 @@ ms.locfileid: "58654654"
 
 ## <a name="implicit-package-references"></a>暗黙的なパッケージ参照
 
-メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。
+メタパッケージは、プロジェクト ファイルの `<TargetFramework>` または `<TargetFrameworks>` プロパティに指定されている対象フレームワークに基づいて暗黙的に参照されています。 `<TargetFramework>` を指定すると、順序に関係なく `<TargetFrameworks>` は無視されます。 詳しくは、「[パッケージ、メタパッケージ、フレームワーク](../packages.md)」をご覧ください。 
 
 ```xml
  <PropertyGroup>
@@ -31,15 +31,39 @@ ms.locfileid: "58654654"
 
 ### <a name="recommendations"></a>推奨事項
 
-`Microsoft.NETCore.App` または `NetStandard.Library` メタパッケージは暗黙的に参照されるので、ベスト プラクティスとして以下が推奨されます。
+`Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージは暗黙的に参照されるので、ベスト プラクティスとして以下が推奨されます。
 
-* .NET Core または .NET Standard を対象とするとき、プロジェクト ファイルの `<PackageReference>` アイテム経由で `Microsoft.NETCore.App` または `NetStandard.Library` メタパッケージを明示的に参照しないようにします。
+* .NET Core または .NET Standard を対象とするとき、プロジェクト ファイルの `<PackageReference>` アイテム経由で `Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージを明示的に参照しないようにします。
 * .NET Core を対象にするとき、特定バージョンのランタイムが必要な場合、メタパッケージを参照するのではなく、プロジェクト内で `<RuntimeFrameworkVersion>` プロパティを使用します (`1.0.4` など)。
-    * [自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)を使用し、特定のパッチ バージョンの 1.0.0 LTS ランタイムが必要な場合などにこの問題が発生する可能性があります。
-* .NET Standard を対象にするとき、特定バージョンの `NetStandard.Library` メタパッケージが必要な場合、`<NetStandardImplicitPackageVersion>` プロパティを使用し、必要なバージョンを設定できます。
-* .NET Framework プロジェクトでは、`Microsoft.NETCore.App` または `NetStandard.Library` メタパッケージに参照を明示的に追加したり、更新したりしないでください。 .NET Standard ベースの NuGet パッケージを使用するとき、何らかのバージョンの `NetStandard.Library` が必要であれば、NuGet はそのバージョンを自動的にインストールします。
+  * [自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)を使用し、特定のパッチ バージョンの 1.0.0 LTS ランタイムが必要な場合などにこの問題が発生する可能性があります。
+* .NET Standard を対象にするとき、特定バージョンの `NETStandard.Library` メタパッケージが必要な場合、`<NetStandardImplicitPackageVersion>` プロパティを使用し、必要なバージョンを設定できます。
+* .NET Framework プロジェクトでは、`Microsoft.NETCore.App` または `NETStandard.Library` メタパッケージに参照を明示的に追加したり、更新したりしないでください。 .NET Standard ベースの NuGet パッケージを使用するとき、何らかのバージョンの `NETStandard.Library` が必要であれば、NuGet はそのバージョンを自動的にインストールします。
+
+## <a name="implicit-version-for-some-package-references"></a>一部のパッケージ参照に対する暗黙的なバージョン
+
+[`<PackageReference>`](#packagereference) を使用するほとんどの場合に、`Version` 属性を設定して、使用する NuGet パッケージのバージョンを指定する必要があります。 ただし、.NET Core 2.1 または 2.2 を使用し、[Microsoft.AspNetCore.App](/aspnet/core/fundamentals/metapackage-app) または [Microsoft.AspNetCore.All](/aspnet/core/fundamentals/metapackage) を参照するときは、その属性は必要ありません。 .NET Core SDK では、使用する必要があるこれらのパッケージのバージョンを自動的に選択できます。
+
+### <a name="recommendation"></a>推奨事項
+
+`Microsoft.AspNetCore.App` または `Microsoft.AspNetCore.All` パッケージを参照するときは、それらのバージョンを指定しないでください。 バージョンを指定すると、SDK で警告 NETSDK1071 が発生する可能性があります。 この警告を解決するには、次の例のようなパッケージのバージョンを削除します。
+
+```xml
+<ItemGroup>
+  <PackageReference Include="Microsoft.AspNetCore.App" />
+</ItemGroup>
+```
+
+> 既知の問題: .NET Core 2.1 SDK では、プロジェクトでも Microsoft.NET.Sdk.Web が使用されている場合にのみ、この構文がサポートされます。 これは、.NET Core 2.2 SDK で解決されます。
+
+ASP.NET Core メタパッケージに対するこれらの参照では、ほとんどの通常の NuGet パッケージとは動作が若干異なります。 これらのメタパッケージを使用するアプリケーションの[フレームワーク依存の展開](../deploying/index.md#framework-dependent-deployments-fdd)では、ASP.NET Core 共有フレームワークが自動的に利用されます。 メタパッケージを使用する場合、参照される ASP.NET Core NuGet パッケージの資産は、アプリケーションと共に展開**されません**。ASP.NET Core 共有フレームワークにはこれらの資産が含まれています。 共有フレームワーク内の資産は、アプリケーションの起動時間を向上させるため、ターゲット プラットフォームに対して最適化されています。 共有フレームワークについて詳しくは、「[.NET Core の配布パッケージ](../build/distribution-packaging.md)」をご覧ください。
+
+バージョンを "*指定する*" と、フレームワーク依存の展開では ASP.NET Core の共有フレームワークの "*最小*" バージョンとして扱われ、自己完結型の展開では "*厳密な*" バージョンとして扱われます。 これには、次のような影響があります。
+
+* サーバーにインストールされている ASP.NET Core のバージョンが、PackageReference で指定されているバージョンより小さい場合、.NET Core プロセスの起動は失敗します。 Azure などのホスティング環境でメタパッケージの更新プログラムが使用できるようになる前に、NuGet.org で更新プログラムが利用可能になることがよくあります。 PackageReference でのバージョンを ASP.NET Core に更新すると、展開されているアプリケーションが失敗する可能性があります。
+* アプリケーションが[自己完結型の展開](../deploying/index.md#self-contained-deployments-scd)として展開されている場合、アプリケーションに .NET Core の最新のセキュリティ更新プログラムが含まれていない可能性があります。 バージョンを指定しないと、SDK は自己完結型の展開に ASP.NET Core の最新バージョンを自動的に含めることができます。
 
 ## <a name="default-compilation-includes-in-net-core-projects"></a>.NET Core プロジェクトの既定のコンパイルの include
+
 最新バージョンの SDK の *csproj* 形式に移行すると共に、コンパイル項目と、SDK プロパティ ファイルに埋め込みリソースの既定の include と exclude を SDK プロパティ ファイルに移行しました。 つまり、これらの項目をプロジェクト ファイルに指定する必要はなくなりました。
 
 これを行う主な理由は、プロジェクト ファイルを見やすくするためです。 SDK の既定値は、最も一般的な使用例に対応しているので、作成するプロジェクトごとに繰り返す必要はありません。 その結果、プロジェクト ファイルが小さくなり、わかりやすく、編集が必要な場合に編集しやすくなります。
@@ -100,6 +124,7 @@ ms.locfileid: "58654654"
 ## <a name="additions"></a>追加
 
 ### <a name="sdk-attribute"></a>SDK 属性
+
 *.csproj* ファイルのルート `<Project>` 要素には、`Sdk` という新しい属性があります。 `Sdk` は、プロジェクトで使用される SDK を指定します。 [レイヤー化のドキュメント](cli-msbuild-architecture.md)で説明されているように、SDK は、.NET Core コードをビルドできる MSBuild [タスク](/visualstudio/msbuild/msbuild-tasks)および[ターゲット](/visualstudio/msbuild/msbuild-targets)のセットです。 .NET Core ツールには主に 3 つの SDK が付属しています。
 
 1. ID が `Microsoft.NET.Sdk` の .NET Core SDK
@@ -283,7 +308,6 @@ SPDX 識別子が割り当てられていないライセンス、またはカス
 
 パッケージに適用されるライセンスの URL。 ("_Visual Studio 15.9.4、.NET SDK 2.1.502 および 2.2.101 以降では非推奨_")
 
-
 ### <a name="packageiconurl"></a>PackageIconUrl
 
 UI 画面のパッケージのアイコンとして使用する背景が透明な 64x64 の画像の URL。
@@ -301,8 +325,10 @@ UI 画面のパッケージのアイコンとして使用する背景が透明�
 パックされたパッケージをドロップする出力パスを指定します。 既定値は `$(OutputPath)` です。
 
 ### <a name="includesymbols"></a>IncludeSymbols
+このブール値は、プロジェクトをパックするときに、パッケージが追加のシンボル パッケージを作成するかどうかを指定します。 シンボル パッケージの形式は、`SymbolPackageFormat` プロパティで制御します。
 
-このブール値は、プロジェクトをパックするときに、パッケージが追加のシンボル パッケージを作成するかどうかを指定します。 このパッケージの拡張子は *.symbols.nupkg* になります。DLL や他の出力ファイルと共に PDF ファイルがコピーされます。
+### <a name="symbolpackageformat"></a>SymbolPackageFormat
+シンボル パッケージの形式を指定します。 "symbols.nupkg" では、*.symbols.nupkg* 拡張子と共に、PDB、DLL、およびその他の出力ファイルを含む従来のシンボル パッケージが作成されます。 "snupkg" では、ポータブル PDB を含む snupkg シンボル パッケージが作成されます。 既定値は "symbols.nupkg" です。
 
 ### <a name="includesource"></a>IncludeSource
 

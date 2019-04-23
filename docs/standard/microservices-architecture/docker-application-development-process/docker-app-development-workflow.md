@@ -4,12 +4,12 @@ description: Docker ベースのアプリケーションを開発するための
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: d494dba829d8065e2bc1424bc9bcc11e265fbcc0
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921092"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613370"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -31,7 +31,7 @@ ms.locfileid: "58921092"
 
 ![Docker アプリの開発プロセス:1 - アプリをコーディングする、2- Dockerfile を書き込む、3 - Dockerfile で定義されているイメージを作成する、4 - (省略可能) docker-compose.yml ファイルにサービスを作成する、5 - コンテナーまたは docker-compose アプリを実行する、6 - アプリまたはマイクロサービスをテストする、7 - リポジトリにプッシュして繰り返す。 ](./media/image1.png)
 
-**図 5-1.** Docker のコンテナー化されたアプリケーションを開発するための詳細なワークフロー
+**図 5-1** Docker のコンテナー化されたアプリケーションを開発するための詳細なワークフロー
 
 このセクションでは、このプロセス全体について詳細に記載されており、主要な各手順は、Visual Studio 環境に重点を置いて説明されています。
 
@@ -51,7 +51,7 @@ Docker アプリケーションの開発方法は、Docker を使用しないア
 
 最初に、次の手順で説明する、Windows 用の [Docker Community Edition (CE)](https://docs.docker.com/docker-for-windows/) がインストールされていることを確認します。
 
-[Docker CE for Windows の概要](https://docs.docker.com/docker-for-windows/)
+[Get started with Docker CE for Windows](https://docs.docker.com/docker-for-windows/) (Windows 用の Docker CE の概要)
 
 さらに、図 5-2 に示すように、**.NET Core クロスプラットフォーム開発**ワークロードがインストールされた、Visual Studio 2017 バージョン 15.7 以降が必要です。
 
@@ -64,10 +64,10 @@ Docker アプリケーションの開発方法は、Docker を使用しないア
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **Windows 用の Docker CE の概要** \
-  [https://docs.docker.com/docker-for-windows/](https://docs.docker.com/docker-for-windows/)
+  <https://docs.docker.com/docker-for-windows/>
 
 - **Visual Studio 2017** \
-  [https://visualstudio.microsoft.com/downloads/](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)
+  [https://visualstudio.microsoft.com/downloads/](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)
 
 ![2 - Dockerfile を作成する](./media/image4.png)
 
@@ -122,7 +122,7 @@ ENTRYPOINT ["dotnet", " MySingleContainerWebApp.dll "]
   [https://docs.microsoft.com/dotnet/core/docker/building-net-docker-images](../../../core/docker/building-net-docker-images.md)
 
 - **Build your own image (独自のイメージのビルド)**。 Docker の公式なドキュメント内にあります。\
-  [https://docs.docker.com/engine/tutorials/dockerimages/](https://docs.docker.com/engine/tutorials/dockerimages/)
+  <https://docs.docker.com/engine/tutorials/dockerimages/>
 
 - **.NET コンテナー イメージを最新の状態に保つ** \
   <https://devblogs.microsoft.com/dotnet/staying-up-to-date-with-net-container-images/>
@@ -193,26 +193,26 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 17  RUN dotnet restore src/Services/Catalog/Catalog.API/Catalog.API.csproj
 18  COPY . .
 19  WORKDIR /src/src/Services/Catalog/Catalog.API
-20  RUN dotnet build Catalog.API.csproj -c Release -0 /app
+20  RUN dotnet build Catalog.API.csproj -c Release -o /app
 21
 22  FROM build AS publish
-23  RUN dotnet publish Catalog.API.csproj -c Release -0 /app
+23  RUN dotnet publish Catalog.API.csproj -c Release -o /app
 24
 25  FROM base AS final
 26  WORKDIR /app
-27  COPY --from=publish /app
+27  COPY --from=publish /app .
 28  ENTRYPOINT ["dotnet", "Catalog.API.dll"]
 ```
 
 行ごとの詳細は次のとおりです。
 
-1.  "小さな" ランタイムのみの基本イメージを使用するステージを開始します。参照用にこれを**基本**と呼びます。
-2.  イメージに **/app** ディレクトリを作成します。
-3.  ポート **80** を公開します。
+1. "小さな" ランタイムのみの基本イメージを使用するステージを開始します。参照用にこれを**基本**と呼びます。
+2. イメージに **/app** ディレクトリを作成します。
+3. ポート **80** を公開します。
 <!-- skip -->
-5.  ビルド/発行用の "大きな" イメージを使用する新しいステージを開始します。参照用にこれを**ビルド**と呼びます。
-6.  イメージに **/src** ディレクトリを作成します。
-7.  16 行目まで、参照プロジェクトの **.csproj** ファイルをコピーし、後でパッケージを復元できるようにします。
+5. ビルド/発行用の "大きな" イメージを使用する新しいステージを開始します。参照用にこれを**ビルド**と呼びます。
+6. イメージに **/src** ディレクトリを作成します。
+7. 16 行目まで、参照プロジェクトの **.csproj** ファイルをコピーし、後でパッケージを復元できるようにします。
 <!-- skip -->
 17. **Catalog.API** プロジェクトと参照プロジェクト用のパッケージを復元します。
 18. イメージの **/src** に対する (**.dockerignore** ファイルに含まれているファイルとディレクトリを除く) **ソリューションのすべてのディレクトリ ツリー**をコピーします。
@@ -290,10 +290,10 @@ RUN dotnet restore
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **マルチアーキテクチャの .NET Core イメージ**。\
-  [https://github.com/dotnet/announcements/issues/14](https://github.com/dotnet/announcements/issues/14)
+  <https://github.com/dotnet/announcements/issues/14>
 
 - **Create a base image** (基本イメージを作成する) Docker の公式なドキュメント。\
-  [https://docs.docker.com/engine/userguide/eng-image/baseimages/](https://docs.docker.com/engine/userguide/eng-image/baseimages/)
+  <https://docs.docker.com/develop/develop-images/baseimages/>
 
 ![3 - Dockerfile で定義されているイメージを作成する](./media/image7.png)
 
@@ -321,7 +321,7 @@ Docker CLI と Dockerfile を使用して、ローカルの環境にカスタム
 
 ![docker images コマンドでリストされるイメージの画面表示](./media/image9.png)
 
-**図 5-6.** docker images コマンドを使用した既存のイメージの表示
+**図 5-6** docker images コマンドを使用した既存のイメージの表示
 
 ### <a name="creating-docker-images-with-visual-studio"></a>Visual Studio での Docker イメージの作成
 
@@ -485,7 +485,7 @@ Visual Studio 2017 を使用したマルチコンテナー アプリケーショ
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **リモート Docker ホストに ASP.NET コンテナーを配置する** \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker](https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker)
+  <https://docs.microsoft.com/azure/vs-azure-tools-docker-hosting-web-apps-in-docker>
 
 ### <a name="a-note-about-testing-and-deploying-with-orchestrators"></a>オーケストレーターを使用したテストと展開に関する注意事項
 
@@ -522,10 +522,10 @@ Visual Studio 2017 でコンテナーを実行またはデバッグする場合�
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **ローカルの Docker コンテナーでのアプリのデバッグ** \
-  [https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh](https://docs.microsoft.com/azure/vs-azure-tools-docker-edit-and-refresh)
+  [https://docs.microsoft.com/visualstudio/containers/edit-and-refresh](/visualstudio/containers/edit-and-refresh)
 
-- **Steve Lasker: Docker を使用した ASP.NET Core アプリのビルド、デバッグおよび展開。** ビデオ。 \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115)
+- **作成者: Steve Lasker。Docker を使用した ASP.NET Core アプリのビルド、デバッグおよび展開。** ビデオ。 \
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T115>
 
 ## <a name="simplified-workflow-when-developing-containers-with-visual-studio"></a>Visual Studio でのコンテナー開発の簡略ワークフロー
 
@@ -540,7 +540,7 @@ Visual Studio を使用するワークフローは、エディター/CLI アプ�
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **作成者: Steve Lasker。Visual Studio 2017 を使用した .NET Docker の開発** \
-  [https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111](https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111)
+  <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
 ## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows コンテナーを設定するための PowerShell コマンドの使用 
 
@@ -562,7 +562,7 @@ RUN powershell add-windowsfeature web-asp-net45
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **aspnet-docker/Dockerfile.** Windows の機能を含めるために dockerfile から実行する PowerShell コマンドの例。\
-  [https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile](https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile)
+  <https://github.com/Microsoft/aspnet-docker/blob/master/4.7.1-windowsservercore-ltsc2016/runtime/Dockerfile>
 
 >[!div class="step-by-step"]
 >[前へ](index.md)

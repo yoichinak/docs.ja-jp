@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f7f385f3-ffcf-4f3b-af35-de8818938e5f
 ms.openlocfilehash: c923ffb6e2653c148b9523b99c4717d42ea57427
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308407"
 ---
 # <a name="how-to-execute-a-query-that-returns-nested-collections"></a>方法: 入れ子になったコレクションを返すクエリを実行する

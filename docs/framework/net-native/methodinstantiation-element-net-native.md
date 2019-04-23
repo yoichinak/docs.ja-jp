@@ -5,10 +5,10 @@ ms.assetid: a3355d78-2a88-4109-8521-830d7cae260a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae15e6d61267feb0388170ee27dcd939035329b0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121694"
 ---
 # <a name="methodinstantiation-element-net-native"></a>\<MethodInstantiation > 要素 (.NET ネイティブ)
@@ -68,8 +68,8 @@ ms.locfileid: "59121694"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<型 >](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
-|[\<TypeInstantiation >](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<Type>](../../../docs/framework/net-native/type-element-net-native.md)|型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
+|[\<TypeInstantiation>](../../../docs/framework/net-native/typeinstantiation-element-net-native.md)|構築されたジェネリック型とそのすべてのメンバーにリフレクション ポリシーを適用します。|  
   
 ## <a name="remarks"></a>Remarks  
  `<MethodInstantiation>` 要素は、対応するオープン ジェネリック メソッドのランタイム リフレクション ポリシーをオーバーライドします。  
@@ -79,4 +79,4 @@ ms.locfileid: "59121694"
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)
 - [ランタイム ディレクティブ要素](../../../docs/framework/net-native/runtime-directive-elements.md)
 - [ランタイム ディレクティブ ポリシーの設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)
-- [\<メソッド > 要素](../../../docs/framework/net-native/method-element-net-native.md)
+- [\<Method> 要素](../../../docs/framework/net-native/method-element-net-native.md)

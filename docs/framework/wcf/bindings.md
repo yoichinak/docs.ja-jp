@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211479"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation バインディング

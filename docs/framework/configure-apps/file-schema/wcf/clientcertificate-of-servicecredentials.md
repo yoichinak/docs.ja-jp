@@ -1,12 +1,12 @@
 ---
-title: <clientCertificate> (行中)  <serviceCredentials>
+title: <clientCertificate> の <serviceCredentials>
 ms.date: 03/30/2017
 ms.assetid: 90ad03aa-2317-43dd-8a72-6d24cdcad15c
 ms.openlocfilehash: 26ebac6439a90959e3a926e6a36c9044251a4aae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107989"
 ---
 # <a name="clientcertificate-of-servicecredentials"></a>\<clientCertificate > の\<serviceCredentials >
@@ -40,7 +40,7 @@ ms.locfileid: "59107989"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<authentication>](../../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-clientcertificate-element.md)|クライアント証明書の認証オプションを指定します。|  
-|[\<証明書>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|使用する証明書を指定します。|  
+|[\<certificate>](../../../../../docs/framework/configure-apps/file-schema/wcf/certificate-of-clientcertificate-element.md)|使用する証明書を指定します。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -60,6 +60,6 @@ ms.locfileid: "59107989"
 - <xref:System.ServiceModel.Configuration.X509InitiatorCertificateServiceElement>
 - <xref:System.ServiceModel.Description.ServiceCredentials.ClientCertificate%2A>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential>
-- [方法: 双方向コントラクトを作成する](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
+- [方法: 双方向コントラクトを作成します。](../../../../../docs/framework/wcf/feature-details/how-to-create-a-duplex-contract.md)
 - [セキュリティ動作](../../../../../docs/framework/wcf/feature-details/security-behaviors-in-wcf.md)
 - [証明書の使用](../../../../../docs/framework/wcf/feature-details/working-with-certificates.md)

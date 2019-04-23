@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ca662b57fae9b1d0d41290f3052f71bca66e9bf3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234751"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774465"
 ---
 ### <a name="webutilityhtmlencode-and-webutilityhtmldecode-round-trip-bmp-correctly"></a>WebUtility.HtmlEncode と WebUtility.HtmlDecode で BMP が正常に往復する
 

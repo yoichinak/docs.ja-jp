@@ -3,11 +3,11 @@ title: TransportBindingElement
 ms.date: 03/30/2017
 ms.assetid: 54ecfbee-53c0-410c-a7fa-a98f2e40c545
 ms.openlocfilehash: bdb5ca7400a41dd724c2ad7fc76695a82874ded6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59112373"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59974176"
 ---
 # <a name="transportbindingelement"></a>TransportBindingElement
 TransportBindingElement  

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202015"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>方法: 進行状況を示す Windows フォーム コントロールを作成する
@@ -28,9 +28,9 @@ ms.locfileid: "59202015"
   
 -   オーバーライドする、<xref:System.Windows.Forms.Control.OnPaint%2A>コントロールを描画するロジックを提供するメソッド。  
   
--   使用して、コントロールを描画するために使用できる面積を計算、<xref:System.Windows.Forms.Control.ClientRectangle%2A>プロパティ。 `FlashTrackBar` これはその`OptimizedInvalidate`メソッド。  
+-   使用して、コントロールを描画するために使用できる面積を計算、<xref:System.Windows.Forms.Control.ClientRectangle%2A>プロパティ。 `FlashTrackBar` は、`OptimizedInvalidate` メソッドでこの計算を実行します。  
   
--   Windows フォーム デザイナー内でプロパティが変更されたときの、プロパティのシリアル化または永続化の実装。 `FlashTrackBar` 定義、`ShouldSerializeStartColor`と`ShouldSerializeEndColor`シリアル化するためのメソッド、`StartColor`と`EndColor`プロパティ。  
+-   Windows フォーム デザイナー内でプロパティが変更されたときの、プロパティのシリアル化または永続化の実装。 `FlashTrackBar` は `StartColor` プロパティと `EndColor` プロパティをシリアル化するために、`ShouldSerializeStartColor` メソッドと `ShouldSerializeEndColor` メソッドを定義します。  
   
  `FlashTrackBar` によって定義されるカスタム プロパティを次の表に示します。  
   

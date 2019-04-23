@@ -11,10 +11,10 @@ ms.assetid: 4afd40c3-68f2-41c5-8ec1-4951bc148b9c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3a3ee82a9091f0caeee010ec79632ce703efb589
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338840"
 ---
 # <a name="how-to-generate-interop-assemblies-from-type-libraries"></a>方法: 相互運用機能アセンブリをタイプ ライブラリから生成する

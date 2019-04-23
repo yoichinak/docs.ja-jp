@@ -6,10 +6,10 @@ helpviewer_keywords:
 - access control [WCF]
 ms.assetid: 9d576122-3f55-4425-9acf-b23d0781e966
 ms.openlocfilehash: 53b20e7f11f5accd1436f29063817142681e4f74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213260"
 ---
 # <a name="access-control-mechanisms"></a>アクセス制御機構
@@ -42,7 +42,7 @@ Windows Communication Foundation (WCF) といくつかの方法でアクセス�
  ロール プロバイダー機能の使用に関する詳細については、次を参照してください。[方法。ASP.NET ロール プロバイダーを使用して、サービスと](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)します。  
   
 ## <a name="authorization-manager"></a>承認マネージャー  
- さらに、承認マネージャー (AzMan) と [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ロール プロバイダーを組み合わせてクライアントを承認する機能もあります。 Web サービスを [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] によってホストする場合は、サービスの承認が AzMan 経由で行われるように AzMan をアプリケーションに統合できます。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ロール マネージャーは、アプリケーション ロールの管理、追加、ロールからユーザーを削除すると、ロールのメンバーシップを確認できるようにする API を提供しますが、名前付きのタスクまたは操作を実行する権限があるかどうかを照会することはできません。 AzMan を使用すると、個々の操作を定義してタスクに結合できます。 AZMan では、ロールのチェックだけでなく、ユーザーがタスクを実行できるかどうかをチェックすることもできます。 ロールの割り当てとタスクの承認は、アプリケーションの外部で構成することも、アプリケーション内でプログラムによって実行することもできます。 AzMan 管理 Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップインにより、管理者は、ロールが実行時に実行できるタスクを変更したり、ユーザーのロール メンバーシップを管理したりできます。  
+ さらに、承認マネージャー (AzMan) と [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ロール プロバイダーを組み合わせてクライアントを承認する機能もあります。 Web サービスを [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] によってホストする場合は、サービスの承認が AzMan 経由で行われるように AzMan をアプリケーションに統合できます。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ロール マネージャーは、アプリケーション ロールの管理、ロールへのユーザーの追加と削除、およびロール メンバーシップのチェックを実行できるようにする API を提供しますが、指定されたタスクまたは操作の実行がユーザーに許可されているかどうかを照会する機能は提供しません。 AzMan を使用すると、個々の操作を定義してタスクに結合できます。 AZMan では、ロールのチェックだけでなく、ユーザーがタスクを実行できるかどうかをチェックすることもできます。 ロールの割り当てとタスクの承認は、アプリケーションの外部で構成することも、アプリケーション内でプログラムによって実行することもできます。 AzMan 管理 Microsoft 管理コンソール (MMC: Microsoft Management Console) スナップインにより、管理者は、ロールが実行時に実行できるタスクを変更したり、ユーザーのロール メンバーシップを管理したりできます。  
   
  また、AzMan と [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ロール プロバイダーは、既存の AzMan インストールに既にアクセスでき、AzMan とロール プロバイダーの組み合わせの機能を使用してサービス ユーザーを承認する場合にも使用できます。  
   
@@ -60,8 +60,8 @@ Windows Communication Foundation (WCF) といくつかの方法でアクセス�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Security.Permissions.PrincipalPermissionAttribute>
-- [方法: PrincipalPermissionAttribute クラスでアクセスを制限する](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [方法: ASP.NET のロール プロバイダーとサービスを使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
-- [方法: ASP.NET の承認マネージャー ロール プロバイダーとサービスを使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
+- [方法: PrincipalPermissionAttribute クラスでアクセスを制限します。](../../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [方法: サービスで ASP.NET ロール プロバイダーを使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)
+- [方法: サービスと ASP.NET の承認マネージャー ロール プロバイダーを使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)
 - [ID モデルを使用したクレームと承認の管理](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)
 - [委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)

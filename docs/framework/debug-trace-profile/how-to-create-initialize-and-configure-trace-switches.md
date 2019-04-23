@@ -14,10 +14,10 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325710"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>方法: トレース スイッチを作成、初期化、および構成する
@@ -77,7 +77,7 @@ ms.locfileid: "59325710"
   
     -   **Visual Basic:** **新しい項目の追加** ダイアログ ボックスで、選択**アプリケーション構成ファイル**します。  
   
-         アプリケーション構成ファイルが作成され、開かれます。 これは、ルート要素が XML ドキュメントです。 `<configuration>.`  
+         アプリケーション構成ファイルが作成され、開かれます。 これは、XML ドキュメントであり、ルート要素は `<configuration>.` です。  
   
     -   **Visual C#:** **新しい項目の追加** ダイアログ ボックスで、選択**XML ファイル**します。 このファイルに **app.config** という名前を付けます。XML エディターで、XML 宣言の後に次の XML を追加します。  
   
@@ -128,6 +128,6 @@ ms.locfileid: "59325710"
 ## <a name="see-also"></a>関連項目
 
 - [アプリケーションのトレースとインストルメント](../../../docs/framework/debug-trace-profile/tracing-and-instrumenting-applications.md)
-- [方法: アプリケーション コードにトレース ステートメントを追加する](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
+- [方法: アプリケーション コードにトレース ステートメントを追加します。](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)
 - [トレース スイッチ](../../../docs/framework/debug-trace-profile/trace-switches.md)
 - [トレースおよびデバッグ設定のスキーマ](../../../docs/framework/configure-apps/file-schema/trace-debug/index.md)

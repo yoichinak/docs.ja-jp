@@ -10,10 +10,10 @@ helpviewer_keywords:
 - TreeView [WPF], styles and templates
 ms.assetid: a49adb77-0202-4caa-b94a-8bb110d7fa9a
 ms.openlocfilehash: 01841bb828594dd4cac0c179d70495fe392c8de5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142708"
 ---
 # <a name="treeview-styles-and-templates"></a>TreeView のスタイルとテンプレート

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], adding items to
 ms.assetid: fd31d314-33eb-4181-90f8-d32ed0c4e072
 ms.openlocfilehash: ef44a9e68b8007d57fc7442a178ae98322747c99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343676"
 ---
 # <a name="how-to-add-items-to-windows-forms-domainupdown-controls-programmatically"></a>方法: Windows フォーム DomainUpDown コントロールにプログラムで項目を追加する

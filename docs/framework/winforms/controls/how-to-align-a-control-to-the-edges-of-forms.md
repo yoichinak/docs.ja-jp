@@ -11,10 +11,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], docking using code
 ms.assetid: 5994cb59-242b-4e75-bd0e-62879c34d702
 ms.openlocfilehash: beb8881dbd2aedaefe66510c2942ce6c082b9729
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329974"
 ---
 # <a name="how-to-align-a-control-to-the-edges-of-forms"></a>方法: フォームの端に合わせてコントロールを配置する
@@ -54,6 +54,6 @@ ms.locfileid: "59329974"
 - <xref:System.Windows.Forms.Control.Dock%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.Control.Anchor%2A?displayProperty=nameWithType>
 - [.NET Framework を使用したカスタム Windows フォーム コントロールの開発](developing-custom-windows-forms-controls.md)
-- [方法: FlowLayoutPanel コントロールで子コントロールを固定およびドッキングする](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
-- [方法: TableLayoutPanel コントロールで子コントロールを固定およびドッキングする](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
+- [方法: 固定およびドッキング FlowLayoutPanel コントロールで子コントロール](how-to-anchor-and-dock-child-controls-in-a-flowlayoutpanel-control.md)
+- [方法: 固定およびドッキング TableLayoutPanel コントロールで子コントロール](how-to-anchor-and-dock-child-controls-in-a-tablelayoutpanel-control.md)
 - [AutoSize プロパティの概要](autosize-property-overview.md)

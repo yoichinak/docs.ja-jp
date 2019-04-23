@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Net profile TCP
 ms.assetid: e8475fe6-0ecd-407a-8e7e-45860561bb74
 ms.openlocfilehash: 6a546a982b7c000e7fb5304daf7eac95d6da7e92
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313685"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59768970"
 ---
 # <a name="default-nettcpbinding"></a>既定の NetTcpBinding
 このサンプルは、<xref:System.ServiceModel.NetTcpBinding> バインディングの使用方法を示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)電卓サービスを実装します。 このサンプルでは、サービスは自己ホスト型です。 クライアントとサービスは両方ともコンソール アプリケーションです。  

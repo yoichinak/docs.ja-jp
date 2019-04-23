@@ -1,7 +1,7 @@
 ---
 title: <AppContextSwitchOverrides> 要素
 ms.custom: updateeachrelease
-ms.date: 03/07/2019
+ms.date: 04/18/2019
 helpviewer_keywords:
 - AppContextSwitchOverrides
 - compatibility switches
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bc4cd94d3acd37244e1d5b882612e4b1da91b90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59136462"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978251"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 要素
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
@@ -98,6 +98,7 @@ ms.locfileid: "59136462"
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|コントロールかどうかの値、 [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)プロパティは、 [IntPtr](xref:System.IntPtr)こと表しますウィンドウのメモリ位置を処理するかどうか、ウィンドウ ハンドル (HWND)。 詳細については、「[軽減策:CspParameters.ParentWindowHandle で HWND を](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)します。 |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|SignedCMS のいくつかの操作の既定値は SHA1 または SHA256 であるかどうかを判断します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|一部の SignedXML 操作の既定値が SHA1 または SHA256 かどうかを判断します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|管理対象の暗号化の使用が FIPS モードがスローされますクラスかどうかを制御、 <xref:System.Security.Cryptography.CryptographicException> (`true`)、またはシステム ライブラリの実装に依存 (`false`)。|.NET Framework 4.8|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|決定かどうか、`TransportWithMessageCredential`セキュリティ モードで、符号なしのメッセージは、"to"ヘッダー。 これは、オプトイン スイッチです。 詳細については、次を参照してください。 [、.NET Framework 4.6.1 におけるランタイムの変更](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)します。|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|コントロールかどうか、<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>コンス トラクターがスローされます、<xref:System.ArgumentException>場合は、要素の 1 つ`null`します。|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|CSG キー ストレージ プロバイダーが例外をスローします X509 を使用しようとすると、証明書を使用するかどうかを判断します。 詳細については、次を参照してください。 [WCF トランスポート セキュリティは、CNG を使用して格納される証明書をサポートしている](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)します。|.NET Framework 4.6.1|
@@ -109,6 +110,7 @@ ms.locfileid: "59136462"
 |`Switch.System.ServiceModel.`<br/>`UseSha1InPipeConnectionGetHashAlgorithm`|WCF が、SHA1 または SHA256 ハッシュを使用して名前付きパイプのランダムな名前を生成するかどうかを制御します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.Internals`<br/>`IncludeNullExceptionMessageInETWTrace`|スローするかどうかを制御する[NullReferenceException](xref:System.NullReferenceException)例外メッセージが null の場合。|.NET Framework 4.7|  
 |`Switch.System.ServiceProcess.`<br/>`DontThrowExceptionsOnStart`|呼び出し元に、サービスの起動時にスローされた例外が反映されるかどうかを制御、<xref:System.ServiceProcess.ServiceBase.Run%2A?displayProperty=nameWithType>メソッド。|.NET Framework 4.7.1|
+|`Switch.System.Threading.UseNetCoreTimer`|コントロールかどうか<xref:System.Threading.Timer>拡張性の高い環境のパフォーマンスの向上のインスタンスを利用します。 場合`true`、パフォーマンスの向上が有効な場合`false`(既定値) が無効になります。|.NET Framework 4.8|
 |`Switch.System.Uri.`<br/>`DontEnableStrictRFC3986ReservedCharacterSets`|場合によってはデコードされた特定のパーセントでエンコードされた文字を常に保たれるエンコードされたようになりましたかどうかを判断します。 場合`true`、デコードされた。 それ以外は`false`します。|.NET Framework 4.7.2|
 |`Switch.System.Uri.`<br/>`DontKeepUnicodeBidiFormattingCharacters`|Uri に Unicode の双方向文字の処理を決定します。 `true` Uri; からそれらを削除するには`false`を保持し、そのパーセントでエンコードします。|.NET Framework 4.7.2|
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation が以前のアルゴリズムを適用するかどうかを指定します (`true`) または新しいアルゴリズム (`false`) 内に領域を割り当てる\*-列。 詳細については、「[軽減策:グリッド コントロールの-column に領域の割り当て](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns)します。 |.NET Framework 4.7 |
@@ -178,4 +180,4 @@ ms.locfileid: "59136462"
 
 - <xref:System.AppContext?displayProperty=nameWithType>
 - [\<ランタイム > 要素](runtime-element.md)
-- [\<configuration > 要素](../configuration-element.md)
+- [\<configuration> 要素](../configuration-element.md)

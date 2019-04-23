@@ -9,10 +9,10 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 2509302d-a74e-484f-9890-2acdbfa67a68
 ms.openlocfilehash: babae31a3be9775d07ca84c54e1177d297cab5cf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59108759"
 ---
 # <a name="considerations-when-hosting-an-activex-control-on-a-windows-form"></a>Windows フォームで ActiveX コントロールをホストする場合の考慮事項
@@ -30,7 +30,7 @@ Windows フォームは、Windows フォーム コントロールをホストす
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: Windows フォームに ActiveX コントロールを追加する](how-to-add-activex-controls-to-windows-forms.md)
+- [方法: Windows フォームに ActiveX コントロールを追加します。](how-to-add-activex-controls-to-windows-forms.md)
 - [コード アクセス セキュリティ](../../misc/code-access-security.md)
 - [各言語およびライブラリにおける、コントロールとプログラミング可能オブジェクトの比較](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))
 - [Windows フォームへのコントロールの追加](putting-controls-on-windows-forms.md)

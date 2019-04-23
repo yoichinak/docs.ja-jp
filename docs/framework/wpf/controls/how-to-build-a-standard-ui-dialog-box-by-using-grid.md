@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Grid control [WPF], creating [WPF], dialog box
 ms.assetid: d6ac3d51-844b-4d29-96d8-81a696a7b960
 ms.openlocfilehash: 0ade908e92e552017acb9ba242ccba2c28c3c995
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149527"
 ---
 # <a name="how-to-build-a-standard-ui-dialog-box-by-using-grid"></a>方法: グリッドを使用して標準 UI ダイアログ ボックスをビルドする
@@ -37,4 +37,4 @@ ms.locfileid: "59149527"
 - <xref:System.Windows.Controls.Grid>
 - <xref:System.Windows.GridUnitType>
 - [パネルの概要](panels-overview.md)
-- [方法のトピック](grid-how-to-topics.md)
+- [方法トピック](grid-how-to-topics.md)

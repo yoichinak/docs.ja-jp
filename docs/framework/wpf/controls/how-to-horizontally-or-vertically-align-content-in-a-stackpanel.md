@@ -10,10 +10,10 @@ helpviewer_keywords:
 - aligning [WPF], content
 ms.assetid: c1e8f962-72c8-4e7a-8670-7a2d7e021791
 ms.openlocfilehash: 03348aa0eb5b6c1791c27683c1c6c6a5d4a8a9d4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186044"
 ---
 # <a name="how-to-horizontally-or-vertically-align-content-in-a-stackpanel"></a>方法: StackPanel にコンテンツを水平方向または垂直方向に配置する

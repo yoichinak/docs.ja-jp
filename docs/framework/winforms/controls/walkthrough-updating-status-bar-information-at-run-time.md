@@ -12,10 +12,10 @@ helpviewer_keywords:
 - panels [Windows Forms], refreshing status bar
 ms.assetid: cc2abb06-c082-49f7-a5a3-2fd1bbcb58d1
 ms.openlocfilehash: 7beae9bb886c7c79d4d97375887bfecb0c2a40c1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59333315"
 ---
 # <a name="walkthrough-updating-status-bar-information-at-run-time"></a>チュートリアル: ステータス バー情報の実行時更新
@@ -88,6 +88,6 @@ ms.locfileid: "59333315"
 
 - <xref:System.Windows.Forms.StatusBar>
 - <xref:System.Windows.Forms.ToolStripStatusLabel>
-- [方法: StatusBar コントロールにパネルを追加する](how-to-add-panels-to-a-statusbar-control.md)
-- [方法: Windows フォームの StatusBar コントロールでクリックされたパネルを確認する](determine-which-panel-wf-statusbar-control-was-clicked.md)
+- [方法: StatusBar コントロールにパネルを追加します。](how-to-add-panels-to-a-statusbar-control.md)
+- [方法: Windows フォームの StatusBar コントロール パネルのクリックを確認します。](determine-which-panel-wf-statusbar-control-was-clicked.md)
 - [StatusBar コントロールの概要](statusbar-control-overview-windows-forms.md)

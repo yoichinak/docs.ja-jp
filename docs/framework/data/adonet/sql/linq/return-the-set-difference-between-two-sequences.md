@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 62efb546-c898-408f-af21-36e7c6fed217
 ms.openlocfilehash: 7edc60c7ab8510aadd9ac273529a88adeb41352a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124281"
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>2 つのシーケンスの差集合の取得

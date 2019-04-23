@@ -2,12 +2,12 @@
 title: C# 言語のバージョンの選択 - C# ガイド
 description: 特定のコンパイラ バージョンを使用して構文の検証を実行するコンパイラを構成します。
 ms.date: 02/28/2019
-ms.openlocfilehash: 6d31a757171bd2eecdcc1fbd3da765dcb3fe45c0
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: feb3e51a107f9830071b55c7985f202edc842f4a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212028"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59770881"
 ---
 # <a name="select-the-c-language-version"></a>C# 言語のバージョンの選択
 
@@ -80,7 +80,7 @@ Visual Studio のバージョンを設定できます。 ソリューション �
 
 ## <a name="configure-multiple-projects"></a>複数のプロジェクトを構成する
 
-複数のディレクトリを構成する `<LangVersion>` 要素を含む **Directory.build.props** ファイルを作成することができます。 この操作は通常、ソリューション ディレクトリで実行します。 ソリューション ディレクトリ内の **Directory.build.props** ファイルに以下を追加します。
+複数のディレクトリを構成する `<LangVersion>` 要素を含む **Directory.Build.props** ファイルを作成することができます。 この操作は通常、ソリューション ディレクトリで実行します。 ソリューション ディレクトリ内の **Directory.Build.props** ファイルに以下を追加します。
 
 ```xml
 <Project>

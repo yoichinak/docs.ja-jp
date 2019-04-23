@@ -11,10 +11,10 @@ helpviewer_keywords:
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: c0125e34-cd74-4c35-818c-3e40f462b0a3
 ms.openlocfilehash: 7115c227cb24cf12a50073d0dc587524abf0cbb9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59163579"
 ---
 # <a name="how-to-use-a-control-rendering-class"></a>方法: コントロールの描画クラスを使用する

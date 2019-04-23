@@ -16,12 +16,12 @@ helpviewer_keywords:
 - time strings
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4c8aa10c25fd7459bebb1de6d71a54b6e361e20e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 413a04d6ccdfff4b9cbf937821683ab7f7b37361
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54560816"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59208125"
 ---
 # <a name="parsing-date-and-time-strings-in-net"></a>.NET での日付と時刻文字列の解析
 
@@ -32,7 +32,6 @@ ms.locfileid: "54560816"
 1. テキストの表現で不足している構成要素を、日付と時刻でどのように設定するのか指定する場合があります。
 
 <xref:System.DateTime.Parse%2A> メソッドと <xref:System.DateTime.TryParse%2A> メソッドでは、多くの一般的な日付と時刻の表現を変換します。 <xref:System.DateTime.ParseExact%2A> メソッドと <xref:System.DateTime.TryParseExact%2A> メソッドでは、日付と時刻の書式指定文字列で指定されたパターンに適合する文字列形式を変換します。 (詳細については、「[標準の日時書式指定文字列](standard-date-and-time-format-strings.md)」および「[カスタム日時書式指定文字列](custom-date-and-time-format-strings.md)」の記事をご覧ください。)
-
 
 現在の <xref:System.Globalization.DateTimeFormatInfo> オブジェクトでは、テキストを日付と時刻として解釈する方法について、より細かく制御できます。 <xref:System.Globalization.DateTimeFormatInfo> のプロパティでは、日付と時刻の区切り記号、月、日、時代 (年号) の名前、"AM" および "PM" を指定する書式について記述します。 現在のスレッド カルチャでは、現在のカルチャを表す <xref:System.Globalization.DateTimeFormatInfo> が提供されます。 特定のカルチャまたはカスタム設定が必要な場合は、解析メソッドの <xref:System.IFormatProvider> パラメーターを指定します。 <xref:System.IFormatProvider> パラメーターには、カルチャを表す <xref:System.Globalization.CultureInfo> オブジェクト、または <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを指定します。
 

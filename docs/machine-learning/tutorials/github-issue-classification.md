@@ -5,10 +5,10 @@ ms.date: 03/12/2019
 ms.topic: tutorial
 ms.custom: mvc
 ms.openlocfilehash: e25f044247064db26e4e1e74590d6f4970fe4477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59318781"
 ---
 # <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>チュートリアル: ML.NET を、GitHub の問題を分類する多クラス分類シナリオで使用する
@@ -203,8 +203,8 @@ ML.NET ではデータは `SQL view` に似ています。 つまり、遅延評
 
 * 最初の列 `ID` (GitHub 問題 ID)
 * 2 番目の列 `Area` (トレーニングの予測)
-* 3 番目の列 `Title` (GitHub の問題のタイトル) は、次の予測に使用される最初の[特徴](../resources/glossary.md##feature)です:  `Area`
-* 第 4 列 `Description` は、の予測に使用される 2 番目の特徴です:  `Area`
+* 3 番目の列 `Title` (GitHub の問題のタイトル) は、`Area` の予測に使用される最初の[特徴](../resources/glossary.md##feature)です
+* 第 4 列 `Description` は、`Area` の予測に使用される 2 番目の特徴です
 
 パイプラインで利用するために `_trainingDataView` グローバル変数を初期化して読み込むには、`mlContext` 初期化の後に次のコードを追加します。
 

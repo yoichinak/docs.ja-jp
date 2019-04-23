@@ -3,10 +3,10 @@ title: System.ServiceModel.Channels.PeerNodeOpenFailed
 ms.date: 03/30/2017
 ms.assetid: fd908a42-30d1-4301-bc33-35b503896634
 ms.openlocfilehash: 1aada8e4784af8f304b6ddb4842b79e149e06bd9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140960"
 ---
 # <a name="systemservicemodelchannelspeernodeopenfailed"></a>System.ServiceModel.Channels.PeerNodeOpenFailed

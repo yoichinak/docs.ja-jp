@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID459
 ms.assetid: 785df3f3-2aae-4a25-af36-1f9879d4e5fd
 ms.openlocfilehash: ad9176b5332a75f03968e742501c3fce541055de
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342883"
 ---
 # <a name="object-or-class-does-not-support-the-set-of-events"></a>オブジェクトまたはクラスがこのイベント セットをサポートしていません。
@@ -20,5 +20,5 @@ ms.locfileid: "59342883"
   
 ## <a name="see-also"></a>関連項目
 
-- [ReadOnly](../../../visual-basic/language-reference/modifiers/withevents.md)
+- [WithEvents](../../../visual-basic/language-reference/modifiers/withevents.md)
 - [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)

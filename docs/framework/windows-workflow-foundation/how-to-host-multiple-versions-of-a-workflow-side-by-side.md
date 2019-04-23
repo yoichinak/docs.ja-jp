@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
 ms.openlocfilehash: 4fc4565db58d008f52bc047d26118fc849648770
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329454"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>方法: ワークフローの複数のバージョンを同時にホストする
-`WorkflowIdentity` ワークフロー アプリケーションの開発者に関連付けるワークフロー定義、名前とバージョンをこの情報を永続化されたワークフロー インスタンスに関連付けられた方法を提供します。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 チュートリアルのこの手順では、`WorkflowIdentity` を使用してワークフローの複数のバージョンを同時にホストする方法について説明します。
+`WorkflowIdentity` を使用すると、ワークフロー アプリケーションの開発者は、名前とバージョンをワークフロー定義に関連付け、永続化されたワークフロー インスタンスにこの情報を関連付けることができます。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 チュートリアルのこの手順では、`WorkflowIdentity` を使用してワークフローの複数のバージョンを同時にホストする方法について説明します。
 
 > [!NOTE]
 >  完成版をダウンロードまたはチュートリアルのビデオ チュートリアルを表示を参照してください。 [Windows Workflow Foundation (WF45) - チュートリアル入門](https://go.microsoft.com/fwlink/?LinkID=248976)します。  
@@ -25,15 +25,15 @@ ms.locfileid: "59329454"
   
 -   [ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflows)  
   
-    -   [StateMachine ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
+    -   [ステート マシン ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateStateMachine)  
   
     -   [フローチャート ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateFlowchart)  
   
     -   [シーケンシャル ワークフローを更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateSequential)  
   
--   [以前のワークフロー バージョンを含むように WorkflowVersionMap を更新するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
+-   [ワークフローの以前のバージョンを含める WorkflowVersionMap を更新します。](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_UpdateWorkflowVersionMap)  
   
--   [アプリケーションをビルドして実行するには](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
+-   [ビルドして、アプリケーションの実行](how-to-host-multiple-versions-of-a-workflow-side-by-side.md#BKMK_BuildAndRun)  
   
 > [!NOTE]
 >  このトピックの手順を実行する前に、アプリケーションを実行し、各種類のワークフローをいくつか開始して、ワークフローごとに 1 つまたは 2 つの推定値を作成します。 これらの永続化されたワークフローがこの手順と次の手順で使用される[方法。実行中のワークフロー インスタンスの定義を更新](how-to-update-the-definition-of-a-running-workflow-instance.md)します。
@@ -555,14 +555,14 @@ ms.locfileid: "59329454"
 
 2. クリックして新しいワークフローを開始**新しいゲーム**します。 ワークフローのバージョンは、ステータス ウィンドウの下に表示され、関連付けられた `WorkflowIdentity` から更新後のバージョンを反映します。 完了時にワークフローの追跡ファイルを確認できるように `InstanceId` を書き留めておき、ゲームが完了するまで推定値を入力します。 `WriteLine` アクティビティに対する更新に基づき、ステータス ウィンドウに示される情報に、ユーザーの推定値がどのように表示されるかを確認します。
 
- **Please enter a number between 1 and 10**  
-**5 is too high.**  
-**Please enter a number between 1 and 10**  
-**3 is too high.**  
-**Please enter a number between 1 and 10**  
-**1 is too low.**  
-**Please enter a number between 1 and 10**  
-**Congratulations, you guessed the number in 4 turns.**  
+ **1 から 10 までの数値を入力してください。**  
+**5 が多すぎます。**  
+**1 から 10 までの数値を入力してください。**  
+**3 が多すぎます。**  
+**1 から 10 までの数値を入力してください。**  
+**1 は低いままです。**  
+**1 から 10 までの数値を入力してください。**  
+**これで、4 つの交替で数を推測します。**  
 
     > [!NOTE]
     >  `WriteLine` アクティビティから更新されたテキストは表示されますが、このトピックで追加された最後の `WriteLine` アクティビティの出力は表示されません。 これは、ステータス ウィンドウが `PersistableIdle` ハンドラーによって更新されるためです。 ワークフローは完了し、最後のアクティビティの後にアイドル状態にならないため、`PersistableIdle` ハンドラーは呼び出されません。 ただし、`Completed` ハンドラーによって同様のメッセージがステータス ウィンドウに表示されます。 必要に応じて、コードを `Completed` ハンドラーに追加し、`StringWriter` からテキストを抽出してステータス ウィンドウに表示できます。

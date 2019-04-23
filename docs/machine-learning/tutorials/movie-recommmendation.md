@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: 822ad0fc7a0a765fbf8664522a2e23f7aca4ea16
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: efa217440ae636422bc8d2bd429f0396d7d28057
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921261"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59311098"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>チュートリアル: ML.NET を使用して映画の推奨システムを作成する
 
@@ -33,6 +33,7 @@ ms.locfileid: "58921261"
 このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) リポジトリで確認できます。
 
 ## <a name="machine-learning-workflow"></a>機械学習ワークフロー
+
 次の手順を使用して、自分のタスクとその他の ML.NET タスクを実行します。
 
 1. [データを読み込む](#load-your-data)
@@ -42,7 +43,7 @@ ms.locfileid: "58921261"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-* [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。
+* [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。
 
 ## <a name="select-the-appropriate-machine-learning-task"></a>適切な機械学習タスクを選択する
 
@@ -62,19 +63,19 @@ ms.locfileid: "58921261"
 
     **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、**[参照]** タブを選択して「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、**[インストール]** を選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.Recommender** に対してこれらの手順を繰り返します。
 
-  > [!NOTE]
-  > このチュートリアルでは、**Microsoft.ML v0.11.0** と **Microsoft.ML.Recommender v0.11.0** を使用します。
-    
+    > [!NOTE]
+    > このチュートリアルでは、**Microsoft.ML v0.11.0** と **Microsoft.ML.Recommender v0.11.0** を使用します。
+
 4. *Program.cs* の先頭に次の `using` ステートメントを追加します。
-    
+
     [!code-csharp[UsingStatements](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#UsingStatements "Add necessary usings")]
 
 ### <a name="download-your-data"></a>データをダウンロードする
 
 1. 2 つのデータセットをダウンロードし、以前に作成した *Data* フォルダーに保存します。
 
-*   [*recommendation-ratings-train.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv) を右クリックして、[名前を付けてリンク先を保存] または [対象をファイルに保存] を選択します。
-*   [*recommendation-ratings-test.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv) 右クリックして、[名前を付けてリンク先を保存] または [対象をファイルに保存] を選択します。
+   * [*recommendation-ratings-train.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-train.csv) を右クリックして、[名前を付けてリンク先を保存] または [対象をファイルに保存] を選択します。
+   * [*recommendation-ratings-test.csv*](https://raw.githubusercontent.com/dotnet/machinelearning-samples/master/samples/csharp/getting-started/MatrixFactorization_MovieRecommendation/Data/recommendation-ratings-test.csv) 右クリックして、[名前を付けてリンク先を保存] または [対象をファイルに保存] を選択します。
 
      \*.csv ファイルを、*Data* フォルダーに保存したことを確認します。または他の場所に保存した後に、\*.csv ファイルを *Data* フォルダーに移動します。
 
@@ -149,10 +150,10 @@ using Microsoft.ML.Data;
 [MLContext クラス](xref:Microsoft.ML.MLContext)は、すべての ML.NET 操作の開始点で、`mlContext` を初期化することで、モデル作成ワークフローのオブジェクト間で共有できる新しい ML.NET 環境が作成されます。 これは Entity Framework における `DBContext` と概念的には同じです。
 
 `Main()` の後に、`LoadData()` と呼ばれるメソッドを作成します。
+
 ```csharp
 public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 {
-
 
 }
 ```
@@ -164,14 +165,13 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
-ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.Data.DataView.IDataView)として表されます。 `IDataView` は、表形式のデータ (数値とテキスト) を表すための柔軟で効率的な方法です。 データはテキスト ファイルから、またはリアルタイムで (SQL データベースやログ ファイルなど) `IDataView` オブジェクトに読み込むことができます。
+ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)として表されます。 `IDataView` は、表形式のデータ (数値とテキスト) を表すための柔軟で効率的な方法です。 データはテキスト ファイルから、またはリアルタイムで (SQL データベースやログ ファイルなど) `IDataView` オブジェクトに読み込むことができます。
 
 [LoadFromTextFile()](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29) は、データ スキーマを定義し、ファイルを読み取ります。 データ パス変数を取得して、`IDataView` を返します。 ここでは、`Test` ファイルと `Train` ファイルへのパスを指定して、テキスト ファイル ヘッダー (列名を正しく使用できるようにするため) とコンマ文字のデータ区切り記号 (既定の区切り記号はタブ) の両方を指定します。
 
 `Main()` メソッドの次の 2 つのコード行として以下を追加して、`LoadData()` メソッドを呼び出し、`Train` と `Test` のデータを返します。
 
 [!code-csharp[LoadDataMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadDataMain "Add LoadData method to Main")]
-
 
 ## <a name="build-and-train-your-model"></a>モデルを構築してトレーニングする
 
@@ -190,13 +190,14 @@ ML.NET には、次の 3 つの主要な概念があります。[データ](../b
 次の手順に従って `Estimator` を構築します。
 
 `LoadData()` メソッドの直後に、次のコードを使用して `BuildAndTrainModel()` メソッドを作成します。
+
 ```csharp
 public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView trainingDataView)
 {
 
-
 }
 ```
+
 > [!NOTE]
 > このメソッドは、次の手順で return ステートメントを追加するまでエラーになります。
 
@@ -211,7 +212,6 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 | 1 | 1 | 4 | userKey1 | movieKey1 |
 | 1 | 3 | 4 | userKey1 | movieKey2 |
 | 1 | 6 | 4 | userKey1 | movieKey3 |
-
 
 機械学習アルゴリズムを選択し、`BuildAndTrainModel()` 内に次のコード行として以下を追加することで、データ変換定義にそれを追加します。
 
@@ -234,7 +234,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 [!code-csharp[FitModel](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#FitModel "Call the Fit method and return back the trained model")]
 
-[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.Data.DataView.IDataView,Microsoft.Data.DataView.IDataView%29) メソッドは、指定されたトレーニング データセットを使用してモデルをトレーニングします。 正確には、データを変換してトレーニングを適用することで、`Estimator` 定義を実行し、トレーニング済みモデル (`Transformer`) を返します。
+[Fit()](xref:Microsoft.ML.Trainers.MatrixFactorizationTrainer.Fit%28Microsoft.ML.IDataView,Microsoft.ML.IDataView%29) メソッドは、指定されたトレーニング データセットを使用してモデルをトレーニングします。 正確には、データを変換してトレーニングを適用することで、`Estimator` 定義を実行し、トレーニング済みモデル (`Transformer`) を返します。
 
 `Main()` メソッドの次のコード行として以下を追加して、`BuildAndTrainModel()` メソッドを呼び出し、トレーニング済みモデルを返します。
 
@@ -245,10 +245,10 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 モデルをトレーニングしたら、テスト データを使用してモデルのパフォーマンスを評価します。 
 
 `BuildAndTrainModel()` メソッドの直後に、次のコードを使用して `EvaluateModel()` メソッドを作成します。
+
 ```csharp
 public static void EvaluateModel(MLContext mlContext, IDataView testDataView, ITransformer model)
 {
-
 
 }
 ```
@@ -304,9 +304,11 @@ RSquared: 0.412556298844873
 
 この出力には 20 のイテレーションがあります。 イテレーションごとに測定誤差が低下し、0 にどんどん近づいていきます。
 
-`root of mean squared error` (RMS または RMSE) は、モデルで予測された値とテスト データセットで観察された値との差を測定するためによく使用されます。 厳密には、これはエラーの 2 乗の平均の平方根です。 RMSE スコアは可能な限り 1 に近づけます。
+モデル予測値とテスト データセットで観察された値の差を測定するために `root of mean squared error` (RMS または RMSE) が使用されます。 厳密には、これはエラーの 2 乗の平均の平方根です。 RMS が低いほど、優れたモデルになります。
 
-`R Squared` は、モデルによって予測された値におけるバリエーションの割合です。 これは 0 から 1 の値で、0 に近いほど優れたモデルになります。
+`R Squared` は、データがモデルにどの程度適合しているかを示します。 0 ～ 1 の値になります。 値 0 は、データがランダムであるか、モデルに適合できないことを意味します。 値 1 は、モデルがデータと完全に一致していることを意味します。 `R Squared` スコアは可能な限り 1 に近づけます。
+
+優れたモデルの構築は、反復的なプロセスです。 このチュートリアルでは、モデルのトレーニングを短時間で実行するために小さなデータセットを使用しているため、このモデルの品質は最初は低くなっています。 このモデルの品質に満足できなければ、大規模なトレーニング データセットを使用するか、別のトレーニング アルゴリズムとアルゴリズムごとに異なるハイパーパラメーターを選択することで、モデルを改良することを試行できます。 詳細については、後述する「[モデルを改良する](#improve-your-model)」セクションを参照してください。
 
 ## <a name="use-your-model"></a>モデルを使用する
 
@@ -316,7 +318,6 @@ RSquared: 0.412556298844873
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
 {
-
 
 }
 ```
@@ -351,13 +352,14 @@ Movie 10 is recommended for user 6
 ```
 
 ### <a name="save-your-model"></a>モデルを保存する
+
 エンド ユーザー アプリケーションでモデルを使用して予測を行うには、最初にモデルを保存する必要があります。
 
 `UseModelForSinglePrediction()` メソッドの直後に、次のコードを使用して `SaveModel()` メソッドを作成します。
+
 ```csharp
 public static void SaveModel(MLContext mlContext, ITransformer model)
 {
-
 
 }
 ```
@@ -373,6 +375,7 @@ public static void SaveModel(MLContext mlContext, ITransformer model)
 [!code-csharp[SaveModelMain](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#SaveModelMain "Create SaveModel method in Main")]
 
 ### <a name="use-your-saved-model"></a>保存したモデルを使用する
+
 トレーニング済みモデルを保存すると、さまざまな環境でそのモデルを利用できるようになります (トレーニング済みの機械学習モデルを運用化する方法については、[「ハウツー ガイド」](../how-to-guides/consuming-model-ml-net.md)を参照してください)。
 
 ## <a name="results"></a>結果
@@ -416,7 +419,7 @@ Movie 10 is recommended for user 6
 
 より正確な予測を取得するために、モデルのパフォーマンスを向上させることができるいくつかの方法があります。
 
-### <a name="data"></a>データ 
+### <a name="data"></a>データ
 
 各ユーザーと映画 ID の十分なサンプルが含まれたトレーニング データをさらに追加することで、レコメンデーション モデルの品質を向上させることができます。
 
@@ -450,6 +453,7 @@ var options = new MatrixFactorizationTrainer.Options
 ```
 
 ### <a name="other-recommendation-algorithms"></a>その他のレコメンデーション アルゴリズム
+
 協調フィルタリングを使用した行列因子分解アルゴリズムは、映画のレコメンデーションを実行するための唯一のアプローチです。 利用可能な評価データがなく、ユーザーから映画の履歴を入手するしかない場合がよくあります。 または、ユーザーの評価データ以上のものがある場合もあります。
 
 | アルゴリズム       | シナリオ           | サンプル  |
@@ -458,12 +462,15 @@ var options = new MatrixFactorizationTrainer.Options
 | Field Aware Factorization Machines | userId、productId、rating 以外の特徴 (製品の説明や製品の価格など) がある場合にはこれを使用してレコメンデーションを作成します。 この手法では協調フィルタリング アプローチも使用します。 | [> 試す](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/end-to-end-apps/Recommendation-MovieRecommender) |
 
 ### <a name="new-user-scenario"></a>新規ユーザー シナリオ
+
 協調フィルタリングで一般的な問題の 1 つは、推測するための以前のデータがない新規ユーザーがいる場合のコールド スタートの問題です。 この問題は多くの場合、新規ユーザーにプロファイルを作成して、たとえば過去に見た映画を評価してもらうことで解決できます。 この手法はユーザーに多少の負担をかけることになりますが、評価履歴がない新規ユーザーの開始データが得られます。
 
 ## <a name="resources"></a>リソース
+
 このチュートリアルで使用したデータは、[MovieLens データセット](http://files.grouplens.org/datasets/movielens/)から派生しています。
 
 ## <a name="next-steps"></a>次の手順
+
 このチュートリアルでは、次の作業を行う方法を学びました。
 
 > [!div class="checklist"]

@@ -3,12 +3,12 @@ title: 分岐とループ - C# の概要に関するチュートリアル
 description: 分岐とループに関するこのチュートリアルでは、C# のコードを記述して、この言語における、ステートメントを繰り返し実行するための条件付き分岐とループに対応している構文について学習します。
 ms.date: 10/31/2017
 ms.custom: mvc
-ms.openlocfilehash: ad5891c11c516a7c5e3d46bea9c17c85b4a8536e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: 4a116ae5294915770dec742c147cf2ba1bf6e284
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920949"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427254"
 ---
 # <a name="learn-conditional-logic-with-branch-and-loop-statements"></a>分岐およびループ ステートメントを使用した条件付きロジックについて説明します
 
@@ -88,34 +88,38 @@ else
 
 ```csharp
 int c = 4;
-if ((a + b + c > 10) && (a > b))
+if ((a + b + c > 10) && (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("And the first number is greater than the second");
+    Console.WriteLine("And the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("Or the first number is not greater than the second");
+    Console.WriteLine("Or the first number is not equal to the second");
 }
 ```
+
+`==` シンボルは、"*同等性*" をテストします。 `==` を使用すると、同等性のテストが `a = 5` で確認した割り当てと区別されます。
 
 `&&` は "and" (および) を表します。 これは、true 分岐でステートメントを実行するには、両方の条件が true になる必要があることを意味しています。  また、これらの例では、ステートメントが `{` と `}` で囲まれていれば、各条件分岐に複数のステートメントを持つことができることを示しています。
 
 `||` を使用して "or" (または) を表すこともできます。 これまでに記述したコードの下に、次のコードを追加します。
 
 ```csharp
-if ((a + b + c > 10) || (a > b))
+if ((a + b + c > 10) || (a == b))
 {
     Console.WriteLine("The answer is greater than 10");
-    Console.WriteLine("Or the first number is greater than the second");
+    Console.WriteLine("Or the first number is equal to the second");
 }
 else
 {
     Console.WriteLine("The answer is not greater than 10");
-    Console.WriteLine("And the first number is not greater than the second");
+    Console.WriteLine("And the first number is not equal to the second");
 }
 ```
+
+`a`、`b`、および `c`の値を変更し、探索する `&&` と `||` を切り替えます。 `&&` 演算子と `||` 演算子がどのように機能するかをより深く理解できます。
 
 最初の手順が完了しました。 次のセクションを開始する前に、現在のコードを別のメソッドに移動してみましょう。 移動しておくと、新しい例で作業を開始するときに楽になります。 `Main` メソッドの名前を `ExploreIf` に変更し、`ExploreIf` を呼び出す新しい `Main` メソッドを記述します。 完成したコードは次のようになります。
 

@@ -7,17 +7,17 @@ helpviewer_keywords:
 - binding [WPF], updates [WPF], notifications of
 ms.assetid: 5673073e-dbe1-49da-980a-484a88f9595a
 ms.openlocfilehash: 4185198312ed98f9aaa1388626600d9f21abae55
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59213963"
 ---
 # <a name="how-to-set-up-notification-of-binding-updates"></a>方法: バインディングの更新の通知を設定する
 この例では、バインドのバインディング ターゲット (ターゲット) またはバインディング ソース (ソース) のプロパティが更新されたときに通知するように設定する方法を示します。  
   
 ## <a name="example"></a>例  
- [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] イベントを発生させますデータ更新たびに、バインディング ソースまたはターゲットが更新されました。 内部的には、このイベントは、バインドされたデータが変更されているため、更新する必要があることを [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] に通知するために使用されます。 これらのイベントをするには、また、一方向または双方向のバインドが適切に機能が使用してデータ クラスを実装する必要がありますに注意してください、<xref:System.ComponentModel.INotifyPropertyChanged>インターフェイス。 詳細については、「[プロパティの変更通知を実装する](how-to-implement-property-change-notification.md)」を参照してください。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、バインドのソースまたはターゲットが更新されるたびにデータ更新イベントを発生させます。 内部的には、このイベントは、バインドされたデータが変更されているため、更新する必要があることを [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] に通知するために使用されます。 これらのイベントをするには、また、一方向または双方向のバインドが適切に機能が使用してデータ クラスを実装する必要がありますに注意してください、<xref:System.ComponentModel.INotifyPropertyChanged>インターフェイス。 詳細については、「[プロパティの変更通知を実装する](how-to-implement-property-change-notification.md)」を参照してください。  
   
  設定、<xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>または<xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>するプロパティ (または両方)`true`バインドにします。 このイベントをリッスンするために提供するハンドラーは、変更を通知する要素に直接アタッチするか、コンテキスト内の何かが変更されたことを認識する場合は、全体的なデータ コンテキストにアタッチする必要があります。  
   
@@ -35,4 +35,4 @@ ms.locfileid: "59213963"
 ## <a name="see-also"></a>関連項目
 
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法のトピック](data-binding-how-to-topics.md)
+- [方法トピック](data-binding-how-to-topics.md)

@@ -13,10 +13,10 @@ ms.assetid: c323687e-b196-487b-beba-f38f9b3f961b
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5f33be207dd6166b16a04844f3d92b6e017d1c7a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345444"
 ---
 # <a name="replacing-a-principal-object"></a>プリンシパル オブジェクトの置き換え

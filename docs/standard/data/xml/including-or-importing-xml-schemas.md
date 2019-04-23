@@ -10,10 +10,10 @@ ms.assetid: fe1b4a11-37f4-4e1a-93c9-239f4fe736c0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 45f6b402ae01b7f762f8ef10dcfb0bc46f949db6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343572"
 ---
 # <a name="including-or-importing-xml-schemas"></a>XML スキーマのインクルードまたはインポート

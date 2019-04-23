@@ -18,10 +18,10 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211927"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
@@ -123,7 +123,7 @@ ms.locfileid: "59211927"
  アプリケーションに必要な特定のアプリケーション データ ファイルのセットが更新されても、そのファイルを使用するアセンブリを再コンパイルせずに、コンテンツ ファイルを使用する必要があります。  
   
 ### <a name="configuring-content-files"></a>コンテンツ ファイルの構成  
- コンテンツ ファイルをプロジェクトに追加するには、アプリケーション データ ファイルでとして指定する必要があります、`Content`項目。 さらに、コンテンツ ファイルがアセンブリに直接コンパイルされていないため、設定する必要が、[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory`メタデータ要素をコンテンツ ファイルがビルドされたアセンブリに対して相対的な場所にコピーされたことを指定します。 プロジェクトをビルド、リソースを毎回ビルド出力フォルダーにコピーする場合は、設定、`CopyToOutputDirectory`メタデータ要素を`Always`値。 使用してビルド出力フォルダーにリソースの最新バージョンのみがコピーされたことを確認する場合は、`PreserveNewest`値。  
+ コンテンツ ファイルをプロジェクトに追加するには、アプリケーション データ ファイルでとして指定する必要があります、`Content`項目。 さらに、コンテンツ ファイルがアセンブリに直接コンパイルされていないため、設定する必要が、 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory`メタデータ要素をコンテンツ ファイルがビルドされたアセンブリに対して相対的な場所にコピーされたことを指定します。 プロジェクトをビルド、リソースを毎回ビルド出力フォルダーにコピーする場合は、設定、`CopyToOutputDirectory`メタデータ要素を`Always`値。 使用してビルド出力フォルダーにリソースの最新バージョンのみがコピーされたことを確認する場合は、`PreserveNewest`値。  
   
  次に示すファイルは、新しいバージョンのリソースがプロジェクトに追加された場合にのみビルド出力フォルダーにコピーされるコンテンツ ファイルとして構成されています。  
   
@@ -197,7 +197,7 @@ ms.locfileid: "59211927"
 ### <a name="configuring-site-of-origin-files"></a>起点サイト ファイルの構成  
  起点サイト ファイルがコンパイル時に存在しないか不明な場合は、従来の展開を使用する必要がありますいずれかの使用など、実行時に、必要なファイルを確保するためのメカニズムが使用可能な、`XCopy`コマンド ライン プログラム、または、 [!INCLUDE[TLA#tla_wininstall](../../../../includes/tlasharptla-wininstall-md.md)].  
   
- それらのファイルを追加することがわかっている場合はコンパイル時にファイルを元のサイトに配置されるような場合は明示的な依存関係をしないように、[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]プロジェクトとして`None`項目。 コンテンツ ファイルと設定する必要がある、[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`CopyToOutputDirectory`いずれかを指定することでビルドされたアセンブリに対して相対的な場所に、起点サイト ファイルをコピーすることを指定する属性、`Always`値または`PreserveNewest`値。  
+ それらのファイルを追加することがわかっている場合はコンパイル時にファイルを元のサイトに配置されるような場合は明示的な依存関係をしないように、[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]プロジェクトとして`None`項目。 コンテンツのファイルで設定する必要がある、 [!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)] `CopyToOutputDirectory`元のファイルのサイトがいずれかを指定することによってビルドされたアセンブリに対応する場所にコピーされていることを指定する属性、`Always`値または`PreserveNewest`値。  
   
 ```xml  
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ... >  

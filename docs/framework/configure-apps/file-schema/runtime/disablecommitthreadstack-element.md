@@ -11,10 +11,10 @@ ms.assetid: 3559d46a-7640-4c72-9a11-7e980768929e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 08ffd6ffcb9a8fa356d486f6d2ae1113de0fa682
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106516"
 ---
 # <a name="disablecommitthreadstack-element"></a>\<disableCommitThreadStack > 要素

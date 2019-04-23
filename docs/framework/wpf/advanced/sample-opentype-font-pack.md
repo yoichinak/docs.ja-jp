@@ -7,10 +7,10 @@ helpviewer_keywords:
 - typography [WPF], OpenType font pack
 ms.assetid: 56b46fa1-a44e-419b-8f14-25ad51c715c3
 ms.openlocfilehash: 96a0a5feaf14a7f040402681e90fba8f9766324b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199038"
 ---
 # <a name="sample-opentype-font-pack"></a>OpenType フォント パックのサンプル
@@ -20,7 +20,7 @@ ms.locfileid: "59199038"
 ## <a name="fonts-in-the-opentype-font-pack"></a>OpenType フォント パックのフォント  
  [!INCLUDE[TLA2#tla_wcsdk](../../../../includes/tla2sharptla-wcsdk-md.md)] には、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションの作成に使用できる [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント サンプルのセットが用意されています。 サンプル フォントは、Ascender Corporation のライセンスを受けて提供されています。 これらのフォントには、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォーマットで定義されている機能全体のサブセットだけが実装されています。 サンプルの [!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] フォント名の一覧を次の表に示します。  
   
-|**名前**|**ファイル**|  
+|**Name**|**ファイル**|  
 |--------------|--------------|  
 |Kootenay|Kooten.ttf|  
 |Lindsey|Linds.ttf|  

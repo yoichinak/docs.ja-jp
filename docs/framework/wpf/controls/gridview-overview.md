@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [WPF], ListView
 ms.assetid: b2d02267-32b3-40ce-8e9f-06972d8749d9
 ms.openlocfilehash: d2f55db90fb130416ee4dcb15d440b6d367c0b06
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59201300"
 ---
 # <a name="gridview-overview"></a>GridView の概要
@@ -73,30 +73,30 @@ ms.locfileid: "59201300"
   
  次の一覧で詳細を使用する機能について説明します<xref:System.Windows.Controls.GridView>ユーザーの操作。  
   
--   **ドラッグ アンド ドロップ メソッドを使用して列の順序を変更します。**  
+-   **ドラッグ アンド ドロップで列の順序を変更する**  
   
      内の列の順序を変更できるユーザーを<xref:System.Windows.Controls.GridView>が列ヘッダーの上にマウスの左ボタンを押すと、新しい位置にその列をドラッグし、します。 ユーザーが列ヘッダーをドラッグしている間、そのヘッダーの浮動バージョンと、列を挿入する場所を示す黒い実線が表示されます。  
   
      ヘッダーの浮動バージョンの既定のスタイルを変更する場合は、指定、<xref:System.Windows.Controls.ControlTemplate>の<xref:System.Windows.Controls.GridViewColumnHeader>である型トリガーされたときに、<xref:System.Windows.Controls.GridViewColumnHeader.Role%2A>プロパティに設定されて<xref:System.Windows.Controls.GridViewColumnHeaderRole.Floating>します。 詳細については、[ドラッグした GridView 列ヘッダーのスタイルを作成する](how-to-create-a-style-for-a-dragged-gridview-column-header.md)を参照してください。  
   
--   **内容に合わせて列のサイズを変更します。**  
+-   **内容に合わせて列のサイズを変更する**  
   
      ユーザーは列ヘッダーの右側にあるグリッパーをダブルクリックすると、内容に合わせて列のサイズを変更できます。  
   
     > [!NOTE]
     >  設定することができます、<xref:System.Windows.Controls.GridViewColumn.Width%2A>プロパティを`Double.NaN`同じ効果を生成するためにします。  
   
--   **行の項目を選択します。**  
+-   **行の項目を選択する**  
   
      1 つまたは複数の項目を選択できる、<xref:System.Windows.Controls.GridView>します。  
   
      変更する場合、<xref:System.Windows.Style>のアイテムを選択し、次を参照してください。[トリガー、ListView で選択した項目のスタイルを使用して](how-to-use-triggers-to-style-selected-items-in-a-listview.md)します。  
   
--   **画面に表示されていないコンテンツを表示するスクロールします。**  
+-   **スクロールして画面に表示されていない内容を表示する**  
   
      場合のサイズ、<xref:System.Windows.Controls.GridView>がないのに十分な大きさのすべての項目を表示する、ユーザーは水平方向にスクロールまたは垂直方向にスクロール バーを使用すると、これによって提供される、<xref:System.Windows.Controls.ScrollViewer>コントロール。 A<xref:System.Windows.Controls.Primitives.ScrollBar>は、すべてのコンテンツが特定の方向に表示される場合に表示されません。 列ヘッダーは、垂直スクロール バーでのスクロール操作ではなく水平方向のスクロール操作を行います。  
   
--   **列ヘッダーのボタンをクリックして列を操作します。**  
+-   **列ヘッダーのボタンをクリックして列を操作する**  
   
      ユーザーは並べ替えアルゴリズムを指定しておけば、列ヘッダーのボタンをクリックして列に表示されているデータを並べ替えることができます。  
   
@@ -133,4 +133,4 @@ ms.locfileid: "59201300"
 - <xref:System.Windows.Controls.ViewBase>
 - [ListView の概要](listview-overview.md)
 - [ヘッダーがクリックされたときに GridView 列を並べ替える](how-to-sort-a-gridview-column-when-a-header-is-clicked.md)
-- [方法のトピック](listview-how-to-topics.md)
+- [方法トピック](listview-how-to-topics.md)

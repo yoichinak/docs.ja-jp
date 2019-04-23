@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 0d4a7f41-c758-4059-8f83-d2e9c2745593
 ms.openlocfilehash: 2133ae7902cc4746e00be75e7a801296073041e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193937"
 ---
 # <a name="query-expression-syntax-examples-navigating-relationships"></a>クエリ式の構文例:リレーションシップの操作

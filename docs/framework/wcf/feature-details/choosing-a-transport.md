@@ -5,10 +5,10 @@ helpviewer_keywords:
 - choosing transports [WCF]
 ms.assetid: b169462b-f7b6-4cf4-9fca-d306909ee8bf
 ms.openlocfilehash: 4d5fe4c92f0d456942219bc3f7014f09a005aa5d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107849"
 ---
 # <a name="choosing-a-transport"></a>トランスポートの選択
@@ -53,7 +53,7 @@ ms.locfileid: "59107849"
 |属性|説明|望ましいトランスポート|  
 |---------------|-----------------|------------------------|  
 |診断|診断によって、トランスポートの接続問題を自動的に検出できます。 すべてのトランスポートは、接続に関するエラー情報を返信する機能をサポートしています。 ただし、WCF では、ネットワークの問題を調査するための診断ツールは含まれません。|なし|  
-|ホスト|すべての WCF エンドポイントは、アプリケーション内でホストされている必要があります。 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 以前のサポート、HTTP トランスポートを使用するアプリケーションのホストのみです。 [!INCLUDE[wv](../../../../includes/wv-md.md)]サポートが TCP を含めた、すべての WCF トランスポートをホストするための追加し、名前付きパイプします。 詳細については、次を参照してください。[インターネット インフォメーション サービスをホストしている](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)と[Windows プロセス アクティブ化サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)します。|HTTP|  
+|ホスト|すべての WCF エンドポイントは、アプリケーション内でホストされている必要があります。 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] 以前では、HTTP トランスポートを使用するアプリケーションのホストだけがサポートされます。 [!INCLUDE[wv](../../../../includes/wv-md.md)]サポートが TCP を含めた、すべての WCF トランスポートをホストするための追加し、名前付きパイプします。 詳細については、次を参照してください。[インターネット インフォメーション サービスをホストしている](../../../../docs/framework/wcf/feature-details/hosting-in-internet-information-services.md)と[Windows プロセス アクティブ化サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)します。|HTTP|  
 |検査|検査は、転送中に、メッセージからの情報を抽出し、処理する機能です。 HTTP プロトコルでは、ルーティングと制御情報がデータから分離されるので、メッセージを調査して分析するツールの作成が容易になります。 検査しやすいトランスポートでは、ネットワーク機器に求められる処理能力も低い場合があります。 使用するセキュリティのレベルは、メッセージを調査できるかどうかに影響を与えます。|HTTP|  
 |待ち時間|待ち時間は、メッセージの交換を完了するために必要な最小限の時間です。 すべてのネットワーク操作には、選択したトランスポートに応じて、多少の待ち時間が発生します。 HTTP など、ネイティブ メッセージ交換パターンが要求/応答であるトランスポートで双方向または一方向通信を使用すると、メッセージの強制的な関連付けが原因で追加の待ち時間が発生する可能性があります。 このような場合、TCP など、ネイティブ メッセージ交換パターンが双方向であるトランスポートを使用することを検討してください。|TCP、名前付き<br /><br /> パイプ|  
 |範囲|トランスポートの範囲は、トランスポートが他のシステムと接続できる能力を反映しています。 名前付きパイプ トランスポートの範囲は非常に狭く、同じコンピューター上で実行しているサービスにしか接続できません。 TCP トランスポートと HTTP トランスポートの範囲は広く、一部の NAT とファイアウォール構成を通ることができます。 詳細については、次を参照してください。 [Nat とファイアウォールの使用](../../../../docs/framework/wcf/feature-details/working-with-nats-and-firewalls.md)します。|HTTP、TCP|  

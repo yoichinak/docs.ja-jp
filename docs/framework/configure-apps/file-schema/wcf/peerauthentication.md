@@ -3,10 +3,10 @@ title: <peerAuthentication>
 ms.date: 03/30/2017
 ms.assetid: ad545e6f-f06e-4549-ac92-09d758d5c636
 ms.openlocfilehash: b627105dc4aae49557b0a6684569719622e13f08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180597"
 ---
 # <a name="peerauthentication"></a>\<peerAuthentication>
@@ -48,7 +48,7 @@ ms.locfileid: "59180597"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ピア >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|ピア ノードの現在の資格情報を指定します。|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-servicecredentials.md)|ピア ノードの現在の資格情報を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
  `<authentication>` 要素は、<xref:System.ServiceModel.Security.X509PeerCertificateAuthentication> クラスに対応します。 この要素は、メッシュ内の近隣ノード間の認証時に呼び出される検証コントロールを指定します。 新しいピアが近隣ノードとの接続を確立しようとするとき、自身の資格情報を応答側のピアに渡します。 リモート パーティの資格情報を検証するために、応答側の検証が呼び出されます。 メッシュ内でピア接続が確立されるたびに、両方のピアが相互に認証されます。つまり、双方の検証が呼び出されます。  

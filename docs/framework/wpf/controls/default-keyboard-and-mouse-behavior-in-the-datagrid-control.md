@@ -8,10 +8,10 @@ helpviewer_keywords:
 - mouse behavior [WPF], DataGrid
 ms.assetid: 563b8854-ca39-4d97-8235-17eaa0f93c8d
 ms.openlocfilehash: 6be464ce85bd3ba91dd6e6cc810ec7d04edc0c3d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083323"
 ---
 # <a name="default-keyboard-and-mouse-behavior-in-the-datagrid-control"></a>DataGrid コントロールの既定のキーボード動作とマウス動作

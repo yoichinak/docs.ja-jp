@@ -15,12 +15,12 @@ helpviewer_keywords:
 - Cache Or Next Cache Only policy
 - Refresh policy
 ms.assetid: e41d7f1a-0a6a-4dee-97d1-c6a8b6a07fc2
-ms.openlocfilehash: 594aef9feee81d026abd6313f1e75cb518479688
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 04efb24dd9e48d7e33fa3ea3c41a51c2dc96ac77
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54499831"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59129897"
 ---
 # <a name="location-based-cache-policies"></a>場所ベースのキャッシュ ポリシー
 場所ベースのキャッシュ ポリシーでは、要求されたリソースを取得できる場所に基づいて、有効なキャッシュされたエントリの鮮度を定義します。 キャッシュされたリソースを使用しても、サーバーに指定されている再検証要件に違反しない場合、キャッシュされたリソースは有効です。 場所ベースのキャッシュ ポリシーをプログラムで作成するには、<xref:System.Net.Cache.RequestCachePolicy> または <xref:System.Net.Cache.HttpRequestCachePolicy> クラス コンストラクターを使用します。 場所ベースのポリシーの種類は、<xref:System.Net.Cache.RequestCacheLevel> または <xref:System.Net.Cache.HttpRequestCacheLevel> 列挙値を使用してコンストラクターに渡されます。 場所ベースのキャッシュ ポリシーを作成するコード例については、「[方法:アプリケーションの場所ベースのキャッシュ ポリシーを設定する](../../../docs/framework/network-programming/how-to-set-a-location-based-cache-policy-for-an-application.md)」をご覧ください。 以下のセクションでは、ハイパーテキスト転送プロトコル (http と https) リソースに使用できる各種の場所ベースのキャッシュ ポリシーを定義します。  
@@ -47,6 +47,7 @@ ms.locfileid: "54499831"
  キャッシュ内のリソースのコピーとサーバー上のコピーを比較します。 サーバー上のコピーが新しい場合は、要求を満たすために使用され、キャッシュ内のコピーは置き換えられます。 キャッシュ内のコピーがサーバー上のコピーと同じ場合、キャッシュされたコピーが使用されます。 HTTP キャッシュ プロトコルの場合、条件付き要求を使用してこの処理が実行されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [ネットワーク アプリケーションのキャッシュ管理](../../../docs/framework/network-programming/cache-management-for-network-applications.md)
 - [キャッシュ ポリシー](../../../docs/framework/network-programming/cache-policy.md)
 - [時間ベースのキャッシュ ポリシー](../../../docs/framework/network-programming/time-based-cache-policies.md)

@@ -3,22 +3,22 @@ title: NativeActivity の基本クラス
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
 ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296590"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity の基本クラス
 
-<xref:System.Activities.NativeActivity> 保護されたコンス トラクターを持つ抽象クラスです。 <xref:System.Activities.CodeActivity> と同様に、<xref:System.Activities.NativeActivity> は、<xref:System.Activities.NativeActivity.Execute%2A> メソッドを実装して、強制的な動作を記述するときに使用します。 <xref:System.Activities.CodeActivity> とは異なり、<xref:System.Activities.NativeActivity> からは、<xref:System.Activities.NativeActivityContext> メソッドに渡される <xref:System.Activities.NativeActivity.Execute%2A> オブジェクトを介して、ワークフロー ランタイムの公開されているすべての機能にアクセスできます。
+<xref:System.Activities.NativeActivity> はプロテクト コンストラクターを持つ抽象クラスです。 <xref:System.Activities.CodeActivity> と同様に、<xref:System.Activities.NativeActivity> は、<xref:System.Activities.NativeActivity.Execute%2A> メソッドを実装して、強制的な動作を記述するときに使用します。 <xref:System.Activities.CodeActivity> とは異なり、<xref:System.Activities.NativeActivity> からは、<xref:System.Activities.NativeActivityContext> メソッドに渡される <xref:System.Activities.NativeActivity.Execute%2A> オブジェクトを介して、ワークフロー ランタイムの公開されているすべての機能にアクセスできます。
 
 ## <a name="using-nativeactivitycontext"></a>NativeActivityContext の使用
  ワークフロー ランタイムの機能は、<xref:System.Activities.NativeActivity.Execute%2A> 型の `context` パラメーターを使用して、<xref:System.Activities.NativeActivityContext> メソッド内からアクセスできます。 <xref:System.Activities.NativeActivityContext> を介して、以下のような機能を使用できます。
 
 -   引数と変数を取得および設定する。
 
--   子アクティビティのスケジュール設定 <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A>
+-   <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> を使用して子のアクティビティのスケジュールを設定する。
 
 -   <xref:System.Activities.NativeActivityContext.Abort%2A> を使用してアクティビティの実行を中止する。
 

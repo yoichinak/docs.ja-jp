@@ -7,10 +7,10 @@ helpviewer_keywords:
 - graphics [WPF], quadratic Bezier curves
 ms.assetid: cd8fca4a-504e-4fd8-92ea-2969065a6e02
 ms.openlocfilehash: a0b2145b4a5bba11186419fe680f2eca41949d6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134876"
 ---
 # <a name="how-to-create-a-quadratic-bezier-curve"></a>方法: 2 次ベジエ曲線を作成する

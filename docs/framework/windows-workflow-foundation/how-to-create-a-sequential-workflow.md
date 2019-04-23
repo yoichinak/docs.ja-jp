@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 5280e816-ae17-48c4-8de0-a1e6895dd8f0
 ms.openlocfilehash: c8a16dc0269fbd768a73e99f15f53e38c207a8d4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326841"
 ---
 # <a name="how-to-create-a-sequential-workflow"></a>方法: シーケンシャル ワークフローの作成
@@ -161,8 +161,8 @@ ms.locfileid: "59326841"
 
 - <xref:System.Activities.Statements.Flowchart>
 - <xref:System.Activities.Statements.FlowDecision>
-- [Windows Workflow Foundation プログラミングの新機能](programming.md)
+- [Windows Workflow Foundation プログラミング](programming.md)
 - [ワークフローの設計](designing-workflows.md)
 - [チュートリアル入門](getting-started-tutorial.md)
-- [方法: アクティビティを作成する](how-to-create-an-activity.md)
-- [方法: ワークフローを実行する](how-to-run-a-workflow.md)
+- [方法: アクティビティを作成します。](how-to-create-an-activity.md)
+- [方法: ワークフローを実行します。](how-to-run-a-workflow.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c7cba174-9d40-491d-b32c-f2d73b7e9eab
 ms.openlocfilehash: 222ce575d9e977cc8b68862385b4a1b147c6394a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326386"
 ---
 # <a name="how-to-submit-changes-to-the-database"></a>方法: データベースに変更内容を送信する
@@ -35,7 +35,7 @@ ms.locfileid: "59326386"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 送信の競合を検出および解決する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
-- [方法: 変更の競合を管理する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [方法: 検出および送信の競合を解決します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-detect-and-resolve-conflicting-submissions.md)
+- [方法: 変更の競合を管理します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
 - [サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)
 - [データの変更と変更の送信](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)

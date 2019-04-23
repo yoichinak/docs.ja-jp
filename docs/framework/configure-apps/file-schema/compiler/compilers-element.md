@@ -10,10 +10,10 @@ helpviewer_keywords:
 - compilers element
 ms.assetid: d40fba59-98f9-4783-ae0c-2ebea27ce77b
 ms.openlocfilehash: 744ef0d9bc58e6a0152dce53c40c24eb5283dc0f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130521"
 ---
 # <a name="compilers-element"></a>\<コンパイラ > 要素
@@ -47,7 +47,7 @@ ms.locfileid: "59130521"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<configuration > 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
+|[\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
 |[\<system.codedom > 要素](../../../../../docs/framework/configure-apps/file-schema/compiler/system-codedom-element.md)|使用可能な言語プロバイダーのコンパイラ構成設定を指定します。|  
   
 ## <a name="remarks"></a>Remarks  

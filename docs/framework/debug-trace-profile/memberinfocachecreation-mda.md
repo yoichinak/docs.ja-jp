@@ -13,10 +13,10 @@ ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 90f59f4d593a8aa077a6710cc0f5c1747ac1a3ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103767"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA

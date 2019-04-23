@@ -24,23 +24,23 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2c422a75244302ae6433af933995b00bdfaa061
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54537973"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59327764"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>方法: 特定の日付から曜日を抽出する
 .NET Framework では、特定の日付が週の何日目であるかを容易に判別でき、また特定の日付のローカライズされた曜日名を表示できます。 特定の日付に対応する曜日を示す列挙値は、<xref:System.DateTime.DayOfWeek%2A> または <xref:System.DateTimeOffset.DayOfWeek%2A> プロパティから取得できます。 対照的に、曜日名の取得は、書式指定メソッド （日付と時刻の値の `ToString` メソッドや <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドなど） を呼び出して実行できる書式指定操作です。 このトピックでは、このような書式指定操作を実行する方法について説明します。  
   
 ### <a name="to-extract-a-number-indicating-the-day-of-the-week-from-a-specific-date"></a>特定の日付から曜日を示す番号を抽出するには  
   
-1.  文字列形式の日付を処理している場合には、静的 <xref:System.DateTime> または <xref:System.DateTimeOffset> メソッドを使用して、その日付を<xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 値または <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 値に変換します。  
+1. 文字列形式の日付を処理している場合には、静的 <xref:System.DateTime> または <xref:System.DateTimeOffset> メソッドを使用して、その日付を<xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 値または <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 値に変換します。  
   
-2.  <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> プロパティまたは <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> プロパティを使用して、曜日を示す <xref:System.DayOfWeek> 値を取得します。  
+2. <xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> プロパティまたは <xref:System.DateTimeOffset.DayOfWeek%2A?displayProperty=nameWithType> プロパティを使用して、曜日を示す <xref:System.DayOfWeek> 値を取得します。  
   
-3.  必要に応じて、<xref:System.DayOfWeek> 値を整数にキャスト （C#） または変換 （Visual Basic） します。  
+3. 必要に応じて、<xref:System.DayOfWeek> 値を整数にキャスト （C#） または変換 （Visual Basic） します。  
   
  次の例は、特定の日付の曜日を表す整数を表示します。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54537973"
   
 ### <a name="to-extract-the-abbreviated-weekday-name-from-a-specific-date"></a>特定の日付から曜日の省略名を抽出するには  
   
-1.  文字列形式の日付を処理している場合には、静的 <xref:System.DateTime> または <xref:System.DateTimeOffset> メソッドを使用して、その日付を<xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 値または <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 値に変換します。  
+1. 文字列形式の日付を処理している場合には、静的 <xref:System.DateTime> または <xref:System.DateTimeOffset> メソッドを使用して、その日付を<xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 値または <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 値に変換します。  
   
-2.  次の手順で現在のカルチャまたは特定のカルチャの曜日の省略名を抽出できます。  
+2. 次の手順で現在のカルチャまたは特定のカルチャの曜日の省略名を抽出できます。  
   
     1.  現在のカルチャの曜日の省略名を抽出するには、日付と時刻の値の <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドまたは <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドを呼び出し、`format` パラメーターとして文字列 "ddd" を渡します。 次の例に、<xref:System.DateTime.ToString%28System.String%29> メソッドの呼び出しを示します。  
   
@@ -65,9 +65,9 @@ ms.locfileid: "54537973"
   
 ### <a name="to-extract-the-full-weekday-name-from-a-specific-date"></a>特定の日付から曜日の正式な名前を抽出するには  
   
-1.  文字列形式の日付を処理している場合には、静的 <xref:System.DateTime> または <xref:System.DateTimeOffset> メソッドを使用して、その日付を<xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 値または <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 値に変換します。  
+1. 文字列形式の日付を処理している場合には、静的 <xref:System.DateTime> または <xref:System.DateTimeOffset> メソッドを使用して、その日付を<xref:System.DateTime.Parse%2A?displayProperty=nameWithType> 値または <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType> 値に変換します。  
   
-2.  現在のカルチャまたは特定のカルチャでの曜日の正式な名前を抽出できます。  
+2. 現在のカルチャまたは特定のカルチャでの曜日の正式な名前を抽出できます。  
   
     1.  現在のカルチャの曜日名を抽出するには、日付と時刻の値の <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドまたは <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドを呼び出し、`format` パラメーターとして文字列 "dddd" を渡します。 次の例に、<xref:System.DateTime.ToString%28System.String%29> メソッドの呼び出しを示します。  
   

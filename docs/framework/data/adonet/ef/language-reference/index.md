@@ -3,10 +3,10 @@ title: Entity SQL 言語リファレンス
 ms.date: 03/30/2017
 ms.assetid: bb07282c-161d-47e8-856d-b2374ba18181
 ms.openlocfilehash: 158240678eec7eb4699263c4febe9b6991196e11
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59231514"
 ---
 # <a name="entity-sql-language-reference"></a>Entity SQL 言語リファレンス
@@ -27,5 +27,5 @@ ms.locfileid: "59231514"
 ## <a name="see-also"></a>関連項目
 
 - [ADO.NET Entity Framework](../../../../../../docs/framework/data/adonet/ef/index.md)
-- [作業の開始](../../../../../../docs/framework/data/adonet/ef/getting-started.md)
+- [はじめに](../../../../../../docs/framework/data/adonet/ef/getting-started.md)
 - [サンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738547(v=vs.100))

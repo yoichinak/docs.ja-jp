@@ -6,10 +6,10 @@ helpviewer_keywords:
 - C# language, My namespace access
 ms.assetid: e7152414-0ea5-4c8e-bf02-c8d5bbe45ff4
 ms.openlocfilehash: 9621f6a01ef4e30bf34b97df3d2c3033e9b62a23
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316025"
 ---
 # <a name="how-to-use-the-my-namespace-c-programming-guide"></a>方法: My 名前空間を使用する (C# プログラミング ガイド)
