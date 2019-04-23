@@ -3,10 +3,10 @@ title: <backupList>
 ms.date: 03/30/2017
 ms.assetid: a3d9d1f9-4a53-45e9-a880-86c8bee0b833
 ms.openlocfilehash: b0a6c604b5741c1355c35fca510cd10544dab9f3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135734"
 ---
 # <a name="backuplist"></a>\<backupList>
@@ -42,7 +42,7 @@ ms.locfileid: "59135734"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<フィルター >](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)||  
+|[\<filter>](../../../../../docs/framework/configure-apps/file-schema/wcf/filter.md)||  
   
 ### <a name="parent-elements"></a>親要素  
   

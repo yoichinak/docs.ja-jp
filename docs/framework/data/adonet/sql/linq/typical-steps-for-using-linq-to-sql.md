@@ -3,10 +3,10 @@ title: 典型的な LINQ to SQL の使用手順
 ms.date: 03/30/2017
 ms.assetid: 9a88bd51-bd74-48f7-a9b1-f650e8d55a3e
 ms.openlocfilehash: a7c6257bc27728d101d64d07ffedb1e38bc994eb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132848"
 ---
 # <a name="typical-steps-for-using-linq-to-sql"></a>典型的な LINQ to SQL の使用手順
@@ -20,7 +20,7 @@ ms.locfileid: "59132848"
 ### <a name="1-select-a-tool-to-create-the-model"></a>1.モデルを作成するツールを選択します。  
  モデルを作成するツールとして、3 つのツールを使用できます。  
   
--   次に、 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]  
+-   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]   
   
      このデザイナーは、既存のデータベースからモデルを作成する多機能なユーザー インターフェイスを備えています。 このツール、Visual Studio IDE の一部であり、小規模または中規模のデータベースに最適です。  
   
@@ -83,6 +83,6 @@ ms.locfileid: "59132848"
   
 ## <a name="see-also"></a>関連項目
 
-- [作業の開始](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
+- [はじめに](../../../../../../docs/framework/data/adonet/sql/linq/getting-started.md)
 - [オブジェクト モデルの作成](../../../../../../docs/framework/data/adonet/sql/linq/creating-the-object-model.md)
 - [ストアド プロシージャ](../../../../../../docs/framework/data/adonet/sql/linq/stored-procedures.md)

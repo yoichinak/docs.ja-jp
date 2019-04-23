@@ -8,10 +8,10 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141532"
 ---
 # <a name="loader-etw-events"></a>ローダー ETW イベント
@@ -37,7 +37,7 @@ ms.locfileid: "59141532"
   
 |イベントを発生させるキーワード|event|レベル|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` と、呼び出し `AppDomainUnLoad_V1`|情報提供 (4)|  
+|`LoaderKeyword` (0x8)|`AppDomainLoad_V1` および `AppDomainUnLoad_V1`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AppDomainDCStart_V1`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AppDomainDCEnd_V1`|情報提供 (4)|  
   
@@ -45,7 +45,7 @@ ms.locfileid: "59141532"
   
 |イベント|イベント ID|説明|  
 |-----------|--------------|-----------------|  
-|`AppDomainLoad_V1` (すべてのアプリケーション ドメインのログオン)|156|プロセスの有効期間中に、アプリケーション ドメインが作成されるたびに発生します。|  
+|`AppDomainLoad_V1` (すべてのアプリケーション ドメインについて記録)|156|プロセスの有効期間中に、アプリケーション ドメインが作成されるたびに発生します。|  
 |`AppDomainUnLoad_V1`|157|プロセスの有効期間中に、アプリケーション ドメインが破壊されるたびに発生します。|  
 |`AppDomainDCStart_V1`|157|開始ランダウン中にアプリケーション ドメインを列挙します。|  
 |`AppDomainDCEnd_V1`|158|終了ランダウン中にアプリケーション ドメインを列挙します。|  
@@ -68,7 +68,7 @@ ms.locfileid: "59141532"
   
 |イベントを発生させるキーワード|event|レベル|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`AssemblyLoad` と、呼び出し `AssemblyUnload`|情報提供 (4)|  
+|`LoaderKeyword` (0x8)|`AssemblyLoad` および `AssemblyUnload`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`AssemblyDCStart`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`AssemblyDCEnd`|情報提供 (4)|  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59141532"
   
 |イベントを発生させるキーワード|event|レベル|  
 |-----------------------------------|-----------|-----------|  
-|`LoaderKeyword` (0x8)|`ModuleLoad_V2` と、呼び出し `ModuleUnload_V2`|情報提供 (4)|  
+|`LoaderKeyword` (0x8)|`ModuleLoad_V2` および `ModuleUnload_V2`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `StartRundownKeyword`|`ModuleDCStart_V2`|情報提供 (4)|  
 |`LoaderRundownKeyword` (0x8) +<br /><br /> `EndRundownKeyword`|`ModuleDCEnd_V2`|情報提供 (4)|  
 ||||  

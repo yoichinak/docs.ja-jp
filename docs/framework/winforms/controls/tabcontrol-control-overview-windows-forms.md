@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140882"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl コントロールの概要 (Windows フォーム)
@@ -26,8 +26,8 @@ Windows フォーム <xref:System.Windows.Forms.TabControl> は、ノートの�
 
 - <xref:System.Windows.Forms.TabControl>
 - [TabControl コントロール](tabcontrol-control-windows-forms.md)
-- [方法: Windows フォーム TabControl の表示形式を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
-- [方法: タブ ページにコントロールを追加する](how-to-add-a-control-to-a-tab-page.md)
-- [方法: Windows フォーム TabControl のタブを追加および削除する](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
-- [方法: タブ ページを無効化する](how-to-disable-tab-pages.md)
+- [方法: Windows フォーム TabControl の外観を変更します。](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)
+- [方法: タブ ページにコントロールを追加します。](how-to-add-a-control-to-a-tab-page.md)
+- [方法: Windows フォーム tabcontrol のタブ追加および削除](how-to-add-and-remove-tabs-with-the-windows-forms-tabcontrol.md)
+- [方法: タブ ページを無効にします。](how-to-disable-tab-pages.md)
 - [Windows フォームのダイアログ ボックス](../dialog-boxes-in-windows-forms.md)

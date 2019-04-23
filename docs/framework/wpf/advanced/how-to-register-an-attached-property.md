@@ -9,10 +9,10 @@ helpviewer_keywords:
 - registering attached properties [WPF]
 ms.assetid: eb47bd94-0451-4f8d-8fb6-95f7812ac05b
 ms.openlocfilehash: 4c678a64b62b8f4db24cf39ffbafac52e56c9982
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137632"
 ---
 # <a name="how-to-register-an-attached-property"></a>方法: 添付プロパティを登録する
@@ -31,4 +31,4 @@ ms.locfileid: "59137632"
 - <xref:System.Windows.DependencyProperty>
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [カスタム依存関係プロパティ](custom-dependency-properties.md)
-- [方法のトピック](properties-how-to-topics.md)
+- [方法トピック](properties-how-to-topics.md)
