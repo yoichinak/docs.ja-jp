@@ -3,10 +3,10 @@ title: データ サービス コンテキストの管理 (WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
 ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184744"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>データ サービス コンテキストの管理 (WCF Data Services)
@@ -20,7 +20,7 @@ ms.locfileid: "59184744"
 ## <a name="managing-concurrency"></a>コンカレンシーの管理  
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 更新の競合を検出するために、データ サービスにより、オプティミスティック同時実行制御をサポートしています。 データ サービス プロバイダーは、データ サービスでコンカレンシー トークンを使用してエンティティへの変更をチェックするように構成できます。 このトークンには、リソースが変更されているかどうかを決定するためにデータ サービスによって検証されるエンティティ型の 1 つ以上のプロパティが含まれています。 要求およびデータ サービスからの応答の eTag ヘッダーに含まれている、同時実行制御トークンがによって管理されている、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント。 詳細については、次を参照してください。[データ サービスの更新](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)します。  
   
- <xref:System.Data.Services.Client.DataServiceContext> は、<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>、および <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> を使用して手動で報告しているか、または <xref:System.Data.Services.Client.DataServiceCollection%601> によって報告されているオブジェクトへの変更を追跡します。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> メソッドを呼び出すと、クライアントはデータ サービスに変更を送り返します。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> クライアントでのデータ変更がデータ サービスの変更と競合する場合は失敗します。 このような状況が発生した場合、エンティティ リソースに対してクエリを再度実行し、更新データを受信する必要があります。 データ サービスの変更を上書きするには、<xref:System.Data.Services.Client.MergeOption.PreserveChanges> マージ オプションを使用してクエリを実行します。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> を再度呼び出すと、データ サービスのリソースに対してその他の変更がまだ行われていない場合に限り、クライアントに保存されている変更がデータ サービスに永続化されます。  
+ <xref:System.Data.Services.Client.DataServiceContext> は、<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>、および <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> を使用して手動で報告しているか、または <xref:System.Data.Services.Client.DataServiceCollection%601> によって報告されているオブジェクトへの変更を追跡します。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> メソッドを呼び出すと、クライアントはデータ サービスに変更を送り返します。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> は、クライアントでのデータ変更がデータ サービスでの変更と競合する場合に失敗する可能性があります。 このような状況が発生した場合、エンティティ リソースに対してクエリを再度実行し、更新データを受信する必要があります。 データ サービスの変更を上書きするには、<xref:System.Data.Services.Client.MergeOption.PreserveChanges> マージ オプションを使用してクエリを実行します。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> を再度呼び出すと、データ サービスのリソースに対してその他の変更がまだ行われていない場合に限り、クライアントに保存されている変更がデータ サービスに永続化されます。  
   
 ## <a name="saving-changes"></a>変更の保存  
  変更は、<xref:System.Data.Services.Client.DataServiceContext> インスタンスで追跡されますが、サーバーには直ちに送信されません。 指定されたアクティビティに対して必要な変更が完了した後、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> を呼び出して、すべての変更をデータ サービスに送信します。 <xref:System.Data.Services.Client.DataServiceResponse> 操作が完了した後、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> オブジェクトが返されます。 <xref:System.Data.Services.Client.DataServiceResponse> オブジェクトには、<xref:System.Data.Services.Client.OperationResponse> オブジェクトのシーケンスが含まれます。さらに、これらの各オブジェクトには、永続化または試行された変更を表す、<xref:System.Data.Services.Client.EntityDescriptor> インスタンスまたは <xref:System.Data.Services.Client.LinkDescriptor> インスタンスのシーケンスが含まれます。 データ サービス内でエンティティが作成または変更されると、前の例で生成された <xref:System.Data.Services.Client.EntityDescriptor> 値のようなサーバー生成のプロパティ値も含めて、更新されたエンティティへの参照が `ProductID` に含められます。 クライアント ライブラリは、これらの新しい値を持つように [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトを自動的に更新します。  

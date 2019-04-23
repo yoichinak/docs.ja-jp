@@ -7,10 +7,10 @@ helpviewer_keywords:
 - control types, Tab
 ms.assetid: f8be2732-836d-4e4d-85e2-73aa39479bf4
 ms.openlocfilehash: be562b3abd03bd7f166fdc29acaee3a447cd8f55
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192855"
 ---
 # <a name="ui-automation-support-for-the-tab-control-type"></a>UI オートメーションによる Tab コントロール型のサポート
@@ -62,7 +62,7 @@ ms.locfileid: "59192855"
   
 |コントロール パターン/パターン プロパティ|サポート/値|メモ|  
 |---------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionProvider>|[はい]|すべてのタブ コントロールが、Selection パターンをサポートする必要があります。|  
+|<xref:System.Windows.Automation.Provider.ISelectionProvider>|はい|すべてのタブ コントロールが、Selection パターンをサポートする必要があります。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.IsSelectionRequired%2A>|True|タブ コントロールで、常に選択が行われる必要があります。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.CanSelectMultiple%2A>|False|タブ コントロールは、常に単一選択コンテナーです。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|状況に依存|Scroll パターンは、一連のタブ項目全体をスクロールできるようにするウィジェットを持つタブ コントロールでサポートされる必要があります。|  
@@ -71,7 +71,7 @@ ms.locfileid: "59192855"
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  
  次の表に、すべてのタブ コントロールでサポートする必要がある [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベントを示します。 イベントについて詳しくは、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」をご覧ください。  
   
-|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] event|サポート|メモ|  
+|[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] イベント|サポート|メモ|  
 |---------------------------------------------------------------------------------|-------------|-----------|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> プロパティ変更イベント。|必須|なし|  
 |<xref:System.Windows.Automation.AutomationElementIdentifiers.IsOffscreenProperty> プロパティ変更イベント。|必須|なし|  

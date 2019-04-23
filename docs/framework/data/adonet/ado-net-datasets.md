@@ -3,10 +3,10 @@ title: ADO.NET データセット
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190939"
 ---
 # <a name="adonet-datasets"></a>ADO.NET データセット
@@ -41,7 +41,7 @@ DataSet オブジェクト モデル
  **データセット**、 **DataTable**、および**DataColumn**がすべて、 **ExtendedProperties**プロパティ。 **ExtendedProperties**は、 **PropertyCollection**結果セットの生成に使用された SELECT ステートメントやデータが生成された時刻などのカスタム情報を配置することができます。 **ExtendedProperties**コレクションのスキーマ情報に保存されて、**データセット**します。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] データセットに格納されている非接続型データを言語統合クエリ機能を提供します。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 標準を使用して[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]構文と、Visual Studio IDE を使用しているときに、コンパイル時の構文チェック、静的な型指定、および IntelliSense のサポートを提供します。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] は、DataSet に格納された非接続型データに対する統合言語クエリ機能を提供します。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 標準を使用して[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]構文と、Visual Studio IDE を使用しているときに、コンパイル時の構文チェック、静的な型指定、および IntelliSense のサポートを提供します。  
   
  詳細については、「[LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)」を参照してください。  
   

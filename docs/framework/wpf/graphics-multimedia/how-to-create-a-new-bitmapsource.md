@@ -9,10 +9,10 @@ helpviewer_keywords:
 - BitmapSource objects [WPF], creating
 ms.assetid: 0adf447e-014f-4ceb-97b2-f21affe6d55b
 ms.openlocfilehash: 4ef7c49e90b5471e6150ffc13bb416d122d6ddc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187279"
 ---
 # <a name="how-to-create-a-new-bitmapsource"></a>方法: 新しい BitmapSource を作成する

@@ -3,10 +3,10 @@ title: クエリ式
 description: LINQ のクエリ式のサポートについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191568"
 ---
 # <a name="query-expressions"></a>クエリ式
@@ -696,7 +696,7 @@ query {
 </code></pre>
 
 </td></tr><tr><td>
-<code>LIKE</code> および <code>TOP</code> を参照してください。<br/>
+<code>LIKE</code> および <code>TOP</code>。<br/>
 
 <pre><code class="lang-sql">-- '_e%' matches strings where the second character is 'e'
 SELECT TOP 2 * FROM Student
@@ -819,7 +819,7 @@ query {
 }
 </code></pre>
 
-</td></tr><tr><td><code>JOIN</code> 代入 <code>COUNT</code><br/>
+</td></tr><tr><td><code>JOIN</code> で <code>COUNT</code><br/>
 
 <pre><code class="lang-sql">SELECT COUNT( * ) FROM Student
 JOIN CourseSelection

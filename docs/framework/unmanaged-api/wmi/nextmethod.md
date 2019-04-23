@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2b3667f7371131a4c1394ba5ca619d1f605c89ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190887"
 ---
 # <a name="nextmethod-function"></a>NextMethod 関数
@@ -86,8 +86,8 @@ C++ の例では、次を参照してください。、 [IWbemClassObject::NextM
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

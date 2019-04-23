@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], performance
 ms.assetid: c649a20f-8b7e-4a38-9b80-74839298d406
 ms.openlocfilehash: 268bb396564db983c293ab1d718171e963ab7aaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188488"
 ---
 # <a name="performance"></a>パフォーマンス
@@ -19,7 +19,7 @@ ms.locfileid: "59188488"
 ## <a name="in-this-section"></a>このセクションの内容  
  [グラフィックスの描画層](graphics-rendering-tiers.md)  
  [WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)  
- [チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ](walkthrough-caching-application-data-in-a-wpf-application.md)  
+ [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](walkthrough-caching-application-data-in-a-wpf-application.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Media.RenderCapability>  

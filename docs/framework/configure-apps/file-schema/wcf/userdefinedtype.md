@@ -3,10 +3,10 @@ title: <userDefinedType>
 ms.date: 03/30/2017
 ms.assetid: 0f70ec06-8249-4f0c-9f49-b4df59985fb8
 ms.openlocfilehash: 46beb88cedf051ed1683161b6ed9b37273ed01f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182140"
 ---
 # <a name="userdefinedtype"></a>\<userDefinedType>
@@ -97,4 +97,4 @@ ms.locfileid: "59182140"
 - <xref:System.ServiceModel.Configuration.ComUdtElement>
 - [\<comContracts>](../../../../../docs/framework/configure-apps/file-schema/wcf/comcontracts.md)
 - [COM+ アプリケーションとの統合](../../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md)
-- [方法: COM+ サービス設定を構成する](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)
+- [方法: COM + サービス設定を構成します。](../../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)

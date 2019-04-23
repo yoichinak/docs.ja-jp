@@ -3,10 +3,10 @@ title: トランスポート
 ms.date: 03/30/2017
 ms.assetid: 5c064c51-5863-4fe7-a772-e298841b62ff
 ms.openlocfilehash: dd141ab5f8ea3ae8bafad830777af75a452f4f95
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183098"
 ---
 # <a name="transports"></a>トランスポート

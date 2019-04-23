@@ -6,28 +6,28 @@ dev_langs:
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
 ms.openlocfilehash: 3945d4fc92bea2c4212da0507618203603ae8aba
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191329"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities の既知の問題および注意点
 ここでは、[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリの既知の問題について説明します。  
   
--   [キャッシュできない LINQ クエリ](#LINQQueriesThatAreNotCached)  
+-   [LINQ クエリをキャッシュできないこと](#LINQQueriesThatAreNotCached)  
   
--   [失われた情報の収集の順序付け](#OrderingInfoLost)  
+-   [失われた情報を順序付け](#OrderingInfoLost)  
   
--   [サポートされていない符号なし整数](#UnsignedIntsUnsupported)  
+-   [符号なし整数がサポートされていません](#UnsignedIntsUnsupported)  
   
 -   [型変換エラー](#TypeConversionErrors)  
   
--   [非スカラー変数の参照はサポートされていません。](#RefNonScalarClosures)  
+-   [参照元の非スカラー変数がサポートされていません](#RefNonScalarClosures)  
   
--   [入れ子になったクエリは、SQL Server 2000 では失敗する可能性があります。](#NestedQueriesSQL2000)  
+-   [SQL Server 2000 で入れ子になったクエリが失敗します。](#NestedQueriesSQL2000)  
   
--   [匿名型への投影](#ProjectToAnonymousType)  
+-   [匿名型に射影](#ProjectToAnonymousType)  
   
 <a name="LINQQueriesThatAreNotCached"></a>   
 ## <a name="linq-queries-that-cannot-be-cached"></a>キャッシュできない LINQ クエリ  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191449"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>方法: Freezable を読み取り専用にする
@@ -41,4 +41,4 @@ ms.locfileid: "59191449"
 - <xref:System.Windows.Freezable.CanFreeze%2A>
 - <xref:System.Windows.Freezable.Freeze%2A>
 - [Freezable オブジェクトの概要](freezable-objects-overview.md)
-- [方法のトピック](base-elements-how-to-topics.md)
+- [方法トピック](base-elements-how-to-topics.md)

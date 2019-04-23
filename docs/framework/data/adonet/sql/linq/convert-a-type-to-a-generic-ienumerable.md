@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 64774fb5-7447-4296-ad3b-8a94346f99a1
 ms.openlocfilehash: d75c9b9123b52b3e241bea1bbd1d302c406715e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190380"
 ---
 # <a name="convert-a-type-to-a-generic-ienumerable"></a>汎用 IEnumerable への型の変換

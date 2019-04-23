@@ -6,10 +6,10 @@ helpviewer_keywords:
 - binding to LINQ query results [WPF]
 ms.assetid: ff2844d9-17ed-4ea6-aab1-5111af0bc684
 ms.openlocfilehash: 5464ee9c59a7c99a83774a7535b9b3c422c1d2e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59185901"
 ---
 # <a name="how-to-bind-to-the-results-of-a-linq-query"></a>方法: LINQ クエリの結果にバインドする
@@ -26,7 +26,7 @@ ms.locfileid: "59185901"
 [!code-csharp[LinqExample#Tasks](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#tasks)]  
 [!code-csharp[LinqExample#Handler](~/samples/snippets/csharp/VS_Snippets_Wpf/LinqExample/CSharp/Window1.xaml.cs#handler)]  
   
- 2 番目のリスト ボックスがそのコレクションにバインドするため、その<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>値に設定されて`{Binding}`します。 その結果、返されるコレクションが表示されます (に基づいて、 `myTaskTemplate`<xref:System.Windows.DataTemplate>)。  
+ 2 番目のリスト ボックスがそのコレクションにバインドするため、その<xref:System.Windows.Controls.ItemsControl.ItemsSource%2A>値に設定されて`{Binding}`します。 その結果、返されるコレクションが表示されます (に基づいて、 `myTaskTemplate` <xref:System.Windows.DataTemplate>)。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -34,4 +34,4 @@ ms.locfileid: "59185901"
 - [コレクションにバインドして選択に基づく情報を表示する](how-to-bind-to-a-collection-and-display-information-based-on-selection.md)
 - [WPF Version 4.5 の新機能](../getting-started/whats-new.md)
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法のトピック](data-binding-how-to-topics.md)
+- [方法トピック](data-binding-how-to-topics.md)

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: c1d2b532-1b8e-4c7a-8ac5-53b801135ec6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1bdb51d38109cf4c072a9841983e86a444e964b0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 24a8c7ce090b286db9d86e0fc6c54ae33e7e2d5e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492635"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59191888"
 ---
 # <a name="snexe-strong-name-tool"></a>Sn.exe (厳密名ツール)
 厳密名ツール (Sn.exe) は、[厳密な名前](../../../docs/framework/app-domains/strong-named-assemblies.md)を使用してアセンブリに署名する場合に役立ちます。 Sn.exe には、キーの管理、署名の生成、署名の検査に関する各オプションが用意されています。  
@@ -125,6 +125,7 @@ sn -d MyContainer
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ツール](../../../docs/framework/tools/index.md)
 - [Al.exe (アセンブリ リンカー)](../../../docs/framework/tools/al-exe-assembly-linker.md)
 - [厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)

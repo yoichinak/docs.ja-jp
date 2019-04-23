@@ -17,10 +17,10 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 9f483f93-1613-4be1-a021-b4934e9c78f3
 ms.openlocfilehash: 98d51f9c6465186e77784aba080130110545f399
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192161"
 ---
 # <a name="how-to-implement-a-form-that-uses-a-background-operation"></a>方法: バックグラウンド操作を使用するフォームを実装する
@@ -40,7 +40,7 @@ ms.locfileid: "59192161"
   
 -   System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ この例をコマンドラインから Visual Basic または Visual C# にビルドする方法の詳細については、[コマンドラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
   

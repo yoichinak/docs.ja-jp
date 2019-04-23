@@ -3,10 +3,10 @@ title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
 ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195749"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
@@ -32,7 +32,7 @@ expression IS [ NOT ] OF ( [ ONLY ] type )
  `expression` を判定するための型。 型は名前空間で修飾する必要があります。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 場合`expression`は型の T と T が基本型、または派生型の`type`; 場合は null`expression`が実行時に null。 それ以外`false`します。  
+ `true` が型 T で、T が基本データ型または `expression` の派生型である場合は、`type` となります。`expression` が実行時に null である場合は null となり、それ以外の場合は `false` となります。  
   
 ## <a name="remarks"></a>Remarks  
  式`expression IS NOT OF (type)`と`expression IS NOT OF (ONLY type)`を構文的に等価`NOT (expression IS OF (type))`と`NOT (expression IS OF (ONLY type))`、それぞれします。  

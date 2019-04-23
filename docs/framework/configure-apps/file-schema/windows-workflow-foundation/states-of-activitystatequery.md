@@ -1,13 +1,13 @@
 ---
-title: <states> (行中)  <activityStateQuery>
+title: <states> の <activityStateQuery>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: a7cc2018-2b79-44f1-825a-bb7ca08690a3
 ms.openlocfilehash: fa3736fc13f6f40f52d15b8257b7a79f4179d738
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189600"
 ---
 # <a name="states-of-activitystatequery"></a>\<状態 > の\<activityStateQuery >
@@ -79,5 +79,5 @@ ms.locfileid: "59189600"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.StateElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

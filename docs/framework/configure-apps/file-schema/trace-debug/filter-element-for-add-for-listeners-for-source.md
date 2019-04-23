@@ -1,5 +1,5 @@
 ---
-title: <filter> 要素の<add>の<listeners>の <source>
+title: <filter> の <add> の <listeners> の <source> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#filter
@@ -10,10 +10,10 @@ helpviewer_keywords:
 - filter element for <add> for <listeners> for <source>
 ms.assetid: 15808b80-4579-4c25-b385-178cfdf154ba
 ms.openlocfilehash: 3abfd0bdd40f98a9e4774677fc2cd5068c14333f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186733"
 ---
 # <a name="filter-element-for-add-for-listeners-for-source"></a>\<フィルター > 要素の\<追加 > の\<リスナー > の\<ソース >

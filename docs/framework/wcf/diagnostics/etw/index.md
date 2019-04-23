@@ -7,10 +7,10 @@ helpviewer_keywords:
 - analytic tracing [WCF]
 ms.assetid: 1d518e47-a38d-41e8-93d7-8c3b361f6a56
 ms.openlocfilehash: cff13439995d8a90da15b7afa15723f21574e35e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193727"
 ---
 # <a name="analytic-tracing-with-etw"></a>ETW を使用した分析トレース

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 0c25ff6c-bff3-422e-b017-146a3ee86cb9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6fddc6142341630e96088323d0c23a2eba1e879
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 14207dcefe053e596052c9b94078333c1c714641
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57479156"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59185576"
 ---
 # <a name="signtoolexe-sign-tool"></a>SignTool.exe (署名ツール)
 署名ツールはコマンド ライン ツールで、ファイルにデジタル署名を添付し、ファイルの署名を検証し、ファイルにタイム スタンプを付けます。  
@@ -210,5 +210,6 @@ signtool verify /c MyCatalog.cat SystemFile.dll
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ツール](../../../docs/framework/tools/index.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)

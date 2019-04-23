@@ -9,10 +9,10 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193719"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows フォームのセキュリティの概要
@@ -20,7 +20,7 @@ ms.locfileid: "59193719"
   
  [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、アクセス許可または権限について、コードが持つものとユーザーが持つものを区別できる、コード アクセス セキュリティと呼ばれるインフラストラクチャを導入しています。 既定では、インターネットとイントラネットからのコードは、部分信頼と呼ばれるものでのみ実行できます。 部分信頼では、アプリケーションに一連の制限が適用されます。特に、アプリケーションはローカルのハード ディスクへのアクセスが制限され、アンマネージ コードを実行することができません。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、送信元、[厳密な名前付きアセンブリ](../app-domains/strong-named-assemblies.md)があるかどうか、証明書で署名されているかどうかなど、そのコードの ID に基づいて、コードにアクセスを許可するリソースを制御します。  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] テクノロジを使用して Windows フォーム アプリケーションを展開する容易の管理者特権を持つ部分信頼で、完全な信頼または部分信頼でを実行しているアプリケーションを開発できます。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] アプリケーションに要求できるように完全信頼または高度な権限、ローカルのユーザーから適切な方法では、アクセス許可の昇格と信頼されたアプリケーションの展開などの機能を提供します。  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] テクノロジは、Windows フォーム アプリケーションの配置に使用しますが、部分信頼で実行するアプリケーションを、完全信頼や、昇格されたアクセス許可を持つ部分信頼で簡単に開発できるようにします。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] は、アクセス許可の昇格や、信頼されたアプリケーション配置などの機能を提供し、アプリケーションが完全信頼やアクセス許可の昇格をローカル ユーザーから実行可能な方法で要求できます。  
   
 ## <a name="understanding-security-in-the-net-framework"></a>.NET Framework のセキュリティについて  
  コード アクセス セキュリティにより、コードの発生元や、そのコードの身元を示すその他の基準に基づいて、コードをさまざまなレベルで信頼できます。 共通言語ランタイムがセキュリティ ポリシーを決定するために使用する証拠の詳細については、「[証拠](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd(v=vs.100))」を参照してください。 悪意のあるコードからコンピューター システムを保護できるだけでなく、セキュリティの意図的または偶然の侵害から信頼されているコードを保護できます。 また、コード アクセス セキュリティは、アプリケーションが実行できるアクションに対して詳細に制御できます。これは、アプリケーションが持っている必要があるアクセス許可のみを指定できるためです。 コード アクセス セキュリティは、コードが単一のコード アクセス セキュリティのアクセス許可のチェックをしない場合でも、共通言語ランタイムを対象とするすべてのマネージド コードに影響を与えます。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のセキュリティの詳細については、「[セキュリティの基本概念](../../standard/security/key-security-concepts.md)」および「[コード アクセス セキュリティの基礎](../misc/code-access-security-basics.md)」を参照してください。  
@@ -62,9 +62,9 @@ ms.locfileid: "59193719"
 -  
   
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>適切なアクセス許可を持つアプリケーションの配置  
- クライアント コンピューターに Windows フォーム アプリケーションを配置する最も一般的な方法は、アプリケーションが実行する必要があるすべてのコンポーネントを記述する配置テクノロジの [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] を使用することです。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 使用して XML ファイルは、アセンブリと、アプリケーションを構成するファイルを記述するマニフェストを呼び出すし、アプリケーションに必要なアクセス許可。  
+ クライアント コンピューターに Windows フォーム アプリケーションを配置する最も一般的な方法は、アプリケーションが実行する必要があるすべてのコンポーネントを記述する配置テクノロジの [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] を使用することです。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] は、マニフェストと呼ばれる XML ファイルを使用して、アプリケーションを構成するアセンブリとファイル、およびアプリケーションに必要なアクセス許可を記述します。  
   
- [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] クライアント コンピューターで管理者特権を要求するための 2 つのテクノロジがあります。 どちらのテクノロジも、Authenticode 証明書の使用に依存します。 証明書は、アプリケーションが信頼できる発行元からのものであることをユーザーにある程度保証するのに役立ちます。  
+ [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] は、クライアント コンピューターでアクセス許可の昇格を要求するための 2 つのテクノロジを持っています。 どちらのテクノロジも、Authenticode 証明書の使用に依存します。 証明書は、アプリケーションが信頼できる発行元からのものであることをユーザーにある程度保証するのに役立ちます。  
   
  次の表では、それらのテクノロジについて説明します。  
   

@@ -8,10 +8,10 @@ ms.assetid: 6453ef66-19b4-41f3-b712-52d0c2abc9ca
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8cc26f9721e911e05c5b5d4092be21a4e1191c84
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183945"
 ---
 # <a name="supportportability-element"></a>\<supportPortability > 要素
@@ -80,5 +80,5 @@ ms.locfileid: "59183945"
   
 ## <a name="see-also"></a>関連項目
 
-- [/appconfig (C# コンパイラ オプション)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
-- [.NET Framework アセンブリ統合の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))
+- [/appconfig (c# コンパイラ オプション)](../../../../../docs/csharp/language-reference/compiler-options/appconfig-compiler-option.md)
+- [.NET framework アセンブリ統合の概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/db7849ey(v=vs.100))

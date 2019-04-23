@@ -1,12 +1,12 @@
 ---
-title: <add> (行中)  <allowAccounts>
+title: <add> の <allowAccounts>
 ms.date: 03/30/2017
 ms.assetid: 763c7b1f-e7b0-4d99-a42c-4506fcb8da00
 ms.openlocfilehash: 1c6764b37b2aa5349b8ccf63e6b7c2bc580b69b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186603"
 ---
 # <a name="add-of-allowaccounts"></a>\<add> of \<allowAccounts>

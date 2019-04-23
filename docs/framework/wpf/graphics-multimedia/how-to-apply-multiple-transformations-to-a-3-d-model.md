@@ -8,10 +8,10 @@ helpviewer_keywords:
 - 3-D models [WPF], applying multiple transformations to
 ms.assetid: cb72245a-5560-4c96-9f58-593c66296992
 ms.openlocfilehash: 7a6a0dd4942eb2430ff79ab5df4a171a4064ac1c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186382"
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>方法: 複数の変換を 3-D モデルに適用する

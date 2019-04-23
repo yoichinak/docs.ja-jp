@@ -1,12 +1,12 @@
 ---
-title: <transport> (行中)  <netHttpBinding>
+title: <transport> の <netHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 3b180006-1661-43bf-a699-96fd3da469af
 ms.openlocfilehash: 44e334c3313f93a23ca7df15ba377c5568a92397
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188800"
 ---
 # <a name="transport-of-nethttpbinding"></a>\<トランスポート > の\<netHttpBinding >
@@ -80,7 +80,7 @@ HTTP トランスポートの認証パラメーターを制御するプロパテ
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|セキュリティ機能を定義、 [ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)します。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-nethttpbinding.md)|セキュリティ機能を定義、 [ \<netHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/nethttpbinding.md)します。|  
   
 ## <a name="example"></a>例  
  基本的なバインディングを使用した SSL トランスポート セキュリティの使用例を次に示します。 既定で、基本的なバインディングは HTTP 通信をサポートします。  
