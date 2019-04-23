@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c7be9c8-72ae-481f-a01c-1a4716806e99
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f3b1f1d153c0ba8c9ae44243adc4672eee872085
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 367bf566d63a81336daed8a4c1bfea3a184bcdf7
+ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492492"
+ms.lasthandoff: 04/08/2019
+ms.locfileid: "59081776"
 ---
 # <a name="gacutilexe-global-assembly-cache-tool"></a>Gacutil.exe (グローバル アセンブリ キャッシュ ツール)
 グローバル アセンブリ キャッシュ ツールを使用すると、グローバル アセンブリ キャッシュとダウンロード キャッシュの内容を表示および操作できます。  
@@ -43,7 +43,7 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
   
 |引数|説明|  
 |--------------|-----------------|  
-|*assemblyName*|アセンブリの名前。 `myAssembly` などの部分的に指定したアセンブリ名、または `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5` などの完全に指定したアセンブリ名を指定できます。|  
+|*AssemblyName*|アセンブリの名前。 `myAssembly` などの部分的に指定したアセンブリ名、または `myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5` などの完全に指定したアセンブリ名を指定できます。|  
 |*assemblyPath*|アセンブリ マニフェストを含むファイルの名前。|  
 |*assemblyListFile*|インストールまたはアンインストールするアセンブリを一覧表示する ANSI テキスト ファイルへのパス。 テキスト ファイルを使用してアセンブリをインストールするには、ファイルの行ごとに各アセンブリへのパスを指定します。 このツールは、*assemblyListFile* の位置を基準にして相対パスを解釈します。 テキスト ファイルを使用してアセンブリをアンインストールするには、ファイルの行ごとに各アセンブリの完全限定アセンブリ名を指定します。 このトピックの後半にある *assemblyListFile* の内容の例を参照してください。|  
   
@@ -55,18 +55,18 @@ gacutil [options] [assemblyName | assemblyPath | assemblyListFile]
 |**/i** *assemblyPath*|アセンブリをグローバル アセンブリ キャッシュにインストールします。|  
 |**/if**  *assemblyPath*|アセンブリをグローバル アセンブリ キャッシュにインストールします。 同じ名前のアセンブリがグローバル アセンブリ キャッシュに既に存在する場合、既存のアセンブリは上書きされます。<br /><br /> このオプションを指定するのは、**/i** オプションと **/f** オプションを一緒に指定するのと同じです。|  
 |**/il** *assemblyListFile*|*assemblyListFile* で指定された 1 つ以上のアセンブリをグローバル アセンブリ キャッシュにインストールします。|  
-|**/ir**  *assemblyPath*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|アセンブリをグローバル アセンブリ キャッシュにインストールし、そのアセンブリをカウントするための参照を追加します。 このオプションと共に *assemblyPath*、*scheme*、*id*、および *description* の各パラメーターを指定する必要があります。 これらのパラメーターとして指定できる有効な値については、**/r** オプションを参照してください。<br /><br /> このオプションを指定するのは、**/i** オプションと **/r** オプションを一緒に指定するのと同じです。|  
+|**/ir**  *assemblyPath*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *説明*|アセンブリをグローバル アセンブリ キャッシュにインストールし、そのアセンブリをカウントするための参照を追加します。 このオプションと共に *assemblyPath*、*scheme*、*id*、および *description* の各パラメーターを指定する必要があります。 これらのパラメーターとして指定できる有効な値については、**/r** オプションを参照してください。<br /><br /> このオプションを指定するのは、**/i** オプションと **/r** オプションを一緒に指定するのと同じです。|  
 |**/l** [*assemblyName*]|グローバル アセンブリ キャッシュの内容を一覧表示します。 *assemblyName* パラメーターを指定した場合は、その名前と一致するアセンブリだけが一覧表示されます。|  
 |**/ldl**|ダウンロードされたファイルのキャッシュの内容を一覧表示します。|  
 |**/l** [*assemblyName*]|すべてのアセンブリとそれらに該当する参照カウントを一覧表示します。 *assemblyName* パラメーターを指定した場合は、その名前と一致するアセンブリと、それらに該当する参照カウントだけが一覧表示されます。|  
 |**/nologo**|Microsoft 著作権情報を表示しません。|  
-|**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|インストールまたはアンインストールするアセンブリへのトレースされた参照を指定します。 このオプションは、**/i**、**/il**、**/u**、または **/ul** の各オプションと共に指定します。<br /><br /> アセンブリをインストールするには、このオプションと共に *assemblyPath*、*scheme*、*id*、および *description* の各パラメーターを指定します。 アセンブリをアンインストールするには、*assemblyName*、*scheme*、*id*、および *description* の各パラメーターを指定します。<br /><br /> アセンブリへの参照を削除するには、アセンブリをインストールしたときに **/i** オプションおよび **/r** (または **/ir**) オプションと共に指定したのと同じ *scheme*、*id* および *description* の各パラメーターを指定する必要があります。 アセンブリをアンインストールする場合、それが削除する最後の参照で、Windows インストーラーにアセンブリへの未解決の参照がまったくないときには、アセンブリもグローバル アセンブリ キャッシュから削除されます。<br /><br /> *scheme* パラメーターはインストール スキームのタイプを指定します。 次のいずれかの値を指定できます。<br /><br /> -   UNINSTALL_KEY: インストーラーがアプリケーションを Microsoft Windows の [アプリケーションの追加と削除] に追加する場合は、この値を指定します。 アプリケーションは、レジストリ キーを HKLM\Software\Microsoft\Windows\CurrentVersion に追加して、そのアプリケーション自体を [アプリケーションの追加と削除] に追加します。<br />-   FILEPATH: インストーラーがアプリケーションを [アプリケーションの追加と削除] に追加しない場合は、この値を指定します。<br />-   OPAQUE: レジストリ キーまたはファイル パスの指定をインストール シナリオで行わない場合は、この値を指定します。 この値を指定した場合には、*id* パラメーターとしてカスタム情報を指定できます。<br /><br /> *id* パラメーターとして指定する値は、*scheme* パラメーターに指定した値によって決まります。<br /><br /> *scheme* パラメーターとして UNINSTALL_KEY を指定した場合は、HKLM\Software\Microsoft\Windows\CurrentVersion レジストリ キーに設定したアプリケーションの名前を指定します。 たとえば、レジストリ キーが HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp の場合は、*id* パラメーターとして MyApp を指定します。<br />-   *scheme* パラメーターとして FILEPATH を指定した場合は、*id* パラメーターとして、アセンブリをインストールする実行可能ファイルへの完全パスを指定します。<br />-   *scheme* パラメーターとして OPAQUE を指定した場合は、*id* パラメーターとして任意のデータを指定できます。 指定するデータは二重引用符 ("") で囲む必要があります。<br /><br /> *description* パラメーターを使用して、インストールするアプリケーションに関する説明を指定できます。 この情報は、参照を列挙した場合に表示されます。|  
+|**/r** [*assemblyName &#124; assemblyPath*]<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *説明*|インストールまたはアンインストールするアセンブリへのトレースされた参照を指定します。 このオプションは、**/i**、**/il**、**/u**、または **/ul** の各オプションと共に指定します。<br /><br /> アセンブリをインストールするには、このオプションと共に *assemblyPath*、*scheme*、*id*、および *description* の各パラメーターを指定します。 アセンブリをアンインストールするには、*assemblyName*、*scheme*、*id*、および *description* の各パラメーターを指定します。<br /><br /> アセンブリへの参照を削除するには、アセンブリをインストールしたときに **/i** オプションおよび **/r** (または **/ir**) オプションと共に指定したのと同じ *scheme*、*id* および *description* の各パラメーターを指定する必要があります。 アセンブリをアンインストールする場合、それが削除する最後の参照で、Windows インストーラーにアセンブリへの未解決の参照がまったくないときには、アセンブリもグローバル アセンブリ キャッシュから削除されます。<br /><br /> *scheme* パラメーターはインストール スキームのタイプを指定します。 次のいずれかの値を指定できます。<br /><br /> -   UNINSTALL_KEY: インストーラーがアプリケーションを Microsoft Windows の [アプリケーションの追加と削除] に追加する場合は、この値を指定します。 アプリケーションは、レジストリ キーを HKLM\Software\Microsoft\Windows\CurrentVersion に追加して、そのアプリケーション自体を [アプリケーションの追加と削除] に追加します。<br />-   FILEPATH: インストーラーがアプリケーションを [アプリケーションの追加と削除] に追加しない場合は、この値を指定します。<br />-   OPAQUE: レジストリ キーまたはファイル パスの指定をインストール シナリオで行わない場合は、この値を指定します。 この値を指定した場合には、*id* パラメーターとしてカスタム情報を指定できます。<br /><br /> *id* パラメーターとして指定する値は、*scheme* パラメーターに指定した値によって決まります。<br /><br /> *scheme* パラメーターとして UNINSTALL_KEY を指定した場合は、HKLM\Software\Microsoft\Windows\CurrentVersion レジストリ キーに設定したアプリケーションの名前を指定します。 たとえば、レジストリ キーが HKLM\Software\Microsoft\Windows\CurrentVersion\MyApp の場合は、*id* パラメーターとして MyApp を指定します。<br />-   *scheme* パラメーターとして FILEPATH を指定した場合は、*id* パラメーターとして、アセンブリをインストールする実行可能ファイルへの完全パスを指定します。<br />-   *scheme* パラメーターとして OPAQUE を指定した場合は、*id* パラメーターとして任意のデータを指定できます。 指定するデータは二重引用符 ("") で囲む必要があります。<br /><br /> *description* パラメーターを使用して、インストールするアプリケーションに関する説明を指定できます。 この情報は、参照を列挙した場合に表示されます。|  
 |**/silent**|すべての出力を表示しません。|  
 |**/u**  *assemblyName*|アセンブリをグローバル アセンブリ キャッシュからアンインストールします。|  
 |**/uf**  *assemblyName*|指定したアセンブリへのすべての参照を削除して、アセンブリを強制的にアンインストールします。<br /><br /> このオプションを指定するのは、**/u** オプションと **/f** オプションを一緒に指定するのと同じです。 **注:** このオプションを使用しても、Microsoft Windows インストーラーを使用してインストールされたアセンブリを削除することはできません。 削除しようとすると、エラー メッセージが表示されます。|  
 |**/ul** *assemblyListFile*|*assemblyListFile* で指定された 1 つ以上のアセンブリをグローバル アセンブリ キャッシュからアンインストールします。|  
 |**/u** **[ngen]** *assemblyName*|指定したアセンブリをグローバル アセンブリ キャッシュからアンインストールします。 指定したアセンブリが既存の参照カウントを持っている場合、参照カウントは表示されますが、アセンブリはグローバル アセンブリ キャッシュから削除されません。 **注:**.NET Framework Version 2.0 では、`/ungen` はサポートされていません。 代わりに、[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)の `uninstall` コマンドを使用します。 <br /><br /> .NET Framework Version 1.0 と 1.1 で **/ungen** を指定すると、Gacutil.exe はネイティブ イメージ キャッシュからアセンブリを削除します。 このキャッシュは、[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) を使用して作成したアセンブリのネイティブ イメージを格納します。|  
-|**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *description*|指定したアセンブリへの参照をグローバル アセンブリ キャッシュからアンインストールします。 アセンブリへの参照を削除するには、アセンブリをインストールしたときに **/i** オプションおよび **/r** (または **/ir**) オプションと共に指定したのと同じ *scheme*、*id* および *description* の各パラメーターを指定する必要があります。 これらのパラメーターとして指定できる有効な値については、**/r** オプションを参照してください。<br /><br /> このオプションを指定するのは、**/u** オプションと **/r** オプションを一緒に指定するのと同じです。|  
+|**/ur**  *assemblyName*<br /><br /> *scheme*<br /><br /> *ID*<br /><br /> *説明*|指定したアセンブリへの参照をグローバル アセンブリ キャッシュからアンインストールします。 アセンブリへの参照を削除するには、アセンブリをインストールしたときに **/i** オプションおよび **/r** (または **/ir**) オプションと共に指定したのと同じ *scheme*、*id* および *description* の各パラメーターを指定する必要があります。 これらのパラメーターとして指定できる有効な値については、**/r** オプションを参照してください。<br /><br /> このオプションを指定するのは、**/u** オプションと **/r** オプションを一緒に指定するのと同じです。|  
 |**/?**|このツールのコマンド構文とオプションを表示します。|  
   
 ## <a name="remarks"></a>解説  
@@ -166,6 +166,7 @@ gacutil /l
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [ツール](../../../docs/framework/tools/index.md)
 - [グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)
 - [Regasm.exe (アセンブリ登録ツール)](../../../docs/framework/tools/regasm-exe-assembly-registration-tool.md)
