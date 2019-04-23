@@ -10,10 +10,10 @@ helpviewer_keywords:
 - animation [WPF], camera direction in 3-D scenes
 ms.assetid: 480224b7-a5e5-4165-ba7f-ef760ddff94a
 ms.openlocfilehash: b64263a495ffe845a76317aad8f5b4a14e11b31e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59146004"
 ---
 # <a name="how-to-animate-camera-position-and-direction-in-a-3d-scene"></a>方法: 3D シーンでカメラの位置および方向をアニメーション化する

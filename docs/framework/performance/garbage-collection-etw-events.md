@@ -9,10 +9,10 @@ ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149735"
 ---
 # <a name="garbage-collection-etw-events"></a>ガベージ コレクション ETW イベント

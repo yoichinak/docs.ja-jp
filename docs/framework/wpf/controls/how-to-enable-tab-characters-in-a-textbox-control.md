@@ -6,10 +6,10 @@ helpviewer_keywords:
 - tab characters [WPF], enabling
 ms.assetid: 14b1b064-61f7-4958-be63-88d85b868d03
 ms.openlocfilehash: 9a01ae93d1b75c604fbe4f15f720e0a84086bd1a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59149488"
 ---
 # <a name="how-to-enable-tab-characters-in-a-textbox-control"></a>方法: TextBox コントロールでタブ文字を有効にする

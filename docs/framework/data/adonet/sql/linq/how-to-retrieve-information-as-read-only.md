@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fb09e298-0b53-47e5-97fb-ab318bcd4fad
 ms.openlocfilehash: 131562e9ee0fbfde8c94f580bcb6d452918f42ee
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148981"
 ---
 # <a name="how-to-retrieve-information-as-read-only"></a>方法: 情報を読み取り専用として取得する

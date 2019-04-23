@@ -10,10 +10,10 @@ helpviewer_keywords:
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
 ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148760"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# リファレンス)
@@ -72,5 +72,5 @@ C# ソース ファイル内に名前空間を明示的に宣言しているか�
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [名前空間キーワード](namespace-keywords.md)
-- [使用](using-directive.md)
+- [using](using-directive.md)
 - [using static](using-static.md)

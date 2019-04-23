@@ -10,10 +10,10 @@ ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143768"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>アンマネージド コードの安全なコーディングのガイドライン

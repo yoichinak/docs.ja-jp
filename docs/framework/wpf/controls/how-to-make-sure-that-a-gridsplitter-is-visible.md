@@ -5,10 +5,10 @@ helpviewer_keywords:
 - GridSplitter control [WPF], ensuring visibility of
 ms.assetid: 0a62a964-89c8-48f0-9023-5df721a8cf47
 ms.openlocfilehash: b7543d14ba39d854b5a2c3f4d0d19b9a457ea89b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147148"
 ---
 # <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>方法: GridSplitter を表示されるようにする
@@ -34,4 +34,4 @@ ms.locfileid: "59147148"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Controls.GridSplitter>
-- [方法のトピック](gridsplitter-how-to-topics.md)
+- [方法トピック](gridsplitter-how-to-topics.md)

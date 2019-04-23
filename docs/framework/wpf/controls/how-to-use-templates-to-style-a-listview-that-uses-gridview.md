@@ -5,10 +5,10 @@ helpviewer_keywords:
 - ListView controls [WPF], styling
 ms.assetid: 94bf964b-96c8-4bdf-a0c3-f5271b7cb565
 ms.openlocfilehash: 1caa652c4a2a3a7d0a8d40fe703df7a3e8038c9b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147096"
 ---
 # <a name="how-to-use-templates-to-style-a-listview-that-uses-gridview"></a>方法: テンプレートを使用して、GridView を使用する ListView のスタイルを設定する
@@ -40,5 +40,5 @@ ms.locfileid: "59147096"
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [GridView の概要](gridview-overview.md)
-- [方法のトピック](listview-how-to-topics.md)
+- [方法トピック](listview-how-to-topics.md)
 - [ListView の概要](listview-overview.md)

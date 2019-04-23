@@ -11,10 +11,10 @@ ms.assetid: 2d92a746-d68c-4f53-a16e-727f071a2d80
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1b2535441da173ee13653c68f25039fd1431261a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59147434"
 ---
 # <a name="axlpublickeyblobtopublickeytoken-function"></a>_AxlPublicKeyBlobToPublicKeyToken 関数
@@ -37,7 +37,7 @@ HRESULT _AxlPublicKeyBlobToPublicKeyToken (
  [out] 16 進エンコードされた公開キー ハッシュを受け取るための WCHAR * へのポインター。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK` 関数が成功した場合それ以外の場合`S_FALSE`します。  
+ 関数が成功した場合は `S_OK`、それ以外の場合は `S_FALSE`。  
   
 ## <a name="see-also"></a>関連項目
 
