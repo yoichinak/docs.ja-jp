@@ -2,12 +2,12 @@
 title: .NET Core の csproj 形式に追加されたもの
 description: 既存の csproj ファイルと .NET Core の csproj ファイルの違いについて説明します
 ms.date: 04/08/2019
-ms.openlocfilehash: f72ea279079b4cdb3a06a2ba64925e2a335e1ed2
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
+ms.openlocfilehash: 89f0bbab1f9887295a68ffc6434340f1c6f10d5d
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59517331"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611095"
 ---
 # <a name="additions-to-the-csproj-format-for-net-core"></a>.NET Core の csproj 形式に追加されたもの
 
@@ -325,8 +325,10 @@ UI 画面のパッケージのアイコンとして使用する背景が透明�
 パックされたパッケージをドロップする出力パスを指定します。 既定値は `$(OutputPath)` です。
 
 ### <a name="includesymbols"></a>IncludeSymbols
+このブール値は、プロジェクトをパックするときに、パッケージが追加のシンボル パッケージを作成するかどうかを指定します。 シンボル パッケージの形式は、`SymbolPackageFormat` プロパティで制御します。
 
-このブール値は、プロジェクトをパックするときに、パッケージが追加のシンボル パッケージを作成するかどうかを指定します。 このパッケージの拡張子は *.symbols.nupkg* になります。DLL や他の出力ファイルと共に PDF ファイルがコピーされます。
+### <a name="symbolpackageformat"></a>SymbolPackageFormat
+シンボル パッケージの形式を指定します。 "symbols.nupkg" では、*.symbols.nupkg* 拡張子と共に、PDB、DLL、およびその他の出力ファイルを含む従来のシンボル パッケージが作成されます。 "snupkg" では、ポータブル PDB を含む snupkg シンボル パッケージが作成されます。 既定値は "symbols.nupkg" です。
 
 ### <a name="includesource"></a>IncludeSource
 
