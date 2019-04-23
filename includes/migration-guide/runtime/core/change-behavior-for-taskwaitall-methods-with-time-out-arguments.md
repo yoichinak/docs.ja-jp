@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 94fad6fe910da6c528c5e13f529a6db274e07d5c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59235696"
+---
 ### <a name="change-in-behavior-for-taskwaitall-methods-with-time-out-arguments"></a>タイムアウト引数を持つ Task.WaitAll メソッドの動作の変更
 
 |   |   |
@@ -8,4 +16,3 @@
 |Version|4.5|
 |型|ランタイム|
 |影響を受ける API|<ul><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.Int32,System.Threading.CancellationToken)?displayProperty=nameWithType></li><li><xref:System.Threading.Tasks.Task.WaitAll(System.Threading.Tasks.Task[],System.TimeSpan)?displayProperty=nameWithType></li></ul>|
-
