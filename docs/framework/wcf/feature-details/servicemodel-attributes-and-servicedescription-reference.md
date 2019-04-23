@@ -3,10 +3,10 @@ title: ServiceModel 属性および ServiceDescription 参照
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195346"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 属性および ServiceDescription 参照
@@ -31,9 +31,9 @@ ms.locfileid: "59195346"
   
 |ServiceContractAttribute プロパティ|影響を受ける説明ツリーの値|  
 |---------------------------------------|-------------------------------------|  
-|CallbackContract|<xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A>、<xref:System.ServiceModel.Description.MessageDescription>すべての操作に追加<xref:System.ServiceModel.Description.OperationDescription.Messages%2A>します。|  
+|CallbackContract|すべての操作の <xref:System.ServiceModel.Description.ContractDescription.CallbackContractType%2A> に追加される <xref:System.ServiceModel.Description.MessageDescription>、<xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
 |ConfigurationName|<xref:System.ServiceModel.Description.ContractDescription.ConfigurationName%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> 子の保護レベル可能性があります。 保護レベルの階層の詳細については、次を参照してください。[について保護レベル](../../../../docs/framework/wcf/understanding-protection-level.md)します。|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.ContractDescription.ProtectionLevel%2A> と、場合によっては子の保護レベル。 保護レベルの階層の詳細については、次を参照してください。[について保護レベル](../../../../docs/framework/wcf/understanding-protection-level.md)します。|  
 |SessionMode|<xref:System.ServiceModel.Description.ContractDescription.SessionMode%2A>|  
   
 |ServiceKnownTypesAttribute 値|影響を受ける説明ツリーの値|  
@@ -42,18 +42,18 @@ ms.locfileid: "59195346"
   
 |OperationContractAttribute 値|影響を受ける説明ツリーの値|  
 |--------------------------------------|-------------------------------------|  
-|アクション|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> 出力メッセージまたは入力メッセージ、コントラクトまたはコールバック コントラクトによって異なります。|  
-|AsyncPattern|True の場合、<xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A>と <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
-|IsOneWay|1 つのマップ<xref:System.ServiceModel.Description.MessageDescription>で <xref:System.ServiceModel.Description.OperationDescription.Messages%2A>|  
+|アクション|出力メッセージまたは入力メッセージの <xref:System.ServiceModel.Description.MessageDescription.Action%2A>。コントラクトまたはコールバック コントラクトによって異なります。|  
+|AsyncPattern|true の場合は、<xref:System.ServiceModel.Description.OperationDescription.BeginMethod%2A> と <xref:System.ServiceModel.Description.OperationDescription.EndMethod%2A>|  
+|IsOneWay|<xref:System.ServiceModel.Description.MessageDescription> の 1 つの <xref:System.ServiceModel.Description.OperationDescription.Messages%2A> にマップします。|  
 |IsInitiating|<xref:System.ServiceModel.Description.OperationDescription.IsInitiating%2A>|  
 |IsTerminating|<xref:System.ServiceModel.Description.OperationDescription.IsTerminating%2A>|  
 |名前|<xref:System.ServiceModel.Description.OperationDescription.Name%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> 子の保護レベル可能性があります。 保護レベルの階層の詳細については、次を参照してください。[について保護レベル](../../../../docs/framework/wcf/understanding-protection-level.md)します。|  
-|ReplyAction|<xref:System.ServiceModel.Description.MessageDescription.Action%2A> 出力メッセージまたは入力メッセージ、コントラクトまたはコールバック コントラクトによって異なります。|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.OperationDescription.ProtectionLevel%2A> と、場合によっては子の保護レベル。 保護レベルの階層の詳細については、次を参照してください。[について保護レベル](../../../../docs/framework/wcf/understanding-protection-level.md)します。|  
+|ReplyAction|出力メッセージまたは入力メッセージの <xref:System.ServiceModel.Description.MessageDescription.Action%2A>。コントラクトまたはコールバック コントラクトによって異なります。|  
   
 |FaultContractAttribute 値|影響を受ける説明ツリーの値|  
 |----------------------------------|-------------------------------------|  
-|アクション|<xref:System.ServiceModel.Description.FaultDescription.Action%2A> コントラクトまたはコールバック コントラクトによって異なります。|  
+|アクション|<xref:System.ServiceModel.Description.FaultDescription.Action%2A>。コントラクトまたはコールバック コントラクトによって異なります。|  
 |DetailType|<xref:System.ServiceModel.Description.FaultDescription.DetailType%2A>|  
 |名前|<xref:System.ServiceModel.Description.FaultDescription.Name%2A>|  
 |名前空間|<xref:System.ServiceModel.Description.FaultDescription.Namespace%2A>|  
@@ -80,19 +80,19 @@ ms.locfileid: "59195346"
   
 |MessageHeaderAttribute 値|影響を受ける説明ツリーの値|  
 |----------------------------------|-------------------------------------|  
-|アクター|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> 内の対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> 内の対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|名前|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 内の対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|名前空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 内の対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 内の対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
-|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> 内の対応するヘッダーの <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|アクター|<xref:System.ServiceModel.Description.MessageHeaderDescription.Actor%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|MustUnderstand|<xref:System.ServiceModel.Description.MessageHeaderDescription.MustUnderstand%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|名前|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|名前空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
+|Relay|<xref:System.ServiceModel.Description.MessageHeaderDescription.Relay%2A> 対応するヘッダー <xref:System.ServiceModel.Description.MessageDescription.Headers%2A>|  
   
 |MessageBodyMemberAttribute 値|影響を受ける説明ツリーの値|  
 |--------------------------------------|-------------------------------------|  
-|名前|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 内の対応する部分の <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|名前空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 内の対応する部分の <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|注文|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 内の対応する部分の <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
-|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 内の対応する部分の <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|名前|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|名前空間|<xref:System.ServiceModel.Description.MessagePartDescription.Namespace%2A> 対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|順序|<xref:System.ServiceModel.Description.MessagePartDescription.Index%2A> 対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|ProtectionLevel|<xref:System.ServiceModel.Description.MessagePartDescription.ProtectionLevel%2A> 対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
 |MessageHeaderArrayAttribute 値|影響を受ける説明ツリーの値|  
 |---------------------------------------|-------------------------------------|  
@@ -109,7 +109,7 @@ ms.locfileid: "59195346"
   
 |MessageParameterAttribute 値|影響を受ける説明ツリーの値|  
 |-------------------------------------|-------------------------------------|  
-|名前|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 内の対応する部分の <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
+|名前|<xref:System.ServiceModel.Description.MessagePartDescription.Name%2A> 対応する部分 <xref:System.ServiceModel.Description.MessageBodyDescription.Parts%2A>|  
   
  説明ツリーの値がメタデータに変換される方法の詳細については、次を参照してください。 [ServiceDescription と WSDL 参照](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)します。  
   

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
 ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195515"
 ---
 # <a name="typography"></a>タイポグラフィ
@@ -26,7 +26,7 @@ ms.locfileid: "59195515"
  [テキストの高度な書式設定](advanced-text-formatting.md)  
  [フォント](fonts-wpf.md)  
  [グリフ](glyphs.md)  
- [方法のトピック](typography-how-to-topics.md)  
+ [方法トピック](typography-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
 

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
 ms.openlocfilehash: 5f7b072e90e92070dd7fda2f0ad44814009268b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199454"
 ---
 # <a name="xclass-directive"></a>x:Class ディレクティブ
@@ -58,7 +58,7 @@ ms.locfileid: "59199454"
  Windows Workflow foundation で`x:Class`全体を XAML で構成されるカスタム アクティビティのクラスの名前または分離コードを含むアクティビティ デザイナーの XAML ページの部分クラスの名前します。  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight の使用上の注意  
- `x:Class` Silverlight は別々 に記載されています。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)します。  
+ Silverlight 用の `x:Class` に関しては、別途ドキュメントが用意されています。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)します。  
   
 ## <a name="see-also"></a>関連項目
 

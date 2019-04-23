@@ -3,10 +3,10 @@ title: トランザクションのサポート
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
 ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196163"
 ---
 # <a name="transaction-support"></a>トランザクションのサポート
@@ -26,4 +26,4 @@ ms.locfileid: "59196163"
 ## <a name="see-also"></a>関連項目
 
 - [背景情報](../../../../../../docs/framework/data/adonet/sql/linq/background-information.md)
-- [方法: データ送信をトランザクションで囲む](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
+- [方法: トランザクションを使用してデータ送信を角かっこ](../../../../../../docs/framework/data/adonet/sql/linq/how-to-bracket-data-submissions-by-using-transactions.md)
