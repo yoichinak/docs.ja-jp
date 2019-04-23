@@ -16,10 +16,10 @@ dev_langs:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320159"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>方法: ローカライズされた日付/時刻情報を Web ユーザーに表示する
@@ -114,6 +114,6 @@ Web ページは世界中で表示されるため、ユーザーとの通信時�
 ## <a name="see-also"></a>関連項目
 
 - [書式設定操作の実行](../../../docs/standard/base-types/performing-formatting-operations.md)
-- [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
-- [カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Custom Date and Time Format Strings](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)
 - [日付と時刻文字列の解析](../../../docs/standard/base-types/parsing-datetime.md)

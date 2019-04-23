@@ -3,10 +3,10 @@ title: ワークフロー トレース
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321667"
 ---
 # <a name="workflow-tracing"></a>ワークフロー トレース
@@ -23,7 +23,7 @@ ms.locfileid: "59321667"
   
 4. 既定の分析トレースのバッファー サイズは 4 KB ですが、このサイズを 32 KB に増やすことをお勧めします。 これを行うには、次の手順を実行します。  
   
-    1.  現在のフレームワーク ディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。 `wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1.  現在のフレームワークのディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
     2.  変更、 \<bufferSize > 32 Windows.ApplicationServer.Applications.man ファイルの値。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "59321667"
                   </channel>  
         ```  
   
-    3.  現在のフレームワーク ディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。 `wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3.  現在のフレームワークのディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  .NET Framework 4 Client Profile を使用している場合は、.NET Framework 4 ディレクトリから、次のコマンドを実行して ETW マニフェストをまず登録する必要があります。 `ServiceModelReg.exe –i –c:etw`  

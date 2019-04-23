@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8aca5f00-d80e-4320-81b3-016d0466f7ee
 ms.openlocfilehash: eb938cfae645a9cc3811f1b5a02cddef742bac89
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317104"
 ---
 # <a name="modifying-large-value-max-data-in-adonet"></a>ADO.NET での大きい値 (max) データの変更
@@ -21,7 +21,7 @@ ms.locfileid: "59317104"
   
  **SQL Server オンライン ブック**  
   
-1. [大きな値のデータ型の使用](https://go.microsoft.com/fwlink/?LinkId=120498)  
+1. [大きな値データ型の使用](https://go.microsoft.com/fwlink/?LinkId=120498)  
   
 ## <a name="large-value-type-restrictions"></a>大きい値型の制限事項  
  `max` データ型には、小さいデータ型にはない、次の制限事項が適用されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "59317104"
 -   大きい `varchar` 列はパーティション分割のキー列として使用できません。  
   
 ## <a name="working-with-large-value-types-in-transact-sql"></a>Transact-SQL での大きい値型の使用  
- Transact-SQL の `OPENROWSET` 関数は、リモート データへの接続およびアクセスに 1 回だけ使用できます。 この関数には、OLE DB データ ソースからリモート データにアクセスするために必要な、すべての接続情報が含まれています。 `OPENROWSET` テーブル名と同様に、クエリの FROM 句で参照できます。 OLE DB プロバイダーの機能に従って、INSERT、UPDATE、または DELETE ステートメントのターゲット テーブルとして参照することもできます。  
+ Transact-SQL の `OPENROWSET` 関数は、リモート データへの接続およびアクセスに 1 回だけ使用できます。 この関数には、OLE DB データ ソースからリモート データにアクセスするために必要な、すべての接続情報が含まれています。 `OPENROWSET` は、クエリの FROM 句でテーブル名と同様に参照できます。 OLE DB プロバイダーの機能に従って、INSERT、UPDATE、または DELETE ステートメントのターゲット テーブルとして参照することもできます。  
   
  `OPENROWSET` 関数には、`BULK` 行セット プロバイダーが含まれており、データをターゲット テーブルに読み込むことなく、ファイルから直接読み取ることができます。 これにより、`OPENROWSET` を単純な INSERT SELECT ステートメントで使用できます。  
   
@@ -69,7 +69,7 @@ FROM OPENROWSET
 |--------|----------|  
 |expression が NULL|`@Length` 無視されますと、値*column_name*が切り捨てられる指定した`@Offset`。|  
 |`@Offset` NULL です。|更新操作では、既存の最後に式を追加します。 *column_name*値と`@Length`は無視されます。|  
-|`@Offset` column_name の値の長さより大きい|SQL Server からエラーが返されます。|  
+|`@Offset` が column_name の値の長さより長い|SQL Server からエラーが返されます。|  
 |`@Length` NULL です。|更新操作により `@Offset` の値の `column_name` から最後までのすべてのデータが削除されます。|  
   
 > [!NOTE]

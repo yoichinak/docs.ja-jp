@@ -3,17 +3,17 @@ title: 実行時における DynamicActivity を使用したアクティビテ�
 ms.date: 03/30/2017
 ms.assetid: 1af85cc6-912d-449e-90c5-c5db3eca5ace
 ms.openlocfilehash: ed133e972caa9a3a62ab2ac1310cb1bd666947ce
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321232"
 ---
 # <a name="creating-an-activity-at-runtime-with-dynamicactivity"></a>実行時における DynamicActivity を使用したアクティビティの作成
-<xref:System.Activities.DynamicActivity> パブリック コンス トラクターを持つ具象、シール クラスです。 <xref:System.Activities.DynamicActivity> 時にアクティビティ DOM を使用してアクティビティ機能を構築するために使用できます。  
+<xref:System.Activities.DynamicActivity> は、パブリック コンストラクターを持つ、具体的なシール クラスです。 <xref:System.Activities.DynamicActivity> は、実行時にアクティビティ DOM を使用してアクティビティの機能を構築するために使用できます。  
   
 ## <a name="dynamicactivity-features"></a>DynamicActivity の機能  
- <xref:System.Activities.DynamicActivity> 実行プロパティの引数と変数へのアクセスが子アクティビティのスケジュール設定や追跡などのランタイム サービスにアクセスできません。  
+ <xref:System.Activities.DynamicActivity> は、実行プロパティ、引数、変数にアクセスできますが、子アクティビティのスケジュール設定や追跡などのランタイム サービスにはアクセスできません。  
   
  最上位のプロパティは、ワークフローの <xref:System.Activities.Argument> オブジェクトを使用して設定できます。 命令型コードでは、これらの引数は新しい型で CLR プロパティを使用して作成されます。 XAML では `x:Class` タグおよび `x:Member` タグを使用して、これらの引数が宣言されます。  
   

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: 46ba0df3-5cf7-443c-a3b4-a72660172476
 ms.openlocfilehash: 14f225f5587379b3efa7b6dc2475f1b697ebb281
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314218"
 ---
 # <a name="how-to-inherit-from-the-control-class"></a>方法: コントロール クラスを継承する
@@ -46,8 +46,8 @@ Windows フォームで使用する完全なカスタム コントロールを�
 ## <a name="see-also"></a>関連項目
 
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)
-- [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)
-- [方法: 既存の Windows フォーム コントロールから継承する](how-to-inherit-from-existing-windows-forms-controls.md)
-- [方法: Windows フォームのコントロールを作成する](how-to-author-controls-for-windows-forms.md)
+- [方法: UserControl クラスを継承します。](how-to-inherit-from-the-usercontrol-class.md)
+- [方法: 継承可能な既存の Windows フォーム コントロール](how-to-inherit-from-existing-windows-forms-controls.md)
+- [方法: Windows フォームのコントロールの作成](how-to-author-controls-for-windows-forms.md)
 - [Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](~/docs/visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)
 - [デザイン時の Windows フォーム コントロールの開発](developing-windows-forms-controls-at-design-time.md)

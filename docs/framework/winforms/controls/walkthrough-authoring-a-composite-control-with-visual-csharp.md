@@ -9,10 +9,10 @@ helpviewer_keywords:
 - custom controls [Windows Forms], creating
 ms.assetid: f88481a8-c746-4a36-9479-374ce5f2e91f
 ms.openlocfilehash: 67fecb95ea373e88e5428251151cc30bfeb580a6
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321037"
 ---
 # <a name="walkthrough-authoring-a-composite-control-with-visual-c"></a>チュートリアル: Visual C# による複合コントロールの作成\#
@@ -30,7 +30,7 @@ ms.locfileid: "59321037"
   
 2. Visual c# プロジェクトのリストから選択、 **Windows フォーム コントロール ライブラリ**プロジェクト テンプレートで、「`ctlClockLib`で、**名前**ボックスと順にクリックします **[ok]**。  
   
-     プロジェクト名 `ctlClockLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、次の 2 つのアセンブリがという名前のコンポーネントを提供`ctlClock`を指定することができます、`ctlClock`を使用してコンポーネント `ctlClockLib.ctlClock.`  
+     プロジェクト名 `ctlClockLib` は、既定でルート名前空間にも割り当てられます。 ルート名前空間は、アセンブリ内のコンポーネント名の修飾に使用されます。 たとえば、`ctlClock` という名前のコンポーネントが 2 つのアセンブリに含まれている場合、`ctlClockLib.ctlClock.` を使用して目的の `ctlClock` コンポーネントを指定できます。  
   
 3. ソリューション エクスプローラーで、**[UserControl1.cs]** を右クリックし、**[名前の変更]** をクリックします。 ファイル名を `ctlClock.cs` に変更します。 コード要素 "UserControl1" へのすべての参照の名前を変更するかどうかをたずねられたら、**[はい]** をクリックします。  
   
@@ -54,8 +54,8 @@ ms.locfileid: "59321037"
   
     |プロパティ|変更後の値|  
     |--------------|---------------|  
-    |**名前**|`lblDisplay`|  
-    |**テキスト**|`(blank space)`|  
+    |**Name**|`lblDisplay`|  
+    |**Text**|`(blank space)`|  
     |**TextAlign**|`MiddleCenter`|  
     |**Font.Size**|`14`|  
   
@@ -247,8 +247,8 @@ ms.locfileid: "59321037"
   
     |プロパティ|設定|  
     |--------------|-------------|  
-    |**名前**|`lblAlarm`|  
-    |**テキスト**|**警告!**|  
+    |**Name**|`lblAlarm`|  
+    |**Text**|**Alarm!**|  
     |**TextAlign**|`MiddleCenter`|  
     |**Visible**|`false`|  
   
@@ -317,10 +317,10 @@ ms.locfileid: "59321037"
   
 2. コントロールにボタンを追加します。 ボタンのプロパティを次のように設定します。  
   
-    |プロパティ|値|  
+    |プロパティ|[値]|  
     |--------------|-----------|  
-    |**名前**|`btnAlarmOff`|  
-    |**テキスト**|**アラームを無効にします。**|  
+    |**Name**|`btnAlarmOff`|  
+    |**Text**|**Disable Alarm**|  
   
 3. デザイナーで **[btnAlarmOff]** をダブルクリックします。  
   
@@ -367,10 +367,10 @@ ms.locfileid: "59321037"
   
     |コントロール|プロパティ|[値]|  
     |-------------|--------------|-----------|  
-    |`label1`|**テキスト**|`(blank space)`|  
-    ||**名前**|`lblTest`|  
-    |`dateTimePicker1`|**名前**|`dtpTest`|  
-    ||**形式**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
+    |`label1`|**Text**|`(blank space)`|  
+    ||**Name**|`lblTest`|  
+    |`dateTimePicker1`|**Name**|`dtpTest`|  
+    ||**Format**|<xref:System.Windows.Forms.DateTimePickerFormat.Time>|  
   
 10. デザイナーで **[dtpTest]** をダブルクリックします。  
   
@@ -407,5 +407,5 @@ ms.locfileid: "59321037"
 ## <a name="see-also"></a>関連項目
 
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)
-- [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
-- [チュートリアル: Visual C# による Windows フォーム コントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)
+- [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)
+- [チュートリアル: ビジュアルを含む Windows フォーム コントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320053"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>方法: 長時間にわたって実行されるワークフローを作成して実行する
@@ -29,11 +29,11 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
 -   [ワークフロー ホスト フォームを作成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [フォームのプロパティとヘルパー メソッドを追加するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+-   [フォームのヘルパー メソッドとプロパティを追加するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [インスタンス ストア、ワークフロー ライフサイクル ハンドラー、および拡張機能を構成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+-   [インスタンス ストア、ワークフロー ライフ サイクル ハンドラー、および拡張機能を構成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [複数のワークフローの種類を開始および再開できるようにするには](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+-   [開始と再開の複数のワークフローの種類を有効にするには](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
 -   [新しいワークフローを開始するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
@@ -41,7 +41,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
 -   [ワークフローを終了するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [アプリケーションをビルドして実行するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+-   [ビルドして、アプリケーションの実行](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> 永続性データベースを作成するには  
   
@@ -50,7 +50,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     > [!NOTE]
     >  いる**Create Database**データベースを作成する前に、ローカル サーバーに対する権限。  
   
-2. 選択**オープン**、**ファイル**から、**ファイル**メニュー。 次のフォルダーを参照してください。 `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`  
+2. 選択**オープン**、**ファイル**から、**ファイル**メニュー。 次のフォルダーに移動します: `C:\Windows\Microsoft.NET\Framework\v4.0.30319\sql\en`。  
   
      次の 2 つのファイルを選択し、クリックして**オープン**します。  
   
@@ -94,12 +94,12 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
     |コントロール|プロパティ:[値]|  
     |-------------|---------------------|  
-    |**ボタン**|名前:NewGame<br /><br /> 場所:13, 13<br /><br /> サイズ:75, 23<br /><br /> テキスト:New Game|  
-    |**group1**|場所:94, 18<br /><br /> テキスト:Guess a number from 1 to|  
+    |**Button**|名前:NewGame<br /><br /> 場所:13, 13<br /><br /> サイズ:75, 23<br /><br /> テキスト:New Game|  
+    |**Label**|場所:94, 18<br /><br /> テキスト:Guess a number from 1 to|  
     |**ComboBox**|名前:NumberRange<br /><br /> DropDownStyle:DropDownList<br /><br /> 項目:10, 100, 1000<br /><br /> 場所:228, 12<br /><br /> サイズ:143, 21|  
-    |**group1**|場所:13, 43<br /><br /> テキスト:Workflow type|  
+    |**Label**|場所:13, 43<br /><br /> テキスト:Workflow type|  
     |**ComboBox**|名前:WorkflowType<br /><br /> DropDownStyle:DropDownList<br /><br /> 項目:StateMachineNumberGuessWorkflow、FlowchartNumberGuessWorkflow、SequentialNumberGuessWorkflow<br /><br /> 場所:94, 40<br /><br /> サイズ:277, 21|  
-    |**group1**|名前:WorkflowVersion<br /><br /> 場所:13, 362<br /><br /> テキスト:Workflow version|  
+    |**Label**|名前:WorkflowVersion<br /><br /> 場所:13, 362<br /><br /> テキスト:Workflow version|  
     |**GroupBox**|場所:13, 67<br /><br /> サイズ:358, 287<br /><br /> テキスト:Game|  
   
     > [!NOTE]
@@ -107,12 +107,12 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
     |コントロール|プロパティ:[値]|  
     |-------------|---------------------|  
-    |**group1**|場所:7, 20<br /><br /> テキスト:ワークフロー インスタンス ID |  
+    |**Label**|場所:7, 20<br /><br /> テキスト:ワークフロー インスタンス ID |  
     |**ComboBox**|名前:InstanceId<br /><br /> DropDownStyle:DropDownList<br /><br /> 場所:121, 17<br /><br /> サイズ:227, 21|  
-    |**group1**|場所:7, 47<br /><br /> テキスト:Guess|  
+    |**Label**|場所:7, 47<br /><br /> テキスト:Guess|  
     |**TextBox**|名前:Guess<br /><br /> 場所:50, 44<br /><br /> サイズ:65, 20|  
-    |**ボタン**|名前:EnterGuess<br /><br /> 場所:121, 42<br /><br /> サイズ:75, 23<br /><br /> テキスト:Enter Guess|  
-    |**ボタン**|名前:QuitGame<br /><br /> 場所:274, 42<br /><br /> サイズ:75, 23<br /><br /> テキスト:終了|  
+    |**Button**|名前:EnterGuess<br /><br /> 場所:121, 42<br /><br /> サイズ:75, 23<br /><br /> テキスト:Enter Guess|  
+    |**Button**|名前:QuitGame<br /><br /> 場所:274, 42<br /><br /> サイズ:75, 23<br /><br /> テキスト:終了|  
     |**TextBox**|名前:WorkflowStatus<br /><br /> 場所:10, 73<br /><br /> Multiline:True<br /><br /> 読み取り専用:True<br /><br /> スクロール バー:Vertical<br /><br /> サイズ:338, 208|  
   
 5. 設定、 **AcceptButton**プロパティをフォームの**EnterGuess**します。  
@@ -341,7 +341,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     }  
     ```  
   
-     `ListPersistedWorkflows` 永続化されたワークフロー インスタンスの場合は、インスタンス ストアのクエリを実行し、インスタンス id を追加、`cboInstanceId`コンボ ボックス。  
+     `ListPersistedWorkflows` は、永続化されたワークフロー インスタンスのインスタンス ストアに対してクエリを実行し、`cboInstanceId` コンボ ボックスにインスタンス ID を追加します。  
   
 10. 次の `UpdateStatus` メソッドと対応するデリゲートをフォーム クラスに追加します。 このメソッドは、現在実行中のワークフローのステータスでフォーム上のステータス ウィンドウを更新します。  
   
@@ -574,7 +574,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     };  
     ```  
   
-     <xref:System.Activities.PersistableIdleAction> 列挙体には、<xref:System.Activities.PersistableIdleAction.None>、<xref:System.Activities.PersistableIdleAction.Persist>、および <xref:System.Activities.PersistableIdleAction.Unload> の 3 つの値があります。 <xref:System.Activities.PersistableIdleAction.Persist> エラーの原因ですが、永続化するワークフローでは、ワークフローがアンロードは発生しません。 <xref:System.Activities.PersistableIdleAction.Unload> によってワークフローを永続化およびアンロードされます。  
+     <xref:System.Activities.PersistableIdleAction> 列挙体には、<xref:System.Activities.PersistableIdleAction.None>、<xref:System.Activities.PersistableIdleAction.Persist>、および <xref:System.Activities.PersistableIdleAction.Unload> の 3 つの値があります。 <xref:System.Activities.PersistableIdleAction.Persist> により、ワークフローは永続化されますが、ワークフローがアンロードされることはありません。 <xref:System.Activities.PersistableIdleAction.Unload> により、ワーク フローが永続化され、アンロードされます。  
   
      完成した `ConfigureWorkflowApplication` メソッドは次のようになります。  
   
@@ -692,7 +692,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     ```  
   
 ### <a name="BKMK_WorkflowVersionMap"></a> 開始と再開の複数のワークフローの種類を有効にするには  
- ワークフロー インスタンスを再開するには、ホストはワークフロー定義を指定する必要があります。 このチュートリアルには 3 種類のワークフローがあり、以降の手順では、これらの種類の複数のバージョンを指定します。 `WorkflowIdentity` ホスト アプリケーションが識別情報を永続化されたワークフロー インスタンスに関連付ける方法を提供します。 このセクションの手順では、永続化されたワークフロー インスタンスから対応するワークフロー定義へのワークフロー ID のマッピングに役立つユーティリティ クラスの作成方法を示します。 詳細については`WorkflowIdentity`とバージョン管理を参照してください[を使用して WorkflowIdentity と Versioning](using-workflowidentity-and-versioning.md)します。  
+ ワークフロー インスタンスを再開するには、ホストはワークフロー定義を指定する必要があります。 このチュートリアルには 3 種類のワークフローがあり、以降の手順では、これらの種類の複数のバージョンを指定します。 `WorkflowIdentity` を使用すると、ホスト アプリケーションは、識別情報を永続化されたワークフロー インスタンスに関連付けることができます。 このセクションの手順では、永続化されたワークフロー インスタンスから対応するワークフロー定義へのワークフロー ID のマッピングに役立つユーティリティ クラスの作成方法を示します。 詳細については`WorkflowIdentity`とバージョン管理を参照してください[を使用して WorkflowIdentity と Versioning](using-workflowidentity-and-versioning.md)します。  
   
 1. 右クリックして**NumberGuessWorkflowHost**で**ソリューション エクスプ ローラー**選択**追加**、**クラス**します。 型`WorkflowVersionMap`に、**名前**ボックスし、をクリックして**追加**します。  
   
@@ -806,7 +806,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
     }  
     ```  
   
-     `WorkflowVersionMap` このチュートリアルの 3 つのワークフロー定義にマップされる 3 つのワークフロー id を格納し、ワークフローの開始および再開されるときに、次のセクションで使用します。  
+     `WorkflowVersionMap` は、このチュートリアルの 3 つのワークフロー定義にマップされる 3 つのワークフロー ID を格納しており、以降のセクションでワークフローが開始および再開されるときに使用されます。  
   
 ### <a name="BKMK_StartWorkflow"></a> 新しいワークフローを開始するには  
   

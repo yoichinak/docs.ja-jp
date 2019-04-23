@@ -3,14 +3,14 @@ title: '方法: 探索プロキシを実装する'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321017"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>方法: 探索プロキシを実装する
-このトピックでは、探索プロキシの実装方法について説明します。 Windows Communication Foundation (WCF) の検出機能の詳細については、次を参照してください。 [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)します。 探索プロキシを実装するには、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを作成します。 このサンプルでは、他の多くのサポート クラスも定義され、使用されています。 `OnResolveAsyncResult`、 `OnFindAsyncResult`、および`AsyncResult`します。 これらのクラスは、<xref:System.IAsyncResult> インターフェイスを実装します。 詳細については<xref:System.IAsyncResult>を参照してください[System.IAsyncResult インターフェイス](xref:System.IAsyncResult)します。
+このトピックでは、探索プロキシの実装方法について説明します。 Windows Communication Foundation (WCF) の検出機能の詳細については、次を参照してください。 [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)します。 探索プロキシを実装するには、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを作成します。 このサンプルでは、他の多くのサポート クラスも定義され、使用されています。 `OnResolveAsyncResult`、`OnFindAsyncResult`、および `AsyncResult`。 これらのクラスは、<xref:System.IAsyncResult> インターフェイスを実装します。 詳細については<xref:System.IAsyncResult>を参照してください[System.IAsyncResult インターフェイス](xref:System.IAsyncResult)します。
 
  このトピックでは、探索プロキシの実装を 3 つの主要な部分に分けて説明します。
 
@@ -980,6 +980,6 @@ namespace Microsoft.Samples.Discovery
 ## <a name="see-also"></a>関連項目
 
 - [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)
-- [方法: 探索プロキシで登録される探索可能なサービスの実装する](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
-- [方法: 探索プロキシを使用してサービスを検索するクライアント アプリケーションを実装する](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
-- [方法: 探索プロキシをテストする](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)
+- [方法: 探索プロキシで登録される探索可能なサービスを実装します。](../../../../docs/framework/wcf/feature-details/discoverable-service-that-registers-with-the-discovery-proxy.md)
+- [方法: 探索プロキシを使用して、サービスを検索するクライアント アプリケーションを実装します。](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)
+- [方法: 探索プロキシをテストします。](../../../../docs/framework/wcf/feature-details/how-to-test-the-discovery-proxy.md)

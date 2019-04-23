@@ -7,10 +7,10 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316740"
 ---
 # <a name="key-frame-animations-overview"></a>キー フレーム アニメーションの概要
@@ -46,11 +46,11 @@ ms.locfileid: "59316740"
   
  属している、キー フレーム アニメーション クラス、<xref:System.Windows.Media.Animation>名前空間と、次の名前付け規則に従います。  
   
- *\<型 >* `AnimationUsingKeyFrames`  
+ *\<Type>* `AnimationUsingKeyFrames`  
   
  ここで、*\<Type>* は、クラスがアニメーション化する値の型です。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 次のキー フレーム アニメーション クラスを提供します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、次のキー フレーム アニメーション クラスを提供します。  
   
 |プロパティの型|対応するFrom/To/By アニメーションのクラス|サポートされる補間方式|  
 |-------------------|------------------------------------------------|-------------------------------------|  
@@ -79,7 +79,7 @@ ms.locfileid: "59316740"
 ## <a name="target-values-key-frames-and-key-times"></a>ターゲット値 (キー フレーム) とキー時刻  
  さまざまな種類のプロパティをアニメーション化するための多様な種類のキー フレーム アニメーションがあるように、さまざまな種類のキー フレーム オブジェクトがあります (アニメーション化される値の型とサポートされる補間方式ごとに 1 種類のオブジェクト)。 キー フレームの種類は、次の名前付け規則に従います。  
   
- *\<InterpolationMethod >\<型 >* `KeyFrame`  
+ *\<InterpolationMethod>\<Type>* `KeyFrame`  
   
  ここで、*\<InterpolationMethod>* は、キー フレームで使用される補間方式であり、*\<Type>* は、クラスがアニメーション化する値の型です。 3 つの補間方式のすべてをサポートするキー フレーム アニメーションでは、3 種類のキー フレームを使用できます。 たとえば、キー フレームの 3 種類を使用することができます、 <xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>: <xref:System.Windows.Media.Animation.DiscreteDoubleKeyFrame>、 <xref:System.Windows.Media.Animation.LinearDoubleKeyFrame>、および<xref:System.Windows.Media.Animation.SplineDoubleKeyFrame>します。 (補間方式については、後のセクションで詳しく説明します)。  
   

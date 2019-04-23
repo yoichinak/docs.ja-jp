@@ -7,10 +7,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data binding
 ms.assetid: f4f46009-cec2-441b-8668-6b5af057558b
 ms.openlocfilehash: 59a025535e850cf3c773a2a078511d41058bb24c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321849"
 ---
 # <a name="how-to-bind-data-to-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用してデータを Windows フォーム DataGridView コントロールにバインドする
@@ -51,13 +51,13 @@ ms.locfileid: "59321849"
 - <xref:System.Windows.Forms.DataGridView.DataMember%2A?displayProperty=nameWithType>
 - <xref:System.Windows.Forms.DataGridView.DataSource%2A?displayProperty=nameWithType>
 - [方法: データをデータベースに接続するには](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fxk9yw1t(v=vs.120))
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を追加および削除する](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列の順序を変更する](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView 列の種類を変更する](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を固定する](freeze-columns-in-the-datagrid-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を非表示にする](hide-columns-in-the-datagrid-using-the-designer.md)
-- [方法: デザイナーを使用して Windows フォームの DataGridView コントロールで列を読み取り専用にする](make-columns-read-only-in-the-datagrid-using-the-designer.md)
-- [方法: Windows フォーム アプリケーション プロジェクトを作成します。](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
-- [方法: Windows フォームにコントロールを追加する](how-to-add-controls-to-windows-forms.md)
+- [方法: 追加して、デザイナーを使用して Windows フォーム DataGridView コントロールで列を削除](add-and-remove-columns-in-the-datagrid-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView コントロール内の列の順序を変更します。](change-the-order-of-columns-in-the-datagrid-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView 列の型を変更します。](change-the-type-of-a-wf-datagridview-column-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView コントロールで列を固定します。](freeze-columns-in-the-datagrid-using-the-designer.md)
+- [方法: デザイナーを使用して Windows フォーム DataGridView コントロール内の列を非表示にします。](hide-columns-in-the-datagrid-using-the-designer.md)
+- [方法: 読み取り専用デザイナーを使用して Windows フォーム DataGridView コントロールで列を作成します。](make-columns-read-only-in-the-datagrid-using-the-designer.md)
+- [方法: Windows フォーム アプリケーション プロジェクトの作成](/visualstudio/ide/step-1-create-a-windows-forms-application-project)
+- [方法: Windows フォームにコントロールを追加します。](how-to-add-controls-to-windows-forms.md)
 - [データ ソース ウィンドウ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/6ckyxa83(v=vs.120))
 - [方法: Windows フォーム アプリケーションで関連データを表示します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/57tx3hhe(v=vs.120))

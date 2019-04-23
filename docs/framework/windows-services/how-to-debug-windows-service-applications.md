@@ -9,12 +9,12 @@ helpviewer_keywords:
 - services, debugging
 ms.assetid: 63ab0800-0f05-4f1e-88e6-94c73fd920a2
 author: ghogen
-ms.openlocfilehash: 15b790f4a4d3348e2bef3e7e929d72c09da8690c
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 1abb64f7d76b772168ed97024f5f1381670c6882
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441880"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59321446"
 ---
 # <a name="how-to-debug-windows-service-applications"></a>方法: Windows サービス アプリケーションをデバッグする
 サービスは、Visual Studio 内からではなく、サービス コントロール マネージャーのコンテキスト内から実行する必要があります。 そのため、サービスのデバッグは、その他の種類の Visual Studio アプリケーションをデバッグするように単純ではありません。 サービスのデバッグを行うには、サービスを起動してから、サービスを実行しているプロセスにデバッガーをアタッチします。 これにより、Visual Studio のすべての標準デバッグ機能を使用して、アプリケーションをデバッグできるようになります。  
@@ -36,23 +36,23 @@ ms.locfileid: "56441880"
   
 ### <a name="to-debug-a-service"></a>サービスをデバッグするには  
   
-1.  サービスをデバッグ構成で構築します。  
+1. サービスをデバッグ構成で構築します。  
   
-2.  サービスをインストールします。 詳細については、「[方法 :サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。  
+2. サービスをインストールします。 詳細については、「[方法 :サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)」を参照してください。  
   
-3.  **サービス コントロール マネージャー**、**サーバー エクスプローラー**、またはコードで、サービスを起動します。 詳細については、「[方法 :サービスを開始する](../../../docs/framework/windows-services/how-to-start-services.md)」を参照してください。  
+3. **サービス コントロール マネージャー**、**サーバー エクスプローラー**、またはコードで、サービスを起動します。 詳細については、「[方法 :サービスを開始する](../../../docs/framework/windows-services/how-to-start-services.md)」を参照してください。  
   
-4.  システム プロセスにアタッチすることができるように、管理者資格情報を使用して Visual Studio を起動します。  
+4. システム プロセスにアタッチすることができるように、管理者資格情報を使用して Visual Studio を起動します。  
   
-5.  (省略可能) Visual Studio のメニュー バーで **[ツール]**、**[オプション]** の順に選択します。 **[オプション]** ダイアログ ボックスで、**[デバッグ]**、**[シンボル]** の順に選択し、**[Microsoft シンボル サーバー]** チェック ボックスをオンにし、**[OK]** を選択します。  
+5. (省略可能) Visual Studio のメニュー バーで **[ツール]**、**[オプション]** の順に選択します。 **[オプション]** ダイアログ ボックスで、**[デバッグ]**、**[シンボル]** の順に選択し、**[Microsoft シンボル サーバー]** チェック ボックスをオンにし、**[OK]** を選択します。  
   
-6.  メニュー バーの **[デバッグ]** または **[ツール]** メニューで、**[プロセスにアタッチ]** を選択します。 (キーボード:Ctrl + Alt + P)  
+6. メニュー バーの **[デバッグ]** または **[ツール]** メニューで、**[プロセスにアタッチ]** を選択します。 (キーボード:Ctrl + Alt + P)  
   
      **[プロセス]** ダイアログ ボックスが表示されます。  
   
-7.  **[全ユーザーのプロセスを表示する]** チェック ボックスをオンにします。  
+7. **[全ユーザーのプロセスを表示する]** チェック ボックスをオンにします。  
   
-8.  **[選択可能なプロセス]** セクションでサービスのプロセスを選択し、**[アタッチ]** を選択します。  
+8. **[選択可能なプロセス]** セクションでサービスのプロセスを選択し、**[アタッチ]** を選択します。  
   
     > [!TIP]
     >  プロセスの名前は、サービスの実行可能ファイルの名前と同じになります。  
@@ -77,7 +77,7 @@ ms.locfileid: "56441880"
   
 #### <a name="how-to-run-a-windows-service-as-a-console-application"></a>方法: Windows サービスをコンソール アプリケーションとして実行する  
   
-1.  <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドを実行するサービスにメソッドを追加します。  
+1. <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドを実行するサービスにメソッドを追加します。  
   
     ```csharp  
     internal void TestStartupAndStop(string[] args)  
@@ -88,7 +88,7 @@ ms.locfileid: "56441880"
     }  
     ```  
   
-2.  `Main` メソッドを次のように書き換えます。  
+2. `Main` メソッドを次のように書き換えます。  
   
     ```csharp  
     static void Main(string[] args)  
@@ -105,15 +105,16 @@ ms.locfileid: "56441880"
     }
     ```  
   
-3.  プロジェクトのプロパティの **[アプリケーション]** タブで、 **[出力の種類]** を **[コンソール アプリケーション]** に設定します。  
+3. プロジェクトのプロパティの **[アプリケーション]** タブで、 **[出力の種類]** を **[コンソール アプリケーション]** に設定します。  
   
-4.  **[デバッグの開始]** を選択します (F5)。  
+4. **[デバッグの開始]** を選択します (F5)。  
   
-5.  プログラムを再度 Windows サービスとして実行するには、プログラムをインストールして、Windows サービスとして通常どおり起動します。 これらの変更を反対にする必要はありません。  
+5. プログラムを再度 Windows サービスとして実行するには、プログラムをインストールして、Windows サービスとして通常どおり起動します。 これらの変更を反対にする必要はありません。  
   
  システムの起動時にのみ発生する問題をデバッグするときなどのいくつかのケースでは、Windows デバッガーを使用する必要があります。 [Windows Driver Kit (WDK) をダウンロード](/windows-hardware/drivers/download-the-wdk)し、「[Windows サービスをデバッグする方法](https://support.microsoft.com/kb/824344)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [Windows サービス アプリケーションの概要](../../../docs/framework/windows-services/introduction-to-windows-service-applications.md)
 - [方法: サービスをインストールおよびアンインストールする](../../../docs/framework/windows-services/how-to-install-and-uninstall-services.md)
 - [方法: サービスを開始する](../../../docs/framework/windows-services/how-to-start-services.md)

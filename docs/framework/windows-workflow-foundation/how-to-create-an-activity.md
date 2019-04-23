@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315141"
 ---
 # <a name="how-to-create-an-activity"></a>方法: アクティビティを作成する
@@ -46,7 +46,7 @@ ms.locfileid: "59315141"
      [!code-vb[CFX_WF_GettingStarted#1](~/samples/snippets/visualbasic/VS_Snippets_CFX/cfx_wf_gettingstarted/vb/readint.vb#1)]
 
     > [!NOTE]
-    > `ReadInt` アクティビティは、コード アクティビティ テンプレートの既定値である <xref:System.Activities.NativeActivity%601> ではなく <xref:System.Activities.CodeActivity> から派生します。 <xref:System.Activities.CodeActivity%601> アクティビティを介して公開される 1 つの結果を提供する場合に使用できます、<xref:System.Activities.Activity%601.Result%2A>引数が<xref:System.Activities.CodeActivity%601>ため、ブックマークの使用をできません<xref:System.Activities.NativeActivity%601>使用されます。
+    > `ReadInt` アクティビティは、コード アクティビティ テンプレートの既定値である <xref:System.Activities.NativeActivity%601> ではなく <xref:System.Activities.CodeActivity> から派生します。 <xref:System.Activities.CodeActivity%601> は、<xref:System.Activities.Activity%601.Result%2A> 引数を介して公開される 1 つの結果がアクティビティによって提供される場合に使用できますが、<xref:System.Activities.CodeActivity%601> ではブックマークの使用がサポートされていないため、<xref:System.Activities.NativeActivity%601> が使用されます。
 
 ## <a name="create-the-prompt-activity"></a>Prompt アクティビティを作成します。
 
@@ -108,5 +108,5 @@ ms.locfileid: "59315141"
 - <xref:System.Activities.NativeActivity%601>
 - [カスタム アクティビティの設計と実装](designing-and-implementing-custom-activities.md)
 - [チュートリアル入門](getting-started-tutorial.md)
-- [方法: ワークフローを作成する](how-to-create-a-workflow.md)
+- [方法: ワークフローを作成します。](how-to-create-a-workflow.md)
 - [カスタム アクティビティ デザイナーでの ExpressionTextBox の使用](./samples/using-the-expressiontextbox-in-a-custom-activity-designer.md)

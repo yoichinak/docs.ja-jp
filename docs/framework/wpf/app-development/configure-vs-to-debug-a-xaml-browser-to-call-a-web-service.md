@@ -9,16 +9,16 @@ helpviewer_keywords:
 - configuring Visual Studio to debug XBAPs [WPF]
 ms.assetid: fd1db082-a7bb-4c4b-9331-6ad74a0682d0
 ms.openlocfilehash: dcaabf9ecd47bc88095e92aa8ed28ad5f13fd1dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314374"
 ---
 # <a name="how-to-configure-visual-studio-to-debug-a-xaml-browser-application-to-call-a-web-service"></a>方法: Visual Studio を構成して Web サービスを呼び出す XAML ブラウザー アプリケーションをデバッグする
 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] インターネット ゾーン アクセス許可のセットに制限されている部分信頼セキュリティ サンド ボックス内で実行します。 このアクセス許可セットのみであるサービスを Web に Web サービス呼び出しを制限する、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]アプリケーションの起点サイト。 ときに、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]は、デバッグ、Visual Studio 2005 とは見なされません起点のサイトと同じように、Web サービスが参照にします。 ときに発生します。 このエラーの原因のセキュリティ例外、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出すしようとしています。 ただし、Visual Studio 2005[!INCLUDE[TLA#tla_wpfbrowserappproj](../../../../includes/tlasharptla-wpfbrowserappproj-md.md)]プロジェクトは、デバッグ中に呼び出す Web サービスと同じサイトの配信元をシミュレートするように構成できます。 これにより、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)]を安全にセキュリティ例外を発生させることがなく、Web サービスを呼び出します。
 
-## <a name="configuring-visual-studio"></a>Visual Studio を構成します。
+## <a name="configuring-visual-studio"></a>Visual Studio の構成
  デバッグを Visual Studio 2005 を構成する、 [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] Web サービスを呼び出します。
 
 1. **ソリューション エクスプ ローラー**でプロジェクトを選択し、 **[プロジェクト]** メニューの **[プロパティ]** をクリックします。
@@ -31,7 +31,7 @@ ms.locfileid: "59314374"
 
 4. **開始オプション**セクションで、次の点を入力してください、**コマンドライン引数**テキスト ボックス。
 
-     `-debug`  *ファイル名*
+     `-debug`  *filename*
 
      *ファイル名*の値、 **-デバッグ**パラメーターが .xbap ファイル名。 例。
 

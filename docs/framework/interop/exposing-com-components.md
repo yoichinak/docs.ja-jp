@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e78b14f1-e487-43cd-9c6d-1a07483f1730
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6987dea6f122819b9f1c0d334440d87545368942
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 2b7aa028afeaf4230ee079f0d4071a5cd6a21c65
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220110"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59320913"
 ---
 # <a name="exposing-com-components-to-the-net-framework"></a>.NET Framework への COM コンポーネントの公開
 このセクションでは、既存の COM コンポーネントをマネージド コードに公開するために必要なプロセスをまとめています。 .NET Framework と緊密に統合される COM サーバーの詳細については、「[Design Considerations for Interoperation](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))」(相互運用のためのデザインの考慮事項) を参照してください。
@@ -22,23 +22,24 @@ ms.locfileid: "56220110"
   
 #### <a name="to-expose-com-components-to-the-net-framework"></a>.NET Framework に COM コンポーネントを公開するには  
   
-1.  [タイプ ライブラリをアセンブリとしてインポートする](importing-a-type-library-as-an-assembly.md)。  
+1. [タイプ ライブラリをアセンブリとしてインポートする](importing-a-type-library-as-an-assembly.md)。  
   
      共通言語ランタイムでは、COM 型を含め、すべてのタイプにメタデータが必要です。 メタデータとしてインポートされた COM 型を含むアセンブリを取得するには、複数の方法があります。  
   
-2.  [マネージド コード内で COM 型を使用する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))。  
+2. [マネージド コード内で COM 型を使用する](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))。  
   
      任意のマネージド型で行うのと同じ方法で、COM オブジェクトで COM 型の検査、インスタンスのアクティブ化、およびメソッドの呼び出しができます。  
   
-3.  [相互運用プロジェクトをコンパイルする](compiling-an-interop-project.md)。  
+3. [相互運用プロジェクトをコンパイルする](compiling-an-interop-project.md)。  
   
      [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] では、共通言語仕様 (CLS) に準拠する複数の言語 ([!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)]、C#、C++ など) のコンパイラが用意されています。  
   
-4.  [相互運用アプリケーションを展開する](deploying-an-interop-application.md)。  
+4. [相互運用アプリケーションを展開する](deploying-an-interop-application.md)。  
   
      相互運用アプリケーションは、[厳密な名前を付けた](../app-domains/strong-named-assemblies.md)、署名されたアセンブリとして、グローバル アセンブリ キャッシュに最適に展開されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アンマネージ コードとの相互運用](index.md)
 - [相互運用のためのデザインの考慮事項](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/61aax4kh(v=vs.100))
 - [COM 相互運用機能のサンプル: .NET クライアントおよび COM サーバー](com-interop-sample-net-client-and-com-server.md)
