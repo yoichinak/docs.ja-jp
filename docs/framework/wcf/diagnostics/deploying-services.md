@@ -3,10 +3,10 @@ title: サービスの配置
 ms.date: 03/30/2017
 ms.assetid: ac361bfb-017d-4da9-a2d7-fc0fb72d65bb
 ms.openlocfilehash: 2c3cd17b597fafcd02b9155089bc583fafbc9dea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085762"
 ---
 # <a name="deploying-services"></a>サービスの配置
@@ -17,5 +17,5 @@ ms.locfileid: "59085762"
   
 ## <a name="see-also"></a>関連項目
 
-- [ホスト](../../../../docs/framework/wcf/feature-details/hosting.md)
+- [ホスティング](../../../../docs/framework/wcf/feature-details/hosting.md)
 - [ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)

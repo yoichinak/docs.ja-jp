@@ -3,10 +3,10 @@ title: LINQ to DataSet の例
 ms.date: 03/30/2017
 ms.assetid: dfd91658-8d8a-45a4-a356-e327e809f21d
 ms.openlocfilehash: 07ad4a993187c91babb74fae9d05f17b66c2098b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091695"
 ---
 # <a name="linq-to-dataset-examples"></a>LINQ to DataSet の例
@@ -22,7 +22,7 @@ ms.locfileid: "59091695"
   
 -   [パーティション分割](../../../../docs/framework/data/adonet/query-expression-syntax-examples-partitioning.md)  
   
--   [順序](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
+-   [順序付け](../../../../docs/framework/data/adonet/query-expression-syntax-examples-ordering-linq-to-dataset.md)  
   
 -   [要素演算子](../../../../docs/framework/data/adonet/query-expression-syntax-examples-element-operators.md)  
   
@@ -37,7 +37,7 @@ ms.locfileid: "59091695"
   
 -   [パーティション分割](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-partitioning-linq.md)  
   
--   [順序](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
+-   [順序付け](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-ordering-linq-to-dataset.md)  
   
 -   [集合演算子](../../../../docs/framework/data/adonet/method-based-query-syntax-examples-set-operators.md)  
   

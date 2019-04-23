@@ -2,12 +2,12 @@
 title: <add> の <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: cf7b5b75-63bd-49a6-abac-4bfdab377e36
-ms.openlocfilehash: 0e463ffa87e67bc5f100f9acf38ace6450b0ce40
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7e65b66170465a8b3bb60754feebb7730b959d9d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55268705"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59089719"
 ---
 # <a name="add-of-namespacetable"></a>\<add> of \<namespaceTable>
 名前空間とプレフィックスのマッピングを含む構成要素を表します。これは、ルーティングの XPath フィルターで使用されます。  
@@ -51,4 +51,5 @@ ms.locfileid: "55268705"
 |[\<namespaceTable>](../../../../../docs/framework/configure-apps/file-schema/wcf/namespacetable.md)|名前空間とプレフィックスのマッピングを含む要素セットを定義する構成セクションを表します。これは、ルーティングの XPath フィルターで使用されます。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.ServiceModel.Routing.Configuration.NamespaceElement?displayProperty=nameWithType>

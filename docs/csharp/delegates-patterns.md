@@ -3,12 +3,12 @@ title: デリゲートの一般的なパターン
 description: コンポーネント間の密接な結合を避けるための、コードでのデリゲートの一般的な使用パターンについて説明します。
 ms.date: 06/20/2016
 ms.assetid: 0ff8fdfd-6a11-4327-b061-0f2526f35b43
-ms.openlocfilehash: 20d55a1aba345b962c506bbc3f82248a817923ea
-ms.sourcegitcommit: d955cb4c681d68cf301d410925d83f25172ece86
+ms.openlocfilehash: ea0e0b7af361b76c4b46b0a180e07b44c1fa07e1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34827021"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59095699"
 ---
 # <a name="common-patterns-for-delegates"></a>デリゲートの一般的なパターン
 
@@ -70,7 +70,7 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 
 ユーザーは、Core Framework に定義されているデリゲート型を使うことで、さらに簡単にデリゲートを扱うことができます。 皆さんが新しい型を定義する必要はなく、皆さんのライブラリを利用する開発者も、特別な目的を持ったデリゲート型を新たに覚える必要がありません。
 
-使用されているインターフェイスはごくわずかでありながら、最大限の柔軟性が得られるようになっています。つまり新しい出力ロガーを作成するために皆さんがすべきことは、メソッドを 1 つ作成することです。 そのメソッドは静的メソッドでも、インスタンス メソッドでもかまいません。 またアクセス指定も任意です。
+使用されているインターフェイスはごくわずかでありながら、最大限の柔軟性が得られるようになっています。新しい出力ロガーを作成するには、メソッドを 1 つ作成する必要があります。 そのメソッドは静的メソッドでも、インスタンス メソッドでもかまいません。 またアクセス指定も任意です。
 
 ## <a name="formatting-output"></a>出力の初期設定
 
@@ -98,7 +98,6 @@ public static IEnumerable<TSource> Where<TSource> (this IEnumerable<TSource> sou
 このファイル ベースのロガーを次に示します。
 
 [!code-csharp[FileLogger](../../samples/csharp/delegates-and-events/FileLogger.cs#FileLogger "Log to files")]
-
 
 このクラスを作成した後、インスタンス化すれば、その LogMessage メソッドを Logger コンポーネントにアタッチすることができます。
 

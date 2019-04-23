@@ -5,14 +5,14 @@ ms.assetid: c4d25b24-9c1a-4b3e-9705-97ba0d6c0289
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1484d50df51ea85a94da0aad1ebaab54b80a6ecb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088289"
 ---
 # <a name="measuring-startup-improvement-with-net-native"></a>.NET ネイティブによる起動時間の改善の測定
-[!INCLUDE[net_native](../../../includes/net-native-md.md)] アプリの起動時間が大幅に向上します。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
+[!INCLUDE[net_native](../../../includes/net-native-md.md)]によって、アプリの起動時間が大幅に改善されます。 この改善は、ポータブルの低電力デバイスや複雑なアプリで特に顕著です。 このトピックでは、この起動時間の改善を測定するために必要となる基本的なインストルメンテーションの概要を示します。  
   
  パフォーマンスの調査を容易にするために、.NET Framework と Windows では、イベントが発生したときにアプリからツールに通知できるようにする Windows イベント トレーシング (ETW) という名前のイベント フレームワークを使用しています。 PerfView というツールを使用して、ETW イベントを簡単に表示および分析できます。 このトピックでは、次の方法を説明します。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "59088289"
 -   PerfView を使用したこれらのイベントの表示。  
   
 ## <a name="using-eventsource-to-emit-events"></a>EventSource を使用したイベントの生成  
- <xref:System.Diagnostics.Tracing.EventSource> カスタム イベント プロバイダーを作成するための基本クラスを提供します。 一般的に、<xref:System.Diagnostics.Tracing.EventSource> のサブクラスを作成して、独自のイベント メソッドで `Write*` メソッドをラップします。 通常、シングルトン パターンが各 <xref:System.Diagnostics.Tracing.EventSource> に使用されます。  
+ <xref:System.Diagnostics.Tracing.EventSource> は、カスタム イベント プロバイダーの作成元となる基底クラスを提供します。 一般的に、<xref:System.Diagnostics.Tracing.EventSource> のサブクラスを作成して、独自のイベント メソッドで `Write*` メソッドをラップします。 通常、シングルトン パターンが各 <xref:System.Diagnostics.Tracing.EventSource> に使用されます。  
   
  たとえば、次の例のクラスを使用して、2 つのパフォーマンス特性を測定できます。  
   
@@ -95,7 +95,7 @@ perfview -KernelEvents:Process -OnlyProviders:*MyCompany-MyApp collect outputFil
   
  左ペインに示されているイベントをすべて選択し (Ctrl + A)、**Enter** キーを押します。 これで、各イベントのタイムスタンプを表示できるようになります。 これらのタイムスタンプは、トレースの開始時間を基準としています。そのため、起動時からの経過時間を調べるには、プロセスの開始時間から各イベントの時間を減算する必要があります。 Ctrl キーを押しながらクリックして 2 つのタイムスタンプを選択すると、ページ下部にあるステータス バーにそれらのタイムスタンプの差が表示されます。 これにより、表示されている 2 つのイベント間の経過時間が簡単にわかるようになります (プロセスの開始を含む)。 ビューのショートカット メニューを開いて、CSV ファイルにエクスポートしたり、Microsoft Excel を開いてデータを保存または処理したりするなど、便利なオプションを選択できます。  
   
- 元のアプリと [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンを使用してビルドしたバージョンの両方についてこの手順を繰り返し、パフォーマンスの違いを比較できます。   [!INCLUDE[net_native](../../../includes/net-native-md.md)] 非よりも高速のアプリは一般に、まず[!INCLUDE[net_native](../../../includes/net-native-md.md)]アプリ。 より詳しく調べる場合は、最も時間がかかっているコードの部分を PerfView で特定することもできます。 詳細については、[PerfView のチュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)または [Vance Morrison のブログ エントリ](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)をご覧ください。  
+ 元のアプリと [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンを使用してビルドしたバージョンの両方についてこの手順を繰り返し、パフォーマンスの違いを比較できます。   通常、[!INCLUDE[net_native](../../../includes/net-native-md.md)] アプリの方が [!INCLUDE[net_native](../../../includes/net-native-md.md)]以外のアプリよりも速く起動します。 より詳しく調べる場合は、最も時間がかかっているコードの部分を PerfView で特定することもできます。 詳細については、[PerfView のチュートリアル](https://channel9.msdn.com/Series/PerfView-Tutorial)または [Vance Morrison のブログ エントリ](https://blogs.msdn.com/b/vancem/archive/2011/12/28/publication-of-the-perfview-performance-analysis-tool.aspx)をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 

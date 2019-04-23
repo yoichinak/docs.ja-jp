@@ -3,10 +3,10 @@ title: System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStoppe
 ms.date: 03/30/2017
 ms.assetid: 6b2912d4-21a4-4a9c-bb68-8626fca5cc39
 ms.openlocfilehash: ec13520e8f061351cbe8279247457c8e334b52c3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59093476"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationdllhostinitializerstopped"></a>System.ServiceModel.ComIntegration.ComIntegrationDllHostInitializerStopped
