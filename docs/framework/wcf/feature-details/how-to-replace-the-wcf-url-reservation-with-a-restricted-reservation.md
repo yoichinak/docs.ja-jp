@@ -3,10 +3,10 @@ title: '方法: WCF URL 予約を制限付きの予約に置き換える'
 ms.date: 03/30/2017
 ms.assetid: 2754d223-79fc-4e2b-a6ce-989889f2abfa
 ms.openlocfilehash: f9cfda1d4ca14dd380dd01f944d4c900f9832096
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307562"
 ---
 # <a name="how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation"></a>方法: WCF URL 予約を制限付きの予約に置き換える
@@ -32,7 +32,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 2. 入力**netsh http 削除 urlacl url =http://+:80/Temporary_Listen_Addresses/** コマンド プロンプト ウィンドウでします。  
   
-3. 予約が正常に削除されると、次のメッセージが表示されます。 **URL 予約を正常に削除しました**  
+3. 予約が正常に削除されると、次のメッセージが表示されます。 **URL 予約が正常に削除されました**  
   
 ## <a name="creating-a-new-security-group-and-new-restricted-url-reservation"></a>新しいセキュリティ グループおよび新しい制限付き URL 予約の作成  
  WCF URL 予約を制限付きの予約に置き換えるに最初に新しいセキュリティ グループを作成する必要があります。 この操作は、コマンド プロンプトを使用する方法か、コンピューターの管理コンソールを使用する方法で行うことができます。 行う必要があるのはいずれか一方のみです。  
@@ -43,7 +43,7 @@ Reserved URL : http://+:80/Temporary_Listen_Addresses/
   
 2. 入力**net localgroup"\<セキュリティ グループ名 >"/コメント:"\<セキュリティ グループの説明 >"/add**コマンド プロンプトでします。 置き換える**\<セキュリティ グループ名 >** を作成するセキュリティ グループの名前と**\<セキュリティ グループの説明 >** の適切な説明と、セキュリティ グループ。  
   
-3. セキュリティ グループが正常に作成されると、次のメッセージが表示されます。 **コマンドは、正常に終了しました。**  
+3. セキュリティ グループが正常に作成されると、次のメッセージが表示されます。 **コマンドが正常に完了しました。**  
   
 #### <a name="to-create-a-new-security-group-from-the-computer-management-console"></a>コンピューターの管理コンソールで新しいセキュリティ グループを作成するには  
   

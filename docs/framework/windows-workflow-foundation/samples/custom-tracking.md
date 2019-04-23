@@ -3,10 +3,10 @@ title: カスタム追跡
 ms.date: 03/30/2017
 ms.assetid: 2d191c9f-62f4-4c63-92dd-cda917fcf254
 ms.openlocfilehash: 7e275af046013dcd76cb61c25ace1d96fd7e4b93
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307635"
 ---
 # <a name="custom-tracking"></a>カスタム追跡
@@ -18,7 +18,7 @@ ms.locfileid: "59307635"
 |コンポーネント|説明|
 |---------------|-----------------|
 |追跡ランタイム|追跡レコードを出力するためのインフラストラクチャを提供します。|
-|追跡参加要素|追跡レコードを処理します。 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] 追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む追跡参加要素が付属しています。|
+|追跡参加要素|追跡レコードを処理します。 [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] には、追跡レコードを Event Tracing for Windows (ETW) イベントとして書き込む追跡参加要素が用意されています。|
 |追跡プロファイル|ワークフロー インスタンスから出力された追跡レコードのサブセットを追跡参加要素から定期受信するためのフィルター機構。|
 
  次の表で、ワークフロー ランタイムが出力する追跡レコードの詳細を説明します。

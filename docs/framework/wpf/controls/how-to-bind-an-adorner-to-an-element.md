@@ -9,10 +9,10 @@ helpviewer_keywords:
 - adorners [WPF], binding to specified UIElements
 ms.assetid: b2101611-a0ee-4137-bdb8-9b3673d2e6b9
 ms.openlocfilehash: b6909fec466c2b31a7f4156c43b21a0c724f0217
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307289"
 ---
 # <a name="how-to-bind-an-adorner-to-an-element"></a>方法: 要素に装飾をバインドする

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - properties [Visual Basic]
 ms.assetid: 4d229712-6be8-4c5c-bac5-06995ce9185a
 ms.openlocfilehash: 91f34de36e88724ccab21097bf54a4604f7eee37
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306717"
 ---
 # <a name="how-to-create-a-property-visual-basic"></a>方法: プロパティ (Visual Basic) を作成します。
@@ -62,12 +62,12 @@ ms.locfileid: "59306717"
   
 ## <a name="see-also"></a>関連項目
 
-- [手順](./index.md)
-- [プロパティ プロシージャ](./property-procedures.md)
+- [プロシージャ](./index.md)
+- [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Visual Basic のプロパティと変数の違い](./differences-between-properties-and-variables.md)
-- [方法: 複数のアクセス レベルを持つプロパティを宣言する](./how-to-declare-a-property-with-mixed-access-levels.md)
+- [Visual Basic でのプロパティと変数の違い](./differences-between-properties-and-variables.md)
+- [方法: 混合アクセス レベルを持つプロパティを宣言します。](./how-to-declare-a-property-with-mixed-access-levels.md)
 - [方法: プロパティ プロシージャを呼び出す](./how-to-call-a-property-procedure.md)
 - [方法: 宣言し、Visual Basic では、既定のプロパティを呼び出す](./how-to-declare-and-call-a-default-property.md)
-- [方法: プロパティに値を格納する](./how-to-put-a-value-in-a-property.md)
-- [方法: プロパティから値を取得する](./how-to-get-a-value-from-a-property.md)
+- [方法: プロパティに値を格納します。](./how-to-put-a-value-in-a-property.md)
+- [方法: プロパティから値を取得します。](./how-to-get-a-value-from-a-property.md)

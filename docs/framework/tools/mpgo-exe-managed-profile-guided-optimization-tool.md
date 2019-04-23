@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 20b4df2a663bdc584b5f350c95c8c533f1cc7c8e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57496821"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306340"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)
 
@@ -79,23 +79,23 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
   
 ## <a name="to-use-mpgoexe"></a>Mpgo.exe を使用するには  
   
-1.  Visual Studio Ultimate 2012 およびアプリケーションがインストールされたコンピューターを使用します。  
+1. Visual Studio Ultimate 2012 およびアプリケーションがインストールされたコンピューターを使用します。  
   
-2.  管理者として必要なパラメーターと共に Mpgo.exe を実行します。  サンプル コマンドについては、次のセクションを参照してください。  
+2. 管理者として必要なパラメーターと共に Mpgo.exe を実行します。  サンプル コマンドについては、次のセクションを参照してください。  
   
      最適化された中間言語 (IL) アセンブリが `–OutDir` パラメーターによって指定したフォルダー内に作成されます (この例では、`C:\Optimized` フォルダー)。  
   
-3.  `–OutDir` によって指定したディレクトリからのプロファイル情報を含む新しい IL アセンブリにより、Ngen.exe で使用する IL アセンブリを置き換えます。  
+3. `–OutDir` によって指定したディレクトリからのプロファイル情報を含む新しい IL アセンブリにより、Ngen.exe で使用する IL アセンブリを置き換えます。  
   
-4.  (Mpgo.exe によって提供されるイメージを使用した) アプリケーション セットアップでは、最適化されたネイティブなイメージがインストールされます。  
+4. (Mpgo.exe によって提供されるイメージを使用した) アプリケーション セットアップでは、最適化されたネイティブなイメージがインストールされます。  
   
 ## <a name="suggested-workflow"></a>推奨されるワークフロー  
   
-1.  `–Scenario` パラメーターと共に Mpgo.exe を使用することにより、一連の最適化された IL アセンブリを作成します。  
+1. `–Scenario` パラメーターと共に Mpgo.exe を使用することにより、一連の最適化された IL アセンブリを作成します。  
   
-2.  ソース管理に最適化された IL アセンブリをチェックインします。  
+2. ソース管理に最適化された IL アセンブリをチェックインします。  
   
-3.  ビルド プロセスで、Ngen.exe に渡す最適化された IL イメージを生成するために、ビルド後のステップとして `–Import` パラメーターと共に Mpgo.exe を呼び出します。  
+3. ビルド プロセスで、Ngen.exe に渡す最適化された IL イメージを生成するために、ビルド後のステップとして `–Import` パラメーターと共に Mpgo.exe を呼び出します。  
   
  このプロセスでは、すべてのアセンブリが最適化データを持つことが保証されます。 更新および最適化されたアセンブリのチェックインをより頻繁に行う場合 (ステップ 1 および 2)、製品開発全体でパフォーマンス値はより一貫したものになります。  
   
@@ -127,6 +127,7 @@ mpgo.exe -import "C:\Optimized" -assemblylist "C:\MyApp\MyTax.dll" "C:\MyApp\MyT
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../../docs/framework/tools/ngen-exe-native-image-generator.md)
 - [Visual Studio 用開発者コマンド プロンプト](../../../docs/framework/tools/developer-command-prompt-for-vs.md)
 - [デスクトップ アプリケーションの起動時のパフォーマンスの向上](https://go.microsoft.com/fwlink/p/?LinkId=248943)

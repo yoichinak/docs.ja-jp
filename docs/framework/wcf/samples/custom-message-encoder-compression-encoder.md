@@ -3,11 +3,11 @@ title: カスタム メッセージ エンコーダー:Expression Encoder
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
 ms.openlocfilehash: e19894a685f511d22252d0b3a79f77b83b7fda99
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59310500"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59973596"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>カスタム メッセージ エンコーダー:Expression Encoder
 このサンプルでは、Windows Communication Foundation (WCF) プラットフォームを使用してカスタム エンコーダーを実装する方法を示します。  
