@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Expander control [WPF], about Expander control
 ms.assetid: 877bf425-0e54-49ec-8fd2-13a211377abb
 ms.openlocfilehash: ddf6ee550e0eb6af5af44d032e85ecd5b735b951
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59130404"
 ---
 # <a name="expander-overview"></a>エキスパンダーの概要
@@ -28,7 +28,7 @@ ms.locfileid: "59130404"
   
 <a name="SettingtheDirectionoftheExpandingWindow"></a>   
 ## <a name="setting-the-direction-of-the-expanding-content-area"></a>コンテンツ エリアの展開方向の設定  
- コンテンツ エリアを設定することができます、 <xref:System.Windows.Controls.Expander> 4 方向のどちらに展開するコントロール (<xref:System.Windows.Controls.ExpandDirection.Down>、 <xref:System.Windows.Controls.ExpandDirection.Up>、 <xref:System.Windows.Controls.ExpandDirection.Left>、または<xref:System.Windows.Controls.ExpandDirection.Right>) を使用して、<xref:System.Windows.Controls.ExpandDirection>プロパティ。 ときに、コンテンツ領域は折りたたまれて、のみ、<xref:System.Windows.Controls.Expander><xref:System.Windows.Controls.HeaderedContentControl.Header%2A>され、そのトグル ボタンが表示されます。 A<xref:System.Windows.Controls.Button>方向矢印を表示するコントロールが展開または折りたたみのコンテンツ エリアにトグル ボタンとして使用されます。 展開すると、<xref:System.Windows.Controls.Expander>ウィンドウに似た領域内のすべてのコンテンツの表示を試みます。  
+ コンテンツ エリアを設定することができます、 <xref:System.Windows.Controls.Expander> 4 方向のどちらに展開するコントロール (<xref:System.Windows.Controls.ExpandDirection.Down>、 <xref:System.Windows.Controls.ExpandDirection.Up>、 <xref:System.Windows.Controls.ExpandDirection.Left>、または<xref:System.Windows.Controls.ExpandDirection.Right>) を使用して、<xref:System.Windows.Controls.ExpandDirection>プロパティ。 ときに、コンテンツ領域は折りたたまれて、のみ、 <xref:System.Windows.Controls.Expander> <xref:System.Windows.Controls.HeaderedContentControl.Header%2A>され、そのトグル ボタンが表示されます。 A<xref:System.Windows.Controls.Button>方向矢印を表示するコントロールが展開または折りたたみのコンテンツ エリアにトグル ボタンとして使用されます。 展開すると、<xref:System.Windows.Controls.Expander>ウィンドウに似た領域内のすべてのコンテンツの表示を試みます。  
   
 <a name="SettingSizeDimensionsonanExpanderinaPanel"></a>   
 ## <a name="controlling-the-size-of-an-expander-in-a-panel"></a>パネル内のエキスパンダーのサイズの制御  
@@ -62,4 +62,4 @@ ms.locfileid: "59130404"
 
 - <xref:System.Windows.Controls.Expander>
 - <xref:System.Windows.Controls.ExpandDirection>
-- [方法のトピック](expander-how-to-topics.md)
+- [方法トピック](expander-how-to-topics.md)

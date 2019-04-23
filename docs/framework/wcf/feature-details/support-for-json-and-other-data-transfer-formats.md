@@ -3,10 +3,10 @@ title: JSON などのデータ転送形式のサポート
 ms.date: 03/30/2017
 ms.assetid: a527f1be-4e37-4beb-9a95-291480d19627
 ms.openlocfilehash: 9bf27a853fff42c098446067fa6f0db6bf4dbc4a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128480"
 ---
 # <a name="support-for-json-and-other-data-transfer-formats"></a>JSON などのデータ転送形式のサポート
@@ -16,7 +16,7 @@ JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJ
  [スタンドアロン JSON のシリアル化](../../../../docs/framework/wcf/feature-details/stand-alone-json-serialization.md)  
  スタンドアロン JSON のシリアル化について説明します。  
   
- [方法: JSON データをシリアル化および逆シリアル化する](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)  
+ [方法: および JSON データを逆シリアル化](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)  
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を使用して .NET 型のオブジェクトを JSON エンコードされたデータにシリアル化し、この JSON 形式のデータを .NET 型のインスタンスに戻すために逆シリアル化する方法について説明します。  
   
  [JSON と XML 間のマッピング](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)  

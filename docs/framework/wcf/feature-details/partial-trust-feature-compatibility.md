@@ -3,10 +3,10 @@ title: 部分信頼機能の互換性
 ms.date: 03/30/2017
 ms.assetid: a36a540b-1606-4e63-88e0-b7c59e0e6ab7
 ms.openlocfilehash: b0d9b7bd8bd5f33ca344ea5674d08507ced209f5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124567"
 ---
 # <a name="partial-trust-feature-compatibility"></a>部分信頼機能の互換性
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
   
 -   `[ServiceKnownType]` 属性を使用するときは、指定するメソッドは `public`である必要があります。  
   
--   `[MessageContract]` クラスとそのメンバーは、`public`します。 `[MessageContract]` クラスがアプリケーション アセンブリで定義されている場合は、 `internal` であり、 `internal` メンバーを持つ場合があります。  
+-   `[MessageContract]` クラスとそのメンバーは、 `public`である場合があります。 `[MessageContract]` クラスがアプリケーション アセンブリで定義されている場合は、 `internal` であり、 `internal` メンバーを持つ場合があります。  
   
 ## <a name="system-provided-bindings"></a>システム標準のバインディング  
  部分信頼環境では、 <xref:System.ServiceModel.BasicHttpBinding> と <xref:System.ServiceModel.WebHttpBinding> が完全にサポートされています。 <xref:System.ServiceModel.WSHttpBinding> は、トランスポート セキュリティ モードでのみサポートされます。  
@@ -119,7 +119,7 @@ Windows Communication Foundation (WCF) では、部分信頼環境で実行さ�
   
 -   <xref:System.Runtime.Serialization>  
   
--   <xref:System.IdentityModel.Claims>、 <xref:System.IdentityModel.Policy>、 <xref:System.IdentityModel.Selectors>、および<xref:System.IdentityModel.Tokens>します。  
+-   <xref:System.IdentityModel.Claims>、 <xref:System.IdentityModel.Policy>、 <xref:System.IdentityModel.Selectors>、および <xref:System.IdentityModel.Tokens>。  
   
  次のトレース ソースはサポートされていません。  
   

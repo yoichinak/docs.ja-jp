@@ -3,10 +3,10 @@ title: LINQ to Entities でのクエリ
 ms.date: 03/30/2017
 ms.assetid: c015a609-29eb-4e95-abb1-2ca721c6e2ad
 ms.openlocfilehash: 0e005939c8168606c7f58467f11115666cf1ef24
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124749"
 ---
 # <a name="queries-in-linq-to-entities"></a>LINQ to Entities でのクエリ
@@ -28,7 +28,7 @@ ms.locfileid: "59124749"
   
 -   [クエリ式の構文例:フィルター処理](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-filtering.md)  
   
--   [クエリ式の構文例:順序](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
+-   [クエリ式の構文例:順序付け](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-ordering.md)  
   
 -   [クエリ式の構文例:集計演算子](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-aggregate-operators.md)  
   
@@ -40,7 +40,7 @@ ms.locfileid: "59124749"
   
 -   [クエリ式の構文例:グループ化](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-grouping.md)  
   
--   [クエリ式の構文例:リレーションシップの操作](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
+-   [クエリ式の構文例:リレーションシップのナビゲーション](../../../../../../docs/framework/data/adonet/ef/language-reference/query-expression-syntax-examples-navigating-relationships.md)  
   
 ### <a name="method-based-query-syntax"></a>メソッド ベースのクエリ構文  
  [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリを作成するもう 1 つの方法として、メソッド ベースのクエリがあります。 メソッド ベースのクエリ構文は、LINQ 演算子のメソッド、ラムダ式をパラメーターとして渡すことへのダイレクト メソッド呼び出しのシーケンスです。 詳細については、「[ラムダ式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。 メソッドベースの構文の使用方法を示す例については、次のトピックを参照してください。  
@@ -49,7 +49,7 @@ ms.locfileid: "59124749"
   
 -   [メソッド ベースのクエリ構文例:フィルター処理](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-filtering.md)  
   
--   [メソッド ベースのクエリ構文例:順序](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
+-   [メソッド ベースのクエリ構文例:順序付け](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-ordering.md)  
   
 -   [メソッド ベースのクエリ構文例:集計演算子](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-aggregate-operators.md)  
   
@@ -63,11 +63,11 @@ ms.locfileid: "59124749"
   
 -   [メソッド ベースのクエリ構文例:グループ化](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-grouping.md)  
   
--   [メソッド ベースのクエリ構文例:リレーションシップの操作](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
+-   [メソッド ベースのクエリ構文例:リレーションシップのナビゲーション](../../../../../../docs/framework/data/adonet/ef/language-reference/method-based-query-syntax-examples-navigating-relationships.md)  
   
 ## <a name="see-also"></a>関連項目
 
 - [LINQ to Entities](../../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)
 - [C# の LINQ の概要](~/docs/csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [Visual Basic の LINQ の概要](~/docs/visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)
-- [Entity Framework マージ オプションおよびコンパイルされたクエリ](https://go.microsoft.com/fwlink/?LinkId=199591)
+- [Entity Framework マージ オプションおよびコンパイル済みクエリ](https://go.microsoft.com/fwlink/?LinkId=199591)
