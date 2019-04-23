@@ -3,11 +3,11 @@ title: '方法: エラー処理'
 ms.date: 03/30/2017
 ms.assetid: de566e39-9358-44ff-8244-780f6b799966
 ms.openlocfilehash: 3752e358230b76d8984fa8e6a2ded43ad0eb2c6c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59334992"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979395"
 ---
 # <a name="how-to-error-handling"></a>方法: エラー処理
 ここでは、エラー処理を使用するルーティング構成の作成に必要な基本的な手順について説明します。 この例では、メッセージは送信先エンドポイントにルーティングされます。 ネットワークまたは通信関係の障害 (<xref:System.ServiceModel.CommunicationException>) のために、メッセージを配信できない場合、そのメッセージは代替エンドポイントに再送信されます。  

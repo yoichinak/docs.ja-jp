@@ -9,10 +9,10 @@ helpviewer_keywords:
 - RichTextBox control [WPF], about RichTextBox control
 ms.assetid: c94548b2-c1e9-4b62-b10c-dd8740eb23d8
 ms.openlocfilehash: 9aa0d33b3cb2c15ba9c1cb7e7d7be9a3125f66d3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162712"
 ---
 # <a name="richtextbox-overview"></a>RichTextBox の概要
@@ -25,7 +25,7 @@ ms.locfileid: "59162712"
 |コントロール|リアルタイム スペル チェック|コンテキスト メニュー|書式設定コマンドのような<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(<xref:system.windows.documents.editingcommands.togglebold%2a>(ctr + B)|<xref:System.Windows.Documents.FlowDocument> イメージ、段落、テーブルなどのコンテンツ。|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|はい|[はい]|いいえ|いいえ。|  
-|<xref:System.Windows.Controls.RichTextBox>|はい|はい|はい|はい|  
+|<xref:System.Windows.Controls.RichTextBox>|[はい]|はい|はい|はい|  
   
  **注:**<xref:System.Windows.Controls.TextBox>は書式設定などの関連コマンドをサポートしていません<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(CTR+B) など、多くの基本的なコマンドは両方のコントロールでサポートされて<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>します。  
   
@@ -95,5 +95,5 @@ ms.locfileid: "59162712"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法のトピック](richtextbox-how-to-topics.md)
+- [方法トピック](richtextbox-how-to-topics.md)
 - [TextBox の概要](textbox-overview.md)

@@ -3,10 +3,10 @@ title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
 ms.openlocfilehash: 1e3c1f74c1bf30da47fb38b6799bff11090cf31a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161365"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
@@ -65,13 +65,13 @@ ms.locfileid: "59161365"
 #### <a name="run-applications-with-the-minimum-permissions"></a>最小限のアクセス許可でアプリケーションを実行する  
  マネージ アプリケーションを完全信頼のアクセス許可で実行できるようにすると、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] でアプリケーションのコンピューターへのアクセスが制限されなくなります。 これは、システム全体を危険にさらすセキュリティの脆弱性の原因になります。 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] のコード アクセス セキュリティやその他のセキュリティ メカニズムを使用するには、部分信頼のアクセス許可を使用して、アプリケーションが機能するために必要な最小限のアクセス許可でアプリケーションを実行する必要があります。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションに必要な最小限のアクセス許可を以下に示します。  
   
--   <xref:System.Security.Permissions.FileIOPermission>:<xref:System.Security.Permissions.FileIOPermissionAccess.Write>指定したメタデータ ファイルを開くまたは<xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery>メタデータ ファイルのディレクトリを検索します。  
+-   <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> (指定されたメタデータ ファイルを開くため) または <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> (メタデータ ファイルのディレクトリを検索するため)。  
   
--   <xref:System.Security.Permissions.ReflectionPermission>:<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess>を LINQ to Entities クエリをサポートしています。  
+-   <xref:System.Security.Permissions.ReflectionPermission>: <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess> (LINQ to Entities クエリをサポートするため)。  
   
--   <xref:System.Transactions.DistributedTransactionPermission>:<xref:System.Security.Permissions.PermissionState.Unrestricted>に参加する、<xref:System.Transactions><xref:System.Transactions.Transaction>します。  
+-   <xref:System.Transactions.DistributedTransactionPermission>: <xref:System.Security.Permissions.PermissionState.Unrestricted> (<xref:System.Transactions> の <xref:System.Transactions.Transaction> に参加するため)。  
   
--   <xref:System.Security.Permissions.SecurityPermission>:<xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter>を使用して例外をシリアル化する、<xref:System.Runtime.Serialization.ISerializable>インターフェイス。  
+-   <xref:System.Security.Permissions.SecurityPermission>: <xref:System.Security.Permissions.SecurityPermissionFlag.SerializationFormatter> (<xref:System.Runtime.Serialization.ISerializable> インターフェイスを使用して例外をシリアル化するため)。  
   
 -   データベース接続を開くし、など、データベースに対してコマンドを実行するアクセス許可<xref:System.Data.SqlClient.SqlClientPermission>SQL Server データベース。  
   
@@ -98,7 +98,7 @@ ms.locfileid: "59161365"
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)] では、クエリ述語やパラメーター名で使用される値に悪質な入力を渡すことによって SQL インジェクション攻撃が行われる可能性があります。 SQL インジェクションが行われないようにするため、ユーザー入力を [!INCLUDE[esql](../../../../../includes/esql-md.md)] コマンド テキストと組み合わせないようにしてください。  
   
-     [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリでは、リテラルを受け入れるようにすべての場所でパラメーターを受け入れます。 外部エージェントから受け取ったリテラルを直接クエリに挿入することは避け、パラメーター化クエリを使用するようにしてください。 使用を検討する必要がありますも[クエリ ビルダー メソッド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))Entity SQL を安全に作成します。  
+     [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリでは、リテラルを渡すことのできる場所であればどこででもパラメーターを渡すことができます。 外部エージェントから受け取ったリテラルを直接クエリに挿入することは避け、パラメーター化クエリを使用するようにしてください。 使用を検討する必要がありますも[クエリ ビルダー メソッド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))Entity SQL を安全に作成します。  
   
 -   [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] インジェクション攻撃:  
   
@@ -150,13 +150,13 @@ ms.locfileid: "59161365"
  ルート演算子 (`~`) と `DataDirectory` 置換文字列が解決される値は、アプリケーションの実行中に変化しない状態で維持される必要がありますが、ホストでそれらの値の変更が [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって制限されるわけではありません。  
   
 #### <a name="verify-the-path-length-before-deployment"></a>配置の前にパスの長さを確認する  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションを配置する前に、ルート演算子 (~) と `DataDirectory` 置換文字列の値がオペレーティング システムのパスの長さの制限を超えないことを確認する必要があります。 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] データ プロバイダーでは、パスの長さが有効な制限内にことは保証されません。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションを配置する前に、ルート演算子 (~) と `DataDirectory` 置換文字列の値がオペレーティング システムのパスの長さの制限を超えないことを確認する必要があります。 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] データ プロバイダーでは、パスの長さが有効な制限内であるかどうかの確認が行われません。  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET メタデータのセキュリティに関する注意点  
  モデル ファイルとマッピング ファイルの生成と操作を行う際は、セキュリティに関して次の点に注意する必要があります。  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>機密情報がログによって公開されないようにする。  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] メタデータ サービス コンポーネントは、プライベートな情報を記録しません。 アクセス制限のために返すことのできない結果があった場合は、データベース管理システムやファイル システムで例外を生成する代わりに 0 個の結果を返す必要があります。例外には機密情報が含まれる可能性があります。  
+ [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] メタデータ サービス コンポーネントでは個人情報はログに記録されません。 アクセス制限のために返すことのできない結果があった場合は、データベース管理システムやファイル システムで例外を生成する代わりに 0 個の結果を返す必要があります。例外には機密情報が含まれる可能性があります。  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>信頼されていないソースから MetadataWorkspace オブジェクトを受け取らない  
  信頼されていないソースから <xref:System.Data.Metadata.Edm.MetadataWorkspace> クラスのインスタンスをアプリケーションで受け取らないようにしてください。 代わりに、それらのソースから明示的にワークスペースを作成および設定する必要があります。  

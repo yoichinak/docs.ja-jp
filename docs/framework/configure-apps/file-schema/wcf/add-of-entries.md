@@ -1,12 +1,12 @@
 ---
-title: <add> (行中)  <entries>
+title: <add> の <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
 ms.openlocfilehash: 1324803d7c0f127cfee9eadebff2672955780eda
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165413"
 ---
 # <a name="add-of-entries"></a>\<追加 > の\<エントリ >

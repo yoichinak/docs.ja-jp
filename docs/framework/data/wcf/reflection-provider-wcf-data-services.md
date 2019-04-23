@@ -5,14 +5,14 @@ helpviewer_keywords:
 - WCF Data Services, providers
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
 ms.openlocfilehash: e36f9124ec9979dac69b596c6d87491581ae9ec6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159524"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>リフレクション プロバイダー (WCF Data Services)
-Entity Framework を介してデータ モデルからデータを公開することに加えて、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、エンティティ ベースのモデルで厳密に定義されていないデータを公開することもできます。 リフレクション プロバイダーは、<xref:System.Linq.IQueryable%601> インターフェイスを実装する型を返すクラスのデータを公開します。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] リフレクションを使用して、これらのクラスのデータ モデルを推論し、統合言語クエリ (LINQ) リソースに対するアドレス ベースのクエリに変換-ベースのクエリに対して、公開されている<xref:System.Linq.IQueryable%601>型。  
+Entity Framework を介してデータ モデルからデータを公開することに加えて、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、エンティティ ベースのモデルで厳密に定義されていないデータを公開することもできます。 リフレクション プロバイダーは、<xref:System.Linq.IQueryable%601> インターフェイスを実装する型を返すクラスのデータを公開します。 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、リフレクションを使用して、これらのクラスのデータ モデルを推論し、リソースに対するアドレス ベースのクエリを、公開されている <xref:System.Linq.IQueryable%601> 型に対する統合言語クエリ (LINQ) ベースのクエリに変換します。  
   
 > [!NOTE]
 >  <xref:System.Linq.Queryable.AsQueryable%2A> メソッドを使用して、<xref:System.Linq.IQueryable%601> インターフェイスを実装する任意のクラスから <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを返すことができます。 これによって、ほとんどのジェネリック コレクション型をデータ サービスのデータ ソースとして使用することが可能になります。  
@@ -89,7 +89,7 @@ Entity Framework を介してデータ モデルからデータを公開する�
 |<xref:System.Data.Services.IUpdatable.SetValue%2A>|リソースのプロパティの値を設定する機能を提供します。|  
   
 ## <a name="handling-concurrency"></a>コンカレンシーの処理  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 有効にすると、エンティティの同時実行トークンを定義することによって、オプティミスティック同時実行制御モデルをサポートしています。 このコンカレンシー トークンは、エンティティの 1 つ以上のプロパティが含まれており、要求、更新、または削除されているデータに対して行われた変更があるかどうかを判断するためにデータ サービスによって使用されます。 要求内の eTag から取得したトークンの値がエンティティの現在の値と異なる場合、データ サービスで例外が発生します。 リフレクション プロバイダーの同時実行トークンを定義するために <xref:System.Data.Services.ETagAttribute> がエンティティ型に適用されます。 コンカレンシー トークンには、キー プロパティまたはナビゲーション プロパティを含めることはできません。 詳細については、次を参照してください。[データ サービスの更新](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)します。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、エンティティの同時実行トークンを定義できるようにすることで、オプティミスティック同時実行制御モデルをサポートしています。 この同時実行トークンは、エンティティの 1 つ以上のプロパティが含まれており、要求、更新、または削除されているデータに対して行われた変更があるかどうかを判断するためにデータ サービスによって使用されます。 要求内の eTag から取得したトークンの値がエンティティの現在の値と異なる場合、データ サービスで例外が発生します。 リフレクション プロバイダーの同時実行トークンを定義するために <xref:System.Data.Services.ETagAttribute> がエンティティ型に適用されます。 コンカレンシー トークンには、キー プロパティまたはナビゲーション プロパティを含めることはできません。 詳細については、次を参照してください。[データ サービスの更新](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)します。  
   
 ## <a name="using-linq-to-sql-with-the-reflection-provider"></a>リフレクション プロバイダーによる SQL への LINQ の使用  
  既定では Entity Framework がネイティブでサポートされるので、これが [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] でリレーショナル データを使用する場合の推奨データ プロバイダーです。 ただし、データ サービスで LINQ to SQL クラスを使用するには、リフレクション プロバイダーを使用できます。 <xref:System.Data.Linq.Table%601>結果セットのメソッドによって返される、 <xref:System.Data.Linq.DataContext> LINQ to SQL オブジェクト リレーショナル デザイナー (O/R デザイナー) の実装によって生成された、<xref:System.Linq.IQueryable%601>インターフェイス。 そのため、リフレクション プロバイダーは、生成された LINQ to SQL クラスを使用して、これらのメソッドにアクセスし、SQL Server からエンティティ データを返すことができます。 ところが、LINQ to SQL は <xref:System.Data.Services.IUpdatable> インターフェイスを実装しないので、既存の <xref:System.Data.Linq.DataContext> 部分クラスを拡張する部分クラスを追加して、<xref:System.Data.Services.IUpdatable> 実装を追加する必要があります。 詳細については、「[方法 :SQL データ ソースを LINQ を使用してデータ サービスを作成する](../../../../docs/framework/data/wcf/create-a-data-service-using-linq-to-sql-wcf.md)します。  

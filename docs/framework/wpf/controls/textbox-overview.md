@@ -6,10 +6,10 @@ helpviewer_keywords:
 - TextBox control [WPF], about TextBox control
 ms.assetid: 1ba6dc5b-11a7-4247-9213-36c6729ee35f
 ms.openlocfilehash: 577a12a0c04e5e3bfbfecb2c45263b684f0ffc17
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162647"
 ---
 # <a name="textbox-overview"></a>TextBox の概要
@@ -22,7 +22,7 @@ ms.locfileid: "59162647"
 |コントロール|リアルタイム スペル チェック|コンテキスト メニュー|書式設定コマンドのような<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(<xref:system.windows.documents.editingcommands.togglebold%2a>(ctr + B)|<xref:System.Windows.Documents.FlowDocument> イメージ、段落、テーブルなどのコンテンツ。|  
 |-------------|------------------------------|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Windows.Controls.TextBox>|はい|[はい]|いいえ|いいえ。|  
-|<xref:System.Windows.Controls.RichTextBox>|はい|[はい]|はい (「[RichTextBox の概要](richtextbox-overview.md)」を参照)|はい (「[RichTextBox の概要](richtextbox-overview.md)」を参照)|  
+|<xref:System.Windows.Controls.RichTextBox>|はい|はい|はい (「[RichTextBox の概要](richtextbox-overview.md)」を参照)|はい (「[RichTextBox の概要](richtextbox-overview.md)」を参照)|  
   
 > [!NOTE]
 >  <xref:System.Windows.Controls.TextBox>コマンドなどの関連の編集を書式設定はサポートされていませんが<xref:System.Windows.Documents.EditingCommands.ToggleBold%2A>(CTR+B) など、多くの基本的なコマンドは両方のコントロールでサポートされて<xref:System.Windows.Documents.EditingCommands.MoveToLineEnd%2A>します。 詳細については、「<xref:System.Windows.Documents.EditingCommands>」を参照してください。  
@@ -67,5 +67,5 @@ ms.locfileid: "59162647"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法のトピック](textbox-how-to-topics.md)
+- [方法トピック](textbox-how-to-topics.md)
 - [RichTextBox の概要](richtextbox-overview.md)

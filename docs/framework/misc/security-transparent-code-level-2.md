@@ -10,10 +10,10 @@ ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 62c25b14fa7b3867bbdbcb2f1e08cc16ce349e72
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59156079"
 ---
 # <a name="security-transparent-code-level-2"></a>透過的セキュリティ コード、レベル 2
@@ -48,7 +48,7 @@ ms.locfileid: "59156079"
   
 -   [オーバーライドのパターン](#override)  
   
--   [継承規則](#inheritance)  
+-   [継承ルール](#inheritance)  
   
 -   [追加情報と規則](#additional)  
   

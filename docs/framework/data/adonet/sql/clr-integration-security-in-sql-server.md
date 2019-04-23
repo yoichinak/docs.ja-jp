@@ -3,10 +3,10 @@ title: SQL Server の CLR 統合セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 489fe096-fd1d-42de-8438-bf7aed46aea2
 ms.openlocfilehash: 946401211d515df9ba5b9e38d7cfd10730973b64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165816"
 ---
 # <a name="clr-integration-security-in-sql-server"></a>SQL Server の CLR 統合セキュリティ
@@ -20,7 +20,7 @@ Microsoft SQL Server で新たに導入された機能の 1 つに、.NET Framew
 |リソース|説明|  
 |--------------|-----------------|  
 |[コード アクセス セキュリティ](../../../../../docs/framework/misc/code-access-security.md)|.NET Framework の CAS について説明します。|  
-|[CLR 統合セキュリティ](/sql/relational-databases/clr-integration/security/clr-integration-security)|SQL Server の内部で実行されるマネージド コードのセキュリティ モデルについて説明します。|  
+|[CLR 統合のセキュリティ](/sql/relational-databases/clr-integration/security/clr-integration-security)|SQL Server の内部で実行されるマネージド コードのセキュリティ モデルについて説明します。|  
   
 ## <a name="see-also"></a>関連項目
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
 ms.openlocfilehash: 6bb9b4f30a88ece93b17ff2510087b220d538738
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59154675"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979720"
 ---
 # <a name="power-management-in-windows-forms"></a>Windows フォームでの電源管理
 Windows フォーム アプリケーションによっては、Windows オペレーティング システムの電源管理機能を活用がかかります。 アプリケーションでは、コンピューターの電源の状態を監視でき、状態の変更が発生したときにアクションを実行することができます。 など、アプリケーションがポータブル コンピューターで実行している場合、コンピューターのバッテリ残量が一定のレベルを下回ったときに、アプリケーションで特定の機能を無効にします。  

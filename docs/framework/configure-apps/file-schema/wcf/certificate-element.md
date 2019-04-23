@@ -3,10 +3,10 @@ title: <certificate> 要素
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
 ms.openlocfilehash: eea8130911ca3780a6e4e753c17877e58c50b139
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59164269"
 ---
 # <a name="certificate-element"></a>\<証明書 > 要素
@@ -48,7 +48,7 @@ ms.locfileid: "59164269"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<ピア >](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|ピアツーピア クライアントの認証時に使用される資格情報を指定します。|  
+|[\<peer>](../../../../../docs/framework/configure-apps/file-schema/wcf/peer-of-clientcredentials-element.md)|ピアツーピア クライアントの認証時に使用される資格情報を指定します。|  
   
 ## <a name="remarks"></a>Remarks  
  この構成要素には、ピア メッシュ内の近隣ノードを認証するときに使用される X509Certificate2 インスタンスが格納されます。  

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
 ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59155936"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>クライアント アプリケーションでのデータ サービスの使用 (WCF Data Services)
@@ -21,7 +21,7 @@ ms.locfileid: "59155936"
  [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 公開するサービス間の相互運用性を保証するのに役立ちます[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードと使用するアプリケーション[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードします。 アプリケーション アクセスし、データの変更、 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]-ベースのサービスを特定の HTTP アクションのおよび URI、アクションの対象となるエンティティ リソースのアドレスを要求メッセージを送信します。 エンティティ データを指定する必要がある場合、メッセージの本文に、エンコードされたペイロードとして明示的に指定します。  
   
 ### <a name="http-actions"></a>HTTP アクション  
- [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] 実行する次の HTTP アクションの作成、読み取り、サポートは、更新、および、アドレス指定されたリソースが表すエンティティ データに対する操作の削除します。  
+ [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] は、アドレス指定されたリソースが表すエンティティ データに対する操作の作成、読み取り、更新、および削除を実行する次の HTTP アクションをサポートします。  
   
 -   **HTTP GET** -これは、ブラウザーからリソースにアクセスする場合の既定のアクション。 要求メッセージではペイロードは指定されず、要求されたデータを含むペイロードを含む応答メソッドが返されます。  
   

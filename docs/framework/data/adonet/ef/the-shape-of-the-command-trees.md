@@ -2,12 +2,12 @@
 title: コマンド ツリーの構造
 ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
-ms.openlocfilehash: aba5511b8baa395714bde315d9542932e854c98b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378549"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59980084"
 ---
 # <a name="the-shape-of-the-command-trees"></a>コマンド ツリーの構造
 
@@ -25,8 +25,7 @@ SQL 生成モジュールは、指定された入力クエリ コマンド ツ�
 
 DBQueryCommandTree.Query プロパティは、クエリのロジックを記述する式ツリーのルートです。 DBQueryCommandTree.Parameters プロパティには、クエリで使用されるパラメーターのリストが格納されます。 式ツリーは、DbExpression オブジェクトから構成されます。
 
-DbExpression オブジェクトは、計算を表します。 
-  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、定数、変数、関数、コンストラクター、およびフィルターや結合のような標準の関係演算子など、クエリ式を構成するための式がいくつか用意されています。 すべての DbExpression オブジェクトには、その式によって生成される結果の型を表す ResultType プロパティがあります。 この型は、TypeUsage として表されます。
+DbExpression オブジェクトは、計算を表します。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、定数、変数、関数、コンストラクター、およびフィルターや結合のような標準の関係演算子など、クエリ式を構成するための式がいくつか用意されています。 すべての DbExpression オブジェクトには、その式によって生成される結果の型を表す ResultType プロパティがあります。 この型は、TypeUsage として表されます。
 
 ## <a name="shapes-of-the-output-query-command-tree"></a>出力クエリ コマンド ツリーの構造
 
@@ -86,9 +85,9 @@ DbNewInstanceExpression は、次の 2 つのケースでのみ使用できま�
 
 - DbProjectExpression の Projection プロパティとして使用する場合。  使用時には、次の制限が適用されます。
 
-    - 結果型は行型である必要があります。
+  - 結果型は行型である必要があります。
 
-    - それぞれの引数は、プリミティブ型の結果を生成する式です。 通常、それぞれの引数は、スカラー式 (たとえば、DbVariableReferenceExpression に対する PropertyExpression)、関数呼び出し、または DbVariableReferenceExpression に対する DbPropertyExpression や関数呼び出しの算術演算です。 ただし、スカラー サブクエリを表す式は、DbNewInstanceExpression の引数リスト内にも使用できます。 スカラー サブクエリを表す式は 1 つの行と DbElementExpression オブジェクトのルートを含むプリミティブ型の 1 つの列を返すサブクエリを表す式ツリー
+  - それぞれの引数は、プリミティブ型の結果を生成する式です。 通常、それぞれの引数は、スカラー式 (たとえば、DbVariableReferenceExpression に対する PropertyExpression)、関数呼び出し、または DbVariableReferenceExpression に対する DbPropertyExpression や関数呼び出しの算術演算です。 ただし、スカラー サブクエリを表す式は、DbNewInstanceExpression の引数リスト内にも使用できます。 スカラー サブクエリを表す式は 1 つの行と DbElementExpression オブジェクトのルートを含むプリミティブ型の 1 つの列を返すサブクエリを表す式ツリー
 
 - 戻り値の型がコレクション型の場合。この場合は、引数として提供される式の新しいコレクションを定義します。
 

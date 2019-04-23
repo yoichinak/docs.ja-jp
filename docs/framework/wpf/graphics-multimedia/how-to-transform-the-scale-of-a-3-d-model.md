@@ -6,10 +6,10 @@ helpviewer_keywords:
 - 3-D objects [WPF], scaling
 ms.assetid: f3fdfe33-f7dc-44b0-84a5-e43b89947f35
 ms.openlocfilehash: 6d668de08201d819ce9f8752bedf6c388a6bc718
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165088"
 ---
 # <a name="how-to-transform-the-scale-of-a-3-d-model"></a>方法: 3-D モデルのスケールを変換する

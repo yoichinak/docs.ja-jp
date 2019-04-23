@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Canvas control [WPF], attached properties
 ms.assetid: 48f1d25d-3820-4107-a4cc-d6c1e5664a44
 ms.openlocfilehash: 347c8502bd4c5fafcde7a142327f85bfb75b9954
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59159628"
 ---
 # <a name="how-to-use-the-attached-properties-of-canvas-to-position-child-elements"></a>方法: Canvas の添付プロパティを使用して子要素を配置する
@@ -36,5 +36,5 @@ ms.locfileid: "59159628"
 - <xref:System.Windows.Controls.Canvas.Top%2A>
 - <xref:System.Windows.Controls.Button>
 - [パネルの概要](panels-overview.md)
-- [方法のトピック](canvas-how-to-topics.md)
+- [方法トピック](canvas-how-to-topics.md)
 - [添付プロパティの概要](../advanced/attached-properties-overview.md)

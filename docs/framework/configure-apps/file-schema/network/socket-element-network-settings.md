@@ -9,10 +9,10 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59160161"
 ---
 # <a name="socket-element-network-settings"></a>\<ソケット > 要素 (ネットワーク設定)
@@ -51,7 +51,7 @@ ms.locfileid: "59160161"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[設定](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
+|[settings](../../../../../docs/framework/configure-apps/file-schema/network/settings-element-network-settings.md)|<xref:System.Net> 名前空間の基本的なネットワーク オプションを構成します。|  
   
 ## <a name="remarks"></a>Remarks  
  `alwaysUseCompletionPortsForAccept`と`alwaysUseCompletionPortsForConnect`内のクラスで属性を使用して、完了ポートの使用に関する既定の動作を指定、 <xref:System.Net.Sockets?displayProperty=nameWithType>.namespace します。 高パフォーマンス サーバー アプリケーションは、完了ポートがお勧めします。  
@@ -72,7 +72,7 @@ ms.locfileid: "59160161"
   
  使用可能な値を`ipProtectionLevel`属性の設定が指定された定義済みの保護レベルに対応して、<xref:System.Net.Sockets.IPProtectionLevel?displayProperty=nameWithType>列挙体として次のとおりです。  
   
-|**属性の値**|**説明**|  
+|**属性値**|**説明**|  
 |-|-|  
 |EdgeRestricted|IP 保護レベルはエッジ制限付きです。 この値は、インターネット経由で動作するように設計アプリケーションによって使用されます。 この設定は、Windows Teredo 実装を使用して、ネットワーク アドレス変換 (NAT) トラバーサルを許可しません。 これらのアプリケーションが IPv4 のファイアウォールをバイパスため、開かれたポートに送信するインターネット攻撃に対するアプリケーションのセキュリティを強化する必要があります。 Windows Server 2003 および Windows XP では、ソケットの IP 保護レベルの既定値はエッジ制限付きです。|  
 |Restricted|IP 保護レベルは、制限付きです。 この値については、インターネットのシナリオを実装しないイントラネット アプリケーションで使用します。 これらのアプリケーションは通常、テストもインターネット スタイルの攻撃に対して強固です。 この設定は、受信トラフィックはリンク ローカルのみに制限されます。|  

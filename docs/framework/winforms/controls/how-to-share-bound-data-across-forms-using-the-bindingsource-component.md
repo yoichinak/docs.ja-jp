@@ -11,10 +11,10 @@ helpviewer_keywords:
 - BindingSource [Windows Forms], using with multiple forms
 ms.assetid: a1a49630-db9c-4485-b888-1f62a373a4f7
 ms.openlocfilehash: 19505c690728147d2a67c26371e1cea4c281ab08
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154871"
 ---
 # <a name="how-to-share-bound-data-across-forms-using-the-bindingsource-component"></a>方法: BindingSource コンポーネントを使用してフォーム間でバインド データを共有する
@@ -34,10 +34,10 @@ ms.locfileid: "59154871"
   
 -   System、System.Windows.Forms、System.Drawing、System.Data、および System.Xml アセンブリへの参照。  
   
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ この例をコマンドラインから Visual Basic または Visual C# にビルドする方法の詳細については、[コマンドラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 
 - [BindingSource コンポーネント](bindingsource-component.md)
 - [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)
-- [方法: データ バインドで発生するエラーと例外を処理する](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)
+- [方法: エラーとデータ バインドで発生する例外を処理します。](how-to-handle-errors-and-exceptions-that-occur-with-databinding.md)

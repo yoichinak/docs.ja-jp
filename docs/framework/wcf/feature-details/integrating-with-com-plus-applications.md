@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, COM+ integration
 ms.assetid: 98bf7dc4-d49a-4129-a59b-db7a7ec8c241
 ms.openlocfilehash: cd72265fe8e49c7def91ebbf05ad84618dd71d19
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162504"
 ---
 # <a name="integrating-with-com-applications"></a>COM+ アプリケーションとの統合
@@ -23,13 +23,13 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
  [COM+ アプリケーションとの統合の概要](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications-overview.md)  
  COM+ コンポーネントを統合するタイミングと方法の概要を説明します。  
   
- [方法: COM+ サービス モデル構成ツールを使用する](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
+ [方法: COM + サービス モデル構成ツールを使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-com-service-model-configuration-tool.md)  
  COM + サービス モデル構成コマンド ライン ツール (ComSvcConfig.exe) を使用して WCF サービスとして公開するアプリケーション インターフェイスを構成する方法について説明します。  
   
- [方法: COM+ サービス設定を構成する](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
+ [方法: COM + サービス設定を構成します。](../../../../docs/framework/wcf/feature-details/how-to-configure-com-service-settings.md)  
  WCF サービスとしての COM + オブジェクトを構成する方法について説明します。  
   
- [方法: COM+ 統合アプリケーションを展開する](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
+ [方法: COM + 統合アプリケーションをデプロイします。](../../../../docs/framework/wcf/feature-details/how-to-deploy-a-com-integration-application.md)  
  COM+ 統合アプリケーションを移動する方法について説明します。  
   
 ## <a name="reference"></a>参照  
