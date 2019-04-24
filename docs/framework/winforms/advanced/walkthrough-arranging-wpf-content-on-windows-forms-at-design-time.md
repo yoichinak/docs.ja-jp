@@ -47,7 +47,7 @@ ms.locfileid: "59327309"
   
 #### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
--   Visual Basic または Visual c# のという名前で新しい Windows フォーム アプリケーション プロジェクトを作成する`ArrangeElementHost`します。  
+-  `ArrangeElementHost` という名前の Visual Basic または Visual C# で新しい Windows フォーム アプリケーション プロジェクトを作成します。   
   
 ## <a name="creating-the-wpf-control"></a>WPF コントロールの作成  
  プロジェクトに WPF コントロール型を追加したら、フォーム状に配置できます。  
