@@ -6,12 +6,12 @@ ms.author: johalex
 ms.date: 03/08/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: efa217440ae636422bc8d2bd429f0396d7d28057
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59311098"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612278"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>チュートリアル: ML.NET を使用して映画の推奨システムを作成する
 
@@ -161,7 +161,7 @@ public static (IDataView training, IDataView test) LoadData(MLContext mlContext)
 > [!NOTE]
 > このメソッドは、次の手順で return ステートメントを追加するまでエラーになります。
 
-`LoadData()` の次のコード行として以下を追加して、データ パス変数を初期化し、*.csv ファイルからデータを読み込み、`Train` と `Test` のデータを `IDataView` オブジェクトとして返します。
+`LoadData()` の次のコード行として以下を追加して、データ パス変数を初期化し、\*.csv ファイルからデータを読み込み、`Train` と `Test` のデータを `IDataView` オブジェクトとして返します。
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#LoadData "Load data from data paths")]
 
@@ -202,7 +202,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 > このメソッドは、次の手順で return ステートメントを追加するまでエラーになります。
 
 次のコードを `BuildAndTrainModel()` に追加して、データ変換を定義します。
-   
+
 [!code-csharp[DataTransformations](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#DataTransformations "Define data transformations")]
 
 `userId` と `movieId` は実際の値ではなく、ユーザーと映画のタイトルを表しているため、[MapValueToKey()](xref:Microsoft.ML.ConversionsExtensionsCatalog.MapValueToKey%2A) メソッドを使って `userId` と `movieId` をそれぞれ数値キー型の `Feature` 列 (レコメンデーション アルゴリズムで受け入れられる形式) に変換して、新しいデータセットの列として追加します。
@@ -217,7 +217,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 [!code-csharp[AddAlgorithm](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#AddAlgorithm "Add the training algorithm with options")]
 
-[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) はレコメンデーション トレーニング アルゴリズムです。  [行列因子分解](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems))は、ユーザーが過去に作品をどのように評価したかに関するデータがある場合 (このチュートリアルでのデータセットがそれにあたります) のレコメンデーションへの一般的なアプローチです。 使用可能なさまざまなデータがある場合は、他のレコメンデーション アゴリズムがあります (詳細については、後述の「[その他のレコメンデーション アルゴリズム](#other-recommendation-algorithms)」をご覧ください)。 
+[MatrixFactorizationTrainer](xref:Microsoft.ML.RecommendationCatalog.RecommendationTrainers.MatrixFactorization%28Microsoft.ML.Trainers.MatrixFactorizationTrainer.Options%29) はレコメンデーション トレーニング アルゴリズムです。  [行列因子分解](https://en.wikipedia.org/wiki/Matrix_factorization_(recommender_systems))は、ユーザーが過去に作品をどのように評価したかに関するデータがある場合 (このチュートリアルでのデータセットがそれにあたります) のレコメンデーションへの一般的なアプローチです。 使用可能なさまざまなデータがある場合は、他のレコメンデーション アゴリズムがあります (詳細については、後述の「[その他のレコメンデーション アルゴリズム](#other-recommendation-algorithms)」をご覧ください)。
 
 ここでは、`Matrix Factorization` アルゴリズムは "協調フィルタリング" と呼ばれる手法を使用します。これは、特定の問題についてユーザー 1 とユーザー 2 の意見が同じ場合、別の問題についてもユーザー 1 はユーザー 2 と同じように感じる可能性が高いと仮定します。
 
@@ -242,7 +242,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView tra
 
 ## <a name="evaluate-your-model"></a>モデルを評価する
 
-モデルをトレーニングしたら、テスト データを使用してモデルのパフォーマンスを評価します。 
+モデルをトレーニングしたら、テスト データを使用してモデルのパフォーマンスを評価します。
 
 `BuildAndTrainModel()` メソッドの直後に、次のコードを使用して `EvaluateModel()` メソッドを作成します。
 
@@ -253,8 +253,7 @@ public static void EvaluateModel(MLContext mlContext, IDataView testDataView, IT
 }
 ```
 
-次のコードを `EvaluateModel()` に追加して、`Test` データを変換します。
-[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
+次のコードを `EvaluateModel()` に追加して、`Test` データを変換します。[!code-csharp[Transform](~/samples/machine-learning/tutorials/MovieRecommendation/Program.cs#Transform "Transform the test data")]
 
 [Transform()](xref:Microsoft.ML.ITransformer.Transform%2A) メソッドはテスト データセットの指定した複数の入力行に対して予測を行います。
 
@@ -315,6 +314,7 @@ RSquared: 0.412556298844873
 これでトレーニング済みのモデルを使用して、新しいデータで予測を行えます。
 
 `EvaluateModel()` メソッドの直後に、次のコードを使用して `UseModelForSinglePrediction()` メソッドを作成します。
+
 ```csharp
 public static void UseModelForSinglePrediction(MLContext mlContext, ITransformer model)
 {
@@ -427,9 +427,9 @@ Movie 10 is recommended for user 6
 
 ### <a name="features"></a>フィーチャー
 
-このチュートリアルでは、データセットで提供される 3 つの `Features` (`user id`、`movie id`、`rating`) のみを使用します。 
+このチュートリアルでは、データセットで提供される 3 つの `Features` (`user id`、`movie id`、`rating`) のみを使用します。
 
-これは出発点としては適切ですが、実際には、データセットに他の属性や `Features` (年齢、性別、地理的場所など) が含まれている場合には、これらを追加することができます。 より関連性の高い `Features` を追加することで、レコメンデーション モデルのパフォーマンスを向上させることができます。 
+これは出発点としては適切ですが、実際には、データセットに他の属性や `Features` (年齢、性別、地理的場所など) が含まれている場合には、これらを追加することができます。 より関連性の高い `Features` を追加することで、レコメンデーション モデルのパフォーマンスを向上させることができます。
 
 自分の機械学習タスクにとってどの `Features` が最も関連性が高いかがわからない場合は、最も影響が大きい `Features` を検出するために ML.NET で提供されている Feature Contribution Calculation (FCC) および [Feature Permutation Importance](../how-to-guides/determine-global-feature-importance-in-model.md) を利用することもできます。
 
@@ -445,7 +445,7 @@ ML.NET には優れたトレーニング アルゴリズムが既定で提供さ
 var options = new MatrixFactorizationTrainer.Options
 {
     MatrixColumnIndexColumnName = "userIdEncoded",
-    MatrixRowIndexColumnName = "movieIdEncoded", 
+    MatrixRowIndexColumnName = "movieIdEncoded",
     LabelColumnName = "Label",
     NumberOfIterations = 20,
     ApproximationRank = 100
