@@ -11,10 +11,10 @@ helpviewer_keywords:
 - AND operator (&) [C#]
 ms.assetid: afa346d5-90ec-4b1f-a2c8-3881f018741d
 ms.openlocfilehash: 67d60709e1c6c76071ecfb7aac74c83dec6f372a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310045"
 ---
 # <a name="amp-operator-c-reference"></a>&amp; 演算子 (C# リファレンス)
@@ -61,7 +61,7 @@ Null 許容型ブールのオペランドの場合、`&` 演算子の動作は�
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
 - [ブール論理演算子](boolean-logical-operators.md)
 - [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)

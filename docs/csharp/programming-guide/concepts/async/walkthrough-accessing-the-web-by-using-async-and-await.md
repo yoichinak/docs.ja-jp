@@ -3,10 +3,10 @@ title: 'チュートリアル: Async と Await を使用した Web へのアク�
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
 ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306730"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>チュートリアル: Async と Await を使用した Web へのアクセス (C#)
@@ -108,13 +108,13 @@ async/await 機能を使用することで、非同期プログラムをより�
 
 3. 同期ソリューションのコードには、次の 4 つのメソッドが含まれています。
 
-    -   `SumPageSizes`は、`SetUpURLList` から Web ページ URL のリストを取得し、`GetURLContents` と `DisplayResults` を呼び出して各 URL を処理します。
+    -   `SumPageSizes` は、`SetUpURLList` から Web ページ URL のリストを取得し、`GetURLContents` と `DisplayResults` を呼び出して各 URL を処理します。
 
-    -   `SetUpURLList`は、Web アドレスのリストを作成して返します。
+    -   `SetUpURLList` は、Web アドレスのリストを作成して返します。
 
-    -   `GetURLContents`は、各 Web サイトのコンテンツをダウンロードし、バイト配列としてそのコンテンツを返します。
+    -   `GetURLContents` は、各 Web サイトのコンテンツをダウンロードし、バイト配列としてそのコンテンツを返します。
 
-    -   `DisplayResults`は、各 URL のバイト配列内のバイト数を表示します。
+    -   `DisplayResults` は、各 URL のバイト配列内のバイト数を表示します。
 
     次の 4 つのメソッドをコピーし、それを MainWindow.xaml.cs の `startButton_Click` イベント ハンドラーの下に貼り付けます。
 
@@ -235,7 +235,7 @@ Control returned to startButton_Click.
     using (WebResponse response = webReq.GetResponseAsync())
     ```
 
-2. `GetResponseAsync` は <xref:System.Threading.Tasks.Task%601> を返します。 この場合、*タスク戻り変数*の `TResult` の型は <xref:System.Net.WebResponse> です。 このタスクは、要求されたデータのダウンロードが完了し、タスクが最後まで実行された後に、実際の `WebResponse` オブジェクトを生成するという約束です。
+2. `GetResponseAsync` は、<xref:System.Threading.Tasks.Task%601> を返します。 この場合、*タスク戻り変数*の `TResult` の型は <xref:System.Net.WebResponse> です。 このタスクは、要求されたデータのダウンロードが完了し、タスクが最後まで実行された後に、実際の `WebResponse` オブジェクトを生成するという約束です。
 
      タスクから `WebResponse` 値を取得するには、次のコードに示すように、[await](../../../../csharp/language-reference/keywords/await.md) (C#) 演算子を `GetResponseAsync` への呼び出しに適用します。
 
@@ -690,7 +690,7 @@ namespace AsyncExampleWPF
 
 ## <a name="see-also"></a>関連項目
 
-- [非同期のサンプル:Web へのアクセスのチュートリアル (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample:Web へのアクセスのチュートリアル (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [async](../../../../csharp/language-reference/keywords/async.md)
 - [await](../../../../csharp/language-reference/keywords/await.md)
 - [Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)

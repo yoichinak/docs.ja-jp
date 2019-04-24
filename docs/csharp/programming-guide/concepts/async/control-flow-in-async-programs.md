@@ -3,10 +3,10 @@ title: 非同期プログラムにおける制御フロー (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
 ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326204"
 ---
 # <a name="control-flow-in-async-programs-c"></a>非同期プログラムにおける制御フロー (C#)
@@ -17,9 +17,9 @@ ms.locfileid: "59326204"
 
 次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。 この例には、次の 2 つのメソッドが含まれています。
 
--   `startButton_Click`: `AccessTheWebAsync` を呼び出して結果を表示します。
+-   `startButton_Click` を呼び出して結果を表示する `AccessTheWebAsync`。
 
--   `AccessTheWebAsync`: Web サイトのコンテンツを文字列としてダウンロードして、その文字列の長さを返します。 `AccessTheWebAsync` は、非同期 <xref:System.Net.Http.HttpClient> メソッドである <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を使用してコンテンツをダウンロードします。
+-   Web サイトのコンテンツを文字列としてダウンロードして、その文字列の長さを返す `AccessTheWebAsync`。 `AccessTheWebAsync` は、非同期 <xref:System.Net.Http.HttpClient> メソッドである <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を使用してコンテンツをダウンロードします。
 
 番号付き表示行はプログラム全体で重要なポイントを示し、プログラムがどのように実行され、マークされている各ポイントで何が発生するかを理解するために役立ちます。 表示行には「1」から「6」までのラベルが付けられています。 このラベルは、プログラムがこれらのコード行に到達する順序を表します。
 
@@ -311,7 +311,7 @@ string urlContents = await getStringTask;
  await 式は `AccessTheWebAsync` が制御を返すまで `client.GetStringAsync` を中断します。 その間、コントロールは `AccessTheWebAsync` の呼び出し元である `startButton_Click` に戻されます。
 
 > [!NOTE]
-> 通常、直ちに非同期メソッドへの呼び出しの待機状態となります。 たとえば、次の割り当てで、`getStringTask` を作成してそれを待機する前のコードを置き換えることができます。 `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
+> 通常、直ちに非同期メソッドへの呼び出しの待機状態となります。 たとえば、次の割り当てで、`getStringTask` を作成してそれを待機する前のコードを置き換えることができます: `string urlContents = await client.GetStringAsync("https://msdn.microsoft.com");`
 >
 > このトピックでは、await 演算子が後で適用され、プログラムでの制御フローを示す出力行を格納します。
 
@@ -390,4 +390,4 @@ int contentLength = await getLengthTask;
 - [Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
 - [非同期の戻り値の型 (C#)](../../../../csharp/programming-guide/concepts/async/async-return-types.md)
 - [チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)
-- [非同期のサンプル:非同期プログラムにおける制御フロー (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
+- [Async Sample:非同期プログラムにおける制御フロー (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Control-Flow-5c804fc0)
