@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - is keyword [C#]
 ms.assetid: bc62316a-d41f-4f90-8300-c6f4f0556e43
-ms.openlocfilehash: 83cb308a14a6db99f65b30eded20442d675cbd57
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: 9fb57caeafde9db5759300d938a85f4abf4d05f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480834"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672460"
 ---
 # <a name="is-c-reference"></a>is (C# リファレンス)
 
@@ -51,7 +51,7 @@ ms.locfileid: "59480834"
 
 [!code-csharp[is#2](../../../../samples/snippets/csharp/language-reference/keywords/is/is2.cs#2)]
 
-`expr` 匿名メソッドまたはラムダ式にすることはできません。 値を返す他の式を使用することもできます。 次の例では、`is` を使用してメソッド呼び出しの戻り値を評価しています。   
+`expr` を匿名メソッドまたはラムダ式にすることはできません。 値を返す他の式を使用することもできます。 次の例では、`is` を使用してメソッド呼び出しの戻り値を評価しています。   
 [!code-csharp[is#4](../../../../samples/snippets/csharp/language-reference/keywords/is/is4.cs#4)]
 
 C# 7.0 以降では、[型パターン](#type)によるパターン マッチングを使用することで、`is` ステートメントを用いたより簡潔なコードを記述できます。
@@ -144,7 +144,7 @@ C#7.1 以降、*expr* はジェネリック型パラメーターとその制約�
  
 ### <a name="var" /> var パターン</a>
 
-var パターンとのパターン マッチは、常に null 以外の式に対して成功します。*expr* が `null` の場合、`is` 式は `false` です。 *expr* の null 以外の値は、常に *expr* の実行時の型と同じ型のローカル変数に割り当てられます。  構文は次のとおりです。
+`var` パターンは、すべての型または値に対応します。 *expr* の値は、常に *expr* のコンパイル時の型と同じ型のローカル変数に割り当てられます。 `is` 式の結果は常に `true` です。 構文は次のとおりです。
 
 ```csharp 
    expr is var varname

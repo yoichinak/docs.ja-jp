@@ -3,10 +3,10 @@ title: C# 7.1 の新機能
 description: C# 7.1 の新機能の概要。
 ms.date: 04/09/2019
 ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480964"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 の新機能

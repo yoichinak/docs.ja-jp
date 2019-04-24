@@ -119,7 +119,7 @@
           href: readonly.md
         - name: sealed
           href: sealed.md
-        - name: 静的
+        - name: static
           href: static.md
         - name: unsafe
           href: unsafe.md

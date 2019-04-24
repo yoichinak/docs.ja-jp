@@ -1,81 +1,59 @@
-items:
-- name: C# 演算子
+- name: 'C# 演算子'
   href: index.md
   items:
-  - name: 算術演算子
-    displayName: ++, --, +, -, *, /, %, +=, -=, *=, /=, %=
-    href: arithmetic-operators.md
-  - name: ブール論理演算子
-    displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
-    href: boolean-logical-operators.md
-  - name: 等値演算子
-    displayName: ==, !=
-    href: equality-operators.md
-  - name: '[] 演算子'
-    href: index-operator.md
-  - name: () 演算子
-    href: invocation-operator.md
-  - name: . 演算子
-    href: member-access-operator.md
-  - name: ?. および ?[] 演算子
-    href: null-conditional-operators.md
-  - name: ::演算子
-    href: namespace-alias-qualifer.md
-  - name: + 演算子
-    href: addition-operator.md
-  - name: '- 演算子'
-    href: subtraction-operator.md
-  - name: '* 演算子'
-    href: multiplication-operator.md
-  - name: '& 演算子'
-    href: and-operator.md
-  - name: '| 演算子'
-    href: or-operator.md
-  - name: ^ 演算子
-    href: xor-operator.md
-  - name: ~ 演算子
-    href: bitwise-complement-operator.md
-  - name: = 演算子
-    href: assignment-operator.md
-  - name: < 演算子
-    href: less-than-operator.md
-  - name: '> 演算子'
-    href: greater-than-operator.md
-  - name: ?:演算子
-    href: conditional-operator.md
-  - name: << 演算子
-    href: left-shift-operator.md
-  - name: '>> 演算子'
-    href: right-shift-operator.md
-  - name: <= 演算子
-    href: less-than-equal-operator.md
-  - name: '>= 演算子'
-    href: greater-than-equal-operator.md
-  - name: += 演算子
-    href: addition-assignment-operator.md
-  - name: -= 演算子
-    href: subtraction-assignment-operator.md
-  - name: '*= 演算子'
-    href: multiplication-assignment-operator.md
-  - name: '&= 演算子'
-    href: and-assignment-operator.md
-  - name: '|= 演算子'
-    href: or-assignment-operator.md
-  - name: ^= 演算子
-    href: xor-assignment-operator.md
-  - name: <<= 演算子
-    href: left-shift-assignment-operator.md
-  - name: '>>= 演算子'
-    href: right-shift-assignment-operator.md
-  - name: -> 演算子
-    href: dereference-operator.md
-  - name: ?? 演算子
-    href: null-coalescing-operator.md
-  - name: => 演算子
-    href: lambda-operator.md
-ms.openlocfilehash: f2554167da2c1e51227d8f745496839c5c60fac2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307536"
+    - name: 算術演算子
+      href: arithmetic-operators.md
+      displayName: '++, --, +, -, *, /, %, +=, -=, *=, /=, %=, checked, unchecked'
+    - name: ブール論理演算子
+      href: boolean-logical-operators.md
+      displayName: '!, &&, ||, &, |, ^, &=, |=, ^='
+    - name: ビット処理シフト演算子
+      href: bitwise-and-shift-operators.md
+      displayName: '~, &, |, ^, <<, >>, &=, |=, ^=, <<=, >>='
+    - name: 等値演算子
+      href: equality-operators.md
+      displayName: '==, !='
+    - name: '[] 演算子'
+      href: index-operator.md
+    - name: () 演算子
+      href: invocation-operator.md
+    - name: . 演算子
+      href: member-access-operator.md
+    - name: '?. および ?[] 演算子'
+      href: null-conditional-operators.md
+    - name: '::演算子'
+      href: namespace-alias-qualifer.md
+    - name: + 演算子
+      href: addition-operator.md
+    - name: '- 演算子'
+      href: subtraction-operator.md
+    - name: '* 演算子'
+      href: multiplication-operator.md
+    - name: '& 演算子'
+      href: and-operator.md
+    - name: = 演算子
+      href: assignment-operator.md
+    - name: < 演算子
+      href: less-than-operator.md
+    - name: '> 演算子'
+      href: greater-than-operator.md
+    - name: '?:演算子'
+      href: conditional-operator.md
+    - name: <= 演算子
+      href: less-than-equal-operator.md
+    - name: '>= 演算子'
+      href: greater-than-equal-operator.md
+    - name: += 演算子
+      href: addition-assignment-operator.md
+    - name: '-= 演算子'
+      href: subtraction-assignment-operator.md
+    - name: '*= 演算子'
+      href: multiplication-assignment-operator.md
+    - name: '&= 演算子'
+      href: and-assignment-operator.md
+    - name: '-> 演算子'
+      href: dereference-operator.md
+    - name: '?? 演算子'
+      href: null-coalescing-operator.md
+    - name: => 演算子
+      href: lambda-operator.md

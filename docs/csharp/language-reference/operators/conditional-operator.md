@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: c03fa202b413c98230ba70ca7a0b709d7865cb91
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59427384"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672395"
 ---
 # <a name="-operator-c-reference"></a>?:演算子 (C# リファレンス)
 
@@ -42,6 +42,12 @@ a ? b : c ? d : e
 ```csharp
 a ? b : (c ? d : e)
 ```
+
+この演算子の評価方法を簡単に思い出すには、次のように質問します。 
+```
+is this condition true ? yes : no
+```
+演算子の ? の部分は 前の文章の疑問符に対応し、結果はこの質問に対する論理的な答えに対応します。
 
 条件演算子の使用例を次に示します。
 
@@ -84,9 +90,9 @@ ref 条件演算子の使用例を次に示します。
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
 - [if-else ステートメント](../keywords/if-else.md)
-- [?. および ?[] 演算子](null-conditional-operators.md)
-- [?? 演算子](null-coalescing-operator.md)
+- [?. 演算子と ?[] 演算子](null-conditional-operators.md)
+- [??演算子](null-coalescing-operator.md)
 - [ref キーワード](../keywords/ref.md)
