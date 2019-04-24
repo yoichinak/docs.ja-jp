@@ -274,7 +274,7 @@
     - name: コンテキスト キーワード
       href: contextual-keywords.md
       items:
-        - name: 追加
+        - name: add
           href: add.md
         - name: get
           href: get.md
