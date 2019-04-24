@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
 ms.openlocfilehash: fea91731694f18625e43c5545b353851e72234a6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821089"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield ステートメント (Visual Basic)
@@ -91,7 +91,7 @@ Next
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- その他の例では、[反復子](../../programming-guide/concepts/iterators.md)を参照してください。  
+ その他の例では、次を参照してください。[反復子](../../programming-guide/concepts/iterators.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

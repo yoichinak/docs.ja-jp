@@ -1,25 +1,18 @@
-items:
 - name: イベント
   href: index.md
   items:
-  - name: '方法: イベントを発生させる/処理する'
-    href: how-to-raise-and-consume-events.md
-  - name: '方法: イベント プロパティを使用して複数のイベントを処理する'
-    href: how-to-handle-multiple-events-using-event-properties.md
-  - name: '方法: Web フォーム アプリケーションでイベントを利用する'
-    href: how-to-consume-events-in-a-web-forms-application.md
-  - name: オブサーバー デザイン パターン
-    href: observer-design-pattern.md
-    items:
-    - name: オブサーバー デザイン パターンのベスト プラクティス
-      href: observer-design-pattern-best-practices.md
-    - name: '方法: プロバイダーを実装する'
-      href: how-to-implement-a-provider.md
-    - name: '方法: オブザーバーを実装する'
-      href: how-to-implement-an-observer.md
-ms.openlocfilehash: 683b3ce9ecf53166bed8101c2ebcd0d4a43024b9
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469731"
+    - name: '方法: イベントを発生させる/処理する'
+      href: how-to-raise-and-consume-events.md
+    - name: '方法: イベント プロパティを使用して複数のイベントを処理する'
+      href: how-to-handle-multiple-events-using-event-properties.md
+    - name: '方法: Web フォーム アプリケーションでイベントを利用する'
+      href: how-to-consume-events-in-a-web-forms-application.md
+    - name: オブサーバー デザイン パターン
+      href: observer-design-pattern.md
+      items:
+        - name: オブサーバー デザイン パターンのベスト プラクティス
+          href: observer-design-pattern-best-practices.md
+        - name: '方法: プロバイダーを実装する'
+          href: how-to-implement-a-provider.md
+        - name: '方法: オブザーバーを実装する'
+          href: how-to-implement-an-observer.md

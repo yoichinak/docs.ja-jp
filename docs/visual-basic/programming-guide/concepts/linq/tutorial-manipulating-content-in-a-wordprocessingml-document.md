@@ -3,16 +3,16 @@ title: 'チュートリアル: WordprocessingML ドキュメント (Visual Basic
 ms.date: 07/20/2015
 ms.assetid: f8028ba8-2dd1-4425-930c-8cc23176ebbc
 ms.openlocfilehash: 7b0a400a19dbe863490e5b2e34ec367e61a413a2
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834960"
 ---
 # <a name="tutorial-manipulating-content-in-a-wordprocessingml-document-visual-basic"></a>チュートリアル: WordprocessingML ドキュメント (Visual Basic) 内のコンテンツの操作
 このチュートリアルでは、関数型変換の方法と LINQ to XML を適用して XML ドキュメントを操作する方法について説明します。 Visual Basic の例では、クエリを実行して、Microsoft Word で保存されている Office Open XML WordprocessingML ドキュメント内の情報を操作します。  
   
- 詳細については、、 [Eric White のブログ](http://www.ericwhite.com)を参照してください。  
+ 詳細については、次を参照してください。、 [Eric White のブログ](http://www.ericwhite.com)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   

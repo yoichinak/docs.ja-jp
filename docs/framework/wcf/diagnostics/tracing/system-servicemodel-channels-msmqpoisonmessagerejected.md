@@ -3,10 +3,10 @@ title: System.ServiceModel.Channels.MsmqPoisonMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 0e64b9bd-1f12-43df-a189-d7be3c2bace1
 ms.openlocfilehash: 562399c1d45dc73c7c88bd165e9f95ee1bcfa19d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125083"
 ---
 # <a name="systemservicemodelchannelsmsmqpoisonmessagerejected"></a>System.ServiceModel.Channels.MsmqPoisonMessageRejected
@@ -22,5 +22,5 @@ ms.locfileid: "59125083"
 - [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [トレースを使用したアプリケーションのトラブルシューティング](../../../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)
 - [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [有害メッセージの処理](https://go.microsoft.com/fwlink/?LinkId=99546)
+- [有害メッセージ処理](https://go.microsoft.com/fwlink/?LinkId=99546)
 - [MQMarkMessageRejected](https://go.microsoft.com/fwlink/?LinkId=99548)

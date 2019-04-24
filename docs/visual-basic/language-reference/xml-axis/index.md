@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 7e400e20-5d1e-4d22-a65c-9df79d5c1621
 ms.openlocfilehash: 90004ff2e9d5fcf1470b34b93091545b2b848b33
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834042"
 ---
 # <a name="xml-axis-properties-visual-basic"></a>XML 軸プロパティ (Visual Basic)

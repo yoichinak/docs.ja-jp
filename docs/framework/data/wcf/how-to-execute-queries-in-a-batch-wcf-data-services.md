@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WCF Data Services, batch requests
 ms.assetid: 3b4db7df-bd33-43a1-8ea4-63a18e131f97
 ms.openlocfilehash: e5cd44ee7c3b2c2744e87ebf66973b637961893c
-ms.sourcegitcommit: 680a741667cf6859de71586a0caf6be14f4f7793
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59517578"
 ---
 # <a name="how-to-execute-queries-in-a-batch-wcf-data-services"></a>方法: クエリ バッチ (WCF Data Services) で実行します。

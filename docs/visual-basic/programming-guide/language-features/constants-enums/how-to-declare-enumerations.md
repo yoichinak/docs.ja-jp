@@ -7,16 +7,16 @@ helpviewer_keywords:
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
 ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343341"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>方法: (Visual Basic) 列挙型を宣言します。
 持つ列挙体を作成する、`Enum`クラスまたはモジュールの宣言セクション内のステートメント。 メソッド内で列挙型を宣言することはできません。 適切なアクセス レベルを指定するには、使用`Private`、 `Protected`、 `Friend`、または`Public`します。  
   
- `Enum`型の名前、基になる型とに一連のフィールドでは、それぞれの定数を表します。 名前は、有効な Visual Basic .NET 修飾子にする必要があります。 基になる型が整数型のいずれかを指定する必要があります:`Byte`、 `Short`、`Long`または`Integer`します。 `Integer` 既定値です。 列挙型では、常に厳密に型指定し、整数の数値型で置き換えることはできません。  
+ `Enum`型の名前、基になる型とに一連のフィールドでは、それぞれの定数を表します。 名前は、有効な Visual Basic .NET 修飾子にする必要があります。 基になる型が整数型のいずれかを指定する必要があります:`Byte`、 `Short`、`Long`または`Integer`します。 `Integer` が既定値です。 列挙型では、常に厳密に型指定し、整数の数値型で置き換えることはできません。  
   
  列挙体は、浮動小数点値を持つことはできません。 列挙には、浮動小数点値が割り当てられている場合`Option Strict On`、コンパイラ エラーが発生します。 場合`Option Strict`は`Off`に、値が自動的に変換、`Enum`型。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "59343341"
 ## <a name="see-also"></a>関連項目
 
 - [列挙型と名前の修飾](../../../../visual-basic/programming-guide/language-features/constants-enums/enumerations-and-name-qualification.md)
-- [方法: 列挙型のメンバーを参照する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
+- [方法: 列挙体のメンバーを参照してください。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-refer-to-an-enumeration-member.md)
 - [方法: Visual Basic で列挙型を反復処理します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-iterate-through-an-enumeration.md)
-- [方法: 列挙値に関連付けられている文字列を確認する](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
+- [方法: 列挙値に関連付けられている文字列を確認します。](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-determine-the-string-associated-with-an-enumeration-value.md)
 - [列挙型を使用する状況](../../../../visual-basic/programming-guide/language-features/constants-enums/when-to-use-an-enumeration.md)
 - [定数の概要](../../../../visual-basic/programming-guide/language-features/constants-enums/constants-overview.md)
 - [定数とリテラルのデータ型](../../../../visual-basic/programming-guide/language-features/constants-enums/constant-and-literal-data-types.md)

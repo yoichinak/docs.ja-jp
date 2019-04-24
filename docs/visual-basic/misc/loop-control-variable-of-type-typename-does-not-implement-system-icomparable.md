@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_IComparable2
 ms.assetid: 8dba1270-380a-4f05-8bad-1031e6a9cc90
 ms.openlocfilehash: a227e367c71d37abd86430979881d1412ff76efc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344417"
 ---
 # <a name="loop-control-variable-of-type-typename-does-not-implement-the-systemicomparable-interface"></a>型のループ コントロール変数 '\<typename >' 'system.icomparable' インターフェイスを実装しません

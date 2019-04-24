@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
 ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59340751"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成する
@@ -45,5 +45,5 @@ ms.locfileid: "59340751"
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
 - [WebBrowser コントロールの概要](webbrowser-control-overview.md)
 - [WebBrowser セキュリティ](webbrowser-security.md)
-- [方法: WebBrowser コントロールで URL に移動する](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [方法: WebBrowser コントロールを使用して印刷する](how-to-print-with-a-webbrowser-control.md)
+- [方法: WebBrowser コントロールで URL に移動します](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [方法: WebBrowser コントロールを使用して印刷します。](how-to-print-with-a-webbrowser-control.md)

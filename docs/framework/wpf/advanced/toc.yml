@@ -1,604 +1,597 @@
-items:
 - name: 詳細設定
   href: index.md
   items:
-  - name: WPF アーキテクチャ
-    href: wpf-architecture.md
-  - name: WPF の XAML
-    href: xaml-in-wpf.md
-    items:
-    - name: XAML の概要 (WPF)
-      href: xaml-overview-wpf.md
-    - name: XAML 構文の詳細
-      href: xaml-syntax-in-detail.md
-    - name: WPF における分離コードと XAML
-      href: code-behind-and-xaml-in-wpf.md
-    - name: WPF における XAML とカスタム クラス
-      href: xaml-and-custom-classes-for-wpf.md
-    - name: マークアップ拡張機能と WPF XAML
-      href: markup-extensions-and-wpf-xaml.md
-    - name: XAML 名前空間および WPF XAML の名前空間の割り当て
-      href: xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md
-    - name: WPF XAML 名前スコープ
-      href: wpf-xaml-namescopes.md
-    - name: インライン スタイルおよびテンプレート
-      href: inline-styles-and-templates.md
-    - name: TypeConverters および XAML
-      href: typeconverters-and-xaml.md
-    - name: WPF XAML 拡張機能
-      href: wpf-xaml-extensions.md
+    - name: WPF アーキテクチャ
+      href: wpf-architecture.md
+    - name: WPF の XAML
+      href: xaml-in-wpf.md
       items:
-      - name: バインドのマークアップ拡張機能
-        href: binding-markup-extension.md
-      - name: ColorConvertedBitmap のマークアップ拡張機能
-        href: colorconvertedbitmap-markup-extension.md
-      - name: ComponentResourceKey マークアップ拡張機能
-        href: componentresourcekey-markup-extension.md
-      - name: DateTime XAML 構文
-        href: datetime-xaml-syntax.md
-      - name: DynamicResource のマークアップ拡張機能
-        href: dynamicresource-markup-extension.md
-      - name: RelativeSource のマークアップ拡張機能
-        href: relativesource-markupextension.md
-      - name: StaticResource のマークアップ拡張機能
-        href: staticresource-markup-extension.md
-      - name: TemplateBinding のマークアップ拡張機能
-        href: templatebinding-markup-extension.md
-      - name: ThemeDictionary のマークアップ拡張機能
-        href: themedictionary-markup-extension.md
-      - name: PropertyPath の XAML 構文
-        href: propertypath-xaml-syntax.md
-      - name: PresentationOptions:Freeze 属性
-        href: presentationoptions-freeze-attribute.md
-    - name: マークアップの互換性 (mc:)言語機能
-      href: markup-compatibility-mc-language-features.md
-      items:
-      - name: mc:Ignorable 属性
-        href: mc-ignorable-attribute.md
-      - name: mc:ProcessContent 属性
-        href: mc-processcontent-attribute.md
-  - name: 基本要素
-    href: base-elements.md
-    items:
-    - name: 基本要素の概要
-      href: base-elements-overview.md
-    - name: Freezable オブジェクトの概要
-      href: freezable-objects-overview.md
-    - name: 配置、余白、パディングの概要
-      href: alignment-margins-and-padding-overview.md
-    - name: 方法のトピック
-      href: base-elements-how-to-topics.md
-      items:
-      - name: UIElement を透明または半透明にする
-        href: how-to-make-a-uielement-transparent-or-semi-transparent.md
-      - name: FrameworkElement のサイズをアニメーション化する
-        href: how-to-animate-the-size-of-a-frameworkelement.md
-      - name: Freezable が固定されているかどうかを判別する
-        href: how-to-determine-whether-a-freezable-is-frozen.md
-      - name: 読み込まれたイベントを処理する
-        href: how-to-handle-a-loaded-event.md
-      - name: 要素およびコントロールのマージンを設定する
-        href: how-to-set-margins-of-elements-and-controls.md
-      - name: Freezable を読み取り専用にする
-        href: how-to-make-a-freezable-read-only.md
-      - name: 読み取り専用の Freezable の書き込み可能なコピーを取得する
-        href: how-to-obtain-a-writable-copy-of-a-read-only-freezable.md
-      - name: UIElement を左右または上下に反転させる
-        href: how-to-flip-a-uielement-horizontally-or-vertically.md
-      - name: ThicknessConverter オブジェクトを使用する
-        href: how-to-use-a-thicknessconverter-object.md
-      - name: ContextMenuOpening イベントを処理する
-        href: how-to-handle-the-contextmenuopening-event.md
-  - name: 要素のツリーおよびシリアル化
-    href: element-tree-and-serialization.md
-    items:
-    - name: WPF のツリー
-      href: trees-in-wpf.md
-    - name: XamlWriter.Save のシリアル化の制限
-      href: serialization-limitations-of-xamlwriter-save.md
-    - name: オブジェクト ツリーに存在しないオブジェクト要素の初期化
-      href: initialization-for-object-elements-not-in-an-object-tree.md
-    - name: 方法のトピック
-      href: element-tree-and-serialization-how-to-topics.md
-      items:
-      - name: 要素を名前で検索する
-        href: how-to-find-an-element-by-its-name.md
-      - name: 論理ツリーをオーバーライドする
-        href: how-to-override-the-logical-tree.md
-  - name: プロパティ
-    href: properties-wpf.md
-    items:
-    - name: 依存関係プロパティの概要
-      href: dependency-properties-overview.md
-    - name: 添付プロパティの概要
-      href: attached-properties-overview.md
-    - name: カスタム依存関係プロパティ
-      href: custom-dependency-properties.md
-    - name: 依存関係プロパティのメタデータ
-      href: dependency-property-metadata.md
-    - name: 依存関係プロパティのコールバックと検証
-      href: dependency-property-callbacks-and-validation.md
-    - name: フレームワーク プロパティ メタデータ
-      href: framework-property-metadata.md
-    - name: 依存関係プロパティ値の優先順位
-      href: dependency-property-value-precedence.md
-    - name: 読み取り専用の依存関係プロパティ
-      href: read-only-dependency-properties.md
-    - name: プロパティ値の継承
-      href: property-value-inheritance.md
-    - name: 依存関係プロパティのセキュリティ
-      href: dependency-property-security.md
-    - name: DependencyObject の安全なコンストラクター パターン
-      href: safe-constructor-patterns-for-dependencyobjects.md
-    - name: コレクション型依存関係プロパティ
-      href: collection-type-dependency-properties.md
-    - name: XAML 読み込みと依存関係プロパティ
-      href: xaml-loading-and-dependency-properties.md
-    - name: 方法のトピック
-      href: properties-how-to-topics.md
-      items:
-      - name: 依存関係プロパティを実装する
-        href: how-to-implement-a-dependency-property.md
-      - name: 依存関係プロパティの所有者の種類を追加する
-        href: how-to-add-an-owner-type-for-a-dependency-property.md
-      - name: 添付プロパティを登録する
-        href: how-to-register-an-attached-property.md
-      - name: 依存関係プロパティのメタデータをオーバーライドする
-        href: how-to-override-metadata-for-a-dependency-property.md
-  - name: イベント
-    href: events-wpf.md
-    items:
-    - name: ルーティング イベントの概要
-      href: routed-events-overview.md
-    - name: 添付イベントの概要
-      href: attached-events-overview.md
-    - name: オブジェクトの有効期間イベント
-      href: object-lifetime-events.md
-    - name: ルーティング イベントの処理済みとしてのマーキング、およびクラス処理
-      href: marking-routed-events-as-handled-and-class-handling.md
-    - name: プレビュー イベント
-      href: preview-events.md
-    - name: プロパティ変更イベント
-      href: property-change-events.md
-    - name: Visual Basic と WPF のイベント処理
-      href: visual-basic-and-wpf-event-handling.md
-    - name: 弱いイベント パターン
-      href: weak-event-patterns.md
-    - name: 方法のトピック
-      href: events-how-to-topics.md
-      items:
-      - name: コードを使用してイベント ハンドラーを追加する
-        href: how-to-add-an-event-handler-using-code.md
-      - name: ルーティング イベントを処理する
-        href: how-to-handle-a-routed-event.md
-      - name: カスタム ルーティング イベントを作成する
-        href: how-to-create-a-custom-routed-event.md
-      - name: イベント ハンドラーでソース要素を検索する
-        href: how-to-find-the-source-element-in-an-event-handler.md
-      - name: ルーティング イベントのクラス処理を追加する
-        href: how-to-add-class-handling-for-a-routed-event.md
-  - name: 入力
-    href: input-wpf.md
-    items:
-    - name: 入力の概要
-      href: input-overview.md
-    - name: コマンド実行の概要
-      href: commanding-overview.md
-    - name: フォーカスの概要
-      href: focus-overview.md
-    - name: コントロールのフォーカスのスタイルと FocusVisualStyle
-      href: styling-for-focus-in-controls-and-focusvisualstyle.md
-    - name: 'チュートリアル: 初めてのタッチ アプリケーションの作成'
-      href: walkthrough-creating-your-first-touch-application.md
-    - name: 方法のトピック
-      href: input-and-commands-how-to-topics.md
-      items:
-      - name: コマンドを有効にする
-        href: how-to-enable-a-command.md
-      - name: カーソルの種類を変更する
-        href: how-to-change-the-cursor-type.md
-      - name: フォーカス イベントを使用して要素の色を変更する
-        href: how-to-change-the-color-of-an-element-using-focus-events.md
-      - name: FocusVisualStyle をコントロールに適用する
-        href: how-to-apply-a-focusvisualstyle-to-a-control.md
-      - name: Enter キーが押されたことを検出する
-        href: how-to-detect-when-the-enter-key-pressed.md
-      - name: イベントを使用してロールオーバー効果を作成する
-        href: how-to-create-a-rollover-effect-using-events.md
-      - name: オブジェクトをマウス ポインターに追従させる
-        href: how-to-make-an-object-follow-the-mouse-pointer.md
-      - name: RoutedCommand を作成する
-        href: how-to-create-a-routedcommand.md
-      - name: ICommandSource を実装する
-        href: how-to-implement-icommandsource.md
-      - name: コマンドをサポートしないコントロールにコマンドをフックする
-        href: how-to-hook-up-a-command-to-a-control-with-no-command-support.md
-      - name: コマンドをサポートするコントロールにコマンドをフックする
-        href: how-to-hook-up-a-command-to-a-control-with-command-support.md
-    - name: デジタル インク
-      href: digital-ink.md
-      items:
-      - name: 概要
-        href: digital-ink-overviews.md
-        items:
-        - name: インクの概要
-          href: getting-started-with-ink.md
-        - name: インクの収集
-          href: collecting-ink.md
-        - name: 手書き認識
-          href: handwriting-recognition.md
-        - name: インクの格納
-          href: storing-ink.md
-        - name: インク オブジェクト モデル:Windows フォームおよび COM と WPF の比較
-          href: the-ink-object-model-windows-forms-and-com-versus-wpf.md
-        - name: 高度なインク処理
-          href: advanced-ink-handling.md
+        - name: XAML の概要 (WPF)
+          href: xaml-overview-wpf.md
+        - name: XAML 構文の詳細
+          href: xaml-syntax-in-detail.md
+        - name: WPF における分離コードと XAML
+          href: code-behind-and-xaml-in-wpf.md
+        - name: WPF における XAML とカスタム クラス
+          href: xaml-and-custom-classes-for-wpf.md
+        - name: マークアップ拡張機能と WPF XAML
+          href: markup-extensions-and-wpf-xaml.md
+        - name: XAML 名前空間および WPF XAML の名前空間の割り当て
+          href: xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md
+        - name: WPF XAML 名前スコープ
+          href: wpf-xaml-namescopes.md
+        - name: インライン スタイルおよびテンプレート
+          href: inline-styles-and-templates.md
+        - name: TypeConverters および XAML
+          href: typeconverters-and-xaml.md
+        - name: WPF XAML 拡張機能
+          href: wpf-xaml-extensions.md
           items:
-          - name: カスタム レンダリング インク
-            href: custom-rendering-ink.md
-          - name: スタイラスからの入力のインターセプト
-            href: intercepting-input-from-the-stylus.md
-          - name: インク入力コントロールの作成
-            href: creating-an-ink-input-control.md
-          - name: インク スレッド モデル
-            href: the-ink-threading-model.md
-      - name: 方法のトピック
-        href: digital-ink-how-to-topics.md
-        items:
-        - name: カスタム コントロールからインクを選択する
-          href: how-to-select-ink-from-a-custom-control.md
-        - name: インク データにカスタム データを追加する
-          href: how-to-add-custom-data-to-ink-data.md
-        - name: カスタム コントロールでインクを消去する
-          href: how-to-erase-ink-on-a-custom-control.md
-        - name: アプリケーション ジェスチャを認識する
-          href: how-to-recognize-application-gestures.md
-        - name: インクをドラッグ アンド ドロップする
-          href: how-to-drag-and-drop-ink.md
-        - name: InkCanvas にデータをバインドする
-          href: how-to-data-bind-to-an-inkcanvas.md
-        - name: 分析のヒントに従ってインクを分析する
-          href: how-to-analyze-ink-with-analysis-hints.md
-        - name: インクの回転
-          href: how-to-rotate-ink.md
-        - name: WPF アプリケーションのリアルタイムなスタイラス入力を無効にする
-          href: disable-the-realtimestylus-for-wpf-applications.md
-  - name: ドラッグ アンド ドロップ
-    href: drag-and-drop.md
-    items:
-    - name: ドラッグ アンド ドロップの概要
-      href: drag-and-drop-overview.md
-    - name: データとデータ オブジェクト
-      href: data-and-data-objects.md
-    - name: 'チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化'
-      href: walkthrough-enabling-drag-and-drop-on-a-user-control.md
-    - name: 方法のトピック
-      href: drag-and-drop-how-to-topics.md
+            - name: バインドのマークアップ拡張機能
+              href: binding-markup-extension.md
+            - name: ColorConvertedBitmap のマークアップ拡張機能
+              href: colorconvertedbitmap-markup-extension.md
+            - name: ComponentResourceKey マークアップ拡張機能
+              href: componentresourcekey-markup-extension.md
+            - name: DateTime XAML 構文
+              href: datetime-xaml-syntax.md
+            - name: DynamicResource のマークアップ拡張機能
+              href: dynamicresource-markup-extension.md
+            - name: RelativeSource のマークアップ拡張機能
+              href: relativesource-markupextension.md
+            - name: StaticResource のマークアップ拡張機能
+              href: staticresource-markup-extension.md
+            - name: TemplateBinding のマークアップ拡張機能
+              href: templatebinding-markup-extension.md
+            - name: ThemeDictionary のマークアップ拡張機能
+              href: themedictionary-markup-extension.md
+            - name: PropertyPath の XAML 構文
+              href: propertypath-xaml-syntax.md
+            - name: 'PresentationOptions:Freeze 属性'
+              href: presentationoptions-freeze-attribute.md
+        - name: 'マークアップの互換性 (mc:)言語機能'
+          href: markup-compatibility-mc-language-features.md
+          items:
+            - name: 'mc:Ignorable 属性'
+              href: mc-ignorable-attribute.md
+            - name: 'mc:ProcessContent 属性'
+              href: mc-processcontent-attribute.md
+    - name: 基本要素
+      href: base-elements.md
       items:
-      - name: RichTextBox コントロール上にドロップしたファイルを開く
-        href: how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md
-      - name: データ オブジェクトを作成する
-        href: how-to-create-a-data-object.md
-      - name: データ形式がデータ オブジェクトに存在するかどうかを判別する
-        href: how-to-determine-if-a-data-format-is-present-in-a-data-object.md
-      - name: データ オブジェクト内のデータ形式の一覧を表示する
-        href: how-to-list-the-data-formats-in-a-data-object.md
-      - name: 特定のデータ形式でデータを取得する
-        href: how-to-retrieve-data-in-a-particular-data-format.md
-      - name: データ オブジェクトへ複数のデータ形式を格納する
-        href: how-to-store-multiple-data-formats-in-a-data-object.md
-  - name: リソース
-    href: resources-wpf.md
-    items:
-    - name: XAML リソース
-      href: xaml-resources.md
-      items:
-      - name: リソースとコード
-        href: resources-and-code.md
-      - name: マージされたリソース ディクショナリ
-        href: merged-resource-dictionaries.md
-      - name: 方法のトピック
-        href: resources-how-to-topics.md
-        items:
-        - name: リソースを定義および参照する
-          href: how-to-define-and-reference-a-resource.md
-        - name: アプリケーション リソースを使用する
-          href: how-to-use-application-resources.md
-        - name: SystemFonts を使用する
-          href: how-to-use-systemfonts.md
-        - name: システム フォント キーを使用する
-          href: how-to-use-system-fonts-keys.md
-        - name: SystemParameters を使用する
-          href: how-to-use-systemparameters.md
-        - name: システム パラメーター キーを使用する
-          href: how-to-use-system-parameters-keys.md
-  - name: ドキュメント
-    href: documents.md
-    items:
-    - name: WPF のドキュメント
-      href: documents-in-wpf.md
-    - name: ドキュメントのシリアル化および保存
-      href: document-serialization-and-storage.md
-    - name: コメント
-      href: annotations.md
-      items:
-      - name: 注釈の概要
-        href: annotations-overview.md
-      - name: 注釈スキーマ
-        href: annotations-schema.md
-    - name: フロー コンテンツ
-      href: flow-content.md
-      items:
-      - name: フロー ドキュメントの概要
-        href: flow-document-overview.md
-      - name: TextElement コンテンツ モデルの概要
-        href: textelement-content-model-overview.md
-      - name: テーブルの概要
-        href: table-overview.md
-      - name: 方法のトピック
-        href: flow-content-elements-how-to-topics.md
-        items:
-        - name: 段落間の間隔を調整する
-          href: how-to-adjust-spacing-between-paragraphs.md
-        - name: プログラムによってテーブルをビルドする
-          href: how-to-build-a-table-programmatically.md
-        - name: プログラムによってコンテンツの FlowDirection を変更する
-          href: how-to-change-the-flowdirection-of-content-programmatically.md
-        - name: TextWrapping プロパティをプログラムにより変更する
-          href: how-to-change-the-textwrapping-property-programmatically.md
-        - name: XAML を使用してテーブルを定義する
-          href: how-to-define-a-table-with-xaml.md
-        - name: テキストの文字体裁を変更する
-          href: how-to-alter-the-typography-of-text.md
-        - name: テキストのトリミングを有効にする
-          href: how-to-enable-text-trimming.md
-        - name: プログラムでテキストに要素を挿入する
-          href: how-to-insert-an-element-into-text-programmatically.md
-        - name: Blocks プロパティを介してフロー コンテンツ要素を操作する
-          href: how-to-manipulate-flow-content-elements-through-the-blocks-property.md
-        - name: Inlines プロパティを介してフロー コンテンツ要素を操作する
-          href: how-to-manipulate-flow-content-elements-through-the-inlines-property.md
-        - name: Blocks プロパティを介して FlowDocument を操作する
-          href: how-to-manipulate-a-flowdocument-through-the-blocks-property.md
-        - name: Columns プロパティによってテーブルの列を操作する
-          href: how-to-manipulate-table-columns-through-the-columns-property.md
-        - name: RowGroups プロパティを介してテーブルの行グループを操作する
-          href: how-to-manipulate-table-row-groups-through-the-rowgroups-property.md
-        - name: フロー コンテンツ要素を使用する
-          href: how-to-use-flow-content-elements.md
-        - name: FlowDocument の列区切り属性を使用する
-          href: how-to-use-flowdocument-column-separating-attributes.md
-    - name: タイポグラフィ
-      href: typography.md
-      items:
-      - name: WPF のタイポグラフィ
-        href: typography-in-wpf.md
-      - name: ClearType の概要
-        href: cleartype-overview.md
-      - name: ClearType レジストリの設定
-        href: cleartype-registry-settings.md
-      - name: 書式設定されたテキストの描画
-        href: drawing-formatted-text.md
-      - name: テキストの高度な書式設定
-        href: advanced-text-formatting.md
-      - name: フォント
-        href: fonts-wpf.md
-        items:
-        - name: OpenType フォントの機能
-          href: opentype-font-features.md
-        - name: アプリケーションでのフォントのパッケージング
-          href: packaging-fonts-with-applications.md
-        - name: OpenType フォント パックのサンプル
-          href: sample-opentype-font-pack.md
+        - name: 基本要素の概要
+          href: base-elements-overview.md
+        - name: Freezable オブジェクトの概要
+          href: freezable-objects-overview.md
+        - name: 配置、余白、パディングの概要
+          href: alignment-margins-and-padding-overview.md
         - name: 方法のトピック
-          href: fonts-how-to-topics.md
+          href: base-elements-how-to-topics.md
           items:
-          - name: システム フォントを列挙する
-            href: how-to-enumerate-system-fonts.md
-          - name: FontSizeConverter クラスを使用する
-            href: how-to-use-the-fontsizeconverter-class.md
-      - name: グリフ
-        href: glyphs.md
-        items:
-        - name: GlyphRun オブジェクトと Glyphs 要素の概要
-          href: introduction-to-the-glyphrun-object-and-glyphs-element.md
-        - name: '方法: グリフを使用したテキストの描画'
-          href: draw-text-using-glyphs.md
-      - name: 方法のトピック
-        href: typography-how-to-topics.md
-        items:
-        - name: 文字の装飾を作成する
-          href: how-to-create-a-text-decoration.md
-        - name: ハイパーリンクに下線を引くかどうかを指定する
-          href: how-to-specify-whether-a-hyperlink-is-underlined.md
-        - name: テキストに変換を適用する
-          href: how-to-apply-transforms-to-text.md
-        - name: アニメーションをテキストに適用する
-          href: how-to-apply-animations-to-text.md
-        - name: 影付きテキストを作成する
-          href: how-to-create-text-with-a-shadow.md
-        - name: 中抜きの文字列を作成する
-          href: how-to-create-outlined-text.md
-        - name: コントロールの背景にテキストを描画する
-          href: how-to-draw-text-to-a-control-background.md
-        - name: ビジュアルにテキストを描画する
-          href: how-to-draw-text-to-a-visual.md
-        - name: XAML で特殊文字を使用する
-          href: how-to-use-special-characters-in-xaml.md
-    - name: 印刷および印刷システムの管理
-      href: printing-and-print-system-management.md
+            - name: UIElement を透明または半透明にする
+              href: how-to-make-a-uielement-transparent-or-semi-transparent.md
+            - name: FrameworkElement のサイズをアニメーション化する
+              href: how-to-animate-the-size-of-a-frameworkelement.md
+            - name: Freezable が固定されているかどうかを判別する
+              href: how-to-determine-whether-a-freezable-is-frozen.md
+            - name: 読み込まれたイベントを処理する
+              href: how-to-handle-a-loaded-event.md
+            - name: 要素およびコントロールのマージンを設定する
+              href: how-to-set-margins-of-elements-and-controls.md
+            - name: Freezable を読み取り専用にする
+              href: how-to-make-a-freezable-read-only.md
+            - name: 読み取り専用の Freezable の書き込み可能なコピーを取得する
+              href: how-to-obtain-a-writable-copy-of-a-read-only-freezable.md
+            - name: UIElement を左右または上下に反転させる
+              href: how-to-flip-a-uielement-horizontally-or-vertically.md
+            - name: ThicknessConverter オブジェクトを使用する
+              href: how-to-use-a-thicknessconverter-object.md
+            - name: ContextMenuOpening イベントを処理する
+              href: how-to-handle-the-contextmenuopening-event.md
+    - name: 要素のツリーおよびシリアル化
+      href: element-tree-and-serialization.md
       items:
-      - name: 印刷の概要
-        href: printing-overview.md
-      - name: 方法のトピック
-        href: printing-how-to-topics.md
-        items:
-        - name: 印刷ダイアログ ボックスを呼び出す
-          href: how-to-invoke-a-print-dialog.md
-        - name: プリンターを複製する
-          href: how-to-clone-a-printer.md
-        - name: 問題のある印刷ジョブを診断する
-          href: how-to-diagnose-problematic-print-job.md
-        - name: 現在、印刷ジョブが印刷可能であるかどうかを検出する
-          href: how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md
-        - name: 印刷キューのサブセットを列挙する
-          href: how-to-enumerate-a-subset-of-print-queues.md
-        - name: リフレクションを使用せずに印刷システム オブジェクトのプロパティを取得する
-          href: how-to-get-print-system-object-properties-without-reflection.md
-        - name: XPS ファイルをプログラムにより印刷する
-          href: how-to-programmatically-print-xps-files.md
-        - name: プリンターのステータスをリモート操作で調査する
-          href: how-to-remotely-survey-the-status-of-printers.md
-        - name: PrintTickets を検証およびマージする
-          href: how-to-validate-and-merge-printtickets.md
-  - name: グローバライズとローカライズ
-    href: globalization-and-localization.md
-    items:
-    - name: WPF のグローバリゼーションおよびローカリゼーションの概要
-      href: wpf-globalization-and-localization-overview.md
-    - name: WPF のグローバリゼーション
-      href: globalization-for-wpf.md
-    - name: 自動レイアウトの使用の概要
-      href: use-automatic-layout-overview.md
-    - name: ローカリゼーション属性とコメント
-      href: localization-attributes-and-comments.md
-    - name: WPF の双方向機能の概要
-      href: bidirectional-features-in-wpf-overview.md
-    - name: 方法のトピック
-      href: globalization-and-localization-how-to-topics.md
+        - name: WPF のツリー
+          href: trees-in-wpf.md
+        - name: XamlWriter.Save のシリアル化の制限
+          href: serialization-limitations-of-xamlwriter-save.md
+        - name: オブジェクト ツリーに存在しないオブジェクト要素の初期化
+          href: initialization-for-object-elements-not-in-an-object-tree.md
+        - name: 方法のトピック
+          href: element-tree-and-serialization-how-to-topics.md
+          items:
+            - name: 要素を名前で検索する
+              href: how-to-find-an-element-by-its-name.md
+            - name: 論理ツリーをオーバーライドする
+              href: how-to-override-the-logical-tree.md
+    - name: プロパティ
+      href: properties-wpf.md
       items:
-      - name: アプリケーションをローカライズする
-        href: how-to-localize-an-application.md
-      - name: 自動レイアウトを使用してボタンを作成する
-        href: how-to-use-automatic-layout-to-create-a-button.md
-      - name: 自動レイアウト用のグリッドを使用する
-        href: how-to-use-a-grid-for-automatic-layout.md
-      - name: ResourceDictionary を使用してローカライズ可能な文字列リソースを管理する
-        href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
-      - name: ローカライズ可能アプリケーションでリソースを使用する
-        href: how-to-use-resources-in-localizable-applications.md
-  - name: レイアウト
-    href: layout.md
-  - name: 移行と相互運用性
-    href: migration-and-interoperability.md
-    items:
-    - name: WPF と Windows フォームの相互運用性
-      href: wpf-and-windows-forms-interoperation.md
+        - name: 依存関係プロパティの概要
+          href: dependency-properties-overview.md
+        - name: 添付プロパティの概要
+          href: attached-properties-overview.md
+        - name: カスタム依存関係プロパティ
+          href: custom-dependency-properties.md
+        - name: 依存関係プロパティのメタデータ
+          href: dependency-property-metadata.md
+        - name: 依存関係プロパティのコールバックと検証
+          href: dependency-property-callbacks-and-validation.md
+        - name: フレームワーク プロパティ メタデータ
+          href: framework-property-metadata.md
+        - name: 依存関係プロパティ値の優先順位
+          href: dependency-property-value-precedence.md
+        - name: 読み取り専用の依存関係プロパティ
+          href: read-only-dependency-properties.md
+        - name: プロパティ値の継承
+          href: property-value-inheritance.md
+        - name: 依存関係プロパティのセキュリティ
+          href: dependency-property-security.md
+        - name: DependencyObject の安全なコンストラクター パターン
+          href: safe-constructor-patterns-for-dependencyobjects.md
+        - name: コレクション型依存関係プロパティ
+          href: collection-type-dependency-properties.md
+        - name: XAML 読み込みと依存関係プロパティ
+          href: xaml-loading-and-dependency-properties.md
+        - name: 方法のトピック
+          href: properties-how-to-topics.md
+          items:
+            - name: 依存関係プロパティを実装する
+              href: how-to-implement-a-dependency-property.md
+            - name: 依存関係プロパティの所有者の種類を追加する
+              href: how-to-add-an-owner-type-for-a-dependency-property.md
+            - name: 添付プロパティを登録する
+              href: how-to-register-an-attached-property.md
+            - name: 依存関係プロパティのメタデータをオーバーライドする
+              href: how-to-override-metadata-for-a-dependency-property.md
+    - name: イベント
+      href: events-wpf.md
       items:
-      - name: Windows フォームと WPF の相互運用性入力アーキテクチャ
-        href: windows-forms-and-wpf-interoperability-input-architecture.md
-      - name: WindowsFormsHost 要素のレイアウトに関する考慮事項
-        href: layout-considerations-for-the-windowsformshost-element.md
-      - name: Windows フォーム コントロールおよび同等の WPF コントロール
-        href: windows-forms-controls-and-equivalent-wpf-controls.md
-      - name: Windows フォームと WPF プロパティの割り当て
-        href: windows-forms-and-wpf-property-mapping.md
-      - name: ハイブリッド アプリケーションのトラブルシューティング
-        href: troubleshooting-hybrid-applications.md
-      - name: 'チュートリアル: WPF での Windows フォーム コントロールのホスト'
-        href: walkthrough-hosting-a-windows-forms-control-in-wpf.md
-      - name: 'チュートリアル: WPF での XAML を使用した Windows フォーム コントロールのホスト'
-        href: walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md
-      - name: 'チュートリアル: WPF での Windows フォーム複合コントロールのホスト'
-        href: walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md
-      - name: 'チュートリアル: WPF での ActiveX コントロールのホスト'
-        href: walkthrough-hosting-an-activex-control-in-wpf.md
-      - name: '方法: ハイブリッド アプリケーションで視覚スタイルを有効にする'
-        href: how-to-enable-visual-styles-in-a-hybrid-application.md
-      - name: 'チュートリアル: WPF での Windows フォーム コントロールの配置'
-        href: walkthrough-arranging-windows-forms-controls-in-wpf.md
-      - name: 'チュートリアル: ハイブリッド アプリケーションでのデータへのバインディング'
-        href: walkthrough-binding-to-data-in-hybrid-applications.md
-      - name: 'チュートリアル: Windows フォームでの 3D WPF 複合コントロールのホスト'
-        href: walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md
-      - name: 'チュートリアル: Windows フォームでの WPF 複合コントロールのホスト'
-        href: walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md
-      - name: 'チュートリアル: ElementHost コントロールを使用したプロパティの割り当て'
-        href: walkthrough-mapping-properties-using-the-elementhost-control.md
-      - name: 'チュートリアル: WindowsFormsHost 要素を使用したプロパティの割り当て'
-        href: walkthrough-mapping-properties-using-the-windowsformshost-element.md
-      - name: 'チュートリアル: ハイブリッド アプリケーションのローカライズ'
-        href: walkthrough-localizing-a-hybrid-application.md
-    - name: WPF と Win32 の相互運用性
-      href: wpf-and-win32-interoperation.md
+        - name: ルーティング イベントの概要
+          href: routed-events-overview.md
+        - name: 添付イベントの概要
+          href: attached-events-overview.md
+        - name: オブジェクトの有効期間イベント
+          href: object-lifetime-events.md
+        - name: ルーティング イベントの処理済みとしてのマーキング、およびクラス処理
+          href: marking-routed-events-as-handled-and-class-handling.md
+        - name: プレビュー イベント
+          href: preview-events.md
+        - name: プロパティ変更イベント
+          href: property-change-events.md
+        - name: Visual Basic と WPF のイベント処理
+          href: visual-basic-and-wpf-event-handling.md
+        - name: 弱いイベント パターン
+          href: weak-event-patterns.md
+        - name: 方法のトピック
+          href: events-how-to-topics.md
+          items:
+            - name: コードを使用してイベント ハンドラーを追加する
+              href: how-to-add-an-event-handler-using-code.md
+            - name: ルーティング イベントを処理する
+              href: how-to-handle-a-routed-event.md
+            - name: カスタム ルーティング イベントを作成する
+              href: how-to-create-a-custom-routed-event.md
+            - name: イベント ハンドラーでソース要素を検索する
+              href: how-to-find-the-source-element-in-an-event-handler.md
+            - name: ルーティング イベントのクラス処理を追加する
+              href: how-to-add-class-handling-for-a-routed-event.md
+    - name: 入力
+      href: input-wpf.md
       items:
-      - name: 技術領域の概要
-        href: technology-regions-overview.md
-      - name: Win32 と WPF 間でのメッセージ ループの共有
-        href: sharing-message-loops-between-win32-and-wpf.md
-      - name: WPF での Win32 コンテンツのホスト
-        href: hosting-win32-content-in-wpf.md
-      - name: 'チュートリアル: WPF での Win32 コントロールのホスト'
-        href: walkthrough-hosting-a-win32-control-in-wpf.md
-      - name: 'チュートリアル: Win32 での WPF コンテンツのホスト'
-        href: walkthrough-hosting-wpf-content-in-win32.md
-      - name: 'チュートリアル: Win32 での WPF クロックのホスト'
-        href: walkthrough-hosting-a-wpf-clock-in-win32.md
-    - name: WPF と Direct3D9 の相互運用性
-      href: wpf-and-direct3d9-interoperation.md
+        - name: 入力の概要
+          href: input-overview.md
+        - name: コマンド実行の概要
+          href: commanding-overview.md
+        - name: フォーカスの概要
+          href: focus-overview.md
+        - name: コントロールのフォーカスのスタイルと FocusVisualStyle
+          href: styling-for-focus-in-controls-and-focusvisualstyle.md
+        - name: 'チュートリアル: 初めてのタッチ アプリケーションの作成'
+          href: walkthrough-creating-your-first-touch-application.md
+        - name: 方法のトピック
+          href: input-and-commands-how-to-topics.md
+          items:
+            - name: コマンドを有効にする
+              href: how-to-enable-a-command.md
+            - name: カーソルの種類を変更する
+              href: how-to-change-the-cursor-type.md
+            - name: フォーカス イベントを使用して要素の色を変更する
+              href: how-to-change-the-color-of-an-element-using-focus-events.md
+            - name: FocusVisualStyle をコントロールに適用する
+              href: how-to-apply-a-focusvisualstyle-to-a-control.md
+            - name: Enter キーが押されたことを検出する
+              href: how-to-detect-when-the-enter-key-pressed.md
+            - name: イベントを使用してロールオーバー効果を作成する
+              href: how-to-create-a-rollover-effect-using-events.md
+            - name: オブジェクトをマウス ポインターに追従させる
+              href: how-to-make-an-object-follow-the-mouse-pointer.md
+            - name: RoutedCommand を作成する
+              href: how-to-create-a-routedcommand.md
+            - name: ICommandSource を実装する
+              href: how-to-implement-icommandsource.md
+            - name: コマンドをサポートしないコントロールにコマンドをフックする
+              href: how-to-hook-up-a-command-to-a-control-with-no-command-support.md
+            - name: コマンドをサポートするコントロールにコマンドをフックする
+              href: how-to-hook-up-a-command-to-a-control-with-command-support.md
+        - name: デジタル インク
+          href: digital-ink.md
+          items:
+            - name: 概要
+              href: digital-ink-overviews.md
+              items:
+                - name: インクの概要
+                  href: getting-started-with-ink.md
+                - name: インクの収集
+                  href: collecting-ink.md
+                - name: 手書き認識
+                  href: handwriting-recognition.md
+                - name: インクの格納
+                  href: storing-ink.md
+                - name: 'インク オブジェクト モデル:Windows フォームおよび COM と WPF の比較'
+                  href: the-ink-object-model-windows-forms-and-com-versus-wpf.md
+                - name: 高度なインク処理
+                  href: advanced-ink-handling.md
+                  items:
+                    - name: カスタム レンダリング インク
+                      href: custom-rendering-ink.md
+                    - name: スタイラスからの入力のインターセプト
+                      href: intercepting-input-from-the-stylus.md
+                    - name: インク入力コントロールの作成
+                      href: creating-an-ink-input-control.md
+                    - name: インク スレッド モデル
+                      href: the-ink-threading-model.md
+            - name: 方法のトピック
+              href: digital-ink-how-to-topics.md
+              items:
+                - name: カスタム コントロールからインクを選択する
+                  href: how-to-select-ink-from-a-custom-control.md
+                - name: インク データにカスタム データを追加する
+                  href: how-to-add-custom-data-to-ink-data.md
+                - name: カスタム コントロールでインクを消去する
+                  href: how-to-erase-ink-on-a-custom-control.md
+                - name: アプリケーション ジェスチャを認識する
+                  href: how-to-recognize-application-gestures.md
+                - name: インクをドラッグ アンド ドロップする
+                  href: how-to-drag-and-drop-ink.md
+                - name: InkCanvas にデータをバインドする
+                  href: how-to-data-bind-to-an-inkcanvas.md
+                - name: 分析のヒントに従ってインクを分析する
+                  href: how-to-analyze-ink-with-analysis-hints.md
+                - name: インクの回転
+                  href: how-to-rotate-ink.md
+                - name: WPF アプリケーションのリアルタイムなスタイラス入力を無効にする
+                  href: disable-the-realtimestylus-for-wpf-applications.md
+    - name: ドラッグ アンド ドロップ
+      href: drag-and-drop.md
       items:
-      - name: Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項
-        href: performance-considerations-for-direct3d9-and-wpf-interoperability.md
-      - name: 'チュートリアル: WPF でホストするための Direct3D9 コンテンツの作成'
-        href: walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md
-      - name: 'チュートリアル: WPF での Direct3D9 コンテンツのホスト'
-        href: walkthrough-hosting-direct3d9-content-in-wpf.md
-  - name: パフォーマンス
-    href: performance.md
-    items:
-    - name: グラフィックスの描画層
-      href: graphics-rendering-tiers.md
-    - name: WPF アプリケーションのパフォーマンスの最適化
-      href: optimizing-wpf-application-performance.md
+        - name: ドラッグ アンド ドロップの概要
+          href: drag-and-drop-overview.md
+        - name: データとデータ オブジェクト
+          href: data-and-data-objects.md
+        - name: 'チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化'
+          href: walkthrough-enabling-drag-and-drop-on-a-user-control.md
+        - name: 方法のトピック
+          href: drag-and-drop-how-to-topics.md
+          items:
+            - name: RichTextBox コントロール上にドロップしたファイルを開く
+              href: how-to-open-a-file-that-is-dropped-on-a-richtextbox-control.md
+            - name: データ オブジェクトを作成する
+              href: how-to-create-a-data-object.md
+            - name: データ形式がデータ オブジェクトに存在するかどうかを判別する
+              href: how-to-determine-if-a-data-format-is-present-in-a-data-object.md
+            - name: データ オブジェクト内のデータ形式の一覧を表示する
+              href: how-to-list-the-data-formats-in-a-data-object.md
+            - name: 特定のデータ形式でデータを取得する
+              href: how-to-retrieve-data-in-a-particular-data-format.md
+            - name: データ オブジェクトへ複数のデータ形式を格納する
+              href: how-to-store-multiple-data-formats-in-a-data-object.md
+    - name: リソース
+      href: resources-wpf.md
       items:
-      - name: アプリケーション パフォーマンスの計画
-        href: planning-for-application-performance.md
-      - name: ハードウェアの活用
-        href: optimizing-performance-taking-advantage-of-hardware.md
-      - name: レイアウトとデザイン
-        href: optimizing-performance-layout-and-design.md
-      - name: 2D グラフィックスとイメージング
-        href: optimizing-performance-2d-graphics-and-imaging.md
-      - name: オブジェクトの動作
-        href: optimizing-performance-object-behavior.md
-      - name: アプリケーション リソース
-        href: optimizing-performance-application-resources.md
-      - name: テキスト
-        href: optimizing-performance-text.md
-      - name: データ バインディング
-        href: optimizing-performance-data-binding.md
-      - name: コントロール
-        href: optimizing-performance-controls.md
-      - name: パフォーマンスに関するその他の推奨事項
-        href: optimizing-performance-other-recommendations.md
-      - name: アプリケーションの起動時間
-        href: application-startup-time.md
-    - name: 'チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ'
-      href: walkthrough-caching-application-data-in-a-wpf-application.md
-  - name: スレッド モデル
-    href: threading-model.md
-  - name: WPF のアンマネージ API リファレンス
-    href: wpf-unmanaged-api-reference.md
-    items:
-    - name: Activate 関数
-      href: activate-function-wpf-unmanaged-api-reference.md
-    - name: CreateIDispatchSTAForwarder 関数
-      href: createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md
-    - name: Deactivate 関数
-      href: deactivate-function-wpf-unmanaged-api-reference.md
-    - name: ForwardTranslateAccelerator 関数
-      href: forwardtranslateaccelerator-function-wpf-unmanaged-api-reference.md
-    - name: LoadFromHistory 関数
-      href: loadfromhistory-function-wpf-unmanaged-api-reference.md
-    - name: ProcessUnhandledException 関数
-      href: processunhandledexception-function-wpf-unmanaged-api-reference.md
-    - name: SaveToHistory 関数
-      href: savetohistory-function-wpf-unmanaged-api-reference.md
-    - name: SetFakeActiveWindow 関数
-      href: setfakeactivewindow-function-wpf-unmanaged-api-reference.md
-ms.openlocfilehash: b1ad7b19f672583fb74f1cea90cbc78b198076ef
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470562"
+        - name: XAML リソース
+          href: xaml-resources.md
+          items:
+            - name: リソースとコード
+              href: resources-and-code.md
+            - name: マージされたリソース ディクショナリ
+              href: merged-resource-dictionaries.md
+            - name: 方法のトピック
+              href: resources-how-to-topics.md
+              items:
+                - name: リソースを定義および参照する
+                  href: how-to-define-and-reference-a-resource.md
+                - name: アプリケーション リソースを使用する
+                  href: how-to-use-application-resources.md
+                - name: SystemFonts を使用する
+                  href: how-to-use-systemfonts.md
+                - name: システム フォント キーを使用する
+                  href: how-to-use-system-fonts-keys.md
+                - name: SystemParameters を使用する
+                  href: how-to-use-systemparameters.md
+                - name: システム パラメーター キーを使用する
+                  href: how-to-use-system-parameters-keys.md
+    - name: ドキュメント
+      href: documents.md
+      items:
+        - name: WPF のドキュメント
+          href: documents-in-wpf.md
+        - name: ドキュメントのシリアル化および保存
+          href: document-serialization-and-storage.md
+        - name: コメント
+          href: annotations.md
+          items:
+            - name: 注釈の概要
+              href: annotations-overview.md
+            - name: 注釈スキーマ
+              href: annotations-schema.md
+        - name: フロー コンテンツ
+          href: flow-content.md
+          items:
+            - name: フロー ドキュメントの概要
+              href: flow-document-overview.md
+            - name: TextElement コンテンツ モデルの概要
+              href: textelement-content-model-overview.md
+            - name: テーブルの概要
+              href: table-overview.md
+            - name: 方法のトピック
+              href: flow-content-elements-how-to-topics.md
+              items:
+                - name: 段落間の間隔を調整する
+                  href: how-to-adjust-spacing-between-paragraphs.md
+                - name: プログラムによってテーブルをビルドする
+                  href: how-to-build-a-table-programmatically.md
+                - name: プログラムによってコンテンツの FlowDirection を変更する
+                  href: how-to-change-the-flowdirection-of-content-programmatically.md
+                - name: TextWrapping プロパティをプログラムにより変更する
+                  href: how-to-change-the-textwrapping-property-programmatically.md
+                - name: XAML を使用してテーブルを定義する
+                  href: how-to-define-a-table-with-xaml.md
+                - name: テキストの文字体裁を変更する
+                  href: how-to-alter-the-typography-of-text.md
+                - name: テキストのトリミングを有効にする
+                  href: how-to-enable-text-trimming.md
+                - name: プログラムでテキストに要素を挿入する
+                  href: how-to-insert-an-element-into-text-programmatically.md
+                - name: Blocks プロパティを介してフロー コンテンツ要素を操作する
+                  href: how-to-manipulate-flow-content-elements-through-the-blocks-property.md
+                - name: Inlines プロパティを介してフロー コンテンツ要素を操作する
+                  href: how-to-manipulate-flow-content-elements-through-the-inlines-property.md
+                - name: Blocks プロパティを介して FlowDocument を操作する
+                  href: how-to-manipulate-a-flowdocument-through-the-blocks-property.md
+                - name: Columns プロパティによってテーブルの列を操作する
+                  href: how-to-manipulate-table-columns-through-the-columns-property.md
+                - name: RowGroups プロパティを介してテーブルの行グループを操作する
+                  href: how-to-manipulate-table-row-groups-through-the-rowgroups-property.md
+                - name: フロー コンテンツ要素を使用する
+                  href: how-to-use-flow-content-elements.md
+                - name: FlowDocument の列区切り属性を使用する
+                  href: how-to-use-flowdocument-column-separating-attributes.md
+        - name: タイポグラフィ
+          href: typography.md
+          items:
+            - name: WPF のタイポグラフィ
+              href: typography-in-wpf.md
+            - name: ClearType の概要
+              href: cleartype-overview.md
+            - name: ClearType レジストリの設定
+              href: cleartype-registry-settings.md
+            - name: 書式設定されたテキストの描画
+              href: drawing-formatted-text.md
+            - name: テキストの高度な書式設定
+              href: advanced-text-formatting.md
+            - name: フォント
+              href: fonts-wpf.md
+              items:
+                - name: OpenType フォントの機能
+                  href: opentype-font-features.md
+                - name: アプリケーションでのフォントのパッケージング
+                  href: packaging-fonts-with-applications.md
+                - name: OpenType フォント パックのサンプル
+                  href: sample-opentype-font-pack.md
+                - name: 方法のトピック
+                  href: fonts-how-to-topics.md
+                  items:
+                    - name: システム フォントを列挙する
+                      href: how-to-enumerate-system-fonts.md
+                    - name: FontSizeConverter クラスを使用する
+                      href: how-to-use-the-fontsizeconverter-class.md
+            - name: グリフ
+              href: glyphs.md
+              items:
+                - name: GlyphRun オブジェクトと Glyphs 要素の概要
+                  href: introduction-to-the-glyphrun-object-and-glyphs-element.md
+                - name: '方法: グリフを使用したテキストの描画'
+                  href: draw-text-using-glyphs.md
+            - name: 方法のトピック
+              href: typography-how-to-topics.md
+              items:
+                - name: 文字の装飾を作成する
+                  href: how-to-create-a-text-decoration.md
+                - name: ハイパーリンクに下線を引くかどうかを指定する
+                  href: how-to-specify-whether-a-hyperlink-is-underlined.md
+                - name: テキストに変換を適用する
+                  href: how-to-apply-transforms-to-text.md
+                - name: アニメーションをテキストに適用する
+                  href: how-to-apply-animations-to-text.md
+                - name: 影付きテキストを作成する
+                  href: how-to-create-text-with-a-shadow.md
+                - name: 中抜きの文字列を作成する
+                  href: how-to-create-outlined-text.md
+                - name: コントロールの背景にテキストを描画する
+                  href: how-to-draw-text-to-a-control-background.md
+                - name: ビジュアルにテキストを描画する
+                  href: how-to-draw-text-to-a-visual.md
+                - name: XAML で特殊文字を使用する
+                  href: how-to-use-special-characters-in-xaml.md
+        - name: 印刷および印刷システムの管理
+          href: printing-and-print-system-management.md
+          items:
+            - name: 印刷の概要
+              href: printing-overview.md
+            - name: 方法のトピック
+              href: printing-how-to-topics.md
+              items:
+                - name: 印刷ダイアログ ボックスを呼び出す
+                  href: how-to-invoke-a-print-dialog.md
+                - name: プリンターを複製する
+                  href: how-to-clone-a-printer.md
+                - name: 問題のある印刷ジョブを診断する
+                  href: how-to-diagnose-problematic-print-job.md
+                - name: 現在、印刷ジョブが印刷可能であるかどうかを検出する
+                  href: how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md
+                - name: 印刷キューのサブセットを列挙する
+                  href: how-to-enumerate-a-subset-of-print-queues.md
+                - name: リフレクションを使用せずに印刷システム オブジェクトのプロパティを取得する
+                  href: how-to-get-print-system-object-properties-without-reflection.md
+                - name: XPS ファイルをプログラムにより印刷する
+                  href: how-to-programmatically-print-xps-files.md
+                - name: プリンターのステータスをリモート操作で調査する
+                  href: how-to-remotely-survey-the-status-of-printers.md
+                - name: PrintTickets を検証およびマージする
+                  href: how-to-validate-and-merge-printtickets.md
+    - name: グローバライズとローカライズ
+      href: globalization-and-localization.md
+      items:
+        - name: WPF のグローバリゼーションおよびローカリゼーションの概要
+          href: wpf-globalization-and-localization-overview.md
+        - name: WPF のグローバリゼーション
+          href: globalization-for-wpf.md
+        - name: 自動レイアウトの使用の概要
+          href: use-automatic-layout-overview.md
+        - name: ローカリゼーション属性とコメント
+          href: localization-attributes-and-comments.md
+        - name: WPF の双方向機能の概要
+          href: bidirectional-features-in-wpf-overview.md
+        - name: 方法のトピック
+          href: globalization-and-localization-how-to-topics.md
+          items:
+            - name: アプリケーションをローカライズする
+              href: how-to-localize-an-application.md
+            - name: 自動レイアウトを使用してボタンを作成する
+              href: how-to-use-automatic-layout-to-create-a-button.md
+            - name: 自動レイアウト用のグリッドを使用する
+              href: how-to-use-a-grid-for-automatic-layout.md
+            - name: ResourceDictionary を使用してローカライズ可能な文字列リソースを管理する
+              href: how-to-use-a-resourcedictionary-to-manage-localizable-string-resources.md
+            - name: ローカライズ可能アプリケーションでリソースを使用する
+              href: how-to-use-resources-in-localizable-applications.md
+    - name: レイアウト
+      href: layout.md
+    - name: 移行と相互運用性
+      href: migration-and-interoperability.md
+      items:
+        - name: WPF と Windows フォームの相互運用性
+          href: wpf-and-windows-forms-interoperation.md
+          items:
+            - name: Windows フォームと WPF の相互運用性入力アーキテクチャ
+              href: windows-forms-and-wpf-interoperability-input-architecture.md
+            - name: WindowsFormsHost 要素のレイアウトに関する考慮事項
+              href: layout-considerations-for-the-windowsformshost-element.md
+            - name: Windows フォーム コントロールおよび同等の WPF コントロール
+              href: windows-forms-controls-and-equivalent-wpf-controls.md
+            - name: Windows フォームと WPF プロパティの割り当て
+              href: windows-forms-and-wpf-property-mapping.md
+            - name: ハイブリッド アプリケーションのトラブルシューティング
+              href: troubleshooting-hybrid-applications.md
+            - name: 'チュートリアル: WPF での Windows フォーム コントロールのホスト'
+              href: walkthrough-hosting-a-windows-forms-control-in-wpf.md
+            - name: 'チュートリアル: WPF での XAML を使用した Windows フォーム コントロールのホスト'
+              href: walkthrough-hosting-a-windows-forms-control-in-wpf-by-using-xaml.md
+            - name: 'チュートリアル: WPF での Windows フォーム複合コントロールのホスト'
+              href: walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md
+            - name: 'チュートリアル: WPF での ActiveX コントロールのホスト'
+              href: walkthrough-hosting-an-activex-control-in-wpf.md
+            - name: '方法: ハイブリッド アプリケーションで視覚スタイルを有効にする'
+              href: how-to-enable-visual-styles-in-a-hybrid-application.md
+            - name: 'チュートリアル: WPF での Windows フォーム コントロールの配置'
+              href: walkthrough-arranging-windows-forms-controls-in-wpf.md
+            - name: 'チュートリアル: ハイブリッド アプリケーションでのデータへのバインディング'
+              href: walkthrough-binding-to-data-in-hybrid-applications.md
+            - name: 'チュートリアル: Windows フォームでの 3D WPF 複合コントロールのホスト'
+              href: walkthrough-hosting-a-3-d-wpf-composite-control-in-windows-forms.md
+            - name: 'チュートリアル: Windows フォームでの WPF 複合コントロールのホスト'
+              href: walkthrough-hosting-a-wpf-composite-control-in-windows-forms.md
+            - name: 'チュートリアル: ElementHost コントロールを使用したプロパティの割り当て'
+              href: walkthrough-mapping-properties-using-the-elementhost-control.md
+            - name: 'チュートリアル: WindowsFormsHost 要素を使用したプロパティの割り当て'
+              href: walkthrough-mapping-properties-using-the-windowsformshost-element.md
+            - name: 'チュートリアル: ハイブリッド アプリケーションのローカライズ'
+              href: walkthrough-localizing-a-hybrid-application.md
+        - name: WPF と Win32 の相互運用性
+          href: wpf-and-win32-interoperation.md
+          items:
+            - name: 技術領域の概要
+              href: technology-regions-overview.md
+            - name: Win32 と WPF 間でのメッセージ ループの共有
+              href: sharing-message-loops-between-win32-and-wpf.md
+            - name: WPF での Win32 コンテンツのホスト
+              href: hosting-win32-content-in-wpf.md
+            - name: 'チュートリアル: WPF での Win32 コントロールのホスト'
+              href: walkthrough-hosting-a-win32-control-in-wpf.md
+            - name: 'チュートリアル: Win32 での WPF コンテンツのホスト'
+              href: walkthrough-hosting-wpf-content-in-win32.md
+            - name: 'チュートリアル: Win32 での WPF クロックのホスト'
+              href: walkthrough-hosting-a-wpf-clock-in-win32.md
+        - name: WPF と Direct3D9 の相互運用性
+          href: wpf-and-direct3d9-interoperation.md
+          items:
+            - name: Direct3D9 および WPF の相互運用性のパフォーマンスに関する考慮事項
+              href: performance-considerations-for-direct3d9-and-wpf-interoperability.md
+            - name: 'チュートリアル: WPF でホストするための Direct3D9 コンテンツの作成'
+              href: walkthrough-creating-direct3d9-content-for-hosting-in-wpf.md
+            - name: 'チュートリアル: WPF での Direct3D9 コンテンツのホスト'
+              href: walkthrough-hosting-direct3d9-content-in-wpf.md
+    - name: パフォーマンス
+      href: performance.md
+      items:
+        - name: グラフィックスの描画層
+          href: graphics-rendering-tiers.md
+        - name: WPF アプリケーションのパフォーマンスの最適化
+          href: optimizing-wpf-application-performance.md
+          items:
+            - name: アプリケーション パフォーマンスの計画
+              href: planning-for-application-performance.md
+            - name: ハードウェアの活用
+              href: optimizing-performance-taking-advantage-of-hardware.md
+            - name: レイアウトとデザイン
+              href: optimizing-performance-layout-and-design.md
+            - name: 2D グラフィックスとイメージング
+              href: optimizing-performance-2d-graphics-and-imaging.md
+            - name: オブジェクトの動作
+              href: optimizing-performance-object-behavior.md
+            - name: アプリケーション リソース
+              href: optimizing-performance-application-resources.md
+            - name: テキスト
+              href: optimizing-performance-text.md
+            - name: データ バインディング
+              href: optimizing-performance-data-binding.md
+            - name: コントロール
+              href: optimizing-performance-controls.md
+            - name: パフォーマンスに関するその他の推奨事項
+              href: optimizing-performance-other-recommendations.md
+            - name: アプリケーションの起動時間
+              href: application-startup-time.md
+        - name: 'チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ'
+          href: walkthrough-caching-application-data-in-a-wpf-application.md
+    - name: スレッド モデル
+      href: threading-model.md
+    - name: WPF のアンマネージ API リファレンス
+      href: wpf-unmanaged-api-reference.md
+      items:
+        - name: Activate 関数
+          href: activate-function-wpf-unmanaged-api-reference.md
+        - name: CreateIDispatchSTAForwarder 関数
+          href: createidispatchstaforwarder-function-wpf-unmanaged-api-reference.md
+        - name: Deactivate 関数
+          href: deactivate-function-wpf-unmanaged-api-reference.md
+        - name: ForwardTranslateAccelerator 関数
+          href: forwardtranslateaccelerator-function-wpf-unmanaged-api-reference.md
+        - name: LoadFromHistory 関数
+          href: loadfromhistory-function-wpf-unmanaged-api-reference.md
+        - name: ProcessUnhandledException 関数
+          href: processunhandledexception-function-wpf-unmanaged-api-reference.md
+        - name: SaveToHistory 関数
+          href: savetohistory-function-wpf-unmanaged-api-reference.md
+        - name: SetFakeActiveWindow 関数
+          href: setfakeactivewindow-function-wpf-unmanaged-api-reference.md

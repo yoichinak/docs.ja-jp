@@ -5,10 +5,10 @@ ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076862"
 ---
 # <a name="apis-that-rely-on-reflection"></a>リフレクションに依存する API
@@ -51,9 +51,9 @@ App1.AppClass`1<System.Int32>.
   
  このコードを正常に実行するには、次のようないくつかのメタデータ項目が必要です。  
   
--   `Browse` 呼び出そうとメソッドを持つ型のメタデータ。  
+-   呼び出すメソッドを持つ型の `Browse` メタデータ。  
   
--   `Browse` 呼び出すメソッドのメタデータを指定します。  パブリック メソッドの場合、それを含む型のパブリック `Browse` メタデータを追加しても、メソッドが含められます。  
+-   呼び出すメソッドの `Browse` メタデータ。  パブリック メソッドの場合、それを含む型のパブリック `Browse` メタデータを追加しても、メソッドが含められます。  
   
 -   呼び出すメソッドの動的メタデータ。これにより、リフレクション呼び出しデリゲートが [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンにより削除されなくなります。 メソッドの動的メタデータが欠落している場合、<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> メソッドを呼び出すと、次の例外がスローされます。  
   
@@ -86,7 +86,7 @@ App1.Class1[]
 Unfortunately, no further information is available.  
 ```  
   
- `Browse` 配列型のメタデータを動的にインスタンス化が必要です。  次のランタイム ディレクティブにより、`Class1[]` を動的にインスタンス化できます。  
+ 配列型の `Browse` メタデータは、配列を動的にインスタンス化するために必要です。  次のランタイム ディレクティブにより、`Class1[]` を動的にインスタンス化できます。  
   
 ```xml  
 <Type Name="App1.Class1[]" Browse="Required Public" />  
@@ -94,5 +94,5 @@ Unfortunately, no further information is available.
   
 ## <a name="see-also"></a>関連項目
 
-- [作業の開始](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)

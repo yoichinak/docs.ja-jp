@@ -3,16 +3,16 @@ title: 型システム (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134564"
 ---
 # <a name="type-system-entity-sql"></a>型システム (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型の数をサポートしています。  
   
--   などのプリミティブ型 (単純) 型`Int32`と `String.`  
+-   `Int32` や `String.` などのプリミティブ型 (単純型)。  
   
 -   <xref:System.Data.Metadata.Edm.EntityType>、<xref:System.Data.Metadata.Edm.ComplexType>、<xref:System.Data.Metadata.Edm.RelationshipType> など、スキーマで定義される標準型。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "59134564"
 ## <a name="references"></a>参照  
  参照とは、特定のエンティティ セットにある特定のエンティティへの論理ポインターです。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 構築、分解、および参照間を移動するには、次の演算子をサポートしています。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、参照の構築、分解、およびナビゲートを行うための次の演算子がサポートされています。  
   
 -   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   

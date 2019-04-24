@@ -1,130 +1,123 @@
-items:
 - name: デバッグ、トレース、およびプロファイリング
   href: index.md
   items:
-  - name: JIT アタッチ デバッグの有効化
-    href: enabling-jit-attach-debugging.md
-  - name: イメージのデバッグの簡略化
-    href: making-an-image-easier-to-debug.md
-  - name: アプリケーションのトレースとインストルメント
-    href: tracing-and-instrumenting-applications.md
-    items:
-    - name: コード コントラクト
-      href: code-contracts.md
-    - name: トレース スイッチ
-      href: trace-switches.md
-    - name: '方法: トレース スイッチを作成、初期化、および構成する'
-      href: how-to-create-initialize-and-configure-trace-switches.md
-    - name: トレース リスナー
-      href: trace-listeners.md
-    - name: '方法: TraceSource とフィルターをトレース リスナーと共に使用する'
-      href: how-to-use-tracesource-and-filters-with-trace-listeners.md
-    - name: '方法: トレース リスナーを作成し初期化する'
-      href: how-to-create-and-initialize-trace-listeners.md
-    - name: '方法: トレース ソースを作成し初期化する'
-      href: how-to-create-and-initialize-trace-sources.md
-    - name: '方法: アプリケーション コードにトレース ステートメントを追加する'
-      href: how-to-add-trace-statements-to-application-code.md
-    - name: '方法: トレースとデバッグを指定して条件付きコンパイルを実行する'
-      href: how-to-compile-conditionally-with-trace-and-debug.md
-  - name: マネージド デバッグ アシスタントによるエラーの診断
-    href: diagnosing-errors-with-managed-debugging-assistants.md
-    items:
-    - name: asynchronousThreadAbort
-      href: asynchronousthreadabort-mda.md
-    - name: bindingFailure
-      href: bindingfailure-mda.md
-    - name: callbackOnCollectedDelegate
-      href: callbackoncollecteddelegate-mda.md
-    - name: contextSwitchDeadlock
-      href: contextswitchdeadlock-mda.md
-    - name: dangerousThreadingAPI
-      href: dangerousthreadingapi-mda.md
-    - name: dateTimeInvalidLocalFormat
-      href: datetimeinvalidlocalformat-mda.md
-    - name: dirtyCastAndCallOnInterface
-      href: dirtycastandcalloninterface-mda.md
-    - name: disconnectedContext
-      href: disconnectedcontext-mda.md
-    - name: dllMainReturnsFalse
-      href: dllmainreturnsfalse-mda.md
-    - name: exceptionSwallowedOnCallFromCom
-      href: exceptionswallowedoncallfromcom-mda.md
-    - name: failedQI
-      href: failedqi-mda.md
-    - name: fatalExecutionEngineError
-      href: fatalexecutionengineerror-mda.md
-    - name: gcManagedToUnmanaged
-      href: gcmanagedtounmanaged-mda.md
-    - name: gcUnmanagedToManaged
-      href: gcunmanagedtomanaged-mda.md
-    - name: illegalPrepareConstrainedRegion
-      href: illegalprepareconstrainedregion-mda.md
-    - name: invalidApartmentStateChange
-      href: invalidapartmentstatechange-mda.md
-    - name: invalidCERCall
-      href: invalidcercall-mda.md
-    - name: invalidFunctionPointerInDelegate
-      href: invalidfunctionpointerindelegate-mda.md
-    - name: invalidGCHandleCookie
-      href: invalidgchandlecookie-mda.md
-    - name: invalidIUnknown
-      href: invalidiunknown-mda.md
-    - name: invalidMemberDeclaration
-      href: invalidmemberdeclaration-mda.md
-    - name: invalidOverlappedToPinvoke
-      href: invalidoverlappedtopinvoke-mda.md
-    - name: invalidVariant
-      href: invalidvariant-mda.md
-    - name: jitCompilationStart
-      href: jitcompilationstart-mda.md
-    - name: loaderLock
-      href: loaderlock-mda.md
-    - name: loadFromContext
-      href: loadfromcontext-mda.md
-    - name: marshalCleanupError
-      href: marshalcleanuperror-mda.md
-    - name: marshaling
-      href: marshaling-mda.md
-    - name: memberInfoCacheCreation
-      href: memberinfocachecreation-mda.md
-    - name: moduloObjectHashcode
-      href: moduloobjecthashcode-mda.md
-    - name: nonComVisibleBaseClass
-      href: noncomvisiblebaseclass-mda.md
-    - name: notMarshalable
-      href: notmarshalable-mda.md
-    - name: openGenericCERCall
-      href: opengenericcercall-mda.md
-    - name: overlappedFreeError
-      href: overlappedfreeerror-mda.md
-    - name: pInvokeLog
-      href: pinvokelog-mda.md
-    - name: pInvokeStackImbalance
-      href: pinvokestackimbalance-mda.md
-    - name: raceOnRCWCleanup
-      href: raceonrcwcleanup-mda.md
-    - name: reentrancy
-      href: reentrancy-mda.md
-    - name: releaseHandleFailed
-      href: releasehandlefailed-mda.md
-    - name: reportAvOnComRelease
-      href: reportavoncomrelease-mda.md
-    - name: streamWriterBufferedDataLost
-      href: streamwriterbuffereddatalost-mda.md
-    - name: virtualCERCall
-      href: virtualcercall-mda.md
-  - name: デバッガー表示属性によるデバッグ機能の拡張
-    href: enhancing-debugging-with-the-debugger-display-attributes.md
-  - name: ランタイム プロファイリング
-    href: runtime-profiling.md
-  - name: パフォーマンス カウンター
-    href: performance-counters.md
-  - name: パフォーマンス カウンターとインプロセス side-by-side アプリケーション
-    href: performance-counters-and-in-process-side-by-side-applications.md
-ms.openlocfilehash: 2dd53aa163049b2a9e92e4fc7dcf67a1ffa0492a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470706"
+    - name: JIT アタッチ デバッグの有効化
+      href: enabling-jit-attach-debugging.md
+    - name: イメージのデバッグの簡略化
+      href: making-an-image-easier-to-debug.md
+    - name: アプリケーションのトレースとインストルメント
+      href: tracing-and-instrumenting-applications.md
+      items:
+        - name: コード コントラクト
+          href: code-contracts.md
+        - name: トレース スイッチ
+          href: trace-switches.md
+        - name: '方法: トレース スイッチを作成、初期化、および構成する'
+          href: how-to-create-initialize-and-configure-trace-switches.md
+        - name: トレース リスナー
+          href: trace-listeners.md
+        - name: '方法: TraceSource とフィルターをトレース リスナーと共に使用する'
+          href: how-to-use-tracesource-and-filters-with-trace-listeners.md
+        - name: '方法: トレース リスナーを作成し初期化する'
+          href: how-to-create-and-initialize-trace-listeners.md
+        - name: '方法: トレース ソースを作成し初期化する'
+          href: how-to-create-and-initialize-trace-sources.md
+        - name: '方法: アプリケーション コードにトレース ステートメントを追加する'
+          href: how-to-add-trace-statements-to-application-code.md
+        - name: '方法: トレースとデバッグを指定して条件付きコンパイルを実行する'
+          href: how-to-compile-conditionally-with-trace-and-debug.md
+    - name: マネージド デバッグ アシスタントによるエラーの診断
+      href: diagnosing-errors-with-managed-debugging-assistants.md
+      items:
+        - name: asynchronousThreadAbort
+          href: asynchronousthreadabort-mda.md
+        - name: bindingFailure
+          href: bindingfailure-mda.md
+        - name: callbackOnCollectedDelegate
+          href: callbackoncollecteddelegate-mda.md
+        - name: contextSwitchDeadlock
+          href: contextswitchdeadlock-mda.md
+        - name: dangerousThreadingAPI
+          href: dangerousthreadingapi-mda.md
+        - name: dateTimeInvalidLocalFormat
+          href: datetimeinvalidlocalformat-mda.md
+        - name: dirtyCastAndCallOnInterface
+          href: dirtycastandcalloninterface-mda.md
+        - name: disconnectedContext
+          href: disconnectedcontext-mda.md
+        - name: dllMainReturnsFalse
+          href: dllmainreturnsfalse-mda.md
+        - name: exceptionSwallowedOnCallFromCom
+          href: exceptionswallowedoncallfromcom-mda.md
+        - name: failedQI
+          href: failedqi-mda.md
+        - name: fatalExecutionEngineError
+          href: fatalexecutionengineerror-mda.md
+        - name: gcManagedToUnmanaged
+          href: gcmanagedtounmanaged-mda.md
+        - name: gcUnmanagedToManaged
+          href: gcunmanagedtomanaged-mda.md
+        - name: illegalPrepareConstrainedRegion
+          href: illegalprepareconstrainedregion-mda.md
+        - name: invalidApartmentStateChange
+          href: invalidapartmentstatechange-mda.md
+        - name: invalidCERCall
+          href: invalidcercall-mda.md
+        - name: invalidFunctionPointerInDelegate
+          href: invalidfunctionpointerindelegate-mda.md
+        - name: invalidGCHandleCookie
+          href: invalidgchandlecookie-mda.md
+        - name: invalidIUnknown
+          href: invalidiunknown-mda.md
+        - name: invalidMemberDeclaration
+          href: invalidmemberdeclaration-mda.md
+        - name: invalidOverlappedToPinvoke
+          href: invalidoverlappedtopinvoke-mda.md
+        - name: invalidVariant
+          href: invalidvariant-mda.md
+        - name: jitCompilationStart
+          href: jitcompilationstart-mda.md
+        - name: loaderLock
+          href: loaderlock-mda.md
+        - name: loadFromContext
+          href: loadfromcontext-mda.md
+        - name: marshalCleanupError
+          href: marshalcleanuperror-mda.md
+        - name: marshaling
+          href: marshaling-mda.md
+        - name: memberInfoCacheCreation
+          href: memberinfocachecreation-mda.md
+        - name: moduloObjectHashcode
+          href: moduloobjecthashcode-mda.md
+        - name: nonComVisibleBaseClass
+          href: noncomvisiblebaseclass-mda.md
+        - name: notMarshalable
+          href: notmarshalable-mda.md
+        - name: openGenericCERCall
+          href: opengenericcercall-mda.md
+        - name: overlappedFreeError
+          href: overlappedfreeerror-mda.md
+        - name: pInvokeLog
+          href: pinvokelog-mda.md
+        - name: pInvokeStackImbalance
+          href: pinvokestackimbalance-mda.md
+        - name: raceOnRCWCleanup
+          href: raceonrcwcleanup-mda.md
+        - name: reentrancy
+          href: reentrancy-mda.md
+        - name: releaseHandleFailed
+          href: releasehandlefailed-mda.md
+        - name: reportAvOnComRelease
+          href: reportavoncomrelease-mda.md
+        - name: streamWriterBufferedDataLost
+          href: streamwriterbuffereddatalost-mda.md
+        - name: virtualCERCall
+          href: virtualcercall-mda.md
+    - name: デバッガー表示属性によるデバッグ機能の拡張
+      href: enhancing-debugging-with-the-debugger-display-attributes.md
+    - name: ランタイム プロファイリング
+      href: runtime-profiling.md
+    - name: パフォーマンス カウンター
+      href: performance-counters.md
+    - name: パフォーマンス カウンターとインプロセス side-by-side アプリケーション
+      href: performance-counters-and-in-process-side-by-side-applications.md

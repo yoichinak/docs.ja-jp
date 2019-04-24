@@ -9,10 +9,10 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
 ms.openlocfilehash: ad74e3ebc947af4f36022be838b69df6ce24997a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840290"
 ---
 # <a name="-operator-visual-basic"></a>= 演算子 (Visual Basic)
@@ -35,7 +35,7 @@ variableorproperty = value
  等号の左側にある要素 (`=`) は、単純なスカラー変数、プロパティ、または配列の要素。 変数またはプロパティにすることはできません[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。 `=`演算子は、変数に、右側の値またはプロパティの左側に代入します。  
   
 > [!NOTE]
->  `=`演算子、比較演算子としても使用します。 詳細については、[比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)を参照してください。  
+>  `=`演算子、比較演算子としても使用します。 詳細については、次を参照してください。[比較演算子](../../../visual-basic/language-reference/operators/comparison-operators.md)します。  
   
 ## <a name="overloading"></a>オーバーロード  
  `=`関係比較演算子としてのみ、代入演算子としてではなく、演算子がオーバー ロードできます。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  

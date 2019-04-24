@@ -14,10 +14,10 @@ helpviewer_keywords:
 - <term> XML tag
 ms.assetid: ec35fced-d58e-4520-a764-0691256e014b
 ms.openlocfilehash: 7d7b85867f4c701322c5e6c31f2d89ab38fad05d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58818533"
 ---
 # <a name="list-visual-basic"></a>\<リスト > (Visual Basic)

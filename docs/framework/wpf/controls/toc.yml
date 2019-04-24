@@ -1,510 +1,503 @@
-items:
 - name: コントロール
   href: index.md
   items:
-  - name: カテゴリ別のコントロール
-    href: controls-by-category.md
-  - name: WPF のコンテンツ モデル
-    href: wpf-content-model.md
-  - name: コントロール ライブラリ
-    href: control-library.md
-    items:
-    - name: 境界線
-      href: border.md
+    - name: カテゴリ別のコントロール
+      href: controls-by-category.md
+    - name: WPF のコンテンツ モデル
+      href: wpf-content-model.md
+    - name: コントロール ライブラリ
+      href: control-library.md
       items:
-      - name: BorderThickness 値をアニメーション化する
-        href: how-to-animate-a-borderthickness-value.md
-    - name: BulletDecorator
-      href: bulletdecorator.md
-    - name: ボタン
-      href: button.md
+        - name: 境界線
+          href: border.md
+          items:
+            - name: BorderThickness 値をアニメーション化する
+              href: how-to-animate-a-borderthickness-value.md
+        - name: BulletDecorator
+          href: bulletdecorator.md
+        - name: ボタン
+          href: button.md
+          items:
+            - name: イメージを持つ Button を作成する
+              href: how-to-create-a-button-that-has-an-image.md
+        - name: 予定表
+          href: calendar.md
+        - name: Canvas
+          href: canvas.md
+          items:
+            - name: 方法のトピック
+              href: canvas-how-to-topics.md
+              items:
+                - name: Canvas のコンテンツを Border で囲む
+                  href: how-to-wrap-a-border-around-the-content-of-a-canvas.md
+                - name: Canvas の配置プロパティを取得または設定する
+                  href: how-to-get-or-set-canvas-positioning-properties.md
+                - name: Canvas を作成および使用する
+                  href: how-to-create-and-use-a-canvas.md
+                - name: Canvas の添付プロパティを使用して子要素を配置する
+                  href: how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md
+                - name: つまみを使用したキャンバスのサイズ変更
+                  href: how-to-resize-a-canvas-by-using-a-thumb.md
+        - name: CheckBox
+          href: checkbox.md
+        - name: ComboBox
+          href: combobox.md
+        - name: ContextMenu
+          href: contextmenu.md
+          items:
+            - name: ContextMenu の概要
+              href: contextmenu-overview.md
+        - name: DataGrid
+          href: datagrid.md
+          items:
+            - name: DataGrid コントロールの既定のキーボード動作とマウス動作
+              href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
+            - name: '方法: DataGrid コントロールに行の詳細を追加する'
+              href: how-to-add-row-details-to-a-datagrid-control.md
+            - name: '方法: DataGrid コントロールでデータをグループ化、並べ替え、およびフィルター処理する'
+              href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
+            - name: '方法: DataGrid コントロールを使用して検証を実装する'
+              href: how-to-implement-validation-with-the-datagrid-control.md
+            - name: 'チュートリアル: DataGrid コントロールで SQL Server データベースのデータを表示する'
+              href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
+            - name: DataGrid コントロールのサイズ変更方法
+              href: sizing-options-in-the-datagrid-control.md
+        - name: DatePicker
+          href: datepicker.md
+        - name: DockPanel
+          href: dockpanel.md
+          items:
+            - name: 方法のトピック
+              href: dockpanel-how-to-topics.md
+              items:
+                - name: Dock の値を取得または設定する
+                  href: how-to-get-or-set-a-dock-value.md
+                - name: DockPanel を作成する
+                  href: how-to-create-a-dockpanel.md
+                - name: DockPanel 要素を使用して領域を分割する
+                  href: how-to-partition-space-by-using-the-dockpanel-element.md
+        - name: DocumentViewer
+          href: documentviewer.md
+        - name: Expander
+          href: expander.md
+          items:
+            - name: エキスパンダーの概要
+              href: expander-overview.md
+            - name: 方法のトピック
+              href: expander-how-to-topics.md
+              items:
+                - name: ScrollViewer を持つエキスパンダーを作成する
+                  href: how-to-create-an-expander-with-a-scrollviewer.md
+        - name: FlowDocumentPageViewer
+          href: flowdocumentpageviewer.md
+        - name: FlowDocumentReader
+          href: flowdocumentreader.md
+        - name: FlowDocumentScrollViewer
+          href: flowdocumentscrollviewer.md
+        - name: フレーム
+          href: frame.md
+        - name: グリッド
+          href: grid.md
+          items:
+            - name: 方法のトピック
+              href: grid-how-to-topics.md
+              items:
+                - name: グリッドを使用して標準 UI ダイアログ ボックスをビルドする
+                  href: how-to-build-a-standard-ui-dialog-box-by-using-grid.md
+                - name: 複雑なグリッドを作成する
+                  href: how-to-create-a-complex-grid.md
+                - name: グリッド要素を作成する
+                  href: how-to-create-a-grid-element.md
+                - name: GridLengthConverter オブジェクトを作成および使用する
+                  href: how-to-create-and-use-a-gridlengthconverter-object.md
+                - name: ColumnDefinitionsCollections および RowDefinitionsCollections を使用して列と行を操作する
+                  href: manipulate-columns-and-rows-by-using-columndefinitionscollections.md
+                - name: グリッドの子要素を配置する
+                  href: how-to-position-the-child-elements-of-a-grid.md
+                - name: グリッド間でサイズ設定プロパティを共有する
+                  href: how-to-share-sizing-properties-between-grids.md
+        - name: GridSplitter
+          href: gridsplitter.md
+          items:
+            - name: 方法のトピック
+              href: gridsplitter-how-to-topics.md
+              items:
+                - name: GridSplitter を使用して行のサイズを変更する
+                  href: how-to-resize-rows-with-a-gridsplitter.md
+                - name: GridSplitter を使用して列のサイズを変更する
+                  href: how-to-resize-columns-with-a-gridsplitter.md
+                - name: GridSplitter を表示されるようにする
+                  href: how-to-make-sure-that-a-gridsplitter-is-visible.md
+        - name: GroupBox
+          href: groupbox.md
+          items:
+            - name: GroupBox テンプレートを定義する
+              href: how-to-define-a-groupbox-template.md
+        - name: イメージ
+          href: image.md
+          items:
+            - name: 方法のトピック
+              href: image-how-to-topics.md
+              items:
+                - name: イメージ要素を使用する
+                  href: how-to-use-the-image-element.md
+                - name: イメージをグレースケールに変換する
+                  href: how-to-convert-an-image-to-greyscale.md
+                - name: イメージをトリミングする
+                  href: how-to-crop-an-image.md
+                - name: イメージを回転させる
+                  href: how-to-rotate-an-image.md
+        - name: group1
+          href: label.md
+          items:
+            - name: アクセス キーおよびテキスト折り返し機能を持つコントロールを作成する
+              href: how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md
+        - name: ListBox
+          href: listbox.md
+          items:
+            - name: 方法のトピック
+              href: listbox-how-to-topics.md
+              items:
+                - name: ListBox にデータをバインドする
+                  href: how-to-bind-a-listbox-to-data.md
+                - name: ListBoxItem を取得する
+                  href: how-to-get-a-listboxitem.md
+                - name: ListBox のスクロール速度を向上させる
+                  href: how-to-improve-the-scrolling-performance-of-a-listbox.md
+        - name: ListView
+          href: listview.md
+          items:
+            - name: 概要
+              href: listview-overviews.md
+              items:
+                - name: ListView の概要
+                  href: listview-overview.md
+                - name: GridView の概要
+                  href: gridview-overview.md
+                - name: GridView の列ヘッダー スタイルおｙびテンプレートの概要
+                  href: gridview-column-header-styles-and-templates-overview.md
+            - name: 方法のトピック
+              href: listview-how-to-topics.md
+              items:
+                - name: ヘッダーがクリックされたときに GridView 列を並べ替える
+                  href: how-to-sort-a-gridview-column-when-a-header-is-clicked.md
+                - name: ListView のカスタム表示モードを作成する
+                  href: how-to-create-a-custom-view-mode-for-a-listview.md
+                - name: テンプレートを使用して、GridView を使用する ListView のスタイルを設定する
+                  href: how-to-use-templates-to-style-a-listview-that-uses-gridview.md
+                - name: ドラッグされた GridView 列ヘッダーのスタイルを作成する
+                  href: how-to-create-a-style-for-a-dragged-gridview-column-header.md
+                - name: GridView を使用して ListView コンテンツを表示する
+                  href: how-to-display-listview-contents-by-using-a-gridview.md
+                - name: トリガーを使用して、ListView で選択された項目のスタイルを設定する
+                  href: how-to-use-triggers-to-style-selected-items-in-a-listview.md
+                - name: CheckBox を持つ ListViewItem を作成する
+                  href: how-to-create-listviewitems-with-a-checkbox.md
+                - name: GridViewRowPresenter を使用してデータを表示する
+                  href: how-to-display-data-by-using-gridviewrowpresenter.md
+                - name: GridView を実装する ListView の項目をグループ化する
+                  href: how-to-group-items-in-a-listview-that-implements-a-gridview.md
+                - name: GridView を実装する ListView で行のスタイルを設定する
+                  href: how-to-style-a-row-in-a-listview-that-implements-a-gridview.md
+                - name: ListView の列の水平方向の配置を変更する
+                  href: how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md
+                - name: ListView の各項目の MouseDoubleClick イベントを処理する
+                  href: how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md
+        - name: メニュー
+          href: menu.md
+          items:
+            - name: メニューの概要
+              href: menu-overview.md
+        - name: パネル
+          href: panel.md
+          items:
+            - name: パネルの概要
+              href: panels-overview.md
+            - name: 方法のトピック
+              href: panel-how-to-topics.md
+              items:
+                - name: カスタム パネル要素を作成する
+                  href: how-to-create-a-custom-panel-element.md
+                - name: パネルの OnRender メソッドをオーバーライドする
+                  href: how-to-override-the-panel-onrender-method.md
+                - name: 要素の Height プロパティを設定する
+                  href: how-to-set-the-height-properties-of-an-element.md
+                - name: 要素の Width プロパティを設定する
+                  href: how-to-set-the-width-properties-of-an-element.md
+        - name: PasswordBox
+          href: passwordbox.md
+        - name: ポップアップ
+          href: popup.md
+          items:
+            - name: ポップアップの概要
+              href: popup-overview.md
+            - name: ポップアップの配置動作
+              href: popup-placement-behavior.md
+            - name: 方法のトピック
+              href: popup-how-to-topics.md
+              items:
+                - name: ポップアップをアニメーション化する
+                  href: how-to-animate-a-popup.md
+                - name: ポップアップのカスタム位置を指定する
+                  href: how-to-specify-a-custom-popup-position.md
+        - name: ProgressBar
+          href: progressbar.md
+        - name: PrintDialog
+          href: printdialog.md
+        - name: RadioButton
+          href: radiobutton.md
+        - name: RepeatButton
+          href: repeatbutton.md
+        - name: RichTextBox
+          href: richtextbox.md
+          items:
+            - name: RichTextBox の概要
+              href: richtextbox-overview.md
+            - name: 方法のトピック
+              href: richtextbox-how-to-topics.md
+              items:
+                - name: RichTextBox からテキスト コンテンツを抽出する
+                  href: how-to-extract-the-text-content-from-a-richtextbox.md
+                - name: プログラムによる RichTextBox での選択の変更
+                  href: change-selection-in-a-richtextbox-programmatically.md
+                - name: RichTextBox コンテンツの保存、読み込み、および印刷
+                  href: how-to-save-load-and-print-richtextbox-content.md
+                - name: カスタム コンテキスト メニューを RichTextBox に配置する
+                  href: how-to-position-a-custom-context-menu-in-a-richtextbox.md
+        - name: ScrollBar
+          href: scrollbar.md
+          items:
+            - name: ScrollBar のつまみのサイズをカスタマイズする
+              href: how-to-customize-the-thumb-size-on-a-scrollbar.md
+        - name: ScrollViewer
+          href: scrollviewer.md
+          items:
+            - name: ScrollViewer の概要
+              href: scrollviewer-overview.md
+            - name: 方法のトピック
+              href: scrollviewer-how-to-topics.md
+              items:
+                - name: ScrollChanged イベントの処理
+                  href: how-to-handle-the-scrollchanged-event.md
+                - name: IScrollInfo インターフェイスを使用してコンテンツをスクロールする
+                  href: how-to-scroll-content-by-using-the-iscrollinfo-interface.md
+                - name: ScrollViewer のコンテンツ スクロール メソッドを使用する
+                  href: how-to-use-the-content-scrolling-methods-of-scrollviewer.md
+        - name: 区切り記号
+          href: separator.md
+        - name: スライダー
+          href: slider.md
+          items:
+            - name: スライダーの目盛りをカスタマイズする
+              href: how-to-customize-the-ticks-on-a-slider.md
+        - name: StackPanel
+          href: stackpanel.md
+          items:
+            - name: 方法のトピック
+              href: stackpanel-how-to-topics.md
+              items:
+                - name: StackPanel または DockPanel を選択する
+                  href: how-to-choose-between-stackpanel-and-dockpanel.md
+                - name: StackPanel を作成する
+                  href: how-to-create-a-stackpanel.md
+                - name: StackPanel にコンテンツを水平方向または垂直方向に配置する
+                  href: how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md
+        - name: StatusBar
+          href: statusbar.md
+        - name: TabControl
+          href: tabcontrol.md
+        - name: TextBlock
+          href: textblock.md
+          items:
+            - name: TextBlock の概要
+              href: textblock-overview.md
+        - name: TextBox
+          href: textbox.md
+          items:
+            - name: TextBox の概要
+              href: textbox-overview.md
+            - name: 方法のトピック
+              href: textbox-how-to-topics.md
+              items:
+                - name: 複数行の TextBox コントロールを作成する
+                  href: how-to-create-a-multiline-textbox-control.md
+                - name: TextBox のテキストがいつ変更されたかを検出する
+                  href: how-to-detect-when-text-in-a-textbox-has-changed.md
+                - name: TextBox コントロールでタブ文字を有効にする
+                  href: how-to-enable-tab-characters-in-a-textbox-control.md
+                - name: TextBox から行のコレクションを取得する
+                  href: how-to-get-a-collection-of-lines-from-a-textbox.md
+                - name: TextBox コントロールを読み取り専用にする
+                  href: how-to-make-a-textbox-control-read-only.md
+                - name: TextBox コントロールのテキストの先頭または末尾にカーソルを配置する
+                  href: position-the-cursor-at-the-beginning-or-end-of-text.md
+                - name: テキスト選択を取得する
+                  href: how-to-retrieve-a-text-selection.md
+                - name: TextBox コントロールにフォーカスを設定する
+                  href: how-to-set-focus-in-a-textbox-control.md
+                - name: TextBox コントロールのテキスト コンテンツを設定する
+                  href: how-to-set-the-text-content-of-a-textbox-control.md
+                - name: テキスト編集コントロールでスペル チェックを有効にする
+                  href: how-to-enable-spell-checking-in-a-text-editing-control.md
+                - name: TextBox でカスタム コンテキスト メニューを使用する
+                  href: how-to-use-a-custom-context-menu-with-a-textbox.md
+                - name: コンテキスト メニューでスペル チェックを使用する
+                  href: how-to-use-spell-checking-with-a-context-menu.md
+                - name: TextBox へのウォーターマークの追加
+                  href: how-to-add-a-watermark-to-a-textbox.md
+        - name: ToolBar
+          href: toolbar.md
+          items:
+            - name: ToolBar の概要
+              href: toolbar-overview.md
+            - name: ToolBar のコントロールのスタイルを設定する
+              href: how-to-style-controls-on-a-toolbar.md
+        - name: ヒント
+          href: tooltip.md
+          items:
+            - name: ToolTip の概要
+              href: tooltip-overview.md
+            - name: 方法のトピック
+              href: tooltip-how-to-topics.md
+              items:
+                - name: ToolTip を配置する
+                  href: how-to-position-a-tooltip.md
+                - name: BetweenShowDelay プロパティを使用する
+                  href: how-to-use-the-betweenshowdelay-property.md
+        - name: TreeView
+          href: treeview.md
+          items:
+            - name: TreeView の概要
+              href: treeview-overview.md
+            - name: 方法のトピック
+              href: treeview-how-to-topics.md
+              items:
+                - name: 単純または複雑な TreeView を作成する
+                  href: how-to-create-simple-or-complex-treeviews.md
+                - name: SelectedValue、SelectedValuePath、および SelectedItem を使用する
+                  href: how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md
+                - name: 深度がわからないデータに TreeView をバインドする
+                  href: how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md
+                - name: TreeView のパフォーマンスを改善する
+                  href: how-to-improve-the-performance-of-a-treeview.md
+                - name: TreeView での TreeViewItem の検索
+                  href: how-to-find-a-treeviewitem-in-a-treeview.md
+        - name: WrapPanel
+          href: wrappanel.md
+        - name: Viewbox
+          href: viewbox.md
+          items:
+            - name: Viewbox のコンテンツに Stretch プロパティを適用する
+              href: how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md
+    - name: スタイルおよびテンプレート
+      href: styles-and-templates.md
       items:
-      - name: イメージを持つ Button を作成する
-        href: how-to-create-a-button-that-has-an-image.md
-    - name: 予定表
-      href: calendar.md
-    - name: Canvas
-      href: canvas.md
+        - name: スタイルとテンプレート
+          href: styling-and-templating.md
+        - name: ControlTemplate の作成による既存のコントロールの外観のカスタマイズ
+          href: customizing-the-appearance-of-an-existing-control.md
+        - name: '方法: ControlTemplate によって生成された要素を検索する'
+          href: how-to-find-controltemplate-generated-elements.md
+    - name: コントロールのカスタマイズ
+      href: control-customization.md
       items:
-      - name: 方法のトピック
-        href: canvas-how-to-topics.md
-        items:
-        - name: Canvas のコンテンツを Border で囲む
-          href: how-to-wrap-a-border-around-the-content-of-a-canvas.md
-        - name: Canvas の配置プロパティを取得または設定する
-          href: how-to-get-or-set-canvas-positioning-properties.md
-        - name: Canvas を作成および使用する
-          href: how-to-create-and-use-a-canvas.md
-        - name: Canvas の添付プロパティを使用して子要素を配置する
-          href: how-to-use-the-attached-properties-of-canvas-to-position-child-elements.md
-        - name: つまみを使用したキャンバスのサイズ変更
-          href: how-to-resize-a-canvas-by-using-a-thumb.md
-    - name: CheckBox
-      href: checkbox.md
-    - name: ComboBox
-      href: combobox.md
-    - name: ContextMenu
-      href: contextmenu.md
-      items:
-      - name: ContextMenu の概要
-        href: contextmenu-overview.md
-    - name: DataGrid
-      href: datagrid.md
-      items:
-      - name: DataGrid コントロールの既定のキーボード動作とマウス動作
-        href: default-keyboard-and-mouse-behavior-in-the-datagrid-control.md
-      - name: '方法: DataGrid コントロールに行の詳細を追加する'
-        href: how-to-add-row-details-to-a-datagrid-control.md
-      - name: '方法: DataGrid コントロールでデータをグループ化、並べ替え、およびフィルター処理する'
-        href: how-to-group-sort-and-filter-data-in-the-datagrid-control.md
-      - name: '方法: DataGrid コントロールを使用して検証を実装する'
-        href: how-to-implement-validation-with-the-datagrid-control.md
-      - name: 'チュートリアル: DataGrid コントロールで SQL Server データベースのデータを表示する'
-        href: walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md
-      - name: DataGrid コントロールのサイズ変更方法
-        href: sizing-options-in-the-datagrid-control.md
-    - name: DatePicker
-      href: datepicker.md
-    - name: DockPanel
-      href: dockpanel.md
-      items:
-      - name: 方法のトピック
-        href: dockpanel-how-to-topics.md
-        items:
-        - name: Dock の値を取得または設定する
-          href: how-to-get-or-set-a-dock-value.md
-        - name: DockPanel を作成する
-          href: how-to-create-a-dockpanel.md
-        - name: DockPanel 要素を使用して領域を分割する
-          href: how-to-partition-space-by-using-the-dockpanel-element.md
-    - name: DocumentViewer
-      href: documentviewer.md
-    - name: Expander
-      href: expander.md
-      items:
-      - name: エキスパンダーの概要
-        href: expander-overview.md
-      - name: 方法のトピック
-        href: expander-how-to-topics.md
-        items:
-        - name: ScrollViewer を持つエキスパンダーを作成する
-          href: how-to-create-an-expander-with-a-scrollviewer.md
-    - name: FlowDocumentPageViewer
-      href: flowdocumentpageviewer.md
-    - name: FlowDocumentReader
-      href: flowdocumentreader.md
-    - name: FlowDocumentScrollViewer
-      href: flowdocumentscrollviewer.md
-    - name: フレーム
-      href: frame.md
-    - name: グリッド
-      href: grid.md
-      items:
-      - name: 方法のトピック
-        href: grid-how-to-topics.md
-        items:
-        - name: グリッドを使用して標準 UI ダイアログ ボックスをビルドする
-          href: how-to-build-a-standard-ui-dialog-box-by-using-grid.md
-        - name: 複雑なグリッドを作成する
-          href: how-to-create-a-complex-grid.md
-        - name: グリッド要素を作成する
-          href: how-to-create-a-grid-element.md
-        - name: GridLengthConverter オブジェクトを作成および使用する
-          href: how-to-create-and-use-a-gridlengthconverter-object.md
-        - name: ColumnDefinitionsCollections および RowDefinitionsCollections を使用して列と行を操作する
-          href: manipulate-columns-and-rows-by-using-columndefinitionscollections.md
-        - name: グリッドの子要素を配置する
-          href: how-to-position-the-child-elements-of-a-grid.md
-        - name: グリッド間でサイズ設定プロパティを共有する
-          href: how-to-share-sizing-properties-between-grids.md
-    - name: GridSplitter
-      href: gridsplitter.md
-      items:
-      - name: 方法のトピック
-        href: gridsplitter-how-to-topics.md
-        items:
-        - name: GridSplitter を使用して行のサイズを変更する
-          href: how-to-resize-rows-with-a-gridsplitter.md
-        - name: GridSplitter を使用して列のサイズを変更する
-          href: how-to-resize-columns-with-a-gridsplitter.md
-        - name: GridSplitter を表示されるようにする
-          href: how-to-make-sure-that-a-gridsplitter-is-visible.md
-    - name: GroupBox
-      href: groupbox.md
-      items:
-      - name: GroupBox テンプレートを定義する
-        href: how-to-define-a-groupbox-template.md
-    - name: イメージ
-      href: image.md
-      items:
-      - name: 方法のトピック
-        href: image-how-to-topics.md
-        items:
-        - name: イメージ要素を使用する
-          href: how-to-use-the-image-element.md
-        - name: イメージをグレースケールに変換する
-          href: how-to-convert-an-image-to-greyscale.md
-        - name: イメージをトリミングする
-          href: how-to-crop-an-image.md
-        - name: イメージを回転させる
-          href: how-to-rotate-an-image.md
-    - name: group1
-      href: label.md
-      items:
-      - name: アクセス キーおよびテキスト折り返し機能を持つコントロールを作成する
-        href: how-to-create-a-control-that-has-an-access-key-and-text-wrapping.md
-    - name: ListBox
-      href: listbox.md
-      items:
-      - name: 方法のトピック
-        href: listbox-how-to-topics.md
-        items:
-        - name: ListBox にデータをバインドする
-          href: how-to-bind-a-listbox-to-data.md
-        - name: ListBoxItem を取得する
-          href: how-to-get-a-listboxitem.md
-        - name: ListBox のスクロール速度を向上させる
-          href: how-to-improve-the-scrolling-performance-of-a-listbox.md
-    - name: ListView
-      href: listview.md
-      items:
-      - name: 概要
-        href: listview-overviews.md
-        items:
-        - name: ListView の概要
-          href: listview-overview.md
-        - name: GridView の概要
-          href: gridview-overview.md
-        - name: GridView の列ヘッダー スタイルおｙびテンプレートの概要
-          href: gridview-column-header-styles-and-templates-overview.md
-      - name: 方法のトピック
-        href: listview-how-to-topics.md
-        items:
-        - name: ヘッダーがクリックされたときに GridView 列を並べ替える
-          href: how-to-sort-a-gridview-column-when-a-header-is-clicked.md
-        - name: ListView のカスタム表示モードを作成する
-          href: how-to-create-a-custom-view-mode-for-a-listview.md
-        - name: テンプレートを使用して、GridView を使用する ListView のスタイルを設定する
-          href: how-to-use-templates-to-style-a-listview-that-uses-gridview.md
-        - name: ドラッグされた GridView 列ヘッダーのスタイルを作成する
-          href: how-to-create-a-style-for-a-dragged-gridview-column-header.md
-        - name: GridView を使用して ListView コンテンツを表示する
-          href: how-to-display-listview-contents-by-using-a-gridview.md
-        - name: トリガーを使用して、ListView で選択された項目のスタイルを設定する
-          href: how-to-use-triggers-to-style-selected-items-in-a-listview.md
-        - name: CheckBox を持つ ListViewItem を作成する
-          href: how-to-create-listviewitems-with-a-checkbox.md
-        - name: GridViewRowPresenter を使用してデータを表示する
-          href: how-to-display-data-by-using-gridviewrowpresenter.md
-        - name: GridView を実装する ListView の項目をグループ化する
-          href: how-to-group-items-in-a-listview-that-implements-a-gridview.md
-        - name: GridView を実装する ListView で行のスタイルを設定する
-          href: how-to-style-a-row-in-a-listview-that-implements-a-gridview.md
-        - name: ListView の列の水平方向の配置を変更する
-          href: how-to-change-the-horizontal-alignment-of-a-column-in-a-listview.md
-        - name: ListView の各項目の MouseDoubleClick イベントを処理する
-          href: how-to-handle-the-mousedoubleclick-event-for-each-item-in-a-listview.md
-    - name: メニュー
-      href: menu.md
-      items:
-      - name: メニューの概要
-        href: menu-overview.md
-    - name: パネル
-      href: panel.md
-      items:
-      - name: パネルの概要
-        href: panels-overview.md
-      - name: 方法のトピック
-        href: panel-how-to-topics.md
-        items:
-        - name: カスタム パネル要素を作成する
-          href: how-to-create-a-custom-panel-element.md
-        - name: パネルの OnRender メソッドをオーバーライドする
-          href: how-to-override-the-panel-onrender-method.md
-        - name: 要素の Height プロパティを設定する
-          href: how-to-set-the-height-properties-of-an-element.md
-        - name: 要素の Width プロパティを設定する
-          href: how-to-set-the-width-properties-of-an-element.md
-    - name: PasswordBox
-      href: passwordbox.md
-    - name: ポップアップ
-      href: popup.md
-      items:
-      - name: ポップアップの概要
-        href: popup-overview.md
-      - name: ポップアップの配置動作
-        href: popup-placement-behavior.md
-      - name: 方法のトピック
-        href: popup-how-to-topics.md
-        items:
-        - name: ポップアップをアニメーション化する
-          href: how-to-animate-a-popup.md
-        - name: ポップアップのカスタム位置を指定する
-          href: how-to-specify-a-custom-popup-position.md
-    - name: ProgressBar
-      href: progressbar.md
-    - name: PrintDialog
-      href: printdialog.md
-    - name: RadioButton
-      href: radiobutton.md
-    - name: RepeatButton
-      href: repeatbutton.md
-    - name: RichTextBox
-      href: richtextbox.md
-      items:
-      - name: RichTextBox の概要
-        href: richtextbox-overview.md
-      - name: 方法のトピック
-        href: richtextbox-how-to-topics.md
-        items:
-        - name: RichTextBox からテキスト コンテンツを抽出する
-          href: how-to-extract-the-text-content-from-a-richtextbox.md
-        - name: プログラムによる RichTextBox での選択の変更
-          href: change-selection-in-a-richtextbox-programmatically.md
-        - name: RichTextBox コンテンツの保存、読み込み、および印刷
-          href: how-to-save-load-and-print-richtextbox-content.md
-        - name: カスタム コンテキスト メニューを RichTextBox に配置する
-          href: how-to-position-a-custom-context-menu-in-a-richtextbox.md
-    - name: ScrollBar
-      href: scrollbar.md
-      items:
-      - name: ScrollBar のつまみのサイズをカスタマイズする
-        href: how-to-customize-the-thumb-size-on-a-scrollbar.md
-    - name: ScrollViewer
-      href: scrollviewer.md
-      items:
-      - name: ScrollViewer の概要
-        href: scrollviewer-overview.md
-      - name: 方法のトピック
-        href: scrollviewer-how-to-topics.md
-        items:
-        - name: ScrollChanged イベントの処理
-          href: how-to-handle-the-scrollchanged-event.md
-        - name: IScrollInfo インターフェイスを使用してコンテンツをスクロールする
-          href: how-to-scroll-content-by-using-the-iscrollinfo-interface.md
-        - name: ScrollViewer のコンテンツ スクロール メソッドを使用する
-          href: how-to-use-the-content-scrolling-methods-of-scrollviewer.md
-    - name: 区切り記号
-      href: separator.md
-    - name: スライダー
-      href: slider.md
-      items:
-      - name: スライダーの目盛りをカスタマイズする
-        href: how-to-customize-the-ticks-on-a-slider.md
-    - name: StackPanel
-      href: stackpanel.md
-      items:
-      - name: 方法のトピック
-        href: stackpanel-how-to-topics.md
-        items:
-        - name: StackPanel または DockPanel を選択する
-          href: how-to-choose-between-stackpanel-and-dockpanel.md
-        - name: StackPanel を作成する
-          href: how-to-create-a-stackpanel.md
-        - name: StackPanel にコンテンツを水平方向または垂直方向に配置する
-          href: how-to-horizontally-or-vertically-align-content-in-a-stackpanel.md
-    - name: StatusBar
-      href: statusbar.md
-    - name: TabControl
-      href: tabcontrol.md
-    - name: TextBlock
-      href: textblock.md
-      items:
-      - name: TextBlock の概要
-        href: textblock-overview.md
-    - name: TextBox
-      href: textbox.md
-      items:
-      - name: TextBox の概要
-        href: textbox-overview.md
-      - name: 方法のトピック
-        href: textbox-how-to-topics.md
-        items:
-        - name: 複数行の TextBox コントロールを作成する
-          href: how-to-create-a-multiline-textbox-control.md
-        - name: TextBox のテキストがいつ変更されたかを検出する
-          href: how-to-detect-when-text-in-a-textbox-has-changed.md
-        - name: TextBox コントロールでタブ文字を有効にする
-          href: how-to-enable-tab-characters-in-a-textbox-control.md
-        - name: TextBox から行のコレクションを取得する
-          href: how-to-get-a-collection-of-lines-from-a-textbox.md
-        - name: TextBox コントロールを読み取り専用にする
-          href: how-to-make-a-textbox-control-read-only.md
-        - name: TextBox コントロールのテキストの先頭または末尾にカーソルを配置する
-          href: position-the-cursor-at-the-beginning-or-end-of-text.md
-        - name: テキスト選択を取得する
-          href: how-to-retrieve-a-text-selection.md
-        - name: TextBox コントロールにフォーカスを設定する
-          href: how-to-set-focus-in-a-textbox-control.md
-        - name: TextBox コントロールのテキスト コンテンツを設定する
-          href: how-to-set-the-text-content-of-a-textbox-control.md
-        - name: テキスト編集コントロールでスペル チェックを有効にする
-          href: how-to-enable-spell-checking-in-a-text-editing-control.md
-        - name: TextBox でカスタム コンテキスト メニューを使用する
-          href: how-to-use-a-custom-context-menu-with-a-textbox.md
-        - name: コンテキスト メニューでスペル チェックを使用する
-          href: how-to-use-spell-checking-with-a-context-menu.md
-        - name: TextBox へのウォーターマークの追加
-          href: how-to-add-a-watermark-to-a-textbox.md
-    - name: ToolBar
-      href: toolbar.md
-      items:
-      - name: ToolBar の概要
-        href: toolbar-overview.md
-      - name: ToolBar のコントロールのスタイルを設定する
-        href: how-to-style-controls-on-a-toolbar.md
-    - name: ヒント
-      href: tooltip.md
-      items:
-      - name: ToolTip の概要
-        href: tooltip-overview.md
-      - name: 方法のトピック
-        href: tooltip-how-to-topics.md
-        items:
-        - name: ToolTip を配置する
-          href: how-to-position-a-tooltip.md
-        - name: BetweenShowDelay プロパティを使用する
-          href: how-to-use-the-betweenshowdelay-property.md
-    - name: TreeView
-      href: treeview.md
-      items:
-      - name: TreeView の概要
-        href: treeview-overview.md
-      - name: 方法のトピック
-        href: treeview-how-to-topics.md
-        items:
-        - name: 単純または複雑な TreeView を作成する
-          href: how-to-create-simple-or-complex-treeviews.md
-        - name: SelectedValue、SelectedValuePath、および SelectedItem を使用する
-          href: how-to-use-selectedvalue-selectedvaluepath-and-selecteditem.md
-        - name: 深度がわからないデータに TreeView をバインドする
-          href: how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth.md
-        - name: TreeView のパフォーマンスを改善する
-          href: how-to-improve-the-performance-of-a-treeview.md
-        - name: TreeView での TreeViewItem の検索
-          href: how-to-find-a-treeviewitem-in-a-treeview.md
-    - name: WrapPanel
-      href: wrappanel.md
-    - name: Viewbox
-      href: viewbox.md
-      items:
-      - name: Viewbox のコンテンツに Stretch プロパティを適用する
-        href: how-to-apply-stretch-properties-to-the-contents-of-a-viewbox.md
-  - name: スタイルおよびテンプレート
-    href: styles-and-templates.md
-    items:
-    - name: スタイルとテンプレート
-      href: styling-and-templating.md
-    - name: ControlTemplate の作成による既存のコントロールの外観のカスタマイズ
-      href: customizing-the-appearance-of-an-existing-control.md
-    - name: '方法: ControlTemplate によって生成された要素を検索する'
-      href: how-to-find-controltemplate-generated-elements.md
-  - name: コントロールのカスタマイズ
-    href: control-customization.md
-    items:
-    - name: コントロールの作成の概要
-      href: control-authoring-overview.md
-    - name: 外観をカスタマイズできるコントロールの作成
-      href: creating-a-control-that-has-a-customizable-appearance.md
-    - name: スタイルの設定が可能なコントロールを設計するためのガイドライン
-      href: guidelines-for-designing-stylable-controls.md
-    - name: 装飾
-      href: adorners.md
-      items:
-      - name: 装飾の概要
-        href: adorners-overview.md
-      - name: 方法のトピック
-        href: adorners-how-to-topics.md
-        items:
-        - name: 装飾を実装する
-          href: how-to-implement-an-adorner.md
-        - name: 要素に装飾をバインドする
-          href: how-to-bind-an-adorner-to-an-element.md
-        - name: パネルの子を装飾する
-          href: how-to-adorn-the-children-of-a-panel.md
-        - name: 要素から装飾を削除する
-          href: how-to-remove-an-adorner-from-an-element.md
-        - name: 要素からすべての装飾を削除する
-          href: how-to-remove-all-adorners-from-an-element.md
-    - name: コントロールのスタイルとテンプレート
-      href: control-styles-and-templates.md
-      items:
-      - name: ボタンのスタイルとテンプレート
-        href: button-styles-and-templates.md
-      - name: カレンダーのスタイルとテンプレート
-        href: calendar-styles-and-templates.md
-      - name: CheckBox のスタイルとテンプレート
-        href: checkbox-styles-and-templates.md
-      - name: ComboBox のスタイルとテンプレート
-        href: combobox-styles-and-templates.md
-      - name: ContextMenu のスタイルとテンプレート
-        href: contextmenu-styles-and-templates.md
-      - name: DataGrid のスタイルとテンプレート
-        href: datagrid-styles-and-templates.md
-      - name: DatePicker のスタイルとテンプレート
-        href: datepicker-styles-and-templates.md
-      - name: DocumentViewer のスタイルとテンプレート
-        href: documentviewer-styles-and-templates.md
-      - name: エクスパンダーのスタイルとテンプレート
-        href: expander-styles-and-templates.md
-      - name: フレームのスタイルとテンプレート
-        href: frame-styles-and-templates.md
-      - name: GroupBox のスタイルとテンプレート
-        href: groupbox-styles-and-templates.md
-      - name: ラベルのスタイルとテンプレート
-        href: label-styles-and-templates.md
-      - name: ListBox のスタイルとテンプレート
-        href: listbox-styles-and-templates.md
-      - name: ListView のスタイルとテンプレート
-        href: listview-styles-and-templates.md
-      - name: メニューのスタイルとテンプレート
-        href: menu-styles-and-templates.md
-      - name: NavigationWindow のスタイルとテンプレート
-        href: navigationwindow-styles-and-templates.md
-      - name: PasswordBox のスタイルとテンプレート
-        href: passwordbox-styles-and-templates.md
-      - name: ProgressBar のスタイルとテンプレート
-        href: progressbar-styles-and-templates.md
-      - name: RadioButton のスタイルとテンプレート
-        href: radiobutton-styles-and-templates.md
-      - name: RepeatButton のスタイルとテンプレート
-        href: repeatbutton-styles-and-templates.md
-      - name: ScrollBar のスタイルとテンプレート
-        href: scrollbar-styles-and-templates.md
-      - name: ScrollViewer のスタイルとテンプレート
-        href: scrollviewer-styles-and-templates.md
-      - name: スライダーのスタイルとテンプレート
-        href: slider-styles-and-templates.md
-      - name: StatusBar のスタイルとテンプレート
-        href: statusbar-styles-and-templates.md
-      - name: TabControl のスタイルとテンプレート
-        href: tabcontrol-styles-and-templates.md
-      - name: TextBox のスタイルとテンプレート
-        href: textbox-styles-and-templates.md
-      - name: つまみのスタイルとテンプレート
-        href: thumb-styles-and-templates.md
-      - name: ToggleButton のスタイルとテンプレート
-        href: togglebutton-styles-and-templates.md
-      - name: ToolBar のスタイルとテンプレート
-        href: toolbar-styles-and-templates.md
-      - name: ToolTip のスタイルとテンプレート
-        href: tooltip-styles-and-templates.md
-      - name: TreeView のスタイルとテンプレート
-        href: treeview-styles-and-templates.md
-      - name: ウィンドウのスタイルとテンプレート
-        href: window-styles-and-templates.md
-    - name: WPF カスタム コントロールの UI オートメーション
-      href: ui-automation-of-a-wpf-custom-control.md
-    - name: チュートリアル:カスタム アニメーション ボタンの作成
-      href: walkthroughs-create-a-custom-animated-button.md
-      items:
-      - name: Microsoft Expression Blend を使用してボタンを作成する
-        href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
-      - name: XAML を使用したボタンの作成
-        href: walkthrough-create-a-button-by-using-xaml.md
-ms.openlocfilehash: e1f4c9978b5a1d640c721cb7b6584b556c622264
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470419"
+        - name: コントロールの作成の概要
+          href: control-authoring-overview.md
+        - name: 外観をカスタマイズできるコントロールの作成
+          href: creating-a-control-that-has-a-customizable-appearance.md
+        - name: スタイルの設定が可能なコントロールを設計するためのガイドライン
+          href: guidelines-for-designing-stylable-controls.md
+        - name: 装飾
+          href: adorners.md
+          items:
+            - name: 装飾の概要
+              href: adorners-overview.md
+            - name: 方法のトピック
+              href: adorners-how-to-topics.md
+              items:
+                - name: 装飾を実装する
+                  href: how-to-implement-an-adorner.md
+                - name: 要素に装飾をバインドする
+                  href: how-to-bind-an-adorner-to-an-element.md
+                - name: パネルの子を装飾する
+                  href: how-to-adorn-the-children-of-a-panel.md
+                - name: 要素から装飾を削除する
+                  href: how-to-remove-an-adorner-from-an-element.md
+                - name: 要素からすべての装飾を削除する
+                  href: how-to-remove-all-adorners-from-an-element.md
+        - name: コントロールのスタイルとテンプレート
+          href: control-styles-and-templates.md
+          items:
+            - name: ボタンのスタイルとテンプレート
+              href: button-styles-and-templates.md
+            - name: カレンダーのスタイルとテンプレート
+              href: calendar-styles-and-templates.md
+            - name: CheckBox のスタイルとテンプレート
+              href: checkbox-styles-and-templates.md
+            - name: ComboBox のスタイルとテンプレート
+              href: combobox-styles-and-templates.md
+            - name: ContextMenu のスタイルとテンプレート
+              href: contextmenu-styles-and-templates.md
+            - name: DataGrid のスタイルとテンプレート
+              href: datagrid-styles-and-templates.md
+            - name: DatePicker のスタイルとテンプレート
+              href: datepicker-styles-and-templates.md
+            - name: DocumentViewer のスタイルとテンプレート
+              href: documentviewer-styles-and-templates.md
+            - name: エクスパンダーのスタイルとテンプレート
+              href: expander-styles-and-templates.md
+            - name: フレームのスタイルとテンプレート
+              href: frame-styles-and-templates.md
+            - name: GroupBox のスタイルとテンプレート
+              href: groupbox-styles-and-templates.md
+            - name: ラベルのスタイルとテンプレート
+              href: label-styles-and-templates.md
+            - name: ListBox のスタイルとテンプレート
+              href: listbox-styles-and-templates.md
+            - name: ListView のスタイルとテンプレート
+              href: listview-styles-and-templates.md
+            - name: メニューのスタイルとテンプレート
+              href: menu-styles-and-templates.md
+            - name: NavigationWindow のスタイルとテンプレート
+              href: navigationwindow-styles-and-templates.md
+            - name: PasswordBox のスタイルとテンプレート
+              href: passwordbox-styles-and-templates.md
+            - name: ProgressBar のスタイルとテンプレート
+              href: progressbar-styles-and-templates.md
+            - name: RadioButton のスタイルとテンプレート
+              href: radiobutton-styles-and-templates.md
+            - name: RepeatButton のスタイルとテンプレート
+              href: repeatbutton-styles-and-templates.md
+            - name: ScrollBar のスタイルとテンプレート
+              href: scrollbar-styles-and-templates.md
+            - name: ScrollViewer のスタイルとテンプレート
+              href: scrollviewer-styles-and-templates.md
+            - name: スライダーのスタイルとテンプレート
+              href: slider-styles-and-templates.md
+            - name: StatusBar のスタイルとテンプレート
+              href: statusbar-styles-and-templates.md
+            - name: TabControl のスタイルとテンプレート
+              href: tabcontrol-styles-and-templates.md
+            - name: TextBox のスタイルとテンプレート
+              href: textbox-styles-and-templates.md
+            - name: つまみのスタイルとテンプレート
+              href: thumb-styles-and-templates.md
+            - name: ToggleButton のスタイルとテンプレート
+              href: togglebutton-styles-and-templates.md
+            - name: ToolBar のスタイルとテンプレート
+              href: toolbar-styles-and-templates.md
+            - name: ToolTip のスタイルとテンプレート
+              href: tooltip-styles-and-templates.md
+            - name: TreeView のスタイルとテンプレート
+              href: treeview-styles-and-templates.md
+            - name: ウィンドウのスタイルとテンプレート
+              href: window-styles-and-templates.md
+        - name: WPF カスタム コントロールの UI オートメーション
+          href: ui-automation-of-a-wpf-custom-control.md
+        - name: 'チュートリアル:カスタム アニメーション ボタンの作成'
+          href: walkthroughs-create-a-custom-animated-button.md
+          items:
+            - name: Microsoft Expression Blend を使用してボタンを作成する
+              href: walkthrough-create-a-button-by-using-microsoft-expression-blend.md
+            - name: XAML を使用したボタンの作成
+              href: walkthrough-create-a-button-by-using-xaml.md

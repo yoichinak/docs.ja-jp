@@ -2,12 +2,12 @@
 title: '方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 6143dfa43227f35eb8c74b386bee96ccec696a4e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9710e5f31b9d01c5151b548c1b642293122d44b3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54631803"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59297955"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)
 「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」の非同期ソリューションのパフォーマンスを <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> メソッドを使用して向上させることができます。 このメソッドは、タスクのコレクションとして表される、複数の非同期操作を非同期に待機します。  
@@ -23,7 +23,7 @@ ms.locfileid: "54631803"
   
 ### <a name="to-add-taskwhenall-to-your-geturlcontentsasync-solution"></a>GetURLContentsAsync ソリューションに Task.WhenAll を追加するには  
   
-1.  `ProcessURLAsync` メソッドを「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した最初のアプリケーションに追加します。  
+1. `ProcessURLAsync` メソッドを「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した最初のアプリケーションに追加します。  
   
     -   コードを[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からダウンロードした場合は、AsyncWalkthrough プロジェクトを開き、`ProcessURLAsync` を MainWindow.xaml.cs ファイルに追加します。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "54631803"
     }  
     ```  
   
-2.  次のコードに示すように、`SumPageSizesAsync` の `foreach` ループをコメント アウトするか削除します。  
+2. 次のコードに示すように、`SumPageSizesAsync` の `foreach` ループをコメント アウトするか削除します。  
   
     ```csharp  
     //var total = 0;  
@@ -61,7 +61,7 @@ ms.locfileid: "54631803"
     //}  
     ```  
   
-3.  タスクのコレクションを作成します。 次のコードは、<xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](../../../../csharp/programming-guide/concepts/linq/index.md)を定義します。 タスクは、クエリが評価されるときに開始されます。  
+3. タスクのコレクションを作成します。 次のコードは、<xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](../../../../csharp/programming-guide/concepts/linq/index.md)を定義します。 タスクは、クエリが評価されるときに開始されます。  
   
      `SumPageSizesAsync` の宣言の後の `urlList` メソッドに、次のコードを追加します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "54631803"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  `Task.WhenAll` をタスクのコレクション `downloadTasks` に適用します。 `Task.WhenAll` は、タスクのコレクションのすべてのタスクが完了すると完了する、単一のタスクを返します。  
+4. `Task.WhenAll` をタスクのコレクション `downloadTasks` に適用します。 `Task.WhenAll` は、タスクのコレクションのすべてのタスクが完了すると完了する、単一のタスクを返します。  
   
      次の例では、`await` 式は、`WhenAll` によって返される単一のタスクが完了するのを待機します。 式は、各整数がダウンロードされたサイトの長さである、整数の配列に評価します。 `SumPageSizesAsync` の、前の手順で追加したコードの直後に、次のコードを追加します。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "54631803"
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  最後に <xref:System.Linq.Enumerable.Sum%2A> メソッドを使って、すべての Web サイトの長さの合計を計算します。 `SumPageSizesAsync` に次の行を追加します。  
+5. 最後に <xref:System.Linq.Enumerable.Sum%2A> メソッドを使って、すべての Web サイトの長さの合計を計算します。 `SumPageSizesAsync` に次の行を追加します。  
   
     ```csharp  
     int total = lengths.Sum();  
@@ -95,7 +95,7 @@ ms.locfileid: "54631803"
   
 ### <a name="to-add-taskwhenall-to-the-httpclientgetbytearrayasync-solution"></a>HttpClient.GetByteArrayAsync ソリューションに Task.WhenAll を追加するには  
   
-1.  `ProcessURLAsync` の次のバージョンを「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した 2 番目のアプリケーションに追加します。  
+1. `ProcessURLAsync` の次のバージョンを「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した 2 番目のアプリケーションに追加します。  
   
     -   コードを[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からダウンロードした場合は、AsyncWalkthrough_HttpClient プロジェクトを開き、`ProcessURLAsync` を MainWindow.xaml.cs ファイルに追加します。  
   
@@ -114,7 +114,7 @@ ms.locfileid: "54631803"
     }  
     ```  
   
-2.  次のコードに示すように、`For Each` の `foreach` または `SumPageSizesAsync` のループをコメント アウトするか削除します。  
+2. 次のコードに示すように、`For Each` の `foreach` または `SumPageSizesAsync` のループをコメント アウトするか削除します。  
   
     ```csharp  
     //var total = 0;  
@@ -136,7 +136,7 @@ ms.locfileid: "54631803"
     //}  
     ```  
   
-3.  <xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](../../../../csharp/programming-guide/concepts/linq/index.md)を定義します。 タスクは、クエリが評価されるときに開始されます。  
+3. <xref:System.Linq.Enumerable.ToArray%2A> メソッドによって実行されるときに、各 Web サイトのコンテンツをダウンロードするタスクのコレクションを作成する[クエリ](../../../../csharp/programming-guide/concepts/linq/index.md)を定義します。 タスクは、クエリが評価されるときに開始されます。  
   
      `SumPageSizesAsync` および `client` の宣言の後の `urlList` メソッドに、次のコードを追加します。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "54631803"
     Task<int>[] downloadTasks = downloadTasksQuery.ToArray();  
     ```  
   
-4.  次に、`Task.WhenAll` をタスクのコレクション `downloadTasks` に適用します。 `Task.WhenAll` は、タスクのコレクションのすべてのタスクが完了すると完了する、単一のタスクを返します。  
+4. 次に、`Task.WhenAll` をタスクのコレクション `downloadTasks` に適用します。 `Task.WhenAll` は、タスクのコレクションのすべてのタスクが完了すると完了する、単一のタスクを返します。  
   
      次の例では、`await` 式は、`WhenAll` によって返される単一のタスクが完了するのを待機します。 完了すると、`await` 式は、各整数がダウンロードされたサイトの長さである、整数の配列に評価します。 `SumPageSizesAsync` の、前の手順で追加したコードの直後に、次のコードを追加します。  
   
@@ -162,7 +162,7 @@ ms.locfileid: "54631803"
     //int[] lengths = await whenAllTask;  
     ```  
   
-5.  最後に <xref:System.Linq.Enumerable.Sum%2A> メソッドを使って、すべての Web サイトの長さの合計を計算します。 `SumPageSizesAsync` に次の行を追加します。  
+5. 最後に <xref:System.Linq.Enumerable.Sum%2A> メソッドを使って、すべての Web サイトの長さの合計を計算します。 `SumPageSizesAsync` に次の行を追加します。  
   
     ```csharp  
     int total = lengths.Sum();

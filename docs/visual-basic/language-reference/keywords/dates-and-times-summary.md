@@ -11,10 +11,10 @@ helpviewer_keywords:
 - time data types [Visual Basic]
 ms.assetid: 914d0563-b53c-492c-ac62-d833ce805f2f
 ms.openlocfilehash: 44bd867412c30eae9a3092446cfd9674ba5e34a4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819049"
 ---
 # <a name="dates-and-times-summary-visual-basic"></a>日付と時刻の概要 (Visual Basic)

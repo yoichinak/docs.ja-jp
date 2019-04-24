@@ -8,10 +8,10 @@ helpviewer_keywords:
 - CheckBox control [WPF], ListView control
 ms.assetid: f6d66c7f-906c-4f65-a55a-0ede9d00e26a
 ms.openlocfilehash: b09d5ad11b0961febf524cec1e19cb1e59832e44
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083108"
 ---
 # <a name="how-to-create-listviewitems-with-a-checkbox"></a>方法: CheckBox を持つ ListViewItem を作成する
@@ -34,5 +34,5 @@ ms.locfileid: "59083108"
 - <xref:System.Windows.Controls.ListView>
 - <xref:System.Windows.Controls.GridView>
 - [ListView の概要](listview-overview.md)
-- [方法のトピック](listview-how-to-topics.md)
+- [方法トピック](listview-how-to-topics.md)
 - [GridView の概要](gridview-overview.md)

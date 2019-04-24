@@ -11,10 +11,10 @@ helpviewer_keywords:
 - shortcut menus [Windows Forms], ContextMenu component
 ms.assetid: 9b93ccbc-c0fe-44a2-968e-faac25971831
 ms.openlocfilehash: cc5d5af4ef49abb7f5f89a99d5cc799eb96a5c61
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59207956"
 ---
 # <a name="contextmenu-component-windows-forms"></a>ContextMenu コンポーネント (Windows フォーム)
@@ -27,7 +27,7 @@ ms.locfileid: "59207956"
  [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)  
  一般的な概念が導入されています、`ContextMenu`コンポーネントで、選択したオブジェクトに関連付けられた、頻繁に使用されるコマンドのメニューを作成することができます。  
   
- [方法: Windows フォーム ContextMenu コンポーネントのメニュー項目を追加および削除する](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
+ [方法: 追加し、Windows フォーム ContextMenu コンポーネントのメニュー項目の削除](add-and-remove-menu-items-with-wf-contextmenu-component.md)  
  追加し、Windows フォームのショートカット メニュー項目を削除する方法について説明します。  
   
 ## <a name="reference"></a>参照  

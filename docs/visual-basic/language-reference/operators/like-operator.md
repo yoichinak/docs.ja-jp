@@ -23,10 +23,10 @@ helpviewer_keywords:
 - string comparison [Visual Basic], Like operators
 ms.assetid: 966283ec-80e2-4294-baa8-c75baff804f9
 ms.openlocfilehash: 38e56b8c0ec6bab89052ee42a2cd9c24053c658e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835701"
 ---
 # <a name="like-operator-visual-basic"></a>Like 演算子 (Visual Basic)

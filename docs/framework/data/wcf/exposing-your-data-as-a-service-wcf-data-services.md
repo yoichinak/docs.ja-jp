@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
 ms.openlocfilehash: 3c0763f21940831f401194356dc25b0d99c8d6f2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59308537"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>サービス (WCF Data Services) として、データを公開します。
@@ -31,5 +31,5 @@ Northwind サンプル データベースに基づいている単純なデータ
 
 ## <a name="see-also"></a>関連項目
 
-- [作業の開始](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [はじめに](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
 - [概要](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)

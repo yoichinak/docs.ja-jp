@@ -5,10 +5,10 @@ helpviewer_keywords:
 - tracing [WCF]
 ms.assetid: 82922010-e8b3-40eb-98c4-10fc05c6d65d
 ms.openlocfilehash: 8702091c185ba3d4956d3bd5d13ca191c12fce82
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162882"
 ---
 # <a name="configuring-tracing"></a>トレースの構成
@@ -184,5 +184,5 @@ ms.locfileid: "59162882"
 
 - [トレース](../../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [管理と診断](../../../../../docs/framework/wcf/diagnostics/index.md)
-- [方法: トレース リスナーを作成し初期化する](https://go.microsoft.com/fwlink/?LinkId=94648)
+- [方法: 作成し、トレース リスナーの初期化](https://go.microsoft.com/fwlink/?LinkId=94648)
 - [カスタム TraceListener の作成](https://go.microsoft.com/fwlink/?LinkId=96239)

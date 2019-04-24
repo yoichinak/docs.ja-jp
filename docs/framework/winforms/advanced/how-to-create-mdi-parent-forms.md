@@ -6,10 +6,10 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating forms
 ms.assetid: 12c71221-2377-4bb6-b10b-7b4b300fd462
 ms.openlocfilehash: d3ec2e16f06169790711c92c9d445ae93ee50c95
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338658"
 ---
 # <a name="how-to-create-mdi-parent-forms"></a>方法: MDI 親フォームを作成する
@@ -38,7 +38,7 @@ ms.locfileid: "59338658"
 ## <a name="see-also"></a>関連項目
 
 - [マルチ ドキュメント インターフェイス (MDI) アプリケーション](multiple-document-interface-mdi-applications.md)
-- [方法: MDI 子フォームを作成する](how-to-create-mdi-child-forms.md)
-- [方法: アクティブな MDI 子フォームを特定する](how-to-determine-the-active-mdi-child.md)
-- [方法: アクティブな MDI 子フォームにデータを送信する](how-to-send-data-to-the-active-mdi-child.md)
-- [方法: MDI 子フォームを配置する](how-to-arrange-mdi-child-forms.md)
+- [方法: MDI 子フォームを作成します。](how-to-create-mdi-child-forms.md)
+- [方法: アクティブな MDI 子を決定します。](how-to-determine-the-active-mdi-child.md)
+- [方法: アクティブな MDI 子ウィンドウにデータを送信します。](how-to-send-data-to-the-active-mdi-child.md)
+- [方法: MDI 子フォームを配置します。](how-to-arrange-mdi-child-forms.md)

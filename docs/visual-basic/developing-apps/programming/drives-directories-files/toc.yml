@@ -1,87 +1,80 @@
-items:
 - name: ドライブ、ディレクトリ、およびファイルの処理
   href: processing.md
   items:
-  - name: Visual Basic におけるファイル アクセス
-    href: file-access.md
-    items:
-    - name: ファイルの読み取り
-      href: reading-from-files.md
+    - name: Visual Basic におけるファイル アクセス
+      href: file-access.md
       items:
-      - name: '方法: テキスト ファイルからデータを読み取る'
-        href: how-to-read-from-text-files.md
-      - name: '方法: コンマ区切りのテキスト ファイルを読み取る'
-        href: how-to-read-from-comma-delimited-text-files.md
-      - name: '方法: 固定幅のテキスト ファイルを読み取る'
-        href: how-to-read-from-fixed-width-text-files.md
-      - name: '方法: 複数の書式を持つテキスト ファイルを読み取る'
-        href: how-to-read-from-text-files-with-multiple-formats.md
-      - name: '方法: バイナリ ファイルを読み取る'
-        href: how-to-read-from-binary-files.md
-      - name: '方法: StreamReader を使用してファイルからテキストを読み取る'
-        href: how-to-read-text-from-files-with-a-streamreader.md
-    - name: ファイルへの書き込み
-      href: writing-to-files.md
+        - name: ファイルの読み取り
+          href: reading-from-files.md
+          items:
+            - name: '方法: テキスト ファイルからデータを読み取る'
+              href: how-to-read-from-text-files.md
+            - name: '方法: コンマ区切りのテキスト ファイルを読み取る'
+              href: how-to-read-from-comma-delimited-text-files.md
+            - name: '方法: 固定幅のテキスト ファイルを読み取る'
+              href: how-to-read-from-fixed-width-text-files.md
+            - name: '方法: 複数の書式を持つテキスト ファイルを読み取る'
+              href: how-to-read-from-text-files-with-multiple-formats.md
+            - name: '方法: バイナリ ファイルを読み取る'
+              href: how-to-read-from-binary-files.md
+            - name: '方法: StreamReader を使用してファイルからテキストを読み取る'
+              href: how-to-read-text-from-files-with-a-streamreader.md
+        - name: ファイルへの書き込み
+          href: writing-to-files.md
+          items:
+            - name: '方法: ファイルにテキストを書き込む'
+              href: how-to-write-text-to-files.md
+            - name: '方法: テキスト ファイルに追記する'
+              href: how-to-append-to-text-files.md
+            - name: '方法: バイナリ ファイルに書き込む'
+              href: how-to-write-to-binary-files.md
+            - name: '方法: My Documents ディレクトリのファイルにテキストを書き込む'
+              href: how-to-write-text-to-files-in-the-my-documents-directory.md
+            - name: '方法: StreamWriter を使用してファイルにテキストを書き込む'
+              href: how-to-write-text-to-files-with-a-streamwriter.md
+        - name: ファイルおよびディレクトリの作成、削除、および移動
+          href: creating-deleting-and-moving-files-and-directories.md
+          items:
+            - name: '方法: 特定のパターンを持つファイルをディレクトリにコピーする'
+              href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
+            - name: '方法: ファイルのコピーを同じディレクトリに作成する'
+              href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
+            - name: '方法: ファイルのコピーを別のディレクトリに作成する'
+              href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
+            - name: '方法: ファイルを作成する'
+              href: how-to-create-a-file.md
+            - name: '方法: ファイルを削除する'
+              href: how-to-delete-a-file.md
+            - name: '方法: 特定のパターンに一致するファイルを検索する'
+              href: how-to-find-files-with-a-specific-pattern.md
+            - name: '方法: ファイルを移動する'
+              href: how-to-move-a-file.md
+            - name: '方法: ファイルの名前を変更する'
+              href: how-to-rename-a-file.md
+            - name: '方法: ディレクトリを別のディレクトリにコピーする'
+              href: how-to-copy-a-directory-to-another-directory.md
+            - name: '方法: ディレクトリを作成する'
+              href: how-to-create-a-directory.md
+            - name: '方法: 特定のパターンに一致するサブディレクトリを検索する'
+              href: how-to-find-subdirectories-with-a-specific-pattern.md
+            - name: '方法: ディレクトリにあるファイルのコレクションを取得する'
+              href: how-to-get-the-collection-of-files-in-a-directory.md
+            - name: '方法: My Documents ディレクトリの内容を取得する'
+              href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
+            - name: '方法: ファイル パスを解析する'
+              href: how-to-parse-file-paths.md
+        - name: TextFieldParser オブジェクトによるテキスト ファイルの解析
+          href: parsing-text-files-with-the-textfieldparser-object.md
+        - name: ファイル エンコーディング
+          href: file-encodings.md
+        - name: 'トラブルシューティング:テキスト ファイルの読み取りと書き込み'
+          href: troubleshooting-reading-from-and-writing-to-text-files.md
+    - name: .NET Framework のファイル I/O とファイル システムの基礎
+      href: basics-of-net-framework-file-io-and-the-file-system.md
       items:
-      - name: '方法: ファイルにテキストを書き込む'
-        href: how-to-write-text-to-files.md
-      - name: '方法: テキスト ファイルに追記する'
-        href: how-to-append-to-text-files.md
-      - name: '方法: バイナリ ファイルに書き込む'
-        href: how-to-write-to-binary-files.md
-      - name: '方法: My Documents ディレクトリのファイルにテキストを書き込む'
-        href: how-to-write-text-to-files-in-the-my-documents-directory.md
-      - name: '方法: StreamWriter を使用してファイルにテキストを書き込む'
-        href: how-to-write-text-to-files-with-a-streamwriter.md
-    - name: ファイルおよびディレクトリの作成、削除、および移動
-      href: creating-deleting-and-moving-files-and-directories.md
-      items:
-      - name: '方法: 特定のパターンを持つファイルをディレクトリにコピーする'
-        href: how-to-copy-files-with-a-specific-pattern-to-a-directory.md
-      - name: '方法: ファイルのコピーを同じディレクトリに作成する'
-        href: how-to-create-a-copy-of-a-file-in-the-same-directory.md
-      - name: '方法: ファイルのコピーを別のディレクトリに作成する'
-        href: how-to-create-a-copy-of-a-file-in-a-different-directory.md
-      - name: '方法: ファイルを作成する'
-        href: how-to-create-a-file.md
-      - name: '方法: ファイルを削除する'
-        href: how-to-delete-a-file.md
-      - name: '方法: 特定のパターンに一致するファイルを検索する'
-        href: how-to-find-files-with-a-specific-pattern.md
-      - name: '方法: ファイルを移動する'
-        href: how-to-move-a-file.md
-      - name: '方法: ファイルの名前を変更する'
-        href: how-to-rename-a-file.md
-      - name: '方法: ディレクトリを別のディレクトリにコピーする'
-        href: how-to-copy-a-directory-to-another-directory.md
-      - name: '方法: ディレクトリを作成する'
-        href: how-to-create-a-directory.md
-      - name: '方法: 特定のパターンに一致するサブディレクトリを検索する'
-        href: how-to-find-subdirectories-with-a-specific-pattern.md
-      - name: '方法: ディレクトリにあるファイルのコレクションを取得する'
-        href: how-to-get-the-collection-of-files-in-a-directory.md
-      - name: '方法: My Documents ディレクトリの内容を取得する'
-        href: how-to-retrieve-the-contents-of-the-my-documents-directory.md
-      - name: '方法: ファイル パスを解析する'
-        href: how-to-parse-file-paths.md
-    - name: TextFieldParser オブジェクトによるテキスト ファイルの解析
-      href: parsing-text-files-with-the-textfieldparser-object.md
-    - name: ファイル エンコーディング
-      href: file-encodings.md
-    - name: トラブルシューティング:テキスト ファイルの読み取りと書き込み
-      href: troubleshooting-reading-from-and-writing-to-text-files.md
-  - name: .NET Framework のファイル I/O とファイル システムの基礎
-    href: basics-of-net-framework-file-io-and-the-file-system.md
-    items:
-    - name: .NET Framework のファイル I/O とファイル システムで使用するクラス
-      href: classes-used-in-net-framework-file-io-and-the-file-system.md
-  - name: 'チュートリアル: .NET Framework のメソッドによるファイル操作'
-    href: walkthrough-manipulating-files-by-using-net-framework-methods.md
-  - name: 'チュートリアル: ファイルとディレクトリの操作'
-    href: walkthrough-manipulating-files-and-directories.md
-ms.openlocfilehash: 04d5b3252fa087fcbba7d29662e7ad1e3fb24d2e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470730"
+        - name: .NET Framework のファイル I/O とファイル システムで使用するクラス
+          href: classes-used-in-net-framework-file-io-and-the-file-system.md
+    - name: 'チュートリアル: .NET Framework のメソッドによるファイル操作'
+      href: walkthrough-manipulating-files-by-using-net-framework-methods.md
+    - name: 'チュートリアル: ファイルとディレクトリの操作'
+      href: walkthrough-manipulating-files-and-directories.md

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165179"
 ---
 # <a name="datatable-constraints"></a>DataTable の制約
@@ -27,7 +27,7 @@ ms.locfileid: "59165179"
 |**Cascade**|関連付けられている行を削除または更新します。|  
 |**SetNull**|関連付けられている行の値を設定**DBNull**します。|  
 |**SetDefault**|関連付けられている行の値を既定値に設定します。|  
-|**なし**|関連付けられている行に対してアクションは実行しません。 既定値です。|  
+|**None**|関連付けられている行に対してアクションは実行しません。 既定値です。|  
   
  A **ForeignKeyConstraint**制限することができますも反映されるまでへの変更が関連する列。 設定されたプロパティに応じて、 **ForeignKeyConstraint** 、列の場合、 **EnforceConstraints**のプロパティ、**データセット**は**true**、親の行に対して操作を実行する、例外が発生します。 たとえば場合、 **DeleteRule**のプロパティ、 **ForeignKeyConstraint**は**None**、子の行がある場合、親の行を削除できません。  
   
@@ -61,7 +61,7 @@ custDS.Tables["OrdersTable"].Constraints.Add(custOrderFK);
 |規則の設定|説明|  
 |------------------|-----------------|  
 |**Cascade**|子の行への変更を受け入れるかまたは拒否します。|  
-|**なし**|子の行に対してアクションは実行しません。 既定値です。|  
+|**None**|子の行に対してアクションは実行しません。 既定値です。|  
   
 ### <a name="example"></a>例  
  次の例では、<xref:System.Data.ForeignKeyConstraint> を作成し、<xref:System.Data.ForeignKeyConstraint.AcceptRejectRule%2A> を含む複数のプロパティを設定して、<xref:System.Data.ConstraintCollection> オブジェクトの <xref:System.Data.DataTable> に追加します。  

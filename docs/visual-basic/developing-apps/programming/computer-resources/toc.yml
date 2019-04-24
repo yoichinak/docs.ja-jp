@@ -1,58 +1,51 @@
-items:
 - name: コンピューター リソースへのアクセス
   href: index.md
   items:
-  - name: サウンドの再生
-    href: playing-sounds.md
-  - name: クリップボードのデータの格納と読み取り
-    href: storing-data-to-and-reading-from-the-clipboard.md
-  - name: コンピューターについての情報の取得
-    href: getting-information-about-the-computer.md
-  - name: キーボードへのアクセス
-    href: accessing-the-keyboard.md
-    items:
-    - name: '方法: アプリケーションを起動してキーストロークを送る'
-      href: how-to-start-an-application-and-send-it-keystrokes.md
-  - name: マウスへのアクセス
-    href: accessing-the-mouse.md
-  - name: ネットワーク操作の実行
-    href: performing-network-operations.md
-    items:
-    - name: '方法: ファイルをアップロードする'
-      href: how-to-upload-a-file.md
-    - name: '方法: ファイルをダウンロードする'
-      href: how-to-download-a-file.md
-    - name: '方法: 接続状態をチェックする'
-      href: how-to-check-connection-status.md
-  - name: コンピューターのポートへのアクセス
-    href: accessing-the-computer-s-ports.md
-    items:
-    - name: '方法: 利用可能なシリアル ポートを表示する'
-      href: how-to-show-available-serial-ports.md
-    - name: '方法: シリアル ポートに接続されているモデムをダイヤルする'
-      href: how-to-dial-modems-attached-to-serial-ports.md
-    - name: '方法: シリアル ポートに文字列を送信する'
-      href: how-to-send-strings-to-serial-ports.md
-    - name: '方法: シリアル ポートから文字列を受信する'
-      href: how-to-receive-strings-from-serial-ports.md
-    - name: .NET Framework でのポート操作
-      href: port-operations-in-the-net-framework.md
-  - name: レジストリからの読み取りとレジストリへの書き込み
-    href: reading-from-and-writing-to-the-registry.md
-    items:
-    - name: '方法: レジストリ キーを作成し、その値を設定する'
-      href: how-to-create-a-registry-key-and-set-its-value.md
-    - name: '方法: レジストリ キーから値を読み取る'
-      href: how-to-read-a-value-from-a-registry-key.md
-    - name: '方法: レジストリ キーの削除'
-      href: how-to-delete-a-registry-key.md
-    - name: Microsoft.Win32 名前空間を使用したレジストリの読み取りと書き込み
-      href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
-    - name: セキュリティとレジストリ
-      href: security-and-the-registry.md
-ms.openlocfilehash: b45e258b05c06cb8494a1644bd43cca447578e6c
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469699"
+    - name: サウンドの再生
+      href: playing-sounds.md
+    - name: クリップボードのデータの格納と読み取り
+      href: storing-data-to-and-reading-from-the-clipboard.md
+    - name: コンピューターについての情報の取得
+      href: getting-information-about-the-computer.md
+    - name: キーボードへのアクセス
+      href: accessing-the-keyboard.md
+      items:
+        - name: '方法: アプリケーションを起動してキーストロークを送る'
+          href: how-to-start-an-application-and-send-it-keystrokes.md
+    - name: マウスへのアクセス
+      href: accessing-the-mouse.md
+    - name: ネットワーク操作の実行
+      href: performing-network-operations.md
+      items:
+        - name: '方法: ファイルをアップロードする'
+          href: how-to-upload-a-file.md
+        - name: '方法: ファイルをダウンロードする'
+          href: how-to-download-a-file.md
+        - name: '方法: 接続状態をチェックする'
+          href: how-to-check-connection-status.md
+    - name: コンピューターのポートへのアクセス
+      href: accessing-the-computer-s-ports.md
+      items:
+        - name: '方法: 利用可能なシリアル ポートを表示する'
+          href: how-to-show-available-serial-ports.md
+        - name: '方法: シリアル ポートに接続されているモデムをダイヤルする'
+          href: how-to-dial-modems-attached-to-serial-ports.md
+        - name: '方法: シリアル ポートに文字列を送信する'
+          href: how-to-send-strings-to-serial-ports.md
+        - name: '方法: シリアル ポートから文字列を受信する'
+          href: how-to-receive-strings-from-serial-ports.md
+        - name: .NET Framework でのポート操作
+          href: port-operations-in-the-net-framework.md
+    - name: レジストリからの読み取りとレジストリへの書き込み
+      href: reading-from-and-writing-to-the-registry.md
+      items:
+        - name: '方法: レジストリ キーを作成し、その値を設定する'
+          href: how-to-create-a-registry-key-and-set-its-value.md
+        - name: '方法: レジストリ キーから値を読み取る'
+          href: how-to-read-a-value-from-a-registry-key.md
+        - name: '方法: レジストリ キーの削除'
+          href: how-to-delete-a-registry-key.md
+        - name: Microsoft.Win32 名前空間を使用したレジストリの読み取りと書き込み
+          href: reading-from-and-writing-to-the-registry-using-the-microsoft-win32-namespace.md
+        - name: セキュリティとレジストリ
+          href: security-and-the-registry.md

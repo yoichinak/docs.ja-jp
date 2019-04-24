@@ -6,10 +6,10 @@ helpviewer_keywords:
 - My.Application.AssemblyInfo object
 ms.assetid: 2f4782ed-3da2-4d88-b341-0c6f480fb7bb
 ms.openlocfilehash: 560541d6f662988c56c973cc63788da4eefd74da
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817684"
 ---
 # <a name="myapplicationinfo-object"></a>My.Application.Info オブジェクト

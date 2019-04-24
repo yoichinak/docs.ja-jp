@@ -1,18 +1,11 @@
-items:
 - name: ジェネリック
   href: index.md
   items:
-  - name: .NET の汎用コレクション
-    href: collections.md
-  - name: 配列とリストの操作に使用する汎用デリゲート
-    href: delegates-for-manipulating-arrays-and-lists.md
-  - name: ジェネリック インターフェイス
-    href: interfaces.md
-  - name: 共変性と反変性
-    href: covariance-and-contravariance.md
-ms.openlocfilehash: 84f8686eb8c70ecc4b36a2335f673319bcc2dd4a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470146"
+    - name: .NET の汎用コレクション
+      href: collections.md
+    - name: 配列とリストの操作に使用する汎用デリゲート
+      href: delegates-for-manipulating-arrays-and-lists.md
+    - name: ジェネリック インターフェイス
+      href: interfaces.md
+    - name: 共変性と反変性
+      href: covariance-and-contravariance.md

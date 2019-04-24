@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Sub Main error message
 ms.assetid: a006d57d-4dd3-46a7-9026-ca9a31470da7
 ms.openlocfilehash: e48968472fea2accd85544f2360a6732e2bcbe17
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59338749"
 ---
 # <a name="sub-main-was-not-found-in-name"></a>'Sub Main' に見つかりませんでした '\<名 >'
-`Sub Main` 不足しているか、間違った場所が指定されていること。  
+`Sub Main` が存在しないか、間違った場所が指定されています。  
   
  **エラー ID:** BC30420  
   
@@ -29,4 +29,4 @@ ms.locfileid: "59338749"
 ## <a name="see-also"></a>関連項目
 
 - [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)
-- [Visual Basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)
+- [Visual Basic の main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)

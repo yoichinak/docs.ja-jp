@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
 ms.openlocfilehash: 351d133215343e07e849ad1045eba601dd8cce56
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59092281"
 ---
 # <a name="administration-and-diagnostics"></a>管理と診断
@@ -51,5 +51,5 @@ Windows Communication Foundation (WCF) は、アプリケーションのライ�
 - [ServiceModel 登録ツール](../../../../docs/framework/wcf/diagnostics/servicemodel-registration-tool.md)
 - [トレース](../../../../docs/framework/wcf/diagnostics/tracing/index.md)
 - [診断用の WMI (Windows Management Instrumentation) の使用](../../../../docs/framework/wcf/diagnostics/wmi/index.md)
-- [[パフォーマンス カウンター]](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
+- [パフォーマンス カウンター](../../../../docs/framework/wcf/diagnostics/performance-counters/index.md)
 - [Windows Communication Foundation ツール](../../../../docs/framework/wcf/tools.md)

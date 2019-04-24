@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
 ms.openlocfilehash: ef0bc5d344f7d465de9209708430d3e61d40d4f7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59114651"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>方法: ScrollViewer を持つエキスパンダーを作成する
@@ -30,4 +30,4 @@ ms.locfileid: "59114651"
 
 - <xref:System.Windows.Controls.Expander>
 - [エキスパンダーの概要](expander-overview.md)
-- [方法のトピック](expander-how-to-topics.md)
+- [方法トピック](expander-how-to-topics.md)

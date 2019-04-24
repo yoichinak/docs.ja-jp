@@ -5,10 +5,10 @@ helpviewer_keywords:
 - batching messages [WCF]
 ms.assetid: 53305392-e82e-4e89-aedc-3efb6ebcd28c
 ms.openlocfilehash: 2d820087973e689514a0a19a7adc912f49e9d0a2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310526"
 ---
 # <a name="batching-messages-in-a-transaction"></a>トランザクションに含まれるメッセージのバッチ処理
@@ -20,11 +20,11 @@ ms.locfileid: "59310526"
 ## <a name="committing-a-transaction"></a>トランザクションのコミット  
  バッチ トランザクションは、次の基準に基づいてコミットされます。  
   
--   `MaxBatchSize`. <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 動作のプロパティ。 このプロパティは、バッチに含められるメッセージの最大数を決定します。 この数に達すると、バッチがコミットされます。 この値は厳密に定められたものではないため、この数のメッセージを受信する前にバッチをコミットすることもできます。  
+-   `MaxBatchSize`。 <xref:System.ServiceModel.Description.TransactedBatchingBehavior> 動作のプロパティ。 このプロパティは、バッチに含められるメッセージの最大数を決定します。 この数に達すると、バッチがコミットされます。 この値は厳密に定められたものではないため、この数のメッセージを受信する前にバッチをコミットすることもできます。  
   
--   `Transaction Timeout`. トランザクションのタイムアウトの 80% が経過すると、バッチがコミットされ、新しいバッチが作成されます。 つまり、トランザクションが完了するために指定された時間の残りが 20% 以下になると、バッチがコミットされます。  
+-   `Transaction Timeout`。 トランザクションのタイムアウトの 80% が経過すると、バッチがコミットされ、新しいバッチが作成されます。 つまり、トランザクションが完了するために指定された時間の残りが 20% 以下になると、バッチがコミットされます。  
   
--   `TransactionScopeRequired`. WCF では、1 つを持つ検出されると、メッセージのバッチを処理するときに`TransactionScopeRequired`  =  `false`、バッチをコミットし、最初のメッセージの受信時に新しいバッチが再度開かれます`TransactionScopeRequired`  =  `true`と`TransactionAutoComplete` = `true`.  
+-   `TransactionScopeRequired`。 WCF では、1 つを持つ検出されると、メッセージのバッチを処理するときに`TransactionScopeRequired`  =  `false`、バッチをコミットし、最初のメッセージの受信時に新しいバッチが再度開かれます`TransactionScopeRequired`  =  `true`と`TransactionAutoComplete` = `true`.  
   
 -   キューのメッセージがなくなると、`MaxBatchSize` に達していない場合やトランザクションのタイムアウトの 80% が経過していない場合でも、現在のバッチがコミットされます。  
   

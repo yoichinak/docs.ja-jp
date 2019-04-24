@@ -3,10 +3,10 @@ title: ServiceDescription と WSDL 参照
 ms.date: 03/30/2017
 ms.assetid: eedc025d-abd9-46b1-bf3b-61d2d5c95fd6
 ms.openlocfilehash: 6690bea3d3df0f39a5581c3a6c14723c0f30f40c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182885"
 ---
 # <a name="servicedescription-and-wsdl-reference"></a>ServiceDescription と WSDL 参照
@@ -50,7 +50,7 @@ ms.locfileid: "59182885"
 |----------------|------------------|  
 |`Name`|エンドポイントの既定の名前で使用されます。この名前は、バインディング名にコントラクト名を追加し、アンダースコアで区切った形で表記されます。|  
 |`Namespace`|`targetNamespace` 定義の `wsdl:binding`。<br /><br /> インポートでは、WSDL ポートに関連付けられたポリシーがある場合、インポートされたバインディング名前空間は、`targetNamespace` 定義の `wsdl:port` にマップされます。|  
-|`BindingElementCollection`、によって返される、 `CreateBindingElements`() メソッド|`wsdl:binding` 定義に対するさまざまなドメイン固有の拡張。通常は、ポリシー アサーション。|  
+|`BindingElementCollection` (`CreateBindingElements`() メソッドによって返されるプロパティとして)|`wsdl:binding` 定義に対するさまざまなドメイン固有の拡張。通常は、ポリシー アサーション。|  
 |`MessageVersion`|エンドポイントの `EnvelopeVersion` および `AddressingVersion`。<br /><br /> `MessageVersion.None` が指定されている場合、WSDL バインディングは SOAP バインディングを格納せず、WSDL ポートは WS-Addressing コンテンツを含みません。 この設定は、通常、Plain Old XML (POX) エンドポイントに対して使用されます。|  
   
 #### <a name="bindingelements"></a>BindingElements  

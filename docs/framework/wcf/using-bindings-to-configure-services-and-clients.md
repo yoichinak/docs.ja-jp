@@ -5,10 +5,10 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59323149"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>サービスとクライアントを構成するためのバインディングの使用
@@ -59,7 +59,7 @@ ms.locfileid: "59323149"
 ## <a name="see-also"></a>関連項目
 
 - [エンドポイントの作成の概要](../../../docs/framework/wcf/endpoint-creation-overview.md)
-- [方法: 構成でサービス バインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
-- [方法: コード内でサービス バインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
-- [方法: 構成でクライアント バインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
-- [方法: コード内でクライアント バインディングを指定する](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)
+- [方法: 構成でサービス バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-configuration.md)
+- [方法: コードでのサービス バインドを指定します。](../../../docs/framework/wcf/how-to-specify-a-service-binding-in-code.md)
+- [方法: 構成でクライアント バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-configuration.md)
+- [方法: コードでクライアント バインディングを指定します。](../../../docs/framework/wcf/how-to-specify-a-client-binding-in-code.md)

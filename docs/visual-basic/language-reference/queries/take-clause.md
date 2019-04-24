@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
 ms.openlocfilehash: cb109eaf43fee19b77ac690492b85919c9d78301
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816955"
 ---
 # <a name="take-clause-visual-basic"></a>Take 句 (Visual Basic)
@@ -33,7 +33,7 @@ Take count
   
  使用することができます、`Take`句、`Skip`句をクエリの任意のセグメントからのデータの範囲を返します。 これを行うには、範囲の最初の要素のインデックスを渡す、`Skip`句とする範囲のサイズ、`Take`句。 ここで、`Take`後句を指定する必要があります、`Skip`句。  
   
- 使用すると、`Take`クエリ句、する必要がありますも結果が可能にする順序で返されるように、`Take`に目的の結果に含める句。 クエリの結果を順序付けの詳細については、[Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)を参照してください。  
+ 使用すると、`Take`クエリ句、する必要がありますも結果が可能にする順序で返されるように、`Take`に目的の結果に含める句。 クエリの結果を順序付けの詳細については、次を参照してください。 [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)します。  
   
  使用することができます、`TakeWhile`句を指定した条件に応じて特定の要素のみを返すことを指定します。  
   

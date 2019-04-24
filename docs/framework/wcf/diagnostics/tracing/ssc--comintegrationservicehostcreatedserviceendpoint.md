@@ -3,10 +3,10 @@ title: System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServic
 ms.date: 03/30/2017
 ms.assetid: 79aa2eee-b65d-4ae3-971a-acb5db4547b9
 ms.openlocfilehash: 7edbac6bbf377a40ab239f7d991a7ab273335411
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59113569"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationservicehostcreatedserviceendpoint"></a>System.ServiceModel.ComIntegration.ComIntegrationServiceHostCreatedServiceEndpoint

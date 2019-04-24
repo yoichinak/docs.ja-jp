@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [Windows Forms], adding
 ms.assetid: 2af86001-9d62-4154-87fb-66db2c3cd9fd
 ms.openlocfilehash: 04597283a8ff2e21a0f227268671d3605eac6356
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59343590"
 ---
 # <a name="how-to-add-controls-to-windows-forms"></a>方法: Windows フォームにコントロールを追加する
@@ -93,6 +93,6 @@ ms.locfileid: "59343590"
 
 - [Windows フォーム コントロール](index.md)
 - [Windows フォームでのコントロールの配置](arranging-controls-on-windows-forms.md)
-- [方法: Windows フォーム上のコントロールのサイズを変更する](how-to-resize-controls-on-windows-forms.md)
-- [方法: Windows フォーム コントロールによって表示されるテキストを設定する](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
+- [方法: Windows フォーム上のコントロールのサイズを変更します。](how-to-resize-controls-on-windows-forms.md)
+- [方法: によって表示されるテキストを設定、Windows フォーム コントロール](how-to-set-the-text-displayed-by-a-windows-forms-control.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)

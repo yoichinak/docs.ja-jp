@@ -13,10 +13,10 @@ helpviewer_keywords:
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
 ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165270"
 ---
 # <a name="binding-declarations-overview"></a>バインディング宣言の概要
@@ -34,7 +34,7 @@ ms.locfileid: "59165270"
   
 <a name="MarkupExtensionSyntax"></a>   
 ### <a name="markup-extension-usage"></a>マークアップ拡張機能の使用方法  
- <xref:System.Windows.Data.Binding> マークアップ拡張機能。 バインディング拡張機能を使用してバインディングを宣言するとき、この宣言は、`Binding` キーワードに続く一連の句で構成され、コンマ (,) で区切られます。 バインディング宣言内の句の順序は任意で、多数の組み合わせが可能です。 句は*名前*=*値*ペアで*名前*の名前を指定します、<xref:System.Windows.Data.Binding>プロパティと*値*はプロパティを設定する値。  
+ <xref:System.Windows.Data.Binding> はマークアップ拡張機能です。 バインディング拡張機能を使用してバインディングを宣言するとき、この宣言は、`Binding` キーワードに続く一連の句で構成され、コンマ (,) で区切られます。 バインディング宣言内の句の順序は任意で、多数の組み合わせが可能です。 句は*名前*=*値*ペアで*名前*の名前を指定します、<xref:System.Windows.Data.Binding>プロパティと*値*はプロパティを設定する値。  
   
  マークアップでバインディング宣言文字列を作成する場合、この文字列はターゲット オブジェクトの特定の依存関係プロパティにアタッチする必要があります。 次の例では、バインドする方法を示しています、<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>バインド拡張機能を使用して、指定するプロパティ、<xref:System.Windows.Data.Binding.Source%2A>と<xref:System.Windows.Data.Binding.Path%2A>プロパティ。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59165270"
   
 -   プロパティのインデクサーは、インデクサーが適用されているプロパティ名の後ろの角かっこ内に指定できます。 たとえば、句 `Path=ShoppingCart[0]` は、プロパティの内部インデックスがリテラル文字列「0」を処理する方法に対応するインデックスへのバインディングを設定します。 入れ子になったインデクサーもサポートします。  
   
--   インデクサーとサブプロパティを混在させることができます、`Path`句たとえば、。 `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
+-   `Path` 句ではインデクサーとサブプロパティを混在させることができます。例: `Path=ShoppingCart.ShippingInfo[MailingAddress,Street].`  
   
 -   インデクサーの内側には、コンマ (,) で区切られた複数のインデクサー パラメーターを設定できます。 かっこで囲んで各パラメーターの型を指定できます。 たとえば、ある`Path="[(sys:Int32)42,(sys:Int32)24]"`ここで、`sys`にマップされて、`System`名前空間。  
   
@@ -126,6 +126,6 @@ ms.locfileid: "59165270"
 ## <a name="see-also"></a>関連項目
 
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法のトピック](data-binding-how-to-topics.md)
+- [方法トピック](data-binding-how-to-topics.md)
 - [データ バインディング](../advanced/optimizing-performance-data-binding.md)
 - [PropertyPath の XAML 構文](../advanced/propertypath-xaml-syntax.md)

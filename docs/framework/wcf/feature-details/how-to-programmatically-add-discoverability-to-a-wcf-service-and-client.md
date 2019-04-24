@@ -3,10 +3,10 @@ title: '方法: プログラムを使用して探索可能性に WCF サービ�
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59336591"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する
@@ -58,7 +58,7 @@ ms.locfileid: "59336591"
   
 1. 新しいコンソール アプリケーションを `DiscoveryClientApp` というソリューションに追加します。  
   
-2. 参照を追加`System.ServiceModel.dll`と `System.ServiceModel.Discovery.dll`  
+2. `System.ServiceModel.dll` および `System.ServiceModel.Discovery.dll` への参照を追加します。  
   
 3. GeneratedClient.cs ファイルおよび App.config ファイルを、既存のクライアント プロジェクトから新しい DiscoveryClientApp プロジェクトに追加します。 これを行うには、内のファイルを右クリックし、**ソリューション エクスプ ローラー**を選択します**コピー**を選び、 **DiscoveryClientApp** のプロジェクトを右クリックし、**貼り付け**します。  
   

@@ -1,422 +1,415 @@
-items:
 - name: Windows フォーム アプリケーションの拡張
   href: index.md
   items:
-  - name: Windows フォームにおけるグラフィックスと描画
-    href: graphics-and-drawing-in-windows-forms.md
-    items:
-    - name: グラフィックスの概要
-      href: graphics-overview-windows-forms.md
+    - name: Windows フォームにおけるグラフィックスと描画
+      href: graphics-and-drawing-in-windows-forms.md
       items:
-      - name: グラフィックスについて
-        href: overview-of-graphics.md
-      - name: グラフィックス サービスの 3 つのカテゴリ
-        href: three-categories-of-graphics-services.md
-      - name: グラフィックス インターフェイスの構造体
-        href: structure-of-the-graphics-interface.md
-    - name: GDI+ マネージド コードについて
-      href: about-gdi-managed-code.md
+        - name: グラフィックスの概要
+          href: graphics-overview-windows-forms.md
+          items:
+            - name: グラフィックスについて
+              href: overview-of-graphics.md
+            - name: グラフィックス サービスの 3 つのカテゴリ
+              href: three-categories-of-graphics-services.md
+            - name: グラフィックス インターフェイスの構造体
+              href: structure-of-the-graphics-interface.md
+        - name: GDI+ マネージド コードについて
+          href: about-gdi-managed-code.md
+          items:
+            - name: 直線、曲線、および図形
+              href: lines-curves-and-shapes.md
+              items:
+                - name: ベクター グラフィックスの概要
+                  href: vector-graphics-overview.md
+                - name: GDI+ でのペン、直線、および四角形
+                  href: pens-lines-and-rectangles-in-gdi.md
+                - name: GDI+ での楕円および円弧
+                  href: ellipses-and-arcs-in-gdi.md
+                - name: GDI+ での多角形
+                  href: polygons-in-gdi.md
+                - name: GDI+ でのカーディナル スプライン
+                  href: cardinal-splines-in-gdi.md
+                - name: GDI+ でのベジエ スプライン
+                  href: bezier-splines-in-gdi.md
+                - name: GDI+ でのグラフィックス パス
+                  href: graphics-paths-in-gdi.md
+                - name: GDI+ でのブラシと塗りつぶされた図形
+                  href: brushes-and-filled-shapes-in-gdi.md
+                - name: GDI+ での開いた曲線と閉じた曲線
+                  href: open-and-closed-curves-in-gdi.md
+                - name: GDI+ での領域
+                  href: regions-in-gdi.md
+                - name: GDI+ での描画サーフェイスの制限
+                  href: restricting-the-drawing-surface-in-gdi.md
+                - name: 直線と曲線のアンチエイリアシング
+                  href: antialiasing-with-lines-and-curves.md
+            - name: イメージ、ビットマップ、およびメタファイル
+              href: images-bitmaps-and-metafiles.md
+              items:
+                - name: ビットマップの種類
+                  href: types-of-bitmaps.md
+                - name: GDI+ でのメタファイル
+                  href: metafiles-in-gdi.md
+                - name: GDI+ でのイメージの描画、配置、およびクローン作成
+                  href: drawing-positioning-and-cloning-images-in-gdi.md
+                - name: GDI+ でのイメージのトリミングおよびスケーリング
+                  href: cropping-and-scaling-images-in-gdi.md
+            - name: 座標系と変換
+              href: coordinate-systems-and-transformations.md
+              items:
+                - name: 座標系の種類
+                  href: types-of-coordinate-systems.md
+                - name: 変換の行列表現
+                  href: matrix-representation-of-transformations.md
+                - name: グローバル変換とローカル変換
+                  href: global-and-local-transformations.md
+        - name: マネージド グラフィックス クラスの使用
+          href: using-managed-graphics-classes.md
+          items:
+            - name: グラフィックス プログラミングについて
+              href: getting-started-with-graphics-programming.md
+              items:
+                - name: '方法: 描画する Graphics オブジェクトを作成する'
+                  href: how-to-create-graphics-objects-for-drawing.md
+                - name: '方法: ペンを作成する'
+                  href: how-to-create-a-pen.md
+                - name: '方法: ペンの色を設定する'
+                  href: how-to-set-the-color-of-a-pen.md
+                - name: '方法: 純色ブラシを作成する'
+                  href: how-to-create-a-solid-brush.md
+                - name: '方法: Windows フォームに直線を描画する'
+                  href: how-to-draw-a-line-on-a-windows-form.md
+                - name: '方法: 形状のアウトラインを描画する'
+                  href: how-to-draw-an-outlined-shape.md
+                - name: '方法: Windows フォームに塗りつぶした四角形を描画する'
+                  href: how-to-draw-a-filled-rectangle-on-a-windows-form.md
+                - name: '方法: Windows フォームに塗りつぶした楕円を描画する'
+                  href: how-to-draw-a-filled-ellipse-on-a-windows-form.md
+                - name: '方法: Windows フォームにテキストを描画する'
+                  href: how-to-draw-text-on-a-windows-form.md
+                - name: '方法: Windows フォームに縦書きテキストを描画する'
+                  href: how-to-draw-vertical-text-on-a-windows-form.md
+                - name: '方法: GDI+ を使用してイメージをレンダリングする'
+                  href: how-to-render-images-with-gdi.md
+                - name: '方法: 成型された Windows フォームを作成する'
+                  href: how-to-create-a-shaped-windows-form.md
+                - name: '方法: ピクセルをコピーして Windows フォームのちらつきを低減する'
+                  href: how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md
+            - name: ペンを使用した直線と図形の描画
+              href: using-a-pen-to-draw-lines-and-shapes.md
+              items:
+                - name: '方法: ペンを使用して線を描画する'
+                  href: how-to-use-a-pen-to-draw-lines.md
+                - name: '方法: ペンを使用して四角形を描画する'
+                  href: how-to-use-a-pen-to-draw-rectangles.md
+                - name: '方法: ペンの幅と配置を設定する'
+                  href: how-to-set-pen-width-and-alignment.md
+                - name: '方法: ライン キャップを使用した直線を描画する'
+                  href: how-to-draw-a-line-with-line-caps.md
+                - name: '方法: 直線を接合する'
+                  href: how-to-join-lines.md
+                - name: '方法: カスタム破線を描画する'
+                  href: how-to-draw-a-custom-dashed-line.md
+                - name: '方法: テクスチャを使用して塗りつぶした直線を描画する'
+                  href: how-to-draw-a-line-filled-with-a-texture.md
+            - name: ブラシを使用した図形の塗りつぶし
+              href: using-a-brush-to-fill-shapes.md
+              items:
+                - name: '方法: 純色で図形を塗りつぶす'
+                  href: how-to-fill-a-shape-with-a-solid-color.md
+                - name: '方法: ハッチ パターンで図形を塗りつぶす'
+                  href: how-to-fill-a-shape-with-a-hatch-pattern.md
+                - name: '方法: イメージ テクスチャによって図形を塗りつぶす'
+                  href: how-to-fill-a-shape-with-an-image-texture.md
+                - name: '方法: イメージを並べたパターンによって図形を塗りつぶす'
+                  href: how-to-tile-a-shape-with-an-image.md
+            - name: グラデーション ブラシを使用した図形の塗りつぶし
+              href: using-a-gradient-brush-to-fill-shapes.md
+              items:
+                - name: '方法: 線形グラデーションを作成する'
+                  href: how-to-create-a-linear-gradient.md
+                - name: '方法: パス グラデーションを作成する'
+                  href: how-to-create-a-path-gradient.md
+                - name: '方法: グラデーションに対してガンマ補正を適用する'
+                  href: how-to-apply-gamma-correction-to-a-gradient.md
+            - name: イメージ、ビットマップ、アイコン、およびメタファイルの操作
+              href: working-with-images-bitmaps-icons-and-metafiles.md
+              items:
+                - name: '方法: 既存のビットマップを画面に描画する'
+                  href: how-to-draw-an-existing-bitmap-to-the-screen.md
+                - name: '方法: メタファイルを読み込んで表示する'
+                  href: how-to-load-and-display-metafiles.md
+                - name: '方法: イメージをトリミングおよびスケーリングする'
+                  href: how-to-crop-and-scale-images.md
+                - name: '方法: イメージを回転、反転、および傾斜させる'
+                  href: how-to-rotate-reflect-and-skew-images.md
+                - name: '方法: 補間モードを使用してスケーリング時の画質を制御する'
+                  href: how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md
+                - name: '方法: サムネイル イメージを作成する'
+                  href: how-to-create-thumbnail-images.md
+                - name: '方法: 自動スケーリングを解除してパフォーマンスを向上させる'
+                  href: how-to-improve-performance-by-avoiding-automatic-scaling.md
+                - name: '方法: イメージ メタデータを読み取る'
+                  href: how-to-read-image-metadata.md
+                - name: '方法: 実行時にビットマップを作成する'
+                  href: how-to-create-a-bitmap-at-run-time.md
+                - name: '方法: Windows フォームでファイルに関連付けられているアイコンを抽出する'
+                  href: how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md
+            - name: アルファ ブレンドの直線と塗りつぶし
+              href: alpha-blending-lines-and-fills.md
+              items:
+                - name: '方法: 不透明な直線および半透明な直線を描画する'
+                  href: how-to-draw-opaque-and-semitransparent-lines.md
+                - name: '方法: 不透明ブラシおよび半透明ブラシを使用して描画する'
+                  href: how-to-draw-with-opaque-and-semitransparent-brushes.md
+                - name: '方法: 複合モードを使用してアルファ ブレンドを制御する'
+                  href: how-to-use-compositing-mode-to-control-alpha-blending.md
+                - name: '方法: カラー行列を使用してイメージのアルファ値を設定する'
+                  href: how-to-use-a-color-matrix-to-set-alpha-values-in-images.md
+            - name: フォントとテキストの使用
+              href: using-fonts-and-text.md
+              items:
+                - name: '方法: フォント ファミリとフォントを作成する'
+                  href: how-to-construct-font-families-and-fonts.md
+                - name: '方法: テキストを指定の位置に描画する'
+                  href: how-to-draw-text-at-a-specified-location.md
+                - name: '方法: 四角形内にテキストを折り返して描画する'
+                  href: how-to-draw-wrapped-text-in-a-rectangle.md
+                - name: '方法: GDI を使用してテキストを描画する'
+                  href: how-to-draw-text-with-gdi.md
+                - name: '方法: 描画テキストを配置する'
+                  href: how-to-align-drawn-text.md
+                - name: '方法: 垂直方向のテキストを作成する'
+                  href: how-to-create-vertical-text.md
+                - name: '方法: 描画されたテキストにタブ ストップを設定する'
+                  href: how-to-set-tab-stops-in-drawn-text.md
+                - name: '方法: インストールされているフォントを列挙する'
+                  href: how-to-enumerate-installed-fonts.md
+                - name: '方法: プライベート フォント コレクションを作成する'
+                  href: how-to-create-a-private-font-collection.md
+                - name: '方法: フォント メトリックを取得する'
+                  href: how-to-obtain-font-metrics.md
+                - name: '方法: テキストでのアンチエイリアシングの使用'
+                  href: how-to-use-antialiasing-with-text.md
+            - name: 曲線の作成と描画
+              href: constructing-and-drawing-curves.md
+              items:
+                - name: '方法: カーディナル スプラインを描画する'
+                  href: how-to-draw-cardinal-splines.md
+                - name: '方法: 1 本のベジエ スプラインを描画する'
+                  href: how-to-draw-a-single-bezier-spline.md
+                - name: '方法: 一連のベジエ スプラインを描画する'
+                  href: how-to-draw-a-sequence-of-bezier-splines.md
+            - name: パスの作成および描画
+              href: constructing-and-drawing-paths.md
+              items:
+                - name: '方法: 直線、曲線、および形状から図形を作成する'
+                  href: how-to-create-figures-from-lines-curves-and-shapes.md
+                - name: '方法: 開いている図形を塗りつぶす'
+                  href: how-to-fill-open-figures.md
+                - name: '方法: 曲線のパスを直線に平坦化する'
+                  href: how-to-flatten-a-curved-path-into-a-line.md
+            - name: マネージド GDI+ での変換の使用
+              href: using-transformations-in-managed-gdi.md
+              items:
+                - name: ワールド変換の使用
+                  href: using-the-world-transformation.md
+                - name: 変換順序が重要となる理由
+                  href: why-transformation-order-is-significant.md
+            - name: グラフィックス コンテナーの使用
+              href: using-graphics-containers.md
+              items:
+                - name: Graphics オブジェクトの状態の管理
+                  href: managing-the-state-of-a-graphics-object.md
+                - name: 入れ子になっているグラフィックス コンテナーの使用
+                  href: using-nested-graphics-containers.md
+            - name: 領域の使用
+              href: using-regions.md
+              items:
+                - name: '方法: 領域でヒット テストを使用する'
+                  href: how-to-use-hit-testing-with-a-region.md
+                - name: '方法: 領域でクリッピングを使用する'
+                  href: how-to-use-clipping-with-a-region.md
+            - name: イメージの色の変更
+              href: recoloring-images.md
+              items:
+                - name: '方法: カラー行列を使用して単一色を変換する'
+                  href: how-to-use-a-color-matrix-to-transform-a-single-color.md
+                - name: '方法: イメージの色を変換する'
+                  href: how-to-translate-image-colors.md
+                - name: 変換を使用した色のスケーリング
+                  href: using-transformations-to-scale-colors.md
+                - name: '方法: 色を回転させる'
+                  href: how-to-rotate-colors.md
+                - name: '方法: 色を傾斜する'
+                  href: how-to-shear-colors.md
+                - name: '方法: カラー リマップ テーブルを使用する'
+                  href: how-to-use-a-color-remap-table.md
+            - name: マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用
+              href: using-image-encoders-and-decoders-in-managed-gdi.md
+              items:
+                - name: '方法: インストールされたエンコーダーの一覧'
+                  href: how-to-list-installed-encoders.md
+                - name: '方法: インストールされたデコーダーの一覧'
+                  href: how-to-list-installed-decoders.md
+                - name: '方法: エンコーダーがサポートするパラメーターの確認'
+                  href: how-to-determine-the-parameters-supported-by-an-encoder.md
+                - name: '方法: BMP イメージから PNG イメージへの変換'
+                  href: how-to-convert-a-bmp-image-to-a-png-image.md
+                - name: '方法: JPEG 圧縮レベルの設定'
+                  href: how-to-set-jpeg-compression-level.md
+            - name: ダブル バッファリングの使用
+              href: using-double-buffering.md
+              items:
+                - name: ダブル バッファリングされたグラフィックス
+                  href: double-buffered-graphics.md
+                - name: '方法: フォームとコントロールのダブル バッファリングを行うことによってグラフィックスのちらつきを軽減する'
+                  href: how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md
+                - name: '方法: バッファリングされたグラフィックスを手動で管理する'
+                  href: how-to-manually-manage-buffered-graphics.md
+                - name: '方法: バッファリングされたグラフィックスを手動で描画する'
+                  href: how-to-manually-render-buffered-graphics.md
+    - name: Windows フォームのアプリケーション設定
+      href: application-settings-for-windows-forms.md
       items:
-      - name: 直線、曲線、および図形
-        href: lines-curves-and-shapes.md
-        items:
-        - name: ベクター グラフィックスの概要
-          href: vector-graphics-overview.md
-        - name: GDI+ でのペン、直線、および四角形
-          href: pens-lines-and-rectangles-in-gdi.md
-        - name: GDI+ での楕円および円弧
-          href: ellipses-and-arcs-in-gdi.md
-        - name: GDI+ での多角形
-          href: polygons-in-gdi.md
-        - name: GDI+ でのカーディナル スプライン
-          href: cardinal-splines-in-gdi.md
-        - name: GDI+ でのベジエ スプライン
-          href: bezier-splines-in-gdi.md
-        - name: GDI+ でのグラフィックス パス
-          href: graphics-paths-in-gdi.md
-        - name: GDI+ でのブラシと塗りつぶされた図形
-          href: brushes-and-filled-shapes-in-gdi.md
-        - name: GDI+ での開いた曲線と閉じた曲線
-          href: open-and-closed-curves-in-gdi.md
-        - name: GDI+ での領域
-          href: regions-in-gdi.md
-        - name: GDI+ での描画サーフェイスの制限
-          href: restricting-the-drawing-surface-in-gdi.md
-        - name: 直線と曲線のアンチエイリアシング
-          href: antialiasing-with-lines-and-curves.md
-      - name: イメージ、ビットマップ、およびメタファイル
-        href: images-bitmaps-and-metafiles.md
-        items:
-        - name: ビットマップの種類
-          href: types-of-bitmaps.md
-        - name: GDI+ でのメタファイル
-          href: metafiles-in-gdi.md
-        - name: GDI+ でのイメージの描画、配置、およびクローン作成
-          href: drawing-positioning-and-cloning-images-in-gdi.md
-        - name: GDI+ でのイメージのトリミングおよびスケーリング
-          href: cropping-and-scaling-images-in-gdi.md
-      - name: 座標系と変換
-        href: coordinate-systems-and-transformations.md
-        items:
-        - name: 座標系の種類
-          href: types-of-coordinate-systems.md
-        - name: 変換の行列表現
-          href: matrix-representation-of-transformations.md
-        - name: グローバル変換とローカル変換
-          href: global-and-local-transformations.md
-    - name: マネージド グラフィックス クラスの使用
-      href: using-managed-graphics-classes.md
+        - name: アプリケーション設定の概要
+          href: application-settings-overview.md
+        - name: アプリケーション設定アーキテクチャ
+          href: application-settings-architecture.md
+        - name: アプリケーション設定の属性
+          href: application-settings-attributes.md
+        - name: カスタム コントロールのアプリケーション設定
+          href: application-settings-for-custom-controls.md
+        - name: アプリケーション設定とユーザー設定の使用
+          href: using-application-settings-and-user-settings.md
+          items:
+            - name: '方法: 設計時に新しい設定を作成する'
+              href: how-to-create-a-new-setting-at-design-time.md
+            - name: '方法: 設計時に既存の設定の値を変更する'
+              href: how-to-change-the-value-of-an-existing-setting-at-design-time.md
+            - name: '方法: アプリケーション セッション間で設定値を変更する'
+              href: how-to-change-the-value-of-a-setting-between-application-sessions.md
+            - name: '方法: 実行時に設定を C# で読み取る'
+              href: how-to-read-settings-at-run-time-with-csharp.md
+            - name: '方法: 実行時にユーザー設定を C# で書き込む'
+              href: how-to-write-user-settings-at-run-time-with-csharp.md
+            - name: '方法: C# のアプリケーションに複数の設定セットを追加する'
+              href: how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md
+        - name: '方法: アプリケーション設定を作成する'
+          href: how-to-create-application-settings.md
+        - name: '方法: アプリケーション設定を検証する'
+          href: how-to-validate-application-settings.md
+    - name: Windows フォームにおける印刷のサポート
+      href: windows-forms-print-support.md
       items:
-      - name: グラフィックス プログラミングについて
-        href: getting-started-with-graphics-programming.md
-        items:
-        - name: '方法: 描画する Graphics オブジェクトを作成する'
-          href: how-to-create-graphics-objects-for-drawing.md
-        - name: '方法: ペンを作成する'
-          href: how-to-create-a-pen.md
-        - name: '方法: ペンの色を設定する'
-          href: how-to-set-the-color-of-a-pen.md
-        - name: '方法: 純色ブラシを作成する'
-          href: how-to-create-a-solid-brush.md
-        - name: '方法: Windows フォームに直線を描画する'
-          href: how-to-draw-a-line-on-a-windows-form.md
-        - name: '方法: 形状のアウトラインを描画する'
-          href: how-to-draw-an-outlined-shape.md
-        - name: '方法: Windows フォームに塗りつぶした四角形を描画する'
-          href: how-to-draw-a-filled-rectangle-on-a-windows-form.md
-        - name: '方法: Windows フォームに塗りつぶした楕円を描画する'
-          href: how-to-draw-a-filled-ellipse-on-a-windows-form.md
-        - name: '方法: Windows フォームにテキストを描画する'
-          href: how-to-draw-text-on-a-windows-form.md
-        - name: '方法: Windows フォームに縦書きテキストを描画する'
-          href: how-to-draw-vertical-text-on-a-windows-form.md
-        - name: '方法: GDI+ を使用してイメージをレンダリングする'
-          href: how-to-render-images-with-gdi.md
-        - name: '方法: 成型された Windows フォームを作成する'
-          href: how-to-create-a-shaped-windows-form.md
-        - name: '方法: ピクセルをコピーして Windows フォームのちらつきを低減する'
-          href: how-to-copy-pixels-for-reducing-flicker-in-windows-forms.md
-      - name: ペンを使用した直線と図形の描画
-        href: using-a-pen-to-draw-lines-and-shapes.md
-        items:
-        - name: '方法: ペンを使用して線を描画する'
-          href: how-to-use-a-pen-to-draw-lines.md
-        - name: '方法: ペンを使用して四角形を描画する'
-          href: how-to-use-a-pen-to-draw-rectangles.md
-        - name: '方法: ペンの幅と配置を設定する'
-          href: how-to-set-pen-width-and-alignment.md
-        - name: '方法: ライン キャップを使用した直線を描画する'
-          href: how-to-draw-a-line-with-line-caps.md
-        - name: '方法: 直線を接合する'
-          href: how-to-join-lines.md
-        - name: '方法: カスタム破線を描画する'
-          href: how-to-draw-a-custom-dashed-line.md
-        - name: '方法: テクスチャを使用して塗りつぶした直線を描画する'
-          href: how-to-draw-a-line-filled-with-a-texture.md
-      - name: ブラシを使用した図形の塗りつぶし
-        href: using-a-brush-to-fill-shapes.md
-        items:
-        - name: '方法: 純色で図形を塗りつぶす'
-          href: how-to-fill-a-shape-with-a-solid-color.md
-        - name: '方法: ハッチ パターンで図形を塗りつぶす'
-          href: how-to-fill-a-shape-with-a-hatch-pattern.md
-        - name: '方法: イメージ テクスチャによって図形を塗りつぶす'
-          href: how-to-fill-a-shape-with-an-image-texture.md
-        - name: '方法: イメージを並べたパターンによって図形を塗りつぶす'
-          href: how-to-tile-a-shape-with-an-image.md
-      - name: グラデーション ブラシを使用した図形の塗りつぶし
-        href: using-a-gradient-brush-to-fill-shapes.md
-        items:
-        - name: '方法: 線形グラデーションを作成する'
-          href: how-to-create-a-linear-gradient.md
-        - name: '方法: パス グラデーションを作成する'
-          href: how-to-create-a-path-gradient.md
-        - name: '方法: グラデーションに対してガンマ補正を適用する'
-          href: how-to-apply-gamma-correction-to-a-gradient.md
-      - name: イメージ、ビットマップ、アイコン、およびメタファイルの操作
-        href: working-with-images-bitmaps-icons-and-metafiles.md
-        items:
-        - name: '方法: 既存のビットマップを画面に描画する'
-          href: how-to-draw-an-existing-bitmap-to-the-screen.md
-        - name: '方法: メタファイルを読み込んで表示する'
-          href: how-to-load-and-display-metafiles.md
-        - name: '方法: イメージをトリミングおよびスケーリングする'
-          href: how-to-crop-and-scale-images.md
-        - name: '方法: イメージを回転、反転、および傾斜させる'
-          href: how-to-rotate-reflect-and-skew-images.md
-        - name: '方法: 補間モードを使用してスケーリング時の画質を制御する'
-          href: how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md
-        - name: '方法: サムネイル イメージを作成する'
-          href: how-to-create-thumbnail-images.md
-        - name: '方法: 自動スケーリングを解除してパフォーマンスを向上させる'
-          href: how-to-improve-performance-by-avoiding-automatic-scaling.md
-        - name: '方法: イメージ メタデータを読み取る'
-          href: how-to-read-image-metadata.md
-        - name: '方法: 実行時にビットマップを作成する'
-          href: how-to-create-a-bitmap-at-run-time.md
-        - name: '方法: Windows フォームでファイルに関連付けられているアイコンを抽出する'
-          href: how-to-extract-the-icon-associated-with-a-file-in-windows-forms.md
-      - name: アルファ ブレンドの直線と塗りつぶし
-        href: alpha-blending-lines-and-fills.md
-        items:
-        - name: '方法: 不透明な直線および半透明な直線を描画する'
-          href: how-to-draw-opaque-and-semitransparent-lines.md
-        - name: '方法: 不透明ブラシおよび半透明ブラシを使用して描画する'
-          href: how-to-draw-with-opaque-and-semitransparent-brushes.md
-        - name: '方法: 複合モードを使用してアルファ ブレンドを制御する'
-          href: how-to-use-compositing-mode-to-control-alpha-blending.md
-        - name: '方法: カラー行列を使用してイメージのアルファ値を設定する'
-          href: how-to-use-a-color-matrix-to-set-alpha-values-in-images.md
-      - name: フォントとテキストの使用
-        href: using-fonts-and-text.md
-        items:
-        - name: '方法: フォント ファミリとフォントを作成する'
-          href: how-to-construct-font-families-and-fonts.md
-        - name: '方法: テキストを指定の位置に描画する'
-          href: how-to-draw-text-at-a-specified-location.md
-        - name: '方法: 四角形内にテキストを折り返して描画する'
-          href: how-to-draw-wrapped-text-in-a-rectangle.md
-        - name: '方法: GDI を使用してテキストを描画する'
-          href: how-to-draw-text-with-gdi.md
-        - name: '方法: 描画テキストを配置する'
-          href: how-to-align-drawn-text.md
-        - name: '方法: 垂直方向のテキストを作成する'
-          href: how-to-create-vertical-text.md
-        - name: '方法: 描画されたテキストにタブ ストップを設定する'
-          href: how-to-set-tab-stops-in-drawn-text.md
-        - name: '方法: インストールされているフォントを列挙する'
-          href: how-to-enumerate-installed-fonts.md
-        - name: '方法: プライベート フォント コレクションを作成する'
-          href: how-to-create-a-private-font-collection.md
-        - name: '方法: フォント メトリックを取得する'
-          href: how-to-obtain-font-metrics.md
-        - name: '方法: テキストでのアンチエイリアシングの使用'
-          href: how-to-use-antialiasing-with-text.md
-      - name: 曲線の作成と描画
-        href: constructing-and-drawing-curves.md
-        items:
-        - name: '方法: カーディナル スプラインを描画する'
-          href: how-to-draw-cardinal-splines.md
-        - name: '方法: 1 本のベジエ スプラインを描画する'
-          href: how-to-draw-a-single-bezier-spline.md
-        - name: '方法: 一連のベジエ スプラインを描画する'
-          href: how-to-draw-a-sequence-of-bezier-splines.md
-      - name: パスの作成および描画
-        href: constructing-and-drawing-paths.md
-        items:
-        - name: '方法: 直線、曲線、および形状から図形を作成する'
-          href: how-to-create-figures-from-lines-curves-and-shapes.md
-        - name: '方法: 開いている図形を塗りつぶす'
-          href: how-to-fill-open-figures.md
-        - name: '方法: 曲線のパスを直線に平坦化する'
-          href: how-to-flatten-a-curved-path-into-a-line.md
-      - name: マネージド GDI+ での変換の使用
-        href: using-transformations-in-managed-gdi.md
-        items:
-        - name: ワールド変換の使用
-          href: using-the-world-transformation.md
-        - name: 変換順序が重要となる理由
-          href: why-transformation-order-is-significant.md
-      - name: グラフィックス コンテナーの使用
-        href: using-graphics-containers.md
-        items:
-        - name: Graphics オブジェクトの状態の管理
-          href: managing-the-state-of-a-graphics-object.md
-        - name: 入れ子になっているグラフィックス コンテナーの使用
-          href: using-nested-graphics-containers.md
-      - name: 領域の使用
-        href: using-regions.md
-        items:
-        - name: '方法: 領域でヒット テストを使用する'
-          href: how-to-use-hit-testing-with-a-region.md
-        - name: '方法: 領域でクリッピングを使用する'
-          href: how-to-use-clipping-with-a-region.md
-      - name: イメージの色の変更
-        href: recoloring-images.md
-        items:
-        - name: '方法: カラー行列を使用して単一色を変換する'
-          href: how-to-use-a-color-matrix-to-transform-a-single-color.md
-        - name: '方法: イメージの色を変換する'
-          href: how-to-translate-image-colors.md
-        - name: 変換を使用した色のスケーリング
-          href: using-transformations-to-scale-colors.md
-        - name: '方法: 色を回転させる'
-          href: how-to-rotate-colors.md
-        - name: '方法: 色を傾斜する'
-          href: how-to-shear-colors.md
-        - name: '方法: カラー リマップ テーブルを使用する'
-          href: how-to-use-a-color-remap-table.md
-      - name: マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用
-        href: using-image-encoders-and-decoders-in-managed-gdi.md
-        items:
-        - name: '方法: インストールされたエンコーダーの一覧'
-          href: how-to-list-installed-encoders.md
-        - name: '方法: インストールされたデコーダーの一覧'
-          href: how-to-list-installed-decoders.md
-        - name: '方法: エンコーダーがサポートするパラメーターの確認'
-          href: how-to-determine-the-parameters-supported-by-an-encoder.md
-        - name: '方法: BMP イメージから PNG イメージへの変換'
-          href: how-to-convert-a-bmp-image-to-a-png-image.md
-        - name: '方法: JPEG 圧縮レベルの設定'
-          href: how-to-set-jpeg-compression-level.md
-      - name: ダブル バッファリングの使用
-        href: using-double-buffering.md
-        items:
-        - name: ダブル バッファリングされたグラフィックス
-          href: double-buffered-graphics.md
-        - name: '方法: フォームとコントロールのダブル バッファリングを行うことによってグラフィックスのちらつきを軽減する'
-          href: how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls.md
-        - name: '方法: バッファリングされたグラフィックスを手動で管理する'
-          href: how-to-manually-manage-buffered-graphics.md
-        - name: '方法: バッファリングされたグラフィックスを手動で描画する'
-          href: how-to-manually-render-buffered-graphics.md
-  - name: Windows フォームのアプリケーション設定
-    href: application-settings-for-windows-forms.md
-    items:
-    - name: アプリケーション設定の概要
-      href: application-settings-overview.md
-    - name: アプリケーション設定アーキテクチャ
-      href: application-settings-architecture.md
-    - name: アプリケーション設定の属性
-      href: application-settings-attributes.md
-    - name: カスタム コントロールのアプリケーション設定
-      href: application-settings-for-custom-controls.md
-    - name: アプリケーション設定とユーザー設定の使用
-      href: using-application-settings-and-user-settings.md
+        - name: '方法: 標準の Windows フォーム印刷ジョブを作成する'
+          href: how-to-create-standard-windows-forms-print-jobs.md
+        - name: '方法: 実行時に PrintDialog のユーザー入力をキャプチャする'
+          href: how-to-capture-user-input-from-a-printdialog-at-run-time.md
+        - name: '方法: Windows フォームでユーザーのコンピューターに接続されたプリンターを選択する'
+          href: how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md
+        - name: '方法: Windows フォームでグラフィックスを印刷する'
+          href: how-to-print-graphics-in-windows-forms.md
+        - name: '方法: Windows フォームで複数ページのテキスト ファイルを印刷する'
+          href: how-to-print-a-multi-page-text-file-in-windows-forms.md
+        - name: '方法: Windows フォームの印刷ジョブを完了する'
+          href: how-to-complete-windows-forms-print-jobs.md
+        - name: '方法: Windows フォームを印刷する'
+          href: how-to-print-a-windows-form.md
+        - name: '方法: Windows フォームで印刷プレビューを使用して印刷する'
+          href: how-to-print-in-windows-forms-using-print-preview.md
+    - name: ドラッグ アンド ドロップ操作とクリップボードのサポート
+      href: drag-and-drop-operations-and-clipboard-support.md
       items:
-      - name: '方法: 設計時に新しい設定を作成する'
-        href: how-to-create-a-new-setting-at-design-time.md
-      - name: '方法: 設計時に既存の設定の値を変更する'
-        href: how-to-change-the-value-of-an-existing-setting-at-design-time.md
-      - name: '方法: アプリケーション セッション間で設定値を変更する'
-        href: how-to-change-the-value-of-a-setting-between-application-sessions.md
-      - name: '方法: 実行時に設定を C# で読み取る'
-        href: how-to-read-settings-at-run-time-with-csharp.md
-      - name: '方法: 実行時にユーザー設定を C# で書き込む'
-        href: how-to-write-user-settings-at-run-time-with-csharp.md
-      - name: '方法: C# のアプリケーションに複数の設定セットを追加する'
-        href: how-to-add-multiple-sets-of-settings-to-your-application-in-csharp.md
-    - name: '方法: アプリケーション設定を作成する'
-      href: how-to-create-application-settings.md
-    - name: '方法: アプリケーション設定を検証する'
-      href: how-to-validate-application-settings.md
-  - name: Windows フォームにおける印刷のサポート
-    href: windows-forms-print-support.md
-    items:
-    - name: '方法: 標準の Windows フォーム印刷ジョブを作成する'
-      href: how-to-create-standard-windows-forms-print-jobs.md
-    - name: '方法: 実行時に PrintDialog のユーザー入力をキャプチャする'
-      href: how-to-capture-user-input-from-a-printdialog-at-run-time.md
-    - name: '方法: Windows フォームでユーザーのコンピューターに接続されたプリンターを選択する'
-      href: how-to-choose-the-printers-attached-to-user-computer-in-windows-forms.md
-    - name: '方法: Windows フォームでグラフィックスを印刷する'
-      href: how-to-print-graphics-in-windows-forms.md
-    - name: '方法: Windows フォームで複数ページのテキスト ファイルを印刷する'
-      href: how-to-print-a-multi-page-text-file-in-windows-forms.md
-    - name: '方法: Windows フォームの印刷ジョブを完了する'
-      href: how-to-complete-windows-forms-print-jobs.md
-    - name: '方法: Windows フォームを印刷する'
-      href: how-to-print-a-windows-form.md
-    - name: '方法: Windows フォームで印刷プレビューを使用して印刷する'
-      href: how-to-print-in-windows-forms-using-print-preview.md
-  - name: ドラッグ アンド ドロップ操作とクリップボードのサポート
-    href: drag-and-drop-operations-and-clipboard-support.md
-    items:
-    - name: 'チュートリアル: Windows フォームにおけるドラッグ アンド ドロップ操作の実行'
-      href: walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md
-    - name: '方法: アプリケーション間でドラッグ アンド ドロップ操作を実行する'
-      href: how-to-perform-drag-and-drop-operations-between-applications.md
-    - name: '方法: クリップボードにデータを追加する'
-      href: how-to-add-data-to-the-clipboard.md
-    - name: '方法: クリップボードからデータを取得する'
-      href: how-to-retrieve-data-from-the-clipboard.md
-  - name: Windows フォーム アプリケーションにおけるネットワーク
-    href: networking-in-windows-forms-applications.md
-  - name: Windows フォームのグローバル化
-    href: globalizing-windows-forms.md
-    items:
-    - name: エンコード方式および Windows フォームのグローバリゼーション
-      href: encoding-and-windows-forms-globalization.md
-    - name: Windows フォームおよびコントロールの国際対応フォント
-      href: international-fonts-in-windows-forms-and-controls.md
-    - name: Windows フォーム アプリケーションの双方向サポート
-      href: bi-directional-support-for-windows-forms-applications.md
-    - name: ImeMode プロパティによるアジア言語の文字表示
-      href: display-of-asian-characters-with-the-imemode-property.md
-  - name: Windows フォームとアンマネージ アプリケーション
-    href: windows-forms-and-unmanaged-applications.md
-    items:
-    - name: Windows フォームおよびアンマネージ アプリケーションの概要
-      href: windows-forms-and-unmanaged-applications-overview.md
-    - name: '方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする'
-      href: how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md
-    - name: '方法: ShowDialog メソッドで Windows フォームを表示して COM 相互運用機能をサポートする'
-      href: com-interop-by-displaying-a-windows-form-shadow.md
-  - name: システム情報と Windows フォーム
-    href: system-information-and-windows-forms.md
-  - name: Windows フォームでの電源管理
-    href: power-management-in-windows-forms.md
-  - name: Windows フォーム アプリケーションのヘルプ システム
-    href: help-systems-in-windows-forms-applications.md
-  - name: Windows フォームのビジュアルの継承
-    href: windows-forms-visual-inheritance.md
-    items:
-    - name: '方法: Windows フォームを継承する'
-      href: how-to-inherit-windows-forms.md
-    - name: '方法: [継承ピッカー] ダイアログ ボックスを使用してフォームを継承する'
-      href: how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md
-    - name: 基本フォームの外観を変更した場合の影響
-      href: effects-of-modifying-base-form-appearance.md
-    - name: 'チュートリアル: ビジュアル継承のデモンストレーション'
-      href: walkthrough-demonstrating-visual-inheritance.md
-    - name: '方法: Modifiers プロパティおよび GenerateMember プロパティを使用する'
-      href: how-to-use-the-modifiers-and-generatemember-properties.md
-  - name: マルチ ドキュメント インターフェイス (MDI) アプリケーション
-    href: multiple-document-interface-mdi-applications.md
-    items:
-    - name: '方法: MDI 親フォームを作成する'
-      href: how-to-create-mdi-parent-forms.md
-    - name: '方法: MDI 子フォームを作成する'
-      href: how-to-create-mdi-child-forms.md
-    - name: '方法: アクティブな MDI 子フォームを特定する'
-      href: how-to-determine-the-active-mdi-child.md
-    - name: '方法: アクティブな MDI 子フォームにデータを送信する'
-      href: how-to-send-data-to-the-active-mdi-child.md
-    - name: '方法: MDI 子フォームを配置する'
-      href: how-to-arrange-mdi-child-forms.md
-  - name: Windows フォームでのヘルプの統合
-    href: integrating-user-help-in-windows-forms.md
-    items:
-    - name: '方法: Windows アプリケーションにヘルプを提供する'
-      href: how-to-provide-help-in-a-windows-application.md
-    - name: '方法: ポップアップ ヘルプを表示する'
-      href: how-to-display-pop-up-help.md
-    - name: ツールヒントを使用したコントロールのヘルプ
-      href: control-help-using-tooltips.md
-  - name: Windows フォームのユーザー補助
-    href: windows-forms-accessibility.md
-    items:
-    - name: 'チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成'
-      href: walkthrough-creating-an-accessible-windows-based-application.md
+        - name: 'チュートリアル: Windows フォームにおけるドラッグ アンド ドロップ操作の実行'
+          href: walkthrough-performing-a-drag-and-drop-operation-in-windows-forms.md
+        - name: '方法: アプリケーション間でドラッグ アンド ドロップ操作を実行する'
+          href: how-to-perform-drag-and-drop-operations-between-applications.md
+        - name: '方法: クリップボードにデータを追加する'
+          href: how-to-add-data-to-the-clipboard.md
+        - name: '方法: クリップボードからデータを取得する'
+          href: how-to-retrieve-data-from-the-clipboard.md
+    - name: Windows フォーム アプリケーションにおけるネットワーク
+      href: networking-in-windows-forms-applications.md
+    - name: Windows フォームのグローバル化
+      href: globalizing-windows-forms.md
       items:
-      - name: ユーザ補助ガイドラインをサポートする Windows フォーム コントロールのプロパティ
-        href: properties-on-windows-forms-controls-that-support-accessibility-guidelines.md
-  - name: WPF コントロールの使用
-    href: using-wpf-controls.md
-    items:
-    - name: '方法: デザイン時に ElementHost コントロールをコピーして貼り付ける'
-      href: how-to-copy-and-paste-an-elementhost-control-at-design-time.md
-    - name: 'チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの配置'
-      href: walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md
-    - name: 'チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成'
-      href: walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md
-    - name: 'チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの割り当て'
-      href: walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md
-    - name: 'チュートリアル: WPF コンテンツへのスタイルの適用'
-      href: walkthrough-styling-wpf-content.md
-ms.openlocfilehash: 59e8cc574aa2fd90e3c79385865aacd75c63fa08
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470723"
+        - name: エンコード方式および Windows フォームのグローバリゼーション
+          href: encoding-and-windows-forms-globalization.md
+        - name: Windows フォームおよびコントロールの国際対応フォント
+          href: international-fonts-in-windows-forms-and-controls.md
+        - name: Windows フォーム アプリケーションの双方向サポート
+          href: bi-directional-support-for-windows-forms-applications.md
+        - name: ImeMode プロパティによるアジア言語の文字表示
+          href: display-of-asian-characters-with-the-imemode-property.md
+    - name: Windows フォームとアンマネージ アプリケーション
+      href: windows-forms-and-unmanaged-applications.md
+      items:
+        - name: Windows フォームおよびアンマネージ アプリケーションの概要
+          href: windows-forms-and-unmanaged-applications-overview.md
+        - name: '方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートする'
+          href: how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md
+        - name: '方法: ShowDialog メソッドで Windows フォームを表示して COM 相互運用機能をサポートする'
+          href: com-interop-by-displaying-a-windows-form-shadow.md
+    - name: システム情報と Windows フォーム
+      href: system-information-and-windows-forms.md
+    - name: Windows フォームでの電源管理
+      href: power-management-in-windows-forms.md
+    - name: Windows フォーム アプリケーションのヘルプ システム
+      href: help-systems-in-windows-forms-applications.md
+    - name: Windows フォームのビジュアルの継承
+      href: windows-forms-visual-inheritance.md
+      items:
+        - name: '方法: Windows フォームを継承する'
+          href: how-to-inherit-windows-forms.md
+        - name: '方法: [継承ピッカー] ダイアログ ボックスを使用してフォームを継承する'
+          href: how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md
+        - name: 基本フォームの外観を変更した場合の影響
+          href: effects-of-modifying-base-form-appearance.md
+        - name: 'チュートリアル: ビジュアル継承のデモンストレーション'
+          href: walkthrough-demonstrating-visual-inheritance.md
+        - name: '方法: Modifiers プロパティおよび GenerateMember プロパティを使用する'
+          href: how-to-use-the-modifiers-and-generatemember-properties.md
+    - name: マルチ ドキュメント インターフェイス (MDI) アプリケーション
+      href: multiple-document-interface-mdi-applications.md
+      items:
+        - name: '方法: MDI 親フォームを作成する'
+          href: how-to-create-mdi-parent-forms.md
+        - name: '方法: MDI 子フォームを作成する'
+          href: how-to-create-mdi-child-forms.md
+        - name: '方法: アクティブな MDI 子フォームを特定する'
+          href: how-to-determine-the-active-mdi-child.md
+        - name: '方法: アクティブな MDI 子フォームにデータを送信する'
+          href: how-to-send-data-to-the-active-mdi-child.md
+        - name: '方法: MDI 子フォームを配置する'
+          href: how-to-arrange-mdi-child-forms.md
+    - name: Windows フォームでのヘルプの統合
+      href: integrating-user-help-in-windows-forms.md
+      items:
+        - name: '方法: Windows アプリケーションにヘルプを提供する'
+          href: how-to-provide-help-in-a-windows-application.md
+        - name: '方法: ポップアップ ヘルプを表示する'
+          href: how-to-display-pop-up-help.md
+        - name: ツールヒントを使用したコントロールのヘルプ
+          href: control-help-using-tooltips.md
+    - name: Windows フォームのユーザー補助
+      href: windows-forms-accessibility.md
+      items:
+        - name: 'チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成'
+          href: walkthrough-creating-an-accessible-windows-based-application.md
+          items:
+            - name: ユーザ補助ガイドラインをサポートする Windows フォーム コントロールのプロパティ
+              href: properties-on-windows-forms-controls-that-support-accessibility-guidelines.md
+    - name: WPF コントロールの使用
+      href: using-wpf-controls.md
+      items:
+        - name: '方法: デザイン時に ElementHost コントロールをコピーして貼り付ける'
+          href: how-to-copy-and-paste-an-elementhost-control-at-design-time.md
+        - name: 'チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの配置'
+          href: walkthrough-arranging-wpf-content-on-windows-forms-at-design-time.md
+        - name: 'チュートリアル: デザイン時の Windows フォームでの新しい WPF コンテンツの作成'
+          href: walkthrough-creating-new-wpf-content-on-windows-forms-at-design-time.md
+        - name: 'チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの割り当て'
+          href: walkthrough-assigning-wpf-content-on-windows-forms-at-design-time.md
+        - name: 'チュートリアル: WPF コンテンツへのスタイルの適用'
+          href: walkthrough-styling-wpf-content.md

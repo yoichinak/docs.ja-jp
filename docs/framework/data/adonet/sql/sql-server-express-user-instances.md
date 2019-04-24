@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
 ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111151"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンス
@@ -37,18 +37,17 @@ sp_configure 'user instances enabled','0'
  ユーザー インスタンスのネットワーク プロトコルは、ローカルの名前付きパイプにする必要があります。 ユーザー インスタンスを SQL Server のリモート インスタンスで開始することはできません。また、SQL Server ログインは許可されません。  
   
 ## <a name="connecting-to-a-user-instance"></a>ユーザー インスタンスへの接続  
- `User Instance`と`AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>キーワードを使用する、<xref:System.Data.SqlClient.SqlConnection>ユーザー インスタンスに接続します。 ユーザー インスタンスはサポートも、<xref:System.Data.SqlClient.SqlConnectionStringBuilder>`UserInstance`と`AttachDBFilename`プロパティ。  
+ `User Instance`と`AttachDBFilename`<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>キーワードを使用する、<xref:System.Data.SqlClient.SqlConnection>ユーザー インスタンスに接続します。 ユーザー インスタンスは、<xref:System.Data.SqlClient.SqlConnectionStringBuilder> の `UserInstance` プロパティおよび `AttachDBFilename` プロパティでもサポートされます。  
   
  以下にサンプルの接続文字列を示します。次の点に注意してください。  
   
--   
-  `Data Source` キーワードは、ユーザー インスタンスを生成している SQL Server Express の親インスタンスを指します。 既定のインスタンスは、.\sqlexpress です。  
+-   `Data Source` キーワードは、ユーザー インスタンスを生成している SQL Server Express の親インスタンスを指します。 既定のインスタンスは、.\sqlexpress です。  
   
--   `Integrated Security` 設定されている`true`します。 ユーザー インスタンスに接続するには Windows 認証が必要です。SQL Server ログインはサポートされません。  
+-   `Integrated Security` が `true` に設定されます。 ユーザー インスタンスに接続するには Windows 認証が必要です。SQL Server ログインはサポートされません。  
   
 -   `User Instance` は `true` に設定されます。これにより、ユーザー インスタンスが呼び出されます。 既定値は `false` です。  
   
--   プライマリ データベース ファイル (.mdf) にアタッチするには、`AttachDbFileName` 接続文字列キーワードで完全パス名を指定します。 `AttachDbFileName` "extended properties"および"initial file name"キー内にも対応して、<xref:System.Data.SqlClient.SqlConnection>接続文字列。  
+-   プライマリ データベース ファイル (.mdf) にアタッチするには、`AttachDbFileName` 接続文字列キーワードで完全パス名を指定します。 また、`AttachDbFileName` は、<xref:System.Data.SqlClient.SqlConnection> 接続文字列内の "extended properties" キーおよび "initial file name" キーに対応しています。  
   
 -   パイプ記号で囲まれた `|DataDirectory|` の部分には、接続元のアプリケーションのデータ ディレクトリを表す文字列が入ります。データベース ファイルである .mdf と .ldf、およびログ ファイルの格納場所を相対パスで指定します。 これらのファイルを別の場所に移す場合は、ファイルの完全パスを指定する必要があります。  
   
@@ -59,10 +58,10 @@ Initial Catalog=InstanceDB;
 ```  
   
 > [!NOTE]
->  使用することも、<xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A>と<xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A>プロパティで接続文字列を作成する実行時間。  
+>  実行時に接続文字列を作成するために <xref:System.Data.SqlClient.SqlConnectionStringBuilder><xref:System.Data.SqlClient.SqlConnectionStringBuilder.UserInstance%2A> および <xref:System.Data.SqlClient.SqlConnectionStringBuilder.AttachDBFilename%2A> プロパティを使用することもできます。  
   
 ### <a name="using-the-124datadirectory124-substitution-string"></a>使用して、 &#124;DataDirectory&#124;置換文字列  
- `AttachDbFileName` ADO.NET 2.0 の導入に伴い拡張されました、 `|DataDirectory|` (パイプ記号で囲まれた) 置換文字列。 `DataDirectory` 組み合わせて使用が`AttachDbFileName`をデータ ファイルへの相対パスを示すために完全なパスを指定する必要はなく、データ ソースへの相対パスに基づいて接続文字列を作成できるようになっています。  
+ ADO.NET 2.0 では、`AttachDbFileName` が拡張されて、`|DataDirectory|` というパイプ記号で囲まれた置換文字列が導入されました。 `DataDirectory` に `AttachDbFileName` を組み合わせて使用することで、データ ファイルへの相対パスを指定でき、完全パスを使用する代わりに、データ ソースの相対パスに基づいて接続文字列を作成できます。  
   
  `DataDirectory` が表す物理的な場所は、アプリケーションの種類によって異なります。 次の例では、アタッチする Northwind.mdf ファイルが、アプリケーションの \app_data フォルダーに格納されています。  
   
@@ -78,7 +77,7 @@ Initial Catalog=Northwind;
  接続文字列に指定した置換文字列の形式が正しくない場合、<xref:System.ArgumentException> がスローされます。  
   
 > [!NOTE]
->  <xref:System.Data.SqlClient> ローカル コンピューターのファイル システムに対して完全なパスに代替文字列を解決します。 したがって、リモート サーバー、HTTP、および UNC のパス名はサポートされません。 サーバーがローカル コンピューター上に存在しない場合、接続を開こうとすると例外がスローされます。  
+>  置換文字列は、<xref:System.Data.SqlClient> によってローカル コンピューターのファイル システムと照合されて完全パスに解決されます。 したがって、リモート サーバー、HTTP、および UNC のパス名はサポートされません。 サーバーがローカル コンピューター上に存在しない場合、接続を開こうとすると例外がスローされます。  
   
  <xref:System.Data.SqlClient.SqlConnection> を開くと、この接続文字列が、既定の SQL Server Express インスタンスから、実行時に開始された (呼び出し元のアカウントで実行される) インスタンスへとリダイレクトされます。  
   

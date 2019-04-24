@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
 ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157678"
 ---
 # <a name="securing-services"></a>サービスのセキュリティ保護
@@ -110,10 +110,10 @@ Windows Communication Foundation (WCF) サービスのセキュリティは、2 
 - [サービス コントラクトの設計](../../../docs/framework/wcf/designing-service-contracts.md)
 - [セキュリティ](../../../docs/framework/wcf/feature-details/security.md)
 - [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)
-- [方法: ProtectionLevel プロパティを設定する](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
-- [方法: Windows 資格情報でサービスをセキュリティで保護する](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
-- [方法: セキュリティ モードを設定する](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
-- [方法: クライアントの資格情報の種類を指定する](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
-- [方法: PrincipalPermissionAttribute クラスでアクセスを制限する](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
-- [方法: サービスでクライアントに偽装する](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
+- [方法: ProtectionLevel プロパティを設定します。](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [方法: Windows 資格情報でサービスをセキュリティで保護します。](../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)
+- [方法: セキュリティ モードを設定します。](../../../docs/framework/wcf/how-to-set-the-security-mode.md)
+- [方法: クライアント資格情報の種類を指定します。](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [方法: PrincipalPermissionAttribute クラスでアクセスを制限します。](../../../docs/framework/wcf/how-to-restrict-access-with-the-principalpermissionattribute-class.md)
+- [方法: サービスでのクライアントを偽装します。](../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)
 - [方法: セキュリティ コンテキストを調べる](../../../docs/framework/wcf/how-to-examine-the-security-context.md)

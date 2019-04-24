@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e73fe48467ede501bae0ddd9362d9d55b3ca998b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234078"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774052"
 ---
 ### <a name="winforms-domain-upbutton-and-downbutton-actions-are-in-sync-now"></a>WinForm の Domain upbutton アクションと downbutton アクションが同期するようになった
 

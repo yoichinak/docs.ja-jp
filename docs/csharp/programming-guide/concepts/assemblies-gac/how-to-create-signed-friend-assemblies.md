@@ -3,10 +3,10 @@ title: '方法: 署名されたフレンド アセンブリを作成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
 ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325203"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>方法: 署名されたフレンド アセンブリを作成する (C#)
@@ -94,7 +94,7 @@ ms.locfileid: "59325203"
 - [.NET のアセンブリ](../../../../standard/assembly/index.md)
 - [フレンド アセンブリ](../../../../standard/assembly/friend-assemblies.md)
 - [方法: 署名のないフレンド アセンブリを作成する (C#)](../../../../csharp/programming-guide/concepts/assemblies-gac/how-to-create-unsigned-friend-assemblies.md)
-- [T:System.Reflection.AssemblyKeyFileAttribute](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
+- [/keyfile](../../../../csharp/language-reference/compiler-options/keyfile-compiler-option.md)
 - [Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md)
 - [厳密な名前付きアセンブリの作成と使用](../../../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)
 - [C# プログラミング ガイド](../../../../csharp/programming-guide/index.md)

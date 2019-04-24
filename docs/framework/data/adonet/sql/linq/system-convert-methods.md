@@ -3,15 +3,15 @@ title: System.Convert メソッド
 ms.date: 03/30/2017
 ms.assetid: 3ca6c5b6-ea5d-4ab0-b675-f082135b342c
 ms.openlocfilehash: 9836820f2c084a80fcc0a4856f20597716344dfd
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59480652"
 ---
 # <a name="systemconvert-methods"></a>System.Convert メソッド
 
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 次をサポートしていません<xref:System.Convert>メソッド。
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、次の <xref:System.Convert> メソッドをサポートしていません。
 
 - <xref:System.IFormatProvider> パラメーターを持つ形式。
 
@@ -27,9 +27,9 @@ ms.locfileid: "59480652"
 
 - 次のメソッド。
 
-  - `public static <Type2> To<Type2>(<Type1> value);` where
+  - `public static <Type2> To<Type2>(<Type1> value);` (
 
-    `Type1` `Type2`はそれぞれの`sbyte`、 `uint`、 `ulong`、または`ushort`します。
+    `Type1` および `Type2` は `sbyte`、`uint`、`ulong`、`ushort` のいずれか)
 
   - C#: 
 

@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_SCNotSupported
 ms.assetid: 197d17cb-2904-4e12-8e45-aba23bddec8c
 ms.openlocfilehash: c9b2483ca51982d93f746d23d996d552a621c64d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320250"
 ---
 # <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a>このシステムには、簡体字中国語ロケールのサポートは含まれていません。

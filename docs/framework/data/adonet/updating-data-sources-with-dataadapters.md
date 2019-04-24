@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: d1bd9a8c-0e29-40e3-bda8-d89176b72fb1
 ms.openlocfilehash: 548e374fbabee57e756d06e5cb56a59f8e97a47c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59153596"
 ---
 # <a name="updating-data-sources-with-dataadapters"></a>DataAdapter によるデータ ソースの更新
@@ -46,7 +46,7 @@ ms.locfileid: "59153596"
   
  呼び出すときに発生する例外を処理する、`Update`メソッドを使用できます、`RowUpdated`発生すると、行更新エラーに応答するイベント (を参照してください[DataAdapter イベントの処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)) を設定することもできます`DataAdapter.ContinueUpdateOnError`に`true`呼び出す前に`Update`に格納されているエラー情報に応答し、`RowError`更新が完了すると、特定の行のプロパティ (を参照してください[行エラー情報](../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-error-information.md))。  
   
- **注**を呼び出す`AcceptChanges`で、 `DataSet`、 `DataTable`、または`DataRow`がすべて`Original`の値を`DataRow`で上書きされます、`Current`の値を`DataRow`。 行を一意に識別するフィールド値が変更された場合は、`AcceptChanges` 呼び出しの後に `Original` 値がデータ ソースの値と一致しなくなります。 `AcceptChanges` 行ごとの Update メソッドの呼び出し中に自動的に呼び出される、`DataAdapter`します。 Update メソッドの呼び出し中に元の値を維持するには、まず `AcceptChangesDuringUpdate` の `DataAdapter` プロパティを false に設定するか、`RowUpdated` イベントのイベント ハンドラーを作成し、その <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> を <xref:System.Data.UpdateStatus.SkipCurrentRow> に設定します。 詳細については、次を参照してください。 [DataSet の内容のマージ](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)と[DataAdapter イベントの処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)します。  
+ **注**を呼び出す`AcceptChanges`で、 `DataSet`、 `DataTable`、または`DataRow`がすべて`Original`の値を`DataRow`で上書きされます、`Current`の値を`DataRow`。 行を一意に識別するフィールド値が変更された場合は、`AcceptChanges` 呼び出しの後に `Original` 値がデータ ソースの値と一致しなくなります。 `AcceptChanges` は、`DataAdapter` の Update メソッドを呼び出す間に、各行について自動的に呼び出されます。 Update メソッドの呼び出し中に元の値を維持するには、まず `AcceptChangesDuringUpdate` の `DataAdapter` プロパティを false に設定するか、`RowUpdated` イベントのイベント ハンドラーを作成し、その <xref:System.Data.Common.RowUpdatedEventArgs.Status%2A> を <xref:System.Data.UpdateStatus.SkipCurrentRow> に設定します。 詳細については、次を参照してください。 [DataSet の内容のマージ](../../../../docs/framework/data/adonet/dataset-datatable-dataview/merging-dataset-contents.md)と[DataAdapter イベントの処理](../../../../docs/framework/data/adonet/handling-dataadapter-events.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、明示的に設定して変更された行の更新を実行する方法、`UpdateCommand`の`DataAdapter`呼び出しとその`Update`メソッド。 UPDATE ステートメントの WHERE 句に指定したパラメーターが `Original` の `SourceColumn` 値を使用するように設定されていることに注意してください。 `Current` 値が既に変更されている可能性、そしてデータ ソースの値と一致していない可能性があるため、この設定は重要です。 `Original` 値は、データ ソースから `DataTable` にデータを取得するために使用された値です。  

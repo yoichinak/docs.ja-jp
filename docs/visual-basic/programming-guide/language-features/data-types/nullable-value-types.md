@@ -11,10 +11,10 @@ helpviewer_keywords:
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
 ms.openlocfilehash: d17d2ad3fd99c6d563c21ddd646396ccb1c1ca48
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58921313"
 ---
 # <a name="nullable-value-types-visual-basic"></a>null 許容値型 (Visual Basic)
@@ -112,7 +112,7 @@ Null 許容と`Boolean`の変数のブール式で使用、結果があります
 - [Null 許容型の使用](../../../../csharp/programming-guide/nullable-types/using-nullable-types.md)
 - [データの種類](index.md)
 - [値型と参照型](value-types-and-reference-types.md)
-- [データ型のトラブルシューティング](troubleshooting-data-types.md)
+- [トラブルシューティング (データ型)](troubleshooting-data-types.md)
 - [TableAdapters を使用してデータセットを入力する](/visualstudio/data-tools/fill-datasets-by-using-tableadapters)
 - [If 演算子](../../../language-reference/operators/if-operator.md)
 - [ローカル型の推論](../variables/local-type-inference.md)

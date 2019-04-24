@@ -9,12 +9,12 @@ helpviewer_keywords:
 - what's new [.NET Framework]
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2bdb1bf5d7e32c2e05eb779eed16c311cbd3eae7
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: 59fe1a5492b34d2aef88e81b86307498e3a5dc2c
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212509"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612291"
 ---
 # <a name="whats-new-in-accessibility-in-the-net-framework"></a>.NET Framework のアクセシビリティの新機能
 
@@ -204,6 +204,7 @@ var peer = FrameworkElementAutomationPeer.FromElement(myTextBlock);
 
 peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged);
 ```
+
 ```vb
 Dim peer = FrameworkElementAutomationPeer.FromElement(myTextBlock)
 peer.RaiseAutomationEvent(AutomationEvents.LiveRegionChanged)

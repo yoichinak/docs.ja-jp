@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 74ce1bbc9a887aee3a33eaf05084e8c2000967c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235756"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804415"
 ---
 ### <a name="wpf-textbox-selected-text-appears-a-different-color-when-the-text-box-is-inactive"></a>WPF TextBox で選択されているテキストが、テキスト ボックスがアクティブでないときに異なる色で表示される
 

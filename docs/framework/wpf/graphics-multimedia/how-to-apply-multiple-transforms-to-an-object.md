@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TransformGroup [WPF]
 ms.assetid: 98cd1921-12bc-4bf5-8193-529228fb7402
 ms.openlocfilehash: 26dcd4a64fc7aa2c3cb9cc599ceaef292efb1b6a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192764"
 ---
 # <a name="how-to-apply-multiple-transforms-to-an-object"></a>方法: オブジェクトに複数の変換を適用する
@@ -33,4 +33,4 @@ ms.locfileid: "59192764"
 - <xref:System.Windows.UIElement.RenderTransform%2A>
 - <xref:System.Windows.Media.TransformGroup>
 - [変換の概要](transforms-overview.md)
-- [2-d 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)

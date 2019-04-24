@@ -3,10 +3,10 @@ title: F# の型
 description: 使用される種類について学ぶF#とどのようにF#型の名前し、説明。
 ms.date: 05/16/2016
 ms.openlocfilehash: b48376c80b48df210bf7bc699a769d40fec60864
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193591"
 ---
 # <a name="f-types"></a>F# の型
@@ -35,8 +35,8 @@ F#コードでは、多くの場合、記述する必要が out 型の名前。 
 |----|-----------|--------|
 |プリミティブ型|*type-name*|`int`<br /><br />`float`<br /><br />`string`|
 |集計の種類 (クラス、構造体、共用体、レコード、列挙型、およびなど)|*type-name*|`System.DateTime`<br /><br />`Color`|
-|型略称|*型略称名*|`bigint`|
-|完全修飾型|*namespaces.type 名*<br /><br />または<br /><br />*modules.type-name*<br /><br />または<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
+|型略称|*type-abbreviation-name*|`bigint`|
+|完全修飾型|*namespaces.type-name*<br /><br />または<br /><br />*modules.type-name*<br /><br />または<br /><br />*namespaces.modules.type-name*|`System.IO.StreamWriter`|
 |array|*型名*または<br /><br />*型名*配列|`int[]`<br /><br />`array<int>`<br /><br />`int array`|
 |2 次元配列|*type-name*[,]|`int[,]`<br /><br />`float[,]`|
 |3 次元の配列|*type-name*[,,]|`float[,,]`|
@@ -57,7 +57,7 @@ F#コードでは、多くの場合、記述する必要が out 型の名前。 
 |[Unit 型](unit-type.md)|について説明します、`unit`と等価です型、型を持つ 1 つの値と () で示されるを`void`でC#と`Nothing`Visual Basic でします。|
 |[タプル](tuples.md)|タプル型、関連付けられている値のペア、3 要素、4 倍でグループ化された任意の型で構成される型について説明します。|
 |[オプション](options.md)|オプション型である可能性がありますか、値または空にする型について説明します。|
-|[表示内容](lists.md)|リストは順序付けられた、変更できない一連の要素について説明します、同じ種類のすべて。|
+|[リスト](lists.md)|リストは順序付けられた、変更できない一連の要素について説明します、同じ種類のすべて。|
 |[配列](arrays.md)|配列で、一連の連続するメモリ ブロックを占有し、固定サイズの同じ種類の変更可能な要素は順序付けについて説明します。|
 |[シーケンス](sequences.md)|表す論理的な一連の値のシーケンスの種類について説明します個々 の値は、必要な場合だけに計算されます。|
 |[レコード](records.md)|レコードの種類、名前付きの値の小さい集計について説明します。|
@@ -67,6 +67,6 @@ F#コードでは、多くの場合、記述する必要が out 型の名前。 
 |[構造体](structures.md)|について説明します、 `struct` .NET 値型に対応するオブジェクト型の型。 `struct`型は、通常、データの小規模の集計を表します。|
 |[インターフェイス](interfaces.md)|特定の機能を提供する、データはありませんが、メンバーのセットを表す型がインターフェイスの型について説明します。 使用するオブジェクトの種類では、インターフェイス型を実装する必要があります。|
 |[デリゲート](delegates.md)|オブジェクトとして関数を表すデリゲートの型について説明します。|
-|[列挙](enumerations.md)|列挙型、値を持つが名前付きの値のセットに属するについて説明します。|
+|[列挙型](enumerations.md)|列挙型、値を持つが名前付きの値のセットに属するについて説明します。|
 |[属性](attributes.md)|別の型のメタデータを指定するための属性について説明します。|
 |[例外の種類](exception-handling/exception-types.md)|エラー情報を指定の例外について説明します。|

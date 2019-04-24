@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
 ms.openlocfilehash: a428f54c3834ccdf6a0c7a5bfce8307172724524
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59322889"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>方法: 複合型を返すクエリを実行する
@@ -26,7 +26,7 @@ ms.locfileid: "59322889"
   
 3. モデルを表示する .edmx ファイルをダブルクリック、[モデル ブラウザー ウィンドウ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738483(v=vs.100))エンティティ デザイナーの。 エンティティ デザイナー画面で選択、`Email`と`Phone`のプロパティ、`Contact`エンティティ型、し、右クリックして選択**新しい複合型へのリファクター**します。  
   
-4. 選択した場合は、新しい複合型`Email`と`Phone`にプロパティを追加、**モデル ブラウザー**します。 複合型が既定の名前を指定: 型の名前を変更`EmailPhone`で、**プロパティ**ウィンドウ。 また、新しい `ComplexProperty` プロパティが `Contact` エンティティ型に追加されます。 プロパティの名前を変更します。 `EmailPhoneComplexType.`  
+4. 選択した場合は、新しい複合型`Email`と`Phone`にプロパティを追加、**モデル ブラウザー**します。 複合型が既定の名前を指定: 型の名前を変更`EmailPhone`で、**プロパティ**ウィンドウ。 また、新しい `ComplexProperty` プロパティが `Contact` エンティティ型に追加されます。 プロパティの名前を `EmailPhoneComplexType.` に変更します。  
   
      作成して、Entity Data Model ウィザードを使用した複合型の変更については、次を参照してください。[方法。既存のプロパティを複合型プロパティにリファクタリング](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456814(v=vs.100))と[方法。作成し、複合型を変更](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456820(v=vs.100))します。  
   

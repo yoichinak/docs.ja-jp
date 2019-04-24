@@ -3,10 +3,10 @@ title: 接続文字列の構文
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59084966"
 ---
 # <a name="connection-string-syntax"></a>接続文字列の構文
@@ -43,7 +43,7 @@ ms.locfileid: "59084966"
 |`OracleClient`|`Integrated Security=yes;`|  
   
 > [!NOTE]
->  `Integrated Security=true` 使用すると、例外がスローされます、`OleDb`プロバイダー。  
+>  `Integrated Security=true` プロバイダーで `OleDb` に設定すると例外がスローされます。  
   
 ## <a name="sqlclient-connection-strings"></a>SqlClient 接続文字列  
 <xref:System.Data.SqlClient.SqlConnection> 接続文字列の構文については、<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A?displayProperty=nameWithType> プロパティで説明されています。 <xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A> プロパティを使用すると、SQL Server データベースの接続文字列を取得または設定することができます。 以前のバージョンの SQL Server に接続する必要がある場合は、.NET Framework Data Provider for OleDb (<xref:System.Data.OleDb>) を使用する必要があります。 接続文字列のほとんどのキーワードは、<xref:System.Data.SqlClient.SqlConnectionStringBuilder> のプロパティにマップされています。  
@@ -141,7 +141,7 @@ Provider=Microsoft.Jet.OLEDB.4.0;Data Source=d:\Northwind.mdb;Jet OLEDB:System D
 >  接続情報を提供することは、 **OleDbConnection** Universal Data Link (UDL) ファイルです。 ただししないでそうです。 UDL ファイルは暗号化されないため、接続文字列をテキスト形式で表現してしまいます。 UDL ファイルは、アプリケーションにとって外部ファイルをベースにしたリソースであるため、.NET Framework でセキュリティ保護できません。 UDL ファイルはサポートされていません**SqlClient**します。  
   
 ### <a name="using-datadirectory-to-connect-to-accessjet"></a>DataDirectory を使用した Access/Jet との接続  
- `DataDirectory` 限定されていない`SqlClient`します。 <xref:System.Data.OleDb> および <xref:System.Data.Odbc> .NET データ プロバイダーでも使用できます。 アプリケーションの app_data フォルダーに格納された Northwind.mdb に接続するための <xref:System.Data.OleDb.OleDbConnection> 文字列の構文を次の例に示します。 この場所には、システム データベース (System.mdw) も格納されています。  
+ `DataDirectory` の使用は `SqlClient` に限定されません。 <xref:System.Data.OleDb> および <xref:System.Data.Odbc> .NET データ プロバイダーでも使用できます。 アプリケーションの app_data フォルダーに格納された Northwind.mdb に接続するための <xref:System.Data.OleDb.OleDbConnection> 文字列の構文を次の例に示します。 この場所には、システム データベース (System.mdw) も格納されています。  
   
 ```  
 "Provider=Microsoft.Jet.OLEDB.4.0;  

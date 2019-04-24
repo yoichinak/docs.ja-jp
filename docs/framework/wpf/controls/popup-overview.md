@@ -6,10 +6,10 @@ helpviewer_keywords:
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
 ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59102779"
 ---
 # <a name="popup-overview"></a>ポップアップの概要
@@ -34,13 +34,13 @@ ms.locfileid: "59102779"
 ## <a name="controls-that-implement-a-popup"></a>ポップアップを実装するコントロール  
  ビルドすることができます<xref:System.Windows.Controls.Primitives.Popup>他のコントロールにコントロール。 次のコントロールの実装、<xref:System.Windows.Controls.Primitives.Popup>特定の使用目的。  
   
--   <xref:System.Windows.Controls.ToolTip>. 要素のツールヒントを作成する場合を使用して、<xref:System.Windows.Controls.ToolTip>と<xref:System.Windows.Controls.ToolTipService>クラス。 詳細については、[ToolTip の概要](tooltip-overview.md)を参照してください。  
+-   <xref:System.Windows.Controls.ToolTip>。 要素のツールヒントを作成する場合を使用して、<xref:System.Windows.Controls.ToolTip>と<xref:System.Windows.Controls.ToolTipService>クラス。 詳細については、[ToolTip の概要](tooltip-overview.md)を参照してください。  
   
--   <xref:System.Windows.Controls.ContextMenu>. 要素のコンテキスト メニューを作成する場合は、使用、<xref:System.Windows.Controls.ContextMenu>コントロール。 詳細については、[ContextMenu の概要](contextmenu-overview.md)を参照してください。  
+-   <xref:System.Windows.Controls.ContextMenu>。 要素のコンテキスト メニューを作成する場合は、使用、<xref:System.Windows.Controls.ContextMenu>コントロール。 詳細については、[ContextMenu の概要](contextmenu-overview.md)を参照してください。  
   
--   <xref:System.Windows.Controls.ComboBox>. または、非表示に使用できるドロップダウン リスト ボックスのある選択コントロールを作成する場合、<xref:System.Windows.Controls.ComboBox>コントロール。  
+-   <xref:System.Windows.Controls.ComboBox>。 または、非表示に使用できるドロップダウン リスト ボックスのある選択コントロールを作成する場合、<xref:System.Windows.Controls.ComboBox>コントロール。  
   
--   <xref:System.Windows.Controls.Expander>. コンテンツを表示する折りたたみ可能な領域を持つヘッダーを表示するコントロールを作成する場合、使用、<xref:System.Windows.Controls.Expander>コントロール。 詳細については、 [Expander の概要](expander-overview.md)を参照してください。  
+-   <xref:System.Windows.Controls.Expander>。 コンテンツを表示する折りたたみ可能な領域を持つヘッダーを表示するコントロールを作成する場合、使用、<xref:System.Windows.Controls.Expander>コントロール。 詳細については、 [Expander の概要](expander-overview.md)を参照してください。  
   
 <a name="PopupBehaviorandAppearance"></a>   
 ## <a name="popup-behavior-and-appearance"></a>ポップアップの動作と外観  
@@ -95,5 +95,5 @@ ms.locfileid: "59102779"
 - <xref:System.Windows.Controls.Primitives.CustomPopupPlacementCallback>
 - <xref:System.Windows.Controls.ToolTip>
 - <xref:System.Windows.Controls.ToolTipService>
-- [方法のトピック](popup-how-to-topics.md)
-- [方法のトピック](tooltip-how-to-topics.md)
+- [方法トピック](popup-how-to-topics.md)
+- [方法トピック](tooltip-how-to-topics.md)

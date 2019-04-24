@@ -5,10 +5,10 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 ms.assetid: 6885d426-fa87-4e1c-881f-f0e9ec8d98af
 ms.openlocfilehash: d3884f99a79a66ed8f8b25975b25a110c7341849
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58813608"
 ---
 # <a name="control-flow-summary-visual-basic"></a>制御フローの概要 (Visual Basic)

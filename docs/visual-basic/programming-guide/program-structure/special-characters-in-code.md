@@ -31,10 +31,10 @@ helpviewer_keywords:
 - Visual Basic code, special characters
 ms.assetid: 310dce0c-45b5-4e0d-83e9-32df258d2a3e
 ms.openlocfilehash: 65fcd10521742e287c7934080b3352a06668df7a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835558"
 ---
 # <a name="special-characters-in-code-visual-basic"></a>コード内の特殊文字 (Visual Basic)
@@ -48,7 +48,7 @@ ms.locfileid: "58835558"
  次のコードでは、値の実行`d`8.225 しの値は、`e`は 3 です。 計算`d`の既定の優先順位を使用して`/`経由で`+`と等価`d = b + (c / a)`します。 計算にかっこ`e`既定の優先順位をオーバーライドします。  
   
 ## <a name="separators"></a>[区切り記号]  
- 区切り記号はその名前が示す: コードのセクションを区切ります。 Visual Basic での区切り記号はコロン (`:`)。 別の行ではなく 1 つの行に複数のステートメントを追加する場合は、区切り記号を使用します。 これは、領域を節約し、コードの読みやすさが向上します。 次の例では、コロンで区切られた 3 つのステートメントを示します。  
+ 区切り記号はその名前が示す: コードのセクションを区切ります。 Visual basic での区切り記号はコロン (`:`)。 別の行ではなく 1 つの行に複数のステートメントを追加する場合は、区切り記号を使用します。 これは、領域を節約し、コードの読みやすさが向上します。 次の例では、コロンで区切られた 3 つのステートメントを示します。  
   
  [!code-vb[VbVbcnConventions#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#12)]  
   

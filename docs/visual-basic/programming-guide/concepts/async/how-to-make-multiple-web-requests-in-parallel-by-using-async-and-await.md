@@ -3,10 +3,10 @@ title: '方法: 並列で非同期を使用して複数の Web 要求を行う�
 ms.date: 07/20/2015
 ms.assetid: a894b99b-7cfd-4a38-adfb-20d24f986730
 ms.openlocfilehash: c799fa83c0157019961da6adcf89b6ab6f906763
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303467"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-visual-basic"></a>方法: 並列で非同期を使用して複数の Web 要求を行うし、Await (Visual Basic)
@@ -68,9 +68,9 @@ Dim result = Await myTask
   
 3. プロジェクトに次のサポート メソッドを追加します。  
   
-    -   `ProcessURLAsync` 使用して、<xref:System.Net.Http.HttpClient>メソッドをバイト配列としての web サイトのコンテンツをダウンロードします。 次に `ProcessURLAsync` サポート メソッドは、配列の長さを表示して返します。  
+    -   `ProcessURLAsync` は <xref:System.Net.Http.HttpClient> メソッドを使用して、Web サイトのコンテンツをバイト配列としてダウンロードします。 次に `ProcessURLAsync` サポート メソッドは、配列の長さを表示して返します。  
   
-    -   `DisplayResults` 各 URL のバイト配列内のバイト数を表示します。 この表示は、各タスクがいつダウンロードを完了したかを示します。  
+    -   `DisplayResults` は各 URL のバイト配列内のバイトの数を表示します。 この表示は、各タスクがいつダウンロードを完了したかを示します。  
   
      次のメソッドをコピーし、後に貼り付けます、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
   

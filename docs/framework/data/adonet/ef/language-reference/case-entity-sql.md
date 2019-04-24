@@ -3,10 +3,10 @@ title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334888"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
@@ -29,13 +29,13 @@ END
  複数の WHEN `Boolean_expression` THEN `result_expression` 句が使用できることを示すプレースホルダーです。  
   
  THEN `result_expression`  
- `Boolean_expression` が `true`に評価されると返される式です。 `result expression` 有効な式です。  
+ `Boolean_expression` が `true`に評価されると返される式です。 `result expression` は、任意の有効な式です。  
   
  ELSE `else_result_expression`  
- 比較操作の評価がいずれも `true`でなかった場合に返される式です。 この引数を省略し、比較演算のいずれも `true`に評価されなかった場合、CASE は NULL を返します。 `else_result_expression` 有効な式です。 `else_result_expression` と任意の `result_expression` のデータ型は同一であるか、暗黙的な変換によって同一の型になる必要があります。  
+ 比較操作の評価がいずれも `true`でなかった場合に返される式です。 この引数を省略し、比較演算のいずれも `true`に評価されなかった場合、CASE は NULL を返します。 `else_result_expression` は、任意の有効な式です。 `else_result_expression` と任意の `result_expression` のデータ型は同一であるか、暗黙的な変換によって同一の型になる必要があります。  
   
  WHEN `Boolean_expression`  
- 検索 CASE 形式を使用した場合に評価される `Boolean` 式です。 `Boolean_expression` 有効な`Boolean`式。  
+ 検索 CASE 形式を使用した場合に評価される `Boolean` 式です。 `Boolean_expression` は、任意の有効な `Boolean` 式です。  
   
 ## <a name="return-value"></a>戻り値  
  `result_expression` およびオプションの `else_result_expression`の一連の型の中から、最も優先順位の高い型を返します。  

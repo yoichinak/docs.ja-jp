@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 07a4998f86958e21fffc8ba8657ec9f2a170f43e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112438"
 ---
 # <a name="iclrhostbindingpolicymanagermodifyapplicationpolicy-method"></a>ICLRHostBindingPolicyManager::ModifyApplicationPolicy メソッド
@@ -69,7 +69,7 @@ HRESULT  ModifyApplicationPolicy (
 |-------------|-----------------|  
 |S_OK|ポリシーが正常に変更します。|  
 |E_INVALIDARG|`pwzSourceAssemblyIdentity` または`pwzTargetAssemblyIdentity`が null 参照。|  
-|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` 小さすぎます。|  
+|ERROR_INSUFFICIENT_BUFFER|`pbNewApplicationPolicy` が小さすぎます。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
 |HOST_E_NOT_OWNER|呼び出し元がロックを所有していません。|  
@@ -86,7 +86,7 @@ HRESULT  ModifyApplicationPolicy (
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

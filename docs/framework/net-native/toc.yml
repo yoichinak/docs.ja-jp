@@ -1,87 +1,80 @@
-items:
 - name: .NET ネイティブによるアプリのコンパイル
   href: index.md
   items:
-  - name: .NET Native とコンパイル
-    href: net-native-and-compilation.md
-  - name: 作業の開始
-    href: getting-started-with-net-native.md
-    items:
-    - name: 例:動的プログラミングのトラブルシューティング
-      href: example-troubleshooting-dynamic-programming.md
-    - name: 例:データ バインド時の例外の処理
-      href: example-handling-exceptions-when-binding-data.md
-    - name: .NET ネイティブ アプリでのランタイム例外
-      href: runtime-exceptions-in-net-native-apps.md
-  - name: .NET ネイティブによる起動時間の改善の測定
-    href: measuring-startup-improvement-with-net-native.md
-  - name: リフレクションおよび .NET ネイティブ
-    href: reflection-and-net-native.md
-    items:
-    - name: リフレクションに依存する API
-      href: apis-that-rely-on-reflection.md
-    - name: リフレクション API リファレンス
-      href: net-native-reflection-api-reference.md
+    - name: .NET Native とコンパイル
+      href: net-native-and-compilation.md
+    - name: 作業の開始
+      href: getting-started-with-net-native.md
       items:
-      - name: MissingInteropDataException クラス
-        href: missinginteropdataexception-class-net-native.md
-      - name: MissingMetadataException クラス
-        href: missingmetadataexception-class-net-native.md
-      - name: MissingRuntimeArtifactException クラス
-        href: missingruntimeartifactexception-class-net-native.md
-    - name: ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス
-      href: runtime-directives-rd-xml-configuration-file-reference.md
+        - name: '例:動的プログラミングのトラブルシューティング'
+          href: example-troubleshooting-dynamic-programming.md
+        - name: '例:データ バインド時の例外の処理'
+          href: example-handling-exceptions-when-binding-data.md
+        - name: .NET ネイティブ アプリでのランタイム例外
+          href: runtime-exceptions-in-net-native-apps.md
+    - name: .NET ネイティブによる起動時間の改善の測定
+      href: measuring-startup-improvement-with-net-native.md
+    - name: リフレクションおよび .NET ネイティブ
+      href: reflection-and-net-native.md
       items:
-      - name: ランタイム ディレクティブ要素
-        href: runtime-directive-elements.md
-        items:
-        - name: <Application> 要素
-          href: application-element-net-native.md
-        - name: <Assembly> 要素
-          href: assembly-element-net-native.md
-        - name: <AttributeImplies> 要素
-          href: attributeimplies-element-net-native.md
-        - name: <Directives> 要素
-          href: directives-element-net-native.md
-        - name: <Event> 要素
-          href: event-element-net-native.md
-        - name: <Field> 要素
-          href: field-element-net-native.md
-        - name: <GenericParameter> 要素
-          href: genericparameter-element-net-native.md
-        - name: <ImpliesType> 要素
-          href: impliestype-element-net-native.md
-        - name: <Library> 要素
-          href: library-element-net-native.md
-        - name: <Method> 要素
-          href: method-element-net-native.md
-        - name: <MethodInstantiation> 要素
-          href: methodinstantiation-element-net-native.md
-        - name: <Namespace> 要素
-          href: namespace-element-net-native.md
-        - name: <Parameter> 要素
-          href: parameter-element-net-native.md
-        - name: <Property> 要素
-          href: property-element-net-native.md
-        - name: <Subtypes> 要素
-          href: subtypes-element-net-native.md
-        - name: <Type> 要素
-          href: type-element-net-native.md
-        - name: <TypeInstantiation> 要素
-          href: typeinstantiation-element-net-native.md
-        - name: <TypeParameter> 要素
-          href: typeparameter-element-net-native.md
-      - name: ランタイム ディレクティブ ポリシーの設定
-        href: runtime-directive-policy-settings.md
-  - name: シリアル化とメタデータ
-    href: serialization-and-metadata.md
-  - name: Windows ストア アプリの .NET ネイティブへの移行
-    href: migrating-your-windows-store-app-to-net-native.md
-  - name: .NET ネイティブの一般的なトラブルシューティング
-    href: net-native-general-troubleshooting.md
-ms.openlocfilehash: 85d8306c93d50cc595fcd3bcbf9ee404a84e7ab2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470282"
+        - name: リフレクションに依存する API
+          href: apis-that-rely-on-reflection.md
+        - name: リフレクション API リファレンス
+          href: net-native-reflection-api-reference.md
+          items:
+            - name: MissingInteropDataException クラス
+              href: missinginteropdataexception-class-net-native.md
+            - name: MissingMetadataException クラス
+              href: missingmetadataexception-class-net-native.md
+            - name: MissingRuntimeArtifactException クラス
+              href: missingruntimeartifactexception-class-net-native.md
+        - name: ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス
+          href: runtime-directives-rd-xml-configuration-file-reference.md
+          items:
+            - name: ランタイム ディレクティブ要素
+              href: runtime-directive-elements.md
+              items:
+                - name: <Application> 要素
+                  href: application-element-net-native.md
+                - name: <Assembly> 要素
+                  href: assembly-element-net-native.md
+                - name: <AttributeImplies> 要素
+                  href: attributeimplies-element-net-native.md
+                - name: <Directives> 要素
+                  href: directives-element-net-native.md
+                - name: <Event> 要素
+                  href: event-element-net-native.md
+                - name: <Field> 要素
+                  href: field-element-net-native.md
+                - name: <GenericParameter> 要素
+                  href: genericparameter-element-net-native.md
+                - name: <ImpliesType> 要素
+                  href: impliestype-element-net-native.md
+                - name: <Library> 要素
+                  href: library-element-net-native.md
+                - name: <Method> 要素
+                  href: method-element-net-native.md
+                - name: <MethodInstantiation> 要素
+                  href: methodinstantiation-element-net-native.md
+                - name: <Namespace> 要素
+                  href: namespace-element-net-native.md
+                - name: <Parameter> 要素
+                  href: parameter-element-net-native.md
+                - name: <Property> 要素
+                  href: property-element-net-native.md
+                - name: <Subtypes> 要素
+                  href: subtypes-element-net-native.md
+                - name: <Type> 要素
+                  href: type-element-net-native.md
+                - name: <TypeInstantiation> 要素
+                  href: typeinstantiation-element-net-native.md
+                - name: <TypeParameter> 要素
+                  href: typeparameter-element-net-native.md
+            - name: ランタイム ディレクティブ ポリシーの設定
+              href: runtime-directive-policy-settings.md
+    - name: シリアル化とメタデータ
+      href: serialization-and-metadata.md
+    - name: Windows ストア アプリの .NET ネイティブへの移行
+      href: migrating-your-windows-store-app-to-net-native.md
+    - name: .NET ネイティブの一般的なトラブルシューティング
+      href: net-native-general-troubleshooting.md

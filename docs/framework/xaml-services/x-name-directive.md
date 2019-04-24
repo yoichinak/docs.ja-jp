@@ -11,10 +11,10 @@ helpviewer_keywords:
 - Name attribute in XAML [XAML Services]
 ms.assetid: b7e61222-e8cf-48d2-acd0-6df3b7685d48
 ms.openlocfilehash: d25c8500250411083e9fb6b33b3f743e5cd103c0
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076746"
 ---
 # <a name="xname-directive"></a>x:Name ディレクティブ
@@ -64,7 +64,7 @@ XAML 名前スコープ内の XAML で定義された要素を一意に識別し
  <xref:System.Windows.FrameworkElement.Name%2A> 内部のテキストを含むプロパティ要素構文を使用して設定できますが、一般的でないです。 これに対し、 `x:Name` XAML プロパティ要素構文でまたはを使用してコードで設定することはできません<xref:System.Windows.DependencyObject.SetValue%2A>; のみ設定できますディレクティブであるため、オブジェクトの属性構文を使用します。  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight の使用上の注意  
- `x:Name` Silverlight は別々 に記載されています。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)します。  
+ Silverlight 用の `x:Name` に関しては、別途ドキュメントが用意されています。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -11,14 +11,14 @@ helpviewer_keywords:
 - syntax errors [Visual Basic], Visual Basic
 ms.assetid: 3048aabf-8c97-4e13-9150-853769cb5f6f
 ms.openlocfilehash: 07db963ac3cf9d1c0d17c420480189d362cdaf2c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58831567"
 ---
 # <a name="error-types-visual-basic"></a>エラーの種類 (Visual Basic)
-Visual Basic でのエラー (とも呼ばれる*例外*) 3 つのカテゴリに分類されます。 構文エラー、実行時エラー、および論理エラー。  
+Visual basic でのエラー (とも呼ばれる*例外*) 3 つのカテゴリに分類されます。 構文エラー、実行時エラー、および論理エラー。  
   
 ## <a name="syntax-errors"></a>構文エラー  
  *構文エラー*はコードを記述するときに表示されます。 Visual Basic で入力すると、コードを確認します、**コード エディター**ウィンドウと単語のスペルが間違ってなどの言語要素を正しくを使用して、操作を誤ったアラートを通知します。 構文エラーは、エラーの最も一般的な種類です。 その解決簡単にコーディング環境で発生するとすぐにします。  

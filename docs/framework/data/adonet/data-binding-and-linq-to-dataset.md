@@ -3,10 +3,10 @@ title: データ バインディングと LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
 ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073560"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>データ バインディングと LINQ to DataSet
@@ -32,7 +32,7 @@ ms.locfileid: "59073560"
  [DataView のパフォーマンス](../../../../docs/framework/data/adonet/dataview-performance.md)  
  <xref:System.Data.DataView> およびパフォーマンスに関する情報を提供します。  
   
- [方法: DataView オブジェクトを Windows フォーム DataGridView コントロールにバインドする](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
+ [方法: DataView オブジェクトを Windows フォームの DataGridView コントロールにバインドします。](../../../../docs/framework/data/adonet/how-to-bind-a-dataview-object-to-a-winforms-datagridview-control.md)  
  <xref:System.Data.DataView> オブジェクトを <xref:System.Windows.Forms.DataGridView> にバインドする方法について説明します。  
   
 ## <a name="see-also"></a>関連項目

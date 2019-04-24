@@ -4,12 +4,12 @@ description: グローバル ツールを作成する方法について説明し
 author: Thraka
 ms.author: adegeo
 ms.date: 08/22/2018
-ms.openlocfilehash: a54cb0a8c32da6a89ab1c3b7757df10fd9adf5cf
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3d0a64d0473f51d73892cd40633e2982c1130469
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677865"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612668"
 ---
 # <a name="create-a-net-core-global-tool-using-the-net-core-cli"></a>.NET Core CLI を使用して .NET Core グローバル ツールを作成する
 
@@ -162,7 +162,7 @@ dotnet run -- hello from the bot
 dotnet pack
 ```
 
-`botsay.1.0.0.nupkg` ファイルは、`botsay.csproj` ファイルの `<PackageOutputPath>` XML 値で識別されるフォルダー (この例では `./nupkg` フォルダー) に作成されます。 これにより、インストールとテストが簡単になります。 ツールを公開する場合は、[https://www.nuget.org](https://www.nuget.org) にアップロードしてください。NuGet でツールを使用できるようになると、開発者は [dotnet tool install](dotnet-tool-install.md) コマンドの `--global` オプションを使用してツールのユーザー全体のインストールを実行できます。
+`botsay.1.0.0.nupkg` ファイルは、`botsay.csproj` ファイルの `<PackageOutputPath>` XML 値で識別されるフォルダー (この例では `./nupkg` フォルダー) に作成されます。 これにより、インストールとテストが簡単になります。 ツールを公開する場合は、<https://www.nuget.org> にアップロードしてください。 NuGet でツールを使用できるようになると、開発者は [dotnet tool install](dotnet-tool-install.md) コマンドの `--global` オプションを使用してツールのユーザー全体のインストールを実行できます。
 
 パッケージを用意できたので、そのパッケージからツールをインストールします。
 

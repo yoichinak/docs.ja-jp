@@ -14,10 +14,10 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821297"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣言された要素の特性 (Visual Basic)
@@ -25,7 +25,7 @@ A*特性*とそのコードをやり取りする方法に影響を与える要�
   
 -   *データ型*: 要素が保持できる値、およびそれらの値を格納する方法。 詳細については、「[Data Types](../../../../visual-basic/language-reference/data-types/index.md)」(データ型) を参照してください。  
   
--   *有効期間*-は、要素を使用できる実行時間の期間。 詳細については、[Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)を参照してください。  
+-   *有効期間*-は、要素を使用できる実行時間の期間。 詳細については、次を参照してください。 [Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)します。  
   
 -   *スコープ*-その名前を修飾しなくても、要素を参照できるすべてのコードのセット。 詳細については、「[方法 :変数のスコープを制御](../../../../visual-basic/programming-guide/language-features/declared-elements/how-to-control-the-scope-of-a-variable.md)します。  
   
@@ -43,8 +43,8 @@ A*特性*とそのコードをやり取りする方法に影響を与える要�
 |プロパティ|[はい]|はい|はい|[はい]|  
 |メソッド|いいえ|[はい]|はい|[はい]|  
 |プロシージャ (`Sub`または`Function`)|いいえ|[はい]|はい|[はい]|  
-|プロシージャ パラメーター|[はい]|はい|はい|いいえ|  
-|関数の戻り値|[はい]|はい|はい|いいえ|  
+|プロシージャ パラメーター|[はい]|はい|[はい]|いいえ|  
+|関数の戻り値|[はい]|はい|[はい]|いいえ|  
 |演算子|[はい]|×|[はい]|[はい]|  
 |Interface|いいえ|×|[はい]|[はい]|  
 |クラス|いいえ|×|[はい]|[はい]|  

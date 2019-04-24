@@ -9,10 +9,10 @@ helpviewer_keywords:
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
 ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299333"
 ---
 # <a name="defining-and-specifying-faults"></a>エラーの定義と指定
@@ -94,7 +94,7 @@ End Class
 - <xref:System.Runtime.Serialization.DataMemberAttribute>
 - [コントラクトおよびサービスのエラーの指定と処理](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)
 - [エラーの送受信](../../../docs/framework/wcf/sending-and-receiving-faults.md)
-- [方法: サービス コントラクトでのエラーを宣言する](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
+- [方法: サービス コントラクトでのエラーを宣言します。](../../../docs/framework/wcf/how-to-declare-faults-in-service-contracts.md)
 - [保護レベルの理解](../../../docs/framework/wcf/understanding-protection-level.md)
-- [方法: ProtectionLevel プロパティを設定する](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
+- [方法: ProtectionLevel プロパティを設定します。](../../../docs/framework/wcf/how-to-set-the-protectionlevel-property.md)
 - [サービス コントラクトでのデータ転送の指定](../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)

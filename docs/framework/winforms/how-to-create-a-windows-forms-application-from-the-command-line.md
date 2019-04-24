@@ -1,5 +1,5 @@
 ---
-title: 'コマンド ラインから Windows フォーム アプリケーションを作成する方法'
+title: '方法: コマンドラインから Windows フォーム アプリケーションを作成します。'
 ms.date: 03/14/2018
 dev_langs:
 - csharp
@@ -12,14 +12,14 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299872"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>方法: コマンドラインから Windows フォーム アプリケーションを作成します。
-次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。[チュートリアル: WPF での Windows フォーム コントロールのホスト](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)を参照してください。  
+次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル。WPF でのフォーム コントロールのホストを Windows](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)します。  
   
 ## <a name="procedure"></a>プロシージャ  
   
@@ -65,7 +65,7 @@ ms.locfileid: "59299872"
   
     -   Visual Basic を使用している場合は、次のように入力します。 `vbc form1.vb`  
   
-3. コマンド プロンプトで、次のコマンドを入力します。 `Form1.exe`  
+3. コマンド プロンプトで次のように入力します。 `Form1.exe`  
   
 ## <a name="adding-a-control-and-handling-an-event"></a>コントロールの追加とイベントの処理  
  前の手順は、コンパイルして実行する基本的な Windows フォームを作成する方法を示しました。 次の手順では、コントロールを作成してフォームに追加し、コントロールのイベントを処理する方法を示します。 Windows フォームに追加することができます、コントロールの詳細については、次を参照してください。 [Windows フォーム コントロール](./controls/index.md)します。  

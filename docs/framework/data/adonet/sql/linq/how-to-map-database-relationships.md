@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152881"
 ---
 # <a name="how-to-map-database-relationships"></a>方法: データベース リレーションシップを割り当てる
@@ -28,7 +28,7 @@ ms.locfileid: "59152881"
   
 -   多対多:多対多リレーションシップのリンク テーブルの主キーで (とも呼ばれます、*接合*テーブル) の他の 2 つのテーブルから外部キーは、複合によって形式が多くの場合。  
   
-     たとえば、 `Employee` - `Project`リンク テーブルを使用して形成された多対多のリレーションシップ`EmployeeProject`します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] このようなリレーションシップが 3 つのクラスを使用してモデル化することが必要です: `Employee`、 `Project`、および`EmployeeProject`します。 この場合、`Employee` と `Project` の間のリレーションシップを変更すると、主キーの `EmployeeProject` の更新が必要であるように見える可能性がありす。 ただし、この状態は、既存の `EmployeeProject` の削除、および新しい `EmployeeProject` の作成として適切にモデル化されます。  
+     たとえば、 `Employee` - `Project`リンク テーブルを使用して形成された多対多のリレーションシップ`EmployeeProject`します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、このようなリレーションシップを、`Employee`、`Project`、および `EmployeeProject` という 3 つのクラスを使用してモデル化する必要があります。 この場合、`Employee` と `Project` の間のリレーションシップを変更すると、主キーの `EmployeeProject` の更新が必要であるように見える可能性がありす。 ただし、この状態は、既存の `EmployeeProject` の削除、および新しい `EmployeeProject` の作成として適切にモデル化されます。  
   
     > [!NOTE]
     >  リレーショナル データベース内のリレーションシップは、通常、他のテーブルの主キーを参照する外部キー値としてモデル化されます。 それらの間を移動するを明示的に 2 つのテーブルを使用して関連付けるリレーショナル*結合*操作。  
@@ -55,5 +55,5 @@ ms.locfileid: "59152881"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: コード エディターを使用してエンティティ クラスをカスタマイズする](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
+- [方法: コード エディターを使用してエンティティ クラスをカスタマイズします。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-customize-entity-classes-by-using-the-code-editor.md)
 - [LINQ to SQL オブジェクト モデル](../../../../../../docs/framework/data/adonet/sql/linq/the-linq-to-sql-object-model.md)

@@ -3,10 +3,10 @@ title: CoordinatorRecoveryLogEntryCreationFailure
 ms.date: 03/30/2017
 ms.assetid: 9f2b1a5c-f5a6-4203-87ff-601635b9ae40
 ms.openlocfilehash: 4d585774bdc2cb4e4cf9ada934bbf00aaa17bdad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59148513"
 ---
 # <a name="coordinatorrecoverylogentrycreationfailure"></a>CoordinatorRecoveryLogEntryCreationFailure

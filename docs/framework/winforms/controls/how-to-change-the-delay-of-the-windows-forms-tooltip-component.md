@@ -11,10 +11,10 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
 ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345483"
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更する
@@ -45,5 +45,5 @@ Windows フォームに設定できる複数の遅延時間の値がある<xref:
 ## <a name="see-also"></a>関連項目
 
 - [ToolTip コンポーネントの概要](tooltip-component-overview-windows-forms.md)
-- [方法: デザイン時に Windows フォームのコントロールにツールヒントを設定する](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
+- [方法: デザイン時に Windows フォーム上のコントロールのツールヒントを設定します。](how-to-set-tooltips-for-controls-on-a-windows-form-at-design-time.md)
 - [ToolTip コンポーネント](tooltip-component-windows-forms.md)

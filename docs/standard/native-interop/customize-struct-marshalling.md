@@ -7,12 +7,12 @@ ms.date: 01/18/2019
 dev_langs:
 - csharp
 - cpp
-ms.openlocfilehash: 5bce891a0061bb1810559febf1ab904a5fb6fc94
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: b07851a0d26f5bfe7edc2115d7276a8e96ba0917
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675785"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59101329"
 ---
 # <a name="customizing-structure-marshalling"></a>構造体のマーシャリングのカスタマイズ
 
@@ -230,7 +230,6 @@ struct UnicodeString
 ```
 
 UTF-8 エンコードを使用して文字列をマーシャリングする場合は、<xref:System.Runtime.InteropServices.MarshalAsAttribute> に <xref:System.Runtime.InteropServices.UnmanagedType.LPUTF8Str?displayProperty=nameWithType> 値を使用できます。
-
 
 ```csharp
 public struct UTF8String

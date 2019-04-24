@@ -5,10 +5,10 @@ helpviewer_keywords:
 - Then keyword [Visual Basic]
 ms.assetid: 41fdb422-d222-4c10-b5b0-c421c79e9070
 ms.openlocfilehash: d7e62e5a36abe917d8b16177fe76715f915ee769
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836754"
 ---
 # <a name="then-statement"></a>Then ステートメント

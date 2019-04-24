@@ -17,16 +17,16 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 88f3c270d2ab0adc0b683fda0e0f4bc1d474fb09
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144145"
 ---
 # <a name="icordebugerrorinfoenum-interface"></a>ICorDebugErrorInfoEnum インターフェイス
 
-`ICorDebugErrorInfoEnum` 古い形式です。 このインターフェイスは使用しないでください。  
+`ICorDebugErrorInfoEnum` は互換性のために残されています。 このインターフェイスは使用しないでください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [デバッグのインターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)
+- [デバッグ インターフェイス](../../../../docs/framework/unmanaged-api/debugging/debugging-interfaces.md)

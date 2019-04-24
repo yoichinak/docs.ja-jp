@@ -3,10 +3,10 @@ title: '方法: XmlSerializer の使用 (Visual Basic) をシリアル化しま�
 ms.date: 07/20/2015
 ms.assetid: cace24eb-0f43-4016-8e4b-199e5ef73a1c
 ms.openlocfilehash: 1799ef4a0d0f20cddc4514c9dc901047c631b158
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821466"
 ---
 # <a name="how-to-serialize-using-xmlserializer-visual-basic"></a>方法: XmlSerializer の使用 (Visual Basic) をシリアル化します。

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - keycontainer compiler option [C#]
 - -keycontainer compiler option [C#]
 ms.assetid: b3982b6d-2382-4f7e-bebd-ce98eaa30763
-ms.openlocfilehash: 06a714bf9140ac793e8d853183047ca7255d565e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: cf51bccc98f04c38149ec821b7064a4844d7e804
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54728990"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59302778"
 ---
 # <a name="-keycontainer-c-compiler-options"></a>-keycontainer (C# コンパイラ オプション)
 暗号化キー コンテナーの名前を指定します。  
@@ -28,7 +28,7 @@ ms.locfileid: "54728990"
  `string`  
  厳密な名前のキー コンテナーの名前です。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  **-keycontainer** オプションを使うと、コンパイラは共有可能なコンポーネントを作成します。 コンパイラは、指定されたコンテナーからアセンブリ マニフェストに公開キーを挿入し、最終的なアセンブリに秘密キーで署名します。 キー ファイルを生成するには、コマンド ラインで「`sn -k file`」と入力します。 `sn -i` は、キー ペアをコンテナーにインストールします。 コンパイラが CoreCLR 上で実行するときは、このオプションはサポートされません。 CoreCLR 上でビルドするときにアセンブリに署名するには、[-keyfile](keyfile-compiler-option.md) オプションを使います。
   
  [-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) を指定してコンパイルした場合は、キー ファイルの名前がモジュールに保持され、このモジュールを [-addmodule](../../../csharp/language-reference/compiler-options/addmodule-compiler-option.md) でアセンブリにコンパイルするときに、アセンブリに組み込まれます。  
@@ -41,7 +41,7 @@ ms.locfileid: "54728990"
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
-1.  このコンパイラ オプションは、Visual Studio 開発環境では使うことができません。  
+1. このコンパイラ オプションは、Visual Studio 開発環境では使うことができません。  
   
  このコンパイラ オプションには、プログラムで <xref:VSLangProj.ProjectProperties.AssemblyKeyContainerName%2A> を使ってアクセスできます。  
   

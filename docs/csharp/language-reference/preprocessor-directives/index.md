@@ -1,12 +1,18 @@
 ---
-title: 'C# プリプロセッサ ディレクティブ'
+title: C# プリプロセッサ ディレクティブ
 ms.date: 07/20/2015
 f1_keywords:
-  - cs.preprocessor
+- cs.preprocessor
 helpviewer_keywords:
-  - 'preprocessor directives [C#]'
-  - 'keywords [C#], preprocessor directives'
+- preprocessor directives [C#]
+- keywords [C#], preprocessor directives
 ms.assetid: f2406090-b244-4f7e-ab72-3698fefed724
+ms.openlocfilehash: 54067777ed2e92eea263b17cce0d4cdf13ed731d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689321"
 ---
 # <a name="c-preprocessor-directives"></a>C# プリプロセッサ ディレクティブ
 このセクションでは、次の C# プリプロセッサ ディレクティブについて説明します。

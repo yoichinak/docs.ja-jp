@@ -3,26 +3,26 @@ title: クエリのサポート
 ms.date: 03/30/2017
 ms.assetid: 093c22f5-3294-4642-857a-5252233d6796
 ms.openlocfilehash: 30695fcd791a0d69c31a897068d69838c80c3957
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307952"
 ---
 # <a name="support-for-queries"></a>クエリのサポート
 SQL Workflow Instance Store は、一連の既知のプロパティをストアに記録します。 ユーザーは、これらのプロパティに基づいてインスタンスのクエリを実行できます。 これらの既知のプロパティの一部を次の一覧に示します。  
   
--   **サイト名: ** サービスが存在する Web サイトの名前。  
+-   **サイトの名前。** サービスが存在する Web サイトの名前。  
   
--   **相対アプリケーション パス: ** Web サイトを基準としたアプリケーションの相対パス。  
+-   **相対アプリケーション パス。** Web サイトを基準としたアプリケーションの相対パス。  
   
--   **相対サービス パス: ** アプリケーションを基準としたサービスの相対パス。  
+-   **相対サービス パス:** アプリケーションを基準としたサービスの相対パス。  
   
--   **サービス名: ** サービスの名前。  
+-   **サービスの名前。** サービスの名前。  
   
--   **サービスの名前空間: ** サービスが使用する名前空間の名称。  
+-   **Service Namespace です。** サービスが使用する名前空間の名称。  
   
--   **現在のコンピューター: **  
+-   **現在のコンピューター。**  
   
 -   **最後のコンピューター**します。 ワークフロー サービスのインスタンスが最後に実行されたコンピューター。  
   
@@ -86,7 +86,7 @@ SQL Workflow Instance Store は、一連の既知のプロパティをストア�
   
 3. **RelativeApplicationPath**  
   
-4. **ServiceName**  
+4. **サービス名**  
   
 5. **ServiceNamespace**  
   

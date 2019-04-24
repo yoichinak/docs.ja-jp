@@ -9,10 +9,10 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
 ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59087184"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>組み込みのオーナー描画サポートを備えたコントロール
@@ -86,7 +86,7 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
 -   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [方法: ComboBox コントロールにサイズ変更可能なテキストを作成する](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+-   [方法: コンボ ボックス コントロールにサイズ設定されたテキストを作成します。](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem コンポーネント  
  <xref:System.Windows.Forms.MenuItem>コンポーネント内の 1 つのメニュー項目を表す、<xref:System.Windows.Forms.MainMenu>または<xref:System.Windows.Forms.ContextMenu>コンポーネント。  
@@ -172,9 +172,9 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
 -   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [方法: Windows フォームの DataGridView コントロールのセルの外観をカスタマイズする](customize-the-appearance-of-cells-in-the-datagrid.md)  
+-   [方法: Windows フォームの DataGridView コントロール内のセルの外観をカスタマイズします。](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [方法: Windows フォームの DataGridView コントロールの行の外観をカスタマイズする](customize-the-appearance-of-rows-in-the-datagrid.md)  
+-   [方法: Windows フォームの DataGridView コントロール内の行の外観をカスタマイズします。](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip コントロール  
  <xref:System.Windows.Forms.ToolStrip> および派生コントロールでは、のどの側面の外観をカスタマイズできます。  
@@ -185,9 +185,9 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
 -   <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [方法: Windows フォームに ToolStrip コントロールのカスタム レンダラーを作成して設定する](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+-   [方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [方法: ToolStrip コントロールをカスタム描画する](how-to-custom-draw-a-toolstrip-control.md)  
+-   [方法: ToolStrip コントロールをカスタム描画します。](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>関連項目
 

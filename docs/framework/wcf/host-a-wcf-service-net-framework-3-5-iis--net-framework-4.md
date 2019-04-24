@@ -3,11 +3,11 @@ title: '方法: .NET Framework 4 で実行されている IIS 内の .NET Framew
 ms.date: 03/30/2017
 ms.assetid: 9aabc785-068d-4d32-8841-3ef39308d8d6
 ms.openlocfilehash: d4f0cb584f7759a6fe52a4bec4306a7d714d3906
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59331534"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59976925"
 ---
 # <a name="how-to-host-a-wcf-service-written-with-net-framework-35-in-iis-running-under-net-framework-4"></a>方法: .NET Framework 4 で実行されている IIS 内の .NET Framework 3.5 で作成された WCF サービスをホストする
 記述された Windows Communication Foundation (WCF) サービスをホストする際に[!INCLUDE[netfx35_long](../../../includes/netfx35-long-md.md)]実行しているコンピューターで[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]、取得することがあります、<xref:System.ServiceModel.ProtocolException>を次のテキスト。  

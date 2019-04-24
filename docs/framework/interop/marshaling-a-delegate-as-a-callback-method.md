@@ -12,10 +12,10 @@ ms.assetid: 6ddd7866-9804-4571-84de-83f5cc017a5a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4cc9d592bc2030cdd17e7f87d7c5ac458dc01106
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59124814"
 ---
 # <a name="marshaling-a-delegate-as-a-callback-method"></a>コールバック メソッドとしてのデリゲートのマーシャ リング
@@ -26,13 +26,13 @@ ms.locfileid: "59124814"
 
 Callback のサンプルで使用するアンマネージ関数とその元の関数宣言を次に示します。
 
--   `TestCallBack` は PinvokeLib.dll からエクスポートされます。
+-   PinvokeLib.dll からエクスポートされる `TestCallBack`。
 
     ```cpp
     void TestCallBack(FPTR pf, int value);
     ```
 
--   `TestCallBack2` は PinvokeLib.dll からエクスポートされます。
+-   PinvokeLib.dll からエクスポートされる `TestCallBack2`。
 
     ```cpp
     void TestCallBack2(FPTR2 pf2, char* value);

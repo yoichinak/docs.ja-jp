@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 9a02b608-e7bb-4041-a452-a7fed26fd008
 ms.openlocfilehash: 825ba2a32e7c75e922ca08386b9f6efede7b2693
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59154753"
 ---
 # <a name="how-to-retrieve-entity-conflict-information"></a>方法: エンティティの競合情報を取得する
@@ -23,4 +23,4 @@ ms.locfileid: "59154753"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 変更の競合を管理する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)
+- [方法: 変更の競合を管理します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-manage-change-conflicts.md)

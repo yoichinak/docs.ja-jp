@@ -1,35 +1,28 @@
-items:
 - name: Async および Await を使用した非同期プログラミング
   href: index.md
   items:
-  - name: 'チュートリアル: Async と Await を使用した Web へのアクセス'
-    href: walkthrough-accessing-the-web-by-using-async-and-await.md
-  - name: '方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する'
-    href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
-  - name: '方法: Async と Await を使用して複数の Web 要求を並列実行する'
-    href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
-  - name: 非同期の戻り値の型
-    href: async-return-types.md
-  - name: 非同期プログラムにおける制御フロー
-    href: control-flow-in-async-programs.md
-  - name: 非同期アプリケーションの微調整
-    href: fine-tuning-your-async-application.md
-    items:
-    - name: 非同期タスクまたはタスクの一覧のキャンセル
-      href: cancel-an-async-task-or-a-list-of-tasks.md
-    - name: 指定した時間の経過後の非同期タスクのキャンセル
-      href: cancel-async-tasks-after-a-period-of-time.md
-    - name: 完了後の残りの非同期タスクのキャンセル
-      href: cancel-remaining-async-tasks-after-one-is-complete.md
-    - name: 完了時での複数の同期タスクとプロセスの実行
-      href: start-multiple-async-tasks-and-process-them-as-they-complete.md
-  - name: 非同期アプリにおける再入の処理
-    href: handling-reentrancy-in-async-apps.md
-  - name: ファイル アクセスにおける非同期の使用
-    href: using-async-for-file-access.md
-ms.openlocfilehash: d6b4558a935d019090ccf0e4258d10e4a4f881b4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470690"
+    - name: 'チュートリアル: Async と Await を使用した Web へのアクセス'
+      href: walkthrough-accessing-the-web-by-using-async-and-await.md
+    - name: '方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する'
+      href: how-to-extend-the-async-walkthrough-by-using-task-whenall.md
+    - name: '方法: Async と Await を使用して複数の Web 要求を並列実行する'
+      href: how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await.md
+    - name: 非同期の戻り値の型
+      href: async-return-types.md
+    - name: 非同期プログラムにおける制御フロー
+      href: control-flow-in-async-programs.md
+    - name: 非同期アプリケーションの微調整
+      href: fine-tuning-your-async-application.md
+      items:
+        - name: 非同期タスクまたはタスクの一覧のキャンセル
+          href: cancel-an-async-task-or-a-list-of-tasks.md
+        - name: 指定した時間の経過後の非同期タスクのキャンセル
+          href: cancel-async-tasks-after-a-period-of-time.md
+        - name: 完了後の残りの非同期タスクのキャンセル
+          href: cancel-remaining-async-tasks-after-one-is-complete.md
+        - name: 完了時での複数の同期タスクとプロセスの実行
+          href: start-multiple-async-tasks-and-process-them-as-they-complete.md
+    - name: 非同期アプリにおける再入の処理
+      href: handling-reentrancy-in-async-apps.md
+    - name: ファイル アクセスにおける非同期の使用
+      href: using-async-for-file-access.md

@@ -1,64 +1,57 @@
-items:
 - name: 厳密な名前付け
   href: index.md
   items:
-  - name: GetHashFromAssemblyFile 関数
-    href: gethashfromassemblyfile-function.md
-  - name: GetHashFromAssemblyFileW 関数
-    href: gethashfromassemblyfilew-function.md
-  - name: GetHashFromBlob 関数
-    href: gethashfromblob-function.md
-  - name: GetHashFromFile 関数
-    href: gethashfromfile-function.md
-  - name: GetHashFromFileW 関数
-    href: gethashfromfilew-function.md
-  - name: GetHashFromHandle 関数
-    href: gethashfromhandle-function.md
-  - name: PublicKeyBlob 構造体
-    href: publickeyblob-structure.md
-  - name: StrongNameCompareAssemblies 関数
-    href: strongnamecompareassemblies-function.md
-  - name: StrongNameErrorInfo 関数
-    href: strongnameerrorinfo-function.md
-  - name: StrongNameFreeBuffer 関数
-    href: strongnamefreebuffer-function.md
-  - name: StrongNameGetBlob 関数
-    href: strongnamegetblob-function.md
-  - name: StrongNameGetBlobFromImage 関数
-    href: strongnamegetblobfromimage-function.md
-  - name: StrongNameGetPublicKey 関数
-    href: strongnamegetpublickey-function.md
-  - name: StrongNameHashSize 関数
-    href: strongnamehashsize-function.md
-  - name: StrongNameKeyDelete 関数
-    href: strongnamekeydelete-function.md
-  - name: StrongNameKeyGen 関数
-    href: strongnamekeygen-function.md
-  - name: StrongNameKeyGenEx 関数
-    href: strongnamekeygenex-function.md
-  - name: StrongNameKeyInstall 関数
-    href: strongnamekeyinstall-function.md
-  - name: StrongNameSignatureGeneration 関数
-    href: strongnamesignaturegeneration-function.md
-  - name: StrongNameSignatureGenerationEx 関数
-    href: strongnamesignaturegenerationex-function.md
-  - name: StrongNameSignatureSize 関数
-    href: strongnamesignaturesize-function.md
-  - name: StrongNameSignatureVerification 関数
-    href: strongnamesignatureverification-function.md
-  - name: StrongNameSignatureVerificationEx 関数
-    href: strongnamesignatureverificationex-function.md
-  - name: StrongNameSignatureVerificationFromImage 関数
-    href: strongnamesignatureverificationfromimage-function.md
-  - name: StrongNameTokenFromAssembly 関数
-    href: strongnametokenfromassembly-function.md
-  - name: StrongNameTokenFromAssemblyEx 関数
-    href: strongnametokenfromassemblyex-function.md
-  - name: StrongNameTokenFromPublicKey 関数
-    href: strongnametokenfrompublickey-function.md
-ms.openlocfilehash: 4c06fdc28855b0dadf1aca52c372236ffb30b782
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470043"
+    - name: GetHashFromAssemblyFile 関数
+      href: gethashfromassemblyfile-function.md
+    - name: GetHashFromAssemblyFileW 関数
+      href: gethashfromassemblyfilew-function.md
+    - name: GetHashFromBlob 関数
+      href: gethashfromblob-function.md
+    - name: GetHashFromFile 関数
+      href: gethashfromfile-function.md
+    - name: GetHashFromFileW 関数
+      href: gethashfromfilew-function.md
+    - name: GetHashFromHandle 関数
+      href: gethashfromhandle-function.md
+    - name: PublicKeyBlob 構造体
+      href: publickeyblob-structure.md
+    - name: StrongNameCompareAssemblies 関数
+      href: strongnamecompareassemblies-function.md
+    - name: StrongNameErrorInfo 関数
+      href: strongnameerrorinfo-function.md
+    - name: StrongNameFreeBuffer 関数
+      href: strongnamefreebuffer-function.md
+    - name: StrongNameGetBlob 関数
+      href: strongnamegetblob-function.md
+    - name: StrongNameGetBlobFromImage 関数
+      href: strongnamegetblobfromimage-function.md
+    - name: StrongNameGetPublicKey 関数
+      href: strongnamegetpublickey-function.md
+    - name: StrongNameHashSize 関数
+      href: strongnamehashsize-function.md
+    - name: StrongNameKeyDelete 関数
+      href: strongnamekeydelete-function.md
+    - name: StrongNameKeyGen 関数
+      href: strongnamekeygen-function.md
+    - name: StrongNameKeyGenEx 関数
+      href: strongnamekeygenex-function.md
+    - name: StrongNameKeyInstall 関数
+      href: strongnamekeyinstall-function.md
+    - name: StrongNameSignatureGeneration 関数
+      href: strongnamesignaturegeneration-function.md
+    - name: StrongNameSignatureGenerationEx 関数
+      href: strongnamesignaturegenerationex-function.md
+    - name: StrongNameSignatureSize 関数
+      href: strongnamesignaturesize-function.md
+    - name: StrongNameSignatureVerification 関数
+      href: strongnamesignatureverification-function.md
+    - name: StrongNameSignatureVerificationEx 関数
+      href: strongnamesignatureverificationex-function.md
+    - name: StrongNameSignatureVerificationFromImage 関数
+      href: strongnamesignatureverificationfromimage-function.md
+    - name: StrongNameTokenFromAssembly 関数
+      href: strongnametokenfromassembly-function.md
+    - name: StrongNameTokenFromAssemblyEx 関数
+      href: strongnametokenfromassemblyex-function.md
+    - name: StrongNameTokenFromPublicKey 関数
+      href: strongnametokenfrompublickey-function.md

@@ -3,10 +3,10 @@ title: Enterprise Services および COM+ トランザクションとの相互�
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301907"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Enterprise Services および COM+ トランザクションとの相互運用性
@@ -21,11 +21,11 @@ ms.locfileid: "59301907"
   
  <xref:System.Transactions.TransactionScope> クラスは、<xref:System.Transactions.EnterpriseServicesInteropOption> をパラメーターとして受け入れるコンストラクターを提供します。  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.None>、名前が示すように、間の相互運用性がないことを意味<xref:System.EnterpriseServices>コンテキストとトランザクションのスコープ。 <xref:System.Transactions.TransactionScope> で <xref:System.Transactions.EnterpriseServicesInteropOption.None> オブジェクトを作成した場合は、その後 <xref:System.Transactions.Transaction.Current%2A> にどのような変更を加えても、その変更が COM+ コンテキストに反映されることはありません。 同様に、COM+ コンテキスト内のトランザクションに対する変更も <xref:System.Transactions.Transaction.Current%2A> には反映されません。 追加の同期は必要ないため、これは <xref:System.Transactions> に対する最速の操作モードです。 <xref:System.Transactions.EnterpriseServicesInteropOption.None> によって使用される既定値は、<xref:System.Transactions.TransactionScope>受け入れないすべてのコンス トラクターで<xref:System.Transactions.EnterpriseServicesInteropOption>をパラメーターとして。  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.None>、名前が示すように、間の相互運用性がないことを意味<xref:System.EnterpriseServices>コンテキストとトランザクションのスコープ。 <xref:System.Transactions.TransactionScope> で <xref:System.Transactions.EnterpriseServicesInteropOption.None> オブジェクトを作成した場合は、その後 <xref:System.Transactions.Transaction.Current%2A> にどのような変更を加えても、その変更が COM+ コンテキストに反映されることはありません。 同様に、COM+ コンテキスト内のトランザクションに対する変更も <xref:System.Transactions.Transaction.Current%2A> には反映されません。 追加の同期は必要ないため、これは <xref:System.Transactions> に対する最速の操作モードです。 <xref:System.Transactions.EnterpriseServicesInteropOption.None> は、<xref:System.Transactions.TransactionScope> をパラメーターとして受け入れないすべてのコンストラクターで、<xref:System.Transactions.EnterpriseServicesInteropOption> よって使用される既定値です。  
   
  <xref:System.EnterpriseServices> トランザクションをアンビエント トランザクションと組み合わせる場合は、<xref:System.Transactions.EnterpriseServicesInteropOption.Full> または <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> のいずれかを使用する必要があります。 これらの値はいずれもコンポーネントのないサービスと呼ばれる機能に依存するため、これらの値を使用する際には Windows XP Service Pack 2 または Windows Server 2003 が稼働している必要があります。  
   
- <xref:System.Transactions.EnterpriseServicesInteropOption.Full> 指定します、アンビエント トランザクション<xref:System.Transactions>と<xref:System.EnterpriseServices>は常に同じです。 結果として、新しい <xref:System.EnterpriseServices> トランザクション コンテキストが作成され、そのコンテキストにとって <xref:System.Transactions.TransactionScope> が最新になるようにするため最新のトランザクションが適用されます。 そのため、<xref:System.Transactions.Transaction.Current%2A> のトランザクションは <xref:System.EnterpriseServices.ContextUtil.Transaction%2A> のトランザクションと完全に同期することになります。 この値を使用すると、新しい COM+ コンテキストを作成しなければならない場合があるため、パフォーマンスが低下します。  
+ <xref:System.Transactions.EnterpriseServicesInteropOption.Full> は、<xref:System.Transactions> と <xref:System.EnterpriseServices> のアンビエント トランザクションが常に同じものであることを指定します。 結果として、新しい <xref:System.EnterpriseServices> トランザクション コンテキストが作成され、そのコンテキストにとって <xref:System.Transactions.TransactionScope> が最新になるようにするため最新のトランザクションが適用されます。 そのため、<xref:System.Transactions.Transaction.Current%2A> のトランザクションは <xref:System.EnterpriseServices.ContextUtil.Transaction%2A> のトランザクションと完全に同期することになります。 この値を使用すると、新しい COM+ コンテキストを作成しなければならない場合があるため、パフォーマンスが低下します。  
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 次の要件を指定します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59301907"
   
 3. 新しいトランザクションを作成する場合は、<xref:System.Transactions.EnterpriseServicesInteropOption> の値に応じてそれぞれ次のようになります。  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>: COM + コンテキストに関連付けられたトランザクションが作成されます。  
+    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>:  COM+ コンテキストに関連付けられたトランザクションが作成されます。  
   
     -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>:、<xref:System.Transactions>トランザクションが作成されます。  
   

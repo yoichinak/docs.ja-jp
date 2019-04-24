@@ -6,16 +6,16 @@ helpviewer_keywords:
 - WCF Data Services, querying
 ms.assetid: f0dbf7b0-0292-4e31-9ae4-b98288336dc1
 ms.openlocfilehash: bf75e126c2a44b6b9d151269046d2cb8110815cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335395"
 ---
 # <a name="object-materialization-wcf-data-services"></a>オブジェクトの具体化 (WCF Data Services)
 使用すると、**サービス参照の追加**ダイアログを使用する、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]同等のデータ クラスは .NET Framework ベースのクライアント アプリケーションでのフィード、フィードによって公開されているデータ モデルのエンティティ型ごと生成されます。 詳細については、次を参照してください。[データ サービス クライアント ライブラリの生成](../../../../docs/framework/data/wcf/generating-the-data-service-client-library-wcf-data-services.md)します。 クエリによって返されるエンティティ データは、これらの生成されたクライアント データ サービス クラスのいずれかのインスタンスに具体化されます。 マージ オプションおよび追跡オブジェクトの id 解決については、次を参照してください。[データ サービス コンテキストの管理](../../../../docs/framework/data/wcf/managing-the-data-service-context-wcf-data-services.md)します。  
   
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] ツールで生成されたデータ クラスを使用するのではなく、独自のクライアント データ サービス クラスを定義することもできます。 これにより、"plain-old CLR object" (POCO) データ クラスとして知られる独自のデータ クラスを使用できます。 これらの種類のカスタム データ クラスを使用する場合は、データ クラスを属性する必要があります<xref:System.Data.Services.Common.DataServiceKeyAttribute>または<xref:System.Data.Services.Common.DataServiceEntityAttribute>クライアント一致の型名、データ サービスのデータ モデル内での型の名前を確認してください。  
+ さらに [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、ツールによって生成されたデータ クラスを使用する代わりに、独自のクライアント データ サービス クラスを定義できます。 これにより、"plain-old CLR object" (POCO) データ クラスとして知られる独自のデータ クラスを使用できます。 これらの種類のカスタム データ クラスを使用する場合は、データ クラスを属性する必要があります<xref:System.Data.Services.Common.DataServiceKeyAttribute>または<xref:System.Data.Services.Common.DataServiceEntityAttribute>クライアント一致の型名、データ サービスのデータ モデル内での型の名前を確認してください。  
   
  返されたデータを具体化ライブラリでは、クエリの応答メッセージを受信した後、[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]クライアント データのインスタンスには、クエリの種類のサービス クラスにフィードします。 これらのオブジェクトを具体化する一般的なプロセスは次のとおりです。  
   

@@ -3,10 +3,10 @@ title: System.ServiceModel.Channels.PeerFlooderReceiveMessageQuotaExceeded
 ms.date: 03/30/2017
 ms.assetid: b8371d0a-843e-440b-b86a-6996db131cb0
 ms.openlocfilehash: 0ca3d198ce225221348ac7b405ea91ad215cd298
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190900"
 ---
 # <a name="systemservicemodelchannelspeerflooderreceivemessagequotaexceeded"></a>System.ServiceModel.Channels.PeerFlooderReceiveMessageQuotaExceeded

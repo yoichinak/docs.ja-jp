@@ -3,10 +3,10 @@ title: インポート宣言:Open キーワード
 description: 完全修飾名を使用せずに参照できる要素を持つ F# インポート宣言し、モジュールまたは名前空間の指定方法について説明します。
 ms.date: 04/04/2019
 ms.openlocfilehash: ad64190c3243c57a185f3b864270fca80590f079
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055002"
 ---
 # <a name="import-declarations-the-open-keyword"></a>インポート宣言:`open`キーワード
@@ -24,7 +24,7 @@ open module-or-namespace-name
 
 ## <a name="remarks"></a>Remarks
 
-名前空間またはモジュールの完全修飾パスを使用してコードを参照するたびには、書き込み、読み取り、および管理するが難しいコードを作成できます。 代わりに、使用、`open`キーワードのモジュールや名前空間をそのモジュールまたは名前空間のメンバーを参照する場合は、完全修飾名ではなく、名前の短い形式を使用できるように頻繁に使用します。 このキーワードと似ています、 `using` C# でキーワード`using namespace`の Visual c と`Imports`Visual Basic でします。
+名前空間またはモジュールの完全修飾パスを使用してコードを参照するたびには、書き込み、読み取り、および管理するが難しいコードを作成できます。 代わりに、使用、`open`キーワードのモジュールや名前空間をそのモジュールまたは名前空間のメンバーを参照する場合は、完全修飾名ではなく、名前の短い形式を使用できるように頻繁に使用します。 このキーワードと似ています、 `using` c# でキーワード`using namespace`の Visual c と`Imports`Visual Basic でします。
 
 モジュールまたは指定された名前空間は、同じプロジェクト内、または参照されるプロジェクトまたはアセンブリである必要があります。 そうでない場合は、プロジェクトへの参照を追加またはを使用して、`-reference`コマンド`-`ライン オプション (またはその省略形、 `-r`)。 詳細については、「[コンパイラ オプション](compiler-options.md)」を参照してください。
 

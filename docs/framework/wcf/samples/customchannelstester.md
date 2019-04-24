@@ -3,10 +3,10 @@ title: CustomChannelTester
 ms.date: 03/30/2017
 ms.assetid: ee1fa307-98b1-4647-8860-2e9217ba6082
 ms.openlocfilehash: 7402ac9ccc0e5e1777fa77f339d7605e1d306e13
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59312671"
 ---
 # <a name="customchannelstester"></a>CustomChannelTester
@@ -30,7 +30,7 @@ ms.locfileid: "59312671"
   
      `/dll` "binding"が Windows Communication Foundation (WCF) によって提供されているシステム指定のバインディングではない場合は、このプロパティの値が必要です。  
   
-     `/testspec` 省略可能です。  
+     `/testspec` は省略可能です。  
   
      これにより、テストの仕様とバインディングに基づくサーバーとクライアントが作成されます。  
   

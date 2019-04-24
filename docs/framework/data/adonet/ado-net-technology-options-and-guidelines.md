@@ -3,10 +3,10 @@ title: ADO.NET テクノロジのオプションとガイドライン
 ms.date: 03/30/2017
 ms.assetid: c8577281-38e6-4ce5-b036-572039a4c3d8
 ms.openlocfilehash: 0d0e8f7bd779ce7a8290594887630dd192301fe1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59212532"
 ---
 # <a name="adonet-technology-options-and-guidelines"></a>ADO.NET テクノロジのオプションとガイドライン
@@ -37,7 +37,7 @@ ADO.NET データ プラットフォームは、概念エンティティ デー�
  LINQ to SQL は、.NET Framework のクラスを使用して SQL Server データベースをモデル化するオブジェクト リレーショナル マッピング (OR/M) の実装です。 LINQ to SQL では、LINQ を使用してデータベースのクエリを実行するだけでなく、そのデータベースのデータを更新、挿入、および削除することができます。 LINQ to SQL では、トランザクション、ビュー、およびストアド プロシージャをサポートし、データ検証ルールとビジネス ロジック ルールをデータ モデルに簡単に統合するための方法を提供します。 オブジェクト リレーショナル デザイナー (O/R デザイナー) を使用して、データベース内のオブジェクトに基づくエンティティ クラスと関連付けのモデル化を実行できます。 詳しくは、「[Visual Studio の LINQ to SQL ツール](/visualstudio/data-tools/linq-to-sql-tools-in-visual-studio2)」をご覧ください。  
   
 ## <a name="wcf-data-services"></a>WCF Data Services  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] Web またはイントラネット上のデータ サービスをデプロイします。 データは、エンティティ データ モデルの仕様に従ってエンティティおよびリレーションシップとして構成されます。 このモデルで展開されるデータは、標準 HTTP プロトコルによってアドレス指定可能です。 詳細については、「[WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)」を参照してください。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、Web またはイントラネットにデータ サービスを展開します。 データは、エンティティ データ モデルの仕様に従ってエンティティおよびリレーションシップとして構成されます。 このモデルで展開されるデータは、標準 HTTP プロトコルによってアドレス指定可能です。 詳細については、「[WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

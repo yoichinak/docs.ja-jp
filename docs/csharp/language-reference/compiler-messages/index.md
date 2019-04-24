@@ -1,11 +1,17 @@
 ---
-title: 'C# コンパイラ エラー'
+title: C# コンパイラ エラー
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'C# language, compiler errors'
-  - 'Visual C# compiler, errors'
-  - 'errors [C#]'
+- C# language, compiler errors
+- Visual C# compiler, errors
+- errors [C#]
 ms.assetid: 57262ab1-6c50-4f9c-81ad-9fba48477416
+ms.openlocfilehash: c4ece5ccf8c31beb2847a50f9cf894959acf23b2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975261"
 ---
 # <a name="c-compiler-errors"></a>C# コンパイラ エラー
 

@@ -3,10 +3,10 @@ title: LINQ to DataSet の概要
 ms.date: 03/30/2017
 ms.assetid: dc20a8fb-03f6-4b68-9c2b-7f7299e3070b
 ms.openlocfilehash: 635f1c17da40095990c238912f9e09ad398e6637
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073677"
 ---
 # <a name="linq-to-dataset-overview"></a>LINQ to DataSet の概要
@@ -14,7 +14,7 @@ ms.locfileid: "59073677"
   
  こうした突出した特長がある反面、<xref:System.Data.DataSet> のクエリ機能には制限があります。 <xref:System.Data.DataTable.Select%2A> メソッドでデータのフィルター処理や並べ替えを行ったり、<xref:System.Data.DataRow.GetChildRows%2A> メソッドや <xref:System.Data.DataRow.GetParentRow%2A> メソッドを使って階層のナビゲーションを行うことはできます。 しかし、さらに複雑な処理を行うには、開発者が独自にクエリを作成する必要があります。 その結果、アプリケーションで期待したパフォーマンスが得られなかったり、メンテナンスが難しくなったりする可能性があります。  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 簡単かつ迅速になりますクエリでキャッシュされたデータに対する、<xref:System.Data.DataSet>オブジェクト。 これらのクエリはアプリケーション コードに文字列リテラルとして記述するのではなく、プログラミング言語そのもので表現できます。 つまり、開発者はクエリ言語を個別に習得する必要はありません。 さらに、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]により、Visual Studio IDE は、コンパイル時の構文チェック、静的な型指定、および IntelliSense サポートを提供するために Visual Studio 開発者はより生産的に作業を[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]します。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] できますを 1 つまたは複数のデータ ソースから統合されているデータに対してクエリを実行します。 これにより、データの表現方法や扱いに柔軟性が要求されるさまざまなシナリオが実現します。 特に、汎用のレポート作成、分析、ビジネス インテリジェンスを行うアプリケーションでは、この手法を用いたデータ操作が欠かせません。  
+ [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] は、<xref:System.Data.DataSet> オブジェクトにキャッシュされたデータに対するクエリをより簡単に、より高速にします。 これらのクエリはアプリケーション コードに文字列リテラルとして記述するのではなく、プログラミング言語そのもので表現できます。 つまり、開発者はクエリ言語を個別に習得する必要はありません。 さらに、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]により、Visual Studio IDE は、コンパイル時の構文チェック、静的な型指定、および IntelliSense サポートを提供するために Visual Studio 開発者はより生産的に作業を[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]します。 また、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を使用すると、1 つまたは複数のデータ ソースから取得して統合したデータを照会することもできます。 これにより、データの表現方法や扱いに柔軟性が要求されるさまざまなシナリオが実現します。 特に、汎用のレポート作成、分析、ビジネス インテリジェンスを行うアプリケーションでは、この手法を用いたデータ操作が欠かせません。  
   
 ## <a name="querying-datasets-using-linq-to-dataset"></a>LINQ to DataSet を使った DataSet のクエリ  
  <xref:System.Data.DataSet> を使用して [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] オブジェクトを照会するには、あらかじめ <xref:System.Data.DataSet> にデータを読み込んでおく必要があります。 いくつかの方法にデータを読み込む、<xref:System.Data.DataSet>などを使用して、<xref:System.Data.Common.DataAdapter>クラスまたは[LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)します。 データが読み込まれた後、<xref:System.Data.DataSet>オブジェクト、クエリを実行を開始することができます。 使用してクエリを作成[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]使用と似ています[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]他に対して[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]-データ ソースを有効にします。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 単一テーブルに対してクエリを実行できる、<xref:System.Data.DataSet>またはを使用して 1 つ以上のテーブルに対して、<xref:System.Linq.Enumerable.Join%2A>と<xref:System.Linq.Enumerable.GroupJoin%2A>標準クエリ演算子。  
@@ -31,6 +31,6 @@ ms.locfileid: "59073677"
 ## <a name="see-also"></a>関連項目
 
 - [DataSet のクエリ](../../../../docs/framework/data/adonet/querying-datasets-linq-to-dataset.md)
-- [統合言語クエリ (LINQ)C#](../../../csharp/programming-guide/concepts/linq/index.md)
+- [統合言語クエリ (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)
 - [統合言語クエリ (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)
 - [LINQ to SQL](../../../../docs/framework/data/adonet/sql/linq/index.md)

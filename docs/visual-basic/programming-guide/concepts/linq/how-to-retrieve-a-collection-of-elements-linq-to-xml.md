@@ -3,10 +3,10 @@ title: '方法: (LINQ to XML) の要素のコレクションを取得する (Vis
 ms.date: 07/20/2015
 ms.assetid: 2269f9de-8fb9-4666-b8a1-a4e754fa6a81
 ms.openlocfilehash: 53572ac3c80e012b95527d32da28c8685cd8cfd3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58833638"
 ---
 # <a name="how-to-retrieve-a-collection-of-elements-linq-to-xml-visual-basic"></a>方法: (LINQ to XML) の要素のコレクションを取得する (Visual Basic)

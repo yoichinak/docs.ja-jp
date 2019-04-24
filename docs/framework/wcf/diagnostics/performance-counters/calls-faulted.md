@@ -3,10 +3,10 @@ title: 失敗した呼び出し
 ms.date: 03/30/2017
 ms.assetid: bb9e8045-6aeb-4b7f-a825-8283c44252a1
 ms.openlocfilehash: 63181078da4ce75b5b5f68a2d40ad5338a687968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095258"
 ---
 # <a name="calls-faulted"></a>失敗した呼び出し

@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XAML [WPF], ThemeDictionary markup extension
 ms.assetid: aa75e10b-13dd-4989-972d-51bab63a05e2
 ms.openlocfilehash: ad2248c791fadc5363d90ff496d5e040f6036ab3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59132094"
 ---
 # <a name="themedictionary-markup-extension"></a>ThemeDictionary のマークアップ拡張機能
@@ -47,23 +47,21 @@ ms.locfileid: "59132094"
   
  `assemblyUri`文字列 (<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>プロパティの値) の特定のテーマに適用するディクショナリを識別する名前付け規則の基礎が形成されます。 <xref:System.Windows.Markup.MarkupExtension.ProvideValue%2A>ロジックを`ThemeDictionary`生成することによって、規則が完了すると、[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]プリコンパイル済みリソース アセンブリ内に含まれるように、特定のテーマ ディクショナリのバリアントを指します。 この規則、または一般的なコントロールのスタイルと概念としては、ページ/アプリケーション レベルのスタイルとテーマの相互作用を記述するについては、ここで完全に説明しません。 使用するための基本的なシナリオ`ThemeDictionary`を指定するには、<xref:System.Windows.ResourceDictionary.Source%2A>のプロパティを`ResourceDictionary`アプリケーション レベルで宣言します。 指定すると、[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]によるアセンブリの`ThemeDictionary`拡張機能ではなく直接[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]、拡張機能のロジックがシステム テーマが変更されるたびに適用される無効化ロジックを提供します。  
   
- 属性構文は、このマークアップ拡張機能で使用される最も一般的な構文です。 
-  `ThemeDictionary` 識別子文字列の後に設定される文字列トークンは、基になる <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 拡張クラスの <xref:System.Windows.ThemeDictionaryExtension> 値として割り当てられます。  
+ 属性構文は、このマークアップ拡張機能で使用される最も一般的な構文です。 `ThemeDictionary` 識別子文字列の後に設定される文字列トークンは、基になる <xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A> 拡張クラスの <xref:System.Windows.ThemeDictionaryExtension> 値として割り当てられます。  
   
  `ThemeDictionary` オブジェクト要素構文にも使用できます。 この場合は、値を指定する、<xref:System.Windows.ThemeDictionaryExtension.AssemblyName%2A>プロパティが必要です。  
   
- `ThemeDictionary` 指定する詳細な属性の使用方法でも使用できます、<xref:System.Windows.Markup.StaticExtension.Member%2A>プロパティとしてプロパティ値のペアを =。  
+ `ThemeDictionary` は、<xref:System.Windows.Markup.StaticExtension.Member%2A> プロパティをプロパティおよび値のペアとして指定する詳細出力属性使用でも使用できます。  
   
 ```xml  
 <object property="{ThemeDictionary AssemblyName=assemblyUri}" .../>  
 ```  
   
- 詳細出力の使用は、複数の設定可能プロパティを持つ拡張機能や、一部のプロパティがオプションである場合に役立ちます。 
-  `ThemeDictionary` には、必須の設定可能プロパティが 1 つしか存在しないため、このような詳細出力の使用は一般的ではありません。  
+ 詳細出力の使用は、複数の設定可能プロパティを持つ拡張機能や、一部のプロパティがオプションである場合に役立ちます。 `ThemeDictionary` には、必須の設定可能プロパティが 1 つしか存在しないため、このような詳細出力の使用は一般的ではありません。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装でこのマークアップ拡張機能の処理が定義されている、<xref:System.Windows.ThemeDictionaryExtension>クラス。  
   
- `ThemeDictionary` マークアップ拡張機能。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 すべてのマークアップ拡張機能で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、{および} される規則は、それぞれの属性構文内の文字を[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサを認識するマークアップ拡張機能が、属性を処理する必要があります。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
+ `ThemeDictionary` はマークアップ拡張機能です。 一般にマークアップ拡張機能を実装するのは、属性値をリテラル値やハンドラー名以外にエスケープする要件が存在し、その要件の適用範囲がグローバルで、特定の型やプロパティに型コンバーターを適用するだけにとどまらない場合です。 すべてのマークアップ拡張機能で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、{および} される規則は、それぞれの属性構文内の文字を[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]プロセッサを認識するマークアップ拡張機能が、属性を処理する必要があります。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

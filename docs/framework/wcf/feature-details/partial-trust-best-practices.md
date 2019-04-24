@@ -3,10 +3,10 @@ title: 部分信頼のベスト プラクティス
 ms.date: 03/30/2017
 ms.assetid: 0d052bc0-5b98-4c50-8bb5-270cc8a8b145
 ms.openlocfilehash: c83c36020cfd5b41e99ff9eeb7968d0b5df909a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184081"
 ---
 # <a name="partial-trust-best-practices"></a>部分信頼のベスト プラクティス
@@ -29,7 +29,7 @@ ms.locfileid: "59184081"
   
 -   `OnSerializing`、`OnSerialized`、`OnDeserializing`、`OnDeserialized` などのシリアル化イベントを処理するメソッドは、パブリックとして宣言する必要があります。 ただし、明示的および暗黙的な <xref:System.Runtime.Serialization.IDeserializationCallback.OnDeserialization%28System.Object%29> の実装は、いずれもサポートされています。  
   
--   `[DataContract]` マークされたアセンブリで実装された型、<xref:System.Security.AllowPartiallyTrustedCallersAttribute>として型コンス トラクターでセキュリティ関連の操作を実行する必要がありますいない、<xref:System.Runtime.Serialization.DataContractSerializer>逆シリアル化中に、新しくインスタンス化されたオブジェクトのコンス トラクターを呼び出しません。 特に、`[DataContract]` 型では、次の一般的なセキュリティ手法の使用を避ける必要があります。  
+-   `[DataContract]` は、逆シリアル化の間に新しくインスタンス化されたオブジェクトのコンストラクターを呼び出さないため、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> でマークされて、アセンブリで実装された <xref:System.Runtime.Serialization.DataContractSerializer> 型は、型コンストラクターでセキュリティ関連の操作を実行することはできません。 特に、`[DataContract]` 型では、次の一般的なセキュリティ手法の使用を避ける必要があります。  
   
 -   型のコンストラクターを内部またはプライベートにすることにより、部分信頼アクセスを制限する。  
   

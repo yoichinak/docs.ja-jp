@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f32a71ec04d791c83f711beee1086bcba283401c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54625615"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59345405"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>方法: アセンブリを使用して XSLT 変換を実行する
 XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパイルしてアセンブリを生成します。 このアセンブリを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。  
@@ -132,7 +132,7 @@ XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパ�
   
 ### <a name="to-compile-the-style-sheet-with-the-script-enabled"></a>スクリプトを有効にしてスタイル シートをコンパイルするには  
   
-1.  コマンド ラインで次のコマンドを実行すると、`Transform.dll` および `Transform_Script1.dll` という名前で 2 つのアセンブリが作成されます (これが既定の動作です。 他に指定しなければ、既定のクラス名とアセンブリ名はメインのスタイル シートの名前になります)。  
+1. コマンド ラインで次のコマンドを実行すると、`Transform.dll` および `Transform_Script1.dll` という名前で 2 つのアセンブリが作成されます (これが既定の動作です。 他に指定しなければ、既定のクラス名とアセンブリ名はメインのスタイル シートの名前になります)。  
   
     ```  
     xsltc /settings:script+ Transform.xsl  
@@ -146,15 +146,15 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-include-the-compiled-assembly-as-a-reference-when-you-compile-your-code"></a>コードをコンパイルするときにコンパイル済みアセンブリを参照として含めるには  
   
-1.  ソリューション エクスプローラーまたはコマンド ラインで参照を追加することで、Visual Studio にアセンブリを含めることができます。  
+1. ソリューション エクスプローラーまたはコマンド ラインで参照を追加することで、Visual Studio にアセンブリを含めることができます。  
   
-2.  コマンド ラインで C# を使用する場合、次のように入力します。  
+2. コマンド ラインで C# を使用する場合、次のように入力します。  
   
     ```  
     csc myCode.cs /r:system.dll;system.xml.dll;Transform.dll  
     ```  
   
-3.  コマンド ラインで Visual Basic を使用する場合、次のように入力します。  
+3. コマンド ラインで Visual Basic を使用する場合、次のように入力します。  
   
     ```  
     vbc myCode.vb /r:system.dll;system.xml.dll;Transform.dll  
@@ -162,7 +162,7 @@ xsltc /settings:script+ /class:Transform Transform.xsl
   
 ### <a name="to-use-the-compiled-assembly-in-your-code"></a>コンパイル済みアセンブリをコードで使用するには  
   
-1.  コンパイルしたスタイル シートを使用して XSLT 変換を実行する方法を次の例に示します。  
+1. コンパイルしたスタイル シートを使用して XSLT 変換を実行する方法を次の例に示します。  
   
  [!code-csharp[XslTransform_XSLTC#1](../../../../samples/snippets/csharp/VS_Snippets_Data/XslTransform_XSLTC/CS/XslTransform_XSLTC.cs#1)]
  [!code-vb[XslTransform_XSLTC#1](../../../../samples/snippets/visualbasic/VS_Snippets_Data/XslTransform_XSLTC/VB/XslTransform_XSLTC.vb#1)]  

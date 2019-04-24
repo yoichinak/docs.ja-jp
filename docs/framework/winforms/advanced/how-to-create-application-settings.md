@@ -9,10 +9,10 @@ helpviewer_keywords:
 - application settings [Windows Forms], creating
 ms.assetid: 1e7aa347-af75-41e5-89ca-f53cab704f72
 ms.openlocfilehash: 5cf109aec8b55650f43f07f5b303c6373df4efc7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305976"
 ---
 # <a name="how-to-create-application-settings"></a>方法: アプリケーション設定を作成する
@@ -51,4 +51,4 @@ ms.locfileid: "59305976"
 - <xref:System.Configuration.SpecialSettingAttribute>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - [アプリケーション設定の概要](application-settings-overview.md)
-- [方法: アプリケーション設定を検証する](how-to-validate-application-settings.md)
+- [方法: アプリケーション設定を検証します。](how-to-validate-application-settings.md)

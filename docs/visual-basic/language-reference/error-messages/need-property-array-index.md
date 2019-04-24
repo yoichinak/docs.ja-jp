@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID385
 ms.assetid: 69ec6d59-ffc4-48ac-8a28-fe6853389843
 ms.openlocfilehash: c68e134237c0dfa4642a1e528c58c98a49ad8b74
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836273"
 ---
 # <a name="need-property-array-index"></a>プロパティ配列のインデックスが必要です。

@@ -3,10 +3,10 @@ title: SQL Server の共通言語ランタイム統合
 ms.date: 03/30/2017
 ms.assetid: c7a324c4-160d-44c2-b593-641af06eca61
 ms.openlocfilehash: fd043aa6c7e5b9246a36146e000e5cba9e090d3e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297501"
 ---
 # <a name="sql-server-common-language-runtime-integration"></a>SQL Server の共通言語ランタイム統合
@@ -18,7 +18,7 @@ SQL Server 2005 で、Microsoft Windows 用の .NET Framework の共通言語ラ
   
  **SQL Server オンライン ブック**  
   
-1. [CLR (共通言語ランタイム) 統合のプログラミング概念](https://go.microsoft.com/fwlink/?LinkId=115240)  
+1. [共通言語ランタイム (CLR) 統合のプログラミングの概念](https://go.microsoft.com/fwlink/?LinkId=115240)  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [SQL Server の CLR 統合の概要](../../../../../docs/framework/data/adonet/sql/introduction-to-sql-server-clr-integration.md)  

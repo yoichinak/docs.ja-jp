@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID381
 ms.assetid: 77c14680-bc61-4f46-9529-bb9fe366c18e
 ms.openlocfilehash: 13646cba1c61d79a4e1d394a2c5d0c2e62c645d9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58822129"
 ---
 # <a name="property-array-index-is-not-valid"></a>プロパティの配列インデックスが有効ではありません。

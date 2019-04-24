@@ -3,10 +3,10 @@ title: システム関数
 ms.date: 03/30/2017
 ms.assetid: b7c71b58-09e6-44ce-a3e5-a0fdb892fb86
 ms.openlocfilehash: 135154d2f5e26cdf7f2e41e8ed2b561bb75f377e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073449"
 ---
 # <a name="system-functions"></a>システム関数
@@ -14,7 +14,7 @@ ms.locfileid: "59073449"
   
 |関数|説明|  
 |--------------|-----------------|  
-|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|チェックサム値を返します。 `CHECKSUM` ハッシュ インデックスの作成に使用されます。<br /><br /> **引数**<br /><br /> `value`:A `Boolean`、 `Byte`、 `Int16`、 `Int32`、 `Int64`、 `Single`、 `Decimal`、 `Double`、 `DateTime`、 `String`、 `Binary`、または`Guid`します。 1 つ、2 つ、または 3 つの値を指定できます。<br /><br /> **戻り値**<br /><br /> 指定された式の絶対値。<br /><br /> **例**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
+|`CHECKSUM (` `value`, [`value`, [`value`]]`)`|チェックサム値を返します。 `CHECKSUM` は、ハッシュ インデックスの作成に使用します。<br /><br /> **引数**<br /><br /> `value`:A `Boolean`、 `Byte`、 `Int16`、 `Int32`、 `Int64`、 `Single`、 `Decimal`、 `Double`、 `DateTime`、 `String`、 `Binary`、または`Guid`します。 1 つ、2 つ、または 3 つの値を指定できます。<br /><br /> **戻り値**<br /><br /> 指定された式の絶対値。<br /><br /> **例**<br /><br /> `SqlServer.CHECKSUM(10,100,1000.0)`|  
 |`CURRENT_TIMESTAMP ()`|有効桁数が 7 (SQL Server 2008) または 3 (SQL Server 2005) の `DateTime` 値に使用する現在の日付と時刻を SQL Server の内部形式で生成します。<br /><br /> **戻り値**<br /><br /> 現在のシステム日時を `DateTime` として表現した値。<br /><br /> **例**<br /><br /> `SqlServer.CURRENT_TIMESTAMP()`|  
 |`CURRENT_ USER` `()`|現在のユーザーの名前を返します。<br /><br /> **戻り値**<br /><br /> ASCII の `String`。<br /><br /> **例**<br /><br /> `SqlServer.CURRENT_USER()`|  
 |`DATALENGTH` `(` `expression` `)`|式を表すために必要なバイト数を返します。<br /><br /> **引数**<br /><br /> `expression`:A `Boolean`、 `Byte`、 `Int16`、 `Int32`、 `Int64`、 `Single`、 `Decimal`、 `Double`、 `DateTime`、 `Time`、 `DateTimeOffset`、 `String`、 `Binary`、または`Guid`.<br /><br /> **戻り値**<br /><br /> プロパティのサイズ (`Int32`)。<br /><br /> **例**<br /><br /> `SELECT VALUE SqlServer.DATALENGTH(P.Name)FROM`<br /><br /> `AdventureWorksEntities.Product AS P`|  
@@ -28,7 +28,7 @@ ms.locfileid: "59073449"
   
 |SQL Server 2000|SQL Server 2005|SQL Server 2008|  
 |---------------------|---------------------|---------------------|  
-|[システム関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[システム関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[システム関数 (Transact-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
+|[システム関数 Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115918)|[システム関数 Transact SQL)](https://go.microsoft.com/fwlink/?LinkId=115917)|[システム関数 (TRANSACT-SQL)](https://go.microsoft.com/fwlink/?LinkId=115919)|  
   
 ## <a name="see-also"></a>関連項目
 

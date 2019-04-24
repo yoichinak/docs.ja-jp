@@ -12,10 +12,10 @@ helpviewer_keywords:
 - If Operator [Visual Basic]
 ms.assetid: dd56c9df-7cd4-442c-9ba6-20c70ee44c8f
 ms.openlocfilehash: 9ab01755d75c91ce87acf83e7f406b26c466aef6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834636"
 ---
 # <a name="if-operator-visual-basic"></a>If 演算子 (Visual Basic)
@@ -34,9 +34,9 @@ If( [argument1,] argument2, argument3 )
   
 |用語|定義|  
 |---|---|  
-|`argument1`|必須。 `Boolean`. 評価し、返すその他の引数のどちらを決定します。|  
-|`argument2`|必須。 `Object`. 評価され、返された場合`argument1`に評価される`True`します。|  
-|`argument3`|必須。 `Object`. 評価され、返された場合`argument1`に評価される`False`場合`argument1`は、 [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`に評価される変数[Nothing](../../../visual-basic/language-reference/nothing.md)します。|  
+|`argument1`|必須。 `Boolean`。 評価し、返すその他の引数のどちらを決定します。|  
+|`argument2`|必須。 `Object`。 評価され、返された場合`argument1`に評価される`True`します。|  
+|`argument3`|必須。 `Object`。 評価され、返された場合`argument1`に評価される`False`場合`argument1`は、 [Nullable](../../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md) `Boolean`に評価される変数[Nothing](../../../visual-basic/language-reference/nothing.md)します。|  
   
  `If`のように 3 つの引数で呼び出される演算子の動作、`IIf`関数を使用するショート サーキット評価します。 `IIf`関数は、引数の 3 つすべてを常に評価は、`If`を 3 つの引数を持つ演算子が 2 つのみを評価します。 最初の`If`引数が評価され、結果としてキャスト、`Boolean`値、`True`または`False`します。 値が場合`True`、`argument2`が評価され、その値が返されますが、`argument3`は評価されません。 場合の値、`Boolean`式が`False`、`argument3`が評価され、その値が返されますが、`argument2`は評価されません。 次の例の使用方法を示します`If`3 つの引数を使用する場合。  
   
@@ -53,8 +53,8 @@ If( [argument1,] argument2, argument3 )
   
 |用語|定義|  
 |---|---|  
-|`argument2`|必須。 `Object`. 参照または null 許容型である必要があります。 評価され、以外の値に評価するときに返される`Nothing`します。|  
-|`argument3`|必須。 `Object`. 評価され、返された場合`argument2`に評価される`Nothing`します。|  
+|`argument2`|必須。 `Object`。 参照または null 許容型である必要があります。 評価され、以外の値に評価するときに返される`Nothing`します。|  
+|`argument3`|必須。 `Object`。 評価され、返された場合`argument2`に評価される`Nothing`します。|  
   
  ときに、`Boolean`引数を省略すると、最初の引数が参照または null 許容型にする必要があります。 最初の引数が評価された場合`Nothing`、2 番目の引数の値が返されます。 その他のすべてのケースでは、最初の引数の値が返されます。 次の例では、この評価のしくみを示しています。  
   

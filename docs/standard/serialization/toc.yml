@@ -1,96 +1,89 @@
-items:
 - name: シリアル化
   href: index.md
   items:
-  - name: シリアル化に関する「方法」トピック
-    href: serialization-how-to-topics.md
-  - name: バイナリ シリアル化
-    href: binary-serialization.md
-    items:
-    - name: シリアル化の概念
-      href: serialization-concepts.md
-    - name: 基本的なシリアル化
-      href: basic-serialization.md
-    - name: 選択的シリアル化
-      href: selective-serialization.md
-    - name: カスタムのシリアル化
-      href: custom-serialization.md
-    - name: シリアル化プロセスの手順
-      href: steps-in-the-serialization-process.md
-    - name: バージョン トレラントなシリアル化
-      href: version-tolerant-serialization.md
-    - name: シリアル化のガイドライン
-      href: serialization-guidelines.md
-    - name: '方法: シリアル化されたデータをチャンクする'
-      href: how-to-chunk-serialized-data.md
-    - name: '方法: .NET 標準オブジェクトがシリアル化可能なのかどうかを判断する'
-      href: how-to-determine-if-netstandard-object-is-serializable.md
-  - name: XML シリアル化および SOAP シリアル化
-    href: xml-and-soap-serialization.md
-    items:
-    - name: '方法: 派生クラスのシリアル化を制御する'
-      href: how-to-control-serialization-of-derived-classes.md
-    - name: XML シリアル化の概要
-      href: introducing-xml-serialization.md
-    - name: '方法: オブジェクトを逆シリアル化する'
-      href: how-to-deserialize-an-object.md
-    - name: XML シリアル化の例
-      href: examples-of-xml-serialization.md
-    - name: XML スキーマ定義ツールと XML シリアル化
-      href: the-xml-schema-definition-tool-and-xml-serialization.md
-    - name: '方法: XML スキーマ定義ツールを使用してクラスと XML スキーマ ドキュメントを生成する'
-      href: xml-schema-def-tool-gen.md
-    - name: 属性を使用した XML シリアル化の制御
-      href: controlling-xml-serialization-using-attributes.md
-    - name: XML シリアル化を制御する属性
-      href: attributes-that-control-xml-serialization.md
-    - name: '方法: XML ストリームの代替要素名を指定する'
-      href: how-to-specify-an-alternate-element-name-for-an-xml-stream.md
-    - name: '方法: オブジェクトをシリアル化する'
-      href: how-to-serialize-an-object.md
-    - name: '方法: XML 要素および XML 属性名を修飾する'
-      href: how-to-qualify-xml-element-and-xml-attribute-names.md
-    - name: XML Web サービスを使用した XML シリアル化
-      href: xml-serialization-with-xml-web-services.md
-    - name: '方法: オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する'
-      href: how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
-    - name: '方法: SOAP エンコード済み XML シリアル化をオーバーライドする'
-      href: how-to-override-encoded-soap-xml-serialization.md
-    - name: エンコード済み SOAP シリアル化を制御する属性
-      href: attributes-that-control-encoded-soap-serialization.md
-    - name: <system.xml.serialization> 要素
-      href: system-xml-serialization-element.md
-    - name: <dateTimeSerialization> 要素
-      href: datetimeserialization-element.md
-    - name: <schemaImporterExtensions> 要素
-      href: schemaimporterextensions-element.md
-    - name: <schemaImporterExtensions> の <add> 要素
-      href: add-element-for-schemaimporterextensions.md
-    - name: <xmlSerializer> 要素
-      href: xmlserializer-element.md
-  - name: シリアル化ツール
-    href: serialization-tools.md
-    items:
-    - name: XML シリアライザー ジェネレーター ツール (Sgen.exe)
-      href: xml-serializer-generator-tool-sgen-exe.md
-    - name: XML Schema Definition Tool (Xsd.exe)
-      href: xml-schema-definition-tool-xsd-exe.md
-  - name: シリアル化のサンプル
-    href: serialization-samples.md
-    items:
-    - name: 基本的なシリアル化の技術サンプル
-      href: basic-serialization-technology-sample.md
-    - name: XmlSerializer によるカスタム シリアル化順序
-      href: custom-serialization-order-with-xmlserializer.md
-    - name: SchemaImporterExtension の技術サンプル
-      href: schemaimporterextension-technology-sample.md
-    - name: バージョン間の耐性があるシリアル化に対応する技術サンプル
-      href: version-tolerant-serialization-technology-sample.md
-    - name: Web サービス ジェネリック シリアル化の技術サンプル
-      href: web-services-generics-serialization-technology-sample.md
-ms.openlocfilehash: ab9134268559fadb0e5f586773d5963535d4b12a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469691"
+    - name: シリアル化に関する「方法」トピック
+      href: serialization-how-to-topics.md
+    - name: バイナリ シリアル化
+      href: binary-serialization.md
+      items:
+        - name: シリアル化の概念
+          href: serialization-concepts.md
+        - name: 基本的なシリアル化
+          href: basic-serialization.md
+        - name: 選択的シリアル化
+          href: selective-serialization.md
+        - name: カスタムのシリアル化
+          href: custom-serialization.md
+        - name: シリアル化プロセスの手順
+          href: steps-in-the-serialization-process.md
+        - name: バージョン トレラントなシリアル化
+          href: version-tolerant-serialization.md
+        - name: シリアル化のガイドライン
+          href: serialization-guidelines.md
+        - name: '方法: シリアル化されたデータをチャンクする'
+          href: how-to-chunk-serialized-data.md
+        - name: '方法: .NET 標準オブジェクトがシリアル化可能なのかどうかを判断する'
+          href: how-to-determine-if-netstandard-object-is-serializable.md
+    - name: XML シリアル化および SOAP シリアル化
+      href: xml-and-soap-serialization.md
+      items:
+        - name: '方法: 派生クラスのシリアル化を制御する'
+          href: how-to-control-serialization-of-derived-classes.md
+        - name: XML シリアル化の概要
+          href: introducing-xml-serialization.md
+        - name: '方法: オブジェクトを逆シリアル化する'
+          href: how-to-deserialize-an-object.md
+        - name: XML シリアル化の例
+          href: examples-of-xml-serialization.md
+        - name: XML スキーマ定義ツールと XML シリアル化
+          href: the-xml-schema-definition-tool-and-xml-serialization.md
+        - name: '方法: XML スキーマ定義ツールを使用してクラスと XML スキーマ ドキュメントを生成する'
+          href: xml-schema-def-tool-gen.md
+        - name: 属性を使用した XML シリアル化の制御
+          href: controlling-xml-serialization-using-attributes.md
+        - name: XML シリアル化を制御する属性
+          href: attributes-that-control-xml-serialization.md
+        - name: '方法: XML ストリームの代替要素名を指定する'
+          href: how-to-specify-an-alternate-element-name-for-an-xml-stream.md
+        - name: '方法: オブジェクトをシリアル化する'
+          href: how-to-serialize-an-object.md
+        - name: '方法: XML 要素および XML 属性名を修飾する'
+          href: how-to-qualify-xml-element-and-xml-attribute-names.md
+        - name: XML Web サービスを使用した XML シリアル化
+          href: xml-serialization-with-xml-web-services.md
+        - name: '方法: オブジェクトを SOAP エンコード済み XML ストリームとしてシリアル化する'
+          href: how-to-serialize-an-object-as-a-soap-encoded-xml-stream.md
+        - name: '方法: SOAP エンコード済み XML シリアル化をオーバーライドする'
+          href: how-to-override-encoded-soap-xml-serialization.md
+        - name: エンコード済み SOAP シリアル化を制御する属性
+          href: attributes-that-control-encoded-soap-serialization.md
+        - name: <system.xml.serialization> 要素
+          href: system-xml-serialization-element.md
+        - name: <dateTimeSerialization> 要素
+          href: datetimeserialization-element.md
+        - name: <schemaImporterExtensions> 要素
+          href: schemaimporterextensions-element.md
+        - name: <schemaImporterExtensions> の <add> 要素
+          href: add-element-for-schemaimporterextensions.md
+        - name: <xmlSerializer> 要素
+          href: xmlserializer-element.md
+    - name: シリアル化ツール
+      href: serialization-tools.md
+      items:
+        - name: XML シリアライザー ジェネレーター ツール (Sgen.exe)
+          href: xml-serializer-generator-tool-sgen-exe.md
+        - name: XML Schema Definition Tool (Xsd.exe)
+          href: xml-schema-definition-tool-xsd-exe.md
+    - name: シリアル化のサンプル
+      href: serialization-samples.md
+      items:
+        - name: 基本的なシリアル化の技術サンプル
+          href: basic-serialization-technology-sample.md
+        - name: XmlSerializer によるカスタム シリアル化順序
+          href: custom-serialization-order-with-xmlserializer.md
+        - name: SchemaImporterExtension の技術サンプル
+          href: schemaimporterextension-technology-sample.md
+        - name: バージョン間の耐性があるシリアル化に対応する技術サンプル
+          href: version-tolerant-serialization-technology-sample.md
+        - name: Web サービス ジェネリック シリアル化の技術サンプル
+          href: web-services-generics-serialization-technology-sample.md

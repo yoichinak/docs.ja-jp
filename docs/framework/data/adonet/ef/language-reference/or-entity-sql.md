@@ -3,10 +3,10 @@ title: '|| (OR) (Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: 8e649648-eb9a-4380-9d74-36e62260628c
 ms.openlocfilehash: d089bcec56ff13ddcd5250a63aee6a00d0c3ef11
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297799"
 ---
 # <a name="-or-entity-sql"></a>|| (OR) (Entity SQL)
@@ -25,7 +25,7 @@ boolean_expression || boolean_expression
  `Boolean`値を返す任意の有効な式。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 条件のいずれかが場合`true`、それ以外の`false`します。  
+ いずれかの条件が`true` の場合は `true`、それ以外の場合は `false`。  
   
 ## <a name="remarks"></a>Remarks  
  OR は [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の論理演算子です。 2 つの条件を結合する場合に使用します。 1 つのステートメント内に複数の論理演算子が使われている場合、OR 演算子は AND 演算子の次に評価されます。 ただし、かっこを使うと、演算の順序を変更することができます。  

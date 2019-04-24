@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Grid control [WPF], positioning child elements
 ms.assetid: 27b3ba9b-ad32-44e2-bcab-a79d573a463c
 ms.openlocfilehash: c508f45c1ea3d0925503d6fe5600498a0558d5ad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59202990"
 ---
 # <a name="how-to-position-the-child-elements-of-a-grid"></a>方法: グリッドの子要素を配置する

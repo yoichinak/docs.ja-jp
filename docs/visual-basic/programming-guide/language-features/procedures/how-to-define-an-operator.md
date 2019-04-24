@@ -14,10 +14,10 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: d4b0e253-092a-4e6e-9fe2-01f562140a29
 ms.openlocfilehash: 14aa25de78eb357f8474d3828aa45e48e7a4f9c7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59126114"
 ---
 # <a name="how-to-define-an-operator-visual-basic"></a>方法: 定義の演算子 (Visual Basic)
@@ -39,10 +39,10 @@ ms.locfileid: "59126114"
 ## <a name="see-also"></a>関連項目
 
 - [演算子プロシージャ](./operator-procedures.md)
-- [方法: 変換演算子を定義する](./how-to-define-a-conversion-operator.md)
+- [方法: 変換演算子を定義します。](./how-to-define-a-conversion-operator.md)
 - [方法: 演算子プロシージャを呼び出す](./how-to-call-an-operator-procedure.md)
-- [方法: 演算子を定義するクラスを使用する](./how-to-use-a-class-that-defines-operators.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [方法: 演算子を定義するクラスを使用して、](./how-to-use-a-class-that-defines-operators.md)
+- [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
 - [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)
-- [方法: 構造体を宣言します。](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
+- [方法: 構造体を宣言する](../../../../visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md)
 - [Mod 演算子](../../../../visual-basic/language-reference/operators/mod-operator.md)

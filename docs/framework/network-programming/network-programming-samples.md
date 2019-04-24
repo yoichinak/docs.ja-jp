@@ -2,12 +2,12 @@
 title: ネットワーク プログラミングのサンプル
 ms.date: 03/30/2017
 ms.assetid: 8efacc29-7367-47c2-8638-a4f66385ad91
-ms.openlocfilehash: b74de4b9b7ef6a505b0f6f986ffe5152b60e7956
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 6d66a5ce0835a52dd1b8c331d94bc58ce17622c1
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56220297"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59204550"
 ---
 # <a name="network-programming-samples"></a>ネットワーク プログラミングのサンプル
 このセクションでは、<xref:System.Net>、<xref:System.Net.Cache>、<xref:System.Net.Configuration>、<xref:System.Net.Mail>、<xref:System.Net.Mime>、<xref:System.Net.NetworkInformation>、<xref:System.Net.Security>、<xref:System.Net.Sockets>、および関連する名前空間のクラスを使用した、ダウンロード可能なネットワーク プログラミング サンプルの説明とリンクを示します。 
@@ -51,13 +51,13 @@ ms.locfileid: "56220297"
   
  [FTP エクスプローラー テクノロジのサンプル](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.0/ms233623(v=vs.85))  
  FTP サーバーの内容を一覧表示する方法を示します。  
-  
-  
-## <a name="reference"></a>参照  
+
+## <a name="reference"></a>関連項目  
  <xref:System.Net>  
   
  <xref:System.Net.NetworkInformation>  
   
 ## <a name="see-also"></a>関連項目
+
 - [.NET Framework のネットワーク プログラミング](../../../docs/framework/network-programming/index.md)
 - [ネットワーク プログラミング方法のトピック](../../../docs/framework/network-programming/network-programming-how-to-topics.md)

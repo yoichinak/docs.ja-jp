@@ -3,10 +3,10 @@ title: '方法: 作成し、コマンドライン (Visual Basic) を使用して
 ms.date: 03/14/2018
 ms.assetid: 229ff9fb-1bd1-403b-946b-526104864c60
 ms.openlocfilehash: eecd644a7b91492f0a78cf969cfa71ae927609ab
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819403"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-visual-basic"></a>方法: 作成し、コマンドライン (Visual Basic) を使用してアセンブリを使用します。
@@ -115,7 +115,7 @@ vbc -out:TestCode.exe -reference:MathLibrary.DLL TestCode.vb
   
  **-アウト**コンパイラ オプションは、コンパイラは EXE ファイルを出力して、出力ファイルの名前を指定します (`TestCode.exe`)。 このコンパイラ オプションは省略できます。 [-参照 (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)コンパイラ オプションは、このプログラムで使用される DLL ファイルを指定します。  
   
- コマンドラインからのビルドの詳細については、および[、コマンドラインからビルドする](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)を参照してください。  
+ コマンドラインからのビルドの詳細については、次を参照してください。 および[、コマンドラインからビルドする](../../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

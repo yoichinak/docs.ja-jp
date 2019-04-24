@@ -5,10 +5,10 @@ helpviewer_keywords:
 - errors [Visual Basic]
 ms.assetid: 2557da60-c6dc-4e99-8128-fceb6f8a0736
 ms.openlocfilehash: 6df4a446e5dbd5ae73c860c86b5a881225d8be1c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826645"
 ---
 # <a name="errors-summary-visual-basic"></a>エラーの概要 (Visual Basic)

@@ -12,10 +12,10 @@ ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59297526"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>方法: CodeDOM を使用して XML ドキュメント ファイルを作成する
@@ -82,5 +82,5 @@ CodeDOM を利用し、XML ドキュメントを生成するコードを作成�
 ## <a name="see-also"></a>関連項目
 
 - [XML の使用によるコードのドキュメントの作成](~/docs/visual-basic/programming-guide/program-structure/documenting-your-code-with-xml.md)
-- [XML ドキュメントのコメント](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML ドキュメント コメント](~/docs/csharp/programming-guide/xmldoc/xml-documentation-comments.md)
 - [XML に関するドキュメント](/cpp/ide/xml-documentation-visual-cpp)

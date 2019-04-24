@@ -3,10 +3,10 @@ title: プロバイダー マニフェストの仕様
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59169911"
 ---
 # <a name="provider-manifest-specification"></a>プロバイダー マニフェストの仕様
@@ -250,8 +250,8 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名前|String|はい|適用なし|プロバイダー固有のデータ型の名前|  
-|PrimitiveTypeKind|PrimitiveTypeKind|はい|適用なし|EDM 型の名前|  
+|名前|String|[はい]|適用なし|プロバイダー固有のデータ型の名前|  
+|PrimitiveTypeKind|PrimitiveTypeKind|[はい]|適用なし|EDM 型の名前|  
   
 ###### <a name="function-node"></a>Function ノード  
  各 Function では、プロバイダーを介して使用できる 1 つの関数が定義されています。  
@@ -266,15 +266,15 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
 |NiladicFunction|ブール型|いいえ|False|関数にパラメーターが必要なく、パラメーターなしで呼び出される場合は True|  
 |ParameterType<br /><br /> Semantics|ParameterSemantics|いいえ|AllowImplicit<br /><br /> 変換|クエリ パイプラインによるパラメーター型の置換の処理方法の選択<br /><br /> -   ExactMatchOnly<br />-AllowImplicitPromotion<br />-AllowImplicitConversion|  
   
- **Parameters ノード**  
+ **[パラメーター] ノード**  
   
  各関数には、1 つ以上の Parameter ノードのコレクションが含まれています。  
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名前|String|[はい]|適用なし|パラメーターの識別子/名前|  
-|型|String|はい|適用なし|パラメーターの EDM 型|  
-|モード|パラメーター<br /><br /> Direction|はい|適用なし|パラメーターの方向<br /><br /> -で<br />-アウト<br />-inout|  
+|名前|String|はい|適用なし|パラメーターの識別子/名前|  
+|型|String|[はい]|適用なし|パラメーターの EDM 型|  
+|モード|パラメーター<br /><br /> Direction|[はい]|適用なし|パラメーターの方向<br /><br /> -で<br />-アウト<br />-inout|  
   
 ##### <a name="namespace-attribute"></a>Namespace 属性  
  各データ ストア プロバイダーでは、マニフェストで定義された情報に対して 1 つの名前空間または名前空間のグループを定義する必要があります。 この名前空間は、Entity SQL クエリで、関数および型の名前を解決するために使用できます。 たとえば、次のようになります。Sql Server。 その名前空間は、標準的な関数が Entity SQL クエリでサポートされるように Entity Services で定義された正規の名前空間 (EDM) とは別にする必要があります。  

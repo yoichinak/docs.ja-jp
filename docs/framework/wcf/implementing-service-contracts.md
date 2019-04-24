@@ -5,10 +5,10 @@ helpviewer_keywords:
 - implementing service contracts [WCF]
 ms.assetid: aefb6f56-47e3-4f24-ab0a-9bc07bf9885f
 ms.openlocfilehash: 766e0c4d30a4fa0eed9ce154ca932f5371a43211
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59196321"
 ---
 # <a name="implementing-service-contracts"></a>サービス コントラクトの実装
@@ -60,6 +60,6 @@ class MathService
 ## <a name="see-also"></a>関連項目
 
 - [サービスの設計と実装](../../../docs/framework/wcf/designing-and-implementing-services.md)
-- [方法: コントラクト クラスを使用してサービスを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
-- [方法: コントラクト インターフェイスを使用してサービスを作成する](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
+- [方法: コントラクト クラスを使用して、サービスを作成します。](../../../docs/framework/wcf/feature-details/how-to-create-a-wcf-contract-with-a-class.md)
+- [方法: サービス コントラクト インターフェイスを作成します。](../../../docs/framework/wcf/feature-details/how-to-create-a-service-with-a-contract-interface.md)
 - [サービスのランタイム動作の指定](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)

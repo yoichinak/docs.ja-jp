@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: a483d1b5-64aa-45b6-86ef-11b859f7f02e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ebd54afb312de0796b5a96b3d41f1e98dd97bd1b
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: f7bda02e1862740e6a6328835367a6a5e9929033
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654355"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59328310"
 ---
 # <a name="memory-mapped-files"></a>メモリ マップト ファイル
 メモリ マップト ファイルには、仮想メモリ内のファイルの内容が含まれています。 ファイルとメモリ空間の間のこのマッピングによって、複数のプロセスを含むアプリケーションは、メモリを直接読み書きすることでファイルを変更できます。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、「[Managing Memory-Mapped Files](https://docs.microsoft.com/previous-versions/ms810613(v=msdn.10))」 (メモリマップ ファイルの管理) で説明されているように、マネージド コードを使用して、ネイティブ Windows 関数がメモリ マップ済みファイルにアクセスする場合と同じ方法でメモリ マップ済みファイルにアクセスできます。  
@@ -96,29 +96,29 @@ ms.locfileid: "58654355"
   
  次の例は、メモリ マップト ファイルにブール値を書き込む、3 つの独立したプロセス (コンソール アプリケーション) で構成されます。 次の順序で処理が実行されます。  
   
-1.  `Process A` がメモリ マップト ファイルを作成し、値を書き込みます。  
+1. `Process A` がメモリ マップト ファイルを作成し、値を書き込みます。  
   
-2.  `Process B` がメモリ マップト ファイルを開き、値を書き込みます。  
+2. `Process B` がメモリ マップト ファイルを開き、値を書き込みます。  
   
-3.  `Process C` がメモリ マップト ファイルを開き、値を書き込みます。  
+3. `Process C` がメモリ マップト ファイルを開き、値を書き込みます。  
   
-4.  `Process A` がメモリ マップト ファイルの値を読み込み、表示します。  
+4. `Process A` がメモリ マップト ファイルの値を読み込み、表示します。  
   
-5.  `Process A` がメモリ マップト ファイルの処理を終了すると、ガベージ コレクションによってファイルが直ちにクリアされます。  
+5. `Process A` がメモリ マップト ファイルの処理を終了すると、ガベージ コレクションによってファイルが直ちにクリアされます。  
   
  この例を実行するには、次の手順に従います。  
   
-1.  アプリケーションをコンパイルし、3 つのコマンド プロンプト ウィンドウを開きます。  
+1. アプリケーションをコンパイルし、3 つのコマンド プロンプト ウィンドウを開きます。  
   
-2.  最初のコマンド プロンプト ウィンドウで、`Process A` を実行します。  
+2. 最初のコマンド プロンプト ウィンドウで、`Process A` を実行します。  
   
-3.  2 つ目のコマンド プロンプト ウィンドウで、`Process B` を実行します。  
+3. 2 つ目のコマンド プロンプト ウィンドウで、`Process B` を実行します。  
   
-4.  `Process A` に戻り、Enter キーを押します。  
+4. `Process A` に戻り、Enter キーを押します。  
   
-5.  3 つ目のコマンド プロンプト ウィンドウで、`Process C` を実行します。  
+5. 3 つ目のコマンド プロンプト ウィンドウで、`Process C` を実行します。  
   
-6.  `Process A` に戻り、Enter キーを押します。  
+6. `Process A` に戻り、Enter キーを押します。  
   
  `Process A` の出力は次のとおりです。  
   

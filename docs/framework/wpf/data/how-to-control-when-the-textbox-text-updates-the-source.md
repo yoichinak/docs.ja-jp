@@ -10,17 +10,17 @@ helpviewer_keywords:
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
 ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143274"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>方法: TextBox テキストでソースを更新するタイミングを制御する
 このトピックでは、使用する方法を説明します、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>プロパティ バインディングのソースの更新のタイミングを制御するためです。 トピックを使用して、<xref:System.Windows.Controls.TextBox>などのコントロール。  
   
 ## <a name="example"></a>例  
- <xref:System.Windows.Controls.TextBox>。<xref:System.Windows.Controls.TextBox.Text%2A> プロパティは、既定値を持つ<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>@property<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>します。 つまり、アプリケーション、<xref:System.Windows.Controls.TextBox>データ バインドで<xref:System.Windows.Controls.TextBox>します。<xref:System.Windows.Controls.TextBox.Text%2A> 入力したテキスト、プロパティ、<xref:System.Windows.Controls.TextBox>までソースを更新できません、<xref:System.Windows.Controls.TextBox>がフォーカスを失った (からクリックすると、たとえば、 <xref:System.Windows.Controls.TextBox>)。  
+ <xref:System.Windows.Controls.TextBox>.<xref:System.Windows.Controls.TextBox.Text%2A> プロパティは、既定値を持つ<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>@property<xref:System.Windows.Data.UpdateSourceTrigger.LostFocus>します。 つまり、アプリケーション、<xref:System.Windows.Controls.TextBox>データ バインドで<xref:System.Windows.Controls.TextBox>します。<xref:System.Windows.Controls.TextBox.Text%2A> 入力したテキスト、プロパティ、<xref:System.Windows.Controls.TextBox>までソースを更新できません、<xref:System.Windows.Controls.TextBox>がフォーカスを失った (からクリックすると、たとえば、 <xref:System.Windows.Controls.TextBox>)。  
   
  ソースの入力を更新する場合は、設定、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>へのバインドの<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>します。 次の例で強調表示された行のコードを表示する、`Text`両方のプロパティ、 <xref:System.Windows.Controls.TextBox> 、<xref:System.Windows.Controls.TextBlock>同じソース プロパティにバインドされます。 <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>のプロパティ、<xref:System.Windows.Controls.TextBox>にバインディングが設定されている<xref:System.Windows.Data.UpdateSourceTrigger.PropertyChanged>します。  
   
@@ -47,4 +47,4 @@ ms.locfileid: "59143274"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法のトピック](data-binding-how-to-topics.md)
+- [方法トピック](data-binding-how-to-topics.md)

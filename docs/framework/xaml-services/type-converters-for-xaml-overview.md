@@ -7,10 +7,10 @@ helpviewer_keywords:
 - type conversion for XAML [XAML Services]
 ms.assetid: 51a65860-efcb-4fe0-95a0-1c679cde66b7
 ms.openlocfilehash: 7a5ec731eacda8017c307a0ffa8ec282da78c40f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59095725"
 ---
 # <a name="type-converters-for-xaml-overview"></a>XAML の型コンバーターの概要
@@ -32,7 +32,7 @@ ms.locfileid: "59095725"
  マークアップ拡張機能の使用は、プロパティの型やその他の考慮事項を確認する前に、XAML プロセッサで処理される必要があります。 たとえば、属性として設定されるプロパティが、通常は型変換を行うものの、特定のケースではマークアップ拡張機能を使用して設定するという場合は、マークアップ拡張機能の動作が最初に処理されます。 マークアップ拡張機能が必要になる 1 つの一般的な状況は、既に存在するオブジェクトを参照する場合です。 このシナリオでは、ステートレスな型コンバーターは新しいインスタンスを生成することしかできないため、望ましくありません。 マークアップ拡張機能について詳しくは、「 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)」をご覧ください。  
   
 ### <a name="native-type-converters"></a>ネイティブな型コンバーター  
- WPF と .NET XAML サービスの実装では、ネイティブ型の変換処理がある特定の CLR 型は、ただし、これらの CLR 型がない従来どおりとして考えることプリミティブ。 このような型の例として、 <xref:System.DateTime>が挙げられます。 この理由の 1 つは、.NET Framework のアーキテクチャがどのように機能するかにあります。 <xref:System.DateTime> 型は、.NET の最も基本的なライブラリである mscorlib で定義されています。 <xref:System.DateTime> 属性、依存関係を導入する別のアセンブリから来る属性を設定するのには許可されていません (<xref:System.ComponentModel.TypeConverterAttribute>は System から)。 したがって、属性によって、通常の型コンバーターの検出メカニズムをサポートできません。 代わりに、XAML パーサーは、ネイティブな処理が必要な型の一覧を保持し、それらの型を通常のプリミティブの処理と類似した方法で処理します。 <xref:System.DateTime>の場合、その処理には <xref:System.DateTime.Parse%2A>の呼び出しが含まれます。  
+ WPF と .NET XAML サービスの実装では、ネイティブ型の変換処理がある特定の CLR 型は、ただし、これらの CLR 型がない従来どおりとして考えることプリミティブ。 このような型の例として、 <xref:System.DateTime>が挙げられます。 この理由の 1 つは、.NET Framework のアーキテクチャがどのように機能するかにあります。 <xref:System.DateTime> 型は、.NET の最も基本的なライブラリである mscorlib で定義されています。 <xref:System.DateTime> の属性を設定する時は、別のアセンブリから来る属性を使用して従属関係を持ち込むことができません (<xref:System.ComponentModel.TypeConverterAttribute> は System から)。したがって、属性による通常の型コンバーターの検出機構はサポートできません。 代わりに、XAML パーサーは、ネイティブな処理が必要な型の一覧を保持し、それらの型を通常のプリミティブの処理と類似した方法で処理します。 <xref:System.DateTime>の場合、その処理には <xref:System.DateTime.Parse%2A>の呼び出しが含まれます。  
   
 <a name="Implementing_a_Type_Converter"></a>   
 ## <a name="implementing-a-type-converter"></a>型コンバーターの実装  
@@ -43,7 +43,7 @@ ms.locfileid: "59095725"
   
  XAML では、 <xref:System.ComponentModel.TypeConverter> の役割が拡張されました。 XAML の目的では、 <xref:System.ComponentModel.TypeConverter> は、特定の文字列への変換と特定の文字列からの変換をサポートする基底クラスです。 文字列からの変換は、XAML から文字列属性値への解析に利用されます。 文字列への変換は、特定のオブジェクト プロパティの実行時の値をシリアル化のために XAML の属性に戻す処理に利用されます。  
   
- <xref:System.ComponentModel.TypeConverter> 文字列に変換および XAML 処理の目的の文字列から変換するために関連する 4 つのメンバーを定義します。  
+ <xref:System.ComponentModel.TypeConverter> には、XAML を処理する目的で、文字列への変換と文字列からの変換に関連する次の 4 つのメンバーが定義されています。  
   
 -   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
@@ -57,7 +57,7 @@ ms.locfileid: "59095725"
   
  次に重要なメソッドは <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>です。 アプリケーションをマークアップ表現に変換する場合 (たとえば、アプリケーションをファイルとして XAML に保存する場合)、 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> は、マークアップ表現を生成する XAML テキスト ライターという、より大きなシナリオに関与します。 この場合、XAML にとって重要なコード パスは、呼び出し元が `destinationType` の <xref:System.String>を渡す時です。  
   
- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>はサポートされているサービスの機能を照会するときに使用する方法、<xref:System.ComponentModel.TypeConverter>実装します。 これらのメソッドは、その型について、相当する変換メソッドをコンバーターがサポートしている場合に `true` を返すように実装する必要があります。 XAML の目的では、通常、 <xref:System.String> 型であることを意味します。  
+ <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A> と <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A> は、サービスが <xref:System.ComponentModel.TypeConverter> の実装の機能を照会する時に使用されるサポート メソッドです。 これらのメソッドは、その型について、相当する変換メソッドをコンバーターがサポートしている場合に `true` を返すように実装する必要があります。 XAML の目的では、通常、 <xref:System.String> 型であることを意味します。  
   
 ### <a name="culture-information-and-type-converters-for-xaml"></a>カルチャ情報と XAML の型コンバーター  
  各 <xref:System.ComponentModel.TypeConverter> 実装では、変換に対して有効な文字列を独自に解釈できます。また、パラメーターとして渡される型の説明を使用することも無視することもできます。 カルチャと XAML の型変換については、重要な考慮事項があります。ローカライズ可能な文字列を属性値として使用することは XAML でサポートされていますが、それらのローカライズ可能な文字列を、特定のカルチャ要件を指定して型コンバーターの入力として使用することはできません。 この制限の理由は、XAML 属性値の型コンバーターには、特定の言語に固定して ( `en-US` カルチャを使用して) 実行しなければならない XAML 処理の動作がどうしても含まれるためです。 この制限の設計上の理由の詳細については、XAML 言語仕様を参照してください ([\[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)) または[WPF のグローバリゼーションおよびローカリゼーションの概要](../wpf/advanced/wpf-globalization-and-localization-overview.md).  
@@ -75,7 +75,7 @@ ms.locfileid: "59095725"
  型コンバーターが .NET Framework XAML サービスのオブジェクト ライターから XAML サービスにアクセスする必要があるものの、そのコンテキストで <xref:System.IServiceProvider.GetService%2A> を呼び出してもそのサービスが返されない場合は、例外をスローするのが適切です。  
   
 ### <a name="implementing-convertto"></a>ConvertTo の実装  
- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> シリアル化のサポートの使用可能性があります。 カスタム型およびその型コンバーターに対して <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> によるシリアル化をサポートすることは、絶対要件ではありません。 ただし、コントロールを実装する場合、またはクラスの機能または設計の一部としてシリアル化を使用する場合は、 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>を実装する必要があります。  
+ <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> は、シリアル化のサポートで使用される可能性があります。 カスタム型およびその型コンバーターに対して <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> によるシリアル化をサポートすることは、絶対要件ではありません。 ただし、コントロールを実装する場合、またはクラスの機能または設計の一部としてシリアル化を使用する場合は、 <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>を実装する必要があります。  
   
  XAML をサポートする <xref:System.ComponentModel.TypeConverter> の実装としてコンバーターを使用できるようにするためには、そのコンバーターの <xref:System.ComponentModel.TypeConverter.ConvertTo%2A> メソッドが、サポートされる型のインスタンス (または値) を `value` パラメーターとして受け入れる必要があります。 `destinationType` パラメーターが <xref:System.String>型の場合、返されるオブジェクトは <xref:System.String>にキャストできる必要があります。 返される文字列は、 `value`のシリアル化された値を表している必要があります。 理想としては、採用するシリアル化の形式は、その文字列を同じコンバーターの <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A> の実装に渡した場合と比べて情報の大きな損失が発生することなく、同じ値を生成できる必要があります。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: e21b078b-70fb-4905-be26-c097ab2433ff
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4640d37ad6c30746e203c26c2c1cd71eb70e7579
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 0db33d59d1fc1c19e07567108970db77059cebb7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56218568"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59223031"
 ---
 # <a name="marshaling-strings"></a>文字列のマーシャリング
 プラットフォーム呼び出しは、文字列のパラメーターをコピーし、必要な場合は、.NET Framework 形式 (Unicode) からアンマネージ形式 (ANSI) に変換します。 マネージド文字列は変更できないため、プラットフォーム呼び出しでは、関数から戻るときに、アンマネージド メモリからマネージド メモリに文字列がコピーされて戻されることはありません。  
@@ -39,6 +39,7 @@ ms.locfileid: "56218568"
 |文字列を含む構造体の配列として値渡し。|文字列を含む構造体の配列を作成し、配列を値で渡します。|[配列](marshaling-different-types-of-arrays.md)|  
   
 ## <a name="see-also"></a>関連項目
+
 - [プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)
 - [クラス、構造体、および共用体のマーシャリング](marshaling-classes-structures-and-unions.md)
 - [さまざまな型の配列のマーシャリング](marshaling-different-types-of-arrays.md)

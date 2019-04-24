@@ -1,71 +1,64 @@
-items:
 - name: パフォーマンス
   href: index.md
   items:
-  - name: 規模が大きく、応答性の高い .NET Framework アプリの作成
-    href: writing-large-responsive-apps.md
-  - name: .NET Framework アプリケーションでのキャッシュ
-    href: caching-in-net-framework-applications.md
-  - name: 限定的な初期化
-    href: lazy-initialization.md
-    items:
-    - name: '方法: オブジェクトの遅延初期化を実行する'
-      href: how-to-perform-lazy-initialization-of-objects.md
-  - name: .NET Framework の ETW イベント
-    href: etw-events.md
-    items:
-    - name: タスク並列ライブラリおよび PLINQ での ETW イベント
-      href: etw-events-in-task-parallel-library-and-plinq.md
-    - name: 共通言語ランタイムの ETW イベント
-      href: etw-events-in-the-common-language-runtime.md
+    - name: 規模が大きく、応答性の高い .NET Framework アプリの作成
+      href: writing-large-responsive-apps.md
+    - name: .NET Framework アプリケーションでのキャッシュ
+      href: caching-in-net-framework-applications.md
+    - name: 限定的な初期化
+      href: lazy-initialization.md
       items:
-      - name: .NET Framework のログ記録の制御
-        href: controlling-logging.md
-      - name: CLR ETW プロバイダー
-        href: clr-etw-providers.md
-      - name: CLR ETW キーワードおよびレベル
-        href: clr-etw-keywords-and-levels.md
-      - name: CLR ETW イベント
-        href: clr-etw-events.md
-        items:
-        - name: ランタイム情報イベント
-          href: runtime-information-etw-events.md
-        - name: Exception Thrown_V1 イベント
-          href: exception-thrown-v1-etw-event.md
-        - name: 競合イベント
-          href: contention-etw-events.md
-        - name: スレッド プール イベント
-          href: thread-pool-etw-events.md
-        - name: ローダー イベント
-          href: loader-etw-events.md
-        - name: メソッド イベント
-          href: method-etw-events.md
-        - name: ガベージ コレクション イベント
-          href: garbage-collection-etw-events.md
-        - name: JIT トレース イベント
-          href: jit-tracing-etw-events.md
-        - name: 相互運用イベント
-          href: interop-etw-events.md
-        - name: ARM のイベント
-          href: application-domain-resource-monitoring-arm-etw-events.md
-        - name: セキュリティ イベント
-          href: security-etw-events.md
-        - name: スタック イベント
-          href: stack-etw-event.md
-  - name: 信頼性
-    href: reliability.md
-    items:
-    - name: SQL Server プログラミングとホスト保護属性
-      href: sql-server-programming-and-host-protection-attributes.md
-    - name: 信頼性に関するベスト プラクティス
-      href: reliability-best-practices.md
-    - name: 制約された実行領域
-      href: constrained-execution-regions.md
-  - name: パフォーマンスに関するヒント
-    href: performance-tips.md
-ms.openlocfilehash: 9030bc17ebfe2cda3b6b1ebb15196a24ac992715
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470522"
+        - name: '方法: オブジェクトの遅延初期化を実行する'
+          href: how-to-perform-lazy-initialization-of-objects.md
+    - name: .NET Framework の ETW イベント
+      href: etw-events.md
+      items:
+        - name: タスク並列ライブラリおよび PLINQ での ETW イベント
+          href: etw-events-in-task-parallel-library-and-plinq.md
+        - name: 共通言語ランタイムの ETW イベント
+          href: etw-events-in-the-common-language-runtime.md
+          items:
+            - name: .NET Framework のログ記録の制御
+              href: controlling-logging.md
+            - name: CLR ETW プロバイダー
+              href: clr-etw-providers.md
+            - name: CLR ETW キーワードおよびレベル
+              href: clr-etw-keywords-and-levels.md
+            - name: CLR ETW イベント
+              href: clr-etw-events.md
+              items:
+                - name: ランタイム情報イベント
+                  href: runtime-information-etw-events.md
+                - name: Exception Thrown_V1 イベント
+                  href: exception-thrown-v1-etw-event.md
+                - name: 競合イベント
+                  href: contention-etw-events.md
+                - name: スレッド プール イベント
+                  href: thread-pool-etw-events.md
+                - name: ローダー イベント
+                  href: loader-etw-events.md
+                - name: メソッド イベント
+                  href: method-etw-events.md
+                - name: ガベージ コレクション イベント
+                  href: garbage-collection-etw-events.md
+                - name: JIT トレース イベント
+                  href: jit-tracing-etw-events.md
+                - name: 相互運用イベント
+                  href: interop-etw-events.md
+                - name: ARM のイベント
+                  href: application-domain-resource-monitoring-arm-etw-events.md
+                - name: セキュリティ イベント
+                  href: security-etw-events.md
+                - name: スタック イベント
+                  href: stack-etw-event.md
+    - name: 信頼性
+      href: reliability.md
+      items:
+        - name: SQL Server プログラミングとホスト保護属性
+          href: sql-server-programming-and-host-protection-attributes.md
+        - name: 信頼性に関するベスト プラクティス
+          href: reliability-best-practices.md
+        - name: 制約された実行領域
+          href: constrained-execution-regions.md
+    - name: パフォーマンスに関するヒント
+      href: performance-tips.md

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
 ms.openlocfilehash: c85ba72c858d155f29875bb944824db1c44ffaab
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086846"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>方法: 純色で領域を塗りつぶす
@@ -19,7 +19,7 @@ ms.locfileid: "59086846"
  次の例では、これらの手法を使用を描画する、<xref:System.Windows.Shapes.Rectangle>青。  
   
 ## <a name="example"></a>例  
- **定義済みのブラシを使用します。**  
+ **定義済みのブラシの使用**  
   
  次の例では、定義済みのブラシを使用して<xref:System.Windows.Media.Brushes.Blue%2A>青い四角形を描画します。  
   
@@ -27,13 +27,13 @@ ms.locfileid: "59086846"
   
  [!code-csharp[brushsamples_procedural_snip#_graphicsmm_PredefinedBrush1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/SolidColorBrushExample.cs#_graphicsmm_predefinedbrush1)]  
   
- **16 進数表記を使用します。**  
+ **16 進数表記の使用**  
   
  次の例では、8 桁の 16 進数表記を使用して、四角形を青で塗りつぶします。  
   
  [!code-xaml[brushsamples_snip#_graphicsmm_HexNotation8Digit1](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_snip/CS/SolidColorBrushExample.xaml#_graphicsmm_hexnotation8digit1)]  
   
- **ARGB 値を使用してください。**  
+ **ARGB 値の使用**  
   
  次の例では、作成、<xref:System.Windows.Media.SolidColorBrush>について説明しますと、 <xref:System.Windows.Media.SolidColorBrush.Color%2A> ARGB を使用して、色の青の値します。  
   

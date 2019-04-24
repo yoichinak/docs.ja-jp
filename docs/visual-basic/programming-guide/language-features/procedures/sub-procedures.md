@@ -12,10 +12,10 @@ helpviewer_keywords:
 - syntax [Visual Basic], Sub procedures
 ms.assetid: 6a0a4958-ed0a-4d3d-8d31-0772c82bda58
 ms.openlocfilehash: b70594e002bbf08f0890586e78df901ccb26c7ce
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843111"
 ---
 # <a name="sub-procedures-visual-basic"></a>Sub プロシージャ (Visual Basic)
@@ -36,7 +36,7 @@ A`Sub`手順は、一連の Visual Basic のステートメントで囲まれた
   
  `End Sub`  
   
- `modifiers`アクセス レベルとオーバー ロード、オーバーライド、共有、およびシャドウ処理に関する情報を指定できます。 詳細については、[Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)を参照してください。  
+ `modifiers`アクセス レベルとオーバー ロード、オーバーライド、共有、およびシャドウ処理に関する情報を指定できます。 詳細については、次を参照してください。 [Sub ステートメント](../../../../visual-basic/language-reference/statements/sub-statement.md)します。  
   
 ## <a name="parameter-declaration"></a>パラメーターの宣言  
  各プロシージャのパラメーターと同様にどのように変数を宣言する、パラメーター名とデータ型を指定することを宣言するとします。 引数渡しの方法を指定することもでき、パラメーターは省略可能かどうか、またはパラメーター配列。  
@@ -59,7 +59,7 @@ A`Sub`手順は、一連の Visual Basic のステートメントで囲まれた
   
  `[Call]`  *subname* `[(` *argumentlist* `)]`  
   
- 呼び出すことができます、`Sub`からそれを定義するクラスの外側のメソッド。 最初に、使用する必要がある、`New`キーワード、クラスのインスタンスを作成またはメソッドを呼び出すには、クラスのインスタンスを返します。 詳細については、[New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)を参照してください。 次を呼び出す、次の構文を使用することができます、`Sub`インスタンス オブジェクトのメソッド。  
+ 呼び出すことができます、`Sub`からそれを定義するクラスの外側のメソッド。 最初に、使用する必要がある、`New`キーワード、クラスのインスタンスを作成またはメソッドを呼び出すには、クラスのインスタンスを返します。 詳細については、次を参照してください。 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)します。 次を呼び出す、次の構文を使用することができます、`Sub`インスタンス オブジェクトのメソッド。  
   
  *オブジェクト*.*methodname*`[(`*argumentlist*`)]`  
   

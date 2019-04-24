@@ -3,10 +3,10 @@ title: Web サービスを使用した LINQ to SQL N 層
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
 ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59107407"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Web サービスを使用した LINQ to SQL N 層
@@ -30,7 +30,7 @@ ms.locfileid: "59107407"
  データの挿入時に、プレゼンテーション層は新しいオブジェクトを構築して中間層にそれを送ることができます。または、プレゼンテーション層から渡される値に基づいて中間層にオブジェクトを構築させることもできます。 一般的に、n 層アプリケーションでのデータの取得と挿入は、2 層アプリケーションでの処理と似ています。 詳細については、次を参照してください。[データベース クエリを実行](../../../../../../docs/framework/data/adonet/sql/linq/querying-the-database.md)と[やデータ変更の送信を行う](../../../../../../docs/framework/data/adonet/sql/linq/making-and-submitting-data-changes.md)します。  
   
 ## <a name="tracking-changes-for-updates-and-deletes"></a>更新と削除における変更内容の追跡  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] タイムスタンプ (rowversion ともいう) と元の値に基づいて、オプティミスティック同時実行をサポートしています。 データベース テーブルにタイムスタンプが存在すると、更新と削除のために、中間層とプレゼンテーション層で実行する必要のある追加の処理はあまりありません。 しかし、元の値を使ってオプティミスティック同時実行制御チェックを行う必要がある場合には、プレゼンテーション層はこれらの値を追跡して、更新時にそれを送り返す必要があります。 これは、プレゼンテーション層上のエンティティに対する変更内容が中間層で追跡されないためです。 実際、エンティティの最初の取得とその後の更新は、通常、<xref:System.Data.Linq.DataContext> のまったく別の 2 つのインスタンスによって実行されます。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、タイムスタンプ (RowVersion ともいう) および元の値に基づくオプティミスティック同時実行制御をサポートします。 データベース テーブルにタイムスタンプが存在すると、更新と削除のために、中間層とプレゼンテーション層で実行する必要のある追加の処理はあまりありません。 しかし、元の値を使ってオプティミスティック同時実行制御チェックを行う必要がある場合には、プレゼンテーション層はこれらの値を追跡して、更新時にそれを送り返す必要があります。 これは、プレゼンテーション層上のエンティティに対する変更内容が中間層で追跡されないためです。 実際、エンティティの最初の取得とその後の更新は、通常、<xref:System.Data.Linq.DataContext> のまったく別の 2 つのインスタンスによって実行されます。  
   
  プレゼンテーション層での変更箇所が多いほど、これらの変更を追跡して中間層にパッケージとして戻す操作が複雑になります。 変更内容をやり取りするメカニズムの実装は、完全にアプリケーションに依存しています。 唯一の要件は、オプティミスティック コンカレンシー チェックに必要な元の値が [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に渡されなければならないということです。  
   

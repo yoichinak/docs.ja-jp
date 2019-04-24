@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 8b8bd3cb-86d4-4a3b-9906-61f68726dd1f
 ms.openlocfilehash: 0d0d87e2fe14553d468384dfa2cfde1d3ee0d526
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210133"
 ---
 # <a name="return-the-set-union-of-two-sequences"></a>2 つのシーケンスの和集合の取得

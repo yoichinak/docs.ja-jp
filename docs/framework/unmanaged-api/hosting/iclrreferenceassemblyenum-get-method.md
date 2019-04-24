@@ -18,10 +18,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 31d26ed6249bad8a7e2fbaab01264c1b32e1ff55
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194475"
 ---
 # <a name="iclrreferenceassemblyenumget-method"></a>ICLRReferenceAssemblyEnum::Get メソッド
@@ -52,7 +52,7 @@ HRESULT Get (
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|`Get` 正常に返されます。|  
-|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` 小さすぎます。|  
+|ERROR_INSUFFICIENT_BUFFER|`pwzBuffer` が小さすぎます。|  
 |ERROR_NO_MORE_ITEMS|列挙には、これ以上項目が含まれています。|  
 |HOST_E_CLRNOTAVAILABLE|共通言語ランタイム (CLR) は、プロセスに読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
 |HOST_E_TIMEOUT|呼び出しがタイムアウトになりました。|  
@@ -70,7 +70,7 @@ HRESULT Get (
   
  **ライブラリ:** MSCorEE.dll でリソースとして含まれます  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v20plus](../../../../includes/net-current-v20plus-md.md)]  
   
 ## <a name="see-also"></a>関連項目
 

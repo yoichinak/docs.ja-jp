@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088822"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows フォームと WPF プロパティの割り当て
@@ -140,5 +140,5 @@ ms.locfileid: "59088822"
 - <xref:System.Windows.Forms.Integration.WindowsFormsHost>
 - [WPF と Win32 の相互運用性](wpf-and-win32-interoperation.md)
 - [WPF と Windows フォームの相互運用性](wpf-and-windows-forms-interoperation.md)
-- [チュートリアル: WindowsFormsHost 要素を使用したプロパティの割り当て](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
-- [チュートリアル: ElementHost コントロールを使用したプロパティの割り当て](walkthrough-mapping-properties-using-the-elementhost-control.md)
+- [チュートリアル: WindowsFormsHost 要素を使用してプロパティのマッピング](walkthrough-mapping-properties-using-the-windowsformshost-element.md)
+- [チュートリアル: ElementHost コントロールを使用してプロパティのマッピング](walkthrough-mapping-properties-using-the-elementhost-control.md)

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30149
 ms.assetid: 29d1b7f4-dca7-478c-bbe7-c657f342c183
 ms.openlocfilehash: 432f089bc77928308820d7456d930fba8dc513f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304910"
 ---
 # <a name="type1typename-must-implement-methodname-for-interface-interfacename"></a>\<type1 >'\<typename >' を実装する必要があります '\<methodname >' のインターフェイス'\<interfacename >'
@@ -23,7 +23,7 @@ ms.locfileid: "59304910"
   
 1. 同じ名前と、インターフェイスで定義されたシグネチャを持つプロシージャを宣言します。 必ず含めて、少なくとも`End Function`または`End Sub`ステートメント。  
   
-2. 追加、`Implements`句の末尾に、`Function`または`Sub`ステートメント。 例:  
+2. 追加、`Implements`句の末尾に、`Function`または`Sub`ステートメント。 例えば:  
   
     ```  
     Public Sub DoSomething() Implements IBaseInterface.DoSomething  

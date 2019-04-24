@@ -10,10 +10,10 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814984"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>演算子の結果のデータ型 (Visual Basic)
@@ -38,7 +38,7 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
   
 -   [二重](../../../visual-basic/language-reference/data-types/double-data-type.md)-最大範囲 1.7 E + 308 (絶対値)  
   
- Visual Basic データ型の詳細については、[データ型](../../../visual-basic/language-reference/data-types/index.md)を参照してください。  
+ Visual Basic データ型の詳細については、次を参照してください。[データ型](../../../visual-basic/language-reference/data-types/index.md)します。  
   
  オペランドが評価された場合に[Nothing](../../../visual-basic/language-reference/nothing.md)、Visual Basic の算術演算子が 0 として処理します。  
   

@@ -1,32 +1,25 @@
-items:
 - name: アプリケーションからの情報のログ記録
   href: index.md
   items:
-  - name: '方法: ログ メッセージを書き込む'
-    href: how-to-write-log-messages.md
-  - name: '方法: 例外をログに記録する'
-    href: how-to-log-exceptions.md
-  - name: '方法: アプリケーションの起動時または終了時にメッセージをログに記録する'
-    href: how-to-log-messages-when-the-application-starts-or-shuts-down.md
-  - name: '方法: アプリケーション イベント ログに書き込む'
-    href: how-to-write-to-an-application-event-log.md
-  - name: '方法: イベント情報をテキスト ファイルに書き込む'
-    href: how-to-write-event-information-to-a-text-file.md
-  - name: アプリケーション ログの使用
-    href: working-with-application-logs.md
-  - name: 'チュートリアル: My.Application.Log による情報の書き込み先の確認'
-    href: walkthrough-determining-where-my-application-log-writes-information.md
-  - name: 'チュートリアル: My.Application.Log による情報の書き込み先の変更'
-    href: walkthrough-changing-where-my-application-log-writes-information.md
-  - name: 'チュートリアル: My.Application.Log の出力をフィルター処理する'
-    href: walkthrough-filtering-my-application-log-output.md
-  - name: 'チュートリアル: カスタム ログ リスナーの作成'
-    href: walkthrough-creating-custom-log-listeners.md
-  - name: トラブルシューティング:ログ リスナー
-    href: troubleshooting-log-listeners.md
-ms.openlocfilehash: 9b1d9ae3a2fdda80723180e7eef1b31aa06a28ea
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470475"
+    - name: '方法: ログ メッセージを書き込む'
+      href: how-to-write-log-messages.md
+    - name: '方法: 例外をログに記録する'
+      href: how-to-log-exceptions.md
+    - name: '方法: アプリケーションの起動時または終了時にメッセージをログに記録する'
+      href: how-to-log-messages-when-the-application-starts-or-shuts-down.md
+    - name: '方法: アプリケーション イベント ログに書き込む'
+      href: how-to-write-to-an-application-event-log.md
+    - name: '方法: イベント情報をテキスト ファイルに書き込む'
+      href: how-to-write-event-information-to-a-text-file.md
+    - name: アプリケーション ログの使用
+      href: working-with-application-logs.md
+    - name: 'チュートリアル: My.Application.Log による情報の書き込み先の確認'
+      href: walkthrough-determining-where-my-application-log-writes-information.md
+    - name: 'チュートリアル: My.Application.Log による情報の書き込み先の変更'
+      href: walkthrough-changing-where-my-application-log-writes-information.md
+    - name: 'チュートリアル: My.Application.Log の出力をフィルター処理する'
+      href: walkthrough-filtering-my-application-log-output.md
+    - name: 'チュートリアル: カスタム ログ リスナーの作成'
+      href: walkthrough-creating-custom-log-listeners.md
+    - name: 'トラブルシューティング:ログ リスナー'
+      href: troubleshooting-log-listeners.md

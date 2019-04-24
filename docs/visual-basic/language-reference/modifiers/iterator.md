@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 ms.openlocfilehash: 499949d1f4c20e1f465355bd076ba39f1496779b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58822701"
 ---
 # <a name="iterator-visual-basic"></a>反復子 (Visual Basic)
@@ -48,7 +48,7 @@ ms.locfileid: "58822701"
   
  [!code-vb[VbVbalrStatements#99](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#99)]  
   
- その他の例では、[反復子](../../programming-guide/concepts/iterators.md)を参照してください。  
+ その他の例では、次を参照してください。[反復子](../../programming-guide/concepts/iterators.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

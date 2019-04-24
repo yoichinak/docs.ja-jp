@@ -10,10 +10,10 @@ helpviewer_keywords:
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
 ms.openlocfilehash: f8e5a7475765bffb76e7b07e81db25b4a62ae038
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303493"
 ---
 # <a name="flow-document-overview"></a>フロー ドキュメントの概要
@@ -96,7 +96,7 @@ ms.locfileid: "59303493"
  これらの 2 つのカテゴリの各クラスについて、以下に簡単に説明します。  
   
 ### <a name="block-derived-classes"></a>Block の派生クラス  
- **段落**  
+ **Paragraph**  
   
  <xref:System.Windows.Documents.Paragraph> 段落にグループの内容を通常に使用されます。 Paragraph の最も単純かつ一般的な用途は、テキストの段落の作成です。  
   
@@ -130,7 +130,7 @@ ms.locfileid: "59303493"
   
  ![UIElement を示すスクリーン ショットは、フロー コンテンツに埋め込まれます。](./media/flow-document-overview/embedded-blockuicontainer.png)  
   
- **リスト**  
+ **List**  
   
  <xref:System.Windows.Documents.List> 箇条書きまたは数値のリストの作成に使用されます。 設定、<xref:System.Windows.Documents.List.MarkerStyle%2A>プロパティを<xref:System.Windows.TextMarkerStyle>リストのスタイルを決定する列挙値。 簡単なリストを作成する方法を次の例に示します。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "59303493"
   
  **注:** 以降では、 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]、<xref:System.Windows.Documents.Run.Text%2A>のプロパティ、<xref:System.Windows.Documents.Run>オブジェクトが依存関係プロパティ。 バインドすることができます、<xref:System.Windows.Documents.Run.Text%2A>プロパティをデータ ソースなど、<xref:System.Windows.Controls.TextBlock>します。 <xref:System.Windows.Documents.Run.Text%2A>プロパティは、一方向のバインドを完全にサポートします。 <xref:System.Windows.Documents.Run.Text%2A>以外のプロパティが双方向のバインドにもサポートしています<xref:System.Windows.Controls.RichTextBox>します。 例については、「<xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>」を参照してください。  
   
- **スパン**  
+ **Span**  
   
  <xref:System.Windows.Documents.Span> その他のインライン コンテンツ要素をグループ化します。 内のコンテンツに固有のレンダリングが適用されず、<xref:System.Windows.Documents.Span>要素。 ただし、要素から継承した<xref:System.Windows.Documents.Span>など<xref:System.Windows.Documents.Hyperlink>、 <xref:System.Windows.Documents.Bold>、<xref:System.Windows.Documents.Italic>と<xref:System.Windows.Documents.Underline>テキストに書式を適用しないでください。  
   
@@ -194,7 +194,7 @@ ms.locfileid: "59303493"
   
  <xref:System.Windows.Documents.Figure> <xref:System.Windows.Documents.Floater>いくつかの方法が異なるし、さまざまなシナリオのために使用します。  
   
- **図:**  
+ **Figure:**  
   
 -   配置することができます。ページ、コンテンツ、列、または段落に対して相対的にドッキングする、水平および垂直方向のアンカーを設定することができます。 使用することもその<xref:System.Windows.Documents.Figure.HorizontalOffset%2A>と<xref:System.Windows.Documents.Figure.VerticalOffset%2A>プロパティを任意のオフセットを指定します。  
   
@@ -202,7 +202,7 @@ ms.locfileid: "59303493"
   
 -   改ページ調整されません。場合内のコンテンツを<xref:System.Windows.Documents.Figure>内に収まらない、<xref:System.Windows.Documents.Figure>はあらゆるコンテンツに合わせて表示して、残りの内容は失われます  
   
- **浮遊要素:**  
+ **Floater:**  
   
 -   配置できません。必要なスペースを確保できる場所に描画されます。 オフセットやアンカーを設定することはできません、<xref:System.Windows.Documents.Floater>します。  
   
@@ -348,9 +348,9 @@ ms.locfileid: "59303493"
   
 ## <a name="see-also"></a>関連項目
 
-- [テキスト](optimizing-performance-text.md)
+- [Text](optimizing-performance-text.md)
 - [WPF のタイポグラフィ](typography-in-wpf.md)
-- [方法のトピック](flow-content-elements-how-to-topics.md)
+- [方法トピック](flow-content-elements-how-to-topics.md)
 - [TextElement コンテンツ モデルの概要](textelement-content-model-overview.md)
 - [RichTextBox の概要](../controls/richtextbox-overview.md)
 - [WPF のドキュメント](documents-in-wpf.md)

@@ -3,10 +3,10 @@ title: クエリ プランのキャッシュ (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 90b0c685-5ef2-461b-98b4-c3c0a2b253c7
 ms.openlocfilehash: 9f042d46d9a601c1091e36f8d81ce8f933140b20
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59178179"
 ---
 # <a name="query-plan-caching-entity-sql"></a>クエリ プランのキャッシュ (Entity SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "59178179"
   
 -   クエリ テキストは定数パターンにする必要があり、最も望ましいのは定数文字列またはリソースです。  
   
--   <xref:System.Data.EntityClient.EntityParameter> または<xref:System.Data.Objects.ObjectParameter>ユーザー指定の値を渡す必要がある場所で使用する必要があります。  
+-   ユーザーが指定した値を渡す必要があるときは、<xref:System.Data.EntityClient.EntityParameter> または <xref:System.Data.Objects.ObjectParameter> を使用します。  
   
  クエリ プランのキャッシュ内のスロットを必要以上に消費する次のようなクエリ パターンは避けます。  
   

@@ -1,127 +1,120 @@
-items:
 - name: クラスと構造体
   href: index.md
   items:
-  - name: クラス
-    href: classes.md
-  - name: オブジェクト
-    href: objects.md
-  - name: 構造体
-    href: structs.md
-    items:
-    - name: 構造体の使用
-      href: using-structs.md
-  - name: 継承
-    href: inheritance.md
-  - name: ポリモーフィズム
-    href: polymorphism.md
-    items:
-    - name: Override キーワードと New キーワードによるバージョン管理
-      href: versioning-with-the-override-and-new-keywords.md
-    - name: Override キーワードと New キーワードを使用する場合について
-      href: knowing-when-to-use-override-and-new-keywords.md
-    - name: '方法: ToString メソッドをオーバーライドする'
-      href: how-to-override-the-tostring-method.md
-  - name: 抽象クラスとシール クラス、およびクラス メンバー
-    href: abstract-and-sealed-classes-and-class-members.md
-    items:
-    - name: '方法: 抽象プロパティを定義する'
-      href: how-to-define-abstract-properties.md
-  - name: 静的クラスと静的クラス メンバー
-    href: static-classes-and-static-class-members.md
-  - name: メンバー
-    href: members.md
-  - name: アクセス修飾子
-    href: access-modifiers.md
-  - name: フィールド
-    href: fields.md
-  - name: 定数
-    href: constants.md
-    items:
-    - name: '方法: C# で定数を定義する'
-      href: how-to-define-constants.md
-  - name: プロパティ
-    href: properties.md
-    items:
-    - name: プロパティの使用
-      href: using-properties.md
-    - name: インターフェイスのプロパティ
-      href: interface-properties.md
-    - name: アクセサーのアクセシビリティの制限
-      href: restricting-accessor-accessibility.md
-    - name: '方法: 読み取り/書き込みのプロパティの宣言と使用'
-      href: how-to-declare-and-use-read-write-properties.md
-    - name: 自動実装プロパティ
-      href: auto-implemented-properties.md
-    - name: '方法: 自動実装するプロパティを使用して簡易クラスを実装する'
-      href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
-  - name: メソッド
-    href: methods.md
-    items:
-    - name: ローカル関数
-      href: local-functions.md
-    - name: ref 戻り値と ref ローカル変数
-      href: ref-returns.md
-    - name: パラメーターの引き渡し
-      href: passing-parameters.md
+    - name: クラス
+      href: classes.md
+    - name: オブジェクト
+      href: objects.md
+    - name: 構造体
+      href: structs.md
       items:
-      - name: 値型パラメーターの引き渡し
-        href: passing-value-type-parameters.md
-      - name: 参照型パラメーターの引き渡し
-        href: passing-reference-type-parameters.md
-      - name: '方法: メソッドに構造体を渡すこととクラス参照を渡すことの違いを理解する'
-        href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
-    - name: 暗黙的に型指定されるローカル変数
-      href: implicitly-typed-local-variables.md
+        - name: 構造体の使用
+          href: using-structs.md
+    - name: 継承
+      href: inheritance.md
+    - name: ポリモーフィズム
+      href: polymorphism.md
       items:
-      - name: '方法: クエリ式で暗黙的に型指定されるローカル変数および配列を使用する'
-        href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
-    - name: 拡張メソッド
-      href: extension-methods.md
+        - name: Override キーワードと New キーワードによるバージョン管理
+          href: versioning-with-the-override-and-new-keywords.md
+        - name: Override キーワードと New キーワードを使用する場合について
+          href: knowing-when-to-use-override-and-new-keywords.md
+        - name: '方法: ToString メソッドをオーバーライドする'
+          href: how-to-override-the-tostring-method.md
+    - name: 抽象クラスとシール クラス、およびクラス メンバー
+      href: abstract-and-sealed-classes-and-class-members.md
       items:
-      - name: '方法: カスタム拡張メソッドを実装して呼び出す'
-        href: how-to-implement-and-call-a-custom-extension-method.md
-      - name: '方法: 列挙型対応の新しいメソッドを作成する'
-        href: how-to-create-a-new-method-for-an-enumeration.md
-    - name: 名前付き引数と省略可能な引数
-      href: named-and-optional-arguments.md
+        - name: '方法: 抽象プロパティを定義する'
+          href: how-to-define-abstract-properties.md
+    - name: 静的クラスと静的クラス メンバー
+      href: static-classes-and-static-class-members.md
+    - name: メンバー
+      href: members.md
+    - name: アクセス修飾子
+      href: access-modifiers.md
+    - name: フィールド
+      href: fields.md
+    - name: 定数
+      href: constants.md
       items:
-      - name: '方法: Office プログラミングで名前付き引数と省略可能な引数を使用する'
-        href: how-to-use-named-and-optional-arguments-in-office-programming.md
-  - name: コンストラクター
-    href: constructors.md
-    items:
-    - name: コンストラクターの使用
-      href: using-constructors.md
-    - name: インスタンス コンストラクター
-      href: instance-constructors.md
-    - name: プライベート コンストラクター
-      href: private-constructors.md
-    - name: 静的コンストラクター
-      href: static-constructors.md
-    - name: '方法: コピー コンストラクターを記述する'
-      href: how-to-write-a-copy-constructor.md
-  - name: ファイナライザー
-    href: destructors.md
-  - name: オブジェクト初期化子とコレクション初期化子
-    href: object-and-collection-initializers.md
-    items:
-    - name: '方法: オブジェクト初期化子を使用してオブジェクトを初期化する'
-      href: how-to-initialize-objects-by-using-an-object-initializer.md
-    - name: '方法: コレクション初期化子を使用してディクショナリを初期化する'
-      href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
-  - name: 入れ子にされた型
-    href: nested-types.md
-  - name: 部分クラスと部分メソッド
-    href: partial-classes-and-methods.md
-  - name: 匿名型
-    href: anonymous-types.md
-    items:
-    - name: '方法: クエリで要素のプロパティのサブセットを返す'
-      href: how-to-return-subsets-of-element-properties-in-a-query.md
-ms.openlocfilehash: ab61eea92fcbfb960038eb09b6e83c31d55eb24e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470250"
+        - name: '方法: C# で定数を定義する'
+          href: how-to-define-constants.md
+    - name: プロパティ
+      href: properties.md
+      items:
+        - name: プロパティの使用
+          href: using-properties.md
+        - name: インターフェイスのプロパティ
+          href: interface-properties.md
+        - name: アクセサーのアクセシビリティの制限
+          href: restricting-accessor-accessibility.md
+        - name: '方法: 読み取り/書き込みのプロパティの宣言と使用'
+          href: how-to-declare-and-use-read-write-properties.md
+        - name: 自動実装プロパティ
+          href: auto-implemented-properties.md
+        - name: '方法: 自動実装するプロパティを使用して簡易クラスを実装する'
+          href: how-to-implement-a-lightweight-class-with-auto-implemented-properties.md
+    - name: メソッド
+      href: methods.md
+      items:
+        - name: ローカル関数
+          href: local-functions.md
+        - name: ref 戻り値と ref ローカル変数
+          href: ref-returns.md
+        - name: パラメーターの引き渡し
+          href: passing-parameters.md
+          items:
+            - name: 値型パラメーターの引き渡し
+              href: passing-value-type-parameters.md
+            - name: 参照型パラメーターの引き渡し
+              href: passing-reference-type-parameters.md
+            - name: '方法: メソッドに構造体を渡すこととクラス参照を渡すことの違いを理解する'
+              href: how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md
+        - name: 暗黙的に型指定されるローカル変数
+          href: implicitly-typed-local-variables.md
+          items:
+            - name: '方法: クエリ式で暗黙的に型指定されるローカル変数および配列を使用する'
+              href: how-to-use-implicitly-typed-local-variables-and-arrays-in-a-query-expression.md
+        - name: 拡張メソッド
+          href: extension-methods.md
+          items:
+            - name: '方法: カスタム拡張メソッドを実装して呼び出す'
+              href: how-to-implement-and-call-a-custom-extension-method.md
+            - name: '方法: 列挙型対応の新しいメソッドを作成する'
+              href: how-to-create-a-new-method-for-an-enumeration.md
+        - name: 名前付き引数と省略可能な引数
+          href: named-and-optional-arguments.md
+          items:
+            - name: '方法: Office プログラミングで名前付き引数と省略可能な引数を使用する'
+              href: how-to-use-named-and-optional-arguments-in-office-programming.md
+    - name: コンストラクター
+      href: constructors.md
+      items:
+        - name: コンストラクターの使用
+          href: using-constructors.md
+        - name: インスタンス コンストラクター
+          href: instance-constructors.md
+        - name: プライベート コンストラクター
+          href: private-constructors.md
+        - name: 静的コンストラクター
+          href: static-constructors.md
+        - name: '方法: コピー コンストラクターを記述する'
+          href: how-to-write-a-copy-constructor.md
+    - name: ファイナライザー
+      href: destructors.md
+    - name: オブジェクト初期化子とコレクション初期化子
+      href: object-and-collection-initializers.md
+      items:
+        - name: '方法: オブジェクト初期化子を使用してオブジェクトを初期化する'
+          href: how-to-initialize-objects-by-using-an-object-initializer.md
+        - name: '方法: コレクション初期化子を使用してディクショナリを初期化する'
+          href: how-to-initialize-a-dictionary-with-a-collection-initializer.md
+    - name: 入れ子にされた型
+      href: nested-types.md
+    - name: 部分クラスと部分メソッド
+      href: partial-classes-and-methods.md
+    - name: 匿名型
+      href: anonymous-types.md
+      items:
+        - name: '方法: クエリで要素のプロパティのサブセットを返す'
+          href: how-to-return-subsets-of-element-properties-in-a-query.md

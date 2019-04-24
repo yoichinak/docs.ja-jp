@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 11515b25-ee49-4b1d-9294-a142147c1ec5
 ms.openlocfilehash: 864a9072b38054557b2583f505e6e7827c02d2de
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59180753"
 ---
 # <a name="handling-dataadapter-events"></a>DataAdapter のイベント処理
@@ -22,7 +22,7 @@ ADO.NET <xref:System.Data.Common.DataAdapter> は、データ ソースのデー
 |`FillError`|`Fill` 操作中にエラーが発生しました。|  
   
 ## <a name="rowupdating-and-rowupdated"></a>RowUpdating と RowUpdated  
- `RowUpdating` 行を更新する前に発生、<xref:System.Data.DataSet>データ ソースで処理されました。 `RowUpdated` 行を更新した後に発生しますが、`DataSet`データ ソースで処理されました。 したがって、更新が始まる前に `RowUpdating` を使用して更新の動作を変更することで、更新発生時に行う追加の処理の提供、更新行への参照の保存、現在の更新のキャンセル、後で処理するバッチ処理のための更新スケジュールなどを提供できます。 `RowUpdated` 更新中に発生するエラーと例外に対応するために役立ちます。 `DataSet` にエラー情報や再試行ロジックなどを追加できます。  
+ `RowUpdating` は、<xref:System.Data.DataSet> 側で生じた行に対する更新が、データ ソース側で処理される前に発生します。 `RowUpdated` は、`DataSet` 側で生じた行に対する更新が、データ ソース側で処理された後で発生します。 したがって、更新が始まる前に `RowUpdating` を使用して更新の動作を変更することで、更新発生時に行う追加の処理の提供、更新行への参照の保存、現在の更新のキャンセル、後で処理するバッチ処理のための更新スケジュールなどを提供できます。 `RowUpdated` は、更新中に発生するエラーや例外の応答に便利です。 `DataSet` にエラー情報や再試行ロジックなどを追加できます。  
   
  `RowUpdating` イベントおよび `RowUpdated` イベントに渡される <xref:System.Data.Common.RowUpdatingEventArgs> 引数および <xref:System.Data.Common.RowUpdatedEventArgs> 引数には、更新を実行するために使用される `Command` オブジェクトを参照する `Command` プロパティ、更新情報を格納する `DataRow` オブジェクトを参照する `Row` プロパティ、どのタイプの更新を実行するかを示す `StatementType` プロパティ、適用可能な場合は `TableMapping`、および、操作の `Status` などがあります。  
   

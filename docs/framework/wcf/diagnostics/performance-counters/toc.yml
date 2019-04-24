@@ -1,153 +1,146 @@
-items:
 - name: パフォーマンス カウンター
   href: index.md
   items:
-  - name: 操作パフォーマンス カウンター
-    href: operation-performance-counters.md
-    items:
-    - name: Calls
-      href: calls.md
-    - name: 1 秒あたりの呼び出し回数
-      href: calls-per-second.md
-    - name: 保留状態の呼び出し
-      href: calls-outstanding.md
-    - name: 失敗した呼び出し
-      href: calls-failed.md
-    - name: 1 秒あたりの失敗した呼び出し
-      href: calls-failed-per-second.md
-    - name: 失敗した呼び出し
-      href: calls-faulted.md
-    - name: 1 秒あたりの失敗した呼び出し
-      href: calls-faulted-per-second.md
-    - name: 呼び出す期間
-      href: calls-duration.md
-    - name: セキュリティ検証と認証エラー
-      href: security-validation-and-authentication-failures.md
-    - name: 1 秒あたりのセキュリティ検証と認証エラー
-      href: security-validation-and-authentication-failures-per-second.md
-    - name: 承認されていないセキュリティ呼び出し
-      href: security-calls-not-authorized.md
-    - name: 1 秒あたりの承認されていないセキュリティ呼び出し
-      href: security-calls-not-authorized-per-second.md
-    - name: トランザクション フロー
-      href: transactions-flowed.md
-    - name: 1 秒あたりのトランザクション フロー
-      href: transactions-flowed-per-second.md
-  - name: サービス パフォーマンス カウンター
-    href: service-performance-counters.md
-    items:
-    - name: Calls
-      href: service-calls.md
-    - name: 1 秒あたりの呼び出し回数
-      href: service-calls-per-second.md
-    - name: 保留状態の呼び出し
-      href: service-calls-outstanding.md
-    - name: 失敗した呼び出し
-      href: service-calls-failed.md
-    - name: 1 秒あたりの失敗した呼び出し
-      href: service-calls-failed-per-second.md
-    - name: 失敗した呼び出し
-      href: service-calls-faulted.md
-    - name: 1 秒あたりの失敗した呼び出し
-      href: service-calls-faulted-per-second.md
-    - name: 呼び出す期間
-      href: service-calls-duration.md
-    - name: インスタンス
-      href: instances.md
-    - name: 1 秒あたりのインスタンス
-      href: instances-per-second.md
-    - name: 同時呼び出しの最大数に対する割合
-      href: percent-of-max-concurrent-calls.md
-    - name: 同時インスタンスの最大数に対する割合
-      href: percent-of-max-concurrent-instances.md
-    - name: 同時セッションの最大数に対する割合
-      href: percent-of-max-concurrent-sessions.md
-    - name: 破棄されたメッセージのキュー
-      href: queue-dropped-messages.md
-    - name: 1 秒あたりの破棄されたメッセージのキュー
-      href: queue-dropped-messages-per-second.md
-    - name: キューに置かれた有害メッセージ
-      href: queued-poison-messages.md
-    - name: 1 秒あたりのキューに置かれた有害メッセージ
-      href: queued-poison-messages-per-second.md
-    - name: キューに置かれた拒否メッセージ
-      href: queued-rejected-messages.md
-    - name: 1 秒あたりのキューに置かれた拒否メッセージ
-      href: queued-rejected-messages-per-second.md
-    - name: 信頼できるメッセージの破棄されたメッセージ
-      href: reliable-messaging-messages-dropped.md
-    - name: 信頼できるメッセージの 1 秒あたりの破棄されたメッセージ
-      href: reliable-messaging-messages-dropped-per-second.md
-    - name: エラーとなった信頼できるメッセージ セッション
-      href: reliable-messaging-sessions-faulted.md
-    - name: 1 秒あたりのエラーとなった信頼できるメッセージ セッション
-      href: reliable-messaging-sessions-faulted-per-second.md
-    - name: 承認されていないセキュリティ呼び出し
-      href: service-security-calls-not-authorized.md
-    - name: 1 秒あたりの承認されていないセキュリティ呼び出し
-      href: service-security-calls-not-authorized-per-second.md
-    - name: セキュリティ検証と認証エラー
-      href: service-security-validation-and-authentication-failures.md
-    - name: 1 秒あたりのセキュリティ検証と認証エラー
-      href: service-security-validation-and-authentication-failures-per-second.md
-    - name: トランザクション フロー
-      href: service-transactions-flowed.md
-    - name: 1 秒あたりのトランザクション フロー
-      href: service-transactions-flowed-per-second.md
-    - name: 中止されたトランザクション操作
-      href: transacted-operations-aborted.md
-    - name: 1 秒あたりの中止されたトランザクション操作
-      href: transacted-operations-aborted-per-second.md
-    - name: コミットされたトランザクション操作
-      href: transacted-operations-committed.md
-    - name: 1 秒あたりのコミットされたトランザクション操作
-      href: transacted-operations-committed-per-second.md
-    - name: 不明なトランザクション操作
-      href: transacted-operations-in-doubt.md
-    - name: 1 秒あたりの不明なトランザクション操作
-      href: transacted-operations-in-doubt-per-second.md
-  - name: エンドポイントのパフォーマンス カウンター
-    href: endpoint-performance-counters.md
-    items:
-    - name: Calls
-      href: endpoint-calls.md
-    - name: 1 秒あたりの呼び出し回数
-      href: endpoint-calls-per-second.md
-    - name: 保留状態の呼び出し
-      href: endpoint-calls-outstanding.md
-    - name: 失敗した呼び出し
-      href: endpoint-calls-failed.md
-    - name: 1 秒あたりの失敗した呼び出し
-      href: endpoint-calls-failed-per-second.md
-    - name: 失敗した呼び出し
-      href: endpoint-calls-faulted.md
-    - name: 1 秒あたりの失敗した呼び出し
-      href: endpoint-calls-faulted-per-second.md
-    - name: 呼び出す期間
-      href: endpoint-calls-duration.md
-    - name: 信頼できるメッセージの破棄されたメッセージ
-      href: endpoint-reliable-messaging-messages-dropped.md
-    - name: 信頼できるメッセージの 1 秒あたりの破棄されたメッセージ
-      href: endpoint-reliable-messaging-messages-dropped-per-second.md
-    - name: エラーとなった信頼できるメッセージ セッション
-      href: endpoint-reliable-messaging-sessions-faulted.md
-    - name: 1 秒あたりのエラーとなった信頼できるメッセージ セッション
-      href: endpoint-reliable-messaging-sessions-faulted-per-second.md
-    - name: 承認されていないセキュリティ呼び出し
-      href: endpoint-security-calls-not-authorized.md
-    - name: 1 秒あたりの承認されていないセキュリティ呼び出し
-      href: endpoint-security-calls-not-authorized-per-second.md
-    - name: セキュリティ検証と認証エラー
-      href: endpoint-security-validation-and-authentication-failures.md
-    - name: 1 秒あたりのセキュリティ検証と認証エラー
-      href: endpoint-security-validation-and-authentication-failures-per-second.md
-    - name: トランザクション フロー
-      href: endpoint-transactions-flowed.md
-    - name: 1 秒あたりのトランザクション フロー
-      href: endpoint-transactions-flowed-per-second.md
-ms.openlocfilehash: 1330af4c40fecfb31fd26ddf3dd152bd5b33deb6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469834"
+    - name: 操作パフォーマンス カウンター
+      href: operation-performance-counters.md
+      items:
+        - name: Calls
+          href: calls.md
+        - name: 1 秒あたりの呼び出し回数
+          href: calls-per-second.md
+        - name: 保留状態の呼び出し
+          href: calls-outstanding.md
+        - name: 失敗した呼び出し
+          href: calls-failed.md
+        - name: 1 秒あたりの失敗した呼び出し
+          href: calls-failed-per-second.md
+        - name: 失敗した呼び出し
+          href: calls-faulted.md
+        - name: 1 秒あたりの失敗した呼び出し
+          href: calls-faulted-per-second.md
+        - name: 呼び出す期間
+          href: calls-duration.md
+        - name: セキュリティ検証と認証エラー
+          href: security-validation-and-authentication-failures.md
+        - name: 1 秒あたりのセキュリティ検証と認証エラー
+          href: security-validation-and-authentication-failures-per-second.md
+        - name: 承認されていないセキュリティ呼び出し
+          href: security-calls-not-authorized.md
+        - name: 1 秒あたりの承認されていないセキュリティ呼び出し
+          href: security-calls-not-authorized-per-second.md
+        - name: トランザクション フロー
+          href: transactions-flowed.md
+        - name: 1 秒あたりのトランザクション フロー
+          href: transactions-flowed-per-second.md
+    - name: サービス パフォーマンス カウンター
+      href: service-performance-counters.md
+      items:
+        - name: Calls
+          href: service-calls.md
+        - name: 1 秒あたりの呼び出し回数
+          href: service-calls-per-second.md
+        - name: 保留状態の呼び出し
+          href: service-calls-outstanding.md
+        - name: 失敗した呼び出し
+          href: service-calls-failed.md
+        - name: 1 秒あたりの失敗した呼び出し
+          href: service-calls-failed-per-second.md
+        - name: 失敗した呼び出し
+          href: service-calls-faulted.md
+        - name: 1 秒あたりの失敗した呼び出し
+          href: service-calls-faulted-per-second.md
+        - name: 呼び出す期間
+          href: service-calls-duration.md
+        - name: インスタンス
+          href: instances.md
+        - name: 1 秒あたりのインスタンス
+          href: instances-per-second.md
+        - name: 同時呼び出しの最大数に対する割合
+          href: percent-of-max-concurrent-calls.md
+        - name: 同時インスタンスの最大数に対する割合
+          href: percent-of-max-concurrent-instances.md
+        - name: 同時セッションの最大数に対する割合
+          href: percent-of-max-concurrent-sessions.md
+        - name: 破棄されたメッセージのキュー
+          href: queue-dropped-messages.md
+        - name: 1 秒あたりの破棄されたメッセージのキュー
+          href: queue-dropped-messages-per-second.md
+        - name: キューに置かれた有害メッセージ
+          href: queued-poison-messages.md
+        - name: 1 秒あたりのキューに置かれた有害メッセージ
+          href: queued-poison-messages-per-second.md
+        - name: キューに置かれた拒否メッセージ
+          href: queued-rejected-messages.md
+        - name: 1 秒あたりのキューに置かれた拒否メッセージ
+          href: queued-rejected-messages-per-second.md
+        - name: 信頼できるメッセージの破棄されたメッセージ
+          href: reliable-messaging-messages-dropped.md
+        - name: 信頼できるメッセージの 1 秒あたりの破棄されたメッセージ
+          href: reliable-messaging-messages-dropped-per-second.md
+        - name: エラーとなった信頼できるメッセージ セッション
+          href: reliable-messaging-sessions-faulted.md
+        - name: 1 秒あたりのエラーとなった信頼できるメッセージ セッション
+          href: reliable-messaging-sessions-faulted-per-second.md
+        - name: 承認されていないセキュリティ呼び出し
+          href: service-security-calls-not-authorized.md
+        - name: 1 秒あたりの承認されていないセキュリティ呼び出し
+          href: service-security-calls-not-authorized-per-second.md
+        - name: セキュリティ検証と認証エラー
+          href: service-security-validation-and-authentication-failures.md
+        - name: 1 秒あたりのセキュリティ検証と認証エラー
+          href: service-security-validation-and-authentication-failures-per-second.md
+        - name: トランザクション フロー
+          href: service-transactions-flowed.md
+        - name: 1 秒あたりのトランザクション フロー
+          href: service-transactions-flowed-per-second.md
+        - name: 中止されたトランザクション操作
+          href: transacted-operations-aborted.md
+        - name: 1 秒あたりの中止されたトランザクション操作
+          href: transacted-operations-aborted-per-second.md
+        - name: コミットされたトランザクション操作
+          href: transacted-operations-committed.md
+        - name: 1 秒あたりのコミットされたトランザクション操作
+          href: transacted-operations-committed-per-second.md
+        - name: 不明なトランザクション操作
+          href: transacted-operations-in-doubt.md
+        - name: 1 秒あたりの不明なトランザクション操作
+          href: transacted-operations-in-doubt-per-second.md
+    - name: エンドポイントのパフォーマンス カウンター
+      href: endpoint-performance-counters.md
+      items:
+        - name: Calls
+          href: endpoint-calls.md
+        - name: 1 秒あたりの呼び出し回数
+          href: endpoint-calls-per-second.md
+        - name: 保留状態の呼び出し
+          href: endpoint-calls-outstanding.md
+        - name: 失敗した呼び出し
+          href: endpoint-calls-failed.md
+        - name: 1 秒あたりの失敗した呼び出し
+          href: endpoint-calls-failed-per-second.md
+        - name: 失敗した呼び出し
+          href: endpoint-calls-faulted.md
+        - name: 1 秒あたりの失敗した呼び出し
+          href: endpoint-calls-faulted-per-second.md
+        - name: 呼び出す期間
+          href: endpoint-calls-duration.md
+        - name: 信頼できるメッセージの破棄されたメッセージ
+          href: endpoint-reliable-messaging-messages-dropped.md
+        - name: 信頼できるメッセージの 1 秒あたりの破棄されたメッセージ
+          href: endpoint-reliable-messaging-messages-dropped-per-second.md
+        - name: エラーとなった信頼できるメッセージ セッション
+          href: endpoint-reliable-messaging-sessions-faulted.md
+        - name: 1 秒あたりのエラーとなった信頼できるメッセージ セッション
+          href: endpoint-reliable-messaging-sessions-faulted-per-second.md
+        - name: 承認されていないセキュリティ呼び出し
+          href: endpoint-security-calls-not-authorized.md
+        - name: 1 秒あたりの承認されていないセキュリティ呼び出し
+          href: endpoint-security-calls-not-authorized-per-second.md
+        - name: セキュリティ検証と認証エラー
+          href: endpoint-security-validation-and-authentication-failures.md
+        - name: 1 秒あたりのセキュリティ検証と認証エラー
+          href: endpoint-security-validation-and-authentication-failures-per-second.md
+        - name: トランザクション フロー
+          href: endpoint-transactions-flowed.md
+        - name: 1 秒あたりのトランザクション フロー
+          href: endpoint-transactions-flowed-per-second.md

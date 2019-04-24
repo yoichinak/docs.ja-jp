@@ -3,10 +3,10 @@ title: WCF サービスの簡略化された構成
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
 ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59304260"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF サービスの簡略化された構成
@@ -80,5 +80,5 @@ ms.locfileid: "59304260"
   
 ## <a name="see-also"></a>関連項目
 
-- [AppFabric の管理のサンプル](https://go.microsoft.com/fwlink/?LinkId=193960)
+- [AppFabric 管理のサンプル](https://go.microsoft.com/fwlink/?LinkId=193960)
 - [簡略化された構成](../../../../docs/framework/wcf/simplified-configuration.md)

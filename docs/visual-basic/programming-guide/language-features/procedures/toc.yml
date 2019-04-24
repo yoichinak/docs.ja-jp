@@ -1,121 +1,114 @@
-items:
 - name: Visual Basic におけるプロシージャ
   href: index.md
   items:
-  - name: '方法: プロシージャを作成する'
-    href: how-to-create-a-procedure.md
-  - name: Sub プロシージャ
-    href: sub-procedures.md
-    items:
-    - name: '方法: 値を返さないプロシージャを呼び出す'
-      href: how-to-call-a-procedure-that-does-not-return-a-value.md
-    - name: '方法: イベント ハンドラーを呼び出す'
-      href: how-to-call-an-event-handler.md
-  - name: Function プロシージャ
-    href: function-procedures.md
-    items:
-    - name: '方法: 値を返すプロシージャを作成する'
-      href: how-to-create-a-procedure-that-returns-a-value.md
-    - name: '方法: プロシージャから値を返す'
-      href: how-to-return-a-value-from-a-procedure.md
-    - name: '方法: 値を返すプロシージャを呼び出す'
-      href: how-to-call-a-procedure-that-returns-a-value.md
-  - name: プロパティ プロシージャ
-    href: property-procedures.md
-    items:
-    - name: 自動実装プロパティ
-      href: auto-implemented-properties.md
-    - name: プロパティと変数の違い
-      href: differences-between-properties-and-variables.md
-    - name: '方法: プロパティを作成する'
-      href: how-to-create-a-property.md
-    - name: '方法: 複数のアクセス レベルを持つプロパティを宣言する'
-      href: how-to-declare-a-property-with-mixed-access-levels.md
-    - name: '方法: プロパティ プロシージャを呼び出す'
-      href: how-to-call-a-property-procedure.md
-    - name: '方法: 既定のプロパティを宣言して呼び出す'
-      href: how-to-declare-and-call-a-default-property.md
-    - name: '方法: プロパティに値を格納する'
-      href: how-to-put-a-value-in-a-property.md
-    - name: '方法: プロパティから値を取得する'
-      href: how-to-get-a-value-from-a-property.md
-  - name: 演算子プロシージャ
-    href: operator-procedures.md
-    items:
-    - name: '方法: 演算子を定義する'
-      href: how-to-define-an-operator.md
-    - name: '方法: 変換演算子を定義する'
-      href: how-to-define-a-conversion-operator.md
-    - name: '方法: 演算子プロシージャを呼び出す'
-      href: how-to-call-an-operator-procedure.md
-    - name: '方法: 演算子を定義するクラスを使用する'
-      href: how-to-use-a-class-that-defines-operators.md
-  - name: プロシージャのパラメーターと引数
-    href: procedure-parameters-and-arguments.md
-    items:
-    - name: パラメーターと引数の違い
-      href: differences-between-parameters-and-arguments.md
-    - name: '方法: プロシージャにパラメーターを定義する'
-      href: how-to-define-a-parameter-for-a-procedure.md
-    - name: '方法: プロシージャに引数を渡す'
-      href: how-to-pass-arguments-to-a-procedure.md
-    - name: 引数の値渡しと参照渡し
-      href: passing-arguments-by-value-and-by-reference.md
+    - name: '方法: プロシージャを作成する'
+      href: how-to-create-a-procedure.md
+    - name: Sub プロシージャ
+      href: sub-procedures.md
       items:
-      - name: 変更できる引数と変更できない引数の違い
-        href: differences-between-modifiable-and-nonmodifiable-arguments.md
-      - name: 引数の値渡しと参照渡しの違い
-        href: differences-between-passing-an-argument-by-value-and-by-reference.md
-      - name: '方法: プロシージャ引数の値を変更する'
-        href: how-to-change-the-value-of-a-procedure-argument.md
-      - name: '方法: プロシージャ引数の値が変化しないようにする'
-        href: how-to-protect-a-procedure-argument-against-value-changes.md
-      - name: '方法: 引数の値渡しを強制する'
-        href: how-to-force-an-argument-to-be-passed-by-value.md
-    - name: 位置と名前による引数渡し
-      href: passing-arguments-by-position-and-by-name.md
-    - name: 省略可能なパラメーター
-      href: optional-parameters.md
-    - name: パラメーター配列
-      href: parameter-arrays.md
-  - name: 参照戻り値
-    href: ref-return-values.md
-  - name: 再帰プロシージャ
-    href: recursive-procedures.md
-  - name: プロシージャのオーバーロード
-    href: procedure-overloading.md
-    items:
-    - name: '方法: プロシージャの複数のバージョンを定義する'
-      href: how-to-define-multiple-versions-of-a-procedure.md
-    - name: '方法: オーバーロードされたプロシージャを呼び出す'
-      href: how-to-call-an-overloaded-procedure.md
-    - name: '方法: 省略可能なパラメーターを受け取るプロシージャをオーバーロードする'
-      href: how-to-overload-a-procedure-that-takes-optional-parameters.md
-    - name: '方法: 不特定数のパラメーターを受け取るプロシージャをオーバーロードする'
-      href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
-    - name: プロシージャのオーバーロードに関する注意事項
-      href: considerations-in-overloading-procedures.md
-    - name: Overload Resolution
-      href: overload-resolution.md
-  - name: プロシージャのトラブルシューティング
-    href: troubleshooting-procedures.md
-  - name: 拡張メソッド
-    href: extension-methods.md
-    items:
-    - name: '方法: 拡張メソッドを作成する'
-      href: how-to-write-an-extension-method.md
-    - name: '方法: 拡張メソッドを呼び出す'
-      href: how-to-call-an-extension-method.md
-  - name: ラムダ式
-    href: lambda-expressions.md
-    items:
-    - name: '方法: ラムダ式を作成する'
-      href: how-to-create-a-lambda-expression.md
-  - name: 部分メソッド
-    href: partial-methods.md
-ms.openlocfilehash: 56cc10bf082515dcf646f005522162b4c9e3bdf0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469963"
+        - name: '方法: 値を返さないプロシージャを呼び出す'
+          href: how-to-call-a-procedure-that-does-not-return-a-value.md
+        - name: '方法: イベント ハンドラーを呼び出す'
+          href: how-to-call-an-event-handler.md
+    - name: Function プロシージャ
+      href: function-procedures.md
+      items:
+        - name: '方法: 値を返すプロシージャを作成する'
+          href: how-to-create-a-procedure-that-returns-a-value.md
+        - name: '方法: プロシージャから値を返す'
+          href: how-to-return-a-value-from-a-procedure.md
+        - name: '方法: 値を返すプロシージャを呼び出す'
+          href: how-to-call-a-procedure-that-returns-a-value.md
+    - name: プロパティ プロシージャ
+      href: property-procedures.md
+      items:
+        - name: 自動実装プロパティ
+          href: auto-implemented-properties.md
+        - name: プロパティと変数の違い
+          href: differences-between-properties-and-variables.md
+        - name: '方法: プロパティを作成する'
+          href: how-to-create-a-property.md
+        - name: '方法: 複数のアクセス レベルを持つプロパティを宣言する'
+          href: how-to-declare-a-property-with-mixed-access-levels.md
+        - name: '方法: プロパティ プロシージャを呼び出す'
+          href: how-to-call-a-property-procedure.md
+        - name: '方法: 既定のプロパティを宣言して呼び出す'
+          href: how-to-declare-and-call-a-default-property.md
+        - name: '方法: プロパティに値を格納する'
+          href: how-to-put-a-value-in-a-property.md
+        - name: '方法: プロパティから値を取得する'
+          href: how-to-get-a-value-from-a-property.md
+    - name: 演算子プロシージャ
+      href: operator-procedures.md
+      items:
+        - name: '方法: 演算子を定義する'
+          href: how-to-define-an-operator.md
+        - name: '方法: 変換演算子を定義する'
+          href: how-to-define-a-conversion-operator.md
+        - name: '方法: 演算子プロシージャを呼び出す'
+          href: how-to-call-an-operator-procedure.md
+        - name: '方法: 演算子を定義するクラスを使用する'
+          href: how-to-use-a-class-that-defines-operators.md
+    - name: プロシージャのパラメーターと引数
+      href: procedure-parameters-and-arguments.md
+      items:
+        - name: パラメーターと引数の違い
+          href: differences-between-parameters-and-arguments.md
+        - name: '方法: プロシージャにパラメーターを定義する'
+          href: how-to-define-a-parameter-for-a-procedure.md
+        - name: '方法: プロシージャに引数を渡す'
+          href: how-to-pass-arguments-to-a-procedure.md
+        - name: 引数の値渡しと参照渡し
+          href: passing-arguments-by-value-and-by-reference.md
+          items:
+            - name: 変更できる引数と変更できない引数の違い
+              href: differences-between-modifiable-and-nonmodifiable-arguments.md
+            - name: 引数の値渡しと参照渡しの違い
+              href: differences-between-passing-an-argument-by-value-and-by-reference.md
+            - name: '方法: プロシージャ引数の値を変更する'
+              href: how-to-change-the-value-of-a-procedure-argument.md
+            - name: '方法: プロシージャ引数の値が変化しないようにする'
+              href: how-to-protect-a-procedure-argument-against-value-changes.md
+            - name: '方法: 引数の値渡しを強制する'
+              href: how-to-force-an-argument-to-be-passed-by-value.md
+        - name: 位置と名前による引数渡し
+          href: passing-arguments-by-position-and-by-name.md
+        - name: 省略可能なパラメーター
+          href: optional-parameters.md
+        - name: パラメーター配列
+          href: parameter-arrays.md
+    - name: 参照戻り値
+      href: ref-return-values.md
+    - name: 再帰プロシージャ
+      href: recursive-procedures.md
+    - name: プロシージャのオーバーロード
+      href: procedure-overloading.md
+      items:
+        - name: '方法: プロシージャの複数のバージョンを定義する'
+          href: how-to-define-multiple-versions-of-a-procedure.md
+        - name: '方法: オーバーロードされたプロシージャを呼び出す'
+          href: how-to-call-an-overloaded-procedure.md
+        - name: '方法: 省略可能なパラメーターを受け取るプロシージャをオーバーロードする'
+          href: how-to-overload-a-procedure-that-takes-optional-parameters.md
+        - name: '方法: 不特定数のパラメーターを受け取るプロシージャをオーバーロードする'
+          href: how-to-overload-a-procedure-that-takes-an-indefinite-number-of-parameters.md
+        - name: プロシージャのオーバーロードに関する注意事項
+          href: considerations-in-overloading-procedures.md
+        - name: Overload Resolution
+          href: overload-resolution.md
+    - name: プロシージャのトラブルシューティング
+      href: troubleshooting-procedures.md
+    - name: 拡張メソッド
+      href: extension-methods.md
+      items:
+        - name: '方法: 拡張メソッドを作成する'
+          href: how-to-write-an-extension-method.md
+        - name: '方法: 拡張メソッドを呼び出す'
+          href: how-to-call-an-extension-method.md
+    - name: ラムダ式
+      href: lambda-expressions.md
+      items:
+        - name: '方法: ラムダ式を作成する'
+          href: how-to-create-a-lambda-expression.md
+    - name: 部分メソッド
+      href: partial-methods.md

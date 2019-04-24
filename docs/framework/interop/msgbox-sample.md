@@ -12,10 +12,10 @@ ms.assetid: 9e0edff6-cc0d-4d5c-a445-aecf283d9c3a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8b88a07115871e48a7981bbb868ff2ef4ce8cf85
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59127700"
 ---
 # <a name="msgbox-sample"></a>MsgBox のサンプル
@@ -46,7 +46,7 @@ ms.locfileid: "59127700"
   
 ## <a name="see-also"></a>関連項目
 
-- [文字列のマーシャリング](marshaling-strings.md)
+- [マーシャリング (文字列の)](marshaling-strings.md)
 - [文字列に対する既定のマーシャリング](default-marshaling-for-strings.md)
 - [マネージド コードでのプロトタイプの作成](creating-prototypes-in-managed-code.md)
 - [文字セットの指定](specifying-a-character-set.md)

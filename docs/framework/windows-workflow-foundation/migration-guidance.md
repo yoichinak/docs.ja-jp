@@ -3,14 +3,14 @@ title: 移行のガイドライン
 ms.date: 03/30/2017
 ms.assetid: cb65c132-58c9-4028-b3d4-1efc71d5e60e
 ms.openlocfilehash: a36108e8c711b9e5d5253b19a9122373fc513855
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083167"
 ---
 # <a name="migration-guidance"></a>移行のガイドライン
-[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]Microsoft は 2 つ目のメジャー バージョンの Windows Workflow Foundation (WF) をリリースします。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] リリースされた[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)](これに含まれて、種類 System.Workflow.* 名前空間は WF3 と呼ばれるようになりました) で強化された[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]します。 WF3 はまたの一部、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]が新しいワークフロー テクノロジがありますが存在します (System.Activities。 内の型\*名前空間。 WF4 と呼ばれます)。 WF4 の導入時期を検討する場合は、最初にそのタイミングの管理を認識することが重要です。  
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]Microsoft は 2 つ目のメジャー バージョンの Windows Workflow Foundation (WF) をリリースします。 [!INCLUDE[wf1](../../../includes/wf1-md.md)] は、[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)] (これに含まれていた System.Workflow.* 名前空間の型は現在 WF3 と呼ばれています) でリリースされ、[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] で強化されました。 WF3 はまたの一部、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]が新しいワークフロー テクノロジがありますが存在します (System.Activities。 内の型\*名前空間。 WF4 と呼ばれます)。 WF4 の導入時期を検討する場合は、最初にそのタイミングの管理を認識することが重要です。  
   
 -   WF3 は [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] で完全にサポートされています。  
   
@@ -23,15 +23,14 @@ ms.locfileid: "59083167"
 ## <a name="wf-migration-whitepapers-and-cookbooks"></a>WF の移行に関するホワイト ペーパーとクックブック  
  [WF の移行の概要](https://go.microsoft.com/fwlink/?LinkId=153873)関係 WF3 と WF4 と移行方法の大まかな概要を説明します。 関連トピックでは、特定のトピックを掘り下げて説明します。  
   
- [WF の移行の概要](https://go.microsoft.com/fwlink/?LinkId=153873)  
+ [WF 移行の概要](https://go.microsoft.com/fwlink/?LinkId=153873)  
  WF3 と WF4 の関係、および .NET 4 のワークフロー テクノロジのユーザーまたは潜在的なユーザーとして使用できる選択肢について説明します。  
   
  [WF の移行:WF3 を開発のベスト プラクティス](https://go.microsoft.com/fwlink/?LinkId=153852)  
  より簡単に WF4 に移行できるように、WF3 の成果物を設計する方法について説明します。  
   
  [WF のガイダンス:ルール](https://go.microsoft.com/fwlink/?LinkId=153854)  
- 
-  [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] のソリューションに規則関連の投資を促進する方法について説明します。  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] のソリューションに規則関連の投資を促進する方法について説明します。  
   
  [WF のガイダンス:ステート マシン](https://go.microsoft.com/fwlink/?LinkId=153855)  
  ステート マシンのアクティビティがない場合の WF4 の制御フロー モデリングについて説明します。  

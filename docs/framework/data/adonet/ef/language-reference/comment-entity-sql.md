@@ -3,14 +3,14 @@ title: -- (コメント) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5d9de735-2099-47f1-b7e7-60856f494924
 ms.openlocfilehash: c10b17931c6024e2a9e947083747435d8aa54fa2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339516"
 ---
 # <a name="---comment-entity-sql"></a>-- (コメント) (Entity SQL)
-[!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリは、コメントを含めることができます。 コメント行の先頭には、2 個のダッシュ (`--`) を付けます。  
+[!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリには、コメントを含めることができます。 コメント行の先頭には、2 個のダッシュ (`--`) を付けます。  
   
 ## <a name="syntax"></a>構文  
   

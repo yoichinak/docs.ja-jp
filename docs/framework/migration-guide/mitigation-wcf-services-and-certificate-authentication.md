@@ -5,10 +5,10 @@ ms.assetid: ef19c91a-b9df-4bf0-a28e-eb1e99c4bc95
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdacf5fc4a5c73fc60df961432089ee65dd0cfaa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59079540"
 ---
 # <a name="mitigation-wcf-services-and-certificate-authentication"></a>軽減策:WCF サービスと証明書認証
@@ -55,4 +55,4 @@ ms.locfileid: "59079540"
   
 ## <a name="see-also"></a>関連項目
 
-- [ランタイムの変更](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)
+- [ランタイムの変更点](../../../docs/framework/migration-guide/runtime-changes-in-the-net-framework-4-6.md)

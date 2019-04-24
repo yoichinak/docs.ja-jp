@@ -1,20 +1,13 @@
-items:
 - name: イベント
   href: index.md
   items:
-  - name: 'チュートリアル: イベントの宣言と発生'
-    href: walkthrough-declaring-and-raising-events.md
-  - name: 'チュートリアル: イベントの処理'
-    href: walkthrough-handling-events.md
-  - name: '方法: カスタム イベントを宣言してブロックを回避する'
-    href: how-to-declare-custom-events-to-avoid-blocking.md
-  - name: '方法: カスタム イベントを宣言してメモリを節約する'
-    href: how-to-declare-custom-events-to-conserve-memory.md
-  - name: 継承されたイベント ハンドラーのトラブルシューティング
-    href: troubleshooting-inherited-event-handlers.md
-ms.openlocfilehash: 1eff7e1b55252c30a97d9e25ee1d21891b770ec5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471068"
+    - name: 'チュートリアル: イベントの宣言と発生'
+      href: walkthrough-declaring-and-raising-events.md
+    - name: 'チュートリアル: イベントの処理'
+      href: walkthrough-handling-events.md
+    - name: '方法: カスタム イベントを宣言してブロックを回避する'
+      href: how-to-declare-custom-events-to-avoid-blocking.md
+    - name: '方法: カスタム イベントを宣言してメモリを節約する'
+      href: how-to-declare-custom-events-to-conserve-memory.md
+    - name: 継承されたイベント ハンドラーのトラブルシューティング
+      href: troubleshooting-inherited-event-handlers.md

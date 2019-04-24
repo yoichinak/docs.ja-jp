@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: fc3cd7fa-2b45-4614-a44f-8fa9b9d15284
 author: BrucePerlerMS
 ms.openlocfilehash: 2f95213390187648c9f58b9b2bf2d5e3f49fb860
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59135357"
 ---
 # <a name="wif-and-web-farms"></a>WIF および Web ファーム
@@ -88,7 +88,7 @@ public interface ISessionSecurityTokenCacheService
 }  
 ```  
   
- WCF キャッシュ サービスの実装を次のコードに示します。 この例では、WIF に実装されている既定のメモリ内セッション トークン キャッシュが使用されます。 または、データベースに基づく永続的なキャッシュを実装することもできます。 `ISessionSecurityTokenCacheService` 上記のインターフェイスを定義します。 この例では、簡略化のために、インターフェイスの実装に必要なメソッドのすべてを示していません。  
+ WCF キャッシュ サービスの実装を次のコードに示します。 この例では、WIF に実装されている既定のメモリ内セッション トークン キャッシュが使用されます。 または、データベースに基づく永続的なキャッシュを実装することもできます。 `ISessionSecurityTokenCacheService` で、上記のインターフェイスを定義します。 この例では、簡略化のために、インターフェイスの実装に必要なメソッドのすべてを示していません。  
   
 ```  
 using System;  

@@ -3,10 +3,10 @@ title: データのフィルター処理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
 ms.openlocfilehash: a673126d928a97bf522783e73fc254debe2a9de8
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837448"
 ---
 # <a name="filtering-data-visual-basic"></a>データのフィルター処理 (Visual Basic)
@@ -14,7 +14,7 @@ ms.locfileid: "58837448"
   
  次の図は、文字のシーケンスをフィルター処理した結果を示したものです。 フィルター処理操作の述語では、文字が "A" でなければならないことが指定されています。  
   
- ![LINQ のフィルター処理操作を示す図](./media/filtering-data/linq-filter-operation.png)  
+ ![LINQ のフィルター操作を示す図。](./media/filtering-data/linq-filter-operation.png)  
   
  次のセクションでは、選択を実行する標準クエリ演算子メソッドの一覧を示します。  
   

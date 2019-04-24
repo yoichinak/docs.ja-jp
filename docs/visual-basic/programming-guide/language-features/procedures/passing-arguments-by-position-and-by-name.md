@@ -23,10 +23,10 @@ helpviewer_keywords:
 - arguments [Visual Basic], listing by name
 ms.assetid: 1ad7358f-1da9-48da-a95b-f3c7ed41eff3
 ms.openlocfilehash: b872eda97d1e349ad781b12810e4b166d6e46fe1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58837313"
 ---
 # <a name="passing-arguments-by-position-and-by-name-visual-basic"></a>位置と名前による引数渡し (Visual Basic)
@@ -86,7 +86,7 @@ Visual Basic 15.5 以降では、位置指定引数は、名前付き引数終�
 </PropertyGroup>
 ```
 
-詳細については、[Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)を参照してください。
+詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)します。
 
 ## <a name="restrictions-on-supplying-arguments-by-name"></a>名前による引数渡しに関する制限事項  
 

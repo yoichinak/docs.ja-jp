@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 867bf0812e54c33dbe84737b67091fc87e3b0651
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54661868"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59342346"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>ランタイムがアセンブリを検索する方法
 .NET Framework アプリケーションを正しく配置するには、アプリケーションを構成するアセンブリを共通言語ランタイムがどのように検索し、バインドするかを理解している必要があります。 既定では、ランタイムはアプリケーションを構成するアセンブリの正しいバージョンをバインドしようとします。 この既定の動作は、構成ファイルの設定によってオーバーライドできます。  
@@ -40,16 +40,16 @@ ms.locfileid: "54661868"
   
  ランタイムは、次の手順を使用することによってアセンブリ参照を解決します。  
   
-1.  適用可能な構成ファイル (アプリケーション構成ファイル、発行者ポリシー ファイル、マシン構成ファイルなど) をチェックして、[正しいアセンブリ バージョンを決定します。](#step1)  構成ファイルがリモート コンピューターに配置されている場合、ランタイムは最初にアプリケーション構成ファイルを検索し、ダウンロードする必要があります。  
+1. 適用可能な構成ファイル (アプリケーション構成ファイル、発行者ポリシー ファイル、マシン構成ファイルなど) をチェックして、[正しいアセンブリ バージョンを決定します。](#step1)  構成ファイルがリモート コンピューターに配置されている場合、ランタイムは最初にアプリケーション構成ファイルを検索し、ダウンロードする必要があります。  
   
-2.  [以前にアセンブリ名がバインドされているかどうかをチェック](#step2) し、バインドされている場合は、前に読み込んだアセンブリを使用します。 前にアセンブリの読み込み要求が失敗している場合は、アセンブリの読み込みを試みることなく要求が直ちにエラーとなります。  
+2. [以前にアセンブリ名がバインドされているかどうかをチェック](#step2) し、バインドされている場合は、前に読み込んだアセンブリを使用します。 前にアセンブリの読み込み要求が失敗している場合は、アセンブリの読み込みを試みることなく要求が直ちにエラーとなります。  
   
     > [!NOTE]
     >  アセンブリ バインディング エラーのキャッシュは、.NET Framework Version 2.0 で新たに追加されました。  
   
-3.  [グローバル アセンブリ キャッシュをチェックします](#step3)。 そこにアセンブリが見つかった場合は、ランタイムでそのアセンブリが使用されます。  
+3. [グローバル アセンブリ キャッシュをチェックします](#step3)。 そこにアセンブリが見つかった場合は、ランタイムでそのアセンブリが使用されます。  
   
-4.  次の手順を使用することによって、[アセンブリのプローブ](#step4) を実行します。  
+4. 次の手順を使用することによって、[アセンブリのプローブ](#step4) を実行します。  
   
     1.  構成と発行者ポリシーが元の参照に影響しない場合およびバインド要求が <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> メソッドを使用することによって作成されている場合、ランタイムは位置ヒントをチェックします。  
   
@@ -154,9 +154,9 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ## <a name="step-4-locating-the-assembly-through-codebases-or-probing"></a>手順 4: コードベースまたはプローブによるアセンブリの検索  
  共通言語ランタイムは、呼び出し元アセンブリの参照および構成ファイル内の情報を使用して正しいアセンブリ バージョンを決定した後、およびグローバル アセンブリ キャッシュ内をチェック (厳密な名前が付いたアセンブリの場合だけ) した後で、アセンブリの検索を試みます。 アセンブリを検索するプロセスは、次のとおりです。  
   
-1.  [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 要素は、アプリケーション構成ファイルに格納されている場合、ランタイムはこの要素に指定されている場所を調べます。 一致するアセンブリが見つかった場合は、そのアセンブリが使用され、プローブは実行されません。 指定されている場所でアセンブリが見つからなかった場合、バインド要求は失敗します。  
+1. [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 要素は、アプリケーション構成ファイルに格納されている場合、ランタイムはこの要素に指定されている場所を調べます。 一致するアセンブリが見つかった場合は、そのアセンブリが使用され、プローブは実行されません。 指定されている場所でアセンブリが見つからなかった場合、バインド要求は失敗します。  
   
-2.  次に、ランタイムは、後でこのセクションで指定する規則に従って、参照先アセンブリをプローブします。  
+2. 次に、ランタイムは、後でこのセクションで指定する規則に従って、参照先アセンブリをプローブします。  
   
 > [!NOTE]
 >  アセンブリがディレクトリ内に複数バージョンあり、特定バージョンのアセンブリを参照する場合は、[\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素の `privatePath` 属性ではなく [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 要素を使用する必要があります。 [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素を使用すると、ランタイムは、参照されている単純なアセンブリ名に一致するアセンブリを初めて検出した時点で、それが適切な一致かどうかに関係なくプローブを停止します。 適切な一致である場合は、そのアセンブリが使用されます。 適切な一致でない場合、プローブは停止し、バインディングは失敗します。  
@@ -248,5 +248,6 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
  たとえば、Assembly1 が Assembly2 を参照し、Assembly1 が `http://www.code.microsoft.com/utils` からダウンロードされていた場合、この場所が、Assembly2.dll を検索する場所についてのヒントと見なされます。 次に、ランタイムは `http://www.code.microsoft.com/utils/Assembly2.dll` と `http://www.code.microsoft.com/utils/Assembly2/Assembly2.dll` のアセンブリをプローブします。 どちらの場所でも Assembly2 が見つからなかった場合は、ランタイムは Windows Installer に問い合わせます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アセンブリの読み込みのベスト プラクティス](../../../docs/framework/deployment/best-practices-for-assembly-loading.md)
 - [配置](../../../docs/framework/deployment/index.md)

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 7e51d44e-7c4e-4040-9332-f0190fe36f07
 ms.openlocfilehash: 566a7905ac2eda17046595bcccc868e44f6a1e9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203939"
 ---
 # <a name="sql-server-connection-pooling-adonet"></a>SQL Server の接続プール (ADO.NET)
@@ -19,7 +19,7 @@ ms.locfileid: "59203939"
   
  接続プールは、新しく開く必要のある接続の数を減らします。 *プーラー*物理的な接続の所有権を保持します。 プーラーは、任意の接続構成それぞれのアクティブな接続のセットをそのまま保持して、接続を管理します。 この接続の `Open` を呼び出すと、プーラーは、プールに使用可能な接続があるかどうかを確認します。 プールされた接続が使用できる場合は、新しい接続を開く代わりに、プールされた接続を呼び出し元に返します。 アプリケーションが接続で `Close` を呼び出すと、プーラーは接続を閉じる代わりに、プールされたアクティブな接続のセットに接続を返します。 接続がプールに返されると、その接続は、次の `Open` 呼び出しで再度使用できる状態になります。  
   
- 同じ構成を持つ接続のみをプールすることができます。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 複数のプールを構成ごとに 1 つ同時に保持します。 接続は接続文字列によってプール内で区別されます。また、統合セキュリティを使用している場合は、Windows ID によっても区別されます。 接続がプールされるかどうかは、その接続がトランザクションに参加しているかどうかにも依存します。 <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> を使用すると、<xref:System.Data.SqlClient.SqlCredential> インスタンスは接続プールに影響します。 ユーザー ID とパスワードが同じでも、<xref:System.Data.SqlClient.SqlCredential> のインスタンスごとに異なる接続プールが使用されます。  
+ 同じ構成を持つ接続のみをプールすることができます。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] は同時に複数のプールを保持し、各プールでの構成は 1 つです。 接続は接続文字列によってプール内で区別されます。また、統合セキュリティを使用している場合は、Windows ID によっても区別されます。 接続がプールされるかどうかは、その接続がトランザクションに参加しているかどうかにも依存します。 <xref:System.Data.SqlClient.SqlConnection.ChangePassword%2A> を使用すると、<xref:System.Data.SqlClient.SqlCredential> インスタンスは接続プールに影響します。 ユーザー ID とパスワードが同じでも、<xref:System.Data.SqlClient.SqlCredential> のインスタンスごとに異なる接続プールが使用されます。  
   
  接続をプールすると、アプリケーションのパフォーマンスとスケーラビリティを大幅に改善できます。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] では、接続プールが既定で有効になっています。 明示的に無効にしない限り、プーラーは、アプリケーションで接続が開かれたり、閉じられたりする際に接続を最適化します。 また、接続プール機能の動作を制御する接続文字列修飾子を指定することもできます。 詳細については、このトピックで後述する「接続文字列キーワードによる接続プールの制御」を参照してください。  
   
@@ -80,7 +80,7 @@ using (SqlConnection connection = new SqlConnection(
  既に存在しないサーバーへの接続が存在する場合は、接続プーラーが、その接続が切断されていることをまだ検出せず、無効というマークを付けていない状況のときでも、プールからその接続を削除できます。 この機能は、接続がまだ有効であることを確認するオーバーヘッドによってサーバーへのラウンド トリップが実行されることにより、プーラーの利点が失われてしまうことを防ぐためにあります。 この状況が発生した場合は、接続の使用を最初に試みたときに接続が切断されていることが検出され、例外がスローされます。  
   
 ## <a name="clearing-the-pool"></a>プールのクリア  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 には、プールをクリアする 2 つの新しいメソッドが導入されました。<xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A>と<xref:System.Data.SqlClient.SqlConnection.ClearPool%2A>します。 `ClearAllPools` 指定されたプロバイダーの接続プールをクリアし、`ClearPool`特定の接続に関連付けられている接続プールをクリアします。 これらのメソッドが呼び出されたときに使用中の接続がある場合は、適切にマーク付けされ、 接続が閉じられるとプールに返されずに破棄されます。  
+ [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 では、プールをクリアするために、<xref:System.Data.SqlClient.SqlConnection.ClearAllPools%2A> と <xref:System.Data.SqlClient.SqlConnection.ClearPool%2A> という 2 つの新しいメソッドが導入されました。 `ClearAllPools` は、指定されたプロバイダーの接続プールをクリアし、`ClearPool` は、特定の接続に関連付けられた接続プールをクリアします。 これらのメソッドが呼び出されたときに使用中の接続がある場合は、適切にマーク付けされ、 接続が閉じられるとプールに返されずに破棄されます。  
   
 ## <a name="transaction-support"></a>トランザクションのサポート  
  接続はプールから取り出され、トランザクション コンテキストに基づいて割り当てられます。 接続文字列で `Enlist=false` が指定されていない限り、接続プールは、接続を <xref:System.Transactions.Transaction.Current%2A> コンテキストの中に参加させます。 接続が閉じられ、参加した `System.Transactions` トランザクションと共にプールに返されると、同じ `System.Transactions` トランザクションを持つ接続プールに対する次の要求でも、使用可能であれば同じ接続を返すように接続が保持されます。 このような要求が発行された場合で、なおかつ、プールされた接続が使用できない場合は、プールの非トランザクション部分から接続を取り出して参加させます。 プールのどちらの領域にも使用できる接続がない場合は、新しい接続を作成して参加させます。  
@@ -133,5 +133,5 @@ using (SqlConnection connection = new SqlConnection(
 
 - [接続プール](../../../../docs/framework/data/adonet/connection-pooling.md)
 - [SQL Server と ADO.NET](../../../../docs/framework/data/adonet/sql/index.md)
-- [[パフォーマンス カウンター]](../../../../docs/framework/data/adonet/performance-counters.md)
+- [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

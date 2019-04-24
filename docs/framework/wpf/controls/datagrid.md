@@ -11,10 +11,10 @@ helpviewer_keywords:
 - DataGrid columns [WPF], using
 ms.assetid: bf89ea63-79b6-422b-bc9f-0485ad803216
 ms.openlocfilehash: dda712d58a4ff956de074ecd416402ba0aece5f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197153"
 ---
 # <a name="datagrid"></a>DataGrid
@@ -49,11 +49,11 @@ ms.locfileid: "59197153"
   
 |タイトル|説明|  
 |-----------|-----------------|  
-|[チュートリアル: DataGrid コントロールで SQL Server データベースのデータを表示する](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|エンティティ フレームワーク要素を追加する新しい WPF プロジェクトをセットアップ、設定、ソース内のデータを表示する方法について説明します、<xref:System.Windows.Controls.DataGrid>します。|  
-|[方法: DataGrid コントロールに行の詳細を追加する](how-to-add-row-details-to-a-datagrid-control.md)|行の詳細を作成する方法について説明します、<xref:System.Windows.Controls.DataGrid>します。|  
-|[方法: DataGrid コントロールを使用して検証を実装する](how-to-implement-validation-with-the-datagrid-control.md)|値を検証する方法について説明します<xref:System.Windows.Controls.DataGrid>セルと行、および検証のフィードバックを表示します。|  
+|[チュートリアル: DataGrid コントロールでの SQL Server データベースのデータを表示](walkthrough-display-data-from-a-sql-server-database-in-a-datagrid-control.md)|エンティティ フレームワーク要素を追加する新しい WPF プロジェクトをセットアップ、設定、ソース内のデータを表示する方法について説明します、<xref:System.Windows.Controls.DataGrid>します。|  
+|[方法: DataGrid コントロールに行の詳細を追加します。](how-to-add-row-details-to-a-datagrid-control.md)|行の詳細を作成する方法について説明します、<xref:System.Windows.Controls.DataGrid>します。|  
+|[方法: DataGrid コントロールに検証を実装します。](how-to-implement-validation-with-the-datagrid-control.md)|値を検証する方法について説明します<xref:System.Windows.Controls.DataGrid>セルと行、および検証のフィードバックを表示します。|  
 |[DataGrid コントロールの既定のキーボード動作とマウス動作](default-keyboard-and-mouse-behavior-in-the-datagrid-control.md)|対話する方法について説明します、<xref:System.Windows.Controls.DataGrid>キーボードとマウスを使用して制御します。|  
-|[方法: DataGrid コントロールでデータをグループ化、並べ替え、およびフィルター処理する](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|データを表示する方法について説明します、<xref:System.Windows.Controls.DataGrid>でさまざまな方法でグループ化、並べ替え、およびデータのフィルター処理します。|  
+|[方法: グループ、並べ替え、およびデータ グリッド コントロールでデータのフィルター選択](how-to-group-sort-and-filter-data-in-the-datagrid-control.md)|データを表示する方法について説明します、<xref:System.Windows.Controls.DataGrid>でさまざまな方法でグループ化、並べ替え、およびデータのフィルター処理します。|  
 |[DataGrid コントロールのサイズ変更方法](sizing-options-in-the-datagrid-control.md)|絶対と自動サイズ設定を制御する方法について説明します、<xref:System.Windows.Controls.DataGrid>します。|  
   
 ## <a name="see-also"></a>関連項目

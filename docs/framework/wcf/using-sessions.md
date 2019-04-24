@@ -8,10 +8,10 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320926"
 ---
 # <a name="using-sessions"></a>セッションの使用
@@ -32,11 +32,11 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  慣れている場合、<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>クラス[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーションと機能を提供、可能性があります、その種のセッションと WCF のセッションの間の次の相違点に注意してください。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは常にサーバーによって開始されます。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、常にサーバーによって開始される。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションには、暗黙的に順序付けします。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、暗黙的に順序付けされない。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、要求間で、一般的なデータ ストレージ機構を提供します。  
+-   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、要求全体について一般的なデータ ストレージ機構を提供する。  
   
  このトピックでは、次の項目について説明します。  
   
@@ -108,14 +108,14 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
 > [!NOTE]
 >  既定の動作は、ローカルのコンストラクターとデストラクターに似ていますが、あくまで似ているだけです。 開始または終了操作は、あるいはその両方同時に、WCF サービス操作ができます。 さらに既定では、開始操作は、任意の順序で何回でも呼び出すことができます。そのため、 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> オブジェクトを操作することでサービス インスタンスの有効期間を明示的に制御しない限り、セッションが確立されインスタンスに関連付けられた後に、追加セッションは作成されません。 また、状態はセッションに関連付けられ、サービス オブジェクトには関連付けられません。  
   
- たとえば、`ICalculatorSession`前の例で使用されるコントラクトは、WCF クライアント オブジェクトの最初の呼び出しである必要があります、 `Clear` を呼び出すときにこのWCFクライアントオブジェクトとのセッションの他の操作とする前に操作が終了する必要があります`Equals`操作。 次のコード例は、この要件を強制的に適用するコントラクトを示しています。 `Clear` セッションを開始するには最初に呼び出す必要があり、セッションは終了`Equals`が呼び出されます。  
+ たとえば、`ICalculatorSession`前の例で使用されるコントラクトは、WCF クライアント オブジェクトの最初の呼び出しである必要があります、 `Clear` を呼び出すときにこのWCFクライアントオブジェクトとのセッションの他の操作とする前に操作が終了する必要があります`Equals`操作。 次のコード例は、この要件を強制的に適用するコントラクトを示しています。 セッションを開始するにはまず`Clear` を呼び出す必要があります。 `Equals` を呼び出すとセッションが終了します。  
   
  [!code-csharp[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/csharp/VS_Snippets_CFX/sca.isinitiatingisterminating/cs/service.cs#1)]
  [!code-vb[SCA.IsInitiatingIsTerminating#1](../../../samples/snippets/visualbasic/VS_Snippets_CFX/sca.isinitiatingisterminating/vb/service.vb#1)]  
   
  サービスは、クライアントとのセッションを開始しません。 WCF クライアント アプリケーションでセッション ベースのチャネルの有効期間とセッション自体の有効期間の間の直接的なリレーションシップが存在します。 そのため、クライアントは、新しいセッション ベースのチャネルを作成することによって新しいセッションを作成し、セッション ベースのチャネルを正常に閉じることによって、既存のセッションを破棄します。 クライアントは、次のいずれかを呼び出してサービス エンドポイントとのセッションを開始します。  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> 呼び出しによって返されるチャネル<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>します。  
+-   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> の呼び出しによって返されるチャネルの <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> によって生成された WCF クライアント オブジェクトで、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。  
   
@@ -123,7 +123,7 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  通常は、クライアントが次のいずれかを呼び出して、サービス エンドポイントとのセッションを終了します。  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> 呼び出しによって返されるチャネル<xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>します。  
+-   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> の呼び出しによって返されるチャネルの <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
 -   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> Svcutil.exe によって生成された WCF クライアント オブジェクトです。  
   

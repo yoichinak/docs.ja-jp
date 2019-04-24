@@ -1,106 +1,99 @@
-items:
 - name: ネットワーク設定スキーマ
   href: index.md
   items:
-  - name: <system.Net> 要素 (ネットワーク設定)
-    href: system-net-element-network-settings.md
-    items:
-    - name: <authenticationModules> 要素 (ネットワーク設定)
-      href: authenticationmodules-element-network-settings.md
+    - name: <system.Net> 要素 (ネットワーク設定)
+      href: system-net-element-network-settings.md
       items:
-      - name: authenticationModules の <add> 要素 (ネットワーク設定)
-        href: add-element-for-authenticationmodules-network-settings.md
-      - name: authenticationModules の <remove> 要素 (ネットワーク設定)
-        href: remove-element-for-authenticationmodules-network-settings.md
-      - name: authenticationModules の <clear> 要素 (ネットワーク設定)
-        href: clear-element-for-authenticationmodules-network-settings.md
-    - name: <connectionManagement> 要素 (ネットワーク設定)
-      href: connectionmanagement-element-network-settings.md
+        - name: <authenticationModules> 要素 (ネットワーク設定)
+          href: authenticationmodules-element-network-settings.md
+          items:
+            - name: authenticationModules の <add> 要素 (ネットワーク設定)
+              href: add-element-for-authenticationmodules-network-settings.md
+            - name: authenticationModules の <remove> 要素 (ネットワーク設定)
+              href: remove-element-for-authenticationmodules-network-settings.md
+            - name: authenticationModules の <clear> 要素 (ネットワーク設定)
+              href: clear-element-for-authenticationmodules-network-settings.md
+        - name: <connectionManagement> 要素 (ネットワーク設定)
+          href: connectionmanagement-element-network-settings.md
+          items:
+            - name: connectionManagement の <add> 要素 (ネットワーク設定)
+              href: add-element-for-connectionmanagement-network-settings.md
+            - name: connectionManagement の <clear> 要素 (ネットワーク設定)
+              href: clear-element-for-connectionmanagement-network-settings.md
+            - name: connectionManagement の <remove> 要素 (ネットワーク設定)
+              href: remove-element-for-connectionmanagement-network-settings.md
+        - name: <defaultProxy> 要素 (ネットワーク設定)
+          href: defaultproxy-element-network-settings.md
+          items:
+            - name: <bypasslist> 要素 (ネットワーク設定)
+              href: bypasslist-element-network-settings.md
+              items:
+                - name: bypasslist の <add> 要素 (ネットワーク設定)
+                  href: add-element-for-bypasslist-network-settings.md
+                - name: bypasslist の <clear> 要素 (ネットワーク設定)
+                  href: clear-element-for-bypasslist-network-settings.md
+                - name: bypasslist の <remove> 要素 (ネットワーク設定)
+                  href: remove-element-for-bypasslist-network-settings.md
+            - name: <module> 要素 (ネットワーク設定)
+              href: module-element-network-settings.md
+            - name: <proxy> 要素 (ネットワーク設定)
+              href: proxy-element-network-settings.md
+        - name: <mailSettings> 要素 (ネットワーク設定)
+          href: mailsettings-element-network-settings.md
+          items:
+            - name: <smtp> 要素 (ネットワーク設定)
+              href: smtp-element-network-settings.md
+              items:
+                - name: <specifiedPickupDirectory> 要素 (ネットワーク設定)
+                  href: specifiedpickupdirectory-element-network-settings.md
+                - name: <network> 要素 (ネットワーク設定)
+                  href: network-element-network-settings.md
+        - name: <requestCaching> 要素 (ネットワーク設定)
+          href: requestcaching-element-network-settings.md
+          items:
+            - name: <defaultHttpCachePolicy> 要素 (ネットワーク設定)
+              href: defaulthttpcachepolicy-element-network-settings.md
+            - name: <defaultFtpCachePolicy> 要素 (ネットワーク設定)
+              href: defaultftpcachepolicy-element-network-settings.md
+        - name: <settings> 要素 (ネットワーク設定)
+          href: settings-element-network-settings.md
+          items:
+            - name: <httpWebRequest> 要素 (ネットワーク設定)
+              href: httpwebrequest-element-network-settings.md
+            - name: <ipv6> 要素 (ネットワーク設定)
+              href: ipv6-element-network-settings.md
+            - name: <performanceCounter> 要素 (ネットワーク設定)
+              href: performancecounter-element-network-settings.md
+            - name: <servicePointManager> 要素 (ネットワーク設定)
+              href: servicepointmanager-element-network-settings.md
+            - name: <socket> 要素 (ネットワーク設定)
+              href: socket-element-network-settings.md
+            - name: <webProxyScript> 要素 (ネットワーク設定)
+              href: webproxyscript-element-network-settings.md
+            - name: <httpListener> 要素 (ネットワーク設定)
+              href: httplistener-element-network-settings.md
+        - name: <webRequestModules> 要素 (ネットワーク設定)
+          href: webrequestmodules-element-network-settings.md
+          items:
+            - name: webRequestModules の <add> 要素 (ネットワーク設定)
+              href: add-element-for-webrequestmodules-network-settings.md
+            - name: webRequestModules の <remove> 要素 (ネットワーク設定)
+              href: remove-element-for-webrequestmodules-network-settings.md
+            - name: webRequestModules の <clear> 要素 (ネットワーク設定)
+              href: clear-element-for-webrequestmodules-network-settings.md
+    - name: <Uri> 要素 (Uri 設定)
+      href: uri-element-uri-settings.md
       items:
-      - name: connectionManagement の <add> 要素 (ネットワーク設定)
-        href: add-element-for-connectionmanagement-network-settings.md
-      - name: connectionManagement の <clear> 要素 (ネットワーク設定)
-        href: clear-element-for-connectionmanagement-network-settings.md
-      - name: connectionManagement の <remove> 要素 (ネットワーク設定)
-        href: remove-element-for-connectionmanagement-network-settings.md
-    - name: <defaultProxy> 要素 (ネットワーク設定)
-      href: defaultproxy-element-network-settings.md
-      items:
-      - name: <bypasslist> 要素 (ネットワーク設定)
-        href: bypasslist-element-network-settings.md
-        items:
-        - name: bypasslist の <add> 要素 (ネットワーク設定)
-          href: add-element-for-bypasslist-network-settings.md
-        - name: bypasslist の <clear> 要素 (ネットワーク設定)
-          href: clear-element-for-bypasslist-network-settings.md
-        - name: bypasslist の <remove> 要素 (ネットワーク設定)
-          href: remove-element-for-bypasslist-network-settings.md
-      - name: <module> 要素 (ネットワーク設定)
-        href: module-element-network-settings.md
-      - name: <proxy> 要素 (ネットワーク設定)
-        href: proxy-element-network-settings.md
-    - name: <mailSettings> 要素 (ネットワーク設定)
-      href: mailsettings-element-network-settings.md
-      items:
-      - name: <smtp> 要素 (ネットワーク設定)
-        href: smtp-element-network-settings.md
-        items:
-        - name: <specifiedPickupDirectory> 要素 (ネットワーク設定)
-          href: specifiedpickupdirectory-element-network-settings.md
-        - name: <network> 要素 (ネットワーク設定)
-          href: network-element-network-settings.md
-    - name: <requestCaching> 要素 (ネットワーク設定)
-      href: requestcaching-element-network-settings.md
-      items:
-      - name: <defaultHttpCachePolicy> 要素 (ネットワーク設定)
-        href: defaulthttpcachepolicy-element-network-settings.md
-      - name: <defaultFtpCachePolicy> 要素 (ネットワーク設定)
-        href: defaultftpcachepolicy-element-network-settings.md
-    - name: <settings> 要素 (ネットワーク設定)
-      href: settings-element-network-settings.md
-      items:
-      - name: <httpWebRequest> 要素 (ネットワーク設定)
-        href: httpwebrequest-element-network-settings.md
-      - name: <ipv6> 要素 (ネットワーク設定)
-        href: ipv6-element-network-settings.md
-      - name: <performanceCounter> 要素 (ネットワーク設定)
-        href: performancecounter-element-network-settings.md
-      - name: <servicePointManager> 要素 (ネットワーク設定)
-        href: servicepointmanager-element-network-settings.md
-      - name: <socket> 要素 (ネットワーク設定)
-        href: socket-element-network-settings.md
-      - name: <webProxyScript> 要素 (ネットワーク設定)
-        href: webproxyscript-element-network-settings.md
-      - name: <httpListener> 要素 (ネットワーク設定)
-        href: httplistener-element-network-settings.md
-    - name: <webRequestModules> 要素 (ネットワーク設定)
-      href: webrequestmodules-element-network-settings.md
-      items:
-      - name: webRequestModules の <add> 要素 (ネットワーク設定)
-        href: add-element-for-webrequestmodules-network-settings.md
-      - name: webRequestModules の <remove> 要素 (ネットワーク設定)
-        href: remove-element-for-webrequestmodules-network-settings.md
-      - name: webRequestModules の <clear> 要素 (ネットワーク設定)
-        href: clear-element-for-webrequestmodules-network-settings.md
-  - name: <Uri> 要素 (Uri 設定)
-    href: uri-element-uri-settings.md
-    items:
-    - name: <idn> 要素 (Uri 設定)
-      href: idn-element-uri-settings.md
-    - name: <iriParsing> 要素 (Uri 設定)
-      href: iriparsing-element-uri-settings.md
-    - name: <schemeSettings> 要素 (Uri 設定)
-      href: schemesettings-element-uri-settings.md
-      items:
-      - name: schemeSettings の <add> 要素 (Uri 設定)
-        href: add-element-for-schemesettings-uri-settings.md
-      - name: schemeSettings の <clear> 要素 (Uri 設定)
-        href: clear-element-for-schemesettings-uri-settings.md
-      - name: schemeSettings の <remove> 要素 (Uri 設定)
-        href: remove-element-for-schemesettings-uri-settings.md
-ms.openlocfilehash: fb6762a20d1c5210e860b9720a62c200f3109ddd
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470147"
+        - name: <idn> 要素 (Uri 設定)
+          href: idn-element-uri-settings.md
+        - name: <iriParsing> 要素 (Uri 設定)
+          href: iriparsing-element-uri-settings.md
+        - name: <schemeSettings> 要素 (Uri 設定)
+          href: schemesettings-element-uri-settings.md
+          items:
+            - name: schemeSettings の <add> 要素 (Uri 設定)
+              href: add-element-for-schemesettings-uri-settings.md
+            - name: schemeSettings の <clear> 要素 (Uri 設定)
+              href: clear-element-for-schemesettings-uri-settings.md
+            - name: schemeSettings の <remove> 要素 (Uri 設定)
+              href: remove-element-for-schemesettings-uri-settings.md

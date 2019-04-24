@@ -2,12 +2,12 @@
 title: C# 8.0 の新機能 - C# ガイド
 description: C# 8.0 で使用できる新しい機能の概要を説明します。 この記事は、プレビュー 2 での最新のものです。
 ms.date: 02/12/2019
-ms.openlocfilehash: 07752d6d7784ff4aeb70900ef3bcd90cb29f7c22
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: eecc37433e4b026b7337418eac1a5e80ef48ea6e
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545560"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427280"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
@@ -58,7 +58,7 @@ public enum Rainbow
 }
 ```
 
-switch 式を含む次のメソッドを使用して、`Rainbow` の値をその RGB 値に変換できます。
+アプリケーションで `R`、`G`、および `B` コンポーネントから構成される `RGBColor` 型が定義されている場合は、switch 式を含む次のメソッドを使用して、`Rainbow` の値をその RGB 値に変換できます。
 
 ```csharp
 public static RGBColor FromRainbow(Rainbow colorBand) =>
@@ -219,7 +219,6 @@ static void WriteLinesToFile(IEnumerable<string> lines)
 ```
 
 上の例では、メソッドの右中かっこに達した時点で、ファイルは破棄されます。 そこは、`file` が宣言されているスコープの末端です。 上記のコードは、従来の [using ステートメント](../language-reference/keywords/using-statement.md)を使用する次のコードと同等です。
-
 
 ```csharp
 static void WriteLinesToFile(IEnumerable<string> lines)

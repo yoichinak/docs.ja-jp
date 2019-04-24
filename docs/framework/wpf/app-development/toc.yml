@@ -1,147 +1,140 @@
-items:
 - name: アプリケーション開発
   href: index.md
   items:
-  - name: アプリケーション管理の概要
-    href: application-management-overview.md
-    items:
-    - name: WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
-      href: wpf-application-resource-content-and-data-files.md
-    - name: WPF におけるパッケージの URI
-      href: pack-uris-in-wpf.md
-    - name: スプラッシュ スクリーンを WPF アプリケーションに追加する
-      href: how-to-add-a-splash-screen-to-a-wpf-application.md
-    - name: アプリケーション スコープのリソース ディクショナリを使用する
-      href: how-to-use-an-application-scope-resource-dictionary.md
-    - name: アプリケーション セッション全体でアプリケーション スコープのプロパティを永続化および復元する
-      href: persist-and-restore-application-scope-properties.md
-  - name: WPF のウィンドウ
-    href: windows-in-wpf-applications.md
-    items:
-    - name: WPF ウィンドウの概要
-      href: wpf-windows-overview.md
-    - name: ダイアログ ボックスの概要
-      href: dialog-boxes-overview.md
-    - name: 方法のトピック
-      href: window-management-how-to-topics.md
+    - name: アプリケーション管理の概要
+      href: application-management-overview.md
       items:
-      - name: コンテンツに合わせてウィンドウのサイズを自動的に変更する
-        href: how-to-automatically-size-a-window-to-fit-its-content.md
-      - name: アプリケーションにすべてのウィンドウを取得する
-        href: how-to-get-all-windows-in-an-application.md
-      - name: メイン アプリケーション ウィンドウを取得して設定する
-        href: how-to-get-and-set-the-main-application-window.md
-      - name: ダイアログ ボックスを開く
-        href: how-to-open-a-dialog-box.md
-      - name: メッセージ ボックスを開く
-        href: how-to-open-a-message-box.md
-      - name: ウィンドウを開く
-        href: how-to-open-a-window.md
-      - name: ダイアログ ボックスの結果を返す
-        href: how-to-return-a-dialog-box-result.md
-  - name: ナビゲーションの概要
-    href: navigation-overview.md
-    items:
-    - name: 構造化ナビゲーションの概要
-      href: structured-navigation-overview.md
-    - name: ナビゲーション トポロジの概要
-      href: navigation-topologies-overview.md
-    - name: 方法のトピック
-      href: navigation-how-to-topics.md
+        - name: WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
+          href: wpf-application-resource-content-and-data-files.md
+        - name: WPF におけるパッケージの URI
+          href: pack-uris-in-wpf.md
+        - name: スプラッシュ スクリーンを WPF アプリケーションに追加する
+          href: how-to-add-a-splash-screen-to-a-wpf-application.md
+        - name: アプリケーション スコープのリソース ディクショナリを使用する
+          href: how-to-use-an-application-scope-resource-dictionary.md
+        - name: アプリケーション セッション全体でアプリケーション スコープのプロパティを永続化および復元する
+          href: persist-and-restore-application-scope-properties.md
+    - name: WPF のウィンドウ
+      href: windows-in-wpf-applications.md
       items:
-      - name: ページ関数を呼び出す
-        href: how-to-call-a-page-function.md
-      - name: ページに移動する
-        href: how-to-navigate-to-a-page.md
-      - name: ページを更新する
-        href: how-to-refresh-a-page.md
-      - name: ページの読み込みを停止する
-        href: how-to-stop-a-page-from-loading.md
-      - name: 移動履歴を遡る
-        href: how-to-navigate-back-through-navigation-history.md
-      - name: ページ関数から戻る
-        href: how-to-return-from-a-page-function.md
-      - name: ページ関数の戻り値を取得する
-        href: how-to-get-the-return-value-of-a-page-function.md
-      - name: 移動履歴の前後への移動
-        href: how-to-navigate-forward-or-back-through-navigation-history.md
-      - name: ページがブラウザーでホストされているかを確認する
-        href: how-to-determine-if-a-page-is-browser-hosted.md
-      - name: 'mailto: を使用してページからメールを送信する'
-        href: how-to-use-mailto-to-send-mail-from-a-page.md
-      - name: ページからウィンドウのタイトルを設定する
-        href: how-to-set-the-title-of-a-window-from-a-page.md
-      - name: ページからウィンドウの幅を設定する
-        href: how-to-set-the-width-of-a-window-from-a-page.md
-      - name: ページからウィンドウの高さを設定する
-        href: how-to-set-the-height-of-a-window-from-a-page.md
-  - name: WPF アドインの概要
-    href: wpf-add-ins-overview.md
-    items:
-    - name: 方法のトピック
-      href: how-to-topics.md
+        - name: WPF ウィンドウの概要
+          href: wpf-windows-overview.md
+        - name: ダイアログ ボックスの概要
+          href: dialog-boxes-overview.md
+        - name: 方法のトピック
+          href: window-management-how-to-topics.md
+          items:
+            - name: コンテンツに合わせてウィンドウのサイズを自動的に変更する
+              href: how-to-automatically-size-a-window-to-fit-its-content.md
+            - name: アプリケーションにすべてのウィンドウを取得する
+              href: how-to-get-all-windows-in-an-application.md
+            - name: メイン アプリケーション ウィンドウを取得して設定する
+              href: how-to-get-and-set-the-main-application-window.md
+            - name: ダイアログ ボックスを開く
+              href: how-to-open-a-dialog-box.md
+            - name: メッセージ ボックスを開く
+              href: how-to-open-a-message-box.md
+            - name: ウィンドウを開く
+              href: how-to-open-a-window.md
+            - name: ダイアログ ボックスの結果を返す
+              href: how-to-return-a-dialog-box-result.md
+    - name: ナビゲーションの概要
+      href: navigation-overview.md
       items:
-      - name: UI を返すアドインを作成する
-        href: how-to-create-an-add-in-that-returns-a-ui.md
-      - name: UI であるアドインを作成する
-        href: how-to-create-an-add-in-that-is-a-ui.md
-  - name: ホスト
-    href: hosting-wpf-applications.md
-    items:
-    - name: WPF XAML ブラウザー アプリケーションの概要
-      href: wpf-xaml-browser-applications-overview.md
-    - name: WPF ホスト (PresentationHost.exe)
-      href: wpf-host-presentationhost-exe.md
-    - name: .NET アプリケーションの配置をサポートするための Firefox のアドオン
-      href: firefox-add-ons-to-support-net-application-deployment.md
-    - name: WPF のブラウザーのホスト処理をサポートするネイティブ API
-      href: native-wpf-browser-hosting-support-apis.md
+        - name: 構造化ナビゲーションの概要
+          href: structured-navigation-overview.md
+        - name: ナビゲーション トポロジの概要
+          href: navigation-topologies-overview.md
+        - name: 方法のトピック
+          href: navigation-how-to-topics.md
+          items:
+            - name: ページ関数を呼び出す
+              href: how-to-call-a-page-function.md
+            - name: ページに移動する
+              href: how-to-navigate-to-a-page.md
+            - name: ページを更新する
+              href: how-to-refresh-a-page.md
+            - name: ページの読み込みを停止する
+              href: how-to-stop-a-page-from-loading.md
+            - name: 移動履歴を遡る
+              href: how-to-navigate-back-through-navigation-history.md
+            - name: ページ関数から戻る
+              href: how-to-return-from-a-page-function.md
+            - name: ページ関数の戻り値を取得する
+              href: how-to-get-the-return-value-of-a-page-function.md
+            - name: 移動履歴の前後への移動
+              href: how-to-navigate-forward-or-back-through-navigation-history.md
+            - name: ページがブラウザーでホストされているかを確認する
+              href: how-to-determine-if-a-page-is-browser-hosted.md
+            - name: 'mailto: を使用してページからメールを送信する'
+              href: how-to-use-mailto-to-send-mail-from-a-page.md
+            - name: ページからウィンドウのタイトルを設定する
+              href: how-to-set-the-title-of-a-window-from-a-page.md
+            - name: ページからウィンドウの幅を設定する
+              href: how-to-set-the-width-of-a-window-from-a-page.md
+            - name: ページからウィンドウの高さを設定する
+              href: how-to-set-the-height-of-a-window-from-a-page.md
+    - name: WPF アドインの概要
+      href: wpf-add-ins-overview.md
       items:
-      - name: IEnumRAWINPUTDEVICE
-        href: ienumrawinputdevice.md
-        items:
-        - name: IEnumRAWINPUTDEVIC:Next
-          href: ienumrawinputdevic-next.md
-        - name: IEnumRAWINPUTDEVIC:Skip
-          href: ienumrawinputdevic-skip.md
-        - name: IEnumRAWINPUTDEVIC:Reset
-          href: ienumrawinputdevic-reset.md
-        - name: IEnumRAWINPUTDEVIC:Clone
-          href: ienumrawinputdevic-clone.md
-      - name: IWpfHostSupport
-        href: iwpfhostsupport.md
-        items:
-        - name: GetRawInputDevices
-          href: getrawinputdevices.md
-        - name: FilterInputMessage
-          href: filterinputmessage.md
-        - name: GetCustomUI
-          href: getcustomui.md
-  - name: ビルドと配置
-    href: building-and-deploying-wpf-applications.md
-    items:
-    - name: WPF アプリケーションのビルド
-      href: building-a-wpf-application-wpf.md
-    - name: WPF アプリケーションの配置
-      href: deploying-a-wpf-application-wpf.md
-    - name: 方法のトピック
-      href: build-and-deploy-how-to-topics.md
+        - name: 方法のトピック
+          href: how-to-topics.md
+          items:
+            - name: UI を返すアドインを作成する
+              href: how-to-create-an-add-in-that-returns-a-ui.md
+            - name: UI であるアドインを作成する
+              href: how-to-create-an-add-in-that-is-a-ui.md
+    - name: ホスト
+      href: hosting-wpf-applications.md
       items:
-      - name: WPF アプリケーションを配置するように IIS 5.0 および IIS 6.0 を構成する
-        href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
-      - name: Visual Studio を構成して Web サービスを呼び出す XAML ブラウザー アプリケーションをデバッグする
-        href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
-      - name: インストールされている WPF のバージョンを確認する
-        href: how-to-determine-the-installed-version-of-wpf.md
-      - name: .NET Framework 3.0 がインストールされているかどうかを確認する
-        href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
-      - name: .NET Framework 3.5 がインストールされているかどうかを確認する
-        href: how-to-detect-whether-the-net-framework-3-5-is-installed.md
-      - name: Firefox に対応した WPF プラグインがインストールされているかどうかを確認する
-        href: how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md
-ms.openlocfilehash: 40a6b0dce93aae1300614800fe482e3ce8133e2f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470394"
+        - name: WPF XAML ブラウザー アプリケーションの概要
+          href: wpf-xaml-browser-applications-overview.md
+        - name: WPF ホスト (PresentationHost.exe)
+          href: wpf-host-presentationhost-exe.md
+        - name: .NET アプリケーションの配置をサポートするための Firefox のアドオン
+          href: firefox-add-ons-to-support-net-application-deployment.md
+        - name: WPF のブラウザーのホスト処理をサポートするネイティブ API
+          href: native-wpf-browser-hosting-support-apis.md
+          items:
+            - name: IEnumRAWINPUTDEVICE
+              href: ienumrawinputdevice.md
+              items:
+                - name: 'IEnumRAWINPUTDEVIC:Next'
+                  href: ienumrawinputdevic-next.md
+                - name: 'IEnumRAWINPUTDEVIC:Skip'
+                  href: ienumrawinputdevic-skip.md
+                - name: 'IEnumRAWINPUTDEVIC:Reset'
+                  href: ienumrawinputdevic-reset.md
+                - name: 'IEnumRAWINPUTDEVIC:Clone'
+                  href: ienumrawinputdevic-clone.md
+            - name: IWpfHostSupport
+              href: iwpfhostsupport.md
+              items:
+                - name: GetRawInputDevices
+                  href: getrawinputdevices.md
+                - name: FilterInputMessage
+                  href: filterinputmessage.md
+                - name: GetCustomUI
+                  href: getcustomui.md
+    - name: ビルドと配置
+      href: building-and-deploying-wpf-applications.md
+      items:
+        - name: WPF アプリケーションのビルド
+          href: building-a-wpf-application-wpf.md
+        - name: WPF アプリケーションの配置
+          href: deploying-a-wpf-application-wpf.md
+        - name: 方法のトピック
+          href: build-and-deploy-how-to-topics.md
+          items:
+            - name: WPF アプリケーションを配置するように IIS 5.0 および IIS 6.0 を構成する
+              href: how-to-configure-iis-5-0-and-iis-6-0-to-deploy-wpf-applications.md
+            - name: Visual Studio を構成して Web サービスを呼び出す XAML ブラウザー アプリケーションをデバッグする
+              href: configure-vs-to-debug-a-xaml-browser-to-call-a-web-service.md
+            - name: インストールされている WPF のバージョンを確認する
+              href: how-to-determine-the-installed-version-of-wpf.md
+            - name: .NET Framework 3.0 がインストールされているかどうかを確認する
+              href: how-to-detect-whether-the-net-framework-3-0-is-installed.md
+            - name: .NET Framework 3.5 がインストールされているかどうかを確認する
+              href: how-to-detect-whether-the-net-framework-3-5-is-installed.md
+            - name: Firefox に対応した WPF プラグインがインストールされているかどうかを確認する
+              href: how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed.md

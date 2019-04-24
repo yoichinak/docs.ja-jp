@@ -15,12 +15,12 @@ helpviewer_keywords:
 - writing to files [Visual Basic], walkthroughs
 - I/O [Visual Basic], reading text from files
 ms.assetid: cae77565-9f78-4e46-8e42-eb2f9f8e1ffd
-ms.openlocfilehash: 9410d166a3f91770cb0c64b9971dc58ad9cd07cb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 4d0aac533759f8cc20ac4f19d7f0e49fef17bf56
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58843696"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59314686"
 ---
 # <a name="walkthrough-manipulating-files-and-directories-in-visual-basic"></a>チュートリアル: Visual Basic によるファイルとディレクトリの操作
 このチュートリアルでは、Visual Basic でのファイル I/O の基礎について概説します。 具体的には、ディレクトリ内のテキスト ファイルをリストして調査する小さなアプリケーションを作成する方法について説明します。 このアプリケーションは、選択された各テキスト ファイルについて、ファイルの属性とコンテンツの最初の行を取得します。 ログ ファイルに情報を書き込むオプションもあります。  
@@ -31,17 +31,17 @@ ms.locfileid: "58843696"
   
 ### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
-1.  **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
+1. **[ファイル]** メニューの **[新しいプロジェクト]** をクリックします。  
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-2.  **[インストールされたテンプレート]** ペインで、**[Visual Basic]** を展開し、**[Windows]** をクリックします。 中央の **[テンプレート]** ペインで、**[Windows フォーム アプリケーション]** をクリックします。  
+2. **[インストールされたテンプレート]** ペインで、**[Visual Basic]** を展開し、**[Windows]** をクリックします。 中央の **[テンプレート]** ペインで、**[Windows フォーム アプリケーション]** をクリックします。  
   
-3.  **[名前]** ボックスに「`FileExplorer`」と入力してプロジェクト名を設定し、**[OK]** をクリックします。  
+3. **[名前]** ボックスに「`FileExplorer`」と入力してプロジェクト名を設定し、**[OK]** をクリックします。  
   
      Visual Studio の**ソリューション エクスプローラー**にプロジェクトが追加され、Windows フォーム デザイナーが開きます。  
   
-4.  次の表にあるコントロールをフォームに追加し、それらのプロパティに対応する値を設定します。  
+4. 次の表にあるコントロールをフォームに追加し、それらのプロパティに対応する値を設定します。  
   
     |コントロール|プロパティ|値|  
     |-------------|--------------|-----------|  
@@ -53,15 +53,15 @@ ms.locfileid: "58843696"
   
 ### <a name="to-select-a-folder-and-list-files-in-a-folder"></a>フォルダーを選択し、フォルダー内のファイルをリストするには  
   
-1.  フォーム上のコントロールをダブルクリックして、`browseButton` の `Click` イベント ハンドラーを作成します。 コード エディターが開きます。  
+1. フォーム上のコントロールをダブルクリックして、`browseButton` の `Click` イベント ハンドラーを作成します。 コード エディターが開きます。  
   
-2.  `Click` イベント ハンドラーに次のコードを追加します。  
+2. `Click` イベント ハンドラーに次のコードを追加します。  
   
      [!code-vb[VbVbcnMyFileSystem#103](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#103)]  
   
      `FolderBrowserDialog1.ShowDialog` 呼び出しにより、**[フォルダーの参照]** ダイアログ ボックスが開きます。 ユーザーが **[OK]** をクリックすると、次の手順で追加する `ListFiles` メソッドに <xref:System.Windows.Forms.FolderBrowserDialog.SelectedPath%2A> プロパティが引数として渡されます。  
   
-3.  次の `ListFiles` メソッドを追加します。  
+3. 次の `ListFiles` メソッドを追加します。  
   
      [!code-vb[VbVbcnMyFileSystem#104](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#104)]  
   
@@ -71,17 +71,17 @@ ms.locfileid: "58843696"
   
      その後、`GetFiles` メソッドによって返された文字列が、**ListBox** に追加されます。  
   
-4.  アプリケーションを実行します。 **[参照]** ボタンをクリックします。 **[フォルダーの参照]** ダイアログ ボックスで、.txt ファイルが含まれているフォルダーを参照し、そのフォルダーを選択して **[OK]** をクリックします。  
+4. アプリケーションを実行します。 **[参照]** ボタンをクリックします。 **[フォルダーの参照]** ダイアログ ボックスで、.txt ファイルが含まれているフォルダーを参照し、そのフォルダーを選択して **[OK]** をクリックします。  
   
      `ListBox` に、選択したフォルダー内のファイルが追加されます。  
   
-5.  アプリケーションの実行を停止します。  
+5. アプリケーションの実行を停止します。  
   
 ### <a name="to-obtain-attributes-of-a-file-and-content-from-a-text-file"></a>テキスト ファイルからファイルの属性とコンテンツを取得するには  
   
-1.  フォーム上のコントロールをダブルクリックして、`examineButton` の `Click` イベント ハンドラーを作成します。  
+1. フォーム上のコントロールをダブルクリックして、`examineButton` の `Click` イベント ハンドラーを作成します。  
   
-2.  `Click` イベント ハンドラーに次のコードを追加します。  
+2. `Click` イベント ハンドラーに次のコードを追加します。  
   
      [!code-vb[VbVbcnMyFileSystem#105](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#105)]  
   
@@ -89,7 +89,7 @@ ms.locfileid: "58843696"
   
      ファイル パスは引数として `GetTextForOutput` メソッドに送られます (このメソッドは次の手順で追加します)。 このメソッドは、ファイル情報を含んだ文字列を返します。 ファイル情報は、**MessageBox** に表示されます。  
   
-3.  次の `GetTextForOutput` メソッドを追加します。  
+3. 次の `GetTextForOutput` メソッドを追加します。  
   
      [!code-vb[VbVbcnMyFileSystem#107](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#107)]  
   
@@ -97,15 +97,15 @@ ms.locfileid: "58843696"
   
      <xref:Microsoft.VisualBasic.FileIO.FileSystem.OpenTextFileReader%2A> メソッドは、ファイルの内容を <xref:System.IO.StreamReader> に読み込みます。 コンテンツの最初の行が `StreamReader` から取得され、`StringBuilder` に追加されます。  
   
-4.  アプリケーションを実行します。 **[参照]** をクリックし、.txt ファイルが含まれているフォルダーを参照します。 **[OK]** をクリックします。  
+4. アプリケーションを実行します。 **[参照]** をクリックし、.txt ファイルが含まれているフォルダーを参照します。 **[OK]** をクリックします。  
   
      `ListBox` でファイルを選択し、**[調査]** をクリックします。 `MessageBox` にファイル情報が表示されます。  
   
-5.  アプリケーションの実行を停止します。  
+5. アプリケーションの実行を停止します。  
   
 ### <a name="to-add-a-log-entry"></a>ログ エントリを追加するには  
   
-1.  `examineButton_Click` イベント ハンドラーの末尾に、次のコードを追加します。  
+1. `examineButton_Click` イベント ハンドラーの末尾に、次のコードを追加します。  
   
      [!code-vb[VbVbcnMyFileSystem#106](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#106)]  
   
@@ -113,41 +113,41 @@ ms.locfileid: "58843696"
   
      `append` 引数を `True` に設定した <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllText%2A> メソッドを使用して、ログ エントリを作成します。  
   
-2.  アプリケーションを実行します。 テキスト ファイルを参照し、`ListBox` でファイルを選択して、**[結果の保存]** チェック ボックスをオンにした後、**[調査]** をクリックします。 ログ エントリが `log.txt` ファイルに書き込まれていることを確認します。  
+2. アプリケーションを実行します。 テキスト ファイルを参照し、`ListBox` でファイルを選択して、**[結果の保存]** チェック ボックスをオンにした後、**[調査]** をクリックします。 ログ エントリが `log.txt` ファイルに書き込まれていることを確認します。  
   
-3.  アプリケーションの実行を停止します。  
+3. アプリケーションの実行を停止します。  
   
 ### <a name="to-use-the-current-directory"></a>現在のディレクトリを使用するには  
   
-1.  フォームをダブルクリックして、`Form1_Load` のイベント ハンドラーを作成します。  
+1. フォームをダブルクリックして、`Form1_Load` のイベント ハンドラーを作成します。  
   
-2.  イベント ハンドラーに次のコードを追加します。  
+2. イベント ハンドラーに次のコードを追加します。  
   
      [!code-vb[VbVbcnMyFileSystem#102](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#102)]  
   
      このコードは、フォルダー ブラウザーの既定のディレクトリを現在のディレクトリに設定します。  
   
-3.  アプリケーションを実行します。 **[参照]** を最初にクリックすると、**[フォルダーの参照]** ダイアログ ボックスが開き、現在のディレクトリが表示されます。  
+3. アプリケーションを実行します。 **[参照]** を最初にクリックすると、**[フォルダーの参照]** ダイアログ ボックスが開き、現在のディレクトリが表示されます。  
   
-4.  アプリケーションの実行を停止します。  
+4. アプリケーションの実行を停止します。  
   
 ### <a name="to-selectively-enable-controls"></a>コントロールを選択的に有効化するには  
   
-1.  次の `SetEnabled` メソッドを追加します。  
+1. 次の `SetEnabled` メソッドを追加します。  
   
      [!code-vb[VbVbcnMyFileSystem#108](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/class2.vb#108)]  
   
      `SetEnabled` メソッドは、`ListBox` で項目が選択されているかどうかに応じて、コントロールを有効または無効にします。  
   
-2.  フォーム上の `ListBox` コントロールをダブルクリックして、`filesListBox` の `SelectedIndexChanged` イベント ハンドラーを作成します。  
+2. フォーム上の `ListBox` コントロールをダブルクリックして、`filesListBox` の `SelectedIndexChanged` イベント ハンドラーを作成します。  
   
-3.  新しい `filesListBox_SelectedIndexChanged` イベント ハンドラーで、`SetEnabled` に対する呼び出しを追加します。  
+3. 新しい `filesListBox_SelectedIndexChanged` イベント ハンドラーで、`SetEnabled` に対する呼び出しを追加します。  
   
-4.  `browseButton_Click` イベント ハンドラーの末尾に、`SetEnabled` に対する呼び出しを追加します。  
+4. `browseButton_Click` イベント ハンドラーの末尾に、`SetEnabled` に対する呼び出しを追加します。  
   
-5.  `Form1_Load` イベント ハンドラーの末尾に、`SetEnabled` に対する呼び出しを追加します。  
+5. `Form1_Load` イベント ハンドラーの末尾に、`SetEnabled` に対する呼び出しを追加します。  
   
-6.  アプリケーションを実行します。 `ListBox` で項目が選択されていない場合は、**[結果の保存**] チェック ボックスと **[調査]** ボタンが無効になります。  
+6. アプリケーションを実行します。 `ListBox` で項目が選択されていない場合は、**[結果の保存**] チェック ボックスと **[調査]** ボタンが無効になります。  
   
 ## <a name="full-example-using-mycomputerfilesystem"></a>My.Computer.FileSystem を使用した完全な例  
  完全な例を次に示します。  

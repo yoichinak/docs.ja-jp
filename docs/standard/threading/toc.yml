@@ -1,87 +1,80 @@
-items:
 - name: スレッド
   href: index.md
   items:
-  - name: マネージド スレッド処理の基本
-    href: managed-threading-basics.md
-    items:
-    - name: スレッドおよびスレッド処理
-      href: threads-and-threading.md
-    - name: マネージド スレッドの例外
-      href: exceptions-in-managed-threads.md
-    - name: マルチスレッド処理のためのデータの同期
-      href: synchronizing-data-for-multithreading.md
-    - name: フォアグラウンド スレッドとバックグラウンド スレッド
-      href: foreground-and-background-threads.md
-    - name: Windows でのマネージド スレッド処理とアンマネージド スレッド処理
-      href: managed-and-unmanaged-threading-in-windows.md
-    - name: Thread.Suspend、ガベージ コレクション、およびセーフ ポイント
-      href: thread-suspend-garbage-collection-and-safe-points.md
-    - name: スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット
-      href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
-  - name: スレッドの使用とスレッド処理
-    href: using-threads-and-threading.md
-    items:
-    - name: スレッドを作成し、開始時にデータを渡す
-      href: creating-threads-and-passing-data-at-start-time.md
-    - name: スレッドの一時中断および中断
-      href: pausing-and-resuming-threads.md
-    - name: スレッドの破棄
-      href: destroying-threads.md
-    - name: スレッドのスケジューリング
-      href: scheduling-threads.md
-    - name: マネージド スレッドのキャンセル
-      href: cancellation-in-managed-threads.md
+    - name: マネージド スレッド処理の基本
+      href: managed-threading-basics.md
       items:
-      - name: スレッドの協調的な取り消し
-        href: canceling-threads-cooperatively.md
-      - name: '方法: ポーリングによりキャンセル要求を待機する'
-        href: how-to-listen-for-cancellation-requests-by-polling.md
-      - name: '方法: キャンセル要求のコールバックを登録する'
-        href: how-to-register-callbacks-for-cancellation-requests.md
-      - name: '方法: 待機ハンドルがあるキャンセル要求を待機する'
-        href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
-      - name: '方法: 複数のキャンセル要求を待機する'
-        href: how-to-listen-for-multiple-cancellation-requests.md
-  - name: マネージド スレッド処理の実施
-    href: managed-threading-best-practices.md
-  - name: スレッド処理オブジェクトと機能
-    href: threading-objects-and-features.md
-    items:
-    - name: マネージド スレッド プール
-      href: the-managed-thread-pool.md
-    - name: タイマー
-      href: timers.md
-    - name: 同期プリミティブの概要
-      href: overview-of-synchronization-primitives.md
-    - name: EventWaitHandle
-      href: eventwaithandle.md
-    - name: CountdownEvent
-      href: countdownevent.md
-    - name: ミューテックス
-      href: mutexes.md
-    - name: Semaphore と SemaphoreSlim
-      href: semaphore-and-semaphoreslim.md
-    - name: バリア
-      href: barrier.md
+        - name: スレッドおよびスレッド処理
+          href: threads-and-threading.md
+        - name: マネージド スレッドの例外
+          href: exceptions-in-managed-threads.md
+        - name: マルチスレッド処理のためのデータの同期
+          href: synchronizing-data-for-multithreading.md
+        - name: フォアグラウンド スレッドとバックグラウンド スレッド
+          href: foreground-and-background-threads.md
+        - name: Windows でのマネージド スレッド処理とアンマネージド スレッド処理
+          href: managed-and-unmanaged-threading-in-windows.md
+        - name: Thread.Suspend、ガベージ コレクション、およびセーフ ポイント
+          href: thread-suspend-garbage-collection-and-safe-points.md
+        - name: 'スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット'
+          href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
+    - name: スレッドの使用とスレッド処理
+      href: using-threads-and-threading.md
       items:
-      - name: '方法: バリアを使用して同時実行操作を同期する'
-        href: how-to-synchronize-concurrent-operations-with-a-barrier.md
-    - name: SpinLock
-      href: spinlock.md
+        - name: スレッドを作成し、開始時にデータを渡す
+          href: creating-threads-and-passing-data-at-start-time.md
+        - name: スレッドの一時中断および中断
+          href: pausing-and-resuming-threads.md
+        - name: スレッドの破棄
+          href: destroying-threads.md
+        - name: スレッドのスケジューリング
+          href: scheduling-threads.md
+        - name: マネージド スレッドのキャンセル
+          href: cancellation-in-managed-threads.md
+          items:
+            - name: スレッドの協調的な取り消し
+              href: canceling-threads-cooperatively.md
+            - name: '方法: ポーリングによりキャンセル要求を待機する'
+              href: how-to-listen-for-cancellation-requests-by-polling.md
+            - name: '方法: キャンセル要求のコールバックを登録する'
+              href: how-to-register-callbacks-for-cancellation-requests.md
+            - name: '方法: 待機ハンドルがあるキャンセル要求を待機する'
+              href: how-to-listen-for-cancellation-requests-that-have-wait-handles.md
+            - name: '方法: 複数のキャンセル要求を待機する'
+              href: how-to-listen-for-multiple-cancellation-requests.md
+    - name: マネージド スレッド処理の実施
+      href: managed-threading-best-practices.md
+    - name: スレッド処理オブジェクトと機能
+      href: threading-objects-and-features.md
       items:
-      - name: '方法: 下位レベルの同期に SpinLock を使用する'
-        href: how-to-use-spinlock-for-low-level-synchronization.md
-      - name: '方法: SpinLock のスレッド追跡モードを有効にする'
-        href: how-to-enable-thread-tracking-mode-in-spinlock.md
-    - name: SpinWait
-      href: spinwait.md
-      items:
-      - name: '方法: SpinWait を使用して 2 フェーズ待機操作を実装する'
-        href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md
-ms.openlocfilehash: c015db2bc66897ca487e29e36d93e7d84a0897f1
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469818"
+        - name: マネージド スレッド プール
+          href: the-managed-thread-pool.md
+        - name: タイマー
+          href: timers.md
+        - name: 同期プリミティブの概要
+          href: overview-of-synchronization-primitives.md
+        - name: EventWaitHandle
+          href: eventwaithandle.md
+        - name: CountdownEvent
+          href: countdownevent.md
+        - name: ミューテックス
+          href: mutexes.md
+        - name: Semaphore と SemaphoreSlim
+          href: semaphore-and-semaphoreslim.md
+        - name: バリア
+          href: barrier.md
+          items:
+            - name: '方法: バリアを使用して同時実行操作を同期する'
+              href: how-to-synchronize-concurrent-operations-with-a-barrier.md
+        - name: SpinLock
+          href: spinlock.md
+          items:
+            - name: '方法: 下位レベルの同期に SpinLock を使用する'
+              href: how-to-use-spinlock-for-low-level-synchronization.md
+            - name: '方法: SpinLock のスレッド追跡モードを有効にする'
+              href: how-to-enable-thread-tracking-mode-in-spinlock.md
+        - name: SpinWait
+          href: spinwait.md
+          items:
+            - name: '方法: SpinWait を使用して 2 フェーズ待機操作を実装する'
+              href: how-to-use-spinwait-to-implement-a-two-phase-wait-operation.md

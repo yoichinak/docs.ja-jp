@@ -3,10 +3,10 @@ title: サポートされていない機能
 ms.date: 03/30/2017
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
 ms.openlocfilehash: 18a1a8f33a9360b4299648bcd329f4c5f2e7de88
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097874"
 ---
 # <a name="unsupported-functionality"></a>サポートされていない機能

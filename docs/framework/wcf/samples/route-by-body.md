@@ -3,10 +3,10 @@ title: 本文別のルーティング
 ms.date: 03/30/2017
 ms.assetid: 07a6fc3b-c360-42e0-b663-3d0f22cf4502
 ms.openlocfilehash: b8a3f7785d7d59d8ad85d6dddde7fd6a04a12d63
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59320718"
 ---
 # <a name="route-by-body"></a>本文別のルーティング
@@ -35,7 +35,7 @@ ms.locfileid: "59320718"
     }  
 ```  
   
- コントラクトが指定されている場合、サービスはカスタムのディスパッチ動作 `DispatchByBodyBehavior` に対して、複数の操作間でメッセージをディスパッチするように要求します。 このディスパッチ動作を初期化します、`DispatchByBodyElementOperationSelector`とそれぞれのラッパー要素の QName をキーと操作名のテーブルのカスタム操作セレクター。 `DispatchByBodyElementOperationSelector` 本文の最初の子の開始タグで検索し、前述のテーブルを使用して、操作を選択します。  
+ コントラクトが指定されている場合、サービスはカスタムのディスパッチ動作 `DispatchByBodyBehavior` に対して、複数の操作間でメッセージをディスパッチするように要求します。 このディスパッチ動作を初期化します、`DispatchByBodyElementOperationSelector`とそれぞれのラッパー要素の QName をキーと操作名のテーブルのカスタム操作セレクター。 `DispatchByBodyElementOperationSelector` は本文の最初の子の開始タグを参照し、前述のテーブルを使用して操作を選択します。  
   
  クライアントを使用して、サービスによってエクスポートされた WSDL から自動生成されたプロキシを使用して[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。  
   

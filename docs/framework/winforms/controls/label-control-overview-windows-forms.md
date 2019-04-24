@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Label control [Windows Forms], about Label control
 ms.assetid: dcad7f44-11b7-4c55-b0c0-d984ade43d7d
 ms.openlocfilehash: cc38b0f3ded9e3c2a5a4146eb6bb474921d1e19f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59210092"
 ---
 # <a name="label-control-overview-windows-forms"></a>Label コントロールの概要 (Windows フォーム)
@@ -26,5 +26,5 @@ Windows フォーム<xref:System.Windows.Forms.Label>テキストまたはユー
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.Label>
-- [方法: Windows フォーム Label コントロールのサイズを内容に合わせて変更する](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
-- [方法: Windows フォームの Label コントロールでアクセス キーを作成する](how-to-create-access-keys-with-windows-forms-label-controls.md)
+- [方法: 内容に合わせて Windows フォーム Label コントロールをサイズします。](how-to-size-a-windows-forms-label-control-to-fit-its-contents.md)
+- [方法: Windows フォームの Label コントロールでのアクセス キーを作成します。](how-to-create-access-keys-with-windows-forms-label-controls.md)

@@ -1,4 +1,3 @@
-items:
 - name: ADO.NET Entity Framework
   href: index.md
 - name: Entity Framework の概要
@@ -6,21 +5,21 @@ items:
 - name: モデリングとマッピング
   href: modeling-and-mapping.md
   items:
-  - name: EDM ジェネレーター (EdmGen.exe)
-    href: edm-generator-edmgen-exe.md
-    items:
-    - name: '方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する'
-      href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
-    - name: '方法: EdmGen.exe を使用してオブジェクトレイヤー コードを生成する'
-      href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
-    - name: '方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを検証する'
-      href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
-  - name: '方法: 接続文字列を定義する'
-    href: how-to-define-the-connection-string.md
-  - name: '方法: モデル ファイルとマッピング ファイルを組み込みリソースにする'
-    href: how-to-make-model-and-mapping-files-embedded-resources.md
-  - name: データ定義言語の操作
-    href: working-with-data-definition-language.md
+    - name: EDM ジェネレーター (EdmGen.exe)
+      href: edm-generator-edmgen-exe.md
+      items:
+        - name: '方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する'
+          href: how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md
+        - name: '方法: EdmGen.exe を使用してオブジェクトレイヤー コードを生成する'
+          href: how-to-use-edmgen-exe-to-generate-object-layer-code.md
+        - name: '方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを検証する'
+          href: how-to-use-edmgen-exe-to-validate-model-and-mapping-files.md
+    - name: '方法: 接続文字列を定義する'
+      href: how-to-define-the-connection-string.md
+    - name: '方法: モデル ファイルとマッピング ファイルを組み込みリソースにする'
+      href: how-to-make-model-and-mapping-files-embedded-resources.md
+    - name: データ定義言語の操作
+      href: working-with-data-definition-language.md
 - name: 概念モデルに対するクエリ
   href: querying-a-conceptual-model.md
 - name: オブジェクトの使用
@@ -28,88 +27,88 @@ items:
 - name: データ プロバイダーの操作
   href: working-with-data-providers.md
   items:
-  - name: 接続文字列
-    href: connection-strings.md
-  - name: Entity Framework データ プロバイダー
-    href: data-providers.md
-    items:
-    - name: Entity Framework 用の EntityClient プロバイダー
-      href: entityclient-provider-for-the-entity-framework.md
+    - name: 接続文字列
+      href: connection-strings.md
+    - name: Entity Framework データ プロバイダー
+      href: data-providers.md
       items:
-      - name: '方法: EntityConnection の接続文字列を作成する'
-        href: how-to-build-an-entityconnection-connection-string.md
-      - name: '方法: PrimitiveType 結果を返すクエリを実行する'
-        href: how-to-execute-a-query-that-returns-primitivetype-results.md
-      - name: '方法: StructuralType 結果を返すクエリを実行する'
-        href: how-to-execute-a-query-that-returns-structuraltype-results.md
-      - name: '方法: RefType 結果を返すクエリを実行する'
-        href: how-to-execute-a-query-that-returns-reftype-results.md
-      - name: '方法: 複合型を返すクエリを実行する'
-        href: how-to-execute-a-query-that-returns-complex-types.md
-      - name: '方法: 入れ子になったコレクションを返すクエリを実行する'
-        href: how-to-execute-a-query-that-returns-nested-collections.md
-      - name: '方法: EntityCommand を使用してパラメーター化 Entity SQL クエリを実行する'
-        href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
-      - name: '方法: EntityCommand を使用してパラメーター化されたストアド プロシージャを実行する'
-        href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
-      - name: '方法: ポリモーフィック クエリを実行する'
-        href: how-to-execute-a-polymorphic-query.md
-      - name: '方法: Navigate 演算子でリレーションシップをナビゲートする'
-        href: how-to-navigate-relationships-with-the-navigate-operator.md
-    - name: Entity Framework 用 SqlClient
-      href: sqlclient-for-the-entity-framework.md
+        - name: Entity Framework 用の EntityClient プロバイダー
+          href: entityclient-provider-for-the-entity-framework.md
+          items:
+            - name: '方法: EntityConnection の接続文字列を作成する'
+              href: how-to-build-an-entityconnection-connection-string.md
+            - name: '方法: PrimitiveType 結果を返すクエリを実行する'
+              href: how-to-execute-a-query-that-returns-primitivetype-results.md
+            - name: '方法: StructuralType 結果を返すクエリを実行する'
+              href: how-to-execute-a-query-that-returns-structuraltype-results.md
+            - name: '方法: RefType 結果を返すクエリを実行する'
+              href: how-to-execute-a-query-that-returns-reftype-results.md
+            - name: '方法: 複合型を返すクエリを実行する'
+              href: how-to-execute-a-query-that-returns-complex-types.md
+            - name: '方法: 入れ子になったコレクションを返すクエリを実行する'
+              href: how-to-execute-a-query-that-returns-nested-collections.md
+            - name: '方法: EntityCommand を使用してパラメーター化 Entity SQL クエリを実行する'
+              href: how-to-execute-a-parameterized-entity-sql-query-using-entitycommand.md
+            - name: '方法: EntityCommand を使用してパラメーター化されたストアド プロシージャを実行する'
+              href: how-to-execute-a-parameterized-stored-procedure-using-entitycommand.md
+            - name: '方法: ポリモーフィック クエリを実行する'
+              href: how-to-execute-a-polymorphic-query.md
+            - name: '方法: Navigate 演算子でリレーションシップをナビゲートする'
+              href: how-to-navigate-relationships-with-the-navigate-operator.md
+        - name: Entity Framework 用 SqlClient
+          href: sqlclient-for-the-entity-framework.md
+          items:
+            - name: Entity Framework 用 SqlClient 関数
+              href: sqlclient-for-ef-functions.md
+              items:
+                - name: 概念モデル正規関数と SQL Server 関数とのマッピング
+                  href: conceptual-model-canonical-to-sql-server-functions-mapping.md
+                - name: 集計関数
+                  href: aggregate-functions-sqlclient-for-entity-framework.md
+                - name: 日付と時刻関数
+                  href: date-and-time-functions.md
+                - name: 数学関数
+                  href: mathematical-functions.md
+                - name: 文字列関数
+                  href: string-functions.md
+                - name: システム関数
+                  href: system-functions.md
+            - name: Entity Framework 用 SqlClient の型
+              href: sqlclient-for-ef-types.md
+            - name: Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
+              href: known-issues-in-sqlclient-for-entity-framework.md
+    - name: Entity Framework データ プロバイダーの作成
+      href: writing-an-ef-data-provider.md
       items:
-      - name: Entity Framework 用 SqlClient 関数
-        href: sqlclient-for-ef-functions.md
-        items:
-        - name: 概念モデル正規関数と SQL Server 関数とのマッピング
-          href: conceptual-model-canonical-to-sql-server-functions-mapping.md
-        - name: 集計関数
-          href: aggregate-functions-sqlclient-for-entity-framework.md
-        - name: 日付と時刻関数
-          href: date-and-time-functions.md
-        - name: 数学関数
-          href: mathematical-functions.md
-        - name: 文字列関数
-          href: string-functions.md
-        - name: システム関数
-          href: system-functions.md
-      - name: Entity Framework 用 SqlClient の型
-        href: sqlclient-for-ef-types.md
-      - name: Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
-        href: known-issues-in-sqlclient-for-entity-framework.md
-  - name: Entity Framework データ プロバイダーの作成
-    href: writing-an-ef-data-provider.md
-    items:
-    - name: SQL 生成
-      href: sql-generation.md
-      items:
-      - name: コマンド ツリーの構造
-        href: the-shape-of-the-command-trees.md
-      - name: 'コマンド ツリーからの SQL の生成: ベスト プラクティス'
-        href: generating-sql-from-command-trees-best-practices.md
-      - name: サンプル プロバイダーでの SQL 生成
-        href: sql-generation-in-the-sample-provider.md
-        items:
-        - name: アーキテクチャとデザイン
-          href: architecture-and-design.md
-        - name: 'チュートリアル: SQL 生成'
-          href: walkthrough-sql-generation.md
-    - name: 変更 SQL 生成
-      href: modification-sql-generation.md
-    - name: プロバイダー マニフェストの仕様
-      href: provider-manifest-specification.md
+        - name: SQL 生成
+          href: sql-generation.md
+          items:
+            - name: コマンド ツリーの構造
+              href: the-shape-of-the-command-trees.md
+            - name: 'コマンド ツリーからの SQL の生成: ベスト プラクティス'
+              href: generating-sql-from-command-trees-best-practices.md
+            - name: サンプル プロバイダーでの SQL 生成
+              href: sql-generation-in-the-sample-provider.md
+              items:
+                - name: アーキテクチャとデザイン
+                  href: architecture-and-design.md
+                - name: 'チュートリアル: SQL 生成'
+                  href: walkthrough-sql-generation.md
+        - name: 変更 SQL 生成
+          href: modification-sql-generation.md
+        - name: プロバイダー マニフェストの仕様
+          href: provider-manifest-specification.md
 - name: 開発および配置に関する注意事項
   href: development-and-deployment-considerations.md
   items:
-  - name: セキュリティの考慮事項
-    href: security-considerations.md
-  - name: パフォーマンスに関する考慮事項
-    href: performance-considerations.md
-  - name: 移行に関する注意事項
-    href: migration-considerations.md
-  - name: 配置に関する注意事項
-    href: deployment-considerations.md
+    - name: セキュリティの考慮事項
+      href: security-considerations.md
+    - name: パフォーマンスに関する考慮事項
+      href: performance-considerations.md
+    - name: 移行に関する注意事項
+      href: migration-considerations.md
+    - name: 配置に関する注意事項
+      href: deployment-considerations.md
 - name: Entity Framework のリソース
   href: resources.md
 - name: Entity Framework の用語
@@ -118,9 +117,3 @@ items:
   href: getting-started.md
 - name: 言語リファレンス
   href: language-reference/index.md
-ms.openlocfilehash: 7b6de341e548ca64690cf9a17281fcbb30f160cf
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470731"

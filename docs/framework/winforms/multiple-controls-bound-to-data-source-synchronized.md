@@ -9,10 +9,10 @@ helpviewer_keywords:
 - controls [Windows Forms], synchronizing with data source
 ms.assetid: c2f0ecc6-11e6-4c2c-a1ca-0759630c451e
 ms.openlocfilehash: 8f7e59720420a845fa195b8c0fb078a8699a9bc3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170340"
 ---
 # <a name="how-to-ensure-multiple-controls-bound-to-the-same-data-source-remain-synchronized"></a>方法: 複数のコントロールを 1 つのデータ ソースにバインドして同期状態を保つ
@@ -42,7 +42,7 @@ Windows フォームでのデータ バインディングを使用する場合�
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: BindingSource コンポーネントを使用してフォーム間でバインド データを共有する](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
-- [Windows フォーム データ バインディングの変更通知](change-notification-in-windows-forms-data-binding.md)
+- [方法: BindingSource コンポーネントを使用してフォーム間でバインド データを共有](./controls/how-to-share-bound-data-across-forms-using-the-bindingsource-component.md)
+- [Windows フォーム データ バインドの変更通知](change-notification-in-windows-forms-data-binding.md)
 - [データ連結に関連するインターフェイス](interfaces-related-to-data-binding.md)
 - [Windows フォームでのデータ バインディング](windows-forms-data-binding.md)

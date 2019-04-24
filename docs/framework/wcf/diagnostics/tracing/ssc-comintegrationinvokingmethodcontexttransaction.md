@@ -3,10 +3,10 @@ title: System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTra
 ms.date: 03/30/2017
 ms.assetid: 1d2690ae-0afb-4cb1-ab62-a1a0ceba8521
 ms.openlocfilehash: 0abf271db4e88ccd56a8bdc5f3b7502aef7ab946
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59174539"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinvokingmethodcontexttransaction"></a>System.ServiceModel.ComIntegration.ComIntegrationInvokingMethodContextTransaction

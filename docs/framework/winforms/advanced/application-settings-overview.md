@@ -9,10 +9,10 @@ helpviewer_keywords:
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
 ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203627"
 ---
 # <a name="application-settings-overview"></a>アプリケーション設定の概要
@@ -53,9 +53,9 @@ ms.locfileid: "59203627"
 - <xref:System.Configuration.SettingsProvider>
 - <xref:System.Configuration.LocalFileSettingsProvider>
 - <xref:System.Configuration.IPersistComponentSettings>
-- [方法: アプリケーション設定を検証する](how-to-validate-application-settings.md)
+- [方法: アプリケーション設定を検証します。](how-to-validate-application-settings.md)
 - [アプリケーションの設定の管理 (.NET)](/visualstudio/ide/managing-application-settings-dotnet)
-- [方法: 実行時に設定を C# で読み取る](how-to-read-settings-at-run-time-with-csharp.md)
+- [方法: 実行時の設定の読み取りC#](how-to-read-settings-at-run-time-with-csharp.md)
 - [アプリケーション設定とユーザー設定の使用](using-application-settings-and-user-settings.md)
 - [アプリケーション設定アーキテクチャ](application-settings-architecture.md)
-- [カスタム コントロールのアプリケーション設定](application-settings-for-custom-controls.md)
+- [Application Settings for Custom Controls](application-settings-for-custom-controls.md)

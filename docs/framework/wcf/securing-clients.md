@@ -5,10 +5,10 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331807"
 ---
 # <a name="securing-clients"></a>クライアントのセキュリティ保護
@@ -80,13 +80,13 @@ Windows Communication Foundation (WCF) サービスは、クライアントの�
   
 |ClientCredential プロパティ|説明|メモ|  
 |-------------------------------|-----------------|-----------|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|返します、 <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential>|クライアントがサービスに対して自身を認証するために提供する X.509 証明書を表します。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|返します、 <xref:System.ServiceModel.Security.HttpDigestClientCredential>|HTTP ダイジェスト資格情報を表します。 この資格情報は、ユーザー名とパスワードのハッシュです。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|返します、 <xref:System.ServiceModel.Security.IssuedTokenClientCredential>|フェデレーション シナリオで通常使用される、セキュリティ トークン サービスによって発行されるカスタム セキュリティ トークンを表します。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|返します、 <xref:System.ServiceModel.Security.PeerCredential>|Windows ドメインのピア メッシュに参加するためのピア資格情報を表します。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|返します、 <xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential>|帯域外ネゴシエーションでサービスによって提供される X.509 証明書を表します。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|返します、 <xref:System.ServiceModel.Security.UserNamePasswordClientCredential>|ユーザー名とパスワードのペアを表します。|  
-|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|返します、 <xref:System.ServiceModel.Security.WindowsClientCredential>|Windows クライアントの資格情報 (Kerberos 資格情報) を表します。 このクラスのプロパティは読み取り専用です。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ClientCertificate%2A>|<xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential> を返します|クライアントがサービスに対して自身を認証するために提供する X.509 証明書を表します。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.HttpDigest%2A>|<xref:System.ServiceModel.Security.HttpDigestClientCredential> を返します|HTTP ダイジェスト資格情報を表します。 この資格情報は、ユーザー名とパスワードのハッシュです。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.IssuedToken%2A>|<xref:System.ServiceModel.Security.IssuedTokenClientCredential> を返します|フェデレーション シナリオで通常使用される、セキュリティ トークン サービスによって発行されるカスタム セキュリティ トークンを表します。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Peer%2A>|<xref:System.ServiceModel.Security.PeerCredential> を返します|Windows ドメインのピア メッシュに参加するためのピア資格情報を表します。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.ServiceCertificate%2A>|<xref:System.ServiceModel.Security.X509CertificateRecipientClientCredential> を返します|帯域外ネゴシエーションでサービスによって提供される X.509 証明書を表します。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.UserName%2A>|<xref:System.ServiceModel.Security.UserNamePasswordClientCredential> を返します|ユーザー名とパスワードのペアを表します。|  
+|<xref:System.ServiceModel.Description.ClientCredentials.Windows%2A>|<xref:System.ServiceModel.Security.WindowsClientCredential> を返します|Windows クライアントの資格情報 (Kerberos 資格情報) を表します。 このクラスのプロパティは読み取り専用です。|  
   
 #### <a name="setting-a-clientcredentials-value-in-configuration"></a>設定、 \<clientCredentials > 構成内の値  
  子要素として、エンドポイントの動作を使用して、資格情報の値が指定されて、 [ \<clientCredentials >](../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)要素。 使用される要素は、クライアントの資格情報の種類によって異なります。 たとえば、次の例は、X.509 証明書を使用して設定を構成を示しています。、<[\<clientCertificate >](../../../docs/framework/configure-apps/file-schema/wcf/clientcertificate-of-clientcredentials-element.md)します。  
@@ -129,7 +129,7 @@ Windows Communication Foundation (WCF) サービスは、クライアントの�
  クライアント資格情報を設定する方法についての詳細については、次を参照してください。[方法。クライアント資格情報の値を指定](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
   
 > [!NOTE]
->  `ClientCredentialType` 無視されます`SecurityMode`に設定されている`"TransportWithMessageCredential",`次のサンプル構成で示すようにします。  
+>  次の構成例に示すように、`ClientCredentialType` が `SecurityMode` に設定されている場合、`"TransportWithMessageCredential",` は無視されます。  
   
 ```xml  
 <wsHttpBinding>  
@@ -155,6 +155,6 @@ Windows Communication Foundation (WCF) サービスは、クライアントの�
 - [構成エディター ツール (SvcConfigEditor.exe)](../../../docs/framework/wcf/configuration-editor-tool-svcconfigeditor-exe.md)
 - [サービスのセキュリティ保護](../../../docs/framework/wcf/securing-services.md)
 - [WCF クライアントを使用したサービスへのアクセス](../../../docs/framework/wcf/accessing-services-using-a-wcf-client.md)
-- [方法: クライアントの資格情報の値を指定する](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
+- [方法: クライアント資格情報の値を指定します。](../../../docs/framework/wcf/how-to-specify-client-credential-values.md)
 - [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)
-- [方法: クライアントの資格情報の種類を指定する](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)
+- [方法: クライアント資格情報の種類を指定します。](../../../docs/framework/wcf/how-to-specify-the-client-credential-type.md)

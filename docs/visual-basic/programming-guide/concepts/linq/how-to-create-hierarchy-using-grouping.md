@@ -3,10 +3,10 @@ title: '方法: グループ化 (Visual Basic) を使用して階層を作成し
 ms.date: 07/20/2015
 ms.assetid: 4eb3ca6b-1aed-43de-b8b9-41c769c993f8
 ms.openlocfilehash: dea189d9d689cfba661fd84cb52f8e6658935a30
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58822896"
 ---
 # <a name="how-to-create-hierarchy-using-grouping-visual-basic"></a>方法: グループ化 (Visual Basic) を使用して階層を作成します。

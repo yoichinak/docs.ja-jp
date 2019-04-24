@@ -18,10 +18,10 @@ helpviewer_keywords:
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
 ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078227"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ でのペン、直線、および四角形
@@ -72,6 +72,6 @@ ms.locfileid: "59078227"
 - <xref:System.Drawing.Graphics?displayProperty=nameWithType>
 - <xref:System.Drawing.Pen?displayProperty=nameWithType>
 - <xref:System.Drawing.Rectangle?displayProperty=nameWithType>
-- [方法: ペンを作成する](how-to-create-a-pen.md)
-- [方法: Windows フォームに直線を描画する](how-to-draw-a-line-on-a-windows-form.md)
-- [方法: 形状のアウトラインを描画する](how-to-draw-an-outlined-shape.md)
+- [方法: ペンを作成します。](how-to-create-a-pen.md)
+- [方法: Windows フォームに直線を描画します。](how-to-draw-a-line-on-a-windows-form.md)
+- [方法: 形状のアウトラインを描画します。](how-to-draw-an-outlined-shape.md)

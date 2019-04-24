@@ -8,10 +8,10 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
 ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296239"
 ---
 # <a name="extension-methods-visual-basic"></a>拡張メソッド (Visual Basic)
@@ -29,7 +29,7 @@ ms.locfileid: "59296239"
   
  [!code-vb[VbVbalrExtensionMethods#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/StringExtensions.vb#1)]  
   
- 拡張メソッド定義に拡張属性 `<Extension()>` を設定している点に注目してください。 メソッドが定義されているモジュールに拡張属性を設定するかどうかは任意ですが、それぞれの拡張メソッドにはこの設定が必要です。 <xref:System.Runtime.CompilerServices> 拡張属性にアクセスするためにインポートする必要があります。  
+ 拡張メソッド定義に拡張属性 `<Extension()>` を設定している点に注目してください。 メソッドが定義されているモジュールに拡張属性を設定するかどうかは任意ですが、それぞれの拡張メソッドにはこの設定が必要です。 拡張属性にアクセスするためには、<xref:System.Runtime.CompilerServices> をインポートする必要があります。  
   
  拡張メソッドはモジュール内でのみ宣言できます。 通常、拡張メソッドを定義するモジュールと拡張メソッドを呼び出すモジュールは、別々になります。 必要に応じて、拡張メソッドが含まれているモジュールをインポートすることによって、そのモジュールをスコープの中に入れます。 `Print` が含まれているモジュールをスコープの中に入れたら、引数を使用しない通常のインスタンス メソッド (`ToUpper` など) の場合と同じ要領でそのメソッドを呼び出すことができます。  
   
@@ -39,9 +39,9 @@ ms.locfileid: "59296239"
   
  [!code-vb[VbVbalrExtensionMethods#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrExtensionMethods/VB/Class2.vb#3)]  
   
- 文字列の引数を送信することによって、メソッドが呼び出さ`punc`: `example.PrintAndPunctuate(".")`  
+ このメソッドを呼び出すときには、`punc` の引数として `example.PrintAndPunctuate(".")` を渡します。  
   
- `Print` と `PrintAndPunctuate` を定義して呼び出す例を次に示します。 <xref:System.Runtime.CompilerServices> 拡張属性へのアクセスを有効にするには、定義モジュールでインポートされます。  
+ `Print` と `PrintAndPunctuate` を定義して呼び出す例を次に示します。 拡張属性にアクセスできるようにするために、<xref:System.Runtime.CompilerServices> が定義モジュールにインポートされます。  
   
 ### <a name="code"></a>コード  
   

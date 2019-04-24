@@ -3,11 +3,11 @@ title: ピア名の公開と解決
 ms.date: 03/30/2017
 ms.assetid: f0370e08-9fa6-4ee5-ab78-9a58a20a7da2
 ms.openlocfilehash: 330117e103f7729ecf6f18ff551f65f1ba0f35da
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309096"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769490"
 ---
 # <a name="peer-name-publication-and-resolution"></a>ピア名の公開と解決
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - '?: operator [C#]'
 - conditional operator (?:) [C#]
 ms.assetid: e83a17f1-7500-48ba-8bee-2fbc4c847af4
-ms.openlocfilehash: 210b7cabb658c6f068d9ab34c83050ad6267e426
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 82ada5e4d1f56ea93bbd7f41b04cda9f98d678c9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704909"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672395"
 ---
 # <a name="-operator-c-reference"></a>?:演算子 (C# リファレンス)
 
@@ -24,12 +24,12 @@ ms.locfileid: "57704909"
 この条件演算子の構文は次のとおりです。
 
 ```csharp
-condition ? consequence : alternative
+condition ? consequent : alternative
 ```
 
-`condition` 式は `true` または `false` と評価する必要があります。 `condition` が `true` と評価された場合は、`consequence` 式が評価され、その結果が演算の結果になります。 `condition` が `false` と評価された場合は、`alternative` 式が評価され、その結果が演算の結果になります。 `consequence` または `alternative` のみが評価されます。
+`condition` 式は `true` または `false` と評価する必要があります。 `condition` が `true` と評価された場合は、`consequent` 式が評価され、その結果が演算の結果になります。 `condition` が `false` と評価された場合は、`alternative` 式が評価され、その結果が演算の結果になります。 `consequent` または `alternative` のみが評価されます。
 
-`consequence` の型と `alternative` の型は同じ型であるか、一方の型から他方の型への暗黙の型変換が存在している必要があります。
+`consequent` の型と `alternative` の型は同じ型であるか、一方の型から他方の型への暗黙の型変換が存在している必要があります。
 
 条件演算子は右結合です。つまり、次の形式の式があるとします。
 
@@ -43,6 +43,12 @@ a ? b : c ? d : e
 a ? b : (c ? d : e)
 ```
 
+この演算子の評価方法を簡単に思い出すには、次のように質問します。 
+```
+is this condition true ? yes : no
+```
+演算子の ? の部分は 前の文章の疑問符に対応し、結果はこの質問に対する論理的な答えに対応します。
+
 条件演算子の使用例を次に示します。
 
 [!code-csharp[non ref conditional](~/samples/snippets/csharp/language-reference/operators/ConditionalExamples.cs#ConditionalValue)]
@@ -54,12 +60,12 @@ C# 7.2 以降、ref 条件式を使用して、2 つの式のいずれかの結�
 ref 条件式の構文は次のとおりです。
 
 ```csharp
-condition ? ref consequence : ref alternative
+condition ? ref consequent : ref alternative
 ```
 
-元の条件演算子と同じように、ref 条件式は、2 つの式 (`consequence` または `alternative`) のいずれかのみを評価します。
+元の条件演算子と同じように、ref 条件式は、2 つの式 (`consequent` または `alternative`) のいずれかのみを評価します。
 
-ref 条件式の場合、`consequence` と`alternative` の型は同じである必要があります。
+ref 条件式の場合、`consequent` と`alternative` の型は同じである必要があります。
 
 ref 条件演算子の使用例を次に示します。
 

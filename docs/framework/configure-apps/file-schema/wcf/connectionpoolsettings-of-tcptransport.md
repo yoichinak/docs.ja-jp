@@ -1,12 +1,12 @@
 ---
-title: <connectionPoolSettings> (行中)  <tcpTransport>
+title: <connectionPoolSettings> の <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
 ms.openlocfilehash: 93363c5ff1753ff02956404da7697780078c9839
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129975"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings > の\<tcpTransport >
@@ -37,7 +37,7 @@ TCP トランスポートの追加の接続プール設定を指定します。
 |---------------|-----------------|  
 |`groupName`|送信チャネルに使用される接続プールの名前を定義する文字列です。 ストリーム配信モードでは、接続が共有されません。したがって、接続プールは無効です。 既定は、"default" 文字列です。 この値を変更して、特定のクライアントの接続を、個別のグループに分離できます。|  
 |`idleTimeout`|接続が切断されるまでの最大アイドル時間を指定する正の <xref:System.TimeSpan>。 既定値は 00:02:00 です。|  
-|`leaseTimeout`|アクティブな接続が終了されるまでの時間を指定する <xref:System.TimeSpan>。 既定値は 00:05:00 です。<br /><br /> 接続は、接続キャッシュに返された後、アクティブに転送中ではないときに終了します。 TCP トランスポートによって使用される接続キャッシュで設定されているキャッシュの上限に達するまで、各エンドポイントの必要に応じて新しい接続を作成します。 `maxOutboundConnectionsPerEndpoint.`|  
+|`leaseTimeout`|アクティブな接続が終了されるまでの時間を指定する <xref:System.TimeSpan>。 既定値は 00:05:00 です。<br /><br /> 接続は、接続キャッシュに返された後、アクティブに転送中ではないときに終了します。 TCP トランスポートによって使用される接続キャッシュは、各エンドポイントの必要に応じて、`maxOutboundConnectionsPerEndpoint.` で設定されているキャッシュ制限内で新しい接続を作成します。|  
 |`maxOutboundConnectionsPerEndpoint`|そのサービスによって開始されるリモート エンドポイントへの接続の最大数を指定する正の整数。 制限を超えた接続は、制限内に空きができるまでキューに置かれます。 `idleTimeout` は、例外がスローされるまでに接続をキューに入れたままにする期間を制限します。 既定値は 10 です。<br /><br /> この属性は、クライアントから特定のサービス エンドポイントへの接続で、同時にアクティブできる接続数を制限します。 この値よりも多くのアクティブなクライアント接続がある場合、サービスは、クライアントに応答しないように見える可能性があります。 この場合は、この値を調整して、予想される特定のエンドポイントへの同時クライアント接続の最大数より大きくする必要があります。|  
   
 ### <a name="child-elements"></a>子要素  

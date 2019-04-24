@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], reusing resources
 ms.assetid: 91580b89-a0a8-4889-aecb-fddf8e63175f
 ms.openlocfilehash: 0176ebffe82e60671ea66481b7d659004dc31477
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344924"
 ---
 # <a name="xaml-resources"></a>XAML リソース
@@ -128,7 +128,7 @@ ms.locfileid: "59344924"
   
 -   設定されているプロパティのプロパティである必要があります、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>します。 プロパティをバックアップする必要がある、<xref:System.Windows.DependencyProperty>します。  
   
--   内の値が参照されて、<xref:System.Windows.Style><xref:System.Windows.Setter>します。  
+-   内の値が参照されて、 <xref:System.Windows.Style><xref:System.Windows.Setter>します。  
   
 -   設定されているプロパティのプロパティである必要があります、<xref:System.Windows.Freezable>いずれかの値として提供されている、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>プロパティ、または<xref:System.Windows.Setter>値。  
   
@@ -144,7 +144,7 @@ ms.locfileid: "59344924"
   
  [!code-xaml[FEResourceSH_snip#ImplicitStyle](~/samples/snippets/csharp/VS_Snippets_Wpf/FEResourceSH_snip/CS/page2.xaml#implicitstyle)]  
   
- あるスタイル実際には、キーが: 暗黙のキー`typeof(`<xref:System.Windows.Controls.Button>`)`します。 マークアップでは、指定することができます、<xref:System.Windows.Style.TargetType%2A>型として直接指定して (または、必要に応じて使用することができます[{X:type...}](../../xaml-services/x-type-markup-extension.md) 返す、<xref:System.Type>します。  
+ あるスタイル実際には、キーが: 暗黙のキー `typeof(` <xref:System.Windows.Controls.Button>`)`します。 マークアップでは、指定することができます、<xref:System.Windows.Style.TargetType%2A>型として直接指定して (または、必要に応じて使用することができます[{X:type...}](../../xaml-services/x-type-markup-extension.md) 返す、<xref:System.Type>します。  
   
  使用される既定のテーマ スタイルのメカニズムを通じて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のランタイム スタイルとしてスタイルが適用されることを<xref:System.Windows.Controls.Button> ページで、場合でも、<xref:System.Windows.Controls.Button>自体を指定しません、<xref:System.Windows.FrameworkElement.Style%2A>プロパティまたは特定のリソーススタイルへの参照します。 ページで定義されているスタイルはテーマ ディクショナリのスタイルと同じキーを使用して、テーマ ディクショナリ スタイルより参照シーケンスの前にあります。 指定することだけでした`<Button>Hello</Button>` ページで、およびスタイルで定義されている任意の場所で<xref:System.Windows.Style.TargetType%2A>の`Button`そのボタンに適用されます。 同じ型の値を持つスタイルを明示的に引き続きキーことができる場合は、 <xref:System.Windows.Style.TargetType%2A>、わかりやすくするため、マークアップでは省略可能です。  
   
@@ -161,4 +161,4 @@ ms.locfileid: "59344924"
 - [アプリケーション管理の概要](../app-development/application-management-overview.md)
 - [x:Type マークアップ拡張機能](../../xaml-services/x-type-markup-extension.md)
 - [StaticResource のマークアップ拡張機能](staticresource-markup-extension.md)
-- [DynamicResource のマークアップ拡張機能](dynamicresource-markup-extension.md)
+- [DynamicResource マークアップ拡張](dynamicresource-markup-extension.md)

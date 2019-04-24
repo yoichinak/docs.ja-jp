@@ -3,10 +3,10 @@ title: メタデータを使用する
 ms.date: 03/30/2017
 ms.assetid: 05cf53a1-b92d-4d8e-a87e-79f6e51c4a8d
 ms.openlocfilehash: 78005f68512e62c667b59c3cec5841a37723b973
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082712"
 ---
 # <a name="using-metadata"></a>メタデータを使用する
@@ -16,7 +16,7 @@ ms.locfileid: "59082712"
  [生成されたクライアント コードの理解](../../../../docs/framework/wcf/feature-details/understanding-generated-client-code.md)  
  Svcutil.exe ツールによって生成されるさまざまなクラスとインターフェイスについて説明します。  
   
- [方法: メタデータの取得および準拠サービスの実装をする](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
+ [方法: メタデータの取得および準拠サービスの実装](../../../../docs/framework/wcf/feature-details/how-to-retrieve-metadata-and-implement-a-compliant-service.md)  
  Svcutil.exe を使用してメタデータを取得し、準拠サービスを実装する方法を示します。  
   
  [サービス メタデータからの WCF クライアントの生成](../../../../docs/framework/wcf/feature-details/generating-a-wcf-client-from-service-metadata.md)  

@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 16154ff6b2fcf6c537126b6ced03c45f6746b57a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649402"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59346107"
 ---
 # <a name="character-encoding-in-net"></a>.NET での文字エンコード
 文字は、さまざまな方法で表現できる抽象エンティティです。 文字エンコーディングとは、サポートされている文字セットの各文字を、その文字を表す値と組み合わせる体系です。 たとえばモールス符号は、ローマ字の各文字を、電信線での送信に適したドットとダッシュのパターンと組み合わせる文字エンコーディングです。 コンピューターの文字エンコーディングは、サポートされている文字セットの各文字を、その文字を表す数値と組み合わせます。 文字エンコーディングには、次の 2 つの異なるコンポーネントがあります。  
@@ -215,11 +215,11 @@ ms.locfileid: "54649402"
   
  さらに、次の手順に従って、最適フォールバック、置換フォールバック、または例外フォールバックを使用するカスタム ソリューションを実装できます。  
   
-1.  エンコード操作の場合は <xref:System.Text.EncoderFallback> 、デコード操作の場合は <xref:System.Text.DecoderFallback> の派生クラスを作成します。  
+1. エンコード操作の場合は <xref:System.Text.EncoderFallback> 、デコード操作の場合は <xref:System.Text.DecoderFallback> の派生クラスを作成します。  
   
-2.  エンコード操作の場合は <xref:System.Text.EncoderFallbackBuffer> 、デコード操作の場合は <xref:System.Text.DecoderFallbackBuffer> の派生クラスを作成します。  
+2. エンコード操作の場合は <xref:System.Text.EncoderFallbackBuffer> 、デコード操作の場合は <xref:System.Text.DecoderFallbackBuffer> の派生クラスを作成します。  
   
-3.  例外フォールバックにおいて、あらかじめ定義されている <xref:System.Text.EncoderFallbackException> クラスと <xref:System.Text.DecoderFallbackException> クラスが目的に合わない場合は、 <xref:System.Exception> や <xref:System.ArgumentException>などの例外オブジェクトから派生クラスを作成します。  
+3. 例外フォールバックにおいて、あらかじめ定義されている <xref:System.Text.EncoderFallbackException> クラスと <xref:System.Text.DecoderFallbackException> クラスが目的に合わない場合は、 <xref:System.Exception> や <xref:System.ArgumentException>などの例外オブジェクトから派生クラスを作成します。  
   
 ### <a name="deriving-from-encoderfallback-or-decoderfallback"></a>EncoderFallback または DecoderFallback からの派生  
  カスタム フォールバック ソリューションを実装するには、エンコード操作の場合は <xref:System.Text.EncoderFallback> 、デコード操作の場合は <xref:System.Text.DecoderFallback> を継承するクラスを作成する必要があります。 これらのクラスのインスタンスは <xref:System.Text.Encoding.GetEncoding%28System.String%2CSystem.Text.EncoderFallback%2CSystem.Text.DecoderFallback%29?displayProperty=nameWithType> メソッドに渡され、エンコーディング クラスとフォールバックの実装の仲介役として機能します。  

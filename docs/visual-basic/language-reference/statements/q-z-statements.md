@@ -3,10 +3,10 @@ title: ステートメント Q ~ Z (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 32a9e547-c1b7-40f2-8118-7eef1d19649e
 ms.openlocfilehash: 20d9adf92aacd1e2624fe0c3fb5a2888801c7f04
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58842006"
 ---
 # <a name="q-z-statements"></a>ステートメント Q ～ Z

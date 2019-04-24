@@ -3,10 +3,10 @@ title: XML ツリー (Visual Basic) の作成
 ms.date: 07/20/2015
 ms.assetid: e86ba12b-17de-4579-81bb-66322b84cfbe
 ms.openlocfilehash: f22dcb111b3c6da01fa60b3ea918b91cb89031b3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819191"
 ---
 # <a name="creating-xml-trees-visual-basic"></a>XML ツリー (Visual Basic) の作成

@@ -15,10 +15,10 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
 ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825535"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean 式 (Visual Basic)
@@ -31,14 +31,14 @@ ms.locfileid: "58825535"
   
  [!code-vb[VbVbalrOperators#88](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#88)]  
   
- 詳細については、[値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)と[ステートメント](../../../../visual-basic/language-reference/statements/index.md)を参照してください。  
+ 詳細については、次を参照してください。[値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)と[ステートメント](../../../../visual-basic/language-reference/statements/index.md)します。  
   
 ## <a name="comparison-operators"></a>比較演算子  
  比較演算子`=`、 `<`、 `>`、 `<>`、 `<=`、および`>=`ブール式を右側にある式を演算子の左側にある式を比較することによって生成演算子と、結果としての評価の`True`または`False`します。 次に例を示します。  
   
  `42 < 81`  
   
- 上記の例ではブール式の評価が 42 81 未満なので`True`します。 このような式の詳細については、[値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)を参照してください。  
+ 上記の例ではブール式の評価が 42 81 未満なので`True`します。 このような式の詳細については、次を参照してください。[値の比較](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/value-comparisons.md)します。  
   
 ### <a name="comparison-operators-combined-with-logical-operators"></a>比較演算子が論理演算子と組み合わせる  
  比較式より複雑なブール式を生成するために論理演算子を使用して結合できます。 次の例では、論理演算子と組み合わせて比較演算子の使用を示します。  
@@ -64,7 +64,7 @@ ms.locfileid: "58825535"
  上記の例では、 `testFunction()` 、左の式を評価する場合でも`False`します。  
   
 ## <a name="parenthetical-expressions"></a>かっこで囲まれた式  
- ブール式の評価の順序を制御するのにかっこを使用することができます。 かっこで囲まれた式が最初に評価されます。 複数のレベルの入れ子では、優先順位が最も深く入れ子になった式に付与されます。 かっこ内では、評価は演算子の優先順位の規則に従って処理されます。 詳細については、[Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)を参照してください。  
+ ブール式の評価の順序を制御するのにかっこを使用することができます。 かっこで囲まれた式が最初に評価されます。 複数のレベルの入れ子では、優先順位が最も深く入れ子になった式に付与されます。 かっこ内では、評価は演算子の優先順位の規則に従って処理されます。 詳細については、次を参照してください。 [Visual Basic における演算子の優先順位](../../../../visual-basic/language-reference/operators/operator-precedence.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

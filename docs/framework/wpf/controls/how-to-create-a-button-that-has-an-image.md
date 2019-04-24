@@ -8,10 +8,10 @@ helpviewer_keywords:
 - Button controls [WPF], creating
 ms.assetid: 607a193c-4098-4dd8-8dc0-51256cec2020
 ms.openlocfilehash: 5be928ac75ad727feabcde07ac0c6dc76ed130e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59120723"
 ---
 # <a name="how-to-create-a-button-that-has-an-image"></a>方法: イメージを持つ Button を作成する

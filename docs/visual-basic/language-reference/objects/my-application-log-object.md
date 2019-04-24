@@ -5,10 +5,10 @@ helpviewer_keywords:
 - My.Application.Log object
 ms.assetid: 296147f9-1109-4a55-9b5e-047f1ab9466c
 ms.openlocfilehash: e4c78a12d6ba66ea88573e6ef2e5b4cc04c1121a
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890785"
 ---
 # <a name="myapplicationlog-object"></a>My.Application.Log オブジェクト
@@ -23,7 +23,7 @@ ms.locfileid: "58890785"
 >  また、.NET Framework 内のクラスを使用すると、ご使用のアプリケーションの情報をログに記録できます。 詳細については、「 [Tracing and Instrumenting Applications](../../../framework/debug-trace-profile/tracing-and-instrumenting-applications.md)」を参照してください。  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間: ** <xref:Microsoft.VisualBasic.Logging>  
+ **名前空間:** <xref:Microsoft.VisualBasic.Logging>  
   
  **クラス:** <xref:Microsoft.VisualBasic.Logging.Log>  
   

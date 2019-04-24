@@ -1,21 +1,14 @@
-items:
 - name: コンパイラおよび言語プロバイダー設定のスキーマ
   href: index.md
   items:
-  - name: <system.codedom> 要素
-    href: system-codedom-element.md
-    items:
-    - name: <compilers> 要素
-      href: compilers-element.md
+    - name: <system.codedom> 要素
+      href: system-codedom-element.md
       items:
-      - name: <compiler> 要素
-        href: compiler-element.md
-        items:
-        - name: <providerOption> 要素
-          href: provideroption-element.md
-ms.openlocfilehash: 9d49c036cf0bb5279ff014c962c31a8d0ae04ff2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471029"
+        - name: <compilers> 要素
+          href: compilers-element.md
+          items:
+            - name: <compiler> 要素
+              href: compiler-element.md
+              items:
+                - name: <providerOption> 要素
+                  href: provideroption-element.md

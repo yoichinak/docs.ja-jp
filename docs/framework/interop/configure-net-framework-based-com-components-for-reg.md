@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b66265a58dcbb6f795e1d207e0bb6f75252161e
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093542"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59336578"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する
 .NET Framework ベースのコンポーネントの登録を必要としないアクティベーションは、COM コンポーネントの場合よりも少しだけ複雑です。 セットアップには 2 つのマニフェストが必要です。  
@@ -28,9 +28,9 @@ ms.locfileid: "56093542"
   
 ### <a name="to-create-an-application-manifest"></a>アプリケーション マニフェストを作成するには  
   
-1.  XML エディターを使用して、1 つ以上のマネージド コンポーネントと相互運用する COM アプリケーションによって所有されるアプリケーション マニフェストを作成または編集します。  
+1. XML エディターを使用して、1 つ以上のマネージド コンポーネントと相互運用する COM アプリケーションによって所有されるアプリケーション マニフェストを作成または編集します。  
   
-2.  ファイルの先頭に次の標準ヘッダーを挿入します。  
+2. ファイルの先頭に次の標準ヘッダーを挿入します。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -39,7 +39,7 @@ ms.locfileid: "56093542"
   
      マニフェストの要素とその属性については、「[Application Manifests](/windows/desktop/SbsCs/application-manifests)」(アプリケーション マニフェスト) をご覧ください。  
   
-3.  マニフェストの所有者を指定します。 次の例では、`myComApp` バージョン 1 がマニフェスト ファイルを所有しています。  
+3. マニフェストの所有者を指定します。 次の例では、`myComApp` バージョン 1 がマニフェスト ファイルを所有しています。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -51,8 +51,7 @@ ms.locfileid: "56093542"
       />  
     ```  
   
-4.  依存アセンブリを指定します。 
-  `myComApp` が `myManagedComp` に依存する例を次に示します。  
+4. 依存アセンブリを指定します。 `myComApp` が `myManagedComp` に依存する例を次に示します。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -76,22 +75,22 @@ ms.locfileid: "56093542"
     </assembly>  
     ```  
   
-5.  マニフェスト ファイルに名前を付けて保存します。 アプリケーション マニフェストの名前は、アセンブリ実行可能ファイルの名前に拡張子 .manifest が付いたものです。 たとえば、myComApp.exe のアプリケーション マニフェスト ファイル名は myComApp.exe.manifest です。  
+5. マニフェスト ファイルに名前を付けて保存します。 アプリケーション マニフェストの名前は、アセンブリ実行可能ファイルの名前に拡張子 .manifest が付いたものです。 たとえば、myComApp.exe のアプリケーション マニフェスト ファイル名は myComApp.exe.manifest です。  
   
  アプリケーション マニフェストは、COM アプリケーションと同じディレクトリにインストールできます。 また、アプリケーションの .exe ファイルにリソースとして追加することもできます。 詳しくは、「[About Side-by-Side Assemblies](/windows/desktop/SbsCs/about-side-by-side-assemblies-)」(side-by-side アセンブリについて) をご覧ください。  
   
 #### <a name="to-create-a-component-manifest"></a>コンポーネント マニフェストを作成するには  
   
-1.  XML エディターを使用して、マネージド アセンブリを記述するコンポーネント マニフェストを作成します。  
+1. XML エディターを使用して、マネージド アセンブリを記述するコンポーネント マニフェストを作成します。  
   
-2.  ファイルの先頭に次の標準ヘッダーを挿入します。  
+2. ファイルの先頭に次の標準ヘッダーを挿入します。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
     <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">  
     ```  
   
-3.  ファイルの所有者を指定します。 アプリケーション マニフェスト ファイル内の `<assemblyIdentity>` 要素の `<dependentAssembly>` 要素は、コンポーネント マニフェスト内の要素と一致している必要があります。 次の例では、`myManagedComp` バージョン 1.2.3.4 がマニフェスト ファイルを所有しています。  
+3. ファイルの所有者を指定します。 アプリケーション マニフェスト ファイル内の `<assemblyIdentity>` 要素の `<dependentAssembly>` 要素は、コンポーネント マニフェスト内の要素と一致している必要があります。 次の例では、`myManagedComp` バージョン 1.2.3.4 がマニフェスト ファイルを所有しています。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -104,7 +103,7 @@ ms.locfileid: "56093542"
            />  
     ```  
   
-4.  アセンブリ内の各クラスを指定します。 マネージド アセンブリ内の各クラスを一意に識別するには `<clrClass>` 要素を使用します。 この要素は、`<assembly>` 要素のサブ要素であり、次の表に示す属性を持っています。  
+4. アセンブリ内の各クラスを指定します。 マネージド アセンブリ内の各クラスを一意に識別するには `<clrClass>` 要素を使用します。 この要素は、`<assembly>` 要素のサブ要素であり、次の表に示す属性を持っています。  
   
     |属性|説明|必須|  
     |---------------|-----------------|--------------|  
@@ -118,8 +117,7 @@ ms.locfileid: "56093542"
   
      属性タグはすべて大文字と小文字が区別されます。 OLE/COM オブジェクト ビューアー (Oleview.exe) で、エクスポートされたアセンブリのタイプ ライブラリを表示することによって、CLSID、ProgID、スレッド モデル、およびランタイムのバージョンを取得できます。  
   
-     
-  `testClass1` および `testClass2` という 2 つのクラスを識別するコンポーネント マニフェストを次に示します。  
+     `testClass1` および `testClass2` という 2 つのクラスを識別するコンポーネント マニフェストを次に示します。  
   
     ```xml  
     <?xml version="1.0" encoding="UTF-8" standalone="yes"?>  
@@ -148,25 +146,25 @@ ms.locfileid: "56093542"
     </assembly>  
     ```  
   
-5.  マニフェスト ファイルに名前を付けて保存します。 コンポーネント マニフェストの名前は、アセンブリ ライブラリの名前に拡張子 .manifest が付いたものです。 たとえば、myManagedComp.dll の場合は、myManagedComp.manifest になります。  
+5. マニフェスト ファイルに名前を付けて保存します。 コンポーネント マニフェストの名前は、アセンブリ ライブラリの名前に拡張子 .manifest が付いたものです。 たとえば、myManagedComp.dll の場合は、myManagedComp.manifest になります。  
   
  コンポーネント マニフェストはリソースとしてアセンブリに埋め込む必要があります。  
   
 #### <a name="to-embed-a-component-manifest-in-a-managed-assembly"></a>コンポーネント マニフェストをマネージド アセンブリに埋め込むには  
   
-1.  次のステートメントを含むリソース スクリプトを作成します。  
+1. 次のステートメントを含むリソース スクリプトを作成します。  
   
      `RT_MANIFEST 1 myManagedComp.manifest`  
   
      このステートメントで、`myManagedComp.manifest` は埋め込むコンポーネント マニフェストの名前です。 この例では、スクリプト ファイル名は `myresource.rc` です。  
   
-2.  Microsoft Windows リソース コンパイラ (Rc.exe) を使用してスクリプトをコンパイルします。 コマンド プロンプトに次のコマンドを入力します。  
+2. Microsoft Windows リソース コンパイラ (Rc.exe) を使用してスクリプトをコンパイルします。 コマンド プロンプトに次のコマンドを入力します。  
   
      `rc myresource.rc`  
   
      Rc.exe は `myresource.res` リソース ファイルを生成します。  
   
-3.  もう一度アセンブリのソース ファイルをコンパイルし、**/win32res** オプションを使用してリソース ファイルを指定します。  
+3. もう一度アセンブリのソース ファイルをコンパイルし、**/win32res** オプションを使用してリソース ファイルを指定します。  
   
     ```  
     /win32res:myresource.res  
@@ -175,6 +173,7 @@ ms.locfileid: "56093542"
      ここでも、`myresource.res` は埋め込むリソースを含むリソース ファイルの名前です。  
   
 ## <a name="see-also"></a>関連項目
+
 - [登録を必要としない COM 相互運用機能](registration-free-com-interop.md)
 - [登録を必要としない COM 相互運用機能の要件](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/f8h7012w(v=vs.100))
 - [登録を必要としないアクティベーション用の COM コンポーネントの構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/x65a421a(v=vs.100))

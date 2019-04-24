@@ -3,10 +3,10 @@ title: コンパイラ オプション
 description: 使用F#のコンパイルを制御するためのコンパイラ コマンド ライン オプション、F#アプリとライブラリ。
 ms.date: 12/10/2018
 ms.openlocfilehash: fa639fe37ed336ad9f990e01bf2645c5a86498e6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59089758"
 ---
 # <a name="compiler-options"></a>コンパイラ オプション
@@ -57,7 +57,7 @@ ms.locfileid: "59089758"
 |`--staticlink:assembly-name`|指定したアセンブリと、そのアセンブリに依存するすべての参照 DLL を静的にリンクします。 DLL 名ではなく、アセンブリ名を使用します。|
 |`--subsystemversion`|生成された実行可能ファイルが使用できる OS サブシステムのバージョンを指定します。 Windows 8.1、Windows 7、Windows Vista の場合は 6.00 の場合は 6.01 6.02 を使用します。 このオプションは、DLL ではなく、実行可能ファイルのみに適用され、アプリケーションが OS の特定のバージョンでのみ使用できる特定のセキュリティ機能に依存している場合にのみ使用される必要があります。 このオプションが使用され、低いバージョンの OS でアプリケーションを実行しようとすると、失敗してエラー メッセージが表示されます。|
 |<code>--tailcalls[+&#124;-]</code>|tail IL 命令の使用を有効または無効にします。有効にすると、スタック フレームが tail 再帰関数で再利用されます。 既定では、このオプションは有効になっています。|
-|<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|生成されるコンパイル済みコードの種類とファイル名を指定します。<ul><li>`exe` コンソール アプリケーションを意味します。<br /></li><li>`winexe` 標準入力/出力ストリーム (stdin、stdout および stderr) 定義があるないことには、コンソール アプリケーションからとは異なる Windows アプリケーションを意味します。<br /></li><li>`library` エントリ ポイントのないアセンブリ。<br /></li><li>`module` 後で組み合わせて使用できる他のモジュールをアセンブリに .NET Framework モジュール (.netmodule) です。<br /></li><ul/>このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [&#47;ターゲット&#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/6h25dztx.aspx)します。|
+|<code>--target:[exe&#124;winexe&#124;library&#124;module] filename</code>|生成されるコンパイル済みコードの種類とファイル名を指定します。<ul><li>`exe` はコンソール アプリケーションを表します。<br /></li><li>`winexe` は Windows アプリケーションを表します。コンソール アプリケーションとの違いは、標準入出力ストリーム (stdin、stdout、および stderr) が定義されていないことです。<br /></li><li>`library` は、エントリ ポイントのないアセンブリです。<br /></li><li>`module` は .NET Framework モジュール (.netmodule) です。後で他のモジュールと組み合わせて、1 つのアセンブリにまとめることができます。<br /></li><ul/>このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [&#47;ターゲット&#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/6h25dztx.aspx)します。|
 |`--times`|コンパイルのタイミング情報を表示します。|
 |`--utf8output`|UTF-8 エンコーディングでのコンパイラ出力を有効にします。|
 |`--warn:warning-level`|警告レベル (0 ～ 5) を設定します。 既定のレベルは 3 です。 各警告には、重大度に基づいてレベルが設定されます。 レベル 5 の方が重大度は低くなりますが、レベル 1 より多くの警告が表示されます。<br /><br />レベル 5 の警告は次のとおりです。21 (実行時チェック再帰を使用)、22 (`let rec`順不同の評価)、45 (完全な抽象化)、および 52 (防御的コピー) します。 他の警告はすべてレベル 2 です。<br /><br />このコンパイラ オプションは、同じ名前の C# コンパイラ オプションに相当します。 詳細については、次を参照してください。 [&#47;警告&#40;C&#35;コンパイラ オプション&#41;](https://msdn.microsoft.com/library/13b90fz7.aspx)します。|

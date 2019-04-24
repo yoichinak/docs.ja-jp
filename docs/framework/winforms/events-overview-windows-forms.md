@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
 ms.openlocfilehash: 57802cad0a75ed21bba02a11fec39f821835c5ea
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59157795"
 ---
 # <a name="events-overview-windows-forms"></a>イベントの概要 (Windows フォーム)

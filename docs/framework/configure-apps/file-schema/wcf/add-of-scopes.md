@@ -1,12 +1,12 @@
 ---
-title: <add> (行中)  <scopes>
+title: <add> の <scopes>
 ms.date: 03/30/2017
 ms.assetid: 0563a7d8-fc84-4c85-9066-af32665857c2
 ms.openlocfilehash: c29e47f688118e34fbdb4deb396c930d478f0582
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187085"
 ---
 # <a name="add-of-scopes"></a>\<追加 > の\<スコープ >

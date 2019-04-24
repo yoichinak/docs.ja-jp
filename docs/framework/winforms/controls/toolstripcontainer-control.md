@@ -7,14 +7,14 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], ToolStripContainer
 ms.assetid: 378fa5b4-38e1-46f4-8e5c-d0c19dcd0200
 ms.openlocfilehash: 5a962b30771414e4b20711b001dc38ff8dc69823
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59082569"
 ---
 # <a name="toolstripcontainer-control"></a>ToolStripContainer コントロール
-<xref:System.Windows.Forms.ToolStrip> コントロール、ビルトイン ラフティング (ドッキングされているときにツール領域内の水平方向または垂直方向の領域の共有) を使用して、<xref:System.Windows.Forms.ToolStripContainer>します。  
+<xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolStripContainer> の使用による、ビルトイン ラフティング (ドッキングされているときに、ツールの領域内の水平または垂直のスペースを共有) を備えています。  
   
  このセクションのトピックでは、<xref:System.Windows.Forms.ToolStripContainer> の機能をアプリケーションに組み込むときに使用できる概念および手法について説明します。  
   
@@ -22,10 +22,10 @@ ms.locfileid: "59082569"
  [ToolStripContainer コントロールの概要](toolstripcontainer-control-overview.md)  
  Windows フォームの <xref:System.Windows.Forms.ToolStripContainer> コントロールの目的および中心となる概念を説明するトピックを示します。  
   
- [方法: フォームに ToolStripContainer を追加する](how-to-add-a-toolstripcontainer-to-a-form.md)  
+ [方法: フォームに ToolStripContainer を追加します。](how-to-add-a-toolstripcontainer-to-a-form.md)  
  <xref:System.Windows.Forms.ToolStripContainer> のアプリケーションへの追加と、<xref:System.Windows.Forms.ToolStripContainer> の特定のパネルへのコントロールの追加を示します。  
   
- [方法: ToolStripContentPanel にコントロールを追加する](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
+ [方法: ToolStripContentPanel にコントロールを追加します。](how-to-add-a-control-to-a-toolstripcontentpanel.md)  
  <xref:System.Windows.Forms.ToolStripContentPanel> へのコントロールの追加を示します。  
   
 ## <a name="reference"></a>参照  

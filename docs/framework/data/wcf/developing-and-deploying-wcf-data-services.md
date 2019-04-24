@@ -8,10 +8,10 @@ helpviewer_keywords:
 - developing applications [WCF Data Services]
 ms.assetid: 6557c0e3-5aea-4f6e-bc14-77ad317a168b
 ms.openlocfilehash: 8b709de728726b7695b987c48574d2a70a1bc27e
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59481380"
 ---
 # <a name="develop-and-deploy-wcf-data-services"></a>開発し、WCF Data Services のデプロイ
@@ -113,7 +113,7 @@ WCF Data Services では、データ サービスをホストするプロセス�
     > [!TIP]
     > データ サービスを IIS に配置する前に、IIS を実行している Web サーバーへの配置をテストしておく必要があります。 詳細については、「[方法 :IIS で実行されている WCF データ サービスを開発](../../../../docs/framework/data/wcf/how-to-develop-a-wcf-data-service-running-on-iis.md)します。
 
-- **Microsoft Azure**
+- **Windows Azure**
 
      Visual Studio の Windows Azure Tools を使用して、Windows Azure にデータ サービスをデプロイできます。 Visual Studio からの Windows Azure Tools をダウンロードすることができます、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkID=201848)します。 Windows Azure へのデータ サービスの展開に関する詳細については、投稿をご覧ください。 [Windows Azure での OData サービスを展開する](https://go.microsoft.com/fwlink/?LinkId=201847)します。
 

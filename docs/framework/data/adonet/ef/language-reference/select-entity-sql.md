@@ -3,10 +3,10 @@ title: SELECT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9a33bd0d-ded1-41e7-ba3c-305502755e3b
 ms.openlocfilehash: d6250871b8e22b73b49a94ee7ae7835f53a7c7cd
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306431"
 ---
 # <a name="select-entity-sql"></a>SELECT (Entity SQL)
@@ -62,7 +62,7 @@ SELECT customers.Name FROM customers AS c
  JOIN 構文 (FULL、INNER、LEFT、OUTER、ON、および RIGHT) を使用することもできます。 内部結合に対しては ON が必要ですが、クロス結合に対しては ON を使用できません。  
   
 ## <a name="row-and-value-select-clauses"></a>ROW 句および VALUE SELECT 句  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] SELECT 句の 2 つのバリエーションをサポートしています。 最初のバリアント、row select は、SELECT キーワードによって識別され、このバリアントを使用して、投影する必要がある 1 つまたは複数の値を指定できます。row ラッパーは、返された値の前後に暗黙的に追加されるため、クエリ式の結果は常に、行のマルチセットになります。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、SELECT 句の 2 つのバリアントをサポートします。 最初のバリアント、row select は、SELECT キーワードによって識別され、このバリアントを使用して、投影する必要がある 1 つまたは複数の値を指定できます。row ラッパーは、返された値の前後に暗黙的に追加されるため、クエリ式の結果は常に、行のマルチセットになります。  
   
  row select の各クエリ式は、別名を指定する必要があります。 別名を指定しないと、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] は別名生成規則を使用して別名の生成を試みます。  
   

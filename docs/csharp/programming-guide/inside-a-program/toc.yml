@@ -1,18 +1,11 @@
-items:
-- name: インサイド C# プログラム
+- name: 'インサイド C# プログラム'
   href: index.md
   items:
-  - name: Hello World -- 最初のプログラム
-    href: hello-world-your-first-program.md
-  - name: C# プログラムの一般構造
-    href: general-structure-of-a-csharp-program.md
-  - name: 識別子名
-    href: identifier-names.md
-  - name: C# のコーディング規則
-    href: coding-conventions.md
-ms.openlocfilehash: 1772c8e85b53055cddffa4ffc2cac15f3cd32c77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470474"
+    - name: Hello World -- 最初のプログラム
+      href: hello-world-your-first-program.md
+    - name: 'C# プログラムの一般構造'
+      href: general-structure-of-a-csharp-program.md
+    - name: 識別子名
+      href: identifier-names.md
+    - name: 'C# のコーディング規則'
+      href: coding-conventions.md

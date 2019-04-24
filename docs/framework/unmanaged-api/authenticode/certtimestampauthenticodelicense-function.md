@@ -11,10 +11,10 @@ ms.assetid: d468325a-21c5-43ce-8567-84e342b22308
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ac7cf92fb9c57491ff45e664513c0e82f22db9f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59111723"
 ---
 # <a name="certtimestampauthenticodelicense-function"></a>CertTimestampAuthenticodeLicense 関数
@@ -44,7 +44,7 @@ HRESULT CertTimestampAuthenticodeLicense (
  タイム スタンプの署名は、実際は PKCS #7 SignedData メッセージで、この内容は、ライセンスの署名の SignatureValue のバイナリ形式です。 これは基本的に、ライセンスの副署名として機能します。  
   
 ## <a name="return-value"></a>戻り値  
- `S_OK` 関数が成功するとします。 それ以外の場合はエラー コードを返します。  
+ 関数が成功した場合は `S_OK`。 それ以外の場合はエラー コードを返します。  
   
 ## <a name="see-also"></a>関連項目
 

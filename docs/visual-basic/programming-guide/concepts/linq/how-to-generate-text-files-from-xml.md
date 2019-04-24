@@ -3,10 +3,10 @@ title: '方法: (Visual Basic) を XML からテキスト ファイルを生成�
 ms.date: 07/20/2015
 ms.assetid: 3b33f191-4abe-4419-b81b-3cb81d9a317f
 ms.openlocfilehash: 6273152995b458da110a2bda56ebdc35d49b6769
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829487"
 ---
 # <a name="how-to-generate-text-files-from-xml-visual-basic"></a>方法: (Visual Basic) を XML からテキスト ファイルを生成します。

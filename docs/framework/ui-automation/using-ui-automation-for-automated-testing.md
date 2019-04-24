@@ -7,10 +7,10 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183977"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>UI オートメーションによる自動テスト
@@ -19,9 +19,9 @@ ms.locfileid: "59183977"
   
  ここでは、自動テストのシナリオで、プログラムによるアクセスのためのフレームワークとして [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] がどのように役立つかについて説明します。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] により、すべて統一されたオブジェクト モデルを提供[!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)]アクセスでき、簡単に自動化された方法で複雑で豊富な機能を公開するフレームワークです。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] の統一されたオブジェクト モデルを使用すると、すべての [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] フレームワークにおいて、複雑で豊富な機能をアクセシビリティが高く自動化しやすい方法で公開できます。  
   
- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 後継として開発されました[!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]します。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 既存のフレームワークがコントロールとアプリケーションにアクセスできるように、ソリューションを提供する設計されています。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 設計いないテストの自動化に場合でも、ユーザー補助と自動化の非常に類似した要件のためには、そのロールに進化しました。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]、アクセシビリティ、より洗練されたソリューションを提供することだけでなく、も専用に作られた自動化されたテストに対する堅牢な機能を提供します。 たとえば、 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] では、UI に関する情報の公開と、AT 製品に必要な情報の収集の両方に、同じインターフェイスを使用します。これに対して [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] では、2 つのモデルを分けています。  
+ [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、 [!INCLUDE[TLA#tla_aa](../../../includes/tlasharptla-aa-md.md)]の後継として開発されました。 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] は、コントロールとアプリケーションにアクセスできるように設計された既存のフレームワークです。 ユーザー補助と自動化の要件がよく似ているため、[!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] はテストの自動化に使用されるようになりましたが、この役割を想定して設計されたものではありません。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]は、ユーザー補助のためのより洗練されたソリューションを提供するだけでなく、信頼性の高い自動テスト機能を提供するように設計されています。 たとえば、 [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] では、UI に関する情報の公開と、AT 製品に必要な情報の収集の両方に、同じインターフェイスを使用します。これに対して [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] では、2 つのモデルを分けています。  
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] を自動テスト ツールとして利用するには、プロバイダーとクライアントの両方にこれを実装する必要があります。 UI オートメーション プロバイダーは、Microsoft Word、Excel やその他のサードパーティ アプリケーションなどのアプリケーション、または [!INCLUDE[TLA#tla_win](../../../includes/tlasharptla-win-md.md)] オペレーティング システムに基づくコントロールです。 UI オートメーション クライアントは、自動テスト スクリプトや支援 (補助) 技術アプリケーションなどです。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59183977"
   
 <a name="Programmatic_Access"></a>   
 ### <a name="programmatic-access"></a>プログラムによるアクセス  
- プログラムによるアクセスでは、従来のマウス入力やキーボード入力によって公開される対話やエクスペリエンスをコードによって模倣する機能が提供されます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] プログラムによるアクセスが 5 つのコンポーネントを有効にします。  
+ プログラムによるアクセスでは、従来のマウス入力やキーボード入力によって公開される対話やエクスペリエンスをコードによって模倣する機能が提供されます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、5 つのコンポーネントにより、プログラムによるアクセスを有効にします。  
   
 -   [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]の構造全体にわたってナビゲーションを容易にします。 ツリーは、hWnd のツリーのコレクションから構築されます。 詳細については、「 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」を参照してください。  
   
@@ -76,16 +76,16 @@ ms.locfileid: "59183977"
  [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 内の任意のコントロールを一意に識別して検索する機能は、自動テスト アプリケーションがその [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]を処理する基盤です。 [!INCLUDE[TLA#tla_uiautomation](../../../includes/tlasharptla-uiautomation-md.md)] プロパティの中にはこれを支援するものがいくつかあり、クライアントとプロバイダーによって使用されます。  
   
 #### <a name="automationid"></a>AutomationID  
- オートメーション要素をその兄弟から一意に識別します。 <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> ローカライズされていない、プロパティとは異なりなど<xref:System.Windows.Automation.AutomationElement.NameProperty>製品は複数の言語で出荷される場合に通常ローカライズされるは。 「 [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)」を参照してください。  
+ オートメーション要素をその兄弟から一意に識別します。 製品が複数言語で出荷される場合に通常ローカライズされる<xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> などのプロパティとは異なり、 <xref:System.Windows.Automation.AutomationElement.NameProperty> はローカライズされません。 「 [Use the AutomationID Property](../../../docs/framework/ui-automation/use-the-automationid-property.md)」を参照してください。  
   
 > [!NOTE]
->  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> オートメーション ツリー全体で一意の id は保証されません。 たとえば、アプリケーションには複数のトップレベルのメニュー項目を持つメニュー コントロールが含まれ、さらに、それらのメニュー項目に複数の子メニュー項目が含まれている場合があります。 これらの 2 次メニュー項目は、Item1、Item2、Item3 などの汎用スキームで識別され、トップレベルのメニュー項目間で子の識別子が重複することがあります。  
+>  <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> では、オートメーション ツリー全体にわたって一意に識別できるとは限りません。 たとえば、アプリケーションには複数のトップレベルのメニュー項目を持つメニュー コントロールが含まれ、さらに、それらのメニュー項目に複数の子メニュー項目が含まれている場合があります。 これらの 2 次メニュー項目は、Item1、Item2、Item3 などの汎用スキームで識別され、トップレベルのメニュー項目間で子の識別子が重複することがあります。  
   
 #### <a name="controltype"></a>ControlType  
  オートメーション要素によって表されるコントロール型を識別します。 コントロール型がわかると、そこから多くの情報を推測できます。 「 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)」を参照してください。  
   
 #### <a name="nameproperty"></a>NameProperty  
- これは、コントロールを識別または説明するテキスト文字列です。 <xref:System.Windows.Automation.AutomationElement.NameProperty> ローカライズできるので、注意して使用する必要があります。 「 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)」を参照してください。  
+ これは、コントロールを識別または説明するテキスト文字列です。 <xref:System.Windows.Automation.AutomationElement.NameProperty> はローカライズされる可能性があるため、注意して使用する必要があります。 「 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)」を参照してください。  
   
 <a name="Steps_Required_To_Automate_the_UI_in_a_Test_Application"></a>   
 ### <a name="implementing-ui-automation-in-a-test-application"></a>テスト アプリケーションへの UI オートメーションの実装  

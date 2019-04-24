@@ -1,36 +1,29 @@
-items:
 - name: ジェネリック
   href: index.md
   items:
-  - name: ジェネリックの概要
-    href: introduction-to-generics.md
-  - name: ジェネリックの利点
-    href: benefits-of-generics.md
-  - name: ジェネリック型の型パラメーター
-    href: generic-type-parameters.md
-  - name: 型パラメーターの制約
-    href: constraints-on-type-parameters.md
-  - name: 汎用クラス
-    href: generic-classes.md
-  - name: ジェネリック インターフェイス
-    href: generic-interfaces.md
-  - name: ジェネリック メソッド
-    href: generic-methods.md
-  - name: ジェネリックと配列
-    href: generics-and-arrays.md
-  - name: 汎用デリゲート
-    href: generic-delegates.md
-  - name: C++ テンプレートと C# ジェネリックの違い
-    href: differences-between-cpp-templates-and-csharp-generics.md
-  - name: ランタイムのジェネリック
-    href: generics-in-the-run-time.md
-  - name: ジェネリックとリフレクション
-    href: generics-and-reflection.md
-  - name: ジェネリックと属性
-    href: generics-and-attributes.md
-ms.openlocfilehash: daccd9dc4b0c808750866aacad6dacffc1282f6e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470002"
+    - name: ジェネリックの概要
+      href: introduction-to-generics.md
+    - name: ジェネリックの利点
+      href: benefits-of-generics.md
+    - name: ジェネリック型の型パラメーター
+      href: generic-type-parameters.md
+    - name: 型パラメーターの制約
+      href: constraints-on-type-parameters.md
+    - name: 汎用クラス
+      href: generic-classes.md
+    - name: ジェネリック インターフェイス
+      href: generic-interfaces.md
+    - name: ジェネリック メソッド
+      href: generic-methods.md
+    - name: ジェネリックと配列
+      href: generics-and-arrays.md
+    - name: 汎用デリゲート
+      href: generic-delegates.md
+    - name: 'C++ テンプレートと C# ジェネリックの違い'
+      href: differences-between-cpp-templates-and-csharp-generics.md
+    - name: ランタイムのジェネリック
+      href: generics-in-the-run-time.md
+    - name: ジェネリックとリフレクション
+      href: generics-and-reflection.md
+    - name: ジェネリックと属性
+      href: generics-and-attributes.md

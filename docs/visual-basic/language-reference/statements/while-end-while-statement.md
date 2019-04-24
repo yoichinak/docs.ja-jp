@@ -10,10 +10,10 @@ helpviewer_keywords:
 - While...End While statements [Visual Basic]
 ms.assetid: b931d1ce-e8ed-44d8-a13d-92a4f5458a1e
 ms.openlocfilehash: 00ca0ad24231128b25a988921386d6bd3265e9a0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843712"
 ---
 # <a name="whileend-while-statement-visual-basic"></a>While...End While ステートメント (Visual Basic)
@@ -53,7 +53,7 @@ End While
   
  `condition`が 2 つの値の比較からの結果に評価される任意の式は、通常、[ブール データ型](../../../visual-basic/language-reference/data-types/boolean-data-type.md)値 (`True`または`False`)。 この式は、数値型に変換されているなどの別のデータ型の値を含めることができます`Boolean`します。  
   
- 入れ子にすることができます`While`内に別の 1 つのループを配置することでループします。 さまざまな種類の制御構造を入れ子にすることもできます。 詳細については、[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)を参照してください。  
+ 入れ子にすることができます`While`内に別の 1 つのループを配置することでループします。 さまざまな種類の制御構造を入れ子にすることもできます。 詳細については、次を参照してください。[制御構造の入れ子になった](../../../visual-basic/programming-guide/language-features/control-flow/nested-control-structures.md)します。  
   
 ## <a name="exit-while"></a>中に終了  
  [終了中に](../../../visual-basic/language-reference/statements/exit-statement.md)ステートメントが終了する別の方法を提供する`While`ループします。 `Exit While` すぐに続くステートメントに制御を転送、`End While`ステートメント。  
@@ -64,7 +64,7 @@ End While
   
  使用すると内で入れ子になった`While`ループ、`Exit While`上位レベルの入れ子にして、最も内側のループからコントロールを転送します。  
   
- `Continue While`ステートメントはすぐに、ループの次のイテレーションに制御を転送します。 詳細については、[Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)を参照してください。  
+ `Continue While`ステートメントはすぐに、ループの次のイテレーションに制御を転送します。 詳細については、次を参照してください。 [Continue ステートメント](../../../visual-basic/language-reference/statements/continue-statement.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、ループ内のステートメントの続行までを実行する、`index`変数が 10 より大きい。  

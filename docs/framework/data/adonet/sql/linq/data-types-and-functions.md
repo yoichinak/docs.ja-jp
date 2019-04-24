@@ -3,10 +3,10 @@ title: データ型と関数
 ms.date: 03/30/2017
 ms.assetid: 683413c5-0312-4e60-8619-9a97bdc6e62a
 ms.openlocfilehash: c17c02900ea6ebda1ee4bbf6e6534310f125a0a6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59151945"
 ---
 # <a name="data-types-and-functions"></a>データ型と関数
@@ -18,7 +18,7 @@ ms.locfileid: "59151945"
 |-----------|-----------------|  
 |[SQL と CLR の型マッピング](../../../../../../docs/framework/data/adonet/sql/linq/sql-clr-type-mapping.md)|CLR 型と SQL Server 型のマッピングを、行列形式で示します。|  
 |[基本データ型](../../../../../../docs/framework/data/adonet/sql/linq/basic-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
-|[ブール型](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
+|[ブール データ型](../../../../../../docs/framework/data/adonet/sql/linq/boolean-data-types.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
 |[null セマンティクス](../../../../../../docs/framework/data/adonet/sql/linq/null-semantics.md)|null および null 許容に関する問題が記載されている [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] トピックへのリンクを示します。|  
 |[数値演算子および比較演算子](../../../../../../docs/framework/data/adonet/sql/linq/numeric-and-comparison-operators.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  
 |[シーケンス演算子](../../../../../../docs/framework/data/adonet/sql/linq/sequence-operators.md)|[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] との相違の概要を示します。|  

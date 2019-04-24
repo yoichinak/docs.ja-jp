@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: fb7baaab-4c0d-47ad-8fd3-4591cf834709
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 72778f769c2c3f030de0cd31d087e0a90ba6f508
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: e33fc98f12c1b49d6fe2b1dc187615e2dc9b1768
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675037"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59330078"
 ---
 # <a name="how-to-view-assembly-contents"></a>方法: アセンブリの内容を表示する
 [Ildasm.exe (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md) を使用して、ファイル内の MSIL (Microsoft Intermediate Language) 情報を表示できます。 内容を調べる対象のファイルがアセンブリの場合、この情報にはアセンブリの属性と共に他のモジュールやアセンブリへの参照が含まれることがあります。 この情報は、ファイルがアセンブリまたはアセンブリの一部かどうか、およびファイルに他のモジュールまたはアセンブリへの参照があるかどうかを判断するために役立ちます。  
   
 ### <a name="to-display-the-contents-of-an-assembly-using-ildasmexe"></a>Ildasm.exe を使用してアセンブリの内容を表示するには  
   
-1.  コマンド プロンプトに「**ildasm** \<*assembly name*>」と入力します。 たとえば、次のコマンドでは、`Hello.exe` アセンブリが逆アセンブルされます。  
+1. コマンド プロンプトに「**ildasm** \<*assembly name*>」と入力します。 たとえば、次のコマンドでは、`Hello.exe` アセンブリが逆アセンブルされます。  
   
     ```  
     ildasm Hello.exe  
@@ -36,7 +36,7 @@ ms.locfileid: "55675037"
   
 ### <a name="to-view-assembly-manifest-information"></a>アセンブリ マニフェストの情報を表示するには  
   
-1.  MSIL 逆アセンブラー ウィンドウで、マニフェストのアイコンをダブルクリックします。  
+1. MSIL 逆アセンブラー ウィンドウで、マニフェストのアイコンをダブルクリックします。  
   
 ## <a name="example"></a>例  
  次の例では、基本の "Hello, World" プログラムを使用します。 プログラムをコンパイルした後、Ildasm.exe を使用して Hello.exe アセンブリを逆アセンブルし、アセンブリ マニフェストを表示します。  
@@ -89,6 +89,7 @@ ms.locfileid: "55675037"
  アセンブリ マニフェストは、アセンブリの内容に応じて、多くの異なるディレクティブを格納できます。 アセンブリ マニフェストに含まれる多様なディレクティブの一覧については、ヨーロッパ電子計算機工業会 (ECMA: European Computer Manufacturer Association) のドキュメント、特に「Partition II:Metadata Definition and Semantics」(パーティション II: メタデータの定義とセマンティクス) および「Partition III:CIL Instruction Set」(パーティション III: CIL 命令セット) を参照してください。 ドキュメントはオンラインで入手できます。MSDN の「[ECMA C# and Common Language Infrastructure Standards](https://go.microsoft.com/fwlink/?LinkID=99212)」 (ECMA の C# および共通言語基盤の標準規格) と、ECMA のインターナショナル Web サイトにある「[Standard ECMA-335 - Common Language Infrastructure (CLI)](https://go.microsoft.com/fwlink/?LinkID=65552)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
+
 - [アプリケーション ドメインとアセンブリ](application-domains.md#application-domains-and-assemblies)
 - [アプリケーション ドメインとアセンブリに関する方法のトピック](../../../docs/framework/app-domains/application-domains-and-assemblies-how-to-topics.md)
 - [Ildasm.exe (IL 逆アセンブラー)](../../../docs/framework/tools/ildasm-exe-il-disassembler.md)

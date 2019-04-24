@@ -5,10 +5,10 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
 ms.openlocfilehash: c4d3ec4ac0dcd02bc7f7a1d28ba383708d1e3f86
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142455"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Data Services を使用した作業の開始
@@ -38,7 +38,7 @@ ms.locfileid: "59142455"
 ## <a name="related-sections"></a>関連項目  
  [WCF Data Services (Silverlight)](https://go.microsoft.com/fwlink/?LinkID=143149)  
   
- [作業の開始](../../../../docs/framework/data/adonet/ef/getting-started.md)  
+ [はじめに](../../../../docs/framework/data/adonet/ef/getting-started.md)  
   
 ## <a name="see-also"></a>関連項目
 

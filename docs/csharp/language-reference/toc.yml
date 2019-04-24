@@ -1,138 +1,131 @@
-items:
 - name: 言語リファレンス
   href: index.md
   items:
-  - name: 言語バージョンの構成
-    href: configure-language-version.md
-  - name: C# のキーワード
-    href: keywords/index.md
-  - name: C# 演算子
-    href: operators/index.md
-  - name: C# 特殊文字
-    href: tokens/index.md
-  - name: C# プリプロセッサ ディレクティブ
-    href: preprocessor-directives/index.md
-  - name: C# コンパイラ オプション
-    href: compiler-options/index.md
-  - name: C# コンパイラ エラー
-    href: compiler-messages/index.md
-  - name: C# 6.0 のドラフト仕様
-    items:
-    - name: はじめに
-      href: ../../../_csharplang/spec/introduction.md
-    - name: 字句構造
-      href: ../../../_csharplang/spec/lexical-structure.md
-    - name: 基本的な概念
-      href: ../../../_csharplang/spec/basic-concepts.md
-    - name: 種類
-      href: ../../../_csharplang/spec/types.md
-    - name: 変数
-      href: ../../../_csharplang/spec/variables.md
-    - name: 変換
-      href: ../../../_csharplang/spec/conversions.md
-    - name: 式
-      href: ../../../_csharplang/spec/expressions.md
-    - name: ステートメント
-      href: ../../../_csharplang/spec/statements.md
-    - name: 名前空間
-      href: ../../../_csharplang/spec/namespaces.md
-    - name: クラス
-      href: ../../../_csharplang/spec/classes.md
-    - name: 構造体
-      href: ../../../_csharplang/spec/structs.md
-    - name: 配列
-      href: ../../../_csharplang/spec/arrays.md
-    - name: インターフェイス
-      href: ../../../_csharplang/spec/interfaces.md
-    - name: 列挙体
-      href: ../../../_csharplang/spec/enums.md
-    - name: デリゲート
-      href: ../../../_csharplang/spec/delegates.md
-    - name: 例外
-      href: ../../../_csharplang/spec/exceptions.md
-    - name: 属性
-      href: ../../../_csharplang/spec/attributes.md
-    - name: アンセーフ コード
-      href: ../../../_csharplang/spec/unsafe-code.md
-    - name: ドキュメント コメント
-      href: ../../../_csharplang/spec/documentation-comments.md
-  - name: C# 7.0 の言語提案
-    items:
-    - name: パターン マッチング
-      href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
-    - name: ローカル関数
-      href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
-    - name: out 変数宣言
-      href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
-    - name: throw 式
-      href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
-    - name: バイナリ リテラル
-      href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
-    - name: 桁区切り文字
-      href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
-  - name: C# 7.1 の言語提案
-    items:
-    - name: 非同期 main メソッド
-      href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
-    - name: 既定値式
-      href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
-    - name: タプル名を推定する
-      href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
-    - name: ジェネリックを使用したパターン マッチング
-      href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
-  - name: C# 7.2 の言語提案
-    items:
-    - name: 読み取り専用の参照
-      href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
-    - name: ref-like 型のコンパイル時の安全性
-      href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
-    - name: 末尾以外の名前付き引数
-      href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
-    - name: Private protected
-      href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
-    - name: 条件付き ref
-      href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
-    - name: 先頭の桁区切り文字
-      href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
-  - name: C# 7.3 の言語提案
-    items:
-    - name: アンマネージド ジェネリック型制約
-      href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
-    - name: 移動可能/移動不可能なコンテキストに関係なく、`fixed` フィールドのインデックス付けでピン留めを必要とすべきではない
-      href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
-    - name: パターン ベースの `fixed` ステートメント
-      href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
-    - name: ref ローカルの再割り当て
-      href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
-    - name: stackalloc 配列初期化子
-      href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
-    - name: 自動実装プロパティのフィールドを対象とした属性
-      href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
-    - name: 初期化子における式の変数
-      href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
-    - name: タプルの等値 (==) および非等値 (!=)
-      href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
-    - name: オーバーロード候補の改善
-      href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
-  - name: C# 8.0 の言語提案
-    items:
-    - name: null 参照型 - 提案
-      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
-    - name: null 許容参照型 - 仕様
-      href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
-    - name: 再帰的なパターン マッチング
-      href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
-    - name: 非同期ストリーム
-      href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
-    - name: 範囲
-      href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
-    - name: パターン ベース using および using 宣言
-      href: ../../../_csharplang/proposals/csharp-8.0/using.md
-    - name: null 合体演算子割り当て
-      href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md
-ms.openlocfilehash: a2c2b2377b093b542f9d45ae688de121db1c1959
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470546"
+    - name: 言語バージョンの構成
+      href: configure-language-version.md
+    - name: 'C# のキーワード'
+      href: keywords/index.md
+    - name: 'C# 演算子'
+      href: operators/index.md
+    - name: 'C# 特殊文字'
+      href: tokens/index.md
+    - name: 'C# プリプロセッサ ディレクティブ'
+      href: preprocessor-directives/index.md
+    - name: 'C# コンパイラ オプション'
+      href: compiler-options/index.md
+    - name: 'C# コンパイラ エラー'
+      href: compiler-messages/index.md
+    - name: 'C# 6.0 のドラフト仕様'
+      items:
+        - name: はじめに
+          href: ../../../_csharplang/spec/introduction.md
+        - name: 字句構造
+          href: ../../../_csharplang/spec/lexical-structure.md
+        - name: 基本的な概念
+          href: ../../../_csharplang/spec/basic-concepts.md
+        - name: 種類
+          href: ../../../_csharplang/spec/types.md
+        - name: 変数
+          href: ../../../_csharplang/spec/variables.md
+        - name: 変換
+          href: ../../../_csharplang/spec/conversions.md
+        - name: 式
+          href: ../../../_csharplang/spec/expressions.md
+        - name: ステートメント
+          href: ../../../_csharplang/spec/statements.md
+        - name: 名前空間
+          href: ../../../_csharplang/spec/namespaces.md
+        - name: クラス
+          href: ../../../_csharplang/spec/classes.md
+        - name: 構造体
+          href: ../../../_csharplang/spec/structs.md
+        - name: 配列
+          href: ../../../_csharplang/spec/arrays.md
+        - name: インターフェイス
+          href: ../../../_csharplang/spec/interfaces.md
+        - name: 列挙体
+          href: ../../../_csharplang/spec/enums.md
+        - name: デリゲート
+          href: ../../../_csharplang/spec/delegates.md
+        - name: 例外
+          href: ../../../_csharplang/spec/exceptions.md
+        - name: 属性
+          href: ../../../_csharplang/spec/attributes.md
+        - name: アンセーフ コード
+          href: ../../../_csharplang/spec/unsafe-code.md
+        - name: ドキュメント コメント
+          href: ../../../_csharplang/spec/documentation-comments.md
+    - name: 'C# 7.0 の言語提案'
+      items:
+        - name: パターン マッチング
+          href: ../../../_csharplang/proposals/csharp-7.0/pattern-matching.md
+        - name: ローカル関数
+          href: ../../../_csharplang/proposals/csharp-7.0/local-functions.md
+        - name: out 変数宣言
+          href: ../../../_csharplang/proposals/csharp-7.0/out-var.md
+        - name: throw 式
+          href: ../../../_csharplang/proposals/csharp-7.0/throw-expression.md
+        - name: バイナリ リテラル
+          href: ../../../_csharplang/proposals/csharp-7.0/binary-literals.md
+        - name: 桁区切り文字
+          href: ../../../_csharplang/proposals/csharp-7.0/digit-separators.md
+    - name: 'C# 7.1 の言語提案'
+      items:
+        - name: 非同期 main メソッド
+          href: ../../../_csharplang/proposals/csharp-7.1/async-main.md
+        - name: 既定値式
+          href: ../../../_csharplang/proposals/csharp-7.1/target-typed-default.md
+        - name: タプル名を推定する
+          href: ../../../_csharplang/proposals/csharp-7.1/infer-tuple-names.md
+        - name: ジェネリックを使用したパターン マッチング
+          href: ../../../_csharplang/proposals/csharp-7.1/generics-pattern-match.md
+    - name: 'C# 7.2 の言語提案'
+      items:
+        - name: 読み取り専用の参照
+          href: ../../../_csharplang/proposals/csharp-7.2/readonly-ref.md
+        - name: ref-like 型のコンパイル時の安全性
+          href: ../../../_csharplang/proposals/csharp-7.2/span-safety.md
+        - name: 末尾以外の名前付き引数
+          href: ../../../_csharplang/proposals/csharp-7.2/non-trailing-named-arguments.md
+        - name: Private protected
+          href: ../../../_csharplang/proposals/csharp-7.2/private-protected.md
+        - name: 条件付き ref
+          href: ../../../_csharplang/proposals/csharp-7.2/conditional-ref.md
+        - name: 先頭の桁区切り文字
+          href: ../../../_csharplang/proposals/csharp-7.2/leading-separator.md
+    - name: 'C# 7.3 の言語提案'
+      items:
+        - name: アンマネージド ジェネリック型制約
+          href: ../../../_csharplang/proposals/csharp-7.3/blittable.md
+        - name: 移動可能/移動不可能なコンテキストに関係なく、`fixed` フィールドのインデックス付けでピン留めを必要とすべきではない
+          href: ../../../_csharplang/proposals/csharp-7.3/indexing-movable-fixed-fields.md
+        - name: パターン ベースの `fixed` ステートメント
+          href: ../../../_csharplang/proposals/csharp-7.3/pattern-based-fixed.md
+        - name: ref ローカルの再割り当て
+          href: ../../../_csharplang/proposals/csharp-7.3/ref-local-reassignment.md
+        - name: stackalloc 配列初期化子
+          href: ../../../_csharplang/proposals/csharp-7.3/stackalloc-array-initializers.md
+        - name: 自動実装プロパティのフィールドを対象とした属性
+          href: ../../../_csharplang/proposals/csharp-7.3/auto-prop-field-attrs.md
+        - name: 初期化子における式の変数
+          href: ../../../_csharplang/proposals/csharp-7.3/expression-variables-in-initializers.md
+        - name: タプルの等値 (==) および非等値 (!=)
+          href: ../../../_csharplang/proposals/csharp-7.3/tuple-equality.md
+        - name: オーバーロード候補の改善
+          href: ../../../_csharplang/proposals/csharp-7.3/improved-overload-candidates.md
+    - name: 'C# 8.0 の言語提案'
+      items:
+        - name: null 参照型 - 提案
+          href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types.md
+        - name: null 許容参照型 - 仕様
+          href: ../../../_csharplang/proposals/csharp-8.0/nullable-reference-types-specification.md
+        - name: 再帰的なパターン マッチング
+          href: ../../../_csharplang/proposals/csharp-8.0/patterns.md
+        - name: 非同期ストリーム
+          href: ../../../_csharplang/proposals/csharp-8.0/async-streams.md
+        - name: 範囲
+          href: ../../../_csharplang/proposals/csharp-8.0/ranges.md
+        - name: パターン ベース using および using 宣言
+          href: ../../../_csharplang/proposals/csharp-8.0/using.md
+        - name: null 合体演算子割り当て
+          href: ../../../_csharplang/proposals/csharp-8.0/null-coalescing-assignment.md

@@ -13,10 +13,10 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58840173"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 演算子 (Visual Basic)
@@ -85,7 +85,7 @@ End Module
  `a - (b * Fix(a / b))`  
   
 ## <a name="floating-point-imprecision"></a>浮動小数点は誤差  
- 浮動小数点数を使用するときに、常がない正確な 10 進表記メモリに注意してください。 これは、値の比較などの特定の操作から予期しない結果につながりますできますと`Mod`演算子。 詳細については、[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)を参照してください。  
+ 浮動小数点数を使用するときに、常がない正確な 10 進表記メモリに注意してください。 これは、値の比較などの特定の操作から予期しない結果につながりますできますと`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
   
 ## <a name="overloading"></a>オーバーロード  
  `Mod`演算子は、*オーバー ロードされた*、つまり、クラスまたは構造体がその動作を再定義できます。 コードが適用される場合`Mod`クラスまたはそのようなオーバー ロードを含む構造体のインスタンスに再定義された動作を理解することを確認します。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  

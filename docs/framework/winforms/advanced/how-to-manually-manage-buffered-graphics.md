@@ -9,10 +9,10 @@ helpviewer_keywords:
 - graphics [Windows Forms], managing buffered
 ms.assetid: 4c2a90ee-bbbe-4ff6-9170-1b06c195c918
 ms.openlocfilehash: 965e3225f8cf1af6d61b81434089ebacac8ad13a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59138672"
 ---
 # <a name="how-to-manually-manage-buffered-graphics"></a>方法: バッファリングされたグラフィックスを手動で管理する
@@ -41,4 +41,4 @@ ms.locfileid: "59138672"
 
 - <xref:System.Drawing.BufferedGraphicsContext>
 - [ダブル バッファリングされたグラフィックス](double-buffered-graphics.md)
-- [方法: バッファリングされたグラフィックスを手動で描画する](how-to-manually-render-buffered-graphics.md)
+- [方法: バッファリングされたグラフィックスを手動で描画します。](how-to-manually-render-buffered-graphics.md)

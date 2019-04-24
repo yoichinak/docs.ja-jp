@@ -9,10 +9,10 @@ helpviewer_keywords:
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
 ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59173031"
 ---
 # <a name="application-startup-time"></a>アプリケーションの起動時間
@@ -65,7 +65,7 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
  NGen と JIT モジュールを併用すると、最悪の影響がもたらされる可能性があります。 mscorjit.dll を読み込む必要があるほか、JIT コンパイラは、アプリケーション コードを処理するとき、アセンブリのメタデータを読み込む際に NGen イメージ内の多数のページにアクセスする必要があるためです。  
   
 ### <a name="ngen-and-clickonce"></a>NGen と ClickOnce  
- アプリケーションの配置方法が、読み込み時間に影響することもあります。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] アプリケーションの展開は、Ngen をサポートしていません。 アプリケーションで Ngen.exe を使用する場合は、Windows インストーラーなど、他の配置機構を使用する必要があります。  
+ アプリケーションの配置方法が、読み込み時間に影響することもあります。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] によるアプリケーションの配置では、NGen がサポートされていません。 アプリケーションで Ngen.exe を使用する場合は、Windows インストーラーなど、他の配置機構を使用する必要があります。  
   
  詳細については、「[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../tools/ngen-exe-native-image-generator.md)」を参照してください。  
   
@@ -130,4 +130,4 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
 - <xref:System.Resources.ResourceManager>
 - [スプラッシュ スクリーンを WPF アプリケーションに追加する](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)
 - [Ngen.exe (ネイティブ イメージ ジェネレーター)](../../tools/ngen-exe-native-image-generator.md)
-- [\<generatePublisherEvidence > 要素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)
+- [\<generatePublisherEvidence> 要素](../../configure-apps/file-schema/runtime/generatepublisherevidence-element.md)

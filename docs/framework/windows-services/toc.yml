@@ -1,41 +1,34 @@
-items:
 - name: Windows サービス アプリケーション
   href: index.md
   items:
-  - name: Windows サービス アプリケーションの概要
-    href: introduction-to-windows-service-applications.md
-  - name: 'チュートリアル: Windows サービス アプリを作成する'
-    href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
-  - name: サービス アプリケーションのプログラミング アーキテクチャ
-    href: service-application-programming-architecture.md
-  - name: '方法: Windows サービスを作成する'
-    href: how-to-create-windows-services.md
-    items:
-    - name: '方法: プログラムでサービスを作成する'
-      href: how-to-write-services-programmatically.md
-    - name: '方法: サービス アプリケーションにインストーラーを追加する'
-      href: how-to-add-installers-to-your-service-application.md
-    - name: '方法: サービスのセキュリティ コンテキストを指定する'
-      href: how-to-specify-the-security-context-for-services.md
-    - name: '方法: サービスをインストールおよびアンインストールする'
-      href: how-to-install-and-uninstall-services.md
-    - name: '方法: サービスを開始する'
-      href: how-to-start-services.md
-    - name: '方法: Windows サービスを一時中断する (Visual Basic)'
-      href: how-to-pause-a-windows-service-visual-basic.md
-    - name: '方法: Windows サービスを続行する (Visual Basic)'
-      href: how-to-continue-a-windows-service-visual-basic.md
-    - name: '方法: Windows サービス アプリケーションをデバッグする'
-      href: how-to-debug-windows-service-applications.md
-    - name: '方法: サービスに関する情報のログを記録する'
-      href: how-to-log-information-about-services.md
-    - name: トラブルシューティング:Windows サービスのデバッグ
-      href: troubleshooting-debugging-windows-services.md
-    - name: トラブルシューティング:サービス アプリケーションをインストールできない場合
-      href: troubleshooting-service-application-wont-install.md
-ms.openlocfilehash: 0b60da73c822f1b87d437076915735c327ca60f8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469962"
+    - name: Windows サービス アプリケーションの概要
+      href: introduction-to-windows-service-applications.md
+    - name: 'チュートリアル: Windows サービス アプリを作成する'
+      href: walkthrough-creating-a-windows-service-application-in-the-component-designer.md
+    - name: サービス アプリケーションのプログラミング アーキテクチャ
+      href: service-application-programming-architecture.md
+    - name: '方法: Windows サービスを作成する'
+      href: how-to-create-windows-services.md
+      items:
+        - name: '方法: プログラムでサービスを作成する'
+          href: how-to-write-services-programmatically.md
+        - name: '方法: サービス アプリケーションにインストーラーを追加する'
+          href: how-to-add-installers-to-your-service-application.md
+        - name: '方法: サービスのセキュリティ コンテキストを指定する'
+          href: how-to-specify-the-security-context-for-services.md
+        - name: '方法: サービスをインストールおよびアンインストールする'
+          href: how-to-install-and-uninstall-services.md
+        - name: '方法: サービスを開始する'
+          href: how-to-start-services.md
+        - name: '方法: Windows サービスを一時中断する (Visual Basic)'
+          href: how-to-pause-a-windows-service-visual-basic.md
+        - name: '方法: Windows サービスを続行する (Visual Basic)'
+          href: how-to-continue-a-windows-service-visual-basic.md
+        - name: '方法: Windows サービス アプリケーションをデバッグする'
+          href: how-to-debug-windows-service-applications.md
+        - name: '方法: サービスに関する情報のログを記録する'
+          href: how-to-log-information-about-services.md
+        - name: 'トラブルシューティング:Windows サービスのデバッグ'
+          href: troubleshooting-debugging-windows-services.md
+        - name: 'トラブルシューティング:サービス アプリケーションをインストールできない場合'
+          href: troubleshooting-service-application-wont-install.md

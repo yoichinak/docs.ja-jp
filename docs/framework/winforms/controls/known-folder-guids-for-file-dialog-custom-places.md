@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
 ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59140232"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>ファイル ダイアログ ボックスのカスタム プレイス用既知のフォルダー GUID
@@ -289,4 +289,4 @@ ms.locfileid: "59140232"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.FileDialogCustomPlace>
-- [方法: よく使用する場所をファイル ダイアログ ボックスに追加する](how-to-add-a-custom-place-to-a-file-dialog-box.md)
+- [方法: ファイル ダイアログ ボックスにカスタム プレースを追加します。](how-to-add-a-custom-place-to-a-file-dialog-box.md)

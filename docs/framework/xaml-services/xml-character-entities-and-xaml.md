@@ -21,10 +21,10 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59228199"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 文字エンティティと XAML
@@ -67,4 +67,4 @@ XAML は、特殊文字に、XML で定義される文字エンティティを�
 - [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)
 - [マークアップ拡張機能と WPF XAML](../wpf/advanced/markup-extensions-and-wpf-xaml.md)
 - [XamlName の文法](xamlname-grammar.md)
-- [XAML での空白の処理](whitespace-processing-in-xaml.md)
+- [空白 XAML での処理](whitespace-processing-in-xaml.md)

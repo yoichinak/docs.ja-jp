@@ -1,43 +1,36 @@
-items:
 - name: 配置
   href: index.md
   items:
-  - name: .NET Framework の配置
-    href: deploying-the-net-framework.md
-    items:
-    - name: 配置ガイド (開発者向け)
-      href: deployment-guide-for-developers.md
-    - name: 配置ガイド (管理者向け)
-      href: guide-for-administrators.md
-    - name: .NET Framework 4.5 のインストール中のシステム再起動の削減
-      href: reducing-system-restarts.md
-    - name: '方法: .NET Framework 4.5 インストーラーの進行状況を表示する'
-      href: how-to-get-progress-from-the-dotnet-installer.md
-    - name: .NET Framework の初期化エラー:ユーザー エクスペリエンスの管理
-      href: initialization-errors-managing-the-user-experience.md
-    - name: '方法: CLR のアクティブ化に関する問題をデバッグする'
-      href: how-to-debug-clr-activation-issues.md
-  - name: .NET Framework アプリケーションの配置
-    href: net-framework-applications.md
-    items:
-    - name: ランタイムがアセンブリを検索する方法
-      href: how-the-runtime-locates-assemblies.md
-    - name: アセンブリの読み込みのベスト プラクティス
-      href: best-practices-for-assembly-loading.md
-  - name: .NET Framework Client Profile
-    href: client-profile.md
-  - name: side-by-side 実行
-    href: side-by-side-execution.md
-    items:
-    - name: アセンブリ バインディングのリダイレクトの構成
-      href: configuring-assembly-binding-redirection.md
-    - name: side-by-side 実行用のコンポーネントを作成するためのガイドライン
-      href: guidelines-for-creating-components-for-side-by-side-execution.md
-    - name: インプロセスの side-by-side 実行
-      href: in-process-side-by-side-execution.md
-ms.openlocfilehash: 73f101fc5031c1ae97a626025d6b16c5729a2568
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470330"
+    - name: .NET Framework の配置
+      href: deploying-the-net-framework.md
+      items:
+        - name: 配置ガイド (開発者向け)
+          href: deployment-guide-for-developers.md
+        - name: 配置ガイド (管理者向け)
+          href: guide-for-administrators.md
+        - name: .NET Framework 4.5 のインストール中のシステム再起動の削減
+          href: reducing-system-restarts.md
+        - name: '方法: .NET Framework 4.5 インストーラーの進行状況を表示する'
+          href: how-to-get-progress-from-the-dotnet-installer.md
+        - name: '.NET Framework の初期化エラー:ユーザー エクスペリエンスの管理'
+          href: initialization-errors-managing-the-user-experience.md
+        - name: '方法: CLR のアクティブ化に関する問題をデバッグする'
+          href: how-to-debug-clr-activation-issues.md
+    - name: .NET Framework アプリケーションの配置
+      href: net-framework-applications.md
+      items:
+        - name: ランタイムがアセンブリを検索する方法
+          href: how-the-runtime-locates-assemblies.md
+        - name: アセンブリの読み込みのベスト プラクティス
+          href: best-practices-for-assembly-loading.md
+    - name: .NET Framework Client Profile
+      href: client-profile.md
+    - name: side-by-side 実行
+      href: side-by-side-execution.md
+      items:
+        - name: アセンブリ バインディングのリダイレクトの構成
+          href: configuring-assembly-binding-redirection.md
+        - name: side-by-side 実行用のコンポーネントを作成するためのガイドライン
+          href: guidelines-for-creating-components-for-side-by-side-execution.md
+        - name: インプロセスの side-by-side 実行
+          href: in-process-side-by-side-execution.md

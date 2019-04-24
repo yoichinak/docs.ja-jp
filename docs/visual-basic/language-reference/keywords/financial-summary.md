@@ -6,10 +6,10 @@ helpviewer_keywords:
 - payment
 ms.assetid: 474f973e-7103-42b7-aa4d-367c935e07e1
 ms.openlocfilehash: 5a7c256b95994db703343338069d7eae3515369c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814537"
 ---
 # <a name="financial-summary-visual-basic"></a>財務処理の概要 (Visual Basic)

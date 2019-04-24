@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: c210475dfab98b2a7e2b62e5a08e5630481f3928
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234221"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774182"
 ---
 ### <a name="exception-message-has-changed-for-failed-datacontract-serialization-in-case-of-an-unknown-type"></a>不明な型の場合に失敗した DataContract シリアル化の例外メッセージが変更された
 

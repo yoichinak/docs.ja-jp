@@ -3,10 +3,10 @@ title: カスタム検索基準
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332535"
 ---
 # <a name="custom-find-criteria"></a>カスタム検索基準
@@ -45,7 +45,7 @@ ms.locfileid: "59332535"
   
      このカスタム ロジックでは、サービスに含まれている各エンドポイントのスコープがすべてチェックされます。 エンドポイントのスコープのいずれかがクライアントによって指定されたスコープのいずれかに一致した場合、探索サービスはクライアントに送り返す応答にそのエンドポイントを追加します。  
   
-3. **CustomDiscoveryExtension.cs**:探索サービスの実装の最後の手順は、カスタムのこの実装を接続することです。 サービス ホストにサービスを検出します。 ここで使用するヘルパー クラスは `CustomDiscoveryExtension` クラスです。 このクラスは <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> クラスを拡張します。 ユーザーは <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> メソッドをオーバーライドする必要があります。 この場合、このメソッドは、前に作成されたカスタム探索サービスのインスタンスを返します。 `PublishedEndpoints` <xref:System.Collections.ObjectModel.ReadOnlyCollection%601>格納しているすべてのアプリケーション エンドポイントに追加される、<xref:System.ServiceModel.ServiceHost>します。 カスタム探索サービスは、これを使用して内部リストを設定します。 ユーザーは、その他のエンドポイント メタデータも追加できます。  
+3. **CustomDiscoveryExtension.cs**:探索サービスの実装の最後の手順は、カスタムのこの実装を接続することです。 サービス ホストにサービスを検出します。 ここで使用するヘルパー クラスは `CustomDiscoveryExtension` クラスです。 このクラスは <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension> クラスを拡張します。 ユーザーは <xref:System.ServiceModel.Discovery.DiscoveryServiceExtension.GetDiscoveryService%2A> メソッドをオーバーライドする必要があります。 この場合、このメソッドは、前に作成されたカスタム探索サービスのインスタンスを返します。 `PublishedEndpoints` は、<xref:System.Collections.ObjectModel.ReadOnlyCollection%601> に追加されるすべてのアプリケーション エンドポイントを含む <xref:System.ServiceModel.ServiceHost> です。 カスタム探索サービスは、これを使用して内部リストを設定します。 ユーザーは、その他のエンドポイント メタデータも追加できます。  
   
  最後に、Program.cs を開きます。 <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior> と `CustomDiscoveryExtension` の両方がホストに追加されていることに注意してください。 これが完了し、探索メッセージの受信に使用されるエンドポイントがホストに追加されると、アプリケーションがカスタム探索サービスを使用できるようになります。  
   

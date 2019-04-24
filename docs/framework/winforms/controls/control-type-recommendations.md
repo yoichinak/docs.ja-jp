@@ -8,10 +8,10 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 5235fe9d-c36a-4c08-ae76-6cb90b50085e
 ms.openlocfilehash: 5dc734997917af7ec4a20a6c12ae04825507c7ce
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098456"
 ---
 # <a name="control-type-recommendations"></a>コントロールの種類に関するアドバイス
@@ -45,35 +45,35 @@ ms.locfileid: "59098456"
   
 -   標準コントロールでは使用できないカスタムの機能を実装する必要があります。  
   
--   [方法: [ツールボックス アイテムの選択] ダイアログ ボックスにコントロールを表示する](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
+-   [方法: 内のコントロールを表示、ツールボックス項目 ダイアログ ボックスの選択](how-to-display-a-control-in-the-choose-toolbox-items-dialog-box.md)  
   
--   [チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化](serializing-collections-designerserializationvisibilityattribute.md)  
+-   [チュートリアル: Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化します。](serializing-collections-designerserializationvisibilityattribute.md)  
   
--   [チュートリアル: Visual C# による Windows フォーム コントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
+-   [チュートリアル: ビジュアルを含む Windows フォーム コントロールからの継承C#](walkthrough-inheriting-from-a-windows-forms-control-with-visual-csharp.md)  
   
--   [方法: コントロールにツールボックス ビットマップを指定する](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
+-   [方法: コントロールにツールボックス ビットマップを指定します。](how-to-provide-a-toolbox-bitmap-for-a-control.md)  
   
--   [方法: 既存の Windows フォーム コントロールから継承する](how-to-inherit-from-existing-windows-forms-controls.md)  
+-   [方法: 継承可能な既存の Windows フォーム コントロール](how-to-inherit-from-existing-windows-forms-controls.md)  
   
 -   [チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ](walkthrough-debugging-custom-windows-forms-controls-at-design-time.md)  
   
--   [方法: コントロール クラスを継承する](how-to-inherit-from-the-control-class.md)  
+-   [方法: コントロール クラスから継承します。](how-to-inherit-from-the-control-class.md)  
   
--   [方法: UserControl の実行時の動作をテストする](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
+-   [方法: UserControl の実行時の動作をテストします。](how-to-test-the-run-time-behavior-of-a-usercontrol.md)  
   
--   [方法: デザイン時にフォームの端に合わせてコントロールを配置する](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
+-   [方法: デザイン時にコントロールをフォームの端を揃える](how-to-align-a-control-to-the-edges-of-forms-at-design-time.md)  
   
--   [方法: UserControl クラスを継承する](how-to-inherit-from-the-usercontrol-class.md)  
+-   [方法: UserControl クラスを継承します。](how-to-inherit-from-the-usercontrol-class.md)  
   
--   [方法: Windows フォームのコントロールを作成する](how-to-author-controls-for-windows-forms.md)  
+-   [方法: Windows フォームのコントロールの作成](how-to-author-controls-for-windows-forms.md)  
   
--   [方法: 複合コントロールを作成する](how-to-author-composite-controls.md)  
+-   [方法: 複合コントロールを作成](how-to-author-composite-controls.md)  
   
 -   [チュートリアル: Visual Basic による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-basic.md)  
   
--   [チュートリアル: Visual C# による複合コントロールの作成](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
+-   [チュートリアル: ビジュアルを含む複合コントロールの作成C#](walkthrough-authoring-a-composite-control-with-visual-csharp.md)  
   
--   [チュートリアル: Visual Basic による Windows フォーム コントロールからの継承](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
+-   [チュートリアル: Visual Basic による Windows フォーム コントロールから継承します。](walkthrough-inheriting-from-a-windows-forms-control-with-visual-basic.md)  
   
 -   [チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成](creating-a-wf-control-design-time-features.md)  
   
@@ -81,5 +81,5 @@ ms.locfileid: "59098456"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: シンプルな Windows フォーム コントロールを開発する](how-to-develop-a-simple-windows-forms-control.md)
+- [方法: 単純な Windows フォーム コントロールを開発します。](how-to-develop-a-simple-windows-forms-control.md)
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

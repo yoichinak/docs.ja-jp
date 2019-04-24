@@ -9,10 +9,10 @@ helpviewer_keywords:
 - spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
 ms.openlocfilehash: 218eb685e546acac76a18450612a1601ab87276b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59109877"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown コントロールの概要 (Windows フォーム)
@@ -27,5 +27,5 @@ ms.locfileid: "59109877"
 
 - <xref:System.Windows.Forms.NumericUpDown>
 - [NumericUpDown コントロール](numericupdown-control-windows-forms.md)
-- [方法: Windows フォームの NumericUpDown コントロールの書式を設定する](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)
+- [方法: Windows フォームの NumericUpDown コントロールの形式を設定します。](how-to-set-the-format-for-the-windows-forms-numericupdown-control.md)
 - [TextBox コントロール](textbox-control-windows-forms.md)

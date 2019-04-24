@@ -3,10 +3,10 @@ title: 'チュートリアル: 非同期を使用して、Web にアクセスし
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59335902"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)
@@ -137,13 +137,13 @@ async/await 機能を使用することで、非同期プログラムをより�
   
 3. 同期ソリューションのコードには、次の 4 つのメソッドが含まれています。  
   
-    -   `SumPageSizes`、から web ページの Url の一覧を取得する`SetUpURLList`号餧ェヒェマル`GetURLContents`と`DisplayResults`を各 URL を処理します。  
+    -   `SumPageSizes` は、`SetUpURLList` から Web ページ URL のリストを取得し、`GetURLContents` と `DisplayResults` を呼び出して各 URL を処理します。  
   
-    -   `SetUpURLList`、これにより、および web アドレスの一覧を返します。  
+    -   `SetUpURLList` は、Web アドレスのリストを作成して返します。  
   
-    -   `GetURLContents`、は各 web サイトのコンテンツをダウンロードして、内容をバイト配列として返します。  
+    -   `GetURLContents` は、各 Web サイトのコンテンツをダウンロードし、バイト配列としてそのコンテンツを返します。  
   
-    -   `DisplayResults`、各 URL のバイト配列内のバイト数が表示されます。  
+    -   `DisplayResults` は、各 URL のバイト配列内のバイト数を表示します。  
   
      次の 4 つのメソッドをコピーしてから下に、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
   
@@ -263,7 +263,7 @@ async/await 機能を使用することで、非同期プログラムをより�
     Using response As WebResponse = webReq.GetResponseAsync()  
     ```  
   
-2. `GetResponseAsync` 返します、<xref:System.Threading.Tasks.Task%601>します。 この場合、*タスク戻り変数*の `TResult` の型は <xref:System.Net.WebResponse> です。 このタスクは、要求されたデータのダウンロードが完了し、タスクが最後まで実行された後に、実際の `WebResponse` オブジェクトを生成するという約束です。  
+2. `GetResponseAsync` は、<xref:System.Threading.Tasks.Task%601> を返します。 この場合、*タスク戻り変数*の `TResult` の型は <xref:System.Net.WebResponse> です。 このタスクは、要求されたデータのダウンロードが完了し、タスクが最後まで実行された後に、実際の `WebResponse` オブジェクトを生成するという約束です。  
   
      取得する、`WebResponse`タスクから値を適用、 [Await](../../../../visual-basic/language-reference/operators/await-operator.md)演算子への呼び出しを`GetResponseAsync`次のコードに示すように、します。  
   
@@ -675,7 +675,7 @@ End Class
   
 ## <a name="see-also"></a>関連項目
 
-- [「Async Sample:Accessing the Web Walkthrough (C#および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample:Accessing the Web Walkthrough (C#および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await 演算子](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

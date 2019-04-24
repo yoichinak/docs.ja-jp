@@ -3,10 +3,10 @@ title: LINQ to DataSet クエリのデバッグ
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
 ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133335"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet クエリのデバッグ
@@ -29,5 +29,5 @@ Visual Studio のデバッグをサポートしている[!INCLUDE[linq_dataset](
   
 ## <a name="see-also"></a>関連項目
 
-- [マネージド コードのデバッグ](/visualstudio/debugger/debugging-managed-code)
+- [マネージド コードをデバッグする](/visualstudio/debugger/debugging-managed-code)
 - [プログラミング ガイド](../../../../docs/framework/data/adonet/programming-guide-linq-to-dataset.md)

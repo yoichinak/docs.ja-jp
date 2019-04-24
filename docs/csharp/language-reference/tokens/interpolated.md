@@ -14,10 +14,10 @@ helpviewer_keywords:
 author: pkulikov
 ms.author: ronpet
 ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920897"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 文字列補間 (C# リファレンス)
@@ -98,5 +98,5 @@ ms.locfileid: "58920897"
 - [数値結果テーブルの書式設定](../keywords/formatting-numeric-results-table.md)
 - [文字列](../../programming-guide/strings/index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C# の特殊文字](index.md)
+- [C# 特殊文字](index.md)
 - [C# リファレンス](../index.md)

@@ -3,10 +3,10 @@ title: 雇用プロセス
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
 ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59313152"
 ---
 # <a name="hiring-process"></a>雇用プロセス
@@ -18,7 +18,7 @@ ms.locfileid: "59313152"
   
  このサンプルでは、次の [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] の機能について説明します。  
   
--   <xref:System.Activities.Statements.Flowchart> <xref:System.Activities.Statements.Sequence>ビジネス プロセスをモデル化するためのワークフロー。  
+-   ビジネス プロセスをモデル化する <xref:System.Activities.Statements.Flowchart> および <xref:System.Activities.Statements.Sequence> ワークフロー。  
   
 -   ワークフロー サービス。  
   
@@ -121,10 +121,10 @@ ms.locfileid: "59313152"
 |アクティビティの構成|プロセス定義では、<xref:System.Activities.Activity> のフリー コンポジションが使用されます。 Flowchart には、その他のアクティビティなどを同時に含んでいる複数の Sequence アクティビティと Parallel アクティビティが含まれています。|HiringRequestService|  
 |並列アクティビティ|-   <xref:System.Activities.Statements.ParallelForEach%601> 並列 (2 人の HR マネージャーの承認手順待機中) の CEO および HR マネージャーの受信トレイで登録に使用されます。<br />-   <xref:System.Activities.Statements.Parallel> 完了し、拒否済みの手順でいくつかのクリーンアップ タスクを実行するために使用します。|HiringRequestService|  
 |モデルの取り消し|フローチャートでは、<xref:System.Activities.Statements.CancellationScope> を使用して、取り消し動作を作成します (この場合、一部のクリーンアップが実行されます)。|HiringRequestService|  
-|カスタマー永続参加要素|`HiringRequestPersistenceParticipant` ワークフロー変数からデータを Contoso HR データベースに格納されているテーブルに保存します。|HiringRequestService|  
-|ワークフロー サービス|`ResumeRequestService` ワークフロー サービスを使用して実装されます。 ワークフロー定義およびサービス情報は、ResumeRequestService.xamlx に含まれています。 サービスは、永続性と追跡を使用するように構成されます。|ResumeRequestService|  
-|永続的なタイマー|`ResumeRequestService` 持続的タイマーを使用して、求人の期間を定義する (タイムアウトになると、求人は終了します)。|ResumeRequestService|  
-|トランザクション|<xref:System.Activities.Statements.TransactionScope> いくつかのアクティビティの実行中のデータの整合性を確認します (新しい履歴書を受信した) 場合に使用されます。|ResumeRequestService|  
+|カスタマー永続参加要素|`HiringRequestPersistenceParticipant` は、ワークフロー変数のデータを Contoso HR データベースに保存されているテーブルに保存します。|HiringRequestService|  
+|ワークフロー サービス|`ResumeRequestService` は、ワークフロー サービスを使用して実装されます。 ワークフロー定義およびサービス情報は、ResumeRequestService.xamlx に含まれています。 サービスは、永続性と追跡を使用するように構成されます。|ResumeRequestService|  
+|永続的なタイマー|`ResumeRequestService` は、永続的なタイマーを使用して、求人の期間を定義します (タイムアウトになると、求人は終了します)。|ResumeRequestService|  
+|トランザクション|<xref:System.Activities.Statements.TransactionScope> は、複数のアクティビティの実行時にデータの一貫性を保つために使用されます (新しい履歴書の受信時)。|ResumeRequestService|  
 |トランザクション|カスタムの永続参加要素 (`HiringRequestPersistenceParticipant`) とカスタムの追跡参加要素 (`HistoryFileTrackingParticipant`) では、同じトランザクションを使用します。|HiringRequestService|  
 |[!INCLUDE[wf1](../../../../includes/wf1-md.md)] アプリケーションでの [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の使用|ワークフローは 2 つの [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーションからアクセスされます。|InternalClient / CareersWebSite|  
   

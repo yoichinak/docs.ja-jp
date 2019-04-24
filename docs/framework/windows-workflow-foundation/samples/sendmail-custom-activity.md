@@ -3,10 +3,10 @@ title: SendMail カスタム アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59321862"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail カスタム アクティビティ
@@ -28,7 +28,7 @@ ms.locfileid: "59321862"
 |目的|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メール メッセージの受信者を格納するアドレスのコレクション。|  
 |CC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メール メッセージのカーボン コピー (CC) 受信者を格納するコレクションをアドレスします。|  
 |BCC|<xref:System.Activities.InArgument%601>\<<xref:System.Net.Mail.MailAddressCollection>>|この電子メール メッセージのブラインド カーボン コピー (BCC) 受信者を格納するアドレスのコレクション。|  
-|トークン|<xref:System.Activities.InArgument%601><IDictionary\<string, string>>|本文で置換するトークン。 この機能を使用すると、本文にいくつかの値を指定した後、このプロパティを使用して提供されるトークンで置換できます。|  
+|トークン|<xref:System.Activities.InArgument%601>< IDictionary\<, string >>|本文で置換するトークン。 この機能を使用すると、本文にいくつかの値を指定した後、このプロパティを使用して提供されるトークンで置換できます。|  
 |BodyTemplateFilePath|String|本文のテンプレートのパス。 `SendMail` アクティビティは、このファイルの内容をその body プロパティにコピーします。<br /><br /> テンプレートは、tokens プロパティの内容によって置き換えられるトークンを含めることができます。|  
 |TestMailTo|<xref:System.Net.Mail.MailAddress>|このプロパティが設定されている場合は、すべての電子メールが指定されているアドレスに送信されます。<br /><br /> このプロパティは、ワークフローをテストするときに使用するためのものです。 たとえば、ことを確認する場合に、すべての電子メールが実際の受信者に送信せず送信されます。|  
 |TestDropPath|String|このプロパティが設定されている場合、すべての電子メールは、指定したファイルにも保存されます。<br /><br /> このプロパティは、送信メールの内容と形式が適切であるかどうかを確認する、ワークフローのデバッグまたはテストするときに使用されるものです。|  
@@ -109,7 +109,7 @@ new SendMail
   
 -   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [SMTP サービス (IIS 6.0) の構成](https://go.microsoft.com/fwlink/?LinkId=150456)  
+-   [SMTP サービス (IIS 6.0) を構成します。](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
 -   [IIS 7.0:SMTP 電子メールを構成します。](https://go.microsoft.com/fwlink/?LinkId=150457)  
   

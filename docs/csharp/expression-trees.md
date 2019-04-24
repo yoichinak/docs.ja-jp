@@ -3,12 +3,12 @@ title: 式ツリー
 description: .NET Core の式ツリーについて、また、それを利用し、検査、変更、実行が可能な構造体としてコードを表す方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: aceb4719-0d5a-4b19-b01f-b51063bcc54f
-ms.openlocfilehash: b7a39ccec293a22e4b4d7d01b30f9f441fd0079b
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: db6e23d1ad0014a7dbb58a0cd473e67d6bd9acc0
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125838"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59096616"
 ---
 # <a name="expression-trees"></a>式ツリー
 
@@ -51,4 +51,3 @@ LINQ クエリを作成するときに関数の引数を作成するには、通
 7. [まとめ](expression-trees-summary.md)
 
     式ツリーに関する情報のまとめです。
-    

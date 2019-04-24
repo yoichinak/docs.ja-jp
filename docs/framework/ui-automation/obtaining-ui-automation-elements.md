@@ -6,10 +6,10 @@ helpviewer_keywords:
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191277"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI オートメーション要素の取得
@@ -34,9 +34,9 @@ ms.locfileid: "59191277"
 ## <a name="conditions"></a>条件  
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] 要素を取得するために使用できるほとんどの手法では、 <xref:System.Windows.Automation.Condition>を指定する必要があります。これは、取得する要素を定義する一連の条件になります。  
   
- 最も簡単な条件は <xref:System.Windows.Automation.Condition.TrueCondition>で、検索範囲内のすべての要素を指定する定義済みオブジェクトが返されます。 <xref:System.Windows.Automation.Condition.FalseCondition>での逆<xref:System.Windows.Automation.Condition.TrueCondition>、はあまり有用では任意の要素から検索するできなくなるとします。  
+ 最も簡単な条件は <xref:System.Windows.Automation.Condition.TrueCondition>で、検索範囲内のすべての要素を指定する定義済みオブジェクトが返されます。 要素が検出されなくなるため、<xref:System.Windows.Automation.Condition.FalseCondition>( <xref:System.Windows.Automation.Condition.TrueCondition>の逆) はあまり有用ではありません。  
   
- その他の 3 つの定義済み条件 ( <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>、および <xref:System.Windows.Automation.Automation.RawViewCondition>) は、単独で使用することも、その他の条件と組み合わせて使用することもできます。 <xref:System.Windows.Automation.Automation.RawViewCondition>、単独で使用すると、は等価<xref:System.Windows.Automation.Condition.TrueCondition>によって要素がフィルター処理しないため、その<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A>または<xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A>プロパティ。  
+ その他の 3 つの定義済み条件 ( <xref:System.Windows.Automation.Automation.ContentViewCondition>、 <xref:System.Windows.Automation.Automation.ControlViewCondition>、および <xref:System.Windows.Automation.Automation.RawViewCondition>) は、単独で使用することも、その他の条件と組み合わせて使用することもできます。 <xref:System.Windows.Automation.Automation.RawViewCondition>を単独で使用した場合、 <xref:System.Windows.Automation.Condition.TrueCondition>または <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsControlElement%2A> プロパティで要素をフィルター処理しないため <xref:System.Windows.Automation.AutomationElement.AutomationElementInformation.IsContentElement%2A> と同等になります。  
   
  その他の条件は 1 つ以上の <xref:System.Windows.Automation.PropertyCondition> オブジェクトで構築され、それぞれはプロパティ値を指定します。 たとえば、 <xref:System.Windows.Automation.PropertyCondition> は要素が有効であることを指定したり、特定のコントロール パターンをサポートすることを指定したりします。  
   
@@ -100,4 +100,4 @@ ms.locfileid: "59191277"
 
 - [プロパティ条件に基づく UI オートメーション要素の検索](../../../docs/framework/ui-automation/find-a-ui-automation-element-based-on-a-property-condition.md)
 - [TreeWalker を使用した UI オートメーション要素間の移動](../../../docs/framework/ui-automation/navigate-among-ui-automation-elements-with-treewalker.md)
-- [UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)

@@ -3,10 +3,10 @@ title: 発行済みトークンを使用したメッセージ セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
 ms.openlocfilehash: 3c2669a4f569d26be15fc7b338f7b01c3e94791c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195099"
 ---
 # <a name="message-security-with-issued-tokens"></a>発行済みトークンを使用したメッセージ セキュリティ
@@ -19,4 +19,4 @@ ms.locfileid: "59195099"
 ## <a name="see-also"></a>関連項目
 
 - [フェデレーションと発行済みトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

@@ -5,10 +5,10 @@ helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
 ms.openlocfilehash: 86705a4f8daa327c442ac6c53c9b44c5b5c5c2ad
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427176"
 ---
 # <a name="configuring-http-and-https"></a>HTTP および HTTPS の構成
@@ -62,4 +62,4 @@ HTTP Server API は、HttpCfg からは使用できない高度な構成設定�
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.WSDualHttpBinding>
-- [方法: SSL 証明書を使用してポートを構成する](how-to-configure-a-port-with-an-ssl-certificate.md)
+- [方法: SSL 証明書でポートを構成します。](how-to-configure-a-port-with-an-ssl-certificate.md)

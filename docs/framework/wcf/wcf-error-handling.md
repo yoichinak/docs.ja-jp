@@ -3,10 +3,10 @@ title: WCF エラー処理
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306288"
 ---
 # <a name="wcf-error-handling"></a>WCF エラー処理
@@ -41,10 +41,10 @@ WCF アプリケーションで発生したエラーは次の 3 つのグルー�
  <xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスでは、WCF アプリケーションがエラーに応答する方法を詳細に制御できます。  クライアントに返されるエラー メッセージを制御し、ログ記録などのカスタム エラー処理を実行できるようにします。  詳細については<xref:System.ServiceModel.Dispatcher.IErrorHandler>と[拡張コントロール経由でエラー処理およびレポートの作成](../../../docs/framework/wcf/samples/extending-control-over-error-handling-and-reporting.md)  
   
 ## <a name="servicehost-events"></a>ServiceHost イベント  
- <xref:System.ServiceModel.ServiceHost> クラスはサービスをホストし、エラー処理に必要になる可能性のあるいくつかのイベントを定義します。 例:  
+ <xref:System.ServiceModel.ServiceHost> クラスはサービスをホストし、エラー処理に必要になる可能性のあるいくつかのイベントを定義します。 例えば:  
   
 1. <xref:System.ServiceModel.Channels.CommunicationObject.Faulted>
   
 2. <xref:System.ServiceModel.ServiceHostBase.UnknownMessageReceived>
   
- 詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.ServiceHost>
+ 詳細については、「<xref:System.ServiceModel.ServiceHost>」を参照してください。

@@ -3,10 +3,10 @@ title: '方法: ワークフローを作成する'
 ms.date: 03/30/2017
 ms.assetid: 87234108-8e21-4cb3-9340-4a1a13f3f98c
 ms.openlocfilehash: 4b24e57cce4d42645fc1750ac932e5f24cf24913
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134798"
 ---
 # <a name="how-to-create-a-workflow"></a>方法: ワークフローを作成する
@@ -19,15 +19,15 @@ ms.locfileid: "59134798"
 >  チュートリアルの完成版をダウンロードするには、「 [Windows Workflow Foundation (WF45) - Getting Started Tutorial (Windows Workflow Foundation (WF45) - チュートリアル入門)](https://go.microsoft.com/fwlink/?LinkID=248976)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: シーケンシャル ワークフローの作成](how-to-create-a-sequential-workflow.md)  
+ [方法: シーケンシャル ワークフローを作成します。](how-to-create-a-sequential-workflow.md)  
  <xref:System.Activities.Statements.Sequence> アクティビティを使用してシーケンシャルなワークフローを作成する方法を説明します。  
   
- [方法: フローチャート ワークフローを作成する](how-to-create-a-flowchart-workflow.md)  
+ [方法: フローチャート ワークフローを作成します。](how-to-create-a-flowchart-workflow.md)  
  <xref:System.Activities.Statements.Flowchart> アクティビティを使用してフローチャート ワークフローを作成する方法を説明します。  
   
- [方法: ステート マシン ワークフローの作成](how-to-create-a-state-machine-workflow.md)  
+ [方法: ステート マシン ワークフローを作成します。](how-to-create-a-state-machine-workflow.md)  
  <xref:System.Activities.Statements.StateMachine> アクティビティを使用してステート マシン ワークフローを作成する方法を説明します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows Workflow Foundation プログラミングの新機能](programming.md)
+- [Windows Workflow Foundation プログラミング](programming.md)

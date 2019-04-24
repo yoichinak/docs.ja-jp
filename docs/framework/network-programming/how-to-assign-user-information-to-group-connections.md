@@ -5,21 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 7ce550d6-8f7c-4ea7-add8-5bc27a7b51be
-ms.openlocfilehash: 927a87b250863c4d59e630264ee11286c30deb3a
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2fa84052bcf9ca97b903111fc02e319b25deb384
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54607999"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59296967"
 ---
 # <a name="how-to-assign-user-information-to-group-connections"></a>方法: グループの接続にユーザー情報を割り当てる
 
-  
  次の例では、グループの接続にユーザー情報を割り当てる方法を示します。このセクションのコードが呼び出される前に、アプリケーションで変数の *UserName*、*SecurelyStoredPassword*、および *Domain* が設定されており、*UserName* が一意であると想定します。  
   
 ### <a name="to-assign-user-information-to-a-group-connection"></a>グループの接続にユーザー情報を割り当てるには  
   
-1.  接続グループ名を作成します。  
+1. 接続グループ名を作成します。  
   
     ```csharp  
     SHA1Managed Sha1 = new SHA1Managed();  
@@ -33,7 +32,7 @@ ms.locfileid: "54607999"
     Dim secureGroupName As [String] = Encoding.Default.GetString(updHash)  
     ```  
   
-2.  特定の URL の要求を作成します。 たとえば、次のコードでは URL `http://www.contoso.com.` の要求が作成されます。  
+2. 特定の URL の要求を作成します。 たとえば、次のコードでは URL `http://www.contoso.com.` の要求が作成されます。  
   
     ```csharp  
     WebRequest myWebRequest=WebRequest.Create("http://www.contoso.com");  
@@ -43,7 +42,7 @@ ms.locfileid: "54607999"
     Dim myWebRequest As WebRequest = WebRequest.Create("http://www.contoso.com")  
     ```  
   
-3.  Web 要求の資格情報と ConnectionGroupName を設定し、**GetResponse** を呼び出して **WebResponse** オブジェクトを取得します。  
+3. Web 要求の資格情報と ConnectionGroupName を設定し、**GetResponse** を呼び出して **WebResponse** オブジェクトを取得します。  
   
     ```csharp  
     myWebRequest.Credentials = new NetworkCredential(UserName, SecurelyStoredPassword, Domain);   
@@ -59,7 +58,7 @@ ms.locfileid: "54607999"
     Dim myWebResponse As WebResponse = myWebRequest.GetResponse()  
     ```  
   
-4.  WebRespose オブジェクトを使用した後、応答ストリームを閉じます。  
+4. WebRespose オブジェクトを使用した後、応答ストリームを閉じます。  
   
     ```csharp  
     MyWebResponse.Close();  
@@ -109,5 +108,6 @@ MyWebResponse.Close()
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [接続の管理](../../../docs/framework/network-programming/managing-connections.md)
 - [接続のグループ化](../../../docs/framework/network-programming/connection-grouping.md)

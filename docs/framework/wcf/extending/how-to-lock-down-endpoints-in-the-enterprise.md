@@ -3,10 +3,10 @@ title: '方法: 企業内のエンドポイントをロックダウンする'
 ms.date: 03/30/2017
 ms.assetid: 1b7eaab7-da60-4cf7-9d6a-ec02709cf75d
 ms.openlocfilehash: da90c2e9d096d32c819590058f1e513224fd9242
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305967"
 ---
 # <a name="how-to-lock-down-endpoints-in-the-enterprise"></a>方法: 企業内のエンドポイントをロックダウンする
@@ -65,5 +65,5 @@ ms.locfileid: "59305967"
   
 ## <a name="see-also"></a>関連項目
 
-- [DPAPI を使用した構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94954)
-- [RSA を使用した構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94955)
+- [DPAPI を使用して構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94954)
+- [RSA を使用して構成ファイルの要素の暗号化](https://go.microsoft.com/fwlink/?LinkId=94955)

@@ -16,10 +16,10 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826198"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本的なクエリ操作 (Visual Basic)
@@ -36,9 +36,9 @@ ms.locfileid: "58826198"
   
  [!code-vb[VbLINQBasicOps#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#1)]  
   
- `From`句は、データ ソースを指定`customers`、および*範囲変数*、`cust`します。 範囲変数は、クエリ式では、実際の反復は発生しませんが、ループの反復変数のようなは。 クエリが実行されると、多くの場合を使用して、`For Each`ループ、連続する各要素への参照として範囲変数`customers`します。 `cust` の型はコンパイラで推論できるため、明示的に指定する必要はありません。 明示的な型指定なしで記述されたクエリの例については、[クエリ操作 (Visual Basic) での型の関係](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)を参照してください。  
+ `From`句は、データ ソースを指定`customers`、および*範囲変数*、`cust`します。 範囲変数は、クエリ式では、実際の反復は発生しませんが、ループの反復変数のようなは。 クエリが実行されると、多くの場合を使用して、`For Each`ループ、連続する各要素への参照として範囲変数`customers`します。 `cust` の型はコンパイラで推論できるため、明示的に指定する必要はありません。 明示的な型指定なしで記述されたクエリの例については、次を参照してください。[クエリ操作 (Visual Basic) での型の関係](../../../../visual-basic/programming-guide/concepts/linq/type-relationships-in-query-operations.md)します。  
   
- 使用する方法についての詳細、 `From` Visual Basic での句を参照してください[句から](../../../../visual-basic/language-reference/queries/from-clause.md)します。  
+ 使用する方法についての詳細、 `From` Visual basic での句を参照してください[句から](../../../../visual-basic/language-reference/queries/from-clause.md)します。  
   
 ## <a name="filtering-data-where"></a>データのフィルター処理 (場所)  
  おそらく、最も一般的なクエリ操作では、ブール式の形式でフィルターを適用するは。 クエリは、式が true の要素のみを返します。 A`Where`句を使用して、フィルター処理を実行します。 フィルターは、結果のシーケンスに含めるデータ ソース内のどの要素を指定します。 次の例では、住所がロンドンを持つお客様のみが含まれます。  
@@ -57,7 +57,7 @@ Where cust.City = "London" And cust.Name = "Devon"
 Where cust.City = "London" Or cust.City = "Paris"   
 ```  
   
- 使用する方法についての詳細、 `Where` Visual Basic での句を参照してください[Where 句](../../../../visual-basic/language-reference/queries/where-clause.md)します。  
+ 使用する方法についての詳細、 `Where` Visual basic での句を参照してください[Where 句](../../../../visual-basic/language-reference/queries/where-clause.md)します。  
   
 ## <a name="ordering-data-order-by"></a>データ (Order By) の並べ替え  
  多くの場合は、特定の順序に返されるデータを並べ替えると便利です。 `Order By`句には、指定されたフィールドで並べ替えるに返されたシーケンスで要素が発生します。 たとえば、次のクエリがに基づいて結果を並べ替えます、`Name`プロパティ。 `Name`文字列では、a ~ Z、返されるデータは、アルファベット順に並べ替えられます。  
@@ -66,7 +66,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  結果を逆の順序 (Z から A) で並び替えるには、`Order By...Descending` 句を使用します。 既定値は`Ascending`がいずれも`Ascending`も`Descending`を指定します。  
   
- 使用する方法についての詳細、 `Order By` Visual Basic での句を参照してください[Order By 句](../../../../visual-basic/language-reference/queries/order-by-clause.md)します。  
+ 使用する方法についての詳細、 `Order By` Visual basic での句を参照してください[Order By 句](../../../../visual-basic/language-reference/queries/order-by-clause.md)します。  
   
 ## <a name="selecting-data-select"></a>データ (選択) を選択します。  
  `Select`句は、フォームと返される要素の内容を指定します。 完全な結果はで構成されているかどうかを指定するたとえば、`Customer`オブジェクト、1 つにすぎません`Customer`計算に基づいて、プロパティ、プロパティのサブセット、さまざまなデータ ソース、または新しい結果の種類からのプロパティの組み合わせ。 `Select` 句でソース要素のコピー以外のものを生成する場合、その操作は*投影*と呼ばれます。  
@@ -95,7 +95,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      [!code-vb[VbLINQBasicOps#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#8)]  
   
- 使用する方法についての詳細、 `Select` Visual Basic での句を参照してください[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)します。  
+ 使用する方法についての詳細、 `Select` Visual basic での句を参照してください[Select 句](../../../../visual-basic/language-reference/queries/select-clause.md)します。  
   
 ## <a name="joining-data-join-and-group-join"></a>結合のデータ (結合やグループ結合)  
  複数のデータ ソースを組み合わせることができます、`From`いくつかの方法で句。 たとえば、次のコードでは、2 つのデータ ソースを使用して、暗黙的に結果にこれらの両方からのプロパティを結合します。 クエリでは、母音で始まる最後名前受講者を選択します。  
@@ -109,7 +109,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  [!code-vb[VbLINQBasicOps#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#10)]  
   
- `Group Join` 同じようにコレクションを 1 つの階層コレクションを組み合わせて、 `LEFT JOIN` sql です。 詳細については、[Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)と[Group Join 句](../../../../visual-basic/language-reference/queries/group-join-clause.md)を参照してください。  
+ `Group Join` 同じようにコレクションを 1 つの階層コレクションを組み合わせて、 `LEFT JOIN` sql です。 詳細については、次を参照してください。 [Join 句](../../../../visual-basic/language-reference/queries/join-clause.md)と[Group Join 句](../../../../visual-basic/language-reference/queries/group-join-clause.md)します。  
   
 ## <a name="grouping-data-group-by"></a>データのグループ化 (Group By)  
  追加することができます、`Group By`要素の 1 つまたは複数のフィールドに従ってのクエリ結果内の要素をグループ化する句。 たとえば、次のコードでは、クラス年ごと学生をグループ化します。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 9baea3ce-27b3-4b4f-af98-9ad0f9467e6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aeba97a5caef8fc705a3b04496ce1fd17085ec5d
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 47543056eaa538b008db3332dda776c0f300108d
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409316"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59078474"
 ---
 # <a name="default-marshaling-for-strings"></a>文字列に対する既定のマーシャリング
 <xref:System.String?displayProperty=nameWithType> と <xref:System.Text.StringBuilder?displayProperty=nameWithType> クラスのマーシャリング動作は類似しています。  
@@ -264,6 +264,7 @@ public class Window {
 ```  
   
 ## <a name="see-also"></a>関連項目
+
 - [既定のマーシャリング動作](default-marshaling-behavior.md)
 - [Blittable 型と非 Blittable 型](blittable-and-non-blittable-types.md)
 - [方向属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))

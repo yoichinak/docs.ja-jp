@@ -1,45 +1,38 @@
-items:
 - name: トランザクション処理
   href: index.md
   items:
-  - name: トランザクションの基礎
-    href: transaction-fundamentals.md
-  - name: System.Transactions により提供される機能
-    href: features-provided-by-system-transactions.md
-    items:
-    - name: トランザクション アプリケーションの作成
-      href: writing-a-transactional-application.md
+    - name: トランザクションの基礎
+      href: transaction-fundamentals.md
+    - name: System.Transactions により提供される機能
+      href: features-provided-by-system-transactions.md
       items:
-      - name: トランザクション スコープを使用した暗黙的なトランザクションの実装
-        href: implementing-an-implicit-transaction-using-transaction-scope.md
-      - name: CommittableTransaction を使用した明示的なトランザクションの実装
-        href: implementing-an-explicit-transaction-using-committabletransaction.md
-      - name: DependentTransaction によるコンカレンシーの管理
-        href: managing-concurrency-with-dependenttransaction.md
-      - name: Enterprise Services および COM+ トランザクションとの相互運用性
-        href: interoperability-with-enterprise-services-and-com-transactions.md
-      - name: トランザクション管理のエスカレーション
-        href: transaction-management-escalation.md
-      - name: 診断トレース
-        href: diagnostic-traces.md
-      - name: ASP.NET での System.Transactions の使用
-        href: using-system-transactions-in-aspnet.md
-    - name: リソース マネージャーの実装
-      href: implementing-a-resource-manager.md
-      items:
-      - name: トランザクションの参加要素としてのリソースの参加
-        href: enlisting-resources-as-participants-in-a-transaction.md
-      - name: 単一フェースおよび複数フェーズでのトランザクションのコミット
-        href: committing-a-transaction-in-single-phase-and-multi-phase.md
-      - name: 回復の実行
-        href: performing-recovery.md
-      - name: リソースへのアクセス時のセキュリティ信頼レベル
-        href: security-trust-levels-in-accessing-resources.md
-      - name: 単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用した最適化
-        href: optimization-spc-and-promotable-spn.md
-ms.openlocfilehash: 9ebce82b22c684bc2cee3892cb53803eef725dee
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470242"
+        - name: トランザクション アプリケーションの作成
+          href: writing-a-transactional-application.md
+          items:
+            - name: トランザクション スコープを使用した暗黙的なトランザクションの実装
+              href: implementing-an-implicit-transaction-using-transaction-scope.md
+            - name: CommittableTransaction を使用した明示的なトランザクションの実装
+              href: implementing-an-explicit-transaction-using-committabletransaction.md
+            - name: DependentTransaction によるコンカレンシーの管理
+              href: managing-concurrency-with-dependenttransaction.md
+            - name: Enterprise Services および COM+ トランザクションとの相互運用性
+              href: interoperability-with-enterprise-services-and-com-transactions.md
+            - name: トランザクション管理のエスカレーション
+              href: transaction-management-escalation.md
+            - name: 診断トレース
+              href: diagnostic-traces.md
+            - name: ASP.NET での System.Transactions の使用
+              href: using-system-transactions-in-aspnet.md
+        - name: リソース マネージャーの実装
+          href: implementing-a-resource-manager.md
+          items:
+            - name: トランザクションの参加要素としてのリソースの参加
+              href: enlisting-resources-as-participants-in-a-transaction.md
+            - name: 単一フェースおよび複数フェーズでのトランザクションのコミット
+              href: committing-a-transaction-in-single-phase-and-multi-phase.md
+            - name: 回復の実行
+              href: performing-recovery.md
+            - name: リソースへのアクセス時のセキュリティ信頼レベル
+              href: security-trust-levels-in-accessing-resources.md
+            - name: 単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用した最適化
+              href: optimization-spc-and-promotable-spn.md

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 1545c807e3bef675e63e14d01ab82c1131600f39
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235703"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804375"
 ---
 ### <a name="itemsclear-does-not-remove-duplicates-from-selecteditems"></a>Items.Clear で SelectedItems から重複部分が削除されない
 

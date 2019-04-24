@@ -1,20 +1,13 @@
-items:
 - name: Visual Basic における配列
   href: index.md
   items:
-  - name: 配列の次元
-    href: array-dimensions.md
-  - name: '方法: 配列変数を初期化する'
-    href: how-to-initialize-an-array-variable.md
-  - name: '方法: 配列を並べ替える'
-    href: how-to-sort-an-array.md
-  - name: '方法: 配列を別の配列に代入する'
-    href: how-to-assign-one-array-to-another-array.md
-  - name: 配列のトラブルシューティング
-    href: troubleshooting-arrays.md
-ms.openlocfilehash: cec0bed9cd5de72b0b48d6e8392715bb792e0836
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469755"
+    - name: 配列の次元
+      href: array-dimensions.md
+    - name: '方法: 配列変数を初期化する'
+      href: how-to-initialize-an-array-variable.md
+    - name: '方法: 配列を並べ替える'
+      href: how-to-sort-an-array.md
+    - name: '方法: 配列を別の配列に代入する'
+      href: how-to-assign-one-array-to-another-array.md
+    - name: 配列のトラブルシューティング
+      href: troubleshooting-arrays.md

@@ -1,5 +1,5 @@
 ---
-title: '方法 : カスタム数値書式プロバイダーを定義して使用する'
+title: '方法: カスタム数値書式プロバイダーを定義して使用する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18a784db1ff02f459fbc2265c3ca1a2abfaff9b4
-ms.sourcegitcommit: a885cc8c3e444ca6471348893d5373c6e9e49a47
+ms.openlocfilehash: 4fab94c85745bf17a632d04c563070d79b48aa95
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43879037"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59318378"
 ---
-# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>方法 : カスタム数値書式プロバイダーを定義して使用する
+# <a name="how-to-define-and-use-custom-numeric-format-providers"></a>方法: カスタム数値書式プロバイダーを定義して使用する
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、数値の文字列形式を広範囲に制御できます。 数値の書式をカスタマイズするため、次の機能をサポートしています。  
   
 -   標準の数値書式指定文字列: 数値をその文字列形式に変換するための定義済みの書式セットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの数値書式指定メソッドと共に使用できます。 詳細については、「[標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)」を参照してください。  
@@ -37,9 +37,9 @@ ms.locfileid: "43879037"
   
 ### <a name="to-define-a-custom-format-provider"></a>カスタム書式プロバイダーを定義するには  
   
-1.  <xref:System.IFormatProvider> および <xref:System.ICustomFormatter>インターフェイスを実装するクラスを定義します。  
+1. <xref:System.IFormatProvider> および <xref:System.ICustomFormatter>インターフェイスを実装するクラスを定義します。  
   
-2.  <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドを実装します。 <xref:System.IFormatProvider.GetFormat%2A> は、書式指定メソッド (<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッドなど) が実際にカスタム書式設定の実行を担当するオブジェクトを取得するために呼び出すコールバック メソッドです。 <xref:System.IFormatProvider.GetFormat%2A> の一般的な実装では、次が実行されます。  
+2. <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドを実装します。 <xref:System.IFormatProvider.GetFormat%2A> は、書式指定メソッド (<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッドなど) が実際にカスタム書式設定の実行を担当するオブジェクトを取得するために呼び出すコールバック メソッドです。 <xref:System.IFormatProvider.GetFormat%2A> の一般的な実装では、次が実行されます。  
   
     1.  メソッド パラメーターとして渡される <xref:System.Type> オブジェクトが <xref:System.ICustomFormatter> インターフェイスを表すかどうかを決定します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "43879037"
   
     3.  パラメーターが <xref:System.ICustomFormatter> インターフェイスを表していない場合、<xref:System.IFormatProvider.GetFormat%2A> は、`null` を返します。  
   
-3.  <xref:System.ICustomFormatter.Format%2A> メソッドを実装します。 このメソッドは、<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッドによって呼び出され、数値の文字列形式を返します。 メソッドの実装には通常、次の作業を行います。  
+3. <xref:System.ICustomFormatter.Format%2A> メソッドを実装します。 このメソッドは、<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッドによって呼び出され、数値の文字列形式を返します。 メソッドの実装には通常、次の作業を行います。  
   
     1.  必要に応じて、`provider` パラメーターを調べることで、メソッドが書式指定サービスを提供する正当なものであることを確認します。 <xref:System.IFormatProvider> と <xref:System.ICustomFormatter> の両方を実装する書式設定オブジェクトの場合、現在の書式設定オブジェクトと等しいことを確認するため、`provider` パラメーターをテストする必要があります。  
   
@@ -59,9 +59,9 @@ ms.locfileid: "43879037"
   
 ### <a name="to-use-a-custom-numeric-formatting-object"></a>カスタム数値書式設定オブジェクトを使用するには  
   
-1.  カスタム書式指定クラスの新しいインスタンスを作成します。  
+1. カスタム書式指定クラスの新しいインスタンスを作成します。  
   
-2.  それをカスタム書式指定オブジェクト、書式指定子 (使用されていない場合は <xref:System.String.Empty?displayProperty=nameWithType>)、および書式設定する数値に渡す、<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 書式指定メソッドを呼び出します。  
+2. それをカスタム書式指定オブジェクト、書式指定子 (使用されていない場合は <xref:System.String.Empty?displayProperty=nameWithType>)、および書式設定する数値に渡す、<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> 書式指定メソッドを呼び出します。  
   
 ## <a name="example"></a>例  
  次の例では、米国の電話番号を表す数値を NANP または E.123 形式に変換する、`TelephoneFormatter` という名前のカスタム数値書式プロバイダーを定義します。 このメソッドは、"N" (NANP 形式を出力) と "I" (国際 E.123 形式を出力) の 2 つの書式指定子を処理します。  
