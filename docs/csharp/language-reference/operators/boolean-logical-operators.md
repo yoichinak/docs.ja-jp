@@ -33,10 +33,10 @@ helpviewer_keywords:
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
 ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: d21bee9dbd32b9540ad30f9d0e2e874227040be3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59427319"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>ブール論理演算子 (C# リファレンス)
@@ -164,7 +164,7 @@ x = x op y
 - 論理否定演算子 `!`
 - 論理 AND 演算子 `&`
 - 論理排他的 OR 演算子 `^`
-- 論理演算子 OR `|`
+- 論理 OR 演算子 `|`
 - 条件付き論理 AND 演算子 `&&`
 - 条件付き論理 OR 演算子 `||`
 
@@ -186,10 +186,10 @@ x = x op y
 
 - [論理否定演算子](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [論理演算子](~/_csharplang/spec/expressions.md#logical-operators)
-- [条件付き論理演算子](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [条件論理演算子](~/_csharplang/spec/expressions.md#conditional-logical-operators)
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a6d205cc9b13a43cd3b519c2a262f3db767ace7b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59309486"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613253"
 ---
 # <a name="com-callable-wrapper"></a>COM 呼び出し可能ラッパー
 
@@ -182,7 +182,7 @@ public class LoanApp
 
 デュアル インターフェイスは、COM クライアントによるインターフェイス メンバーへの事前バインディングと遅延バインディングを有効にします。 デザイン時およびテスト中は、クラス インターフェイスをデュアルに設定すると役に立つ場合があります。 変更されることのないマネージド クラス (およびその基本クラス) の場合、このオプションも使用できます。 それ以外の場合はすべて、クラス インターフェイスをデュアルに設定しないでください。
 
-自動的に生成されたデュアル インターフェイスが適切な場合もまれにありますが、より多くの場合、それはバージョンに関連する複雑さを生じさせます。 たとえば、派生クラスのクラス インターフェイスを使用する COM クライアントは、基本クラスが変更されると簡単に中断します。 サード パーティが基本クラスを提供するとき、クラス インターフェイスのレイアウトを自分で制御することはできません。 さらに、ディスパッチ専用インターフェイスとは異なり、デュアル インターフェイス (**ClassInterfaceType.AutoDual**) は、エクスポートされたタイプ ライブラリ内にクラス インターフェイスの説明を提供します。 そのような説明は、遅延バインディングのクライアントが実行時に DISPID をキャッシュすることを促進します。
+自動的に生成されたデュアル インターフェイスが適切な場合もまれにありますが、より多くの場合、それはバージョンに関連する複雑さを生じさせます。 たとえば、派生クラスのクラス インターフェイスを使用する COM クライアントは、基本クラスが変更されると簡単に中断します。 サード パーティが基本クラスを提供するとき、クラス インターフェイスのレイアウトを自分で制御することはできません。 さらに、ディスパッチ専用インターフェイスとは異なり、デュアル インターフェイス (**ClassInterfaceType.AutoDual**) は、エクスポートされたタイプ ライブラリ内にクラス インターフェイスの説明を提供します。 そのような説明により、遅延バインディングのクライアントではコンパイル時に DISPID をキャッシュすることが促進されます。
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>すべての COM イベント通知が遅延バインドされていることを確認します。
 
@@ -199,5 +199,5 @@ public class LoanApp
 - <xref:System.Runtime.InteropServices.ClassInterfaceAttribute>
 - [COM ラッパー](com-wrappers.md)
 - [COM への .NET Framework コンポーネントの公開](exposing-dotnet-components-to-com.md)
-- [相互運用のための .NET 型の要件](qualifying-net-types-for-interoperation.md)
+- [要件 (相互運用のための .NET 型の)](qualifying-net-types-for-interoperation.md)
 - [ランタイム呼び出し可能ラッパー](runtime-callable-wrapper.md)
