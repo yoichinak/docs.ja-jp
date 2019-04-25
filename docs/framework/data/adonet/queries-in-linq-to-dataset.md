@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
 ms.openlocfilehash: f4458639aa2c78e7c78bdae66fa2b20d5546743c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878775"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet でのクエリ
 クエリは、データ ソースからデータを取得する式です。 一般に、クエリは専用のクエリ言語で表現されます。たとえば、リレーショナル データベースであれば SQL、XML であれば XQuery が使用されます。 そのため、開発者はクエリの対象となるデータ ソースやデータ形式ごとに新しいクエリ言語を習得する必要があります。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] は、データ ソースや形式の違いを意識せずにデータを扱うことのできる、より簡素化された一貫したモデルを提供します。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] クエリでは、常にプログラミング オブジェクトを操作することになります。  

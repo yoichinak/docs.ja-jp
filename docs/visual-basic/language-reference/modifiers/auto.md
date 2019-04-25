@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Auto keyword [Visual Basic], marshaling strings
 ms.assetid: bf79ba95-a62c-48a5-916f-0ac7a52c13ec
 ms.openlocfilehash: e4beb320b3aa0cadb790dd3ab92255496bc32f05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802705"
 ---
 # <a name="auto-visual-basic"></a>Auto (Visual Basic)
 Visual Basic で宣言されている外部プロシージャの外部名に基づいて、.NET Framework の規則に従って文字列をマーシャ リングする必要がありますを指定します。  

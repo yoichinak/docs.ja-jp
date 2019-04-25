@@ -11,10 +11,10 @@ author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9e40f93be7f2dad4a80a4f4d23f61f3c93061751
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874940"
 ---
 # <a name="code-contracts"></a>コード コントラクト
 

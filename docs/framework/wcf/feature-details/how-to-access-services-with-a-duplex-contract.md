@@ -8,11 +8,11 @@ helpviewer_keywords:
 - duplex contracts [WCF]
 ms.assetid: 746a9d64-f21c-426c-b85d-972e916ec6c5
 ms.openlocfilehash: 366fd9d6aa220bcbec1ee8fb2a04d1b84755800a
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855141"
 ---
 # <a name="how-to-access-services-with-a-duplex-contract"></a>方法: Access services と双方向コントラクト
 
@@ -20,7 +20,7 @@ Windows Communication Foundation (WCF) の機能の 1 つは、双方向メッ�
 
 二重バインディングでは、クライアントの IP アドレスをサービスに公開します。 クライアントは、セキュリティを使用して信頼するサービスだけに接続できるようにする必要があります。
 
-基本的な WCF サービスとクライアントの作成に関するチュートリアルについては、[チュートリアル入門](../../../../docs/framework/wcf/getting-started-tutorial.md)を参照してください。
+基本的な WCF サービスとクライアントの作成に関するチュートリアルについては、次を参照してください。[チュートリアル入門](../../../../docs/framework/wcf/getting-started-tutorial.md)します。
 
 ## <a name="to-access-a-duplex-service"></a>双方向サービスにアクセスするには
 
@@ -58,8 +58,7 @@ Windows Communication Foundation (WCF) の機能の 1 つは、双方向メッ�
     End Class
     ```
 
-5. 
-  <xref:System.ServiceModel.InstanceContext> クラスのインスタンスを作成します。 コンストラクターには、クライアント クラスのインスタンスが必要です。
+5. <xref:System.ServiceModel.InstanceContext> クラスのインスタンスを作成します。 コンストラクターには、クライアント クラスのインスタンスが必要です。
 
     ```csharp
     InstanceContext site = new InstanceContext(new CallbackHandler());

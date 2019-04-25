@@ -3,11 +3,11 @@ title: 静的にコンパイルされたクエリ (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 3f4825c7-c3b0-48da-ba4e-8e97fb2a2f34
 ms.openlocfilehash: ff708dd14d27b34be797f1630dabe27a56c5a219
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908337"
 ---
 # <a name="statically-compiled-queries-linq-to-xml-visual-basic"></a>静的にコンパイルされたクエリ (LINQ to XML) (Visual Basic)
 <xref:System.Xml.XmlDocument> に対し、LINQ to XML で最も重要なパフォーマンスの利点の 1 つは、XPath のクエリは実行時に解釈する必要がある一方で LINQ to XML のクエリは静的にコンパイルされるという点です。 この機能は LINQ to XML に組み込まれているので、追加の手順を実行することなく利用できますが、その違いを理解しておくと、この 2 つの技術のどちらかを選ぶときに役立ちます。 このトピックでは、相違点について説明します。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - getting selection [Windows Forms], DataGridView control [Windows Forms]
 ms.assetid: d93c4b5b-498e-49bc-982a-2229d61778e4
 ms.openlocfilehash: cd3e88b5b01b67f677fbe203a0db9c4de7fe67ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902240"
 ---
 # <a name="how-to-get-the-selected-cells-rows-and-columns-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの選択されたセル、行、および列を取得する
 選択したセル、行、または列から取得できます、<xref:System.Windows.Forms.DataGridView>対応するプロパティを使用してコントロール: <xref:System.Windows.Forms.DataGridView.SelectedCells%2A>、 <xref:System.Windows.Forms.DataGridView.SelectedRows%2A>、および<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>します。 次の手順では、選択したセルを取得しでその行と列のインデックスを表示、<xref:System.Windows.Forms.MessageBox>します。  

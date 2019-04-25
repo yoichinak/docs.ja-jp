@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
 ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802610"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Expression は値であるため、代入式のターゲットにすることはできません。
 ステートメントは、式に値を代入しようとします。 実行時に、書き込み可能な変数、プロパティ、または配列要素にのみ値を割り当てることができます。 次の例では、このエラーは発生する方法を示しています。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - date and time picker controls
 ms.assetid: 501af106-e9fc-4efc-b9b3-c9d8dcaf8c5c
 ms.openlocfilehash: 451172b51427e4932470c53737c7bc276920271c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909169"
 ---
 # <a name="datetimepicker-control-overview-windows-forms"></a>DateTimePicker コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.DateTimePicker>コントロールによりユーザーは日付または時刻の一覧から 1 つの項目を選択します。 2 つの部分に表示される日付の表示に使用する場合: テキスト、および一覧の横の下向きの矢印をクリックしたときに表示されるグリッドで表される日付のドロップダウン リスト。 次のように、グリッド、<xref:System.Windows.Forms.MonthCalendar>コントロールで、複数の日付を選択するために使用できます。 詳細については、<xref:System.Windows.Forms.MonthCalendar>コントロールを参照してください[MonthCalendar コントロールの概要](monthcalendar-control-overview-windows-forms.md)します。  

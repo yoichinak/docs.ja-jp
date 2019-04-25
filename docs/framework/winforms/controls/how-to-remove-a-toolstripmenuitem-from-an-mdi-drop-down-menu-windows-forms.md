@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MDI [Windows Forms], merging menu items
 ms.assetid: bdafe60d-82ee-45bc-97fe-eeefca6e54c1
 ms.openlocfilehash: 7c84d260783e3a511b5ef6a651c71f1ee55acffe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913160"
 ---
 # <a name="how-to-remove-a-toolstripmenuitem-from-an-mdi-drop-down-menu-windows-forms"></a>方法: ToolStripMenuItem を MDI ドロップダウン メニュー (Windows フォーム) から削除します。
 アプリケーションの中には、マルチ ドキュメント インターフェイス (MDI) 子ウィンドウの種類が MDI 親ウィンドウと異なるものがあります。 たとえば、MDI 親がスプレッドシートで、MDI 子がグラフの場合があります。 そのような場合は、異なる種類の MDI 子ウィンドウがアクティブになったときに、MDI 子メニューの内容で MDI 親メニューの内容を更新する必要があります。  
