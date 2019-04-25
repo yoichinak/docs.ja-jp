@@ -3,11 +3,11 @@ title: SQL Server での認証
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
 ms.openlocfilehash: f7fac0756da3bcc19ee6370468f0e0e65c428d35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879016"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server での認証
 SQL Server は、Windows 認証モードと混合モードの 2 つの認証モードをサポートしています。  

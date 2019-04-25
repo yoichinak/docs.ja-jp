@@ -11,11 +11,11 @@ helpviewer_keywords:
 - '#Region keyword [Visual Basic]'
 ms.assetid: 90a6a104-3cbf-47d0-bdc4-b585d0921b87
 ms.openlocfilehash: eaaf0f8279ec905767be3f364a88357f0d393bba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61812646"
 ---
 # <a name="region-directive"></a>#Region ディレクティブ
 Visual Basic ファイルのコードのセクションを折りたたんで非表示にします。  

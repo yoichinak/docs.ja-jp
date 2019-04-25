@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Dock values [WPF], getting
 ms.assetid: fcf4ab8a-c7cd-4835-8d04-de1c999ab4a8
 ms.openlocfilehash: fb6c8a7d62aa09a6e1d82cb4079d1425a7f39f8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910287"
 ---
 # <a name="how-to-get-or-set-a-dock-value"></a>方法: Dock の値を取得または設定する
 次の例を割り当てる方法を示しています、<xref:System.Windows.Controls.Dock>オブジェクトの値。 この例では、<xref:System.Windows.Controls.DockPanel.GetDock%2A>と<xref:System.Windows.Controls.DockPanel.SetDock%2A>メソッドの<xref:System.Windows.Controls.DockPanel>します。  

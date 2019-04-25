@@ -5,11 +5,11 @@ helpviewer_keywords:
 - controls [WPF], listed by category
 ms.assetid: f8a1f78e-d9fa-4367-9ec6-f084577e83bb
 ms.openlocfilehash: 26488b76608aa46b56285581e7368bf24f8b1be7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912406"
 ---
 # <a name="controls-by-category"></a>カテゴリ別のコントロール
 Windows Presentation Foundation (WPF) コントロールは、いくつかのカテゴリに論理的にグループ化することができます。 これらのカテゴリを使用すると、類似の使用パターンや機能を持つコントロールを見つけやすくなり、シナリオに適したコントロールを選択できます。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - add element for <listeners>
 ms.assetid: 81e804a3-ef11-4d39-bbde-bfa012c179e2
 ms.openlocfilehash: ba0ffc4f95b9af7fcd319068501ce0bb9714c2ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673974"
 ---
 # <a name="add-element-for-listeners-for-trace"></a>\<追加 > 要素の\<リスナー > の\<トレース >
 リスナーを追加、**リスナー**コレクション。  

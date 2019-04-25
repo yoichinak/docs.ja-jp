@@ -3,11 +3,11 @@ title: '方法: 計算列を表す'
 ms.date: 03/30/2017
 ms.assetid: 4025f1fd-9dfa-46c0-b04f-34e8bc7957a2
 ms.openlocfilehash: df72562b303e5b9a7c31334df06926f157b59b05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903878"
 ---
 # <a name="how-to-represent-computed-columns"></a>方法: 計算列を表す
 使用して、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Mapping.ColumnAttribute.Expression%2A>プロパティを<xref:System.Data.Linq.Mapping.ColumnAttribute>計算の結果で構成される列を表す属性です。  

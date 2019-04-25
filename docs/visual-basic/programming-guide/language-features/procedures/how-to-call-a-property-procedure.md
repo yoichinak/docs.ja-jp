@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedure calls [Visual Basic], property procedures
 ms.assetid: 96bc4d74-d9c3-4b7a-954d-58ac8553cd94
 ms.openlocfilehash: d05c1b63f5567ade9935f80ecc022eb4840e0af0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864365"
 ---
 # <a name="how-to-call-a-property-procedure-visual-basic"></a>方法: プロパティ プロシージャ (Visual Basic) を呼び出す
 プロパティ プロシージャを呼び出すには、「プロパティ値を保存するか値を取得します。 プロパティは変数にアクセスする同じ方法でアクセスします。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 68f5bc70-14d5-45c9-b288-7d7b1493ee79
 ms.openlocfilehash: eaeee45e2c7856012b4ff20eefea3fca53679467
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800842"
 ---
 # <a name="keyboard-input-in-a-windows-forms-application"></a>Windows フォーム アプリケーションにおけるキーボード入力
 Windows フォームには、特定のキー入力に応答することはしてもインターセプト、変更、およびアプリケーションでは、フォーム、キーの押下を使用およびレベルを制御するための方法を提供します。 標準のキーボード イベントが含まれています。  

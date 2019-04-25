@@ -5,11 +5,11 @@ author: jamesnk
 ms.author: mairaw
 ms.date: 10/17/2018
 ms.openlocfilehash: a656094066eb43ffe64ab405784f4577621b5c46
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910131"
 ---
 # <a name="open-source-library-guidance"></a>オープン ソース ライブラリのガイダンス
 
@@ -29,9 +29,9 @@ ms.locfileid: "53128071"
 
 ## <a name="types-of-recommendations"></a>推奨事項の種類
 
-各記事で 4 種類の推奨事項 (**実施**、**検討**、**回避**、**実施しない**) が提示されます。 推奨事項の種類によって、その推奨設定にどの程度厳密に従う必要があるかが示されます。
+各記事で 4 種類のレコメンデーションが提示されます:**実施**、**検討**、**回避**、**実施しない**です。 推奨事項の種類によって、その推奨設定にどの程度厳密に従う必要があるかが示されます。
 
-**実施**の推奨事項にはほとんど常に従う必要があります。 例:
+**実施**の推奨事項にはほとんど常に従う必要があります。 次に例を示します。
 
 NuGet パッケージを使用してご利用のライブラリの配布を **✔️ 実施**してください。
 

@@ -11,11 +11,11 @@ ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: b22705f1540b237c566721018f974822d5cd8758
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/19/2018
-ms.locfileid: "49454500"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61872847"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF (Managed Extensibility Framework)
 
@@ -62,7 +62,7 @@ Managed Extensibility Framework (MEF) は、軽量で拡張可能なアプリケ
 
 <a name="simplecalculator_an_example_application"></a>
 
-## <a name="simplecalculator-an-example-application"></a>SimpleCalculator: サンプル アプリケーション
+## <a name="simplecalculator-an-example-application"></a>SimpleCalculator:アプリケーションの例
 
 MEF が実行できる処理を理解する最も簡単な方法は、単純な MEF アプリケーションを作成することです。 この例では、SimpleCalculator という名前の単純な電卓を作成します。 SimpleCalculator の目的は、"5+3" や "6-2" などの形式で基本的な算術命令を受け取り、正しい答えを返すコンソール アプリケーションを作成することです。 MEF を使用すると、アプリケーション コードを変更せずに、新しい演算子を追加できます。
 
@@ -439,7 +439,7 @@ catalog.Catalogs.Add(New DirectoryCatalog("C:\SimpleCalculator\SimpleCalculator\
 catalog.Catalogs.Add(new DirectoryCatalog("C:\\SimpleCalculator\\SimpleCalculator\\Extensions"));
 ```
 
- 例に示されているパスを、Extensions ディレクトリのパスに置き換えます。 (この絶対パスはデバッグにのみ使用します。 実稼働アプリケーションでは、相対パスを使用します)。これで、<xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> により、Extensions ディレクトリ内のアセンブリで見つかったすべてのパートが合成コンテナーに追加されます。
+ 例に示されているパスを、Extensions ディレクトリのパスに置き換えます。 (この絶対パスはデバッグにのみ使用します。 運用アプリケーションでは、相対パスを使用します。)これで、<xref:System.ComponentModel.Composition.Hosting.DirectoryCatalog> により、Extensions ディレクトリ内のアセンブリで見つかったすべてのパーツが合成コンテナーに追加されます。
 
  ExtendedOperations プロジェクトで、SimpleCalculator と System.ComponentModel.Composition への参照を追加します。 ExtendedOperations クラス ファイルで、System.ComponentModel.Composition の `Imports` ステートメントまたは `using` ステートメントを追加します。 Visual Basic では、SimpleCalculator の `Imports` ステートメントも追加します。 次に、ExtendedOperations クラス ファイルに次のクラスを追加します。
 

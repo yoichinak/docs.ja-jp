@@ -5,11 +5,11 @@ ms.assetid: e53b029c-9d6d-4c0a-9cdc-5cfca8a5ca47
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 89e8ddf9ea72db63c72bfb5393709b4c20de2a14
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163001"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868578"
 ---
 # <a name="event-element-net-native"></a>\<イベント > 要素 (.NET ネイティブ)
 イベントにランタイム リフレクション ポリシーを適用します。  

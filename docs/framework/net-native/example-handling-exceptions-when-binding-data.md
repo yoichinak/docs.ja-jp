@@ -5,11 +5,11 @@ ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868531"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>例:データ バインド時の例外の処理
 > [!NOTE]

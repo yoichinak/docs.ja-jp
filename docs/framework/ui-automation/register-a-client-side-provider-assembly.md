@@ -11,11 +11,11 @@ helpviewer_keywords:
 - provider assemblies, registering
 ms.assetid: a03af4d9-2771-43cc-b07b-d468dca23190
 ms.openlocfilehash: 3c5c658ffd9b8ac6f9fcd38a9ea979ddb7e0c34c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906647"
 ---
 # <a name="register-a-client-side-provider-assembly"></a>クライアント側プロバイダー アセンブリの登録
 > [!NOTE]

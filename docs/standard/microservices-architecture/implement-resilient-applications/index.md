@@ -1,26 +1,26 @@
 ---
-title: Implementing Resilient Applications
-description: Learn about resilience, a core concept in a microservices architecture. You must know how to handle transient failures gracefully because they will occur.
+title: 回復性の高いアプリケーションの実装
+description: マイクロサービスのアーキテクチャで中核となる概念である、回復性について説明します。 一時的な障害は必ず発生するため、それらを適切に処理する方法を知っておく必要があります。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
 ms.openlocfilehash: 00724509ba6e027ef73f72bfb6f85b8ec0aa9d25
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977708"
 ---
-# <a name="implement-resilient-applications"></a>Implement Resilient Applications
+# <a name="implement-resilient-applications"></a>回復性があるアプリケーションを実装する
 
-*Your microservice and cloud-based applications must embrace the partial failures that will certainly occur eventually. You must design your application to be resilient to those partial failures.*
+*マイクロサービスおよびクラウド ベースのアプリケーションは、最終的に確実に発生する部分的な障害を受け入れる必要があります。そのような部分的な障害に対する回復性があるようにアプリケーションを設計する必要があります。*
 
-Resiliency is the ability to recover from failures and continue to function. It isn't about avoiding failures but accepting the fact that failures will happen and responding to them in a way that avoids downtime or data loss. The goal of resiliency is to return the application to a fully functioning state after a failure.
+回復性は、障害から回復し、引き続き機能する能力です。 これは、障害を回避することではなく、障害が発生するという事実を受け入れ、ダウンタイムまたはデータの損失を回避するようにそれらに対応することです。 回復性の目的は、障害発生後にアプリケーションを完全に機能する状態に戻すことです。
 
-It's challenging enough to design and deploy a microservices-based application. But you also need to keep your application running in an environment where some sort of failure is certain. Therefore, your application should be resilient. It should be designed to cope with partial failures, like network outages or nodes or VMs crashing in the cloud. Even microservices (containers) being moved to a different node within a cluster can cause intermittent short failures within the application.
+マイクロサービスベースのアプリケーションの設計および展開は難しい作業です。 しかし、何らかの障害が確実に発生する環境で、アプリケーションの稼働を維持する必要もあります。 そのため、アプリケーションは、回復性を持っている必要があります。 ネットワークの停止、クラウド内のノードまたは VM のクラッシュなどの部分的な障害に対処するように設計する必要があります。 クラスタ内でマイクロサービス (コンテナー) を別のノードに移動するだけでも、アプリケーション内での断続的な短いエラーが発生する可能性があります。
 
-The many individual components of your application should also incorporate health monitoring features. By following the guidelines in this chapter, you can create an application that can work smoothly in spite of transient downtime or the normal hiccups that occur in complex and cloud-based deployments.
+アプリケーションの多くの個々のコンポーネントにも、正常性監視機能を組み込むも必要があります。 この章のガイドラインに従うと、複雑で、クラウド ベースの展開で発生する一時的なダウンタイムや定期的な障害があってもスムーズに動作するアプリケーションを作成できます。
 
 >[!div class="step-by-step"]
->[Previous](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
->[Next](handle-partial-failure.md)
+>[前へ](../microservice-ddd-cqrs-patterns/microservice-application-layer-implementation-web-api.md)
+>[次へ](handle-partial-failure.md)

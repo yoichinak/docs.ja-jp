@@ -7,11 +7,11 @@ helpviewer_keywords:
 - graphics [WPF], composite drawings
 ms.assetid: 066eb0ab-5f0e-439d-85c6-dca60af269fc
 ms.openlocfilehash: 0af7fbca593627ebe8cd102a02617a27eac50aa5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909991"
 ---
 # <a name="how-to-create-a-composite-drawing"></a>方法: 複合描画を作成する
 この例は、使用する方法を示します、<xref:System.Windows.Media.DrawingGroup>複数を組み合わせることで複雑な描画を作成する<xref:System.Windows.Media.Drawing>オブジェクトを 1 つの複合描画にします。  

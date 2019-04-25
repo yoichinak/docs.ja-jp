@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0365eb37-98cc-4b13-80fb-f1e78847a748
 ms.openlocfilehash: b5a7f68edc49a02bb99ca05765d4582b798e72ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855206"
 ---
 # <a name="how-the-wcf-syndication-object-model-maps-to-atom-and-rss"></a>WCF 配信オブジェクト モデルを Atom や RSS に割り当てる方法
 Windows Communication Foundation (WCF) 配信サービスを開発する場合は、フィードと、次のクラスを使用して項目を作成します。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - CanOverflow property
 ms.assetid: fa10e0ad-4cbf-4c0d-9082-359c2f855d4e
 ms.openlocfilehash: 53f610a728925d454a8833a49e705818f027aec5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913758"
 ---
 # <a name="how-to-manage-toolstrip-overflow-in-windows-forms"></a>方法: Windows フォームで ToolStrip オーバーフローを管理します。
 

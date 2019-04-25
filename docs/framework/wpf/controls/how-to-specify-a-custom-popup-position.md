@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Popup control [WPF], specifying custom position
 ms.assetid: 28c24f39-d3aa-4ee2-b950-384b4a5dab92
 ms.openlocfilehash: dc516f0eb1cfcbac6662497eb4019041eefec2a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911210"
 ---
 # <a name="how-to-specify-a-custom-popup-position"></a>方法: ポップアップのカスタム位置を指定する
 この例のカスタム位置を指定する方法を示しています、<xref:System.Windows.Controls.Primitives.Popup>タイミングを制御、<xref:System.Windows.Controls.Primitives.Popup.Placement%2A>プロパティに設定されて<xref:System.Windows.Controls.Primitives.PlacementMode.Custom>します。  

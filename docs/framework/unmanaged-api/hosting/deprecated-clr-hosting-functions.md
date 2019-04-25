@@ -10,11 +10,11 @@ ms.assetid: 91fbbb35-e543-4814-b806-371cebae8c5a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa84ca0defd173563817673aad183a8b64226d41
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905971"
 ---
 # <a name="deprecated-clr-hosting-functions"></a>非推奨の CLR ホスト関数
 このセクションでは、以前のバージョンのホスト API で使用されていたアンマネージ グローバル静的関数について説明します。  

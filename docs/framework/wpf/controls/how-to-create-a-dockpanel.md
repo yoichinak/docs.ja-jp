@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DockPanel control [WPF], creating
 ms.assetid: 9194f663-e279-4f1a-86d7-125a57d05c6f
 ms.openlocfilehash: 35434a13386ae89fdc1428bd632d21c1551c9871
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911124"
 ---
 # <a name="how-to-create-a-dockpanel"></a>方法: DockPanel を作成する
 ## <a name="example"></a>例  

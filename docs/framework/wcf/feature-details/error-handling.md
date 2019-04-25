@@ -3,11 +3,11 @@ title: エラー処理
 ms.date: 03/30/2017
 ms.assetid: c948841a-7db9-40ae-9b78-587d216cbcaf
 ms.openlocfilehash: 34f4f11176b3827ec3e4622944ffe02be5207df9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856687"
 ---
 # <a name="error-handling"></a>エラー処理
 ## <a name="error-handling-in-windows-communication-foundation"></a>Windows Communication Foundation でのエラー処理  

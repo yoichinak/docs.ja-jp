@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clear element for <listeners> for <source>
 ms.assetid: 76796bb2-9c0b-4526-8135-8bf18b16d8d9
 ms.openlocfilehash: 63d3bb272fcdbee2c59b0569c85f8183cdac8666
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673786"
 ---
 # <a name="clear-element-for-listeners-for-source"></a>\<クリア > 要素の\<リスナー > の\<ソース >
 トレース ソースの `Listeners` コレクションを消去します。  

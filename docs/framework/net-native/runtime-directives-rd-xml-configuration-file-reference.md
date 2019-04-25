@@ -5,11 +5,11 @@ ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906322"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス
 
@@ -92,43 +92,43 @@ ms.locfileid: "58410460"
 
 [Application](../../../docs/framework/net-native/application-element-net-native.md)、[Assembly](../../../docs/framework/net-native/assembly-element-net-native.md)、[AttributeImplies](../../../docs/framework/net-native/attributeimplies-element-net-native.md)、[Namespace](../../../docs/framework/net-native/namespace-element-net-native.md)、[Subtypes](../../../docs/framework/net-native/subtypes-element-net-native.md)、および [Type](../../../docs/framework/net-native/type-element-net-native.md) 要素は、次のポリシーの種類をサポートしています。
 
-- `Activate`. コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。
+- `Activate`。 コンストラクターへの実行時アクセスを制御して、インスタンスのアクティブ化を有効にします。
 
-- `Browse`. プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。
+- `Browse`。 プログラム要素に関する情報の照会を制御しますが、実行時アクセスは有効にしません。
 
-- `Dynamic`. コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。
+- `Dynamic`。 コンストラクター、メソッド、フィールド、プロパティ、およびイベントを含むすべての型のメンバーへの実行時アクセスを制御して、動的プログラミングを有効にします。
 
-- `Serialize`. コンストラクター、フィールド、およびプロパティへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのサードパーティ ライブラリによって型インスタンスをシリアル化および逆シリアル化できるようにします。
+- `Serialize`。 コンストラクター、フィールド、およびプロパティへの実行時アクセスを制御し、Newtonsoft の JSON シリアライザーなどのサードパーティ ライブラリによって型インスタンスをシリアル化および逆シリアル化できるようにします。
 
-- `DataContractSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用するシリアル化のポリシーを制御します。
+- `DataContractSerializer`。 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用するシリアル化のポリシーを制御します。
 
-- `DataContractJsonSerializer`. <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用する JSON シリアル化のポリシーを制御します。
+- `DataContractJsonSerializer`。 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType> クラスを使用する JSON シリアル化のポリシーを制御します。
 
-- `XmlSerializer`. <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> クラスを使用する XML シリアル化のポリシーを制御します。
+- `XmlSerializer`。 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> クラスを使用する XML シリアル化のポリシーを制御します。
 
-- `MarshalObject`. WinRT と COM に参照型をマーシャリングするためのポリシーを制御します。
+- `MarshalObject`。 WinRT と COM に参照型をマーシャリングするためのポリシーを制御します。
 
-- `MarshalDelegate`. ネイティブ コードへの関数ポインターとしてデリゲート型をマーシャリングするためのポリシーを制御します。
+- `MarshalDelegate`。 ネイティブ コードへの関数ポインターとしてデリゲート型をマーシャリングするためのポリシーを制御します。
 
 - `MarshalStructure` . ネイティブ コードに構造体をマーシャリングするためのポリシーを制御します。
 
 これらのポリシーの種類に関連付けられている設定を次に示します。
 
-- `All`. ツール チェーンが削除しないすべての型とメンバーに対するポリシーを有効にします。
+- `All`。 ツール チェーンが削除しないすべての型とメンバーに対するポリシーを有効にします。
 
-- `Auto`. 既定の動作を使用します。 (親要素などによってポリシーがオーバーライドされない限り、ポリシーを指定しないことは、そのポリシーを `Auto` に設定することと同じです。)
+- `Auto`。 既定の動作を使用します。 (親要素などによってポリシーがオーバーライドされない限り、ポリシーを指定しないことは、そのポリシーを `Auto` に設定することと同じです。)
 
-- `Excluded`. プログラム要素のポリシーを無効にします。
+- `Excluded`。 プログラム要素のポリシーを無効にします。
 
-- `Public`. ツール チェーンがメンバーが不要なために削除すると判断した場合を除き、パブリック型またはメンバーのポリシーを有効にします。 (後者の場合は、`Required Public` を使用して、メンバーが保持されており、リフレクション機能があることを確認する必要があります。)
+- `Public`。 ツール チェーンがメンバーが不要なために削除すると判断した場合を除き、パブリック型またはメンバーのポリシーを有効にします。 (後者の場合は、`Required Public` を使用して、メンバーが保持されており、リフレクション機能があることを確認する必要があります。)
 
-- `PublicAndInternal`. パブリックおよび内部型またはメンバーがツール チェーンによって削除されていない場合、それらのポリシーを有効にします。
+- `PublicAndInternal`。 パブリックおよび内部型またはメンバーがツール チェーンによって削除されていない場合、それらのポリシーを有効にします。
 
-- `Required Public`. 使用されているかどうかに関係なく、パブリック型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
+- `Required Public`。 使用されているかどうかに関係なく、パブリック型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
 
-- `Required PublicAndInternal`. 使用されているかどうかに関係なく、パブリックおよび内部両方の型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
+- `Required PublicAndInternal`。 使用されているかどうかに関係なく、パブリックおよび内部両方の型とメンバーを保持し、それらのポリシーを有効にするためにツール チェーンを要求します。
 
-- `Required All`. 使用されているかどうかに関係なく、すべての型とメンバーを保持し、それらのポリシーを有効にするために、ツール チェーンを要求します。
+- `Required All`。 使用されているかどうかに関係なく、すべての型とメンバーを保持し、それらのポリシーを有効にするために、ツール チェーンを要求します。
 
 たとえば、次のランタイム ディレクティブ ファイルは、DataClasses.dll アセンブリ内のすべての型とメンバーのポリシーを定義します。 これは、すべてのパブリック プロパティのシリアル化のリフレクションを有効にし、すべての型と型のメンバーの参照を有効にし、すべての型のアクティブ化を (`Dynamic` 属性により) 有効にして、すべてのパブリック型とメンバーのリフレクションを有効にします。
 
@@ -183,8 +183,7 @@ ms.locfileid: "58410460"
 
 別のランタイム ディレクティブ ファイルにある 2 つの要素が同じプログラム要素 (アセンブリや型など) の同じポリシーの種類を異なる値に設定しようとした場合、次のように競合が解決されます。
 
-1. 
-  `Excluded` 要素が存在する場合はこれが優先されます。
+1. `Excluded` 要素が存在する場合はこれが優先されます。
 
 2. `Required` は `Required` 以外より優先されます。
 
@@ -220,8 +219,7 @@ ms.locfileid: "58410460"
 
 ### <a name="if-child-and-parent-elements-apply-the-same-policy-type"></a>子要素と親要素が同じポリシーの種類を適用する場合
 
-
-  `Excluded` 設定を含め、子要素はその親要素をオーバーライドします。 オーバーライドは、`Auto` を指定する必要がある主な理由です。
+`Excluded` 設定を含め、子要素はその親要素をオーバーライドします。 オーバーライドは、`Auto` を指定する必要がある主な理由です。
 
 次の例では、`DataClasses` にはあるが `DataClasses.ViewModels` にはないものすべてのシリアル化ポリシー設定が `Required Public` になり、`DataClasses` と `DataClasses.ViewModels` の両方にあるものすべてのシリアル化ポリシー設定は `All` になります。
 
@@ -265,8 +263,7 @@ ms.locfileid: "58410460"
 
 #### <a name="the-effect-of-browse-policy"></a>Browse ポリシーの効果
 
-
-  `Browse` ポリシーを型に適用すると、ポリシーが次のように変更されます。
+`Browse` ポリシーを型に適用すると、ポリシーが次のように変更されます。
 
 - 型の基本型が `Browse` ポリシーでマークされます。
 
@@ -308,8 +305,7 @@ ms.locfileid: "58410460"
 
 #### <a name="the-effect-of-dynamic-policy"></a>Dynamic ポリシーの効果
 
-
-  `Dynamic` ポリシーを型に適用すると、ポリシーが次のように変更されます。
+`Dynamic` ポリシーを型に適用すると、ポリシーが次のように変更されます。
 
 - 型の基本型が `Dynamic` ポリシーでマークされます。
 
@@ -369,11 +365,9 @@ ms.locfileid: "58410460"
 
 #### <a name="the-effect-of-serialize-policy"></a>Serialize ポリシーの効果
 
+`Serialize` ポリシーにより、一般的なリフレクション ベースのシリアライザーを使用できるようになります。 ただし、Microsoft では、Microsoft 以外のシリアライザーの正確なリフレクション アクセス パターンを認識していないため、このポリシーが常に効果的であるとは限りません。
 
-  `Serialize` ポリシーにより、一般的なリフレクション ベースのシリアライザーを使用できるようになります。 ただし、Microsoft では、Microsoft 以外のシリアライザーの正確なリフレクション アクセス パターンを認識していないため、このポリシーが常に効果的であるとは限りません。
-
-
-  `Serialize` ポリシーを型に適用すると、ポリシーが次のように変更されます。
+`Serialize` ポリシーを型に適用すると、ポリシーが次のように変更されます。
 
 - 型の基本型が `Serialize` ポリシーでマークされます。
 

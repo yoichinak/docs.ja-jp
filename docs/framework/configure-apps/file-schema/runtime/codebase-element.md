@@ -10,11 +10,11 @@ helpviewer_keywords:
 - codeBase element
 ms.assetid: d48a3983-2297-43ff-a14d-1f29d3995822
 ms.openlocfilehash: b5825efcc613689e73fb56b6695fe7c75ff09136
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674195"
 ---
 # <a name="codebase-element"></a>\<codeBase > 要素
 

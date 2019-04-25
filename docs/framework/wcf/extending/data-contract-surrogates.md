@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
 ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858027"
 ---
 # <a name="data-contract-surrogates"></a>データ コントラクト サロゲート
 データ コントラクト*サロゲート*は高度な機能、データ コントラクト モデルに基づいて構築されています。 この機能は、型をシリアル化または逆シリアル化する方法や、型をメタデータに投影する方法をユーザーが変更する場合に、型のカスタマイズと置換に使用することを目的としています。 サロゲートを使用できるのは、型のデータ コントラクトが指定されていない場合、フィールドやプロパティが <xref:System.Runtime.Serialization.DataMemberAttribute> 属性でマークされていない場合、またはユーザーがスキーマのバリエーションを動的に作成することを希望している場合などです。  

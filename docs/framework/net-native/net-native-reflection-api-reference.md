@@ -5,11 +5,11 @@ ms.assetid: 0429c049-22a3-4ba1-9cc8-f6ee91e31d9c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 031ec811315f4a9d9f1f73d34e32236d2cf27729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61866835"
 ---
 # <a name="net-native-reflection-api-reference"></a>.NET ネイティブ リフレクション API リファレンス
 [!INCLUDE[net_native](../../../includes/net-native-md.md)] 次の 3 つの新しい例外の種類が含まれます。[System.Runtime.CompilerServices.MissingInteropDataException](../../../docs/framework/net-native/missinginteropdataexception-class-net-native.md)、 [System.Reflection.MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)、および[System.Reflection.MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md). 3 つの例外型すべてについて、次の点に注意してください。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing key-frame animation
 ms.assetid: b059216f-7d4b-4ca8-a019-bc287ee7bf16
 ms.openlocfilehash: d0ea56b24f8fffeb688d297a675681bce3fdc4e0
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911508"
 ---
 # <a name="how-to-control-key-frame-animation-timing"></a>方法: キー フレーム アニメーションのタイミングを制御する
 
@@ -63,9 +63,9 @@ ms.locfileid: "57489879"
 
 ![キーの値が 0、5、および 10 秒の位置に到達](./media/graphicsmm-keyframe-keytime4-paced.png "graphicsmm_keyframe_keytime4_paced")
 
-わかりやすくするため、この例を使用してローカル、アニメーションのコードでは、いないストーリー ボードを 1 つのアニメーションを 1 つのプロパティに適用されているが、ストーリー ボードを代わりに使用する例を変更する可能性があります。 コード内のストーリー ボードを宣言する方法を示す例は、[ストーリー ボードを使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)を参照してください。
+わかりやすくするため、この例を使用してローカル、アニメーションのコードでは、いないストーリー ボードを 1 つのアニメーションを 1 つのプロパティに適用されているが、ストーリー ボードを代わりに使用する例を変更する可能性があります。 コード内のストーリー ボードを宣言する方法を示す例は、次を参照してください。[ストーリー ボードを使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)します。
 
-サンプル全体については、「[キーフレーム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160012)」を参照してください。 キー フレーム アニメーションの詳細については、、[キー フレーム アニメーションの概要](key-frame-animations-overview.md)を参照してください。
+サンプル全体については、「[キーフレーム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=160012)」を参照してください。 キー フレーム アニメーションの詳細については、次を参照してください。、[キー フレーム アニメーションの概要](key-frame-animations-overview.md)します。
 
 ## <a name="see-also"></a>関連項目
 

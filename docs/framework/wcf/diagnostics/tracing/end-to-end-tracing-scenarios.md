@@ -3,11 +3,11 @@ title: エンドツーエンドのトレースのシナリオ
 ms.date: 03/30/2017
 ms.assetid: f83b7d53-6061-4362-a9a3-ee1daf6542be
 ms.openlocfilehash: 6e2f62841e610d6eab95b908088f24cf2fec0c34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912510"
 ---
 # <a name="end-to-end-tracing-scenarios"></a>エンドツーエンドのトレースのシナリオ
 このセクションの各トピックで、トレースの使用に関するさまざまなシナリオを説明します。  

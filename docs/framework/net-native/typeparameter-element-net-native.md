@@ -5,11 +5,11 @@ ms.assetid: d37bb1b7-1ddc-4c6d-8ecf-583f804a2479
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b03c87c70fa1bfcd331f468d369632f4164300bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110215"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982463"
 ---
 # <a name="typeparameter-element-net-native"></a>\<TypeParameter > 要素 (.NET ネイティブ)
 メソッドに渡される型引数により表される型にポリシーを適用します。  

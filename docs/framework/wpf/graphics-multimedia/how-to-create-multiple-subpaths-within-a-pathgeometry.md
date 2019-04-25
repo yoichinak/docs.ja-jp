@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subpaths [WPF]
 ms.assetid: 104a862c-dde2-4e62-ac87-80660dd1681c
 ms.openlocfilehash: 286075448cd6a343f8a7b15b2b5005f840f68e1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904723"
 ---
 # <a name="how-to-create-multiple-subpaths-within-a-pathgeometry"></a>方法: PathGeometry 内に複数のサブパスを作成する
 この例で複数のサブパスを作成する方法を示しています、<xref:System.Windows.Media.PathGeometry>します。 作成する複数のサブパスを作成する、<xref:System.Windows.Media.PathFigure>各サブパスにします。  

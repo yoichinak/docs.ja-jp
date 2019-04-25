@@ -5,11 +5,11 @@ helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
 ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906530"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>方法: オブジェクトを Visual Basic で別の型に変換します。
 変換する、`Object`変数などの変換キーワードを使用して、別のデータ型を[CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)します。  

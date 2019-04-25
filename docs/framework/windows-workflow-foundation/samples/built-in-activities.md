@@ -3,11 +3,11 @@ title: ビルトイン アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 31e1b8c2-7f74-458a-b2e2-fddc5b10eac1
 ms.openlocfilehash: 7f497ff3dafd8615066bbae6ba1020d96d73b30c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711604"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913836"
 ---
 # <a name="built-in-activities"></a>ビルトイン アクティビティ
 このセクションには、組み込みの Windows Workflow Foundation (WF) アクティビティを示すサンプルが含まれています。  
@@ -20,9 +20,7 @@ ms.locfileid: "57711604"
  XamlBuildTask ツールを実行することなく、XAML ワークフローを動的に読み込む方法を示します。
   
  [InvokeMethod アクティビティの使用](using-the-invokemethod-activity.md)  
- 
-  <xref:System.Activities.Statements.InvokeMethod> アクティビティを使用してパブリック クラス内のパブリック メソッドを呼び出す方法を示します。  
+ <xref:System.Activities.Statements.InvokeMethod> アクティビティを使用してパブリック クラス内のパブリック メソッドを呼び出す方法を示します。  
   
  [Pick アクティビティの使用](using-the-pick-activity.md)  
- 
-  <xref:System.Activities.Statements.Pick> アクティビティを使用する方法を示します。
+ <xref:System.Activities.Statements.Pick> アクティビティを使用する方法を示します。

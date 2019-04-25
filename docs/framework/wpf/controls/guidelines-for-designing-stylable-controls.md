@@ -6,11 +6,11 @@ helpviewer_keywords:
 - controls [WPF], style design
 ms.assetid: c52dde45-a311-4531-af4c-853371c4d5f4
 ms.openlocfilehash: 756cc821b1a9fe20741e390a1fe6e84d12cc6363
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009969"
 ---
 # <a name="guidelines-for-designing-stylable-controls"></a>スタイルの設定が可能なコントロールを設計するためのガイドライン
 このドキュメントは、スタイルの設定とテンプレートの作成を簡単に行うためのコントロールを設計する際に考慮すべき一連のベスト プラクティスをまとめたものです。 組み込みの [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コントロール セットのテーマのコントロールのスタイルの操作で試行錯誤を繰り返した結果、この一連のベスト プラクティスにたどり着きました。 スタイリングの成功の鍵は、スタイルそのものであると同様に、適切に設計されたオブジェクト モデルの機能であることが分かりました。 このドキュメントの対象読者は、スタイルの作成者ではなく、コントロールの作成者です。  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Overloads keyword [Visual Basic], overloaded members
 ms.assetid: b686fb97-e7d7-4001-afaa-6650cba08f0d
 ms.openlocfilehash: 8d7341370d9770d2e57f786ac7c68277e66a9bbd
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864872"
 ---
 # <a name="overloaded-properties-and-methods-visual-basic"></a>オーバー ロードされたプロパティとメソッド (Visual Basic)
 

@@ -6,10 +6,10 @@ helpviewer_keywords:
 ms.assetid: ef5ba300-6d7c-455e-a7bd-d0cc6d211ad4
 ms.openlocfilehash: 5239117d375ef9c305863ff847c3aff3af91234d
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875785"
 ---
 # <a name="reflection-provider-wcf-data-services"></a>リフレクション プロバイダー (WCF Data Services)
 

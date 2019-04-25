@@ -10,11 +10,11 @@ helpviewer_keywords:
 - reflections [WPF], creating
 ms.assetid: 4f017e16-ab80-43c7-98df-03b6bddbb203
 ms.openlocfilehash: 61b597cd36fcf0d60f215d9b5403f3b42b21dec4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904224"
 ---
 # <a name="how-to-create-a-reflection"></a>方法: 反射を作成する
 この例は、使用する方法を示します、<xref:System.Windows.Media.VisualBrush>反射を作成します。 <xref:System.Windows.Media.VisualBrush>既存のビジュアルを表示することができます、反射や拡大などの興味深い視覚効果を生成するために、この機能を使用することができます。  

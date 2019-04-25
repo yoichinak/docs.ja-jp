@@ -14,11 +14,11 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
 ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913186"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>方法: WebBrowser コントロールを使用して印刷する
 コード例を次に示しますを使用する方法、<xref:System.Windows.Forms.WebBrowser>コントロールを表示せず、Web ページを印刷します。  

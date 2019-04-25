@@ -3,11 +3,11 @@ title: 遅延式
 description: 学習方法F#遅延式は、アプリとライブラリのパフォーマンスを向上させることができます。
 ms.date: 03/13/2019
 ms.openlocfilehash: 6d53d53093f4e93f53e1c956b94e2f1e4a1bbd55
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57853326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904112"
 ---
 # <a name="lazy-expressions"></a>遅延式
 
@@ -31,7 +31,7 @@ let identifier = lazy ( expression )
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet73011.fs)]
 
-遅延評価は、ではなく、`Lazy`入力、シーケンスにも使用します。 詳細については、[シーケンス](sequences.md)を参照してください。
+遅延評価は、ではなく、`Lazy`入力、シーケンスにも使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)します。
 
 ## <a name="see-also"></a>関連項目
 
