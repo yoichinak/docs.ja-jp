@@ -6,10 +6,10 @@ helpviewer_keywords:
 - attributes [Visual Basic], applying
 ms.assetid: 5880073a-68a4-4b6b-8a07-ace32959a4e2
 ms.openlocfilehash: 2399ec1342280df101e2818399e0f41f10d9606d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58818421"
 ---
 # <a name="attribute-list-visual-basic"></a>属性リスト (Visual Basic)
@@ -32,7 +32,7 @@ ms.locfileid: "58818421"
 ## <a name="remarks"></a>Remarks  
  ほぼすべてのプログラミング要素 (型、プロシージャ、プロパティ、およびなど) には、1 つまたは複数の属性を適用できます。 属性がアセンブリのメタデータに表示され、コードの注釈を設定または特定のプログラミング要素を使用する方法を指定するのに役立ちます。 Visual Basic と .NET Framework によって定義された属性を適用して、独自の属性を定義することができます。  
 
- 属性を使用する場合の詳細については、[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)を参照してください。 属性名には、[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)を参照してください。  
+ 属性を使用する場合の詳細については、次を参照してください。[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)します。 属性名には、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
   
 ## <a name="rules"></a>ルール  
   

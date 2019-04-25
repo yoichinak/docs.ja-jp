@@ -1,51 +1,44 @@
-items:
 - name: はじめに
   href: index.md
   items:
-  - name: 既存のアプリの Azure IaaS のリフト アンド シフト
-    href: lift-and-shift-existing-apps-azure-iaas.md
-  - name: リレーショナル データベースの Azure への移行
-    href: migrate-your-relational-databases-to-azure.md
-  - name: クラウドに最適化された最新の既存 .NET アプリ
-    href: ./modernize-existing-apps-to-cloud-optimized/index.md
-    items:
-    - name: 既存の .NET アプリをクラウドに最適化されたアプリに現代化する理由
-      href: ./modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md
-    - name: クラウドに最適化されたアプリにおけるマイクロソフト テクノロジ
-      href: ./modernize-existing-apps-to-cloud-optimized/microsoft-technologies-in-cloud-optimized-applications.md
-    - name: クラウド ネイティブなアプリケーションについて
-      href: ./modernize-existing-apps-to-cloud-optimized/what-about-cloud-native-applications.md
-    - name: Windows コンテナーとして既存の .NET アプリを展開する
-      href: ./modernize-existing-apps-to-cloud-optimized/deploy-existing-net-apps-as-windows-containers.md
-    - name: Windows コンテナーを展開しない状況
-      href: ./modernize-existing-apps-to-cloud-optimized/when-not-to-deploy-to-windows-containers.md
-    - name: オンプレミスの IaaS VM インフラストラクチャで Windows コンテナーを展開するタイミング
-      href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md
-    - name: Azure Vm (IaaS クラウド) に Windows コンテナーを展開するタイミング
-      href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
-    - name: Azure コンテナー インスタンス (ACI) に Windows コンテナーを展開するタイミング
-      href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
-    - name: Service Fabric に Windows コンテナーを展開するタイミング
-      href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md
-    - name: Azure Container Service (ACS-Kubernetes) に Windows コンテナーを展開するタイミング
-      href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
-    - name: コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
-      href: ./modernize-existing-apps-to-cloud-optimized/choosing-azure-compute-options-for-container-based-applications.md
-    - name: クラウドの準備が整っている回復力のあるサービスの構築:クラウド内の一時的な障害を受け入れる
-      href: ./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md
-    - name: 監視と製品利用統計情報でアプリを最新化する
-      href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md
-    - name: クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
-      href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md
-    - name: ハイブリッド クラウド シナリオへの移行
-      href: ./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md
-  - name: チュートリアルと技術的な概要
-    href: walkthroughs-technical-get-started-overview.md
-  - name: まとめ
-    href: conclusions.md
-ms.openlocfilehash: f88e21a8b7769b34b365d0bfcef46736bf5732c1
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470058"
+    - name: 既存のアプリの Azure IaaS のリフト アンド シフト
+      href: lift-and-shift-existing-apps-azure-iaas.md
+    - name: リレーショナル データベースの Azure への移行
+      href: migrate-your-relational-databases-to-azure.md
+    - name: クラウドに最適化された最新の既存 .NET アプリ
+      href: ./modernize-existing-apps-to-cloud-optimized/index.md
+      items:
+        - name: 既存の .NET アプリをクラウドに最適化されたアプリに現代化する理由
+          href: ./modernize-existing-apps-to-cloud-optimized/reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications.md
+        - name: クラウドに最適化されたアプリにおけるマイクロソフト テクノロジ
+          href: ./modernize-existing-apps-to-cloud-optimized/microsoft-technologies-in-cloud-optimized-applications.md
+        - name: クラウド ネイティブなアプリケーションについて
+          href: ./modernize-existing-apps-to-cloud-optimized/what-about-cloud-native-applications.md
+        - name: Windows コンテナーとして既存の .NET アプリを展開する
+          href: ./modernize-existing-apps-to-cloud-optimized/deploy-existing-net-apps-as-windows-containers.md
+        - name: Windows コンテナーを展開しない状況
+          href: ./modernize-existing-apps-to-cloud-optimized/when-not-to-deploy-to-windows-containers.md
+        - name: オンプレミスの IaaS VM インフラストラクチャで Windows コンテナーを展開するタイミング
+          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-in-your-on-premises-iaas-vm-infrastructure.md
+        - name: Azure Vm (IaaS クラウド) に Windows コンテナーを展開するタイミング
+          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
+        - name: Azure コンテナー インスタンス (ACI) に Windows コンテナーを展開するタイミング
+          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
+        - name: Service Fabric に Windows コンテナーを展開するタイミング
+          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md
+        - name: Azure Container Service (ACS-Kubernetes) に Windows コンテナーを展開するタイミング
+          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
+        - name: コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
+          href: ./modernize-existing-apps-to-cloud-optimized/choosing-azure-compute-options-for-container-based-applications.md
+        - name: 'クラウドの準備が整っている回復力のあるサービスの構築:クラウド内の一時的な障害を受け入れる'
+          href: ./modernize-existing-apps-to-cloud-optimized/build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud.md
+        - name: 監視と製品利用統計情報でアプリを最新化する
+          href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-with-monitoring-and-telemetry.md
+        - name: クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
+          href: ./modernize-existing-apps-to-cloud-optimized/modernize-your-apps-lifecycle-with-ci-cd-pipelines-and-devops-tools-in-the-cloud.md
+        - name: ハイブリッド クラウド シナリオへの移行
+          href: ./modernize-existing-apps-to-cloud-optimized/migrate-to-hybrid-cloud-scenarios.md
+    - name: チュートリアルと技術的な概要
+      href: walkthroughs-technical-get-started-overview.md
+    - name: まとめ
+      href: conclusions.md

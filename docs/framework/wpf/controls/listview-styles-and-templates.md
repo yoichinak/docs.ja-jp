@@ -10,10 +10,10 @@ helpviewer_keywords:
 - templates [WPF], ListView
 ms.assetid: d2387356-2171-4785-822a-7247e024b4ee
 ms.openlocfilehash: 813e7425b944ce9a7480cc45ab7d1f61cc0dc6d1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59188787"
 ---
 # <a name="listview-styles-and-templates"></a>ListView のスタイルとテンプレート

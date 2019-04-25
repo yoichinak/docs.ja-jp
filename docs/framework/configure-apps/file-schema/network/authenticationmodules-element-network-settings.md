@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <authenticationModules> element
 ms.assetid: 10fcfaad-82ef-4692-871a-0aec9dfbe75e
 ms.openlocfilehash: 8878bcbdf8b3613677231db3e91a6d71dfa10bae
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143339"
 ---
 # <a name="authenticationmodules-element-network-settings"></a>\<authenticationModules > 要素 (ネットワーク設定)
@@ -39,8 +39,8 @@ ms.locfileid: "59143339"
   
 |**要素**|**説明**|  
 |-----------------|---------------------|  
-|[追加](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|アプリケーションに認証モジュールを追加します。|  
-|[クリア](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|アプリケーションからのすべての認証モジュールを削除します。|  
+|[add](../../../../../docs/framework/configure-apps/file-schema/network/add-element-for-authenticationmodules-network-settings.md)|アプリケーションに認証モジュールを追加します。|  
+|[clear](../../../../../docs/framework/configure-apps/file-schema/network/clear-element-for-authenticationmodules-network-settings.md)|アプリケーションからのすべての認証モジュールを削除します。|  
 |[remove](../../../../../docs/framework/configure-apps/file-schema/network/remove-element-for-authenticationmodules-network-settings.md)|アプリケーションから認証モジュールを削除します。|  
   
 ### <a name="parent-elements"></a>親要素  

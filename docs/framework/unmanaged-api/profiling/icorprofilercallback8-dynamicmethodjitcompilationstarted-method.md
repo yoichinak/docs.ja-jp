@@ -11,10 +11,10 @@ api_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c4b8bffeb71497a7dd8e2ed25b833f9216d8017e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59142247"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationStarted メソッド
@@ -37,13 +37,13 @@ HRESULT DynamicMethodJITCompilationStarted(
 [入力] `functionId`  
 どの JIT コンパイルが開始されてメモリ内の関数の識別子です。   
 
-[入力] `fIsSafeToBlock`   
+[in] `fIsSafeToBlock`   
 `true` ブロックしていることにより、ランタイムでこのコールバックから返される呼び出し元のスレッドを待機するかを示す`false`をブロックしてに影響しないこと、実行時の操作を示します。  
 
-[入力] `pILHeader`    
+[in] `pILHeader`    
 メソッドの IL のヘッダーの最初のバイトへのポインター。   
 
-[入力] `cbILHeader`    
+[in] `cbILHeader`    
 IL ヘッダーのバイト数。 
 
 ## <a name="remarks"></a>Remarks  
@@ -62,7 +62,7 @@ IL ヘッダーのバイト数。
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 

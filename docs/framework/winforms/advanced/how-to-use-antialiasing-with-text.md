@@ -12,10 +12,10 @@ helpviewer_keywords:
 - strings [Windows Forms], antialiasing when drawing
 ms.assetid: 48fc34f3-f236-4b01-a0cb-f0752e6d22ae
 ms.openlocfilehash: 24d1b1dfbe955bcfa98a16c3be592ab837ec0182
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227614"
 ---
 # <a name="how-to-use-antialiasing-with-text"></a>方法: テキストでのアンチエイリアシングの使用

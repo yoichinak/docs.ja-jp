@@ -3,10 +3,10 @@ title: FailedToSetupTracing
 ms.date: 03/30/2017
 ms.assetid: dd61db93-4687-4832-8dc9-99e38fa83671
 ms.openlocfilehash: 8448ba2055783d57ef1413d2dca0d84b646ba869
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184432"
 ---
 # <a name="failedtosetuptracing"></a>FailedToSetupTracing

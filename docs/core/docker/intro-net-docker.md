@@ -3,12 +3,12 @@ title: Docker の概要
 description: この記事では、.NET Core アプリケーションのコンテキストでの Docker の基本と概要について説明します。
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 725d8301a27f1109c85a89945f0fb8403e255ab4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
+ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58817256"
+ms.lasthandoff: 04/11/2019
+ms.locfileid: "59480730"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET および Docker の概要
 
@@ -58,6 +58,9 @@ Kubernetes を使用して Linux コンテナーのスケールと調整を行�
 * [Azure App Service](https://azure.microsoft.com/services/app-service/containers/)\
 PaaS 環境で Linux コンテナーを使用して Web アプリまたは API をデプロイします。
 
+* [Azure Container Instances](https://azure.microsoft.com/services/container-instances/)\
+クラウドでコンテナーをホストしますが、高度な管理サービスは何もありません。
+
 * [Azure Batch](https://azure.microsoft.com/services/batch/)\
 コンテナーを使用して反復的なコンピューティング ジョブを実行します。
 
@@ -69,5 +72,5 @@ Windows Server コンテナーを使用して、.NET アプリケーションを
 
 ## <a name="next-steps"></a>次の手順
 
-* [.NET Core アプリケーションをコンテナー化する方法について説明します。](build-docker-netcore-container.md)
-* [Learn の ASP.NET Core マイクロサービスのチュートリアルをお試しください。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+* [.NET Core アプリケーションをコンテナー化する方法を学習します。](build-docker-netcore-container.md)
+* [Learn の ASP.NET Core マイクロサービスのチュートリアルを試します。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)

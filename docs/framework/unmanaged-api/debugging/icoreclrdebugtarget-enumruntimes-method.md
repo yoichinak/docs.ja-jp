@@ -20,10 +20,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: afb31646d21ec7e15f79601f5fe83ea6ce44fa90
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134681"
 ---
 # <a name="icoreclrdebugtargetenumruntimes-method"></a>ICoreClrDebugTarget::EnumRuntimes メソッド
@@ -54,7 +54,7 @@ HRESULT EnumRuntimes (
  成功。  
   
  S_FALSE  
- `dwInternalProcessID` プロセスが終了したためは、おそらく、コンピューターで実行されている任意のプロセスを一致しません。 `pcRuntimes` `ppRuntimes`は null になります。  
+ `dwInternalProcessID` が、コンピューターで実行されているどのプロセスにも一致しません。多くの場合、プロセスが既に終了していることが原因です。 `pcRuntimes` と `ppRuntimes` は null になります。  
   
  E_OUTOFMEMORY  
  `ppRuntimes`  用に十分なメモリを割り当てることができません。  

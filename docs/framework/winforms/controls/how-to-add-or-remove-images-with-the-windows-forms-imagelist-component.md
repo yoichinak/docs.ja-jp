@@ -14,10 +14,10 @@ helpviewer_keywords:
 - images [Windows Forms], displaying with controls
 ms.assetid: c5eacc56-f769-4e2e-bfb7-f756620913db
 ms.openlocfilehash: 286b56cddc18589b936a7f053a12ed44c81a32b6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072975"
 ---
 # <a name="how-to-add-or-remove-images-with-the-windows-forms-imagelist-component"></a>方法: Windows フォームの ImageList コンポーネントにイメージを追加または削除する
@@ -145,4 +145,4 @@ imageList1.Images.RemoveByKey("myPhoto");
 
 - [ImageList コンポーネント](imagelist-component-windows-forms.md)
 - [ImageList コンポーネントの概要](imagelist-component-overview-windows-forms.md)
-- [イメージ、ビットマップ、およびメタファイル](../advanced/images-bitmaps-and-metafiles.md)
+- [イメージ、ビットマップ、メタファイル](../advanced/images-bitmaps-and-metafiles.md)

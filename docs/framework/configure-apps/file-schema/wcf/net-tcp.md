@@ -3,10 +3,10 @@ title: <net.tcp>
 ms.date: 03/30/2017
 ms.assetid: 8bc2f2be-11c1-4bab-9018-1d21ae568d94
 ms.openlocfilehash: 589bae5d1f91e0424eb19cee62fe758aa7846191
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59166518"
 ---
 # <a name="nettcp"></a>\<net.tcp>
@@ -68,7 +68,7 @@ ms.locfileid: "59166518"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<system.serviceModel.activation>](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|リスナー プロセス SMSvcHost.exe の設定が含まれています。|  
+|[\<system.serviceModel.activation >](../../../../../docs/framework/configure-apps/file-schema/wcf/system-servicemodel-activation.md)|リスナー プロセス SMSvcHost.exe の設定が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
  ポート共有の詳細については、次を参照してください。 [Net.TCP ポート共有](../../../../../docs/framework/wcf/feature-details/net-tcp-port-sharing.md)します。 ポート共有サービスを構成する方法については、次を参照してください。 [Net.TCP ポート共有サービスを構成する](../../../../../docs/framework/wcf/feature-details/configuring-the-net-tcp-port-sharing-service.md)します。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e72ed5af-b24f-486c-8429-c8fd2208f844
 ms.openlocfilehash: bb3f35f17b2dd451b41035c8e34f7b3a886a26e8
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59178127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878294"
 ---
 # <a name="performing-batch-operations-using-dataadapters"></a>DataAdapter を使用したバッチ操作の実行
 ADO.NET のバッチ サポートを利用すると、<xref:System.Data.Common.DataAdapter> は、<xref:System.Data.DataSet> または <xref:System.Data.DataTable> から INSERT、UPDATE、および DELETE の各操作を 1 操作ずつサーバーに送信するのではなく、グループ化してサーバーに送信できます。 こうすることで、サーバーへのラウンド トリップの回数が減少し、大幅なパフォーマンスの向上が期待できます。 バッチ更新は、SQL Server (<xref:System.Data.SqlClient>) および Oracle (<xref:System.Data.OracleClient>) の .NET データ プロバイダーでサポートされています。  
@@ -134,7 +134,7 @@ public static void BatchUpdate(DataTable dataTable,Int32 batchSize)
 ### <a name="accessing-updated-rows"></a>更新された行へのアクセス  
  バッチ処理が無効になっている場合、更新された行には、<xref:System.Data.Common.RowUpdatedEventArgs.Row%2A> クラスの <xref:System.Data.Common.RowUpdatedEventArgs> プロパティを使用してアクセスできます。  
   
- バッチ処理が有効になっている場合、複数の行に対して 1 つの `RowUpdated` イベントが生成されます。 つまり、各行の `Row` プロパティ値は null ですが、 `RowUpdating` イベントは、行ごとに生成されます。 処理された行にアクセスするには、<xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> クラスの <xref:System.Data.Common.RowUpdatedEventArgs> メソッドにより、配列に行への参照をコピーします。 処理される行がない場合、`CopyToRows` が <xref:System.ArgumentNullException> をスローします。 <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> メソッドを呼び出す前に、<xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> プロパティを使用して、処理されている行数を取得できます。  
+ バッチ処理が有効になっている場合、複数の行に対して 1 つの `RowUpdated` イベントが生成されます。 つまり、各行の `Row` プロパティ値は null ですが、 `RowUpdating` イベントは各行に対して生成されます。 処理された行にアクセスするには、<xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> クラスの <xref:System.Data.Common.RowUpdatedEventArgs> メソッドにより、配列に行への参照をコピーします。 処理される行がない場合、`CopyToRows` が <xref:System.ArgumentNullException> をスローします。 <xref:System.Data.Common.RowUpdatedEventArgs.RowCount%2A> メソッドを呼び出す前に、<xref:System.Data.Common.RowUpdatedEventArgs.CopyToRows%2A> プロパティを使用して、処理されている行数を取得できます。  
   
 ### <a name="handling-data-errors"></a>データ エラーの処理  
  ステートメントを個別に実行した場合とバッチ処理を実行した場合では効果は同じです。 ステートメントはバッチに追加された順序と同じ順序で実行されます。 エラーは、バッチ モードでも、バッチ モードが無効な場合と同様に処理されます。 つまり、各行が個別に処理されます。 データベース内で正常に処理された行だけが、<xref:System.Data.DataRow> 内の対応する <xref:System.Data.DataTable> で更新されます。  

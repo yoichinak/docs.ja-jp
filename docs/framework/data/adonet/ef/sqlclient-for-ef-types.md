@@ -3,11 +3,11 @@ title: Entity Framework 用 SqlClient の型
 ms.date: 03/30/2017
 ms.assetid: f2a95ead-c845-4e97-9fb3-04b444f7ed81
 ms.openlocfilehash: eb12bde1e319fde5adf20ad6cd54f8776aeda31d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59147661"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879165"
 ---
 # <a name="sqlclient-for-entity-frameworktypes"></a>Entity Framework 用 SqlClient の型
 .NET Framework Data Provider for SQL Server (SqlClient) プロバイダー マニフェスト ファイルには、プロバイダー プリミティブ型のリスト、それぞれの型のファセット、概念モデルとストレージ モデルのプリミティブ型とのマッピング、および概念モデルとストレージ モデルのプリミティブ型間での昇格と変換の規則が含まれています。  

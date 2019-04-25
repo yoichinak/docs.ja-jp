@@ -3,10 +3,10 @@ title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
 ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59191914"
 ---
 # <a name="adonet"></a>ADO.NET
@@ -44,7 +44,7 @@ ADO.NET は、.NET Framework のプログラミングでデータ アクセス �
  .NET Framework Data Provider for Oracle 固有の機能および動作について説明します。  
   
 ## <a name="related-sections"></a>関連項目  
- [統合言語クエリ (LINQ)C#](../../../csharp/programming-guide/concepts/linq/index.md)  
+ [統合言語クエリ (LINQ) - C#](../../../csharp/programming-guide/concepts/linq/index.md)  
  LINQ のトピックへのリンクを提供し、サンプルを使用してC#します。  
   
  [統合言語クエリ (LINQ) - Visual Basic](../../../visual-basic/programming-guide/concepts/linq/index.md)  
@@ -61,5 +61,5 @@ ADO.NET は、.NET Framework のプログラミングでデータ アクセス �
   
 ## <a name="see-also"></a>関連項目
 
-- [Visual Studio でのデータにアクセスします。](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

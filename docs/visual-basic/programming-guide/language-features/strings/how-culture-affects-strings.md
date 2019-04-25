@@ -6,10 +6,10 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834622"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic においてカルチャが文字列に与える影響
@@ -25,7 +25,7 @@ ms.locfileid: "58834622"
 ## <a name="culture-sensitive-functions"></a>カルチャに依存する関数  
  すべての Visual Basic の文字列変換関数 (を除き、`Str`と`Val`関数)、アプリケーションのカルチャ情報を使用して変換および比較がアプリケーションのカルチャに適切であるかどうかを確認ユーザー。  
   
- キーが正常に文字列変換関数を使用して別のカルチャ設定を持つコンピューターで実行されるアプリケーションでどの関数を使用して、特定のカルチャ設定と現在のカルチャ設定を使用するを理解することです。 アプリケーションのカルチャの設定は、既定では、設定から継承される、カルチャ、オペレーティング システムのことを確認します。 詳細については、<xref:Microsoft.VisualBasic.Strings.Asc%2A>、 <xref:Microsoft.VisualBasic.Strings.AscW%2A>、 <xref:Microsoft.VisualBasic.Strings.Chr%2A>、 <xref:Microsoft.VisualBasic.Strings.ChrW%2A>、 <xref:Microsoft.VisualBasic.Strings.Format%2A>、 <xref:Microsoft.VisualBasic.Conversion.Hex%2A>、 <xref:Microsoft.VisualBasic.Conversion.Oct%2A>、および[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)を参照してください。  
+ キーが正常に文字列変換関数を使用して別のカルチャ設定を持つコンピューターで実行されるアプリケーションでどの関数を使用して、特定のカルチャ設定と現在のカルチャ設定を使用するを理解することです。 アプリケーションのカルチャの設定は、既定では、設定から継承される、カルチャ、オペレーティング システムのことを確認します。 詳細については、次を参照してください。 <xref:Microsoft.VisualBasic.Strings.Asc%2A>、 <xref:Microsoft.VisualBasic.Strings.AscW%2A>、 <xref:Microsoft.VisualBasic.Strings.Chr%2A>、 <xref:Microsoft.VisualBasic.Strings.ChrW%2A>、 <xref:Microsoft.VisualBasic.Strings.Format%2A>、 <xref:Microsoft.VisualBasic.Conversion.Hex%2A>、 <xref:Microsoft.VisualBasic.Conversion.Oct%2A>、および[型変換関数](../../../../visual-basic/language-reference/functions/type-conversion-functions.md)します。  
   
  `Str` (数値を文字列に変換) と`Val`文字列や数値の間で変換するときに (文字列数値からに変換) 関数がアプリケーションのカルチャ情報を使用しないでください。 代わりに、有効な 10 進区切り記号としてピリオド (.) のみを認識できるとします。 これらの関数のカルチャに対応して類似のものは次のとおりです。  
   

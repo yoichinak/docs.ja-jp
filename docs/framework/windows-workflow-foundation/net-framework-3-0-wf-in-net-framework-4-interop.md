@@ -3,10 +3,10 @@ title: Interop アクティビティと .NET Framework 4 内の .NET Framework 3
 ms.date: 03/30/2017
 ms.assetid: 71f112ba-abb0-46f7-b05f-a5d2eb9d0c5c
 ms.openlocfilehash: 33140ac85cd50140c0aa34d1986365fefc005c78
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59329415"
 ---
 # <a name="using-net-framework-30-wf-activities-in-net-framework-4-with-the-interop-activity"></a>Interop アクティビティと .NET Framework 4 内の .NET Framework 3.0 WF アクティビティの使用
@@ -34,13 +34,13 @@ ms.locfileid: "59329415"
 ## <a name="limitations-of-using-a-wf-3-activity-within-an-interop-activity"></a>Interop アクティビティ内で WF 3 アクティビティを使用する際の制限  
  WF 3 システム標準アクティビティは、<xref:System.Activities.Statements.Interop> アクティビティで直接ラップすることはできません。 <xref:System.Workflow.Activities.DelayActivity> などの一部の WF 3 アクティビティの場合、これは類似する WF 4.5 アクティビティがあることが原因です。 その他のアクティビティの場合、これはそのアクティビティの機能がサポートされないことが原因です。 多くの WF 3 システム標準アクティビティは、次の制限に従い、<xref:System.Activities.Statements.Interop> アクティビティによってラップしたワークフロー内で使用できます。  
   
-1. <xref:System.ServiceModel.Activities.Send> <xref:System.ServiceModel.Activities.Receive>では使用できません、<xref:System.Activities.Statements.Interop>アクティビティ。  
+1. <xref:System.ServiceModel.Activities.Send> アクティビティでは、<xref:System.ServiceModel.Activities.Receive> および <xref:System.Activities.Statements.Interop> を使用できません。  
   
-2. <xref:System.Workflow.Activities.WebServiceInputActivity>、 <xref:System.Workflow.Activities.WebServiceOutputActivity>、および<xref:System.Workflow.Activities.WebServiceFaultActivity>内で使用することはできません、<xref:System.Activities.Statements.Interop>アクティビティ。  
+2. <xref:System.Workflow.Activities.WebServiceInputActivity> 内では、<xref:System.Workflow.Activities.WebServiceOutputActivity>、<xref:System.Workflow.Activities.WebServiceFaultActivity>、および <xref:System.Activities.Statements.Interop> を使用できません。  
   
-3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> 内で使用することはできません、<xref:System.Activities.Statements.Interop>アクティビティ。  
+3. <xref:System.Workflow.Activities.InvokeWorkflowActivity> アクティビティでは、<xref:System.Activities.Statements.Interop> を使用できません。  
   
-4. <xref:System.Workflow.ComponentModel.SuspendActivity> 内で使用することはできません、<xref:System.Activities.Statements.Interop>アクティビティ。  
+4. <xref:System.Workflow.ComponentModel.SuspendActivity> アクティビティでは、<xref:System.Activities.Statements.Interop> を使用できません。  
   
 5. <xref:System.Activities.Statements.Interop> アクティビティ内では、補正関係のアクティビティを使用できません。  
   
@@ -50,6 +50,6 @@ ms.locfileid: "59329415"
   
 2. WF 4.5 ランタイムは、トランザクションの開始場所 (<xref:System.Activities.Statements.Interop> アクティビティ内かどうか) を問わず、トランザクションの開始時にワークフロー インスタンスの状態を確認しません。  
   
-3. <xref:System.Activities.Statements.Interop> アクティビティ内のアクティビティに関する WF 3 追跡レコードは、WF 4.5 の追跡参加要素に <xref:System.Activities.Tracking.InteropTrackingRecord> オブジェクトとして提供されます。 <xref:System.Activities.Tracking.InteropTrackingRecord> 派生クラスは、<xref:System.Activities.Tracking.CustomTrackingRecord>します。  
+3. <xref:System.Activities.Statements.Interop> アクティビティ内のアクティビティに関する WF 3 追跡レコードは、WF 4.5 の追跡参加要素に <xref:System.Activities.Tracking.InteropTrackingRecord> オブジェクトとして提供されます。 <xref:System.Activities.Tracking.InteropTrackingRecord> は <xref:System.Activities.Tracking.CustomTrackingRecord> の派生物です。  
   
 4. WF 3 カスタム アクティビティからは、WF 3 ワークフロー ランタイム内とまったく同じ方法で、相互運用環境内でワークフロー キューを使用してデータにアクセスできます。 カスタム アクティビティ コードの変更は必要ありません。 ホストでは、<xref:System.Activities.Bookmark> を再開することで WF 3 ワークフロー キューにデータが追加されます。 ブックマークの名前は、<xref:System.IComparable> ワークフロー キュー名の文字列の形式です。

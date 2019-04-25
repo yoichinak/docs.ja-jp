@@ -1,58 +1,51 @@
-items:
 - name: 例外リファレンス
   href: index.md
   items:
-  - name: COM+ 統合
-    href: com-integration.md
-  - name: 構成
-    href: configuration.md
-  - name: 'コア通信: チャネル フレームワーク'
-    href: core-communications-channel-framework.md
-  - name: 'コア通信: 接続フレームワーク'
-    href: core-communications-connection-framework.md
-  - name: 'コア通信: HTTP/HTTPS トランスポート チャネル'
-    href: core-communications-http-https-transport-channels.md
-  - name: 'コア通信: 内部二重トランスポート チャネル'
-    href: core-communications-internal-duplex-transport-channels.md
-  - name: 'コア通信: 名前付きパイプ トランスポート チャネル'
-    href: core-communications-named-pipe-transport-channels.md
-  - name: 'コア通信: TCP トランスポート チャネル'
-    href: core-communications-tcp-transport-channels.md
-  - name: 'コア通信: トランスポート フレームワーク'
-    href: core-communications-transport-framework.md
-  - name: 'コア通信: ユーティリティ'
-    href: core-communications-utilities.md
-  - name: 'コア通信: Web ホスト サポート'
-    href: core-communications-webhost-support.md
-  - name: ホスト
-    href: hosting-exceptions.md
-  - name: IdentityModel
-    href: identitymodel-exceptions.md
-  - name: MSMQ 統合のトランスポート
-    href: msmq-integration-transport.md
-  - name: MSMQ トランスポート
-    href: msmq-transport.md
-  - name: ピア チャネル
-    href: peer-channel.md
-  - name: 信頼できるメッセージ機能
-    href: reliable-messaging.md
-  - name: セキュリティ例外
-    href: security-exceptions.md
-  - name: サービス フレームワーク
-    href: service-framework.md
-  - name: サービス フレームワーク データ
-    href: service-framework-data.md
-  - name: サービス フレームワークのメタデータ
-    href: service-framework-metadata.md
-  - name: トランザクション
-    href: transaction-exceptions.md
-  - name: トランザクション フォーマッタ
-    href: transaction-formatter.md
-  - name: ツール
-    href: tools.md
-ms.openlocfilehash: e3ba9b5630ceaa9e4124fb4577759cfddb536951
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469842"
+    - name: COM+ 統合
+      href: com-integration.md
+    - name: 構成
+      href: configuration.md
+    - name: 'コア通信: チャネル フレームワーク'
+      href: core-communications-channel-framework.md
+    - name: 'コア通信: 接続フレームワーク'
+      href: core-communications-connection-framework.md
+    - name: 'コア通信: HTTP/HTTPS トランスポート チャネル'
+      href: core-communications-http-https-transport-channels.md
+    - name: 'コア通信: 内部二重トランスポート チャネル'
+      href: core-communications-internal-duplex-transport-channels.md
+    - name: 'コア通信: 名前付きパイプ トランスポート チャネル'
+      href: core-communications-named-pipe-transport-channels.md
+    - name: 'コア通信: TCP トランスポート チャネル'
+      href: core-communications-tcp-transport-channels.md
+    - name: 'コア通信: トランスポート フレームワーク'
+      href: core-communications-transport-framework.md
+    - name: 'コア通信: ユーティリティ'
+      href: core-communications-utilities.md
+    - name: 'コア通信: Web ホスト サポート'
+      href: core-communications-webhost-support.md
+    - name: ホスト
+      href: hosting-exceptions.md
+    - name: IdentityModel
+      href: identitymodel-exceptions.md
+    - name: MSMQ 統合のトランスポート
+      href: msmq-integration-transport.md
+    - name: MSMQ トランスポート
+      href: msmq-transport.md
+    - name: ピア チャネル
+      href: peer-channel.md
+    - name: 信頼できるメッセージ機能
+      href: reliable-messaging.md
+    - name: セキュリティ例外
+      href: security-exceptions.md
+    - name: サービス フレームワーク
+      href: service-framework.md
+    - name: サービス フレームワーク データ
+      href: service-framework-data.md
+    - name: サービス フレームワークのメタデータ
+      href: service-framework-metadata.md
+    - name: トランザクション
+      href: transaction-exceptions.md
+    - name: トランザクション フォーマッタ
+      href: transaction-formatter.md
+    - name: ツール
+      href: tools.md

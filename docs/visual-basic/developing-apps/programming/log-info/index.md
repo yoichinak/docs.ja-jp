@@ -2,13 +2,19 @@
 title: アプリケーションからの情報のログ記録 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - Log object
-  - My.Log object
-  - 'applications [Visual Basic], logging information from'
-  - logging
-  - My.Application.Log object
-  - 'examples [Visual Basic], logging application information'
+- Log object
+- My.Log object
+- applications [Visual Basic], logging information from
+- logging
+- My.Application.Log object
+- examples [Visual Basic], logging application information
 ms.assetid: 8bf4f047-22d6-48d6-aec5-93b98ad5b8e8
+ms.openlocfilehash: 3202bdb2c4274e6d3127537b7cae661ba6e63a35
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052509"
 ---
 # <a name="logging-information-from-the-application-visual-basic"></a>アプリケーションからの情報のログ記録 (Visual Basic)
 このセクションには、`My.Application.Log` オブジェクトまたは `My.Log` オブジェクトを使ってアプリケーションの情報を記録する方法と、アプリケーションのログ機能を拡張する方法に関するトピックが含まれます。  

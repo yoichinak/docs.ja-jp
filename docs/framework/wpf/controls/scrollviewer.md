@@ -10,10 +10,10 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 ms.assetid: 2163666e-04da-4036-841f-40947c9c034d
 ms.openlocfilehash: 5e8b1b30fc50318882ca7a7f5ed2a4827d5446c2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128662"
 ---
 # <a name="scrollviewer"></a>ScrollViewer
@@ -21,7 +21,7 @@ ms.locfileid: "59128662"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ScrollViewer の概要](scrollviewer-overview.md)  
- [方法のトピック](scrollviewer-how-to-topics.md)  
+ [方法トピック](scrollviewer-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Primitives.ScrollBar>  

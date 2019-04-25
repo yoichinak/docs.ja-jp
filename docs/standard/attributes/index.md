@@ -15,11 +15,11 @@ ms.assetid: 30386922-1e00-4602-9ebf-526b271a8b87
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2a31082604048e71ebc7581b36857a8bfbd333c2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33567498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969794"
 ---
 # <a name="extending-metadata-using-attributes"></a>属性を使用したメタデータの拡張
 共通言語ランタイムでは、属性と呼ばれるキーワードに似た記述的な宣言を追加して、型、フィールド、メソッド、プロパティなどのプログラミング要素に注釈を付けることができます。 ランタイム用にコードをコンパイルすると、コードは Microsoft Intermediate Language (MSIL) に変換され、コンパイラによって生成されるメタデータと共に、ポータブル実行可能 (PE) ファイルに格納されます。 属性を使用すると、ランタイム リフレクション サービスで抽出できる記述的な情報をメタデータに追加できます。 属性は、<xref:System.Attribute?displayProperty=nameWithType> から派生する特殊なクラスのインスタンスを宣言するときに、コンパイラによって作成されます。  
@@ -34,7 +34,7 @@ ms.locfileid: "33567498"
 |[カスタム属性の記述](../../../docs/standard/attributes/writing-custom-attributes.md)|カスタム属性クラスをデザインする方法を説明します。|  
 |[属性に格納されている情報の取得](../../../docs/standard/attributes/retrieving-information-stored-in-attributes.md)|実行コンテキストに読み込まれるコードのカスタム属性を取得する方法を説明します。|  
 |[メタデータと自己言及的なコンポーネント](../../../docs/standard/metadata-and-self-describing-components.md)|メタデータの概要と、.NET Framework のポータブル実行可能 (PE) ファイル内でメタデータがどのように実装されるかを説明します。|  
-|[方法: リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)|リフレクションのみのコンテキストでカスタム属性情報を取得する方法を説明します。|  
+|[方法:  リフレクションのみのコンテキストにアセンブリを読み込む](../../../docs/framework/reflection-and-codedom/how-to-load-assemblies-into-the-reflection-only-context.md)」を参照してください。|リフレクションのみのコンテキストでカスタム属性情報を取得する方法を説明します。|  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:System.Attribute?displayProperty=nameWithType>

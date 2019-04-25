@@ -3,10 +3,10 @@ title: BETWEEN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 4dcdd754-ae01-4e78-bf28-8a117fb2b73e
 ms.openlocfilehash: eae4387bcd5cbaf381ebf7169b6bc54d60328377
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59309304"
 ---
 # <a name="between-entity-sql"></a>BETWEEN (Entity SQL)
@@ -20,13 +20,13 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
   
 ## <a name="arguments"></a>引数  
  `expression`  
- `begin_expression` と `end_expression` で定義される範囲についてテストするための任意の有効な式。 `expression` 両方と同じ型である必要があります`begin_expression`と`end_expression`します。  
+ `begin_expression` と `end_expression` で定義される範囲についてテストするための任意の有効な式。 `expression` は、`begin_expression` と `end_expression` の両方と同じ型にする必要があります。  
   
  `begin_expression`  
- 任意の有効な式。 `begin_expression` 両方と同じ型である必要があります`expression`と`end_expression`します。 `begin_expression` 必要がありますより小さい`end_expression`、それ以外の場合、戻り値は否定されます。  
+ 任意の有効な式。 `begin_expression` は、`expression` と `end_expression` の両方と同じ型にする必要があります。 `begin_expression` は、`end_expression` 未満でなければなりません。それ以外の場合、戻り値は否定されます。  
   
  `end_expression`  
- 任意の有効な式。 `end_expression` 両方と同じ型である必要があります`expression`と`begin_expression`します。  
+ 任意の有効な式。 `end_expression` は、`expression` と `begin_expression` の両方と同じ型にする必要があります。  
   
  NOT  
  BETWEEN の結果を否定することを指定します。  
@@ -35,7 +35,7 @@ expression [ NOT ] BETWEEN begin_expression AND end_expression
  `expression` と `begin_expression` で表される範囲内で `end_expression` をテストする必要があることを示すプレースホルダーです。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 場合`expression`によって示される範囲間`begin_expression`と`end_expression`、それ以外の`false`します。 `null` 場合に返される`expression`は`null`場合`begin_expression`または`end_expression`は`null`します。  
+ `true` が、`expression` と `begin_expression` で指定される範囲内にある場合は `end_expression`。それ以外の場合は `false`。 `null` が `expression` であるか、`null` または `begin_expression` が `end_expression` である場合は、`null` が返されます。  
   
 ## <a name="remarks"></a>Remarks  
  両端を除いた範囲を指定するには、BETWEEN の代わりに大なり (>) と (<) 演算子よりも小さいかを使用します。  

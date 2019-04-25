@@ -11,10 +11,10 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839614"
 ---
 # <a name="from-clause-visual-basic"></a>From 句 (Visual Basic)
@@ -36,7 +36,7 @@ From element [ As type ] In collection [ _ ]
 |`collection`|必須。 クエリを実行するコレクションを参照します。 列挙可能な型である必要があります。|  
   
 ## <a name="remarks"></a>Remarks  
- `From`句をクエリし、ソース コレクションから要素を指すために使用されている変数のソース データを識別するために使用します。 これらの変数と呼ばれます*範囲変数*します。 `From`句が必要な場合を除き、クエリ、`Aggregate`句を返しますが、結果の集計をのみこと、クエリを識別するために使用します。 詳細については、[Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)を参照してください。  
+ `From`句をクエリし、ソース コレクションから要素を指すために使用されている変数のソース データを識別するために使用します。 これらの変数と呼ばれます*範囲変数*します。 `From`句が必要な場合を除き、クエリ、`Aggregate`句を返しますが、結果の集計をのみこと、クエリを識別するために使用します。 詳細については、次を参照してください。 [Aggregate 句](../../../visual-basic/language-reference/queries/aggregate-clause.md)します。  
   
  複数を指定する`From`参加する複数のコレクションを識別するために、クエリ内の句。 複数のコレクションを指定すると、これらは別々 に反復処理、または関連している場合に参加することができます。 使用してコレクションに暗黙的に参加することができます、`Select`句、またはを使用して明示的に、`Join`または`Group Join`句。 代わりに、指定できます複数の範囲変数およびコレクション 1 つの`From`句は、各関連の範囲変数と、他のユーザーから、コンマで区切られたコレクションを使用します。 次のコード例は、両方の構文のオプションを示しています、`From`句。  
   

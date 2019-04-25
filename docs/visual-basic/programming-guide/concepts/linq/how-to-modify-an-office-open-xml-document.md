@@ -3,16 +3,16 @@ title: '方法: Office Open XML ドキュメント (Visual Basic) の変更し�
 ms.date: 07/20/2015
 ms.assetid: 1cefd7f5-8e39-44c4-869c-f8021538a777
 ms.openlocfilehash: 5ec5451112855b687abded3ec64dda18423881f1
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827191"
 ---
 # <a name="how-to-modify-an-office-open-xml-document-visual-basic"></a>方法: Office Open XML ドキュメント (Visual Basic) の変更します。
 このトピックでは、Office Open XML ドキュメントを開き、それを変更して保存する例について説明します。  
   
- Office Open XML の詳細については、[Eric White のブログ](http://www.ericwhite.com)を参照してください。  
+ Office Open XML の詳細については、次を参照してください。 [Eric White のブログ](http://www.ericwhite.com)します。  
   
 ## <a name="example"></a>例  
  この例では、ドキュメント内の最初の段落要素を検索します。 次に、段落からテキストを取得し、段落内のテキスト ランをすべて削除します。 また、大文字に変換された最初の段落のテキストから構成される新しいテキスト ランを作成します。 最後に、変更した XML を Open XML パッケージにシリアル化して閉じます。  

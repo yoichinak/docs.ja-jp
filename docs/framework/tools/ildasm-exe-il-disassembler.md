@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e96f86e516e7b741aa9fbf67efd1683d0845101
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: a785401f0477131e6ebf0e9c04ce6d0b0b4d4f5c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57488514"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59517539"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 逆アセンブラー)
 
@@ -69,7 +69,7 @@ ildasm [options] [PEfilename] [options]
 |**/classlist**|モジュールで定義されているクラスの一覧を含めます。|
 |**/forward**|事前のクラス宣言を使用します。|
 |**/headers**|出力にファイル ヘッダー情報を組み込みます。|
-|**/item:** `class`[**::** `member`[`(sig`]]|指定した引数に応じて、次の要素を逆アセンブルします。<br /><br /> -   指定した `class` を逆アセンブルします。<br />-   指定した `class` の `member` を逆アセンブルします。<br />-   指定したシグネチャ `sig` を持つ `class` の `member` を逆アセンブルします。 `sig` の形式は次のとおりです。<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **注** .NET Framework Version 1.0 および 1.1 では、`(sig)` のように、`sig` の後に閉じかっこを付ける必要があります。 .NET Framework Version 2.0 以降では、閉じかっこを省略して (`sig` とする必要があります。|
+|**/item:** `class`[**::** `member`[`(sig`]]|指定した引数に応じて、次の要素を逆アセンブルします。<br /><br /> -   指定した `class` を逆アセンブルします。<br />-   指定した `class` の `member` を逆アセンブルします。<br />-   指定したシグネチャ `sig` を持つ `class` の `member` を逆アセンブルします。 `sig` の形式は次のとおりです。<br />     [`instance`] `returnType`(`parameterType1`, `parameterType2`, …, `parameterTypeN`)<br />     **注** .NET Framework Version 1.0 および 1.1 では、`(sig)` のように、`sig` の後に閉じかっこを付ける必要があります。 .NET Framework 2.0 以降では、閉じかっこを省略して `(sig` とする必要があります。|
 |**/noil**|IL アセンブリ コードが出力されなくなります。|
 |**/stats**|イメージの統計情報を含めます。|
 |**/typelist**|ラウンド トリップの型の順序を保存するために、型の完全な一覧を生成します。|

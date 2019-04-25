@@ -9,10 +9,10 @@ helpviewer_keywords:
 - cursor (mouse pointer)
 ms.assetid: 08c945a7-8ab0-4320-acf3-0b4955a344c2
 ms.openlocfilehash: 5c9e6931f6addb62a51e44b06a159d4e7b1e5f8a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141207"
 ---
 # <a name="how-to-change-the-cursor-type"></a>方法: カーソルの種類を変更する

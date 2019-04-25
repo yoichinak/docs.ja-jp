@@ -3,10 +3,10 @@ title: 高度な LINQ to XML プログラミング (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 36018532-a55c-4538-8a27-98f475ea3415
 ms.openlocfilehash: f30f8f1c6dcdbabc1f32f4f7e216ce65a50396c6
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835324"
 ---
 # <a name="advanced-linq-to-xml-programming-visual-basic"></a>高度な LINQ to XML プログラミング (Visual Basic)

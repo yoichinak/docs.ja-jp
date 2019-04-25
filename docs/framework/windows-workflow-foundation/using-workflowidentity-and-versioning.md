@@ -3,27 +3,27 @@ title: WorkflowIdentity と Versioning の使用
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
 ms.openlocfilehash: 5bed526a47b802c60aa679e53c84af4e14656675
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327491"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity と Versioning の使用
-<xref:System.Activities.WorkflowIdentity> 名前を関連付けるアプリケーションの開発者ワークフローの方法を提供します、<xref:System.Version>ワークフロー定義に、この情報を永続化されたワークフロー インスタンスに関連付けられています。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 このトピックでは、<xref:System.Activities.WorkflowIdentity> ホスティングでの <xref:System.Activities.WorkflowApplication> の使用の概要について説明します。 ワークフロー サービスでのワークフロー定義のサイド バイ サイドでの実行については、次を参照してください。 [WorkflowServiceHost でサイド バイ サイドのバージョン管理](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)します。 動的更新については、次を参照してください。[動的更新](dynamic-update.md)します。  
+<xref:System.Activities.WorkflowIdentity> を使用すると、ワークフロー アプリケーションの開発者は、名前と <xref:System.Version> をワークフロー定義に関連付け、永続化されたワークフロー インスタンスにこの情報を関連付けることができます。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 このトピックでは、<xref:System.Activities.WorkflowIdentity> ホスティングでの <xref:System.Activities.WorkflowApplication> の使用の概要について説明します。 ワークフロー サービスでのワークフロー定義のサイド バイ サイドでの実行については、次を参照してください。 [WorkflowServiceHost でサイド バイ サイドのバージョン管理](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)します。 動的更新については、次を参照してください。[動的更新](dynamic-update.md)します。  
   
 ## <a name="in-this-topic"></a>このトピックの内容  
   
 -   [WorkflowIdentity の使用](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
   
-    -   [WorkflowIdentity を使用した side-by-side 実行](using-workflowidentity-and-versioning.md#SxS)  
+    -   [WorkflowIdentity を使用したサイド バイ サイドで実行](using-workflowidentity-and-versioning.md#SxS)  
   
--   [ワークフローのバージョン管理をサポートする .NET Framework 4 永続性データベースのアップグレード](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
+-   [ワークフローのバージョン管理をサポートするために .NET Framework 4 永続性データベースのアップグレード](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
   
     -   [データベース スキーマをアップグレードするには](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> WorkflowIdentity の使用  
- <xref:System.Activities.WorkflowIdentity> を使用するには、インスタンスを作成および構成し、<xref:System.Activities.WorkflowApplication> インスタンスに関連付けます。 <xref:System.Activities.WorkflowIdentity> インスタンスには 3 種類の識別情報が格納されます。 <xref:System.Activities.WorkflowIdentity.Name%2A> <xref:System.Activities.WorkflowIdentity.Version%2A>名が含まれて、<xref:System.Version>が必要とし、<xref:System.Activities.WorkflowIdentity.Package%2A>は省略可能ですし、その他のアセンブリ名などの情報を格納する追加文字列に必要な情報を指定するために使用できます。 <xref:System.Activities.WorkflowIdentity> は、その 3 つのプロパティのいずれかが他の <xref:System.Activities.WorkflowIdentity> と異なる場合に一意です。  
+ <xref:System.Activities.WorkflowIdentity> を使用するには、インスタンスを作成および構成し、<xref:System.Activities.WorkflowApplication> インスタンスに関連付けます。 <xref:System.Activities.WorkflowIdentity> インスタンスには 3 種類の識別情報が格納されます。 <xref:System.Activities.WorkflowIdentity.Name%2A> と <xref:System.Activities.WorkflowIdentity.Version%2A> は必須で、名前と <xref:System.Version> を表します。また、<xref:System.Activities.WorkflowIdentity.Package%2A> は省略可能で、アセンブリ名やその他の必要な情報などの情報を格納する追加文字列の指定に使用できます。 <xref:System.Activities.WorkflowIdentity> は、その 3 つのプロパティのいずれかが他の <xref:System.Activities.WorkflowIdentity> と異なる場合に一意です。  
   
 > [!IMPORTANT]
 >  <xref:System.Activities.WorkflowIdentity> には、個人を特定できる情報 (PII) を含めないでください。 インスタンスの作成に使用される <xref:System.Activities.WorkflowIdentity> に関する情報は、ランタイムによるアクティビティ ライフ サイクルのさまざまなポイントで構成されているすべての追跡サービスに出力されます。 WF の追跡には PII (機密ユーザー データ) を非表示にするメカニズムがありません。 そのため、<xref:System.Activities.WorkflowIdentity> インスタンスには PII データを含めないでください。PII データは、ランタイムによって追跡レコードに出力され、追跡レコードを表示するためのアクセス権を持つユーザーに表示できます。  
@@ -76,9 +76,9 @@ wfApp.Load(instanceId);
   
  前のコードが実行されると、次の <xref:System.Activities.VersionMismatchException> がスローされます。  
   
- **読み込まれたインスタンスの WorkflowIdentity ('MortgageWorkflow v1; Version=1.0.0.0') が、指定されたワークフロー定義の WorkflowIdentity ('MortgageWorkflow v2; Version=2.0.0.0') と一致しません。 別の定義を使用してインスタンスを読み込むか、動的更新を使用してインスタンスを更新してください。**  
+ **WorkflowIdentity ('MortgageWorkflow v1;バージョン 1.0.0.0' =) の読み込まれたインスタンスと一致しません、WorkflowIdentity ('MortgageWorkflow v2;バージョン 2.0.0.0' =) の指定されたワークフロー定義。インスタンスは、別の定義を使用して読み込むことができるや、動的更新を使用して更新します。**  
 ### <a name="SxS"></a> WorkflowIdentity を使用したサイド バイ サイドで実行  
- <xref:System.Activities.WorkflowIdentity> ワークフロー サイド バイ サイドの複数のバージョンの実行を容易にするために使用します。 たとえば、実行時間の長いワークフローのビジネス要件を変更します。 ワークフローの多くのインスタンスは、更新されたバージョンを配置すると実行できます。 ホスト アプリケーションは、新しいインスタンスの開始時に更新されたワークフロー定義を使用するよう構成できます。また、インスタンスの再開時に適切なワークフロー定義を指定するのはホスト アプリケーションの役割です。 <xref:System.Activities.WorkflowIdentity> 特定のワークフロー インスタンスを再開するときに、一致するワークフロー定義を指定して使用できます。  
+ <xref:System.Activities.WorkflowIdentity> を使用すると、ワークフローの複数のバージョンの side-by-side 実行を簡略化できます。 たとえば、実行時間の長いワークフローのビジネス要件を変更します。 ワークフローの多くのインスタンスは、更新されたバージョンを配置すると実行できます。 ホスト アプリケーションは、新しいインスタンスの開始時に更新されたワークフロー定義を使用するよう構成できます。また、インスタンスの再開時に適切なワークフロー定義を指定するのはホスト アプリケーションの役割です。 <xref:System.Activities.WorkflowIdentity> を使用すると、ワークフロー インスタンスの再開時に、一致するワークフロー定義を特定して指定できます。  
   
  永続化されたワークフロー インスタンスの <xref:System.Activities.WorkflowIdentity> を取得するには、<xref:System.Activities.WorkflowApplication.GetInstance%2A> メソッドを使用します。 <xref:System.Activities.WorkflowApplication.GetInstance%2A> メソッドは、永続化されたワークフロー インスタンスの <xref:System.Activities.WorkflowApplication.Id%2A>、および永続化されたインスタンスを格納する <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> を取得して、<xref:System.Activities.WorkflowApplicationInstance> を返します。 <xref:System.Activities.WorkflowApplicationInstance> には、永続化されたワークフロー インスタンスに関する情報 (関連付けられた <xref:System.Activities.WorkflowIdentity> など) が格納されます。 この関連付けられた <xref:System.Activities.WorkflowIdentity> は、ワークフロー インスタンスを読み込んで再開するときに、適切なワークフロー定義を指定するためにホストで使用できます。  
   
@@ -143,12 +143,12 @@ wfApp.Load(instance);
   
  [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ワークフロー アプリケーションが、提供されたスクリプトを使用してアップグレードされていない永続性データベースで新しいバージョン管理機能を使用する永続化操作を実行すると、<xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> がスローされ、次のようなメッセージが表示されます。  
   
- **SqlWorkflowInstanceStore のデータベースのバージョンが '4.0.0.0' です。 このバージョンのデータベースに対して InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' を実行することはできません。  データベースを '4.5.0.0' にアップグレードしてください。**  
+ **SqlWorkflowInstanceStore が '4.0.0.0' のデータベースのバージョンです。このバージョンのデータベースに対して InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' を実行することはできません。データベースを '4.5.0.0' にアップグレードしてください。**  
 ### <a name="ToUpgrade"></a> データベース スキーマをアップグレードするには  
   
 1. SQL Server Management Studio を開き、たとえば、永続性データベース サーバーに接続 **. \SQLEXPRESS**します。  
   
-2. 選択**オープン**、**ファイル**から、**ファイル**メニュー。 次のフォルダーを参照してください。 `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`  
+2. 選択**オープン**、**ファイル**から、**ファイル**メニュー。 次のフォルダーに移動します: `C:\Windows\Microsoft.NET\Framework\4.0.30319\sql\en`。  
   
 3. 選択**SqlWorkflowInstanceStoreSchemaUpgrade.sql** をクリック**オープン**します。  
   

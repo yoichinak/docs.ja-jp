@@ -3,10 +3,10 @@ title: 追跡レコード
 ms.date: 03/30/2017
 ms.assetid: 51adbda3-bd8b-4892-a8ea-d343186472d2
 ms.openlocfilehash: 46b52f6b774d1d692c0e7dec400d369428a9607e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298358"
 ---
 # <a name="tracking-records"></a>追跡レコード
@@ -50,15 +50,15 @@ ms.locfileid: "59298358"
   
  単純な <xref:System.Activities.Statements.Sequence> アクティビティの例としては、追跡レコードを次の順序で出力する <xref:System.Activities.Statements.WriteLine> 操作を含めることが考えられます。  
   
-1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> ワークフローが開始されていることを示します。  
+1. <xref:System.Activities.Tracking.WorkflowInstanceRecord> は、ワークフローが起動していることを示します。  
   
-2. <xref:System.Activities.Tracking.ActivityScheduledRecord> アクティビティがスケジュールされていることを示します。 この場合は <xref:System.Activities.Statements.Sequence> アクティビティです。  
+2. <xref:System.Activities.Tracking.ActivityScheduledRecord> は、アクティビティがスケジュールされたことを示します。 この場合は <xref:System.Activities.Statements.Sequence> アクティビティです。  
   
-3. <xref:System.Activities.Tracking.ActivityScheduledRecord> 表す、<xref:System.Activities.Statements.WriteLine>アクティビティ。  
+3. <xref:System.Activities.Tracking.ActivityScheduledRecord> は、<xref:System.Activities.Statements.WriteLine> アクティビティを表します。  
   
 4. 2 つのアクティビティが完了していることを示す 2 つの <xref:System.Activities.Tracking.ActivityStateRecord> レコードがあります。  
   
-5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> ワークフローが完了していることを示します。  
+5. <xref:System.Activities.Tracking.WorkflowInstanceRecord> は、ワークフローが完了していることを示します。  
   
 ## <a name="see-also"></a>関連項目
 

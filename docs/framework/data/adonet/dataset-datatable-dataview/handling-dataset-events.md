@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
 ms.openlocfilehash: 5e1de3effcae5700aa25f5dbb84f2dec3a0b20f1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59195287"
 ---
 # <a name="handling-dataset-events"></a>DataSet のイベント処理
@@ -48,7 +48,7 @@ private static void DataSetMergeFailed(
  <xref:System.Data.DataSet.IsInitialized%2A> プロパティは、 `true` の初期化が完了した場合に `DataSet` を返します。それ以外の場合は `false`を返します。 この値は、 <xref:System.Data.DataSet.BeginInit%2A> の初期化を開始する `DataSet`メソッドによって <xref:System.Data.DataSet.IsInitialized%2A> が `false`に設定されます。 また、 <xref:System.Data.DataSet.EndInit%2A> の初期化を終了する `DataSet`メソッドによって `true`に設定されます。 これらのメソッドは、Visual Studio のデザイン環境が初期化に使用される、`DataSet`別のコンポーネントで使用されています。 通常、コード内で直接使用することはありません。  
   
 ## <a name="the-disposed-event"></a>Disposed イベント  
- `DataSet` 派生したが、<xref:System.ComponentModel.MarshalByValueComponent>両方を公開するクラスを<xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>メソッドと<xref:System.ComponentModel.MarshalByValueComponent.Disposed>イベント。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>コンポーネントのイベントが破棄イベントをリッスンするように、イベント ハンドラーを追加します。 使用することができます、<xref:System.ComponentModel.MarshalByValueComponent.Disposed>のイベントを`DataSet`を実行する場合は、ときにコード、<xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>メソッドが呼び出されます。 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 使用されるリソースを解放、<xref:System.ComponentModel.MarshalByValueComponent>します。  
+ `DataSet` は、 <xref:System.ComponentModel.MarshalByValueComponent> メソッドおよび <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> イベントの両方を公開する <xref:System.ComponentModel.MarshalByValueComponent.Disposed> クラスから派生しています。 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>コンポーネントのイベントが破棄イベントをリッスンするように、イベント ハンドラーを追加します。 使用することができます、<xref:System.ComponentModel.MarshalByValueComponent.Disposed>のイベントを`DataSet`を実行する場合は、ときにコード、<xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A>メソッドが呼び出されます。 <xref:System.ComponentModel.MarshalByValueComponent.Dispose%2A> 使用されるリソースを解放、<xref:System.ComponentModel.MarshalByValueComponent>します。  
   
 > [!NOTE]
 >  `DataSet`と`DataTable`オブジェクトから継承<xref:System.ComponentModel.MarshalByValueComponent>をサポートし、<xref:System.Runtime.Serialization.ISerializable>リモート処理用のインターフェイス。 これらは、リモート処理ができる唯一の ADO.NET オブジェクトです。 詳細については、次を参照してください。 [.NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507(v=vs.100))します。  

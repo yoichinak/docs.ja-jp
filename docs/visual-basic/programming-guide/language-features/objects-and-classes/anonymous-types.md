@@ -9,10 +9,10 @@ helpviewer_keywords:
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829136"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名型 (Visual Basic)
@@ -32,7 +32,7 @@ Visual Basic では、データ型のクラス定義を記述せずにオブジ�
   
  [!code-vb[VbVbalrAnonymousTypes#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#3)]  
   
- 匿名型のためにコンパイラによって作成されたコードの詳細については、[匿名の型定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)を参照してください。  
+ 匿名型のためにコンパイラによって作成されたコードの詳細については、次を参照してください。[匿名の型定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)します。  
   
 > [!CAUTION]
 >  匿名型の名前は、コンパイラが生成され、コンパイルするたびに異なる場合があります。 コードをいないを使用して、または、プロジェクトが再コンパイルされるとき、名前が変わる可能性がある匿名型の名前に依存します。  
@@ -104,7 +104,7 @@ Visual Basic では、データ型のクラス定義を記述せずにオブジ�
   
  によって表されるコレクション内の要素`custs3`厳密に型指定し、使用可能なプロパティをナビゲートし、その型を確認するのには、IntelliSense を使用することができます。  
   
- 詳細については、[Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)を参照してください。  
+ 詳細については、次を参照してください。 [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)します。  
   
 ## <a name="deciding-whether-to-use-anonymous-types"></a>匿名型を使用するかどうかを決定します。  
  匿名クラスのインスタンスとしてオブジェクトを作成する前に、最適なオプションがあるかどうかを検討してください。 たとえば場合は、関連するデータを格納する一時オブジェクトを作成して、その他のフィールドやメソッドが含まれる完全なクラスの必要はありません、匿名型は優れたソリューションです。 匿名型は、宣言ごとに異なるプロパティを選択する場合、またはプロパティの順序を変更する場合にも便利です。 ただし、プロジェクトには、一定の順序で、同じプロパティがありますをいくつかのオブジェクトが含まれている場合ことでも宣言できますより簡単にクラス コンス トラクターを持つ名前付きの型を使用しています。 たとえば、適切なコンス トラクターではの複数のインスタンスを宣言しやすく、`Product`クラス、匿名型のいくつかのインスタンスを宣言するよりもします。  
@@ -124,7 +124,7 @@ Visual Basic では、データ型のクラス定義を記述せずにオブジ�
   
  匿名型の定義には少なくとも 1 つを持つキー プロパティも実装、<xref:System.IEquatable%601?displayProperty=nameWithType>インターフェイス、場所`T`匿名型の種類です。  
   
- コンパイラとオーバーライドされたメソッドの機能によって作成されたコードの詳細については、[匿名の型定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)を参照してください。  
+ コンパイラとオーバーライドされたメソッドの機能によって作成されたコードの詳細については、次を参照してください。[匿名の型定義](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-type-definition.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

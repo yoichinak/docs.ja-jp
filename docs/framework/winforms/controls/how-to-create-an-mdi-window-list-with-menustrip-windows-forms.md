@@ -9,10 +9,10 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
 ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59299645"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>方法: MenuStrip (Windows フォーム) を MDI ウィンドウ リストを作成します。
@@ -34,7 +34,7 @@ ms.locfileid: "59299645"
   
 6. プロジェクトにフォームを追加し、別などの必要なコントロールを追加<xref:System.Windows.Forms.MenuStrip>します。  
   
-7. イベント ハンドラーを作成、<xref:System.Windows.Forms.Control.Click>のイベント、`&New`<xref:System.Windows.Forms.ToolStripMenuItem>します。  
+7. <xref:System.Windows.Forms.ToolStripMenuItem> の `&New` の <xref:System.Windows.Forms.Control.Click> イベントにイベント ハンドラーを作成します。  
   
 8. イベント ハンドラー内で作成の新しいインスタンスを表示するには、次のようなコードを挿入`Form2`の MDI 子フォームとして`Form1`します。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59299645"
     }  
     ```  
   
-9. 配置では、次のようなコード、`&New`<xref:System.Windows.Forms.ToolStripMenuItem>イベント ハンドラーを登録します。  
+9. 配置では、次のようなコード、 `&New` <xref:System.Windows.Forms.ToolStripMenuItem>イベント ハンドラーを登録します。  
   
     ```vb  
     Private Sub newToolStripMenuItem_Click(sender As Object, e As _  
@@ -83,6 +83,6 @@ ms.locfileid: "59299645"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: MDI 親フォームを作成する](../advanced/how-to-create-mdi-parent-forms.md)
-- [方法: MDI 子フォームを作成する](../advanced/how-to-create-mdi-child-forms.md)
+- [方法: MDI 親フォームを作成します。](../advanced/how-to-create-mdi-parent-forms.md)
+- [方法: MDI 子フォームを作成します。](../advanced/how-to-create-mdi-child-forms.md)
 - [MenuStrip コントロール](menustrip-control-windows-forms.md)

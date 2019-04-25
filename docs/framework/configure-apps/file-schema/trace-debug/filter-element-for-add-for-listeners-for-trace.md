@@ -1,5 +1,5 @@
 ---
-title: <filter> 要素の<add>の<listeners>の <trace>
+title: <filter> の <add> の <listeners> の <trace> 要素
 ms.date: 03/30/2017
 f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#configuration/system.diagnostics/trace/listeners/add/filter
@@ -9,10 +9,10 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
 ms.openlocfilehash: 5961125e1b8d0d0f5711f8b942b68ba71d61888f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59143430"
 ---
 # <a name="filter-element-for-add-for-listeners-for-trace"></a>\<フィルター > 要素の\<追加 > の\<リスナー > の\<トレース >

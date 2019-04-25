@@ -3,10 +3,10 @@ title: パラメーター (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8d618edd-0988-4ff2-8263-ce59448af7a5
 ms.openlocfilehash: 47a1514933904daa623adc151d50525f011e07a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59187675"
 ---
 # <a name="parameters-entity-sql"></a>パラメーター (Entity SQL)

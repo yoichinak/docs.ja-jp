@@ -3,10 +3,10 @@ title: '方法: Metadata Exchange コントラクトと共にサービス モニ
 ms.date: 03/30/2017
 ms.assetid: c41a07e5-cb9d-45d6-9ea4-34511e227faf
 ms.openlocfilehash: 367cbd4a2bfbde3d4ab0a74eeeaf5d5f5662ec27
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319834"
 ---
 # <a name="how-to-use-a-service-moniker-with-metadata-exchange-contracts"></a>方法: Metadata Exchange コントラクトと共にサービス モニカーを使用する
@@ -41,5 +41,5 @@ ms.locfileid: "59319834"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: 未登録で Windows Communication Foundation のサービス モニカーを使用する](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
-- [方法: WSDL コントラクトと共にサービス モニカーを使用する](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)
+- [方法: 登録しないと、Windows Communication Foundation サービス モニカーを使用して、](../../../../docs/framework/wcf/feature-details/use-the-wcf-service-moniker-without-registration.md)
+- [方法: WSDL コントラクトと共にサービス モニカーを使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-a-service-moniker-with-wsdl-contracts.md)

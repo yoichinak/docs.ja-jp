@@ -3,10 +3,10 @@ title: Mac 用 Visual Studio での F# の概要します。
 description: 使用する方法について説明しますF#で Visual Studio for mac。
 ms.date: 07/03/2018
 ms.openlocfilehash: a6997f139d7e6c5fdf77878442db0b0b75b3d727
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331872"
 ---
 # <a name="get-started-with-f-in-visual-studio-for-mac"></a>Mac 用 Visual Studio での F# の概要します。
@@ -107,7 +107,7 @@ val it : bool = true
 
 以降のチュートリアルでは、順方向のパイプ演算子などがについて説明します。
 
-ここでは、F# Interactive で何ができるかを大まかに取り上げているだけです。 詳細については、[F# を使用した対話型プログラミング](../tutorials/fsharp-interactive/index.md) を参照してください。
+ここでは、F# Interactive で何ができるかを大まかに取り上げているだけです。  詳細については、[F# を使用した対話型プログラミング](../tutorials/fsharp-interactive/index.md) を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
@@ -116,7 +116,7 @@ val it : bool = true
 ## <a name="see-also"></a>関連項目
 
 - [Visual F#](../index.md)
-- [ツアーF#](../tour.md)
+- [F# のツアー](../tour.md)
 - [F#言語リファレンス](../language-reference/index.md)
 - [型の推論](../language-reference/type-inference.md)
 - [シンボルと演算子のリファレンス](../language-reference/symbol-and-operator-reference/index.md)

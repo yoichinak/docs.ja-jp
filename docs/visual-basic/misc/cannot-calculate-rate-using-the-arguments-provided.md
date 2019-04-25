@@ -5,11 +5,11 @@ f1_keywords:
 - vbrFinancial_CannotCalculateRate
 ms.assetid: 17d5c8eb-4716-4b72-977f-a640c02e630d
 ms.openlocfilehash: 86f32251bdbd782e348bbfeb7f0429905b230153
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59302648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904242"
 ---
 # <a name="cannot-calculate-rate-using-the-arguments-provided"></a>指定された引数を使って割合を計算することはできません
 割合の計算に必要な引数が含まれていません。  

@@ -1,49 +1,42 @@
-items:
 - name: Visual Basic における XML
   href: index.md
   items:
-  - name: LINQ to XML の概要
-    href: overview-of-linq-to-xml.md
-  - name: XML の作成
-    href: creating-xml.md
-    items:
-    - name: XML リテラルの概要
-      href: xml-literals-overview.md
-    - name: XML での埋め込み式
-      href: embedded-expressions-in-xml.md
-    - name: 宣言する XML 要素と属性の名前
-      href: names-of-declared-xml-elements-and-attributes.md
-    - name: XML リテラルと XML 1.0 仕様
-      href: xml-literals-and-the-xml-1-0-specification.md
-    - name: XML リテラルでの空白文字
-      href: white-space-in-xml-literals.md
-    - name: '方法: XML リテラルを作成する'
-      href: how-to-create-xml-literals.md
-    - name: '方法: XML リテラルに式を埋め込む'
-      href: how-to-embed-expressions-in-xml-literals.md
-  - name: XML の操作
-    href: manipulating-xml.md
-    items:
-    - name: '方法: ファイル、文字列、またはストリームからの XML の読み込み'
-      href: how-to-load-xml-from-a-file-string-or-stream.md
-    - name: '方法: LINQ を使用した XML の変換'
-      href: how-to-transform-xml-by-using-linq.md
-    - name: '方法: XML リテラルの変更'
-      href: how-to-modify-xml-literals.md
-  - name: XML へのアクセス
-    href: accessing-xml.md
-    items:
-    - name: '方法: XML 子孫要素にアクセスする'
-      href: how-to-access-xml-descendant-elements.md
-    - name: '方法: XML 子要素にアクセスする'
-      href: how-to-access-xml-child-elements.md
-    - name: '方法: XML 属性にアクセスする'
-      href: how-to-access-xml-attributes.md
-    - name: '方法: XML 名前空間プレフィックスを宣言して使用する'
-      href: how-to-declare-and-use-xml-namespace-prefixes.md
-ms.openlocfilehash: 7d2d931b5f88e9af9a2cdef92168d907e3fd6ce6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470354"
+    - name: LINQ to XML の概要
+      href: overview-of-linq-to-xml.md
+    - name: XML の作成
+      href: creating-xml.md
+      items:
+        - name: XML リテラルの概要
+          href: xml-literals-overview.md
+        - name: XML での埋め込み式
+          href: embedded-expressions-in-xml.md
+        - name: 宣言する XML 要素と属性の名前
+          href: names-of-declared-xml-elements-and-attributes.md
+        - name: XML リテラルと XML 1.0 仕様
+          href: xml-literals-and-the-xml-1-0-specification.md
+        - name: XML リテラルでの空白文字
+          href: white-space-in-xml-literals.md
+        - name: '方法: XML リテラルを作成する'
+          href: how-to-create-xml-literals.md
+        - name: '方法: XML リテラルに式を埋め込む'
+          href: how-to-embed-expressions-in-xml-literals.md
+    - name: XML の操作
+      href: manipulating-xml.md
+      items:
+        - name: '方法: ファイル、文字列、またはストリームからの XML の読み込み'
+          href: how-to-load-xml-from-a-file-string-or-stream.md
+        - name: '方法: LINQ を使用した XML の変換'
+          href: how-to-transform-xml-by-using-linq.md
+        - name: '方法: XML リテラルの変更'
+          href: how-to-modify-xml-literals.md
+    - name: XML へのアクセス
+      href: accessing-xml.md
+      items:
+        - name: '方法: XML 子孫要素にアクセスする'
+          href: how-to-access-xml-descendant-elements.md
+        - name: '方法: XML 子要素にアクセスする'
+          href: how-to-access-xml-child-elements.md
+        - name: '方法: XML 属性にアクセスする'
+          href: how-to-access-xml-attributes.md
+        - name: '方法: XML 名前空間プレフィックスを宣言して使用する'
+          href: how-to-declare-and-use-xml-namespace-prefixes.md

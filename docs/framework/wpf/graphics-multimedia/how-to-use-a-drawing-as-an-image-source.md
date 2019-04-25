@@ -7,10 +7,10 @@ helpviewer_keywords:
 - drawings [WPF], as image sources
 ms.assetid: dcf71c7b-9e86-4b8e-8e39-0d0ce0389ef4
 ms.openlocfilehash: d4b91a6495e1c54400d5fbfe43b6311d908565a7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097861"
 ---
 # <a name="how-to-use-a-drawing-as-an-image-source"></a>方法: 描画をイメージ ソースとして使用する

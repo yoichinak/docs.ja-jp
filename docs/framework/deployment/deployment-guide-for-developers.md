@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 094d043e-33c4-40ba-a503-e0b20b55f4cf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9298bb758c205c1ef577942aca6b107828e8e139
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: f71cebc164e7b324dc847c67d3e0e49e856c11c7
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675914"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59306535"
 ---
 # <a name="net-framework-deployment-guide-for-developers"></a>.NET Framework 配置ガイド (開発者向け)
 このトピックでは、.NET Framework 4.5 から [!INCLUDE[net_current](../../../includes/net-current-version.md)] までの任意のバージョンの .NET Framework を、それぞれのアプリと共にインストールする開発者向けの情報を提供します。
@@ -117,23 +117,23 @@ ms.locfileid: "58675914"
 
  Visual Studio で ClickOnce 配置を選択し、.NET Framework の依存関係を追加するには:
 
-1.  発行するアプリケーション プロジェクトを開きます。
+1. 発行するアプリケーション プロジェクトを開きます。
 
-2.  ソリューション エクスプローラーで、プロジェクトのショートカット メニューを開き、 **[プロパティ]** を選択します。
+2. ソリューション エクスプローラーで、プロジェクトのショートカット メニューを開き、 **[プロパティ]** を選択します。
 
-3.  **[発行]** ペインを選択します。
+3. **[発行]** ペインを選択します。
 
-4.  **[必須コンポーネント]** ボタンをクリックします。
+4. **[必須コンポーネント]** ボタンをクリックします。
 
-5.  **[必須コンポーネント]** ダイアログ ボックスの **[必須コンポーネントをインストールするセットアップ プログラムを作成する]** チェック ボックスをオンにします。
+5. **[必須コンポーネント]** ダイアログ ボックスの **[必須コンポーネントをインストールするセットアップ プログラムを作成する]** チェック ボックスをオンにします。
 
-6.  必須コンポーネントの一覧で、プロジェクトのビルドに使用した .NET Framework のバージョンを検索して選択します。
+6. 必須コンポーネントの一覧で、プロジェクトのビルドに使用した .NET Framework のバージョンを検索して選択します。
 
-7.  必須コンポーネントのソースの場所を指定するオプションを選択し、 **[OK]** をクリックします。
+7. 必須コンポーネントのソースの場所を指定するオプションを選択し、 **[OK]** をクリックします。
 
      .NET Framework のダウンロード場所の URL を指定する場合は、Microsoft ダウンロード センター サイトまたは独自のサイトを指定できます。 再頒布可能パッケージを独自のサーバーに配置する場合は、Web インストーラーではなく、オフライン インストーラーを使用する必要があります。 Microsoft ダウンロード センターの Web インストーラーにのみリンクできます。 URL には、独自のアプリケーションを配布する CD を指定することもできます。
 
-8.  **[プロパティ ページ]** ダイアログ ボックスの **[OK]** をクリックします。
+8. **[プロパティ ページ]** ダイアログ ボックスの **[OK]** をクリックします。
 
 <a name="installaware"></a> 
 ### <a name="installaware-deployment"></a>InstallAware の配置
@@ -142,19 +142,19 @@ InstallAware は、Windows アプリ (APPX)、Windows インストーラー (MSI
 ### <a name="installshield-deployment"></a>InstallShield 配置
  Visual Studio で InstallShield 配置を選択し、.NET Framework の依存関係を追加するには:
 
-1.  Visual Studio メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順に選択します。
+1. Visual Studio メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順に選択します。
 
-2.  **[新しいプロジェクト]** ダイアログ ボックスの左ペインで、 **[その他のプロジェクトの種類]**、 **[セットアップと配置]**、 **[InstallShield LE]** の順に選択します。
+2. **[新しいプロジェクト]** ダイアログ ボックスの左ペインで、 **[その他のプロジェクトの種類]**、 **[セットアップと配置]**、 **[InstallShield LE]** の順に選択します。
 
-3.  **[名前]** ボックスにプロジェクト名を入力し、 **[OK]** をクリックします。
+3. **[名前]** ボックスにプロジェクト名を入力し、 **[OK]** をクリックします。
 
-4.  初めてセットアップと配置プロジェクトを作成する場合、**[Go to InstallShield]\(InstallShield に移動\)** または **[InstallShield Limited Edition の有効化]** を選択し、ご使用の Microsoft Visual Studio のバージョンの InstallShield Limited Edition をダウンロードします。 Visual Studio を再起動します。
+4. 初めてセットアップと配置プロジェクトを作成する場合、**[Go to InstallShield]\(InstallShield に移動\)** または **[InstallShield Limited Edition の有効化]** を選択し、ご使用の Microsoft Visual Studio のバージョンの InstallShield Limited Edition をダウンロードします。 Visual Studio を再起動します。
 
-5.  **プロジェクト アシスタント** ウィザードに移動し、 **[アプリケーション ファイル]** をクリックしてプロジェクト出力を追加します。 このウィザードを使用して、他のプロジェクト属性を設定できます。
+5. **プロジェクト アシスタント** ウィザードに移動し、 **[アプリケーション ファイル]** をクリックしてプロジェクト出力を追加します。 このウィザードを使用して、他のプロジェクト属性を設定できます。
 
-6.  **[インストール要件]** に移動し、オペレーティング システムと、インストールする .NET Framework のバージョンを選択します。
+6. **[インストール要件]** に移動し、オペレーティング システムと、インストールする .NET Framework のバージョンを選択します。
 
-7.  セットアップ プロジェクトのショートカット メニューを開き、 **[ビルド]** を選択します。
+7. セットアップ プロジェクトのショートカット メニューを開き、 **[ビルド]** を選択します。
  
 <a name="wix"></a> 
 ### <a name="windows-installer-xml-wix-deployment"></a>Windows インストーラー XML (WiX) 配置
@@ -403,6 +403,7 @@ NDP451-KB2858728-x86-x64-AllOS-JPN.exe /q /norestart /ChainingPackage <ProductNa
 |3082|スペイン語 (スペイン、モダン ソート)|es|
 
 ## <a name="see-also"></a>関連項目
+
 - [配置ガイド (管理者向け)](../../../docs/framework/deployment/guide-for-administrators.md)
 - [システム要件](../../../docs/framework/get-started/system-requirements.md)
 - [開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)

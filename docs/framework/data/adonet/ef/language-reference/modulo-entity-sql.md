@@ -3,10 +3,10 @@ title: (剰余) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
 ms.openlocfilehash: e2d2c4cd6fd62cf5785d6b69aa399a74f8d04d30
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59326737"
 ---
 # <a name="modulo-entity-sql"></a>(剰余) (Entity SQL)
@@ -20,10 +20,10 @@ dividend % divisor
   
 ## <a name="arguments"></a>引数  
  `dividend`  
- 除算する数値式。 `dividend` 数値データ型のいずれかの任意の有効な式です。  
+ 除算する数値式。 `dividend` は、任意の数値データ型の有効な式です。  
   
  `divisor`  
- 被除数を除算する数値式。 `divisor` 数値データ型のいずれかの任意の有効な式です。  
+ 被除数を除算する数値式。 `divisor` は、任意の数値データ型の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
  Edm.Int32  

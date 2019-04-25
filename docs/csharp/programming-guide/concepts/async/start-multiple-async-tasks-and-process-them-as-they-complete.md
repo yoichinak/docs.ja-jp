@@ -2,12 +2,12 @@
 title: 完了時の非同期タスクの処理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: ec5729eaa8d63eb18b1ac4dea5820cbf834d001b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53152366"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59304858"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>完了時での複数の非同期タスクとプロセスの実行 (C#)
 
@@ -20,22 +20,22 @@ ms.locfileid: "53152366"
 
 ## <a name="download-an-example-solution"></a>ソリューションの例をダウンロードする
 
-完全な Windows Presentation Foundation (WPF) プロジェクトは「[Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」からダウンロードできます。ダウンロード後、次の手順に従います。
+完全な Windows Presentation Foundation (WPF) プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。その後、次の手順に従います。
 
 > [!TIP]
 > プロジェクトをダウンロードしない場合は、代わりに、このトピックの最後の MainWindow.xaml.cs ファイルをレビューしてもかまいません。
 
-1.  .zip ファイルからダウンロードしたファイルを抽出して、Visual Studio を開始します。
+1. .zip ファイルからダウンロードしたファイルを抽出して、Visual Studio を開始します。
 
-2.  メニュー バーで、**[ファイル]** > **[開く]** > **[プロジェクト/ソリューション]** を選択します。
+2. メニュー バーで、**[ファイル]** > **[開く]** > **[プロジェクト/ソリューション]** を選択します。
 
-3.  **[プロジェクトを開く]** ダイアログ ボックスで、ダウンロードしたサンプル コードを含むフォルダーを開き、AsyncFineTuningCS のソリューション (.sln) ファイルを開きます。
+3. **[プロジェクトを開く]** ダイアログ ボックスで、ダウンロードしたサンプル コードを含むフォルダーを開き、AsyncFineTuningCS のソリューション (.sln) ファイルを開きます。
 
-4.  **ソリューション エクスプローラー**で、**ProcessTasksAsTheyFinish** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。
+4. **ソリューション エクスプローラー**で、**ProcessTasksAsTheyFinish** プロジェクトのショートカット メニューを開き、**[スタートアップ プロジェクトに設定]** をクリックします。
 
-5.  **F5** キーを押してプログラムを実行します (または、**Ctrl**+**F5** キーを押して、デバッグせずにプログラムを実行します)。
+5. **F5** キーを押してプログラムを実行します (または、**Ctrl**+**F5** キーを押して、デバッグせずにプログラムを実行します)。
 
-6.  ダウンロードの長さが常に同じ順序では表示されないことを確認するために、プロジェクトを複数回実行します。
+6. ダウンロードの長さが常に同じ順序では表示されないことを確認するために、プロジェクトを複数回実行します。
 
 ## <a name="create-the-program-yourself"></a>プログラムを自分で作成する
 
@@ -87,7 +87,7 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 次のコードは、この例での MainWindow.xaml.cs ファイルのテキスト全体です。 アスタリスクはこの例のために追加された要素を示しています。 また、<xref:System.Net.Http> の参照を追加する必要があることに注意してください。
 
-このプロジェクトは「[Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」からダウンロードできます。
+プロジェクトは、「[Async Sample: Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」(非同期のサンプル: アプリケーションの微調整) からダウンロードできます。
 
 ```csharp
 using System;
@@ -230,4 +230,4 @@ namespace ProcessTasksAsTheyFinish
 - <xref:System.Threading.Tasks.Task.WhenAny%2A>
 - [非同期アプリケーションの微調整 (C#)](../../../../csharp/programming-guide/concepts/async/fine-tuning-your-async-application.md)
 - [Async および Await を使用した非同期プログラミング (C#)](../../../../csharp/programming-guide/concepts/async/index.md)
-- [Async Sample: Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)
+- [Async Sample:Fine Tuning Your Application (非同期のサンプル: アプリケーションの微調整)](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)

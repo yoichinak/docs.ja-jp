@@ -9,10 +9,10 @@ helpviewer_keywords:
 - animation [WPF], changes to border thickness
 ms.assetid: fd021978-f74b-4e7b-a7f7-3987dcad9e0f
 ms.openlocfilehash: 10e177d1f6d6add4638ce14af900e75d7e363890
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59150736"
 ---
 # <a name="how-to-animate-a-borderthickness-value"></a>方法: BorderThickness 値をアニメーション化する
@@ -32,5 +32,5 @@ ms.locfileid: "59150736"
 - <xref:System.Windows.Controls.Border.BorderThickness%2A>
 - <xref:System.Windows.Controls.Border>
 - [アニメーションの概要](../graphics-multimedia/animation-overview.md)
-- [アニメーションおよびタイミングに関する「方法」トピック](../graphics-multimedia/animation-and-timing-how-to-topics.md)
+- [アニメーションとタイミングに関するトピック](../graphics-multimedia/animation-and-timing-how-to-topics.md)
 - [キー フレームを使用して境界線の太さをアニメーション化する](../graphics-multimedia/how-to-animate-the-thickness-of-a-border-by-using-key-frames.md)

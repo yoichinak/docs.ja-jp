@@ -7,10 +7,10 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59086443"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows フォーム コントロール開発の基本概念
@@ -32,7 +32,7 @@ Windows フォーム コントロールから直接または間接的に派生�
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: シンプルな Windows フォーム コントロールを開発する](how-to-develop-a-simple-windows-forms-control.md)
+- [方法: 単純な Windows フォーム コントロールを開発します。](how-to-develop-a-simple-windows-forms-control.md)
 - [複合 Windows フォーム コントロールの開発](developing-a-composite-windows-forms-control.md)
-- [方法: 進行状況を示す Windows フォーム コントロールを作成する](how-to-create-a-windows-forms-control-that-shows-progress.md)
+- [方法: 進行状況を示す Windows フォーム コントロールを作成します。](how-to-create-a-windows-forms-control-that-shows-progress.md)
 - [さまざまなカスタム コントロール](varieties-of-custom-controls.md)

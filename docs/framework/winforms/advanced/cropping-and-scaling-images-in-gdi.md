@@ -16,10 +16,10 @@ helpviewer_keywords:
 - images [Windows Forms], compression
 ms.assetid: ad5daf26-005f-45bc-a2af-e0e97777a21a
 ms.openlocfilehash: c3cdb06e99770808461f9266fb5f07df9074149b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59183730"
 ---
 # <a name="cropping-and-scaling-images-in-gdi"></a>GDI+ でのイメージのトリミングおよびスケーリング
@@ -48,5 +48,5 @@ ms.locfileid: "59183730"
   
 ## <a name="see-also"></a>関連項目
 
-- [イメージ、ビットマップ、およびメタファイル](images-bitmaps-and-metafiles.md)
+- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
 - [イメージ、ビットマップ、アイコン、およびメタファイルの操作](working-with-images-bitmaps-icons-and-metafiles.md)

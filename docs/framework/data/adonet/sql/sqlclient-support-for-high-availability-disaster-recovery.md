@@ -3,11 +3,11 @@ title: 高可用性障害復旧のための SqlClient サポート
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
 ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59307611"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876091"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性障害復旧のための SqlClient サポート
 このトピックでは、高可用性、ディザスター リカバリーのための SqlClient サポート ([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] に追加) である AlwaysOn 可用性グループについて説明します。  AlwaysOn 可用性グループ機能は、SQL Server 2012 に追加されました。 AlwaysOn 可用性グループの詳細については、SQL Server オンライン ブックを参照してください。  
@@ -63,7 +63,7 @@ ms.locfileid: "59307611"
   
 2. アプリケーションが `ApplicationIntent=ReadWrite` (後で説明) を使用している場合、セカンダリ レプリカの場所は読み取り専用アクセスとして構成されます。  
   
- <xref:System.Data.SqlClient.SqlDependency> 読み取り専用のセカンダリ レプリカでサポートされていません。  
+ <xref:System.Data.SqlClient.SqlDependency> は、読み取り専用のセカンダリ レプリカではサポートされていません。  
   
  プライマリ レプリカが読み取り専用のワークロードを拒否するように設定され、接続文字列が  `ApplicationIntent=ReadOnly` を含んでいる場合、接続は失敗します。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "59307611"
   
  `ApplicationIntent` キーワードは従来の読み取り専用のデータベースでは機能しません。  
   
- データベースは、対象となる AlwaysOn データベースのワークロードの読み取りを許可または拒否できます。 (これは、`ALLOW_CONNECTIONS`の句、`PRIMARY_ROLE`と`SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]ステートメントです)。  
+ データベースは、対象となる AlwaysOn データベースのワークロードの読み取りを許可または拒否できます。 (これは `ALLOW_CONNECTIONS` の `PRIMARY_ROLE` 句および `SECONDARY_ROLE`[!INCLUDE[tsql](../../../../../includes/tsql-md.md)] ステートメントを使用して行います。)  
   
  `ApplicationIntent` キーワードは、読み取り専用のルーティングを有効にするために使用されます。  
   

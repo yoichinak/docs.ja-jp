@@ -8,17 +8,17 @@ helpviewer_keywords:
 - Image control [WPF]
 ms.assetid: 5707e860-ee4a-4c9f-b123-80c64996af19
 ms.openlocfilehash: 4da98f5caa0cbf4714d16f66a18c67844bf5c201
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59184861"
 ---
 # <a name="image"></a>イメージ
 <xref:System.Windows.Controls.Image>ビットマップ画像を表示する要素が使用される[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法のトピック](image-how-to-topics.md)  
+ [方法トピック](image-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.Image>  
@@ -30,4 +30,4 @@ ms.locfileid: "59184861"
 ## <a name="see-also"></a>関連項目
 
 - [イメージングの概要](../graphics-multimedia/imaging-overview.md)
-- [方法のトピック](../graphics-multimedia/imaging-how-to-topics.md)
+- [方法トピック](../graphics-multimedia/imaging-how-to-topics.md)

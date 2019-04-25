@@ -2,17 +2,17 @@
 title: WebRequest の問題と例外について
 ms.date: 03/30/2017
 ms.assetid: 74a361a5-e912-42d3-8f2e-8e9a96880a2b
-ms.openlocfilehash: 55ef0b0f5260c986cad01d2854202dea3755ace7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a6dc06ed7abdbb6a28f9d6c09eda079157493d9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587529"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59215015"
 ---
 # <a name="understanding-webrequest-problems-and-exceptions"></a>WebRequest の問題と例外について
 <xref:System.Net.WebRequest> とその派生クラス (<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>、<xref:System.Net.FileWebRequest>) は例外をスローし、異常な状態を信号で伝えます。 このような問題の解決はすぐにわからないことがあります。  
   
-## <a name="solutions"></a>ソリューション  
+## <a name="solutions"></a>解決策  
  <xref:System.Net.WebException> の <xref:System.Net.WebException.Status%2A> プロパティを調べ、問題を判断します。 次の表は、いくつかの状態値と可能な解決策をまとめたものです。  
   
 |Status|説明|ソリューション|  
@@ -29,6 +29,7 @@ ms.locfileid: "54587529"
 |<xref:System.Net.WebExceptionStatus.ServerProtocolViolation>|サーバーからの応答が有効な HTTP 応答ではありません。 サーバー応答が HTTP 1.1 RFC に準拠しないことを .NET Framework が検出したとき、この問題が発生します。 応答に含まれるヘッダーまたはヘッダー区切り文字が正しくないとき、この問題が発生することがあります。RFC 2616 は HTTP 1.1 とサーバーからの応答の有効な形式を定義します。 詳細については、[Internet Engineering Task Force (IETF)](https://www.ietf.org/) の Web サイトの「[RFC 2616 - Hypertext Transfer Protocol -- HTTP/1.1](https://go.microsoft.com/fwlink/?LinkID=147388)」をご覧ください。|トランザクションのネットワーク トレースを取得し、応答のヘッダーを調べます。<br /><br /> アプリケーションが解析せずに (セキュリティ上、これは問題になる可能性があります) サーバー応答を要求する場合、構成ファイルで `useUnsafeHeaderParsing` を `true` に設定します。 [\<httpWebRequest> 要素 (ネットワーク設定)](../../../docs/framework/configure-apps/file-schema/network/httpwebrequest-element-network-settings.md) を参照してください。|  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Net.HttpWebRequest>
 - <xref:System.Net.HttpWebResponse>
 - <xref:System.Net.Dns>

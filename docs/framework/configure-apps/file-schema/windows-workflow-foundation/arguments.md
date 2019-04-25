@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 0f327196-f468-4be3-b6c4-68ba981a1bd6
 ms.openlocfilehash: 2b0d982997ab590ce7f0fc4c482b1ddfa6bc758f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152803"
 ---
 # <a name="arguments"></a>\<arguments>
@@ -50,7 +50,7 @@ ms.locfileid: "59152803"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<argument>](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/argument.md)|アクティビティ状態クエリに関連付けられている引数。|  
+|[\<引数 >](../../../../../docs/framework/configure-apps/file-schema/windows-workflow-foundation/argument.md)|アクティビティ状態クエリに関連付けられている引数。|  
   
 ### <a name="parent-elements"></a>親要素  
   
@@ -79,5 +79,5 @@ ms.locfileid: "59152803"
 
 - <xref:System.ServiceModel.Activities.Tracking.Configuration.ArgumentElementCollection?displayProperty=nameWithType>
 - <xref:System.Activities.Tracking.ActivityStateQuery?displayProperty=nameWithType>
-- [ワークフロー追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
+- [ワークフローの追跡とトレース](../../../../../docs/framework/windows-workflow-foundation/workflow-tracking-and-tracing.md)
 - [追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)

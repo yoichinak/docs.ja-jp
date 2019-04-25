@@ -3,10 +3,10 @@ title: Visual Studio での F# の概要します。
 description: Visual Studio で F# を使用する方法について説明します。
 ms.date: 07/03/2018
 ms.openlocfilehash: 020e5d32b3aa5d5a2195c19d70d8fe684fbd56ef
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59331911"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio での F# の概要します。
@@ -63,7 +63,7 @@ val square: x:int -> int
 
 ## <a name="see-also"></a>関連項目
 
-- [ツアーF#](../tour.md)
+- [F# のツアー](../tour.md)
 - [F#言語リファレンス](../language-reference/index.md)
 - [型の推論](../language-reference/type-inference.md)
 - [シンボルと演算子のリファレンス](../language-reference/symbol-and-operator-reference/index.md)

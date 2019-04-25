@@ -5,10 +5,10 @@ helpviewer_keywords:
 - metadata [WCF], exporting and importing
 ms.assetid: 614a75bb-e0b0-4c95-b6d8-02cb5e5ddb38
 ms.openlocfilehash: 39b964584cde42e6569da35f8653042f6d7432cb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59091942"
 ---
 # <a name="exporting-and-importing-metadata"></a>メタデータのエクスポートとインポート
@@ -48,16 +48,16 @@ Windows Communication Foundation (WCF) では、サービス エンドポイン�
  <xref:System.ServiceModel.Description.WsdlExporter> 型は、エクスポート プロセスでキャッチされたすべての例外を再スローします。 `Errors` プロパティでは、この例外はエラーとしてキャプチャされません。 <xref:System.ServiceModel.Description.WsdlExporter> は、例外をスローするとエラー状態になるため、再使用できません。 ワイルドカード アクションを使用しているために操作をエクスポートできない場合や、重複したバインディング名を検出した場合、<xref:System.ServiceModel.Description.WsdlExporter> はその `Errors` プロパティに警告を追加します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: メタデータをサービス エンドポイントにインポートする](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
+ [方法: サービス エンドポイントにメタデータをインポートします。](../../../../docs/framework/wcf/feature-details/how-to-import-metadata-into-service-endpoints.md)  
  ダウンロードされたメタデータを説明オブジェクトにインポートする方法について説明します。  
   
- [方法: メタデータをサービス エンドポイントからエクスポートする](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
+ [方法: サービス エンドポイントからメタデータをエクスポートします。](../../../../docs/framework/wcf/feature-details/how-to-export-metadata-from-service-endpoints.md)  
  説明オブジェクトをメタデータにエクスポートする方法について説明します。  
   
  [ServiceDescription と WSDL 参照](../../../../docs/framework/wcf/feature-details/servicedescription-and-wsdl-reference.md)  
  説明オブジェクトと WSDL の間のマッピングについて説明します。  
   
- [方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
+ [方法: Svcutil.exe を使用して、コンパイル済みサービス コードからメタデータをエクスポートするには](../../../../docs/framework/wcf/feature-details/how-to-use-svcutil-exe-to-export-metadata-from-compiled-service-code.md)  
  Svcutil.exe を使用して、コンパイル済みアセンブリのサービス型、コントラクト型、およびデータ型のメタデータをエクスポートする方法について説明します。  
   
  [データ コントラクト スキーマの参照](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)  

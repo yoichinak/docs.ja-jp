@@ -8,10 +8,10 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121980"
 ---
 # <a name="using-message-contracts"></a>メッセージ コントラクトの使用
@@ -105,7 +105,7 @@ public class BankingTransaction
  <xref:System.ServiceModel.MessageContractAttribute> を使用すると、SOAP メッセージの本文のラッパー要素の名前を制御する WrapperName および WrapperNamespace 属性を指定できます。 既定では、メッセージ コントラクト型の名前はラッパー用に使用され、メッセージ コントラクトが定義されている名前空間 (`http://tempuri.org/`) は既定の名前空間として使用されます。  
   
 > [!NOTE]
->  <xref:System.Runtime.Serialization.KnownTypeAttribute> メッセージ コントラクトでは、属性が無視されます。 <xref:System.Runtime.Serialization.KnownTypeAttribute> が必要な場合は、対象のメッセージ コントラクトを使用している処理でそれを設定します。  
+>  <xref:System.Runtime.Serialization.KnownTypeAttribute> 属性は、メッセージ コントラクトでは無視されます。 <xref:System.Runtime.Serialization.KnownTypeAttribute> が必要な場合は、対象のメッセージ コントラクトを使用している処理でそれを設定します。  
   
 ## <a name="controlling-header-and-body-part-names-and-namespaces"></a>ヘッダー名、本文名、および名前空間の制御  
  メッセージ コントラクトの SOAP 表現では、各ヘッダーと本文の各部分が名前と名前空間を持つ XML 要素にマップされます。  
@@ -244,7 +244,7 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP ヘッダーの属性  
  SOAP 標準では、ヘッダーに設定可能な次の属性が定義されます。  
   
--   `Actor/Role` (`Actor` soap 1.1 で`Role`SOAP 1.2 で)  
+-   `Actor/Role` (SOAP 1.1 では `Actor`、SOAP 1.2 では `Role`)  
   
 -   `MustUnderstand`  
   

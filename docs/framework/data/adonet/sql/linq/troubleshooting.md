@@ -3,10 +3,10 @@ title: トラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105483"
 ---
 # <a name="troubleshooting"></a>トラブルシューティング
@@ -15,7 +15,7 @@ ms.locfileid: "59105483"
  その他の問題が記載[よく寄せられる質問](../../../../../../docs/framework/data/adonet/sql/linq/frequently-asked-questions.md)します。  
   
 ## <a name="unsupported-standard-query-operators"></a>サポートされない標準クエリ演算子  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] すべての標準クエリ演算子メソッドをサポートしていません (たとえば、 <xref:System.Linq.Enumerable.ElementAt%2A>)。 このため、コンパイルできたプロジェクトでも、ランタイム エラーが発生する可能性があります。 詳細については、次を参照してください。[標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)します。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、すべての標準クエリ演算子メソッド (たとえば <xref:System.Linq.Enumerable.ElementAt%2A>) をサポートするわけではありません。 このため、コンパイルできたプロジェクトでも、ランタイム エラーが発生する可能性があります。 詳細については、次を参照してください。[標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)します。  
   
 ## <a name="memory-issues"></a>メモリの問題  
  クエリがメモリ内コレクションが含まれる場合と[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.Table%601>、2 つのコレクションを指定する順序によって、メモリ内でクエリを実行する場合があります。 クエリをメモリ内で実行する必要がある場合、データベース テーブルのデータを取得する必要があります。  
@@ -26,10 +26,10 @@ ms.locfileid: "59105483"
  入力ファイル名を指定するには、その名前をコマンド ラインに入力ファイルとして追加します。 ( **/conn** オプションを使用して) 接続文字列にファイル名を含める操作は、サポートされていません。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="class-library-projects"></a>クラス ライブラリ プロジェクト  
- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]は、プロジェクトの `app.config` ファイルの中に接続文字列を作成します。 クラス ライブラリ プロジェクトでは `app.config` ファイルが使用されません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] デザイン時のファイルで提供される接続文字列を使用します。 `app.config` 内の値を変更しても、アプリケーションの接続先データベースは変更されません。  
+ [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]は、プロジェクトの `app.config` ファイルの中に接続文字列を作成します。 クラス ライブラリ プロジェクトでは `app.config` ファイルが使用されません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、デザイン時のファイルで提供される接続文字列を使用します。 `app.config` 内の値を変更しても、アプリケーションの接続先データベースは変更されません。  
   
 ## <a name="cascade-delete"></a>連鎖削除  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] サポートや、連鎖削除操作を認識しません。 制約を持つテーブルの行を削除するには、次のいずれかを行う必要があります。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は連鎖削除操作をサポートせず、認識もしません。 制約を持つテーブルの行を削除するには、次のいずれかを行う必要があります。  
   
 -   データベース内の外部キー制約で `ON DELETE CASCADE` 規則を設定する。  
   

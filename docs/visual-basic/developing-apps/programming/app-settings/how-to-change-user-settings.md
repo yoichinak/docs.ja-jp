@@ -8,10 +8,10 @@ helpviewer_keywords:
 - examples [Visual Basic], changing user settings
 ms.assetid: 41250181-c594-4854-9988-8183b9eb03cf
 ms.openlocfilehash: 05c95026d061918b38cf301209afefa9498e33bf
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820972"
 ---
 # <a name="how-to-change-user-settings-in-visual-basic"></a>方法: Visual Basic でユーザー設定を変更する

@@ -1,17 +1,17 @@
 ---
-title: 回復力のあるサービス、クラウドの準備をビルドします。 クラウドでの一時的な障害を受け入れる
-description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |回復力のあるサービス、クラウドの準備をビルドします。 クラウドでの一時的な障害を受け入れる
+title: 回復力のあるサービス、クラウドの準備をビルドします。 クラウド内の一時的な障害を受け入れる
+description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |回復力のあるサービス、クラウドの準備をビルドします。 クラウド内の一時的な障害を受け入れる
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61811837"
 ---
-# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドの準備が回復力のあるサービスをビルドするには。クラウドでの一時的な障害を受け入れる
+# <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドの準備が整っている回復力のあるサービスの構築:クラウド内の一時的な障害を受け入れる
 
 回復性は、障害から回復し、引き続き機能する能力です。 回復性は、障害を回避、障害が発生するという事実を受け入れてがそれに応答するダウンタイムやデータの損失を回避する方法でについてではありません。 回復性の目的は、障害発生後にアプリケーションを完全に機能する状態に戻すことです。
 

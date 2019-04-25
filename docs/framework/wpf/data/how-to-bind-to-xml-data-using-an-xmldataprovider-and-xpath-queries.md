@@ -7,10 +7,10 @@ helpviewer_keywords:
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
 ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097227"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>方法: XMLDataProvider と XPath クエリを使用して XML データにバインドする
@@ -36,13 +36,13 @@ ms.locfileid: "59097227"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内の **XPath** プロパティは、XmlNode.SelectNodes メソッドによって処理されます。 別の結果を得るために、**XPath** クエリを変更できます。 いくつかの例を次のとおり、<xref:System.Windows.Data.Binding.XPath%2A>にバインドされているクエリを<xref:System.Windows.Controls.ListBox>前の例。  
   
--   `XPath="Book[1]"` 最初の書籍要素 ("XML in Action") を返します。 **XPath** のインデックスが 0 ではなく 1 から開始することにご注意ください。  
+-   `XPath="Book[1]"` は、最初の書籍要素 ("XML in Action") を返します。 **XPath** のインデックスが 0 ではなく 1 から開始することにご注意ください。  
   
--   `XPath="Book[@*]"` 任意の属性を持つすべての book 要素を返します。  
+-   `XPath="Book[@*]"` は、任意の属性を持つすべての書籍要素を返します。  
   
--   `XPath="Book[last()-1]"` 最後の書籍要素 ("Introducing Microsoft .NET") に、2 つ目が戻ります。  
+-   `XPath="Book[last()-1]"` は、最後から 2 番目の書籍要素 ("Introducing Microsoft .NET") を返します。  
   
--   `XPath="*[position()>3]"` 最初の 3 つを除く、書籍要素のすべてを返します。  
+-   `XPath="*[position()>3]"` は、最初の 3 つを除くすべての書籍要素を返します。  
   
  実行すると、 **XPath**クエリを返します、<xref:System.Xml.XmlNode>または Xmlnode のリスト。 <xref:System.Xml.XmlNode> [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]オブジェクトは、使用できる、<xref:System.Windows.Data.Binding.Path%2A>プロパティにバインドする、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]プロパティ。 前の例をもう一度考えてみます。 この例の残りの部分は同じままで変更した場合、 <xref:System.Windows.Controls.TextBlock> 、次のバインド、返された Xmlnode の名前が表示されます、 <xref:System.Windows.Controls.ListBox>。 この場合、返されたノードの名前はすべて "*Book*" です。  
   
@@ -65,4 +65,4 @@ ms.locfileid: "59097227"
 - [階層 XML データでマスター詳細パターンを使用する](how-to-use-the-master-detail-pattern-with-hierarchical-xml-data.md)
 - [バインディング ソースの概要](binding-sources-overview.md)
 - [データ バインディングの概要](data-binding-overview.md)
-- [方法のトピック](data-binding-how-to-topics.md)
+- [方法トピック](data-binding-how-to-topics.md)

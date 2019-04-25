@@ -13,15 +13,15 @@ ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: ef746d4a2e6782fa295b7c27f32ce5dc117350a7
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32745917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675495"
 ---
-# <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest です。\_HttpResponse フィールド
+# <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest します。\_HttpResponse フィールド
 
-`HttpWebRequest._HttpResponse` <xref:System.Net.HttpWebResponse> HTTP 要求から HTTP 応答の詳細を格納します。 できます`null`HTTP 応答を受信するまでです。
+`HttpWebRequest._HttpResponse` <xref:System.Net.HttpWebResponse> HTTP 要求から HTTP 応答の詳細が含まれます。 できます`null`HTTP 応答が受信されるまでです。
 
 ## <a name="syntax"></a>構文
   
@@ -32,12 +32,12 @@ internal HttpWebResponse _HttpResponse
 > [!WARNING]
 > `HttpWebRequest._HttpResponse`フィールドは内部であり、コード内で直接使用します。
 > 
-> Microsoft は、どのような状況下で、実稼働アプリケーションでこのフィールドの使用をサポートしていません。
+> Microsoft はいかなる運用アプリケーションでこのフィールドの使用をサポートしていません。
 
-## <a name="requirements"></a>要件
+## <a name="requirements"></a>必要条件
 
-**Namespace:** <xref:System.Net>
+**名前空間:** <xref:System.Net>
 
-**アセンブリ:** システム (System.dll)
+**アセンブリ:**(System.dll) のシステム
 
-**.NET framework のバージョン:** 2.0 から利用可能です。
+**.NET framework のバージョン:** 2.0 以降で使用可能です。

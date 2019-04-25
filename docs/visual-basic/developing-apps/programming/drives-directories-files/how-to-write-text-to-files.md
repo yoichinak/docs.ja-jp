@@ -8,10 +8,10 @@ helpviewer_keywords:
 - examples [Visual Basic], text files
 ms.assetid: 304956eb-530d-4df7-b48f-9b4d1f2581a0
 ms.openlocfilehash: f4d6c3ef5ba6d8aa286e1ae2bd8a944aacdad096
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828226"
 ---
 # <a name="how-to-write-text-to-files-in-visual-basic"></a>方法: テキストのファイルへの書き込み (Visual Basic)

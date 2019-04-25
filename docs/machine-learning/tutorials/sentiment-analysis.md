@@ -4,12 +4,12 @@ description: バイナリ分類のシナリオで ML.NET を使用する方法�
 ms.date: 03/07/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 202edc5127388df2397053d5703d33a39046374f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: e88a85b96c1e5d33d748332991cb9480222a9c66
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59303116"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612096"
 ---
 # <a name="tutorial-use-mlnet-in-a-sentiment-analysis-binary-classification-scenario"></a>チュートリアル: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する
 
@@ -33,7 +33,7 @@ ms.locfileid: "59303116"
 
 ## <a name="sentiment-analysis-sample-overview"></a>センチメント分析のサンプルの概要
 
-このサンプルは ML.NET を使用するコンソール アプリケーションであり、センチメントを分類して肯定的か否定的かを予測するモデルをトレーニングします。 Yelp センチメント データセットは、カリフォルニア大学アーバイン校 (UCI) 提供のデータセットです。これがトレーニング データセットとテスト データセットに分割されます。 サンプルでは、テスト データセットを使用してモデルを評価して、品質分析を実行します。 
+このサンプルは ML.NET を使用するコンソール アプリケーションであり、センチメントを分類して肯定的か否定的かを予測するモデルをトレーニングします。 Yelp センチメント データセットは、カリフォルニア大学アーバイン校 (UCI) 提供のデータセットです。これがトレーニング データセットとテスト データセットに分割されます。 サンプルでは、テスト データセットを使用してモデルを評価して、品質分析を実行します。
 
 このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/SentimentAnalysis) リポジトリで確認できます。
 
@@ -53,7 +53,7 @@ ms.locfileid: "59303116"
 2. **データを準備する**
    * **データを読み込む**
    * **特徴を抽出する (データを変換する)**
-3. **ビルドしてトレーニングする** 
+3. **ビルドしてトレーニングする**
    * **モデルをトレーニングする**
    * **モデルを評価する**
 4. **モデルの配置**
@@ -96,7 +96,7 @@ ms.locfileid: "59303116"
 * バイナリ: A か B のいずれかである。
 * 多クラス: 1 つのモデルを使用して予測できるカテゴリが多数ある。
 
-Web サイトのコメントは、肯定的または否定的のいずれかとして分類する必要があるため、二項分類アルゴリズムが使用されます。 
+Web サイトのコメントは、肯定的または否定的のいずれかとして分類する必要があるため、二項分類アルゴリズムが使用されます。
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
@@ -178,21 +178,22 @@ public static TrainCatalogBase.TrainTestData LoadData(MLContext mlContext)
 
 }
 ```
+
 ## <a name="load-the-data"></a>データを読み込む
 
-前に作成した `SentimentData` データ モデルの種類がデータセット スキーマと一致するため、[LoadFromTextFile メソッド](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)の `MLContext.Data.LoadFromTextFile` ラッパーを使用して、初期化、マッピング、およびデータセットの読み込みを 1 行のコードに組み合わせることができます。 <xref:Microsoft.Data.DataView.IDataView> が返されます。 
+前に作成した `SentimentData` データ モデルの種類がデータセット スキーマと一致するため、[LoadFromTextFile メソッド](xref:Microsoft.ML.TextLoaderSaverCatalog.LoadFromTextFile%60%601%28Microsoft.ML.DataOperationsCatalog,System.String,System.Char,System.Boolean,System.Boolean,System.Boolean,System.Boolean%29)の `MLContext.Data.LoadFromTextFile` ラッパーを使用して、初期化、マッピング、およびデータセットの読み込みを 1 行のコードに組み合わせることができます。 <xref:Microsoft.Data.DataView.IDataView> が返されます。
 
- `Transforms` の入力および出力として、`DataView` は基本的なデータ パイプラインの種類であり、`LINQ` の `IEnumerable` と同等です。
+`Transforms` の入力および出力として、`DataView` は基本的なデータ パイプラインの種類であり、`LINQ` の `IEnumerable` と同等です。
 
 ML.NET ではデータは SQL ビューに似ています。 つまり、遅延評価、体系的、異種です。 オブジェクトはパイプラインの最初の部分であり、データを読み込みます。 このチュートリアルでは、コメントと対応する有害または無害のセンチメントを含むデータセットが読み込まれます。 これを使用して、モデルを作成してトレーニングします。
 
- `LoadData` メソッドの最初の行として、次のコードを追加します。
+`LoadData` メソッドの最初の行として、次のコードを追加します。
 
 [!code-csharp[LoadData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#LoadData "loading dataset")]
 
 ### <a name="split-the-dataset-for-model-training-and-testing"></a>モデルのトレーニング用とテスト用にデータセットを分割する
 
-次に、モデルをトレーニングするためのトレーニング データセットと、モデルを評価するためのテスト データセットの両方が必要です。 <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> をラップする `MLContext.BinaryClassification.TrainTestSplit` を使用して、読み込まれたデータセットをトレーニング データセットとテスト データセットに分割し、それらを <xref:Microsoft.ML.TrainCatalogBase.TrainTestData> に返します。 `testFraction` パラメーターを使用して、テスト セット用のデータの割合を指定できます。 既定値は 10% ですが、ここでは、評価でより多くのデータを使用するために 20% を使用します。  
+次に、モデルをトレーニングするためのトレーニング データセットと、モデルを評価するためのテスト データセットの両方が必要です。 <xref:Microsoft.ML.StaticPipe.TrainingStaticExtensions.TrainTestSplit%2A> をラップする `MLContext.BinaryClassification.TrainTestSplit` を使用して、読み込まれたデータセットをトレーニング データセットとテスト データセットに分割し、それらを <xref:Microsoft.ML.TrainCatalogBase.TrainTestData> に返します。 `testFraction` パラメーターを使用して、テスト セット用のデータの割合を指定できます。 既定値は 10% ですが、ここでは、評価でより多くのデータを使用するために 20% を使用します。
 
 読み込まれたデータを必要なデータセットに分割するには、`LoadData` メソッドの次の行として、次のコードを追加します。
 
@@ -224,7 +225,7 @@ public static ITransformer BuildAndTrainModel(MLContext mlContext, IDataView spl
 }
 ```
 
-Train メソッドに 2 つのパラメーターが渡されていることに注意してください。`MLContext` はコンテキスト (`mlContext`)、`IDataView` はトレーニング データセット (`splitTrainSet`) に関するものです。 
+Train メソッドに 2 つのパラメーターが渡されていることに注意してください。`MLContext` はコンテキスト (`mlContext`)、`IDataView` はトレーニング データセット (`splitTrainSet`) に関するものです。
 
 ## <a name="extract-and-transform-the-data"></a>データを抽出して変換する
 
@@ -353,7 +354,7 @@ private static void UseModelWithSingleItem(MLContext mlContext, ITransformer mod
 `model` は多数のデータ行を操作する `transformer` ですが、よくある運用シナリオとして個々の例に対する予測のニーズがあります。 <xref:Microsoft.ML.PredictionEngine%602> は、`CreatePredictionEngine` メソッドから返されるラッパーです。 次の行を追加して、`PredictionEngine` を `Predict` メソッドの 1 行目として作成しましょう。
 
 [!code-csharp[CreatePredictionEngine](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreatePredictionEngine1 "Create the PredictionEngine")]
-  
+
 コメントを追加して、`Predict` メソッドでトレーニングされたモデルの予測をテストします。これには `SentimentData` のインスタンスを作成します。
 
 [!code-csharp[PredictionData](~/samples/machine-learning/tutorials/SentimentAnalysis/Program.cs#CreateTestIssue1 "Create test data for single prediction")]
@@ -450,7 +451,7 @@ Press any key to continue . . .
 
 ```
 
-おめでとうございます!  これで、メッセージのセンチメントを分類および予測するための機械学習モデルをビルドできました。 
+おめでとうございます!  これで、メッセージのセンチメントを分類および予測するための機械学習モデルをビルドできました。
 
 優れたモデルの構築は、反復的なプロセスです。 このチュートリアルでは、モデルのトレーニングを短時間で実行するために小さなデータセットを使用しているため、このモデルの品質は最初は低くなっています。 このモデルの品質に満足できなければ、大規模なトレーニング データセットを使用するか、別のトレーニング アルゴリズムとアルゴリズムごとに異なるハイパーパラメーターを選択することで、モデルを改良することを試行できます。
 
@@ -459,6 +460,7 @@ Press any key to continue . . .
 ## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは、次の作業を行う方法を学びました。
+
 > [!div class="checklist"]
 > * 問題を把握する
 > * 適切な機械学習アルゴリズムを選択する
@@ -470,5 +472,6 @@ Press any key to continue . . .
 > * 読み込み済みのモデルを使用して配置および予測する
 
 さらに詳しく学習するには、次のチュートリアルに進んでください。
+
 > [!div class="nextstepaction"]
 > [問題の分類](github-issue-classification.md)

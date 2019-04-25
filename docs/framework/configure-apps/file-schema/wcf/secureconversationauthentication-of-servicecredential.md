@@ -1,12 +1,12 @@
 ---
-title: <secureConversationAuthentication> (行中)  <serviceCredential>
+title: <secureConversationAuthentication> の <serviceCredential>
 ms.date: 03/30/2017
 ms.assetid: 0bd3fac7-befd-4a45-ba51-c200b33be0fd
 ms.openlocfilehash: f35392b91d047c46e65ce433ef544b86cf6c88c6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59083700"
 ---
 # <a name="secureconversationauthentication-of-servicecredential"></a>\<secureConversationAuthentication > の\<serviceCredential >

@@ -10,10 +10,10 @@ helpviewer_keywords:
 - list views [Windows Forms], adding columns
 ms.assetid: 79174274-12ee-4a5d-80db-6ec02976d010
 ms.openlocfilehash: 5c87d43513f2125945145445c61f689cdd9d2aaf
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59345743"
 ---
 # <a name="how-to-add-columns-to-the-windows-forms-listview-control"></a>方法: Windows フォーム ListView コントロールに列を追加する

@@ -11,10 +11,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836286"
 ---
 # <a name="parameter-list-visual-basic"></a>パラメーター リスト (Visual Basic)
@@ -55,11 +55,11 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
 ## <a name="remarks"></a>Remarks  
  パラメーターはかっこで囲むし、コンマで区切られました。 任意のデータ型では、パラメーターを宣言することができます。 指定しない場合`parametertype`、既定値は`Object`します。  
   
- 呼び出し元のコードはプロシージャを呼び出す際に渡して、*引数*必要な各パラメーターにします。 詳細については、[の相違点の間でパラメーターと引数](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)を参照してください。  
+ 呼び出し元のコードはプロシージャを呼び出す際に渡して、*引数*必要な各パラメーターにします。 詳細については、次を参照してください。[の相違点の間でパラメーターと引数](../../../visual-basic/programming-guide/language-features/procedures/differences-between-parameters-and-arguments.md)します。  
   
- 呼び出し元のコードは、各パラメーターに渡す引数は、呼び出し元のコード内の基になる要素へのポインターです。 この要素が場合*不変*(定数、リテラル、列挙型、または式)、すべてのコードを変更することはできません。 ある場合、*変数*要素 (宣言された変数、フィールド、プロパティ、配列の要素、または構造体の要素)、呼び出し元のコードを変更できます。 詳細については、[変更の間の相違点と変更できない引数](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)を参照してください。  
+ 呼び出し元のコードは、各パラメーターに渡す引数は、呼び出し元のコード内の基になる要素へのポインターです。 この要素が場合*不変*(定数、リテラル、列挙型、または式)、すべてのコードを変更することはできません。 ある場合、*変数*要素 (宣言された変数、フィールド、プロパティ、配列の要素、または構造体の要素)、呼び出し元のコードを変更できます。 詳細については、次を参照してください。[変更の間の相違点と変更できない引数](../../../visual-basic/programming-guide/language-features/procedures/differences-between-modifiable-and-nonmodifiable-arguments.md)します。  
   
- Variable 要素が渡された場合`ByRef`プロシージャがも変更できます。 詳細については、[の相違点の間の値と参照渡しによって引数を渡す](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)を参照してください。  
+ Variable 要素が渡された場合`ByRef`プロシージャがも変更できます。 詳細については、次を参照してください。[の相違点の間の値と参照渡しによって引数を渡す](../../../visual-basic/programming-guide/language-features/procedures/differences-between-passing-an-argument-by-value-and-by-reference.md)します。  
   
 ## <a name="rules"></a>ルール  
   
@@ -69,17 +69,17 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
      すべての省略可能なパラメーター宣言を指定する必要があります、`defaultvalue`句。  
   
-     詳細については、[省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)を参照してください。  
+     詳細については、次を参照してください。[省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)します。  
   
 -   **パラメーターの配列。** 指定する必要があります`ByVal`の`ParamArray`パラメーター。  
   
      両方を使用することはできません`Optional`と`ParamArray`パラメーター リストを同じにします。  
   
-     詳細については、[パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)を参照してください。  
+     詳細については、次を参照してください。[パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)します。  
   
 -   **値渡し。** すべての引数について既定のメカニズムは`ByVal`手順、つまり基になる可変要素を変更できません。 ただし、要素が参照型の場合は、プロシージャが変更できます内容や、基になるオブジェクトのメンバーでも交換や、オブジェクト自体を再割り当てはできません。  
   
--   **パラメーター名。** 次のパラメーターのデータ型が配列の場合は、`parametername`かっこの直後にします。 パラメーター名の詳細については、[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)を参照してください。  
+-   **パラメーター名。** 次のパラメーターのデータ型が配列の場合は、`parametername`かっこの直後にします。 パラメーター名の詳細については、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
   
 ## <a name="example"></a>例  
  次の例は、`Function`プロシージャを 2 つのパラメーターを定義します。  

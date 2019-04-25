@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: d356a43a-73df-4ae2-a457-b9628074c7cd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416192d431234b2ce7d6e53f21803f88371a6805
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 9c84afced8c98530e6d6b02c1cde69e93bd8d7e9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58018748"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59337280"
 ---
 # <a name="whats-obsolete-in-the-net-framework-class-library"></a>.NET Framework クラス ライブラリの互換性のために残されている機能
 .NET Framework は進化しています。 バージョンが新しくなるたびに、新しい機能を提供する新しい型と新しいメンバーが追加されています。 既存の型とそのメンバーも変更されています。 たとえば、一部の型は、その型がサポートするテクノロジが新しいテクノロジに置き換えられることで重要度が下がり、一部のメソッドは、より便利な新しいメソッドまたはより多くの機能を備えた新しいメソッドに置き換えられています。  
@@ -42,9 +42,9 @@ ms.locfileid: "58018748"
   
  既存のコードは、.NET Framework の新しいバージョンに対して再コンパイルすることはできません。 代わりに、既存のコンパイル済みコードの実行対象である .NET Framework のバージョンを指定できます。 たとえば、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] に対してコンパイルされた app1.exe というアプリケーションがあり、このアプリケーションを [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] を対象に実行する必要があるとします。 この場合、次の手順が必要です。  
   
-1.  メイン実行可能ファイルの構成ファイルを作成し、その名前を *appName*.exe.config にします。*appName* は、アプリケーションの実行可能ファイルの名前です。 このトピックの例の app1.exe というアプリケーションの場合は、app1.exe.config という名前の構成ファイルを作成します。  
+1. メイン実行可能ファイルの構成ファイルを作成し、その名前を *appName*.exe.config にします。*appName* は、アプリケーションの実行可能ファイルの名前です。 このトピックの例の app1.exe というアプリケーションの場合は、app1.exe.config という名前の構成ファイルを作成します。  
   
-2.  次のコードを構成ファイルに追加します。  
+2. 次のコードを構成ファイルに追加します。  
   
     ```xml  
     <configuration>  
@@ -82,4 +82,5 @@ ms.locfileid: "58018748"
  [.NET Framework 2.0 Obsolete List (.NET Framework 2.0 の互換性のために残されている機能の一覧)](https://go.microsoft.com/fwlink/?LinkID=125264)  
   
 ## <a name="see-also"></a>関連項目
+
 - [\<supportedRuntime> 要素](../configure-apps/file-schema/startup/supportedruntime-element.md)

@@ -3,10 +3,10 @@ title: ADO.NET でのデータの取得および変更
 ms.date: 03/30/2017
 ms.assetid: 722e7f87-3691-46c6-87e8-7d159722d675
 ms.openlocfilehash: bf26cd216b456e912dbaf0019114ea8e60b439a1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59097624"
 ---
 # <a name="retrieving-and-modifying-data-in-adonet"></a>ADO.NET でのデータの取得および変更
@@ -28,7 +28,7 @@ ms.locfileid: "59097624"
  [DataAdapter と DataReader](../../../../docs/framework/data/adonet/dataadapters-and-datareaders.md)  
  DataReaders、DataAdapters、パラメーター、DataAdapter イベントの処理、およびバッチ操作の実行について説明します。  
   
- [トランザクションとコンカレンシー](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
+ [トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)  
  ローカル トランザクションや分散トランザクションの実行方法、およびオプティミスティック コンカレンシーの使用方法について説明します。  
   
  [ID 値および Autonumber 値の取得](../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)  
@@ -49,7 +49,7 @@ ms.locfileid: "59097624"
  [ADO.NET のデータ追跡](../../../../docs/framework/data/adonet/data-tracing.md)  
  ADO.NET が備える組み込みデータ トレース機能のしくみについて説明します。  
   
- [[パフォーマンス カウンター]](../../../../docs/framework/data/adonet/performance-counters.md)  
+ [パフォーマンス カウンター](../../../../docs/framework/data/adonet/performance-counters.md)  
  `SqlClient` および `OracleClient` で使用できるパフォーマンス カウンターについて説明します。  
   
  [非同期プログラミング](../../../../docs/framework/data/adonet/asynchronous-programming.md)  

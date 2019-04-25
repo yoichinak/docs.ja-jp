@@ -3,10 +3,10 @@ title: カスタム エンコーダー
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190575"
 ---
 # <a name="custom-encoders"></a>カスタム エンコーダー
@@ -50,7 +50,7 @@ ms.locfileid: "59190575"
 ### <a name="pooling"></a>Pooling  
  各エンコーダー実装は、可能な限りプールを試みます。 マネージド コードのパフォーマンスを向上するには、割り当てを減らすことが重要です。 このプールを実現するには、実装で `SynchronizedPool` クラスを使用します。 C# ファイルには、このクラスで使用する追加の最適化に関する記述を含めます。  
   
- <xref:System.Xml.XmlDictionaryReader> <xref:System.Xml.XmlDictionaryWriter>インスタンスはプールされ、各メッセージ用に新しいルールを割り当てないように再初期化します。 リーダーについては、`OnClose` の呼び出し時に `Close()` コールバックでリーダーが再利用されます。 また、エンコーダーでは、メッセージを作成するときに使用するいくつかのメッセージ状態オブジェクトが再利用されます。 このプールのサイズは、`MaxReadPoolSize` から派生した 3 つの各クラスの `MaxWritePoolSize` プロパティと <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> プロパティによって構成可能です。  
+ メッセージごとに新しい <xref:System.Xml.XmlDictionaryReader> および <xref:System.Xml.XmlDictionaryWriter> インスタンスを割り当てるのを避けるため、これらのインスタンスをプールして再初期化します。 リーダーについては、`OnClose` の呼び出し時に `Close()` コールバックでリーダーが再利用されます。 また、エンコーダーでは、メッセージを作成するときに使用するいくつかのメッセージ状態オブジェクトが再利用されます。 このプールのサイズは、`MaxReadPoolSize` から派生した 3 つの各クラスの `MaxWritePoolSize` プロパティと <xref:System.ServiceModel.Channels.MessageEncodingBindingElement> プロパティによって構成可能です。  
   
 ### <a name="binary-encoding"></a>バイナリ エンコーディング  
  バイナリ エンコーディングでセッションを使用する場合、動的ディクショナリの文字列をメッセージの受信者と通信する必要があります。 これを行うには、メッセージのプレフィックスに動的ディクショナリの文字列を指定します。 受信側では、その文字列を取り除いて、セッションに追加し、メッセージ処理を行います。 ディクショナリの文字列を正しく渡すには、トランスポートをバッファーする必要があります。  
@@ -79,9 +79,9 @@ ms.locfileid: "59190575"
   
 -   オーバーライドを必要とする、このクラスの主要なメソッドを次に示します。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A> 受け取り、<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>オブジェクトし、それに書き込みます、<xref:System.IO.Stream>オブジェクト。  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>。<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> オブジェクトを受け取り、それを <xref:System.IO.Stream> オブジェクトに書き込みます。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A> 受け取り、<xref:System.IO.Stream>オブジェクトと最大ヘッダー サイズを返します、<xref:System.ServiceModel.Channels.Message>オブジェクト。  
+-   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>。<xref:System.IO.Stream> オブジェクトと最大ヘッダー サイズを受け取り、<xref:System.ServiceModel.Channels.Message> オブジェクトを返します。  
   
  これらのメソッドに記述するコードは、標準トランスポート プロトコルとカスタマイズしたエンコーディングの間の変換処理です。  
   

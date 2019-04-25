@@ -3,10 +3,10 @@ title: 安全なクライアント アプリケーション
 ms.date: 03/30/2017
 ms.assetid: 6239592e-fa7d-4dea-9f00-d296d0048b01
 ms.openlocfilehash: 0c14089247e916b91cb385c7d715cce54acee57c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119614"
 ---
 # <a name="secure-client-applications"></a>安全なクライアント アプリケーション
@@ -27,7 +27,7 @@ ms.locfileid: "59119614"
  [Windows フォームでのユーザー入力](../../../../docs/framework/winforms/user-input-in-windows-forms.md)  
  Windows フォーム アプリケーションにおけるマウス入力およびキーボード入力の検証に関連したリンクや情報を提供します。  
   
- [.NET Framework の正規表現](../../../../docs/standard/base-types/regular-expressions.md)  
+ [.NET Framework 正規表現](../../../../docs/standard/base-types/regular-expressions.md)  
  <xref:System.Text.RegularExpressions.Regex> クラスを使用してユーザー入力の有効性を確認する方法について説明します。  
   
 ## <a name="windows-applications"></a>Windows アプリケーション  
@@ -36,7 +36,7 @@ ms.locfileid: "59119614"
  [Windows フォームのセキュリティ](../../../../docs/framework/winforms/windows-forms-security.md)  
  Windows フォーム アプリケーションをセキュリティで保護する方法について説明します。また、関連項目へのリンクがあります。  
   
- [Windows フォームとアンマネージ アプリケーション](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
+ [Windows Forms and Unmanaged Applications](../../../../docs/framework/winforms/advanced/windows-forms-and-unmanaged-applications.md)  
  Windows フォーム アプリケーションでアンマネージ アプリケーションと対話する方法について説明します。  
   
  [Windows フォームの ClickOnce 配置](../../winforms/clickonce-deployment-for-windows-forms.md)  
@@ -52,7 +52,7 @@ ms.locfileid: "59119614"
 |リソース|説明|  
 |--------------|-----------------|  
 |[ASP.NET Web サイトをセキュリティで保護します。](https://docs.microsoft.com/previous-versions/aspnet/91f66yxt(v=vs.100))|ASP.NET アプリケーションをセキュリティで保護する方法について説明します。|  
-|[ASP.NET を使用して作成した XML Web サービスのセキュリティ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|ASP.NET Web サービスへのセキュリティの実装方法について説明します。|  
+|[ASP.NET を使用して作成された XML Web サービスをセキュリティで保護します。](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/w67h0dw7(v=vs.100))|ASP.NET Web サービスへのセキュリティの実装方法について説明します。|  
 |[スクリプトによる攻略の概要](https://docs.microsoft.com/previous-versions/aspnet/w1sw53ds(v=vs.100))|Web ページに悪意のある文字の挿入を試みるスクリプト攻略攻撃を阻止する方法について説明します。|  
 |[Web アプリケーションの基本的なセキュリティ プラクティス](https://docs.microsoft.com/previous-versions/aspnet/zdh19h94(v=vs.100))|一般的なセキュリティ情報のほか、より詳細なページへのリンクも掲載されています。|  
   

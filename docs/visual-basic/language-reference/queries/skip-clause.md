@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Skip clause [Visual Basic]
 ms.assetid: f00eb172-3907-4c43-9745-d8546ab86234
 ms.openlocfilehash: db2d79596895505ddaa7778e831082a94c7ad44e
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821102"
 ---
 # <a name="skip-clause-visual-basic"></a>Skip 句 (Visual Basic)
@@ -33,7 +33,7 @@ Skip count
   
  使用することができます、`Skip`句、`Take`句をクエリの任意のセグメントからのデータの範囲を返します。 これを行うには、範囲の最初の要素のインデックスを渡す、`Skip`句とする範囲のサイズ、`Take`句。  
   
- 使用すると、`Skip`クエリ句、する必要がありますも結果が可能にする順序で返されるように、`Skip`意図した結果をバイパスする句。 クエリの結果を順序付けの詳細については、[Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)を参照してください。  
+ 使用すると、`Skip`クエリ句、する必要がありますも結果が可能にする順序で返されるように、`Skip`意図した結果をバイパスする句。 クエリの結果を順序付けの詳細については、次を参照してください。 [Order By 句](../../../visual-basic/language-reference/queries/order-by-clause.md)します。  
   
  使用することができます、`SkipWhile`句を指定した条件に応じて、特定の要素だけを無視するかを指定します。  
   

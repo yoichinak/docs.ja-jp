@@ -16,10 +16,10 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 0b570339-5407-474f-8421-e183a8b303ee
 ms.openlocfilehash: d08974a929a723d4037300f9d72ae03c072d47fa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826159"
 ---
 # <a name="comparison-operators-in-visual-basic"></a>Visual Basic における比較演算子
@@ -56,7 +56,7 @@ ms.locfileid: "58826159"
   
  `' The result of the preceding comparison is True.`  
   
- 並べ替え順序がバイナリの比較またはテキストの比較の設定に応じてのいずれかに基づいて`Option Compare`します。 詳細については、[Option Compare ステートメント](../../../../visual-basic/language-reference/statements/option-compare-statement.md)を参照してください。  
+ 並べ替え順序がバイナリの比較またはテキストの比較の設定に応じてのいずれかに基づいて`Option Compare`します。 詳細については、次を参照してください。 [Option Compare ステートメント](../../../../visual-basic/language-reference/statements/option-compare-statement.md)します。  
   
 ## <a name="comparing-objects"></a>オブジェクトの比較  
  Visual Basic での 2 つのオブジェクト参照変数を比較し、 [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)と[IsNot 演算子](../../../../visual-basic/language-reference/operators/isnot-operator.md)します。 2 つの参照変数が同じオブジェクト インスタンスを参照している場合を判断するには、これらの演算子のいずれかを使用します。 次に例を示します。  
@@ -86,7 +86,7 @@ ms.locfileid: "58826159"
   
  前の例では、`TypeOf x Is Control`式に評価されます`True`ための種類`x`は`Button`から継承される`Control`します。  
   
- 詳細については、[TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)を参照してください。  
+ 詳細については、次を参照してください。 [TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

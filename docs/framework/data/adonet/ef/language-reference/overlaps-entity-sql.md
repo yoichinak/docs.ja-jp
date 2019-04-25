@@ -3,10 +3,10 @@ title: OVERLAPS (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41743e89-79cb-4d7b-8a27-355b45024b61
 ms.openlocfilehash: 9d909fb7efbb29619351cfc866b0f84381d0b80b
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319639"
 ---
 # <a name="overlaps-entity-sql"></a>OVERLAPS (Entity SQL)
@@ -23,7 +23,7 @@ expression OVERLAPS expression
  コレクションを返す任意の有効なクエリ式。もう一方のクエリ式から返されたコレクションと比較されます。 すべての式は、 `expression`と同じ型であるか、共通の基本型または派生型である必要があります。  
   
 ## <a name="return-value"></a>戻り値  
- `true` 2 つのコレクションは共通の要素である場合それ以外の場合、`false`します。  
+ 2 つのコレクションに共通の要素がある場合は`true` 、それ以外の場合は `false`。  
   
 ## <a name="remarks"></a>Remarks  
  機能的には、次と同等で重複が用意されています。  

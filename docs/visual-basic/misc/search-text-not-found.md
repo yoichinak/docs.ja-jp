@@ -5,10 +5,10 @@ f1_keywords:
 - vbrID744
 ms.assetid: 145f0a6d-7fdd-4d73-9dc6-5fea39a52896
 ms.openlocfilehash: ddc5251dcb6dfe7457c5c4fe1ba9b21ac4fb9943
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325879"
 ---
 # <a name="search-text-not-found"></a>検索文字列が見つかりませんでした

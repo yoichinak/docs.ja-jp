@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 2cd107dc92fd0fae89717c38840ce7ea44f3ac9a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59233999"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774084"
 ---
 ### <a name="wpf-changing-a-primary-key-when-displaying-ado-data-in-a-masterdetail-scenario"></a>WPF のマスター/詳細シナリオで ADO データを表示するときに主キーが変更される
 

@@ -3,15 +3,15 @@ title: 明示的なフィールド:Val キーワード
 description: については、 F# 'val' キーワードは、型を初期化せず、クラスまたは構造体の型に値を格納する場所を宣言するために使用します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6557514f13a9e86c7f367713775535db79e99a0c
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904918"
 ---
 # <a name="explicit-fields-the-val-keyword"></a>明示的なフィールド:Val キーワード
 
-`val` キーワードを使用すると、クラス型または構造体型の値を格納する場所を初期化せずに宣言することができます。 この方法で宣言されている記憶域の場所が呼び出される*明示的なフィールド*します。 `val` キーワードの別の用途として、`member` キーワードと組み合わせて自動実装プロパティを宣言する方法があります。 自動実装プロパティの詳細については、[プロパティ](properties.md)を参照してください。
+`val` キーワードを使用すると、クラス型または構造体型の値を格納する場所を初期化せずに宣言することができます。 この方法で宣言されている記憶域の場所が呼び出される*明示的なフィールド*します。 `val` キーワードの別の用途として、`member` キーワードと組み合わせて自動実装プロパティを宣言する方法があります。 自動実装プロパティの詳細については、次を参照してください。[プロパティ](properties.md)します。
 
 ## <a name="syntax"></a>構文
 

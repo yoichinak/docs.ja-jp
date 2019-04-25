@@ -4,12 +4,12 @@ description: Visual Studio Code を使用した、C# で初めての .NET Core �
 author: kendrahavens
 ms.date: 12/05/2018
 ms.custom: seodec18
-ms.openlocfilehash: d91427197662d61c1c3ffc242de9b1128b81b9c6
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.openlocfilehash: d23f095454a24d67c2b9fb7a0f090fb08ff9e8bb
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
-ms.locfileid: "58890554"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613448"
 ---
 # <a name="get-started-with-c-and-visual-studio-code"></a>C# および Visual Studio Code の使用を開始する
 
@@ -93,6 +93,7 @@ ms.locfileid: "58890554"
 1. 新しいクラスを追加するには、VSCode エクスプローラーを右クリックし、**[新しいファイル]** を選択します。 これで、新しいファイルが VSCode で開いたフォルダーに追加されます。
 2. ファイルに `MyClass.cs` と名前を付けます。 csharp ファイルとして認識されるには、最後に `.cs` 拡張子を付けて保存する必要があります。
 3. 次のコードを追加して、1 つ目のクラスを作成します。 `Program.cs` ファイルから参照できるように、正しい名前空間を含めるようにします。
+
 ``` csharp
 using System;
 
@@ -127,6 +128,7 @@ namespace HelloWorld
 ```
 
 5. 変更を保存し、プログラムを再度実行します。 新しいメッセージと共に追加した文字列が表示されます。
+
 ```console
 > dotnet run
 Hello World! Happy coding!

@@ -6,10 +6,10 @@ helpviewer_keywords:
 - GridView [WPF], displaying ListView contents
 ms.assetid: 5bc1e767-ab46-4f14-bd41-3d5d39e1d000
 ms.openlocfilehash: 9b467c95d541c326a41d1ed4bd9eb5c87e25bd5c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59112789"
 ---
 # <a name="how-to-display-listview-contents-by-using-a-gridview"></a>方法: GridView を使用して ListView コンテンツを表示する
@@ -30,4 +30,4 @@ ms.locfileid: "59112789"
 - <xref:System.Windows.Controls.GridView>
 - [ListView の概要](listview-overview.md)
 - [GridView の概要](gridview-overview.md)
-- [方法のトピック](listview-how-to-topics.md)
+- [方法トピック](listview-how-to-topics.md)

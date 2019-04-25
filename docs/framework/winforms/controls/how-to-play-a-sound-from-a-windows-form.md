@@ -12,10 +12,10 @@ helpviewer_keywords:
 - examples [Windows Forms], sounds
 ms.assetid: 3d3350b7-1ebd-4e05-a738-48ca1160a19d
 ms.openlocfilehash: 3b9eb6f902d0d2193f0099f8e868e4ead347ce26
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59078682"
 ---
 # <a name="how-to-play-a-sound-from-a-windows-form"></a>方法: Windows フォームからサウンドを再生する
@@ -67,4 +67,4 @@ private void playSimpleSound()
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Media.SoundPlayer>
-- [方法: Windows フォーム内でサウンドを非同期的に読み込む](how-to-load-a-sound-asynchronously-within-a-windows-form.md)
+- [方法: Windows フォーム内で非同期的にサウンドを読み込む](how-to-load-a-sound-asynchronously-within-a-windows-form.md)

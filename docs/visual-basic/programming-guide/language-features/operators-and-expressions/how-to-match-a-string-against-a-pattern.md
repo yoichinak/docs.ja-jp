@@ -14,10 +14,10 @@ helpviewer_keywords:
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
 ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59316272"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>方法: (Visual Basic) パターンとの比較の文字列と一致します。
@@ -83,4 +83,4 @@ ms.locfileid: "59316272"
 - [比較演算子](../../../../visual-basic/language-reference/operators/comparison-operators.md)
 - [演算子および式](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/index.md)
 - [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)
-- [文字列型 (String)](../../../../visual-basic/language-reference/data-types/string-data-type.md)
+- [String データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)

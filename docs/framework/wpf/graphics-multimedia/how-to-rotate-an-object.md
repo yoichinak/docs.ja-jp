@@ -9,10 +9,10 @@ helpviewer_keywords:
 - rotating objects [WPF]
 ms.assetid: ee3466cd-e66f-4e8f-8a5a-71d77bc1e390
 ms.openlocfilehash: d1c4700a5dc8f6ed99043552999d8f014116da8f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59189668"
 ---
 # <a name="how-to-rotate-an-object"></a>方法: オブジェクトを回転させる
@@ -48,4 +48,4 @@ ms.locfileid: "59189668"
 
 - <xref:System.Windows.Media.Transform>
 - [変換の概要](transforms-overview.md)
-- [方法のトピック](transformations-how-to-topics.md)
+- [方法トピック](transformations-how-to-topics.md)

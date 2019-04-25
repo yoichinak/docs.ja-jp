@@ -14,11 +14,11 @@ helpviewer_keywords:
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
 ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59094945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913186"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>方法: WebBrowser コントロールを使用して印刷する
 コード例を次に示しますを使用する方法、<xref:System.Windows.Forms.WebBrowser>コントロールを表示せず、Web ページを印刷します。  
@@ -37,8 +37,8 @@ ms.locfileid: "59094945"
 - <xref:System.Windows.Forms.WebBrowser>
 - <xref:System.Windows.Forms.WebBrowser.Print%2A>
 - <xref:System.Windows.Forms.WebBrowser.Url%2A>
-- [方法: WebBrowser コントロールで URL に移動する](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
-- [方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加する](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
-- [方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成する](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
+- [方法: WebBrowser コントロールで URL に移動します](how-to-navigate-to-a-url-with-the-webbrowser-control.md)
+- [方法: Windows フォーム アプリケーションに Web ブラウザーの機能を追加します。](how-to-add-web-browser-capabilities-to-a-windows-forms-application.md)
+- [方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成します。](how-to-create-an-html-document-viewer-in-a-windows-forms-application.md)
 - [WebBrowser コントロールの概要](webbrowser-control-overview.md)
 - [WebBrowser セキュリティ](webbrowser-security.md)

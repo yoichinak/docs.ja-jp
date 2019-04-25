@@ -3,11 +3,11 @@ title: 非同期プログラミング
 description: 学習方法F#非同期プログラミングが言語レベルのプログラミング モデルを簡単に使用し、自然言語を使用して実現されます。
 ms.date: 06/20/2016
 ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59343455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61901820"
 ---
 # <a name="async-programming-in-f"></a>F での非同期プログラミング\#
 
@@ -26,7 +26,7 @@ ms.locfileid: "59343455"
 open System
 open System.Net
 
-let fetchHtmlAsync url = 
+let fetchHtmlAsync url =
     async {
         let uri = Uri(url)
         use webClient = new WebClient()
@@ -45,11 +45,11 @@ printfn "%s" html
 
 注目すべきである、いくつかの構文構造があります。
 
-*   `let!` (別のコンテキストで実行) される非同期式の結果にバインドします。
-*   `use!` 同様の機能`let!`がスコープ外になったときに、そのバインドされているリソースを破棄します。
-*   `do!` 何も返しませんが、非同期ワークフローを待機します。
-*   `return` 単に非同期式から結果を返します。
-*   `return!` 別の非同期ワークフローを実行し、結果としてその戻り値を返します。
+* `let!` (別のコンテキストで実行) される非同期式の結果にバインドします。
+* `use!` 同様の機能`let!`がスコープ外になったときに、そのバインドされているリソースを破棄します。
+* `do!` 何も返しませんが、非同期ワークフローを待機します。
+* `return` 単に非同期式から結果を返します。
+* `return!` 別の非同期ワークフローを実行し、結果としてその戻り値を返します。
 
 さらに、通常`let`、 `use`、および`do`キーワードは、通常の関数内にある場合と同様、非同期バージョンと共に使用できます。
 
@@ -59,45 +59,45 @@ printfn "%s" html
 
 1. `Async.RunSynchronously` 別のスレッドで非同期ワークフローを開始し、その結果を待機します。
 
-```fsharp
-open System
-open System.Net
+    ```fsharp
+    open System
+    open System.Net
 
-let fetchHtmlAsync url = 
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        let! html = webClient.AsyncDownloadString(uri)
-        return html
-    }
+    let fetchHtmlAsync url =
+        async {
+            let uri = Uri(url)
+            use webClient = new WebClient()
+            let! html = webClient.AsyncDownloadString(uri)
+            return html
+        }
 
- // Execution will pause until fetchHtmlAsync finishes
- let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
+    // Execution will pause until fetchHtmlAsync finishes
+    let html = "https://dotnetfoundation.org" |> fetchHtmlAsync |> Async.RunSynchronously
 
- // you actually have the result from fetchHtmlAsync now!
- printfn "%s" html
- ```
+    // you actually have the result from fetchHtmlAsync now!
+    printfn "%s" html
+    ```
 
 2. `Async.Start` 別のスレッドで非同期ワークフローが開始され、**いない**その結果を待機します。
 
-```fsharp
-open System
-open System.Net
-  
-let uploadDataAsync url data = 
-    async {
-        let uri = Uri(url)
-        use webClient = new WebClient()
-        webClient.UploadStringAsync(uri, data)
-    }
+    ```fsharp
+    open System
+    open System.Net
 
-let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
+    let uploadDataAsync url data =
+        async {
+            let uri = Uri(url)
+            use webClient = new WebClient()
+            webClient.UploadStringAsync(uri, data)
+        }
 
-// Execution will continue after calling this!
-Async.Start(workflow)
+    let workflow = uploadDataAsync "https://url-to-upload-to.com" "hello, world!"
 
-printfn "%s" "uploadDataAsync is running in the background..."
- ```
+    // Execution will continue after calling this!
+    Async.Start(workflow)
+
+    printfn "%s" "uploadDataAsync is running in the background..."
+    ```
 
 具体的なシナリオで使用可能な非同期ワークフローを開始するには、その他の方法はあります。 詳細については[非同期リファレンス](https://msdn.microsoft.com/library/ee370232.aspx)します。
 
@@ -115,13 +115,13 @@ printfn "%s" "uploadDataAsync is running in the background..."
 open System
 open System.Net
 
-let urlList = 
+let urlList =
     [ "https://www.microsoft.com"
       "https://www.google.com"
       "https://www.amazon.com"
       "https://www.facebook.com" ]
 
-let fetchHtmlAsync url = 
+let fetchHtmlAsync url =
     async {
         let uri = Uri(url)
         use webClient = new WebClient()
@@ -144,13 +144,13 @@ for html in htmlList do
 
 ## <a name="important-info-and-advice"></a>重要な情報とアドバイス
 
-*   使用するすべての関数の最後に"Async"を追加します。
+* 使用するすべての関数の最後に"Async"を追加します。
 
  これは単なる名前付け規則が、これはやすく API の発見など。 同じルーチンの同期および非同期のバージョンがある場合に特には、明示的に名前を使用して非同期であることをお勧めです。
 
-*   コンパイラをリッスンします。
+* コンパイラをリッスンします。
 
- F#コンパイラは非常に厳格な"async"コードを同期的に実行を行うような問題とされることはほぼ不可能です。 警告に遭遇した場合はどのように考えるかをコードが実行されません記号です。 コンパイラを満足することができますと、ほとんどの場合に、コードは、想定どおりに実行されます。
+F#コンパイラは非常に厳格な"async"コードを同期的に実行を行うような問題とされることはほぼ不可能です。 警告に遭遇した場合はどのように考えるかをコードが実行されません記号です。 コンパイラを満足することができますと、ほとんどの場合に、コードは、想定どおりに実行されます。
 
 ## <a name="for-the-cvb-programmer-looking-into-f"></a>C#または VB プログラマが F を見る\#
 
@@ -164,23 +164,23 @@ for html in htmlList do
 
 ### <a name="similarities"></a>類似点
 
-*   `let!`、 `use!`、および`do!`に似ています`await`内から、非同期ジョブを呼び出すときに、`async{ }`ブロックします。
+* `let!`、 `use!`、および`do!`に似ています`await`内から、非同期ジョブを呼び出すときに、`async{ }`ブロックします。
 
- 次の 3 つのキーワードは内でのみ使用できます、`async { }`ブロック、方法と似ています`await`内で呼び出すことができますのみ、`async`メソッド。 つまり、`let!`キャプチャし、結果を使用する場合に`use!`は同じですが、何かのリソースが使用すると、後にクリーンアップする必要がありますと`do!`戻り値を完了する非同期ワークフローを待機する場合に続行する前にします。
+  次の 3 つのキーワードは内でのみ使用できます、`async { }`ブロック、方法と似ています`await`内で呼び出すことができますのみ、`async`メソッド。 つまり、`let!`キャプチャし、結果を使用する場合に`use!`は同じですが、何かのリソースが使用すると、後にクリーンアップする必要がありますと`do!`戻り値を完了する非同期ワークフローを待機する場合に続行する前にします。
 
-*   F#同様の方法でデータを並列化をサポートしています。
+* F#同様の方法でデータを並列化をサポートしています。
 
- 非常に異なる方法で動作が`Async.Parallel`に対応する`Task.WhenAll`をすべて終了すると、一連の非同期ジョブの結果としているシナリオでは。
+  非常に異なる方法で動作が`Async.Parallel`に対応する`Task.WhenAll`をすべて終了すると、一連の非同期ジョブの結果としているシナリオでは。
 
 ### <a name="differences"></a>相違点
 
-*   入れ子になった`let!`いないは許可されているとは異なり、入れ子になった `await`
+* 入れ子になった`let!`いないは許可されているとは異なり、入れ子になった `await`
 
- 異なり`await`、無期限にネストできます`let!`ことはできませんし、その結果を別の内部で使用する前にバインドされている必要があります`let!`、 `do!`、または`use!`します。
+  異なり`await`、無期限にネストできます`let!`ことはできませんし、その結果を別の内部で使用する前にバインドされている必要があります`let!`、 `do!`、または`use!`します。
 
-*   キャンセルのサポートは、非常に簡単F#よりもC#/VB.
+* キャンセルのサポートは、非常に簡単F#よりもC#/VB.
 
- タスクの途中での実行でのキャンセルをサポートしているC#または VB では、チェックが必要、`IsCancellationRequested`プロパティまたは呼び出す`ThrowIfCancellationRequested()`上、`CancellationToken`非同期メソッドに渡されるオブジェクト。
+  タスクの途中での実行でのキャンセルをサポートしているC#または VB では、チェックが必要、`IsCancellationRequested`プロパティまたは呼び出す`ThrowIfCancellationRequested()`上、`CancellationToken`非同期メソッドに渡されるオブジェクト。
 
 これに対し、F#非同期ワークフローがより自然にキャンセル可能です。 キャンセルは、単純な 3 段階のプロセスです。
 
@@ -200,7 +200,7 @@ let workflow =
             printfn "Working..."
             do! Async.Sleep 1000
     }
-    
+
 let tokenSource = new CancellationTokenSource()
 
 // Start the workflow in the background
@@ -214,6 +214,6 @@ tokenSource.Cancel()
 
 ## <a name="further-resources"></a>他のリソース:
 
-*   [MSDN での非同期ワークフロー](https://msdn.microsoft.com/library/dd233250.aspx)
-*   [非同期のシーケンスF#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
-*   [F#データを HTTP ユーティリティ](https://fsharp.github.io/FSharp.Data/library/Http.html)
+* [MSDN での非同期ワークフロー](https://msdn.microsoft.com/library/dd233250.aspx)
+* [非同期のシーケンスF#](https://fsprojects.github.io/FSharp.Control.AsyncSeq/library/AsyncSeq.html)
+* [F#データを HTTP ユーティリティ](https://fsharp.github.io/FSharp.Data/library/Http.html)

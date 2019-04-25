@@ -12,10 +12,10 @@ ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59192057"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > 要素
@@ -45,7 +45,7 @@ DEVPATH 環境変数によって指定されたディレクトリで、ランタ
 |[値]|説明|  
 |-----------|-----------------|  
 |**true**|DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリを検索します。|  
-|**False**|DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリを検索しません。 これは、既定値です。|  
+|**false**|DEVPATH 環境変数によって指定されたディレクトリ内のアセンブリを検索しません。 これは、既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  
@@ -75,4 +75,4 @@ DEVPATH 環境変数によって指定されたディレクトリで、ランタ
 
 - [ランタイム設定スキーマ](../../../../../docs/framework/configure-apps/file-schema/runtime/index.md)
 - [構成ファイル スキーマ](../../../../../docs/framework/configure-apps/file-schema/index.md)
-- [方法: DEVPATH を使用してアセンブリを指定する](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)
+- [方法: DEVPATH を使用してアセンブリを検索します。](../../../../../docs/framework/configure-apps/how-to-locate-assemblies-by-using-devpath.md)

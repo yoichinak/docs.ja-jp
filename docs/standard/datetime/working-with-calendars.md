@@ -16,10 +16,10 @@ ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055314"
 ---
 # <a name="working-with-calendars"></a>カレンダーの使用
@@ -30,33 +30,33 @@ ms.locfileid: "59055314"
 
 派生して .NET でのすべてのカレンダー、<xref:System.Globalization.Calendar?displayProperty=nameWithType>クラスを基本の暦の実装を提供します。 <xref:System.Globalization.Calendar> クラスを継承するクラスの 1 つに <xref:System.Globalization.EastAsianLunisolarCalendar> クラスがあります。これは、すべての太陰太陽暦の基本クラスです。 .NET には、次のカレンダー実装が含まれています。
 
-* <xref:System.Globalization.ChineseLunisolarCalendar>、中国の太陰太陽暦を表します。
+* <xref:System.Globalization.ChineseLunisolarCalendar>。中国の太陰太陽暦を表します。
 
-* <xref:System.Globalization.GregorianCalendar>、グレゴリオ暦の暦を表します。 この暦は、<xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列挙体で定義されるサブタイプ (アラビア語や中東フランス語など) にさらに分けられます。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> プロパティは、グレゴリオ暦のサブタイプを指定します。
+* <xref:System.Globalization.GregorianCalendar>。グレゴリオ暦を表します。 この暦は、<xref:System.Globalization.GregorianCalendarTypes?displayProperty=nameWithType> 列挙体で定義されるサブタイプ (アラビア語や中東フランス語など) にさらに分けられます。 <xref:System.Globalization.GregorianCalendar.CalendarType%2A?displayProperty=nameWithType> プロパティは、グレゴリオ暦のサブタイプを指定します。
 
-* <xref:System.Globalization.HebrewCalendar>、ヘブライ暦を表します。
+* <xref:System.Globalization.HebrewCalendar>。ヘブライ暦を表します。
 
-* <xref:System.Globalization.HijriCalendar>、イスラム暦を表します。
+* <xref:System.Globalization.HijriCalendar>。回教暦を表します。
 
-* <xref:System.Globalization.JapaneseCalendar>、日本語の暦を表します。
+* <xref:System.Globalization.JapaneseCalendar>。和暦を表します。
 
-* <xref:System.Globalization.JapaneseLunisolarCalendar>、日本の太陰太陽暦を表します。
+* <xref:System.Globalization.JapaneseLunisolarCalendar>。日本の太陰太陽暦を表します。
 
-* <xref:System.Globalization.JulianCalendar>、ユリウス暦を表します。
+* <xref:System.Globalization.JulianCalendar>。ユリウス暦を表します。
 
-* <xref:System.Globalization.KoreanCalendar>、韓国暦を表します。
+* <xref:System.Globalization.KoreanCalendar>。韓国暦を表します。
 
-* <xref:System.Globalization.KoreanLunisolarCalendar>、韓国の太陰太陽暦を表します。
+* <xref:System.Globalization.KoreanLunisolarCalendar>。韓国の太陰太陽暦を表します。
 
-* <xref:System.Globalization.PersianCalendar>、ペルシャ暦を表します。
+* <xref:System.Globalization.PersianCalendar>。ペルシャ暦を表します。
 
-* <xref:System.Globalization.TaiwanCalendar>、台湾暦を表します。
+* <xref:System.Globalization.TaiwanCalendar>。台湾暦を表します。
 
-* <xref:System.Globalization.TaiwanLunisolarCalendar>、台湾の太陰太陽暦を表します。
+* <xref:System.Globalization.TaiwanLunisolarCalendar>。台湾の太陰太陽暦を表します。
 
-* <xref:System.Globalization.ThaiBuddhistCalendar>、タイ仏暦を表します。
+* <xref:System.Globalization.ThaiBuddhistCalendar>。タイ仏暦を表します。
 
-* <xref:System.Globalization.UmAlQuraCalendar>、ウムアルクラ暦を表します。
+* <xref:System.Globalization.UmAlQuraCalendar>。ウムアルクラ暦を表します。
 
 暦は、次の 2 とおりの方法で使用できます。
 
@@ -363,5 +363,5 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 ## <a name="see-also"></a>関連項目
 
 - [方法: グレゴリオ暦以外の暦で日付の表示](../../../docs/standard/base-types/how-to-display-dates-in-non-gregorian-calendars.md)
-- [サンプル:カレンダーの週の範囲のユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
+- [サンプル: カレンダーの週の範囲のユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Calendar-3360a84a)
 - [Calendar クラス](xref:System.Globalization.Calendar)

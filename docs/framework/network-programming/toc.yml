@@ -1,235 +1,228 @@
-items:
 - name: .NET Framework のネットワーク プログラミング
   href: index.md
   items:
-  - name: ネットワーク プログラミング方法のトピック
-    href: network-programming-how-to-topics.md
-  - name: プラグ可能なプロトコルの概要
-    href: introducing-pluggable-protocols.md
-  - name: データの要求
-    href: requesting-data.md
-    items:
-    - name: インターネット要求の作成
-      href: creating-internet-requests.md
-    - name: '方法: Web ページを要求し、ストリームとして結果を取得する'
-      href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
-    - name: '方法: WebRequest クラスを使用してデータを要求する'
-      href: how-to-request-data-using-the-webrequest-class.md
-    - name: '方法: WebRequest クラスを使用してデータを送信する'
-      href: how-to-send-data-using-the-webrequest-class.md
-    - name: '方法: WebRequest に一致するプロトコル固有の WebResponse を取得する'
-      href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
-    - name: ネットワーク上でストリームを使用する
-      href: using-streams-on-the-network.md
-    - name: 非同期要求を行う
-      href: making-asynchronous-requests.md
-    - name: エラー処理
-      href: handling-errors.md
-  - name: プラグ可能なプロトコルのプログラミング
-    href: programming-pluggable-protocols.md
-    items:
-    - name: '方法: WebRequest を使用してカスタム プロトコルを登録する'
-      href: how-to-register-a-custom-protocol-using-webrequest.md
-    - name: '方法: WebRequest を型キャストしてプロトコル固有のプロパティにアクセスする'
-      href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
-    - name: WebRequest からの派生
-      href: deriving-from-webrequest.md
-    - name: WebResponse からの派生
-      href: deriving-from-webresponse.md
-  - name: アプリケーション プロトコルの使用
-    href: using-application-protocols.md
-    items:
-    - name: HTTP
-      href: http.md
+    - name: ネットワーク プログラミング方法のトピック
+      href: network-programming-how-to-topics.md
+    - name: プラグ可能なプロトコルの概要
+      href: introducing-pluggable-protocols.md
+    - name: データの要求
+      href: requesting-data.md
       items:
-      - name: HttpListener
-        href: httplistener.md
-    - name: '方法: HTTP 固有のプロパティにアクセスする'
-      href: how-to-access-http-specific-properties.md
-    - name: 接続の管理
-      href: managing-connections.md
+        - name: インターネット要求の作成
+          href: creating-internet-requests.md
+        - name: '方法: Web ページを要求し、ストリームとして結果を取得する'
+          href: how-to-request-a-web-page-and-retrieve-the-results-as-a-stream.md
+        - name: '方法: WebRequest クラスを使用してデータを要求する'
+          href: how-to-request-data-using-the-webrequest-class.md
+        - name: '方法: WebRequest クラスを使用してデータを送信する'
+          href: how-to-send-data-using-the-webrequest-class.md
+        - name: '方法: WebRequest に一致するプロトコル固有の WebResponse を取得する'
+          href: how-to-retrieve-a-protocol-specific-webresponse-that-matches-a-webrequest.md
+        - name: ネットワーク上でストリームを使用する
+          href: using-streams-on-the-network.md
+        - name: 非同期要求を行う
+          href: making-asynchronous-requests.md
+        - name: エラー処理
+          href: handling-errors.md
+    - name: プラグ可能なプロトコルのプログラミング
+      href: programming-pluggable-protocols.md
       items:
-      - name: 接続のグループ化
-        href: connection-grouping.md
-      - name: '方法: グループの接続にユーザー情報を割り当てる'
-        href: how-to-assign-user-information-to-group-connections.md
-    - name: TCP-UDP
-      href: tcp-udp.md
+        - name: '方法: WebRequest を使用してカスタム プロトコルを登録する'
+          href: how-to-register-a-custom-protocol-using-webrequest.md
+        - name: '方法: WebRequest を型キャストしてプロトコル固有のプロパティにアクセスする'
+          href: how-to-typecast-a-webrequest-to-access-protocol-specific-properties.md
+        - name: WebRequest からの派生
+          href: deriving-from-webrequest.md
+        - name: WebResponse からの派生
+          href: deriving-from-webresponse.md
+    - name: アプリケーション プロトコルの使用
+      href: using-application-protocols.md
       items:
-      - name: TCP サービスの使用
-        href: using-tcp-services.md
-      - name: UDP サービスの使用
-        href: using-udp-services.md
-    - name: ソケット
-      href: sockets.md
+        - name: HTTP
+          href: http.md
+          items:
+            - name: HttpListener
+              href: httplistener.md
+        - name: '方法: HTTP 固有のプロパティにアクセスする'
+          href: how-to-access-http-specific-properties.md
+        - name: 接続の管理
+          href: managing-connections.md
+          items:
+            - name: 接続のグループ化
+              href: connection-grouping.md
+            - name: '方法: グループの接続にユーザー情報を割り当てる'
+              href: how-to-assign-user-information-to-group-connections.md
+        - name: TCP-UDP
+          href: tcp-udp.md
+          items:
+            - name: TCP サービスの使用
+              href: using-tcp-services.md
+            - name: UDP サービスの使用
+              href: using-udp-services.md
+        - name: ソケット
+          href: sockets.md
+          items:
+            - name: '方法: ソケットを作成する'
+              href: how-to-create-a-socket.md
+            - name: クライアント ソケットの使用
+              href: using-client-sockets.md
+              items:
+                - name: 同期クライアント ソケットの使用
+                  href: using-a-synchronous-client-socket.md
+                - name: 非同期クライアント ソケットの使用
+                  href: using-an-asynchronous-client-socket.md
+            - name: リッスン (ソケットで)
+              href: listening-with-sockets.md
+              items:
+                - name: 同期サーバー ソケットの使用
+                  href: using-a-synchronous-server-socket.md
+                - name: 非同期サーバー ソケットの使用
+                  href: using-an-asynchronous-server-socket.md
+            - name: ソケットのコード例
+              href: socket-code-examples.md
+              items:
+                - name: 同期クライアント ソケットの例
+                  href: synchronous-client-socket-example.md
+                - name: 同期サーバー ソケットの例
+                  href: synchronous-server-socket-example.md
+                - name: 非同期クライアント ソケットの例
+                  href: asynchronous-client-socket-example.md
+                - name: 非同期サーバー ソケットの例
+                  href: asynchronous-server-socket-example.md
+        - name: FTP
+          href: ftp.md
+          items:
+            - name: '方法: FTP を使用してファイルをダウンロードする'
+              href: how-to-download-files-with-ftp.md
+            - name: '方法: FTP を使用してファイルをアップロードする'
+              href: how-to-upload-files-with-ftp.md
+            - name: '方法: FTP でディレクトリの内容を一覧表示する'
+              href: how-to-list-directory-contents-with-ftp.md
+        - name: WebRequest の問題と例外について
+          href: understanding-webrequest-problems-and-exceptions.md
+    - name: インターネット プロトコル バージョン 6
+      href: internet-protocol-version-6.md
       items:
-      - name: '方法: ソケットを作成する'
-        href: how-to-create-a-socket.md
-      - name: クライアント ソケットの使用
-        href: using-client-sockets.md
-        items:
-        - name: 同期クライアント ソケットの使用
-          href: using-a-synchronous-client-socket.md
-        - name: 非同期クライアント ソケットの使用
-          href: using-an-asynchronous-client-socket.md
-      - name: リッスン (ソケットで)
-        href: listening-with-sockets.md
-        items:
-        - name: 同期サーバー ソケットの使用
-          href: using-a-synchronous-server-socket.md
-        - name: 非同期サーバー ソケットの使用
-          href: using-an-asynchronous-server-socket.md
-      - name: ソケットのコード例
-        href: socket-code-examples.md
-        items:
-        - name: 同期クライアント ソケットの例
-          href: synchronous-client-socket-example.md
-        - name: 同期サーバー ソケットの例
-          href: synchronous-server-socket-example.md
-        - name: 非同期クライアント ソケットの例
-          href: asynchronous-client-socket-example.md
-        - name: 非同期サーバー ソケットの例
-          href: asynchronous-server-socket-example.md
-    - name: FTP
-      href: ftp.md
+        - name: IPv6 アドレス指定
+          href: ipv6-addressing.md
+        - name: IPv6 のルーティング
+          href: ipv6-routing.md
+        - name: IPv6 の自動構成
+          href: ipv6-auto-configuration.md
+        - name: IPv6 の有効化と無効化
+          href: enabling-and-disabling-ipv6.md
+        - name: '方法: IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する'
+          href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
+    - name: 構成 (インターネット アプリケーションを)
+      href: configuring-internet-applications.md
+    - name: .NET Framework のネットワークのトレース
+      href: network-tracing.md
       items:
-      - name: '方法: FTP を使用してファイルをダウンロードする'
-        href: how-to-download-files-with-ftp.md
-      - name: '方法: FTP を使用してファイルをアップロードする'
-        href: how-to-upload-files-with-ftp.md
-      - name: '方法: FTP でディレクトリの内容を一覧表示する'
-        href: how-to-list-directory-contents-with-ftp.md
-    - name: WebRequest の問題と例外について
-      href: understanding-webrequest-problems-and-exceptions.md
-  - name: インターネット プロトコル バージョン 6
-    href: internet-protocol-version-6.md
-    items:
-    - name: IPv6 アドレス指定
-      href: ipv6-addressing.md
-    - name: IPv6 のルーティング
-      href: ipv6-routing.md
-    - name: IPv6 の自動構成
-      href: ipv6-auto-configuration.md
-    - name: IPv6 の有効化と無効化
-      href: enabling-and-disabling-ipv6.md
-    - name: '方法: IPv6 のサポートを有効にするようにコンピューター構成ファイルを変更する'
-      href: how-to-modify-the-computer-configuration-file-to-enable-ipv6-support.md
-  - name: 構成 (インターネット アプリケーションを)
-    href: configuring-internet-applications.md
-  - name: .NET Framework のネットワークのトレース
-    href: network-tracing.md
-    items:
-    - name: ネットワークのトレースの解釈
-      href: interpreting-network-tracing.md
-    - name: ネットワークのトレースの有効化
-      href: enabling-network-tracing.md
-    - name: '方法: ネットワークのトレースを構成する'
-      href: how-to-configure-network-tracing.md
-  - name: ネットワーク アプリケーションのキャッシュ管理
-    href: cache-management-for-network-applications.md
-    items:
-    - name: キャッシュ ポリシー
-      href: cache-policy.md
-    - name: 場所ベースのキャッシュ ポリシー
-      href: location-based-cache-policies.md
-    - name: 時間ベースのキャッシュ ポリシー
-      href: time-based-cache-policies.md
+        - name: ネットワークのトレースの解釈
+          href: interpreting-network-tracing.md
+        - name: ネットワークのトレースの有効化
+          href: enabling-network-tracing.md
+        - name: '方法: ネットワークのトレースを構成する'
+          href: how-to-configure-network-tracing.md
+    - name: ネットワーク アプリケーションのキャッシュ管理
+      href: cache-management-for-network-applications.md
       items:
-      - name: キャッシュ ポリシーの相互作用 — 最大有効期間と最大期限延長
-        href: cache-policy-interaction-maximum-age-and-maximum-staleness.md
-      - name: キャッシュ ポリシーの相互作用 — 最大有効期間と最小鮮度
-        href: cache-policy-interaction-maximum-age-and-minimum-freshness.md
-    - name: ネットワーク アプリケーションでのキャッシュの構成
-      href: configuring-caching-in-network-applications.md
+        - name: キャッシュ ポリシー
+          href: cache-policy.md
+        - name: 場所ベースのキャッシュ ポリシー
+          href: location-based-cache-policies.md
+        - name: 時間ベースのキャッシュ ポリシー
+          href: time-based-cache-policies.md
+          items:
+            - name: キャッシュ ポリシーの相互作用 — 最大有効期間と最大期限延長
+              href: cache-policy-interaction-maximum-age-and-maximum-staleness.md
+            - name: キャッシュ ポリシーの相互作用 — 最大有効期間と最小鮮度
+              href: cache-policy-interaction-maximum-age-and-minimum-freshness.md
+        - name: ネットワーク アプリケーションでのキャッシュの構成
+          href: configuring-caching-in-network-applications.md
+          items:
+            - name: '方法: アプリケーションの場所ベースのキャッシュ ポリシーを設定する'
+              href: how-to-set-a-location-based-cache-policy-for-an-application.md
+            - name: '方法: アプリケーションの既定の時間ベースのキャッシュ ポリシーを設定する'
+              href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
+            - name: '方法: 時間ベースのキャッシュ ポリシーをカスタマイズする'
+              href: how-to-customize-a-time-based-cache-policy.md
+            - name: '方法: 要求のキャッシュ ポリシーを設定する'
+              href: how-to-set-cache-policy-for-a-request.md
+    - name: ネットワーク プログラミングにおけるセキュリティ
+      href: security-in-network-programming.md
       items:
-      - name: '方法: アプリケーションの場所ベースのキャッシュ ポリシーを設定する'
-        href: how-to-set-a-location-based-cache-policy-for-an-application.md
-      - name: '方法: アプリケーションの既定の時間ベースのキャッシュ ポリシーを設定する'
-        href: how-to-set-the-default-time-based-cache-policy-for-an-application.md
-      - name: '方法: 時間ベースのキャッシュ ポリシーをカスタマイズする'
-        href: how-to-customize-a-time-based-cache-policy.md
-      - name: '方法: 要求のキャッシュ ポリシーを設定する'
-        href: how-to-set-cache-policy-for-a-request.md
-  - name: ネットワーク プログラミングにおけるセキュリティ
-    href: security-in-network-programming.md
-    items:
-    - name: トランスポート層セキュリティ (TLS) のベスト プラクティス
-      href: tls.md
-    - name: Secure Sockets Layerの使用
-      href: using-secure-sockets-layer.md
+        - name: トランスポート層セキュリティ (TLS) のベスト プラクティス
+          href: tls.md
+        - name: Secure Sockets Layerの使用
+          href: using-secure-sockets-layer.md
+          items:
+            - name: 証明書の選択と検証
+              href: certificate-selection-and-validation.md
+        - name: インターネット認証
+          href: internet-authentication.md
+          items:
+            - name: 基本認証とダイジェスト認証
+              href: basic-and-digest-authentication.md
+            - name: NTLM 認証および Kerberos 認証
+              href: ntlm-and-kerberos-authentication.md
+        - name: Web およびソケットのアクセス許可
+          href: web-and-socket-permissions.md
+    - name: System.Net クラスのベスト プラクティス
+      href: best-practices-for-system-net-classes.md
+    - name: プロキシを介したインターネットへのアクセス
+      href: accessing-the-internet-through-a-proxy.md
       items:
-      - name: 証明書の選択と検証
-        href: certificate-selection-and-validation.md
-    - name: インターネット認証
-      href: internet-authentication.md
+        - name: プロキシの構成
+          href: proxy-configuration.md
+        - name: 自動プロキシ検出
+          href: automatic-proxy-detection.md
+        - name: '方法: WebRequest でインターネットとの通信にプロキシを使用できるようにする'
+          href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
+        - name: '方法: グローバル プロキシの選択をオーバーライドする'
+          href: how-to-override-a-global-proxy-selection.md
+    - name: NetworkInformation
+      href: networkinformation.md
       items:
-      - name: 基本認証とダイジェスト認証
-        href: basic-and-digest-authentication.md
-      - name: NTLM 認証および Kerberos 認証
-        href: ntlm-and-kerberos-authentication.md
-    - name: Web およびソケットのアクセス許可
-      href: web-and-socket-permissions.md
-  - name: System.Net クラスのベスト プラクティス
-    href: best-practices-for-system-net-classes.md
-  - name: プロキシを介したインターネットへのアクセス
-    href: accessing-the-internet-through-a-proxy.md
-    items:
-    - name: プロキシの構成
-      href: proxy-configuration.md
-    - name: 自動プロキシ検出
-      href: automatic-proxy-detection.md
-    - name: '方法: WebRequest でインターネットとの通信にプロキシを使用できるようにする'
-      href: how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md
-    - name: '方法: グローバル プロキシの選択をオーバーライドする'
-      href: how-to-override-a-global-proxy-selection.md
-  - name: NetworkInformation
-    href: networkinformation.md
-    items:
-    - name: '方法: ネットワークの可用性とアドレスの変更を検出する'
-      href: how-to-detect-network-availability-and-address-changes.md
-    - name: '方法: インターフェイス情報とプロトコル情報を取得する'
-      href: how-to-get-interface-and-protocol-information.md
-    - name: '方法: ホストに対して ping を実行'
-      href: how-to-ping-a-host.md
-  - name: バージョン 2.0 での System.Uri 名前空間の変更
-    href: changes-to-the-system-uri-namespace-in-version-2-0.md
-  - name: System.Uri での International Resource Identifier のサポート
-    href: international-resource-identifier-support-in-system-uri.md
-  - name: バージョン 3.5 のソケット パフォーマンスの強化
-    href: socket-performance-enhancements-in-version-3-5.md
-  - name: Peer Name Resolution Protocol
-    href: peer-name-resolution-protocol.md
-    items:
-    - name: ピア名と PNRP ID
-      href: peer-names-and-pnrp-ids.md
-    - name: ピア名の公開と解決
-      href: peer-name-publication-and-resolution.md
-    - name: PNRP クラウド
-      href: pnrp-clouds.md
-    - name: PNRP キャッシュ
-      href: pnrp-caches.md
-    - name: アプリケーション開発での PNRP
-      href: pnrp-in-application-development.md
-  - name: ピアツーピア コラボレーション
-    href: peer-to-peer-collaboration.md
-    items:
-    - name: System.Net.PeerToPeer.Collaboration 名前空間について
-      href: about-the-system-net-peertopeer-collaboration-namespace.md
-    - name: ピアツーピア ネットワーキング シナリオ
-      href: peer-to-peer-networking-scenarios.md
-  - name: バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更
-    href: changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md
-  - name: 統合 Windows 認証と拡張保護
-    href: integrated-windows-authentication-with-extended-protection.md
-  - name: IPv6 および Teredo を使用した NAT トラバーサル
-    href: nat-traversal-using-ipv6-and-teredo.md
-  - name: Windows ストア アプリのネットワーク分離
-    href: network-isolation-for-windows-store-apps.md
-  - name: ネットワーク プログラミングのサンプル
-    href: network-programming-samples.md
-ms.openlocfilehash: 9f44403f015f28fe92aed3309584abc51156db3a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469707"
+        - name: '方法: ネットワークの可用性とアドレスの変更を検出する'
+          href: how-to-detect-network-availability-and-address-changes.md
+        - name: '方法: インターフェイス情報とプロトコル情報を取得する'
+          href: how-to-get-interface-and-protocol-information.md
+        - name: '方法: ホストに対して ping を実行'
+          href: how-to-ping-a-host.md
+    - name: バージョン 2.0 での System.Uri 名前空間の変更
+      href: changes-to-the-system-uri-namespace-in-version-2-0.md
+    - name: System.Uri での International Resource Identifier のサポート
+      href: international-resource-identifier-support-in-system-uri.md
+    - name: バージョン 3.5 のソケット パフォーマンスの強化
+      href: socket-performance-enhancements-in-version-3-5.md
+    - name: Peer Name Resolution Protocol
+      href: peer-name-resolution-protocol.md
+      items:
+        - name: ピア名と PNRP ID
+          href: peer-names-and-pnrp-ids.md
+        - name: ピア名の公開と解決
+          href: peer-name-publication-and-resolution.md
+        - name: PNRP クラウド
+          href: pnrp-clouds.md
+        - name: PNRP キャッシュ
+          href: pnrp-caches.md
+        - name: アプリケーション開発での PNRP
+          href: pnrp-in-application-development.md
+    - name: ピアツーピア コラボレーション
+      href: peer-to-peer-collaboration.md
+      items:
+        - name: System.Net.PeerToPeer.Collaboration 名前空間について
+          href: about-the-system-net-peertopeer-collaboration-namespace.md
+        - name: ピアツーピア ネットワーキング シナリオ
+          href: peer-to-peer-networking-scenarios.md
+    - name: バージョン 3.5 SP1 における HttpWebRequest の NTLM 認証への変更
+      href: changes-to-ntlm-authentication-for-httpwebrequest-in-version-3-5-sp1.md
+    - name: 統合 Windows 認証と拡張保護
+      href: integrated-windows-authentication-with-extended-protection.md
+    - name: IPv6 および Teredo を使用した NAT トラバーサル
+      href: nat-traversal-using-ipv6-and-teredo.md
+    - name: Windows ストア アプリのネットワーク分離
+      href: network-isolation-for-windows-store-apps.md
+    - name: ネットワーク プログラミングのサンプル
+      href: network-programming-samples.md

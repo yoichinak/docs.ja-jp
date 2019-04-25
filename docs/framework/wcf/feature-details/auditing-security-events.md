@@ -5,10 +5,10 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59101297"
 ---
 # <a name="auditing-security-events"></a>セキュリティ イベントの監査
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
   
  セキュリティ ログへの書き込みを行うには、`SeAuditPrivilege` が必要です。 既定では、この権限は Local System アカウントと Network Service アカウントだけに与えられています。 セキュリティ ログの `read` および `delete` 機能を管理するには、`SeSecurityPrivilege` が必要です。 既定では、この権限は管理者だけに与えられています。  
   
- これに対し、アプリケーション ログは認証済みユーザーが読み書きできます。 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] 書き込みは、既定では、アプリケーション ログにイベントを監査します。 すべての認証済みユーザーに表示される個人情報をログに格納することもできます。  
+ これに対し、アプリケーション ログは認証済みユーザーが読み書きできます。 既定では、[!INCLUDE[wxp](../../../../includes/wxp-md.md)] は、監査イベントをアプリケーション ログに書き込みます。 すべての認証済みユーザーに表示される個人情報をログに格納することもできます。  
   
 ## <a name="suppressing-audit-failures"></a>監査エラーの抑制  
  監査中に監査エラーを表示しないように指定するオプションも用意されています。 既定では、監査エラーはアプリケーションに影響を与えません。 ただし、必要に応じて、このオプションを `false` に設定し、例外をスローすることもできます。  
@@ -87,8 +87,8 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
   
 |システム|アプリケーション ログ|セキュリティ ログ|  
 |------------|---------------------|------------------|  
-|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] またはそれ以降|サポート状況|サポートなし|  
-|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] と、呼び出し [!INCLUDE[wv](../../../../includes/wv-md.md)]|サポート状況|スレッド コンテキストを持つ必要があります。 `SeAuditPrivilege`|  
+|[!INCLUDE[wxpsp2](../../../../includes/wxpsp2-md.md)] 以降|サポート状況|サポートなし|  
+|[!INCLUDE[ws2003sp1](../../../../includes/ws2003sp1-md.md)] および [!INCLUDE[wv](../../../../includes/wv-md.md)]|サポート状況|スレッド コンテキストが `SeAuditPrivilege` を持つ必要があります。|  
   
 #### <a name="other-factors"></a>その他の要素  
  オペレーティング システム以外に、ログ記録の使用可能性を制御する設定を次の表に示します。  
@@ -104,7 +104,7 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
 - <xref:System.ServiceModel.AuditLogLocation>
 - [セキュリティの概要](../../../../docs/framework/wcf/feature-details/security-overview.md)
 - [基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)
-- [方法: セキュリティ イベントを監査する](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
+- [方法: セキュリティ イベントを監査します。](../../../../docs/framework/wcf/feature-details/how-to-audit-wcf-security-events.md)
 - [\<serviceSecurityAudit>](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)
-- [\<<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [\<behaviors>](../../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

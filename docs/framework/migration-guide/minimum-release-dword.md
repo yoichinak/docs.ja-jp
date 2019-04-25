@@ -9,11 +9,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6476539d704da171dc6bc1849bcabc21058cdc7e
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055381"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59769776"
 ---
 # <a name="the-minimum-values-of-the-release-dword-for-net-framework-45-and-later-versions"></a>.NET Framework 4.5 以降のバージョン用の Release DWORD の最小値
 

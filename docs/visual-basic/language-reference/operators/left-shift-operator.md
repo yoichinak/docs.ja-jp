@@ -9,10 +9,10 @@ helpviewer_keywords:
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
 ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824287"
 ---
 # <a name="-operator-visual-basic"></a>\<\< 演算子 (Visual Basic)
@@ -42,7 +42,7 @@ result = pattern << amount
 |データ型 `pattern`|サイズのマスク (10 進数)|サイズのマスク (16 進数)|  
 |----------------------------|---------------------------|-------------------------------|  
 |`SByte`, `Byte`|7|&AMP; H00000007|  
-|`Short`, `UShort`|15|&AMP; H0000000F|  
+|`Short`, `UShort`|16|&AMP; H0000000F|  
 |`Integer`, `UInteger`|31|&AMP; H0000001F|  
 |`Long`, `ULong`|63|&AMP; H0000003F|  
   

@@ -17,10 +17,10 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 81f4d5219865bf7f7c9e6d284d74d0c249729dfc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59194423"
 ---
 # <a name="spawnderivedclass-function"></a>SpawnDerivedClass 関数
@@ -62,7 +62,7 @@ HRESULT SpawnDerivedClass (
 | `WBEM_E_INVALID_OPERATION` | 0x80041016 | インスタンスからのクラスの生成などの無効な操作が要求されました。 |
 | `WBEM_E_INCOMPLETE_CLASS` | ソース クラスが完全に定義されているか、Windows の管理を登録するため、新しい派生クラスは許可されていません。 |
 | `WBEM_E_OUT_OF_MEMORY` | 0x80041006 | 操作を完了するのに十分なメモリがあります。 |
-| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` `null`します。 |
+| `WBEM_E_INVALID_PARAMETER` | 0x80041008 | `ppNewClass` は `null`です。 |
 | `WBEM_S_NO_ERROR` | 0 | 関数呼び出しに成功しました。  |
   
 ## <a name="remarks"></a>Remarks
@@ -78,8 +78,8 @@ HRESULT SpawnDerivedClass (
   
  **ヘッダー:** WMINet_Utils.idl  
   
- **.NET Framework のバージョン: ** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v472plus](../../../../includes/net-current-v472plus.md)]  
   
 ## <a name="see-also"></a>関連項目
 
-- [WMI およびパフォーマンス カウンター (アンマネージド API リファレンス)](index.md)
+- [WMI およびパフォーマンス カウンター (アンマネージ API リファレンス)](index.md)

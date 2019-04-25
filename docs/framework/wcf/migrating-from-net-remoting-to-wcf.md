@@ -3,10 +3,10 @@ title: .NET リモート処理から WCF への移行
 ms.date: 03/30/2017
 ms.assetid: 16902a42-ef80-40e9-8c4c-90e61ddfdfe5
 ms.openlocfilehash: c6bc16e97a87461be7b2c4877777329a0005a497
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59296200"
 ---
 # <a name="migrating-from-net-remoting-to-wcf"></a>.NET リモート処理から WCF への移行
@@ -101,7 +101,7 @@ using (ServiceHost serviceHost = new ServiceHost(typeof(WCFServer), baseAddress)
   
  WCF サービスの構成方法やホスト方法には、さまざまなものがあります。 これは、"自己ホスト型" と呼ばれる一例にすぎません。 詳細については、次のトピックを参照してください。  
   
--   [方法: サービス コントラクトを定義する](how-to-define-a-wcf-service-contract.md)  
+-   [方法: サービス コントラクトを定義します。](how-to-define-a-wcf-service-contract.md)  
   
 -   [構成ファイルを使用してサービスを構成する方法](configuring-services-using-configuration-files.md)  
   
@@ -142,7 +142,7 @@ Console.WriteLine($"  Customer {customer.FirstName} {customer.LastName} received
   
  この例では、リモート処理の例に最も近いことから、チャネル レベルでのプログラミングを示しています。 でも使用できますが、**サービス参照の追加**クライアント プログラミングを簡略化するコードを生成する Visual Studio のアプローチです。 詳細については、次のトピックを参照してください。  
   
--   [クライアントのチャネル レベルのプログラミング](./extending/client-channel-level-programming.md)  
+-   [クライアント チャネル レベルのプログラミング](./extending/client-channel-level-programming.md)  
   
 -   [方法: 追加、更新、またはサービス参照の削除](/visualstudio/data-tools/how-to-add-update-or-remove-a-wcf-data-service-reference)  
   
@@ -286,26 +286,26 @@ catch (FaultException<CustomerServiceFault> fault)
   
 -   **.NET リモート処理はレガシー製品です。** 」の説明に従って[.NET リモート処理](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/72x4h507%28v=vs.100%29)、これはレガシー製品と見なされます、新規の開発は推奨されません。 新規および既存のアプリケーションには、WCF または ASP.NET Web API をお勧めします。  
   
--   **WCF では、クロスプラットフォーム標準を使用しています。** WCF は、クロスプラットフォームの相互運用性を考慮して設計されており、さまざまな業界標準 (SOAP、WS-Security、WS-Trust など) をサポートしています。 WCF サービスでは、Windows 以外のオペレーション システムで動作中のクライアントとの相互運用ができます。 リモート処理は、主に、サーバーおよびクライアント アプリケーションの両方が Windows オペレーティング システムで .NET Framework を使用して実行される環境向けに設計されました。  
+-   **WCF では、クロス プラットフォームの標準を使用します。** WCF は、クロスプラットフォームの相互運用性を考慮して設計されており、さまざまな業界標準 (SOAP、WS-Security、WS-Trust など) をサポートしています。 WCF サービスでは、Windows 以外のオペレーション システムで動作中のクライアントとの相互運用ができます。 リモート処理は、主に、サーバーおよびクライアント アプリケーションの両方が Windows オペレーティング システムで .NET Framework を使用して実行される環境向けに設計されました。  
   
--   **WCF にはセキュリティが組み込まれています。** WCF は、セキュリティを考慮して設計されており、認証、トランスポート レベルのセキュリティ、メッセージ レベルのセキュリティなどのために、数多くのオプションが用意されています。リモート処理は、アプリケーションの相互運用を容易にするように設計されましたが、信頼できない環境で安全性を確保できるようには設計されていません。 WCF は信頼できる環境と信頼できない環境の両方で動作するよう設計されました。  
+-   **WCF では、組み込みのセキュリティがあります。** WCF は、セキュリティを考慮して設計されており、認証、トランスポート レベルのセキュリティ、メッセージ レベルのセキュリティなどのために、数多くのオプションが用意されています。リモート処理は、アプリケーションの相互運用を容易にするように設計されましたが、信頼できない環境で安全性を確保できるようには設計されていません。 WCF は信頼できる環境と信頼できない環境の両方で動作するよう設計されました。  
   
 ### <a name="migration-recommendations"></a>移行の推奨事項  
  .NET リモート処理から WCF に移行するための推奨手順を次に示します。  
   
--   **サービス コントラクトを作成する。** サービス インターフェイスの型を定義し、[ServiceContract] 属性でマークします。クライアントからの呼び出しを可能にするすべてのメソッドを [OperationContract] でマークします。  
+-   **サービス コントラクトを作成します。** サービス インターフェイスの型を定義し、[ServiceContract] 属性でマークします。クライアントからの呼び出しを可能にするすべてのメソッドを [OperationContract] でマークします。  
   
 -   **データ コントラクトを作成します。** サーバーとクライアントの間で交換されるデータ型を定義し、[DataContract] 属性でマークします。 クライアントから使用できるようにするすべてのフィールドとプロパティを [DataMember] でマークします。  
   
--   **エラー コントラクトを作成する (省略可能)。** エラーが検出されたときにサーバーとクライアントの間で交換される型を作成します。 これらの型を [DataContract] と [DataMember] でマークしてシリアル化できるようにします。 [OperationContract] でマークしたすべてのサービス操作について、どのエラーが返されるのかを示すために [FaultContract] でも同様にマークします。  
+-   **(省略可能) エラー コントラクトを作成します。** エラーが検出されたときにサーバーとクライアントの間で交換される型を作成します。 これらの型を [DataContract] と [DataMember] でマークしてシリアル化できるようにします。 [OperationContract] でマークしたすべてのサービス操作について、どのエラーが返されるのかを示すために [FaultContract] でも同様にマークします。  
   
--   **サービスを構成し、ホストする。** サービス コントラクトの作成後の手順としては、エンドポイントでサービスを公開するためにバインドを構成します。 詳細については、次を参照してください。[エンドポイント。アドレス、バインディング、およびコントラクト](./feature-details/endpoints-addresses-bindings-and-contracts.md)します。  
+-   **構成し、サービスをホストします。** サービス コントラクトの作成後の手順としては、エンドポイントでサービスを公開するためにバインドを構成します。 詳細については、次を参照してください。[エンドポイント。アドレス、バインディング、およびコントラクト](./feature-details/endpoints-addresses-bindings-and-contracts.md)します。  
   
  リモート処理アプリケーションの WCF への移行が完了した後は、.NET リモート処理で依存関係を削除する必要があります。 これにより、リモート処理の脆弱性がアプリケーションから確実に取り除かれます。 実行する必要がある手順は、次のとおりです。  
   
--   **MarshalByRefObject の使用を中止する。** MarshalByRefObject 型は、リモート処理のためだけに存在する型で、WCF では使用されません。 MarshalByRefObject をサブクラスに持つアプリケーション型は、削除するか変更する必要があります。  
+-   **MarshalByRefObject の使用を中止します。** MarshalByRefObject 型は、リモート処理のためだけに存在する型で、WCF では使用されません。 MarshalByRefObject をサブクラスに持つアプリケーション型は、削除するか変更する必要があります。  
   
--   **[Serializable] と ISerializable の使用を中止する。** [Serializable] 属性と ISerializable インターフェイスは、信頼できる環境内の型をシリアル化するように設計されたものであり、これらはリモート処理によって使用されます。 WCF のシリアル化では、[DataContract] と [DataMember] でマークされている型を使用します。 アプリケーションで使用されるデータ型は、ISerializable や [Serializable] を使用せずに [DataContract] を使用するように変更する必要があります。  
+-   **[Serializable] と ISerializable を中止します。** [Serializable] 属性と ISerializable インターフェイスは、信頼できる環境内の型をシリアル化するように設計されたものであり、これらはリモート処理によって使用されます。 WCF のシリアル化では、[DataContract] と [DataMember] でマークされている型を使用します。 アプリケーションで使用されるデータ型は、ISerializable や [Serializable] を使用せずに [DataContract] を使用するように変更する必要があります。  
   
 ### <a name="migration-scenarios"></a>移行のシナリオ  
  WCF で次の一般的なリモート処理のシナリオを実現する方法を見てみましょう。  

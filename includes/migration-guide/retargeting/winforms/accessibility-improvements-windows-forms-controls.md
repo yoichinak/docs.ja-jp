@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 789e7833eb2e6418b23c63db9939bd83f8a8a0d6
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58760250"
 ---
 ### <a name="accessibility-improvements-in-windows-forms-controls"></a>Windows フォーム コントロールでのアクセシビリティの向上

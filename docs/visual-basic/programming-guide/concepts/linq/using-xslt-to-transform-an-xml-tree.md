@@ -3,10 +3,10 @@ title: XSLT を使用して XML ツリー (Visual Basic) を変換するには
 ms.date: 07/20/2015
 ms.assetid: 3390ca68-c270-4e1d-b64b-6a063a77017c
 ms.openlocfilehash: a013e042bcaab321d8a5596368c349f296240d0b
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820166"
 ---
 # <a name="using-xslt-to-transform-an-xml-tree-visual-basic"></a>XSLT を使用して XML ツリー (Visual Basic) を変換するには

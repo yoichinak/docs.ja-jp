@@ -3,10 +3,10 @@ title: C# 6 の新機能 - C# ガイド
 description: C# バージョン 6 の新機能について説明します
 ms.date: 12/12/2018
 ms.openlocfilehash: 478fd512f6b6facfce6d7f70f9691ce15e418d6e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920676"
 ---
 # <a name="whats-new-in-c-6"></a>C# 6 の新機能
@@ -106,7 +106,7 @@ public class Student
 this.SomethingHappened?.Invoke(this, eventArgs);
 ```
 
-左辺が 1 回だけ評価されるようにすることで、左辺でメソッドの呼び出しなどの任意の式を使用できるようになります。 `?.`
+左辺が 1 回だけ評価されることを保証し、また `?.` の左辺で、メソッドの呼び出しなどの任意の式を使用できるようにします。
 
 ## <a name="string-interpolation"></a>文字列補間
 

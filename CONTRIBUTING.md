@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 1b12e614c59785a066ad34e5320a205961f7dd49
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59610809"
+---
 # <a name="contributing"></a>コントリビューション
 
 .NET ドキュメントへの貢献に関心をお寄せいただきありがとうございます。
@@ -24,7 +32,7 @@
 
 [Git と GitHub.com](https://guides.github.com/activities/hello-world/) の基本的な理解が必要です。
 
-**手順 1:** 小さな変更の場合は、この手順をスキップしてください。 新しいコンテンツを書き込んだり、既存のコンテンツを完全に改訂したりすることに興味がある場合は、自分が何をしたいかを説明する[問題](https://github.com/dotnet/docs/issues)を開きます。
+**手順 1:** 少しの変更の場合 (たとえば、入力ミスを修正する場合や、すぐに pull request を開いてドキュメント内に見つけた問題に対処する場合) は、この手順をスキップします。 新しいコンテンツを書き込んだり、既存のコンテンツを完全に改訂したりすることに興味がある場合は、自分が何をしたいかを説明する[問題](https://github.com/dotnet/docs/issues)を開きます。
 **docs** フォルダーのコンテンツはセクションで構成され、それらが目次 (TOC) に反映されます。 TOC のどこにトピックを配置するかを明確にします。 提案に対するフィードバックを得ます。
 
 - または -

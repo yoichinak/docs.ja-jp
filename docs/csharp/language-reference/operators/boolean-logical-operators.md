@@ -1,0 +1,195 @@
+---
+title: ブール論理演算子 - C# リファレンス
+description: ブール オペランドを使用した論理否定演算、論理積演算 (AND)、および包含的および排他的論理和演算 (OR) を実行する C# 演算子について説明します。
+ms.date: 04/08/2019
+author: pkulikov
+f1_keywords:
+- '!_CSharpKeyword'
+- '&_CSharpKeyword'
+- ^_CSharpKeyword
+- '|_CSharpKeyword'
+- '&&_CSharpKeyword'
+- '||_CSharpKeyword'
+helpviewer_keywords:
+- logical operators [C#]
+- short-circuiting operators [C#]
+- logical negation operator [C#]
+- NOT operator [C#]
+- '! operator [C#]'
+- AND operator [C#]
+- ampersand operator [C#]
+- conjunction operator [C#]
+- '& operator [C#]'
+- exclusive OR operator [C#]
+- XOR operator [C#]
+- ^ operator [C#]
+- OR operator [C#]
+- disjunction operator [C#]
+- '| operator [C#]'
+- conditional AND operator [C#]
+- short-circuiting AND operator [C#]
+- '&& operator [C#]'
+- conditional OR operator [C#]
+- short-circuiting OR operator [C#]
+- '|| operator [C#]'
+ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59427319"
+---
+# <a name="boolean-logical-operators-c-reference"></a>ブール論理演算子 (C# リファレンス)
+
+次の演算子は、[bool](../keywords/bool.md) オペランドを使用して論理演算を実行します。
+
+- 単項 [`!` (論理否定)](#logical-negation-operator-) 演算子。
+- 二項 [`&` (論理 AND)](#logical-and-operator-)、[`|` (論理 OR)](#logical-or-operator-)、および [`^` (論理排他的 OR)](#logical-exclusive-or-operator-) 演算子。 これらの演算子は常に両方のオペランドを評価します。
+- 二項 [`&&` (条件付き論理 AND)](#conditional-logical-and-operator-) および [`||` (条件付き論理 OR)](#conditional-logical-or-operator-) 演算子。 これらの演算子は、必要な場合にのみ 2 番目のオペランドを評価します。
+
+[整数](../keywords/integral-types-table.md)型のオペランドの場合、`&`、`|`、および `^` 演算子はビットごとの論理演算を実行します。
+
+## <a name="logical-negation-operator-"></a>論理否定演算子 !
+
+`!` 演算子は、そのオペランドの論理否定を計算します。 つまり、オペランドが `false` と評価された場合は `true`、オペランドが `true` と評価された場合は `false` が生成されます。
+
+[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Negation)]
+
+## <a name="logical-and-operator-amp"></a>論理 AND 演算子 &amp;
+
+`&` 演算子がそのオペランドの論理 AND を計算します。 `x` と `y` の両方が `true` と評価されれば、`x & y` の結果は `true` です。 それ以外の場合、結果は `false` です。
+
+`&` 演算子は最初のオペランドが `false` と評価されても両方のオペランドを評価するため、結果は 2 番目のオペランドの値に関係なく、必ず `false` になります。
+
+次の例では、`&` 演算子の 2 番目のオペランドはメソッド呼び出しで、最初のオペランドの値に関係なく実行されます。
+
+[!code-csharp-interactive[logical AND](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#And)]
+
+[条件付き論理 AND 演算子](#conditional-logical-and-operator-) `&&` もそのオペランドの論理 AND を計算しますが、最初のオペランドが `false` と評価された場合、2 番目のオペランドは評価されません。
+
+整数型のオペランドの場合、`&` 演算子は、そのオペランドの[ビットごとの論理 AND](and-operator.md#integer-logical-bitwise-and-operator) を計算します。 単項 `&` 演算子は[アドレス演算子](and-operator.md#unary-address-of-operator)です。
+
+## <a name="logical-exclusive-or-operator-"></a>論理排他的 OR 演算子: ^
+
+`^` 演算子は、そのオペランドの論理排他的 OR (論理 XOR とも呼ばれます) を計算します。 `x` が `true` に評価され、`y` が `false` に評価された場合、または `x` が `false` に評価され、`y` が `true` に評価された場合、`x ^ y` の結果は `true` です。 それ以外の場合、結果は `false` です。 つまり、`bool` オペランドの場合、`^` 演算子は[非等値演算子](equality-operators.md#inequality-operator-) `!=` と同じ結果を計算します。
+
+[!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
+
+整数型のオペランドの場合、`^` 演算子は、そのオペランドの[ビットごとの論理排他的 OR](xor-operator.md) を計算します。
+
+## <a name="logical-or-operator-"></a>論理 OR 演算子 |
+
+`|` 演算子がそのオペランドの論理 OR を計算します。 `x` または `y` のどちらかが `true` と評価された場合、`x | y` の結果は `true` になります。 それ以外の場合、結果は `false` です。
+
+`|` 演算子は最初のオペランドが `true` と評価されても両方のオペランドを評価するため、結果は 2 番目のオペランドの値に関係なく、必ず `true` になります。
+
+次の例では、`|` 演算子の 2 番目のオペランドはメソッド呼び出しで、最初のオペランドの値に関係なく実行されます。
+
+[!code-csharp-interactive[logical OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Or)]
+
+[条件付き論理 OR 演算子](#conditional-logical-or-operator-) `||` もそのオペランドの論理 OR を計算しますが、最初のオペランドが `true` と評価された場合、2 番目のオペランドは評価されません。
+
+整数型のオペランドの場合、`|` 演算子は、そのオペランドの[ビットごとの論理 OR](or-operator.md) を計算します。
+
+## <a name="conditional-logical-and-operator-ampamp"></a>条件付き論理 AND 演算子 &amp;&amp;
+
+条件論理 AND 演算子 `&&` は、"短絡" 論理 AND 演算子とも呼ばれ、そのオペランドの論理 AND を計算します。 `x` と `y` の両方が `true` と評価されれば、`x && y` の結果は `true` です。 それ以外の場合、結果は `false` です。 最初のオペランドが `false` と評価されると、2 番目のオペランドは評価されません。
+
+次の例では、最初のオペランドが `false` と評価されると、`&&` 演算子の 2 番目のオペランドはメソッド呼び出しで実行されません。
+
+[!code-csharp-interactive[conditional logical AND](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#ConditionalAnd)]
+
+[論理 AND 演算子](#logical-and-operator-) `&` もそのオペランドの論理 AND を計算しますが、常に両方のオペランドを評価します。
+
+## <a name="conditional-logical-or-operator-"></a>条件付き論理 OR 演算子 ||
+
+条件論理 OR 演算子 `||` は、"短絡" 論理 OR 演算子とも呼ばれ、そのオペランドの論理 OR を計算します。 `x` または `y` のどちらかが `true` と評価された場合、`x || y` の結果は `true` になります。 それ以外の場合、結果は `false` です。 最初のオペランドが `true` と評価されると、2 番目のオペランドは評価されません。
+
+次の例では、最初のオペランドが `true` と評価されると、`||` 演算子の 2 番目のオペランドはメソッド呼び出しで実行されません。
+
+[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#ConditionalOr)]
+
+[論理 OR 演算子](#logical-or-operator-) `|` もそのオペランドの論理 OR を計算しますが、常に両方のオペランドを評価します。
+
+## <a name="nullable-boolean-logical-operators"></a>null 許容ブール論理演算子
+
+`bool?` オペランドの場合、`&` 演算子と `|` 演算子は 3 値ロジックをサポートします。 次の表に、これらの演算子のセマンティクスが定義されています。  
+  
+|x|Y|x&y|x&#124;y|  
+|----|----|----|----|  
+|true|true|true|true|  
+|TRUE|False|false|true|  
+|true|null|null|true|  
+|False|true|False|true|  
+|False|False|False|False|  
+|False|null|False|null|  
+|null|true|null|true|  
+|null|False|False|null|  
+|null|null|null|null|  
+
+これらの演算子の動作は、null 許容値型の一般的な演算子の動作とは異なります。 通常、値型のオペランドに定義されている演算子も、対応する null 値型のオペランドと共に使用できます。 このような演算子は、そのオペランドのいずれかが `null` の場合に `null` を生成します。 ただし、`&` および `|` 演算子は、オペランドの 1 つが `null` の場合でも、null 以外の値を生成する可能性があります。 null 許容値型の演算子の動作については、「[Null 許容型の使用](../../programming-guide/nullable-types/using-nullable-types.md)」記事の「[演算子](../../programming-guide/nullable-types/using-nullable-types.md#operators)」セクションを参照してください。
+
+次の例に示すように、`!` 演算子と `^` 演算子を `bool?` オペランドと共に使用することもできます。
+
+[!code-csharp-interactive[lifted negation and xor](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#WithNullableBoolean)]
+
+条件付き論理演算子 `&&` と `||` は `bool?` オペランドをサポートしません。
+
+## <a name="compound-assignment"></a>複合代入。
+
+2 項演算子 `op` の場合、フォームの複合代入式
+
+```csharp
+x op= y
+```
+
+上記の式は、次の式と同じです。
+
+```csharp
+x = x op y
+```
+
+ただし、`x` が評価されるのは 1 回だけです。
+
+次の例に示すように、`&`、`|`、および `^` 演算子は複合代入をサポートします。
+
+[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#CompoundAssignment)]
+
+条件付き論理演算子 `&&` と `||` は複合代入をサポートしません。
+
+## <a name="operator-precedence"></a>演算子の優先順位
+
+次の論理演算子の一覧は、優先度が高い順に並べられています。
+
+- 論理否定演算子 `!`
+- 論理 AND 演算子 `&`
+- 論理排他的 OR 演算子 `^`
+- 論理 OR 演算子 `|`
+- 条件付き論理 AND 演算子 `&&`
+- 条件付き論理 OR 演算子 `||`
+
+演算子の優先順位によって定められた評価の順序を変更するには、かっこ `()` を使用します。
+
+[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Precedence)]
+
+優先度順に並べられた C# 演算子の完全な一覧については、「[C# 演算子](index.md)」を参照してください。
+
+## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
+
+ユーザー定義型は、`!`、`&`、`|`、および `^` 演算子を[オーバーロード](../keywords/operator.md)できます。 2 項演算子をオーバーロードすると、対応する複合代入演算子も暗黙的にオーバーロードされます。 ユーザー定義型は、複合代入演算子を明示的にオーバーロードすることはできません。
+
+ユーザー定義型は条件付き論理演算子 `&&` と `||` をオーバーロードできません。 ただし、ユーザー定義型が [true および false 演算子](../keywords/true-false-operators.md)と `&` または `|` 演算子を特定の方法でオーバーロードしている場合は、その型のオペランドに対してそれぞれ `&&` または `||` 演算の評価が可能になります。 詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の[ユーザー定義型条件論理演算子](~/_csharplang/spec/expressions.md#user-defined-conditional-logical-operators)に関するセクションを参照してください。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の次のセクションを参照してください。
+
+- [論理否定演算子](~/_csharplang/spec/expressions.md#logical-negation-operator)
+- [論理演算子](~/_csharplang/spec/expressions.md#logical-operators)
+- [条件論理演算子](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+
+## <a name="see-also"></a>関連項目
+
+- [C# リファレンス](../index.md)
+- [C# プログラミングガイド](../../programming-guide/index.md)
+- [C# 演算子](index.md)

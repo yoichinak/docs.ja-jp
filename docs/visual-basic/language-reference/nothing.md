@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Nothing keyword [Visual Basic], syntax
 ms.assetid: 06176e2d-bbf7-4a37-afaa-a86ad21ee99f
 ms.openlocfilehash: 97c651dbcc657fbab0706c9a959bd0031c0fe343
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58826094"
 ---
 # <a name="nothing-visual-basic"></a>Nothing (Visual Basic)
@@ -26,7 +26,7 @@ ms.locfileid: "58826094"
   
  変数を*値の型*直接その値が含まれています。 値の型は、すべての数値データ型を含める`Boolean`、 `Char`、 `Date`、すべての構造、およびすべての列挙体。 変数を*参照型*メモリ内オブジェクトのインスタンスへの参照を格納します。 参照型には、クラス、配列、デリゲート、および文字列が含まれます。 詳細については、「 [Value Types and Reference Types](../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。  
   
- 変数は、値の場合は入力の動作`Nothing`かどうか、変数が null 許容のデータ型によって異なります。 Null 許容値型を表す、追加、`?`修飾子を型名。 割り当てる`Nothing`null 許容型の変数に値を設定`null`します。 詳細と例については、[null 許容値型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)を参照してください。  
+ 変数は、値の場合は入力の動作`Nothing`かどうか、変数が null 許容のデータ型によって異なります。 Null 許容値型を表す、追加、`?`修飾子を型名。 割り当てる`Nothing`null 許容型の変数に値を設定`null`します。 詳細と例については、次を参照してください。 [null 許容値型](../../visual-basic/programming-guide/language-features/data-types/nullable-value-types.md)します。  
   
  変数が null 許容型でない値型の場合は、割り当てる`Nothing`に設定が既定値にその宣言された型。 その型に変数のメンバーが含まれている場合はすべて既定値に設定します。 次の例は、スカラー型の場合、これを示しています。  
   

@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2b224a84-bad5-4843-adcc-14e784d280f5
 ms.openlocfilehash: 49138e9b130b1a2137b5e9e779875d6107972578
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211531"
 ---
 # <a name="eliminate-duplicate-elements-from-a-sequence"></a>シーケンスからの重複する要素の削除

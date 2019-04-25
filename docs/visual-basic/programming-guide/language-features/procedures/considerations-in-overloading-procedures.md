@@ -26,10 +26,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: a2001248-10d0-42c5-b0ce-eeedc987319f
 ms.openlocfilehash: f14cc28960af28530bda9a78c1309dea10c18b8f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58815597"
 ---
 # <a name="considerations-in-overloading-procedures-visual-basic"></a>プロシージャのオーバーロードに関する注意事項 (Visual Basic)
@@ -59,7 +59,7 @@ ms.locfileid: "58815597"
   
 -   呼び出し元のコードは省略可能な引数を指定していない場合にのみ必要な操作では、既定値にパラメーターを設定します。 このような場合は、プロシージャのコードは複雑になる小さい場合は 1 つまたは複数の 1 つのバージョンを定義する`Optional`パラメーター。  
   
- 詳細については、[省略可能なパラメーター](./optional-parameters.md)を参照してください。  
+ 詳細については、次を参照してください。[省略可能なパラメーター](./optional-parameters.md)します。  
   
 ### <a name="overloads-and-paramarrays"></a>Paramarray とオーバー ロード  
  呼び出し元のコードは、可変個の引数を渡すことのできる場合は、複数のオーバー ロードされたバージョンを定義またはパラメーター配列を使用できます。  
@@ -80,7 +80,7 @@ ms.locfileid: "58815597"
   
 -   プロシージャのロジックは、呼び出し元のコードを渡すと、すべての値に対して基本的に同じ操作を実行するすべての値を反復処理に適しています。  
   
- 詳細については、[パラメーター配列](./parameter-arrays.md)を参照してください。  
+ 詳細については、次を参照してください。[パラメーター配列](./parameter-arrays.md)します。  
   
 ## <a name="implicit-overloads-for-optional-parameters"></a>省略可能なパラメーターの暗黙のオーバー ロード  
  使用するプロシージャを[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)パラメータは、1 つは省略可能なパラメーター、これがない 1 つの 2 つのオーバー ロードされたプロシージャに相当します。 これらのいずれかに対応するパラメーター リストで、このようなプロシージャをオーバー ロードすることはできません。 次の宣言では、これについて説明します。  

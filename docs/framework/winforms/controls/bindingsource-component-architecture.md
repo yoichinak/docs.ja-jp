@@ -8,10 +8,10 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
 ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59165348"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource コンポーネント アーキテクチャ
@@ -78,16 +78,16 @@ ms.locfileid: "59165348"
   
  <xref:System.Windows.Forms.BindingSource>コンポーネントをカプセル化<xref:System.Windows.Forms.CurrencyManager>機能と、最も一般的な公開<xref:System.Windows.Forms.CurrencyManager>プロパティおよびイベント。 次の表では、通貨管理に関連するメンバーの一部について説明します。  
   
- <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> property  
+ <xref:System.Windows.Forms.ICurrencyManagerProvider.CurrencyManager%2A> プロパティ  
  関連付けられた currencymanager を取得、<xref:System.Windows.Forms.BindingSource>します。  
   
  <xref:System.Windows.Forms.ICurrencyManagerProvider.GetRelatedCurrencyManager%2A> メソッド  
  他を使用する必要がある場合<xref:System.Windows.Forms.BindingSource>指定したデータ メンバーにバインドされている、その currencymanager を取得します。  
   
- <xref:System.Windows.Forms.BindingSource.Current%2A> property  
+ <xref:System.Windows.Forms.BindingSource.Current%2A> プロパティ  
  データソースの現在の項目を取得します。  
   
- <xref:System.Windows.Forms.BindingSource.Position%2A> property  
+ <xref:System.Windows.Forms.BindingSource.Position%2A> プロパティ  
  基になるリストでの現在の位置を取得または設定します。  
   
  <xref:System.Windows.Forms.BindingSource.EndEdit%2A> メソッド  
@@ -119,7 +119,7 @@ ms.locfileid: "59165348"
   
 |メンバー|説明|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.List%2A> property|評価の結果一覧の取得、<xref:System.Windows.Forms.BindingSource.DataSource%2A>または<xref:System.Windows.Forms.BindingSource.DataMember%2A>プロパティ。|  
+|<xref:System.Windows.Forms.BindingSource.List%2A> プロパティ|評価の結果一覧の取得、<xref:System.Windows.Forms.BindingSource.DataSource%2A>または<xref:System.Windows.Forms.BindingSource.DataMember%2A>プロパティ。|  
 |<xref:System.Windows.Forms.BindingSource.AddNew%2A> メソッド|基になるリストに新しい項目を追加します。 実装するデータ ソースに適用されます、<xref:System.ComponentModel.IBindingList>インターフェイスし、項目の追加を許可する (つまり、<xref:System.Windows.Forms.BindingSource.AllowNew%2A>プロパティに設定されて`true`)。|  
   
 ### <a name="custom-item-creation"></a>カスタムの項目の作成  
@@ -149,7 +149,7 @@ ms.locfileid: "59165348"
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>.  
+-   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>。  
   
 -   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
@@ -162,8 +162,8 @@ ms.locfileid: "59165348"
   
 |メンバー|説明|  
 |------------|-----------------|  
-|<xref:System.Windows.Forms.BindingSource.Filter%2A> property|データ ソースが <xref:System.ComponentModel.IBindingListView> である場合は、表示する行のフィルター処理に使用する式を取得または設定します。|  
-|<xref:System.Windows.Forms.BindingSource.Sort%2A> property|データ ソースが <xref:System.ComponentModel.IBindingList> である場合は、並べ替えに使用する列名と並べ替え順序情報を取得または設定します。<br /><br /> - または -<br /><br /> データ ソースがある場合、<xref:System.ComponentModel.IBindingListView>し並べ替え、高度なサポートは、並べ替えと並べ替え順序を使用する複数の列名を取得します。|  
+|<xref:System.Windows.Forms.BindingSource.Filter%2A> プロパティ|データ ソースが <xref:System.ComponentModel.IBindingListView> である場合は、表示する行のフィルター処理に使用する式を取得または設定します。|  
+|<xref:System.Windows.Forms.BindingSource.Sort%2A> プロパティ|データ ソースが <xref:System.ComponentModel.IBindingList> である場合は、並べ替えに使用する列名と並べ替え順序情報を取得または設定します。<br /><br /> - または -<br /><br /> データ ソースがある場合、<xref:System.ComponentModel.IBindingListView>し並べ替え、高度なサポートは、並べ替えと並べ替え順序を使用する複数の列名を取得します。|  
   
 ### <a name="integration-with-bindingnavigator"></a>BindingNavigator の統合  
  使用することができます、<xref:System.Windows.Forms.BindingSource>任意の Windows フォーム コントロールをデータ ソースにバインドするコンポーネントが、<xref:System.Windows.Forms.BindingNavigator>コントロールが操作専用にデザインされた、<xref:System.Windows.Forms.BindingSource>コンポーネント。 <xref:System.Windows.Forms.BindingNavigator>コントロールを制御するためのユーザー インターフェイスを提供する、<xref:System.Windows.Forms.BindingSource>コンポーネントの現在の項目。 既定で、<xref:System.Windows.Forms.BindingNavigator>コントロールのナビゲーション メソッドに対応するボタンを提供する、<xref:System.Windows.Forms.BindingSource>コンポーネント。 詳細については、「[方法 :Windows フォーム BindingNavigator コントロールでデータ間を移動](how-to-navigate-data-with-the-windows-forms-bindingnavigator-control.md)します。  
@@ -176,5 +176,5 @@ ms.locfileid: "59165348"
 - [BindingNavigator コントロール](bindingnavigator-control-windows-forms.md)
 - [Windows フォームでのデータ バインディング](../windows-forms-data-binding.md)
 - [Windows フォームで使用するコントロール](controls-to-use-on-windows-forms.md)
-- [方法: Windows フォーム コントロールを型にバインドする](how-to-bind-a-windows-forms-control-to-a-type.md)
-- [方法: BindingSource を使用して Windows フォーム コントロール内にデータ ソースの更新を反映させる](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)
+- [方法: Windows フォーム コントロールを型にバインドします。](how-to-bind-a-windows-forms-control-to-a-type.md)
+- [方法: BindingSource で Windows フォーム コントロール内のデータ ソースの更新が反映されます。](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)

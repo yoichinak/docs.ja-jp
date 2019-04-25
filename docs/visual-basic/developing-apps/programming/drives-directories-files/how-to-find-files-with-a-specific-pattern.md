@@ -7,10 +7,10 @@ helpviewer_keywords:
 - patterns, matching
 ms.assetid: 25e3b71d-b844-4293-9e4e-f06c5836b5cc
 ms.openlocfilehash: e4d40c4ad3a694b3f7e830604edf94d90cb4c395
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825327"
 ---
 # <a name="how-to-find-files-with-a-specific-pattern-in-visual-basic"></a>方法: Visual Basic で特定のパターンに一致するファイルを検索する

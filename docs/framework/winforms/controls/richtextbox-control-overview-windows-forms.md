@@ -8,11 +8,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], about text boxes
 ms.assetid: 95081194-3dd4-4b84-9545-dd373e491eca
 ms.openlocfilehash: 0827c1919597e9eb85bfa41721676008b76564d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59201599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902500"
 ---
 # <a name="richtextbox-control-overview-windows-forms"></a>RichTextBox コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>を表示する、入力、およびテキストの書式形式のコントロールを使用します。 <xref:System.Windows.Forms.RichTextBox>コントロールはすべて、<xref:System.Windows.Forms.TextBox>コントロールを使用して、できますが、ことができますフォント、色、およびリンクの表示; ファイルからテキストと埋め込み画像を読み込み、指定した文字を検索します。 <xref:System.Windows.Forms.RichTextBox>コントロールを通常使用するテキストの操作を行い、Microsoft Word などのワード プロセッシング アプリケーションに似た機能を表示します。 ように、<xref:System.Windows.Forms.TextBox>コントロール、<xref:System.Windows.Forms.RichTextBox>コントロールがスクロール バーを表示できますとは異なり、<xref:System.Windows.Forms.TextBox>コントロール、その既定値は、必要に応じて、水平および垂直の両方向のスクロール バーを表示して、スクロール バーの追加の設定があります。  

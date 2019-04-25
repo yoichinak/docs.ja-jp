@@ -1,21 +1,14 @@
-items:
 - name: 属性
   href: index.md
   items:
-  - name: カスタム属性の作成
-    href: creating-custom-attributes.md
-    items:
-    - name: AttributeUsage
-      href: attributeusage.md
-  - name: リフレクションを使用した属性へのアクセス
-    href: accessing-attributes-by-using-reflection.md
-  - name: '方法: 属性を使用して C/C++ の共用体を作成する'
-    href: how-to-create-a-c-cpp-union-by-using-attributes.md
-  - name: 共通の属性
-    href: common-attributes.md
-ms.openlocfilehash: a0d3d1f59209cdbba6ccda6ddb8a3173ddab74d0
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470138"
+    - name: カスタム属性の作成
+      href: creating-custom-attributes.md
+      items:
+        - name: AttributeUsage
+          href: attributeusage.md
+    - name: リフレクションを使用した属性へのアクセス
+      href: accessing-attributes-by-using-reflection.md
+    - name: '方法: 属性を使用して C/C++ の共用体を作成する'
+      href: how-to-create-a-c-cpp-union-by-using-attributes.md
+    - name: 共通の属性
+      href: common-attributes.md

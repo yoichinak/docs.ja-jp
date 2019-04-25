@@ -10,13 +10,13 @@ ms.assetid: 71b2ebf6-3843-41e2-ad52-ffa5cd083a40
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6c39d9a1e3da9cccb2f027e9597a6f2272d187ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59179141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674208"
 ---
-# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames > 要素
+# <a name="bypasstrustedappstrongnames-element"></a>\<bypassTrustedAppStrongNames> 要素
 完全信頼に読み込まれる完全に信頼されたアセンブリに厳密な名前の検証をバイパスするかどうかを指定します<xref:System.AppDomain>します。  
   
  \<configuration>  
@@ -70,7 +70,7 @@ ms.locfileid: "59179141"
 -   遅延署名されていない。  
   
 > [!NOTE]
->  バイパス機能がオフになっているコンピューター上のすべてのアプリケーションのレジストリ キーを使用して場合は、この構成ファイルの設定に影響はありません。 詳細については、「[方法 :厳密な名前のバイパス機能を無効にする](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)します。  
+>  バイパス機能がオフになっているコンピューター上のすべてのアプリケーションのレジストリ キーを使用して場合は、この構成ファイルの設定に影響はありません。 詳細については、「[方法 :厳密な名前のバイパス機能を無効にする](../../../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  次の例では、完全信頼アセンブリの厳密な名前の署名を検証する動作を指定する方法を示します。  

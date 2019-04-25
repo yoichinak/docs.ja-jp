@@ -12,12 +12,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 98b96f5b4c6d6ea70687a97c849e89573c67c37e
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 297285ccb9aba7eae1d70a7d28a62241646a023c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545893"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59334160"
 ---
 # <a name="equality-operators-c-reference"></a>等値演算子 (C# リファレンス)
 

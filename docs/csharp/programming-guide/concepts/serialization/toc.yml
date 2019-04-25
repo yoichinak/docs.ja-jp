@@ -1,16 +1,9 @@
-items:
-- name: シリアル化 (C#)
+- name: 'シリアル化 (C#)'
   href: index.md
   items:
-  - name: '方法: XML ファイルにオブジェクト データを書き込む'
-    href: how-to-write-object-data-to-an-xml-file.md
-  - name: '方法: XML ファイルからオブジェクト データを読み込む'
-    href: how-to-read-object-data-from-an-xml-file.md
-  - name: 'チュートリアル: オブジェクトの永続化 (Visual Basic)'
-    href: walkthrough-persisting-an-object-in-visual-studio.md
-ms.openlocfilehash: ccf7c795b437ff2c4046b6005ec7b05528aa884f
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470378"
+    - name: '方法: XML ファイルにオブジェクト データを書き込む'
+      href: how-to-write-object-data-to-an-xml-file.md
+    - name: '方法: XML ファイルからオブジェクト データを読み込む'
+      href: how-to-read-object-data-from-an-xml-file.md
+    - name: 'チュートリアル: オブジェクトの永続化 (Visual Basic)'
+      href: walkthrough-persisting-an-object-in-visual-studio.md

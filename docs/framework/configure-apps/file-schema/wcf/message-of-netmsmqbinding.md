@@ -1,12 +1,12 @@
 ---
-title: <message> (行中)  <netMsmqBinding>
+title: <message> の <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
 ms.openlocfilehash: c623b7daf1e91c9c1800b9653525cd51b1087506
-ms.sourcegitcommit: 5c2176883dc3107445702724a7caa7ac2f6cb0d3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/03/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58890567"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<メッセージ > の\<netMsmqBinding >
@@ -54,7 +54,7 @@ ms.locfileid: "58890567"
 
 |要素|説明|
 |-------------|-----------------|
-|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|バインディングのセキュリティ設定を定義します。|
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-netmsmqbinding.md)|バインディングのセキュリティ設定を定義します。|
 
 ## <a name="see-also"></a>関連項目
 

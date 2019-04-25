@@ -10,11 +10,11 @@ helpviewer_keywords:
 - syntax [Visual Basic], function procedures
 ms.assetid: 1b9f632c-553b-4cb6-920a-ded117ead8c0
 ms.openlocfilehash: 568489d6034316e895cd999801241fa995aadefa
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58834245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864404"
 ---
 # <a name="function-procedures-visual-basic"></a>Function プロシージャ (Visual Basic)
 A`Function`手順は、一連の Visual Basic のステートメントで囲まれた、`Function`と`End Function`ステートメント。 `Function`プロシージャは、タスクを実行し、呼び出し元のコードにコントロールを返します。 コントロールが返されたときにも、呼び出し元のコードに値を返します。  
@@ -34,7 +34,7 @@ A`Function`手順は、一連の Visual Basic のステートメントで囲ま�
 End Function  
 ```  
   
- *修飾子*アクセス レベルとオーバー ロード、オーバーライド、共有、およびシャドウ処理に関する情報を指定できます。 詳細については、[関数ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)を参照してください。  
+ *修飾子*アクセス レベルとオーバー ロード、オーバーライド、共有、およびシャドウ処理に関する情報を指定できます。 詳細については、次を参照してください。[関数ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)します。  
   
  各パラメーターのと同じ方法を宣言する[Sub プロシージャ](./sub-procedures.md)します。  
   
@@ -76,7 +76,7 @@ End Function
   
  関数名に、戻り値を割り当てることの利点は、コントロールを返さないこと、プロシージャからが検出されるまで、`Exit Function`または`End Function`ステートメント。 これにより、暫定値を割り当てるし、必要に応じて後で調整することができます。  
   
- 値を返す方法についての詳細については、[関数ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)を参照してください。 配列を返す方法については、[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)を参照してください。  
+ 値を返す方法についての詳細については、次を参照してください。[関数ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)します。 配列を返す方法については、次を参照してください。[配列](../../../../visual-basic/programming-guide/language-features/arrays/index.md)します。  
   
 ## <a name="calling-syntax"></a>呼び出し構文  
  呼び出す、`Function`名前と引数の代入ステートメントまたは式の右側にあるいずれかを含めることによってプロシージャ。 省略可能でないすべての引数の値を指定する必要があり、引数リストをかっこで囲む必要があります。 引数が指定されていない場合、かっこを省略することができます。  

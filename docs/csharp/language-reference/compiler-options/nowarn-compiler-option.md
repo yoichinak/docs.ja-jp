@@ -9,10 +9,10 @@ helpviewer_keywords:
 - -nowarn compiler option [C#]
 ms.assetid: 6dcbc5e8-ae67-4566-9df3-f63cfdd9c4e4
 ms.openlocfilehash: 13bb50366d9c19751ef3387baf809ab69e27b5dc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59324150"
 ---
 # <a name="-nowarn-c-compiler-options"></a>-nowarn (C# コンパイラ オプション)
@@ -25,7 +25,7 @@ ms.locfileid: "59324150"
 ```  
   
 ## <a name="arguments"></a>引数  
- `number1`, `number2`  
+ `number1`、 `number2`  
  コンパイラで表示しないようにする警告番号。  
   
 ## <a name="remarks"></a>解説  

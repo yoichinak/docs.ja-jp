@@ -1,63 +1,56 @@
-items:
 - name: トレースおよびデバッグ設定のスキーマ
   href: index.md
   items:
-  - name: <system.diagnostics>
-    href: system-diagnostics-element.md
-    items:
-    - name: <assert>
-      href: assert-element.md
-    - name: <performanceCounters>
-      href: performancecounters-element.md
-    - name: <sharedListeners>
-      href: sharedlisteners-element.md
+    - name: <system.diagnostics>
+      href: system-diagnostics-element.md
       items:
-      - name: <add>
-        href: add-element-for-sharedlisteners.md
-        items:
-        - name: <filter>
-          href: filter-element-for-add-for-sharedlisteners.md
-    - name: <sources>
-      href: sources-element.md
-      items:
-      - name: <source>
-        href: source-element.md
-        items:
-        - name: <listeners>
-          href: listeners-element-for-source.md
+        - name: <assert>
+          href: assert-element.md
+        - name: <performanceCounters>
+          href: performancecounters-element.md
+        - name: <sharedListeners>
+          href: sharedlisteners-element.md
           items:
-          - name: <add>
-            href: add-element-for-listeners-for-source.md
-            items:
-            - name: <filter>
-              href: filter-element-for-add-for-listeners-for-source.md
-          - name: <clear>
-            href: clear-element-for-listeners-for-source.md
-          - name: <remove>
-            href: remove-element-for-listeners-for-source.md
-    - name: <switches>
-      href: switches-element.md
-      items:
-      - name: <add>
-        href: add-element-for-switches.md
-    - name: <trace>
-      href: trace-element.md
-      items:
-      - name: <listeners>
-        href: listeners-element-for-trace.md
-        items:
-        - name: <add>
-          href: add-element-for-listeners-for-trace.md
+            - name: <add>
+              href: add-element-for-sharedlisteners.md
+              items:
+                - name: <filter>
+                  href: filter-element-for-add-for-sharedlisteners.md
+        - name: <sources>
+          href: sources-element.md
           items:
-          - name: <filter>
-            href: filter-element-for-add-for-listeners-for-trace.md
-        - name: <clear>
-          href: clear-element-for-listeners-for-trace.md
-        - name: <remove>
-          href: remove-element-for-listeners-for-trace.md
-ms.openlocfilehash: 476205a53102a08af73fc010853a683db8c835a3
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470435"
+            - name: <source>
+              href: source-element.md
+              items:
+                - name: <listeners>
+                  href: listeners-element-for-source.md
+                  items:
+                    - name: <add>
+                      href: add-element-for-listeners-for-source.md
+                      items:
+                        - name: <filter>
+                          href: filter-element-for-add-for-listeners-for-source.md
+                    - name: <clear>
+                      href: clear-element-for-listeners-for-source.md
+                    - name: <remove>
+                      href: remove-element-for-listeners-for-source.md
+        - name: <switches>
+          href: switches-element.md
+          items:
+            - name: <add>
+              href: add-element-for-switches.md
+        - name: <trace>
+          href: trace-element.md
+          items:
+            - name: <listeners>
+              href: listeners-element-for-trace.md
+              items:
+                - name: <add>
+                  href: add-element-for-listeners-for-trace.md
+                  items:
+                    - name: <filter>
+                      href: filter-element-for-add-for-listeners-for-trace.md
+                - name: <clear>
+                  href: clear-element-for-listeners-for-trace.md
+                - name: <remove>
+                  href: remove-element-for-listeners-for-trace.md

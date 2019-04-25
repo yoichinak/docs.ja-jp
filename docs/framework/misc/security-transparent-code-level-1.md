@@ -12,10 +12,10 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59161071"
 ---
 # <a name="security-transparent-code-level-1"></a>透過的セキュリティ コード、レベル 1
@@ -32,7 +32,7 @@ ms.locfileid: "59161071"
   
 -   [透過性属性](#transparency_attributes)  
   
--   [透過的セキュリティの例](#security_transparency_examples)  
+-   [セキュリティ透過性の例](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>レベル 1 の透過性モデル  

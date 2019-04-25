@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
 ms.openlocfilehash: 7b2d388cbcd1995178adf4102520ecaa1c9b1889
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814191"
 ---
 # <a name="property-statement"></a>Property Statement
@@ -48,7 +48,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Default`  
   
-     省略可能です。 このプロパティは、クラスまたは構造体が定義されている既定のプロパティを指定します。 既定のプロパティのパラメーターを受け入れる必要がありますと設定し、取得できるプロパティの名前を指定せず。 としてプロパティを宣言する場合`Default`、使用することはできません`Private`プロパティまたはプロパティ プロシージャのいずれか。  
+     任意。 このプロパティは、クラスまたは構造体が定義されている既定のプロパティを指定します。 既定のプロパティのパラメーターを受け入れる必要がありますと設定し、取得できるプロパティの名前を指定せず。 としてプロパティを宣言する場合`Default`、使用することはできません`Private`プロパティまたはプロパティ プロシージャのいずれか。  
   
 -   `accessmodifier`  
   
@@ -96,11 +96,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `ReadOnly`  
   
-     省略可能です。 参照してください[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
+     任意。 参照してください[ReadOnly](../../../visual-basic/language-reference/modifiers/readonly.md)します。  
   
 -   `WriteOnly`  
   
-     省略可能です。 参照してください[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)します。  
+     任意。 参照してください[WriteOnly](../../../visual-basic/language-reference/modifiers/writeonly.md)します。  
   
 -   `Iterator`  
   
@@ -112,7 +112,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `parameterlist`  
   
-     省略可能です。 このプロパティのパラメーターとの可能な追加パラメーターを表すローカル変数名の一覧、`Set`プロシージャ。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。  
+     任意。 このプロパティのパラメーターとの可能な追加パラメーターを表すローカル変数名の一覧、`Set`プロシージャ。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。  
   
 -   `returntype`  
   
@@ -120,7 +120,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Implements`  
   
-     省略可能です。 このプロパティには、このプロパティの包含クラスまたは構造体によって実装されるインターフェイスで定義されているそれぞれの 1 つまたは複数のプロパティが実装していることを示します。 参照してください[ステートメントを実装](../../../visual-basic/language-reference/statements/implements-statement.md)します。  
+     任意。 このプロパティには、このプロパティの包含クラスまたは構造体によって実装されるインターフェイスで定義されているそれぞれの 1 つまたは複数のプロパティが実装していることを示します。 参照してください[ステートメントを実装](../../../visual-basic/language-reference/statements/implements-statement.md)します。  
   
 -   `implementslist`  
   
@@ -143,7 +143,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `statements`  
   
-     省略可能です。 内で実行するステートメントのブロック、`Get`または`Set`プロシージャ。  
+     任意。 内で実行するステートメントのブロック、`Get`または`Set`プロシージャ。  
   
 -   `End Get`  
   
@@ -151,7 +151,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
   
 -   `Set`  
   
-     省略可能です。 プロパティがマークされているかどうかに必要な`ReadOnly`します。 開始、`Set`プロパティ プロシージャ、プロパティの値を格納するために使用します。  
+     任意。 プロパティがマークされているかどうかに必要な`ReadOnly`します。 開始、`Set`プロパティ プロシージャ、プロパティの値を格納するために使用します。  
   
 -   `End Set`  
   

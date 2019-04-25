@@ -3,10 +3,10 @@ title: System.ServiceModel.Activation.ServiceContinue
 ms.date: 03/30/2017
 ms.assetid: 37a43c8e-493d-4e35-a24f-ab0d4c6d5ce7
 ms.openlocfilehash: d4c8aeb4ebe6a6dda30225bea9b0de681dd19729
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59103299"
 ---
 # <a name="systemservicemodelactivationservicecontinue"></a>System.ServiceModel.Activation.ServiceContinue

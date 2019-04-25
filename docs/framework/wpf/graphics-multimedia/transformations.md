@@ -17,10 +17,10 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 ms.assetid: 712b543f-d8b2-4dcf-ba2c-f7921c61c6fd
 ms.openlocfilehash: a0b5268d1c7e319a6144a7d551dca45bdc3e64aa
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59227231"
 ---
 # <a name="transformations"></a>変換
@@ -28,7 +28,7 @@ ms.locfileid: "59227231"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [変換の概要](transforms-overview.md)  
- [方法のトピック](transformations-how-to-topics.md)  
+ [方法トピック](transformations-how-to-topics.md)  
   
 ## <a name="see-also"></a>関連項目
 

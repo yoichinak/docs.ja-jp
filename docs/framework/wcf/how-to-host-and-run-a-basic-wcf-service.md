@@ -9,10 +9,10 @@ helpviewer_keywords:
 - WCF services [WCF], running
 ms.assetid: 31774d36-923b-4e2d-812e-aa190127266f
 ms.openlocfilehash: ad9536b1f27ba3945bf76d0474de4825033a1e8b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59197907"
 ---
 # <a name="tutorial-host-and-run-a-basic-windows-communication-foundation-service"></a>チュートリアル: ホストおよび基本的な Windows Communication Foundation サービスの実行

@@ -5,10 +5,10 @@ f1_keywords:
 - vbrArgument_RangeTwoBytes1
 ms.assetid: d1ab6767-8334-4d7c-bb99-c837a793ed69
 ms.openlocfilehash: 894c5b059db2be5322de837983d73e321af79c8d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59342376"
 ---
 # <a name="argument-argumentname-must-be-in-the-range-of--32768-to-65535"></a>引数 '\<argumentname >'-32768 から 65535 までの範囲内で指定する必要があります

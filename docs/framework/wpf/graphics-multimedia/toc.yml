@@ -1,450 +1,443 @@
-items:
 - name: グラフィックスとマルチメディア
   href: index.md
   items:
-  - name: WPF グラフィックス レンダリングの概要
-    href: wpf-graphics-rendering-overview.md
-  - name: グラフィックス
-    href: graphics.md
-    items:
-    - name: ビットマップ効果
-      href: bitmap-effects.md
+    - name: WPF グラフィックス レンダリングの概要
+      href: wpf-graphics-rendering-overview.md
+    - name: グラフィックス
+      href: graphics.md
       items:
-      - name: ビットマップ効果の概要
-        href: bitmap-effects-overview.md
-    - name: ブラシ
-      href: brushes.md
+        - name: ビットマップ効果
+          href: bitmap-effects.md
+          items:
+            - name: ビットマップ効果の概要
+              href: bitmap-effects-overview.md
+        - name: ブラシ
+          href: brushes.md
+          items:
+            - name: WPF のブラシの概要
+              href: wpf-brushes-overview.md
+            - name: ブラシの変換の概要
+              href: brush-transformation-overview.md
+            - name: 不透明度マスクの概要
+              href: opacity-masks-overview.md
+            - name: 純色およびグラデーションによる塗りつぶしの概要
+              href: painting-with-solid-colors-and-gradients-overview.md
+            - name: イメージ、描画、およびビジュアルによる塗りつぶし
+              href: painting-with-images-drawings-and-visuals.md
+            - name: TileBrush の概要
+              href: tilebrush-overview.md
+            - name: 方法のトピック
+              href: brushes-how-to-topics.md
+              items:
+                - name: SolidColorBrush の色または不透明度をアニメーション化する
+                  href: how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md
+                - name: グラデーション ストップの位置または色をアニメーション化する
+                  href: how-to-animate-the-position-or-color-of-a-gradient-stop.md
+                - name: 反射を作成する
+                  href: how-to-create-a-reflection.md
+                - name: TileBrush を使用してさまざまなタイル パターンを作成する
+                  href: how-to-create-different-tile-patterns-with-a-tilebrush.md
+                - name: ペンを定義する
+                  href: how-to-define-a-pen.md
+                - name: 描画を使用して領域を塗りつぶす
+                  href: how-to-paint-an-area-with-a-drawing.md
+                - name: イメージで領域を塗りつぶす
+                  href: how-to-paint-an-area-with-an-image.md
+                - name: 線形グラデーションを使用して領域を塗りつぶす
+                  href: how-to-paint-an-area-with-a-linear-gradient.md
+                - name: 放射状グラデーションを使用して領域を塗りつぶす
+                  href: how-to-paint-an-area-with-a-radial-gradient.md
+                - name: 純色で領域を塗りつぶす
+                  href: how-to-paint-an-area-with-a-solid-color.md
+                - name: システム ブラシで領域を塗りつぶす
+                  href: how-to-paint-an-area-with-a-system-brush.md
+                - name: ビデオを使用して領域を塗りつぶす
+                  href: how-to-paint-an-area-with-a-video.md
+                - name: ビジュアルで領域を塗りつぶす
+                  href: how-to-paint-an-area-with-a-visual.md
+                - name: 背景として使用するイメージの縦横比を保持する
+                  href: how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md
+                - name: TileBrush の水平方向および垂直方向の配置を設定する
+                  href: how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md
+                - name: TileBrush のタイル サイズを設定する
+                  href: how-to-set-the-tile-size-for-a-tilebrush.md
+                - name: ブラシを変換する
+                  href: how-to-transform-a-brush.md
+                - name: グラデーションでシステム カラーを使用する
+                  href: how-to-use-system-colors-in-a-gradient.md
+        - name: 描画
+          href: drawings.md
+          items:
+            - name: Drawing オブジェクトの概要
+              href: drawing-objects-overview.md
+            - name: 方法のトピック
+              href: drawings-how-to-topics.md
+              items:
+                - name: 描画に GuidelineSet を適用する
+                  href: how-to-apply-a-guidelineset-to-a-drawing.md
+                - name: 複合描画を作成する
+                  href: how-to-create-a-composite-drawing.md
+                - name: GeometryDrawing を作成する
+                  href: how-to-create-a-geometrydrawing.md
+                - name: ImageDrawing を使用してイメージを描画する
+                  href: how-to-draw-an-image-using-imagedrawing.md
+                - name: VideoDrawing を使用してメディアを再生する
+                  href: how-to-play-media-using-a-videodrawing.md
+                - name: 描画をイメージ ソースとして使用する
+                  href: how-to-use-a-drawing-as-an-image-source.md
+        - name: ジオメトリ
+          href: geometries.md
+          items:
+            - name: パス マークアップ構文
+              href: path-markup-syntax.md
+            - name: ジオメトリの概要
+              href: geometry-overview.md
+            - name: 方法のトピック
+              href: geometries-how-to-topics.md
+              items:
+                - name: EllipseGeometry をアニメーション化する
+                  href: how-to-animate-an-ellipsegeometry.md
+                - name: ArcSegment のサイズをアニメーション化する
+                  href: how-to-animate-the-size-of-an-arcsegment.md
+                - name: 複合図形の塗りつぶしを制御する
+                  href: how-to-control-the-fill-of-a-composite-shape.md
+                - name: 結合したジオメトリを作成する
+                  href: how-to-create-a-combined-geometry.md
+                - name: 複合図形を作成する
+                  href: how-to-create-a-composite-shape.md
+                - name: 3 次ベジエ曲線を作成する
+                  href: how-to-create-a-cubic-bezier-curve.md
+                - name: LineGeometry を使用して線を作成する
+                  href: how-to-create-a-line-using-a-linegeometry.md
+                - name: PathGeometry で LineSegment を作成する
+                  href: how-to-create-a-linesegment-in-a-pathgeometry.md
+                - name: PathGeometry を使用して図形を作成する
+                  href: how-to-create-a-shape-by-using-a-pathgeometry.md
+                - name: StreamGeometry を使用して図形を作成する
+                  href: how-to-create-a-shape-using-a-streamgeometry.md
+                - name: 2 次ベジエ曲線を作成する
+                  href: how-to-create-a-quadratic-bezier-curve.md
+                - name: 楕円の円弧を作成する
+                  href: how-to-create-an-elliptical-arc.md
+                - name: PathGeometry 内に複数のサブパスを作成する
+                  href: how-to-create-multiple-subpaths-within-a-pathgeometry.md
+                - name: RectangleGeometry を使用して四角形を定義する
+                  href: how-to-define-a-rectangle-using-a-rectanglegeometry.md
+                - name: RectangleGeometry の角に丸みを付ける
+                  href: how-to-round-the-corners-of-a-rectanglegeometry.md
+        - name: イメージ
+          href: images.md
+          items:
+            - name: イメージングの概要
+              href: imaging-overview.md
+            - name: 方法のトピック
+              href: imaging-how-to-topics.md
+              items:
+                - name: XAML で BitmapImage を使用する
+                  href: how-to-use-a-bitmapimage.md
+                - name: サムネイルとしてイメージを読み込む
+                  href: how-to-load-an-image-as-a-thumbnail.md
+                - name: BitmapImage に変換を適用する
+                  href: how-to-apply-a-transform-to-a-bitmapimage.md
+                - name: ビジュアルからビットマップを作成する
+                  href: how-to-create-a-bitmap-from-a-visual.md
+                - name: ビジュアルをイメージ ファイルにエンコードする
+                  href: how-to-encode-a-visual-to-an-image-file.md
+                - name: 新しい BitmapSource を作成する
+                  href: how-to-create-a-new-bitmapsource.md
+                - name: BitmapSource オブジェクトをチェーンする
+                  href: how-to-chain-bitmapsource-objects-together.md
+                - name: BitmapSource を別の PixelFormat に変換する
+                  href: how-to-convert-a-bitmapsource-to-a-different-pixelformat.md
+                - name: BitmapSource をインデックス付きピクセル形式に変換する
+                  href: how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md
+                - name: JPEG イメージのエンコードおよびデコード
+                  href: how-to-encode-and-decode-a-jpeg-image.md
+                - name: BMP イメージのエンコードおよびデコード
+                  href: how-to-encode-and-decode-a-bmp-image.md
+                - name: PNG イメージのエンコードおよびデコード
+                  href: how-to-encode-and-decode-a-png-image.md
+                - name: WDP イメージのエンコードおよびデコード
+                  href: how-to-encode-and-decode-a-wdp-image.md
+                - name: GIF イメージのエンコードおよびデコード
+                  href: how-to-encode-and-decode-a-gif-image.md
+                - name: TIFF イメージのエンコードおよびデコード
+                  href: how-to-encode-and-decode-a-tiff-image.md
+                - name: ビットマップにメタデータを書き込む
+                  href: how-to-write-metadata-to-a-bitmap.md
+                - name: ビットマップからメタデータを読み取る
+                  href: how-to-read-metadata-from-a-bitmap.md
+        - name: 図形
+          href: shapes.md
+          items:
+            - name: WPF での図形と基本描画の概要
+              href: shapes-and-basic-drawing-in-wpf-overview.md
+            - name: 方法のトピック
+              href: shapes-how-to-topics.md
+              items:
+                - name: 多角形要素を使用して、閉じた図形を描画する
+                  href: how-to-draw-a-closed-shape-by-using-the-polygon-element.md
+                - name: 楕円または円を描画する
+                  href: how-to-draw-an-ellipse-or-a-circle.md
+                - name: 線を描画する
+                  href: how-to-draw-a-line.md
+                - name: ポリライン要素を使用してポリラインを描画する
+                  href: how-to-draw-a-polyline-by-using-the-polyline-element.md
+                - name: 四角形を描画する
+                  href: how-to-draw-a-rectangle.md
+                - name: 直線または線分の終点のキャップを変更する
+                  href: how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md
+        - name: 変換
+          href: transformations.md
+          items:
+            - name: 変換の概要
+              href: transforms-overview.md
+            - name: 方法のトピック
+              href: transformations-how-to-topics.md
+              items:
+                - name: イベントの発生時に要素に変換を適用する
+                  href: how-to-apply-a-transform-to-an-element-when-an-event-occurs.md
+                - name: オブジェクトに複数の変換を適用する
+                  href: how-to-apply-multiple-transforms-to-an-object.md
+                - name: 要素のスピンを設定する
+                  href: how-to-make-an-element-spin-in-place.md
+                - name: オブジェクトを回転させる
+                  href: how-to-rotate-an-object.md
+                - name: 要素を拡大縮小する
+                  href: how-to-scale-an-element.md
+                - name: 要素を傾斜させる
+                  href: how-to-skew-an-element.md
+                - name: 変換の原点を相対値で指定する
+                  href: how-to-specify-the-origin-of-a-transform-by-using-relative-values.md
+                - name: 要素を平行移動する
+                  href: how-to-translate-an-element.md
+                - name: MatrixTransform を使用してカスタム変換を作成する
+                  href: how-to-use-a-matrixtransform-to-create-custom-transforms.md
+        - name: グラフィックス レンダリングのレジストリ設定
+          href: graphics-rendering-registry-settings.md
+        - name: 方法のトピック
+          href: graphics-how-to-topics.md
+          items:
+            - name: 四角形をアニメーション化する
+              href: how-to-animate-a-rectangle.md
+            - name: PointAnimation を使用してオブジェクトの位置をアニメーション化する
+              href: how-to-animate-the-position-of-an-object-by-using-pointanimation.md
+            - name: 点およびベクターを変換する
+              href: how-to-transform-points-and-vectors.md
+            - name: WPF アプリケーションへのグラス フレームの拡張
+              href: extend-glass-frame-into-a-wpf-application.md
+            - name: '方法: 要素をキャッシュしてレンダリングのパフォーマンスを向上させる'
+              href: how-to-improve-rendering-performance-by-caching-an-element.md
+            - name: '方法: キャッシュされた要素をブラシとして使用する'
+              href: how-to-use-a-cached-element-as-a-brush.md
+    - name: 3-D グラフィックスの概要
+      href: 3-d-graphics-overview.md
       items:
-      - name: WPF のブラシの概要
-        href: wpf-brushes-overview.md
-      - name: ブラシの変換の概要
-        href: brush-transformation-overview.md
-      - name: 不透明度マスクの概要
-        href: opacity-masks-overview.md
-      - name: 純色およびグラデーションによる塗りつぶしの概要
-        href: painting-with-solid-colors-and-gradients-overview.md
-      - name: イメージ、描画、およびビジュアルによる塗りつぶし
-        href: painting-with-images-drawings-and-visuals.md
-      - name: TileBrush の概要
-        href: tilebrush-overview.md
-      - name: 方法のトピック
-        href: brushes-how-to-topics.md
-        items:
-        - name: SolidColorBrush の色または不透明度をアニメーション化する
-          href: how-to-animate-the-color-or-opacity-of-a-solidcolorbrush.md
-        - name: グラデーション ストップの位置または色をアニメーション化する
-          href: how-to-animate-the-position-or-color-of-a-gradient-stop.md
-        - name: 反射を作成する
-          href: how-to-create-a-reflection.md
-        - name: TileBrush を使用してさまざまなタイル パターンを作成する
-          href: how-to-create-different-tile-patterns-with-a-tilebrush.md
-        - name: ペンを定義する
-          href: how-to-define-a-pen.md
-        - name: 描画を使用して領域を塗りつぶす
-          href: how-to-paint-an-area-with-a-drawing.md
-        - name: イメージで領域を塗りつぶす
-          href: how-to-paint-an-area-with-an-image.md
-        - name: 線形グラデーションを使用して領域を塗りつぶす
-          href: how-to-paint-an-area-with-a-linear-gradient.md
-        - name: 放射状グラデーションを使用して領域を塗りつぶす
-          href: how-to-paint-an-area-with-a-radial-gradient.md
-        - name: 純色で領域を塗りつぶす
-          href: how-to-paint-an-area-with-a-solid-color.md
-        - name: システム ブラシで領域を塗りつぶす
-          href: how-to-paint-an-area-with-a-system-brush.md
-        - name: ビデオを使用して領域を塗りつぶす
-          href: how-to-paint-an-area-with-a-video.md
-        - name: ビジュアルで領域を塗りつぶす
-          href: how-to-paint-an-area-with-a-visual.md
-        - name: 背景として使用するイメージの縦横比を保持する
-          href: how-to-preserve-the-aspect-ratio-of-an-image-used-as-a-background.md
-        - name: TileBrush の水平方向および垂直方向の配置を設定する
-          href: how-to-set-the-horizontal-and-vertical-alignment-of-a-tilebrush.md
-        - name: TileBrush のタイル サイズを設定する
-          href: how-to-set-the-tile-size-for-a-tilebrush.md
-        - name: ブラシを変換する
-          href: how-to-transform-a-brush.md
-        - name: グラデーションでシステム カラーを使用する
-          href: how-to-use-system-colors-in-a-gradient.md
-    - name: 描画
-      href: drawings.md
+        - name: 3-D 変換の概要
+          href: 3-d-transformations-overview.md
+        - name: WPF の 3D パフォーマンスの最大化
+          href: maximize-wpf-3d-performance.md
+        - name: 方法のトピック
+          href: 3-d-graphics-how-to-topics.md
+          items:
+            - name: 3-D シーンを作成する
+              href: how-to-create-a-3-d-scene.md
+            - name: 3-D モデルに描画を適用する
+              href: how-to-apply-a-drawing-to-a-3-d-model.md
+            - name: 3-D オブジェクトの前面および背面に素材を適用する
+              href: how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md
+            - name: 3-D モデルに発色マテリアルを適用する
+              href: how-to-apply-emissive-material-to-a-3-d-object.md
+            - name: 3-D モデルのスケールを変換する
+              href: how-to-transform-the-scale-of-a-3-d-model.md
+            - name: 複数の変換を 3-D モデルに適用する
+              href: how-to-apply-multiple-transformations-to-a-3-d-model.md
+            - name: 3-D 変換をアニメーション化する
+              href: how-to-animate-3-d-translations.md
+            - name: ストーリーボードを使用して 3-D 回転をアニメーション化する
+              href: how-to-animate-a-3-d-rotation-using-storyboards.md
+            - name: Rotation3DAnimation を使用して 3-D 回転をアニメーション化する
+              href: how-to-animate-a-3-d-rotation-using-rotation3danimation.md
+            - name: 四元数を使用して 3-D 回転をアニメーション化する
+              href: how-to-animate-a-3-d-rotation-using-quaternions.md
+            - name: キー フレーム (Rotation3DAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する
+              href: how-to-animate-a-3-d-rotation-using-key-frames.md
+            - name: キー フレーム (QuaternionAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する
+              href: animate-a-3-d-rotation-quaternionanimationusingkeyframes.md
+            - name: 3D シーンでカメラの位置および方向をアニメーション化する
+              href: how-to-animate-camera-position-and-direction-in-a-3d-scene.md
+            - name: キー フレームを使用してカメラの位置および方向をアニメーション化する
+              href: how-to-animate-camera-position-and-direction-using-key-frames.md
+            - name: 3-D シーンで素材プロパティをアニメーション化する
+              href: how-to-animate-material-properties-in-a-3-d-scene.md
+            - name: Viewport3D でヒット テストを実行する
+              href: how-to-hit-test-in-a-viewport3d.md
+            - name: Point4D 構造体が等価かどうかをテストする
+              href: how-to-test-point4d-structures-for-equality-and-inequality.md
+    - name: アニメーションの概要
+      href: animation-overview.md
       items:
-      - name: Drawing オブジェクトの概要
-        href: drawing-objects-overview.md
-      - name: 方法のトピック
-        href: drawings-how-to-topics.md
-        items:
-        - name: 描画に GuidelineSet を適用する
-          href: how-to-apply-a-guidelineset-to-a-drawing.md
-        - name: 複合描画を作成する
-          href: how-to-create-a-composite-drawing.md
-        - name: GeometryDrawing を作成する
-          href: how-to-create-a-geometrydrawing.md
-        - name: ImageDrawing を使用してイメージを描画する
-          href: how-to-draw-an-image-using-imagedrawing.md
-        - name: VideoDrawing を使用してメディアを再生する
-          href: how-to-play-media-using-a-videodrawing.md
-        - name: 描画をイメージ ソースとして使用する
-          href: how-to-use-a-drawing-as-an-image-source.md
-    - name: ジオメトリ
-      href: geometries.md
+        - name: アニメーションとタイミング システムの概要
+          href: animation-and-timing-system-overview.md
+        - name: アニメーションのヒントとテクニック
+          href: animation-tips-and-tricks.md
+        - name: カスタム アニメーションの概要
+          href: custom-animations-overview.md
+        - name: From/To/By アニメーションの概要
+          href: from-to-by-animations-overview.md
+        - name: キー フレーム アニメーションの概要
+          href: key-frame-animations-overview.md
+        - name: イージング関数
+          href: easing-functions.md
+        - name: パス アニメーションの概要
+          href: path-animations-overview.md
+        - name: プロパティ アニメーションの手法の概要
+          href: property-animation-techniques-overview.md
+        - name: ストーリーボードの概要
+          href: storyboards-overview.md
+        - name: タイミング動作の概要
+          href: timing-behaviors-overview.md
+        - name: タイミング イベントの概要
+          href: timing-events-overview.md
+        - name: 方法のトピック
+          href: animation-and-timing-how-to-topics.md
+          items:
+            - name: アニメーションを加速または減速させる
+              href: how-to-accelerate-or-decelerate-an-animation.md
+            - name: 反復サイクル中にアニメーション値を累積する
+              href: how-to-accumulate-animation-values-during-repeat-cycles.md
+            - name: アニメーションの出力値をアニメーションの開始値に追加する
+              href: how-to-add-an-animation-output-value-to-an-animation-starting-value.md
+            - name: ストーリーボードを使ってプロパティをアニメーション化する
+              href: how-to-animate-a-property-by-using-a-storyboard.md
+            - name: ストーリーボードを使用せずにプロパティをアニメーション化する
+              href: how-to-animate-a-property-without-using-a-storyboard.md
+            - name: ControlTemplate 内でアニメーション化を行う
+              href: how-to-animate-in-a-controltemplate.md
+            - name: スタイル内でアニメーション化を行う
+              href: how-to-animate-in-a-style.md
+            - name: 要素またはブラシの不透明度をアニメーション化する
+              href: how-to-animate-the-opacity-of-an-element-or-brush.md
+            - name: タイムラインの速度を変更せずにクロックの速度を変更する
+              href: change-the-speed-of-a-clock.md
+            - name: 対話型メソッドを使用してストーリーボードを開始後に制御する
+              href: how-to-control-a-storyboard-after-it-starts.md
+            - name: '"From"、"To"、および "By" を使用してアニメーションを制御する'
+              href: how-to-control-an-animation-using-from-to-and-by.md
+            - name: 名前のスコープを定義する
+              href: how-to-define-a-name-scope.md
+            - name: クロックの状態が変化したときに通知を受け取る
+              href: how-to-receive-notification-when-clock-state-changes.md
+            - name: アニメーションを反復する
+              href: how-to-repeat-an-animation.md
+            - name: ストーリーボードをシークする
+              href: how-to-seek-a-storyboard.md
+            - name: ストーリーボードを同期的にシークする
+              href: how-to-seek-a-storyboard-synchronously.md
+            - name: アニメーションの継続時間を設定する
+              href: how-to-set-a-duration-for-an-animation.md
+            - name: ストーリーボードを使用してアニメーション化した後にプロパティを設定する
+              href: how-to-set-a-property-after-animating-it-with-a-storyboard.md
+            - name: 子タイムラインを使用してアニメーションを簡素化する
+              href: how-to-simplify-animations-by-using-child-timelines.md
+            - name: ストーリーボード アニメーション間で HandoffBehavior を指定する
+              href: how-to-specify-handoffbehavior-between-storyboard-animations.md
+            - name: アクティブな期間の末尾に到達したタイムラインの FillBehavior を指定する
+              href: specify-the-fillbehavior-for-a-timeline.md
+            - name: タイムラインを自動的に反転するかどうかを指定する
+              href: how-to-specify-whether-a-timeline-automatically-reverses.md
+            - name: プロパティ値が変化したときにアニメーションをトリガーする
+              href: how-to-trigger-an-animation-when-a-property-value-changes.md
+            - name: 開始後のストーリーボードをイベント トリガーを使用して制御する
+              href: how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md
+        - name: クロックに関する「方法」トピック
+          href: clocks-how-to-topics.md
+          items:
+            - name: AnimationClock を使用してプロパティをアニメーション化する
+              href: how-to-animate-a-property-by-using-an-animationclock.md
+            - name: クロックを対話的に制御する
+              href: how-to-interactively-control-a-clock.md
+            - name: クロックを同期的にシークする
+              href: how-to-seek-a-clock-synchronously.md
+        - name: キー フレームに関する「方法」トピック
+          href: key-frame-animation-how-to-topics.md
+          items:
+            - name: キー フレームを使用してオブジェクトをアニメーション化する
+              href: how-to-animate-an-object-by-using-key-frames.md
+            - name: キー フレームを使用してブール値をアニメーション化する
+              href: how-to-animate-a-boolean-by-using-key-frames.md
+            - name: キー フレームを使用して Double 値をアニメーション化する
+              href: how-to-animate-a-double-by-using-key-frames.md
+            - name: キー フレームを使用して行列をアニメーション化する
+              href: how-to-animate-a-matrix-by-using-key-frames.md
+            - name: キー フレームを使用して点をアニメーション化する
+              href: how-to-animate-a-point-by-using-key-frames.md
+            - name: キー フレームを使用して四角形のジオメトリをアニメーション化する
+              href: how-to-animate-a-rectangle-geometry-by-using-key-frames.md
+            - name: キー フレームを使用して文字列をアニメーション化する
+              href: how-to-animate-a-string-by-using-key-frames.md
+            - name: キー フレームを使用して色をアニメーション化する
+              href: how-to-animate-color-by-using-key-frames.md
+            - name: キー フレームを使用してサイズの変更をアニメーション化する
+              href: how-to-animate-size-changes-by-using-key-frames.md
+            - name: キー フレームを使用して境界線の太さをアニメーション化する
+              href: how-to-animate-the-thickness-of-a-border-by-using-key-frames.md
+            - name: キー フレーム アニメーションのタイミングを制御する
+              href: how-to-control-key-frame-animation-timing.md
+        - name: パス アニメーションに関する「方法」トピック
+          href: path-animation-how-to-topics.md
+          items:
+            - name: パスに沿ってオブジェクトをアニメーション化する (ダブル アニメーション)
+              href: how-to-animate-an-object-along-a-path-double-animation.md
+            - name: パスに沿ってオブジェクトをアニメーション化する (ポイント アニメーション)
+              href: how-to-animate-an-object-along-a-path-point-animation.md
+            - name: パスに沿ってオブジェクトをアニメーション化する (行列アニメーション)
+              href: how-to-animate-an-object-along-a-path-matrix-animation.md
+            - name: パスに沿ってオブジェクトをアニメーション化する (オフセット累積による行列アニメーション)
+              href: animate-an-object-along-a-path-matrix-animation-with-offset.md
+            - name: ジオメトリック パスを使用してオブジェクトを回転させる (行列アニメーション)
+              href: how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md
+            - name: ジオメトリック パスを使用してオブジェクトを回転させる
+              href: how-to-rotate-an-object-by-using-a-geometric-path.md
+    - name: マルチメディアの概要
+      href: multimedia-overview.md
       items:
-      - name: パス マークアップ構文
-        href: path-markup-syntax.md
-      - name: ジオメトリの概要
-        href: geometry-overview.md
-      - name: 方法のトピック
-        href: geometries-how-to-topics.md
-        items:
-        - name: EllipseGeometry をアニメーション化する
-          href: how-to-animate-an-ellipsegeometry.md
-        - name: ArcSegment のサイズをアニメーション化する
-          href: how-to-animate-the-size-of-an-arcsegment.md
-        - name: 複合図形の塗りつぶしを制御する
-          href: how-to-control-the-fill-of-a-composite-shape.md
-        - name: 結合したジオメトリを作成する
-          href: how-to-create-a-combined-geometry.md
-        - name: 複合図形を作成する
-          href: how-to-create-a-composite-shape.md
-        - name: 3 次ベジエ曲線を作成する
-          href: how-to-create-a-cubic-bezier-curve.md
-        - name: LineGeometry を使用して線を作成する
-          href: how-to-create-a-line-using-a-linegeometry.md
-        - name: PathGeometry で LineSegment を作成する
-          href: how-to-create-a-linesegment-in-a-pathgeometry.md
-        - name: PathGeometry を使用して図形を作成する
-          href: how-to-create-a-shape-by-using-a-pathgeometry.md
-        - name: StreamGeometry を使用して図形を作成する
-          href: how-to-create-a-shape-using-a-streamgeometry.md
-        - name: 2 次ベジエ曲線を作成する
-          href: how-to-create-a-quadratic-bezier-curve.md
-        - name: 楕円の円弧を作成する
-          href: how-to-create-an-elliptical-arc.md
-        - name: PathGeometry 内に複数のサブパスを作成する
-          href: how-to-create-multiple-subpaths-within-a-pathgeometry.md
-        - name: RectangleGeometry を使用して四角形を定義する
-          href: how-to-define-a-rectangle-using-a-rectanglegeometry.md
-        - name: RectangleGeometry の角に丸みを付ける
-          href: how-to-round-the-corners-of-a-rectanglegeometry.md
-    - name: イメージ
-      href: images.md
+        - name: 方法のトピック
+          href: audio-and-video-how-to-topics.md
+          items:
+            - name: MediaElement (再生、一時停止、停止、ボリューム、速度) を制御する
+              href: how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md
+            - name: ストーリーボードを使用して MediaElement を制御する
+              href: how-to-control-a-mediaelement-by-using-a-storyboard.md
+            - name: ユーザー イベントによってメディアの再生をトリガーする
+              href: how-to-trigger-media-playback-with-a-user-event.md
+            - name: メディアの再生を反復する
+              href: how-to-repeat-media-playback.md
+            - name: アニメーションを使用してメディアを再生する
+              href: how-to-play-media-with-animations.md
+            - name: MediaElement で変換を使用する
+              href: how-to-use-transforms-on-a-mediaelement.md
+    - name: ビジュアル層のプログラミング
+      href: visual-layer-programming.md
       items:
-      - name: イメージングの概要
-        href: imaging-overview.md
-      - name: 方法のトピック
-        href: imaging-how-to-topics.md
-        items:
-        - name: XAML で BitmapImage を使用する
-          href: how-to-use-a-bitmapimage.md
-        - name: サムネイルとしてイメージを読み込む
-          href: how-to-load-an-image-as-a-thumbnail.md
-        - name: BitmapImage に変換を適用する
-          href: how-to-apply-a-transform-to-a-bitmapimage.md
-        - name: ビジュアルからビットマップを作成する
-          href: how-to-create-a-bitmap-from-a-visual.md
-        - name: ビジュアルをイメージ ファイルにエンコードする
-          href: how-to-encode-a-visual-to-an-image-file.md
-        - name: 新しい BitmapSource を作成する
-          href: how-to-create-a-new-bitmapsource.md
-        - name: BitmapSource オブジェクトをチェーンする
-          href: how-to-chain-bitmapsource-objects-together.md
-        - name: BitmapSource を別の PixelFormat に変換する
-          href: how-to-convert-a-bitmapsource-to-a-different-pixelformat.md
-        - name: BitmapSource をインデックス付きピクセル形式に変換する
-          href: how-to-convert-a-bitmapsource-to-an-indexed-pixel-format.md
-        - name: JPEG イメージのエンコードおよびデコード
-          href: how-to-encode-and-decode-a-jpeg-image.md
-        - name: BMP イメージのエンコードおよびデコード
-          href: how-to-encode-and-decode-a-bmp-image.md
-        - name: PNG イメージのエンコードおよびデコード
-          href: how-to-encode-and-decode-a-png-image.md
-        - name: WDP イメージのエンコードおよびデコード
-          href: how-to-encode-and-decode-a-wdp-image.md
-        - name: GIF イメージのエンコードおよびデコード
-          href: how-to-encode-and-decode-a-gif-image.md
-        - name: TIFF イメージのエンコードおよびデコード
-          href: how-to-encode-and-decode-a-tiff-image.md
-        - name: ビットマップにメタデータを書き込む
-          href: how-to-write-metadata-to-a-bitmap.md
-        - name: ビットマップからメタデータを読み取る
-          href: how-to-read-metadata-from-a-bitmap.md
-    - name: 図形
-      href: shapes.md
-      items:
-      - name: WPF での図形と基本描画の概要
-        href: shapes-and-basic-drawing-in-wpf-overview.md
-      - name: 方法のトピック
-        href: shapes-how-to-topics.md
-        items:
-        - name: 多角形要素を使用して、閉じた図形を描画する
-          href: how-to-draw-a-closed-shape-by-using-the-polygon-element.md
-        - name: 楕円または円を描画する
-          href: how-to-draw-an-ellipse-or-a-circle.md
-        - name: 線を描画する
-          href: how-to-draw-a-line.md
-        - name: ポリライン要素を使用してポリラインを描画する
-          href: how-to-draw-a-polyline-by-using-the-polyline-element.md
-        - name: 四角形を描画する
-          href: how-to-draw-a-rectangle.md
-        - name: 直線または線分の終点のキャップを変更する
-          href: how-to-modify-the-cap-at-the-end-of-a-line-or-segment.md
-    - name: 変換
-      href: transformations.md
-      items:
-      - name: 変換の概要
-        href: transforms-overview.md
-      - name: 方法のトピック
-        href: transformations-how-to-topics.md
-        items:
-        - name: イベントの発生時に要素に変換を適用する
-          href: how-to-apply-a-transform-to-an-element-when-an-event-occurs.md
-        - name: オブジェクトに複数の変換を適用する
-          href: how-to-apply-multiple-transforms-to-an-object.md
-        - name: 要素のスピンを設定する
-          href: how-to-make-an-element-spin-in-place.md
-        - name: オブジェクトを回転させる
-          href: how-to-rotate-an-object.md
-        - name: 要素を拡大縮小する
-          href: how-to-scale-an-element.md
-        - name: 要素を傾斜させる
-          href: how-to-skew-an-element.md
-        - name: 変換の原点を相対値で指定する
-          href: how-to-specify-the-origin-of-a-transform-by-using-relative-values.md
-        - name: 要素を平行移動する
-          href: how-to-translate-an-element.md
-        - name: MatrixTransform を使用してカスタム変換を作成する
-          href: how-to-use-a-matrixtransform-to-create-custom-transforms.md
-    - name: グラフィックス レンダリングのレジストリ設定
-      href: graphics-rendering-registry-settings.md
-    - name: 方法のトピック
-      href: graphics-how-to-topics.md
-      items:
-      - name: 四角形をアニメーション化する
-        href: how-to-animate-a-rectangle.md
-      - name: PointAnimation を使用してオブジェクトの位置をアニメーション化する
-        href: how-to-animate-the-position-of-an-object-by-using-pointanimation.md
-      - name: 点およびベクターを変換する
-        href: how-to-transform-points-and-vectors.md
-      - name: WPF アプリケーションへのグラス フレームの拡張
-        href: extend-glass-frame-into-a-wpf-application.md
-      - name: '方法: 要素をキャッシュしてレンダリングのパフォーマンスを向上させる'
-        href: how-to-improve-rendering-performance-by-caching-an-element.md
-      - name: '方法: キャッシュされた要素をブラシとして使用する'
-        href: how-to-use-a-cached-element-as-a-brush.md
-  - name: 3-D グラフィックスの概要
-    href: 3-d-graphics-overview.md
-    items:
-    - name: 3-D 変換の概要
-      href: 3-d-transformations-overview.md
-    - name: WPF の 3D パフォーマンスの最大化
-      href: maximize-wpf-3d-performance.md
-    - name: 方法のトピック
-      href: 3-d-graphics-how-to-topics.md
-      items:
-      - name: 3-D シーンを作成する
-        href: how-to-create-a-3-d-scene.md
-      - name: 3-D モデルに描画を適用する
-        href: how-to-apply-a-drawing-to-a-3-d-model.md
-      - name: 3-D オブジェクトの前面および背面に素材を適用する
-        href: how-to-apply-material-to-the-front-and-back-of-a-3-d-object.md
-      - name: 3-D モデルに発色マテリアルを適用する
-        href: how-to-apply-emissive-material-to-a-3-d-object.md
-      - name: 3-D モデルのスケールを変換する
-        href: how-to-transform-the-scale-of-a-3-d-model.md
-      - name: 複数の変換を 3-D モデルに適用する
-        href: how-to-apply-multiple-transformations-to-a-3-d-model.md
-      - name: 3-D 変換をアニメーション化する
-        href: how-to-animate-3-d-translations.md
-      - name: ストーリーボードを使用して 3-D 回転をアニメーション化する
-        href: how-to-animate-a-3-d-rotation-using-storyboards.md
-      - name: Rotation3DAnimation を使用して 3-D 回転をアニメーション化する
-        href: how-to-animate-a-3-d-rotation-using-rotation3danimation.md
-      - name: 四元数を使用して 3-D 回転をアニメーション化する
-        href: how-to-animate-a-3-d-rotation-using-quaternions.md
-      - name: キー フレーム (Rotation3DAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する
-        href: how-to-animate-a-3-d-rotation-using-key-frames.md
-      - name: キー フレーム (QuaternionAnimationUsingKeyFrames) を使用して 3-D 回転をアニメーション化する
-        href: animate-a-3-d-rotation-quaternionanimationusingkeyframes.md
-      - name: 3D シーンでカメラの位置および方向をアニメーション化する
-        href: how-to-animate-camera-position-and-direction-in-a-3d-scene.md
-      - name: キー フレームを使用してカメラの位置および方向をアニメーション化する
-        href: how-to-animate-camera-position-and-direction-using-key-frames.md
-      - name: 3-D シーンで素材プロパティをアニメーション化する
-        href: how-to-animate-material-properties-in-a-3-d-scene.md
-      - name: Viewport3D でヒット テストを実行する
-        href: how-to-hit-test-in-a-viewport3d.md
-      - name: Point4D 構造体が等価かどうかをテストする
-        href: how-to-test-point4d-structures-for-equality-and-inequality.md
-  - name: アニメーションの概要
-    href: animation-overview.md
-    items:
-    - name: アニメーションとタイミング システムの概要
-      href: animation-and-timing-system-overview.md
-    - name: アニメーションのヒントとテクニック
-      href: animation-tips-and-tricks.md
-    - name: カスタム アニメーションの概要
-      href: custom-animations-overview.md
-    - name: From/To/By アニメーションの概要
-      href: from-to-by-animations-overview.md
-    - name: キー フレーム アニメーションの概要
-      href: key-frame-animations-overview.md
-    - name: イージング関数
-      href: easing-functions.md
-    - name: パス アニメーションの概要
-      href: path-animations-overview.md
-    - name: プロパティ アニメーションの手法の概要
-      href: property-animation-techniques-overview.md
-    - name: ストーリーボードの概要
-      href: storyboards-overview.md
-    - name: タイミング動作の概要
-      href: timing-behaviors-overview.md
-    - name: タイミング イベントの概要
-      href: timing-events-overview.md
-    - name: 方法のトピック
-      href: animation-and-timing-how-to-topics.md
-      items:
-      - name: アニメーションを加速または減速させる
-        href: how-to-accelerate-or-decelerate-an-animation.md
-      - name: 反復サイクル中にアニメーション値を累積する
-        href: how-to-accumulate-animation-values-during-repeat-cycles.md
-      - name: アニメーションの出力値をアニメーションの開始値に追加する
-        href: how-to-add-an-animation-output-value-to-an-animation-starting-value.md
-      - name: ストーリーボードを使ってプロパティをアニメーション化する
-        href: how-to-animate-a-property-by-using-a-storyboard.md
-      - name: ストーリーボードを使用せずにプロパティをアニメーション化する
-        href: how-to-animate-a-property-without-using-a-storyboard.md
-      - name: ControlTemplate 内でアニメーション化を行う
-        href: how-to-animate-in-a-controltemplate.md
-      - name: スタイル内でアニメーション化を行う
-        href: how-to-animate-in-a-style.md
-      - name: 要素またはブラシの不透明度をアニメーション化する
-        href: how-to-animate-the-opacity-of-an-element-or-brush.md
-      - name: タイムラインの速度を変更せずにクロックの速度を変更する
-        href: change-the-speed-of-a-clock.md
-      - name: 対話型メソッドを使用してストーリーボードを開始後に制御する
-        href: how-to-control-a-storyboard-after-it-starts.md
-      - name: "\"From\"、\"To\"、および \"By\" を使用してアニメーションを制御する"
-        href: how-to-control-an-animation-using-from-to-and-by.md
-      - name: 名前のスコープを定義する
-        href: how-to-define-a-name-scope.md
-      - name: クロックの状態が変化したときに通知を受け取る
-        href: how-to-receive-notification-when-clock-state-changes.md
-      - name: アニメーションを反復する
-        href: how-to-repeat-an-animation.md
-      - name: ストーリーボードをシークする
-        href: how-to-seek-a-storyboard.md
-      - name: ストーリーボードを同期的にシークする
-        href: how-to-seek-a-storyboard-synchronously.md
-      - name: アニメーションの継続時間を設定する
-        href: how-to-set-a-duration-for-an-animation.md
-      - name: ストーリーボードを使用してアニメーション化した後にプロパティを設定する
-        href: how-to-set-a-property-after-animating-it-with-a-storyboard.md
-      - name: 子タイムラインを使用してアニメーションを簡素化する
-        href: how-to-simplify-animations-by-using-child-timelines.md
-      - name: ストーリーボード アニメーション間で HandoffBehavior を指定する
-        href: how-to-specify-handoffbehavior-between-storyboard-animations.md
-      - name: アクティブな期間の末尾に到達したタイムラインの FillBehavior を指定する
-        href: specify-the-fillbehavior-for-a-timeline.md
-      - name: タイムラインを自動的に反転するかどうかを指定する
-        href: how-to-specify-whether-a-timeline-automatically-reverses.md
-      - name: プロパティ値が変化したときにアニメーションをトリガーする
-        href: how-to-trigger-an-animation-when-a-property-value-changes.md
-      - name: 開始後のストーリーボードをイベント トリガーを使用して制御する
-        href: how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md
-    - name: クロックに関する「方法」トピック
-      href: clocks-how-to-topics.md
-      items:
-      - name: AnimationClock を使用してプロパティをアニメーション化する
-        href: how-to-animate-a-property-by-using-an-animationclock.md
-      - name: クロックを対話的に制御する
-        href: how-to-interactively-control-a-clock.md
-      - name: クロックを同期的にシークする
-        href: how-to-seek-a-clock-synchronously.md
-    - name: キー フレームに関する「方法」トピック
-      href: key-frame-animation-how-to-topics.md
-      items:
-      - name: キー フレームを使用してオブジェクトをアニメーション化する
-        href: how-to-animate-an-object-by-using-key-frames.md
-      - name: キー フレームを使用してブール値をアニメーション化する
-        href: how-to-animate-a-boolean-by-using-key-frames.md
-      - name: キー フレームを使用して Double 値をアニメーション化する
-        href: how-to-animate-a-double-by-using-key-frames.md
-      - name: キー フレームを使用して行列をアニメーション化する
-        href: how-to-animate-a-matrix-by-using-key-frames.md
-      - name: キー フレームを使用して点をアニメーション化する
-        href: how-to-animate-a-point-by-using-key-frames.md
-      - name: キー フレームを使用して四角形のジオメトリをアニメーション化する
-        href: how-to-animate-a-rectangle-geometry-by-using-key-frames.md
-      - name: キー フレームを使用して文字列をアニメーション化する
-        href: how-to-animate-a-string-by-using-key-frames.md
-      - name: キー フレームを使用して色をアニメーション化する
-        href: how-to-animate-color-by-using-key-frames.md
-      - name: キー フレームを使用してサイズの変更をアニメーション化する
-        href: how-to-animate-size-changes-by-using-key-frames.md
-      - name: キー フレームを使用して境界線の太さをアニメーション化する
-        href: how-to-animate-the-thickness-of-a-border-by-using-key-frames.md
-      - name: キー フレーム アニメーションのタイミングを制御する
-        href: how-to-control-key-frame-animation-timing.md
-    - name: パス アニメーションに関する「方法」トピック
-      href: path-animation-how-to-topics.md
-      items:
-      - name: パスに沿ってオブジェクトをアニメーション化する (ダブル アニメーション)
-        href: how-to-animate-an-object-along-a-path-double-animation.md
-      - name: パスに沿ってオブジェクトをアニメーション化する (ポイント アニメーション)
-        href: how-to-animate-an-object-along-a-path-point-animation.md
-      - name: パスに沿ってオブジェクトをアニメーション化する (行列アニメーション)
-        href: how-to-animate-an-object-along-a-path-matrix-animation.md
-      - name: パスに沿ってオブジェクトをアニメーション化する (オフセット累積による行列アニメーション)
-        href: animate-an-object-along-a-path-matrix-animation-with-offset.md
-      - name: ジオメトリック パスを使用してオブジェクトを回転させる (行列アニメーション)
-        href: how-to-rotate-an-object-by-using-a-geometric-path-matrix-animation.md
-      - name: ジオメトリック パスを使用してオブジェクトを回転させる
-        href: how-to-rotate-an-object-by-using-a-geometric-path.md
-  - name: マルチメディアの概要
-    href: multimedia-overview.md
-    items:
-    - name: 方法のトピック
-      href: audio-and-video-how-to-topics.md
-      items:
-      - name: MediaElement (再生、一時停止、停止、ボリューム、速度) を制御する
-        href: how-to-control-a-mediaelement-play-pause-stop-volume-and-speed.md
-      - name: ストーリーボードを使用して MediaElement を制御する
-        href: how-to-control-a-mediaelement-by-using-a-storyboard.md
-      - name: ユーザー イベントによってメディアの再生をトリガーする
-        href: how-to-trigger-media-playback-with-a-user-event.md
-      - name: メディアの再生を反復する
-        href: how-to-repeat-media-playback.md
-      - name: アニメーションを使用してメディアを再生する
-        href: how-to-play-media-with-animations.md
-      - name: MediaElement で変換を使用する
-        href: how-to-use-transforms-on-a-mediaelement.md
-  - name: ビジュアル層のプログラミング
-    href: visual-layer-programming.md
-    items:
-    - name: ビジュアル層でのヒット テスト
-      href: hit-testing-in-the-visual-layer.md
-    - name: DrawingVisual オブジェクトの使用
-      href: using-drawingvisual-objects.md
-    - name: 'チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト'
-      href: tutorial-hosting-visual-objects-in-a-win32-application.md
-    - name: 方法のトピック
-      href: visual-layer-programming-how-to-topics.md
-      items:
-      - name: ビジュアルのオフセットを取得する
-        href: how-to-get-the-offset-of-a-visual.md
-      - name: ビジュアルの描画コンテンツを列挙する
-        href: how-to-enumerate-drawing-content-of-a-visual.md
-      - name: ビジュアル内のジオメトリのヒット テストを実行する
-        href: how-to-hit-test-geometry-in-a-visual.md
-      - name: パラメーターとしてジオメトリを使用してヒット テストを実行する
-        href: how-to-hit-test-using-geometry-as-a-parameter.md
-      - name: Win32 ホスト コンテナーを使用してヒット テストを実行する
-        href: how-to-hit-test-using-a-win32-host-container.md
-      - name: CompositionTarget を使用したフレームの間隔ごとの描画
-        href: how-to-render-on-a-per-frame-interval-using-compositiontarget.md
-ms.openlocfilehash: 9c5976fe8464bea82fbb95b4ff39db535c5985dc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470083"
+        - name: ビジュアル層でのヒット テスト
+          href: hit-testing-in-the-visual-layer.md
+        - name: DrawingVisual オブジェクトの使用
+          href: using-drawingvisual-objects.md
+        - name: 'チュートリアル: Win32 アプリケーションでのビジュアル オブジェクトのホスト'
+          href: tutorial-hosting-visual-objects-in-a-win32-application.md
+        - name: 方法のトピック
+          href: visual-layer-programming-how-to-topics.md
+          items:
+            - name: ビジュアルのオフセットを取得する
+              href: how-to-get-the-offset-of-a-visual.md
+            - name: ビジュアルの描画コンテンツを列挙する
+              href: how-to-enumerate-drawing-content-of-a-visual.md
+            - name: ビジュアル内のジオメトリのヒット テストを実行する
+              href: how-to-hit-test-geometry-in-a-visual.md
+            - name: パラメーターとしてジオメトリを使用してヒット テストを実行する
+              href: how-to-hit-test-using-geometry-as-a-parameter.md
+            - name: Win32 ホスト コンテナーを使用してヒット テストを実行する
+              href: how-to-hit-test-using-a-win32-host-container.md
+            - name: CompositionTarget を使用したフレームの間隔ごとの描画
+              href: how-to-render-on-a-per-frame-interval-using-compositiontarget.md

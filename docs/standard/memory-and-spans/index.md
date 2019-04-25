@@ -10,11 +10,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1a61f56eca242db65bd555553132450c3f8af7f6
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909442"
 ---
 # <a name="memory--and-span-related-types"></a>メモリおよびスパンに関連する型
 

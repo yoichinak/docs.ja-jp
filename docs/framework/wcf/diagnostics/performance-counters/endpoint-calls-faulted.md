@@ -3,10 +3,10 @@ title: エンドポイント:失敗した呼び出し
 ms.date: 03/30/2017
 ms.assetid: 271e6284-9c4b-465f-b619-069e1555a5e4
 ms.openlocfilehash: e46ca3034c69e46f0fef510f9035d2e1544fd72c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59144977"
 ---
 # <a name="endpoint-calls-faulted"></a>エンドポイント:失敗した呼び出し

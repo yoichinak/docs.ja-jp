@@ -8,10 +8,10 @@ helpviewer_keywords:
 - FlowDocumentScrollViewer control [WPF]
 ms.assetid: 727b0a0a-b845-4aa9-9fd4-98f42ed738b4
 ms.openlocfilehash: e7f3f52ecbed792469c70c8736e3ca43e5a7a788
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59098898"
 ---
 # <a name="flowdocumentscrollviewer"></a>FlowDocumentScrollViewer

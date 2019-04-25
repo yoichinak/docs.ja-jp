@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: df478548-8c05-4de2-8ba7-adcdbe1c2a60
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d861aa59b31871d20d21d88d9587239f76ae386d
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 368d5f7fa2eec8f3526a10b4777a862e8334617c
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203640"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59210231"
 ---
 # <a name="net-framework-4-migration-issues"></a>.NET Framework 4 への移行に関する問題
 
@@ -86,7 +86,6 @@ ms.locfileid: "57203640"
 | **夏時間** | システム クロックと一貫させるために、時間プロパティ (<xref:System.TimeZoneInfo.Local> や <xref:System.DateTime.Now> など) では、夏時間操作に他の .NET Framework データではなくオペレーティング システム規則を使用するようになりました。 | なし。 |
 | **書式指定文字列** | カルチャで区別される書式設定をサポートするために、新しい `ParseExact` メソッドと `TryParseExact` メソッドに加えて、`ToString`、`Parse`、`TryParse` などのメソッドの新しいオーバーロードが <xref:System.TimeSpan> 構造体に含まれています。 | なし。 |
 
-
 ### <a name="globalization"></a>グローバリゼーション
 
 新しいニュートラル カルチャと特定のカルチャの一覧については、「[グローバリゼーションとローカリゼーションの新機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd997383%28v=vs.100%29)」をご覧ください。
@@ -95,7 +94,7 @@ ms.locfileid: "57203640"
 
 | 機能 | 3.5 SP1 との相違 | 推奨される変更 |
 | ------- | ------------------------ | ------------------- |
-| **カルチャ名** | 次の名前変更は、ドイツ語、ディベヒ語、アフリカーンス語のカルチャに影響します。<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>: ドイツ語 (スイス) (de-CH) カルチャの通貨名は "sFr." から  "Fr." に変更されました。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>: ディベヒ語 (モルディブ) (dv-MV) カルチャの長い日付パターンは、"dd/MMMM/yyyy" から "dd/MM/yyyy" に変更されました。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>:  アフリカーンス語 (南アフリカ) (af-ZA) カルチャの午後指定子は、"nm" から "PM" に変更されました。 | カルチャ名の変更に注意してください。 |
+| **カルチャ名** | 次の名前変更は、ドイツ語、ディベヒ語、アフリカーンス語のカルチャに影響します。<br><br>* <xref:System.Globalization.CultureAndRegionInfoBuilder.CurrencyEnglishName>: ドイツ語 (スイス) (de-CH) カルチャの通貨名は "sFr." から  "Fr." に変更されました。<br>* <xref:System.Globalization.DateTimeFormatInfo.LongDatePattern>: ディベヒ語 (モルディブ) (dv-MV) カルチャの長い日付パターンは、"dd/MMMM/yyyy" から "dd/MM/yyyy" に変更されました。<br>* <xref:System.Globalization.DateTimeFormatInfo.PMDesignator>:午後: アフリカーンス語 (南アフリカ) (af-ZA) カルチャの午後指定子は、"nm" から "PM" に変更されました。 | カルチャ名の変更に注意してください。 |
 | **LCID パラメーター** | オートメーション サーバー設定で予期される動作と一貫させるために、CLR はアンマネージ COM ベースのアプリケーションに `LCID` パラメーターの現在のカルチャを渡さなくなりました。 代わりに、カルチャとして 1033 (en-us) が渡されます。 | 指定したカルチャを必要とするネイティブ アプリケーションを除き、変更は不要です。 |
 | **互換性のために残されているカルチャ タイプ** | <xref:System.Globalization.CultureTypes> と <xref:System.Globalization.CultureTypes> のカルチャ タイプは互換性のために残されています。<br><br>下位互換性を維持するために、<xref:System.Globalization.CultureTypes> は以前の .NET Framework に含まれていたニュートラル カルチャと特定のカルチャを返し、<xref:System.Globalization.CultureTypes> は空のリストを返すようになりました。 | <xref:System.Globalization.CultureTypes> 列挙の他の値を使用します。 |
 | **カルチャの取得** | Windows 7 以降、.NET Framework 4 ではデータ自体を格納する代わりにオペレーティング システムからカルチャ情報を取得します。 また、.NET Framework では、データの並べ替えおよび大文字と小文字の指定を行うために Windows と同期します。 | なし。 |

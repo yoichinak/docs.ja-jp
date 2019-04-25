@@ -4,12 +4,12 @@ description: マイクロサービス アーキテクチャは、バックエン
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: b481a76052efdd1ce0da406732230d41701ac354
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 8a2cdf2569f4333dc3ba71b3492d21197ff006ad
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464841"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612421"
 ---
 # <a name="creating-composite-ui-based-on-microservices"></a>マイクロサービスを基にしている複合 UI を作成する
 
@@ -42,19 +42,19 @@ ms.locfileid: "58464841"
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **ASP.NET を使用した複合 UI (特定のワークショップ)** \
-  [https://github.com/Particular/Workshop/tree/master/demos/asp-net-core](https://github.com/Particular/Workshop/tree/master/demos/asp-net-core)
+  <https://github.com/Particular/Workshop/tree/master/demos/asp-net-core>
 
 - **Ruben Oostinga。マイクロサービス アーキテクチャでのモノリシック フロントエンド** \
-  [https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/](https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/)
+  <https://blog.xebia.com/the-monolithic-frontend-in-the-microservices-architecture/>
 
 - **Mauro Servienti。優れた UI コンポジションの秘密** \
-  [https://particular.net/blog/secret-of-better-ui-composition](https://particular.net/blog/secret-of-better-ui-composition)
+  <https://particular.net/blog/secret-of-better-ui-composition>
 
 - **Viktor Farcic。フロントエンド Web コンポーネントをマイクロサービスに含める** \
-  [https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/](https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/)
+  <https://technologyconversations.com/2015/08/09/including-front-end-web-components-into-microservices/>
 
 - **マイクロサービス アーキテクチャでのフロントエンドの管理** \
-  [https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html](https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html)
+  <https://allegro.tech/2016/03/Managing-Frontend-in-the-microservices-architecture.html>
 
 >[!div class="step-by-step"]
 >[前へ](microservices-addressability-service-registry.md)

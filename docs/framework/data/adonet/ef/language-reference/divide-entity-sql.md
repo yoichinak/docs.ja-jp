@@ -3,10 +3,10 @@ title: '- (除算)(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: ef48c368-f3ed-4275-8ada-4e9649781262
 ms.openlocfilehash: c3b477a63adf3c3d51f28449e94c2b716422296c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59330858"
 ---
 # <a name="-divide-entity-sql"></a>/ (除算) (Entity SQL)
@@ -20,10 +20,10 @@ dividend / divisor
   
 ## <a name="arguments"></a>引数  
  `dividend`  
- 除算する数値式。 `dividend` 数値データ型のいずれかの任意の有効な式です。  
+ 除算する数値式。 `dividend` は、任意の数値データ型の有効な式です。  
   
  `divisor`  
- 被除数を除算する数値式。 `divisor` 数値データ型のいずれかの任意の有効な式です。  
+ 被除数を除算する数値式。 `divisor` は、任意の数値データ型の有効な式です。  
   
 ## <a name="result-types"></a>戻り値の型  
  2 つの引数の暗黙の型の昇格の結果であるデータ型。 暗黙的な型の上位変換の詳細については、次を参照してください。[型システム](../../../../../../docs/framework/data/adonet/ef/language-reference/type-system-entity-sql.md)します。  

@@ -10,11 +10,11 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 258ce5e63c9095e5a451d807d588f31512f5e5fd
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58635599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675287"
 ---
 # <a name="excepinfo-structure"></a>EXCEPINFO 構造体
 

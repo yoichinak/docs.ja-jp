@@ -5,12 +5,12 @@ author: Thraka
 ms.author: adegeo
 ms.date: 03/27/2019
 ms.custom: ''
-ms.openlocfilehash: 29ea308ee5147cfb18df312887e933615e349803
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.openlocfilehash: 5c7e3aca0a473abb831693244d1b194985f2ef7f
+ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58677552"
+ms.lasthandoff: 04/09/2019
+ms.locfileid: "59342207"
 ---
 # <a name="how-to-port-a-wpf-desktop-app-to-net-core"></a>方法: WPF デスクトップ アプリを .NET Core に移植する
 
@@ -27,7 +27,7 @@ ms.locfileid: "58677552"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- 実行したいデザイナー作業用の [Visual Studio 2019](https://visualstudio.microsoft.com/vs/preview/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=wpf+core)。
+- 実行したいデザイナー作業用の [Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019)。
 
   次の Visual Studio ワークロードをインストールします。
   - .NET デスクトップ開発
@@ -37,9 +37,8 @@ ms.locfileid: "58677552"
 - プロジェクトは C# でコーディングされている必要があります。 
 - 最新の [.NET Core 3.0](https://aka.ms/netcore3download) のプレビューをインストールします。
 
-
 >[!NOTE]
->**Visual Studio 2017** では、.NET Core 3.0 プロジェクトはサポートされていません。 **Visual Studio 2019 Preview/RC** では .NET Core 3.0 プロジェクトはサポートされていますが、.NET Core 3.0 WPF プロジェクト用のビジュアル デザイナーはまだサポートされていません。 ビジュアル デザイナーを使用するには、.NET Core プロジェクトとそのファイルを共有するソリューション内に .NET WPF プロジェクトを配置する必要です。
+>**Visual Studio 2017** では、.NET Core 3.0 プロジェクトはサポートされていません。 **Visual Studio 2019** では .NET Core 3.0 プロジェクトはサポートされていますが、.NET Core 3.0 WPF プロジェクト用のビジュアル デザイナーはまだサポートされていません。 ビジュアル デザイナーを使用するには、.NET Core プロジェクトとそのファイルを共有するソリューション内に .NET WPF プロジェクトを配置する必要です。
 
 ### <a name="consider"></a>次の例を考えてみましょう
 
@@ -61,7 +60,7 @@ ms.locfileid: "58677552"
 
     移行する前に、常に NuGet パッケージの最新バージョンを使用することをお勧めします。 アプリケーションで NuGet パッケージを参照している場合は、最新バージョンに更新してください。 アプリケーションが正常にビルドされることを確認します。 アップグレード後にパッケージ エラーが発生した場合は、コードを壊さない最新のバージョンにパッケージをダウングレードします。
 
-01. Visual Studio 2019 Preview/RC では、.NET Core 3.0 の WPF デザイナーはまだサポートしていない。
+01. Visual Studio 2019 では、.NET Core 3.0 用の WPF デザイナーはまだサポートされていない
 
     現時点では、Visual Studio の WPF デザイナーを使用する場合は、既存の .NET Framework WPF プロジェクト ファイルを保持する必要があります。
 
@@ -216,7 +215,7 @@ dotnet add .\MyWPFAppCore\MyWPFCore.csproj package Microsoft.Windows.Compatibili
 
 ## <a name="wpf-designer"></a>WPF デザイナー
 
-この記事で説明したように、Visual Studio 2019 Preview/RC では、.NET Framework プロジェクトでのみ WPF デザイナーをサポートします。 サイドバイサイドの .NET Core プロジェクトを作成することで、.NET Framework プロジェクトを使用してフォームをデザインしながら、.NET Core でプロジェクトをテストできます。 ソリューション ファイルには、.NET Framework と .NET Core の両方のプロジェクトが含まれます。 .NET Framework プロジェクトにフォームとコントロールを追加してデザインし、.NET Core プロジェクトに追加されたファイルの glob パターンに基づいて、新しいファイルまたは変更されたファイルが、.NET Core プロジェクトに自動的に追加されます。
+この記事で説明したように、Visual Studio 2019 では、.NET Framework プロジェクトでのみ WPF デザイナーがサポートされます。 サイドバイサイドの .NET Core プロジェクトを作成することで、.NET Framework プロジェクトを使用してフォームをデザインしながら、.NET Core でプロジェクトをテストできます。 ソリューション ファイルには、.NET Framework と .NET Core の両方のプロジェクトが含まれます。 .NET Framework プロジェクトにフォームとコントロールを追加してデザインし、.NET Core プロジェクトに追加されたファイルの glob パターンに基づいて、新しいファイルまたは変更されたファイルが、.NET Core プロジェクトに自動的に追加されます。
 
 Visual Studio 2019 で WPF デザイナーがサポートされるようになったら、.NET Core プロジェクト ファイルの内容を .NET Framework プロジェクト ファイルにコピーして貼り付けることができます。 その後、`<Source>` と `<EmbeddedResource>` 項目を使用して追加されたファイルの glob パターンを削除します。 アプリで使用されるすべてのプロジェクト参照のパスを修正します。 これにより、.NET Framework プロジェクトが .NET Core プロジェクトに効率的にアップグレードされます。
  

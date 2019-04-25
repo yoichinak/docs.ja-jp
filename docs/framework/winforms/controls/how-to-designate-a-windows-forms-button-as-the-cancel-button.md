@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Button control [Windows Forms], designating as cancel button
 ms.assetid: 252f0834-e54b-44d9-96f7-ee5f50e94f2c
 ms.openlocfilehash: 8170190145e76a86f5343bc42b39be7fb9d61a0f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59344144"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-cancel-button"></a>方法: Windows フォームの Button コントロールをキャンセル ボタンとして指定する
@@ -49,6 +49,6 @@ ms.locfileid: "59344144"
 - <xref:System.Windows.Forms.Form.CancelButton%2A>
 - [Button コントロールの概要](button-control-overview-windows-forms.md)
 - [Windows フォームの Button コントロールを選択する方法](ways-to-select-a-windows-forms-button-control.md)
-- [方法: Windows フォームのボタンのクリックに応答する](how-to-respond-to-windows-forms-button-clicks.md)
-- [方法: Windows フォームの Button コントロールを承認ボタンとして指定する](how-to-designate-a-windows-forms-button-as-the-accept-button.md)
+- [方法: Windows フォームのボタン クリックに応答するには](how-to-respond-to-windows-forms-button-clicks.md)
+- [方法: Windows フォームの Button を承認ボタンとして指定します。](how-to-designate-a-windows-forms-button-as-the-accept-button.md)
 - [Button コントロール](button-control-windows-forms.md)

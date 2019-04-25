@@ -3,10 +3,10 @@ title: 詳細の Office Open XML WordprocessingML ドキュメント (Visual Bas
 ms.date: 07/20/2015
 ms.assetid: 6b1e155c-7174-4244-a6de-0fddf9a0b0d7
 ms.openlocfilehash: ae684ddcb194000da6bf66d96fb1027d925d7f21
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836865"
 ---
 # <a name="details-of-office-open-xml-wordprocessingml-documents-visual-basic"></a>詳細の Office Open XML WordprocessingML ドキュメント (Visual Basic)

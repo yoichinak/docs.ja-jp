@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 339ec145-826c-46d2-8cf2-3acd252cd072
 ms.openlocfilehash: c1bc8e18f2e3b0c67b98713e67fc261649a6a0e2
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59128337"
 ---
 # <a name="determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition"></a>シーケンスのすべての要素が条件を満たしているかどうかの確認

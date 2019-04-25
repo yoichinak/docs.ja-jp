@@ -5,10 +5,10 @@ helpviewer_keywords:
 - operators [Visual Basic]
 ms.assetid: d1fb027c-872b-4ccc-afc8-2380e3f65d4a
 ms.openlocfilehash: 7e65e8e015c88c95c527e148aca6ecb2641afa61
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816227"
 ---
 # <a name="operators-listed-by-functionality-visual-basic"></a>機能別の演算子一覧 (Visual Basic)

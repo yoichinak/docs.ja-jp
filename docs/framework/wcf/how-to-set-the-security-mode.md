@@ -10,10 +10,10 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 6e01dd9f-b5dd-4474-b24c-06e124de4ff7
 ms.openlocfilehash: 5a4550e4c914dcdbc9908e766c67a2efa53e6e9e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59339386"
 ---
 # <a name="how-to-set-the-security-mode"></a>方法: セキュリティ モードを設定する
@@ -115,12 +115,12 @@ Windows Communication Foundation (WCF) のセキュリティは、ほとんど�
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: SSL 証明書を使用してポートを構成する](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
-- [方法: トランスポート セキュリティとメッセージ資格情報を使用する](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
+- [方法: SSL 証明書でポートを構成します。](../../../docs/framework/wcf/feature-details/how-to-configure-a-port-with-an-ssl-certificate.md)
+- [方法: トランスポート セキュリティの使用とメッセージ資格情報](../../../docs/framework/wcf/feature-details/how-to-use-transport-security-and-message-credentials.md)
 - [トランスポート セキュリティ](../../../docs/framework/wcf/feature-details/transport-security.md)
 - [メッセージのセキュリティ](../../../docs/framework/wcf/feature-details/message-security-in-wcf.md)
 - [セキュリティの概要](../../../docs/framework/wcf/feature-details/security-overview.md)
 - [システム標準のバインディング](../../../docs/framework/wcf/system-provided-bindings.md)
-- [\<セキュリティ >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
-- [\<セキュリティ >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
-- [\<セキュリティ >](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-wshttpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-basichttpbinding.md)
+- [\<security>](../../../docs/framework/configure-apps/file-schema/wcf/security-of-nettcpbinding.md)

@@ -13,11 +13,11 @@ ms.assetid: 34ddc6bd-1675-4f35-86aa-de1645d5c631
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 9ecdfd708217f260b0c02383159fab88948029c6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54512321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874212"
 ---
 # <a name="pinvokestackimbalance-mda"></a>PInvokeStackImbalance MDA
 
@@ -28,13 +28,13 @@ ms.locfileid: "54512321"
 > [!NOTE]
 > `PInvokeStackImbalance` MDA は既定で無効になります。 Visual Studio 2017 で、`PInvokeStackImbalance`で MDA が表示されます、**マネージ デバッグ アシスタント**の一覧で、**例外設定** ダイアログ ボックス (を選択すると表示される**のデバッグ** >  **Windows** > **例外設定**)。 ただし、オンまたはオフにして、**スローされたときに中断** チェック ボックスが有効または MDA を無効にしていない; のみ、MDA がアクティブになる、Visual Studio が例外をスローするかどうかを制御します。
 
-## <a name="symptoms"></a>現象
+## <a name="symptoms"></a>症状
 
 プラットフォーム呼び出しの実行時または実行後に、アプリケーションでアクセス違反またはメモリ破損が発生します。
 
 ## <a name="cause"></a>原因
 
-プラットフォーム呼び出しのマネージド シグネチャが、呼び出されているメソッドのアンマネージド シグネチャと一致しない可能性があります。  この不一致は、正しい数のパラメーターを宣言しないか、適切なサイズのパラメーターを指定しないマネージド シグネチャで発生する可能性があります。  また、<xref:System.Runtime.InteropServices.DllImportAttribute> 属性によって指定されている可能性がある呼び出し規約が、アンマネージ呼び出し規約と一致しない場合にも、MDA がアクティブ化される可能性があります。
+プラットフォーム呼び出しのマネージド シグネチャが、呼び出されているメソッドのアンマネージド シグネチャと一致しない可能性があります。  この不一致は、正しい数のパラメーターを宣言しないか、適切なサイズのパラメーターを指定しないマネージド シグネチャで発生する可能性があります。  また、<xref:System.Runtime.InteropServices.DllImportAttribute> 属性によって指定されている可能性がある呼び出し規則が、アンマネージ呼び出し規則と一致しない場合にも、MDA がアクティブ化される可能性があります。
 
 ## <a name="resolution"></a>解像度
 

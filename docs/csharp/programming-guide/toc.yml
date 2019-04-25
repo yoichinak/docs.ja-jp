@@ -1,52 +1,45 @@
-items:
-- name: C# プログラミング ガイド
+- name: 'C# プログラミング ガイド'
   href: index.md
   items:
-  - name: インサイド C# プログラム
-    href: inside-a-program/
-  - name: Main() とコマンド ライン引数
-    href: main-and-command-args/
-  - name: プログラミングの概念
-    href: concepts/
-  - name: ステートメント、式、および演算子
-    href: statements-expressions-operators/
-  - name: 種類
-    href: types/
-  - name: クラスと構造体
-    href: classes-and-structs/
-  - name: インターフェイス
-    href: interfaces/
-  - name: 列挙型
-    href: enumeration-types.md
-  - name: デリゲート
-    href: delegates/index.md
-  - name: 配列
-    href: arrays/
-  - name: 文字列
-    href: strings/
-  - name: インデクサー
-    href: indexers/
-  - name: イベント
-    href: events/
-  - name: ジェネリック
-    href: generics/
-  - name: 名前空間
-    href: namespaces/
-  - name: Null 許容型
-    href: nullable-types/
-  - name: アンセーフ コードとポインター
-    href: unsafe-code-pointers/
-  - name: XML ドキュメントのコメント
-    href: xmldoc/
-  - name: 例外と例外処理
-    href: exceptions/
-  - name: ファイル システムとレジストリ
-    href: file-system/
-  - name: 相互運用性
-    href: interop/
-ms.openlocfilehash: 735c939dd903ff7e713fc9870afeda99786f8e77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58471049"
+    - name: 'インサイド C# プログラム'
+      href: inside-a-program/
+    - name: Main() とコマンド ライン引数
+      href: main-and-command-args/
+    - name: プログラミングの概念
+      href: concepts/
+    - name: ステートメント、式、および演算子
+      href: statements-expressions-operators/
+    - name: 種類
+      href: types/
+    - name: クラスと構造体
+      href: classes-and-structs/
+    - name: インターフェイス
+      href: interfaces/
+    - name: 列挙型
+      href: enumeration-types.md
+    - name: デリゲート
+      href: delegates/index.md
+    - name: 配列
+      href: arrays/
+    - name: 文字列
+      href: strings/
+    - name: インデクサー
+      href: indexers/
+    - name: イベント
+      href: events/
+    - name: ジェネリック
+      href: generics/
+    - name: 名前空間
+      href: namespaces/
+    - name: Null 許容型
+      href: nullable-types/
+    - name: アンセーフ コードとポインター
+      href: unsafe-code-pointers/
+    - name: XML ドキュメントのコメント
+      href: xmldoc/
+    - name: 例外と例外処理
+      href: exceptions/
+    - name: ファイル システムとレジストリ
+      href: file-system/
+    - name: 相互運用性
+      href: interop/

@@ -7,10 +7,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], returning a value
 ms.assetid: 4bcc4724-2b4e-4df8-9b4b-16054607f87d
 ms.openlocfilehash: 8b53df1634d2b9971bc44c968a17db81cac3924f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59307887"
 ---
 # <a name="how-to-return-a-value-from-a-procedure-visual-basic"></a>方法: プロシージャ (Visual Basic) から値を返す
@@ -46,12 +46,12 @@ A`Function`プロシージャに値を返す呼び出し元のコードを実行
   
 ## <a name="see-also"></a>関連項目
 
-- [手順](./index.md)
+- [プロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
-- [プロパティ プロシージャ](./property-procedures.md)
+- [Property プロシージャ](./property-procedures.md)
 - [演算子プロシージャ](./operator-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
 - [Function ステートメント](../../../../visual-basic/language-reference/statements/function-statement.md)
 - [Return ステートメント](../../../../visual-basic/language-reference/statements/return-statement.md)
-- [方法: 値を返すプロシージャを作成する](./how-to-create-a-procedure-that-returns-a-value.md)
+- [方法: 値を返すプロシージャを作成します。](./how-to-create-a-procedure-that-returns-a-value.md)
 - [方法: 値を返すプロシージャを呼び出す](./how-to-call-a-procedure-that-returns-a-value.md)

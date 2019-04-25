@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 126e7245-c5a0-4ebf-800d-cc1fcf9cd0ab
 ms.openlocfilehash: 92acee0d36634ea09c245418fcc7a8b97d208aa6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59228634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903111"
 ---
 # <a name="how-to-display-a-changeset"></a>方法: 変更セットを表示する
 <xref:System.Data.Linq.DataContext> によって追跡される変更を <xref:System.Data.Linq.DataContext.GetChangeSet%2A> を使って表示することができます。  

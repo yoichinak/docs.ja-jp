@@ -3,10 +3,10 @@ title: コンストラクター (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 41fa7bde-8d20-4a3f-a3d2-fb791e128010
 ms.openlocfilehash: 53aa7fcc82a476c8b8bd87b059e08bee6741c0d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59073781"
 ---
 # <a name="constructing-types-entity-sql"></a>コンストラクター (Entity SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "59073781"
  詳細については、次を参照してください。 [MULTISET](../../../../../../docs/framework/data/adonet/ef/language-reference/multiset-entity-sql.md)します。  
   
 ## <a name="named-type-constructors-namedtype-initializers"></a>名前付きの型コンストラクター (NamedType 初期化子)  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型コンス トラクター (初期化子) の複合型の名前付きインスタンスを作成し、エンティティ型を使用できます。 たとえば、次の式は `Person` 型のインスタンスを作成します。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、型コンストラクター (初期化子) を使用して、名前付きの複合型およびエンティティ型のインスタンスを作成できます。 たとえば、次の式は `Person` 型のインスタンスを作成します。  
   
  `Person("abc", 12)`  
   

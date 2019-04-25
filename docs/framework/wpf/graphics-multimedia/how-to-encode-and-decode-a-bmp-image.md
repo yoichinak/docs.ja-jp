@@ -14,10 +14,10 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 ms.assetid: feb5ef27-28ac-40ab-bfc2-e0456990d32c
 ms.openlocfilehash: b7d5ace8aead864cb69a9e696a3f1f925e232600
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59121902"
 ---
 # <a name="how-to-encode-and-decode-a-bmp-image"></a>方法: BMP イメージのエンコードおよびデコード

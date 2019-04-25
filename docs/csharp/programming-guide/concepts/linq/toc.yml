@@ -1,488 +1,481 @@
-items:
 - name: '統合言語クエリ (LINQ: Language-Integrated Query)'
   href: index.md
   items:
-  - name: LINQ の概要
-    href: introduction-to-linq.md
-  - name: C# の LINQ の概要
-    href: getting-started-with-linq.md
-    items:
-    - name: LINQ クエリの概要
-      href: introduction-to-linq-queries.md
-    - name: LINQ とジェネリック型
-      href: linq-and-generic-types.md
-    - name: LINQ クエリの基本操作
-      href: basic-linq-query-operations.md
-    - name: LINQ によるデータ変換
-      href: data-transformations-with-linq.md
-    - name: LINQ クエリ操作での型の関係
-      href: type-relationships-in-linq-query-operations.md
-    - name: LINQ でのクエリ構文とメソッド構文
-      href: query-syntax-and-method-syntax-in-linq.md
-    - name: LINQ をサポートする C# の機能
-      href: features-that-support-linq.md
-    - name: 'チュートリアル: C# でのクエリの作成 (LINQ)'
-      href: walkthrough-writing-queries-linq.md
-  - name: 標準クエリ演算子の概要
-    href: standard-query-operators-overview.md
-    items:
-    - name: 標準クエリ演算子のクエリ式構文
-      href: query-expression-syntax-for-standard-query-operators.md
-    - name: 実行方法による標準クエリ演算子の分類
-      href: classification-of-standard-query-operators-by-manner-of-execution.md
-    - name: データの並べ替え
-      href: sorting-data.md
-    - name: セット操作
-      href: set-operations.md
-    - name: データのフィルター処理
-      href: filtering-data.md
-    - name: 量指定子操作
-      href: quantifier-operations.md
-    - name: 射影操作
-      href: projection-operations.md
-    - name: データのパーティション分割
-      href: partitioning-data.md
-    - name: 結合操作
-      href: join-operations.md
-    - name: データのグループ化
-      href: grouping-data.md
-    - name: 生成操作
-      href: generation-operations.md
-    - name: 等価演算
-      href: equality-operations.md
-    - name: 要素操作
-      href: element-operations.md
-    - name: データ型の変換
-      href: converting-data-types.md
-    - name: 連結演算
-      href: concatenation-operations.md
-    - name: 集計操作
-      href: aggregation-operations.md
-  - name: LINQ to Objects
-    href: linq-to-objects.md
-    items:
-    - name: LINQ と文字列
-      href: linq-and-strings.md
+    - name: LINQ の概要
+      href: introduction-to-linq.md
+    - name: 'C# の LINQ の概要'
+      href: getting-started-with-linq.md
       items:
-      - name: '方法: 文字列での単語の出現回数をカウントする (LINQ)'
-        href: how-to-count-occurrences-of-a-word-in-a-string-linq.md
-      - name: '方法: 指定された単語のセットを含む文章を照会する (LINQ)'
-        href: how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
-      - name: '方法: 文字列内の文字をクエリする (LINQ)'
-        href: how-to-query-for-characters-in-a-string-linq.md
-      - name: '方法: LINQ クエリと正規表現を組み合わせる'
-        href: how-to-combine-linq-queries-with-regular-expressions.md
-      - name: '方法: 2 つのリストの差集合を見つける (LINQ)'
-        href: how-to-find-the-set-difference-between-two-lists-linq.md
-      - name: '方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ)'
-        href: how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
-      - name: '方法: 区切り記号入りファイルのフィールドの順序を変更する (LINQ)'
-        href: how-to-reorder-the-fields-of-a-delimited-file-linq.md
-      - name: '方法: 文字列コレクションを結合および比較する (LINQ)'
-        href: how-to-combine-and-compare-string-collections-linq.md
-      - name: '方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ)'
-        href: how-to-populate-object-collections-from-multiple-sources-linq.md
-      - name: '方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ)'
-        href: how-to-split-a-file-into-many-files-by-using-groups-linq.md
-      - name: '方法: 異種ファイルのコンテンツを結合する (LINQ)'
-        href: how-to-join-content-from-dissimilar-files-linq.md
-      - name: '方法: CSV テキスト ファイルの列値を計算する (LINQ)'
-        href: how-to-compute-column-values-in-a-csv-text-file-linq.md
-    - name: LINQ とリフレクション
-      href: linq-and-reflection.md
+        - name: LINQ クエリの概要
+          href: introduction-to-linq-queries.md
+        - name: LINQ とジェネリック型
+          href: linq-and-generic-types.md
+        - name: LINQ クエリの基本操作
+          href: basic-linq-query-operations.md
+        - name: LINQ によるデータ変換
+          href: data-transformations-with-linq.md
+        - name: LINQ クエリ操作での型の関係
+          href: type-relationships-in-linq-query-operations.md
+        - name: LINQ でのクエリ構文とメソッド構文
+          href: query-syntax-and-method-syntax-in-linq.md
+        - name: 'LINQ をサポートする C# の機能'
+          href: features-that-support-linq.md
+        - name: 'チュートリアル: C# でのクエリの作成 (LINQ)'
+          href: walkthrough-writing-queries-linq.md
+    - name: 標準クエリ演算子の概要
+      href: standard-query-operators-overview.md
       items:
-      - name: '方法: リフレクションを使用してアセンブリのメタデータをクエリする (LINQ)'
-        href: how-to-query-an-assembly-s-metadata-with-reflection-linq.md
-    - name: LINQ とファイル ディレクトリ
-      href: linq-and-file-directories.md
+        - name: 標準クエリ演算子のクエリ式構文
+          href: query-expression-syntax-for-standard-query-operators.md
+        - name: 実行方法による標準クエリ演算子の分類
+          href: classification-of-standard-query-operators-by-manner-of-execution.md
+        - name: データの並べ替え
+          href: sorting-data.md
+        - name: セット操作
+          href: set-operations.md
+        - name: データのフィルター処理
+          href: filtering-data.md
+        - name: 量指定子操作
+          href: quantifier-operations.md
+        - name: 射影操作
+          href: projection-operations.md
+        - name: データのパーティション分割
+          href: partitioning-data.md
+        - name: 結合操作
+          href: join-operations.md
+        - name: データのグループ化
+          href: grouping-data.md
+        - name: 生成操作
+          href: generation-operations.md
+        - name: 等価演算
+          href: equality-operations.md
+        - name: 要素操作
+          href: element-operations.md
+        - name: データ型の変換
+          href: converting-data-types.md
+        - name: 連結演算
+          href: concatenation-operations.md
+        - name: 集計操作
+          href: aggregation-operations.md
+    - name: LINQ to Objects
+      href: linq-to-objects.md
       items:
-      - name: '方法: 指定された属性または名前のファイルをクエリする'
-        href: how-to-query-for-files-with-a-specified-attribute-or-name.md
-      - name: '方法: 拡張子別にファイルをグループ化する (LINQ)'
-        href: how-to-group-files-by-extension-linq.md
-      - name: '方法: 一連のフォルダーの合計バイト数を照会する (LINQ)'
-        href: how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
-      - name: '方法: 2 つのフォルダーの内容を比較する (LINQ)'
-        href: how-to-compare-the-contents-of-two-folders-linq.md
-      - name: '方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ)'
-        href: how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
-      - name: '方法: ディレクトリ ツリーで重複するファイルをクエリする (LINQ)'
-        href: how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
-      - name: '方法: フォルダー内のファイルの内容を照会する (LINQ)'
-        href: how-to-query-the-contents-of-files-in-a-folder-lin.md
-    - name: '方法: LINQ を使用して ArrayList を照会する'
-      href: how-to-query-an-arraylist-with-linq.md
-    - name: '方法: LINQ クエリのカスタム メソッドを追加する'
-      href: how-to-add-custom-methods-for-linq-queries.md
-  - name: LINQ to XML
-    href: linq-to-xml.md
-    items:
-    - name: はじめに (LINQ to XML)
-      href: getting-started-linq-to-xml.md
+        - name: LINQ と文字列
+          href: linq-and-strings.md
+          items:
+            - name: '方法: 文字列での単語の出現回数をカウントする (LINQ)'
+              href: how-to-count-occurrences-of-a-word-in-a-string-linq.md
+            - name: '方法: 指定された単語のセットを含む文章を照会する (LINQ)'
+              href: how-to-query-for-sentences-that-contain-a-specified-set-of-words-linq.md
+            - name: '方法: 文字列内の文字をクエリする (LINQ)'
+              href: how-to-query-for-characters-in-a-string-linq.md
+            - name: '方法: LINQ クエリと正規表現を組み合わせる'
+              href: how-to-combine-linq-queries-with-regular-expressions.md
+            - name: '方法: 2 つのリストの差集合を見つける (LINQ)'
+              href: how-to-find-the-set-difference-between-two-lists-linq.md
+            - name: '方法: 任意の単語またはフィールドを基準にテキスト データの並べ替えまたはフィルター処理を実行する (LINQ)'
+              href: how-to-sort-or-filter-text-data-by-any-word-or-field-linq.md
+            - name: '方法: 区切り記号入りファイルのフィールドの順序を変更する (LINQ)'
+              href: how-to-reorder-the-fields-of-a-delimited-file-linq.md
+            - name: '方法: 文字列コレクションを結合および比較する (LINQ)'
+              href: how-to-combine-and-compare-string-collections-linq.md
+            - name: '方法: 複数のソースからオブジェクト コレクションにデータを設定する (LINQ)'
+              href: how-to-populate-object-collections-from-multiple-sources-linq.md
+            - name: '方法: グループを使用して 1 つのファイルを複数のファイルに分割する (LINQ)'
+              href: how-to-split-a-file-into-many-files-by-using-groups-linq.md
+            - name: '方法: 異種ファイルのコンテンツを結合する (LINQ)'
+              href: how-to-join-content-from-dissimilar-files-linq.md
+            - name: '方法: CSV テキスト ファイルの列値を計算する (LINQ)'
+              href: how-to-compute-column-values-in-a-csv-text-file-linq.md
+        - name: LINQ とリフレクション
+          href: linq-and-reflection.md
+          items:
+            - name: '方法: リフレクションを使用してアセンブリのメタデータをクエリする (LINQ)'
+              href: how-to-query-an-assembly-s-metadata-with-reflection-linq.md
+        - name: LINQ とファイル ディレクトリ
+          href: linq-and-file-directories.md
+          items:
+            - name: '方法: 指定された属性または名前のファイルをクエリする'
+              href: how-to-query-for-files-with-a-specified-attribute-or-name.md
+            - name: '方法: 拡張子別にファイルをグループ化する (LINQ)'
+              href: how-to-group-files-by-extension-linq.md
+            - name: '方法: 一連のフォルダーの合計バイト数を照会する (LINQ)'
+              href: how-to-query-for-the-total-number-of-bytes-in-a-set-of-folders-linq.md
+            - name: '方法: 2 つのフォルダーの内容を比較する (LINQ)'
+              href: how-to-compare-the-contents-of-two-folders-linq.md
+            - name: '方法: ディレクトリ ツリー内で最もサイズの大きいファイルを照会する (LINQ)'
+              href: how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq.md
+            - name: '方法: ディレクトリ ツリーで重複するファイルをクエリする (LINQ)'
+              href: how-to-query-for-duplicate-files-in-a-directory-tree-linq.md
+            - name: '方法: フォルダー内のファイルの内容を照会する (LINQ)'
+              href: how-to-query-the-contents-of-files-in-a-folder-lin.md
+        - name: '方法: LINQ を使用して ArrayList を照会する'
+          href: how-to-query-an-arraylist-with-linq.md
+        - name: '方法: LINQ クエリのカスタム メソッドを追加する'
+          href: how-to-add-custom-methods-for-linq-queries.md
+    - name: LINQ to XML
+      href: linq-to-xml.md
       items:
-      - name: LINQ to XML の概要
-        href: linq-to-xml-overview.md
-      - name: LINQ to XML およびDOM
-        href: linq-to-xml-vs-dom.md
-      - name: LINQ to XML およびその他の XML テクノロジ
-        href: linq-to-xml-vs-other-xml-technologies.md
-    - name: プログラミング ガイド (LINQ to XML)
-      href: programming-guide-linq-to-xml.md
-      items:
-      - name: LINQ to XML プログラミングの概要
-        href: linq-to-xml-programming-overview.md
-        items:
-        - name: 関数型プログラミングと手続き型プログラミング (LINQ to XML)
-          href: functional-vs-procedural-programming-linq-to-xml.md
-        - name: LINQ to XML クラスの概要
-          href: linq-to-xml-classes-overview.md
-        - name: XElement クラスの概要
-          href: xelement-class-overview.md
-        - name: XAttribute クラスの概要
-          href: xattribute-class-overview.md
-        - name: XDocument クラスの概要
-          href: xdocument-class-overview.md
-        - name: '方法: LINQ to XML の例をビルドする'
-          href: how-to-build-linq-to-xml-examples.md
-      - name: XML ツリーの作成
-        href: creating-xml-trees.md
-        items:
-        - name: 関数型構築 (LINQ to XML)
-          href: functional-construction-linq-to-xml.md
-        - name: C# での XML ツリーの作成 (LINQ to XML)
-          href: creating-xml-trees-linq-to-xml-2.md
-        - name: XML の解析
-          href: parsing-xml.md
+        - name: はじめに (LINQ to XML)
+          href: getting-started-linq-to-xml.md
           items:
-          - name: '方法: 文字列を解析する'
-            href: how-to-parse-a-string.md
-          - name: '方法: ファイルから XML を読み込む'
-            href: how-to-load-xml-from-a-file.md
-          - name: XML の読み込み時または解析時の空白の維持
-            href: preserving-white-space-while-loading-or-parsing-xml1.md
-          - name: '方法: 解析エラーをキャッチする'
-            href: how-to-catch-parsing-errors.md
-          - name: '方法: XmlReader からツリーを作成する'
-            href: how-to-create-a-tree-from-an-xmlreader.md
-          - name: '方法: XmlReader から XML フラグメントをストリーム出力する'
-            href: how-to-stream-xml-fragments-from-an-xmlreader.md
-        - name: '方法: XmlWriter を使用して XML ツリーを設定する (LINQ to XML)'
-          href: how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
-        - name: '方法: XSD を使用して検証する (LINQ to XML)'
-          href: how-to-validate-using-xsd-linq-to-xml.md
-        - name: XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
-          href: valid-content-of-xelement-and-xdocument-objects3.md
-      - name: XML 名前空間の使用
-        href: working-with-xml-namespaces.md
-        items:
-        - name: 名前空間の概要 (LINQ to XML)
-          href: namespaces-overview-linq-to-xml.md
-        - name: '方法: 名前空間を持つドキュメントを作成する (LINQ to XML)'
-          href: how-to-create-a-document-with-namespaces-linq-to-xml.md
-        - name: '方法: 名前空間プレフィックスを制御する (LINQ to XML)'
-          href: how-to-control-namespace-prefixes-linq-to-xml.md
-        - name: C# での既定の名前空間のスコープ
-          href: scope-of-default-namespaces.md
-        - name: '方法: 名前空間内の XML に対するクエリを記述する'
-          href: how-to-write-queries-on-xml-in-namespaces.md
-      - name: XML ツリーのシリアル化
-        href: serializing-xml-trees.md
-        items:
-        - name: シリアル化時の空白の維持
-          href: preserving-white-space-while-serializing.md
-        - name: XML 宣言付きのシリアル化
-          href: serializing-with-an-xml-declaration.md
-        - name: ファイル、TextWriter、および XmlWriter へのシリアル化
-          href: serializing-to-files-textwriters-and-xmlwriters.md
-        - name: XmlReader へのシリアル化 (XSLT の呼び出し)
-          href: serializing-to-an-xmlreader-invoking-xslt.md
-      - name: LINQ to XML 軸
-        href: linq-to-xml-axes.md
-        items:
-        - name: LINQ to XML 軸の概要
-          href: linq-to-xml-axes-overview.md
-        - name: '方法: 要素のコレクションを取得する (LINQ to XML)'
-          href: how-to-retrieve-a-collection-of-elements-linq-to-xml.md
-        - name: '方法: 要素の値を取得する (LINQ to XML)'
-          href: how-to-retrieve-the-value-of-an-element-linq-to-xml.md
-        - name: '方法: 要素名をフィルター処理する (LINQ to XML)'
-          href: how-to-filter-on-element-names-linq-to-xml.md
-        - name: '方法: 軸メソッドの呼び出しを連結する (LINQ to XML)'
-          href: how-to-chain-axis-method-calls-linq-to-xml.md
-        - name: '方法: 単一の子要素を取得する (LINQ to XML)'
-          href: how-to-retrieve-a-single-child-element-linq-to-xml.md
-        - name: '方法: 属性のコレクションを取得する (LINQ to XML)'
-          href: how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
-        - name: '方法: 単一の属性を取得する (LINQ to XML)'
-          href: how-to-retrieve-a-single-attribute-linq-to-xml.md
-        - name: '方法: 属性の値を取得する (LINQ to XML)'
-          href: how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
-        - name: '方法: 要素の浅い値を取得する'
-          href: how-to-retrieve-the-shallow-value-of-an-element.md
-      - name: XML ツリーのクエリ
-        href: querying-xml-trees.md
-        items:
-        - name: 基本的なクエリ (LINQ to XML)
-          href: basic-queries-linq-to-xml.md
+            - name: LINQ to XML の概要
+              href: linq-to-xml-overview.md
+            - name: LINQ to XML およびDOM
+              href: linq-to-xml-vs-dom.md
+            - name: LINQ to XML およびその他の XML テクノロジ
+              href: linq-to-xml-vs-other-xml-technologies.md
+        - name: プログラミング ガイド (LINQ to XML)
+          href: programming-guide-linq-to-xml.md
           items:
-          - name: '方法: 特定の属性を持つ要素を検索する'
-            href: how-to-find-an-element-with-a-specific-attribute.md
-          - name: '方法: 特定の子要素を持つ要素を検索する'
-            href: how-to-find-an-element-with-a-specific-child-element.md
-          - name: XDocument のクエリと XElement のクエリ
-            href: querying-an-xdocument-vs-querying-an-xelement.md
-          - name: '方法: 特定の要素名を持つ子孫を検索する'
-            href: how-to-find-descendants-with-a-specific-element-name.md
-          - name: '方法: Descendants メソッドを使用して単一の子孫を検索する'
-            href: how-to-find-a-single-descendant-using-the-descendants-method.md
-          - name: '方法: 複雑なフィルターを使用してクエリを記述する'
-            href: how-to-write-queries-with-complex-filtering.md
-          - name: '方法: 省略可能な要素をフィルター処理する'
-            href: how-to-filter-on-an-optional-element.md
-          - name: '方法: 名前空間内のすべてのノードを検索する'
-            href: how-to-find-all-nodes-in-a-namespace.md
-          - name: '方法: 要素を並べ替える'
-            href: how-to-sort-elements.md
-          - name: '方法: 複数のキーに基づいて要素を並べ替える'
-            href: how-to-sort-elements-on-multiple-keys.md
-          - name: '方法: 中間値を計算する'
-            href: how-to-calculate-intermediate-values.md
-          - name: '方法: コンテキストに基づいて要素を検索するクエリを記述する'
-            href: how-to-write-a-query-that-finds-elements-based-on-context.md
-          - name: '方法: 空のクエリ結果セットをデバッグする'
-            href: how-to-debug-empty-query-results-sets.md
-        - name: 射影と変換 (LINQ to XML)
-          href: projections-and-transformations-linq-to-xml.md
-          items:
-          - name: '方法: LINQ to XML を使用してディクショナリを操作する'
-            href: how-to-work-with-dictionaries-using-linq-to-xml.md
-          - name: '方法: XML ツリーの構造を変換する'
-            href: how-to-transform-the-shape-of-an-xml-tree.md
-          - name: '方法: 射影の型を制御する'
-            href: how-to-control-the-type-of-a-projection.md
-          - name: '方法: 新しい型を射影する (LINQ to XML)'
-            href: how-to-project-a-new-type-linq-to-xml.md
-          - name: '方法: オブジェクト グラフを射影する'
-            href: how-to-project-an-object-graph.md
-          - name: '方法: 匿名型を射影する'
-            href: how-to-project-an-anonymous-type.md
-          - name: '方法: XML からテキスト ファイルを生成する'
-            href: how-to-generate-text-files-from-xml.md
-          - name: '方法: CSV ファイルから XML を生成する'
-            href: how-to-generate-xml-from-csv-files.md
-        - name: 高度なクエリ手法 (LINQ to XML)
-          href: advanced-query-techniques-linq-to-xml.md
-          items:
-          - name: '方法: 2 つのコレクションを結合する (LINQ to XML)'
-            href: how-to-join-two-collections-linq-to-xml.md
-          - name: '方法: グループ化を使用して階層を作成する'
-            href: how-to-create-hierarchy-using-grouping.md
-          - name: '方法: XPath を使用して LINQ to XML にクエリを実行する'
-            href: how-to-query-linq-to-xml-using-xpath.md
-          - name: '方法: LINQ to XML 軸メソッドを記述する'
-            href: how-to-write-a-linq-to-xml-axis-method.md
-          - name: '方法: テキストから XML へのストリーミング変換を実行する'
-            href: how-to-perform-streaming-transformations-of-text-to-xml.md
-          - name: '方法: ツリー内のすべてのノードを一覧表示する'
-            href: how-to-list-all-nodes-in-a-tree.md
-          - name: '方法: Office Open XML ドキュメントから段落を取得する'
-            href: how-to-retrieve-paragraphs-from-an-office-open-xml-document.md
-          - name: '方法: Office Open XML ドキュメントを変更する'
-            href: how-to-modify-an-office-open-xml-document.md
-          - name: '方法: ファイル システムから XML ツリーを設定する'
-            href: how-to-populate-an-xml-tree-from-the-file-system.md
-        - name: XPath ユーザー向けの LINQ to XML
-          href: linq-to-xml-for-xpath-users.md
-          items:
-          - name: XPath と LINQ to XML の比較
-            href: comparison-of-xpath-and-linq-to-xml.md
-          - name: '方法: 子要素を検索する (XPath-LINQ to XML)'
-            href: how-to-find-a-child-element-xpath-linq-to-xml.md
-          - name: '方法: 子要素の一覧を検索する (XPath-LINQ to XML)'
-            href: how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
-          - name: '方法: ルート要素を検索する (XPath-LINQ to XML)'
-            href: how-to-find-the-root-element-xpath-linq-to-xml.md
-          - name: '方法: 子孫要素を検索する (XPath-LINQ to XML)'
-            href: how-to-find-descendant-elements-xpath-linq-to-xml.md
-          - name: '方法: 属性をフィルター処理する (XPath-LINQ to XML)'
-            href: how-to-filter-on-an-attribute-xpath-linq-to-xml.md
-          - name: '方法: 関連要素を検索する (XPath-LINQ to XML)'
-            href: how-to-find-related-elements-xpath-linq-to-xml.md
-          - name: '方法: 名前空間内の要素を検索する (XPath-LINQ to XML)'
-            href: how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md
-          - name: '方法: 先行する兄弟を検索する (XPath-LINQ to XML)'
-            href: how-to-find-preceding-siblings-xpath-linq-to-xml.md
-          - name: '方法: 子要素の子孫を検索する (XPath-LINQ to XML)'
-            href: how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
-          - name: '方法: 2 つのロケーション パスの和集合を検索する (XPath-LINQ to XML)'
-            href: how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md
-          - name: '方法: 兄弟ノードを検索する (XPath-LINQ to XML)'
-            href: how-to-find-sibling-nodes-xpath-linq-to-xml.md
-          - name: '方法: 親の属性を検索する (XPath-LINQ to XML)'
-            href: how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
-          - name: '方法: 特定の名前を持つ兄弟の属性を検索する (XPath-LINQ to XML)'
-            href: how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md
-          - name: '方法: 特定の属性を持つ要素を検索する (XPath-LINQ to XML)'
-            href: how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md
-          - name: '方法: 位置に基づいて子要素を検索する (XPath-LINQ to XML)'
-            href: how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md
-          - name: '方法: 直前の兄弟を検索する (XPath-LINQ to XML)'
-            href: how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
-        - name: XML の純粋関数型変換
-          href: pure-functional-transformations-of-xml.md
-          items:
-          - name: 純粋関数型変換の概要
-            href: introduction-to-pure-functional-transformations.md
-            items:
-            - name: 概念と用語 (関数型変換)
-              href: concepts-and-terminology-functional-transformation.md
-            - name: 関数型プログラミングと命令型プログラミング
-              href: functional-programming-vs-imperative-programming.md
-            - name: 純粋関数へのリファクタリング
-              href: refactoring-into-pure-functions.md
-            - name: 関数型変換の適用範囲
-              href: applicability-of-functional-transformation.md
-            - name: XML の関数型変換
-              href: functional-transformation-of-xml.md
-          - name: 'チュートリアル: クエリの連結'
-            href: tutorial-chaining-queries-together.md
-            items:
-            - name: LINQ to XML における遅延実行とレイジー評価
-              href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
-            - name: 遅延実行の例
-              href: deferred-execution-example.md
-            - name: クエリの連結の例
-              href: chaining-queries-example.md
-            - name: 中間結果の具体化
-              href: intermediate-materialization.md
-            - name: 標準クエリ演算子の連結
-              href: chaining-standard-query-operators-together.md
-          - name: 'チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作'
-            href: tutorial-manipulating-content-in-a-wordprocessingml-document.md
-            items:
-            - name: WordprocessingML ドキュメントの構造
-              href: shape-of-wordprocessingml-documents.md
-            - name: ソースとなる Office Open XML ドキュメントの作成
-              href: creating-the-source-office-open-xml-document.md
-            - name: 既定の段落スタイルの検索
-              href: finding-the-default-paragraph-style.md
-            - name: 段落とそのスタイルの取得
-              href: retrieving-the-paragraphs-and-their-styles.md
-            - name: 段落のテキストの取得
-              href: retrieving-the-text-of-the-paragraphs.md
-            - name: 拡張メソッドを使用したリファクタリング
-              href: refactoring-using-an-extension-method.md
-            - name: 純粋関数によるリファクタリング
-              href: refactoring-using-a-pure-function.md
-            - name: 異なる構造の XML の射影
-              href: projecting-xml-in-a-different-shape.md
-            - name: Word 文書内のテキストの検索
-              href: finding-text-in-word-documents.md
-            - name: Office Open XML WordprocessingML ドキュメントの詳細
-              href: details-of-office-open-xml-wordprocessingml-documents.md
+            - name: LINQ to XML プログラミングの概要
+              href: linq-to-xml-programming-overview.md
               items:
-              - name: スタイルを含む WordprocessingML ドキュメント
-                href: wordprocessingml-document-with-styles.md
-              - name: WordprocessingML ドキュメントのスタイル パーツ
-                href: style-part-of-a-wordprocessingml-document.md
-              - name: Office Open XML ドキュメント パーツを出力する例
-                href: example-that-outputs-office-open-xml-document-parts.md
-      - name: XML ツリーの変更 (LINQ to XML)
-        href: modifying-xml-trees-linq-to-xml.md
-        items:
-        - name: メモリ内の XML ツリーの変更と関数型構築 (LINQ to XML)
-          href: in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md
-        - name: XML ツリーへの要素、属性、およびノードの追加
-          href: adding-elements-attributes-and-nodes-to-an-xml-tree.md
-        - name: XML ツリー内の要素、属性、およびノードの変更
-          href: modifying-elements-attributes-and-nodes-in-an-xml-tree.md
-        - name: XML ツリーからの要素、属性、およびノードの削除
-          href: removing-elements-attributes-and-nodes-from-an-xml-tree.md
-        - name: 名前と値のペアの保持
-          href: maintaining-name-value-pairs.md
-        - name: '方法: XML ツリー全体の名前空間を変更する'
-          href: how-to-change-the-namespace-for-an-entire-xml-tree.md
-      - name: パフォーマンス (LINQ to XML)
-        href: performance-linq-to-xml.md
-        items:
-        - name: 連結クエリのパフォーマンス (LINQ to XML)
-          href: performance-of-chained-queries-linq-to-xml.md
-        - name: アトミック化された XName および XNamespace オブジェクト (LINQ to XML)
-          href: atomized-xname-and-xnamespace-objects-linq-to-xml.md
-        - name: XName オブジェクトの事前アトミック化 (LINQ to XML)
-          href: pre-atomization-of-xname-objects-linq-to-xml.md
-        - name: 静的にコンパイルされたクエリ (LINQ to XML)
-          href: statically-compiled-queries-linq-to-xml.md
-      - name: 高度な LINQ to XML プログラミング
-        href: advanced-linq-to-xml-programming.md
-        items:
-        - name: LINQ to XML の注釈
-          href: linq-to-xml-annotations.md
-        - name: LINQ to XML イベント
-          href: linq-to-xml-events.md
-        - name: ノードでのプログラミング
-          href: programming-with-nodes.md
-        - name: 宣言型コードと命令型コードの混在のバグ (LINQ to XML)
-          href: mixed-declarative-code-imperative-code-bugs-linq-to-xml.md
-        - name: '方法: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する'
-          href: how-to-stream-xml-fragments-with-access-to-header-information.md
-        - name: '方法: 大きな XML ドキュメントのストリーミング変換を実行する'
-          href: how-to-perform-streaming-transform-of-large-xml-documents.md
-        - name: '方法: エンコードされたドキュメントを読み書きする'
-          href: how-to-read-and-write-an-encoded-document.md
-        - name: XSLT を使用した XML ツリーの変換
-          href: using-xslt-to-transform-an-xml-tree.md
-        - name: '方法: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する'
-          href: how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md
-        - name: XElement オブジェクトを含むオブジェクト グラフのシリアル化
-          href: serializing-object-graphs-that-contain-xelement-objects.md
-          items:
-          - name: '方法: XmlSerializer を使用してシリアル化する'
-            href: how-to-serialize-using-xmlserializer.md
-          - name: '方法: DataContractSerializer を使用してシリアル化する'
-            href: how-to-serialize-using-datacontractserializer.md
-      - name: LINQ to XML のセキュリティ
-        href: linq-to-xml-security.md
-      - name: サンプル XML ドキュメント (LINQ to XML)
-        href: sample-xml-documents-linq-to-xml.md
-        items:
-        - name: サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)
-          href: sample-xml-file-typical-purchase-order-linq-to-xml-1.md
-        - name: サンプル XML ファイル:名前空間内の一般的な購買発注書
-          href: sample-xml-file-typical-purchase-order-in-a-namespace.md
-        - name: サンプル XML ファイル:複数の購買発注書 (LINQ to XML)
-          href: sample-xml-file-multiple-purchase-orders-linq-to-xml.md
-        - name: サンプル XML ファイル:名前空間内の複数の購買発注書
-          href: sample-xml-file-multiple-purchase-orders-in-a-namespace.md
-        - name: サンプル XML ファイル:テスト構成 (LINQ to XML)
-          href: sample-xml-file-test-configuration-linq-to-xml.md
-        - name: サンプル XML ファイル:名前空間内のテスト構成
-          href: sample-xml-file-test-configuration-in-a-namespace1.md
-        - name: サンプル XML ファイル:顧客と注文 (LINQ to XML)
-          href: sample-xml-file-customers-and-orders-linq-to-xml-2.md
-        - name: サンプル XSD ファイル:顧客と注文
-          href: sample-xsd-file-customers-and-orders1.md
-        - name: サンプル XML ファイル:名前空間内の顧客と注文
-          href: sample-xml-file-customers-and-orders-in-a-namespace.md
-        - name: サンプル XML ファイル:数値データ (LINQ to XML)
-          href: sample-xml-file-numerical-data-linq-to-xml.md
-        - name: サンプル XML ファイル:名前空間内の数値データ
-          href: sample-xml-file-numerical-data-in-a-namespace.md
-        - name: サンプル XML ファイル:書籍 (LINQ to XML)
-          href: sample-xml-file-books-linq-to-xml.md
-        - name: サンプル XML ファイル:統合購買発注書
-          href: sample-xml-file-consolidated-purchase-orders.md
-    - name: リファレンス (LINQ to XML)
-      href: reference-linq-to-xml.md
-  - name: LINQ to ADO.NET (ポータル ページ)
-    href: linq-to-adonet-portal-page.md
-  - name: データ ソースの LINQ クエリの有効化
-    href: enabling-a-data-source-for-linq-querying1.md
-  - name: Visual Studio IDE およびツールの LINQ のサポート
-    href: visual-studio-ide-and-tools-support-for-linq.md
-ms.openlocfilehash: 4bae64ec7cba78172210dfe73d759db8d3fd7646
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470506"
+                - name: 関数型プログラミングと手続き型プログラミング (LINQ to XML)
+                  href: functional-vs-procedural-programming-linq-to-xml.md
+                - name: LINQ to XML クラスの概要
+                  href: linq-to-xml-classes-overview.md
+                - name: XElement クラスの概要
+                  href: xelement-class-overview.md
+                - name: XAttribute クラスの概要
+                  href: xattribute-class-overview.md
+                - name: XDocument クラスの概要
+                  href: xdocument-class-overview.md
+                - name: '方法: LINQ to XML の例をビルドする'
+                  href: how-to-build-linq-to-xml-examples.md
+            - name: XML ツリーの作成
+              href: creating-xml-trees.md
+              items:
+                - name: 関数型構築 (LINQ to XML)
+                  href: functional-construction-linq-to-xml.md
+                - name: 'C# での XML ツリーの作成 (LINQ to XML)'
+                  href: creating-xml-trees-linq-to-xml-2.md
+                - name: XML の解析
+                  href: parsing-xml.md
+                  items:
+                    - name: '方法: 文字列を解析する'
+                      href: how-to-parse-a-string.md
+                    - name: '方法: ファイルから XML を読み込む'
+                      href: how-to-load-xml-from-a-file.md
+                    - name: XML の読み込み時または解析時の空白の維持
+                      href: preserving-white-space-while-loading-or-parsing-xml1.md
+                    - name: '方法: 解析エラーをキャッチする'
+                      href: how-to-catch-parsing-errors.md
+                    - name: '方法: XmlReader からツリーを作成する'
+                      href: how-to-create-a-tree-from-an-xmlreader.md
+                    - name: '方法: XmlReader から XML フラグメントをストリーム出力する'
+                      href: how-to-stream-xml-fragments-from-an-xmlreader.md
+                - name: '方法: XmlWriter を使用して XML ツリーを設定する (LINQ to XML)'
+                  href: how-to-populate-an-xml-tree-with-an-xmlwriter-linq-to-xml.md
+                - name: '方法: XSD を使用して検証する (LINQ to XML)'
+                  href: how-to-validate-using-xsd-linq-to-xml.md
+                - name: XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
+                  href: valid-content-of-xelement-and-xdocument-objects3.md
+            - name: XML 名前空間の使用
+              href: working-with-xml-namespaces.md
+              items:
+                - name: 名前空間の概要 (LINQ to XML)
+                  href: namespaces-overview-linq-to-xml.md
+                - name: '方法: 名前空間を持つドキュメントを作成する (LINQ to XML)'
+                  href: how-to-create-a-document-with-namespaces-linq-to-xml.md
+                - name: '方法: 名前空間プレフィックスを制御する (LINQ to XML)'
+                  href: how-to-control-namespace-prefixes-linq-to-xml.md
+                - name: 'C# での既定の名前空間のスコープ'
+                  href: scope-of-default-namespaces.md
+                - name: '方法: 名前空間内の XML に対するクエリを記述する'
+                  href: how-to-write-queries-on-xml-in-namespaces.md
+            - name: XML ツリーのシリアル化
+              href: serializing-xml-trees.md
+              items:
+                - name: シリアル化時の空白の維持
+                  href: preserving-white-space-while-serializing.md
+                - name: XML 宣言付きのシリアル化
+                  href: serializing-with-an-xml-declaration.md
+                - name: ファイル、TextWriter、および XmlWriter へのシリアル化
+                  href: serializing-to-files-textwriters-and-xmlwriters.md
+                - name: XmlReader へのシリアル化 (XSLT の呼び出し)
+                  href: serializing-to-an-xmlreader-invoking-xslt.md
+            - name: LINQ to XML 軸
+              href: linq-to-xml-axes.md
+              items:
+                - name: LINQ to XML 軸の概要
+                  href: linq-to-xml-axes-overview.md
+                - name: '方法: 要素のコレクションを取得する (LINQ to XML)'
+                  href: how-to-retrieve-a-collection-of-elements-linq-to-xml.md
+                - name: '方法: 要素の値を取得する (LINQ to XML)'
+                  href: how-to-retrieve-the-value-of-an-element-linq-to-xml.md
+                - name: '方法: 要素名をフィルター処理する (LINQ to XML)'
+                  href: how-to-filter-on-element-names-linq-to-xml.md
+                - name: '方法: 軸メソッドの呼び出しを連結する (LINQ to XML)'
+                  href: how-to-chain-axis-method-calls-linq-to-xml.md
+                - name: '方法: 単一の子要素を取得する (LINQ to XML)'
+                  href: how-to-retrieve-a-single-child-element-linq-to-xml.md
+                - name: '方法: 属性のコレクションを取得する (LINQ to XML)'
+                  href: how-to-retrieve-a-collection-of-attributes-linq-to-xml.md
+                - name: '方法: 単一の属性を取得する (LINQ to XML)'
+                  href: how-to-retrieve-a-single-attribute-linq-to-xml.md
+                - name: '方法: 属性の値を取得する (LINQ to XML)'
+                  href: how-to-retrieve-the-value-of-an-attribute-linq-to-xml.md
+                - name: '方法: 要素の浅い値を取得する'
+                  href: how-to-retrieve-the-shallow-value-of-an-element.md
+            - name: XML ツリーのクエリ
+              href: querying-xml-trees.md
+              items:
+                - name: 基本的なクエリ (LINQ to XML)
+                  href: basic-queries-linq-to-xml.md
+                  items:
+                    - name: '方法: 特定の属性を持つ要素を検索する'
+                      href: how-to-find-an-element-with-a-specific-attribute.md
+                    - name: '方法: 特定の子要素を持つ要素を検索する'
+                      href: how-to-find-an-element-with-a-specific-child-element.md
+                    - name: XDocument のクエリと XElement のクエリ
+                      href: querying-an-xdocument-vs-querying-an-xelement.md
+                    - name: '方法: 特定の要素名を持つ子孫を検索する'
+                      href: how-to-find-descendants-with-a-specific-element-name.md
+                    - name: '方法: Descendants メソッドを使用して単一の子孫を検索する'
+                      href: how-to-find-a-single-descendant-using-the-descendants-method.md
+                    - name: '方法: 複雑なフィルターを使用してクエリを記述する'
+                      href: how-to-write-queries-with-complex-filtering.md
+                    - name: '方法: 省略可能な要素をフィルター処理する'
+                      href: how-to-filter-on-an-optional-element.md
+                    - name: '方法: 名前空間内のすべてのノードを検索する'
+                      href: how-to-find-all-nodes-in-a-namespace.md
+                    - name: '方法: 要素を並べ替える'
+                      href: how-to-sort-elements.md
+                    - name: '方法: 複数のキーに基づいて要素を並べ替える'
+                      href: how-to-sort-elements-on-multiple-keys.md
+                    - name: '方法: 中間値を計算する'
+                      href: how-to-calculate-intermediate-values.md
+                    - name: '方法: コンテキストに基づいて要素を検索するクエリを記述する'
+                      href: how-to-write-a-query-that-finds-elements-based-on-context.md
+                    - name: '方法: 空のクエリ結果セットをデバッグする'
+                      href: how-to-debug-empty-query-results-sets.md
+                - name: 射影と変換 (LINQ to XML)
+                  href: projections-and-transformations-linq-to-xml.md
+                  items:
+                    - name: '方法: LINQ to XML を使用してディクショナリを操作する'
+                      href: how-to-work-with-dictionaries-using-linq-to-xml.md
+                    - name: '方法: XML ツリーの構造を変換する'
+                      href: how-to-transform-the-shape-of-an-xml-tree.md
+                    - name: '方法: 射影の型を制御する'
+                      href: how-to-control-the-type-of-a-projection.md
+                    - name: '方法: 新しい型を射影する (LINQ to XML)'
+                      href: how-to-project-a-new-type-linq-to-xml.md
+                    - name: '方法: オブジェクト グラフを射影する'
+                      href: how-to-project-an-object-graph.md
+                    - name: '方法: 匿名型を射影する'
+                      href: how-to-project-an-anonymous-type.md
+                    - name: '方法: XML からテキスト ファイルを生成する'
+                      href: how-to-generate-text-files-from-xml.md
+                    - name: '方法: CSV ファイルから XML を生成する'
+                      href: how-to-generate-xml-from-csv-files.md
+                - name: 高度なクエリ手法 (LINQ to XML)
+                  href: advanced-query-techniques-linq-to-xml.md
+                  items:
+                    - name: '方法: 2 つのコレクションを結合する (LINQ to XML)'
+                      href: how-to-join-two-collections-linq-to-xml.md
+                    - name: '方法: グループ化を使用して階層を作成する'
+                      href: how-to-create-hierarchy-using-grouping.md
+                    - name: '方法: XPath を使用して LINQ to XML にクエリを実行する'
+                      href: how-to-query-linq-to-xml-using-xpath.md
+                    - name: '方法: LINQ to XML 軸メソッドを記述する'
+                      href: how-to-write-a-linq-to-xml-axis-method.md
+                    - name: '方法: テキストから XML へのストリーミング変換を実行する'
+                      href: how-to-perform-streaming-transformations-of-text-to-xml.md
+                    - name: '方法: ツリー内のすべてのノードを一覧表示する'
+                      href: how-to-list-all-nodes-in-a-tree.md
+                    - name: '方法: Office Open XML ドキュメントから段落を取得する'
+                      href: how-to-retrieve-paragraphs-from-an-office-open-xml-document.md
+                    - name: '方法: Office Open XML ドキュメントを変更する'
+                      href: how-to-modify-an-office-open-xml-document.md
+                    - name: '方法: ファイル システムから XML ツリーを設定する'
+                      href: how-to-populate-an-xml-tree-from-the-file-system.md
+                - name: XPath ユーザー向けの LINQ to XML
+                  href: linq-to-xml-for-xpath-users.md
+                  items:
+                    - name: XPath と LINQ to XML の比較
+                      href: comparison-of-xpath-and-linq-to-xml.md
+                    - name: '方法: 子要素を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-a-child-element-xpath-linq-to-xml.md
+                    - name: '方法: 子要素の一覧を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-a-list-of-child-elements-xpath-linq-to-xml.md
+                    - name: '方法: ルート要素を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-the-root-element-xpath-linq-to-xml.md
+                    - name: '方法: 子孫要素を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-descendant-elements-xpath-linq-to-xml.md
+                    - name: '方法: 属性をフィルター処理する (XPath-LINQ to XML)'
+                      href: how-to-filter-on-an-attribute-xpath-linq-to-xml.md
+                    - name: '方法: 関連要素を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-related-elements-xpath-linq-to-xml.md
+                    - name: '方法: 名前空間内の要素を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-elements-in-a-namespace-xpath-linq-to-xml.md
+                    - name: '方法: 先行する兄弟を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-preceding-siblings-xpath-linq-to-xml.md
+                    - name: '方法: 子要素の子孫を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-descendants-of-a-child-element-xpath-linq-to-xml.md
+                    - name: '方法: 2 つのロケーション パスの和集合を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-a-union-of-two-location-paths-xpath-linq-to-xml.md
+                    - name: '方法: 兄弟ノードを検索する (XPath-LINQ to XML)'
+                      href: how-to-find-sibling-nodes-xpath-linq-to-xml.md
+                    - name: '方法: 親の属性を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml.md
+                    - name: '方法: 特定の名前を持つ兄弟の属性を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-attributes-of-siblings-with-a-specific-name-xpath-linq-to-xml.md
+                    - name: '方法: 特定の属性を持つ要素を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-elements-with-a-specific-attribute-xpath-linq-to-xml.md
+                    - name: '方法: 位置に基づいて子要素を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-child-elements-based-on-position-xpath-linq-to-xml.md
+                    - name: '方法: 直前の兄弟を検索する (XPath-LINQ to XML)'
+                      href: how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml.md
+                - name: XML の純粋関数型変換
+                  href: pure-functional-transformations-of-xml.md
+                  items:
+                    - name: 純粋関数型変換の概要
+                      href: introduction-to-pure-functional-transformations.md
+                      items:
+                        - name: 概念と用語 (関数型変換)
+                          href: concepts-and-terminology-functional-transformation.md
+                        - name: 関数型プログラミングと命令型プログラミング
+                          href: functional-programming-vs-imperative-programming.md
+                        - name: 純粋関数へのリファクタリング
+                          href: refactoring-into-pure-functions.md
+                        - name: 関数型変換の適用範囲
+                          href: applicability-of-functional-transformation.md
+                        - name: XML の関数型変換
+                          href: functional-transformation-of-xml.md
+                    - name: 'チュートリアル: クエリの連結'
+                      href: tutorial-chaining-queries-together.md
+                      items:
+                        - name: LINQ to XML における遅延実行とレイジー評価
+                          href: deferred-execution-and-lazy-evaluation-in-linq-to-xml.md
+                        - name: 遅延実行の例
+                          href: deferred-execution-example.md
+                        - name: クエリの連結の例
+                          href: chaining-queries-example.md
+                        - name: 中間結果の具体化
+                          href: intermediate-materialization.md
+                        - name: 標準クエリ演算子の連結
+                          href: chaining-standard-query-operators-together.md
+                    - name: 'チュートリアル: WordprocessingML ドキュメント内のコンテンツの操作'
+                      href: tutorial-manipulating-content-in-a-wordprocessingml-document.md
+                      items:
+                        - name: WordprocessingML ドキュメントの構造
+                          href: shape-of-wordprocessingml-documents.md
+                        - name: ソースとなる Office Open XML ドキュメントの作成
+                          href: creating-the-source-office-open-xml-document.md
+                        - name: 既定の段落スタイルの検索
+                          href: finding-the-default-paragraph-style.md
+                        - name: 段落とそのスタイルの取得
+                          href: retrieving-the-paragraphs-and-their-styles.md
+                        - name: 段落のテキストの取得
+                          href: retrieving-the-text-of-the-paragraphs.md
+                        - name: 拡張メソッドを使用したリファクタリング
+                          href: refactoring-using-an-extension-method.md
+                        - name: 純粋関数によるリファクタリング
+                          href: refactoring-using-a-pure-function.md
+                        - name: 異なる構造の XML の射影
+                          href: projecting-xml-in-a-different-shape.md
+                        - name: Word 文書内のテキストの検索
+                          href: finding-text-in-word-documents.md
+                        - name: Office Open XML WordprocessingML ドキュメントの詳細
+                          href: details-of-office-open-xml-wordprocessingml-documents.md
+                          items:
+                            - name: スタイルを含む WordprocessingML ドキュメント
+                              href: wordprocessingml-document-with-styles.md
+                            - name: WordprocessingML ドキュメントのスタイル パーツ
+                              href: style-part-of-a-wordprocessingml-document.md
+                            - name: Office Open XML ドキュメント パーツを出力する例
+                              href: example-that-outputs-office-open-xml-document-parts.md
+            - name: XML ツリーの変更 (LINQ to XML)
+              href: modifying-xml-trees-linq-to-xml.md
+              items:
+                - name: メモリ内の XML ツリーの変更と関数型構築 (LINQ to XML)
+                  href: in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md
+                - name: XML ツリーへの要素、属性、およびノードの追加
+                  href: adding-elements-attributes-and-nodes-to-an-xml-tree.md
+                - name: XML ツリー内の要素、属性、およびノードの変更
+                  href: modifying-elements-attributes-and-nodes-in-an-xml-tree.md
+                - name: XML ツリーからの要素、属性、およびノードの削除
+                  href: removing-elements-attributes-and-nodes-from-an-xml-tree.md
+                - name: 名前と値のペアの保持
+                  href: maintaining-name-value-pairs.md
+                - name: '方法: XML ツリー全体の名前空間を変更する'
+                  href: how-to-change-the-namespace-for-an-entire-xml-tree.md
+            - name: パフォーマンス (LINQ to XML)
+              href: performance-linq-to-xml.md
+              items:
+                - name: 連結クエリのパフォーマンス (LINQ to XML)
+                  href: performance-of-chained-queries-linq-to-xml.md
+                - name: アトミック化された XName および XNamespace オブジェクト (LINQ to XML)
+                  href: atomized-xname-and-xnamespace-objects-linq-to-xml.md
+                - name: XName オブジェクトの事前アトミック化 (LINQ to XML)
+                  href: pre-atomization-of-xname-objects-linq-to-xml.md
+                - name: 静的にコンパイルされたクエリ (LINQ to XML)
+                  href: statically-compiled-queries-linq-to-xml.md
+            - name: 高度な LINQ to XML プログラミング
+              href: advanced-linq-to-xml-programming.md
+              items:
+                - name: LINQ to XML の注釈
+                  href: linq-to-xml-annotations.md
+                - name: LINQ to XML イベント
+                  href: linq-to-xml-events.md
+                - name: ノードでのプログラミング
+                  href: programming-with-nodes.md
+                - name: 宣言型コードと命令型コードの混在のバグ (LINQ to XML)
+                  href: mixed-declarative-code-imperative-code-bugs-linq-to-xml.md
+                - name: '方法: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する'
+                  href: how-to-stream-xml-fragments-with-access-to-header-information.md
+                - name: '方法: 大きな XML ドキュメントのストリーミング変換を実行する'
+                  href: how-to-perform-streaming-transform-of-large-xml-documents.md
+                - name: '方法: エンコードされたドキュメントを読み書きする'
+                  href: how-to-read-and-write-an-encoded-document.md
+                - name: XSLT を使用した XML ツリーの変換
+                  href: using-xslt-to-transform-an-xml-tree.md
+                - name: '方法: 注釈を使用して XSLT スタイルの LINQ to XML ツリーを変換する'
+                  href: how-to-use-annotations-to-transform-linq-to-xml-trees-in-an-xslt-style.md
+                - name: XElement オブジェクトを含むオブジェクト グラフのシリアル化
+                  href: serializing-object-graphs-that-contain-xelement-objects.md
+                  items:
+                    - name: '方法: XmlSerializer を使用してシリアル化する'
+                      href: how-to-serialize-using-xmlserializer.md
+                    - name: '方法: DataContractSerializer を使用してシリアル化する'
+                      href: how-to-serialize-using-datacontractserializer.md
+            - name: LINQ to XML のセキュリティ
+              href: linq-to-xml-security.md
+            - name: サンプル XML ドキュメント (LINQ to XML)
+              href: sample-xml-documents-linq-to-xml.md
+              items:
+                - name: 'サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)'
+                  href: sample-xml-file-typical-purchase-order-linq-to-xml-1.md
+                - name: 'サンプル XML ファイル:名前空間内の一般的な購買発注書'
+                  href: sample-xml-file-typical-purchase-order-in-a-namespace.md
+                - name: 'サンプル XML ファイル:複数の購買発注書 (LINQ to XML)'
+                  href: sample-xml-file-multiple-purchase-orders-linq-to-xml.md
+                - name: 'サンプル XML ファイル:名前空間内の複数の購買発注書'
+                  href: sample-xml-file-multiple-purchase-orders-in-a-namespace.md
+                - name: 'サンプル XML ファイル:テスト構成 (LINQ to XML)'
+                  href: sample-xml-file-test-configuration-linq-to-xml.md
+                - name: 'サンプル XML ファイル:名前空間内のテスト構成'
+                  href: sample-xml-file-test-configuration-in-a-namespace1.md
+                - name: 'サンプル XML ファイル:顧客と注文 (LINQ to XML)'
+                  href: sample-xml-file-customers-and-orders-linq-to-xml-2.md
+                - name: 'サンプル XSD ファイル:顧客と注文'
+                  href: sample-xsd-file-customers-and-orders1.md
+                - name: 'サンプル XML ファイル:名前空間内の顧客と注文'
+                  href: sample-xml-file-customers-and-orders-in-a-namespace.md
+                - name: 'サンプル XML ファイル:数値データ (LINQ to XML)'
+                  href: sample-xml-file-numerical-data-linq-to-xml.md
+                - name: 'サンプル XML ファイル:名前空間内の数値データ'
+                  href: sample-xml-file-numerical-data-in-a-namespace.md
+                - name: 'サンプル XML ファイル:書籍 (LINQ to XML)'
+                  href: sample-xml-file-books-linq-to-xml.md
+                - name: 'サンプル XML ファイル:統合購買発注書'
+                  href: sample-xml-file-consolidated-purchase-orders.md
+        - name: リファレンス (LINQ to XML)
+          href: reference-linq-to-xml.md
+    - name: LINQ to ADO.NET (ポータル ページ)
+      href: linq-to-adonet-portal-page.md
+    - name: データ ソースの LINQ クエリの有効化
+      href: enabling-a-data-source-for-linq-querying1.md
+    - name: Visual Studio IDE およびツールの LINQ のサポート
+      href: visual-studio-ide-and-tools-support-for-linq.md

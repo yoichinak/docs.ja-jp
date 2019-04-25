@@ -3,11 +3,11 @@ title: ファイアウォール手順
 ms.date: 03/30/2017
 ms.assetid: a7dc429f-65ac-4faf-974a-77d5fb977fe1
 ms.openlocfilehash: f1b576b4e413fa3bae70ef1eb8f8ed768e28e309
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295160"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59773798"
 ---
 # <a name="firewall-instructions"></a>ファイアウォール手順
 Windows Communication Foundation (WCF) のサンプルが機能できるようにいくつかのファイアウォールの プログラムとポートを有効にする必要があります。 サンプルの多くは、通信する際に 8000 ～ 8003 の範囲のポートと 9000 のポートを使用します。 既定ではファイアウォールが有効なので、こうしたポートにはアクセスできません。 サンプル用にファイアウォールを有効にするには、要件とセキュリティ環境に応じて次のいずれかの手順を完了する必要があります。  

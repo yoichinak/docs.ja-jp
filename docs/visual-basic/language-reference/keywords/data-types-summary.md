@@ -5,10 +5,10 @@ helpviewer_keywords:
 - data types [Visual Basic], Visual Basic
 ms.assetid: 4ea2ef2a-3d4d-42d9-9f8f-173a37c96e53
 ms.openlocfilehash: cb7d77d87e37cd4cdc4872fd862c575737a8d3cb
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58841122"
 ---
 # <a name="data-types-summary-visual-basic"></a>データ型の概要 (Visual Basic)

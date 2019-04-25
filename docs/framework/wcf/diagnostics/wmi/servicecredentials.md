@@ -3,11 +3,11 @@ title: ServiceCredentials
 ms.date: 03/30/2017
 ms.assetid: 9c780793-4785-46f7-add9-ac1ebeadb614
 ms.openlocfilehash: d9563bd3bfe067ad83bfa03e7c6375a9db933f14
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59230929"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59772103"
 ---
 # <a name="servicecredentials"></a>ServiceCredentials
 ServiceCredentials  

@@ -3,10 +3,10 @@ title: サンプル XML ファイル:3 内の一般的な購買発注
 ms.date: 07/20/2015
 ms.assetid: 38260901-c9f9-4240-9cbf-652c8b05021d
 ms.openlocfilehash: de0ac574b0f7b086592bc2d6afa3db3fdcebda78
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839678"
 ---
 # <a name="sample-xml-file-typical-purchase-order-in-a-namespace"></a>サンプル XML ファイル:名前空間内の一般的な購買発注書

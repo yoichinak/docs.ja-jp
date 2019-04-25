@@ -1,38 +1,31 @@
-items:
 - name: アンマネージ API リファレンス
   href: index.md
   items:
-  - name: 共有のデータ型
-    href: common-data-types-unmanaged-api-reference.md
-  - name: ALink API
-    href: alink/
-  - name: Authenticode
-    href: authenticode/
-  - name: 定数
-    href: constants-unmanaged-api-reference.md
-  - name: デバッグ
-    href: debugging/
-  - name: シンボル ストア診断
-    href: diagnostics/
-  - name: Fusion
-    href: fusion/
-  - name: ホスト
-    href: hosting/
-  - name: メタデータ
-    href: metadata/
-  - name: プロファイル
-    href: profiling/
-  - name: 厳密な名前付け
-    href: strong-naming/
-  - name: WMI およびパフォーマンス カウンター
-    href: wmi/
-  - name: Tlbexp ヘルパー関数
-    href: tlbexp/
-  - name: GUID_ManagedName 属性
-    href: guid-managedname-attribute.md
-ms.openlocfilehash: 48454d1cf9285a229de8d3b852d33c985c3b53bc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470898"
+    - name: 共有のデータ型
+      href: common-data-types-unmanaged-api-reference.md
+    - name: ALink API
+      href: alink/
+    - name: Authenticode
+      href: authenticode/
+    - name: 定数
+      href: constants-unmanaged-api-reference.md
+    - name: デバッグ
+      href: debugging/
+    - name: シンボル ストア診断
+      href: diagnostics/
+    - name: Fusion
+      href: fusion/
+    - name: ホスト
+      href: hosting/
+    - name: メタデータ
+      href: metadata/
+    - name: プロファイル
+      href: profiling/
+    - name: 厳密な名前付け
+      href: strong-naming/
+    - name: WMI およびパフォーマンス カウンター
+      href: wmi/
+    - name: Tlbexp ヘルパー関数
+      href: tlbexp/
+    - name: GUID_ManagedName 属性
+      href: guid-managedname-attribute.md

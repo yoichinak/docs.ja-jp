@@ -11,10 +11,10 @@ helpviewer_keywords:
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58821371"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>オブジェクト初期化子:名前付きの匿名型 (Visual Basic)
@@ -105,7 +105,7 @@ ms.locfileid: "58821371"
   
  使用することはできません型の名前が使用できないため、`As`を宣言する句`cust13`します。 型を推論する必要があります。 遅延バインディングを使用しない場合は、ローカル変数に匿名型の使用を制限します。  
   
- 匿名型の重大なサポートを提供する[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリ。 クエリで匿名型の使用に関する詳細については、[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)と[Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)を参照してください。  
+ 匿名型の重大なサポートを提供する[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]クエリ。 クエリで匿名型の使用に関する詳細については、次を参照してください。[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)と[Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)します。  
   
 ### <a name="remarks-about-anonymous-types"></a>匿名型についての解説  
   
@@ -113,7 +113,7 @@ ms.locfileid: "58821371"
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
-     キー プロパティの詳細については、[キー](../../../../visual-basic/language-reference/modifiers/key.md)を参照してください。  
+     キー プロパティの詳細については、次を参照してください。[キー](../../../../visual-basic/language-reference/modifiers/key.md)します。  
   
 -   このような名前付きの型、初期化子リスト匿名型の定義は、少なくとも 1 つのプロパティを宣言する必要があります。  
   

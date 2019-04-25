@@ -1,19 +1,12 @@
-items:
 - name: Tlbexp ヘルパー関数
   href: index.md
   items:
-  - name: GetTypeLibInfo 関数
-    href: gettypelibinfo-function.md
-  - name: LoadTypeLibWithResolver 関数
-    href: loadtypelibwithresolver-function.md
-  - name: ITypeLibResolver インターフェイス
-    href: itypelibresolver-interface.md
-    items:
-    - name: ResolveTypeLib メソッド
-      href: resolvetypelib-method.md
-ms.openlocfilehash: 0e93432ddbf8f67674a555cac4be9d07c268d9b7
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470003"
+    - name: GetTypeLibInfo 関数
+      href: gettypelibinfo-function.md
+    - name: LoadTypeLibWithResolver 関数
+      href: loadtypelibwithresolver-function.md
+    - name: ITypeLibResolver インターフェイス
+      href: itypelibresolver-interface.md
+      items:
+        - name: ResolveTypeLib メソッド
+          href: resolvetypelib-method.md

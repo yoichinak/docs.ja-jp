@@ -7,10 +7,10 @@ helpviewer_keywords:
 - Invoke control pattern
 ms.assetid: e5b1e239-49f8-468e-bfec-1fba02ec9ac4
 ms.openlocfilehash: 5c9d94aca6b9b53c505fa7419406a0d2fc4a0ae7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59134785"
 ---
 # <a name="implementing-the-ui-automation-invoke-control-pattern"></a>UI オートメーション Invoke コントロール パターンの実装
@@ -29,7 +29,7 @@ ms.locfileid: "59134785"
   
 -   通常、コントロールの呼び出しは、クリックまたはダブルクリックするか、Enter キー、定義済みのキーボード ショートカット、または何らかの代替的なキーの組み合わせを押すことによって実行されます。  
   
--   <xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> (関連付けられたアクションを実行するコントロールへの応答) としてアクティブ化されたコントロールで発生します。 可能な場合は、コントロールがアクションを完了し、ブロックせずに戻った後に、イベントを生成する必要があります。 次のシナリオでは、Invoke 要求を処理する前に Invoked イベントを生成する必要があります。  
+-   (関連付けられたアクションを実行したコントロールへの応答として) アクティブ化されたコントロールで<xref:System.Windows.Automation.InvokePatternIdentifiers.InvokedEvent> が生成されます。 可能な場合は、コントロールがアクションを完了し、ブロックせずに戻った後に、イベントを生成する必要があります。 次のシナリオでは、Invoke 要求を処理する前に Invoked イベントを生成する必要があります。  
   
     -   処理が完了するまで待機することが不可能または非現実的である。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "59134785"
   
 -   要素は、呼び出されるとすぐに [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーから消える場合があります。 そのため、イベント コールバックで提供された要素に情報を要求すると失敗することがあります。 推奨される回避策は、キャッシュされた情報をプリフェッチすることです。  
   
--   コントロールは、複数のコントロール パターンを実装できます。 たとえば、 [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] ツール バーの [塗りつぶしの色] コントロールは、 <xref:System.Windows.Automation.InvokePattern> コントロール パターンと <xref:System.Windows.Automation.ExpandCollapsePattern> コントロール パターンを実装しています。 <xref:System.Windows.Automation.ExpandCollapsePattern> メニューを公開し、<xref:System.Windows.Automation.InvokePattern>選択した色でアクティブな選択範囲を入力します。  
+-   コントロールは、複数のコントロール パターンを実装できます。 たとえば、 [!INCLUDE[TLA#tla_xl](../../../includes/tlasharptla-xl-md.md)] ツール バーの [塗りつぶしの色] コントロールは、 <xref:System.Windows.Automation.InvokePattern> コントロール パターンと <xref:System.Windows.Automation.ExpandCollapsePattern> コントロール パターンを実装しています。 <xref:System.Windows.Automation.ExpandCollapsePattern> はメニューを公開し、 <xref:System.Windows.Automation.InvokePattern> は選択された色でアクティブな選択内容を塗りつぶします。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iinvokeprovider"></a>IInvokeProvider の必須メンバー  
@@ -56,7 +56,7 @@ ms.locfileid: "59134785"
   
 |必須メンバー|メンバーの型|メモ|  
 |----------------------|-----------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|メソッド|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> 非同期の呼び出しは、ブロックすることがなくすぐに返す必要があります。<br /><br /> 呼び出されたときにモーダル ダイアログを直接的または間接的に表示するコントロールでは、この動作は特に重要です。 イベントを発生させたすべての UI オートメーション クライアントは、モーダル ダイアログが閉じられるまで、ブロックされたままになります。|  
+|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A>|メソッド|<xref:System.Windows.Automation.Provider.IInvokeProvider.Invoke%2A> は非同期呼び出しであるため、クライアントをブロックせずに即座に戻る必要があります。<br /><br /> 呼び出されたときにモーダル ダイアログを直接的または間接的に表示するコントロールでは、この動作は特に重要です。 イベントを発生させたすべての UI オートメーション クライアントは、モーダル ダイアログが閉じられるまで、ブロックされたままになります。|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>例外  
@@ -68,9 +68,9 @@ ms.locfileid: "59134785"
   
 ## <a name="see-also"></a>関連項目
 
-- [UI オートメーション コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
+- [UI Automation コントロール パターンの概要](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)
 - [UI オートメーション プロバイダーでのコントロール パターンのサポート](../../../docs/framework/ui-automation/support-control-patterns-in-a-ui-automation-provider.md)
 - [クライアントの UI オートメーション コントロール パターン](../../../docs/framework/ui-automation/ui-automation-control-patterns-for-clients.md)
 - [UI オートメーションを使用したコントロールの呼び出し](../../../docs/framework/ui-automation/invoke-a-control-using-ui-automation.md)
-- [UI オートメーション ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
+- [UI Automation ツリーの概要](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)
 - [UI オートメーションにおけるキャッシュの使用](../../../docs/framework/ui-automation/use-caching-in-ui-automation.md)

@@ -3,11 +3,11 @@ title: Match 式
 description: について説明しますが、どのようにF#match 式が式のパターンのセットとの比較に基づいている分岐を制御を提供します。
 ms.date: 04/19/2018
 ms.openlocfilehash: 8972cc012d2746cb720eeed1acee403948941425
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903956"
 ---
 # <a name="match-expressions"></a>Match 式
 
@@ -43,7 +43,7 @@ fun arg ->
     | ...
 ```
 
-ラムダ式の詳細については、[ラムダ式。`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)を参照してください。
+ラムダ式の詳細については、次を参照してください。[ラムダ式。`fun`キーワード](functions/lambda-expressions-the-fun-keyword.md)します。
 
 パターンのセット全体には、入力変数の考えられるすべての一致する必要がありますについて説明します。 ワイルドカード パターンを使用する多くの場合、(`_`)、比類のない以前の入力値と一致する最後のパターンとして。
 

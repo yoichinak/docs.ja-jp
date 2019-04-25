@@ -8,10 +8,10 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: ac8c6aa3-3c68-4a24-9827-3b6c829c1ebf
 ms.openlocfilehash: 53291a0e428b723cd7a6e7b1184639a7b3c3b972
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59141558"
 ---
 # <a name="optimizing-wpf-application-performance"></a>WPF アプリケーションのパフォーマンスの最適化
@@ -33,7 +33,7 @@ ms.locfileid: "59141558"
   
  [アプリケーション リソース](optimizing-performance-application-resources.md)  
   
- [テキスト](optimizing-performance-text.md)  
+ [[テキスト]](optimizing-performance-text.md)  
   
  [データ バインディング](optimizing-performance-data-binding.md)  
   
@@ -62,4 +62,4 @@ ms.locfileid: "59141558"
 - [データ バインディングの概要](../data/data-binding-overview.md)
 - [ナビゲーションの概要](../app-development/navigation-overview.md)
 - [アニメーションのヒントとテクニック](../graphics-multimedia/animation-tips-and-tricks.md)
-- [チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ](walkthrough-caching-application-data-in-a-wpf-application.md)
+- [チュートリアル: WPF アプリケーションでアプリケーション データのキャッシュ](walkthrough-caching-application-data-in-a-wpf-application.md)

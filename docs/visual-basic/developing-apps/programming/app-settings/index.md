@@ -2,9 +2,15 @@
 title: アプリケーション設定へのアクセス (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - 'My.Settings object [Visual Basic], application settings'
-  - 'examples [Visual Basic], application settings'
+- My.Settings object [Visual Basic], application settings
+- examples [Visual Basic], application settings
 ms.assetid: e38d0cc7-247a-46ca-ba04-f2913f0adb2e
+ms.openlocfilehash: 56bce47aa37b536c494e43d26bead3114e7dcfa1
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014415"
 ---
 # <a name="accessing-application-settings-visual-basic"></a>アプリケーション設定へのアクセス (Visual Basic)
 このセクションのトピックでは、`My.Settings` オブジェクトと、それを使用して実行できるタスクについて説明します。  

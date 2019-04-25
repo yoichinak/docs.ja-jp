@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: fe374932-67f5-487d-9325-f868812b92e4
 ms.openlocfilehash: 824d2a08ddd36317fcdb8caa1690decb2f9c432a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295888"
 ---
 # <a name="how-to-expose-a-feed-as-both-atom-and-rss"></a>方法: Atom および RSS の両方としてフィードを公開する
@@ -17,7 +17,7 @@ Windows Communication Foundation (WCF) では、配信フィードを公開す�
   
 ### <a name="to-create-a-basic-syndication-service"></a>基本的な配信サービスを作成するには  
   
-1. <xref:System.ServiceModel.Web.WebGetAttribute> 属性でマークされたインターフェイスを使用して、サービス コントラクトを定義します。 配信フィードとして公開される各操作は、<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> オブジェクトを返します。 <xref:System.ServiceModel.Web.WebGetAttribute> のパラメーターに注意してください。 `UriTemplate` このサービス操作の呼び出しに使用する URL を指定します。 このパラメーターの文字列には、リテラルと中かっこ内の変数が含まれています ({*形式*})。 この変数は、サービス操作の `format` パラメーターに対応します。 詳細については、「 <xref:System.UriTemplate> 」を参照してください。 `BodyStyle` このサービス操作が送受信するメッセージが書き込まれる方法に影響します。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> このサービス操作の間で送受信データ インフラストラクチャにより定義された XML 要素でラップされないことを指定します。 詳細については、「 <xref:System.ServiceModel.Web.WebMessageBodyStyle> 」を参照してください。  
+1. <xref:System.ServiceModel.Web.WebGetAttribute> 属性でマークされたインターフェイスを使用して、サービス コントラクトを定義します。 配信フィードとして公開される各操作は、<xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> オブジェクトを返します。 <xref:System.ServiceModel.Web.WebGetAttribute> のパラメーターに注意してください。 `UriTemplate` は、このサービス操作を呼び出すために使用される URL を指定します。 このパラメーターの文字列には、リテラルと中かっこ内の変数が含まれています ({*形式*})。 この変数は、サービス操作の `format` パラメーターに対応します。 詳細については、「 <xref:System.UriTemplate> 」を参照してください。 `BodyStyle` は、このサービス操作が送受信するメッセージの書き方に影響を与えます。 <xref:System.ServiceModel.Web.WebMessageBodyStyle.Bare> は、このサービス操作に送受信されるデータが、インフラストラクチャにより定義された XML 要素でラップされないことを指定します。 詳細については、「 <xref:System.ServiceModel.Web.WebMessageBodyStyle> 」を参照してください。  
   
      [!code-csharp[htAtomRss#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/htatomrss/cs/program.cs#0)]
      [!code-vb[htAtomRss#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/htatomrss/vb/program.vb#0)]  

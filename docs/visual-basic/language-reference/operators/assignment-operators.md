@@ -8,10 +8,10 @@ helpviewer_keywords:
 - assignment operators [Visual Basic]
 ms.assetid: 43b7e40c-b7af-45f6-b100-198a90f2561e
 ms.openlocfilehash: 217ae092872b5de1638d88051aed1f8a4e785b7d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58829058"
 ---
 # <a name="assignment-operators-visual-basic"></a>代入演算子 (Visual Basic)

@@ -3,10 +3,10 @@ title: SQL と CLR の型マッピング
 ms.date: 07/23/2018
 ms.assetid: 4ed76327-54a7-414b-82a9-7579bfcec04b
 ms.openlocfilehash: a2c70f5243dc3506a26824c83beb3ff454482f10
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152491"
 ---
 # <a name="sql-clr-type-mapping"></a>SQL と CLR の型マッピング
@@ -18,9 +18,9 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
 -   [既定の型マッピング](#DefaultTypeMapping)  
   
--   [型マッピングと実行時動作の関係](#BehaviorMatrix)  
+-   [型マッピングと実行時の動作の関係](#BehaviorMatrix)  
   
--   [CLR と SQL の実行時の動作の違い](#BehaviorDiffs)  
+-   [CLR と SQL の実行の動作の相違](#BehaviorDiffs)  
   
 -   [Enum 型のマッピング](#EnumMapping)  
   
@@ -28,7 +28,7 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
 -   [テキストおよび XML のマッピング](#TextMapping)  
   
--   [日付および時刻のマッピング](#DateMapping)  
+-   [日付し、時刻のマッピング](#DateMapping)  
   
 -   [バイナリのマッピング](#BinaryMapping)  
   
@@ -104,7 +104,7 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
  次の表に、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドで使用される既定の型マッピングを示します。既定の型マッピングでは、オブジェクト モデルまたは外部マッピング ファイルで定義された CLR 型にマップするために作成される SQL 列の型が定義されています。  
   
-|CLR 型|既定で使用される SQL Server の種類 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 型|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> で使用される既定の SQL Server 型|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Boolean?displayProperty=nameWithType>|`BIT`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`TINYINT`|  
@@ -142,12 +142,12 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
  次の表に、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドで使用される既定の型マッピングを示します。既定の型マッピングでは、オブジェクト モデルまたは外部マッピング ファイルで定義された CLR 型にマップするために作成される SQL 列の型が定義されています。  
   
-|CLR 型|既定で使用される SQL Server の種類 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 型|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> で使用される既定の SQL Server 型|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Char?displayProperty=nameWithType>|`NCHAR(1)`|  
 |<xref:System.String?displayProperty=nameWithType>|`NVARCHAR(4000)`|  
 |<xref:System.Char?displayProperty=nameWithType>[]|`NVARCHAR(4000)`|  
-|実装するカスタム型`Parse()`と `ToString()`|`NVARCHAR(MAX)`|  
+|`Parse()` および `ToString()` を実装するカスタム型|`NVARCHAR(MAX)`|  
   
  これ以外にもさまざまなテキスト ベースおよび XML のマッピングを選択できますが、一部のマッピングでは、データベースに対する変換操作中にオーバーフローやデータ損失の例外が発生することがあります。 詳細については、次を参照してください。、[型マッピングの実行時動作関係](#BehaviorMatrix)します。  
   
@@ -185,7 +185,7 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
  次の表に、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドで使用される既定の型マッピングを示します。既定の型マッピングでは、オブジェクト モデルまたは外部マッピング ファイルで定義された CLR 型にマップするために作成される SQL 列の型が定義されています。  
   
-|CLR 型|既定で使用される SQL Server の種類 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 型|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> で使用される既定の SQL Server 型|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.DateTime?displayProperty=nameWithType>|`DATETIME`|  
 |<xref:System.DateTimeOffset?displayProperty=nameWithType>|`DATETIMEOFFSET`|  
@@ -199,7 +199,7 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
 ### <a name="systemdatetime"></a>System.Datetime  
  CLR の <xref:System.DateTime?displayProperty=nameWithType> 型の範囲と有効桁数の値は、`DATETIME` メソッドの既定の型マッピングである SQL Server の <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> 型の範囲と有効桁数より大きな値です。 `DATETIME` の範囲外の日付に関連する例外を回避するには、Microsoft SQL Server 2008 以降で利用できる `DATETIME2` を使用してください。 `DATETIME2` 範囲と、CLR の有効桁数に一致できる<xref:System.DateTime?displayProperty=nameWithType>します。  
   
- SQL Server の日付には、CLR で十分にサポートされている機能である <xref:System.TimeZone> の概念がありません。 <xref:System.TimeZone> 値は、データベースには保存<xref:System.TimeZone>元に関係なく、変換<xref:System.DateTimeKind>情報。 <xref:System.DateTime> 値がデータベースから取得される場合、その値は、<xref:System.DateTime> が <xref:System.DateTimeKind> の状態で、そのまま <xref:System.DateTimeKind.Unspecified> に読み込まれます。 詳細についてはサポートされている<xref:System.DateTime?displayProperty=nameWithType>メソッドを参照してください[System.DateTime メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)します。  
+ SQL Server の日付には、CLR で十分にサポートされている機能である <xref:System.TimeZone> の概念がありません。 <xref:System.TimeZone> の値は、元の <xref:System.TimeZone> の情報にかかわらず、<xref:System.DateTimeKind> 変換なしでそのまま保存されます。 <xref:System.DateTime> 値がデータベースから取得される場合、その値は、<xref:System.DateTime> が <xref:System.DateTimeKind> の状態で、そのまま <xref:System.DateTimeKind.Unspecified> に読み込まれます。 詳細についてはサポートされている<xref:System.DateTime?displayProperty=nameWithType>メソッドを参照してください[System.DateTime メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-datetime-methods.md)します。  
   
 ### <a name="systemtimespan"></a>System.TimeSpan  
  Microsoft SQL Server 2008 および .NET Framework 3.5 SP1 では、CLR の <xref:System.TimeSpan?displayProperty=nameWithType> 型を SQL Server の `TIME` 型にマップできます。 ただし、CLR の <xref:System.TimeSpan?displayProperty=nameWithType> でサポートされる範囲と SQL Server `TIME` 型でサポートされる範囲には大きな差があります。 時間を表す 0 より小さい値または 23:59:59.9999999 より大きい値を SQL の `TIME` にマップすると、オーバーフロー例外が発生します。 詳細については、次を参照してください。 [System.TimeSpan メソッド](../../../../../../docs/framework/data/adonet/sql/linq/system-timespan-methods.md)します。  
@@ -221,7 +221,7 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
  次の表に、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドで使用される既定の型マッピングを示します。既定の型マッピングでは、オブジェクト モデルまたは外部マッピング ファイルで定義された CLR 型にマップするために作成される SQL 列の型が定義されています。  
   
-|CLR 型|既定で使用される SQL Server の種類 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 型|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> で使用される既定の SQL Server 型|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Data.Linq.Binary?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
 |<xref:System.Byte?displayProperty=nameWithType>|`VARBINARY(MAX)`|  
@@ -249,7 +249,7 @@ LINQ to SQL では、リレーショナル データベースのデータ モデ
   
  次の表に、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドで使用される既定の型マッピングを示します。既定の型マッピングでは、オブジェクト モデルまたは外部マッピング ファイルで定義された CLR 型にマップするために作成される SQL 列の型が定義されています。  
   
-|CLR 型|既定で使用される SQL Server の種類 <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType>|  
+|CLR 型|<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> で使用される既定の SQL Server 型|  
 |--------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|  
 |<xref:System.Guid?displayProperty=nameWithType>|`UNIQUEIDENTIFIER`|  
 |<xref:System.Object?displayProperty=nameWithType>|`SQL_VARIANT`|  

@@ -3,10 +3,10 @@ title: リプレイ攻撃
 ms.date: 03/30/2017
 ms.assetid: 7a17e040-93cd-4432-81b9-9f62fec78c8f
 ms.openlocfilehash: fefcb533cedb5405736ecda70c6879ebe00b8b49
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59186759"
 ---
 # <a name="replay-attacks"></a>リプレイ攻撃
@@ -43,4 +43,4 @@ A*リプレイ攻撃*攻撃者は、2 つのパーティ間のメッセージの
 - [権限の昇格](../../../../docs/framework/wcf/feature-details/elevation-of-privilege.md)
 - [サービス拒否](../../../../docs/framework/wcf/feature-details/denial-of-service.md)
 - [改変](../../../../docs/framework/wcf/feature-details/tampering.md)
-- [サポートされていないシナリオ](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)
+- [サポートされていないシナリオ:](../../../../docs/framework/wcf/feature-details/unsupported-scenarios.md)

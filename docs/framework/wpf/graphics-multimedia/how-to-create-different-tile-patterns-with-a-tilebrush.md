@@ -10,11 +10,11 @@ helpviewer_keywords:
 - creating [WPF], tile patterns with TileBrush
 ms.assetid: 5aa46632-3527-4668-9d8d-0375c8af28aa
 ms.openlocfilehash: c1051b234961eee9ae740af2abac3d64c523656c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59227406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905134"
 ---
 # <a name="how-to-create-different-tile-patterns-with-a-tilebrush"></a>方法: TileBrush を使用してさまざまなタイル パターンを作成する
 この例は、使用する方法を示します、<xref:System.Windows.Media.TileBrush.TileMode%2A>のプロパティを<xref:System.Windows.Media.TileBrush>パターンを作成します。  

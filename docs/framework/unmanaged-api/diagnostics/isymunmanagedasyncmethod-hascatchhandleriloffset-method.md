@@ -5,10 +5,10 @@ ms.assetid: a9ce105c-6495-49ab-b0e5-903a48ebadb3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: aa9583442e9ed76d4064e4f10089b17db961ba9c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59125969"
 ---
 # <a name="isymunmanagedasyncmethodhascatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethod::HasCatchHandlerILOffset メソッド

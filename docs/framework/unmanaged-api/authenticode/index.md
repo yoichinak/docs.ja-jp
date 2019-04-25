@@ -5,11 +5,11 @@ ms.assetid: 7e8cc303-6e77-4116-aa8b-7ea297a3a467
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 408219307015d5c39cb581b3884ed9810f4c0566
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59216354"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941632"
 ---
 # <a name="authenticode-unmanaged-api-reference"></a>Authenticode (アンマネージ API リファレンス)
 Authenticode XrML ライセンスの作成および検証モジュールをサポートします。  

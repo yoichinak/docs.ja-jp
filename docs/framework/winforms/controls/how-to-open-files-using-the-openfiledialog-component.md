@@ -10,11 +10,11 @@ helpviewer_keywords:
 - files [Windows Forms], opening with OpenFileDialog component
 ms.assetid: 9d88367a-cc21-4ffd-be74-89fd63767d35
 ms.openlocfilehash: 7f4e96f1714a182647665f12e29d38f2b8037478
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59159108"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913459"
 ---
 # <a name="how-to-open-files-with-the-openfiledialog"></a>方法: それは、OpenFileDialog を開いているファイル 
 

@@ -1,5 +1,5 @@
 ---
-title: リソース ファイルにリンクできません '<filename>'。 <error message>
+title: "リソース ファイル '<filename>' にリンクできません : <error message>"
 ms.date: 07/20/2015
 f1_keywords:
 - bc30144
@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30144
 ms.assetid: 67ae276e-80d4-4162-ba00-e546c9294340
 ms.openlocfilehash: cae65e1637c29ecfdec07d6a5df27e71b6460c01
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59327816"
 ---
 # <a name="unable-to-link-to-resource-file-filename-error-message"></a>リソース ファイルにリンクできません '\<filename >':\<エラー メッセージ >
@@ -28,4 +28,4 @@ Visual Basic コンパイラでは、マニフェストを持つアセンブリ�
 ## <a name="see-also"></a>関連項目
 
 - [Al.exe](../../../framework/tools/al-exe-assembly-linker.md)
-- [Talk to Us](/visualstudio/ide/talk-to-us)
+- [ご意見](/visualstudio/ide/talk-to-us)

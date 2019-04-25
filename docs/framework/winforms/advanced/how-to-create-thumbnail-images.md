@@ -9,10 +9,10 @@ helpviewer_keywords:
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
 ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59341492"
 ---
 # <a name="how-to-create-thumbnail-images"></a>方法: サムネイル イメージを作成する
@@ -52,5 +52,5 @@ ms.locfileid: "59341492"
   
 ## <a name="see-also"></a>関連項目
 
-- [イメージ、ビットマップ、およびメタファイル](images-bitmaps-and-metafiles.md)
+- [イメージ、ビットマップ、メタファイル](images-bitmaps-and-metafiles.md)
 - [イメージ、ビットマップ、アイコン、およびメタファイルの操作](working-with-images-bitmaps-icons-and-metafiles.md)

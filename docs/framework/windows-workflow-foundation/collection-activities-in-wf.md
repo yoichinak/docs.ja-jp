@@ -3,14 +3,14 @@ title: WF 内のコレクション アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 2680c3e2-9902-4968-b98d-cab776103dbe
 ms.openlocfilehash: 6e4b9ce6f967ba9405f55dbf5fd4708d3319b458
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59133787"
 ---
 # <a name="collection-activities-in-wf"></a>WF 内のコレクション アクティビティ
-コレクション アクティビティはワークフローのコレクション オブジェクトの作業に使用します。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 追加、コレクションから項目を削除して、コレクション内の項目の存在をテスト、およびコレクションの消去のシステム標準アクティビティがあります。 `ExistsInCollection` `RemoveFromCollection`が、<xref:System.Activities.OutArgument%601>型の<xref:System.Boolean>結果を示します。  
+コレクション アクティビティはワークフローのコレクション オブジェクトの作業に使用します。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には、コレクション内の項目の追加および削除、コレクション内の項目の存在を確認するテスト、およびコレクションの消去を行うシステム標準アクティビティがあります。 `ExistsInCollection` `RemoveFromCollection`が、<xref:System.Activities.OutArgument%601>型の<xref:System.Boolean>結果を示します。  
   
 > [!IMPORTANT]
 >  コレクション アクティビティが、基礎となるコレクション オブジェクトの設定前に実行された場合、<xref:System.InvalidOperationException> がスローされ、アクティビティは失敗します。  
@@ -225,7 +225,7 @@ Activity wf = new Sequence
 </Sequence>  
 ```  
   
- 使用して上記のコード サンプルを作成することも<xref:Microsoft.CSharp.Activities.CSharpValue%601>の代わりに <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601>  
+ 上のコード サンプルは、<xref:Microsoft.CSharp.Activities.CSharpValue%601> の代わりに <xref:Microsoft.VisualBasic.Activities.VisualBasicValue%601> を使用しても作成できます。  
   
 ```csharp
 Variable<ICollection<string>> fruitList = new Variable<ICollection<string>>  

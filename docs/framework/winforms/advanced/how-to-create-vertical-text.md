@@ -11,10 +11,10 @@ helpviewer_keywords:
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
 ms.openlocfilehash: 75f5d8faa4dc4b7e022cd6de2e6db49f4fa9030c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59190224"
 ---
 # <a name="how-to-create-vertical-text"></a>方法: 垂直方向のテキストを作成する
@@ -32,8 +32,8 @@ ms.locfileid: "59190224"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs>`e`、はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
+-   前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs> `e` 、はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: GDI を使用してテキストを描画する](how-to-draw-text-with-gdi.md)
+- [方法: GDI を使用してテキストを描画します。](how-to-draw-text-with-gdi.md)

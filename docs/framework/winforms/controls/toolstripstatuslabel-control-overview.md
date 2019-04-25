@@ -8,11 +8,11 @@ helpviewer_keywords:
 - status bars
 ms.assetid: 0b9c991e-a9fa-4609-9e1b-caadaef93821
 ms.openlocfilehash: cf4c23f385ba624befdc17c42145d20e184792b9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59195112"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59975911"
 ---
 # <a name="toolstripstatuslabel-control-overview"></a>ToolStripStatusLabel コントロールの概要
 <xref:System.Windows.Forms.ToolStripStatusLabel>のラベルを<xref:System.Windows.Forms.StatusStrip>します。 ように、<xref:System.Windows.Forms.Label>または<xref:System.Windows.Forms.ToolStripLabel>、<xref:System.Windows.Forms.ToolStripStatusLabel>テキスト、画像、またはその両方のクリック可能では非表示領域を提供します。 <xref:System.Windows.Forms.ToolStripStatusLabel>によってホストされている、<xref:System.Windows.Forms.StatusStrip>します。  

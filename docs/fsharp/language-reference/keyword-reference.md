@@ -3,11 +3,11 @@ title: キーワード リファレンス
 description: すべての F# 言語のキーワードに関する情報へのリンクを検索します。
 ms.date: 05/16/2016
 ms.openlocfilehash: d55846fe7c8d31454b6bc8684de75546800df7d6
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57845295"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904099"
 ---
 # <a name="keyword-reference"></a>キーワード リファレンス
 

@@ -19,10 +19,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58825457"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>プロシージャのパラメーターと引数 (Visual Basic)
@@ -38,7 +38,7 @@ ms.locfileid: "58825457"
   
  ![パラメーターに引数を渡すことを示す図](./media/procedure-parameters-and-arguments/pass-argument-parameter.gif)  
   
- 詳細については、[の相違点の間でパラメーターと引数](./differences-between-parameters-and-arguments.md)を参照してください。  
+ 詳細については、次を参照してください。[の相違点の間でパラメーターと引数](./differences-between-parameters-and-arguments.md)します。  
   
 ## <a name="parameter-data-type"></a>パラメーターのデータ型  
  使用して、パラメーターのデータ型を定義する、`As`宣言内の句。 たとえば、次の関数は、文字列と整数を受け取ります。  

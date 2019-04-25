@@ -5,11 +5,11 @@ ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59199896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868531"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>例:データ バインド時の例外の処理
 > [!NOTE]
@@ -61,5 +61,5 @@ Windows_UI_Xaml!DirectUI::PropertyPathListener::ConnectPathStep+0x113
   
 ## <a name="see-also"></a>関連項目
 
-- [作業の開始](../../../docs/framework/net-native/getting-started-with-net-native.md)
+- [はじめに](../../../docs/framework/net-native/getting-started-with-net-native.md)
 - [例:動的プログラミングのトラブルシューティング](../../../docs/framework/net-native/example-troubleshooting-dynamic-programming.md)

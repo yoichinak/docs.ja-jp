@@ -1,12 +1,5 @@
-items:
 - name: Windows フォームの構成セクション
   href: index.md
   items:
-  - name: Add 要素
-    href: windows-forms-add-configuration-element.md
-ms.openlocfilehash: 5b9177298a7163f196bea82676b8a9c0fdab2755
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470227"
+    - name: Add 要素
+      href: windows-forms-add-configuration-element.md

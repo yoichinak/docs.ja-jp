@@ -1,162 +1,155 @@
-items:
 - name: DataSet、DataTable、および DataView
   href: index.md
   items:
-  - name: DataSet の作成
-    href: creating-a-dataset.md
-  - name: DataSet への DataTable の追加
-    href: adding-a-datatable-to-a-dataset.md
-  - name: DataRelation の追加
-    href: adding-datarelations.md
-  - name: DataRelation の移動
-    href: navigating-datarelations.md
-  - name: DataSet の内容のマージ
-    href: merging-dataset-contents.md
-  - name: DataSet の内容のコピー
-    href: copying-dataset-contents.md
-  - name: DataSet のイベント処理
-    href: handling-dataset-events.md
-  - name: 型指定されたデータセット
-    href: typed-datasets.md
-    items:
-    - name: 厳密に型指定された DataSet の生成
-      href: generating-strongly-typed-datasets.md
-    - name: 型指定された DataSet の注釈
-      href: annotating-typed-datasets.md
-  - name: DataTables
-    href: datatables.md
-    items:
-    - name: DataTable の作成
-      href: creating-a-datatable.md
-    - name: DataTable スキーマの定義
-      href: datatable-schema-definition.md
+    - name: DataSet の作成
+      href: creating-a-dataset.md
+    - name: DataSet への DataTable の追加
+      href: adding-a-datatable-to-a-dataset.md
+    - name: DataRelation の追加
+      href: adding-datarelations.md
+    - name: DataRelation の移動
+      href: navigating-datarelations.md
+    - name: DataSet の内容のマージ
+      href: merging-dataset-contents.md
+    - name: DataSet の内容のコピー
+      href: copying-dataset-contents.md
+    - name: DataSet のイベント処理
+      href: handling-dataset-events.md
+    - name: 型指定されたデータセット
+      href: typed-datasets.md
       items:
-      - name: DataTable への列の追加
-        href: adding-columns-to-a-datatable.md
-      - name: 式列の作成
-        href: creating-expression-columns.md
-      - name: AutoIncrement 列の作成
-        href: creating-autoincrement-columns.md
-      - name: 主キーの定義
-        href: defining-primary-keys.md
-      - name: DataTable の制約
-        href: datatable-constraints.md
-    - name: DataTable 内のデータの操作
-      href: manipulating-data-in-a-datatable.md
+        - name: 厳密に型指定された DataSet の生成
+          href: generating-strongly-typed-datasets.md
+        - name: 型指定された DataSet の注釈
+          href: annotating-typed-datasets.md
+    - name: DataTables
+      href: datatables.md
       items:
-      - name: DataTable へのデータの追加
-        href: adding-data-to-a-datatable.md
-      - name: DataTable 内のデータの表示
-        href: viewing-data-in-a-datatable.md
-      - name: Load メソッド
-        href: the-load-method.md
-      - name: DataTable の編集
-        href: datatable-edits.md
-      - name: 行の状態とバージョン
-        href: row-states-and-row-versions.md
-      - name: DataRow の削除
-        href: datarow-deletion.md
-      - name: 行エラー情報
-        href: row-error-information.md
-      - name: AcceptChange と RejectChange
-        href: acceptchanges-and-rejectchanges.md
-    - name: DataTable イベントの処理
-      href: handling-datatable-events.md
-  - name: DataTableReader
-    href: datatablereaders.md
-    items:
-    - name: DataReader の作成
-      href: creating-a-datareader.md
-    - name: DataTable の移動
-      href: navigating-datatables.md
-  - name: DataView
-    href: dataviews.md
-    items:
-    - name: DataView の作成
-      href: creating-a-dataview.md
-    - name: データの並べ替えとフィルター処理
-      href: sorting-and-filtering-data.md
-    - name: DataRow および DataRowView
-      href: datarows-and-datarowviews.md
-    - name: 行の検索
-      href: finding-rows.md
-    - name: ChildView とリレーション
-      href: childviews-and-relations.md
-    - name: DataView の変更
-      href: modifying-dataviews.md
-    - name: DataView イベントの処理
-      href: handling-dataview-events.md
-    - name: DataViews の管理
-      href: managing-dataviews.md
-    - name: DataView からの DataTable の作成
-      href: creating-a-datatable-from-a-dataview.md
-  - name: DataSet での XML の使用
-    href: using-xml-in-a-dataset.md
-    items:
-    - name: DiffGrams
-      href: diffgrams.md
-    - name: XML からの DataSet の読み込み
-      href: loading-a-dataset-from-xml.md
-    - name: DataSet 内容の XML データとしての書き込み
-      href: writing-dataset-contents-as-xml-data.md
-    - name: XML の DataSet スキーマ情報の読み込み
-      href: loading-dataset-schema-information-from-xml.md
-    - name: XSD としての DataSet スキーマ情報の書き込み
-      href: writing-dataset-schema-information-as-xsd.md
-    - name: DataSet と XmlDataDocument の同期
-      href: dataset-and-xmldatadocument-synchronization.md
+        - name: DataTable の作成
+          href: creating-a-datatable.md
+        - name: DataTable スキーマの定義
+          href: datatable-schema-definition.md
+          items:
+            - name: DataTable への列の追加
+              href: adding-columns-to-a-datatable.md
+            - name: 式列の作成
+              href: creating-expression-columns.md
+            - name: AutoIncrement 列の作成
+              href: creating-autoincrement-columns.md
+            - name: 主キーの定義
+              href: defining-primary-keys.md
+            - name: DataTable の制約
+              href: datatable-constraints.md
+        - name: DataTable 内のデータの操作
+          href: manipulating-data-in-a-datatable.md
+          items:
+            - name: DataTable へのデータの追加
+              href: adding-data-to-a-datatable.md
+            - name: DataTable 内のデータの表示
+              href: viewing-data-in-a-datatable.md
+            - name: Load メソッド
+              href: the-load-method.md
+            - name: DataTable の編集
+              href: datatable-edits.md
+            - name: 行の状態とバージョン
+              href: row-states-and-row-versions.md
+            - name: DataRow の削除
+              href: datarow-deletion.md
+            - name: 行エラー情報
+              href: row-error-information.md
+            - name: AcceptChange と RejectChange
+              href: acceptchanges-and-rejectchanges.md
+        - name: DataTable イベントの処理
+          href: handling-datatable-events.md
+    - name: DataTableReader
+      href: datatablereaders.md
       items:
-      - name: DataSet と XmlDataDocument の同期
-        href: synchronizing-a-dataset-with-an-xmldatadocument.md
-      - name: DataSet に対する XPath クエリの実行
-        href: performing-an-xpath-query-on-a-dataset.md
-      - name: DataSet への XSLT 変換の適用
-        href: applying-an-xslt-transform-to-a-dataset.md
-    - name: DataRelation の入れ子化
-      href: nesting-datarelations.md
-    - name: XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
-      href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
+        - name: DataReader の作成
+          href: creating-a-datareader.md
+        - name: DataTable の移動
+          href: navigating-datatables.md
+    - name: DataView
+      href: dataviews.md
       items:
-      - name: XML スキーマ (XSD) 制約の DataSet 制約への割り当て
-        href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
-        items:
-        - name: XML スキーマ (XSD) の UNIQUE 制約の DataSet 制約への割り当て
-          href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
-        - name: XML スキーマ (XSD) のキー制約の DataSet 制約への割り当て
-          href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
-        - name: XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て
-          href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
-      - name: XML スキーマ (XSD) からの DataSet リレーションの生成
-        href: generating-dataset-relations-from-xml-schema-xsd.md
-        items:
-        - name: 入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て
-          href: map-implicit-relations-between-nested-schema-elements.md
-        - name: 入れ子になっている要素に指定したリレーションシップの割り当て
-          href: map-relations-specified-for-nested-elements.md
-        - name: 入れ子になっていない要素間のリレーションの指定
-          href: specify-relations-between-elements-with-no-nesting.md
-      - name: XML スキーマ制約およびリレーションシップ
-        href: xml-schema-constraints-and-relationships.md
-    - name: XML からの DataSet リレーショナル構造の推論
-      href: inferring-dataset-relational-structure-from-xml.md
+        - name: DataView の作成
+          href: creating-a-dataview.md
+        - name: データの並べ替えとフィルター処理
+          href: sorting-and-filtering-data.md
+        - name: DataRow および DataRowView
+          href: datarows-and-datarowviews.md
+        - name: 行の検索
+          href: finding-rows.md
+        - name: ChildView とリレーション
+          href: childviews-and-relations.md
+        - name: DataView の変更
+          href: modifying-dataviews.md
+        - name: DataView イベントの処理
+          href: handling-dataview-events.md
+        - name: DataViews の管理
+          href: managing-dataviews.md
+        - name: DataView からの DataTable の作成
+          href: creating-a-datatable-from-a-dataview.md
+    - name: DataSet での XML の使用
+      href: using-xml-in-a-dataset.md
       items:
-      - name: DataSet スキーマの推論プロセスの概要
-        href: summary-of-the-dataset-schema-inference-process.md
-      - name: テーブルの推論
-        href: inferring-tables.md
-      - name: 列の推論
-        href: inferring-columns.md
-      - name: リレーションシップの推論
-        href: inferring-relationships.md
-      - name: 要素のテキストの推論
-        href: inferring-element-text.md
-      - name: 推論の制限事項
-        href: inference-limitations.md
-  - name: XML Web サービスからの DataSet の使用
-    href: consuming-a-dataset-from-an-xml-web-service.md
-ms.openlocfilehash: 739874c03720eac9e49db2f1e80a8bcafd28d1f8
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469762"
+        - name: DiffGrams
+          href: diffgrams.md
+        - name: XML からの DataSet の読み込み
+          href: loading-a-dataset-from-xml.md
+        - name: DataSet 内容の XML データとしての書き込み
+          href: writing-dataset-contents-as-xml-data.md
+        - name: XML の DataSet スキーマ情報の読み込み
+          href: loading-dataset-schema-information-from-xml.md
+        - name: XSD としての DataSet スキーマ情報の書き込み
+          href: writing-dataset-schema-information-as-xsd.md
+        - name: DataSet と XmlDataDocument の同期
+          href: dataset-and-xmldatadocument-synchronization.md
+          items:
+            - name: DataSet と XmlDataDocument の同期
+              href: synchronizing-a-dataset-with-an-xmldatadocument.md
+            - name: DataSet に対する XPath クエリの実行
+              href: performing-an-xpath-query-on-a-dataset.md
+            - name: DataSet への XSLT 変換の適用
+              href: applying-an-xslt-transform-to-a-dataset.md
+        - name: DataRelation の入れ子化
+          href: nesting-datarelations.md
+        - name: XML スキーマ (XSD) からの DataSet リレーショナル構造の派生
+          href: deriving-dataset-relational-structure-from-xml-schema-xsd.md
+          items:
+            - name: XML スキーマ (XSD) 制約の DataSet 制約への割り当て
+              href: mapping-xml-schema-xsd-constraints-to-dataset-constraints.md
+              items:
+                - name: XML スキーマ (XSD) の UNIQUE 制約の DataSet 制約への割り当て
+                  href: map-unique-xml-schema-xsd-constraints-to-dataset-constraints.md
+                - name: XML スキーマ (XSD) のキー制約の DataSet 制約への割り当て
+                  href: map-key-xml-schema-xsd-constraints-to-dataset-constraints.md
+                - name: XML スキーマ (XSD) のキー参照制約の DataSet 制約への割り当て
+                  href: map-keyref-xml-schema-xsd-constraints-to-dataset-constraints.md
+            - name: XML スキーマ (XSD) からの DataSet リレーションの生成
+              href: generating-dataset-relations-from-xml-schema-xsd.md
+              items:
+                - name: 入れ子になっているスキーマ要素間の暗黙的なリレーションの割り当て
+                  href: map-implicit-relations-between-nested-schema-elements.md
+                - name: 入れ子になっている要素に指定したリレーションシップの割り当て
+                  href: map-relations-specified-for-nested-elements.md
+                - name: 入れ子になっていない要素間のリレーションの指定
+                  href: specify-relations-between-elements-with-no-nesting.md
+            - name: XML スキーマ制約およびリレーションシップ
+              href: xml-schema-constraints-and-relationships.md
+        - name: XML からの DataSet リレーショナル構造の推論
+          href: inferring-dataset-relational-structure-from-xml.md
+          items:
+            - name: DataSet スキーマの推論プロセスの概要
+              href: summary-of-the-dataset-schema-inference-process.md
+            - name: テーブルの推論
+              href: inferring-tables.md
+            - name: 列の推論
+              href: inferring-columns.md
+            - name: リレーションシップの推論
+              href: inferring-relationships.md
+            - name: 要素のテキストの推論
+              href: inferring-element-text.md
+            - name: 推論の制限事項
+              href: inference-limitations.md
+    - name: XML Web サービスからの DataSet の使用
+      href: consuming-a-dataset-from-an-xml-web-service.md

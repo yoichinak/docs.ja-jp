@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 3adf711fd00ac0ab57764a67a08ce453318fd965
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 106e38a3cf3a121c4d7f879b718c832d27e0910f
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463138"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611511"
 ---
 # <a name="testing-aspnet-core-services-and-web-apps"></a>ASP.NET Core サービスと Web アプリのテスト
 
@@ -104,25 +104,25 @@ public class PrimeWebDefaultRequestShould
 #### <a name="additional-resources"></a>その他の技術情報
 
 - **Steve Smith。コントローラーのテスト** (ASP.NET Core) \
-    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](https://docs.microsoft.com/aspnet/core/mvc/controllers/testing)
+    [https://docs.microsoft.com/aspnet/core/mvc/controllers/testing](/aspnet/core/mvc/controllers/testing)
 
 - **Steve Smith。統合テスト** (ASP.NET Core) \
-    [https://docs.microsoft.com/aspnet/core/test/integration-tests](https://docs.microsoft.com/aspnet/core/test/integration-tests)
+    [https://docs.microsoft.com/aspnet/core/test/integration-tests](/aspnet/core/test/integration-tests)
 
 - **dotnet テストを使用した .NET Core での単体テスト** \
     [https://docs.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test](../../../core/testing/unit-testing-with-dotnet-test.md)
 
 - **xUnit.net**。 公式サイト。 \
-    [https://xunit.github.io/](https://xunit.github.io/)
+    <https://xunit.github.io/>
 
 - **単体テストの基本。** \
     [https://docs.microsoft.com/visualstudio/test/unit-test-basics](/visualstudio/test/unit-test-basics)
 
 - **Moq**。 GitHub リポジトリ。 \
-    [https://github.com/moq/moq](https://github.com/moq/moq)
+    <https://github.com/moq/moq>
 
 - **NUnit**。 公式サイト。 \
-    [https://www.nunit.org/](https://www.nunit.org/)
+    <https://www.nunit.org/>
 
 ### <a name="implementing-service-tests-on-a-multi-container-application"></a>マルチコンテナー アプリケーションでのサービス テストの実装
 
@@ -203,10 +203,10 @@ docker-compose -f docker-compose-test.yml -f docker-compose-test.override.yml up
 ### <a name="additional-resources"></a>その他の技術情報
 
 - **テストの README ファイル** (GitHub の eShopOnContainers リポジトリ) \
-    [https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test](https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test)
+    <https://github.com/dotnet-architecture/eShopOnContainers/tree/dev/test>
 
 - **ロード テストの README ファイル** (GitHub の eShopOnContainers リポジトリ) \
-    [https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/](https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/)
+    <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/test/ServicesTests/LoadTest/>
 
 > [!div class="step-by-step"]
 > [前へ](subscribe-events.md)

@@ -3,10 +3,10 @@ title: ADO.NET の概要
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
 ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170066"
 ---
 # <a name="adonet-overview"></a>ADO.NET の概要
@@ -60,5 +60,5 @@ ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や OD
 ## <a name="see-also"></a>関連項目
 
 - [ADO.NET](../../../../docs/framework/data/adonet/index.md)
-- [Visual Studio でのデータにアクセスします。](/visualstudio/data-tools/accessing-data-in-visual-studio)
+- [Visual Studio でのデータへのアクセス](/visualstudio/data-tools/accessing-data-in-visual-studio)
 - [ADO.NET のマネージド プロバイダーと DataSet デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=217917)

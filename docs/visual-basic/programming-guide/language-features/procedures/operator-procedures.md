@@ -12,10 +12,10 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59175020"
 ---
 # <a name="operator-procedures-visual-basic"></a>演算子プロシージャ (Visual Basic)
@@ -81,13 +81,13 @@ ms.locfileid: "59175020"
 
 ## <a name="see-also"></a>関連項目
 
-- [手順](./index.md)
+- [プロシージャ](./index.md)
 - [Sub プロシージャ](./sub-procedures.md)
 - [Function プロシージャ](./function-procedures.md)
-- [プロパティ プロシージャ](./property-procedures.md)
+- [Property プロシージャ](./property-procedures.md)
 - [プロシージャのパラメーターと引数](./procedure-parameters-and-arguments.md)
-- [Operator Statement](../../../../visual-basic/language-reference/statements/operator-statement.md)
-- [方法: 演算子を定義する](./how-to-define-an-operator.md)
-- [方法: 変換演算子を定義する](./how-to-define-a-conversion-operator.md)
+- [Operator ステートメント](../../../../visual-basic/language-reference/statements/operator-statement.md)
+- [方法: 演算子を定義します。](./how-to-define-an-operator.md)
+- [方法: 変換演算子を定義します。](./how-to-define-a-conversion-operator.md)
 - [方法: 演算子プロシージャを呼び出す](./how-to-call-an-operator-procedure.md)
-- [方法: 演算子を定義するクラスを使用する](./how-to-use-a-class-that-defines-operators.md)
+- [方法: 演算子を定義するクラスを使用して、](./how-to-use-a-class-that-defines-operators.md)

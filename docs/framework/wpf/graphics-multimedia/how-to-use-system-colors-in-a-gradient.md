@@ -6,10 +6,10 @@ helpviewer_keywords:
 - system colors in gradients [WPF]
 ms.assetid: 11942e7e-6300-4b50-8ed1-f50e8d20e7d2
 ms.openlocfilehash: 55c99640907a0c372f8c7bbc50b9b45c9f15ef3c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59229441"
 ---
 # <a name="how-to-use-system-colors-in-a-gradient"></a>方法: グラデーションでシステム カラーを使用する

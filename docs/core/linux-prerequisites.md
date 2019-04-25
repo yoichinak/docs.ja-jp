@@ -4,12 +4,12 @@ description: Linux マシンで .NET Core アプリケーションを開発、�
 author: thraka
 ms.author: adegeo
 ms.date: 12/14/2018
-ms.openlocfilehash: 5ef1737185ad41de7bd5e7a9b8db048ff577811f
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 0bd3287535ba2c398f6577890d1d39f42a806364
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083887"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612226"
 ---
 # <a name="prerequisites-for-net-core-on-linux"></a>Linux における .NET Core の前提条件
 
@@ -87,8 +87,6 @@ Alpine Linux                  | 3.8+                  | x64、ARM64
 
 ARM64 で .NET Core 3.0 をインストールする方法の詳細については、「[Installing .NET Core 3.0 on Linux ARM64](https://gist.github.com/richlander/467813274cea8abc624553ee72b28213)」 (Linux ARM64 での .NET Core 3.0 のインストール) を参照してください。
 
-
-
 ---
 
 ## <a name="linux-distribution-dependencies"></a>Linux ディストリビューションの依存関係
@@ -146,7 +144,7 @@ Linux では、2 つのインストーラー パッケージから選択でき�
 
 ### <a name="scripting-installs-with-the-net-core-installer-script"></a>.NET Core インストーラー スクリプトを使用したスクリプトのインストール
 
-[dotnet-install スクリプト](./tools/dotnet-install-script.md)は、CLI ツールチェーンと共有ランタイムの非管理者インストールを実行するために使用されます。 このスクリプトは [https://dot.net/v1/dotnet-install.sh](https://dot.net/v1/dotnet-install.sh) からダウンロードできます。
+[dotnet-install スクリプト](./tools/dotnet-install-script.md)は、CLI ツールチェーンと共有ランタイムの非管理者インストールを実行するために使用されます。 このスクリプトは <https://dot.net/v1/dotnet-install.sh> からダウンロードできます。
 
 スクリプトは、既定で最新の "LTS" のバージョン (現在は .NET Core 1.1) をインストールします。 NET Core 2.1 をインストールするには、次のスイッチを使用してスクリプトを実行します。
 

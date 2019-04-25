@@ -10,10 +10,10 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59106744"
 ---
 # <a name="collection-types-in-data-contracts"></a>データ コントラクトのコレクション型
@@ -273,7 +273,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |---------------------|----------------------------------------------|-------------|----------------------|  
 |非ジェネリックまたはクローズ ジェネリック (任意の数のパラメーター)|非ジェネリック|`MyType : IList`<br /><br /> または<br /><br /> `MyType<T> : IList`<br /><br /> ここでは、T= `int`|`Object` のクローズ ジェネリック (例 : `IList<object>`)|  
 |非ジェネリックまたはクローズ ジェネリック (コレクション型と必ずしも一致するわけではない任意の数のパラメーター)|クローズ ジェネリック|`MyType : IList<string>`<br /><br /> または<br /><br /> `MyType<T> : IList<string>` ここでは、T=`int`|クローズ ジェネリック (例 : `IList<string>`)|  
-|任意の数のパラメーターを持つクローズ ジェネリック|型のパラメーターのいずれかを使用するオープン ジェネリック|`MyType<T,U,V> : IList<U>`<br /><br /> 位置 T =`int`、U =`string`V =`bool`|クローズ ジェネリック (例 : `IList<string>`)|  
+|任意の数のパラメーターを持つクローズ ジェネリック|型のパラメーターのいずれかを使用するオープン ジェネリック|`MyType<T,U,V> : IList<U>`<br /><br /> ここでは、T=`int`、U=`string`、V=`bool`|クローズ ジェネリック (例 : `IList<string>`)|  
 |パラメーターを 1 つ持つオープン ジェネリック|型のパラメーターを使用するオープン ジェネリック|`MyType<T> : IList<T>`、T はオープン|オープン ジェネリック (例 : `IList<T>`)|  
   
  型が複数のリスト コレクション インターフェイスを実装している場合、以下の制限が適用されます。  
@@ -287,10 +287,10 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |参照される型|参照される型で実装されるインターフェイス|例|型の処理|  
 |---------------------|----------------------------------------------|-------------|---------------------|  
 |非ジェネリックまたはクローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.IDictionary>|`MyType : IDictionary`<br /><br /> または<br /><br /> `MyType<T> : IDictionary` ここでは、T=`int`|クローズ ジェネリック `IDictionary<object,object>`|  
-|クローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.Generic.IDictionary%602>を閉じる|`MyType<T> : IDictionary<string, bool>` ここでは、T=`int`|クローズ ジェネリック (例 : `IDIctionary<string,bool>`)|  
-|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーまたは値の一方がクローズ。もう一方はオープンで、型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<string,V>` 位置 T =`int`、U =`float`V =`bool`<br /><br /> または<br /><br /> `MyType<Z> : IDictionary<Z,bool>` ここでは、Z=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
-|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーと値の両方がオープンであり、それぞれ型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<V,U>` 位置 T =`int`、U =`bool`V =`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
-|オープン ジェネリック (2 つのパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、オープン、型のジェネリック パラメーターの両方をその出現順に使用|`MyType<K,V> : IDictionary<K,V>`、K および V 共にオープン|オープン ジェネリック (例 : `IDictionary<K,V>`)|  
+|クローズ ジェネリック (任意の数のパラメーター)|<xref:System.Collections.Generic.IDictionary%602>、クローズ|`MyType<T> : IDictionary<string, bool>` ここでは、T=`int`|クローズ ジェネリック (例 : `IDIctionary<string,bool>`)|  
+|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーまたは値の一方がクローズ。もう一方はオープンで、型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<string,V>` ここでは、T=`int`、U=`float`、V=`bool`<br /><br /> または<br /><br /> `MyType<Z> : IDictionary<Z,bool>` ここでは、Z=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
+|クローズ ジェネリック (任意の数のパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、キーと値の両方がオープンであり、それぞれ型のパラメーターのいずれかを使用|`MyType<T,U,V> : IDictionary<V,U>` ここでは、T=`int`、U=`bool`、V=`string`|クローズ ジェネリック (例 : `IDictionary<string,bool>`)|  
+|オープン ジェネリック (2 つのパラメーター)|ジェネリック <xref:System.Collections.Generic.IDictionary%602>、オープン、型のジェネリック パラメーターの両方をその出現順に使用|`MyType<K,V> : IDictionary<K,V>`、K と V は共にオープン|オープン ジェネリック (例 : `IDictionary<K,V>`)|  
   
  型が <xref:System.Collections.IDictionary> とジェネリック <xref:System.Collections.Generic.IDictionary%602>の両方を実装している場合、ジェネリック <xref:System.Collections.Generic.IDictionary%602> だけが考慮されます。  
   
@@ -327,7 +327,7 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 |ジェネリック <xref:System.Collections.Generic.ICollection%601>|列挙子|ジェネリック Add|  
 |<xref:System.Collections.IList>|<xref:System.Collections.IList> インデクサー|`Add`|  
 |ジェネリック <xref:System.Collections.Generic.IEnumerable%601>|`GetEnumerator`|適切な型 (ジェネリック パラメーターの型、またはその基本型のいずれか) のパラメーターを 1 つ受け取る `Add` という非静的メソッド。 このようなメソッドは、シリアル化と逆シリアル化の両方で、シリアライザーがコレクション型をコレクションとして処理するために必要になります。|  
-|<xref:System.Collections.IEnumerable> (つまり<xref:System.Collections.ICollection>、そこから派生する)|`GetEnumerator`|`Add` 型のパラメーターを 1 つ受け取る `Object`という非静的メソッド。 このようなメソッドは、シリアル化と逆シリアル化の両方で、シリアライザーがコレクション型をコレクションとして処理するために必要になります。|  
+|<xref:System.Collections.IEnumerable> (およびこのインターフェイスから派生した <xref:System.Collections.ICollection>)|`GetEnumerator`|`Add` 型のパラメーターを 1 つ受け取る `Object`という非静的メソッド。 このようなメソッドは、シリアル化と逆シリアル化の両方で、シリアライザーがコレクション型をコレクションとして処理するために必要になります。|  
   
  前の表に示すコレクション インターフェイスは、優先度の高いものから順に並べられています。 たとえば、型が <xref:System.Collections.IList> とジェネリック <xref:System.Collections.Generic.IEnumerable%601>の両方を実装している場合、 <xref:System.Collections.IList> の規則に従って、コレクションがシリアル化および逆シリアル化されます。  
   

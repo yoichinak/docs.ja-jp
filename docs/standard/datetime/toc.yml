@@ -1,48 +1,41 @@
-items:
 - name: 日付、時刻、およびタイム ゾーン
   href: index.md
   items:
-  - name: タイム ゾーンの概要
-    href: time-zone-overview.md
-  - name: DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け
-    href: choosing-between-datetime.md
-  - name: ローカル システムで定義されているタイム ゾーンの検索
-    href: finding-the-time-zones-on-local-system.md
-  - name: '方法: コンピューター上に存在するタイム ゾーンを列挙する'
-    href: enumerate-time-zones.md
-  - name: '方法: 定義済みの UTC オブジェクトおよびローカル タイム ゾーン オブジェクトにアクセスする'
-    href: access-utc-and-local.md
-  - name: '方法: TimeZoneInfo オブジェクトをインスタンス化する'
-    href: instantiate-time-zone-info.md
-  - name: DateTimeOffset オブジェクトのインスタンス化
-    href: instantiating-a-datetimeoffset-object.md
-  - name: '方法: 調整規則のないタイム ゾーンを作成する'
-    href: create-time-zones-without-adjustment-rules.md
-  - name: '方法: 調整規則のあるタイム ゾーンを作成する'
-    href: create-time-zones-with-adjustment-rules.md
-  - name: タイム ゾーンの保存と復元
-    href: saving-and-restoring-time-zones.md
-  - name: '方法: 埋め込みリソースにタイム ゾーンを保存する'
-    href: save-time-zones-to-an-embedded-resource.md
-  - name: '方法: 埋め込みリソースからタイム ゾーンを復元する'
-    href: restore-time-zones-from-an-embedded-resource.md
-  - name: カレンダーの使用
-    href: working-with-calendars.md
-  - name: 日付と時刻を使用した算術演算の実行
-    href: performing-arithmetic-operations.md
-  - name: '方法: 日付と時刻の演算でタイム ゾーンを使用する'
-    href: use-time-zones-in-arithmetic.md
-  - name: DateTime と DateTimeOffset 間の変換
-    href: converting-between-datetime-and-offset.md
-  - name: タイム ゾーン間での時刻の変換
-    href: converting-between-time-zones.md
-  - name: '方法: あいまいな時刻を解決する'
-    href: resolve-ambiguous-times.md
-  - name: '方法: ユーザーがあいまいな時刻を解決できるようにする'
-    href: let-users-resolve-ambiguous-times.md
-ms.openlocfilehash: 302dc3e44cacb3148ae0e246220721ccfda44d98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470291"
+    - name: タイム ゾーンの概要
+      href: time-zone-overview.md
+    - name: DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo の使い分け
+      href: choosing-between-datetime.md
+    - name: ローカル システムで定義されているタイム ゾーンの検索
+      href: finding-the-time-zones-on-local-system.md
+    - name: '方法: コンピューター上に存在するタイム ゾーンを列挙する'
+      href: enumerate-time-zones.md
+    - name: '方法: 定義済みの UTC オブジェクトおよびローカル タイム ゾーン オブジェクトにアクセスする'
+      href: access-utc-and-local.md
+    - name: '方法: TimeZoneInfo オブジェクトをインスタンス化する'
+      href: instantiate-time-zone-info.md
+    - name: DateTimeOffset オブジェクトのインスタンス化
+      href: instantiating-a-datetimeoffset-object.md
+    - name: '方法: 調整規則のないタイム ゾーンを作成する'
+      href: create-time-zones-without-adjustment-rules.md
+    - name: '方法: 調整規則のあるタイム ゾーンを作成する'
+      href: create-time-zones-with-adjustment-rules.md
+    - name: タイム ゾーンの保存と復元
+      href: saving-and-restoring-time-zones.md
+    - name: '方法: 埋め込みリソースにタイム ゾーンを保存する'
+      href: save-time-zones-to-an-embedded-resource.md
+    - name: '方法: 埋め込みリソースからタイム ゾーンを復元する'
+      href: restore-time-zones-from-an-embedded-resource.md
+    - name: カレンダーの使用
+      href: working-with-calendars.md
+    - name: 日付と時刻を使用した算術演算の実行
+      href: performing-arithmetic-operations.md
+    - name: '方法: 日付と時刻の演算でタイム ゾーンを使用する'
+      href: use-time-zones-in-arithmetic.md
+    - name: DateTime と DateTimeOffset 間の変換
+      href: converting-between-datetime-and-offset.md
+    - name: タイム ゾーン間での時刻の変換
+      href: converting-between-time-zones.md
+    - name: '方法: あいまいな時刻を解決する'
+      href: resolve-ambiguous-times.md
+    - name: '方法: ユーザーがあいまいな時刻を解決できるようにする'
+      href: let-users-resolve-ambiguous-times.md

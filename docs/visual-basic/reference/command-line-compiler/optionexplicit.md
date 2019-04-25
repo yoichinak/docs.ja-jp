@@ -10,10 +10,10 @@ helpviewer_keywords:
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
 ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59332392"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
@@ -27,7 +27,7 @@ ms.locfileid: "59332392"
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 任意。 指定`-optionexplicit+`変数の明示的な宣言を要求します。 `-optionexplicit+`オプションと同じですが、既定`-optionexplicit`します。 `-optionexplicit-`オプションは、変数の暗黙的な宣言を使用できます。  
+ 省略可能です。 指定`-optionexplicit+`変数の明示的な宣言を要求します。 `-optionexplicit+`オプションと同じですが、既定`-optionexplicit`します。 `-optionexplicit-`オプションは、変数の暗黙的な宣言を使用できます。  
   
 ## <a name="remarks"></a>Remarks  
  ソース コード ファイルが含まれている場合、 [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)、ステートメントよりも優先、`-optionexplicit`コマンド ライン コンパイラを設定します。  

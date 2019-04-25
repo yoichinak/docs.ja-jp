@@ -6,10 +6,10 @@ helpviewer_keywords:
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
 ms.openlocfilehash: 0127ee4112c4b42a7a55b9233217ea1e02604042
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59085195"
 ---
 # <a name="cleartype-overview"></a>ClearType の概要
@@ -17,7 +17,7 @@ ms.locfileid: "59085195"
 
 <a name="overview"></a>   
 ## <a name="technology-overview"></a>テクノロジの概要  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 開発したソフトウェア テクノロジ[!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)]ラップトップや Pocket PC の画面、フラット パネル モニターなどの既存の Lcd (液晶ディスプレイ) 上のテキストの読みやすさを向上します。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] LCD 画面の各ピクセル内の個々 の垂直カラー ストライプ要素にアクセスすることによって機能します。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] が開発されるまでは、コンピューターで表示可能な最小の詳細レベルは 1 ピクセルでしたが、[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] を LCD モニターで実行することで、テキストの各部分の幅が 1 ピクセルより小さくても表示できるようになりました。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。  
+ [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、ラップトップや Pocket PC の画面、フラット パネル モニターなど、既存の LCD (液晶ディスプレイ) でのテキストの読みやすさを向上させるために [!INCLUDE[TLA#tla_ms](../../../../includes/tlasharptla-ms-md.md)] が開発したソフトウェア テクノロジです。  [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、LCD 画面の各ピクセル内の個々の垂直カラー ストライプ要素にアクセスすることによって機能します。 [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] が開発されるまでは、コンピューターで表示可能な最小の詳細レベルは 1 ピクセルでしたが、[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] を LCD モニターで実行することで、テキストの各部分の幅が 1 ピクセルより小さくても表示できるようになりました。 解像度が上がるとテキスト表示の微細部の鮮明度が高くなるため、長時間にわたって読んでも苦になりません。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] で利用可能な [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、[!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] に含まれるバージョンにいくつかの改良を加えた最新世代の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] です。  
   
@@ -44,7 +44,7 @@ ClearType の以前のバージョンと新しいバージョンを使用した�
  ![緩やかな曲線上のギザギザした境界が付いたテキスト](./media/wcpsdk-mmgraphics-text-cleartype-overview-03.png "wcpsdk_mmgraphics_text_cleartype_overview_03")  
 緩やかな曲線上にギザギザした境界が付いたテキスト  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ギザギザした境界を滑らかにする y 方向レベルのアンチエイリアシングを提供します。 これは、東アジア言語を読みやすくするために特に重要です。これらの言語の表意文字では、緩やかな曲線の量が水平方向と垂直方向でほぼ同じであるからです。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] には、ギザギザした境界を滑らかにする y 方向レベルのアンチエイリアシング機能があります。 これは、東アジア言語を読みやすくするために特に重要です。これらの言語の表意文字では、緩やかな曲線の量が水平方向と垂直方向でほぼ同じであるからです。  
   
  次の例では、y 方向のアンチエイリアシングの効果を示します。 この場合、文字の上下の曲線が滑らかに表示されています。  
   
@@ -53,9 +53,9 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
   
 <a name="hardware_acceleration"></a>   
 ## <a name="hardware-acceleration"></a>ハードウェアの高速化  
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]パフォーマンスを向上させ、CPU の負荷とシステムのメモリ要件を軽減するハードウェア アクセラレータを利用できます。 グラフィックス カードのピクセル シェーダーおよびビデオ メモリを使用することにより、[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] では特にアニメーション使用時のテキストのレンダリングが速くなります。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] は、ハードウェア アクセラレーションを利用してパフォーマンスを向上させ、CPU の負荷および必要なシステム メモリを削減します。 グラフィックス カードのピクセル シェーダーおよびビデオ メモリを使用することにより、[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] では特にアニメーション使用時のテキストのレンダリングが速くなります。  
   
- [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]システム全体を変更しません[!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)]設定します。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] を無効にすると、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のアンチエイリアシングがグレースケール モードに設定されます。 また、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] によって、[ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx) の設定が変更されることはありません。  
+ [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] によって、システム全体の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] 設定が変更されることはありません。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] を無効にすると、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のアンチエイリアシングがグレースケール モードに設定されます。 また、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_ct](../../../../includes/tla2sharptla-ct-md.md)] によって、[ClearType Tuner PowerToy](https://www.microsoft.com/typography/ClearTypePowerToy.mspx) の設定が変更されることはありません。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のアーキテクチャ設計における決定事項の 1 つに、解像度に依存しないレイアウトによる高解像度 DPI モニターのサポート向上があります。高解像度モニターの普及は進みつつあるからです。 この決定を受けて、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ではエイリアス化されたテキスト レンダリングや、一部の東アジア言語フォントのビットマップをサポートしないことになりました。これらはどちらも解像度に依存するためです。  
   

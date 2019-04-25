@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30766
 ms.assetid: 13918600-6087-40d7-8134-32aa9d3bfda4
 ms.openlocfilehash: 2561995e6b03efb2b6c10b7ded7cd76805ec481c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843087"
 ---
 # <a name="functionname-is-not-declared-smart-devicevisual-basic-compiler-error"></a>'\<functionname >' (Smart Device/visual Basic コンパイラ エラー) が宣言されていません

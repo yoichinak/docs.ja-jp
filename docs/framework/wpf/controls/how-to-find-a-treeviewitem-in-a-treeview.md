@@ -9,11 +9,11 @@ helpviewer_keywords:
 - TreeViewItem [WPF], finding
 ms.assetid: 72ecd40c-3939-4e01-b617-5e9daa6074d9
 ms.openlocfilehash: 034ec2e57fb3b6a9b3a81f66f6888a68e2c113d7
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59219045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910534"
 ---
 # <a name="how-to-find-a-treeviewitem-in-a-treeview"></a>方法: TreeView での TreeViewItem の検索
 <xref:System.Windows.Controls.TreeView>コントロールには、階層データを表示する便利な方法が用意されています。 場合、 <xref:System.Windows.Controls.TreeView> 、データ ソースにバインドされて、<xref:System.Windows.Controls.TreeView.SelectedItem%2A>プロパティは、選択したデータ オブジェクトを迅速に取得するための便利な方法を提供します。 通常、基になるデータ オブジェクトを使用することをお勧めがデータを格納しているプログラムで操作する必要がありますも<xref:System.Windows.Controls.TreeViewItem>します。 など、プログラムで展開する必要があります、<xref:System.Windows.Controls.TreeViewItem>でさまざまな項目を選択します。 または、<xref:System.Windows.Controls.TreeView>します。  

@@ -3,10 +3,10 @@ title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
 ms.openlocfilehash: 3cc02b4c51b32d0faace4d89d0c6c1f6923dd138
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59119835"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
@@ -28,7 +28,7 @@ FROM expression [ ,...n ] as C
  `FROM C as c`  
   
 ## <a name="from-clause-items"></a>FROM 句の項目  
- 各 `FROM` 句項目は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリ内のソース コレクションを参照します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 次のクラスをサポートしている`FROM`句の項目: 単純な`FROM`句項目、`JOIN FROM`句の項目と`APPLY FROM`句の項目。 これらの `FROM` 句の各項目については、以下のセクションで詳しく説明します。  
+ 各 `FROM` 句項目は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] クエリ内のソース コレクションを参照します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、`FROM` 句項目のクラスとして、単純 `FROM` 句項目、`JOIN FROM` 句項目、および `APPLY FROM` 句項目をサポートしています。 これらの `FROM` 句の各項目については、以下のセクションで詳しく説明します。  
   
 ### <a name="simple-from-clause-item"></a>単純な FROM 句の項目  
  最も単純な `FROM` 句の項目は、1 つのコレクションと 1 つの別名を識別する単一の式です。 式には、エンティティ セット、サブクエリ、またはコレクション型のその他の任意の式を使用できます。 次に例を示します。  
@@ -46,7 +46,7 @@ LOB.Customers
  別名を指定しない場合、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] はコレクション式に基づいて別名の生成を試みます。  
   
 ### <a name="join-from-clause-item"></a>JOIN FROM 句の項目  
- `JOIN FROM` 句項目は、2 つの `FROM` 句項目の間の結合を表します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、クロス結合、内部結合、左と右外部結合、および完全外部結合。 これらすべての結合は、[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] でのサポートと同様にサポートされます。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] の場合と同様に、`FROM` に含まれる 2 つの `JOIN` 句の項目は独立している必要があります。 つまり、相互に関連付けられた項目は使用できません。 このような場合には、`CROSS APPLY` または `OUTER APPLY` を使用できます。  
+ `JOIN FROM` 句項目は、2 つの `FROM` 句項目の間の結合を表します。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、クロス結合、内部結合、左外部結合、右外部結合、および完全外部結合をサポートしています。 これらすべての結合は、[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] でのサポートと同様にサポートされます。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] の場合と同様に、`FROM` に含まれる 2 つの `JOIN` 句の項目は独立している必要があります。 つまり、相互に関連付けられた項目は使用できません。 このような場合には、`CROSS APPLY` または `OUTER APPLY` を使用できます。  
   
 #### <a name="cross-joins"></a>クロス結合  
  次の例に示すように、`CROSS JOIN` クエリ式は 2 つのコレクションのデカルト積を生成します。  
@@ -80,7 +80,7 @@ LOB.Customers
 >  SQL-92 との互換性を保つため、[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] では、OUTER キーワードは省略可能です。 したがって、`LEFT JOIN`、`RIGHT JOIN`、および `FULL JOIN` は、`LEFT OUTER JOIN`、`RIGHT OUTER JOIN`、および `FULL OUTER JOIN` のシノニムです。  
   
 ### <a name="apply-clause-item"></a>APPLY 句の項目  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 次の 2 種類の`APPLY`:`CROSS APPLY`と`OUTER APPLY`します。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] は、`APPLY` と `CROSS APPLY` という 2 種類の `OUTER APPLY` をサポートしています。  
   
  `CROSS APPLY` は、左のコレクションの各要素と右の式の評価によって生成されたコレクションの要素との一意の組み合わせを生成します。 `CROSS APPLY` では、右の式は左の要素に機能的に依存します。このような関連付けられたコレクションの例を次に示します。  
   
@@ -96,7 +96,7 @@ LOB.Customers
 >  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] とは異なり、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、明示的なネスト解除の手順は不要です。  
   
 > [!NOTE]
->  `CROSS` `OUTER APPLY`演算子で導入された[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]します。 場合によっては、クエリ パイプラインにより、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含む Transact-SQL が生成されることがあります。 ため、SQL Server のバージョンを含む、一部のバックエンド プロバイダーよりも前[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]、これらの演算子をサポートして、このようなクエリは、これらのバックエンド プロバイダーで実行することはできません。  
+>  `CROSS` 演算子および `OUTER APPLY` 演算子は [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] で導入されました。 場合によっては、クエリ パイプラインにより、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含む Transact-SQL が生成されることがあります。 ため、SQL Server のバージョンを含む、一部のバックエンド プロバイダーよりも前[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]、これらの演算子をサポートして、このようなクエリは、これらのバックエンド プロバイダーで実行することはできません。  
 >   
 >  `CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含むクエリの生成につながる可能性がある一般的なシナリオとしては、ページングを使用した相関サブクエリ、相関サブクエリ全体またはナビゲーションによって生成されたコレクション全体を対象とした AnyElement、要素セレクターを受け取るグループ化メソッドを使用した LINQ クエリ、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子が明示的に指定されたクエリ、`DEREF` コンストラクターを引数に取る `REF` コンストラクターを含むクエリなどがあります。  
   
@@ -131,7 +131,7 @@ from (C as c join D as d) cross apply c.Names as e
   
  `FROM` 句は、c、d、e の各フィールドが `C`、`D`、`c.Names` の要素型になると見なされる Row(c, d, e) 型の行のマルチセットを論理的に生成します。  
   
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 各単純なエイリアスが導入されています`FROM`スコープ句の項目。 たとえば、次の FROM 句の例では、スコープに導入される名前は c、d、e です。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、単純な `FROM` 句の項目ごとの別名がスコープに導入されます。 たとえば、次の FROM 句の例では、スコープに導入される名前は c、d、e です。  
   
 ```  
 from (C as c join D as d) cross apply c.Names as e  

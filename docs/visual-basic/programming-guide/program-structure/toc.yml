@@ -1,16 +1,9 @@
-items:
 - name: コード内のコメント
   href: comments-in-code.md
   items:
-  - name: XML の使用によるコードのドキュメントの作成
-    href: documenting-your-code-with-xml.md
-  - name: XML ファイルの処理
-    href: processing-the-xml-file.md
-  - name: '方法: XML ドキュメントを作成する'
-    href: how-to-create-xml-documentation.md
-ms.openlocfilehash: 9a5c821d3f3de1b47ab4be58835d2562a1228cf2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470738"
+    - name: XML の使用によるコードのドキュメントの作成
+      href: documenting-your-code-with-xml.md
+    - name: XML ファイルの処理
+      href: processing-the-xml-file.md
+    - name: '方法: XML ドキュメントを作成する'
+      href: how-to-create-xml-documentation.md

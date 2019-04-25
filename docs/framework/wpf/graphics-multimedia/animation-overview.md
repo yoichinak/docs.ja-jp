@@ -9,10 +9,10 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337735"
 ---
 # <a name="animation-overview"></a>アニメーションの概要
@@ -35,9 +35,9 @@ ms.locfileid: "59337735"
   
 -   プログラムは、新しい値で四角形を更新し、再描画します。  
   
- 前のバージョン[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]開発者は、作成し、独自のタイミング システムを管理または特殊なカスタム ライブラリを使用する必要があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] マネージ コードを通じて公開されている効率的なタイミング システムが含まれていますと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]密接に統合されていると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フレームワーク。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アニメーションを簡単にコントロールとその他のグラフィカル オブジェクトをアニメーション化します。  
+ 前のバージョン[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]開発者は、作成し、独自のタイミング システムを管理または特殊なカスタム ライブラリを使用する必要があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] マネージ コードを通じて公開されている効率的なタイミング システムが含まれていますと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]密接に統合されていると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フレームワーク。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アニメーションを使うと、コントロールやその他のグラフィカル オブジェクトを簡単にアニメーション化できます。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] すべてのバック グラウンド処理のタイミング システムの管理と画面を効率的に再描画を処理します。 効果を実現するしくみではなく、作り出す効果に重点を置くことのできるタイミング クラスが提供されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 簡単にカスタマイズされたアニメーションを生成するために、アニメーションの基底クラス、クラスの継承元となることができますを公開することで、独自のアニメーションを作成します。 これらのカスタム アニメーションは、標準のアニメーション クラスのパフォーマンス上のメリットの多くを得ます。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、タイミング システムの管理と画面の効率的な再描画をすべてバックグラウンドで処理します。 効果を実現するしくみではなく、作り出す効果に重点を置くことのできるタイミング クラスが提供されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、クラスが継承できるアニメーションの基底クラスを公開しているため、独自のアニメーションを簡単に作成して、カスタマイズされたアニメーションを生成することもできます。 これらのカスタム アニメーションは、標準のアニメーション クラスのパフォーマンス上のメリットの多くを得ます。  
   
 <a name="thewpftimingsystem"></a>   
 ## <a name="wpf-property-animation-system"></a>WPF プロパティ アニメーション システム  
@@ -318,7 +318,7 @@ ms.locfileid: "59337735"
 ## <a name="animation-samples"></a>アニメーションのサンプル  
  以下のサンプルは、アプリケーションへのアニメーションの追加を開始するのに役立つ場合があります。  
   
--   [From、To、およびアニメーション ターゲット値のサンプルで](https://go.microsoft.com/fwlink/?LinkID=159988)  
+-   [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      さまざまな From/To/By 設定を示します。  
   
@@ -342,7 +342,7 @@ ms.locfileid: "59337735"
 |[ストーリーボードの概要](storyboards-overview.md)|複数のタイムラインを持つストーリーボードを使って複雑なアニメーションを作成する方法について説明します。|  
 |[タイミング動作の概要](timing-behaviors-overview.md)|について説明します、<xref:System.Windows.Media.Animation.Timeline>型とプロパティをアニメーションで使用します。|  
 |[タイミング イベントの概要](timing-events-overview.md)|使用できるイベントについて説明します、<xref:System.Windows.Media.Animation.Timeline>と<xref:System.Windows.Media.Animation.Clock>など、タイムラインのポイントでコードを実行するためのオブジェクトを開始、一時停止、再開、スキップ、または停止します。|  
-|[方法のトピック](animation-and-timing-how-to-topics.md)|アプリケーションでアニメーションとタイムラインを使うためのコード例を示します。|  
+|[方法トピック](animation-and-timing-how-to-topics.md)|アプリケーションでアニメーションとタイムラインを使うためのコード例を示します。|  
 |[クロックに関する「方法」トピック](clocks-how-to-topics.md)|使用するためのコード例が含まれて、<xref:System.Windows.Media.Animation.Clock>アプリケーション内のオブジェクト。|  
 |[キー フレームに関する「方法」トピック](key-frame-animation-how-to-topics.md)|アプリケーションでキー フレーム アニメーションを使うためのコード例を示します。|  
 |[パス アニメーションに関する「方法」トピック](path-animation-how-to-topics.md)|アプリケーションでパス アニメーションを使うためのコード例を示します。|  

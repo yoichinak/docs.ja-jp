@@ -6,10 +6,10 @@ helpviewer_keywords:
 - classes [WPF], MediaPlayer
 ms.assetid: 165d47ed-22ce-4ded-aa6a-aa9b7467de87
 ms.openlocfilehash: 186c9ae8167dafd09f029418c1d23f81f7a9e906
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59203614"
 ---
 # <a name="how-to-play-media-using-a-videodrawing"></a>方法: VideoDrawing を使用してメディアを再生する

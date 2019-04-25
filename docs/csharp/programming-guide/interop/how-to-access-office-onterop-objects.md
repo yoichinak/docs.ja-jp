@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: b928be1c4e291918b0d75d6efc40bb11cff91088
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203536"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59302999"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする (C# プログラミング ガイド)
 Visual C# には、Office API オブジェクトへのアクセスを容易にする機能があります。 新機能は、名前付き引数と省略可能な引数、`dynamic` と呼ばれる新しい型、値パラメーターの場合と同様に COM メソッドの参照パラメーターに引数を渡す機能などです。  
@@ -30,65 +30,65 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
 ## <a name="to-create-a-new-console-application"></a>新しいコンソール アプリケーションを作成するには  
   
-1.  Visual Studio を起動します。  
+1. Visual Studio を起動します。  
   
-2.  **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
+2. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3.  **[インストールされたテンプレート]** ペインで、**[Visual C#]** を展開し、**[Windows]** をクリックします。  
+3. **[インストールされたテンプレート]** ペインで、**[Visual C#]** を展開し、**[Windows]** をクリックします。  
   
-4.  **[新しいプロジェクト]** ダイアログ ボックスの上部で、**.NET Framework 4** (またはそれ以降のバージョン) がターゲット フレームワークとして選択されていることを確認します。  
+4. **[新しいプロジェクト]** ダイアログ ボックスの上部で、**.NET Framework 4** (またはそれ以降のバージョン) がターゲット フレームワークとして選択されていることを確認します。  
   
-5.  **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
+5. **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
   
-6.  **[名前]** フィールドに、プロジェクトの名前を入力します。  
+6. **[名前]** フィールドに、プロジェクトの名前を入力します。  
   
-7.  **[OK]** をクリックします。  
+7. **[OK]** をクリックします。  
   
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。  
   
 ## <a name="to-add-references"></a>参照を追加するには  
   
-1.  **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、**[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。  
+1. **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、**[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。  
   
-2.  **[アセンブリ]** ページの **[コンポーネント名]** 一覧で **[Microsoft.Office.Interop.Word]** を選択し、Ctrl キーを押しながら **[Microsoft.Office.Interop.Excel]** を選択します。  アセンブリが表示されない場合は、それをインストールして表示させることが必要になる場合があります (「[方法: Office のプライマリ相互運用機能アセンブリをインストールする](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)」を参照)  
+2. **[アセンブリ]** ページの **[コンポーネント名]** 一覧で **[Microsoft.Office.Interop.Word]** を選択し、Ctrl キーを押しながら **[Microsoft.Office.Interop.Excel]** を選択します。  アセンブリが表示されない場合は、それをインストールして表示させることが必要になる場合があります (「[方法: Office のプライマリ相互運用機能アセンブリをインストールする](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)」を参照)  
   
-3.  **[OK]** をクリックします。  
+3. **[OK]** をクリックします。  
   
 ## <a name="to-add-necessary-using-directives"></a>ディレクティブを使用して必要なものを追加するには  
   
-1.  **ソリューション エクスプローラー**で、**Program.cs** ファイルを右クリックし、**[コードの表示]** をクリックします。  
+1. **ソリューション エクスプローラー**で、**Program.cs** ファイルを右クリックし、**[コードの表示]** をクリックします。  
   
-2.  次の `using` ディレクティブをコード ファイルの先頭に追加します。  
+2. 次の `using` ディレクティブをコード ファイルの先頭に追加します。  
   
      [!code-csharp[csProgGuideOfficeHowTo#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#1)]  
   
 ## <a name="to-create-a-list-of-bank-accounts"></a>銀行口座の一覧を作成するには  
   
-1.  次のクラス定義を **Program.cs** の `Program` クラスの下に貼り付けます。  
+1. 次のクラス定義を **Program.cs** の `Program` クラスの下に貼り付けます。  
   
      [!code-csharp[csProgGuideOfficeHowTo#2](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#2)]  
   
-2.  次のコードを `Main` メソッドに追加して、2 つの口座を含む `bankAccounts` 一覧を作成します。  
+2. 次のコードを `Main` メソッドに追加して、2 つの口座を含む `bankAccounts` 一覧を作成します。  
   
      [!code-csharp[csProgGuideOfficeHowTo#3](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#3)]  
   
 ## <a name="to-declare-a-method-that-exports-account-information-to-excel"></a>口座情報を Excel にエクスポートするメソッドを宣言するには  
   
-1.  次のメソッドを `Program` クラスに追加して、Excel ワークシートを設定します。  
+1. 次のメソッドを `Program` クラスに追加して、Excel ワークシートを設定します。  
   
      <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> メソッドには、特定のテンプレートを指定する省略可能なパラメーターがあります。 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] の新機能であるオプションのパラメーターでは、パラメーターの既定値を使用する場合は、そのパラメーターの引数を省略することができます。 次のコードで引数が渡されないため、`Add` は、既定のテンプレートを使用して、新しいブックを作成します。 以前のバージョンの C# では、同等のステートメントには、プレースホルダーの引数 `ExcelApp.Workbooks.Add(Type.Missing)` が必要です。  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
-2.  次のコードを `DisplayInExcel` の末尾に追加します。 このコードでは、ワークシートの最初の行の最初の 2 つの列に値が挿入されます。  
+2. 次のコードを `DisplayInExcel` の末尾に追加します。 このコードでは、ワークシートの最初の行の最初の 2 つの列に値が挿入されます。  
   
      [!code-csharp[csProgGuideOfficeHowTo#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#5)]  
   
-3.  次のコードを `DisplayInExcel` の末尾に追加します。 `foreach` ループでは、ワークシートの連続した行の最初の 2 つの列に口座の一覧の情報が配置されます。  
+3. 次のコードを `DisplayInExcel` の末尾に追加します。 `foreach` ループでは、ワークシートの連続した行の最初の 2 つの列に口座の一覧の情報が配置されます。  
   
      [!code-csharp[csProgGuideOfficeHowTo#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#7)]  
   
-4.  次のコードを `DisplayInExcel` の末尾に追加して、コンテンツに合わせて列の幅を調整します。  
+4. 次のコードを `DisplayInExcel` の末尾に追加して、コンテンツに合わせて列の幅を調整します。  
   
      [!code-csharp[csProgGuideOfficeHowTo#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#13)]  
   
@@ -100,17 +100,17 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
 ## <a name="to-run-the-project"></a>プロジェクトを実行するには  
   
-1.  `Main` の末尾に次の行を追加します。  
+1. `Main` の末尾に次の行を追加します。  
   
      [!code-csharp[csProgGuideOfficeHowTo#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#8)]  
   
-2.  Ctrl キーを押しながら、F5 キーを押します。  
+2. Ctrl キーを押しながら、F5 キーを押します。  
   
      2 つの口座からのデータを含む Excel ワークシートが表示されます。  
   
 ## <a name="to-add-a-word-document"></a>Word 文書を追加するには  
   
-1.  [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] およびそれ以降のバージョンで Office プログラミングを強化するその他の方法を説明するために、次のコードでは、Word アプリケーションを開き、Excel ワークシートにリンクするアイコンを作成します。  
+1. [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] およびそれ以降のバージョンで Office プログラミングを強化するその他の方法を説明するために、次のコードでは、Word アプリケーションを開き、Excel ワークシートにリンクするアイコンを作成します。  
   
      この手順の後半で提供されている `CreateIconInWordDoc` メソッドを `Program` クラスに貼り付けます。 <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> メソッドと <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A> メソッドの呼び出しに伴う複雑さが、`CreateIconInWordDoc` の名前付き引数と省略可能な引数によって軽減されます。 これらの呼び出しによって、[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] で導入された、参照パラメーターを持つ COM メソッドの呼び出しを簡略化する 2 つの他の新しい機能が組み込まれます。 第一に、値パラメーターの場合と同様に参照パラメーターに引数を渡すことができます。 つまり、参照パラメーターごとに変数を作成することなく値を直接渡すことができます。 コンパイラは引数の値を保持する一時変数を生成し、呼び出しから戻るときに変数を破棄します。 第二に、引数リスト内の `ref` キーワードを省略できます。  
   
@@ -124,21 +124,21 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
      [!code-csharp[csProgGuideOfficeHowTo#10](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#10)]  
   
-2.  次のステートメントを `Main` の末尾に追加します。  
+2. 次のステートメントを `Main` の末尾に追加します。  
   
      [!code-csharp[csProgGuideOfficeHowTo#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#11)]  
   
-3.  次のステートメントを `DisplayInExcel` の末尾に追加します。 `Copy` メソッドはクリップボードにワークシートを追加します。  
+3. 次のステートメントを `DisplayInExcel` の末尾に追加します。 `Copy` メソッドはクリップボードにワークシートを追加します。  
   
      [!code-csharp[csProgGuideOfficeHowTo#12](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#12)]  
   
-4.  Ctrl キーを押しながら、F5 キーを押します。  
+4. Ctrl キーを押しながら、F5 キーを押します。  
   
      アイコンを含む Word 文書が表示されます。 ワークシートを前面に表示するアイコンをダブルクリックします。  
   
 ## <a name="to-set-the-embed-interop-types-property"></a>[相互運用機能型の埋め込み] プロパティを設定するには  
   
-1.  実行時に、プライマリ相互運用機能アセンブリ (PIA) を必要としない COM 型を呼び出すときに、追加の拡張が可能です。 PIA への依存関係を削除することによって、バージョンに依存しない、より簡単な展開が実現されます。 PIA を使用しないプログラミングのメリットの詳細については、「[チュートリアル: マネージド アセンブリからの型の埋め込み](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)」をご覧ください。  
+1. 実行時に、プライマリ相互運用機能アセンブリ (PIA) を必要としない COM 型を呼び出すときに、追加の拡張が可能です。 PIA への依存関係を削除することによって、バージョンに依存しない、より簡単な展開が実現されます。 PIA を使用しないプログラミングのメリットの詳細については、「[チュートリアル: マネージド アセンブリからの型の埋め込み](../../../csharp/programming-guide/concepts/assemblies-gac/walkthrough-embedding-types-from-managed-assemblies-in-visual-studio.md)」をご覧ください。  
   
      また、`dynamic` ではなく `Object` 型を使用して、COM メソッドに必要とされ、COM メソッドによって返される型を簡単に表現できるため、プログラミングがより簡単になります。 型が `dynamic` の変数は、明示的なキャストが不要になる実行時まで評価されません。 詳細については、「[dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)」を参照してください。  
   
@@ -146,15 +146,15 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-2.  既定値を変更し、型情報を埋め込むのではなく PIA を使用するには、**ソリューション エクスプ ローラー**で **[参照設定]** ノードを展開し、**[Microsoft.Office.Interop.Excel]** または **[Microsoft.Office.Interop.Word]** を選択します。  
+2. 既定値を変更し、型情報を埋め込むのではなく PIA を使用するには、**ソリューション エクスプ ローラー**で **[参照設定]** ノードを展開し、**[Microsoft.Office.Interop.Excel]** または **[Microsoft.Office.Interop.Word]** を選択します。  
   
-3.  **[プロパティ]** ウィンドウが表示されない場合は、**F4** キーを押します。  
+3. **[プロパティ]** ウィンドウが表示されない場合は、**F4** キーを押します。  
   
-4.  プロパティの一覧で **[相互運用機能型の埋め込み]** を見つけて、値を **[False]** に変更します。 同様に、コマンド プロンプトで [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) の代わりに [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) コンパイラ オプションを使用してコンパイルすることができます。  
+4. プロパティの一覧で **[相互運用機能型の埋め込み]** を見つけて、値を **[False]** に変更します。 同様に、コマンド プロンプトで [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) の代わりに [/reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) コンパイラ オプションを使用してコンパイルすることができます。  
   
 ## <a name="to-add-additional-formatting-to-the-table"></a>テーブルに追加の書式設定を追加するには  
   
-1.  `AutoFit` の `DisplayInExcel` への 2 つの呼び出しを次のステートメントに置き換えます。  
+1. `AutoFit` の `DisplayInExcel` への 2 つの呼び出しを次のステートメントに置き換えます。  
   
      [!code-csharp[csProgGuideOfficeHowTo#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#15)]  
   
@@ -162,9 +162,9 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
      [!code-csharp[csProgGuideOfficeHowTo#16](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#16)]  
   
-2.  Ctrl + F5 キーを押して結果を表示します。 その他の形式は、<xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> 列挙型のページに掲載されています。  
+2. Ctrl + F5 キーを押して結果を表示します。 その他の形式は、<xref:Microsoft.Office.Interop.Excel.XlRangeAutoFormat> 列挙型のページに掲載されています。  
   
-3.  手順 1 のステートメントと [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 以前のバージョンで必要な引数が示されている次のコードを比較します。  
+3. 手順 1 のステートメントと [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 以前のバージョンで必要な引数が示されている次のコードを比較します。  
   
      [!code-csharp[csProgGuideOfficeHowTo#17](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#17)]  
   

@@ -1,406 +1,399 @@
-items:
 - name: シンボル ストア診断
   href: index.md
   items:
-  - name: シンボル ストア診断インターフェイス
-    href: diagnostics-symbol-store-interfaces.md
-    items:
-    - name: IBindingDisplay インターフェイス
-      href: ibindingdisplay-interface.md
+    - name: シンボル ストア診断インターフェイス
+      href: diagnostics-symbol-store-interfaces.md
       items:
-      - name: GetCurrentDisplay メソッド
-        href: ibindingdisplay-getcurrentdisplay-method.md
-      - name: InitializeForProcess メソッド
-        href: ibindingdisplay-initializeforprocess-method.md
-    - name: IDebugAutoAttach インターフェイス
-      href: idebugautoattach-interface.md
+        - name: IBindingDisplay インターフェイス
+          href: ibindingdisplay-interface.md
+          items:
+            - name: GetCurrentDisplay メソッド
+              href: ibindingdisplay-getcurrentdisplay-method.md
+            - name: InitializeForProcess メソッド
+              href: ibindingdisplay-initializeforprocess-method.md
+        - name: IDebugAutoAttach インターフェイス
+          href: idebugautoattach-interface.md
+          items:
+            - name: AutoAttach メソッド
+              href: idebugautoattach-autoattach-method.md
+        - name: INotifyConnection2 インターフェイス
+          href: inotifyconnection2-interface.md
+          items:
+            - name: RegisterNotifySource メソッド
+              href: inotifyconnection2-registernotifysource-method.md
+            - name: UnregisterNotifySource メソッド
+              href: inotifyconnection2-unregisternotifysource-method.md
+        - name: INotifySink2 インターフェイス
+          href: inotifysink2-interface.md
+          items:
+            - name: OnSyncCallEnter メソッド
+              href: inotifysink2-onsynccallenter-method.md
+            - name: OnSyncCallExit メソッド
+              href: inotifysink2-onsynccallexit-method.md
+            - name: OnSyncCallOut メソッド
+              href: inotifysink2-onsynccallout-method.md
+            - name: OnSyncCallReturn メソッド
+              href: inotifysink2-onsynccallreturn-method.md
+        - name: INotifySource2 インターフェイス
+          href: inotifysource2-interface.md
+          items:
+            - name: SetNotifyFilter メソッド
+              href: inotifysource2-setnotifyfilter-method.md
+        - name: ISymENCUnmanagedMethod インターフェイス
+          href: isymencunmanagedmethod-interface.md
+          items:
+            - name: GetDocumentsForMethod メソッド
+              href: isymencunmanagedmethod-getdocumentsformethod-method.md
+            - name: GetDocumentsForMethodCount メソッド
+              href: isymencunmanagedmethod-getdocumentsformethodcount-method.md
+            - name: GetFileNameFromOffset メソッド
+              href: isymencunmanagedmethod-getfilenamefromoffset-method.md
+            - name: GetLineFromOffset メソッド
+              href: isymencunmanagedmethod-getlinefromoffset-method.md
+            - name: GetSourceExtentInDocument メソッド
+              href: isymencunmanagedmethod-getsourceextentindocument-method.md
+        - name: ISymUnmanagedAsyncMethod インターフェイス
+          href: isymunmanagedasyncmethod-interface.md
+          items:
+            - name: GetAsyncStepInfo メソッド
+              href: isymunmanagedasyncmethod-getasyncstepinfo-method.md
+            - name: GetAsyncStepInfoCount メソッド
+              href: isymunmanagedasyncmethod-getasyncstepinfocount-method.md
+            - name: GetCatchHandlerILOffSet メソッド
+              href: isymunmanagedasyncmethod-getcatchhandleriloffset-method.md
+            - name: GetKickoffMethod メソッド
+              href: isymunmanagedasyncmethod-getkickoffmethod-method.md
+            - name: HasCatchHandlerILOffSet メソッド
+              href: isymunmanagedasyncmethod-hascatchhandleriloffset-method.md
+            - name: IsAsyncMethod メソッド
+              href: isymunmanagedasyncmethod-isasyncmethod-method.md
+        - name: ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス
+          href: isymunmanagedasyncmethodpropertieswriter-interface.md
+          items:
+            - name: DefineAsyncStepInfo メソッド
+              href: isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md
+            - name: DefineCatchHandlerILOffSet メソッド
+              href: isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md
+            - name: DefineKickoffMethod メソッド
+              href: isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md
+        - name: ISymUnmanagedBinder インターフェイス
+          href: isymunmanagedbinder-interface.md
+          items:
+            - name: GetReaderForFile メソッド
+              href: isymunmanagedbinder-getreaderforfile-method.md
+            - name: GetReaderFromStream メソッド
+              href: isymunmanagedbinder-getreaderfromstream-method.md
+        - name: ISymUnmanagedBinder2 インターフェイス
+          href: isymunmanagedbinder2-interface.md
+          items:
+            - name: GetReaderForFile2 メソッド
+              href: isymunmanagedbinder2-getreaderforfile2-method.md
+        - name: ISymUnmanagedBinder3 インターフェイス
+          href: isymunmanagedbinder3-interface.md
+          items:
+            - name: GetReaderFromCallback メソッド
+              href: isymunmanagedbinder3-getreaderfromcallback-method.md
+        - name: ISymUnmanagedConstant インターフェイス
+          href: isymunmanagedconstant-interface.md
+          items:
+            - name: GetName メソッド
+              href: isymunmanagedconstant-getname-method.md
+            - name: GetSignature メソッド
+              href: isymunmanagedconstant-getsignature-method.md
+            - name: GetValue メソッド
+              href: isymunmanagedconstant-getvalue-method.md
+        - name: ISymUnmanagedDispose インターフェイス
+          href: isymunmanageddispose-interface.md
+          items:
+            - name: destroy メソッド
+              href: isymunmanageddispose-destroy-method.md
+        - name: ISymUnmanagedDocument インターフェイス
+          href: isymunmanageddocument-interface.md
+          items:
+            - name: FindClosestLine メソッド
+              href: isymunmanageddocument-findclosestline-method.md
+            - name: GetCheckSum メソッド
+              href: isymunmanageddocument-getchecksum-method.md
+            - name: GetCheckSumAlgorithmId メソッド
+              href: isymunmanageddocument-getchecksumalgorithmid-method.md
+            - name: GetDocumentType メソッド
+              href: isymunmanageddocument-getdocumenttype-method.md
+            - name: GetLanguage メソッド
+              href: isymunmanageddocument-getlanguage-method.md
+            - name: GetLanguageVendor メソッド
+              href: isymunmanageddocument-getlanguagevendor-method.md
+            - name: GetSourceLength メソッド
+              href: isymunmanageddocument-getsourcelength-method.md
+            - name: GetSourceRange メソッド
+              href: isymunmanageddocument-getsourcerange-method.md
+            - name: GetURL メソッド
+              href: isymunmanageddocument-geturl-method.md
+            - name: HasEmbeddedSource メソッド
+              href: isymunmanageddocument-hasembeddedsource-method.md
+        - name: ISymUnmanagedDocumentWriter インターフェイス
+          href: isymunmanageddocumentwriter-interface.md
+          items:
+            - name: SetCheckSum メソッド
+              href: isymunmanageddocumentwriter-setchecksum-method.md
+            - name: SetSource メソッド
+              href: isymunmanageddocumentwriter-setsource-method.md
+        - name: ISymUnmanagedENCUpdate インターフェイス
+          href: isymunmanagedencupdate-interface.md
+          items:
+            - name: GetLocalVariableCount メソッド
+              href: isymunmanagedencupdate-getlocalvariablecount-method.md
+            - name: GetLocalVariables メソッド
+              href: isymunmanagedencupdate-getlocalvariables-method.md
+            - name: InitializeForEnc メソッド
+              href: isymunmanagedencupdate-initializeforenc-method.md
+            - name: UpdateMethodLines メソッド
+              href: isymunmanagedencupdate-updatemethodlines-method.md
+            - name: UpdateSymbolStore2 メソッド
+              href: isymunmanagedencupdate-updatesymbolstore2-method.md
+        - name: ISymUnmanagedMethod インターフェイス
+          href: isymunmanagedmethod-interface.md
+          items:
+            - name: GetNamespace メソッド
+              href: isymunmanagedmethod-getnamespace-method.md
+            - name: GetOffset メソッド
+              href: isymunmanagedmethod-getoffset-method.md
+            - name: GetParameters メソッド
+              href: isymunmanagedmethod-getparameters-method.md
+            - name: GetRanges メソッド
+              href: isymunmanagedmethod-getranges-method.md
+            - name: GetRootScope メソッド
+              href: isymunmanagedmethod-getrootscope-method.md
+            - name: GetScopeFromOffSet メソッド
+              href: isymunmanagedmethod-getscopefromoffset-method.md
+            - name: GetSequencePointCount メソッド
+              href: isymunmanagedmethod-getsequencepointcount-method.md
+            - name: GetSequencePoints メソッド
+              href: isymunmanagedmethod-getsequencepoints-method.md
+            - name: GetSourceStartEnd メソッド
+              href: isymunmanagedmethod-getsourcestartend-method.md
+            - name: GetToken メソッド
+              href: isymunmanagedmethod-gettoken-method.md
+        - name: ISymUnmanagedNamespace インターフェイス
+          href: isymunmanagednamespace-interface.md
+          items:
+            - name: GetName メソッド
+              href: isymunmanagednamespace-getname-method.md
+            - name: GetNamespaces メソッド
+              href: isymunmanagednamespace-getnamespaces-method.md
+            - name: GetVariables メソッド
+              href: isymunmanagednamespace-getvariables-method.md
+        - name: ISymUnmanagedReader インターフェイス
+          href: isymunmanagedreader-interface.md
+          items:
+            - name: GetDocument メソッド
+              href: isymunmanagedreader-getdocument-method.md
+            - name: GetDocuments メソッド
+              href: isymunmanagedreader-getdocuments-method.md
+            - name: GetDocumentVersion メソッド
+              href: isymunmanagedreader-getdocumentversion-method.md
+            - name: GetGlobalVariables メソッド
+              href: isymunmanagedreader-getglobalvariables-method.md
+            - name: GetMethod メソッド
+              href: isymunmanagedreader-getmethod-method.md
+            - name: GetMethodByVersion メソッド
+              href: isymunmanagedreader-getmethodbyversion-method.md
+            - name: GetMethodFromDocumentPosition メソッド
+              href: isymunmanagedreader-getmethodfromdocumentposition-method.md
+            - name: GetMethodsFromDocumentPosition メソッド
+              href: isymunmanagedreader-getmethodsfromdocumentposition-method.md
+            - name: GetMethodVersion メソッド
+              href: isymunmanagedreader-getmethodversion-method.md
+            - name: GetNamespaces メソッド
+              href: isymunmanagedreader-getnamespaces-method.md
+            - name: GetSymAttribute メソッド
+              href: isymunmanagedreader-getsymattribute-method.md
+            - name: GetSymbolStoreFileName メソッド
+              href: isymunmanagedreader-getsymbolstorefilename-method.md
+            - name: GetUserEntryPoint メソッド
+              href: isymunmanagedreader-getuserentrypoint-method.md
+            - name: GetVariables メソッド
+              href: isymunmanagedreader-getvariables-method.md
+            - name: Initialize メソッド
+              href: isymunmanagedreader-initialize-method.md
+            - name: ReplaceSymbolStore メソッド
+              href: isymunmanagedreader-replacesymbolstore-method.md
+            - name: UpdateSymbolStore メソッド
+              href: isymunmanagedreader-updatesymbolstore-method.md
+        - name: ISymUnmanagedReader2 インターフェイス
+          href: isymunmanagedreader2-interface.md
+          items:
+            - name: GetMethodByVersionPreRemap メソッド
+              href: isymunmanagedreader2-getmethodbyversionpreremap-method.md
+            - name: GetMethodsInDocument メソッド
+              href: isymunmanagedreader2-getmethodsindocument-method.md
+            - name: GetSymAttributePreRemap メソッド
+              href: isymunmanagedreader2-getsymattributepreremap-method.md
+        - name: ISymUnmanagedReaderSymbolSearchInfo インターフェイス
+          href: isymunmanagedreadersymbolsearchinfo-interface.md
+          items:
+            - name: GetSymbolSearchInfoCount メソッド
+              href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md
+            - name: GetSymbolSearchInfo メソッド
+              href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md
+        - name: ISymUnmanagedScope インターフェイス
+          href: isymunmanagedscope-interface.md
+          items:
+            - name: GetChildren メソッド
+              href: isymunmanagedscope-getchildren-method.md
+            - name: GetEndOffSet メソッド
+              href: isymunmanagedscope-getendoffset-method.md
+            - name: GetLocalCount メソッド
+              href: isymunmanagedscope-getlocalcount-method.md
+            - name: GetLocals メソッド
+              href: isymunmanagedscope-getlocals-method.md
+            - name: GetMethod メソッド
+              href: isymunmanagedscope-getmethod-method.md
+            - name: GetNamespaces メソッド
+              href: isymunmanagedscope-getnamespaces-method.md
+            - name: GetParent メソッド
+              href: isymunmanagedscope-getparent-method.md
+            - name: GetStartOffSet メソッド
+              href: isymunmanagedscope-getstartoffset-method.md
+        - name: ISymUnmanagedScope2 インターフェイス
+          href: isymunmanagedscope2-interface.md
+          items:
+            - name: GetConstantCount メソッド
+              href: isymunmanagedscope2-getconstantcount-method.md
+            - name: GetConstants メソッド
+              href: isymunmanagedscope2-getconstants-method.md
+        - name: ISymUnmanagedSourceServerModule インターフェイス
+          href: isymunmanagedsourceservermodule-interface.md
+          items:
+            - name: GetSourceServerData メソッド
+              href: isymunmanagedsourceservermodule-getsourceserverdata-method.md
+        - name: ISymUnmanagedSymbolSearchInfo インターフェイス
+          href: isymunmanagedsymbolsearchinfo-interface.md
+          items:
+            - name: GetHRESULT メソッド
+              href: isymunmanagedsymbolsearchinfo-gethresult-method.md
+            - name: GetSearchPath メソッド
+              href: isymunmanagedsymbolsearchinfo-getsearchpath-method.md
+            - name: GetSearchPathLength メソッド
+              href: isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md
+        - name: ISymUnmanagedVariable インターフェイス
+          href: isymunmanagedvariable-interface.md
+          items:
+            - name: GetAddressField1 メソッド
+              href: isymunmanagedvariable-getaddressfield1-method.md
+            - name: GetAddressField2 メソッド
+              href: isymunmanagedvariable-getaddressfield2-method.md
+            - name: GetAddressField3 メソッド
+              href: isymunmanagedvariable-getaddressfield3-method.md
+            - name: GetAddressKind メソッド
+              href: isymunmanagedvariable-getaddresskind-method.md
+            - name: GetAttributes メソッド
+              href: isymunmanagedvariable-getattributes-method.md
+            - name: GetEndOffSet メソッド
+              href: isymunmanagedvariable-getendoffset-method.md
+            - name: GetName メソッド
+              href: isymunmanagedvariable-getname-method.md
+            - name: GetSignature メソッド
+              href: isymunmanagedvariable-getsignature-method.md
+            - name: GetStartOffSet メソッド
+              href: isymunmanagedvariable-getstartoffset-method.md
+        - name: ISymUnmanagedWriter インターフェイス
+          href: isymunmanagedwriter-interface.md
+          items:
+            - name: Abort メソッド
+              href: isymunmanagedwriter-abort-method.md
+            - name: Close メソッド
+              href: isymunmanagedwriter-close-method.md
+            - name: CloseMethod メソッド
+              href: isymunmanagedwriter-closemethod-method.md
+            - name: CloseNamespace メソッド
+              href: isymunmanagedwriter-closenamespace-method.md
+            - name: CloseScope メソッド
+              href: isymunmanagedwriter-closescope-method.md
+            - name: DefineConstant メソッド
+              href: isymunmanagedwriter-defineconstant-method.md
+            - name: DefineDocument メソッド
+              href: isymunmanagedwriter-definedocument-method.md
+            - name: DefineField メソッド
+              href: isymunmanagedwriter-definefield-method.md
+            - name: DefineGlobalVariable メソッド
+              href: isymunmanagedwriter-defineglobalvariable-method.md
+            - name: DefineLocalVariable メソッド
+              href: isymunmanagedwriter-definelocalvariable-method.md
+            - name: DefineParameter メソッド
+              href: isymunmanagedwriter-defineparameter-method.md
+            - name: DefineSequencePoints メソッド
+              href: isymunmanagedwriter-definesequencepoints-method.md
+            - name: GetDebugInfo メソッド
+              href: isymunmanagedwriter-getdebuginfo-method.md
+            - name: Initialize メソッド
+              href: isymunmanagedwriter-initialize-method.md
+            - name: Initialize2 メソッド
+              href: isymunmanagedwriter-initialize2-method.md
+            - name: OpenMethod メソッド
+              href: isymunmanagedwriter-openmethod-method.md
+            - name: OpenNamespace メソッド
+              href: isymunmanagedwriter-opennamespace-method.md
+            - name: OpenScope メソッド
+              href: isymunmanagedwriter-openscope-method.md
+            - name: RemapToken メソッド
+              href: isymunmanagedwriter-remaptoken-method.md
+            - name: SetMethodSourceRange メソッド
+              href: isymunmanagedwriter-setmethodsourcerange-method.md
+            - name: SetScopeRange メソッド
+              href: isymunmanagedwriter-setscoperange-method.md
+            - name: SetSymAttribute メソッド
+              href: isymunmanagedwriter-setsymattribute-method.md
+            - name: SetUserEntryPoint メソッド
+              href: isymunmanagedwriter-setuserentrypoint-method.md
+            - name: UsingNamespace メソッド
+              href: isymunmanagedwriter-usingnamespace-method.md
+        - name: ISymUnmanagedWriter2 インターフェイス
+          href: isymunmanagedwriter2-interface.md
+          items:
+            - name: DefineConstant2 メソッド
+              href: isymunmanagedwriter2-defineconstant2-method.md
+            - name: DefineGlobalVariable2 メソッド
+              href: isymunmanagedwriter2-defineglobalvariable2-method.md
+            - name: DefineLocalVariable2 メソッド
+              href: isymunmanagedwriter2-definelocalvariable2-method.md
+        - name: ISymUnmanagedWriter3 インターフェイス
+          href: isymunmanagedwriter3-interface.md
+          items:
+            - name: Commit メソッド
+              href: isymunmanagedwriter3-commit-method.md
+            - name: OpenMethod2 メソッド
+              href: isymunmanagedwriter3-openmethod2-method.md
+        - name: ISymUnmanagedWriter4 インターフェイス
+          href: isymunmanagedwriter4-interface.md
+          items:
+            - name: GetDebugInfoWithPadding メソッド
+              href: isymunmanagedwriter4-getdebuginfowithpadding-method.md
+        - name: ISymUnmanagedWriter5 インターフェイス
+          href: isymunmanagedwriter5-interface.md
+          items:
+            - name: CloseMapTokensToSourceSpans メソッド
+              href: isymunmanagedwriter5-closemaptokenstosourcespans-method.md
+            - name: MapTokenToSourceSpan メソッド
+              href: isymunmanagedwriter5-maptokentosourcespan-method.md
+            - name: OpenMapTokensToSourceSpans メソッド
+              href: isymunmanagedwriter5-openmaptokenstosourcespans-method.md
+    - name: シンボル ストア診断列挙体
+      href: diagnostics-symbol-store-enumerations.md
       items:
-      - name: AutoAttach メソッド
-        href: idebugautoattach-autoattach-method.md
-    - name: INotifyConnection2 インターフェイス
-      href: inotifyconnection2-interface.md
+        - name: CorSymAddrKind 列挙体
+          href: corsymaddrkind-enumeration.md
+        - name: CorSymSearchPolicyAttributes 列挙体
+          href: corsymsearchpolicyattributes-enumeration.md
+        - name: CorSymVarFlag 列挙体
+          href: corsymvarflag-enumeration.md
+        - name: NOTIFY_FILTER 列挙体
+          href: notify-filter-enumeration.md
+    - name: シンボル ストア診断構造体
+      href: diagnostics-symbol-store-structures.md
       items:
-      - name: RegisterNotifySource メソッド
-        href: inotifyconnection2-registernotifysource-method.md
-      - name: UnregisterNotifySource メソッド
-        href: inotifyconnection2-unregisternotifysource-method.md
-    - name: INotifySink2 インターフェイス
-      href: inotifysink2-interface.md
-      items:
-      - name: OnSyncCallEnter メソッド
-        href: inotifysink2-onsynccallenter-method.md
-      - name: OnSyncCallExit メソッド
-        href: inotifysink2-onsynccallexit-method.md
-      - name: OnSyncCallOut メソッド
-        href: inotifysink2-onsynccallout-method.md
-      - name: OnSyncCallReturn メソッド
-        href: inotifysink2-onsynccallreturn-method.md
-    - name: INotifySource2 インターフェイス
-      href: inotifysource2-interface.md
-      items:
-      - name: SetNotifyFilter メソッド
-        href: inotifysource2-setnotifyfilter-method.md
-    - name: ISymENCUnmanagedMethod インターフェイス
-      href: isymencunmanagedmethod-interface.md
-      items:
-      - name: GetDocumentsForMethod メソッド
-        href: isymencunmanagedmethod-getdocumentsformethod-method.md
-      - name: GetDocumentsForMethodCount メソッド
-        href: isymencunmanagedmethod-getdocumentsformethodcount-method.md
-      - name: GetFileNameFromOffset メソッド
-        href: isymencunmanagedmethod-getfilenamefromoffset-method.md
-      - name: GetLineFromOffset メソッド
-        href: isymencunmanagedmethod-getlinefromoffset-method.md
-      - name: GetSourceExtentInDocument メソッド
-        href: isymencunmanagedmethod-getsourceextentindocument-method.md
-    - name: ISymUnmanagedAsyncMethod インターフェイス
-      href: isymunmanagedasyncmethod-interface.md
-      items:
-      - name: GetAsyncStepInfo メソッド
-        href: isymunmanagedasyncmethod-getasyncstepinfo-method.md
-      - name: GetAsyncStepInfoCount メソッド
-        href: isymunmanagedasyncmethod-getasyncstepinfocount-method.md
-      - name: GetCatchHandlerILOffSet メソッド
-        href: isymunmanagedasyncmethod-getcatchhandleriloffset-method.md
-      - name: GetKickoffMethod メソッド
-        href: isymunmanagedasyncmethod-getkickoffmethod-method.md
-      - name: HasCatchHandlerILOffSet メソッド
-        href: isymunmanagedasyncmethod-hascatchhandleriloffset-method.md
-      - name: IsAsyncMethod メソッド
-        href: isymunmanagedasyncmethod-isasyncmethod-method.md
-    - name: ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス
-      href: isymunmanagedasyncmethodpropertieswriter-interface.md
-      items:
-      - name: DefineAsyncStepInfo メソッド
-        href: isymunmanagedasyncmethodpropertieswriter-defineasyncstepinfo-method.md
-      - name: DefineCatchHandlerILOffSet メソッド
-        href: isymunmanagedasyncmethodpropertieswriter-definecatchhandleriloffset-method.md
-      - name: DefineKickoffMethod メソッド
-        href: isymunmanagedasyncmethodpropertieswriter-definekickoffmethod-method.md
-    - name: ISymUnmanagedBinder インターフェイス
-      href: isymunmanagedbinder-interface.md
-      items:
-      - name: GetReaderForFile メソッド
-        href: isymunmanagedbinder-getreaderforfile-method.md
-      - name: GetReaderFromStream メソッド
-        href: isymunmanagedbinder-getreaderfromstream-method.md
-    - name: ISymUnmanagedBinder2 インターフェイス
-      href: isymunmanagedbinder2-interface.md
-      items:
-      - name: GetReaderForFile2 メソッド
-        href: isymunmanagedbinder2-getreaderforfile2-method.md
-    - name: ISymUnmanagedBinder3 インターフェイス
-      href: isymunmanagedbinder3-interface.md
-      items:
-      - name: GetReaderFromCallback メソッド
-        href: isymunmanagedbinder3-getreaderfromcallback-method.md
-    - name: ISymUnmanagedConstant インターフェイス
-      href: isymunmanagedconstant-interface.md
-      items:
-      - name: GetName メソッド
-        href: isymunmanagedconstant-getname-method.md
-      - name: GetSignature メソッド
-        href: isymunmanagedconstant-getsignature-method.md
-      - name: GetValue メソッド
-        href: isymunmanagedconstant-getvalue-method.md
-    - name: ISymUnmanagedDispose インターフェイス
-      href: isymunmanageddispose-interface.md
-      items:
-      - name: destroy メソッド
-        href: isymunmanageddispose-destroy-method.md
-    - name: ISymUnmanagedDocument インターフェイス
-      href: isymunmanageddocument-interface.md
-      items:
-      - name: FindClosestLine メソッド
-        href: isymunmanageddocument-findclosestline-method.md
-      - name: GetCheckSum メソッド
-        href: isymunmanageddocument-getchecksum-method.md
-      - name: GetCheckSumAlgorithmId メソッド
-        href: isymunmanageddocument-getchecksumalgorithmid-method.md
-      - name: GetDocumentType メソッド
-        href: isymunmanageddocument-getdocumenttype-method.md
-      - name: GetLanguage メソッド
-        href: isymunmanageddocument-getlanguage-method.md
-      - name: GetLanguageVendor メソッド
-        href: isymunmanageddocument-getlanguagevendor-method.md
-      - name: GetSourceLength メソッド
-        href: isymunmanageddocument-getsourcelength-method.md
-      - name: GetSourceRange メソッド
-        href: isymunmanageddocument-getsourcerange-method.md
-      - name: GetURL メソッド
-        href: isymunmanageddocument-geturl-method.md
-      - name: HasEmbeddedSource メソッド
-        href: isymunmanageddocument-hasembeddedsource-method.md
-    - name: ISymUnmanagedDocumentWriter インターフェイス
-      href: isymunmanageddocumentwriter-interface.md
-      items:
-      - name: SetCheckSum メソッド
-        href: isymunmanageddocumentwriter-setchecksum-method.md
-      - name: SetSource メソッド
-        href: isymunmanageddocumentwriter-setsource-method.md
-    - name: ISymUnmanagedENCUpdate インターフェイス
-      href: isymunmanagedencupdate-interface.md
-      items:
-      - name: GetLocalVariableCount メソッド
-        href: isymunmanagedencupdate-getlocalvariablecount-method.md
-      - name: GetLocalVariables メソッド
-        href: isymunmanagedencupdate-getlocalvariables-method.md
-      - name: InitializeForEnc メソッド
-        href: isymunmanagedencupdate-initializeforenc-method.md
-      - name: UpdateMethodLines メソッド
-        href: isymunmanagedencupdate-updatemethodlines-method.md
-      - name: UpdateSymbolStore2 メソッド
-        href: isymunmanagedencupdate-updatesymbolstore2-method.md
-    - name: ISymUnmanagedMethod インターフェイス
-      href: isymunmanagedmethod-interface.md
-      items:
-      - name: GetNamespace メソッド
-        href: isymunmanagedmethod-getnamespace-method.md
-      - name: GetOffset メソッド
-        href: isymunmanagedmethod-getoffset-method.md
-      - name: GetParameters メソッド
-        href: isymunmanagedmethod-getparameters-method.md
-      - name: GetRanges メソッド
-        href: isymunmanagedmethod-getranges-method.md
-      - name: GetRootScope メソッド
-        href: isymunmanagedmethod-getrootscope-method.md
-      - name: GetScopeFromOffSet メソッド
-        href: isymunmanagedmethod-getscopefromoffset-method.md
-      - name: GetSequencePointCount メソッド
-        href: isymunmanagedmethod-getsequencepointcount-method.md
-      - name: GetSequencePoints メソッド
-        href: isymunmanagedmethod-getsequencepoints-method.md
-      - name: GetSourceStartEnd メソッド
-        href: isymunmanagedmethod-getsourcestartend-method.md
-      - name: GetToken メソッド
-        href: isymunmanagedmethod-gettoken-method.md
-    - name: ISymUnmanagedNamespace インターフェイス
-      href: isymunmanagednamespace-interface.md
-      items:
-      - name: GetName メソッド
-        href: isymunmanagednamespace-getname-method.md
-      - name: GetNamespaces メソッド
-        href: isymunmanagednamespace-getnamespaces-method.md
-      - name: GetVariables メソッド
-        href: isymunmanagednamespace-getvariables-method.md
-    - name: ISymUnmanagedReader インターフェイス
-      href: isymunmanagedreader-interface.md
-      items:
-      - name: GetDocument メソッド
-        href: isymunmanagedreader-getdocument-method.md
-      - name: GetDocuments メソッド
-        href: isymunmanagedreader-getdocuments-method.md
-      - name: GetDocumentVersion メソッド
-        href: isymunmanagedreader-getdocumentversion-method.md
-      - name: GetGlobalVariables メソッド
-        href: isymunmanagedreader-getglobalvariables-method.md
-      - name: GetMethod メソッド
-        href: isymunmanagedreader-getmethod-method.md
-      - name: GetMethodByVersion メソッド
-        href: isymunmanagedreader-getmethodbyversion-method.md
-      - name: GetMethodFromDocumentPosition メソッド
-        href: isymunmanagedreader-getmethodfromdocumentposition-method.md
-      - name: GetMethodsFromDocumentPosition メソッド
-        href: isymunmanagedreader-getmethodsfromdocumentposition-method.md
-      - name: GetMethodVersion メソッド
-        href: isymunmanagedreader-getmethodversion-method.md
-      - name: GetNamespaces メソッド
-        href: isymunmanagedreader-getnamespaces-method.md
-      - name: GetSymAttribute メソッド
-        href: isymunmanagedreader-getsymattribute-method.md
-      - name: GetSymbolStoreFileName メソッド
-        href: isymunmanagedreader-getsymbolstorefilename-method.md
-      - name: GetUserEntryPoint メソッド
-        href: isymunmanagedreader-getuserentrypoint-method.md
-      - name: GetVariables メソッド
-        href: isymunmanagedreader-getvariables-method.md
-      - name: Initialize メソッド
-        href: isymunmanagedreader-initialize-method.md
-      - name: ReplaceSymbolStore メソッド
-        href: isymunmanagedreader-replacesymbolstore-method.md
-      - name: UpdateSymbolStore メソッド
-        href: isymunmanagedreader-updatesymbolstore-method.md
-    - name: ISymUnmanagedReader2 インターフェイス
-      href: isymunmanagedreader2-interface.md
-      items:
-      - name: GetMethodByVersionPreRemap メソッド
-        href: isymunmanagedreader2-getmethodbyversionpreremap-method.md
-      - name: GetMethodsInDocument メソッド
-        href: isymunmanagedreader2-getmethodsindocument-method.md
-      - name: GetSymAttributePreRemap メソッド
-        href: isymunmanagedreader2-getsymattributepreremap-method.md
-    - name: ISymUnmanagedReaderSymbolSearchInfo インターフェイス
-      href: isymunmanagedreadersymbolsearchinfo-interface.md
-      items:
-      - name: GetSymbolSearchInfoCount メソッド
-        href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfocount-method.md
-      - name: GetSymbolSearchInfo メソッド
-        href: isymunmanagedreadersymbolsearchinfo-getsymbolsearchinfo-method.md
-    - name: ISymUnmanagedScope インターフェイス
-      href: isymunmanagedscope-interface.md
-      items:
-      - name: GetChildren メソッド
-        href: isymunmanagedscope-getchildren-method.md
-      - name: GetEndOffSet メソッド
-        href: isymunmanagedscope-getendoffset-method.md
-      - name: GetLocalCount メソッド
-        href: isymunmanagedscope-getlocalcount-method.md
-      - name: GetLocals メソッド
-        href: isymunmanagedscope-getlocals-method.md
-      - name: GetMethod メソッド
-        href: isymunmanagedscope-getmethod-method.md
-      - name: GetNamespaces メソッド
-        href: isymunmanagedscope-getnamespaces-method.md
-      - name: GetParent メソッド
-        href: isymunmanagedscope-getparent-method.md
-      - name: GetStartOffSet メソッド
-        href: isymunmanagedscope-getstartoffset-method.md
-    - name: ISymUnmanagedScope2 インターフェイス
-      href: isymunmanagedscope2-interface.md
-      items:
-      - name: GetConstantCount メソッド
-        href: isymunmanagedscope2-getconstantcount-method.md
-      - name: GetConstants メソッド
-        href: isymunmanagedscope2-getconstants-method.md
-    - name: ISymUnmanagedSourceServerModule インターフェイス
-      href: isymunmanagedsourceservermodule-interface.md
-      items:
-      - name: GetSourceServerData メソッド
-        href: isymunmanagedsourceservermodule-getsourceserverdata-method.md
-    - name: ISymUnmanagedSymbolSearchInfo インターフェイス
-      href: isymunmanagedsymbolsearchinfo-interface.md
-      items:
-      - name: GetHRESULT メソッド
-        href: isymunmanagedsymbolsearchinfo-gethresult-method.md
-      - name: GetSearchPath メソッド
-        href: isymunmanagedsymbolsearchinfo-getsearchpath-method.md
-      - name: GetSearchPathLength メソッド
-        href: isymunmanagedsymbolsearchinfo-getsearchpathlength-method.md
-    - name: ISymUnmanagedVariable インターフェイス
-      href: isymunmanagedvariable-interface.md
-      items:
-      - name: GetAddressField1 メソッド
-        href: isymunmanagedvariable-getaddressfield1-method.md
-      - name: GetAddressField2 メソッド
-        href: isymunmanagedvariable-getaddressfield2-method.md
-      - name: GetAddressField3 メソッド
-        href: isymunmanagedvariable-getaddressfield3-method.md
-      - name: GetAddressKind メソッド
-        href: isymunmanagedvariable-getaddresskind-method.md
-      - name: GetAttributes メソッド
-        href: isymunmanagedvariable-getattributes-method.md
-      - name: GetEndOffSet メソッド
-        href: isymunmanagedvariable-getendoffset-method.md
-      - name: GetName メソッド
-        href: isymunmanagedvariable-getname-method.md
-      - name: GetSignature メソッド
-        href: isymunmanagedvariable-getsignature-method.md
-      - name: GetStartOffSet メソッド
-        href: isymunmanagedvariable-getstartoffset-method.md
-    - name: ISymUnmanagedWriter インターフェイス
-      href: isymunmanagedwriter-interface.md
-      items:
-      - name: Abort メソッド
-        href: isymunmanagedwriter-abort-method.md
-      - name: Close メソッド
-        href: isymunmanagedwriter-close-method.md
-      - name: CloseMethod メソッド
-        href: isymunmanagedwriter-closemethod-method.md
-      - name: CloseNamespace メソッド
-        href: isymunmanagedwriter-closenamespace-method.md
-      - name: CloseScope メソッド
-        href: isymunmanagedwriter-closescope-method.md
-      - name: DefineConstant メソッド
-        href: isymunmanagedwriter-defineconstant-method.md
-      - name: DefineDocument メソッド
-        href: isymunmanagedwriter-definedocument-method.md
-      - name: DefineField メソッド
-        href: isymunmanagedwriter-definefield-method.md
-      - name: DefineGlobalVariable メソッド
-        href: isymunmanagedwriter-defineglobalvariable-method.md
-      - name: DefineLocalVariable メソッド
-        href: isymunmanagedwriter-definelocalvariable-method.md
-      - name: DefineParameter メソッド
-        href: isymunmanagedwriter-defineparameter-method.md
-      - name: DefineSequencePoints メソッド
-        href: isymunmanagedwriter-definesequencepoints-method.md
-      - name: GetDebugInfo メソッド
-        href: isymunmanagedwriter-getdebuginfo-method.md
-      - name: Initialize メソッド
-        href: isymunmanagedwriter-initialize-method.md
-      - name: Initialize2 メソッド
-        href: isymunmanagedwriter-initialize2-method.md
-      - name: OpenMethod メソッド
-        href: isymunmanagedwriter-openmethod-method.md
-      - name: OpenNamespace メソッド
-        href: isymunmanagedwriter-opennamespace-method.md
-      - name: OpenScope メソッド
-        href: isymunmanagedwriter-openscope-method.md
-      - name: RemapToken メソッド
-        href: isymunmanagedwriter-remaptoken-method.md
-      - name: SetMethodSourceRange メソッド
-        href: isymunmanagedwriter-setmethodsourcerange-method.md
-      - name: SetScopeRange メソッド
-        href: isymunmanagedwriter-setscoperange-method.md
-      - name: SetSymAttribute メソッド
-        href: isymunmanagedwriter-setsymattribute-method.md
-      - name: SetUserEntryPoint メソッド
-        href: isymunmanagedwriter-setuserentrypoint-method.md
-      - name: UsingNamespace メソッド
-        href: isymunmanagedwriter-usingnamespace-method.md
-    - name: ISymUnmanagedWriter2 インターフェイス
-      href: isymunmanagedwriter2-interface.md
-      items:
-      - name: DefineConstant2 メソッド
-        href: isymunmanagedwriter2-defineconstant2-method.md
-      - name: DefineGlobalVariable2 メソッド
-        href: isymunmanagedwriter2-defineglobalvariable2-method.md
-      - name: DefineLocalVariable2 メソッド
-        href: isymunmanagedwriter2-definelocalvariable2-method.md
-    - name: ISymUnmanagedWriter3 インターフェイス
-      href: isymunmanagedwriter3-interface.md
-      items:
-      - name: Commit メソッド
-        href: isymunmanagedwriter3-commit-method.md
-      - name: OpenMethod2 メソッド
-        href: isymunmanagedwriter3-openmethod2-method.md
-    - name: ISymUnmanagedWriter4 インターフェイス
-      href: isymunmanagedwriter4-interface.md
-      items:
-      - name: GetDebugInfoWithPadding メソッド
-        href: isymunmanagedwriter4-getdebuginfowithpadding-method.md
-    - name: ISymUnmanagedWriter5 インターフェイス
-      href: isymunmanagedwriter5-interface.md
-      items:
-      - name: CloseMapTokensToSourceSpans メソッド
-        href: isymunmanagedwriter5-closemaptokenstosourcespans-method.md
-      - name: MapTokenToSourceSpan メソッド
-        href: isymunmanagedwriter5-maptokentosourcespan-method.md
-      - name: OpenMapTokensToSourceSpans メソッド
-        href: isymunmanagedwriter5-openmaptokenstosourcespans-method.md
-  - name: シンボル ストア診断列挙体
-    href: diagnostics-symbol-store-enumerations.md
-    items:
-    - name: CorSymAddrKind 列挙体
-      href: corsymaddrkind-enumeration.md
-    - name: CorSymSearchPolicyAttributes 列挙体
-      href: corsymsearchpolicyattributes-enumeration.md
-    - name: CorSymVarFlag 列挙体
-      href: corsymvarflag-enumeration.md
-    - name: NOTIFY_FILTER 列挙体
-      href: notify-filter-enumeration.md
-  - name: シンボル ストア診断構造体
-    href: diagnostics-symbol-store-structures.md
-    items:
-    - name: CALL_ID 構造体
-      href: call-id-structure.md
-    - name: SYMLINEDELTA 構造体
-      href: symlinedelta-structure.md
-    - name: USER_THREAD 構造体
-      href: user-thread-structure.md
-ms.openlocfilehash: e9bec23db08e17d11aa5cabadb8967bcc8b32b77
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470042"
+        - name: CALL_ID 構造体
+          href: call-id-structure.md
+        - name: SYMLINEDELTA 構造体
+          href: symlinedelta-structure.md
+        - name: USER_THREAD 構造体
+          href: user-thread-structure.md

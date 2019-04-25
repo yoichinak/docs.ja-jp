@@ -9,10 +9,10 @@ ms.assetid: c693fd34-88fe-4d90-b332-19eeadf3b7e7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6604beca5c0031b55fc22fc48e0c23d27c8a37e
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59314972"
 ---
 # <a name="get-started-with-the-net-framework"></a>.NET Framework の概要
@@ -81,7 +81,7 @@ Windows 8 よりも前の Windows バージョンで .NET Framework を削除す
 | ----- |------------ |
 | [概要](overview.md) | .NET Framework を対象としたアプリを作成する開発者向けの詳細情報を提供します。 |
 | [インストール ガイド](../install/index.md) | .NET Framework のインストールに関する情報を提供します。 |  
-| [.NET Framework および特別なリリース](the-net-framework-and-out-of-band-releases.md) | .NET Framework のアウト オブ バンド リリースと、これらをアプリ内で使用する方法について説明します。 |
+| [NET Framework および特別なリリース](the-net-framework-and-out-of-band-releases.md) | .NET Framework のアウト オブ バンド リリースと、これらをアプリ内で使用する方法について説明します。 |
 | [システム要件](system-requirements.md) | .NET Framework を実行するためのハードウェアおよびソフトウェアの要件を示します。 |
 | [.NET Core とオープン ソース](net-core-and-open-source.md) | .NET Core と .NET Framework の関係性、およびオープン ソースの .NET Core プロジェクトにアクセスする方法について説明します。 |
 | [.NET Core ドキュメント](../../core/index.md) | .NET Core の概念と API リファレンス ドキュメントを提供します。 |

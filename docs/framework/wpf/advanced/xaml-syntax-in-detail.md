@@ -30,10 +30,10 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59298891"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
@@ -316,7 +316,7 @@ ms.locfileid: "59298891"
 ## <a name="see-also"></a>関連項目
 
 - [XAML の概要 (WPF)](xaml-overview-wpf.md)
-- [XAML 名前空間 (x:)言語機能](../../xaml-services/xaml-namespace-x-language-features.md)
+- [XAML Namespace (x:)言語機能](../../xaml-services/xaml-namespace-x-language-features.md)
 - [WPF XAML 拡張機能](wpf-xaml-extensions.md)
 - [依存関係プロパティの概要](dependency-properties-overview.md)
 - [TypeConverters および XAML](typeconverters-and-xaml.md)

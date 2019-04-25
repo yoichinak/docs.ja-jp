@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 05b0549b-882d-4660-b6f0-5678543e5475
 ms.openlocfilehash: 05130e809356369ee2b43d9af86acf69fe527e9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59295420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902331"
 ---
 # <a name="how-to-create-a-custom-authorization-policy"></a>方法: カスタム承認ポリシーを作成する
 Id モデル インフラストラクチャでは、Windows Communication Foundation (WCF) には、クレーム ベースの承認モデルがサポートしています。 クレームは、トークンから抽出され、状況に応じてカスタム承認ポリシーによって処理されてから、承認決定を行う際に確認できる <xref:System.IdentityModel.Policy.AuthorizationContext> に格納されます。 カスタム ポリシーを使用して、入力トークンからのクレームを、アプリケーションが要求するクレームに変換することができます。 この方法では、WCF がサポートする、さまざまなトークンの種類から提供されるさまざまなクレームの詳細からアプリケーション層を隔離することができます。 このトピックでは、カスタム承認ポリシーの実装方法と、サービスで使用するポリシーのコレクションにカスタム承認ポリシーを追加する方法について説明します。  
@@ -78,6 +78,6 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.ServiceModel.ServiceAuthorizationManager>
-- [方法: クレームを比較する](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
-- [方法: サービスで使用するカスタム承認マネージャーを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
+- [方法: クレームを比較します。](../../../../docs/framework/wcf/extending/how-to-compare-claims.md)
+- [方法: サービスのカスタム承認マネージャーを作成します。](../../../../docs/framework/wcf/extending/how-to-create-a-custom-authorization-manager-for-a-service.md)
 - [承認ポリシー](../../../../docs/framework/wcf/samples/authorization-policy.md)

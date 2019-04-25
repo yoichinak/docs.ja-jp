@@ -1,256 +1,249 @@
-items:
 - name: WCF を使用したサービス指向アプリケーション
   href: index.md
   items:
-  - name: Windows Communication Foundation 4.5 の新機能
-    href: whats-new.md
-  - name: WCF の単純化機能
-    href: wcf-simplification-features.md
-  - name: ドキュメントのガイド
-    href: guide-to-the-documentation.md
-  - name: 概念
-    href: conceptual-overview.md
-    items:
-    - name: Windows Communication Foundation とは
-      href: whats-wcf.md
-    - name: Windows Communication Foundation の基本概念
-      href: fundamental-concepts.md
-    - name: Windows Communication Foundation のアーキテクチャ
-      href: architecture.md
-    - name: WCF および .NET Framework のクライアント プロファイル
-      href: wcf-and-net-framework-client-profile.md
-  - name: 入門チュートリアル
-    href: getting-started-tutorial.md
-    items:
-    - name: サービス コントラクトを定義する
-      href: how-to-define-a-wcf-service-contract.md
-    - name: サービス コントラクトを実装する
-      href: how-to-implement-a-wcf-contract.md
-    - name: 基本的なサービスをホストおよび実行する
-      href: how-to-host-and-run-a-basic-wcf-service.md
-    - name: クライアントを作成する
-      href: how-to-create-a-wcf-client.md
-    - name: クライアントを使用する
-      href: how-to-use-a-wcf-client.md
-    - name: 入門チュートリアルのトラブルシューティング
-      href: troubleshooting-the-getting-started-tutorial.md
-  - name: 基本的な WCF プログラミング
-    href: basic-wcf-programming.md
-    items:
-    - name: 基本的なプログラミング ライフサイクル
-      href: basic-programming-lifecycle.md
-    - name: サービスの設計と実装
-      href: designing-and-implementing-services.md
+    - name: Windows Communication Foundation 4.5 の新機能
+      href: whats-new.md
+    - name: WCF の単純化機能
+      href: wcf-simplification-features.md
+    - name: ドキュメントのガイド
+      href: guide-to-the-documentation.md
+    - name: 概念
+      href: conceptual-overview.md
       items:
-      - name: サービス コントラクトの設計
-        href: designing-service-contracts.md
-        items:
-        - name: コントラクトおよびサービスのエラーの指定と処理
-          href: specifying-and-handling-faults-in-contracts-and-services.md
+        - name: Windows Communication Foundation とは
+          href: whats-wcf.md
+        - name: Windows Communication Foundation の基本概念
+          href: fundamental-concepts.md
+        - name: Windows Communication Foundation のアーキテクチャ
+          href: architecture.md
+        - name: WCF および .NET Framework のクライアント プロファイル
+          href: wcf-and-net-framework-client-profile.md
+    - name: 入門チュートリアル
+      href: getting-started-tutorial.md
+      items:
+        - name: サービス コントラクトを定義する
+          href: how-to-define-a-wcf-service-contract.md
+        - name: サービス コントラクトを実装する
+          href: how-to-implement-a-wcf-contract.md
+        - name: 基本的なサービスをホストおよび実行する
+          href: how-to-host-and-run-a-basic-wcf-service.md
+        - name: クライアントを作成する
+          href: how-to-create-a-wcf-client.md
+        - name: クライアントを使用する
+          href: how-to-use-a-wcf-client.md
+        - name: 入門チュートリアルのトラブルシューティング
+          href: troubleshooting-the-getting-started-tutorial.md
+    - name: 基本的な WCF プログラミング
+      href: basic-wcf-programming.md
+      items:
+        - name: 基本的なプログラミング ライフサイクル
+          href: basic-programming-lifecycle.md
+        - name: サービスの設計と実装
+          href: designing-and-implementing-services.md
           items:
-          - name: エラーの定義と指定
-            href: defining-and-specifying-faults.md
-            items:
-            - name: '方法: サービス コントラクトでのエラーを宣言する'
-              href: how-to-declare-faults-in-service-contracts.md
-          - name: エラーの送受信
-            href: sending-and-receiving-faults.md
-        - name: セッションの使用
-          href: using-sessions.md
-        - name: 同期操作と非同期操作
-          href: synchronous-and-asynchronous-operations.md
+            - name: サービス コントラクトの設計
+              href: designing-service-contracts.md
+              items:
+                - name: コントラクトおよびサービスのエラーの指定と処理
+                  href: specifying-and-handling-faults-in-contracts-and-services.md
+                  items:
+                    - name: エラーの定義と指定
+                      href: defining-and-specifying-faults.md
+                      items:
+                        - name: '方法: サービス コントラクトでのエラーを宣言する'
+                          href: how-to-declare-faults-in-service-contracts.md
+                    - name: エラーの送受信
+                      href: sending-and-receiving-faults.md
+                - name: セッションの使用
+                  href: using-sessions.md
+                - name: 同期操作と非同期操作
+                  href: synchronous-and-asynchronous-operations.md
+                  items:
+                    - name: '方法: 非同期サービス操作を実装する'
+                      href: how-to-implement-an-asynchronous-service-operation.md
+                - name: 信頼できるサービス
+                  href: reliable-services.md
+                - name: サービスとトランザクション
+                  href: services-and-transactions.md
+            - name: サービス コントラクトの実装
+              href: implementing-service-contracts.md
+              items:
+                - name: サービスのランタイム動作の指定
+                  href: specifying-service-run-time-behavior.md
+        - name: サービスの構成
+          href: configuring-services.md
           items:
-          - name: '方法: 非同期サービス操作を実装する'
-            href: how-to-implement-an-asynchronous-service-operation.md
-        - name: 信頼できるサービス
-          href: reliable-services.md
-        - name: サービスとトランザクション
-          href: services-and-transactions.md
-      - name: サービス コントラクトの実装
-        href: implementing-service-contracts.md
-        items:
-        - name: サービスのランタイム動作の指定
-          href: specifying-service-run-time-behavior.md
-    - name: サービスの構成
-      href: configuring-services.md
-      items:
-      - name: 簡略化された構成
-        href: simplified-configuration.md
-      - name: 構成ファイルを使用してサービスを構成する方法
-        href: configuring-services-using-configuration-files.md
-      - name: コード内での WCF サービスの構成
-        href: configuring-wcf-services-in-code.md
-      - name: バインディング
-        href: bindings.md
-        items:
-        - name: WCF のバインディングの概要
-          href: bindings-overview.md
-        - name: システム標準のバインディング
-          href: system-provided-bindings.md
-        - name: サービスとクライアントを構成するためのバインディングの使用
-          href: using-bindings-to-configure-services-and-clients.md
+            - name: 簡略化された構成
+              href: simplified-configuration.md
+            - name: 構成ファイルを使用してサービスを構成する方法
+              href: configuring-services-using-configuration-files.md
+            - name: コード内での WCF サービスの構成
+              href: configuring-wcf-services-in-code.md
+            - name: バインディング
+              href: bindings.md
+              items:
+                - name: WCF のバインディングの概要
+                  href: bindings-overview.md
+                - name: システム標準のバインディング
+                  href: system-provided-bindings.md
+                - name: サービスとクライアントを構成するためのバインディングの使用
+                  href: using-bindings-to-configure-services-and-clients.md
+                  items:
+                    - name: '方法: コード内でクライアント バインディングを指定する'
+                      href: how-to-specify-a-client-binding-in-code.md
+                    - name: '方法: 構成でクライアント バインディングを指定する'
+                      href: how-to-specify-a-client-binding-in-configuration.md
+                    - name: '方法: コード内でサービス バインディングを指定する'
+                      href: how-to-specify-a-service-binding-in-code.md
+                    - name: '方法: 構成でサービス バインディングを指定する'
+                      href: how-to-specify-a-service-binding-in-configuration.md
+                - name: サービスのバインディングの構成
+                  href: configuring-bindings-for-wcf-services.md
+            - name: エンドポイント
+              href: endpoints.md
+              items:
+                - name: エンドポイントの作成の概要
+                  href: endpoint-creation-overview.md
+                - name: エンドポイント アドレスの指定
+                  href: specifying-an-endpoint-address.md
+                - name: メタデータ エンドポイントを公開する
+                  href: publishing-metadata-endpoints.md
+            - name: サービスのセキュリティ保護
+              href: securing-services.md
+              items:
+                - name: '方法: Windows 資格情報でサービスをセキュリティで保護する'
+                  href: how-to-secure-a-service-with-windows-credentials.md
+                - name: '方法: セキュリティ モードを設定する'
+                  href: how-to-set-the-security-mode.md
+                - name: '方法: クライアントの資格情報の種類を指定する'
+                  href: how-to-specify-the-client-credential-type.md
+                - name: '方法: PrincipalPermissionAttribute クラスでアクセスを制限する'
+                  href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
+                - name: '方法: サービスでクライアントに偽装する'
+                  href: how-to-impersonate-a-client-on-a-service.md
+                - name: '方法: セキュリティ コンテキストを調べる'
+                  href: how-to-examine-the-security-context.md
+                - name: 保護レベルの理解
+                  href: understanding-protection-level.md
+                - name: '方法: ProtectionLevel プロパティを設定する'
+                  href: how-to-set-the-protectionlevel-property.md
+            - name: WS-I Basic Profile 1.1 の相互運用可能サービスの作成
+              href: creating-ws-i-basic-profile-1-1-interoperable-services.md
+        - name: ホスティング サービス
+          href: hosting-services.md
           items:
-          - name: '方法: コード内でクライアント バインディングを指定する'
-            href: how-to-specify-a-client-binding-in-code.md
-          - name: '方法: 構成でクライアント バインディングを指定する'
-            href: how-to-specify-a-client-binding-in-configuration.md
-          - name: '方法: コード内でサービス バインディングを指定する'
-            href: how-to-specify-a-service-binding-in-code.md
-          - name: '方法: 構成でサービス バインディングを指定する'
-            href: how-to-specify-a-service-binding-in-configuration.md
-        - name: サービスのバインディングの構成
-          href: configuring-bindings-for-wcf-services.md
-      - name: エンドポイント
-        href: endpoints.md
-        items:
-        - name: エンドポイントの作成の概要
-          href: endpoint-creation-overview.md
-        - name: エンドポイント アドレスの指定
-          href: specifying-an-endpoint-address.md
-        - name: メタデータ エンドポイントを公開する
-          href: publishing-metadata-endpoints.md
-      - name: サービスのセキュリティ保護
-        href: securing-services.md
-        items:
-        - name: '方法: Windows 資格情報でサービスをセキュリティで保護する'
-          href: how-to-secure-a-service-with-windows-credentials.md
-        - name: '方法: セキュリティ モードを設定する'
-          href: how-to-set-the-security-mode.md
-        - name: '方法: クライアントの資格情報の種類を指定する'
-          href: how-to-specify-the-client-credential-type.md
-        - name: '方法: PrincipalPermissionAttribute クラスでアクセスを制限する'
-          href: how-to-restrict-access-with-the-principalpermissionattribute-class.md
-        - name: '方法: サービスでクライアントに偽装する'
-          href: how-to-impersonate-a-client-on-a-service.md
-        - name: '方法: セキュリティ コンテキストを調べる'
-          href: how-to-examine-the-security-context.md
-        - name: 保護レベルの理解
-          href: understanding-protection-level.md
-        - name: '方法: ProtectionLevel プロパティを設定する'
-          href: how-to-set-the-protectionlevel-property.md
-      - name: WS-I Basic Profile 1.1 の相互運用可能サービスの作成
-        href: creating-ws-i-basic-profile-1-1-interoperable-services.md
-    - name: ホスティング サービス
-      href: hosting-services.md
+            - name: '方法: マネージド アプリケーションで WCF サービスをホストする'
+              href: how-to-host-a-wcf-service-in-a-managed-application.md
+            - name: '方法: .NET Framework 4 で実行されている IIS 内の .NET Framework 3.5 で作成された WCF サービスをホストする'
+              href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
+        - name: クライアントを構築する
+          href: building-clients.md
+          items:
+            - name: WCF クライアントの概要
+              href: wcf-client-overview.md
+            - name: WCF クライアントを使用したサービスへのアクセス
+              href: accessing-services-using-a-wcf-client.md
+              items:
+                - name: ポータブル サブセット プロジェクトでサービス参照を追加する
+                  href: add-service-reference-in-a-portable-subset-project.md
+                - name: クライアントのランタイム動作の指定
+                  href: specifying-client-run-time-behavior.md
+                - name: クライアントの動作の構成
+                  href: configuring-client-behaviors.md
+            - name: クライアントのセキュリティ保護
+              href: securing-clients.md
+              items:
+                - name: '方法: クライアントの資格情報の値を指定する'
+                  href: how-to-specify-client-credential-values.md
+        - name: 拡張機能の概要
+          href: introduction-to-extensibility.md
+        - name: WCF トラブルシューティング クイックスタート
+          href: wcf-troubleshooting-quickstart.md
+        - name: WCF エラー処理
+          href: wcf-error-handling.md
+        - name: WCF と ASP.NET Web API
+          href: wcf-and-aspnet-web-api.md
+    - name: WCF 機能の詳細
+      href: feature-details/
+    - name: WCF の拡張
+      href: extending/
+    - name: ガイドラインと最適な使用方法
+      href: guidelines-and-best-practices.md
       items:
-      - name: '方法: マネージド アプリケーションで WCF サービスをホストする'
-        href: how-to-host-a-wcf-service-in-a-managed-application.md
-      - name: '方法: .NET Framework 4 で実行されている IIS 内の .NET Framework 3.5 で作成された WCF サービスをホストする'
-        href: host-a-wcf-service-net-framework-3-5-iis--net-framework-4.md
-    - name: クライアントを構築する
-      href: building-clients.md
+        - name: 'ベスト プラクティス:データ コントラクトのバージョン管理'
+          href: best-practices-data-contract-versioning.md
+        - name: 'ベスト プラクティス:中継局'
+          href: best-practices-intermediaries.md
+        - name: サービスのバージョン管理
+          href: service-versioning.md
+        - name: 負荷分散
+          href: load-balancing.md
+        - name: リソース消費の制御とパフォーマンスの向上
+          href: controlling-resource-consumption-and-improving-performance.md
+        - name: ClickOnce を使用して WCF アプリケーションを展開する
+          href: deploying-wcf-applications-with-clickonce.md
+    - name: 管理と診断
+      href: diagnostics/
+    - name: システム要件
+      href: wcf-system-requirements.md
+    - name: WCF に必要なオペレーティング システム リソース
+      href: operating-system-resources-required-by-wcf.md
+    - name: セットアップに関する問題のトラブルシューティング
+      href: troubleshooting-setup-issues.md
+    - name: .NET リモート処理から WCF への移行
+      href: migrating-from-net-remoting-to-wcf.md
+    - name: WCF 開発ツールの使用
+      href: using-the-wcf-development-tools.md
       items:
-      - name: WCF クライアントの概要
-        href: wcf-client-overview.md
-      - name: WCF クライアントを使用したサービスへのアクセス
-        href: accessing-services-using-a-wcf-client.md
-        items:
-        - name: ポータブル サブセット プロジェクトでサービス参照を追加する
-          href: add-service-reference-in-a-portable-subset-project.md
-        - name: クライアントのランタイム動作の指定
-          href: specifying-client-run-time-behavior.md
-        - name: クライアントの動作の構成
-          href: configuring-client-behaviors.md
-      - name: クライアントのセキュリティ保護
-        href: securing-clients.md
-        items:
-        - name: '方法: クライアントの資格情報の値を指定する'
-          href: how-to-specify-client-credential-values.md
-    - name: 拡張機能の概要
-      href: introduction-to-extensibility.md
-    - name: WCF トラブルシューティング クイックスタート
-      href: wcf-troubleshooting-quickstart.md
-    - name: WCF エラー処理
-      href: wcf-error-handling.md
-    - name: WCF と ASP.NET Web API
-      href: wcf-and-aspnet-web-api.md
-  - name: WCF 機能の詳細
-    href: feature-details/
-  - name: WCF の拡張
-    href: extending/
-  - name: ガイドラインと最適な使用方法
-    href: guidelines-and-best-practices.md
-    items:
-    - name: ベスト プラクティス:データ コントラクトのバージョン管理
-      href: best-practices-data-contract-versioning.md
-    - name: ベスト プラクティス:中継局
-      href: best-practices-intermediaries.md
-    - name: サービスのバージョン管理
-      href: service-versioning.md
-    - name: 負荷分散
-      href: load-balancing.md
-    - name: リソース消費の制御とパフォーマンスの向上
-      href: controlling-resource-consumption-and-improving-performance.md
-    - name: ClickOnce を使用して WCF アプリケーションを展開する
-      href: deploying-wcf-applications-with-clickonce.md
-  - name: 管理と診断
-    href: diagnostics/
-  - name: システム要件
-    href: wcf-system-requirements.md
-  - name: WCF に必要なオペレーティング システム リソース
-    href: operating-system-resources-required-by-wcf.md
-  - name: セットアップに関する問題のトラブルシューティング
-    href: troubleshooting-setup-issues.md
-  - name: .NET リモート処理から WCF への移行
-    href: migrating-from-net-remoting-to-wcf.md
-  - name: WCF 開発ツールの使用
-    href: using-the-wcf-development-tools.md
-    items:
-    - name: WCF サービス ホスト (WcfSvcHost.exe)
-      href: wcf-service-host-wcfsvchost-exe.md
-    - name: WCF のテスト用クライアント (WcfTestClient.exe)
-      href: wcf-test-client-wcftestclient-exe.md
-    - name: WCF Visual Studio テンプレート
-      href: wcf-vs-templates.md
-    - name: WCF サービス発行
-      href: wcf-service-publishing.md
-    - name: WCF サービス名の変更
-      href: renaming-a-wcf-service.md
-    - name: WCF ライブラリ プロジェクトの配置
-      href: deploying-a-wcf-library-project.md
-    - name: WCF サービス ホストの自動起動の制御
-      href: controlling-auto-launching-of-wcf-service-host.md
-    - name: XML からのデータ型クラスの生成
-      href: generating-data-type-classes-from-xml.md
-  - name: Windows Communication Foundation ツール
-    href: tools.md
-    items:
-    - name: ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)
-      href: servicemodel-metadata-utility-tool-svcutil-exe.md
-    - name: 秘密キー検索ツール (FindPrivateKey.exe)
-      href: find-private-key-tool-findprivatekey-exe.md
-    - name: ServiceModel 登録ツール (ServiceModelReg.exe)
-      href: servicemodelreg-exe.md
-    - name: サービス トレース ビューアー ツール (SvcTraceViewer.exe)
-      href: service-trace-viewer-tool-svctraceviewer-exe.md
-    - name: 構成エディター ツール (SvcConfigEditor.exe)
-      href: configuration-editor-tool-svcconfigeditor-exe.md
-    - name: COM+ サービス モデル構成ツール (ComSvcConfig.exe)
-      href: com-service-model-configuration-tool-comsvcconfig-exe.md
-    - name: WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)
-      href: ws-atomictransaction-configuration-utility-wsatconfig-exe.md
+        - name: WCF サービス ホスト (WcfSvcHost.exe)
+          href: wcf-service-host-wcfsvchost-exe.md
+        - name: WCF のテスト用クライアント (WcfTestClient.exe)
+          href: wcf-test-client-wcftestclient-exe.md
+        - name: WCF Visual Studio テンプレート
+          href: wcf-vs-templates.md
+        - name: WCF サービス発行
+          href: wcf-service-publishing.md
+        - name: WCF サービス名の変更
+          href: renaming-a-wcf-service.md
+        - name: WCF ライブラリ プロジェクトの配置
+          href: deploying-a-wcf-library-project.md
+        - name: WCF サービス ホストの自動起動の制御
+          href: controlling-auto-launching-of-wcf-service-host.md
+        - name: XML からのデータ型クラスの生成
+          href: generating-data-type-classes-from-xml.md
+    - name: Windows Communication Foundation ツール
+      href: tools.md
       items:
-      - name: wsatConfig.exe によって返されたエラー コードの解釈
-        href: interpreting-error-codes-returned-by-wsatconfig-exe.md
-    - name: WS-AtomicTransaction 構成 MMC スナップイン
-      href: ws-atomictransaction-configuration-mmc-snap-in.md
-    - name: ワークフロー サービス登録ツール (WFServicesReg.exe)
-      href: workflow-service-registration-tool-wfservicesreg-exe.md
-    - name: コントラクト優先ツール
-      href: contract-first-tool.md
-  - name: Windows Communication Foundation サンプル
-    href: samples/
-  - name: Windows Communication Foundation 用語集
-    href: glossary.md
-  - name: 一般的なリファレンス
-    href: general-reference.md
-  - name: フィードバックとコミュニティ
-    href: feedback-and-community.md
-  - name: プライバシー情報
-    href: privacy-information.md
-ms.openlocfilehash: 4bd93b468fb7f077fc070053745d8ac6b2abb810
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470699"
+        - name: ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)
+          href: servicemodel-metadata-utility-tool-svcutil-exe.md
+        - name: 秘密キー検索ツール (FindPrivateKey.exe)
+          href: find-private-key-tool-findprivatekey-exe.md
+        - name: ServiceModel 登録ツール (ServiceModelReg.exe)
+          href: servicemodelreg-exe.md
+        - name: サービス トレース ビューアー ツール (SvcTraceViewer.exe)
+          href: service-trace-viewer-tool-svctraceviewer-exe.md
+        - name: 構成エディター ツール (SvcConfigEditor.exe)
+          href: configuration-editor-tool-svcconfigeditor-exe.md
+        - name: COM+ サービス モデル構成ツール (ComSvcConfig.exe)
+          href: com-service-model-configuration-tool-comsvcconfig-exe.md
+        - name: WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)
+          href: ws-atomictransaction-configuration-utility-wsatconfig-exe.md
+          items:
+            - name: wsatConfig.exe によって返されたエラー コードの解釈
+              href: interpreting-error-codes-returned-by-wsatconfig-exe.md
+        - name: WS-AtomicTransaction 構成 MMC スナップイン
+          href: ws-atomictransaction-configuration-mmc-snap-in.md
+        - name: ワークフロー サービス登録ツール (WFServicesReg.exe)
+          href: workflow-service-registration-tool-wfservicesreg-exe.md
+        - name: コントラクト優先ツール
+          href: contract-first-tool.md
+    - name: Windows Communication Foundation サンプル
+      href: samples/
+    - name: Windows Communication Foundation 用語集
+      href: glossary.md
+    - name: 一般的なリファレンス
+      href: general-reference.md
+    - name: フィードバックとコミュニティ
+      href: feedback-and-community.md
+    - name: プライバシー情報
+      href: privacy-information.md

@@ -5,19 +5,19 @@ helpviewer_keywords:
 - WCF Data Services, learn more
 ms.assetid: e63a9baf-699c-42e2-b11f-fba57bcc14df
 ms.openlocfilehash: d3562122ab578f5f622d439c17d86cdb64a1e573
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59172121"
 ---
 # <a name="wcf-data-services-resources"></a>WCF Data Services リソース
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 概要トピックは、次の場所で確認できます。 これらのトピックの多くには、詳細情報が記載された関連トピックへのリンクも含まれています。  
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] の概要に関するトピックは次のとおりです。 これらのトピックの多くには、詳細情報が記載された関連トピックへのリンクも含まれています。  
   
  [概要](../../../../docs/framework/data/wcf/wcf-data-services-overview.md)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] で使用可能な機能の概要について説明します。  
   
- [作業の開始](../../../../docs/framework/data/adonet/ef/getting-started.md)  
+ [はじめに](../../../../docs/framework/data/adonet/ef/getting-started.md)  
  設計およびを使用してデータ サービスにアクセスする方法について説明します[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]ように、[クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)します。  
   
  [アプリケーション シナリオ](../../../../docs/framework/data/wcf/application-scenarios-wcf-data-services.md)  
@@ -47,10 +47,10 @@ ms.locfileid: "59172121"
  [データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=91903)  
  データ操作に関する情報やリソースが一度に見つかる場所。  
   
- [データ プラットフォーム操作方法 ビデオ:WCF Data Services シリーズ](https://go.microsoft.com/fwlink/?LinkId=124600)  
+ [データ プラットフォーム操作方法でしょうか。ビデオ:WCF Data Services シリーズ](https://go.microsoft.com/fwlink/?LinkId=124600)  
  データ サービスのビルドおよびアクセス方法について説明するビデオ スクリーン キャストのセットが提供されています。  
   
- [概要: WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
+ [概要:WCF Data Services](https://go.microsoft.com/fwlink/?LinkID=131074)  
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] の利点に関する概要が記載されたホワイト ペーパー。  
   
  [Microsoft WCF Data Services の使用](https://go.microsoft.com/fwlink/?LinkID=131075)  
@@ -61,4 +61,4 @@ ms.locfileid: "59172121"
   
 ## <a name="see-also"></a>関連項目
 
-- [作業の開始](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)
+- [はじめに](../../../../docs/framework/data/wcf/getting-started-with-wcf-data-services.md)

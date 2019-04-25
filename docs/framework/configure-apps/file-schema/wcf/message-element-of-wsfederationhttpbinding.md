@@ -1,12 +1,12 @@
 ---
-title: '<message> 要素。次に含まれます: <wsFederationHttpBinding>'
+title: <message> 要素 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
 ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59223815"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<メッセージ > 要素の\<wsFederationHttpBinding >
@@ -125,7 +125,7 @@ ms.locfileid: "59223815"
   
 |要素|説明|  
 |-------------|-----------------|  
-|[\<セキュリティ >](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|バインディングのセキュリティ設定を定義します。|  
+|[\<security>](../../../../../docs/framework/configure-apps/file-schema/wcf/security-of-wsfederationhttpbinding.md)|バインディングのセキュリティ設定を定義します。|  
   
 ## <a name="see-also"></a>関連項目
 

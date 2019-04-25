@@ -9,23 +9,21 @@ helpviewer_keywords:
 ms.assetid: 0059f576-e460-4e70-b257-668870e420b8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 45ac26442adc78c5d1e6a2efe94fc2cefff86562
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: e1696bd6eb4eb3a43593cf7ed264c80745c1ec66
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219621"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59326282"
 ---
 # <a name="copying-and-pinning"></a>コピーと固定
 データをマーシャリングするときに、相互運用マーシャラーはマーシャリングされるデータをコピーまたは固定できます。 データをコピーすると、あるメモリ位置のデータのコピーが別のメモリ位置に配置されます。 マネージド メモリからアンマネージド メモリへの値型のコピーと、参照渡しされる型のコピーの違いを次の図に示します。  
   
- ![値渡しされる値型と参照渡しされる値型](./media/interopmarshalcopy.gif "interopmarshalcopy")  
-値と参照別に渡される値型  
+ ![値型と参照型がどのようにコピーされるかを示す図。](./media/copying-and-pinning/interop-marshal-copy.gif)  
   
- 値渡しされるメソッド引数は、スタック上の値としてアンマネージ コードにマーシャリングされます。 コピーのプロセスは直接的です。 参照渡しされる引数は、ポインターとしてスタック上に渡されます。 参照型も値渡しと参照渡しが行われます。 次の図に示されているように、値渡しされる参照型はコピーまたは固定されます。  
+ 値渡しされるメソッド引数は、スタック上の値としてアンマネージ コードにマーシャリングされます。 コピーのプロセスは直接的です。 参照渡しされる引数は、ポインターとしてスタック上に渡されます。 参照型も値渡しと参照渡しが行われます。 次の図に示されているように、値渡しされる参照型はコピーまたは固定されます。 
   
- ![COM 相互運用](./media/interopmarshalpin.gif "interopmarshalpin")  
-値渡しされる参照型と参照渡しされる参照型  
+ ![値渡しされる参照型と参照渡しされる参照型を示す図。](./media/copying-and-pinning/interop-marshal-reference-pin.gif)  
   
  固定では一時的に現在のメモリ位置でデータをロックします。したがって、共通言語ランタイムのガベージ コレクターによって、そのデータが再配置されることを回避できます。 マーシャラーはデータを固定することでコピーのオーバーヘッドを減らし、パフォーマンスを向上させます。 マーシャリング プロセス中にデータがコピーされるか固定されるかは、そのデータの型によって決まります。  固定は <xref:System.String> などのオブジェクトのマーシャリング中に自動的に実行されますが、<xref:System.Runtime.InteropServices.GCHandle> クラスを使用して手動でメモリを固定することもできます。  
   
@@ -78,6 +76,7 @@ ms.locfileid: "56219621"
  <xref:System.Text.StringBuilder?displayProperty=nameWithType> を値渡しする場合、マーシャラーは **StringBuilder** の内部バッファーへの参照を直接呼び出し元に渡します。 呼び出し元と呼び出し先は、バッファーのサイズに同意する必要があります。 呼び出し元は、適切な長さの **StringBuilder** を作成します。 呼び出し先は、バッファーのオーバーランが発生しないように必要な予防措置をとる必要があります。 **StringBuilder** は、値渡しされる参照型は既定で In パラメーターとして渡される、という規則の例外です。 StringBuilder は常に In/Out として渡されます。  
   
 ## <a name="see-also"></a>関連項目
+
 - [既定のマーシャリング動作](default-marshaling-behavior.md)
 - [方向属性](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/77e6taeh(v=vs.100))
 - [相互運用マーシャリング](interop-marshaling.md)

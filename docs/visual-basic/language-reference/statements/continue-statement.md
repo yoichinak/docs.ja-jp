@@ -8,10 +8,10 @@ helpviewer_keywords:
 - loops, transferring to next iteration
 ms.assetid: 3ad00103-358b-4af3-a3a8-1b9ea0e995d3
 ms.openlocfilehash: 5523be69f2901851c86f6c0263548e3577507ff9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58835388"
 ---
 # <a name="continue-statement-visual-basic"></a>Continue ステートメント (Visual Basic)

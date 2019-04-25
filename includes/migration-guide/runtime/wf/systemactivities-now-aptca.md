@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 6cc1c65a95238e758f99090794f5e50b830d9667
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235666"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804355"
 ---
 ### <a name="systemactivities-is-now-aptca"></a>System.Activities が APTCA に
 

@@ -1,30 +1,23 @@
-items:
 - name: LINQ (Visual Basic における)
   href: index.md
   items:
-  - name: LINQ の概要
-    href: introduction-to-linq.md
-  - name: '方法: LINQ を使用してデータベースを照会する'
-    href: how-to-query-a-database-by-using-linq.md
-  - name: '方法: LINQ を使用してストアド プロシージャを呼び出す'
-    href: how-to-call-a-stored-procedure-by-using-linq.md
-  - name: '方法: LINQ を使用してデータベースのデータを変更する'
-    href: how-to-modify-data-in-a-database-by-using-linq.md
-  - name: '方法: LINQ の結合を使用してデータを結合する'
-    href: how-to-combine-data-with-linq-by-using-joins.md
-  - name: '方法: LINQ を使用してクエリ結果を並べ替える'
-    href: how-to-sort-query-results-by-using-linq.md
-  - name: '方法: LINQ を使用してクエリ結果をフィルター処理する'
-    href: how-to-filter-query-results-by-using-linq.md
-  - name: '方法: LINQ を使用したデータの数、合計、または平均の算出'
-    href: how-to-count-sum-or-average-data-by-using-linq.md
-  - name: '方法: LINQ を使用したクエリ結果内の最小値と最大値の検索'
-    href: how-to-find-the-minimum-or-maximum-value-in-a-query-result.md
-  - name: '方法: 特定の型での LINQ クエリ結果の取得'
-    href: how-to-return-a-linq-query-result-as-a-specific-type.md
-ms.openlocfilehash: 0d56e6e5c147b71bbd4aa35bab93751b15e63a8d
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470930"
+    - name: LINQ の概要
+      href: introduction-to-linq.md
+    - name: '方法: LINQ を使用してデータベースを照会する'
+      href: how-to-query-a-database-by-using-linq.md
+    - name: '方法: LINQ を使用してストアド プロシージャを呼び出す'
+      href: how-to-call-a-stored-procedure-by-using-linq.md
+    - name: '方法: LINQ を使用してデータベースのデータを変更する'
+      href: how-to-modify-data-in-a-database-by-using-linq.md
+    - name: '方法: LINQ の結合を使用してデータを結合する'
+      href: how-to-combine-data-with-linq-by-using-joins.md
+    - name: '方法: LINQ を使用してクエリ結果を並べ替える'
+      href: how-to-sort-query-results-by-using-linq.md
+    - name: '方法: LINQ を使用してクエリ結果をフィルター処理する'
+      href: how-to-filter-query-results-by-using-linq.md
+    - name: '方法: LINQ を使用したデータの数、合計、または平均の算出'
+      href: how-to-count-sum-or-average-data-by-using-linq.md
+    - name: '方法: LINQ を使用したクエリ結果内の最小値と最大値の検索'
+      href: how-to-find-the-minimum-or-maximum-value-in-a-query-result.md
+    - name: '方法: 特定の型での LINQ クエリ結果の取得'
+      href: how-to-return-a-linq-query-result-as-a-specific-type.md

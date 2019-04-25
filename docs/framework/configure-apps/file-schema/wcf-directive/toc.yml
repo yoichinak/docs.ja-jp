@@ -1,12 +1,5 @@
-items:
 - name: WCF ディレクティブ構文
   href: index.md
   items:
-  - name: '@ServiceHost'
-    href: servicehost.md
-ms.openlocfilehash: ae25b5293edad48e1fee6a80bea4397079b50cb5
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469858"
+    - name: '@ServiceHost'
+      href: servicehost.md

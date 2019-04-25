@@ -3,10 +3,10 @@ title: (Visual Basic) の XML の解析
 ms.date: 07/20/2015
 ms.assetid: 5bcbd7e2-d9f1-4c8f-80d6-39915fe17bd1
 ms.openlocfilehash: ec9df29c239d2780b4fc13bb101a22c54eb43da5
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58832758"
 ---
 # <a name="parsing-xml-visual-basic"></a>(Visual Basic) の XML の解析

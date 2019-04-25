@@ -3,10 +3,10 @@ title: LINQ to XML プログラミングの概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a7c07d0a-1fae-4610-ae51-56dd7075cc14
 ms.openlocfilehash: 741a9bff54f856d7283cae8c748047d24c0377a0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827017"
 ---
 # <a name="linq-to-xml-programming-overview-visual-basic"></a>LINQ to XML プログラミングの概要 (Visual Basic)

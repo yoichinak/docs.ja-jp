@@ -1,12 +1,5 @@
-items:
 - name: 特殊文字
   href: index.md
   items:
-  - name: $ -- 文字列補間
-    href: interpolated.md
-ms.openlocfilehash: 2a396b48ad4443e29e809a1b86646838bf998706
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469683"
+    - name: $ -- 文字列補間
+      href: interpolated.md

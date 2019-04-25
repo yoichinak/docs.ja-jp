@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 0642b184d85306a453d429f247dad95a259cb012
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236511"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804447"
 ---
 ### <a name="serialization-of-control-characters-with-datacontractjsonserializer-is-now-compatible-with-ecmascript-v6-and-v8"></a>DataContractJsonSerializer による制御文字のシリアル化が ECMAScript V6 および V8 対応に
 

@@ -1,42 +1,35 @@
-items:
 - name: 宣言された要素
   href: index.md
   items:
-  - name: Declared Element Names
-    href: declared-element-names.md
-  - name: 宣言された要素の特性
-    href: declared-element-characteristics.md
-    items:
-    - name: 有効期間
-      href: lifetime.md
-    - name: スコープ
-      href: scope.md
+    - name: Declared Element Names
+      href: declared-element-names.md
+    - name: 宣言された要素の特性
+      href: declared-element-characteristics.md
       items:
-      - name: '方法: 変数のスコープを制御する'
-        href: how-to-control-the-scope-of-a-variable.md
-      - name: 型の上位変換
-        href: type-promotion.md
-    - name: アクセス レベル
-      href: access-levels.md
-      items:
-      - name: '方法: 変数の可用性を制御する'
-        href: how-to-control-the-availability-of-a-variable.md
-    - name: References to Declared Elements
-      href: references-to-declared-elements.md
-    - name: シャドウ
-      href: shadowing.md
-      items:
-      - name: シャドウとオーバーライドの違い
-        href: differences-between-shadowing-and-overriding.md
-      - name: '方法: 自分で宣言した変数と同じ名前の変数を隠す'
-        href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
-      - name: '方法: 継承された変数を隠す'
-        href: how-to-hide-an-inherited-variable.md
-      - name: '方法: 派生クラスによって非表示になっている変数にアクセスする'
-        href: how-to-access-a-variable-hidden-by-a-derived-class.md
-ms.openlocfilehash: d747436df2e7ad7187e39808ea19d64ac1b082fc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469867"
+        - name: 有効期間
+          href: lifetime.md
+        - name: スコープ
+          href: scope.md
+          items:
+            - name: '方法: 変数のスコープを制御する'
+              href: how-to-control-the-scope-of-a-variable.md
+            - name: 型の上位変換
+              href: type-promotion.md
+        - name: アクセス レベル
+          href: access-levels.md
+          items:
+            - name: '方法: 変数の可用性を制御する'
+              href: how-to-control-the-availability-of-a-variable.md
+        - name: References to Declared Elements
+          href: references-to-declared-elements.md
+        - name: シャドウ
+          href: shadowing.md
+          items:
+            - name: シャドウとオーバーライドの違い
+              href: differences-between-shadowing-and-overriding.md
+            - name: '方法: 自分で宣言した変数と同じ名前の変数を隠す'
+              href: how-to-hide-a-variable-with-the-same-name-as-your-variable.md
+            - name: '方法: 継承された変数を隠す'
+              href: how-to-hide-an-inherited-variable.md
+            - name: '方法: 派生クラスによって非表示になっている変数にアクセスする'
+              href: how-to-access-a-variable-hidden-by-a-derived-class.md

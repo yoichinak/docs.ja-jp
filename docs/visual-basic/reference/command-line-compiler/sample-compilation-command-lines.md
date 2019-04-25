@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual Basic compiler, sample command lines
 ms.assetid: 5bfbb487-5f47-4267-969a-39dfb917beeb
 ms.openlocfilehash: 0771ed41d6c58ce7cc98435b405f5819e45393db
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824306"
 ---
 # <a name="sample-compilation-command-lines-visual-basic"></a>コンパイル コマンドラインのサンプル (Visual Basic)
@@ -22,7 +22,7 @@ Visual Studio 内から Visual Basic プログラムをコンパイルする代�
   
  次の表では、独自の用途を変更するサンプルのコマンドラインを示します。  
   
-|目的|使用|  
+|目的|用途|  
 |--------|---------|  
 |.Vb というファイルをコンパイルして File.exe を作成します。|`vbc -reference:Microsoft.VisualBasic.dll File.vb`|  
 |.Vb というファイルをコンパイルして File.dll を作成します。|`vbc -target:library File.vb`|  

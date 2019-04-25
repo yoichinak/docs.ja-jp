@@ -17,10 +17,10 @@ helpviewer_keywords:
 - properties [Visual Basic], overriding
 ms.assetid: 612581e7-8a4c-4a5d-beff-3402fffa6f35
 ms.openlocfilehash: 91a1cedc66fd66e336b6e7976ad87ad638cb43c3
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58816883"
 ---
 # <a name="overridable-visual-basic"></a>Overridable (Visual Basic)
@@ -31,7 +31,7 @@ ms.locfileid: "58816883"
   
  場合、`Overridable`または`NotOverridable`修飾子が指定されていない、既定の設定は、プロパティまたはメソッドが基底クラスのプロパティまたはメソッドをオーバーライドするかどうかによって異なります。 プロパティまたはメソッドは、基底クラスのプロパティまたはメソッドをオーバーライドする場合、既定値は`Overridable`。 それ以外は`NotOverridable`します。  
   
- 継承された要素を再定義するためにオーバーライドまたはシャドウできますが、2 つのアプローチの重要な違いがあります。 詳細については、[Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)を参照してください。  
+ 継承された要素を再定義するためにオーバーライドまたはシャドウできますが、2 つのアプローチの重要な違いがあります。 詳細については、次を参照してください。 [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)します。  
   
  オーバーライド可能な要素として呼ば、*仮想*要素。 ということもありますが、オーバーライドできますが、する必要はありません、*具象*要素。  
   

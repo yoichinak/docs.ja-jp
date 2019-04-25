@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 0bfaa88ea3a492cbf8426db45efa9322b8655169
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235693"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804393"
 ---
 ### <a name="systemservicemodelwebwebservicehost-object-no-longer-adds-a-default-endpoint"></a>System.ServiceModel.Web.WebServiceHost オブジェクトは、既定のエンドポイントを追加しなくなりました
 

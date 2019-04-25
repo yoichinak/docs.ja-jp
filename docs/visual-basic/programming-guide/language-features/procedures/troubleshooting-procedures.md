@@ -9,10 +9,10 @@ helpviewer_keywords:
 - procedures [Visual Basic], about procedures
 ms.assetid: 525721e8-2e02-4f75-b5d8-6b893462cf2b
 ms.openlocfilehash: 492a7474a38a7e41b7e3b3f59dfa118c30256ea4
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58830137"
 ---
 # <a name="troubleshooting-procedures-visual-basic"></a>プロシージャのトラブルシューティング (Visual Basic)
@@ -88,7 +88,7 @@ ms.locfileid: "58830137"
  **正しいアプローチは:** プロシージャのオーバー ロードを定義できるようにするには、するには、署名を変更する必要があります。 同じ名前を使用する必要があります、ために、数、順序、またはパラメーターのデータ型を変更しなければなりません。 ジェネリック プロシージャでは、型パラメーターの数を変更できます。 変換演算子で ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md))、戻り値の型を変えることができます。  
   
 ### <a name="overload-resolution-with-optional-and-paramarray-arguments"></a>オーバー ロード解決でオプションおよび ParamArray 引数  
- 1 つまたは複数のプロシージャをオーバー ロードは場合[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)パラメーターまたは[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーター、複製のいずれかの回避する必要があります、*暗黙のオーバー ロード*します。 詳しくは、[プロシージャのオーバー ロードに関する考慮事項](./considerations-in-overloading-procedures.md)を参照してください。  
+ 1 つまたは複数のプロシージャをオーバー ロードは場合[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)パラメーターまたは[ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーター、複製のいずれかの回避する必要があります、*暗黙のオーバー ロード*します。 詳しくは、次を参照してください。[プロシージャのオーバー ロードに関する考慮事項](./considerations-in-overloading-procedures.md)します。  
   
 ## <a name="calling-a-wrong-version-of-an-overloaded-procedure"></a>オーバー ロードされたプロシージャの間違ったバージョンの呼び出し  
  プロシージャにいくつかのオーバー ロードされたバージョンがある場合は、すべてのパラメーター リストを使い慣れて、Visual Basic での通話を複数のオーバー ロードの解決方法を理解してください。 それ以外の場合、意図したものと異なるオーバー ロードを呼び出すことができます。  

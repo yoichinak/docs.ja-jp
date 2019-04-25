@@ -5,10 +5,10 @@ helpviewer_keywords:
 - security [WCF], scenarios
 ms.assetid: 201923b5-5162-4a8a-8d4c-e7bd242748d5
 ms.openlocfilehash: af58d6b529fba32380bedb9a892a2b1fd4807d96
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59199272"
 ---
 # <a name="common-security-scenarios"></a>一般的なセキュリティ シナリオ
@@ -21,10 +21,10 @@ ms.locfileid: "59199272"
  [セキュリティで保護されていないイントラネットのクライアントとサービス](../../../../docs/framework/wcf/feature-details/intranet-unsecured-client-and-service.md)  
  WCF アプリケーションをセキュリティで保護されたプライベート ネットワーク上の情報を提供する基本的な Windows Communication Foundation (WCF) サービスを開発しました。  
   
- [基本認証でのトランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
+ [基本認証を使用する場合のトランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security-with-basic-authentication.md)  
  アプリケーションは、カスタム認証を使用して、クライアントにログオンを許可します。  
   
- [トランスポート セキュリティと Windows 認証](../../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)  
+ [Windows 認証を使用する場合のトランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/transport-security-with-windows-authentication.md)  
  Windows セキュリティによってセキュリティ保護されたクライアントとサービスを示します。  
   
  [トランスポート セキュリティと匿名クライアント](../../../../docs/framework/wcf/feature-details/transport-security-with-an-anonymous-client.md)  
@@ -42,13 +42,13 @@ ms.locfileid: "59199272"
  [メッセージ セキュリティと証明書クライアント](../../../../docs/framework/wcf/feature-details/message-security-with-a-certificate-client.md)  
  サーバー側の証明書は複数あり、クライアント側の証明書はそれぞれ 1 つです。 セキュリティのコンテキストは、トランスポート層セキュリティ (TLS: Transport Layer Security) ネゴシエーションを介して確立されます。  
   
- [Windows クライアントとのメッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)  
+ [Windows クライアントを使用する場合のメッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client.md)  
  証明書クライアントのバリエーションの 1 つです。 サーバー側の証明書は複数あり、クライアント側の証明書はそれぞれ 1 つです。 セキュリティのコンテキストは TLS ネゴシエーションを介して確立されます。  
   
  [資格情報ネゴシエーションを使用しない Windows クライアントを使用するメッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/message-security-with-a-windows-client-without-credential-negotiation.md)  
  Kerberos ドメインによってセキュリティ保護されたクライアントとサービスを示します。  
   
- [メッセージ セキュリティと相互の証明書](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
+ [相互の証明書を使用する場合のメッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/message-security-with-mutual-certificates.md)  
  サーバー側の証明書は複数あり、クライアント側の証明書はそれぞれ 1 つです。 サーバーの証明書はアプリケーションと共に配布され、帯域外でも使用可能です。  
   
  [発行済みトークンを使用したメッセージ セキュリティ](../../../../docs/framework/wcf/feature-details/message-security-with-issued-tokens.md)  
@@ -82,4 +82,4 @@ ms.locfileid: "59199272"
 ## <a name="see-also"></a>関連項目
 
 - [セキュリティ ガイドラインとベスト プラクティス](../../../../docs/framework/wcf/feature-details/security-guidance-and-best-practices.md)
-- [Windows Server AppFabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)
+- [Windows Server App Fabric のセキュリティ モデル](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)

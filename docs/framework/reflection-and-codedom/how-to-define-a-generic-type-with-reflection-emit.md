@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74ddda813d756fb5cb54cb600e3cbf1cf68b3f38
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: b129da00fcd841566a4a823d8929348441d0a0f3
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221148"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59315544"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>方法: リフレクション出力を使用してジェネリック型を定義する
 このトピックでは、2 種類のパラメーターを持つ単純なジェネリック型を作成する方法、クラス制約、インターフェイス制約、特殊な制約をパラメーターに適用する方法、パラメーターの型や戻り値の型としてクラスの型パラメーターを使用するメンバーを作成する方法を紹介します。  
@@ -27,25 +27,25 @@ ms.locfileid: "56221148"
   
 ### <a name="to-define-a-generic-type"></a>ジェネリック型を定義するには  
   
-1.  `GenericEmitExample1` という名前の動的アセンブリを定義します。 この例では、アセンブリが実行され、ディスクに保存されます。そのため、<xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> が指定されています。  
+1. `GenericEmitExample1` という名前の動的アセンブリを定義します。 この例では、アセンブリが実行され、ディスクに保存されます。そのため、<xref:System.Reflection.Emit.AssemblyBuilderAccess.RunAndSave?displayProperty=nameWithType> が指定されています。  
   
      [!code-cpp[EmitGenericType#2](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#2)]
      [!code-csharp[EmitGenericType#2](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#2)]
      [!code-vb[EmitGenericType#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#2)]  
   
-2.  動的モジュールを定義します。 アセンブリは実行可能モジュールで構成をされます。 単一モジュールのアセンブリの場合、モジュール名はアセンブリ名と同じであり、ファイル名はモジュール名に拡張子が付いたものになります。  
+2. 動的モジュールを定義します。 アセンブリは実行可能モジュールで構成をされます。 単一モジュールのアセンブリの場合、モジュール名はアセンブリ名と同じであり、ファイル名はモジュール名に拡張子が付いたものになります。  
   
      [!code-cpp[EmitGenericType#3](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#3)]
      [!code-csharp[EmitGenericType#3](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#3)]
      [!code-vb[EmitGenericType#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#3)]  
   
-3.  クラスを定義します。 この例では、クラスに `Sample` という名前が付けられています。  
+3. クラスを定義します。 この例では、クラスに `Sample` という名前が付けられています。  
   
      [!code-cpp[EmitGenericType#4](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#4)]
      [!code-csharp[EmitGenericType#4](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#4)]
      [!code-vb[EmitGenericType#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#4)]  
   
-4.  パラメーターの名前を格納している文字列の配列を `Sample` メソッドに渡して、<xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> のジェネリック型パラメーターを定義します。 これによりクラスがジェネリック型になります。 戻り値は、型パラメーターを表す <xref:System.Reflection.Emit.GenericTypeParameterBuilder> オブジェクトの配列になります。型パラメーターは出力されたコードで利用できます。  
+4. パラメーターの名前を格納している文字列の配列を `Sample` メソッドに渡して、<xref:System.Reflection.Emit.TypeBuilder.DefineGenericParameters%2A?displayProperty=nameWithType> のジェネリック型パラメーターを定義します。 これによりクラスがジェネリック型になります。 戻り値は、型パラメーターを表す <xref:System.Reflection.Emit.GenericTypeParameterBuilder> オブジェクトの配列になります。型パラメーターは出力されたコードで利用できます。  
   
      次のコードでは、`Sample` が型パラメーターの `TFirst` と `TSecond` を持つジェネリック型になります。 コードを読みやすくするために、各 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> が型パラメーターと同じ名前の変数に入ります。  
   
@@ -53,25 +53,25 @@ ms.locfileid: "56221148"
      [!code-csharp[EmitGenericType#5](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#5)]
      [!code-vb[EmitGenericType#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#5)]  
   
-5.  型パラメーターに特殊な制約を追加します。 この例では、型パラメーター `TFirst` が、パラメーターのないコンストラクターを持つ型と参照型に制約されています。  
+5. 型パラメーターに特殊な制約を追加します。 この例では、型パラメーター `TFirst` が、パラメーターのないコンストラクターを持つ型と参照型に制約されています。  
   
      [!code-cpp[EmitGenericType#6](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#6)]
      [!code-csharp[EmitGenericType#6](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#6)]
      [!code-vb[EmitGenericType#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#6)]  
   
-6.  オプションで、型パラメーターにクラスの制約とインターフェイスの制約を追加します。 この例では、型パラメーター `TFirst` が、変数 `baseType` に含まれる <xref:System.Type> オブジェクトで表される基底クラスから派生し、型が変数の `interfaceA` と `interfaceB` に含まれるインターフェイスを実装する型に制約されています。 これらの変数の宣言と割り当てについては、コード例を参照してください。  
+6. オプションで、型パラメーターにクラスの制約とインターフェイスの制約を追加します。 この例では、型パラメーター `TFirst` が、変数 `baseType` に含まれる <xref:System.Type> オブジェクトで表される基底クラスから派生し、型が変数の `interfaceA` と `interfaceB` に含まれるインターフェイスを実装する型に制約されています。 これらの変数の宣言と割り当てについては、コード例を参照してください。  
   
      [!code-cpp[EmitGenericType#7](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#7)]
      [!code-csharp[EmitGenericType#7](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#7)]
      [!code-vb[EmitGenericType#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#7)]  
   
-7.  フィールドを定義します。 この例では、フィールドの型は型パラメーター `TFirst` により指定されます。 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> は <xref:System.Type> から派生します。つまり、ジェネリック型パラメーターは、型を利用できるあらゆる場所で利用できます。  
+7. フィールドを定義します。 この例では、フィールドの型は型パラメーター `TFirst` により指定されます。 <xref:System.Reflection.Emit.GenericTypeParameterBuilder> は <xref:System.Type> から派生します。つまり、ジェネリック型パラメーターは、型を利用できるあらゆる場所で利用できます。  
   
      [!code-cpp[EmitGenericType#21](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#21)]
      [!code-csharp[EmitGenericType#21](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#21)]
      [!code-vb[EmitGenericType#21](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#21)]  
   
-8.  ジェネリック型の型パラメーターを使用するメソッドを定義します。 そのようなメソッドは、独自の型パラメーター リストが与えられない限り、ジェネリックにならないことに注意してください。 次のコードでは、`TFirst` の配列を受け取り、その配列のすべての要素を含む `List<TFirst>` (Visual Basic の場合は `List(Of TFirst)`) を返す `static` メソッド (Visual Basic の場合は `Shared`) が定義されます。 このメソッドを定義するには、ジェネリック型定義の `List<T>` で <xref:System.Type.MakeGenericType%2A> を呼び出し、型 `List<TFirst>` を作成する必要があります。 (`typeof` 演算子 (Visual Basic の場合は `GetType`) を利用してジェネリック型の定義を取得するとき、`T` が省略されます。)パラメーター型は <xref:System.Type.MakeArrayType%2A> メソッドを利用して作成されます。  
+8. ジェネリック型の型パラメーターを使用するメソッドを定義します。 そのようなメソッドは、独自の型パラメーター リストが与えられない限り、ジェネリックにならないことに注意してください。 次のコードでは、`TFirst` の配列を受け取り、その配列のすべての要素を含む `List<TFirst>` (Visual Basic の場合は `List(Of TFirst)`) を返す `static` メソッド (Visual Basic の場合は `Shared`) が定義されます。 このメソッドを定義するには、ジェネリック型定義の `List<T>` で <xref:System.Type.MakeGenericType%2A> を呼び出し、型 `List<TFirst>` を作成する必要があります。 (`typeof` 演算子 (Visual Basic の場合は `GetType`) を利用してジェネリック型の定義を取得するとき、`T` が省略されます。)パラメーター型は <xref:System.Type.MakeArrayType%2A> メソッドを利用して作成されます。  
   
      [!code-cpp[EmitGenericType#22](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#22)]
      [!code-csharp[EmitGenericType#22](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#22)]
@@ -136,6 +136,7 @@ ms.locfileid: "56221148"
 -   コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
 ## <a name="see-also"></a>関連項目
+
 - <xref:System.Reflection.Emit.GenericTypeParameterBuilder>
 - [リフレクション出力の使用](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y322t50(v=vs.100))
 - [リフレクション出力による動的アセンブリのシナリオ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/tt9483fk(v=vs.100))

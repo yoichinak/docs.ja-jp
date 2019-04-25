@@ -5,10 +5,10 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58920910"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
@@ -216,7 +216,7 @@ Redis サービスの使用、[最新のパブリック redis イメージ](http
 
 アプリに 1 つのコンテナーのみがある場合だけ、Docker ホスト (VM または物理サーバー) にデプロイして実行する必要があります。 ただし、複数のサービス、アプリが構成されている場合をする必要があります*組み立てること*もします。 さまざまなオプションを見てみましょう。
 
-***オプション A:1 つのコンテナーまたはサービスを実行します。***
+***オプション a:1 つのコンテナーまたはサービスを実行します。***
 
 次に示すように docker run コマンドを使用して、Docker イメージを実行できます。
 
@@ -226,7 +226,7 @@ docker run -t -d -p 80:5000 cesardl/netcore-webapi-microservice-docker:first
 
 この特定の展開の私たち 要求をリダイレクトする内部ポート 5000 をポート 80 に送信します。 外部ポート 80、ホスト レベルで、アプリケーションがリッスンしているようになりました。
 
-***オプション B:構成して複数コンテナー アプリケーションの実行***
+***オプション b:構成して複数コンテナー アプリケーションの実行***
 
 ほとんどのエンタープライズ シナリオでは、Docker アプリケーションを複数のサービスはから構成します。 このような場合は、実行することができます、`docker-compose up`が以前に作成した docker compose.yml ファイルを使用するコマンド (図 4-27)、します。 このコマンドを実行するには、すべての関連するコンテナーの構成済みのアプリケーションはデプロイします。
 

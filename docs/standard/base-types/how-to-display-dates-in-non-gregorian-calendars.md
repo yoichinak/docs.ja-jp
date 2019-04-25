@@ -1,5 +1,5 @@
 ---
-title: '方法 : グレゴリオ暦以外の暦の日付を表示する'
+title: '方法: グレゴリオ暦以外の暦の日付を表示する'
 ms.date: 03/30/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63af71f92af9c2f3a5986dcb73f44d0e53c00f58
-ms.sourcegitcommit: 64f4baed249341e5bf64d1385bf48e3f2e1a0211
+ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2018
-ms.locfileid: "44079462"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59313308"
 ---
-# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>方法 : グレゴリオ暦以外の暦の日付を表示する
+# <a name="how-to-display-dates-in-non-gregorian-calendars"></a>方法: グレゴリオ暦以外の暦の日付を表示する
 <xref:System.DateTime> 型と <xref:System.DateTimeOffset> 型は既定の暦としてグレゴリオ暦を使用しています。 つまり、日付と時刻値の `ToString` メソッドを呼び出すと、その日付の時刻が別の暦を使用して作成された場合でも、その日付の時刻はグレゴリオ暦の文字列形式で表示されます。 これを次の例で示します。この例では、2 つの方法を使用してペルシャ暦で日付と時刻の値を作成していますが、<xref:System.DateTime.ToString%2A> メソッドを呼び出すと、これらの日付と時刻の値はグレゴリオ暦で表示されます。 この例では、一般的に使われているものの、特定の暦で日付を表示するには正しくない 2 つの手法が反映されています。  
   
  [!code-csharp[Formatting.HowTo.Calendar#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.Calendar/cs/Calendar1.cs#1)]
@@ -30,26 +30,26 @@ ms.locfileid: "44079462"
   
 ### <a name="to-display-the-date-for-a-cultures-default-calendar"></a>カルチャの既定の暦の日付を表示するには  
   
-1.  使用する暦を表す <xref:System.Globalization.Calendar> クラスから派生した暦オブジェクトをインスタンス化します。  
+1. 使用する暦を表す <xref:System.Globalization.Calendar> クラスから派生した暦オブジェクトをインスタンス化します。  
   
-2.  日付を表示するために使用される書式のカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化します。  
+2. 日付を表示するために使用される書式のカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトをインスタンス化します。  
   
-3.  <xref:System.Array.Exists%2A?displayProperty=nameWithType> メソッドを呼び出し、暦オブジェクトが <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> プロパティによって返される配列のメンバーかどうかを判断します。 これは、暦が <xref:System.Globalization.CultureInfo> オブジェクトの既定の暦として使用できることを示します。 配列のメンバーでない場合は、「任意の暦で日付を表示するには」セクションの手順に従います。  
+3. <xref:System.Array.Exists%2A?displayProperty=nameWithType> メソッドを呼び出し、暦オブジェクトが <xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> プロパティによって返される配列のメンバーかどうかを判断します。 これは、暦が <xref:System.Globalization.CultureInfo> オブジェクトの既定の暦として使用できることを示します。 配列のメンバーでない場合は、「任意の暦で日付を表示するには」セクションの手順に従います。  
   
-4.  <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> プロパティから返される <xref:System.Globalization.DateTimeFormatInfo> オブジェクトの <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> プロパティに暦オブジェクトを割り当てます。  
+4. <xref:System.Globalization.CultureInfo.DateTimeFormat%2A?displayProperty=nameWithType> プロパティから返される <xref:System.Globalization.DateTimeFormatInfo> オブジェクトの <xref:System.Globalization.DateTimeFormatInfo.Calendar%2A> プロパティに暦オブジェクトを割り当てます。  
   
     > [!NOTE]
     >  <xref:System.Globalization.CultureInfo> クラスには <xref:System.Globalization.CultureInfo.Calendar%2A> プロパティもあります。 ただし、これは読み取り専用で定数のため、<xref:System.Globalization.DateTimeFormatInfo.Calendar%2A?displayProperty=nameWithType> プロパティに割り当てられた新しい既定の暦を反映するために変更されることはありません。  
   
-5.  <xref:System.DateTime.ToString%2A> と <xref:System.DateTime.ToString%2A> メソッドのいずれかを呼び出し、前の手順で既定の暦を変更した <xref:System.Globalization.CultureInfo> オブジェクトを渡します。  
+5. <xref:System.DateTime.ToString%2A> と <xref:System.DateTime.ToString%2A> メソッドのいずれかを呼び出し、前の手順で既定の暦を変更した <xref:System.Globalization.CultureInfo> オブジェクトを渡します。  
   
 ### <a name="to-display-the-date-in-any-calendar"></a>任意の暦で日付を表示するには  
   
-1.  使用する暦を表す <xref:System.Globalization.Calendar> クラスから派生した暦オブジェクトをインスタンス化します。  
+1. 使用する暦を表す <xref:System.Globalization.Calendar> クラスから派生した暦オブジェクトをインスタンス化します。  
   
-2.  日付と時刻の値の文字列形式で表示する日付と時刻の要素を決定します。  
+2. 日付と時刻の値の文字列形式で表示する日付と時刻の要素を決定します。  
   
-3.  表示する日付と時刻の要素ごとに、暦オブジェクトの `Get`  メソッドをオーバーライドします。 次のメソッドが使用できます。  
+3. 表示する日付と時刻の要素ごとに、暦オブジェクトの `Get`  メソッドをオーバーライドします。 次のメソッドが使用できます。  
   
     -   <xref:System.Globalization.Calendar.GetYear%2A>: 適切な暦で年を表示します。  
   

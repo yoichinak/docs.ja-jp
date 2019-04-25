@@ -3,11 +3,11 @@ title: 拡張保護認証のサンプルの ReadMe
 ms.date: 03/30/2017
 ms.assetid: 80bf2e97-398d-4db5-9040-d96478a2ccab
 ms.openlocfilehash: 53592db03c88e673d529ef04f2fbc6e182897457
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59319353"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59979122"
 ---
 # <a name="readme-for-extended-protection-authentication-sample"></a>拡張保護認証のサンプルの ReadMe
 拡張保護を攻撃者 (、「- the-中間」) がクライアントの資格情報をインターセプトし、クライアントの目的のサーバー上のセキュリティで保護されたリソースにアクセスする、中間の (MITM) 攻撃から保護するためのセキュリティ イニシアチブです。  

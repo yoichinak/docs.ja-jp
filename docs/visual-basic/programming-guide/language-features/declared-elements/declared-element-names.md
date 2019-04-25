@@ -24,10 +24,10 @@ helpviewer_keywords:
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814069"
 ---
 # <a name="declared-element-names-visual-basic"></a>宣言された要素の名前 (Visual Basic)
@@ -79,7 +79,7 @@ ms.locfileid: "58814069"
   
 -   指定されたキーワードが予約されていない別の言語で記述されたコードを使用しています。  
   
- それ以外の場合、キーワードを使用してその名前が競合する場合、要素名の変更を検討してください。 統合開発環境 (IDE) では、これを行う簡単な方法を提供します。 詳細については、[リファクタリング](/visualstudio/vb-ide/refactoring-vb)を参照してください。  
+ それ以外の場合、キーワードを使用してその名前が競合する場合、要素名の変更を検討してください。 統合開発環境 (IDE) では、これを行う簡単な方法を提供します。 詳細については、次を参照してください。[リファクタリング](/visualstudio/vb-ide/refactoring-vb)します。  
   
 ## <a name="case-sensitivity-in-names"></a>名前に大文字小文字の区別  
  Visual Basic での要素名は大文字です。 これは、コンパイラは、英字の大文字小文字のみが異なる 2 つの名前を比較をする際を解釈するには同じ名前としてことを意味します。 たとえば、 `ABC` と `abc` は、宣言された同じ要素を参照していると見なされます。  

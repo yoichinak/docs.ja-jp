@@ -7,10 +7,10 @@ helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
 ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59219422"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer コントロールの概要 (Windows フォーム)
@@ -40,14 +40,14 @@ Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロ�
   
 |名前|説明|  
 |----------|-----------------|  
-|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> property|同じパネルを決定後サイズ、<xref:System.Windows.Forms.SplitContainer>コントロールのサイズを変更します。|  
-|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> property|キーボードまたはマウスで分割線を移動できるかどうかを決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> property|垂直方向または水平方向に分割が配置されているかどうかを決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> property|移動可能な分割バーを左端または上端からのピクセル単位で距離を決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> property|最小距離 (ピクセル単位)、スプリッターをユーザーが移動できることを決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> property|分割線のピクセル単位での太さを決定します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> event|分割線を移動するときに発生します。|  
-|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> event|分割線が移動されたときに発生します。|  
+|<xref:System.Windows.Forms.SplitContainer.FixedPanel%2A> プロパティ|同じパネルを決定後サイズ、<xref:System.Windows.Forms.SplitContainer>コントロールのサイズを変更します。|  
+|<xref:System.Windows.Forms.SplitContainer.IsSplitterFixed%2A> プロパティ|キーボードまたはマウスで分割線を移動できるかどうかを決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.Orientation%2A> プロパティ|垂直方向または水平方向に分割が配置されているかどうかを決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterDistance%2A> プロパティ|移動可能な分割バーを左端または上端からのピクセル単位で距離を決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterIncrement%2A> プロパティ|最小距離 (ピクセル単位)、スプリッターをユーザーが移動できることを決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterWidth%2A> プロパティ|分割線のピクセル単位での太さを決定します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoving> イベント|分割線を移動するときに発生します。|  
+|<xref:System.Windows.Forms.SplitContainer.SplitterMoved> イベント|分割線が移動されたときに発生します。|  
   
 ## <a name="see-also"></a>関連項目
 

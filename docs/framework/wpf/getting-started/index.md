@@ -7,10 +7,10 @@ helpviewer_keywords:
 - WPF [WPF], getting started
 ms.assetid: 04f91da8-708c-46c7-8172-f1695ec847cd
 ms.openlocfilehash: 26cb4fabedb7a4e17f3ee56e95c310e6483d59e5
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59099691"
 ---
 # <a name="getting-started-wpf"></a>概要 (WPF)
@@ -29,5 +29,5 @@ Windows Presentation Foundation (WPF) は、デスクトップ クライアン�
 ## <a name="see-also"></a>関連項目
 
 - [クラス ライブラリ](../class-library-wpf.md)
-- [アプリケーション開発](../app-development/index.md)
-- [.NET Framework Developer Center](https://www.microsoft.com/net)
+- [アプリケーションの開発](../app-development/index.md)
+- [.NET Framework デベロッパー センター](https://www.microsoft.com/net)

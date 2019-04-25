@@ -9,10 +9,10 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58827576"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML での埋め込み式 (Visual Basic)
@@ -70,7 +70,7 @@ ms.locfileid: "58827576"
   
  コンテンツが、省略可能な場所で埋め込み式が含まれている`Nothing`は無視されます。 これは、その要素のコンテンツの属性の値を確認する必要はありませんし、配列の要素がないことを意味`Nothing`XML リテラルを使用する前にします。 要素および属性の名前などの値にすることはできません必要な`Nothing`します。  
   
- 特定の種類のリテラルでの埋め込み式の使用に関する詳細については、[XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)、 [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)を参照してください。  
+ 特定の種類のリテラルでの埋め込み式の使用に関する詳細については、次を参照してください。 [XML ドキュメント リテラル](../../../../visual-basic/language-reference/xml-literals/xml-document-literal.md)、 [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)します。  
   
 ## <a name="scoping-rules"></a>スコープの規則  
  コンパイラは、各 XML リテラルを適切なリテラルの型のコンス トラクターの呼び出しに変換します。 リテラルの内容と、XML リテラルでの埋め込み式は、コンス トラクターに引数として渡されます。 つまり、すべて Visual Basic プログラミング要素、XML リテラルに使用できますが、埋め込み式を使用できるもこと。  

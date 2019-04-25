@@ -9,10 +9,10 @@ helpviewer_keywords:
 - Visual Basic code, limitations
 ms.assetid: cf1646b7-5d24-48c6-9616-bda8a4849d91
 ms.openlocfilehash: 10f67c02d25ec275d1c3e98197d51c25aa250c19
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824911"
 ---
 # <a name="visual-basic-limitations"></a>Visual Basic の制限事項

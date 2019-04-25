@@ -1,61 +1,54 @@
-items:
 - name: 動的プログラミング
   href: index.md
   items:
-  - name: リフレクション
-    href: reflection.md
-    items:
-    - name: 型情報の表示
-      href: viewing-type-information.md
-    - name: リフレクションとジェネリック型
-      href: reflection-and-generic-types.md
-    - name: '方法: リフレクションを使用してジェネリック型をチェックおよびインスタンス化する'
-      href: how-to-examine-and-instantiate-generic-types-with-reflection.md
-    - name: リフレクションに関するセキュリティ上の考慮事項
-      href: security-considerations-for-reflection.md
-    - name: 型の動的な読み込みおよび使用
-      href: dynamically-loading-and-using-types.md
-    - name: '方法: リフレクションのみのコンテキストにアセンブリを読み込む'
-      href: how-to-load-assemblies-into-the-reflection-only-context.md
-    - name: カスタム属性へのアクセス
-      href: accessing-custom-attributes.md
-    - name: 完全修飾型名の指定
-      href: specifying-fully-qualified-type-names.md
-    - name: '方法: リフレクションを使用してデリゲートをフックする'
-      href: how-to-hook-up-a-delegate-using-reflection.md
-    - name: Windows ストア アプリのための .NET Framework のリフレクション
-      href: reflection-for-windows-store-apps.md
-  - name: 動的メソッドおよびアセンブリの出力
-    href: emitting-dynamic-methods-and-assemblies.md
-    items:
-    - name: リフレクション出力のセキュリティ関連事項
-      href: security-issues-in-reflection-emit.md
-    - name: 'チュートリアル: 部分信頼シナリオにおけるコード出力'
-      href: walkthrough-emitting-code-in-partial-trust-scenarios.md
-    - name: '方法: 動的メソッドを定義および実行する'
-      href: how-to-define-and-execute-dynamic-methods.md
-    - name: '方法: リフレクション出力を使用してジェネリック型を定義する'
-      href: how-to-define-a-generic-type-with-reflection-emit.md
-    - name: '方法: リフレクション出力を使用してジェネリック メソッドを定義する'
-      href: how-to-define-a-generic-method-with-reflection-emit.md
-    - name: 動的な型生成のための収集可能なアセンブリ
-      href: collectible-assemblies.md
-  - name: 動的言語ランタイムの概要
-    href: dynamic-language-runtime-overview.md
-  - name: 動的なソース コードの生成とコンパイル
-    href: dynamic-source-code-generation-and-compilation.md
-    items:
-    - name: CodeDOM の使用方法
-      href: using-the-codedom.md
-    - name: CodeDOM グラフからのソース コードの生成およびコンパイル
-      href: generating-and-compiling-source-code-from-a-codedom-graph.md
-    - name: '方法: CodeDOM を使用して XML ドキュメント ファイルを作成する'
-      href: how-to-create-an-xml-documentation-file-using-codedom.md
-    - name: '方法: CodeDOM を使用してクラスを作成する'
-      href: how-to-create-a-class-using-codedom.md
-ms.openlocfilehash: 00d24c89f04d5bfb257fa3e7835741190c8fcbdc
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469883"
+    - name: リフレクション
+      href: reflection.md
+      items:
+        - name: 型情報の表示
+          href: viewing-type-information.md
+        - name: リフレクションとジェネリック型
+          href: reflection-and-generic-types.md
+        - name: '方法: リフレクションを使用してジェネリック型をチェックおよびインスタンス化する'
+          href: how-to-examine-and-instantiate-generic-types-with-reflection.md
+        - name: リフレクションに関するセキュリティ上の考慮事項
+          href: security-considerations-for-reflection.md
+        - name: 型の動的な読み込みおよび使用
+          href: dynamically-loading-and-using-types.md
+        - name: '方法: リフレクションのみのコンテキストにアセンブリを読み込む'
+          href: how-to-load-assemblies-into-the-reflection-only-context.md
+        - name: カスタム属性へのアクセス
+          href: accessing-custom-attributes.md
+        - name: 完全修飾型名の指定
+          href: specifying-fully-qualified-type-names.md
+        - name: '方法: リフレクションを使用してデリゲートをフックする'
+          href: how-to-hook-up-a-delegate-using-reflection.md
+        - name: Windows ストア アプリのための .NET Framework のリフレクション
+          href: reflection-for-windows-store-apps.md
+    - name: 動的メソッドおよびアセンブリの出力
+      href: emitting-dynamic-methods-and-assemblies.md
+      items:
+        - name: リフレクション出力のセキュリティ関連事項
+          href: security-issues-in-reflection-emit.md
+        - name: 'チュートリアル: 部分信頼シナリオにおけるコード出力'
+          href: walkthrough-emitting-code-in-partial-trust-scenarios.md
+        - name: '方法: 動的メソッドを定義および実行する'
+          href: how-to-define-and-execute-dynamic-methods.md
+        - name: '方法: リフレクション出力を使用してジェネリック型を定義する'
+          href: how-to-define-a-generic-type-with-reflection-emit.md
+        - name: '方法: リフレクション出力を使用してジェネリック メソッドを定義する'
+          href: how-to-define-a-generic-method-with-reflection-emit.md
+        - name: 動的な型生成のための収集可能なアセンブリ
+          href: collectible-assemblies.md
+    - name: 動的言語ランタイムの概要
+      href: dynamic-language-runtime-overview.md
+    - name: 動的なソース コードの生成とコンパイル
+      href: dynamic-source-code-generation-and-compilation.md
+      items:
+        - name: CodeDOM の使用方法
+          href: using-the-codedom.md
+        - name: CodeDOM グラフからのソース コードの生成およびコンパイル
+          href: generating-and-compiling-source-code-from-a-codedom-graph.md
+        - name: '方法: CodeDOM を使用して XML ドキュメント ファイルを作成する'
+          href: how-to-create-an-xml-documentation-file-using-codedom.md
+        - name: '方法: CodeDOM を使用してクラスを作成する'
+          href: how-to-create-a-class-using-codedom.md

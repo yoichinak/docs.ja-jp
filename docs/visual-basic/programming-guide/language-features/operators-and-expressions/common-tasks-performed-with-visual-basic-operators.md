@@ -14,11 +14,11 @@ helpviewer_keywords:
 - operators [Visual Basic], short-circuiting logical
 ms.assetid: d181afe5-fafa-460f-a13b-81203f6f4587
 ms.openlocfilehash: 88c05b54402733fadb686e3c6f883b2d2d56990c
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58815070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864859"
 ---
 # <a name="common-tasks-performed-with-visual-basic-operators"></a>Visual Basic の演算子で実行される一般的な演算
 演算子と呼ばれる 1 つまたは複数の式に関連する多くの一般的なタスクを実行する*オペランド*します。  
@@ -26,7 +26,7 @@ ms.locfileid: "58815070"
 ## <a name="arithmetic-and-bit-shift-tasks"></a>算術演算子とビット シフトのタスク  
  次の表では、使用可能な算術演算子とビット シフトの操作をまとめたものです。  
   
-|目的|解決方法|  
+|目的|参照トピック|  
 |---|---|  
 |別の 1 つの数値を追加します。|[+ 演算子](../../../../visual-basic/language-reference/operators/addition-operator.md)|  
 |別の 1 つの数値を減算します。|[-演算子 (Visual Basic)](../../../../visual-basic/language-reference/operators/subtraction-operator.md)|  
@@ -42,7 +42,7 @@ ms.locfileid: "58815070"
 ## <a name="comparison-tasks"></a>比較タスク  
  次の表では、使用可能な比較操作をまとめたものです。  
   
-|目的|解決方法|  
+|目的|参照トピック|  
 |---|---|  
 |2 つの値が等しいかどうかを確認します。|`=` 演算子 ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
 |2 つの値が等しくないかどうかを判断します。|`<>` 演算子 ([Comparison Operators in Visual Basic](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/comparison-operators.md))|  
@@ -57,7 +57,7 @@ ms.locfileid: "58815070"
 ## <a name="concatenation-tasks"></a>タスクの連結  
  次の表では、使用可能な連結操作をまとめたものです。  
   
-|目的|解決方法|  
+|目的|参照トピック|  
 |---|---|  
 |複数の文字列を 1 つの文字列に結合します。|`&` 演算子 ([Visual Basic の連結演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
 |数値の文字列値が参加します。|`+` 演算子 ([Visual Basic の連結演算子](../../../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md))|  
@@ -65,7 +65,7 @@ ms.locfileid: "58815070"
 ## <a name="logical-and-bitwise-tasks"></a>論理とビットごとのタスク  
  次の表では、使用可能な論理とビットごとの操作をまとめたものです。  
   
-|目的|解決方法|  
+|目的|参照トピック|  
 |---|---|  
 |ブール値に対して論理否定を実行します。|[Not 演算子](../../../../visual-basic/language-reference/operators/not-operator.md)|  
 |2 つのブール値の論理積します。|[And 演算子](../../../../visual-basic/language-reference/operators/and-operator.md)|  

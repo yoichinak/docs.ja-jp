@@ -11,10 +11,10 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
 ms.openlocfilehash: dd85363447e9b405241d608550d9484b4760a739
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817280"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp; 演算子 (Visual Basic)
@@ -45,7 +45,7 @@ result = expression1 & expression2
 >  `&`演算子は、*オーバー ロードされた*、つまり、ことクラスまたは構造体を再定義できますその動作はそのクラスまたは構造体の型。 コードは、このようなクラスまたは構造体に、この演算子を使用する場合は、再定義された動作を確認ください。 詳細については、「 [Operator Procedures](../../../visual-basic/programming-guide/language-features/procedures/operator-procedures.md)」を参照してください。  
   
 > [!NOTE]
->  型として変数を識別するために、アンパサンド (&) 文字を使用することができますも`Long`します。 詳細については、[型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)を参照してください。  
+>  型として変数を識別するために、アンパサンド (&) 文字を使用することができますも`Long`します。 詳細については、次を参照してください。[型文字](../../../visual-basic/programming-guide/language-features/data-types/type-characters.md)します。  
   
 ## <a name="example"></a>例  
  この例では、`&`文字列の連結を強制する演算子。 結果は、2 つの文字列オペランドの連結を表す文字列値です。  

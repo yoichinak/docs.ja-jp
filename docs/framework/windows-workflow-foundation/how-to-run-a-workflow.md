@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
 ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59319925"
 ---
 # <a name="how-to-run-a-workflow"></a>方法: ワークフローを実行する
@@ -62,7 +62,7 @@ ms.locfileid: "59319925"
     WorkflowInvoker.Invoke(workflow1);
     ```
 
-     この生成されたホスト コードでは <xref:System.Activities.WorkflowInvoker>を使用します。 <xref:System.Activities.WorkflowInvoker> 永続化を使用しないワークフローに対してのみ使用でき、メソッドを呼び出すようワークフローを呼び出すには、簡単な方法を提供します。 <xref:System.Activities.WorkflowApplication> ライフ サイクル イベント、実行制御、ブックマークの再開、および永続化の通知を含むワークフローを実行するには、豊富なモデルを提供します。 次の例ではブックマークを使用し、ワークフローのホスティングには <xref:System.Activities.WorkflowApplication> を使用します。 `using` Program.cs **または** Module1.vb **の先頭にある既存の** using **ステートメントまたは** Imports **ステートメントの下に、次の** ステートメントまたは **Imports** ステートメントを追加します。
+     この生成されたホスト コードでは <xref:System.Activities.WorkflowInvoker>を使用します。 <xref:System.Activities.WorkflowInvoker> は、メソッド呼び出しのようにワークフローを呼び出す簡単な方法を提供し、永続化を使用しないワークフローのみに使用できます。 <xref:System.Activities.WorkflowApplication> は、ライフ サイクル イベントの通知、実行制御、ブックマークの再開、および永続化を含むワークフローを実行するための豊富なモデルを提供します。 次の例ではブックマークを使用し、ワークフローのホスティングには <xref:System.Activities.WorkflowApplication> を使用します。 `using` Program.cs **または** Module1.vb **の先頭にある既存の** using **ステートメントまたは** Imports **ステートメントの下に、次の** ステートメントまたは **Imports** ステートメントを追加します。
 
     ```vb
     Imports NumberGuessWorkflowActivities
@@ -163,9 +163,9 @@ ms.locfileid: "59319925"
 
 - <xref:System.Activities.WorkflowApplication>
 - <xref:System.Activities.Bookmark>
-- [Windows Workflow Foundation プログラミングの新機能](programming.md)
+- [Windows Workflow Foundation プログラミング](programming.md)
 - [チュートリアル入門](getting-started-tutorial.md)
-- [方法: ワークフローを作成する](how-to-create-a-workflow.md)
-- [方法: 長時間にわたって実行されるワークフローを作成して実行する](how-to-create-and-run-a-long-running-workflow.md)
+- [方法: ワークフローを作成します。](how-to-create-a-workflow.md)
+- [方法: 作成して実行する時間の長いワークフローの実行](how-to-create-and-run-a-long-running-workflow.md)
 - [ワークフロー内での入力の待機](waiting-for-input-in-a-workflow.md)
 - [ワークフローのホスティング](hosting-workflows.md)

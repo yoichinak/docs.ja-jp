@@ -6,10 +6,10 @@ helpviewer_keywords:
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
 ms.openlocfilehash: 0fbe07884f55b7e6f460929e54520de5f718e1af
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58815006"
 ---
 # <a name="summary-visual-basic"></a>\<概要 > (Visual Basic)
@@ -28,7 +28,7 @@ ms.locfileid: "58815006"
 ## <a name="remarks"></a>Remarks  
  使用して、`<summary>`型または型のメンバーを記述するタグ。 型の説明に補足情報を追加するには、[\<remarks>](../../../visual-basic/language-reference/xmldoc/remarks.md) タグを使用します。  
   
- テキスト、`<summary>`タグは IntelliSense の型に関する情報の唯一のソースであり、オブジェクト ブラウザーにも表示されます。 オブジェクト ブラウザーの詳細については、[コードの構造を表示する](/visualstudio/ide/viewing-the-structure-of-code)を参照してください。  
+ テキスト、`<summary>`タグは IntelliSense の型に関する情報の唯一のソースであり、オブジェクト ブラウザーにも表示されます。 オブジェクト ブラウザーの詳細については、次を参照してください。[コードの構造を表示する](/visualstudio/ide/viewing-the-structure-of-code)します。  
   
  コンパイル時に [/doc](../../../visual-basic/reference/command-line-compiler/doc.md) を指定して、ドキュメント コメントをファイルに出力します。  
   

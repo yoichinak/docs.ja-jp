@@ -3,10 +3,10 @@ title: WCF 拡張に対するカスタム メタデータのエクスポート
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
 ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59334511"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF 拡張に対するカスタム メタデータのエクスポート
@@ -43,6 +43,6 @@ Windows Communication Foundation (WCF) では、メタデータのエクスポ�
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: カスタム WSDL をエクスポートする](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
-- [方法: カスタム ポリシー アサーションをエクスポートする](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
+- [方法: カスタム WSDL をエクスポートします。](../../../../docs/framework/wcf/extending/how-to-export-custom-wsdl.md)
+- [方法: カスタム ポリシー アサーションをエクスポートします。](../../../../docs/framework/wcf/extending/how-to-export-custom-policy-assertions.md)
 - [WCF 拡張に対するカスタム メタデータのインポート](../../../../docs/framework/wcf/extending/importing-custom-metadata-for-a-wcf-extension.md)

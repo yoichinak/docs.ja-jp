@@ -6,10 +6,10 @@ helpviewer_keywords:
 - resources [WPF], application resources
 ms.assetid: 507ea937-5191-406b-8797-0a3d9f94156d
 ms.openlocfilehash: 70dff8089c4da70fdc61247a0c604cf7ee85d02b
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59088204"
 ---
 # <a name="how-to-use-application-resources"></a>方法: アプリケーション リソースを使用する
@@ -29,4 +29,4 @@ ms.locfileid: "59088204"
 
 - [XAML リソース](xaml-resources.md)
 - [アプリケーション管理の概要](../app-development/application-management-overview.md)
-- [方法のトピック](resources-how-to-topics.md)
+- [方法トピック](resources-how-to-topics.md)

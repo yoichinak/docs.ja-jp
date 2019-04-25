@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
 ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59110794"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL オブジェクト モデル
@@ -65,11 +65,11 @@ ms.locfileid: "59110794"
  詳細については、の「Association Attribute」セクションを参照してください。[属性ベースの対応付け](../../../../../../docs/framework/data/adonet/sql/linq/attribute-based-mapping.md)します。  
   
 ## <a name="linq-to-sql-methods-and-database-stored-procedures"></a>LINQ to SQL メソッドおよびデータベース ストアド プロシージャ  
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ストアド プロシージャおよびユーザー定義関数をサポートしています。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、それらをクライアント コードから厳密に型指定された方法でアクセスできるように、クライアント オブジェクトにこれらのデータベースによる抽象化をマップします。 メソッド シグネチャは、データベース内で定義されているプロシージャおよび関数のシグネチャと可能な限りよく似ています。 IntelliSense を使用して、これらのメソッドを見つけることができます。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、ストアド プロシージャとユーザー定義関数をサポートしています。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、それらをクライアント コードから厳密に型指定された方法でアクセスできるように、クライアント オブジェクトにこれらのデータベースによる抽象化をマップします。 メソッド シグネチャは、データベース内で定義されているプロシージャおよび関数のシグネチャと可能な限りよく似ています。 IntelliSense を使用して、これらのメソッドを見つけることができます。  
   
  呼び出しによって対応するプロシージャに返される結果セットは、厳密に型指定されたコレクションです。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 使用して、ストアド プロシージャおよび関数をメソッドにマップ、<xref:System.Data.Linq.Mapping.FunctionAttribute>と<xref:System.Data.Linq.Mapping.ParameterAttribute>属性。 ストアド プロシージャを表すメソッドは、<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> プロパティによって、ユーザー定義関数を表すメソッドと区別されます。 このプロパティが `false` (既定値) に設定されている場合、メソッドはストアド プロシージャを表します。 `true` に設定されている場合、メソッドはデータベース関数を表します。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、<xref:System.Data.Linq.Mapping.FunctionAttribute> 属性と <xref:System.Data.Linq.Mapping.ParameterAttribute> 属性を使用して、ストアド プロシージャおよび関数をメソッドに対応付けます。 ストアド プロシージャを表すメソッドは、<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> プロパティによって、ユーザー定義関数を表すメソッドと区別されます。 このプロパティが `false` (既定値) に設定されている場合、メソッドはストアド プロシージャを表します。 `true` に設定されている場合、メソッドはデータベース関数を表します。  
   
 > [!NOTE]
 >  Visual Studio を使用している場合を使用できます、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]ストアド プロシージャおよびユーザー定義関数にマップされるメソッドを作成します。  

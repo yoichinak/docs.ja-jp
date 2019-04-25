@@ -7,10 +7,10 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59295901"
 ---
 # <a name="document-serialization-and-storage"></a>ドキュメントのシリアル化および保存
@@ -39,7 +39,7 @@ Microsoft .NET Framework では、作成して、高品質のドキュメント�
     -   カスタム実行時設定とオプションのユーザー インターフェイス サポート。  
   
 ### <a name="xps-print-path"></a>XPS 印刷パス  
- Microsoft .NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]印刷パスには、印刷出力によってドキュメントを作成するための拡張機構も用意されています。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ネイティブ印刷スプール形式であり、ドキュメント ファイル形式の両方として機能[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)]します。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ドキュメントを直接に送信できる[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-互換性のあるプリンター、中間形式に変換する必要はありません。  印刷パス出力オプションと機能について詳しくは、「[印刷の概要](printing-overview.md)」をご覧ください。  
+ Microsoft .NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]印刷パスには、印刷出力によってドキュメントを作成するための拡張機構も用意されています。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] は、ドキュメント ファイル形式と、[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] のネイティブ印刷スプール形式の両方として機能します。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] のドキュメントは [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 互換性のあるプリンターに直接送信でき、中間形式に変換する必要はありません。  印刷パス出力オプションと機能について詳しくは、「[印刷の概要](printing-overview.md)」をご覧ください。  
   
 <a name="PluginSerializers"></a>   
 ## <a name="plug-in-serializers"></a>プラグイン シリアライザー  
@@ -48,7 +48,7 @@ Microsoft .NET Framework では、作成して、高品質のドキュメント�
  アプリケーション開発者にとっての利点として、プラグイン シリアライザーは新しいストレージ設計およびファイル形式に対する拡張性を備え、ビルド時に可能性のあるすべての形式を直接コーディングする必要はありません。  また、サードパーティの開発者にとっても、プラグイン シリアライザーには、カスタムまたは独自のファイル形式のためのシステムでアクセス可能なプラグインを展開、インストール、更新する標準化された手段が提供されるというメリットがあります。  
   
 ### <a name="using-a-plug-in-serializer"></a>プラグイン シリアライザーの使用  
- プラグイン シリアライザーは簡単に使うことができます。  <xref:System.Windows.Documents.Serialization.SerializerProvider>クラスを列挙、<xref:System.Windows.Documents.Serialization.SerializerDescriptor>オブジェクトの各プラグインがシステムにインストールします。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>プロパティがインストールされているプラグインが現在の構成に基づくフィルター処理し、シリアライザーの読み込まれ、アプリケーションで使用されることを確認します。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor>もなどの他のプロパティを提供します<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>と<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>シリアライザーを使用可能な出力形式を選択する際にユーザー入力を求めるアプリケーションを使用できます。  既定のプラグイン シリアライザー[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]は .NET Framework で提供されており、常に列挙されます。  ユーザーが、出力形式を選択した後、<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>メソッドの使用を作成、<xref:System.Windows.Documents.Serialization.SerializerWriter>の特定の形式。  <xref:System.Windows.Documents.Serialization.SerializerWriter>。<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> データ ストアにドキュメント ストリームを出力するメソッドを呼び出すしできます。  
+ プラグイン シリアライザーは簡単に使うことができます。  <xref:System.Windows.Documents.Serialization.SerializerProvider>クラスを列挙、<xref:System.Windows.Documents.Serialization.SerializerDescriptor>オブジェクトの各プラグインがシステムにインストールします。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor.IsLoadable%2A>プロパティがインストールされているプラグインが現在の構成に基づくフィルター処理し、シリアライザーの読み込まれ、アプリケーションで使用されることを確認します。  <xref:System.Windows.Documents.Serialization.SerializerDescriptor>もなどの他のプロパティを提供します<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DisplayName%2A>と<xref:System.Windows.Documents.Serialization.SerializerDescriptor.DefaultFileExtension%2A>シリアライザーを使用可能な出力形式を選択する際にユーザー入力を求めるアプリケーションを使用できます。  既定のプラグイン シリアライザー[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]は .NET Framework で提供されており、常に列挙されます。  ユーザーが、出力形式を選択した後、<xref:System.Windows.Documents.Serialization.SerializerProvider.CreateSerializerWriter%2A>メソッドの使用を作成、<xref:System.Windows.Documents.Serialization.SerializerWriter>の特定の形式。  <xref:System.Windows.Documents.Serialization.SerializerWriter>.<xref:System.Windows.Documents.Serialization.SerializerWriter.Write%2A> データ ストアにドキュメント ストリームを出力するメソッドを呼び出すしできます。  
   
  次の例では、使用するアプリケーション、 <xref:System.Windows.Documents.Serialization.SerializerProvider> "PlugInFileFilter"プロパティのメソッド。  PlugInFileFilter はインストールされているプラグインを列挙し、フィルター文字列を使用可能なファイルのオプションを付けて、<xref:Microsoft.Win32.SaveFileDialog>します。  
   

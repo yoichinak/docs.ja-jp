@@ -10,10 +10,10 @@ helpviewer_keywords:
 - Unicode, marshaling strings
 ms.assetid: 0021d5ff-3209-444e-8497-420f3e6ee075
 ms.openlocfilehash: b3c9452f8d144fb18ea3efcb35b85caed80e8692
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58819347"
 ---
 # <a name="unicode-visual-basic"></a>Unicode (Visual Basic)

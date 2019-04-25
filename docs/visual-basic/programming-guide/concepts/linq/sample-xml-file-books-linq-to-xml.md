@@ -3,10 +3,10 @@ title: サンプル XML ファイル:書籍 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
 ms.openlocfilehash: d16a67ba95f7fa9f940c12c61f9ab128abd55a57
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58817085"
 ---
 # <a name="sample-xml-file-books-linq-to-xml"></a>サンプル XML ファイル:書籍 (LINQ to XML)

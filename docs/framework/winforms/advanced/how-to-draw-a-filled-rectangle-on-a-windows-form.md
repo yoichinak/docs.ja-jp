@@ -13,10 +13,10 @@ helpviewer_keywords:
 - drawing rectangles
 ms.assetid: d656a93c-987d-4809-aafd-493fe17450f0
 ms.openlocfilehash: e551eacf0924c9bffa802fb5d2ba8bae7c1c3a98
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59072028"
 ---
 # <a name="how-to-draw-a-filled-rectangle-on-a-windows-form"></a>方法: Windows フォームに塗りつぶした四角形を描画する

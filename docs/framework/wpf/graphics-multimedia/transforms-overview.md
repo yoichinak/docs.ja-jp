@@ -13,10 +13,10 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59162204"
 ---
 # <a name="transforms-overview"></a>変換の概要
@@ -152,5 +152,5 @@ LayoutTransform を使用したボタンの回転
 
 - <xref:System.Windows.Media.Transform>
 - <xref:System.Windows.Media.Matrix>
-- [方法のトピック](transformations-how-to-topics.md)
-- [2-d 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)
+- [方法トピック](transformations-how-to-topics.md)
+- [2-D 変換のサンプル](https://go.microsoft.com/fwlink/?LinkID=158252)

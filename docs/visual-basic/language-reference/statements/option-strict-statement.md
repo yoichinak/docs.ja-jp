@@ -12,10 +12,10 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59310188"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
@@ -73,7 +73,7 @@ Option Strict { On | Off }
   
 -   [/= 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [文字型 (Char)](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+-   [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  使用して文字列を連結するときに、 [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)、すべての文字列への変換は拡大変換と見なされます。 場合でも、暗黙的な縮小変換エラーは、これらの変換が生成されないように`Option Strict`にします。  
   
@@ -116,11 +116,11 @@ Option Strict { On | Off }
 ### <a name="conditions"></a> IDE で警告の構成を設定するには  
  使用すると、 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)の代わりに、`Option Strict`ステートメントでは、エラーを生成する条件をさらに制御があります。 **警告の構成**のセクション、**コンパイル ページ**がコンパイル時エラーが発生する 3 つの条件に対応する設定と`Option Strict`にします。 これらの設定を次に示します。  
   
--   **暗黙的な変換です**  
+-   **暗黙的な変換**  
   
--   **遅延バインディングです。呼び出しが実行時に失敗する可能性があります**  
+-   **遅延バインディング、呼び出しが実行時に失敗する可能性があります**  
   
--   **暗黙的な型; Object と見なされます**  
+-   **暗黙的な型、オブジェクトと見なされます**  
   
  **[Option Strict]** を **[オン]** に設定すると、これら 3 つの警告の構成設定のすべてが **[エラー]** に設定されます。 **[Option Strict]** を **[オフ]** に設定すると、3 つの設定すべてが **[なし]** に設定されます。  
   
@@ -153,12 +153,12 @@ Option Strict { On | Off }
   
 ## <a name="see-also"></a>関連項目
 
-- [Widening and Narrowing Conversions](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
+- [拡大変換と縮小変換](../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)
 - [暗黙の型変換と明示的な型変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)
 - [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)
 - [Option Explicit ステートメント](../../../visual-basic/language-reference/statements/option-explicit-statement.md)
-- [CString](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
-- [方法: オブジェクトのメンバーにアクセスする](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
+- [データ型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)
+- [方法: オブジェクトのメンバーへのアクセス](../../../visual-basic/programming-guide/language-features/variables/how-to-access-members-of-an-object.md)
 - [XML での埋め込み式](../../../visual-basic/programming-guide/language-features/xml/embedded-expressions-in-xml.md)
 - [厳密でないデリゲート変換](../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)
 - [Office ソリューションの遅延バインディング](/visualstudio/vsto/late-binding-in-office-solutions)

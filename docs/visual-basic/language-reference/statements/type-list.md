@@ -25,10 +25,10 @@ helpviewer_keywords:
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
 ms.openlocfilehash: d071e59d94e51ca55167983d0ee3098bd5c7dd8f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58843631"
 ---
 # <a name="type-list-visual-basic"></a>型リスト (Visual Basic)
@@ -51,7 +51,7 @@ ms.locfileid: "58843631"
 ## <a name="remarks"></a>Remarks  
  すべて汎用のプログラミング要素には、少なくとも 1 つの型パラメーターを実行する必要があります。 型パラメーターは、特定の種類のプレース ホルダー (、*構築される要素*) クライアント コードは、ジェネリック型のインスタンスを作成するタイミングを指定します。 ジェネリック クラスを定義、構造体、インターフェイス、プロシージャを委任したりできます。  
   
- ジェネリック型を定義する場合の詳細については、[Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)を参照してください。 型パラメーター名の詳細については、[Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)を参照してください。  
+ ジェネリック型を定義する場合の詳細については、次を参照してください。 [Visual Basic におけるジェネリック型](../../../visual-basic/programming-guide/language-features/data-types/generic-types.md)します。 型パラメーター名の詳細については、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
   
 ## <a name="rules"></a>ルール  
   
@@ -63,7 +63,7 @@ ms.locfileid: "58843631"
   
     -   1 つのクラス。 指定された型は、そのクラスから継承する必要があります。  
   
-    -   `New` キーワード。 指定された型には、ジェネリック型にアクセスできるパラメーターなしのコンストラクターを公開する必要があります。 これは、1 つまたは複数のインターフェイスで型パラメーターを制限する場合に便利です。 インターフェイスを実装する型が必ずしも、コンストラクターを公開し、コンストラクターのアクセス レベルに応じて、ジェネリック型内のコード可能性へのアクセスします。  
+    -   `New` キーワード。 指定された型には、ジェネリック型にアクセスできるパラメーターなしのコンス トラクターを公開する必要があります。 これは、1 つまたは複数のインターフェイスで型パラメーターを制限する場合に便利です。 インターフェイスを実装する型が必ずしも、コンス トラクターを公開し、コンス トラクターのアクセス レベルに応じて、ジェネリック型内のコード可能性へのアクセスします。  
   
     -   いずれか、`Class`キーワードまたは`Structure`キーワード。 `Class`キーワードは、すべての型引数が渡された文字列、配列、またはデリゲートでは、たとえば、参照型であること、またはクラスからオブジェクトが作成されたことを必要とするジェネリック型パラメーターを制約します。 `Structure`キーワードで制約などの構造体、列挙型、または基本データ型をジェネリック型パラメーターに渡されるすべての型引数の値の型である必要があります。 両方を含めることはできません`Class`と`Structure`同じ`constraintlist`します。  
   

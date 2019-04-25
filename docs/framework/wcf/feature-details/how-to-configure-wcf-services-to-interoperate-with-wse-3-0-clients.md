@@ -3,10 +3,10 @@ title: '方法: WCF サービスと WSE 3.0 クライアントを相互運用す
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
 ms.openlocfilehash: 8f4407f66095f97a213d6cd987b4bd9a3ed340fa
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59303896"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>方法: WCF サービスと WSE 3.0 クライアントを相互運用するために構成する
@@ -92,4 +92,4 @@ Windows Communication Foundation (WCF) サービス ワイヤレベルの互換�
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: システム指定のバインディングをカスタマイズする](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)
+- [方法: システム指定のバインディングをカスタマイズします。](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)

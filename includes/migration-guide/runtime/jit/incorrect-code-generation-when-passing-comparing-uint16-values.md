@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: ad624a665dbe8e989ea05acc20213809e515e6ac
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59236594"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804417"
 ---
 ### <a name="incorrect-code-generation-when-passing-and-comparing-uint16-values"></a>UInt16 値を渡して比較する場合にコード生成が正しく行われません
 

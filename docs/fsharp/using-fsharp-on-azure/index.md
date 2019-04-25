@@ -4,10 +4,10 @@ description: ガイドと、Azure サービスを使用するにはF#
 author: sylvanc
 ms.date: 09/22/2016
 ms.openlocfilehash: 92b453b680a5f8c55f35458e9020f15444e90035
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59211739"
 ---
 # <a name="using-f-on-azure"></a>Azure での F# の使用
@@ -33,8 +33,8 @@ Azure Functions は、F# を第一級の言語としてサポートし、F# コ�
 
 Azure Functions と F# の使用に関する他のリソース:
 
-* [Azure Functions でのスケール アップF#Suave を使用しました。](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
-* [Azure 関数を作成する方法F#](https://mnie.github.io/2016-09-08-AzureFunctions/)
+* [Suave を使用した F# での Azure Functions のスケールアップ](https://blog.tamizhvendan.in/blog/2016/09/19/scale-up-azure-functions-in-f-number-using-suave/)
+* [F# で Azure 関数を作成する方法](https://mnie.github.io/2016-09-08-AzureFunctions/)
 * [Azure Functions で Azure の型プロバイダーを使用します。](https://compositional-it.com/blog/2017/08-30-using-the-azure-type-provider-with-azure-functions/index.html)
 
 ## <a name="using-azure-storage-with-f"></a>F で Azure Storage の使用\#
@@ -52,15 +52,15 @@ Azure Storage は、明示的な API 呼び出しではなく、宣言型の構�
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/) は、クラウドまたはオンプレミスでどこにでもデータに接続する強力な Web アプリおよびモバイル アプリをビルドするためのクラウド プラットフォームです。
 
-* [F#Azure の Web API の例](https://github.com/fsprojects/azure-webapi-example)
-* [ホストしているF#Azure 上の web アプリケーションで](https://github.com/isaacabraham/fsharp-demonstrator)
+* [F# Azure Web API の例](https://github.com/fsprojects/azure-webapi-example)
+* [Azure 上の web アプリケーションでの F# のホスト](https://github.com/isaacabraham/fsharp-demonstrator)
 
 ## <a name="using-apache-spark-with-f-with-azure-hdinsight"></a>Azure HDInsight と F# での Apache Spark の使用
 
 [Apache Spark for Azure HDInsight](https://azure.microsoft.com/services/hdinsight/apache-spark/) は、大規模なデータ分析アプリケーションを実行するオープン ソースの処理のフレームワークです。 Azure では、Apache Spark は簡単かつ低コストで展開できます。 F# で、Spark 用の .NET API である [Mobius](https://github.com/Microsoft/Mobius) を使用して、Spark アプリケーションを開発します。
 
-* [Spark アプリケーションを実装するF#Mobius を使用します。](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
-* [例F#Mobius を使用して Spark アプリ](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
+* [Mobius を使用した F# での Spark アプリケーションの実装](https://github.com/Microsoft/Mobius/blob/master/notes/spark-fsharp-mobius.md)
+* [Mobius を使用する F# Spark アプリケーションの例](https://github.com/Microsoft/Mobius/tree/master/examples/fsharp)
 
 ## <a name="using-azure-cosmos-db-with-f"></a>F での Azure Cosmos DB の使用\#
 
@@ -99,7 +99,7 @@ Azure Notification Hubs は、2 つの方法で F# で使用できます。
 
 [Webjobs](/azure/app-service-web/web-sites-create-web-jobs) は、オンデマンド、継続的、またはスケジュール指定の 3 つの方法で App Service Web アプリで実行できるプログラムです。
 
-[例F#web ジョブ](https://github.com/jrr/webjob-project-examples)
+[F# Webjob の例](https://github.com/jrr/webjob-project-examples)
 
 ## <a name="implementing-timers-on-azure-with-f"></a>Azure と F でのタイマーの実装\#
 
@@ -117,4 +117,4 @@ F# スクリプトを使用したリソースの展開および管理は、通�
 
 ## <a name="other-resources"></a>その他のリソース
 
-* [すべての Azure サービスの完全なドキュメント](/azure/)
+* [すべての Azure サービスのドキュメント](/azure/)

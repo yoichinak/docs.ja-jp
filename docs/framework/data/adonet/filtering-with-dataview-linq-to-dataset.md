@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
 ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59176931"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView によるフィルター処理 (LINQ to DataSet)
-特定の条件に基づいてデータをフィルター処理し、UI コントロールを介してそのデータをクライアントに提供する機能は、データ バインドの重要な特徴です。 <xref:System.Data.DataView> データをフィルター処理し、特定のフィルター条件を満たすデータ行のサブセットを返すいくつかの方法を提供します。 フィルター処理の機能だけでなく、文字列ベース<xref:System.Data.DataView>を使用する機能もあります。[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]フィルター条件の式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 式を使用する文字列ベースのフィルターよりも、はるかに複雑で強力なフィルター処理します。  
+特定の条件に基づいてデータをフィルター処理し、UI コントロールを介してそのデータをクライアントに提供する機能は、データ バインドの重要な特徴です。 <xref:System.Data.DataView> は、データにフィルターを適用し、特定のフィルター条件を満たすデータ行のサブセットを返す方法をいくつか提供します。 フィルター処理の機能だけでなく、文字列ベース<xref:System.Data.DataView>を使用する機能もあります。[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]フィルター条件の式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 式を使用する文字列ベースのフィルターよりも、はるかに複雑で強力なフィルター処理します。  
   
  <xref:System.Data.DataView> を使用してデータをフィルター処理する方法は 2 つあります。  
   

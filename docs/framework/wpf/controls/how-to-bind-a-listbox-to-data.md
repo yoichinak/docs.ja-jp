@@ -7,11 +7,11 @@ helpviewer_keywords:
 - binding data [WPF], to ListBox control
 ms.assetid: de93a907-709a-44a7-84bf-578b846a3d8b
 ms.openlocfilehash: 4dea53a524247d18628b3e7e7b2c06906dced53d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59106440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911158"
 ---
 # <a name="how-to-bind-a-listbox-to-data"></a>方法: ListBox にデータをバインドする
 アプリケーション開発者が作成できる<xref:System.Windows.Controls.ListBox>それぞれのコンテンツを指定することがなくコントロール<xref:System.Windows.Controls.ListBoxItem>とは別にします。 データ バインディングを使用すると、個々 の項目にデータをバインドします。  

@@ -8,10 +8,10 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59170314"
 ---
 # <a name="binding-markup-extension"></a>バインドのマークアップ拡張機能
@@ -118,7 +118,7 @@ ms.locfileid: "59170314"
   
  データの検証に関連するバインドは、通常、明示的な指定`Binding`要素ではなくとして、`{Binding ...}`式、および設定<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>または<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>式ではあまりありません。 これは、ため、コンパニオン プロパティ<xref:System.Windows.Data.Binding.ValidationRules%2A>式の形式で簡単に設定することはできません。 詳細については、次を参照してください。[実装バインド検証](../data/how-to-implement-binding-validation.md)です。  
   
- `Binding` マークアップ拡張機能。 通常、マークアップ拡張機能は、属性値の名前、リテラル値やハンドラー以外にエスケープする必要があるし、要件が特定の種類またはプロパティで属性付きの型コンバーターよりも多くのグローバルに実装されます。 XAML の使用中のすべてのマークアップ拡張機能、`{`と`}`マークアップ拡張機能が文字列の内容を処理する必要がありますを XAML プロセッサが認識する規則は、それぞれの属性構文内の文字。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
+ `Binding` はマークアップ拡張機能です。 通常、マークアップ拡張機能は、属性値の名前、リテラル値やハンドラー以外にエスケープする必要があるし、要件が特定の種類またはプロパティで属性付きの型コンバーターよりも多くのグローバルに実装されます。 XAML の使用中のすべてのマークアップ拡張機能、`{`と`}`マークアップ拡張機能が文字列の内容を処理する必要がありますを XAML プロセッサが認識する規則は、それぞれの属性構文内の文字。 詳細については、次を参照してください。[マークアップ拡張機能と WPF XAML](markup-extensions-and-wpf-xaml.md)します。  
   
  `Binding` 特殊なマークアップ拡張機能は、 <xref:System.Windows.Data.Binding> WPF の XAML 実装の拡張機能を実装するクラスは、その他のいくつかのメソッドと XAML に関連していないプロパティにも実装します。 他のメンバーにするは<xref:System.Windows.Data.Binding>汎用性と自己完結型のクラスで、XAML マークアップ拡張機能として機能しているだけでなく多くのデータ バインディングのシナリオに対処できます。  
   

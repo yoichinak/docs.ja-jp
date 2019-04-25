@@ -1,36 +1,29 @@
-items:
 - name: 定数と列挙体
   href: index.md
   items:
-  - name: 定数の概要
-    href: constants-overview.md
-    items:
-    - name: '方法: 定数を宣言する'
-      href: how-to-declare-a-constant.md
-    - name: ユーザー定義定数
-      href: user-defined-constants.md
-    - name: 定数とリテラルのデータ型
-      href: constant-and-literal-data-types.md
-    - name: '方法: 関連する定数値をまとめてグループ化する'
-      href: how-to-group-related-constant-values-together.md
-  - name: 列挙型の概要
-    href: enumerations-overview.md
-    items:
-    - name: '方法: 列挙型を宣言する'
-      href: how-to-declare-enumerations.md
-    - name: '方法: 列挙型のメンバーを参照する'
-      href: how-to-refer-to-an-enumeration-member.md
-    - name: 列挙型と名前の修飾
-      href: enumerations-and-name-qualification.md
-    - name: '方法: 列挙型を反復処理する'
-      href: how-to-iterate-through-an-enumeration.md
-    - name: '方法: 列挙値に関連付けられている文字列を確認する'
-      href: how-to-determine-the-string-associated-with-an-enumeration-value.md
-    - name: 列挙型を使用する状況
-      href: when-to-use-an-enumeration.md
-ms.openlocfilehash: d04784aa644ef5d37a7b3d416f8a15f2e5113f98
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470787"
+    - name: 定数の概要
+      href: constants-overview.md
+      items:
+        - name: '方法: 定数を宣言する'
+          href: how-to-declare-a-constant.md
+        - name: ユーザー定義定数
+          href: user-defined-constants.md
+        - name: 定数とリテラルのデータ型
+          href: constant-and-literal-data-types.md
+        - name: '方法: 関連する定数値をまとめてグループ化する'
+          href: how-to-group-related-constant-values-together.md
+    - name: 列挙型の概要
+      href: enumerations-overview.md
+      items:
+        - name: '方法: 列挙型を宣言する'
+          href: how-to-declare-enumerations.md
+        - name: '方法: 列挙型のメンバーを参照する'
+          href: how-to-refer-to-an-enumeration-member.md
+        - name: 列挙型と名前の修飾
+          href: enumerations-and-name-qualification.md
+        - name: '方法: 列挙型を反復処理する'
+          href: how-to-iterate-through-an-enumeration.md
+        - name: '方法: 列挙値に関連付けられている文字列を確認する'
+          href: how-to-determine-the-string-associated-with-an-enumeration-value.md
+        - name: 列挙型を使用する状況
+          href: when-to-use-an-enumeration.md

@@ -1,15 +1,8 @@
-items:
 - name: Web 設定スキーマ
   href: index.md
   items:
-  - name: <system.web> 要素 (Web 設定)
-    href: system-web-element-web-settings.md
-    items:
-    - name: <applicationPool> 要素 (Web 設定)
-      href: applicationpool-element-web-settings.md
-ms.openlocfilehash: d47abec64d32f6b285c4d3494c169bc19114063b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469779"
+    - name: <system.web> 要素 (Web 設定)
+      href: system-web-element-web-settings.md
+      items:
+        - name: <applicationPool> 要素 (Web 設定)
+          href: applicationpool-element-web-settings.md

@@ -1,18 +1,11 @@
-items:
 - name: 式ツリー
   href: index.md
   items:
-  - name: '方法: 式ツリーを実行する'
-    href: how-to-execute-expression-trees.md
-  - name: '方法: 式ツリーを変更する'
-    href: how-to-modify-expression-trees.md
-  - name: '方法: 式ツリーを使用して動的クエリをビルドする'
-    href: how-to-use-expression-trees-to-build-dynamic-queries.md
-  - name: 式ツリーのデバッグ (Visual Studio)
-    href: debugging-expression-trees-in-visual-studio.md
-ms.openlocfilehash: 4f5abd220c0835eec40fd815088ef5dca1dca417
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470586"
+    - name: '方法: 式ツリーを実行する'
+      href: how-to-execute-expression-trees.md
+    - name: '方法: 式ツリーを変更する'
+      href: how-to-modify-expression-trees.md
+    - name: '方法: 式ツリーを使用して動的クエリをビルドする'
+      href: how-to-use-expression-trees-to-build-dynamic-queries.md
+    - name: 式ツリーのデバッグ (Visual Studio)
+      href: debugging-expression-trees-in-visual-studio.md

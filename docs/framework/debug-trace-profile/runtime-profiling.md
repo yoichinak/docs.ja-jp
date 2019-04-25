@@ -14,10 +14,10 @@ ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306392"
 ---
 # <a name="runtime-profiling"></a>ランタイム プロファイリング
@@ -68,4 +68,4 @@ ms.locfileid: "59306392"
   
 ## <a name="see-also"></a>関連項目
 
-- [[パフォーマンス カウンター]](../../../docs/framework/debug-trace-profile/performance-counters.md)
+- [パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)

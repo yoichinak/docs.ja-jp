@@ -1,16 +1,9 @@
-items:
 - name: MEF (Managed Extensibility Framework)
   href: index.md
   items:
-  - name: 属性付きプログラミング モデルの概要 (MEF)
-    href: attributed-programming-model-overview-mef.md
-  - name: コンポジション分析ツール (Mefx)
-    href: composition-analysis-tool-mefx.md
-  - name: Windows ストア アプリ用 .NET 用 MEF
-    href: mef-for-net-for-windows-store-apps.md
-ms.openlocfilehash: de9b31206949c867343b112769d71d7b9c9035fa
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469730"
+    - name: 属性付きプログラミング モデルの概要 (MEF)
+      href: attributed-programming-model-overview-mef.md
+    - name: コンポジション分析ツール (Mefx)
+      href: composition-analysis-tool-mefx.md
+    - name: Windows ストア アプリ用 .NET 用 MEF
+      href: mef-for-net-for-windows-store-apps.md

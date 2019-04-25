@@ -3,10 +3,10 @@ title: 基本的なシリアル化の技術サンプル
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59315011"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本的なシリアル化の技術サンプル
@@ -72,11 +72,11 @@ ms.locfileid: "59315011"
   
 -   ストリーム入出力  
   
-    -   <xref:System.IO.Stream> シリアル化および逆シリアル化するために使用します。 このサンプルで使用する特有のストリーム型として、<xref:System.IO.FileStream> 型があります。 ただし、シリアル化は、<xref:System.IO.Stream> から派生する任意の型で行うことができます。  
+    -   <xref:System.IO.Stream> は、シリアル化および逆シリアル化に使用します。 このサンプルで使用する特有のストリーム型として、<xref:System.IO.FileStream> 型があります。 ただし、シリアル化は、<xref:System.IO.Stream> から派生する任意の型で行うことができます。  
   
-    -   <xref:System.IO.File> 作成するために使用<xref:System.IO.FileStream>オブジェクトの読み取りとディスク上のファイルを作成します。  
+    -   <xref:System.IO.File> は、ディスク上のファイルを読み込み、作成するための <xref:System.IO.FileStream> オブジェクトを作成するために使用します。  
   
-    -   <xref:System.IO.FileStream> リンク リストを逆シリアル化およびシリアル化するために使用します。  
+    -   <xref:System.IO.FileStream> は、リンク リストのシリアル化および逆シリアル化に使用します。  
   
 ## <a name="see-also"></a>関連項目
 

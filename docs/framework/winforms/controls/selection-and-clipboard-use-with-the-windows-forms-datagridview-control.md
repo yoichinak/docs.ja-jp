@@ -10,10 +10,10 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], selecting cells
 ms.assetid: 82cffcad-8b30-4897-bddb-c3a79d751b83
 ms.openlocfilehash: 1836fbc1887082ca685c49bef2bc42bdb167578f
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59105855"
 ---
 # <a name="selection-and-clipboard-use-with-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでの選択およびクリップボードの使用
@@ -23,13 +23,13 @@ ms.locfileid: "59105855"
  [Windows フォーム DataGridView コントロールの選択モード](selection-modes-in-the-windows-forms-datagridview-control.md)  
  ユーザーと、コントロールのプログラムの選択項目のオプションについて説明します。  
   
- [方法: Windows フォーム DataGridView コントロールの選択モードを設定する](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
+ [方法: Windows フォーム DataGridView コントロールの選択モードを設定します。](how-to-set-the-selection-mode-of-the-windows-forms-datagridview-control.md)  
  ユーザーがセルをクリックすると、単一行の選択のコントロールを構成する方法について説明します。  
   
- [方法: Windows フォーム DataGridView コントロールの選択されたセル、行、および列を取得する](selected-cells-rows-and-columns-datagridview.md)  
+ [方法: Windows フォーム DataGridView コントロールで選択したセル、行、および列を取得します。](selected-cells-rows-and-columns-datagridview.md)  
  選択したセル、行、および列のコレクションを操作する方法について説明します。  
   
- [方法: ユーザーが、Windows フォーム DataGridView コントロールからクリップボードに複数のセルをコピーできるようにする](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
+ [方法: Windows フォームの DataGridView コントロールから複数のセルをクリップボードにコピーするユーザーを有効にします。](enable-users-to-copy-multiple-cells-to-the-clipboard-datagridview.md)  
  コントロールでのクリップボードのサポートを有効にする方法について説明します。  
   
 ## <a name="reference"></a>参照  

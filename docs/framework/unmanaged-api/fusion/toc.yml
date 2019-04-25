@@ -1,152 +1,145 @@
-items:
 - name: Fusion
   href: index.md
   items:
-  - name: Fusion インターフェイス
-    href: fusion-interfaces.md
-    items:
-    - name: IAppIdAuthority インターフェイス
-      href: iappidauthority-interface.md
-    - name: IAssemblyCache インターフェイス
-      href: iassemblycache-interface.md
+    - name: Fusion インターフェイス
+      href: fusion-interfaces.md
       items:
-      - name: CreateAssemblyCacheItem メソッド
-        href: iassemblycache-createassemblycacheitem-method.md
-      - name: CreateAssemblyScavenger メソッド
-        href: iassemblycache-createassemblyscavenger-method.md
-      - name: InstallAssembly メソッド
-        href: iassemblycache-installassembly-method.md
-      - name: QueryAssemblyInfo メソッド
-        href: iassemblycache-queryassemblyinfo-method.md
-      - name: UninstallAssembly メソッド
-        href: iassemblycache-uninstallassembly-method.md
-    - name: IAssemblyCacheItem インターフェイス
-      href: iassemblycacheitem-interface.md
+        - name: IAppIdAuthority インターフェイス
+          href: iappidauthority-interface.md
+        - name: IAssemblyCache インターフェイス
+          href: iassemblycache-interface.md
+          items:
+            - name: CreateAssemblyCacheItem メソッド
+              href: iassemblycache-createassemblycacheitem-method.md
+            - name: CreateAssemblyScavenger メソッド
+              href: iassemblycache-createassemblyscavenger-method.md
+            - name: InstallAssembly メソッド
+              href: iassemblycache-installassembly-method.md
+            - name: QueryAssemblyInfo メソッド
+              href: iassemblycache-queryassemblyinfo-method.md
+            - name: UninstallAssembly メソッド
+              href: iassemblycache-uninstallassembly-method.md
+        - name: IAssemblyCacheItem インターフェイス
+          href: iassemblycacheitem-interface.md
+          items:
+            - name: AbortItem メソッド
+              href: iassemblycacheitem-abortitem-method.md
+            - name: Commit メソッド
+              href: iassemblycacheitem-commit-method.md
+            - name: CreateStream メソッド
+              href: iassemblycacheitem-createstream-method.md
+        - name: IAssemblyEnum インターフェイス
+          href: iassemblyenum-interface.md
+          items:
+            - name: Clone メソッド
+              href: iassemblyenum-clone-method.md
+            - name: GetNextAssembly メソッド
+              href: iassemblyenum-getnextassembly-method.md
+            - name: Reset メソッド
+              href: iassemblyenum-reset-method.md
+        - name: IAssemblyName インターフェイス
+          href: iassemblyname-interface.md
+          items:
+            - name: Clone メソッド
+              href: iassemblyname-clone-method.md
+            - name: Finalize メソッド
+              href: iassemblyname-finalize-method.md
+            - name: GetDisplayName メソッド
+              href: iassemblyname-getdisplayname-method.md
+            - name: GetName メソッド
+              href: iassemblyname-getname-method.md
+            - name: GetProperty メソッド
+              href: iassemblyname-getproperty-method.md
+            - name: GetVersion メソッド
+              href: iassemblyname-getversion-method.md
+            - name: IsEqual メソッド
+              href: iassemblyname-isequal-method.md
+            - name: SetProperty メソッド
+              href: iassemblyname-setproperty-method.md
+        - name: IDefinitionAppId インターフェイス
+          href: idefinitionappid-interface.md
+        - name: IDefinitionIdentity インターフェイス
+          href: idefinitionidentity-interface.md
+        - name: IEnumDefinitionIdentity インターフェイス
+          href: ienumdefinitionidentity-interface.md
+        - name: IEnumIDENTITY_ATTRIBUTE インターフェイス
+          href: ienumidentity-attribute-interface.md
+        - name: IEnumReferenceIdentity インターフェイス
+          href: ienumreferenceidentity-interface.md
+        - name: IIdentityAuthority インターフェイス
+          href: iidentityauthority-interface.md
+        - name: IInstallReferenceEnum インターフェイス
+          href: iinstallreferenceenum-interface.md
+          items:
+            - name: GetNextInstallReferenceItem メソッド
+              href: iinstallreferenceenum-getnextinstallreferenceitem-method.md
+        - name: IInstallReferenceItem インターフェイス
+          href: iinstallreferenceitem-interface.md
+          items:
+            - name: GetReference メソッド
+              href: iinstallreferenceitem-getreference-method.md
+        - name: IReferenceAppId インターフェイス
+          href: ireferenceappid-interface.md
+        - name: IReferenceIdentity インターフェイス
+          href: ireferenceidentity-interface.md
+    - name: Fusion グローバル静的関数
+      href: fusion-global-static-functions.md
       items:
-      - name: AbortItem メソッド
-        href: iassemblycacheitem-abortitem-method.md
-      - name: Commit メソッド
-        href: iassemblycacheitem-commit-method.md
-      - name: CreateStream メソッド
-        href: iassemblycacheitem-createstream-method.md
-    - name: IAssemblyEnum インターフェイス
-      href: iassemblyenum-interface.md
+        - name: ClearDownloadCache 関数
+          href: cleardownloadcache-function.md
+        - name: CompareAssemblyIdentity 関数
+          href: compareassemblyidentity-function.md
+        - name: CreateApplicationContext 関数
+          href: createapplicationcontext-function.md
+        - name: CreateAssemblyCache 関数
+          href: createassemblycache-function.md
+        - name: CreateAssemblyEnum 関数
+          href: createassemblyenum-function.md
+        - name: CreateAssemblyNameObject 関数
+          href: createassemblynameobject-function.md
+        - name: CreateHistoryReader 関数
+          href: createhistoryreader-function.md
+        - name: CreateInstallReferenceEnum 関数
+          href: createinstallreferenceenum-function.md
+        - name: GetAppIdAuthority 関数
+          href: getappidauthority-function.md
+        - name: GetAssemblyIdentityFromFile 関数
+          href: getassemblyidentityfromfile-function.md
+        - name: GetCachePath 関数
+          href: getcachepath-function.md
+        - name: GetHistoryFileDirectory 関数
+          href: gethistoryfiledirectory-function.md
+        - name: GetIdentityAuthority 関数
+          href: getidentityauthority-function.md
+        - name: IsFrameworkAssembly 関数
+          href: isframeworkassembly-function.md
+        - name: NukeDownloadedCache 関数
+          href: nukedownloadedcache-function.md
+        - name: PreBindAssemblyEx 関数
+          href: prebindassemblyex-function.md
+    - name: fusion 列挙体
+      href: fusion-enumerations.md
       items:
-      - name: Clone メソッド
-        href: iassemblyenum-clone-method.md
-      - name: GetNextAssembly メソッド
-        href: iassemblyenum-getnextassembly-method.md
-      - name: Reset メソッド
-        href: iassemblyenum-reset-method.md
-    - name: IAssemblyName インターフェイス
-      href: iassemblyname-interface.md
+        - name: ASM_CACHE_FLAGS 列挙型
+          href: asm-cache-flags-enumeration.md
+        - name: ASM_CMP_FLAGS 列挙型
+          href: asm-cmp-flags-enumeration.md
+        - name: ASM_DISPLAY_FLAGS 列挙型
+          href: asm-display-flags-enumeration.md
+        - name: ASM_NAME 列挙型
+          href: asm-name-enumeration.md
+        - name: AssemblyComparisonResult 列挙型
+          href: assemblycomparisonresult-enumeration.md
+        - name: CREATE_ASM_NAME_OBJ_FLAGS 列挙型
+          href: create-asm-name-obj-flags-enumeration.md
+    - name: Fusion 構造体
+      href: fusion-structures.md
       items:
-      - name: Clone メソッド
-        href: iassemblyname-clone-method.md
-      - name: Finalize メソッド
-        href: iassemblyname-finalize-method.md
-      - name: GetDisplayName メソッド
-        href: iassemblyname-getdisplayname-method.md
-      - name: GetName メソッド
-        href: iassemblyname-getname-method.md
-      - name: GetProperty メソッド
-        href: iassemblyname-getproperty-method.md
-      - name: GetVersion メソッド
-        href: iassemblyname-getversion-method.md
-      - name: IsEqual メソッド
-        href: iassemblyname-isequal-method.md
-      - name: SetProperty メソッド
-        href: iassemblyname-setproperty-method.md
-    - name: IDefinitionAppId インターフェイス
-      href: idefinitionappid-interface.md
-    - name: IDefinitionIdentity インターフェイス
-      href: idefinitionidentity-interface.md
-    - name: IEnumDefinitionIdentity インターフェイス
-      href: ienumdefinitionidentity-interface.md
-    - name: IEnumIDENTITY_ATTRIBUTE インターフェイス
-      href: ienumidentity-attribute-interface.md
-    - name: IEnumReferenceIdentity インターフェイス
-      href: ienumreferenceidentity-interface.md
-    - name: IIdentityAuthority インターフェイス
-      href: iidentityauthority-interface.md
-    - name: IInstallReferenceEnum インターフェイス
-      href: iinstallreferenceenum-interface.md
-      items:
-      - name: GetNextInstallReferenceItem メソッド
-        href: iinstallreferenceenum-getnextinstallreferenceitem-method.md
-    - name: IInstallReferenceItem インターフェイス
-      href: iinstallreferenceitem-interface.md
-      items:
-      - name: GetReference メソッド
-        href: iinstallreferenceitem-getreference-method.md
-    - name: IReferenceAppId インターフェイス
-      href: ireferenceappid-interface.md
-    - name: IReferenceIdentity インターフェイス
-      href: ireferenceidentity-interface.md
-  - name: Fusion グローバル静的関数
-    href: fusion-global-static-functions.md
-    items:
-    - name: ClearDownloadCache 関数
-      href: cleardownloadcache-function.md
-    - name: CompareAssemblyIdentity 関数
-      href: compareassemblyidentity-function.md
-    - name: CreateApplicationContext 関数
-      href: createapplicationcontext-function.md
-    - name: CreateAssemblyCache 関数
-      href: createassemblycache-function.md
-    - name: CreateAssemblyEnum 関数
-      href: createassemblyenum-function.md
-    - name: CreateAssemblyNameObject 関数
-      href: createassemblynameobject-function.md
-    - name: CreateHistoryReader 関数
-      href: createhistoryreader-function.md
-    - name: CreateInstallReferenceEnum 関数
-      href: createinstallreferenceenum-function.md
-    - name: GetAppIdAuthority 関数
-      href: getappidauthority-function.md
-    - name: GetAssemblyIdentityFromFile 関数
-      href: getassemblyidentityfromfile-function.md
-    - name: GetCachePath 関数
-      href: getcachepath-function.md
-    - name: GetHistoryFileDirectory 関数
-      href: gethistoryfiledirectory-function.md
-    - name: GetIdentityAuthority 関数
-      href: getidentityauthority-function.md
-    - name: IsFrameworkAssembly 関数
-      href: isframeworkassembly-function.md
-    - name: NukeDownloadedCache 関数
-      href: nukedownloadedcache-function.md
-    - name: PreBindAssemblyEx 関数
-      href: prebindassemblyex-function.md
-  - name: fusion 列挙体
-    href: fusion-enumerations.md
-    items:
-    - name: ASM_CACHE_FLAGS 列挙型
-      href: asm-cache-flags-enumeration.md
-    - name: ASM_CMP_FLAGS 列挙型
-      href: asm-cmp-flags-enumeration.md
-    - name: ASM_DISPLAY_FLAGS 列挙型
-      href: asm-display-flags-enumeration.md
-    - name: ASM_NAME 列挙型
-      href: asm-name-enumeration.md
-    - name: AssemblyComparisonResult 列挙型
-      href: assemblycomparisonresult-enumeration.md
-    - name: CREATE_ASM_NAME_OBJ_FLAGS 列挙型
-      href: create-asm-name-obj-flags-enumeration.md
-  - name: Fusion 構造体
-    href: fusion-structures.md
-    items:
-    - name: ASSEMBLY_INFO 構造体
-      href: assembly-info-structure.md
-    - name: FUSION_INSTALL_REFERENCE 構造体
-      href: fusion-install-reference-structure.md
-    - name: IDENTITY_ATTRIBUTE 構造体
-      href: identity-attribute-structure.md
-    - name: IDENTITY_ATTRIBUTE_BLOB 構造体
-      href: identity-attribute-blob-structure.md
-ms.openlocfilehash: 1f0a82977e7a39315ab8c4d328be76dd5804ae71
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470018"
+        - name: ASSEMBLY_INFO 構造体
+          href: assembly-info-structure.md
+        - name: FUSION_INSTALL_REFERENCE 構造体
+          href: fusion-install-reference-structure.md
+        - name: IDENTITY_ATTRIBUTE 構造体
+          href: identity-attribute-structure.md
+        - name: IDENTITY_ATTRIBUTE_BLOB 構造体
+          href: identity-attribute-blob-structure.md

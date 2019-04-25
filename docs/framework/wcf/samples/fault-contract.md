@@ -3,10 +3,10 @@ title: エラー コントラクト
 ms.date: 03/30/2017
 ms.assetid: b31b140e-dc3b-408b-b3c7-10b6fe769725
 ms.openlocfilehash: 21c4894b3927b6fdcf9aff16ea07020eeb073977
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59317130"
 ---
 # <a name="fault-contract"></a>エラー コントラクト
@@ -98,7 +98,7 @@ catch (FaultException<MathFault> e)
 }  
 ```  
   
- 既定では、サービス実装の詳細がサービスのセキュリティの境界から漏えいするのを回避するため、予期しない例外の詳細はクライアントに送信されません。 `FaultContract` コントラクトのエラーを記述し、特定の種類のクライアントに送信する適切な例外をマークする方法を提供します。 `FaultException<T>` エラーをコンシューマーに送信するため、実行時のメカニズムを提供します。  
+ 既定では、サービス実装の詳細がサービスのセキュリティの境界から漏えいするのを回避するため、予期しない例外の詳細はクライアントに送信されません。 `FaultContract` では、コントラクトでエラーを説明し、例外の特定の型がクライアントへの転送に適しているとマークできます。 `FaultException<T>` には、エラーをコンシューマーに送信するためのランタイム機構が用意されています。  
   
  ただし、デバッグ時にはサービス エラーの内部詳細を確認することが役立ちます。 前に説明したセキュリティ動作を無効にするには、サーバーで未処理のすべての例外の詳細を、クライアントに送信するエラーに含めるように指定できます。 これは、<xref:System.ServiceModel.ServiceBehaviorAttribute.IncludeExceptionDetailInFaults%2A> を `true` に設定することによって行います。 次の例に示すように、コードまたは構成のどちらを使用しても設定できます。  
   

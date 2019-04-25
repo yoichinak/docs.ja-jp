@@ -11,10 +11,10 @@ helpviewer_keywords:
 - modal dialog boxes [WPF]
 ms.assetid: 0d23d544-a393-4a02-a3aa-d8cd5d3d6511
 ms.openlocfilehash: 162414dbd4b0f5e15eceaf73c87c122701fefc4e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59177412"
 ---
 # <a name="dialog-boxes-overview"></a>ダイアログ ボックスの概要
@@ -45,7 +45,7 @@ ms.locfileid: "59177412"
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxconfigurecodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxConfigureCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxconfigurecodebehind)]  
   
- メッセージ ボックスを表示するを呼び出す、`static`<xref:System.Windows.MessageBox.Show%2A>メソッドを次のコードに示されています。  
+ メッセージ ボックスを表示するを呼び出す、 `static` <xref:System.Windows.MessageBox.Show%2A>メソッドを次のコードに示されています。  
   
  [!code-csharp[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/CSharp/Window1.xaml.cs#msgboxshowcodebehind)]
  [!code-vb[DialogBoxesOverviewSnippets#MsgBoxShowCODEBEHIND](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxesOverviewSnippets/VisualBasic/window1.xaml.vb#msgboxshowcodebehind)]  
@@ -63,7 +63,7 @@ ms.locfileid: "59177412"
   
 <a name="Common_Dialogs"></a>   
 ## <a name="common-dialog-boxes"></a>コモン ダイアログ ボックス  
- [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] さまざまなファイルを開く、ファイルの保存、および印刷ダイアログ ボックスを含むすべてのアプリケーションに共通する再利用可能なダイアログ ボックスを実装します。 これらのダイアログ ボックスはオペレーティング システムによって実装されるため、そのオペレーティング システム上で実行するすべてのアプリケーション間で共有でき、ユーザー エクスペリエンスの一貫性を保つことができます。ユーザーが 1 つのアプリケーションで、オペレーティング システムによって提供されるダイアログ ボックスの使用に慣れると、他のアプリケーションでも、そのダイアログ ボックスの使用法を学ぶ必要はありません。 これらのダイアログ ボックスはすべてのアプリケーションで使用できる、一貫したユーザー エクスペリエンスを提供するのに役立つ、ために、これらと呼ばれます。*コモン ダイアログ ボックス*します。  
+ [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] は、ファイルを開く、ファイルを保存する、印刷するためのダイアログ ボックスなど、すべてのアプリケーションに共通の、さまざまな再利用可能なダイアログ ボックスを実装します。 これらのダイアログ ボックスはオペレーティング システムによって実装されるため、そのオペレーティング システム上で実行するすべてのアプリケーション間で共有でき、ユーザー エクスペリエンスの一貫性を保つことができます。ユーザーが 1 つのアプリケーションで、オペレーティング システムによって提供されるダイアログ ボックスの使用に慣れると、他のアプリケーションでも、そのダイアログ ボックスの使用法を学ぶ必要はありません。 これらのダイアログ ボックスはすべてのアプリケーションで使用できる、一貫したユーザー エクスペリエンスを提供するのに役立つ、ために、これらと呼ばれます。*コモン ダイアログ ボックス*します。  
   
  Windows Presentation Foundation (WPF) で、開いているファイルをカプセル化しファイルを保存印刷コモン ダイアログ ボックスしそれらがスタンドアロン アプリケーションで使用するため、マネージ クラスを公開します。 このトピックでは、それぞれの概要を簡単に説明します。  
   
@@ -208,7 +208,7 @@ ms.locfileid: "59177412"
   
  ![無効な左余白の値を囲む赤い境界線付きの余白 ダイアログ ボックス。](./media/dialog-boxes-overview/invalid-left-margin-dialog.png)  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 有効なデータを入力するまで、無効なコントロールに、ユーザーは制限されません。 これは、ダイアログ ボックスとして適切な動作です。データが有効かどうかにかかわらず、ユーザーはダイアログ ボックス内のコントロールを自由に移動できる必要があります。 ユーザーは、無効なデータとキーを押して入力してください。 ただし、これは意味、 **OK**ボタンをクリックします。 このため、コードも必要があるダイアログ内のすべてのコントロールを検証するときにボックス、 **[ok]** ボタンを処理することによって、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] は、ユーザーが有効なデータを入力するまで、ユーザーを無効なコントロールに制限するわけではありません。 これは、ダイアログ ボックスとして適切な動作です。データが有効かどうかにかかわらず、ユーザーはダイアログ ボックス内のコントロールを自由に移動できる必要があります。 ユーザーは、無効なデータとキーを押して入力してください。 ただし、これは意味、 **OK**ボタンをクリックします。 このため、コードも必要があるダイアログ内のすべてのコントロールを検証するときにボックス、 **[ok]** ボタンを処理することによって、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
  [!code-csharp[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/csharp/VS_Snippets_Wpf/DialogBoxSample/CSharp/MarginsDialogBox.xaml.cs#marginsdialogboxvalidationcodebehind1)]
  [!code-vb[DialogBoxSample#MarginsDialogBoxValidationCODEBEHIND1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DialogBoxSample/VisualBasic/MarginsDialogBox.xaml.vb#marginsdialogboxvalidationcodebehind1)]  

@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 8b0617d8f021a9534289fd7ae8539cd054684862
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59234687"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59774336"
 ---
 ### <a name="wpf-textboxtext-can-be-out-of-sync-with-databinding"></a>WPF TextBox.Text とデータ バインドを非同期にできる
 

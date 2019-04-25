@@ -9,10 +9,10 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59209152"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By アニメーションの概要
@@ -36,11 +36,11 @@ ms.locfileid: "59209152"
   
  属しているによって/アニメーション クラス、<xref:System.Windows.Media.Animation>名前空間と、次の名前付け規則。  
   
- *\<型 >* `Animation`  
+ *\<Type>* `Animation`  
   
  ここで、*\<Type>* は、クラスがアニメーション化する値の型です。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 次によって/アニメーション クラスを提供します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、次の From/To/By アニメーション クラスが用意されています。  
   
 |プロパティの型|対応する From/To/By アニメーションのクラス|  
 |-------------------|------------------------------------------------|  
@@ -138,7 +138,7 @@ ms.locfileid: "59209152"
   
 -   パス アニメーションからの出力値を生成する、<xref:System.Windows.Media.PathGeometry>します。 詳細については、次を参照してください。、[パス アニメーションの概要](path-animations-overview.md)します。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 独自のカスタム アニメーションの種類を作成することもできます。 詳細については、次を参照してください。、[カスタム アニメーションの概要](custom-animations-overview.md)します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、独自のカスタム アニメーションの種類を作成することもできます。 詳細については、次を参照してください。、[カスタム アニメーションの概要](custom-animations-overview.md)します。  
   
 ## <a name="see-also"></a>関連項目
 
@@ -149,4 +149,4 @@ ms.locfileid: "59209152"
 - [キー フレーム アニメーションの概要](key-frame-animations-overview.md)
 - [パス アニメーションの概要](path-animations-overview.md)
 - [カスタム アニメーションの概要](custom-animations-overview.md)
-- [From、To、およびアニメーション ターゲット値のサンプルで](https://go.microsoft.com/fwlink/?LinkID=159988)
+- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)

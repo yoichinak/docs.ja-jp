@@ -2,12 +2,12 @@
 title: dotnet run コマンド
 description: dotnet run コマンドは、ソース コードからアプリケーションを実行する便利なオプションを提供します。
 ms.date: 05/29/2018
-ms.openlocfilehash: effca44db19e512a01f858e7a149e3fc4fe076a2
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: e96d5c99e7bcb394c6feffa18990f76a83f32276
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53170250"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59612850"
 ---
 # <a name="dotnet-run"></a>dotnet run
 
@@ -20,22 +20,28 @@ ms.locfileid: "53170250"
 ## <a name="synopsis"></a>構文
 
 # <a name="net-core-21tabnetcore21"></a>[.NET Core 2.1](#tab/netcore21)
+
 ```
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [-v|--verbosity] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
+
 # <a name="net-core-20tabnetcore20"></a>[.NET Core 2.0](#tab/netcore20)
+
 ```
 dotnet run [-c|--configuration] [-f|--framework] [--force] [--launch-profile] [--no-build] [--no-dependencies]
     [--no-launch-profile] [--no-restore] [-p|--project] [--runtime] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
+
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
+
 ```
 dotnet run [-c|--configuration] [-f|--framework] [-p|--project] [[--] [application arguments]]
 dotnet run [-h|--help]
 ```
+
 ---
 
 ## <a name="description"></a>説明

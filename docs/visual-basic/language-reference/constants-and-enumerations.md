@@ -7,10 +7,10 @@ helpviewer_keywords:
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
 ms.openlocfilehash: 0a9c01269e12c2d84be4f30c236c439012a88153
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839590"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>定数と列挙型 (Visual Basic)
@@ -25,7 +25,7 @@ Visual Basic では、さまざまな定義済みの定数と開発者の列挙�
 |---|---|  
 |`CONFIG`|現在の設定に対応する文字列、**アクティブ ソリューション構成**ボックスに、 **Configuration Manager**します。|  
 |`DEBUG`|A`Boolean`で設定できる値、**プロジェクト プロパティ** ダイアログ ボックス。 既定では、プロジェクトのデバッグ構成を定義します`DEBUG`します。 ときに`DEBUG`が定義されている<xref:System.Diagnostics.Debug>クラスのメソッドへの出力を生成する、**出力**ウィンドウ。 定義されていない場合<xref:System.Diagnostics.Debug>クラスのメソッドはコンパイルされず、デバッグ出力は生成されません。|  
-|`TARGET`|出力の種類のプロジェクトまたはコマンドラインの設定を表す文字列 **/target**オプション。 可能な値`TARGET`は。<br /><br /> -Windows アプリケーションの"winexe"。<br />-"exe"コンソール アプリケーションです。<br />-クラス ライブラリの「ライブラリ」です。<br />-モジュールの「モジュール」。<br />- **/Target**オプションは、Visual Studio 統合開発環境で設定することがあります。 詳細については、[/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)を参照してください。|  
+|`TARGET`|出力の種類のプロジェクトまたはコマンドラインの設定を表す文字列 **/target**オプション。 可能な値`TARGET`は。<br /><br /> -Windows アプリケーションの"winexe"。<br />-"exe"コンソール アプリケーションです。<br />-クラス ライブラリの「ライブラリ」です。<br />-モジュールの「モジュール」。<br />- **/Target**オプションは、Visual Studio 統合開発環境で設定することがあります。 詳細については、次を参照してください。 [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)します。|  
 |`TRACE`|A`Boolean`で設定できる値、**プロジェクト プロパティ** ダイアログ ボックス。 既定では、プロジェクトのすべての構成を定義`TRACE`します。 ときに`TRACE`が定義されている<xref:System.Diagnostics.Trace>クラスのメソッドへの出力を生成する、**出力**ウィンドウ。 定義されていない場合<xref:System.Diagnostics.Trace>クラスのメソッドはコンパイルされず、いいえ`Trace`出力が生成されます。|  
 |`VBC_VER`|Visual Basic バージョンを表す数値*メジャー*.*マイナー*形式。 バージョン番号[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]8.0 です。|  
   

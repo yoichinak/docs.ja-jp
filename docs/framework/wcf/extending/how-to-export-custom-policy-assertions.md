@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 99030386-43b0-4f7b-866d-17ea307f5cbd
 ms.openlocfilehash: b3d3afdd1e3fba2a77186d1cd644d723c445600c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59306223"
 ---
 # <a name="how-to-export-custom-policy-assertions"></a>方法: カスタム ポリシー アサーションをエクスポートする
@@ -53,4 +53,4 @@ ms.locfileid: "59306223"
 
 - <xref:System.ServiceModel.Description.IPolicyImportExtension>
 - <xref:System.ServiceModel.Description.IPolicyExportExtension>
-- [方法: カスタム ポリシー アサーションをインポートする](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)
+- [方法: カスタム ポリシー アサーションをインポートします。](../../../../docs/framework/wcf/extending/how-to-import-custom-policy-assertions.md)

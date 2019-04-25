@@ -3,10 +3,10 @@ title: '方法: XML ファイルから読み込む (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: e2d337ad-8ac8-4671-b694-30e5ca1413b7
 ms.openlocfilehash: b4f1f9abfa33b76e702b51221715da80c3f66421
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58814962"
 ---
 # <a name="how-to-load-xml-from-a-file-visual-basic"></a>方法: XML ファイルから読み込む (Visual Basic)

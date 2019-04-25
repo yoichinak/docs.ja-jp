@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
-ms.openlocfilehash: f07053c9fba194138467bbf8664e2f5fe1f667ea
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352819"
+ms.lasthandoff: 04/22/2019
+ms.locfileid: "59978927"
 ---
 # <a name="data-binding"></a>データ バインディング
 
@@ -42,9 +42,9 @@ Windows Presentation Foundation でも同じようになります。
 
 - データ ソースが <xref:System.Linq.IQueryable%601> の場合 :  次の 2 つのシナリオがあります。
 
-    - 場合[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、基になる検索<xref:System.Data.Linq.Table%601>から、 <xref:System.Linq.IQueryable%601>edition により、ソース、および、状況は、最初の箇条書きの場合と同様です。
+  - 場合[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、基になる検索<xref:System.Data.Linq.Table%601>から、 <xref:System.Linq.IQueryable%601>edition により、ソース、および、状況は、最初の箇条書きの場合と同様です。
 
-    - 場合[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、基になるを見つけることができません<xref:System.Data.Linq.Table%601>、エディション、ソースは許可されません (たとえば、 `groupby`)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ジェネリック型を格納するクエリを参照する`SortableBindingList`、これは、単純な<xref:System.ComponentModel.BindingList%601>による T エンティティの特定のプロパティの並べ替え機能を実装します。
+  - 場合[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、基になるを見つけることができません<xref:System.Data.Linq.Table%601>、エディション、ソースは許可されません (たとえば、 `groupby`)。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ジェネリック型を格納するクエリを参照する`SortableBindingList`、これは、単純な<xref:System.ComponentModel.BindingList%601>による T エンティティの特定のプロパティの並べ替え機能を実装します。
 
 ## <a name="specialized-collections"></a>専用コレクション
 

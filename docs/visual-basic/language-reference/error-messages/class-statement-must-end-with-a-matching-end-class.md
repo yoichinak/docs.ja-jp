@@ -8,10 +8,10 @@ helpviewer_keywords:
 - BC30481
 ms.assetid: 583f3029-bc3a-4e06-866f-92dbecc46f19
 ms.openlocfilehash: 0619db618abd562bda86836bdd41bbcd6caee0f9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58836507"
 ---
 # <a name="class-statement-must-end-with-a-matching-end-class"></a>'Class' ステートメントの終わりには、対応する 'End Class' を指定しなければなりません。

@@ -3,11 +3,11 @@ title: <add> の <issuerChannelBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 50710506-e28f-45dd-ab7e-bff6f44173db
 ms.openlocfilehash: 5c9937cb6302a194228461f3e2e06ecdf4d43269
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673616"
 ---
 # <a name="add-of-issuerchannelbehaviors"></a>\<add> of \<issuerChannelBehaviors>
 

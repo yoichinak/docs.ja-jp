@@ -6,10 +6,10 @@ helpviewer_keywords:
 - sample applications [Visual Basic]
 ms.assetid: 09c6bc12-25fd-4359-a5fc-8dab8dddbfd2
 ms.openlocfilehash: 5b7ef535c0f93900c42c77f296ae1eb43df668b0
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58831393"
 ---
 # <a name="visual-basic-sample-applications"></a>Visual Basic のサンプル アプリケーション

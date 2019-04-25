@@ -1,66 +1,59 @@
-items:
 - name: 構成ファイル スキーマ
   href: index.md
   items:
-  - name: <configuration> 要素
-    href: configuration-element.md
-  - name: <assemblyBinding> 要素
-    href: assemblybinding-element-for-configuration.md
-  - name: <linkedConfiguration> 要素
-    href: linkedconfiguration-element.md
-  - name: <configSections> 要素
-    href: configsections-element-for-configuration.md
-  - name: <configSections> の <clear> 要素
-    href: clear-element-for-configsections.md
-  - name: <configSections> の <remove> 要素
-    href: remove-element-for-configsections.md
-  - name: <sectionGroup> 要素
-    href: sectiongroup-element-for-configsections.md
-  - name: SingleTagSectionHandler のカスタム要素
-    href: custom-element-1.md
-  - name: NameValueSectionHandler および DictionarySectionHandler のカスタム要素
-    href: custom-element-2.md
-  - name: <add> 要素
-    href: add-element-for-custom-2.md
-  - name: NameValueSectionHandler および DictionarySectionHandler の <clear> 要素
-    href: clear-element-for-custom-2.md
-  - name: NameValueSectionHandler および DictionarySectionHandler の <remove> 要素
-    href: remove-element-for-custom-2.md
-  - name: <section> 要素
-    href: section-element.md
-  - name: アプリ設定スキーマ
-    href: appsettings/index.md
-  - name: アプリケーション設定スキーマ
-    href: application-settings-schema.md
-  - name: コンパイラおよび言語プロバイダー設定のスキーマ
-    href: compiler/index.md
-  - name: 構成セクション スキーマ
-    href: configuration-sections-schema.md
-  - name: 暗号設定スキーマ
-    href: cryptography/index.md
-  - name: ネットワーク設定スキーマ
-    href: network/index.md
-  - name: ランタイム設定スキーマ
-    href: runtime/index.md
-  - name: スタートアップ設定スキーマ
-    href: startup/index.md
-  - name: トレースおよびデバッグ設定のスキーマ
-    href: trace-debug/index.md
-  - name: Web 設定スキーマ
-    href: web/index.md
-  - name: WCF 構成スキーマ
-    href: wcf/index.md
-  - name: WCF ディレクティブ構文
-    href: wcf-directive/index.md
-  - name: WIF 構成スキーマ
-    href: windows-identity-foundation/index.md
-  - name: Windows フォームの構成セクション
-    href: winforms/index.md
-  - name: Windows Workflow Foundation の構成スキーマ
-    href: windows-workflow-foundation/index.md
-ms.openlocfilehash: 69b0e7862ab6c9a7540469f79d6870a8f9976f14
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469690"
+    - name: <configuration> 要素
+      href: configuration-element.md
+    - name: <assemblyBinding> 要素
+      href: assemblybinding-element-for-configuration.md
+    - name: <linkedConfiguration> 要素
+      href: linkedconfiguration-element.md
+    - name: <configSections> 要素
+      href: configsections-element-for-configuration.md
+    - name: <configSections> の <clear> 要素
+      href: clear-element-for-configsections.md
+    - name: <configSections> の <remove> 要素
+      href: remove-element-for-configsections.md
+    - name: <sectionGroup> 要素
+      href: sectiongroup-element-for-configsections.md
+    - name: SingleTagSectionHandler のカスタム要素
+      href: custom-element-1.md
+    - name: NameValueSectionHandler および DictionarySectionHandler のカスタム要素
+      href: custom-element-2.md
+    - name: <add> 要素
+      href: add-element-for-custom-2.md
+    - name: NameValueSectionHandler および DictionarySectionHandler の <clear> 要素
+      href: clear-element-for-custom-2.md
+    - name: NameValueSectionHandler および DictionarySectionHandler の <remove> 要素
+      href: remove-element-for-custom-2.md
+    - name: <section> 要素
+      href: section-element.md
+    - name: アプリ設定スキーマ
+      href: appsettings/index.md
+    - name: アプリケーション設定スキーマ
+      href: application-settings-schema.md
+    - name: コンパイラおよび言語プロバイダー設定のスキーマ
+      href: compiler/index.md
+    - name: 構成セクション スキーマ
+      href: configuration-sections-schema.md
+    - name: 暗号設定スキーマ
+      href: cryptography/index.md
+    - name: ネットワーク設定スキーマ
+      href: network/index.md
+    - name: ランタイム設定スキーマ
+      href: runtime/index.md
+    - name: スタートアップ設定スキーマ
+      href: startup/index.md
+    - name: トレースおよびデバッグ設定のスキーマ
+      href: trace-debug/index.md
+    - name: Web 設定スキーマ
+      href: web/index.md
+    - name: WCF 構成スキーマ
+      href: wcf/index.md
+    - name: WCF ディレクティブ構文
+      href: wcf-directive/index.md
+    - name: WIF 構成スキーマ
+      href: windows-identity-foundation/index.md
+    - name: Windows フォームの構成セクション
+      href: winforms/index.md
+    - name: Windows Workflow Foundation の構成スキーマ
+      href: windows-workflow-foundation/index.md

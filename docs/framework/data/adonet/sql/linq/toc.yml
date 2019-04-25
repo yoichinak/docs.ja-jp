@@ -1,344 +1,337 @@
-items:
 - name: LINQ to SQL
   href: index.md
   items:
-  - name: 作業の開始
-    href: getting-started.md
-    items:
-    - name: LINQ to SQL の主な機能
-      href: what-you-can-do-with-linq-to-sql.md
-    - name: 典型的な LINQ to SQL の使用手順
-      href: typical-steps-for-using-linq-to-sql.md
-    - name: サンプル データベースとツールのダウンロード
-      href: downloading-sample-databases.md
-    - name: チュートリアルによる学習
-      href: learning-by-walkthroughs.md
+    - name: 作業の開始
+      href: getting-started.md
       items:
-      - name: 'チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)'
-        href: walkthrough-simple-object-model-and-query-visual-basic.md
-      - name: 'チュートリアル: リレーションシップを介したクエリの実行 (Visual Basic)'
-        href: walkthrough-querying-across-relationships-visual-basic.md
-      - name: 'チュートリアル: データの操作 (Visual Basic)'
-        href: walkthrough-manipulating-data-visual-basic.md
-      - name: 'チュートリアル: ストアド プロシージャのみの使用 (Visual Basic)'
-        href: walkthrough-using-only-stored-procedures-visual-basic.md
-      - name: 'チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)'
-        href: walkthrough-simple-object-model-and-query-csharp.md
-      - name: 'チュートリアル: リレーションシップを介したクエリの実行 (C#)'
-        href: walkthrough-querying-across-relationships-csharp.md
-      - name: 'チュートリアル: データの操作 (C#)'
-        href: walkthrough-manipulating-data-csharp.md
-      - name: 'チュートリアル: ストアド プロシージャのみを使用する (C#)'
-        href: walkthrough-using-only-stored-procedures-csharp.md
-  - name: プログラミング ガイド
-    href: programming-guide.md
-    items:
-    - name: オブジェクト モデルの作成
-      href: creating-the-object-model.md
-      items:
-      - name: '方法: Visual Basic または C# でオブジェクト モデルを生成する'
-        href: how-to-generate-the-object-model-in-visual-basic-or-csharp.md
-      - name: '方法: オブジェクト モデルを外部ファイルとして生成する'
-        href: how-to-generate-the-object-model-as-an-external-file.md
-      - name: '方法: DBML ファイルを変更してカスタマイズ コードを生成する'
-        href: how-to-generate-customized-code-by-modifying-a-dbml-file.md
-      - name: '方法: DBML ファイルおよび外部マッピング ファイルを検証する'
-        href: how-to-validate-dbml-and-external-mapping-files.md
-      - name: '方法: エンティティをシリアル化可能にする'
-        href: how-to-make-entities-serializable.md
-      - name: '方法: コード エディターを使用してエンティティ クラスをカスタマイズする'
-        href: how-to-customize-entity-classes-by-using-the-code-editor.md
-        items:
-        - name: '方法: データベースの名前を指定する'
-          href: how-to-specify-database-names.md
-        - name: '方法: クラスとしてテーブルを表す'
-          href: how-to-represent-tables-as-classes.md
-        - name: '方法: クラス メンバーとして列を表す'
-          href: how-to-represent-columns-as-class-members.md
-        - name: '方法: 主キーを表す'
-          href: how-to-represent-primary-keys.md
-        - name: '方法: データベース リレーションシップを割り当てる'
-          href: how-to-map-database-relationships.md
-        - name: '方法: 列をデータベース生成列として表す'
-          href: how-to-represent-columns-as-database-generated.md
-        - name: '方法: 列をタイムスタンプ列またはバージョン列として表現する'
-          href: how-to-represent-columns-as-timestamp-or-version-columns.md
-        - name: '方法: データベース データ型を指定する'
-          href: how-to-specify-database-data-types.md
-        - name: '方法: 計算列を表す'
-          href: how-to-represent-computed-columns.md
-        - name: '方法: プライベート ストレージ フィールドを指定する'
-          href: how-to-specify-private-storage-fields.md
-        - name: '方法: null 値を許可する列として列を表す'
-          href: how-to-represent-columns-as-allowing-null-values.md
-        - name: '方法: 継承階層を割り当てる'
-          href: how-to-map-inheritance-hierarchies.md
-        - name: '方法: コンカレンシーの競合のチェックを指定する'
-          href: how-to-specify-concurrency-conflict-checking.md
-    - name: データベースとの通信
-      href: communicating-with-the-database.md
-      items:
-      - name: '方法: データベースに接続する'
-        href: how-to-connect-to-a-database.md
-      - name: '方法: SQL コマンドを直接実行する'
-        href: how-to-directly-execute-sql-commands.md
-      - name: '方法: ADO.NET コマンドおよび DataContext 間の接続を再利用する'
-        href: how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md
-    - name: データベースに対するクエリの実行
-      href: querying-the-database.md
-      items:
-      - name: '方法: クエリで情報を取得する'
-        href: how-to-query-for-information.md
-      - name: '方法: 情報を読み取り専用として取得する'
-        href: how-to-retrieve-information-as-read-only.md
-      - name: '方法: 取得する関連データの量を制御する'
-        href: how-to-control-how-much-related-data-is-retrieved.md
-      - name: '方法: 関連データをフィルター処理する'
-        href: how-to-filter-related-data.md
-      - name: '方法: 遅延読み込みをオフにする'
-        href: how-to-turn-off-deferred-loading.md
-      - name: '方法: SQL クエリを直接実行する'
-        href: how-to-directly-execute-sql-queries.md
-      - name: '方法: クエリを格納および再利用する'
-        href: how-to-store-and-reuse-queries.md
-      - name: '方法: クエリで複合キーを処理する'
-        href: how-to-handle-composite-keys-in-queries.md
-      - name: '方法: 多くのオブジェクトを一度に取得する'
-        href: how-to-retrieve-many-objects-at-once.md
-      - name: '方法: DataContext レベルでフィルター処理する'
-        href: how-to-filter-at-the-datacontext-level.md
-      - name: クエリの例
-        href: query-examples.md
-        items:
-        - name: 集計クエリ
-          href: aggregate-queries.md
+        - name: LINQ to SQL の主な機能
+          href: what-you-can-do-with-linq-to-sql.md
+        - name: 典型的な LINQ to SQL の使用手順
+          href: typical-steps-for-using-linq-to-sql.md
+        - name: サンプル データベースとツールのダウンロード
+          href: downloading-sample-databases.md
+        - name: チュートリアルによる学習
+          href: learning-by-walkthroughs.md
           items:
-          - name: 一連の数値の平均値の取得
-            href: return-the-average-value-from-a-numeric-sequence.md
-          - name: シーケンス内の要素数のカウント
-            href: count-the-number-of-elements-in-a-sequence.md
-          - name: 一連の数値の中の最大値の検出
-            href: find-the-maximum-value-in-a-numeric-sequence.md
-          - name: 一連の数値の中の最小値の検出
-            href: find-the-minimum-value-in-a-numeric-sequence.md
-          - name: 数値のシーケンスの合計の計算
-            href: compute-the-sum-of-values-in-a-numeric-sequence.md
-        - name: シーケンスの最初の要素の取得
-          href: return-the-first-element-in-a-sequence.md
-        - name: シーケンスの要素の取得またはスキップ
-          href: return-or-skip-elements-in-a-sequence.md
-        - name: シーケンスの要素の並べ替え
-          href: sort-elements-in-a-sequence.md
-        - name: シーケンスの要素のグループ化
-          href: group-elements-in-a-sequence.md
-        - name: シーケンスからの重複する要素の削除
-          href: eliminate-duplicate-elements-from-a-sequence.md
-        - name: シーケンスのすべての要素が条件を満たしているかどうかの確認
-          href: determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md
-        - name: 2 つのシーケンスの連結
-          href: concatenate-two-sequences.md
-        - name: 2 つのシーケンスの差集合の取得
-          href: return-the-set-difference-between-two-sequences.md
-        - name: 2 つのシーケンスの積集合の取得
-          href: return-the-set-intersection-of-two-sequences.md
-        - name: 2 つのシーケンスの和集合の取得
-          href: return-the-set-union-of-two-sequences.md
-        - name: '方法 : シーケンスを配列に変換する'
-          href: convert-a-sequence-to-an-array.md
-        - name: ジェネリック リストへのシーケンスの変換
-          href: convert-a-sequence-to-a-generic-list.md
-        - name: 汎用 IEnumerable への型の変換
-          href: convert-a-type-to-a-generic-ienumerable.md
-        - name: 結合およびクロス積クエリの作成
-          href: formulate-joins-and-cross-product-queries.md
-        - name: 射影の作成
-          href: formulate-projections.md
-    - name: データの変更と変更の送信
-      href: making-and-submitting-data-changes.md
+            - name: 'チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)'
+              href: walkthrough-simple-object-model-and-query-visual-basic.md
+            - name: 'チュートリアル: リレーションシップを介したクエリの実行 (Visual Basic)'
+              href: walkthrough-querying-across-relationships-visual-basic.md
+            - name: 'チュートリアル: データの操作 (Visual Basic)'
+              href: walkthrough-manipulating-data-visual-basic.md
+            - name: 'チュートリアル: ストアド プロシージャのみの使用 (Visual Basic)'
+              href: walkthrough-using-only-stored-procedures-visual-basic.md
+            - name: 'チュートリアル: 簡単なオブジェクト モデルとクエリ (C#)'
+              href: walkthrough-simple-object-model-and-query-csharp.md
+            - name: 'チュートリアル: リレーションシップを介したクエリの実行 (C#)'
+              href: walkthrough-querying-across-relationships-csharp.md
+            - name: 'チュートリアル: データの操作 (C#)'
+              href: walkthrough-manipulating-data-csharp.md
+            - name: 'チュートリアル: ストアド プロシージャのみを使用する (C#)'
+              href: walkthrough-using-only-stored-procedures-csharp.md
+    - name: プログラミング ガイド
+      href: programming-guide.md
       items:
-      - name: '方法: 行をデータベースに挿入する'
-        href: how-to-insert-rows-into-the-database.md
-      - name: '方法: データベースの行を更新する'
-        href: how-to-update-rows-in-the-database.md
-      - name: '方法: 行をデータベースから削除する'
-        href: how-to-delete-rows-from-the-database.md
-      - name: '方法: データベースに変更内容を送信する'
-        href: how-to-submit-changes-to-the-database.md
-      - name: '方法: データ送信をトランザクションで囲む'
-        href: how-to-bracket-data-submissions-by-using-transactions.md
-      - name: '方法: データベースを動的に作成する'
-        href: how-to-dynamically-create-a-database.md
-      - name: '方法: 変更の競合を管理する'
-        href: how-to-manage-change-conflicts.md
-        items:
-        - name: '方法: 送信の競合を検出および解決する'
-          href: how-to-detect-and-resolve-conflicting-submissions.md
-        - name: '方法: コンカレンシー例外をいつスローするかを指定する'
-          href: how-to-specify-when-concurrency-exceptions-are-thrown.md
-        - name: '方法: コンカレンシーの競合を検査するメンバーを指定する'
-          href: how-to-specify-which-members-are-tested-for-concurrency-conflicts.md
-        - name: '方法: エンティティの競合情報を取得する'
-          href: how-to-retrieve-entity-conflict-information.md
-        - name: '方法: メンバーの競合情報を取得する'
-          href: how-to-retrieve-member-conflict-information.md
-        - name: '方法: データベース値を維持することで競合を解決する'
-          href: how-to-resolve-conflicts-by-retaining-database-values.md
-        - name: '方法: データベース値を上書きすることで競合を解決する'
-          href: how-to-resolve-conflicts-by-overwriting-database-values.md
-        - name: '方法: データベース値とマージすることで競合を解決する'
-          href: how-to-resolve-conflicts-by-merging-with-database-values.md
-    - name: デバッグのサポート
-      href: debugging-support.md
+        - name: オブジェクト モデルの作成
+          href: creating-the-object-model.md
+          items:
+            - name: '方法: Visual Basic または C# でオブジェクト モデルを生成する'
+              href: how-to-generate-the-object-model-in-visual-basic-or-csharp.md
+            - name: '方法: オブジェクト モデルを外部ファイルとして生成する'
+              href: how-to-generate-the-object-model-as-an-external-file.md
+            - name: '方法: DBML ファイルを変更してカスタマイズ コードを生成する'
+              href: how-to-generate-customized-code-by-modifying-a-dbml-file.md
+            - name: '方法: DBML ファイルおよび外部マッピング ファイルを検証する'
+              href: how-to-validate-dbml-and-external-mapping-files.md
+            - name: '方法: エンティティをシリアル化可能にする'
+              href: how-to-make-entities-serializable.md
+            - name: '方法: コード エディターを使用してエンティティ クラスをカスタマイズする'
+              href: how-to-customize-entity-classes-by-using-the-code-editor.md
+              items:
+                - name: '方法: データベースの名前を指定する'
+                  href: how-to-specify-database-names.md
+                - name: '方法: クラスとしてテーブルを表す'
+                  href: how-to-represent-tables-as-classes.md
+                - name: '方法: クラス メンバーとして列を表す'
+                  href: how-to-represent-columns-as-class-members.md
+                - name: '方法: 主キーを表す'
+                  href: how-to-represent-primary-keys.md
+                - name: '方法: データベース リレーションシップを割り当てる'
+                  href: how-to-map-database-relationships.md
+                - name: '方法: 列をデータベース生成列として表す'
+                  href: how-to-represent-columns-as-database-generated.md
+                - name: '方法: 列をタイムスタンプ列またはバージョン列として表現する'
+                  href: how-to-represent-columns-as-timestamp-or-version-columns.md
+                - name: '方法: データベース データ型を指定する'
+                  href: how-to-specify-database-data-types.md
+                - name: '方法: 計算列を表す'
+                  href: how-to-represent-computed-columns.md
+                - name: '方法: プライベート ストレージ フィールドを指定する'
+                  href: how-to-specify-private-storage-fields.md
+                - name: '方法: null 値を許可する列として列を表す'
+                  href: how-to-represent-columns-as-allowing-null-values.md
+                - name: '方法: 継承階層を割り当てる'
+                  href: how-to-map-inheritance-hierarchies.md
+                - name: '方法: コンカレンシーの競合のチェックを指定する'
+                  href: how-to-specify-concurrency-conflict-checking.md
+        - name: データベースとの通信
+          href: communicating-with-the-database.md
+          items:
+            - name: '方法: データベースに接続する'
+              href: how-to-connect-to-a-database.md
+            - name: '方法: SQL コマンドを直接実行する'
+              href: how-to-directly-execute-sql-commands.md
+            - name: '方法: ADO.NET コマンドおよび DataContext 間の接続を再利用する'
+              href: how-to-reuse-a-connection-between-an-ado-net-command-and-a-datacontext.md
+        - name: データベースに対するクエリの実行
+          href: querying-the-database.md
+          items:
+            - name: '方法: クエリで情報を取得する'
+              href: how-to-query-for-information.md
+            - name: '方法: 情報を読み取り専用として取得する'
+              href: how-to-retrieve-information-as-read-only.md
+            - name: '方法: 取得する関連データの量を制御する'
+              href: how-to-control-how-much-related-data-is-retrieved.md
+            - name: '方法: 関連データをフィルター処理する'
+              href: how-to-filter-related-data.md
+            - name: '方法: 遅延読み込みをオフにする'
+              href: how-to-turn-off-deferred-loading.md
+            - name: '方法: SQL クエリを直接実行する'
+              href: how-to-directly-execute-sql-queries.md
+            - name: '方法: クエリを格納および再利用する'
+              href: how-to-store-and-reuse-queries.md
+            - name: '方法: クエリで複合キーを処理する'
+              href: how-to-handle-composite-keys-in-queries.md
+            - name: '方法: 多くのオブジェクトを一度に取得する'
+              href: how-to-retrieve-many-objects-at-once.md
+            - name: '方法: DataContext レベルでフィルター処理する'
+              href: how-to-filter-at-the-datacontext-level.md
+            - name: クエリの例
+              href: query-examples.md
+              items:
+                - name: 集計クエリ
+                  href: aggregate-queries.md
+                  items:
+                    - name: 一連の数値の平均値の取得
+                      href: return-the-average-value-from-a-numeric-sequence.md
+                    - name: シーケンス内の要素数のカウント
+                      href: count-the-number-of-elements-in-a-sequence.md
+                    - name: 一連の数値の中の最大値の検出
+                      href: find-the-maximum-value-in-a-numeric-sequence.md
+                    - name: 一連の数値の中の最小値の検出
+                      href: find-the-minimum-value-in-a-numeric-sequence.md
+                    - name: 数値のシーケンスの合計の計算
+                      href: compute-the-sum-of-values-in-a-numeric-sequence.md
+                - name: シーケンスの最初の要素の取得
+                  href: return-the-first-element-in-a-sequence.md
+                - name: シーケンスの要素の取得またはスキップ
+                  href: return-or-skip-elements-in-a-sequence.md
+                - name: シーケンスの要素の並べ替え
+                  href: sort-elements-in-a-sequence.md
+                - name: シーケンスの要素のグループ化
+                  href: group-elements-in-a-sequence.md
+                - name: シーケンスからの重複する要素の削除
+                  href: eliminate-duplicate-elements-from-a-sequence.md
+                - name: シーケンスのすべての要素が条件を満たしているかどうかの確認
+                  href: determine-if-any-or-all-elements-in-a-sequence-satisfy-a-condition.md
+                - name: 2 つのシーケンスの連結
+                  href: concatenate-two-sequences.md
+                - name: 2 つのシーケンスの差集合の取得
+                  href: return-the-set-difference-between-two-sequences.md
+                - name: 2 つのシーケンスの積集合の取得
+                  href: return-the-set-intersection-of-two-sequences.md
+                - name: 2 つのシーケンスの和集合の取得
+                  href: return-the-set-union-of-two-sequences.md
+                - name: '方法 : シーケンスを配列に変換する'
+                  href: convert-a-sequence-to-an-array.md
+                - name: ジェネリック リストへのシーケンスの変換
+                  href: convert-a-sequence-to-a-generic-list.md
+                - name: 汎用 IEnumerable への型の変換
+                  href: convert-a-type-to-a-generic-ienumerable.md
+                - name: 結合およびクロス積クエリの作成
+                  href: formulate-joins-and-cross-product-queries.md
+                - name: 射影の作成
+                  href: formulate-projections.md
+        - name: データの変更と変更の送信
+          href: making-and-submitting-data-changes.md
+          items:
+            - name: '方法: 行をデータベースに挿入する'
+              href: how-to-insert-rows-into-the-database.md
+            - name: '方法: データベースの行を更新する'
+              href: how-to-update-rows-in-the-database.md
+            - name: '方法: 行をデータベースから削除する'
+              href: how-to-delete-rows-from-the-database.md
+            - name: '方法: データベースに変更内容を送信する'
+              href: how-to-submit-changes-to-the-database.md
+            - name: '方法: データ送信をトランザクションで囲む'
+              href: how-to-bracket-data-submissions-by-using-transactions.md
+            - name: '方法: データベースを動的に作成する'
+              href: how-to-dynamically-create-a-database.md
+            - name: '方法: 変更の競合を管理する'
+              href: how-to-manage-change-conflicts.md
+              items:
+                - name: '方法: 送信の競合を検出および解決する'
+                  href: how-to-detect-and-resolve-conflicting-submissions.md
+                - name: '方法: コンカレンシー例外をいつスローするかを指定する'
+                  href: how-to-specify-when-concurrency-exceptions-are-thrown.md
+                - name: '方法: コンカレンシーの競合を検査するメンバーを指定する'
+                  href: how-to-specify-which-members-are-tested-for-concurrency-conflicts.md
+                - name: '方法: エンティティの競合情報を取得する'
+                  href: how-to-retrieve-entity-conflict-information.md
+                - name: '方法: メンバーの競合情報を取得する'
+                  href: how-to-retrieve-member-conflict-information.md
+                - name: '方法: データベース値を維持することで競合を解決する'
+                  href: how-to-resolve-conflicts-by-retaining-database-values.md
+                - name: '方法: データベース値を上書きすることで競合を解決する'
+                  href: how-to-resolve-conflicts-by-overwriting-database-values.md
+                - name: '方法: データベース値とマージすることで競合を解決する'
+                  href: how-to-resolve-conflicts-by-merging-with-database-values.md
+        - name: デバッグのサポート
+          href: debugging-support.md
+          items:
+            - name: '方法: 生成された SQL を表示する'
+              href: how-to-display-generated-sql.md
+            - name: '方法: 変更セットを表示する'
+              href: how-to-display-a-changeset.md
+            - name: '方法: LINQ to SQL コマンドを表示する'
+              href: how-to-display-linq-to-sql-commands.md
+            - name: トラブルシューティング
+              href: troubleshooting.md
+        - name: 背景情報
+          href: background-information.md
+          items:
+            - name: ADO.NET および LINQ to SQL
+              href: ado-net-and-linq-to-sql.md
+            - name: LINQ to SQL のソース コードの分析
+              href: analyzing-linq-to-sql-source-code.md
+            - name: 挿入、更新、および削除の各操作のカスタマイズ
+              href: customizing-insert-update-and-delete-operations.md
+              items:
+                - name: '操作のカスタマイズ:概要'
+                  href: customizing-operations-overview.md
+                - name: 挿入、更新、および削除の各操作
+                  href: insert-update-and-delete-operations.md
+                - name: 既定の動作をオーバーライドするときの開発者の責任
+                  href: responsibilities-of-the-developer-in-overriding-default-behavior.md
+                - name: 部分メソッドによるビジネス ロジックの追加
+                  href: adding-business-logic-by-using-partial-methods.md
+            - name: データ バインディング
+              href: data-binding.md
+            - name: 継承のサポート
+              href: inheritance-support.md
+            - name: ローカル メソッド呼び出し
+              href: local-method-calls.md
+            - name: LINQ to SQL を使用する n 層アプリケーションとリモート アプリケーション
+              href: n-tier-and-remote-applications-with-linq-to-sql.md
+              items:
+                - name: ASP.NET での LINQ to SQL N 層
+                  href: linq-to-sql-n-tier-with-aspnet.md
+                - name: Web サービスを使用した LINQ to SQL N 層
+                  href: linq-to-sql-n-tier-with-web-services.md
+                - name: N 層ビジネス ロジックの実装
+                  href: implementing-business-logic-linq-to-sql.md
+                - name: N 層アプリケーションでのデータ取得および CUD 操作 (LINQ to SQL)
+                  href: data-retrieval-and-cud-operations-in-n-tier-applications.md
+            - name: オブジェクト ID
+              href: object-identity.md
+            - name: LINQ to SQL オブジェクト モデル
+              href: the-linq-to-sql-object-model.md
+            - name: オブジェクトの状態と変更の追跡
+              href: object-states-and-change-tracking.md
+            - name: 'オプティミスティック コンカレンシー:概要'
+              href: optimistic-concurrency-overview.md
+            - name: クエリの概念
+              href: query-concepts.md
+              items:
+                - name: LINQ to SQL クエリ
+                  href: linq-to-sql-queries.md
+                - name: リレーションシップを介したクエリの実行
+                  href: querying-across-relationships.md
+                - name: クエリのリモート実行とローカル実行
+                  href: remote-vs-local-execution.md
+                - name: 遅延読み込みと即時読み込み
+                  href: deferred-versus-immediate-loading.md
+            - name: ID キャッシュからのオブジェクトの取得
+              href: retrieving-objects-from-the-identity-cache.md
+            - name: LINQ to SQL におけるセキュリティ
+              href: security-in-linq-to-sql.md
+            - name: シリアル化
+              href: serialization.md
+            - name: ストアド プロシージャ
+              href: stored-procedures.md
+              items:
+                - name: '方法: 行セットを返す'
+                  href: how-to-return-rowsets.md
+                - name: '方法: パラメーターを受け取るストアド プロシージャを使用する'
+                  href: how-to-use-stored-procedures-that-take-parameters.md
+                - name: '方法: 複数の結果形状が割り当てられたストアド プロシージャを使用する'
+                  href: how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md
+                - name: '方法: シーケンシャルな結果形状が割り当てられたストアド プロシージャを使用する'
+                  href: how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md
+                - name: ストアド プロシージャによる操作のカスタマイズ
+                  href: customizing-operations-by-using-stored-procedures.md
+                - name: ストアド プロシージャのみによる操作のカスタマイズ
+                  href: customizing-operations-by-using-stored-procedures-exclusively.md
+            - name: トランザクションのサポート
+              href: transaction-support.md
+            - name: SQL と CLR の型の不一致
+              href: sql-clr-type-mismatches.md
+            - name: SQL と CLR のカスタム型マッピング
+              href: sql-clr-custom-type-mappings.md
+            - name: ユーザー定義関数
+              href: user-defined-functions.md
+              items:
+                - name: '方法: スカラー値のユーザー定義関数を使用する'
+                  href: how-to-use-scalar-valued-user-defined-functions.md
+                - name: '方法: テーブル値のユーザー定義関数を使用する'
+                  href: how-to-use-table-valued-user-defined-functions.md
+                - name: '方法: ユーザー定義関数をインラインで呼び出す'
+                  href: how-to-call-user-defined-functions-inline.md
+    - name: 関連項目
+      href: reference.md
       items:
-      - name: '方法: 生成された SQL を表示する'
-        href: how-to-display-generated-sql.md
-      - name: '方法: 変更セットを表示する'
-        href: how-to-display-a-changeset.md
-      - name: '方法: LINQ to SQL コマンドを表示する'
-        href: how-to-display-linq-to-sql-commands.md
-      - name: トラブルシューティング
-        href: troubleshooting.md
-    - name: 背景情報
-      href: background-information.md
-      items:
-      - name: ADO.NET および LINQ to SQL
-        href: ado-net-and-linq-to-sql.md
-      - name: LINQ to SQL のソース コードの分析
-        href: analyzing-linq-to-sql-source-code.md
-      - name: 挿入、更新、および削除の各操作のカスタマイズ
-        href: customizing-insert-update-and-delete-operations.md
-        items:
-        - name: 操作のカスタマイズ:概要
-          href: customizing-operations-overview.md
-        - name: 挿入、更新、および削除の各操作
-          href: insert-update-and-delete-operations.md
-        - name: 既定の動作をオーバーライドするときの開発者の責任
-          href: responsibilities-of-the-developer-in-overriding-default-behavior.md
-        - name: 部分メソッドによるビジネス ロジックの追加
-          href: adding-business-logic-by-using-partial-methods.md
-      - name: データ バインディング
-        href: data-binding.md
-      - name: 継承のサポート
-        href: inheritance-support.md
-      - name: ローカル メソッド呼び出し
-        href: local-method-calls.md
-      - name: LINQ to SQL を使用する n 層アプリケーションとリモート アプリケーション
-        href: n-tier-and-remote-applications-with-linq-to-sql.md
-        items:
-        - name: ASP.NET での LINQ to SQL N 層
-          href: linq-to-sql-n-tier-with-aspnet.md
-        - name: Web サービスを使用した LINQ to SQL N 層
-          href: linq-to-sql-n-tier-with-web-services.md
-        - name: N 層ビジネス ロジックの実装
-          href: implementing-business-logic-linq-to-sql.md
-        - name: N 層アプリケーションでのデータ取得および CUD 操作 (LINQ to SQL)
-          href: data-retrieval-and-cud-operations-in-n-tier-applications.md
-      - name: オブジェクト ID
-        href: object-identity.md
-      - name: LINQ to SQL オブジェクト モデル
-        href: the-linq-to-sql-object-model.md
-      - name: オブジェクトの状態と変更の追跡
-        href: object-states-and-change-tracking.md
-      - name: オプティミスティック コンカレンシー:概要
-        href: optimistic-concurrency-overview.md
-      - name: クエリの概念
-        href: query-concepts.md
-        items:
-        - name: LINQ to SQL クエリ
-          href: linq-to-sql-queries.md
-        - name: リレーションシップを介したクエリの実行
-          href: querying-across-relationships.md
-        - name: クエリのリモート実行とローカル実行
-          href: remote-vs-local-execution.md
-        - name: 遅延読み込みと即時読み込み
-          href: deferred-versus-immediate-loading.md
-      - name: ID キャッシュからのオブジェクトの取得
-        href: retrieving-objects-from-the-identity-cache.md
-      - name: LINQ to SQL におけるセキュリティ
-        href: security-in-linq-to-sql.md
-      - name: シリアル化
-        href: serialization.md
-      - name: ストアド プロシージャ
-        href: stored-procedures.md
-        items:
-        - name: '方法: 行セットを返す'
-          href: how-to-return-rowsets.md
-        - name: '方法: パラメーターを受け取るストアド プロシージャを使用する'
-          href: how-to-use-stored-procedures-that-take-parameters.md
-        - name: '方法: 複数の結果形状が割り当てられたストアド プロシージャを使用する'
-          href: how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md
-        - name: '方法: シーケンシャルな結果形状が割り当てられたストアド プロシージャを使用する'
-          href: how-to-use-stored-procedures-mapped-for-sequential-result-shapes.md
-        - name: ストアド プロシージャによる操作のカスタマイズ
-          href: customizing-operations-by-using-stored-procedures.md
-        - name: ストアド プロシージャのみによる操作のカスタマイズ
-          href: customizing-operations-by-using-stored-procedures-exclusively.md
-      - name: トランザクションのサポート
-        href: transaction-support.md
-      - name: SQL と CLR の型の不一致
-        href: sql-clr-type-mismatches.md
-      - name: SQL と CLR のカスタム型マッピング
-        href: sql-clr-custom-type-mappings.md
-      - name: ユーザー定義関数
-        href: user-defined-functions.md
-        items:
-        - name: '方法: スカラー値のユーザー定義関数を使用する'
-          href: how-to-use-scalar-valued-user-defined-functions.md
-        - name: '方法: テーブル値のユーザー定義関数を使用する'
-          href: how-to-use-table-valued-user-defined-functions.md
-        - name: '方法: ユーザー定義関数をインラインで呼び出す'
-          href: how-to-call-user-defined-functions-inline.md
-  - name: 関連項目
-    href: reference.md
-    items:
-    - name: データ型と関数
-      href: data-types-and-functions.md
-      items:
-      - name: SQL と CLR の型マッピング
-        href: sql-clr-type-mapping.md
-      - name: 基本データ型
-        href: basic-data-types.md
-      - name: ブール型
-        href: boolean-data-types.md
-      - name: null セマンティクス
-        href: null-semantics.md
-      - name: 数値演算子および比較演算子
-        href: numeric-and-comparison-operators.md
-      - name: シーケンス演算子
-        href: sequence-operators.md
-      - name: System.Convert メソッド
-        href: system-convert-methods.md
-      - name: System.DateTime メソッド
-        href: system-datetime-methods.md
-      - name: System.Math メソッド
-        href: system-math-methods.md
-      - name: System.Object メソッド
-        href: system-object-methods.md
-      - name: System.String メソッド
-        href: system-string-methods.md
-      - name: System.TimeSpan メソッド
-        href: system-timespan-methods.md
-      - name: サポートされていない機能
-        href: unsupported-functionality.md
-      - name: System.DateTimeOffset メソッド
-        href: system-datetimeoffset-methods.md
-    - name: 属性ベースの対応付け
-      href: attribute-based-mapping.md
-    - name: LINQ to SQL でのコード生成
-      href: code-generation-in-linq-to-sql.md
-    - name: 外部マップ
-      href: external-mapping.md
-    - name: よく寄せられる質問
-      href: frequently-asked-questions.md
-    - name: SQL Server Compact および LINQ to SQL
-      href: sql-server-compact-and-linq-to-sql.md
-    - name: 標準クエリ演算子の変換
-      href: standard-query-operator-translation.md
-  - name: サンプル
-    href: samples.md
-ms.openlocfilehash: 754a552a01d40f6dc020536ef090b2bcbb3f90c2
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470795"
+        - name: データ型と関数
+          href: data-types-and-functions.md
+          items:
+            - name: SQL と CLR の型マッピング
+              href: sql-clr-type-mapping.md
+            - name: 基本データ型
+              href: basic-data-types.md
+            - name: ブール型
+              href: boolean-data-types.md
+            - name: null セマンティクス
+              href: null-semantics.md
+            - name: 数値演算子および比較演算子
+              href: numeric-and-comparison-operators.md
+            - name: シーケンス演算子
+              href: sequence-operators.md
+            - name: System.Convert メソッド
+              href: system-convert-methods.md
+            - name: System.DateTime メソッド
+              href: system-datetime-methods.md
+            - name: System.Math メソッド
+              href: system-math-methods.md
+            - name: System.Object メソッド
+              href: system-object-methods.md
+            - name: System.String メソッド
+              href: system-string-methods.md
+            - name: System.TimeSpan メソッド
+              href: system-timespan-methods.md
+            - name: サポートされていない機能
+              href: unsupported-functionality.md
+            - name: System.DateTimeOffset メソッド
+              href: system-datetimeoffset-methods.md
+        - name: 属性ベースの対応付け
+          href: attribute-based-mapping.md
+        - name: LINQ to SQL でのコード生成
+          href: code-generation-in-linq-to-sql.md
+        - name: 外部マップ
+          href: external-mapping.md
+        - name: よく寄せられる質問
+          href: frequently-asked-questions.md
+        - name: SQL Server Compact および LINQ to SQL
+          href: sql-server-compact-and-linq-to-sql.md
+        - name: 標準クエリ演算子の変換
+          href: standard-query-operator-translation.md
+    - name: サンプル
+      href: samples.md

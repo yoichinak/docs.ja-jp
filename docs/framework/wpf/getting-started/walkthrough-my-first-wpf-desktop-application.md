@@ -12,10 +12,10 @@ author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
 ms.openlocfilehash: dbfc40bd1fcc97810ea1397731bd8c232297cbd1
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59055249"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
@@ -68,7 +68,7 @@ ms.locfileid: "59055249"
    > [!NOTE]
    > このチュートリアルでは、<xref:System.Windows.Controls.DataGrid>以降、.NET Framework 4 で利用可能であるコントロール。 プロジェクトが、.NET Framework 4 を対象とすることを確認以降に。 詳細については、「[方法 :.NET Framework のターゲット バージョンを指定する](/visualstudio/ide/how-to-target-a-version-of-the-dotnet-framework)」を参照してください。
 
-2. 開いている*Application.xaml* (Visual Basic) または*App.xaml* (C#)。
+2. 開いている*Application.xaml* (Visual Basic) または*App.xaml* (c#)。
 
     この XAML ファイルでは、WPF アプリケーションとすべてのアプリケーション リソースを定義します。 ときに自動的に表示する UI を指定することもこのファイルを使用するアプリケーションを起動します。この場合、 *MainWindow.xaml*します。
 
@@ -94,7 +94,7 @@ ms.locfileid: "59055249"
    </NavigationWindow>
    ```
 
-   このアプリは、ユーザーの入力に応じてさまざまなコンテンツに移動します。 そのため、メイン ウィンドウを<xref:System.Windows.Window>から<xref:System.Windows.Navigation.NavigationWindow>に変更する必要があります。 <xref:System.Windows.Navigation.NavigationWindow> すべてのプロパティを継承<xref:System.Windows.Window>します。 <xref:System.Windows.Navigation.NavigationWindow> XAML ファイル内の要素のインスタンスを作成する、<xref:System.Windows.Navigation.NavigationWindow>クラス。 詳細については、次を参照してください。[ナビゲーションの概要](../app-development/navigation-overview.md)します。
+   このアプリは、ユーザーの入力に応じてさまざまなコンテンツに移動します。 そのため、メイン ウィンドウを<xref:System.Windows.Window>から<xref:System.Windows.Navigation.NavigationWindow>に変更する必要があります。 <xref:System.Windows.Navigation.NavigationWindow>  は、<xref:System.Windows.Window>のすべてのプロパティを継承しています。 <xref:System.Windows.Navigation.NavigationWindow> XAML ファイル内の要素のインスタンスを作成する、<xref:System.Windows.Navigation.NavigationWindow>クラス。 詳細については、次を参照してください。[ナビゲーションの概要](../app-development/navigation-overview.md)します。
 
 5. 次のプロパティを変更、<xref:System.Windows.Navigation.NavigationWindow>要素。
 
@@ -118,7 +118,7 @@ ms.locfileid: "59055249"
 
     このファイルは、分離コード ファイルで宣言されたイベントを処理するコードを含む*MainWindow.xaml*します。 このファイルには、XAML で定義されたウィンドウの部分クラスが含まれています。
 
-7. C# を使用している場合は、変更、`MainWindow`クラスから派生する<xref:System.Windows.Navigation.NavigationWindow>します。 (Visual Basic の場合は、これは XAML でウィンドウを変更するときにします。)
+7. C# を使用している場合は、変更、`MainWindow`クラスから派生する<xref:System.Windows.Navigation.NavigationWindow>します。 (Visual basic の場合は、これは XAML でウィンドウを変更するときにします。)
 
    コードについては、次のようになります。
 
@@ -484,7 +484,7 @@ ms.locfileid: "59055249"
 >
 > - [セキュリティ](../security-wpf.md)
 >
-> - [WPF のグローバリゼーションおよびローカリゼーション](../advanced/wpf-globalization-and-localization-overview.md)
+> - [WPF のグローバリゼーションとローカライズ](../advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [WPF のパフォーマンス](../advanced/optimizing-wpf-application-performance.md)
 
@@ -501,7 +501,7 @@ ms.locfileid: "59055249"
 
 - [アプリケーションの開発](../app-development/index.md)
 - [コントロール](../controls/index.md)
-- [データ バインディングの概要](../data/data-binding-overview.md)
+- [データバインディングの概要](../data/data-binding-overview.md)
 - [グラフィックスとマルチ メディア](../graphics-multimedia/index.md)
 - [WPF のドキュメント](../advanced/documents-in-wpf.md)
 

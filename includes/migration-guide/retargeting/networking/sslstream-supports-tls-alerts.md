@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: e86542cbf96025247a29a860bfd44db5383c9d16
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/01/2019
-ms.locfileid: "58760230"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59804356"
 ---
 ### <a name="sslstream-supports-tls-alerts"></a>SslStream で TLS アラートに対応
 

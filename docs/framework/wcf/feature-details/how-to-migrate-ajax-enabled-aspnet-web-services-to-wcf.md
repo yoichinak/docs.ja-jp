@@ -3,10 +3,10 @@ title: '方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59337423"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する
@@ -193,9 +193,9 @@ d.Add("two", 2);
 
  このディクショナリは、JSON オブジェクトでは次のように表されます。
 
--   [{"Key":"one","Value":1},{"Key":"two","Value":2}] by the <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>
+-   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> では [{"Key":"one","Value":1},{"Key":"two","Value":2}] と表され、
 
--   {"one": 1,"two": 2}、ASP.NET AJAX によって <xref:System.Web.Script.Serialization.JavaScriptSerializer>
+-   {"one":1,"two":2} by the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、キーの種類が文字列ではないディクショナリを処理でき、<xref:System.Web.Script.Serialization.JavaScriptSerializer> はできません。この点で前者はより強力と言えます。 しかし、後者の方が JSON で使いやすいと言えます。
 
@@ -204,14 +204,14 @@ d.Add("two", 2);
 |相違点のカテゴリ|DataContractJsonSerializer|ASP.NET AJAX JavaScriptSerializer|
 |-----------------------------|--------------------------------|---------------------------------------|
 |空きバッファー (新しい byte[0]) の <xref:System.Object> (または <xref:System.Uri>、あるいは他の一部のクラス) への逆シリアル化|SerializationException|null|
-|シリアル化 <xref:System.DBNull.Value>|{} (または {"_ _type":"#System"})|Null|
+|<xref:System.DBNull.Value> のシリアル化|{} (または {"_ _type":"#System"})|Null|
 |[Serializable] 型のプライベート メンバーのシリアル化|できるか|シリアル化できません|
 |<xref:System.Runtime.Serialization.ISerializable> 型のパブリック プロパティのシリアル化|シリアル化できません|できるか|
 |JSON の「拡張機能」|オブジェクト メンバー名で引用符を必要とする ({"a":"hello"}) JSON 仕様に準拠しています。|引用符のないオブジェクト メンバー名 ({a:"hello"}) をサポートします。|
-|<xref:System.DateTime> 世界協定時刻 (UTC)|形式をサポートしていません"\\/Date(123456789U)\\/"または"\\日付/\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\)\\\\/)".|形式をサポート"\\/Date(123456789U)\\/"と"\\日付/\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\)\\ \\/)"は、DateTime 値として。|
+|<xref:System.DateTime> 協定世界時刻 (UTC)|形式をサポートしていません"\\/Date(123456789U)\\/"または"\\日付/\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\)\\\\/)".|形式をサポート"\\/Date(123456789U)\\/"と"\\日付/\\(\d+ (U&#124;(\\+\\-[\d{4}]))?\\)\\ \\/)"は、DateTime 値として。|
 |ディクショナリの表現|KeyValuePair の配列\<K, V >、文字列以外の種類のキーを処理します。|実際の JSON オブジェクトですが、文字列の種類のキーのみ処理します。|
 |エスケープ文字|必ず、エスケープ文字であるスラッシュ (/) を付けます。"\n" などのエスケープされない無効な JSON 文字は使用できません。|DateTime 値には、エスケープ文字スラッシュ (/) を付けます。|
 
 ## <a name="see-also"></a>関連項目
 
-- [方法: 構成を使用して ASP.NET AJAX エンドポイントを追加する](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)
+- [方法: 構成を使用して ASP.NET AJAX エンドポイントを追加するには](../../../../docs/framework/wcf/feature-details/how-to-use-configuration-to-add-an-aspnet-ajax-endpoint.md)

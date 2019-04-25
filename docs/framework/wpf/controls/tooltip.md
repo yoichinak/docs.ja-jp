@@ -9,10 +9,10 @@ helpviewer_keywords:
 - popups [WPF]
 ms.assetid: a3cb42d6-6ce3-4aa0-a557-2cc5b142f1e4
 ms.openlocfilehash: 9fbb2fa4d403f59619792271eb3b8046cfa23949
-ms.sourcegitcommit: 68eb5c4928e2b082f178a42c16f73fedf52c2ab8
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59054989"
 ---
 # <a name="tooltip"></a>ヒント
@@ -26,7 +26,7 @@ ms.locfileid: "59054989"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ToolTip の概要](tooltip-overview.md)  
-  [方法のトピック](tooltip-how-to-topics.md)  
+  [方法トピック](tooltip-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.ToolTip>  
@@ -35,4 +35,4 @@ ms.locfileid: "59054989"
   
 ## <a name="related-sections"></a>関連項目  
  [ポップアップの概要](popup-overview.md)  
-  [方法のトピック](popup-how-to-topics.md)
+  [方法トピック](popup-how-to-topics.md)

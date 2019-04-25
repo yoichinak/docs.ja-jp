@@ -3,10 +3,10 @@ title: DependentTransaction によるコンカレンシーの管理
 ms.date: 03/30/2017
 ms.assetid: b85a97d8-8e02-4555-95df-34c8af095148
 ms.openlocfilehash: b06470ed76c15208f019874db8573d0ed4778d33
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59216302"
 ---
 # <a name="managing-concurrency-with-dependenttransaction"></a>DependentTransaction によるコンカレンシーの管理
@@ -19,7 +19,7 @@ ms.locfileid: "59216302"
   
 -   <xref:System.Transactions.DependentCloneOption.BlockCommitUntilComplete> out、またはまで、親トランザクションがタイムアウトするまで、親トランザクションのコミット プロセスをブロックする依存トランザクションを作成します。<xref:System.Transactions.DependentTransaction.Complete%2A>完了を示すすべての依存で呼び出されます。 これは、依存トランザクションが完了するまで、クライアントが親トランザクションのコミットを望まない場合に役立ちます。 親トランザクションが依存トランザクションより前に処理を完了して <xref:System.Transactions.CommittableTransaction.Commit%2A> を呼び出した場合、すべての依存トランザクションが <xref:System.Transactions.DependentTransaction.Complete%2A> を呼び出すまで、コミット プロセスはブロックされ、そのトランザクションで追加処理を実行し、新しい参加リストを作成できる状態になります。 すべての依存トランザクションの処理が完了し、<xref:System.Transactions.DependentTransaction.Complete%2A> を呼び出すとすぐに、トランザクションのコミット プロセスが開始します。  
   
--   <xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete>、その一方で、場合に自動的に中止する依存トランザクションを作成します。<xref:System.Transactions.CommittableTransaction.Commit%2A>前に、親トランザクションで呼び出される<xref:System.Transactions.DependentTransaction.Complete%2A>が呼び出されます。 この場合、依存トランザクションで行われたすべての処理は、1 つのトランザクションの有効期間内はそのまま変更されず、その一部でもコミットすることはできません。  
+-   一方、<xref:System.Transactions.DependentCloneOption.RollbackIfNotComplete> では、<xref:System.Transactions.CommittableTransaction.Commit%2A> が呼び出される前に親トランザクションで <xref:System.Transactions.DependentTransaction.Complete%2A> が呼び出された場合、自動的に中止する依存トランザクションが作成されます。 この場合、依存トランザクションで行われたすべての処理は、1 つのトランザクションの有効期間内はそのまま変更されず、その一部でもコミットすることはできません。  
   
  アプリケーションが依存トランザクションでその処理を完了した場合、<xref:System.Transactions.DependentTransaction.Complete%2A> メソッドを 1 回だけ呼び出す必要があります。それ以外の場合は、<xref:System.InvalidOperationException> がスローされます。 この呼び出しを行った後は、トランザクションで追加作業を行わないでください。例外が発生します。  
   

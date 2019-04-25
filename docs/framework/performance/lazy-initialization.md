@@ -10,10 +10,10 @@ ms.assetid: 56b4ae5c-4745-44ff-ad78-ffe4fcde6b9b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce217e2ed8e542ad0f7122970655aa32a353f51a
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59182300"
 ---
 # <a name="lazy-initialization"></a>遅延初期化
@@ -23,7 +23,7 @@ ms.locfileid: "59182300"
   
 -   あるオブジェクトを作成するとコストが高いとき、他の高額な演算が完了するまで、そのオブジェクトの作成を延期する。 たとえば、プログラムが起動時に複数のオブジェクト インスタンスを読み込むが、すぐに必要になるのはその中の一部のインスタンスだけという場合があります。 必要なオブジェクトが作成されるまで必要にならないオブジェクトの初期化を遅らせることで、プログラムの起動パフォーマンスを改善できます。  
   
- 初期化を遅延させる独自のコードを記述できますが、代わりに <xref:System.Lazy%601> を使用することが推奨されます。 <xref:System.Lazy%601> その関連型もスレッド セーフをサポートし、一貫性のある例外反映ポリシーを提供します。  
+ 初期化を遅延させる独自のコードを記述できますが、代わりに <xref:System.Lazy%601> を使用することが推奨されます。 <xref:System.Lazy%601> とその関連型はスレッドセーフ対応であり、一貫性のある例外反映ポリシーを提供します。  
   
  次の表は、.NET Framework バージョン 4 で提供される、さまざまなシナリオの遅延初期化を可能にする型の一覧です。  
   
@@ -102,8 +102,8 @@ ms.locfileid: "59182300"
 |-----------------|------------------------|--------------------------------|---------------------------|  
 |Lazy(T)()|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|いいえ|いいえ|  
 |Lazy(T)(Func(T))|(<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>)|[はい]|[はい]|  
-|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または`false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|いいえ|いいえ|  
-|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または`false`(<xref:System.Threading.LazyThreadSafetyMode.None>)|はい|[はい]|  
+|Lazy(T)(Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|いいえ|いいえ|  
+|Lazy(T)(Func(T), Boolean)|`True` (<xref:System.Threading.LazyThreadSafetyMode.ExecutionAndPublication>) または `false` (<xref:System.Threading.LazyThreadSafetyMode.None>)|[はい]|[はい]|  
 |Lazy(T)(LazyThreadSafetyMode)|ユーザー指定|いいえ|いいえ|  
 |Lazy(T)(Func(T), LazyThreadSafetyMode)|ユーザー指定|[はい]|ユーザーが <xref:System.Threading.LazyThreadSafetyMode.PublicationOnly> を指定する場合は、いいえ。指定しない場合は、はい。|  
   
@@ -126,7 +126,7 @@ ms.locfileid: "59182300"
  [!code-csharp[Lazy#7](../../../samples/snippets/csharp/VS_Snippets_Misc/lazy/cs/cs_lazycodefile.cs#7)]
  [!code-vb[Lazy#7](../../../samples/snippets/visualbasic/VS_Snippets_Misc/lazy/vb/lazy_vb.vb#7)]  
   
- <xref:System.Threading.ThreadLocal%601> 同様に、そのオブジェクトをラップ<xref:System.Lazy%601>、これらの重要な点が異なります。  
+ <xref:System.Threading.ThreadLocal%601> は、<xref:System.Lazy%601> とほとんど同じ方法でそのオブジェクトをラップしますが、本質的な違いとして次があります。  
   
 -   各スレッドは、他のスレッドからアクセスできない独自のプライベート データを利用してスレッドローカル変数を初期化します。  
   
@@ -154,7 +154,7 @@ ms.locfileid: "59182300"
   
 ## <a name="see-also"></a>関連項目
 
-- [マネージド スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)
+- [マネージ スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)
 - [スレッドおよびスレッド処理](../../../docs/standard/threading/threads-and-threading.md)
 - [タスク並列ライブラリ (TPL)](../../../docs/standard/parallel-programming/task-parallel-library-tpl.md)
-- [方法: オブジェクトの遅延初期化を実行する](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)
+- [方法: オブジェクトの遅延初期化を実行します。](../../../docs/framework/performance/how-to-perform-lazy-initialization-of-objects.md)

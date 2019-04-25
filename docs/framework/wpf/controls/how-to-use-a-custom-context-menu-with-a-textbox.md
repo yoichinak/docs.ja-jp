@@ -11,10 +11,10 @@ helpviewer_keywords:
 - TextBox control [WPF], custom content menus
 ms.assetid: 842d3cd5-6fa0-4be4-8d90-6c7466213b1c
 ms.openlocfilehash: b0507c6fa37f0f51f9e12ebe5f908c39c25b50d9
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59129417"
 ---
 # <a name="how-to-use-a-custom-context-menu-with-a-textbox"></a>方法: TextBox でカスタム コンテキスト メニューを使用する

@@ -4,12 +4,12 @@ description: マイクロサービスの高可用性を実現するには、一�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: ebf3a81718cd3423d3c80edb9c2f5b10f4ef47da
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: a63b0c67e00ec91c5a91e1c6b84d1a38ab50e394
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465816"
+ms.lasthandoff: 04/17/2019
+ms.locfileid: "59672356"
 ---
 # <a name="resiliency-and-high-availability-in-microservices"></a>マイクロサービスの回復性と高可用性
 
@@ -42,7 +42,7 @@ Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使�
 
 モノリシック サーバー ベースのアプリケーションでは、単純にログをディスク上のファイルに書き込み (ログ ファイル)、後でツールを使用して分析します アプリケーションの実行は、固定サーバーまたは VM に制限されているため、イベントのフローの分析は一般的にそれほど複雑ではありません。 ただし、複数のサービスがオーケストレーター クラスタ内の多くのノードに渡って実行される分散アプリケーションでは、分散イベントを関連付けることは難しい課題です。
 
-マイクロサービスベースのアプリケーションは、イベントまたはログファイルの出力ストリームをアプリケーション自体で保存しないようにする必要があり、さらに中央の場所へのイベントのルーティングも管理しないようにする必要があります 透過的になっている必要があります。つまり、各プロセスは、標準出力にイベント ストリームを書き込むだけで、それが実行されている実行環境インフラストラクチャによって収集されるようにする必要があります。 これらのイベント ストリーム ルーターの例として、[Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow) は、複数のソースからイベント ストリームを収集し、出力システムに公開します。 これらには、開発環境用の単純な標準出力、[Application Insights](https://azure.microsoft.com/services/application-insights/)、[OMS](https://github.com/Azure/diagnostics-eventflow#oms-operations-management-suite) (オンプレミス アプリケーション用)、[Azure Diagnostics](https://docs.microsoft.com/azure/monitoring-and-diagnostics/azure-diagnostics) などのクラウド システムが含まれます。 ログの検索、アラート、レポート、監視を行うことができる優れたサードパーティ製のログ分析プラットフォームとツールもあり、[Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA) のようにリアルタイムで実行できるものもあります。
+マイクロサービスベースのアプリケーションは、イベントまたはログファイルの出力ストリームをアプリケーション自体で保存しないようにする必要があり、さらに中央の場所へのイベントのルーティングも管理しないようにする必要があります 透過的になっている必要があります。つまり、各プロセスは、標準出力にイベント ストリームを書き込むだけで、それが実行されている実行環境インフラストラクチャによって収集されるようにする必要があります。 これらのイベント ストリーム ルーターの例として、[Microsoft.Diagnostic.EventFlow](https://github.com/Azure/diagnostics-eventflow) は、複数のソースからイベント ストリームを収集し、出力システムに公開します。 これらには、開発環境や、[Azure Monitor](https://azure.microsoft.com/services/monitor//) や [Azure Diagnostics](https://docs.microsoft.com/azure/azure-monitor/platform/diagnostics-extension-overview) などのクラウド システムに向けた、シンプルな標準出力を含めることができます。 ログの検索、アラート、レポート、監視を行うことができる優れたサードパーティ製のログ分析プラットフォームとツールもあり、[Splunk](https://www.splunk.com/goto/Splunk_Log_Management?ac=ga_usa_log_analysis_phrase_Mar17&_kk=logs%20analysis&gclid=CNzkzIrex9MCFYGHfgodW5YOtA) のようにリアルタイムで実行できるものもあります。
 
 ### <a name="orchestrators-managing-health-and-diagnostics-information"></a>正常性および診断情報を管理するオーケストレーター
 
@@ -59,22 +59,22 @@ Beat Pulse と呼ばれる優れたオープン ソース ライブラリを使�
 ## <a name="additional-resources"></a>その他の技術情報
 
 - **Twelve-Factor App.XI.ログ:イベント ストリームとしてログを処理する** \
-  [https://12factor.net/logs](https://12factor.net/logs)
+  <https://12factor.net/logs>
 
 - **Microsoft 診断 EventFlow ライブラリ** GitHub リポジトリ。 \
-  [https://github.com/Azure/diagnostics-eventflow](https://github.com/Azure/diagnostics-eventflow)
+  <https://github.com/Azure/diagnostics-eventflow>
 
 - **Azure Diagnostics について** \
-  [https://docs.microsoft.com/azure/azure-diagnostics](https://docs.microsoft.com/azure/azure-diagnostics)
+  <https://docs.microsoft.com/azure/azure-diagnostics>
 
-- **Windows コンピューターを Azure の Log Analytics サービスに接続する** \
-  [https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents](https://docs.microsoft.com/azure/log-analytics/log-analytics-windows-agents)
+- **Windows コンピューターを Azure Monitor サービスに接続する** \
+  <https://docs.microsoft.com/azure/azure-monitor/platform/agent-windows>
 
 - **意味を表すログ:セマンティック ログ アプリケーション ブロックを使用する** \
   <https://docs.microsoft.com/previous-versions/msp-n-p/dn440729(v=pandp.60)>
 
 - **Splunk** 公式サイト。 \
-  [https://www.splunk.com/](https://www.splunk.com/)
+  <https://www.splunk.com/>
 
 - Windows イベント トレーシング (ETW) の **EventSource クラス** API \
   [https://docs.microsoft.com/dotnet/api/system.diagnostics.tracing.eventsource](xref:System.Diagnostics.Tracing.EventSource)

@@ -19,10 +19,10 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 54bb4c25-12c4-4181-b4a0-93546053964e
 ms.openlocfilehash: 9ad992a53618fa2f410e0b0fb23886c30136384f
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58839393"
 ---
 # <a name="shadowing-in-visual-basic"></a>Visual Basic におけるシャドウ
@@ -97,7 +97,7 @@ End Module
  ただし、さらに、派生クラス`thirdClass`宣言`display`として`Public`ため、コードでは、`callDisplay`アクセスできます。  
   
 ## <a name="shadowing-and-overriding"></a>シャドウとオーバーライド  
- シャドウとオーバーライドを混同しないでください。 どちらも、派生クラスは基底クラスから継承し、1 つの宣言された要素と他の再定義に使用されます。 2 つの重要な違いがあります。 比較については、[の相違点の間でシャドウとオーバーライド](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)を参照してください。  
+ シャドウとオーバーライドを混同しないでください。 どちらも、派生クラスは基底クラスから継承し、1 つの宣言された要素と他の再定義に使用されます。 2 つの重要な違いがあります。 比較については、次を参照してください。[の相違点の間でシャドウとオーバーライド](../../../../visual-basic/programming-guide/language-features/declared-elements/differences-between-shadowing-and-overriding.md)します。  
   
 ## <a name="shadowing-and-overloading"></a>シャドウとオーバー ロード  
  派生クラスで 1 つ以上の要素と同じ基本クラスの要素をシャドウする場合は、その要素のオーバー ロードされたバージョンがシャドウする要素になります。 詳細については、「 [Procedure Overloading](../../../../visual-basic/programming-guide/language-features/procedures/procedure-overloading.md)」を参照してください。  

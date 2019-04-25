@@ -8,10 +8,10 @@ helpviewer_keywords:
 - white-space processing [XAML Services]
 ms.assetid: 5e1814f0-5b30-43d5-8c88-dede335a89d7
 ms.openlocfilehash: d15bab1ad9234959048fa7b7c3fa2bbbeca5fe6e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59193318"
 ---
 # <a name="xmlspace-handling-in-xaml"></a>XAML における xml:space の処理
@@ -42,5 +42,5 @@ ms.locfileid: "59193318"
   
 ## <a name="see-also"></a>関連項目
 
-- [XAML での空白の処理](whitespace-processing-in-xaml.md)
+- [空白 XAML での処理](whitespace-processing-in-xaml.md)
 - [XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)

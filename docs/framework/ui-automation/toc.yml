@@ -1,252 +1,245 @@
-items:
 - name: ユーザー補助
   href: index.md
   items:
-  - name: ユーザー補助のベスト プラクティス
-    href: accessibility-best-practices.md
-  - name: UI オートメーションの基礎
-    href: ui-automation-fundamentals.md
-    items:
-    - name: UI オートメーションの概要
-      href: ui-automation-overview.md
-    - name: UI オートメーションと Microsoft Active Accessibility
-      href: ui-automation-and-microsoft-active-accessibility.md
-    - name: UI オートメーション ツリーの概要
-      href: ui-automation-tree-overview.md
-    - name: UI オートメーション コントロール パターンの概要
-      href: ui-automation-control-patterns-overview.md
-    - name: UI オートメーション プロパティの概要
-      href: ui-automation-properties-overview.md
-    - name: UI オートメーション イベントの概要
-      href: ui-automation-events-overview.md
-    - name: UI オートメーションのセキュリティの概要
-      href: ui-automation-security-overview.md
-    - name: UI オートメーションによる自動テスト
-      href: using-ui-automation-for-automated-testing.md
-  - name: マネージド コードの UI オートメーション プロバイダー
-    href: ui-automation-providers-for-managed-code.md
-    items:
-    - name: サーバー側 UI オートメーション プロバイダーの実装
-      href: server-side-ui-automation-provider-implementation.md
-    - name: UI オートメーション プロバイダーの概要
-      href: ui-automation-providers-overview.md
-    - name: クライアント側 UI オートメーション プロバイダーの実装
-      href: client-side-ui-automation-provider-implementation.md
-    - name: 方法のトピック
-      href: ui-automation-providers-for-managed-code-how-to-topics.md
+    - name: ユーザー補助のベスト プラクティス
+      href: accessibility-best-practices.md
+    - name: UI オートメーションの基礎
+      href: ui-automation-fundamentals.md
       items:
-      - name: サーバー側 UI オートメーション プロバイダーの公開
-        href: expose-a-server-side-ui-automation-provider.md
-      - name: UI オートメーション プロバイダーからのプロパティの返却
-        href: return-properties-from-a-ui-automation-provider.md
-      - name: UI オートメーション プロバイダーからのイベントの発生
-        href: raise-events-from-a-ui-automation-provider.md
-      - name: UI オートメーション フラグメント プロバイダーでのナビゲーションの有効化
-        href: enable-navigation-in-a-ui-automation-fragment-provider.md
-      - name: UI オートメーション プロバイダーでのコントロール パターンのサポート
-        href: support-control-patterns-in-a-ui-automation-provider.md
-      - name: クライアント側 UI オートメーション プロバイダーの作成
-        href: create-a-client-side-ui-automation-provider.md
-      - name: クライアント アプリケーションに UI オートメーション プロバイダーを実装する
-        href: implement-ui-automation-providers-in-a-client-application.md
-  - name: マネージド コードの UI オートメーション クライアント
-    href: ui-automation-clients-for-managed-code.md
-    items:
-    - name: UI オートメーションおよび画面の拡大縮小
-      href: ui-automation-and-screen-scaling.md
-    - name: UI オートメーションによる標準コントロールのサポート
-      href: ui-automation-support-for-standard-controls.md
-    - name: クライアントの UI オートメーション イベント
-      href: ui-automation-events-for-clients.md
-    - name: UI オートメーション クライアントにおけるキャッシュ
-      href: caching-in-ui-automation-clients.md
-    - name: クライアントの UI オートメーション プロパティ
-      href: ui-automation-properties-for-clients.md
-    - name: UI オートメーション クライアントのコントロール パターン マッピング
-      href: control-pattern-mapping-for-ui-automation-clients.md
-    - name: クライアントの UI オートメーション コントロール パターン
-      href: ui-automation-control-patterns-for-clients.md
-    - name: UI オートメーション要素の取得
-      href: obtaining-ui-automation-elements.md
-    - name: UI オートメーション スレッド処理の問題点
-      href: ui-automation-threading-issues.md
-    - name: 方法のトピック
-      href: ui-automation-clients-for-managed-code-how-to-topics.md
+        - name: UI オートメーションの概要
+          href: ui-automation-overview.md
+        - name: UI オートメーションと Microsoft Active Accessibility
+          href: ui-automation-and-microsoft-active-accessibility.md
+        - name: UI オートメーション ツリーの概要
+          href: ui-automation-tree-overview.md
+        - name: UI オートメーション コントロール パターンの概要
+          href: ui-automation-control-patterns-overview.md
+        - name: UI オートメーション プロパティの概要
+          href: ui-automation-properties-overview.md
+        - name: UI オートメーション イベントの概要
+          href: ui-automation-events-overview.md
+        - name: UI オートメーションのセキュリティの概要
+          href: ui-automation-security-overview.md
+        - name: UI オートメーションによる自動テスト
+          href: using-ui-automation-for-automated-testing.md
+    - name: マネージド コードの UI オートメーション プロバイダー
+      href: ui-automation-providers-for-managed-code.md
       items:
-      - name: プロパティ条件に基づく UI オートメーション要素の検索
-        href: find-a-ui-automation-element-based-on-a-property-condition.md
-      - name: TreeWalker を使用した UI オートメーション要素間の移動
-        href: navigate-among-ui-automation-elements-with-treewalker.md
-      - name: リスト項目の UI オートメーション要素の検索
-        href: find-a-ui-automation-element-for-a-list-item.md
-      - name: UI オートメーション要素のプロパティの取得
-        href: get-ui-automation-element-properties.md
-      - name: UI オートメーションにおけるキャッシュの使用
-        href: use-caching-in-ui-automation.md
-      - name: UI オートメーション イベントのサブスクライブ
-        href: subscribe-to-ui-automation-events.md
-      - name: クライアント側プロバイダー アセンブリの登録
-        href: register-a-client-side-provider-assembly.md
-      - name: AutomationID プロパティの使用
-        href: use-the-automationid-property.md
-  - name: UI オートメーション コントロール パターン
-    href: ui-automation-control-patterns.md
-    items:
-    - name: UI オートメーション Dock コントロール パターンの実装
-      href: implementing-the-ui-automation-dock-control-pattern.md
-    - name: UI オートメーション ExpandCollapse コントロール パターンの実装
-      href: implementing-the-ui-automation-expandcollapse-control-pattern.md
-    - name: UI オートメーション Grid コントロール パターンの実装
-      href: implementing-the-ui-automation-grid-control-pattern.md
-    - name: UI オートメーション GridItem コントロール パターンの実装
-      href: implementing-the-ui-automation-griditem-control-pattern.md
-    - name: UI オートメーション Invoke コントロール パターンの実装
-      href: implementing-the-ui-automation-invoke-control-pattern.md
-    - name: UI オートメーション MultipleView コントロール パターンの実装
-      href: implementing-the-ui-automation-multipleview-control-pattern.md
-    - name: UI オートメーション RangeValue コントロール パターンの実装
-      href: implementing-the-ui-automation-rangevalue-control-pattern.md
-    - name: UI オートメーション Scroll コントロール パターンの実装
-      href: implementing-the-ui-automation-scroll-control-pattern.md
-    - name: UI オートメーション ScrollItem コントロール パターンの実装
-      href: implementing-the-ui-automation-scrollitem-control-pattern.md
-    - name: UI オートメーション Selection コントロール パターンの実装
-      href: implementing-the-ui-automation-selection-control-pattern.md
-    - name: UI オートメーション SelectionItem コントロール パターンの実装
-      href: implementing-the-ui-automation-selectionitem-control-pattern.md
-    - name: UI オートメーション Table コントロール パターンの実装
-      href: implementing-the-ui-automation-table-control-pattern.md
-    - name: UI オートメーション TableItem コントロール パターンの実装
-      href: implementing-the-ui-automation-tableitem-control-pattern.md
-    - name: UI オートメーション Toggle コントロール パターンの実装
-      href: implementing-the-ui-automation-toggle-control-pattern.md
-    - name: UI オートメーション Transform コントロール パターンの実装
-      href: implementing-the-ui-automation-transform-control-pattern.md
-    - name: UI オートメーション Value コントロール パターンの実装
-      href: implementing-the-ui-automation-value-control-pattern.md
-    - name: UI オートメーション Window コントロール パターンの実装
-      href: implementing-the-ui-automation-window-control-pattern.md
-    - name: 方法のトピック
-      href: ui-automation-control-patterns-how-to-topics.md
+        - name: サーバー側 UI オートメーション プロバイダーの実装
+          href: server-side-ui-automation-provider-implementation.md
+        - name: UI オートメーション プロバイダーの概要
+          href: ui-automation-providers-overview.md
+        - name: クライアント側 UI オートメーション プロバイダーの実装
+          href: client-side-ui-automation-provider-implementation.md
+        - name: 方法のトピック
+          href: ui-automation-providers-for-managed-code-how-to-topics.md
+          items:
+            - name: サーバー側 UI オートメーション プロバイダーの公開
+              href: expose-a-server-side-ui-automation-provider.md
+            - name: UI オートメーション プロバイダーからのプロパティの返却
+              href: return-properties-from-a-ui-automation-provider.md
+            - name: UI オートメーション プロバイダーからのイベントの発生
+              href: raise-events-from-a-ui-automation-provider.md
+            - name: UI オートメーション フラグメント プロバイダーでのナビゲーションの有効化
+              href: enable-navigation-in-a-ui-automation-fragment-provider.md
+            - name: UI オートメーション プロバイダーでのコントロール パターンのサポート
+              href: support-control-patterns-in-a-ui-automation-provider.md
+            - name: クライアント側 UI オートメーション プロバイダーの作成
+              href: create-a-client-side-ui-automation-provider.md
+            - name: クライアント アプリケーションに UI オートメーション プロバイダーを実装する
+              href: implement-ui-automation-providers-in-a-client-application.md
+    - name: マネージド コードの UI オートメーション クライアント
+      href: ui-automation-clients-for-managed-code.md
       items:
-      - name: UI オートメーションを使用したテーブルの内容の公開
-        href: expose-the-content-of-a-table-using-ui-automation.md
-      - name: サポートされている UI オートメーション コントロール パターンの取得
-        href: get-supported-ui-automation-control-patterns.md
-      - name: UI オートメーションを使用した、チェック ボックスのトグル状態の取得
-        href: get-the-toggle-state-of-a-check-box-using-ui-automation.md
-      - name: UI オートメーションを使用したコントロールの呼び出し
-        href: invoke-a-control-using-ui-automation.md
-      - name: UI オートメーション要素の移動
-        href: move-a-ui-automation-element.md
-  - name: UI オートメーション テキスト パターン
-    href: ui-automation-text-pattern.md
-    items:
-    - name: UI オートメーション TextPattern の概要
-      href: ui-automation-textpattern-overview.md
-    - name: TextPattern および埋め込みオブジェクトの概要
-      href: textpattern-and-embedded-objects-overview.md
-    - name: 方法のトピック
-      href: ui-automation-text-pattern-how-to-topics.md
+        - name: UI オートメーションおよび画面の拡大縮小
+          href: ui-automation-and-screen-scaling.md
+        - name: UI オートメーションによる標準コントロールのサポート
+          href: ui-automation-support-for-standard-controls.md
+        - name: クライアントの UI オートメーション イベント
+          href: ui-automation-events-for-clients.md
+        - name: UI オートメーション クライアントにおけるキャッシュ
+          href: caching-in-ui-automation-clients.md
+        - name: クライアントの UI オートメーション プロパティ
+          href: ui-automation-properties-for-clients.md
+        - name: UI オートメーション クライアントのコントロール パターン マッピング
+          href: control-pattern-mapping-for-ui-automation-clients.md
+        - name: クライアントの UI オートメーション コントロール パターン
+          href: ui-automation-control-patterns-for-clients.md
+        - name: UI オートメーション要素の取得
+          href: obtaining-ui-automation-elements.md
+        - name: UI オートメーション スレッド処理の問題点
+          href: ui-automation-threading-issues.md
+        - name: 方法のトピック
+          href: ui-automation-clients-for-managed-code-how-to-topics.md
+          items:
+            - name: プロパティ条件に基づく UI オートメーション要素の検索
+              href: find-a-ui-automation-element-based-on-a-property-condition.md
+            - name: TreeWalker を使用した UI オートメーション要素間の移動
+              href: navigate-among-ui-automation-elements-with-treewalker.md
+            - name: リスト項目の UI オートメーション要素の検索
+              href: find-a-ui-automation-element-for-a-list-item.md
+            - name: UI オートメーション要素のプロパティの取得
+              href: get-ui-automation-element-properties.md
+            - name: UI オートメーションにおけるキャッシュの使用
+              href: use-caching-in-ui-automation.md
+            - name: UI オートメーション イベントのサブスクライブ
+              href: subscribe-to-ui-automation-events.md
+            - name: クライアント側プロバイダー アセンブリの登録
+              href: register-a-client-side-provider-assembly.md
+            - name: AutomationID プロパティの使用
+              href: use-the-automationid-property.md
+    - name: UI オートメーション コントロール パターン
+      href: ui-automation-control-patterns.md
       items:
-      - name: UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加
-        href: add-content-to-a-text-box-using-ui-automation.md
-      - name: UI オートメーションを使用した、テキストの検索と強調表示
-        href: find-and-highlight-text-using-ui-automation.md
-      - name: UI オートメーションを使用してテキスト属性を取得する
-        href: obtain-text-attributes-using-ui-automation.md
-      - name: UI オートメーションを使用して混合テキスト属性の詳細を取得する
-        href: obtain-mixed-text-attribute-details-using-ui-automation.md
-      - name: UI オートメーションを使用したテキストのスキャン
-        href: traverse-text-using-ui-automation.md
-      - name: UI オートメーションを使用した、埋め込みオブジェクトへのアクセス
-        href: access-embedded-objects-using-ui-automation.md
-  - name: UI オートメーション コントロール型
-    href: ui-automation-control-types.md
-    items:
-    - name: UI オートメーション コントロール型の概要
-      href: ui-automation-control-types-overview.md
-    - name: UI オートメーションによる Button コントロール型のサポート
-      href: ui-automation-support-for-the-button-control-type.md
-    - name: UI オートメーションによる Calendar コントロール型のサポート
-      href: ui-automation-support-for-the-calendar-control-type.md
-    - name: UI オートメーションによる CheckBox コントロール型のサポート
-      href: ui-automation-support-for-the-checkbox-control-type.md
-    - name: UI オートメーションによる ComboBox コントロール型のサポート
-      href: ui-automation-support-for-the-combobox-control-type.md
-    - name: UI オートメーションによる DataGrid コントロール型のサポート
-      href: ui-automation-support-for-the-datagrid-control-type.md
-    - name: UI オートメーションによる DataItem コントロール型のサポート
-      href: ui-automation-support-for-the-dataitem-control-type.md
-    - name: UI オートメーションによる Document コントロール型のサポート
-      href: ui-automation-support-for-the-document-control-type.md
-    - name: UI オートメーションによる Edit コントロール型のサポート
-      href: ui-automation-support-for-the-edit-control-type.md
-    - name: UI オートメーションによる Group コントロール型のサポート
-      href: ui-automation-support-for-the-group-control-type.md
-    - name: UI オートメーションによる Header コントロール型のサポート
-      href: ui-automation-support-for-the-header-control-type.md
-    - name: UI オートメーションによる HeaderItem コントロール型のサポート
-      href: ui-automation-support-for-the-headeritem-control-type.md
-    - name: UI オートメーションによる Hyperlink コントロール型のサポート
-      href: ui-automation-support-for-the-hyperlink-control-type.md
-    - name: UI オートメーションによる Image コントロール型のサポート
-      href: ui-automation-support-for-the-image-control-type.md
-    - name: UI オートメーションによる List コントロール型のサポート
-      href: ui-automation-support-for-the-list-control-type.md
-    - name: UI オートメーションによる ListItem コントロール型のサポート
-      href: ui-automation-support-for-the-listitem-control-type.md
-    - name: UI オートメーションによる Menu コントロール型のサポート
-      href: ui-automation-support-for-the-menu-control-type.md
-    - name: UI オートメーションによる MenuBar コントロール型のサポート
-      href: ui-automation-support-for-the-menubar-control-type.md
-    - name: UI オートメーションによる MenuItem コントロール型のサポート
-      href: ui-automation-support-for-the-menuitem-control-type.md
-    - name: UI オートメーションによる Pane コントロール型のサポート
-      href: ui-automation-support-for-the-pane-control-type.md
-    - name: UI オートメーションによる ProgressBar コントロール型のサポート
-      href: ui-automation-support-for-the-progressbar-control-type.md
-    - name: UI オートメーションによる RadioButton コントロール型のサポート
-      href: ui-automation-support-for-the-radiobutton-control-type.md
-    - name: UI オートメーションによる ScrollBar コントロール型のサポート
-      href: ui-automation-support-for-the-scrollbar-control-type.md
-    - name: UI オートメーションによる Separator コントロール型のサポート
-      href: ui-automation-support-for-the-separator-control-type.md
-    - name: UI オートメーションによる Slider コントロール型のサポート
-      href: ui-automation-support-for-the-slider-control-type.md
-    - name: UI オートメーションによる Spinner コントロール型のサポート
-      href: ui-automation-support-for-the-spinner-control-type.md
-    - name: UI オートメーションによる SplitButton コントロール型のサポート
-      href: ui-automation-support-for-the-splitbutton-control-type.md
-    - name: UI オートメーションによる StatusBar コントロール型のサポート
-      href: ui-automation-support-for-the-statusbar-control-type.md
-    - name: UI オートメーションによる Tab コントロール型のサポート
-      href: ui-automation-support-for-the-tab-control-type.md
-    - name: UI オートメーションでの TabItem コントロール型のサポート
-      href: ui-automation-support-for-the-tabitem-control-type.md
-    - name: UI オートメーションによる Table コントロール型のサポート
-      href: ui-automation-support-for-the-table-control-type.md
-    - name: UI オートメーションによる Text コントロール型のサポート
-      href: ui-automation-support-for-the-text-control-type.md
-    - name: UI オートメーションによる Thumb コントロール型のサポート
-      href: ui-automation-support-for-the-thumb-control-type.md
-    - name: UI オートメーションによる TitleBar コントロール型のサポート
-      href: ui-automation-support-for-the-titlebar-control-type.md
-    - name: UI オートメーションによる ToolBar コントロール型のサポート
-      href: ui-automation-support-for-the-toolbar-control-type.md
-    - name: UI オートメーションによる ToolTip コントロール型のサポート
-      href: ui-automation-support-for-the-tooltip-control-type.md
-    - name: UI オートメーションによる Tree コントロール型のサポート
-      href: ui-automation-support-for-the-tree-control-type.md
-    - name: UI オートメーションによる TreeItem コントロール型のサポート
-      href: ui-automation-support-for-the-treeitem-control-type.md
-    - name: UI オートメーションによる Window コントロール型のサポート
-      href: ui-automation-support-for-the-window-control-type.md
-  - name: UI Automation Specification および UI Automation Community Promise
-    href: ui-automation-specification-and-community-promise.md
-ms.openlocfilehash: b30bb47e5b2bfb91c64a07c055889e83310da789
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470186"
+        - name: UI オートメーション Dock コントロール パターンの実装
+          href: implementing-the-ui-automation-dock-control-pattern.md
+        - name: UI オートメーション ExpandCollapse コントロール パターンの実装
+          href: implementing-the-ui-automation-expandcollapse-control-pattern.md
+        - name: UI オートメーション Grid コントロール パターンの実装
+          href: implementing-the-ui-automation-grid-control-pattern.md
+        - name: UI オートメーション GridItem コントロール パターンの実装
+          href: implementing-the-ui-automation-griditem-control-pattern.md
+        - name: UI オートメーション Invoke コントロール パターンの実装
+          href: implementing-the-ui-automation-invoke-control-pattern.md
+        - name: UI オートメーション MultipleView コントロール パターンの実装
+          href: implementing-the-ui-automation-multipleview-control-pattern.md
+        - name: UI オートメーション RangeValue コントロール パターンの実装
+          href: implementing-the-ui-automation-rangevalue-control-pattern.md
+        - name: UI オートメーション Scroll コントロール パターンの実装
+          href: implementing-the-ui-automation-scroll-control-pattern.md
+        - name: UI オートメーション ScrollItem コントロール パターンの実装
+          href: implementing-the-ui-automation-scrollitem-control-pattern.md
+        - name: UI オートメーション Selection コントロール パターンの実装
+          href: implementing-the-ui-automation-selection-control-pattern.md
+        - name: UI オートメーション SelectionItem コントロール パターンの実装
+          href: implementing-the-ui-automation-selectionitem-control-pattern.md
+        - name: UI オートメーション Table コントロール パターンの実装
+          href: implementing-the-ui-automation-table-control-pattern.md
+        - name: UI オートメーション TableItem コントロール パターンの実装
+          href: implementing-the-ui-automation-tableitem-control-pattern.md
+        - name: UI オートメーション Toggle コントロール パターンの実装
+          href: implementing-the-ui-automation-toggle-control-pattern.md
+        - name: UI オートメーション Transform コントロール パターンの実装
+          href: implementing-the-ui-automation-transform-control-pattern.md
+        - name: UI オートメーション Value コントロール パターンの実装
+          href: implementing-the-ui-automation-value-control-pattern.md
+        - name: UI オートメーション Window コントロール パターンの実装
+          href: implementing-the-ui-automation-window-control-pattern.md
+        - name: 方法のトピック
+          href: ui-automation-control-patterns-how-to-topics.md
+          items:
+            - name: UI オートメーションを使用したテーブルの内容の公開
+              href: expose-the-content-of-a-table-using-ui-automation.md
+            - name: サポートされている UI オートメーション コントロール パターンの取得
+              href: get-supported-ui-automation-control-patterns.md
+            - name: UI オートメーションを使用した、チェック ボックスのトグル状態の取得
+              href: get-the-toggle-state-of-a-check-box-using-ui-automation.md
+            - name: UI オートメーションを使用したコントロールの呼び出し
+              href: invoke-a-control-using-ui-automation.md
+            - name: UI オートメーション要素の移動
+              href: move-a-ui-automation-element.md
+    - name: UI オートメーション テキスト パターン
+      href: ui-automation-text-pattern.md
+      items:
+        - name: UI オートメーション TextPattern の概要
+          href: ui-automation-textpattern-overview.md
+        - name: TextPattern および埋め込みオブジェクトの概要
+          href: textpattern-and-embedded-objects-overview.md
+        - name: 方法のトピック
+          href: ui-automation-text-pattern-how-to-topics.md
+          items:
+            - name: UI オートメーションを使用した、テキスト ボックスへのコンテンツの追加
+              href: add-content-to-a-text-box-using-ui-automation.md
+            - name: UI オートメーションを使用した、テキストの検索と強調表示
+              href: find-and-highlight-text-using-ui-automation.md
+            - name: UI オートメーションを使用してテキスト属性を取得する
+              href: obtain-text-attributes-using-ui-automation.md
+            - name: UI オートメーションを使用して混合テキスト属性の詳細を取得する
+              href: obtain-mixed-text-attribute-details-using-ui-automation.md
+            - name: UI オートメーションを使用したテキストのスキャン
+              href: traverse-text-using-ui-automation.md
+            - name: UI オートメーションを使用した、埋め込みオブジェクトへのアクセス
+              href: access-embedded-objects-using-ui-automation.md
+    - name: UI オートメーション コントロール型
+      href: ui-automation-control-types.md
+      items:
+        - name: UI オートメーション コントロール型の概要
+          href: ui-automation-control-types-overview.md
+        - name: UI オートメーションによる Button コントロール型のサポート
+          href: ui-automation-support-for-the-button-control-type.md
+        - name: UI オートメーションによる Calendar コントロール型のサポート
+          href: ui-automation-support-for-the-calendar-control-type.md
+        - name: UI オートメーションによる CheckBox コントロール型のサポート
+          href: ui-automation-support-for-the-checkbox-control-type.md
+        - name: UI オートメーションによる ComboBox コントロール型のサポート
+          href: ui-automation-support-for-the-combobox-control-type.md
+        - name: UI オートメーションによる DataGrid コントロール型のサポート
+          href: ui-automation-support-for-the-datagrid-control-type.md
+        - name: UI オートメーションによる DataItem コントロール型のサポート
+          href: ui-automation-support-for-the-dataitem-control-type.md
+        - name: UI オートメーションによる Document コントロール型のサポート
+          href: ui-automation-support-for-the-document-control-type.md
+        - name: UI オートメーションによる Edit コントロール型のサポート
+          href: ui-automation-support-for-the-edit-control-type.md
+        - name: UI オートメーションによる Group コントロール型のサポート
+          href: ui-automation-support-for-the-group-control-type.md
+        - name: UI オートメーションによる Header コントロール型のサポート
+          href: ui-automation-support-for-the-header-control-type.md
+        - name: UI オートメーションによる HeaderItem コントロール型のサポート
+          href: ui-automation-support-for-the-headeritem-control-type.md
+        - name: UI オートメーションによる Hyperlink コントロール型のサポート
+          href: ui-automation-support-for-the-hyperlink-control-type.md
+        - name: UI オートメーションによる Image コントロール型のサポート
+          href: ui-automation-support-for-the-image-control-type.md
+        - name: UI オートメーションによる List コントロール型のサポート
+          href: ui-automation-support-for-the-list-control-type.md
+        - name: UI オートメーションによる ListItem コントロール型のサポート
+          href: ui-automation-support-for-the-listitem-control-type.md
+        - name: UI オートメーションによる Menu コントロール型のサポート
+          href: ui-automation-support-for-the-menu-control-type.md
+        - name: UI オートメーションによる MenuBar コントロール型のサポート
+          href: ui-automation-support-for-the-menubar-control-type.md
+        - name: UI オートメーションによる MenuItem コントロール型のサポート
+          href: ui-automation-support-for-the-menuitem-control-type.md
+        - name: UI オートメーションによる Pane コントロール型のサポート
+          href: ui-automation-support-for-the-pane-control-type.md
+        - name: UI オートメーションによる ProgressBar コントロール型のサポート
+          href: ui-automation-support-for-the-progressbar-control-type.md
+        - name: UI オートメーションによる RadioButton コントロール型のサポート
+          href: ui-automation-support-for-the-radiobutton-control-type.md
+        - name: UI オートメーションによる ScrollBar コントロール型のサポート
+          href: ui-automation-support-for-the-scrollbar-control-type.md
+        - name: UI オートメーションによる Separator コントロール型のサポート
+          href: ui-automation-support-for-the-separator-control-type.md
+        - name: UI オートメーションによる Slider コントロール型のサポート
+          href: ui-automation-support-for-the-slider-control-type.md
+        - name: UI オートメーションによる Spinner コントロール型のサポート
+          href: ui-automation-support-for-the-spinner-control-type.md
+        - name: UI オートメーションによる SplitButton コントロール型のサポート
+          href: ui-automation-support-for-the-splitbutton-control-type.md
+        - name: UI オートメーションによる StatusBar コントロール型のサポート
+          href: ui-automation-support-for-the-statusbar-control-type.md
+        - name: UI オートメーションによる Tab コントロール型のサポート
+          href: ui-automation-support-for-the-tab-control-type.md
+        - name: UI オートメーションでの TabItem コントロール型のサポート
+          href: ui-automation-support-for-the-tabitem-control-type.md
+        - name: UI オートメーションによる Table コントロール型のサポート
+          href: ui-automation-support-for-the-table-control-type.md
+        - name: UI オートメーションによる Text コントロール型のサポート
+          href: ui-automation-support-for-the-text-control-type.md
+        - name: UI オートメーションによる Thumb コントロール型のサポート
+          href: ui-automation-support-for-the-thumb-control-type.md
+        - name: UI オートメーションによる TitleBar コントロール型のサポート
+          href: ui-automation-support-for-the-titlebar-control-type.md
+        - name: UI オートメーションによる ToolBar コントロール型のサポート
+          href: ui-automation-support-for-the-toolbar-control-type.md
+        - name: UI オートメーションによる ToolTip コントロール型のサポート
+          href: ui-automation-support-for-the-tooltip-control-type.md
+        - name: UI オートメーションによる Tree コントロール型のサポート
+          href: ui-automation-support-for-the-tree-control-type.md
+        - name: UI オートメーションによる TreeItem コントロール型のサポート
+          href: ui-automation-support-for-the-treeitem-control-type.md
+        - name: UI オートメーションによる Window コントロール型のサポート
+          href: ui-automation-support-for-the-window-control-type.md
+    - name: UI Automation Specification および UI Automation Community Promise
+      href: ui-automation-specification-and-community-promise.md

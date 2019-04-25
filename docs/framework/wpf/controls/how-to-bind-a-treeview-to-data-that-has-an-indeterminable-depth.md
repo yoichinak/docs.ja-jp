@@ -5,11 +5,11 @@ helpviewer_keywords:
 - TreeView control [WPF], binding to data of indeterminate depth
 ms.assetid: daddcd74-1b0f-4ffd-baeb-ec934c5e0f53
 ms.openlocfilehash: 7da0a121cdb854c787c105c92cec70b7c4b3244e
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59214859"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911080"
 ---
 # <a name="how-to-bind-a-treeview-to-data-that-has-an-indeterminable-depth"></a>方法: 深度がわからないデータに TreeView をバインドする
 バインドに必要な場合がある可能性があります、<xref:System.Windows.Controls.TreeView>深さがわからない場合は、データ ソースにします。  これは、データが再帰的な場所のフォルダーは、フォルダーを含めることができます、ファイル システム、または企業の組織の構造など、本質的に直属の部下として他の従業員の従業員がある場合に発生します。  

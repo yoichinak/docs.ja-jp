@@ -12,10 +12,10 @@ helpviewer_keywords:
 - Freezable objects [WPF], performance
 ms.assetid: 73aa2f47-1d73-439a-be1f-78dc4ba2b5bd
 ms.openlocfilehash: 49318059435c5f5669510f7cf3fb7c93a4bc05e1
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59137437"
 ---
 # <a name="optimizing-performance-object-behavior"></a>パフォーマンスの最適化:オブジェクトの動作
@@ -25,7 +25,7 @@ ms.locfileid: "59137437"
 ## <a name="not-removing-event-handlers-on-objects-may-keep-objects-alive"></a>オブジェクトのイベント ハンドラーを削除しないとオブジェクトが維持される可能性がある  
  オブジェクトがそのイベントに渡すデリゲートは、事実上そのオブジェクトへの参照です。 このため、イベント ハンドラーによってオブジェクトが本来より長く維持される可能性があります。 オブジェクトのイベントをリッスンするように登録されているオブジェクトのクリーンアップを実行するときには、オブジェクトを解放する前にそのデリゲートを削除することが重要です。 不要なオブジェクトが残っていると、アプリケーションのメモリ使用量が増加します。 これは、オブジェクトが論理ツリーやビジュアル ツリーのルートである場合には特に重要になります。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ソースとリスナー間でオブジェクトの有効期間の関係が追跡する困難な状況で役に立ちますイベントの弱いイベント リスナー パターンについて説明します。 一部の既存の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベントはこのパターンを使用します。 カスタム イベントを持つオブジェクトを実装する場合に、このパターンが役に立つこともあります。 詳細については、「[弱いイベント パターン](weak-event-patterns.md)」を参照してください。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] によって導入される弱いイベント リスナー パターンは、ソースとリスナーのオブジェクト有効期間の関係の追跡が困難な場合に役に立ちます。 一部の既存の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベントはこのパターンを使用します。 カスタム イベントを持つオブジェクトを実装する場合に、このパターンが役に立つこともあります。 詳細については、「[弱いイベント パターン](weak-event-patterns.md)」を参照してください。  
   
  CLR プロファイラーや作業セット ビューアーなど、特定のプロセスのメモリ使用量に関する情報を入手できるツールもいくつかあります。 CLR プロファイラーには、割り当てられた型のヒストグラム、割り当てグラフと呼び出しグラフ、さまざまなジェネレーションのガベージ コレクションとその結果のマネージド ヒープの状態を示す時系列、メソッドごとの割り当てとアセンブリの読み込みを示す呼び出しツリーなど、非常に便利な割り当てプロファイルのビューがいくつか含まれています。 詳細については、「[.NET Framework デベロッパー センター](https://go.microsoft.com/fwlink/?LinkId=117435)」を参照してください。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "59137437"
   
  固定、<xref:System.Windows.Freezable>変更通知の維持にリソースを費やす必要がなくなったために、パフォーマンスが向上することができます。 次の表は、簡単なサイズ<xref:System.Windows.Media.SolidColorBrush>ときにその<xref:System.Windows.Freezable.IsFrozen%2A>プロパティに設定されて`true`ではない場合に比べて、します。 これは 1 つのブラシを適用することを前提としています、 <xref:System.Windows.Shapes.Shape.Fill%2A> 10 プロパティ<xref:System.Windows.Shapes.Rectangle>オブジェクト。  
   
-|**状態**|**サイズ**|  
+|**状態**|**Size**|  
 |---------------|--------------|  
 |固定されています。 <xref:System.Windows.Media.SolidColorBrush>|212 バイト|  
 |固定されていません。 <xref:System.Windows.Media.SolidColorBrush>|972 バイト|  
@@ -116,6 +116,6 @@ ms.locfileid: "59137437"
 - [レイアウトとデザイン](optimizing-performance-layout-and-design.md)
 - [2D グラフィックスとイメージング](optimizing-performance-2d-graphics-and-imaging.md)
 - [アプリケーション リソース](optimizing-performance-application-resources.md)
-- [テキスト](optimizing-performance-text.md)
+- [[テキスト]](optimizing-performance-text.md)
 - [データ バインディング](optimizing-performance-data-binding.md)
 - [パフォーマンスに関するその他の推奨事項](optimizing-performance-other-recommendations.md)

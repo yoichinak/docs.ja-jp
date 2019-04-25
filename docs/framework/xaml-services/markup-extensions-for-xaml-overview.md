@@ -6,10 +6,10 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59224924"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML のマークアップ拡張機能の概要
@@ -25,19 +25,19 @@ ms.locfileid: "59224924"
 >  `x:` プレフィックスは、XAML 稼働環境のルート要素で、XAML 言語の名前空間を標準的な XAML 名前空間にマッピングするために使用します。 さまざまな特定のフレームワークの Visual Studio プロジェクトとページ テンプレートがこれを使用して XAML ファイルを開始するなど、`x:`マッピングします。 独自の XAML 名前空間のマッピングに別のプレフィックス トークンを選択することもできますが、このドキュメントでは、既定の `x:` マッピングを、独自の固有なフレームワークの既定の XAML 名前空間や他の任意の CLR 名前空間または XML 名前空間ではなく、XAML 言語の XAML 名前空間の一部として定義されているエンティティを識別する手段と想定します。  
   
 ### <a name="xtype"></a>x:Type  
- `x:Type` 提供、<xref:System.Type>名前付きの型のオブジェクト。 この機能は、基になる CLR 型やそれから派生した型をグループ化のモニカーまたは識別子として使用する遅延メカニズムの中で最も頻繁に使用されます。 具体的な例には、WPF のスタイルとテンプレート、およびそれらにおける `TargetType` プロパティの使用があります。 詳細については、「 [x:Type Markup Extension](x-type-markup-extension.md)」を参照してください。  
+ `x:Type` は、名前を指定した型の <xref:System.Type> オブジェクトを提供します。 この機能は、基になる CLR 型やそれから派生した型をグループ化のモニカーまたは識別子として使用する遅延メカニズムの中で最も頻繁に使用されます。 具体的な例には、WPF のスタイルとテンプレート、およびそれらにおける `TargetType` プロパティの使用があります。 詳細については、「 [x:Type Markup Extension](x-type-markup-extension.md)」を参照してください。  
   
 ### <a name="xstatic"></a>x:Static  
- `x:Static` 直接プロパティの値の型ではありませんが、その型に評価される値型コード エンティティからの静的な値を生成します。 これは、型定義で既知の定数として既に存在する値を指定するときに便利です。 詳細については、「 [x:Static Markup Extension](x-static-markup-extension.md)」を参照してください。  
+ `x:Static` は、直接的にはプロパティの値の型ではなくても、その型に評価することができる値型コード エンティティから、静的な値を生成します。 これは、型定義で既知の定数として既に存在する値を指定するときに便利です。 詳細については、「 [x:Static Markup Extension](x-static-markup-extension.md)」を参照してください。  
   
 ### <a name="xnull"></a>x:Null  
- `x:Null` 指定します`null`XAML メンバーの値として。 特定の型の設計やフレームワークの広義の概念によっては、 `null` がプロパティの既定値に該当しない場合や、空の文字列属性の暗黙的な値に該当しない場合もあります。 詳細については、「 [x:Null Markup Extension](x-null-markup-extension.md)」を参照してください。  
+ `x:Null` は、XAML メンバーに対する値として `null` を指定します。 特定の型の設計やフレームワークの広義の概念によっては、 `null` がプロパティの既定値に該当しない場合や、空の文字列属性の暗黙的な値に該当しない場合もあります。 詳細については、「 [x:Null Markup Extension](x-null-markup-extension.md)」を参照してください。  
   
 ### <a name="xarray"></a>x:Array  
- `x:Array` 基本要素とコントロール モデルによって提供されるコレクションのサポートは意図的に使用されている場合、XAML 構文では、一般的な配列の作成をサポートしています。 詳細については、「 [x:Array Markup Extension](x-array-markup-extension.md)」を参照してください。 XAML 2009 では、厳密に言うと、拡張機能としてではなく言語プリミティブとして配列にアクセスします。 詳細については、「 [XAML 2009 Language Features](xaml-2009-language-features.md)」を参照してください。  
+ `x:Array` は、XAML 構文での一般的な配列の作成をサポートします。基本要素とコントロール モデルで提供されているコレクションのサポートをあえて使用しない場合に使用します。 詳細については、「 [x:Array Markup Extension](x-array-markup-extension.md)」を参照してください。 XAML 2009 では、厳密に言うと、拡張機能としてではなく言語プリミティブとして配列にアクセスします。 詳細については、「 [XAML 2009 Language Features](xaml-2009-language-features.md)」を参照してください。  
   
 ### <a name="xreference"></a>x:Reference  
- `x:Reference` XAML 2009 では、元 (2006 年) の言語セットの拡張機能の一部です。 `x:Reference` オブジェクト グラフ内の別の既存オブジェクトへの参照を表します。 このオブジェクトは、その `x:Name`によって識別されます。 詳細については、「 [x:Reference Markup Extension](x-reference-markup-extension.md)」を参照してください。  
+ `x:Reference` は XAML 2009 に含まれており、元 (2006) の言語セットの拡張機能です。 `x:Reference` は、オブジェクト グラフにある別の既存のオブジェクトへの参照を表します。 このオブジェクトは、その `x:Name`によって識別されます。 詳細については、「 [x:Reference Markup Extension](x-reference-markup-extension.md)」を参照してください。  
   
 ### <a name="other-x-constructs"></a>その他の x:構築します  
  XAML 言語機能をサポートするための他の `x:` コンストラクトも存在しますが、マークアップ拡張機能としては実装されていません。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能](xaml-namespace-x-language-features.md)します。  
@@ -122,7 +122,7 @@ public Collate(CollationMode collationMode, object collateThis) {...}
 ## <a name="attributing-for-a-custom-markup-extension"></a>カスタム マークアップ拡張機能の属性設定  
  デザイン環境と、特定の XAML オブジェクト ライターのシナリオのどちらをサポートするためにも、マークアップ拡張機能のサポート型にいくつかの CLR 属性を設定する必要があります。 これらの属性は、目的のマークアップ拡張機能の使用を報告します。  
   
- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> レポート、<xref:System.Type>オブジェクトの情報の種類を<xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A>を返します。 純粋なシグネチャとしては、 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> は <xref:System.Object>を返します。 ただし、コンシューマーの種類によっては、戻り値の型についてさらに詳細な情報が必要になる場合があります。 バインディングには、以下の項目が含まれます。  
+ <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> は、 <xref:System.Type> が返すオブジェクトの型の <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 情報を報告します。 純粋なシグネチャとしては、 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> は <xref:System.Object>を返します。 ただし、コンシューマーの種類によっては、戻り値の型についてさらに詳細な情報が必要になる場合があります。 バインディングには、以下の項目が含まれます。  
   
 -   マークアップ拡張機能の使用に関して、型を認識したサポートを提供できるデザイナーや IDE を実現するための情報。  
   
@@ -138,11 +138,11 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  マークアップ拡張機能の使用で位置指定引数が使用される場合、その使用は初期化の値が設定された開始オブジェクトとして表されます。 大まかなテキスト表現では、ノード ストリームは次のようになります。  
   
- `StartObject` (<xref:System.Xaml.XamlType>はマークアップ拡張機能の定義の種類、その戻り値の型ではありません)  
+ `StartObject` (<xref:System.Xaml.XamlType> はマークアップ拡張機能の定義の型であり、戻り値の型ではありません)  
   
- `StartMember` (名前、<xref:System.Xaml.XamlMember>は`_InitializationText`)  
+ `StartMember` ( <xref:System.Xaml.XamlMember> の名前は `_InitializationText`)  
   
- `Value` (値は、介在する区切り記号を含む文字列として位置指定引数は)  
+ `Value` (値は、途中に区切り記号を含む文字列形式の位置指定引数)  
   
  `EndMember`  
   

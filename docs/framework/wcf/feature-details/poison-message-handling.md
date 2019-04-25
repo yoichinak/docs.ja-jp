@@ -3,10 +3,10 @@ title: 有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: 8d1c5e5a-7928-4a80-95ed-d8da211b8595
 ms.openlocfilehash: fe748ac40f03ed22cacb254ab464a6caf3d27a8c
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59305027"
 ---
 # <a name="poison-message-handling"></a>有害メッセージ処理
@@ -21,9 +21,9 @@ A*有害なメッセージ*をアプリケーションに配信試行の最大�
   
 -   `ReceiveRetryCount`. アプリケーション キューからアプリケーションへのメッセージの配信を再試行する最大回数を示す整数値。 既定値は 5 です。 データベースの一時的なデッドロックなどの問題を即時再試行で解決する場合は、この値で十分です。  
   
--   `MaxRetryCycles`. 再試行サイクルの最大数を示す整数値。 再試行サイクルは、アプリケーション キューから再試行サブキューにメッセージを転送し、構成可能な遅延の後に再試行サブキューからアプリケーション キューにメッセージを転送して配信を再試行するプロセスで構成されます。 既定値は 2 です。 [!INCLUDE[wv](../../../../includes/wv-md.md)] では、メッセージが最大で (`ReceiveRetryCount` + 1) × (`MaxRetryCycles` + 1) 回試行されます。 `MaxRetryCycles` 時に無視されます[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]と[!INCLUDE[wxp](../../../../includes/wxp-md.md)]します。  
+-   `MaxRetryCycles`. 再試行サイクルの最大数を示す整数値。 再試行サイクルは、アプリケーション キューから再試行サブキューにメッセージを転送し、構成可能な遅延の後に再試行サブキューからアプリケーション キューにメッセージを転送して配信を再試行するプロセスで構成されます。 既定値は 2 です。 [!INCLUDE[wv](../../../../includes/wv-md.md)] では、メッセージが最大で (`ReceiveRetryCount` + 1) × (`MaxRetryCycles` + 1) 回試行されます。 `MaxRetryCycles` は、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] および [!INCLUDE[wxp](../../../../includes/wxp-md.md)] では無視されます。  
   
--   `RetryCycleDelay`. 再試行サイクル間の遅延時間。 既定値は 30 分です。 `MaxRetryCycles` `RetryCycleDelay`まとめて、定期的な遅延後に再試行が問題を解決する問題に対処するためのメカニズムを提供します。 たとえば、SQL Server の保留中のトランザクションのコミットでロックされた行セットが処理されます。  
+-   `RetryCycleDelay`. 再試行サイクル間の遅延時間。 既定値は 30 分です。 `MaxRetryCycles` と `RetryCycleDelay` の組み合わせにより、問題に対処する機構が提供されます。この場合、定期的な遅延後に再試行が行われ、問題が解決されます。 たとえば、SQL Server の保留中のトランザクションのコミットでロックされた行セットが処理されます。  
   
 -   `ReceiveErrorHandling`. 再試行を最大回数実行しても配信できなかったメッセージに対して実行するアクションを示す列挙値。 値には、Fault、Drop、Reject、および Move の 4 つがあります。 既定のオプションは Fault です。  
   
@@ -52,9 +52,9 @@ A*有害なメッセージ*をアプリケーションに配信試行の最大�
   
  WCF には、2 つの標準的なキューに置かれたバインディングが用意されています。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>. A[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]他の WCF エンドポイントとの通信をキュー ベースの実行に適したバインディング。  
+-   <xref:System.ServiceModel.NetMsmqBinding>。 A[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]他の WCF エンドポイントとの通信をキュー ベースの実行に適したバインディング。  
   
--   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>. 既存のメッセージ キュー アプリケーションとの通信に適したバインディング。  
+-   <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>。 既存のメッセージ キュー アプリケーションとの通信に適したバインディング。  
   
 > [!NOTE]
 >  WCF サービスの要件に基づいてこれらのバインドのプロパティを変更することができます。 有害メッセージ処理機構全体は、受信側アプリケーションに対してローカルです。 このプロセスは、受信側アプリケーションが最終的に処理を停止し、送信側に否定受信確認を返信する場合を除き、送信元アプリケーションには認識されません。 この場合、メッセージは、送信元の配信不能キューに送られます。  
@@ -92,7 +92,7 @@ A*有害なメッセージ*をアプリケーションに配信試行の最大�
  バッチの一部であるメッセージが有害メッセージになった場合は、バッチ全体がロールバックされ、チャネルはメッセージを 1 つずつ読み取る処理に戻ります。 バッチ処理の詳細については、次を参照してください[トランザクションでメッセージのバッチ処理。](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)  
   
 ## <a name="poison-message-handling-for-messages-in-a-poison-queue"></a>有害キュー内のメッセージに対する有害メッセージ処理  
- 有害メッセージ処理は、メッセージが有害メッセージ キューに配置された時点では終了しません。 有害メッセージ キューに置かれたメッセージは、依然として読み取り、処理する必要があります。 最終有害サブキューからメッセージを読み取るときは、有害メッセージ処理設定のサブセットを使用できます。 適用できる設定は、`ReceiveRetryCount` と `ReceiveErrorHandling` です。 `ReceiveErrorHandling` は Drop、Rreject、Fault のいずれかに設定できます。 `MaxRetryCycles` 無視される場合、例外がスローされます`ReceiveErrorHandling`が Move に設定します。  
+ 有害メッセージ処理は、メッセージが有害メッセージ キューに配置された時点では終了しません。 有害メッセージ キューに置かれたメッセージは、依然として読み取り、処理する必要があります。 最終有害サブキューからメッセージを読み取るときは、有害メッセージ処理設定のサブセットを使用できます。 適用できる設定は、`ReceiveRetryCount` と `ReceiveErrorHandling` です。 `ReceiveErrorHandling` は Drop、Rreject、Fault のいずれかに設定できます。 `MaxRetryCycles` が Move に設定されている場合は、`ReceiveErrorHandling` が無視され、例外がスローされます。  
   
 ## <a name="windows-vista-windows-server-2003-and-windows-xp-differences"></a>Windows Vista、Windows Server 2003、および Windows XP の相違点  
  前述のように、[!INCLUDE[ws2003](../../../../includes/ws2003-md.md)] と [!INCLUDE[wxp](../../../../includes/wxp-md.md)] には、すべての有害メッセージ処理設定が適用されるわけではありません。 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、[!INCLUDE[wxp](../../../../includes/wxp-md.md)]、および [!INCLUDE[wv](../../../../includes/wv-md.md)] のメッセージ キューには、有害メッセージの処理に関連する次のような重要な違いがあります。  

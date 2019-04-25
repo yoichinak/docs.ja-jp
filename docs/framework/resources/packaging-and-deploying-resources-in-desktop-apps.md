@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: b224d7c0-35f8-4e82-a705-dd76795e8d16
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9edc54b5b7d86f0ecb58a6910cde82d088b2c663
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 19f1d3d1d94db885938a5da3f3b66c8e554205b5
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357860"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59611394"
 ---
 # <a name="packaging-and-deploying-resources-in-net-apps"></a>.NET アプリでのリソースのパッケージ化と配置
 
@@ -226,6 +226,7 @@ vbc Example1.vb
 ```
 Bon jour!
 ```
+
 ## <a name="suggested-packaging-alternative"></a>推奨されるパッケージ化の代替方法
 
 時間や予算の制約により、アプリケーションがサポートするすべてのサブカルチャのリソース セットを作成できない場合があります。 そのような場合は、関連のあるすべてのサブカルチャで使うことができる親カルチャ用の単一のサテライト アセンブリを作成できます。 たとえば、地域固有の英語リソースを要求するユーザーによって取得される単一の英語サテライト アセンブリ (en) と、地域固有のドイツ語リソースを要求するユーザー用の単一のドイツ語サテライト アセンブリ (de) を提供することができます。 たとえば、ドイツ (de-DE)、オーストリア (de-AT)、スイス (de-CH) で話されるドイツ語の要求は、ドイツ語のサテライト アセンブリ (de) にフォールバックします。 既定のリソースは最終的なフォールバックであり、アプリケーションのほとんどのユーザーによって要求されるリソースであるため、これらのリソースは慎重に選択する必要があります。 この方法では、カルチャ固有性の低いリソースが配置されますが、アプリケーションのローカライズ費用を大幅に削減できます。

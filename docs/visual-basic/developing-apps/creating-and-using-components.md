@@ -5,10 +5,10 @@ helpviewer_keywords:
 - components [Visual Basic]
 ms.assetid: ee6a4156-73f7-4e9b-8e01-c74c4798b65c
 ms.openlocfilehash: ca336e2ffa3831167088d92bfca017ce2226d8a9
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58828083"
 ---
 # <a name="creating-and-using-components-in-visual-basic"></a>Visual Basic でのコンポーネントの作成および使用
@@ -34,29 +34,29 @@ ms.locfileid: "58828083"
   
  核となるコンポーネント クラスは次のとおりです。  
   
--   <xref:System.ComponentModel.Component>. <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。 このクラスにより、アプリケーション間でオブジェクトの共有が可能になります。  
+-   <xref:System.ComponentModel.Component>。 <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。 このクラスにより、アプリケーション間でオブジェクトの共有が可能になります。  
   
--   <xref:System.ComponentModel.MarshalByValueComponent>. <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。  
+-   <xref:System.ComponentModel.MarshalByValueComponent>。 <xref:System.ComponentModel.IComponent> インターフェイスの基本実装。  
   
 -   <xref:System.ComponentModel.Container>。 <xref:System.ComponentModel.IContainer> インターフェイスの基本実装。 このクラスは、0 個以上のコンポーネントをカプセル化します。  
   
  コンポーネントのライセンス処理に使用するクラスのいくつかを次に示します。  
   
--   <xref:System.ComponentModel.License>. すべてのライセンスの抽象基底クラスです。 ライセンスは、コンポーネントの特定のインスタンスに付与されます。  
+-   <xref:System.ComponentModel.License>。 すべてのライセンスの抽象基底クラスです。 ライセンスは、コンポーネントの特定のインスタンスに付与されます。  
   
--   <xref:System.ComponentModel.LicenseManager>. コンポーネントにライセンスを追加し、<xref:System.ComponentModel.LicenseProvider> を管理するためのプロパティとメソッドを提供します。  
+-   <xref:System.ComponentModel.LicenseManager>。 コンポーネントにライセンスを追加し、<xref:System.ComponentModel.LicenseProvider> を管理するためのプロパティとメソッドを提供します。  
   
--   <xref:System.ComponentModel.LicenseProvider>. ライセンス プロバイダーを実装するための抽象基底クラスです。  
+-   <xref:System.ComponentModel.LicenseProvider>。 ライセンス プロバイダーを実装するための抽象基底クラスです。  
   
--   <xref:System.ComponentModel.LicenseProviderAttribute>. クラスで使用する <xref:System.ComponentModel.LicenseProvider> クラスを指定します。  
+-   <xref:System.ComponentModel.LicenseProviderAttribute>。 クラスで使用する <xref:System.ComponentModel.LicenseProvider> クラスを指定します。  
   
  コンポーネントの説明や永続化に一般的に使用するクラスを次に示します。  
   
--   <xref:System.ComponentModel.TypeDescriptor>. 属性、プロパティ、イベントなど、コンポーネントの特性に関する情報を提供します。  
+-   <xref:System.ComponentModel.TypeDescriptor>。 属性、プロパティ、イベントなど、コンポーネントの特性に関する情報を提供します。  
   
--   <xref:System.ComponentModel.EventDescriptor>. イベントに関する情報を提供します。  
+-   <xref:System.ComponentModel.EventDescriptor>。 イベントに関する情報を提供します。  
   
--   <xref:System.ComponentModel.PropertyDescriptor>. プロパティに関する情報を提供します。  
+-   <xref:System.ComponentModel.PropertyDescriptor>。 プロパティに関する情報を提供します。  
   
 ## <a name="related-sections"></a>関連項目  
  [コントロールとコンポーネントの作成時のトラブルシューティング](../../framework/winforms/controls/troubleshooting-control-and-component-authoring.md)  

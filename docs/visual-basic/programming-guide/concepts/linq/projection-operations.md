@@ -3,10 +3,10 @@ title: 射影操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
 ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58820985"
 ---
 # <a name="projection-operations-visual-basic"></a>射影操作 (Visual Basic)
@@ -85,11 +85,11 @@ MsgBox(sb.ToString())
   
  次の図は、`Select()` がソース コレクションと同じ数の要素を持つコレクションを返すしくみを示しています。  
   
- ![Select のアクションを示しています。 グラフィック&#40;&#41;](./media/projection-operations/select-action-graphic.png)  
+ ![Select&#40;&#41; のアクションを示すグラフィック。](./media/projection-operations/select-action-graphic.png)  
   
  次の図は、`SelectMany()` が中間配列シーケンスを、各中間配列の値を含む最終的な結果値に連結するしくみを示しています。  
   
- ![SelectMany のアクションを示すグラフィック&#40;&#41;します。](./media/projection-operations/select-many-action-graphic.png )  
+ ![SelectMany&#40;&#41; のアクションを示すグラフィック。](./media/projection-operations/select-many-action-graphic.png )  
   
 ### <a name="code-example"></a>コード例  
  次の例は、`Select()` と `SelectMany()` の動作を比較しています。 コードは、ソース コレクションの花の名前の各リストから最初の 2 つの項目を取って "花束" を作成します。 この例では、変換関数 <xref:System.Linq.Enumerable.Select%60%602%28System.Collections.Generic.IEnumerable%7B%60%600%7D%2CSystem.Func%7B%60%600%2C%60%601%7D%29> が使用する "単一の値" 自体が値のコレクションになっています。 各サブ シーケンスで各文字列を列挙するために追加の `For Each` ループを使用しています。  

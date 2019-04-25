@@ -8,10 +8,10 @@ helpviewer_keywords:
 - TextBox control [WPF]
 ms.assetid: 2512a277-e9d8-4de8-a12f-2bd95e8e7b60
 ms.openlocfilehash: 5be472d0d4f27c7a9acc966e4d6ffbcf9d7a1b0d
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59226964"
 ---
 # <a name="textbox"></a>TextBox
@@ -19,7 +19,7 @@ ms.locfileid: "59226964"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [TextBox の概要](textbox-overview.md)  
- [方法のトピック](textbox-how-to-topics.md)  
+ [方法トピック](textbox-how-to-topics.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Controls.TextBox>  
@@ -32,5 +32,5 @@ ms.locfileid: "59226964"
   
 ## <a name="see-also"></a>関連項目
 
-- [WPF コントロール ギャラリー サンプル](https://go.microsoft.com/fwlink/?LinkID=160053)
+- [WPF Controls Gallery Sample](https://go.microsoft.com/fwlink/?LinkID=160053)
 - [TextBox のスタイルとテンプレート](textbox-styles-and-templates.md)

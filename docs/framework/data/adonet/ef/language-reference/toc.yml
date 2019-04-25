@@ -1,281 +1,274 @@
-items:
 - name: 言語リファレンス
   href: index.md
   items:
-  - name: LINQ to Entities
-    href: linq-to-entities.md
-    items:
-    - name: LINQ to Entities でのクエリ
-      href: queries-in-linq-to-entities.md
+    - name: LINQ to Entities
+      href: linq-to-entities.md
       items:
-      - name: メソッド ベースのクエリ構文例:射影
-        href: method-based-query-syntax-examples-projection.md
-      - name: メソッド ベースのクエリ構文例:フィルター処理
-        href: method-based-query-syntax-examples-filtering.md
-      - name: メソッド ベースのクエリ構文例:順序
-        href: method-based-query-syntax-examples-ordering.md
-      - name: メソッド ベースのクエリ構文例:集計演算子
-        href: method-based-query-syntax-examples-aggregate-operators.md
-      - name: メソッド ベースのクエリ構文例:パーティション分割
-        href: method-based-query-syntax-examples-partitioning.md
-      - name: メソッド ベースのクエリ構文例:変換
-        href: method-based-query-syntax-examples-conversion.md
-      - name: メソッド ベースのクエリ構文例:結合演算子
-        href: method-based-query-syntax-examples-join-operators.md
-      - name: メソッド ベースのクエリ構文例:要素演算子
-        href: method-based-query-syntax-examples-element-operators.md
-      - name: メソッド ベースのクエリ構文例:グループ化
-        href: method-based-query-syntax-examples-grouping.md
-      - name: メソッド ベースのクエリ構文例:リレーションシップの操作
-        href: method-based-query-syntax-examples-navigating-relationships.md
-      - name: クエリ式の構文例:射影
-        href: query-expression-syntax-examples-projection.md
-      - name: クエリ式の構文例:フィルター処理
-        href: query-expression-syntax-examples-filtering.md
-      - name: クエリ式の構文例:順序
-        href: query-expression-syntax-examples-ordering.md
-      - name: クエリ式の構文例:集計演算子
-        href: query-expression-syntax-examples-aggregate-operators.md
-      - name: クエリ式の構文例:パーティション分割
-        href: query-expression-syntax-examples-partitioning.md
-      - name: クエリ式の構文例:結合演算子
-        href: query-expression-syntax-examples-join-operators.md
-      - name: クエリ式の構文例:要素演算子
-        href: query-expression-syntax-examples-element-operators.md
-      - name: クエリ式の構文例:グループ化
-        href: query-expression-syntax-examples-grouping.md
-      - name: クエリ式の構文例:リレーションシップの操作
-        href: query-expression-syntax-examples-navigating-relationships.md
-    - name: LINQ to Entities クエリ内の式
-      href: expressions-in-linq-to-entities-queries.md
+        - name: LINQ to Entities でのクエリ
+          href: queries-in-linq-to-entities.md
+          items:
+            - name: 'メソッド ベースのクエリ構文例:射影'
+              href: method-based-query-syntax-examples-projection.md
+            - name: 'メソッド ベースのクエリ構文例:フィルター処理'
+              href: method-based-query-syntax-examples-filtering.md
+            - name: 'メソッド ベースのクエリ構文例:順序'
+              href: method-based-query-syntax-examples-ordering.md
+            - name: 'メソッド ベースのクエリ構文例:集計演算子'
+              href: method-based-query-syntax-examples-aggregate-operators.md
+            - name: 'メソッド ベースのクエリ構文例:パーティション分割'
+              href: method-based-query-syntax-examples-partitioning.md
+            - name: 'メソッド ベースのクエリ構文例:変換'
+              href: method-based-query-syntax-examples-conversion.md
+            - name: 'メソッド ベースのクエリ構文例:結合演算子'
+              href: method-based-query-syntax-examples-join-operators.md
+            - name: 'メソッド ベースのクエリ構文例:要素演算子'
+              href: method-based-query-syntax-examples-element-operators.md
+            - name: 'メソッド ベースのクエリ構文例:グループ化'
+              href: method-based-query-syntax-examples-grouping.md
+            - name: 'メソッド ベースのクエリ構文例:リレーションシップの操作'
+              href: method-based-query-syntax-examples-navigating-relationships.md
+            - name: 'クエリ式の構文例:射影'
+              href: query-expression-syntax-examples-projection.md
+            - name: 'クエリ式の構文例:フィルター処理'
+              href: query-expression-syntax-examples-filtering.md
+            - name: 'クエリ式の構文例:順序'
+              href: query-expression-syntax-examples-ordering.md
+            - name: 'クエリ式の構文例:集計演算子'
+              href: query-expression-syntax-examples-aggregate-operators.md
+            - name: 'クエリ式の構文例:パーティション分割'
+              href: query-expression-syntax-examples-partitioning.md
+            - name: 'クエリ式の構文例:結合演算子'
+              href: query-expression-syntax-examples-join-operators.md
+            - name: 'クエリ式の構文例:要素演算子'
+              href: query-expression-syntax-examples-element-operators.md
+            - name: 'クエリ式の構文例:グループ化'
+              href: query-expression-syntax-examples-grouping.md
+            - name: 'クエリ式の構文例:リレーションシップの操作'
+              href: query-expression-syntax-examples-navigating-relationships.md
+        - name: LINQ to Entities クエリ内の式
+          href: expressions-in-linq-to-entities-queries.md
+          items:
+            - name: 定数式
+              href: constant-expressions.md
+            - name: 比較式
+              href: comparison-expressions.md
+            - name: NULL 比較
+              href: null-comparisons.md
+            - name: 初期化式
+              href: initialization-expressions.md
+        - name: LINQ to Entities クエリ内の関数の呼び出し
+          href: calling-functions-in-linq-to-entities-queries.md
+          items:
+            - name: '方法: Canonical 関数を呼び出す'
+              href: how-to-call-canonical-functions.md
+            - name: '方法: データベース関数を呼び出す'
+              href: how-to-call-database-functions.md
+            - name: '方法: カスタム データベース関数を呼び出す'
+              href: how-to-call-custom-database-functions.md
+            - name: '方法: クエリを使用してモデル定義関数を呼び出す'
+              href: how-to-call-model-defined-functions-in-queries.md
+            - name: '方法: モデル定義関数をオブジェクト メソッドとして呼び出す'
+              href: how-to-call-model-defined-functions-as-object-methods.md
+        - name: コンパイル済みクエリ (LINQ to Entities)
+          href: compiled-queries-linq-to-entities.md
+        - name: クエリの実行
+          href: query-execution.md
+        - name: クエリ結果
+          href: query-results.md
+        - name: LINQ to Entities クエリの標準クエリ演算子
+          href: standard-query-operators-in-linq-to-entities-queries.md
+        - name: CLR メソッドと正規関数とのマッピング
+          href: clr-method-to-canonical-function-mapping.md
+        - name: サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities)
+          href: supported-and-unsupported-linq-methods-linq-to-entities.md
+        - name: LINQ to Entities の既知の問題および注意点
+          href: known-issues-and-considerations-in-linq-to-entities.md
+    - name: Entity SQL 言語
+      href: entity-sql-language.md
       items:
-      - name: 定数式
-        href: constant-expressions.md
-      - name: 比較式
-        href: comparison-expressions.md
-      - name: NULL 比較
-        href: null-comparisons.md
-      - name: 初期化式
-        href: initialization-expressions.md
-    - name: LINQ to Entities クエリ内の関数の呼び出し
-      href: calling-functions-in-linq-to-entities-queries.md
+        - name: Entity SQL の概要
+          href: entity-sql-overview.md
+          items:
+            - name: Entity SQL と Transact-SQL の相違点
+              href: how-entity-sql-differs-from-transact-sql.md
+            - name: Entity SQL クイック リファレンス
+              href: entity-sql-quick-reference.md
+            - name: 型システム
+              href: type-system-entity-sql.md
+            - name: 型定義
+              href: type-definitions-entity-sql.md
+            - name: コンストラクト型
+              href: constructing-types-entity-sql.md
+            - name: クエリ プランのキャッシュ
+              href: query-plan-caching-entity-sql.md
+            - name: 名前空間
+              href: namespaces-entity-sql.md
+            - name: 識別子
+              href: identifiers-entity-sql.md
+            - name: パラメーター
+              href: parameters-entity-sql.md
+            - name: 変数
+              href: variables-entity-sql.md
+            - name: サポートされていない式
+              href: unsupported-expressions-entity-sql.md
+            - name: リテラル
+              href: literals-entity-sql.md
+            - name: NULL リテラルと型推論
+              href: null-literals-and-type-inference-entity-sql.md
+            - name: 入力文字セット
+              href: input-character-set-entity-sql.md
+            - name: クエリ式
+              href: query-expressions-entity-sql.md
+            - name: 関数
+              href: functions-entity-sql.md
+              items:
+                - name: ユーザー定義関数
+                  href: user-defined-functions-entity-sql.md
+                - name: 関数のオーバーロードの解決方法
+                  href: function-overload-resolution-entity-sql.md
+                - name: 集計関数
+                  href: aggregate-functions-entity-sql.md
+            - name: 演算子の優先順位
+              href: operator-precedence-entity-sql.md
+            - name: ページング
+              href: paging-entity-sql.md
+            - name: 比較セマンティクス
+              href: comparison-semantics-entity-sql.md
+            - name: 入れ子になった Entity SQL クエリの作成
+              href: composing-nested-entity-sql-queries.md
+            - name: NULL 値が許容される構造化型
+              href: nullable-structured-types-entity-sql.md
+        - name: Entity SQL リファレンス
+          href: entity-sql-reference.md
+          items:
+            - name: + (追加)
+              href: add.md
+            - name: + (文字列連結)
+              href: string-concatenation-entity-sql.md
+            - name: '- (負)'
+              href: negative-entity-sql.md
+            - name: '- (減算)'
+              href: subtract-entity-sql.md
+            - name: '* (乗算)'
+              href: multiply-entity-sql.md
+            - name: / (除算)
+              href: divide-entity-sql.md
+            - name: パーセント (剰余)
+              href: modulo-entity-sql.md
+            - name: '&& (AND)'
+              href: and-entity-sql.md
+            - name: '|| (OR)'
+              href: or-entity-sql.md
+            - name: '! (NOT)'
+              href: not-entity-sql.md
+            - name: = (等しい)
+              href: equals-entity-sql.md
+            - name: '> (より大きい)'
+              href: greater-than-entity-sql.md
+            - name: '>= (次の値以上)'
+              href: greater-than-or-equal-to-entity-sql.md
+            - name: < (より小さい)
+              href: less-than-entity-sql.md
+            - name: <= (以下)
+              href: less-than-or-equal-to-entity-sql.md
+            - name: '!= (等しくない)'
+              href: not-equal-to-entity-sql.md
+            - name: . (メンバー アクセス)
+              href: member-access-entity-sql.md
+            - name: '-- (コメント)'
+              href: comment-entity-sql.md
+            - name: ANYELEMENT
+              href: anyelement-entity-sql.md
+            - name: BETWEEN
+              href: between-entity-sql.md
+            - name: CASE
+              href: case-entity-sql.md
+            - name: CAST
+              href: cast-entity-sql.md
+            - name: COLLECTION
+              href: collection-entity-sql.md
+            - name: CREATEREF
+              href: createref-entity-sql.md
+            - name: DEREF
+              href: deref-entity-sql.md
+            - name: EXCEPT
+              href: except-entity-sql.md
+            - name: EXISTS
+              href: exists-entity-sql.md
+            - name: FLATTEN
+              href: flatten-entity-sql.md
+            - name: FROM
+              href: from-entity-sql.md
+            - name: FUNCTION
+              href: function-entity-sql.md
+            - name: GROUP BY
+              href: group-by-entity-sql.md
+            - name: GROUPPARTITION
+              href: grouppartition-entity-sql.md
+            - name: HAVING
+              href: having-entity-sql.md
+            - name: KEY
+              href: key-entity-sql.md
+            - name: IN
+              href: in-entity-sql.md
+            - name: INTERSECT
+              href: intersect-entity-sql.md
+            - name: ISNULL
+              href: isnull-entity-sql.md
+            - name: ISOF
+              href: isof-entity-sql.md
+            - name: LIKE
+              href: like-entity-sql.md
+            - name: LIMIT
+              href: limit-entity-sql.md
+            - name: MULTISET
+              href: multiset-entity-sql.md
+            - name: 名前付きの型コンストラクター
+              href: named-type-constructor-entity-sql.md
+            - name: NAVIGATE
+              href: navigate-entity-sql.md
+            - name: OFTYPE
+              href: oftype-entity-sql.md
+            - name: ORDER BY
+              href: order-by-entity-sql.md
+            - name: OVERLAPS
+              href: overlaps-entity-sql.md
+            - name: REF
+              href: ref-entity-sql.md
+            - name: ROW
+              href: row-entity-sql.md
+            - name: SELECT
+              href: select-entity-sql.md
+            - name: SET
+              href: set-entity-sql.md
+            - name: SKIP
+              href: skip-entity-sql.md
+            - name: THEN
+              href: then-entity-sql.md
+            - name: TOP
+              href: top-entity-sql.md
+            - name: TREAT
+              href: treat-entity-sql.md
+            - name: UNION
+              href: union-entity-sql.md
+            - name: USING
+              href: using-entity-sql.md
+            - name: WHERE
+              href: where-entity-sql.md
+    - name: 正規関数
+      href: canonical-functions.md
       items:
-      - name: '方法: Canonical 関数を呼び出す'
-        href: how-to-call-canonical-functions.md
-      - name: '方法: データベース関数を呼び出す'
-        href: how-to-call-database-functions.md
-      - name: '方法: カスタム データベース関数を呼び出す'
-        href: how-to-call-custom-database-functions.md
-      - name: '方法: クエリを使用してモデル定義関数を呼び出す'
-        href: how-to-call-model-defined-functions-in-queries.md
-      - name: '方法: モデル定義関数をオブジェクト メソッドとして呼び出す'
-        href: how-to-call-model-defined-functions-as-object-methods.md
-    - name: コンパイル済みクエリ (LINQ to Entities)
-      href: compiled-queries-linq-to-entities.md
-    - name: クエリの実行
-      href: query-execution.md
-    - name: クエリ結果
-      href: query-results.md
-    - name: LINQ to Entities クエリの標準クエリ演算子
-      href: standard-query-operators-in-linq-to-entities-queries.md
-    - name: CLR メソッドと正規関数とのマッピング
-      href: clr-method-to-canonical-function-mapping.md
-    - name: サポート対象の LINQ メソッドとサポート非対象の LINQ メソッド (LINQ to Entities)
-      href: supported-and-unsupported-linq-methods-linq-to-entities.md
-    - name: LINQ to Entities の既知の問題および注意点
-      href: known-issues-and-considerations-in-linq-to-entities.md
-  - name: Entity SQL 言語
-    href: entity-sql-language.md
-    items:
-    - name: Entity SQL の概要
-      href: entity-sql-overview.md
-      items:
-      - name: Entity SQL と Transact-SQL の相違点
-        href: how-entity-sql-differs-from-transact-sql.md
-      - name: Entity SQL クイック リファレンス
-        href: entity-sql-quick-reference.md
-      - name: 型システム
-        href: type-system-entity-sql.md
-      - name: 型定義
-        href: type-definitions-entity-sql.md
-      - name: コンストラクト型
-        href: constructing-types-entity-sql.md
-      - name: クエリ プランのキャッシュ
-        href: query-plan-caching-entity-sql.md
-      - name: 名前空間
-        href: namespaces-entity-sql.md
-      - name: 識別子
-        href: identifiers-entity-sql.md
-      - name: パラメーター
-        href: parameters-entity-sql.md
-      - name: 変数
-        href: variables-entity-sql.md
-      - name: サポートされていない式
-        href: unsupported-expressions-entity-sql.md
-      - name: リテラル
-        href: literals-entity-sql.md
-      - name: NULL リテラルと型推論
-        href: null-literals-and-type-inference-entity-sql.md
-      - name: 入力文字セット
-        href: input-character-set-entity-sql.md
-      - name: クエリ式
-        href: query-expressions-entity-sql.md
-      - name: 関数
-        href: functions-entity-sql.md
-        items:
-        - name: ユーザー定義関数
-          href: user-defined-functions-entity-sql.md
-        - name: 関数のオーバーロードの解決方法
-          href: function-overload-resolution-entity-sql.md
-        - name: 集計関数
-          href: aggregate-functions-entity-sql.md
-      - name: 演算子の優先順位
-        href: operator-precedence-entity-sql.md
-      - name: ページング
-        href: paging-entity-sql.md
-      - name: 比較セマンティクス
-        href: comparison-semantics-entity-sql.md
-      - name: 入れ子になった Entity SQL クエリの作成
-        href: composing-nested-entity-sql-queries.md
-      - name: NULL 値が許容される構造化型
-        href: nullable-structured-types-entity-sql.md
-    - name: Entity SQL リファレンス
-      href: entity-sql-reference.md
-      items:
-      - name: + (追加)
-        href: add.md
-      - name: + (文字列連結)
-        href: string-concatenation-entity-sql.md
-      - name: '- (負)'
-        href: negative-entity-sql.md
-      - name: '- (減算)'
-        href: subtract-entity-sql.md
-      - name: '* (乗算)'
-        href: multiply-entity-sql.md
-      - name: / (除算)
-        href: divide-entity-sql.md
-      - name: パーセント (剰余)
-        href: modulo-entity-sql.md
-      - name: '&& (AND)'
-        href: and-entity-sql.md
-      - name: '|| (OR)'
-        href: or-entity-sql.md
-      - name: '! (NOT)'
-        href: not-entity-sql.md
-      - name: = (等しい)
-        href: equals-entity-sql.md
-      - name: '> (より大きい)'
-        href: greater-than-entity-sql.md
-      - name: '>= (次の値以上)'
-        href: greater-than-or-equal-to-entity-sql.md
-      - name: < (より小さい)
-        href: less-than-entity-sql.md
-      - name: <= (以下)
-        href: less-than-or-equal-to-entity-sql.md
-      - name: '!= (等しくない)'
-        href: not-equal-to-entity-sql.md
-      - name: . (メンバー アクセス)
-        href: member-access-entity-sql.md
-      - name: -- (コメント)
-        href: comment-entity-sql.md
-      - name: ANYELEMENT
-        href: anyelement-entity-sql.md
-      - name: BETWEEN
-        href: between-entity-sql.md
-      - name: CASE
-        href: case-entity-sql.md
-      - name: CAST
-        href: cast-entity-sql.md
-      - name: COLLECTION
-        href: collection-entity-sql.md
-      - name: CREATEREF
-        href: createref-entity-sql.md
-      - name: DEREF
-        href: deref-entity-sql.md
-      - name: EXCEPT
-        href: except-entity-sql.md
-      - name: EXISTS
-        href: exists-entity-sql.md
-      - name: FLATTEN
-        href: flatten-entity-sql.md
-      - name: FROM
-        href: from-entity-sql.md
-      - name: FUNCTION
-        href: function-entity-sql.md
-      - name: GROUP BY
-        href: group-by-entity-sql.md
-      - name: GROUPPARTITION
-        href: grouppartition-entity-sql.md
-      - name: HAVING
-        href: having-entity-sql.md
-      - name: KEY
-        href: key-entity-sql.md
-      - name: IN
-        href: in-entity-sql.md
-      - name: INTERSECT
-        href: intersect-entity-sql.md
-      - name: ISNULL
-        href: isnull-entity-sql.md
-      - name: ISOF
-        href: isof-entity-sql.md
-      - name: LIKE
-        href: like-entity-sql.md
-      - name: LIMIT
-        href: limit-entity-sql.md
-      - name: MULTISET
-        href: multiset-entity-sql.md
-      - name: 名前付きの型コンストラクター
-        href: named-type-constructor-entity-sql.md
-      - name: NAVIGATE
-        href: navigate-entity-sql.md
-      - name: OFTYPE
-        href: oftype-entity-sql.md
-      - name: ORDER BY
-        href: order-by-entity-sql.md
-      - name: OVERLAPS
-        href: overlaps-entity-sql.md
-      - name: REF
-        href: ref-entity-sql.md
-      - name: ROW
-        href: row-entity-sql.md
-      - name: SELECT
-        href: select-entity-sql.md
-      - name: SET
-        href: set-entity-sql.md
-      - name: SKIP
-        href: skip-entity-sql.md
-      - name: THEN
-        href: then-entity-sql.md
-      - name: TOP
-        href: top-entity-sql.md
-      - name: TREAT
-        href: treat-entity-sql.md
-      - name: UNION
-        href: union-entity-sql.md
-      - name: USING
-        href: using-entity-sql.md
-      - name: WHERE
-        href: where-entity-sql.md
-  - name: 正規関数
-    href: canonical-functions.md
-    items:
-    - name: 集計正規関数
-      href: aggregate-canonical-functions.md
-    - name: 数値演算正規関数
-      href: math-canonical-functions.md
-    - name: 文字列正規関数
-      href: string-canonical-functions.md
-    - name: 日付と時刻の正規関数
-      href: date-and-time-canonical-functions.md
-    - name: ビット単位の正規関数
-      href: bitwise-canonical-functions.md
-    - name: 空間関数
-      href: spatial-functions.md
-    - name: その他の正規関数
-      href: other-canonical-functions.md
-ms.openlocfilehash: 5886642c5f0074893aa960333fa4d85aa5fa1e46
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469955"
+        - name: 集計正規関数
+          href: aggregate-canonical-functions.md
+        - name: 数値演算正規関数
+          href: math-canonical-functions.md
+        - name: 文字列正規関数
+          href: string-canonical-functions.md
+        - name: 日付と時刻の正規関数
+          href: date-and-time-canonical-functions.md
+        - name: ビット単位の正規関数
+          href: bitwise-canonical-functions.md
+        - name: 空間関数
+          href: spatial-functions.md
+        - name: その他の正規関数
+          href: other-canonical-functions.md

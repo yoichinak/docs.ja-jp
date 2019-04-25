@@ -3,10 +3,10 @@ title: 仮想ディレクトリのセットアップ手順
 ms.date: 03/30/2017
 ms.assetid: 3c62cab5-81a4-48b6-ac8c-9ce33a85a157
 ms.openlocfilehash: fdff88026a49989870ee5c47f9a38a65ecad3c80
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59325346"
 ---
 # <a name="virtual-directory-setup-instructions"></a>仮想ディレクトリのセットアップ手順
@@ -59,9 +59,9 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
 7. 既定では、次のチェック ボックスがオンになっています。  
   
-    -   **読み取り**  
+    -   **Read**  
   
-    -   **[ASP などのスクリプトを実行する]**  
+    -   **ASP などのスクリプトを実行します。**  
   
 8. をクリックして **[次へ]**、順にクリックします**完了**ウィザードを完了します。  
   
@@ -84,11 +84,11 @@ Windows Communication Foundation (WCF) サンプルは %SystemDrive%\inetpub\www
   
 2. 既定では、次のチェック ボックスがオンになっています。  
   
-    -   **読み取り**  
+    -   **Read**  
   
     -   **[ログ アクセス]**  
   
-    -   **[このリソースにインデックスを付ける]**  
+    -   **このリソースします。**  
   
 3. 選択、**ディレクトリの参照**チェック ボックスをオンします。 これにより、Internet Explorer でディレクトリにアクセスできるようになり、サービスのデバッグに役立ちます。  
   

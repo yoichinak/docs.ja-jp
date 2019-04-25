@@ -11,10 +11,10 @@ helpviewer_keywords:
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
 ms.openlocfilehash: a302b8bf978afcead5768fadeb6336c1ece986ec
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59100928"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>方法: 不透明ブラシおよび半透明ブラシを使用して描画する
@@ -33,11 +33,11 @@ ms.locfileid: "59100928"
  ![不透明な直線および半透明な出力を示す図。](./media/how-to-draw-with-opaque-and-semitransparent-brushes/compositingquality-ellipse-semitransparent.png)  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されています。 また必要が<xref:System.Windows.Forms.PaintEventArgs>`e`、はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
+ 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> のパラメーターである `e`<xref:System.Windows.Forms.PaintEventHandler> を必要とします。  
   
 ## <a name="see-also"></a>関連項目
 
 - [Windows フォームにおけるグラフィックスと描画](graphics-and-drawing-in-windows-forms.md)
 - [アルファ ブレンドの直線と塗りつぶし](alpha-blending-lines-and-fills.md)
-- [方法: コントロールに透明な背景を指定する](../controls/how-to-give-your-control-a-transparent-background.md)
-- [方法: 不透明な直線および半透明な直線を描画する](how-to-draw-opaque-and-semitransparent-lines.md)
+- [方法: コントロールに透明な背景を提供します。](../controls/how-to-give-your-control-a-transparent-background.md)
+- [方法: 不透明な直線および半透明な直線を描画します。](how-to-draw-opaque-and-semitransparent-lines.md)

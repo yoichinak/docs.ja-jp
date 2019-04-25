@@ -18,16 +18,16 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58833283"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic での変数宣言
 名前と特性を指定する変数を宣言するとします。 変数の宣言ステートメントは、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)します。 その場所や内容は、変数の特性を決定します。  
   
- 変数の名前付け規則と考慮事項では、[Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)を参照してください。  
+ 変数の名前付け規則と考慮事項では、次を参照してください。 [Declared Element Names](../../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
   
 ## <a name="declaration-levels"></a>宣言レベル  
   
@@ -61,7 +61,7 @@ Dim l, m As Long, x, y As Single
 ' In the preceding statement, l and m are Long, x and y are Single.  
 ```  
   
- データ型の詳細については、[データ型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)を参照してください。 オブジェクトの詳細については、[オブジェクトとクラス](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)と[コンポーネントによるプログラミング](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))を参照してください。  
+ データ型の詳細については、次を参照してください。[データ型](../../../../visual-basic/programming-guide/language-features/data-types/index.md)します。 オブジェクトの詳細については、次を参照してください。[オブジェクトとクラス](../../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)と[コンポーネントによるプログラミング](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/0ffkdtkf(v=vs.120))します。  
   
 ## <a name="local-type-inference"></a>ローカル型の推論  
  *型の推論*なしで宣言されたローカル変数のデータの種類を決定するために使用する`As`句。 コンパイラでは、初期化式の型から変数の型を推測します。 これにより、型を明示的に指定せずに変数を宣言することができます。 次の例では、どちらも`num1`と`num2`整数として厳密に型指定します。  
@@ -71,7 +71,7 @@ Dim l, m As Long, x, y As Single
  ローカル型の推論を使用したい場合`Option Infer`に設定する必要があります`On`します。 詳細については、「[ローカル型の推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)」と「[Option Infer ステートメント](../../../../visual-basic/language-reference/statements/option-infer-statement.md)」を参照してください。  
   
 ## <a name="characteristics-of-declared-variables"></a>宣言された変数の特性  
- *有効期間*変数は、一定期間その中に、使用可能です。 一般に、変数は、(手順やクラスで) 宣言された要素が存在し続けます限り存在します。 変数がそのコンテナー要素の有効期間よりも長く必要がない場合は、宣言で特別な処理は必要はありません。 変数をそのコンテナー要素よりも長い場合は、含めることができます、`Static`または`Shared`キーワードでその`Dim`ステートメント。 詳細については、[Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)を参照してください。  
+ *有効期間*変数は、一定期間その中に、使用可能です。 一般に、変数は、(手順やクラスで) 宣言された要素が存在し続けます限り存在します。 変数がそのコンテナー要素の有効期間よりも長く必要がない場合は、宣言で特別な処理は必要はありません。 変数をそのコンテナー要素よりも長い場合は、含めることができます、`Static`または`Shared`キーワードでその`Dim`ステートメント。 詳細については、次を参照してください。 [Visual Basic での有効期間](../../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)します。  
   
  *スコープ*変数がその名前を修飾せずに参照できるすべてのコードのセット。 変数のスコープは、宣言されている場所によって決まります。 特定のリージョン内にあるコードでは、その名前を修飾することがなく、そのリージョンで定義されている変数を使用できます。 詳細については、「 [Scope in Visual Basic](../../../../visual-basic/programming-guide/language-features/declared-elements/scope.md)」を参照してください。  
   

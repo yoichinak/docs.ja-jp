@@ -3,11 +3,11 @@ title: インデックス付きプロパティ
 description: インデックス付きプロパティについて説明しますF#、順序付けられたデータを配列に似たアクセスを許可します。
 ms.date: 10/17/2018
 ms.openlocfilehash: bc330641c451973ddefa0a34fe6e757a808f6cb7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678608"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903826"
 ---
 # <a name="indexed-properties"></a>インデックス付きプロパティ
 
@@ -42,7 +42,7 @@ member self-identifier.Index
 
 既定以外のインデックス付きプロパティにアクセスするための構文は、プロパティと、通常のメンバーと同様、かっこ内のインデックスの名前を提供します。 たとえば場合のプロパティ`o`が呼び出されます`Ordinal`、記述する`o.Ordinal(index)`へのアクセスします。
 
-使用する形式に関係なく、インデックス付きプロパティの set メソッドのカリー化されたフォームを常に使用する必要があります。 カリー化関数については、[関数](../functions/index.md)を参照してください。
+使用する形式に関係なく、インデックス付きプロパティの set メソッドのカリー化されたフォームを常に使用する必要があります。 カリー化関数については、次を参照してください。[関数](../functions/index.md)します。
 
 ## <a name="example"></a>例
 

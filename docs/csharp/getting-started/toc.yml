@@ -1,12 +1,5 @@
-items:
 - name: 作業の開始
   href: index.md
   items:
-  - name: C# 言語と .NET Framework の概要
-    href: introduction-to-the-csharp-language-and-the-net-framework.md
-ms.openlocfilehash: b28cf0d14c72247997a94f90ad842b4451843d9e
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470698"
+    - name: 'C# 言語と .NET Framework の概要'
+      href: introduction-to-the-csharp-language-and-the-net-framework.md

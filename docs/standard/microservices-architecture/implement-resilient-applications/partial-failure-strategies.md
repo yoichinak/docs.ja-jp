@@ -4,12 +4,12 @@ description: 部分的なエラーを適切に処理するための戦略をい�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: dd485eae7163ecf5e5622b960448385e33ae718a
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 63c6764d18ee0a8990cf669a8cdc824dea79aac8
+ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464269"
+ms.lasthandoff: 04/16/2019
+ms.locfileid: "59613357"
 ---
 # <a name="strategies-to-handle-partial-failure"></a>部分的なエラーを処理する戦略
 
@@ -36,7 +36,7 @@ ms.locfileid: "58464269"
   <https://docs.microsoft.com/previous-versions/msp-n-p/jj591574(v=pandp.10)>
 
 - **Bulkhead** (バルクヘッド)。 GitHub リポジトリ。 Polly ポリシーを使用した実装。\
-  [https://github.com/App-vNext/Polly/wiki/Bulkhead](https://github.com/App-vNext/Polly/wiki/Bulkhead)
+  <https://github.com/App-vNext/Polly/wiki/Bulkhead>
 
 - **Azure 用の回復性の高いアプリケーションの設計**\
   [https://docs.microsoft.com/azure/architecture/resiliency/](/azure/architecture/resiliency/)

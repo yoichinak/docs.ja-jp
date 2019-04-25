@@ -14,10 +14,10 @@ helpviewer_keywords:
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
 ms.openlocfilehash: 68401571645d77a41b827c13b3cfc3674076e218
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58824573"
 ---
 # <a name="class-statement-visual-basic"></a>Class ステートメント (Visual Basic)
@@ -55,7 +55,7 @@ End Class
 |`End Class`|必須。 `Class` の定義を終了します。|  
   
 ## <a name="remarks"></a>Remarks  
- A`Class`ステートメントは、新しいデータ型を定義します。 A*クラス*はオブジェクト指向プログラミング (OOP) の基本的な構成要素です。 詳細については、[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)を参照してください。  
+ A`Class`ステートメントは、新しいデータ型を定義します。 A*クラス*はオブジェクト指向プログラミング (OOP) の基本的な構成要素です。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)します。  
   
  `Class` は、名前空間またはモジュール レベルでのみ使用できます。 つまり、*宣言コンテキスト*クラスのソース ファイル、名前空間、クラス、構造体、モジュール、またはインターフェイスである必要があります、プロシージャまたはブロックすることはできません。 詳細については、「[宣言コンテキストと既定のアクセス レベル](../../../visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md)」を参照してください。  
   
@@ -75,7 +75,7 @@ End Class
   
 -   **実装です。** クラスを使用している場合、 [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)で指定したすべてのインターフェイスで定義されたすべてのメンバーを実装する必要があります`interfacenames`します。 この例外は、基底クラスのメンバーの再実装です。 詳細については、「再実装」を参照してください[実装](../../../visual-basic/language-reference/statements/implements-clause.md)します。  
   
--   **既定のプロパティ。** クラスとして最大で 1 つのプロパティを指定できます、*プロパティの既定*します。 詳細については、[既定](../../../visual-basic/language-reference/modifiers/default.md)を参照してください。  
+-   **既定のプロパティ。** クラスとして最大で 1 つのプロパティを指定できます、*プロパティの既定*します。 詳細については、次を参照してください。[既定](../../../visual-basic/language-reference/modifiers/default.md)します。  
   
 ## <a name="behavior"></a>動作  
   
@@ -85,9 +85,9 @@ End Class
   
      すべてのクラス メンバーのスコープは、クラス全体です。  
   
-     **有効期間。** Visual Basic は、静的クラスをサポートしていません。 静的クラスと同等の機能は、モジュールによって提供されます。 詳細については、[モジュール ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)を参照してください。  
+     **有効期間。** Visual Basic は、静的クラスをサポートしていません。 静的クラスと同等の機能は、モジュールによって提供されます。 詳細については、次を参照してください。[モジュール ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)します。  
   
-     クラスのメンバーでは、によって宣言されている方法と場所の有効期間があります。 詳細については、[Visual Basic での有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)を参照してください。  
+     クラスのメンバーでは、によって宣言されている方法と場所の有効期間があります。 詳細については、次を参照してください。 [Visual Basic での有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)します。  
   
 -   **パス名です。** クラスの外部のコードでは、そのクラスの名前を持つメンバーの名前を修飾する必要があります。  
   
@@ -100,7 +100,7 @@ End Class
   
 -   **共有メンバー。** クラスのメンバーは、共有するかどうか、またはインスタンス メンバーを制御できます。  
   
--   **オブジェクト指向です。** クラスは、オブジェクト指向ですが、モジュールがないです。 クラスの 1 つまたは複数のインスタンスを作成することができます。 詳細については、[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)を参照してください。  
+-   **オブジェクト指向です。** クラスは、オブジェクト指向ですが、モジュールがないです。 クラスの 1 つまたは複数のインスタンスを作成することができます。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、`Class`クラスといくつかのメンバーを定義するステートメント。  

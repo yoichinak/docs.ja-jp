@@ -6,10 +6,10 @@ dev_langs:
 - vb
 ms.assetid: 2ea85959-e763-4669-8bd9-46a9dab894bd
 ms.openlocfilehash: 84c84cb8fc0ee484b09c69c72571a19c335b58f4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59230630"
 ---
 # <a name="defining-primary-keys"></a>主キーの定義

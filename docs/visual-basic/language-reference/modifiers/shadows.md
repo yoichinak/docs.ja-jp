@@ -12,10 +12,10 @@ helpviewer_keywords:
 - names [Visual Basic], shadowing
 ms.assetid: 6bf687cd-0544-4797-b51b-911125ec57c6
 ms.openlocfilehash: c314db90a1a0f89613e20897387bdec8ec534837
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "58834141"
 ---
 # <a name="shadows-visual-basic"></a>Shadows (Visual Basic)
@@ -24,7 +24,7 @@ ms.locfileid: "58834141"
 ## <a name="remarks"></a>Remarks  
  シャドウの主な目的は、(あるとも呼ばれます*名前による隠ぺい*)、クラスのメンバーの定義を維持しています。 基底クラスには、既に定義されている 1 つとして同じ名前の要素を作成する変更を行うこともできます。 このような場合、`Shadows`するメンバーに解決するのには、クラスを通じて参照修飾子強制的に基本クラスの新しい要素の代わりに定義されました。  
   
- シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、[Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)を参照してください。  
+ シャドウとオーバーライドは、どちらも継承された要素を再定義しますが、その方法は大きく異なります。 詳細については、次を参照してください。 [Visual Basic におけるシャドウ](../../../visual-basic/programming-guide/language-features/declared-elements/shadowing.md)します。  
   
 ## <a name="rules"></a>ルール  
   

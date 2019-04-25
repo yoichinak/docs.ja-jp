@@ -1,122 +1,115 @@
-items:
 - name: アンマネージ コードとの相互運用
   href: index.md
   items:
-  - name: .NET Framework への COM コンポーネントの公開
-    href: exposing-com-components.md
-    items:
-    - name: タイプ ライブラリのアセンブリとしてのインポート
-      href: importing-a-type-library-as-an-assembly.md
-    - name: '方法: タイプ ライブラリへの参照を追加する'
-      href: how-to-add-references-to-type-libraries.md
-    - name: '方法: 相互運用機能アセンブリをタイプ ライブラリから生成する'
-      href: how-to-generate-interop-assemblies-from-type-libraries.md
-    - name: 相互運用プロジェクトのコンパイル
-      href: compiling-an-interop-project.md
-    - name: 相互運用アプリケーションの配置
-      href: deploying-an-interop-application.md
-    - name: 'COM 相互運用機能のサンプル: .NET クライアントおよび COM サーバー'
-      href: com-interop-sample-net-client-and-com-server.md
-  - name: COM への .NET Framework コンポーネントの公開
-    href: exposing-dotnet-components-to-com.md
-    items:
-    - name: 相互運用のための .NET 型の要件
-      href: qualifying-net-types-for-interoperation.md
-    - name: 相互運用固有の属性の適用
-      href: applying-interop-attributes.md
-    - name: COM 用のアセンブリのパッケージ化
-      href: packaging-an-assembly-for-com.md
-    - name: COM へのアセンブリの登録
-      href: registering-assemblies-with-com.md
-    - name: '方法: COM から .NET 型を参照する'
-      href: how-to-reference-net-types-from-com.md
-    - name: 'COM 相互運用の例: COM クライアントと .NET サーバー'
-      href: com-interop-sample-com-client-and-net-server.md
-  - name: アンマネージ DLL 関数の処理
-    href: consuming-unmanaged-dll-functions.md
-    items:
-    - name: DLL 内の関数の識別
-      href: identifying-functions-in-dlls.md
-    - name: DLL 関数を保持するクラスの作成
-      href: creating-a-class-to-hold-dll-functions.md
-    - name: マネージド コードでのプロトタイプの作成
-      href: creating-prototypes-in-managed-code.md
+    - name: .NET Framework への COM コンポーネントの公開
+      href: exposing-com-components.md
       items:
-      - name: エントリ ポイントの指定
-        href: specifying-an-entry-point.md
-      - name: 文字セットの指定
-        href: specifying-a-character-set.md
-      - name: プラットフォーム呼び出しの例
-        href: platform-invoke-examples.md
-    - name: DLL 関数の呼び出し
-      href: calling-a-dll-function.md
+        - name: タイプ ライブラリのアセンブリとしてのインポート
+          href: importing-a-type-library-as-an-assembly.md
+        - name: '方法: タイプ ライブラリへの参照を追加する'
+          href: how-to-add-references-to-type-libraries.md
+        - name: '方法: 相互運用機能アセンブリをタイプ ライブラリから生成する'
+          href: how-to-generate-interop-assemblies-from-type-libraries.md
+        - name: 相互運用プロジェクトのコンパイル
+          href: compiling-an-interop-project.md
+        - name: 相互運用アプリケーションの配置
+          href: deploying-an-interop-application.md
+        - name: 'COM 相互運用機能のサンプル: .NET クライアントおよび COM サーバー'
+          href: com-interop-sample-net-client-and-com-server.md
+    - name: COM への .NET Framework コンポーネントの公開
+      href: exposing-dotnet-components-to-com.md
       items:
-      - name: 構造体の受け渡し
-        href: passing-structures.md
-      - name: コールバック関数
-        href: callback-functions.md
-      - name: '方法: コールバック関数を実装する'
-        href: how-to-implement-callback-functions.md
-  - name: 相互運用マーシャリング
-    href: interop-marshaling.md
-    items:
-    - name: 既定のマーシャリングの動作
-      href: default-marshaling-behavior.md
+        - name: 相互運用のための .NET 型の要件
+          href: qualifying-net-types-for-interoperation.md
+        - name: 相互運用固有の属性の適用
+          href: applying-interop-attributes.md
+        - name: COM 用のアセンブリのパッケージ化
+          href: packaging-an-assembly-for-com.md
+        - name: COM へのアセンブリの登録
+          href: registering-assemblies-with-com.md
+        - name: '方法: COM から .NET 型を参照する'
+          href: how-to-reference-net-types-from-com.md
+        - name: 'COM 相互運用の例: COM クライアントと .NET サーバー'
+          href: com-interop-sample-com-client-and-net-server.md
+    - name: アンマネージ DLL 関数の処理
+      href: consuming-unmanaged-dll-functions.md
       items:
-      - name: Blittable 型と非 Blittable 型
-        href: blittable-and-non-blittable-types.md
-      - name: コピーと固定
-        href: copying-and-pinning.md
-      - name: 配列に対する既定のマーシャリング
-        href: default-marshaling-for-arrays.md
-      - name: オブジェクトに対する既定のマーシャリング
-        href: default-marshaling-for-objects.md
-      - name: 文字列に対する既定のマーシャリング
-        href: default-marshaling-for-strings.md
-    - name: プラットフォーム呼び出しによるデータのマーシャリング
-      href: marshaling-data-with-platform-invoke.md
+        - name: DLL 内の関数の識別
+          href: identifying-functions-in-dlls.md
+        - name: DLL 関数を保持するクラスの作成
+          href: creating-a-class-to-hold-dll-functions.md
+        - name: マネージド コードでのプロトタイプの作成
+          href: creating-prototypes-in-managed-code.md
+          items:
+            - name: エントリ ポイントの指定
+              href: specifying-an-entry-point.md
+            - name: 文字セットの指定
+              href: specifying-a-character-set.md
+            - name: プラットフォーム呼び出しの例
+              href: platform-invoke-examples.md
+        - name: DLL 関数の呼び出し
+          href: calling-a-dll-function.md
+          items:
+            - name: 構造体の受け渡し
+              href: passing-structures.md
+            - name: コールバック関数
+              href: callback-functions.md
+            - name: '方法: コールバック関数を実装する'
+              href: how-to-implement-callback-functions.md
+    - name: 相互運用マーシャリング
+      href: interop-marshaling.md
       items:
-      - name: 文字列のマーシャリング
-        href: marshaling-strings.md
-      - name: MsgBox のサンプル
-        href: msgbox-sample.md
-      - name: クラス、構造体、および共用体のマーシャリング
-        href: marshaling-classes-structures-and-unions.md
-      - name: さまざまな型の配列のマーシャリング
-        href: marshaling-different-types-of-arrays.md
-      - name: コールバック メソッドとしてのデリゲートのマーシャ リング
-        href: marshaling-a-delegate-as-a-callback-method.md
-    - name: COM 相互運用機能によるデータのマーシャリング
-      href: marshaling-data-with-com-interop.md
+        - name: 既定のマーシャリングの動作
+          href: default-marshaling-behavior.md
+          items:
+            - name: Blittable 型と非 Blittable 型
+              href: blittable-and-non-blittable-types.md
+            - name: コピーと固定
+              href: copying-and-pinning.md
+            - name: 配列に対する既定のマーシャリング
+              href: default-marshaling-for-arrays.md
+            - name: オブジェクトに対する既定のマーシャリング
+              href: default-marshaling-for-objects.md
+            - name: 文字列に対する既定のマーシャリング
+              href: default-marshaling-for-strings.md
+        - name: プラットフォーム呼び出しによるデータのマーシャリング
+          href: marshaling-data-with-platform-invoke.md
+          items:
+            - name: 文字列のマーシャリング
+              href: marshaling-strings.md
+            - name: MsgBox のサンプル
+              href: msgbox-sample.md
+            - name: クラス、構造体、および共用体のマーシャリング
+              href: marshaling-classes-structures-and-unions.md
+            - name: さまざまな型の配列のマーシャリング
+              href: marshaling-different-types-of-arrays.md
+            - name: コールバック メソッドとしてのデリゲートのマーシャ リング
+              href: marshaling-a-delegate-as-a-callback-method.md
+        - name: COM 相互運用機能によるデータのマーシャリング
+          href: marshaling-data-with-com-interop.md
+          items:
+            - name: '方法: ラッパーを手動で作成する'
+              href: how-to-create-wrappers-manually.md
+            - name: '方法: マネージ コード DCOM を WCF に移行する'
+              href: how-to-migrate-managed-code-dcom-to-wcf.md
+    - name: '方法: HRESULT に例外を割り当てる'
+      href: how-to-map-hresults-and-exceptions.md
+    - name: COM ラッパー
+      href: com-wrappers.md
       items:
-      - name: '方法: ラッパーを手動で作成する'
-        href: how-to-create-wrappers-manually.md
-      - name: '方法: マネージ コード DCOM を WCF に移行する'
-        href: how-to-migrate-managed-code-dcom-to-wcf.md
-  - name: '方法: HRESULT に例外を割り当てる'
-    href: how-to-map-hresults-and-exceptions.md
-  - name: COM ラッパー
-    href: com-wrappers.md
-    items:
-    - name: ランタイム呼び出し可能ラッパー
-      href: runtime-callable-wrapper.md
-    - name: COM 呼び出し可能ラッパー
-      href: com-callable-wrapper.md
-    - name: '方法: COM ラッパーを作成する'
-      href: how-to-create-com-wrappers.md
-  - name: 型の等価性と埋め込まれた相互運用機能型
-    href: type-equivalence-and-embedded-interop-types.md
-  - name: '方法: Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する'
-    href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
-  - name: '方法: プライマリ相互運用機能アセンブリを登録する'
-    href: how-to-register-primary-interop-assemblies.md
-  - name: 登録を必要としない COM 相互運用機能
-    href: registration-free-com-interop.md
-  - name: '方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する'
-    href: configure-net-framework-based-com-components-for-reg.md
-ms.openlocfilehash: be9d4bcdaeb8b7389d72bddfa36e1594b5149ce4
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58469786"
+        - name: ランタイム呼び出し可能ラッパー
+          href: runtime-callable-wrapper.md
+        - name: COM 呼び出し可能ラッパー
+          href: com-callable-wrapper.md
+        - name: '方法: COM ラッパーを作成する'
+          href: how-to-create-com-wrappers.md
+    - name: 型の等価性と埋め込まれた相互運用機能型
+      href: type-equivalence-and-embedded-interop-types.md
+    - name: '方法: Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する'
+      href: how-to-generate-primary-interop-assemblies-using-tlbimp-exe.md
+    - name: '方法: プライマリ相互運用機能アセンブリを登録する'
+      href: how-to-register-primary-interop-assemblies.md
+    - name: 登録を必要としない COM 相互運用機能
+      href: registration-free-com-interop.md
+    - name: '方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する'
+      href: configure-net-framework-based-com-components-for-reg.md

@@ -1,14 +1,7 @@
-items:
 - name: Null 許容型
   href: index.md
   items:
-  - name: Null 許容型の使用
-    href: using-nullable-types.md
-  - name: '方法: Null 許容型を識別する'
-    href: how-to-identify-a-nullable-type.md
-ms.openlocfilehash: d90838048915f0e9cf0a7efe88dd7d0439864e49
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470035"
+    - name: Null 許容型の使用
+      href: using-nullable-types.md
+    - name: '方法: Null 許容型を識別する'
+      href: how-to-identify-a-nullable-type.md

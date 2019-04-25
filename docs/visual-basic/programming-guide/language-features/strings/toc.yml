@@ -1,57 +1,50 @@
-items:
 - name: Visual Basic における文字列
   href: index.md
   items:
-  - name: 文字列の概要
-    href: introduction-to-strings.md
-    items:
-    - name: 文字列の基本
-      href: string-basics.md
-    - name: 文字列操作メソッドの種類
-      href: types-of-string-manipulation-methods.md
-    - name: テキストと文字列
-      href: nothing-and-strings.md
-    - name: カルチャが文字列に与える影響
-      href: how-culture-affects-strings.md
-    - name: 挿入文字列
-      href: interpolated-strings.md
-    - name: 0 から始まる文字列アクセスと1 から始まる文字列アクセスの比較
-      href: zero-based-vs-one-based-string-access.md
-  - name: '方法: StringBuilder を使用して文字列を作成する'
-    href: how-to-create-strings-using-a-stringbuilder.md
-  - name: '方法: 文字列内を検索する'
-    href: how-to-search-within-a-string.md
-  - name: 文字列型とその他のデータ型との変換を行う
-    href: converting-between-strings-and-other-data-types.md
-    items:
-    - name: '方法: バイトの配列を文字列に変換する'
-      href: how-to-convert-an-array-of-bytes-into-a-string.md
-    - name: '方法: 文字列をバイトの配列に変換する'
-      href: how-to-convert-strings-into-an-array-of-bytes.md
-    - name: '方法: Char 値の配列から文字列を作成する'
-      href: how-to-create-a-string-from-an-array-of-char-values.md
-    - name: '方法: 16 進文字列を数値に変換する'
-      href: how-to-convert-hexadecimal-strings-to-numbers.md
-    - name: '方法: 文字列を文字の配列に変換する'
-      href: how-to-convert-a-string-to-an-array-of-characters.md
-    - name: '方法: 文字列の文字にアクセスする'
-      href: how-to-access-characters-in-strings.md
-  - name: 文字列の検証
-    href: validating-strings.md
-    items:
-    - name: '方法: ファイル名とパスを検証する'
-      href: how-to-validate-file-names-and-paths.md
-    - name: '方法: 日付または時刻を表す文字列を検証する'
-      href: how-to-validate-strings-that-represent-dates-or-times.md
-    - name: MaskedTextBox コントロールによる正規表現を使用する
-      href: using-regular-expressions-with-the-maskedtextbox-control.md
-    - name: 'チュートリアル: パスワードの複雑さの検証'
-      href: walkthrough-validating-that-passwords-are-complex.md
-  - name: 'チュートリアル: 文字列の暗号化と複合化'
-    href: walkthrough-encrypting-and-decrypting-strings.md
-ms.openlocfilehash: 2c148e2d34ef032785f1ccd723fb1d8aad136332
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470555"
+    - name: 文字列の概要
+      href: introduction-to-strings.md
+      items:
+        - name: 文字列の基本
+          href: string-basics.md
+        - name: 文字列操作メソッドの種類
+          href: types-of-string-manipulation-methods.md
+        - name: テキストと文字列
+          href: nothing-and-strings.md
+        - name: カルチャが文字列に与える影響
+          href: how-culture-affects-strings.md
+        - name: 挿入文字列
+          href: interpolated-strings.md
+        - name: 0 から始まる文字列アクセスと1 から始まる文字列アクセスの比較
+          href: zero-based-vs-one-based-string-access.md
+    - name: '方法: StringBuilder を使用して文字列を作成する'
+      href: how-to-create-strings-using-a-stringbuilder.md
+    - name: '方法: 文字列内を検索する'
+      href: how-to-search-within-a-string.md
+    - name: 文字列型とその他のデータ型との変換を行う
+      href: converting-between-strings-and-other-data-types.md
+      items:
+        - name: '方法: バイトの配列を文字列に変換する'
+          href: how-to-convert-an-array-of-bytes-into-a-string.md
+        - name: '方法: 文字列をバイトの配列に変換する'
+          href: how-to-convert-strings-into-an-array-of-bytes.md
+        - name: '方法: Char 値の配列から文字列を作成する'
+          href: how-to-create-a-string-from-an-array-of-char-values.md
+        - name: '方法: 16 進文字列を数値に変換する'
+          href: how-to-convert-hexadecimal-strings-to-numbers.md
+        - name: '方法: 文字列を文字の配列に変換する'
+          href: how-to-convert-a-string-to-an-array-of-characters.md
+        - name: '方法: 文字列の文字にアクセスする'
+          href: how-to-access-characters-in-strings.md
+    - name: 文字列の検証
+      href: validating-strings.md
+      items:
+        - name: '方法: ファイル名とパスを検証する'
+          href: how-to-validate-file-names-and-paths.md
+        - name: '方法: 日付または時刻を表す文字列を検証する'
+          href: how-to-validate-strings-that-represent-dates-or-times.md
+        - name: MaskedTextBox コントロールによる正規表現を使用する
+          href: using-regular-expressions-with-the-maskedtextbox-control.md
+        - name: 'チュートリアル: パスワードの複雑さの検証'
+          href: walkthrough-validating-that-passwords-are-complex.md
+    - name: 'チュートリアル: 文字列の暗号化と複合化'
+      href: walkthrough-encrypting-and-decrypting-strings.md

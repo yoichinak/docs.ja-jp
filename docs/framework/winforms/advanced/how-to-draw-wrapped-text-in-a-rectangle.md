@@ -10,10 +10,10 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing in a rectangle
 ms.assetid: e1fb432a-dc90-48b5-9b6b-acc14507133d
 ms.openlocfilehash: 8e5c7cab1f977bef0570b2e540d7bf3a630aceb0
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
-ms.translationtype: MT
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59301927"
 ---
 # <a name="how-to-draw-wrapped-text-in-a-rectangle"></a>方法: 四角形内にテキストを折り返して描画する
@@ -46,7 +46,7 @@ ms.locfileid: "59301927"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: GDI を使用してテキストを描画する](how-to-draw-text-with-gdi.md)
+- [方法: GDI を使用してテキストを描画します。](how-to-draw-text-with-gdi.md)
 - [フォントとテキストの使用](using-fonts-and-text.md)
-- [方法: フォント ファミリとフォントを作成する](how-to-construct-font-families-and-fonts.md)
-- [方法: テキストを指定の位置に描画する](how-to-draw-text-at-a-specified-location.md)
+- [方法: フォント ファミリとフォントを作成します。](how-to-construct-font-families-and-fonts.md)
+- [方法: 指定した位置のテキストの描画](how-to-draw-text-at-a-specified-location.md)

@@ -1,0 +1,76 @@
+- name: ML.NET ガイド
+  href: index.yml
+- name: 概要
+  expanded: true
+  items:
+    - name: ML.NET とは
+      href: what-is-mldotnet.md
+    - name: モデルのトレーニングの概念
+      href: basic-concepts-model-training-in-mldotnet.md
+- name: チュートリアル
+  href: null
+  items:
+    - name: 概要
+      href: tutorials/index.md
+    - name: センチメント分析 (二項分類)
+      href: tutorials/sentiment-analysis.md
+    - name: 問題の分類 (多クラス分類)
+      href: tutorials/github-issue-classification.md
+    - name: 料金の予測 (回帰)
+      href: tutorials/taxi-fare.md
+    - name: あやめの花 (クラスタリング)
+      href: tutorials/iris-clustering.md
+    - name: 映画のレコメンデーション (推奨)
+      href: tutorials/movie-recommmendation.md
+    - name: 画像の分類 (転移学習)
+      href: tutorials/image-classification.md
+- name: 使い方ガイド
+  items:
+    - name: データの読み込み
+      href: how-to-guides/load-data-ml-net.md
+    - name: データの準備
+      href: how-to-guides/index.md
+      items:
+        - name: カテゴリの特徴エンジニアリングを適用する
+          href: how-to-guides/train-model-categorical-ml-net.md
+        - name: テキストの特徴エンジニアリングを適用する
+          href: how-to-guides/train-model-textual-ml-net.md
+        - name: ノーマライザーを使ってデータを処理する
+          href: how-to-guides/normalizers-preprocess-data-ml-net.md
+    - name: トレーニング、評価、およびモデルの説明
+      items:
+        - name: クロス検証を使ってモデルをトレーニングする
+          href: how-to-guides/train-cross-validation-ml-net.md
+        - name: パイプラインの中間データ値を検査する
+          href: how-to-guides/inspect-intermediate-data-ml-net.md
+        - name: 回帰モデルをトレーニングする
+          href: how-to-guides/train-regression-model-ml-net.md
+        - name: PFI を使ってモデルの特徴の重要度を判断する
+          href: how-to-guides/determine-global-feature-importance-in-model.md
+    - name: トレーニング済みモデルの使用
+      items:
+        - name: PredictionEngine を使った一度に 1 つの予測
+          href: how-to-guides/single-predict-model-ml-net.md
+        - name: トレーニング済みのモデルを運用化する
+          href: how-to-guides/consuming-model-ml-net.md
+        - name: モデル Azure Functions のサービスを提供する
+          href: how-to-guides/serve-model-serverless-azure-functions-ml-net.md
+        - name: Web API でのサービス提供モデル
+          href: how-to-guides/serve-model-web-api-ml-net.md
+        - name: Infer.NET
+          items: null
+        - name: Infer.NET を使用した確率的プログラミング
+          href: how-to-guides/matchup-app-infer-net.md
+- name: 関連項目
+  items:
+    - name: API リファレンス
+      href: 'https://docs.microsoft.com/dotnet/api/?view=ml-dotnet'
+- name: リソース
+  href: resources/index.md
+  items:
+    - name: 機械学習の用語集
+      href: resources/glossary.md
+    - name: 機械学習のタスク
+      href: resources/tasks.md
+    - name: データ変換
+      href: resources/transforms.md

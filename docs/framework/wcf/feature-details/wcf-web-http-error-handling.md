@@ -3,10 +3,10 @@ title: WCF Web HTTP エラー処理
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
 ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59152699"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP エラー処理
@@ -23,7 +23,7 @@ Public string Operation1()
 }  
 ```  
   
- 次の例は、HTTP 状態コードおよび追加情報をユーザー定義型で返す方法を示しています。 `MyErrorDetail` 発生したエラーに関する追加情報を含むユーザー定義型です。  
+ 次の例は、HTTP 状態コードおよび追加情報をユーザー定義型で返す方法を示しています。 `MyErrorDetail` は、発生したエラーに関する追加情報を格納しているユーザー定義型です。  
   
 ```  
 Public string Operation2()  
@@ -47,7 +47,7 @@ Public string Operation2()
   
  これらの値が、操作の書式設定に影響する方法の詳細については、次を参照してください。 [WCF Web HTTP 書式](../../../../docs/framework/wcf/feature-details/wcf-web-http-formatting.md)します。  
   
- <xref:System.ServiceModel.Web.WebFaultException> <xref:System.ServiceModel.FaultException>ので SOAP エンドポイントを公開して、HTTP エンドポイントを web サービスのエラー例外プログラミング モデルとして使用することができます。  
+ <xref:System.ServiceModel.Web.WebFaultException> は <xref:System.ServiceModel.FaultException> であるため、SOAP エンドポイントと Web HTTP エンドポイントを公開するサービスのエラー例外プログラミング モデルとして使用できます。  
   
 ## <a name="see-also"></a>関連項目
 

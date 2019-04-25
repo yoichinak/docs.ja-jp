@@ -10,10 +10,10 @@ helpviewer_keywords:
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
 ms.openlocfilehash: 33d4f4ecca7b9d777fa4eab5b6d031de10f03ccc
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
+ms.lasthandoff: 04/18/2019
 ms.locfileid: "59076030"
 ---
 # <a name="regions-in-gdi"></a>GDI+ での領域

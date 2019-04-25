@@ -8,19 +8,19 @@ helpviewer_keywords:
 - WebRequest class, sending data to a host
 - Sending data to a host, using WebRequest class
 ms.assetid: 66686878-38ac-4aa6-bf42-ffb568ffc459
-ms.openlocfilehash: 6d7a2e52177c05ead6300e775021572f3a64340a
-ms.sourcegitcommit: bce0586f0cccaae6d6cbd625d5a7b824d1d3de4b
+ms.openlocfilehash: 3878a94debc7066cb8ace3b119d95d3b76d91610
+ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/02/2019
-ms.locfileid: "58822270"
+ms.lasthandoff: 04/18/2019
+ms.locfileid: "59322876"
 ---
 # <a name="how-to-send-data-by-using-the-webrequest-class"></a>方法: WebRequest クラスを使用してデータを送信する
 次の手順では、サーバーにデータを送信するための手順について説明します。 この手順は、通常、Web ページへのデータをポストするときに使用されます。 
   
 ## <a name="to-send-data-to-a-host-server"></a>ホスト サーバーにデータを送信するには  
   
-1.  スクリプトや ASP.NET ページなど、データを受け取るリソースの URI を指定して <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> を呼び出すことによって <xref:System.Net.WebRequest> インスタンスを作成します。 次に例を示します。 
+1. スクリプトや ASP.NET ページなど、データを受け取るリソースの URI を指定して <xref:System.Net.WebRequest.Create%2A?displayProperty=nameWithType> を呼び出すことによって <xref:System.Net.WebRequest> インスタンスを作成します。 次に例を示します。 
   
     ```csharp  
     WebRequest request = WebRequest.Create("http://www.contoso.com/PostAccepter.aspx");  
@@ -34,7 +34,7 @@ ms.locfileid: "58822270"
     > .NET Framework は、*http:*、*https:*、*ftp:*、*file:* で始まる URI に対応する <xref:System.Net.WebRequest> と <xref:System.Net.WebResponse> クラスから派生したプロトコル固有のクラスを提供します。
     プロトコル固有のプロパティを設定する必要がある場合、<xref:System.Net.WebRequest> または <xref:System.Net.WebResponse> オブジェクトをプロトコル固有のオブジェクトの種類にキャストする必要があります。 詳細については、「[プラグ可能なプロトコルのプログラミング](programming-pluggable-protocols.md)」を参照してください。 
   
-2.  `WebRequest` オブジェクトで必要なプロパティ値を設定します。 たとえば、認証を有効にするには、<xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> プロパティを <xref:System.Net.NetworkCredential> クラスのインスタンスに設定します。
+2. `WebRequest` オブジェクトで必要なプロパティ値を設定します。 たとえば、認証を有効にするには、<xref:System.Net.WebRequest.Credentials%2A?displayProperty=nameWithType> プロパティを <xref:System.Net.NetworkCredential> クラスのインスタンスに設定します。
   
     ```csharp  
     request.Credentials = CredentialCache.DefaultCredentials;  
@@ -44,7 +44,7 @@ ms.locfileid: "58822270"
     request.Credentials = CredentialCache.DefaultCredentials  
     ```  
   
-3.  HTTP `POST` メソッドなど、要求と共にデータを送信することを許可するプロトコル メソッドを指定します。  
+3. HTTP `POST` メソッドなど、要求と共にデータを送信することを許可するプロトコル メソッドを指定します。  
   
     ```csharp  
     request.Method = "POST";  
@@ -54,7 +54,7 @@ ms.locfileid: "58822270"
     request.Method = "POST"  
     ```  
   
-4.  要求で含めるバイト数に <xref:System.Web.HttpRequest.ContentLength> プロパティを設定します。 次に例を示します。 
+4. 要求で含めるバイト数に <xref:System.Web.HttpRequest.ContentLength> プロパティを設定します。 次に例を示します。 
   
     ```csharp  
     request.ContentLength = byteArray.Length;  
@@ -64,7 +64,7 @@ ms.locfileid: "58822270"
     request.ContentLength = byteArray.Length  
     ```  
   
-5.  <xref:System.Web.HttpRequest.ContentType> プロパティに適切な値を設定します。 次に例を示します。
+5. <xref:System.Web.HttpRequest.ContentType> プロパティに適切な値を設定します。 次に例を示します。
   
     ```csharp  
     request.ContentType = "application/x-www-form-urlencoded";  
@@ -74,7 +74,7 @@ ms.locfileid: "58822270"
     request.ContentType = "application/x-www-form-urlencoded"  
     ```  
   
-6.  <xref:System.Net.WebRequest.GetRequestStream%2A> メソッドを呼び出すことで、要求のデータを保持するストリームを取得します。 次に例を示します。
+6. <xref:System.Net.WebRequest.GetRequestStream%2A> メソッドを呼び出すことで、要求のデータを保持するストリームを取得します。 次に例を示します。
   
     ```csharp  
     Stream dataStream = request.GetRequestStream();  
@@ -84,7 +84,7 @@ ms.locfileid: "58822270"
     Stream dataStream = request.GetRequestStream()  
     ```  
   
-7.  `GetRequestStream` メソッドによって返される <xref:System.IO.Stream> オブジェクトにデータを書き込みます。 次に例を示します。
+7. `GetRequestStream` メソッドによって返される <xref:System.IO.Stream> オブジェクトにデータを書き込みます。 次に例を示します。
   
     ```csharp  
     dataStream.Write(byteArray, 0, byteArray.Length);  
@@ -94,7 +94,7 @@ ms.locfileid: "58822270"
     dataStream.Write(byteArray, 0, byteArray.Length)  
     ```  
   
-8.  <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> メソッドを呼び出すことで、要求のストリームを閉じます。 次に例を示します。
+8. <xref:System.IO.Stream.Close%2A?displayProperty=nameWithType> メソッドを呼び出すことで、要求のストリームを閉じます。 次に例を示します。
   
     ```csharp  
     dataStream.Close();  
@@ -153,8 +153,8 @@ ms.locfileid: "58822270"
 [!code-csharp[SendDataUsingWebRequest](../../../samples/snippets/csharp/VS_Snippets_Network/SendDataUsingWebRequest/cs/WebRequestPostExample.cs)]
 [!code-vb[SendDataUsingWebRequest](../../../samples/snippets/visualbasic/VS_Snippets_Network/SendDataUsingWebRequest/vb/WebRequestPostExample.vb)]
 
-  
 ## <a name="see-also"></a>関連項目
+
 - [インターネット要求の作成](creating-internet-requests.md)
 - [ネットワーク上でストリームを使用する](using-streams-on-the-network.md)
 - [プロキシを介したインターネットへのアクセス](accessing-the-internet-through-a-proxy.md)

@@ -1,12 +1,5 @@
-items:
 - name: 文字列
   href: index.md
   items:
-  - name: '方法: 文字列が数値を表しているかどうかを確認する'
-    href: how-to-determine-whether-a-string-represents-a-numeric-value.md
-ms.openlocfilehash: 966d7801e448c16be7db2428363d50f44db5eb4b
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58470243"
+    - name: '方法: 文字列が数値を表しているかどうかを確認する'
+      href: how-to-determine-whether-a-string-represents-a-numeric-value.md
