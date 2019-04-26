@@ -1,10 +1,10 @@
 - name: 'C# のキーワード'
   href: index.md
   items:
-  - name: 型
+    - name: 型
       href: types.md
       items:
-        - name: 型
+        - name: 値型
           href: value-types.md
           items:
             - name: bool
@@ -197,7 +197,7 @@
       items:
         - name: namespace
           href: namespace.md
-    - name: using
+        - name: using
           href: using.md
           items:
             - name: using ディレクティブ
