@@ -104,7 +104,7 @@ MsgBox(output.ToString())
 
 - <xref:System.Linq.Enumerable>
 - <xref:System.Linq.Queryable>
-- [LINQ (Visual Basic) の概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
+- [LINQ の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)
 - [標準クエリ演算子 (Visual Basic) のクエリ式構文](../../../../visual-basic/programming-guide/concepts/linq/query-expression-syntax-for-standard-query-operators.md)
 - [(Visual Basic) の実行方法による標準クエリ演算子の分類](../../../../visual-basic/programming-guide/concepts/linq/classification-of-standard-query-operators-by-manner-of-execution.md)
 - [拡張メソッド](../../../../visual-basic/programming-guide/language-features/procedures/extension-methods.md)
