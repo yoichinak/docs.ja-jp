@@ -37,7 +37,7 @@ Parallel LINQ (PLINQ) は、LINQ パターンの並列実装です。 PLINQ ク�
 
   <xref:System.Linq.ParallelEnumerable?displayProperty=nameWithType> クラスは、ほぼすべての PLINQ 機能を公開します。 このクラスと、その他の <xref:System.Linq?displayProperty=nameWithType> 名前空間の型は、System.Core.dll アセンブリにコンパイルされます。 Visual Studio の既定の C# プロジェクトと Visual Basic プロジェクトは、どちらもアセンブリを参照し、名前空間をインポートします。
 
-<xref:System.Linq.ParallelEnumerable> には、LINQ to Objects がサポートするすべての標準クエリ演算子の実装が含まれていますが、各演算子の並列化は試行しません。 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] に精通していない場合は、「[LINQ の概要 (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)」および「[LINQ (Visual Basic) の概要](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)」を参照してください。
+<xref:System.Linq.ParallelEnumerable> には、LINQ to Objects がサポートするすべての標準クエリ演算子の実装が含まれていますが、各演算子の並列化は試行しません。 [!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] に精通していない場合は、「[LINQ の概要 (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq.md)」および「[LINQ の概要 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)」を参照してください。
 
 
   <xref:System.Linq.ParallelEnumerable> クラスには、標準クエリ演算子に加え、並行実行固有の動作を可能にする一連のメソッドが含まれています。 次の表に、これらの PLINQ 固有のメソッドを示します。
