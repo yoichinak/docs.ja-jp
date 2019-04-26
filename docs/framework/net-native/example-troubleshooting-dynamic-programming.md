@@ -33,7 +33,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 [snip]  
 ```  
   
- 「[.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)」(はじめに) の「メタデータの欠落を手動で解決する」セクションで説明されている 3 つの手順からなるアプローチを使用して、この例外をトラブルシューティングしてみましょう。  
+ 「[.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)」の「メタデータの欠落を手動で解決する」セクションで説明されている 3 つの手順からなるアプローチを使用して、この例外をトラブルシューティングしてみましょう。  
   
 ## <a name="what-was-the-app-doing"></a>アプリが行っていた動作は何か  
  最初に注目するのは、スタックの最下位にある `async` キーワード メカニズムです。  スタックでは元の呼び出しのコンテキストが失われており、別のスレッドで `async` コードを実行しているため、アプリが `async` メソッドで実際に何を行っていたかを決定するのは困難です。 ただし、アプリが最初のページをロードしようとしていたことは推測できます。  `NavigationArgs.Setup` の実装で、次のコードによってアクセス違反が発生しました。  
