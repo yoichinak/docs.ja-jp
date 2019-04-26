@@ -14,7 +14,7 @@ ms.locfileid: "58832529"
 # <a name="classes-used-in-net-framework-file-io-and-the-file-system-visual-basic"></a>.NET Framework のファイル I/O とファイル システムで使用するクラス (Visual Basic)
 以下の表は、.NET Framework のファイル I/O で一般的に使用するクラスの一覧です。ファイル I/O クラス、ストリームの作成に使用するクラス、ストリームの読み取りと書き込みに使用するクラスに分類されています。  
   
- [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] ドキュメントで詳細な一覧を参照するには、「[クラス ライブラリの概要](../../../../standard/class-library-overview.md)」をご覧ください。  
+ [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] ドキュメントで詳細な一覧を参照するには、「[.NET クラス ライブラリの概要](../../../../standard/class-library-overview.md)」をご覧ください。  
   
 ## <a name="basic-io-classes-for-files-drives-and-directories"></a>ファイル、ドライブ、およびディレクトリ用の基本 I/O クラス  
  次の表は、ファイル I/O に使用する主要なクラスの一覧と各クラスの説明です。  

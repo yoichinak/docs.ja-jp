@@ -172,7 +172,7 @@ Mono について詳しくは、[Mono のドキュメント](https://www.mono-pr
 
 一連のライブラリとツールであり、開発者はこれを利用して .NET Core のアプリケーションやライブラリを作成できます。 アプリ構築用の [.NET Core CLI](#net-core-cli)、アプリの構築および実行用の .NET Core ライブラリとランタイム、CLI コマンドとアプリケーションを実行する dotnet 実行可能ファイル (*dotnet.exe*) が含まれます。
 
-「[.NET Core SDK の概要](../core/sdk.md)」をご覧ください。
+「[.NET Core SDK 概要](../core/sdk.md)」をご覧ください。
 
 ## <a name="net-framework"></a>.NET Framework
 

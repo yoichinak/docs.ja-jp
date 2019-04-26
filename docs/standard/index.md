@@ -29,7 +29,7 @@ ms.locfileid: "61752439"
 
 ## <a name="new-to-net-core"></a>.NET Core を初めて使う
 
-.NET Core を初めて使用する場合は、[「.NET Core の概要」](../core/get-started.md)を参照してください。
+.NET Core を初めて使用する場合は、[.NET Core の概要](../core/get-started.md) を参照してください。
 
 ## <a name="new-to-net-standard"></a>.NET Standard を初めて使う
 
@@ -54,7 +54,7 @@ ms.locfileid: "61752439"
 * [.NET の基本型](base-types/index.md)
 * [コレクション](collections/index.md)
 * [日付、時刻、およびタイム ゾーン](datetime/index.md)
-* [非同期プログラミング](async.md)
+* [非同期の概要](async.md)
 
 さらに、.NET の主要な 3 つの言語については、各言語のガイドを参照してください。
 
