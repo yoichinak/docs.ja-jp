@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 4958f3e28b80fca2086d45827df1ced8fc26bd8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61689815"
 ---
 # <a name="c-operators"></a>C# 演算子
 
@@ -77,7 +77,7 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 [\!x](boolean-logical-operators.md#logical-negation-operator-) – 論理否定。
 
-[~x](bitwise-complement-operator.md) – ビットごとの補数。
+[~x](bitwise-and-shift-operators.md#bitwise-complement-operator-) – ビットごとの補数。
 
 [++x](arithmetic-operators.md#increment-operator-) – 前置インクリメント。 1 大きくなった (通常は整数 1 が加算された) x の値で格納場所を更新した後に x の値を返します。
 
@@ -90,6 +90,10 @@ C# には、多くの演算子が用意されています。演算子とは、�
 [&x](and-operator.md) – アドレス。
 
 [*x](multiplication-operator.md) – 逆参照。
+
+[true 演算子](../keywords/true-false-operators.md) - オペランドが確実に true であることを示す[ブール](../keywords/bool.md)値 `true` を返します。
+
+[false 演算子](../keywords/true-false-operators.md) - オペランドが確実に false であることを示す[ブール](../keywords/bool.md)値 `true` を返します。
 
 ## <a name="multiplicative-operators"></a>乗算演算子
 
@@ -113,9 +117,9 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x <\<  y](left-shift-operator.md) – ビットを左へシフトし、右側には 0 を格納します。
+[x <\<  y](bitwise-and-shift-operators.md#left-shift-operator-) – ビットを左へシフトし、右側には 0 を格納します。
 
-[x >> y](right-shift-operator.md) – ビットを右へシフトします。 左側のオペランドが `int` または `long` の場合、左側のビットには符号ビットが格納されます。 左側のオペランドが `uint` または `ulong` の場合、左側のビットには 0 が格納されます。
+[x >> y](bitwise-and-shift-operators.md#right-shift-operator-) – ビットを右へシフトします。 左側のオペランドが `int` または `long` の場合、左側のビットには符号ビットが格納されます。 左側のオペランドが `uint` または `ulong` の場合、左側のビットには 0 が格納されます。
 
 ## <a name="relational-and-type-testing-operators"></a>関係演算子と型検査演算子
 
@@ -145,27 +149,19 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x & y](and-operator.md) – 論理またはビットごとの AND。 通常、整数型と `enum` 型で使用できます。
+`x & y` – `bool` オペランドの場合は[論理 AND](boolean-logical-operators.md#logical-and-operator-)、整数型のオペランドの場合は[ビットごとの論理 AND](bitwise-and-shift-operators.md#logical-and-operator-)。
 
 ## <a name="logical-xor-operator"></a>論理 XOR 演算子
 
 この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x ^ y](xor-operator.md) – 論理またはビットごとの XOR。 通常、整数型と `enum` 型で使用できます。
+`x ^ y` – `bool` オペランドの場合は[論理 XOR](boolean-logical-operators.md#logical-exclusive-or-operator-)、整数型のオペランドの場合は[ビットごとの論理 XOR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-)。
 
 ## <a name="logical-or-operator"></a>論理演算子 OR
 
 この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x &#124; y](or-operator.md) – 論理またはビットごとの OR。 通常、整数型と `enum` 型で使用できます。
-
-## <a name="true-operator"></a>true 演算子
-
-[true](../keywords/true-false-operators.md) 演算子は、オペランドが確実に true であることを示す[ブール](../keywords/bool.md)値 `true` を返します。 
-
-## <a name="false-operator"></a>false 演算子
-
-[false](../keywords/true-false-operators.md) 演算子は、オペランドが確実に false であることを示す[ブール](../keywords/bool.md)値 `true` を返します。 
+`x | y` – `bool` オペランドの場合は[論理 OR](boolean-logical-operators.md#logical-or-operator-)、整数型のオペランドの場合は[ビットごとの論理 OR](bitwise-and-shift-operators.md#logical-or-operator-)。
 
 ## <a name="conditional-and-operator"></a>条件 AND 演算子
 
@@ -199,23 +195,23 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 [x += y](addition-assignment-operator.md) – インクリメント。 `y` の値を `x` の値に加算した結果を `x` に格納し、新しい値を返します。 `x` が `event` を指定した場合、`y` は、C# によってイベント ハンドラーとして追加される適切な関数である必要があります。
 
-[x -= y](subtraction-assignment-operator.md) – デクリメント。 `y` の値を `x` の値から減算した結果を `x` に格納し、新しい値を返します。 `x` が `event` を指定した場合、`y` は、C# によってイベント ハンドラーとして削除される適切な関数である必要があります。
+[x -= y](subtraction-assignment-operator.md) – デクリメント。 `y` の値を `x` の値から減算した結果を `x` に格納し、新しい値を返します。 `x` で `event` を指定する場合、`y` は C# によってイベント ハンドラーとして削除される適切な関数である必要があります。
 
-[x *= y](multiplication-assignment-operator.md) – 乗算代入。 `y` の値を `x` の値に乗算した結果を `x` に格納し、新しい値を返します。
+[x *= y](arithmetic-operators.md#compound-assignment) – 乗算代入。 `y` の値を `x` の値に乗算した結果を `x` に格納し、新しい値を返します。
 
 [x /= y](arithmetic-operators.md#compound-assignment) – 除算代入。 `x` の値を `y` の値で除算した結果を `x` に格納し、新しい値を返します。
 
 [x %= y](arithmetic-operators.md#compound-assignment) – 剰余代入。 `x` の値を `y` の値で除算した剰余を `x` に格納し、新しい値を返します。
 
-[x &= y](and-assignment-operator.md) – AND 代入。 `y` の値と `x` の値の AND 演算を行った結果を `x` に格納し、新しい値を返します。
+[x &= y](boolean-logical-operators.md#compound-assignment) – AND 代入。 `y` の値と `x` の値の AND 演算を行った結果を `x` に格納し、新しい値を返します。
 
-[x &#124;= y](or-assignment-operator.md) – OR 代入。 `y` の値と `x` の値の OR 演算を行った結果を `x` に格納し、新しい値を返します。
+[x &#124;= y](boolean-logical-operators.md#compound-assignment) – OR 代入。 `y` の値と `x` の値の OR 演算を行った結果を `x` に格納し、新しい値を返します。
 
-[x ^= y](xor-assignment-operator.md) – XOR 代入。 `y` の値と `x` の値の XOR 演算を行った結果を `x` に格納し、新しい値を返します。
+[x ^= y](boolean-logical-operators.md#compound-assignment) – XOR 代入。 `y` の値と `x` の値の XOR 演算を行った結果を `x` に格納し、新しい値を返します。
 
-[x <<= y](left-shift-assignment-operator.md) – 左シフト代入。 `x` の値を `y` で指定した分だけ左へシフトした結果を `x` に格納し、新しい値を返します。
+[x <<= y](bitwise-and-shift-operators.md#compound-assignment) – 左シフト代入。 `x` の値を `y` で指定した分だけ左へシフトした結果を `x` に格納し、新しい値を返します。
 
-[x >>= y](right-shift-assignment-operator.md) – 右シフト代入。 `x` の値を `y` で指定した分だけ右へシフトした結果を `x` に格納し、新しい値を返します。
+[x >>= y](bitwise-and-shift-operators.md#compound-assignment) – 右シフト代入。 `x` の値を `y` で指定した分だけ右へシフトした結果を `x` に格納し、新しい値を返します。
 
 [=>](lambda-operator.md) – ラムダ宣言。
 
@@ -224,5 +220,5 @@ C# には、多くの演算子が用意されています。演算子とは、�
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C#](../../index.md)
-- [オーバーロードされた演算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
+- [オーバーロード可能な演算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
 - [C# のキーワード](../keywords/index.md)
