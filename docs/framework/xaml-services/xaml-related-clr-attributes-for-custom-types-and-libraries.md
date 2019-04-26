@@ -81,7 +81,7 @@ ms.locfileid: "59086211"
   
  **引数:** A<xref:System.Type>として期待する最も正確な型を指定する、`ProvideValue`属性付きの結果<xref:System.Windows.Markup.MarkupExtension>します。  
   
- 詳細については、次を参照してください。 [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)します。  
+詳細については、[XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md) を参照してください。
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **リファレンス ドキュメント。**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
