@@ -21,7 +21,7 @@ Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.B
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するには、変換するブラシの機能を理解している必要があります。 <xref:System.Windows.Media.LinearGradientBrush>と<xref:System.Windows.Media.RadialGradientBrush>を参照してください、[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)します。 <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、または<xref:System.Windows.Media.VisualBrush>を参照してください[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)します。 また、「[変換の概要](transforms-overview.md)」で説明されている 2D 変換についても理解しておく必要があります。  
+ このトピックを理解するには、変換するブラシの機能を理解している必要があります。<xref:System.Windows.Media.LinearGradientBrush> および <xref:System.Windows.Media.RadialGradientBrush> については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。<xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush>、または <xref:System.Windows.Media.VisualBrush> については、「[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)」を参照してください。また、「[変換の概要](transforms-overview.md)」で説明されている 2D 変換についても理解しておく必要があります。   
   
 <a name="transformversusrelativetransform"></a>   
 ## <a name="differences-between-the-transform-and-relativetransform-properties"></a>Transform プロパティと RelativeTransform プロパティの違い  
