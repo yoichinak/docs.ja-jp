@@ -13,7 +13,7 @@ ms.locfileid: "33645969"
 LINQ は、強力なクエリ機能を Visual Basic の言語構文に拡張する機能のセットです。 LINQ には、データを照会したり、更新したりするための、容易に覚えることのできる標準的なパターンが採用されており、あらゆる種類のデータ ストアをサポートするようにテクノロジを拡張できます。  .NET Framework には LINQ プロバイダー アセンブリが含まれているため、.NET Framework コレクション、SQL Server データベース、ADO.NET データセット、および XML ドキュメントで LINQ を使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [LINQ (Visual Basic) の概要](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
+ [LINQ の概要 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/introduction-to-linq.md)  
  作成できるアプリケーションの種類と、LINQ クエリを使用して解決できる問題の種類の概要について説明します。  
   
  [Visual Basic の LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)  
