@@ -79,7 +79,7 @@ ms.locfileid: "58048161"
   
 -   呼び出す<xref:System.Xaml.XamlXmlWriter.Flush%2A>最終的な出力を取得します。  
   
- XAML ノード ストリームの概念の詳細については、[Understanding XAML ノード Stream 構造と概念](understanding-xaml-node-stream-structures-and-concepts.md)を参照してください。  
+ XAML ノード ストリームの概念の詳細については、「[XAML ノード ストリームの構造と概念について](understanding-xaml-node-stream-structures-and-concepts.md)」を参照してください。 
   
 ### <a name="the-xamlservices-class"></a>XamlServices クラス  
  常に XAML ノード ストリームを処理するために必要です Api を使用する場合は、基本的な読み込みパスまたは保存パスの基本的な場合は、<xref:System.Xaml.XamlServices>クラス。  

@@ -1,4 +1,4 @@
----
+﻿---
 title: 型 - C# プログラミング ガイド
 ms.custom: seodec18
 ms.date: 07/20/2015

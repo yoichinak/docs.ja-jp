@@ -18,7 +18,7 @@ ms.lasthandoff: 09/11/2017
 ---
 # <a name="welcome-to-net"></a>.NET にようこそ
 
-.NET Core アプリの作成方法については、「[Getting Started with .NET Core (.NET Core の概要)](core/get-started.md)」をご覧ください。
+.NET Core アプリの作成方法については、「[.NET Core の概要](core/get-started.md)」をご覧ください。
 
 .NET では、クラウド、IoT、ゲームなどのさまざまな種類のアプリを、無料のクロスプラットフォーム ツールを使用して構築できます。 アプリは、Android、iOS、Linux、macOS、Windows で実行できます。 サーバーまたはデスクトップにアプリを展開し、モバイル デバイスへの展開用としてアプリ ストアに発行します。 .NET は学生やプログラミング愛好者も利用することができ、海外の活気ある開発コミュニティに参加したり、多くの .NET テクノロジに貢献したりできます。
 

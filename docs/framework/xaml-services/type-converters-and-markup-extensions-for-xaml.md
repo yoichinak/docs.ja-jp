@@ -1,4 +1,4 @@
----
+﻿---
 title: XAML の型コンバーターおよびマークアップ拡張機能
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -42,7 +42,7 @@ ms.locfileid: "59200988"
   
  マークアップ拡張機能は、単一のサポート サービス クラスに関連付けられますが、任意のメンバー値に適用できます。 (ただし、マークアップ拡張機能の実装では、サービス コンテキストを使用することにより、その用途を特定のメンバーまたは変換先の型に意図的に制限することもできます。)マークアップ拡張機能は、型コンバーターの関連付けをオーバーライドできます。 または、テキスト構文をサポートしないメンバーの属性値を指定するためにマークアップ拡張機能を使用することもできます。  
   
- XAML でのマークアップ拡張機能の実装パターンの詳細については、「 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)」を参照してください。  
+ XAML でのマークアップ拡張機能の実装パターンの詳細については、「 [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)」を参照してください。  
   
 > [!NOTE]
 >  <xref:System.Windows.Markup.MarkupExtension> 型と <xref:System.Windows.Markup.ValueSerializer> 型はどちらも、 <xref:System.Windows.Markup> 名前空間ではなく、 <xref:System.Xaml> 名前空間にあります。 これらの型がそれ以外の場合、文字列を含む CLR 名前空間を設定、WPF、または Windows フォームのいずれかのテクノロジに固有であるわけ`Windows`します。 <xref:System.Windows.Markup.MarkupExtension> と <xref:System.Windows.Markup.ValueSerializer> は System.Xaml アセンブリにあり、特定のフレームワークとの依存関係はありません。 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] では、これらの型は CLR 名前空間に存在し、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] でも引き続き CLR 名前空間に残っているので、既存の WPF プロジェクトの参照は破損しません。 詳細については、「 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)」を参照してください。  

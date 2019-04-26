@@ -1,4 +1,4 @@
----
+﻿---
 title: Visual Studio での WPF アプリケーションを作成します。
 ms.date: 10/26/2018
 dev_langs:

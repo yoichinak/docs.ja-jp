@@ -146,7 +146,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  ![SolidColorBrush の図](./media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
   
- 図形のストロークまたは塗りつぶしをグラデーション、イメージ、パターンなどで塗りつぶすこともできます。 詳細については、次を参照してください。、[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)します。  
+ 図形のストロークを描いたり、グラデーション、イメージ、パターンなどで塗りつぶすこともできます。 詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。
   
 <a name="stretchableshapessection"></a>   
 ## <a name="stretchable-shapes"></a>伸縮可能な図形  

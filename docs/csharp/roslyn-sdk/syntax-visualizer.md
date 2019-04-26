@@ -16,7 +16,7 @@ ms.locfileid: "54307202"
 
 [!INCLUDE[interactive-note](~/includes/roslyn-installation.md)]
 
-[概要](compiler-api-model.md)の記事を読んで、.NET Compiler Platform SDK で使われている概念をよく理解してください。 この記事では、構文ツリー、ノード、トークン、およびトリビアについて説明されています。
+「[.NET Compiler Platform SDK の概念とオブジェクト モデル](compiler-api-model.md)」の記事を読んで、.NET Compiler Platform SDK で使われている概念をよく理解してください。 この記事では、構文ツリー、ノード、トークン、およびトリビアについて説明されています。
 
 ## <a name="syntax-visualizer"></a>Syntax Visualizer
 

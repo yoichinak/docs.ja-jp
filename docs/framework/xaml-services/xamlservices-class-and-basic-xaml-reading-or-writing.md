@@ -59,7 +59,7 @@ ms.locfileid: "59162269"
 ## <a name="transform"></a>変換  
  <xref:System.Xaml.XamlServices.Transform%2A> は、読み込みパスと保存パスを単一の操作としてリンクすることによって、XAML を変換します。 <xref:System.Xaml.XamlReader> および <xref:System.Xaml.XamlWriter>に対して異なるスキーマ コンテキストまたは異なるバッキング型システムを使用できます。これは、結果として生成される XAML がどのように変換されるかに影響します。 これは、さまざまな変換操作で機能します。  
   
- XAML ノード ストリームの各ノードの確認に依存する操作については、通常、 <xref:System.Xaml.XamlServices.Transform%2A>は使用しません。 代わりに、読み込みパスから保存パスへの一連の操作を独自に定義し、独自のロジックを挿入する必要があります。 たとえば、独自のノード ループの中で XAML リーダーと XAML ライターのペアを使用します。 具体的に言うと、 <xref:System.Xaml.XamlXmlReader> を使用して最初の XAML を読み込み、 <xref:System.Xaml.XamlXmlReader.Read%2A> を連続的に呼び出してノードにステップ インします。 XAML ノード ストリーム レベルの操作では、個々のノード (型、メンバー、その他のノード) を調整して変換を適用するか、ノードをそのままにしておくことができます。 その後、ノードを `Write` の関連する <xref:System.Xaml.XamlObjectWriter> API に送り、オブジェクトを書き込みます。 詳細については、「 [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md)」を参照してください。  
+ XAML ノード ストリームの各ノードの確認に依存する操作については、通常、 <xref:System.Xaml.XamlServices.Transform%2A>は使用しません。 代わりに、読み込みパスから保存パスへの一連の操作を独自に定義し、独自のロジックを挿入する必要があります。 たとえば、独自のノード ループの中で XAML リーダーと XAML ライターのペアを使用します。 具体的に言うと、 <xref:System.Xaml.XamlXmlReader> を使用して最初の XAML を読み込み、 <xref:System.Xaml.XamlXmlReader.Read%2A> を連続的に呼び出してノードにステップ インします。 XAML ノード ストリーム レベルの操作では、個々のノード (型、メンバー、その他のノード) を調整して変換を適用するか、ノードをそのままにしておくことができます。 その後、ノードを `Write` の関連する <xref:System.Xaml.XamlObjectWriter> API に送り、オブジェクトを書き込みます。 詳細については、「 [XAML ノード ストリームの構造と概念について](understanding-xaml-node-stream-structures-and-concepts.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

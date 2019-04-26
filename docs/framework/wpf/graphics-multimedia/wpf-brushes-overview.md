@@ -50,7 +50,7 @@ SolidColorBrush を使用して描画された四角形
  [!code-vb[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmsolidcolorbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmsolidcolorbrushexampleinline)]  
   
- 詳細については、<xref:System.Windows.Media.SolidColorBrush>クラスを参照してください[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)します。  
+ <xref:System.Windows.Media.SolidColorBrush> クラスの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。  
   
 <a name="paintwithlineargradientbrush"></a>   
 ## <a name="paint-with-a-linear-gradient"></a>線形グラデーションでの塗りつぶし  
@@ -65,7 +65,7 @@ LinearGradientBrush を使用して描画された四角形
  [!code-vb[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmlineargradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmlineargradientbrushexampleinline)]  
   
- 詳細については、<xref:System.Windows.Media.LinearGradientBrush>クラスを参照してください[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)します。  
+ <xref:System.Windows.Media.LinearGradientBrush> クラスの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。  
   
 <a name="paintwithradialgradientbrush"></a>   
 ## <a name="paint-with-a-radial-gradient"></a>放射状グラデーションの描画  
@@ -80,7 +80,7 @@ RadialGradientBrush を使用して描画された四角形
  [!code-vb[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmradialgradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmradialgradientbrushexampleinline)]  
   
- 詳細については、<xref:System.Windows.Media.RadialGradientBrush>クラスを参照してください[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)します。  
+ <xref:System.Windows.Media.RadialGradientBrush> クラスの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください 
   
 <a name="paintwithimage"></a>   
 ## <a name="paint-with-an-image"></a>イメージの描画  
