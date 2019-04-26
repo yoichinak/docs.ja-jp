@@ -33,4 +33,4 @@ ms.locfileid: "57379784"
 > [!NOTE]
 >  このトピックの例では、コントロール ポイントを設定するための既定の座標系を使用します。 既定の座標系は、境界ボックスに対して相対的です。0、境界ボックスの 0% を示し、1 は境界ボックスの 100% を示します。 この座標系を設定して変更することができます、<xref:System.Windows.Media.GradientBrush.MappingMode%2A>プロパティ値を<xref:System.Windows.Media.BrushMappingMode.Absolute>します。 絶対座標系は、境界ボックスに相対しません。 値は、ローカル空間に直接変換されます。  
   
- 追加<xref:System.Windows.Media.RadialGradientBrush>例についてを参照してください、[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)します。 グラデーションおよびその他の種類のブラシの詳細については、[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)を参照してください。
+ <xref:System.Windows.Media.RadialGradientBrush> のさらに別の例については、「[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)」を参照してください。グラデーションおよびその他の種類のブラシの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。
