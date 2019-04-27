@@ -6,13 +6,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], binding redirection
 ms.assetid: 5fca42f3-bdce-4b81-a704-61e42c89d3ba
 ms.openlocfilehash: f646445d5fa4556646700bb5daf8ac859631da2c
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880119"
 ---
-# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>方法: 有効にして、自動バインド リダイレクトを無効にします。
+# <a name="how-to-enable-and-disable-automatic-binding-redirection"></a>方法: 自動バインディング リダイレクトを有効/無効にする
 
 Visual studio を対象とするアプリをコンパイルするときに、[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]以降のバージョンでバインド リダイレクトが自動的にアセンブリの統一をオーバーライドするアプリの構成ファイルに追加するとします。 アプリの構成ファイルで手動でバインド リダイレクトを指定している場合でも、アプリまたはそのコンポーネントが同じアセンブリの複数バージョンを参照している場合、バインド リダイレクトが追加されます。 自動バインド リダイレクトの機能に影響を与えますデスクトップ アプリと web アプリを対象とする、[!INCLUDE[net_v451](../../../includes/net-v451-md.md)]以降のバージョンでは、この操作は、web アプリに少しずつ異なります。 既存のアプリ、.NET Framework のターゲットを以前のバージョンがあるか、バインド リダイレクトを手動で作成する場合は、この機能を無効にすることができる場合、自動バインド リダイレクトを有効にできます。
 

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 82648714c375998e9daa1bb59cd9ebd9802b5794
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993942"
 ---
 # <a name="icordebugthread2-interface"></a>ICorDebugThread2 インターフェイス
 ICorDebugThread インターフェイスを論理的に拡張として機能します。  

@@ -3,11 +3,11 @@ title: 複合型
 ms.date: 03/30/2017
 ms.assetid: 63efbd23-11d4-4871-bc88-ad01b9837553
 ms.openlocfilehash: 9d63660c441192bbc9ecb48bb3a86030b46461cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880015"
 ---
 # <a name="complex-type"></a>複合型
 A*複合型*豊富な構造化されたプロパティを定義するためのテンプレートです[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)または他の複合型。 各テンプレートには、以下が含まれています。  

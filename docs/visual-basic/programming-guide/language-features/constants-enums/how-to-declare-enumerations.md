@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declaring enumerations [Visual Basic]
 ms.assetid: db4ca1c3-f429-4c81-ae81-29e0157b29fd
 ms.openlocfilehash: f168d6d9cd6970353e75fa35a7e52cc7156fda72
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343341"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907648"
 ---
 # <a name="how-to-declare-enumerations-visual-basic"></a>方法: (Visual Basic) 列挙型を宣言します。
 持つ列挙体を作成する、`Enum`クラスまたはモジュールの宣言セクション内のステートメント。 メソッド内で列挙型を宣言することはできません。 適切なアクセス レベルを指定するには、使用`Private`、 `Protected`、 `Friend`、または`Public`します。  

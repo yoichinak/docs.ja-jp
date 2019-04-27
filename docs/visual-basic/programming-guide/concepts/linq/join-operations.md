@@ -3,11 +3,11 @@ title: 結合操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 39ab4854-ac84-4738-9d0b-3cb79be84db4
 ms.openlocfilehash: c7bd81f729558c8ec41baacda99765eb2f862b29
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58411149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61834377"
 ---
 # <a name="join-operations-visual-basic"></a>結合操作 (Visual Basic)
 2 つのデータ ソースの "*結合*" とは、あるデータ ソースのオブジェクトを、共通の属性を共有する別のデータ ソースのオブジェクトと関連付けることです。  
@@ -18,7 +18,7 @@ ms.locfileid: "58411149"
   
  次の図は、2 つのセットと、内部結合または左外部結合としてこれらのセットに含まれている要素の概念図を示しています。  
   
- ![2 つの重なり合う円内部&#47;外部です。](./media/join-operations/join-method-overlapping-circles.png)  
+ ![内側&#47;外側を示す 2 つの重なり合う円。](./media/join-operations/join-method-overlapping-circles.png)  
   
 ## <a name="methods"></a>メソッド  
   

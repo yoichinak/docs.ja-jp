@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
 ms.openlocfilehash: a2d0ef1e70c88133d5f9c3d2ffe8dafa4983cfd9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54552022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904548"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation とは
 Windows Communication Foundation (WCF) は、サービス指向アプリケーションを構築するためのフレームワークです。 WCF を使用して、できるデータを送信する非同期メッセージとして 1 つのサービス エンドポイントから別です。 サービス エンドポイントには、IIS でホストされている、継続的に使用可能なサービスの一部を使用したり、アプリケーションでホストされているサービスを使用できます。 エンドポイントには、サービス エンドポイントからデータを要求するサービスのクライアントを使用できます。 メッセージは XML として送信された 1 文字または 1 語の簡単なものでも、バイナリ データのストリームのような複雑なものでも構いません。 サンプル シナリオをいくつか挙げます。
@@ -32,7 +32,7 @@ Windows Communication Foundation (WCF) は、サービス指向アプリケー�
 
 ## <a name="features-of-wcf"></a>WCF の機能
 
-WCF には、次の機能セットが含まれています。 詳細については、[WCF 機能の詳細](../../../docs/framework/wcf/feature-details/index.md)を参照してください。
+WCF には、次の機能セットが含まれています。 詳細については、次を参照してください。 [WCF 機能の詳細](../../../docs/framework/wcf/feature-details/index.md)します。
 
 -   **サービス指向**
 
@@ -40,7 +40,7 @@ WCF には、次の機能セットが含まれています。 詳細について
 
 -   **相互運用性**
 
-     WCF では、Web サービス相互運用性の最新の業界標準を実装します。 サポートされている標準の詳細については、[相互運用性と統合](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)を参照してください。
+     WCF では、Web サービス相互運用性の最新の業界標準を実装します。 サポートされている標準の詳細については、次を参照してください。[相互運用性と統合](../../../docs/framework/wcf/feature-details/interoperability-and-integration.md)します。
 
 -   **複数のメッセージ パターン**
 
@@ -48,7 +48,7 @@ WCF には、次の機能セットが含まれています。 詳細について
 
 -   **サービス メタデータ**
 
-     WCF では、WSDL、XML スキーマ、Ws-policy などの業界標準で指定された形式を使用してサービス メタデータの公開をサポートします。 このメタデータは、自動的に生成し、WCF サービスにアクセスするためのクライアントの構成に使用できます。 メタデータは HTTP や HTTPS 上で、または Web サービス メタデータ交換標準を使用して公開できます。 詳細については、[メタデータ](../../../docs/framework/wcf/feature-details/metadata.md)を参照してください。
+     WCF では、WSDL、XML スキーマ、Ws-policy などの業界標準で指定された形式を使用してサービス メタデータの公開をサポートします。 このメタデータは、自動的に生成し、WCF サービスにアクセスするためのクライアントの構成に使用できます。 メタデータは HTTP や HTTPS 上で、または Web サービス メタデータ交換標準を使用して公開できます。 詳細については、次を参照してください。[メタデータ](../../../docs/framework/wcf/feature-details/metadata.md)します。
 
 -   **データ コントラクト**
 
@@ -60,15 +60,15 @@ WCF には、次の機能セットが含まれています。 詳細について
 
 -   **複数のトランスポートとエンコーディング**
 
-     メッセージは複数の組み込みトランスポート プロトコルおよびエンコーディングのいずれかを使用して送信できます。 最も一般的なプロトコルとエンコーディングではエンコードされた World Wide Web 上で使用するためのハイパー テキスト転送プロトコル (HTTP) を使用して SOAP メッセージのテキストを送信します。 また、WCF に名前付きパイプ、または MSMQ を使用 TCP 経由でメッセージを送信することができます。 これらのメッセージはテキストとしてエンコードするか、最適化されたバイナリ形式を使用することができます。  バイナリ データは MTOM 標準を使用することで効率的に送信できます。 提供されているトランスポートまたはエンコーディングのいずれもニーズを満たさない場合は、独自のカスタム トランスポートまたはエンコーディングを作成できます。 トランスポートと WCF でサポートされているエンコーディングの詳細については、[トランスポート](../../../docs/framework/wcf/feature-details/transports.md)を参照してください。
+     メッセージは複数の組み込みトランスポート プロトコルおよびエンコーディングのいずれかを使用して送信できます。 最も一般的なプロトコルとエンコーディングではエンコードされた World Wide Web 上で使用するためのハイパー テキスト転送プロトコル (HTTP) を使用して SOAP メッセージのテキストを送信します。 また、WCF に名前付きパイプ、または MSMQ を使用 TCP 経由でメッセージを送信することができます。 これらのメッセージはテキストとしてエンコードするか、最適化されたバイナリ形式を使用することができます。  バイナリ データは MTOM 標準を使用することで効率的に送信できます。 提供されているトランスポートまたはエンコーディングのいずれもニーズを満たさない場合は、独自のカスタム トランスポートまたはエンコーディングを作成できます。 トランスポートと WCF でサポートされているエンコーディングの詳細については、次を参照してください。[トランスポート](../../../docs/framework/wcf/feature-details/transports.md)します。
 
 -   **キューに置かれた信頼性のあるメッセージ**
 
-     WCF では、Ws-reliable Messaging 経由で実装され、MSMQ を使用して、信頼できるセッションを使用した信頼性の高いメッセージ交換をサポートします。 WCF で信頼性が高く、キューに置かれたメッセージングのサポートの詳細については、[Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)を参照してください。
+     WCF では、Ws-reliable Messaging 経由で実装され、MSMQ を使用して、信頼できるセッションを使用した信頼性の高いメッセージ交換をサポートします。 WCF で信頼性が高く、キューに置かれたメッセージングのサポートの詳細については、次を参照してください。 [Queues and Reliable Sessions](../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)します。
 
 -   **非揮発性メッセージ**
 
-     非揮発性メッセージは、通信の中断によって失われることがないメッセージです。 非揮発性メッセージ パターンのメッセージは常にデータベースに保存されます。 中断が発生した場合、接続復旧時にデータベースでメッセージの交換を再開できます。 Windows Workflow Foundation (WF) を使用して永続的なメッセージを作成することもできます。 詳細については、[ワークフロー サービス](../../../docs/framework/wcf/feature-details/workflow-services.md)を参照してください。
+     非揮発性メッセージは、通信の中断によって失われることがないメッセージです。 非揮発性メッセージ パターンのメッセージは常にデータベースに保存されます。 中断が発生した場合、接続復旧時にデータベースでメッセージの交換を再開できます。 Windows Workflow Foundation (WF) を使用して永続的なメッセージを作成することもできます。 詳細については、次を参照してください。[ワークフロー サービス](../../../docs/framework/wcf/feature-details/workflow-services.md)します。
 
 -   **トランザクション**
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 48e1cd90-de80-4d6c-846e-631878955762
 ms.openlocfilehash: 84762d8917609b84a049ea665b575acfa6e5fecf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325190"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857533"
 ---
 # <a name="how-to-configure-wcf-service-to-interoperate-with-aspnet-web-service-clients"></a>方法: WCF サービスおよび ASP.NET Web サービス クライアントを相互運用するために構成する
 相互運用できるように Windows Communication Foundation (WCF) サービス エンドポイントを構成する[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web サービス クライアントを使用して、<xref:System.ServiceModel.BasicHttpBinding?displayProperty=nameWithType>サービス エンドポイントのバインドの種類として。  

@@ -14,11 +14,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b79da7832a797cce0163de42363f0d3812a2376
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675391"
 ---
 # <a name="datamemberlisteditor-class"></a>DataMemberListEditor クラス
 

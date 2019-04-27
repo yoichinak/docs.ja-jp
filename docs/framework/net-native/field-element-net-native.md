@@ -5,11 +5,11 @@ ms.assetid: 6a14125f-1a8d-41a1-8a32-659ca0ad12de
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c58be27334bcb862367464475a4eade5e01bdbb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868546"
 ---
 # <a name="field-element-net-native"></a>\<フィールド > 要素 (.NET ネイティブ)
 フィールドにランタイム リフレクション ポリシーを適用します。  

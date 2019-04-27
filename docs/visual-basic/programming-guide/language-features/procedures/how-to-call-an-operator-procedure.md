@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator overloading
 ms.assetid: 0dce42cc-f0b0-4c14-9f62-018b21f33497
 ms.openlocfilehash: d68781aa12ab7c1c717031ca252c5f3120649edc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335486"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863936"
 ---
 # <a name="how-to-call-an-operator-procedure-visual-basic"></a>方法: 演算子プロシージャ (Visual Basic) を呼び出す
 演算子プロシージャを呼び出すには、式で演算子記号を使用します。 場合は、変換演算子を呼び出す、 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)に値を別の 1 つのデータ型に変換します。  

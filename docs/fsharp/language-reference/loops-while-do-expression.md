@@ -3,11 +3,11 @@ title: 'ループ: while...do 式'
 description: 参照してください、... 中は式を使用して、指定したテスト条件が true の場合は、反復実行 (ループ) を実行します。
 ms.date: 05/16/2016
 ms.openlocfilehash: d2a77e0bfefe3b6b026012e6b2938ba670326bcf
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904021"
 ---
 # <a name="loops-whiledo-expression"></a>ループ: while...do 式
 
@@ -36,7 +36,7 @@ Found a 10!
 ```
 
 > [!NOTE]
-> 使用することができます`while...do`シーケンス式とその他のコンピュテーション式で、カスタマイズされたバージョンの場合、`while...do`式を使用します。 詳細については、[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)を参照してください。
+> 使用することができます`while...do`シーケンス式とその他のコンピュテーション式で、カスタマイズされたバージョンの場合、`while...do`式を使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)します。
 
 ## <a name="see-also"></a>関連項目
 

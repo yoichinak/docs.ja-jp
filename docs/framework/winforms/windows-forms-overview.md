@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
 ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800179"
 ---
 # <a name="windows-forms-overview"></a>Windows フォームの概要
 

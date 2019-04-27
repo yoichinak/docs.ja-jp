@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30014
 ms.assetid: 5215585e-2efa-485a-9efe-9833a1cc83a0
 ms.openlocfilehash: 4832fb80cfbe42c7a1303e0de69f36784711c05a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803364"
 ---
 # <a name="elseif-must-be-preceded-by-a-matching-if-or-elseif"></a>	'#Else' の前には、対応する '#If' または '#ElseIf' が必要です。
 `#ElseIf` は条件付きコンパイル ディレクティブです。 `#ElseIf`句の前に、対応する`#If`または`#ElseIf`句が必要です。  

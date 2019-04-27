@@ -5,11 +5,11 @@ ms.assetid: 123457ac-4223-4273-bb58-3bc0e4957e9d
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: 67da51ae900a0b2d1c0728b22e58aa83e789684f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358172"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61861232"
 ---
 # <a name="writing-large-responsive-net-framework-apps"></a>規模が大きく、応答性の高い .NET Framework アプリの作成
 この記事では、大規模な .NET Framework アプリや、ファイルやデータベースなど大量のデータを処理するアプリのパフォーマンス改善のヒントを説明します。 説明するヒントは C# および Visual Basic コンパイラを マネージド コードで作成し直した際に得られたものです。この記事では C# コンパイラでの実際の例をいくつか紹介します。 
@@ -23,7 +23,7 @@ ms.locfileid: "57358172"
   
  エンド ユーザはアプリを操作するときに、アプリが応答するものであると期待します。 入力またはコマンドの処理がブロックされることがあってはなりません。 ヘルプはすぐにポップアップ表示され、またユーザーが入力を続けるときには閉じる必要があります。 処理時間がかかっている UI スレッドがあり、これが原因でアプリの動作が遅くなっていると判断される場合でも、アプリがその UI スレッドをブロックしないようにする必要があります。 
   
- Roslyn コンパイラの詳細については、[.NET コンパイラ プラットフォーム SDK](../../csharp/roslyn-sdk/index.md)を参照してください。
+ Roslyn コンパイラの詳細については、次を参照してください。 [.NET コンパイラ プラットフォーム SDK](../../csharp/roslyn-sdk/index.md)します。
   
 ## <a name="just-the-facts"></a>.NET Framework についての事実  
  パフォーマンスを調整し、応答性のある .NET Framework アプリを作成する際には、次に説明する事実を考慮してください。 

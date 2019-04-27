@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data contracts [WCF], naming
 ms.assetid: 31f87e6c-247b-48f5-8e94-b9e1e33d8d09
 ms.openlocfilehash: 16a42a2808104a77e56e93564a679dfc578e73f6
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857283"
 ---
 # <a name="data-contract-names"></a>データ コントラクト名
 
@@ -36,8 +36,7 @@ ms.locfileid: "58408874"
 > `http://schemas.microsoft.com/2003/10/Serialization`名前空間は予約されており、データ コントラクト名前空間として使用できません。
 
 > [!NOTE]
-> 
-  `delegate` 宣言を含むデータ コントラクト型では、既定の名前空間をオーバーライドすることはできません。
+> `delegate` 宣言を含むデータ コントラクト型では、既定の名前空間をオーバーライドすることはできません。
 
 ## <a name="data-contract-names"></a>データ コントラクト名
 ある型のデータ コントラクトの既定の名前は、その型の名前になります。 この既定をオーバーライドするには、<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> の <xref:System.Runtime.Serialization.DataContractAttribute> プロパティを別の名前に設定します。 ジェネリック型に関する特別な規則については、このトピックで後述される「ジェネリック型のデータ コントラクト名」で説明します。
@@ -61,21 +60,18 @@ ms.locfileid: "58408874"
 [!code-csharp[C_DataContractNames#2](~/samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#2)]
 [!code-vb[C_DataContractNames#2](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#2)]
 
-この例では、`Drawing<Square,RegularRedBrush>` 型は "DrawingOfSquareRedBrush5HWGAU6h" というデータ コントラクト名を持ちます。ここで "5HWGAU6h" は "urn:shapes" および "urn:default" 名前空間のハッシュになります。 
-  `Drawing<Square,SpecialRedBrush>` 型は "DrawingOfSquareRedBrushjpB5LgQ_S" というデータ コントラクト名を持ちます。ここで "jpB5LgQ_S" は "urn:shapes" および "urn:special" 名前空間のハッシュになります。 ハッシュを使用しないと 2 つの名前は同一になり、名前の競合が発生することに注意してください。
+この例では、`Drawing<Square,RegularRedBrush>` 型は "DrawingOfSquareRedBrush5HWGAU6h" というデータ コントラクト名を持ちます。ここで "5HWGAU6h" は "urn:shapes" および "urn:default" 名前空間のハッシュになります。 `Drawing<Square,SpecialRedBrush>` 型は "DrawingOfSquareRedBrushjpB5LgQ_S" というデータ コントラクト名を持ちます。ここで "jpB5LgQ_S" は "urn:shapes" および "urn:special" 名前空間のハッシュになります。 ハッシュを使用しないと 2 つの名前は同一になり、名前の競合が発生することに注意してください。
 
 ## <a name="customizing-data-contract-names-for-generic-types"></a>ジェネリック型のデータ コントラクト名をカスタマイズ
 
-前述のようにジェネリック型用に生成されたデータ コントラクト名を容認できない場合があります。 たとえば、名前の競合が起こらないことが前もってわかっているため、ハッシュを削除するとします。 この場合、使用することができます、<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType>プロパティ名を生成する別の方法を指定します。 
-  `Name` プロパティの中かっこ内に数字を指定して、ジェネリック パラメーターのデータ コントラクト名を参照できます  (0 は最初のパラメーターを参照し、1 は 2 番目のパラメーターを参照します。以下同様です)。中かっこ内にシャープ記号 (#) を指定すると、ハッシュを参照できます。 これらの各参照は、複数回使用しても、まったく使用しなくてもかまいません。
+前述のようにジェネリック型用に生成されたデータ コントラクト名を容認できない場合があります。 たとえば、名前の競合が起こらないことが前もってわかっているため、ハッシュを削除するとします。 この場合、使用することができます、<xref:System.Runtime.Serialization.DataContractAttribute.Name%2A?displayProperty=nameWithType>プロパティ名を生成する別の方法を指定します。 `Name` プロパティの中かっこ内に数字を指定して、ジェネリック パラメーターのデータ コントラクト名を参照できます  (0 は最初のパラメーターを参照し、1 は 2 番目のパラメーターを参照します。以下同様です)。中かっこ内にシャープ記号 (#) を指定すると、ハッシュを参照できます。 これらの各参照は、複数回使用しても、まったく使用しなくてもかまいません。
 
 たとえば、前の `Drawing` ジェネリック型は次の例に示すように宣言できます。
 
 [!code-csharp[c_DataContractNames#3](~/samples/snippets/csharp/VS_Snippets_CFX/c_datacontractnames/cs/source.cs#3)]
 [!code-vb[c_DataContractNames#3](~/samples/snippets/visualbasic/VS_Snippets_CFX/c_datacontractnames/vb/source.vb#3)]
 
-この場合、`Drawing<Square,RegularRedBrush>` 型は、"Drawing_using_RedBrush_brush_and_Square_shape" というデータ コントラクト名になります。 
-  <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> プロパティに "{#}" があるため、名前にはハッシュは含まれません。したがって、この型では名前の競合が発生しやすくなります。たとえば、`Drawing<Square,SpecialRedBrush>` 型は、まったく同じデータ コントラクト名を持ちます。
+この場合、`Drawing<Square,RegularRedBrush>` 型は、"Drawing_using_RedBrush_brush_and_Square_shape" というデータ コントラクト名になります。 <xref:System.Runtime.Serialization.DataContractAttribute.Name%2A> プロパティに "{#}" があるため、名前にはハッシュは含まれません。したがって、この型では名前の競合が発生しやすくなります。たとえば、`Drawing<Square,SpecialRedBrush>` 型は、まったく同じデータ コントラクト名を持ちます。
 
 ## <a name="see-also"></a>関連項目
 

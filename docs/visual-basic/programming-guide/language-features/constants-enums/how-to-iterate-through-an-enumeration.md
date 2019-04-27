@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], populating from an enumeration
 ms.assetid: e5aa10eb-cfcd-4a3b-8e76-f06b8f2002be
 ms.openlocfilehash: 63597145e96b04affc5f0e80e05a56b3fdf27278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907037"
 ---
 # <a name="how-to-iterate-through-an-enumeration-in-visual-basic"></a>方法: Visual Basic で列挙型を反復処理します。
 一連の関連する定数を操作する場合や、定数値に名前を関連付ける場合は、列挙型を使うと便利です。 列挙体を反復処理に移動できますを使用して、配列に、<xref:System.Enum.GetValues%2A>メソッド。 使用して、列挙を反復処理することも、`For...Each`ステートメントを使用して、<xref:System.Enum.GetNames%2A>または<xref:System.Enum.GetValues%2A>文字列または数値の値を抽出するメソッド。  

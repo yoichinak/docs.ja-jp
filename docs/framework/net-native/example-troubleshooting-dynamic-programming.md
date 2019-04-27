@@ -1,15 +1,15 @@
-﻿---
+---
 title: 例:動的プログラミングのトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 42ed860a-a022-4682-8b7f-7c9870784671
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: af71c4916a2abdeb019e538a33ad05efa727e720
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868785"
 ---
 # <a name="example-troubleshooting-dynamic-programming"></a>例:動的プログラミングのトラブルシューティング
 > [!NOTE]
@@ -33,7 +33,7 @@ App!$43_System::Threading::SendOrPostCallback.InvokeOpenStaticThunk
 [snip]  
 ```  
   
- 「[.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)」の「メタデータの欠落を手動で解決する」セクションで説明されている 3 つの手順からなるアプローチを使用して、この例外をトラブルシューティングしてみましょう。  
+ 「[Getting Started](../../../docs/framework/net-native/getting-started-with-net-native.md)」(はじめに) の「メタデータの欠落を手動で解決する」セクションで説明されている 3 つの手順からなるアプローチを使用して、この例外をトラブルシューティングしてみましょう。  
   
 ## <a name="what-was-the-app-doing"></a>アプリが行っていた動作は何か  
  最初に注目するのは、スタックの最下位にある `async` キーワード メカニズムです。  スタックでは元の呼び出しのコンテキストが失われており、別のスレッドで `async` コードを実行しているため、アプリが `async` メソッドで実際に何を行っていたかを決定するのは困難です。 ただし、アプリが最初のページをロードしようとしていたことは推測できます。  `NavigationArgs.Setup` の実装で、次のコードによってアクセス違反が発生しました。  

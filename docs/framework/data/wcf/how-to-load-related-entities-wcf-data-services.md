@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 6f143d30-d997-4e6b-bcf0-d5c394ecb108
 ms.openlocfilehash: 75e1d583d2a4d519619a440800cdeb1403fedac2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936497"
 ---
 # <a name="how-to-load-related-entities-wcf-data-services"></a>方法: 関連エンティティ (WCF Data Services) を読み込む
 関連付けられたエンティティを [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] で読み込む必要がある場合、<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> クラスで <xref:System.Data.Services.Client.DataServiceContext> メソッドを使用できます。 使用することも、<xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A>メソッドを<xref:System.Data.Services.Client.DataServiceQuery%601>に関連するエンティティを同じクエリの応答で頻繁に読み込むことが必要です。  

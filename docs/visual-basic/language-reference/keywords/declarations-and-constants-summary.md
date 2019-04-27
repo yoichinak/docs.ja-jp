@@ -7,11 +7,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], Visual Basic language elements
 ms.assetid: 79d64f3e-941d-4d39-bc5b-79f225d5be6e
 ms.openlocfilehash: 00c789d01a55382254e1d90a13b9d8b0a23a81de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802012"
 ---
 # <a name="declarations-and-constants-summary-visual-basic"></a>宣言と定数の概要 (Visual Basic)
 Visual Basic 言語のキーワードとランタイム ライブラリ メンバーを、目的と使用方法に応じて編成しました。  

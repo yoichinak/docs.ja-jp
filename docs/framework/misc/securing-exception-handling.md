@@ -12,11 +12,11 @@ ms.assetid: 1f3da743-9742-47ff-96e6-d0dd1e9e1c19
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: bc8cd20a4183ffd002f1399b6b50c8956208a21b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868804"
 ---
 # <a name="securing-exception-handling"></a>例外処理の保護
 Visual C と Visual Basic では、スタックをさらにフィルター式の実行前に、**最後に**ステートメント。 **キャッチ**に関連付けられているブロックの後にそのフィルターが実行される、**最後に**ステートメント。 詳細については、次を参照してください。[ユーザー フィルター例外](../../../docs/standard/exceptions/using-user-filtered-exception-handlers.md)します。 このセクションでは、この注文のセキュリティへの影響を調べます。 フィルター ステートメントで順序を示す次の擬似コード例を検討してくださいと**最後に**ステートメントを実行します。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application startup event order
 ms.assetid: e81db09b-4453-437f-b78a-62d7cd5c9829
 ms.openlocfilehash: 24d48a9dfdf10601099333e52073bb7fa3579beb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193058"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800785"
 ---
 # <a name="order-of-events-in-windows-forms"></a>Windows フォームのイベントの順序
 Windows フォーム アプリケーションでイベントが発生する順序は、各イベントを順番に処理する必要がある開発者にとって重要な問題です。 フォームの構成要素を再描画するときなど、イベント処理に細心の注意が必要な状況では、実行時におけるイベントの正確な発生順序に気を配る必要があります。 このトピックでは、アプリケーションとコントロールの有効期間におけるいくつかの重要な段階での、イベントの順序について詳しく説明します。 特定の詳細については、マウス入力イベントの順序では、次を参照してください。 [Windows フォームにおけるマウス イベント](mouse-events-in-windows-forms.md)します。 Windows フォームのイベントの概要については、次を参照してください。[イベントの概要](events-overview-windows-forms.md)します。 イベント ハンドラーの構成の詳細については、次を参照してください。[イベント ハンドラーの概要](event-handlers-overview-windows-forms.md)します。  

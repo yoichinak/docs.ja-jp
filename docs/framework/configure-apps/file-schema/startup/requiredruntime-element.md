@@ -10,11 +10,11 @@ helpviewer_keywords:
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
 ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55254731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673843"
 ---
 # <a name="requiredruntime-element"></a>\<requiredRuntime > 要素
 

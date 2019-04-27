@@ -3,11 +3,11 @@ title: エラー処理およびレポートに対する制御の拡張
 ms.date: 03/30/2017
 ms.assetid: 45f996a7-fa00-45cb-9d6f-b368f5778aaa
 ms.openlocfilehash: 4a12ab62a9ec25d207a88b041bcdf498eaff7228
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990159"
 ---
 # <a name="extending-control-over-error-handling-and-reporting"></a>エラー処理およびレポートに対する制御の拡張
 このサンプルではエラー処理およびを使用して Windows Communication Foundation (WCF) サービスのエラー報告に対する制御を拡張する方法、<xref:System.ServiceModel.Dispatcher.IErrorHandler>インターフェイス。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)いくつか追加のコード エラーを処理するサービスに追加します。 クライアントは、強制的にエラーが発生する状態にされます。 サービスはエラーを途中受信して、ファイルに記録します。  

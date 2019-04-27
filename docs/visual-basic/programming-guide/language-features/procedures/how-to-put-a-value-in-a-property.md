@@ -9,11 +9,11 @@ helpviewer_keywords:
 - properties [Visual Basic], values
 ms.assetid: c39401e5-b5fc-4439-8f31-ed640f7ce6ed
 ms.openlocfilehash: e6aee5ea36c0315d5b01ae2734d17c9e7dab8e93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863897"
 ---
 # <a name="how-to-put-a-value-in-a-property-visual-basic"></a>方法: プロパティ (Visual Basic) で、値を入力します。
 プロパティに値を格納するには、代入ステートメントの左側にあるプロパティ名を置きます。  

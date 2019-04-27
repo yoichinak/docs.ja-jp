@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 54edefe0-bc38-419b-b486-3d8a0c356f13
 ms.openlocfilehash: 5e1de3effcae5700aa25f5dbb84f2dec3a0b20f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879685"
 ---
 # <a name="handling-dataset-events"></a>DataSet のイベント処理
 <xref:System.Data.DataSet> オブジェクトには、 <xref:System.ComponentModel.MarshalByValueComponent.Disposed>、 <xref:System.Data.DataSet.Initialized>、 <xref:System.Data.DataSet.MergeFailed>という 3 つのイベントがあります。  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Visual Basic code, expressions
 ms.assetid: d3d90406-55c8-4404-8143-50fd7f0d0d1a
 ms.openlocfilehash: ce9146791935a488108d110134e9273507b0da6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864668"
 ---
 # <a name="boolean-expressions-visual-basic"></a>Boolean 式 (Visual Basic)
 *ブール式*の値に評価される式を指定、[ブールのデータ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md):`True`または`False`です。 `Boolean` 式には、いくつかの形式を取ります。 単純な形式の値を直接比較、`Boolean`変数を`Boolean`リテラルは、次の例に示すようにします。  

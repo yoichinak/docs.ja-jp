@@ -8,11 +8,11 @@ helpviewer_keywords:
 - constants [Visual Basic], enumerated
 ms.assetid: bbb5c3cc-7cdb-4814-8d6a-a6d91546ed1e
 ms.openlocfilehash: e9ea359d58dfa11f7bba7fec3d31955e18d24953
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907596"
 ---
 # <a name="how-to-refer-to-an-enumeration-member-visual-basic"></a>方法: 列挙体のメンバー (Visual Basic) を参照してください。
 列挙体は、関連する定数を使用して、名前の定数値を関連付ける便利な方法を提供します。 たとえば、一連の整数型の定数を曜日に関連付けて列挙型として宣言すると、コードで整数値ではなく曜日名を使用することができます。  

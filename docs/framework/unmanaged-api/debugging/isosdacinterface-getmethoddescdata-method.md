@@ -16,11 +16,11 @@ topic_type:
 author: cshung
 ms.author: andrewau
 ms.openlocfilehash: 4e32facc65162c4deb853cd507a00126e5f786e7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914876"
 ---
 # <a name="isosdacinterfacegetmethoddescdata-method"></a>ISOSDacInterface::GetMethodDescData メソッド
 

@@ -3,11 +3,11 @@ title: フィルター処理
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
 ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856701"
 ---
 # <a name="filtering"></a>フィルター処理
 Windows Communication Foundation (WCF) のフィルター処理システムは、メッセージと一致し、操作を決定する宣言型のフィルターを使用できます。 フィルターを使用してメッセージの一部を調べることで、そのメッセージで必要な操作を決定できます。 たとえば、キュー プロセスでは、XPath 1.0 クエリを使用して既知のヘッダー優先度要素をチェックし、メッセージをキューの先頭に移動するべきかどうかを決定します。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - validating user input [Windows Forms], Windows Forms
 ms.assetid: 4ec07681-1dee-4bf9-be5e-718f635a33a1
 ms.openlocfilehash: c8a40706df4274728b438cff2539173a0e94b767
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800127"
 ---
 # <a name="user-input-validation-in-windows-forms"></a>Windows フォームでのユーザー入力の検証
 ユーザーがアプリケーションにデータを入力すると、アプリケーションが使用する前に、データが有効であることを確認したい場合があります。 特定のテキスト フィールドである長さがゼロで電話番号または正しい形式のデータの他の種類として、フィールドの形式、または文字列にデータベースのセキュリティを侵害される可能性があります安全でない文字が含まれていない場合があります。 Windows フォームでは、アプリケーションでの入力を検証するためのいくつかの方法を提供します。  

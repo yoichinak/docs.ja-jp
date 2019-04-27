@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], sorting data
 ms.assetid: 57dfed60-a608-40d5-86f9-d65686ffb325
 ms.openlocfilehash: 4894de00a323f70ca244ea877101a5af1cbb37e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096369"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012192"
 ---
 # <a name="how-to-set-the-sort-modes-for-columns-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロール内の列の並べ替えモードを設定する
 <xref:System.Windows.Forms.DataGridView>コントロール、テキスト ボックスの列を使用して、その他の列の型が自動的に並べ替えられていないときに、既定では、自動並べ替え。 これらの既定値をオーバーライドすることがあります。 たとえば、テキスト、数値、または列挙のセル値の代わりにイメージを表示できます。 イメージを並べ替えることはできません、中にそれが表す基になる値を並べ替えることができます。  

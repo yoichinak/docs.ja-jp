@@ -3,11 +3,11 @@ title: Basic1
 ms.date: 03/30/2017
 ms.assetid: 84a315b6-3f96-4959-8306-49be37936a23
 ms.openlocfilehash: 265d0730fb7084e03cf37bbcf050c39d98ad4ef4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61914018"
 ---
 # <a name="basic"></a>Basic
 このセクションでは、基本的な Windows Workflow Foundation (WF) 機能を示すサンプルを提供します。  
@@ -20,8 +20,7 @@ ms.locfileid: "57708523"
  カスタム アクティビティの作成を示すサンプルが含まれます。  
   
  [デザイナー](designer.md)  
- 
-  [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]の使用方法を示すサンプルが含まれます。  
+ [!INCLUDE[wfd1](../../../../includes/wfd1-md.md)]の使用方法を示すサンプルが含まれます。  
   
  [デザイナーのホスト変更](designer-rehosting.md)  
  アクティビティ デザイナーの再ホストを示すサンプルが含まれます。  

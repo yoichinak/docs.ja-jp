@@ -9,11 +9,11 @@ helpviewer_keywords:
 - procedures
 ms.assetid: 9effbcf0-80a0-4d1a-98f4-2c6920592766
 ms.openlocfilehash: dfd366cd823931962af878de59225ea183fff7c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863507"
 ---
 # <a name="procedures-in-visual-basic"></a>Visual Basic におけるプロシージャ
 A*プロシージャ*宣言ステートメントで囲まれている Visual Basic ステートメント ブロックは、(`Function`、 `Sub`、 `Operator`、 `Get`、 `Set`) し、対応する`End`宣言します。 Visual Basic でのすべての実行可能なステートメントは、何らかのプロシージャ内である必要があります。  

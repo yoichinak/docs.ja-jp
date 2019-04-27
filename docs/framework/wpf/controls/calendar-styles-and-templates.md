@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ControlTemplate [WPF], Calendar
 ms.assetid: f4fcf046-7a8f-41b8-b5a8-534b64e0345c
 ms.openlocfilehash: 18bef548b11f1a680c1361027b86f6952bedaad0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912445"
 ---
 # <a name="calendar-styles-and-templates"></a>カレンダーのスタイルとテンプレート
 このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.Calendar>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  

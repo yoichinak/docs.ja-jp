@@ -3,11 +3,11 @@ title: エンティティ キー
 ms.date: 03/30/2017
 ms.assetid: 0d447a6d-fa7a-4db0-8e7a-fd45e385fca0
 ms.openlocfilehash: 1484a73450d5a435f795f18f122c7fe8494cf197
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879186"
 ---
 # <a name="entity-key"></a>エンティティ キー
 *エンティティ キー*は、[プロパティ](../../../../docs/framework/data/adonet/property.md)または一連のプロパティの[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)id を確認に使用します。 エンティティ キーを構成するプロパティは、デザイン時に選択されます。 エンティティ キー プロパティの値は、内のエンティティ型インスタンスを一意に識別する必要があります、[エンティティ セット](../../../../docs/framework/data/adonet/entity-set.md)実行時にします。 エンティティ キーを構成するプロパティには、エンティティ セット内のインスタンスの一意性を保証するものを選択する必要があります。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - variables [Visual Basic], accessing hidden
 ms.assetid: ae21a8ac-9cd4-4fba-a3ec-ecc4321ef93c
 ms.openlocfilehash: a97a51d4570d87eaa873fb3152ad810f528dff46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61829661"
 ---
 # <a name="how-to-access-a-variable-hidden-by-a-derived-class-visual-basic"></a>方法: 変数にアクセスする (Visual Basic)、派生クラスによって非表示
 派生クラスのコードは、変数にアクセスするときに、コンパイラ通常解決アクセス可能な最も近いバージョンは、アクセス可能なバージョンへの参照を最小限継承の手順との下位にアクセスするクラスからします。 場合は、変数は、派生クラスで定義されているが、コードは、通常の定義にアクセスします。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
 ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799191"
 ---
 # <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' には、参照の型を持つオペランドが必要ですが、このオペランドの値の型は '\<typename >'
 `Is`比較演算子は、同じインスタンスに 2 つのオブジェクト変数が参照しているかどうかを判断します。 この比較値の型が定義されていません。  

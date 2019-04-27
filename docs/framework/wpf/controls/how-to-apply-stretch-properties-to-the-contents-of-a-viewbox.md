@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Viewbox control [WPF]
 ms.assetid: b9c22ef4-bce4-4300-9e0c-8260b7db83cc
 ms.openlocfilehash: 08358ea07e0c41e3b7cdf52251a3ed4296035e2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019036"
 ---
 # <a name="how-to-apply-stretch-properties-to-the-contents-of-a-viewbox"></a>方法: Viewbox のコンテンツに Stretch プロパティを適用する
 ## <a name="example"></a>例  

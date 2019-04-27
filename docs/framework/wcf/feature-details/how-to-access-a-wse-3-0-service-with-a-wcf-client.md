@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1f9bcd9b-8f8f-47fa-8f1e-0d47236eb800
 ms.openlocfilehash: 83507a95dbc4bc7499b94a516f569703f21a2726
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855128"
 ---
 # <a name="how-to-access-a-wse-30-service-with-a-wcf-client"></a>方法: WSE 3.0 へのアクセス、WCF クライアントとサービス
 Windows Communication Foundation (WCF) クライアントは、Ws-addressing 仕様の 2004 年 8 月バージョンを使用する WCF クライアントが構成されている場合、Microsoft .NET services のワイヤレベルの互換性のある Web Services Enhancements (WSE) 3.0 が。 ただし、WSE 3.0 サービスは、メタデータ交換 (MEX) プロトコルをサポートしないので使用すると、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) WCF クライアント クラスを作成するセキュリティ設定は適用されませんを生成されました。WCF クライアントです。 そのため、セキュリティの設定を指定する必要があります、WCF クライアントが生成された後に、WSE 3.0 サービスが必要であります。  

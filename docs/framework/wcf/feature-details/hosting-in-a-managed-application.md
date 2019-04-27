@@ -3,11 +3,11 @@ title: マネージド アプリケーションのホスト
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
 ms.openlocfilehash: 415a6fef511d7d7397a38882801e5848e2998a11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855830"
 ---
 # <a name="hosting-in-a-managed-application"></a>マネージド アプリケーションのホスト
 Windows Communication Foundation (WCF) サービスは、いずれかでホストできる[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アプリケーション。 自己ホスト型サービスは、展開を要するインフラストラクチャが最も少ないので、最も柔軟なホスト オプションです。 しかしも、最も堅牢なホスティング オプションのマネージ アプリケーションでは、高度なホストとインターネット インフォメーション サービス (IIS) や Windows サービスなどの WCF では、ホストの他のオプションの管理機能が提供されないためです。  

@@ -3,11 +3,11 @@ title: Oracle シーケンス
 ms.date: 03/30/2017
 ms.assetid: 27cd371d-8252-414d-b5b2-5d31fa44b585
 ms.openlocfilehash: 8fe7513093d06f3928540f2de8cba902ce62b56e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878451"
 ---
 # <a name="oracle-sequences"></a>Oracle シーケンス
 .NET Framework Data Provider for Oracle では、<xref:System.Data.OracleClient.OracleDataAdapter> を使用して挿入操作を実行した後、サーバーによって生成されたキー値 (Oracle シーケンス) を取得できます。  

@@ -3,11 +3,11 @@ title: データベース アクセス アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
 ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005211"
 ---
 # <a name="database-access-activities"></a>データベース アクセス アクティビティ
 データベース アクセス アクティビティを使用すると、ワークフロー内でデータベースにアクセスできます。 これらのアクティビティは、取得、情報を変更または使用するデータベースへのアクセスを許可する[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。  

@@ -3,11 +3,11 @@ title: F#コンポーネントのデザイン ガイドライン
 description: 他の呼び出し元で消費するための F# コンポーネントを記述するためのガイドラインについて説明します。
 ms.date: 05/14/2018
 ms.openlocfilehash: c61e4cd9098388b356c71c325d66c760fa866cf0
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55066026"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61902162"
 ---
 # <a name="f-component-design-guidelines"></a>F#コンポーネントのデザイン ガイドライン
 
@@ -428,7 +428,7 @@ val inline highestCommonFactor : ^T -> ^T -> ^T
 
 #### <a name="carefully-use-units-of-measure-for-added-type-safety-in-f-code"></a>追加された型の安全性の測定単位を使用して、慎重にF#コード
 
-他の .NET 言語で表示したときに、メジャーの単位の追加入力情報が消去されます。 .NET コンポーネント、ツール、およびリフレクションは型-san の単位で表示されますが注意します。 たとえば、C# のコンシューマーが表示されます`float`なく`float<kg>`します。
+他の .NET 言語で表示したときに、メジャーの単位の追加入力情報が消去されます。 .NET コンポーネント、ツール、およびリフレクションは型-san の単位で表示されますが注意します。 たとえば、c# のコンシューマーが表示されます`float`なく`float<kg>`します。
 
 ### <a name="type-abbreviations"></a>型略称
 
@@ -704,7 +704,7 @@ let checkNonNull` argName (arg: obj) =
 
 #### <a name="avoid-using-tuples-as-return-values"></a>戻り値として組を使用しないでください。
 
-代わりに、集計のデータを保持するか、複数の値を返す出力パラメーターを使用して名前付きの型を返すことを好みます。 タプルと構造体のタプルは、.NET に存在 (C# の構造体のタプルの言語サポートを含む)、最もよくが用意されて、理想的なと予想される API .NET 開発者向け。
+代わりに、集計のデータを保持するか、複数の値を返す出力パラメーターを使用して名前付きの型を返すことを好みます。 タプルと構造体のタプルは、.NET に存在 (c# の構造体のタプルの言語サポートを含む)、最もよくが用意されて、理想的なと予想される API .NET 開発者向け。
 
 #### <a name="avoid-the-use-of-currying-of-parameters"></a>パラメーターのカリー化を使用をしません。
 
@@ -851,4 +851,4 @@ Vanilla .NET ライブラリの一部は次のように、この型を使用す�
 
 * .NET のデリゲート型を使用する`System.Func`F# 関数型の代わりにします。
 
-これにより、C# コードで使用するよりはるかにします。
+これにより、c# コードで使用するよりはるかにします。

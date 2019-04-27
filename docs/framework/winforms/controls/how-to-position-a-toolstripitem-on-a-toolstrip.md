@@ -6,11 +6,11 @@ helpviewer_keywords:
 - toolbars [Windows Forms], positioning items
 ms.assetid: 11fd7c5b-ee5c-4993-9a11-89127ff0aa7a
 ms.openlocfilehash: 7379c09d430f498add746cfb14422e63d0a45149
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301929"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913277"
 ---
 # <a name="how-to-position-a-toolstripitem-on-a-toolstrip"></a>方法: ToolStrip に ToolStripItem を配置する
 移動または追加することができます、<xref:System.Windows.Forms.ToolStripItem>左側または右側にあるに、<xref:System.Windows.Forms.ToolStrip>します。  

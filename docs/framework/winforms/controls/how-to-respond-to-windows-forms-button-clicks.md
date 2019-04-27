@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Click event [Windows Forms], responding to
 ms.assetid: 7a4951bd-369c-4662-b246-28ad83eda484
 ms.openlocfilehash: a10eaa3ea62df9301a53f5609b503bfabcb50a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913082"
 ---
 # <a name="how-to-respond-to-windows-forms-button-clicks"></a>方法: Windows フォームのボタンのクリックに応答する
 Windows フォームの最も基本的な使用<xref:System.Windows.Forms.Button>コントロールのボタンがクリックされたときに、いくつかのコードを実行します。  

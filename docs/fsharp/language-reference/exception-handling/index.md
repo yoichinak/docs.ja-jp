@@ -3,11 +3,11 @@ title: 例外処理
 description: 例外処理の基礎を習得F#例外処理の式と関数へのリンクを検索します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 187236ca380c7de0b3714160f6c3703f8fb93d5a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025094"
 ---
 # <a name="exception-handling"></a>例外処理
 
@@ -20,7 +20,7 @@ ms.locfileid: "53614442"
 
 ## <a name="related-topics"></a>関連トピック
 
-|Title|説明|
+|タイトル|説明|
 |-----|-----------|
 |[例外の種類](exception-types.md)|例外の種類を宣言する方法について説明します。|
 |[例外処理:`try...with`式](the-try-with-expression.md)|例外処理をサポートする言語構成要素について説明します。|

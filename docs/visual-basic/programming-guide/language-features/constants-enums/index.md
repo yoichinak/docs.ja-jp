@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Visual Basic code, improving readability with constants
 ms.assetid: c8aba36e-fa47-4a33-8b68-cb2009218270
 ms.openlocfilehash: dfd9330210dd748d739cd8da2985795099beacd8
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907297"
 ---
 # <a name="constants-and-enumerations-in-visual-basic"></a>Visual Basic の定数と列挙体
 定数は、変化しない値の代わりにわかりやすい名前を使用するための方法です。 定数に格納された値は、その名が示すとおり、アプリケーションの実行中に変わることはありません。 定数を使用すると、数値の代わりにわかりやすい名前を指定できるので、コードが読みやすくなります。  

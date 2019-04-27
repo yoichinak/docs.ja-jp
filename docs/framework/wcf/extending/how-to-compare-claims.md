@@ -9,11 +9,11 @@ helpviewer_keywords:
 - claims [WCF]
 ms.assetid: 0c4ec84d-53df-408f-8953-9bc437f56c28
 ms.openlocfilehash: 932ad347730b35a936e040e116e5aa6af36cd3dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857764"
 ---
 # <a name="how-to-compare-claims"></a>方法: クレームを比較する
 Id モデル インフラストラクチャでは、Windows Communication Foundation (WCF) を使用して、承認チェックを実行できます。 この場合、一般的なタスクとして、承認コンテキスト内のクレームが、要求されたアクションの実行や要求されたリソースへのアクセスに必要なクレームと比較されます。 このトピックでは、組み込みとカスタム クレームの型を含め、クレームの比較方法について説明します。 Id モデル インフラストラクチャの詳細については、次を参照してください。[管理クレームと Id モデルでの承認](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)します。  

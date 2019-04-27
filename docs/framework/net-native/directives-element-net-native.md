@@ -5,11 +5,11 @@ ms.assetid: 444846f3-48d5-4341-a43e-69f7221389eb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5cfc9dc5c8122f9b1b1696cedcd5d9a8ceead403
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868587"
 ---
 # <a name="directives-element-net-native"></a>\<ディレクティブ > 要素 (.NET ネイティブ)
 .NET ネイティブ用のすべてのランタイム ディレクティブ ファイルにルート要素です。  

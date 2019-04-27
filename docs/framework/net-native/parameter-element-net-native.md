@@ -5,11 +5,11 @@ ms.assetid: 22aaa1f3-596f-4733-93db-f4bcabcb5240
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d2dbff544f991712ad26f2cb12d638801b5a3fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867057"
 ---
 # <a name="parameter-element-net-native"></a>\<パラメーター > 要素 (.NET ネイティブ)
 メソッドに渡された引数の型にリフレクション ポリシーを適用します。  

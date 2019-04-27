@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], resizing columns and rows
 ms.assetid: 7532764d-e5c1-4943-a08b-6377a722d3b6
 ms.openlocfilehash: e1fa2d57cfb2cd374d691fe03a0e0bdbd3ad7141
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903189"
 ---
 # <a name="resizing-columns-and-rows-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロール内の列と行のサイズ変更
 `DataGridView`コントロールには、その列と行のサイズ変更動作をカスタマイズするためのさまざまなオプションが用意されています。 通常、`DataGridView`セル サイズを変更しないでその内容を基にします。 代わりに、セルよりも大きい任意の表示値のクリップです。 コンテンツを文字列として表示でき、セルにより、ツールヒントに表示します。  

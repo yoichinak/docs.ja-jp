@@ -16,11 +16,11 @@ ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876149"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>アプリケーションのトレースとインストルメント
 トレースとは、実行中のアプリケーションの実行状態を監視する方法です。 .NET Framework アプリケーションの開発時に、トレースとデバッグのインストルメンテーションをアプリケーションに追加できます。このインストルメンテーションは、アプリケーションの開発中でも開発したアプリケーションの配置後でも使用できます。 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>、および <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> の各クラスを使用すると、エラーおよびアプリケーションの実行についての情報を後で分析するために、ログ、テキスト ファイル、またはその他のデバイスに記録できます。  
@@ -44,7 +44,7 @@ ms.locfileid: "59298910"
  <xref:System.Diagnostics.Trace> クラスおよび <xref:System.Diagnostics.Debug> クラスは、アプリケーションの開発中または配置後に、アプリケーションのパフォーマンスをモニターおよび検査する手段を提供します。 たとえば、(新しいデータベース接続の作成など) が配置されたアプリケーションの操作の特定の種類を追跡するために <xref:System.Diagnostics.Trace> クラスを使用すると、アプリケーションの効率を監視できるようになります。  
   
 ## <a name="code-tracing-and-debugging"></a>コードのトレースとデバッグ  
- 開発時に、Visual Studio 統合開発環境 (IDE) の出力ウィンドウにメッセージを表示するために <xref:System.Diagnostics.Debug> クラスの出力メソッドを使用できます。 例:  
+ 開発時に、Visual Studio 統合開発環境 (IDE) の出力ウィンドウにメッセージを表示するために <xref:System.Diagnostics.Debug> クラスの出力メソッドを使用できます。 例えば:  
   
 ```vb  
 Trace.WriteLine("Hello World!")  

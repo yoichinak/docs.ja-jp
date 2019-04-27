@@ -6,11 +6,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
 ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61909275"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView コントロール テクノロジの概要 (Windows フォーム)
 ここでは、`DataGridView` コントロールおよびその使用をサポートしているクラスの概要について説明します。  

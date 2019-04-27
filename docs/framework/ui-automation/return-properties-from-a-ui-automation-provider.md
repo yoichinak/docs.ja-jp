@@ -10,11 +10,11 @@ helpviewer_keywords:
 - UI Automation, providers returning properties
 ms.assetid: 5eba950e-b9e1-48eb-ab8e-b69db76bf589
 ms.openlocfilehash: f3d5776441f1d4848adbb0a5f9435274f118a0da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982996"
 ---
 # <a name="return-properties-from-a-ui-automation-provider"></a>UI オートメーション プロバイダーからのプロパティの返却
 > [!NOTE]

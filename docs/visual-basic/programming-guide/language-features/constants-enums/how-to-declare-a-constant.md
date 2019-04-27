@@ -24,11 +24,11 @@ helpviewer_keywords:
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
 ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61975976"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>方法: 定数 (Visual Basic) の宣言します。
 使用する、`Const`定数を宣言し、その値を設定するステートメント。 定数を宣言すると、値に意味のある名前を割り当てます。 定数が宣言されると、変更または新しい値を代入することはできません。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - collapsing headers [WPF]
 ms.assetid: e9dfc8d6-4555-47b9-a4de-0acd64f8770a
 ms.openlocfilehash: a7dc0d2cc32d387f87221748ab94ac82c2dfc8b0
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911829"
 ---
 # <a name="expander"></a>Expander
 <xref:System.Windows.Controls.Expander>ヘッダーを表示し、詳細は、さらに参照してください。 または、ヘッダーまでのセクションを折りたたむには、そのヘッダーを展開できます。  

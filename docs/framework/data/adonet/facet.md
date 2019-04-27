@@ -3,11 +3,11 @@ title: facet
 ms.date: 03/30/2017
 ms.assetid: 91c4e6aa-3e54-4b6c-a38a-abf27808cc85
 ms.openlocfilehash: 9353b143a328e0fb183b7870332462a0a2c91b10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879061"
 ---
 # <a name="facet"></a>facet
 A*ファセット*詳細プリミティブ型のプロパティ定義を追加するために使用します。 A[プロパティ](../../../../docs/framework/data/adonet/property.md)定義にはプロパティの種類に関する情報が含まれていますが、多くの場合、詳細が必要です。 たとえば、概念モデルのエンティティ型に、値を null に設定できない `String` 型のプロパティが含まれる場合があります。 ファセットにより、このレベルの詳細を指定することができます。  

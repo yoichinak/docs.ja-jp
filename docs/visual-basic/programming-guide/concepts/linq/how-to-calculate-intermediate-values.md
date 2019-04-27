@@ -3,11 +3,11 @@ title: '方法: 中間値 (Visual Basic) を計算します。'
 ms.date: 07/20/2015
 ms.assetid: 933a97b2-dfe7-4f4d-94ad-e6e20df84abd
 ms.openlocfilehash: cb619784d487ae12b1fb8bb3adc97acb0f767455
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855444"
 ---
 # <a name="how-to-calculate-intermediate-values-visual-basic"></a>方法: 中間値 (Visual Basic) を計算します。
 この例では、並べ替え、フィルタリング、および選択を実行する際に使用できる中間値を計算する方法について説明します。  

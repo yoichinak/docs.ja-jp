@@ -1,5 +1,5 @@
 ---
-title: '方法: ユーザーがあいまいな時刻を解決できるように'
+title: '方法: ユーザーがあいまいな時刻を解決できるようにする'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -9,13 +9,13 @@ ms.assetid: bca874ee-5b68-4654-8bbd-3711220ef332
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ae6d16bda7a2cd6f2367129b737ec79d8193ebf9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54502716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903787"
 ---
-# <a name="how-to-let-users-resolve-ambiguous-times"></a>方法: ユーザーがあいまいな時刻を解決できるように
+# <a name="how-to-let-users-resolve-ambiguous-times"></a>方法: ユーザーがあいまいな時刻を解決できるようにする
 
 あいまいな時刻とは、複数の世界協定時刻 (UTC) にマップされる時刻です。 これは、あるタイム ゾーンの夏時間から標準時間に移行する際など、時計の時刻を前に戻すときに発生します。 あいまいな時刻を処理する場合は、次のいずれかの操作を行います。
 

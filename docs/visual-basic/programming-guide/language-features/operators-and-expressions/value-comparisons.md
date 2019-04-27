@@ -11,11 +11,11 @@ helpviewer_keywords:
 - expressions [Visual Basic], comparing
 ms.assetid: 60da0c76-9458-4afc-97e9-44a7939c064c
 ms.openlocfilehash: 270b226d0a1aa7d08721e6f9ed36d68492685af3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864392"
 ---
 # <a name="value-comparisons-visual-basic"></a>値の比較 (Visual Basic)
 比較演算子は、数値変数の値を比較する式を作成できます。 これらの式を返す、`Boolean`比較が true かどうかに基づいて、値または false。 このような式の例は次のとおりです。  

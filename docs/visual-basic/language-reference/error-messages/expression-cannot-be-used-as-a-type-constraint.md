@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32061
 ms.assetid: b17821b7-fa14-4397-a211-6e2a14079f09
 ms.openlocfilehash: 8dbf510d7c6ee80e2dcd2f9d2552bc870413cbab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801479"
 ---
 # <a name="expression-cannot-be-used-as-a-type-constraint"></a>'\<式 >' を型制約として使用することはできません
 制約リストに、型パラメーターについて有効な制約を表していない式が含まれています。  

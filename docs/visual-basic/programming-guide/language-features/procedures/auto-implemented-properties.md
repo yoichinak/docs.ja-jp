@@ -10,11 +10,11 @@ helpviewer_keywords:
 - auto-implemented properties [Visual Basic]
 ms.assetid: 5c669f0b-cf95-4b4e-ae84-9cc55212ca87
 ms.openlocfilehash: aa045dd5454819a37ad81c76d97fd3e61e7d0420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864314"
 ---
 # <a name="auto-implemented-properties-visual-basic"></a>自動実装プロパティ (Visual Basic)
 *自動実装プロパティ*を使用すると、すばやくクラスのプロパティを指定するためのコードを記述することがなく`Get`と`Set`プロパティ。 自動実装プロパティのコードを記述する場合、Visual Basic コンパイラでは、関連付けられた `Get` プロシージャおよび `Set` プロシージャが作成されるだけでなく、プロパティの変数を格納するためのプライベート フィールドが自動的に作成されます。  

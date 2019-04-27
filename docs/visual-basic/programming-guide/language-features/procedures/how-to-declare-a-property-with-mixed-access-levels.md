@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Property statement [Visual Basic], declaring mixed access levels
 ms.assetid: fdbb2d97-279a-4956-b26c-cbdfbc34915a
 ms.openlocfilehash: e899b57e02f492b0e4909aca84c069e5b7688618
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61863689"
 ---
 # <a name="how-to-declare-a-property-with-mixed-access-levels-visual-basic"></a>方法: 混合アクセス レベル (Visual Basic) を持つプロパティを宣言します。
 場合は、`Get`と`Set`手順が異なるアクセス レベルのプロパティについてでより制限の緩やかなレベルを使用することができます、`Property`ステートメントといずれかより制限の厳しいレベル、`Get`または`Set`ステートメント。 プロパティの値を取得できるコードの特定の部分と値を変更することができるコードの他の特定の部分を使う場合は、プロパティに混合アクセス レベルを使用します。  

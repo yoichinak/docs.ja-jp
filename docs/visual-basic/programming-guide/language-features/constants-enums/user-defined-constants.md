@@ -10,11 +10,11 @@ helpviewer_keywords:
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
 ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906985"
 ---
 # <a name="user-defined-constants-visual-basic"></a>ユーザー定義定数 (Visual Basic)
 定数とは、数値または変更されない文字列の代わりに使用されるわかりやすい名前です。 定数に格納された値は、その名が示すとおり、アプリケーションの実行中に変わることはありません。 コントロールまたは使用するコンポーネントで定義されている定数を使用することができますか、独自に作成することができます。 自分で作成した定数は*ユーザー定義*します。  

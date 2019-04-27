@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
 ms.openlocfilehash: b2adf4fe0d510f65db5bded715f084a4d7e016b6
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935773"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>方法: ADO.NET Entity Framework データ ソース (WCF Data Services) を使用してデータ サービスを作成します。
 
@@ -26,8 +26,7 @@ WCF Data Services では、データ サービスとしてのエンティティ 
 
 3. モデル名を入力し、クリックして**追加**します。
 
-     
-  [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] ウィザードの最初のページが表示されます。
+     [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] ウィザードの最初のページが表示されます。
 
 4. **モデルのコンテンツの選択**ダイアログ ボックスで、**データベースから生成**します。 その後、 **[次へ]** をクリックします。
 
@@ -42,12 +41,11 @@ WCF Data Services では、データ サービスとしてのエンティティ 
 8. **データベース オブジェクトの選択**ダイアログ ボックスで、すべてのデータベースのオブジェクトが、データ サービスで公開します。
 
     > [!NOTE]
-    > データ モデルに含まれるオブジェクトは、データ サービスによって自動的には公開されません。 これらのオブジェクトは、サービス自身によって明示的に公開される必要があります。 詳細については、[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)を参照してください。
+    > データ モデルに含まれるオブジェクトは、データ サービスによって自動的には公開されません。 これらのオブジェクトは、サービス自身によって明示的に公開される必要があります。 詳細については、次を参照してください。[データ サービスの構成](../../../../docs/framework/data/wcf/configuring-the-data-service-wcf-data-services.md)します。
 
 9. クリックして**完了**ウィザードを完了します。
 
-     特定のデータベースに基づく既定のデータ モデルが作成されます。 
-  [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] では、データ モデルをカスタマイズできます。 詳細については、[エンティティ データ モデル ツール タスク](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))を参照してください。
+     特定のデータベースに基づく既定のデータ モデルが作成されます。 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] では、データ モデルをカスタマイズできます。 詳細については、次を参照してください。[エンティティ データ モデル ツール タスク](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738480(v=vs.100))します。
 
 ## <a name="to-create-the-data-service-by-using-the-new-data-model"></a>新しいデータ モデルを使用してデータ サービスを作成するには
 
@@ -70,7 +68,7 @@ WCF Data Services では、データ サービスとしてのエンティティ 
 
 6. データ サービスのコードで、データ サービスを定義するクラスの定義内のコメント `/* TODO: put your data source class name here */` を <xref:System.Data.Objects.ObjectContext> クラスから継承する型で置き換えます。この型はデータ モデルのエンティティ コンテナー (手順 2 で確認したコンテナー) です。
 
-7. データ サービスのコードで、承認されたクライアントがデータ サービスによって公開されているエンティティ セットにアクセスできるようにします。 詳細については、[データ サービスを作成する](../../../../docs/framework/data/wcf/creating-the-data-service.md)を参照してください。
+7. データ サービスのコードで、承認されたクライアントがデータ サービスによって公開されているエンティティ セットにアクセスできるようにします。 詳細については、次を参照してください。[データ サービスを作成する](../../../../docs/framework/data/wcf/creating-the-data-service.md)します。
 
 8. Web ブラウザーを使用して Northwind.svc データ サービスをテストする、トピックの手順に従います[Web ブラウザーからサービスへのアクセス](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)します。
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], visibility
 ms.assetid: 1bc40fb8-b67c-4428-90a4-76b630ae2583
 ms.openlocfilehash: 98f6a7738a462e9f36abdc0380cb1fe8d488fb9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61830168"
 ---
 # <a name="declared-element-characteristics-visual-basic"></a>宣言された要素の特性 (Visual Basic)
 A*特性*とそのコードをやり取りする方法に影響を与える要素の特定の側面は、宣言された要素の。 宣言された各要素は、関連付けられている次の特性の 1 つ以上があります。  

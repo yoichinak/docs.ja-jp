@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 885e2d7a-3436-4093-bc5f-0a404c62acdc
 ms.openlocfilehash: 67c1083daa9acfd204d4de50d4e9178b25aafcf0
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858391"
 ---
 # <a name="textmessageencodingbindingelement"></a>TextMessageEncodingBindingElement
 TextMessageEncodingBindingElement  

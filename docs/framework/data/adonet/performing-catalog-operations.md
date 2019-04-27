@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e60f542f-6271-495b-a9e4-48553481c2a3
 ms.openlocfilehash: beb5d2db898df1c98662d53190ac1432acc746e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878227"
 ---
 # <a name="performing-catalog-operations"></a>カタログ操作の実行
 データベースまたは CREATE TABLE または CREATE PROCEDURE ステートメントなどのカタログを変更するコマンドを実行するには、作成、**コマンド**オブジェクト、適切な SQL ステートメントを使用して、**接続**オブジェクト。 コマンドを実行、 **ExecuteNonQuery**のメソッド、**コマンド**オブジェクト。  

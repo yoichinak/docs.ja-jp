@@ -14,11 +14,11 @@ helpviewer_keywords:
 - command line [Visual Basic], Visual Basic
 ms.assetid: e61947e9-a42e-4717-a699-5f70a98cdd03
 ms.openlocfilehash: 798baa90308c83e42b335635fb23a9983f5180fb
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839385"
 ---
 # <a name="building-from-the-command-line-visual-basic"></a>コマンド ラインからのビルド (Visual Basic)
 Visual Basic プロジェクトでは、1 つ以上の別のソース ファイルの構成されます。 コンパイルと呼ばれるプロセス中にこれらのファイルが 1 つのパッケージにまとめられて — アプリケーションとして実行できる 1 つの実行可能ファイルです。  

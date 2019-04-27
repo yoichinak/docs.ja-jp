@@ -11,11 +11,11 @@ helpviewer_keywords:
 - SoundPlayer class [Windows Forms], playing sounds from resources
 ms.assetid: 7d148bb6-8a1e-47d7-a08d-35828d2e688f
 ms.openlocfilehash: 49235f9cb035c5a09c26b427f855fc00e818fe1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913355"
 ---
 # <a name="how-to-play-a-sound-embedded-in-a-resource-from-a-windows-form"></a>方法: Windows フォームからリソースに埋め込まれたサウンドを再生する
 使用することができます、<xref:System.Media.SoundPlayer>埋め込みリソースからサウンドを再生するクラス。  

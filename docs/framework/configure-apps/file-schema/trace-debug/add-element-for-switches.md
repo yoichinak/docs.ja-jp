@@ -8,11 +8,11 @@ helpviewer_keywords:
 - add element for <switches>
 ms.assetid: 712ac3a7-7abf-4a9e-8db4-acd241c2f369
 ms.openlocfilehash: d7500620aed1165ff365fee8529230ba252dbc4b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673811"
 ---
 # <a name="add-element-for-switches"></a>\<追加 > 要素の\<スイッチ >
 トレース スイッチを設定するレベルを指定します。  

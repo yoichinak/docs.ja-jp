@@ -8,11 +8,11 @@ helpviewer_keywords:
 - classes [WPF], GeometryDrawing
 ms.assetid: 11d3c096-91ba-4d41-9bba-aeac0db70f97
 ms.openlocfilehash: f5cdcfdb68ad8030bcbd6c689f45a8baddd000e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61904957"
 ---
 # <a name="how-to-create-a-geometrydrawing"></a>方法: GeometryDrawing を作成する
 この例は、作成および表示する方法を示しています、<xref:System.Windows.Media.GeometryDrawing>します。 A<xref:System.Windows.Media.GeometryDrawing>塗りつぶしをアウトラインと関連付けることによって図形を作成することができます、<xref:System.Windows.Media.Pen>と<xref:System.Windows.Media.Brush>で、<xref:System.Windows.Media.Geometry>します。 <xref:System.Windows.Media.GeometryDrawing.Geometry%2A>図形の構造体について説明します、<xref:System.Windows.Media.GeometryDrawing.Brush%2A>図形の塗りつぶし、について説明しますと、<xref:System.Windows.Media.GeometryDrawing.Pen%2A>図形のアウトラインをについて説明します。  

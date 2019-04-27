@@ -3,11 +3,11 @@ title: Oracle スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 89a75de8-dee8-45e2-a97f-254d7e62e7e1
 ms.openlocfilehash: 016a21b2106e955fd9806c5fb62833bc37da1f2f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878476"
 ---
 # <a name="oracle-schema-collections"></a>Oracle スキーマ コレクション
 
@@ -29,7 +29,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 
 - Users
 
-- ビュー
+- Views
 
 - 関数
 
@@ -96,7 +96,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |AVG_LEAF_BLOCKS_PER_KEY|Decimal (10 進数型)|最も近い整数に丸められた、インデックスの個別の値が表示されるリーフ ブロックの平均数。 UNIQUE および PRIMARY KEY 制約を強制するインデックスの場合、この値は常に 1 になります。|
 |AVG_DATA_BLOCKS_PER_KEY|Decimal (10 進数型)|最も近い整数に丸められた、インデックス内の個別の値によってポイントされている、テーブル内のデータ ブロックの平均数。 この統計情報は、インデックス列の値を含む行があるデータ ブロックの平均数を示します。|
 |CLUSTERING_FACTOR|Decimal (10 進数型)|インデックスの値に基づいて順序付けされている、テーブルの行数を示します。|
-|STATUS|String|分割されていないインデックスが VALID または UNUSABLE のどちらであるかを示します。|
+|状態|String|分割されていないインデックスが VALID または UNUSABLE のどちらであるかを示します。|
 |NUM_ROWS|Decimal (10 進数型)|インデックス内の行数。|
 |SAMPLE_SIZE|Decimal (10 進数型)|インデックスの分析に使用されるサンプルのサイズ。|
 |LAST_ANALYZED|DateTime|インデックスが最後に分析された日付。|
@@ -144,7 +144,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |DATA_OBJECT_ID|Decimal (10 進数型)|オブジェクトを含むセグメントの辞書オブジェクト数。|
 |LAST_DDL_TIME|DateTime|DDL コマンド (許可および取り消しを含む) の実行結果として、最後に変更されたオブジェクトのタイムスタンプ。|
 |TIMESTAMP|String|オブジェクト (文字データ) の指定に対するタイムスタンプ。|
-|STATUS|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
+|状態|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|
 |GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|
 |SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|
@@ -190,7 +190,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |ID|Decimal (10 進数型)|ユーザーの ID 番号。|
 |CREATEDATE|DateTime|ユーザーの作成日。|
 
-## <a name="views"></a>ビュー
+## <a name="views"></a>Views
 
 |ColumnName|DataType|説明|
 |----------------|--------------|-----------------|
@@ -219,7 +219,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |CREATED|DateTime|オブジェクトが作成された日付。|
 |LAST_DDL_TIME|DateTime|DDL コマンド (許可および取り消しを含む) の実行結果として、最後に変更されたオブジェクトのタイムスタンプ。|
 |TIMESTAMP|String|オブジェクト (文字データ) の指定に対するタイムスタンプ。|
-|STATUS|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
+|状態|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|
 |GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|
 |SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|
@@ -235,7 +235,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |DATA_OBJECT_ID|Decimal (10 進数型)|オブジェクトを含むセグメントの辞書オブジェクト数。|
 |LAST_DDL_TIME|DateTime|DDL コマンド (許可および取り消しを含む) の実行結果として、最後に変更されたオブジェクトのタイムスタンプ。|
 |TIMESTAMP|String|オブジェクト (文字データ) の指定に対するタイムスタンプ。|
-|STATUS|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
+|状態|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|
 |GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|
 |SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|
@@ -252,7 +252,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |DATA_OBJECT_ID|Decimal (10 進数型)|オブジェクトを含むセグメントの辞書オブジェクト数。|
 |LAST_DDL_TIME|DateTime|DDL コマンド (許可および取り消しを含む) の実行結果として、最後に変更されたオブジェクトのタイムスタンプ。|
 |TIMESTAMP|String|オブジェクト (文字データ) の指定に対するタイムスタンプ。|
-|STATUS|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
+|状態|String|オブジェクトのステータス (VALID、INVALID、または N/A)。|
 |TEMPORARY|String|オブジェクトが一時的かどうかを示します (現在のセッションでは、オブジェクト自体に置かれたデータだけが表示される)。|
 |GENERATED|String|このオブジェクトの名前がシステムによって生成されたかどうかを示します  (Y &AMP;#124; N)。|
 |SECONDARY|String|Oracle9i Data Cartridge の ODCIIndexCreate メソッドによって作成されたセカンダリ オブジェクトであるかどうか (Y &#124; N)。|
@@ -287,7 +287,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |R_OWNER|String|参照制約で参照されるテーブルの所有者。|
 |R_CONSTRAINT_NAME|String|参照テーブルの UNIQUE 制約の定義の名前。|
 |DELETE_RULE|String|参照制約の削除規則 (CASCADE または NO ACTION)。|
-|STATUS|String|制約の強制ステータス (ENABLED または DISABLED)。|
+|状態|String|制約の強制ステータス (ENABLED または DISABLED)。|
 |DEFERRABLE|String|制約を遅延可能にするかどうかを示します。|
 |VALIDATED|String|すべてのデータが制約に従うかどうかを示します (VALIDATED または NOT VALIDATED)。|
 |GENERATED|String|制約の名前がユーザーとシステムのどちらによって生成されたかを示します。|
@@ -308,7 +308,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |R_OWNER|String|参照制約で参照されるテーブルの所有者。|
 |R_CONSTRAINT_NAME|String|参照テーブルの UNIQUE 制約の定義の名前。|
 |DELETE_RULE|String|参照制約の削除規則 (CASCADE または NO ACTION)。|
-|STATUS|String|制約の強制ステータス (ENABLED または DISABLED)。|
+|状態|String|制約の強制ステータス (ENABLED または DISABLED)。|
 |DEFERRABLE|String|制約を遅延可能にするかどうかを示します。|
 |VALIDATED|String|すべてのデータが制約に従うかどうかを示します (VALIDATED または NOT VALIDATED)。|
 |GENERATED|String|制約の名前がユーザーとシステムのどちらによって生成されたかを示します。|
@@ -332,7 +332,7 @@ Microsoft .NET Framework Data Provider for Oracle は、共通のスキーマ �
 |R_OWNER|String|参照制約で参照されるテーブルの所有者。|
 |R_CONSTRAINT_NAME|String|参照テーブルの UNIQUE 制約の定義の名前。|
 |DELETE_RULE|String|参照制約の削除規則 (CASCADE または NO ACTION)。|
-|STATUS|String|制約の強制ステータス (ENABLED または DISABLED)。|
+|状態|String|制約の強制ステータス (ENABLED または DISABLED)。|
 |VALIDATED|String|すべてのデータが制約に従うかどうかを示します (VALIDATED または NOT VALIDATED)。|
 |GENERATED|String|制約の名前がユーザーとシステムのどちらによって生成されたかを示します。|
 |RELY|String|有効な制約が強制されたものであるかどうかを示します。|

@@ -3,11 +3,11 @@ title: '方法: 前の兄弟を検索 (XPATH-LINQ to XML) (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: ec046283-9fe2-4440-b295-860bf700099d
 ms.openlocfilehash: ca3602a24b80d9002a639d9a319a731541aeb2df
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61854998"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-visual-basic"></a>方法: 前の兄弟を検索 (XPATH-LINQ to XML) (Visual Basic)
 ノードの直前の兄弟を検索することが必要になる場合があります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] とは対照的に、XPath では先行する兄弟軸の位置述語にはセマンティクス上の違いがあります。この  と XPath の相違点は、注目すべき特徴といえます。  

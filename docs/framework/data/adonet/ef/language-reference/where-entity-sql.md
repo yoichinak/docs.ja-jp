@@ -3,11 +3,11 @@ title: WHERE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: a8e1061e-0028-4a6f-8f19-b9f48e96c4b8
 ms.openlocfilehash: 02eeaeb8cfa335e5545b26d3d52b91c4e1614629
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879438"
 ---
 # <a name="where-entity-sql"></a>WHERE (Entity SQL)
 WHERE 句は、直後に適用、 [FROM](../../../../../../docs/framework/data/adonet/ef/language-reference/from-entity-sql.md)句。  

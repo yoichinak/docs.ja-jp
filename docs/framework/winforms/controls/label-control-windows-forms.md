@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LinkLabel control [Windows Forms]
 ms.assetid: 2028bbe3-ffe2-43e8-8ae3-dec759d2ecec
 ms.openlocfilehash: 0175a6551d7257d7d74df27ab4b927320b176dd7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804665"
 ---
 # <a name="label-control-windows-forms"></a>Label コントロール (Windows フォーム)
 > [!IMPORTANT]

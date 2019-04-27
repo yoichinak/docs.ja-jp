@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3debd3f13d78841188dd8c900f51c0110e1d4c67
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906374"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 列挙型
 ホストが部分的に信頼されたコードでの実行をブロックできる機能のカテゴリについて説明します。  

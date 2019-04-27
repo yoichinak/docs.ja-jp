@@ -3,11 +3,11 @@ title: <additionalRequestParameters> 要素
 ms.date: 03/30/2017
 ms.assetid: da8109fb-581c-48f4-b718-3bbda1edc47d
 ms.openlocfilehash: bbd6f5ef78d26417a926140ba9eacb2b2eeffb77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673564"
 ---
 # <a name="additionalrequestparameters-element"></a>\<additionalRequestParameters> element
 追加の要求パラメーターを指定する構成要素のコレクションを含みます。  

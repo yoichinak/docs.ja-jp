@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
 ms.openlocfilehash: fb71fe7abb5f70022e39808369779274eda2a7f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213950"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923111"
 ---
 # <a name="manipulating-data"></a>データの操作
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) の導入前は、開発者は複数の接続またはサーバー側のカーソルのいずれかを使用して特定のシナリオを解決しなければなりませんでした。 さらに、複数の接続、トランザクションの状況で使用されていたときにバインドされた接続 (で**sp_getbindtoken**と**sp_bindsession**) が必要でした。 以下のシナリオでは、複数の接続の代わりに MARS の有効な接続の使い方について説明します。  

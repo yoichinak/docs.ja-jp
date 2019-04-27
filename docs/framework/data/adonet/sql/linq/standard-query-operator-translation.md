@@ -7,10 +7,10 @@ dev_langs:
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
 ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973890"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876885"
 ---
 # <a name="standard-query-operator-translation"></a>標準クエリ演算子の変換
 
