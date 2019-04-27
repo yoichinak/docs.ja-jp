@@ -11,11 +11,11 @@ helpviewer_keywords:
 - expressions [Visual Basic]
 ms.assetid: b86f3131-94ee-448f-96cd-79611e028b26
 ms.openlocfilehash: b762c3002913cbd925579ef28f2aa01411976c32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864326"
 ---
 # <a name="operators-and-expressions-in-visual-basic"></a>Visual Basic の演算子および式
 *演算子*は、値が格納されている 1 つ以上のコード要素に対して演算を実行するコード要素です。 値要素は、変数、定数、リテラル、プロパティ、`Function` プロシージャおよび `Operator` プロシージャからの戻り値、式などです。  

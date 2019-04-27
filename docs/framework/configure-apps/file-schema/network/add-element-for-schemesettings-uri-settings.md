@@ -3,11 +3,11 @@ title: schemeSettings の <add> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 594a7b3b-af23-4cfa-b616-0b2dddb1a705
 ms.openlocfilehash: e7606a1185d406384a926ca4dcb7c42586461574
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674702"
 ---
 # <a name="add-element-for-schemesettings-uri-settings"></a>\<追加 > schemeSettings (Uri 設定) の要素
 スキーム名の設定の設定を追加します。  

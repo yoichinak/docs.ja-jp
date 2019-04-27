@@ -7,11 +7,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms]
 ms.assetid: 779b3a12-cd74-4e58-b46e-04983bda5b2c
 ms.openlocfilehash: 06eaf68fef167d63e6f8404dd5049f5445881d24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912874"
 ---
 # <a name="how-to-set-the-input-mask"></a>方法: 定型入力を設定する
 マスクされたテキスト ボックス コントロールは、許可または拒否のユーザー入力の宣言の構文をサポートする強化されたテキスト ボックス コントロールです。 Mask プロパティを設定して、アプリケーションで任意のカスタム検証ロジックを記述することがなく、使用可能なユーザー入力を指定できます。 詳細については、の「解説」を参照してください、<xref:System.Windows.Forms.MaskedTextBox>クラス。  

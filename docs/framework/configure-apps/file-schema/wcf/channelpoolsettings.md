@@ -3,11 +3,11 @@ title: <channelPoolSettings>
 ms.date: 03/30/2017
 ms.assetid: 4755f3d3-4213-4c68-ae7f-45b67d744459
 ms.openlocfilehash: ca1f680e2de67984dfcec49b3d262799000a2625
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673330"
 ---
 # <a name="channelpoolsettings"></a>\<channelPoolSettings>
 カスタム バインディングのチャネル プール設定を指定します。  

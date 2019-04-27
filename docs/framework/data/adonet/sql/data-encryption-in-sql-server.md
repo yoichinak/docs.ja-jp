@@ -3,11 +3,11 @@ title: SQL Server でのデータの暗号化
 ms.date: 03/30/2017
 ms.assetid: 83b992f7-b351-4678-b4b9-f4ffd58134cc
 ms.openlocfilehash: 1acb720b8a4f8beb27bb1a5236efdb6f2bb44383
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877878"
 ---
 # <a name="data-encryption-in-sql-server"></a>SQL Server でのデータの暗号化
 SQL Server には、証明書、非対称キー、対称キーのいずれかを使ってデータを暗号化したり、復号化したりできる関数が用意されています。 これらはすべて内部の証明書ストアで管理されます。 証明書ストアは、1 つ上の層がその下の層を保護する暗号化階層を使用することによって、証明書およびキーを保護します。 SQL Server では、この機能領域をシークレット ストレージと呼びます。  

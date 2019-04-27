@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
 ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61839407"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic プログラムの構造
 Visual Basic プログラムは、標準の構成ブロックから構築します。 A*ソリューション*は 1 つまたは複数のプロジェクトで構成されます。 A*プロジェクト*さらに、1 つまたは複数のアセンブリを含めることができます。 各*アセンブリ*が 1 つまたは複数のソース ファイルからコンパイルします。 A*ソース ファイル*定義とクラス、構造体、モジュール、および、最終的には、すべてのコードが含まれているインターフェイスの実装を提供します。  

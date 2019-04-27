@@ -3,11 +3,11 @@ title: エンドツーエンドのトレース
 ms.date: 03/30/2017
 ms.assetid: f5ac7fc7-f97c-4313-b068-54e0c471b2aa
 ms.openlocfilehash: fd2964b39c758e41620fb453ddd8f61a1aa550aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912536"
 ---
 # <a name="end-to-end-tracing"></a>エンドツーエンドのトレース
 エンド ツー エンド (e2e) のトレースでは、開発者はコード パスが失敗した理由を調査したり、キャパシティ プランニングやパフォーマンス分析の詳細なトレースを提供する Windows Communication Foundation (WCF) インフラストラクチャ内のコードの実行ができます。 Windows Communication Foundation (WCF) が、エラーの原因の診断に役立つ 3 つの相関機構を提供します。 アクティビティ、転送、および伝達します。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsHttpBinding Element
 ms.assetid: 0eee8ced-ad68-427d-b95a-97260e98deed
 ms.openlocfilehash: 6059bc91588492afdd1f205398e6cdfdba0be7ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670184"
 ---
 # <a name="wshttpbinding"></a>\<wsHttpBinding>
 双方向サービス コントラクト以外に適した、安全で信頼のおける相互操作可能なバインディングを定義します。 バインディングは、次の仕様を実装します。Ws-reliable メッセージングの信頼性、およびメッセージ セキュリティと認証用 Ws-security。 トランスポートは HTTP、メッセージ エンコーディングは Text/XML エンコーディングです。  

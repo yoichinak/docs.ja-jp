@@ -12,11 +12,11 @@ helpviewer_keywords:
 - data [Windows Forms], navigating
 ms.assetid: 97360f7b-b181-4084-966a-4c62518f735b
 ms.openlocfilehash: 2ba33f9ecb3a12a62c41af17d3f9ad6f6e3f8a5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801713"
 ---
 # <a name="how-to-navigate-data-in-windows-forms"></a>方法: Windows フォームでデータ間を移動する
 Windows アプリケーションでは、データ ソース内のレコードをナビゲートする最も簡単な方法は、バインドする、<xref:System.Windows.Forms.BindingSource>コンポーネントをデータ ソースとし、バインド コントロールを<xref:System.Windows.Forms.BindingSource>します。 組み込みのナビゲーション メソッドを使用することができますし、<xref:System.Windows.Forms.BindingSource>このような<xref:System.Windows.Forms.BindingSource.MoveNext%2A>、 <xref:System.Windows.Forms.BindingSource.MoveLast%2A>、<xref:System.Windows.Forms.BindingSource.MovePrevious%2A>と<xref:System.Windows.Forms.BindingSource.MoveFirst%2A>します。 これらのメソッドを使用して、調整は、<xref:System.Windows.Forms.BindingSource.Position%2A>と<xref:System.Windows.Forms.BindingSource.Current%2A>のプロパティ、<xref:System.Windows.Forms.BindingSource>適切にします。 項目を検索し、設定して、現在の項目として設定できる、<xref:System.Windows.Forms.BindingSource.Position%2A>プロパティ。  

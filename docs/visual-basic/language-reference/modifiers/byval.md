@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic]
 ms.assetid: 1eaf4e58-b305-4785-9e3d-e416b9c75598
 ms.openlocfilehash: 5e534eac2300327d4c54c5ce93d8b2c6c538e794
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832497"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801667"
 ---
 # <a name="byval-visual-basic"></a>ByVal (Visual Basic)
 呼び出されたプロシージャまたはプロパティが呼び出し元のコードで引数を基になる変数の値を変更できないように、引数が渡されることを指定します。  

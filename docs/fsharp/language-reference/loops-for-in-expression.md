@@ -3,11 +3,11 @@ title: 'ループ: for...in 式'
 description: 参照してください方法 F# for….. 式で列挙可能なコレクション内のパターンの一致を反復処理するループ コンストラクトが使用されます。
 ms.date: 05/16/2016
 ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614410"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024444"
 ---
 # <a name="loops-forin-expression"></a>ループ: for...in 式
 
@@ -131,7 +131,7 @@ a b c d e f g h i j k l m n o p q r s t u v w x y z
 Number of elements in list1: 5
 ```
 
-`Note` 使用することができます`for...in`シーケンス式とその他のコンピュテーション式で、カスタマイズされたバージョンの場合、`for...in`式を使用します。 詳細については、[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)を参照してください。
+`Note` 使用することができます`for...in`シーケンス式とその他のコンピュテーション式で、カスタマイズされたバージョンの場合、`for...in`式を使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)します。
 
 ## <a name="see-also"></a>関連項目
 

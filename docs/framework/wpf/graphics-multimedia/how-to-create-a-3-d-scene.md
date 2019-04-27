@@ -9,11 +9,11 @@ helpviewer_keywords:
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
 ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910183"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>方法: 3-D シーンを作成する
 この例では、回転紙のフラットなシートのような 3-D オブジェクトを作成する方法を示します。 A<xref:System.Windows.Controls.Viewport3D>次のコンポーネントと共にこのシンプルな 3-D シーンを作成に使用されます。  

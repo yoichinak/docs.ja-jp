@@ -7,11 +7,11 @@ helpviewer_keywords:
 - WCF [WCF], addresses
 ms.assetid: 13f269e3-ebb1-433c-86cf-54fbd866a627
 ms.openlocfilehash: f59b8403ecb683dafa6963565da46e517b5a2cbc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856634"
 ---
 # <a name="endpoint-addresses"></a>エンドポイント アドレス
 すべてのエンドポイントにはこれと関連するアドレスがあり、エンドポイントの検索と識別に使用されます。 このアドレスは主にエンドポイントの位置を指定する URI (Uniform Resource Identifier) で構成されます。 エンドポイント アドレスが、Windows Communication Foundation (WCF) のプログラミング モデルで表される、<xref:System.ServiceModel.EndpointAddress>クラスを含む、省略可能な<xref:System.ServiceModel.EndpointAddress.Identity%2A>他のエンドポイントによるエンドポイントの認証を有効にするプロパティをメッセージをおよび一連の省略可能な交換<xref:System.ServiceModel.EndpointAddress.Headers%2A>プロパティで、サービスに到達するために必要な SOAP ヘッダーを定義します。 オプションのヘッダーは、サービス エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 エンドポイントのアドレスは、ネットワーク上では WS-Addressing エンドポイント参照 (EPR) として表されます。  

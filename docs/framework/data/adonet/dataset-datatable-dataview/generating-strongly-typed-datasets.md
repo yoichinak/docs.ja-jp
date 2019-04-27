@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 54333cbf-bb43-4314-a7d4-6dc1dd1c44b3
 ms.openlocfilehash: 25883b7be10c68e527e4e04182b7162574b994d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880049"
 ---
 # <a name="generating-strongly-typed-datasets"></a>厳密に型指定された DataSet の生成
 XML スキーマ定義言語 (XSD) 標準に準拠する XML スキーマがあれば、<xref:System.Data.DataSet> に付属の XSD.exe ツールを使用して、厳密に型指定された [!INCLUDE[winsdklong](../../../../../includes/winsdklong-md.md)] を生成できます。  

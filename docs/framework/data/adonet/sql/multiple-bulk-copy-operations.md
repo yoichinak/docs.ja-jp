@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 5ad12f94-7459-4a93-a421-4160d1a90715
 ms.openlocfilehash: 405a82c625853d242ca68088ffdf81b6bcd7c518
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922214"
 ---
 # <a name="multiple-bulk-copy-operations"></a>バルク コピー操作の複数実行
 <xref:System.Data.SqlClient.SqlBulkCopy> クラスのインスタンスを 1 つ使用すると、バルク コピー操作を複数回実行できます。 後続の呼び出しの前に更新する必要があります (たとえば、レプリケーション先テーブルの名前) のコピー間で操作のパラメーターを変更する場合、 **WriteToServer**メソッドは、次の例に示すよう。 明示的に変更されている場合を除き、すべてのプロパティ値は、任意のインスタンスに対する前回のバルク コピー操作の状態のまま残っています。  

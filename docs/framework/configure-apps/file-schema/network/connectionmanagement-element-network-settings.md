@@ -9,11 +9,11 @@ helpviewer_keywords:
 - connectionManagement element
 ms.assetid: bedccaab-12a2-4511-8f67-e961f249aec6
 ms.openlocfilehash: 4412fe30bfb8dcb3d7576df18cb2a472463d935c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674585"
 ---
 # <a name="connectionmanagement-element-network-settings"></a>\<connectionManagement > 要素 (ネットワーク設定)
 ネットワーク ホストへの接続の最大数を指定します。  

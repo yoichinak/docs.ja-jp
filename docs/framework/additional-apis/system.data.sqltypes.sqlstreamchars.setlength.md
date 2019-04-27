@@ -13,11 +13,11 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 1283fea83cf77bbc898d460feedc72b898a65fb7
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633947"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675176"
 ---
 # <a name="sqlstreamcharssetlengthint64-method"></a>SqlStreamChars.SetLength(Int64) メソッド
 

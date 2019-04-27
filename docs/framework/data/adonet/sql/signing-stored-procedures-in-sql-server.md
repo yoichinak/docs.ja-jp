@@ -3,11 +3,11 @@ title: SQL Server でのストアド プロシージャの署名
 ms.date: 01/05/2018
 ms.assetid: eeed752c-0084-48e5-9dca-381353007a0d
 ms.openlocfilehash: 2c2076294c0e06ec411ceb1f5b1238dc3d7eb304
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922188"
 ---
 # <a name="signing-stored-procedures-in-sql-server"></a>SQL Server でのストアド プロシージャの署名
  デジタル署名は、署名者の秘密キーで暗号化されたデータ ダイジェストです。 秘密キーにより、デジタル署名がその保持者または所有者に固有であることが保証されます。 ストアド プロシージャ、関数 (インライン テーブル値関数) を除く、トリガー、およびアセンブリに署名することができます。  

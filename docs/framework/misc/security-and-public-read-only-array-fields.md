@@ -7,11 +7,11 @@ ms.assetid: 3df28dee-2a9f-40ff-9852-bfdbe59c27f3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19b5ad73150697c1442056642a1b11d504ecc426
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869747"
 ---
 # <a name="security-and-public-read-only-array-fields"></a>セキュリティとパブリックの読み取り専用配列フィールド
 パブリックの読み取り専用の配列フィールドを変更できるため、境界の動作またはアプリケーションのセキュリティを定義するのに、マネージ ライブラリからパブリック読み取り専用の配列フィールドを使用しないでください。  

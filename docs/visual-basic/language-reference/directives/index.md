@@ -7,11 +7,11 @@ helpviewer_keywords:
 - directives
 ms.assetid: 20d5fe65-490a-4c23-88c2-ee4f490ed762
 ms.openlocfilehash: 38d54feae5cf7bf41a825d1f6000811e2b56f319
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44187280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858510"
 ---
 # <a name="directives-visual-basic"></a>ディレクティブ (Visual Basic)
 このセクションのトピックでは、Visual Basic ソース コードのコンパイラ ディレクティブについて説明します。  

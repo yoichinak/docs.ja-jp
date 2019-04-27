@@ -3,11 +3,11 @@ title: <customBinding>
 ms.date: 03/30/2017
 ms.assetid: 9da4f960-f64e-4d8a-894d-2b09eba5ce4b
 ms.openlocfilehash: 60ce3cdfd7c78d152c71cdd652532cc96a6be296
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481120"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673187"
 ---
 # <a name="custombinding"></a>\<customBinding>
 
@@ -285,8 +285,8 @@ ms.locfileid: "59481120"
 |セキュリティ|同期、非同期、トランスポート レベル|いいえ|
 |形状の変更|<xref:System.ServiceModel.Channels.CompositeDuplexBindingElement>|いいえ|
 |トランスポートのアップグレード|SSL ストリーム、Windows ストリーム、ピア リゾルバー|いいえ|
-|エンコーディング|テキスト、バイナリ、MTOM、カスタム|[はい]|
-|Transport|TCP、名前付きパイプ、HTTP、HTTPS、MSMQ のフレーバー、カスタム|はい|
+|エンコーディング|テキスト、バイナリ、MTOM、カスタム|はい|
+|Transport|TCP、名前付きパイプ、HTTP、HTTPS、MSMQ のフレーバー、カスタム|[はい]|
 
 さらに、独自のバインド要素を定義し、それを定義済みの層のいずれかの間に挿入できます。
 

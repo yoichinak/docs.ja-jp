@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
 ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903358"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 ここでは、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] を実装するときに発生する可能性のある一般的な問題の対処法について説明します。  

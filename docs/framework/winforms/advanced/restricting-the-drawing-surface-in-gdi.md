@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, restricting drawing surface
 ms.assetid: 8b5f71d9-d2f0-4540-9c41-740f90fd4c26
 ms.openlocfilehash: d0508166f905b45789ce638b03d0747dd6fa904e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672641"
 ---
 # <a name="restricting-the-drawing-surface-in-gdi"></a>GDI+ での描画サーフェイスの制限
 クリッピングでは、描画を四角形または領域を制限します。 次の図、文字列「こんにちは」ハート形の領域にクリップされます。  

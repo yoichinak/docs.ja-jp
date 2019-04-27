@@ -3,11 +3,11 @@ title: 探索機能のバージョン指定
 ms.date: 03/30/2017
 ms.assetid: f91c6d0a-3af2-45c5-9a5c-e75390619836
 ms.openlocfilehash: 18c160e5e08ed9b6733bed9d5e40a4dde00dfd1c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33489181"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856649"
 ---
 # <a name="discovery-versioning"></a>探索機能のバージョン指定
 ここでは、新しい探索機能の実装の概要について簡単に説明します。 使用する探索バージョンを選択する方法の概要も示します。  
@@ -26,7 +26,7 @@ ms.locfileid: "33489181"
 -   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
 ### <a name="discoveryversionwsdiscoveryapril2005"></a>DiscoveryVersion.WSDiscoveryApril2005  
- 提供する<xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005>コンス トラクターとしてパラメーターにより、実装で、Ws-discovery プロトコルの April2005 バージョンを使用します。 このバージョンは、WS-Discovery プロトコル仕様の発行済みバージョンに対応します。 このバージョンは、WS-Discovery の April2005 バージョンを利用しているレガシ アプリケーションとの相互運用時に使用する必要があります。  
+ 提供する<xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscoveryApril2005>コンス トラクターとパラメーターにより、実装で、Ws-discovery プロトコルの April2005 バージョンを使用します。 このバージョンは、WS-Discovery プロトコル仕様の発行済みバージョンに対応します。 このバージョンは、WS-Discovery の April2005 バージョンを利用しているレガシ アプリケーションとの相互運用時に使用する必要があります。  
   
 ### <a name="discoveryversionwsdiscovery11"></a>DiscoveryVersion.WSDiscovery11  
  Api で使用される既定の探索バージョンは<xref:System.ServiceModel.Discovery.DiscoveryVersion.WSDiscovery11>します。 これは、現在標準化されている WS-Discovery プロトコルのバージョンです。  

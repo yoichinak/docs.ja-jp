@@ -3,11 +3,11 @@ title: サービス メタデータからの WCF クライアントの生成
 ms.date: 03/30/2017
 ms.assetid: 27f8f545-cc44-412a-b104-617e0781b803
 ms.openlocfilehash: 5cfbfc1e4be0003b3699f818212fbcd959f3ad91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855999"
 ---
 # <a name="generating-a-wcf-client-from-service-metadata"></a>サービス メタデータからの WCF クライアントの生成
 ここでは、Svcutil.exe の各種のスイッチを使用して、メタデータ ドキュメントからクライアントを生成する方法を説明します。  

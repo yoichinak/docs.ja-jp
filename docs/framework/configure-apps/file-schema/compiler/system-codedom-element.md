@@ -10,11 +10,11 @@ helpviewer_keywords:
 - <system.codedom> element
 ms.assetid: 672a68f7-e69f-4479-ac30-e980085ec4fe
 ms.openlocfilehash: 0f47255bb4073007a847e4a8b85ccfd34100582b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674799"
 ---
 # <a name="systemcodedom-element"></a>\<system.codedom > 要素
 使用可能な言語プロバイダーのコンパイラ構成設定を指定します。  

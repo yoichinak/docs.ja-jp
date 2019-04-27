@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structures [Visual Basic], declaring
 ms.assetid: d5e98381-eb81-47d4-af83-48cc534a2572
 ms.openlocfilehash: a52daddaa8701ccca9bd9b5b4a48535a6ffa19ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906712"
 ---
 # <a name="how-to-declare-a-structure-visual-basic"></a>方法: 構造体 (Visual Basic) を宣言します。
 構造体の宣言を開始する、 [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)、それを終了して、`End Structure`ステートメント。 これら 2 つのステートメントの間で、少なくとも 1 つを宣言する必要があります*要素*します。 任意のデータ型の要素ができますが、非共有変数または非共有の非カスタム イベントのいずれかに少なくとも 1 つである必要があります。  

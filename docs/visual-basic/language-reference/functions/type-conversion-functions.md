@@ -82,11 +82,11 @@ helpviewer_keywords:
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
 ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802298"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>データ型変換関数 (Visual Basic)
 これらの関数は、インラインでのコンパイル、つまり、変換コード式を評価するコードの一部です。 場合によってパフォーマンスを向上させると、変換を実行するプロシージャの呼び出しではありません。 各関数は、特定のデータ型に式を変換します。  

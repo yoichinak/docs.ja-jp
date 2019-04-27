@@ -3,11 +3,11 @@ title: '方法: ロードとアンロード アセンブリ (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: bbc84236-04b6-4c1b-9672-52773f65a5dc
 ms.openlocfilehash: efd8ddbe45323e1f80cec54379d61b5aa8a435cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297384"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818652"
 ---
 # <a name="how-to-load-and-unload-assemblies-visual-basic"></a>方法: ロードとアンロード アセンブリ (Visual Basic)
 プログラムから参照されるアセンブリは、ビルド時に自動的に読み込まれますが、実行時に特定のアセンブリを現在のアプリケーション ドメインに読み込むこともできます。 詳細については、「[方法 :アプリケーション ドメインにアセンブリを読み込む](../../../../framework/app-domains/how-to-load-assemblies-into-an-application-domain.md)」をご覧ください。  

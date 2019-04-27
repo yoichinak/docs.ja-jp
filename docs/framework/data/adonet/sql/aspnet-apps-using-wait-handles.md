@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f588597a-49de-4206-8463-4ef377e112ff
 ms.openlocfilehash: 0a17755af4027238393890545c051a063d607b6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877761"
 ---
 # <a name="aspnet-applications-using-wait-handles"></a>待機ハンドルを使用した ASP.NET アプリケーション
 アプリケーションが一度に 1 つの非同期操作しか処理しない場合は、コールバック モデルとポーリング モデルが非同期操作の処理に役立ちます。 Wait モデルを使用することで、複数の非同期操作をより柔軟に処理できます。 Wait モデルには Wait (Any) モデルと Wait (All) モデルの 2 つがあり、モデルの実装に使用される <xref:System.Threading.WaitHandle> メソッドに指定されます。  

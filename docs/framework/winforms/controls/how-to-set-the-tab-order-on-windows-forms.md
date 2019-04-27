@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, setting tab order
 ms.assetid: 71fa8e76-0472-414b-ad3c-0f90166e0ad7
 ms.openlocfilehash: 50f5f91a946aeebc4d82630b25d18d8f8d2ea4be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339906"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013128"
 ---
 # <a name="how-to-set-the-tab-order-on-windows-forms"></a>方法: Windows フォーム上のタブ オーダーを設定する
 タブ オーダーは、ユーザーが TAB キーを押して 1 つのコントロールからでフォーカスを移動する順序です。 各フォームには、独自のタブ オーダーがあります。 既定では、タブ オーダーは、コントロールを作成した順序と同じです。 タブ オーダーの番号は 0 から始まります。  

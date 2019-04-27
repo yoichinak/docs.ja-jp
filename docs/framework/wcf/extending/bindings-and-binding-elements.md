@@ -6,10 +6,10 @@ helpviewer_keywords:
 ms.assetid: 765ff77b-7682-4ea3-90eb-e4d751e37379
 ms.openlocfilehash: 33ebb07e350dbbbdd324b442f52dfb6287322bd8
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858378"
 ---
 # <a name="bindings-and-binding-elements"></a>バインディングとバインド要素
 バインドと呼ばれる特別な構成要素のコレクションが、*バインド要素*場合は常に、サービス ランタイムによって評価される、または、サービス エンドポイントが構築されます。 バインディング内のバインド要素の型と順序に基づいて、エンドポイントのチャネル スタック内のプロトコル チャネルとトランスポート チャネルが選択され、スタック順が決定されます。  

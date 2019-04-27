@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <defaultProxy> element
 ms.assetid: 9d663c4b-07b4-4f6f-9b12-efbd3630354f
 ms.openlocfilehash: ce08dadb0fb7b986c0573b1514f9ecbbe2961c3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674572"
 ---
 # <a name="defaultproxy-element-network-settings"></a>\<defaultProxy > 要素 (ネットワーク設定)
 ハイパーテキスト転送プロトコル (HTTP: Hypertext Transfer Protocol) プロキシ サーバーを構成します。  

@@ -3,11 +3,11 @@ title: <add> の <entries>
 ms.date: 03/30/2017
 ms.assetid: 3af4805b-dc72-4f68-b168-da4fba8c6170
 ms.openlocfilehash: 1324803d7c0f127cfee9eadebff2672955780eda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673642"
 ---
 # <a name="add-of-entries"></a>\<追加 > の\<エントリ >
 以前に定義されたクライアント エンドポイントにフィルターをマップするルーティング エントリを表します。 このフィルターに一致するメッセージは、この宛先に送信されます。  

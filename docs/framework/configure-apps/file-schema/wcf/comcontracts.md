@@ -3,11 +3,11 @@ title: <comContracts>
 ms.date: 03/30/2017
 ms.assetid: 42e74148-223d-4888-a8ed-1d928527eb09
 ms.openlocfilehash: 47a7d862cf85254f88373d582169ff421be2b5b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673291"
 ---
 # <a name="comcontracts"></a>\<comContracts>
 `comContracts` 構成セクションには、COM+ 統合サービス コントラクトのさまざまなプロパティを指定できる要素が含まれます。  

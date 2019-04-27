@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f80d4327-b6a5-4aa8-a743-e95d09a2a02e
 ms.openlocfilehash: ed8071352902b8f97445cbfa5ff0ebe8fead9bb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903254"
 ---
 # <a name="how-to-call-user-defined-functions-inline"></a>方法: ユーザー定義関数をインラインで呼び出す
 ユーザー定義関数はインラインで呼び出すことができますが、遅延実行のクエリに含まれる関数は、そのクエリが実行されるまで実行されません。 詳細については、「[LINQ クエリの概要 (C#)](~/docs/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)」を参照してください。  

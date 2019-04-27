@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <specifiedPickupDirectory> element
 ms.assetid: 0121f49d-bff2-4bc6-af06-f1628dcd61f1
 ms.openlocfilehash: a459fee557285935c383dcfaf512c8a8a9aea570
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099275"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674372"
 ---
 # <a name="specifiedpickupdirectory-element-network-settings"></a>\<specifiedPickupDirectory > 要素 (ネットワーク設定)
 SMTP (Simple Mail Transport Protocol) サーバー用のローカル ディレクトリを設定します。  

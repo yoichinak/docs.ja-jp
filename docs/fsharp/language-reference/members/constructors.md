@@ -3,11 +3,11 @@ title: コンストラクター
 description: 定義および F# で作成し、クラスと構造のオブジェクトを初期化するコンス トラクターを使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 34989e2877b29f6f9fe1f6cc05e3fd7c90a1306a
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612076"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903969"
 ---
 # <a name="constructors"></a>コンストラクター
 
@@ -42,7 +42,7 @@ Initialized object that has coordinates (0, 0, 0)
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-2/snippet3502.fs)]
 
-詳細については、次を参照してください。[明示的なフィールド。`val`キーワード](explicit-fields-the-val-keyword.md)します。
+詳細については、次を参照してください。[明示的なフィールド:`val`キーワード](explicit-fields-the-val-keyword.md)します。
 
 ## <a name="executing-side-effects-in-constructors"></a>コンス トラクター内で実行中の副作用
 
@@ -84,11 +84,11 @@ Created an invalid person object.
 
 ## <a name="constructors-in-inherited-class"></a>継承されたクラスのコンス トラクター
 
-コンス トラクターを持つ基本クラスを継承する場合は、継承句でその引数を指定する必要があります。 詳細については、[コンス トラクターと継承](../inheritance.md#constructors-and-inheritance)を参照してください。
+コンス トラクターを持つ基本クラスを継承する場合は、継承句でその引数を指定する必要があります。 詳細については、次を参照してください。[コンス トラクターと継承](../inheritance.md#constructors-and-inheritance)します。
 
 ## <a name="static-constructors-or-type-constructors"></a>静的コンス トラクターまたは型コンス トラクター
 
-静的オブジェクトを作成するためのコードを指定するだけでなく`let`と`do`型レベルでの初期化を実行する型が最初に使用される前に実行するクラス型でバインディングを作成できます。 詳細については、[ `let`クラス内のバインディング](let-bindings-in-classes.md)と[`do`クラス内のバインディング](do-bindings-in-classes.md)を参照してください。
+静的オブジェクトを作成するためのコードを指定するだけでなく`let`と`do`型レベルでの初期化を実行する型が最初に使用される前に実行するクラス型でバインディングを作成できます。 詳細については、次を参照してください。 [ `let`クラス内のバインディング](let-bindings-in-classes.md)と[`do`クラス内のバインディング](do-bindings-in-classes.md)します。
 
 ## <a name="see-also"></a>関連項目
 

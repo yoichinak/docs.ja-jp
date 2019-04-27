@@ -3,11 +3,11 @@ title: <add> <scopedCertificates>要素
 ms.date: 03/30/2017
 ms.assetid: e21c1ef8-d6d6-4bca-ac5a-6fbf4bd77412
 ms.openlocfilehash: 06a624d0146745581dfe907d044d1f7d3b857902
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673869"
 ---
 # <a name="add-of-scopedcertificates-element"></a>\<追加 > の\<scopedCertificates > 要素
 範囲指定された証明書のコレクションに X.509 証明書を追加します。  

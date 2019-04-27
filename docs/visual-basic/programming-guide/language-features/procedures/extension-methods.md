@@ -8,11 +8,11 @@ helpviewer_keywords:
 - extension methods [Visual Basic]
 ms.assetid: b8020aae-374d-46a9-bcb7-8cc2390b93b6
 ms.openlocfilehash: 9e005d0dc7da154fbaffbf7e02c55445a1213195
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864340"
 ---
 # <a name="extension-methods-visual-basic"></a>拡張メソッド (Visual Basic)
 拡張メソッドには、新しい派生型を作成せずに既に定義されているデータ型にカスタム機能を追加する開発者が有効にします。 拡張メソッドを使用すれば、既存の型のインスタンス メソッドの場合と同様に呼び出すことができるメソッドを記述できます。  

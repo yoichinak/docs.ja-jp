@@ -8,11 +8,11 @@ helpviewer_keywords:
 - embedded objects, UI Automation
 ms.assetid: 93fdfbb9-0025-4b72-8ca0-0714adbb70d5
 ms.openlocfilehash: c8dc4ba5a17ca6a950d7ef3e0835f31463979bd3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983229"
 ---
 # <a name="textpattern-and-embedded-objects-overview"></a>TextPattern および埋め込みオブジェクトの概要
 > [!NOTE]

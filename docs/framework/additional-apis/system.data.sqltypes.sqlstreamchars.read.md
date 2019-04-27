@@ -13,11 +13,11 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: df92acfd4050eb16d3a101b20b9b44560273f4d5
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58633648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675235"
 ---
 # <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars.Read (Char、Int32, Int32) メソッド
 

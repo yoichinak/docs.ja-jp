@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30686
 ms.assetid: 784fefec-ef57-48cf-b960-957df419b439
 ms.openlocfilehash: 5f058c8e7d480b9145452ae85f186a6ac2ed0d56
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803731"
 ---
 # <a name="default-property-access-is-ambiguous-between-the-inherited-interface-members-defaultpropertyname-of-interface-interfacename1-and-defaultpropertyname-of-interface-interfacename2"></a>Default プロパティ アクセスは継承インターフェイス メンバーの間であいまいな\<defaultpropertyname >' のインターフェイス '\<interfacename1 >' と'\<defaultpropertyname >' のインターフェイス '\<interfacename2 >'
 インターフェイスは、同じ名前の既定プロパティを宣言するそれぞれの 2 つのインターフェイスから継承します。 コンパイラは、この既定のプロパティを修飾なしに、アクセスを解決できません。 次に例を示します。  

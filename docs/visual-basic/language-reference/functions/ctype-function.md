@@ -10,11 +10,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], expression
 ms.assetid: dd4b29e7-6fa1-428c-877e-69955420bb72
 ms.openlocfilehash: dbf01263723a9e2890dab57d5ffc3d467ed250fc
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212054"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801680"
 ---
 # <a name="ctype-function-visual-basic"></a>CType 関数 (Visual Basic)
 
@@ -37,7 +37,7 @@ CType(expression, typename)
 > [!TIP]
 > 次の関数を使用して型変換を実行することもできます。
 >
-> - 特定のデータ型への変換を実行する、`CByte`、`CDbl`、`CInt` などの型変換関数。 詳細については、[型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)を参照してください。
+> - 特定のデータ型への変換を実行する、`CByte`、`CDbl`、`CInt` などの型変換関数。 詳細については、次を参照してください。[型変換関数](../../../visual-basic/language-reference/functions/type-conversion-functions.md)します。
 > - [DirectCast 演算子](../../../visual-basic/language-reference/operators/directcast-operator.md)または[TryCast 演算子](../../../visual-basic/language-reference/operators/trycast-operator.md)します。 これらの演算子では、一方の型が他方の型を継承または実装している必要があります。 これらの場合は、`CType` データ型との間で変換を行うときに、`Object` よりもいくらかパフォーマンスが向上します。
 
 `CType` は、インラインでコンパイルされます。つまり、変換コードは、式を評価するコードに含まれます。 場合によっては、変換を実行するプロシージャが呼び出されないため、コードの実行速度が速くなります。
@@ -62,7 +62,7 @@ CType(expression, typename)
 
 [!code-vb[VbVbalrFunctions#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrFunctions/VB/Class1.vb#24)]
 
-その他の例では、[暗黙的および明示的な変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)を参照してください。
+その他の例では、次を参照してください。[暗黙的および明示的な変換](../../../visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md)します。
 
 ## <a name="see-also"></a>関連項目
 

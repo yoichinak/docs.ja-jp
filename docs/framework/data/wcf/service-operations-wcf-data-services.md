@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: 583a690a-e60f-4990-8991-d6efce069d76
 ms.openlocfilehash: 2a043e71e15de8ffbd4a0e7296545b7af35a3e3e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916644"
 ---
 # <a name="service-operations-wcf-data-services"></a>サービス操作 (WCF Data Services)
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
 ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827945"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>シャドウとオーバーライドの違い (Visual Basic)
 基本クラスから継承するクラスを定義するときに場合がありますを 1 つまたは複数の派生クラスで基底クラスの要素を再定義します。 シャドウとオーバーライドは、この目的のためです。  

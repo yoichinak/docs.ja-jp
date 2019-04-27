@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31535
 ms.assetid: 6540c1d0-bb19-4051-a579-2e4f9094585e
 ms.openlocfilehash: 0c1526e32ddc64cb4124c6f8205d58deef911dd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802480"
 ---
 # <a name="friend-assembly-reference-reference-is-invalid"></a>フレンド アセンブリ参照\<参照 > が無効です
 フレンド アセンブリ参照\<参照 > が無効です。 厳密な名前の署名つきアセンブリはその InternalsVisibleTo 宣言内で公開キーを指定しなければなりません。  

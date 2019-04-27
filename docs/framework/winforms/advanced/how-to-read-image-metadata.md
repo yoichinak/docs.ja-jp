@@ -9,11 +9,11 @@ helpviewer_keywords:
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
 ms.openlocfilehash: 0a53e9b9d23c03715bf3088a4ae8577a39527995
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61672602"
 ---
 # <a name="how-to-read-image-metadata"></a>方法: イメージ メタデータを読み取る
 一部のイメージ ファイルには、イメージの機能を読み取ることができるメタデータが含まれます。 たとえば、デジタル写真には、製造元とイメージをキャプチャするために使用するカメラのモデルを決定する読み取り可能なメタデータが含まれます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、既存のメタデータを読み取ることができ、イメージ ファイルに新しいメタデータを記述することもできます。  

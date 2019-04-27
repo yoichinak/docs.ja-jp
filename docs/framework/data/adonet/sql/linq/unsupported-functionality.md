@@ -3,11 +3,11 @@ title: サポートされていない機能
 ms.date: 03/30/2017
 ms.assetid: e480cfb5-697e-42c8-bed5-9264c945c4f9
 ms.openlocfilehash: 18a1a8f33a9360b4299648bcd329f4c5f2e7de88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917559"
 ---
 # <a name="unsupported-functionality"></a>サポートされていない機能
 LINQ to SQL では、次の SQL 機能は、既存の共通言語ランタイム (CLR) および .NET Framework の構成要素の変換からは公開できません。  

@@ -9,10 +9,10 @@ helpviewer_keywords:
 ms.assetid: cc06e61f-43b6-4408-a676-2542dcfcd96e
 ms.openlocfilehash: 6feabadff17538f4a7368c348f7b72226e2d678e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800153"
 ---
 # <a name="windows-forms-coordinates"></a>Windows フォームの座標
 Windows フォームの座標システムは、デバイス座標に基づいており、Windows フォームで描画するときに、メジャーの基本単位はデバイス単位 (通常は、ピクセル) です。 画面上の点は、増加、右、上から下に増やすと、y 座標の x 座標と、x 座標と y 座標のペアで説明します。 画面を基準とした、元の場所は、画面またはクライアント座標を指定するかどうかによって異なります。  
