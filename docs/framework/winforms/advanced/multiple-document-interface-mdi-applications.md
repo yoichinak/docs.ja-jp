@@ -30,7 +30,7 @@ ms.locfileid: "57717447"
  [方法: アクティブな MDI 子フォームを特定する](how-to-determine-the-active-mdi-child.md)  
  フォーカスを持つ子ウィンドウを確認するための手順を示します (とその内容をクリップボードに送信) します。  
   
- [方法: アクティブな MDI 子ウィンドウにデータを送信する](how-to-send-data-to-the-active-mdi-child.md)  
+ [方法: アクティブな MDI 子フォームにデータを送信する](how-to-send-data-to-the-active-mdi-child.md)  
  アクティブな子ウィンドウに情報を転送するための手順を示します。  
   
  [方法: MDI 子フォームを配置する](how-to-arrange-mdi-child-forms.md)  
