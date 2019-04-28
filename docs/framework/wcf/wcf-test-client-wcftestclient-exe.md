@@ -3,11 +3,11 @@ title: WCF のテスト用クライアント (WcfTestClient.exe)
 ms.date: 03/30/2017
 ms.assetid: d4302855-677f-4640-aa90-c5d785d72fb7
 ms.openlocfilehash: cd6f0d7a98ca5bc5f6bee45ad296341a5b91b2a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791197"
 ---
 # <a name="wcf-test-client-wcftestclientexe"></a>WCF のテスト用クライアント (WcfTestClient.exe)
 Windows Communication Foundation (WCF) のテスト クライアント (WcfTestClient.exe) は、テスト パラメーターを入力し、そのサービスに入力するユーザーを有効にし、サービスが返送する応答を表示する GUI ツールです。 テストを行う WCF サービス ホストと組み合わせたときに、シームレスにサービスを提供します。  
@@ -136,34 +136,34 @@ Windows Communication Foundation (WCF) のテスト クライアント (WcfTestC
 ## <a name="features-supported-by-wcf-test-client"></a>WCF のテスト用クライアントでサポートされる機能  
  WCF テスト クライアントでサポートされる機能の一覧を次には。  
   
--   サービスの呼び出し:要求/応答、一方向のメッセージ。  
+- サービスの呼び出し:要求/応答、一方向のメッセージ。  
   
--   バインディング : Svcutil.exe でサポートされるすべてのバインディング  
+- バインディング : Svcutil.exe でサポートされるすべてのバインディング  
   
--   セッションの制御  
+- セッションの制御  
   
--   メッセージ コントラクト  
+- メッセージ コントラクト  
   
--   XML シリアル化  
+- XML シリアル化  
   
  WCF テスト クライアントでサポートされない機能の一覧を次には。  
   
--   型: <xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message>、<xref:System.Xml.XmlElement>、<xref:System.Xml.XmlAttribute>、<xref:System.Xml.XmlNode>、<xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装する型 (関連する <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性を含む)、<xref:System.Xml.Linq.XDocument> 型と <xref:System.Xml.Linq.XElement> 型、および ADO.NET <xref:System.Data.DataTable> 型。  
+- 型: <xref:System.IO.Stream>、<xref:System.ServiceModel.Channels.Message>、<xref:System.Xml.XmlElement>、<xref:System.Xml.XmlAttribute>、<xref:System.Xml.XmlNode>、<xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装する型 (関連する <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性を含む)、<xref:System.Xml.Linq.XDocument> 型と <xref:System.Xml.Linq.XElement> 型、および ADO.NET <xref:System.Data.DataTable> 型。  
   
--   双方向コントラクト  
+- 双方向コントラクト  
   
--   トランザクション  
+- トランザクション  
   
--   セキュリティ : [!INCLUDE[infocard](../../../includes/infocard-md.md)]、証明書、およびユーザー名/パスワード  
+- セキュリティ : [!INCLUDE[infocard](../../../includes/infocard-md.md)]、証明書、およびユーザー名/パスワード  
   
--   バインド:WSFederationbinding、任意のコンテキスト バインディングおよび Https バインディング、WebHttpbinding (Json 応答メッセージのサポート)。  
+- バインド:WSFederationbinding、任意のコンテキスト バインディングおよび Https バインディング、WebHttpbinding (Json 応答メッセージのサポート)。  
   
 ## <a name="closing-wcf-test-client"></a>WCF のテスト用クライアントの終了  
  次の方法では、WCF テスト クライアントを閉じることができます。  
   
--   **ファイル** メニューのをクリックして**終了**します。 また、WCF テスト クライアントのメイン ウィンドウで次のようにクリックします。**閉じる**します。 これらのアクションも WCF サービスの自動ホストをシャット ダウン、および Visual Studio によって WCF テスト クライアントを起動した場合は、Visual Studio のデバッグ プロセスを停止します。  
+- **ファイル** メニューのをクリックして**終了**します。 また、WCF テスト クライアントのメイン ウィンドウで次のようにクリックします。**閉じる**します。 これらのアクションも WCF サービスの自動ホストをシャット ダウン、および Visual Studio によって WCF テスト クライアントを起動した場合は、Visual Studio のデバッグ プロセスを停止します。  
   
--   右クリックし、 **WCF サービス ホスト**アイコン、通知領域とクリック**終了します。** これにより、シャット ダウン、WCF サービスの自動ホストと WCF テスト クライアントの両方と、Visual Studio のプロセスのデバッグを停止します。  
+- 右クリックし、 **WCF サービス ホスト**アイコン、通知領域とクリック**終了します。** これにより、シャット ダウン、WCF サービスの自動ホストと WCF テスト クライアントの両方と、Visual Studio のプロセスのデバッグを停止します。  
   
 ## <a name="see-also"></a>関連項目
 

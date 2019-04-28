@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30812
 ms.assetid: 5091a250-be66-413b-98a3-2a9974c4d600
 ms.openlocfilehash: 01c0abb366e8605a9b153333e645fc3276b6bd16
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821726"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772594"
 ---
 # <a name="optional-parameters-must-specify-a-default-value"></a>省略可能な引数には、既定値を指定する必要があります。
 省略可能なパラメーターは、呼び出し元のプロシージャでパラメーターが指定されていない場合に使用できる既定値を指定する必要があります。  
@@ -21,7 +21,7 @@ ms.locfileid: "58821726"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   は省略可能なパラメーターの既定値を指定します例えば：  
+- は省略可能なパラメーターの既定値を指定します例えば：  
   
     ```  
     Sub Proc1(ByVal X As Integer,   

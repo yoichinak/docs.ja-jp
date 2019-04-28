@@ -2,15 +2,9 @@
 title: Visual Basic における変数
 ms.date: 07/20/2015
 helpviewer_keywords:
-- variables [Visual Basic]
-- values [Visual Basic], storing
+  - 'variables [Visual Basic]'
+  - 'values [Visual Basic], storing'
 ms.assetid: 4cfaa06d-4ae3-4307-897b-cf599dc24caa
-ms.openlocfilehash: 9a39c53ea2d57bca379297897d6d4d1b9f7a1a9f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840381"
 ---
 # <a name="variables-in-visual-basic"></a>Visual Basic における変数
 Visual Basic での計算を実行するときに、値を格納する多くの場合があります。 たとえば、いくつかの値を計算し、比較し、比較の結果に応じて、さまざまな操作を実行する必要があるとします。 比較する場合には、その値を保持する必要があります。  

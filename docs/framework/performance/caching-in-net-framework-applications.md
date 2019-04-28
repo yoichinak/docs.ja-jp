@@ -7,11 +7,11 @@ helpviewer_keywords:
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
 ms.openlocfilehash: a57489af2f2af59f128f5d86be844b43c9c49840
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788142"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework アプリケーションでのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。  
@@ -24,17 +24,17 @@ ms.locfileid: "59085781"
 ## <a name="caching-data"></a>キャッシュされたデータ  
  情報をキャッシュするには、<xref:System.Runtime.Caching> 名前空間のクラスを使用します。 この名前空間のキャッシュ クラスには、次の機能があります。  
   
--   カスタムのキャッシュ実装を作成するための基礎として機能する抽象型。  
+- カスタムのキャッシュ実装を作成するための基礎として機能する抽象型。  
   
--   具体的なメモリ内オブジェクト キャッシュ実装。  
+- 具体的なメモリ内オブジェクト キャッシュ実装。  
   
  抽象的な基本キャッシュ クラス (<xref:System.Runtime.Caching.ObjectCache>) では、次のキャッシュ タスクを定義します。  
   
--   キャッシュ エントリの作成と管理  
+- キャッシュ エントリの作成と管理  
   
--   有効期限と削除の情報を指定します。  
+- 有効期限と削除の情報を指定します。  
   
--   キャッシュ エントリの変化に応答して発生するイベントをトリガーします。  
+- キャッシュ エントリの変化に応答して発生するイベントをトリガーします。  
   
  <xref:System.Runtime.Caching.MemoryCache> クラスは、<xref:System.Runtime.Caching.ObjectCache> クラスのメモリ内オブジェクト キャッシュ実装です。 ほとんどのキャッシュ タスクに <xref:System.Runtime.Caching.MemoryCache> クラスを使用できます。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "59085781"
   
  キャッシュを拡張するには、次の方法があります。  
   
--   <xref:System.Runtime.Caching.ObjectCache> クラスから派生したカスタム クラスを作成し、派生クラスでカスタム キャッシュ実装を提供します。  
+- <xref:System.Runtime.Caching.ObjectCache> クラスから派生したカスタム クラスを作成し、派生クラスでカスタム キャッシュ実装を提供します。  
   
--   <xref:System.Runtime.Caching.MemoryCache> クラスから派生したクラスを作成し、派生クラスをカスタマイズまたは拡張します。 この実行方法の例については、「[Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)」(ASP.NET アプリケーションで複数のキャッシュ オブジェクトを使用してアプリケーション データをキャッシュする) を参照してください。  
+- <xref:System.Runtime.Caching.MemoryCache> クラスから派生したクラスを作成し、派生クラスをカスタマイズまたは拡張します。 この実行方法の例については、「[Caching Application Data by Using Multiple Cache Objects in an ASP.NET Application](https://blogs.msdn.com/aspnetue/archive/2010/03/22/caching-application-data-by-using-multiple-cache-objects-in-an-asp-net-application.aspx)」(ASP.NET アプリケーションで複数のキャッシュ オブジェクトを使用してアプリケーション データをキャッシュする) を参照してください。  
   
--   <xref:System.Web.Caching.OutputCacheProvider> クラスから派生したクラスを作成し、そのカスタム出力キャッシュ プロバイダーを使用するようにアプリケーションを構成します。  
+- <xref:System.Web.Caching.OutputCacheProvider> クラスから派生したクラスを作成し、そのカスタム出力キャッシュ プロバイダーを使用するようにアプリケーションを構成します。  
   
  詳細については、Scott Guthrie のブログのエントリ「[Extensible Output Caching with ASP.NET 4 (VS 2010 and .NET 4.0 Series)](https://go.microsoft.com/fwlink/?LinkId=185772)」(ASP.NET 4 を使用した拡張可能な出力キャッシュ (VS 2010 および .NET 4.0 シリーズ)) を参照してください。  
   

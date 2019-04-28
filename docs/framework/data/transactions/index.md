@@ -2,12 +2,6 @@
 title: トランザクション処理
 ms.date: 03/30/2017
 ms.assetid: effdc8e6-accf-41eb-98a5-431603ba218b
-ms.openlocfilehash: dc032746b265a3e781898beb823be0d1bcf1abea
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33355218"
 ---
 # <a name="transaction-processing"></a>トランザクション処理
 オンライン書店で書籍を購入する場合、書籍と代金 (クレジット形式) を交換します。 クレジットに問題がなければ、一連の処理によって顧客は書籍を入手し、書店には代金が入金されます。 ただし、一連の取引処理の 1 つでも失敗すると取引全体が失敗し、 顧客は書籍を入手できず、書店は代金を受け取れません。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], ListBox
 ms.assetid: 15d58f1d-3db6-4cb5-88c7-8c45f19301e2
 ms.openlocfilehash: 0895b80f230d2c67ab0723c7935ae20443327a41
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766741"
 ---
 # <a name="listbox-how-to-topics"></a>ListBox に関する「方法」トピック
 このセクションのトピックでは、使用する方法をについて説明します、<xref:System.Windows.Controls.ListBox>項目の選択可能なリストを表示するコントロール。  

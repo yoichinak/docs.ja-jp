@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Calendar
 ms.assetid: e91a7393-a7f9-4838-a1a6-857438b24bc9
 ms.openlocfilehash: 747e1112046b6882b1a3bef0c1bfdb25f0e83f53
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787986"
 ---
 # <a name="ui-automation-support-for-the-calendar-control-type"></a>UI オートメーションによる Calendar コントロール型のサポート
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "59149761"
   
 |コントロール パターン/パターン プロパティ|サポート|メモ|  
 |---------------------------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|はい|1 か月の中に含まれる日付が空間的に移動できる項目になるため、カレンダー コントロールは必ず Grid パターンをサポートします。|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|[はい]|1 か月の中に含まれる日付が空間的に移動できる項目になるため、カレンダー コントロールは必ず Grid パターンをサポートします。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|状況に依存|ほとんどのカレンダー コントロールはページごとのビューのフリッピングをサポートしています。 ページ移動をサポートするために、Scroll パターンを使用することをお勧めします。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|状況に依存|ほとんどのカレンダー コントロールは、特定の日付、月、または年を、サブ要素の選択内容の形で保存します。 複数選択が可能なカレンダーもあれば、1 つしか選択できないカレンダーもあります。|  
 |<xref:System.Windows.Automation.Provider.ITableProvider>|[はい]|カレンダー コントロールには曜日のサブツリー内に常にヘッダーがあるため、Table パターンがサポートされる必要があります。|  

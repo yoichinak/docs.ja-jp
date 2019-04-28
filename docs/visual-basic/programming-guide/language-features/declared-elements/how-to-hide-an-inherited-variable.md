@@ -12,11 +12,11 @@ helpviewer_keywords:
 - variables [Visual Basic], hiding inherited
 ms.assetid: 765728d9-7351-4a30-999d-b5f34f024412
 ms.openlocfilehash: ee147ecd00b88b538ace32844c42ac9c5022b2ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794694"
 ---
 # <a name="how-to-hide-an-inherited-variable-visual-basic"></a>方法: 継承された変数 (Visual Basic) を非表示にします。
 派生クラスでは、その基底クラスのすべての定義を継承します。 基底クラスの要素として、同じ名前を使用して変数を定義する場合は、非表示にできます、または*シャドウ*、派生クラスで、変数を定義するときにその基本クラスの要素。 これを行う場合、シャドウ機構を明示的にバイパスしない限り、派生クラスのコード、変数にアクセスします。  

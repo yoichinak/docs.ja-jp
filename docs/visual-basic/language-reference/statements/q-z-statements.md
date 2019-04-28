@@ -3,11 +3,11 @@ title: ステートメント Q ~ Z (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 32a9e547-c1b7-40f2-8118-7eef1d19649e
 ms.openlocfilehash: 20d9adf92aacd1e2624fe0c3fb5a2888801c7f04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783982"
 ---
 # <a name="q-z-statements"></a>ステートメント Q ～ Z
 次の表には、Visual Basic 言語のステートメントの一覧が含まれています。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30616
 ms.assetid: e7658ebc-da45-451b-a409-a0f8915f0beb
 ms.openlocfilehash: 15c35cbb829bec782771b584ea25b111b81b5e1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766891"
 ---
 # <a name="variable-variablename-hides-a-variable-in-an-enclosing-block"></a>変数 '\<variablename >'、それを囲むブロック内の変数を非表示になります
 ブロックで囲まれた変数では、別のローカル変数と同じ名前を持ちます。  
@@ -21,7 +21,7 @@ ms.locfileid: "58827134"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   囲まれたブロック内の変数の名前を変更して、他の任意のローカル変数と同じではないようにします。 例:  
+- 囲まれたブロック内の変数の名前を変更して、他の任意のローカル変数と同じではないようにします。 例:  
   
     ```  
     Dim a, b, x As Integer  
@@ -30,9 +30,9 @@ ms.locfileid: "58827134"
     End If  
     ```  
   
--   このエラーの一般的な原因は、使用`Catch e As Exception`イベント ハンドラーの内部。 この場合は、名前、`Catch`ブロック変数`ex`なく`e`します。  
+- このエラーの一般的な原因は、使用`Catch e As Exception`イベント ハンドラーの内部。 この場合は、名前、`Catch`ブロック変数`ex`なく`e`します。  
   
--   このエラーのもう 1 つの一般的な原因は内で宣言されたローカル変数にアクセスしようとする`Try`個別のブロック`Catch`ブロック。 これを修正するには、外部変数を宣言、`Try...Catch...Finally`構造体。  
+- このエラーのもう 1 つの一般的な原因は内で宣言されたローカル変数にアクセスしようとする`Try`個別のブロック`Catch`ブロック。 これを修正するには、外部変数を宣言、`Try...Catch...Finally`構造体。  
   
 ## <a name="see-also"></a>関連項目
 

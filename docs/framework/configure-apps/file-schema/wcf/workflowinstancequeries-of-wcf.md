@@ -3,11 +3,11 @@ title: <workflowInstanceQueries> WCF の
 ms.date: 03/30/2017
 ms.assetid: b0852f77-16e4-4d55-8eb7-a19feb0e8fc4
 ms.openlocfilehash: 89e122b87743a81a80ce63b382ae235c1c4863bc
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790521"
 ---
 # <a name="workflowinstancequeries-of-wcf"></a>\<workflowInstanceQueries > の WCF
 

@@ -3,11 +3,11 @@ title: '方法: 属性 (Visual Basic) を使用して C/C++ の共用体を作�
 ms.date: 07/20/2015
 ms.assetid: 9352a7e4-c0da-4d07-aa14-55ed43736fcb
 ms.openlocfilehash: 0c3ebf248f5d2f20e2fff25fb8326a294b51d153
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789091"
 ---
 # <a name="how-to-create-a-cc-union-by-using-attributes-visual-basic"></a>方法: 属性 (Visual Basic) を使用して C/C++ の共用体を作成します。
 属性を使用すると、構造体のメモリ内での配置をカスタマイズできます。 たとえば、`StructLayout(LayoutKind.Explicit)` 属性と `FieldOffset` 属性を使用すると、C/C++ の共用体と呼ばれるものを作成できます。  

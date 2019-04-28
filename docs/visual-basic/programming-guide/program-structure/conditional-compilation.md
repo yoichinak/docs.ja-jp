@@ -6,11 +6,11 @@ helpviewer_keywords:
 - compilation [Visual Basic], conditional
 ms.assetid: 9c35e55e-7eee-44fb-a586-dad1f1884848
 ms.openlocfilehash: 828edf2e5491394f5ac802b5c9babfb3df359e59
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56967850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758458"
 ---
 # <a name="conditional-compilation-in-visual-basic"></a>Visual Basic での条件付きコンパイル
 *条件付きコンパイル*、他のユーザーは無視されます、特定のプログラムでのコード ブロックは選択的にコンパイルします。  
@@ -29,11 +29,11 @@ ms.locfileid: "56967850"
 ## <a name="declaring-conditional-compilation-constants"></a>条件付きコンパイル定数を宣言します。  
  3 つの方法のいずれかでは、条件付きコンパイル定数を設定できます。  
   
--   **プロジェクト デザイナー**  
+- **プロジェクト デザイナー**  
   
--   コマンド ライン コンパイラを使用するときに、コマンドラインで  
+- コマンド ライン コンパイラを使用するときに、コマンドラインで  
   
--   コードで  
+- コードで  
   
  条件付きコンパイル定数は、特殊なスコープを持ち、標準的なコードからアクセスできません。 条件付きコンパイル定数のスコープが設定されている方法によって異なります。 次の表は、上記で説明した 3 つの方法のそれぞれを使用して宣言されている定数のスコープを一覧表示します。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "56967850"
   
 |コマンドラインで定数を設定するには|  
 |---|  
-|-を使用して、 **/d**スイッチを次の例のように、条件付きコンパイル定数を入力します。<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     間で必要な空き領域がない、 **/d**スイッチと、最初の定数。 詳細については、[/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)を参照してください。<br />     コマンド ラインの宣言で入力した宣言のオーバーライド、**プロジェクト デザイナー**は消去されません。 引数の設定**プロジェクト デザイナー**後続のコンパイルを有効になります。<br />     コード自体で定数を記述する場合はありません、配置場所に関する厳密な規則のスコープは宣言されているモジュール全体であるためです。|  
+|-を使用して、 **/d**スイッチを次の例のように、条件付きコンパイル定数を入力します。<br />     `vbc MyProj.vb /d:conFrenchVersion=–1:conANSI=0`<br />     間で必要な空き領域がない、 **/d**スイッチと、最初の定数。 詳細については、次を参照してください。 [/define (Visual Basic)](../../../visual-basic/reference/command-line-compiler/define.md)します。<br />     コマンド ラインの宣言で入力した宣言のオーバーライド、**プロジェクト デザイナー**は消去されません。 引数の設定**プロジェクト デザイナー**後続のコンパイルを有効になります。<br />     コード自体で定数を記述する場合はありません、配置場所に関する厳密な規則のスコープは宣言されているモジュール全体であるためです。|  
   
 |コードで定数を設定するには|  
 |---|  

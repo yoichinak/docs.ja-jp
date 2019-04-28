@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -optionexplicit compiler option [Visual Basic]
 ms.assetid: 5d296ab3-bafe-4c4d-9887-78f162ed86c7
 ms.openlocfilehash: 54d438541e8840e4394b24b20b4f394ff8cdb820
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788948"
 ---
 # <a name="-optionexplicit"></a>-optionexplicit
 使用されるように、変数が宣言されていない場合は、コンパイラ エラーを報告します。  

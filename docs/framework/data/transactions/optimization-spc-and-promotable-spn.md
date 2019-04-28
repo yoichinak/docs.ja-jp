@@ -3,11 +3,11 @@ title: 単一フェーズ コミットおよび昇格可能単一フェーズ通
 ms.date: 03/30/2017
 ms.assetid: 57beaf1a-fb4d-441a-ab1d-bc0c14ce7899
 ms.openlocfilehash: 73340f5f65de1d743e046cf669258ab5f6c66298
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793628"
 ---
 # <a name="optimization-using-single-phase-commit-and-promotable-single-phase-notification"></a>単一フェーズ コミットおよび昇格可能単一フェーズ通知を使用した最適化
 
@@ -34,7 +34,7 @@ ms.locfileid: "57371204"
 > [!NOTE]
 > **TransactionCommitted** (エスカレートされたトランザクションで Commit が呼び出されたときに生成される) トレースには、DTC トランザクションのアクティビティ ID が含まれています。
 
-管理エスカレーションの詳細については、[Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md)を参照してください。
+管理エスカレーションの詳細については、次を参照してください。 [Transaction Management Escalation](../../../../docs/framework/data/transactions/transaction-management-escalation.md)します。
 
 ## <a name="transaction-management-escalation-scenario"></a>トランザクション管理エスカレーションのシナリオ
 
@@ -50,8 +50,7 @@ ms.locfileid: "57371204"
 
 4. この時点で CN1 は、SQL 2005 固有のメカニズムと <xref:System.Data> を使用して、トランザクションをエスカレートします。
 
-5. 
-  <xref:System.Transactions.ITransactionPromoter.Promote%2A> メソッドからの戻り値は、トランザクションの反映トークンを含むバイト配列です。 <xref:System.Transactions> ローカル トランザクションに組み込むことのできる DTC トランザクションを作成するのにには、この反映トークンを使用します。
+5. <xref:System.Transactions.ITransactionPromoter.Promote%2A> メソッドからの戻り値は、トランザクションの反映トークンを含むバイト配列です。 <xref:System.Transactions> ローカル トランザクションに組み込むことのできる DTC トランザクションを作成するのにには、この反映トークンを使用します。
 
 6. この時点で CN2 は、<xref:System.Transactions.TransactionInterop> によるメソッドの 1 つを呼び出すことで受信したデータを使用して、SQL にトランザクションを渡すことができます。
 

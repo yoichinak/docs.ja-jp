@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
 ms.openlocfilehash: 243f51b3e6c798c82fdbe7b28557c4f96c728bf2
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55281724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764375"
 ---
 # <a name="type-typename-is-not-cls-compliant"></a>型\<typename > CLS 準拠ではありません
 変数、プロパティ、または関数の戻り値は、CLS 準拠でないデータ型で宣言されています。  
@@ -21,18 +21,18 @@ ms.locfileid: "55281724"
   
  次の Visual Basic データ型は CLS 準拠ではありません。  
   
--   [SByte データ型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
+- [SByte データ型](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)  
   
--   [UInteger データ型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
+- [UInteger データ型](../../../visual-basic/language-reference/data-types/uinteger-data-type.md)  
   
--   [ULong データ型](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
+- [ULong データ型](../../../visual-basic/language-reference/data-types/ulong-data-type.md)  
   
--   [UShort データ型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
+- [UShort データ型](../../../visual-basic/language-reference/data-types/ushort-data-type.md)  
   
  **エラー ID:** BC40041  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   アプリケーションは、CLS に準拠する必要がある、最も近い CLS 準拠型にこの要素のデータ型を変更します。 たとえば、2,147,483,647 を超える値の範囲が不要な場合は、 `UInteger` の代わりに `Integer` を使用できます。 拡張範囲が必要な場合は、 `UInteger` の代わりに `Long`を使用できます。  
+- アプリケーションは、CLS に準拠する必要がある、最も近い CLS 準拠型にこの要素のデータ型を変更します。 たとえば、2,147,483,647 を超える値の範囲が不要な場合は、 `UInteger` の代わりに `Integer` を使用できます。 拡張範囲が必要な場合は、 `UInteger` の代わりに `Long`を使用できます。  
   
--   場合は、アプリケーションは、CLS に準拠する必要はありません、何も変更する必要はありません。 おく必要がある、コンプライアンス非対応意識ただしします。
+- 場合は、アプリケーションは、CLS に準拠する必要はありません、何も変更する必要はありません。 おく必要がある、コンプライアンス非対応意識ただしします。

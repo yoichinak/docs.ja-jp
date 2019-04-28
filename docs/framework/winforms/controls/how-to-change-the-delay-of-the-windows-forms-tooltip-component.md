@@ -11,11 +11,11 @@ helpviewer_keywords:
 - examples [Windows Forms], tooltips
 ms.assetid: 08979ba7-dd84-477b-ab17-8d06e759be99
 ms.openlocfilehash: cf257cccd272c16c3d7c3d403456265444fc8ac8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781239"
 ---
 # <a name="how-to-change-the-delay-of-the-windows-forms-tooltip-component"></a>方法: Windows フォームの ToolTip コンポーネントの遅延時間を変更する
 Windows フォームに設定できる複数の遅延時間の値がある<xref:System.Windows.Forms.ToolTip>コンポーネント。 これらすべてのプロパティの測定単位は、(ミリ秒) です。 <xref:System.Windows.Forms.ToolTip.InitialDelay%2A>プロパティは、ユーザーが、関連付けられたコントロールに表示されるツールヒントの文字列でポイントする必要があります期間を決定します。 <xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>プロパティ後続のヒント文字列が表示されるツールヒントに関連付けられている 1 つのコントロール間マウスを移動するためにかかる時間をミリ秒単位の数を設定します。 <xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>プロパティがツール ヒントの文字列が表示される時間の長さを決定します。 これらの値を設定するには、個別またはの値を設定して、<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>プロパティです。 その他の遅延に割り当てられている値に基づいてプロパティが設定、<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>プロパティ。 たとえば、 <xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A> N の値に設定されている<xref:System.Windows.Forms.ToolTip.InitialDelay%2A>N に設定されている<xref:System.Windows.Forms.ToolTip.ReshowDelay%2A>の値に設定されている<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>5 で割った値 (または N/5) と<xref:System.Windows.Forms.ToolTip.AutoPopDelay%2A>5 倍の値を示す値に設定されている、<xref:System.Windows.Forms.ToolTip.AutomaticDelay%2A>プロパティ (または 5 個以上)。  

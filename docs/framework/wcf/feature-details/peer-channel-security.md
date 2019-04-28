@@ -3,11 +3,11 @@ title: ピア チャネルのセキュリティ
 ms.date: 03/30/2017
 ms.assetid: 2c59b164-3729-44f0-a967-f247c42de662
 ms.openlocfilehash: bc17c35bf088472cfbf36b2c6d7c868c8cc85f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769396"
 ---
 # <a name="peer-channel-security"></a>ピア チャネルのセキュリティ
 ピア チャネルは、マルチパーティ メッセージングに基づく各種分散アプリケーションを実現します。 例として、インターネット規模のコンテンツ配布 (信頼されたソースによるコンテンツ (メディアやソフトウェア更新プログラムなど) 配布)、友人グループによる音楽や写真の交換、同僚チームによるドキュメントの共同編集などが挙げられます。 これらのシナリオでは、それぞれに一意のセキュリティ モデルが必要です。 ピア チャネル セキュリティ モデルは、このようなシナリオに対処するようにデザインされており、さまざまな ID モデル、認証モデル、および承認モデルの各ニーズに対応する堅牢なセキュリティ モデルを提供します。  

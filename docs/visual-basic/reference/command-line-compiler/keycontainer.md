@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /keycontainer compiler option [Visual Basic]
 ms.assetid: 6a9bc861-1752-4db1-9f64-b5252f0482cc
 ms.openlocfilehash: 51cfe4a52af2fbcd51a4f9e2dc738e83fe0852c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793979"
 ---
 # <a name="-keycontainer"></a>-keycontainer
 アセンブリに厳密な名前を付けるキー ペアのキー コンテナー名を指定します。  

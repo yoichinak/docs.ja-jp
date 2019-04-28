@@ -4,32 +4,32 @@ ms.date: 03/30/2017
 ms.assetid: 4a96a9af-d980-43be-bf91-341a23401431
 author: BrucePerlerMS
 ms.openlocfilehash: 3313b2ad36260415d0ac505e01523dd999f85424
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792819"
 ---
 # <a name="claims-based-identity-model"></a>クレームベースの ID モデル
 クレーム対応アプリケーションをビルドすると、ユーザー ID はアプリケーションでクレーム セットとして表されます。 1 つの要求は、ユーザーの名前、別の電子メール アドレスがあります。 これは、ユーザーが要求を行うたびにユーザーの識別に必要なすべての情報がアプリケーションに提供されるように外部 ID システムを構成し、同時に、信頼できるソースから提供される ID データを暗号化によって保護するという考え方です。  
   
  このモデルでは、シングル サインオンが非常に簡単になり、アプリケーションで次の処理を実行する必要がありません。  
   
--   ユーザーを認証する。  
+- ユーザーを認証する。  
   
--   ユーザー アカウントとパスワードを格納する。  
+- ユーザー アカウントとパスワードを格納する。  
   
--   エンタープライズ ディレクトリを呼び出して、ユーザー ID の詳細を検索する。  
+- エンタープライズ ディレクトリを呼び出して、ユーザー ID の詳細を検索する。  
   
--   他のプラットフォームまたは企業の ID システムを統合する。  
+- 他のプラットフォームまたは企業の ID システムを統合する。  
   
  このモデルでは、ユーザーを認証したシステムによって提供されたクレームに基づいて、アプリケーションが ID 関連の決定を行います。 たとえば、ユーザーの名前を使用してアプリケーションの簡単なパーソナル化を行ったり、アプリケーションのより重要な機能やリソースへのユーザー アクセスを承認したりできます。  
   
  ここでは、次の情報について説明します。  
   
--   [クレーム ベース ID の概要](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
+- [クレーム ベース ID の概要](../../../docs/framework/security/claims-based-identity-model.md#BKMK_1)  
   
--   [クレーム ベース ID モデルの基本的なシナリオ](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
+- [クレーム ベース ID モデルの基本的なシナリオ](../../../docs/framework/security/claims-based-identity-model.md#BKMK_2)  
   
 <a name="BKMK_1"></a>   
 ## <a name="introduction-to-claims-based-identity"></a>クレーム ベース ID の概要  

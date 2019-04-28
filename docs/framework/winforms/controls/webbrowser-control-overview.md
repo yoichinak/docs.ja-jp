@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Web pages [Windows Forms], displaying in applications
 ms.assetid: 6e3e1cc2-9c48-4136-9659-e99e4e60b7e9
 ms.openlocfilehash: c75d0b348a2f3dd678f2bfb235bce2e4e227c4b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792133"
 ---
 # <a name="webbrowser-control-overview"></a>WebBrowser コントロールの概要
 <xref:System.Windows.Forms.WebBrowser>コントロールでは、WebBrowser ActiveX コントロールのマネージ ラッパーが用意されています。 マネージ ラッパーを使用して、Windows フォーム クライアント アプリケーションに Web ページを表示できます。 使用することができます、<xref:System.Windows.Forms.WebBrowser>アプリケーションか、Internet Explorer の Web 閲覧機能を複製するコントロールが既定の Internet Explorer の機能を無効にしてとして単純な HTML ドキュメント ビューアー コントロールを使用します。 DHTML ベースのユーザー インターフェイス要素をフォームに追加しにホストされているという事実を非表示にするコントロールを使用することもできます、<xref:System.Windows.Forms.WebBrowser>コントロール。 この方法では、Web コントロールと 1 つのアプリケーションでの Windows フォーム コントロールをシームレスに結合できます。  

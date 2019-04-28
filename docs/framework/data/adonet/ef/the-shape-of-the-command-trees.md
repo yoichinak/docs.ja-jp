@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 2215585e-ca47-45f8-98d4-8cb982f8c1d3
 ms.openlocfilehash: 08a67c8d181188cbc14c6f60876a7e26cd6de25a
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59980084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763985"
 ---
 # <a name="the-shape-of-the-command-trees"></a>コマンド ツリーの構造
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], adding event handlers
 ms.assetid: 269c61e0-6bd9-4291-9bed-1c5ee66da486
 ms.openlocfilehash: 10f8e0899e61d5d54589c910bdcbcd92d8ee947c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777066"
 ---
 # <a name="how-to-add-an-event-handler-using-code"></a>方法: コードを使用してイベント ハンドラーを追加する
 この例では、コードを使用して要素にイベント ハンドラーを追加する方法を示します。  
@@ -25,9 +25,9 @@ ms.locfileid: "59129364"
   
  C#の例では、`+=`演算子をイベントにハンドラーを割り当てます。 これは、のハンドラーを割り当てるために使用する演算子と同じ、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]イベント モデルを処理します。 Microsoft Visual Basic では、イベント ハンドラーを追加するための手段としてこの演算子はサポートされません。 代わりに、2 つの手法の 1 つ必要です。  
   
--   使用して、<xref:System.Windows.UIElement.AddHandler%2A>メソッド、と共に、`AddressOf`演算子、イベント ハンドラーの実装を参照します。  
+- 使用して、<xref:System.Windows.UIElement.AddHandler%2A>メソッド、と共に、`AddressOf`演算子、イベント ハンドラーの実装を参照します。  
   
--   使用して、`Handles`イベント ハンドラーの定義の一部としてキーワード。 この手法はここでは表示されません。参照してください[Visual Basic と WPF のイベント処理](visual-basic-and-wpf-event-handling.md)します。  
+- 使用して、`Handles`イベント ハンドラーの定義の一部としてキーワード。 この手法はここでは表示されません。参照してください[Visual Basic と WPF のイベント処理](visual-basic-and-wpf-event-handling.md)します。  
   
  [!code-xaml[RoutedEventAddRemoveHandler#XAML](~/samples/snippets/csharp/VS_Snippets_Wpf/RoutedEventAddRemoveHandler/CSharp/default.xaml#xaml)]  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42025
 ms.assetid: db3337e5-c349-42bf-86df-d9c1e00952a5
 ms.openlocfilehash: 8e6ddab16c59d7ce95d96b377e3f372f6ebe5278
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751606"
 ---
 # <a name="access-of-shared-member-through-an-instance-qualifying-expression-will-not-be-evaluated"></a>インスタンスを経由する共有メンバーへのアクセスです。正規の式は評価されません。
 クラスまたは構造体のインスタンス変数を使用するアクセス、`Shared`変数、プロパティ、プロシージャ、またはそのクラスまたは構造体で定義されているイベント。 この警告は、インスタンス変数をクラスまたは構造体、定数または列挙型、または入れ子になったクラスまたは構造体などの暗黙的な共有メンバーへのアクセスに使用する場合にも発生します。  
@@ -29,7 +29,7 @@ ms.locfileid: "58843566"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   クラスまたは定義する構造体の名前を使用して、`Shared`に次の例に示すように、アクセスするメンバー。  
+- クラスまたは定義する構造体の名前を使用して、`Shared`に次の例に示すように、アクセスするメンバー。  
   
 ```vb  
 Public Class testClass  

@@ -3,11 +3,11 @@ title: <udpBinding>
 ms.date: 03/30/2017
 ms.assetid: fa291901-8340-45c6-9c44-5d9281c70bc3
 ms.openlocfilehash: 84a5bc763f898b3d323a6cee468c6e22d27d85a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788207"
 ---
 # <a name="udpbinding"></a>\<udpBinding>
 <xref:System.ServiceModel.UdpBinding> バインディングの構成に使用する構成要素です。  

@@ -5,11 +5,11 @@ f1_keywords:
 - vbrAppModel_NoStartupForm
 ms.assetid: 8e04af49-4bef-49de-a7ec-e407e9873da7
 ms.openlocfilehash: 2bbae640ca65c95411cae24a9506fe2076b62cba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751645"
 ---
 # <a name="a-startup-form-has-not-been-specified"></a>スタートアップ フォームが指定されていません。
 アプリケーションを使用して、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>クラスが、スタートアップ フォームを指定しません。  

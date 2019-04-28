@@ -12,11 +12,11 @@ helpviewer_keywords:
 - cloning print queues [WPF]
 ms.assetid: dd6997c9-fe04-40f8-88a6-92e3ac0889eb
 ms.openlocfilehash: 09a445da068f0141b9526e0228df8be0105498c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310461"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776546"
 ---
 # <a name="how-to-clone-a-printer"></a>方法: プリンターを複製する
 ほとんどの企業が、ある時点で、購入、同じモデルの複数のプリンターです。 通常、これらがすべてインストールと実質的に同じ構成設定。 かかることがあります各プリンターをインストールしてエラーが発生します。 <xref:System.Printing.IndexedProperties?displayProperty=nameWithType>名前空間と<xref:System.Printing.PrintServer.InstallPrintQueue%2A>Microsoft .NET Framework で公開されているクラスでは、すぐに既存の印刷キューから任意の数の複製がその他の印刷キューをインストールすることです。  
@@ -28,9 +28,9 @@ ms.locfileid: "59310461"
   
 2. 作成、<xref:System.Printing.IndexedProperties.PrintPropertyDictionary>から、<xref:System.Printing.PrintSystemObject.PropertiesCollection%2A>の<xref:System.Printing.PrintQueue>します。 <xref:System.Collections.DictionaryEntry.Value%2A>このディクショナリ内の各エントリのプロパティから派生した型の 1 つのオブジェクトである<xref:System.Printing.IndexedProperties.PrintProperty>します。 このディクショナリ内のエントリの値を設定する 2 つの方法はあります。  
   
-    -   使用して、辞書の**削除**と<xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A>エントリを削除し、目的の値に再び追加する方法。  
+    - 使用して、辞書の**削除**と<xref:System.Printing.IndexedProperties.PrintPropertyDictionary.Add%2A>エントリを削除し、目的の値に再び追加する方法。  
   
-    -   使用して、辞書の<xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A>メソッド。  
+    - 使用して、辞書の<xref:System.Printing.IndexedProperties.PrintPropertyDictionary.SetProperty%2A>メソッド。  
   
      次の例では、両方の方法を示します。  
   

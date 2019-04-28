@@ -3,11 +3,11 @@ title: <userDefinedTypes>
 ms.date: 03/30/2017
 ms.assetid: 6f69742e-5144-4115-9344-cbe175aab73d
 ms.openlocfilehash: 7761a3384318f9f1e8bdfde921836aac568d0381
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769825"
 ---
 # <a name="userdefinedtypes"></a>\<userDefinedTypes>
 このセクションには、`userDefinedType` 要素のコレクションが含まれています。  

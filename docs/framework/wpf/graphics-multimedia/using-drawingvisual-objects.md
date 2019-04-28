@@ -9,11 +9,11 @@ helpviewer_keywords:
 - DrawingVisual objects in visual layer [WPF]
 ms.assetid: 0b4e711d-e640-40cb-81c3-8f5c59909b7d
 ms.openlocfilehash: 01e10a4b0f0bf4959850caf3951ad4ea915edb4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762112"
 ---
 # <a name="using-drawingvisual-objects"></a>DrawingVisual オブジェクトの使用
 このトピックでは、使用する方法の概要を示します<xref:System.Windows.Media.DrawingVisual>内のオブジェクト、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ビジュアル層。  
@@ -51,9 +51,9 @@ ms.locfileid: "59121720"
   
  オーバーライドする必要がある 2 つのメンバーを次に示します。  
   
--   <xref:System.Windows.FrameworkElement.GetVisualChild%2A>:子要素のコレクションから指定したインデックス位置にある子を返します。  
+- <xref:System.Windows.FrameworkElement.GetVisualChild%2A>:子要素のコレクションから指定したインデックス位置にある子を返します。  
   
--   <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>:この要素内でビジュアル子要素の数を取得します。  
+- <xref:System.Windows.FrameworkElement.VisualChildrenCount%2A>:この要素内でビジュアル子要素の数を取得します。  
   
  次の例では、2 つのオーバーライド<xref:System.Windows.FrameworkElement>メンバーを実装します。  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - queries [LINQ in Visual Basic], how-to topics
 ms.assetid: 5b00a478-035b-41c6-8918-be1a97728396
 ms.openlocfilehash: 127e1afa7707f31584e93f3d4b08e865d7fcedf6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775883"
 ---
 # <a name="how-to-combine-data-with-linq-by-using-joins-visual-basic"></a>方法: 結合 (Visual Basic) を使用してデータを LINQ を結合します。
 Visual Basic では、`Join`と`Group Join`コレクション間で共通の値に基づく複数のコレクションの内容を結合するための句をクエリします。 これらの値と呼ばれる*キー*値。 リレーショナル データベースの概念に慣れている開発者が認識、 `Join` INNER JOIN 句、`Group Join`として、実際には、左外部結合句。  

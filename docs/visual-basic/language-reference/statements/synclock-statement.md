@@ -10,11 +10,11 @@ helpviewer_keywords:
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
 ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56979815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783826"
 ---
 # <a name="synclock-statement"></a>SyncLock ステートメント
 ブロックを実行する前にステートメント ブロックの排他ロックを取得します。  
@@ -46,25 +46,25 @@ End SyncLock
   
 ## <a name="rules"></a>ルール  
   
--   分岐します。 分岐することはできません、`SyncLock`ブロックの外側からブロックされます。  
+- 分岐します。 分岐することはできません、`SyncLock`ブロックの外側からブロックされます。  
   
--   オブジェクトの値をロックします。 値`lockobject`することはできません`Nothing`します。 使用する前に、ロック オブジェクトを作成する必要があります、`SyncLock`ステートメント。  
+- オブジェクトの値をロックします。 値`lockobject`することはできません`Nothing`します。 使用する前に、ロック オブジェクトを作成する必要があります、`SyncLock`ステートメント。  
   
      値を変更することはできません`lockobject`の実行中に、`SyncLock`ブロックします。 メカニズムは、ロック オブジェクトが変わらないことが必要です。  
   
--   使用することはできません、 [Await](../../../visual-basic/language-reference/operators/await-operator.md)で演算子を`SyncLock`ブロックします。  
+- 使用することはできません、 [Await](../../../visual-basic/language-reference/operators/await-operator.md)で演算子を`SyncLock`ブロックします。  
   
 ## <a name="behavior"></a>動作  
   
--   メカニズムです。 スレッドが達したとき、`SyncLock`ステートメントでは、評価、`lockobject`式と式によって返されるオブジェクトの排他ロックを取得するまで実行を中断します。 別のスレッドが達したとき、`SyncLock`ステートメントでは、これはロックを取得、最初のスレッドが実行されるまで、`End SyncLock`ステートメント。  
+- メカニズムです。 スレッドが達したとき、`SyncLock`ステートメントでは、評価、`lockobject`式と式によって返されるオブジェクトの排他ロックを取得するまで実行を中断します。 別のスレッドが達したとき、`SyncLock`ステートメントでは、これはロックを取得、最初のスレッドが実行されるまで、`End SyncLock`ステートメント。  
   
--   保護されたデータ。 場合`lockobject`は、`Shared`変数、排他ロック クラスの任意のインスタンス内のスレッドが実行されないように、`SyncLock`他のスレッドが実行中にブロックします。 これは、すべてのインスタンス間で共有されるデータを保護します。  
+- 保護されたデータ。 場合`lockobject`は、`Shared`変数、排他ロック クラスの任意のインスタンス内のスレッドが実行されないように、`SyncLock`他のスレッドが実行中にブロックします。 これは、すべてのインスタンス間で共有されるデータを保護します。  
   
      場合`lockobject`インスタンス変数は、(いない`Shared`)、ロックにより、スレッドの実行を現在のインスタンスで実行できなくなります、`SyncLock`同じインスタンス内の別のスレッドと同時にブロックします。 これは、個々 のインスタンスで保持されるデータを保護します。  
   
--   取得と解放します。 A`SyncLock`ブロックのように動作を`Try...Finally`を構築、`Try`ブロックで排他ロックを取得する`lockobject`と`Finally`ブロックでは、それを解放します。 このため、`SyncLock`ブロックがブロックを終了する方法に関係なく、ロックの解放を保証します。 これはハンドルされない例外の場合にも当てはまります。  
+- 取得と解放します。 A`SyncLock`ブロックのように動作を`Try...Finally`を構築、`Try`ブロックで排他ロックを取得する`lockobject`と`Finally`ブロックでは、それを解放します。 このため、`SyncLock`ブロックがブロックを終了する方法に関係なく、ロックの解放を保証します。 これはハンドルされない例外の場合にも当てはまります。  
   
--   フレームワーク。 `SyncLock`ブロックを取得し、呼び出すことによって、排他ロックを解放、`Enter`と`Exit`のメソッド、`Monitor`クラス、<xref:System.Threading>名前空間。  
+- フレームワーク。 `SyncLock`ブロックを取得し、呼び出すことによって、排他ロックを解放、`Enter`と`Exit`のメソッド、`Monitor`クラス、<xref:System.Threading>名前空間。  
   
 ## <a name="programming-practices"></a>プログラミング手法  
  `lockobject`式は常をクラスにのみ属しているオブジェクトを評価する必要があります。 宣言する必要があります、`Private`オブジェクト変数を現在のインスタンスに属するデータを保護または`Private Shared`オブジェクト変数をすべてのインスタンスに共通のデータを保護します。  

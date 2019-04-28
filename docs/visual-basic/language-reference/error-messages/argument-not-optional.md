@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID449
 ms.assetid: 76e7bcf3-24ed-4cd5-945b-b98f1c76944b
 ms.openlocfilehash: bd5c5c498fb489f01e8a867e3400a06ef7905173
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751580"
 ---
 # <a name="argument-not-optional-visual-basic"></a>引数は省略できません。(Visual Basic)
 引数の型と数は、予想されるものと一致する必要があります。 引数の数が正しくないか、省略された引数は省略できません。 宣言されている場合、引数をユーザー定義プロシージャへの呼び出しから省略のみできます`Optional`プロシージャの定義にします。  

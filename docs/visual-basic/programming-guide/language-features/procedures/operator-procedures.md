@@ -12,11 +12,11 @@ helpviewer_keywords:
 - operator procedures
 ms.assetid: 8c513d38-246b-4fb7-8b75-29e1364e555b
 ms.openlocfilehash: 80c9a77494be95365899c6a25435fcfc5d2a7293
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791977"
 ---
 # <a name="operator-procedures-visual-basic"></a>演算子プロシージャ (Visual Basic)
 演算子プロシージャは、一連の標準の演算子の動作を定義する Visual Basic ステートメント (など`*`、 `<>`、または`And`) クラスまたは定義した構造にします。 これもと呼ばれる*演算子のオーバー ロード*します。  
@@ -31,13 +31,13 @@ ms.locfileid: "59175020"
 ## <a name="types-of-operator-procedure"></a>演算子プロシージャの種類  
  演算子プロシージャには、次の種類のいずれかを指定できます。  
   
--   引数が、クラスまたは構造体の型の単項演算子の定義。  
+- 引数が、クラスまたは構造体の型の単項演算子の定義。  
   
--   クラスまたは構造体の型の引数の少なくとも 1 つが二項演算子の定義。  
+- クラスまたは構造体の型の引数の少なくとも 1 つが二項演算子の定義。  
   
--   引数が、クラスまたは構造体の型の変換演算子の定義。  
+- 引数が、クラスまたは構造体の型の変換演算子の定義。  
   
--   クラスまたは構造体の型を返す変換演算子の定義。  
+- クラスまたは構造体の型を返す変換演算子の定義。  
   
  変換演算子は、単項では常に、常に使用して`CType`として定義する演算子。  
   

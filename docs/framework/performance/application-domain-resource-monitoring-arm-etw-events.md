@@ -8,26 +8,26 @@ ms.assetid: d38ff268-a2ee-434e-b504-d570880e0289
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2bb2b0dd95877fc6492f6d23a19c14688cd78f7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788064"
 ---
 # <a name="application-domain-resource-monitoring-arm-etw-events"></a>アプリケーション ドメインのリソース監視 (ARM) ETW イベント
 <a name="top"></a> これらのイベントは、アプリケーション ドメインの状態に関する詳細な診断の情報を提供します。 これらのイベントを使用することもできますが、アプリケーション ドメインのリソース監視 (ARM) の機能を使用しても同じ情報を得られます。  
   
  このカテゴリは、次のイベントで構成されます。  
   
--   [ThreadCreated イベント](#threadcreated_event)  
+- [ThreadCreated イベント](#threadcreated_event)  
   
--   [AppDomainMemAllocated イベント](#appdomainmemallocated_event)  
+- [AppDomainMemAllocated イベント](#appdomainmemallocated_event)  
   
--   [AppDomainMemSurvived イベント](#appdomainmemsurvived_event)  
+- [AppDomainMemSurvived イベント](#appdomainmemsurvived_event)  
   
--   [ThreadAppDomainEnter イベント](#threadappdomainenter_event)  
+- [ThreadAppDomainEnter イベント](#threadappdomainenter_event)  
   
--   [ThreadTerminated イベント](#threadterminated_event)  
+- [ThreadTerminated イベント](#threadterminated_event)  
   
 <a name="threadcreated_event"></a>   
 ## <a name="threadcreated-event"></a>ThreadCreated イベント  

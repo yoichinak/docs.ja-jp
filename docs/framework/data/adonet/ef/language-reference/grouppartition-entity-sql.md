@@ -3,11 +3,11 @@ title: GROUPPARTITION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: d0482e9b-086c-451c-9dfa-ccb024a9efb6
 ms.openlocfilehash: 9f0f917380e6422da753282216529580f87f1a1a
-ms.sourcegitcommit: 11f11ca6cefe555972b3a5c99729d1a7523d8f50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/03/2018
-ms.locfileid: "32760909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774726"
 ---
 # <a name="grouppartition-entity-sql"></a>GROUPPARTITION (Entity SQL)
 引数値のコレクションを返します。この値は、集計が関連する現在のグループ パーティションから投影されたものです。 `GroupPartition` 集計は、グループベースの集計であり、コレクションベースの形式ではありません。  
@@ -22,7 +22,7 @@ GROUPPARTITION( [ALL|DISTINCT] expression )
  `expression`  
  任意のブール型 ( [!INCLUDE[esql](../../../../../../includes/esql-md.md)] ) の式を指定します。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>Remarks  
  次のクエリでは、製品の一覧と、製品ごとの注文明細の数量のコレクションが生成されます。  
   
 ```  
@@ -41,7 +41,7 @@ select p, Sum(ol.Quantity) from LOB.OrderLines as ol
   
  `GROUPPARTITION` 演算子は、ユーザー定義の集計関数と組み合わせて使用できます。  
   
- `GROUPPARTITION` は、グループ化された入力セットへの参照を格納する特殊な集計演算子です。 この参照は、GROUP BY がスコープに含まれているクエリ内の任意の位置で使用できます。 次に例を示します。  
+ `GROUPPARTITION` は、グループ化された入力セットへの参照を格納する特殊な集計演算子です。 この参照は、GROUP BY がスコープに含まれているクエリ内の任意の位置で使用できます。 例えば以下のようにします。  
   
 ```  
 select p, GroupPartition(ol.Quantity) from LOB.OrderLines as ol group by ol.Product as p  

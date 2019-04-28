@@ -3,11 +3,11 @@ title: NULL 値が許容される構造化型 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ae006fa9-997e-45bb-8a04-a7f62026171e
 ms.openlocfilehash: 632b092e1d0d99a2a40cc3cd4b323e234de6232b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59127856"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760325"
 ---
 # <a name="nullable-structured-types-entity-sql"></a>NULL 値が許容される構造化型 (Entity SQL)
 構造化型の `null` インスタンスは、存在しないインスタンスです。 これは、すべてのプロパティの値が `null` であるインスタンスとは異なります。  
@@ -17,28 +17,28 @@ ms.locfileid: "59127856"
 ## <a name="kinds-of-nullable-structured-types"></a>NULL 値が許容される構造化型の種類  
  NULL 値が許容される構造化型には、3 つの種類があります。  
   
--   行型。  
+- 行型。  
   
--   複合型。  
+- 複合型。  
   
--   エンティティ型。  
+- エンティティ型。  
   
 ## <a name="code-patterns-that-produce-null-instances-of-structured-types"></a>構造化型の NULL インスタンスを生成するコード パターン  
  次のシナリオは、`null` インスタンスを生成します。  
   
--   構造化型としての `null` の構造化  
+- 構造化型としての `null` の構造化  
   
     ```  
     TREAT (NULL AS StructuredType)  
     ```  
   
--   派生型に対する基本データ型のキャスト  
+- 派生型に対する基本データ型のキャスト  
   
     ```  
     TREAT (BaseType AS DerivedType)  
     ```  
   
--   false の条件での外部結合  
+- false の条件での外部結合  
   
     ```  
     Collection1 LEFT OUTER JOIN Collection2  
@@ -59,19 +59,19 @@ ms.locfileid: "59127856"
     ON FalseCondition  
     ```  
   
--   `null` 参照の逆参照  
+- `null` 参照の逆参照  
   
     ```  
     DEREF(NullRef)  
     ```  
   
--   空のコレクションからの ANYELEMENT の取得  
+- 空のコレクションからの ANYELEMENT の取得  
   
     ```  
     ANYELEMENT(EmptyCollection)  
     ```  
   
--   構造化型の `null` インスタンスのチェック  
+- 構造化型の `null` インスタンスのチェック  
   
     ```csharp  
     ...  

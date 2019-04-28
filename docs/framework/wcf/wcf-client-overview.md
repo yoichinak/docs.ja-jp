@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], architecture
 ms.assetid: f60d9bc5-8ade-4471-8ecf-5a07a936c82d
 ms.openlocfilehash: 5cb73dfeaac4f1c23724dc71b0f1f5d07fd28b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770387"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791236"
 ---
 # <a name="wcf-client-overview"></a>WCF クライアントの概要
 このセクションでは、クライアント アプリケーションの処理、構成、作成、および Windows Communication Foundation (WCF) クライアントを使用する方法、およびクライアント アプリケーションをセキュリティで保護する方法について説明します。  
@@ -30,15 +30,15 @@ ms.locfileid: "59770387"
   
  この後の各セクションでは、これらの手順について詳しく説明します。また、次の内容についても簡単に説明します。  
   
--   エラー処理  
+- エラー処理  
   
--   クライアントの構成とセキュリティ保護  
+- クライアントの構成とセキュリティ保護  
   
--   双方向サービスのコールバック オブジェクトの作成  
+- 双方向サービスのコールバック オブジェクトの作成  
   
--   サービスの非同期呼び出し  
+- サービスの非同期呼び出し  
   
--   クライアント チャネルを使用したサービスの呼び出し  
+- クライアント チャネルを使用したサービスの呼び出し  
   
 ## <a name="obtain-the-service-contract-bindings-and-addresses"></a>サービス コントラクト、バインディング、およびアドレスを取得する  
  WCF では、サービスとクライアントは、マネージ属性、インターフェイス、およびメソッドを使用してコントラクトをモデルします。 クライアント アプリケーションからサービスに接続するには、そのサービス コントラクトの型情報を取得する必要があります。 通常、これを行うを使用して、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)、サービスからメタデータをダウンロード、好みの言語でのマネージ ソース コード ファイルに変換し、クライアントを作成します。WCF クライアント オブジェクトを構成に使用できるアプリケーション構成ファイル。 呼び出す、WCF クライアント オブジェクトを作成する場合など、`MyCalculatorService`でそのサービスのメタデータが公開されていることがわかって`http://computerName/MyCalculatorService/Service.svc?wsdl`、次のコード例は、Svcutil.exe を使用して取得する方法を示していますその後、`ClientCode.vb`ファイル。マネージ コードでサービス コントラクトが含まれています。  
@@ -146,11 +146,11 @@ End Interface
   
  双方向サービスのクライアントでは、以下の処理を行う必要があります。  
   
--   コールバック コントラクト クラスを実装します。  
+- コールバック コントラクト クラスを実装します。  
   
--   コールバック コントラクト実装クラスのインスタンスを作成し、使用して作成する、 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> WCF クライアント コンス トラクターに渡すオブジェクト。  
+- コールバック コントラクト実装クラスのインスタンスを作成し、使用して作成する、 <xref:System.ServiceModel.InstanceContext?displayProperty=nameWithType> WCF クライアント コンス トラクターに渡すオブジェクト。  
   
--   操作を呼び出し、操作のコールバックを処理します。  
+- 操作を呼び出し、操作のコールバックを処理します。  
   
  双方向の WCF クライアント オブジェクトの関数などの対応する双方向コールバック サービスの構成など、コールバックをサポートするために必要な機能を公開する例外を使用します。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], adjusting spacing between paragraphs
 ms.assetid: 7cd2f2ac-0e19-4587-bfb6-7f5b18c9536e
 ms.openlocfilehash: e2a6ba34e3ab15eb316671fef7c11bea03d53c73
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777014"
 ---
 # <a name="how-to-adjust-spacing-between-paragraphs"></a>方法: 段落間の間隔を調整する
 この例では、調整またはフロー コンテンツ内の段落の間隔を排除する方法を示します。  

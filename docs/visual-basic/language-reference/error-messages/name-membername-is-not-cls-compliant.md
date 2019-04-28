@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40031
 ms.assetid: e2b885dc-cbf9-49ff-bbbe-531657ea99f7
 ms.openlocfilehash: 06b20b4f61741f2174654d749df55c3c4348c547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787466"
 ---
 # <a name="name-membername-is-not-cls-compliant"></a>名前\<membername > CLS 準拠ではありません
 アセンブリをマーク`<CLSCompliant(True)>`アンダー スコアで始まる名前を持つメンバーを公開しますが、(`_`)。  
@@ -29,9 +29,9 @@ ms.locfileid: "58824625"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   ソース コード制御を使用する場合は、メンバー名を変更してから、アンダー スコアで始まらないようにします。  
+- ソース コード制御を使用する場合は、メンバー名を変更してから、アンダー スコアで始まらないようにします。  
   
--   メンバー名が変わらない場合は、削除、<xref:System.CLSCompliantAttribute>その定義からとしてマークまたは`<CLSCompliant(False)>`します。 アセンブリをマークすることも`<CLSCompliant(True)>`します。  
+- メンバー名が変わらない場合は、削除、<xref:System.CLSCompliantAttribute>その定義からとしてマークまたは`<CLSCompliant(False)>`します。 アセンブリをマークすることも`<CLSCompliant(True)>`します。  
   
 ## <a name="see-also"></a>関連項目
 

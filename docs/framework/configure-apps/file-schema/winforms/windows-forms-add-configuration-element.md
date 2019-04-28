@@ -8,11 +8,11 @@ ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
-ms.sourcegitcommit: 5d9f4b805787f890ca6e0dc7ea30a43018bc9cbb
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/12/2019
-ms.locfileid: "57788480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775844"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows フォームの構成要素を追加します。
 
@@ -67,7 +67,7 @@ ms.locfileid: "57788480"
 
 `<System.Windows.Forms.ApplicationConfigurationSection>`要素では、1 つまたは複数の子を追加できます。`<add>`要素は、それぞれが特定の構成設定を定義します。
 
-Windows フォームの高 DPI サポートの概要については、[Windows フォームでの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)を参照してください。
+Windows フォームの高 DPI サポートの概要については、次を参照してください。 [Windows フォームでの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)します。
 
 ### <a name="dpiawareness"></a>DpiAwareness
 
@@ -99,7 +99,7 @@ Windows フォームの高 DPI サポートの概要については、[Windows �
 
 通常、オプトアウトする特定の機能をプログラムで処理することを選択したためです。
 
-Windows フォーム アプリケーションの高 DPI サポートの利用の詳細については、[Windows フォームでの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)を参照してください。
+Windows フォーム アプリケーションの高 DPI サポートの利用の詳細については、次を参照してください。 [Windows フォームでの高 DPI サポート](../../../../../docs/framework/winforms/high-dpi-support-in-windows-forms.md)します。
 
 ### <a name="disabledpichangedmessagehandling"></a>DisableDpiChangedMessageHandling
 

@@ -1,14 +1,8 @@
 ---
-title: F# のガイド
-description: このガイドでは、F# では、.NET 上で実行される関数型プログラミング言語のさまざまな学習教材の情報の概要を示します。
+title: 'F# のガイド'
+description: 'このガイドでは、F# では、.NET 上で実行される関数型プログラミング言語のさまざまな学習教材の情報の概要を示します。'
 author: cartermp
 ms.date: 08/03/2018
-ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56977007"
 ---
 # <a name="f-guide"></a>F# のガイド
 
@@ -32,7 +26,7 @@ F# のガイドでは、F# 言語を習得する多くのリソースを提供�
 
 [Azure Notebooks の F#](https://notebooks.azure.com/Microsoft/libraries/samples/html/FSharp%20for%20Azure%20Notebooks.ipynb)は無料でホストされている Jupyter Notebook での F# 学習するためのチュートリアルです。
 
-## <a name="references"></a>関連項目
+## <a name="references"></a>参照
 
 [F# 言語リファレンス](language-reference/index.md)F# 言語のすべての機能の公式、包括的なリファレンスです。 各記事では、構文について説明し、コード サンプルを示します。 目次の内容でフィルター バーを使用すると、特定の記事を検索します。
 

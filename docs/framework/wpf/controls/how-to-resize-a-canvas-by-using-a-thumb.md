@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: 7dc9f435-726c-4d4d-be41-eb24cfe17bef
 ms.openlocfilehash: 14942157429b029147d47e2f88428c56e66523d1
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770748"
 ---
 # <a name="how-to-resize-a-canvas-by-using-a-thumb"></a>方法: つまみを使用したキャンバスのサイズ変更
 この例は、使用する方法を示します、<xref:System.Windows.Controls.Primitives.Thumb>サイズを変更するコントロールを<xref:System.Windows.Controls.Canvas>コントロール。  

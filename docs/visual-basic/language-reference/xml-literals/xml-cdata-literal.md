@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], CDATA
 ms.assetid: 9eafb6a4-dd9d-4866-85e8-0654c65abc44
 ms.openlocfilehash: ee269ca5cf9635fec35165d1ea65d6a6483cadef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938633"
 ---
 # <a name="xml-cdata-literal-visual-basic"></a>XML CDATA リテラル (Visual Basic)
 リテラルを表す、<xref:System.Xml.Linq.XCData>オブジェクト。  
@@ -40,9 +40,9 @@ ms.locfileid: "58828600"
 ## <a name="remarks"></a>Remarks  
  XML CDATA セクションを含む未加工のテキストが含まれている場合は、それを含んでいる XML を解析できません。 XML CDATA セクションは、任意のテキストを含めることができます。 これには、予約済み XML 文字が含まれます。 XML CDATA セクションは、シーケンスで終わる"] >"。 これは、次の点を意味します。  
   
--   埋め込み式の区切り記号が有効な XML の CDATA コンテンツであるので、XML CDATA リテラルの埋め込み式を使うことはできません。  
+- 埋め込み式の区切り記号が有効な XML の CDATA コンテンツであるので、XML CDATA リテラルの埋め込み式を使うことはできません。  
   
--   XML CDATA セクションは入れ子にできないため、`content`値を含めることはできません"] >"。  
+- XML CDATA セクションは入れ子にできないため、`content`値を含めることはできません"] >"。  
   
  XML CDATA リテラルの変数を割り当てたり、XML 要素リテラルに含めることができます。  
   

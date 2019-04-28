@@ -8,11 +8,11 @@ helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
 ms.openlocfilehash: 1b4451b11fed2fd138985824d5f139e192c51f45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929845"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。  
@@ -29,27 +29,27 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 ## <a name="certificate-stores"></a>証明書ストア  
  証明書はストアに格納されています。 2 つの主要なストアがあり、さらにサブストアに分かれています。 コンピューターの管理者は、MMC スナップイン ツールを使用して、両方の主要なストアを表示できます。 管理者以外のユーザーは、現在のユーザー ストアだけを表示できます。  
   
--   **ローカル コンピューター ストア**:  このストアには、コンピューター プロセス ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] など) がアクセスする証明書が格納されます。 クライアントに対してサーバーを認証するための証明書は、ここに格納します。  
+- **ローカル コンピューター ストア**:  このストアには、コンピューター プロセス ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] など) がアクセスする証明書が格納されます。 クライアントに対してサーバーを認証するための証明書は、ここに格納します。  
   
--   **現在のユーザー ストア**:  コンピューターの現在のユーザーの証明書は、通常、対話型アプリケーションによってここに配置されます。 クライアント アプリケーションを作成する場合、サービスに対してユーザーを認証するための証明書は、通常、ここに配置します。  
+- **現在のユーザー ストア**:  コンピューターの現在のユーザーの証明書は、通常、対話型アプリケーションによってここに配置されます。 クライアント アプリケーションを作成する場合、サービスに対してユーザーを認証するための証明書は、通常、ここに配置します。  
   
  上記の 2 つのストアは、さらにサブストアに分かれています。 サブストアの中で、WCF でプログラミングするときに最も重要なものは次のとおりです。  
   
--   **信頼されたルート証明機関**:  このストア内の証明書を使用して、証明書チェーンを作成できます。証明書チェーンをさかのぼることで、このストア内の任意の証明機関証明書に到達できます。  
+- **信頼されたルート証明機関**:  このストア内の証明書を使用して、証明書チェーンを作成できます。証明書チェーンをさかのぼることで、このストア内の任意の証明機関証明書に到達できます。  
   
     > [!IMPORTANT]
     >  証明書が信頼されたサードパーティ証明機関から発行されたものではない場合でも、ローカル コンピューターは、このストアに配置された証明書を暗黙で信頼します。 したがって、発行者を完全に信頼し、かつ信頼することの結果を理解していない限り、このストアに証明書を配置しないでください。  
   
--   **個人**:  このストアは、コンピューターのユーザーに関連付けられた証明書に使用されます。 通常、このストアは、信頼されたルート証明機関ストアにある証明機関証明書のいずれかによって発行された証明書に使用されます。 また、自己発行され、アプリケーションから信頼された証明書が格納されている場合もあります。  
+- **個人**:  このストアは、コンピューターのユーザーに関連付けられた証明書に使用されます。 通常、このストアは、信頼されたルート証明機関ストアにある証明機関証明書のいずれかによって発行された証明書に使用されます。 また、自己発行され、アプリケーションから信頼された証明書が格納されている場合もあります。  
   
  証明書ストアの詳細については、「[Certificate Stores](/windows/desktop/secauthn/certificate-stores)」(証明書ストア) を参照してください。  
   
 ### <a name="selecting-a-store"></a>ストアの選択  
  証明書を格納する場所の選択は、サービスまたはクライアントの実行方法や実行する状況によって異なります。 次の一般規則が適用されます。  
   
--   WCF サービスが Windows サービスでホストされる場合は、**ローカル コンピューター** ストアを使用します。 ローカル コンピューター ストアに証明書をインストールするには、管理特権が必要です。  
+- WCF サービスが Windows サービスでホストされる場合は、**ローカル コンピューター** ストアを使用します。 ローカル コンピューター ストアに証明書をインストールするには、管理特権が必要です。  
   
--   サービスまたはクライアントがユーザー アカウントで実行されるアプリケーションである場合は、**現在のユーザー** ストアを使用します。  
+- サービスまたはクライアントがユーザー アカウントで実行されるアプリケーションである場合は、**現在のユーザー** ストアを使用します。  
   
 ### <a name="accessing-stores"></a>ストアへのアクセス  
  ストアは、コンピューター上の一種のフォルダーであり、アクセス制御リスト (ACL: Access Control List) によって保護されています。 インターネット インフォメーション サービス (IIS: Internet Information Services) によってホストされたサービスを作成すると、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アカウントで [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] プロセスが実行されます。 このアカウントは、サービスが使用する証明書を格納するストアにアクセス可能である必要があります。 各主要ストアは既定のアクセス リストで保護されていますが、これらのリストは変更できます。 ストアにアクセスする別のロールを作成した場合、そのロールにアクセス許可を付与する必要があります。 WinHttpCertConfig.exe ツールを使用してアクセス リストを変更する方法については、次を参照してください。[方法。開発中に使用するための一時的な証明書を作成](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)です。 IIS でクライアント証明書を使用する方法の詳細については、「[ASP.NET Web アプリケーションで認証用のクライアント証明書を使用して Web サービスを呼び出す方法 ](https://go.microsoft.com/fwlink/?LinkId=88914)」を参照してください。  
@@ -74,11 +74,11 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
   
  構成を使用して、このプロパティを設定することもできます。 検証モードを指定するには、次の要素を使用します。  
   
--   [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
+- [\<authentication>](../../../../docs/framework/configure-apps/file-schema/wcf/authentication-of-servicecertificate-element.md)  
   
--   [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
+- [\<peerAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/peerauthentication-element.md)  
   
--   [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
+- [\<messageSenderAuthentication>](../../../../docs/framework/configure-apps/file-schema/wcf/messagesenderauthentication-element.md)  
   
 ## <a name="custom-authentication"></a>カスタム認証  
  `CertificateValidationMode` プロパティを使用すると、証明書の認証方法をカスタマイズすることもできます。 既定では、レベルは `ChainTrust` に設定されています。 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> 値を使用するには、`CustomCertificateValidatorType` 属性を証明書の検証に使用するアセンブリと型に設定することも必要です。 カスタム検証を作成するには、抽象 <xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスから継承する必要があります。  

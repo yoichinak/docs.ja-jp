@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.PeerChannelMessageReceived
 ms.date: 03/30/2017
 ms.assetid: b68cfbbf-27fa-49d4-a2a1-c9f6af4876f2
 ms.openlocfilehash: c14e961e313415ac6a543960df3d2e3b3ffca6c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779536"
 ---
 # <a name="systemservicemodelchannelspeerchannelmessagereceived"></a>System.ServiceModel.Channels.PeerChannelMessageReceived
 新しい PeerChannel メッセージが受信されました。  

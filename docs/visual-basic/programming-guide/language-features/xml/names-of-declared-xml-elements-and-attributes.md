@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], element names
 ms.assetid: cc110118-b6cf-4ff9-a4e4-6233c90c9fbf
 ms.openlocfilehash: 2221f2677183cf360fa82a4d73a679a8b68927d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761703"
 ---
 # <a name="names-of-declared-xml-elements-and-attributes-visual-basic"></a>宣言する XML 要素と属性の名前 (Visual Basic)
 このトピックでは、XML リテラルの XML 要素と属性の名前付けの Visual Basic のガイドラインを提供します。  XML リテラルでは、ローカル名または修飾名を指定できます。 修飾名は、XML 名前空間プレフィックス、コロン、およびローカル名で構成されます。 XML 名前空間プレフィックスの詳細については、次を参照してください。 [XML 要素リテラル](../../../../visual-basic/language-reference/xml-literals/xml-element-literal.md)します。  
@@ -21,17 +21,17 @@ ms.locfileid: "58819685"
 ## <a name="rules"></a>ルール  
  要素または Visual Basic での属性のローカル名は、次の規則に従う必要があります。  
   
--   名前空間がそれを開始できます。 先頭にアルファベットまたはアンダー スコア (`_`)。  
+- 名前空間がそれを開始できます。 先頭にアルファベットまたはアンダー スコア (`_`)。  
   
--   それだけアルファベット文字、10 進数字、アンダー スコア、ピリオド (.)、およびハイフンを含める必要があります (-)。  
+- それだけアルファベット文字、10 進数字、アンダー スコア、ピリオド (.)、およびハイフンを含める必要があります (-)。  
   
--   1,024 を超える文字はできません。  
+- 1,024 を超える文字はできません。  
   
--   名前に含まれるコロンは、名前空間の区切りを示します。 そのため、特定の名前の XML 名前空間を指定するだけのコロンを使用することができます。  
+- 名前に含まれるコロンは、名前空間の区切りを示します。 そのため、特定の名前の XML 名前空間を指定するだけのコロンを使用することができます。  
   
  さらは、次のガイドラインに従う必要があります。  
   
--   XML 1.0 仕様では、任意の大文字と小文字のバリエーションの"xml"、文字列で始まるすべての名前を予約します。 したがって、これらの要素名および属性名は使用しないでください。  
+- XML 1.0 仕様では、任意の大文字と小文字のバリエーションの"xml"、文字列で始まるすべての名前を予約します。 したがって、これらの要素名および属性名は使用しないでください。  
   
 ### <a name="name-length-guidelines"></a>名前の長さのガイドライン  
  実際には、名前はできるだけ短く中の要素の特性を明確にします。 これは、コードの読みやすさが向上し、行の長さとソース ファイルのサイズを縮小します。  

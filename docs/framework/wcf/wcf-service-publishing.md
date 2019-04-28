@@ -3,11 +3,11 @@ title: WCF サービス発行
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
 ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791210"
 ---
 # <a name="wcf-service-publishing"></a>WCF サービス発行
 
@@ -17,19 +17,19 @@ ms.locfileid: "59299723"
 
 WCF サービス発行は、WCF サービス ライブラリ テンプレート、および以下の対応する項目テンプレートのセットから作成された WCF サービスの公開をサポートしています。
 
--   WCF サービス ライブラリ テンプレートと項目テンプレート。
+- WCF サービス ライブラリ テンプレートと項目テンプレート。
 
--   配信サービス ライブラリ
+- 配信サービス ライブラリ
 
 これらのサービス テンプレートを選択して検索できます**ファイル** > **新しいプロジェクト**> [**Visual Basic**または**Visual C#** ] > **WCF**します。 (WCF ワークフロー サービス アプリケーションと WCF サービス アプリケーションを含む)、この場所での他の WCF テンプレートを使用してを公開できる[ワンクリック web アプリケーションの発行](https://docs.microsoft.com/previous-versions/aspnet/dd465337(v=vs.110))します。
 
 サービスは、次のターゲットの場所に発行できます。
 
--   ローカル IIS
+- ローカル IIS
 
--   ファイル システム
+- ファイル システム
 
--   FTP サイト
+- FTP サイト
 
 ## <a name="using-wcf-service-publishing"></a>WCF サービス発行の使用
 
@@ -63,9 +63,9 @@ WCF サービス発行は、WCF サービス ライブラリ テンプレート�
 
  生成された Web.config ファイルには、Web ホスティング、および以下の変更を WCF サービス ライブラリの app.config ファイルの内容に役立つ Web セクションが含まれています。
 
--   ベース アドレスが除外されています。
+- ベース アドレスが除外されています。
 
--   ターゲット プラットフォームのトレース設定を保持するために、`<diagnostics>` 要素の設定が除外されています。
+- ターゲット プラットフォームのトレース設定を保持するために、`<diagnostics>` 要素の設定が除外されています。
 
 ## <a name="publishing-wcf-services-with-non-http-bindings-to-iis"></a>IIS への非 HTTP バインドを使用した WCF サービスの公開
  IIS7.0 を使用している場合は後で、非 HTTP バインドを IIS で WCF サービスを発行できます。 事前の構成を行う必要があります。 詳細についてでトピックを参照してください[Windows プロセス アクティブ化サービスでのホスティング](../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)します。

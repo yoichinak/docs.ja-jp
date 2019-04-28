@@ -9,11 +9,11 @@ helpviewer_keywords:
 - positioning ToolTip controls [WPF]
 ms.assetid: cddf3757-9e5f-4ce3-a6eb-44489cf3804a
 ms.openlocfilehash: 811818fe6e7c0d8ce9e2aa058b42bf592ada4b92
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770931"
 ---
 # <a name="how-to-position-a-tooltip"></a>方法: ToolTip を配置する
 この例では、画面上のツールヒントの位置を指定する方法を示します。  

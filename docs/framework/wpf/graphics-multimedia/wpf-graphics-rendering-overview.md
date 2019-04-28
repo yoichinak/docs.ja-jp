@@ -9,11 +9,11 @@ helpviewer_keywords:
 - rendering graphics [WPF]
 ms.assetid: 6dec9657-4d8c-4e46-8c54-40fb80008265
 ms.openlocfilehash: a0400ce32dc6dab2585a8d5e76ff8d416fae24c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765064"
 ---
 # <a name="wpf-graphics-rendering-overview"></a>WPF グラフィックス レンダリングの概要
 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のビジュアル層の概要について説明します。 ロールに焦点を当てます、<xref:System.Windows.Media.Visual>でのサポートを表示するためのクラス、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]モデル。  
@@ -24,27 +24,27 @@ ms.locfileid: "59101368"
   
  <xref:System.Windows.Media.Visual>オブジェクトは、コア[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]そのプライマリの役割は描画をサポートするオブジェクト。 などのユーザー インターフェイス コントロール<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TextBox>から派生、<xref:System.Windows.Media.Visual>クラス、およびレンダリング データを保持するのに使用します。 <xref:System.Windows.Media.Visual>オブジェクトのサポートを提供します。  
   
--   出力が表示されます。ビジュアルの描画コンテンツをシリアル化、永続化、レンダリングされます。  
+- 出力が表示されます。ビジュアルの描画コンテンツをシリアル化、永続化、レンダリングされます。  
   
--   変換:ビジュアルで変換を実行します。  
+- 変換:ビジュアルで変換を実行します。  
   
--   クリッピング:ビジュアルのクリッピング領域をサポートを提供します。  
+- クリッピング:ビジュアルのクリッピング領域をサポートを提供します。  
   
--   ヒット テストします。座標またはジオメトリがビジュアルの境界内に含まれているかどうかを決定します。  
+- ヒット テストします。座標またはジオメトリがビジュアルの境界内に含まれているかどうかを決定します。  
   
--   境界ボックス計算。ビジュアルの外接する四角形を決定します。  
+- 境界ボックス計算。ビジュアルの外接する四角形を決定します。  
   
  ただし、<xref:System.Windows.Media.Visual>オブジェクトが非表示の機能のサポートをなど含まれません。  
   
--   イベント処理  
+- イベント処理  
   
--   レイアウト  
+- レイアウト  
   
--   スタイル  
+- スタイル  
   
--   データ バインディング  
+- データ バインディング  
   
--   グローバリゼーション  
+- グローバリゼーション  
   
  <xref:System.Windows.Media.Visual> 元の子クラスを派生する必要があります、パブリックの抽象クラスとして公開されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] で公開されるビジュアル オブジェクトの階層構造を次の図に示します。  
   
@@ -127,13 +127,13 @@ DrawingGroup の操作の順序
   
  ビジュアル オブジェクトとベクター グラフィックス命令リストの階層については、次の点に注意する必要があります。  
   
--   階層内の順序は、描画情報のレンダリング順序を表します。 子要素は、ルート ビジュアル要素を起点として、左から右、上から下に走査されます。 要素に子ビジュアル要素がある場合、子ビジュアル要素は要素の兄弟よりも先に走査されます。  
+- 階層内の順序は、描画情報のレンダリング順序を表します。 子要素は、ルート ビジュアル要素を起点として、左から右、上から下に走査されます。 要素に子ビジュアル要素がある場合、子ビジュアル要素は要素の兄弟よりも先に走査されます。  
   
--   階層では、非リーフ ノード要素など<xref:System.Windows.Controls.ContentPresenter>、子要素を格納するための命令リストが含まれていません。  
+- 階層では、非リーフ ノード要素など<xref:System.Windows.Controls.ContentPresenter>、子要素を格納するための命令リストが含まれていません。  
   
--   ビジュアル要素にベクター グラフィックス命令リストとビジュアル子の両方が含まれている場合は、ビジュアル子オブジェクトが描画される前に、親ビジュアル要素の命令リストがレンダリングされます。  
+- ビジュアル要素にベクター グラフィックス命令リストとビジュアル子の両方が含まれている場合は、ビジュアル子オブジェクトが描画される前に、親ビジュアル要素の命令リストがレンダリングされます。  
   
--   ベクター グラフィックス命令リスト内の項目は、左から右の順にレンダリングされます。  
+- ベクター グラフィックス命令リスト内の項目は、左から右の順にレンダリングされます。  
   
 <a name="visual_tree"></a>   
 ## <a name="visual-tree"></a>ビジュアル ツリー  

@@ -3,11 +3,11 @@ title: <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: a68b44d7-7799-43a3-9e63-f07c782810a6
 ms.openlocfilehash: 7a4bae0def6599ab577656e970abbe20dd10692f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778028"
 ---
 # <a name="netmsmqbinding"></a>\<netMsmqBinding>
 複数コンピューターの通信に適しているキューに置かれたバインディングを定義します。  

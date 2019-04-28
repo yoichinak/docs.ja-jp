@@ -3,11 +3,11 @@ title: <serviceThrottling>
 ms.date: 03/30/2017
 ms.assetid: a337d064-1e64-4209-b4a9-db7fdb7e3eaf
 ms.openlocfilehash: 995ff9979096757225c9241e977f86f755955945
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758107"
 ---
 # <a name="servicethrottling"></a>\<serviceThrottling>
 WCF (Windows Communication Foundation) サービスの調整機構を指定します。  

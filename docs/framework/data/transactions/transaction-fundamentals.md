@@ -3,11 +3,11 @@ title: トランザクションの基礎
 ms.date: 03/30/2017
 ms.assetid: 353f4ee2-e6bf-4b1c-b1c8-385fc8a486c0
 ms.openlocfilehash: 49e44ce1112a44c105f47560017331afe4454a0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793518"
 ---
 # <a name="transaction-fundamentals"></a>トランザクションの基礎
 トランザクションとは、複数のタスクを互いに結合したものです。 たとえば、あるアプリケーションが 2 つのタスクを実行するものとします。 まず、このアプリケーションはデータベースに新しいテーブルを作成します。 次に、データを収集、フォーマットし、新しく作成したテーブルに挿入する特定のオブジェクトを呼び出します。 この 2 つのタスクは、単に関連しているだけでなく、相互に依存しており、たとえば、新しいテーブルにデータを格納できなければ新しいテーブルを作成しないようにできます。 単一のトランザクションのスコープ内でこの 2 つのタスクを実行すると、両タスク間の結合が行われます。 第 2 のタスクが失敗すると、新しいテーブルの作成以前の時点まで第 1 のタスクがロールバックされます。  

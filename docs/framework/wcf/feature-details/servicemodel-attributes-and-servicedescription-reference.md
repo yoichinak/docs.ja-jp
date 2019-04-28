@@ -3,11 +3,11 @@ title: ServiceModel 属性および ServiceDescription 参照
 ms.date: 03/30/2017
 ms.assetid: 4ab86b17-eab9-4846-a881-0099f9a7cc64
 ms.openlocfilehash: 022731d7d6e60d36c5f4a595edc90aaff0586a79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747741"
 ---
 # <a name="servicemodel-attributes-and-servicedescription-reference"></a>ServiceModel 属性および ServiceDescription 参照
 *説明ツリー*型の階層は、(以降、<xref:System.ServiceModel.Description.ServiceDescription?displayProperty=nameWithType>クラス) をまとめて、サービスのすべての側面がについて説明します。 Windows Communication Foundation (WCF) では、説明ツリーを使用して、Web サービス記述言語 (WSDL)、XML スキーマ定義言語 (XSD)、およびクライアントに使用できるサービスに関するポリシー アサーション (メタデータ) を公開する、有効なサービス ランタイムをビルドするには接続し、サービスを使用し、説明ツリーの値のさまざまなコードと構成ファイル表現を生成します。  

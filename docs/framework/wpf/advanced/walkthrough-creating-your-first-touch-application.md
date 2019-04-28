@@ -11,11 +11,11 @@ helpviewer_keywords:
 - creating a touchscreen application [WPF]
 ms.assetid: d69e602e-9a25-4e24-950b-e89eaa2a906b
 ms.openlocfilehash: 53ae737394d76d9f293f6e03fbf04cbb46d2adbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778821"
 ---
 # <a name="walkthrough-creating-your-first-touch-application"></a>チュートリアル: 初めてのタッチ アプリケーションの作成
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] タッチに応答するアプリケーションを有効にします。 たとえば、いずれかを使用するアプリケーションとやり取りするまたはこのチュートリアルは、ユーザーに移動できるようにするアプリケーションを作成します。 タッチ スクリーンなどのタッチを検知するデバイスに複数の指がサイズ変更、またはタッチを使用して 1 つのオブジェクトを回転します。  
@@ -23,9 +23,9 @@ ms.locfileid: "59326984"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   Visual Studio  
+- Visual Studio  
   
--   Windows タッチをサポートするタッチ スクリーンなど、タッチ入力を受け取るデバイス。  
+- Windows タッチをサポートするタッチ スクリーンなど、タッチ入力を受け取るデバイス。  
   
  アプリケーションを作成する方法の基本を理解しておくさらに、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、サブスクライブして、イベントを処理する方法に特にです。 詳細については、「[チュートリアル:初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
   
@@ -73,11 +73,11 @@ ms.locfileid: "59326984"
 ## <a name="testing-the-application"></a>アプリケーションのテスト
  アプリケーションをテストするには、次の操作を再試行してください。 同時に、次の 1 つ以上実行できることに注意してください。
 
--   移動する、 <xref:System.Windows.Shapes.Rectangle>、に指を置き、<xref:System.Windows.Shapes.Rectangle>し、画面上で指を移動します。
+- 移動する、 <xref:System.Windows.Shapes.Rectangle>、に指を置き、<xref:System.Windows.Shapes.Rectangle>し、画面上で指を移動します。
 
--   サイズを変更する、 <xref:System.Windows.Shapes.Rectangle>2 本の指を置く、<xref:System.Windows.Shapes.Rectangle>近い一緒または相互よりも、本の指を移動します。
+- サイズを変更する、 <xref:System.Windows.Shapes.Rectangle>2 本の指を置く、<xref:System.Windows.Shapes.Rectangle>近い一緒または相互よりも、本の指を移動します。
 
--   回転する、 <xref:System.Windows.Shapes.Rectangle>2 本の指を置く、<xref:System.Windows.Shapes.Rectangle>を互いに指を回転させます。
+- 回転する、 <xref:System.Windows.Shapes.Rectangle>2 本の指を置く、<xref:System.Windows.Shapes.Rectangle>を互いに指を回転させます。
 
  慣性による処理には、直前の操作を実行する際は、画面から指すばやくを発生させます。 <xref:System.Windows.Shapes.Rectangle>移動、サイズ変更、または停止する前に、数秒回転し続けます。
 

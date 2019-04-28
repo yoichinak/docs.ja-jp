@@ -7,11 +7,11 @@ helpviewer_keywords:
 - PresentationOptions prefix [WPF]
 ms.assetid: 391032dd-2fba-4804-bb8a-3b071797a9f4
 ms.openlocfilehash: e60c4a505db42936f188354f52edd7832fb9632b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772841"
 ---
 # <a name="presentationoptionsfreeze-attribute"></a>PresentationOptions:Freeze 属性
 セット、<xref:System.Windows.Freezable.IsFrozen%2A>状態`true`で格納している<xref:System.Windows.Freezable>要素。 既定の動作を<xref:System.Windows.Freezable>せず、`PresentationOptions:Freeze`属性が指定される<xref:System.Windows.Freezable.IsFrozen%2A>は`false`の読み込み時間、および [全般] に依存<xref:System.Windows.Freezable>時の動作。  

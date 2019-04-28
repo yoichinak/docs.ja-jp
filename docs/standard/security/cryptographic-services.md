@@ -27,11 +27,11 @@ ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795305"
 ---
 # <a name="cryptographic-services"></a>暗号化サービス
 
@@ -207,7 +207,7 @@ Alice は、公開キー暗号方式を使用してメッセージにデジタ�
 
 - Alice はプレーンテキスト メッセージとハッシュしたメッセージ (デジタル署名) を Bob に送信します。 Bob はメッセージを受信してハッシュ値を計算し、算出したハッシュ値を Alice から受け取ったハッシュ値と比較します。 ハッシュ値が同一の場合、メッセージは変更されていません。 ハッシュ値が同一でない場合は、Alice がメッセージを作成した後でその内容が変更されています。
 
-    残念ながら、この方法では送信元の信頼性を保証できません。 どのユーザーでも Alice を偽装して Bob にメッセージを送信できます。 だれもが同じハッシュ アルゴリズムを使用してメッセージに署名できます。Bob が判断できるのは、メッセージがその署名と一致するかどうかだけです。 これは、一種の man-in-the-middle 攻撃です。 詳細については、[Cryptography Next Generation (CNG) セキュリティで保護された通信の例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))を参照してください。
+    残念ながら、この方法では送信元の信頼性を保証できません。 どのユーザーでも Alice を偽装して Bob にメッセージを送信できます。 だれもが同じハッシュ アルゴリズムを使用してメッセージに署名できます。Bob が判断できるのは、メッセージがその署名と一致するかどうかだけです。 これは、一種の man-in-the-middle 攻撃です。 詳細については、次を参照してください。 [Cryptography Next Generation (CNG) セキュリティで保護された通信の例](https://docs.microsoft.com/previous-versions/cc488018(v=vs.100))します。
 
 - Alice はセキュリティで保護されていないパブリック チャネルを使用して、Bob にプレーンテキスト メッセージを送信します。 そして、セキュリティで保護されたプライベート チャネルを使用して、Bob にハッシュしたメッセージを送信します。 Bob はプレーンテキスト メッセージを受信し、ハッシュを計算して、プライベートに交換したハッシュと比較します。 ハッシュが一致すると、Bob は次の 2 つのことを判断できます。
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC40059
 ms.assetid: 520e39cb-8ab6-46f5-aa00-08afd51b4b7c
 ms.openlocfilehash: c0b4f56e3d1613486dd1198976557831ce657e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774866"
 ---
 # <a name="a-reference-was-created-to-embedded-interop-assembly-assembly1-because-of-an-indirect-reference-to-that-assembly-from-assembly-assembly2"></a>埋め込まれた相互運用機能アセンブリへの参照が作成された '\<assembly1 >' のアセンブリからそのアセンブリへの間接参照により'\<assembly2 >'
 埋め込まれた相互運用機能アセンブリ '\<assembly1>' への参照が作成されました。これは、そのアセンブリへの間接参照がアセンブリ '\<assembly2>' によって作成されたためです。 両方のアセンブリで '相互運用機能型の埋め込み' プロパティを変更することを検討してください。  
@@ -27,9 +27,9 @@ ms.locfileid: "58837547"
   
 ### <a name="to-address-this-warning"></a>この警告に対処するには  
   
--   両方のアセンブリに相互運用の型情報を埋め込むには、assembly1 へのすべての参照の `Embed Interop Types` プロパティを `True` に設定します。  
+- 両方のアセンブリに相互運用の型情報を埋め込むには、assembly1 へのすべての参照の `Embed Interop Types` プロパティを `True` に設定します。  
   
--   assembly1 の `Embed Interop Types` プロパティを `False` に設定すると警告を回避できます。 この場合は、相互運用機能型の情報は、プライマリ相互運用機能アセンブリ (PIA) によって提供されます。  
+- assembly1 の `Embed Interop Types` プロパティを `False` に設定すると警告を回避できます。 この場合は、相互運用機能型の情報は、プライマリ相互運用機能アセンブリ (PIA) によって提供されます。  
   
 ## <a name="see-also"></a>関連項目
 

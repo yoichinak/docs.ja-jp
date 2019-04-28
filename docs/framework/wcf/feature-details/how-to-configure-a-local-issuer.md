@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
 ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779302"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>方法: ローカル発行者を設定する
 ここでは、発行済みトークンに対してローカル発行者を使用するようにクライアントを構成する方法を説明します。  
@@ -54,7 +54,7 @@ ms.locfileid: "59306990"
      [!code-csharp[c_CreateSTS#13](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#13)]
      [!code-vb[c_CreateSTS#13](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#13)]  
   
-5. 任意。 ローカル発行者に対して構成したエンドポイントの動作を <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> プロパティから返されるコレクションに追加することにより、この動作を次のように追加します。  
+5. 省略可能です。 ローカル発行者に対して構成したエンドポイントの動作を <xref:System.ServiceModel.Security.IssuedTokenClientCredential.LocalIssuerChannelBehaviors%2A> プロパティから返されるコレクションに追加することにより、この動作を次のように追加します。  
   
      [!code-csharp[c_CreateSTS#14](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_creatests/cs/source.cs#14)]
      [!code-vb[c_CreateSTS#14](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_creatests/vb/source.vb#14)]  
@@ -67,7 +67,7 @@ ms.locfileid: "59306990"
   
 3. `binding` および `bindingConfiguration` 属性を、ローカル発行者のエンドポイントと通信するときに使用する適切なバインディングを参照する値に設定します。  
   
-4. 任意。 設定、 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)要素の子として、<`localIssuer`> 要素と、ローカル発行者の id 情報を指定します。  
+4. 省略可能です。 設定、 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)要素の子として、<`localIssuer`> 要素と、ローカル発行者の id 情報を指定します。  
   
 5. 任意。 設定、 [\<ヘッダー >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)要素の子として、<`localIssuer`> 要素と、ローカル発行者を正しく対処するために必要な追加ヘッダーを指定します。  
   

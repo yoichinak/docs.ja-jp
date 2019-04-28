@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID452
 ms.assetid: 7459562b-cd4f-4590-95e0-6126ae3589a5
 ms.openlocfilehash: 28f78161e14604c1f59872801855ccc918faec58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772490"
 ---
 # <a name="ordinal-is-not-valid"></a>序数が有効ではありません。
 プロシージャ名ではなく番号を使用するダイナミック リンク ライブラリ (DLL) への呼び出しが示されるを使用して、`#num`構文。 このエラーは、次の考えられる原因があります。  
   
--   変換、`#num`序数が失敗する式。  
+- 変換、`#num`序数が失敗する式。  
   
--   `#num`指定された DLL で任意の関数を指定できません。  
+- `#num`指定された DLL で任意の関数を指定できません。  
   
--   タイプ ライブラリには、無効な序数の内部使用の無効な宣言があります。  
+- タイプ ライブラリには、無効な序数の内部使用の無効な宣言があります。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   

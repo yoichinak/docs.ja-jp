@@ -14,11 +14,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 1b9a4e0a-f134-48ff-a1be-c461446a31ba
 ms.openlocfilehash: c1881ffa1c6fca546b086efea59d2263af853949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792172"
 ---
 # <a name="walkthrough-running-an-operation-in-the-background"></a>チュートリアル: 操作をバックグラウンドで実行する
 完了に長い時間がかかる操作を実行しており、ユーザー インターフェイスで遅延が発生しないようにするには<xref:System.ComponentModel.BackgroundWorker> クラスを使用して別のスレッドで操作を実行できます。  
@@ -96,9 +96,9 @@ ms.locfileid: "59308446"
   
 ## <a name="next-steps"></a>次の手順  
   
--   非同期操作の進行に伴って進行状況を報告するフォームを実装します。 詳細については、「[方法 :バック グラウンド操作を使用してフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)します。  
+- 非同期操作の進行に伴って進行状況を報告するフォームを実装します。 詳細については、「[方法 :バック グラウンド操作を使用してフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)します。  
   
--   コンポーネントの非同期パターンをサポートするクラスを実装します。 詳細については、次を参照してください。[イベント ベースの非同期パターンを実装する](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)します。  
+- コンポーネントの非同期パターンをサポートするクラスを実装します。 詳細については、次を参照してください。[イベント ベースの非同期パターンを実装する](../../../standard/asynchronous-programming-patterns/implementing-the-event-based-asynchronous-pattern.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

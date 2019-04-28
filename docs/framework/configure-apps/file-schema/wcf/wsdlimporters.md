@@ -3,11 +3,11 @@ title: <wsdlImporters>
 ms.date: 03/30/2017
 ms.assetid: 270c7f93-eab7-47b6-8b94-ac3f5b7f17e4
 ms.openlocfilehash: 75f88219ab73d321b3e04c140bbfe964aed0b83a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785477"
 ---
 # <a name="wsdlimporters"></a>\<wsdlImporters>
 この構成要素は、WS-Policy が添付された Web サービス記述言語 (WSDL) 1.1 メタデータをインポートするすべての WSDL インポートを指定します。 各子要素は、<`wsdlImporter`> メタデータをインポート、その情報をコントラクトおよびエンドポイント情報を表すさまざまなクラスに変換する方法を指定します。 コントラクトおよびエンドポイントの情報やプロパティを選択的にインポートできます。これらは、任意のインポート エラーを公開し、インポートおよび変換プロセスに関連する型情報を受け取ります。 また、任意のポリシー ドキュメント、WSDL ドキュメント、WSDL 拡張、および XML スキーマ ドキュメントにアクセスするためのバインディング情報およびプロパティのインポートもサポートします。  

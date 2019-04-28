@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42324
 ms.assetid: b5c2c4bd-3b2a-4a73-aaeb-55728eb03b68
 ms.openlocfilehash: 618fc88a2ca92ec911a3fbd82de580403d924430
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841101"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774843"
 ---
 # <a name="using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results"></a>ラムダ式内で繰り返し変数を使用すると、予期しない結果が発生する可能性があります。
 ラムダ式で繰り返し変数を使用する必要があります予期しない結果。 代わりに、ループ内でローカル変数を作成し、反復変数の値を割り当てます。  
@@ -63,7 +63,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   反復変数の値をローカル変数に割り当てるし、ローカル変数をラムダ式で使用します。  
+- 反復変数の値をローカル変数に割り当てるし、ローカル変数をラムダ式で使用します。  
   
 ```vb  
 Module Module1  

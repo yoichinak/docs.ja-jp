@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inferring property types [Visual Basic]
 ms.assetid: 7c748b22-913f-4d9d-b747-6b7bf296a0bc
 ms.openlocfilehash: be3c74e8f8c69eb9f0a1d0dda4d6c90dfd7e567a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760741"
 ---
 # <a name="how-to-infer-property-names-and-types-in-anonymous-type-declarations-visual-basic"></a>方法: 匿名型の宣言 (Visual Basic) におけるプロパティ名と型を推論します。
 匿名型には、プロパティのデータ型を直接指定する機構はありません。 すべてのプロパティの型は、推論されます。 次の例では、 `Name` と `Price` の型は、それらを初期化するために使われる値から、直接推論されます。  
@@ -24,11 +24,11 @@ ms.locfileid: "58824729"
   
 #### <a name="anonymous-types-can-infer-property-names-and-types-from-the-following-sources"></a>匿名型は、プロパティの名前と型を、次のソースから推論できます:  
   
--   変数名から。 匿名型 `anonProduct` には、 `productName` と `productPrice`という 2 つのプロパティがあります。 それらのプロパティのデータ型は、それぞれ、元の変数のデータ型である `String` と `Double`になります。  
+- 変数名から。 匿名型 `anonProduct` には、 `productName` と `productPrice`という 2 つのプロパティがあります。 それらのプロパティのデータ型は、それぞれ、元の変数のデータ型である `String` と `Double`になります。  
   
      [!code-vb[VbVbalrAnonymousTypes#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#11)]  
   
--   他のオブジェクトのプロパティまたはフィールドの名前から。 たとえば、 `car` プロパティと `CarClass` プロパティを含む `Name` 型の `ID` オブジェクトがあるとします。 新しい匿名型のインスタンス `car1`を作成し、 `Name` オブジェクトの値を使用して `ID` プロパティと `car` プロパティを初期化するには、次のように記述できます。  
+- 他のオブジェクトのプロパティまたはフィールドの名前から。 たとえば、 `car` プロパティと `CarClass` プロパティを含む `Name` 型の `ID` オブジェクトがあるとします。 新しい匿名型のインスタンス `car1`を作成し、 `Name` オブジェクトの値を使用して `ID` プロパティと `car` プロパティを初期化するには、次のように記述できます。  
   
      [!code-vb[VbVbalrAnonymousTypes#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#34)]  
   
@@ -36,13 +36,13 @@ ms.locfileid: "58824729"
   
      [!code-vb[VbVbalrAnonymousTypes#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#35)]  
   
--   XML メンバー名から。  
+- XML メンバー名から。  
   
      [!code-vb[VbVbalrAnonymousTypes#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#12)]  
   
      推論後の `anon` の型は、 `Book`(Of XElement) 型の 1 つのプロパティ <xref:System.Collections.IEnumerable>を持ちます。  
   
--   次の例に示す `SomeFunction` など、パラメーターを持たない関数から。  
+- 次の例に示す `SomeFunction` など、パラメーターを持たない関数から。  
   
      `Dim sc As New SomeClass`  
   
@@ -56,7 +56,7 @@ ms.locfileid: "58824729"
   
 #### <a name="name-inference-will-fail-in-many-circumstances-including-the-following"></a>名前の推論は、次の状況を含む、さまざまな状況で失敗します:  
   
--   推論が、引数を必要とするメソッド、コンストラクター、またはパラメーター化されたプロパティの呼び出しから派生する場合。 前の `anon1` の宣言は、 `someFunction` に 1 つ以上の引数があると失敗します。  
+- 推論が、引数を必要とするメソッド、コンストラクター、またはパラメーター化されたプロパティの呼び出しから派生する場合。 前の `anon1` の宣言は、 `someFunction` に 1 つ以上の引数があると失敗します。  
   
      `' Not valid.`  
   
@@ -68,7 +68,7 @@ ms.locfileid: "58824729"
   
      `Dim anon4 = New With {Key .FunResult = sc.someFunction(someArg)}`  
   
--   推論が、複合式から派生する場合。  
+- 推論が、複合式から派生する場合。  
   
     ```  
     Dim aString As String = "Act "  
@@ -80,7 +80,7 @@ ms.locfileid: "58824729"
   
      [!code-vb[VbVbalrAnonymousTypes#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#14)]  
   
--   複数のプロパティの推論で、同じ名前を持つ 2 つ以上のプロパティが生成される場合。 前の例で示した宣言で説明すると、同じ匿名型のプロパティとして `product.Name` と `car1.Name` の両方を指定することはできません。 これは、各プロパティの推論された識別子がどちらも `Name`になるためです。  
+- 複数のプロパティの推論で、同じ名前を持つ 2 つ以上のプロパティが生成される場合。 前の例で示した宣言で説明すると、同じ匿名型のプロパティとして `product.Name` と `car1.Name` の両方を指定することはできません。 これは、各プロパティの推論された識別子がどちらも `Name`になるためです。  
   
      `' Not valid.`  
   
@@ -98,7 +98,7 @@ ms.locfileid: "58824729"
   
      `' Dim anon7 = New With {Key product.Price, Key price}`  
   
--   1 つのプロパティの初期の型と値が、まだ確立されていない別のプロパティに依存している場合。 たとえば、 `.IDName = .LastName` は、 `.LastName` が既に初期化されていない限り、匿名型の宣言では使えません。  
+- 1 つのプロパティの初期の型と値が、まだ確立されていない別のプロパティに依存している場合。 たとえば、 `.IDName = .LastName` は、 `.LastName` が既に初期化されていない限り、匿名型の宣言では使えません。  
   
      `' Not valid.`  
   
@@ -108,7 +108,7 @@ ms.locfileid: "58824729"
   
      [!code-vb[VbVbalrAnonymousTypes#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class1.vb#15)]  
   
--   匿名型のプロパティの名前が、 <xref:System.Object>のメンバーの名前と同じである場合。 たとえば、次の宣言は、 `Equals` が <xref:System.Object>のメソッドなので失敗します。  
+- 匿名型のプロパティの名前が、 <xref:System.Object>のメンバーの名前と同じである場合。 たとえば、次の宣言は、 `Equals` が <xref:System.Object>のメソッドなので失敗します。  
   
      `' Not valid.`  
   

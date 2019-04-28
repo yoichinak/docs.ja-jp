@@ -3,11 +3,11 @@ title: '方法: WebSockets 上で通信する WCF サービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: bafbbd89-eab8-4e9a-b4c3-b7b0178e12d8
 ms.openlocfilehash: 7125914e64ac3c7643f7338b1343654794cf45da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346367"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787531"
 ---
 # <a name="how-to-create-a-wcf-service-that-communicates-over-websockets"></a>方法: WebSockets 上で通信する WCF サービスを作成する
 WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHttpBinding> バインディングを使用することにより、WebSocket 経由で通信できます。  WebSocket が使用されるのは、サービス コントラクトによってコールバック コントラクトが定義されていると <xref:System.ServiceModel.NetHttpBinding> によって判断された場合です。 ここでは、<xref:System.ServiceModel.NetHttpBinding> を使用して WebSocket 経由で通信する WCF サービスと WCF クライアントの実装方法について説明します。  
@@ -108,7 +108,7 @@ WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHtt
   
      コールバック コントラクト操作は、非同期メソッドとして実装されます。  
   
-    1.  クライアント コードを実装します。  
+    1. クライアント コードを実装します。  
   
         ```csharp  
         class Program  
@@ -133,7 +133,7 @@ WCF サービスと WCF クライアントは、<xref:System.ServiceModel.NetHtt
   
          ここでは、わかりやすいように CallbackHandler を繰り返しています。 クライアント アプリケーションは、新しい InstanceContext を作成し、コールバック インターフェイスの実装を指定します。 次に、新しく作成された InstanceContext への参照を送信するプロキシ クラスのインスタンスを作成します。 クライアントがサービスを呼び出すと、サービスは、指定されたコールバック コントラクトを使用してクライアントを呼び出します。  
   
-    2.  クライアントの構成  
+    2. クライアントの構成  
   
         ```xml  
         <?xml version="1.0" encoding="utf-8" ?>  

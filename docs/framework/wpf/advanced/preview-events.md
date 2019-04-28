@@ -8,11 +8,11 @@ helpviewer_keywords:
 - events [WPF], suppressing
 ms.assetid: b5032308-aa9c-4d02-af11-630ecec8df7e
 ms.openlocfilehash: 75165df94aa8b508ef85cf970933efb98b9d62ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772880"
 ---
 # <a name="preview-events"></a>プレビュー イベント
 プレビュー イベント、トンネル イベントとも呼ばれますにはルーティング イベントがあるイベントを発生し、イベント データのソースとして報告された要素に対するアプリケーションのルートからルートの方向が送信されます。 すべてのイベント シナリオがサポートまたはプレビュー イベント; が必要です。このトピックでは、カスタム コンポーネントまたはクラスでプレビュー イベントを作成する可能性がありますが、適切なである場合、プレビュー イベントが存在、アプリケーションまたはコンポーネントを処理する方法、それらの状況について説明します。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - /vbruntime compiler option [Visual Basic]
 ms.assetid: 1aa0239e-511a-4c29-957d-fd72877b350a
 ms.openlocfilehash: a1988fcd19c6629d85ae0e739681fd39fe033c0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796131"
 ---
 # <a name="-vbruntime"></a>-vbruntime
 コンパイラが Visual Basic Runtime Library を参照せずにコンパイルするか、特定のランタイム ライブラリを参照してコンパイルするかを指定します。  
@@ -50,35 +50,35 @@ ms.locfileid: "58843865"
   
  次のランタイムのメンバーが埋め込まれます。  
   
--   <xref:Microsoft.VisualBasic.CompilerServices.Conversions> クラス  
+- <xref:Microsoft.VisualBasic.CompilerServices.Conversions> クラス  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> メソッド  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.Char%29> メソッド  
   
--   <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> メソッド  
+- <xref:Microsoft.VisualBasic.Strings.AscW%28System.String%29> メソッド  
   
--   <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> メソッド  
+- <xref:Microsoft.VisualBasic.Strings.ChrW%28System.Int32%29> メソッド  
   
--   <xref:Microsoft.VisualBasic.Constants.vbBack> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbBack> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCr> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbCr> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbCrLf> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbCrLf> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbFormFeed> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbFormFeed> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbLf> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbLf> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNewLine> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbNewLine> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullChar> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbNullChar> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbNullString> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbNullString> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbTab> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbTab> 定数  
   
--   <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 定数  
+- <xref:Microsoft.VisualBasic.Constants.vbVerticalTab> 定数  
   
--   一部のオブジェクトの`My`型  
+- 一部のオブジェクトの`My`型  
   
  使用してコンパイルする場合、`-vbruntime*`オプションと、コードは、コア機能に埋め込まれていない Visual Basic ランタイム ライブラリからメンバーを参照、コンパイラには、メンバーが使用できないことを示すエラーが返されます。  
   

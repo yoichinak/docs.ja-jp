@@ -13,11 +13,11 @@ helpviewer_keywords:
 - visibility [Visual Basic], variables
 ms.assetid: 44b7f62a-cb5c-4d50-bce9-60ae68f87072
 ms.openlocfilehash: 24a7ae3b8f3400beeaedb20ea6352ea44bdb7597
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794733"
 ---
 # <a name="how-to-control-the-scope-of-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) のスコープを制御します。
 変数が、通常、*スコープ*、または宣言をリージョン全体での参照を表示します。 場合によっては、変数の*アクセス レベル*そのスコープに影響を与えることができます。  
@@ -28,13 +28,13 @@ ms.locfileid: "59324319"
   
 #### <a name="to-make-a-variable-visible-only-within-a-block"></a>変数をブロック内でのみ表示されるようにするには  
   
--   場所、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)の開始との間など、そのブロックの宣言ステートメントの終了の間、変数、`For`と`Next`のステートメントを`For`ループします。  
+- 場所、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)の開始との間など、そのブロックの宣言ステートメントの終了の間、変数、`For`と`Next`のステートメントを`For`ループします。  
   
      ブロック内からのみ、変数を参照することができます。  
   
 #### <a name="to-make-a-variable-visible-only-within-a-procedure"></a>変数をプロシージャ内でのみ表示されるようにするには  
   
--   場所、`Dim`変数、プロシージャ内では、ブロックの外側のステートメント (など、 `With`.`End With`ブロック)。  
+- 場所、`Dim`変数、プロシージャ内では、ブロックの外側のステートメント (など、 `With`.`End With`ブロック)。  
   
      プロシージャに含まれる各ブロックの内部を含むプロシージャ内からのみ、変数を参照することができます。  
   

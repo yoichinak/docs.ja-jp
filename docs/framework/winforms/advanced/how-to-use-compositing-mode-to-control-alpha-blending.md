@@ -10,20 +10,20 @@ helpviewer_keywords:
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
 ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779042"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>方法: 複合モードを使用してアルファ ブレンドを制御する
 次の特性を持つオフスクリーン ビットマップを作成する場合がある可能性があります。  
   
--   色のアルファ値 255 未満であるがあります。  
+- 色のアルファ値 255 未満であるがあります。  
   
--   色はいないアルファ ビットマップを作成すると、相互のブレンドです。  
+- 色はいないアルファ ビットマップを作成すると、相互のブレンドです。  
   
--   完成したビットマップを表示する場合、ビットマップの色は、アルファ ブレンドされるディスプレイ デバイスの背景色になります。  
+- 完成したビットマップを表示する場合、ビットマップの色は、アルファ ブレンドされるディスプレイ デバイスの背景色になります。  
   
  このようなビットマップを作成するには空白を構築<xref:System.Drawing.Bitmap>オブジェクト、および構築し、<xref:System.Drawing.Graphics>オブジェクトに基づくビットマップ。 複合モードの設定、<xref:System.Drawing.Graphics>オブジェクトを<xref:System.Drawing.Drawing2D.CompositingMode.SourceCopy?displayProperty=nameWithType>します。  
   

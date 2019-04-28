@@ -3,11 +3,11 @@ title: FailedToInitializeTraceSource
 ms.date: 03/30/2017
 ms.assetid: ce6fea55-292c-4fb9-908e-3713fcd4cf8f
 ms.openlocfilehash: 84fa33050e6479fb4a3eca154d7e28d1875a3666
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774921"
 ---
 # <a name="failedtoinitializetracesource"></a>FailedToInitializeTraceSource
 Id:101  

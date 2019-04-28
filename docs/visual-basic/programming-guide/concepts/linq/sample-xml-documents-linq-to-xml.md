@@ -3,11 +3,11 @@ title: サンプル XML ドキュメント (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: a734cc4e-d95d-4631-91a2-81618c8ad894
 ms.openlocfilehash: d8567d8129dd7ba32e847b8c1e28ffc992d10b1f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787141"
 ---
 # <a name="sample-xml-documents-linq-to-xml"></a>サンプル XML ドキュメント (LINQ to XML)
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメント全体にわたって、コード例とコード スニペットで使用されているサンプル ファイルは次のとおりです。  

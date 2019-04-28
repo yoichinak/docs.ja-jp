@@ -11,11 +11,11 @@ helpviewer_keywords:
 - arrays [Visual Basic], parameter arrays
 ms.assetid: c43edfae-9114-4096-9ebc-8c5c957a1067
 ms.openlocfilehash: 8ea4c77056701b8f61c1ed5a53cf20d98ae913bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834165"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791952"
 ---
 # <a name="parameter-arrays-visual-basic"></a>パラメーター配列 (Visual Basic)
 通常、プロシージャ宣言の指定よりも多くの引数を持つプロシージャを呼び出すことはできません。 宣言することができます、不特定多数の引数を必要がある場合、*パラメーター配列*、プロシージャ パラメーターの値の配列をそのまま使用することができます。 プロシージャを定義するときに、パラメーター配列内の要素の数を把握する必要はありません。 配列のサイズは、各プロシージャの呼び出しによって個別に決まります。  
@@ -23,22 +23,22 @@ ms.locfileid: "58834165"
 ## <a name="declaring-a-paramarray"></a>ParamArray を宣言します。  
  使用する、 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)パラメーター リスト内のパラメーター配列を示すキーワードです。 次の規則が適用されます。  
   
--   プロシージャが 1 つだけのパラメーター配列を定義およびプロシージャの定義の最後のパラメーターがあります。  
+- プロシージャが 1 つだけのパラメーター配列を定義およびプロシージャの定義の最後のパラメーターがあります。  
   
--   パラメーター配列は、値を渡しする必要があります。 明示的に指定することをお勧め、 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)プロシージャ定義内のキーワード。  
+- パラメーター配列は、値を渡しする必要があります。 明示的に指定することをお勧め、 [ByVal](../../../../visual-basic/language-reference/modifiers/byval.md)プロシージャ定義内のキーワード。  
   
--   パラメーター配列は、自動的に省略可能です。 既定値は、パラメーター配列の要素の型の空の 1 次元配列です。  
+- パラメーター配列は、自動的に省略可能です。 既定値は、パラメーター配列の要素の型の空の 1 次元配列です。  
   
--   前に、パラメーター配列のすべてのパラメーターは必須である必要があります。 パラメーター配列は、唯一のパラメーターである必要があります。  
+- 前に、パラメーター配列のすべてのパラメーターは必須である必要があります。 パラメーター配列は、唯一のパラメーターである必要があります。  
   
 ## <a name="calling-a-paramarray"></a>ParamArray を呼び出す  
  パラメーター配列を定義するプロシージャを呼び出すときに、次の方法のいずれかで、引数を指定できます。  
   
--   Nothing-これは省略できます、 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)引数。 この場合、空の配列は、プロシージャに渡されます。 渡すことも、 [Nothing](../../../../visual-basic/language-reference/nothing.md)キーワードは、同じ効果を持つ。  
+- Nothing-これは省略できます、 [ParamArray](../../../../visual-basic/language-reference/modifiers/paramarray.md)引数。 この場合、空の配列は、プロシージャに渡されます。 渡すことも、 [Nothing](../../../../visual-basic/language-reference/nothing.md)キーワードは、同じ効果を持つ。  
   
--   任意の数の引数、コンマ区切りの一覧。 各引数のデータ型に暗黙的に変換できる必要があります、`ParamArray`要素の型。  
+- 任意の数の引数、コンマ区切りの一覧。 各引数のデータ型に暗黙的に変換できる必要があります、`ParamArray`要素の型。  
   
--   パラメーター配列の要素の型と同じ要素型の配列。  
+- パラメーター配列の要素の型と同じ要素型の配列。  
   
  すべてのケースで、プロシージャ内のコード、パラメーターは配列として扱いますと同じデータ型の要素を持つ 1 次元配列、`ParamArray`データ型。  
   

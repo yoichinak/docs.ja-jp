@@ -10,11 +10,11 @@ helpviewer_keywords:
 - operators [Visual Basic], result data types
 ms.assetid: 9d524533-e1a1-4aa8-b1b8-622068173d06
 ms.openlocfilehash: 45dcc80ee791da1c2731ba32f0ebd34564faf806
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814984"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778561"
 ---
 # <a name="data-types-of-operator-results-visual-basic"></a>演算子の結果のデータ型 (Visual Basic)
 Visual Basic では、オペランドのデータ型に基づく操作の結果のデータ型を決定します。 場合によっては、データ型のいずれかのオペランドよりも広い範囲をこれがあります。  
@@ -22,21 +22,21 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 ## <a name="data-type-ranges"></a>データ型の範囲  
  最小から最大値、順序で、該当するデータ型の範囲は次のとおりです。  
   
--   [ブール](../../../visual-basic/language-reference/data-types/boolean-data-type.md): 2 つの値  
+- [ブール](../../../visual-basic/language-reference/data-types/boolean-data-type.md): 2 つの値  
   
--   [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、[バイト](../../../visual-basic/language-reference/data-types/byte-data-type.md)— 256 の整数の値  
+- [SByte](../../../visual-basic/language-reference/data-types/sbyte-data-type.md)、[バイト](../../../visual-basic/language-reference/data-types/byte-data-type.md)— 256 の整数の値  
   
--   [短い](../../../visual-basic/language-reference/data-types/short-data-type.md)、 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5... E + 4) 使用可能な整数値  
+- [短い](../../../visual-basic/language-reference/data-types/short-data-type.md)、 [UShort](../../../visual-basic/language-reference/data-types/ushort-data-type.md) — 65,536 (6.5... E + 4) 使用可能な整数値  
   
--   [整数](../../../visual-basic/language-reference/data-types/integer-data-type.md)、 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4,294,967,296 (4.2. E + 9) 使用可能な整数値  
+- [整数](../../../visual-basic/language-reference/data-types/integer-data-type.md)、 [UInteger](../../../visual-basic/language-reference/data-types/uinteger-data-type.md) — 4,294,967,296 (4.2. E + 9) 使用可能な整数値  
   
--   [長い](../../../visual-basic/language-reference/data-types/long-data-type.md)、 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8... E + 19) 使用可能な整数値  
+- [長い](../../../visual-basic/language-reference/data-types/long-data-type.md)、 [ULong](../../../visual-basic/language-reference/data-types/ulong-data-type.md) — 18,446,744,073,709,551,615 (1.8... E + 19) 使用可能な整数値  
   
--   [10 進](../../../visual-basic/language-reference/data-types/decimal-data-type.md)-1.5... E + 29 可能な整数値、最大の範囲は 7.9... E + 28 (絶対値)  
+- [10 進](../../../visual-basic/language-reference/data-types/decimal-data-type.md)-1.5... E + 29 可能な整数値、最大の範囲は 7.9... E + 28 (絶対値)  
   
--   [1 つ](../../../visual-basic/language-reference/data-types/single-data-type.md)-最大範囲 3.4 E + 38 (絶対値)  
+- [1 つ](../../../visual-basic/language-reference/data-types/single-data-type.md)-最大範囲 3.4 E + 38 (絶対値)  
   
--   [二重](../../../visual-basic/language-reference/data-types/double-data-type.md)-最大範囲 1.7 E + 308 (絶対値)  
+- [二重](../../../visual-basic/language-reference/data-types/double-data-type.md)-最大範囲 1.7 E + 308 (絶対値)  
   
  Visual Basic データ型の詳細については、次を参照してください。[データ型](../../../visual-basic/language-reference/data-types/index.md)します。  
   
@@ -68,11 +68,11 @@ Visual Basic では、オペランドのデータ型に基づく操作の結果�
 ## <a name="integer-arithmetic"></a>整数の算術演算  
  整数演算の結果のデータ型は、オペランドのデータ型に依存します。 一般に、Visual Basic では、結果のデータ型を決定するため、次のポリシーを使用します。  
   
--   二項演算子の両方のオペランドが同じであるかどうか、結果がそのデータ型をデータ型します。 例外は、 `Boolean`、これは強制的に`Short`します。  
+- 二項演算子の両方のオペランドが同じであるかどうか、結果がそのデータ型をデータ型します。 例外は、 `Boolean`、これは強制的に`Short`します。  
   
--   符号付きのオペランドの符号なしのオペランドが参加すると場合、結果には符号付きの型で、最低どちらかのオペランドとして。  
+- 符号付きのオペランドの符号なしのオペランドが参加すると場合、結果には符号付きの型で、最低どちらかのオペランドとして。  
   
--   それ以外の場合、結果は、通常の 2 つのオペランドのデータ型のうち、大きい方。  
+- それ以外の場合、結果は、通常の 2 つのオペランドのデータ型のうち、大きい方。  
   
  結果のデータ型がありますいずれかのオペランドのデータ型と同じに注意してください。  
   

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 74447f52c75ae22e513c6f07950630d37bad191a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790118"
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
 

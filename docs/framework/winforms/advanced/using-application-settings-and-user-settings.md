@@ -6,11 +6,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], how-to topics
 ms.assetid: 54682d3b-1cbf-4683-9351-012b8b4286b5
 ms.openlocfilehash: ea6994e653b3a06239634f5a0fddea84a07086e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777183"
 ---
 # <a name="using-application-settings-and-user-settings"></a>アプリケーション設定とユーザー設定の使用
 以降、.NET Framework 2.0 では、作成し、アプリケーションの実行のセッション間で保持されている値にアクセスできます。 これらの値と呼ばれる*設定*します。 設定は、ユーザー設定を表すことができますか、貴重な情報、アプリケーションを使用する必要があります。 たとえば、一連のアプリケーションの配色のユーザー設定を保存している設定を作成する可能性があります。 または、アプリケーションを使用するデータベースを指定する接続文字列を格納する場合があります。 設定は、両方に個々 のユーザーの設定を格納するプロファイルを作成して、コードの外部のアプリケーションに不可欠な情報の保存を許可します。  

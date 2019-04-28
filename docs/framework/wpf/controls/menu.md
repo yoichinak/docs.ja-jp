@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], Menu
 ms.assetid: 4317fb80-408c-47c7-9223-b29e4742c4ee
 ms.openlocfilehash: 93152861ff3a2ab1782b86b1de0951d89a8cc85d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770732"
 ---
 # <a name="menu"></a>メニュー
 A<xref:System.Windows.Controls.Menu>コマンドまたはイベント ハンドラーに関連付けられている要素の階層編成できるようにするコントロールです。 各<xref:System.Windows.Controls.Menu>複数含めることができます<xref:System.Windows.Controls.MenuItem>コントロール。 各<xref:System.Windows.Controls.MenuItem>コマンドの呼び出しまたは呼び出すことができます、`Click`イベント ハンドラー。 A<xref:System.Windows.Controls.MenuItem>複数持つこともできます<xref:System.Windows.Controls.MenuItem>サブメニューを形成する子要素として。  

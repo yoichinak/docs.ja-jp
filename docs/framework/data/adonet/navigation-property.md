@@ -3,11 +3,11 @@ title: ナビゲーションのプロパティ - ADO.NET
 ms.date: 03/30/2017
 ms.assetid: d0bf1a6a-1d84-484c-b7c3-b410fd8dc0b1
 ms.openlocfilehash: b57ecf9329aa9ea8afc07507613c9e3961bfd0a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772261"
 ---
 # <a name="navigation-property"></a>ナビゲーション プロパティ
 

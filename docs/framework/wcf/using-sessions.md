@@ -8,11 +8,11 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
 ms.openlocfilehash: fc7b86f3f2c2c6276681c324dbe9a390fdfdafd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791457"
 ---
 # <a name="using-sessions"></a>セッションの使用
 Windows Communication Foundation (WCF) アプリケーションで、*セッション*会話にメッセージのグループを関連付けます。 WCF のセッションとは異なる場合、セッション オブジェクトで使用できる[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーション、サポートされる動作、およびさまざまな方法で制御されます。 このトピックでは、WCF でセッションを有効にする機能を説明します。 アプリケーションとその使用方法。  
@@ -22,31 +22,31 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  WCF のセッションでは、次の主な概念の機能があります。  
   
--   呼び出し側アプリケーション (WCF クライアント) によって明示的に開始および終了される。  
+- 呼び出し側アプリケーション (WCF クライアント) によって明示的に開始および終了される。  
   
--   セッション中に配信されたメッセージは、受信された順に処理される。  
+- セッション中に配信されたメッセージは、受信された順に処理される。  
   
--   セッションはメッセージのグループを相互に関連付けて通信を行う。 関連付けにはさまざまな種類があります。 たとえば、あるセッション ベースのチャネルでは、共有ネットワーク接続に基づいてメッセージが相互に関連付けられる一方、別のセッション ベースのチャネルでは、メッセージ本文にある共有タグに基づいてメッセージが相互に関連付けられます。 セッションから派生可能な機能は、相互関連付けの性質によって異なります。  
+- セッションはメッセージのグループを相互に関連付けて通信を行う。 関連付けにはさまざまな種類があります。 たとえば、あるセッション ベースのチャネルでは、共有ネットワーク接続に基づいてメッセージが相互に関連付けられる一方、別のセッション ベースのチャネルでは、メッセージ本文にある共有タグに基づいてメッセージが相互に関連付けられます。 セッションから派生可能な機能は、相互関連付けの性質によって異なります。  
   
--   WCF のセッションに関連付けられた一般的なデータ ストアはありません。  
+- WCF のセッションに関連付けられた一般的なデータ ストアはありません。  
   
  慣れている場合、<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>クラス[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーションと機能を提供、可能性があります、その種のセッションと WCF のセッションの間の次の相違点に注意してください。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、常にサーバーによって開始される。  
+- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、常にサーバーによって開始される。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、暗黙的に順序付けされない。  
+- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、暗黙的に順序付けされない。  
   
--   [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、要求全体について一般的なデータ ストレージ機構を提供する。  
+- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、要求全体について一般的なデータ ストレージ機構を提供する。  
   
  このトピックでは、次の項目について説明します。  
   
--   サービス モデル レイヤーにおいてセッション ベースのバインディングを使用する場合の既定の実行動作。  
+- サービス モデル レイヤーにおいてセッション ベースのバインディングを使用する場合の既定の実行動作。  
   
--   WCF のセッション ベース、システム指定のバインディングが提供される機能の種類。  
+- WCF のセッション ベース、システム指定のバインディングが提供される機能の種類。  
   
--   セッションの要件を宣言するコントラクトの作成方法。  
+- セッションの要件を宣言するコントラクトの作成方法。  
   
--   セッションの作成と終了、およびセッションとサービス インスタンスの関係を理解し、制御する方法。  
+- セッションの作成と終了、およびセッションとサービス インスタンスの関係を理解し、制御する方法。  
   
 ## <a name="default-execution-behavior-using-sessions"></a>セッションを使用した既定の実行動作  
  セッションの開始を試みるバインディングは、 *セッション ベース* のバインディングと呼ばれます。 サービス コントラクトで、セッション ベースのバインディングを要求、許可、または拒否するように指定するときは、サービス コントラクト インターフェイス (またはクラス) の <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> 列挙値に設定します。 このプロパティの値は、既定では、 <xref:System.ServiceModel.SessionMode.Allowed>WCF サービスの実装でセッション ベースのバインディングを使用している場合をクライアントにつまり、サービスを確立して提供されるセッションを使用します。  
@@ -62,24 +62,24 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  WCF には、次の種類のセッション ベースのアプリケーションの動作が用意されています。  
   
--   2 者間の通信で特定のセキュリティ保護されたメッセージ交換について両者の合意が成立している場合、 <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> は、セキュリティ ベースのセッションをサポートします。 詳細については、次を参照してください。 [Securing Services](../../../docs/framework/wcf/securing-services.md)します。 たとえば、セキュリティ セッションと信頼できるセッションの両方のサポートを含む <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> バインディングは、既定では、メッセージを暗号化してデジタル署名を行うセキュリティで保護されたセッションのみを使用します。  
+- 2 者間の通信で特定のセキュリティ保護されたメッセージ交換について両者の合意が成立している場合、 <xref:System.ServiceModel.Channels.SecurityBindingElement?displayProperty=nameWithType> は、セキュリティ ベースのセッションをサポートします。 詳細については、次を参照してください。 [Securing Services](../../../docs/framework/wcf/securing-services.md)します。 たとえば、セキュリティ セッションと信頼できるセッションの両方のサポートを含む <xref:System.ServiceModel.WSHttpBinding?displayProperty=nameWithType> バインディングは、既定では、メッセージを暗号化してデジタル署名を行うセキュリティで保護されたセッションのみを使用します。  
   
--   <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> バインディングは、TCP/IP ベースのセッションをサポートしており、すべてのメッセージがソケット レベルの接続によって関連付けられます。  
+- <xref:System.ServiceModel.NetTcpBinding?displayProperty=nameWithType> バインディングは、TCP/IP ベースのセッションをサポートしており、すべてのメッセージがソケット レベルの接続によって関連付けられます。  
   
--   WS-ReliableMessaging 仕様を実装する <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 要素は、メッセージを順番に 1 回だけ配信するように構成できる、信頼できるセッションをサポートします。これにより、メッセージ交換時にメッセージが複数のノードを通過する場合でもメッセージが受信されます。 詳細については、次を参照してください。[信頼できるセッション](../../../docs/framework/wcf/feature-details/reliable-sessions.md)します。  
+- WS-ReliableMessaging 仕様を実装する <xref:System.ServiceModel.Channels.ReliableSessionBindingElement?displayProperty=nameWithType> 要素は、メッセージを順番に 1 回だけ配信するように構成できる、信頼できるセッションをサポートします。これにより、メッセージ交換時にメッセージが複数のノードを通過する場合でもメッセージが受信されます。 詳細については、次を参照してください。[信頼できるセッション](../../../docs/framework/wcf/feature-details/reliable-sessions.md)します。  
   
--   <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> バインディングは、MSMQ データグラム セッションを提供します。 詳細については、次を参照してください。 [WCF のキュー](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)します。  
+- <xref:System.ServiceModel.NetMsmqBinding?displayProperty=nameWithType> バインディングは、MSMQ データグラム セッションを提供します。 詳細については、次を参照してください。 [WCF のキュー](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)します。  
   
  <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> プロパティを設定しても、コントラクトが必要とするセッションの種類は指定されず、コントラクトがセッションを必要とすることだけが指定されます。  
   
 ## <a name="creating-a-contract-that-requires-a-session"></a>セッションを必要とするコントラクトの作成  
  セッションを必要とするコントラクトを作成するのは、サービス コントラクトで宣言する操作のグループをすべて同じセッション内で実行し、メッセージを順番に配信する必要がある場合です。 サービス コントラクトが必要とするセッションのサポート レベルをアサートするには、サービス コントラクト インターフェイスまたはクラスの <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A?displayProperty=nameWithType> プロパティを <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> 列挙値に設定して以下を指定します。  
   
--   コントラクトがセッションを必要とするかどうか。  
+- コントラクトがセッションを必要とするかどうか。  
   
--   コントラクトで、クライアントによるセッションの確立を許可するかどうか。  
+- コントラクトで、クライアントによるセッションの確立を許可するかどうか。  
   
--   コントラクトでセッションを禁止するかどうか。  
+- コントラクトでセッションを禁止するかどうか。  
   
  ただし、 <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A> プロパティを設定しても、コントラクトが必要とするセッション ベースの動作の種類は指定されません。 WCF 実行時に確認するように指示するサービスは、しない、またはセッションを確立できますのバインド (通信チャネルを作成) するように構成サービスを実装する場合。 ここでもバインディングは、選択する任意の種類のセッション ベースの動作 (セキュリティ セッション、トランスポート セッション、信頼できるセッション、またはこれらの一定の組み合わせ) によってこの要件を満たすことができます。 正確な動作は、選択した <xref:System.ServiceModel.SessionMode?displayProperty=nameWithType> 値によって決まります。 サービスの構成済みバインディングが <xref:System.ServiceModel.ServiceContractAttribute.SessionMode%2A>の値に一致しない場合は、例外がスローされます。 セッションをサポートするバインディングと、それが作成するチャネルは、セッション ベースのバインディングまたはチャネルと呼ばれます。  
   
@@ -93,11 +93,11 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
 ## <a name="sessions-and-service-instances"></a>セッションとサービス インスタンス  
  既定の WCF での動作をインスタンス化を使用する場合は、WCF クライアント オブジェクト間のすべての呼び出しが、同じサービス インスタンスによって処理されます。 そのため、アプリケーション レベルでは、セッションは、ローカル呼び出し動作と同様のアプリケーション動作を有効にすると考えることができます。 たとえば、ローカル オブジェクトを作成するときは、次のような流れになります。  
   
--   コンストラクターが呼び出されます。  
+- コンストラクターが呼び出されます。  
   
--   WCF クライアント オブジェクト参照に加えられたすべての後続の呼び出しは、同じオブジェクト インスタンスによって処理されます。  
+- WCF クライアント オブジェクト参照に加えられたすべての後続の呼び出しは、同じオブジェクト インスタンスによって処理されます。  
   
--   オブジェクト参照が破棄されると、デストラクターが呼び出されます。  
+- オブジェクト参照が破棄されると、デストラクターが呼び出されます。  
   
  既定のサービス インスタンス動作を使用している限り、セッションでは、クライアントとサービス間で同様の動作が有効になります。 サービス コントラクトがセッションを必要としたり、サポートしたりする場合は、 <xref:System.ServiceModel.OperationContractAttribute.IsInitiating%2A> プロパティと <xref:System.ServiceModel.OperationContractAttribute.IsTerminating%2A> プロパティを設定することで、1 つ以上のコントラクト操作をセッションの開始または終了としてマークできます。  
   
@@ -115,19 +115,19 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
  サービスは、クライアントとのセッションを開始しません。 WCF クライアント アプリケーションでセッション ベースのチャネルの有効期間とセッション自体の有効期間の間の直接的なリレーションシップが存在します。 そのため、クライアントは、新しいセッション ベースのチャネルを作成することによって新しいセッションを作成し、セッション ベースのチャネルを正常に閉じることによって、既存のセッションを破棄します。 クライアントは、次のいずれかを呼び出してサービス エンドポイントとのセッションを開始します。  
   
--   <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> の呼び出しによって返されるチャネルの <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+- <xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> の呼び出しによって返されるチャネルの <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
--   <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> によって生成された WCF クライアント オブジェクトで、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。  
+- <xref:System.ServiceModel.ClientBase%601.Open%2A?displayProperty=nameWithType> によって生成された WCF クライアント オブジェクトで、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)します。  
   
--   WCF クライアント オブジェクトのいずれかの型の発信側の操作 (既定では、すべての操作が開始される)。 最初の操作が呼び出されると、WCF クライアント オブジェクトは自動的にチャネルを開き、セッションを開始します。  
+- WCF クライアント オブジェクトのいずれかの型の発信側の操作 (既定では、すべての操作が開始される)。 最初の操作が呼び出されると、WCF クライアント オブジェクトは自動的にチャネルを開き、セッションを開始します。  
   
  通常は、クライアントが次のいずれかを呼び出して、サービス エンドポイントとのセッションを終了します。  
   
--   <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> の呼び出しによって返されるチャネルの <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
+- <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> の呼び出しによって返されるチャネルの <xref:System.ServiceModel.ChannelFactory%601.CreateChannel%2A?displayProperty=nameWithType>。  
   
--   <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> Svcutil.exe によって生成された WCF クライアント オブジェクトです。  
+- <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> Svcutil.exe によって生成された WCF クライアント オブジェクトです。  
   
--   WCF クライアント オブジェクトのいずれかの型の終了操作 (既定では、操作が終了していません。 コントラクトは、終了操作を明示的に指定する必要があります)。 最初の操作が呼び出されると、WCF クライアント オブジェクトは自動的にチャネルを開き、セッションを開始します。  
+- WCF クライアント オブジェクトのいずれかの型の終了操作 (既定では、操作が終了していません。 コントラクトは、終了操作を明示的に指定する必要があります)。 最初の操作が呼び出されると、WCF クライアント オブジェクトは自動的にチャネルを開き、セッションを開始します。  
   
  たとえば、「[方法:作成する Service That Requires Sessions](../../../docs/framework/wcf/feature-details/how-to-create-a-service-that-requires-sessions.md)だけでなく[Default Service Behavior](../../../docs/framework/wcf/samples/default-service-behavior.md)と[Instancing](../../../docs/framework/wcf/samples/instancing.md)サンプル。  
   

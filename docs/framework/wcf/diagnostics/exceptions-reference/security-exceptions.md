@@ -3,11 +3,11 @@ title: セキュリティ例外
 ms.date: 03/30/2017
 ms.assetid: 76d5e5cd-e4f4-404f-9a5a-ec3522494ad8
 ms.openlocfilehash: c1eeca9111837b9833de54ecafbc981d1c2b6343
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50201375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780862"
 ---
 # <a name="security-exceptions"></a>セキュリティ例外
 ここでは、すべてのセキュリティ例外を示します。  
@@ -29,8 +29,8 @@ ms.locfileid: "50201375"
 |CachedNegotiationStateQuotaReached|容量が指定された制限に達したため、サービスがネゴシエーションの状態をキャッシュできません。 要求を再試行してください。|  
 |CacheQuotaReached|項目を追加できません。 キャッシュの最大サイズが指定されています。|  
 |CannotDetermineSPNBasedOnAddress|クライアントは、SspiNegotiation/Kerberos に使用される指定された対象アドレスの ID から、サービス プリンシパル名を特定できません。 対象アドレス id は、UPN id である必要があります (acmedomain\\\alice) または SPN id (ホスト/振りマシン) のようにします。|  
-|CannotFindCert|StoreName、StoreLocation、FindType、FindValue という検索条件で検索しましたが、X.509 証明書が見つかりません。|  
-|CannotFindCertForTarget|指定された対象の StoreName、StoreLocation、FindType、FindValue という、指定された検索条件で検索しましたが、X.509 証明書が見つかりません。|  
+|CannotFindCert|指定した検索条件を使用して X.509 証明書を見つけることができません。StoreName, StoreLocation, FindType, FindValue.|  
+|CannotFindCertForTarget|指定した検索条件を使用して、X.509 証明書を見つけることができません。StoreName、StoreLocation、FindType、FindValue が指定した対象の。|  
 |CannotFindCorrelationStateForApplyingSecurity|応答側の応答にセキュリティを適用するために必要な相関状態が見つかりません。|  
 |CannotFindNegotiationState|指定されたコンテキストのネゴシエーションの状態が見つかりません。|  
 |CannotFindSecuritySession|指定された ID を持つセキュリティ セッションが見つかりません。|  
@@ -55,8 +55,8 @@ ms.locfileid: "50201375"
 |ExportOfBindingWithAsymmetricAndTransportSecurityNotSupported|セキュリティ ポリシーをエクスポートできませんでした。 このバインディングには、AsymmetricSecurityBindingElement とセキュリティで保護されたトランスポート バインド要素の両方が指定されています。 このようなバインド用のポリシーのエクスポートはサポートされていません。|  
 |ExportOfBindingWithSymmetricAndTransportSecurityNotSupported|セキュリティ ポリシーをエクスポートできませんでした。 このバインディングには、SymmetricSecurityBindingElement とセキュリティで保護されたトランスポート バインド要素の両方が指定されています。 このようなバインド用のポリシーのエクスポートはサポートされていません。|  
 |ExportOfBindingWithTransportSecurityBindingElementAndNoTransportSecurityNotSupported|セキュリティ ポリシーをエクスポートできませんでした。 このバインディングには、TransportSecurityBindingElement が指定されていますが、ITransportTokenAssertionProvider を実装するトランスポート バインド要素がありません。 このようなバインド用のポリシーのエクスポートはサポートされていません。 バインディングに ITransportTokenAssertionProvider インターフェイスを実装するトランスポート バインド要素を設定してください。|  
-|FoundMultipleCerts|StoreName、StoreLocation、FindType、FindValue という検索条件で検索しましたが、複数の X.509 証明書が見つかりました。 より具体的な検索条件を指定してください。|  
-|FoundMultipleCertsForTarget|指定された対象の StoreName、StoreLocation、FindType、FindValue という、指定された検索条件で検索したところ、複数の X.509 証明書が見つかりました。 より具体的な検索条件を指定してください。|  
+|FoundMultipleCerts|指定した検索条件を使用して複数の X.509 証明書を参照してください。StoreName, StoreLocation, FindType, FindValue. より具体的な検索条件を指定してください。|  
+|FoundMultipleCertsForTarget|指定した検索条件を使用して複数の X.509 証明書を参照してください。StoreName、StoreLocation、FindType、FindValue が指定した対象の。 より具体的な検索条件を指定してください。|  
 |HeaderDecryptionNotSupportedInWsSecurityJan2004|SecurityVersion.WSSecurityJan2004 は、ヘッダーの解読をサポートしていません。 SecurityVersion.WsSecurityXXX2005 以降を使用するか、トランスポート セキュリティを使用してメッセージ全体を暗号化してください。|  
 |IdentityCheckFailedForIncomingMessage|受信メッセージの ID 検査が失敗しました。 予測される ID が対象エンドポイントに指定されています。|  
 |IdentityCheckFailedForOutgoingMessage|送信メッセージの ID の確認が失敗しました。 予測される ID が対象エンドポイントに指定されています。|  
@@ -112,7 +112,7 @@ ms.locfileid: "50201375"
 |SecurityAuditFailToLoadDll|指定されたダイナミック リンク ライブラリ (dll) を読み込むことができませんでした。|  
 |SecurityAuditNotSupportedOnChannelFactory|SecurityAuditBehavior は、チャネル ファクトリではサポートされていません。|  
 |SecurityAuditPlatformNotSupported|現在のプラットフォームでは、セキュリティ ログへの監査メッセージの書き込みはサポートされていません。 監査メッセージはアプリケーション ログに書き込む必要があります。|  
-|SecurityBindingElementCannotBeExpressedInConfig|エンドポイントのセキュリティ ポリシーがインポートされました。 このセキュリティ ポリシーには、Windows Communication Foundation の構成では表現できない要件が含まれています。 生成された構成ファイルで、必須の SecurityBindingElement パラメーターに関するコメントを参照してください。 コードを使用して正しいバインド要素を作成してください。 構成ファイル内のバインド構成はセキュリティで保護されていません。|  
+|SecurityBindingElementCannotBeExpressedInConfig|エンドポイントのセキュリティ ポリシーがインポートされました。 このセキュリティ ポリシーには、Windows Communication Foundation の構成では表現できない要件が含まれています。 生成された構成ファイルで、必須の SecurityBindingElement パラメーターに関するコメントを参照してください。 コードを使用して正しいバインド要素を作成してください。 構成ファイル内のバインディング構成はセキュリティで保護されていません。|  
 |SecurityBindingSupportsOneWayOnly|指定されたコントラクトに対する指定されたバインディングの SecurityBinding は、OneWay 操作のみをサポートしています。|  
 |SecurityContextDoesNotAllowImpersonation|指定されたアクションを含む要求メッセージの UltimateReceiver ロールの SecurityContext が Windows ID に割り当てられていないため、偽装を開始できません。|  
 |SecurityListenerClosing|リスナーは、閉じている途中のため、セキュリティで保護された新しいメッセージ交換を受け入れていません。|  

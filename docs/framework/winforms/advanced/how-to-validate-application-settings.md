@@ -10,11 +10,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
 ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778847"
 ---
 # <a name="how-to-validate-application-settings"></a>方法: アプリケーション設定を検証する
 このトピックでは、アプリケーション設定を永続化する前に検証する方法について説明します。  
@@ -34,11 +34,11 @@ ms.locfileid: "59317891"
   
  イベント ハンドラーは、無効な値を検出すると、一般に次のいずれかのアクションを実行します。  
   
--   既定値など、正しいことがわかっている値を自動的に入力します。  
+- 既定値など、正しいことがわかっている値を自動的に入力します。  
   
--   サーバー コードのユーザーに情報を再度照会します。  
+- サーバー コードのユーザーに情報を再度照会します。  
   
--   などの関連付けられたアクションの前に発生したイベントの<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>と<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>を使用して、<xref:System.ComponentModel.CancelEventArgs>操作をキャンセルする引数。  
+- などの関連付けられたアクションの前に発生したイベントの<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>と<xref:System.Configuration.ApplicationSettingsBase.SettingsSaving>を使用して、<xref:System.ComponentModel.CancelEventArgs>操作をキャンセルする引数。  
   
  イベント処理の詳細については、「[イベント ハンドラーの概要](../event-handlers-overview-windows-forms.md)」を参照してください。  
   
@@ -46,9 +46,9 @@ ms.locfileid: "59317891"
   
 ### <a name="to-obtain-the-application-settings-object"></a>アプリケーション設定オブジェクトを取得するには  
   
--   次の項目のいずれかを実行して、アプリケーション設定オブジェクト (ラッパー インスタンス) への参照を取得します。  
+- 次の項目のいずれかを実行して、アプリケーション設定オブジェクト (ラッパー インスタンス) への参照を取得します。  
   
-    -   Visual Studio の**プロパティ エディター**で [アプリケーション設定] ダイアログ ボックスを使用して設定を作成した場合は、次の式によって、使用している言語用に生成された既定の設定オブジェクトを取得できます。  
+    - Visual Studio の**プロパティ エディター**で [アプリケーション設定] ダイアログ ボックスを使用して設定を作成した場合は、次の式によって、使用している言語用に生成された既定の設定オブジェクトを取得できます。  
   
         ```csharp  
         Configuration.Settings.Default   
@@ -60,11 +60,11 @@ ms.locfileid: "59317891"
   
          - または -  
   
-    -   Visual Basic 開発者がプロジェクト デザイナーを使用してアプリケーション設定を作成した場合は、[My.Settings オブジェクト](~/docs/visual-basic/language-reference/objects/my-settings-object.md)を使用して設定を取得できます。  
+    - Visual Basic 開発者がプロジェクト デザイナーを使用してアプリケーション設定を作成した場合は、[My.Settings オブジェクト](~/docs/visual-basic/language-reference/objects/my-settings-object.md)を使用して設定を取得できます。  
   
          - または -  
   
-    -   派生することによって、設定を作成した場合<xref:System.Configuration.ApplicationSettingsBase>を直接手動で、クラスのインスタンスを作成する必要があります。  
+    - 派生することによって、設定を作成した場合<xref:System.Configuration.ApplicationSettingsBase>を直接手動で、クラスのインスタンスを作成する必要があります。  
   
         ```csharp  
         MyCustomSettings settings = new MyCustomSettings();  

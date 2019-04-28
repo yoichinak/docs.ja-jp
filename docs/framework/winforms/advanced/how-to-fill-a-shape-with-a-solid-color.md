@@ -9,11 +9,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 ms.assetid: 06088b31-bac9-4ef3-9ebe-06c2c764d6df
 ms.openlocfilehash: d6fe7a252029ff80f21d99f7342fabb1d29fbe24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781291"
 ---
 # <a name="how-to-fill-a-shape-with-a-solid-color"></a>方法: 純色で図形を塗りつぶす
 純色で図形を塗りつぶす、作成、<xref:System.Drawing.SolidBrush>オブジェクト、および渡す<xref:System.Drawing.SolidBrush>オブジェクトの fill メソッドのいずれかの引数として、<xref:System.Drawing.Graphics>クラス。 次の例では、楕円の塗りつぶし色が赤にする方法を示します。  

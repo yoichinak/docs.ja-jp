@@ -3,11 +3,11 @@ title: <localIssuer>
 ms.date: 03/30/2017
 ms.assetid: 26bdd0df-0e7d-4b9e-bbeb-f28c53769385
 ms.openlocfilehash: 9a51387cd75d57a6828ecde1dcd788b056f7e27a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766403"
 ---
 # <a name="localissuer"></a>\<localIssuer>
 セキュリティ トークンの取得に使用される、ローカル発行者のアドレスとバインディングを指定します。  

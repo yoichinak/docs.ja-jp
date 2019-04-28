@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], walkthrough
 ms.assetid: cc844419-1a77-4906-95d9-060d79107fc7
 ms.openlocfilehash: a628665ccfa0a423667344b1fe81f132d6691b12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778923"
 ---
 # <a name="walkthrough-enabling-drag-and-drop-on-a-user-control"></a>チュートリアル: ユーザー コントロールでのドラッグ アンド ドロップの有効化
 
@@ -23,13 +23,13 @@ ms.locfileid: "59321680"
 
 このチュートリアルでは、次の作業について説明します。
 
--   カスタム ユーザー コントロールを作成します。
+- カスタム ユーザー コントロールを作成します。
 
--   ドラッグ元にユーザー コントロールを有効にします。
+- ドラッグ元にユーザー コントロールを有効にします。
 
--   ドロップ ターゲットにするユーザー コントロールを有効にします。
+- ドロップ ターゲットにするユーザー コントロールを有効にします。
 
--   ユーザー コントロールから削除されるデータを受信するパネルを有効にします。
+- ユーザー コントロールから削除されるデータを受信するパネルを有効にします。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -108,17 +108,17 @@ ms.locfileid: "59321680"
 
      これは、<xref:System.Windows.UIElement.OnMouseMove%2A>オーバーライドは、次のタスクを実行します。
 
-    -   マウスが移動中に、マウスの左ボタンが押されたかどうかを確認します。
+    - マウスが移動中に、マウスの左ボタンが押されたかどうかを確認します。
 
-    -   パッケージにデータを円、<xref:System.Windows.DataObject>します。 この場合、円コントロール パッケージを 3 つのデータ項目。塗りつぶしの色、高さの二重表現自体のコピーの文字列表現。
+    - パッケージにデータを円、<xref:System.Windows.DataObject>します。 この場合、円コントロール パッケージを 3 つのデータ項目。塗りつぶしの色、高さの二重表現自体のコピーの文字列表現。
 
-    -   静的な呼び出し<xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType>ドラッグ アンド ドロップ操作を開始するメソッド。 次の 3 つのパラメーターを渡す、<xref:System.Windows.DragDrop.DoDragDrop%2A>メソッド。
+    - 静的な呼び出し<xref:System.Windows.DragDrop.DoDragDrop%2A?displayProperty=nameWithType>ドラッグ アンド ドロップ操作を開始するメソッド。 次の 3 つのパラメーターを渡す、<xref:System.Windows.DragDrop.DoDragDrop%2A>メソッド。
 
-        -   `dragSource` – このコントロールへの参照。
+        - `dragSource` – このコントロールへの参照。
 
-        -   `data` –<xref:System.Windows.DataObject>前のコードで作成します。
+        - `data` –<xref:System.Windows.DataObject>前のコードで作成します。
 
-        -   `allowedEffects` – の許可されているドラッグ アンド ドロップ操作<xref:System.Windows.DragDropEffects.Copy>または<xref:System.Windows.DragDropEffects.Move>します。
+        - `allowedEffects` – の許可されているドラッグ アンド ドロップ操作<xref:System.Windows.DragDropEffects.Copy>または<xref:System.Windows.DragDropEffects.Move>します。
 
 3. **F5** キーを押してアプリケーションをビルドし、実行します。
 
@@ -143,9 +143,9 @@ ms.locfileid: "59321680"
 
      これは、<xref:System.Windows.UIElement.OnGiveFeedback%2A>オーバーライドは、次のタスクを実行します。
 
-    -   チェック、<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>でドロップ先の設定されている値<xref:System.Windows.UIElement.DragOver>イベント ハンドラー。
+    - チェック、<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>でドロップ先の設定されている値<xref:System.Windows.UIElement.DragOver>イベント ハンドラー。
 
-    -   基づくカスタム カーソル設定、<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>値。 カーソルは、どのようなデータを削除する効果は必要があります。 詳細については、ユーザーに視覚的なフィードバックを提供するものです。
+    - 基づくカスタム カーソル設定、<xref:System.Windows.GiveFeedbackEventArgs.Effects%2A>値。 カーソルは、どのようなデータを削除する効果は必要があります。 詳細については、ユーザーに視覚的なフィードバックを提供するものです。
 
 3. **F5** キーを押してアプリケーションをビルドし、実行します。
 
@@ -181,15 +181,15 @@ ms.locfileid: "59321680"
 
      これは、<xref:System.Windows.UIElement.OnDrop%2A>オーバーライドは、次のタスクを実行します。
 
-    -   使用して、<xref:System.Windows.DataObject.GetDataPresent%2A>ドラッグ中のデータに文字列オブジェクトが含まれているかどうかをチェックするメソッド。
+    - 使用して、<xref:System.Windows.DataObject.GetDataPresent%2A>ドラッグ中のデータに文字列オブジェクトが含まれているかどうかをチェックするメソッド。
 
-    -   使用して、<xref:System.Windows.DataObject.GetData%2A>メソッドが存在する場合は、文字列データを抽出します。
+    - 使用して、<xref:System.Windows.DataObject.GetData%2A>メソッドが存在する場合は、文字列データを抽出します。
 
-    -   使用して、<xref:System.Windows.Media.BrushConverter>を文字列に変換しようとする、<xref:System.Windows.Media.Brush>します。
+    - 使用して、<xref:System.Windows.Media.BrushConverter>を文字列に変換しようとする、<xref:System.Windows.Media.Brush>します。
 
-    -   変換が成功した場合は、適用するブラシ、<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Ellipse>円コントロールの UI を提供します。
+    - 変換が成功した場合は、適用するブラシ、<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Ellipse>円コントロールの UI を提供します。
 
-    -   マーク、<xref:System.Windows.UIElement.Drop>イベントを処理します。 このイベントを受信する他の要素が円のユーザー コントロールに処理を認識できるように処理済みとしてドロップ イベントをマークする必要があります。
+    - マーク、<xref:System.Windows.UIElement.Drop>イベントを処理します。 このイベントを受信する他の要素が円のユーザー コントロールに処理を認識できるように処理済みとしてドロップ イベントをマークする必要があります。
 
 3. **F5** キーを押してアプリケーションをビルドし、実行します。
 
@@ -222,11 +222,11 @@ ms.locfileid: "59321680"
 
      これは、<xref:System.Windows.UIElement.OnDragOver%2A>オーバーライドは、次のタスクを実行します。
 
-    -   <xref:System.Windows.DragEventArgs.Effects%2A> プロパティを <xref:System.Windows.DragDropEffects.None> に設定します。
+    - <xref:System.Windows.DragEventArgs.Effects%2A> プロパティを <xref:System.Windows.DragDropEffects.None> に設定します。
 
-    -   実行される同じチェックが実行、<xref:System.Windows.UIElement.OnDrop%2A>円ユーザー コントロールがドラッグしたデータを処理できるかどうかを判断するメソッド。
+    - 実行される同じチェックが実行、<xref:System.Windows.UIElement.OnDrop%2A>円ユーザー コントロールがドラッグしたデータを処理できるかどうかを判断するメソッド。
 
-    -   ユーザー コントロールには、データを処理できますが、設定、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティを<xref:System.Windows.DragDropEffects.Copy>または<xref:System.Windows.DragDropEffects.Move>します。
+    - ユーザー コントロールには、データを処理できますが、設定、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティを<xref:System.Windows.DragDropEffects.Copy>または<xref:System.Windows.DragDropEffects.Move>します。
 
 3. **F5** キーを押してアプリケーションをビルドし、実行します。
 
@@ -252,11 +252,11 @@ ms.locfileid: "59321680"
 
      これは、<xref:System.Windows.UIElement.OnDragEnter%2A>オーバーライドは、次のタスクを実行します。
 
-    -   保存、<xref:System.Windows.Shapes.Shape.Fill%2A>のプロパティ、<xref:System.Windows.Shapes.Ellipse>で、`_previousFill`変数。
+    - 保存、<xref:System.Windows.Shapes.Shape.Fill%2A>のプロパティ、<xref:System.Windows.Shapes.Ellipse>で、`_previousFill`変数。
 
-    -   実行される同じチェックが実行、<xref:System.Windows.UIElement.OnDrop%2A>にデータを変換できるかどうかを判断するメソッド、<xref:System.Windows.Media.Brush>します。
+    - 実行される同じチェックが実行、<xref:System.Windows.UIElement.OnDrop%2A>にデータを変換できるかどうかを判断するメソッド、<xref:System.Windows.Media.Brush>します。
 
-    -   有効なデータが変換される場合<xref:System.Windows.Media.Brush>、それを適用、<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Ellipse>します。
+    - 有効なデータが変換される場合<xref:System.Windows.Media.Brush>、それを適用、<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Ellipse>します。
 
 4. 次の追加<xref:System.Windows.UIElement.OnDragLeave%2A>のクラス処理を提供するオーバーライド、<xref:System.Windows.UIElement.DragLeave>イベント。
 
@@ -265,7 +265,7 @@ ms.locfileid: "59321680"
 
      これは、<xref:System.Windows.UIElement.OnDragLeave%2A>オーバーライドは、次のタスクを実行します。
 
-    -   適用される、<xref:System.Windows.Media.Brush>に保存されている、`_previousFill`変数を<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Ellipse>円ユーザー コントロールの UI を提供します。
+    - 適用される、<xref:System.Windows.Media.Brush>に保存されている、`_previousFill`変数を<xref:System.Windows.Shapes.Shape.Fill%2A>の<xref:System.Windows.Shapes.Ellipse>円ユーザー コントロールの UI を提供します。
 
 5. **F5** キーを押してアプリケーションをビルドし、実行します。
 
@@ -296,11 +296,11 @@ ms.locfileid: "59321680"
 
      これは、<xref:System.Windows.UIElement.DragOver>イベント ハンドラーは、次のタスクを実行します。
 
-    -   パッケージ化された「オブジェクト」のデータにはドラッグしたデータが含まれているを確認します、<xref:System.Windows.DataObject>円のユーザー コントロールへの呼び出しで渡されると<xref:System.Windows.DragDrop.DoDragDrop%2A>します。
+    - パッケージ化された「オブジェクト」のデータにはドラッグしたデータが含まれているを確認します、<xref:System.Windows.DataObject>円のユーザー コントロールへの呼び出しで渡されると<xref:System.Windows.DragDrop.DoDragDrop%2A>します。
 
-    -   「オブジェクト」のデータが存在する場合、チェックするかどうか、 **Ctrl**キーが押されました。
+    - 「オブジェクト」のデータが存在する場合、チェックするかどうか、 **Ctrl**キーが押されました。
 
-    -   場合、 **Ctrl**キーを押す、セット、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティを<xref:System.Windows.DragDropEffects.Copy>します。 それ以外の場合、設定、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティを<xref:System.Windows.DragDropEffects.Move>します。
+    - 場合、 **Ctrl**キーを押す、セット、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティを<xref:System.Windows.DragDropEffects.Copy>します。 それ以外の場合、設定、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティを<xref:System.Windows.DragDropEffects.Move>します。
 
 5. 次のコードを追加、<xref:System.Windows.UIElement.Drop>イベント ハンドラー。
 
@@ -309,15 +309,15 @@ ms.locfileid: "59321680"
 
      これは、<xref:System.Windows.UIElement.Drop>イベント ハンドラーは、次のタスクを実行します。
 
-    -   チェックするかどうか、<xref:System.Windows.UIElement.Drop>イベントが既に処理されました。 別の円が削除された場合 Circle をたとえば、ハンドル、<xref:System.Windows.UIElement.Drop>イベント、たくも処理する円形を格納しているパネル。
+    - チェックするかどうか、<xref:System.Windows.UIElement.Drop>イベントが既に処理されました。 別の円が削除された場合 Circle をたとえば、ハンドル、<xref:System.Windows.UIElement.Drop>イベント、たくも処理する円形を格納しているパネル。
 
-    -   場合、<xref:System.Windows.UIElement.Drop>イベントが処理されない、チェックするかどうか、 **Ctrl**キーが押されました。
+    - 場合、<xref:System.Windows.UIElement.Drop>イベントが処理されない、チェックするかどうか、 **Ctrl**キーが押されました。
 
-    -   場合、 **Ctrl**キーが押されたときに、<xref:System.Windows.UIElement.Drop>が発生し、制御が円のコピーに追加、<xref:System.Windows.Controls.Panel.Children%2A>のコレクション、<xref:System.Windows.Controls.StackPanel>します。
+    - 場合、 **Ctrl**キーが押されたときに、<xref:System.Windows.UIElement.Drop>が発生し、制御が円のコピーに追加、<xref:System.Windows.Controls.Panel.Children%2A>のコレクション、<xref:System.Windows.Controls.StackPanel>します。
 
-    -   場合、 **Ctrl**から円を移動キーが押されていない、<xref:System.Windows.Controls.Panel.Children%2A>をその親パネルのコレクション、<xref:System.Windows.Controls.Panel.Children%2A>上にドロップされたパネルのコレクション。
+    - 場合、 **Ctrl**から円を移動キーが押されていない、<xref:System.Windows.Controls.Panel.Children%2A>をその親パネルのコレクション、<xref:System.Windows.Controls.Panel.Children%2A>上にドロップされたパネルのコレクション。
 
-    -   セット、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティに通知する、<xref:System.Windows.DragDrop.DoDragDrop%2A>メソッドを移動またはコピー操作が実行されたかどうか。
+    - セット、<xref:System.Windows.DragEventArgs.Effects%2A>プロパティに通知する、<xref:System.Windows.DragDrop.DoDragDrop%2A>メソッドを移動またはコピー操作が実行されたかどうか。
 
 6. **F5** キーを押してアプリケーションをビルドし、実行します。
 

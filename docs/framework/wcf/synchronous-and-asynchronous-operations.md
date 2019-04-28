@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], asynchronous operations
 ms.assetid: db8a51cb-67e6-411b-9035-e5821ed350c9
 ms.openlocfilehash: 3d7e44a468388f6d9a8f30d7fea29ec465cd8664
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935513"
 ---
 # <a name="synchronous-and-asynchronous-operations"></a>同期操作と非同期操作
 ここでは、非同期サービス操作の実装と呼び出しについて説明します。  
@@ -27,24 +27,24 @@ ms.locfileid: "59770868"
   
  サービス コントラクトがサービスとクライアントの両方の実装から独立していることで、WCF アプリケーションでは次の形式の非同期実行が可能になります。  
   
--   クライアントは、同期メッセージ交換を使用して要求/応答操作を非同期に呼び出すことができます。  
+- クライアントは、同期メッセージ交換を使用して要求/応答操作を非同期に呼び出すことができます。  
   
--   サービスは、同期メッセージ交換を使用して要求/応答操作を非同期に実装できます。  
+- サービスは、同期メッセージ交換を使用して要求/応答操作を非同期に実装できます。  
   
--   クライアントまたはサービスの実装に関係なく、一方向のメッセージ交換が可能です。  
+- クライアントまたはサービスの実装に関係なく、一方向のメッセージ交換が可能です。  
   
 ### <a name="suggested-asynchronous-scenarios"></a>推奨される非同期シナリオ  
  操作のサービス実装でブロッキング呼び出し (I/O 処理の実行など) を作成する場合は、サービス操作の実装で非同期手法を使用します。 非同期操作を実装している場合、非同期の操作とメソッドを呼び出して、できるだけ非同期呼び出しパスを拡張するようにします。 たとえば、`BeginOperationTwo()` 内から `BeginOperationOne()` を呼び出します。  
   
--   次のような場合には、クライアントまたは呼び出し元アプリケーションで非同期手法を使用します。  
+- 次のような場合には、クライアントまたは呼び出し元アプリケーションで非同期手法を使用します。  
   
--   中間層アプリケーションから操作を呼び出す場合  (このようなシナリオの詳細については、「[中間層クライアント アプリケーション](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)」を参照してください)。  
+- 中間層アプリケーションから操作を呼び出す場合  (このようなシナリオの詳細については、「[中間層クライアント アプリケーション](../../../docs/framework/wcf/feature-details/middle-tier-client-applications.md)」を参照してください)。  
   
--   ASP.NET ページ内で操作を呼び出す場合、非同期ページを使用します。  
+- ASP.NET ページ内で操作を呼び出す場合、非同期ページを使用します。  
   
--   シングル スレッドのアプリケーション (Windows フォームや Windows Presentation Foundation (WPF) など) から操作を呼び出す場合。 イベント ベースの非同期呼び出しモデルを使用すると、結果イベントが UI スレッドで発生するので複数のスレッドを独自に処理する必要がなく、アプリケーションの応答性が向上します。  
+- シングル スレッドのアプリケーション (Windows フォームや Windows Presentation Foundation (WPF) など) から操作を呼び出す場合。 イベント ベースの非同期呼び出しモデルを使用すると、結果イベントが UI スレッドで発生するので複数のスレッドを独自に処理する必要がなく、アプリケーションの応答性が向上します。  
   
--   一般に、同期呼び出しと非同期呼び出しのいずれかを選択する場合は、非同期呼び出しを選択します。  
+- 一般に、同期呼び出しと非同期呼び出しのいずれかを選択する場合は、非同期呼び出しを選択します。  
   
 ### <a name="implementing-an-asynchronous-service-operation"></a>非同期サービス操作の実装  
  非同期操作は、次の 3 つの方法のいずれかを使用して実装できます。  
@@ -118,11 +118,11 @@ public class AsyncExample
   
  クライアント アプリケーションでの呼び出し方法に関係なく、非同期に実行するコントラクト操作 `X` を定義するには次の処理を実行します。  
   
--   パターン `BeginOperation` と `EndOperation` を使用する 2 つのメソッドを定義します。  
+- パターン `BeginOperation` と `EndOperation` を使用する 2 つのメソッドを定義します。  
   
--   `BeginOperation` メソッドには操作のための `in` パラメーターと `ref` パラメーターがあり、<xref:System.IAsyncResult> 型を返します。  
+- `BeginOperation` メソッドには操作のための `in` パラメーターと `ref` パラメーターがあり、<xref:System.IAsyncResult> 型を返します。  
   
--   `EndOperation` メソッドには <xref:System.IAsyncResult> パラメーター、`out` パラメーター、および `ref` パラメーターがあり、操作の戻り値の型を返します。  
+- `EndOperation` メソッドには <xref:System.IAsyncResult> パラメーター、`out` パラメーター、および `ref` パラメーターがあり、操作の戻り値の型を返します。  
   
  たとえば、次のメソッドを参照してください。  
   

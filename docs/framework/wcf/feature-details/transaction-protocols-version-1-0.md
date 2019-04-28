@@ -3,14 +3,14 @@ title: トランザクション プロトコル バージョン 1.0
 ms.date: 03/30/2017
 ms.assetid: 034679af-0002-402e-98a8-ef73dcd71bb6
 ms.openlocfilehash: a1501bbd5364773359f9b62602ba4bb684f076ba
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764632"
 ---
 # <a name="transaction-protocols-version-10"></a>トランザクション プロトコル バージョン 1.0
-Windows Communication Foundation (WCF) のバージョン 1 では、Ws-atomic Transaction および Ws-coordination プロトコルのバージョン 1.0 を実装します。 バージョン 1.1 の詳細については、[トランザクション プロトコル](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)を参照してください。  
+Windows Communication Foundation (WCF) のバージョン 1 では、Ws-atomic Transaction および Ws-coordination プロトコルのバージョン 1.0 を実装します。 バージョン 1.1 の詳細については、次を参照してください。[トランザクション プロトコル](../../../../docs/framework/wcf/feature-details/transaction-protocols.md)します。  
   
 |仕様/ドキュメント|Link|  
 |-----------------------------|----------|  
@@ -45,13 +45,13 @@ Windows Communication Foundation (WCF) のバージョン 1 では、Ws-atomic T
   
  この図および表では、セキュリティの観点から見た次の 4 つのクラスのメッセージを示しています。  
   
--   アクティベーション メッセージ (CreateCoordinationContext と CreateCoordinationContextResponse)  
+- アクティベーション メッセージ (CreateCoordinationContext と CreateCoordinationContextResponse)  
   
--   登録メッセージ (Register と RegisterResponse)  
+- 登録メッセージ (Register と RegisterResponse)  
   
--   プロトコル メッセージ (Prepare、Rollback、Commit、Aborted など)  
+- プロトコル メッセージ (Prepare、Rollback、Commit、Aborted など)  
   
--   アプリケーション メッセージ  
+- アプリケーション メッセージ  
   
  最初の 3 つのメッセージ クラスはトランザクション マネージャーのメッセージと考えられます。これらのクラスのバインド構成については、後の「アプリケーション メッセージ交換」で説明します。 4 番目のメッセージ クラスは、アプリケーション間のメッセージであり、後の「メッセージの例」で説明します。 このセクションでは、WCF によって使用されるこれらのクラスの各プロトコル バインディングについて説明します。  
   
@@ -78,9 +78,9 @@ Windows Communication Foundation (WCF) のバージョン 1 では、Ws-atomic T
 #### <a name="https-transport-configuration"></a>HTTPS トランスポート構成  
  トランザクション マネージャー ID を確立するために X.509 証明書が使用されます。 クライアントおよびサーバーの承認が必要です。クライアントおよびサーバーの承認は、以下のような実装詳細の状態にしておきます。  
   
--   R1111:発信元コンピューターの完全修飾ドメイン名 (FQDN) に一致するサブジェクト名、ネットワーク経由で提示された X.509 証明書が必要です。  
+- R1111:発信元コンピューターの完全修飾ドメイン名 (FQDN) に一致するサブジェクト名、ネットワーク経由で提示された X.509 証明書が必要です。  
   
--   B1112:DNS は、機能を正常に X.509 のサブジェクト名のチェックのシステムで各送信者と受信者ペアの間である必要があります。  
+- B1112:DNS は、機能を正常に X.509 のサブジェクト名のチェックのシステムで各送信者と受信者ペアの間である必要があります。  
   
 #### <a name="activation-and-registration-binding-configuration"></a>アクティベーションと登録のバインド構成  
  WCF では、HTTPS 経由での相関関係で要求/応答の二重バインディングが必要です。 (関連付けと要求/応答メッセージ交換パターンの詳細については、WS-AtomicTransaction 仕様のセクション 8 を参照してください)。  
@@ -103,9 +103,9 @@ Windows Communication Foundation (WCF) のバージョン 1 では、Ws-atomic T
   
  WS-AtomicTransaction 仕様のセクション 8 では、関連付けとメッセージ交換のパターンについて詳細に説明されています。  
   
--   R1222:受信すると、 `CreateCoordinationContext`、コーディネーターを発行する必要があります、`SecurityContextToken`関連付けられているシークレットを使用して`STx`します。 このトークンは、WS-Trust の仕様に従って、`t:IssuedTokens` ヘッダー内に返されます。  
+- R1222:受信すると、 `CreateCoordinationContext`、コーディネーターを発行する必要があります、`SecurityContextToken`関連付けられているシークレットを使用して`STx`します。 このトークンは、WS-Trust の仕様に従って、`t:IssuedTokens` ヘッダー内に返されます。  
   
--   R1223:既存のコーディネーション コンテキスト内でアクティブ化が発生した場合、`t:IssuedTokens`ヘッダーを`SecurityContextToken`に関連付けられた既存のコンテキストをフローする必要があります、`CreateCoordinationContext`メッセージ。  
+- R1223:既存のコーディネーション コンテキスト内でアクティブ化が発生した場合、`t:IssuedTokens`ヘッダーを`SecurityContextToken`に関連付けられた既存のコンテキストをフローする必要があります、`CreateCoordinationContext`メッセージ。  
   
  新しい`t:IssuedTokens`への送信のヘッダーを生成する`wscoor:CreateCoordinationContextResponse`メッセージ。  
   
@@ -126,9 +126,9 @@ Windows Communication Foundation (WCF) のバージョン 1 では、Ws-atomic T
 ## <a name="application-message-exchange"></a>アプリケーション メッセージ交換  
  アプリケーションでは、バインディングが次のセキュリティ要件を満たしている限り、アプリケーション間メッセージに任意のバインディングを使用できます。  
   
--   R2001:アプリケーション間メッセージをフローする必要があります、`t:IssuedTokens`ヘッダーと共に、`CoordinationContext`メッセージのヘッダー。  
+- R2001:アプリケーション間メッセージをフローする必要があります、`t:IssuedTokens`ヘッダーと共に、`CoordinationContext`メッセージのヘッダー。  
   
--   R2002:整合性と機密性`t:IssuedToken`提供する必要があります。  
+- R2002:整合性と機密性`t:IssuedToken`提供する必要があります。  
   
  `CoordinationContext` ヘッダーには `wscoor:Identifier` が含まれます。 定義`xsd:AnyURI`、絶対と相対 Uri を使用できるように WCF のみをサポート`wscoor:Identifiers`、絶対 Uri であります。  
   

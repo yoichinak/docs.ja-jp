@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 12ef215253ca02048a5a3fc2c7c682823233929f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779822"
 ---
 # <a name="icorprofilerinfo2dostacksnapshot-method"></a>ICorProfilerInfo2::DoStackSnapshot メソッド
 指定されたスレッドのスタックでマネージド フレームをについて説明し、コールバックを通じてプロファイラーに情報を送信します。  
@@ -91,11 +91,11 @@ HRESULT DoStackSnapshot(
   
  非同期のスタック ウォークを簡単にデッドロックが発生するか、アクセス違反が次のガイドラインに従わない場合、します。  
   
--   直接のスレッドを中断する場合は、マネージ コードを実行しないが、スレッドが別のスレッドを中断できますを注意してください。  
+- 直接のスレッドを中断する場合は、マネージ コードを実行しないが、スレッドが別のスレッドを中断できますを注意してください。  
   
--   常にブロック、 [icorprofilercallback::threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)スレッドのスタック ウォークが完了するまでのコールバック。  
+- 常にブロック、 [icorprofilercallback::threaddestroyed](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-threaddestroyed-method.md)スレッドのスタック ウォークが完了するまでのコールバック。  
   
--   プロファイラーがガベージ コレクションをトリガーできる CLR 関数を呼び出すときに、ロックを保持しないでください。 つまり、所有元のスレッドがガベージ コレクションをトリガーする呼び出しを行う場合、ロックを保持しないでください。  
+- プロファイラーがガベージ コレクションをトリガーできる CLR 関数を呼び出すときに、ロックを保持しないでください。 つまり、所有元のスレッドがガベージ コレクションをトリガーする呼び出しを行う場合、ロックを保持しないでください。  
   
  またがデッドロックの危険性を呼び出す場合`DoStackSnapshot`プロファイラーが別のターゲット スレッドのスタックを学ぶことができるように作成したスレッドから。 最初に作成したスレッドが特定`ICorProfilerInfo*`メソッド (含む`DoStackSnapshot`)、CLR はスレッドごと、そのスレッドで CLR 固有の初期化を実行します。 プロファイラーには、スタック ウォーク、しようとして対象のスレッドが中断されている場合、およびその対象スレッドは、このスレッドごとの初期化を実行するために必要なロックを所有するが発生した場合は、デッドロックが発生します。 このデッドロックを回避することを最初の呼び出しに`DoStackSnapshot`からプロファイラーが作成したスレッドについて説明しますが、別が対象に、スレッドは、まず対象のスレッドを中断しないようにします。 この最初の呼び出しにより、スレッドごとの初期化がデッドロックなしで完了できます。 場合`DoStackSnapshot`が成功し、少なくとも 1 つのフレームを報告その後、対象のスレッドと呼び出しを中断するプロファイラーが作成したスレッドの安全ななります`DoStackSnapshot`ターゲット スレッドのスタック ウォークします。  
   

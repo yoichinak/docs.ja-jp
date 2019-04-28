@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 91bb1a9416e577dbb5cc96e8be87033c53232811
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765272"
 ---
 # <a name="lockclrversion-function"></a>LockClrVersion 関数
 により、ホストがプロセス内で、CLR を明示的に初期化する前に使用する共通言語ランタイム (CLR) のバージョンを決定します。  
@@ -72,15 +72,15 @@ typedef HRESULT ( __stdcall *FLockClrVersionCallback ) ();
   
 3. 指定された関数`hostCallback`続いて、次の一連の呼び出し。  
   
-    -   指定された関数、`pBeginHostSetup`パラメーター。  
+    - 指定された関数、`pBeginHostSetup`パラメーター。  
   
-    -   `CorBindToRuntimeEx` (または別のランタイム初期化関数)。  
+    - `CorBindToRuntimeEx` (または別のランタイム初期化関数)。  
   
-    -   [Iclrruntimehost::sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)します。  
+    - [Iclrruntimehost::sethostcontrol](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)します。  
   
-    -   [Iclrruntimehost::start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)します。  
+    - [Iclrruntimehost::start](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)します。  
   
-    -   指定された関数、`pEndHostSetup`パラメーター。  
+    - 指定された関数、`pEndHostSetup`パラメーター。  
   
  すべての呼び出し`pBeginHostSetup`に`pEndHostSetup`1 つのスレッドまたはファイバーは、同じ論理スタックで発生する必要があります。 このスレッドは、対象スレッドと異なる場合が`hostCallback`が呼び出されます。  
   

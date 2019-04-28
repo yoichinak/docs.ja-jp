@@ -13,11 +13,11 @@ helpviewer_keywords:
 - execution [Visual Basic], stopping
 ms.assetid: c9a9fde0-d649-4662-9bef-bd0146ebc2a7
 ms.openlocfilehash: 80d6734945324f3f517b256051486273f6b687ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783853"
 ---
 # <a name="stop-statement-visual-basic"></a>Stop ステートメント (Visual Basic)
 実行を中断します。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding, WCF Data Services
 ms.assetid: b32e1d49-c214-4cb1-867e-88fbb3d08c8d
 ms.openlocfilehash: fb2a7c8e1cf3fbae4c6417dab492343ead991204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793445"
 ---
 # <a name="binding-data-to-controls-wcf-data-services"></a>コントロールへのデータのバインド (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、`ComboBox` や `ListView` などのコントロールを <xref:System.Data.Services.Client.DataServiceCollection%601> クラスのインスタンスにバインドすることができます。 このコレクションは <xref:System.Collections.ObjectModel.ObservableCollection%601> クラスから継承され、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] フィードのデータが含まれます。 このクラスは、項目が追加または削除されたときに通知を行う動的なデータ コレクションを表します。 インスタンスを使用すると<xref:System.Data.Services.Client.DataServiceCollection%601>、データ バインディングの[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアント ライブラリによって追跡されるオブジェクトにこれらのイベントを処理する、<xref:System.Data.Services.Client.DataServiceContext>バインドされている UI 要素のデータの同期を維持します。  
@@ -73,17 +73,17 @@ ms.locfileid: "59517877"
 ## <a name="customizing-data-binding-behaviors"></a>データ バインディングの動作のカスタマイズ  
  <xref:System.Data.Services.Client.DataServiceCollection%601> クラスを使用すると、コレクションへの変更が行われたとき (オブジェクトが追加または削除されたときなど)、およびコレクション内のオブジェクトのプロパティに対して変更が行われたときに発生するイベントを先に取得できます。 データ バインディング イベントを変更して、次の制約を含む既定の動作をオーバーライドできます。  
   
--   デリゲート内では検証は実行されません。  
+- デリゲート内では検証は実行されません。  
   
--   エンティティを追加すると関連エンティティが自動的に追加されます。  
+- エンティティを追加すると関連エンティティが自動的に追加されます。  
   
--   エンティティを削除しても関連エンティティは削除されません。  
+- エンティティを削除しても関連エンティティは削除されません。  
   
  <xref:System.Data.Services.Client.DataServiceCollection%601> の新しいインスタンスを作成するとき、次のパラメーターを指定して、バインドされたオブジェクトが変更されたときに発生するイベントを処理するメソッドに対してデリゲートを定義できます。  
   
--   `entityChanged` - バインドされたオブジェクトのプロパティが変更されたときに呼び出されるメソッド。 この <xref:System.Func%602> デリゲートは、<xref:System.Data.Services.Client.EntityChangedParams> オブジェクトを受け入れ、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> で <xref:System.Data.Services.Client.DataServiceContext> を呼び出す既定の動作を引き続き発生させるかどうかを示すブール値を返します。  
+- `entityChanged` - バインドされたオブジェクトのプロパティが変更されたときに呼び出されるメソッド。 この <xref:System.Func%602> デリゲートは、<xref:System.Data.Services.Client.EntityChangedParams> オブジェクトを受け入れ、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> で <xref:System.Data.Services.Client.DataServiceContext> を呼び出す既定の動作を引き続き発生させるかどうかを示すブール値を返します。  
   
--   `entityCollectionChanged` - バインディング コレクションに対してオブジェクトの追加または削除が行われたときに呼び出されるメソッド。 この <xref:System.Func%602> デリゲートは、<xref:System.Data.Services.Client.EntityCollectionChangedParams> オブジェクトを受け入れ、既定の動作 (<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> での <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> アクションの <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> または <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> アクションの <xref:System.Data.Services.Client.DataServiceContext> 呼び出し) を引き続き発生させるかどうかを示すブール値を返します。  
+- `entityCollectionChanged` - バインディング コレクションに対してオブジェクトの追加または削除が行われたときに呼び出されるメソッド。 この <xref:System.Func%602> デリゲートは、<xref:System.Data.Services.Client.EntityCollectionChangedParams> オブジェクトを受け入れ、既定の動作 (<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> での <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Add> アクションの <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> または <xref:System.Collections.Specialized.NotifyCollectionChangedAction.Remove> アクションの <xref:System.Data.Services.Client.DataServiceContext> 呼び出し) を引き続き発生させるかどうかを示すブール値を返します。  
   
 > [!NOTE]
 >  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、これらのデリゲートで実装したカスタムの動作を検証しません。  
@@ -101,15 +101,15 @@ ms.locfileid: "59517877"
 ## <a name="data-binding-with-custom-client-data-classes"></a>カスタム クライアント データ クラスでのデータ バインディング  
  オブジェクトを <xref:System.Data.Services.Client.DataServiceCollection%601> に読み込むには、オブジェクト自身が <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装する必要があります。 データ サービスを使用するときに生成されるクライアント クラス、**サービス参照の追加** ダイアログ ボックスまたは[DataSvcUtil.exe](../../../../docs/framework/data/wcf/wcf-data-service-client-utility-datasvcutil-exe.md)ツールは、このインターフェイスを実装します。 独自のクライアント データ クラスを提供する場合、データ バインディングに別の種類のコレクションを使用する必要があります。 オブジェクトが変更されると、データ バインド コントロール内のイベントを処理して、<xref:System.Data.Services.Client.DataServiceContext> クラスの次のメソッドを呼び出す必要があります。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> - 新しいオブジェクトがコレクションに追加されたとき。  
+- <xref:System.Data.Services.Client.DataServiceContext.AddObject%2A> - 新しいオブジェクトがコレクションに追加されたとき。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - オブジェクトがコレクションから削除されたとき。  
+- <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> - オブジェクトがコレクションから削除されたとき。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> - コレクション内のオブジェクトでプロパティが変更されたとき。  
+- <xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A> - コレクション内のオブジェクトでプロパティが変更されたとき。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> - オブジェクトが関連オブジェクトのコレクションに追加されたとき。  
+- <xref:System.Data.Services.Client.DataServiceContext.AddLink%2A> - オブジェクトが関連オブジェクトのコレクションに追加されたとき。  
   
--   <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> - オブジェクトが関連オブジェクトのコレクションに追加されたとき。  
+- <xref:System.Data.Services.Client.DataServiceContext.SetLink%2A> - オブジェクトが関連オブジェクトのコレクションに追加されたとき。  
   
  詳細については、次を参照してください。[データ サービスの更新](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)します。  
   

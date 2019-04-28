@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cardinal splines
 ms.assetid: 09b3797a-6294-422d-9adf-a5a0a7695c0c
 ms.openlocfilehash: 4588f6f606f0f479aeae1d143f23175ec4be32a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779133"
 ---
 # <a name="cardinal-splines-in-gdi"></a>GDI+ でのカーディナル スプライン
 カーディナル スプラインは、大きな曲線を形成に参加している個々 の曲線のシーケンスです。 スプラインは、ポイントおよびテンション パラメーターの配列を指定します。 カーディナル スプラインは、配列内の各ポイントをスムーズに通過します。曲線のテンションの急激な変化やがあります。 次の図は、一連のポイントと、セット内の各ポイントを通過するカーディナル スプラインを示します。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - operator <<, Visual Basic left shift operator
 ms.assetid: fdb93d25-81ba-417f-b808-41207bfb8440
 ms.openlocfilehash: 75c16c27dc919ba365cbe3c28c61a1e46496b0ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768291"
 ---
 # <a name="-operator-visual-basic"></a>\<\< 演算子 (Visual Basic)
 ビット パターン上で算術左シフトを実行します。  
@@ -60,15 +60,15 @@ result = pattern << amount
   
  前の例の結果は次のとおりです。  
   
--   `result1` 192 (0000 0000 1100 0000) です。  
+- `result1` 192 (0000 0000 1100 0000) です。  
   
--   `result2` 3072 (0000 1100 0000 0000)。  
+- `result2` 3072 (0000 1100 0000 0000)。  
   
--   `result3` -32768 (1000 0000 0000 0000) です。  
+- `result3` -32768 (1000 0000 0000 0000) です。  
   
--   `result4` 384 (0000 0001 1000 0000) です。  
+- `result4` 384 (0000 0001 1000 0000) です。  
   
--   `result5` 0 (シフト 15 桁) です。  
+- `result5` 0 (シフト 15 桁) です。  
   
  シフト数`result4`17 として計算されますが 1 に等しいと 15 です。  
   

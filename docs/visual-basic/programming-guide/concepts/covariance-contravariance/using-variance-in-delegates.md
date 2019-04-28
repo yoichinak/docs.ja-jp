@@ -3,11 +3,11 @@ title: デリゲート (Visual Basic) の分散の使用
 ms.date: 07/20/2015
 ms.assetid: 7b5c20f1-6416-46a3-94b6-f109c31c842c
 ms.openlocfilehash: 19eb3070c1b8359a4eb050e7cf2f16622f66ebe9
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787258"
 ---
 # <a name="using-variance-in-delegates-visual-basic"></a>デリゲート (Visual Basic) の分散の使用
 

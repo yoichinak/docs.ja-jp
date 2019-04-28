@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], setting the first day of the week
 ms.assetid: 788c5325-b721-44ec-95bf-9b680ba0f6a2
 ms.openlocfilehash: 8928a78735392920d893661c70554bd35eba2886
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768486"
 ---
 # <a name="monthcalendar-control-overview-windows-forms"></a>MonthCalendar コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロールがユーザーに表示し、日付情報を設定するための直感的なグラフィカル インターフェイスを表示します。 カレンダーを表示、: 曜日、強調表示されている日付の選択範囲を下にある列には、月の番号付きの日を含むグリッドです。 1 か月のキャプションのどちら側にある矢印ボタンをクリックして、別の月を選択できます。 異なり、類似<xref:System.Windows.Forms.DateTimePicker>コントロールでは、このコントロールでは、複数の日付を選択することができます。 詳細については、<xref:System.Windows.Forms.DateTimePicker>コントロールを参照してください[DateTimePicker コントロール](datetimepicker-control-windows-forms.md)します。  

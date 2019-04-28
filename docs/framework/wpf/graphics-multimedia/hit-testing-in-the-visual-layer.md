@@ -9,11 +9,11 @@ helpviewer_keywords:
 - visual layer [WPF], hit testing functionality
 ms.assetid: b1a64b61-14be-4d75-b89a-5c67bebb2c7b
 ms.openlocfilehash: 0cb8d0656765e5bc2c2a54ef5f282a67d8579f20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762451"
 ---
 # <a name="hit-testing-in-the-visual-layer"></a>ビジュアル層でのヒット テスト
 ここでは、ビジュアル層で提供されるヒット テスト機能の概要について説明します。 ヒット テストのサポートでは、ジオメトリまたはポイント値の表示内容内かどうかを確認できます。、 <xref:System.Windows.Media.Visual>、複数のオブジェクトを選択する四角形を描くなどのユーザー インターフェイスの動作を実装することができます。  
@@ -22,13 +22,13 @@ ms.locfileid: "59082179"
 ## <a name="hit-testing-scenarios"></a>ヒット テストのシナリオ  
  <xref:System.Windows.UIElement>クラスには、<xref:System.Windows.UIElement.InputHitTest%2A>メソッドで、指定した座標値を使用して、要素に対してヒット テストすることができます。 多くの場合、<xref:System.Windows.UIElement.InputHitTest%2A>メソッドは、要素のテスト ヒットを実装するのに必要な機能を提供します。 ただし、ビジュアル層でのヒット テストを実装する必要があるシナリオもいくつか存在します。  
   
--   非に対するヒット テスト<xref:System.Windows.UIElement>オブジェクト。ヒット テスト以外を行う場合に適用されます<xref:System.Windows.UIElement>などのオブジェクト<xref:System.Windows.Media.DrawingVisual>やグラフィックス オブジェクト。  
+- 非に対するヒット テスト<xref:System.Windows.UIElement>オブジェクト。ヒット テスト以外を行う場合に適用されます<xref:System.Windows.UIElement>などのオブジェクト<xref:System.Windows.Media.DrawingVisual>やグラフィックス オブジェクト。  
   
--   ヒット テスト ジオメトリを使用します。これは、点の座標の値ではなく、ジオメトリ オブジェクトを使用してヒット テストする必要がある場合は適用されます。  
+- ヒット テスト ジオメトリを使用します。これは、点の座標の値ではなく、ジオメトリ オブジェクトを使用してヒット テストする必要がある場合は適用されます。  
   
--   複数のオブジェクトに対してテストをヒットするには。これは、重なっているオブジェクトなど、複数のオブジェクトに対してヒット テストする必要があるときに適用されます。 最初のビジュアルだけでなく、ジオメトリまたはポイントと交差するすべてのビジュアルの結果を取得できます。  
+- 複数のオブジェクトに対してテストをヒットするには。これは、重なっているオブジェクトなど、複数のオブジェクトに対してヒット テストする必要があるときに適用されます。 最初のビジュアルだけでなく、ジオメトリまたはポイントと交差するすべてのビジュアルの結果を取得できます。  
   
--   無視<xref:System.Windows.UIElement>ヒット テスト ポリシー。これは、無視する必要がある場合は適用されます、<xref:System.Windows.UIElement>ヒット テスト ポリシーで、要素が無効になっているかどうか、または非表示としてこのような要因を考慮します。  
+- 無視<xref:System.Windows.UIElement>ヒット テスト ポリシー。これは、無視する必要がある場合は適用されます、<xref:System.Windows.UIElement>ヒット テスト ポリシーで、要素が無効になっているかどうか、または非表示としてこのような要因を考慮します。  
   
 > [!NOTE]
 >  ビジュアル層でのテスト ヒットを示すコード サンプル全体については、「[DrawingVisuals を使用したヒット テストのサンプル](https://go.microsoft.com/fwlink/?LinkID=159994)」と「[Win32 相互運用によるヒット テストのサンプル](https://go.microsoft.com/fwlink/?LinkID=159995)」を参照してください。  

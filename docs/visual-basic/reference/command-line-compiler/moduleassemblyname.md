@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -moduleassemblyname compiler option [Visual Basic]
 ms.assetid: 013a57b6-f425-4dd3-b333-512d72c42f55
 ms.openlocfilehash: b0279c5ac658c7d0749f62066abbd705d0a271af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793901"
 ---
 # <a name="-moduleassemblyname"></a>-moduleassemblyname
 このモジュールが一部となるアセンブリの名前を指定します。  
@@ -33,9 +33,9 @@ ms.locfileid: "58832415"
   
  `-moduleassemblyname`オプションは、次に該当する場合にのみ必要があります。  
   
--   モジュール内のデータ型へのアクセスを必要な`Friend`参照先アセンブリの型。  
+- モジュール内のデータ型へのアクセスを必要な`Friend`参照先アセンブリの型。  
   
--   参照アセンブリがモジュールをビルドするアセンブリにフレンド アセンブリのアクセスを付与します。  
+- 参照アセンブリがモジュールをビルドするアセンブリにフレンド アセンブリのアクセスを付与します。  
   
  モジュールの作成方法の詳細については、次を参照してください。 [/target (Visual Basic)](../../../visual-basic/reference/command-line-compiler/target.md)します。 フレンド アセンブリの詳細については、次を参照してください。[フレンド アセンブリ](../../../standard/assembly/friend-assemblies.md)します。  
   

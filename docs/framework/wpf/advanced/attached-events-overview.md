@@ -13,11 +13,11 @@ helpviewer_keywords:
 - attached events [WPF], definition
 ms.assetid: 2c40eae3-80e4-4a45-ae09-df6c9ab4d91e
 ms.openlocfilehash: 7b7b0fcc9612994803bb23e985f44c483e708857
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777144"
 ---
 # <a name="attached-events-overview"></a>添付イベントの概要
 [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] は言語コンポーネントと*添付イベント*と呼ばれている種類のイベントを定義します。 添付イベントという概念を利用すると、イベントを実際に定義または継承する要素にではなく、任意の要素に特定のイベントのハンドラーを追加できます。 この場合、イベントを発生させる可能性があるオブジェクトとターゲット処理インスタンスのいずれもイベントを定義せず、"所有" しません。  
@@ -64,9 +64,9 @@ ms.locfileid: "59613591"
   
  パターンは次のとおりです。  
   
--   メソッド**追加*EventName*ハンドラー** 2 つのパラメーターを使用します。 最初のパラメーターは、イベント ハンドラーを追加するインスタンスです。 The second parameter is the event handler to add. メソッドである必要があります`public`と`static`、戻り値はありません。  
+- メソッド**追加*EventName*ハンドラー** 2 つのパラメーターを使用します。 最初のパラメーターは、イベント ハンドラーを追加するインスタンスです。 The second parameter is the event handler to add. メソッドである必要があります`public`と`static`、戻り値はありません。  
   
--   メソッド**削除*EventName*ハンドラー** 2 つのパラメーターを使用します。 最初のパラメーターは、イベント ハンドラーを削除するインスタンスです。 2 番目のパラメーターは、削除するイベント ハンドラーです。 メソッドである必要があります`public`と`static`、戻り値はありません。  
+- メソッド**削除*EventName*ハンドラー** 2 つのパラメーターを使用します。 最初のパラメーターは、イベント ハンドラーを削除するインスタンスです。 2 番目のパラメーターは、削除するイベント ハンドラーです。 メソッドである必要があります`public`と`static`、戻り値はありません。  
   
  **追加*EventName*ハンドラー**アクセサー メソッドを容易に、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]属性が要素で宣言されたイベント ハンドラーをアタッチするときに処理します。 **追加*EventName*ハンドラー**と**削除*EventName*ハンドラー**メソッドでは、コードのイベント ハンドラー ストアへのアクセスも有効にします添付イベント。  
   

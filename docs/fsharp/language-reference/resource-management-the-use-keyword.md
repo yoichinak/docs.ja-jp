@@ -3,11 +3,11 @@ title: リソースの管理:Use キーワード
 description: については、F#キーワード 'use' と 'using' の関数は、初期化とリソースの解放を制御できます。
 ms.date: 05/16/2016
 ms.openlocfilehash: 127877a3823faade9bc3c6aefea655c86cc348e7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770488"
 ---
 # <a name="resource-management-the-use-keyword"></a>リソースの管理:Use キーワード
 
@@ -34,13 +34,13 @@ ms.locfileid: "53613090"
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-2/snippet6301.fs)]
 
 > [!NOTE]
-> 使用することができます`use`計算式で、カスタマイズされたバージョンの場合、`use`式を使用します。 詳細については、[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)を参照してください。
+> 使用することができます`use`計算式で、カスタマイズされたバージョンの場合、`use`式を使用します。 詳細については、次を参照してください。[シーケンス](sequences.md)、[非同期ワークフロー](asynchronous-workflows.md)、および[コンピュテーション式](computation-expressions.md)します。
 
 ## <a name="using-function"></a>関数を使用してください。
 
 `using`関数には、次の形式。
 
-`using` (*expression1*)*関数またはラムダ*
+`using` (*expression1*) *function-or-lambda*
 
 `using`式、 *expression1*破棄する必要がありますオブジェクトを作成します。 結果*expression1* (破棄する必要がありますオブジェクト) が、引数*値*を*関数またはラムダ*、1 つが必要とする関数によって生成された値に一致する型の引数の残り*expression1*、またはその型の引数を受け取るラムダ式。 ランタイムが呼び出す関数の実行の最後に、`Dispose`リソースを解放し、(値がない限り`null`、後者 Dispose の呼び出しは行われません)。
 
