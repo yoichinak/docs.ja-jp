@@ -3,11 +3,11 @@ title: SqlClient による LocalDB のサポート
 ms.date: 03/30/2017
 ms.assetid: cf796898-5575-46f2-ae6e-21e5aa8c4123
 ms.openlocfilehash: 416945964af7fda5ed5aaab2f5aae1bbc8928556
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670054"
 ---
 # <a name="sqlclient-support-for-localdb"></a>SqlClient による LocalDB のサポート
 SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server の軽量バージョンは提供されます。 このトピックでは、LocalDB データベースに接続する方法について説明します。  
@@ -17,13 +17,13 @@ SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server
   
  LocalDB の主な機能の概要  
   
--   sqllocaldb.exe または app.config ファイルを使用して LocalDB インスタンスを作成および開始する。  
+- sqllocaldb.exe または app.config ファイルを使用して LocalDB インスタンスを作成および開始する。  
   
--   sqlcmd.exe を使用して LocalDB インスタンスにデータベースを追加および変更する。 たとえば、 `sqlcmd -S (localdb)\myinst`のようにします。  
+- sqlcmd.exe を使用して LocalDB インスタンスにデータベースを追加および変更する。 たとえば、 `sqlcmd -S (localdb)\myinst`のようにします。  
   
--   `AttachDBFilename` 接続文字列キーワードを使用して LocalDB インスタンスにデータベースを追加する。 `AttachDBFilename`を使用していて、 `Database` 接続文字列キーワードでデータベースの名前を指定しない場合、アプリケーションを閉じると、データベースは LocalDB インスタンスから削除されます。  
+- `AttachDBFilename` 接続文字列キーワードを使用して LocalDB インスタンスにデータベースを追加する。 `AttachDBFilename`を使用していて、 `Database` 接続文字列キーワードでデータベースの名前を指定しない場合、アプリケーションを閉じると、データベースは LocalDB インスタンスから削除されます。  
   
--   接続文字列に LocalDB インスタンスを指定する。 たとえば、インスタンス名が `myInstance`の場合、接続文字列には次の行が含まれます。  
+- 接続文字列に LocalDB インスタンスを指定する。 たとえば、インスタンス名が `myInstance`の場合、接続文字列には次の行が含まれます。  
   
     ```  
     server=(localdb)\\myInstance  
@@ -36,7 +36,7 @@ SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server
 ## <a name="programmatically-create-a-named-instance"></a>名前付きインスタンスをプログラムによって作成する  
  アプリケーションは、次のように名前付きインスタンスを作成してデータベースを指定できます。  
   
--   app.config ファイルに作成するための LocalDB インスタンスを次のように指定する。  インスタンスのバージョン番号は LocalDB インストールのバージョン番号と同じである必要があります。  
+- app.config ファイルに作成するための LocalDB インスタンスを次のように指定する。  インスタンスのバージョン番号は LocalDB インストールのバージョン番号と同じである必要があります。  
   
     ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
@@ -54,9 +54,9 @@ SQL Server コード名 Denali 以降では、LocalDB と呼ばれる SQL Server
     </configuration>  
     ```  
   
--   `server` 接続文字列キーワードを使用してインスタンス名を指定する。  `server` 接続文字列キーワードで指定されたインスタンス名は app.config ファイルで指定された名前と一致する必要があります。  
+- `server` 接続文字列キーワードを使用してインスタンス名を指定する。  `server` 接続文字列キーワードで指定されたインスタンス名は app.config ファイルで指定された名前と一致する必要があります。  
   
--   .MDF ファイルを指定するには、 `AttachDBFilename` 接続文字列キーワードを使用する。  
+- .MDF ファイルを指定するには、 `AttachDBFilename` 接続文字列キーワードを使用する。  
   
 ## <a name="see-also"></a>関連項目
 

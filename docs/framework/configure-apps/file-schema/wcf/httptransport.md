@@ -3,11 +3,11 @@ title: <httpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8b30c065-b32a-4fa3-8eb4-5537a9c6b897
 ms.openlocfilehash: 7a06772f078f9187298ad0b4b9c8b0f51c849928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122734"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756066"
 ---
 # <a name="httptransport"></a>\<httpTransport>
 カスタム バインディングの SOAP メッセージを送信する HTTP トランスポートを指定します。  

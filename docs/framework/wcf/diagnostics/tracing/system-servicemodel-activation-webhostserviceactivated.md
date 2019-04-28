@@ -3,11 +3,11 @@ title: System.ServiceModel.Activation.WebHostServiceActivated
 ms.date: 03/30/2017
 ms.assetid: fc3e76d8-4057-474d-815f-1f73f9574588
 ms.openlocfilehash: 4aa73d7b6a00d1101d96886fa98b1579d93437e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186798"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752855"
 ---
 # <a name="systemservicemodelactivationwebhostserviceactivated"></a>System.ServiceModel.Activation.WebHostServiceActivated
 System.ServiceModel.Activation.WebHostServiceActivated  

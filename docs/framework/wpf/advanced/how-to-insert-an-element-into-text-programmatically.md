@@ -12,11 +12,11 @@ helpviewer_keywords:
 - text [WPF], inserting elements
 ms.assetid: 97bd950a-25ac-4e42-a311-94b6420d4136
 ms.openlocfilehash: ea9850c8490ec37032d4565c6b3375e3116d4313
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757116"
 ---
 # <a name="how-to-insert-an-element-into-text-programmatically"></a>方法: プログラムでテキストに要素を挿入する
 次の例は、2 つを使用する方法を示しています。<xref:System.Windows.Documents.TextPointer>を適用するテキスト内の範囲を指定するオブジェクト、<xref:System.Windows.Documents.Span>する要素。  

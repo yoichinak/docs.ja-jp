@@ -3,11 +3,11 @@ title: <idn> 要素 (Uri 設定)
 ms.date: 03/30/2017
 ms.assetid: 16c8e869-1791-4cf5-9244-3d3c738f60ec
 ms.openlocfilehash: 2d2729f9120d6b6fe673904ad2bf6d005ddf5469
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705117"
 ---
 # <a name="idn-element-uri-settings"></a>\<idn > 要素 (Uri 設定)
 ドメイン名に国際化ドメイン名 (IDN) 解析が適用されるかどうかを指定します。  
@@ -60,15 +60,15 @@ ms.locfileid: "59321758"
   
  IDN を使用する DNS サーバーによって可能な値は 3 つです。  
   
--   idn を有効になっている = All  
+- idn を有効になっている = All  
   
      この値は、任意の Unicode ドメイン名を等価の Punycode (IDN 名) に変換されます。  
   
--   idn を有効になっている AllExceptIntranet を =  
+- idn を有効になっている AllExceptIntranet を =  
   
      この値は、等価の Punycode (IDN 名) を使用するローカルのイントラネットではなく、すべての Unicode ドメイン名に変換されます。 ここでローカルのイントラネットで国際名を処理するために、イントラネットに使用される DNS サーバーは、Unicode の名前解決をサポートする必要があります。  
   
--   idn を有効になっている = なし  
+- idn を有効になっている = なし  
   
      この値は Punycode を使用する Unicode ドメイン名を変換できません。 これは、.NET Framework 2.0 の動作と一貫した既定値です。  
   

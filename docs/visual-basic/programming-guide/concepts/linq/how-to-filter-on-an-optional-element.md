@@ -3,11 +3,11 @@ title: '方法: 省略可能な要素 (Visual Basic) でフィルター処理し
 ms.date: 07/20/2015
 ms.assetid: a74b76ad-6889-4185-a189-d6ef2c63841e
 ms.openlocfilehash: f2a1c7d4091af80e79a6758bcede8f4ccc753f03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855388"
 ---
 # <a name="how-to-filter-on-an-optional-element-visual-basic"></a>方法: 省略可能な要素 (Visual Basic) でフィルター処理します。
 要素に対するフィルター処理が、その要素が XML ドキュメント内に存在しているかどうか明確でない場合でも必要になることがあります。 特定の要素が子要素を持たない場合、その要素に対するフィルター処理によって null 参照例外が発生しないように検索を実行する必要があります。 次の例では、`Child5` 要素には `Type` 子要素はありませんが、クエリは正常に実行されます。  

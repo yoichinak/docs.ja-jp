@@ -17,11 +17,11 @@ ms.assetid: a33fd5f9-2de9-4653-a4f0-d9df25082c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2ba3172b1a82c0a9f624a49eb63a193dd29faac1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750733"
 ---
 # <a name="link-demands"></a>リンク確認要求
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

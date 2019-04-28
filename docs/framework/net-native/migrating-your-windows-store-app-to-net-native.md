@@ -1,47 +1,47 @@
-﻿---
+---
 title: Windows ストア アプリの .NET ネイティブへの移行
 ms.date: 03/30/2017
 ms.assetid: 4153aa18-6f56-4a0a-865b-d3da743a1d05
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1d14e4ad45a4d5805187b993f2fc622a16dac09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61867104"
 ---
 # <a name="migrating-your-windows-store-app-to-net-native"></a>Windows ストア アプリの .NET ネイティブへの移行
 .NET ネイティブ アプリ、Windows ストアまたは開発者のコンピューター上の静的なコンパイルを提供します。 これは、デバイス上で Just-In-Time (JIT) コンパイラまたは [ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../docs/framework/tools/ngen-exe-native-image-generator.md) によって Windows ストア アプリに対して実行される動的なコンパイルとは異なります。 違いは、.NET ネイティブ試行との互換性を維持するために、 [Windows ストア アプリ用 .NET](https://docs.microsoft.com/previous-versions/windows/apps/br230302%28v=vs.140%29)します。 ほとんどの場合、Windows ストア アプリ用 .NET で機能する機能は、.NET ネイティブでも動作します。  ただし、動作に違いがある場合もあります。 このドキュメントでは、次の領域で、標準的な Windows ストア アプリ用 .NET と .NET ネイティブのこれらの違いについて説明します。  
   
--   [全般的なランタイムの違い](#Runtime)  
+- [全般的なランタイムの違い](#Runtime)  
   
--   [動的プログラミングの違い](#Dynamic)  
+- [動的プログラミングの違い](#Dynamic)  
   
--   [リフレクションに関するその他の違い](#Reflection)  
+- [リフレクションに関するその他の違い](#Reflection)  
   
--   [サポートされていないシナリオと API](#Unsupported)  
+- [サポートされていないシナリオと API](#Unsupported)  
   
--   [Visual Studio の違い](#VS)  
+- [Visual Studio の違い](#VS)  
   
 <a name="Runtime"></a>   
 ## <a name="general-runtime-differences"></a>全般的なランタイムの違い  
   
--   例外など<xref:System.TypeLoadException>共通のアプリを実行すると、JIT コンパイラによってスローされる言語ランタイム (CLR) は、通常、.NET ネイティブで処理すると、コンパイル時エラーになります。  
+- 例外など<xref:System.TypeLoadException>共通のアプリを実行すると、JIT コンパイラによってスローされる言語ランタイム (CLR) は、通常、.NET ネイティブで処理すると、コンパイル時エラーになります。  
   
--   アプリの UI スレッドから <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> メソッドを呼び出さないでください。 これは、結果、.NET ネイティブのデッドロック。  
+- アプリの UI スレッドから <xref:System.GC.WaitForPendingFinalizers%2A?displayProperty=nameWithType> メソッドを呼び出さないでください。 これは、結果、.NET ネイティブのデッドロック。  
   
--   静的クラス コンストラクターの呼び出し順序に依存しないでください。 .NET ネイティブでは、呼び出し順序が標準ランタイムでの順序と異なるです。 (標準ランタイムを使用する場合であっても、静的クラス コンストラクターの実行順序に依存しないでください。)  
+- 静的クラス コンストラクターの呼び出し順序に依存しないでください。 .NET ネイティブでは、呼び出し順序が標準ランタイムでの順序と異なるです。 (標準ランタイムを使用する場合であっても、静的クラス コンストラクターの実行順序に依存しないでください。)  
   
--   スレッドでの呼び出しを行わない無限ループ (たとえば、 `while(true);`) によって、アプリが停止する可能性があります。 同様に、長時間または無限の待機によってもアプリが停止する可能性があります。  
+- スレッドでの呼び出しを行わない無限ループ (たとえば、 `while(true);`) によって、アプリが停止する可能性があります。 同様に、長時間または無限の待機によってもアプリが停止する可能性があります。  
   
--   特定の汎用初期化サイクルは、.NET ネイティブで例外をスローしません。 たとえば、次のコードは標準 CLR では <xref:System.TypeLoadException> 例外をスローします。 .NET ネイティブでは、以下のことはしません。  
+- 特定の汎用初期化サイクルは、.NET ネイティブで例外をスローしません。 たとえば、次のコードは標準 CLR では <xref:System.TypeLoadException> 例外をスローします。 .NET ネイティブでは、以下のことはしません。  
   
      [!code-csharp[ProjectN#8](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat1.cs#8)]  
   
--   場合によっては、.NET ネイティブは、.NET Framework クラス ライブラリのさまざまな実装を提供します。 メソッドから返されるオブジェクトは、常に、返される型のメンバーを実装します。 ただし、その補助的な実装が異なるため、その他の .NET Framework プラットフォームの場合と同じ型セットへのオブジェクトのキャストを行うことができない場合があります。 たとえば、 <xref:System.Collections.Generic.IEnumerable%601> や <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> などのメソッドにより返される <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> インターフェイス オブジェクトを `T[]`にキャストできない場合があります。  
+- 場合によっては、.NET ネイティブは、.NET Framework クラス ライブラリのさまざまな実装を提供します。 メソッドから返されるオブジェクトは、常に、返される型のメンバーを実装します。 ただし、その補助的な実装が異なるため、その他の .NET Framework プラットフォームの場合と同じ型セットへのオブジェクトのキャストを行うことができない場合があります。 たとえば、 <xref:System.Collections.Generic.IEnumerable%601> や <xref:System.Reflection.TypeInfo.DeclaredMembers%2A?displayProperty=nameWithType> などのメソッドにより返される <xref:System.Reflection.TypeInfo.DeclaredProperties%2A?displayProperty=nameWithType> インターフェイス オブジェクトを `T[]`にキャストできない場合があります。  
   
--   WinInet キャッシュは既定では、Windows Store 用の .NET アプリで有効になっていないが、.NET ネイティブで実行されます。 これによりパフォーマンスが向上しますが、作業セットへの影響があります。 開発者のアクションは必要ありません。  
+- WinInet キャッシュは既定では、Windows Store 用の .NET アプリで有効になっていないが、.NET ネイティブで実行されます。 これによりパフォーマンスが向上しますが、作業セットへの影響があります。 開発者のアクションは必要ありません。  
   
 <a name="Dynamic"></a>   
 ## <a name="dynamic-programming-differences"></a>動的プログラミングの違い  
@@ -58,12 +58,12 @@ ms.locfileid: "59163138"
   
  .NET ネイティブの既定の構成は、ほとんどの開発者だけで十分ですが、ランタイム ディレクティブを使用してその構成を fine を調整する一部の開発者 (. rd.xml) ファイル。 さらに、場合によっては、.NET ネイティブ コンパイラはメタデータのリフレクションで使用できる必要があり、次の場合に特に、ヒントを確認できません。  
   
--   <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> や <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> などの一部の構造体は、静的に決定できません。  
+- <xref:System.Type.MakeGenericType%2A?displayProperty=nameWithType> や <xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> などの一部の構造体は、静的に決定できません。  
   
--   コンパイラでインスタンス化を決定できないため、リフレクション対象のジェネリック型をランタイム ディレクティブで指定する必要があります。 これは、すべてのコードを含める必要があるだけではなく、ジェネリック型へのリフレクションによって無限サイクルが生じる可能性があるためです (たとえば、ジェネリック型でジェネリック メソッドが呼び出された場合)。  
+- コンパイラでインスタンス化を決定できないため、リフレクション対象のジェネリック型をランタイム ディレクティブで指定する必要があります。 これは、すべてのコードを含める必要があるだけではなく、ジェネリック型へのリフレクションによって無限サイクルが生じる可能性があるためです (たとえば、ジェネリック型でジェネリック メソッドが呼び出された場合)。  
   
 > [!NOTE]
-> ランタイム ディレクティブは、ランタイム ディレクティブ (.rd.xml) ファイルで定義されます。 このファイルの使用方法に関する全般的な情報は、「[.NET ネイティブの概要](../../../docs/framework/net-native/getting-started-with-net-native.md)」(.NET ネイティブの概要) をご覧ください。 ランタイム ディレクティブについては、「 [ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」をご覧ください。   
+>  ランタイム ディレクティブは、ランタイム ディレクティブ (.rd.xml) ファイルで定義されます。 このファイルの使用方法に関する全般的な情報は、「[Getting Started with .NET Native](../../../docs/framework/net-native/getting-started-with-net-native.md)」(.NET ネイティブの概要) をご覧ください。 ランタイム ディレクティブについては、「 [Runtime Directives (rd.xml) Configuration File Reference](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)」をご覧ください。  
   
  .NET ネイティブも含まれています、開発者の既定セット以外のどの型がリフレクションをサポートする決定に役立つツールをプロファイリングします。  
   
@@ -73,67 +73,67 @@ ms.locfileid: "59163138"
   
  .NET ネイティブ。  
   
--   .NET Framework クラス ライブラリでの型とメンバーに対するプライベート リフレクションはサポートされません。 ただし、独自のプライベート型とメンバー、およびサードパーティ ライブラリの型とメンバーに対するリフレクションは行うことができます。  
+- .NET Framework クラス ライブラリでの型とメンバーに対するプライベート リフレクションはサポートされません。 ただし、独自のプライベート型とメンバー、およびサードパーティ ライブラリの型とメンバーに対するリフレクションは行うことができます。  
   
--   <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> プロパティは、戻り値を表す `false` オブジェクトに対し、正しく <xref:System.Reflection.ParameterInfo> を返します。 Windows ストア アプリ用 .NET の場合、これは `true`を返します。 中間言語 (IL) はこれを直接サポートせず、解釈は言語に任されます。  
+- <xref:System.Reflection.ParameterInfo.HasDefaultValue%2A?displayProperty=nameWithType> プロパティは、戻り値を表す `false` オブジェクトに対し、正しく <xref:System.Reflection.ParameterInfo> を返します。 Windows ストア アプリ用 .NET の場合、これは `true`を返します。 中間言語 (IL) はこれを直接サポートせず、解釈は言語に任されます。  
   
--   <xref:System.RuntimeFieldHandle> 構造体と <xref:System.RuntimeMethodHandle> 構造体のパブリック メンバーはサポートされません。 これらの型は、LINQ、式ツリー、および静的な配列の初期化でのみサポートされます。  
+- <xref:System.RuntimeFieldHandle> 構造体と <xref:System.RuntimeMethodHandle> 構造体のパブリック メンバーはサポートされません。 これらの型は、LINQ、式ツリー、および静的な配列の初期化でのみサポートされます。  
   
--   <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> と <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> の基底クラスには隠ぺいされたメンバーが含まれるため、明示的なオーバーライドなしでオーバーライドできます。 これは、その他の [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) メソッドの場合も同様です。  
+- <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeProperties%2A?displayProperty=nameWithType> と <xref:System.Reflection.RuntimeReflectionExtensions.GetRuntimeEvents%2A?displayProperty=nameWithType> の基底クラスには隠ぺいされたメンバーが含まれるため、明示的なオーバーライドなしでオーバーライドできます。 これは、その他の [RuntimeReflectionExtensions.GetRuntime*](xref:System.Reflection.RuntimeReflectionExtensions) メソッドの場合も同様です。  
   
--   <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> と <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> は、特定の組み合わせ (たとえば、byref の配列) を作成しようとしたときに失敗しません。  
+- <xref:System.Type.MakeArrayType%2A?displayProperty=nameWithType> と <xref:System.Type.MakeByRefType%2A?displayProperty=nameWithType> は、特定の組み合わせ (たとえば、byref の配列) を作成しようとしたときに失敗しません。  
   
--   リフレクションを使用して、ポインター パラメーターを持つメンバーを呼び出すことはできません。  
+- リフレクションを使用して、ポインター パラメーターを持つメンバーを呼び出すことはできません。  
   
--   リフレクションを使用して、ポインター フィールドを取得または設定することはできません。  
+- リフレクションを使用して、ポインター フィールドを取得または設定することはできません。  
   
--   引数の数が間違っていると、引数の 1 つの種類が正しくない、.NET ネイティブをスローする<xref:System.ArgumentException>の代わりに、<xref:System.Reflection.TargetParameterCountException>します。  
+- 引数の数が間違っていると、引数の 1 つの種類が正しくない、.NET ネイティブをスローする<xref:System.ArgumentException>の代わりに、<xref:System.Reflection.TargetParameterCountException>します。  
   
--   通常、例外のバイナリ シリアル化はサポートされません。 そのため、シリアル化不可能なオブジェクトを <xref:System.Exception.Data%2A?displayProperty=nameWithType> ディクショナリに追加できます。  
+- 通常、例外のバイナリ シリアル化はサポートされません。 そのため、シリアル化不可能なオブジェクトを <xref:System.Exception.Data%2A?displayProperty=nameWithType> ディクショナリに追加できます。  
   
 <a name="Unsupported"></a>   
 ## <a name="unsupported-scenarios-and-apis"></a>サポートされていないシナリオと API  
  次のセクションに、全般的な開発、相互運用、および HTTPClient や Windows Communication Foundation (WCF) などの技術でサポートされないシナリオと API を示します。  
   
--   [全般的な開発](#General)  
+- [全般的な開発](#General)  
   
--   [HttpClient](#HttpClient)  
+- [HttpClient](#HttpClient)  
   
--   [Interop](#Interop)  
+- [Interop](#Interop)  
   
--   [サポートされていない API](#APIs)  
+- [サポートされていない API](#APIs)  
   
 <a name="General"></a>   
 ### <a name="general-development-differences"></a>全般的な開発の違い  
  **値型**  
   
--   値型の <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> メソッドと <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> メソッドをオーバーライドする場合は、基底クラスの実装を呼び出さないでください。 Windows ストア アプリ用 .NET では、これらのメソッドはリフレクションに依存します。 コンパイル時に、.NET ネイティブは、ランタイム リフレクションに依存しない実装を生成します。 これは、これら 2 つのメソッドを上書きしない場合は期待どおりに動作を .NET ネイティブ コンパイル時に実装を生成するためを意味します。 ただし、基底クラスの実装を呼び出さずにこれらのメソッドをオーバーライドすると、例外が発生します。  
+- 値型の <xref:System.ValueType.Equals%2A?displayProperty=nameWithType> メソッドと <xref:System.ValueType.GetHashCode%2A?displayProperty=nameWithType> メソッドをオーバーライドする場合は、基底クラスの実装を呼び出さないでください。 Windows ストア アプリ用 .NET では、これらのメソッドはリフレクションに依存します。 コンパイル時に、.NET ネイティブは、ランタイム リフレクションに依存しない実装を生成します。 これは、これら 2 つのメソッドを上書きしない場合は期待どおりに動作を .NET ネイティブ コンパイル時に実装を生成するためを意味します。 ただし、基底クラスの実装を呼び出さずにこれらのメソッドをオーバーライドすると、例外が発生します。  
   
--   1 メガバイトより大きい値型はサポートされません。  
+- 1 メガバイトより大きい値型はサポートされません。  
   
--   値の型は、.NET ネイティブで既定のコンス トラクターを持つことはできません。 (C# と Visual Basic では、値型の既定のコンストラクターが許可されません。 ただし、IL ではこれらを作成できます。)  
+- 値の型は、.NET ネイティブで既定のコンス トラクターを持つことはできません。 (C# と Visual Basic では、値型の既定のコンストラクターが許可されません。 ただし、IL ではこれらを作成できます。)  
   
  **配列**  
   
--   ゼロ以外の下限を持つ配列はサポートされません。 通常、これらの配列は <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> オーバーロードを呼び出すことで作成されます。  
+- ゼロ以外の下限を持つ配列はサポートされません。 通常、これらの配列は <xref:System.Array.CreateInstance%28System.Type%2CSystem.Int32%5B%5D%2CSystem.Int32%5B%5D%29?displayProperty=nameWithType> オーバーロードを呼び出すことで作成されます。  
   
--   多次元配列の動的作成はサポートされません。 そのような配列は通常、 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> パラメーターを含む `lengths` メソッドのオーバーロードを呼び出すか、 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> メソッドを呼び出すことで作成されます。  
+- 多次元配列の動的作成はサポートされません。 そのような配列は通常、 <xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> パラメーターを含む `lengths` メソッドのオーバーロードを呼び出すか、 <xref:System.Type.MakeArrayType%28System.Int32%29?displayProperty=nameWithType> メソッドを呼び出すことで作成されます。  
   
--   4 つ以上の次元を持つ多次元配列 (つまり、 <xref:System.Array.Rank%2A?displayProperty=nameWithType> プロパティ値が 4 以上のもの) はサポートされません。 代わりに [ジャグ配列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (配列の配列) を使用してください。 たとえば、 `array[x,y,z]` は無効ですが、 `array[x][y][z]` は有効です。  
+- 4 つ以上の次元を持つ多次元配列 (つまり、 <xref:System.Array.Rank%2A?displayProperty=nameWithType> プロパティ値が 4 以上のもの) はサポートされません。 代わりに [ジャグ配列](~/docs/csharp/programming-guide/arrays/jagged-arrays.md) (配列の配列) を使用してください。 たとえば、 `array[x,y,z]` は無効ですが、 `array[x][y][z]` は有効です。  
   
--   多次元配列の共変性はサポートされず、実行時に <xref:System.InvalidCastException> 例外を発生させます。  
+- 多次元配列の共変性はサポートされず、実行時に <xref:System.InvalidCastException> 例外を発生させます。  
   
  **ジェネリック**  
   
--   ジェネリック型の無限展開はコンパイル エラーになります。 たとえば、このコードはコンパイルに失敗します。  
+- ジェネリック型の無限展開はコンパイル エラーになります。 たとえば、このコードはコンパイルに失敗します。  
   
      [!code-csharp[ProjectN#9](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat2.cs#9)]  
   
  **ポインター**  
   
--   ポインターの配列はサポートされていません。  
+- ポインターの配列はサポートされていません。  
   
--   リフレクションを使用して、ポインター フィールドを取得または設定することはできません。  
+- リフレクションを使用して、ポインター フィールドを取得または設定することはできません。  
   
  **シリアル化**  
   
@@ -149,19 +149,19 @@ ms.locfileid: "59163138"
   
  **その他の API**  
   
--   [TypeInfo.GUID](xref:System.Type.GUID)プロパティがスローされます、<xref:System.PlatformNotSupportedException>例外場合、<xref:System.Runtime.InteropServices.GuidAttribute>属性が型に適用されません。 GUID は主に COM サポートで使用されます。  
+- [TypeInfo.GUID](xref:System.Type.GUID)プロパティがスローされます、<xref:System.PlatformNotSupportedException>例外場合、<xref:System.Runtime.InteropServices.GuidAttribute>属性が型に適用されません。 GUID は主に COM サポートで使用されます。  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>メソッドは、.NET ネイティブで、短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](https://support.microsoft.com/kb/2803771) と [KB2803755](https://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。  
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>メソッドは、.NET ネイティブで、短い日付を含む文字列を正しく解析します。 ただし、Microsoft サポート技術情報の記事 [KB2803771](https://support.microsoft.com/kb/2803771) と [KB2803755](https://support.microsoft.com/kb/2803755)で説明されている日付と時刻の解析の変更に対する互換性は保持されません。  
   
--   <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` .NET ネイティブで正しく丸められます。 CLR の一部のバージョンでは、結果の文字列が丸められるのではなく、切り捨てられます。  
+- <xref:System.Numerics.BigInteger.ToString%2A?displayProperty=nameWithType> `("E")` .NET ネイティブで正しく丸められます。 CLR の一部のバージョンでは、結果の文字列が丸められるのではなく、切り捨てられます。  
   
 <a name="HttpClient"></a>   
 ### <a name="httpclient-differences"></a>HttpClient の違い  
  .NET ネイティブで、<xref:System.Net.Http.HttpClientHandler>クラス WinINet を内部的に使用する (を通じて、<xref:Windows.Web.Http.Filters.HttpBaseProtocolFilter>クラス) の代わりに、<xref:System.Net.WebRequest>と<xref:System.Net.WebResponse>標準的な Windows ストア アプリ用 .NET で使用されるクラス。  WinINet では、 <xref:System.Net.Http.HttpClientHandler> クラスでサポートされる構成オプションがすべてサポートされるわけではありません。  結果は次のようになります。  
   
--   機能プロパティの一部<xref:System.Net.Http.HttpClientHandler>返す`false`.NET ネイティブで返す一方`true`標準的な Windows ストア アプリ用 .NET でします。  
+- 機能プロパティの一部<xref:System.Net.Http.HttpClientHandler>返す`false`.NET ネイティブで返す一方`true`標準的な Windows ストア アプリ用 .NET でします。  
   
--   構成プロパティの一部`get`アクセサーは常に、.NET ネイティブで Windows ストア アプリ用 .NET の既定の構成可能な値とは異なる固定値を返します。  
+- 構成プロパティの一部`get`アクセサーは常に、.NET ネイティブで Windows ストア アプリ用 .NET の既定の構成可能な値とは異なる固定値を返します。  
   
  次のサブセクションで、その他の動作の違いについて説明します。  
   
@@ -189,13 +189,13 @@ ms.locfileid: "59163138"
   
  .NET ネイティブ。  
   
--   <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> プロパティの値は常に <xref:System.Net.Http.ClientCertificateOption.Automatic>です。  Windows ストア アプリ用 .NET での既定値は <xref:System.Net.Http.ClientCertificateOption.Manual>です。  
+- <xref:System.Net.Http.HttpClientHandler.ClientCertificateOptions%2A?displayProperty=nameWithType> プロパティの値は常に <xref:System.Net.Http.ClientCertificateOption.Automatic>です。  Windows ストア アプリ用 .NET での既定値は <xref:System.Net.Http.ClientCertificateOption.Manual>です。  
   
--   <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> プロパティは構成できません。  
+- <xref:System.Net.Http.HttpClientHandler.MaxRequestContentBufferSize%2A?displayProperty=nameWithType> プロパティは構成できません。  
   
--   <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> プロパティは常に `true`です。  Windows ストア アプリ用 .NET での既定値は `false`です。  
+- <xref:System.Net.Http.HttpClientHandler.PreAuthenticate%2A?displayProperty=nameWithType> プロパティは常に `true`です。  Windows ストア アプリ用 .NET での既定値は `false`です。  
   
--   応答の `SetCookie2` ヘッダーは廃止されたものとして無視されます。  
+- 応答の `SetCookie2` ヘッダーは廃止されたものとして無視されます。  
   
 <a name="Interop"></a>   
 ### <a name="interop-differences"></a>相互運用の違い  
@@ -262,59 +262,59 @@ ms.locfileid: "59163138"
   
  ほとんどのプラットフォーム呼び出しし、COM 相互運用シナリオは引き続き .NET ネイティブでサポートされます。 特に、Windows ランタイム (WinRT) API とのすべての相互運用性と Windows ランタイムで必要なすべてのマーシャリングがサポートされます。 これには、次のものに対するマーシャリング サポートが含まれます。  
   
--   配列 ( <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>を含む)  
+- 配列 ( <xref:System.Runtime.InteropServices.UnmanagedType.ByValArray?displayProperty=nameWithType>を含む)  
   
--   `BStr`  
+- `BStr`  
   
--   デリゲート  
+- デリゲート  
   
--   文字列 (Unicode、Ansi、および HSTRING)  
+- 文字列 (Unicode、Ansi、および HSTRING)  
   
--   構造体 (`byref` と `byval`)  
+- 構造体 (`byref` と `byval`)  
   
--   Unions  
+- Unions  
   
--   Win32 ハンドル  
+- Win32 ハンドル  
   
--   すべての WinRT 構造体  
+- すべての WinRT 構造体  
   
--   マーシャリング バリアント型の部分的なサポート。 次の型がサポートされます。  
+- マーシャリング バリアント型の部分的なサポート。 次の型がサポートされます。  
   
-    -   <xref:System.Boolean>  
+    - <xref:System.Boolean>  
   
-    -   <xref:System.Byte>  
+    - <xref:System.Byte>  
   
-    -   <xref:System.Decimal>  
+    - <xref:System.Decimal>  
   
-    -   <xref:System.Double>  
+    - <xref:System.Double>  
   
-    -   <xref:System.Int16>  
+    - <xref:System.Int16>  
   
-    -   <xref:System.Int32>  
+    - <xref:System.Int32>  
   
-    -   <xref:System.Int64>  
+    - <xref:System.Int64>  
   
-    -   <xref:System.SByte>  
+    - <xref:System.SByte>  
   
-    -   <xref:System.Single>  
+    - <xref:System.Single>  
   
-    -   <xref:System.UInt16>  
+    - <xref:System.UInt16>  
   
-    -   <xref:System.UInt32>  
+    - <xref:System.UInt32>  
   
-    -   <xref:System.UInt64>  
+    - <xref:System.UInt64>  
   
-    -   `BStr`  
+    - `BStr`  
   
-    -   [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
+    - [IUnknown](/windows/desktop/api/unknwn/nn-unknwn-iunknown)  
   
  ただし、.NET ネイティブは以下をサポートします。  
   
--   クラシック COM イベントの使用  
+- クラシック COM イベントの使用  
   
--   マネージド型での <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> インターフェイスの実装  
+- マネージド型での <xref:System.Runtime.InteropServices.ICustomQueryInterface?displayProperty=nameWithType> インターフェイスの実装  
   
--   [属性を使用したマネージド型での](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> インターフェイスの実装。 ただし、 `IDispatch`から COM オブジェクトを呼び出すことはできず、マネージド オブジェクトは `IDispatch`を実装できないことに注意してください。  
+- [属性を使用したマネージド型での](https://docs.microsoft.com/previous-versions/windows/desktop/api/oaidl/nn-oaidl-idispatch) IDispatch <xref:System.Runtime.InteropServices.ComDefaultInterfaceAttribute?displayProperty=nameWithType> インターフェイスの実装。 ただし、 `IDispatch`から COM オブジェクトを呼び出すことはできず、マネージド オブジェクトは `IDispatch`を実装できないことに注意してください。  
   
  リフレクションを使用したプラットフォーム呼び出しメソッドの呼び出しはサポートされません。 この制限を回避するには、別のメソッドでメソッド呼び出しをラップし、リフレクションを使用してラッパーを代わりに呼び出します。  
   
@@ -568,57 +568,57 @@ ms.locfileid: "59163138"
 ### <a name="differences-in-serializers"></a>シリアライザーの違い  
  <xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>、および <xref:System.Xml.Serialization.XmlSerializer> クラスによるシリアル化と逆シリアル化に関する違いを次に示します。  
   
--   .NET ネイティブで<xref:System.Runtime.Serialization.DataContractSerializer>と<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>されていないルート シリアル化の種類の型を持つ基底クラスのメンバーを持つ派生クラスを逆シリアル化または逆シリアル化に失敗します。 たとえば、次のコードでは、 `Y` をシリアル化または逆シリアル化しようとするとエラーになります。  
+- .NET ネイティブで<xref:System.Runtime.Serialization.DataContractSerializer>と<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>されていないルート シリアル化の種類の型を持つ基底クラスのメンバーを持つ派生クラスを逆シリアル化または逆シリアル化に失敗します。 たとえば、次のコードでは、 `Y` をシリアル化または逆シリアル化しようとするとエラーになります。  
   
      [!code-csharp[ProjectN#10](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/compat3.cs#10)]  
   
      基底クラスのメンバーはシリアル化時にスキャンされないため、 `InnerType` 型はシリアライザーに認識されていません。  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> と <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装するクラスまたは構造体のシリアル化に失敗します。 たとえば、次の型ではシリアル化と逆シリアル化が失敗します。  
+- <xref:System.Runtime.Serialization.DataContractSerializer> と <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、 <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装するクラスまたは構造体のシリアル化に失敗します。 たとえば、次の型ではシリアル化と逆シリアル化が失敗します。  
 
--   <xref:System.Xml.Serialization.XmlSerializer> は、シリアル化するオブジェクトの正確な型を認識していないため、次のオブジェクト値をシリアル化できません。  
+- <xref:System.Xml.Serialization.XmlSerializer> は、シリアル化するオブジェクトの正確な型を認識していないため、次のオブジェクト値をシリアル化できません。  
 
--   <xref:System.Xml.Serialization.XmlSerializer> は、シリアル化されるオブジェクトの型が <xref:System.Xml.XmlQualifiedName>の場合、シリアル化と逆シリアル化に失敗します。  
+- <xref:System.Xml.Serialization.XmlSerializer> は、シリアル化されるオブジェクトの型が <xref:System.Xml.XmlQualifiedName>の場合、シリアル化と逆シリアル化に失敗します。  
   
--   すべてのシリアライザー (<xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>、および <xref:System.Xml.Serialization.XmlSerializer>) は、 <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 型または <xref:System.Xml.Linq.XElement>を含む型のシリアル化コードを生成できません。 代わりに、ビルド時エラーが表示されます。  
+- すべてのシリアライザー (<xref:System.Runtime.Serialization.DataContractSerializer>、 <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>、および <xref:System.Xml.Serialization.XmlSerializer>) は、 <xref:System.Xml.Linq.XElement?displayProperty=nameWithType> 型または <xref:System.Xml.Linq.XElement>を含む型のシリアル化コードを生成できません。 代わりに、ビルド時エラーが表示されます。  
   
--   次のシリアル化型のコンストラクターが、期待どおりに動作する保証はありません。  
+- 次のシリアル化型のコンストラクターが、期待どおりに動作する保証はありません。  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.DataContractSerializerSettings%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.String%2CSystem.String%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.DataContractSerializer.%23ctor%28System.Type%2CSystem.Xml.XmlDictionaryString%2CSystem.Xml.XmlDictionaryString%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Runtime.Serialization.Json.DataContractJsonSerializerSettings%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
+    - <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer.%23ctor%28System.Type%2CSystem.Collections.Generic.IEnumerable%7BSystem.Type%7D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.String%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlRootAttribute%29?displayProperty=nameWithType>  
   
-    -   <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
+    - <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Xml.Serialization.XmlAttributeOverrides%2CSystem.Type%5B%5D%2CSystem.Xml.Serialization.XmlRootAttribute%2CSystem.String%29?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> は、次のいずれかの属性が設定されているメソッドを持つ型のコードを生成できません。  
+- <xref:System.Xml.Serialization.XmlSerializer> は、次のいずれかの属性が設定されているメソッドを持つ型のコードを生成できません。  
   
-    -   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+    - <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+    - <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+    - <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
-    -   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+    - <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Xml.Serialization.XmlSerializer> は、 <xref:System.Xml.Serialization.IXmlSerializable> カスタム シリアル化インターフェイスを受け入れません。 このインターフェイスを実装するクラスがある場合、 <xref:System.Xml.Serialization.XmlSerializer> は型を Plain Old CLR Object (POCO) 型であると見なし、そのパブリック プロパティのみをシリアル化します。  
+- <xref:System.Xml.Serialization.XmlSerializer> は、 <xref:System.Xml.Serialization.IXmlSerializable> カスタム シリアル化インターフェイスを受け入れません。 このインターフェイスを実装するクラスがある場合、 <xref:System.Xml.Serialization.XmlSerializer> は型を Plain Old CLR Object (POCO) 型であると見なし、そのパブリック プロパティのみをシリアル化します。  
   
--   プレーンなシリアル化する<xref:System.Exception>オブジェクトとうまく連動しません<xref:System.Runtime.Serialization.DataContractSerializer>と<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>します。
+- プレーンなシリアル化する<xref:System.Exception>オブジェクトとうまく連動しません<xref:System.Runtime.Serialization.DataContractSerializer>と<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>します。
 
 <a name="VS"></a>   
 ## <a name="visual-studio-differences"></a>Visual Studio の違い  
@@ -626,9 +626,9 @@ ms.locfileid: "59163138"
   
  デバッガーで .NET ネイティブを使用してコンパイルされたアプリを実行している初回の例外は次の例外の種類を有効になります。  
   
--   <xref:System.MemberAccessException>  
+- <xref:System.MemberAccessException>  
   
--   <xref:System.TypeAccessException>  
+- <xref:System.TypeAccessException>  
   
  **アプリのビルド**  
   
@@ -636,11 +636,11 @@ ms.locfileid: "59163138"
   
  **プロファイラー**  
   
--   Visual Studio CPU プロファイラーと XAML メモリ プロファイラーでは、マイ コードのみは正しく表示されません。  
+- Visual Studio CPU プロファイラーと XAML メモリ プロファイラーでは、マイ コードのみは正しく表示されません。  
   
--   XAML メモリ プロファイラーでは、マネージド ヒープ データが正しく表示されません。  
+- XAML メモリ プロファイラーでは、マネージド ヒープ データが正しく表示されません。  
   
--   CPU プロファイラーでは、モジュールが正しく識別されず、プレフィックス付きの関数名が表示されます。  
+- CPU プロファイラーでは、モジュールが正しく識別されず、プレフィックス付きの関数名が表示されます。  
   
  **単体テスト ライブラリ プロジェクト**  
   

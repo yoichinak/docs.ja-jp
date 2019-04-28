@@ -3,11 +3,11 @@ title: アクティビティ クラスを使用したワークフロー アク�
 ms.date: 03/30/2017
 ms.assetid: 7b7b1c66-f093-43c3-b4d1-7173b46516da
 ms.openlocfilehash: 1bec10b6ae9fb43319cfb6acbf59133e1acca09c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755507"
 ---
 # <a name="workflow-activity-authoring-using-the-activity-class"></a>アクティビティ クラスを使用したワークフロー アクティビティの作成
 Windows Workflow Foundation (WF) を使用してアクティビティを作成する最も基本的な方法は、[!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)]から継承するクラスを作成するには<xref:System.Activities.Activity>機能を作成するまとめることでカスタム アクティビティまたはアクティビティから、[組み込みアクティビティ ライブラリ](net-framework-4-5-built-in-activity-library.md)します。 ここでは、2 つのメッセージをコンソールに書き込むアクティビティを作成する方法について説明します。

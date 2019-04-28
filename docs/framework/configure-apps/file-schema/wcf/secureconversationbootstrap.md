@@ -3,11 +3,11 @@ title: <secureConversationBootstrap>
 ms.date: 03/30/2017
 ms.assetid: 66b46f95-fa2d-4b5b-b6ce-0572ab0cdd50
 ms.openlocfilehash: e39458e7e0bac15429ad3d34c4fbba0f55d254f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670600"
 ---
 # <a name="secureconversationbootstrap"></a>\<secureConversationBootstrap>
 セキュリティで保護されたメッセージ交換サービスの開始に使用される既定値を指定します。  
@@ -47,7 +47,7 @@ ms.locfileid: "59166999"
   
 |属性|説明|  
 |---------------|-----------------|  
-|`allowSerializedSigningTokenOnReply`|任意。 シリアル化されたトークンを応答で使用できる場合に指定するブール値。 既定値は `false` です。 二重バインドを使用する場合、この設定の既定値は `true` に設定され、行った設定はすべて無視されます。|  
+|`allowSerializedSigningTokenOnReply`|省略可能です。 シリアル化されたトークンを応答で使用できる場合に指定するブール値。 既定値は `false` です。 二重バインドを使用する場合、この設定の既定値は `true` に設定され、行った設定はすべて無視されます。|  
 |`authenticationMode`|イニシエーターとレスポンダーの間で使用される SOAP 認証モードを指定します。<br /><br /> 既定値は sspiNegotiated です。<br /><br /> この属性は <xref:System.ServiceModel.Configuration.AuthenticationMode> 型です。|  
 |`defaultAlgorithmSuite`|セキュリティ アルゴリズム スイートは、正規化、ダイジェスト、キーラップ、署名、暗号化、およびキー派生の各アルゴリズムなど、さまざまなアルゴリズムを定義します。 各セキュリティ アルゴリズム スイートは、これらのさまざまなパラメーターの値を定義します。 メッセージ ベースのセキュリティは、これらのアルゴリズムを使用して実現されます。<br /><br /> この属性は、既定とは異なるアルゴリズムのセットを選択する別のプラットフォームで操作するときに使用されます。 この設定を修正する場合、関連するアルゴリズムの強さと脆弱性に注意する必要があります。 この属性は <xref:System.ServiceModel.Security.SecurityAlgorithmSuite> 型です。 既定値は `Basic256` です。|  
 |`includeTimestamp`|各メッセージにタイム スタンプが含まれるかどうかを指定するブール値です。 既定値は `true` です。|  

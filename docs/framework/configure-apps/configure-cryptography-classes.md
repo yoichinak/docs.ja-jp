@@ -10,11 +10,11 @@ helpviewer_keywords:
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
 ms.openlocfilehash: ba11eed316e227ceae4cb5acecb2b081fa8868f2
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55084407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705533"
 ---
 # <a name="configuring-cryptography-classes"></a>暗号化クラスの設定
 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]コンピューターの管理者は、既定の暗号アルゴリズムと、.NET Framework と適切に記述されたアプリケーションを使用するアルゴリズムの実装を構成します。  たとえば、暗号アルゴリズムの独自の実装を持つエンタープライズは、その実装に出荷された実装ではなく既定、[!INCLUDE[winsdkshort](../../../includes/winsdkshort-md.md)]します。 暗号化を使用するマネージ アプリケーションは、特定の実装にバインドするように常に選択できますが、crypto の構成システムを使用して暗号化オブジェクトを作成することをお勧めします。  

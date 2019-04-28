@@ -15,11 +15,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: d2b7c766-ce16-4d2c-8d79-3fc0e7ba2227
 ms.openlocfilehash: 70378b57c6d3af5a98e0ba9c6e3aebc319561b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665742"
 ---
 # <a name="how-to-protect-a-procedure-argument-against-value-changes-visual-basic"></a>方法: プロシージャ引数の値の変更 (Visual Basic) を保護します。
 プロシージャ宣言のパラメーターとして場合[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)、Visual Basic でプロシージャのコードは呼び出し元のコードで引数を基になるプログラミング要素への直接参照します。 これにより、プロシージャが呼び出し元のコードで引数を基になる値を変更します。 場合によってはの呼び出し元のコードは、このような変更から保護します。  

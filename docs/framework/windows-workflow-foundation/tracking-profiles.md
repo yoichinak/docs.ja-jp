@@ -3,11 +3,11 @@ title: 追跡プロファイル
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
 ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57721373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699676"
 ---
 # <a name="tracking-profiles"></a>追跡プロファイル
 
@@ -59,7 +59,7 @@ TrackingProfile profile = new TrackingProfile()
 };
 ```
 
-追跡レコードは、<xref:System.Activities.Tracking.ImplementationVisibility> 属性を使用して、追跡プロファイル内部の表示モードを通じてフィルター処理されます。 複合アクティビティは、その実装を形成する他のアクティビティを含む最上位アクティビティです。 表示モードは、実装を形成するアクティビティが追跡されているかどうかを指定するために、ワークフロー アクティビティ内の複合アクティビティから生成された追跡レコードを指定します。 表示モードは、追跡プロファイル レベルで適用されます。 ワークフロー内にある個々のアクティビティの追跡レコードのフィルター処理は、追跡プロファイル内のクエリによって制御されます。 詳細については、、**追跡プロファイルのクエリの種類**このドキュメントの「を参照してください。
+追跡レコードは、<xref:System.Activities.Tracking.ImplementationVisibility> 属性を使用して、追跡プロファイル内部の表示モードを通じてフィルター処理されます。 複合アクティビティは、その実装を形成する他のアクティビティを含む最上位アクティビティです。 表示モードは、実装を形成するアクティビティが追跡されているかどうかを指定するために、ワークフロー アクティビティ内の複合アクティビティから生成された追跡レコードを指定します。 表示モードは、追跡プロファイル レベルで適用されます。 ワークフロー内にある個々のアクティビティの追跡レコードのフィルター処理は、追跡プロファイル内のクエリによって制御されます。 詳細については、次を参照してください。、**追跡プロファイルのクエリの種類**このドキュメントの「します。
 
 追跡プロファイルの `implementationVisibility` 属性で指定される 2 つの表示モードは、`RootScope` と `All` です。 `RootScope` モードを使用すると、複合アクティビティがワークフローのルート アクティビティでない場合にアクティビティの実装を形成するアクティビティの追跡レコードが抑制されます。 したがって、他のアクティビティを使用して実装されているアクティビティがワークフローに追加された場合、`implementationVisibility` が RootScope に設定されていると、その複合アクティビティ内の最上位アクティビティのみが追跡されます。 アクティビティがワークフローのルート アクティビティである場合、アクティビティの実装はワークフローそのものであり、追跡レコードはその実装を形成するアクティビティを対象として生成されます。 All モードを使用すると、ルート アクティビティとそのすべての複合アクティビティを対象として、すべての追跡レコードを生成できます。
 
@@ -67,8 +67,7 @@ TrackingProfile profile = new TrackingProfile()
 
 ただし場合、`implementationVisibility`属性に設定されている追跡プロファイルを`All`、だけでなく追跡レコードが出力されますし、 *MyActivity*がアクティビティについても*Activity1*と*Activity2*します。
 
-
-  `implementationVisibility` フラグは、次の追跡レコード タイプに適用されます。
+`implementationVisibility` フラグは、次の追跡レコード タイプに適用されます。
 
 - ActivityStateRecord
 

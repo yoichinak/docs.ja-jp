@@ -12,22 +12,22 @@ helpviewer_keywords:
 - pictures [Windows Forms], controlling placement in PictureBox control [Windows Forms]
 ms.assetid: d0b332a3-fae2-4891-957c-dc3e17743326
 ms.openlocfilehash: d0a86d7fe53dba3da6bd63587561f82877bc2f06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913732"
 ---
 # <a name="how-to-modify-the-size-or-placement-of-a-picture-at-run-time-windows-forms"></a>方法: 実行時 (Windows フォーム) にサイズまたは画像の配置を変更します。
 Windows フォームを使用する場合<xref:System.Windows.Forms.PictureBox>コントロール、フォームで設定することができます、<xref:System.Windows.Forms.PictureBox.SizeMode%2A>をプロパティ。  
   
--   コントロールの左上隅で、画像の左上を揃え  
+- コントロールの左上隅で、画像の左上を揃え  
   
--   コントロール内で画像を中央揃え  
+- コントロール内で画像を中央揃え  
   
--   表示の画像に合わせてコントロールのサイズを調整します。  
+- 表示の画像に合わせてコントロールのサイズを調整します。  
   
--   コントロールに合わせて、表示される任意の画像を拡大します。  
+- コントロールに合わせて、表示される任意の画像を拡大します。  
   
  (特にビットマップ形式の 1 つ) 画像を拡大すると、イメージの品質の損失を生成できます。 実行時にイメージを描画するためのグラフィックス命令リストのメタファイルはストレッチ ビットマップよりも適しています。  
   

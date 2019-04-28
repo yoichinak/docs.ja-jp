@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Me keyword [Visual Basic], as object variable
 ms.assetid: 3706811d-fd40-44fe-8727-d692e8e55d6d
 ms.openlocfilehash: dff1b9bb9e87f827663786cac3f33531db41b2c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757067"
 ---
 # <a name="object-variable-assignment-visual-basic"></a>オブジェクト変数への代入 (Visual Basic)
 オブジェクトをオブジェクト変数に代入するのにには、通常代入ステートメントを使用します。 オブジェクト式を割り当てることができます、または[Nothing](../../../../visual-basic/language-reference/nothing.md)キーワードでは、次の例として示します。  

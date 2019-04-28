@@ -7,18 +7,18 @@ ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 16ed4d86d64a6d3c569c7fd7ab9e9e3a3943f078
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723668"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework のログ記録の制御
 Windows イベント トレーシング (ETW: Event Tracing for Windows) を使用して共通言語ランタイム (CLR: Common Language Runtime) イベントを記録できます。 トレースの作成および表示には次のツールを使用します。  
   
--   Windows オペレーティング システムに含まれる [Logman](/windows-server/administration/windows-commands/logman) および [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) コマンド ライン ツール。  
+- Windows オペレーティング システムに含まれる [Logman](/windows-server/administration/windows-commands/logman) および [Tracerpt](/windows-server/administration/windows-commands/tracerpt_1) コマンド ライン ツール。  
   
--   [Windows Performance Toolkit](/windows-hardware/test/wpt/) の [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) ツール。 Xperf の詳細については、[Windows のパフォーマンスに関するブログ](https://go.microsoft.com/fwlink/?LinkId=179509)を参照してください。  
+- [Windows Performance Toolkit](/windows-hardware/test/wpt/) の [Xperf](/windows-hardware/test/wpt/xperf-command-line-reference) ツール。 Xperf の詳細については、[Windows のパフォーマンスに関するブログ](https://go.microsoft.com/fwlink/?LinkId=179509)を参照してください。  
   
  CLR イベントの情報をキャプチャするには、コンピューターに CLR プロバイダーがインストールされている必要があります。 プロバイダーがインストールされているかどうかを確認するには、コマンド プロンプトで「`logman query providers`」と入力します。 プロバイダーの一覧が表示されます。 その一覧に、次のような CLR プロバイダーのエントリが含まれている必要があります。  
   
@@ -37,11 +37,11 @@ Provider                                 GUID
   
  ログを有効にするには、次の 3 つの項目を指定する必要があります。  
   
--   通信先のプロバイダー。  
+- 通信先のプロバイダー。  
   
--   キーワード セットを表す 64 ビットの数値。 各キーワードは、プロバイダーが有効にできる一連のイベントを表します。 この数値は、有効にするキーワードの組み合わせを表します。  
+- キーワード セットを表す 64 ビットの数値。 各キーワードは、プロバイダーが有効にできる一連のイベントを表します。 この数値は、有効にするキーワードの組み合わせを表します。  
   
--   記録レベル (詳細度) を表す小さな数値。 レベル 1 が最も簡易であり、レベル 5 が最も詳細になります。 レベル 0 は既定値であり、プロバイダー固有であることを意味します。  
+- 記録レベル (詳細度) を表す小さな数値。 レベル 1 が最も簡易であり、レベル 5 が最も詳細になります。 レベル 0 は既定値であり、プロバイダー固有であることを意味します。  
   
 #### <a name="to-capture-clr-etw-events-using-logman"></a>Logman を使用して CLR ETW イベントをキャプチャするには  
   
@@ -51,15 +51,15 @@ Provider                                 GUID
   
      それぞれの文字について以下に説明します。  
   
-    -   `-p` パラメーターはプロバイダーの GUID を識別します。  
+    - `-p` パラメーターはプロバイダーの GUID を識別します。  
   
-    -   `0x1CCBD` は、発生するイベントのカテゴリを指定しています。  
+    - `0x1CCBD` は、発生するイベントのカテゴリを指定しています。  
   
-    -   `0x5` は、ログ レベルを設定しています (この場合は詳細 (5))。  
+    - `0x5` は、ログ レベルを設定しています (この場合は詳細 (5))。  
   
-    -   `-ets` パラメーターは、コマンドをイベント トレース セッションに送信するように指定します。  
+    - `-ets` パラメーターは、コマンドをイベント トレース セッションに送信するように指定します。  
   
-    -   `-ct perf` パラメーターは、`QueryPerformanceCounter` 関数を使用して各イベントのタイム スタンプを記録するように指定します。  
+    - `-ct perf` パラメーターは、`QueryPerformanceCounter` 関数を使用して各イベントのタイム スタンプを記録するように指定します。  
   
 2. イベントの記録を停止するには、次のように入力します。  
   
@@ -86,7 +86,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-tracerpt"></a>Tracerpt を使用して CLR ETW イベントを表示するには  
   
--   コマンド プロンプトで、次のコマンドを入力します。  
+- コマンド プロンプトで、次のコマンドを入力します。  
   
      `tracerpt clrevents.etl`  
   
@@ -94,7 +94,7 @@ Provider                                 GUID
   
 #### <a name="to-view-clr-etw-events-using-xperf"></a>Xperf を使用して CLR ETW イベントを表示するには  
   
--   コマンド プロンプトで、次のコマンドを入力します。  
+- コマンド プロンプトで、次のコマンドを入力します。  
   
      `xperf clrevents.etl`  
   
@@ -102,7 +102,7 @@ Provider                                 GUID
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>.etl ファイルをコンマ区切り値ファイルに変換するには  
   
--   コマンド プロンプトで、次のコマンドを入力します。  
+- コマンド プロンプトで、次のコマンドを入力します。  
   
      `xperf -i clrevents.etl -f clrevents.csv`  
   

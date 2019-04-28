@@ -7,11 +7,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], writing queries
 ms.assetid: 4affb732-3e9b-4479-aa31-1f9bd8183cbe
 ms.openlocfilehash: 6f6968713fdb1c0ec0ee9f9da3b199a649938de5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907479"
 ---
 # <a name="writing-your-first-linq-query-visual-basic"></a>初めての LINQ クエリの作成 (Visual Basic)
 "*クエリ*" は、データ ソースからデータを取得する式です。 クエリは、専用のクエリ言語で表現されます。 時間の経過と共にさまざまな言語用に開発したさまざまな種類のデータ ソース、たとえば、SQL のリレーショナル データベースや XML 用の XQuery です。 これにより、必要なアプリケーション開発者はデータ ソースまたはサポートされているデータ形式の種類ごとに新しいクエリ言語について説明します。  

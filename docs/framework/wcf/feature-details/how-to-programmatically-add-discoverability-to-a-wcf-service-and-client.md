@@ -3,11 +3,11 @@ title: '方法: プログラムを使用して探索可能性に WCF サービ�
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
 ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336591"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761547"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する
 このトピックでは、Windows Communication Foundation (WCF) サービスを探索可能にする方法について説明します。 基にして、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプル。  

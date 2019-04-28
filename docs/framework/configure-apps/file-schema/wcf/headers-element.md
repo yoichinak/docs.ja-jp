@@ -3,11 +3,11 @@ title: <headers> 要素
 ms.date: 03/30/2017
 ms.assetid: 040f7a8c-bb57-4db6-bdb0-cfb92a1b01af
 ms.openlocfilehash: 90d6d7f981f176348a14ddc6b0af39378239eebd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704155"
 ---
 # <a name="headers-element"></a>\<ヘッダー > 要素
 ローカル発行者を正しくアドレス指定するために必要なアドレス ヘッダーのコレクションが含まれます。 `add` キーワードを使用して、このコレクションにヘッダーを追加できます。  

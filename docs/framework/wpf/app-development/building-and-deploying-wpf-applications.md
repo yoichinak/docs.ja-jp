@@ -9,20 +9,20 @@ helpviewer_keywords:
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
 ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756976"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>WPF アプリケーションのビルドと配置
 ビルドおよび展開モデルは、次のようをビルドし、ローカルとリモートのアプリケーションの展開機能を提供します。  
   
--   MSBuild: .NET では、Microsoft.Build.Tasks.Windows 名前空間にあるシステムを構築します。  
+- MSBuild: .NET では、Microsoft.Build.Tasks.Windows 名前空間にあるシステムを構築します。  
   
--   リソース: UI リソースを使用します。  
+- リソース: UI リソースを使用します。  
   
--   ClickOnce 配置: .NET 発行および配置システム。  
+- ClickOnce 配置: .NET 発行および配置システム。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
 ms.openlocfilehash: 51da86d6c0f565d1baa58452a661ccbaa321538c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765688"
 ---
 # <a name="feed-customization-wcf-data-services"></a>フィードのカスタマイズ (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用して、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]データ フィードとして公開します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] データ フィードに対して JavaScript Object Notation (JSON) と Atom の両方の形式をサポートします。 Atom フィードを使用するときに[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]エンティティとリレーションシップは、HTTP メッセージの本文に含めることができる XML 形式などのデータをシリアル化の標準的な方法を提供します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] エンティティに含まれるデータと Atom 要素の既定のエンティティとプロパティのマッピングを定義します。 詳細については、次を参照してください[OData:。Atom 形式](https://go.microsoft.com/fwlink/?LinkID=185794)します。  
@@ -83,12 +83,12 @@ ms.locfileid: "59517318"
 ## <a name="feed-customization-considerations"></a>フィードのカスタマイズに関する考慮事項  
  カスタム フィードのマッピングを定義する場合は、以下を検討してください。  
   
--   [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアントに扱います空としてマップされた要素がフィードに空白しか含まれている場合。 このため、空白のみを含むマップされた要素は同じ空白文字で、クライアントで具体化されません。 クライアントでこの空白を保持するためには、値を設定する必要があります`KeepInContext`に`true`フィード マッピング属性にします。  
+- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]クライアントに扱います空としてマップされた要素がフィードに空白しか含まれている場合。 このため、空白のみを含むマップされた要素は同じ空白文字で、クライアントで具体化されません。 クライアントでこの空白を保持するためには、値を設定する必要があります`KeepInContext`に`true`フィード マッピング属性にします。  
   
 ## <a name="versioning-requirements"></a>バージョン管理の要件  
  フィードのカスタマイズには、次に示す [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] プロトコルのバージョン管理の要件があります。  
   
--   フィードのカスタマイズを行う場合は、クライアントとデータ サービスの両方でバージョン 2.0 以降の [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] プロトコルがサポートされている必要があります。  
+- フィードのカスタマイズを行う場合は、クライアントとデータ サービスの両方でバージョン 2.0 以降の [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] プロトコルがサポートされている必要があります。  
   
  詳細については、次を参照してください。[データ サービスのバージョン管理](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)します。  
   

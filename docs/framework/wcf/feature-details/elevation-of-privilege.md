@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], elevation of privilege
 ms.assetid: 146e1c66-2a76-4ed3-98a5-fd77851a06d9
 ms.openlocfilehash: fd5829d2dbb1853bf65f1f6e402b918137bd59e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856405"
 ---
 # <a name="elevation-of-privilege"></a>権限の昇格
 *特権が昇格される*本来付与されたもの以外のアクセス許可を承認を攻撃者に与えた結果します。 たとえば、"読み取り専用" アクセス許可の権限セットを持つ攻撃者が、何らかの方法で権限セットを "読み取り/書き込み" アクセス許可を含むものに昇格させます。  
@@ -25,13 +25,13 @@ ms.locfileid: "59099990"
   
  クライアントとサーバー、クライアントの id の間の接続が確立されたときに変化しない状況の 1 つを除く: すべての次の条件に該当する場合、WCF クライアントが開かれた後に。  
   
--   (トランスポート セキュリティ セッションまたはメッセージ セキュリティ セッションを使用) のセキュリティ コンテキストを確立するプロシージャがオフになっている (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>プロパティに設定されて`false`メッセージ セキュリティまたはトランスポート セキュリティを確立できない場合トランスポート セキュリティの場合は、セッションが使用されます。 トランスポート セキュリティの場合は、セキュリティ セッションを確立できないトランスポート (HTTPS など) が使用されている)。  
+- (トランスポート セキュリティ セッションまたはメッセージ セキュリティ セッションを使用) のセキュリティ コンテキストを確立するプロシージャがオフになっている (<xref:System.ServiceModel.NonDualMessageSecurityOverHttp.EstablishSecurityContext%2A>プロパティに設定されて`false`メッセージ セキュリティまたはトランスポート セキュリティを確立できない場合トランスポート セキュリティの場合は、セッションが使用されます。 トランスポート セキュリティの場合は、セキュリティ セッションを確立できないトランスポート (HTTPS など) が使用されている)。  
   
--   Windows 認証を使用している。  
+- Windows 認証を使用している。  
   
--   資格情報を明示的に設定していない。  
+- 資格情報を明示的に設定していない。  
   
--   偽装されたセキュリティ コンテキストでサービスを呼び出している。  
+- 偽装されたセキュリティ コンテキストでサービスを呼び出している。  
   
  これらの条件に該当する場合、サービスに対するクライアントの認証に使用される id が変わる可能性があります (必要はありませんが、偽装された id、プロセス id 代わりに)、WCF クライアントが開かれた後にします。 この状況が発生するのは、サービスに対するクライアントの認証に使用する Windows 資格情報がすべてのメッセージと共に送信され、認証に使用する資格情報が現在のスレッドの Windows ID から取得されるためです。 (たとえば、別の呼び出し元を偽装することによって) 現在のスレッドの Windows ID が変更された場合、メッセージに添付され、サービスに対するクライアントの認証に使用する資格情報も変更される可能性があります。  
   
@@ -59,13 +59,13 @@ ms.locfileid: "59099990"
   
  また、以下のメソッドのいずれかを使用して、カスタム バインドを作成した場合にも発生します。  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForCertificateBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenForSslBindingElement%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateIssuedTokenOverTransportBindingElement%2A>  
   
  これをできるだけ防ぐには、承認ポリシーによって各承認ポリシーのアクションと有効期限をチェックする必要があります。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59099990"
   
  これは、次のような状況で発生する可能性があります。  
   
--   クライアントが X.509 証明書を使用してメッセージにデジタル署名したときに、その X.509 証明書をメッセージに添付するのではなく、サブジェクト キー識別子を使用して証明書を参照しているだけの場合。  
+- クライアントが X.509 証明書を使用してメッセージにデジタル署名したときに、その X.509 証明書をメッセージに添付するのではなく、サブジェクト キー識別子を使用して証明書を参照しているだけの場合。  
   
--   サービスのコンピューターに同じ公開キーを持つ複数の証明書が格納されており、それらの証明書に含まれる情報が異なる場合。  
+- サービスのコンピューターに同じ公開キーを持つ複数の証明書が格納されており、それらの証明書に含まれる情報が異なる場合。  
   
--   サービスがサブジェクト キー識別子と一致する証明書を取得したが、クライアントが使用する予定だったものではない場合。 WCF では、メッセージを受信し、署名を検証、WCF は、X.509 証明書の情報をから、クライアントが期待と異なる可能性がある管理者特権のあるクレームのセットにマップします。  
+- サービスがサブジェクト キー識別子と一致する証明書を取得したが、クライアントが使用する予定だったものではない場合。 WCF では、メッセージを受信し、署名を検証、WCF は、X.509 証明書の情報をから、クライアントが期待と異なる可能性がある管理者特権のあるクレームのセットにマップします。  
   
  これをできるだけ防ぐには、X.509 証明書を別の方法 (<xref:System.ServiceModel.Security.Tokens.X509KeyIdentifierClauseType.IssuerSerial> の使用など) で参照します。  
   

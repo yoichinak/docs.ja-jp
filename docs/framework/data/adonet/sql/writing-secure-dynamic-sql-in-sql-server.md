@@ -3,11 +3,11 @@ title: SQL Server での安全な動的 SQL の作成
 ms.date: 03/30/2017
 ms.assetid: df5512b0-c249-40d2-82f9-f9a2ce6665bc
 ms.openlocfilehash: 236fd925740d37c2cccabfcebfb7fcb46361489d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107355"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757717"
 ---
 # <a name="writing-secure-dynamic-sql-in-sql-server"></a>SQL Server での安全な動的 SQL の作成
 SQL インジェクションとは、悪意のあるユーザーによって、有効な入力データの代わりに Transact-SQL ステートメントが入力されることをいいます。 この入力データが検証されずにサーバーに直接渡され、挿入されたコードがアプリケーションでそのまま実行された場合、その攻撃によってデータが破損または破壊される可能性があります。  
@@ -21,34 +21,34 @@ SQL インジェクションとは、悪意のあるユーザーによって、�
   
  次に、有用なガイドラインを示します。  
   
--   Transact-SQL ステートメントはユーザー入力から直接作成しないでください。ストアド プロシージャを使用して、ユーザー入力を検証してください。  
+- Transact-SQL ステートメントはユーザー入力から直接作成しないでください。ストアド プロシージャを使用して、ユーザー入力を検証してください。  
   
--   ユーザー入力の型、長さ、形式、範囲をテストし、検証してください。 システム名をエスケープするには Transact-SQL の QUOTENAME() 関数を使用し、文字列内の任意の文字をエスケープするには REPLACE() 関数を使用します。  
+- ユーザー入力の型、長さ、形式、範囲をテストし、検証してください。 システム名をエスケープするには Transact-SQL の QUOTENAME() 関数を使用し、文字列内の任意の文字をエスケープするには REPLACE() 関数を使用します。  
   
--   アプリケーションの各層に、複数層の検証を実装します。  
+- アプリケーションの各層に、複数層の検証を実装します。  
   
--   入力のサイズとデータ型をテストし、適切な制限を適用します。 これは、意図的なバッファー オーバーランを防ぐのに役立ちます。  
+- 入力のサイズとデータ型をテストし、適切な制限を適用します。 これは、意図的なバッファー オーバーランを防ぐのに役立ちます。  
   
--   文字列変数の内容をテストし、期待値のみを許可します。 バイナリ データ、エスケープ シーケンス、およびコメント文字を含む入力は拒否します。  
+- 文字列変数の内容をテストし、期待値のみを許可します。 バイナリ データ、エスケープ シーケンス、およびコメント文字を含む入力は拒否します。  
   
--   XML ドキュメントを扱う場合、入力時にすべてのデータをスキーマに照らして検証します。  
+- XML ドキュメントを扱う場合、入力時にすべてのデータをスキーマに照らして検証します。  
   
--   多層環境では、信頼済みゾーンに入ることを許可する前にすべてのデータを検証する必要があります。  
+- 多層環境では、信頼済みゾーンに入ることを許可する前にすべてのデータを検証する必要があります。  
   
--   ファイル名を構築するためのフィールドで、次の文字列は受け入れません。AUX、CLOCK$、COM1 ~ COM8、CON、CONFIG$、LPT1 ~ LPT8、NUL、PRN します。  
+- ファイル名を構築するためのフィールドで、次の文字列は受け入れません。AUX、CLOCK$、COM1 ~ COM8、CON、CONFIG$、LPT1 ~ LPT8、NUL、PRN します。  
   
--   <xref:System.Data.SqlClient.SqlParameter> オブジェクトにストアド プロシージャとコマンドを組み合わせ、型チェックと長さ検証を実行します。  
+- <xref:System.Data.SqlClient.SqlParameter> オブジェクトにストアド プロシージャとコマンドを組み合わせ、型チェックと長さ検証を実行します。  
   
--   クライアント コードで <xref:System.Text.RegularExpressions.Regex> 式を使用して、無効な文字を排除します。  
+- クライアント コードで <xref:System.Text.RegularExpressions.Regex> 式を使用して、無効な文字を排除します。  
   
 ## <a name="dynamic-sql-strategies"></a>動的 SQL を利用した手法  
  プロシージャ コードで動的に生成された SQL ステートメントを実行することで組み合わせ所有権を破棄すると、SQL Server は動的 SQL によりアクセスされるオブジェクトに対する呼び出し元の権限をチェックします。  
   
  SQL Server には、動的 SQL を実行するストアド プロシージャやユーザー定義関数を使用したデータ アクセスをユーザーに許可するための方法があります。  
   
--   Transact-SQL EXECUTE AS 句による偽装を利用する。詳細は、[SQL Server で偽装を利用してアクセス許可をカスタマイズする](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)方法に関するページにあります。  
+- Transact-SQL EXECUTE AS 句による偽装を利用する。詳細は、[SQL Server で偽装を利用してアクセス許可をカスタマイズする](../../../../../docs/framework/data/adonet/sql/customizing-permissions-with-impersonation-in-sql-server.md)方法に関するページにあります。  
   
--   証明書を利用してストアド プロシージャに署名する。詳細は、[SQL Server でストアド プロシージャに署名する](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)方法に関するページにあります。  
+- 証明書を利用してストアド プロシージャに署名する。詳細は、[SQL Server でストアド プロシージャに署名する](../../../../../docs/framework/data/adonet/sql/signing-stored-procedures-in-sql-server.md)方法に関するページにあります。  
   
 ### <a name="execute-as"></a>EXECUTE AS  
  EXECUTE AS 句を使用すると、呼び出し元の権限が EXECUTE AS 句で指定されたユーザーの権限に置き換えられます。 入れ子になったストアド プロシージャやトリガーは、プロキシ ユーザーのセキュリティ コンテキストで実行されることに注意してください。 これにより、行レベルのセキュリティに依存するアプリケーションや監査を必要とするアプリケーションが中断されることがあります。 ユーザーの識別情報を返す関数では、最初の呼び出し元ではなく EXECUTE AS 句で指定されたユーザーが返されます。 プロシージャの実行後、または REVERT ステートメントが発行されたときにのみ、実行コンテキストが最初の呼び出し元に戻ります。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - metafiles [Windows Forms], displaying
 ms.assetid: 60af1714-f148-4d85-a739-0557965ffa73
 ms.openlocfilehash: 39b7251b2789c7410e1d59b4aa7990a2f73055fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229356"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723219"
 ---
 # <a name="how-to-load-and-display-metafiles"></a>方法: メタファイルを読み込んで表示する
 <xref:System.Drawing.Imaging.Metafile>から継承されるクラス、<xref:System.Drawing.Image>クラス、メソッドの記録、表示、およびベクター イメージの検証を提供します。  

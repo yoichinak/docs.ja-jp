@@ -9,11 +9,11 @@ helpviewer_keywords:
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
 ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674390"
 ---
 # <a name="socket-element-network-settings"></a>\<ソケット > 要素 (ネットワーク設定)
 ソケット操作が完了ポートを使用するかどうかを指定します。  
@@ -64,9 +64,9 @@ ms.locfileid: "59160161"
   
  これは、`ipProtectionLevel`属性の設定が最初に受信トラフィックのみに影響します。  
   
--   着信接続をソケットでリッスンしている TCP サーバー。  
+- 着信接続をソケットでリッスンしている TCP サーバー。  
   
--   ソケットでのパケットを受信 UDP アプリケーションです。  
+- ソケットでのパケットを受信 UDP アプリケーションです。  
   
  この構成設定では既に確立されている TCP 接続が (トラフィックは両方向に無制限) には影響しません UDP パケットを送信するアプリケーションには影響しません。  
   

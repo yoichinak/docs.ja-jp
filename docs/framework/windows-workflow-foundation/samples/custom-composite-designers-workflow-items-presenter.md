@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 70055c4b-1173-47a3-be80-b5bce6f59e9a
 ms.openlocfilehash: 61f61962e06e94572b7eb564ab08b829ba2c864f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005642"
 ---
 # <a name="custom-composite-designers---workflow-items-presenter"></a>カスタム複合デザイナー - Workflow Items Presenter
 <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> は、格納されている要素のコレクションを編集できる、WF デザイナー プログラミング モデル内の主要な型です。 このサンプルでは、このような編集可能なコレクションを表示するアクティビティ デザイナーの構築方法を示します。
 
  このサンプルでは、次の方法を示します。
 
--   <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> を使用したカスタム アクティビティ デザイナーの作成
+- <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> を使用したカスタム アクティビティ デザイナーの作成
 
--   「折りたたまれている」と「拡張」ビューを使用して、アクティビティ デザイナーを作成します。
+- 「折りたたまれている」と「拡張」ビューを使用して、アクティビティ デザイナーを作成します。
 
--   再ホストされたアプリケーションでの既定のデザイナーのオーバーライド
+- 再ホストされたアプリケーションでの既定のデザイナーのオーバーライド
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
@@ -32,15 +32,15 @@ ms.locfileid: "59344872"
 ## <a name="sample-highlights"></a>サンプルの詳細
  このサンプルのコードには、次の内容が表示されます。
 
--   デザイナーをビルドするアクティビティは `Parallel` です。
+- デザイナーをビルドするアクティビティは `Parallel` です。
 
--   <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> を使用してカスタム アクティビティ デザイナーを作成します。 次の点に注意してください。
+- <xref:System.Activities.Presentation.WorkflowItemsPresenter?displayProperty=nameWithType> を使用してカスタム アクティビティ デザイナーを作成します。 次の点に注意してください。
 
-    -   `ModelItem.Branches` にバインドする WPF のデータ バインドの使用に注意してください。 `ModelItem` は、デザイナーが使用されている、基になるオブジェクト (この例では `WorkflowElementDesigner`) を参照する `Parallel` のプロパティです。
+    - `ModelItem.Branches` にバインドする WPF のデータ バインドの使用に注意してください。 `ModelItem` は、デザイナーが使用されている、基になるオブジェクト (この例では `WorkflowElementDesigner`) を参照する `Parallel` のプロパティです。
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> は、コレクション内の個々の項目間にビジュアル表示を配置するために使用できます。
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.SpacerTemplate?displayProperty=nameWithType> は、コレクション内の個々の項目間にビジュアル表示を配置するために使用できます。
 
-    -   <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> は、コレクション内の項目のレイアウトを決定するために提供できるテンプレートです。 この例では、水平方向のスタック パネルが使用されます。
+    - <xref:System.Activities.Presentation.WorkflowItemsPresenter.ItemsPanel?displayProperty=nameWithType> は、コレクション内の項目のレイアウトを決定するために提供できるテンプレートです。 この例では、水平方向のスタック パネルが使用されます。
 
  このコード例を次に示します。
 
@@ -60,9 +60,9 @@ ms.locfileid: "59344872"
   </sad:WorkflowItemsPresenter>
 ```
 
--   `DesignerAttribute` の `Parallel` 型への関連付けを実行し、報告された属性を出力します。
+- `DesignerAttribute` の `Parallel` 型への関連付けを実行し、報告された属性を出力します。
 
-    -   最初に、すべての既定のデザイナーを登録します。
+    - 最初に、すべての既定のデザイナーを登録します。
 
  このコード例を次に示します。
 
@@ -80,7 +80,7 @@ metadata.Register()
 RegisterCustomMetadata()
 ```
 
-    -   次に、`RegisterCustomMetadata` メソッドで parallel をオーバーライドします。
+    - 次に、`RegisterCustomMetadata` メソッドで parallel をオーバーライドします。
 
  次に、C# と Visual Basic のコード例をそれぞれ示します。
 
@@ -101,7 +101,7 @@ Sub RegisterCustomMetadata()
 End Sub
 ```
 
--   最後に、さまざまなデータ テンプレートとトリガーを使用して、`IsRootDesigner` プロパティに基づいて適切なテンプレートを選択していることに注目してください。
+- 最後に、さまざまなデータ テンプレートとトリガーを使用して、`IsRootDesigner` プロパティに基づいて適切なテンプレートを選択していることに注目してください。
 
  このコード例を次に示します。
 

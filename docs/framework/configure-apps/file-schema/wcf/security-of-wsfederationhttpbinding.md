@@ -3,11 +3,11 @@ title: <security> の <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: a8e5e854-b8dc-4921-843d-34b6a4a6a8ba
 ms.openlocfilehash: 75e3910473a353c2ef110106c34b4e92c018b51c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196126"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670418"
 ---
 # <a name="security-of-wsfederationhttpbinding"></a>\<セキュリティ > の\<wsFederationHttpBinding >
 セキュリティ設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)します。  
@@ -85,7 +85,7 @@ ms.locfileid: "59196126"
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|任意。 適用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.WSFederationHttpSecurityMode> 型です。|  
+|モード|省略可能です。 適用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.WSFederationHttpSecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>Mode 属性  
   

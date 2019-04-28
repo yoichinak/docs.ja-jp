@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187339"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700203"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats メソッド
 共通言語ランタイムのガベージ コレクション システムに関する現在の統計情報のセットを取得します。  

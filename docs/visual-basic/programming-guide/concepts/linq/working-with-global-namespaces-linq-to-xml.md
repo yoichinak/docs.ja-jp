@@ -3,11 +3,11 @@ title: グローバル名前空間の使用 (Visual Basic) (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 0a8064d5-e02f-4315-ad48-6deaa443a2f0
 ms.openlocfilehash: d8e74e949815d36f06f522460cc31ca6c3ccabb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908012"
 ---
 # <a name="working-with-global-namespaces-visual-basic-linq-to-xml"></a>グローバル名前空間の使用 (Visual Basic) (LINQ to XML)
 使用して XML 名前空間を宣言する機能は、Visual Basic で XML リテラルの主な機能の 1 つ、`Imports`ステートメント。 この機能を使用することで、プレフィックスを使用する XML 名前空間または既定の XML 名前空間を宣言できます。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 37df2641-661e-407a-a3fb-7bf9540f01e8
 ms.openlocfilehash: 786094bc426066b45fd1a214950ec1e030f0b731
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088835"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61880075"
 ---
 # <a name="connection-strings-and-configuration-files"></a>接続文字列と構成ファイル
 接続文字列をアプリケーションのコードに組み込むと、セキュリティ上の脆弱性やメンテナンスの問題を引き起こす可能性があります。 アプリケーションのソース コード内にコンパイルされた暗号化されていない接続文字列は、[Ildasm.exe (IL 逆アセンブラー)](../../../../docs/framework/tools/ildasm-exe-il-disassembler.md) ツールを使用して参照することができます。 さらに、接続文字列が変わるたびにアプリケーションを再コンパイルする必要性が生じます。 そのため、接続文字列はアプリケーション構成ファイルに保存することをお勧めします。  

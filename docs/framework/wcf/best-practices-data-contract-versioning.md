@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, data contracts
 ms.assetid: bf0ab338-4d36-4e12-8002-8ebfdeb346cb
 ms.openlocfilehash: cf3ae6f47f63c545edf3d65804daa049d4541788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703531"
 ---
 # <a name="best-practices-data-contract-versioning"></a>ベスト プラクティス:データ コントラクトのバージョン管理
 このトピックでは、長期的に容易に拡張させることのできるデータ コントラクトを作成するためのベスト プラクティスをいくつか紹介します。 データ コントラクトの詳細については、トピックを参照してください。 [Using Data Contracts](../../../docs/framework/wcf/feature-details/using-data-contracts.md)します。  
@@ -39,9 +39,9 @@ ms.locfileid: "59334927"
   
  アプリケーションから送信するメッセージは厳密にスキーマに適合させる必要があるが、外部から受信したメッセージがこれに適合しているとは限らない、という場合もあります。 この場合、受信したメッセージには、異質なデータが含まれているおそれがあります。 余分な値が格納されているし、WCF によって返されると結果スキーマが無効なメッセージが送信されるになります。 これを回避するには、ラウンド トリップ機能を無効にする必要があります。 これには、2 つの方法があります。  
   
--   独自に定義した型に <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装しない。  
+- 独自に定義した型に <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装しない。  
   
--   サービス コントラクトに <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性を適用し、<xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> プロパティ値を `true` に設定する。  
+- サービス コントラクトに <xref:System.ServiceModel.ServiceBehaviorAttribute> 属性を適用し、<xref:System.ServiceModel.ServiceBehaviorAttribute.IgnoreExtensionDataObject%2A> プロパティ値を `true` に設定する。  
   
  ラウンド トリップの詳細については、次を参照してください。[上位互換性のあるデータ コントラクト](../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)します。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "59334927"
   
 8. 新しいバージョンで、新しいデータ メンバーを追加することは可能ですが、 以下の規則に従う必要があります。  
   
-    1.  <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティ値は、既定値である `false` のまま変更しないでください。  
+    1. <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティ値は、既定値である `false` のまま変更しないでください。  
   
-    2.  メンバーの既定値として `null` または 0 を許容できない場合は、<xref:System.Runtime.Serialization.OnDeserializingAttribute> を使用してコールバック メソッドを指定する必要があります。該当するメンバーが受信ストリーム内に含まれていない場合は、このコールバック メソッドで妥当な既定値を設定します。 コールバックの詳細については、次を参照してください。[バージョン トレラントなシリアル化コールバック](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)します。  
+    2. メンバーの既定値として `null` または 0 を許容できない場合は、<xref:System.Runtime.Serialization.OnDeserializingAttribute> を使用してコールバック メソッドを指定する必要があります。該当するメンバーが受信ストリーム内に含まれていない場合は、このコールバック メソッドで妥当な既定値を設定します。 コールバックの詳細については、次を参照してください。[バージョン トレラントなシリアル化コールバック](../../../docs/framework/wcf/feature-details/version-tolerant-serialization-callbacks.md)します。  
   
-    3.  <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType>既存のデータ メンバーの後にすべての新しく追加されたデータ メンバーが表示されることを確認するプロパティを使用する必要があります。 これを行うことをお勧めの方法は次のとおりです。データ コントラクトの最初のバージョンのデータ メンバーのいずれもする必要がありますが、`Order`プロパティ セット。 バージョン 2 のデータ コントラクトで追加されたすべてのデータ メンバーについては、`Order` プロパティを 2 に設定します。 バージョン 3 のデータ コントラクトで追加されたすべてのデータ メンバーについては、`Order` プロパティを 3 に設定します。以降のバージョンも同様にしていきます。 複数のデータ メンバーに同じ `Order` 番号を設定してかまいません。  
+    3. <xref:System.Runtime.Serialization.DataMemberAttribute.Order?displayProperty=nameWithType>既存のデータ メンバーの後にすべての新しく追加されたデータ メンバーが表示されることを確認するプロパティを使用する必要があります。 これを行うことをお勧めの方法は次のとおりです。データ コントラクトの最初のバージョンのデータ メンバーのいずれもする必要がありますが、`Order`プロパティ セット。 バージョン 2 のデータ コントラクトで追加されたすべてのデータ メンバーについては、`Order` プロパティを 2 に設定します。 バージョン 3 のデータ コントラクトで追加されたすべてのデータ メンバーについては、`Order` プロパティを 3 に設定します。以降のバージョンも同様にしていきます。 複数のデータ メンバーに同じ `Order` 番号を設定してかまいません。  
   
 9. 新しいバージョンで、データ メンバーを削除しないでください。旧バージョンで、<xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティ値が `false` (既定値) であった場合も同様です。  
   

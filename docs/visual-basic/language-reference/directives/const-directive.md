@@ -16,11 +16,11 @@ helpviewer_keywords:
 - 'declaring constants [Visual Basic], #const directive'
 ms.assetid: 707669e5-23f9-4f17-8622-a0d534429386
 ms.openlocfilehash: 5458bbebc6064eb6273b8deb5447b8941e1d233f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842266"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746697"
 ---
 # <a name="const-directive"></a>#Const ディレクティブ
 Visual basic の条件付きコンパイラ定数を定義します。  

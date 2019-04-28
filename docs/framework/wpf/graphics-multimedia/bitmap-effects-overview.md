@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bitmap effects [WPF]
 ms.assetid: 23cb338e-4b59-4b52-b294-96431f9c9568
 ms.openlocfilehash: 1866ba7a5419ea435a56daa63f94122d3b83473e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752751"
 ---
 # <a name="bitmap-effects-overview"></a>ビットマップ効果の概要
 ビットマップ効果は、デザイナーを有効にして、視覚効果を適用する開発者が Windows Presentation Foundation (WPF) をコンテンツのレンダリングします。 ビットマップ効果を簡単に適用することを許可するなど、<xref:System.Windows.Media.Effects.DropShadowBitmapEffect>効果またはぼかし効果をイメージやボタン。  
@@ -23,15 +23,15 @@ ms.locfileid: "59166895"
   
  特殊なケースとしての[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、効果として設定できるプロパティでライブ<xref:System.Windows.Media.Visual>などのオブジェクトを<xref:System.Windows.Controls.Button>または<xref:System.Windows.Controls.TextBox>します。 ピクセル処理は、実行時に適用されてレンダリングされます。 レンダリング時にこの場合、<xref:System.Windows.Media.Visual>に自動的に変換されます、<xref:System.Windows.Media.Imaging.BitmapSource>同等への入力として渡すは、 <xref:System.Windows.Media.Effects.BitmapEffect>。 出力の置換、<xref:System.Windows.Media.Visual>オブジェクトの既定のレンダリング動作します。 これは、ため<xref:System.Windows.Media.Effects.BitmapEffect>オブジェクトが効果を適用するときに、ビジュアルでハードウェア アクセラレータのみつまりなしをソフトウェアでレンダリングするビジュアルを強制します。  
   
--   <xref:System.Windows.Media.Effects.BlurBitmapEffect> 焦点のずれたに表示されるオブジェクトをシミュレートします。  
+- <xref:System.Windows.Media.Effects.BlurBitmapEffect> 焦点のずれたに表示されるオブジェクトをシミュレートします。  
   
--   <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> オブジェクトの周囲に色の付いた光輪を作成します。  
+- <xref:System.Windows.Media.Effects.OuterGlowBitmapEffect> オブジェクトの周囲に色の付いた光輪を作成します。  
   
--   <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> オブジェクトの後ろに影を作成します。  
+- <xref:System.Windows.Media.Effects.DropShadowBitmapEffect> オブジェクトの後ろに影を作成します。  
   
--   <xref:System.Windows.Media.Effects.BevelBitmapEffect> 指定した曲線に従ってイメージの表面を浮き上がらせるベベルを作成します。  
+- <xref:System.Windows.Media.Effects.BevelBitmapEffect> 指定した曲線に従ってイメージの表面を浮き上がらせるベベルを作成します。  
   
--   <xref:System.Windows.Media.Effects.EmbossBitmapEffect> バンプ マッピングを作成、<xref:System.Windows.Media.Visual>人工的な光源から奥行きとテクスチャの印象を与える。  
+- <xref:System.Windows.Media.Effects.EmbossBitmapEffect> バンプ マッピングを作成、<xref:System.Windows.Media.Visual>人工的な光源から奥行きとテクスチャの印象を与える。  
   
 > [!NOTE]
 >  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] のビットマップ効果は、ソフトウェア モードでレンダリングされます。 効果を適用するオブジェクトも、ソフトウェアでレンダリングされます。 大きなビジュアルにビットマップ効果を使うとき、またはビットマップ効果のプロパティをアニメーション化するときに、パフォーマンスが最も低下します。 このような方法ではビットマップ効果をまったく使ってはならないということではありませんが、注意を払い、十分にテストを行って、ユーザー エクスペリエンスが期待どおりになることを確認する必要があります。  

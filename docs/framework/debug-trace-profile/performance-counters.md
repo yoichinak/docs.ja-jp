@@ -9,30 +9,30 @@ ms.assetid: 06a4ae8c-eeb2-4d5a-817e-b1b95c0653e1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 210a0a7d84f21360dce93627cdf6a27777c09968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61874473"
 ---
 # <a name="performance-counters-in-the-net-framework"></a>.NET Framework のパフォーマンス カウンター
 ここで見つかりますパフォーマンス カウンターの一覧では、 [Windows パフォーマンス モニター](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc749249%28v=ws.11%29)します。  
   
--   [例外パフォーマンス カウンター](#exception)  
+- [例外パフォーマンス カウンター](#exception)  
   
--   [相互運用パフォーマンス カウンター](#interop)  
+- [相互運用パフォーマンス カウンター](#interop)  
   
--   [JIT パフォーマンス カウンター](#jit)  
+- [JIT パフォーマンス カウンター](#jit)  
   
--   [読み込みパフォーマンス カウンター](#loading)  
+- [読み込みパフォーマンス カウンター](#loading)  
   
--   [ロックおよびスレッド パフォーマンス カウンター](#lockthread)  
+- [ロックおよびスレッド パフォーマンス カウンター](#lockthread)  
   
--   [メモリ パフォーマンス カウンター](#memory)  
+- [メモリ パフォーマンス カウンター](#memory)  
   
--   [ネットワーク パフォーマンス カウンター](#networking)  
+- [ネットワーク パフォーマンス カウンター](#networking)  
   
--   [セキュリティ パフォーマンス カウンター](#security)  
+- [セキュリティ パフォーマンス カウンター](#security)  
   
 <a name="exception"></a>   
 ## <a name="exception-performance-counters"></a>例外パフォーマンス カウンター  
@@ -161,21 +161,21 @@ ms.locfileid: "59184809"
   
  サポートされているネットワーク パフォーマンス カウンターのクラスを次に示します。  
   
--   イベントが発生した回数を測定するイベント カウンター。  
+- イベントが発生した回数を測定するイベント カウンター。  
   
--   送信または受信されたデータの量を測定するデータ カウンター。  
+- 送信または受信されたデータの量を測定するデータ カウンター。  
   
--   各種プロセスが実行される時間を測定する時間計測カウンター。 時間は、オブジェクトの状態が変わった後に、間隔 (通常は秒単位) ごとに計測されます。  
+- 各種プロセスが実行される時間を測定する時間計測カウンター。 時間は、オブジェクトの状態が変わった後に、間隔 (通常は秒単位) ごとに計測されます。  
   
--   間隔 (通常は秒単位) ごとに特定の遷移を形成するオブジェクトの数を測定する間隔ごとのカウンター。  
+- 間隔 (通常は秒単位) ごとに特定の遷移を形成するオブジェクトの数を測定する間隔ごとのカウンター。  
   
  イベントのネットワーク パフォーマンス カウンターには、次のようなものがあります。  
   
--   **Connections Established**  
+- **Connections Established**  
   
--   **Datagrams Received**  
+- **Datagrams Received**  
   
--   **Datagrams Sent**  
+- **Datagrams Sent**  
   
  これらのパフォーマンス カウンターは、プロセス開始後のカウントを提供します。 確立された <xref:System.Net.Sockets.Socket> 接続のカウントには、確立されたストリーム ソケット接続用のアプリケーションによる明示的な <xref:System.Net.Sockets.Socket> メソッド呼び出しと、その他のクラス (<xref:System.Net.HttpWebRequest>、<xref:System.Net.FtpWebRequest>、<xref:System.Net.WebClient>、<xref:System.Net.Sockets.TcpClient> など) による <xref:System.Net.Sockets.Socket> クラスの内部呼び出しが含まれます。  
   
@@ -183,33 +183,33 @@ ms.locfileid: "59184809"
   
  データのネットワーク パフォーマンス カウンターには、次のようなものがあります。  
   
--   **Bytes Received**  
+- **Bytes Received**  
   
--   **Bytes Sent**  
+- **Bytes Sent**  
   
  これらのカウンターは、プロセス開始後のバイトのカウントを提供します。  
   
  <xref:System.Net.HttpWebRequest> オブジェクトが有効期間全体またはその一部を通過するのに要する時間を計測する時間計測カウンターには、次の 2 つがあります。  
   
--   **HttpWebRequest Average Lifetime**  
+- **HttpWebRequest Average Lifetime**  
   
--   **HttpWebRequest Average Queue Time**  
+- **HttpWebRequest Average Queue Time**  
   
  **HttpWebRequest Average Lifetime** カウンターの場合、大部分の <xref:System.Net.HttpWebRequest> オブジェクトの有効期間は、常に、オブジェクトが作成されたときに開始し、アプリケーションによって応答ストリームが閉じられたときに終了します。 ただし、例外的なシナリオが 2 つあります。  
   
--   アプリケーションが  <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドまたは <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>  メソッドの呼び出しをしない場合、<xref:System.Net.HttpWebRequest> オブジェクトの有効期間は無視されます。  
+- アプリケーションが  <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドまたは <xref:System.Net.HttpWebRequest.BeginGetResponse%2A>  メソッドの呼び出しをしない場合、<xref:System.Net.HttpWebRequest> オブジェクトの有効期間は無視されます。  
   
--   <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドまたは <xref:System.Net.HttpWebRequest.EndGetResponse%2A> メソッドを呼び出したときに <xref:System.Net.HttpWebRequest> オブジェクトが <xref:System.Net.WebException> をスローした場合、その例外がスローされたときに有効期間は終了します。 技術的には、基になる応答ストリームもその時点で閉じられます (ユーザーに返される応答ストリームは、実際には、応答ストリームのコピーを含むメモリ ストリームです)。  
+- <xref:System.Net.HttpWebRequest.GetResponse%2A> メソッドまたは <xref:System.Net.HttpWebRequest.EndGetResponse%2A> メソッドを呼び出したときに <xref:System.Net.HttpWebRequest> オブジェクトが <xref:System.Net.WebException> をスローした場合、その例外がスローされたときに有効期間は終了します。 技術的には、基になる応答ストリームもその時点で閉じられます (ユーザーに返される応答ストリームは、実際には、応答ストリームのコピーを含むメモリ ストリームです)。  
   
  間隔ごとに特定の <xref:System.Net.HttpWebRequest> オブジェクトの動作を追跡するカウンターが 4 つあります。 これらのパフォーマンス カウンターは、アプリケーション開発者、管理者、およびサポート スタッフが、<xref:System.Net.HttpWebRequest> オブジェクトの動作をより的確に把握するのに役立ちます。 これらのカウンターは、次のとおりです。  
   
--   **HttpWebRequests Created/sec**  
+- **HttpWebRequests Created/sec**  
   
--   **HttpWebRequests Queued/sec**  
+- **HttpWebRequests Queued/sec**  
   
--   **HttpWebRequests Aborted/sec**  
+- **HttpWebRequests Aborted/sec**  
   
--   **HttpWebRequests Failed/sec**  
+- **HttpWebRequests Failed/sec**  
   
  **HttpWebRequests Aborted/sec** カウンターでは、<xref:System.Net.HttpWebRequest.Abort%2A> の内部呼び出しもカウントされます。 これらの内部呼び出しは、通常、一部のアプリケーションが測定するタイムアウトによって発生します。  
   
@@ -233,9 +233,9 @@ for (int i = 0; i < Array.Length; i++)
   
  ネットワーク パフォーマンス カウンターは、次の 2 つのカテゴリに一覧表示されます。  
   
--   ".NET CLR Networking" - .NET Framework Version 2 で導入され、.NET Framework Version 2 以降でサポートされている元のパフォーマンス カウンター。  
+- ".NET CLR Networking" - .NET Framework Version 2 で導入され、.NET Framework Version 2 以降でサポートされている元のパフォーマンス カウンター。  
   
--   ".NET CLR Networking 4.0.0.0" - 上に示したすべてのソケット カウンターと、.NET Framework Version 4 以降でサポートされている新しいパフォーマンス カウンター。 これらの新しいカウンターは、<xref:System.Net.HttpWebRequest> オブジェクトに関するパフォーマンス情報を提供します。  
+- ".NET CLR Networking 4.0.0.0" - 上に示したすべてのソケット カウンターと、.NET Framework Version 4 以降でサポートされている新しいパフォーマンス カウンター。 これらの新しいカウンターは、<xref:System.Net.HttpWebRequest> オブジェクトに関するパフォーマンス情報を提供します。  
   
  アプリケーションでパフォーマンス カウンターにアクセスして管理する方法の詳細については、「[パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)」を参照してください。  
   

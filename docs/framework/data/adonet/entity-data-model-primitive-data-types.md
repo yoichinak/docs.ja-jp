@@ -3,11 +3,11 @@ title: Entity Data Model:プリミティブ データ型
 ms.date: 03/30/2017
 ms.assetid: 7635168e-0566-4fdd-8391-7941b0d9f787
 ms.openlocfilehash: 044a0ed981bb9cda3550fb3a3a9f1cb9bff96f25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667133"
 ---
 # <a name="entity-data-model-primitive-data-types"></a>Entity Data Model:プリミティブ データ型
 Entity Data Model (EDM) は、一連の定義に使用される抽象プリミティブ データ型 (文字列、ブール値、Int32 など) をサポートしている[プロパティ](../../../../docs/framework/data/adonet/property.md)概念モデル。 これらのプリミティブ データ型は、SQL Server データベースや共通言語ランタイム (CLR) などのストレージ環境またはホスト環境でサポートされる、実際のプリミティブ データ型のプロキシです。 EDM では、プリミティブ データ型に対する演算や変換のセマンティクスを定義していません。これらのセマンティクスは、ストレージ環境またはホスト環境で定義されます。 通常、EDM のプリミティブ データ型は、ストレージ環境またはホスト環境の対応プリミティブ データ型にマップされます。 Entity Framework が EDM のプリミティブ型を SQL Server データ型にマップする方法については、次を参照してください。[エンティティ FrameworkTypes 用 SqlClient](../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-types.md)します。  

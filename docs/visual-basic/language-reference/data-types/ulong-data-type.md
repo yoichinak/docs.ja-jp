@@ -17,11 +17,11 @@ helpviewer_keywords:
 - UL literal type characters [Visual Basic]
 ms.assetid: 017e0702-774e-44ae-bedc-786b424ca84e
 ms.openlocfilehash: 82a2badc1bb22a55f753c9075562db3a5ee0d234
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54522961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747081"
 ---
 # <a name="ulong-data-type-visual-basic"></a>ULong データ型 (Visual Basic)
 
@@ -64,19 +64,19 @@ Dim number = &H_00_00_0A_96_2F_AC_14_D7ul
 
 ## <a name="programming-tips"></a>プログラミングのヒント
   
--   **負の数。** `ULong`符号なしの型は、負の数を表すことはできません。 単項マイナスを使用する場合 (`-`) 型に評価される式で演算子`ULong`、Visual Basic の式を変換する`Decimal`最初。  
+- **負の数。** `ULong`符号なしの型は、負の数を表すことはできません。 単項マイナスを使用する場合 (`-`) 型に評価される式で演算子`ULong`、Visual Basic の式を変換する`Decimal`最初。  
   
--   **CLS 準拠です。** `ULong`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。  
+- **CLS 準拠です。** `ULong`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。  
   
--   **相互運用の考慮事項。** .NET Framework、例のオートメーションまたは COM オブジェクト用に作成されていないコンポーネントとやり取りする場合などの型を注意してください`ulong`他の環境で別のデータ幅 (32 ビット) を持つことができます。 このようなコンポーネントに 32 ビットの引数を渡す場合の宣言として`UInteger`の代わりに`ULong`管理対象の Visual Basic コードです。  
+- **相互運用の考慮事項。** .NET Framework、例のオートメーションまたは COM オブジェクト用に作成されていないコンポーネントとやり取りする場合などの型を注意してください`ulong`他の環境で別のデータ幅 (32 ビット) を持つことができます。 このようなコンポーネントに 32 ビットの引数を渡す場合の宣言として`UInteger`の代わりに`ULong`管理対象の Visual Basic コードです。  
   
      さらに、オートメーションは Windows 95、Windows 98、Windows ME、および Windows 2000 で 64 ビット整数をサポートしません。 Visual Basic を渡すことはできません`ULong`これらのプラットフォームで、オートメーション コンポーネントへの引数。  
   
--   **拡大します。** `ULong`拡大変換後のデータ型`Decimal`、 `Single`、および`Double`します。 つまり、変換できる`ULong`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
+- **拡大します。** `ULong`拡大変換後のデータ型`Decimal`、 `Single`、および`Double`します。 つまり、変換できる`ULong`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
   
--   **型宣言文字。** リテラルの型文字を付加`UL`リテラルに強制的に、`ULong`データ型。 `ULong` 識別子の型文字がありません。
+- **型宣言文字。** リテラルの型文字を付加`UL`リテラルに強制的に、`ULong`データ型。 `ULong` 識別子の型文字がありません。
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.UInt64?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.UInt64?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="see-also"></a>関連項目
 

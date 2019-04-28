@@ -11,11 +11,11 @@ ms.assetid: 964cbb35-ab49-4498-8471-209689e5dada
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: eec77d4dd42a7b95d1e2cd0e353e2e54746676b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704883"
 ---
 # <a name="assemblybinding-element-for-runtime"></a>\<assemblyBinding > 要素の\<ランタイム >
 アセンブリ バージョンのリダイレクトおよびアセンブリの位置に関する情報が含まれます。  

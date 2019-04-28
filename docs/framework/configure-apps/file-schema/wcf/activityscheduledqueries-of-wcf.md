@@ -3,11 +3,11 @@ title: <activityScheduledQueries> WCF の
 ms.date: 03/30/2017
 ms.assetid: e351329f-9676-4f11-9b19-f4bac82f36fc
 ms.openlocfilehash: 1c9c292080016d7a2d0014ed07be371c0e247621
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701126"
 ---
 # <a name="activityscheduledqueries-of-wcf"></a>\<activityScheduledQueries > の WCF
 親アクティビティによる実行がスケジュールされているアクティビティを追跡するために使用する、クエリのコレクションを表します。 アクティビティがスケジュールされたレコードを追跡参加要素が定期受信するには、このクエリが必要です。  

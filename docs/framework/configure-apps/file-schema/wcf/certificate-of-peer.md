@@ -3,11 +3,11 @@ title: <certificate> の <peer>
 ms.date: 03/30/2017
 ms.assetid: 48b69142-c957-4305-a042-c9d0c9a55c0e
 ms.openlocfilehash: 5fdcb94e0c252d0bf5c215c08d44061bfe09a537
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673395"
 ---
 # <a name="certificate-of-peer"></a>\<証明書 > の\<ピア >
 ピアで使用される証明書を指定します。  

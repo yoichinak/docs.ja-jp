@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
 ms.openlocfilehash: 687037d4299c8a53a2dcd644fd778081b5e7a0a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100081"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757354"
 ---
 # <a name="application-management-overview"></a>アプリケーション管理の概要
 すべてのアプリケーションは、アプリケーションの実装と管理に適用される機能を共有することがよくあります。 このトピックでは、機能の概要、<xref:System.Windows.Application>クラスを作成すると、アプリケーションを管理します。  
@@ -20,17 +20,17 @@ ms.locfileid: "59100081"
 ## <a name="the-application-class"></a>Application クラス  
  WPF では、一般的なアプリケーション スコープの機能がカプセル化された、<xref:System.Windows.Application>クラス。 <xref:System.Windows.Application>クラスには、次の機能が含まれています。  
   
--   アプリケーションの有効期間を追跡し、相互作用する。  
+- アプリケーションの有効期間を追跡し、相互作用する。  
   
--   コマンド ライン パラメーターを取得し、処理する。  
+- コマンド ライン パラメーターを取得し、処理する。  
   
--   未処理の例外を検出し、応答する。  
+- 未処理の例外を検出し、応答する。  
   
--   アプリケーション スコープのプロパティと リソースを共有する。  
+- アプリケーション スコープのプロパティと リソースを共有する。  
   
--   スタンドアロン アプリケーションのウィンドウを管理する。  
+- スタンドアロン アプリケーションのウィンドウを管理する。  
   
--   ナビゲーションを追跡し、管理する。  
+- ナビゲーションを追跡し、管理する。  
   
 <a name="The_Application_Class"></a>   
 ## <a name="how-to-perform-common-tasks-using-the-application-class"></a>アプリケーションのクラスを使用して一般的なタスクを実行する方法  
@@ -71,7 +71,7 @@ ms.locfileid: "59100081"
   
 - マークアップでは、`Application`要素を含める必要があります、`x:Class`属性。 ときに、アプリケーションがビルドが存在する`x:Class`を作成するために MSBuild を原因と、マークアップ ファイルを`partial`クラスから派生した<xref:System.Windows.Application>によって指定された名前を持つ、`x:Class`属性。 XAML スキーマの XML 名前空間宣言を追加する必要があります (`xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`)。
   
--   分離コード クラスがある必要があります、`partial`によって指定される同じ名前のクラス、`x:Class`マークアップ属性およびから派生する必要があります<xref:System.Windows.Application>します。 これにより、分離コード ファイルに関連付けられる、`partial`アプリケーションのビルド時にマークアップ ファイル用に生成されたクラス (を参照してください[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md))。  
+- 分離コード クラスがある必要があります、`partial`によって指定される同じ名前のクラス、`x:Class`マークアップ属性およびから派生する必要があります<xref:System.Windows.Application>します。 これにより、分離コード ファイルに関連付けられる、`partial`アプリケーションのビルド時にマークアップ ファイル用に生成されたクラス (を参照してください[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md))。  
   
 > [!NOTE]
 >  新しい WPF アプリケーション プロジェクトまたは Visual Studio を使用して WPF ブラウザー アプリケーション プロジェクトを作成するときに、アプリケーション定義は既定で含まれているし、マークアップと分離コードの両方を使用して定義されます。  
@@ -195,17 +195,17 @@ ms.locfileid: "59100081"
 ### <a name="application-activation-and-deactivation"></a>アプリケーションのアクティブ化と非アクティブ化  
  Windows では、アプリケーションを切り替えることができます。 最も一般的な方法は、Alt キーを押しながら Tab キーを押す方法です。 表示されている場合、アプリケーションに切り替えるだけできます<xref:System.Windows.Window>項目を選択できます。 現在選択されている<xref:System.Windows.Window>は、*アクティブなウィンドウ*(とも呼ばれます、*フォア グラウンド ウィンドウ*) であり、<xref:System.Windows.Window>ユーザー入力を受け取る。 アクティブなウィンドウにアプリケーションが、*アクティブなアプリケーション*(または*フォア グラウンド アプリケーション*)。 アプリケーションは、次の状況でアクティブ アプリケーションになります。  
   
--   起動しを示しています、<xref:System.Windows.Window>します。  
+- 起動しを示しています、<xref:System.Windows.Window>します。  
   
--   選択して、ユーザーが別のアプリケーションから切り替えた、<xref:System.Windows.Window>アプリケーションにします。  
+- 選択して、ユーザーが別のアプリケーションから切り替えた、<xref:System.Windows.Window>アプリケーションにします。  
   
  処理することにより、アプリケーションがアクティブになったときに検出することができます、<xref:System.Windows.Application.Activated?displayProperty=nameWithType>イベント。  
   
  同様に、アプリケーションは、次の状況で非アクティブになります。  
   
--   ユーザーが現在のアプリケーションから別のアプリケーションに切り替えた。  
+- ユーザーが現在のアプリケーションから別のアプリケーションに切り替えた。  
   
--   アプリケーションがシャットダウンされた。  
+- アプリケーションがシャットダウンされた。  
   
  処理することにより、アプリケーションが非アクティブになったときに検出することができます、<xref:System.Windows.Application.Deactivated?displayProperty=nameWithType>イベント。  
   
@@ -225,13 +225,13 @@ ms.locfileid: "59100081"
 ### <a name="application-shutdown"></a>アプリケーションのシャットダウン  
  アプリケーションの有効期間は、シャット ダウンされると終了します。シャットダウンは、次の理由で発生します。  
   
--   ユーザーが閉じたすべて<xref:System.Windows.Window>します。  
+- ユーザーが閉じたすべて<xref:System.Windows.Window>します。  
   
--   ユーザーがメインを閉じた<xref:System.Windows.Window>します。  
+- ユーザーがメインを閉じた<xref:System.Windows.Window>します。  
   
--   ユーザーは、ログオフまたはシャット ダウンによって、Windows セッションを終了します。  
+- ユーザーは、ログオフまたはシャット ダウンによって、Windows セッションを終了します。  
   
--   アプリケーション固有の条件が満たされた。  
+- アプリケーション固有の条件が満たされた。  
   
  アプリケーションのシャット ダウンの管理に役立つ<xref:System.Windows.Application>を提供します、<xref:System.Windows.Application.Shutdown%2A>メソッド、<xref:System.Windows.Application.ShutdownMode%2A>プロパティ、および<xref:System.Windows.Application.SessionEnding>と<xref:System.Windows.Application.Exit>イベント。  
   
@@ -241,11 +241,11 @@ ms.locfileid: "59100081"
 #### <a name="shutdown-mode"></a>シャットダウン モード  
  ほとんどのアプリケーションは、すべてのウィンドウが閉じられるか、メイン ウィンドウが閉じられたときにシャットダウンします。 ただし、場合によっては、他のアプリケーションに固有の条件によって、アプリケーションがシャット ダウンするタイミングに影響します。 アプリケーションがシャットを設定して、条件を指定する<xref:System.Windows.Application.ShutdownMode%2A>、次のいずれかで<xref:System.Windows.ShutdownMode>列挙値。  
   
--   <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnLastWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
+- <xref:System.Windows.ShutdownMode.OnMainWindowClose>  
   
--   <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
+- <xref:System.Windows.ShutdownMode.OnExplicitShutdown>  
   
  既定値<xref:System.Windows.Application.ShutdownMode%2A>は<xref:System.Windows.ShutdownMode.OnLastWindowClose>アプリケーションに自動的にシャット ダウン、ユーザーがアプリケーションの最後のウィンドウを閉じたときのことを意味します。 ただし場合は、アプリケーションはメイン ウィンドウが閉じられたときに、シャット ダウンする必要があります、WPF が自動的を設定した場合<xref:System.Windows.Application.ShutdownMode%2A>に<xref:System.Windows.ShutdownMode.OnMainWindowClose>します。 これを次の例に示します。  
   
@@ -259,13 +259,13 @@ ms.locfileid: "59100081"
 #### <a name="session-ending"></a>セッションの終了  
  によって記述されるシャット ダウン条件、<xref:System.Windows.Application.ShutdownMode%2A>プロパティは、アプリケーションに固有です。 ただし、場合によっては、アプリケーションは、外部条件の結果としてシャットダウンすることもあります。 最も一般的な外部条件は、ユーザーは、次の操作を Windows セッションを終了したときに発生します。  
   
--   ログオフ  
+- ログオフ  
   
--   シャット ダウン  
+- シャット ダウン  
   
--   再起動  
+- 再起動  
   
--   休止  
+- 休止  
   
  Windows セッションが終了を検出するには、処理、<xref:System.Windows.Application.SessionEnding>イベントは、次の例に示すようにします。  
   
@@ -291,11 +291,11 @@ ms.locfileid: "59100081"
   
  <xref:System.Windows.Application.Exit> スタンドアロン アプリケーションと Xbap の両方で処理できます。 Xbap の<xref:System.Windows.Application.Exit>は、次の状況で発生します。  
   
--   XBAP はから移動します。  
+- XBAP はから移動します。  
   
--   [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]XBAP をホストするタブが閉じられたときに、します。  
+- [!INCLUDE[TLA2#tla_ie7](../../../../includes/tla2sharptla-ie7-md.md)]XBAP をホストするタブが閉じられたときに、します。  
   
--   ブラウザーが閉じられた。  
+- ブラウザーが閉じられた。  
   
 #### <a name="exit-code"></a>終了コード  
  ほとんどのアプリケーションは、ユーザー要求に応じてオペレーティング システムから起動されます。 ただし、アプリケーションは、特定のタスクを実行するために、別のアプリケーションに起動されることもあります。 起動されたアプリケーションがシャット ダウンするとき、起動元のアプリケーションは、起動されたアプリケーションのシャット ダウン条件を知ならなければならないことがあります。 このような状況では、Windows は、アプリケーションをシャット ダウン時にアプリケーション終了コードを返すをできます。 既定では、WPF アプリケーションには、終了コード値 0 が返されます。  
@@ -325,11 +325,11 @@ ms.locfileid: "59100081"
   
  ユーザー エクスペリエンスの観点から、アプリケーションは、次のいずれか、またはすべてを行うことによって、この既定の動作を回避することをお勧めします。  
   
--   わかりやすい情報を表示する。  
+- わかりやすい情報を表示する。  
   
--   アプリケーションの続行を試みる。  
+- アプリケーションの続行を試みる。  
   
--   記録なは、Windows イベント ログの開発者にとって使いやすい例外情報。  
+- 記録なは、Windows イベント ログの開発者にとって使いやすい例外情報。  
   
  これはどのような未処理の例外を検出できることに依存このサポートを実装する、<xref:System.Windows.Application.DispatcherUnhandledException>のイベントが発生します。  
   

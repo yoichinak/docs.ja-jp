@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57efd4f29ba7e28adf1af03030d7f83eb32c1c2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763673"
 ---
 # <a name="iclrtaskabort-method"></a>ICLRTask::Abort メソッド
 共通言語ランタイム (CLR) がタスクを中止する要求を現在[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インスタンスが表す。  

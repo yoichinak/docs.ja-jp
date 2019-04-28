@@ -11,11 +11,11 @@ helpviewer_keywords:
 - authenticationModules, remove element
 ms.assetid: abf79949-b05c-465a-b51c-bbeda9a74173
 ms.openlocfilehash: 0eb3ef7db422d5cbbe70bd5633798b8d3787452d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125254"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705039"
 ---
 # <a name="remove-element-for-authenticationmodules-network-settings"></a>\<削除 > authenticationModules (ネットワーク設定) の要素
 アプリケーションから認証モジュールを削除します。  

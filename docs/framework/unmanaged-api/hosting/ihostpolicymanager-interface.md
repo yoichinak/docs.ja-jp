@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cf9d903b4e44ea7a185ad8b3b71b7a5da2f2bda3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760117"
 ---
 # <a name="ihostpolicymanager-interface"></a>IHostPolicyManager インターフェイス
 ホストの場合、共通言語ランタイム (CLR) を実行するアクションの中止、タイムアウト、またはエラーを通知するメソッドを提供します。  

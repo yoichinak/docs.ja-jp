@@ -3,11 +3,11 @@ title: <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: 97e665b6-1c51-410b-928a-9bb42c954ddb
 ms.openlocfilehash: 7506cce61966a4a4650ff591cd6106dfd4a33b67
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670366"
 ---
 # <a name="serviceactivations"></a>\<serviceActivations>
 

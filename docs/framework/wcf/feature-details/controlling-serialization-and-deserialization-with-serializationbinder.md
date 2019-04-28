@@ -3,11 +3,11 @@ title: SerializationBinder を使用したシリアル化および逆シリア�
 ms.date: 03/30/2017
 ms.assetid: ba8dcecf-acc7-467c-939d-021bbac797d4
 ms.openlocfilehash: cb2476b55a965e326e492c3c0b77f0be65b2b290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857260"
 ---
 # <a name="controlling-serialization-and-deserialization-with-serializationbinder"></a>SerializationBinder を使用したシリアル化および逆シリアル化の制御
 シリアル化中に、フォーマッタは、正しい型およびバージョンのオブジェクトのインスタンスを作成するために必要な情報を送信します。 通常、この情報には、オブジェクトの完全な型名および完全なアセンブリ名が含まれます。 既定では、逆シリアル化でこの情報を使用して、同一のオブジェクトのインスタンスを作成します。 場合によっては、シリアル化するクラスと逆シリアル化するクラスの制御が必要となります。これは、元のクラスが逆シリアル化を実行するコンピューター上に存在していない可能性がある場合、元のクラスがアセンブリ間で移動されている場合、または、サーバー上とクライアント上では異なるバージョンのクラスが必要である場合です。 詳細については、次を参照してください。[シリアル化バインダーの使用状況](../../../../docs/framework/wcf/samples/usage-of-serialization-binder.md)します。  

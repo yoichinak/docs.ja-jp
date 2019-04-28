@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: a092d98c-444d-4336-a644-63c2e11e96c8
 author: BrucePerlerMS
 ms.openlocfilehash: ef5801ccfdda22b1c89c22ea9c2b14ea0855ed26
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670034"
 ---
 # <a name="namespace-mapping-between-wif-35-and-wif-45"></a>WIF 3.5 と WIF 4.5 間での名前空間マッピング
 
@@ -19,8 +19,7 @@ ms.locfileid: "57352790"
 WIF 3.5 では `Microsoft.IdentityModel` 名前空間に集められていた WIF のクラスは、WIF 4.5 では `System.Security.Claims`、`System.ServiceModel.Security`、`System.IdentityModel` の各名前空間に分散されています。 さらに、WIF 3.5 の一部の名前空間は、WIF 4.5 では統合されるか完全に削除されています。
 
 > [!IMPORTANT]
-> 
-  `System.IdentityModel`、<xref:System.IdentityModel.Claims?displayProperty=nameWithType>、および <xref:System.IdentityModel.Policy?displayProperty=nameWithType> という <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> 名前空間には、WCF クレーム ベースの ID モデルを実装するクラスが含まれます。 WCF クレーム ベース ID モデルは WIF に置き換えられています。 WIF に基づいてソリューションをビルドする際は、これら 3 つの名前空間でクラスを使用しないでください。
+> `System.IdentityModel`、<xref:System.IdentityModel.Claims?displayProperty=nameWithType>、および <xref:System.IdentityModel.Policy?displayProperty=nameWithType> という <xref:System.IdentityModel.Selectors?displayProperty=nameWithType> 名前空間には、WCF クレーム ベースの ID モデルを実装するクラスが含まれます。 WCF クレーム ベース ID モデルは WIF に置き換えられています。 WIF に基づいてソリューションをビルドする際は、これら 3 つの名前空間でクラスを使用しないでください。
 
 次の表では、WIF 3.5 のクラスが WIF 4.5 で見つかる場所を示します。
 

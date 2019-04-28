@@ -3,11 +3,11 @@ title: <certificate> 要素
 ms.date: 03/30/2017
 ms.assetid: 9b3d9233-ef35-477a-bf5d-efd1e80a52f4
 ms.openlocfilehash: eea8130911ca3780a6e4e753c17877e58c50b139
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164269"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704324"
 ---
 # <a name="certificate-element"></a>\<証明書 > 要素
 ピアツーピア クライアントのメッセージの署名と暗号化に使用する X.509 証明書を指定します。  

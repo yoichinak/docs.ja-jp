@@ -3,11 +3,11 @@ title: トラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
 ms.openlocfilehash: 27b7eef345dd8ec6c4f5e319818b6b002717f049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917637"
 ---
 # <a name="troubleshooting"></a>トラブルシューティング
 ここでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションで発生する可能性のある問題をいくつか示し、そうした問題を回避または影響を軽減するための提案を示します。  
@@ -31,9 +31,9 @@ ms.locfileid: "59105483"
 ## <a name="cascade-delete"></a>連鎖削除  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は連鎖削除操作をサポートせず、認識もしません。 制約を持つテーブルの行を削除するには、次のいずれかを行う必要があります。  
   
--   データベース内の外部キー制約で `ON DELETE CASCADE` 規則を設定する。  
+- データベース内の外部キー制約で `ON DELETE CASCADE` 規則を設定する。  
   
--   独自のコードを使用して、親オブジェクトの削除を妨げる子オブジェクトを最初に削除する。  
+- 独自のコードを使用して、親オブジェクトの削除を妨げる子オブジェクトを最初に削除する。  
   
  このような操作を行わない場合、<xref:System.Data.SqlClient.SqlException> 例外がスローされます。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "59105483"
 ## <a name="expression-not-queryable"></a>クエリ可能でない式  
  なら、"式 [式] はクエリ不可能です。アセンブリ参照が存在しますか?" エラーは、次のことを確認します。  
   
--   アプリケーションが [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)] を対象としている。  
+- アプリケーションが [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)] を対象としている。  
   
--   `System.Core.dll` および `System.Data.Linq.dll` への参照が存在する。  
+- `System.Core.dll` および `System.Data.Linq.dll` への参照が存在する。  
   
--   ある、 `Imports` (Visual Basic) または`using`(c#) ディレクティブを<xref:System.Linq>と<xref:System.Data.Linq>します。  
+- ある、 `Imports` (Visual Basic) または`using`(c#) ディレクティブを<xref:System.Linq>と<xref:System.Data.Linq>します。  
   
 ## <a name="duplicatekeyexception"></a>DuplicateKeyException  
  デバッグ時、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト、エンティティのリレーションシップを走査する可能性があります。 これらの項目をキャッシュにはそうと[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]存在している対応になります。 その後、同じキーの複数の行を生成する <xref:System.Data.Linq.Table%601.Attach%2A> や <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> などのメソッドを実行しようとした場合、<xref:System.Data.Linq.DuplicateKeyException> がスローされます。  

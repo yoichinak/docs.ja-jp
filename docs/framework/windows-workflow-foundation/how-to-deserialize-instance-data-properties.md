@@ -3,28 +3,28 @@ title: '方法: インスタンス データ プロパティを逆シリアル�
 ms.date: 03/30/2017
 ms.assetid: b13a3508-1b97-4359-b336-03d85fa23bc4
 ms.openlocfilehash: badea2b9731b1144a727a5d5b83c92072027e1f2
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33514053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761443"
 ---
 # <a name="how-to-deserialize-instance-data-properties"></a>方法: インスタンス データ プロパティを逆シリアル化する
 ユーザーまたはワークフロー管理者は、永続化されたワークフロー インスタンスの状態を手動で調べることが必要になる場合があります。 <xref:System.Activities.DurableInstancing.SqlWorkflowInstanceStore> は、次の 4 列を公開するインスタンス テーブルに関するビューを提供します。  
   
--   ReadWritePrimitiveDataProperties  
+- ReadWritePrimitiveDataProperties  
   
--   WriteOnlyPrimitiveDataProperties  
+- WriteOnlyPrimitiveDataProperties  
   
--   ReadWriteComplexDataProperties  
+- ReadWriteComplexDataProperties  
   
--   WriteOnlyComplexDataProperties  
+- WriteOnlyComplexDataProperties  
   
  プリミティブ データ プロパティは、.NET Framework 型を持つと見なされます (たとえば、Int32 や String など)、"common"複合データ プロパティは、他のすべての型を参照中にプロパティを参照してください。 プリミティブ型の正確な列挙については、後で示すコード例を参照してください。  
   
  Read/write プロパティは、インスタンスが読み込まれるときにワークフロー ランタイムに戻されるプロパティを表します。 WriteOnly プロパティは、データベースに書き込まれた後に再度読み取られることはありません。  
   
- この例では、プリミティブ データ プロパティを逆シリアル化できるコードを示します。 ReadWritePrimitiveDataProperties または WriteOnlyPrimitiveDataProperties 列からの読み取りバイト配列を指定して、このコードはバイナリ ラージ オブジェクト (BLOB) に変換する<xref:System.Collections.Generic.Dictionary%602>型の\<XName、オブジェクト > を各キー値プロパティ名と対応する値のペアを表します。  
+ この例では、プリミティブ データ プロパティを逆シリアル化できるコードを示します。 れるまたは WriteOnlyPrimitiveDataProperties 列から読み取るバイト配列を指定するには、このコードはバイナリ ラージ オブジェクト (BLOB) に変換を<xref:System.Collections.Generic.Dictionary%602>型の\<、XName オブジェクト > を各キーの値プロパティ名とその対応する値のペアを表します。  
   
  複合データ プロパティを逆シリアル化する操作は現在サポートされていないので、この例ではその方法は示しません。  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
 ms.openlocfilehash: e8d82ff8958af12842366911b6633ea6b2e0efbb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765865"
 ---
 # <a name="create-the-data-service"></a>データ サービスを作成する
 
@@ -52,11 +52,11 @@ ms.locfileid: "59517227"
 
 5. 次の手順のいずれかの手順を実行して、データ モデルをデータベースに接続し、**次**:
 
-    -   既に構成されているデータベース接続を持っていない場合はクリックして**新しい接続**し、新しい接続を作成します。 詳細については、「[方法 :SQL Server データベースへの接続を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))します。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
+    - 既に構成されているデータベース接続を持っていない場合はクリックして**新しい接続**し、新しい接続を作成します。 詳細については、「[方法 :SQL Server データベースへの接続を作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/s4yys16a(v=vs.90))します。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
 
          \- または -
 
-    -   Northwind データベースに接続するようにデータベース接続が既に構成されている場合は、一覧からその接続を選択します。
+    - Northwind データベースに接続するようにデータベース接続が既に構成されている場合は、一覧からその接続を選択します。
 
 6. ウィザードの最終ページで、データベース内のすべてのテーブルのチェック ボックスをオンにし、ビューおよびストアド プロシージャのチェック ボックスをオフにします。
 

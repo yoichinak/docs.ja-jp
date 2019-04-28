@@ -3,11 +3,11 @@ title: 資格情報の種類の選択
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
 ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748807"
 ---
 # <a name="selecting-a-credential-type"></a>資格情報の種類の選択
 *資格情報* とはWindows Communication Foundation (WCF) が要求された身分証明または資格を確立するために使用するデータです。 たとえば、パスポートは、政府によって発行される、国籍または地域籍を証明するための資格情報です。 WCF では、資格情報は、ユーザー名トークンと X.509 証明書などのさまざまな形式を実行できます。 このトピックでは、資格情報、WCF では、使用する方法と、アプリケーションの適切な資格情報を選択する方法について説明します。  
@@ -85,9 +85,9 @@ ms.locfileid: "59167844"
 ## <a name="how-client-credentials-are-used-to-authenticate-a-client-to-the-service"></a>サービスに対するクライアントの認証でのクライアント資格情報の使用  
  サービスとの通信に必要なクライアント資格情報は、<xref:System.ServiceModel.ClientBase%601.ClientCredentials%2A> プロパティまたは <xref:System.ServiceModel.ChannelFactory.Credentials%2A> プロパティを使用して提供されます。 この情報は、サービスに対してクライアントを認証するためにセキュリティ チャネルで使用されます。 認証は、次のいずれかの方法で実行されます。  
   
--   クライアントの資格情報は、最初のメッセージを送信すると、WCF クライアントのインスタンスを使用してセキュリティ コンテキストを確立する前に 1 回使用されます。 アプリケーション メッセージはすべて、そのセキュリティ コンテキストで保護されます。  
+- クライアントの資格情報は、最初のメッセージを送信すると、WCF クライアントのインスタンスを使用してセキュリティ コンテキストを確立する前に 1 回使用されます。 アプリケーション メッセージはすべて、そのセキュリティ コンテキストで保護されます。  
   
--   サービスに送信されたアプリケーション メッセージごとの認証に、クライアント資格情報を使用します。 この場合、クライアントとサービスとの間にコンテキストは確立されません。  
+- サービスに送信されたアプリケーション メッセージごとの認証に、クライアント資格情報を使用します。 この場合、クライアントとサービスとの間にコンテキストは確立されません。  
   
 ### <a name="established-identities-cannot-be-changed"></a>変更できない確立された ID  
  1 つ目の方法を使用した場合、確立されたコンテキストは、クライアント ID に永続的に関連付けられます。 つまり、セキュリティ コンテキストが確立されると、クライアントに関連付けられた ID を変更できません。  
@@ -108,7 +108,6 @@ ms.locfileid: "59167844"
 - <xref:System.ServiceModel.MessageSecurityOverMsmq.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.MessageSecurityOverTcp.ClientCredentialType%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.TcpTransportSecurity.ClientCredentialType%2A?displayProperty=nameWithType>
-- <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorClientCredential.SetCertificate%2A?displayProperty=nameWithType>
 - <xref:System.ServiceModel.Security.X509CertificateInitiatorServiceCredential.SetCertificate%2A?displayProperty=nameWithType>
 - [セキュリティの概念](../../../../docs/framework/wcf/feature-details/security-concepts.md)

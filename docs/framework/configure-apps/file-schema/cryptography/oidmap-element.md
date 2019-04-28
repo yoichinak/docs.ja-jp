@@ -9,11 +9,11 @@ helpviewer_keywords:
 - oidMap element
 ms.assetid: 7f0c2246-c070-4748-b96a-2f66a296c539
 ms.openlocfilehash: 80564c5895e08884f78a4ec7c955ecdb11126e35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705169"
 ---
 # <a name="oidmap-element"></a>\<oidMap > 要素
 クラスへの ASN.1 オブジェクト識別子 (OID) のマッピングが含まれています。  

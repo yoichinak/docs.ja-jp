@@ -9,11 +9,11 @@ helpviewer_keywords:
 - RadioButton control [Windows Forms]
 ms.assetid: e895b2a5-9bcb-4486-b165-eaf4c3ea9644
 ms.openlocfilehash: cf2da32dd286e03b89cfa59e09d38eceb030f5ea
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57725306"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755403"
 ---
 # <a name="radiobutton-control-windows-forms"></a>RadioButton コントロール (Windows フォーム)
 Windows フォーム`RadioButton`コントロールがユーザーに一連の 2 つ以上の相互に排他的な選択肢を提示します。 同様に機能するラジオ ボタンおよびチェック ボックスがあります、中には、重要な違いがあります。 ユーザーは、ラジオ ボタンを選択するときに、同じグループ内の他のオプション ボタンをも選択できません。  

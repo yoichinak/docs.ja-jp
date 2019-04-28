@@ -9,27 +9,27 @@ ms.assetid: efc64414-77c3-48d0-881a-8594ed416aad
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e2403d736d031aab52525fc12b5071e764a8bde1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33406452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698526"
 ---
 # <a name="debugging-global-static-functions"></a>デバッグ グローバル静的関数
 このセクションでは、デバッグ API が使用するアンマネージ グローバル静的関数について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [_EFN_GetManagedExcepStack 関数](../../../../docs/framework/unmanaged-api/debugging/efn-getmanagedexcepstack-function.md)  
- 指定したマネージ例外オブジェクトのアドレスに応じて、中に含まれているスタック トレースの文字列バージョンを返します。  
+ 指定したマネージド例外オブジェクトのアドレスに応じて、中に含まれているスタック トレースの文字列バージョンを返します。  
   
  [_EFN_GetManagedObjectFieldInfo 関数](../../../../docs/framework/unmanaged-api/debugging/efn-getmanagedobjectfieldinfo-function.md)  
  指定したオブジェクト ポインターとフィールド名を使用して、オブジェクトの先頭からフィールドまでのオフセットとフィールドの値を取得します。  
   
  [_EFN_GetManagedObjectName 関数](../../../../docs/framework/unmanaged-api/debugging/efn-getmanagedobjectname-function.md)  
- 指定したマネージ オブジェクトのポインターを使用して、型の名前を取得します。  
+ 指定したマネージド オブジェクトのポインターを使用して、型の名前を取得します。  
   
  [_EFN_StackTrace 関数](../../../../docs/framework/unmanaged-api/debugging/efn-stacktrace-function.md)  
- マネージ スタック トレースのテキスト表現および `CONTEXT` レコードの配列 (アンマネージ コードとマネージ コードの間の各移行につき 1 つ) を提供します。  
+ マネージド スタック トレースのテキスト表現および `CONTEXT` レコードの配列 (アンマネージド コードとマネージド コードの間の各移行につき 1 つ) を提供します。  
   
  [CLRDataCreateInstance 関数](../../../../docs/framework/unmanaged-api/debugging/clrdatacreateinstance-function.md)  
  指定した対象プロセスの指定したインターフェイス オブジェクトを作成するために、共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  

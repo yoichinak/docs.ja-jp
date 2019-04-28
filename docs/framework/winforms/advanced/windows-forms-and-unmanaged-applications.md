@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Windows Forms, interop
 ms.assetid: 81bc100c-fa49-4614-85a6-0f7ab59eac8a
 ms.openlocfilehash: 65465f22b1806d385523c894cce2103afe33c2f0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746728"
 ---
 # <a name="windows-forms-and-unmanaged-applications"></a>Windows フォームとアンマネージ アプリケーション
 Windows フォーム アプリケーションとコントロールは、いくつかの注意事項がありますが、アンマネージ アプリケーションと相互運用できます。 次のセクションでは、Windows フォーム アプリケーションとコントロールがサポートするシナリオと構成、および、サポートしないシナリオと構成について説明します。  
@@ -23,8 +23,7 @@ Windows フォーム アプリケーションとコントロールは、いく�
  アンマネージ アプリケーションで使用する Windows フォーム コントロールを実装する方法に関する一般的な情報を提供します。  
   
  [方法: ShowDialog メソッドを使用して Windows フォームを表示して COM 相互運用機能をサポートします。](com-interop-by-displaying-a-windows-form-shadow.md)  
- 
-  <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> メソッドを使用して Windows フォームをアンマネージ アプリケーションで実行する方法を示すコード例を提供します。  
+ <xref:System.Windows.Forms.Form.ShowDialog%2A?displayProperty=nameWithType> メソッドを使用して Windows フォームをアンマネージ アプリケーションで実行する方法を示すコード例を提供します。  
   
  [方法: 独自のスレッドで各 Windows フォームを表示して COM 相互運用機能をサポートします。](how-to-support-com-interop-by-displaying-each-windows-form-on-its-own-thread.md)  
  独自のスレッドで Windows フォームを実行する方法を示すコード例を提供します。  

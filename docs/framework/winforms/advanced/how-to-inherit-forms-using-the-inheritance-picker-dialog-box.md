@@ -7,11 +7,11 @@ helpviewer_keywords:
 - inherited forms [Windows Forms], creating
 ms.assetid: 969b4c04-12aa-4297-93a2-0ae747447823
 ms.openlocfilehash: 5ae1c236835141b10bc704cd39f55de6e3e974b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723128"
 ---
 # <a name="how-to-inherit-forms-using-the-inheritance-picker-dialog-box"></a>方法: [継承ピッカー] ダイアログ ボックスを使用してフォームを継承する
 フォームまたは他のオブジェクトを継承する最も簡単な方法は、**[継承ピッカー]** ダイアログ ボックスを使用することです。 これを使用して、その他のソリューションで作成済みのコードまたはユーザー インターフェイス (UI) を利用できます。  

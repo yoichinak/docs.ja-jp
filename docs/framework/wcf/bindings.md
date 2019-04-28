@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF]
 ms.assetid: 845df323-be53-4848-92ef-ba67a406484d
 ms.openlocfilehash: c948c20788ae4e16e6b626a3f168cf9dcb94d718
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608880"
 ---
 # <a name="windows-communication-foundation-bindings"></a>Windows Communication Foundation バインディング
 バインドでは、Windows Communication Foundation (WCF) サービスのエンドポイントが他のエンドポイントと通信する方法を指定します。 バインディングでは、まず、使用するトランスポート (HTTP や TCP など) を指定する必要があります。 セキュリティやトランザクションのサポートなど、その他の特性もバインディングによって設定できます。  

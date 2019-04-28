@@ -10,11 +10,11 @@ helpviewer_keywords:
 - concatenation operators [Visual Basic]
 ms.assetid: e59908c3-89e0-41ae-933d-3e8826c16a04
 ms.openlocfilehash: 124f0ca0cd01d7fd218fd89dfb78e70fe8aad9e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61864937"
 ---
 # <a name="concatenation-operators-in-visual-basic"></a>Visual Basic の連結演算子
 連結演算子は、複数の文字列を結合して 1 つの文字列にします。 連結演算子には、`+` と `&` の 2 つがあります。 どちらの演算子も、次の例に示すように基本的な連結演算を行います。  

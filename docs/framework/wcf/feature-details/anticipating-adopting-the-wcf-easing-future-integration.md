@@ -3,11 +3,11 @@ title: Windows Communication Foundation 導入の準備:将来的な統合の容
 ms.date: 03/30/2017
 ms.assetid: 3028bba8-6355-4ee0-9ecd-c56e614cb474
 ms.openlocfilehash: c6e749c32947a4159d6bfd56c4d30a06f6ef0b7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316337"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650558"
 ---
 # <a name="anticipating-adopting-the-windows-communication-foundation-easing-future-integration"></a>Windows Communication Foundation 導入の準備:将来的な統合の容易化
 現在 ASP.NET を使用して WCF を今後の使用が予想される場合、このトピックは、WCF アプリケーションと共に、新しい ASP.NET Web サービスが動作することを確認するためのガイダンスを示します。  

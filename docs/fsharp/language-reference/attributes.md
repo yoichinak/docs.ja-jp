@@ -3,11 +3,11 @@ title: 属性
 description: 学習方法F#属性を使用するプログラミング コンストラクトに適用されるメタデータ。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6e80bc4e32ee4ff5ff132270bde8e2fd018369e1
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703206"
 ---
 # <a name="attributes"></a>属性
 
@@ -89,7 +89,7 @@ ms.locfileid: "58464659"
     <td><pre lang="fsharp"><code>member this.MyMethod([&lt;param: Out&gt;] x : ref&lt;int&gt;) = x := 10<code></pre></td> 
   </tr>
   <tr>
-    <td>型</td>
+    <td>種類</td>
     <td>
         <pre lang="fsharp"><code>
         [&lt;type: StructLayout(Sequential)&gt;] 

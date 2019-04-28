@@ -10,11 +10,11 @@ ms.assetid: 7d90ea7a-150f-4f97-98a7-f9c26541b9a3
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5bab707afb059d4fcbd46a9ee54edead991be523
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754220"
 ---
 # <a name="making-an-image-easier-to-debug-in-net"></a>イメージを .NET でデバッグしやすきます。
 

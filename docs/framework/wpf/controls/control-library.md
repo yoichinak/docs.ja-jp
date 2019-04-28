@@ -8,11 +8,11 @@ helpviewer_keywords:
 - libraries [WPF], controls
 ms.assetid: c1b33289-c389-4ac2-b153-3cbb0d8324ad
 ms.openlocfilehash: f5d69a1743941a235b3a1fda38023b11b3f26809
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912315"
 ---
 # <a name="control-library"></a>コントロール ライブラリ
 Windows Presentation Foundation (WPF) コントロール ライブラリで Windows Presentation Foundation (WPF)、アルファベット順の一覧が提供されているコントロールについての情報が含まれています。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BindingNavigator control [Windows Forms], adding buttons
 ms.assetid: faa33042-186e-4bb2-8798-17ceb987ec62
 ms.openlocfilehash: 4d5cc91ca8bf71b2d5893f591652d777041e1a4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757376"
 ---
 # <a name="how-to-add-load-save-and-cancel-buttons-to-the-windows-forms-bindingnavigator-control"></a>方法: Windows フォーム BindingNavigator コントロールに [Load]、[Save]、[Cancel] の各ボタンを追加する
 <xref:System.Windows.Forms.BindingNavigator>コントロールが特別な用途<xref:System.Windows.Forms.ToolStrip>移動し、フォーム上のデータにバインドされているコントロールを操作することが想定されているコントロール。  
@@ -40,15 +40,15 @@ ms.locfileid: "59304780"
   
 7. **Items コレクション エディター**を次の手順します。  
   
-    1.  追加、<xref:System.Windows.Forms.ToolStripSeparator>と 3 つ<xref:System.Windows.Forms.ToolStripButton>を適切な種類の選択項目<xref:System.Windows.Forms.ToolStripItem>クリックして、**追加**ボタン。  
+    1. 追加、<xref:System.Windows.Forms.ToolStripSeparator>と 3 つ<xref:System.Windows.Forms.ToolStripButton>を適切な種類の選択項目<xref:System.Windows.Forms.ToolStripItem>クリックして、**追加**ボタン。  
   
-    2.  設定、<xref:System.Windows.Forms.ToolStripItem.Name%2A>プロパティをボタンの**LoadButton**、 **SaveButton**、および**CancelButton**、それぞれします。  
+    2. 設定、<xref:System.Windows.Forms.ToolStripItem.Name%2A>プロパティをボタンの**LoadButton**、 **SaveButton**、および**CancelButton**、それぞれします。  
   
-    3.  設定、<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティをボタンの**ロード**、**保存**と**キャンセル**します。  
+    3. 設定、<xref:System.Windows.Forms.ToolStripItem.Text%2A>プロパティをボタンの**ロード**、**保存**と**キャンセル**します。  
   
-    4.  設定、<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>ボタンの各プロパティ**テキスト**します。 このプロパティを設定する代わりに、**イメージ**または**ImageAndText**に表示されるイメージを設定し、<xref:System.Windows.Forms.ToolStripItem.Image%2A>プロパティ。  
+    4. 設定、<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>ボタンの各プロパティ**テキスト**します。 このプロパティを設定する代わりに、**イメージ**または**ImageAndText**に表示されるイメージを設定し、<xref:System.Windows.Forms.ToolStripItem.Image%2A>プロパティ。  
   
-    5.  クリックして**OK**ダイアログ ボックスを閉じます。ボタンに追加されて、<xref:System.Windows.Forms.ToolStrip>します。  
+    5. クリックして**OK**ダイアログ ボックスを閉じます。ボタンに追加されて、<xref:System.Windows.Forms.ToolStrip>します。  
   
 8. フォームを右クリックし **コードの表示**します。  
   

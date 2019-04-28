@@ -10,11 +10,11 @@ helpviewer_keywords:
 - bindingRedirect element
 ms.assetid: 67784ecd-9663-434e-bd6a-26975e447ac0
 ms.openlocfilehash: dda99bb4b96efbdd274e24e7cd548e4ed4df8b66
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704896"
 ---
 # <a name="bindingredirect-element"></a>\<bindingRedirect > 要素
 1 つのアセンブリ バージョンを別のバージョンにリダイレクトします。  

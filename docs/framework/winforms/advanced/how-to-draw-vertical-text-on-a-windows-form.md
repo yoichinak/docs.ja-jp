@@ -15,11 +15,11 @@ helpviewer_keywords:
 - text [Windows Forms], vertical text
 ms.assetid: 717a6131-00f6-4373-b574-9894e8317799
 ms.openlocfilehash: eb00928205a318b068d49ea3f6f71c398f77bbcd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722914"
 ---
 # <a name="how-to-draw-vertical-text-on-a-windows-form"></a>方法: Windows フォームに縦書きテキストを描画する
 次のコード例を使用して、フォームに縦書きテキストを描画する方法を示しています、<xref:System.Drawing.Graphics.DrawString%2A>メソッドの<xref:System.Drawing.Graphics>します。  
@@ -35,7 +35,7 @@ ms.locfileid: "59072494"
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   Arial フォントがインストールされていません。  
+- Arial フォントがインストールされていません。  
   
 ## <a name="see-also"></a>関連項目
 

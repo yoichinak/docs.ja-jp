@@ -5,11 +5,11 @@ helpviewer_keywords:
 - secure applications [WCF]
 ms.assetid: 79e4e6f7-0c00-4045-b0f0-e6a7c37c7788
 ms.openlocfilehash: dbe460888400735e0950e7a34372d8540e236303
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210712"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749541"
 ---
 # <a name="security-guidance-and-best-practices"></a>セキュリティ ガイドラインとベスト プラクティス
 このセクションのトピックでは、ガイダンスとセキュリティで保護された Windows Communication Foundation (WCF) アプリケーションを作成するときに考慮すべき項目を提示します。 Windows Server AppFabric およびセキュリティには、「の詳細については[セキュリティ モデルの Windows Server App Fabric](https://go.microsoft.com/fwlink/?LinkID=201279&clcid=0x409)  

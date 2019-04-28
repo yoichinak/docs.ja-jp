@@ -3,11 +3,11 @@ title: トランザクションのサポート
 ms.date: 03/30/2017
 ms.assetid: 8cceb26e-8d36-4365-8967-58e2e89e0187
 ms.openlocfilehash: 519ddab069cf3c4ca1ccfa7b203769b8102db844
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876838"
 ---
 # <a name="transaction-support"></a>トランザクションのサポート
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 次の 3 つの個別のトランザクション モデルをサポートしています。 チェックが行われる順に、これらのモデルを以下に示します。  

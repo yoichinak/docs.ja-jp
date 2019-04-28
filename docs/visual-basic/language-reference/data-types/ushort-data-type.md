@@ -17,11 +17,11 @@ helpviewer_keywords:
 - US literal type characters [Visual Basic]
 ms.assetid: 138db892-665d-4ba8-9cae-d8d91c4a8f39
 ms.openlocfilehash: 8845a6bde4e1a701b5420029788259724cd0f8d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748761"
 ---
 # <a name="ushort-data-type-visual-basic"></a>UShort データ型 (Visual Basic)
 
@@ -64,15 +64,15 @@ Dim number = &H_5826us
 
 ## <a name="programming-tips"></a>プログラミングのヒント
   
--   **負の数。** `UShort`符号なしの型は、負の数を表すことはできません。 単項マイナスを使用する場合 (`-`) 型に評価される式で演算子`UShort`、Visual Basic の式を変換する`Integer`最初。  
+- **負の数。** `UShort`符号なしの型は、負の数を表すことはできません。 単項マイナスを使用する場合 (`-`) 型に評価される式で演算子`UShort`、Visual Basic の式を変換する`Integer`最初。  
   
--   **CLS 準拠です。** `UShort`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。
+- **CLS 準拠です。** `UShort`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。
   
--   **拡大します。** `UShort`拡大変換後のデータ型`Integer`、 `UInteger`、 `Long`、 `ULong`、 `Decimal`、 `Single`、および`Double`します。 つまり、変換できる`UShort`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
+- **拡大します。** `UShort`拡大変換後のデータ型`Integer`、 `UInteger`、 `Long`、 `ULong`、 `Decimal`、 `Single`、および`Double`します。 つまり、変換できる`UShort`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
   
--   **型宣言文字。** リテラルの型文字を付加`US`リテラルに強制的に、`UShort`データ型。 `UShort` 識別子の型文字がありません。  
+- **型宣言文字。** リテラルの型文字を付加`US`リテラルに強制的に、`UShort`データ型。 `UShort` 識別子の型文字がありません。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.UInt16?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.UInt16?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="see-also"></a>関連項目
 

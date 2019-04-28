@@ -7,24 +7,24 @@ helpviewer_keywords:
 - controls [Windows Forms], creating
 ms.assetid: 6277bb81-90f7-4c5b-9f4b-b02bb42dd316
 ms.openlocfilehash: 21b8b08e56e8b4d48fb738b86247d3f04dc4150b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086443"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759870"
 ---
 # <a name="windows-forms-control-development-basics"></a>Windows フォーム コントロール開発の基本概念
 Windows フォーム コントロールから直接または間接的に派生するクラスは、<xref:System.Windows.Forms.Control?displayProperty=nameWithType>します。 次の一覧には、Windows フォーム コントロールを開発するための一般的なシナリオについて説明します。  
   
--   既存の組み合わせを制御複合コントロールを作成します。  
+- 既存の組み合わせを制御複合コントロールを作成します。  
   
      複合コントロールは、コントロールとして再利用できるユーザー インターフェイスをカプセル化します。 複合コントロールの例は、テキスト ボックスと [リセット] ボタンで構成されるコントロールです。 ビジュアル デザイナーは、複合コントロールを作成するための豊富なサポートを提供します。 派生する複合コントロールを作成するには、<xref:System.Windows.Forms.UserControl?displayProperty=nameWithType>します。 基本クラス<xref:System.Windows.Forms.UserControl>キーボード ルーティングを提供する子コントロールを子コントロールをグループとして機能できるようにします。 詳細については、「[複合 Windows フォーム コントロールの開発](developing-a-composite-windows-forms-control.md)」を参照してください。  
   
--   これをカスタマイズするか、その機能を追加する既存のコントロールを拡張します。  
+- これをカスタマイズするか、その機能を追加する既存のコントロールを拡張します。  
   
      色を変更することはできません ボタンとボタンがクリックしてされた回数を追跡する追加のプロパティを持つ拡張コントロールの例に示します。 クラスを派生し、プロパティ、メソッド、およびイベントを追加、またはオーバーライドでは、任意の Windows フォーム コントロールをカスタマイズできます。  
   
--   ないコントロールの作成、結合または、既存のコントロールを拡張します。  
+- ないコントロールの作成、結合または、既存のコントロールを拡張します。  
   
      このシナリオでは、基本クラスから、コントロールを派生<xref:System.Windows.Forms.Control>します。 追加したり、プロパティ、メソッド、および基底クラスのイベントをオーバーライドしたりします。 最初に、次を参照してください。[方法。単純な Windows フォーム コントロールを開発](how-to-develop-a-simple-windows-forms-control.md)します。  
   

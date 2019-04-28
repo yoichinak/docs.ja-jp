@@ -6,11 +6,11 @@ f1_keywords:
 - http://schemas.microsoft.com/.NetConfiguration/v2.0#client
 ms.assetid: bf0f7031-76c8-4e7e-a6c6-9ad9119134be
 ms.openlocfilehash: 2e0352efdd5b709984338fe4484b120bddb7d545
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164360"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704298"
 ---
 # <a name="client"></a>\<client>
 `client` 要素は、クライアントが接続可能なエンドポイントの一覧を定義します。  

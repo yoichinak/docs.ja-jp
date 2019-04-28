@@ -3,11 +3,11 @@ title: トランスポート:サンプルの UDP 経由のカスタム トラン
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
 ms.openlocfilehash: e257c987d93fc7a5b5e8e7f51d79dd8399b45d72
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760049"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>トランスポート:サンプルの UDP 経由のカスタム トランザクション
 このサンプルがに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 、Windows Communication Foundation (WCF) サンプル[トランスポート拡張](../../../../docs/framework/wcf/samples/transport-extensibility.md)します。 ここでは、カスタム トランザクション フローをサポートするように UDP トランスポートのサンプルを拡張し、<xref:System.ServiceModel.Channels.TransactionMessageProperty> プロパティの使用方法について説明します。  
@@ -50,9 +50,9 @@ int bytesSent = this.socket.SendTo(txmsgBuffer, 0, txmsgBuffer.Length, SocketFla
   
  どのようなサービス操作がトランザクション フローを必要とカスタム トランザクション フローのトランスポートで、クライアントの実装が知る必要がありますを WCF にこの情報を渡します。 また、ユーザー トランザクションをトランスポート層に転送するための機構もあります。 このサンプルは、「WCF メッセージ インスペクタ」を使用してこの情報を取得します。 ここで実装されるクライアント メッセージ インスペクタは `TransactionFlowInspector` と呼ばれ、次のタスクを実行します。  
   
--   指定されたメッセージ アクションに対してトランザクションをフローする必要があるかどうかを判断します (これは `IsTxFlowRequiredForThisOperation()` で行われます)。  
+- 指定されたメッセージ アクションに対してトランザクションをフローする必要があるかどうかを判断します (これは `IsTxFlowRequiredForThisOperation()` で行われます)。  
   
--   トランザクションをフローする必要がある場合、`TransactionFlowProperty` を使用して現在のアンビエント トランザクションをメッセージにアタッチします (これは `BeforeSendRequest()` で行われます)。  
+- トランザクションをフローする必要がある場合、`TransactionFlowProperty` を使用して現在のアンビエント トランザクションをメッセージにアタッチします (これは `BeforeSendRequest()` で行われます)。  
   
 ```  
 public class TransactionFlowInspector : IClientMessageInspector  

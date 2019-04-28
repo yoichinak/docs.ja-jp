@@ -10,11 +10,11 @@ helpviewer_keywords:
 - states [WPF], DatePicker
 ms.assetid: c430a657-692f-44bd-a549-2341f92d6115
 ms.openlocfilehash: 5c8e199dd7123e1490c8a836a62ffea158797eb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912250"
 ---
 # <a name="datepicker-styles-and-templates"></a>DatePicker のスタイルとテンプレート
 このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.DatePicker>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  

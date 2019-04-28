@@ -3,24 +3,24 @@ title: 配信の拡張
 ms.date: 03/30/2017
 ms.assetid: 4d941175-74a2-4b15-81b3-086e8a95d25f
 ms.openlocfilehash: 226ea682d8b17a818e6d5be2097a19315d106bda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915565"
 ---
 # <a name="syndication-extensibility"></a>配信の拡張
 配信 API は、形式に依存せず、さまざま形式で概要コンテンツをネットワークに書き込むことができるプログラミング モデルを提供することを目的としています。 抽象データ モデルは、次のクラスで構成されています。  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  これらのクラスは、一部の名前が異なっていますが、Atom 1.0 仕様に規定されるコンストラクトに厳密にマップされています。  
   
@@ -32,17 +32,17 @@ ms.locfileid: "59170808"
 ## <a name="deriving-a-new-class"></a>新しいクラスの派生  
  任意の既存抽象データ モデル クラスから、新しいクラスを派生できます。 これは、対象フィードのほとんどに特定の拡張機能が含まれるアプリケーションを実装する際に行います。 このトピックでは、プログラムで処理するフィードのほとんどに、`MyExtension` 拡張機能が含まれています。 プログラミング性を向上するには、次の手順を実行します。  
   
--   拡張機能データを保持するクラスを作成します。 この場合、MyExtension というクラスを作成します。  
+- 拡張機能データを保持するクラスを作成します。 この場合、MyExtension というクラスを作成します。  
   
--   プログラミング性を向上するには、<xref:System.ServiceModel.Syndication.SyndicationItem> から MyExtensionItem というクラスを派生させ、MyExtension 型のプロパティを公開します。  
+- プログラミング性を向上するには、<xref:System.ServiceModel.Syndication.SyndicationItem> から MyExtensionItem というクラスを派生させ、MyExtension 型のプロパティを公開します。  
   
--   MyExtensionItem クラスの <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> をオーバーライドし、MyExtension が読み込まれたら新しい MyExtension インスタンスをインスタンス化します。  
+- MyExtensionItem クラスの <xref:System.ServiceModel.Syndication.SyndicationItem.TryParseElement%28System.Xml.XmlReader%2CSystem.String%29> をオーバーライドし、MyExtension が読み込まれたら新しい MyExtension インスタンスをインスタンス化します。  
   
--   MyExtensionItem クラスの <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> をオーバーライドし、MyExtension プロパティのコンテンツを XML ライターに書き出します。  
+- MyExtensionItem クラスの <xref:System.ServiceModel.Syndication.SyndicationItem.WriteElementExtensions%28System.Xml.XmlWriter%2CSystem.String%29> をオーバーライドし、MyExtension プロパティのコンテンツを XML ライターに書き出します。  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed> から、MyExtensionFeed というクラスを派生させます。  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed> から、MyExtensionFeed というクラスを派生させます。  
   
--   MyExtensionFeed クラスの <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> をオーバーライドし、既定の <xref:System.ServiceModel.Syndication.SyndicationItem> の代わりに MyExtensionItem をインスタンス化します。 <xref:System.ServiceModel.Syndication.SyndicationFeed> および <xref:System.ServiceModel.Syndication.SyndicationItem> に、<xref:System.ServiceModel.Syndication.SyndicationLink>、<xref:System.ServiceModel.Syndication.SyndicationCategory>、および <xref:System.ServiceModel.Syndication.SyndicationPerson> の各オブジェクトを生成する一連のメソッドが定義されます (たとえば、<xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>、<xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>、<xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson> など)。 そのどれもが、カスタム派生クラスを作成するためにオーバーライドできます。  
+- MyExtensionFeed クラスの <xref:System.ServiceModel.Syndication.SyndicationFeed.CreateItem> をオーバーライドし、既定の <xref:System.ServiceModel.Syndication.SyndicationItem> の代わりに MyExtensionItem をインスタンス化します。 <xref:System.ServiceModel.Syndication.SyndicationFeed> および <xref:System.ServiceModel.Syndication.SyndicationItem> に、<xref:System.ServiceModel.Syndication.SyndicationLink>、<xref:System.ServiceModel.Syndication.SyndicationCategory>、および <xref:System.ServiceModel.Syndication.SyndicationPerson> の各オブジェクトを生成する一連のメソッドが定義されます (たとえば、<xref:System.ServiceModel.Syndication.SyndicationFeed.CreateLink>、<xref:System.ServiceModel.Syndication.SyndicationFeed.CreateCategory>、<xref:System.ServiceModel.Syndication.SyndicationFeed.CreatePerson> など)。 そのどれもが、カスタム派生クラスを作成するためにオーバーライドできます。  
   
 ## <a name="see-also"></a>関連項目
 

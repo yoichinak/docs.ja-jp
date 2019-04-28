@@ -3,11 +3,11 @@ title: WCF 分析トレース
 ms.date: 03/30/2017
 ms.assetid: 6029c7c7-3515-4d36-9d43-13e8f4971790
 ms.openlocfilehash: 9ed89bdbe2469a96f2a959c9fda8442e80b6f7ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723356"
 ---
 # <a name="wcf-analytic-tracing"></a>WCF 分析トレース
 このサンプルは、Windows Communication Foundation (WCF) が ETW に書き込む分析トレースのストリームに独自のトレース イベントを追加する方法を示します[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。 分析トレースは、パフォーマンスを低下させずに簡単にサービスを確認できるようにするためのものです。 このサンプルは、使用する方法を示します、 <xref:System.Diagnostics.Eventing?displayProperty=nameWithType> Api を WCF サービスと統合されるイベントを記述します。  
@@ -22,11 +22,11 @@ ms.locfileid: "59332314"
 ## <a name="self-hosting-vs-web-hosting"></a>自己ホスト型と Web ホスト  
  Web ホスト サービスでは、WCF の分析トレースは、"HostReference"は、サービスは、トレースの出力を識別するために使用をという名前のフィールドを指定します。 拡張可能なユーザー トレースをこのモデルに加えることができます。このサンプルで、そのためのベスト プラクティスを示します。 Web ホストの形式を参照場合に、パイプ '&#124;' 文字が実際には、最終的な表示文字列は、次のいずれかを指定できます。  
   
--   アプリケーションがルート以外にある場合  
+- アプリケーションがルート以外にある場合  
   
      \<サイト名 >\<ApplicationVirtualPath >&#124;\<ServiceVirtualPath >&#124;\<ServiceName >  
   
--   アプリケーションがルートにある場合  
+- アプリケーションがルートにある場合  
   
      \<SiteName>&#124;\<ServiceVirtualPath>&#124;\<ServiceName>  
   
@@ -77,13 +77,13 @@ ms.locfileid: "59332314"
   
 10. WCF テスト クライアントを使用してサービスをテストします。  
   
-    1.  WCF テスト クライアントでのダブルクリック**Add()** ICalculator サービス ノードの下。  
+    1. WCF テスト クライアントでのダブルクリック**Add()** ICalculator サービス ノードの下。  
   
          **Add()** メソッドが 2 つのパラメーターと共に右ペインに表示されます。  
   
-    2.  最初のパラメーターに「2」と入力し、2 番目のパラメーターに「3」と入力します。  
+    2. 最初のパラメーターに「2」と入力し、2 番目のパラメーターに「3」と入力します。  
   
-    3.  クリックして**Invoke**メソッドを呼び出します。  
+    3. クリックして**Invoke**メソッドを呼び出します。  
   
 11. 移動して、**イベント ビューアー**既に開いているウィンドウ。 移動します**イベント ビューアー**、 **Applications and Services Logs**、 **Microsoft**、 **Windows**、**アプリケーションサーバー-アプリケーション**します。  
   

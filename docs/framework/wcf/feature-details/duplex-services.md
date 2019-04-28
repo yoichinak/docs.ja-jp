@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
 ms.openlocfilehash: 33cfcb765b93309d365a85e679107405a55a91f9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858040"
 ---
 # <a name="duplex-services"></a>双方向サービス
 

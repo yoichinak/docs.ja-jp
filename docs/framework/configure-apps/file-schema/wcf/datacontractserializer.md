@@ -3,11 +3,11 @@ title: dataContractSerializer
 ms.date: 03/30/2017
 ms.assetid: a47513a4-a96c-4350-8586-daacb05dee71
 ms.openlocfilehash: 8ba16d9cc30b07d3e6b0924e6013ec01443867d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704129"
 ---
 # <a name="datacontractserializer"></a>dataContractSerializer
 <xref:System.Runtime.Serialization.DataContractSerializer> 用の設定データが含まれています。  

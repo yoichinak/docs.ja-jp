@@ -7,33 +7,33 @@ helpviewer_keywords:
 - custom components [Windows Forms], adding to Toolbox
 ms.assetid: 2fa1e3e8-6b9f-42b2-97c0-2be57444dba4
 ms.openlocfilehash: 6ecf69350b8337dc6049b73251809192b47dc2fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759909"
 ---
 # <a name="walkthrough-automatically-populating-the-toolbox-with-custom-components"></a>チュートリアル: ツールボックスへのカスタム コンポーネントの自動設定
 自動的に表示されます、コンポーネントは現在開いているソリューション内のプロジェクトで定義されている場合、**ツールボックス**操作は必要とします。 手動で設定することができます、**ツールボックス**を使用して、カスタム コンポーネントで、[選択ツールボックス項目 ダイアログ ボックス (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))が、**ツールボックス**を考慮に入れたソリューションの内の項目の次のすべての特性を持つ出力をビルドします。  
   
--   実装<xref:System.ComponentModel.IComponent>;  
+- 実装<xref:System.ComponentModel.IComponent>;  
   
--   <xref:System.ComponentModel.ToolboxItemAttribute>設定`false`;  
+- <xref:System.ComponentModel.ToolboxItemAttribute>設定`false`;  
   
--   <xref:System.ComponentModel.DesignTimeVisibleAttribute>設定`false`します。  
+- <xref:System.ComponentModel.DesignTimeVisibleAttribute>設定`false`します。  
   
 > [!NOTE]
 >  **ツールボックス**ソリューションのプロジェクトで構築されていない項目は表示されませんので、チェーンの参照に従わない。  
   
  このチュートリアルでは、カスタム コンポーネントを自動的にでの表示方法、**ツールボックス**したら、コンポーネントが構築されます。 このチュートリアルでは、以下のタスクを行います。  
   
--   Windows フォーム プロジェクトを作成します。  
+- Windows フォーム プロジェクトを作成します。  
   
--   カスタム コンポーネントを作成します。  
+- カスタム コンポーネントを作成します。  
   
--   カスタム コンポーネントのインスタンスを作成します。  
+- カスタム コンポーネントのインスタンスを作成します。  
   
--   アンロードして、カスタム コンポーネントを再読み込みします。  
+- アンロードして、カスタム コンポーネントを再読み込みします。  
   
  完了したらが表示されますが、**ツールボックス**は作成したコンポーネントが格納されます。  
   
@@ -96,6 +96,6 @@ ms.locfileid: "59338099"
 ## <a name="see-also"></a>関連項目
 
 - [一般に、Windows フォーム デザイナー オプション ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))
-- [方法: [ツールボックス] タブを操作します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
+- [方法: [ツールボックス] タブを操作する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/66kwe227(v=vs.100))
 - [[ツールボックス アイテムの選択] ダイアログ ボックス (Visual Studio)](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/dyca0t6t(v=vs.100))
 - [Windows フォームへのコントロールの追加](putting-controls-on-windows-forms.md)

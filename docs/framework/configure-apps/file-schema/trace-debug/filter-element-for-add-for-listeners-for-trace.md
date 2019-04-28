@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <filter> element for <add> for <listeners> for <trace>
 ms.assetid: eb9c18f5-dfa8-47c5-b91b-e4b93e76e1cc
 ms.openlocfilehash: 5961125e1b8d0d0f5711f8b942b68ba71d61888f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701308"
 ---
 # <a name="filter-element-for-add-for-listeners-for-trace"></a>\<フィルター > 要素の\<追加 > の\<リスナー > の\<トレース >
 内のリスナーにフィルターを追加、`Listeners`トレースのコレクション。  

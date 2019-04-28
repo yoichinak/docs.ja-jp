@@ -3,11 +3,11 @@ title: <security> の <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 001d11a9-7439-498c-b09d-fca20eaf8cd3
 ms.openlocfilehash: acb4d04663d841a9b494153caa180855959c145e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206513"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670509"
 ---
 # <a name="security-of-netmsmqbinding"></a>\<セキュリティ > の\<netMsmqBinding >
 MSMQ バインディングのセキュリティ設定を定義します。 トランスポートまたは SOAP セキュリティが有効であるかどうか、および有効である場合は、どの認証モードと保護レベルを使用するかを指定します。  

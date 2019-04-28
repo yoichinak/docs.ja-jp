@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 ms.assetid: 7ea87fcb-dcfb-4a4a-8b03-6b954575d45b
 ms.openlocfilehash: 58bec40f197dd1f2b104607a65c3ad456b95f69d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748468"
 ---
 # <a name="windows-communication-foundation-security"></a>Windows Communication Foundation セキュリティ
 このセクションのトピックでは、Windows Communication Foundation (WCF) のセキュリティ機能とそれらを使用してメッセージをセキュリティで保護する方法について説明します。  

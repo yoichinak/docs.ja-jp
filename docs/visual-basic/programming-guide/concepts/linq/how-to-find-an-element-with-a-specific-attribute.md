@@ -3,11 +3,11 @@ title: '方法: 特定の属性 (Visual Basic) を持つ要素を検索します
 ms.date: 07/20/2015
 ms.assetid: 59fb7c19-d42f-40eb-8cf8-f1d5b9658eb7
 ms.openlocfilehash: d4af129cdb7e9049be747b9eb29aaa26ef5d8188
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61855622"
 ---
 # <a name="how-to-find-an-element-with-a-specific-attribute-visual-basic"></a>方法: 特定の属性 (Visual Basic) を持つ要素を検索します。
 このトピックでは、特定の値を含む属性を持つ要素を検索する方法について説明します。  

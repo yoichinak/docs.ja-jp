@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f66e00c3334aecdf8c653f57e28d1b327c4170e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628003"
 ---
 # <a name="getcorversion-function"></a>GetCORVersion 関数
 現在のプロセスで実行されている共通言語ランタイム (CLR) のバージョン番号を返します。  

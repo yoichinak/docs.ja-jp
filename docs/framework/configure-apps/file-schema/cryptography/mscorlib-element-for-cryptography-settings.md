@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <mscorlib> element
 ms.assetid: d549668f-31f1-4b92-8021-a9135c09ca3c
 ms.openlocfilehash: ec328bc4c63bd4754c6f975ac03e610718304245
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674747"
 ---
 # <a name="mscorlib-element-for-cryptography-settings"></a>\<mscorlib > 要素の暗号化の設定
 含まれています、 [ \<cryptographySettings > 要素](../../../../../docs/framework/configure-apps/file-schema/cryptography/cryptographysettings-element.md)します。  

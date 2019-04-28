@@ -12,11 +12,11 @@ helpviewer_keywords:
 - ToolStripMenuItems [Windows Forms], cutting and pasting
 ms.assetid: cab9e03e-4edd-4c25-b3e3-bd1edc602bd9
 ms.openlocfilehash: 2203511e91254c270c59b5d298dd87a5b3737109
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913628"
 ---
 # <a name="how-to-move-toolstripmenuitems"></a>方法: ToolStripMenuItems を移動する
 デザイン時に移動できますトップレベル メニュー全体とそのメニュー項目を別の場所、<xref:System.Windows.Forms.MenuStrip>します。 トップレベル メニュー間で個々 のメニュー項目を移動またはメニュー内でのメニュー項目の位置を変更することもできます。  

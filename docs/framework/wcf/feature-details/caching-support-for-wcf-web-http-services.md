@@ -3,11 +3,11 @@ title: WCF WEB HTTP サービスのキャッシュ サポート
 ms.date: 03/30/2017
 ms.assetid: 7f8078e0-00d9-415c-b8ba-c1b6d5c31799
 ms.openlocfilehash: 6c601b19a0b3b9b3eddbd686c316ce7e2cdf7778
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50196805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857663"
 ---
 # <a name="caching-support-for-wcf-web-http-services"></a>WCF WEB HTTP サービスのキャッシュ サポート
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] ASP.NET、WCF Web HTTP サービスで既に提供宣言によるキャッシュ機構を使用できます。 これにより、WCF Web HTTP サービス操作からの応答をキャッシュできます。 キャッシュ用に構成されているサービスに対してユーザーが HTTP GET を送信すると、ASP.NET は、キャッシュされた応答を送り返し、サービス メソッドは呼び出されません。 キャッシュの有効期限が切れると、ユーザーが次回に HTTP GET を送信したときに、サービス メソッドが呼び出され、応答が再度キャッシュされます。 ASP.NET のキャッシュの詳細については、次を参照してください[ASP.NET のキャッシュの概要。](https://go.microsoft.com/fwlink/?LinkId=152534)  
@@ -58,7 +58,7 @@ public class Service
 </system.web>  
 ```  
   
- これは、ASP.NET アプリケーションで使用できる構成要素と同じです。 ASP.NET キャッシュ プロファイルの詳細については、<xref:System.Web.Configuration.OutputCacheProfile>を参照してください。 Web HTTP サービスの場合、キャッシュ プロファイルで最も重要な属性は `cacheDuration` と `varyByParam` です。 この 2 つの属性はどちらも必要です。 `cacheDuration` は、応答がキャッシュに保持される時間 (秒数) を設定します。 `varyByParam` では、応答のキャッシュに使用されるクエリ文字列パラメーターを指定できます。 異なるクエリ文字列パラメーターの値を使用する要求は、すべて個別にキャッシュされます。 たとえば、最初の要求に確立されると`http://MyServer/MyHttpService/MyOperation?param=10`、同じ URI を使用したすべての後続の要求が返されます、キャッシュされた応答 (限りキャッシュの存続期間が経過していない)。 クエリ文字列パラメーターの値が異なることを除いて同じである同様の要求に対する応答は、個別にキャッシュされます。 このような個別のキャッシングを行わない場合は、`varyByParam` を "none" に設定します。  
+ これは、ASP.NET アプリケーションで使用できる構成要素と同じです。 ASP.NET キャッシュ プロファイルの詳細については、次を参照してください。<xref:System.Web.Configuration.OutputCacheProfile>します。 Web HTTP サービスの場合、キャッシュ プロファイルで最も重要な属性は `cacheDuration` と `varyByParam` です。 この 2 つの属性はどちらも必要です。 `cacheDuration` は、応答がキャッシュに保持される時間 (秒数) を設定します。 `varyByParam` では、応答のキャッシュに使用されるクエリ文字列パラメーターを指定できます。 異なるクエリ文字列パラメーターの値を使用する要求は、すべて個別にキャッシュされます。 たとえば、最初の要求に確立されると`http://MyServer/MyHttpService/MyOperation?param=10`、同じ URI を使用したすべての後続の要求が返されます、キャッシュされた応答 (限りキャッシュの存続期間が経過していない)。 クエリ文字列パラメーターの値が異なることを除いて同じである同様の要求に対する応答は、個別にキャッシュされます。 このような個別のキャッシングを行わない場合は、`varyByParam` を "none" に設定します。  
   
 ## <a name="sql-cache-dependency"></a>SQL キャッシュ依存関係  
  Web HTTP サービスの応答も、SQL キャッシュ依存関係と併せてキャッシュできます。 SQL データベースに格納されているデータに応じて WCF Web HTTP サービスが異なる場合は、サービスの応答をキャッシュして、キャッシュした応答を、SQL データベース テーブル内のデータの変更時に無効にすることもできます。 この動作は、すべて Web.config ファイル内で構成します。 内の接続文字列を定義する必要があります最初に、<`connectionStrings`> 要素。  
@@ -122,7 +122,7 @@ public class Service
  ここでは、キャッシュ期間が 60 秒に、`varyByParam` が none に設定されており、`sqlDependency` が、コロン区切りのデータベース名とテーブルのペアをセミコロンで区切ったリストに設定されています。 `MyTable` のデータが変更されると、キャッシュされているサービス操作への応答が削除されます。この操作が呼び出されると、新しい応答が (サービス操作の呼び出しによって) 生成され、キャッシュされて、クライアントに返されます。  
   
 > [!IMPORTANT]
->  SQL データベースにアクセスする asp.net は、使用する必要があります、 [ASP.NET SQL Server の登録ツール](https://go.microsoft.com/fwlink/?LinkId=152536)します。 また、適切なユーザー アカウントに、データベースおよびテーブルへのアクセスを許可する必要があります。 詳細については、[Web アプリケーションからの SQL Server へのアクセス](https://go.microsoft.com/fwlink/?LinkId=178988)を参照してください。  
+>  SQL データベースにアクセスする asp.net は、使用する必要があります、 [ASP.NET SQL Server の登録ツール](https://go.microsoft.com/fwlink/?LinkId=152536)します。 また、適切なユーザー アカウントに、データベースおよびテーブルへのアクセスを許可する必要があります。 詳細については、次を参照してください。 [Web アプリケーションからの SQL Server へのアクセス](https://go.microsoft.com/fwlink/?LinkId=178988)します。  
   
 ## <a name="conditional-http-get-based-caching"></a>条件付きの HTTP GET ベースのキャッシュ  
  Web HTTP シナリオで、条件付き HTTP GET は多くの場合、サービスで使用」の説明に従って、インテリジェントな HTTP キャッシュを実装するために、 [HTTP 仕様](https://go.microsoft.com/fwlink/?LinkId=165800)します。 そのためには、サービスが ETag ヘッダーの値を HTTP 応答に設定する必要があります。 また、HTTP 要求の If-None-Match ヘッダーの値を確認して、指定されている ETag が現在の ETag と一致するかどうかを調べる必要もあります。  

@@ -13,20 +13,20 @@ helpviewer_keywords:
 - object arrays
 ms.assetid: fceff7d2-a1b7-44c7-b9aa-8bd831d8a444
 ms.openlocfilehash: 88002e2c099ed9503beddb190d243aadcc1087fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908025"
 ---
 # <a name="array-conversions-visual-basic"></a>配列の変換 (Visual Basic)
 別の配列型に、配列型を変換するには、次の条件を満たす指定。  
   
--   **ランクが等しい。** 2 つの配列のランクは同じである必要があります、つまり、同じ次元数があります。 ただし、それぞれの次元の長さが同じである必要はありません。  
+- **ランクが等しい。** 2 つの配列のランクは同じである必要があります、つまり、同じ次元数があります。 ただし、それぞれの次元の長さが同じである必要はありません。  
   
--   **要素のデータ型。** 両方の配列の要素のデータ型は、参照型である必要があります。 変換することはできません、`Integer`配列を`Long`配列、またはさらに、`Object`に少なくとも 1 つの値の型が関係するための配列。 詳細については、「 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。  
+- **要素のデータ型。** 両方の配列の要素のデータ型は、参照型である必要があります。 変換することはできません、`Integer`配列を`Long`配列、またはさらに、`Object`に少なくとも 1 つの値の型が関係するための配列。 詳細については、「 [Value Types and Reference Types](../../../../visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md)」を参照してください。  
   
--   **でもです。** 2 つの配列の要素型の間で、拡張または縮小、変換できる必要があります。 この要件に失敗した例は、間の変換を実行しようとした、`String`とクラスの配列から派生した<xref:System.Attribute?displayProperty=nameWithType>します。 これら 2 つの型が共通の何もあるし、それらの間の任意の種類の変換は存在しません。  
+- **でもです。** 2 つの配列の要素型の間で、拡張または縮小、変換できる必要があります。 この要件に失敗した例は、間の変換を実行しようとした、`String`とクラスの配列から派生した<xref:System.Attribute?displayProperty=nameWithType>します。 これら 2 つの型が共通の何もあるし、それらの間の任意の種類の変換は存在しません。  
   
  1 つの配列型の間の変換は拡大またはそれぞれの要素の変換を拡大または縮小するかどうかに応じて縮小します。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   

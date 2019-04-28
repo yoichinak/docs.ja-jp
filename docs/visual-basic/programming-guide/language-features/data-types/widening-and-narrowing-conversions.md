@@ -20,11 +20,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
 ms.openlocfilehash: 9f1a71e8e2e3e4ebb9b412be74b5ea8702eb164f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61827159"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>拡大変換と縮小変換 (Visual Basic)
 型変換で重要な考慮事項は、変換の結果が変換先のデータ型の範囲内かどうか。  
@@ -68,15 +68,15 @@ ms.locfileid: "58842552"
 ## <a name="narrowing-conversions"></a>縮小変換  
  標準の縮小変換を以下に示します。  
   
--   (すべての型は、自動的に拡大) する点を除いて、前の拡大変換の逆の方向がテーブルにします。  
+- (すべての型は、自動的に拡大) する点を除いて、前の拡大変換の逆の方向がテーブルにします。  
   
--   いずれかの方向との間で変換[ブール](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)と任意の数値型  
+- いずれかの方向との間で変換[ブール](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)と任意の数値型  
   
--   列挙型の任意の数値型からいずれかへの変換 (`Enum`)  
+- 列挙型の任意の数値型からいずれかへの変換 (`Enum`)  
   
--   いずれかの方向との間で変換[文字列](../../../../visual-basic/language-reference/data-types/string-data-type.md)と任意の数値型`Boolean`、または[日付](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
+- いずれかの方向との間で変換[文字列](../../../../visual-basic/language-reference/data-types/string-data-type.md)と任意の数値型`Boolean`、または[日付](../../../../visual-basic/language-reference/data-types/date-data-type.md)  
   
--   それから派生した型にデータ型またはオブジェクトからの変換の入力します。  
+- それから派生した型にデータ型またはオブジェクトからの変換の入力します。  
   
  縮小変換は常にではありません、実行時に成功し失敗したり、データ損失が発生できます。 エラーは、先のデータ型に変換される値を受信できない場合に発生します。 たとえば、数値変換が、オーバーフローがあります。 コンパイラでは許可しない限り、暗黙的に縮小変換を実行することできません、 [Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)型チェック スイッチを設定`Off`します。  
   
@@ -89,9 +89,9 @@ ms.locfileid: "58842552"
 ## <a name="exceptions-during-conversion"></a>変換中に例外  
  拡大変換を常にあるため、成功しますが、例外をスローしないでください。 失敗したときに、縮小変換は、最もよく、次の例外をスローします。  
   
--   <xref:System.InvalidCastException> -2 つの型の間で変換が定義されていない場合  
+- <xref:System.InvalidCastException> -2 つの型の間で変換が定義されていない場合  
   
--   <xref:System.OverflowException> -(整数型の場合のみ)、指定した型の変換後の値が大きすぎる場合  
+- <xref:System.OverflowException> -(整数型の場合のみ)、指定した型の変換後の値が大きすぎる場合  
   
  クラスまたは構造体が定義されている場合、 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)そのクラスまたは構造体、または変換演算子として機能するを`CType`適切と見なされるすべての例外をスローすることができます。 さらを`CType`Visual Basic の関数を呼び出すことがありますまたは[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]メソッドで、さらに、さまざまな例外をスローする可能性があります。  
   

@@ -3,24 +3,24 @@ title: WorkflowIdentity と Versioning の使用
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
 ms.openlocfilehash: 5bed526a47b802c60aa679e53c84af4e14656675
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669648"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity と Versioning の使用
 <xref:System.Activities.WorkflowIdentity> を使用すると、ワークフロー アプリケーションの開発者は、名前と <xref:System.Version> をワークフロー定義に関連付け、永続化されたワークフロー インスタンスにこの情報を関連付けることができます。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 このトピックでは、<xref:System.Activities.WorkflowIdentity> ホスティングでの <xref:System.Activities.WorkflowApplication> の使用の概要について説明します。 ワークフロー サービスでのワークフロー定義のサイド バイ サイドでの実行については、次を参照してください。 [WorkflowServiceHost でサイド バイ サイドのバージョン管理](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)します。 動的更新については、次を参照してください。[動的更新](dynamic-update.md)します。  
   
 ## <a name="in-this-topic"></a>このトピックの内容  
   
--   [WorkflowIdentity の使用](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
+- [WorkflowIdentity の使用](using-workflowidentity-and-versioning.md#UsingWorkflowIdentity)  
   
-    -   [WorkflowIdentity を使用したサイド バイ サイドで実行](using-workflowidentity-and-versioning.md#SxS)  
+    - [WorkflowIdentity を使用したサイド バイ サイドで実行](using-workflowidentity-and-versioning.md#SxS)  
   
--   [ワークフローのバージョン管理をサポートするために .NET Framework 4 永続性データベースのアップグレード](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
+- [ワークフローのバージョン管理をサポートするために .NET Framework 4 永続性データベースのアップグレード](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)  
   
-    -   [データベース スキーマをアップグレードするには](using-workflowidentity-and-versioning.md#ToUpgrade)  
+    - [データベース スキーマをアップグレードするには](using-workflowidentity-and-versioning.md#ToUpgrade)  
   
 ## <a name="UsingWorkflowIdentity"></a> WorkflowIdentity の使用  
  <xref:System.Activities.WorkflowIdentity> を使用するには、インスタンスを作成および構成し、<xref:System.Activities.WorkflowApplication> インスタンスに関連付けます。 <xref:System.Activities.WorkflowIdentity> インスタンスには 3 種類の識別情報が格納されます。 <xref:System.Activities.WorkflowIdentity.Name%2A> と <xref:System.Activities.WorkflowIdentity.Version%2A> は必須で、名前と <xref:System.Version> を表します。また、<xref:System.Activities.WorkflowIdentity.Package%2A> は省略可能で、アセンブリ名やその他の必要な情報などの情報を格納する追加文字列の指定に使用できます。 <xref:System.Activities.WorkflowIdentity> は、その 3 つのプロパティのいずれかが他の <xref:System.Activities.WorkflowIdentity> と異なる場合に一意です。  

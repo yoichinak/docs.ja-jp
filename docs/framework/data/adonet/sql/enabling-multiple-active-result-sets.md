@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 576079e4-debe-4ab5-9204-fcbe2ca7a5e2
 ms.openlocfilehash: 633aaa4a9540d0895252e56dbeabd97200081fc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877683"
 ---
 # <a name="enabling-multiple-active-result-sets"></a>複数のアクティブな結果セットの有効化
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) は、SQL Server で動作する機能であり、複数のバッチを単一の接続で実行することができます。 SQL Server で使用できるように MARS が有効になっているときは、使用中の各コマンド オブジェクトは接続にセッションを追加します。  
@@ -75,15 +75,15 @@ string connectionString = "Data Source=MSSQL1;" +
   
  バッチ実行環境には、次のコンポーネントが含まれます。  
   
--   SET オプション (ANSI_NULLS、DATE_FORMAT、LANGUAGE、TEXTSIZE など)  
+- SET オプション (ANSI_NULLS、DATE_FORMAT、LANGUAGE、TEXTSIZE など)  
   
--   セキュリティ コンテキスト (ユーザーまたはアプリケーションのロール)  
+- セキュリティ コンテキスト (ユーザーまたはアプリケーションのロール)  
   
--   データベース コンテキスト (現在のデータベース)  
+- データベース コンテキスト (現在のデータベース)  
   
--   実行状態変数 (たとえば、@@ERROR、@@ROWCOUNT、@@FETCH_STATUS @@IDENTITY)  
+- 実行状態変数 (たとえば、@@ERROR、@@ROWCOUNT、@@FETCH_STATUS @@IDENTITY)  
   
--   最上位の一時テーブル  
+- 最上位の一時テーブル  
   
  MARS を使用すると、既定の実行環境が接続に関連付けられます。 所定の接続で実行を開始する新しいバッチは、いずれも既定の環境のコピーを受け取ります。 コードが所定のバッチで実行されるときは、その環境に対して行われるすべての変更は、常に特定のバッチにスコープ設定されます。 実行が完了すると、実行の設定は既定の環境にコピーされます。 単一のバッチが複数のコマンドを発行し、それらが同じトランザクションで連続して実行される場合、そのセマンティクスは、以前のクライアントやサーバーを含む接続で公開されているときのセマンティクスと同じです。  
   

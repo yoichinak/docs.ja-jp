@@ -3,11 +3,11 @@ title: 署名または暗号化、あるいはその両方が行われたカス�
 ms.date: 03/30/2017
 ms.assetid: e8668b37-c79f-4714-9de5-afcb88b9ff02
 ms.openlocfilehash: 76bfb6040f6b78765ed42ce7fbf86cdbd62c1e48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857377"
 ---
 # <a name="creating-a-custom-header-that-is-signed-and-or-encrypted"></a>署名または暗号化、あるいはその両方が行われたカスタム ヘッダーの作成
 WCF クライアントを使用して WCF 以外のサービスを呼び出す場合、状況によっては、カスタム SOAP ヘッダーが必要です。 WCF には正規化のバグがあり、署名および暗号化されたカスタム ヘッダーは、WCF 以外のサービスで使用できません。 この問題は、既定の XML 名前空間に対する正規化の誤りが原因で発生します。 この問題が生じるのは、署名または暗号化、あるいはその両方が行われたカスタム ヘッダーを持つ、WCF 以外のサービスを呼び出す場合のみです。  サービスは、受信したメッセージに署名または暗号化、あるいはその両方が行われたカスタム ヘッダーが含まれている場合、署名を検証できません。 この回避策では正規化のバグを回避し、WCF 以外のサービスとの相互運用が可能になりますが、WCF サービスとの相互運用性は妨げられません。  

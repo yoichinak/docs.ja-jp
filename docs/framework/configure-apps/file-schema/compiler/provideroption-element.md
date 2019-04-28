@@ -9,11 +9,11 @@ helpviewer_keywords:
 - provideroption element
 ms.assetid: 014f2e0b-c0b5-4fc4-92d3-73f02978b2a1
 ms.openlocfilehash: 9c69ea7bf95b311a796ec29d90410a77b748c3c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229785"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705325"
 ---
 # <a name="provideroption-element"></a>\<providerOption > 要素
 言語プロバイダーのコンパイラ バージョン属性を指定します。  

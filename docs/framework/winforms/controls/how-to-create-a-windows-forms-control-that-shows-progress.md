@@ -11,26 +11,26 @@ helpviewer_keywords:
 - FlashTrackBar custom control
 ms.assetid: 24c5a2e3-058c-4b8d-a217-c06e6a130c2f
 ms.openlocfilehash: 1f457d6e2b0eb73da7a16dc93ea80a14ddb4b2c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202015"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746723"
 ---
 # <a name="how-to-create-a-windows-forms-control-that-shows-progress"></a>方法: 進行状況を示す Windows フォーム コントロールを作成する
 次のコード例は、アプリケーションのレベルまたは進行状況の表示にに使用できる `FlashTrackBar` というカスタム コントロールを示していいます。 これは、グラデーションを使用して、進行状況を視覚的に表示します。  
   
  `FlashTrackBar` コントロールには次のような機能が含まれます。  
   
--   カスタム プロパティの定義。  
+- カスタム プロパティの定義。  
   
--   カスタム イベントの定義  (`FlashTrackBar` が `ValueChanged` イベントを定義します)。  
+- カスタム イベントの定義  (`FlashTrackBar` が `ValueChanged` イベントを定義します)。  
   
--   オーバーライドする、<xref:System.Windows.Forms.Control.OnPaint%2A>コントロールを描画するロジックを提供するメソッド。  
+- オーバーライドする、<xref:System.Windows.Forms.Control.OnPaint%2A>コントロールを描画するロジックを提供するメソッド。  
   
--   使用して、コントロールを描画するために使用できる面積を計算、<xref:System.Windows.Forms.Control.ClientRectangle%2A>プロパティ。 `FlashTrackBar` は、`OptimizedInvalidate` メソッドでこの計算を実行します。  
+- 使用して、コントロールを描画するために使用できる面積を計算、<xref:System.Windows.Forms.Control.ClientRectangle%2A>プロパティ。 `FlashTrackBar` は、`OptimizedInvalidate` メソッドでこの計算を実行します。  
   
--   Windows フォーム デザイナー内でプロパティが変更されたときの、プロパティのシリアル化または永続化の実装。 `FlashTrackBar` は `StartColor` プロパティと `EndColor` プロパティをシリアル化するために、`ShouldSerializeStartColor` メソッドと `ShouldSerializeEndColor` メソッドを定義します。  
+- Windows フォーム デザイナー内でプロパティが変更されたときの、プロパティのシリアル化または永続化の実装。 `FlashTrackBar` は `StartColor` プロパティと `EndColor` プロパティをシリアル化するために、`ShouldSerializeStartColor` メソッドと `ShouldSerializeEndColor` メソッドを定義します。  
   
  `FlashTrackBar` によって定義されるカスタム プロパティを次の表に示します。  
   
@@ -59,23 +59,23 @@ ms.locfileid: "59202015"
   
  対応するを処理するために*EventName*イベント、`FlashTrackBar`から継承した次のメソッドを上書き<xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
--   <xref:System.Windows.Forms.Control.OnPaint%2A>  
+- <xref:System.Windows.Forms.Control.OnPaint%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseDown%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseMove%2A>  
   
--   <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
+- <xref:System.Windows.Forms.Control.OnMouseUp%2A>  
   
--   <xref:System.Windows.Forms.Control.OnResize%2A>  
+- <xref:System.Windows.Forms.Control.OnResize%2A>  
   
  対応するプロパティ変更イベントを処理する`FlashTrackBar`から継承した次のメソッドを上書き<xref:System.Windows.Forms.Control?displayProperty=nameWithType>:  
   
--   <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackColorChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnBackgroundImageChanged%2A>  
   
--   <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
+- <xref:System.Windows.Forms.Control.OnTextChanged%2A>  
   
 ## <a name="example"></a>例  
  `FlashTrackBar` コントロールは、次のコード一覧に示すとおり、`FlashTrackBarValueEditor` と `FlashTrackBarDarkenByEditor` という 2 つの UI 型エディターを定義します。 `HostApp` クラスは、Windows フォームで `FlashTrackBar` コントロールを使用します。  

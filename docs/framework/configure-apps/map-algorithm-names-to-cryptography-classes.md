@@ -8,22 +8,22 @@ helpviewer_keywords:
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
 ms.openlocfilehash: 6ec98aabd92a7a0fed11482bdf6e5e8ddc045a7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700807"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>暗号化クラスへのアルゴリズム名の割り当て
 開発者を使用して暗号化オブジェクトを作成する 4 つの方法がある、 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
   
--   使用してオブジェクトを作成、**新しい**演算子。  
+- 使用してオブジェクトを作成、**新しい**演算子。  
   
--   呼び出して、特定の暗号化アルゴリズムを実装するオブジェクトを作成、**作成**するアルゴリズムの抽象クラスのメソッド。  
+- 呼び出して、特定の暗号化アルゴリズムを実装するオブジェクトを作成、**作成**するアルゴリズムの抽象クラスのメソッド。  
   
--   呼び出して、特定の暗号化アルゴリズムを実装するオブジェクトを作成、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッド。  
+- 呼び出して、特定の暗号化アルゴリズムを実装するオブジェクトを作成、<xref:System.Security.Cryptography.CryptoConfig.CreateFromName%2A?displayProperty=nameWithType>メソッド。  
   
--   呼び出して、暗号化アルゴリズム (対称ブロック暗号) などのクラスを実装するオブジェクトを作成、**作成**アルゴリズムの種類の抽象クラスのメソッド (など<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
+- 呼び出して、暗号化アルゴリズム (対称ブロック暗号) などのクラスを実装するオブジェクトを作成、**作成**アルゴリズムの種類の抽象クラスのメソッド (など<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
   
  たとえば、開発者が、一連のバイトの SHA1 ハッシュを計算するとします。 <xref:System.Security.Cryptography>名前空間には、SHA1 アルゴリズム、1 つの単なるマネージされた実装および CryptoAPI をラップする 1 つの 2 つの実装が含まれています。 開発者は特定の SHA1 実装をインスタンス化を選択できます (など、 <xref:System.Security.Cryptography.SHA1Managed>) 呼び出すことによって、**新しい**演算子。 ただし、クラスは、SHA1 ハッシュ アルゴリズムを実装している限り、共通言語ランタイムがロードするクラス、問題にしない場合、開発者オブジェクトを作成できますを呼び出して、<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>メソッド。 このメソッドを呼び出す**System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**、SHA1 ハッシュ アルゴリズムの実装を返す必要があります。  
   

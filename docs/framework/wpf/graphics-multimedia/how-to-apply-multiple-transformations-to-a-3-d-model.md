@@ -8,11 +8,11 @@ helpviewer_keywords:
 - 3-D models [WPF], applying multiple transformations to
 ms.assetid: cb72245a-5560-4c96-9f58-593c66296992
 ms.openlocfilehash: 7a6a0dd4942eb2430ff79ab5df4a171a4064ac1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698942"
 ---
 # <a name="how-to-apply-multiple-transformations-to-a-3-d-model"></a>方法: 複数の変換を 3-D モデルに適用する
 このサンプルは、使用する方法を示します、<xref:System.Windows.Media.Media3D.RotateTransform3D>と<xref:System.Windows.Media.Media3D.ScaleTransform3D>回転を 3-D モデルのスケールを変更します。 次のコードをこれらの変換を適用する方法を示しています、<xref:System.Windows.Media.Media3D.Model3D.Transform%2A>のプロパティを<xref:System.Windows.Media.Media3D.GeometryModel3D>XAML でします。  

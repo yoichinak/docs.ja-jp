@@ -13,11 +13,11 @@ ms.assetid: df8afb59-f0f6-4ddc-b3c1-839b9fc601d8
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: a764c74dc0927094675b0f5e0916a4ad29f04250
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54151164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705949"
 ---
 # <a name="servicepointmconnectiongrouplist-field"></a>ServicePoint.m\_ConnectionGroupList フィールド
 

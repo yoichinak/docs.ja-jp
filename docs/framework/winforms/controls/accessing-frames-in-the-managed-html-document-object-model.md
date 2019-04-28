@@ -10,22 +10,22 @@ helpviewer_keywords:
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
 ms.openlocfilehash: 9b2719ca000ab86b9ca40f9e78af46cbf598d16e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640533"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>マネージド HTML DOM (Document Object Model) へのアクセス
 一部の HTML ドキュメントが帯で構成される*フレーム*、または独自の HTML ドキュメントを保持できる windows。 フレームを使用すると、ページ内に 1 つ以上の静的な部分 (ナビゲーション バーなど) があり、その他のフレームでは内容が常に変化するような HTML ページを簡単に作成できます。  
   
  HTML の作成者は、2 つの方法のいずれかでフレームを作成できます。  
   
--   `FRAMESET` タグと `FRAME` タグを使用して、固定ウィンドウを作成する。  
+- `FRAMESET` タグと `FRAME` タグを使用して、固定ウィンドウを作成する。  
   
  - または -  
   
--   `IFRAME` タグを使用して、実行時に移動できるフローティング ウィンドウを作成する。  
+- `IFRAME` タグを使用して、実行時に移動できるフローティング ウィンドウを作成する。  
   
 1. フレームは HTML ドキュメントを含むため、DOM (Document Object Model) においてフレームはウィンドウ要素およびフレーム要素の両方として表されます  
   

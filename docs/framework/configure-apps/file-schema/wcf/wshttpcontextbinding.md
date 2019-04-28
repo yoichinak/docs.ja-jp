@@ -3,11 +3,11 @@ title: <wsHttpContextBinding>
 ms.date: 03/30/2017
 ms.assetid: 1e40b5c9-0df2-4d66-afc5-a99d0e4ae7a4
 ms.openlocfilehash: 20d931dfd1805dd4b56aabbab778e6587caa003a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670171"
 ---
 # <a name="wshttpcontextbinding"></a>\<wsHttpContextBinding>
 保護レベルの署名を要求する <xref:System.ServiceModel.WSHttpBinding> のコンテキストを提供します。  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1eb6b870beabb71e340b0ec39c489cedb02128cf
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57366635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749580"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 関数
 ユーザーの資格情報が、指定されたアクセスを許可するかどうかを示す[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクト。 
@@ -68,7 +68,7 @@ HRESULT BlessIWbemServicesObject (
 |定数  |値  |説明  |
 |---------|---------|---------|
 | `E_INVALIDARG` | 0x80070057 | 1 つまたは複数の引数が無効です。 |
-| `E_POINTER` | 0x80004003 | `pIWbemServices` は `null` です。 | 
+| `E_POINTER` | 0x80004003 | `pIWbemServices` は `null`です。 | 
 | `E_FAIL` | 0x80000008 | 不明なエラーが発生しました。 |
 | `E_OUTOFMEMORY` | 0x80000002 | メモリ不足のためでは、操作を実行します。 | 
 | `S_OK` | 0 | 関数呼び出しに成功しました。 | 

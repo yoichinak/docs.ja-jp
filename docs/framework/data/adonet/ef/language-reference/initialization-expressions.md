@@ -6,22 +6,22 @@ dev_langs:
 - vb
 ms.assetid: 98daef1f-15d4-483e-985c-d78ea3abe8c8
 ms.openlocfilehash: 6f6f27eaecd760e565eeb98a286252981d6df0bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61615026"
 ---
 # <a name="initialization-expressions"></a>初期化式
 初期化式は、新しいオブジェクトを初期化します。 初期化式は、ほとんどの新しい C# 3.0 および Visual Basic 9.0 初期化式を含め、ほとんどがサポートされています。 次の型は、LINQ to Entities クエリによって初期化して返すことができます。  
   
--   0 個以上の型指定されたエンティティ オブジェクトのコレクション、または概念モデルで定義された複合型のプロジェクション。  
+- 0 個以上の型指定されたエンティティ オブジェクトのコレクション、または概念モデルで定義された複合型のプロジェクション。  
   
--   [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] でサポートされる CLR 型。  
+- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] でサポートされる CLR 型。  
   
--   インライン コレクション。  
+- インライン コレクション。  
   
--   匿名型。  
+- 匿名型。  
   
  クエリ式構文の次の例では、匿名型の初期化を示します。  
   

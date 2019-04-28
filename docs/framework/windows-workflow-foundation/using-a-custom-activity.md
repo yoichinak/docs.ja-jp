@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 8f356419-681a-4175-ae93-878eee970249
 ms.openlocfilehash: 47ddd42168445aa23eaaded6fd19ffe4698e4117
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669577"
 ---
 # <a name="using-a-custom-activity"></a>カスタム アクティビティの使用
 <xref:System.Activities.Activity> またはそのサブクラスから派生するアクティビティは、結合してより大規模なワークフローにしたり、コードで直接作成したりすることができます。 このトピックでは、コードまたはデザイナーで作成したワークフロー内でカスタム アクティビティを使用する方法について説明します。  

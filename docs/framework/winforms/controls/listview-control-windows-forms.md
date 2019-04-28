@@ -12,11 +12,11 @@ helpviewer_keywords:
 - list controls [Windows Forms], List view
 ms.assetid: 9f71cf5c-82da-488a-a04e-ef52c0817187
 ms.openlocfilehash: d826fe0a64ad226db62e01259b0466f7f495f8e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757870"
 ---
 # <a name="listview-control-windows-forms"></a>ListView コントロール (Windows フォーム)
 Windows フォーム `ListView` コントロールにはアイコン表示で項目の一覧が表示されます。 リスト ビューを使用すると、Windows エクスプローラーの右側のペインのようなユーザー インターフェイスを作成することができます。  
@@ -58,15 +58,15 @@ Windows フォーム `ListView` コントロールにはアイコン表示で項
  [方法: ListView コントロールに検索機能を追加します。](how-to-add-search-capabilities-to-a-listview-control.md)  
  プログラムでいずれかのテキストの検索または画面座標を使用してアイテムを検索する方法について説明します。  
   
--   [方法: デザイナーを使用して Windows フォーム ListView コントロールの並べて表示ビューを有効にします。](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
+- [方法: デザイナーを使用して Windows フォーム ListView コントロールの並べて表示ビューを有効にします。](enable-tile-view-in-a-wf-listview-control-using-the-designer.md)  
   
--   [方法: デザイナーを使用して Windows フォーム ListView コントロールで項目追加および削除](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
+- [方法: デザイナーを使用して Windows フォーム ListView コントロールで項目追加および削除](add-and-remove-items-with-wf-listview-control-using-the-designer.md)  
   
--   [方法: デザイナーを使用して Windows フォーム ListView コントロールに列を追加します。](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
+- [方法: デザイナーを使用して Windows フォーム ListView コントロールに列を追加します。](how-to-add-columns-to-the-windows-forms-listview-control-using-the-designer.md)  
   
--   [方法: デザイナーを使用して Windows フォーム ListView コントロールの項目をグループ化](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
+- [方法: デザイナーを使用して Windows フォーム ListView コントロールの項目をグループ化](how-to-group-items-in-a-windows-forms-listview-control-using-the-designer.md)  
   
--   [チュートリアル: ListView とデザイナーを使用して TreeView コントロールでエクスプ ローラー スタイルのインターフェイスを作成します。](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
+- [チュートリアル: ListView とデザイナーを使用して TreeView コントロールでエクスプ ローラー スタイルのインターフェイスを作成します。](creating-an-explorer-style-interface-with-the-listview-and-treeview.md)  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.ListView> クラス  

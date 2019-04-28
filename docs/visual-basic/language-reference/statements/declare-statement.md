@@ -28,11 +28,11 @@ helpviewer_keywords:
 - Function procedures [Visual Basic], declaring
 ms.assetid: d3f21fb0-b804-4c99-97ed-583b23894cf1
 ms.openlocfilehash: fbb7b4e118598157e2005469f89831df50de6576
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838340"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638227"
 ---
 # <a name="declare-statement"></a>Declare ステートメント
 外部のファイルに実装されているプロシージャへの参照を宣言します。  
@@ -76,55 +76,55 @@ Declare [ charsetmodifier ] [ Function ] name Lib "libname" _
   
 ## <a name="rules"></a>ルール  
   
--   **属性。** 外部参照に属性を適用することができます。 プロジェクトでのみ、外部のファイルではなくを適用するすべての属性を持ちません。  
+- **属性。** 外部参照に属性を適用することができます。 プロジェクトでのみ、外部のファイルではなくを適用するすべての属性を持ちません。  
   
--   **修飾子。** 外部プロシージャは暗黙的に[Shared](../../../visual-basic/language-reference/modifiers/shared.md)します。 使用することはできません、`Shared`キーワードと、その共有状態を変更して、外部参照を宣言することはできません。  
+- **修飾子。** 外部プロシージャは暗黙的に[Shared](../../../visual-basic/language-reference/modifiers/shared.md)します。 使用することはできません、`Shared`キーワードと、その共有状態を変更して、外部参照を宣言することはできません。  
   
      外部プロシージャでは、オーバーライドに参加したり、インターフェイス メンバーを実装、またはイベントを処理できません。 したがって、使用することはできません、 `Overrides`、 `Overridable`、 `NotOverridable`、 `MustOverride`、 `Implements`、または`Handles`キーワード、`Declare`ステートメント。  
   
--   **外部プロシージャの名前。** この外部参照に同じ名前を指定する必要はありません (で`name`) 外部ファイルの内部でプロシージャのエントリ ポイント名として (`aliasname`)。 使用することができます、`Alias`エントリ ポイント名を指定する句。 これは、外部プロシージャが同じスコープ内で予約済みの Visual Basic の修飾子または変数、プロシージャ、またはその他のプログラミング要素と同じ名前を持つ場合に役立ちます。 ことができます。  
+- **外部プロシージャの名前。** この外部参照に同じ名前を指定する必要はありません (で`name`) 外部ファイルの内部でプロシージャのエントリ ポイント名として (`aliasname`)。 使用することができます、`Alias`エントリ ポイント名を指定する句。 これは、外部プロシージャが同じスコープ内で予約済みの Visual Basic の修飾子または変数、プロシージャ、またはその他のプログラミング要素と同じ名前を持つ場合に役立ちます。 ことができます。  
   
     > [!NOTE]
     >  ほとんどの Dll のエントリ ポイント名は大文字小文字を区別します。  
   
--   **外部プロシージャの数。** また、使用することができます、`Alias`句を外部ファイルのエクスポート テーブル内のエントリ ポイントの序数を指定します。 開始するには、`aliasname`に番号記号 (`#`)。 Visual basic では、外部プロシージャ名の任意の文字は許可されていない場合、または外部のファイル名を指定せず、プロシージャをエクスポートする場合は便利にできます。  
+- **外部プロシージャの数。** また、使用することができます、`Alias`句を外部ファイルのエクスポート テーブル内のエントリ ポイントの序数を指定します。 開始するには、`aliasname`に番号記号 (`#`)。 Visual basic では、外部プロシージャ名の任意の文字は許可されていない場合、または外部のファイル名を指定せず、プロシージャをエクスポートする場合は便利にできます。  
   
 ## <a name="data-type-rules"></a>データ型のルール  
   
--   **パラメーターのデータ型。** 場合`Option Strict`は`On`、内の各パラメーターのデータ型を指定する必要があります`parameterlist`します。 これには、任意のデータ型または列挙型、構造体、クラス、インターフェイスの名前を指定できます。 内で`parameterlist`を使用する、`As`句の各パラメーターに渡される引数のデータ型を指定します。  
+- **パラメーターのデータ型。** 場合`Option Strict`は`On`、内の各パラメーターのデータ型を指定する必要があります`parameterlist`します。 これには、任意のデータ型または列挙型、構造体、クラス、インターフェイスの名前を指定できます。 内で`parameterlist`を使用する、`As`句の各パラメーターに渡される引数のデータ型を指定します。  
   
     > [!NOTE]
     >  外部プロシージャが .NET Framework の書き込まれないため場合、必要があります注意するデータ型の対応します。 Visual Basic 6.0 プロシージャへの外部参照を宣言する場合など、`Integer`パラメーター (Visual Basic 6.0 では 16 ビット) として、対応する引数を識別する必要があります`Short`で、`Declare`ステートメントでは、16 ビットであるためですVisual Basic では、整数型をビットです。 同様に、`Long`別のデータ幅が、Visual Basic 6.0、および`Date`の実装は異なります。  
   
--   **データ型を返します。** 外部プロシージャがある場合、`Function`と`Option Strict`は`On`、呼び出し元のコードに返される値のデータ型を指定する必要があります。 これには、任意のデータ型または列挙型、構造体、クラス、インターフェイスの名前を指定できます。  
+- **データ型を返します。** 外部プロシージャがある場合、`Function`と`Option Strict`は`On`、呼び出し元のコードに返される値のデータ型を指定する必要があります。 これには、任意のデータ型または列挙型、構造体、クラス、インターフェイスの名前を指定できます。  
   
     > [!NOTE]
     >  Visual Basic コンパイラでは、ユーザーのデータ型が外部プロシージャのものと互換性があるは検証しません。 不一致がある場合、共通言語ランタイムを生成、<xref:System.Runtime.InteropServices.MarshalDirectiveException>実行時に例外。  
   
--   **既定のデータ型。** 場合`Option Strict`は`Off`内のパラメーターのデータ型を指定しないと`parameterlist`、Visual Basic コンパイラに対応する引数の変換、 [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)。 同様に、指定しない場合`returntype`、コンパイラは、戻り値のデータ型を受け取る`Object`します。  
+- **既定のデータ型。** 場合`Option Strict`は`Off`内のパラメーターのデータ型を指定しないと`parameterlist`、Visual Basic コンパイラに対応する引数の変換、 [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)。 同様に、指定しない場合`returntype`、コンパイラは、戻り値のデータ型を受け取る`Object`します。  
   
     > [!NOTE]
     >  別のプラットフォームで書き込まれた外部プロシージャを扱うため、これについてのデータ型を推測したりすると、既定値には危険です。 存在する場合は安全にすべてのパラメーターと戻り値のデータ型を指定します。 これは、コードの読みやすさも向上します。  
   
 ## <a name="behavior"></a>動作  
   
--   **スコープ。** 外部参照では、そのクラス、構造体、またはモジュール全体にわたってスコープ内で。  
+- **スコープ。** 外部参照では、そのクラス、構造体、またはモジュール全体にわたってスコープ内で。  
   
--   **有効期間。** 外部参照では、クラス、構造体、またはそれが宣言されているモジュールと同じ有効期間があります。  
+- **有効期間。** 外部参照では、クラス、構造体、またはそれが宣言されているモジュールと同じ有効期間があります。  
   
--   **外部プロシージャの呼び出し。** 呼び出すのと同じ方法で外部プロシージャを呼び出す、`Function`または`Sub`プロシージャ: またはを指定することで、値を返す場合、式の中で使用することによって、 [Call ステートメント](../../../visual-basic/language-reference/statements/call-statement.md)値を返さない場合。  
+- **外部プロシージャの呼び出し。** 呼び出すのと同じ方法で外部プロシージャを呼び出す、`Function`または`Sub`プロシージャ: またはを指定することで、値を返す場合、式の中で使用することによって、 [Call ステートメント](../../../visual-basic/language-reference/statements/call-statement.md)値を返さない場合。  
   
      指定されているとおり、外部プロシージャに引数を渡す`parameterlist`で、`Declare`ステートメント。 考慮されない方法パラメーターは、外部のファイルで宣言されていた。 同様に、戻り値がある場合を使用して、これによって指定されているとおり`returntype`で、`Declare`ステートメント。  
   
--   **文字を設定します。** 指定できる`charsetmodifier`方法 Visual Basic は文字列をマーシャ リングしている外部プロシージャを呼び出すときにします。 `Ansi`修飾子に指示を ANSI 値のすべての文字列をマーシャ リングする Visual Basic、および`Unicode`を Unicode 値にすべての文字列をマーシャ リングすることです。 `Auto`修飾子は、Visual Basic .NET フレームワークに従って文字列をマーシャ リングにルールが外部参照に基づくように指示`name`、または`aliasname`指定されている場合。 既定値は `Ansi` です。  
+- **文字を設定します。** 指定できる`charsetmodifier`方法 Visual Basic は文字列をマーシャ リングしている外部プロシージャを呼び出すときにします。 `Ansi`修飾子に指示を ANSI 値のすべての文字列をマーシャ リングする Visual Basic、および`Unicode`を Unicode 値にすべての文字列をマーシャ リングすることです。 `Auto`修飾子は、Visual Basic .NET フレームワークに従って文字列をマーシャ リングにルールが外部参照に基づくように指示`name`、または`aliasname`指定されている場合。 既定値は `Ansi` です。  
   
      `charsetmodifier` また、外部ファイル内で外部プロシージャが Visual Basic を検索する方法を指定します。 `Ansi` `Unicode`両方を検索中にその名前を変更することがなく調べる Visual Basic に指示します。 `Auto` Visual Basic ランタイム プラットフォームの基本文字セットを決定し、次のように、外部プロシージャ名を変更するように指示します。  
   
-    -   Windows 95、Windows 98、または Windows Millennium Edition などの ANSI プラットフォームでは、名前変更していない場合、外部の手順をまず検索します。 失敗した場合は、外部プロシージャ名の末尾に"A"を追加し、もう一度検索します。  
+    - Windows 95、Windows 98、または Windows Millennium Edition などの ANSI プラットフォームでは、名前変更していない場合、外部の手順をまず検索します。 失敗した場合は、外部プロシージャ名の末尾に"A"を追加し、もう一度検索します。  
   
-    -   Windows NT、Windows 2000、Windows XP などの Unicode プラットフォームでは、名前変更していない場合、外部の手順をまず検索します。 失敗した場合、追加している外部プロシージャの末尾に"W"名前を指定し、もう一度検索します。  
+    - Windows NT、Windows 2000、Windows XP などの Unicode プラットフォームでは、名前変更していない場合、外部の手順をまず検索します。 失敗した場合、追加している外部プロシージャの末尾に"W"名前を指定し、もう一度検索します。  
   
--   **メカニズムです。** Visual Basic、.NET Framework を使用して*プラットフォーム呼び出し*(PInvoke) メカニズムを解決し、外部プロシージャにアクセスします。 `Declare`ステートメントと<xref:System.Runtime.InteropServices.DllImportAttribute>両方のクラスが自動的に、このメカニズムを使用して、PInvoke を認識する必要はありません。 詳細については、「[チュートリアル:Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
+- **メカニズムです。** Visual Basic、.NET Framework を使用して*プラットフォーム呼び出し*(PInvoke) メカニズムを解決し、外部プロシージャにアクセスします。 `Declare`ステートメントと<xref:System.Runtime.InteropServices.DllImportAttribute>両方のクラスが自動的に、このメカニズムを使用して、PInvoke を認識する必要はありません。 詳細については、「[チュートリアル:Windows API の呼び出し](../../../visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md)します。  
   
 > [!IMPORTANT]
 >  共通言語ランタイム (CLR) の外部で実行している外部プロシージャ、ある*アンマネージ コード*します。 このようなプロシージャ、たとえば Windows API 関数、または、COM メソッドを呼び出すときに、セキュリティ リスクにアプリケーションを公開する可能性があります。 詳細については、次を参照してください。[アンマネージ コードのコーディング ガイドラインをセキュリティで保護された](../../../framework/security/secure-coding-guidelines-for-unmanaged-code.md)します。  

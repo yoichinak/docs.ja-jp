@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 407bcad0101fabd0c65b0d27c97ef47a93902f6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61749749"
 ---
 # <a name="icordebugcontext-interface"></a>ICorDebugContext インターフェイス
 

@@ -3,11 +3,11 @@ title: <security> の <ws2007HttpBinding>
 ms.date: 03/30/2017
 ms.assetid: fdda0ff7-b462-4e26-af52-e87ddab71945
 ms.openlocfilehash: bac8b9c4af812e924296008fa81227d181b30c0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670431"
 ---
 # <a name="security-of-ws2007httpbinding"></a>\<セキュリティ > の\<ws2007HttpBinding >
 使用されるセキュリティ設定を表す、 [ \<ws2007HttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/ws2007httpbinding.md)要素。  

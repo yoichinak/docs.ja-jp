@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 10/26/2017
 ms.openlocfilehash: 62a9a38ccbe696c34ef799b574c0f5a95bc8f726
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53147925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628328"
 ---
 # <a name="conclusions"></a>まとめ
 
