@@ -13,11 +13,11 @@ helpviewer_keywords:
 - highlighting text
 ms.assetid: b77693f5-87bb-4b29-a297-05ff882e2044
 ms.openlocfilehash: fafd3fc7345f94d3907163ff9dcf0ab293f85f3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157158"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609952"
 ---
 # <a name="find-and-highlight-text-using-ui-automation"></a>UI オートメーションを使用した、テキストの検索と強調表示
 > [!NOTE]

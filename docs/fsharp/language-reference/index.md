@@ -3,11 +3,11 @@ title: F# 言語リファレンス
 description: トークンの言語、概念、型、式、およびコンストラクトのコンパイラでサポートされているトピックへの参照をこのから F# 言語機能情報を検索します。
 ms.date: 05/16/2016
 ms.openlocfilehash: b70264b44b0820993cd77cb6c4f95a1547783174
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666444"
 ---
 # <a name="f-language-reference"></a>F# 言語リファレンス
 

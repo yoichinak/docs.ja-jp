@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36548
 ms.assetid: 27de068f-080e-4160-86bf-1ec23fd1925a
 ms.openlocfilehash: a6ddbaa358709fe306f1529112d1f2bd0a715a91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649960"
 ---
 # <a name="cannot-convert-anonymous-type-to-expression-tree-because-it-contains-a-field-that-is-used-in-the-initialization-of-another-field"></a>型のプロパティは別のプロパティを初期化するために使用されるため、匿名型を式のツリーに変換することはできません。
 コンパイラでは、匿名型の別のプロパティを初期化するために、匿名型の 1 つのプロパティを使用する場合、匿名の式ツリーへの変換は受け入れられません。 たとえば、次のコードで`Prop1`が初期化リストで宣言されの初期値として使用し、`Prop2`します。  
@@ -35,7 +35,7 @@ End Module
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   初期値を割り当てる`Prop1`ローカル変数にします。 両方にその変数を割り当てる`Prop1`と`Prop2`、次のコードに示すようにします。  
+- 初期値を割り当てる`Prop1`ローカル変数にします。 両方にその変数を割り当てる`Prop1`と`Prop2`、次のコードに示すようにします。  
   
     ```  
     Sub Main()  

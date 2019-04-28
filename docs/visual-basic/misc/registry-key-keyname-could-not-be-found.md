@@ -3,11 +3,11 @@ title: レジストリ キー '<keyname>' は見つかりませんでした
 ms.date: 07/20/2015
 ms.assetid: ca4eb74f-8303-48fc-9ea8-d792fa4c810b
 ms.openlocfilehash: 28d3ec818b392e440686fa7b65639a779eedf261
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637928"
 ---
 # <a name="registry-key-keyname-could-not-be-found"></a>レジストリ キー '\<keyname >' は見つかりませんでした
 レジストリ キーが見つかりません。  

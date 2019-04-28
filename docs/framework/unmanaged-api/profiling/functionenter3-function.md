@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: a731df84af0991f80c560db417df0ffe053a5e2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598936"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 関数
 コントロールが関数に渡されることをプロファイラーに通知します。  
@@ -43,9 +43,9 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
   
  実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。  
   
--   項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
+- 項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
   
--   終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
+- 終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

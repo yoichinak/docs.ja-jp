@@ -3,11 +3,11 @@ title: 正規関数
 ms.date: 03/30/2017
 ms.assetid: bbcc9928-36ea-4dff-9e31-96549ffed958
 ms.openlocfilehash: 380c1dbcf86d8bbb844c2b226697d72d00c3e81a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606089"
 ---
 # <a name="canonical-functions"></a>正規関数
 このセクションでは、すべてのデータ プロバイダーがサポートし、あらゆるクエリ テクノロジで使用されている正規関数について説明します。 正規関数は、プロバイダーが拡張することはできません。  

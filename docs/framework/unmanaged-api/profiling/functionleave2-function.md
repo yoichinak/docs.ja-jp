@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3efee2e2b595f1e0d9116dcac3fdaa99aa4659d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598897"
 ---
 # <a name="functionleave2-function"></a>FunctionLeave2 関数
 プロファイラーに通知関数が呼び出し元に戻るには、し、スタック フレームと関数の戻り値に関する情報を提供します。  
@@ -61,9 +61,9 @@ void __stdcall FunctionLeave2 (
   
  実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。  
   
--   項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
+- 項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
   
--   終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
+- 終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
   
  実装`FunctionLeave2`ガベージ コレクションは延期されますブロックしないでください。 実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。 ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionLeave2`を返します。  
   

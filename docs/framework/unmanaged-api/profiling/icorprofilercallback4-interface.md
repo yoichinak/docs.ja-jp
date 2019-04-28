@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3eb1f46900199db65be5d14c56bfc0b6f55bf269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598192"
 ---
 # <a name="icorprofilercallback4-interface"></a>ICorProfilerCallback4 インターフェイス
 共通言語ランタイム (CLR) がプロファイラーに情報を通信に使用するコールバック メソッドを提供します。  

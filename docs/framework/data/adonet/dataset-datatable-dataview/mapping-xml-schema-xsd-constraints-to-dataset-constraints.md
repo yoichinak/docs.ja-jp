@@ -3,22 +3,22 @@ title: XML スキーマ (XSD) 制約の DataSet 制約への割り当て
 ms.date: 03/30/2017
 ms.assetid: 3d0d1a4b-9104-434f-ac04-6c01ab5716b5
 ms.openlocfilehash: a1690e99aeaeb7ed9c85fd28697ae22d34bb2018
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115649"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607899"
 ---
 # <a name="mapping-xml-schema-xsd-constraints-to-dataset-constraints"></a>XML スキーマ (XSD) 制約の DataSet 制約への割り当て
 XML スキーマ定義言語 (XSD) を使用すると、定義する要素と属性で制約を指定できます。 リレーショナル スキーマに XML スキーマをマップするとき、 <xref:System.Data.DataSet>、XML スキーマの制約は、テーブルや列内で適切なリレーショナル制約にマップされて、**データセット**します。  
   
  このセクションでは、次の XML スキーマの制約の割り当てについて説明します。  
   
--   使用して指定される unique 制約、**一意**要素。  
+- 使用して指定される unique 制約、**一意**要素。  
   
--   使用して指定されたキーの制約、**キー**要素。  
+- 使用して指定されたキーの制約、**キー**要素。  
   
--   使用して指定されるキー参照制約、 **keyref**要素。  
+- 使用して指定されるキー参照制約、 **keyref**要素。  
   
  要素または属性に対して制約を指定することにより、同じスキーマに基づくあらゆるドキュメントで、その要素の値について特定の制限を適用できます。 たとえば、キー制約を**CustomerID**の子要素、**顧客**スキーマ内の要素には、ことを示しますの値、 **CustomerID**子要素である必要があります任意のドキュメント インスタンス内で一意で null 値は許可されていません。  
   

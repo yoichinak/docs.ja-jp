@@ -14,11 +14,11 @@ helpviewer_keywords:
 - GoTo statement [Visual Basic], syntax
 ms.assetid: 313274c2-8ab3-4b9c-9ba3-0fd6798e4f6d
 ms.openlocfilehash: c4dd249620ba1bf445642ce4600498f6beb30461
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637967"
 ---
 # <a name="goto-statement"></a>GoTo ステートメント
 プロシージャ内の指定した行に無条件に分岐します。  

@@ -5,11 +5,11 @@ f1_keywords:
 - WcfOptions
 ms.assetid: 6abe5d34-519b-4cef-8f02-3c0a7f125585
 ms.openlocfilehash: 2fa060e567fba9bb5e6344b2c8fc67fb639ad0f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608451"
 ---
 # <a name="controlling-auto-launching-of-wcf-service-host"></a>WCF サービス ホストの自動起動の制御
 複数のプロジェクトを含む同じ Visual Studio ソリューション内の別のプロジェクトをデバッグする場合は、WCF サービス ライブラリ プロジェクトでは、Windows Communication Foundation (WCF) サービス ホスト (WcfSvcHost.exe) の自動起動機能を制御できます。  
@@ -20,13 +20,13 @@ ms.locfileid: "59228498"
   
  このオプションは、次のプロジェクトで使用できます。  
   
--   WCF サービス ライブラリ プロジェクト。  
+- WCF サービス ライブラリ プロジェクト。  
   
--   シーケンシャル ワークフロー サービス ライブラリ プロジェクト  
+- シーケンシャル ワークフロー サービス ライブラリ プロジェクト  
   
--   ステート マシン ワークフロー サービス ライブラリ プロジェクト  
+- ステート マシン ワークフロー サービス ライブラリ プロジェクト  
   
--   配信サービス ライブラリ プロジェクト  
+- 配信サービス ライブラリ プロジェクト  
   
 ## <a name="see-also"></a>関連項目
 

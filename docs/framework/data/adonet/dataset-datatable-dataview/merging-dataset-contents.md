@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e5e9309a-3ebb-4a9c-9d78-21c4e2bafc5b
 ms.openlocfilehash: 153c96860005046e4cc16d5a965bd569e3519b52
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607931"
 ---
 # <a name="merging-dataset-contents"></a>DataSet の内容のマージ
 
@@ -35,7 +35,7 @@ ms.locfileid: "57356881"
 
 ## <a name="preservechanges"></a>PreserveChanges
 
-`DataSet`、`DataTable`、または `DataRow` の各配列を `Merge` メソッドに渡すときに、オプション パラメーターを含めることができます。そのパラメーターを使用して、変更内容を既存の `DataSet` に保存するかどうか、および受信データで見つかった新しいスキーマの要素を処理する方法を指定します。 受信データの後に続く最初のオプション パラメーターは、Boolean 型のフラグ <xref:System.Data.LoadOption.PreserveChanges> で、変更内容を既存の `DataSet` に保存するかどうかを指定します。 `PreserveChanges` フラグを `true` に設定した場合、既存の行の `Current` 行バージョンの値は受信する値で上書きされません。 `PreserveChanges` フラグを `false` に設定した場合、既存の行の `Current` 行バージョンの値が受信した値で上書きされます。 `PreserveChanges` フラグを指定しない場合は、既定で `false` に設定されます。 行のバージョンの詳細については、[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)を参照してください。
+`DataSet`、`DataTable`、または `DataRow` の各配列を `Merge` メソッドに渡すときに、オプション パラメーターを含めることができます。そのパラメーターを使用して、変更内容を既存の `DataSet` に保存するかどうか、および受信データで見つかった新しいスキーマの要素を処理する方法を指定します。 受信データの後に続く最初のオプション パラメーターは、Boolean 型のフラグ <xref:System.Data.LoadOption.PreserveChanges> で、変更内容を既存の `DataSet` に保存するかどうかを指定します。 `PreserveChanges` フラグを `true` に設定した場合、既存の行の `Current` 行バージョンの値は受信する値で上書きされません。 `PreserveChanges` フラグを `false` に設定した場合、既存の行の `Current` 行バージョンの値が受信した値で上書きされます。 `PreserveChanges` フラグを指定しない場合は、既定で `false` に設定されます。 行のバージョンの詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。
 
 `PreserveChanges` を `true` に設定すると、既存の行のデータは <xref:System.Data.DataRowVersion.Current> 行バージョンで保存されますが、既存の行の <xref:System.Data.DataRowVersion.Original> 行バージョンのデータは受信した行の `Original` 行バージョンのデータで上書きされます。 既存の行の <xref:System.Data.DataRow.RowState%2A> は、<xref:System.Data.DataRowState.Modified> に設定されます。 適用される例外を次に示します。
 
@@ -69,7 +69,7 @@ ms.locfileid: "57356881"
 `DataSet` 内に、`Unchanged` に設定され、主キー値が 1 である既存の行があるとします。 マージ操作の際、受信した行が `Modified` に設定され、`Original` 行バージョンの主キーの値が 2 であり、`Current` 行バージョンの主キーの値が 1 である場合、`Original` 行バージョンの主キーの値が一致しないため、既存の行と受信した行は一致していると見なされません。 マージが完了し、制約がチェックされると、`Current` 行バージョンの主キーの値が主キー列の UNIQUE 制約に違反するため、例外がスローされます。
 
 > [!NOTE]
-> ID 列などの自動インクリメント列を含むデータベース テーブルに行を挿入すると、挿入によって返される ID 列の値が `DataSet` の列の値と一致せず、返された列がマージされずに追加されることがあります。 詳細については、[Id の取得や値および Autonumber 値](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)を参照してください。
+> ID 列などの自動インクリメント列を含むデータベース テーブルに行を挿入すると、挿入によって返される ID 列の値が `DataSet` の列の値と一致せず、返された列がマージされずに追加されることがあります。 詳細については、次を参照してください。 [Id の取得や値および Autonumber 値](../../../../../docs/framework/data/adonet/retrieving-identity-or-autonumber-values.md)します。
 
 次のコード例では、2 つをマージ`DataSet`オブジェクトを 1 つに異なるスキーマを持つ`DataSet`2 つの入力方向の結合されたスキーマを使用した`DataSet`オブジェクト。
 

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 44a84b03c85cc1332c07ffbaf53187b7f01d0236
-ms.sourcegitcommit: e994e47d3582bf09ae487ecbd53c0dac30aebaf7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58262467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609049"
 ---
 # <a name="formatfromrawvalue-function"></a>FormatFromRawValue 関数
 1 つの生のパフォーマンス データ値が指定した形式に変換されます。この形式変換が時間ベースである場合は、2 つの生のパフォーマンス データ値が変換されます。 
@@ -44,7 +44,7 @@ int FormatFromRawValue (
 ## <a name="parameters"></a>パラメーター
 
 `dwCounterType`\
-[in]カウンターの型。 カウンターの種類の一覧は、[WMI パフォーマンス カウンターの種類](/windows/desktop/WmiSdk/wmi-performance-counter-types)を参照してください。 `dwCounterType` 以外の任意のカウンター タイプ`PERF_LARGE_RAW_FRACTION`と`PERF_LARGE_RAW_BASE`します。 
+[in]カウンターの型。 カウンターの種類の一覧は、次を参照してください。 [WMI パフォーマンス カウンターの種類](/windows/desktop/WmiSdk/wmi-performance-counter-types)します。 `dwCounterType` 以外の任意のカウンター タイプ`PERF_LARGE_RAW_FRACTION`と`PERF_LARGE_RAW_BASE`します。 
 
 `dwFormat`\
 [in]生のパフォーマンス データを変換先の形式。 次の値のいずれかを指定できます。

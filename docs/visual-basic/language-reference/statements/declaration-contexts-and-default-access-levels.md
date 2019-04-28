@@ -10,11 +10,11 @@ helpviewer_keywords:
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
 ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638188"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>宣言コンテキストと既定のアクセス レベル (Visual Basic)
 このトピックでは、他の種類内でどの Visual Basic の型を宣言することができ、どのようなアクセス レベルを既定の指定されていない場合について説明します。  
@@ -24,11 +24,11 @@ ms.locfileid: "58821700"
   
  宣言コンテキストのレベルは、次のとおりです。  
   
--   *Namespace レベル*: ソース ファイルまたは名前空間内にあるが、クラス、構造体、モジュール、またはインターフェイス  
+- *Namespace レベル*: ソース ファイルまたは名前空間内にあるが、クラス、構造体、モジュール、またはインターフェイス  
   
--   *モジュール レベル*-クラス、構造体、モジュール、またはインターフェイス内にあるが、プロシージャまたはブロック  
+- *モジュール レベル*-クラス、構造体、モジュール、またはインターフェイス内にあるが、プロシージャまたはブロック  
   
--   *プロシージャ レベル*— プロシージャまたはブロック内 (など`If`または`For`)  
+- *プロシージャ レベル*— プロシージャまたはブロック内 (など`If`または`For`)  
   
  次の表では、その宣言コンテキストに応じて、さまざまな宣言されたプログラミングの要素の既定のアクセス レベルを示します。  
   

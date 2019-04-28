@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4f5639bf-bb7f-4982-bb1d-c7caa4348888
 ms.openlocfilehash: deb1877397053ceab8c284a537a861ba56ffb729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606157"
 ---
 # <a name="how-to-execute-a-parameterized-stored-procedure-using-entitycommand"></a>方法: EntityCommand を使用してパラメーター化されたストアド プロシージャを実行する
 このトピックでは、<xref:System.Data.EntityClient.EntityCommand> クラスを使用して、パラメーター化されたストアド プロシージャを実行する方法を示します。  

@@ -3,11 +3,11 @@ title: '方法: クエリ (LINQ) (Visual Basic)、文字列内の文字'
 ms.date: 07/20/2015
 ms.assetid: 499ebbe0-746c-4235-9dba-ce722c12b50e
 ms.openlocfilehash: 3f460f635c581eef5655c5707e3dd356e7986d74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644387"
 ---
 # <a name="how-to-query-for-characters-in-a-string-linq-visual-basic"></a>方法: クエリ (LINQ) (Visual Basic)、文字列内の文字
 <xref:System.String> クラスはジェネリック <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装しているため、任意の文字列を文字のシーケンスとしてクエリできます。 ただし、これは LINQ の一般的な使用方法ではありません。 複雑なパターン一致操作には、<xref:System.Text.RegularExpressions.Regex> クラスを使用してください。  

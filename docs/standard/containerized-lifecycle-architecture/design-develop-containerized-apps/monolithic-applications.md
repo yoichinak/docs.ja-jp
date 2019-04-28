@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644965"
 ---
 # <a name="monolithic-applications"></a>モノリシック アプリケーション
 

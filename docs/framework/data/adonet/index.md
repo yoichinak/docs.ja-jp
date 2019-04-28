@@ -3,11 +3,11 @@ title: ADO.NET
 ms.date: 03/30/2017
 ms.assetid: 5b96ed06-9759-4966-a797-a1d5f6ee50ca
 ms.openlocfilehash: 4105aaba92c73206e7a162415e3bc245507f40e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191914"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667087"
 ---
 # <a name="adonet"></a>ADO.NET
 ADO.NET は、.NET Framework のプログラミングでデータ アクセス サービスを使用できるようにするためのクラスの集合です。 ADO.NET は、分散型データ共有アプリケーションを作成する、さまざまなコンポーネントのセットを提供します。 ADO.NET は .NET Framework の不可欠な部分であり、リレーショナル データ、XML データ、およびアプリケーション データへのアクセス機能を提供します。 ADO.NET は、アプリケーション、ツール、言語、またはインターネット ブラウザーが使用するフロントエンド データベース クライアントや中間層ビジネス オブジェクトの作成を含む、各種の開発ニーズをサポートします。  

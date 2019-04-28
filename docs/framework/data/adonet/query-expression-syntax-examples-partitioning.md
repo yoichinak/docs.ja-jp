@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: beb5f361-1ac8-44fb-afa1-2aacea15f166
 ms.openlocfilehash: 35c9c0346c84be7002800c8bf0c7e5eb8f1381e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637655"
 ---
 # <a name="query-expression-syntax-examples-partitioning-linq-to-dataset"></a>クエリ式の構文例:パーティション分割 (LINQ to DataSet)
 このトピックでは、<xref:System.Linq.Enumerable.Skip%2A> メソッドおよび <xref:System.Linq.Enumerable.Take%2A> メソッドで、クエリ式の構文を使って <xref:System.Data.DataSet> に対するクエリを実行する例を紹介しています。  

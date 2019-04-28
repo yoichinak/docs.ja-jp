@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b1fe219c4c852792390b48b0ea4d38adb702281
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598871"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 関数
 関数が呼び出し元に戻ることをプロファイラーに通知します。  
@@ -46,9 +46,9 @@ void __stdcall FunctionLeave (
   
  実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。  
   
--   項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
+- 項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
   
--   終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
+- 終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
   
  実装`FunctionLeave`ガベージ コレクションは延期されますブロックしないでください。 実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。 ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionLeave`を返します。  
   

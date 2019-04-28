@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dependency properties [WPF]
 ms.assetid: e16dd710-1530-4462-81a2-43719b973970
 ms.openlocfilehash: 78bf1dbe9c9c95a3ae1afe2515adbd8bc65a7d44
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61628614"
 ---
 # <a name="properties-how-to-topics"></a>プロパティに関する「方法」トピック
 ## <a name="in-this-section"></a>このセクションの内容  

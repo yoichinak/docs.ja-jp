@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1d26e0fb-f6e0-4afa-9a9c-b8d55b8f20dc
 ms.openlocfilehash: fa8749550e10256ee0623714cc95e03a838655c8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364490"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607031"
 ---
 # <a name="viewing-data-in-a-datatable"></a>DataTable 内のデータの表示
 

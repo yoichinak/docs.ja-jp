@@ -3,11 +3,11 @@ title: 比較セマンティクス (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: b36ce28a-2fe4-4236-b782-e5f7c054deae
 ms.openlocfilehash: 6b4c4177ebd6c45e00a1ac7774e40a43e0c14a74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083336"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605972"
 ---
 # <a name="comparison-semantics-entity-sql"></a>比較セマンティクス (Entity SQL)
 次のいずれかの [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 演算子を実行すると、型インスタンスの比較が行われます。  
@@ -15,53 +15,53 @@ ms.locfileid: "59083336"
 ## <a name="explicit-comparison"></a>明示的な比較  
  等価演算  
   
--   =  
+- =  
   
--   !=  
+- !=  
   
  順序付け操作  
   
--   <  
+- <  
   
--   \<=  
+- \<=  
   
--   \>  
+- \>  
   
--   \>=  
+- \>=  
   
  NULL 値が許容される操作  
   
--   IS_NULL  
+- IS_NULL  
   
--   IS NOT NULL  
+- IS NOT NULL  
   
 ## <a name="explicit-distinction"></a>明示的な区別  
  等価区別  
   
--   DISTINCT  
+- DISTINCT  
   
--   GROUP BY  
+- GROUP BY  
   
  順序付け区別  
   
--   ORDER BY  
+- ORDER BY  
   
 ## <a name="implicit-distinction"></a>暗黙的な区別  
  設定操作および述語 (等価)  
   
--   UNION  
+- UNION  
   
--   INTERSECT  
+- INTERSECT  
   
--   EXCEPT  
+- EXCEPT  
   
--   SET  
+- SET  
   
--   OVERLAPS  
+- OVERLAPS  
   
  項目述語 (等価)  
   
--   IN  
+- IN  
   
 ## <a name="supported-combinations"></a>サポートされている組み合わせ  
  次の表は、各種類の型の比較演算子のサポートされているすべての組み合わせを示します。  

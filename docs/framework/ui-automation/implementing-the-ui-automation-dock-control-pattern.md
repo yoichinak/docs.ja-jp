@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, dock control pattern
 ms.assetid: ea3d2212-7c8e-4dd7-bf08-73141ca2d4fb
 ms.openlocfilehash: 32ee58833b83e2a3356b6c1598abd207364e6ec1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609926"
 ---
 # <a name="implementing-the-ui-automation-dock-control-pattern"></a>UI オートメーション Dock コントロール パターンの実装
 > [!NOTE]
@@ -28,13 +28,13 @@ ms.locfileid: "59190529"
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
  Dock コントロール パターンを実装する場合は、次のガイドラインと規則に注意してください。  
   
--   <xref:System.Windows.Automation.Provider.IDockProvider> は、ドッキング コンテナーのプロパティや、ドッキング コンテナー内の現在のコントロールに隣接してドッキングされるコントロールのプロパティは公開しません。  
+- <xref:System.Windows.Automation.Provider.IDockProvider> は、ドッキング コンテナーのプロパティや、ドッキング コンテナー内の現在のコントロールに隣接してドッキングされるコントロールのプロパティは公開しません。  
   
--   コントロールは、現在の重ね順に基づき、互いを基準としてドッキングされます。重ね順が上位であるほど、指定されたドッキング コンテナーの端から離れた位置に配置されます。  
+- コントロールは、現在の重ね順に基づき、互いを基準としてドッキングされます。重ね順が上位であるほど、指定されたドッキング コンテナーの端から離れた位置に配置されます。  
   
--   ドッキング コンテナーのサイズを変更すると、コンテナー内にドッキングされているコントロールは、もともとドッキングされていたのと同じ端に合わせて再配置されます。 また、ドッキングされているコントロールは、 <xref:System.Windows.Automation.DockPosition>のドッキング動作に従って、コンテナー内のスペースを埋めるようにサイズ変更されます。 たとえば、 <xref:System.Windows.Automation.DockPosition.Top> が指定されている場合は、コントロールの左側と右側が広がって、使用できるスペースを埋めます。 <xref:System.Windows.Automation.DockPosition.Fill> が指定されている場合は、コントロールの 4 つの側面すべてが広がって、使用できるスペースを埋めます。  
+- ドッキング コンテナーのサイズを変更すると、コンテナー内にドッキングされているコントロールは、もともとドッキングされていたのと同じ端に合わせて再配置されます。 また、ドッキングされているコントロールは、 <xref:System.Windows.Automation.DockPosition>のドッキング動作に従って、コンテナー内のスペースを埋めるようにサイズ変更されます。 たとえば、 <xref:System.Windows.Automation.DockPosition.Top> が指定されている場合は、コントロールの左側と右側が広がって、使用できるスペースを埋めます。 <xref:System.Windows.Automation.DockPosition.Fill> が指定されている場合は、コントロールの 4 つの側面すべてが広がって、使用できるスペースを埋めます。  
   
--   マルチモニター システムでは、コントロールは現在のモニターの左側または右側にドッキングする必要があります。 それが不可能な場合は、左端のモニターの左側、または右端のモニターの右側にドッキングする必要があります。  
+- マルチモニター システムでは、コントロールは現在のモニターの左側または右側にドッキングする必要があります。 それが不可能な場合は、左端のモニターの左側、または右端のモニターの右側にドッキングする必要があります。  
   
 <a name="Required_Members_for_IDockProvider"></a>   
 ## <a name="required-members-for-idockprovider"></a>IDockProvider の必須メンバー  

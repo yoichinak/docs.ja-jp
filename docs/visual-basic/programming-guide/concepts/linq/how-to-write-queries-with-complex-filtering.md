@@ -3,11 +3,11 @@ title: '方法: 複雑なフィルター (Visual Basic) を使用したクエリ
 ms.date: 07/20/2015
 ms.assetid: bf286ffc-7990-4b00-a4eb-ee3d70129950
 ms.openlocfilehash: ac58394619b83e2b862e87926f0b6a722fdc3c7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820920"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614845"
 ---
 # <a name="how-to-write-queries-with-complex-filtering-visual-basic"></a>方法: 複雑なフィルター (Visual Basic) を使用したクエリを作成します。
 複雑なフィルターを使用して LINQ to XML クエリを記述することが必要になる場合があります。 たとえば、特定の名前と値を持つ子要素を含む要素をすべて検索しなければならない場合があります。 このトピックでは、複雑なフィルターを使用してクエリを記述する例について説明します。  

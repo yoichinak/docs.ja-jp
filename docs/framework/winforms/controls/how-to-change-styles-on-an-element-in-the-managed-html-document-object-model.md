@@ -8,11 +8,11 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
 ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608399"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>方法: マネージド HTML DOM (Document Object Model) の要素のスタイルを変更する
 

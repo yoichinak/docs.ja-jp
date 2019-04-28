@@ -7,11 +7,11 @@ helpviewer_keywords:
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
 ms.openlocfilehash: 932eb0af6afbe958695d5c084d2cb0c0bc188830
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609588"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>UI オートメーション GridItem コントロール パターンの実装
 > [!NOTE]
@@ -25,13 +25,13 @@ ms.locfileid: "59176619"
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
  <xref:System.Windows.Automation.Provider.IGridProvider> を実装する場合は、次のガイドラインと規則に留意してください。  
   
--   グリッドの座標は 0 から始まり、左上のセルの座標が (0, 0) です。  
+- グリッドの座標は 0 から始まり、左上のセルの座標が (0, 0) です。  
   
--   結合されたセルが報告する <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> および <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> プロパティは、UI オートメーション プロバイダーによって定義された、基になるアンカー セルに基づきます。 通常、これは、最上位の左端の行または列です。  
+- 結合されたセルが報告する <xref:System.Windows.Automation.Provider.IGridItemProvider.Row%2A> および <xref:System.Windows.Automation.Provider.IGridItemProvider.Column%2A> プロパティは、UI オートメーション プロバイダーによって定義された、基になるアンカー セルに基づきます。 通常、これは、最上位の左端の行または列です。  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider> は、セルの結合や分割などのアクティブなグリッド操作を提供しません。  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> は、セルの結合や分割などのアクティブなグリッド操作を提供しません。  
   
--   <xref:System.Windows.Automation.Provider.IGridItemProvider> を実装するコントロールは、一般にキーボードを使用して横断できます (つまり、UI オートメーション クライアントが隣接するコントロールに移動できます)。  
+- <xref:System.Windows.Automation.Provider.IGridItemProvider> を実装するコントロールは、一般にキーボードを使用して横断できます (つまり、UI オートメーション クライアントが隣接するコントロールに移動できます)。  
   
 <a name="Required_Members_for_IGridItemProvider"></a>   
 ## <a name="required-members-for-igriditemprovider"></a>IGridItemProvider の必須メンバー  

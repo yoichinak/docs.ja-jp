@@ -3,11 +3,11 @@ title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
 ms.openlocfilehash: 51de041a4b06d5da31071ea2b3cb31c86feff137
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294446"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606136"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 あるデータ型の式を別のデータ型に変換します。  
@@ -39,11 +39,11 @@ CAST( e as T )
   
  `Edm.Decimal`にキャストする場合は、オプションで精度と小数点以下桁数のファセットの値を指定できます。 明示的に指定しない場合、精度と小数点以下桁数の既定値はそれぞれ 18 と 0 です。 具体的には、 `Decimal`で次のオーバーロードがサポートされています。  
   
--   `CAST( d as Edm.Decimal );`  
+- `CAST( d as Edm.Decimal );`  
   
--   `CAST( d as Edm.Decimal(precision) );`  
+- `CAST( d as Edm.Decimal(precision) );`  
   
--   `CAST( d as Edm.Decimal(precision, scale) );`  
+- `CAST( d as Edm.Decimal(precision, scale) );`  
   
  キャスト式の使用は明示的な変換と見なされます。 明示的な変換では、データが切り捨てられたり、精度が失われたりする場合があります。  
   

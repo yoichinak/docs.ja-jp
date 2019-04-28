@@ -9,11 +9,11 @@ helpviewer_keywords:
 - = assignment statements [Visual Basic]
 ms.assetid: 2dac2e49-86c8-42f8-80c1-458452fb5e29
 ms.openlocfilehash: ad74e3ebc947af4f36022be838b69df6ce24997a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608276"
 ---
 # <a name="-operator-visual-basic"></a>= 演算子 (Visual Basic)
 変数またはプロパティに値を割り当てます。  

@@ -6,17 +6,17 @@ helpviewer_keywords:
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
 ms.openlocfilehash: d3981be7977b56af0b60f9796519b78dc9ac5db3
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43505767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640509"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows フォームにおける自動スケーリング
 
 自動スケーリングによって、特定のディスプレイの解像度またはシステムのフォントを持つマシンに合わせて設計されたフォームとコントロールを、ディスプレイの別の解像度やシステム フォントを持つ別のマシンで適切に表示することができます。 フォームとコントロールが、ユーザーとその他の開発者のマシンのネイティブ ウィンドウとその他のアプリケーションで、一貫性を持つよう適切にサイズ変更され、 自動スケーリングと視覚スタイルに対する [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のサポートにより、各ユーザーのマシンのネイティブの Windows アプリケーションと比較した場合、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションが一貫したルック アンド フィールを維持することができます。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] バージョン 2.0 以降では、ほとんどの場合、自動スケーリングは正常に機能します。 ただし、フォント パターンの変更が問題になる可能性があります。 この問題を解決する方法の例は、[方法: Windows フォーム アプリケーションでフォント パターンの変更に応答](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)を参照してください。
+[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] バージョン 2.0 以降では、ほとんどの場合、自動スケーリングは正常に機能します。 ただし、フォント パターンの変更が問題になる可能性があります。 この問題を解決する方法の例は、次を参照してください。[方法。Windows フォーム アプリケーションでフォント パターンの変更に応答](how-to-respond-to-font-scheme-changes-in-a-windows-forms-application.md)します。
 
 ## <a name="need-for-automatic-scaling"></a>自動スケーリングの必要性
 

@@ -3,11 +3,11 @@ title: System.ServiceModel.ServiceChannelLifetime
 ms.date: 03/30/2017
 ms.assetid: 1da8b8d0-7c5b-40bb-b177-29bbd67245e0
 ms.openlocfilehash: a56efde838dcc250d6f57746bac817229e38f1e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608373"
 ---
 # <a name="systemservicemodelservicechannellifetime"></a>System.ServiceModel.ServiceChannelLifetime
 System.ServiceModel.ServiceChannelLifetime  

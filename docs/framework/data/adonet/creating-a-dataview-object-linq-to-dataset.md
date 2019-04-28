@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
 ms.openlocfilehash: 95bc9beed9965bad32118dfafa4a5aa76902ca10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607827"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView オブジェクトの作成 (LINQ to DataSet)
 <xref:System.Data.DataView> のコンテキストで [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を作成するには 2 つの方法があります。 <xref:System.Data.DataView> は、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] に対する <xref:System.Data.DataTable> クエリから作成したり、型指定されているまたは型指定されていない <xref:System.Data.DataTable> から作成したりできます。 どちらの場合も、作成、<xref:System.Data.DataView>のいずれかを使用して、<xref:System.Data.DataTableExtensions.AsDataView%2A>拡張メソッド。<xref:System.Data.DataView>に直接構築可能でない、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]コンテキスト。  
@@ -31,19 +31,19 @@ ms.locfileid: "59121655"
   
  <xref:System.Data.DataView> の作成に使用されるクエリでは、次のクエリ演算子のみがサポートされます。  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Cast%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.OrderByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenBy%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.ThenByDescending%2A>  
   
--   <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
+- <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
  場合、<xref:System.Data.DataView>から作成された、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ、<xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>メソッドは、クエリで呼び出す最後のメソッドである必要があります。 次の例は、作成にこれを<xref:System.Data.DataView>合計支払額別に並べ替えられたオンライン注文の。  
   

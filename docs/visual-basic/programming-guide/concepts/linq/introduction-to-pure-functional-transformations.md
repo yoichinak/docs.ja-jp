@@ -3,11 +3,11 @@ title: 純粋関数型変換 (Visual Basic) の概要
 ms.date: 07/20/2015
 ms.assetid: 82bf3348-c503-4854-a91f-71f9835779ff
 ms.openlocfilehash: 32cd588d527dbc3e995ea8629f024498c80cba2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614402"
 ---
 # <a name="introduction-to-pure-functional-transformations-visual-basic"></a>純粋関数型変換 (Visual Basic) の概要
 ここでは、関数型変換の概要について、その基になる概念や、それをサポートする言語構成要素も含めて説明します。 また、オブジェクト指向変換と関数型変換という 2 つのプログラミング方法を対比させて、関数型変換に移行するためのアドバイスを紹介します。 関数型変換はさまざまなプログラミング シナリオで使用できますが、ここでは XML 変換を具体例として取り上げます。  

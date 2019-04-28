@@ -3,20 +3,20 @@ title: アーキテクチャとデザイン
 ms.date: 03/30/2017
 ms.assetid: bd738d39-00e2-4bab-b387-90aac1a014bd
 ms.openlocfilehash: a4b597c8a62c661ace4485959589823094b9a08f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606847"
 ---
 # <a name="architecture-and-design"></a>アーキテクチャとデザイン
 SQL 生成モジュール、[サンプル プロバイダー](https://code.msdn.microsoft.com/windowsdesktop/Entity-Framework-Sample-6a9801d0)コマンド ツリーを表す式ツリー上のビジターとして実装されます。 生成は、式ツリーを介した単一のパスで行われます。  
   
  ツリーのノードはボトムアップ方式で処理されます。 最初に、中間構造が生成されます。SqlSelectStatement または SqlBuilder を両方実装する ISqlFragment します。 次に、文字列である SQL ステートメントがその構造から生成されます。 中間構造には 2 つの理由があります。  
   
--   論理上、SQL SELECT ステートメントは順序を無視して挿入されます。 FROM 句に参加するノードは、WHERE 句、GROUP BY 句、および ORDER BY 句に参加するノードの前にアクセスされます。  
+- 論理上、SQL SELECT ステートメントは順序を無視して挿入されます。 FROM 句に参加するノードは、WHERE 句、GROUP BY 句、および ORDER BY 句に参加するノードの前にアクセスされます。  
   
--   別名の名前を変更するには、名前の変更中に競合が発生しないように、使用されているすべての別名を識別する必要があります。 SqlBuilder で名前変更の選択を遅らせるには、Symbol オブジェクトを使用して、名前変更の候補となる列を表します。  
+- 別名の名前を変更するには、名前の変更中に競合が発生しないように、使用されているすべての別名を識別する必要があります。 SqlBuilder で名前変更の選択を遅らせるには、Symbol オブジェクトを使用して、名前変更の候補となる列を表します。  
   
  ![図](../../../../../docs/framework/data/adonet/ef/media/de1ca705-4f7c-4d2d-ace5-afefc6d3cefa.gif "de1ca705-4f7c-4d2d-ace5-afefc6d3cefa")  
   
@@ -30,9 +30,9 @@ SQL 生成モジュール、[サンプル プロバイダー](https://code.msdn.
 ### <a name="isqlfragment"></a>ISqlFragment  
  このセクションでは、ISqlFragment インターフェイスを実装するクラスについて説明します。このインターフェイスは、2 つの目的を達成します。  
   
--   すべてのビジター メソッドに共通する戻り値の型です。  
+- すべてのビジター メソッドに共通する戻り値の型です。  
   
--   最終的な SQL 文字列を作成するためのメソッドを指定します。  
+- 最終的な SQL 文字列を作成するためのメソッドを指定します。  
   
 ```  
 internal interface ISqlFragment {  
@@ -194,11 +194,11 @@ private bool IsParentAJoin{get}
   
  通常、連結が検討されているノードが空ではない句の後に SQL ステートメントの句が評価される場合、そのノードを現在のステートメントに追加することはできません。 たとえば、次のノードが Filter の場合、そのノードを現在の SqlSelectStatement に組み込むことができるのは、次の条件に当てはまる場合のみです。  
   
--   SELECT リストが空の場合。 SELECT リストが空ではない場合、SELECT リストはフィルターの前のノードによって生成されているため、述語はその SELECT リストによって生成された列を参照できます。  
+- SELECT リストが空の場合。 SELECT リストが空ではない場合、SELECT リストはフィルターの前のノードによって生成されているため、述語はその SELECT リストによって生成された列を参照できます。  
   
--   GROUPBY が空の場合。 GROUPBY が空ではない場合、フィルターを追加すると、グループ化の前にフィルター処理することになりますが、これは正しい処理ではありません。  
+- GROUPBY が空の場合。 GROUPBY が空ではない場合、フィルターを追加すると、グループ化の前にフィルター処理することになりますが、これは正しい処理ではありません。  
   
--   TOP 句が空の場合。 TOP 句が空ではない場合、フィルターを追加すると、TOP を実行する前にフィルター処理することになりますが、これは正しい処理ではありません。  
+- TOP 句が空の場合。 TOP 句が空ではない場合、フィルターを追加すると、TOP を実行する前にフィルター処理することになりますが、これは正しい処理ではありません。  
   
  これは、DbConstantExpression や算術式のような非リレーショナル ノードには当てはまりません。非リレーショナル ノードは、常に既存の SqlSelectStatement に含まれているためです。  
   
@@ -236,35 +236,35 @@ private bool IsParentAJoin{get}
 ### <a name="relational-non-join-nodes"></a>リレーショナル (非結合) ノード  
  非結合ノードをサポートする式の型を次に示します。  
   
--   DbDistinctExpression  
+- DbDistinctExpression  
   
--   DbFilterExpression  
+- DbFilterExpression  
   
--   DbGroupByExpression  
+- DbGroupByExpression  
   
--   DbLimitExpession  
+- DbLimitExpession  
   
--   DbProjectExpression  
+- DbProjectExpression  
   
--   DbSkipExpression  
+- DbSkipExpression  
   
--   DbSortExpression  
+- DbSortExpression  
   
  これらのノードへのアクセスは、次のパターンに従います。  
   
 1. リレーショナル入力にアクセスし、結果の SqlSelectStatement を取得します。 リレーショナル ノードへの入力は次のいずれかになります。  
   
-    -   エクステントを含むリレーショナル ノード (DbScanExpression など)。 このようなノードにアクセスすると、SqlSelectStatement が返されます。  
+    - エクステントを含むリレーショナル ノード (DbScanExpression など)。 このようなノードにアクセスすると、SqlSelectStatement が返されます。  
   
-    -   集合演算式 (UNION ALL など)。 結果は、角かっこで囲み、新しい SqlSelectStatement の FROM 句に配置する必要があります。  
+    - 集合演算式 (UNION ALL など)。 結果は、角かっこで囲み、新しい SqlSelectStatement の FROM 句に配置する必要があります。  
   
 2. 入力によって生成された SqlSelectStatement に現在のノードを追加できるかどうかを確認します。 これについては、「SQL ステートメントへの式ノードのグループ化」で説明しています。 追加できない場合は、次の操作を行います。  
   
-    -   現在の SqlSelectStatement オブジェクトを表示します。  
+    - 現在の SqlSelectStatement オブジェクトを表示します。  
   
-    -   新しい SqlSelectStatement オブジェクトを作成し、表示された SqlSelectStatement を新しい SqlSelectStatement オブジェクトの FROM として追加します。  
+    - 新しい SqlSelectStatement オブジェクトを作成し、表示された SqlSelectStatement を新しい SqlSelectStatement オブジェクトの FROM として追加します。  
   
-    -   スタックの先頭に新しいオブジェクトを配置します。  
+    - スタックの先頭に新しいオブジェクトを配置します。  
   
 3. 入力式バインディングを入力から正しいシンボルにリダイレクトします。 この情報は、SqlSelectStatement オブジェクトに保持されます。  
   
@@ -289,11 +289,11 @@ ORDER BY sk1, sk2, ...
 ### <a name="join-expressions"></a>結合式  
  次の式は結合式と見なされ、VisitJoinExpression メソッドによって一般的な方法で処理されます。  
   
--   DbApplyExpression  
+- DbApplyExpression  
   
--   DbJoinExpression  
+- DbJoinExpression  
   
--   DbCrossJoinExpression  
+- DbCrossJoinExpression  
   
  アクセスする手順を次に示します。  
   
@@ -305,15 +305,15 @@ ORDER BY sk1, sk2, ...
   
 2. ProcessJoinInputResult を呼び出して、入力にアクセスした結果の後処理を実行します。ProcessJoinInputResult は、結合式の子にアクセスした後にシンボル テーブルを保持し、場合によっては、子によって生成された SqlSelectStatement を終了します。 子の結果は次のいずれかになります。  
   
-    -   親が追加される SqlSelectStatement とは別の SqlSelectStatement。 この場合、既定の列を追加して完了する必要があります。 入力が Join だった場合、新しい結合シンボルを作成する必要があります。 それ以外の場合は、標準のシンボルを作成します。  
+    - 親が追加される SqlSelectStatement とは別の SqlSelectStatement。 この場合、既定の列を追加して完了する必要があります。 入力が Join だった場合、新しい結合シンボルを作成する必要があります。 それ以外の場合は、標準のシンボルを作成します。  
   
-    -   エクステント (DbScanExpression など)。この場合、エクステントは親の SqlSelectStatement の入力のリストに追加されます。  
+    - エクステント (DbScanExpression など)。この場合、エクステントは親の SqlSelectStatement の入力のリストに追加されます。  
   
-    -   SqlSelectStatement 以外。この場合、角かっこで囲まれています。  
+    - SqlSelectStatement 以外。この場合、角かっこで囲まれています。  
   
-    -   親が追加されるのと同じ SqlSelectStatement。 この場合、FromExtents リスト内のシンボルは、すべてのシンボルを表す新しい 1 つの JoinSymbol に置き換える必要があります。  
+    - 親が追加されるのと同じ SqlSelectStatement。 この場合、FromExtents リスト内のシンボルは、すべてのシンボルを表す新しい 1 つの JoinSymbol に置き換える必要があります。  
   
-    -   最初の 3 つの場合、AS 句を追加してシンボル テーブルを更新するために AddFromSymbol が呼び出されます。  
+    - 最初の 3 つの場合、AS 句を追加してシンボル テーブルを更新するために AddFromSymbol が呼び出されます。  
   
  その後、結合条件がある場合は、その条件にアクセスします。  
   
@@ -337,18 +337,18 @@ ORDER BY sk1, sk2, ...
   
  Instance プロパティは最初にアクセスされると、結果は Symbol、JoinSymbol、または SymbolPair になります。 この 3 つのケースを処理する方法を次に示します。  
   
--   JoinSymbol が返された場合、その NameToExtent プロパティには、必要なプロパティのシンボルが格納されます。 結合シンボルが入れ子になった結合を表す場合、新しい Symbol のペアが結合シンボルと共に返され、インスタンスの別名として使用されるシンボルと、さらに解決するために実際のプロパティを表すシンボルを追跡します。  
+- JoinSymbol が返された場合、その NameToExtent プロパティには、必要なプロパティのシンボルが格納されます。 結合シンボルが入れ子になった結合を表す場合、新しい Symbol のペアが結合シンボルと共に返され、インスタンスの別名として使用されるシンボルと、さらに解決するために実際のプロパティを表すシンボルを追跡します。  
   
--   SymbolPair が返され、その Column 部分が結合シンボルである場合、結合シンボルが再び返されますが、現在のプロパティ式で表されるプロパティを指すように列プロパティが更新されます。 それ以外の場合は、別名として SymbolPair ソース、および列として現在のプロパティのシンボルを含む SqlBuilder が返されます。  
+- SymbolPair が返され、その Column 部分が結合シンボルである場合、結合シンボルが再び返されますが、現在のプロパティ式で表されるプロパティを指すように列プロパティが更新されます。 それ以外の場合は、別名として SymbolPair ソース、および列として現在のプロパティのシンボルを含む SqlBuilder が返されます。  
   
--   Symbol が返された場合、Visit メソッドは、別名としてそのインスタンス、および列名としてプロパティ名を含む SqlBuilder メソッドを返します。  
+- Symbol が返された場合、Visit メソッドは、別名としてそのインスタンス、および列名としてプロパティ名を含む SqlBuilder メソッドを返します。  
   
 ### <a name="dbnewinstanceexpression"></a>DbNewInstanceExpression  
  DbProjectExpression の Projection プロパティとして使用する場合、DbNewInstanceExpression は、投影された列を表すためにコンマで区切った引数のリストを生成します。  
   
  DbNewInstanceExpression が、コレクションの戻り値の型を格納しており、引数として指定される式の新しいコレクションを定義している場合、次の 3 つのケースは個別に処理されます。  
   
--   DbNewInstanceExpression に唯一の引数として DbElementExpression が使用されている場合、次のように変換されます。  
+- DbNewInstanceExpression に唯一の引数として DbElementExpression が使用されている場合、次のように変換されます。  
   
     ```  
     NewInstance(Element(X)) =>  SELECT TOP 1 …FROM X  

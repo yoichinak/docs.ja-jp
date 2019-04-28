@@ -3,11 +3,11 @@ title: タスク 1:新しい Windows Presentation Foundation アプリケーシ�
 ms.date: 03/30/2017
 ms.assetid: 270eaeba-9492-4532-af9f-403ce5c9935b
 ms.openlocfilehash: 63b84e4fd2c88d98fbf417ee1f55ec203d295116
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641639"
 ---
 # <a name="task-1-create-a-new-windows-presentation-foundation-application"></a>タスク 1:新しい Windows Presentation Foundation アプリケーションの作成
 このタスクでは、WPF Application Visual Studio テンプレートを使用して空の Windows Presentation Foundation (WPF) アプリケーションを作成し、適切な参照を追加[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]ワークフロー アセンブリ。  
@@ -32,11 +32,11 @@ ms.locfileid: "59320380"
   
 9. **参照の追加**ダイアログ ボックスで、をクリックして、 **.NET**  タブ、CTRL キーを押し、次のアセンブリを選択し、順にクリックします**OK**:  
   
-    -   System.Activities  
+    - System.Activities  
   
-    -   System.Activities.Presentation  
+    - System.Activities.Presentation  
   
-    -   System.Activities.Core.Presentation  
+    - System.Activities.Core.Presentation  
   
 10. **[OK]** をクリックします。  
   

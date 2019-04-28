@@ -5,18 +5,18 @@ f1_keywords:
 - vbrArgument_PathNullOrEmpty1
 ms.assetid: 4a742518-30ce-4054-b1bb-df6978f15c06
 ms.openlocfilehash: f941a4f57b581208ec3690fe30efb1852409802e
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58036907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666067"
 ---
 # <a name="argument-argumentname-is-nothing-or-empty"></a>引数 '\<argumentname >' は Nothing または空
 引数名は、 `Nothing` に初期化されるか空であるため、無効です。 引数には、特定のデータ型と有効な名前を設定する必要があります。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   有効な引数名を追加します。  
+- 有効な引数名を追加します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - execution [Visual Basic], stopping
 ms.assetid: 0e64467c-0f34-4aab-9ddd-43f8b9d55d90
 ms.openlocfilehash: 4fc4fd36fb6b057195e9d8a79eb0a5b3ac9ff95c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638143"
 ---
 # <a name="end-statement"></a>End ステートメント
 すぐに実行を終了します。  

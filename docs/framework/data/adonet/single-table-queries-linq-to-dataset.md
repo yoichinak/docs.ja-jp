@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
 ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664169"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>単一テーブルのクエリ (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 実装するデータ ソースに対してクエリが動作、<xref:System.Collections.Generic.IEnumerable%601>インターフェイスまたは<xref:System.Linq.IQueryable%601>インターフェイス。 <xref:System.Data.DataTable>クラスがいずれかのインターフェイスを実装していませんので、呼び出す必要があります、<xref:System.Data.DataTableExtensions.AsEnumerable%2A>メソッドを使用する場合、<xref:System.Data.DataTable>でソースとして、`From`の句、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]クエリ。  

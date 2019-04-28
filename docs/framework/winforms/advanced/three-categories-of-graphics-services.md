@@ -9,20 +9,20 @@ helpviewer_keywords:
 - typography
 ms.assetid: 068c0ef3-f6ee-4d58-a7b6-eb2531ead408
 ms.openlocfilehash: ccbd5e236b47d1d870c9b77cfa2b3880619cf3cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651520"
 ---
 # <a name="three-categories-of-graphics-services"></a>グラフィックス サービスの 3 つのカテゴリ
 Windows フォームでグラフィックスの提供は、次の 3 つの広範なカテゴリに分類されます。  
   
--   2 次元 (2-d) のベクター グラフィックス  
+- 2 次元 (2-d) のベクター グラフィックス  
   
--   イメージング  
+- イメージング  
   
--   タイポグラフィ  
+- タイポグラフィ  
   
 ## <a name="2-d-vector-graphics"></a>2 次元ベクター グラフィックス  
  2 次元ベクター グラフィックスはプリミティブです。直線、曲線、および図表; など座標系のポイントのセットによって指定されています。 たとえば、直線がその 2 つのエンドポイントで指定され、四角形の左上隅にあると、幅と高さを定義する数値の 1 組の位置を示す点で指定します。 単純なパスは、直線で接続されている点の配列によって指定されます。 ベジエ スプラインは、4 つのコントロール ポイントで指定された高度な曲線です。  

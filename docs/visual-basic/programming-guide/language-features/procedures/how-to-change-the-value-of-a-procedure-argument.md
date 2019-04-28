@@ -14,11 +14,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], changing value
 ms.assetid: 6fad2368-5da7-4c07-8bf8-0f4e65a1be67
 ms.openlocfilehash: a56bdf888163c9559b87e857abb33522c547ed45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316623"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665833"
 ---
 # <a name="how-to-change-the-value-of-a-procedure-argument-visual-basic"></a>方法: (Visual Basic)、プロシージャ引数の値を変更します。
 プロシージャを呼び出すときに指定する各引数は、プロシージャで定義されたパラメーターのいずれかに対応します。 場合によっては、プロシージャのコードは呼び出し元のコードで引数を基になる値を変更できます。 それ以外の場合、プロシージャは、引数のローカル コピーだけを変更できます。  

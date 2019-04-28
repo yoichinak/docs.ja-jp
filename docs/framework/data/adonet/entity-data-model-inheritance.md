@@ -3,11 +3,11 @@ title: Entity Data Model:継承
 ms.date: 03/30/2017
 ms.assetid: 42c7ef24-710a-4af9-8493-cd41c399ecb0
 ms.openlocfilehash: 9f77f2ebb86ea050c124fbd1c6f2b30ed9e75a1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667204"
 ---
 # <a name="entity-data-model-inheritance"></a>Entity Data Model:継承
 Entity Data Model (EDM) の継承をサポートしている[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)します。 EDM の継承は、オブジェクト指向プログラミング言語におけるクラスの継承に似ています。 オブジェクト指向言語でクラスでは、概念モデルで定義できますエンティティ型と同様に (、*派生型*) 別のエンティティ型から継承する (、*基本型*)。 ただし、オブジェクト指向プログラミング、クラスとは異なり、概念モデルで、派生型常にすべて継承、[プロパティ](../../../../docs/framework/data/adonet/property.md)と[ナビゲーション プロパティ](../../../../docs/framework/data/adonet/navigation-property.md)の基本型。 派生型の継承プロパティは、オーバーライドできません。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, polygons
 ms.assetid: a72213d2-d69a-4c2b-a75c-be7b20390c13
 ms.openlocfilehash: 2b1e3d387e4d056d9187c54dcef560544206c370
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641308"
 ---
 # <a name="polygons-in-gdi"></a>GDI+ での多角形
 多角形は、次の 3 つまたは複数の辺を持つ閉じた図形です。 たとえば、三角形は、次の 3 つの辺の多角形、四角形は、4 辺の多角形および五角形は、5 つの辺の多角形です。 次の図は、いくつかの多角形を示します。  

@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 4352d006c95a5b85341625220e6c7e62a86b482a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598767"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 関数
 現在実行中の関数が別の関数の末尾呼び出しを実行しようとしているプロファイラーに通知しに渡すことができるハンドルを提供します、 [icorprofilerinfo 3::getfunctiontailcall3info メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)を取得しますスタック フレーム。  
@@ -48,9 +48,9 @@ void __stdcall FunctionTailcall3WithInfo(
   
  実行エンジンは、この関数を呼び出す前に、レジスタを保存できません。  
   
--   項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
+- 項目で、浮動小数点ユニット (FPU) にあるなど、使用するすべてのレジスタを保存する必要があります。  
   
--   終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
+- 終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
   
  実装`FunctionTailcall3WithInfo`をブロックしないでください、ガベージ コレクションは延期されます。 実装は、ガベージ コレクションをしないで、スタックはガベージ コレクションに適した状態ではない可能性が。 ランタイムがまでブロックはガベージ コレクションが試行されると、`FunctionTailcall3WithInfo`を返します。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30451
 ms.assetid: 765f099b-e21e-47c6-a906-a065444e56b3
 ms.openlocfilehash: 3aadc49f91021409123550ba2712f1acf5b99d83
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651026"
 ---
 # <a name="name-name-is-not-declared"></a>名前 '\<名 >' が宣言されていません
 ステートメントがプログラミング要素の場合を参照しますが、コンパイラは、正確な名前を持つ要素を見つけることができません。  
@@ -25,7 +25,7 @@ ms.locfileid: "55260135"
   
 2. メンバー アクセス演算子があることを確認 (`.`) オブジェクトとメンバーの間。 たとえば、 <xref:System.Windows.Forms.TextBox> という名前の `TextBox1`コントロールがある場合、このコントロールの <xref:System.Windows.Forms.TextBoxBase.Text%2A> プロパティにアクセスするには、「 `TextBox1.Text`」と入力する必要があります。 代わりに「 `TextBox1Text`」と入力した場合、別の名前と見なされます。  
   
-3. スペルが正しいことと、オブジェクト メンバー アクセスの構文が正しくの場合は、要素が宣言されていることを確認します。 詳細については、[Declared Elements](../../programming-guide/language-features/declared-elements/index.md)を参照してください。  
+3. スペルが正しいことと、オブジェクト メンバー アクセスの構文が正しくの場合は、要素が宣言されていることを確認します。 詳細については、次を参照してください。 [Declared Elements](../../programming-guide/language-features/declared-elements/index.md)します。  
   
 4. プログラミング要素が宣言されている場合は、スコープ内にあることを確認します。 参照元のステートメントがプログラミング要素が宣言領域の外側にある場合は、要素名を修飾する必要があります。 詳細については、「 [Scope in Visual Basic](../../programming-guide/language-features/declared-elements/scope.md)」を参照してください。  
 

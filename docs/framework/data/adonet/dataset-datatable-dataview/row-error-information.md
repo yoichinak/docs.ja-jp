@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 8b1f9070-d032-48c7-b030-bd8fbb2ca59a
 ms.openlocfilehash: 89889c5543e6518046bb59b59646ecba715f5e03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607567"
 ---
 # <a name="row-error-information"></a>行エラー情報
 <xref:System.Data.DataTable> の値を編集しているときに、行エラーに対処する必要をなくすために、エラー情報を行に追加して後で使用することができます。 <xref:System.Data.DataRow> オブジェクトは、この目的のために各行に <xref:System.Data.DataRow.RowError%2A> プロパティを提供します。 データを追加する、 **RowError**のプロパティを**DataRow**設定、<xref:System.Data.DataRow.HasErrors%2A>のプロパティ、 **DataRow**に**true**します。 場合、 **DataRow**の一部である、 **DataTable**、および**DataRow.HasErrors**は**true**、 **DataTable.HasErrors**プロパティも**true**します。 これにも適用されます、**データセット**先、 **DataTable**が属しています。 チェックすることができますのエラーをテストする場合、 **HasErrors**プロパティを任意の行にエラー情報が追加されたかどうかを判断します。 場合**HasErrors**は**true**、使用することができます、<xref:System.Data.DataTable.GetErrors%2A>のメソッド、 **DataTable**に戻り、次の例に示すように、エラーがある行のみを確認します。  

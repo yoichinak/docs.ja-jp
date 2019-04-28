@@ -24,11 +24,11 @@ helpviewer_keywords:
 - For statement [Visual Basic]
 ms.assetid: f5fc0d51-67ce-4c36-9f09-31c9a91c94e9
 ms.openlocfilehash: 5d47d57b75005d5c13dbf8633981dfb2d57d3e90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826328"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638061"
 ---
 # <a name="fornext-statement-visual-basic"></a>For...Next ステートメント (Visual Basic)
 ステートメントのグループを指定した回数だけ繰り返されます。  
@@ -98,11 +98,11 @@ Next [ counter ]
   
  `Exit For` いくつかの条件を評価した後は、よく使用 (たとえば、 `If`.`Then`...`Else`構造)。 使用する`Exit For`次の条件。  
   
--   反復処理を続けることは不要なか不可能です。 エラー値や終了要求は、この条件を作成可能性があります。  
+- 反復処理を続けることは不要なか不可能です。 エラー値や終了要求は、この条件を作成可能性があります。  
   
--   A `Try`.`Catch`...`Finally`ステートメントが例外をキャッチします。 使用する場合があります`Exit For`の最後に、`Finally`ブロックします。  
+- A `Try`.`Catch`...`Finally`ステートメントが例外をキャッチします。 使用する場合があります`Exit For`の最後に、`Finally`ブロックします。  
   
--   何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は使用できます`Exit For`ループを抜けます。 詳細については、次を参照してください[操作を行います...ステートメントをループ](../../../visual-basic/language-reference/statements/do-loop-statement.md)です。  
+- 何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は使用できます`Exit For`ループを抜けます。 詳細については、次を参照してください[操作を行います...ステートメントをループ](../../../visual-basic/language-reference/statements/do-loop-statement.md)です。  
   
 ## <a name="technical-implementation"></a>技術的な実装  
  ときに、 `For`.`Next`ループの開始、Visual Basic の評価`start`、 `end`、および`step`します。 Visual Basic では、この時間とし、割り当てにのみこれらの値を評価`start`に`counter`します。 ステートメントの前にブロックが実行、Visual Basic の比較`counter`に`end`します。 場合`counter`よりも大きいは既に、`end`値 (より小さい場合、または`step`が負の値)、`For`ループが終了と制御に続くステートメントに渡す、`Next`ステートメント。 それ以外の場合、ステートメント ブロックが実行されます。  
@@ -137,13 +137,13 @@ Next [ counter ]
   
  データ型`counter`イテレーションでは、次の種類のいずれかを指定する必要がありますの種類を決定します。  
   
--   A `Byte`、 `SByte`、 `UShort`、 `Short`、 `UInteger`、 `Integer`、 `ULong`、 `Long`、 `Decimal`、 `Single`、または`Double`します。  
+- A `Byte`、 `SByte`、 `UShort`、 `Short`、 `UInteger`、 `Integer`、 `ULong`、 `Long`、 `Decimal`、 `Single`、または`Double`します。  
   
--   列挙体を使用して宣言する、 [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)します。  
+- 列挙体を使用して宣言する、 [Enum ステートメント](../../../visual-basic/language-reference/statements/enum-statement.md)します。  
   
--   `Object`。  
+- `Object`。  
   
--   型`T`、次の演算子を持つ場所`B`型で使用できるは、`Boolean`式。  
+- 型`T`、次の演算子を持つ場所`B`型で使用できるは、`Boolean`式。  
   
      `Public Shared Operator >= (op1 As T, op2 As T) As B`  
   

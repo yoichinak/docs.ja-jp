@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Menu Bar control type
 ms.assetid: c1202b21-c1f0-4560-853c-7b99bd73ad97
 ms.openlocfilehash: d577f053e2865462a32349baba97edeff89cb585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651929"
 ---
 # <a name="ui-automation-support-for-the-menubar-control-type"></a>UI オートメーションによる MenuBar コントロール型のサポート
 > [!NOTE]

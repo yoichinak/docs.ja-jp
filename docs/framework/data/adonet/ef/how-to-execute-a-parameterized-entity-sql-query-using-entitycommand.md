@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e93fea43-7e03-4d7d-9fee-2517b8b88cba
 ms.openlocfilehash: 9f87ff28c4da864df8004f3baa1a8339503fb351
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606050"
 ---
 # <a name="how-to-execute-a-parameterized-entity-sql-query-using-entitycommand"></a>方法: EntityCommand を使用してパラメーター化 Entity SQL クエリを実行する
 このトピックでは、実行する方法を示します、[!INCLUDE[esql](../../../../../includes/esql-md.md)]クエリを使用してパラメーターを持つ、<xref:System.Data.EntityClient.EntityCommand>オブジェクト。  

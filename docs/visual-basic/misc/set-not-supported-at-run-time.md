@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID382
 ms.assetid: cb7285d3-778f-423d-a2be-88573be8ad48
 ms.openlocfilehash: 1b3f8aa3811baae240e6baa546082d0dcf2cf667
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594868"
 ---
 # <a name="set-not-supported-at-run-time"></a>Set は実行時にはサポートされません
 デザイン時にのみ値を設定できるプロパティを設定または変更しようとしました。  

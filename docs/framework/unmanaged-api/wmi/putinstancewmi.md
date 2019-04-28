@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 19f657fd76f73c4016824511079e6f037bc3bc53
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61597337"
 ---
 # <a name="putinstancewmi-function"></a>PutInstanceWmi 関数
 

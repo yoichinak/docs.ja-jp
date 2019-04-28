@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 97afc121-fb8b-465b-bab3-6d844420badb
 ms.openlocfilehash: 8063f239123ec1a2f2650adf9d76f7ceaaa50673
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61664261"
 ---
 # <a name="retrieve-data-using-a-datareader"></a>DataReader によるデータを取得します。
 使用してデータを取得する、 **DataReader**のインスタンスを作成、**コマンド**オブジェクト、し、作成、 **DataReader**呼び出して**Command.ExecuteReader**データ ソースから行を取得します。 **DataReader**は手続き型のロジックを効率的にデータ ソースからの結果を順番に処理を可能にするデータのバッファリングされていないストリームを提供します。 **DataReader**データがメモリにキャッシュされていないために、大量のデータを取得しているときをお勧めします。

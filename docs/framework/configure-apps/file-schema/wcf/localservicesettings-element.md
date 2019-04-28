@@ -3,11 +3,11 @@ title: <localServiceSettings> 要素
 ms.date: 03/30/2017
 ms.assetid: 0658549c-3f65-46dd-8c5c-9895441ed734
 ms.openlocfilehash: e987d14edde3af6aca2ceb392976abe3b6460c9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614571"
 ---
 # <a name="localservicesettings-element"></a>\<localServiceSettings > 要素
 このバインディングのローカル サービスのセキュリティ設定を指定します。  
@@ -76,13 +76,13 @@ ms.locfileid: "59102636"
   
  `localServiceSecuritySettings` 要素の以下の属性は、サービス拒否 (DOS) セキュリティ攻撃を軽減するために役立ちます。  
   
--   `maxCachedCookies`: SPNEGO または SSL の各ネゴシエーションの実行後にサーバーによってキャッシュされる、期限付きの SecurityContextTokens の最大数を制御します。  
+- `maxCachedCookies`: SPNEGO または SSL の各ネゴシエーションの実行後にサーバーによってキャッシュされる、期限付きの SecurityContextTokens の最大数を制御します。  
   
--   `issuedCookieLifetime`: SPNEGO または SSL の各ネゴシエーションに続いてサーバーが発行する SecurityContextTokens の有効期限を制御します。 サーバーは、この期間だけ SecurityContextTokens をキャッシュします。  
+- `issuedCookieLifetime`: SPNEGO または SSL の各ネゴシエーションに続いてサーバーが発行する SecurityContextTokens の有効期限を制御します。 サーバーは、この期間だけ SecurityContextTokens をキャッシュします。  
   
--   `maxPendingSessions`: サーバーで確立されているが、そのアプリケーション メッセージが処理されていない、セキュリティで保護されたメッセージ交換の最大数を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
+- `maxPendingSessions`: サーバーで確立されているが、そのアプリケーション メッセージが処理されていない、セキュリティで保護されたメッセージ交換の最大数を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
   
--   `inactivityTimeout`: サービスが、セキュリティで保護されたメッセージ交換を、それに対するアプリケーション メッセージを受信しなくても維持する最長時間を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
+- `inactivityTimeout`: サービスが、セキュリティで保護されたメッセージ交換を、それに対するアプリケーション メッセージを受信しなくても維持する最長時間を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
   
  セキュリティで保護されたメッセージ交換セッションでは、バインディングの `inactivityTimeout` 属性および `receiveTimeout` 属性の両方が、セッション タイムアウトに影響します。 2 つのうち短い方が、タイムアウトが発生する時間を決定します。  
   

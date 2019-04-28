@@ -5,11 +5,11 @@ ms.assetid: 1da7f5ff-5a67-44ba-b165-f3e5de008e4a
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: 049a51fb7b92ef1601b435a49ae4678f052ac509
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48579778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669460"
 ---
 # <a name="windows-workflow-foundation-wf-migration-guidance"></a>Windows Workflow Foundation (WF) への移行のガイドライン
 

@@ -3,18 +3,18 @@ title: ソース フォルダーとターゲット フォルダーが同じで�
 ms.date: 07/20/2015
 ms.assetid: d4e6f996-8bbe-45f2-b662-f26b4474f44d
 ms.openlocfilehash: a3739afd25971433d78d84bb183c51ab674ecd9a
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61594764"
 ---
 # <a name="source-folder-and-target-folder-are-the-same"></a>ソース フォルダーとターゲット フォルダーが同じです
 ファイルをコピーまたは移動しようとしましたが、指定したソース ディレクトリとターゲット ディレクトリが同じです。 ファイル パスの解析に誤りがある可能性があります。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   適切なソース ディレクトリとターゲット ディレクトリを指定したことを確認してください。  
+- 適切なソース ディレクトリとターゲット ディレクトリを指定したことを確認してください。  
   
 ## <a name="see-also"></a>関連項目
 

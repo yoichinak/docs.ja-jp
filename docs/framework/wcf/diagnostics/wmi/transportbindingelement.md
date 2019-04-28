@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 54ecfbee-53c0-410c-a7fa-a98f2e40c545
 ms.openlocfilehash: bdb5ca7400a41dd724c2ad7fc76695a82874ded6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641620"
 ---
 # <a name="transportbindingelement"></a>TransportBindingElement
 TransportBindingElement  

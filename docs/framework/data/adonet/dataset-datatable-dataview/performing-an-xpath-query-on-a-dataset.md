@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e828566-fffe-4d38-abb2-4d68fd73f663
 ms.openlocfilehash: 29d1e5ae494b2fff4e13886159bb937041152382
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607900"
 ---
 # <a name="performing-an-xpath-query-on-a-dataset"></a>DataSet に対する XPath クエリの実行
 同期済みの間のリレーションシップ<xref:System.Data.DataSet>と<xref:System.Xml.XmlDataDocument>XML を使用するのには、アクセス、XML Path Language (XPath) クエリなどのサービス、 **XmlDataDocument**特定の機能を実行できます簡単にアクセスするよりも、**データセット**直接します。 使用してではなく、たとえば、**選択**のメソッド、<xref:System.Data.DataTable>内の他のテーブルにリレーションシップをナビゲートする、**データセット**で XPath クエリを実行することができます、 **XmlDataDocument**と同期される、**データセット**の形式で XML 要素の一覧を取得する、<xref:System.Xml.XmlNodeList>します。 内のノード、 **XmlNodeList**としてキャスト<xref:System.Xml.XmlElement>ノードに渡すことができます、 **GetRowFromElement**のメソッド、 **XmlDataDocument**を一致を返す<xref:System.Data.DataRow>は同期済みテーブルの行への参照**データセット**します。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - TabControl control [Windows Forms], displaying side-aligned tabs
 ms.assetid: 110d5abd-3ae3-4ded-95bf-778aaac798a0
 ms.openlocfilehash: d98c5906d99dff9371f8290e7dbc9c9011cd0c29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338788"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650493"
 ---
 # <a name="how-to-display-side-aligned-tabs-with-tabcontrol"></a>方法: TabControl を使用して側面に位置を合わせて表示する
 <xref:System.Windows.Forms.TabControl> の <xref:System.Windows.Forms.TabControl.Alignment%2A> プロパティは、水平方向 (コントロールの上部または下部) ではなく、垂直方向 (コントロールの左端または右端) でのタブの表示をサポートします。 <xref:System.Windows.Forms.TabPage> オブジェクトの <xref:System.Windows.Forms.TabPage.Text%2A> プロパティは、視覚スタイルを有効にしたときにタブが表示されないため、既定では、この垂直方向の表示はユーザーの操作性が低下します。 また、タブ内のテキストの方向を制御する直接的な方法がありません。この操作性を向上させるために、<xref:System.Windows.Forms.TabControl> でオーナー描画を使用できます。  

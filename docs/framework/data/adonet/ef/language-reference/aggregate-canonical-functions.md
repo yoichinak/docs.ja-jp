@@ -3,11 +3,11 @@ title: 集計正規関数
 ms.date: 03/30/2017
 ms.assetid: 3bcff826-ca90-41b3-a791-04d6ff0e5085
 ms.openlocfilehash: f5d3584c6e9d35c9eb69b4f54cad45187416ee59
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607454"
 ---
 # <a name="aggregate-canonical-functions"></a>集計正規関数
 
@@ -74,8 +74,7 @@ NULL 以外の値の最大値を返します。
 
 **引数**
 
-
-  `Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
+`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
 
 **戻り値**
 
@@ -92,8 +91,7 @@ NULL 以外の値の最小値を返します。
 
 **引数**
 
-
-  `Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
+`Byte`、`Int16`、`Int32`、`Int64`、`Byte`、`Single`、`Double`、`Decimal`、`DateTime`、`DateTimeOffset`、`Time`、`String`、`Binary`。
 
 **戻り値**
 
@@ -110,8 +108,7 @@ NULL 以外の値の標準偏差を返します。
 
 **引数**
 
-
-  `Int32`、`Int64`、`Double`、`Decimal`。
+`Int32`、`Int64`、`Double`、`Decimal`。
 
 **戻り値**
 
@@ -128,8 +125,7 @@ NULL 以外の値の標準偏差を返します。
 
 **引数**
 
-
-  `Int32`、`Int64`、`Double`、`Decimal`。
+`Int32`、`Int64`、`Double`、`Decimal`。
 
 **戻り値**
 
@@ -146,8 +142,7 @@ NULL 以外の値の合計を返します。
 
 **引数**
 
-
-  `Int32`、`Int64`、`Double`、`Decimal`。
+`Int32`、`Int64`、`Double`、`Decimal`。
 
 **戻り値**
 
@@ -164,8 +159,7 @@ A `Double`、または`null`場合はすべての入力値`null`値。
 
 **引数**
 
-
-  `Int32`、`Int64`、`Double`、`Decimal`。
+`Int32`、`Int64`、`Double`、`Decimal`。
 
 **戻り値**
 
@@ -182,8 +176,7 @@ A `Double`、または`null`場合はすべての入力値`null`値。
 
 **引数**
 
-
-  `Int32`、`Int64`、`Double`、`Decimal`。
+`Int32`、`Int64`、`Double`、`Decimal`。
 
 **戻り値**
 
@@ -194,7 +187,7 @@ A `Double`、または`null`場合はすべての入力値`null`値。
 [!code-csharp[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/csharp/VS_Snippets_Data/dp entityservices concepts/cs/entitysql.cs#edm_varp)]
 [!code-sql[DP EntityServices Concepts#EDM_VARP](~/samples/snippets/tsql/VS_Snippets_Data/dp entityservices concepts/tsql/entitysql.sql#edm_varp)]
 
-同等の機能は、Microsoft SQL クライアント マネージド プロバイダーでも利用できます。 詳細については、[Entity Framework の関数の SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)を参照してください。
+同等の機能は、Microsoft SQL クライアント マネージド プロバイダーでも利用できます。 詳細については、次を参照してください。 [Entity Framework の関数の SqlClient](../../../../../../docs/framework/data/adonet/ef/sqlclient-for-ef-functions.md)します。
 
 ## <a name="collection-based-aggregates"></a>コレクション ベースの集計
 

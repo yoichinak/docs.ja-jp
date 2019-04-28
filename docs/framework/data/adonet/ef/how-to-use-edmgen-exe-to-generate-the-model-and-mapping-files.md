@@ -3,24 +3,24 @@ title: '方法: EdmGen.exe を使用してモデル ファイルとマッピン�
 ms.date: 03/30/2017
 ms.assetid: 40db462d-2fd2-4cc1-ad86-d280403e63fa
 ms.openlocfilehash: 915a9f3c53dba355480a3869602f963b195d53fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605991"
 ---
 # <a name="how-to-use-edmgenexe-to-generate-the-model-and-mapping-files"></a>方法: EdmGen.exe を使用してモデル ファイルとマッピング ファイルを生成する
 このトピックでは、EDM ジェネレーター (EdmGen.exe) ツールを使用して、School データベースに基づく次のファイルを生成する方法について説明します。  
   
--   概念モデル (.csdl ファイル)  
+- 概念モデル (.csdl ファイル)  
   
--   ストレージ モデル (.ssdl ファイル)  
+- ストレージ モデル (.ssdl ファイル)  
   
--   概念モデルとストレージ モデル間のマッピング (.msl ファイル)  
+- 概念モデルとストレージ モデル間のマッピング (.msl ファイル)  
   
--   Visual Basic または C# のオブジェクト レイヤー コード  
+- Visual Basic または C# のオブジェクト レイヤー コード  
   
--   ビュー ファイル  
+- ビュー ファイル  
   
  EdmGen.exe ツールでは、/mode:FullGeneration を使用して上記のファイルを生成します。 EdmGen.exe コマンドの詳細については、次を参照してください。 [EDM ジェネレーター (EdmGen.exe)](../../../../../docs/framework/data/adonet/ef/edm-generator-edmgen-exe.md)します。  
   

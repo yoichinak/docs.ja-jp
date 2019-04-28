@@ -3,11 +3,11 @@ title: WCF サービスが Web ファームでホストされている場合の�
 ms.date: 03/30/2017
 ms.assetid: 1c2ed695-7a31-4257-92bd-9e9731b886a5
 ms.openlocfilehash: e27a85d42268df107b26d3bd24af15a639bb1836
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641594"
 ---
 # <a name="preventing-replay-attacks-when-a-wcf-service-is-hosted-in-a-web-farm"></a>WCF サービスが Web ファームでホストされている場合のリプレイ攻撃の回避
 メッセージ セキュリティ WCF の使用により、受信メッセージから NONCE を作成し、生成された NONCE が内部 `InMemoryNonceCache` にあるかどうかを確認することで、リプレイ攻撃が防止される場合。 その場合、メッセージはリプレイとして破棄されます。 WCF サービスが Web ファームでホストされている場合、`InMemoryNonceCache` は Web ファームのノード間で共有されていないため、サービスはリプレイ攻撃に対して脆弱です。  このシナリオの危険性を軽減するために、WCF 4.5 では抽象クラス <xref:System.ServiceModel.Security.NonceCache> からクラスを派生させることによって独自の共有 NONCE キャッシュを実装する機能拡張ポイントを提供しています。  

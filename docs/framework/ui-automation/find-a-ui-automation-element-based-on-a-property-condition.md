@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UI Automation, finding elements by property conditions
 ms.assetid: 3acaee5a-6ce8-4c3e-81c8-67e59eb74477
 ms.openlocfilehash: a5e775c69a4dd520d8148bfc790cc00428d9d15e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175514"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609738"
 ---
 # <a name="find-a-ui-automation-element-based-on-a-property-condition"></a>プロパティ条件に基づく UI オートメーション要素の検索
 > [!NOTE]

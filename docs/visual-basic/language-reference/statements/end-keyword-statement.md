@@ -7,11 +7,11 @@ helpviewer_keywords:
 - End keyword [Visual Basic]
 ms.assetid: 42d6e088-ab0f-4cda-88e8-fdce3e5fcf4f
 ms.openlocfilehash: 96dc8ce6b0d3b7545f5caeef43358936e426f566
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638156"
 ---
 # <a name="end-keyword-statement-visual-basic"></a>End\<keyword>ステートメント (Visual Basic)
 

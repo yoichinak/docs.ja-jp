@@ -3,11 +3,11 @@ title: WorkflowInvoker と WorkflowApplication の使用
 ms.date: 03/30/2017
 ms.assetid: cd0e583c-a3f9-4fa2-b247-c7b3368c48a7
 ms.openlocfilehash: 29d152cd6011fb3b55aae60726d095dc44dd23a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669564"
 ---
 # <a name="using-workflowinvoker-and-workflowapplication"></a>WorkflowInvoker と WorkflowApplication の使用
 Windows Workflow Foundation (WF) ワークフローのホスティングのいくつかのメソッドを提供します。 <xref:System.Activities.WorkflowInvoker> は、メソッド呼び出しのようにワークフローを呼び出す簡単な方法を提供し、永続化を使用しないワークフローのみに使用できます。 <xref:System.Activities.WorkflowApplication> は、ライフサイクル イベントの通知、実行制御、ブックマークの再開、および永続化を含むワークフローを実行するための豊富なモデルを提供します。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> は、メッセージング アクティビティをサポートし、主にワーク フロー サービスと一緒に使用されます。 このトピックでは、<xref:System.Activities.WorkflowInvoker> と <xref:System.Activities.WorkflowApplication> を使用したワークフロー ホスティングついて説明します。 使用したワークフロー ホスティングの詳細については<xref:System.ServiceModel.Activities.WorkflowServiceHost>を参照してください[ワークフロー サービス](../wcf/feature-details/workflow-services.md)と[ホスト ワークフロー サービスの概要](../wcf/feature-details/hosting-workflow-services-overview.md)します。  
@@ -67,7 +67,7 @@ Windows Workflow Foundation (WF) ワークフローのホスティングのい�
  [!code-csharp[CFX_WorkflowApplicationExample#21](~/samples/snippets/csharp/VS_Snippets_CFX/cfx_workflowapplicationexample/cs/program.cs#21)]  
   
 > [!NOTE]
->  <xref:System.Activities.WorkflowApplication> と <xref:System.Activities.WorkflowInvoker> は入力引数の辞書を取得し、`out` 引数の辞書を返します。 これらの辞書のパラメーター、プロパティ、および戻り値は `IDictionary<string, object>` 型です。 渡される辞書クラスの実際のインスタンスには、`IDictionary<string, object>` を実装した任意のクラスを使用できます。 これらの例では、`Dictionary<string, object>` が使用されています。 ディクショナリの詳細については、<xref:System.Collections.Generic.IDictionary%602>と<xref:System.Collections.Generic.Dictionary%602>を参照してください。  
+>  <xref:System.Activities.WorkflowApplication> と <xref:System.Activities.WorkflowInvoker> は入力引数の辞書を取得し、`out` 引数の辞書を返します。 これらの辞書のパラメーター、プロパティ、および戻り値は `IDictionary<string, object>` 型です。 渡される辞書クラスの実際のインスタンスには、`IDictionary<string, object>` を実装した任意のクラスを使用できます。 これらの例では、`Dictionary<string, object>` が使用されています。 ディクショナリの詳細については、次を参照してください。<xref:System.Collections.Generic.IDictionary%602>と<xref:System.Collections.Generic.Dictionary%602>します。  
   
 ### <a name="passing-data-into-a-running-workflow-using-bookmarks"></a>ブックマークを使用した実行中のワークフローへのデータの受け渡し  
  ブックマークは、アクティビティが再開されるのを受動的に待機するメカニズムです。また、実行中のワークフロー インスタンスにデータを渡すメカニズムでもあります。 次の例に示すように、アクティビティがデータを待機している場合、<xref:System.Activities.Bookmark> を作成し、<xref:System.Activities.Bookmark> が再開されたときに呼び出されるコールバック メソッドを登録します。  

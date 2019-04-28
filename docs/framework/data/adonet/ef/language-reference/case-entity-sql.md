@@ -3,11 +3,11 @@ title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
 ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607194"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 一連の `Boolean` 式を評価して結果を決定します。  

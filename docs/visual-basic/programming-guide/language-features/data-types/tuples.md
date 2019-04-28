@@ -5,11 +5,11 @@ helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
 ms.openlocfilehash: 146e9c2360cea153d2f487769d5b983516861e8d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54694728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663298"
 ---
 # <a name="tuples-visual-basic"></a>タプル (Visual Basic)
 
@@ -60,7 +60,7 @@ Visual Basic 15.3 以降、Visual Basic はタプルの要素の名前を推測�
 
 バージョン番号は 15.3 以降、Visual Basic コンパイラの任意のバージョンを指定できます。 特定のコンパイラ バージョンをハードコーディングするのではなく指定することも"Latest"の値として`LangVersion`システムにインストールされている Visual Basic コンパイラの最新バージョンでコンパイルします。
 
-詳細については、[Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)を参照してください。
+詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../../language-reference/configure-language-version.md)します。
 
 場合によっては、Visual Basic コンパイラが、候補名からタプル要素名を推論できませんなどを使用して、既定の名前は、タプルのフィールドを参照のみ`Item1`、`Item2`など。不足している機能には次が含まれます。
 

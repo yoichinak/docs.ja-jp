@@ -13,11 +13,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: add1458bb3a50a5e5433e8cc7baaf47d750c927d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645709"
 ---
 # <a name="cordebugrecordformat-enumeration"></a>CorDebugRecordFormat 列挙体
 ネイティブ例外デバッグ イベントに関する情報を格納するバイト配列内のデータの形式を示します。  

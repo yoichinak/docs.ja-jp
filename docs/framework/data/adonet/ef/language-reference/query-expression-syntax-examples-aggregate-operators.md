@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d729120c-4c1b-4f34-bbe9-33694fca2dde
 ms.openlocfilehash: d9d53e91f5252a0ac44822ac6252ce02e9697d33
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130586"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61615039"
 ---
 # <a name="query-expression-syntax-examples-aggregate-operators"></a>クエリ式の構文例:集計演算子
 このトピックの例では、使用する方法を示します、 <xref:System.Linq.Enumerable.Average%2A>、 <xref:System.Linq.Enumerable.Count%2A>、 <xref:System.Linq.Enumerable.Max%2A>、 <xref:System.Linq.Enumerable.Min%2A>、および<xref:System.Linq.Enumerable.Sum%2A>を照会する方法、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)クエリ式構文を使用します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  

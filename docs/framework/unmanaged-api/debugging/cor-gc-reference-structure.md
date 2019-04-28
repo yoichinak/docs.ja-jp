@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1e31e95473136bf7e7c196eacc278fa8a1caab2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59093658"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609465"
 ---
 # <a name="corgcreference-structure"></a>COR_GC_REFERENCE 構造体
 ガベージ コレクトされるオブジェクトに関する情報が含まれます。  
@@ -49,19 +49,19 @@ typedef struct _COR_GC_REFERENCE {
 ## <a name="remarks"></a>Remarks  
  `type`フィールドは、 [CorGCReferenceType](../../../../docs/framework/unmanaged-api/debugging/corgcreferencetype-enumeration.md)参照の出所を示す列挙値。 特定の`COR_GC_REFERENCE`値は次のようなマネージ オブジェクトのいずれかを反映できます。  
   
--   すべてのマネージ スタックからオブジェクト (`CorGCReferenceType.CorReferenceStack`)。 これには、共通言語ランタイムによって作成されたオブジェクトと同様に、マネージ コードでのライブ参照が含まれます。  
+- すべてのマネージ スタックからオブジェクト (`CorGCReferenceType.CorReferenceStack`)。 これには、共通言語ランタイムによって作成されたオブジェクトと同様に、マネージ コードでのライブ参照が含まれます。  
   
--   オブジェクト ハンドル テーブルから (`CorGCReferenceType.CorHandle*`)。 強い参照が含まれます (`HNDTYPE_STRONG`と`HNDTYPE_REFCOUNT`) とモジュールの静的変数。  
+- オブジェクト ハンドル テーブルから (`CorGCReferenceType.CorHandle*`)。 強い参照が含まれます (`HNDTYPE_STRONG`と`HNDTYPE_REFCOUNT`) とモジュールの静的変数。  
   
--   ファイナライザー キューからオブジェクト (`CorGCReferenceType.CorReferenceFinalizer`)。 ファイナライザー キューでは、ファイナライザーが実行されるまでオブジェクトがルートします。  
+- ファイナライザー キューからオブジェクト (`CorGCReferenceType.CorReferenceFinalizer`)。 ファイナライザー キューでは、ファイナライザーが実行されるまでオブジェクトがルートします。  
   
  `extraData`フィールドには参照のソース (または型) によって追加のデータが含まれています。 指定できる値は次のとおりです。  
   
--   `DependentSource`。 場合、`type`は`CorGCREferenceType.CorHandleStrongDependent`、このフィールドはオブジェクトでガベージ コレクトされるオブジェクトの場合は、ルートを`COR_GC_REFERENCE.Location`します。  
+- `DependentSource`。 場合、`type`は`CorGCREferenceType.CorHandleStrongDependent`、このフィールドはオブジェクトでガベージ コレクトされるオブジェクトの場合は、ルートを`COR_GC_REFERENCE.Location`します。  
   
--   `RefCount`。 場合、`type`は`CorGCREferenceType.CorHandleStrongRefCount`、このフィールドは、ハンドルの参照カウントします。  
+- `RefCount`。 場合、`type`は`CorGCREferenceType.CorHandleStrongRefCount`、このフィールドは、ハンドルの参照カウントします。  
   
--   `Size`。 場合、`type`は`CorGCREferenceType.CorHandleStrongSizedByref`、このフィールドは、ガベージ コレクターがオブジェクトのルートを計算するオブジェクト ツリーの最後のサイズ。 この計算は必ずしも最新ではないことに注意してください。  
+- `Size`。 場合、`type`は`CorGCREferenceType.CorHandleStrongSizedByref`、このフィールドは、ガベージ コレクターがオブジェクトのルートを計算するオブジェクト ツリーの最後のサイズ。 この計算は必ずしも最新ではないことに注意してください。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

@@ -3,11 +3,11 @@ title: DiffGrams
 ms.date: 03/30/2017
 ms.assetid: 037f3991-7bbc-424b-b52e-8b03585d3e34
 ms.openlocfilehash: 048c5331028bbe2bb232302637dbb12bcdd2adc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607814"
 ---
 # <a name="diffgrams"></a>DiffGrams
 DiffGram は、データ要素の現在のバージョンと元のバージョンを識別する XML 形式です。 <xref:System.Data.DataSet> では、 の内容を読み込んで永続化するため、およびネットワーク接続経由で転送する場合にこの内容をシリアル化するために、DiffGram 形式が使用されます。 ときに、<xref:System.Data.DataSet>正確に再作成する内容は、ただし、スキーマの DiffGram に必要なすべての情報を格納しますが、DiffGram として書き込まれますが、 <xref:System.Data.DataSet>、両方の列の値を含む、**元**と**現在**行のバージョン、行エラー情報、および行の順序。  

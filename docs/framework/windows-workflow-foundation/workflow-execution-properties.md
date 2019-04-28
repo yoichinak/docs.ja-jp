@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: a50e088e-3a45-4267-bd51-1a3e6c2d246d
 ms.openlocfilehash: 0f87e58a034cbc11565fc74347e6b4362952093c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669382"
 ---
 # <a name="workflow-execution-properties"></a>ワークフロー実行プロパティ
 CLR は、スレッド ローカル ストレージ (TLS) を介して各スレッドの実行コンテキストを維持します。 この実行コンテキストは、スレッド ID、アンビエント トランザクション、現在のアクセス許可セットなど、既知のスレッド プロパティに加えて、名前付きスロットのようなユーザー定義のスレッド プロパティを制御します。  

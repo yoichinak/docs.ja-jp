@@ -10,11 +10,11 @@ helpviewer_keywords:
 - namespaces [Visual Basic], importing
 ms.assetid: 1f4d50a6-08c7-4c2e-8206-ccae35fcd1b4
 ms.openlocfilehash: 97d08113a37477add9d770b0a680c303fe7e3040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638958"
 ---
 # <a name="imports-statement-xml-namespace"></a>Imports ステートメント (XML 名前空間)
 XML リテラルおよび XML 軸のプロパティで使用するための XML 名前空間プレフィックスをインポートします。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
 ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651104"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>方法: ストーリーボードを使用してアニメーション化した後にプロパティを設定する
 場合によっては、表示にアニメーション化した後、プロパティの値を変更できないことがあります。  
@@ -30,11 +30,11 @@ ms.locfileid: "59188319"
   
  何もする前のコードが表示されない: によって提供される、ブラシは黄色、これは、値、<xref:System.Windows.Media.Animation.ColorAnimation>ブラシをアニメーション化します。 基になるプロパティの値 (基本値) は実際に青に変更します。 ただし、有効な場合、または、現在の値は黄色ため、<xref:System.Windows.Media.Animation.ColorAnimation>は基本の値をまだオーバーライドします。 基本の値をもう一度有効な値をする場合は、プロパティへの影響からアニメーションを停止する必要があります。 ストーリー ボード アニメーションでそれを行う 3 つの方法はあります。  
   
--   アニメーションの<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>プロパティを <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
+- アニメーションの<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>プロパティを <xref:System.Windows.Media.Animation.FillBehavior.Stop>  
   
--   ストーリー ボード全体を削除します。  
+- ストーリー ボード全体を削除します。  
   
--   個々 のプロパティからアニメーションを削除します。  
+- 個々 のプロパティからアニメーションを削除します。  
   
 ## <a name="set-the-animations-fillbehavior-property-to-stop"></a>Stop に設定されて、アニメーションの FillBehavior プロパティ  
  設定して<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>に<xref:System.Windows.Media.Animation.FillBehavior.Stop>、アクティブな期間の末尾に達した後、ターゲット プロパティに影響することを停止するアニメーションに指示します。  

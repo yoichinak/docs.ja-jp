@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1b97afeb-03f8-41e2-8eb3-58aff65f7d18
 ms.openlocfilehash: b25de14267bc31ad0ac5e3f51d4cd964b5a0535f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607337"
 ---
 # <a name="creating-a-datatable-from-a-query-linq-to-dataset"></a>クエリによる DataTable の作成 (LINQ to DataSet)
 <xref:System.Data.DataTable> オブジェクトの一般的な利用法の 1 つが、データ バインディングです。 <xref:System.Data.DataTableExtensions.CopyToDataTable%2A> メソッドは、クエリの結果を受け取り、そのデータを <xref:System.Data.DataTable> にコピーします。これをデータ バインディングに利用できます。 このデータ操作が実行されると、新しい <xref:System.Data.DataTable> が、基となった <xref:System.Data.DataTable> にマージ バックされます。  

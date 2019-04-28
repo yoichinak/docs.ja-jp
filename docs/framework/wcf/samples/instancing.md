@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Instancing Sample [Windows Communication Foundation]
 ms.assetid: c290fa54-f6ae-45a1-9186-d9504ebc6ee6
 ms.openlocfilehash: 2cc3c54563b261d49264314f7306193accbe4040
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596798"
 ---
 # <a name="instancing"></a>"インスタンス化"
 インスタンス化のサンプルでは、インスタンス化動作の設定を示します。この設定は、クライアント要求への応答として作成される、サービス クラスのインスタンスの作成方法を制御します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、実装、`ICalculator`サービス コントラクト。 このサンプルでは、`ICalculatorInstance` から継承される新しいコントラクト `ICalculator` を定義します。 `ICalculatorInstance` によって指定されるコントラクトにより、サービス インスタンスの状態を検査するための 3 つの操作が追加されます。 インスタンス化設定を変更することにより、クライアントを実行して動作の変更を確認できます。  
@@ -22,11 +22,11 @@ ms.locfileid: "59311436"
   
  次のインスタンス化モードを使用できます。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>:クライアント要求ごとに新しいサービス インスタンスが作成されます。  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>:クライアント要求ごとに新しいサービス インスタンスが作成されます。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>:新しいインスタンスでは、新しいクライアント セッションごとに作成され、(セッションをサポートするバインディングが必要)、そのセッションの有効期間にわたって保持されます。  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>:新しいインスタンスでは、新しいクライアント セッションごとに作成され、(セッションをサポートするバインディングが必要)、そのセッションの有効期間にわたって保持されます。  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>:サービス クラスの 1 つのインスタンスは、アプリケーションの有効期間のすべてのクライアント要求を処理します。  
+- <xref:System.ServiceModel.InstanceContextMode.Single>:サービス クラスの 1 つのインスタンスは、アプリケーションの有効期間のすべてのクライアント要求を処理します。  
   
  サービス クラスは、`[ServiceBehavior(InstanceContextMode=<setting>)]` 属性を使用してインスタンス化動作を指定します。次のサンプル コードを参照してください。 コメント化されている行を変更すると、各インスタンス モードの動作を確認できます。 インスタンス モードを変更したら、サービスを再ビルドする必要があります。 クライアントでは、インスタンス化に関連する設定は行いません。  
   

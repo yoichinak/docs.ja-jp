@@ -3,18 +3,18 @@ title: 集計関数 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: acfd3149-f519-4c6e-8fe1-b21d243a0e58
 ms.openlocfilehash: 113c19078feeca24a0817e52f8eb0d04537b0684
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607220"
 ---
 # <a name="aggregate-functions-entity-sql"></a>集計関数 (Entity SQL)
 集計は、コレクションをグループ操作の一部としてスカラーに圧縮する言語構成要素です。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 集計には次の 2 つの形式があります。  
   
--   [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 任意の場所、式で使用できるコレクション関数。 これには、コレクションに対して作用するプロジェクションおよび述語での集計関数の使用が含まれます。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] で集計を指定するには、コレクション関数を使用することをお勧めします。  
+- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 任意の場所、式で使用できるコレクション関数。 これには、コレクションに対して作用するプロジェクションおよび述語での集計関数の使用が含まれます。 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] で集計を指定するには、コレクション関数を使用することをお勧めします。  
   
--   GROUP BY 句を含むクエリ式内のグループ集計。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] と同様に、グループ集計では集計の入力に対する修飾子として DISTINCT と ALL を受け入れます。  
+- GROUP BY 句を含むクエリ式内のグループ集計。 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] と同様に、グループ集計では集計の入力に対する修飾子として DISTINCT と ALL を受け入れます。  
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 最初にコレクション関数として式を解釈しようと、式がのかどうか、SELECT 式のコンテキストで、グループ集計として解釈します。  
   

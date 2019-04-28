@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 653a4a97-1e4a-4b2d-8d24-7dbe1f2a5c84
 ms.openlocfilehash: b8f605eaa3a186ebb6bad7800d6576bd4d5a34b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637935"
 ---
 # <a name="query-expression-syntax-examples-ordering-linq-to-dataset"></a>クエリ式の構文例:並べ替え (LINQ to DataSet)
 このトピックでは、<xref:System.Linq.Enumerable.OrderBy%2A>、<xref:System.Linq.Enumerable.OrderByDescending%2A>、<xref:System.Linq.Enumerable.Reverse%2A>、および <xref:System.Linq.Enumerable.ThenByDescending%2A> の各メソッドで、クエリ構文を使って <xref:System.Data.DataSet> に対するクエリを実行し、その結果を並べ替える例を紹介しています。  

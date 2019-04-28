@@ -3,11 +3,11 @@ title: ADO.NET Entity Framework 内の接続文字列
 ms.date: 10/15/2018
 ms.assetid: 78d516bc-c99f-4865-8ff1-d856bc1a01c0
 ms.openlocfilehash: 55097e4977111c56cb06c590e305e31ed681fd31
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606784"
 ---
 # <a name="connection-strings-in-the-adonet-entity-framework"></a>ADO.NET Entity Framework 内の接続文字列
 
@@ -15,7 +15,7 @@ ms.locfileid: "57365036"
 
 接続文字列は、モデル メタデータおよびマッピング メタデータにアクセスしてデータ ソースに接続する際に EntityClient プロバイダーによって使用されます。 接続文字列へのアクセスや接続文字列の設定は、<xref:System.Data.EntityClient.EntityConnection.ConnectionString%2A> の <xref:System.Data.EntityClient.EntityConnection> プロパティを使用して行います。 <xref:System.Data.EntityClient.EntityConnectionStringBuilder> クラスを使用すると、接続文字列内のパラメーターの構築やこれらへのアクセスをプログラムで行えます。 詳細については、「[方法 :EntityConnection の接続文字列を構築](../../../../../docs/framework/data/adonet/ef/how-to-build-an-entityconnection-connection-string.md)します。
 
-[Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))アプリケーションの構成ファイルに格納されている接続文字列を生成します。 <xref:System.Data.Objects.ObjectContext> は、オブジェクト クエリの作成時に自動的にこの接続情報を取得します。 <xref:System.Data.EntityClient.EntityConnection> インスタンスで使用される <xref:System.Data.Objects.ObjectContext> には、<xref:System.Data.Objects.ObjectContext.Connection%2A> プロパティからアクセスできます。 詳細については、[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))を参照してください。
+[Entity Data Model ツール](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb399249(v=vs.100))アプリケーションの構成ファイルに格納されている接続文字列を生成します。 <xref:System.Data.Objects.ObjectContext> は、オブジェクト クエリの作成時に自動的にこの接続情報を取得します。 <xref:System.Data.EntityClient.EntityConnection> インスタンスで使用される <xref:System.Data.Objects.ObjectContext> には、<xref:System.Data.Objects.ObjectContext.Connection%2A> プロパティからアクセスできます。 詳細については、次を参照してください。[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))です。
 
 ## <a name="connection-string-syntax"></a>接続文字列の構文
 

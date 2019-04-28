@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 429c9d09-92ac-46ec-829a-fbff0a9575a2
 ms.openlocfilehash: b2b63719149c21eba493b3d8f2fc65309515bb0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646013"
 ---
 # <a name="provider-statistics-for-sql-server"></a>SQL Server のプロバイダー統計情報
 .NET Framework version 2.0 以降では、.NET Framework Data Provider for SQL Server によって実行時の統計がサポートされています。 統計情報を有効にするには、有効な接続オブジェクトを作成した後で、<xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> プロパティを `True` に設定する必要があります。 統計情報が有効にされると、<xref:System.Collections.IDictionary> オブジェクトの <xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> メソッドを通じて <xref:System.Data.SqlClient.SqlConnection> 参照を取得することにより、"時間単位のスナップショット" として統計情報を確認できます。 名前と値がペアになったディクショナリ エントリのセットとして、一覧を列挙します。 これらの名前と値のペアは順序付けられていません。 いつでも <xref:System.Data.SqlClient.SqlConnection.ResetStatistics%2A> オブジェクトの <xref:System.Data.SqlClient.SqlConnection> メソッドを呼び出して、カウンターをリセットすることができます。 統計情報収集が有効になっていない場合、例外は生成されません。 また、<xref:System.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> が最初に呼び出されるずに <xref:System.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> が呼び出されると、取得される値は各エントリの初期値になります。 統計情報を有効にしてからアプリケーションをしばらく実行した後で統計情報を無効にした場合、取得される値には、統計情報が無効にされた時点までに収集された値が含まれます。 すべての統計情報の値は、接続ごとに収集されます。  

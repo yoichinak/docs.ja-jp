@@ -10,11 +10,11 @@ helpviewer_keywords:
 - inline functions [Visual Basic]
 ms.assetid: 137064b0-3928-4bfa-ba71-c3f9cbd951e2
 ms.openlocfilehash: c43739e098a91d54d300fa7074d1563da179c0e9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832113"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665794"
 ---
 # <a name="lambda-expressions-visual-basic"></a>ラムダ式 (Visual Basic)
 A*ラムダ式*は関数またはサブルーチン デリゲートは、有効な場所で使用できる名前のないです。 ラムダ式は関数またはサブルーチンを指定でき、単一行または複数行を指定できます。 ラムダ式に現在のスコープから値を渡すことができます。  
@@ -43,27 +43,27 @@ A*ラムダ式*は関数またはサブルーチン デリゲートは、有効�
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
  標準の関数またはサブルーチンのラムダ式の構文に似ています。 相違点は次のとおりです。  
   
--   ラムダ式の名前ではありません。  
+- ラムダ式の名前ではありません。  
   
--   ラムダ式などで、修飾子を含めることはできません`Overloads`または`Overrides`します。  
+- ラムダ式などで、修飾子を含めることはできません`Overloads`または`Overrides`します。  
   
--   単一行のラムダ関数は使用しないでください、`As`戻り値の型を指定する句。 代わりに、型は、ラムダ式の本体に評価される値から推論されます。 たとえば、ラムダ式の本体が`cust.City = "London"`、戻り値の型は`Boolean`します。  
+- 単一行のラムダ関数は使用しないでください、`As`戻り値の型を指定する句。 代わりに、型は、ラムダ式の本体に評価される値から推論されます。 たとえば、ラムダ式の本体が`cust.City = "London"`、戻り値の型は`Boolean`します。  
   
--   複数行ラムダの関数にするかを指定できます戻り値の型を使用して、`As`句、または省略、`As`句戻り値の型を推論できるようにします。 ときに、`As`複数行ラムダ関数の句を省略すると、すべての主要な型と戻り値の型が推論されます、`Return`複数行ラムダの関数内のステートメント。 *優先型*は一意の型に拡大変換できるその他のすべての種類です。 この一意の型を決定できない場合に絞り込むことが、配列内の他のすべての型を一意の型は、主要な型。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 この場合は場合、`Option Strict`に設定されている`On`、コンパイラ エラーが発生します。  
+- 複数行ラムダの関数にするかを指定できます戻り値の型を使用して、`As`句、または省略、`As`句戻り値の型を推論できるようにします。 ときに、`As`複数行ラムダ関数の句を省略すると、すべての主要な型と戻り値の型が推論されます、`Return`複数行ラムダの関数内のステートメント。 *優先型*は一意の型に拡大変換できるその他のすべての種類です。 この一意の型を決定できない場合に絞り込むことが、配列内の他のすべての型を一意の型は、主要な型。 これらの一意の型をどちらも特定できない場合は、 `Object`が最も優先度の高い型になります。 この場合は場合、`Option Strict`に設定されている`On`、コンパイラ エラーが発生します。  
   
      式が指定された場合など、`Return`ステートメントは、型の値を含めることが`Integer`、 `Long`、および`Double`、結果の配列の型は`Double`します。 両方`Integer`と`Long`に拡大変換`Double`とのみ`Double`します。 そのため、 `Double` が最も優先度の高い型になります。 詳細については、「 [Widening and Narrowing Conversions](../../../../visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md)」を参照してください。  
   
--   単一行の関数の本体は、ステートメントではなく、値を返す式を指定する必要があります。 ない`Return`関数の単一行ステートメント。 単一行の関数によって返される値は、関数の本体での式の値です。  
+- 単一行の関数の本体は、ステートメントではなく、値を返す式を指定する必要があります。 ない`Return`関数の単一行ステートメント。 単一行の関数によって返される値は、関数の本体での式の値です。  
   
--   単一行のサブルーチンの本文は、単一行ステートメントである必要があります。  
+- 単一行のサブルーチンの本文は、単一行ステートメントである必要があります。  
   
--   単一行の関数とサブルーチンは含まれません、`End Function`または`End Sub`ステートメント。  
+- 単一行の関数とサブルーチンは含まれません、`End Function`または`End Sub`ステートメント。  
   
--   使用して、ラムダ式のパラメーターのデータ型を指定することができます、`As`キーワード、またはパラメーターのデータ型を推論することができます。 すべてのパラメーターまたはすべてのデータ型を推論する必要があります指定する必要があります。  
+- 使用して、ラムダ式のパラメーターのデータ型を指定することができます、`As`キーワード、またはパラメーターのデータ型を推論することができます。 すべてのパラメーターまたはすべてのデータ型を推論する必要があります指定する必要があります。  
   
--   `Optional` `Paramarray`パラメーターは使用できません。  
+- `Optional` `Paramarray`パラメーターは使用できません。  
   
--   ジェネリック パラメーターを指定することはできません。  
+- ジェネリック パラメーターを指定することはできません。  
   
 ## <a name="async-lambdas"></a>非同期ラムダ  
  使用して非同期処理を組み込んだするラムダ式およびステートメントを簡単に作成することができます、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)と[Await 演算子](../../../../visual-basic/language-reference/operators/await-operator.md)キーワード。 たとえば、次に示す Windows フォーム例には、非同期メソッド `ExampleMethodAsync`を呼び出して待機するイベント ハンドラーが含まれています。  
@@ -118,15 +118,15 @@ End Class
   
  次の例では、さまざまな入れ子になったラムダ式のアクセス権を示します。 返されたラムダ式が実行されると`Main`として`aDel`、これらの要素にアクセスします。  
   
--   定義されているクラスのフィールド: `aField`  
+- 定義されているクラスのフィールド: `aField`  
   
--   定義されているクラスのプロパティ: `aProp`  
+- 定義されているクラスのプロパティ: `aProp`  
   
--   メソッドのパラメーター `functionWithNestedLambda`、それが定義されています。 `level1`  
+- メソッドのパラメーター `functionWithNestedLambda`、それが定義されています。 `level1`  
   
--   ローカル変数`functionWithNestedLambda`: `localVar`  
+- ローカル変数`functionWithNestedLambda`: `localVar`  
   
--   入れ子になったラムダ式のパラメーター: `level2`  
+- 入れ子になったラムダ式のパラメーター: `level2`  
   
  [!code-vb[VbVbalrLambdas#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class3.vb#9)]  
   
@@ -143,11 +143,11 @@ End Class
   
 ## <a name="examples"></a>使用例  
   
--   次の例を返すラムダ式を定義する`True`null 許容型の引数に値が割り当てられる場合と`False`場合、その値は`Nothing`します。  
+- 次の例を返すラムダ式を定義する`True`null 許容型の引数に値が割り当てられる場合と`False`場合、その値は`Nothing`します。  
   
      [!code-vb[VbVbalrLambdas#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#4)]  
   
--   次の例では、配列内の最後の要素のインデックスを返すラムダ式を定義します。  
+- 次の例では、配列内の最後の要素のインデックスを返すラムダ式を定義します。  
   
      [!code-vb[VbVbalrLambdas#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrLambdas/VB/Class1.vb#5)]  
   

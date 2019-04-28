@@ -3,11 +3,11 @@ title: '&amp;&amp; (および)(Entity SQL)'
 ms.date: 03/30/2017
 ms.assetid: e7d24213-471d-4807-b85e-570375df89b5
 ms.openlocfilehash: eab05f7454f8ebc88ed29030503bfa96d0c70756
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605750"
 ---
 # <a name="ampamp-and-entity-sql"></a>&amp;&amp; (および)(Entity SQL)
 両方の式が `true` の場合は `true`を返します。それ以外の場合は `false` または `NULL`を返します。  

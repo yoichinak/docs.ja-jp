@@ -11,8 +11,8 @@ ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975547"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649882"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>'\<classname >' ため、CLS 準拠は、インターフェイス'\<interfacename >' に実装が CLS 準拠ではありません
 クラスまたはインターフェイスが `<CLSCompliant(True)>` としてマークされていますが、これらの派生元の型、またはこれらが実装している型が `<CLSCompliant(False)>` としてマークされているか、マークされていません。  
@@ -29,6 +29,6 @@ ms.locfileid: "59975547"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   CLS 準拠にする必要がある場合は、この型を別の継承階層または実装スキームの中で定義します。  
+- CLS 準拠にする必要がある場合は、この型を別の継承階層または実装スキームの中で定義します。  
   
--   この型を現在の継承階層または実装スキームに残しておく必要がある場合は、 <xref:System.CLSCompliantAttribute> を定義から削除するか、 `<CLSCompliant(False)>`としてマークします。  
+- この型を現在の継承階層または実装スキームに残しておく必要がある場合は、 <xref:System.CLSCompliantAttribute> を定義から削除するか、 `<CLSCompliant(False)>`としてマークします。  

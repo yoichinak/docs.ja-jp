@@ -6,11 +6,11 @@ helpviewer_keywords:
 - /highentropyva compiler option (Visual Basic)
 ms.assetid: ff25f20a-6ca2-467b-9e52-5cf439f5028e
 ms.openlocfilehash: 16bfea37a5742ac5aaaabfacdcf03a2b5bedb6db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819282"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663272"
 ---
 # <a name="-highentropyva-visual-basic"></a>-highentropyva (Visual Basic)
 示す、64 ビット実行可能ファイルまたは実行可能ファイルでマークされているかどうか、 [/platform:anycpu](../../../visual-basic/reference/command-line-compiler/platform.md)コンパイラ オプションで高エントロピ アドレス空間レイアウト Randomization (ASLR) をサポートします。  

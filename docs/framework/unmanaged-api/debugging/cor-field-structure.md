@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 691041632312bf8ac7c82a11724dcd725e14a420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609491"
 ---
 # <a name="corfield-structure"></a>COR_FIELD 構造体
 オブジェクトのフィールドに関する情報が提供されます。  

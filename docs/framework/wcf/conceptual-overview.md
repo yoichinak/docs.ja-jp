@@ -6,24 +6,24 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 503fae4b-014c-44df-a9c7-c76ec4ed4229
 ms.openlocfilehash: 7a885bd4ff0d3c35e26fd0f37e82a41abf713b6e
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608666"
 ---
 # <a name="conceptual-overview"></a>概念
-このトピックは、情報は、Windows Communication Foundation (WCF) メッセージング システムおよびその使用をサポートするクラスをまとめたものです。  
+このトピックでは、メッセージング システムおよびその使用をサポートするクラス Windows Communication Foundation (WCF) についての情報をまとめたものです。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Windows Communication Foundation とは](../../../docs/framework/wcf/whats-wcf.md)  
- WCF の概要です。  
+ WCF の簡単な概要です。  
   
  [Windows Communication Foundation の基本概念](../../../docs/framework/wcf/fundamental-concepts.md)  
- WCF プログラミング モデルの主要な概念の概要です。  
+ WCF プログラミング モデルの主要な概念の概要を説明します。  
   
  [Windows Communication Foundation のアーキテクチャ](../../../docs/framework/wcf/architecture.md)  
- WCF アーキテクチャのグラフィック表示します。  
+ WCF のアーキテクチャのグラフィック表示。  
   
 ## <a name="reference"></a>参照  
  <xref:System.ServiceModel>  

@@ -10,11 +10,11 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: ae4e2a0e0914251ddc5b7e18202047546b97907f
-ms.sourcegitcommit: 0aca6c5d166d7961a1e354c248495645b97a1dc5
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/30/2019
-ms.locfileid: "58675615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675248"
 ---
 # <a name="stdfont-interface"></a>StdFont インターフェイス
 

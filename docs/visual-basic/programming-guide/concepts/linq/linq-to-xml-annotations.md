@@ -3,11 +3,11 @@ title: LINQ to XML Annotations2
 ms.date: 07/20/2015
 ms.assetid: c3e8b3ff-fceb-4428-b0ca-1ed6f128aac8
 ms.openlocfilehash: edf8e0126c632deae6b6d4c235c4880d7b8687e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61663428"
 ---
 # <a name="linq-to-xml-annotations"></a>LINQ to XML の注釈
 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の注釈を使用すると、任意の型の任意のオブジェクトを XML ツリー内の任意の XML コンポーネントに関連付けることができます。  

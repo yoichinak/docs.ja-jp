@@ -9,11 +9,11 @@ helpviewer_keywords:
 - addresses, passing to API procedures
 ms.assetid: 8105a59d-60d8-4ab5-b221-5899cdfacbf4
 ms.openlocfilehash: 9d8515b6d5b0caf3552ed05a7e0cd4a271efaf54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608347"
 ---
 # <a name="addressof-operator-visual-basic"></a>AddressOf 演算子 (Visual Basic)
 特定のプロシージャを参照するプロシージャ デリゲート インスタンスを作成します。  

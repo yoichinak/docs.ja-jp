@@ -3,11 +3,11 @@ title: ワークフロー トレース
 ms.date: 03/30/2017
 ms.assetid: 18737989-0502-4367-b5f6-617ebfb77c96
 ms.openlocfilehash: cd53ed834fdacb639b38346dca831ef4c3e26337
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669226"
 ---
 # <a name="workflow-tracing"></a>ワークフロー トレース
 ワークフロー トレースでは、.NET Framework のトレース リスナーを使用して診断情報を取得できます。 トレースは、アプリケーションで問題が検出された場合に有効にし、その問題が解決されたら、再度無効にすることが可能です。 ワークフローのデバッグ トレースを有効にする方法は 2 つあります。 また、イベント トレース ビューアーを使用してトレースを構成したり、<xref:System.Diagnostics> を使用してトレース イベントをファイルに送信したりすることができます。  
@@ -23,9 +23,9 @@ ms.locfileid: "59321667"
   
 4. 既定の分析トレースのバッファー サイズは 4 KB ですが、このサイズを 32 KB に増やすことをお勧めします。 これを行うには、次の手順を実行します。  
   
-    1.  現在のフレームワークのディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
+    1. 現在のフレームワークのディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。`wevtutil um Microsoft.Windows.ApplicationServer.Applications.man`  
   
-    2.  変更、 \<bufferSize > 32 Windows.ApplicationServer.Applications.man ファイルの値。  
+    2. 変更、 \<bufferSize > 32 Windows.ApplicationServer.Applications.man ファイルの値。  
   
         ```xml  
         <channel name="Microsoft-Windows-Application Server-Applications/Analytic" chid="ANALYTIC_CHANNEL" symbol="ANALYTIC_CHANNEL" type="Analytic" enabled="false" isolation="Application" message="$(string.MICROSOFT_WINDOWS_APPLICATIONSERVER_APPLICATIONS.channel.ANALYTIC_CHANNEL.message)" >  
@@ -35,7 +35,7 @@ ms.locfileid: "59321667"
                   </channel>  
         ```  
   
-    3.  現在のフレームワークのディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
+    3. 現在のフレームワークのディレクトリ (C:\Windows\Microsoft.NET\Framework\v4.0.21203 など) で、次のコマンドを実行します。`wevtutil im Microsoft.Windows.ApplicationServer.Applications.man`  
   
 > [!NOTE]
 >  .NET Framework 4 Client Profile を使用している場合は、.NET Framework 4 ディレクトリから、次のコマンドを実行して ETW マニフェストをまず登録する必要があります。 `ServiceModelReg.exe –i –c:etw`  

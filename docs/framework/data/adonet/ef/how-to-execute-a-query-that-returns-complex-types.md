@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c2209fdb-70ef-4dea-8bb8-097fe96f5563
 ms.openlocfilehash: a428f54c3834ccdf6a0c7a5bfce8307172724524
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607207"
 ---
 # <a name="how-to-execute-a-query-that-returns-complex-types"></a>方法: 複合型を返すクエリを実行する
 このトピックでは、複合型プロパティを含むエンティティ型オブジェクトを返す [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリを実行する方法について説明します。  

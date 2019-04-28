@@ -3,11 +3,11 @@ title: 'コマンド ツリーからの SQL の生成: ベスト プラクティ
 ms.date: 03/30/2017
 ms.assetid: 71ef6a24-4c4f-4254-af3a-ffc0d855b0a8
 ms.openlocfilehash: 6ac46b577f071bca6c79e23b8b77f9b267ac879b
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57369670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606668"
 ---
 # <a name="generating-sql-from-command-trees---best-practices"></a>コマンド ツリーからの SQL の生成: ベスト プラクティス
 

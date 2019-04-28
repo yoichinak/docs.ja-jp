@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0decfde08a9097c8fe5185c8b5a3fef4f7f68189
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61598728"
 ---
 # <a name="icorprofilercallbackexceptionoshandlerleave-method"></a>ICorProfilerCallback::ExceptionOSHandlerLeave メソッド
 実装されていません。 非管理対象の例外情報を必要とするプロファイラーでは、他の手段では、この情報を取得する必要があります。  

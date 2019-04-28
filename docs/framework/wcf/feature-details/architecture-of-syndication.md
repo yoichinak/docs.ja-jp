@@ -3,24 +3,24 @@ title: 配信のアーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: ed4ca86e-e3d8-4acb-87aa-1921fbc353be
 ms.openlocfilehash: 4083f7f7ef3fc986e9a7c430b8ed8cfe451c9d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61596363"
 ---
 # <a name="architecture-of-syndication"></a>配信のアーキテクチャ
 配信 API は、形式に依存せず、さまざま形式で概要コンテンツをネットワークに書き込むことができるプログラミング モデルを提供することを目的としています。 抽象データ モデルは、次のクラスで構成されています。  
   
--   <xref:System.ServiceModel.Syndication.SyndicationCategory>  
+- <xref:System.ServiceModel.Syndication.SyndicationCategory>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationFeed>  
+- <xref:System.ServiceModel.Syndication.SyndicationFeed>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationItem>  
+- <xref:System.ServiceModel.Syndication.SyndicationItem>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationLink>  
+- <xref:System.ServiceModel.Syndication.SyndicationLink>  
   
--   <xref:System.ServiceModel.Syndication.SyndicationPerson>  
+- <xref:System.ServiceModel.Syndication.SyndicationPerson>  
   
  これらのクラスは、一部の名前が異なっていますが、Atom 1.0 仕様に規定されるコンストラクトに厳密にマップされています。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "59075913"
   
 ## <a name="extensibility"></a>機能拡張  
   
--   配信プロトコルの主な機能は拡張性です。 Atom 1.0 と RSS 2.0 では、仕様で定義されていない属性および要素を配信フィードに追加できます。 WCF 配信プログラミング モデルには、カスタム属性と拡張機能を使用した作業の 2 つの方法が用意されています。 派生クラスの新しいと弱い型指定のアクセス。 詳細については、次を参照してください。[配信の拡張](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)します。  
+- 配信プロトコルの主な機能は拡張性です。 Atom 1.0 と RSS 2.0 では、仕様で定義されていない属性および要素を配信フィードに追加できます。 WCF 配信プログラミング モデルには、カスタム属性と拡張機能を使用した作業の 2 つの方法が用意されています。 派生クラスの新しいと弱い型指定のアクセス。 詳細については、次を参照してください。[配信の拡張](../../../../docs/framework/wcf/feature-details/syndication-extensibility.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

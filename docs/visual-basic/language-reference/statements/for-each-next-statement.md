@@ -23,11 +23,11 @@ helpviewer_keywords:
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
 ms.openlocfilehash: 5081f80ad0da738ebb950bcd649af7a593582356
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61638078"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next ステートメント (Visual Basic)
 ステートメントのグループをコレクション内の各要素に対して繰り返されます。  
@@ -92,11 +92,11 @@ Next [ element ]
   
  `Exit For` いくつかの条件の評価後は、よく使用など、 `If`.`Then`...`Else`構造体。 使用する`Exit For`次の条件。  
   
--   反復処理を続けることは不要なか不可能です。 これは、エラー値や終了要求によって発生する可能性があります。  
+- 反復処理を続けることは不要なか不可能です。 これは、エラー値や終了要求によって発生する可能性があります。  
   
--   例外がキャッチされました、 `Try`.`Catch`...`Finally`.使用する場合があります`Exit For`の最後に、`Finally`ブロックします。  
+- 例外がキャッチされました、 `Try`.`Catch`...`Finally`.使用する場合があります`Exit For`の最後に、`Finally`ブロックします。  
   
--   何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は使用できます`Exit For`ループを抜けます。 詳細については、次を参照してください[操作を行います...ステートメントをループ](../../../visual-basic/language-reference/statements/do-loop-statement.md)です。  
+- 何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は使用できます`Exit For`ループを抜けます。 詳細については、次を参照してください[操作を行います...ステートメントをループ](../../../visual-basic/language-reference/statements/do-loop-statement.md)です。  
   
 ## <a name="iterators"></a>Iterators  
  使用する、*反復子*コレクションに対するカスタム イテレーションを実行します。 関数は、反復子または`Get`アクセサー。 使用して、`Yield`ステートメントを一度に 1 つのコレクションの各要素を返します。  

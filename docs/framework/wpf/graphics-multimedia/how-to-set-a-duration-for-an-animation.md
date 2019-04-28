@@ -7,11 +7,11 @@ helpviewer_keywords:
 - duration of animations [WPF]
 ms.assetid: 155034ef-7d00-4416-a73c-b1713992d2eb
 ms.openlocfilehash: bdae1689ffeb8c54d756b9debbd26d57a052892d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651156"
 ---
 # <a name="how-to-set-a-duration-for-an-animation"></a>方法: アニメーションの継続時間を設定する
 A<xref:System.Windows.Media.Animation.Timeline>表す時間のセグメントとそのセグメントの長さはタイムラインのによって決まります<xref:System.Windows.Duration>します。 ときに、<xref:System.Windows.Media.Animation.Timeline>が最後に達すると、その継続時間の再生を停止します。 場合、<xref:System.Windows.Media.Animation.Timeline>が子タイムラインも再生を停止します。 アニメーションの場合は、<xref:System.Windows.Duration>アニメーションにかかる時間の遷移の終了値をその開始値から指定します。  

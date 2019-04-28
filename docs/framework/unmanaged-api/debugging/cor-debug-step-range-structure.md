@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57d7c3256d7b52a4e55dbb5bc420b0438983d2f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609530"
 ---
 # <a name="cordebugsteprange-structure"></a>COR_DEBUG_STEP_RANGE 構造体
 コードの範囲に関するオフセット情報が含まれます。  

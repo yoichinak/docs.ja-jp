@@ -10,11 +10,11 @@ helpviewer_keywords:
 - getting, control patterns
 ms.assetid: 006c54c9-50bf-48d9-a855-9d62eb95603a
 ms.openlocfilehash: 64c5bae738cee5249e6c2406a2f94667ecb2931f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337020"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609907"
 ---
 # <a name="get-supported-ui-automation-control-patterns"></a>サポートされている UI オートメーション コントロール パターンの取得
 > [!NOTE]

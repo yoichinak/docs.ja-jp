@@ -10,21 +10,21 @@ ms.assetid: 0d423791-d40d-45c6-a82b-1a165768d737
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2e7bd0fabcd4838990ae8704de4f83e9677dbc08
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33426238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599287"
 ---
 # <a name="diagnostics-symbol-store-structures"></a>シンボル ストア診断構造体
 このトピックでは、シンボル ストア診断 API を使用するアンマネージ構造体について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CALL_ID 構造](../../../../docs/framework/unmanaged-api/diagnostics/call-id-structure.md)  
- 呼び出される関数はデバッガーに情報を提供します。  
+ デバッガーが呼び出される関数に関する情報を提供します。  
   
  [SYMLINEDELTA 構造](../../../../docs/framework/unmanaged-api/diagnostics/symlinedelta-structure.md)  
- シンボル ハンドラーを編集した結果として移動されたメソッドに関する情報を提供します。  
+ 編集の結果として移動されたメソッドに関する情報をシンボル ハンドラーを提供します。  
   
  [USER_THREAD 構造](../../../../docs/framework/unmanaged-api/diagnostics/user-thread-structure.md)  
  デバッガー スレッドに関する情報を提供します。  

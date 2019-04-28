@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7e41aed0-3be9-4f75-98de-860a85552a3c
 ms.openlocfilehash: e205a50b70a29d056af23ba64eb630b50e304ecb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613308"
 ---
 # <a name="query-expression-syntax-examples-partitioning"></a>クエリ式の構文例:パーティション分割
 このトピックの例では、使用する方法を示します、<xref:System.Linq.Enumerable.Skip%2A>と<xref:System.Linq.Enumerable.Take%2A>を照会する方法、 [AdventureWorks Sales Model](https://archive.codeplex.com/?p=msftdbprodsamples)クエリ式構文を使用します。 これらの例で使用されている、AdventureWorks Sales Model は、AdventureWorks サンプル データベースの Contact、Address、Product、SalesOrderHeader、SalesOrderDetail の各テーブルから作成されています。  

@@ -5,11 +5,11 @@ ms.assetid: 881e20ca-8131-4bd0-ba41-c2d6391b0fe2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 191aa16c285b3a28beed65004d65525c9214ec93
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650740"
 ---
 # <a name="isymunmanagedwriter4getdebuginfowithpadding-method"></a>ISymUnmanagedWriter4::GetDebugInfoWithPadding メソッド
 機能と同じ[GetDebugInfo メソッド](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedwriter-getdebuginfo-method.md)パス文字列は、文字列データの固定サイズの終端の null 文字の後に続くゼロで埋められますことを除いて`MAX_PATH`します。 自体のパス文字列の長さがある場合、余白が指定されたのみより小さい`MAX_PATH`します。  

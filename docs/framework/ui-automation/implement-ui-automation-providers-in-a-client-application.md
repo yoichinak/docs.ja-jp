@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UI Automation, implementing client-side provider within application
 ms.assetid: f325f0d8-1715-41ea-85ca-45b82ffea8bc
 ms.openlocfilehash: b368ab3bc842fda5a99a64e0220093ebd60698b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105925"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609816"
 ---
 # <a name="implement-ui-automation-providers-in-a-client-application"></a>クライアント アプリケーションに UI オートメーション プロバイダーを実装する
 > [!NOTE]

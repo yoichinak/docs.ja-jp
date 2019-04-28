@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 58c9d4c66af0bb9f4e66d17b18ac78ef8271bc31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609608"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo 構造体
 

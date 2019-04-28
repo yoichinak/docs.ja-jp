@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7dbbfbcd-93f5-4546-9dbf-e5fa290b69fa
 ms.openlocfilehash: f3f1e11d3211140abb02733de4b5b46ac93cf769
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607948"
 ---
 # <a name="how-to-execute-a-query-that-returns-reftype-results"></a>方法: RefType 結果を返すクエリを実行する
 このトピックでは、<xref:System.Data.EntityClient.EntityCommand> オブジェクトを使用して概念モデルに対してコマンドを実行する方法と、<xref:System.Data.Metadata.Edm.RefType> を使用して <xref:System.Data.EntityClient.EntityDataReader> の結果を取得する方法を示します。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - arguments [Visual Basic], modifiable
 ms.assetid: 87b2df69-e1f7-4657-9caf-b3f48d693428
 ms.openlocfilehash: a880ae8c13eebd5d9d325468098e058f58d3fa71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826666"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665950"
 ---
 # <a name="differences-between-modifiable-and-nonmodifiable-arguments-visual-basic"></a>変更できる引数と変更できない引数の違い (Visual Basic)
 プロシージャを呼び出すときに通常を 1 つまたは複数の引数を渡します。 各引数は、基になるプログラミング要素に対応します。 基になる要素と引数自体の両方には、変更可能なか、変更不可能なをすることができます。  

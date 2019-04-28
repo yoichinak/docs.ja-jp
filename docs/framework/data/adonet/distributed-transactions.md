@@ -3,11 +3,11 @@ title: 分散トランザクション
 ms.date: 03/30/2017
 ms.assetid: 718b257c-bcb2-408e-b004-a7b0adb1c176
 ms.openlocfilehash: 89d94e94ea74c73a7f68f6052291c95a7c96f0d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606807"
 ---
 # <a name="distributed-transactions"></a>分散トランザクション
 トランザクションとは、たとえば、1 つの単位として成功 (コミット) または失敗 (アボート) する関連タスク セットです。 A*分散トランザクション*いくつかのリソースに影響を与えるトランザクションです。 分散トランザクションがコミットされるためには、すべての参加要素が、すべてのデータ変更が永久的な変更となることを保証する必要があります。 システム クラッシュその他の予期しない出来事が発生した場合でも、変更は保持されます。 1 つの参加要素がこの保証に失敗しただけでも、トランザクション全体が失敗し、トランザクションのスコープ内のデータに対する変更がロールバックされます。  

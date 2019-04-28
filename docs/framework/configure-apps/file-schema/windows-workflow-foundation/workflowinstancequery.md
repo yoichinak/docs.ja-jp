@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 9096e812-626a-409a-9eda-c31a60b84c55
 ms.openlocfilehash: 6fe02cfea91633da41c8ebc7d8a78dd005ad3f4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080905"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61613717"
 ---
 # <a name="workflowinstancequery"></a>\<workflowInstanceQuery>
 開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡するクエリを表します。  
@@ -61,15 +61,15 @@ ms.locfileid: "59080905"
 ## <a name="remarks"></a>Remarks  
  <xref:System.Activities.Tracking.WorkflowInstanceQuery> は、次の <xref:System.Activities.Tracking.TrackingRecord> オブジェクトの定期受信に使用されます。  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceAbortedRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceUnhandledExceptionRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceTerminatedRecord>  
   
--   <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
+- <xref:System.Activities.Tracking.WorkflowInstanceSuspendedRecord>  
   
 ## <a name="example"></a>例  
  次の構成は、このクエリを使用して、`Started` インスタンス状態のワークフロー インスタンス レベルの追跡レコードを定期受信します。  

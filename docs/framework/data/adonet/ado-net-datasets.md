@@ -3,11 +3,11 @@ title: ADO.NET データセット
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
 ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607586"
 ---
 # <a name="adonet-datasets"></a>ADO.NET データセット
 <xref:System.Data.DataSet> オブジェクトは、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] で非接続型分散データ シナリオをサポートするうえで中心的な役割を果たします。 **データセット**データ ソースに関係なく一貫したリレーショナル プログラミング モデルを提供するデータのメモリ常駐型の表現です。 複数の異なるデータ ソースや XML データと組み合わせて使用でき、アプリケーションにとってローカルなデータの管理にも使用できます。 **データセット**関連テーブル、制約、およびテーブル間のリレーションシップを含む、データの完全なセットを表します。 次の図は、**データセット**オブジェクト モデルです。  

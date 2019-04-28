@@ -3,11 +3,11 @@ title: 接続文字列の構文
 ms.date: 05/22/2018
 ms.assetid: 0977aeee-04d1-4cce-bbed-750c77fce06e
 ms.openlocfilehash: 4c5ed5000f075fb637915dc40e122a9337176e36
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608022"
 ---
 # <a name="connection-string-syntax"></a>接続文字列の構文
 すべての .NET Framework データ プロバイダーは、`Connection` を継承する <xref:System.Data.Common.DbConnection> オブジェクトに加え、プロバイダー固有の <xref:System.Data.Common.DbConnection.ConnectionString%2A> プロパティを持ちます。 それぞれのプロバイダーに固有の接続文字列の構文は、対応する `ConnectionString` プロパティのトピックで説明されています。 次の表は、.NET Framework に含まれている 4 つのデータ プロバイダーを一覧にしたものです。  
@@ -22,13 +22,13 @@ ms.locfileid: "59084966"
 ## <a name="connection-string-builders"></a>接続文字列ビルダー  
  ADO.NET 2.0 では、.NET Framework データ プロバイダー用の次の接続文字列ビルダーが導入されました。  
   
--   <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
+- <xref:System.Data.SqlClient.SqlConnectionStringBuilder>  
   
--   <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
+- <xref:System.Data.OleDb.OleDbConnectionStringBuilder>  
   
--   <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
+- <xref:System.Data.Odbc.OdbcConnectionStringBuilder>  
   
--   <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
+- <xref:System.Data.OracleClient.OracleConnectionStringBuilder>  
   
  接続文字列ビルダーを使用すると、構文的に正しい接続文字列を実行時に構築できるため、コード内で接続文字列値を手動で連結する必要はありません。 詳細については、「[接続文字列ビルダー](../../../../docs/framework/data/adonet/connection-string-builders.md)」をご覧ください。  
 

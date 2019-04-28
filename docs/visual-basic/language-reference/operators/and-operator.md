@@ -14,11 +14,11 @@ helpviewer_keywords:
 - bitwise comparison [Visual Basic]
 ms.assetid: 2ea711f3-439a-4c7c-9e3a-1ffe3b0d6046
 ms.openlocfilehash: 7e25f25677fa684427bdaf00cea73916ffbad655
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608360"
 ---
 # <a name="and-operator-visual-basic"></a>And 演算子 (Visual Basic)
 2 つの論理積を求めます`Boolean`式、または 2 つの数値式のビットごとの積。  

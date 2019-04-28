@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 90820e49-9d46-41f6-9a3d-6c0741bbd8eb
 ms.openlocfilehash: f0a85232b753eed891cded4b0fb1154269b30dc9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224117"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606945"
 ---
 # <a name="dataview-performance"></a>DataView のパフォーマンス
 このトピックでは、<xref:System.Data.DataView.Find%2A> クラスの <xref:System.Data.DataView.FindRows%2A> メソッドと <xref:System.Data.DataView> メソッドを使用すること、および、Web アプリケーションで <xref:System.Data.DataView> をキャッシュすることのパフォーマンス上の利点について説明します。  

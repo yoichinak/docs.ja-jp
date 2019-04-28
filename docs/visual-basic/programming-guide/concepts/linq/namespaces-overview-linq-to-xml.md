@@ -3,11 +3,11 @@ title: 名前空間の概要 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: b8eb31fa-4b26-4acf-8050-6e705687f458
 ms.openlocfilehash: 45328fe0ac549086b8abea22c42c7be37fb12b3c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665963"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>名前空間の概要 (LINQ to XML)
 このトピックでは、名前空間、<xref:System.Xml.Linq.XName> クラス、および <xref:System.Xml.Linq.XNamespace> クラスについて説明します。  

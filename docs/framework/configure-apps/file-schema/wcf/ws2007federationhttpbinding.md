@@ -3,11 +3,11 @@ title: <ws2007FederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9af4ec79-cdef-457e-9dca-09d5eb821594
 ms.openlocfilehash: e6215465acbf9bb94298d282d15f8735a0e20c8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890255"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61673083"
 ---
 # <a name="ws2007federationhttpbinding"></a>\<ws2007FederationHttpBinding>
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -delaysign compiler option [Visual Basic]
 ms.assetid: c76e61a4-1884-4252-9fb2-377f99caa690
 ms.openlocfilehash: 770dcad385c522a548a0c6fd3b6ef02dfbac82f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334602"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649713"
 ---
 # <a name="-delaysign"></a>-delaysign
 アセンブリに完全に署名するか、部分的に署名するかを指定します。  
@@ -24,7 +24,7 @@ ms.locfileid: "59334602"
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 省略可能です。 完全署名されたアセンブリを作成する場合は、`-delaysign-` を使用します。 使用`-delaysign+`かどうかは、署名のハッシュのアセンブリと予約のスペースで公開キーを配置します。 既定値は `-delaysign-` です。  
+ 任意。 完全署名されたアセンブリを作成する場合は、`-delaysign-` を使用します。 使用`-delaysign+`かどうかは、署名のハッシュのアセンブリと予約のスペースで公開キーを配置します。 既定値は `-delaysign-` です。  
   
 ## <a name="remarks"></a>Remarks  
  `-delaysign`オプションも何も起こりません併用しない限り、 [-keyfile](../../../visual-basic/reference/command-line-compiler/keyfile.md)または[-keycontainer](../../../visual-basic/reference/command-line-compiler/keycontainer.md)します。  

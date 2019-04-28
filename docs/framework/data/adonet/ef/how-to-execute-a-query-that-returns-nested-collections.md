@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f7f385f3-ffcf-4f3b-af35-de8818938e5f
 ms.openlocfilehash: c923ffb6e2653c148b9523b99c4717d42ea57427
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605963"
 ---
 # <a name="how-to-execute-a-query-that-returns-nested-collections"></a>方法: 入れ子になったコレクションを返すクエリを実行する
 ここでは、<xref:System.Data.EntityClient.EntityCommand> オブジェクトを使用して概念モデルに対してコマンドを実行する方法、および <xref:System.Data.EntityClient.EntityDataReader> を使用して入れ子になったコレクションの結果を取得する方法について説明します。  

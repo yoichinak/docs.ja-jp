@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
 ms.openlocfilehash: f821088375bf1df01e75de5e0c226334baca113f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607554"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework データ プロバイダー
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダーは、データベースに接続して、コマンドを実行したり、結果を取得したりする目的で使用されます。 その結果は、直接処理されるか、必要に応じてユーザーに公開されるように <xref:System.Data.DataSet> に格納されるか、取得したデータセットを複数のソースからのデータと組み合わせるか、または、層間でリモート処理されます。 軽量な [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダーでは、データ ソースとコード間に形成される層が最小限で済むため、機能を犠牲にすることなく、パフォーマンスを高めることができます。  

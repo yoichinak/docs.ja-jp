@@ -3,11 +3,11 @@ title: SQL Server における所有権とユーザーとスキーマの分離
 ms.date: 03/30/2017
 ms.assetid: 242830c1-31b5-4427-828c-cc22ff339f30
 ms.openlocfilehash: b56a2c6f1211a11d2aa55de0cc101f6b90f7f83d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61646060"
 ---
 # <a name="ownership-and-user-schema-separation-in-sql-server"></a>SQL Server における所有権とユーザーとスキーマの分離
 オブジェクトの所有者は、それを管理するための取り消し不可能な権限を持ちます。これは SQL Server のセキュリティの核となる概念です。 オブジェクトの所有者から権限を削除することはできません。また、特定のユーザーがデータベース内のオブジェクトを所有しているときに、そのユーザーをデータベースから削除することもできません。  
@@ -29,13 +29,13 @@ Server.Database.DatabaseSchema.DatabaseObject
 ### <a name="built-in-schemas"></a>組み込みスキーマ  
  SQL Server には、組み込みのデータベース ユーザーおよびロールと同じ名前を持った 10 個の定義済みスキーマが付属しています。 これらは主に下位互換性を確保するために存在します。 固定データベース ロールと同じ名前のスキーマは、不要であれば削除してもかまいません。 次のスキーマを削除することはできません。  
   
--   `dbo`  
+- `dbo`  
   
--   `guest`  
+- `guest`  
   
--   `sys`  
+- `sys`  
   
--   `INFORMATION_SCHEMA`  
+- `INFORMATION_SCHEMA`  
   
  これらを model データベースから削除した場合、新しいデータベースにはこれらのスキーマが存在しなくなります。  
   

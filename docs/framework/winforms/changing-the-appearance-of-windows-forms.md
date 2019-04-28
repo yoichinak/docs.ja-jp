@@ -5,17 +5,17 @@ helpviewer_keywords:
 - Windows Forms, changing the appearance of
 ms.assetid: 12f35d5b-1587-49cc-ada3-47eec1ff1738
 ms.openlocfilehash: 0582ad4c8e18d0f0419f0463ba260226839f7f42
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640420"
 ---
 # <a name="changing-the-appearance-of-windows-forms"></a>Windows フォームの表示形式の変更
 罫線、不透明度、図形、スタイルの変更、または Windows フォーム アプリケーションの背景画像の設定など、Windows フォーム アプリケーションの外観をさまざまな方法でカスタマイズできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [Windows フォームの境界線を変更する方法](how-to-change-the-borders-of-windows-forms.md) 
+ [方法: Windows フォームの境界線を変更します。](how-to-change-the-borders-of-windows-forms.md)  
  フォームの罫線のスタイルを変更する方法を示します。  
   
 ## <a name="reference"></a>参照  

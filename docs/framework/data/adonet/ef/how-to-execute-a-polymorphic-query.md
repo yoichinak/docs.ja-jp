@@ -1,18 +1,18 @@
 ---
-title: '方法: ポリモーフィック クエリを実行します。'
+title: '方法: ポリモーフィック クエリを実行する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: 2f05da1e-845b-4f14-83e4-c6353a850553
 ms.openlocfilehash: 08ae5722267ef781ed6bee59c7895269f63a75e5
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355544"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61606191"
 ---
-# <a name="how-to-execute-a-polymorphic-query"></a>方法: ポリモーフィック クエリを実行します。
+# <a name="how-to-execute-a-polymorphic-query"></a>方法: ポリモーフィック クエリを実行する
 
 このトピックでは、ポリモーフィックなを実行する方法を示しています。[!INCLUDE[esql](../../../../../includes/esql-md.md)]クエリを使用して、 [OFTYPE](../../../../../docs/framework/data/adonet/ef/language-reference/oftype-entity-sql.md)演算子。
 

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Else statement [Visual Basic]
 ms.assetid: 790068a2-1307-4e28-8a72-be5ebda099e9
 ms.openlocfilehash: d91a913d515f36a6b974850bc30079b000a919b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637755"
 ---
 # <a name="ifthenelse-statement-visual-basic"></a>If...Then...Else ステートメント (Visual Basic)
 式の値に応じてステートメント グループを条件付きで実行します。  
@@ -71,10 +71,10 @@ If condition Then [ statements ] [ Else [ elsestatements ] ]
  場合に、必ず`ElseIf`が存在します。 式。 評価される必要があります`True`または`False`、またはデータ型に暗黙的に変換できる`Boolean`します。  
   
  `elseifstatements`  
- 省略可能です。 1 つまたは複数のステートメントの次`ElseIf`.`Then`場合に実行されている`elseifcondition`に評価される`True`します。  
+ 任意。 1 つまたは複数のステートメントの次`ElseIf`.`Then`場合に実行されている`elseifcondition`に評価される`True`します。  
   
  `elsestatements`  
- 任意。 ない場合に実行される 1 つまたは複数のステートメント`condition`または`elseifcondition`式に評価される`True`します。  
+ 省略可能です。 ない場合に実行される 1 つまたは複数のステートメント`condition`または`elseifcondition`式に評価される`True`します。  
   
  `End If`  
  複数行のバージョンを終了する`If`.`Then`...`Else`ブロックします。  

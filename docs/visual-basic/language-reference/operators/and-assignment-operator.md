@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 0cf262fc-1a05-419a-a503-60013f111c8a
 ms.openlocfilehash: a79e779d8fcf549daeabc494e0a55deee30b5d22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608438"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp;= 演算子 (Visual Basic)
 連結、`String`式を`String`変数またはプロパティし、結果を変数またはプロパティに代入します。  

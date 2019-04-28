@@ -3,11 +3,11 @@ title: '方法: (Visual Basic) のコンテキストに基づいて要素を検�
 ms.date: 07/20/2015
 ms.assetid: 0b085290-ddc1-4126-aaa0-e4c95a3d9a09
 ms.openlocfilehash: 0981da1e35f2c0b6023c009d4f62c95a612d8971
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61614884"
 ---
 # <a name="how-to-write-a-query-that-finds-elements-based-on-context-visual-basic"></a>方法: (Visual Basic) のコンテキストに基づいて要素を検索するクエリを記述します。
 コンテキストに基づいて要素を選択するクエリの記述が必要になる場合があります。 つまり、前の兄弟要素や次の兄弟要素に基づいてフィルターしたり、 子要素や祖先要素に基づいてフィルターすることが必要になる場合が考えられます。  

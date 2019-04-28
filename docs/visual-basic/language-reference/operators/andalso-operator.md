@@ -12,11 +12,11 @@ helpviewer_keywords:
 - short-circuit evaluation
 ms.assetid: bbc15191-b374-495b-9b8f-7b8c2f4388eb
 ms.openlocfilehash: 3876fd9c32d486b8ebecc9ee2428486a687a1624
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608321"
 ---
 # <a name="andalso-operator-visual-basic"></a>AndAlso 演算子 (Visual Basic)
 ショート サーキットの 2 つの式の論理積を実行します。  

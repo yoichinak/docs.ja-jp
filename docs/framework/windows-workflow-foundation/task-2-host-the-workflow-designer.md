@@ -3,11 +3,11 @@ title: タスク 2:ワークフロー デザイナーのホスティング
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
 ms.openlocfilehash: 3f7964e907fe513679e60c18292f07c84128590b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641578"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>タスク 2:ワークフロー デザイナーのホスティング
 このトピックでは、のインスタンスをホストするための手順を説明します、 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) アプリケーションでします。  
@@ -42,7 +42,7 @@ ms.locfileid: "59299268"
   
 8. **ソリューション エクスプ ローラー**で MainWindow.xaml を右クリックし、選択**コードの表示**します。 次の手順に従ってコードを修正します。  
   
-    1.  次の名前空間を追加します。  
+    1. 次の名前空間を追加します。  
   
         ```csharp  
         using System.Activities;  
@@ -54,7 +54,7 @@ ms.locfileid: "59299268"
         using System.ComponentModel;  
         ```  
   
-    2.  <xref:System.Activities.Presentation.WorkflowDesigner> のインスタンスを保持するプライベート メンバー フィールドを宣言するには、次のコードを `MainWindow` クラスに追加します。  
+    2. <xref:System.Activities.Presentation.WorkflowDesigner> のインスタンスを保持するプライベート メンバー フィールドを宣言するには、次のコードを `MainWindow` クラスに追加します。  
   
         ```csharp  
         public partial class MainWindow : Window  
@@ -68,7 +68,7 @@ ms.locfileid: "59299268"
         }  
         ```  
   
-    3.  次の `AddDesigner` メソッドを `MainWindow` クラスに追加します。 実装のインスタンスを作成する、 <xref:System.Activities.Presentation.WorkflowDesigner>、追加、 <xref:System.Activities.Statements.Sequence> 、アクティビティ、grid1 の中央の列に配置**グリッド**します。  
+    3. 次の `AddDesigner` メソッドを `MainWindow` クラスに追加します。 実装のインスタンスを作成する、 <xref:System.Activities.Presentation.WorkflowDesigner>、追加、 <xref:System.Activities.Statements.Sequence> 、アクティビティ、grid1 の中央の列に配置**グリッド**します。  
   
         ```csharp  
         private void AddDesigner()  
@@ -87,7 +87,7 @@ ms.locfileid: "59299268"
         }  
         ```  
   
-    4.  デザイナーのメタデータを登録して、すべてのビルトイン アクティビティにデザイナー サポートを追加します。 こうすることにより、ツールボックスから<xref:System.Activities.Statements.Sequence>の元の [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] アクティビティに、アクティビティをドロップできるようになります。 この操作を行うには、`RegisterMetadata` メソッドを `MainWindow` クラスに追加します。  
+    4. デザイナーのメタデータを登録して、すべてのビルトイン アクティビティにデザイナー サポートを追加します。 こうすることにより、ツールボックスから<xref:System.Activities.Statements.Sequence>の元の [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] アクティビティに、アクティビティをドロップできるようになります。 この操作を行うには、`RegisterMetadata` メソッドを `MainWindow` クラスに追加します。  
   
         ```csharp  
         private void RegisterMetadata()  
@@ -99,7 +99,7 @@ ms.locfileid: "59299268"
   
          アクティビティ デザイナーの登録の詳細については、次を参照してください。[方法。カスタム アクティビティ デザイナーを作成](how-to-create-a-custom-activity-designer.md)です。  
   
-    5.  `MainWindow` クラス コンストラクターで、前に宣言したメソッドへの呼び出しを追加して、デザイナー サポートのメタデータを登録し、<xref:System.Activities.Presentation.WorkflowDesigner> を作成します。  
+    5. `MainWindow` クラス コンストラクターで、前に宣言したメソッドへの呼び出しを追加して、デザイナー サポートのメタデータを登録し、<xref:System.Activities.Presentation.WorkflowDesigner> を作成します。  
   
         ```csharp  
         public MainWindow()  

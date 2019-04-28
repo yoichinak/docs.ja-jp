@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4ff084d5-5956-4db1-8e18-c5a66b000882
 ms.openlocfilehash: 31239033c56303af33899ac88f1745e90f052377
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151256"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61645956"
 ---
 # <a name="polling-in-console-applications"></a>コンソール アプリケーションでのポーリング
 ADO.NET での非同期操作は、1 つのスレッドで他のタスクを実行している間に、別のスレッドで時間のかかるデータベース操作を開始できます。 ただし、ほとんどの場合、データベース操作が完了するまでは、アプリケーションを続行できない状態に最終的に達することになります。 このような場合は、操作が完了したかどうかを確認するために、非同期操作をポーリングすると便利です。  

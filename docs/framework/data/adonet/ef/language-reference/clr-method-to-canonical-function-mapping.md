@@ -3,15 +3,15 @@ title: CLR メソッドと正規関数とのマッピング
 ms.date: 03/30/2017
 ms.assetid: e3363261-2cb8-4b54-9555-2870be99b929
 ms.openlocfilehash: 16d447e82959f5ade7210b36dcf9d06bed9c9b00
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61605718"
 ---
 # <a name="clr-method-to-canonical-function-mapping"></a>CLR メソッドと正規関数とのマッピング
 
-Entity Framework は、文字列操作、数学関数などの多くのデータベース システム間で共通の機能を実装する正規関数のセットを提供します。 この関数により、開発者は広範なデータベース システムをターゲットとして指定することができます。 LINQ to Entities などのクエリ テクノロジから呼び出されると、これらの正規関数は使用されているプロバイダーに対応した正しい格納関数に変換されます。 これにより、関数の呼び出しをデータ ソース間で共通の形式で表すことができ、データ ソース間に一貫した方法でクエリを利用できます。 オペランドが数値型である場合は、ビット単位の AND、OR、NOT、および XOR 演算子も正規関数にマップされます。 ブール型のオペランドの場合、ビット単位の AND、OR、NOT、および XOR 演算子は、それぞれのオペランドの論理 AND、OR、NOT、および XOR 演算を計算します。 詳細については、[正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)を参照してください。
+Entity Framework は、文字列操作、数学関数などの多くのデータベース システム間で共通の機能を実装する正規関数のセットを提供します。 この関数により、開発者は広範なデータベース システムをターゲットとして指定することができます。 LINQ to Entities などのクエリ テクノロジから呼び出されると、これらの正規関数は使用されているプロバイダーに対応した正しい格納関数に変換されます。 これにより、関数の呼び出しをデータ ソース間で共通の形式で表すことができ、データ ソース間に一貫した方法でクエリを利用できます。 オペランドが数値型である場合は、ビット単位の AND、OR、NOT、および XOR 演算子も正規関数にマップされます。 ブール型のオペランドの場合、ビット単位の AND、OR、NOT、および XOR 演算子は、それぞれのオペランドの論理 AND、OR、NOT、および XOR 演算を計算します。 詳細については、次を参照してください。[正規関数](../../../../../../docs/framework/data/adonet/ef/language-reference/canonical-functions.md)します。
 
 LINQ シナリオの場合、Entity Framework に対するクエリでは、正規関数による、基になるデータ ソース上のメソッドへの特定の CLR メソッドのマッピングも行われます。 正規関数に明示的にマップされない LINQ to Entities クエリで任意のメソッドの呼び出しが実行されると、ランタイムの <xref:System.NotSupportedException> 例外がスローされます。
 

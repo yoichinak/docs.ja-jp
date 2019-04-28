@@ -3,11 +3,11 @@ title: <serviceBehaviors>
 ms.date: 03/30/2017
 ms.assetid: 5aed9062-cc36-4b72-b9dd-a3018b8ffafc
 ms.openlocfilehash: ca5b4126840edda4c443d30c161ae086c58d666a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670340"
 ---
 # <a name="servicebehaviors"></a>\<serviceBehaviors>
 この構成セクションは、特定のサービスに対して定義されたすべての動作を表します。  

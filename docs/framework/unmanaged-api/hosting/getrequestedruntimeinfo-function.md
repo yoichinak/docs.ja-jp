@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1290aa864a3f65e549bc26173dcd23648b8dee90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074886"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61627983"
 ---
 # <a name="getrequestedruntimeinfo-function"></a>GetRequestedRuntimeInfo 関数
 アプリケーションによって要求された共通言語ランタイム (CLR) のバージョンとディレクトリ情報を取得します。  
@@ -94,25 +94,25 @@ HRESULT GetRequestedRuntimeInfo (
   
  .NET Framework version 2.0 を使用している最新のバージョンに関する情報を取得できます、`GetRequestedRuntimeInfo`メソッドとして、次のとおりです。  
   
--   指定、 `pExe`、 `pwszVersion`、および`pConfigurationFile`パラメーターを null として。  
+- 指定、 `pExe`、 `pwszVersion`、および`pConfigurationFile`パラメーターを null として。  
   
--   RUNTIME_INFO_UPGRADE_VERSION フラグを指定、`RUNTIME_INFO_FLAGS`の列挙体、`runtimeInfoFlags`パラメーター。  
+- RUNTIME_INFO_UPGRADE_VERSION フラグを指定、`RUNTIME_INFO_FLAGS`の列挙体、`runtimeInfoFlags`パラメーター。  
   
  `GetRequestedRuntimeInfo`メソッドでは、次の状況では、最新の CLR バージョンは返しません。  
   
--   特定の CLR バージョンの読み込みを指定するアプリケーション構成ファイルが存在します。 Null を指定した場合でも、.NET Framework は構成ファイルを使用ことに注意してください、`pConfigurationFile`パラメーター。  
+- 特定の CLR バージョンの読み込みを指定するアプリケーション構成ファイルが存在します。 Null を指定した場合でも、.NET Framework は構成ファイルを使用ことに注意してください、`pConfigurationFile`パラメーター。  
   
--   [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) CLR の以前のバージョンを指定するメソッドが呼び出されました。  
+- [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md) CLR の以前のバージョンを指定するメソッドが呼び出されました。  
   
--   CLR の以前のバージョン用にコンパイルされたアプリケーションは現在実行中です。  
+- CLR の以前のバージョン用にコンパイルされたアプリケーションは現在実行中です。  
   
  `runtimeInfoFlags`パラメーターを指定できますアーキテクチャの定数の 1 つだけ、`RUNTIME_INFO_FLAGS`一度に列挙体。  
   
--   RUNTIME_INFO_REQUEST_IA64  
+- RUNTIME_INFO_REQUEST_IA64  
   
--   RUNTIME_INFO_REQUEST_AMD64  
+- RUNTIME_INFO_REQUEST_AMD64  
   
--   RUNTIME_INFO_REQUEST_X86  
+- RUNTIME_INFO_REQUEST_X86  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

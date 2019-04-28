@@ -3,18 +3,18 @@ title: カスタム式エディターの使用
 ms.date: 03/30/2017
 ms.assetid: 0901b58b-e037-44a8-8281-f6f54361cfca
 ms.openlocfilehash: 4bf885911719f2ec673cb515807f0879535aed7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669603"
 ---
 # <a name="using-a-custom-expression-editor"></a>カスタム式エディターの使用
 カスタム式エディターを実装して、式の編集を多機能化したり単純化したりすることができます。 たとえば、次のような場合にカスタム式エディターを使用できます。  
   
--   再ホストされたワークフロー デザイナーで IntelliSense などの高度な編集機能をサポートする場合。 Visual Studio の既定の式エディターは、再ホストされたアプリケーションで使用できないために、この機能を提供する必要があります。  
+- 再ホストされたワークフロー デザイナーで IntelliSense などの高度な編集機能をサポートする場合。 Visual Studio の既定の式エディターは、再ホストされたアプリケーションで使用できないために、この機能を提供する必要があります。  
   
--   Visual Basic の学習または Visual Basic 式を処理するなどの必要はありません、ように式のビジネス アナリスト ユーザーのエクスペリエンスを編集しやすいようにします。  
+- Visual Basic の学習または Visual Basic 式を処理するなどの必要はありません、ように式のビジネス アナリスト ユーザーのエクスペリエンスを編集しやすいようにします。  
   
  カスタム式エディターを実装するには、次の 3 つの基本的な手順を実行する必要があります。  
   

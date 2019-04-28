@@ -3,11 +3,11 @@ title: 入れ子になっていない要素間のリレーションの指定
 ms.date: 03/30/2017
 ms.assetid: e31325da-7691-4d33-acf4-99fccca67006
 ms.openlocfilehash: 4b7b216e58f36302db29c4b4b5176339521b0f17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607918"
 ---
 # <a name="specify-relations-between-elements-with-no-nesting"></a>入れ子になっていない要素間のリレーションの指定
 要素が入れ子になっていない場合、暗黙的なリレーションは作成されません。 使用して入れ子にされていない要素間のリレーションを明示的に指定することができます、ただし、 **msdata:Relationship**注釈。  

@@ -3,11 +3,11 @@ title: (Visual Basic) の非同期アプリにおける再入の処理
 ms.date: 07/20/2015
 ms.assetid: ef3dc73d-13fb-4c5f-a686-6b84148bbffe
 ms.openlocfilehash: 0913a8b422d8ea3d6b38680a26bac143087dd2c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61593945"
 ---
 # <a name="handling-reentrancy-in-async-apps-visual-basic"></a>(Visual Basic) の非同期アプリにおける再入の処理
 非同期コードをアプリに含める場合は、再入を考慮し、場合によっては回避することをお勧めします。これは、完了前に非同期操作の再入力を参照します。 再入の可能性を特定して処理しないと、予期しない結果が発生する可能性があります。  

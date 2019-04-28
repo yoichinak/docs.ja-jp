@@ -3,11 +3,11 @@ title: EDM ジェネレーター (EdmGen.exe)
 ms.date: 03/30/2017
 ms.assetid: fe8297a1-1fc3-48ce-8eeb-f70f63f857aa
 ms.openlocfilehash: 7f06b393cd7e7ccf3d3637d6fb46eb6d983d943a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607672"
 ---
 # <a name="edm-generator-edmgenexe"></a>EDM ジェネレーター (EdmGen.exe)
 

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - GradientStop objects [WPF], animating position of
 ms.assetid: 6f5b8b47-6c32-4b8e-98ee-fdf6515ec843
 ms.openlocfilehash: eeaea4732855155bf711912644f2f5b3f5a4f8d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134811"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651364"
 ---
 # <a name="how-to-animate-the-position-or-color-of-a-gradient-stop"></a>方法: グラデーション ストップの位置または色をアニメーション化する
 この例は、アニメーション化する方法を示しています、<xref:System.Windows.Media.GradientStop.Color%2A>と<xref:System.Windows.Media.GradientStop.Offset%2A>の<xref:System.Windows.Media.GradientStop>オブジェクト。  
@@ -25,11 +25,11 @@ ms.locfileid: "59134811"
 ## <a name="example"></a>例  
  次の例では、アニメーション内の 3 つのグラデーションの分岐点を<xref:System.Windows.Media.LinearGradientBrush>します。 例では、さまざまなグラデーションの分岐点をアニメーション化の 3 つのアニメーションを使用します。  
   
--   最初のアニメーションを<xref:System.Windows.Media.Animation.DoubleAnimation>、アニメーションの最初のグラデーションの<xref:System.Windows.Media.GradientStop.Offset%2A>0.0 ~ 1.0 0.0 に戻ります。 その結果、最初の色の四角形の右側にあるを左側にあるグラデーション シフトで、左側に戻ります。  
+- 最初のアニメーションを<xref:System.Windows.Media.Animation.DoubleAnimation>、アニメーションの最初のグラデーションの<xref:System.Windows.Media.GradientStop.Offset%2A>0.0 ~ 1.0 0.0 に戻ります。 その結果、最初の色の四角形の右側にあるを左側にあるグラデーション シフトで、左側に戻ります。  
   
--   2 番目のアニメーションを<xref:System.Windows.Media.Animation.ColorAnimation>、2 番目のグラデーションのアニメーション化<xref:System.Windows.Media.GradientStop.Color%2A>から<xref:System.Windows.Media.Colors.Purple%2A>に<xref:System.Windows.Media.Colors.Yellow%2A>に再び<xref:System.Windows.Media.Colors.Purple%2A>します。 その結果、黄色および紫へ、グラデーションの中間色を表すは紫から変更します。  
+- 2 番目のアニメーションを<xref:System.Windows.Media.Animation.ColorAnimation>、2 番目のグラデーションのアニメーション化<xref:System.Windows.Media.GradientStop.Color%2A>から<xref:System.Windows.Media.Colors.Purple%2A>に<xref:System.Windows.Media.Colors.Yellow%2A>に再び<xref:System.Windows.Media.Colors.Purple%2A>します。 その結果、黄色および紫へ、グラデーションの中間色を表すは紫から変更します。  
   
--   3 番目のアニメーションでは、もう 1 つ<xref:System.Windows.Media.Animation.ColorAnimation>、3 番目のグラデーション ストップの不透明度をアニメーション化<xref:System.Windows.Media.GradientStop.Color%2A>-1 で戻ります。 その結果、3 番目の色、グラデーションはフェードアウトし、し、再び不透明になります。  
+- 3 番目のアニメーションでは、もう 1 つ<xref:System.Windows.Media.Animation.ColorAnimation>、3 番目のグラデーション ストップの不透明度をアニメーション化<xref:System.Windows.Media.GradientStop.Color%2A>-1 で戻ります。 その結果、3 番目の色、グラデーションはフェードアウトし、し、再び不透明になります。  
   
  [!code-csharp[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushesIntroduction_snip/CSharp/GradientStopAnimationExample.cs#graphicsmmgradientanimationexampleswholepage)]
  [!code-vb[BrushesIntroduction_snip#GraphicsMMGradientAnimationExamplesWholePage](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/gradientstopanimationexample.vb#graphicsmmgradientanimationexampleswholepage)]

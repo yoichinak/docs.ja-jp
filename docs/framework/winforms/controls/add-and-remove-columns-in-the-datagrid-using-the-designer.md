@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], removing columns
 ms.assetid: 9e709f35-0a8c-4e7e-b4c4-bacb7a834077
 ms.openlocfilehash: 80ede9b7bc5bf667e03dc0a745fbc0b5f6c2663a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61640476"
 ---
 # <a name="how-to-add-and-remove-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を追加および削除する
 Windows フォーム<xref:System.Windows.Forms.DataGridView>コントロールがデータを表示するために列を含める必要があります。 コントロールを手動で設定する場合は、する必要があります列を追加する、自分でします。 または、コントロールを生成し、列に自動的に設定するデータ ソースにバインドできます。 データ ソースに表示するより多くの列が含まれている場合は、不要な列を削除できます。  

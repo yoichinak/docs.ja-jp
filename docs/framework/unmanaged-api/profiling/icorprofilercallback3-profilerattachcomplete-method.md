@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6bd3326aa5807bd7f2dd882991d211cbbf873067
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650824"
 ---
 # <a name="icorprofilercallback3profilerattachcomplete-method"></a>ICorProfilerCallback3::ProfilerAttachComplete メソッド
 共通言語ランタイム (CLR)、プロファイラーが呼び出すことができますようになりましたことを示すためにメソッドを呼び出して、 [icorprofilerinfo 3::enumjitedfunctions](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enumjitedfunctions-method.md)と[icorprofilerinfo 3::enummodules](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-enummodules-method.md)キャッチアップ メソッド。  
@@ -36,9 +36,9 @@ HRESULT ProfilerAttachComplete ();
 ## <a name="remarks"></a>Remarks  
  `ProfilerAttachComplete`コールバックが後に発行された、 [icorprofilercallback 3::initializeforattach](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback3-initializeforattach-method.md)メソッドが呼び出されます。 これは、次のことを示します。  
   
--   `InitializeForAttach` でプロファイラーによって要求されたコールバックがアクティブ化されました。  
+- `InitializeForAttach` でプロファイラーによって要求されたコールバックがアクティブ化されました。  
   
--   プロファイラーは、通知されないことを心配せずに、関連付けられた ID でキャッチアップを実行できます。  
+- プロファイラーは、通知されないことを心配せずに、関連付けられた ID でキャッチアップを実行できます。  
   
  CLR はこのコールバックからの戻り値を無視します。  
   

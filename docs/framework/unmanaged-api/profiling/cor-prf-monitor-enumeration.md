@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dbb39eb768069a737f3f89c771bf02fd6bc0c3b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61599053"
 ---
 # <a name="corprfmonitor-enumeration"></a>COR_PRF_MONITOR 列挙型
 プロファイラーがサブスクライブしようとする動作、機能、またはイベントの指定で使用する値を含めます。  
@@ -102,15 +102,15 @@ typedef enum {
 ## <a name="members"></a>メンバー  
  次のセクションでは一覧`COR_PRF_MONITOR`カテゴリ別の列挙型メンバー。 カテゴリは次のとおりです。  
   
--   [フラグが設定されていません](#None)  
+- [フラグが設定されていません](#None)  
   
--   [コールバック フラグ](#Callback)  
+- [コールバック フラグ](#Callback)  
   
--   [機能の有効化フラグ](#Feature)  
+- [機能の有効化フラグ](#Feature)  
   
--   [構成フラグ](#Config)  
+- [構成フラグ](#Config)  
   
--   [複合フラグ](#Composite)  
+- [複合フラグ](#Composite)  
   
 <a name="None"></a>   
 ### <a name="no-flags-set"></a>フラグが設定されていません  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61651624"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum インターフェイス
 ガベージ コレクトされるオブジェクトの列挙子を提供します。  
@@ -39,11 +39,11 @@ ms.locfileid: "59080830"
   
  [COR_GC_REFERENCE](../../../../docs/framework/unmanaged-api/debugging/cor-gc-reference-structure.md)このメソッドによって設定されます。 コレクション内のオブジェクトは、3 種類のオブジェクトを表します。  
   
--   すべてのマネージ スタックからオブジェクト。 これには、マネージ コードだけではなく、共通言語ランタイムによって作成されたオブジェクトでのライブ参照が含まれます。  
+- すべてのマネージ スタックからオブジェクト。 これには、マネージ コードだけではなく、共通言語ランタイムによって作成されたオブジェクトでのライブ参照が含まれます。  
   
--   オブジェクト ハンドル テーブルをします。 強い参照が含まれます (`HNDTYPE_STRONG`と`HNDTYPE_REFCOUNT`) とモジュールの静的変数。  
+- オブジェクト ハンドル テーブルをします。 強い参照が含まれます (`HNDTYPE_STRONG`と`HNDTYPE_REFCOUNT`) とモジュールの静的変数。  
   
--   ファイナライザー キューからのオブジェクト。 ファイナライザー キューでは、ファイナライザーが実行されるまでオブジェクトがルートします。  
+- ファイナライザー キューからのオブジェクト。 ファイナライザー キューでは、ファイナライザーが実行されるまでオブジェクトがルートします。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

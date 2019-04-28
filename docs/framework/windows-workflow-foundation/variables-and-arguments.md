@@ -3,11 +3,11 @@ title: 変数と引数
 ms.date: 03/30/2017
 ms.assetid: d03dbe34-5b2e-4f21-8b57-693ee49611b8
 ms.openlocfilehash: 29ce5222435b68ed13cbc967e58e72a937625e8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669486"
 ---
 # <a name="variables-and-arguments"></a>変数と引数
 Windows Workflow Foundation (WF) では、変数がデータのストレージを表し、引数はアクティビティとの間にデータのフローを表します。 アクティビティには一連の引数があり、その引数はアクティビティの署名を構成します。 また、アクティビティは開発者がワークフローの設計時に変数を追加または削除できる変数のリストを保持しています。 引数は、値を返す式を使用してバインドされます。  

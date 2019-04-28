@@ -3,11 +3,11 @@ title: (Visual Basic) の XML の解析
 ms.date: 07/20/2015
 ms.assetid: 5bcbd7e2-d9f1-4c8f-80d6-39915fe17bd1
 ms.openlocfilehash: ec9df29c239d2780b4fc13bb101a22c54eb43da5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61665924"
 ---
 # <a name="parsing-xml-visual-basic"></a>(Visual Basic) の XML の解析
 このセクションのトピックでは、XML ドキュメントを解析する方法について説明します。  

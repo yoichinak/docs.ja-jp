@@ -6,11 +6,11 @@ helpviewer_keywords:
 - security [WCF], authentication
 ms.assetid: 9254d873-843d-4c6e-bea4-8184ac3e44f4
 ms.openlocfilehash: ebff66e185bdca75a0150b22a16392bfd08892d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165484"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61595960"
 ---
 # <a name="authentication-in-wcf"></a>WCF での認証
 次のトピックでは、たとえば、認証を提供する Windows Communication Foundation (WCF)、Windows 認証、X.509 証明書とユーザー名およびパスワードの数の異なるメカニズムを説明します。  

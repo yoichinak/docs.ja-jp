@@ -10,11 +10,11 @@ helpviewer_keywords:
 - interface implementation [Visual Basic], Implements statement
 ms.assetid: 1fafb83f-f55a-4215-8ea9-681e8622613d
 ms.openlocfilehash: 1f0c6b052ead303e0b43465dac2067422abc4ef8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61637740"
 ---
 # <a name="implements-statement"></a>Implements ステートメント
 1 つ以上のインターフェイス、またはインターフェイス メンバーの場合、クラスで実装する必要がありますまたはが表示される構造体の定義を指定します。  

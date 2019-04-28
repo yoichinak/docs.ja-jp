@@ -3,11 +3,11 @@ title: <defaultCertificate> 要素
 ms.date: 03/30/2017
 ms.assetid: f1ddf364-9a00-45d3-b989-ff381c154ce6
 ms.openlocfilehash: c94531d10b7c0ef5ca0ee1f2d5683d0a259a2537
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100601"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644462"
 ---
 # <a name="defaultcertificate-element"></a>\<defaultCertificate > 要素
 ネゴシエーション プロトコル経由でサービスまたは STS が証明書を提供しないときに使用される X.509 証明書を指定します。  

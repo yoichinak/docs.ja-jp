@@ -10,18 +10,18 @@ helpviewer_keywords:
 - MonthCalendar control [Windows Forms], formatting display
 ms.assetid: d09b95c9-e108-4608-9b31-b9100c0677bf
 ms.openlocfilehash: 233143099996759cc006b3f28b984938554a0d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666515"
 ---
 # <a name="how-to-change-the-windows-forms-monthcalendar-controls-appearance"></a>方法: Windows フォームの MonthCalendar コントロールの外観を変更する
 Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロールでは、さまざまな方法で、カレンダーの外観をカスタマイズできます。 たとえば、配色を設定でき、または週数と現在の日付を非表示に選択できます。  
   
 ### <a name="to-change-the-month-calendars-color-scheme"></a>月間予定表の配色を変更するには  
   
--   プロパティを設定します。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>と<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>します。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>も、プロパティは、曜日のフォントの色を決定します。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>プロパティ直前および直後の表示されている月または数か月の日付の色を決定します。  
+- プロパティを設定します。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>、<xref:System.Windows.Forms.MonthCalendar.TitleForeColor%2A>と<xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>します。 <xref:System.Windows.Forms.MonthCalendar.TitleBackColor%2A>も、プロパティは、曜日のフォントの色を決定します。 <xref:System.Windows.Forms.MonthCalendar.TrailingForeColor%2A>プロパティ直前および直後の表示されている月または数か月の日付の色を決定します。  
   
     ```vb  
     MonthCalendar1.TitleBackColor = System.Drawing.Color.Blue  
@@ -46,7 +46,7 @@ Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロール�
   
 ### <a name="to-display-the-current-date-at-the-bottom-of-the-control"></a>コントロールの下部にある現在の日付を表示するには  
   
--   <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> プロパティを `true`に設定します。 次の例は、フォームがダブルクリックされたときに、今日の日付を省略すると表示を切り替えます。  
+- <xref:System.Windows.Forms.MonthCalendar.ShowToday%2A> プロパティを `true`に設定します。 次の例は、フォームがダブルクリックされたときに、今日の日付を省略すると表示を切り替えます。  
   
     ```vb  
     Private Sub Form1_DoubleClick(ByVal sender As Object, _  
@@ -87,7 +87,7 @@ Windows フォーム<xref:System.Windows.Forms.MonthCalendar>コントロール�
   
 ### <a name="to-display-week-numbers"></a>週番号を表示するには  
   
--   <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> プロパティを `true`に設定します。 コードで、または [プロパティ] ウィンドウで、このプロパティを設定できます。  
+- <xref:System.Windows.Forms.MonthCalendar.ShowWeekNumbers%2A> プロパティを `true`に設定します。 コードで、または [プロパティ] ウィンドウで、このプロパティを設定できます。  
   
      別の列の週の最初の日の左側に週番号が表示されます。  
   

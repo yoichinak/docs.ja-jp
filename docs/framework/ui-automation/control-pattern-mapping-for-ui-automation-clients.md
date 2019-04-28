@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
 ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61609894"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI オートメーション クライアントのコントロール パターン マッピング
 > [!NOTE]
@@ -20,11 +20,11 @@ ms.locfileid: "59101134"
   
  次の表に、コントロール パターンを次のカテゴリに整理して示します。  
   
--   サポートされています。 コントロールはこのコントロール パターンをサポートする必要があります。  
+- サポートされています。 コントロールはこのコントロール パターンをサポートする必要があります。  
   
--   条件付きサポート。 コントロールは、その状態に応じてこのコントロール パターンをサポートする場合があります。  
+- 条件付きサポート。 コントロールは、その状態に応じてこのコントロール パターンをサポートする場合があります。  
   
--   サポートされていません。 コントロールはこのコントロール パターンをサポートしません。カスタム コントロールは、このコントロール パターンをサポートする場合があります。  
+- サポートされていません。 コントロールはこのコントロール パターンをサポートしません。カスタム コントロールは、このコントロール パターンをサポートする場合があります。  
   
 > [!NOTE]
 >  一部のコントロールは、その機能に応じて複数のコントロール パターンを条件付きでサポートします。 たとえば、メニュー項目コントロールは、メニュー コントロール内での機能に応じて、 <xref:System.Windows.Automation.InvokePattern>、 <xref:System.Windows.Automation.ExpandCollapsePattern>、 <xref:System.Windows.Automation.TogglePattern>、または <xref:System.Windows.Automation.SelectionItemPattern> コントロール パターンを条件付きでサポートします。  

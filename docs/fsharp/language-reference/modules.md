@@ -3,11 +3,11 @@ title: モジュール
 description: F# のモジュールの値、型、および F# のプログラム内の関数値などの F# コードでのグループ化の方法について説明します。
 ms.date: 04/24/2017
 ms.openlocfilehash: 9e5bef4ffe3301a69bbe32483625652d988f8a35
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611114"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666319"
 ---
 # <a name="modules"></a>モジュール
 
@@ -54,7 +54,7 @@ F# のモジュールは、型、値、関数の値のコードなどの F# コ�
 
 `Namespace1.Namespace2.ModuleName.Identifier`
 
-モジュールまたは 1 つ以上のコードを簡略化する名前空間を開くことができます。 開く名前空間とモジュールの詳細については、[インポート宣言。`open`キーワード](import-declarations-the-open-keyword.md)を参照してください。
+モジュールまたは 1 つ以上のコードを簡略化する名前空間を開くことができます。 開く名前空間とモジュールの詳細については、次を参照してください。[インポート宣言。`open`キーワード](import-declarations-the-open-keyword.md)します。
 
 次のコード例では、ファイルの末尾までのすべてのコードを含む最上位レベルのモジュールを示します。
 

@@ -3,11 +3,11 @@ title: メッセージ エンコーダーを選択する
 ms.date: 03/30/2017
 ms.assetid: 2204d82d-d962-4922-a79e-c9a231604f19
 ms.openlocfilehash: 0c960505d6c8368396cddebe37c76c8d95550727
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61608386"
 ---
 # <a name="choosing-a-message-encoder"></a>メッセージ エンコーダーを選択する
 このトピックでは、Windows Communication Foundation (WCF) に含まれているメッセージ エンコーダーを選択するための基準をについて説明します。 バイナリ、テキスト、および Message Transmission Optimization Mechanism (MTOM)。  
@@ -21,18 +21,18 @@ ms.locfileid: "58409485"
 ## <a name="system-provided-encoders"></a>システム指定のエンコーダー  
  WCF には、次の 3 つのクラスによって表される、3 つのメッセージ エンコーダーが含まれています。  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> は、書式なし XML エンコーディングと SOAP エンコーディングの両方をサポートするテキスト メッセージ エンコーダーです。 テキスト メッセージ エンコーダーの書式なし XML エンコーディング モードは、テキスト ベースの SOAP エンコーディングと区別するために、"POX" (Plain Old XML) と呼ばれます。 POX を有効にするには、<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> プロパティを <xref:System.ServiceModel.Channels.MessageVersion.None%2A> に設定します。 WCF 以外のエンドポイントと相互運用するには、テキスト メッセージ エンコーダーを使用します。  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> は、書式なし XML エンコーディングと SOAP エンコーディングの両方をサポートするテキスト メッセージ エンコーダーです。 テキスト メッセージ エンコーダーの書式なし XML エンコーディング モードは、テキスト ベースの SOAP エンコーディングと区別するために、"POX" (Plain Old XML) と呼ばれます。 POX を有効にするには、<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement.MessageVersion%2A> プロパティを <xref:System.ServiceModel.Channels.MessageVersion.None%2A> に設定します。 WCF 以外のエンドポイントと相互運用するには、テキスト メッセージ エンコーダーを使用します。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>、、バイナリ メッセージ エンコーダーは、コンパクトなバイナリ形式を使用してと WCF WCF の通信に最適化されたため相互運用可能なではありません。 これが、WCF は、すべてのエンコーダーのほとんどのパフォーマンスの高いエンコーダーです。  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>、、バイナリ メッセージ エンコーダーは、コンパクトなバイナリ形式を使用してと WCF WCF の通信に最適化されたため相互運用可能なではありません。 これが、WCF は、すべてのエンコーダーのほとんどのパフォーマンスの高いエンコーダーです。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> は、MTOM エンコーディングを使用して、メッセージの文字エンコーディングとバージョン管理を指定するバインド要素です。 MTOM は、WCF メッセージでバイナリ データを転送するための効率的なテクノロジです。 MTOM エンコーダーは、効率と相互運用性のバランスをとろうとします。 MTOM エンコーディングは、ほとんどの XML をテキスト形式で転送しますが、大きいサイズのバイナリ データ ブロックはテキストに変換せずにそのまま転送することによって最適化します。 WCF が提供するエンコーダー間で、効率性という点は、MTOM は、(最も遅い) 間のテキストとバイナリ (最も速い) です。  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> は、MTOM エンコーディングを使用して、メッセージの文字エンコーディングとバージョン管理を指定するバインド要素です。 MTOM は、WCF メッセージでバイナリ データを転送するための効率的なテクノロジです。 MTOM エンコーダーは、効率と相互運用性のバランスをとろうとします。 MTOM エンコーディングは、ほとんどの XML をテキスト形式で転送しますが、大きいサイズのバイナリ データ ブロックはテキストに変換せずにそのまま転送することによって最適化します。 WCF が提供するエンコーダー間で、効率性という点は、MTOM は、(最も遅い) 間のテキストとバイナリ (最も速い) です。  
   
 ## <a name="how-to-choose-a-message-encoder"></a>メッセージ エンコーダーを選択する方法  
  メッセージ エンコーダーを選択するために使用される一般的な要因を、次の表に示します。 アプリケーションにとって重要な要因に優先順位を与えて、それらの要因に対して最適なメッセージ エンコーダーを選択します。 この表には示されていないその他の要因と、アプリケーションで必要になることがあるカスタム メッセージ エンコーダーも考慮するようにしてください。  
   
 |要因|説明|この要因をサポートするエンコーダー|  
 |------------|-----------------|---------------------------------------|  
-|サポートされている文字セット|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> UTF8 と UTF16 Unicode のみのサポート (*ビッグ エンディアン*と*リトル エンディアン*) エンコーディング。 UTF7 や ASCII など、別のエンコーディングが要求される場合はカスタム エンコーディングを使用する必要があります。 サンプルのカスタム エンコーダーでは、[カスタム メッセージ エンコーダー](https://go.microsoft.com/fwlink/?LinkId=119857)を参照してください。|テキスト|  
+|サポートされている文字セット|<xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement> <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement> UTF8 と UTF16 Unicode のみのサポート (*ビッグ エンディアン*と*リトル エンディアン*) エンコーディング。 UTF7 や ASCII など、別のエンコーディングが要求される場合はカスタム エンコーディングを使用する必要があります。 サンプルのカスタム エンコーダーでは、次を参照してください。[カスタム メッセージ エンコーダー](https://go.microsoft.com/fwlink/?LinkId=119857)します。|テキスト|  
 |検査|検査は、転送中にメッセージを調べる機能です。 SOAP の使用に関係なく、テキスト エンコーディングでは、多くのアプリケーションで特別なツールを使用することなくメッセージの検査と分析が可能です。 メッセージまたはトランスポートのいずれかのレベルで転送セキュリティを使用すると、メッセージの検査機能に影響がある点に注意してください。 機密性はメッセージが検査されないように保護し、整合性はメッセージが変更されないように保護します。|テキスト|  
 |信頼性|信頼性は、転送エラーに対するエンコーダーの復元能力です。 信頼性はメッセージ層、トランスポート層、またはアプリケーション層でも提供できます。 すべての標準の WCF エンコーダーは、別のレイヤーが信頼性を提供するいると仮定します。 エンコーダーは、転送エラーから回復する機能をほとんど備えていません。|なし|  
 |単純さ|単純さは、エンコード仕様に対応するエンコーダーとデコーダーの作成の容易さを表します。 テキスト エンコーディングは、単純さの面で特に優れており、POX テキスト エンコーディングは SOAP 処理のサポートが不要なため、さらに優れています。|テキスト (POX)|  

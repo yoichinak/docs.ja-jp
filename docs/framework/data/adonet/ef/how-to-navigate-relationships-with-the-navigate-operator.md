@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 79996d2d-9b03-4a9d-82cc-7c5e7c2ad93d
 ms.openlocfilehash: 94789bcc007056a26d206903dc554ffe35999823
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61607957"
 ---
 # <a name="how-to-navigate-relationships-with-the-navigate-operator"></a>方法: Navigate 演算子でリレーションシップをナビゲートする
 このトピックでは、<xref:System.Data.EntityClient.EntityCommand> オブジェクトを使用して概念モデルに対してコマンドを実行する方法と、<xref:System.Data.Metadata.Edm.RefType> を使用して <xref:System.Data.EntityClient.EntityDataReader> の結果を取得する方法を示します。  

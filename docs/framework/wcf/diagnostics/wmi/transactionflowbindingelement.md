@@ -3,11 +3,11 @@ title: TransactionFlowBindingElement
 ms.date: 03/30/2017
 ms.assetid: 0a9656fe-2400-45ca-ad79-92715c8cf190
 ms.openlocfilehash: a58d5620abbb636480ceea3020552246ae284842
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641685"
 ---
 # <a name="transactionflowbindingelement"></a>TransactionFlowBindingElement
 TransactionFlowBindingElement  
