@@ -2,20 +2,14 @@
 title: 暗号設定スキーマ
 ms.date: 03/30/2017
 helpviewer_keywords:
-- configuration schema [.NET Framework], cryptography
-- elements [.NET Framework], cryptography
-- schema configuration settings
-- cryptography, settings schema
-- cryptography, mapping algorithm names
-- configuration sections [.NET Framework]
-- configuration settings [.NET Framework], cryptography
+  - 'configuration schema [.NET Framework], cryptography'
+  - 'elements [.NET Framework], cryptography'
+  - schema configuration settings
+  - 'cryptography, settings schema'
+  - 'cryptography, mapping algorithm names'
+  - 'configuration sections [.NET Framework]'
+  - 'configuration settings [.NET Framework], cryptography'
 ms.assetid: 1f55050a-b2a3-4868-a3c0-da20826150f3
-ms.openlocfilehash: 00b04cc2175f4bb4cc0b74602cd3c26f4a4e342f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184458"
 ---
 # <a name="cryptography-settings-schema"></a>暗号設定スキーマ
 暗号設定スキーマには、アルゴリズムの表示名を、暗号化アルゴリズムを実装するクラスに割り当てる方法を指定する要素が含まれます。  

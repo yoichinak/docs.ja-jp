@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
 ms.openlocfilehash: 22d2ce71d850fc799304cadf7e8d7d8af2670d5d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856601"
 ---
 # <a name="data-transfer-architectural-overview"></a>データ転送のアーキテクチャの概要
 Windows Communication Foundation (WCF) は、メッセージング インフラストラクチャと考えることができます。 WCF は、メッセージを受信し、それらのメッセージを処理し、さらにアクションを実行するためにユーザー コードにディスパッチすることができます。また、ユーザー コードで指定されたデータからメッセージを作成し、送信先に配布することもできます。 ここでは、メッセージを処理するためのアーキテクチャと格納されるデータについて説明します。このトピックは、上級開発者を対象としています。 データを送受信する方法のより簡単なタスク指向の概要については、「 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。  
@@ -66,9 +66,9 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
 ### <a name="getting-data-from-a-message-body"></a>メッセージ本文からのデータの取得  
  メッセージ本文に格納されたデータは、主に次の 2 とおりの方法で抽出できます。  
   
--   <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> メソッドを呼び出し、XML ライターに渡すことにより、メッセージ本文全体を一度に取得できます。 メッセージ本文全体がこのライターに書き込まれます。 メッセージ本文全体を一度に取得することを、 *メッセージの書き込み*とも呼びます。 書き込みは、メッセージの送信時に主にチャネル スタックによって実行されます。チャネル スタックには、通常、メッセージ本文全体にアクセスし、本文全体をエンコードして送信する部分があります。  
+- <xref:System.ServiceModel.Channels.Message.WriteBodyContents%28System.Xml.XmlDictionaryWriter%29> メソッドを呼び出し、XML ライターに渡すことにより、メッセージ本文全体を一度に取得できます。 メッセージ本文全体がこのライターに書き込まれます。 メッセージ本文全体を一度に取得することを、 *メッセージの書き込み*とも呼びます。 書き込みは、メッセージの送信時に主にチャネル スタックによって実行されます。チャネル スタックには、通常、メッセージ本文全体にアクセスし、本文全体をエンコードして送信する部分があります。  
   
--   メッセージ本文から情報を取得するもう 1 つの方法は、 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> を呼び出し、XML リーダーを取得する方法です。 リーダーでメソッドを呼び出すことにより、必要に応じてメッセージ本文に順次アクセスできます。 メッセージ本文を少しずつ取得することを、 *メッセージの読み取り*とも呼びます。 メッセージの読み取りは、メッセージの受信時にサービス フレームワークによって主に使用されます。 たとえば、 <xref:System.Runtime.Serialization.DataContractSerializer> の使用時に、サービス フレームワークは本文で XML リーダーを取得し、逆シリアル化エンジンに渡します。逆シリアル化エンジンは、要素単位でメッセージを読み取り、対応するオブジェクト グラフの構築を開始します。  
+- メッセージ本文から情報を取得するもう 1 つの方法は、 <xref:System.ServiceModel.Channels.Message.GetReaderAtBodyContents> を呼び出し、XML リーダーを取得する方法です。 リーダーでメソッドを呼び出すことにより、必要に応じてメッセージ本文に順次アクセスできます。 メッセージ本文を少しずつ取得することを、 *メッセージの読み取り*とも呼びます。 メッセージの読み取りは、メッセージの受信時にサービス フレームワークによって主に使用されます。 たとえば、 <xref:System.Runtime.Serialization.DataContractSerializer> の使用時に、サービス フレームワークは本文で XML リーダーを取得し、逆シリアル化エンジンに渡します。逆シリアル化エンジンは、要素単位でメッセージを読み取り、対応するオブジェクト グラフの構築を開始します。  
   
  メッセージ本文を取得できるのは一度だけです。 これにより、転送専用ストリームを使用することが可能になります。 たとえば、 <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> から読み取り、XML Infoset として結果を返す <xref:System.IO.FileStream> のオーバーライドを作成できます。 ファイルの先頭まで「巻き戻す」必要はありません。  
   
@@ -160,11 +160,11 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
 ### <a name="the-istreamprovider-interface"></a>IStreamProvider インターフェイス  
  ストリーミングされた本文を含む送信メッセージを XML ライターに書き込むときに、 <xref:System.ServiceModel.Channels.Message> は <xref:System.ServiceModel.Channels.Message.OnWriteBodyContents%28System.Xml.XmlDictionaryWriter%29> 実装で次のような一連の呼び出しを使用します。  
   
--   ストリームの前に必要な情報を書き込みます (XML 開始タグなど)。  
+- ストリームの前に必要な情報を書き込みます (XML 開始タグなど)。  
   
--   ストリームを書き込みます。  
+- ストリームを書き込みます。  
   
--   ストリームの後に情報を書き込みます (XML 終了タグなど)。  
+- ストリームの後に情報を書き込みます (XML 終了タグなど)。  
   
  これは、テキスト XML エンコーディングに類似するエンコードで有効に機能します。 ただし、XML Infoset 情報 (XML 要素を開始および終了するためのタグなど) を、要素内に含まれるデータと共には配置しないエンコードもあります。 たとえば、MTOM エンコーディングでは、メッセージは複数の部分に分割されます。 ある部分に XML Infoset が含まれ、要素の実際のコンテンツについては他の部分への参照が含まれている場合があります。 通常、XML Infoset は、ストリーミングされたコンテンツと比べてサイズが小さいため、Infoset をバッファーに格納し、これを書き込んだ後に、ストリーミング方式でコンテンツを書き込むことには意味があります。 これは、終了要素タグが書き込まれるまでは、ストリームを書き込むことができないことを意味します。  
   
