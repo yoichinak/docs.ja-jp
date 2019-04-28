@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
 ms.openlocfilehash: 15ff9ad710b49caf35767acf498a8e55b238d84c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759922"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置
 フォーム上のコントロールを正確に配置することは、多くのアプリケーションで優先度の高い作業です。 Windows フォーム デザイナーでは、これを実現するさまざまなレイアウト ツールを提供します。 最も重要なの 1 つは、<xref:System.Windows.Forms.Design.Behavior.SnapLine>機能します。  
@@ -23,27 +23,27 @@ ms.locfileid: "59343039"
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   Windows フォーム プロジェクトの作成  
+- Windows フォーム プロジェクトの作成  
   
--   スペーシングとスナップ線を使用してコントロールの配置  
+- スペーシングとスナップ線を使用してコントロールの配置  
   
--   フォームやコンテナーの余白に合わせて調整  
+- フォームやコンテナーの余白に合わせて調整  
   
--   グループ化されたコントロールに合わせて調整  
+- グループ化されたコントロールに合わせて調整  
   
--   スナップ線を使用して、サイズのアウトラインでコントロールを配置するには  
+- スナップ線を使用して、サイズのアウトラインでコントロールを配置するには  
   
--   コントロールをツールボックスからドラッグしたときに、スナップ線を使用します。  
+- コントロールをツールボックスからドラッグしたときに、スナップ線を使用します。  
   
--   スナップ線を使用してコントロールのサイズ変更  
+- スナップ線を使用してコントロールのサイズ変更  
   
--   コントロールのテキストとラベルの整列  
+- コントロールのテキストとラベルの整列  
   
--   キーボード ナビゲーションとスナップ線を使用します。  
+- キーボード ナビゲーションとスナップ線を使用します。  
   
--   スナップ線とレイアウト パネル  
+- スナップ線とレイアウト パネル  
   
--   スナップ線を無効にします。  
+- スナップ線を無効にします。  
   
  完了したら、レイアウトにスナップ線の機能で果たす役割について理解があります。  
   
@@ -216,7 +216,7 @@ ms.locfileid: "59343039"
   
 #### <a name="to-selectively-disable-snaplines"></a>スナップ線を無効にするには  
   
--   ALT キーを押しておよびコントロールをフォーム上に移動します。  
+- ALT キーを押しておよびコントロールをフォーム上に移動します。  
   
      スナップ線が表示されないと、コントロールが潜在的な配置位置にスナップいないことに注意してください。  
   
@@ -233,9 +233,9 @@ ms.locfileid: "59343039"
 ## <a name="next-steps"></a>次の手順  
  スナップ線は、直観的に、フォームのコントロールの配置を提供します。 さらに詳しく調べるための推奨事項を次に示します。  
   
--   入れ子にしてください、<xref:System.Windows.Forms.GroupBox>内に別のコントロール<xref:System.Windows.Forms.GroupBox>コントロール。 場所、<xref:System.Windows.Forms.Button>子内のコントロール<xref:System.Windows.Forms.GroupBox>制御、および親内の別<xref:System.Windows.Forms.GroupBox>コントロール。 移動、<xref:System.Windows.Forms.Button>スナップ線がコンテナーの境界を越える方法を確認するには、約コントロール。  
+- 入れ子にしてください、<xref:System.Windows.Forms.GroupBox>内に別のコントロール<xref:System.Windows.Forms.GroupBox>コントロール。 場所、<xref:System.Windows.Forms.Button>子内のコントロール<xref:System.Windows.Forms.GroupBox>制御、および親内の別<xref:System.Windows.Forms.GroupBox>コントロール。 移動、<xref:System.Windows.Forms.Button>スナップ線がコンテナーの境界を越える方法を確認するには、約コントロール。  
   
--   列を作成する<xref:System.Windows.Forms.TextBox>コントロールとの対応する列<xref:System.Windows.Forms.Label>コントロール。 値を設定、<xref:System.Windows.Forms.Label>コントロールの<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティを`true`します。 移動するスナップ線を使用して、<xref:System.Windows.Forms.Label>コントロールが表示されるテキスト内のテキストに揃えて配置されますので、<xref:System.Windows.Forms.TextBox>コントロール。  
+- 列を作成する<xref:System.Windows.Forms.TextBox>コントロールとの対応する列<xref:System.Windows.Forms.Label>コントロール。 値を設定、<xref:System.Windows.Forms.Label>コントロールの<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティを`true`します。 移動するスナップ線を使用して、<xref:System.Windows.Forms.Label>コントロールが表示されるテキスト内のテキストに揃えて配置されますので、<xref:System.Windows.Forms.TextBox>コントロール。  
   
  Windows ユーザー インターフェイスの設計については、ブックを参照してください*Microsoft Windows User Experience, Official Guidelines for ユーザー インターフェイス開発者および設計者*Redmond、WA:。Microsoft Press、1999 年。 (USBN:0-7356-0566-1).  
   

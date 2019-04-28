@@ -14,11 +14,11 @@ ms.assetid: 5a0e41bf-f99c-4692-8799-f89617f5bcf9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87170035df47e7605d25531df4b0759bf121ad80
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754350"
 ---
 # <a name="how-to-create-initialize-and-configure-trace-switches"></a>方法: トレース スイッチを作成、初期化、および構成する
 トレース スイッチを使用すると、トレース出力を有効/無効にしたり、トレースの出力をフィルター処理したりできます。  
@@ -75,11 +75,11 @@ ms.locfileid: "59325710"
   
 2. プロジェクトに構成ファイル (app.config または Web.config) が含まれない場合は、**[プロジェクト]** メニューから **[新しい項目の追加]** を選択します。  
   
-    -   **Visual Basic:** **新しい項目の追加** ダイアログ ボックスで、選択**アプリケーション構成ファイル**します。  
+    - **Visual Basic:** **新しい項目の追加** ダイアログ ボックスで、選択**アプリケーション構成ファイル**します。  
   
          アプリケーション構成ファイルが作成され、開かれます。 これは、XML ドキュメントであり、ルート要素は `<configuration>.` です。  
   
-    -   **Visual C#:** **新しい項目の追加** ダイアログ ボックスで、選択**XML ファイル**します。 このファイルに **app.config** という名前を付けます。XML エディターで、XML 宣言の後に次の XML を追加します。  
+    - **Visual C#:** **新しい項目の追加** ダイアログ ボックスで、選択**XML ファイル**します。 このファイルに **app.config** という名前を付けます。XML エディターで、XML 宣言の後に次の XML を追加します。  
   
         ```xml  
         <configuration>  

@@ -20,11 +20,11 @@ helpviewer_keywords:
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
 ms.openlocfilehash: 56b97170884ef31004b06b0eb50a8d79ad1d041c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757224"
 ---
 # <a name="xaml-overview-wpf"></a>XAML の概要 (WPF)
 このトピックでは、XAML 言語の機能について説明し、記述する XAML を使用する方法を示して[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 このトピックでは XAML を具体的には説明によって実装される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 XAML 自体よりも大きく、言語の概念は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
@@ -115,11 +115,11 @@ ms.locfileid: "59102831"
 ### <a name="text-content"></a>テキストの内容  
  XAML 要素の数が少ないは、その内容としてテキストを直接処理できます。 これを有効にするには、場合は true、次の場合のいずれかの必要があります。  
   
--   クラスは、コンテンツのプロパティを宣言する必要があり、そのコンテンツ プロパティが文字列に割り当てることができるにする必要があります (タイプ<xref:System.Object>)。 たとえば、いずれか<xref:System.Windows.Controls.ContentControl>を使用して<xref:System.Windows.Controls.ContentControl.Content%2A>型は、コンテンツのプロパティとして<xref:System.Object>、これは実用的で、次の使用法をサポートし、<xref:System.Windows.Controls.ContentControl>など、 <xref:System.Windows.Controls.Button>:`<Button>Hello</Button>`します。  
+- クラスは、コンテンツのプロパティを宣言する必要があり、そのコンテンツ プロパティが文字列に割り当てることができるにする必要があります (タイプ<xref:System.Object>)。 たとえば、いずれか<xref:System.Windows.Controls.ContentControl>を使用して<xref:System.Windows.Controls.ContentControl.Content%2A>型は、コンテンツのプロパティとして<xref:System.Object>、これは実用的で、次の使用法をサポートし、<xref:System.Windows.Controls.ContentControl>など、 <xref:System.Windows.Controls.Button>:`<Button>Hello</Button>`します。  
   
--   型は、ケースのテキストの内容がその型コンバーターの初期化テキストとして使用される型コンバーターを宣言する必要があります。 たとえば、`<Brush>Blue</Brush>` のようにします。 この場合は、実際にはあまり一般的です。  
+- 型は、ケースのテキストの内容がその型コンバーターの初期化テキストとして使用される型コンバーターを宣言する必要があります。 たとえば、`<Brush>Blue</Brush>` のようにします。 この場合は、実際にはあまり一般的です。  
   
--   種類は、既知の XAML 言語プリミティブである必要があります。  
+- 種類は、既知の XAML 言語プリミティブである必要があります。  
   
 ### <a name="content-properties-and-collection-syntax-combined"></a>コンテンツのプロパティとコレクション構文の結合  
  次の例について考えます。  
@@ -133,9 +133,9 @@ ms.locfileid: "59102831"
   
  ここでは、各<xref:System.Windows.Controls.Button>の子要素は、<xref:System.Windows.Controls.StackPanel>します。 これは、2 つのさまざまな理由で 2 つのタグを省略する効率的で直感的なマークアップです。  
   
--   **省略された StackPanel.Children プロパティ要素:** <xref:System.Windows.Controls.StackPanel>から派生した<xref:System.Windows.Controls.Panel>します。 <xref:System.Windows.Controls.Panel> 定義<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>としてその XAML コンテンツのプロパティ。  
+- **省略された StackPanel.Children プロパティ要素:** <xref:System.Windows.Controls.StackPanel>から派生した<xref:System.Windows.Controls.Panel>します。 <xref:System.Windows.Controls.Panel> 定義<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>としてその XAML コンテンツのプロパティ。  
   
--   **省略された UIElementCollection object 要素:**<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>プロパティには、型<xref:System.Windows.Controls.UIElementCollection>、実装する<xref:System.Collections.IList>します。 コレクションの処理などの XAML のルールに基づいて、コレクションの要素タグを省略できます<xref:System.Collections.IList>します。 (この場合、<xref:System.Windows.Controls.UIElementCollection>実際にインスタンス化できないため、既定のコンス トラクターは公開されませんしているため、<xref:System.Windows.Controls.UIElementCollection>オブジェクトの要素をコメント アウトされた表示)。  
+- **省略された UIElementCollection object 要素:**<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>プロパティには、型<xref:System.Windows.Controls.UIElementCollection>、実装する<xref:System.Collections.IList>します。 コレクションの処理などの XAML のルールに基づいて、コレクションの要素タグを省略できます<xref:System.Collections.IList>します。 (この場合、<xref:System.Windows.Controls.UIElementCollection>実際にインスタンス化できないため、既定のコンス トラクターは公開されませんしているため、<xref:System.Windows.Controls.UIElementCollection>オブジェクトの要素をコメント アウトされた表示)。  
   
 ```xaml  
 <StackPanel>  
@@ -210,15 +210,15 @@ ms.locfileid: "59102831"
 ### <a name="the-x-prefix"></a>X: プレフィックス  
  前のルート要素例プレフィックス`x:`XAML 名前空間をマップするために使用された [!INCLUDE[TLA#tla_xamlxmlnsv1](../../../../includes/tlasharptla-xamlxmlnsv1-md.md)] 、これは XAML 言語をサポートする専用の XAML 名前空間を構築します。 これは、`x:`のプロジェクトのテンプレートで、例については、およびこのドキュメントでこの XAML 名前空間のマッピング プレフィックスで使用[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)]します。 XAML 言語の XAML 名前空間には、XAML で非常に頻繁に使用するいくつかのプログラミング構成要素が含まれます。 最も一般的なの一覧を次に`x:`を使用するプログラミング構成要素のプレフィックスします。  
   
--   [X:key](../../xaml-services/x-key-directive.md):内の各リソースの一意のキーの設定、 <xref:System.Windows.ResourceDictionary> (またはその他のフレームワークのようなディクショナリの概念)。 `x:Key` 90% のアカウントではおそらく、`x:`使用法の一般的な WPF アプリケーションのマークアップに表示されます。  
+- [X:key](../../xaml-services/x-key-directive.md):内の各リソースの一意のキーの設定、 <xref:System.Windows.ResourceDictionary> (またはその他のフレームワークのようなディクショナリの概念)。 `x:Key` 90% のアカウントではおそらく、`x:`使用法の一般的な WPF アプリケーションのマークアップに表示されます。  
   
--   [X:class](../../xaml-services/x-class-directive.md):指定します、 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] XAML ページの分離コードを提供するクラスの名前空間とクラス名。 1 つの WPF プログラミング モデルでは、分離コードをサポートするために、このようなクラスがあり、ほぼ常に表示するため`x:`リソースがない場合でも、マップします。  
+- [X:class](../../xaml-services/x-class-directive.md):指定します、 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] XAML ページの分離コードを提供するクラスの名前空間とクラス名。 1 つの WPF プログラミング モデルでは、分離コードをサポートするために、このようなクラスがあり、ほぼ常に表示するため`x:`リソースがない場合でも、マップします。  
   
--   [X:name](../../xaml-services/x-name-directive.md):オブジェクト要素が処理された後、実行時のコードに存在するインスタンスの実行時のオブジェクト名を指定します。 WPF 定義されている同等のプロパティを頻繁に使用する一般に、 [X:name](../../xaml-services/x-name-directive.md)します。 このようなプロパティ具体的には CLR バッキング プロパティにマップされ、したがってアプリケーションのプログラミングの方が便利で頻繁に使用するコードの実行時に初期化された XAML から名前付きの要素を検索します。 このようなプロパティは、最も一般的な<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>します。 使用することもあります[X:name](../../xaml-services/x-name-directive.md)と同等の WPF フレームワーク-レベル<xref:System.Windows.FrameworkElement.Name%2A>プロパティが特定の種類でサポートされていません。 これは、特定のアニメーション シナリオで発生します。  
+- [X:name](../../xaml-services/x-name-directive.md):オブジェクト要素が処理された後、実行時のコードに存在するインスタンスの実行時のオブジェクト名を指定します。 WPF 定義されている同等のプロパティを頻繁に使用する一般に、 [X:name](../../xaml-services/x-name-directive.md)します。 このようなプロパティ具体的には CLR バッキング プロパティにマップされ、したがってアプリケーションのプログラミングの方が便利で頻繁に使用するコードの実行時に初期化された XAML から名前付きの要素を検索します。 このようなプロパティは、最も一般的な<xref:System.Windows.FrameworkElement.Name%2A?displayProperty=nameWithType>します。 使用することもあります[X:name](../../xaml-services/x-name-directive.md)と同等の WPF フレームワーク-レベル<xref:System.Windows.FrameworkElement.Name%2A>プロパティが特定の種類でサポートされていません。 これは、特定のアニメーション シナリオで発生します。  
   
--   [X:static](../../xaml-services/x-static-markup-extension.md):それ以外の場合、XAML と互換性のあるプロパティではない静的な値を返しますの参照を有効にします。  
+- [X:static](../../xaml-services/x-static-markup-extension.md):それ以外の場合、XAML と互換性のあるプロパティではない静的な値を返しますの参照を有効にします。  
   
--   [X:type](../../xaml-services/x-type-markup-extension.md):構築、<xref:System.Type>型名の上に基づく参照。 これは、属性を指定に使用<xref:System.Type>など<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>プロパティが頻繁にネイティブの文字列には、-に-<xref:System.Type>ような方法で変換を[X:type](../../xaml-services/x-type-markup-extension.md)マークアップ拡張機能の使用は、省略可能。  
+- [X:type](../../xaml-services/x-type-markup-extension.md):構築、<xref:System.Type>型名の上に基づく参照。 これは、属性を指定に使用<xref:System.Type>など<xref:System.Windows.Style.TargetType%2A?displayProperty=nameWithType>プロパティが頻繁にネイティブの文字列には、-に-<xref:System.Type>ような方法で変換を[X:type](../../xaml-services/x-type-markup-extension.md)マークアップ拡張機能の使用は、省略可能。  
   
  プログラミング構成要素がある、`x:`プレフィックス/XAML 名前空間は一般的でないです。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能](../../xaml-services/xaml-namespace-x-language-features.md)します。  
   

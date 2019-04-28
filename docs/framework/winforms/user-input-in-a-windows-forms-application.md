@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Windows Forms, user input
 ms.assetid: 9d61fa96-70f7-4754-885a-49a4a6316bdb
 ms.openlocfilehash: 0eb39f0ecd8fcd12918b38bd77fed2ff32cac1d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800140"
 ---
 # <a name="user-input-in-a-windows-forms-application"></a>Windows フォーム アプリケーションにおけるユーザー入力
 Windows フォームでは、ユーザー入力が Windows メッセージの形式でアプリケーションに送信されます。 一連のオーバーライド可能なメソッドは、フォーム、アプリケーションでこれらのメッセージを処理し、レベルを制御します。 これらのメソッドは、マウスとキーボード メッセージを受信するときに取得については、マウスやキーボード入力を処理できるイベントが発生します。 多くの場合、Windows フォーム アプリケーションはこれらのイベントを処理するだけですべてのユーザー入力を処理することになります。 それ以外の場合は、アプリケーションは、アプリケーション、フォーム、またはコントロールによって受信される前に、特定のメッセージをインターセプトするにはメッセージを処理する方法の 1 つをオーバーライドする必要があります。  

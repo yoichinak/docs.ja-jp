@@ -15,11 +15,11 @@ ms.assetid: 26dfaa15-9ddb-4b0a-b6da-999bba664fa6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 43404ba24f6308d8da17b03df9997e893799c8d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875005"
 ---
 # <a name="contextswitchdeadlock-mda"></a>contextSwitchDeadlock MDA
 
@@ -39,16 +39,16 @@ ms.locfileid: "54643144"
 
 次のすべての条件が満たされる場合、この MDA が誤ってアクティブ化される可能性があります。
 
--   アプリケーションがライブラリを通じて直接または間接的に STA スレッドから COM コンポーネントを作成する。
+- アプリケーションがライブラリを通じて直接または間接的に STA スレッドから COM コンポーネントを作成する。
 
--   デバッガーでアプリケーションが中断され、ユーザーがアプリケーションを続行したか、またはステップ操作を実行した。
+- デバッガーでアプリケーションが中断され、ユーザーがアプリケーションを続行したか、またはステップ操作を実行した。
 
--   アンマネージ デバッグが有効になっていない。
+- アンマネージ デバッグが有効になっていない。
 
 MDA が誤ってアクティブ化されたかどうかを判断するには、すべてのブレークポイントを無効にし、アプリケーションを再び実行して、中断なしで実行させます。 MDA がアクティブ化されない場合は、最初のアクティブ化は誤りだった可能性があります。 その場合は、MDA を無効にして、デバッグ セッションとの干渉を防ぎます。
 
 > [!NOTE]
-> この MDA は、既定の Visual Studio のセットです。 Mda を無効にする方法については、[マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)を参照してください。
+> この MDA は、既定の Visual Studio のセットです。 Mda を無効にする方法については、次を参照してください。[マネージ デバッグ アシスタントによるエラーの診断](../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md#enable-and-disable-mdas)します。
 
 ## <a name="resolution"></a>解像度
 

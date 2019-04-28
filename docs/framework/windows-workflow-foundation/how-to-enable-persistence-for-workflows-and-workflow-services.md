@@ -3,11 +3,11 @@ title: '方法: ワークフローとワークフロー サービスの永続化
 ms.date: 03/30/2017
 ms.assetid: 2b1c8bf3-9866-45a4-b06d-ee562393e503
 ms.openlocfilehash: 6a2a8d73298e14f92f376b97b9637db91532e937
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761430"
 ---
 # <a name="how-to-enable-persistence-for-workflows-and-workflow-services"></a>方法: ワークフローとワークフロー サービスの永続化を有効にする
 ここでは、ワークフローとワークフロー サービスの永続化を有効にする方法について説明します。  

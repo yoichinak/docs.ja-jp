@@ -6,11 +6,11 @@ helpviewer_keywords:
 - best practices [WCF], queued communication
 ms.assetid: 446a6383-cae3-4338-b193-a33c14a49948
 ms.openlocfilehash: 27b9c6e117b6ba809daae87d376b03e27bc2b0f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230097"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61858079"
 ---
 # <a name="best-practices-for-queued-communication"></a>キューに置かれた通信のベスト プラクティス
 このトピックでは、キューに置かれた通信では、Windows Communication Foundation (WCF) の推奨されるベスト プラクティスを提供します。 以下の各セクションでは、シナリオの観点から推奨されるベスト プラクティスについて説明します。  
@@ -48,11 +48,11 @@ ms.locfileid: "59230097"
 ## <a name="achieving-high-throughput"></a>高スループットの実現  
  単一のエンドポイントで高スループットを実現するには、以下を使用します。  
   
--   トランザクション バッチ。 トランザクション バッチでは、1 回のトランザクションで多くのメッセージを読み取ることができます。 これにより、トランザクションのコミットが最適化され、全体的なパフォーマンスが向上します。 バッチ処理の難点は、バッチ内の 1 つのメッセージでエラーが発生した場合に、バッチ全体をロールバックし、再び安全にバッチ処理できるようになるまで、メッセージを 1 つずつ処理する必要があることです。 ほとんどの場合、有害メッセージはまれであるため、特にトランザクションに他のリソース マネージャーが参加している場合は、バッチ処理がシステム パフォーマンスを向上させる方法として推奨されます。 詳細については、次を参照してください。[メッセージをバッチ処理をトランザクションで](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)します。  
+- トランザクション バッチ。 トランザクション バッチでは、1 回のトランザクションで多くのメッセージを読み取ることができます。 これにより、トランザクションのコミットが最適化され、全体的なパフォーマンスが向上します。 バッチ処理の難点は、バッチ内の 1 つのメッセージでエラーが発生した場合に、バッチ全体をロールバックし、再び安全にバッチ処理できるようになるまで、メッセージを 1 つずつ処理する必要があることです。 ほとんどの場合、有害メッセージはまれであるため、特にトランザクションに他のリソース マネージャーが参加している場合は、バッチ処理がシステム パフォーマンスを向上させる方法として推奨されます。 詳細については、次を参照してください。[メッセージをバッチ処理をトランザクションで](../../../../docs/framework/wcf/feature-details/batching-messages-in-a-transaction.md)します。  
   
--   コンカレンシー。 コンカレンシーによりスループットが向上します。ただし、コンカレンシーは共有リソースの競合に影響します。 詳細については、次を参照してください。[同時実行](../../../../docs/framework/wcf/samples/concurrency.md)します。  
+- コンカレンシー。 コンカレンシーによりスループットが向上します。ただし、コンカレンシーは共有リソースの競合に影響します。 詳細については、次を参照してください。[同時実行](../../../../docs/framework/wcf/samples/concurrency.md)します。  
   
--   調整。 最適なパフォーマンスを実現するために、ディスパッチャー パイプラインのメッセージの数を調整します。 これを行う方法の例は、次を参照してください。[スロットル](../../../../docs/framework/wcf/samples/throttling.md)します。  
+- 調整。 最適なパフォーマンスを実現するために、ディスパッチャー パイプラインのメッセージの数を調整します。 これを行う方法の例は、次を参照してください。[スロットル](../../../../docs/framework/wcf/samples/throttling.md)します。  
   
  バッチ処理を使用する場合は、コンカレンシーと調整はコンカレント バッチに変換されることに気をつけてください。  
   
@@ -75,11 +75,11 @@ ms.locfileid: "59230097"
   
  `MsmqIntegrationBinding` を使用するときは、以下の点に注意してください。  
   
--   WCF メッセージ本文は、MSMQ メッセージ本文と同じではできません。 キューに置かれたバインディングを使用して WCF メッセージを送信するときに、WCF メッセージ本文は MSMQ メッセージの内部に配置されます。 MSMQ インフラストラクチャは、この追加情報を認識しません。認識するのは、MSMQ メッセージだけです。  
+- WCF メッセージ本文は、MSMQ メッセージ本文と同じではできません。 キューに置かれたバインディングを使用して WCF メッセージを送信するときに、WCF メッセージ本文は MSMQ メッセージの内部に配置されます。 MSMQ インフラストラクチャは、この追加情報を認識しません。認識するのは、MSMQ メッセージだけです。  
   
--   `MsmqIntegrationBinding` では、よく使用されるシリアル化型をサポートしています。 ジェネリック メッセージである <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> の本文の型は、シリアル化型に基づいてさまざまな型パラメーターを受け取ります。 たとえば、<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> には `MsmqMessage\<byte[]>` が必要であり、<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> には `MsmqMessage<Stream>` が必要です。  
+- `MsmqIntegrationBinding` では、よく使用されるシリアル化型をサポートしています。 ジェネリック メッセージである <xref:System.ServiceModel.MsmqIntegration.MsmqMessage%601> の本文の型は、シリアル化型に基づいてさまざまな型パラメーターを受け取ります。 たとえば、<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.ByteArray> には `MsmqMessage\<byte[]>` が必要であり、<xref:System.ServiceModel.MsmqIntegration.MsmqMessageSerializationFormat.Stream> には `MsmqMessage<Stream>` が必要です。  
   
--   XML シリアル化を使用して、既知の型を指定できます、`KnownTypes`属性を[\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)要素、XML メッセージを逆シリアル化する方法を決定するために使用されます。  
+- XML シリアル化を使用して、既知の型を指定できます、`KnownTypes`属性を[\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-servicebehaviors.md)要素、XML メッセージを逆シリアル化する方法を決定するために使用されます。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
 ms.openlocfilehash: fcb450b86066e24fba9c6a33f7abe0d4749d2c8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59193719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801050"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows フォームのセキュリティの概要
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のリリース以前、ユーザーのコンピューターで実行されているすべてのコードは、リソースにアクセスするために、そのコンピューターのユーザーが持っていたのと同じ権限またはアクセス許可を持っていました。 たとえば、ユーザーにファイル システムへのアクセスが許可されている場合は、コードにファイル システムへのアクセスが許可され、ユーザーにデータベースへのアクセスが許可されている場合は、コードにデータベースへのアクセスが許可されていました。 これらの権限やアクセス許可は、ユーザーがローカル コンピューターに明示的にインストールした実行可能ファイルのコードに対しては受け入れることができますが、インターネットやローカル イントラネットからの悪意のある可能性があるコードに対しては受け入れることができません。 このコードは、アクセス許可がないユーザーのコンピューター リソースにアクセスすべきではありません。  

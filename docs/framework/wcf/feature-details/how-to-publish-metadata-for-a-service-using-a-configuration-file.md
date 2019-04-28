@@ -3,11 +3,11 @@ title: '方法: 構成ファイルを使用してサービスのメタデータ�
 ms.date: 03/30/2017
 ms.assetid: f061443f-92df-4824-b36a-609c4cd14a17
 ms.openlocfilehash: 367ebeee5c12d809a758f1bee73dfaadda85788d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295537"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761456"
 ---
 # <a name="how-to-publish-metadata-for-a-service-using-a-configuration-file"></a>方法: 構成ファイルを使用してサービスのメタデータを公開する
 これは、Windows Communication Foundation (WCF) サービスのメタデータの公開を示す 2 つの操作方法に関するトピックのいずれかです。 構成ファイルとコードを使用して、サービスがメタデータを公開する手段を指定する方法は 2 つあります。 このトピックでは、構成ファイルを使用してサービスのメタデータを公開する方法について説明します。  
@@ -140,21 +140,21 @@ namespace Metadata.Samples
   
 7. 前の手順で追加したメタデータ エンドポイントについて、`binding` 属性に次のいずれかの値を設定します。  
   
-    -   HTTP 公開の場合、`mexHttpBinding`  
+    - HTTP 公開の場合、`mexHttpBinding`  
   
-    -   HTTPS 公開の場合、`mexHttpsBinding`  
+    - HTTPS 公開の場合、`mexHttpsBinding`  
   
-    -   名前付きパイプ公開の場合、`mexNamedPipeBinding`  
+    - 名前付きパイプ公開の場合、`mexNamedPipeBinding`  
   
-    -   TCP 公開の場合、`mexTcpBinding`  
+    - TCP 公開の場合、`mexTcpBinding`  
   
 8. 前の手順で追加したメタデータ エンドポイントについて、次のいずれかに等しいアドレスを設定します。  
   
-    -   ベース アドレスがメタデータ バインディングと同じ場合に、公開ポイントとしてホスト アプリケーションのベース アドレスを使用するための空の文字列  
+    - ベース アドレスがメタデータ バインディングと同じ場合に、公開ポイントとしてホスト アプリケーションのベース アドレスを使用するための空の文字列  
   
-    -   ホスト アプリケーションにベース アドレスがある場合、相対アドレス  
+    - ホスト アプリケーションにベース アドレスがある場合、相対アドレス  
   
-    -   絶対アドレス  
+    - 絶対アドレス  
   
 9. コンソール アプリケーションのビルドと実行  
   

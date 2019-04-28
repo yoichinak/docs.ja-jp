@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1d50c8b4-f550-4775-bbb6-eab6e874cb43
 ms.openlocfilehash: 5d812ae9b5fd0a796588d3366b8546ef84c982c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59089917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877358"
 ---
 # <a name="group-elements-in-a-sequence"></a>シーケンスの要素のグループ化
 <xref:System.Linq.Enumerable.GroupBy%2A> 演算子はシーケンスの要素をグループ化します。 Northwind データベースを使用する例を次に示します。  

@@ -3,11 +3,11 @@ title: CLR ユーザー定義関数
 ms.date: 03/30/2017
 ms.assetid: 1c59d9d3-6ff9-411b-8b29-b1494d80fdf1
 ms.openlocfilehash: 5cf7f4b9a0bd0c97b237d85dc99b28f0a89cf00a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169404"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878177"
 ---
 # <a name="clr-user-defined-functions"></a>CLR ユーザー定義関数
 ユーザー定義関数は、パラメーターを受け取り、計算やその他の動作を実行し、結果を返すルーチンです。 Microsoft Visual Basic .NET や Microsoft Visual C# など、任意の Microsoft .NET Framework プログラミング言語を使用してユーザー定義関数を作成できます。  

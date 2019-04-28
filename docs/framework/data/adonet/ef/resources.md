@@ -3,11 +3,11 @@ title: Entity Framework のリソース
 ms.date: 03/30/2017
 ms.assetid: 0bb04c18-4a14-42a4-baa9-a63d556c9f49
 ms.openlocfilehash: c1e93896bbbaf7be68f53e4cfb45ba7465a423bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879334"
 ---
 # <a name="entity-framework-resources"></a>Entity Framework のリソース
 次の外部リソースでは、Entity Framework アプリケーションの作成に関する情報とサポートを提供しています。  

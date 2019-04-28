@@ -6,14 +6,14 @@ dev_langs:
 - vb
 ms.assetid: aababd75-2335-43e3-ace8-4b7ae84191a8
 ms.openlocfilehash: d773b6e49a9f3c2909b2479abdc498d4b059f660
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54674063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878112"
 ---
 # <a name="comparing-guid-and-uniqueidentifier-values"></a>GUID と uniqueidentifier 値の比較
-SQL Server のグローバル一意識別子 (GUID: Globally Unique Identifier) データ型は、16 バイトのバイナリ値を格納する `uniqueidentifier` データ型で表現されます。 GUID は、2 進数の値です。GUID は主に、多数のコンピューターが多数のサイトに存在するネットワーク内で、一意である必要のある識別子として使用されます。 GUID は、Transact-SQL NEWID 関数を呼び出すことにより生成され、世界中のコンピューターの中で一意であることが保証されています。 詳細については、[一意識別子 (TRANSACT-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql)を参照してください。  
+SQL Server のグローバル一意識別子 (GUID: Globally Unique Identifier) データ型は、16 バイトのバイナリ値を格納する `uniqueidentifier` データ型で表現されます。 GUID は、2 進数の値です。GUID は主に、多数のコンピューターが多数のサイトに存在するネットワーク内で、一意である必要のある識別子として使用されます。 GUID は、Transact-SQL NEWID 関数を呼び出すことにより生成され、世界中のコンピューターの中で一意であることが保証されています。 詳細については、次を参照してください。[一意識別子 (TRANSACT-SQL)](/sql/t-sql/data-types/uniqueidentifier-transact-sql)します。  
   
 ## <a name="working-with-sqlguid-values"></a>SqlGuid 値の使用  
  GUID の値は長くて不可解な値であるため、ユーザーには意味がわかりません。 ランダムに生成された GUID をキー値として使用して多数の行を挿入した場合に、ランダムな I/O をインデックスにすると、パフォーマンスに悪影響を及ぼします。 また、GUID は、その他のデータ型に比べてサイズが大きくなります。 通常、GUID は、その他のデータ型が適さないような非常に限られた場合にのみ使用することをお勧めします。  

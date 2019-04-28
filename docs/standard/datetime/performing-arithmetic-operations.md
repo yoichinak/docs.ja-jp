@@ -17,11 +17,11 @@ ms.assetid: 87c7ddf2-f15e-48af-8602-b3642237e6d0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d5f807481468b61365c8b4d8412f12a4741ebb9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912757"
 ---
 # <a name="performing-arithmetic-operations-with-dates-and-times"></a>日付と時刻を使用した算術演算の実行
 
@@ -76,9 +76,9 @@ A<xref:System.DateTimeOffset>値には、日付と時刻だけでなくを明確
 
 * <xref:System.TimeZoneInfo.ConvertTimeFromUtc%2A>と<xref:System.TimeZoneInfo.ConvertTimeToUtc%2A>メソッドは、特定のタイム ゾーンの時刻 (UTC) を変換または特定のタイム ゾーンの時刻を UTC に変換します。
 
-詳細については、[タイム ゾーン間で時刻の変換](../../../docs/standard/datetime/converting-between-time-zones.md)を参照してください。
+詳細については、次を参照してください。[タイム ゾーン間で時刻の変換](../../../docs/standard/datetime/converting-between-time-zones.md)します。
 
-<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>クラスは、日付と時刻の演算を実行するときに、調整規則を自動的に適用されるすべてのメソッドを提供しません。 ただし、あるタイム ゾーンの時刻を UTC に変換してから算術演算を実行し、その後 UTC から元のタイム ゾーンの時刻に再変換することで、調整規則を適用したときと同じ結果を得ることができます。 詳細については、次を参照してください。[方法。日付と時刻の演算でタイム ゾーンを使用して](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)します。
+<xref:System.TimeZoneInfo.ConvertTimeToUtc(System.DateTime)>クラスは、日付と時刻の演算を実行するときに、調整規則を自動的に適用されるすべてのメソッドを提供しません。 ただし、あるタイム ゾーンの時刻を UTC に変換してから算術演算を実行し、その後 UTC から元のタイム ゾーンの時刻に再変換することで、調整規則を適用したときと同じ結果を得ることができます。 詳細については、「[方法: 日付と時刻の演算でタイム ゾーンを使用して](../../../docs/standard/datetime/use-time-zones-in-arithmetic.md)します。
 
 たとえば、次のコードは、2008 年 3 月 9 日の午前 2 時に 2 時間 30 分を加算する 前のコードと似ています。 ただし、中部標準時を UTC に変換した後に日付と時刻の算術演算を実行し、その結果を UTC から中部標準時に変換するため、得られた時刻は中部標準時タイム ゾーンの夏時間への移行を反映しています。
 

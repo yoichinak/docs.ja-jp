@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, client library
 ms.assetid: 00d993be-ffed-4dea-baf7-6eea982cdb54
 ms.openlocfilehash: 42980aa4691d8ecb9868336ecb270c9ad937b5a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876110"
 ---
 # <a name="updating-the-data-service-wcf-data-services"></a>データ サービスの更新 (WCF Data Services)
 使用すると、[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]を使用するクライアント ライブラリ、 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)] 、フィード、ライブラリはクライアント データ サービス クラスのインスタンスにフィードのエントリは変換します。 これらのデータ サービス クラスは、<xref:System.Data.Services.Client.DataServiceContext> が属する <xref:System.Data.Services.Client.DataServiceQuery%601> を使用して追跡されます。 クライアントでは、<xref:System.Data.Services.Client.DataServiceContext> にメソッドを使用して報告する、エンティティへの変更が追跡されます。 これらのメソッドを使用すると、クライアントは、追加および削除されたエンティティの追跡に加えて、プロパティ値に対して行われた変更やエンティティ インスタンス間のリレーションシップに対して行われた変更を追跡できます。 追跡されたこれらの変更は、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> メソッドが呼び出されたときに、REST ベースの操作としてデータ サービスに送り返されます。  
@@ -54,13 +54,13 @@ ms.locfileid: "59517110"
   
  オブジェクトをアタッチする際は、次の点に注意してください。  
   
--   オブジェクトは、<xref:System.Data.Services.Client.EntityStates.Unchanged> 状態でアタッチされます。  
+- オブジェクトは、<xref:System.Data.Services.Client.EntityStates.Unchanged> 状態でアタッチされます。  
   
--   オブジェクトがアタッチされるとき、アタッチされるオブジェクトに関連付けられたオブジェクトはアタッチされません。  
+- オブジェクトがアタッチされるとき、アタッチされるオブジェクトに関連付けられたオブジェクトはアタッチされません。  
   
--   エンティティがコンテキストによって既に追跡されている場合は、オブジェクトをアタッチできません。  
+- エンティティがコンテキストによって既に追跡されている場合は、オブジェクトをアタッチできません。  
   
--   eTag 値と一緒に受け取ったエンティティ オブジェクトをアタッチした場合は、<xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> メソッドの、`etag` パラメーターを受け取るオーバーロードが使用されます。 この eTag 値は、アタッチされたオブジェクトへの変更を保存したときに、コンカレンシーをチェックするために使用されます。  
+- eTag 値と一緒に受け取ったエンティティ オブジェクトをアタッチした場合は、<xref:System.Data.Services.Client.DataServiceContext.AttachTo%28System.String%2CSystem.Object%2CSystem.String%29> メソッドの、`etag` パラメーターを受け取るオーバーロードが使用されます。 この eTag 値は、アタッチされたオブジェクトへの変更を保存したときに、コンカレンシーをチェックするために使用されます。  
   
  詳細については、「[方法 :既存のエンティティを DataServiceContext にアタッチ](../../../../docs/framework/data/wcf/attach-an-existing-entity-to-dc-wcf-data.md)します。  
   

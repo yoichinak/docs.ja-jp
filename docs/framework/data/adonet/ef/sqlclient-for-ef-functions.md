@@ -3,11 +3,11 @@ title: Entity Framework 用 SqlClient 関数
 ms.date: 03/30/2017
 ms.assetid: 71a3613c-b94e-494c-8ad8-90cf86ae0b87
 ms.openlocfilehash: 54072576b73b933277d33839fdbb575d420f2286
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879139"
 ---
 # <a name="sqlclient-for-entity-framework-functions"></a>Entity Framework 用 SqlClient 関数
 Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) には、`System.DateTime` や `string` の操作を実行する関数の他に、数学計算および集計計算を実行する関数のセットが用意されています。 これらの関数は `SQLServer` 名前空間にあります。  

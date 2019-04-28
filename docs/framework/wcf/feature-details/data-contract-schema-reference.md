@@ -5,11 +5,11 @@ helpviewer_keywords:
 - data contracts [WCF], schema reference
 ms.assetid: 9ebb0ebe-8166-4c93-980a-7c8f1f38f7c0
 ms.openlocfilehash: a4ddaaea2133a8adf5271628f442644194a7f453
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131938"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857182"
 ---
 # <a name="data-contract-schema-reference"></a>データ コントラクト スキーマの参照
 ここでは、XML シリアル化用の共通言語ランタイム (CLR) 型を表すために <xref:System.Runtime.Serialization.DataContractSerializer> が使用する XML スキーマ (XSD) のサブセットについて説明します。  
@@ -24,19 +24,19 @@ ms.locfileid: "59131938"
 ### <a name="support-levels"></a>サポート レベル  
  `DataContractSerializer` は、特定の XML スキーマ機能に次のサポート レベルを提供します。  
   
--   **サポートあり**。 この機能から CLR 型または属性の一方または両方への、 `DataContractSerializer`を使用する明示的なマッピングが存在します。  
+- **サポートあり**。 この機能から CLR 型または属性の一方または両方への、 `DataContractSerializer`を使用する明示的なマッピングが存在します。  
   
--   **無視**。 この機能は、 `DataContractSerializer`によってインポートされたスキーマで使用できますが、コードの生成に影響しません。  
+- **無視**。 この機能は、 `DataContractSerializer`によってインポートされたスキーマで使用できますが、コードの生成に影響しません。  
   
--   **禁止**。 `DataContractSerializer` は、この機能を使用するスキーマのインポートをサポートしません。 たとえば、Svcutil.exe は、この機能を使用するスキーマに基づいて WSDL にアクセスする場合、代わりに <xref:System.Xml.Serialization.XmlSerializer> を使用します。 これが既定値です。  
+- **禁止**。 `DataContractSerializer` は、この機能を使用するスキーマのインポートをサポートしません。 たとえば、Svcutil.exe は、この機能を使用するスキーマに基づいて WSDL にアクセスする場合、代わりに <xref:System.Xml.Serialization.XmlSerializer> を使用します。 これが既定値です。  
   
 ## <a name="general-information"></a>一般情報  
   
--   スキーマ名前空間については、「 [XML Schema (XML スキーマ)](https://go.microsoft.com/fwlink/?LinkId=95475)」を参照してください。 このドキュメントでは、プレフィックス "xs" を使用しています。  
+- スキーマ名前空間については、「 [XML Schema (XML スキーマ)](https://go.microsoft.com/fwlink/?LinkId=95475)」を参照してください。 このドキュメントでは、プレフィックス "xs" を使用しています。  
   
--   スキーマ以外の名前空間を含む属性は無視されます。  
+- スキーマ以外の名前空間を含む属性は無視されます。  
   
--   注釈 (このドキュメントで説明しているものを除きます) はすべて無視されます。  
+- 注釈 (このドキュメントで説明しているものを除きます) はすべて無視されます。  
   
 ### <a name="xsschema-attributes"></a>\<xs:schema >: 属性  
   
@@ -120,11 +120,11 @@ ms.locfileid: "59131938"
 ### <a name="general-information"></a>一般情報  
  `<xs:element>` は、次の構文で発生します。  
   
--   `<xs:sequence>`内で発生し、通常 (コレクション以外) のデータ コントラクトのデータ メンバーを表すことができます。 この場合、 `maxOccurs` 属性は 1 にする必要があります (値 0 は使用できません)。  
+- `<xs:sequence>`内で発生し、通常 (コレクション以外) のデータ コントラクトのデータ メンバーを表すことができます。 この場合、 `maxOccurs` 属性は 1 にする必要があります (値 0 は使用できません)。  
   
--   `<xs:sequence>`内で発生し、コレクション データ コントラクトのデータ メンバーを表すことができます。 この場合、 `maxOccurs` 属性は 2 以上の値か、"unbounded" にする必要があります。  
+- `<xs:sequence>`内で発生し、コレクション データ コントラクトのデータ メンバーを表すことができます。 この場合、 `maxOccurs` 属性は 2 以上の値か、"unbounded" にする必要があります。  
   
--   `<xs:schema>` 内で GED (グローバル要素宣言) として発生します。  
+- `<xs:schema>` 内で GED (グローバル要素宣言) として発生します。  
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-data-members"></a>\<xs:element > maxOccurs = 1 で、 \<xs:sequence > (データ メンバー)  
   
@@ -144,17 +144,17 @@ ms.locfileid: "59131938"
   
 ### <a name="xselement-with-maxoccurs1-within-an-xssequence-collections"></a>\<xs:element > に maxOccurs > 1 内、 \<xs:sequence > (コレクション)  
   
--   <xref:System.Runtime.Serialization.CollectionDataContractAttribute>にマッピングされます。  
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute>にマッピングされます。  
   
--   コレクションの型では、xs:sequence 内で xs:element を 1 つしか使用できません。  
+- コレクションの型では、xs:sequence 内で xs:element を 1 つしか使用できません。  
   
  コレクションは次のいずれかになります。  
   
--   標準コレクション (配列など)。  
+- 標準コレクション (配列など)。  
   
--   ディクショナリ コレクション (1 つの値を別の値にマッピングする、 <xref:System.Collections.Hashtable>など)。  
+- ディクショナリ コレクション (1 つの値を別の値にマッピングする、 <xref:System.Collections.Hashtable>など)。  
   
--   ディクショナリとキー/値ペアの配列の種類との唯一の相違は、生成されるプログラミング モデルにあります。 特定の種類がディクショナリ コレクションであることを示すには、スキーマ注釈機構を使用できます。  
+- ディクショナリとキー/値ペアの配列の種類との唯一の相違は、生成されるプログラミング モデルにあります。 特定の種類がディクショナリ コレクションであることを示すには、スキーマ注釈機構を使用できます。  
   
  `ref`、 `block`、 `default`、 `fixed`、 `form`、および `id` の各属性に対するルールは、コレクション以外の場合と同じです。 その他に、次の表に示す属性があります。  
   
@@ -168,13 +168,13 @@ ms.locfileid: "59131938"
   
 ### <a name="xselement-within-an-xsschema-global-element-declaration"></a>\<xs:element > 内で、 \<xs:schema > グローバル要素宣言  
   
--   スキーマ内の型と同じ名前および名前空間を持つか、それ自体の内部で匿名型を定義するグローバル要素宣言 (GED) は、型に関連付けられていると言います。  
+- スキーマ内の型と同じ名前および名前空間を持つか、それ自体の内部で匿名型を定義するグローバル要素宣言 (GED) は、型に関連付けられていると言います。  
   
--   スキーマのエクスポート : 単純型と複合型の両方で、生成された型ごとに関連 GED が生成されます。  
+- スキーマのエクスポート : 単純型と複合型の両方で、生成された型ごとに関連 GED が生成されます。  
   
--   逆シリアル化/シリアル化 : 関連 GED が、該当する型のルート要素として使用されます。  
+- 逆シリアル化/シリアル化 : 関連 GED が、該当する型のルート要素として使用されます。  
   
--   スキーマのインポート : 次のルールに従う場合、関連 GED は不要となり無視されます (ただし、それが型を定義する場合を除きます)。  
+- スキーマのインポート : 次のルールに従う場合、関連 GED は不要となり無視されます (ただし、それが型を定義する場合を除きます)。  
   
 |属性|Schema|  
 |---------------|------------|  
@@ -202,11 +202,11 @@ ms.locfileid: "59131938"
   
  \* 使用する場合、`simpleType`と`complexType,`匿名データ コントラクトはありませんが、要素名から派生する生成された名前で名前付きのデータ コントラクトが作成されるように匿名型のマッピングは非匿名のタイプと同じです。 匿名型のルールは、次のとおりです。  
   
--   WCF 実装の詳細:場合、`xs:element`名にピリオドが含まれていない場合、匿名型、外側のデータ コントラクト型の内部型にマップされます。 名前にピリオドが含まれている場合、結果のデータ コントラクト型は、内部型ではなく、独立した型になります。  
+- WCF 実装の詳細:場合、`xs:element`名にピリオドが含まれていない場合、匿名型、外側のデータ コントラクト型の内部型にマップされます。 名前にピリオドが含まれている場合、結果のデータ コントラクト型は、内部型ではなく、独立した型になります。  
   
--   内部型の生成されたデータ コントラクト名は、外部型のデータ コントラクト名の後にピリオド、要素の名前、および文字列 "Type" が付いたものになります。  
+- 内部型の生成されたデータ コントラクト名は、外部型のデータ コントラクト名の後にピリオド、要素の名前、および文字列 "Type" が付いたものになります。  
   
--   そのような名前を持つデータ コントラクトが既に存在する場合は、"1"、"2"、"3" などの番号が付加されて一意の名前になります。  
+- そのような名前を持つデータ コントラクトが既に存在する場合は、"1"、"2"、"3" などの番号が付加されて一意の名前になります。  
   
 ## <a name="simple-types---xssimpletype"></a>Simple Types - \<xs:simpleType>  
   
@@ -228,11 +228,11 @@ ms.locfileid: "59131938"
   
 ### <a name="xsrestriction"></a>\<xs:restriction>  
   
--   複合型制限は、base="`xs:anyType`" の場合のみサポートされます。  
+- 複合型制限は、base="`xs:anyType`" の場合のみサポートされます。  
   
--   `xs:string` 以外の制限ファセットを持たない `xs:enumeration` の単純型制限は、列挙データ コントラクトにマッピングされます。  
+- `xs:string` 以外の制限ファセットを持たない `xs:enumeration` の単純型制限は、列挙データ コントラクトにマッピングされます。  
   
--   その他すべての単純型制限は、それぞれが制限する型にマッピングされます。 たとえば、 `xs:int` の制限は、 `xs:int` 自体と同様に整数にマッピングされます。 プリミティブ型のマッピングの詳細については、「型/プリミティブのマッピングを参照してください。  
+- その他すべての単純型制限は、それぞれが制限する型にマッピングされます。 たとえば、 `xs:int` の制限は、 `xs:int` 自体と同様に整数にマッピングされます。 プリミティブ型のマッピングの詳細については、「型/プリミティブのマッピングを参照してください。  
   
 ### <a name="xsrestriction-attributes"></a>\<xs:restriction >: 属性  
   
@@ -464,9 +464,9 @@ public class Employee : Person
   
  基本型の要素と同じ名前を持つ要素が派生型に含まれている場合は、重複する要素宣言が、一意のものとして生成される名前を持つデータ メンバーにマッピングされます。 データ メンバーの名前には、一意の名前が見つかるまで正の整数が付加されます ("member1"、"member2" など)。 これに対して、次のようになります。  
   
--   基本データ コントラクトのデータ メンバーと同じ名前および型を持つデータ メンバーが派生データ コントラクトに存在する場合、 `DataContractSerializer` は、これに対応する要素を派生型で生成します。  
+- 基本データ コントラクトのデータ メンバーと同じ名前および型を持つデータ メンバーが派生データ コントラクトに存在する場合、 `DataContractSerializer` は、これに対応する要素を派生型で生成します。  
   
--   基本データ コントラクトのデータ メンバーと名前は同じでも型が異なるデータ メンバーが派生データ コントラクトに存在する場合、 `DataContractSerializer` は、 `xs:anyType` 型の要素を含むスキーマを、基本型と派生型の両方の宣言にインポートします。 元の型名は、 `xs:annotations/xs:appInfo/ser:ActualType/@Name`に保持されます。  
+- 基本データ コントラクトのデータ メンバーと名前は同じでも型が異なるデータ メンバーが派生データ コントラクトに存在する場合、 `DataContractSerializer` は、 `xs:anyType` 型の要素を含むスキーマを、基本型と派生型の両方の宣言にインポートします。 元の型名は、 `xs:annotations/xs:appInfo/ser:ActualType/@Name`に保持されます。  
   
  それぞれのデータ メンバーの順序によっては、これら両方のバリエーションにより、あいまいなコンテンツ モデルを含むスキーマが生じる場合があります。  
   
@@ -609,11 +609,11 @@ public class Employee : Person
   
  ここで次の点に注意します。  
   
--   `ser:char` を導入して、型 <xref:System.Char>の Unicode 文字を表現します。  
+- `ser:char` を導入して、型 <xref:System.Char>の Unicode 文字を表現します。  
   
--   `valuespace` の `xs:duration` を順序付きセットに縮小し、 <xref:System.TimeSpan>にマッピングできるようにします。  
+- `valuespace` の `xs:duration` を順序付きセットに縮小し、 <xref:System.TimeSpan>にマッピングできるようにします。  
   
--   `FactoryType` から派生した型からエクスポートされたスキーマで <xref:System.Runtime.Serialization.ISerializable>を使用します。  
+- `FactoryType` から派生した型からエクスポートされたスキーマで <xref:System.Runtime.Serialization.ISerializable>を使用します。  
   
 ## <a name="importing-non-datacontract-schemas"></a>非 DataContract スキーマのインポート  
  `DataContractSerializer` には、 `ImportXmlTypes` XSD プロファイルに準拠しないスキーマのインポートを可能にする `DataContractSerializer` オプションがあります (「 <xref:System.Runtime.Serialization.XsdDataContractImporter.Options%2A> プロパティ」を参照してください)。 このオプションを `true` に設定すると、非準拠スキーマ型を受け入れ、それを次の実装 ( <xref:System.Xml.Serialization.IXmlSerializable> の配列をラップする <xref:System.Xml.XmlNode> ) にマッピングできるようになります (クラス名のみ異なります)。  

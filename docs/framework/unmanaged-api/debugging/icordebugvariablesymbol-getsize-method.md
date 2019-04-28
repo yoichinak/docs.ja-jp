@@ -5,11 +5,11 @@ ms.assetid: add0cd9d-9a29-49b1-ae07-d9d3786b4ccd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 027b3f773ff0ed0ca7bf9d193f97a3b060ea8494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768837"
 ---
 # <a name="icordebugvariablesymbolgetsize-method"></a>Icordebugvariablesymbol::getsize メソッド
 変数のサイズ (バイト単位) を取得します。  

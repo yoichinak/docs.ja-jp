@@ -12,14 +12,14 @@ ms.assetid: 9a9621d7-8883-4a4f-a874-65e8e09e20a6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0e60f463d5a691cb84a30c169e471aa905b2db17
-ms.sourcegitcommit: bbf70abe6b46073148f78cbf0619de6092b5800c
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2018
-ms.locfileid: "34728590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61860556"
 ---
 # <a name="security-in-net"></a>.NET でのセキュリティ
-共通言語ランタイムと .NET は、保護されたリソースの多くの有用なクラスと開発者がセキュリティで保護されたコードを簡単に記述し、システム管理者がアクセスできるように、コードに付与されたアクセス許可のカスタマイズを有効にするサービスを提供します。 さらに、ランタイムと .NET は、有用なクラスとを暗号とロール ベース セキュリティの使用を容易にするサービスを提供します。  
+共通言語ランタイムと .NET は、保護されたリソースの多くの便利なクラスと開発者がセキュリティで保護されたコードを簡単に記述し、システム管理者にアクセスできるように、コードに付与されるアクセス許可のカスタマイズを有効にするサービスを提供します。 さらに、ランタイムと .NET は、暗号化とロールベースのセキュリティの使用を容易にする便利なクラスおよびサービスを提供します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
 
@@ -30,7 +30,7 @@ ms.locfileid: "34728590"
  コード内でロール ベースのセキュリティと対話する方法について説明します。 このセクションは開発者を対象としています。  
   
  [暗号モデル](../../../docs/standard/security/cryptography-model.md)  
- .NET で提供される暗号サービスの概要を示します。 このセクションは開発者を対象としています。  
+ .NET によって提供される暗号化サービスの概要を示します。 このセクションは開発者を対象としています。  
   
  [安全なコーディングのガイドライン](../../../docs/standard/security/secure-coding-guidelines.md)  
  信頼性の高い .NET アプリケーションを作成するためのベスト プラクティスについて説明します。 このセクションは開発者を対象としています。  
@@ -41,7 +41,7 @@ ms.locfileid: "34728590"
  [Windows Identity Foundation](../../../docs/framework/security/index.md)  
  アプリケーションでクレーム ベースの ID を実装する方法について説明します。  
 
-[セキュリティの変更点](../../../docs/framework/security/security-changes.md).NET Framework セキュリティ システムの重要な変更について説明します。
+[セキュリティの変更](../../../docs/framework/security/security-changes.md).NET Framework セキュリティ システムの重要な変更について説明します。
 
 ## <a name="related-sections"></a>関連項目  
  [開発ガイド](../../../docs/framework/development-guide.md)  

@@ -12,8 +12,8 @@ ms.openlocfilehash: 2d323566aa211ced9ed76302756ed5dc82c5d2c3
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857117"
 ---
 # <a name="data-member-default-values"></a>データ メンバーの既定値
 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]、型の概念がある*既定値*します。 たとえば、参照型の既定値は `null` で、整数型の既定値は 0 です。 しかし、データ メンバーが既定値に設定されている場合は、シリアル化されたデータからそのデータ メンバーを省略することが望ましいことがあります。 それは、メンバーが既定値に設定されているために実際の値をシリアル化する必要がなく、パフォーマンスの点で有利だからです。  
@@ -50,9 +50,9 @@ ms.locfileid: "59973721"
 ### <a name="schema-representation"></a>スキーマ表現  
  データ メンバーの XML スキーマ定義言語 (XSD) スキーマ表現の詳細と、`EmitDefaultValue`プロパティに設定されて`false`は、後ほど[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。 以下に、その概要を簡単に説明します。  
   
--   ときに、<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>に設定されている`false`、Windows Communication Foundation (WCF) に固有の注釈としてスキーマで表されます。 この情報を表すための相互運用可能な方法はありません。 特に、スキーマにおける "default" 属性はこの目的では使用されません。また、`minOccurs` 属性は <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 設定だけに影響され、`nillable` 属性はデータ メンバーの型だけに影響されます。  
+- ときに、<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>に設定されている`false`、Windows Communication Foundation (WCF) に固有の注釈としてスキーマで表されます。 この情報を表すための相互運用可能な方法はありません。 特に、スキーマにおける "default" 属性はこの目的では使用されません。また、`minOccurs` 属性は <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 設定だけに影響され、`nillable` 属性はデータ メンバーの型だけに影響されます。  
   
--   使用される実際の既定値は、スキーマには存在しません。 指定されていない要素が適切に解釈されるかどうかは、受信エンドポイントに依存します。  
+- 使用される実際の既定値は、スキーマには存在しません。 指定されていない要素が適切に解釈されるかどうかは、受信エンドポイントに依存します。  
   
  スキーマのインポート、<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>プロパティが自動的に設定`false`たびに説明したように WCF 固有の注釈が検出されます。 また、このプロパティは、一般に `false` Web サービスを使用したときに発生する特定の相互運用シナリオをサポートするために、`nillable` プロパティが `false` に設定されている参照型に対しても、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] に設定されます。  
   

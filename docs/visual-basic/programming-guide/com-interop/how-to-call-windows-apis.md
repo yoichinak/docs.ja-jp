@@ -8,11 +8,11 @@ helpviewer_keywords:
 - calls [Visual Basic], stored procedures
 ms.assetid: 27d75f0a-54ab-4ee1-b91d-43513a19b12d
 ms.openlocfilehash: e7b76495b83cb9a1dfe7629a1d82695d2046eac2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61818717"
 ---
 # <a name="how-to-call-windows-apis-visual-basic"></a>方法: Windows API (Visual Basic) を呼び出す
 この例を定義し、呼び出し、 `MessageBox` user32.dll 内の関数に文字列を渡します。  
@@ -23,17 +23,16 @@ ms.locfileid: "56972769"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   
-  <xref:System> 名前空間への参照  
+- <xref:System> 名前空間への参照  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   メソッドが静的でないするには、抽象クラスでは、または以前に定義します。 親の種類がインターフェイス、またはの長さ*名前*または*dllName*は 0 です。 (<xref:System.ArgumentException>)  
+- メソッドが静的でないするには、抽象クラスでは、または以前に定義します。 親の種類がインターフェイス、またはの長さ*名前*または*dllName*は 0 です。 (<xref:System.ArgumentException>)  
   
--   *名前*または*dllName*は`Nothing`します。 (<xref:System.ArgumentNullException>)  
+- *名前*または*dllName*は`Nothing`します。 (<xref:System.ArgumentNullException>)  
   
--   含んでいる型が `CreateType` を使用して以前に作成されています。 (<xref:System.InvalidOperationException>)  
+- 含んでいる型が `CreateType` を使用して以前に作成されています。 (<xref:System.InvalidOperationException>)  
   
 ## <a name="see-also"></a>関連項目
 

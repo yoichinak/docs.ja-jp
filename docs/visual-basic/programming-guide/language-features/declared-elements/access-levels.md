@@ -15,11 +15,11 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 ms.assetid: 6e06c1ab-fd78-47f0-83a8-1152780b5e1a
 ms.openlocfilehash: d8f2f16d2fb15f2e840f13f177d3fea83fda315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843103"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828101"
 ---
 # <a name="access-levels-in-visual-basic"></a>Visual Basic でのアクセス レベル
 *アクセス レベル*程度にアクセスできるは、宣言された要素のどのようなコードは、読み取りし、書き込みをするアクセス許可。 これは、アクセス レベルは、要素自体を宣言する方法だけでなく、要素のコンテナーのアクセス レベルによっても決定されます。 として宣言も含めに含まれる要素のいずれかが含まれている要素にアクセスできないコードにアクセスできない、`Public`します。 など、`Public`で変数を`Private`構造体からは、構造体を含むクラスの内部からアクセスできるそのクラスの外部。  

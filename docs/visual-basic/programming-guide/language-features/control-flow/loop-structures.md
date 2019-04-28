@@ -11,11 +11,11 @@ helpviewer_keywords:
 - conditional statements [Visual Basic], loop structures
 ms.assetid: ecacb09b-a4c9-42be-98b2-a15d368b5db8
 ms.openlocfilehash: 56165eecce5e73c4e06235dac1691774fb39b794
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906863"
 ---
 # <a name="loop-structures-visual-basic"></a>ループ構造 (Visual Basic)
 Visual Basic のループ構造を使用して、1 つまたは複数の行のコードを繰り返し実行できます。 条件になるまで、ループ構造でステートメントを繰り返すことができます`True`条件になるまで、`False`コレクションの回数、または 1 回の各要素の数を指定します。  

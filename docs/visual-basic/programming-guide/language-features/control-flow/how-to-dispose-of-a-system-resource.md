@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Using block
 ms.assetid: 8be2b239-8090-419b-8e7e-bcaa75b0ecc8
 ms.openlocfilehash: e3594db036edc3a6288b0373737c1ee26a691a57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341908"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906738"
 ---
 # <a name="how-to-dispose-of-a-system-resource-visual-basic"></a>方法: システム リソース (Visual Basic) を破棄します。
 使用することができます、`Using`システムは、コード ブロックの終了時に、リソースの破棄を保証するためにブロックします。 これは、大量のメモリを使用すること、またはその他のコンポーネントが使用する必要も、システム リソースを使用している場合に便利です。  

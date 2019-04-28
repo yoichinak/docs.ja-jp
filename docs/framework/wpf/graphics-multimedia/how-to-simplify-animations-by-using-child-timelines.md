@@ -7,11 +7,11 @@ helpviewer_keywords:
 - child timelines [WPF]
 ms.assetid: 8335d770-d13d-42bd-8dfa-63f92c0327e2
 ms.openlocfilehash: 21a297208be045eea79d6f5ca6c8eac016d26345
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804014"
 ---
 # <a name="how-to-simplify-animations-by-using-child-timelines"></a>方法: 子タイムラインを使用してアニメーションを簡素化する
 この例は、子を使用してアニメーションを簡素化する方法を示しています。<xref:System.Windows.Media.Animation.ParallelTimeline>オブジェクト。 A<xref:System.Windows.Media.Animation.Storyboard>の種類は、<xref:System.Windows.Media.Animation.Timeline>が含まれているタイムラインのターゲットの情報を提供します。 使用して、<xref:System.Windows.Media.Animation.Storyboard>をタイムラインのターゲット オブジェクトとプロパティの情報などの情報を提供します。  

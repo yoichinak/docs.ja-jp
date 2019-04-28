@@ -10,18 +10,18 @@ helpviewer_keywords:
 - Windows Forms, resizing
 ms.assetid: 5d9dd47e-e68c-48c9-a0a3-a9ff34ba009d
 ms.openlocfilehash: 2da4b7483e92b02360bceb886d84a7f729b84dee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800803"
 ---
 # <a name="how-to-resize-windows-forms"></a>方法: Windows フォームのサイズ変更
 Windows フォームのサイズは、いくつかの方法で指定できます。 <xref:System.Windows.Forms.Form.Size%2A> プロパティに新しい値を設定したり、<xref:System.Windows.Forms.Control.Height%2A> プロパティまたは <xref:System.Windows.Forms.Control.Width%2A> プロパティを個別に調整したりすることで、フォームの高さと幅の両方をプログラムで変更できます。 Visual Studio を使用している場合は、Windows フォーム デザイナーを使用してサイズを変更できます。 参照してください[方法。デザイナーを使用して Windows フォームのサイズを変更](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/37k2zkwx(v=vs.100))します。  
   
 ### <a name="to-resize-a-form-programmatically"></a>プログラムによってフォームのサイズを変更するには  
   
--   フォームの <xref:System.Windows.Forms.Form.Size%2A> プロパティを設定して、実行時にフォームのサイズを定義します。  
+- フォームの <xref:System.Windows.Forms.Form.Size%2A> プロパティを設定して、実行時にフォームのサイズを定義します。  
   
      次のコード例では、フォームのサイズを 100 × 100 ピクセルに設定します。  
   
@@ -39,7 +39,7 @@ Windows フォームのサイズは、いくつかの方法で指定できます
   
 ### <a name="to-change-form-width-and-height-programmatically"></a>フォームの幅と高さをプログラムで変更するには  
   
--   <xref:System.Windows.Forms.Form.Size%2A> を定義した後で、<xref:System.Windows.Forms.Control.Width%2A> プロパティまたは <xref:System.Windows.Forms.Control.Height%2A> プロパティを使用して、フォームの高さと幅のいずれかを変更します。  
+- <xref:System.Windows.Forms.Form.Size%2A> を定義した後で、<xref:System.Windows.Forms.Control.Width%2A> プロパティまたは <xref:System.Windows.Forms.Control.Height%2A> プロパティを使用して、フォームの高さと幅のいずれかを変更します。  
   
      次のコード例は、フォームの幅を、フォームの左端から 300 ピクセルに設定し、高さは一定のままにする方法を示しています。  
   
@@ -75,7 +75,7 @@ Windows フォームのサイズは、いくつかの方法で指定できます
   
 ### <a name="to-change-form-size-by-increments-programmatically"></a>フォームのサイズをプログラムで増分して変更するには  
   
--   フォームのサイズを増分するには、<xref:System.Drawing.Size.Width%2A> プロパティと <xref:System.Drawing.Size.Height%2A> プロパティを設定します。  
+- フォームのサイズを増分するには、<xref:System.Drawing.Size.Width%2A> プロパティと <xref:System.Drawing.Size.Height%2A> プロパティを設定します。  
   
      次のコード例は、フォームの幅を、現在の設定より 200 ピクセル広くする方法を示しています。  
   

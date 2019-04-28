@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ee50e943-9349-4c84-ab1c-c35d3ada1a9c
 ms.openlocfilehash: 02d0417bc05f8585dc469d365089c8123d395f64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877124"
 ---
 # <a name="remote-vs-local-execution"></a>クエリのリモート実行とローカル実行
 クエリは、リモートで実行することも (データベース エンジンによるデータベースに対するクエリの実行)、ローカルに実行することも ([!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によるローカル キャッシュに対するクエリの実行) できます。  
@@ -23,18 +23,18 @@ ms.locfileid: "59164516"
   
  データベース内に大量の行がある場合は、小さなサブセットを処理するためにすべての行を取得するのは望ましくありません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、<xref:System.Data.Linq.EntitySet%601> クラスに <xref:System.Linq.IQueryable> インターフェイスが実装されています。 これにより、このようなクエリをリモートで実行することが可能になります。 この方法には、次の 2 つの大きな利点があります。  
   
--   不要なデータは取得されません。  
+- 不要なデータは取得されません。  
   
--   多くの場合、データベース エンジンによって実行されるクエリは、データベース インデックスの効果でより効率的になります。  
+- 多くの場合、データベース エンジンによって実行されるクエリは、データベース インデックスの効果でより効率的になります。  
   
 ## <a name="local-execution"></a>ローカル実行  
  一方、関連するエンティティ全体をローカル キャッシュに取り込むことが必要な場合もあります。 この目的から、<xref:System.Data.Linq.EntitySet%601> には、<xref:System.Data.Linq.EntitySet%601.Load%2A> のすべてのメンバーを明示的に読み込む <xref:System.Data.Linq.EntitySet%601> メソッドが用意されています。  
   
  <xref:System.Data.Linq.EntitySet%601> が既に読み込まれている場合、それ以降のクエリはローカルに実行されます。 この方法は、次の 2 つの点で役立ちます。  
   
--   データ全体をローカルで使用する必要がある場合、または複数回使用する必要がある場合に、リモート クエリおよびそれに伴う待機時間を回避できます。  
+- データ全体をローカルで使用する必要がある場合、または複数回使用する必要がある場合に、リモート クエリおよびそれに伴う待機時間を回避できます。  
   
--   エンティティ全体をシリアル化できます。  
+- エンティティ全体をシリアル化できます。  
   
  次のコードは、ローカル実行を行う方法を示しています。  
   

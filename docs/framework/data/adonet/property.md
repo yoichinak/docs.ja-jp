@@ -3,11 +3,11 @@ title: property
 ms.date: 03/30/2017
 ms.assetid: a941c53f-fc97-42c2-8832-0fb9f1d55c06
 ms.openlocfilehash: 71a04f334ec465b0f11cc8f18f2680df651081eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181650"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879043"
 ---
 # <a name="property"></a>property
 *プロパティ*の基本的な構成要素を[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)と[複合型](../../../../docs/framework/data/adonet/complex-type.md)します。 プロパティは、エンティティ型または複合型のインスタンスに含まれるデータの形と特性を定義します。 概念モデルのプロパティは、クラスに定義されるプロパティに似ています。 クラスのプロパティがクラスの構造を定義し、オブジェクトに関する情報を伝達するのと同様に、概念モデルのプロパティはエンティティ型の構造を定義し、エンティティ型のインスタンスに関する情報を伝達します。  
@@ -17,11 +17,11 @@ ms.locfileid: "59181650"
   
  プロパティの定義には、次の情報が含まれます。  
   
--   プロパティ名。 (必須)  
+- プロパティ名。 (必須)  
   
--   プロパティの型。 (必須)  
+- プロパティの型。 (必須)  
   
--   一連の[ファセット](../../../../docs/framework/data/adonet/facet.md)します。 (オプション)。  
+- 一連の[ファセット](../../../../docs/framework/data/adonet/facet.md)します。 (オプション)。  
   
  プロパティには、プリミティブ データ (文字列、整数、ブール値など) または構造化データ (複合型) を含めることができます。 プリミティブ型のプロパティは、スカラー プロパティとも呼ばれます。 詳細については、次を参照してください[Entity Data Model:。プリミティブ データ型](../../../../docs/framework/data/adonet/entity-data-model-primitive-data-types.md)します。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42105
 ms.assetid: b6929bf4-a365-4a70-8dc9-6b0fc09e1468
 ms.openlocfilehash: badcfea4f24ba3858071e02ba47b8f77ab557f88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802378"
 ---
 # <a name="function-procedurename-doesnt-return-a-value-on-all-code-paths"></a>関数 '\<procedurename >' は、すべてのコード パスで値を返しません
 関数 '\<procedurename >' は、すべてのコード パスで値を返しません。 'Return' ステートメントが見当たりませんか。  
@@ -21,11 +21,11 @@ ms.locfileid: "58824833"
   
  値を返すことができます、`Function`次の方法のいずれかの手順。  
   
--   値を含める、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)します。  
+- 値を含める、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)します。  
   
--   値を代入します、`Function`プロシージャ名前を指定し、実行、`Exit Function`ステートメント。  
+- 値を代入します、`Function`プロシージャ名前を指定し、実行、`Exit Function`ステートメント。  
   
--   値を代入します、`Function`プロシージャ名前を指定し、実行、`End Function`ステートメント。  
+- 値を代入します、`Function`プロシージャ名前を指定し、実行、`End Function`ステートメント。  
   
  コントロールに渡します`Exit Function`または`End Function`プロシージャ名を任意の値が割り当てられていないと、戻り値のデータ型の既定値を返します。 詳細については、「動作」を参照してください[関数ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "58824833"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   制御フローのロジックを確認し、すべてが値を返すステートメントの前に値を代入するかどうかを確認します。  
+- 制御フローのロジックを確認し、すべてが値を返すステートメントの前に値を代入するかどうかを確認します。  
   
      常に使用する場合に、プロシージャからリターンごとに値を返すことを保証する方が簡単、`Return`ステートメント。 この場合、最後のステートメントの前に`End Function`する必要があります、`Return`ステートメント。  
   

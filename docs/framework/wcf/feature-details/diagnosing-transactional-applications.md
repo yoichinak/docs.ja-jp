@@ -3,11 +3,11 @@ title: トランザクション アプリケーションの診断
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
 ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856740"
 ---
 # <a name="diagnosing-transactional-applications"></a>トランザクション アプリケーションの診断
 このトピックでは、Windows Communication Foundation (WCF) の管理と診断機能を使用して、トランザクション アプリケーションをトラブルシューティングする方法について説明します。  
@@ -87,15 +87,15 @@ ms.locfileid: "59101713"
 ## <a name="tracing"></a>トレース  
  トレースを使用すると、トランザクション アプリケーションにおけるエラーを監視および分析できます。 トレースは次の方法を使用して有効にできます。  
   
--   標準の WCF トレース  
+- 標準の WCF トレース  
   
      この種類のトレースは、任意の WCF アプリケーションのトレースと同じです。 詳細については、「 [Configuring Tracing](../../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)」を参照してください。  
   
--   WS-AtomicTransaction トレース  
+- WS-AtomicTransaction トレース  
   
      WS-AtomicTransaction トレースを使用して有効にすることができます、 [WS-AtomicTransaction 構成ユーティリティ (wsatConfig.exe)](../../../../docs/framework/wcf/ws-atomictransaction-configuration-utility-wsatconfig-exe.md)します。 このトレースでは、トランザクションの状態とシステム内の参加要素を把握できます。 内部のサービス モデル トレースも有効にするには、`HKLM\SOFTWARE\Microsoft\WSAT\3.0\ServiceModelDiagnosticTracing` レジストリ キーを <xref:System.Diagnostics.SourceLevels> 列挙体の有効な値に設定します。 その他の WCF アプリケーションと同じ方法でメッセージ ログを有効にすることができます。  
   
--   `System.Transactions` トレース  
+- `System.Transactions` トレース  
   
      OleTransactions プロトコルを使用する場合、プロトコル メッセージはトレースできません。 <xref:System.Transactions> インフラストラクチャではトレースがサポートされるため (OleTransactions を使用)、ユーザーはトランザクションで発生したイベントを確認できます。 <xref:System.Transactions> アプリケーションのトレースを有効にするには、`App.config` 構成ファイルに次のコードを含めます。  
   

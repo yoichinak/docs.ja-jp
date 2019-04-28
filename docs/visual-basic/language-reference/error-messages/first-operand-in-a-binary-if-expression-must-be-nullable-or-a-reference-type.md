@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC33107
 ms.assetid: 493c8899-3f6b-4471-8eb6-9284e8492768
 ms.openlocfilehash: 32ff0adca9d35e6b5439ae06be85414924dac2e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801297"
 ---
 # <a name="first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type"></a>バイナリ 'If' 式の最初のオペランドは Null 許容または参照型である必要があります
 `If`式が 2 つまたは 3 つの引数を受け取ることができます。 2 つの引数を送信すると、最初の引数は、参照型または null 許容型でする必要があります。 最初の引数の評価が何も以外の場合`Nothing`、その値が返されます。 最初の引数が評価された場合`Nothing`、2 番目の引数が評価され、返されます。  
@@ -46,7 +46,7 @@ Dim booleanVar = True
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   最初の引数が null 許容型または参照型であるようにコードを変更することはできない場合、は、3 つの引数に変換することを検討してください`If`式、または、`If...Then...Else`ステートメント。  
+- 最初の引数が null 許容型または参照型であるようにコードを変更することはできない場合、は、3 つの引数に変換することを検討してください`If`式、または、`If...Then...Else`ステートメント。  
   
 ```vb  
 Console.WriteLine(If(choice1 < choice2, 1, 2))  

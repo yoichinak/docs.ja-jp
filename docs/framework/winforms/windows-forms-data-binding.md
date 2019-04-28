@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 ms.assetid: c3826d8e-ea25-4ad4-a669-45bfb19192aa
 ms.openlocfilehash: ed456807137e8cf7594bc50eb0eebb67b88e6b40
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61800114"
 ---
 # <a name="windows-forms-data-binding"></a>Windows フォームでのデータ バインディング
 Windows フォームでのデータ バインディングは、データ ソースの情報をフォーム上のコントロールで表示したり変更したりする手段を提供します。 従来のデータ ソースに対してだけでなく、データを格納したほとんどすべての構造に対してバインドできます。  
@@ -34,23 +34,19 @@ Windows フォームでのデータ バインディングは、データ ソー�
  Windows フォーム データ バインドの異なる種類の変更通知について説明します。  
   
  [方法: INotifyPropertyChanged インターフェイスを実装します。](how-to-implement-the-inotifypropertychanged-interface.md)  
- 
-  <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装する方法について説明します。 インターフェイスは、バインドしたコントロールを通してビジネス オブジェクトのプロパティの変更内容を通信します。  
+ <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装する方法について説明します。 インターフェイスは、バインドしたコントロールを通してビジネス オブジェクトのプロパティの変更内容を通信します。  
   
  [方法: PropertyNameChanged パターンを適用します。](how-to-apply-the-propertynamechanged-pattern.md)  
  適用する方法を示しています、 *PropertyName*Changed パターンを Windows フォーム ユーザー コントロールのプロパティ。  
   
  [方法: ITypedList インターフェイスを実装します。](how-to-implement-the-itypedlist-interface.md)  
- 
-  <xref:System.ComponentModel.ITypedList> インターフェイスを実装して、バインドできるリストのスキーマを検出できるようにする方法について説明します。  
+ <xref:System.ComponentModel.ITypedList> インターフェイスを実装して、バインドできるリストのスキーマを検出できるようにする方法について説明します。  
   
  [方法: IListSource インターフェイスを実装します。](how-to-implement-the-ilistsource-interface.md)  
- 
-  <xref:System.ComponentModel.IListSource> インターフェイスを実装して、<xref:System.Collections.IList> を実装する代わりに別の場所からリストを提供する、バインドできるクラスを作成する方法について説明します。  
+ <xref:System.ComponentModel.IListSource> インターフェイスを実装して、<xref:System.Collections.IList> を実装する代わりに別の場所からリストを提供する、バインドできるクラスを作成する方法について説明します。  
   
  [方法: 複数のコントロールと同じデータ ソースにバインドが同期を維持](multiple-controls-bound-to-data-source-synchronized.md)  
- 
-  <xref:System.Windows.Forms.BindingSource.BindingComplete> イベントを処理して、データ ソースにバインドされているすべてのコントロールの同期を保つ方法について説明します。  
+ <xref:System.Windows.Forms.BindingSource.BindingComplete> イベントを処理して、データ ソースにバインドされているすべてのコントロールの同期を保つ方法について説明します。  
   
  [方法: 子テーブルの選択行が正しい位置に保持することを確認します。](ensure-the-selected-row-in-a-child-table-correct.md)  
  親テーブルのフィールドが変更された場合に、子テーブルの選択行が変更されないことを保証する方法について説明しています。  
@@ -66,8 +62,7 @@ Windows フォームでのデータ バインディングは、データ ソー�
   
 ## <a name="related-sections"></a>関連項目  
  [BindingSource コンポーネント](./controls/bindingsource-component.md)  
- 
-  <xref:System.Windows.Forms.BindingSource> コンポーネントの使用方法の例を示すトピックの一覧を示します。  
+ <xref:System.Windows.Forms.BindingSource> コンポーネントの使用方法の例を示すトピックの一覧を示します。  
   
  [DataGridView コントロール](./controls/datagridview-control-windows-forms.md)  
  バインドできるデータ グリッド コントロールの使用方法の例を示すトピックの一覧を示します。  

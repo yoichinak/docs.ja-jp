@@ -10,11 +10,11 @@ helpviewer_keywords:
 - document literal [Visual Basic]
 ms.assetid: f7bbee56-0911-41de-b907-96f20450137b
 ms.openlocfilehash: f58c1365e145166dfe122d455854d44526300a1e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61799308"
 ---
 # <a name="xml-document-literal-visual-basic"></a>XML ドキュメント リテラル (Visual Basic)
 リテラルを表す、<xref:System.Xml.Linq.XDocument>オブジェクト。  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7864bb81c3b457bf8ec07cd194d24b29a42bd441
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156066"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767489"
 ---
 # <a name="iclriocompletionmanager-interface"></a>ICLRIoCompletionManager インターフェイス
 実装により、指定した I/O の状態のホストが共通言語ランタイム (CLR) に通知するコールバック メソッドを要求します。  

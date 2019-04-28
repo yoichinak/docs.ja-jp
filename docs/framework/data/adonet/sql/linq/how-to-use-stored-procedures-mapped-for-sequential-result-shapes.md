@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: a73530de-5a4e-4d9c-8d66-abb19c225b11
 ms.openlocfilehash: e51ebacb3f6be849f7b871f2d12db3ea7476b117
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134512"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877072"
 ---
 # <a name="how-to-use-stored-procedures-mapped-for-sequential-result-shapes"></a>方法: シーケンシャルな結果形状が割り当てられたストアド プロシージャを使用する
 この種類のストアド プロシージャでは、複数の結果形状が生成されますが、どの順序で結果が返されるかがわかります。 このシナリオは、返される結果のシーケンスがわからないシナリオと対照的です。 詳細については、「[方法 :複数の結果形状が割り当てられたストアド プロシージャを使用して、](../../../../../../docs/framework/data/adonet/sql/linq/how-to-use-stored-procedures-mapped-for-multiple-result-shapes.md)します。  

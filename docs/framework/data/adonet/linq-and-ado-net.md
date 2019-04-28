@@ -3,11 +3,11 @@ title: LINQ と ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
 ms.openlocfilehash: f57d50e6c76b3d95c1d87b6beafe345f9a251e04
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54714816"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61878744"
 ---
 # <a name="linq-and-adonet"></a>LINQ と ADO.NET
 今日では、多くのビジネス開発者が 2 つ (以上) のプログラミング言語を使用する必要があります。 高級言語 (Visual c# または Visual Basic) などのビジネス ロジックやプレゼンテーション層とデータベースと対話するクエリ言語 (など[!INCLUDE[tsql](../../../../includes/tsql-md.md)])。 開発者は実質的に複数の言語に精通していることが要求され、開発環境における言語の不整合が生じる原因にもなっています。 たとえば、データ アクセス API を使用してデータベースを照会するアプリケーションでは、クエリは文字列リテラルとして引用符で囲んで指定する必要があります。 コンパイラはこのクエリ文字列を認識できないため、エラー (無効な構文、参照されている列または行が実際に存在するかどうかなど) のチェック機構が働きません。 クエリ パラメーターの型チェックや `IntelliSense` のサポートもありません。  
@@ -22,7 +22,7 @@ ms.locfileid: "54714816"
   
  ![LINQ to ADO.NET overview](../../../../docs/framework/data/adonet/media/dpue-linqtoadonetoverview-bpuedev11.gif "DPUE_LinqToAdoNetOverview_bpuedev11")  
   
- LINQ の詳細については、[言語統合クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)を参照してください。
+ LINQ の詳細については、次を参照してください。[言語統合クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)します。
   
  以降のセクションで、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]、および [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] について詳しく説明します。  
   

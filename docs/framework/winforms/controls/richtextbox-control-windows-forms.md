@@ -7,11 +7,11 @@ helpviewer_keywords:
 - rich edit controls
 ms.assetid: 3225f2ef-c6d9-4bd4-9d3e-2219e58edbf2
 ms.openlocfilehash: 2b1a6604df3979e83e4a815cdb4a9397ab4e67ad
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716974"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012465"
 ---
 # <a name="richtextbox-control-windows-forms"></a>RichTextBox コントロール (Windows フォーム)
 Windows フォーム`RichTextBox`を表示する、入力、およびテキストの書式形式のコントロールを使用します。 `RichTextBox`コントロールはすべて、<xref:System.Windows.Forms.TextBox>コントロールを使用して、できますが、できますフォント、色、およびリンクの表示; ファイルは元に戻すおよびやり直し操作の編集からテキストと埋め込み画像を読み込み、指定した文字を検索します。 `RichTextBox`コントロールを通常使用するテキストの操作を行い、Microsoft Word などのワード プロセッシング アプリケーションに似た機能を表示します。 ように、<xref:System.Windows.Forms.TextBox>コントロール、`RichTextBox`コントロールがスクロール バーを表示できますとは異なり、<xref:System.Windows.Forms.TextBox>コントロール、既定では水平および垂直の両方向のスクロール バーを表示し、スクロール バーの追加の設定があります。  

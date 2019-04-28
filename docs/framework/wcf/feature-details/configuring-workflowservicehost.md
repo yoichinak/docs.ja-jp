@@ -3,11 +3,11 @@ title: WorkflowServiceHost の構成
 ms.date: 03/30/2017
 ms.assetid: d8e961cb-0ef5-4f8c-8a25-e76ae6334fed
 ms.openlocfilehash: dcfc22c1c0084761039a876eec7bf00cf78b51a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201235"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857390"
 ---
 # <a name="configuring-workflowservicehost"></a>WorkflowServiceHost の構成
 このセクションには一連の短い「する方法」のさまざまな機能を構成する方法を簡単に説明するトピック、<xref:System.ServiceModel.Activities.WorkflowServiceHost>構成内のクラス。 これらのトピックがワークフロー サービス固有の構成に対応、通常の WCF サービスと同じ方法で他のすべての構成が行われます。  

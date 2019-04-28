@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], ScrollViewer
 ms.assetid: 2ad124d2-2406-4157-aaf2-64e067298f01
 ms.openlocfilehash: ef0bc5d344f7d465de9209708430d3e61d40d4f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114651"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910794"
 ---
 # <a name="how-to-create-an-expander-with-a-scrollviewer"></a>方法: ScrollViewer を持つエキスパンダーを作成する
 この例は、作成する方法を示します、<xref:System.Windows.Controls.Expander>イメージやテキストなどの複雑なコンテンツを格納しているコントロール。 例では、コンテンツを囲むことも、<xref:System.Windows.Controls.Expander>で、<xref:System.Windows.Controls.ScrollViewer>コントロール。  

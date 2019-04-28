@@ -3,11 +3,11 @@ title: '方法: 探索プロキシで登録される探索可能なサービス�
 ms.date: 03/30/2017
 ms.assetid: eb275bc1-535b-44c8-b9f3-0b75e9aa473b
 ms.openlocfilehash: 31c89aeed2577c5dd11ae59ee4a4d692210e5f37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61856493"
 ---
 # <a name="how-to-implement-a-discoverable-service-that-registers-with-the-discovery-proxy"></a>方法: 探索プロキシで登録される探索可能なサービスの実装する
 これは、探索プロキシの実装方法に関する 4 つのトピックのうちの 2 番目のトピックです。 前のトピックで[方法。探索プロキシの実装](../../../../docs/framework/wcf/feature-details/how-to-implement-a-discovery-proxy.md)、探索プロキシを実装します。 このトピックでは、アナウンス メッセージを送信する WCF サービスを作成 (`Hello`と`Bye`) に、探索プロキシに登録または登録解除、探索プロキシの原因です。
@@ -18,9 +18,9 @@ ms.locfileid: "59302193"
 
 2. 次のアセンブリへの参照を追加します。
 
-    1.  System.ServiceModel
+    1. System.ServiceModel
 
-    2.  System.ServiceModel.Discovery
+    2. System.ServiceModel.Discovery
 
 3. 新しいクラスを `CalculatorService` プロジェクトに追加します。
 

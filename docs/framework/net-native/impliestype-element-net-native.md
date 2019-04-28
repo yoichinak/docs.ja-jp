@@ -5,11 +5,11 @@ ms.assetid: 3abd2071-0f28-40ba-b9a0-d52bd94cd2f6
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2ef238a2cb852ecd7fa3f0e2dbe4048ff03a4139
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868629"
 ---
 # <a name="impliestype-element-net-native"></a>\<ImpliesType > 要素 (.NET ネイティブ)
 型にポリシーを適用します (含んでいる型またはメソッドにそのポリシーが適用されている場合)。  
@@ -75,9 +75,9 @@ ms.locfileid: "59080879"
 ## <a name="remarks"></a>Remarks  
  `<ImpliesType>` 要素は主にライブラリによる使用を想定しています。 これは、次のシナリオに対応します。  
   
--   ルーチンを 1 つの型にリフレクションする必要がある場合、2 番目の型にもリフレクションする必要がある。  
+- ルーチンを 1 つの型にリフレクションする必要がある場合、2 番目の型にもリフレクションする必要がある。  
   
--   スタティック分析で必要であると示されないため、2 番目の型の暗黙的なインスタンス化のメタデータをそれ以外の方法で使用できない。  
+- スタティック分析で必要であると示されないため、2 番目の型の暗黙的なインスタンス化のメタデータをそれ以外の方法で使用できない。  
   
  最も一般的には、2 つの型は共有型引数を持つジェネリックなインスタンス化です。  
   

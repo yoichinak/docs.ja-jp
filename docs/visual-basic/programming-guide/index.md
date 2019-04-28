@@ -7,18 +7,18 @@ helpviewer_keywords:
 - Visual Basic, language reference
 ms.assetid: 640e5796-2796-433c-af37-4d2a2334895b
 ms.openlocfilehash: 32654012343fc919dbadbfa4515c1e8e2b686ed1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33646540"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907700"
 ---
 # <a name="visual-basic-programming-guide"></a>Visual Basic のプログラミング ガイド
 Visual Basic は、最新のプログラミング言語と同様に、多くの一般的なプログラミング構成要素と言語要素をサポートします。 このガイドでは、Visual Basic でのプログラミングのすべての主要な要素について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [プログラム構造とコード規則](../../visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md)  
- 名前付け規則などの Visual Basic、Visual Basic での制限事項、コード内のコメントの基本的な構造とコード規則に関するドキュメントが含まれています。  
+ 名前付け規則など、Visual Basic、Visual Basic での制限事項、コード内のコメントの基本的な構造とコード規則に関するドキュメントが含まれています。  
   
  [Visual Basic 言語の機能](../../visual-basic/programming-guide/language-features/index.md)  
  LINQ や XML リテラルなど、Visual Basic の重要な機能に関するトピックへのリンクを示します。  
