@@ -11,11 +11,11 @@ helpviewer_keywords:
 - authenticationModules, clear element
 ms.assetid: dc522c45-4a80-4831-8955-f7b68a47edfd
 ms.openlocfilehash: 3c018c7d474286f7a9cde2d070e4b54d164b5b40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59094373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674611"
 ---
 # <a name="clear-element-for-authenticationmodules-network-settings"></a>\<クリア > authenticationModules (ネットワーク設定) の要素
 アプリケーションからのすべての認証モジュールを削除します。  

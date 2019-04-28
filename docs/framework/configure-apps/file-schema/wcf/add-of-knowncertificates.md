@@ -3,11 +3,11 @@ title: <add> の <knownCertificates>
 ms.date: 03/30/2017
 ms.assetid: 128aaabe-3f1a-4c3b-b59f-898d0f02910f
 ms.openlocfilehash: 3eb5bf74f909e6036154b7f5f7c6181b09fefbff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704701"
 ---
 # <a name="add-of-knowncertificates"></a>\<追加 > の\<knownCertificates >
 既知の証明書のコレクションに X.509 証明書を追加します。  

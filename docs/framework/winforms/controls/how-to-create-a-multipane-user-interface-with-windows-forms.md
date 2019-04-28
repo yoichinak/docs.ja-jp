@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Splitter control [Windows Forms], examples
 ms.assetid: e79f6bcc-3740-4d1e-b46a-c5594d9b7327
 ms.openlocfilehash: 8650ba3b8011e50779080e31d94727609f2d08f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747096"
 ---
 # <a name="how-to-create-a-multipane-user-interface-with-windows-forms"></a>方法: Windows フォームでマルチペイン ユーザー インターフェイスを作成する
 Microsoft Outlook で使用される次のようなマルチペイン ユーザー インターフェイスを作成する次の手順で、**フォルダー**  ボックスの一覧を**メッセージ**ウィンドウで、および**プレビュー**ウィンドウ。 この配置は、主に、コントロールをフォームにドッキングして実現されます。  

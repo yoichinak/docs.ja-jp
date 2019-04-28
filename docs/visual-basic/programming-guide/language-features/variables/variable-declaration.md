@@ -18,11 +18,11 @@ helpviewer_keywords:
 - scope [Visual Basic], variables
 ms.assetid: d8f10226-92b1-480f-9f53-df377b2d7e15
 ms.openlocfilehash: 699737ffbe0b136af8862931fadacec26772b928
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757002"
 ---
 # <a name="variable-declaration-in-visual-basic"></a>Visual Basic での変数宣言
 名前と特性を指定する変数を宣言するとします。 変数の宣言ステートメントは、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)します。 その場所や内容は、変数の特性を決定します。  
@@ -42,15 +42,15 @@ ms.locfileid: "58833283"
 ## <a name="declaring-data-type"></a>データ型の宣言  
  [として](../../../../visual-basic/language-reference/statements/as-clause.md)宣言ステートメントの句では、データ型またはオブジェクトを宣言する変数の種類を定義できます。 変数の種類として次のいずれかを指定できます。  
   
--   などの基本のデータ入力`Boolean`、 `Long`、または `Decimal`  
+- などの基本のデータ入力`Boolean`、 `Long`、または `Decimal`  
   
--   配列や構造体などの複合データ型  
+- 配列や構造体などの複合データ型  
   
--   オブジェクトの種類、または、アプリケーションで、または別のアプリケーションで定義されているクラス  
+- オブジェクトの種類、または、アプリケーションで、または別のアプリケーションで定義されているクラス  
   
--   A[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]クラスなど、<xref:System.Windows.Forms.Label>または <xref:System.Windows.Forms.TextBox>  
+- A[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]クラスなど、<xref:System.Windows.Forms.Label>または <xref:System.Windows.Forms.TextBox>  
   
--   インターフェイス型など、<xref:System.IComparable>または <xref:System.IDisposable>  
+- インターフェイス型など、<xref:System.IComparable>または <xref:System.IDisposable>  
   
  データ型を繰り返すことがなく、1 つのステートメントで複数の変数を宣言できます。 次のステートメントでは、変数で`i`、 `j`、および`k`型として宣言されている`Integer`、`l`と`m`として`Long`と`x`と`y`として`Single`:  
   

@@ -3,11 +3,11 @@ title: System.ServiceModel.Security.ImportSecurityChannelBindingExit
 ms.date: 03/30/2017
 ms.assetid: a174db12-23e4-49ec-b8b3-40ca7b2c1ba1
 ms.openlocfilehash: 69e59aaca6054d7b184f2e7ef6fd06c0abe7bdf6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220995"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666457"
 ---
 # <a name="systemservicemodelsecurityimportsecuritychannelbindingexit"></a>System.ServiceModel.Security.ImportSecurityChannelBindingExit
 System.ServiceModel.Security.ImportSecurityChannelBindingExit  

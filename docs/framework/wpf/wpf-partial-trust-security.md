@@ -16,11 +16,11 @@ helpviewer_keywords:
 - managing permissions [WPF]
 ms.assetid: ef2c0810-1dbf-4511-babd-1fab95b523b5
 ms.openlocfilehash: 75ebf605e9abb844e7a713b448aefe2ec4cd1a27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696600"
 ---
 # <a name="wpf-partial-trust-security"></a>WPF 部分信頼セキュリティ
 <a name="introduction"></a> 一般に、悪意のある破損を防ぐための重要なシステム リソースに直接アクセスする必要がなくなりますインターネット アプリケーションを制限する必要があります。 既定では、[!INCLUDE[TLA#tla_html](../../../includes/tlasharptla-html-md.md)]クライアント側のスクリプト言語は、重要なシステム リソースにアクセスすることができません。 Windows Presentation Foundation (WPF)、ブラウザーからブラウザーでホストされるアプリケーションを起動できるのような一連の制限に準拠している必要があります。 これらの制限を適用する[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]依存両方[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)]と[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)](を参照してください[WPF のセキュリティ方針 - プラットフォーム セキュリティ](wpf-security-strategy-platform-security.md))。 既定では、ブラウザーでホストされるアプリケーションはインターネット ゾーンを要求[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]インターネット、ローカル イントラネット、またはローカル コンピューターから起動するかどうかに関係なく、権限のセット。 アクセス許可の完全なセットよりも小さいか何かを実行しているアプリケーションは、部分信頼で実行されていると見なされます。  
@@ -29,11 +29,11 @@ ms.locfileid: "59218382"
   
  このトピックは、次のセクションで構成されています。  
   
--   [機能の WPF 部分信頼サポート](#WPF_Feature_Partial_Trust_Support)  
+- [機能の WPF 部分信頼サポート](#WPF_Feature_Partial_Trust_Support)  
   
--   [部分信頼のプログラミング](#Partial_Trust_Programming)  
+- [部分信頼のプログラミング](#Partial_Trust_Programming)  
   
--   [アクセス許可の管理](#Managing_Permissions)  
+- [アクセス許可の管理](#Managing_Permissions)  
   
 <a name="WPF_Feature_Partial_Trust_Support"></a>   
 ## <a name="wpf-feature-partial-trust-support"></a>機能の WPF 部分信頼サポート  
@@ -52,19 +52,19 @@ ms.locfileid: "59218382"
   
  この表は、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]高レベルで機能します。 詳細については、[!INCLUDE[TLA#tla_lhsdk](../../../includes/tlasharptla-lhsdk-md.md)]ドキュメント内の各メンバーに必要なアクセス許可[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]します。 さらに、次の機能には、特別な考慮事項を含め、部分信頼の実行に関する情報の詳細します。  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (を参照してください[XAML の概要 (WPF)](./advanced/xaml-overview-wpf.md))。  
+- [!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)] (を参照してください[XAML の概要 (WPF)](./advanced/xaml-overview-wpf.md))。  
   
--   ポップアップ (を参照してください<xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>)。  
+- ポップアップ (を参照してください<xref:System.Windows.Controls.Primitives.Popup?displayProperty=nameWithType>)。  
   
--   ドラッグ アンド ドロップ (を参照してください[ドラッグ アンド ドロップの概要](./advanced/drag-and-drop-overview.md))。  
+- ドラッグ アンド ドロップ (を参照してください[ドラッグ アンド ドロップの概要](./advanced/drag-and-drop-overview.md))。  
   
--   クリップボード (を参照してください<xref:System.Windows.Clipboard?displayProperty=nameWithType>)。  
+- クリップボード (を参照してください<xref:System.Windows.Clipboard?displayProperty=nameWithType>)。  
   
--   イメージング (を参照してください<xref:System.Windows.Controls.Image?displayProperty=nameWithType>)。  
+- イメージング (を参照してください<xref:System.Windows.Controls.Image?displayProperty=nameWithType>)。  
   
--   シリアル化 (を参照してください<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>、 <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>)。  
+- シリアル化 (を参照してください<xref:System.Windows.Markup.XamlReader.Load%2A?displayProperty=nameWithType>、 <xref:System.Windows.Markup.XamlWriter.Save%2A?displayProperty=nameWithType>)。  
   
--   ファイル ダイアログ ボックスを開きます (を参照してください<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>)。  
+- ファイル ダイアログ ボックスを開きます (を参照してください<xref:Microsoft.Win32.OpenFileDialog?displayProperty=nameWithType>)。  
   
  次の表にアウトライン、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]インターネットの制限内で実行しても安全ではない機能をゾーンのアクセス許可セット。  
   
@@ -153,11 +153,11 @@ ms.locfileid: "59218382"
   
  アクセス許可を増やす必要がある場合は、プロジェクトの設定と、ClickOnce アプリケーション マニフェストを変更する必要があります。 詳細については、「[WPF XAML ブラウザー アプリケーションの概要](./app-development/wpf-xaml-browser-applications-overview.md)」をご覧ください。 次のドキュメントも便利な場合があります。  
   
--   [Mage.exe (マニフェスト生成および編集ツール)](../tools/mage-exe-manifest-generation-and-editing-tool.md)します。  
+- [Mage.exe (マニフェスト生成および編集ツール)](../tools/mage-exe-manifest-generation-and-editing-tool.md)します。  
   
--   [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)します。  
+- [MageUI.exe (マニフェスト生成および編集ツールのグラフィカル クライアント)](../tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)します。  
   
--   [ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)します。  
+- [ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)します。  
   
  場合、[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]完全な信頼が必要です。 要求されたアクセス許可を増やすと同じツールを使用することができます。 ただし、[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]上にインストールされ、イントラネット、ローカル コンピューターとは、ブラウザーの信頼済みまたは許可されたサイトに記載されている URL から起動された場合のみ、完全な信頼が受信されます。 アプリケーションは、イントラネットまたは信頼済みサイトからインストールする場合、ユーザーには管理者特権でのアクセス許可のことを通知する標準の ClickOnce プロンプトが表示されます。 ユーザーは、インストールを続行するか取り消すかを選択できます。  
   

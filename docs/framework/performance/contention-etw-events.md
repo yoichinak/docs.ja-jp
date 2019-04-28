@@ -8,17 +8,17 @@ ms.assetid: 6933e753-2f2a-425b-ae84-42138c957d76
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 95f56a6c8b51c58ed36d5d0de428bf57b728009c
-ms.sourcegitcommit: 5dcfeb59179e81071f54840d4902cbe00b184294
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/24/2019
-ms.locfileid: "54857646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723941"
 ---
 # <a name="contention-etw-events"></a>競合 ETW イベント
 
 競合イベントは、ランタイムによって使用される <xref:System.Threading.Monitor?displayProperty=nameWithType> ロックまたはネイティブ ロックの競合が発生するたびに発生します。 競合は、あるスレッドが、別のスレッドが保持しているロックを待機しているときに発生します。
 
-競合イベントが発生するキーワードとイベントのレベルを次の表に示します  詳細については、[CLR ETW キーワードおよびレベル](clr-etw-keywords-and-levels.md)を参照してください。
+競合イベントが発生するキーワードとイベントのレベルを次の表に示します  詳細については、次を参照してください。 [CLR ETW キーワードおよびレベル](clr-etw-keywords-and-levels.md)します。
 
 |イベントを発生させるキーワード|レベル|
 |-----------------------------------|-----------|

@@ -12,11 +12,11 @@ ms.assetid: 60e79a8c-415a-497d-be29-b9d0fd9bdee3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fdf840035150f08c894c984213af9a0abe6e95af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704766"
 ---
 # <a name="developmentmode-element"></a>\<developmentMode > 要素
 DEVPATH 環境変数によって指定されたディレクトリで、ランタイムがアセンブリの検索を行うかどうかを指定します。  

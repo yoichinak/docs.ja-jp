@@ -3,11 +3,11 @@ title: <system.runtime.serialization>
 ms.date: 03/30/2017
 ms.assetid: a8cebf4c-06d2-4667-8f5b-c3e1fc90df6f
 ms.openlocfilehash: c34eba2614a354f1753d8da077f8653f2c260a97
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165894"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757912"
 ---
 # <a name="systemruntimeserialization"></a>\<system.runtime.serialization>
 <xref:System.Runtime.Serialization> 名前空間セクションのルート要素を表し、<xref:System.Runtime.Serialization.DataContractSerializer> のオプションを設定するための要素を含みます。  

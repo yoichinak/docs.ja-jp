@@ -3,11 +3,11 @@ title: <serviceAuthenticationManager>
 ms.date: 03/30/2017
 ms.assetid: 5d69e64f-f325-4d55-8e2d-0fb30f222dda
 ms.openlocfilehash: 0940248364488bb38a329c5e461d72463c574e74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670379"
 ---
 # <a name="serviceauthenticationmanager"></a>\<serviceAuthenticationManager>
 サービス レベルで転送、メッセージ、または送信元の有効性を確立するワークフロー構成要素を提供します。  

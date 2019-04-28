@@ -9,11 +9,11 @@ helpviewer_keywords:
 - credentials [WCF], validation
 ms.assetid: da831bec-e281-4d44-b343-437b5eef688e
 ms.openlocfilehash: 3b1ff700010f471a4d9be117f363083b6cbed493
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696445"
 ---
 # <a name="custom-credential-and-credential-validation"></a>カスタム資格情報と資格情報の検証
 Windows Communication Foundation (WCF) のセキュリティは、サービスとクライアント間で資格情報の交換に基づきます。 セキュリティ シナリオの多くは、Windows (Kerberos)、ユーザー名とパスワード、証明書などの共通の資格情報の種類を使用して満たされます。 ただし、新しい種類の資格情報が必要な場合があります。このセクションのこのトピックでは、その新しい種類の処理方法と検証方法について説明します。  

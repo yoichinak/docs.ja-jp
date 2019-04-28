@@ -7,11 +7,11 @@ helpviewer_keywords:
 - wrapper classes [Windows Forms], application settings
 ms.assetid: 53caa66c-a9fb-43a5-953c-ad092590098d
 ms.openlocfilehash: f945d8e6918c271eeb5fdf3cf9c357b1c2bbca66
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699728"
 ---
 # <a name="application-settings-attributes"></a>アプリケーション設定の属性
 アプリケーション設定アーキテクチャでは、アプリケーション設定ラッパー クラスまたはその個々 のプロパティに適用できる多くの属性を提供します。 これらの属性は、カスタム ラッパーの規定のニーズに合わせて機能を調整するには、実行時に、アプリケーション設定のインフラストラクチャ、多くの場合、具体的には、設定プロバイダーによって調べられます。  

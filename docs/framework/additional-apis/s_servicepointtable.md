@@ -13,11 +13,11 @@ ms.assetid: 24459679-291c-401a-9def-e42b29466fcf
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: ebcf5c3f13b3bd30a8e091be09ae546eee1eaffe
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54147448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675443"
 ---
 # <a name="servicepointmanagersservicepointtable-field"></a>ServicePointManager.s\_ServicePointTable フィールド
 

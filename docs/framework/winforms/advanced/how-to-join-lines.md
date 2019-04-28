@@ -15,11 +15,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
 ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723304"
 ---
 # <a name="how-to-join-lines"></a>方法: 直線を接合する
 直線の接合部は、2 つの行の端を満たすまたはオーバー ラップによって構成される一般的な領域です。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 次の 3 つの行の結合スタイルを提供します。 マイタ、傾斜、およびラウンドします。 直線の接合スタイルのプロパティである、<xref:System.Drawing.Pen>クラス。 直線の接合スタイルを指定すると、<xref:System.Drawing.Pen>オブジェクトのいずれかで接続されているすべての行を結合スタイルが適用されること<xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクトがそのペンを使用して描画します。  

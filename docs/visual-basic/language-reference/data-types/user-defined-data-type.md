@@ -24,11 +24,11 @@ helpviewer_keywords:
 - types [Visual Basic], user-defined
 ms.assetid: be913dca-a364-4a51-96a1-549a1b390b0a
 ms.openlocfilehash: 5fe12d18c7f403c1a50ed548a260ba39e83280eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746756"
 ---
 # <a name="user-defined-data-type"></a>ユーザー定義型
 定義する形式でデータを保持します。 `Structure`ステートメントの形式を定義します。  
@@ -50,15 +50,15 @@ ms.locfileid: "58814199"
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **メモリ使用量。**  他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。  
+- **メモリ使用量。**  他のすべての複合データ型と同様に、構造体の総メモリ使用量を計算する場合、各メンバーのストレージ割り当ての公称サイズを単に合計しただけでは安全ではありません。 さらに、メモリ内に格納される順序が宣言の順序と同じであると仮定するのも安全ではありません。 構造体のストレージ レイアウトを制御する必要がある場合は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を `Structure` ステートメントに適用します。  
   
--   **相互運用の考慮事項。** オートメーションまたは COM オブジェクトなどの .NET Framework 用に作成されていないコンポーネントをやり取りする場合、他の環境でのユーザー定義型は Visual Basic 構造型と互換性がないことに注意してください。  
+- **相互運用の考慮事項。** オートメーションまたは COM オブジェクトなどの .NET Framework 用に作成されていないコンポーネントをやり取りする場合、他の環境でのユーザー定義型は Visual Basic 構造型と互換性がないことに注意してください。  
   
--   **拡大します。** 任意の構造のデータ型との間の自動変換はありません。 変換演算子を定義するには構造体を使用して、 [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)、するには、各変換演算子を宣言して`Widening`または`Narrowing`します。  
+- **拡大します。** 任意の構造のデータ型との間の自動変換はありません。 変換演算子を定義するには構造体を使用して、 [Operator Statement](../../../visual-basic/language-reference/statements/operator-statement.md)、するには、各変換演算子を宣言して`Widening`または`Narrowing`します。  
   
--   **型宣言文字。** リテラルの型文字または識別子の型文字は、構造体のデータ型はあるありません。  
+- **型宣言文字。** リテラルの型文字または識別子の型文字は、構造体のデータ型はあるありません。  
   
--   **フレームワークの型。** .NET Framework では、対応する型はありません。 すべての構造は、.NET Framework クラスから継承<xref:System.ValueType?displayProperty=nameWithType>に対応する個別の構造体がありませんが、<xref:System.ValueType?displayProperty=nameWithType>します。  
+- **フレームワークの型。** .NET Framework では、対応する型はありません。 すべての構造は、.NET Framework クラスから継承<xref:System.ValueType?displayProperty=nameWithType>に対応する個別の構造体がありませんが、<xref:System.ValueType?displayProperty=nameWithType>します。  
   
 ## <a name="example"></a>例  
  構造体の宣言の概要を次に示します。  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6c54c704-b55e-4631-88ff-4d4a5621554c
 author: BrucePerlerMS
 ms.openlocfilehash: 7b8823d792e3f15846a9483d670994be4b368980
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55273898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667354"
 ---
 # <a name="certificatevalidation"></a>\<certificateValidation>
 トークン ハンドラーを使用して証明書の検証の設定を制御します。 特定のハンドラーが、独自の検証ツールで構成されている場合、これらの設定が上書きされます。  
@@ -39,8 +39,8 @@ ms.locfileid: "55273898"
 |属性|説明|  
 |---------------|-----------------|  
 |certificateValidationMode|<xref:System.ServiceModel.Security.X509CertificateValidationMode> X.509 証明書を使用する検証モードを指定する値。 既定値は、"PeerOrChainTrust"です。 カスタム検証を指定するには、"Custom"には、この属性を設定し、検証を指定、 [ \<certificateValidator >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/certificatevalidator.md)要素。 任意。|  
-|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> X.509 証明書を使用する失効モードを指定する値。 既定値は、"Online"です。 任意。|  
-|trustedStoreLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> X.509 証明書ストアを指定する値。 既定値は、"LocalMachine"です。 任意。|  
+|revocationMode|<xref:System.Security.Cryptography.X509Certificates.X509RevocationMode> X.509 証明書を使用する失効モードを指定する値。 既定値は、"Online"です。 省略可能です。|  
+|trustedStoreLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> X.509 証明書ストアを指定する値。 既定値は、"LocalMachine"です。 省略可能です。|  
   
 ### <a name="child-elements"></a>子要素  
   

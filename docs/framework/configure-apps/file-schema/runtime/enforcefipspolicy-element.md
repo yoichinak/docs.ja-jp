@@ -10,11 +10,11 @@ ms.assetid: c35509c4-35cf-43c0-bb47-75e4208aa24e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b1aa958e15449949a1b7ca740198fff71295b2ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704964"
 ---
 # <a name="enforcefipspolicy-element"></a>\<enforceFIPSPolicy > 要素
 暗号化アルゴリズムが連邦情報処理規格 (FIPS: Federal Information Processing Standard) に準拠する必要があるコンピューターの構成要件を強制するかどうかを指定します。  

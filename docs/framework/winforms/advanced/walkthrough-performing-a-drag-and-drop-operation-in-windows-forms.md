@@ -9,11 +9,11 @@ helpviewer_keywords:
 - drag and drop [Windows Forms], Windows Forms
 ms.assetid: eb66f6bf-4a7d-4c2d-b276-40fefb2d3b6c
 ms.openlocfilehash: f7551f28d07c9517865f60af99954eb40e57daa2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340725"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747395"
 ---
 # <a name="walkthrough-performing-a-drag-and-drop-operation-in-windows-forms"></a>チュートリアル: Windows フォームにおけるドラッグ アンド ドロップ操作の実行
 Windows ベースのアプリケーション内でドラッグ アンド ドロップ操作を実行する必要がありますを処理する、一連のイベント、特に、 <xref:System.Windows.Forms.Control.DragEnter>、 <xref:System.Windows.Forms.Control.DragLeave>、および<xref:System.Windows.Forms.Control.DragDrop>イベント。 利用可能な情報、イベントのこれらのイベントの引数を使用して、ドラッグ アンド ドロップ操作を簡単に実行できます。  

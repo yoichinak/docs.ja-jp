@@ -11,11 +11,11 @@ ms.assetid: 6e00af10-42f3-4235-8415-1bb2db78394e
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c39ee551dde19d87a75403f3db7433d1ef829f3b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704636"
 ---
 # <a name="legacyimpersonationpolicy-element"></a>\<legacyImpersonationPolicy > 要素
 Windows ID が、現在のスレッドの実行コンテキストのフロー設定に関係なく、非同期ポイント間でフローしないことを指定します。  

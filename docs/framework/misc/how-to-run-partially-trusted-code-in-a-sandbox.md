@@ -1,5 +1,5 @@
 ---
-title: '方法: サンド ボックスで部分信頼コードを実行します。'
+title: '方法: サンドボックスで部分信頼コードを実行する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - partially trusted code
@@ -11,13 +11,13 @@ ms.assetid: d1ad722b-5b49-4040-bff3-431b94bb8095
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: caa9afcb1ab2ca53bba849c39651ca4cba3a9c77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752972"
 ---
-# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>方法: サンド ボックスで部分信頼コードを実行します。
+# <a name="how-to-run-partially-trusted-code-in-a-sandbox"></a>方法: サンドボックスで部分信頼コードを実行する
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
   
  サンドボックス化は、制限されたセキュリティ環境でコードを実行する方法です。この方法を採用すると、コードに付与されるアクセス許可が制限されます。 たとえば、完全に信頼していない発行元のマネージド ライブラリは、完全信頼として実行しないようにする必要があります。 代わりに、必要なアクセス許可 (<xref:System.Security.Permissions.SecurityPermissionFlag.Execution> アクセス許可など) のみを与えるサンドボックスにコードを配置します。  
@@ -92,15 +92,15 @@ AppDomain.CreateDomain( string friendlyName,
   
      追加情報:  
   
-    -   これは、パラメーターとして <xref:System.Security.PermissionSet> を使用する <xref:System.AppDomain.CreateDomain%2A> メソッドの唯一のオーバーロードです。つまり、部分信頼設定でアプリケーションを読み込むことができる唯一のオーバーロードになります。  
+    - これは、パラメーターとして <xref:System.Security.PermissionSet> を使用する <xref:System.AppDomain.CreateDomain%2A> メソッドの唯一のオーバーロードです。つまり、部分信頼設定でアプリケーションを読み込むことができる唯一のオーバーロードになります。  
   
-    -   `evidence` パラメーターは、アクセス許可セットの計算では使用されません。このパラメーターは、.NET Framework の他の機能が識別目的で使用します。  
+    - `evidence` パラメーターは、アクセス許可セットの計算では使用されません。このパラメーターは、.NET Framework の他の機能が識別目的で使用します。  
   
-    -   このオーバーロードでは、`info` パラメーターの <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティを必ず設定します。  
+    - このオーバーロードでは、`info` パラメーターの <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティを必ず設定します。  
   
-    -   `fullTrustAssemblies` パラメーターには `params` キーワードがあります。これは <xref:System.Security.Policy.StrongName> 配列を作成する必要がないことを示します。 パラメーターとして、0 個、1 個、または複数の厳密な名前を渡すことができます。  
+    - `fullTrustAssemblies` パラメーターには `params` キーワードがあります。これは <xref:System.Security.Policy.StrongName> 配列を作成する必要がないことを示します。 パラメーターとして、0 個、1 個、または複数の厳密な名前を渡すことができます。  
   
-    -   アプリケーション ドメインを作成するコードは次のとおりです。  
+    - アプリケーション ドメインを作成するコードは次のとおりです。  
   
     ```csharp
     AppDomain newDomain = AppDomain.CreateDomain("Sandbox", null, adSetup, permSet, fullTrustAssembly);  
@@ -108,15 +108,15 @@ AppDomain.CreateDomain( string friendlyName,
   
 5. 作成したサンドボックスの <xref:System.AppDomain> にコードを読み込みます。 これは、次の 2 つの方法で行うことができます。  
   
-    -   アセンブリに対して <xref:System.AppDomain.ExecuteAssembly%2A> メソッドを呼び出します。  
+    - アセンブリに対して <xref:System.AppDomain.ExecuteAssembly%2A> メソッドを呼び出します。  
   
-    -   <xref:System.Activator.CreateInstanceFrom%2A> メソッドを使用して、<xref:System.MarshalByRefObject> から派生したクラスのインスタンスを新しい <xref:System.AppDomain> に作成します。  
+    - <xref:System.Activator.CreateInstanceFrom%2A> メソッドを使用して、<xref:System.MarshalByRefObject> から派生したクラスのインスタンスを新しい <xref:System.AppDomain> に作成します。  
   
      2 番目の方が望ましい方法です。新しい <xref:System.AppDomain> インスタンスにパラメーターを渡しやすいためです。 <xref:System.Activator.CreateInstanceFrom%2A> メソッドには 2 つの重要な機能があります。  
   
-    -   アセンブリが保存されていない場所を示すコード ベースを使用できます。  
+    - アセンブリが保存されていない場所を示すコード ベースを使用できます。  
   
-    -   <xref:System.Security.CodeAccessPermission.Assert%2A> の下で、完全信頼 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) で作成操作を実行できます。こうすることで、重要なクラスのインスタンスを作成できます。 (この状況は、アセンブリに透過マーキングがなく、完全信頼として読み込まれるときに毎回発生します)。そのため、この関数で信頼するコードのみを作成する場合は注意が必要です。新しいアプリケーション ドメインに、完全信頼クラスのインスタンスのみを作成することをお勧めします。  
+    - <xref:System.Security.CodeAccessPermission.Assert%2A> の下で、完全信頼 (<xref:System.Security.Permissions.PermissionState.Unrestricted?displayProperty=nameWithType>) で作成操作を実行できます。こうすることで、重要なクラスのインスタンスを作成できます。 (この状況は、アセンブリに透過マーキングがなく、完全信頼として読み込まれるときに毎回発生します)。そのため、この関数で信頼するコードのみを作成する場合は注意が必要です。新しいアプリケーション ドメインに、完全信頼クラスのインスタンスのみを作成することをお勧めします。  
   
     ```csharp
     ObjectHandle handle = Activator.CreateInstanceFrom(  

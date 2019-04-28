@@ -3,11 +3,11 @@ title: 呼び出し元情報
 description: 呼び出し元情報の引数属性を使用して、メソッドから呼び出し元情報を取得する方法について説明します。
 ms.date: 04/25/2017
 ms.openlocfilehash: 13092df453b684d3ed4a93c842ea49c066157cb6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703167"
 ---
 # <a name="caller-information"></a>呼び出し元情報
 

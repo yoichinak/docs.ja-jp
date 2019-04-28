@@ -9,11 +9,11 @@ helpviewer_keywords:
 - add element for <sharedListeners>
 ms.assetid: 1595e1bc-2492-421f-8384-7f382eb8eb57
 ms.openlocfilehash: e7934ed5e71005cfd28271298ff6ce1eb8829a0d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701373"
 ---
 # <a name="add-element-for-sharedlisteners"></a>\<追加 > 要素の\<上 sharedListeners >
 `sharedListeners` コレクションにリスナーを追加します。 `sharedListeners` リスナーのコレクションは、 [\<ソース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)または[\<トレース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)を参照できます。  既定でリスナーに、`sharedListeners`でコレクションが配置されていない、`Listeners`コレクション。 名前で追加する必要があります、 [\<ソース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/source-element.md)または[\<トレース >](../../../../../docs/framework/configure-apps/file-schema/trace-debug/trace-element.md)します。 リスナーを取得することはできません、`sharedListeners`実行時にコード内のコレクション。  

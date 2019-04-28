@@ -3,11 +3,11 @@ title: <defaultPorts>
 ms.date: 03/30/2017
 ms.assetid: 725d4ee5-bd46-4f0e-9c20-30ba75d6eb2c
 ms.openlocfilehash: 4d7fdfb1cccb14f03d11864f1939cb578c79880a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704116"
 ---
 # <a name="defaultports"></a>\<defaultPorts>
 クライアント アプリケーションがリッスンする既定の通信エンドポイントの一覧を表示する既定のポートのコレクション。  

@@ -13,11 +13,11 @@ ms.assetid: 5abdad23-1335-4744-8acb-934002c0b6fe
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 90f59f4d593a8aa077a6710cc0f5c1747ac1a3ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754001"
 ---
 # <a name="memberinfocachecreation-mda"></a>memberInfoCacheCreation MDA
 `memberInfoCacheCreation` マネージド デバッグ アシスタント (MDA) は、<xref:System.Reflection.MemberInfo> キャッシュが作成されるとアクティブになります。 これは、リソースに大きな負荷のかかるリフレクション機能をプログラムが使っていることを明確に示すものです。  

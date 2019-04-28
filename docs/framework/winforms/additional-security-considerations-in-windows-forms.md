@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], securing access
 ms.assetid: 15abda8b-0527-47c7-aedb-77ab595f2bf1
 ms.openlocfilehash: a101b5838b843f0130d16aab6eb199c7a54ca6b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669317"
 ---
 # <a name="additional-security-considerations-in-windows-forms"></a>Windows フォームのセキュリティに関するその他の考慮事項
 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] セキュリティ設定によっては、ローカル コンピューターとは異なり、アプリケーションが部分信頼環境で実行されることがあります。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、ファイル システム、ネットワーク、アンマネージ API などの重要なローカル リソースへのアクセスを他のリソースの場合よりも制限します。 セキュリティ設定では、Microsoft Windows API またはその他のセキュリティ システムで検証できない Api を呼び出す機能に影響します。 また、ファイルやデータへのアクセス、印刷など、アプリケーションのその他の処理にも影響があります。 部分信頼環境でのファイルやデータへのアクセスの詳細については、「[Windows フォームにおけるファイルおよびデータへのより安全なアクセス](more-secure-file-and-data-access-in-windows-forms.md)」を参照してください。 部分信頼環境での印刷の詳細については、「[Windows フォームでのより安全な印刷](more-secure-printing-in-windows-forms.md)」を参照してください。  

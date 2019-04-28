@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], Material
 ms.assetid: d93c8ad6-4939-4d29-9544-4d16d98093c1
 ms.openlocfilehash: 1d3f6a0622b5e0ccccf14af99782bb78dfe87ccb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698968"
 ---
 # <a name="how-to-apply-material-to-the-front-and-back-of-a-3-d-object"></a>方法: 3-D オブジェクトの前面および背面に素材を適用する
 次の例では、適用する方法を示しています、<xref:System.Windows.Media.Media3D.Material>オブジェクトの前に、および 3-D 背面とオブジェクトの両方の側を表示するオブジェクトをアニメーション化します。 <xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>のプロパティを<xref:System.Windows.Media.Media3D.GeometryModel3D>赤いを適用するために使用<xref:System.Windows.Media.Brush>オブジェクトの前面に、<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>のプロパティ、<xref:System.Windows.Media.Media3D.GeometryModel3D>青いを適用するために使用<xref:System.Windows.Media.Brush>オブジェクトの背面にします。 次のコードでは、オブジェクトの素材のアプリケーションを示します。  

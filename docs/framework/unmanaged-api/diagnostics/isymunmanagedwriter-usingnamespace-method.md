@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d0739cc38d1f12967f0daef2d6828e04a256ade6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61650675"
 ---
 # <a name="isymunmanagedwriterusingnamespace-method"></a>ISymUnmanagedWriter::UsingNamespace メソッド
 指定した名前空間の完全修飾名が現在開いている構文のスコープ内で使用されているを指定します。 名前空間は、現在開いているスコープから継承するすべてのスコープ内で使用されます。 現在のスコープを閉じると、名前空間の使用も停止されます。  

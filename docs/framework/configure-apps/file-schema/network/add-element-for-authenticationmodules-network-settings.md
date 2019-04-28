@@ -11,11 +11,11 @@ helpviewer_keywords:
 - <add> element, authenticationModules
 ms.assetid: 333c5fb0-a2ab-4db8-8531-a7fe37bb9b5b
 ms.openlocfilehash: a46e6af97f37974805812fb0d19801d618eee4d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705156"
 ---
 # <a name="add-element-for-authenticationmodules-network-settings"></a>\<追加 > authenticationModules (ネットワーク設定) の要素
 アプリケーションに認証モジュールを追加します。  

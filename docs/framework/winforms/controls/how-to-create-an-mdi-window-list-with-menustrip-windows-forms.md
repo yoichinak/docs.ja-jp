@@ -9,11 +9,11 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
 ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299645"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746824"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>方法: MenuStrip (Windows フォーム) を MDI ウィンドウ リストを作成します。
 マルチ ドキュメント インターフェイス (MDI) を使用して、同じ時およびコピーにいくつかのドキュメントを開くし、他の 1 つのドキュメントのコンテンツを貼り付けることができますアプリケーションを作成します。  
@@ -75,11 +75,11 @@ ms.locfileid: "59299645"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   `Form1` と `Form2` という名前の 2 つの <xref:System.Windows.Forms.Form> コントロール。  
+- `Form1` と `Form2` という名前の 2 つの <xref:System.Windows.Forms.Form> コントロール。  
   
--   `Form1` 上の `menuStrip1` という名前の <xref:System.Windows.Forms.MenuStrip> コントロールと、`Form2` 上の `menuStrip2` という名前の <xref:System.Windows.Forms.MenuStrip> コントロール。  
+- `Form1` 上の `menuStrip1` という名前の <xref:System.Windows.Forms.MenuStrip> コントロールと、`Form2` 上の `menuStrip2` という名前の <xref:System.Windows.Forms.MenuStrip> コントロール。  
   
--   <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
+- <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -3,11 +3,11 @@ title: <headers>
 ms.date: 03/30/2017
 ms.assetid: c79b897d-8ea3-40b5-a8b6-2471941f7ed3
 ms.openlocfilehash: 660497012dd057e4ecf95524833e2573fe03a8b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224560"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670678"
 ---
 # <a name="headers"></a>\<headers>
 エンドポイントは、基本となる URI だけでなく、1 つ以上の SOAP ヘッダーによってアドレス指定することもできます。 これが役に立つのは、エンドポイントのクライアントに中継局を指す SOAP ヘッダーを含める必要がある、SOAP 中継局のシナリオの場合です。 この構成要素を使用して、カスタムのアドレス ヘッダーを定義できます。 エンドポイント ヘッダー コレクション内のエントリは、ユーザー定義の XML 要素です。 各要素は、正しい形式の XML である必要があります。  

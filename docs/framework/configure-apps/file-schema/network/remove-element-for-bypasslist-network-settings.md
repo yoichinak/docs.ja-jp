@@ -11,11 +11,11 @@ helpviewer_keywords:
 - remove element, bypasslist
 ms.assetid: 61dcfb4a-e3d9-4abf-a2cd-7d685fe2f64b
 ms.openlocfilehash: a04cca3e57af5cc422776c5b2444a140e86f98b9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57354259"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674468"
 ---
 # <a name="remove-element-for-bypasslist-network-settings"></a>\<削除 > bypasslist (ネットワーク設定) の要素
 

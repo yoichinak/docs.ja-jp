@@ -9,11 +9,11 @@ helpviewer_keywords:
 - image decoders [Windows Forms], listing
 ms.assetid: 11417191-8c95-40ca-8024-779e61706fb6
 ms.openlocfilehash: c92b8010def2f77f859ee0bd9cdb1ed51dd15f27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723044"
 ---
 # <a name="how-to-list-installed-decoders"></a>方法: インストールされたデコーダーの一覧
 アプリケーションが特定のイメージ ファイル形式を読み取るかどうかを判断するコンピューターでは、使用可能なイメージ デコーダーの一覧を表示することがあります。 <xref:System.Drawing.Imaging.ImageCodecInfo>クラスには、<xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A>静的メソッド イメージ デコーダーは、使用可能なを確認できるようにします。 <xref:System.Drawing.Imaging.ImageCodecInfo.GetImageDecoders%2A> 配列を返します<xref:System.Drawing.Imaging.ImageCodecInfo>オブジェクト。  
@@ -27,9 +27,9 @@ ms.locfileid: "59079416"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   Windows フォーム アプリケーション  
+- Windows フォーム アプリケーション  
   
--   A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
+- A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
   
 ## <a name="see-also"></a>関連項目
 

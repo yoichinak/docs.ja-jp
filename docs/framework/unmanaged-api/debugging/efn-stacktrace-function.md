@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: dfbdbb389f9945ffeea649bcddd45bee8caf2496
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698318"
 ---
 # <a name="efnstacktrace-function"></a>_EFN_StackTrace 関数
 マネージド スタック トレースのテキスト表現および `CONTEXT` レコードの配列 (アンマネージド コードとマネージド コードの間の各移行につき 1 つ) を提供します。  
@@ -65,17 +65,17 @@ HRESULT CALLBACK _EFN_StackTrace(
 ## <a name="remarks"></a>Remarks  
  `_EFN_StackTrace`構造体は、WinDbg プログラマティック インターフェイスから呼び出すことができます。 パラメーターは、次のように使用されます。  
   
--   場合`wszTextOut`が null と`puiTextLength`が null でない関数は、返す文字列の長さで`puiTextLength`します。  
+- 場合`wszTextOut`が null と`puiTextLength`が null でない関数は、返す文字列の長さで`puiTextLength`します。  
   
--   場合`wszTextOut`が null でないテキストでは、関数には格納`wszTextOut`によって示される位置まで`puiTextLength`します。 バッファーの長さが不足している場合、バッファー、または返します E_OUTOFMEMORY で十分な空き領域が認識されたかどうかを正常に返します。  
+- 場合`wszTextOut`が null でないテキストでは、関数には格納`wszTextOut`によって示される位置まで`puiTextLength`します。 バッファーの長さが不足している場合、バッファー、または返します E_OUTOFMEMORY で十分な空き領域が認識されたかどうかを正常に返します。  
   
--   場合、関数の遷移の部分は無視されます`pTransitionContexts`と`puiTransitionContextCount`はどちらも null です。 この場合、関数は、関数名のみのテキスト出力を持つ呼び出し元を提供します。  
+- 場合、関数の遷移の部分は無視されます`pTransitionContexts`と`puiTransitionContextCount`はどちらも null です。 この場合、関数は、関数名のみのテキスト出力を持つ呼び出し元を提供します。  
   
--   場合`pTransitionContexts`が null と`puiTransitionContextCount`が null でない関数返しますコンテキスト エントリのために必要な数`puiTransitionContextCount`します。  
+- 場合`pTransitionContexts`が null と`puiTransitionContextCount`が null でない関数返しますコンテキスト エントリのために必要な数`puiTransitionContextCount`します。  
   
--   場合`pTransitionContexts`が null でない関数として扱われます長さの構造体の配列`puiTransitionContextCount`します。 構造体のサイズがで指定された`uiSizeOfContext`のサイズを指定する必要があります[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)または`CONTEXT`のアーキテクチャ。  
+- 場合`pTransitionContexts`が null でない関数として扱われます長さの構造体の配列`puiTransitionContextCount`します。 構造体のサイズがで指定された`uiSizeOfContext`のサイズを指定する必要があります[SimpleContext](../../../../docs/framework/unmanaged-api/debugging/stacktrace-simplecontext-structure.md)または`CONTEXT`のアーキテクチャ。  
   
--   `wszTextOut` 次の形式で書き込まれます。  
+- `wszTextOut` 次の形式で書き込まれます。  
   
     ```  
     "<ModuleName>!<Function Name>[+<offset in hex>]  
@@ -84,11 +84,11 @@ HRESULT CALLBACK _EFN_StackTrace(
     ..."  
     ```  
   
--   16 進数でオフセットが「0x0」の場合、オフセットは書き込まれません。  
+- 16 進数でオフセットが「0x0」の場合、オフセットは書き込まれません。  
   
--   コードがないマネージ スレッドの現在のコンテキストで、関数は SOS_E_NOMANAGEDCODE を返します。  
+- コードがないマネージ スレッドの現在のコンテキストで、関数は SOS_E_NOMANAGEDCODE を返します。  
   
--   `Flags`パラメーターが 0 またはそれぞれの前に、EBP と ESP を表示する SOS_STACKTRACE_SHOWADDRESSES`module!functionname`行。 既定では、これは 0 です。  
+- `Flags`パラメーターが 0 またはそれぞれの前に、EBP と ESP を表示する SOS_STACKTRACE_SHOWADDRESSES`module!functionname`行。 既定では、これは 0 です。  
   
     ```  
     #define SOS_STACKTRACE_SHOWADDRESSES   0x00000001  

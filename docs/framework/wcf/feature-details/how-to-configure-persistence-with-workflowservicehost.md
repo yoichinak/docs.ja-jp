@@ -3,11 +3,11 @@ title: '方法: WorkflowServiceHost を使用して永続性を構成する'
 ms.date: 03/30/2017
 ms.assetid: e31cd4df-13a3-4a9a-9be8-5243e0055356
 ms.openlocfilehash: b8839f42a9b8b5f4da0a1a8364c7eac5a4c06d4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337163"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699774"
 ---
 # <a name="how-to-configure-persistence-with-workflowservicehost"></a>方法: WorkflowServiceHost を使用して永続性を構成する
 このトピックでは、構成ファイルを使用して、<xref:System.ServiceModel.Activities.WorkflowServiceHost> でホストされるワークフローに対して永続化を有効にするように、SQL Workflow Instance Store の機能を構成する方法について説明します。 SQL Workflow Instance Store 機能を使用する前に、ワークフロー インスタンスの永続化に使用する SQL データベースを作成する必要があります。 詳細については、「[方法 :SQL 永続性ワークフローとワークフロー サービスを有効にする](../../../../docs/framework/windows-workflow-foundation/how-to-enable-sql-persistence-for-workflows-and-workflow-services.md)します。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3dadd7f1-d207-4ea5-a73b-3e8aa44407f8
 ms.openlocfilehash: 62642651516274a27c44abfc19e94dc529690ea9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699553"
 ---
 # <a name="how-to-configure-a-wcf-client-to-interoperate-with-wse30-services"></a>方法: WCF クライアントと WSE3.0 サービスを相互運用するために構成する
 Windows Communication Foundation (WCF) クライアントと Microsoft .NET (WSE) サービスの Web サービス拡張 3.0 とネットワーク レベル互換性は、Ws-addressing 仕様の 2004 年 8 月バージョンを使用する WCF クライアントが構成されている場合。  
@@ -27,21 +27,21 @@ Windows Communication Foundation (WCF) クライアントと Microsoft .NET (WSE
   
      次のクラスの一部である、 [WSE との相互運用](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms752257%28v=vs.90%29)サンプル。  
   
-    1.  <xref:System.ServiceModel.Channels.Binding> クラスから派生するクラスを作成します。  
+    1. <xref:System.ServiceModel.Channels.Binding> クラスから派生するクラスを作成します。  
   
          `WseHttpBinding` クラスから派生する、<xref:System.ServiceModel.Channels.Binding> という名前のクラスを作成する方法を次のコード例に示します。  
   
          [!code-csharp[c_WCFClientToWSEService#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#1)]
          [!code-vb[c_WCFClientToWSEService#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#1)]  
   
-    2.  WSE の設定不要アサーションを指定するクラスに、派生キーが必要か、セキュリティで保護されたセッションが使用されるか、署名の確認が必要かどうかの指定、およびメッセージ保護設定などのプロパティを追加します。  
+    2. WSE の設定不要アサーションを指定するクラスに、派生キーが必要か、セキュリティで保護されたセッションが使用されるか、署名の確認が必要かどうかの指定、およびメッセージ保護設定などのプロパティを追加します。  
   
          次のコード例を定義、 `SecurityAssertion`、 `RequireDerivedKeys`、 `EstablishSecurityContext`、および`MessageProtectionOrder`プロパティ。 WSE 設定不要アサーション、派生キーが必要かどうか、セキュリティで保護されたセッションを使用するかどうか、署名の確認が必要かどうかおよびメッセージ保護設定をそれぞれ指定します。  
   
          [!code-csharp[c_WCFClientToWSEService#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_wcfclienttowseservice/cs/wsehttpbinding.cs#3)]
          [!code-vb[c_WCFClientToWSEService#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_wcfclienttowseservice/vb/wsehttpbinding.vb#3)]  
   
-    3.  <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> メソッドをオーバーライドして、バインディング プロパティを設定します。  
+    3. <xref:System.ServiceModel.Channels.Binding.CreateBindingElements%2A> メソッドをオーバーライドして、バインディング プロパティを設定します。  
   
          `SecurityAssertion` プロパティと `MessageProtectionOrder` プロパティの値を取得することで、トランスポート、メッセージ エンコーディング、メッセージ保護設定を指定するコード例を次に示します。  
   

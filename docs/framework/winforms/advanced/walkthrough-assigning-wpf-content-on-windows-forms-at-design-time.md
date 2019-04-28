@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WPF user control [Windows Forms], hosting in Windows Forms
 ms.assetid: b3e9ef93-7e0f-4a2f-8f1e-3437609a1eb7
 ms.openlocfilehash: b4efef869c96ddb4e58445e45ecad12b5658f9f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748891"
 ---
 # <a name="walkthrough-assigning-wpf-content-on-windows-forms-at-design-time"></a>チュートリアル: デザイン時の Windows フォームでの WPF コンテンツの割り当て
 このチュートリアルでは、フォームに表示する Windows Presentation Foundation (WPF) コントロール型を選択する方法について説明します。 プロジェクトに含まれている WPF コントロール型であれば、どれでも選択できます。
 
  このチュートリアルでは次のタスクを実行します。
 
--   プロジェクトを作成する。
+- プロジェクトを作成する。
 
--   WPF コントロール型を作成する。
+- WPF コントロール型を作成する。
 
--   WPF コントロールを選択する。
+- WPF コントロールを選択する。
 
 > [!NOTE]
 >  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "59343351"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   Visual Studio 2012.  
+- Visual Studio 2012.  
   
 ## <a name="creating-the-project"></a>プロジェクトの作成  
  まず、Windows フォーム プロジェクトを作成します。  
@@ -42,7 +42,7 @@ ms.locfileid: "59343351"
   
 #### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
--   Visual Basic または Visual C# のという名前で新しい Windows フォーム アプリケーション プロジェクトを作成する`SelectingWpfContent`します。  
+- Visual Basic または Visual C# のという名前で新しい Windows フォーム アプリケーション プロジェクトを作成する`SelectingWpfContent`します。  
   
 ## <a name="creating-the-wpf-control-types"></a>WPF コントロール型の作成  
  プロジェクトに追加した WPF コントロール型は、さまざまな <xref:System.Windows.Forms.Integration.ElementHost> コントロール内でホストできます。  

@@ -3,11 +3,11 @@ title: スタンドアロン JSON のシリアル化
 ms.date: 03/30/2017
 ms.assetid: 312bd7b2-1300-4b12-801e-ebe742bd2287
 ms.openlocfilehash: 29c7dd6ebde07632ef7742b5e9bdd846fc632258
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54618423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747590"
 ---
 # <a name="stand-alone-json-serialization"></a>スタンドアロン JSON のシリアル化
 JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで実行される JavaScript コードで使用するために特別に設計されたデータ形式です。 Windows Communication Foundation (WCF) を作成した ASP.NET AJAX サービスで使用される既定のデータ形式になります。  
@@ -16,7 +16,7 @@ JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで�
   
  JSON をサポートする必要はあっても AJAX サービスを作成する予定はない場合は、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> を使用することで、.NET オブジェクトを JSON データに直接シリアル化したり、このようなデータを .NET 型のインスタンスに逆シリアル化したりできます。 これを行う方法については、次を参照してください。[方法。および JSON データを逆シリアル化](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)します。  
   
- JSON を使用する場合、一部例外はありますが、<xref:System.Runtime.Serialization.DataContractSerializer> でサポートされているものと同じ .NET 型 がサポートされます。 サポートされている種類の一覧は、[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)を参照してください。 これには、ほとんどのプリミティブ型、ほとんどの配列型とコレクション型、<xref:System.Runtime.Serialization.DataContractAttribute> と <xref:System.Runtime.Serialization.DataMemberAttribute> を使用する複合型などがあります。  
+ JSON を使用する場合、一部例外はありますが、<xref:System.Runtime.Serialization.DataContractSerializer> でサポートされているものと同じ .NET 型 がサポートされます。 サポートされている種類の一覧は、次を参照してください。[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)します。 これには、ほとんどのプリミティブ型、ほとんどの配列型とコレクション型、<xref:System.Runtime.Serialization.DataContractAttribute> と <xref:System.Runtime.Serialization.DataMemberAttribute> を使用する複合型などがあります。  
   
 ## <a name="mapping-net-types-to-json-types"></a>.NET 型から JSON 型へのマッピング  
  シリアル化および逆シリアル化の手順でマップされる場合の .NET 型と JSON/JavaScript 型の対応表を次に示します。  
@@ -27,7 +27,7 @@ JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで�
 |<xref:System.Enum>|数値|このトピックの「列挙体と JSON」を参照してください。|  
 |<xref:System.Boolean>|ブール型|--|  
 |<xref:System.String>, <xref:System.Char>|String|--|  
-|<xref:System.TimeSpan>、 <xref:System.Guid>、 <xref:System.Uri>|String|JSON でこれらの型の形式は XML に示すように、同じ (基本的に、ISO 8601 期間形式で TimeSpan、"12345678-ABCD-ABCD-ABCD-1234567890AB"形式の GUID と、自然な文字列形式の URI などの"http://www.example.com")。 正確な情報については、[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)を参照してください。|  
+|<xref:System.TimeSpan>、 <xref:System.Guid>、 <xref:System.Uri>|String|JSON でこれらの型の形式は XML に示すように、同じ (基本的に、ISO 8601 期間形式で TimeSpan、"12345678-ABCD-ABCD-ABCD-1234567890AB"形式の GUID と、自然な文字列形式の URI などの"http://www.example.com")。 正確な情報については、次を参照してください。 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。|  
 |<xref:System.Xml.XmlQualifiedName>|String|形式は "name:namespace" です (最初のコロンの前が名前です)。 名前または名前空間が存在しない場合があります。 名前空間がない場合、コロンも省略されることがあります。|  
 |<xref:System.Array> 型の <xref:System.Byte>|数値の配列型|各数値は、1 バイトの値を表します。|  
 |<xref:System.DateTime>|DateTime 型または文字列型|このトピックの「日付/時刻と JSON」を参照してください。|  
@@ -40,22 +40,22 @@ JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで�
 |任意の型の `Null` 値|Null|null 許容型もサポートされており、null 非許容型と同様に JSON にマップされます。|  
   
 ### <a name="enumerations-and-json"></a>列挙体と JSON  
- 列挙メンバー値は、JSON では数値として処理されるため、列挙メンバー値がメンバー名として含まれているデータ コントラクトでの処理方法とは異なります。 データ コントラクトの処理方法の詳細については、[データ コントラクトの列挙型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)を参照してください。  
+ 列挙メンバー値は、JSON では数値として処理されるため、列挙メンバー値がメンバー名として含まれているデータ コントラクトでの処理方法とは異なります。 データ コントラクトの処理方法の詳細については、次を参照してください。[データ コントラクトの列挙型](../../../../docs/framework/wcf/feature-details/enumeration-types-in-data-contracts.md)します。  
   
--   たとえば、`public enum Color {red, green, blue, yellow, pink}` の場合、`yellow` をシリアル化すると、文字列の "yellow" ではなく、数字の 3 が生成されます。  
+- たとえば、`public enum Color {red, green, blue, yellow, pink}` の場合、`yellow` をシリアル化すると、文字列の "yellow" ではなく、数字の 3 が生成されます。  
   
--   `enum` のメンバーはすべて、シリアル化できます。 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性と <xref:System.NonSerializedAttribute> 属性は、使用しても無視されます。  
+- `enum` のメンバーはすべて、シリアル化できます。 <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性と <xref:System.NonSerializedAttribute> 属性は、使用しても無視されます。  
   
--   存在しない `enum` 値を逆シリアル化できます。たとえば、値 87 に対応する色の名前が定義されていなくても、この値を上記の Color 列挙値に逆シリアル化できます。  
+- 存在しない `enum` 値を逆シリアル化できます。たとえば、値 87 に対応する色の名前が定義されていなくても、この値を上記の Color 列挙値に逆シリアル化できます。  
   
--   フラグ `enum` は特殊ではなく、他の `enum` と同様に処理されます。  
+- フラグ `enum` は特殊ではなく、他の `enum` と同様に処理されます。  
   
 ### <a name="datestimes-and-json"></a>日付時刻 とJSON  
  JSON 形式では、日付と時刻を直接サポートしていません。 ただし、日付と時刻は使用されることが非常に多いため、ASP.NET AJAX ではこれらの型を特別にサポートしています。 ASP.NET AJAX プロキシを使用する場合、.NET の <xref:System.DateTime> 型は JavaScript の `DateTime` 型に完全に対応します。  
   
--   ASP.NET を使用しない場合、JSON では、<xref:System.DateTime> 型はこのトピックの「高度な情報」で説明する特殊な形式の文字列として表されます。  
+- ASP.NET を使用しない場合、JSON では、<xref:System.DateTime> 型はこのトピックの「高度な情報」で説明する特殊な形式の文字列として表されます。  
   
--   JSON では、<xref:System.DateTimeOffset> が複合型 {"DateTime":dateTime,"OffsetMinutes":offsetMinutes} として表現されます。 `offsetMinutes` メンバーは、当該イベントの場所に関連付けられたグリニッジ標準時 (GMT) (協定世界時 (UTC) とも呼ばれます) からの現地時刻のオフセットです。 `dateTime` メンバーは、当該イベントが発生した時点のインスタンスを表します (この場合も、ASP.NET AJAX を使用しているときは JavaScript の `DateTime` になり、使用していないときは文字列になります)。 シリアル化時には、`dateTime` メンバーは常に GMT でシリアル化されます。 したがって、ニューヨーク時間の午前 3 時を示す場合、`dateTime` の時刻コンポーネントは 8:00 AM であり、`offsetMinutes` は 300 (GMT マイナス 300 分 (5 時間)) です。  
+- JSON では、<xref:System.DateTimeOffset> が複合型 {"DateTime":dateTime,"OffsetMinutes":offsetMinutes} として表現されます。 `offsetMinutes` メンバーは、当該イベントの場所に関連付けられたグリニッジ標準時 (GMT) (協定世界時 (UTC) とも呼ばれます) からの現地時刻のオフセットです。 `dateTime` メンバーは、当該イベントが発生した時点のインスタンスを表します (この場合も、ASP.NET AJAX を使用しているときは JavaScript の `DateTime` になり、使用していないときは文字列になります)。 シリアル化時には、`dateTime` メンバーは常に GMT でシリアル化されます。 したがって、ニューヨーク時間の午前 3 時を示す場合、`dateTime` の時刻コンポーネントは 8:00 AM であり、`offsetMinutes` は 300 (GMT マイナス 300 分 (5 時間)) です。  
   
     > [!NOTE]
     >  <xref:System.DateTime> オブジェクトと <xref:System.DateTimeOffset> オブジェクトを JSON にシリアル化した場合、ミリ秒の精度までしか情報は保持されません。 1 ミリ秒未満の値 (マイクロ秒/ナノ秒) は、シリアル化時に失われます。  
@@ -63,28 +63,28 @@ JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで�
 ### <a name="xml-types-and-json"></a>XML 型と JSON  
  XML 型は JSON 文字列になります。  
   
--   たとえば、XElement を入力するデータ メンバー"q"の場合に\<abc/>、JSON は {"q":"\<abc/>"}。  
+- たとえば、XElement を入力するデータ メンバー"q"の場合に\<abc/>、JSON は {"q":"\<abc/>"}。  
   
--   XML のラップ方法を指定する特別なルールがいくつかあります。詳細については、このトピックで後述する「高度な情報」を参照してください。  
+- XML のラップ方法を指定する特別なルールがいくつかあります。詳細については、このトピックで後述する「高度な情報」を参照してください。  
   
--   ASP.NET AJAX を使用している場合に、JavaScript で文字列ではなく XML DOM を使用するときは、<xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> で <xref:System.ServiceModel.Web.WebGetAttribute> プロパティを XML に設定するか、<xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> で <xref:System.ServiceModel.Web.WebInvokeAttribute> プロパティを XML に設定します。  
+- ASP.NET AJAX を使用している場合に、JavaScript で文字列ではなく XML DOM を使用するときは、<xref:System.ServiceModel.Web.WebGetAttribute.ResponseFormat%2A> で <xref:System.ServiceModel.Web.WebGetAttribute> プロパティを XML に設定するか、<xref:System.ServiceModel.Web.WebInvokeAttribute.ResponseFormat%2A> で <xref:System.ServiceModel.Web.WebInvokeAttribute> プロパティを XML に設定します。  
   
 ### <a name="collections-dictionaries-and-arrays"></a>コレクション、ディクショナリ、および配列  
  コレクション、ディクショナリ、および配列は、JSON ではすべて配列として表されます。  
   
--   <xref:System.Runtime.Serialization.CollectionDataContractAttribute> を使用するカスタマイズは、JSON 表現では無視されます。  
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute> を使用するカスタマイズは、JSON 表現では無視されます。  
   
--   ディクショナリは、直接 JSON を操作する手段ではありません。 ディクショナリ\<object > その他の JSON テクノロジの使用から予想されるよう、WCF で同じ方法でサポートされない可能性があります。 たとえば、ディクショナリで "abc" が "xyz" にマップされ、"def" が 42 にマップされている場合、JSON 表現では {"abc":"xyz","def":42} ではなく、[{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}] になります。  
+- ディクショナリは、直接 JSON を操作する手段ではありません。 ディクショナリ\<object > その他の JSON テクノロジの使用から予想されるよう、WCF で同じ方法でサポートされない可能性があります。 たとえば、ディクショナリで "abc" が "xyz" にマップされ、"def" が 42 にマップされている場合、JSON 表現では {"abc":"xyz","def":42} ではなく、[{"Key":"abc","Value":"xyz"},{"Key":"def","Value":42}] になります。  
   
--   JSON を直接使用する (厳密なコントラクトをあらかじめ定義せずに、キーと値に動的にアクセスする) 場合、いくつかのオプションがあります。  
+- JSON を直接使用する (厳密なコントラクトをあらかじめ定義せずに、キーと値に動的にアクセスする) 場合、いくつかのオプションがあります。  
   
-    -   使用を検討して、[厳密に型指定された JSON シリアル化 (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)サンプル。  
+    - 使用を検討して、[厳密に型指定された JSON シリアル化 (AJAX)](../../../../docs/framework/wcf/samples/weakly-typed-json-serialization-sample.md)サンプル。  
   
-    -   <xref:System.Runtime.Serialization.ISerializable> インターフェイスと逆シリアル化コンストラクターを使用することを検討します。この 2 つの機構を使用すると、シリアル化と逆シリアル化の実行時にそれぞれ JSON のキーと値のペアにアクセスできます。ただし、これらの機構は、部分信頼シナリオでは機能しません。  
+    - <xref:System.Runtime.Serialization.ISerializable> インターフェイスと逆シリアル化コンストラクターを使用することを検討します。この 2 つの機構を使用すると、シリアル化と逆シリアル化の実行時にそれぞれ JSON のキーと値のペアにアクセスできます。ただし、これらの機構は、部分信頼シナリオでは機能しません。  
   
-    -   使用を検討してください、 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)シリアライザーを使用する代わりにします。  
+    - 使用を検討してください、 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)シリアライザーを使用する代わりにします。  
   
-    -   *ポリモーフィズム*シリアル化のコンテキストでは、その基本型が必要な場合、派生型をシリアル化する機能を指します。 コレクションをポリモーフィックに使用する場合は (コレクションを <xref:System.Object> に割り当てる場合など)、JSON 固有の特別なルールがあります。 この問題については、後の「高度な情報」で詳しく説明します。  
+    - *ポリモーフィズム*シリアル化のコンテキストでは、その基本型が必要な場合、派生型をシリアル化する機能を指します。 コレクションをポリモーフィックに使用する場合は (コレクションを <xref:System.Object> に割り当てる場合など)、JSON 固有の特別なルールがあります。 この問題については、後の「高度な情報」で詳しく説明します。  
   
 ## <a name="additional-details"></a>追加の詳細情報  
   
@@ -101,7 +101,7 @@ JSON (JavaScript Object Notation) は、ブラウザー内の Web ページで�
   
  インターフェイス型に逆シリアル化する場合、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、宣言された型がオブジェクトである場合と同様に逆シリアル化します。  
   
- 独自の基本型と派生型を使用している場合は、通常、<xref:System.Runtime.Serialization.KnownTypeAttribute>、<xref:System.ServiceModel.ServiceKnownTypeAttribute>、または同等の機構を使用する必要があります。 たとえば、ある操作がある場合、`Animal`のインスタンスを返します実際に値とそれを返す`Cat`(から派生した`Animal`)、かを適用する必要があります、<xref:System.Runtime.Serialization.KnownTypeAttribute>を、`Animal`型または<xref:System.ServiceModel.ServiceKnownTypeAttribute>に。操作を指定し、`Cat`でこれらの属性の型。 詳細については、[Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)を参照してください。  
+ 独自の基本型と派生型を使用している場合は、通常、<xref:System.Runtime.Serialization.KnownTypeAttribute>、<xref:System.ServiceModel.ServiceKnownTypeAttribute>、または同等の機構を使用する必要があります。 たとえば、ある操作がある場合、`Animal`のインスタンスを返します実際に値とそれを返す`Cat`(から派生した`Animal`)、かを適用する必要があります、<xref:System.Runtime.Serialization.KnownTypeAttribute>を、`Animal`型または<xref:System.ServiceModel.ServiceKnownTypeAttribute>に。操作を指定し、`Cat`でこれらの属性の型。 詳細については、次を参照してください。 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md)します。  
   
  ポリモーフィックなシリアル化のしくみの詳細、およびポリモーフィックなシリアル化を使用するときに留意する必要のある制限事項については、このトピックで後述する「高度な情報」を参照してください。  
   
@@ -124,9 +124,9 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="supported-and-unsupported-iserializable-types"></a>サポートされる ISerializable 型とサポートされない ISerializable 型  
  通常、JSON をシリアル化または逆シリアル化するときに、<xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装する型は完全にサポートされています。 ただし、これらの型の一部 (一部の .NET Framework 型を含みます) は、次のような JSON 固有のシリアル化の側面が原因で正しく逆シリアル化されない方法で実装されています。  
   
--   <xref:System.Runtime.Serialization.ISerializable> では、個々のデータ メンバーの型は事前にはわかりません。 このため、型をオブジェクトに逆シリアル化する場合と同様のポリモーフィックな状況になります。 前述のように、これは JSON で型情報が失われる原因となる場合があります。 たとえば、`enum` 実装で <xref:System.Runtime.Serialization.ISerializable> をシリアル化した型を (適切にキャストせずに) `enum` に直接逆シリアル化しようとした場合、逆シリアル化は失敗します。これは、`enum` は JSON の数値型を使用してシリアル化されますが、JSON の数値型は .NET の組み込みの数値型 (Int32、Decimal、または Double) に逆シリアル化されるためです。 そのため、この数値が `enum` 値を表すために使用されているという情報が失われます。  
+- <xref:System.Runtime.Serialization.ISerializable> では、個々のデータ メンバーの型は事前にはわかりません。 このため、型をオブジェクトに逆シリアル化する場合と同様のポリモーフィックな状況になります。 前述のように、これは JSON で型情報が失われる原因となる場合があります。 たとえば、`enum` 実装で <xref:System.Runtime.Serialization.ISerializable> をシリアル化した型を (適切にキャストせずに) `enum` に直接逆シリアル化しようとした場合、逆シリアル化は失敗します。これは、`enum` は JSON の数値型を使用してシリアル化されますが、JSON の数値型は .NET の組み込みの数値型 (Int32、Decimal、または Double) に逆シリアル化されるためです。 そのため、この数値が `enum` 値を表すために使用されているという情報が失われます。  
   
--   <xref:System.Runtime.Serialization.ISerializable> 型が逆シリアル化コンストラクターで特定の順序の逆シリアル化に依存する場合も、一部の JSON データの逆シリアル化に失敗する場合があります。これは、ほとんどの JSON シリアライザーが特定の順序を保証しないためです。  
+- <xref:System.Runtime.Serialization.ISerializable> 型が逆シリアル化コンストラクターで特定の順序の逆シリアル化に依存する場合も、一部の JSON データの逆シリアル化に失敗する場合があります。これは、ほとんどの JSON シリアライザーが特定の順序を保証しないためです。  
   
 #### <a name="factory-types"></a>ファクトリ型  
  <xref:System.Runtime.Serialization.IObjectReference> インターフェイスは JSON で一般にサポートされますが、"ファクトリ型" 機能 (<xref:System.Runtime.Serialization.IObjectReference.GetRealObject%28System.Runtime.Serialization.StreamingContext%29> から、このインターフェイスを実装する型とは異なる型のインスタンスを返す機能) を必要とする型はサポートされません。  
@@ -159,7 +159,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  XmlNode 配列の先頭 (他の要素の前) にある空の名前空間の属性はサポートされません。  
   
 #### <a name="ixmlserializable-types-including-xelement-and-dataset"></a>XElement と DataSet を含む IXmlSerializable 型  
- <xref:System.Runtime.Serialization.ISerializable> 型は、"コンテンツ型"、"DataSet 型"、および "要素型" に細分化されます。 これらの型の定義は、[XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)を参照してください。  
+ <xref:System.Runtime.Serialization.ISerializable> 型は、"コンテンツ型"、"DataSet 型"、および "要素型" に細分化されます。 これらの型の定義は、次を参照してください。 [XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)します。  
   
  "コンテンツ" 型と "DataSet" 型は、前のセクションで説明した <xref:System.Array> の <xref:System.Xml.XmlNode> オブジェクトと同様にシリアル化されます。 これらの型は、その型のデータ コントラクトの名前と名前空間に対応する名前と名前空間を持つ要素にラップされます。  
   
@@ -204,11 +204,11 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
 #### <a name="when-are-type-hints-emitted"></a>型ヒントが出力される状況  
  型ヒントにより、メッセージ サイズが大幅に増加することがあります (これを軽減する 1 つの方法として、可能であれば短いデータ コントラクト名前空間を使用します)。 そのため、次のルールによって型ヒントを出力するかどうかが制御されます。  
   
--   ASP.NET AJAX を使用する場合、基本型と派生型の割り当てが存在しない場合でも (Circle を Circle に割り当てる場合など)、型ヒントは可能である限り常に出力されます  (これは、厳密に型指定されていない JSON 環境から厳密に型指定された .NET 環境への呼び出しプロセスにおいて、情報が予想外に失われることのないプロセスを完全に実現するために必要です)。  
+- ASP.NET AJAX を使用する場合、基本型と派生型の割り当てが存在しない場合でも (Circle を Circle に割り当てる場合など)、型ヒントは可能である限り常に出力されます  (これは、厳密に型指定されていない JSON 環境から厳密に型指定された .NET 環境への呼び出しプロセスにおいて、情報が予想外に失われることのないプロセスを完全に実現するために必要です)。  
   
--   ASP.NET と統合せずに AJAX サービスを使用する場合、基本型と派生型の割り当てが存在する場合にのみ、型ヒントが出力されます。つまり、Circle を Shape または <xref:System.Object> に割り当てるときは出力されますが、Circle に割り当てるときには出力されません。 この場合、JavaScript クライアントを適切に実装するために必要な最小限の情報しか提供されないため、パフォーマンスは向上しますが、適切に設計されていないクライアントでの型情報の損失を防ぐことはできません。 クライアントでこの問題に対処することを避ける必要がある場合は、サーバーで基本型と派生型の割り当てを一切行わないようにします。  
+- ASP.NET と統合せずに AJAX サービスを使用する場合、基本型と派生型の割り当てが存在する場合にのみ、型ヒントが出力されます。つまり、Circle を Shape または <xref:System.Object> に割り当てるときは出力されますが、Circle に割り当てるときには出力されません。 この場合、JavaScript クライアントを適切に実装するために必要な最小限の情報しか提供されないため、パフォーマンスは向上しますが、適切に設計されていないクライアントでの型情報の損失を防ぐことはできません。 クライアントでこの問題に対処することを避ける必要がある場合は、サーバーで基本型と派生型の割り当てを一切行わないようにします。  
   
--   <xref:System.Runtime.Serialization.DataContractSerializer> 型を使用する場合、`alwaysEmitTypeInformation` コンストラクター パラメーターを使用すると、上記の 2 つのモードのいずれかを選択できます。既定値は "`false`" (必要な場合にのみ型情報を出力) です。  
+- <xref:System.Runtime.Serialization.DataContractSerializer> 型を使用する場合、`alwaysEmitTypeInformation` コンストラクター パラメーターを使用すると、上記の 2 つのモードのいずれかを選択できます。既定値は "`false`" (必要な場合にのみ型情報を出力) です。  
   
 #### <a name="duplicate-data-member-names"></a>重複するデータ メンバー名  
  派生型情報は、基本型情報と共に同じ JSON オブジェクト内に存在しますが、任意の順序で出現する場合があります。 たとえば、`Shape`次のように表すことができます。  
@@ -245,9 +245,9 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
   
  <xref:System.Object> に逆シリアル化するときは、次の点に注意してください。  
   
--   `Shape` 既知の型の一覧である必要があります。 ある<xref:System.Collections.Generic.List%601>型の`Shape`既知の型に影響を与えません。 追加する必要はありませんので注意`Shape`シリアル化の既知の型をここでは、この自動的に行われます。  
+- `Shape` 既知の型の一覧である必要があります。 ある<xref:System.Collections.Generic.List%601>型の`Shape`既知の型に影響を与えません。 追加する必要はありませんので注意`Shape`シリアル化の既知の型をここでは、この自動的に行われます。  
   
--   コレクションとして逆シリアル化、<xref:System.Array>型の<xref:System.Object>を格納している`Shape`インスタンス。  
+- コレクションとして逆シリアル化、<xref:System.Array>型の<xref:System.Object>を格納している`Shape`インスタンス。  
   
 #### <a name="derived-collections-assigned-to-base-collections"></a>基本コレクションに割り当てられた派生コレクション  
  派生コレクションを基本コレクションに割り当てると、通常、そのコレクションは基本型のコレクションと同様にシリアル化されます。 ただし、派生コレクションの項目の型を基本コレクションの項目の型に割り当てることができない場合は、例外がスローされます。  
@@ -258,7 +258,7 @@ http://example.com/myservice.svc/MyOperation?number=7&p={"name":"John","age":42}
  ディクショナリ型をシリアル化した場合、"Key" メンバーと "Value" メンバーを含む JSON オブジェクトは、`alwaysEmitTypeInformation` 設定の影響を受けません。オブジェクトに型ヒントが含まれるのは、前述のコレクション ルールで必要とされる場合だけです。  
   
 ### <a name="valid-json-key-names"></a>JSON の有効なキー名  
- シリアライザーは、無効な XML 名のキー名を XML エンコードします。 たとえば、「123」の名前を持つデータ メンバーでエンコードされた名前がなど"\_x0031\_\_x0032\_\_x0033\_"「123」は無効な XML 要素名であるため (始まり、桁)。 XML 名が有効ではない一部の国際文字セットでも、同様の状況が発生する場合があります。 この JSON の処理での XML の影響の詳細については、[Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)を参照してください。  
+ シリアライザーは、無効な XML 名のキー名を XML エンコードします。 たとえば、「123」の名前を持つデータ メンバーでエンコードされた名前がなど"\_x0031\_\_x0032\_\_x0033\_"「123」は無効な XML 要素名であるため (始まり、桁)。 XML 名が有効ではない一部の国際文字セットでも、同様の状況が発生する場合があります。 この JSON の処理での XML の影響の詳細については、次を参照してください。 [Mapping Between JSON and XML](../../../../docs/framework/wcf/feature-details/mapping-between-json-and-xml.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

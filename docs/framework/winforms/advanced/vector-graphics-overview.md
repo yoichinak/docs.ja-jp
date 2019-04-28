@@ -10,11 +10,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
 ms.openlocfilehash: d424254839db6c403bafe779f475c0e344918a5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087964"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748449"
 ---
 # <a name="vector-graphics-overview"></a>ベクター グラフィックスの概要
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 座標系には、線、四角形、およびその他の図形を描画します。 さまざまな座標系から選択できますが、既定の座標系では、左上隅の原点が、x 軸が右と下向きの y 軸を参照します。 既定の座標系内のメジャーの単位は、ピクセルです。  
@@ -32,19 +32,19 @@ ms.locfileid: "59087964"
   
  時間の経過と共に一部の基本的な構成要素が最も便利な 2 次元の画像を作成するために実績のあります。 これらのビルディング ブロックでサポートされている[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]は、次の一覧で指定します。  
   
--   線  
+- 線  
   
--   四角形  
+- 四角形  
   
--   省略記号  
+- 省略記号  
   
--   円弧  
+- 円弧  
   
--   多角形  
+- 多角形  
   
--   カーディナル スプライン  
+- カーディナル スプライン  
   
--   ベジエ スプライン  
+- ベジエ スプライン  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>グラフィックス オブジェクトを使用した描画メソッド  
  <xref:System.Drawing.Graphics>クラス[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]前の一覧に項目を描画するための次のメソッドを提供します: <xref:System.Drawing.Graphics.DrawLine%2A>、 <xref:System.Drawing.Graphics.DrawRectangle%2A>、 <xref:System.Drawing.Graphics.DrawEllipse%2A>、 <xref:System.Drawing.Graphics.DrawPolygon%2A>、 <xref:System.Drawing.Graphics.DrawArc%2A>、 <xref:System.Drawing.Graphics.DrawCurve%2A> (のカーディナル スプライン) と<xref:System.Drawing.Graphics.DrawBezier%2A>. これらの各メソッドはオーバー ロードされます。つまり、各メソッドは、さまざまなパラメーター リストをサポートします。 例では、1 つのバリエーション、<xref:System.Drawing.Graphics.DrawLine%2A>メソッドは受信、<xref:System.Drawing.Pen>オブジェクトと別のバリエーションの中に、4 つの整数、<xref:System.Drawing.Graphics.DrawLine%2A>メソッドは受信、<xref:System.Drawing.Pen>オブジェクトと 2 つ<xref:System.Drawing.Point>オブジェクト。  

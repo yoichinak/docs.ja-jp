@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 648b641cbd2ec97305674451df06ce5be6a93a49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183691"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697642"
 ---
 # <a name="iassemblycachecreateassemblycacheitem-method"></a>IAssemblyCache::CreateAssemblyCacheItem メソッド
 新しいへの参照を取得します。 [IAssemblyCacheItem](../../../../docs/framework/unmanaged-api/fusion/iassemblycacheitem-interface.md)オブジェクト。  
@@ -42,9 +42,9 @@ HRESULT CreateAssemblyCacheItem (
  `dwFlags`  
  [in]ものがありますで定義されているフラグ。 次の値がサポートされています。  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
+- IASSEMBLYCACHE_INSTALL_FLAG_REFRESH (0x00000001)  
   
--   IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
+- IASSEMBLYCACHE_INSTALL_FLAG_FORCE_REFRESH (0x00000002)  
   
  `pvReserved`  
  [入力] 将来の機能拡張に備えて予約されています。 `pvReserved` null 参照である必要があります。  

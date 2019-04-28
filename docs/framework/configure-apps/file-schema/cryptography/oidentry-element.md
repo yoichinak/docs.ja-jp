@@ -9,11 +9,11 @@ helpviewer_keywords:
 - oidEntry element
 ms.assetid: 22fb88b0-bf27-489c-9ca0-e65950ac136c
 ms.openlocfilehash: c686d2b99ad66aec753a356b09fa3c7151193808
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61674754"
 ---
 # <a name="oidentry-element"></a>\<oidEntry > 要素
 ASN.1 オブジェクト識別子 (OID) を表示名にマップします。  

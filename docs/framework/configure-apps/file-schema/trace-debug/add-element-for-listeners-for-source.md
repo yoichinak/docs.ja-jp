@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <add> element for <listeners> for <source>
 ms.assetid: 4ce36ac1-81ef-48e8-b8b2-b5a5b0e2adcb
 ms.openlocfilehash: 4d2952e29b09fcf9f81624317e30caf301a61a51
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701490"
 ---
 # <a name="add-element-for-listeners-for-source"></a>\<追加 > 要素の\<リスナー > の\<ソース >
 トレース ソースの `Listeners` コレクションにリスナーを追加します。  

@@ -3,11 +3,11 @@ title: SQL Server のインプロセス固有の ADO.NET の動作
 ms.date: 03/30/2017
 ms.assetid: 4f223948-ae8f-4c16-bdc2-4acc6debed3f
 ms.openlocfilehash: 0c227e1177e59b3421297e80510d1a7077f7f165
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670119"
 ---
 # <a name="sql-server-in-process-specific-behavior-of-adonet"></a>SQL Server のインプロセス固有の ADO.NET の動作
 <xref:Microsoft.SqlServer.Server> 名前空間には、インプロセスのみで使用される 4 つの主な ADO.NET の拡張機能として、<xref:Microsoft.SqlServer.Server.SqlContext>、<xref:Microsoft.SqlServer.Server.SqlPipe>、<xref:Microsoft.SqlServer.Server.SqlTriggerContext>、<xref:Microsoft.SqlServer.Server.SqlDataRecord> があります。  

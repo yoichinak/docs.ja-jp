@@ -5,11 +5,11 @@ helpviewer_keywords:
 - wsFederationBinding element
 ms.assetid: 9c3312b4-2137-4e71-bf3f-de1cf8e9be79
 ms.openlocfilehash: 8ed8f62f9415ed556a61ca53f27442a9355d8d7c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352127"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698851"
 ---
 # <a name="wsfederationhttpbinding"></a>\<wsFederationHttpBinding >
 
@@ -124,7 +124,7 @@ wsFederationBinding 要素
 |receiveTimeout|受信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:10:00 です。|
 |sendTimeout|送信操作が完了するまでの時間間隔を指定する <xref:System.TimeSpan> 値です。 この値は必ず <xref:System.TimeSpan.Zero> 以上である必要があります。 既定値は 00:01:00 です。|
 |textEncoding|バインディングでメッセージの発行に使用される文字セット エンコーディングを設定します。 以下の値が有効です。<br /><br /> -BigEndianUnicode:Unicode BigEndian エンコーディングします。<br />Unicode:16 ビット エンコーディング。<br />UTF8:8 ビット エンコード<br /><br /> 既定値は UTF8 です。 この属性は <xref:System.Text.Encoding> 型です。|
-|transactionFlow|バインディングが WS-Transactions のフローをサポートするかどうかを指定するブール値です。 既定値は、`false` です。|
+|transactionFlow|バインディングが WS-Transactions のフローをサポートするかどうかを指定するブール値です。 既定値は `false` です。|
 |useDefaultWebProxy|システムの自動設定 HTTP プロキシを使用するかどうかを示すブール値。 この属性が `null` の場合、プロキシ アドレスを `true` (つまり、設定しない) にする必要があります。 既定値は `true` です。|
 
 ### <a name="child-elements"></a>子要素

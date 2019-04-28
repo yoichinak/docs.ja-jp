@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <servicePointManager> element
 ms.assetid: 6e5def51-3646-4ef6-a7bd-c69151321bec
 ms.openlocfilehash: 407ed85de109a671030eccff8ddd92af91628014
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704987"
 ---
 # <a name="servicepointmanager-element-network-settings"></a>\<servicePointManager > 要素 (ネットワーク設定)
 ネットワーク リソースへの接続を構成します。  

@@ -3,11 +3,11 @@ title: 演算子のオーバーロード
 description: クラスまたはレコードの種類と F# でのグローバル レベルで算術演算子をオーバー ロードする方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666249"
 ---
 # <a name="operator-overloading"></a>演算子のオーバーロード
 
@@ -153,7 +153,7 @@ F# コンパイラが演算子の式をコンパイルするときに、その�
 
 F# のスコープ規則では、新しく定義された演算子が組み込み演算子よりも優先されるため、このようにして、通常の算術演算子を再定義できます。
 
-キーワード `inline` は、グローバル演算子と共に使用されることがよくあります。グローバル演算子は、通常、呼び出し元のコードに適宜組み込まれる小規模関数にします。 演算子関数をインライン化することにより、その関数を静的に解決された型パラメーターと共に使用して、静的に解決されたジェネリック コードを作成することもできます。 詳細については、[インライン関数](functions/inline-functions.md)と[Statically Resolved Type Parameters](generics/statically-resolved-type-parameters.md)を参照してください。
+キーワード `inline` は、グローバル演算子と共に使用されることがよくあります。グローバル演算子は、通常、呼び出し元のコードに適宜組み込まれる小規模関数にします。 演算子関数をインライン化することにより、その関数を静的に解決された型パラメーターと共に使用して、静的に解決されたジェネリック コードを作成することもできます。 詳細については、次を参照してください。[インライン関数](functions/inline-functions.md)と[Statically Resolved Type Parameters](generics/statically-resolved-type-parameters.md)します。
 
 ## <a name="see-also"></a>関連項目
 

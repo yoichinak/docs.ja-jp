@@ -7,11 +7,11 @@ helpviewer_keywords:
 - <namedCaches> element
 ms.assetid: 6bd4fbc5-55a6-4dc4-998b-cdcc7e023330
 ms.openlocfilehash: 36920a5e585c0c7581fbc4f84043d68550fbdac1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704870"
 ---
 # <a name="namedcaches-element-cache-settings"></a>\<namedCaches > 要素 (キャッシュ設定)
 名前付きの構成設定のコレクションを指定します<xref:System.Runtime.Caching.MemoryCache>インスタンス。 <xref:System.Runtime.Caching.Configuration.MemoryCacheSection.NamedCaches%2A>プロパティから 1 つまたは複数の構成設定のコレクションの参照`namedCaches`構成ファイルの要素。  

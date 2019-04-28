@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Direct3D9 [WPF interoperability], creating Direct3D9 content
 ms.assetid: 1b14b823-69c4-4e8d-99e4-f6dade58f89a
 ms.openlocfilehash: 38f5eb36e3e5c055c5a354a67e15cde8049a2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669206"
 ---
 # <a name="wpf-and-direct3d9-interoperation"></a>WPF と Direct3D9 の相互運用性
 Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 コンテンツを含めることができます。 このトピックでは、WPF で効率的に相互運用するための Direct3D9 コンテンツを作成する方法について説明します。  
@@ -32,9 +32,9 @@ Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 �
   
  次の方法の 1 つを呼び出すことによって、デバイスを作成します。  
   
--   `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
+- `IDirect3D9 * Direct3DCreate9(UINT SDKVersion);`  
   
--   `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
+- `HRESULT Direct3DCreate9Ex(UINT SDKVersion, IDirect3D9Ex **ppD3D);`  
   
  Windows Vista またはそれ以降のオペレーティング システムで使用して、 `Direct3DCreate9Ex` Windows 表示 Driver Model (WDDM) を使用するように構成するディスプレイを持つメソッド。 使用して、`Direct3DCreate9`他の任意のプラットフォームでのメソッド。  
   
@@ -97,11 +97,11 @@ Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 �
   
  サイズ変更を処理するために、次の 3 つの可能な方法はあります。  
   
--   レイアウト システムに参加し、サイズが変更されたときに、新しい画面を作成します。 不足や、ビデオ メモリの断片化する可能性がありますので、多数のサーフェスを作成できません。  
+- レイアウト システムに参加し、サイズが変更されたときに、新しい画面を作成します。 不足や、ビデオ メモリの断片化する可能性がありますので、多数のサーフェスを作成できません。  
   
--   新しい画面を作成する、固定期間、サイズ変更イベントが発生していないまで待機します。  
+- 新しい画面を作成する、固定期間、サイズ変更イベントが発生していないまで待機します。  
   
--   作成、<xref:System.Windows.Threading.DispatcherTimer>を何度も 1 秒あたりのコンテナーのディメンションを確認します。  
+- 作成、<xref:System.Windows.Threading.DispatcherTimer>を何度も 1 秒あたりのコンテナーのディメンションを確認します。  
   
 ## <a name="multi-monitor-optimization"></a>マルチ モニターの最適化  
  レンダリング システムに移動するとパフォーマンスが大幅に低下する可能性を<xref:System.Windows.Interop.D3DImage>別のモニターにします。  
@@ -132,11 +132,11 @@ Windows Presentation Foundation (WPF) アプリケーションでの Direct3D9 �
 ## <a name="wpf-software-rendering"></a>WPF ソフトウェア レンダリング  
  WPF は、次の状況でのソフトウェアの UI スレッドで同期的に表示します。  
   
--   印刷  
+- 印刷  
   
--   <xref:System.Windows.Media.Effects.BitmapEffect>  
+- <xref:System.Windows.Media.Effects.BitmapEffect>  
   
--   <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
+- <xref:System.Windows.Media.Imaging.RenderTargetBitmap>  
   
  このような状況のいずれかが発生したとき、レンダリング システムは、<xref:System.Windows.Interop.D3DImage.CopyBackBuffer%2A>ソフトウェアにハードウェアのバッファーをコピーする方法。 既定の実装、`GetRenderTargetData`サーフェスを持つメソッド。 この呼び出しは、ロック/ロック解除のパターンの外部で発生するために失敗します。 ここで、`CopyBackBuffer`メソッドを返します。`null`イメージは表示されません。  
   

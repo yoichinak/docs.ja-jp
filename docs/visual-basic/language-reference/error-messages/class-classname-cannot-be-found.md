@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC31098
 ms.assetid: 72528d02-77b7-4b4c-8b9e-d12f666f92ef
 ms.openlocfilehash: e1a33a56d196b2a8731f2ddb5c632b0de147db3e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649921"
 ---
 # <a name="class-classname-cannot-be-found"></a>クラス\<classname >' が見つかりません
 クラス\<classname >' が見つかりません。 このエラーは通常、'Microsoft.VisualBasic.dll' が適切でない場合に発生します。  

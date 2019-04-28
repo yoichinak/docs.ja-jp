@@ -7,11 +7,11 @@ ms.assetid: 87a9cff5-d86f-4e44-a06e-d12764d0dce2
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 85ca55e976a010a4875d260b3da30f5bc3cf2ffb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723616"
 ---
 # <a name="etw-events-in-task-parallel-library-and-plinq"></a>タスク並列ライブラリおよび PLINQ での ETW イベント
 

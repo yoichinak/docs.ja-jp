@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 2ac8bc14-e9f1-48fb-b662-f5991558fbe4
 author: BrucePerlerMS
 ms.openlocfilehash: 6c9c77f96ff6032de43d9b5a257bc0796a19b858
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269342"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667380"
 ---
 # <a name="certificatereference"></a>\<certificateReference>
 検索して、証明書ストアに X.509 証明書の検証に使用される設定を指定します。  
   
  \<system.identityModel.services>  
 \<federationConfiguration>  
-\<serviceCertificate >  
+\<serviceCertificate>  
 \<certificateReference>  
   
 ## <a name="syntax"></a>構文  
@@ -43,11 +43,11 @@ ms.locfileid: "55269342"
   
 |属性|説明|  
 |---------------|-----------------|  
-|storeName|X.509 証明書ストアの名前。 既定値は"My"です。 任意。|  
-|storeLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> X.509 証明書ストアの場所を指定する値。 既定値は、"LocalMachine"です。 任意。|  
+|storeName|X.509 証明書ストアの名前。 既定値は"My"です。 省略可能です。|  
+|storeLocation|A <xref:System.Security.Cryptography.X509Certificates.StoreLocation> X.509 証明書ストアの場所を指定する値。 既定値は、"LocalMachine"です。 省略可能です。|  
 |x509FindType|<xref:System.Security.Cryptography.X509Certificates.X509FindType>を実行する検索の種類を指定する値。 既定値は、「findbysubjectdistinguishedname です」です。 任意。|  
-|findValue|X.509 証明書ストアで検索する値。 任意。|  
-|isChainIncluded|証明書チェーンを使用して検証を実行するかどうかを指定します。 既定値は"true"になります。証明書チェーンを使用して検証します。 任意。|  
+|findValue|X.509 証明書ストアで検索する値。 省略可能です。|  
+|isChainIncluded|証明書チェーンを使用して検証を実行するかどうかを指定します。 既定値は"true"になります。証明書チェーンを使用して検証します。 省略可能です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし  

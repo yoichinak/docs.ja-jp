@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e9005dd8fde0d7258bd1dd48b561e4925e87733b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698071"
 ---
 # <a name="iclrdatatargetrequest-method"></a>ICLRDataTarget::Request メソッド
 実装によって定義されているように、操作を要求する共通言語ランタイム (CLR) データ アクセス サービスによって呼び出されます。  

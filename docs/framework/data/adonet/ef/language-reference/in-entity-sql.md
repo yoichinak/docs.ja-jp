@@ -3,11 +3,11 @@ title: IN (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 51662950-ee01-4857-b7b9-311dd8515966
 ms.openlocfilehash: d88f79dbfcd27f0ca0d1e26815d7d2bbee731bcf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750697"
 ---
 # <a name="in-entity-sql"></a>IN (Entity SQL)
 コレクション内に一致する値があるかどうかを調べます。  

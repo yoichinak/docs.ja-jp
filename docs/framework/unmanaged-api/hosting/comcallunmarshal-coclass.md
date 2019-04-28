@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2f17a88a90905006432ae8c5dc040277124c947b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697291"
 ---
 # <a name="comcallunmarshal-coclass"></a>ComCallUnmarshal コクラス
 インターフェイス ポインターのマーシャ リングを管理するためのインターフェイスを提供します。  

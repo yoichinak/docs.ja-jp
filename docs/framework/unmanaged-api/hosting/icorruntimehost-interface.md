@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ec893c898a6cd4abffd525056ed0d0169fcbb288
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700729"
 ---
 # <a name="icorruntimehost-interface"></a>ICorRuntimeHost インターフェイス
 ホストが起動し、作成して既定のドメインにアクセスして、プロセスで実行されているすべてのドメインを列挙するために、アプリケーション ドメインを構成する共通言語ランタイム (CLR) を明示的に停止できるようにするメソッドを提供します。  

@@ -9,11 +9,11 @@ ms.assetid: f04816ab-110d-4e28-9283-845d6d9a4a68
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 21c24040f7d093aa72738957316a4219539510c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704818"
 ---
 # <a name="runtime-settings-schema"></a>ランタイム設定スキーマ
 ランタイム設定は、.NET Framework を対象とするアプリケーションを構成する共通言語ランタイムによって使用されます。  

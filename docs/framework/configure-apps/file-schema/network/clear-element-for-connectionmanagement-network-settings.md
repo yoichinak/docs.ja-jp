@@ -11,11 +11,11 @@ helpviewer_keywords:
 - <connectionManagement>, clear element
 ms.assetid: fb259282-84c4-4dc4-a226-78d904a6edc3
 ms.openlocfilehash: 733c70b0575de7e2635afaab58ad48591f035fc0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705246"
 ---
 # <a name="clear-element-for-connectionmanagement-network-settings"></a>\<クリア > connectionManagement (ネットワーク設定) の要素
 接続の管理の一覧をクリアします。  

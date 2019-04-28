@@ -3,11 +3,11 @@ title: '方法: IIS でホストされる WCF サービスに SSL を構成す�
 ms.date: 03/30/2017
 ms.assetid: df2fe31f-a4bb-4024-92ca-b74ba055e038
 ms.openlocfilehash: 8d3bbb1ceab8a3bc7e5e209fda29fd574110b4f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699996"
 ---
 # <a name="how-to-configure-an-iis-hosted-wcf-service-with-ssl"></a>方法: IIS でホストされる WCF サービスに SSL を構成する
 ここでは、HTTP トランスポート セキュリティを使用するように IIS でホストされる WCF サービスをセットアップする方法について説明します。 HTTP トランスポート セキュリティを使用するには、SSL 証明書が IIS に登録されている必要があります。 SSL 証明書がない場合は、IIS を使用してテスト証明書を生成できます。 次に、Web サイトに SSL バインディングを追加し、Web サイトの認証プロパティを構成する必要があります。 最後に、HTTPS を使用するように WCF サービスを構成する必要があります。  

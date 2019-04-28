@@ -6,11 +6,11 @@ helpviewer_keywords:
 - framework property metadata [WPF]
 ms.assetid: 9962f380-b885-4b61-a62e-457397083fea
 ms.openlocfilehash: 2a20e5a2bdbcbb36f6f06bbbadb2a46743ca5eba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314699"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703336"
 ---
 # <a name="framework-property-metadata"></a>フレームワーク プロパティ メタデータ
 フレームワーク プロパティ メタデータのオプションは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アーキテクチャの WPF フレームワーク レベルにあると見なされるオブジェクト要素のプロパティに対して報告されます。 一般に、WPF フレームワーク レベルが指定されている場合、レンダリング、データ バインディング、プロパティ システムの調整などの機能が、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のプレゼンテーション [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] と実行可能ファイルによって処理されます。 フレームワーク プロパティ メタデータがこれらのシステムによって照会されて、特定の要素プロパティに対する機能固有の特性が決まります。  
@@ -23,18 +23,18 @@ ms.locfileid: "59314699"
 ## <a name="what-is-communicated-by-framework-property-metadata"></a>フレームワーク プロパティ メタデータによる通知内容  
  フレームワーク プロパティ メタデータは、次のように分類できます。  
   
--   要素に影響するレイアウト プロパティ (<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>)。 それぞれの側面に影響を与えるプロパティとも実装している場合、メタデータでこれらのフラグを設定する可能性があります、 <xref:System.Windows.FrameworkElement.MeasureOverride%2A>  /  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>特定のレンダリング動作とレイアウト情報を指定する、クラスのメソッドシステム。 通常、そのような実装では、依存関係プロパティのメタデータでこれらのレイアウト プロパティのいずれかが true であると、プロパティの無効化があるかどうかがチェックされます。無効化があった場合にのみ、新しいレイアウト パスの要求が必要となります。  
+- 要素に影響するレイアウト プロパティ (<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.AffectsRender%2A>)。 それぞれの側面に影響を与えるプロパティとも実装している場合、メタデータでこれらのフラグを設定する可能性があります、 <xref:System.Windows.FrameworkElement.MeasureOverride%2A>  /  <xref:System.Windows.FrameworkElement.ArrangeOverride%2A>特定のレンダリング動作とレイアウト情報を指定する、クラスのメソッドシステム。 通常、そのような実装では、依存関係プロパティのメタデータでこれらのレイアウト プロパティのいずれかが true であると、プロパティの無効化があるかどうかがチェックされます。無効化があった場合にのみ、新しいレイアウト パスの要求が必要となります。  
   
--   要素の親要素に影響するレイアウト プロパティ (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>)。 既定ではこれらのフラグが設定される場所の例をいくつかは<xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType>と<xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>します。  
+- 要素の親要素に影響するレイアウト プロパティ (<xref:System.Windows.FrameworkPropertyMetadata.AffectsParentArrange%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.AffectsParentMeasure%2A>)。 既定ではこれらのフラグが設定される場所の例をいくつかは<xref:System.Windows.Documents.FixedPage.Left%2A?displayProperty=nameWithType>と<xref:System.Windows.Documents.Paragraph.KeepWithNext%2A?displayProperty=nameWithType>します。  
   
--   <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>。 既定では、依存関係プロパティは値を継承しません。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 一部のコントロール合成シナリオに必要なビジュアル ツリーにも移動する継承のパスを使用できます。  
+- <xref:System.Windows.FrameworkPropertyMetadata.Inherits%2A>。 既定では、依存関係プロパティは値を継承しません。 <xref:System.Windows.FrameworkPropertyMetadata.OverridesInheritanceBehavior%2A> 一部のコントロール合成シナリオに必要なビジュアル ツリーにも移動する継承のパスを使用できます。  
   
     > [!NOTE]
     >  プロパティ値のコンテキストにおける "継承" という用語は、依存関係プロパティに固有の事項を意味します。つまり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロパティ システムの WPF フレームワーク レベルの機能によって、実際の依存関係プロパティ値を子要素が親要素から継承できることを意味します。 派生型を通じたマネージド コードの型およびメンバーの継承とは直接関係はありません。 詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。  
   
--   データ バインディング特性 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>)。 既定では、フレームワークの依存関係プロパティは、一方向のバインディング動作を持つデータ バインディングをサポートします。 必要がない場合はデータ バインディングを無効にできます (柔軟性と拡張性を目的とするため、既定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] にそのようなプロパティの例は多くありません)。 バインディングを個々 のコンポーネント間でのコントロールの動作を結び付けるプロパティの双方向の既定値を設定することがあります (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>例を示します) または双方向のバインディングがユーザーの一般的かつ期待されるシナリオ (<xref:System.Windows.Controls.TextBox.Text%2A>例を示します)。 データ バインディング関連のメタデータを変更した場合に影響を受けるのは既定値だけです。この既定値は、バインディングごとにいつでも変更できます。 バインディング モードおよびバインディング全般の詳細については、「[データ バインドの概要](../data/data-binding-overview.md)」を参照してください。  
+- データ バインディング特性 (<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A>、 <xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A>)。 既定では、フレームワークの依存関係プロパティは、一方向のバインディング動作を持つデータ バインディングをサポートします。 必要がない場合はデータ バインディングを無効にできます (柔軟性と拡張性を目的とするため、既定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] にそのようなプロパティの例は多くありません)。 バインディングを個々 のコンポーネント間でのコントロールの動作を結び付けるプロパティの双方向の既定値を設定することがあります (<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>例を示します) または双方向のバインディングがユーザーの一般的かつ期待されるシナリオ (<xref:System.Windows.Controls.TextBox.Text%2A>例を示します)。 データ バインディング関連のメタデータを変更した場合に影響を受けるのは既定値だけです。この既定値は、バインディングごとにいつでも変更できます。 バインディング モードおよびバインディング全般の詳細については、「[データ バインドの概要](../data/data-binding-overview.md)」を参照してください。  
   
--   レポートのプロパティをジャーナリングをサポートするアプリケーションまたはサービスをジャーナリングするかどうか (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>)。 一般的な要素に対しては、ジャーナリングは既定で有効になりませんが、特定のユーザー入力コントロールに対しては選択的に有効になります。 これは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のジャーナリングの実装を含む、ジャーナリング サービスによって読み取られるプロパティです。通常は、複数のナビゲーション ステップにわたって永続化する必要があるユーザー コントロール (一覧におけるユーザー選択など) に設定します。 ジャーナリングの詳細については、「[ナビゲーションの概要](../app-development/navigation-overview.md)」を参照してください。  
+- レポートのプロパティをジャーナリングをサポートするアプリケーションまたはサービスをジャーナリングするかどうか (<xref:System.Windows.FrameworkPropertyMetadata.Journal%2A>)。 一般的な要素に対しては、ジャーナリングは既定で有効になりませんが、特定のユーザー入力コントロールに対しては選択的に有効になります。 これは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のジャーナリングの実装を含む、ジャーナリング サービスによって読み取られるプロパティです。通常は、複数のナビゲーション ステップにわたって永続化する必要があるユーザー コントロール (一覧におけるユーザー選択など) に設定します。 ジャーナリングの詳細については、「[ナビゲーションの概要](../app-development/navigation-overview.md)」を参照してください。  
   
 <a name="Reading_FrameworkPropertyMetadata"></a>   
 ## <a name="reading-frameworkpropertymetadata"></a>FrameworkPropertyMetadata の読み取り  
@@ -56,17 +56,17 @@ ms.locfileid: "59314699"
 ## <a name="framework-property-metadata-merge-behavior"></a>フレームワーク プロパティ メタデータのマージ動作  
  フレームワーク プロパティ メタデータをオーバーライドすると、さまざまなメタデータ特性がマージされるか置き換えられます。  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 結合されます。 新しく追加した場合<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>、そのコールバックがメタデータに格納します。 指定しない場合、<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>はメタデータでそれを指定した最も近い先祖からの参照として昇格します。  
+- <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 結合されます。 新しく追加した場合<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>、そのコールバックがメタデータに格納します。 指定しない場合、<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>はメタデータでそれを指定した最も近い先祖からの参照として昇格します。  
   
--   実際のプロパティ システム動作<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>される実装で、階層内のすべてのメタデータ所有者が保持され、テーブルに追加の派生クラスのコールバックがプロパティ システムによる実行の順序で最初に呼び出されます。 継承されたコールバックは、それらをメタデータに配置したクラスによって所有されていると見なされ、それぞれ 1 回だけ実行されます。  
+- 実際のプロパティ システム動作<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>される実装で、階層内のすべてのメタデータ所有者が保持され、テーブルに追加の派生クラスのコールバックがプロパティ システムによる実行の順序で最初に呼び出されます。 継承されたコールバックは、それらをメタデータに配置したクラスによって所有されていると見なされ、それぞれ 1 回だけ実行されます。  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 置き換えられます。 指定しない場合、<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.DefaultValue%2A>メタデータでそれを指定した最も近い先祖します。  
+- <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 置き換えられます。 指定しない場合、<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.DefaultValue%2A>メタデータでそれを指定した最も近い先祖します。  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 実装は置き換えられます。 新しく追加した場合<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>、そのコールバックがメタデータに格納します。 指定しない場合、<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>はメタデータでそれを指定した最も近い先祖からの参照として昇格します。  
+- <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 実装は置き換えられます。 新しく追加した場合<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>、そのコールバックがメタデータに格納します。 指定しない場合、<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>はメタデータでそれを指定した最も近い先祖からの参照として昇格します。  
   
--   プロパティ システム動作はのみですが、<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>直接のメタデータが呼び出されます。 その他への参照<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>階層内の実装が保持されます。  
+- プロパティ システム動作はのみですが、<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>直接のメタデータが呼び出されます。 その他への参照<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>階層内の実装が保持されます。  
   
--   フラグ<xref:System.Windows.FrameworkPropertyMetadataOptions>列挙体はビットごとの OR 演算として組み合わされます。  指定した場合<xref:System.Windows.FrameworkPropertyMetadataOptions>、元のオプションは上書きされません。  オプションを変更するには対応するプロパティを設定します。<xref:System.Windows.FrameworkPropertyMetadata>します。 などの場合、元<xref:System.Windows.FrameworkPropertyMetadata>オブジェクト セット、<xref:System.Windows.FrameworkPropertyMetadataOptions.NotDataBindable?displayProperty=nameWithType>フラグを設定して変更できます<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A?displayProperty=nameWithType>に`false`。  
+- フラグ<xref:System.Windows.FrameworkPropertyMetadataOptions>列挙体はビットごとの OR 演算として組み合わされます。  指定した場合<xref:System.Windows.FrameworkPropertyMetadataOptions>、元のオプションは上書きされません。  オプションを変更するには対応するプロパティを設定します。<xref:System.Windows.FrameworkPropertyMetadata>します。 などの場合、元<xref:System.Windows.FrameworkPropertyMetadata>オブジェクト セット、<xref:System.Windows.FrameworkPropertyMetadataOptions.NotDataBindable?displayProperty=nameWithType>フラグを設定して変更できます<xref:System.Windows.FrameworkPropertyMetadata.IsNotDataBindable%2A?displayProperty=nameWithType>に`false`。  
   
  この動作を実装して<xref:System.Windows.FrameworkPropertyMetadata.Merge%2A>、派生メタデータ クラスでオーバーライドすることができます。  
   

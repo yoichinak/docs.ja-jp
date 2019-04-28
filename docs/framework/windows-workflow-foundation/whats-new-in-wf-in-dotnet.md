@@ -3,15 +3,15 @@ title: .NET 4.5 での Windows Workflow Foundation の新機能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
 ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61671419"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 での Windows Workflow Foundation の新機能
 
-Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]新しいアクティビティ、デザイナー機能、ワークフロー開発モデルなど、多くの新機能が導入されています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された新しいワークフロー機能の多くは、ホストを変更したワークフロー デザイナーでサポートされています (ただし、すべての機能がサポートされているわけではありません)。 サポートされている新しい機能の詳細については、[再ホストされたワークフロー デザイナーでの新しい Workflow Foundation 4.5 機能のサポート](wf-features-in-the-rehosted-workflow-designer.md)を参照してください。 最新バージョンを使用する .NET 3.0 および .NET 3.5 ワークフロー アプリケーションの移行の詳細については、[移行ガイダンス](migration-guidance.md)を参照してください。 ここでは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された新しいワークフロー機能の概要について説明します。
+Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]新しいアクティビティ、デザイナー機能、ワークフロー開発モデルなど、多くの新機能が導入されています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された新しいワークフロー機能の多くは、ホストを変更したワークフロー デザイナーでサポートされています (ただし、すべての機能がサポートされているわけではありません)。 サポートされている新しい機能の詳細については、次を参照してください。[再ホストされたワークフロー デザイナーでの新しい Workflow Foundation 4.5 機能のサポート](wf-features-in-the-rehosted-workflow-designer.md)します。 最新バージョンを使用する .NET 3.0 および .NET 3.5 ワークフロー アプリケーションの移行の詳細については、次を参照してください。[移行ガイダンス](migration-guidance.md)します。 ここでは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された新しいワークフロー機能の概要について説明します。
 
 > [!WARNING]
 > 導入された新しい Windows Workflow Foundation 機能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]framework の以前のバージョンを対象とするプロジェクトでは使用できません。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] を対象とするプロジェクトの対象を以前のバージョンのフレームワークに変更すると、いくつかの問題が発生する場合があります。
@@ -27,11 +27,11 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 - <xref:System.Activities.WorkflowApplication> ホスティングを使用する開発者は、<xref:System.Activities.WorkflowIdentity> を使用して、ワークフローの複数のバージョンを同時にホストできます。 永続化されたワークフロー インスタンスは新しい <xref:System.Activities.WorkflowApplicationInstance> クラスを使用して読み込むことができ、ホストは <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> を使用して、<xref:System.Activities.WorkflowApplication> のインスタンス化時に適切なバージョンのワークフロー定義を提供できます。 詳細については、次を参照してください。[を使用して WorkflowIdentity と Versioning](using-workflowidentity-and-versioning.md)と[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
-- 現在、<xref:System.ServiceModel.WorkflowServiceHost> は複数のバージョンのホストです。 ワークフロー サービスの新しいバージョンを配置すると、新しいインスタンスが新しいサービスを使用して作成されますが、既存のインスタンスは以前のバージョンを使用して完了します。 詳細については、[WorkflowServiceHost でサイド バイ サイドのバージョン管理](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)を参照してください。
+- 現在、<xref:System.ServiceModel.WorkflowServiceHost> は複数のバージョンのホストです。 ワークフロー サービスの新しいバージョンを配置すると、新しいインスタンスが新しいサービスを使用して作成されますが、既存のインスタンスは以前のバージョンを使用して完了します。 詳細については、次を参照してください。 [WorkflowServiceHost でサイド バイ サイドのバージョン管理](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)します。
 
 - 永続化されたワークフロー インスタンスの定義を更新するためのメカニズムを提供する動的更新が導入されました。 詳細については、次を参照してください。[動的更新](dynamic-update.md)と[方法。実行中のワークフロー インスタンスの定義を更新](how-to-update-the-definition-of-a-running-workflow-instance.md)します。
 
-- SqlWorkflowInstanceStoreSchemaUpgrade.sql データベース スクリプトは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] データベース スクリプトを使用して作成された永続性データベースを更新するために用意されています。 このスクリプトは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] で導入された新しいバージョン管理機能をサポートするように [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 永続性データベースを更新します。 データベースで永続化されたワークフロー インスタンスは、既定のバージョン番号が付与されるため、side-by-side 実行および動的更新に参加できるようになります。 詳細については、[をアップグレードする .NET Framework 4 永続性データベース ワークフローのバージョン管理をサポートする](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)を参照してください。
+- SqlWorkflowInstanceStoreSchemaUpgrade.sql データベース スクリプトは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] データベース スクリプトを使用して作成された永続性データベースを更新するために用意されています。 このスクリプトは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] で導入された新しいバージョン管理機能をサポートするように [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 永続性データベースを更新します。 データベースで永続化されたワークフロー インスタンスは、既定のバージョン番号が付与されるため、side-by-side 実行および動的更新に参加できるようになります。 詳細については、次を参照してください。[をアップグレードする .NET Framework 4 永続性データベース ワークフローのバージョン管理をサポートする](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)します。
 
 ## <a name="BKMK_NewActivities"></a> アクティビティ
 
@@ -162,7 +162,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 C# の式はデザイン時に検証されます。 C# 式のエラーは赤い波下線でマークされます。
 
-C# の式の詳細については、[C# 式](csharp-expressions.md)を参照してください。
+C# の式の詳細については、次を参照してください。 [C# 式](csharp-expressions.md)します。
 
 ### <a name="BKMK_Visibility"></a> シェル バーおよびヘッダーの可視性の詳細に制御項目
 
@@ -234,7 +234,7 @@ C# の式の詳細については、[C# 式](csharp-expressions.md)を参照し�
 
 ![完成したステート マシン ワークフロー](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
 
-ステート マシン ワークフローを作成する方法の詳細については、[ステート マシン ワークフロー](state-machine-workflows.md)を参照してください。
+ステート マシン ワークフローを作成する方法の詳細については、次を参照してください。[ステート マシン ワークフロー](state-machine-workflows.md)します。
 
 ### <a name="BKMK_ContractFirst"></a> コントラクト優先ワークフローの開発
 

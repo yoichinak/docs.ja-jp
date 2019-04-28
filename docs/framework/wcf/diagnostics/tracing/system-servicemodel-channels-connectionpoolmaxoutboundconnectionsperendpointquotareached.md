@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure
 ms.date: 03/30/2017
 ms.assetid: 1b9f5139-e122-4716-9ef7-2f38e1813993
 ms.openlocfilehash: 93c96d94aaeddeb7e7b04ea80645b8de95b0343e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59143326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61666795"
 ---
 # <a name="microsofttransactionstransactionbridgeenlisttransactionfailure"></a>Microsoft.Transactions.TransactionBridge.EnlistTransactionFailure
 WS-AT プロトコル サービスは、指定されたコーディネーション コンテキストを使用してトランザクションに参加することができませんでした。  

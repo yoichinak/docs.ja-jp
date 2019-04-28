@@ -10,11 +10,11 @@ helpviewer_keywords:
 - spell checking with a context menu [WPF]
 ms.assetid: 61f69a20-2ff3-4056-9060-e32f4483ec5e
 ms.openlocfilehash: 72b24c386eb99140c9c2729688994b81f92e1a6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699150"
 ---
 # <a name="how-to-use-spell-checking-with-a-context-menu"></a>方法: コンテキスト メニューでスペル チェックを使用する
 既定では、編集コントロールでスペル チェックを有効にするとがなど<xref:System.Windows.Controls.TextBox>または<xref:System.Windows.Controls.RichTextBox>、コンテキスト メニューでスペル チェックの選択肢を取得します。 たとえば、ユーザーは、スペル ミスの単語を右クリックし、ときのセットを取得するオプションや、スペルの修正候補**すべて無視**します。 ただし、独自のカスタム コンテキスト メニューで、既定のショートカット メニューをオーバーライドするときにこの機能は失われ、コンテキスト メニューでスペル チェック機能を再度有効にするコードを記述する必要があります。 次の例でこれを有効にする方法を示しています、<xref:System.Windows.Controls.TextBox>します。  

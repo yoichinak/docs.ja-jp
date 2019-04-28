@@ -3,11 +3,11 @@ title: <security> の <netTcpBinding>
 ms.date: 03/30/2017
 ms.assetid: 286cd191-4fd5-4c4e-a223-9c71cf7fdead
 ms.openlocfilehash: 3fd850862172ad2b9bd58cd01d332028ff76462a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670470"
 ---
 # <a name="security-of-nettcpbinding"></a>\<セキュリティ > の\<netTcpBinding >
 バインディングのセキュリティ設定を定義します。  
@@ -36,7 +36,7 @@ ms.locfileid: "59199077"
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|任意。 適用するセキュリティの種類を指定します。 有効な値を次に示します。 既定値は `Transport` です。<br /><br /> この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
+|モード|省略可能です。 適用するセキュリティの種類を指定します。 有効な値を次に示します。 既定値は `Transport` です。<br /><br /> この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   

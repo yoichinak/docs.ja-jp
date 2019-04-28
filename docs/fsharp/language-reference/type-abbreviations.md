@@ -3,11 +3,11 @@ title: 型略称
 description: コードを読みやすくためにわかりやすい名前の型を提供する F# 型略称について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 0deaef789367aad413e5a537bf7164034e1275c0
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683341"
 ---
 # <a name="type-abbreviations"></a>型略称
 
@@ -35,7 +35,7 @@ type [accessibility-modifier] type-abbreviation = type-name
 
 型の省略形は、.NET Framework の MSIL コードでは保持されません。 したがって、F# アセンブリ .NET Framework の別の言語からを使用する場合は、型の省略形の基になる種類の名前を使用する必要があります。
 
-型の省略形は、測定単位にも使用できます。 詳細については、[単位](units-of-measure.md)を参照してください。
+型の省略形は、測定単位にも使用できます。 詳細については、次を参照してください。[単位](units-of-measure.md)します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -3,20 +3,20 @@ title: '方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する'
 ms.date: 03/30/2017
 ms.assetid: 1428df4d-b18f-4e6d-bd4d-79ab3dd5147c
 ms.openlocfilehash: 6114fa90b10a5d0cacb60a7ad40f63fae776e174
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337423"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61683523"
 ---
 # <a name="how-to-migrate-ajax-enabled-aspnet-web-services-to-wcf"></a>方法: AJAX 対応 ASP.NET Web サービスを WCF に移行する
 このトピックでは、基本的な ASP.NET AJAX サービスを同等の AJAX 対応の Windows Communication Foundation (WCF) サービスに移行する手順について説明します。 同等の WCF が ASP.NET AJAX サービスのバージョンを作成する方法を示します。 並行して 2 つのサービスは使用して、または WCF サービスが ASP.NET AJAX サービスを置き換えることができます。
 
  既存の ASP.NET AJAX を移行するサービスに WCF AJAX サービスでは、次の利点。
 
--   最小限の追加構成で、AJAX サービスを SOAP サービスとして公開できます。
+- 最小限の追加構成で、AJAX サービスを SOAP サービスとして公開できます。
 
--   トレースなどの WCF 機能を利用し、できます。
+- トレースなどの WCF 機能を利用し、できます。
 
  次の手順では、Visual Studio 2012 を使用していることを前提としています。
 
@@ -179,9 +179,9 @@ namespace ASPHello
 
  ASMX Web サービスは、アップグレードして、WCF サービスへのサイド バイ サイドでの移行された場合、は、クライアントで同じ名前に 2 つの型のマッピングを回避します。 同じ名前が割り当てられていると、<xref:System.Web.Services.WebMethodAttribute> と <xref:System.ServiceModel.ServiceContractAttribute> で同じ型が使用されている場合に、シリアライザーで次のような例外が発生します。
 
--   WCF サービスが最初に追加された場合に例外の原因の ASMX Web サービス メソッドを呼び出して<xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29>のため、プロキシでの順序の WCF スタイル定義が優先されます。
+- WCF サービスが最初に追加された場合に例外の原因の ASMX Web サービス メソッドを呼び出して<xref:System.Web.UI.ObjectConverter.ConvertValue%28System.Object%2CSystem.Type%2CSystem.String%29>のため、プロキシでの順序の WCF スタイル定義が優先されます。
 
--   WCF サービスのメソッドを呼び出す場合は、ASMX Web サービスを最初に追加するで例外が発生<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>のため、プロキシでの順序の Web サービス スタイル定義が優先されます。
+- WCF サービスのメソッドを呼び出す場合は、ASMX Web サービスを最初に追加するで例外が発生<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>のため、プロキシでの順序の Web サービス スタイル定義が優先されます。
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> と ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> の動作には大きな違いがあります。 たとえば、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> はディクショナリをキーと値のペアの配列として表しますが、ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer> はディクショナリを実際の JSON オブジェクトとして表します。 したがって、ASP.NET AJAX では、ディクショナリが次のように表されます。
 
@@ -193,9 +193,9 @@ d.Add("two", 2);
 
  このディクショナリは、JSON オブジェクトでは次のように表されます。
 
--   <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> では [{"Key":"one","Value":1},{"Key":"two","Value":2}] と表され、
+- <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> では [{"Key":"one","Value":1},{"Key":"two","Value":2}] と表され、
 
--   {"one":1,"two":2} by the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
+- {"one":1,"two":2} by the ASP.NET AJAX <xref:System.Web.Script.Serialization.JavaScriptSerializer>
 
  <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> は、キーの種類が文字列ではないディクショナリを処理でき、<xref:System.Web.Script.Serialization.JavaScriptSerializer> はできません。この点で前者はより強力と言えます。 しかし、後者の方が JSON で使いやすいと言えます。
 

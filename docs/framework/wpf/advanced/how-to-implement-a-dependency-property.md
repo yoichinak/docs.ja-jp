@@ -9,11 +9,11 @@ helpviewer_keywords:
 - properties [WPF], backing with dependency properties
 ms.assetid: 855fd6d7-19ac-493c-bf5e-2f40b57cdc92
 ms.openlocfilehash: e2f18cb3941be2ebf4315a844c05b91ff49c6aa2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223802"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757457"
 ---
 # <a name="how-to-implement-a-dependency-property"></a>方法: 依存関係プロパティを実装する
 バックアップを作成する方法を示します、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]プロパティを<xref:System.Windows.DependencyProperty>フィールド、ため、依存関係プロパティを定義します。 独自に定義したプロパティが [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のさまざまな機能、たとえばスタイル、データ バインディング、継承、アニメーション、既定値をサポートできるようにするには、そのプロパティを依存関係プロパティとして実装します。  

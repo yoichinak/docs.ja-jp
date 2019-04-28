@@ -3,11 +3,11 @@ title: <diagnostics>
 ms.date: 03/30/2017
 ms.assetid: 0c2f95c4-cc12-4fb5-a70c-7fc6fa95db58
 ms.openlocfilehash: 3fc7828d399555f7c459f6dd067ce9a24b8998b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704064"
 ---
 # <a name="diagnostics"></a>\<diagnostics>
 `diagnostics` 要素は、ランタイムの検査と管理を行う管理者が使用できる設定を定義します。  

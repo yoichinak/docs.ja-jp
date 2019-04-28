@@ -22,11 +22,11 @@ helpviewer_keywords:
 - configuration file reference [.NET Framework]
 ms.assetid: 69003d39-dc8a-460c-a6be-e6d93e690b38
 ms.openlocfilehash: 6ebb6487136bff567c57143e3000a20270c1f87e
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705286"
 ---
 # <a name="configuration-file-schema-for-the-net-framework"></a>.NET Framework の構成ファイル スキーマ
 

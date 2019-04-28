@@ -13,11 +13,11 @@ ms.assetid: 235503c1-1d01-4f59-895f-ae2cf15b3345
 author: guardrex
 ms.author: mairaw
 ms.openlocfilehash: a7446b9cbbfd4d3a4d38368a8e24c99527cf9108
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54146707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705936"
 ---
 # <a name="connectionmwritelist-field"></a>Connection.m\_WriteList フィールド
 

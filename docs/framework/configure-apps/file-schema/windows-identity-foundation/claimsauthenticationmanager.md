@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 6d30a450-6d13-4671-81a8-77e0204500c5
 author: BrucePerlerMS
 ms.openlocfilehash: ecf26263bf47e8b4609e7adc208f0a59a2fa795b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55255186"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667328"
 ---
 # <a name="claimsauthenticationmanager"></a>\<claimsAuthenticationManager>
 入力方向の要求のクレーム認証マネージャーを登録します。  
@@ -36,7 +36,7 @@ ms.locfileid: "55255186"
   
 |属性|説明|  
 |---------------|-----------------|  
-|型|派生したカスタム型を指定します、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラス。 詳細を指定する方法については、`type`属性を [カスタム型の参照] を参照してください。|  
+|種類|派生したカスタム型を指定します、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラス。 詳細を指定する方法については、`type`属性を [カスタム型の参照] を参照してください。|  
   
 ### <a name="child-elements"></a>子要素  
  ある場合ありません`type`属性、または、`type`属性参照、<xref:System.Security.Claims.ClaimsAuthenticationManager>クラス、`<claimsAuthenticationManager>`要素は子要素を取りません。 ただし、から派生したクラス<xref:System.Security.Claims.ClaimsAuthenticationManager>子構成要素を定義できます。  

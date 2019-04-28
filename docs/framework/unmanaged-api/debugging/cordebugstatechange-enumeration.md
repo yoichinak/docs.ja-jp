@@ -13,11 +13,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 05a29022d3ebad37322aef9826f10689d2b5b06b
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56221135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61723070"
 ---
 # <a name="cordebugstatechange-enumeration"></a>CorDebugStateChange 列挙体
 

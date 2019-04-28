@@ -9,11 +9,11 @@ helpviewer_keywords:
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
 ms.openlocfilehash: 33df685b4d14130ae00d59012706b7637924c9be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699829"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>方法: フェデレーション サービスで資格情報を設定する
 Windows Communication Foundation (WCF) では、フェデレーション サービスを作成する、次の主な手順で構成されます。  
@@ -63,11 +63,11 @@ Windows Communication Foundation (WCF) では、フェデレーション サー�
   
  クライアントがフェデレーション サービスによって認証されるためには、発行済みトークンが次のことを満たす必要があります。  
   
--   発行済みトークンのデジタル署名が RSA セキュリティ キー識別子を使用している場合、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> プロパティを `true` にする必要があります。  
+- 発行済みトークンのデジタル署名が RSA セキュリティ キー識別子を使用している場合、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> プロパティを `true` にする必要があります。  
   
--   発行済みトークンの署名に X.509 発行者シリアル番号、X.509 サブジェクト キー識別子、または X.509 拇印セキュリティ識別子が使用されている場合、発行済みトークンは <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> クラスの <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> プロパティによって返されたコレクションにある証明書で署名されている必要があります。  
+- 発行済みトークンの署名に X.509 発行者シリアル番号、X.509 サブジェクト キー識別子、または X.509 拇印セキュリティ識別子が使用されている場合、発行済みトークンは <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> クラスの <xref:System.ServiceModel.Security.IssuedTokenServiceCredential> プロパティによって返されたコレクションにある証明書で署名されている必要があります。  
   
--   発行済みトークンが X.509 証明書を使用して署名されている場合、証明書が <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> として証明書利用者に送信されたか、<xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> プロパティから取得されたかに関係なく、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> プロパティの値で指定されるセマンティックスごとに証明書を検証する必要があります。 X.509 証明書の検証の詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。  
+- 発行済みトークンが X.509 証明書を使用して署名されている場合、証明書が <xref:System.ServiceModel.Security.X509ServiceCertificateAuthentication.CertificateValidationMode%2A> として証明書利用者に送信されたか、<xref:System.IdentityModel.Tokens.X509RawDataKeyIdentifierClause> プロパティから取得されたかに関係なく、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> プロパティの値で指定されるセマンティックスごとに証明書を検証する必要があります。 X.509 証明書の検証の詳細については、次を参照してください。 [Working with Certificates](../../../../docs/framework/wcf/feature-details/working-with-certificates.md)します。  
   
  たとえば、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CertificateValidationMode%2A> を <xref:System.ServiceModel.Security.X509CertificateValidationMode.PeerTrust> に設定すると、その署名の証明書が `TrustedPeople` 証明書ストアに格納されている任意の発行済みトークンが認証されます。 この場合、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.TrustedStoreLocation%2A> プロパティを <xref:System.Security.Cryptography.X509Certificates.StoreLocation.CurrentUser> または <xref:System.Security.Cryptography.X509Certificates.StoreLocation.LocalMachine> に設定します。 <xref:System.ServiceModel.Security.X509CertificateValidationMode.Custom> を含めて、他のモードを選択できます。 `Custom` を選択した場合、<xref:System.IdentityModel.Selectors.X509CertificateValidator> クラスのインスタンスを <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.CustomCertificateValidator%2A> プロパティに割り当てる必要があります。 カスタム検証では、任意の基準を使用して証明書を検証できます。 詳細については、「[方法 :カスタム証明書の検証を使用するサービスを作成する](../../../../docs/framework/wcf/extending/how-to-create-a-service-that-employs-a-custom-certificate-validator.md)します。  
   

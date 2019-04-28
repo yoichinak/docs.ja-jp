@@ -7,11 +7,11 @@ helpviewer_keywords:
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
 ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747548"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成
 ユーザー補助に対応するアプリケーションを作成することは、ビジネスに重要な影響を与えます。 多くの政府は、ソフトウェアの購入に関するユーザー補助の規制があります。 Certified for Windows ロゴには、ユーザー補助に関する要件が含まれています。 米国だけでも 3000 万人 (その多くは潜在的な顧客) が、ソフトウェアのアクセシビリティ機能によって影響を受けると推定されています。  

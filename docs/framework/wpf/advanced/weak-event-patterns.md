@@ -7,11 +7,11 @@ helpviewer_keywords:
 - IWeakEventListener interface [WPF]
 ms.assetid: e7c62920-4812-4811-94d8-050a65c856f6
 ms.openlocfilehash: e0cd6837de626fa6bcd560811c6a70f7f6604daa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669362"
 ---
 # <a name="weak-event-patterns"></a>弱いイベント パターン
 アプリケーションでは、イベント ソースに接続されているハンドラーがハンドラーをソースに接続されているリスナーのオブジェクトと連携して破棄されないです。 このような状況は、メモリ リークにつながります。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 特定のイベントの専任マネージャー クラスを提供することでそのイベントのリスナー インターフェイスを実装してこの問題に対処するために使用する設計パターンについて説明します。 この設計パターンと呼ばれる、*弱いイベント パターン*します。  
@@ -40,13 +40,13 @@ ms.locfileid: "59316168"
 
  次のセクションでは、弱いイベント パターンを実装する方法について説明します。  この説明のためは、サブスクライブするイベントは、次の特性を持ちます。  
   
--   イベントの名前は`SomeEvent`します。  
+- イベントの名前は`SomeEvent`します。  
   
--   イベントが発生した、`EventSource`クラス。  
+- イベントが発生した、`EventSource`クラス。  
   
--   イベント ハンドラーが型: `SomeEventEventHandler` (または`EventHandler<SomeEventEventArgs>`)。  
+- イベント ハンドラーが型: `SomeEventEventHandler` (または`EventHandler<SomeEventEventArgs>`)。  
   
--   このイベントは、型のパラメーターを渡します`SomeEventEventArgs`イベント ハンドラーにします。  
+- このイベントは、型のパラメーターを渡します`SomeEventEventArgs`イベント ハンドラーにします。  
   
 ### <a name="using-an-existing-weak-event-manager-class"></a>既存の弱いイベント マネージャー クラスを使用します。  
   

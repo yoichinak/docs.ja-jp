@@ -3,11 +3,11 @@ title: WCF ディレクティブ構文
 ms.date: 03/30/2017
 ms.assetid: e471b042-d5e3-491c-bc81-758655016a3a
 ms.openlocfilehash: 65c972067d5c2869a9dd130d285566db81dbc0d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183353"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704675"
 ---
 # <a name="wcf-directive-syntax"></a>WCF ディレクティブ構文
 .Svc ファイル内の Windows Communication Foundation (WCF) ディレクティブ、コンパイラに指示するために使用する設定を指定します。 各ディレクティブには、そのディレクティブに固有な 1 つ以上の (値と対にした) 属性を含めることができます。 WCF には、のみ、 [ \@ServiceHost](../../../../../docs/framework/configure-apps/file-schema/wcf-directive/servicehost.md)ディレクティブ。  

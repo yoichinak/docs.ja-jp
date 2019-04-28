@@ -9,44 +9,44 @@ ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61722940"
 ---
 # <a name="garbage-collection-etw-events"></a>ガベージ コレクション ETW イベント
 <a name="top"></a> これらのイベントは、ガベージ コレクションに関連する情報を収集します。 ガベージ コレクションが実行された回数、ガベージ コレクションの間に解放されたメモリの量など、診断やデバッグに役立つ情報を入手できます。  
   
  このカテゴリは、次のイベントで構成されます。  
   
--   [GCStart_V1 イベント](#gcstart_v1_event)  
+- [GCStart_V1 イベント](#gcstart_v1_event)  
   
--   [GCEnd_V1 イベント](#gcend_v1_event)  
+- [GCEnd_V1 イベント](#gcend_v1_event)  
   
--   [GCHeapStats_V1 イベント](#gcheapstats_v1_event)  
+- [GCHeapStats_V1 イベント](#gcheapstats_v1_event)  
   
--   [GCCreateSegment_V1 イベント](#gccreatesegment_v1_event)  
+- [GCCreateSegment_V1 イベント](#gccreatesegment_v1_event)  
   
--   [GCFreeSegment_V1 イベント](#gcfreesegment_v1_event)  
+- [GCFreeSegment_V1 イベント](#gcfreesegment_v1_event)  
   
--   [GCRestartEEBegin_V1 イベント](#gcrestarteebegin_v1_event)  
+- [GCRestartEEBegin_V1 イベント](#gcrestarteebegin_v1_event)  
   
--   [GCRestartEEEnd_V1 イベント](#gcrestarteeend_v1_event)  
+- [GCRestartEEEnd_V1 イベント](#gcrestarteeend_v1_event)  
   
--   [GCSuspendEE_V1 イベント](#gcsuspendee_v1_event)  
+- [GCSuspendEE_V1 イベント](#gcsuspendee_v1_event)  
   
--   [GCSuspendEEEnd_V1 イベント](#gcsuspendeeend_v1_event)  
+- [GCSuspendEEEnd_V1 イベント](#gcsuspendeeend_v1_event)  
   
--   [GCAllocationTick_V2 イベント](#gcallocationtick_v2_event)  
+- [GCAllocationTick_V2 イベント](#gcallocationtick_v2_event)  
   
--   [GCFinalizersBegin_V1 イベント](#gcfinalizersbegin_v1_event)  
+- [GCFinalizersBegin_V1 イベント](#gcfinalizersbegin_v1_event)  
   
--   [GCFinalizersEnd_V1 イベント](#gcfinalizersend_v1_event)  
+- [GCFinalizersEnd_V1 イベント](#gcfinalizersend_v1_event)  
   
--   [GCCreateConcurrentThread_V1 イベント](#gccreateconcurrentthread_v1_event)  
+- [GCCreateConcurrentThread_V1 イベント](#gccreateconcurrentthread_v1_event)  
   
--   [GCTerminateConcurrentThread_V1 イベント](#gcterminateconcurrentthread_v1_event)  
+- [GCTerminateConcurrentThread_V1 イベント](#gcterminateconcurrentthread_v1_event)  
   
 <a name="gcstart_v1_event"></a>   
 ## <a name="gcstartv1-event"></a>GCStart_V1 イベント  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0cf0065f1ed12ad3a37819b0a15d734a2b51ff5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125607"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61697778"
 ---
 # <a name="icordebugcanlaunchorattach-method"></a>ICorDebug::CanLaunchOrAttach メソッド
 現在コンピューターとランタイムの構成のコンテキスト内で、新しいプロセスの起動または指定した既存のプロセスにアタッチを実行するかどうかを示す HRESULT を返します。  
@@ -46,13 +46,13 @@ HRESULT CanLaunchOrAttach (
 ## <a name="return-value"></a>戻り値  
  デバッグ サービスを確認する新しいプロセスの起動または特定のプロセスにアタッチする場合は S_OK が、現在のコンピューターとランタイムの構成に関する情報を指定できます。 HRESULT 値があります。  
   
--   S_OK  
+- S_OK  
   
--   CORDBG_E_DEBUGGING_NOT_POSSIBLE  
+- CORDBG_E_DEBUGGING_NOT_POSSIBLE  
   
--   CORDBG_E_KERNEL_DEBUGGER_PRESENT  
+- CORDBG_E_KERNEL_DEBUGGER_PRESENT  
   
--   CORDBG_E_KERNEL_DEBUGGER_ENABLED  
+- CORDBG_E_KERNEL_DEBUGGER_ENABLED  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドは、純粋な情報です。 インターフェイスは停止されませんを起動またはによって返される値に関係なく、プロセスにアタッチ`CanLaunchOrAttach`します。  

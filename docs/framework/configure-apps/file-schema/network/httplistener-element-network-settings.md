@@ -3,11 +3,11 @@ title: <httpListener> 要素 (ネットワーク設定)
 ms.date: 03/30/2017
 ms.assetid: 62f121fd-3f2e-4033-bb39-48ae996bfbd9
 ms.openlocfilehash: b3a6d527bc1bf8210bb85424fa218fda495a2a2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705078"
 ---
 # <a name="httplistener-element-network-settings"></a>\<httpListener > 要素 (ネットワーク設定)
 <xref:System.Net.HttpListener>クラスで使用されるパラメータをカスタマイズします。  
@@ -52,9 +52,9 @@ ms.locfileid: "59099744"
   
  `http.sys`サービスは 2 つの要求 URI の文字列を公開します。  
   
--   生の URI  
+- 生の URI  
   
--   変換された URI  
+- 変換された URI  
   
  生の URI は、 <xref:System.Uri?displayProperty=nameWithType> HTTP 要求の要求行で提供されます。  
   
@@ -72,11 +72,11 @@ ms.locfileid: "59099744"
   
  `http.sys`サービスの結合、<xref:System.Uri.Host%2A?displayProperty=nameWithType>プロパティの値と、変換された URI を作成する要求の行の文字列。 さらに、`http.sys`と<xref:System.Uri?displayProperty=nameWithType>クラスも、次を行います。  
   
--   すべてのパーセントでエンコードされた値エスケープ解除します。  
+- すべてのパーセントでエンコードされた値エスケープ解除します。  
   
--   Utf-16 文字表現に非 ASCII 文字をパーセントでエンコードに変換します。 Unicode の文字 (Unicode のエンコード %uxxxx 形式を使用) と、utf-8 と ANSI や DBCS 文字がサポートされていることに注意してください。  
+- Utf-16 文字表現に非 ASCII 文字をパーセントでエンコードに変換します。 Unicode の文字 (Unicode のエンコード %uxxxx 形式を使用) と、utf-8 と ANSI や DBCS 文字がサポートされていることに注意してください。  
   
--   パスの圧縮など、他の正規化の手順を実行します。  
+- パスの圧縮など、他の正規化の手順を実行します。  
   
  要求には、パーセントでエンコードされた値に使用されるエンコーディングに関する情報が含まれていない、以降は、パーセントでエンコードされた値を解析するだけで正しいエンコーディングを判断することはできません。  
   

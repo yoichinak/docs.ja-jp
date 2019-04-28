@@ -3,17 +3,17 @@ title: <faultPropagationQuery> WCF の
 ms.date: 03/30/2017
 ms.assetid: fabafbc8-3e45-4feb-8321-0725e9f4079c
 ms.openlocfilehash: e5793852d49a052d05f6cb2f4efbe166d67afc62
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675408"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701048"
 ---
 # <a name="faultpropagationquery-of-wcf"></a>\<faultPropagationQuery > の WCF
 
 1 つのアクティビティ内で発生するエラーの処理を追跡するために使用するクエリを表します。  このイベントは、FaultHandler がエラーを処理するたびに発生します。 1 つのアクティビティ内で発生したエラーの処理は、このようなクエリを使用して追跡する必要があります。 追跡参加要素がエラー伝達レコードを定期受信するには、このクエリが必要です。
 
-追跡プロファイルのクエリの詳細については、[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)を参照してください。
+追跡プロファイルのクエリの詳細については、次を参照してください。[追跡プロファイル](../../../../../docs/framework/windows-workflow-foundation/tracking-profiles.md)します。
 
 \<system.serviceModel>\
 \<追跡 > \

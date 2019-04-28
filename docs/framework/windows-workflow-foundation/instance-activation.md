@@ -3,11 +3,11 @@ title: インスタンスのアクティブ化処理
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
 ms.openlocfilehash: 41dfc076bdee72c2f4d0c781c6588caa927c740e
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61641665"
 ---
 # <a name="instance-activation"></a>インスタンスのアクティブ化処理
 SQL Workflow Instance Store が実行する内部タスクは、定期的にアクティブになり、実行可能またはアクティブ化可能なワークフロー インスタンスを永続性データベースで検出します。 このタスクは、実行可能なワークフロー インスタンスを検出すると、このインスタンスをアクティブ化することができるワークフロー ホストに通知します。 Instance Store がアクティブ化可能なワークフロー インスタンスを検出した場合、ワークフロー ホストをアクティブ化する汎用ホストに Instance Store が通知を行い、ワークフロー ホストがワークフロー インスタンスを実行します。 このトピックの以降のセクションでは、インスタンスのアクティブ化処理を詳細に説明します。  
@@ -15,11 +15,11 @@ SQL Workflow Instance Store が実行する内部タスクは、定期的にア�
 ## <a name="RunnableSection"></a> 検出と実行可能なワークフロー インスタンスをアクティブ化  
  SQL Workflow Instance Store がワークフロー インスタンスと見なします*実行可能な*インスタンスが中断状態または完了状態にないし、次の条件を満たす場合。  
   
--   インスタンスがロック解除されていて、保留タイマーの期限が切れている。  
+- インスタンスがロック解除されていて、保留タイマーの期限が切れている。  
   
--   インスタンスに期限切れのロックがある。  
+- インスタンスに期限切れのロックがある。  
   
--   インスタンスのロックが解除され、状態が**Executing**します。  
+- インスタンスのロックが解除され、状態が**Executing**します。  
   
  SQL Workflow Instance Store は、実行可能なインスタンスを見つけると <xref:System.Activities.DurableInstancing.HasRunnableWorkflowEvent> を生成します。 その後、SqlWorkflowInstanceStore は <xref:System.Activities.DurableInstancing.TryLoadRunnableWorkflowCommand> がストアで一度呼び出されるまで監視を停止します。  
   

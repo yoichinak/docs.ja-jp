@@ -5,14 +5,14 @@ helpviewer_keywords:
 - analytic tracing [WCF]. reference
 ms.assetid: e44540cf-44a1-4efc-b965-7fbfd2131d73
 ms.openlocfilehash: 0f8b4c15f2afefbc62b98dca66dcf3ccc31b1dc0
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33808638"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753037"
 ---
 # <a name="analytic-trace-event-reference"></a>分析トレース イベント リファレンス
-次の表は、イベント レベル、識別子、および WCF の分析トレースに関連付けられたメッセージを定義します。  
+次の表は、イベント レベル、識別子、および WCF 分析トレースに関連付けられたメッセージを定義します。  
   
 ## <a name="event-reference"></a>イベント リファレンス  
   

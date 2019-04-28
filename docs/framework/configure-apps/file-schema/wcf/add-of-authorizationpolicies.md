@@ -3,11 +3,11 @@ title: <add> の <authorizationPolicies>
 ms.date: 03/30/2017
 ms.assetid: 613a03d8-4384-4556-bce2-8c23286c0bb0
 ms.openlocfilehash: 532f7f1a74cb3af24d7a1bc26046be901f3cf025
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701412"
 ---
 # <a name="add-of-authorizationpolicies"></a>\<add> of \<authorizationPolicies>
 クレームの変換の承認ポリシーを指定します。  

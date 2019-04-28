@@ -8,11 +8,11 @@ helpviewer_keywords:
 - <clear> element for <listeners> for <trace>
 ms.assetid: b44732a8-271f-4a06-ba9e-fe3298d6f192
 ms.openlocfilehash: 97b18f9d6baa618b0f535955b232e2119c758b11
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124892"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701321"
 ---
 # <a name="clear-element-for-listeners-for-trace"></a>\<クリア > 要素の\<リスナー > の\<トレース >
 トレースの `Listeners` コレクションを削除します。  

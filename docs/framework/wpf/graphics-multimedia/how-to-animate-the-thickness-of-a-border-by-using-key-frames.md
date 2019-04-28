@@ -7,11 +7,11 @@ helpviewer_keywords:
 - border thickness [WPF], animating with key frames
 ms.assetid: 3a9cb463-0a63-407d-aae7-3fbb1a559947
 ms.openlocfilehash: 101fd077bf125faadbd9a0186c2282e4b20ee78f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699033"
 ---
 # <a name="how-to-animate-the-thickness-of-a-border-by-using-key-frames"></a>方法: キー フレームを使用して境界線の太さをアニメーション化する
 この例は、アニメーション化する方法を示しています、<xref:System.Windows.Controls.Control.BorderThickness%2A>のプロパティを<xref:System.Windows.Controls.Border>します。  

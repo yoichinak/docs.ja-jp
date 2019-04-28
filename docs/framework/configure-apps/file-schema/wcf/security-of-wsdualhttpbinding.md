@@ -3,11 +3,11 @@ title: <security> の <wsDualHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 869c05e7-4ebe-467d-95ab-c8f8de4e6b9e
 ms.openlocfilehash: c6f9e34724ccc3a0d05da3e1886b4f0bcbaae064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59171510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670444"
 ---
 # <a name="security-of-wsdualhttpbinding"></a>\<セキュリティ > の\<wsDualHttpBinding >
 セキュリティ機能を定義、 [ \<wsDualHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)します。  

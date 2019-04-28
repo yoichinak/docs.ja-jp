@@ -3,11 +3,11 @@ title: <add> の <serviceActivations>
 ms.date: 03/30/2017
 ms.assetid: e5b01fc8-ee84-48b7-95fd-95ab54fa871f
 ms.openlocfilehash: 2a3ba6d41059a480fe610254c0407df16d149e3b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57673042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701464"
 ---
 # <a name="add-of-serviceactivations"></a>\<add> of \<serviceActivations>
 
@@ -36,7 +36,7 @@ ms.locfileid: "57673042"
 |属性|説明|
 |---------------|-----------------|
 |factory|サービス アクティベーション要素を生成するファクトリの CLR 型名を指定する文字列。|
-|service|サービスを実装する ServiceType (完全修飾 Typename または省略形の Typename (App_Code フォルダーに配置されている場合))。|
+|サービス|サービスを実装する ServiceType (完全修飾 Typename または省略形の Typename (App_Code フォルダーに配置されている場合))。|
 |relativeAddress|現在の IIS アプリケーション内の相対アドレス (たとえば "Service.svc")。 WCF 4.0 ではこの相対アドレスが 1 個の既知のファイル拡張子 (.svc、.xamlx など) を含む必要があります。relativeUrl 用の物理ファイルは必要ありません。|
 
 ### <a name="child-elements"></a>子要素

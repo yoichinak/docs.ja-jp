@@ -11,11 +11,11 @@ author: mairaw
 ms.author: mairaw
 ms.topic: conceptual
 ms.openlocfilehash: a48a145cd337a18c4ce63b281e1c82032d0532e7
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674413"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61675365"
 ---
 # <a name="additional-class-libraries-and-apis"></a>追加のクラス ライブラリと API
 

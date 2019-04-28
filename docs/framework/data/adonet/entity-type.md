@@ -3,22 +3,22 @@ title: エンティティ型
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
 ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667178"
 ---
 # <a name="entity-type"></a>エンティティ型
 *エンティティ型*Entity Data Model (EDM) でのデータの構造を記述するための基本的なビルド ブロックです。 概念モデルでのエンティティ型は、顧客や注文のように、トップレベル概念の構造を表します。 エンティティ型は、エンティティ型のインスタンスのテンプレートです。 各テンプレートには、次の情報が含まれています。  
   
--   一意の名前  (必須)   
+- 一意の名前  (必須)   
   
--   [エンティティ キー](../../../../docs/framework/data/adonet/entity-key.md) 1 つまたは複数のプロパティで定義します。 (必須)   
+- [エンティティ キー](../../../../docs/framework/data/adonet/entity-key.md) 1 つまたは複数のプロパティで定義します。 (必須)   
   
--   データの形式で[プロパティ](../../../../docs/framework/data/adonet/property.md)します。 (省略可能)   
+- データの形式で[プロパティ](../../../../docs/framework/data/adonet/property.md)します。 (省略可能)   
   
--   [ナビゲーション プロパティ](../../../../docs/framework/data/adonet/navigation-property.md)のナビゲーションを使用できる[エンド](../../../../docs/framework/data/adonet/association-end.md)の[アソシエーション](../../../../docs/framework/data/adonet/association-type.md)もう一方の end にします。 (オプション)。  
+- [ナビゲーション プロパティ](../../../../docs/framework/data/adonet/navigation-property.md)のナビゲーションを使用できる[エンド](../../../../docs/framework/data/adonet/association-end.md)の[アソシエーション](../../../../docs/framework/data/adonet/association-type.md)もう一方の end にします。 (オプション)。  
   
  アプリケーションでは、エンティティ型のインスタンスが特定のオブジェクト (特定の顧客や注文など) を表します。 エンティティ型の各インスタンスを一意にいる必要があります[エンティティ キー](../../../../docs/framework/data/adonet/entity-key.md)内、[エンティティ セット](../../../../docs/framework/data/adonet/entity-set.md)します。  
   

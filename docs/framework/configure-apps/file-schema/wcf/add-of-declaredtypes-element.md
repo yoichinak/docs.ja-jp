@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DataContractAttribute
 ms.assetid: c3d37ae4-8f1c-463f-b195-658c5a7e90a1
 ms.openlocfilehash: 9b280a63e85beac3231bc1a414430239bea4a1f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701113"
 ---
 # <a name="add-of-declaredtypes-element"></a>\<追加 > の\<declaredTypes > 要素
 逆シリアル化中に、<xref:System.Runtime.Serialization.DataContractSerializer> で使用される型を追加します。 各宣言型は、宣言型のフィールドまたはプロパティとして返される既知の型を含みます。  

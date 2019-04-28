@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fac87410d4e9b23fd532582b9ce1500e2c08a301
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33412322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61700438"
 ---
 # <a name="icordebugheapvaluecreaterelocbreakpoint-method"></a>ICorDebugHeapValue::CreateRelocBreakpoint メソッド
-.NET Framework の現在のバージョンでは、このメソッドが実装されていません。  
+.NET Framework の現在のバージョンでは、このメソッドは実装されていません。  
   
 ## <a name="syntax"></a>構文  
   
@@ -35,8 +35,8 @@ HRESULT CreateRelocBreakpoint (
 );  
 ```  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

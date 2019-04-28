@@ -9,11 +9,11 @@ helpviewer_keywords:
 - <performanceCounter> element
 ms.assetid: 3afa1586-e1b8-473d-8985-c3fc90cf561b
 ms.openlocfilehash: 30c5cd07c92a8fc3c340cab0ff9ae74e940c0c12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705240"
 ---
 # <a name="performancecounter-element-network-settings"></a>\<performanceCounter > 要素 (ネットワーク設定)
 有効または、ネットワーク パフォーマンス カウンターを無効にします。  

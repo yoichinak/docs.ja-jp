@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7ab93b89-1221-427c-84ad-04803b3c64b4
 ms.openlocfilehash: 11cfad81e40e76691db9f99efd1d60f5528600d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667050"
 ---
 # <a name="getschema-and-schema-collections"></a>GetSchema およびスキーマ コレクション
 **接続**で .NET Framework マネージ プロバイダーの実装の各クラスを**GetSchema**メソッドが現在接続されているデータベースに関するスキーマ情報を取得するために使用し、返されるスキーマ情報、 **GetSchema**メソッドは、の形式では、<xref:System.Data.DataTable>します。 **GetSchema**メソッドが戻るには、スキーマ コレクションを指定し、返される情報量を制限するための省略可能なパラメーターを提供するオーバー ロードされたメソッド。  

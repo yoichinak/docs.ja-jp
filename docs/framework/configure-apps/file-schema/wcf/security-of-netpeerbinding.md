@@ -3,11 +3,11 @@ title: <security> の <netPeerBinding>
 ms.date: 03/30/2017
 ms.assetid: 1ef40d8c-f903-4426-9b08-da81462766d8
 ms.openlocfilehash: 6348bc6f6c0d3a9656fbe57bf71f531d1287a949
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170093"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670483"
 ---
 # <a name="security-of-netpeerbinding"></a>\<セキュリティ > の\<netPeerBinding >
 セキュリティ設定を定義、 [ \<netPeerTcpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/netpeertcpbinding.md)メッセージ トランスポートで使用されるセキュリティ、認証の種類などを使用します。  
@@ -37,7 +37,7 @@ ms.locfileid: "59170093"
   
 |属性|説明|  
 |---------------|-----------------|  
-|モード|任意。 このバインディングで構成されたピアが使用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
+|モード|省略可能です。 このバインディングで構成されたピアが使用するセキュリティの種類を指定します。 既定値は `Message` です。 この属性は <xref:System.ServiceModel.SecurityMode> 型です。|  
   
 ## <a name="mode-attribute"></a>mode 属性  
   

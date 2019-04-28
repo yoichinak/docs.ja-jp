@@ -3,11 +3,11 @@ title: <backupLists>
 ms.date: 03/30/2017
 ms.assetid: 593b3390-f65b-4684-ad40-0596b62f0954
 ms.openlocfilehash: 6e44dbe3c0966c6d243db343b9f9b0dec2480cb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134447"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701074"
 ---
 # <a name="backuplists"></a>\<backupLists >
 エラー処理に使用されるバックアップ サービス セットを定義する構成セクションを表します。 各子要素は、プライマリ エンドポイントに接続できない場合に使用するルーティング サービスが希望されるエンドポイントのセットを列挙したバックアップ リストです。 リストの最初のエンドポイントがダウンしていると、ルーティング サービスは自動的にリスト内で次にあるエンドポイントにフェールオーバーします。  これにより、クライアント アプリケーションに複雑なパターンの処理方法やサービスの配置場所を示すことなく、アプリケーションの信頼性を高めることができます。  

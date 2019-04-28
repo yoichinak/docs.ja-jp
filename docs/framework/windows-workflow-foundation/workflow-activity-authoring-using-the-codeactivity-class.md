@@ -3,11 +3,11 @@ title: CodeActivity クラスを使用したワークフロー アクティビ�
 ms.date: 03/30/2017
 ms.assetid: cfe315c1-f86d-43ec-b9ce-2f8c469b1106
 ms.openlocfilehash: 549acec8b8101312d48bd20e63a4a988b798ff38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61669447"
 ---
 # <a name="workflow-activity-authoring-using-the-codeactivity-class"></a>CodeActivity クラスを使用したワークフロー アクティビティの作成
 <xref:System.Activities.CodeActivity> を継承して作成されたアクティビティは、<xref:System.Activities.CodeActivity.Execute%2A> メソッドをオーバーライドすることで強制的な基本動作を実装できます。
@@ -15,11 +15,11 @@ ms.locfileid: "59767397"
 ## <a name="using-codeactivitycontext"></a>CodeActivityContext の使用
  ワークフロー ランタイムの機能は、<xref:System.Activities.CodeActivity.Execute%2A> 型の `context` パラメーターを使用して、<xref:System.Activities.CodeActivityContext> メソッド内からアクセスできます。 <xref:System.Activities.CodeActivityContext> を介して、以下のような機能を使用できます。
 
--   変数と引数の値を取得および設定。
+- 変数と引数の値を取得および設定。
 
--   <xref:System.Activities.CodeActivityContext.Track%2A> を使用したカスタムの追跡機能。
+- <xref:System.Activities.CodeActivityContext.Track%2A> を使用したカスタムの追跡機能。
 
--   <xref:System.Activities.CodeActivityContext.GetProperty%2A> を使用したアクティビティの実行プロパティへのアクセス。
+- <xref:System.Activities.CodeActivityContext.GetProperty%2A> を使用したアクティビティの実行プロパティへのアクセス。
 
 #### <a name="to-create-a-custom-activity-that-inherits-from-codeactivity"></a>CodeActivity を継承するカスタム アクティビティを作成するには
 

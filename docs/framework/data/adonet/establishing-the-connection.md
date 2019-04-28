@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3af512f3-87d9-4005-9e2f-abb1060ff43f
 ms.openlocfilehash: 7f8cca02e673339e892c16e0de99e20accdfd404
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142344"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61667107"
 ---
 # <a name="establishing-the-connection"></a>接続の確立
 Microsoft SQL Server に接続する場合は、.NET Framework Data Provider for SQL Server の <xref:System.Data.SqlClient.SqlConnection> オブジェクトを使用します。 OLE DB データ ソースに接続する場合は、.NET Framework Data Provider for OLE DB の <xref:System.Data.OleDb.OleDbConnection> オブジェクトを使用します。 ODBC データ ソースに接続する場合は、.NET Framework Data Provider for ODBC の <xref:System.Data.Odbc.OdbcConnection> オブジェクトを使用します。 Oracle データ ソースに接続する場合は、.NET Framework Data Provider for Oracle の <xref:System.Data.OracleClient.OracleConnection> オブジェクトを使用します。 安全に格納すると、接続文字列を取得する、次を参照してください。[接続情報の保護](../../../../docs/framework/data/adonet/protecting-connection-information.md)します。  
@@ -58,9 +58,9 @@ using (SqlConnection connection = new SqlConnection(connectionString))
   
  .NET Framework Data Provider for OLE DB で使用される接続文字列フォーマットは ADO で使用される接続文字列フォーマットと同じですが、次の例外があります。  
   
--   **プロバイダー**キーワードが必要です。  
+- **プロバイダー**キーワードが必要です。  
   
--   **URL**、**リモート プロバイダー**、および**リモート サーバー**キーワードがサポートされていません。  
+- **URL**、**リモート プロバイダー**、および**リモート サーバー**キーワードがサポートされていません。  
   
  OLE DB 接続文字列の詳細については、「<xref:System.Data.OleDb.OleDbConnection.ConnectionString%2A>」を参照してください。 また、<xref:System.Data.OleDb.OleDbConnectionStringBuilder> を使用すると、接続文字列を実行時に作成できます。  
   

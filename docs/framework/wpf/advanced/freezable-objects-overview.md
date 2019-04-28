@@ -10,11 +10,11 @@ helpviewer_keywords:
 - classes [WPF], Freezable
 ms.assetid: 89c71692-4f43-4057-b611-67c6a8a863a2
 ms.openlocfilehash: 8df19e69ff3be06704878ea290a3f4a2997127eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703316"
 ---
 # <a name="freezable-objects-overview"></a>Freezable オブジェクトの概要
 このトピックでは、効果的に使用し、作成する方法を説明します。<xref:System.Windows.Freezable>オブジェクトで、アプリケーションのパフォーマンスの向上に役立つ特殊な機能を提供します。 Freezable オブジェクトの例には、ブラシ、ペン、変換、ジオメトリ、およびアニメーションが含まれます。  
@@ -63,11 +63,11 @@ ms.locfileid: "59224264"
   
  Freezable**できません**次のいずれかに該当する場合にフリーズします。  
   
--   アニメーション化されたまたは、データ バインドされたプロパティ。  
+- アニメーション化されたまたは、データ バインドされたプロパティ。  
   
--   動的リソースによって設定されるプロパティがあります。 (を参照してください、 [XAML リソース](xaml-resources.md)動的リソースの詳細について)。  
+- 動的リソースによって設定されるプロパティがあります。 (を参照してください、 [XAML リソース](xaml-resources.md)動的リソースの詳細について)。  
   
--   含まれている<xref:System.Windows.Freezable>サブオブジェクトを固定することはできません。  
+- 含まれている<xref:System.Windows.Freezable>サブオブジェクトを固定することはできません。  
   
  これらの条件が false の場合と、変更する予定がないかどうか、 <xref:System.Windows.Freezable>、その前に説明したパフォーマンスの利点を活用できますを固定する必要があります。  
   
@@ -122,13 +122,13 @@ mc:Ignorable="PresentationOptions"
 ## <a name="creating-your-own-freezable-class"></a>Freezable クラスの作成  
  派生したクラス<xref:System.Windows.Freezable>次の機能を取得します。  
   
--   特殊な状態。 読み取り専用 (固定)、書き込み可能な状態です。  
+- 特殊な状態。 読み取り専用 (固定)、書き込み可能な状態です。  
   
--   スレッド セーフ。 固定された<xref:System.Windows.Freezable>スレッド間で共有することができます。  
+- スレッド セーフ。 固定された<xref:System.Windows.Freezable>スレッド間で共有することができます。  
   
--   変更の詳細についての通知:その他とは異なり<xref:System.Windows.DependencyObject>、フリーズ可能オブジェクトは変更通知サブ プロパティの値を変更するときにします。  
+- 変更の詳細についての通知:その他とは異なり<xref:System.Windows.DependencyObject>、フリーズ可能オブジェクトは変更通知サブ プロパティの値を変更するときにします。  
   
--   簡単に複製: Freezable クラスは既にディープ クローンを生成するいくつかのメソッドを実装します。  
+- 簡単に複製: Freezable クラスは既にディープ クローンを生成するいくつかのメソッドを実装します。  
   
  A<xref:System.Windows.Freezable>の種類は、<xref:System.Windows.DependencyObject>をそのため、依存関係プロパティ システムを使用します。 クラスのプロパティは、依存関係プロパティにする必要はありませんが、ために書き込むがあるコードの量を減らすは依存関係プロパティを使用して、<xref:System.Windows.Freezable>クラスは依存関係プロパティを考慮して設計されました。 依存関係プロパティ システムの詳細については、次を参照してください。、[依存関係プロパティの概要](dependency-properties-overview.md)します。  
   
@@ -136,23 +136,23 @@ mc:Ignorable="PresentationOptions"
   
  クラスに依存関係のないプロパティのデータ メンバーが含まれている場合は、次のメソッドもオーバーライドする必要があります。  
   
--   <xref:System.Windows.Freezable.CloneCore%2A>  
+- <xref:System.Windows.Freezable.CloneCore%2A>  
   
--   <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
+- <xref:System.Windows.Freezable.CloneCurrentValueCore%2A>  
   
--   <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
+- <xref:System.Windows.Freezable.GetCurrentValueAsFrozenCore%2A>  
   
--   <xref:System.Windows.Freezable.FreezeCore%2A>  
+- <xref:System.Windows.Freezable.FreezeCore%2A>  
   
  次のルールにアクセスして、依存関係プロパティではないデータ メンバーへの書き込みにも注意してください。  
   
--   いずれかの先頭に[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]呼び出し、依存関係のないプロパティのデータ メンバーを読み取る、<xref:System.Windows.Freezable.ReadPreamble%2A>メソッド。  
+- いずれかの先頭に[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]呼び出し、依存関係のないプロパティのデータ メンバーを読み取る、<xref:System.Windows.Freezable.ReadPreamble%2A>メソッド。  
   
--   依存関係のないプロパティのデータ メンバーを書き込む任意の API の先頭には、呼び出し、<xref:System.Windows.Freezable.WritePreamble%2A>メソッド。 (呼び出したら<xref:System.Windows.Freezable.WritePreamble%2A>で、[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]への呼び出しを追加する必要はありません<xref:System.Windows.Freezable.ReadPreamble%2A>も非依存関係プロパティのデータ メンバーを読み取るかどうかです)。  
+- 依存関係のないプロパティのデータ メンバーを書き込む任意の API の先頭には、呼び出し、<xref:System.Windows.Freezable.WritePreamble%2A>メソッド。 (呼び出したら<xref:System.Windows.Freezable.WritePreamble%2A>で、[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]への呼び出しを追加する必要はありません<xref:System.Windows.Freezable.ReadPreamble%2A>も非依存関係プロパティのデータ メンバーを読み取るかどうかです)。  
   
--   呼び出す、<xref:System.Windows.Freezable.WritePostscript%2A>依存関係のないプロパティのデータ メンバーへの書き込みメソッドを終了する前にメソッド。  
+- 呼び出す、<xref:System.Windows.Freezable.WritePostscript%2A>依存関係のないプロパティのデータ メンバーへの書き込みメソッドを終了する前にメソッド。  
   
  クラスにある非依存関係プロパティのデータ メンバーが含まれて かどうか<xref:System.Windows.DependencyObject>オブジェクトも呼び出す必要があります、<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>メソッドは、メンバーを設定している場合でも、その値のいずれかを変更するたびに`null`します。  
   

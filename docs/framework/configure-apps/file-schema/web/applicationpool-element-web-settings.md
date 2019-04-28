@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
 ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698578"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 要素 (Web 設定)
 ASP.NET アプリケーションが統合モードで実行されている場合に、プロセス全体の動作を管理する、ASP.NET で使用される構成設定を指定します[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン。  
@@ -66,11 +66,11 @@ ASP.NET アプリケーションが統合モードで実行されている場合
 ## <a name="example"></a>例  
  次の例では、次の状況で aspnet.config ファイルに ASP.NET プロセス全体の動作を構成する方法を示します。  
   
--   アプリケーションがホストされている、[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]アプリケーション プール。  
+- アプリケーションがホストされている、[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]アプリケーション プール。  
   
--   [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 統合モードで実行されています。  
+- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 統合モードで実行されています。  
   
--   アプリケーションを使用して、[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]以降のバージョン。  
+- アプリケーションを使用して、[!INCLUDE[net_v35SP1_short](../../../../../includes/net-v35sp1-short-md.md)]以降のバージョン。  
   
  値の例では、既定値です。  
   

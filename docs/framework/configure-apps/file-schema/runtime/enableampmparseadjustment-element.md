@@ -5,11 +5,11 @@ ms.assetid: fda998a5-f538-4f8b-a18c-ee7f35e16938
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 57d1a14199debbb90827c1ea95347d485a636329
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704844"
 ---
 # <a name="enableampmparseadjustment-element"></a>\<EnableAmPmParseAdjustment > 要素
 日付と時刻の解析メソッドが日、月、1 時間、および AM/PM 指定子を含む日付の文字列を解析する調整済みの一連のルールを使用しているかどうかを判断します。  
@@ -53,15 +53,15 @@ ms.locfileid: "59222511"
 ## <a name="remarks"></a>Remarks  
  `<EnableAmPmParseAdjustment>`要素は、次のメソッドが 1 日と月の後に 1 時間と、AM/PM 指定子 (「10 4/6 AM」) などを含む日付文字列を解析する方法を制御します。  
   
--   <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTime.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTime.TryParse%2A?displayProperty=nameWithType>  
   
--   <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
+- <xref:System.DateTimeOffset.TryParse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
+- <xref:System.Convert.ToDateTime%2A?displayProperty=nameWithType>  
   
  その他のパターンが影響を受けません。  
   

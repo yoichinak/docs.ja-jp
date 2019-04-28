@@ -3,11 +3,11 @@ title: '方法: プロジェクトの匿名型 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 30b42987-0e0e-4b2b-adb1-5255ddfbcd7b
 ms.openlocfilehash: cc8e59ac1037fc173cb44d8c8ff344374c5766ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61644324"
 ---
 # <a name="how-to-project-an-anonymous-type-visual-basic"></a>方法: プロジェクトの匿名型 (Visual Basic)
 短期間しか使用しないことがわかっている新しい型にクエリを射影することが必要になる場合があります。 単に射影で使用するために新しい型を作成するのは大きな負担です。 この場合は、匿名型に射影する方法が効率的です。 匿名型を使用すると、クラス名を指定することなくクラスを定義し、そのクラスのオブジェクトを宣言して初期化できます。  

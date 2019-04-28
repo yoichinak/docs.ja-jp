@@ -11,11 +11,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], controlling insertion point
 ms.assetid: 5bee7d34-5121-429e-ab1f-d8ff67bc74c1
 ms.openlocfilehash: 43fdb023f19aa988dfef3dcd68443d6f59808472
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61746629"
 ---
 # <a name="how-to-control-the-insertion-point-in-a-windows-forms-textbox-control"></a>方法: Windows フォーム TextBox コントロールでのカーソル位置を制御する
 Windows フォームと<xref:System.Windows.Forms.TextBox>コントロールがフォーカスを受け取る最初に、テキスト ボックス内の既定のカーソルが既存のテキストの左側にします。 ユーザーは、キーボードまたはマウス カーソルを移動できます。 テキスト ボックスは、フォーカスを得たを失い場合、カーソルが任意の場所、ユーザー置かれたことになります。  
@@ -59,7 +59,7 @@ Windows フォームと<xref:System.Windows.Forms.TextBox>コントロールが�
   
 #### <a name="to-make-the-text-box-insertion-point-visible-by-default-on-a-new-form"></a>既定では新しいフォームにテキスト ボックスのカーソル位置を表示する  
   
--   設定、<xref:System.Windows.Forms.TextBox>コントロールの<xref:System.Windows.Forms.Control.TabIndex%2A>プロパティを`0`します。  
+- 設定、<xref:System.Windows.Forms.TextBox>コントロールの<xref:System.Windows.Forms.Control.TabIndex%2A>プロパティを`0`します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
 ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61703687"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation のバインディングの概要
 バインドは、Windows Communication Foundation (WCF) サービスのエンドポイントに接続するために必要な通信の詳細の指定に使用されるオブジェクトです。 WCF サービスでは、各エンドポイントでは、バインドを正しく指定する必要があります。 このトピックでは、通信の詳細、バインドを定義するバインドを WCF では、どのようなバインドが含まれているエンドポイントのバインディングを指定する方法の要素の種類について説明します。  
@@ -32,13 +32,13 @@ ms.locfileid: "59325060"
 ## <a name="system-provided-bindings"></a>システム標準のバインディング  
  バインディングの情報は複雑になる可能性があり、一部の設定は他の設定と互換性がない場合もあります。 このため、WCF には、システム指定のバインディングのセットが含まれています。 このバインディングは、アプリケーション要件のほとんどに対応するように設計されています。 システム指定のバインディングの例のいくつかを次のクラスで示します。  
   
--   <xref:System.ServiceModel.BasicHttpBinding>:Web サービスに接続するのに適したバインド、WS に準拠している HTTP プロトコルの Basic Profile 仕様 (たとえば、ASP.NET Web サービス ベースのサービス)。  
+- <xref:System.ServiceModel.BasicHttpBinding>:Web サービスに接続するのに適したバインド、WS に準拠している HTTP プロトコルの Basic Profile 仕様 (たとえば、ASP.NET Web サービス ベースのサービス)。  
   
--   <xref:System.ServiceModel.WSHttpBinding>:Ws-に準拠するエンドポイントに接続するための適切な相互運用可能なバインドを * プロトコル。  
+- <xref:System.ServiceModel.WSHttpBinding>:Ws-に準拠するエンドポイントに接続するための適切な相互運用可能なバインドを * プロトコル。  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>:使用して、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]同じコンピューター上の他の WCF エンドポイントに接続します。  
+- <xref:System.ServiceModel.NetNamedPipeBinding>:使用して、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]同じコンピューター上の他の WCF エンドポイントに接続します。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>:使用して、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]他の WCF エンドポイントでメッセージをキューに置かれた接続を作成します。  
+- <xref:System.ServiceModel.NetMsmqBinding>:使用して、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]他の WCF エンドポイントでメッセージをキューに置かれた接続を作成します。  
 
 - <xref:System.ServiceModel.NetTcpBinding>:このバインディングでは、HTTP バインドよりも高いパフォーマンスを提供しはローカル ネットワークで使用するために最適です。
   

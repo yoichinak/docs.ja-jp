@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], element
 ms.assetid: 95039642-7893-48b7-b23f-45a6c55d8f67
 ms.openlocfilehash: 7bd47d2461ba86dfbd1d5ff5993382914116f9ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61649778"
 ---
 # <a name="xml-element-literal-visual-basic"></a>XML 要素リテラル (Visual Basic)
 

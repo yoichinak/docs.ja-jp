@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d97ce4da-f09c-4d1e-85b7-a0ccedd7246a
 ms.openlocfilehash: 803357f9ae97eee2cbbf5e777dbc1210ded26ab2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61670132"
 ---
 # <a name="sql-xml-column-values"></a>SQL XML 列値
 SQL Server では、`xml`データ型の場合は、開発者が標準の動作を使用してこの型を含む結果セットを取得し、<xref:System.Data.SqlClient.SqlCommand>クラス。 `xml` 列は、その他の列と同じようにして (<xref:System.Data.SqlClient.SqlDataReader> などに) 取得することができますが、その列の内容を XML として使用する場合は、<xref:System.Xml.XmlReader> を使用する必要があります。  

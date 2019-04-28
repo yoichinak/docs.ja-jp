@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
 ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696360"
 ---
 # <a name="controls"></a>コントロール
 <a name="introduction"></a>
@@ -33,11 +33,11 @@ ms.locfileid: "59154415"
 ## <a name="changing-the-appearance-of-a-control"></a>コントロールの外観の変更  
  通常は、アプリケーションの外観に合わせてコントロールの外観を変更します。 コントロールの外観を変更するには、目的に応じて、次のいずれかの手順を実行します。  
   
--   コントロールのプロパティ値を変更します。  
+- コントロールのプロパティ値を変更します。  
   
--   作成、<xref:System.Windows.Style>コントロール。  
+- 作成、<xref:System.Windows.Style>コントロール。  
   
--   新規作成<xref:System.Windows.Controls.ControlTemplate>コントロール。  
+- 新規作成<xref:System.Windows.Controls.ControlTemplate>コントロール。  
   
 ### <a name="changing-a-controls-property-value"></a>コントロールのプロパティ値の変更  
  多くのコントロールがコントロールの外観などを変更するためのプロパティを持つ、<xref:System.Windows.Controls.Control.Background%2A>の<xref:System.Windows.Controls.Button>します。 両方の値のプロパティを設定する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とコード。 次の例のセット、 <xref:System.Windows.Controls.Control.Background%2A>、 <xref:System.Windows.Controls.Control.FontSize%2A>、および<xref:System.Windows.Controls.Control.FontWeight%2A>プロパティを<xref:System.Windows.Controls.Button>で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。  
@@ -87,13 +87,13 @@ ms.locfileid: "59154415"
 ## <a name="rich-content-in-controls"></a>コントロールでのリッチ コンテンツ  
  ほとんどのクラスを継承するクラス、<xref:System.Windows.Controls.Control>クラス リッチ コンテンツを格納する容量があります。 たとえば、<xref:System.Windows.Controls.Label>文字列など、任意のオブジェクトを含めることができます、 <xref:System.Windows.Controls.Image>、または<xref:System.Windows.Controls.Panel>します。  次のクラスがリッチ コンテンツのサポートを提供し、ほとんどのコントロールの基本クラスとして機能[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
   
--   <xref:System.Windows.Controls.ContentControl>-このクラスから継承するクラスの例としては、 <xref:System.Windows.Controls.Label>、 <xref:System.Windows.Controls.Button>、および<xref:System.Windows.Controls.ToolTip>します。  
+- <xref:System.Windows.Controls.ContentControl>-このクラスから継承するクラスの例としては、 <xref:System.Windows.Controls.Label>、 <xref:System.Windows.Controls.Button>、および<xref:System.Windows.Controls.ToolTip>します。  
   
--   <xref:System.Windows.Controls.ItemsControl>-このクラスから継承するクラスの例としては、 <xref:System.Windows.Controls.ListBox>、 <xref:System.Windows.Controls.Menu>、および<xref:System.Windows.Controls.Primitives.StatusBar>します。  
+- <xref:System.Windows.Controls.ItemsControl>-このクラスから継承するクラスの例としては、 <xref:System.Windows.Controls.ListBox>、 <xref:System.Windows.Controls.Menu>、および<xref:System.Windows.Controls.Primitives.StatusBar>します。  
   
--   <xref:System.Windows.Controls.HeaderedContentControl>-このクラスから継承するクラスの例としては、 <xref:System.Windows.Controls.TabItem>、 <xref:System.Windows.Controls.GroupBox>、および<xref:System.Windows.Controls.Expander>します。  
+- <xref:System.Windows.Controls.HeaderedContentControl>-このクラスから継承するクラスの例としては、 <xref:System.Windows.Controls.TabItem>、 <xref:System.Windows.Controls.GroupBox>、および<xref:System.Windows.Controls.Expander>します。  
   
--   <xref:System.Windows.Controls.HeaderedItemsControl>-このクラスから継承するクラスの例としては、 <xref:System.Windows.Controls.MenuItem>、 <xref:System.Windows.Controls.TreeViewItem>、および<xref:System.Windows.Controls.ToolBar>します。  
+- <xref:System.Windows.Controls.HeaderedItemsControl>-このクラスから継承するクラスの例としては、 <xref:System.Windows.Controls.MenuItem>、 <xref:System.Windows.Controls.TreeViewItem>、および<xref:System.Windows.Controls.ToolBar>します。  
 
  これらの基本クラスの詳細については、次を参照してください。 [WPF コンテンツ モデル](wpf-content-model.md)します。  
   

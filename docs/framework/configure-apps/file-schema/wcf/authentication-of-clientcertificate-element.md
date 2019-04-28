@@ -3,11 +3,11 @@ title: <authentication> <clientCertificate>要素
 ms.date: 03/30/2017
 ms.assetid: 4a55eea2-1826-4026-b911-b7cc9e9c8bfe
 ms.openlocfilehash: e232cde8f6838de734e37aeee3f52cd7f7e7502d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61701334"
 ---
 # <a name="authentication-of-clientcertificate-element"></a>\<認証 > の\<clientCertificate > 要素
 サービスによって使用されるクライアント証明書の認証動作を指定します。  
