@@ -9,11 +9,11 @@ helpviewer_keywords:
 - types [Visual Basic], anonymous
 ms.assetid: 7b87532c-4b3e-4398-8503-6ea9d67574a4
 ms.openlocfilehash: 3dc2083e5b4fd06250a1387c32f0eba28e879b30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829136"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758497"
 ---
 # <a name="anonymous-types-visual-basic"></a>匿名型 (Visual Basic)
 Visual Basic では、データ型のクラス定義を記述せずにオブジェクトを作成することを有効にする匿名型をサポートしています。 クラスは、コンパイラによって生成されます。 クラスは、使用可能な名前を持たないから直接継承<xref:System.Object>オブジェクトの宣言で指定したプロパティが含まれます。 として参照にはデータ型の名前が指定されていないため、*匿名型*します。  
@@ -53,22 +53,22 @@ Visual Basic では、データ型のクラス定義を記述せずにオブジ�
 ## <a name="key-properties"></a>キー プロパティ  
  キー プロパティは、いくつかの基本的な方法でキー以外のプロパティとは異なります。  
   
--   キー プロパティの値だけは、2 つのインスタンスが等しいかどうかを判断するために比較されます。  
+- キー プロパティの値だけは、2 つのインスタンスが等しいかどうかを判断するために比較されます。  
   
--   キー プロパティの値は読み取り専用と、変更することはできません。  
+- キー プロパティの値は読み取り専用と、変更することはできません。  
   
--   のみ、匿名型のコンパイラによって生成されたハッシュ コード アルゴリズムでは、キーのプロパティ値が含まれます。  
+- のみ、匿名型のコンパイラによって生成されたハッシュ コード アルゴリズムでは、キーのプロパティ値が含まれます。  
   
 ### <a name="equality"></a>等価比較  
  匿名型のインスタンスは、同じ匿名型のインスタンスの場合のみ等しいとすることはできます。 コンパイラでは、次の条件を満たしている場合に 2 つのインスタンスと同じ型のインスタンスとして扱います。  
   
--   同じアセンブリ内で宣言されています。  
+- 同じアセンブリ内で宣言されています。  
   
--   プロパティは、同じ名前では、推論された型、および同じ順序で宣言されます。 名前の比較は区別されません。  
+- プロパティは、同じ名前では、推論された型、および同じ順序で宣言されます。 名前の比較は区別されません。  
   
--   それぞれの同じプロパティは、キー プロパティとしてマークされます。  
+- それぞれの同じプロパティは、キー プロパティとしてマークされます。  
   
--   各宣言内の少なくとも 1 つのプロパティは、キー プロパティです。  
+- 各宣言内の少なくとも 1 つのプロパティは、キー プロパティです。  
   
  キー プロパティを持たない匿名の型のインスタンスはのみにします。  
   
@@ -86,11 +86,11 @@ Visual Basic では、データ型のクラス定義を記述せずにオブジ�
 ## <a name="anonymous-types-from-query-expressions"></a>クエリ式からの匿名型  
  クエリ式では、匿名型の作成は常に必要はありません。 可能であれば、列のデータを保持するために、既存の型が使用します。 これは、クエリ、データ ソースまたは各レコードから 1 つだけのフィールドからレコード全体が返されるときに発生します。 次のコード例で`customers`のオブジェクトのコレクションには、`Customer`クラス。 クラスには、多くのプロパティと任意の順序で、クエリ結果のうち 1 つ以上を含めることができます。 最初の 2 つの例では、匿名型は必要ありませんので、クエリが名前付きの型の要素を選択します。  
   
--   `custs1` に、文字列のコレクションを格納`cust.Name`は文字列です。  
+- `custs1` に、文字列のコレクションを格納`cust.Name`は文字列です。  
   
      [!code-vb[VbVbalrAnonymousTypes#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#30)]  
   
--   `custs2` コレクションを格納`Customer`ため、オブジェクトの各要素`customers`は、`Customer`オブジェクト、および全体の要素は、クエリで選択されます。  
+- `custs2` コレクションを格納`Customer`ため、オブジェクトの各要素`customers`は、`Customer`オブジェクト、および全体の要素は、クエリで選択されます。  
   
      [!code-vb[VbVbalrAnonymousTypes#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrAnonymousTypes/VB/Class2.vb#31)]  
   

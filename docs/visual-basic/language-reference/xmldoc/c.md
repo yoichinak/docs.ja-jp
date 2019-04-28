@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <c> XML tag
 ms.assetid: 36ad5d1b-11f7-4012-8932-41962ac327d1
 ms.openlocfilehash: 9be9f9e96fc1b79ea97d54c54352da63b93ef264
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938594"
 ---
 # <a name="c-visual-basic"></a>\<c> (Visual Basic)
 説明内のテキストがコードであることを示します。  

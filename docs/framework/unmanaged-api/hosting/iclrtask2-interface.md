@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 518248651de6d8afdf25692c5f48da52b11eb0f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172472"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763400"
 ---
 # <a name="iclrtask2-interface"></a>ICLRTask2 インターフェイス
 すべての機能を提供、 [ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インターフェイスは、さらに、現在のスレッドが遅延するスレッドの中止できるようにするメソッドを提供します。  

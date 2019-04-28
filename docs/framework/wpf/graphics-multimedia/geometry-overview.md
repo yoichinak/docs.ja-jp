@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
 ms.openlocfilehash: f4f109b51ed566d1996b0c59b4ecbe51caa022cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762895"
 ---
 # <a name="geometry-overview"></a>ジオメトリの概要
 この概要は、使用する方法を説明します、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry>クラス図形を記述します。 このトピックでは、間の相違点も対照的です。<xref:System.Windows.Media.Geometry>オブジェクトと<xref:System.Windows.Shapes.Shape>要素。  
@@ -55,11 +55,11 @@ ms.locfileid: "59179999"
   
  単純なジオメトリ クラス<xref:System.Windows.Media.LineGeometry>、 <xref:System.Windows.Media.RectangleGeometry>、および<xref:System.Windows.Media.EllipseGeometry>線、四角形や円などの基本的な幾何学的図形の作成に使用されます。  
   
--   A<xref:System.Windows.Media.LineGeometry>行と終点の始点を指定することによって定義されます。  
+- A<xref:System.Windows.Media.LineGeometry>行と終点の始点を指定することによって定義されます。  
   
--   A<xref:System.Windows.Media.RectangleGeometry>を定義して、<xref:System.Windows.Rect>構造の相対的な位置、高さ、および幅を指定します。 角丸四角形を作成するには設定して、<xref:System.Windows.Media.RectangleGeometry.RadiusX%2A>と<xref:System.Windows.Media.RectangleGeometry.RadiusY%2A>プロパティ。  
+- A<xref:System.Windows.Media.RectangleGeometry>を定義して、<xref:System.Windows.Rect>構造の相対的な位置、高さ、および幅を指定します。 角丸四角形を作成するには設定して、<xref:System.Windows.Media.RectangleGeometry.RadiusX%2A>と<xref:System.Windows.Media.RectangleGeometry.RadiusY%2A>プロパティ。  
   
--   <xref:System.Windows.Media.EllipseGeometry>中心点、x 半径と y 半径によって定義されます。  レンダリングとクリッピング用の単純ジオメトリの作成方法を次の例に示します。  
+- <xref:System.Windows.Media.EllipseGeometry>中心点、x 半径と y 半径によって定義されます。  レンダリングとクリッピング用の単純ジオメトリの作成方法を次の例に示します。  
   
  使用して、これらと同じ図形は、だけでなく、複雑な図形を作成できる、<xref:System.Windows.Media.PathGeometry>または geometry オブジェクトを合わせてがこれらのクラスを組み合わせることで、これらの基本的な幾何学的図形を生成するため簡単な手段を提供します。  
   
@@ -175,9 +175,9 @@ PathGeometry
 ## <a name="composite-geometries"></a>複合ジオメトリ  
  使用して複合ジオメトリ オブジェクトを作成することができます、 <xref:System.Windows.Media.GeometryGroup>、 <xref:System.Windows.Media.CombinedGeometry>、または静的なを呼び出すことによって<xref:System.Windows.Media.Geometry>メソッド<xref:System.Windows.Media.Geometry.Combine%2A>します。  
   
--   <xref:System.Windows.Media.CombinedGeometry>オブジェクトと<xref:System.Windows.Media.Geometry.Combine%2A>メソッドが 2 つのジオメトリで定義される領域を結合するブール型の操作を実行します。 <xref:System.Windows.Media.Geometry> 領域がオブジェクトは破棄されません。 2 つだけ<xref:System.Windows.Media.Geometry>(ただし、これら 2 つのジオメトリは複合ジオメトリの役割を果たす場合もあります)、オブジェクトを組み合わせることができます。  
+- <xref:System.Windows.Media.CombinedGeometry>オブジェクトと<xref:System.Windows.Media.Geometry.Combine%2A>メソッドが 2 つのジオメトリで定義される領域を結合するブール型の操作を実行します。 <xref:System.Windows.Media.Geometry> 領域がオブジェクトは破棄されません。 2 つだけ<xref:System.Windows.Media.Geometry>(ただし、これら 2 つのジオメトリは複合ジオメトリの役割を果たす場合もあります)、オブジェクトを組み合わせることができます。  
   
--   <xref:System.Windows.Media.GeometryGroup>クラスを融合したものを作成し、<xref:System.Windows.Media.Geometry>オブジェクトの領域を結合せずにします。 任意の数の<xref:System.Windows.Media.Geometry>オブジェクトに追加することができます、<xref:System.Windows.Media.GeometryGroup>します。 例については、「[方法 : 複合図形を作成する](how-to-create-a-composite-shape.md)」をご覧ください。  
+- <xref:System.Windows.Media.GeometryGroup>クラスを融合したものを作成し、<xref:System.Windows.Media.Geometry>オブジェクトの領域を結合せずにします。 任意の数の<xref:System.Windows.Media.Geometry>オブジェクトに追加することができます、<xref:System.Windows.Media.GeometryGroup>します。 例については、「[方法 : 複合図形を作成する](how-to-create-a-composite-shape.md)」をご覧ください。  
   
  使用して結合操作を実行しないため、<xref:System.Windows.Media.GeometryGroup>オブジェクトを使用してパフォーマンスのメリットが得<xref:System.Windows.Media.CombinedGeometry>オブジェクトまたは<xref:System.Windows.Media.Geometry.Combine%2A>メソッド。  
   
@@ -207,11 +207,11 @@ PathGeometry
 ## <a name="other-geometry-features"></a>その他のジオメトリ機能  
  <xref:System.Windows.Media.Geometry>クラスは、次などの便利なユーティリティ メソッドも提供します。  
   
--   <xref:System.Windows.Media.Geometry.GetArea%2A> -の領域を取得、<xref:System.Windows.Media.Geometry>します。  
+- <xref:System.Windows.Media.Geometry.GetArea%2A> -の領域を取得、<xref:System.Windows.Media.Geometry>します。  
   
--   <xref:System.Windows.Media.Geometry.FillContains%2A> -別のジオメトリを含むかどうかを判断します<xref:System.Windows.Media.Geometry>します。  
+- <xref:System.Windows.Media.Geometry.FillContains%2A> -別のジオメトリを含むかどうかを判断します<xref:System.Windows.Media.Geometry>します。  
   
--   <xref:System.Windows.Media.Geometry.StrokeContains%2A> 指定するかどうかのストロークを<xref:System.Windows.Media.Geometry>指定したポイントが含まれています。  
+- <xref:System.Windows.Media.Geometry.StrokeContains%2A> 指定するかどうかのストロークを<xref:System.Windows.Media.Geometry>指定したポイントが含まれています。  
   
  参照してください、<xref:System.Windows.Media.Geometry>クラスのメソッドの完全な一覧についてはします。  
   

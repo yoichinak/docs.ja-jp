@@ -3,27 +3,27 @@ title: モデル定義関数
 ms.date: 03/30/2017
 ms.assetid: 8bb2edc8-e8e7-44c2-adc7-f44e11bda4f0
 ms.openlocfilehash: 77152e8f37b009cbc3e72f053ead867914768d3d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226639"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772247"
 ---
 # <a name="model-defined-function"></a>モデル定義関数
 A*モデル定義関数*は概念モデルで定義されている関数です。 モデル定義関数の本体がで表される[Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)ルールとは無関係に表現する関数に対応できる、または、データ ソースの言語がサポートされています。  
   
  モデル定義関数の定義には、次の情報が含まれます。  
   
--   関数名。 (必須)  
+- 関数名。 (必須)  
   
--   戻り値の型。 (オプション)。  
+- 戻り値の型。 (オプション)。  
   
     > [!NOTE]
     >  戻り値の型が指定されていない場合、戻り値は void になります。  
   
--   パラメーター情報。 (オプション)。  
+- パラメーター情報。 (オプション)。  
   
--   [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)関数の本体を定義する式。  
+- [Entity SQL](../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)関数の本体を定義する式。  
   
  モデル定義関数では、出力パラメーターがサポートされません。 この制約は、モデル定義関数を構成できるようにするためにあります。  
   

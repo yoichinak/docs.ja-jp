@@ -5,11 +5,11 @@ ms.assetid: e2be4af2-15d1-4e6a-8b68-1d78c93294a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5f52999c3f680fbccefe4681f83d473cdb86306
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782617"
 ---
 # <a name="icordebugstaticfieldsymbolgetname-method"></a>ICorDebugStaticFieldSymbol::GetName メソッド
 静的フィールドの名前を取得します。  

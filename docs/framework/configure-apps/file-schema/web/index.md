@@ -2,19 +2,13 @@
 title: Web 設定スキーマ
 ms.date: 03/30/2017
 helpviewer_keywords:
-- Web.config configuration file [ASP.NET]
-- ASP.NET configuration system, Web settings schema
-- schema Web settings
-- Web settings, schema [ASP.NET]
-- configuration files [ASP.NET]
-- configuration schema [.NET Framework], Web settings
+  - 'Web.config configuration file [ASP.NET]'
+  - 'ASP.NET configuration system, Web settings schema'
+  - schema Web settings
+  - 'Web settings, schema [ASP.NET]'
+  - 'configuration files [ASP.NET]'
+  - 'configuration schema [.NET Framework], Web settings'
 ms.assetid: ae1ac356-267d-4753-8d7a-7a04eb45a9be
-ms.openlocfilehash: 1f0241b65c915dd5703ceea97dd5b07f88832003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113062"
 ---
 # <a name="web-settings-schema"></a>Web 設定スキーマ
 Web 設定は、CPU と、ASP.NET ホスト層によって管理されているプロセス全体の動作に適用される CPU および ASP.NET 設定の実行レベルを指定します。 これらの設定は、ASP.NET アプリケーションの Web.config ファイルで指定されているアプリケーション ドメインの種類の設定とは異なります。  

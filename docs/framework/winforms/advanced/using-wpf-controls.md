@@ -6,18 +6,18 @@ helpviewer_keywords:
 - interoperability [WPF]
 ms.assetid: 03c85dce-26ad-44cd-bc1d-8e0cb56de096
 ms.openlocfilehash: 24b88e456628c5a0bdc3cded60b0e52a92057851
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713801"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747616"
 ---
 # <a name="using-wpf-controls"></a>WPF コントロールの使用
 Windows フォーム ベースのアプリケーションでは、Windows Presentation Foundation (WPF) コントロールを使用できます。 これらは、2 つの異なるビュー テクノロジが円滑に相互運用します。  
   
  Windows フォーム デザイナーでは、Windows Presentation Foundation コントロールをホストするためのビジュアル デ ザイン環境を提供します。 WPF コントロールがという特殊な Windows フォーム コントロールによってホストされている<xref:System.Windows.Forms.Integration.ElementHost>します。 このコントロールは、フォームのレイアウトに参加して、キーボードとマウスのメッセージを受信する WPF コントロールを使用します。 デザイン時に配置することができます、<xref:System.Windows.Forms.Integration.ElementHost>任意の Windows フォーム コントロールと同様に制御します。  
   
- Windows フォーム コントロールは WPF ベースのアプリケーションで使用することもできます。 詳細については、[Visual Studio で XAML をデザイン](/visualstudio/designers/designing-xaml-in-visual-studio)を参照してください。  
+ Windows フォーム コントロールは WPF ベースのアプリケーションで使用することもできます。 詳細については、次を参照してください。 [Visual Studio で XAML をデザイン](/visualstudio/designers/designing-xaml-in-visual-studio)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: コピーして、デザイン時に ElementHost コントロールを貼り付ける](how-to-copy-and-paste-an-elementhost-control-at-design-time.md)  

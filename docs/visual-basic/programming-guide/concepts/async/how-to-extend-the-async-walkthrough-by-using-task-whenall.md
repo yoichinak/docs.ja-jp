@@ -3,11 +3,11 @@ title: '方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough �
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
 ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756508"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張します。
 「[チュートリアル: 使用して Async と Await (Visual Basic) した Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)を使用して、<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>メソッド。 このメソッドは、タスクのコレクションとして表される、複数の非同期操作を非同期に待機します。  
@@ -25,9 +25,9 @@ ms.locfileid: "59331885"
   
 1. `ProcessURLAsync` メソッドを「[チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。  
   
-    -   コードをダウンロードしている場合[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)、AsyncWalkthrough プロジェクトを開き、追加し、 `ProcessURLAsync` MainWindow.xaml.vb ファイルです。  
+    - コードをダウンロードしている場合[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)、AsyncWalkthrough プロジェクトを開き、追加し、 `ProcessURLAsync` MainWindow.xaml.vb ファイルです。  
   
-    -   チュートリアルを実行してコードを開発する場合は、`ProcessURLAsync` メソッドを含むアプリケーションに `GetURLContentsAsync` を追加します。 このアプリケーションの MainWindow.xaml.vb ファイルは、「完全なコードのチュートリアル例」セクション最初の例です。  
+    - チュートリアルを実行してコードを開発する場合は、`ProcessURLAsync` メソッドを含むアプリケーションに `GetURLContentsAsync` を追加します。 このアプリケーションの MainWindow.xaml.vb ファイルは、「完全なコードのチュートリアル例」セクション最初の例です。  
   
      `ProcessURLAsync` メソッドは、元のチュートリアルの `SumPageSizesAsync` の `For Each` ループの本体にあるアクションを統合します。 このメソッドは、指定した Web サイトのコンテンツをバイト配列として非同期的にダウンロードし、バイト配列の長さを表示して返します。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "59331885"
   
 1. `ProcessURLAsync` の次のバージョンを「[チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。  
   
-    -   コードをダウンロードしている場合[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough_HttpClient プロジェクトを開くし、追加し、 `ProcessURLAsync` MainWindow.xaml.vb ファイルです。  
+    - コードをダウンロードしている場合[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)AsyncWalkthrough_HttpClient プロジェクトを開くし、追加し、 `ProcessURLAsync` MainWindow.xaml.vb ファイルです。  
   
-    -   チュートリアルを実行してコードを開発する場合は、`ProcessURLAsync` メソッドを使うアプリケーションに `HttpClient.GetByteArrayAsync` を追加します。 このアプリケーションの MainWindow.xaml.vb ファイルは、「完全なコードのチュートリアル例」セクションでは 2 つ目の例です。  
+    - チュートリアルを実行してコードを開発する場合は、`ProcessURLAsync` メソッドを使うアプリケーションに `HttpClient.GetByteArrayAsync` を追加します。 このアプリケーションの MainWindow.xaml.vb ファイルは、「完全なコードのチュートリアル例」セクションでは 2 つ目の例です。  
   
      `ProcessURLAsync` メソッドは、元のチュートリアルの `SumPageSizesAsync` の `For Each` ループの本体にあるアクションを統合します。 このメソッドは、指定した Web サイトのコンテンツをバイト配列として非同期的にダウンロードし、バイト配列の長さを表示して返します。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "59331885"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>Task.WhenAll ソリューションをテストするには  
   
--   各ソリューションで、F5 キーを押してプログラムを実行し、**[Start]** を複数回クリックします。 出力は「[チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。 ただし、Web サイトは毎回、異なる順序で表示されることに注意してください。  
+- 各ソリューションで、F5 キーを押してプログラムを実行し、**[Start]** を複数回クリックします。 出力は「[チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)します。 ただし、Web サイトは毎回、異なる順序で表示されることに注意してください。  
   
 ## <a name="example"></a>例  
  次のコードは、`GetURLContentsAsync` メソッドを使用して Web からコンテンツをダウンロードするプロジェクトの拡張機能を示します。  

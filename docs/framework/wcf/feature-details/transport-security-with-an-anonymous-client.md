@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
 ms.openlocfilehash: 20d7e59ba2b4b9dedc0b0daff1c1aa9c5210e61b
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55260386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932956"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>トランスポート セキュリティと匿名クライアント
 
 この Windows Communication Foundation (WCF) のシナリオでは、トランスポート セキュリティ (HTTPS) を使用して、機密性と整合性を確認します。 サーバーは SSL (Secure Sockets Layer) 証明書で認証される必要があり、クライアントはサーバーの証明書を信頼する必要があります。 クライアントを認証する機構はないため、匿名となります。
 
-サンプル アプリケーションでは、[WS トランスポート セキュリティ](../samples/ws-transport-security.md)を参照してください。 トランスポート セキュリティの詳細については、[トランスポート セキュリティの概要](transport-security-overview.md)を参照してください。
+サンプル アプリケーションでは、次を参照してください。 [WS トランスポート セキュリティ](../samples/ws-transport-security.md)します。 トランスポート セキュリティの詳細については、次を参照してください。[トランスポート セキュリティの概要](transport-security-overview.md)します。
 
 サービスで証明書の使用に関する詳細については、次を参照してください。 [Working with Certificates](working-with-certificates.md)と[方法。SSL 証明書でポートを構成](how-to-configure-a-port-with-an-ssl-certificate.md)します。
 
@@ -30,7 +30,7 @@ ms.locfileid: "55260386"
 |整合性|はい|
 |機密性|はい|
 |Transport|HTTPS|
-|バインディング|<xref:System.ServiceModel.WSHttpBinding>|
+|バインド|<xref:System.ServiceModel.WSHttpBinding>|
 
 ## <a name="service"></a>サービス
 

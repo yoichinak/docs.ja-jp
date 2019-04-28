@@ -3,11 +3,11 @@ title: <message> 要素 <wsFederationHttpBinding>
 ms.date: 03/30/2017
 ms.assetid: 9d710389-d9d8-4454-9bf2-da4ccda31cec
 ms.openlocfilehash: 79739dd715d7982555e5577c921cb65156af5923
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769877"
 ---
 # <a name="message-element-of-wsfederationhttpbinding"></a>\<メッセージ > 要素の\<wsFederationHttpBinding >
 メッセージ レベル セキュリティの設定を定義、 [ \<wsFederationHttpBinding >](../../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)します。  

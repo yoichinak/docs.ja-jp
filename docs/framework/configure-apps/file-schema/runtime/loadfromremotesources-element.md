@@ -8,11 +8,11 @@ ms.assetid: 006d1280-2ac3-4db6-a984-a3d4e275046a
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7568129f30267b212737ec8aa688cf882e19bbff
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55675310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704597"
 ---
 # <a name="loadfromremotesources-element"></a>\<loadFromRemoteSources > 要素
 リモート ソースから読み込まれたアセンブリに対して、.NET Framework 4 以降の完全な信頼を付与するかどうかを指定します。

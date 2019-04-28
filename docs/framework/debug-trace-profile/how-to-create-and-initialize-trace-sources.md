@@ -12,11 +12,11 @@ ms.assetid: f88dda6f-5fda-45be-9b3c-745a9b708c4d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2d96de43d258e4a7ff925e0c5b1702727e67d737
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754519"
 ---
 # <a name="how-to-create-and-initialize-trace-sources"></a>方法: トレース ソースを作成し初期化する
 <xref:System.Diagnostics.TraceSource> クラスをアプリケーションで使用すると、アプリケーションに関連付けることができるトレースを生成できます。 <xref:System.Diagnostics.TraceSource> は、イベントのトレース、データのトレース、および情報トレースの発行を簡単に実行できるトレース メソッドを提供します。 <xref:System.Diagnostics.TraceSource> からのトレース出力は、構成ファイルを使用してもしなくても作成および初期化できます。 このトピックでは、この両方の手順について説明しています。 ただし、実行時にトレース ソースによって作成されるトレースの再構成を容易にするために構成ファイルを使用することをお勧めします。  
@@ -73,7 +73,7 @@ ms.locfileid: "59339438"
   
 ### <a name="to-initialize-trace-sources-listeners-and-filters-without-a-configuration-file"></a>構成ファイルを使わずにトレース ソース、リスナー、およびフィルターを初期化するには  
   
--   次のプログラム例を使用すると、構成ファイルを使わずにトレース ソース全体のトレースが有効になります。 この方法はお勧めできませんが、構成ファイルに依存しないでトレース機能を確保する必要がある場合もあります。  
+- 次のプログラム例を使用すると、構成ファイルを使わずにトレース ソース全体のトレースが有効になります。 この方法はお勧めできませんが、構成ファイルに依存しないでトレース機能を確保する必要がある場合もあります。  
   
      [!code-csharp[TraceSourceExample2#1](../../../samples/snippets/csharp/VS_Snippets_CLR/tracesourceexample2/cs/program.cs#1)]
      [!code-vb[TraceSourceExample2#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/tracesourceexample2/vb/program.vb#1)]  

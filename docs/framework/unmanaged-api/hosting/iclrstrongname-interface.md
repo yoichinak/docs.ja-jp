@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: abe967195694dd61b4af18fb4eebbc3caad2ef4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771476"
 ---
 # <a name="iclrstrongname-interface"></a>ICLRStrongName インターフェイス
 厳密な名前を持つアセンブリに署名するための基本的なグローバル静的関数を提供します。 すべて`ICLRStrongName`メソッドは、標準の COM Hresult を返します。  

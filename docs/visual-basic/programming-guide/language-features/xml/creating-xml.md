@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], creating
 ms.assetid: 8ae29ec5-e5fb-4137-9df5-60a288df7045
 ms.openlocfilehash: d847f589bc47f8ab3d6691666bbd879e795db0c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756521"
 ---
 # <a name="creating-xml-in-visual-basic"></a>Visual Basic での XML の作成
 Visual Basic では、使用することができます*XML リテラル*コード内で直接します。 XML リテラルの構文を表します[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト、およびでは、XML 1.0 の構文と似ています。 これにより、簡単に、コードは、最終的な XML と同じ構造を持つため、XML 要素、ドキュメント、およびフラグメントをプログラムで作成します。  

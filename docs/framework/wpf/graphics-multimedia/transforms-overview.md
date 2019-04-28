@@ -13,11 +13,11 @@ helpviewer_keywords:
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
 ms.openlocfilehash: 6f7cbd91be83c96b25248f87ddc377159ba39b64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762390"
 ---
 # <a name="transforms-overview"></a>変換の概要
 このトピックでは、使用する方法を説明します、 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform>クラスには、回転、拡大縮小、移動 (平行移動)、および傾斜させる<xref:System.Windows.FrameworkElement>オブジェクト。  
@@ -101,9 +101,9 @@ ms.locfileid: "59162204"
 ## <a name="transforming-a-frameworkelement"></a>FrameworkElement の変換  
  変換を適用する、 <xref:System.Windows.FrameworkElement>、作成、<xref:System.Windows.Media.Transform>し、2 つのプロパティのいずれかに適用する、<xref:System.Windows.FrameworkElement>クラスを提供します。  
   
--   <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – レイアウト パスの前に適用される変換。 変換が適用されると、レイアウト システムは変換後のサイズと要素の位置を処理します。  
+- <xref:System.Windows.FrameworkElement.LayoutTransform%2A> – レイアウト パスの前に適用される変換。 変換が適用されると、レイアウト システムは変換後のサイズと要素の位置を処理します。  
   
--   <xref:System.Windows.UIElement.RenderTransform%2A> – 要素の外観を変更しますが、レイアウト パスが完了した後に適用する変換。 使用して、<xref:System.Windows.UIElement.RenderTransform%2A>プロパティの代わりに、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>プロパティ、パフォーマンス上の利点を取得することができます。  
+- <xref:System.Windows.UIElement.RenderTransform%2A> – 要素の外観を変更しますが、レイアウト パスが完了した後に適用する変換。 使用して、<xref:System.Windows.UIElement.RenderTransform%2A>プロパティの代わりに、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>プロパティ、パフォーマンス上の利点を取得することができます。  
   
  どちらのプロパティを使用すればよいのでしょうか。 により、パフォーマンス上の利点が提供する、使用、<xref:System.Windows.UIElement.RenderTransform%2A>プロパティを使用する場合は特に、可能なアニメーションを実行するたびに<xref:System.Windows.Media.Transform>オブジェクト。 使用して、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>拡大縮小、回転、または傾斜するプロパティとは、要素の親要素の変換後のサイズに合わせて調整する必要があります。 併用すると、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>プロパティ、<xref:System.Windows.Media.TranslateTransform>要素に効果がないオブジェクトが表示されます。 これは、レイアウト システムがその処理の一環として、変換後の要素を元の位置に返すためです。  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - From/to/by animation
 ms.assetid: 516fce0a-e7f8-49b8-b018-53b3d409a8a3
 ms.openlocfilehash: 9708a4d06e8a2aa65fb4d3bb959f4699237a2bc6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209152"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762398"
 ---
 # <a name="fromtoby-animations-overview"></a>From/To/By アニメーションの概要
 このトピックでは、From/To/By アニメーションを使って依存関係プロパティをアニメーション化する方法を説明します。 From/To/By アニメーションでは、2 つの値の間の遷移が作成されます。  
@@ -65,15 +65,15 @@ ms.locfileid: "59209152"
 ## <a name="target-values"></a>ターゲット値  
  From/To/By アニメーションでは、2 つのターゲット値の間の遷移が作成されます。 開始値を指定するが一般的 (を使用して設定、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティ) と終了値 (を使用して設定、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティ)。 ただし、開始値、終了値、またはオフセット値のみを指定することもできます。 これらの場合、アニメーションは不足しているターゲット値をアニメーション化するプロパティから取得します。 次の一覧では、アニメーションのターゲット値を指定する方法について説明します。  
   
--   **開始値**  
+- **開始値**  
   
      使用して、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティ アニメーションの開始値を明示的に指定する場合。 使用することができます、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティ自体は、または、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>または<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ。 のみを指定する場合、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティをアニメーション化されたプロパティの基本値に、その値からアニメーション遷移します。  
   
--   **終了値**  
+- **終了値**  
   
      アニメーションの終了値を指定するには、次のように使用します。 その<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティ。 使用する場合、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティ自体で、アニメーションは開始値の同じプロパティに適用される別のアニメーションの出力から、またはアニメーション化されているプロパティから。 使用することができます、<xref:System.Windows.Media.Animation.DoubleAnimation.To%2A>プロパティと共に、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティを明示的に開始および終了のアニメーションの値を指定します。  
   
--   **オフセット値**  
+- **オフセット値**  
   
      <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティでは、代わりに、明示的な開始時刻またはアニメーションの終了値のオフセットを指定することができます。 <xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>アニメーションのプロパティがどの程度のアニメーションによって、その期間にわたって値を変更します。 を指定します。 使用することができます、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ自体または、<xref:System.Windows.Media.Animation.DoubleAnimation.From%2A>プロパティ。 のみを指定する場合、<xref:System.Windows.Media.Animation.DoubleAnimation.By%2A>プロパティ、アニメーションをプロパティの基本値または別のアニメーションの出力にオフセット値を追加します。  
   
@@ -134,9 +134,9 @@ ms.locfileid: "59209152"
 ## <a name="other-animation-types"></a>他のアニメーションの種類  
  /アニメーションがない唯一の種類のアニメーションを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供: キー フレーム アニメーションとパス アニメーションも用意されています。  
   
--   キー フレーム アニメーションは、キー フレームを使って記述されている任意の数の目標値に沿ってアニメーション化します。 詳細については、次を参照してください。、[キー フレーム アニメーションの概要](key-frame-animations-overview.md)します。  
+- キー フレーム アニメーションは、キー フレームを使って記述されている任意の数の目標値に沿ってアニメーション化します。 詳細については、次を参照してください。、[キー フレーム アニメーションの概要](key-frame-animations-overview.md)します。  
   
--   パス アニメーションからの出力値を生成する、<xref:System.Windows.Media.PathGeometry>します。 詳細については、次を参照してください。、[パス アニメーションの概要](path-animations-overview.md)します。  
+- パス アニメーションからの出力値を生成する、<xref:System.Windows.Media.PathGeometry>します。 詳細については、次を参照してください。、[パス アニメーションの概要](path-animations-overview.md)します。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、独自のカスタム アニメーションの種類を作成することもできます。 詳細については、次を参照してください。、[カスタム アニメーションの概要](custom-animations-overview.md)します。  
   

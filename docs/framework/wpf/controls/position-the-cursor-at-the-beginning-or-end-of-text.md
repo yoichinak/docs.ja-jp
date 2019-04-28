@@ -10,11 +10,11 @@ helpviewer_keywords:
 - cursor [WPF], positioning
 ms.assetid: c771a0b8-c6b4-4240-aecd-a21d0ba51a2e
 ms.openlocfilehash: 3d7da5daf09e06938b8366e0f5f98a599cae4571
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770618"
 ---
 # <a name="how-to-position-the-cursor-at-the-beginning-or-end-of-text-in-a-textbox-control"></a>方法: TextBox コントロールのテキストの先頭または末尾にカーソルを配置する
 この例では、先頭またはのテキストの内容の末尾にカーソルを置き、<xref:System.Windows.Controls.TextBox>コントロール。  

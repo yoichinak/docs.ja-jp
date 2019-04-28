@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WPF Namespace [WPF]
 ms.assetid: 5e1d60e8-9403-47d0-98e4-b49aec871ee7
 ms.openlocfilehash: 91416bba9c94c26cbc107e90c2f528d94600699c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764557"
 ---
 # <a name="wpf-xaml-extensions"></a>WPF XAML 拡張機能
 ## <a name="in-this-section"></a>このセクションの内容  

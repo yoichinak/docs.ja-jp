@@ -11,11 +11,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 2b210382-99da-4195-89ba-b1d06f5e89ad
 ms.openlocfilehash: 09b95585325b05c0b7925c4c1c9e123f45791e10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828954"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936644"
 ---
 # <a name="-operator-visual-basic"></a>* 演算子 (Visual Basic)
 2 つの数値を乗算します。  

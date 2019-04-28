@@ -3,11 +3,11 @@ title: リフレクション (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: d991bc0f-d16a-4ac5-9351-70e5c5b9891b
 ms.openlocfilehash: d2ad8957d308aa98935c862ec1864b6682be904b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783527"
 ---
 # <a name="reflection-visual-basic"></a>リフレクション (Visual Basic)
 リフレクションは、アセンブリ、モジュール、および型を記述する (<xref:System.Type> 型の) オブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、作成したインスタンスを既存のオブジェクトにバインドしたり、さらに既存のオブジェクトから型を取得してそのオブジェクトのメソッドを呼び出したり、フィールドやプロパティにアクセスしたりできます。 コードで属性を使用している場合は、リフレクションを使用してそれらにアクセスできます。 詳細については、「[属性](../../../standard/attributes/index.md)」を参照してください。  
@@ -40,26 +40,26 @@ System.Console.WriteLine(info)
 ## <a name="reflection-overview"></a>リフレクションの概要  
  リフレクションは、次の場合に役立ちます。  
   
--   プログラムのメタデータ内の属性にアクセスする必要がある。 詳細については、「[属性に格納されている情報の取得](../../../standard/attributes/retrieving-information-stored-in-attributes.md)」を参照してください。  
+- プログラムのメタデータ内の属性にアクセスする必要がある。 詳細については、「[属性に格納されている情報の取得](../../../standard/attributes/retrieving-information-stored-in-attributes.md)」を参照してください。  
   
--   アセンブリの型をチェックし、インスタンス化する。  
+- アセンブリの型をチェックし、インスタンス化する。  
   
--   実行時に新しい型を作成する。 <xref:System.Reflection.Emit> でクラスを使います。  
+- 実行時に新しい型を作成する。 <xref:System.Reflection.Emit> でクラスを使います。  
   
--   遅延バインディングを実行するために、実行時に作成された型でメソッドにアクセスする。 「[型の動的な読み込みおよび使用](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)」を参照してください。  
+- 遅延バインディングを実行するために、実行時に作成された型でメソッドにアクセスする。 「[型の動的な読み込みおよび使用](../../../framework/reflection-and-codedom/dynamically-loading-and-using-types.md)」を参照してください。  
   
 ## <a name="related-sections"></a>関連項目  
  詳細情報  
   
--   [リフレクション](../../../framework/reflection-and-codedom/reflection.md)  
+- [リフレクション](../../../framework/reflection-and-codedom/reflection.md)  
   
--   [型情報の表示](../../../framework/reflection-and-codedom/viewing-type-information.md)  
+- [型情報の表示](../../../framework/reflection-and-codedom/viewing-type-information.md)  
   
--   [リフレクションとジェネリック型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
+- [リフレクションとジェネリック型](../../../framework/reflection-and-codedom/reflection-and-generic-types.md)  
   
--   <xref:System.Reflection.Emit>  
+- <xref:System.Reflection.Emit>  
   
--   [属性に格納されている情報の取得](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
+- [属性に格納されている情報の取得](../../../standard/attributes/retrieving-information-stored-in-attributes.md)  
   
 ## <a name="see-also"></a>関連項目
 

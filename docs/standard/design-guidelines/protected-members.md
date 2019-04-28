@@ -12,11 +12,11 @@ helpviewer_keywords:
 ms.assetid: aa0b58ee-3956-494d-ab48-471ae5db8740
 author: KrzysztofCwalina
 ms.openlocfilehash: 7d940f10799df2efc6c6d031781e1ef7cf777dd6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54559343"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937398"
 ---
 # <a name="protected-members"></a>プロテクト メンバー
 単独で保護されたメンバーでは任意の拡張機能は提供しませんより強力なサブクラス化による拡張性を作成することができます。 これらは、メインのパブリック インターフェイスを不必要に複雑にせず、高度なカスタマイズ オプションを公開する使用できます。  

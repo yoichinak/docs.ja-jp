@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
 ms.openlocfilehash: d9afa49525f03c06f94b1b7b704fb3d9caa9e19d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748006"
 ---
 # <a name="serialization-and-deserialization"></a>シリアル化と逆シリアル化
 Windows Communication Foundation (WCF) には、新しいシリアル化エンジンが含まれています、<xref:System.Runtime.Serialization.DataContractSerializer>します。 <xref:System.Runtime.Serialization.DataContractSerializer> は、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトと XML を双方向で変換します。 ここでは、シリアライザーのしくみについて説明します。  
@@ -109,11 +109,11 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
  この方法には以下の特性があり、望ましくないことがあります。  
   
--   パフォーマンス。 データのレプリケートは非効率的です。  
+- パフォーマンス。 データのレプリケートは非効率的です。  
   
--   循環参照。 他のオブジェクトを介してであっても、オブジェクトがそれ自体を参照している場合、レプリケーションによるシリアル化は無限ループを発生させます (この状況が発生した場合、シリアライザーは <xref:System.Runtime.Serialization.SerializationException> をスローします)。  
+- 循環参照。 他のオブジェクトを介してであっても、オブジェクトがそれ自体を参照している場合、レプリケーションによるシリアル化は無限ループを発生させます (この状況が発生した場合、シリアライザーは <xref:System.Runtime.Serialization.SerializationException> をスローします)。  
   
--   セマンティクス。 2 つの参照の参照先が 1 つのオブジェクトであり、2 つの同一のオブジェクトではない状態を維持することが重要な場合があります。  
+- セマンティクス。 2 つの参照の参照先が 1 つのオブジェクトであり、2 つの同一のオブジェクトではない状態を維持することが重要な場合があります。  
   
  上記の理由から、 `DataContractSerializer` の一部のコンストラクター オーバーロードには、 `preserveObjectReferences` パラメーターが含まれています (既定値は `false`です)。 このパラメーターを設定すると`true`、唯一の WCF を理解している、オブジェクト参照をエンコードの特殊なメソッドを使用します。 `true`に設定すると、XML コードの例は次のようになります。  
   
@@ -131,11 +131,11 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
  このモードの以下の制限を理解しておくことが重要です。  
   
--   `DataContractSerializer` が `preserveObjectReferences` に設定された `true` によって生成した XML は、他のテクノロジと相互運用できません。この XML にアクセスできるのは、 `DataContractSerializer` が `preserveObjectReferences` に設定された別の `true`インスタンスだけです。  
+- `DataContractSerializer` が `preserveObjectReferences` に設定された `true` によって生成した XML は、他のテクノロジと相互運用できません。この XML にアクセスできるのは、 `DataContractSerializer` が `preserveObjectReferences` に設定された別の `true`インスタンスだけです。  
   
--   この機能では、メタデータ (スキーマ) はサポートされていません。 生成されるスキーマは、 `preserveObjectReferences` が `false`に設定されている場合にのみ有効です。  
+- この機能では、メタデータ (スキーマ) はサポートされていません。 生成されるスキーマは、 `preserveObjectReferences` が `false`に設定されている場合にのみ有効です。  
   
--   この機能により、シリアル化および逆シリアル化プロセスの実行速度が低下することがあります。 データをレプリケートする必要はありませんが、このモードではオブジェクトの比較を追加で実行する必要があります。  
+- この機能により、シリアル化および逆シリアル化プロセスの実行速度が低下することがあります。 データをレプリケートする必要はありませんが、このモードではオブジェクトの比較を追加で実行する必要があります。  
   
 > [!CAUTION]
 >  `preserveObjectReferences` モードを有効にする場合、 `maxItemsInObjectGraph` の値を適切なクォータに設定することが特に重要となります。 このモードでの配列の処理方法に起因して、攻撃者は `maxItemsInObjectGraph` のクォータによってのみ制限される、メモリを大量に消費させる小さい悪質なメッセージを容易に作成できます。  
@@ -230,29 +230,29 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
  ただし、次のようないくつかの問題が発生する可能性があります。  
   
--   セキュリティ。 逆シリアル化する XML で見つかったすべての型が読み込まれます。 これを利用して、悪質な型が強制的に読み込まれるおそれがあります。 信頼できないデータでの `NetDataContractSerializer` の使用は、( *プロパティまたはコンストラクター パラメーターを使用して)* シリアル化バインダー <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> を使用する場合に限定する必要があります。 バインダーが読み込みを許可するのは安全な型だけです。 このバインダー機構は、 <xref:System.Runtime.Serialization> 名前空間の型が使用するものと同じです。  
+- セキュリティ。 逆シリアル化する XML で見つかったすべての型が読み込まれます。 これを利用して、悪質な型が強制的に読み込まれるおそれがあります。 信頼できないデータでの `NetDataContractSerializer` の使用は、( *プロパティまたはコンストラクター パラメーターを使用して)* シリアル化バインダー <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> を使用する場合に限定する必要があります。 バインダーが読み込みを許可するのは安全な型だけです。 このバインダー機構は、 <xref:System.Runtime.Serialization> 名前空間の型が使用するものと同じです。  
   
--   バージョン管理。 XML で型とアセンブリの完全名を使用する場合、型をバージョン管理する方法が厳しく制限されます。 型名、名前空間、アセンブリ名、およびアセンブリのバージョンを変更することはできません。 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> プロパティまたはコンストラクター パラメーターを既定値の <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> ではなく、 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> に設定すると、アセンブリのバージョンを変更できるようになりますが、ジェネリック パラメーターの型を変更することはできません。  
+- バージョン管理。 XML で型とアセンブリの完全名を使用する場合、型をバージョン管理する方法が厳しく制限されます。 型名、名前空間、アセンブリ名、およびアセンブリのバージョンを変更することはできません。 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> プロパティまたはコンストラクター パラメーターを既定値の <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> ではなく、 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> に設定すると、アセンブリのバージョンを変更できるようになりますが、ジェネリック パラメーターの型を変更することはできません。  
   
--   相互運用性。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型名とアセンブリ名は XML に含まれるため、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 以外のプラットフォームでは、生成されたデータにアクセスできません。  
+- 相互運用性。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型名とアセンブリ名は XML に含まれるため、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 以外のプラットフォームでは、生成されたデータにアクセスできません。  
   
--   パフォーマンス。 型名とアセンブリ名を書き込むと、生成される XML のサイズが大幅に増加します。  
+- パフォーマンス。 型名とアセンブリ名を書き込むと、生成される XML のサイズが大幅に増加します。  
   
  この機構は、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] リモート処理で使用されるバイナリ シリアル化または SOAP シリアル化 (具体的には、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> と <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>) に似ています。  
   
  `NetDataContractSerializer` の使用方法と `DataContractSerializer`の使用方法は似ていますが、次のような違いがあります。  
   
--   コンストラクターでルート型を指定する必要はありません。 `NetDataContractSerializer`の同じインスタンスを使用して、すべての型をシリアル化できます。  
+- コンストラクターでルート型を指定する必要はありません。 `NetDataContractSerializer`の同じインスタンスを使用して、すべての型をシリアル化できます。  
   
--   コンストラクターは、既知の型のリストを受け入れません。 型名を XML にシリアル化する場合、既知の型機構は不要です。  
+- コンストラクターは、既知の型のリストを受け入れません。 型名を XML にシリアル化する場合、既知の型機構は不要です。  
   
--   コンストラクターは、データ コントラクト サロゲートを受け入れません。 代わりに、( <xref:System.Runtime.Serialization.ISurrogateSelector> プロパティに割り当てられた) `surrogateSelector` という <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> のパラメーターを受け入れます。 これは、従来のサロゲート機構です。  
+- コンストラクターは、データ コントラクト サロゲートを受け入れません。 代わりに、( <xref:System.Runtime.Serialization.ISurrogateSelector> プロパティに割り当てられた) `surrogateSelector` という <xref:System.Runtime.Serialization.NetDataContractSerializer.SurrogateSelector%2A> のパラメーターを受け入れます。 これは、従来のサロゲート機構です。  
   
--   コンストラクターは、 `assemblyFormat` プロパティに割り当てられた、 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> の <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> というパラメーターを受け入れます。 前述のように、このパラメーターを使用することで、シリアライザーのバージョン管理機能を強化できます。 これは、バイナリ シリアル化または SOAP シリアル化の <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 機構と同じです。  
+- コンストラクターは、 `assemblyFormat` プロパティに割り当てられた、 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> の <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> というパラメーターを受け入れます。 前述のように、このパラメーターを使用することで、シリアライザーのバージョン管理機能を強化できます。 これは、バイナリ シリアル化または SOAP シリアル化の <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle> 機構と同じです。  
   
--   コンストラクターは、 <xref:System.Runtime.Serialization.StreamingContext> プロパティに割り当てられた `context` という <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> のパラメーターを受け入れます。 このパラメーターを使用して、シリアル化する型に情報を渡すことができます。 この使用方法は、他の <xref:System.Runtime.Serialization.StreamingContext> クラスで使用する <xref:System.Runtime.Serialization> 機構と同じです。  
+- コンストラクターは、 <xref:System.Runtime.Serialization.StreamingContext> プロパティに割り当てられた `context` という <xref:System.Runtime.Serialization.NetDataContractSerializer.Context%2A> のパラメーターを受け入れます。 このパラメーターを使用して、シリアル化する型に情報を渡すことができます。 この使用方法は、他の <xref:System.Runtime.Serialization.StreamingContext> クラスで使用する <xref:System.Runtime.Serialization> 機構と同じです。  
   
--   <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> メソッドと <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> メソッドは、 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> メソッドと <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> メソッドのエイリアスです。 これらのメソッドは、より一貫性のあるプログラミング モデルで、バイナリ シリアル化または SOAP シリアル化を使用できるようにするために存在しています。  
+- <xref:System.Runtime.Serialization.NetDataContractSerializer.Serialize%2A> メソッドと <xref:System.Runtime.Serialization.NetDataContractSerializer.Deserialize%2A> メソッドは、 <xref:System.Runtime.Serialization.XmlObjectSerializer.WriteObject%2A> メソッドと <xref:System.Runtime.Serialization.XmlObjectSerializer.ReadObject%2A> メソッドのエイリアスです。 これらのメソッドは、より一貫性のあるプログラミング モデルで、バイナリ シリアル化または SOAP シリアル化を使用できるようにするために存在しています。  
   
  これらの機能に関する詳細については、次を参照してください。[バイナリ シリアル化](../../../../docs/standard/serialization/binary-serialization.md)します。  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3ec60e8f-fad4-493e-a426-e7962d7aee8c
 ms.openlocfilehash: 654621ab7dd74c26a7fddbd985559a713c0e9df3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773517"
 ---
 # <a name="how-to-create-a-state-machine-workflow"></a>方法: ステート マシン ワークフローの作成
 ワークフローは、ビルトイン アクティビティおよびカスタム アクティビティから構築できます。 このトピックでなど両方の組み込みのアクティビティを使用するワークフローを作成する手順、<xref:System.Activities.Statements.StateMachine>アクティビティ、およびカスタム アクティビティ、前の[方法。アクティビティ作成](how-to-create-an-activity.md)トピック。 このワークフローは、数値推測ゲームをモデル化しています。  

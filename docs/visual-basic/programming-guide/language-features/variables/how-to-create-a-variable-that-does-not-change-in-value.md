@@ -6,22 +6,22 @@ helpviewer_keywords:
 - variables [Visual Basic], constant value
 ms.assetid: 86b59266-25df-4635-ae15-9b59c411d036
 ms.openlocfilehash: 7180e5141572d219ed02c57103e9d4b80cde536e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342935"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938230"
 ---
 # <a name="how-to-create-a-variable-that-does-not-change-in-value-visual-basic"></a>方法: 値 (Visual Basic) 変化しない変数を作成します。
 矛盾する値を変更しない変数の概念があります。 定数では不可能である場合もありますし、固定値を持つ変数を使用すると便利です。 このような場合でメンバー変数を定義することができます、 [ReadOnly](../../../../visual-basic/language-reference/modifiers/readonly.md)キーワード。  
   
  使用することはできません、 [Const ステートメント](../../../../visual-basic/language-reference/statements/const-statement.md)宣言を次の状況で定数の値を割り当てます。  
   
--   `Const`ステートメントには、使用するデータ型は受け入れません。  
+- `Const`ステートメントには、使用するデータ型は受け入れません。  
   
--   コンパイル時に、値がわからない  
+- コンパイル時に、値がわからない  
   
--   コンパイル時に定数値を計算できません。  
+- コンパイル時に定数値を計算できません。  
   
 ### <a name="to-create-a-variable-that-does-not-change-in-value"></a>値の変わらない変数を作成するには  
   

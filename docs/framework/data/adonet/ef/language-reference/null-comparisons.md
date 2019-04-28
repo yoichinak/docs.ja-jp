@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
 ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760429"
 ---
 # <a name="null-comparisons"></a>NULL 比較
 データ ソースの `null` 値は不明な値を表します。 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリでは、NULL 値をチェックして、必ず NULL でない有効なデータを持つ行に特定の計算または比較を行うようにすることができます。 ただし、CLR の NULL セマンティクスは、データ ソースの NULL セマンティクスとは異なる場合があります。 ほとんどのデータベースでは、3 値論理を使用して NULL 比較を処理します。 これは、null 値に対する比較に評価されない`true`または`false`、評価結果が`unknown`します。 これは、多くの場合は ANSI NULL の実装ですが、そうでない場合もあります。  

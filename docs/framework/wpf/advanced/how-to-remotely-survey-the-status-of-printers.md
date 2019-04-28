@@ -12,11 +12,11 @@ helpviewer_keywords:
 - status [WPF], printers [WPF], surveying remotely
 ms.assetid: d6324759-8292-4c23-9584-9c708887dc94
 ms.openlocfilehash: dc187a4ea120661e8118ce79a966d3d4a3b40711
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768502"
 ---
 # <a name="how-to-remotely-survey-the-status-of-printers"></a>方法: プリンターのステータスをリモート操作で調査する
 中企業および大企業では、任意の時点において、紙詰まりや用紙切れなどの問題が発生したために動作していないプリンターが複数存在する場合があります。 プリンターのプロパティで公開されている一連の豊富な[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]Microsoft .NET Framework のプリンターの状態を迅速に調査を実行する手段を提供します。  
@@ -39,9 +39,9 @@ ms.locfileid: "59340790"
   
  使用して<xref:System.Printing.PrintServer.GetPrintQueues%2A>のキューに配置してループを開始し、サーバーのすべてのコレクションを作成します。 この内側のループは分岐構造になっており、プリンターの状態を確認する 2 つの方法に対応しています。  
   
--   フラグを読み取ることができます、<xref:System.Printing.PrintQueue.QueueStatus%2A>型のプロパティ<xref:System.Printing.PrintQueueStatus>します。  
+- フラグを読み取ることができます、<xref:System.Printing.PrintQueue.QueueStatus%2A>型のプロパティ<xref:System.Printing.PrintQueueStatus>します。  
   
--   など、各関連プロパティを読み取ることができます<xref:System.Printing.PrintQueue.IsOutOfPaper%2A>、および<xref:System.Printing.PrintQueue.IsPaperJammed%2A>します。  
+- など、各関連プロパティを読み取ることができます<xref:System.Printing.PrintQueue.IsOutOfPaper%2A>、および<xref:System.Printing.PrintQueue.IsPaperJammed%2A>します。  
   
  この例では、両方の方法、ユーザーが以前に使用する方法に関して入力を求めし、求めのフラグを使用する場合は、"y"で応答したため、<xref:System.Printing.PrintQueue.QueueStatus%2A>プロパティ。 2 つの方法の詳細については、以下を参照してください。  
   

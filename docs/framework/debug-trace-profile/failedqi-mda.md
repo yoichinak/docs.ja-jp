@@ -11,11 +11,11 @@ ms.assetid: 902dc863-34b3-477c-b433-b8a6bb6133c6
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 0ac478644561d2aab13d10811987d8d02c8d7608
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754727"
 ---
 # <a name="failedqi-mda"></a>failedQI MDA
 `failedQI` マネージド デバッグ アシスタント (MDA: Managed Debugging Asssitant) は、ランタイムがランタイム呼び出し可能ラッパー (RCW: Runtime Callable Wrapper) の代わりに COM インターフェイス ポインター上の `QueryInterface` を呼び出し、その `QueryInterface` 呼び出しに失敗するとアクティブ化されます。  
@@ -25,11 +25,11 @@ ms.locfileid: "59217628"
   
 ## <a name="cause"></a>原因  
   
--   正しくないコンテキストから呼び出しが実行されました。  
+- 正しくないコンテキストから呼び出しが実行されました。  
   
--   呼び出しが正しくないコンテキストで試行されたため、登録されたプロキシが `QueryInterface` 呼び出しに失敗しています。  
+- 呼び出しが正しくないコンテキストで試行されたため、登録されたプロキシが `QueryInterface` 呼び出しに失敗しています。  
   
--   OLE 所有のプロキシがエラー HRESULT を返しました。  
+- OLE 所有のプロキシがエラー HRESULT を返しました。  
   
 ## <a name="resolution"></a>解像度  
  COM 規則についての MSDN ドキュメントを参照してください。  

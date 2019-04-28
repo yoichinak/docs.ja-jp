@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
 ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833530"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766819"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>型の値 '\<typename1 >' に変換できません'\<typename2 >' (複数ファイル参照)。
 型の値 '\<typename1 >' に変換できません。'\<typename2 >'。 型の不一致がへの参照をファイルの混合によって生じた可能性があります '\<filepath1 >' プロジェクトで'\<projectname1 >' への参照をファイルに '\<filepath2 >' プロジェクトで'\<projectname2 >'。 両方のアセンブリが同一である場合は、これらの参照を同じ場所から参照するように置き換えてください。  
@@ -27,9 +27,9 @@ ms.locfileid: "58833530"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   参照先アセンブリのアセンブリ id が同じ場合は、削除するか置き換えるファイルの参照のいずれか 1 つのファイル参照のみがあります。  
+- 参照先アセンブリのアセンブリ id が同じ場合は、削除するか置き換えるファイルの参照のいずれか 1 つのファイル参照のみがあります。  
   
--   参照されたアセンブリは、同じアセンブリ id を持っていない場合、それ以外の型を 1 つの型を変換しませんようにコードを変更します。  
+- 参照されたアセンブリは、同じアセンブリ id を持っていない場合、それ以外の型を 1 つの型を変換しませんようにコードを変更します。  
   
 ## <a name="see-also"></a>関連項目
 

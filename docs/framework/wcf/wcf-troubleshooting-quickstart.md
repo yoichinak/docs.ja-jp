@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
 ms.openlocfilehash: 4327e8bb07cb03a91f7384f7fe82bc2e47f6fcb9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320003"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780823"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF トラブルシューティング クイックスタート
 このトピックでは、WCF クライアントと WCF サービスの開発時に生じるさまざまな既知の問題の一覧を示します。 発生している問題がこの一覧にない場合は、サービスに対してトレースを構成することをお勧めします。 これにより、トレース ファイル ビューアーで表示し、サービス内で発生することがある例外に関する詳細情報を取得できるトレース ファイルが生成されます。 トレースの構成の詳細についてを参照してください。[トレースの構成](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)します。 トレース ファイル ビューアーの詳細についてを参照してください。[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)します。  
@@ -98,15 +98,15 @@ public class MyServiceHost : ServiceHost
 ## <a name="my-service-and-client-work-great-but-i-cant-get-them-to-work-when-the-client-is-on-another-computer-whats-happening"></a>サービスとクライアントの動作に問題はないのですが、クライアントが別のコンピューター上にあるときにサービスとクライアントがうまく動作しません。 どうしてでしょうか。  
  例外によっては、次のようないくつかの問題が存在する可能性があります。  
   
--   場合によっては、クライアントのエンドポイント アドレスを "localhost" ではなくホスト名に変更する必要があります。  
+- 場合によっては、クライアントのエンドポイント アドレスを "localhost" ではなくホスト名に変更する必要があります。  
   
--   場合によっては、アプリケーションに対してポートを開く必要があります。 詳細については、SDK サンプルから「 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 」を参照してください。  
+- 場合によっては、アプリケーションに対してポートを開く必要があります。 詳細については、SDK サンプルから「 [Firewall Instructions](../../../docs/framework/wcf/samples/firewall-instructions.md) 」を参照してください。  
   
--   その他の考えられる問題は、サンプル トピックの「を参照してください。 [Windows Communication Foundation サンプルの実行](./samples/running-the-samples.md)します。  
+- その他の考えられる問題は、サンプル トピックの「を参照してください。 [Windows Communication Foundation サンプルの実行](./samples/running-the-samples.md)します。  
   
--   クライアントが Windows 資格情報を使用し、例外が <xref:System.ServiceModel.Security.SecurityNegotiationException>の場合、次のように Kerberos を設定します。  
+- クライアントが Windows 資格情報を使用し、例外が <xref:System.ServiceModel.Security.SecurityNegotiationException>の場合、次のように Kerberos を設定します。  
   
-    1.  クライアントの App.config ファイルのエンドポイント要素に ID 資格情報を追加します。  
+    1. クライアントの App.config ファイルのエンドポイント要素に ID 資格情報を追加します。  
   
         ```xml
         <endpoint   
@@ -122,33 +122,33 @@ public class MyServiceHost : ServiceHost
         </endpoint>  
         ```  
   
-    2.  System または NetworkService アカウントで自己ホスト型サービスを実行します。 次のコマンドを実行すると、System アカウントでコマンド ウィンドウを作成できます。  
+    2. System または NetworkService アカウントで自己ホスト型サービスを実行します。 次のコマンドを実行すると、System アカウントでコマンド ウィンドウを作成できます。  
   
         ```console
         at 12:36 /interactive "cmd.exe"  
         ```  
   
-    3.  既定でサービス プリンシパル名 (SPN) アカウントを使用するインターネット インフォメーション サービス (IIS) でのサービスをホストします。  
+    3. 既定でサービス プリンシパル名 (SPN) アカウントを使用するインターネット インフォメーション サービス (IIS) でのサービスをホストします。  
   
-    4.  SetSPN を使用してドメインに新しい SPN を登録します。 この操作を行えるのは、ドメイン管理者のみです。  
+    4. SetSPN を使用してドメインに新しい SPN を登録します。 この操作を行えるのは、ドメイン管理者のみです。  
   
  Kerberos プロトコルの詳細については、次を参照してください。 [Security Concepts Used in WCF](../../../docs/framework/wcf/feature-details/security-concepts-used-in-wcf.md)と。  
   
--   [Windows 認証エラーのデバッグ](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
+- [Windows 認証エラーのデバッグ](../../../docs/framework/wcf/feature-details/debugging-windows-authentication-errors.md)  
   
--   [Http.sys を使用した Kerberos サービス プリンシパル名の登録](https://go.microsoft.com/fwlink/?LinkId=86943)  
+- [Http.sys を使用した Kerberos サービス プリンシパル名の登録](https://go.microsoft.com/fwlink/?LinkId=86943)  
   
--   [Kerberos の説明](https://go.microsoft.com/fwlink/?LinkId=86946)  
+- [Kerberos の説明](https://go.microsoft.com/fwlink/?LinkId=86946)  
   
 <a name="BKMK_q5"></a>   
 ## <a name="when-i-throw-a-faultexceptionexception-where-the-type-is-an-exception-i-always-receive-a-general-faultexception-type-on-the-client-and-not-the-generic-type-whats-happening"></a>FaultException をスローするときに\<例外 > 型は、例外は、必ずクライアントで一般的な FaultException 型とジェネリック型ではなく受け取ります。 どうしてでしょうか。  
  独自のカスタム エラー データ型を作成し、エラー コントラクトで詳細な型としてその型を宣言することをお勧めします。 その理由は、システム指定の例外型を使用すると、次のような状況が起こるためです。  
   
--   サービス指向アプリケーションの長所の 1 つを排除する型依存関係が作成されます。  
+- サービス指向アプリケーションの長所の 1 つを排除する型依存関係が作成されます。  
   
--   標準的な方法でシリアル化している例外に依存できません。 <xref:System.Security.SecurityException>のような例外はまったくシリアル化できない可能性があります。  
+- 標準的な方法でシリアル化している例外に依存できません。 <xref:System.Security.SecurityException>のような例外はまったくシリアル化できない可能性があります。  
   
--   クライアントに内部実装の詳細が公開されます。 詳細については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
+- クライアントに内部実装の詳細が公開されます。 詳細については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
   
  ただし、アプリケーションをデバッグしている場合、 <xref:System.ServiceModel.Description.ServiceDebugBehavior> クラスを使用することによって例外情報をシリアル化して、その情報をクライアントに返すことができます。  
   

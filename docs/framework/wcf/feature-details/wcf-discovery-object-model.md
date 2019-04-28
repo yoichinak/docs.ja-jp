@@ -3,11 +3,11 @@ title: WCF Discovery オブジェクト モデル
 ms.date: 03/30/2017
 ms.assetid: 8365a152-eacd-4779-9130-bbc48fa5c5d9
 ms.openlocfilehash: b337eda40fc70a6d0e7b3aeccfc125e6e6bacf8f
-ms.sourcegitcommit: ea00c05e0995dae928d48ead99ddab6296097b4c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48046670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935539"
 ---
 # <a name="wcf-discovery-object-model"></a>WCF Discovery オブジェクト モデル
 WCF Discovery は、実行時に探索可能なサービスと、これらのサービスを検索して使用するクライアントの作成を可能にする統合プログラミング モデルを提供する型のセットで構成されています。  
@@ -22,49 +22,49 @@ WCF Discovery は、実行時に探索可能なサービスと、これらのサ
 ## <a name="object-model"></a>オブジェクト モデル  
  WCF Discovery API は、次のクラスを定義します。  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementClient>  
+- <xref:System.ServiceModel.Discovery.AnnouncementClient>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.AnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.AnnouncementService>  
+- <xref:System.ServiceModel.Discovery.AnnouncementService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClient>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClient>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.DiscoveryEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
+- <xref:System.ServiceModel.Discovery.DiscoveryClientBindingElement>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
+- <xref:System.ServiceModel.Discovery.DiscoveryMessageSequenceGenerator>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryMode>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
+- <xref:System.ServiceModel.Discovery.DiscoveryProxy>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryService>  
+- <xref:System.ServiceModel.Discovery.DiscoveryService>  
   
--   <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
+- <xref:System.ServiceModel.Discovery.DiscoveryVersion>  
   
--   <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
+- <xref:System.ServiceModel.Discovery.DynamicEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryBehavior>  
   
--   <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
+- <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata>  
   
--   <xref:System.ServiceModel.Discovery.FindCriteria>  
+- <xref:System.ServiceModel.Discovery.FindCriteria>  
   
--   <xref:System.ServiceModel.Discovery.FindRequestContext>  
+- <xref:System.ServiceModel.Discovery.FindRequestContext>  
   
--   <xref:System.ServiceModel.Discovery.FindResponse>  
+- <xref:System.ServiceModel.Discovery.FindResponse>  
   
--   <xref:System.ServiceModel.Discovery.ResolveCriteria>  
+- <xref:System.ServiceModel.Discovery.ResolveCriteria>  
   
--   <xref:System.ServiceModel.Discovery.ResolveResponse>  
+- <xref:System.ServiceModel.Discovery.ResolveResponse>  
   
--   <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
+- <xref:System.ServiceModel.Discovery.ServiceDiscoveryBehavior>  
  
--   <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpAnnouncementEndpoint>  
   
--   <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
+- <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint>  
   
 ## <a name="announcementclient"></a>AnnouncementClient  
  <xref:System.ServiceModel.Discovery.AnnouncementClient> クラスは、アナウンス メッセージを送信するための同期メソッドと非同期メソッドを提供します。 アナウンス メッセージには Hello と Bye の 2 種類があります。 Hello メッセージは、サービスが使用可能になったことを示すために送信され、Bye メッセージは、既存のサービスが使用不可になったことを示すために送信されます。 開発者は、<xref:System.ServiceModel.Discovery.AnnouncementClient> インスタンスを作成して、<xref:System.ServiceModel.Discovery.AnnouncementEndpoint> のインスタンスをコンストラクター パラメーターとして渡します。  
@@ -80,7 +80,7 @@ WCF Discovery は、実行時に探索可能なサービスと、これらのサ
   
  サービスを検索するには、同期または非同期の `Find` メソッドを呼び出し、使用する検索条件が設定された <xref:System.ServiceModel.Discovery.FindCriteria> インスタンスを提供します。 <xref:System.ServiceModel.Discovery.DiscoveryClient> は、適切なヘッダーを設定して `Probe` メッセージを作成し、検索要求を送信します。 どの時点でも、未処理の `Find` 要求が 1 つ以上存在する可能性があるため、クライアントは、受信した応答を関連付けて、応答を検証します。 その後、`Find` を使用して、結果を <xref:System.ServiceModel.Discovery.FindResponse> 操作の呼び出し元に渡します。  
   
- 既知のサービスを解決するには、既知のサービスの `Resolve` が設定された <xref:System.ServiceModel.Discovery.ResolveCriteria> のインスタンスを提供する同期または非同期の <xref:System.ServiceModel.EndpointAddress> メソッドを呼び出します。 <xref:System.ServiceModel.Discovery.DiscoveryClient> は、適切なヘッダーを設定して `Resolve` メッセージを作成し、解決要求を送信します。 受信された応答が未処理の解決要求と関連付けられ、その結果が、`Resolve` を使用して、<xref:System.ServiceModel.Discovery.ResolveResponse> 操作の呼び出し元に渡されます。  
+ 既知のサービスを解決するには、既知のサービスの <xref:System.ServiceModel.EndpointAddress> が設定された <xref:System.ServiceModel.Discovery.ResolveCriteria> のインスタンスを提供する同期または非同期の `Resolve` メソッドを呼び出します。 <xref:System.ServiceModel.Discovery.DiscoveryClient> は、適切なヘッダーを設定して `Resolve` メッセージを作成し、解決要求を送信します。 受信された応答が未処理の解決要求と関連付けられ、その結果が、`Resolve` を使用して、<xref:System.ServiceModel.Discovery.ResolveResponse> 操作の呼び出し元に渡されます。  
   
  ネットワークに探索プロキシが存在し、<xref:System.ServiceModel.Discovery.DiscoveryClient> がマルチキャストで探索要求を送信する場合、探索プロキシは、マルチキャスト抑制 Hello メッセージを使用して応答できます。 <xref:System.ServiceModel.Discovery.DiscoveryClient> は、未処理の `ProxyAvailable` 要求または `Find` 要求に対する Hello 応答を受信すると、`Resolve` イベントを発生させます。 `ProxyAvailable` イベントには、探索プロキシについての <xref:System.ServiceModel.Discovery.EndpointDiscoveryMetadata> が含まれています。 管理者は、この情報を使用して、アドホック モードからマネージド モードに切り替えるかどうかを制御できます。  
   

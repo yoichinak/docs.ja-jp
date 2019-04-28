@@ -11,11 +11,11 @@ helpviewer_keywords:
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
 ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821371"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760754"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>オブジェクト初期化子:名前付きの匿名型 (Visual Basic)
 オブジェクト初期化子を使用すると、1 つの式を使用して複雑なオブジェクトのプロパティを指定できます。 これらは、匿名型の名前付きの型のインスタンスを作成する使用できます。  
@@ -63,11 +63,11 @@ ms.locfileid: "58821371"
   
 ### <a name="remarks-about-named-types"></a>名前付きの型についての解説  
   
--   クラス メンバーには、オブジェクト初期化子リスト内の 1 つ以上の時間を初期化できません。 宣言`cust7`エラーが発生します。  
+- クラス メンバーには、オブジェクト初期化子リスト内の 1 つ以上の時間を初期化できません。 宣言`cust7`エラーが発生します。  
   
      [!code-vb[VbVbalrObjectInit#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#9)]  
   
--   メンバーは、それ自体または別のフィールドを初期化するために使用できます。 次の宣言のように、初期化前に、メンバーがアクセスされる場合`cust8`既定値が使用されます。 オブジェクト初期化子を使用する宣言が処理されるときに最初に行われるが、適切なコンス トラクターが呼び出されることに注意してください。 その後、初期化子リスト内の各フィールドが初期化されます。 既定値を次の例で`Name`が割り当てられている`cust8`で初期化の値が割り当てられていると`cust9`します。  
+- メンバーは、それ自体または別のフィールドを初期化するために使用できます。 次の宣言のように、初期化前に、メンバーがアクセスされる場合`cust8`既定値が使用されます。 オブジェクト初期化子を使用する宣言が処理されるときに最初に行われるが、適切なコンス トラクターが呼び出されることに注意してください。 その後、初期化子リスト内の各フィールドが初期化されます。 既定値を次の例で`Name`が割り当てられている`cust8`で初期化の値が割り当てられていると`cust9`します。  
   
      [!code-vb[VbVbalrObjectInit#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#10)]  
   
@@ -75,17 +75,17 @@ ms.locfileid: "58821371"
   
      [!code-vb[VbVbalrObjectInit#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#11)]  
   
--   オブジェクト初期化子を入れ子にすることができます。 次の例では、`AddressClass`を 2 つのプロパティを持つクラスは、`City`と`State`、および`Customer`クラスには、`Address`プロパティのインスタンスである`AddressClass`。  
+- オブジェクト初期化子を入れ子にすることができます。 次の例では、`AddressClass`を 2 つのプロパティを持つクラスは、`City`と`State`、および`Customer`クラスには、`Address`プロパティのインスタンスである`AddressClass`。  
   
      [!code-vb[VbVbalrObjectInit#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#12)]  
   
--   初期化リストを空にすることはできません。  
+- 初期化リストを空にすることはできません。  
   
--   初期化されているインスタンスは、Object 型のすることはできません。  
+- 初期化されているインスタンスは、Object 型のすることはできません。  
   
--   クラスのメンバーの初期化中には、共有メンバー、読み取り専用メンバー、定数、またはメソッドの呼び出しをすることはできません。  
+- クラスのメンバーの初期化中には、共有メンバー、読み取り専用メンバー、定数、またはメソッドの呼び出しをすることはできません。  
   
--   クラス メンバーは初期化は、インデックス付きまたは修飾ことはできません。 次の例では、コンパイラ エラーが発生します。  
+- クラス メンバーは初期化は、インデックス付きまたは修飾ことはできません。 次の例では、コンパイラ エラーが発生します。  
   
      `'' Not valid.`  
   
@@ -109,19 +109,19 @@ ms.locfileid: "58821371"
   
 ### <a name="remarks-about-anonymous-types"></a>匿名型についての解説  
   
--   通常、匿名型の宣言内のプロパティのほとんどすべてできるが、キーのプロパティをキーワードを入力して示されている`Key`プロパティ名の前にします。  
+- 通常、匿名型の宣言内のプロパティのほとんどすべてできるが、キーのプロパティをキーワードを入力して示されている`Key`プロパティ名の前にします。  
   
      [!code-vb[VbVbalrObjectInit#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#14)]  
   
      キー プロパティの詳細については、次を参照してください。[キー](../../../../visual-basic/language-reference/modifiers/key.md)します。  
   
--   このような名前付きの型、初期化子リスト匿名型の定義は、少なくとも 1 つのプロパティを宣言する必要があります。  
+- このような名前付きの型、初期化子リスト匿名型の定義は、少なくとも 1 つのプロパティを宣言する必要があります。  
   
      [!code-vb[VbVbalrObjectInit#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#2)]  
   
--   匿名型のインスタンスが宣言されている場合、コンパイラは、一致する匿名型の定義を生成します。 名前とプロパティのデータ型はインスタンスの宣言からのものし、定義でコンパイラが含まれます。 プロパティがないという名前し、名前付きの型とは異なり、事前に定義されています。 その型が推論されます。 使用して、プロパティのデータ型を指定することはできません、`As`句。  
+- 匿名型のインスタンスが宣言されている場合、コンパイラは、一致する匿名型の定義を生成します。 名前とプロパティのデータ型はインスタンスの宣言からのものし、定義でコンパイラが含まれます。 プロパティがないという名前し、名前付きの型とは異なり、事前に定義されています。 その型が推論されます。 使用して、プロパティのデータ型を指定することはできません、`As`句。  
   
--   匿名型は、その他のいくつかの方法で、名前とそのプロパティの値を確立できますも。 たとえば、匿名型のプロパティには、名前と、変数、または名前の値と別のオブジェクトのプロパティの値の両方がかかります。  
+- 匿名型は、その他のいくつかの方法で、名前とそのプロパティの値を確立できますも。 たとえば、匿名型のプロパティには、名前と、変数、または名前の値と別のオブジェクトのプロパティの値の両方がかかります。  
   
      [!code-vb[VbVbalrObjectInit#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrObjectInit/VB/Class1.vb#15)]  
   

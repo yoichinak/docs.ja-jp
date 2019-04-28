@@ -1,13 +1,7 @@
 ---
 title: ジェネリック
-description: 使用する方法について説明しますF#ジェネリック関数と型で、コードを繰り返さなくても、さまざまな型で動作するコードを記述できます。
+description: '使用する方法について説明しますF#ジェネリック関数と型で、コードを繰り返さなくても、さまざまな型で動作するコードを記述できます。'
 ms.date: 05/16/2016
-ms.openlocfilehash: bafb80893df2f3fab85840ee844bc78d1fb33428
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614377"
 ---
 # <a name="generics"></a>ジェネリック
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
 ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58843202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698656"
 ---
 # <a name="using-statement-visual-basic"></a>Using ステートメント (Visual Basic)
 宣言の先頭を`Using`をブロックし、必要に応じて、ブロックを制御するシステム リソースを取得します。  
@@ -33,7 +33,7 @@ End Using
 |---|---|  
 |`resourcelist`|指定しないかどうかに必要な`resourceexpression`します。 この 1 つまたは複数のシステム リソースの一覧表示`Using`コンマで区切られたコントロールをブロックします。|  
 |`resourceexpression`|指定しないかどうかに必要な`resourcelist`します。 参照変数または式で制御するシステム リソースを参照する`Using`ブロックします。|  
-|`statements`|任意。 ステートメントのブロックを`Using`ブロックが実行されます。|  
+|`statements`|省略可能です。 ステートメントのブロックを`Using`ブロックが実行されます。|  
 |`End Using`|必須。 定義を終了、`Using`ブロックおよびそれによって制御されるすべてのリソースを破棄します。|  
   
  内の各リソース、`resourcelist`部分が次の構文と部分。  
@@ -51,7 +51,7 @@ End Using
 |`resourcename`|必須。 システム リソースを参照する参照変数を`Using`コントロールをブロックします。|  
 |`New`|必要な場合、`Using`ステートメントがリソースを取得します。 既にリソースを取得する場合は、2 番目の構文を使用します。|  
 |`resourcetype`|必須。 リソースのクラスです。 クラスを実装する必要があります、<xref:System.IDisposable>インターフェイス。|  
-|`arglist`|任意。 インスタンスを作成するコンス トラクターに渡す引数のリスト`resourcetype`します。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。|  
+|`arglist`|省略可能です。 インスタンスを作成するコンス トラクターに渡す引数のリスト`resourcetype`します。 参照してください[パラメーター リスト](../../../visual-basic/language-reference/statements/parameter-list.md)します。|  
 |`resourceexpression`|必須。 変数または式の要件を満たすシステム リソースを参照する`resourcetype`します。 2 番目の構文を使用する場合は、制御を渡す前に、リソースを取得する必要があります、`Using`ステートメント。|  
   
 ## <a name="remarks"></a>Remarks  
@@ -61,11 +61,11 @@ End Using
   
  A`Using`ブロックには 3 つの部分: 取得、使用状況、および破棄します。  
   
--   *買収*変数を作成して、初期化、システムのリソースを参照することを意味します。 `Using`ステートメントが 1 つまたは複数のリソースを取得するか、ブロックに入る前に正確に 1 つのリソースを入手してに提供することができます、`Using`ステートメント。 指定した場合`resourceexpression`、制御を渡す前に、リソースを取得する必要があります、`Using`ステートメント。  
+- *買収*変数を作成して、初期化、システムのリソースを参照することを意味します。 `Using`ステートメントが 1 つまたは複数のリソースを取得するか、ブロックに入る前に正確に 1 つのリソースを入手してに提供することができます、`Using`ステートメント。 指定した場合`resourceexpression`、制御を渡す前に、リソースを取得する必要があります、`Using`ステートメント。  
   
--   *使用状況*リソースにアクセスし、それを使ってアクションを実行することを意味します。 間にあるステートメント`Using`と`End Using`リソースの使用量を表します。  
+- *使用状況*リソースにアクセスし、それを使ってアクションを実行することを意味します。 間にあるステートメント`Using`と`End Using`リソースの使用量を表します。  
   
--   *廃棄*を呼び出す方法、<xref:System.IDisposable.Dispose%2A>メソッド内のオブジェクトを`resourcename`します。 これにより、そのリソースを正常に終了するオブジェクト。 `End Using`ステートメントを下にあるリソースの破棄、`Using`ブロックのコントロール。  
+- *廃棄*を呼び出す方法、<xref:System.IDisposable.Dispose%2A>メソッド内のオブジェクトを`resourcename`します。 これにより、そのリソースを正常に終了するオブジェクト。 `End Using`ステートメントを下にあるリソースの破棄、`Using`ブロックのコントロール。  
   
 ## <a name="behavior"></a>動作  
  A`Using`ブロックのように動作する`Try`.`Finally`を構築、`Try`ブロックはリソースを使用し、`Finally`それらのブロックを破棄します。 このため、`Using`ブロックがブロックを終了する方法に関係なく、リソースの破棄を保証します。 これは、未処理の例外の場合にも当てはまりますを除き、<xref:System.StackOverflowException>します。  

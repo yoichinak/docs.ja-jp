@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UI Automation, caching
 ms.assetid: ec722dff-6009-4279-b86a-e18d3fa94ebf
 ms.openlocfilehash: b63d94789d081ce7337b5f9c2abca3f7d9e99eeb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775724"
 ---
 # <a name="use-caching-in-ui-automation"></a>UI オートメーションにおけるキャッシュの使用
 > [!NOTE]

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60d3b22d8dc140bf16af7f59781d5ed103dafbf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765480"
 ---
 # <a name="icordebugheapvalue3-interface"></a>ICorDebugHeapValue3 インターフェイス
 オブジェクトのモニター ロック プロパティを公開します。 このインターフェイスは、ICorDebugHeapValue および ICorDebugHeapValue2 インターフェイスを拡張します。  

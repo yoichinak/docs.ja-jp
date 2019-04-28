@@ -3,11 +3,11 @@ title: System.ServiceModel.ServiceHostFaulted
 ms.date: 03/30/2017
 ms.assetid: 58cf2adc-a6ef-46d8-8e73-e127287b42a2
 ms.openlocfilehash: 51357dcc8d60fbc96113ac36c27479fab1f68a2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165296"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760000"
 ---
 # <a name="systemservicemodelservicehostfaulted"></a>System.ServiceModel.ServiceHostFaulted
 System.ServiceModel.ServiceHostFaulted  

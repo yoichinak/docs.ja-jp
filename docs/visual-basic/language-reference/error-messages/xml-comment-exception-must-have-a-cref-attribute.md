@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42319
 ms.assetid: 62eeeba3-6811-48be-b1ef-c2e4feda3177
 ms.openlocfilehash: a974df5d2305b88946981d0d258a8088b23d3fc3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766608"
 ---
 # <a name="xml-comment-exception-must-have-a-cref-attribute"></a>XML コメントの例外には 'cref' 属性を指定しなければなりません
 \<例外 > タグは、メソッドによってスローされる可能性が例外を文書化する方法を提供します。 必要な`cref`属性は、ドキュメントのジェネレーターがチェックされているメンバーの名前を指定します。 メンバーが存在する場合は、ドキュメント ファイルで正規要素名に変換されます。  
@@ -21,7 +21,7 @@ ms.locfileid: "58813289"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   追加、`cref`属性、例外を次のようにします。  
+- 追加、`cref`属性、例外を次のようにします。  
   
     ```  
     '''<exception cref="member">description</exception>  

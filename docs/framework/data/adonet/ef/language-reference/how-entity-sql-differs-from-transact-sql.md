@@ -3,11 +3,11 @@ title: Entity SQL と Transact-SQL の相違点
 ms.date: 03/30/2017
 ms.assetid: 9c9ee36d-f294-4c8b-a196-f0114c94f559
 ms.openlocfilehash: 75ce0b00962526b76ea9f4b9fdfb0d1e1e564cdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774752"
 ---
 # <a name="how-entity-sql-differs-from-transact-sql"></a>Entity SQL と Transact-SQL の相違点
 このトピックでは、間の相違点を説明します。[!INCLUDE[esql](../../../../../../includes/esql-md.md)]と[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)]します。  
@@ -20,15 +20,15 @@ ms.locfileid: "59162738"
 ## <a name="support-for-collections"></a>コレクションのサポート  
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] コレクションをファーストクラスのエンティティとして扱われます。 例:  
   
--   コレクションの式は、`from` 句内で有効です。  
+- コレクションの式は、`from` 句内で有効です。  
   
--   `in` サブクエリと `exists` サブクエリは任意のコレクションを使用できるように一般化されています。  
+- `in` サブクエリと `exists` サブクエリは任意のコレクションを使用できるように一般化されています。  
   
      サブクエリは一種のコレクションです。 `e1 in e2` および `exists(e)` は、これらの演算を実行する [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 構造です。  
   
--   `union`、`intersect`、`except` などの集合演算は、現在ではコレクションに対して実行されます。  
+- `union`、`intersect`、`except` などの集合演算は、現在ではコレクションに対して実行されます。  
   
--   結合はコレクションに対して実行されます。  
+- 結合はコレクションに対して実行されます。  
   
 ## <a name="support-for-expressions"></a>式のサポート  
  [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] サブクエリ (テーブル) と式 (行および列) があります。  

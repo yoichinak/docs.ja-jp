@@ -5,11 +5,11 @@ helpviewer_keywords:
 - programming [WF], hosting workflows
 ms.assetid: a99a5990-b53b-419b-9538-b1c3d1ba5db3
 ms.openlocfilehash: 3b3b7b94c94096d916efb9399c82ad6ddf8b8b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773465"
 ---
 # <a name="hosting-workflows"></a>ワークフローのホスティング
 このセクションの各トピックでは、ワークフローのホスティングについて説明します。  

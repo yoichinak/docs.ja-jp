@@ -3,11 +3,11 @@ title: 射影操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: b8d38e6d-21cf-4619-8dbb-94476f4badc7
 ms.openlocfilehash: e2af45f9cbbed9eb88095a30e2b77a7730740898
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766702"
 ---
 # <a name="projection-operations-visual-basic"></a>射影操作 (Visual Basic)
 射影とは、オブジェクトを、必要なプロパティだけで構成された別の形式に変換する操作のことをいいます。 射影を使用することにより、個々のオブジェクトから構築された新しい型を作成できます。 プロパティを投影し、それに対して数値演算関数を実行できます。 また、元のオブジェクトを変更せずに射影することもできます。  

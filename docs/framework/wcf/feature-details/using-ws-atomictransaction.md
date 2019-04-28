@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF]
 ms.assetid: 04a4c200-0af0-4c5d-a3d9-87cb7339e054
 ms.openlocfilehash: 8a8265873e4287e1455659aa4d9fae7e1d570a00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932848"
 ---
 # <a name="using-ws-atomictransaction"></a>WS-AtomicTransaction の使用
 WS-AtomicTransaction (WS-AT) は、相互運用が可能なトランザクション プロトコルです。 Web サービス メッセージを使用して分散トランザクションをフローできるようにすると共に、異種のトランザクション インフラストラクチャ間で相互運用できるように調整します。 WS-AT では、2 フェーズ コミット プロトコルを使用して、分散アプリケーション、トランザクション マネージャー、およびリソース マネージャー間でアトミックな結果を実現します。  
@@ -20,9 +20,9 @@ WS-AtomicTransaction (WS-AT) は、相互運用が可能なトランザクショ
   
  プロトコルの選択は、次の内容に影響を与えます。  
   
--   トランザクションをクライアントからサーバーにフローさせるために使用されるメッセージ ヘッダーの形式。  
+- トランザクションをクライアントからサーバーにフローさせるために使用されるメッセージ ヘッダーの形式。  
   
--   トランザクションの結果を解決するために、クライアントのトランザクション マネージャーとサーバーのトランザクション マネージャーの間で 2 フェーズ コミット プロトコルを実行するために使用されるネットワーク プロトコル。  
+- トランザクションの結果を解決するために、クライアントのトランザクション マネージャーとサーバーのトランザクション マネージャーの間で 2 フェーズ コミット プロトコルを実行するために使用されるネットワーク プロトコル。  
   
  場合は、サーバーとクライアントは、WCF を使用して記述されて、WS-AT を使用する必要はありません。 その代わりに、`NetTcpBinding` プロトコルを使用する `TransactionFlow` 属性を有効にして `OleTransactions` の既定の設定を使用できます。 詳細については、次を参照してください。 [ \<netTcpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)します。 ただし、サードパーティのテクノロジで構築された Web サービスにトランザクションをフローさせる場合は、WS-AT を使用する必要があります。  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ListView controls [WPF], about ListView control
 ms.assetid: 989e12b0-260e-4570-95c6-489284003ce2
 ms.openlocfilehash: 6d4a6c19dc0af8a2950754f32890ae9c3bcbad21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769536"
 ---
 # <a name="listview-overview"></a>ListView の概要
 <xref:System.Windows.Controls.ListView>コントロールには、さまざまなレイアウトやビューにデータ項目のセットを表示するインフラストラクチャが用意されています。 たとえば、ユーザーは、テーブルにデータ項目を表示し、その列を並べ替えできます。  
@@ -58,9 +58,9 @@ ms.locfileid: "59186499"
 ## <a name="styling-a-listview-that-implements-a-gridview"></a>GridView を実装する ListView のスタイル設定  
  <xref:System.Windows.Controls.ListView>コントロールが含まれる<xref:System.Windows.Controls.ListViewItem>表示されるデータ項目を表すオブジェクト。 次のプロパティを使用して、データ項目の内容とスタイルを定義できます。  
   
--   <xref:System.Windows.Controls.ListView>コントロールを使用して、 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>、 <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>、および<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>プロパティ。  
+- <xref:System.Windows.Controls.ListView>コントロールを使用して、 <xref:System.Windows.Controls.ItemsControl.ItemTemplate%2A>、 <xref:System.Windows.Controls.ItemsControl.ItemTemplateSelector%2A>、および<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>プロパティ。  
   
--   <xref:System.Windows.Controls.ListViewItem>コントロールを使用して、<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>と<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>プロパティ。  
+- <xref:System.Windows.Controls.ListViewItem>コントロールを使用して、<xref:System.Windows.Controls.ContentControl.ContentTemplate%2A>と<xref:System.Windows.Controls.ContentControl.ContentTemplateSelector%2A>プロパティ。  
   
  内のセル間のアライメントの問題を回避するために、 <xref:System.Windows.Controls.GridView>、使用しないでください、<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>プロパティを設定したり、アイテムの幅に影響するコンテンツを追加する、<xref:System.Windows.Controls.ListView>します。 設定すると、アライメントの問題が発生することなど、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティ、<xref:System.Windows.Controls.ItemsControl.ItemContainerStyle%2A>します。 プロパティを指定するか、項目の幅に影響するコンテンツを定義する、<xref:System.Windows.Controls.GridView>のプロパティを使用して、<xref:System.Windows.Controls.GridView>クラスとその関連のクラスなど<xref:System.Windows.Controls.GridViewColumn>します。  
   

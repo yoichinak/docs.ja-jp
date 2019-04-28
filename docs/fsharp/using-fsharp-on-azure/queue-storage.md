@@ -4,11 +4,11 @@ description: Azure キューでは、アプリケーション コンポーネン
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: 58a46dfe905a32be77a13d11df8f0544546ea0ed
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756378"
 ---
 # <a name="get-started-with-azure-queue-storage-using-f"></a>F を使用した Azure Queue storage を概要します。\#
 
@@ -39,7 +39,7 @@ Queue storage の概念的概要についてを参照してください[queue st
 
 ### <a name="get-your-connection-string"></a>接続文字列を取得します。
 
-このチュートリアルでは、Azure Storage 接続文字列を必要があります。 接続文字列の詳細については、[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)を参照してください。
+このチュートリアルでは、Azure Storage 接続文字列を必要があります。 接続文字列の詳細については、次を参照してください。[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)します。
 
 チュートリアルでは、次のように、スクリプトで、接続文字列を入力します。
 

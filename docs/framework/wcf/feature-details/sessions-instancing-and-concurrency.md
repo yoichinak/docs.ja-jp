@@ -3,11 +3,11 @@ title: セッション、インスタンス化、およびコンカレンシー
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
 ms.openlocfilehash: 994b95bb8ebc14a9997e1e9510389fdf16098d12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748019"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>セッション、インスタンス化、およびコンカレンシー
 *"セッション"* とは、2 つのエンドポイント間で送信されるすべてのメッセージを相互に関連付けたものです。 *"インスタンス化"* とは、ユーザー定義のサービス オブジェクトとこれらのオブジェクトに関連する <xref:System.ServiceModel.InstanceContext> オブジェクトの有効期間を制御することです。 また、*コンカレンシー*は、<xref:System.ServiceModel.InstanceContext> で同時に実行されるスレッドの数の制御を表す用語です。  
@@ -19,21 +19,21 @@ ms.locfileid: "59229070"
   
  WCF のセッションでは、次の主な概念の機能があります。  
   
--   呼び出し側アプリケーションによって明示的に開始および終了される。  
+- 呼び出し側アプリケーションによって明示的に開始および終了される。  
   
--   セッション中に配信されたメッセージは、受信された順に処理される。  
+- セッション中に配信されたメッセージは、受信された順に処理される。  
   
--   セッションはメッセージのグループを相互に関連付けて通信を行う。 ここで "相互に関連付ける" は、抽象的な意味を持ちます。 たとえば、あるセッション ベースのチャネルでは、共有ネットワーク接続に基づいてメッセージが相互に関連付けられる一方、別のセッション ベースのチャネルでは、メッセージ本文にある共有タグに基づいてメッセージが相互に関連付けられます。 セッションから派生可能な機能は、相互関連付けの性質によって異なります。  
+- セッションはメッセージのグループを相互に関連付けて通信を行う。 ここで "相互に関連付ける" は、抽象的な意味を持ちます。 たとえば、あるセッション ベースのチャネルでは、共有ネットワーク接続に基づいてメッセージが相互に関連付けられる一方、別のセッション ベースのチャネルでは、メッセージ本文にある共有タグに基づいてメッセージが相互に関連付けられます。 セッションから派生可能な機能は、相互関連付けの性質によって異なります。  
   
--   WCF のセッションに関連付けられた一般的なデータ ストアはありません。  
+- WCF のセッションに関連付けられた一般的なデータ ストアはありません。  
   
  慣れている場合、<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>クラス[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーションと機能を提供、可能性があります、その種のセッションと WCF のセッションの間の次の相違点に注意してください。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、常にサーバーによって開始される。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、常にサーバーによって開始される。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、暗黙的に順序付けされない。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、暗黙的に順序付けされない。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、要求全体について一般的なデータ ストレージ機構を提供する。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、要求全体について一般的なデータ ストレージ機構を提供する。  
   
  クライアント アプリケーションとサービス アプリケーションでは、異なる方法でセッションと対話します。 クライアント アプリケーションはセッションを開始し、セッション内で送信されてきたメッセージの受信と処理を行います。 サービス アプリケーションでは、動作を追加するための機能拡張ポイントとしてセッションを使用できます。 これは <xref:System.ServiceModel.InstanceContext> を直接操作する、またはカスタムのインスタンス コンテキスト プロバイダーを実装することで可能になります。  
   
@@ -42,11 +42,11 @@ ms.locfileid: "59229070"
   
  次のインスタンス化モードを使用できます。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerCall>:新しい<xref:System.ServiceModel.InstanceContext>(およびサービス オブジェクト) がクライアント要求ごとに作成されます。  
+- <xref:System.ServiceModel.InstanceContextMode.PerCall>:新しい<xref:System.ServiceModel.InstanceContext>(およびサービス オブジェクト) がクライアント要求ごとに作成されます。  
   
--   <xref:System.ServiceModel.InstanceContextMode.PerSession>:新しい<xref:System.ServiceModel.InstanceContext>(およびサービス オブジェクト) が新しいクライアント セッションごとに作成され、(セッションをサポートするバインディングが必要)、そのセッションの有効期間にわたって保持されます。  
+- <xref:System.ServiceModel.InstanceContextMode.PerSession>:新しい<xref:System.ServiceModel.InstanceContext>(およびサービス オブジェクト) が新しいクライアント セッションごとに作成され、(セッションをサポートするバインディングが必要)、そのセッションの有効期間にわたって保持されます。  
   
--   <xref:System.ServiceModel.InstanceContextMode.Single>:1 つ<xref:System.ServiceModel.InstanceContext>(およびサービス オブジェクト)、アプリケーションの有効期間のすべてのクライアント要求を処理します。  
+- <xref:System.ServiceModel.InstanceContextMode.Single>:1 つ<xref:System.ServiceModel.InstanceContext>(およびサービス オブジェクト)、アプリケーションの有効期間のすべてのクライアント要求を処理します。  
   
  既定の <xref:System.ServiceModel.InstanceContextMode> 値 (サービス クラスで明示的に設定された <xref:System.ServiceModel.InstanceContextMode.PerSession> ) を次のコード例に示します。  
   
@@ -75,11 +75,11 @@ public class CalculatorService : ICalculatorInstance
   
  選択可能なコンカレンシー モードは次の 3 つです。  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Single>:各インスタンス コンテキストは、一度にインスタンス コンテキスト内でメッセージを処理する 1 つのスレッドの最大値で許可されています。 他のスレッドは、最初のスレッドがインスタンス コンテキストを使用し終えるまで、同じインスタンス コンテキストを使用できません。  
+- <xref:System.ServiceModel.ConcurrencyMode.Single>:各インスタンス コンテキストは、一度にインスタンス コンテキスト内でメッセージを処理する 1 つのスレッドの最大値で許可されています。 他のスレッドは、最初のスレッドがインスタンス コンテキストを使用し終えるまで、同じインスタンス コンテキストを使用できません。  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Multiple>:各サービス インスタンスは、メッセージの処理を同時に複数のスレッドを持つことができます。 このコンカレンシー モードを使用するには、サービスの実装がスレッドセーフである必要があります。  
+- <xref:System.ServiceModel.ConcurrencyMode.Multiple>:各サービス インスタンスは、メッセージの処理を同時に複数のスレッドを持つことができます。 このコンカレンシー モードを使用するには、サービスの実装がスレッドセーフである必要があります。  
   
--   <xref:System.ServiceModel.ConcurrencyMode.Reentrant>:各サービス インスタンスは、一度に 1 つのメッセージの処理が再入操作の呼び出しを受け入れます。 サービスは、WCF クライアント オブジェクトを通じて呼び出しが場合にのみ、これらの呼び出しを受け入れます。  
+- <xref:System.ServiceModel.ConcurrencyMode.Reentrant>:各サービス インスタンスは、一度に 1 つのメッセージの処理が再入操作の呼び出しを受け入れます。 サービスは、WCF クライアント オブジェクトを通じて呼び出しが場合にのみ、これらの呼び出しを受け入れます。  
   
 > [!NOTE]
 >  複数のスレッドを安全に使用するコードを理解し、適切に記述することが困難な場合もあります。 <xref:System.ServiceModel.ConcurrencyMode.Multiple> 値や <xref:System.ServiceModel.ConcurrencyMode.Reentrant> 値を使用する前に、これらのモード用にサービスが適切に設計されていることを確認してください。 詳細については、「 <xref:System.ServiceModel.ServiceBehaviorAttribute.ConcurrencyMode%2A> 」を参照してください。  

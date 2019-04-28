@@ -8,11 +8,11 @@ ms.assetid: 846ffa47-7257-4ce3-8cac-7ff627e0e34f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c98914f57c24dc51625564e266157731ff173337
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704571"
 ---
 # <a name="relativebindforresources-element"></a>\<relativeBindForResources > 要素
 サテライト アセンブリのプローブを最適化します。  
@@ -57,19 +57,19 @@ ms.locfileid: "59157380"
 ## <a name="remarks"></a>Remarks  
  記載されているのリソースについては、Resource Manager が一般に、プローブ、 [Packaging and Deploying Resources](../../../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)トピック。 つまり、リソース マネージャーは、リソースの特定のローカライズされたバージョンのプローブ、ときに、可能性があります、グローバル アセンブリ キャッシュ ファイルの場所、カルチャ固有のフォルダー、アプリケーションのコード ベース、クエリ Windows インストーラーでサテライト アセンブリでは、検索対象を発生させる、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。 `<relativeBindForResources>`要素は、Resource Manager がサテライト アセンブリをプローブする方法を最適化します。 次の条件下でリソースのプローブは、パフォーマンスを向上させることできます。  
   
--   ときに、サテライト アセンブリは、コード アセンブリと同じ場所にデプロイされます。 つまり、コード アセンブリがグローバル アセンブリ キャッシュにインストールする場合、サテライト アセンブリもインストールしなければなりませんがあります。 コード アセンブリは、アプリケーションのコード ベースでインストールする場合、コード ベースのカルチャ固有のフォルダーにもこのサテライト アセンブリをインストールする必要があります。  
+- ときに、サテライト アセンブリは、コード アセンブリと同じ場所にデプロイされます。 つまり、コード アセンブリがグローバル アセンブリ キャッシュにインストールする場合、サテライト アセンブリもインストールしなければなりませんがあります。 コード アセンブリは、アプリケーションのコード ベースでインストールする場合、コード ベースのカルチャ固有のフォルダーにもこのサテライト アセンブリをインストールする必要があります。  
   
--   Windows インストーラーが実行されていないまたはほとんど使用されないサテライト アセンブリのオンデマンドでインストールします。  
+- Windows インストーラーが実行されていないまたはほとんど使用されないサテライト アセンブリのオンデマンドでインストールします。  
   
--   アプリケーション コードが処理しない場合、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。  
+- アプリケーション コードが処理しない場合、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。  
   
  設定、`enabled`の属性、`<relativeBindForResources>`要素を`true`サテライト アセンブリの次のように Resource Manager のプローブを最適化します。  
   
--   親コード アセンブリの場所を使って、サテライト アセンブリをプローブします。  
+- 親コード アセンブリの場所を使って、サテライト アセンブリをプローブします。  
   
--   Windows インストーラーをサテライト アセンブリに照会しません。  
+- Windows インストーラーをサテライト アセンブリに照会しません。  
   
--   発生させない、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。  
+- 発生させない、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType>イベント。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -3,11 +3,11 @@ title: HTTP、TCP、または名前付きパイプを使用した同期シナリ
 ms.date: 03/30/2017
 ms.assetid: 7e90af1b-f8f6-41b9-a63a-8490ada502b1
 ms.openlocfilehash: 28e612b190f4993e1ce7da0d1083c4e55f827d4a
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784863"
 ---
 # <a name="synchronous-scenarios-using-http-tcp-or-named-pipe"></a>HTTP、TCP、または名前付きパイプを使用した同期シナリオ
 ここでは、シングル スレッド クライアントで HTTP、TCP、または名前付きパイプを使用したときの、さまざまな同期要求/応答シナリオでのアクティビティと転送について説明します。 参照してください[HTTP、TCP、または名前付きパイプを使用した非同期シナリオ](../../../../../docs/framework/wcf/diagnostics/tracing/asynchronous-scenarios-using-http-tcp-or-named-pipe.md)マルチ スレッド要求の詳細についてはします。  

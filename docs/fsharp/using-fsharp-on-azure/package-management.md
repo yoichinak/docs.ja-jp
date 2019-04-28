@@ -4,11 +4,11 @@ description: パケットを作成または Nuget を使用して管理するF#A
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: fd9c4a15ab0741d44d6d5cf909b7219d310affb0
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "33566973"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756534"
 ---
 # <a name="package-management-for-f-azure-dependencies"></a>F# の Azure の依存関係のためのパッケージ管理
 
@@ -42,7 +42,7 @@ ms.locfileid: "33566973"
 
 ## <a name="using-nuget"></a>Nuget を使用してください。
 
-使用している場合[NuGet](https://www.nuget.org/)の依存関係マネージャーとして使用することができます、 `nuget.exe` Azure の依存関係を追加するツール。 例えば:
+使用している場合[NuGet](https://www.nuget.org/)の依存関係マネージャーとして使用することができます、 `nuget.exe` Azure の依存関係を追加するツール。 例:
 
     > nuget install WindowsAzure.Storage -ExcludeVersion
 

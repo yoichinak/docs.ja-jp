@@ -13,11 +13,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
 ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936670"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 演算子 (Visual Basic)
 2 つの数値を除算し、残りの部分のみを返します。  
@@ -70,9 +70,9 @@ End Module
   
  関連する演算子を以下に示します。  
   
--   [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)除算の商の整数を返します。 たとえば、式`14 \ 4`3 に評価されます。  
+- [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)除算の商の整数を返します。 たとえば、式`14 \ 4`3 に評価されます。  
   
--   [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)浮動小数点数として、残りの部分を含む、完全な商を返します。 たとえば、式`14 / 4`3.5 に評価されます。  
+- [/演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-operator.md)浮動小数点数として、残りの部分を含む、完全な商を返します。 たとえば、式`14 / 4`3.5 に評価されます。  
   
 ## <a name="attempted-division-by-zero"></a>0 による除算  
  場合`number2`の動作を 0 に評価される、`Mod`演算子はオペランドのデータ型によって異なります。 整数の除算をスローする<xref:System.DivideByZeroException>例外。 浮動小数点除算が返されます<xref:System.Double.NaN>します。  

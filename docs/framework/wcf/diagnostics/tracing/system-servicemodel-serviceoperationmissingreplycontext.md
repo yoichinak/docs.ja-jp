@@ -3,11 +3,11 @@ title: System.ServiceModel.ServiceOperationMissingReplyContext
 ms.date: 03/30/2017
 ms.assetid: 1373c661-e63a-4e11-a635-689451450274
 ms.openlocfilehash: 99b6c4cdb0546411eb894b518b01cc6ee6e72065
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149904"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759974"
 ---
 # <a name="systemservicemodelserviceoperationmissingreplycontext"></a>System.ServiceModel.ServiceOperationMissingReplyContext
 System.ServiceModel.ServiceOperationMissingReplyContext  

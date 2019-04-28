@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data binding [WPF], clearing bindings
 ms.assetid: 73962a93-32a9-4bcd-9240-bcfbb239093a
 ms.openlocfilehash: 8140928d44555e399ddf4ebd73407a251ad3cffe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101420"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931470"
 ---
 # <a name="how-to-clear-bindings"></a>方法: バインディングをクリアする
 この例では、オブジェクトからバインディングをクリアする方法を示します。  

@@ -2,28 +2,22 @@
 title: デバッグ、トレース、およびプロファイリング
 ms.date: 03/30/2017
 helpviewer_keywords:
-- debugging [.NET Framework]
-- .NET Framework application configuration, debugging
-- debugging [.NET Framework], .NET Framework application debugging
-- troubleshooting applications [.NET Framework], profiling
-- application development [.NET Framework], debugging
-- .NET Framework application configuration, profiling
-- profiling applications
-- troubleshooting applications [.NET Framework], debugging
-- troubleshooting applications [.NET Framework]
-- application development [.NET Framework], profiling
+  - 'debugging [.NET Framework]'
+  - '.NET Framework application configuration, debugging'
+  - 'debugging [.NET Framework], .NET Framework application debugging'
+  - 'troubleshooting applications [.NET Framework], profiling'
+  - 'application development [.NET Framework], debugging'
+  - '.NET Framework application configuration, profiling'
+  - profiling applications
+  - 'troubleshooting applications [.NET Framework], debugging'
+  - 'troubleshooting applications [.NET Framework]'
+  - 'application development [.NET Framework], profiling'
 ms.assetid: 4a04863e-2475-46f4-bc3f-3c11510c2a4b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 855a1329c9804e4b40d796c639bbe8768156dcc2
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092502"
 ---
 # <a name="debugging-tracing-and-profiling"></a>デバッグ、トレース、およびプロファイリング
-.NET Framework アプリケーションをデバッグするには、アプリケーションにデバッガーをアタッチできるようにコンパイラとランタイム環境を構成する必要があり、可能であれば、アプリケーションとそれに対応する Microsoft Intermediate Language (MSIL) について記号マップと行マップの両方を生成する必要があります。 マネージ アプリケーションのデバッグが完了した後は、パフォーマンスを向上するようにプロファイルできます。 プロファイルでは、最も頻繁に実行されるコードを生成するソース コード行と、そのコードの実行に要する時間を評価して記述します。  
+.NET Framework アプリケーションをデバッグするには、アプリケーションにデバッガーをアタッチできるようにコンパイラとランタイム環境を構成する必要があり、可能であれば、アプリケーションとそれに対応する Microsoft Intermediate Language (MSIL) について記号マップと行マップの両方を生成する必要があります。 マネージド アプリケーションのデバッグが完了した後は、パフォーマンスを向上するようにプロファイルできます。 プロファイルでは、最も頻繁に実行されるコードを生成するソース コード行と、そのコードの実行に要する時間を評価して記述します。  
   
  .NET Framework アプリケーションは、構成の詳細の多くを処理する Visual Studio を使用すると容易にデバッグできます。 Visual Studio がインストールされていない場合は、.NET Framework の <xref:System.Diagnostics> 名前空間に含まれるデバッグ用のクラスを使用して .NET Framework アプリケーションのパフォーマンスを確認して向上させることができます。 この名前空間には、実行フローをトレースするためのクラスとして <xref:System.Diagnostics.Trace>、<xref:System.Diagnostics.Debug>、および <xref:System.Diagnostics.TraceSource> が含まれ、コードをプロファイルするためのクラスとして <xref:System.Diagnostics.Process>、<xref:System.Diagnostics.EventLog>、および <xref:System.Diagnostics.PerformanceCounter> が含まれています。  
   

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - PageSetupDialog component
 ms.assetid: 6dae05bc-c0fd-4357-bb93-841a1631d98f
 ms.openlocfilehash: 7c65eb54bb95b9a20cd1e43f0d491af47985f2e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771489"
 ---
 # <a name="how-to-determine-page-properties-using-the-pagesetupdialog-component"></a>方法: PageSetupDialog コンポーネントを使用してページのプロパティを決定する
 [PageSetupDialog](pagesetupdialog-component-windows-forms.md) コンポーネントは、レイアウト、用紙サイズ、およびその他のページ レイアウトの選択肢をドキュメントのユーザーに示します。  

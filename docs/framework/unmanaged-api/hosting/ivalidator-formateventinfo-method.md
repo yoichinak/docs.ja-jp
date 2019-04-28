@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ecbecec86d81357000679ab50e12f06d91c9f50d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765376"
 ---
 # <a name="ivalidatorformateventinfo-method"></a>IValidator::FormatEventInfo メソッド
 指定した検証エラーに対応するエラー メッセージを取得します。  

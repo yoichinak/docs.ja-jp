@@ -3,11 +3,11 @@ title: <peerTransport>
 ms.date: 03/30/2017
 ms.assetid: c1a5013a-9dd4-4a27-b114-795b8b323177
 ms.openlocfilehash: 6765259f290047a4199a422b4ad0cced2ffee9ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179830"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783352"
 ---
 # <a name="peertransport"></a>\<peerTransport >
 カスタム バインドのピア トランスポートを定義します。  

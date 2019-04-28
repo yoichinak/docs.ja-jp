@@ -11,11 +11,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: c5fa29e8-47f7-4691-829b-0e697a691f36
 ms.openlocfilehash: a887dacfcb83b4b6ea4cb2690ab09b0d1b20b4fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772893"
 ---
 # <a name="walkthrough-creating-a-masterdetail-form-using-two-windows-forms-datagridview-controls"></a>チュートリアル: Windows フォームの 2 つの DataGridView コントロールを使用したマスター/詳細形式のフォームを作成する
 使用するための最も一般的なシナリオの 1 つ、<xref:System.Windows.Forms.DataGridView>コントロールが、*マスター/詳細*フォーム、2 つのデータベース テーブル間の親/子リレーションシップが表示されます。 マスター テーブルの行を選択すると、対応する子データで更新する詳細テーブル。  
@@ -27,7 +27,7 @@ ms.locfileid: "59295797"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを完了するための要件は次のとおりです。  
   
--   Northwind SQL Server のサンプル データベースが存在するサーバーにアクセスします。  
+- Northwind SQL Server のサンプル データベースが存在するサーバーにアクセスします。  
   
 ## <a name="creating-the-form"></a>フォームの作成  
   
@@ -58,22 +58,22 @@ ms.locfileid: "59295797"
   
 #### <a name="to-test-the-form"></a>フォームをテストするには  
   
--   アプリケーションをコンパイルして実行します。  
+- アプリケーションをコンパイルして実行します。  
   
      2 つが表示されます<xref:System.Windows.Forms.DataGridView>上、他のいずれかの制御します。 上部には、Northwind から顧客`Customers`テーブル、および下部には、`Orders`選択した顧客に対応します。 上で別の行を選択すると<xref:System.Windows.Forms.DataGridView>、下の内容<xref:System.Windows.Forms.DataGridView>適宜変更します。  
   
 ## <a name="next-steps"></a>次の手順  
  このアプリケーションでは、基本を理解、<xref:System.Windows.Forms.DataGridView>コントロールの機能です。 動作と外観をカスタマイズすることができます、<xref:System.Windows.Forms.DataGridView>いくつかの方法で制御します。  
   
--   罫線とヘッダーのスタイルを変更します。 詳細については、「[方法 :罫線を変更して、グリッド線のスタイルで、Windows フォーム DataGridView コントロール](change-the-border-and-gridline-styles-in-the-datagrid.md)します。  
+- 罫線とヘッダーのスタイルを変更します。 詳細については、「[方法 :罫線を変更して、グリッド線のスタイルで、Windows フォーム DataGridView コントロール](change-the-border-and-gridline-styles-in-the-datagrid.md)します。  
   
--   有効にするか、ユーザー入力を制限、<xref:System.Windows.Forms.DataGridView>コントロール。 詳細については、「[方法 :行の追加を回避し、削除を Windows フォーム DataGridView コントロール](prevent-row-addition-and-deletion-datagridview.md)、および[方法。列を読み取り専用の Windows フォーム DataGridView コントロール](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)します。  
+- 有効にするか、ユーザー入力を制限、<xref:System.Windows.Forms.DataGridView>コントロール。 詳細については、「[方法 :行の追加を回避し、削除を Windows フォーム DataGridView コントロール](prevent-row-addition-and-deletion-datagridview.md)、および[方法。列を読み取り専用の Windows フォーム DataGridView コントロール](how-to-make-columns-read-only-in-the-windows-forms-datagridview-control.md)します。  
   
--   ユーザー入力を検証、<xref:System.Windows.Forms.DataGridView>コントロール。 詳細については、「[チュートリアル:フォームの DataGridView コントロールを Windows のデータの検証](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)です。  
+- ユーザー入力を検証、<xref:System.Windows.Forms.DataGridView>コントロール。 詳細については、「[チュートリアル:フォームの DataGridView コントロールを Windows のデータの検証](walkthrough-validating-data-in-the-windows-forms-datagridview-control.md)です。  
   
--   仮想モードを使用して、非常に大きなデータ セットを処理します。 詳細については、「[チュートリアル:仮想モードの実装で、Windows フォーム DataGridView コントロール](implementing-virtual-mode-wf-datagridview-control.md)します。  
+- 仮想モードを使用して、非常に大きなデータ セットを処理します。 詳細については、「[チュートリアル:仮想モードの実装で、Windows フォーム DataGridView コントロール](implementing-virtual-mode-wf-datagridview-control.md)します。  
   
--   セルの外観をカスタマイズします。 詳細については、「[方法 :Windows フォームの DataGridView コントロール内のセルの外観をカスタマイズ](customize-the-appearance-of-cells-in-the-datagrid.md)と[方法。Windows フォーム DataGridView コントロールの既定のセル スタイルを設定](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)します。  
+- セルの外観をカスタマイズします。 詳細については、「[方法 :Windows フォームの DataGridView コントロール内のセルの外観をカスタマイズ](customize-the-appearance-of-cells-in-the-datagrid.md)と[方法。Windows フォーム DataGridView コントロールの既定のセル スタイルを設定](how-to-set-default-cell-styles-for-the-windows-forms-datagridview-control.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

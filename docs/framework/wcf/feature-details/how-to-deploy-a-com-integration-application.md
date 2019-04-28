@@ -3,11 +3,11 @@ title: '方法: COM+ 統合アプリケーションを展開する'
 ms.date: 03/30/2017
 ms.assetid: 2e5a0510-db3c-4988-a09c-696285836650
 ms.openlocfilehash: fcf525943e6e453253c6f4d3bcfa8a1a08df6909
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778327"
 ---
 # <a name="how-to-deploy-a-com-integration-application"></a>方法: COM+ 統合アプリケーションを展開する
 COM+ 統合アプリケーションを作成した後、これを別のコンピューターに展開する必要が生じる場合があります。 ここでは、COM+ 統合アプリケーションをコンピューター間で移動する方法を説明します。  

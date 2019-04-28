@@ -3,11 +3,11 @@ title: '方法: WCF Web HTTP プログラミング モデルを使用して任�
 ms.date: 03/30/2017
 ms.assetid: 0283955a-b4ae-458d-ad9e-6fbb6f529e3d
 ms.openlocfilehash: 55fdc6824ab82bdf3b5913cd600815ed05bd909c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747850"
 ---
 # <a name="how-to-create-a-service-that-returns-arbitrary-data-using-the-wcf-web-http-programming-model"></a>方法: WCF Web HTTP プログラミング モデルを使用して任意のデータを返すサービスを作成する
 開発者は、データがサービス操作から返される流れを完全に制御する必要が生じることがあります。 これは、サービス操作が WCF でサポートされていない形式のデータを返す必要があるときに、大文字と小文字です。 このトピックでは、WCF WEB HTTP プログラミング モデルを使用して、このようなサービスを作成するについて説明します。 ストリームを返す操作を 1 つ持つサービスを例に取ります。  
@@ -173,7 +173,7 @@ namespace RawImageService
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   コード例のコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll を参照します。  
+- コード例のコンパイル時には、System.ServiceModel.dll と System.ServiceModel.Web.dll を参照します。  
   
 ## <a name="see-also"></a>関連項目
 

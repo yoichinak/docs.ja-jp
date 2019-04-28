@@ -9,11 +9,11 @@ helpviewer_keywords:
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
 ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777131"
 ---
 # <a name="application-startup-time"></a>アプリケーションの起動時間
 WPF アプリケーションの起動に必要な時間には、かなりばらつきがあります。 このトピックでは、Windows Presentation Foundation (WPF) アプリケーションの認識される起動時間と実際の起動時間を短縮する方法について説明します。  

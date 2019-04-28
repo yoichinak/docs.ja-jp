@@ -22,11 +22,11 @@ helpviewer_keywords:
 - Case statement [Visual Basic], Select...Case
 ms.assetid: 68877b65-5419-4bf0-a465-20cd0e4c7d44
 ms.openlocfilehash: f99db4f1dc224e5f75ee67ba94c3745f28438724
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814615"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783891"
 ---
 # <a name="selectcase-statement-visual-basic"></a>Select...Case ステートメント (Visual Basic)
 式の値に応じて、ステートメントのグループをいくつかのいずれかを実行します。  

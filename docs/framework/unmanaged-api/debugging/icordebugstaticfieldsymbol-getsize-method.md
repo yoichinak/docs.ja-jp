@@ -5,11 +5,11 @@ ms.assetid: 72389860-7e37-4656-ba46-b6aeee1860f8
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9baa3632b6ede9ce45f34302611710344ed33761
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154324"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782604"
 ---
 # <a name="icordebugstaticfieldsymbolgetsize-method"></a>ICorDebugStaticFieldSymbol::GetSize メソッド
 静的フィールドのサイズ (バイト単位) を取得します。  

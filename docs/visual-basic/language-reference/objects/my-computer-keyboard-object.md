@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Computer.Keyboard object
 ms.assetid: 78dec9be-4e69-4ede-b9be-2ac34bec2b26
 ms.openlocfilehash: 19e2780d526c0ae37d6577aef25a5a4940005cb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832230"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751451"
 ---
 # <a name="mycomputerkeyboard-object"></a>My.Computer.Keyboard オブジェクト
 現在どのキーが押されているかなど、キーボードの現在の状態にアクセスするためのプロパティを提供します。また、キーストロークを作業中のウィンドウに送るメソッドを提供します。  

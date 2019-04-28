@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: e35c7f9e-648b-4fcc-9361-d365c3e42c9a
 ms.openlocfilehash: 3038e35947cd8f97266d374a367a77380df440dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772178"
 ---
 # <a name="modifying-data-with-a-dbdataadapter"></a>DbDataAdapter を使用したデータの変更
 <xref:System.Data.Common.DbProviderFactory.CreateDataAdapter%2A> オブジェクトの <xref:System.Data.Common.DbProviderFactory> メソッドを使用すると、ファクトリの作成時に指定した基になるデータ プロバイダーに対して厳密に型指定された <xref:System.Data.Common.DbDataAdapter> オブジェクトを取得できます。 続いて <xref:System.Data.Common.DbCommandBuilder> を使用することで、データ ソースに対して <xref:System.Data.DataSet> のデータの挿入、更新、削除を実行するコマンドを作成できます。  

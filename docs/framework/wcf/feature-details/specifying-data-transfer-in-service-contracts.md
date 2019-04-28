@@ -8,11 +8,11 @@ helpviewer_keywords:
 - service contracts [WCF], data transfer
 ms.assetid: 7c5a26c8-89c9-4bcb-a4bc-7131e6d01f0c
 ms.openlocfilehash: 88bdfe6e659e6e83365b3d17c9067581f209d154
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331521"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748149"
 ---
 # <a name="specifying-data-transfer-in-service-contracts"></a>サービス コントラクトでのデータ転送の指定
 Windows Communication Foundation (WCF) は、メッセージング インフラストラクチャと考えることができます。 サービス操作では、メッセージを受信し、それらのメッセージを処理し、送信することができます。 メッセージは、操作コントラクトを使用して記述されます。 たとえば、次のようなコントラクトがあるとします。  

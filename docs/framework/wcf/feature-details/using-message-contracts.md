@@ -8,11 +8,11 @@ helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
 ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121980"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932796"
 ---
 # <a name="using-message-contracts"></a>メッセージ コントラクトの使用
 通常 Windows Communication Foundation (WCF) アプリケーションを構築するときに、開発者はデータ構造とシリアル化の問題に細心の注意し、データを送信するメッセージの構造を意識する必要はありません。 このようなアプリケーションでは、パラメーターまたは戻り値用にデータ コントラクトを作成するのは簡単です  (詳細については、次を参照してください[Data Transfer in Service Contracts にを指定する](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)。  
@@ -244,11 +244,11 @@ public class PatientRecord
 ## <a name="soap-header-attributes"></a>SOAP ヘッダーの属性  
  SOAP 標準では、ヘッダーに設定可能な次の属性が定義されます。  
   
--   `Actor/Role` (SOAP 1.1 では `Actor`、SOAP 1.2 では `Role`)  
+- `Actor/Role` (SOAP 1.1 では `Actor`、SOAP 1.2 では `Role`)  
   
--   `MustUnderstand`  
+- `MustUnderstand`  
   
--   `Relay`  
+- `Relay`  
   
  `Actor` 属性または `Role` 属性は、指定のヘッダーが対象とするノードの URI (Uniform Resource Identifier) を指定します。 `MustUnderstand` 属性は、ヘッダー処理ノードがヘッダーを認識する必要があるかどうかを指定します。 `Relay` 属性は、ダウンストリーム ノードにヘッダーを中継する必要があるかどうかを指定します。 WCF は除いて、受信メッセージに対してこれらの属性の処理を実行しません、`MustUnderstand`属性に、このトピックの後半の「メッセージ コントラクトのバージョン管理」セクションで指定されています。 ただし、後述するように、必要に応じてこれらの属性を読み書きすることができます。  
   
@@ -323,9 +323,9 @@ public class BankingTransaction
   
  ヘッダーのバージョン管理には、次のルールが適用されます。  
   
--   WCF が不足しているヘッダーをオブジェクトできません-対応するメンバーは、既定値のままにします。  
+- WCF が不足しているヘッダーをオブジェクトできません-対応するメンバーは、既定値のままにします。  
   
--   WCF には、予期しない余分なヘッダーも無視されます。 このルールの 1 つの例外は、入力 SOAP メッセージ内の余分なヘッダーの `MustUnderstand` 属性が `true` に設定されている場合です。この場合、認識する必要のあるヘッダーを処理できないため、例外がスローされます。  
+- WCF には、予期しない余分なヘッダーも無視されます。 このルールの 1 つの例外は、入力 SOAP メッセージ内の余分なヘッダーの `MustUnderstand` 属性が `true` に設定されている場合です。この場合、認識する必要のあるヘッダーを処理できないため、例外がスローされます。  
   
  メッセージ本文にも同様のバージョン管理ルールがあります。メッセージ本文の不足している部分と追加された部分はいずれも無視されます。  
   
@@ -334,9 +334,9 @@ public class BankingTransaction
   
  他のメッセージ コントラクト型から継承したメッセージ コントラクト型を使用して、メッセージを作成したり、メッセージにアクセスしたりする場合、次のルールが適用されます。  
   
--   継承階層内のすべてのメッセージ ヘッダーが収集され、そのメッセージの完全なヘッダー セットが形成されます。  
+- 継承階層内のすべてのメッセージ ヘッダーが収集され、そのメッセージの完全なヘッダー セットが形成されます。  
   
--   継承階層内のすべてのメッセージ本文が収集され、完全なメッセージ本文が形成されます。 本文の各部分は、継承階層内での位置に関係なく、通常の順序ルール (<xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティ順、続いてアルファベット順) に従って並べられます。 メッセージ本文が継承ツリーの複数レベルに存在するメッセージ コントラクト継承の使用は、あまりお勧めできません。 基本クラスと派生クラスでヘッダーまたは本文に同じ名前が定義されている場合は、base-most クラスからのメンバーがそのヘッダーまたは本文の値を保存するために使用されます。  
+- 継承階層内のすべてのメッセージ本文が収集され、完全なメッセージ本文が形成されます。 本文の各部分は、継承階層内での位置に関係なく、通常の順序ルール (<xref:System.ServiceModel.MessageBodyMemberAttribute.Order%2A?displayProperty=nameWithType> プロパティ順、続いてアルファベット順) に従って並べられます。 メッセージ本文が継承ツリーの複数レベルに存在するメッセージ コントラクト継承の使用は、あまりお勧めできません。 基本クラスと派生クラスでヘッダーまたは本文に同じ名前が定義されている場合は、base-most クラスからのメンバーがそのヘッダーまたは本文の値を保存するために使用されます。  
   
  次のコード例のクラスについて考えてみます。  
   
@@ -361,26 +361,26 @@ public class PatientRecord : PersonRecord
 ## <a name="wsdl-considerations"></a>WSDL に関する留意点  
  メッセージ コントラクトを使用するサービスから Web サービス記述言語 (WSDL: Web Services Description Language) コントラクトを生成するときには、メッセージ コントラクトのすべての機能が結果の WSDL に反映されるわけではないことに留意してください。 次の点を考慮してください。  
   
--   WSDL では、ヘッダー配列の概念を表現することができません。 <xref:System.ServiceModel.MessageHeaderArrayAttribute> を使用してヘッダー配列を含むメッセージを作成した場合、結果の WSDL は配列ではなく 1 つのヘッダーだけに反映されます。  
+- WSDL では、ヘッダー配列の概念を表現することができません。 <xref:System.ServiceModel.MessageHeaderArrayAttribute> を使用してヘッダー配列を含むメッセージを作成した場合、結果の WSDL は配列ではなく 1 つのヘッダーだけに反映されます。  
   
--   結果の WSDL ドキュメントに一部の保護レベル情報が反映されない場合があります。  
+- 結果の WSDL ドキュメントに一部の保護レベル情報が反映されない場合があります。  
   
--   WSDL で生成されたメッセージ型が、メッセージ コントラクト型のクラスと同じ名前になります。  
+- WSDL で生成されたメッセージ型が、メッセージ コントラクト型のクラスと同じ名前になります。  
   
--   複数の処理で同じメッセージ コントラクトを使用すると、WSDL ドキュメント内に複数のメッセージ型が生成されます。 以降も使用できるように、"2"、"3" などの番号を付加することで名前を一意にします。 WSDL をインポートし直すと、名前以外は同一の複数のメッセージ コントラクト型が作成されます。  
+- 複数の処理で同じメッセージ コントラクトを使用すると、WSDL ドキュメント内に複数のメッセージ型が生成されます。 以降も使用できるように、"2"、"3" などの番号を付加することで名前を一意にします。 WSDL をインポートし直すと、名前以外は同一の複数のメッセージ コントラクト型が作成されます。  
   
 ## <a name="soap-encoding-considerations"></a>SOAP エンコードに関する留意点  
  WCF では、レガシー SOAP エンコード スタイルの XML を使用できます。 ただし、その使用は推奨されません。 (サービス コントラクトに適用されている `Use` で、`Encoded` プロパティを <xref:System.ServiceModel.XmlSerializerFormatAttribute?displayProperty=nameWithType> に設定して) このスタイルを使用する場合、次の追加の考慮事項が適用されます。  
   
--   メッセージ ヘッダーはサポートされません。つまり、<xref:System.ServiceModel.MessageHeaderAttribute> 属性と <xref:System.ServiceModel.MessageHeaderArrayAttribute> 配列属性は、SOAP エンコーディングと互換性がありません。  
+- メッセージ ヘッダーはサポートされません。つまり、<xref:System.ServiceModel.MessageHeaderAttribute> 属性と <xref:System.ServiceModel.MessageHeaderArrayAttribute> 配列属性は、SOAP エンコーディングと互換性がありません。  
   
--   メッセージ コントラクトがラップされていない場合、つまり、<xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> プロパティが `false` に設定されている場合は、メッセージ コントラクトが持つことのできる本文の部分は 1 つに限られます。  
+- メッセージ コントラクトがラップされていない場合、つまり、<xref:System.ServiceModel.MessageContractAttribute.IsWrapped%2A> プロパティが `false` に設定されている場合は、メッセージ コントラクトが持つことのできる本文の部分は 1 つに限られます。  
   
--   要求メッセージ コントラクトのラッパー要素の名前は、操作の名前と一致する必要があります。 この場合、メッセージ コントラクトの `WrapperName` プロパティを使用します。  
+- 要求メッセージ コントラクトのラッパー要素の名前は、操作の名前と一致する必要があります。 この場合、メッセージ コントラクトの `WrapperName` プロパティを使用します。  
   
--   応答メッセージ コントラクトのラッパー要素の名前は、操作の名前にサフィックスとして "Response" を付けたものと同じである必要があります。 この場合、メッセージ コントラクトの <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> プロパティを使用します。  
+- 応答メッセージ コントラクトのラッパー要素の名前は、操作の名前にサフィックスとして "Response" を付けたものと同じである必要があります。 この場合、メッセージ コントラクトの <xref:System.ServiceModel.MessageContractAttribute.WrapperName%2A> プロパティを使用します。  
   
--   SOAP エンコードはオブジェクト参照を保存します。 次に例を示します。  
+- SOAP エンコードはオブジェクト参照を保存します。 次に例を示します。  
   
     ```csharp  
     [MessageContract(WrapperName="updateChangeRecord")]  

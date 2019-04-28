@@ -7,20 +7,20 @@ helpviewer_keywords:
 - designer actions
 ms.assetid: cac337e6-00f6-4584-80f4-75728f5ea113
 ms.openlocfilehash: a93402be30cb461ac6a0ed9daa4a684598a85da1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932601"
 ---
 # <a name="walkthrough-performing-common-tasks-using-smart-tags-on-windows-forms-controls"></a>チュートリアル: Windows フォーム コントロールのスマート タグを使用した共通タスクの実行
 Windows フォーム アプリケーションのフォームとコントロールを作成するときは、繰り返し実行する多くのタスクを使用します。 これらは、発生する、一般的に実行されるタスクの一部を示します。  
   
--   追加またはでタブを削除する、<xref:System.Windows.Forms.TabControl>します。  
+- 追加またはでタブを削除する、<xref:System.Windows.Forms.TabControl>します。  
   
--   コントロールは、その親にドッキングします。  
+- コントロールは、その親にドッキングします。  
   
--   向きの変更、<xref:System.Windows.Forms.SplitContainer>コントロール。  
+- 向きの変更、<xref:System.Windows.Forms.SplitContainer>コントロール。  
   
  開発のスピード、多くのコントロールは、デザイン時に 1 つのジェスチャで上記のような一般的なタスクを実行するための状況依存のメニューにはスマート タグを提供します。 これらのタスクが呼び出されます*スマート タグの動詞*します。  
   
@@ -28,11 +28,11 @@ Windows フォーム アプリケーションのフォームとコントロー�
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   Windows フォーム プロジェクトの作成  
+- Windows フォーム プロジェクトの作成  
   
--   スマート タグを使用します。  
+- スマート タグを使用します。  
   
--   有効にして、スマート タグを無効化  
+- 有効にして、スマート タグを無効化  
   
  終了すると、これらの重要なレイアウト機能が果たす役割について理解できます。  
   

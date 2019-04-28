@@ -3,11 +3,11 @@ title: WCF Visual Studio テンプレート
 ms.date: 03/30/2017
 ms.assetid: 6a608575-3535-4190-89da-911e24c8374f
 ms.openlocfilehash: b0cca0cd585a45b795db4d573659e0d19ecd78dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780667"
 ---
 # <a name="wcf-visual-studio-templates"></a>WCF Visual Studio テンプレート
 Windows Communication Foundation (WCF) の Visual Studio テンプレートは、定義済みのプロジェクトと項目テンプレートを WCF サービスや周辺アプリケーションをすばやく作成する Visual Studio で使用することができます。  
@@ -20,11 +20,11 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
   
  使用して新しいプロジェクトを作成する場合、 **WCF サービス**テンプレート、新しいプロジェクトに自動的に次の 3 つのファイルが含まれています。  
   
--   サービス コントラクト ファイル (IService1.cs または IService1.vb)。 サービス コントラクトのファイルは、適用される WCF サービスの属性を持つインターフェイスです。 このファイルには、サービスの定義方法を示す単純なサービスの定義が含まれています。その他に、パラメーター ベースの操作や、単純なデータ コントラクトのサンプルも含まれています。 これは、WCF サービス プロジェクトを作成したら、コード エディターに表示される既定のファイルです。  
+- サービス コントラクト ファイル (IService1.cs または IService1.vb)。 サービス コントラクトのファイルは、適用される WCF サービスの属性を持つインターフェイスです。 このファイルには、サービスの定義方法を示す単純なサービスの定義が含まれています。その他に、パラメーター ベースの操作や、単純なデータ コントラクトのサンプルも含まれています。 これは、WCF サービス プロジェクトを作成したら、コード エディターに表示される既定のファイルです。  
   
--   サービス実装ファイル (Service1.cs または Service1.vb)。 サービス実装ファイルは、サービス コントラクト ファイルに定義されているコントラクトを実装します。  
+- サービス実装ファイル (Service1.cs または Service1.vb)。 サービス実装ファイルは、サービス コントラクト ファイルに定義されているコントラクトを実装します。  
   
--   アプリケーション構成ファイル (App.config)。 構成ファイルでは、セキュリティで保護された HTTP バインディングで WCF サービス モデルの基本的な要素を提供します。 サービスのエンドポイントも含まれており、メタデータの交換も可能です。  
+- アプリケーション構成ファイル (App.config)。 構成ファイルでは、セキュリティで保護された HTTP バインディングで WCF サービス モデルの基本的な要素を提供します。 サービスのエンドポイントも含まれており、メタデータの交換も可能です。  
   
 > [!NOTE]
 >  Visual Studio を使用して実行した場合、プロジェクトの構成ファイルと App.config ファイルを認識するように構成、 [WCF サービス ホスト (WcfSvcHost.exe)](../../../docs/framework/wcf/wcf-service-host-wcfsvchost-exe.md)既定の構成します。 サービス ライブラリを実行可能ファイルでホストする場合は、DLL の構成ファイルは無効になるため、その実行可能ファイルの構成ファイルに構成コードを移動する必要があります。  
@@ -34,13 +34,13 @@ Windows Communication Foundation (WCF) の Visual Studio テンプレートは�
   
  使用して新しいプロジェクトを作成する場合、 **WCF Web アプリケーション サービス**テンプレート プロジェクトにはには、次の 4 つのファイルが含まれています。  
   
--   サービス ホスト ファイル (service1.svc)。  
+- サービス ホスト ファイル (service1.svc)。  
   
--   サービス コントラクト ファイル (IService1.cs または IService1.vb)。  
+- サービス コントラクト ファイル (IService1.cs または IService1.vb)。  
   
--   サービス実装ファイル (Service1.svc.cs または Service1.svc.vb)。  
+- サービス実装ファイル (Service1.svc.cs または Service1.svc.vb)。  
   
--   Web 構成ファイル (Web.config)。  
+- Web 構成ファイル (Web.config)。  
   
  このテンプレートでは、自動的に Web サイトが作成されて (仮想ディレクトリに配置されます)、サービスがホストされます。  
   

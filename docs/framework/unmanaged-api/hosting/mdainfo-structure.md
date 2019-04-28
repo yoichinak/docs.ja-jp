@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3be6f2b9454ed2f74d2cc6792cd9aaa2c25215db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765207"
 ---
 # <a name="mdainfo-structure"></a>MDAInfo 構造体
 詳細について説明します、 `Event_MDAFired` 、マネージ デバッグ アシスタント (MDA) の作成をトリガーするイベントです。  
@@ -47,9 +47,9 @@ typedef struct _MDAInfo {
   
  MDA の作成をトリガーするイベントが発生したときに、ランタイムは、次の手順を受け取ります。  
   
--   ホストが登録されていない場合、 [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)呼び出すことによってインスタンス[iclroneventmanager::registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)の通知を受け取る、`Event_MDAFired`ランタイムを実行イベント、その既定では、ホストなしの動作。  
+- ホストが登録されていない場合、 [IActionOnCLREvent](../../../../docs/framework/unmanaged-api/hosting/iactiononclrevent-interface.md)呼び出すことによってインスタンス[iclroneventmanager::registeractiononevent](../../../../docs/framework/unmanaged-api/hosting/iclroneventmanager-registeractiononevent-method.md)の通知を受け取る、`Event_MDAFired`ランタイムを実行イベント、その既定では、ホストなしの動作。  
   
--   ホストには、このイベントのハンドラーが登録されている場合、ランタイムは、デバッガーがプロセスにアタッチされているかどうかを確認します。 場合は、ランタイムはデバッガーを中断します。 デバッガーが引き続き発生する場合は、ホストを呼び出します。 デバッガーがアタッチされていない場合、ランタイムが呼び出す`IActionOnCLREvent::OnEvent`へのポインターを渡すと、`MDAInfo`インスタンスとして、`data`パラメーター。  
+- ホストには、このイベントのハンドラーが登録されている場合、ランタイムは、デバッガーがプロセスにアタッチされているかどうかを確認します。 場合は、ランタイムはデバッガーを中断します。 デバッガーが引き続き発生する場合は、ホストを呼び出します。 デバッガーがアタッチされていない場合、ランタイムが呼び出す`IActionOnCLREvent::OnEvent`へのポインターを渡すと、`MDAInfo`インスタンスとして、`data`パラメーター。  
   
  Mda をアクティブ化して、MDA がアクティブ化されたときに通知するホストを選択できます。 これにより、ホストは、既定の動作をオーバーライドして、プロセスの状態の破損を防ぐために、イベントを発生させたマネージ スレッドを中止できます。 詳細については、Mda を使用して、次を参照してください。[マネージ デバッグ アシスタントによるエラーの診断](../../../../docs/framework/debug-trace-profile/diagnosing-errors-with-managed-debugging-assistants.md)します。  
   

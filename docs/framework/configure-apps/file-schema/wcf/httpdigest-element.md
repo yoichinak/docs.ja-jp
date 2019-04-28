@@ -3,11 +3,11 @@ title: <httpDigest> 要素
 ms.date: 03/30/2017
 ms.assetid: 3da4f276-dfd9-4247-8c07-01d83618727c
 ms.openlocfilehash: 914711e4d6c3dbb1ccc741af1b3abd6b8de716a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751047"
 ---
 # <a name="httpdigest-element"></a>\<httpDigest > 要素
 サービスに対するクライアントの認証時に使用されるダイジェスト型の資格情報を指定します。  

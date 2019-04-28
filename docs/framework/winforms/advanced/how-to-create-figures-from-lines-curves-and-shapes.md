@@ -9,11 +9,11 @@ helpviewer_keywords:
 - figures [Windows Forms], creating from lines
 ms.assetid: 82fd56c7-b443-4765-9b7c-62ce030656ec
 ms.openlocfilehash: eeaf478375e08734b20d83b6f3c8030732495013
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937697"
 ---
 # <a name="how-to-create-figures-from-lines-curves-and-shapes"></a>方法: 直線、曲線、および形状から図形を作成する
 図を作成するには、構築、<xref:System.Drawing.Drawing2D.GraphicsPath>などのメソッドを呼び出すと<xref:System.Drawing.Drawing2D.GraphicsPath.AddLine%2A>と<xref:System.Drawing.Drawing2D.GraphicsPath.AddCurve%2A>にプリミティブを追加するパス。  
@@ -21,9 +21,9 @@ ms.locfileid: "59224911"
 ## <a name="example"></a>例  
  次のコード例では、図形のパスを作成します。  
   
--   最初の例では、1 つの図に、パスを作成します。 1 つの円弧の図で構成されます。これは既定の座標系に反時計回りに-180 度の掃引角度を円弧には。  
+- 最初の例では、1 つの図に、パスを作成します。 1 つの円弧の図で構成されます。これは既定の座標系に反時計回りに-180 度の掃引角度を円弧には。  
   
--   2 番目の例では、2 つの図に、パスを作成します。 最初の図では、円弧が続く行です。 2 番目の図は、後に続く行曲線行です。 最初の図は開いたままされ、2 番目の図が閉じられます。  
+- 2 番目の例では、2 つの図に、パスを作成します。 最初の図では、円弧が続く行です。 2 番目の図は、後に続く行曲線行です。 最初の図は開いたままされ、2 番目の図が閉じられます。  
   
  [!code-csharp[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/CS/Class1.cs#21)]
  [!code-vb[System.Drawing.ConstructingDrawingPaths#21](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.ConstructingDrawingPaths/VB/Class1.vb#21)]  

@@ -17,18 +17,18 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ed32fe643a7722eaf1af38e6079096194690e950
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771894"
 ---
 # <a name="iclrruntimehost-interface"></a>ICLRRuntimeHost インターフェイス
 同様の機能を提供します、 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)以下の変更をバージョン 1 では、.NET Framework で提供されるインターフェイス。  
   
--   追加、 [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)ホスト コントロールのインターフェイスを設定します。  
+- 追加、 [SetHostControl](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-sethostcontrol-method.md)ホスト コントロールのインターフェイスを設定します。  
   
--   によって提供されるいくつかのメソッドの省略`ICorRuntimeHost`します。  
+- によって提供されるいくつかのメソッドの省略`ICorRuntimeHost`します。  
   
 ## <a name="methods"></a>メソッド  
   

@@ -6,18 +6,18 @@ helpviewer_keywords:
 - object variables [Visual Basic], null reference
 ms.assetid: e6d30578-bdae-4142-a3ac-a10697bf696a
 ms.openlocfilehash: 373d4ae84c44b212ad02b0b4266af75921e40423
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818690"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769058"
 ---
 # <a name="how-to-make-an-object-variable-not-refer-to-any-instance-visual-basic"></a>方法: オブジェクトが変数になる任意のインスタンス (Visual Basic) を参照していません
 任意のオブジェクトのインスタンスからオブジェクト変数設定することで関連付けを解除することができます[Nothing](../../../../visual-basic/language-reference/nothing.md)します。  
   
 ### <a name="to-disassociate-an-object-variable-from-any-object-instance"></a>任意のオブジェクトのインスタンスからオブジェクト変数の関連付けを解除するには  
   
--   変数を設定します`Nothing`代入ステートメントでします。  
+- 変数を設定します`Nothing`代入ステートメントでします。  
   
     ```  
     ' Assume account is a defined class  
