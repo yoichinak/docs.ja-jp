@@ -7,11 +7,11 @@ helpviewer_keywords:
 - security terms [WCF]
 ms.assetid: 68dde024-8e51-40ba-804f-ec52d85e9ca9
 ms.openlocfilehash: f0d5ecccdd48da2799e3299406f219a10f47e84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768616"
 ---
 # <a name="wcf-security-terminology"></a>WCF セキュリティ用語
 セキュリティについて説明するときに使用する用語の中には、だれもが知っているとは限らないものもあります。 ここでは、セキュリティ用語の一部を簡単に説明します。このトピックは、すべての項目について詳細に説明することを目的としたものではありません。  

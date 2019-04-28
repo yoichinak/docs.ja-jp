@@ -3,11 +3,11 @@ title: SendMail カスタム アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
 ms.openlocfilehash: 89252098402deee991ea01b8e76082a5f4b8c389
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321862"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785945"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail カスタム アクティビティ
 このサンプルでは、<xref:System.Activities.AsyncCodeActivity> から派生するカスタム アクティビティを作成して、SMTP を使用して電子メールを送信し、ワークフロー アプリケーション内で使用する方法を示します。 カスタム アクティビティの機能を使用して<xref:System.Net.Mail.SmtpClient>非同期的に電子メールを送信して、認証を使用したメールを送信します。 また、テスト モード、トークン置換、ファイル テンプレート、テスト ドロップ パスなどのエンドユーザーの機能も提供しています。  
@@ -107,13 +107,13 @@ new SendMail
   
  SMTP サーバーの設定に関する詳細については、次のリンクを参照してください。  
   
--   [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
+- [Microsoft Technet](https://go.microsoft.com/fwlink/?LinkId=166060)  
   
--   [SMTP サービス (IIS 6.0) を構成します。](https://go.microsoft.com/fwlink/?LinkId=150456)  
+- [SMTP サービス (IIS 6.0) を構成します。](https://go.microsoft.com/fwlink/?LinkId=150456)  
   
--   [IIS 7.0:SMTP 電子メールを構成します。](https://go.microsoft.com/fwlink/?LinkId=150457)  
+- [IIS 7.0:SMTP 電子メールを構成します。](https://go.microsoft.com/fwlink/?LinkId=150457)  
   
--   [SMTP サービスをインストールする方法](https://go.microsoft.com/fwlink/?LinkId=150458)  
+- [SMTP サービスをインストールする方法](https://go.microsoft.com/fwlink/?LinkId=150458)  
   
  ダウンロードには、サードパーティで提供されている SMTP エミュレーターを使用できます。  
   

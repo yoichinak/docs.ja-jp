@@ -10,11 +10,11 @@ helpviewer_keywords:
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
 ms.openlocfilehash: e7c7dd72c733036031fcf28d0dd2c1bc023d6552
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781499"
 ---
 # <a name="collection-types-in-data-contracts"></a>データ コントラクトのコレクション型
 *"コレクション"* は、特定の型の項目のリストです。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]では、このようなリストは、配列や他のさまざまな型を使用して表すことができます (ジェネリック List、ジェネリック <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>、または <xref:System.Collections.ArrayList>)。 たとえば、コレクションでは指定された顧客のアドレスのリストを保持できます。 これらのコレクションは、実際の型に関係なく、 *リスト コレクション*と呼びます。  
@@ -83,9 +83,9 @@ ms.locfileid: "59106744"
 ### <a name="collection-data-contract-naming"></a>コレクション データ コントラクトの名前付け  
  コレクション型の名前付け規則は、「 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)」で説明する通常のデータ コントラクト型の名前付けの規則に似ていますが、重要な違いがいくつかあります。  
   
--   名前をカスタマイズする際に、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性ではなく、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性を使用します。 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性にも、 `Name` プロパティと `Namespace` プロパティがあります。  
+- 名前をカスタマイズする際に、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性ではなく、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性を使用します。 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性にも、 `Name` プロパティと `Namespace` プロパティがあります。  
   
--   <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用しない場合、コレクション型の既定の名前と名前空間は、コレクションに含まれる型の名前と名前空間によって決まります。 これらは、コレクション型自体の名前と名前空間の影響を受けません。 型の一例を次に示します。  
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用しない場合、コレクション型の既定の名前と名前空間は、コレクションに含まれる型の名前と名前空間によって決まります。 これらは、コレクション型自体の名前と名前空間の影響を受けません。 型の一例を次に示します。  
   
     ```csharp  
     public CustomerList1 : Collection<string> {}  
@@ -123,7 +123,7 @@ ms.locfileid: "59106744"
   
  これは、カスタマイズされていない型の XML 表現と等価ではなくなっていることに注意してください。  
   
--   `Name` プロパティと `Namespace` プロパティを使用して、名前付けをさらにカスタマイズできます。 次のクラスを参照してください。  
+- `Name` プロパティと `Namespace` プロパティを使用して、名前付けをさらにカスタマイズできます。 次のクラスを参照してください。  
   
      [!code-csharp[c_collection_types_in_data_contracts#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_collection_types_in_data_contracts/cs/program.cs#3)]
      [!code-vb[c_collection_types_in_data_contracts#3](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_collection_types_in_data_contracts/vb/program.vb#3)]  
@@ -278,9 +278,9 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  型が複数のリスト コレクション インターフェイスを実装している場合、以下の制限が適用されます。  
   
--   型が、異なる型のジェネリック <xref:System.Collections.Generic.IEnumerable%601> (またはその派生インターフェイス) を複数回実装している場合、その型は有効な参照されるコレクション型とは見なされず、無視されます。 これは、一部の実装が無効であったり、オープン ジェネリックを使用していたりする場合も該当します。 たとえば、型が <xref:System.Collections.Generic.IEnumerable%601> のジェネリック `int` と、T のジェネリック <xref:System.Collections.Generic.IEnumerable%601> を実装している場合、 `int` の参照されるコレクションとしても、その他の型の参照されるコレクションとしても使用されることはありません。この場合、型が `Add` を受け入れる `int` メソッドと T 型のパラメーターを受け入れる `Add` メソッドのいずれか、または両方を持っているかどうかは関係ありません。  
+- 型が、異なる型のジェネリック <xref:System.Collections.Generic.IEnumerable%601> (またはその派生インターフェイス) を複数回実装している場合、その型は有効な参照されるコレクション型とは見なされず、無視されます。 これは、一部の実装が無効であったり、オープン ジェネリックを使用していたりする場合も該当します。 たとえば、型が <xref:System.Collections.Generic.IEnumerable%601> のジェネリック `int` と、T のジェネリック <xref:System.Collections.Generic.IEnumerable%601> を実装している場合、 `int` の参照されるコレクションとしても、その他の型の参照されるコレクションとしても使用されることはありません。この場合、型が `Add` を受け入れる `int` メソッドと T 型のパラメーターを受け入れる `Add` メソッドのいずれか、または両方を持っているかどうかは関係ありません。  
   
--   型がジェネリック コレクション インターフェイスと <xref:System.Collections.IList>を実装している場合、ジェネリック コレクション インターフェイスが <xref:System.Object>型のクローズ ジェネリックでない限り、参照されるコレクション型として使用されることはありません。  
+- 型がジェネリック コレクション インターフェイスと <xref:System.Collections.IList>を実装している場合、ジェネリック コレクション インターフェイスが <xref:System.Object>型のクローズ ジェネリックでない限り、参照されるコレクション型として使用されることはありません。  
   
  ディクショナリ コレクションの場合、以下の表内のケースだけがサポートされます。  
   
@@ -303,21 +303,21 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ### <a name="serializing-collections"></a>コレクションのシリアル化  
  コレクションのシリアル化規則を以下に示します。  
   
--   コレクション型は、組み合わせる (コレクションのコレクションを持つ) ことができます。 ジャグ配列は、コレクションのコレクションとして扱われます。 多次元配列はサポートされていません。  
+- コレクション型は、組み合わせる (コレクションのコレクションを持つ) ことができます。 ジャグ配列は、コレクションのコレクションとして扱われます。 多次元配列はサポートされていません。  
   
--   バイト配列と <xref:System.Xml.XmlNode> の配列は、コレクションではなく、プリミティブとして扱われる特殊な配列の型です。 バイト配列をシリアル化すると、バイトごとの個別の要素ではなく、Base64 でエンコードされたデータのチャンクを含む単一の XML 要素が生成されます。 方法についての詳細の配列<xref:System.Xml.XmlNode>が処理するを参照してください[XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。 これらの特殊な型もコレクションに参加できます。バイト配列の配列の場合、複数の XML 要素が生成され、各要素に Base64 でエンコードされたデータのチャンクが含まれます。  
+- バイト配列と <xref:System.Xml.XmlNode> の配列は、コレクションではなく、プリミティブとして扱われる特殊な配列の型です。 バイト配列をシリアル化すると、バイトごとの個別の要素ではなく、Base64 でエンコードされたデータのチャンクを含む単一の XML 要素が生成されます。 方法についての詳細の配列<xref:System.Xml.XmlNode>が処理するを参照してください[XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)。 これらの特殊な型もコレクションに参加できます。バイト配列の配列の場合、複数の XML 要素が生成され、各要素に Base64 でエンコードされたデータのチャンクが含まれます。  
   
--   <xref:System.Runtime.Serialization.DataContractAttribute> 属性をコレクション型に適用した場合、型はコレクションとしてではなく、通常のデータ コントラクト型として扱われるようになります。  
+- <xref:System.Runtime.Serialization.DataContractAttribute> 属性をコレクション型に適用した場合、型はコレクションとしてではなく、通常のデータ コントラクト型として扱われるようになります。  
   
--   コレクション型が <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装している場合、次の規則が適用されます。 `myType:IList<string>, IXmlSerializable`型と仮定します。  
+- コレクション型が <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装している場合、次の規則が適用されます。 `myType:IList<string>, IXmlSerializable`型と仮定します。  
   
-    -   宣言型が `IList<string>`の場合、この型はリストとしてシリアル化されます。  
+    - 宣言型が `IList<string>`の場合、この型はリストとしてシリアル化されます。  
   
-    -   宣言型が `myType`の場合、この型は `IXmlSerializable`としてシリアル化されます。  
+    - 宣言型が `myType`の場合、この型は `IXmlSerializable`としてシリアル化されます。  
   
-    -   宣言型が `IXmlSerializable`の場合は、既知の型のリストに `IXmlSerializable`を追加しているときにのみ、この型が `myType` としてシリアル化されます。  
+    - 宣言型が `IXmlSerializable`の場合は、既知の型のリストに `IXmlSerializable`を追加しているときにのみ、この型が `myType` としてシリアル化されます。  
   
--   コレクションは、以下の表に示すメソッドを使用してシリアル化および逆シリアル化されます。  
+- コレクションは、以下の表に示すメソッドを使用してシリアル化および逆シリアル化されます。  
   
 |コレクション型の実装|シリアル化で呼び出されるメソッド|逆シリアル化で呼び出されるメソッド|  
 |--------------------------------|-----------------------------------------|-------------------------------------------|  
@@ -331,22 +331,22 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
   
  前の表に示すコレクション インターフェイスは、優先度の高いものから順に並べられています。 たとえば、型が <xref:System.Collections.IList> とジェネリック <xref:System.Collections.Generic.IEnumerable%601>の両方を実装している場合、 <xref:System.Collections.IList> の規則に従って、コレクションがシリアル化および逆シリアル化されます。  
   
--   逆シリアル化では、すべてのコレクションが、まず、既定のコンストラクターを呼び出して型のインスタンスを作成することによって逆シリアル化されます。既定のコンストラクターは、シリアル化と逆シリアル化の両方で、シリアライザーがコレクション型をコレクションとして処理するために必要となります。  
+- 逆シリアル化では、すべてのコレクションが、まず、既定のコンストラクターを呼び出して型のインスタンスを作成することによって逆シリアル化されます。既定のコンストラクターは、シリアル化と逆シリアル化の両方で、シリアライザーがコレクション型をコレクションとして処理するために必要となります。  
   
--   同じジェネリック コレクション インターフェイスが複数回実装されており (型が <xref:System.Collections.Generic.ICollection%601> のジェネリック `Integer` と、 <xref:System.Collections.Generic.ICollection%601> のジェネリック <xref:System.String>の両方を実装している場合など)、優先度がより高いインターフェイスが見つからない場合は、コレクションが有効なコレクションとして扱われません。  
+- 同じジェネリック コレクション インターフェイスが複数回実装されており (型が <xref:System.Collections.Generic.ICollection%601> のジェネリック `Integer` と、 <xref:System.Collections.Generic.ICollection%601> のジェネリック <xref:System.String>の両方を実装している場合など)、優先度がより高いインターフェイスが見つからない場合は、コレクションが有効なコレクションとして扱われません。  
   
--   コレクション型には <xref:System.SerializableAttribute> 属性を適用でき、 <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装できます。 これらはいずれも無視されます。 ただし、型がコレクション型の要件を完全に満たしていない場合 ( `Add` メソッドがないなど)、その型はコレクション型と見なされないため、 <xref:System.SerializableAttribute> 属性と <xref:System.Runtime.Serialization.ISerializable> インターフェイスを使用して、型をシリアル化できるかどうかが判断されます。  
+- コレクション型には <xref:System.SerializableAttribute> 属性を適用でき、 <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装できます。 これらはいずれも無視されます。 ただし、型がコレクション型の要件を完全に満たしていない場合 ( `Add` メソッドがないなど)、その型はコレクション型と見なされないため、 <xref:System.SerializableAttribute> 属性と <xref:System.Runtime.Serialization.ISerializable> インターフェイスを使用して、型をシリアル化できるかどうかが判断されます。  
   
--   コレクションをカスタマイズするために、コレクションに <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用した場合、上記の <xref:System.SerializableAttribute> 代替機構は除去されます。 カスタマイズされたコレクションがコレクション型の要件を満たしていない場合には、代わりに <xref:System.Runtime.Serialization.InvalidDataContractException> 例外がスローされます。 多くの場合、この例外文字列には、指定された型が有効なコレクションと見なされない理由を説明する情報 ( `Add` メソッドがない、既定のコンストラクターがないなど) が含まれるため、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用することは、しばしばデバッグに役立ちます。  
+- コレクションをカスタマイズするために、コレクションに <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用した場合、上記の <xref:System.SerializableAttribute> 代替機構は除去されます。 カスタマイズされたコレクションがコレクション型の要件を満たしていない場合には、代わりに <xref:System.Runtime.Serialization.InvalidDataContractException> 例外がスローされます。 多くの場合、この例外文字列には、指定された型が有効なコレクションと見なされない理由を説明する情報 ( `Add` メソッドがない、既定のコンストラクターがないなど) が含まれるため、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用することは、しばしばデバッグに役立ちます。  
   
 ### <a name="collection-naming"></a>コレクションの名前付け  
  コレクションの名前付け規則を以下に示します。  
   
--   既定の名前空間のすべてのディクショナリ コレクション データ コントラクトとプリミティブ型を含むリスト コレクション データ コントラクトが`http://schemas.microsoft.com/2003/10/Serialization/Arrays`Namespace を使用してオーバーライドしない限り、します。 このために、組み込みの XSD 型に割り当てられた型と、 `char`、 `Timespan`、および `Guid` の各型がプリミティブと見なされます。  
+- 既定の名前空間のすべてのディクショナリ コレクション データ コントラクトとプリミティブ型を含むリスト コレクション データ コントラクトが`http://schemas.microsoft.com/2003/10/Serialization/Arrays`Namespace を使用してオーバーライドしない限り、します。 このために、組み込みの XSD 型に割り当てられた型と、 `char`、 `Timespan`、および `Guid` の各型がプリミティブと見なされます。  
   
--   Namespace を使用してオーバーライドしていない場合、プリミティブ型以外の型を含むコレクション型の既定の名前空間は、コレクションに含まれる型のデータ コントラクト名前空間と同じです。  
+- Namespace を使用してオーバーライドしていない場合、プリミティブ型以外の型を含むコレクション型の既定の名前空間は、コレクションに含まれる型のデータ コントラクト名前空間と同じです。  
   
--   Name を使用してオーバーライドしていない場合、リスト コレクション データ コントラクトの既定の名前は、文字列 "ArrayOf" とコレクションに含まれる型のデータ コントラクト名を組み合わせたものです。 たとえば、Integers のジェネリック List のデータ コントラクト名は "ArrayOfint" です。 `Object` のデータ コントラクト名は "anyType" であることに留意してください。したがって、 <xref:System.Collections.ArrayList> のような非ジェネリック リストのデータ コントラクト名は、"ArrayOfanyType" になります。  
+- Name を使用してオーバーライドしていない場合、リスト コレクション データ コントラクトの既定の名前は、文字列 "ArrayOf" とコレクションに含まれる型のデータ コントラクト名を組み合わせたものです。 たとえば、Integers のジェネリック List のデータ コントラクト名は "ArrayOfint" です。 `Object` のデータ コントラクト名は "anyType" であることに留意してください。したがって、 <xref:System.Collections.ArrayList> のような非ジェネリック リストのデータ コントラクト名は、"ArrayOfanyType" になります。  
   
  `Name`を使用してオーバーライドしていない場合、ディクショナリ コレクション データ コントラクトの既定の名前は、文字列 "ArrayOfKeyValueOf"、キーの型のデータ コントラクト名、および値の型のデータ コントラクト名をこの順番で組み合わせたものです。 たとえば、String と Integer のジェネリック ディクショナリのデータ コントラクト名は、"ArrayOfKeyValueOfstringint" になります。 また、キーの型と値の型がいずれもプリミティブ型ではない場合は、キーおよび値の型のデータ コントラクト名前空間の名前空間ハッシュが名前に付加されます。 名前空間ハッシュの詳細については、次を参照してください。 [Data Contract Names](../../../../docs/framework/wcf/feature-details/data-contract-names.md)します。  
   
@@ -357,13 +357,13 @@ svcutil.exe MyService.wsdl MyServiceSchema.xsd /r:C:\full_path_to_system_dll\Sys
 ## <a name="collection-customization"></a>コレクションのカスタマイズ  
  <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を次のように使用することは禁止されています。次のように使用すると、 <xref:System.Runtime.Serialization.InvalidDataContractException> 例外が発生します。  
   
--   <xref:System.Runtime.Serialization.DataContractAttribute> 属性が既に適用されている型、またはその派生型のいずれかに <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用する。  
+- <xref:System.Runtime.Serialization.DataContractAttribute> 属性が既に適用されている型、またはその派生型のいずれかに <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用する。  
   
--   <xref:System.Runtime.Serialization.CollectionDataContractAttribute> インターフェイスを実装する型に <xref:System.Xml.Serialization.IXmlSerializable> 属性を適用する。  
+- <xref:System.Runtime.Serialization.CollectionDataContractAttribute> インターフェイスを実装する型に <xref:System.Xml.Serialization.IXmlSerializable> 属性を適用する。  
   
--   コレクション型以外の型に <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用する。  
+- コレクション型以外の型に <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を適用する。  
   
--   ディクショナリ型以外の型に適用された <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> 属性で、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> または <xref:System.Runtime.Serialization.CollectionDataContractAttribute> の設定を試みる。  
+- ディクショナリ型以外の型に適用された <xref:System.Runtime.Serialization.CollectionDataContractAttribute.KeyName%2A> 属性で、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute.ValueName%2A> または <xref:System.Runtime.Serialization.CollectionDataContractAttribute> の設定を試みる。  
   
 ### <a name="polymorphism-rules"></a>ポリモーフィズム規則  
  既に説明したように、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute> 属性を使用してコレクションをカスタマイズすると、コレクションの可換性を妨げることがあります。 カスタマイズされた 2 つのコレクション型を等価と見なすことができるのは、それらの名前、名前空間、項目名、およびキーと値の名前 (ディクショナリ コレクションの場合) が一致する場合だけです。  

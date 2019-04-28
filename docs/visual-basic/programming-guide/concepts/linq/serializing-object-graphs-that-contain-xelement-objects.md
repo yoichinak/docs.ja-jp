@@ -3,11 +3,11 @@ title: XElement オブジェクト (Visual Basic) を含むオブジェクト �
 ms.date: 07/20/2015
 ms.assetid: c0cc5c92-5ca3-44b1-98dd-371601df721b
 ms.openlocfilehash: ffb348a0305b0f94c0870edead2a4852eee237cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835909"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786568"
 ---
 # <a name="serializing-object-graphs-that-contain-xelement-objects-visual-basic"></a>XElement オブジェクト (Visual Basic) を含むオブジェクト グラフをシリアル化します。
 このトピックでは、<xref:System.Xml.Linq.XElement> 型のオブジェクトへの参照が含まれているオブジェクト グラフのシリアル化機能について説明します。 この種のシリアル化を円滑に行うために、<xref:System.Xml.Linq.XElement> は <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装しています。  

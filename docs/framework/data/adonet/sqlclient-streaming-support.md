@@ -3,11 +3,11 @@ title: SqlClient ストリーミング サポート
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
 ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57844237"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61698448"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient ストリーミング サポート
 

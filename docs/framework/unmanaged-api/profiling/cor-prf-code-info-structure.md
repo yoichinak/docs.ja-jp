@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 56734a9971759b78a835917c4914cf55edaa47a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775168"
 ---
 # <a name="corprfcodeinfo-structure"></a>COR_PRF_CODE_INFO 構造体
 メモリに格納されている 1 個の連続ブロックからなるネイティブ コードを表します。  

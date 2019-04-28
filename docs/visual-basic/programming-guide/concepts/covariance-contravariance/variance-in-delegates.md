@@ -3,11 +3,11 @@ title: デリゲート (Visual Basic) の分散
 ms.date: 07/20/2015
 ms.assetid: 38e9353f-74f8-4211-a8f0-7a495414df4a
 ms.openlocfilehash: 6d341c7c2b5adeebcafc5b0787b132ab6bd57e41
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787232"
 ---
 # <a name="variance-in-delegates-visual-basic"></a>デリゲート (Visual Basic) の分散
 
@@ -76,7 +76,7 @@ Dim dGeneric As SampleGenericDelegate(Of Second, First) = AddressOf ASecondRFirs
 Dim dGenericConversion As SampleGenericDelegate(Of Second, First) = AddressOf AFirstRSecond
 ```
 
-例については、[デリゲート (Visual Basic) を使用して分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)と[Func および Action 汎用デリゲート (Visual Basic) を使用して分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)を参照してください。
+例については、次を参照してください。[デリゲート (Visual Basic) を使用して分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-in-delegates.md)と[Func および Action 汎用デリゲート (Visual Basic) を使用して分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)します。
 
 ## <a name="variance-in-generic-type-parameters"></a>ジェネリック型パラメーターの分散
 
@@ -133,7 +133,7 @@ End Sub
 
 - <xref:System.Converter%602> デリゲート
 
-詳細と例については、[Func および Action 汎用デリゲート (Visual Basic) を使用して分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)を参照してください。
+詳細と例については、次を参照してください。 [Func および Action 汎用デリゲート (Visual Basic) を使用して分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/using-variance-for-func-and-action-generic-delegates.md)します。
 
 ### <a name="declaring-variant-type-parameters-in-generic-delegates"></a>汎用デリゲートのバリアント型パラメーターの宣言
 
@@ -209,7 +209,7 @@ End Sub
 
 ## <a name="relaxed-delegate-conversion-in-visual-basic"></a>Visual Basic での厳密でないデリゲート変換
 
-厳密でないデリゲート変換によりより柔軟にメソッド シグネチャをデリゲート型と一致します。 たとえば、パラメーターの指定を省略してメソッドをデリゲートに割り当てるときに、関数の戻り値を省略できます。 詳細については、[厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)を参照してください。
+厳密でないデリゲート変換によりより柔軟にメソッド シグネチャをデリゲート型と一致します。 たとえば、パラメーターの指定を省略してメソッドをデリゲートに割り当てるときに、関数の戻り値を省略できます。 詳細については、次を参照してください。[厳密でないデリゲート変換](../../../../visual-basic/programming-guide/language-features/delegates/relaxed-delegate-conversion.md)します。
 
 ## <a name="see-also"></a>関連項目
 

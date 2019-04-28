@@ -18,11 +18,11 @@ ms.assetid: c4b7ed01-5e38-4959-a3b6-ef9765d6ccf1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5fa4376cdb0496cfd25f4764257c4f3afbc7268
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54697050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795279"
 ---
 # <a name="time-zone-overview"></a>タイム ゾーンの概要
 
@@ -59,7 +59,7 @@ ms.locfileid: "54697050"
 
 依存関係、<xref:System.TimeZoneInfo>レジストリのクラスがすることはできません、タイム ゾーンに対応するアプリケーションが特定の特定のタイム ゾーンがレジストリで定義されていることを意味します。 そのため、(ローカルのタイム ゾーンまたは UTC を示すタイム ゾーン以外の) 特定のタイム ゾーンをインスタンス化する場合、例外処理を使用する必要があります。 アプリケーションを必要な場合に続行できる何らかの方法も提供する必要があります<xref:System.TimeZoneInfo>レジストリからオブジェクトをインスタンス化することはできません。
 
-必要なタイム ゾーンでは、休暇を処理するために、<xref:System.TimeZoneInfo>クラスが含まれています、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッドで、レジストリにも記載されていないカスタムのタイム ゾーンを作成して使用することができます。 カスタムのタイム ゾーンの作成の詳細については、[方法。調整規則のないタイム ゾーンを作成](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)と[方法。タイム ゾーン調整規則を作成](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)を参照してください。 さらに、使用、<xref:System.TimeZoneInfo.ToSerializedString%2A>メソッドを新しく作成されたタイム ゾーンを文字列に変換し、(データベース、テキスト ファイル、レジストリ、またはアプリケーションのリソース) などのデータ ストアに保存します。 使用することができますし、<xref:System.TimeZoneInfo.FromSerializedString%2A>にこの文字列に変換するメソッドが戻る、<xref:System.TimeZoneInfo>オブジェクト。 詳細については、[方法。埋め込みリソースにタイム ゾーンを保存](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)と[方法。埋め込みリソースからタイム ゾーンを復元](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)を参照してください。
+必要なタイム ゾーンでは、休暇を処理するために、<xref:System.TimeZoneInfo>クラスが含まれています、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッドで、レジストリにも記載されていないカスタムのタイム ゾーンを作成して使用することができます。 カスタムのタイム ゾーンの作成の詳細については、次を参照してください。[方法。調整規則のないタイム ゾーンを作成](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)と[方法。タイム ゾーン調整規則を作成](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)です。 さらに、使用、<xref:System.TimeZoneInfo.ToSerializedString%2A>メソッドを新しく作成されたタイム ゾーンを文字列に変換し、(データベース、テキスト ファイル、レジストリ、またはアプリケーションのリソース) などのデータ ストアに保存します。 使用することができますし、<xref:System.TimeZoneInfo.FromSerializedString%2A>にこの文字列に変換するメソッドが戻る、<xref:System.TimeZoneInfo>オブジェクト。 詳細については、「[方法: 埋め込みリソースにタイム ゾーンを保存](../../../docs/standard/datetime/save-time-zones-to-an-embedded-resource.md)と[方法。埋め込みリソースからタイム ゾーンを復元](../../../docs/standard/datetime/restore-time-zones-from-an-embedded-resource.md)します。
 
 各タイム ゾーンは、UTC からのベース オフセットと、既存の調整規則を反映した UTC からのオフセットによって表されるため、あるタイム ゾーンの時刻は、簡単に別のタイム ゾーンの時間に変換できます。 この目的で、<xref:System.TimeZoneInfo>オブジェクトにはなど、いくつかの変換メソッドが含まれています。
 

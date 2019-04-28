@@ -3,11 +3,11 @@ title: ISOF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 5b2b0d34-d0a7-4bcd-baf2-58aa8456d00b
 ms.openlocfilehash: 097d6e7d452ee62a2c8934d2c5fcfdddbeaffc73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772373"
 ---
 # <a name="isof-entity-sql"></a>ISOF (Entity SQL)
 式の型が指定の型であるか、またはそのサブタイプであるかを判断します。  

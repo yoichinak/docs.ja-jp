@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RoutedCommand class [WPF], creating
 ms.assetid: aaf6979f-69ab-406f-979f-5766daa85fa0
 ms.openlocfilehash: d433658a3039c262d2f682eff09df646d978018c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109045"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776481"
 ---
 # <a name="how-to-create-a-routedcommand"></a>方法: RoutedCommand を作成する
 カスタムを作成する方法を示します<xref:System.Windows.Input.RoutedCommand>を作成して、カスタム コマンドを実装する方法と、<xref:System.Windows.Input.ExecutedRoutedEventHandler>と<xref:System.Windows.Input.CanExecuteRoutedEventHandler>にアタッチし、<xref:System.Windows.Input.CommandBinding>します。  コマンド実行の詳細については、次を参照してください。、[コマンド実行の概要](commanding-overview.md)します。  

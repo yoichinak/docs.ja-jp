@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: f11a631d-4094-4e11-bb03-4ede74b30281
 author: BrucePerlerMS
 ms.openlocfilehash: a5af3893ab72d23c2b3814569decfc50431b8e55
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55277525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793836"
 ---
 # <a name="securitytokenhandlers"></a>\<securityTokenHandlers>
 エンドポイントに登録されているセキュリティ トークン ハンドラーのコレクションを指定します。  

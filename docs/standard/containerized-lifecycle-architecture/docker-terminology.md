@@ -8,8 +8,8 @@ ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785594"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語
 

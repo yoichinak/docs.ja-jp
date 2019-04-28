@@ -3,11 +3,11 @@ title: 純粋関数 (Visual Basic) を使用したリファクタリング
 ms.date: 07/20/2015
 ms.assetid: af0ea62f-4f57-4868-b624-a85524055935
 ms.openlocfilehash: ac14385b87899490099dd0664264daef538319a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787115"
 ---
 # <a name="refactoring-using-a-pure-function-visual-basic"></a>純粋関数 (Visual Basic) を使用したリファクタリング
 次の例では、リファクタリング前の例では、[拡張メソッド (Visual Basic) を使用したリファクタリング](../../../../visual-basic/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)、この例では、検索、段落のテキストが純粋静的メソッドに移動するコードでは、純粋関数を使用する`ParagraphText`.  
@@ -170,7 +170,7 @@ StyleName:Code >Hello World<
 ### <a name="next-steps"></a>次の手順  
  次の例では、XML を別の形式に射影する方法を示します。  
   
--   [さまざまな図形 (Visual Basic) での XML の射影](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
+- [さまざまな図形 (Visual Basic) での XML の射影](../../../../visual-basic/programming-guide/concepts/linq/projecting-xml-in-a-different-shape.md)  
   
 ## <a name="see-also"></a>関連項目
 

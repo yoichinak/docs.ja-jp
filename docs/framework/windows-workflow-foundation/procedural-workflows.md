@@ -3,11 +3,11 @@ title: 手続き型ワークフロー
 ms.date: 03/30/2017
 ms.assetid: 52401de9-9115-472d-8fd9-047af6a072b9
 ms.openlocfilehash: 05942418038ca4349e32973aeefdfc4a50e49f46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780690"
 ---
 # <a name="procedural-workflows"></a>手続き型ワークフロー
 手続き型ワークフローでは、手続き型言語と似たフロー制御方法を使用します。 これらの構造には `While` と `If` が含まれます。 これらのワークフローは、<xref:System.Activities.Statements.Flowchart> や <xref:System.Activities.Statements.Sequence> など、他のフロー制御アクティビティを使用して自由に構成できます。  
@@ -15,21 +15,21 @@ ms.locfileid: "59164750"
 ## <a name="controlling-execution-flow"></a>実行フローの制御  
  ワークフロー アクティビティ ライブラリには、手続き型言語で使用されるほとんどのフロー制御方法をモデル化するアクティビティがあります。 不足している機能には次が含まれます。  
   
--   <xref:System.Activities.Statements.While>  
+- <xref:System.Activities.Statements.While>  
   
--   <xref:System.Activities.Statements.DoWhile>  
+- <xref:System.Activities.Statements.DoWhile>  
   
--   <xref:System.Activities.Statements.ForEach%601>  
+- <xref:System.Activities.Statements.ForEach%601>  
   
--   <xref:System.Activities.Statements.Parallel>  
+- <xref:System.Activities.Statements.Parallel>  
   
--   <xref:System.Activities.Statements.ParallelForEach%601>  
+- <xref:System.Activities.Statements.ParallelForEach%601>  
   
--   <xref:System.Activities.Statements.If>  
+- <xref:System.Activities.Statements.If>  
   
--   <xref:System.Activities.Statements.Switch%601>  
+- <xref:System.Activities.Statements.Switch%601>  
   
--   <xref:System.Activities.Statements.Pick>  
+- <xref:System.Activities.Statements.Pick>  
   
  フロー制御アクティビティを使用するドラッグ アンド ドロップしてから、**アクティビティ**ツールボックス、デザイナー ウィンドウ内の複合アクティビティ。  
   

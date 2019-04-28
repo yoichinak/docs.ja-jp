@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9d98a7be-b110-4edb-8eba-bed10f250b6d
 ms.openlocfilehash: 10c74ede8d490bf96a9d0855889669bdc2628b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209204"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785360"
 ---
 # <a name="constant-expressions"></a>定数式
 定数式は、定数値で構成されています。 定数値は、クライアント側で変換されることなく、コマンド ツリーの定数式に直接変換されます。 これには、定数値になる式が含まれます。 したがって、定数にかかわるすべての式でデータ ソースの動作が、予期したとおりになります。 これは CLR の動作とは異なる結果となります。  

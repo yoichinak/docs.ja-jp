@@ -3,11 +3,11 @@ title: パターン マッチ
 description: 論理構造体を使用してデータを比較または構成要素にデータを分解したり、データから情報を抽出するパターンが F# の使用方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: bb6b41f6d15612e4a65abd4a3d5d7291d84a8f3c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53613584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795461"
 ---
 # <a name="pattern-matching"></a>パターン マッチ
 
@@ -38,11 +38,11 @@ match expression with
 |OR パターン|*pattern1* &#124; *pattern2*|<code>([h] &#124; [h; _])</code>|
 |AND パターン|*pattern1* &amp; *pattern2*|`(a, b) & (_, "test")`|
 |Cons パターン|*識別子*::*一覧識別子*|`h :: t`|
-|リスト パターン|[ *pattern_1*;... です。*pattern_n* ]|`[ a; b; c ]`|
+|リスト パターン|[ *pattern_1*; ... ; *pattern_n* ]|`[ a; b; c ]`|
 |配列パターン|[&#124; *pattern_1*;... です。*pattern_n* &#124;]|<code>[&#124; a; b; c &#124;]</code>|
-|かっこで囲まれたパターン|(*パターン*)|`( a )`|
-|タプル パターン|( *pattern_1*,..., *pattern_n* )|`( a, b )`|
-|レコード パターン|{ *identifier1* = *pattern_1*;... です。*identifier_n* = *pattern_n* }|`{ Name = name; }`|
+|かっこで囲まれたパターン|( *pattern* )|`( a )`|
+|タプル パターン|( *pattern_1*, ... , *pattern_n* )|`( a, b )`|
+|レコード パターン|{ *identifier1* = *pattern_1*; ... ; *identifier_n* = *pattern_n* }|`{ Name = name; }`|
 |ワイルドカード パターン|_|`_`|
 |型の注釈が指定されたパターン|*パターン*:*型*|`a : int`|
 |型テスト パターン|:? *型*[として*識別子*]|`:? System.DateTime as dt`|
@@ -101,7 +101,7 @@ match shape with
 | _ -> ()
 ```
 
-アクティブ パターンを使用すると、より複雑なカスタム パターン マッチを定義できます。 アクティブ パターンの詳細については、[アクティブ パターン](active-patterns.md)を参照してください。
+アクティブ パターンを使用すると、より複雑なカスタム パターン マッチを定義できます。 アクティブ パターンの詳細については、次を参照してください。[アクティブ パターン](active-patterns.md)します。
 
 識別子が例外であるケースは、例外ハンドラーのコンテキストのパターン マッチで使用されます。 例外処理で一致するパターンについては、次を参照してください。[例外。`try...with`式](exception-handling/the-try-with-expression.md)します。
 

@@ -1,5 +1,5 @@
 ---
-title: '方法: 実行時にユーザー設定を書き込みC#'
+title: '方法: 実行時にユーザー設定を C# で書き込む'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - application settings [Windows Forms], run time
@@ -7,11 +7,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], C#
 ms.assetid: 9d061c7d-b33b-470f-a36d-edccb1d6f9a3
 ms.openlocfilehash: 264fa9706f9255d7324cad6d02c36cc424e28995
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56981596"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778834"
 ---
 # <a name="how-to-write-user-settings-at-run-time-with-c"></a>方法: C での実行時にユーザー設定を書き込み\#
 

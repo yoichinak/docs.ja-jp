@@ -1,5 +1,5 @@
 ---
-title: 利用ガイドライン
+title: 使用ガイドライン
 ms.date: 10/22/2008
 ms.technology: dotnet-standard
 helpviewer_keywords:
@@ -7,13 +7,13 @@ helpviewer_keywords:
 ms.assetid: 42215ffa-a099-4a26-b14e-fb2bdb6f95b7
 author: KrzysztofCwalina
 ms.openlocfilehash: 761570b899a2a36391eb81dc7f42e13fff1f14ef
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778808"
 ---
-# <a name="usage-guidelines"></a>利用ガイドライン
+# <a name="usage-guidelines"></a>使用ガイドライン
 
 このセクションには、パブリックにアクセスできる Api で一般的な種類の使用に関するガイドラインが含まれています。 組み込みフレームワーク型 (シリアル化属性など) および一般的な演算子のオーバー ロードの直接の使用状況を処理します。
   

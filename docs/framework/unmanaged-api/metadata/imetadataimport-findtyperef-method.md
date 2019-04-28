@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: acc006894f05536ed76bac60b0fde9277a460813
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777846"
 ---
 # <a name="imetadataimportfindtyperef-method"></a>IMetaDataImport::FindTypeRef メソッド
 トークンにポインターを取得、<xref:System.Type>参照を指定されたスコープ内にあるし、指定した名前を持ちます。  

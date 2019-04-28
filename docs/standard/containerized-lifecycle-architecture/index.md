@@ -4,12 +4,6 @@ description: Docker を使用する主な利点の概要を取得します。
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: aa3ead1cb184e23dd091822368e62f580ed73ee5
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332638"
 ---
 # <a name="introduction-to-containers-and-docker"></a>コンテナーと Docker の概要
 

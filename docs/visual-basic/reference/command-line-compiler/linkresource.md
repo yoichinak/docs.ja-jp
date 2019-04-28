@@ -10,11 +10,11 @@ helpviewer_keywords:
 - -linkres compiler option [Visual Basic]
 ms.assetid: cf4dcad8-17b7-404c-9184-29358aa05b15
 ms.openlocfilehash: 5555f83107a40b40c7f05c7cc5729f721727f67c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54729997"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793940"
 ---
 # <a name="-linkresource-visual-basic"></a>-linkresource (Visual Basic)
 マネージド リソースへのリンクを作成します。  
@@ -32,7 +32,7 @@ ms.locfileid: "54729997"
  必須。 アセンブリにリンクするリソース ファイル。 ファイル名にスペースが含まれている場合は、名前を引用符で囲みます ("")。  
   
  `identifier`  
- 任意。 リソースの論理名。 リソースの読み込みに使用される名前です。 既定値は、ファイルの名前です。 かどうか、ファイルがパブリックかプライベート アセンブリ マニフェストの例を指定する必要に応じて、:`-linkres:filename.res,myname.res,public`します。 既定では、`filename`アセンブリ内でパブリックです。  
+ 省略可能です。 リソースの論理名。 リソースの読み込みに使用される名前です。 既定値は、ファイルの名前です。 かどうか、ファイルがパブリックかプライベート アセンブリ マニフェストの例を指定する必要に応じて、:`-linkres:filename.res,myname.res,public`します。 既定では、`filename`アセンブリ内でパブリックです。  
   
 ## <a name="remarks"></a>Remarks  
  `-linkresource`オプションは、リソース ファイルを出力ファイルに埋め込まれません。 を使用して、`-resource`これを実行するオプション。  

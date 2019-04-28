@@ -10,10 +10,11 @@ ms.assetid: 57d68c70-aba1-4bad-a13f-6d0c55f43746
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d7675e4ade28be1f57e20e655fd7b82603b91f4c
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756183"
 ---
 # <a name="diagnostics-symbol-store-enumerations"></a>シンボル ストア診断列挙体
 このトピックでは、シンボル ストア診断 API を使用するアンマネージ列挙について説明します。  
@@ -23,7 +24,7 @@ ms.lasthandoff: 05/04/2018
  メモリ アドレスの種類を示します。  
   
  [CorSymSearchPolicyAttributes 列挙型](../../../../docs/framework/unmanaged-api/diagnostics/corsymsearchpolicyattributes-enumeration.md)  
- シンボル リーダーの検索を実行するときに使用されるポリシーを指定します。  
+ シンボル リーダーの検索を行うときに使用されるポリシーを指定します。  
   
  [CorSymVarFlag 列挙型](../../../../docs/framework/unmanaged-api/diagnostics/corsymvarflag-enumeration.md)  
  変数がコンパイラによって生成されたかどうかを示します。  

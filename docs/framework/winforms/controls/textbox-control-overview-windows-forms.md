@@ -12,11 +12,11 @@ helpviewer_keywords:
 - text boxes [Windows Forms], adding
 ms.assetid: d1a9c7f5-fa53-480a-a75c-158f8649ea2f
 ms.openlocfilehash: a91b67df1071c79707bb20a68efb4d5e6f083ae0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932549"
 ---
 # <a name="textbox-control-overview-windows-forms"></a>TextBox コントロールの概要 (Windows フォーム)
 Windows フォームのテキスト ボックスは、ユーザーからの入力を取得する、またはテキストを表示するに使用されます。 <xref:System.Windows.Forms.TextBox>コントロールもできる読み取り専用ですが、通常、編集可能なテキストに使用します。 テキスト ボックスでは、複数の行を表示、テキスト、コントロールのサイズをラップ、および基本的な書式設定を追加できます。 <xref:System.Windows.Forms.TextBox>コントロールは、コントロールに表示または入力テキストを単一の書式スタイルを提供します。 複数の種類の書式設定されたテキストを表示するには、使用、<xref:System.Windows.Forms.RichTextBox>コントロール。 詳細については、次を参照してください。 [RichTextBox コントロールの概要](richtextbox-control-overview-windows-forms.md)します。  

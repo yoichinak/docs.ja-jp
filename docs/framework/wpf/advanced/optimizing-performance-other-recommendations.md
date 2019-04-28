@@ -12,28 +12,28 @@ helpviewer_keywords:
 - brushes [WPF], performance
 ms.assetid: d028cc65-7e97-4a4f-9859-929734eaf40d
 ms.openlocfilehash: 56d3e3cad09b46090a11b884f3ac590e8d4ba23a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224287"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773101"
 ---
 # <a name="optimizing-performance-other-recommendations"></a>パフォーマンスの最適化:他の推奨事項
 <a name="introduction"></a> このトピックでは、「[WPF アプリケーションのパフォーマンスの最適化](optimizing-wpf-application-performance.md)」セクションのトピックで説明されている推奨事項を補足するパフォーマンスに関する推奨事項について取り上げます。  
   
  このトピックは、次のセクションで構成されています。  
   
--   [ブラシの Opacity と要素の Opacity](#Opacity)  
+- [ブラシの Opacity と要素の Opacity](#Opacity)  
   
--   [オブジェクトへの移動](#Navigation_Objects)  
+- [オブジェクトへの移動](#Navigation_Objects)  
   
--   [大きな 3D サーフェイスのヒット テスト](#Hit_Testing)  
+- [大きな 3D サーフェイスのヒット テスト](#Hit_Testing)  
   
--   [CompositionTarget.Rendering イベント](#CompositionTarget_Rendering_Event)  
+- [CompositionTarget.Rendering イベント](#CompositionTarget_Rendering_Event)  
   
--   [ScrollBarVisibility=Auto は使用しない](#Avoid_Using_ScrollBarVisibility)  
+- [ScrollBarVisibility=Auto は使用しない](#Avoid_Using_ScrollBarVisibility)  
   
--   [Font Cache サービスの構成による起動時間の短縮](#FontCache)  
+- [Font Cache サービスの構成による起動時間の短縮](#FontCache)  
   
 <a name="Opacity"></a>   
 ## <a name="opacity-on-brushes-versus-opacity-on-elements"></a>ブラシの Opacity と要素の Opacity  

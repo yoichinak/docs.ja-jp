@@ -3,11 +3,11 @@ title: さまざまな図形 (Visual Basic) での XML の射影
 ms.date: 07/20/2015
 ms.assetid: 2da7ec97-34f7-443d-9a48-b162ac58236b
 ms.openlocfilehash: ed689e2f0e659eade83fa8e4ec147b0edcddefc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766593"
 ---
 # <a name="projecting-xml-in-a-different-shape-visual-basic"></a>さまざまな図形 (Visual Basic) での XML の射影
 このトピックでは、ソース XML とは異なる構造の XML を射影する例について説明します。  
@@ -230,7 +230,7 @@ End Module
 ## <a name="next-steps"></a>次の手順  
  次の例では、クエリを実行して Word 文書内のテキストをすべて検索します。  
   
--   [Word 文書 (Visual Basic) でのテキストの検索](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Word 文書 (Visual Basic) でのテキストの検索](../../../../visual-basic/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>関連項目
 

@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: 60887eed-df40-4412-b812-41e1dd329d15
 ms.openlocfilehash: 3f180fa115453be86fa5f99fbabb776eb7198623
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58465868"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747941"
 ---
 # <a name="side-by-side-versioning-in-workflowservicehost"></a>WorkflowServiceHost による side-by-side でのバージョン管理
 <xref:System.ServiceModel.Activities.WorkflowServiceHost> で導入された [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] による side-by-side でのバージョン管理は、1 つのエンドポイントでワークフロー サービスの複数のバージョンをホストする機能を提供します。 提供される side-by-side 機能により、既存の定義を使用してインスタンスを実行しているときに、新しいワークフロー定義を使用してワークフロー サービスの新しいインスタンスが作成されるように、ワークフロー サービスを構成できます。 このトピックでは、<xref:System.ServiceModel.Activities.WorkflowServiceHost> を使用したワークフロー サービスの side-by-side での実行の概要を提供します。  
   
 > [!NOTE]
->  サンプルをダウンロードして、ワークフロー サービスのサイド バイ サイド バージョン管理のビデオ チュートリアルをご覧ください、[Web-Hosted Xamlx ワークフロー サービスとのサイド バイ サイド バージョン管理](https://go.microsoft.com/fwlink/?LinkId=393746)を参照してください。  
+>  サンプルをダウンロードして、ワークフロー サービスのサイド バイ サイド バージョン管理のビデオ チュートリアルをご覧ください、次を参照してください。 [Web-Hosted Xamlx ワークフロー サービスとのサイド バイ サイド バージョン管理](https://go.microsoft.com/fwlink/?LinkId=393746)します。  
   
 ## <a name="hosting-multiple-versions-in-a-workflow-service"></a>ワークフロー サービスでの複数のバージョンのホスティング  
  <xref:System.ServiceModel.Activities.WorkflowServiceHost> には、ワークフローの複数のバージョンを side-by-side 実行するように構成できる <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> と <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> の 2 つのプロパティが含まれています。 <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> には、ワークフロー サービスのサポートされているバージョンが含まれます。<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> は、各ワークフロー サービスを一意に識別するために使用されます。 これは、<xref:System.Activities.WorkflowIdentity> をワークフロー サービスと関連付けることによって行われます。 <xref:System.Activities.WorkflowIdentity> には 3 種類の識別情報が格納されます。 <xref:System.Activities.WorkflowIdentity.Name%2A> と <xref:System.Activities.WorkflowIdentity.Version%2A> は必須で、名前と <xref:System.Version> を表します。また、<xref:System.Activities.WorkflowIdentity.Package%2A> は省略可能で、アセンブリ名やその他の必要な情報などの情報を格納する追加文字列の指定に使用できます。 <xref:System.ServiceModel.Activities.WorkflowServiceHost.SupportedVersions%2A> コレクションに含まれる各ワークフロー サービスは、一意の <xref:System.Activities.WorkflowIdentity> を持つ必要があります。 <xref:System.Activities.WorkflowIdentity> は、その 3 つのプロパティのいずれかが他の <xref:System.Activities.WorkflowIdentity> と異なる場合に一意です。 A `null` <xref:System.Activities.WorkflowIdentity>の許容の値は、 <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>、ワークフロー サービスの 1 つだけの以前のバージョンがありますが、 `null` <xref:System.Activities.WorkflowIdentity>します。  
@@ -27,21 +27,21 @@ ms.locfileid: "58465868"
 ### <a name="rules-for-hosting-multiple-versions-of-a-workflow-service"></a>ワークフロー サービスでの複数のバージョンのホスティングに関する規則  
  ユーザーが追加のバージョンを <xref:System.ServiceModel.Activities.WorkflowServiceHost> に追加する場合、エンドポイントと説明の同じセットを使用してワークフロー サービスをホストするために満たす必要があるいくつかの条件があります。 追加のバージョンのいずれかがこれらの条件を満たすことができない場合、<xref:System.ServiceModel.Activities.WorkflowServiceHost> は `Open` が呼び出されたときに例外をスローします。 追加のバージョンとしてホストに提供される各ワークフロー定義は、次の要件を満たす必要があります (プライマリ バージョンは、ホストのコンストラクターに提供されるワークフロー サービス定義です)。 追加のワークフローのバージョンは、次の条件を満たす必要があります。  
   
--   ワークフロー サービスのプライマリ バージョンと同じ <xref:System.ServiceModel.Activities.WorkflowService.Name%2A> を持つ必要があります。  
+- ワークフロー サービスのプライマリ バージョンと同じ <xref:System.ServiceModel.Activities.WorkflowService.Name%2A> を持つ必要があります。  
   
--   プライマリ バージョンにない <xref:System.ServiceModel.Activities.Receive> に <xref:System.ServiceModel.Activities.SendReply> アクティビティまたは <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> アクティビティがあってはならず、これらは操作コントラクトに一致する必要があります。  
+- プライマリ バージョンにない <xref:System.ServiceModel.Activities.Receive> に <xref:System.ServiceModel.Activities.SendReply> アクティビティまたは <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> アクティビティがあってはならず、これらは操作コントラクトに一致する必要があります。  
   
--   一意の <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> を持つ必要があります。 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> を持つことができるワークフロー定義は 1 つだけです。  
+- 一意の <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> を持つ必要があります。 `null`<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> を持つことができるワークフロー定義は 1 つだけです。  
   
  一部の変更は可能です。 次の項目は、バージョン間で異なることができます。  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> は、プライマリ バージョンと異なる名前およびパッケージを持つことができます。  
+- <xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A> は、プライマリ バージョンと異なる名前およびパッケージを持つことができます。  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> 値は、プライマリ バージョンと異なることができます。  
+- <xref:System.ServiceModel.Activities.WorkflowService.AllowBufferedReceive%2A> 値は、プライマリ バージョンと異なることができます。  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> 値は、プライマリ バージョンと異なることができます。  
+- <xref:System.ServiceModel.Activities.WorkflowService.ConfigurationName%2A> 値は、プライマリ バージョンと異なることができます。  
   
--   <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> 値は、プライマリ バージョンと異なることができます。  
+- <xref:System.ServiceModel.Activities.WorkflowService.ImplementedContracts%2A> 値は、プライマリ バージョンと異なることができます。  
   
 ### <a name="configuring-the-definitionidentity"></a>DefinitionIdentity の構成  
  ワークフロー サービスは、ワークフロー デザイナーを使用して作成されたときに、<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>を使用して設定されている、**プロパティ**ウィンドウ。 ワークフロー サービスを選択して、デザイナーで、サービスのルート アクティビティの外部でクリックして**プロパティ ウィンドウ**から、**ビュー**メニュー。 選択**WorkflowIdentity**横にあるドロップダウン リストから、 **DefinitionIdentity**プロパティを展開して、必要な指定<xref:System.Activities.WorkflowIdentity>プロパティ。 次の例では、<xref:System.ServiceModel.Activities.WorkflowService.DefinitionIdentity%2A>で構成されて、 <xref:System.Activities.WorkflowIdentity.Name%2A> `MortgageWorkflow`と<xref:System.Activities.WorkflowIdentity.Version%2A>の`1.0.0.0`します。 <xref:System.Activities.WorkflowIdentity.Package%2A> は省略可能です。この例では、`null` です。  

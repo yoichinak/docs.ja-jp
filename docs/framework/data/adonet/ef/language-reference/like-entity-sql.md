@@ -3,11 +3,11 @@ title: LIKE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 8300e6d2-875b-481e-9ef4-e1e7c12d46fa
 ms.openlocfilehash: 9463a5cb522a3d3dab7725c4b71a5970d1bdf19d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780446"
 ---
 # <a name="like-entity-sql"></a>LIKE (Entity SQL)
 指定された文字列 `String` が指定されたパターンと一致するかどうかを判断します。  

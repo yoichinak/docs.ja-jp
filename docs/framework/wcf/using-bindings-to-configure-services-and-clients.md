@@ -5,11 +5,11 @@ helpviewer_keywords:
 - bindings [WCF], using
 ms.assetid: c39479c3-0766-4a17-ba4c-97a74607f392
 ms.openlocfilehash: 3b4f00617418d5f84a0da5d0e531e1f671b58bb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791379"
 ---
 # <a name="using-bindings-to-configure-services-and-clients"></a>サービスとクライアントを構成するためのバインディングの使用
 バインディングとは、エンドポイントへの接続に必要な通信の詳細設定を指定するオブジェクトです。 具体的には、バインディングには構成情報が含まれており、この情報を使用してそれぞれのエンドポイントまたはクライアント チャネルで使用されるトランスポート仕様、ワイヤ形式 (メッセージ エンコード) 仕様、プロトコル仕様が定義され、クライアントまたはサービスのランタイムが作成されます。 機能している Windows Communication Foundation (WCF) サービスを作成するには、サービス内の各エンドポイントにバインディングが必要です。 ここでは、エンドポイントにおけるバインディングの概要と定義方法、特定のバインディングの指定方法を説明します。  
@@ -29,13 +29,13 @@ ms.locfileid: "59323149"
 ## <a name="system-provided-bindings"></a>システム標準のバインディング  
  WCF には、ほとんどのアプリケーションの要件とシナリオをカバーするように設計されたシステム指定のバインディングのセットが含まれています。 システム指定のバインディングの例のいくつかを次のクラスで示します。  
   
--   <xref:System.ServiceModel.BasicHttpBinding>:WS に準拠している HTTP プロトコル バインディング Web サービスに接続するのに適した-Basic Profile 1.1 仕様 (たとえば、ASP.NET Web サービス (ASMX)-ベースのサービス)。  
+- <xref:System.ServiceModel.BasicHttpBinding>:WS に準拠している HTTP プロトコル バインディング Web サービスに接続するのに適した-Basic Profile 1.1 仕様 (たとえば、ASP.NET Web サービス (ASMX)-ベースのサービス)。  
   
--   <xref:System.ServiceModel.WSHttpBinding>:HTTP プロトコル バインディングを Web に準拠するエンドポイントに接続するために適したサービス仕様のプロトコルです。  
+- <xref:System.ServiceModel.WSHttpBinding>:HTTP プロトコル バインディングを Web に準拠するエンドポイントに接続するために適したサービス仕様のプロトコルです。  
   
--   <xref:System.ServiceModel.NetNamedPipeBinding>:.NET binary エンコードとフレーム技術と組み合わせてを名前付きパイプ トランスポートの Windows でを使用して、同じコンピューター上の他の WCF エンドポイントに接続します。  
+- <xref:System.ServiceModel.NetNamedPipeBinding>:.NET binary エンコードとフレーム技術と組み合わせてを名前付きパイプ トランスポートの Windows でを使用して、同じコンピューター上の他の WCF エンドポイントに接続します。  
   
--   <xref:System.ServiceModel.NetMsmqBinding>:.NET binary エンコードとフレーム メッセージ キュー (MSMQ とも呼ばれます) と組み合わせて技術を使用して、他の WCF エンドポイントとメッセージをキューに置かれた接続を作成します。  
+- <xref:System.ServiceModel.NetMsmqBinding>:.NET binary エンコードとフレーム メッセージ キュー (MSMQ とも呼ばれます) と組み合わせて技術を使用して、他の WCF エンドポイントとメッセージをキューに置かれた接続を作成します。  
   
  詳細についてで、システム指定のバインディングの完全な一覧を参照してください。 [System-Provided Bindings](../../../docs/framework/wcf/system-provided-bindings.md)します。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "59323149"
 ## <a name="code-and-configuration"></a>コードおよび構成  
  バインディングは、コードまたは構成を使用して定義または構成できます。 この 2 つの方法は使用するバインディングの種類に依存しません。たとえば、システム指定のバインディングまたは <xref:System.ServiceModel.Channels.CustomBinding> バインディングのどちらを使用していても関係ありません。 一般に、コードを使用すると、コンパイル時に開発者がバインディングの定義を完全に制御できます。 システム管理者または WCF サービスまたはクライアントのバインディングのパラメーターを変更するユーザーは、その一方で、構成を使用しています。 特定のマシンの要件を予測し、ネットワークの状態は、WCF アプリケーションの展開方法がないために、このような柔軟性が望ましい多くの場合。 バインディング (およびアドレス) 情報がコードから分離されているため、管理者はアプリケーションの再コンパイルや再配置を行わずにバインディングの詳細を変更できます。 バインディングをコードに定義した場合、構成ファイルに記述されている構成ベースの定義はすべて上書きされます。 この方法についての例は、以下のトピックを参照してください。  
   
--   [方法: マネージ アプリケーションで WCF サービスをホスト](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)コードでバインディングの作成の例を示します。  
+- [方法: マネージ アプリケーションで WCF サービスをホスト](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)コードでバインディングの作成の例を示します。  
   
--   [チュートリアル: Windows Communication Foundation クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)の構成を使用してクライアントを作成する例を示します。  
+- [チュートリアル: Windows Communication Foundation クライアントを作成する](../../../docs/framework/wcf/how-to-create-a-wcf-client.md)の構成を使用してクライアントを作成する例を示します。  
   
 ## <a name="see-also"></a>関連項目
 

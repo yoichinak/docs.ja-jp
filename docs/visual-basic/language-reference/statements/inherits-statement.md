@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Inherits statement [Visual Basic], syntax
 ms.assetid: 9e6fe042-9af3-4341-8093-fc3537770cf2
 ms.openlocfilehash: 5ab90e44e2809c1e71d7f100970b7be73af4a732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817098"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784203"
 ---
 # <a name="inherits-statement"></a>Inherits Statement
 現在のクラスまたは属性、変数、プロパティ、プロシージャ、およびイベントを別のクラスまたはインターフェイスのセットから継承するインターフェイスとします。  
@@ -37,11 +37,11 @@ Inherits basetypenames
   
 ## <a name="rules"></a>ルール  
   
--   **クラスの継承します。** クラスで使用する場合、`Inherits`ステートメントでは、1 つだけの基本クラスを指定することができます。  
+- **クラスの継承します。** クラスで使用する場合、`Inherits`ステートメントでは、1 つだけの基本クラスを指定することができます。  
   
      クラスは、その中に入れ子になったクラスから継承できません。  
   
--   **インターフェイスの継承します。** インターフェイスで使用する場合、`Inherits`ステートメントでは、1 つまたは複数の基底インターフェイスを指定することができます。 同じ名前のメンバーが定義されている場合でも、2 つのインターフェイスから継承できます。 これを行う場合、実装コードは、実装しています。 どのメンバーを指定する名前の修飾を使用する必要があります。  
+- **インターフェイスの継承します。** インターフェイスで使用する場合、`Inherits`ステートメントでは、1 つまたは複数の基底インターフェイスを指定することができます。 同じ名前のメンバーが定義されている場合でも、2 つのインターフェイスから継承できます。 これを行う場合、実装コードは、実装しています。 どのメンバーを指定する名前の修飾を使用する必要があります。  
   
      インターフェイスより制限の厳しいアクセス レベルを持つ別のインターフェイスから継承できません。 たとえば、`Public`インターフェイスから継承することはできません、`Friend`インターフェイス。  
   

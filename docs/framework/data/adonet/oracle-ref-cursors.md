@@ -3,11 +3,11 @@ title: Oracle REF CURSOR
 ms.date: 03/30/2017
 ms.assetid: c6b25b8b-0bdd-41b2-9c7c-661f070c2247
 ms.openlocfilehash: b23b0f07d7755fed820481a3ad1fe831ae3f5224
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771860"
 ---
 # <a name="oracle-ref-cursors"></a>Oracle REF CURSOR
 .NET Framework Data Provider for Oracle のサポート、Oracle **REF CURSOR**データ型。 データ プロバイダーを使用して Oracle REF CURSOR を操作するときは、次の動作を考慮する必要があります。  
@@ -15,19 +15,19 @@ ms.locfileid: "59213169"
 > [!NOTE]
 >  動作の中には、Microsoft OLE DB Provider for Oracle (MSDAORA) の動作と異なるものがあります。  
   
--   パフォーマンス上の理由から、Data Provider for Oracle は自動的にバインドしない**REF CURSOR**データ型は、MSDAORA よう、明示的に指定する場合を除き、します。  
+- パフォーマンス上の理由から、Data Provider for Oracle は自動的にバインドしない**REF CURSOR**データ型は、MSDAORA よう、明示的に指定する場合を除き、します。  
   
--   データ プロバイダーでは、REF CURSOR パラメーターの指定に使用する {resultset} エスケープのような、ODBC エスケープ シーケンスはサポートされていません。  
+- データ プロバイダーでは、REF CURSOR パラメーターの指定に使用する {resultset} エスケープのような、ODBC エスケープ シーケンスはサポートされていません。  
   
--   REF Cursor を返すストアド プロシージャを実行するにパラメーターを定義する必要があります、<xref:System.Data.OracleClient.OracleParameterCollection>で、<xref:System.Data.OracleClient.OracleType>の**カーソル**と<xref:System.Data.OracleClient.OracleParameter.Direction%2A>の**出力**します。 データ プロバイダーでは、REF CURSOR のバインドは出力パラメーターとしてのみサポートされています。 プロバイダーは、入力パラメーターとしての REF CURSOR はサポートしていません。  
+- REF Cursor を返すストアド プロシージャを実行するにパラメーターを定義する必要があります、<xref:System.Data.OracleClient.OracleParameterCollection>で、<xref:System.Data.OracleClient.OracleType>の**カーソル**と<xref:System.Data.OracleClient.OracleParameter.Direction%2A>の**出力**します。 データ プロバイダーでは、REF CURSOR のバインドは出力パラメーターとしてのみサポートされています。 プロバイダーは、入力パラメーターとしての REF CURSOR はサポートしていません。  
   
--   パラメーター値からの <xref:System.Data.OracleClient.OracleDataReader> の取得はサポートされていません。 値は、コマンドを実行すると <xref:System.DBNull> 型になります。  
+- パラメーター値からの <xref:System.Data.OracleClient.OracleDataReader> の取得はサポートされていません。 値は、コマンドを実行すると <xref:System.DBNull> 型になります。  
   
--   唯一**CommandBehavior**の REF Cursor で動作する列挙値 (を呼び出すときに、たとえば、 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) は**CloseConnection**; 他のすべてのユーザーは無視されます。  
+- 唯一**CommandBehavior**の REF Cursor で動作する列挙値 (を呼び出すときに、たとえば、 <xref:System.Data.OracleClient.OracleCommand.ExecuteReader%2A>) は**CloseConnection**; 他のすべてのユーザーは無視されます。  
   
--   内の REF Cursor の順序、 **OracleDataReader**内のパラメーターの順序によっては、 **OracleParameterCollection**します。 <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> プロパティは無視されます。  
+- 内の REF Cursor の順序、 **OracleDataReader**内のパラメーターの順序によっては、 **OracleParameterCollection**します。 <xref:System.Data.OracleClient.OracleParameter.ParameterName%2A> プロパティは無視されます。  
   
--   PL/SQL**テーブル**データ型はサポートされていません。 ただし、REF CURSOR は、さらに効果的です。 使用する場合、**テーブル**MSDAORA で OLE DB .NET データ プロバイダーを使用して、データ型します。  
+- PL/SQL**テーブル**データ型はサポートされていません。 ただし、REF CURSOR は、さらに効果的です。 使用する場合、**テーブル**MSDAORA で OLE DB .NET データ プロバイダーを使用して、データ型します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [REF CURSOR の例](../../../../docs/framework/data/adonet/ref-cursor-examples.md)  

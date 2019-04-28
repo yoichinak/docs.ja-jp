@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ec7637a9-01d5-4a95-8bb0-478311cd263b
 ms.openlocfilehash: a37e7e3d0759cb3cf17d2b4cbd3dd2e4877ff6c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785399"
 ---
 # <a name="comparison-expressions"></a>比較式
 比較式は、定数値、プロパティ値、またはメソッドの結果と別の値を比較して、両者が等しいかどうか、または一方の値がもう一方の値より大きい (小さい) かどうかを調べます。 特定の比較が [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] に対して無効な場合は、例外がスローされます。 暗黙的および明示的な比較を行う場合は、データ ソース内のすべてのコンポーネントが比較可能である必要があります。 比較式は、クエリ結果を絞り込むために `Where` 句で頻繁に使用されます。  

@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Panel control [WPF], overriding OnRender method
 ms.assetid: 57397834-a085-4e36-90ab-416fad98f341
 ms.openlocfilehash: c4539847368c1a5789e99ec92106d17077ed5943
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770839"
 ---
 # <a name="how-to-override-the-panel-onrender-method"></a>方法: パネルの OnRender メソッドをオーバーライドする
 この例は、オーバーライドする方法を示します、<xref:System.Windows.Controls.Panel.OnRender%2A>メソッドの<xref:System.Windows.Controls.Panel>レイアウト要素にカスタムのグラフィカルな効果を追加するためにします。  

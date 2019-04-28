@@ -14,11 +14,11 @@ helpviewer_keywords:
 ms.assetid: f8b8ec9b-0ba7-4dea-aadf-a93395cd804f
 author: KrzysztofCwalina
 ms.openlocfilehash: a47e43b2387362500d46c8e531f16d004d823c4c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54565866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778782"
 ---
 # <a name="choosing-between-class-and-struct"></a>クラスまたは構造体の選択
 すべてのフレームワーク設計者が直面する基本的な設計上の決定の 1 つが、ある型をクラス (参照型) として設計するか、構造体 (値型) として設計するかという点です。 この決定を下すためには、参照型と値の型の動作の違いをよく理解しておく必要があります。  
@@ -39,19 +39,19 @@ ms.locfileid: "54565866"
   
  **X** 次の条件をすべて満たさない限り、構造体を**定義しないでください。  
   
--   プリミティブ型 (`int`、`double`など) のように、論理的に 1 つの値を表す。  
+- プリミティブ型 (`int`、`double`など) のように、論理的に 1 つの値を表す。  
   
--   インスタンスのサイズは 16 バイト未満である。  
+- インスタンスのサイズは 16 バイト未満である。  
   
--   変更不可である。  
+- 変更不可である。  
   
--   頻繁にボックス化することはない。  
+- 頻繁にボックス化することはない。  
   
  他のすべてのケースでは、クラスとして、型を定義する必要があります。  
   
  *Portions © 2005, 2009 Microsoft Corporation.All rights reserved.*  
   
- *Microsoft Windows の開発シリーズの一部として、Addison-wesley Professionalよ り 2008 年 10 月 22日を公開された Krzysztof Cwalina と Brad Abrams による [Framework デザイン ガイドライン:規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619) Pearson Education, Inc. からのアクセス許可によって了承を得て転載*  
+ *Pearson Education, Inc. からのアクセス許可によって了承を得て転載[Framework デザイン ガイドライン。規則、手法、および再利用可能な .NET ライブラリの第 2 版のパターン](https://www.informit.com/store/framework-design-guidelines-conventions-idioms-and-9780321545619)Krzysztof Cwalina、Brad 内容では、Microsoft Windows の開発シリーズの一部として、Addison-wesley Professional、2008 年 10 月 22日を公開します。*  
   
 ## <a name="see-also"></a>関連項目
 

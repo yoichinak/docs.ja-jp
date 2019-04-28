@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3fbb22fa-2930-48b8-b437-def1de87c6a0
 ms.openlocfilehash: 65d26c0b9a41a6825108b73f822add4d91400055
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302531"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787687"
 ---
 # <a name="how-to-create-a-service-endpoint-in-code"></a>方法: コード内にサービス エンドポイントを作成する
 この例では、電卓サービスに `ICalculator` コントラクトを定義し、そのサービスを `CalculatorService` クラスに実装し、コード内でサービス エンドポイントを定義します。このエンドポイントでは、サービスが <xref:System.ServiceModel.BasicHttpBinding> クラスを使用するように指定します。  

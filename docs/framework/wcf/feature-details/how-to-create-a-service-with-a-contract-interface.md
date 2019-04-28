@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 7b6803f6-d6f9-4cc2-9f1b-6f4c920475d5
 ms.openlocfilehash: 0aa5429d771aeda0b392b89ec4cc1a07de30973f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772896"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787622"
 ---
 # <a name="how-to-create-a-service-with-a-contract-interface"></a>方法: コントラクト インターフェイスを使用してサービスを作成する
 インターフェイスを使用する Windows Communication Foundation (WCF) コントラクトを作成することをお勧めです。 このコントラクトでは、サービスが提供する操作にアクセスするために必要なメッセージのコレクションと構造を指定します。 このインターフェイスでは、インターフェイスに <xref:System.ServiceModel.ServiceContractAttribute> クラスを適用し、公開するメソッドに <xref:System.ServiceModel.OperationContractAttribute> クラスを適用して、入力と出力の種類を定義します。  

@@ -3,20 +3,20 @@ title: アソシエーション セット End
 ms.date: 03/30/2017
 ms.assetid: fe4bf1d3-047a-4a37-98c5-a66e70811346
 ms.openlocfilehash: 7b6c646592c1878ea30396d98b4976dc8fa0be12
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769591"
 ---
 # <a name="association-set-end"></a>アソシエーション セット End
 *アソシエーション セット end*識別、[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)と[エンティティ セット](../../../../docs/framework/data/adonet/entity-set.md)の最後に、[アソシエーション セット](../../../../docs/framework/data/adonet/association-set.md)します。 アソシエーション セット End はアソシエーション セットの一部として定義されます。アソシエーション セットには、アソシエーション セット End が 2 つ必要です。  
   
  アソシエーション セット End の定義には、次の情報が含まれます。  
   
--   アソシエーション セットに含まれるエンティティ型の 1 つ。 (必須)  
+- アソシエーション セットに含まれるエンティティ型の 1 つ。 (必須)  
   
--   アソシエーション セットに含まれるエンティティ型のエンティティ セット。 (必須)  
+- アソシエーション セットに含まれるエンティティ型のエンティティ セット。 (必須)  
   
 ## <a name="example"></a>例  
  下のダイアグラムは、`WrittenBy` および `PublishedBy` という 2 つのアソシエーションの概念モデルを示しています。  

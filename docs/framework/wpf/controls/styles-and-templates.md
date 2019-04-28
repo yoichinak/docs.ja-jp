@@ -8,11 +8,11 @@ helpviewer_keywords:
 - templates [WPF]
 ms.assetid: 7fd571fd-d54a-40fc-b332-4c4015a5b6ff
 ms.openlocfilehash: d7a5e9515e78dd9c762973ca9854e04b44c1e18d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372075"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790911"
 ---
 # <a name="styles-and-templates"></a>スタイルおよびテンプレート
 Windows Presentation Foundation (WPF) のスタイルとテンプレートは、アプリケーション、ドキュメント、またはユーザー インターフェイス (UI) デザイナー視覚的に説得力のあるアプリケーションを作成する機能 (スタイル、テンプレート、トリガー、およびストーリー ボード) のスイートを参照してください。それらの製品の特定の外観を標準化します。  

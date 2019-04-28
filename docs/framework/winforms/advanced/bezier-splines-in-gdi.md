@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, Bezier splines
 ms.assetid: 5774ce1e-87d4-4bc7-88c4-4862052781b8
 ms.openlocfilehash: ff4e9eb18610b70c88e057d3d44020321bbb9f4f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779277"
 ---
 # <a name="b233zier-splines-in-gdi"></a>B&#233;ベジエ スプラインを GDI + で
 ベジエ スプラインは、4 つのポイントで指定された曲線: 2 つの終点 (p1 および p2) と 2 つの制御点 (c1 と c2)。 曲線が p1 で始まり p2 で終了します。 曲線が制御点を通過しませんが、制御点は磁石、特定の方向に曲線を取得し、湾曲方法に影響を与えてとして機能します。 次の図は、そのエンドポイントの制御点とベジエ曲線を示します。  

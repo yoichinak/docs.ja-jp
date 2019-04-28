@@ -3,11 +3,11 @@ title: 既定の段落スタイル (Visual Basic) の検索
 ms.date: 07/20/2015
 ms.assetid: 9d094a4a-ec8c-41b0-b7ab-a3deb2a01d45
 ms.openlocfilehash: 0694c9144e44e4a5de262f97581eb18943937243
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931314"
 ---
 # <a name="finding-the-default-paragraph-style-visual-basic"></a>既定の段落スタイル (Visual Basic) の検索
 「WordprocessingML ドキュメント内の情報の操作」チュートリアルでの最初のタスクは、ドキュメント内にある段落の既定のスタイルを検索することです。  
@@ -89,7 +89,7 @@ The default style is: Normal
 ## <a name="next-steps"></a>次の手順  
  次の例では、ドキュメント内のすべての段落およびそのスタイルを検索する同様のクエリを記述します。  
   
--   [段落とそのスタイル (Visual Basic) の取得](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
+- [段落とそのスタイル (Visual Basic) の取得](../../../../visual-basic/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)  
   
 ## <a name="see-also"></a>関連項目
 

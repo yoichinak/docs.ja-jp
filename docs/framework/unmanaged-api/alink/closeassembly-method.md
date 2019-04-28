@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 94c1c083d010cd82fd9e9e2f02b23e81d88fedd5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790092"
 ---
 # <a name="closeassembly-method"></a>CloseAssembly メソッド
 アセンブリの操作を終了します。 新しいアセンブリまたはバインドされていないモジュールを開始する前に、このメソッドを呼び出します。  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - overriding metadata for dependency properties [WPF]
 ms.assetid: f90f026e-60d8-428a-933d-edf0dba4441f
 ms.openlocfilehash: 7f20708722660aa4f86462efd50939935f840613
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768629"
 ---
 # <a name="how-to-override-metadata-for-a-dependency-property"></a>方法: 依存関係プロパティのメタデータをオーバーライドする
 この例は、呼び出すことによって、継承されたクラスからは既定の依存関係プロパティ メタデータをオーバーライドする方法を示します、<xref:System.Windows.DependencyProperty.OverrideMetadata%2A>メソッドと型固有のメタデータを提供します。  

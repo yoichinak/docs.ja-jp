@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Button control type
 ms.assetid: 057c983a-da83-4c50-86c7-26fe381076a6
 ms.openlocfilehash: 8ab42bc6c7cde50e2e30806b9fab91603580bb64
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788116"
 ---
 # <a name="ui-automation-support-for-the-button-control-type"></a>UI オートメーションによる Button コントロール型のサポート
 > [!NOTE]

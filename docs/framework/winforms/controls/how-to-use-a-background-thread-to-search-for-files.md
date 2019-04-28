@@ -11,11 +11,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], samples
 ms.assetid: 7fe3956f-5b8f-4f78-8aae-c9eb0b28f13a
 ms.openlocfilehash: 806cb2b69d83fae2f73583111d0094c7e86e3c61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785854"
 ---
 # <a name="how-to-use-a-background-thread-to-search-for-files"></a>方法: バックグラウンド スレッドを使用してファイルを検索する
 <xref:System.ComponentModel.BackgroundWorker>コンポーネントが置換および機能を追加、<xref:System.Threading>名前空間です。 ただし、、<xref:System.Threading>を選択した場合、下位互換性と将来の使用の両方の名前空間は保持されます。 詳細については、次を参照してください。 [BackgroundWorker コンポーネントの概要](backgroundworker-component-overview.md)します。  
@@ -28,13 +28,13 @@ ms.locfileid: "59157784"
   
  次の例 (`DirectorySearcher`) を指定した検索文字列に一致するファイルのディレクトリを再帰的に検索するバック グラウンド スレッドを使用し、検索結果をリスト ボックスに設定し、マルチ スレッドの Windows フォーム コントロールを示しています。 このサンプルに示すように、主要な概念は次のとおりです。  
   
--   `DirectorySearcher` 検索を実行する新しいスレッドを開始します。 スレッドが実行する、`ThreadProcedure`メソッドをさらに、ヘルパーを呼び出す`RecurseDirectory`メソッドが、実際の検索を実行して、リスト ボックスを設定します。 ただし、リスト ボックスの作成が必要です、スレッド間の呼び出しでは、次の 2 つの箇条書き項目で説明したようです。  
+- `DirectorySearcher` 検索を実行する新しいスレッドを開始します。 スレッドが実行する、`ThreadProcedure`メソッドをさらに、ヘルパーを呼び出す`RecurseDirectory`メソッドが、実際の検索を実行して、リスト ボックスを設定します。 ただし、リスト ボックスの作成が必要です、スレッド間の呼び出しでは、次の 2 つの箇条書き項目で説明したようです。  
   
--   `DirectorySearcher` 定義、 `AddFiles` 、リスト ボックスにファイルを追加するメソッドただし、`RecurseDirectory`直接呼び出すことはできません`AddFiles`ため`AddFiles`作成 STA スレッドでのみ実行できます`DirectorySearcher`します。  
+- `DirectorySearcher` 定義、 `AddFiles` 、リスト ボックスにファイルを追加するメソッドただし、`RecurseDirectory`直接呼び出すことはできません`AddFiles`ため`AddFiles`作成 STA スレッドでのみ実行できます`DirectorySearcher`します。  
   
--   唯一の方法は、`RecurseDirectory`呼び出すことができます`AddFiles`スレッド間の呼び出しでは、-は、呼び出すことによって<xref:System.Windows.Forms.Control.Invoke%2A>または<xref:System.Windows.Forms.Control.BeginInvoke%2A>をマーシャ リングする`AddFiles`の作成のスレッドに`DirectorySearcher`します。 `RecurseDirectory` 使用して<xref:System.Windows.Forms.Control.BeginInvoke%2A>呼び出しが非同期に実行できるようにします。  
+- 唯一の方法は、`RecurseDirectory`呼び出すことができます`AddFiles`スレッド間の呼び出しでは、-は、呼び出すことによって<xref:System.Windows.Forms.Control.Invoke%2A>または<xref:System.Windows.Forms.Control.BeginInvoke%2A>をマーシャ リングする`AddFiles`の作成のスレッドに`DirectorySearcher`します。 `RecurseDirectory` 使用して<xref:System.Windows.Forms.Control.BeginInvoke%2A>呼び出しが非同期に実行できるようにします。  
   
--   メソッドのマーシャ リングには、関数ポインターやコールバックに相当する必要があります。 これにより、.NET Framework のデリゲートの使用が実現されます。 <xref:System.Windows.Forms.Control.BeginInvoke%2A> デリゲートを引数として受け取ります。 `DirectorySearcher` そのため、デリゲートを定義します (`FileListDelegate`)、バインド`AddFiles`のインスタンスに`FileListDelegate`そのコンス トラクター、およびこのデリゲートのインスタンスをパスで<xref:System.Windows.Forms.Control.BeginInvoke%2A>します。 `DirectorySearcher` 検索が完了したときにマーシャ リングは、イベント デリゲートを定義します。  
+- メソッドのマーシャ リングには、関数ポインターやコールバックに相当する必要があります。 これにより、.NET Framework のデリゲートの使用が実現されます。 <xref:System.Windows.Forms.Control.BeginInvoke%2A> デリゲートを引数として受け取ります。 `DirectorySearcher` そのため、デリゲートを定義します (`FileListDelegate`)、バインド`AddFiles`のインスタンスに`FileListDelegate`そのコンス トラクター、およびこのデリゲートのインスタンスをパスで<xref:System.Windows.Forms.Control.BeginInvoke%2A>します。 `DirectorySearcher` 検索が完了したときにマーシャ リングは、イベント デリゲートを定義します。  
   
 ```vb  
 Option Strict  

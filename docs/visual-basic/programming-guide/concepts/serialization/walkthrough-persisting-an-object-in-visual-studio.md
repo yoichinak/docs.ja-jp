@@ -3,11 +3,11 @@ title: Visual Studio (Visual Basic) でのオブジェクトの永続化
 ms.date: 07/20/2015
 ms.assetid: f1d0b562-e349-4dce-ab5f-c05108467030
 ms.openlocfilehash: 55ad2049003baaed26f4db909ae466aefdd161e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783475"
 ---
 # <a name="walkthrough-persisting-an-object-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio (Visual Basic) でのオブジェクトの永続化
 オブジェクトのプロパティはデザイン時に既定値に設定できますが、そのオブジェクトが破棄されると、実行時に入力した値はすべて失われます。 シリアル化によってインスタンス間でオブジェクトのデータを永続化すると、値を保存しておき、次にそのオブジェクトをインスタンス化するときに、その値を取得することができます。  
@@ -127,7 +127,7 @@ ms.locfileid: "59303350"
   
 ### <a name="to-mark-a-class-as-serializable"></a>クラスをシリアル化可能としてマークするには  
   
--   Loan クラスのクラス宣言を次のように変更します。  
+- Loan クラスのクラス宣言を次のように変更します。  
   
     ```vb  
     <Serializable()>  
@@ -138,7 +138,7 @@ ms.locfileid: "59303350"
   
 ### <a name="to-prevent-a-member-from-being-serialized"></a>メンバーをシリアル化の対象から除外するには  
   
--   `PropertyChanged` イベントの宣言を次のように変更します。  
+- `PropertyChanged` イベントの宣言を次のように変更します。  
   
     ```vb  
     <NonSerialized()>  
@@ -150,7 +150,7 @@ ms.locfileid: "59303350"
   
 ### <a name="to-add-references-to-namespaces"></a>名前空間に参照を追加するには  
   
--   `Form1` クラスの先頭に、次のステートメントを追加します。  
+- `Form1` クラスの先頭に、次のステートメントを追加します。  
   
     ```vb  
     Imports System.IO  
@@ -197,7 +197,7 @@ ms.locfileid: "59303350"
   
 ### <a name="to-save-the-data-and-serialize-the-class"></a>データを保存してクラスをシリアル化するには  
   
--   `Form1_FormClosing` イベント プロシージャに次のコードを追加します。  
+- `Form1_FormClosing` イベント プロシージャに次のコードを追加します。  
   
     ```vb  
     Private Sub Form1_FormClosing() Handles MyBase.FormClosing  

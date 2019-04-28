@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: d6538ab0-0abe-426a-b9d9-e6f3a5ca2016
 ms.openlocfilehash: 1deb5bcc29e43720929951764d1fcfeee8e89f8c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793407"
 ---
 # <a name="how-to-bind-data-to-windows-presentation-foundation-elements-wcf-data-services"></a>方法: Windows Presentation Foundation 要素 (WCF Data Services) にデータをバインドします。
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]など、Windows Presentation Foundation (WPF) 要素をバインドすることができます、<xref:System.Windows.Controls.ListBox>または<xref:System.Windows.Controls.ComboBox>のインスタンスに<xref:System.Data.Services.Client.DataServiceCollection%601>、維持するためにコントロールによって生成されるイベントを処理する、<xref:System.Data.Services.Client.DataServiceContext>変更と同期コントロール内のデータに行われます。 詳細については、次を参照してください。[データ コントロールをバインド](../../../../docs/framework/data/wcf/binding-data-to-controls-wcf-data-services.md)します。  

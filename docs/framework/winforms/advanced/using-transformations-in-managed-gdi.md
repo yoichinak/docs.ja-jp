@@ -6,11 +6,11 @@ helpviewer_keywords:
 - examples [Windows Forms], transformations
 ms.assetid: 1f8e18d3-d2f5-460e-a8e3-2da891c301de
 ms.openlocfilehash: 22984ca8b12b1b71cfc5df78f8ac4005e1ad55f2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57702400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791093"
 ---
 # <a name="using-transformations-in-managed-gdi"></a>マネージド GDI+ での変換の使用
 アフィン変換には、回転、スケーリング、反転、傾斜、および変換が含まれます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、<xref:System.Drawing.Drawing2D.Matrix>クラス ベクター描画、イメージ、およびテキストのアフィン変換を実行するための基盤を提供します。  

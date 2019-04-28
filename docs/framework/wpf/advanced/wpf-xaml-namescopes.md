@@ -11,11 +11,11 @@ helpviewer_keywords:
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
 ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61764648"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名前スコープ
 XAML 名前スコープは、XAML で定義されているオブジェクトを識別する概念です。 XAML 名前スコープ内の名前は、オブジェクト ツリーで XAML 定義のオブジェクトの名前と、対応するインスタンス間の関係を確立するために使用できます。 通常、XAML 名前スコープ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML アプリケーションのルート個々 の XAML ページの読み込みとマネージ コードが作成されます。 プログラミング オブジェクトとしての XAML 名前スコープが定義されている、<xref:System.Windows.Markup.INameScope>インターフェイスし、実際のクラスによって実装も<xref:System.Windows.NameScope>します。  
@@ -76,13 +76,13 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
 ### <a name="xaml-namescope-implementations"></a>XAML 名前スコープの実装  
  次は、実装をクラス<xref:System.Windows.Markup.INameScope>直接。  
   
--   <xref:System.Windows.NameScope>  
+- <xref:System.Windows.NameScope>  
   
--   <xref:System.Windows.Style>  
+- <xref:System.Windows.Style>  
   
--   <xref:System.Windows.ResourceDictionary>  
+- <xref:System.Windows.ResourceDictionary>  
   
--   <xref:System.Windows.FrameworkTemplate>  
+- <xref:System.Windows.FrameworkTemplate>  
   
  <xref:System.Windows.ResourceDictionary> XAML 名や名前スコープ; を使用しません。使用してキー代わりに、ディクショナリの実装があるためです。 唯一の理由<xref:System.Windows.ResourceDictionary>実装<xref:System.Windows.Markup.INameScope>が true の XAML 名前スコープの違いを明確にするユーザー コードに例外を発生させる可能性が方法と、<xref:System.Windows.ResourceDictionary>キーを処理および XAML 名前スコープに適用されないことを保証することも、<xref:System.Windows.ResourceDictionary>親要素。  
   
@@ -90,9 +90,9 @@ XAML 名前スコープは、XAML で定義されているオブジェクトを�
   
  次のクラスを使用して、独自の XAML 名前スコープを定義する、<xref:System.Windows.NameScope?displayProperty=nameWithType>ヘルパー クラスおよびその XAML 名前スコープの実装を通じてへの接続、<xref:System.Windows.NameScope.NameScope%2A?displayProperty=nameWithType>添付プロパティ。  
   
--   <xref:System.Windows.FrameworkElement>  
+- <xref:System.Windows.FrameworkElement>  
   
--   <xref:System.Windows.FrameworkContentElement>  
+- <xref:System.Windows.FrameworkContentElement>  
   
 ## <a name="see-also"></a>関連項目
 

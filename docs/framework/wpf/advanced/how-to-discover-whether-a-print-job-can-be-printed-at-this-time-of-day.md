@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], timing
 ms.assetid: 7e9c8ec1-abf6-4b3d-b1c6-33b35d3c4063
 ms.openlocfilehash: 7eed5400744f1010cbf52dc8d3b3d0bc24aa4371
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776221"
 ---
 # <a name="how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day"></a>方法: 現在、印刷ジョブが印刷可能であるかどうかを検出する
 印刷キューは常に使用できません、1 日 24 時間です。 特定の時間帯で使用できないように設定可能な開始と終了時のプロパティがあります。 たとえば、この機能は、特定の部門午後 5 時以降後に排他的に使用するプリンターを予約するは使用できます。 その部門は、別のキュー サービスの他の部門よりプリンターを使用して、必要があります。 他の部署のキューは午後 5 時以降に設定されます、する部門用のキューに設定できるときに常に利用できます。  
@@ -41,9 +41,9 @@ ms.locfileid: "59326867"
   
  **ReportQueueAndJobAvailability**かどうか、キューまたは印刷ジョブが使用可能なこの時点で確認するメソッドを開始します。 それらのいずれかが使用可能な場合は、それから、かどうかを使用できないキュー。 利用できないこのファクト テーブルとすると、キューが使用可能になるもう一度時間、メソッドが報告します。 ジョブを確認し、次回を報告が利用できない場合にまたがる場合に印刷できる場合。 最後に、ジョブが印刷できる最も早い時刻を報告します。 これは、次の 2 倍のそれ以降。  
   
--   印刷キューが次に利用できる時刻。  
+- 印刷キューが次に利用できる時刻。  
   
--   印刷ジョブが次に利用可能な時間です。  
+- 印刷ジョブが次に利用可能な時間です。  
   
  、1 日の時間を報告するときに、<xref:System.DateTime.ToShortTimeString%2A>年、月、および日の出力からこのメソッドを抑制しますので、メソッドが呼び出されます。 特定の年、月、または日に印刷キューまたは印刷ジョブのいずれかの可用性を制限することはできません。  
   

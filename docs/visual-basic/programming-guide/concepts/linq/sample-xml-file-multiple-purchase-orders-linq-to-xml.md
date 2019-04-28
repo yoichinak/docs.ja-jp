@@ -3,11 +3,11 @@ title: サンプル XML ファイル:複数の購買発注書 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 08e148ff-4070-4bb4-b089-306f4a9a7641
 ms.openlocfilehash: 0a3edba9d071b04e67d5350c9833fc515a08f218
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786985"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-linq-to-xml"></a>サンプル XML ファイル:複数の購買発注書 (LINQ to XML)
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには、複数の購買発注書が含まれています。  

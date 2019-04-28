@@ -11,11 +11,11 @@ helpviewer_keywords:
 - properties [WPF], RowGroups [WPF], manipulating row groups
 ms.assetid: ea61440f-08ae-44ed-b314-5716aaaae3ed
 ms.openlocfilehash: edc5fbe552a04387fc3f152cb53444605d142624
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768473"
 ---
 # <a name="how-to-manipulate-a-tables-row-groups-through-the-rowgroups-property"></a>方法: RowGroups プロパティを介してテーブルの行グループを操作する
 この例を使用してテーブルの行グループで実行できる一般的な操作の一部を示します、<xref:System.Windows.Documents.Table.RowGroups%2A>プロパティ。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1ad69393-3915-4e7f-9b91-b6fc59c6f5ba
 ms.openlocfilehash: 37d0e6fae8ad0f3a91f1bead23fb5823fc52d420
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313220"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787583"
 ---
 # <a name="how-to-create-a-windows-communication-foundation-contract-with-a-class"></a>方法: クラスを持つ、Windows Communication Foundation コントラクトを作成します。
 インターフェイスを使用する Windows Communication Foundation (WCF) コントラクトを作成することをお勧めです。 詳細については、「[方法 :サービス コントラクトを定義する](../../../../docs/framework/wcf/how-to-define-a-wcf-service-contract.md)します。 ここで説明する代替方法では、クラスを作成してから、<xref:System.ServiceModel.ServiceContractAttribute> 属性を直接そのクラスに適用し、<xref:System.ServiceModel.OperationContractAttribute> 属性をコントラクトに含まれるクラス内の各メソッドに適用します。  

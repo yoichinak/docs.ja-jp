@@ -10,17 +10,17 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f494d3176d72563a82b50fd5e077917e46045b91
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712285"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779185"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows フォーム アプリケーションの双方向サポート
 Visual Studio を使用して、アラビア語やヘブライ語などの双方向 (右から左の) 言語をサポートする Windows ベースのアプリケーションを作成することができます。 これには、標準的なフォーム、ダイアログ ボックス、MDI フォームや、これらのフォームで操作できるすべてのコントロール、まり、<xref:System.Windows.Forms.Control> 名前空間のすべてのオブジェクトが含まれます。  
   
 ## <a name="culture-support"></a>カルチャのサポート  
- カルチャと UI カルチャの設定は、アプリケーションが日付、時刻、通貨、およびその他の情報をどのように操作するかを決定します。 双方向言語のカルチャおよび UI カルチャのサポートは、その他の言語と同じです。 詳細については、[グローバルの Windows フォームおよび web フォームにおけるカルチャ固有のクラス](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms)を参照してください。  
+ カルチャと UI カルチャの設定は、アプリケーションが日付、時刻、通貨、およびその他の情報をどのように操作するかを決定します。 双方向言語のカルチャおよび UI カルチャのサポートは、その他の言語と同じです。 詳細については、次を参照してください。[グローバルの Windows フォームおよび web フォームにおけるカルチャ固有のクラス](/visualstudio/ide/culture-specific-classes-for-global-windows-forms-and-web-forms)します。  
   
 ## <a name="righttoleft-and-righttoleftlayout-properties"></a>RightToLeft プロパティと RightToLeftLayout プロパティ  
  フォームの派生元となる基底 <xref:System.Windows.Forms.Control> クラスには、フォームとコントロールの読み取り順序を変更するよう設定できる <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティが含まれます。 フォームの <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティを設定する場合、既定ではフォームのコントロールがこの設定を継承します。 ただし、ほとんどのコントロールで <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティを個別に設定することもできます。 参照してください[方法。グローバリゼーション用の Windows フォームで右から左のテキストを表示](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/7d3337xw(v=vs.100))します。  
@@ -101,19 +101,19 @@ Visual Studio を使用して、アラビア語やヘブライ語などの双方
   
  次のコントロールのミラーリングされたバージョンを作成できます。  
   
--   <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
+- <xref:System.Windows.Forms.ColumnHeader.ListView%2A>  
   
--   <xref:System.Windows.Forms.Panel>  
+- <xref:System.Windows.Forms.Panel>  
   
--   <xref:System.Windows.Forms.StatusBar>  
+- <xref:System.Windows.Forms.StatusBar>  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
--   <xref:System.Windows.Forms.TabPage>  
+- <xref:System.Windows.Forms.TabPage>  
   
--   <xref:System.Windows.Forms.ToolBar>  
+- <xref:System.Windows.Forms.ToolBar>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  一部のコントロールはシールされています。 そのため、そこから新しいコントロールを派生できません。 これには、<xref:System.Windows.Forms.ImageList> コントロールや <xref:System.Windows.Forms.ProgressBar> コントロールが含まれます。  
   

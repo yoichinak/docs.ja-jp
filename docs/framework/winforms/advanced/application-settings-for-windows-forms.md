@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms, application settings
 ms.assetid: 64090a34-8556-4904-8ea0-20efe9f8c886
 ms.openlocfilehash: 0cac4433ec9fe54721752c63d2b3b37f9d874c19
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719313"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779146"
 ---
 # <a name="application-settings-for-windows-forms"></a>Windows フォームのアプリケーション設定
 Windows フォームのアプリケーション設定の機能により、カスタム アプリケーションと、クライアント上のユーザー設定の作成、保存、および保守が簡単になります。 アプリケーション設定では、データベースの接続文字列など、アプリケーションのデータだけでなく、ツールバーの位置や最近使用した一覧など、ユーザー固有のデータも格納することができます。  

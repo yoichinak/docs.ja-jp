@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9c5b1cc7-84f3-45f8-9226-d59c278e8c42
 ms.openlocfilehash: 87f9cf5040ffb757799c51d598d0755847c5bfd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61767092"
 ---
 # <a name="how-to-inspect-and-modify-messages-on-the-service"></a>方法: サービスのメッセージを検査および変更する
 検査または実装することで、Windows Communication Foundation (WCF) クライアントの受信または送信メッセージを変更することができます、<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType>をサービス ランタイムに挿入します。 詳細については、次を参照してください。[ディスパッチャーの拡張](../../../../docs/framework/wcf/extending/extending-dispatchers.md)します。 サービスの同等の機能は、<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType> です。  
@@ -26,11 +26,11 @@ ms.locfileid: "59340647"
 ## <a name="example"></a>例  
  下のコード例では、次の項目を順番に示しています。  
   
--   サービス インスペクターの実装  
+- サービス インスペクターの実装  
   
--   インスペクターを挿入するサービス動作  
+- インスペクターを挿入するサービス動作  
   
--   サービス アプリケーションに動作を読み込んで実行する構成ファイル  
+- サービス アプリケーションに動作を読み込んで実行する構成ファイル  
   
  [!code-csharp[Interceptors#7](../../../../samples/snippets/csharp/VS_Snippets_CFX/interceptors/cs/interceptors.cs#7)]
  [!code-vb[Interceptors#7](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/interceptors/vb/interceptors.vb#7)]  

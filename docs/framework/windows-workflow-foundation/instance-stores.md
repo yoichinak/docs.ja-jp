@@ -3,11 +3,11 @@ title: インスタンス ストア
 ms.date: 03/30/2017
 ms.assetid: f2629668-0923-4987-b943-67477131c1e0
 ms.openlocfilehash: 352ffad56c77d0bd16f7e3b9aa1d82090f3a29b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791171"
 ---
 # <a name="instance-stores"></a>インスタンス ストア
 インスタンス ストアは、インスタンスの論理コンテナーです。 この場所には、インスタンス データとメタデータが格納されます。 インスタンス ストアは、専用の物理的なストレージを意味しているわけではありません。 インスタンス ストアには SQL Server データベースの永続的な情報と、メモリ内の非永続的な状態の情報が含まれます。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] には SQL Workflow Instance Store が付属しています。これはインスタンス ストアの具象実装で、ワークフローが SQL Server 2005 または SQL Server 2008 データベースにインスタンス データとメタデータを永続化できるようにします。 また、Windows Server App Fabric には、インスタンス ストアの具象実装も用意されています。 詳細については、次を参照してください。 [Windows Server App Fabric のインスタンス ストア、クエリ、およびコントロール プロバイダー](https://go.microsoft.com/fwlink/?LinkID=201201&clcid=0x409)します。  

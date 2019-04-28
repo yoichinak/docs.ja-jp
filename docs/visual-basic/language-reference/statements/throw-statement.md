@@ -15,11 +15,11 @@ helpviewer_keywords:
 - throw statement [Visual Basic]
 ms.assetid: a6e07406-5c8a-4498-87a2-8339f3651d62
 ms.openlocfilehash: 2494eac2f61f112f3ba6321ada7404f8cd618049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766637"
 ---
 # <a name="throw-statement-visual-basic"></a>Throw ステートメント (Visual Basic)
 プロシージャ内で例外をスローします。  

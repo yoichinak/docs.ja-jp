@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF Data Services, scenarios
 ms.assetid: 7c82658f-e7c0-46b6-834d-6592f67ab5ea
 ms.openlocfilehash: f0334f23a1b2bd454377d2f5b93e70495e693043
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793542"
 ---
 # <a name="application-scenarios-wcf-data-services"></a>アプリケーション シナリオ (WCF Data Services)
 

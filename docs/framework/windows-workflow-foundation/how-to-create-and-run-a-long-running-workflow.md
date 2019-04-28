@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
 ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773423"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>方法: 長時間にわたって実行されるワークフローを作成して実行する
 Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは、永続化およびデータベースへのアイドル状態のワークフローをアンロードするランタイムの機能です。 手順では、[方法。ワークフローを実行する](how-to-run-a-workflow.md)コンソール アプリケーションを使用したワークフロー ホスティングの基本を説明します。 ワークフローの開始、ワークフロー ライフサイクル ハンドラー、およびブックマークの再開の例を紹介しました。 ワークフローの永続化を効果的に説明するためには、複数のワークフロー インスタンスの開始と再開をサポートするより複雑なワークフロー ホストが必要です。 チュートリアルのこの手順では、複数のワークフロー インスタンスの開始と再開およびワークフローの永続化をサポートする Windows フォーム ホスト アプリケーションを作成する方法について説明します。また、この手順は、以降の手順で説明する追跡やバージョン管理などの高度な機能の基礎となります。  
@@ -23,25 +23,25 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
 ## <a name="in-this-topic"></a>このトピックの内容  
   
--   [永続性データベースを作成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
+- [永続性データベースを作成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreatePersistenceDatabase)  
   
--   [DurableInstancing アセンブリへの参照を追加するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
+- [DurableInstancing アセンブリへの参照を追加するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddReference)  
   
--   [ワークフロー ホスト フォームを作成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
+- [ワークフロー ホスト フォームを作成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_CreateForm)  
   
--   [フォームのヘルパー メソッドとプロパティを追加するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
+- [フォームのヘルパー メソッドとプロパティを追加するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_AddHelperMethods)  
   
--   [インスタンス ストア、ワークフロー ライフ サイクル ハンドラー、および拡張機能を構成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
+- [インスタンス ストア、ワークフロー ライフ サイクル ハンドラー、および拡張機能を構成するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_ConfigureWorkflowApplication)  
   
--   [開始と再開の複数のワークフローの種類を有効にするには](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
+- [開始と再開の複数のワークフローの種類を有効にするには](how-to-create-and-run-a-long-running-workflow.md#BKMK_WorkflowVersionMap)  
   
--   [新しいワークフローを開始するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
+- [新しいワークフローを開始するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_StartWorkflow)  
   
--   [ワークフローを再開するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
+- [ワークフローを再開するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_ResumeWorkflow)  
   
--   [ワークフローを終了するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
+- [ワークフローを終了するには](how-to-create-and-run-a-long-running-workflow.md#BKMK_TerminateWorkflow)  
   
--   [ビルドして、アプリケーションの実行](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
+- [ビルドして、アプリケーションの実行](how-to-create-and-run-a-long-running-workflow.md#BKMK_BuildAndRun)  
   
 ### <a name="BKMK_CreatePersistenceDatabase"></a> 永続性データベースを作成するには  
   
@@ -54,9 +54,9 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
      次の 2 つのファイルを選択し、クリックして**オープン**します。  
   
-    -   SqlWorkflowInstanceStoreLogic.sql  
+    - SqlWorkflowInstanceStoreLogic.sql  
   
-    -   SqlWorkflowInstanceStoreSchema.sql  
+    - SqlWorkflowInstanceStoreSchema.sql  
   
 3. 選択**SqlWorkflowInstanceStoreSchema.sql**から、**ウィンドウ**メニュー。 いることを確認**WF45GettingStartedTutorial**でが選択されている、**利用可能なデータベース**ドロップダウンをクリックし、選択**Execute**から、**クエリ**メニュー。  
   

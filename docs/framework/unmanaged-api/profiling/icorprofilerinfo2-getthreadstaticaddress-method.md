@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: e8a842dd531576b1029c3924d12b1a4bd95bde37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115207"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791561"
 ---
 # <a name="icorprofilerinfo2getthreadstaticaddress-method"></a>ICorProfilerInfo2::GetThreadStaticAddress メソッド
 指定したスレッドのスコープ内の指定したスレッド内静的フィールドのアドレスを取得します。  
@@ -53,9 +53,9 @@ HRESULT GetThreadStaticAddress(
 ## <a name="remarks"></a>Remarks  
  `GetThreadStaticAddress`メソッドは、次のいずれかを返す可能性があります。  
   
--   指定された静的フィールドに指定したコンテキスト内のアドレスが割り当てられていない場合の CORPROF_E_DATAINCOMPLETE HRESULT。  
+- 指定された静的フィールドに指定したコンテキスト内のアドレスが割り当てられていない場合の CORPROF_E_DATAINCOMPLETE HRESULT。  
   
--   ガベージ コレクション ヒープで可能性のあるオブジェクトのアドレス。 これらのアドレスの後、ガベージ コレクションが無効になる後、ガベージ コレクションのプロファイラーが有効である想定しないでください。  
+- ガベージ コレクション ヒープで可能性のあるオブジェクトのアドレス。 これらのアドレスの後、ガベージ コレクションが無効になる後、ガベージ コレクションのプロファイラーが有効である想定しないでください。  
   
  クラスのクラスのコンス トラクターが完了したら、前に`GetThreadStaticAddress`はいくつかの静的フィールドは既に初期化可能性がありますが、すべての静的フィールドの CORPROF_E_DATAINCOMPLETE を返し、ガベージ コレクション オブジェクトのルートします。  
   

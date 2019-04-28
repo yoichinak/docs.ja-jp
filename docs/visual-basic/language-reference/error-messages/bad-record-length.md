@@ -6,19 +6,19 @@ f1_keywords:
 ms.assetid: 0926a3a4-177b-4452-9b33-d8a01e24cc21
 ms.openlocfilehash: 1bc75303bcc2f46e54c06e89347da28997e59786
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935253"
 ---
 # <a name="bad-record-length"></a>レコード長が正しくありません。
 このエラーでは以下の原因が考えられます。  
   
--   指定されたレコードの変数の長さ、 `FileGet`、 `FileGetObject`、`FilePut`または`FilePutObject`ステートメントは、対応する指定された長さによって異なります。`FileOpen`ステートメント。  
+- 指定されたレコードの変数の長さ、 `FileGet`、 `FileGetObject`、`FilePut`または`FilePutObject`ステートメントは、対応する指定された長さによって異なります。`FileOpen`ステートメント。  
   
--   内の変数を`FilePut`または`FilePutObject`ステートメントまたは可変長文字列が含まれています。  
+- 内の変数を`FilePut`または`FilePutObject`ステートメントまたは可変長文字列が含まれています。  
   
--   内の変数を`FilePut`または`FilePutObject`かが含まれています、`Variant`型。  
+- 内の変数を`FilePut`または`FilePutObject`かが含まれています、`Variant`型。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   

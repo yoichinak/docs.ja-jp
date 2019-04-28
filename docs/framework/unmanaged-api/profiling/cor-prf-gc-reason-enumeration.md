@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: daf97f25b1adc30b173fcd81812a4b197915cdd1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775051"
 ---
 # <a name="corprfgcreason-enumeration"></a>COR_PRF_GC_REASON 列挙型
 ガベージ コレクションが発生している理由を示します。  

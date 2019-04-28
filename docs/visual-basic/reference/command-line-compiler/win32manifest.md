@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -win32manifest compiler option [Visual Basic]
 ms.assetid: 9e3191b4-90db-41c8-966a-28036fd20005
 ms.openlocfilehash: 15fe62457ed11ffcd08a1db3aa8be57080f22869
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774778"
 ---
 # <a name="-win32manifest-visual-basic"></a>-win32manifest (Visual Basic)
 プロジェクトのポータブル実行可能 (PE) ファイルに埋め込まれる、ユーザー定義の Win32 アプリケーション マニフェスト ファイルを識別します。  

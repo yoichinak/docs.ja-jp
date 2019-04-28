@@ -3,11 +3,11 @@ title: <peerAuthentication> 要素
 ms.date: 03/30/2017
 ms.assetid: 09a8a9ff-e395-42f6-8ceb-9d44bdc1cbe1
 ms.openlocfilehash: 1e99f6d117604f9ba2672972a4b09e7fe9f96792
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59092969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783381"
 ---
 # <a name="peerauthentication-element"></a>\<peerAuthentication > 要素
 ピアツーピア クライアントの認証オプションを指定します。  

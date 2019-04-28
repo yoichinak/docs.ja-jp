@@ -3,11 +3,11 @@ title: System.ServiceModel.Activation.MessageQueueDuplicatedSocketError
 ms.date: 03/30/2017
 ms.assetid: 5d039e48-8188-4f43-a9bd-d6c58c075173
 ms.openlocfilehash: 58c611b43565268da6ea965adbb0177c66a156a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792601"
 ---
 # <a name="systemservicemodelactivationmessagequeueduplicatedsocketerror"></a>System.ServiceModel.Activation.MessageQueueDuplicatedSocketError
 System.ServiceModel.Activation.MessageQueueDuplicatedSocketError  

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 143b11f0a99081b7d49bfbb68b635d92cf1e9ba3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163879"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777430"
 ---
 # <a name="imetadataimportresetenum-method"></a>IMetaDataImport::ResetEnum メソッド
 指定した列挙子を指定した位置にリセットします。  

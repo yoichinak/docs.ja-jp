@@ -5,11 +5,11 @@ ms.assetid: 939cabe1-b647-4090-b662-eeec23c6c58d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5dab9183075f563f52a4fc982eda5cb172556554
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154376"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782981"
 ---
 # <a name="icordebugdatatarget2getimagefrompointer-method"></a>ICorDebugDataTarget2::GetImageFromPointer メソッド
 モジュールのアドレスから、そのモジュールのベース アドレスとサイズを返します。  

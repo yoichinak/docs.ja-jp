@@ -11,11 +11,11 @@ helpviewer_keywords:
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
 ms.openlocfilehash: fc38d239720b5d5a8e159f91749b03512568cd9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776260"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>方法: 問題のある印刷ジョブを診断する
 印刷ジョブで印刷を実行できない、印刷速度が遅い、などのユーザーからの苦情に、ネットワーク管理者が対処することはよくあります。 豊富な一連の印刷ジョブのプロパティで公開されている、 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft .NET Framework の印刷ジョブの迅速なリモート診断を実行する手段を提供します。  
@@ -25,13 +25,13 @@ ms.locfileid: "59338476"
   
 1. ユーザーから苦情が出ている印刷ジョブを特定します。 ユーザーがそのジョブを正確に特定できないことはよくあります。 プリント サーバーやプリンターの名前がわからないのかもしれません。 設定で使用されたさまざまな用語では、プリンターの位置を示す、可能性があります、<xref:System.Printing.PrintQueue.Location%2A>プロパティ。 そこで、ユーザーが現在送信しているジョブのリストを生成することをお勧めします。 ジョブが複数存在する場合は、ユーザーと印刷システム管理者の間の通信を使用して、問題のあるジョブを特定できます。 その手順を次に示します。  
   
-    1.  プリント サーバーの一覧を取得します。  
+    1. プリント サーバーの一覧を取得します。  
   
-    2.  サーバーをループして、印刷キューを照会します。  
+    2. サーバーをループして、印刷キューを照会します。  
   
-    3.  サーバー ループの各パス内で、すべてのサーバーのキューをループして、ジョブを照会します  
+    3. サーバー ループの各パス内で、すべてのサーバーのキューをループして、ジョブを照会します  
   
-    4.  キュー ループの各パス内で、ジョブをループし、苦情を訴えているユーザーが送信したジョブに関する識別情報を収集します。  
+    4. キュー ループの各パス内で、ジョブをループし、苦情を訴えているユーザーが送信したジョブに関する識別情報を収集します。  
   
 2. 問題のある印刷ジョブを特定したら、関連するプロパティを調べて、 ジョブがエラー状態になっていないか、キューにサービスを提供しているプリンターがジョブの印刷前にオフラインになっていないか、など、何が問題になっているかを確認します。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "59338476"
   
  この時点で、アプリケーションは分岐構造になっており、印刷ジョブの状態を確認する 2 つの方法に対応しています。  
   
--   フラグを読み取ることができます、<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>型のプロパティ<xref:System.Printing.PrintJobStatus>します。  
+- フラグを読み取ることができます、<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>型のプロパティ<xref:System.Printing.PrintJobStatus>します。  
   
--   など、各関連プロパティを読み取ることができます<xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A>と<xref:System.Printing.PrintSystemJobInfo.IsInError%2A>します。  
+- など、各関連プロパティを読み取ることができます<xref:System.Printing.PrintSystemJobInfo.IsBlocked%2A>と<xref:System.Printing.PrintSystemJobInfo.IsInError%2A>します。  
   
  この例では、両方の方法、ユーザーが以前に使用する方法に関して入力を求めし、求めのフラグを使用する場合は、"Y"で応答したため、<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>プロパティ。 2 つの方法の詳細については、以下を参照してください。 最後に、アプリケーションは **ReportQueueAndJobAvailability** というメソッドを使用して、現在ジョブを印刷できるかどうかを報告します。 このメソッドについては、「[方法: 現在、印刷ジョブが印刷可能であるかどうかを検出する](how-to-discover-whether-a-print-job-can-be-printed-at-this-time-of-day.md)」で説明しています。  
   

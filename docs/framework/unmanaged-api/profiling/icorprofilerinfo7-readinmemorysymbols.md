@@ -13,11 +13,11 @@ ms.assetid: 1745a0b9-8332-4777-a670-b549bff3b901
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 662863ec69e464dafe893552f1d81755313acc75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786230"
 ---
 # <a name="icorprofilerinfo7readinmemorysymbols"></a>ICorProfilerInfo7::ReadInMemorySymbols
 [[!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] 以降のバージョンでサポート]  

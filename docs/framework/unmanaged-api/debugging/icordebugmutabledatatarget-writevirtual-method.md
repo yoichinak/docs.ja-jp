@@ -5,11 +5,11 @@ ms.assetid: 80833648-58a7-491a-8dc8-9a48e9bb3adc
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2fba970de6e5882d3cbe9be17b5b49be5a3e81aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59171653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61927375"
 ---
 # <a name="icordebugmutabledatatargetwritevirtual-method"></a>ICorDebugMutableDataTarget::WriteVirtual メソッド
 ターゲット プロセスのアドレス空間にメモリを書き込みます。  

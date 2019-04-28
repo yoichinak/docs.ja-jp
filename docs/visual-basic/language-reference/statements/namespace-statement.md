@@ -13,11 +13,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], namespaces
 ms.assetid: a31fbd95-9ace-4c3d-bbb1-51222a2272b2
 ms.openlocfilehash: 7f6b976af7933b3895f6992488d2d1532a8fc2f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784138"
 ---
 # <a name="namespace-statement"></a>Namespace ステートメント
 名前空間の名前を宣言し、ソース コードがその名前空間内でコンパイルするように宣言します。  
@@ -32,7 +32,7 @@ End Namespace
   
 ## <a name="parts"></a>指定項目  
  Global  
- 任意。 プロジェクトのルート名前空間から名前空間を定義することができます。 参照してください[Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)します。  
+ 省略可能です。 プロジェクトのルート名前空間から名前空間を定義することができます。 参照してください[Visual Basic における名前空間](../../../visual-basic/programming-guide/program-structure/namespaces.md)します。  
   
  `name`  
  必須。 名前空間を識別する一意の名前。 有効な Visual Basic 識別子である必要があります。 詳細については、次を参照してください。 [宣言された要素の名前](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)  

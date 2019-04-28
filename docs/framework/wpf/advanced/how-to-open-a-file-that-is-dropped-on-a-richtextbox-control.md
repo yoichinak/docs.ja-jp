@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drag-and-drop [WPF], open a dropped file
 ms.assetid: 6bb8bb54-f576-41db-a9a7-24102ddeb490
 ms.openlocfilehash: 8ffa4c9919788060dc4524e127c181ee8282e6f9
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378917"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768603"
 ---
 # <a name="how-to-open-a-file-that-is-dropped-on-a-richtextbox-control"></a>方法: RichTextBox コントロール上にドロップしたファイルを開く
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、 <xref:System.Windows.Controls.TextBox>、 <xref:System.Windows.Controls.RichTextBox>、および<xref:System.Windows.Documents.FlowDocument>組み込みのドラッグ アンド ドロップ機能をすべてのコントロールがあります。 組み込みの機能により、テキスト内とコントロール間のドラッグ アンド ドロップできます。 ただし、コントロール上のファイルを削除することにより、ファイルを開く、ことはできません。 これらのコントロールは、処理済みとしても、ドラッグ アンド ドロップ イベントをマークします。 その結果、既定では、削除されたファイルを開くための機能を提供する独自のイベント ハンドラーを追加できません。  

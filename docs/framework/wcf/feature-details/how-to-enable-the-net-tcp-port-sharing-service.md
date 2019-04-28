@@ -6,11 +6,11 @@ helpviewer_keywords:
 - activation services [WCF]
 ms.assetid: c9175af4-c27c-4765-bf45-b8f7528a7282
 ms.openlocfilehash: 20db0ef427a5e791bd6b8dcef90bf7911ae0d4a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772958"
 ---
 # <a name="how-to-enable-the-nettcp-port-sharing-service"></a>方法: Net.TCP ポート共有サービスを有効にする
 Windows Communication Foundation (WCF) は、複数のプロセスで TCP ポート共有が簡単に、Net.TCP ポート共有サービスと呼ばれる Windows サービスを使用します。 このサービスは、WCF の一部としてインストールされますが、サービスのセキュリティ予防措置としてデフォルトが有効でないとようにする必要があります手動で有効にする最初の使用前にします。 このトピックでは、Microsoft 管理コンソール (MMC) スナップインを使用して、Net TCP ポート共有サービスを設定する方法について説明します。  

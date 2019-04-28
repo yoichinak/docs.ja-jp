@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], creating
 ms.assetid: 35300be3-77b0-4bef-a156-034d3cdedde0
 ms.openlocfilehash: ee1e93b4e9819992f17738eb024004a4d66210d1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332587"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938243"
 ---
 # <a name="how-to-create-a-new-variable-visual-basic"></a>方法: 新しい変数 (Visual Basic) を作成します。
 変数を作成する、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)します。  

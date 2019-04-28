@@ -3,17 +3,17 @@ title: JSON Web トークン ハンドラー パッケージのダウンロー�
 ms.date: 10/10/2018
 ms.assetid: d12b3f5b-f1f1-4a9d-a159-0c13e5976c90
 ms.openlocfilehash: 8f878d23afd76488de7da03f16f72cbfa43c17d7
-ms.sourcegitcommit: d88024e6d6d8b242feae5f4007a709379355aa24
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2018
-ms.locfileid: "49316481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792757"
 ---
 # <a name="download-the-json-web-token-handler-package"></a>JSON Web トークン ハンドラー パッケージをダウンロードします。
 
 このトピックでは、JSON Web トークン ハンドラーをダウンロードしてプロジェクトで使用する方法について説明します。
 
-JSON Web トークン ハンドラー拡張機能は、プロジェクトに必要なアセンブリと参照を追加する NuGet パッケージとして入手できます。 まだ NuGet がインストールされていない場合は、[nuget.org](https://nuget.org) にアクセスしてインストールしてください。 NuGet の「[JSON Web Token Handler](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)」 (JSON Web トークン ハンドラー) ページにアクセスすると、拡張機能のバージョン履歴を参照できます。
+JSON Web トークン ハンドラー拡張機能は、プロジェクトに必要なアセンブリと参照を追加する NuGet パッケージとして入手できます。 まだ NuGet がインストールされていない場合は、[nuget.org](https://nuget.org) にアクセスしてインストールしてください。 ページ NuGet にアクセスして、拡張機能のバージョン履歴を確認できます。[NuGet での JSON Web トークン ハンドラー](https://www.nuget.org/packages/System.IdentityModel.Tokens.Jwt/)
 
 ## <a name="use-the-package-manager-gui"></a>パッケージ マネージャー GUI を使用します。
 

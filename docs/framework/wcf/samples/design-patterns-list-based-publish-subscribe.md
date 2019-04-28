@@ -3,11 +3,11 @@ title: デザイン パターン:リストに基づく公開/定期受信
 ms.date: 03/30/2017
 ms.assetid: f4257abc-12df-4736-a03b-0731becf0fd4
 ms.openlocfilehash: e98fab5c8e7570917a4ba755fa372832fe0b26b5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773062"
 ---
 # <a name="design-patterns-list-based-publish-subscribe"></a>デザイン パターン:リストに基づく公開/定期受信
 このサンプルでは、Windows Communication Foundation (WCF) プログラムとして実装されたリストに基づく公開/定期受信パターンを示します。  
@@ -130,23 +130,23 @@ public class PriceChangeEventArgs : EventArgs
   
 1. サービス コンピュータを設定します。  
   
-    1.  サービス コンピューターで、ServiceModelSamples という仮想ディレクトリを作成します。 バッチ ファイル Setupvroot.bat ファイル、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ディスク ディレクトリと仮想ディレクトリを作成するために使用できます。  
+    1. サービス コンピューターで、ServiceModelSamples という仮想ディレクトリを作成します。 バッチ ファイル Setupvroot.bat ファイル、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)ディスク ディレクトリと仮想ディレクトリを作成するために使用できます。  
   
-    2.  サービス プログラム ファイルを %SystemDrive%\Inetpub\wwwroot\servicemodelsamples からサービス コンピューターの ServiceModelSamples 仮想ディレクトリにコピーします。 \bin ディレクトリのファイルが含まれていることを確認してください。  
+    2. サービス プログラム ファイルを %SystemDrive%\Inetpub\wwwroot\servicemodelsamples からサービス コンピューターの ServiceModelSamples 仮想ディレクトリにコピーします。 \bin ディレクトリのファイルが含まれていることを確認してください。  
   
-    3.  ブラウザーを使用して、サービスにクライアント コンピューターからアクセスできるかどうかをテストします。  
+    3. ブラウザーを使用して、サービスにクライアント コンピューターからアクセスできるかどうかをテストします。  
   
 2. クライアント コンピュータを設定します。  
   
-    1.  クライアント プログラム ファイルを、言語固有のフォルダにある \client\bin\ フォルダーからクライアント コンピュータにコピーします。  
+    1. クライアント プログラム ファイルを、言語固有のフォルダにある \client\bin\ フォルダーからクライアント コンピュータにコピーします。  
   
-    2.  各クライアントの構成ファイルで、エンドポイント定義のアドレス値をサービスの新しいアドレスに合わせて変更します。 アドレスの "localhost" への参照をすべて完全修飾ドメイン名に置き換えます。  
+    2. 各クライアントの構成ファイルで、エンドポイント定義のアドレス値をサービスの新しいアドレスに合わせて変更します。 アドレスの "localhost" への参照をすべて完全修飾ドメイン名に置き換えます。  
   
 3. データ ソース コンピュータを設定します。  
   
-    1.  データ ソース プログラム ファイルを、言語固有のフォルダーにある \datasource\bin\ フォルダーからデータ ソース コンピュータにコピーします。  
+    1. データ ソース プログラム ファイルを、言語固有のフォルダーにある \datasource\bin\ フォルダーからデータ ソース コンピュータにコピーします。  
   
-    2.  データ ソースの構成ファイルで、エンドポイント定義のアドレス値をサービスの新しいアドレスに合わせて変更します。 アドレスの "localhost" への参照をすべて完全修飾ドメイン名に置き換えます。  
+    2. データ ソースの構成ファイルで、エンドポイント定義のアドレス値をサービスの新しいアドレスに合わせて変更します。 アドレスの "localhost" への参照をすべて完全修飾ドメイン名に置き換えます。  
   
 4. クライアント コンピュータで、コマンド プロンプトから Client.exe を起動します。  
   

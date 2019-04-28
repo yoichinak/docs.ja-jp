@@ -7,11 +7,11 @@ helpviewer_keywords:
 - lambda expressions [Visual Basic], function expression
 ms.assetid: e8a47a45-4b8a-4f45-a623-7653625dffbc
 ms.openlocfilehash: 0aa47fd277cfe47b3d8f08b41ffca9c547dcbfe9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839686"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778535"
 ---
 # <a name="function-expression-visual-basic"></a>Function 式 (Visual Basic)
 パラメーターと、関数ラムダ式を定義するコードを宣言します。  
@@ -40,19 +40,19 @@ End Function
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
  ラムダ式の構文では、標準的な関数に似ています。 相違点は次のとおりです。  
   
--   ラムダ式の名前ではありません。  
+- ラムダ式の名前ではありません。  
   
--   ラムダ式などで、修飾子を含めることはできません`Overloads`または`Overrides`します。  
+- ラムダ式などで、修飾子を含めることはできません`Overloads`または`Overrides`します。  
   
--   ラムダ式は使用しないでください、`As`関数の戻り値の型を指定する句。 代わりに、型は、1 行のラムダ式の本体が評価される値または複数行のラムダ式の戻り値から推論されます。 たとえば、1 行のラムダ式の本体が`Where cust.City = "London"`、戻り値の型は`Boolean`します。  
+- ラムダ式は使用しないでください、`As`関数の戻り値の型を指定する句。 代わりに、型は、1 行のラムダ式の本体が評価される値または複数行のラムダ式の戻り値から推論されます。 たとえば、1 行のラムダ式の本体が`Where cust.City = "London"`、戻り値の型は`Boolean`します。  
   
--   単一行のラムダ式の本体は、ステートメントではなく、式である必要があります。 本文は、関数、プロシージャの呼び出しが sub プロシージャへの呼び出しではないので構成できます。  
+- 単一行のラムダ式の本体は、ステートメントではなく、式である必要があります。 本文は、関数、プロシージャの呼び出しが sub プロシージャへの呼び出しではないので構成できます。  
   
--   すべてのパラメーターまたはすべてのデータ型を推論する必要があります指定する必要があります。  
+- すべてのパラメーターまたはすべてのデータ型を推論する必要があります指定する必要があります。  
   
--   (省略可能) と Paramarray パラメーターは使用できません。  
+- (省略可能) と Paramarray パラメーターは使用できません。  
   
--   ジェネリック パラメーターを指定することはできません。  
+- ジェネリック パラメーターを指定することはできません。  
   
 ## <a name="example"></a>例  
  次の例では、単純なラムダ式を作成する 2 つの方法を示します。 最初の使用、`Dim`関数の名前を指定します。 関数を呼び出すには、パラメーターの値で送信します。  

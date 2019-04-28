@@ -10,11 +10,11 @@ ms.assetid: fdf5856d-516b-4042-849d-911c4518a6cb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ef621d1cbbd04421b392e64f5507fcbe23860465
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788077"
 ---
 # <a name="clr-etw-keywords-and-levels"></a>CLR ETW キーワードおよびレベル
 <a name="top"></a> Windows (ETW) イベントのイベント トレースは、カテゴリとレベルによってフィルター処理できます。 イベントの [CLR ETW キーワード](#keywords) は、イベントをカテゴリ別にフィルタ処理できます。これらはランタイム プロバイダーとランダウン プロバイダー用に組み合わせて使用します。 [イベント レベル](#levels) は、フラグによって識別されます。  
@@ -25,13 +25,13 @@ ms.locfileid: "59105743"
   
  これらのキーワードの説明を次の表に示します。  
   
--   [CLR ETW ランタイム キーワード](#runtime)  
+- [CLR ETW ランタイム キーワード](#runtime)  
   
--   [CLR ETW ランダウン キーワード](#rundown)  
+- [CLR ETW ランダウン キーワード](#rundown)  
   
--   [ランタイム プロバイダーのシンボル解決のキーワードの組み合わせ](#runtime_combo)  
+- [ランタイム プロバイダーのシンボル解決のキーワードの組み合わせ](#runtime_combo)  
   
--   [ランダウン プロバイダーのシンボル解決のキーワードの組み合わせ](#rundown_combo)  
+- [ランダウン プロバイダーのシンボル解決のキーワードの組み合わせ](#rundown_combo)  
   
 <a name="runtime"></a>   
 ### <a name="clr-etw-runtime-keywords"></a>CLR ETW ランタイム キーワード  

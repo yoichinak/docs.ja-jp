@@ -8,11 +8,11 @@ helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
 ms.openlocfilehash: 0cf2a37eaa812d27dc3d111b1459c9daae72dc5a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320072"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788831"
 ---
 # <a name="structured-navigation-overview"></a>構造化ナビゲーションの概要
 ホストされるコンテンツ、 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 <xref:System.Windows.Controls.Frame>、または<xref:System.Windows.Navigation.NavigationWindow>はパックによって識別できるページで構成されます[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]ハイパーリンクに移動するとします。 ページの構造、およびハイパーリンクで定義される移動方法を、ナビゲーション トポロジと呼びます。 このトポロジはさまざまな種類のアプリケーションに対応しますが、特にドキュメント間を移動するアプリケーションに適しています。 このようなアプリケーションでは、互いのページの情報を必要とせずに、ユーザーはページ間を移動できます。  
@@ -25,15 +25,15 @@ ms.locfileid: "59320072"
 ## <a name="structured-navigation"></a>構造化ナビゲーション  
  構造化ナビゲーションで、あるページが別のページを呼び出す場合、以下の一部またはすべての動作が必要です。  
   
--   呼び出し元ページが、必要に応じてパラメーターを渡して、呼び出されたページに移動します。  
+- 呼び出し元ページが、必要に応じてパラメーターを渡して、呼び出されたページに移動します。  
   
--   ユーザーが呼び出し元ページの使用を終了すると、呼び出されたページは呼び出し元ページに戻ります。このとき、次の動作が行われることがあります。  
+- ユーザーが呼び出し元ページの使用を終了すると、呼び出されたページは呼び出し元ページに戻ります。このとき、次の動作が行われることがあります。  
   
-    -   呼び出し元ページの終了方法 (ユーザーが [OK] または [キャンセル] をクリックしたかどうかなど) を示す状態情報を返します。  
+    - 呼び出し元ページの終了方法 (ユーザーが [OK] または [キャンセル] をクリックしたかどうかなど) を示す状態情報を返します。  
   
-    -   ユーザーから収集したデータ (新しい従業員の詳細など) を返します。  
+    - ユーザーから収集したデータ (新しい従業員の詳細など) を返します。  
   
--   呼び出し元ページが、呼び出されたページに戻ると、呼び出されたページはナビゲーション履歴から削除されて、呼び出されたページのインスタンスが他のインスタンスから分離されます。  
+- 呼び出し元ページが、呼び出されたページに戻ると、呼び出されたページはナビゲーション履歴から削除されて、呼び出されたページのインスタンスが他のインスタンスから分離されます。  
   
  これらの動作は、次の図に示します。  
   
@@ -115,17 +115,17 @@ ms.locfileid: "59320072"
   
  呼び出されるページにパラメーターを渡す必要はありません。 代わりに、以下を実行できます。  
   
--   呼び出し元ページの場合:  
+- 呼び出し元ページの場合:  
   
-    1.  呼び出されたインスタンス化<xref:System.Windows.Navigation.PageFunction%601>既定コンス トラクターを使用します。  
+    1. 呼び出されたインスタンス化<xref:System.Windows.Navigation.PageFunction%601>既定コンス トラクターを使用します。  
   
-    2.  内のパラメーターを格納<xref:System.Windows.Application.Properties%2A>します。  
+    2. 内のパラメーターを格納<xref:System.Windows.Application.Properties%2A>します。  
   
-    3.  呼び出されたに移動します<xref:System.Windows.Navigation.PageFunction%601>します。  
+    3. 呼び出されたに移動します<xref:System.Windows.Navigation.PageFunction%601>します。  
   
--   呼び出されたから<xref:System.Windows.Navigation.PageFunction%601>:  
+- 呼び出されたから<xref:System.Windows.Navigation.PageFunction%601>:  
   
-    -   取得しに格納されているパラメーターを使用して<xref:System.Windows.Application.Properties%2A>します。  
+    - 取得しに格納されているパラメーターを使用して<xref:System.Windows.Application.Properties%2A>します。  
   
  しかし、この後の説明にもあるように、コードを使用して呼び出されたページをインスタンス化して、そのページに移動して、呼び出されたページから返されるデータを収集する必要が依然としてあります。 このため、<xref:System.Windows.Navigation.PageFunction%601>に移動するそれ以外の動作を保持する必要がある、次回、 <xref:System.Windows.Navigation.PageFunction%601>、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]をインスタンス化、<xref:System.Windows.Navigation.PageFunction%601>既定コンス トラクターを使用します。  
   

@@ -3,11 +3,11 @@ title: <transport> の <msmqIntegrationBinding>
 ms.date: 03/30/2017
 ms.assetid: 054579e3-7fdd-47df-99ca-952706ba5c8e
 ms.openlocfilehash: 3126618eca6e8317968c6eb568a04615ec8de884
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788363"
 ---
 # <a name="transport-of-msmqintegrationbinding"></a>\<トランスポート > の\<msmqIntegrationBinding >
 メッセージ キュー統合トランスポートのセキュリティ設定を定義します。  

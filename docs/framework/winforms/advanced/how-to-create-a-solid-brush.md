@@ -11,11 +11,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], creating solid
 ms.assetid: 85c3fe7d-fb1d-4591-8a9f-d75b556b90af
 ms.openlocfilehash: ed9ec1f52b41c83b3cc6e36dedf97f1c00db42e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937710"
 ---
 # <a name="how-to-create-a-solid-brush"></a>方法: 純色ブラシを作成する
 この例で作成、<xref:System.Drawing.SolidBrush>で使用できるオブジェクト、<xref:System.Drawing.Graphics>図形を塗りつぶすためのオブジェクト。  

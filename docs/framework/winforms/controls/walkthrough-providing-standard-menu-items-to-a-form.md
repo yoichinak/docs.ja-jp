@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms]
 ms.assetid: dac37d98-589e-4d6d-9673-6437e8943122
 ms.openlocfilehash: b4957a3f2efcb31594806a188e3d3bb10c2dac09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296395"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792211"
 ---
 # <a name="walkthrough-providing-standard-menu-items-to-a-form"></a>チュートリアル: 標準メニュー項目をフォームに用意する
 フォームの標準のメニューを <xref:System.Windows.Forms.MenuStrip> コントロールに提供できます。  
   
  このチュートリアルを使用する方法について説明する<xref:System.Windows.Forms.MenuStrip>標準メニューを作成するコントロール。 フォームは、ユーザーがメニュー項目を選択したときにも応答します。 このチュートリアルで、次のタスクを示します。  
   
--   Windows フォーム プロジェクトを作成します。  
+- Windows フォーム プロジェクトを作成します。  
   
--   標準メニューを作成します。  
+- 標準メニューを作成します。  
   
--   作成、<xref:System.Windows.Forms.StatusStrip>コントロール。  
+- 作成、<xref:System.Windows.Forms.StatusStrip>コントロール。  
   
--   メニュー項目の選択を処理します。  
+- メニュー項目の選択を処理します。  
   
  標準のメニューにメニュー項目の選択内容を表示するフォームが完了したら、<xref:System.Windows.Forms.StatusStrip>コントロール。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "59296395"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを完了するための要件は次のとおりです。  
   
--   作成し、Visual Studio がインストールされているコンピューターで Windows フォーム アプリケーション プロジェクトを実行できる十分なアクセスを許可します。  
+- 作成し、Visual Studio がインストールされているコンピューターで Windows フォーム アプリケーション プロジェクトを実行できる十分なアクセスを許可します。  
   
 ## <a name="creating-the-project"></a>プロジェクトの作成  
  最初にプロジェクトを作成し、フォームを設定します。  
@@ -113,11 +113,11 @@ ms.locfileid: "59296395"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、標準メニューを持つフォームを作成しました。 使用することができます、<xref:System.Windows.Forms.ToolStrip>の他のさまざまな目的のコントロール ファミリ。  
   
--   ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、次を参照してください。 [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)します。  
+- ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、次を参照してください。 [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)します。  
   
--   ドッキングのマルチ ドキュメント インターフェイス (MDI) フォームを作成する<xref:System.Windows.Forms.ToolStrip>コントロール。 詳細については、「[チュートリアル:メニューのマージと ToolStrip コントロールを MDI フォームを作成する](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)します。  
+- ドッキングのマルチ ドキュメント インターフェイス (MDI) フォームを作成する<xref:System.Windows.Forms.ToolStrip>コントロール。 詳細については、「[チュートリアル:メニューのマージと ToolStrip コントロールを MDI フォームを作成する](walkthrough-creating-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)します。  
   
--   与える、<xref:System.Windows.Forms.ToolStrip>プロフェッショナルな外観を制御します。 詳細については、「[方法 :アプリケーションの ToolStrip レンダラーを設定](how-to-set-the-toolstrip-renderer-for-an-application.md)します。  
+- 与える、<xref:System.Windows.Forms.ToolStrip>プロフェッショナルな外観を制御します。 詳細については、「[方法 :アプリケーションの ToolStrip レンダラーを設定](how-to-set-the-toolstrip-renderer-for-an-application.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

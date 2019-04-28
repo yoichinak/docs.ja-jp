@@ -3,11 +3,11 @@ title: <issuerMetadata>
 ms.date: 03/30/2017
 ms.assetid: e7eae2c0-cc17-4281-af59-e4eb8d54f92a
 ms.openlocfilehash: 0dffad6a17720dd0506acbcd60efe4aafe24ed28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761677"
 ---
 # <a name="issuermetadata"></a>\<issuerMetadata >
 \<system.serviceModel>  

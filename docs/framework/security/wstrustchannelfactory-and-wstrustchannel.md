@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 96cec467-e963-4132-b18b-7d0b3a2e979f
 author: BrucePerlerMS
 ms.openlocfilehash: ecc62292b2b064219127c369f43141a31ffe606d
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780069"
 ---
 # <a name="wstrustchannelfactory-and-wstrustchannel"></a>WSTrustChannelFactory および WSTrustChannel
 Windows Communication Foundation (WCF) をよくご存じの方は、WCF クライアントが既にフェデレーションに対応していることを理解されていると思います。 <xref:System.ServiceModel.WSFederationHttpBinding> または同様のカスタム バインドを使用して WCF クライアントを構成することで、サービスに対するフェデレーション認証を有効にすることができます。
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) をよくご存じの方は、WCF クラ�
 
 - WIF を単独で使用して、STS からトークンを取得し、WCF クライアントがこのトークンを使用して認証できるようにする。 詳細については、[ClaimsAwareWebService](https://go.microsoft.com/fwlink/?LinkID=248406) サンプルを参照してください。
 
- 最初のシナリオは明快であるため、改めて説明しません。既存の WCF クライアントは、引き続き WIF 証明書利用者および STS と動作します。 このトピックでは、残りの 2 つのシナリオについて説明します。
+ 最初のシナリオでは、一目瞭然です。既存の WCF クライアントは引き続き WIF 証明書利用者および Sts を使用します。 このトピックでは、残りの 2 つのシナリオについて説明します。
 
 ## <a name="enhancing-an-existing-wcf-client-with-actas--onbehalfof"></a>ActAs または OnBehalfOf を使用した既存の WCF クライアントの拡張
 一般的な ID 委任シナリオでは、クライアントは、中間層サービスを呼び出します。この中間層サービスによって、バックエンド サービスが呼び出されます。 中間層サービスは、クライアントとして、またはクライアントの代わりに機能します。

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - routing [WCF], message filters
 ms.assetid: cb33ba49-8b1f-4099-8acb-240404a46d9a
 ms.openlocfilehash: fc4656a76894eb3a844bc9f2187847fd9eff0ffe
-ms.sourcegitcommit: 586dbdcaef9767642436b1e4efbe88fb15473d6f
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/06/2018
-ms.locfileid: "48839106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785999"
 ---
 # <a name="message-filters"></a>メッセージ フィルター
 コンテンツ ベースのルーティングを実装する場合、ルーティング サービスは、アドレス、エンドポイント名、特定の XPath ステートメントなど、メッセージの特定のセクションを確認する <xref:System.ServiceModel.Dispatcher.MessageFilter> 実装を使用します。 [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] に付属のメッセージ フィルターの中にニーズを満たすものがない場合は、<xref:System.ServiceModel.Dispatcher.MessageFilter> 基本クラスの新しい実装を作成することで、カスタム フィルターを作成できます。  
@@ -25,14 +25,14 @@ ms.locfileid: "48839106"
   
 |フィルターの型|説明|フィルター データの意味|フィルターの例|  
 |------------------|-----------------|-------------------------|--------------------|  
-|動作|<xref:System.ServiceModel.Dispatcher.ActionMessageFilter> クラスを使用して、特定のアクションを含むメッセージを照合します。|フィルター処理するアクション。|\<フィルター名 ="action1"filterType"Action"filterData を = ="http://namespace/contract/operation"/>|  
+|アクション|<xref:System.ServiceModel.Dispatcher.ActionMessageFilter> クラスを使用して、特定のアクションを含むメッセージを照合します。|フィルター処理するアクション。|\<フィルター名 ="action1"filterType"Action"filterData を = ="http://namespace/contract/operation"/>|  
 |EndpointAddress|使用して、<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter>クラスと<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`特定のアドレスを含むメッセージを照合します。|フィルター処理するアドレス (To ヘッダー)。|\<filter name="address1" filterType="EndpointAddress" filterData="http://host/vdir/s.svc/b"  />|  
 |EndpointAddressPrefix|使用して、<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter>クラスと<xref:System.ServiceModel.Dispatcher.PrefixEndpointAddressMessageFilter.IncludeHostNameInComparison%2A>  ==  `true`特定のアドレス プレフィックスを含むメッセージを照合します。|最長プレフィックス一致を使用してフィルター処理するアドレス。|\<filter name="prefix1" filterType="EndpointAddressPrefix" filterData="http://host/" />|  
-|および|常に両方の条件を評価してから結果を返す <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> クラスを使用します。|filterData は使用されません。代わりに filter1 および filter2 する必要がありますが、(同じくテーブル) 内のメッセージの対応するフィルターの名前を持つ**AND**連結します。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
+|And|常に両方の条件を評価してから結果を返す <xref:System.ServiceModel.Dispatcher.StrictAndMessageFilter> クラスを使用します。|filterData は使用されません。代わりに filter1 および filter2 する必要がありますが、(同じくテーブル) 内のメッセージの対応するフィルターの名前を持つ**AND**連結します。|\<filter name="and1" filterType="And" filter1="address1" filter2="action1" />|  
 |カスタム|<xref:System.ServiceModel.Dispatcher.MessageFilter> クラスを拡張し、文字列を受け取るコンストラクターを持つユーザー定義の型。|customType 属性は、作成するクラスの完全修飾型名で、filterData は、フィルターの作成時にコンストラクターに渡す文字列です。|\<filter name="custom1" filterType="Custom" customType="CustomAssembly.CustomMsgFilter, CustomAssembly" filterData="Custom Data" />|  
 |EndpointName|<xref:System.ServiceModel.Dispatcher.EndpointNameMessageFilter> クラスを使用して、メッセージを受信したサービス エンドポイントの名前を基にメッセージを照合します。|たとえば、サービス エンドポイントの名前:"serviceEndpoint1"。  このサービス エンドポイントは、ルーティング サービスで公開されるいずれかのエンドポイントでなければなりません。|\<フィルター名 ="stock1"filterType「エンドポイント」filterData を = = SvcEndpoint/>|  
 |MatchAll|<xref:System.ServiceModel.Dispatcher.MatchAllMessageFilter> クラスを使用します。 このフィルターは、すべての着信メッセージを照合します。|filterData は使用されません。 このフィルターは、常にすべてのメッセージを照合します。|\<filter name="matchAll1" filterType="MatchAll" />|  
-|XPath|<xref:System.ServiceModel.Dispatcher.XPathMessageFilter> クラスを使用して、メッセージ内の特定の XPath クエリを照合します。|メッセージの照合時に使用する XPath クエリ。|\<フィルター名 ="XPath1"filterType"XPath"filterData を = ="//ns:element"/>|  
+|XPath|<xref:System.ServiceModel.Dispatcher.XPathMessageFilter> クラスを使用して、メッセージ内の特定の XPath クエリを照合します。|メッセージの照合時に使用する XPath クエリ。|\<filter name="XPath1" filterType="XPath" filterData="//ns:element" />|  
   
  次の例では、XPath、EndpointName、および PrefixEndpointAddress メッセージ フィルターを使用するフィルター エントリを定義しています。 また、この例では、RoundRobinFilter1 エントリと RoundRobinFilter2 エントリに対するカスタム フィルターの使用方法も示しています。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "48839106"
   
  名前空間テーブルは、XPath で使用できる一般的な名前空間の名前空間プレフィックスを定義する <xref:System.ServiceModel.Routing.Configuration.NamespaceElement> オブジェクトのコレクションです。 以下は、名前空間テーブルに格納されている既定の名前空間およびプレフィックスです。  
   
-|プレフィックス|Namespace|  
+|プレフィックス|名前空間|  
 |------------|---------------|  
 |s11|`http://schemas.xmlsoap.org/soap/envelope`|  
 |s12|`http://www.w3.org/2003/05/soap-envelope`|  

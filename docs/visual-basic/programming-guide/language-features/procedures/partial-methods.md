@@ -12,11 +12,11 @@ helpviewer_keywords:
 - inserting custom logic into code
 ms.assetid: 74b3368b-b348-44a0-a326-7d7dc646f4e9
 ms.openlocfilehash: 765a667f18340c53909c3ff1e9fcc5f2ffc0f9bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791938"
 ---
 # <a name="partial-methods-visual-basic"></a>部分メソッド (Visual Basic)
 部分メソッドには、カスタム ロジックをコードに挿入する開発者が有効にします。 通常、コードには、デザイナーで生成されたクラスの一部です。 部分メソッドは、コード ジェネレーターによって作成される部分クラスで定義され、何かが変更されたことを通知によく使用されます。 これらの変更に対応するカスタム動作を指定する、開発者が有効にします。  
@@ -33,11 +33,11 @@ End Sub
   
  定義には、次の条件を満たす必要があります。  
   
--   メソッドである必要があります、`Sub`ではなく、`Function`します。  
+- メソッドである必要があります、`Sub`ではなく、`Function`します。  
   
--   メソッドの本体は空のままにする必要があります。  
+- メソッドの本体は空のままにする必要があります。  
   
--   アクセス修飾子がある必要があります`Private`します。  
+- アクセス修飾子がある必要があります`Private`します。  
   
 ## <a name="implementation"></a>実装  
  実装では、主に、部分メソッドの本文を入力します。 この実装は一般に、定義から別の部分クラスを生成されたコードを拡張する必要がある開発者によって書き込まれます。  

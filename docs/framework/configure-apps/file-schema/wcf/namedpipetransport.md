@@ -3,11 +3,11 @@ title: <namedPipeTransport>
 ms.date: 03/30/2017
 ms.assetid: 9fc3f42f-43e2-4ab1-8bc7-3c95a9220df1
 ms.openlocfilehash: fd7dc38e229b6135f91fc159596ed1669d43701a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772360"
 ---
 # <a name="namedpipetransport"></a>\<namedPipeTransport>
 チャネルがカスタム バインドに含まれているときに名前付きパイプを使用してメッセージを転送するトランスポートを定義します。  

@@ -3,11 +3,11 @@ title: (Visual Basic) のジェネリック コレクションに対するイン
 ms.date: 07/20/2015
 ms.assetid: c867fcea-7462-4995-b9c5-542feec74036
 ms.openlocfilehash: 3c7cde2baf6d8b163c6765b87d6bebef803eb6ee
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356703"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787245"
 ---
 # <a name="using-variance-in-interfaces-for-generic-collections-visual-basic"></a>(Visual Basic) のジェネリック コレクションに対するインターフェイスの分散の使用
 
@@ -15,7 +15,7 @@ ms.locfileid: "57356703"
 
 .NET Framework 4 では、既存のいくつかのインターフェイスが共変および反変になります。 その中には、<xref:System.Collections.Generic.IEnumerable%601> や <xref:System.IComparable%601> があります。 これにより、派生型のコレクションに対して、基本型のジェネリック コレクションを操作するメソッドを再利用できます。
 
-.NET Framework のバリアント インターフェイスの一覧は、[ジェネリック インターフェイス (Visual Basic) の分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)を参照してください。
+.NET Framework のバリアント インターフェイスの一覧は、次を参照してください。[ジェネリック インターフェイス (Visual Basic) の分散](../../../../visual-basic/programming-guide/concepts/covariance-contravariance/variance-in-generic-interfaces.md)します。
 
 ## <a name="converting-generic-collections"></a>ジェネリック コレクションの変換
 

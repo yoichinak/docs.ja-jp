@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MaskedTextBox control [Windows Forms], binding data
 ms.assetid: 34b29f07-e8df-48d4-b08b-53fcca524708
 ms.openlocfilehash: ebc8eaf63c6b5280961a80ef11afb919810dbdb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342233"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761376"
 ---
 # <a name="how-to-bind-data-to-the-maskedtextbox-control"></a>方法: MaskedTextBox コントロールにデータをバインドする
 データをバインドすることができます、<xref:System.Windows.Forms.MaskedTextBox>他の Windows フォーム コントロールと同様に制御します。 ただし、データベース内のデータの形式で、マスクの定義で予期される形式が一致しない場合は、データの書式を変更する必要があります。 次の手順を使用してこれを行う方法を示して、<xref:System.Windows.Forms.Binding.Format>と<xref:System.Windows.Forms.Binding.Parse>のイベント、<xref:System.Windows.Forms.Binding>クラスを別の電話番号を表示および編集可能なフィールドを 1 つとして、拡張データベースのフィールドを電話します。  
@@ -239,15 +239,15 @@ ms.locfileid: "59342233"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   ビジュアルを作成するC#または Visual Basic プロジェクト。  
+- ビジュアルを作成するC#または Visual Basic プロジェクト。  
   
--   追加、<xref:System.Windows.Forms.TextBox>と<xref:System.Windows.Forms.MaskedTextBox>フォームにコントロールを前の手順で説明します。  
+- 追加、<xref:System.Windows.Forms.TextBox>と<xref:System.Windows.Forms.MaskedTextBox>フォームにコントロールを前の手順で説明します。  
   
--   プロジェクトの既定のフォームのソース コード ファイルを開きます。  
+- プロジェクトの既定のフォームのソース コード ファイルを開きます。  
   
--   このファイル内のソース コードを前の"Code"セクションに記載されているコードに置き換えます。  
+- このファイル内のソース コードを前の"Code"セクションに記載されているコードに置き換えます。  
   
--   アプリケーションをコンパイルします。  
+- アプリケーションをコンパイルします。  
   
 ## <a name="see-also"></a>関連項目
 

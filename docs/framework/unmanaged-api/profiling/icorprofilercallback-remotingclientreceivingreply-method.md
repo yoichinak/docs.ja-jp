@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5865935af96260982d47b778d208f4235f6245e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775037"
 ---
 # <a name="icorprofilercallbackremotingclientreceivingreply-method"></a>ICorProfilerCallback::RemotingClientReceivingReply メソッド
 リモート処理呼び出しのサーバー側の部分が完了し、クライアントが受け取るようになりましたことをプロファイラーに通知し、応答を処理します。  
@@ -39,11 +39,11 @@ HRESULT RemotingClientReceivingReply(
  `pCookie`  
  [in]指定された値に対応する値[icorprofilercallback::remotingserversendingreply](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-remotingserversendingreply-method.md)これらの条件下で。  
   
--   リモート処理の GUID の cookie はアクティブです。  
+- リモート処理の GUID の cookie はアクティブです。  
   
--   チャネルは、メッセージの送信に成功します。  
+- チャネルは、メッセージの送信に成功します。  
   
--   GUID の cookie は、サーバー側のプロセスでアクティブにします。  
+- GUID の cookie は、サーバー側のプロセスでアクティブにします。  
   
  これにより、リモート処理呼び出しのペアを容易にします。  
   

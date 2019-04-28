@@ -3,11 +3,11 @@ title: <namespaceTable>
 ms.date: 03/30/2017
 ms.assetid: 64801766-01b7-4c65-9ce6-70ad5af67689
 ms.openlocfilehash: ee7a0c23adca883af279addf9d1f221bd4056d00
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55269576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772412"
 ---
 # <a name="namespacetable"></a>\<namespaceTable>
 

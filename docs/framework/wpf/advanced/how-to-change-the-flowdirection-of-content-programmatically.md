@@ -9,11 +9,11 @@ helpviewer_keywords:
 - documents [WPF], changing FlowDirection property programmatically
 ms.assetid: 02f5a8ba-f8c0-4e5a-84b9-4c5bf12922a2
 ms.openlocfilehash: ec159ed0efce8b5514788331e8715a55e7a8a638
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359329"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776559"
 ---
 # <a name="how-to-change-the-flowdirection-of-content-programmatically"></a>方法: プログラムによってコンテンツの FlowDirection を変更する
 この例は、プログラムで変更する方法を示します、<xref:System.Windows.FrameworkElement.FlowDirection%2A>のプロパティを<xref:System.Windows.Controls.FlowDocumentReader>します。  

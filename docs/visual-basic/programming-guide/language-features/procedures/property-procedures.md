@@ -14,20 +14,20 @@ helpviewer_keywords:
 - Get statement [Visual Basic], property procedures
 ms.assetid: 46a98379-e1a2-45dd-a48c-b51213f5ab07
 ms.openlocfilehash: 47e93ee17f160ce5cd701fd0a12ec16b3997ce9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828350"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791860"
 ---
 # <a name="property-procedures-visual-basic"></a>Property プロシージャ (Visual Basic)
 プロパティ プロシージャは、一連のモジュール、クラスまたは構造体のカスタム プロパティを操作する Visual Basic ステートメントです。 プロパティ プロシージャとも呼ばれます*プロパティ アクセサー*します。  
   
  Visual Basic は、次のプロパティ プロシージャを提供します。  
   
--   A`Get`プロパティの値を返します。 式でプロパティにアクセスするときに呼び出されます。  
+- A`Get`プロパティの値を返します。 式でプロパティにアクセスするときに呼び出されます。  
   
--   A`Set`プロシージャに値をオブジェクト参照を含むプロパティを設定します。 プロパティに値を割り当てるときに呼び出されます。  
+- A`Set`プロシージャに値をオブジェクト参照を含むプロパティを設定します。 プロパティに値を割り当てるときに呼び出されます。  
   
  使用して、ペアで、通常、プロパティ プロシージャを定義する、`Get`と`Set`プロパティが読み取り専用の場合は、ステートメントがからだけでいずれかの手順に定義することができます ([Get ステートメント](../../../../visual-basic/language-reference/statements/get-statement.md)) または書き込み専用 ([設定ステートメント](../../../../visual-basic/language-reference/statements/set-statement.md))。  
   

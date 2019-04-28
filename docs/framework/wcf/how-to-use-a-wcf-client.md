@@ -8,11 +8,11 @@ dev_langs:
 - VB
 ms.assetid: 190349fc-0573-49c7-bb85-8e316df7f31f
 ms.openlocfilehash: fa9aa3612a8dc72623fc4ea4b1ea337ac773fa26
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169976"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928844"
 ---
 # <a name="tutorial-use-a-windows-communication-foundation-client"></a>チュートリアル: Windows Communication Foundation クライアントを使用します。
 

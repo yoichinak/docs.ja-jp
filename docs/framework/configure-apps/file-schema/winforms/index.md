@@ -4,12 +4,6 @@ ms.date: 04/07/2017
 ms.assetid: 6eb142d5-fc98-40e2-9d90-84733f2a27ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbb2c4157ba702182056c98c959a60569e8c3d1e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54649471"
 ---
 # <a name="windows-forms-configuration-section"></a>Windows フォームの構成セクション
 Windows フォームの構成設定により、カスタマイズされたアプリケーション設定に関する情報 (マルチ モニターや高 DPI のサポート、その他の定義済みの構成設定など) を Windows フォームのアプリで格納したり、取得したりできます。

@@ -3,11 +3,11 @@ title: System.ServiceModel.PerformanceCountersFailed
 ms.date: 03/30/2017
 ms.assetid: 3bf030f3-e218-4300-943f-03aaa7dfe2d3
 ms.openlocfilehash: 04e11638067f9693c24c9fe7de2e1e07218655c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773374"
 ---
 # <a name="systemservicemodelperformancecountersfailed"></a>System.ServiceModel.PerformanceCountersFailed
 System.ServiceModel.PerformanceCountersFailed  

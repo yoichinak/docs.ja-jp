@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating custom bindings
 ms.assetid: 203a9f9e-3a73-427c-87aa-721c56265b29
 ms.openlocfilehash: 7966c1fe4cd94408455c6bb146fdd3ea55757702
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787856"
 ---
 # <a name="how-to-create-a-custom-binding-using-the-securitybindingelement"></a>方法: SecurityBindingElement を使用してカスタム バインドを作成する
 Windows Communication Foundation (WCF) には、複数のシステムで指定されたバインド構成できますが、WCF がサポートするすべてのセキュリティ オプションを構成するときに完全な柔軟性を提供しないにはが含まれています。 ここでは、個別のバインド要素からカスタム バインドを直接作成する方法を説明し、このようなバインディングを作成する場合に指定できるセキュリティ設定のいくつかに焦点を当てます。 カスタム バインディングの作成の詳細については、次を参照してください。[バインディングの拡張](../../../../docs/framework/wcf/extending/extending-bindings.md)します。  
@@ -32,22 +32,22 @@ Windows Communication Foundation (WCF) には、複数のシステムで指定�
   
  トランスポート レベルのセキュリティが提供される場合は、次の追加のクラスが使用されます。  
   
--   <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
+- <xref:System.ServiceModel.Channels.HttpsTransportBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SslStreamSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.WindowsStreamSecurityBindingElement>  
   
 ## <a name="required-binding-elements"></a>必要なバインド要素  
  1 つのバインディングに結合できる可能性のあるバインド要素は多数存在します。 これらの組み合わせすべてが有効なわけではありません。 ここでは、セキュリティ バインディングに存在する必要のある要素について説明します。  
   
  有効なセキュリティ バインディングは、次のような多くの要因に依存します。  
   
--   セキュリティ モード  
+- セキュリティ モード  
   
--   トランスポート プロトコル  
+- トランスポート プロトコル  
   
--   コントラクトに指定されているメッセージ交換パターン (MEP)  
+- コントラクトに指定されているメッセージ交換パターン (MEP)  
   
  前述の要因の各組み合わせに有効なバインド要素のスタックの構成を次の表に示します。 これらは最小限の要件であることに注意してください。 メッセージ エンコーディング バインド要素、トランザクション バインド要素などの追加のバインド要素をバインディングに追加することもできます。  
   

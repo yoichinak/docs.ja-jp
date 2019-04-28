@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 94a4457f-f43f-458d-a47e-2d11103ee75e
 ms.openlocfilehash: f70e30c903fa9bfc3f5d6054ef2ec34bf1b3cba1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083019"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790209"
 ---
 # <a name="channelsettings"></a>\<channelSettings>
 チャネル キャッシュの設定を指定します。  

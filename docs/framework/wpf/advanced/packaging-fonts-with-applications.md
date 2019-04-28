@@ -11,11 +11,11 @@ helpviewer_keywords:
 - packaging fonts with applications [WPF]
 ms.assetid: db15ee48-4d24-49f5-8b9d-a64460865286
 ms.openlocfilehash: fb91d4b413db512021b90f0d4ba3049fe7333601
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123799"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61773234"
 ---
 # <a name="packaging-fonts-with-applications"></a>アプリケーションでのフォントのパッケージング
 このトピックでは、フォントをパッケージングする方法の概要を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。  
@@ -158,17 +158,17 @@ ms.locfileid: "59123799"
 ## <a name="limitations-on-font-usage"></a>フォントの使用に関する制限事項  
  次の一覧でフォントの使用、パッケージでいくつかの制限をについて説明します[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。  
   
--   **フォント埋め込みアクセス許可ビット:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションはフォント埋め込みアクセス許可ビットのチェックも確認もしません。 参照してください、[フォントのパッケージングの概要](#introduction_to_packaging_fonts)詳細についてはします。  
+- **フォント埋め込みアクセス許可ビット:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションはフォント埋め込みアクセス許可ビットのチェックも確認もしません。 参照してください、[フォントのパッケージングの概要](#introduction_to_packaging_fonts)詳細についてはします。  
   
--   **フォントの起点サイト:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションには、http または ftp へのフォント参照は許可しない[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]します。  
+- **フォントの起点サイト:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションには、http または ftp へのフォント参照は許可しない[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]します。  
   
--   **パックを使用して絶対 URI: 表記:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションでは作成することはできません、<xref:System.Windows.Media.FontFamily>オブジェクトを使用してプログラムで"pack:"、絶対パスの一部として[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]フォントへの参照。 たとえば、`"pack://application:,,,/resources/#Pericles Light"`は無効なフォント参照です。  
+- **パックを使用して絶対 URI: 表記:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションでは作成することはできません、<xref:System.Windows.Media.FontFamily>オブジェクトを使用してプログラムで"pack:"、絶対パスの一部として[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]フォントへの参照。 たとえば、`"pack://application:,,,/resources/#Pericles Light"`は無効なフォント参照です。  
   
--   **自動フォント埋め込み:** 設計時に、アプリケーションのフォントの使用を検索して、自動的にアプリケーションのリソースで、フォントの埋め込みのサポートはありません。  
+- **自動フォント埋め込み:** 設計時に、アプリケーションのフォントの使用を検索して、自動的にアプリケーションのリソースで、フォントの埋め込みのサポートはありません。  
   
--   **フォント サブセット:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、固定ドキュメント以外でフォント サブセットの作成はサポートされていません。  
+- **フォント サブセット:** [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションでは、固定ドキュメント以外でフォント サブセットの作成はサポートされていません。  
   
--   正しくない参照がある場合、アプリケーションは使用可能なフォントの使用に戻ります。  
+- 正しくない参照がある場合、アプリケーションは使用可能なフォントの使用に戻ります。  
   
 ## <a name="see-also"></a>関連項目
 

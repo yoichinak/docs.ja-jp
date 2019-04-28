@@ -9,11 +9,11 @@ helpviewer_keywords:
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
 ms.openlocfilehash: f78d48c88b72388676f5e7ae963b98d8f1b4beac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937835"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>方法: プライベート フォント コレクションを作成する
 <xref:System.Drawing.Text.PrivateFontCollection>クラスから継承、<xref:System.Drawing.Text.FontCollection>抽象基本クラス。 使用することができます、<xref:System.Drawing.Text.PrivateFontCollection>具体的には、アプリケーションのフォントのセットを保持するオブジェクト。 プライベート フォント コレクションには、インストールされているシステム フォントだけでなく、コンピューターにインストールされていないフォントを含めることができます。 プライベート フォント コレクションには、フォント ファイルを追加するには、呼び出し、<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>のメソッドを<xref:System.Drawing.Text.PrivateFontCollection>オブジェクト。  
@@ -25,11 +25,11 @@ ms.locfileid: "59210692"
 ## <a name="example"></a>例  
  次の例では、次の 3 つのフォント ファイルを<xref:System.Drawing.Text.PrivateFontCollection>オブジェクト。  
   
--   C:\\*systemroot*\Fonts\Arial.tff (Arial、正規表現)  
+- C:\\*systemroot*\Fonts\Arial.tff (Arial、正規表現)  
   
--   C:\\*systemroot*\Fonts\CourBI.tff (Courier New、太字斜体)  
+- C:\\*systemroot*\Fonts\CourBI.tff (Courier New、太字斜体)  
   
--   C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman, bold)  
+- C:\\*systemroot*\Fonts\TimesBd.tff (Times New Roman, bold)  
   
  コードの配列を取得する<xref:System.Drawing.FontFamily>オブジェクトから、<xref:System.Drawing.Text.FontCollection.Families%2A>のプロパティ、<xref:System.Drawing.Text.PrivateFontCollection>オブジェクト。  
   

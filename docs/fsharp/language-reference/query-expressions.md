@@ -3,11 +3,11 @@ title: クエリ式
 description: LINQ のクエリ式のサポートについて説明します、F#プログラミング言語。
 ms.date: 05/16/2016
 ms.openlocfilehash: 3e5be7f81d7e15953142186be3aca64e68ded2a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795510"
 ---
 # <a name="query-expressions"></a>クエリ式
 

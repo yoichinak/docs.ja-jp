@@ -3,11 +3,11 @@ title: <netNamedPipeBinding>
 ms.date: 03/30/2017
 ms.assetid: 00a8580b-face-47a4-838d-b9fed48e72df
 ms.openlocfilehash: dc1af462222920c7b3c6b66c3822e7b2b326b244
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169825"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778509"
 ---
 # <a name="netnamedpipebinding"></a>\<netNamedPipeBinding>
 コンピューター上のプロセス間通信に適した、セキュリティで保護された信頼できる最適バインディングを定義します。 既定では、信頼のための WS-ReliableMessaging、転送セキュリティ用トランスポート セキュリティ、メッセージ配信用名前付きパイプ、およびバイナリ メッセージ エンコーディングを持つランタイム通信スタックを生成します。  

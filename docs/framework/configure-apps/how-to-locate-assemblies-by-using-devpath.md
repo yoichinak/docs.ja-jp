@@ -1,5 +1,5 @@
 ---
-title: '方法: DEVPATH を使用してアセンブリを検索します。'
+title: '方法: DEVPATH を使用してアセンブリを指定する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - DEVPATH
@@ -10,13 +10,13 @@ helpviewer_keywords:
 - assemblies [.NET Framework], location
 ms.assetid: 44d2eadf-7eec-443c-a2ac-d601fd919e17
 ms.openlocfilehash: 5c4041f42b0a9d1d1e4bc8438e662911534daa42
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775831"
 ---
-# <a name="how-to-locate-assemblies-by-using-devpath"></a>方法: DEVPATH を使用してアセンブリを検索します。
+# <a name="how-to-locate-assemblies-by-using-devpath"></a>方法: DEVPATH を使用してアセンブリを指定する
 開発者は、複数のアプリケーションの構築、共有アセンブリが正常に動作するかどうかを確認することがあります。 継続的に開発サイクル中にグローバル アセンブリ キャッシュにアセンブリを配置ではなく、開発者は、アセンブリのビルド出力ディレクトリを指す DEVPATH 環境変数を作成できます。  
   
  たとえば、MySharedAssembly と呼ばれる共有のアセンブリをビルドして、出力ディレクトリは C:\MySharedAssembly\Debug します。 DEVPATH 変数に C:\MySharedAssembly\Debug を配置することができます。 指定する必要がありますし、 [ \<developmentMode >](../../../docs/framework/configure-apps/file-schema/runtime/developmentmode-element.md)マシン構成ファイル内の要素。 この要素は、アセンブリの検索に DEVPATH を使用する共通言語ランタイムを指示します。  

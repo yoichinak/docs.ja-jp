@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, List control type
 ms.assetid: 0e959fcb-50f2-413b-948d-7167d279bc11
 ms.openlocfilehash: 7811efd680bbeb299a4e37b74768f7462b808e9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783046"
 ---
 # <a name="ui-automation-support-for-the-list-control-type"></a>UI オートメーションによる List コントロール型のサポート
 > [!NOTE]

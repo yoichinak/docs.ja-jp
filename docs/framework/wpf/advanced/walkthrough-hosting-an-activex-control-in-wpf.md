@@ -9,31 +9,31 @@ helpviewer_keywords:
 - hosting ActiveX controls [WPF]
 ms.assetid: 1931d292-0dd1-434f-963c-dcda7638d75a
 ms.openlocfilehash: c27449da5ee0351e472eaba7d930a774979db65f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311502"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781382"
 ---
 # <a name="walkthrough-hosting-an-activex-control-in-wpf"></a>チュートリアル: WPF での ActiveX コントロールのホスト
 ブラウザーでの強化された操作を有効にするを使用できます[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]でコントロールを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーション。 このチュートリアルでは、ホストする方法、[!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)]上のコントロールとして、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ページ。
 
  このチュートリアルでは、以下のタスクを行います。
 
--   プロジェクトの作成。
+- プロジェクトの作成。
 
--   ActiveX コントロールを作成します。
+- ActiveX コントロールを作成します。
 
--   WPF ページ上の ActiveX コントロールをホストします。
+- WPF ページ上の ActiveX コントロールをホストします。
 
  使用する方法を理解するときに、このチュートリアルを完了すると、[!INCLUDE[TLA#tla_actx](../../../../includes/tlasharptla-actx-md.md)]でコントロールを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーション。
 
 ## <a name="prerequisites"></a>必須コンポーネント
  このチュートリアルを実行するには、次のコンポーネントが必要です。
 
--   [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] Visual Studio がインストールされているコンピューターにインストールします。
+- [!INCLUDE[TLA#tla_wmp](../../../../includes/tlasharptla-wmp-md.md)] Visual Studio がインストールされているコンピューターにインストールします。
 
--   Visual Studio 2010。
+- Visual Studio 2010。
 
 ## <a name="creating-the-project"></a>プロジェクトの作成
 

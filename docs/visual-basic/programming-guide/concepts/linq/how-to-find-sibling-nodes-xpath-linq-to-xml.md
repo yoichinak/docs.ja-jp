@@ -3,11 +3,11 @@ title: '方法: 兄弟ノード (XPATH-LINQ to XML) を検索 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 73082738-2113-4438-8545-98d5df0927cb
 ms.openlocfilehash: dad211c9c3716f760d28e4a18a61c885fc4dd58f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780394"
 ---
 # <a name="how-to-find-sibling-nodes-xpath-linq-to-xml-visual-basic"></a>方法: 兄弟ノード (XPATH-LINQ to XML) を検索 (Visual Basic)
 特定の名前を持つノードのすべての兄弟を検索する場合があります。 コンテキスト ノードも特定の名前を持つ場合は、結果のコレクションにコンテキスト ノードが含まれることがあります。  

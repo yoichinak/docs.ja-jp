@@ -8,22 +8,22 @@ helpviewer_keywords:
 - Freezable objects [WPF], making read-only
 ms.assetid: 6c544b7d-d3c9-4736-aa90-4b8728234ccb
 ms.openlocfilehash: 9b7102db4de0df7183355e50e3b372eac30d81b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771021"
 ---
 # <a name="how-to-make-a-freezable-read-only"></a>方法: Freezable を読み取り専用にする
 この例では、作成、<xref:System.Windows.Freezable>呼び出すことによって、読み取り専用の<xref:System.Windows.Freezable.Freeze%2A>メソッド。  
   
  固定することはできません、<xref:System.Windows.Freezable>オブジェクトのかどうかは、次の条件のいずれかが`true`オブジェクトについて。  
   
--   アニメーション化されたまたは、データ バインドされたプロパティ。  
+- アニメーション化されたまたは、データ バインドされたプロパティ。  
   
--   動的なリソースが設定されているプロパティがあります。 動的リソースの詳細については、次を参照してください。、 [XAML リソース](xaml-resources.md)します。  
+- 動的なリソースが設定されているプロパティがあります。 動的リソースの詳細については、次を参照してください。、 [XAML リソース](xaml-resources.md)します。  
   
--   含まれている<xref:System.Windows.Freezable>サブオブジェクトを固定することはできません。  
+- 含まれている<xref:System.Windows.Freezable>サブオブジェクトを固定することはできません。  
   
  これらの条件が場合`false`の<xref:System.Windows.Freezable>オブジェクトする予定がない変更を固定するパフォーマンスを向上することを検討してください。  
   

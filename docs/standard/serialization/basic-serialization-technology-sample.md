@@ -3,11 +3,11 @@ title: 基本的なシリアル化の技術サンプル
 ms.date: 03/30/2017
 ms.assetid: 9d824e16-08d1-4a36-bc7f-2388c1f75f34
 ms.openlocfilehash: dc190a93e45bf2b682aff0158ccd42bc09762d9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315011"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795019"
 ---
 # <a name="basic-serialization-technology-sample"></a>基本的なシリアル化の技術サンプル
 [サンプルのダウンロード](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Runtime%20Serialization/Basic.zip.exe)  
@@ -62,21 +62,21 @@ ms.locfileid: "59315011"
   
  このサンプルで使用するクラスと技術についての簡単な説明を、以下に箇条書きします。  
   
--   ランタイム シリアル化  
+- ランタイム シリアル化  
   
-    -   <xref:System.Runtime.Serialization.IFormatter> いずれかを参照するために使用する<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>または<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>オブジェクト。  
+    - <xref:System.Runtime.Serialization.IFormatter> いずれかを参照するために使用する<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>または<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>オブジェクト。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> リンクのリストをバイナリ形式でストリームにシリアル化するために使用します。 バイナリ フォーマッタでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型でのみ理解できる形式を使用します。 ただし、データは簡潔です。  
+    - <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> リンクのリストをバイナリ形式でストリームにシリアル化するために使用します。 バイナリ フォーマッタでは、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型でのみ理解できる形式を使用します。 ただし、データは簡潔です。  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> リンクされたリストを SOAP 形式でストリームにシリアル化するために使用します。 SOAP は標準の形式です。  
+    - <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> リンクされたリストを SOAP 形式でストリームにシリアル化するために使用します。 SOAP は標準の形式です。  
   
--   ストリーム入出力  
+- ストリーム入出力  
   
-    -   <xref:System.IO.Stream> は、シリアル化および逆シリアル化に使用します。 このサンプルで使用する特有のストリーム型として、<xref:System.IO.FileStream> 型があります。 ただし、シリアル化は、<xref:System.IO.Stream> から派生する任意の型で行うことができます。  
+    - <xref:System.IO.Stream> は、シリアル化および逆シリアル化に使用します。 このサンプルで使用する特有のストリーム型として、<xref:System.IO.FileStream> 型があります。 ただし、シリアル化は、<xref:System.IO.Stream> から派生する任意の型で行うことができます。  
   
-    -   <xref:System.IO.File> は、ディスク上のファイルを読み込み、作成するための <xref:System.IO.FileStream> オブジェクトを作成するために使用します。  
+    - <xref:System.IO.File> は、ディスク上のファイルを読み込み、作成するための <xref:System.IO.FileStream> オブジェクトを作成するために使用します。  
   
-    -   <xref:System.IO.FileStream> は、リンク リストのシリアル化および逆シリアル化に使用します。  
+    - <xref:System.IO.FileStream> は、リンク リストのシリアル化および逆シリアル化に使用します。  
   
 ## <a name="see-also"></a>関連項目
 

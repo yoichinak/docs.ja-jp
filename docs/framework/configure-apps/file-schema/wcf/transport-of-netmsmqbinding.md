@@ -3,11 +3,11 @@ title: <transport> の <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 72e1b338-39f0-4af1-a5d9-7a2fb79f6a0b
 ms.openlocfilehash: ec726c4b39fedbf63a7ecc9e685a86367609fa43
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788337"
 ---
 # <a name="transport-of-netmsmqbinding"></a>\<トランスポート > の\<netMsmqBinding >
 トランスポートのセキュリティ設定を定義します。  

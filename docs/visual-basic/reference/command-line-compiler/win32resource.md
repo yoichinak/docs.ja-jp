@@ -10,11 +10,11 @@ helpviewer_keywords:
 - win32resource compiler option [Visual Basic]
 ms.assetid: e226946d-19ce-4cc9-91f5-aed24f77aa2b
 ms.openlocfilehash: 9351e9f6bcb7660dac2c49667ca8db6d578eff7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834999"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774765"
 ---
 # <a name="-win32resource"></a>-win32resource
 出力ファイルには、Win32 リソース ファイルを挿入します。  

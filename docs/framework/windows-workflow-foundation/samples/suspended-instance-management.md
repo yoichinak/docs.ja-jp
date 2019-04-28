@@ -3,11 +3,11 @@ title: 中断されたインスタンスの管理
 ms.date: 03/30/2017
 ms.assetid: f5ca3faa-ba1f-4857-b92c-d927e4b29598
 ms.openlocfilehash: ace4d2baef8f6b030790deaa5b1c20bb4b0cd30d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785906"
 ---
 # <a name="suspended-instance-management"></a>中断されたインスタンスの管理
 このサンプルでは、中断されているワークフロー インスタンスを管理する方法を示します。  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> の既定のアクションは `AbandonAndSuspend` です。 つまり、既定では、<xref:System.ServiceModel.WorkflowServiceHost> でホストされるワークフロー インスタンスからスローされた未処理の例外により、インスタンスがメモリから破棄され、インスタンスの永続バージョンが中断状態としてマークされることになります。 中断されたワークフロー インスタンスは、中断が解除されるまで実行できません。
@@ -26,41 +26,41 @@ ms.locfileid: "59319561"
 
 1. このサンプルでは、次の Windows コンポーネントが有効になっている必要があります。
 
-    1.  Microsoft メッセージ キュー (MSMQ) サーバー
+    1. Microsoft メッセージ キュー (MSMQ) サーバー
 
-    2.  SQL Server Express
+    2. SQL Server Express
 
 2. SQL Server データベースを設定します。
 
-    1.  Visual Studio 2010 コマンド プロンプトでは、次の SuspendedInstanceManagement サンプル ディレクトリから"setup.cmd"を実行します。
+    1. Visual Studio 2010 コマンド プロンプトでは、次の SuspendedInstanceManagement サンプル ディレクトリから"setup.cmd"を実行します。
 
-        1.  SQL Server Express を使用して永続性データベースを作成します。 永続性データベースが既に存在する場合、データベースは削除され、再作成されます。
+        1. SQL Server Express を使用して永続性データベースを作成します。 永続性データベースが既に存在する場合、データベースは削除され、再作成されます。
 
-        2.  永続化のためにデータベースを設定します。
+        2. 永続化のためにデータベースを設定します。
 
-        3.  IIS APPPOOL\DefaultAppPool および NT AUTHORITY\Network Service を、永続化のためにデータベースを設定するときに定義された InstanceStoreUsers ロールに追加します。
+        3. IIS APPPOOL\DefaultAppPool および NT AUTHORITY\Network Service を、永続化のためにデータベースを設定するときに定義された InstanceStoreUsers ロールに追加します。
 
 3. サービス キューを設定します。
 
-    1.  Visual Studio 2010 で右クリックし、 **SampleWorkflowApp**プロジェクトし、クリックして**スタートアップ プロジェクトとして設定**します。
+    1. Visual Studio 2010 で右クリックし、 **SampleWorkflowApp**プロジェクトし、クリックして**スタートアップ プロジェクトとして設定**します。
 
-    2.  コンパイルしてキーを押して SampleWorkflowApp を実行**F5**します。 これにより、必要なキューが作成されます。
+    2. コンパイルしてキーを押して SampleWorkflowApp を実行**F5**します。 これにより、必要なキューが作成されます。
 
-    3.  キーを押して**Enter** SampleWorkflowApp を停止します。
+    3. キーを押して**Enter** SampleWorkflowApp を停止します。
 
-    4.  コマンド プロンプトから Compmgmt.msc を実行して、[コンピューターの管理] コンソールを開きます。
+    4. コマンド プロンプトから Compmgmt.msc を実行して、[コンピューターの管理] コンソールを開きます。
 
-    5.  展開**サービスとアプリケーション**、**メッセージ キュー**、**専用キュー**します。
+    5. 展開**サービスとアプリケーション**、**メッセージ キュー**、**専用キュー**します。
 
-    6.  右クリックして、 **ReceiveTx**キューし、選択**プロパティ**します。
+    6. 右クリックして、 **ReceiveTx**キューし、選択**プロパティ**します。
 
-    7.  選択、**セキュリティ**でき、タブ**Everyone**へのアクセス許可を持つ**メッセージの受信**、**メッセージのピーク**、および**メッセージを送信**します。
+    7. 選択、**セキュリティ**でき、タブ**Everyone**へのアクセス許可を持つ**メッセージの受信**、**メッセージのピーク**、および**メッセージを送信**します。
 
 4. サンプルを実行します。
 
-    1.  Visual Studio 2010、SampleWorkflowApp プロジェクトを再実行を押してデバッグなし**Ctrl + F5**します。 2 つのエンドポイント アドレスがコンソール ウィンドウに出力されます。1 つはアプリケーション エンドポイントのアドレスで、もう 1 つは <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> のアドレスです。 その後、ワークフロー インスタンスが作成され、そのインスタンスの追跡レコードがコンソール ウィンドウに表示されます。 ワークフロー インスタンスから例外がスローされ、インスタンスは中断されて中止されます。
+    1. Visual Studio 2010、SampleWorkflowApp プロジェクトを再実行を押してデバッグなし**Ctrl + F5**します。 2 つのエンドポイント アドレスがコンソール ウィンドウに出力されます。1 つはアプリケーション エンドポイントのアドレスで、もう 1 つは <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> のアドレスです。 その後、ワークフロー インスタンスが作成され、そのインスタンスの追跡レコードがコンソール ウィンドウに表示されます。 ワークフロー インスタンスから例外がスローされ、インスタンスは中断されて中止されます。
 
-    2.  次に、コマンド ライン ユーティリティを使用して、これらのインスタンスに対してさらに操作を実行できます。 コマンド ライン引数の構文は次のとおりです。
+    2. 次に、コマンド ライン ユーティリティを使用して、これらのインスタンスに対してさらに操作を実行できます。 コマンド ライン引数の構文は次のとおりです。
 
          `SuspendedInstanceManagement -Command:[CommandName] -Server:[ServerName] -Database:[DatabaseName] -InstanceId:[InstanceId]`
 

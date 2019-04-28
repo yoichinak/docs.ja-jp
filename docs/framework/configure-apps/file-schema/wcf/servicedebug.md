@@ -3,11 +3,11 @@ title: <serviceDebug>
 ms.date: 03/30/2017
 ms.assetid: 6d7ea986-f232-49fe-842c-f934d9966889
 ms.openlocfilehash: 7b7526dbcbd1948d3d8a27d146efd0462fefaca5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788441"
 ---
 # <a name="servicedebug"></a>\<serviceDebug >
 Windows Communication Foundation (WCF) サービスのデバッグおよびヘルプ情報機能を指定します。  

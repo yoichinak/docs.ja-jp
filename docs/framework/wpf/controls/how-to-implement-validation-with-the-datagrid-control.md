@@ -9,11 +9,11 @@ helpviewer_keywords:
 - validation [WPF], DataGrid
 ms.assetid: ec6078a8-1e42-4648-b414-f4348e81bda1
 ms.openlocfilehash: 00d09c62aae67e3438816409c95ccf96050b3206
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305957"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770878"
 ---
 # <a name="how-to-implement-validation-with-the-datagrid-control"></a>方法: DataGrid コントロールを使用して検証を実装する
 <xref:System.Windows.Controls.DataGrid>コントロールでは、セルと行の両方のレベルでの検証を実行することができます。 セル レベルの検証、ユーザーが値を更新したときに、バインドされたデータ オブジェクトの個々 のプロパティを検証します。 行レベルの検証、ユーザーが行への変更をコミット時に、データ オブジェクト全体を検証します。 検証エラーの場合は、カスタマイズされた視覚的なフィードバックを提供したり、既定の視覚的フィードバックを使用したりできる<xref:System.Windows.Controls.DataGrid>コントロールを提供します。  
@@ -22,7 +22,7 @@ ms.locfileid: "59305957"
   
 ### <a name="to-validate-individual-cell-values"></a>個々 のセルの値を検証するには  
   
--   列で使用されるバインディングの 1 つまたは複数の検証規則を指定します。 」の説明に従って、単純なコントロールのデータの検証に似ています[データ バインディングの概要](../data/data-binding-overview.md)します。  
+- 列で使用されるバインディングの 1 つまたは複数の検証規則を指定します。 」の説明に従って、単純なコントロールのデータの検証に似ています[データ バインディングの概要](../data/data-binding-overview.md)します。  
   
      次の例は、<xref:System.Windows.Controls.DataGrid>ビジネス オブジェクトのさまざまなプロパティにバインドされている 4 つの列を持つコントロール。 3 つの列の指定、<xref:System.Windows.Controls.ExceptionValidationRule>を設定して、<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>プロパティを`true`します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "59305957"
   
 ### <a name="to-customize-cell-validation-feedback"></a>セルの検証のフィードバックをカスタマイズするには  
   
--   セットの列の<xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A>列の編集コントロールのスタイル プロパティが適切な。 編集コントロールは、実行時に作成、ために使用できません、<xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType>添付プロパティの単純なコントロールの場合と同様です。  
+- セットの列の<xref:System.Windows.Controls.DataGridBoundColumn.EditingElementStyle%2A>列の編集コントロールのスタイル プロパティが適切な。 編集コントロールは、実行時に作成、ために使用できません、<xref:System.Windows.Controls.Validation.ErrorTemplate%2A?displayProperty=nameWithType>添付プロパティの単純なコントロールの場合と同様です。  
   
      次の例では、検証規則を次の 3 つの列で共有されるエラー スタイルを追加することで、前の例を更新します。 無効な値を入力すると、スタイルはセルの背景色を変更し、ツールヒントを追加します。 検証エラーがあるかどうかを判断するトリガーの使用に注意してください。 現在のセルのエラー テンプレートがないために必要です。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "59305957"
   
 ### <a name="to-customize-row-validation-feedback"></a>行の検証のフィードバックをカスタマイズするには  
   
--   <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> プロパティを設定します。 このプロパティでは、個々 の行の検証のフィードバックをカスタマイズできます。<xref:System.Windows.Controls.DataGrid>コントロール。 複数のコントロールを設定する、暗黙の行のスタイルを使用しても影響、<xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType>プロパティ。  
+- <xref:System.Windows.Controls.DataGrid.RowValidationErrorTemplate%2A?displayProperty=nameWithType> プロパティを設定します。 このプロパティでは、個々 の行の検証のフィードバックをカスタマイズできます。<xref:System.Windows.Controls.DataGrid>コントロール。 複数のコントロールを設定する、暗黙の行のスタイルを使用しても影響、<xref:System.Windows.Controls.DataGridRow.ValidationErrorTemplate%2A?displayProperty=nameWithType>プロパティ。  
   
      次の例は、既定行の検証のフィードバックをよりわかりやすいインジケーターに置き換えます。 無効な値を入力すると、行ヘッダーに白い感嘆符の付いた赤い円が表示されます。 これは、行とセルの両方の検証エラーに対して発生します。 関連付けられたエラー メッセージは、ツールヒントに表示されます。  
   
@@ -73,17 +73,17 @@ ms.locfileid: "59305957"
   
  検証をテストするには、次を試してください。  
   
--   コース ID 列で整数以外の値を入力します。  
+- コース ID 列で整数以外の値を入力します。  
   
--   終了日列で、開始日より前の日付を入力します。  
+- 終了日列で、開始日より前の日付を入力します。  
   
--   コース ID、開始日または終了日の値を削除します。  
+- コース ID、開始日または終了日の値を削除します。  
   
--   無効なセル値を元に戻すには、セルにカーソルを置くし、ESC キーを押します。  
+- 無効なセル値を元に戻すには、セルにカーソルを置くし、ESC キーを押します。  
   
--   現在のセルが編集モードのときは、全体の行の変更を元に戻したり、ESC キーを 2 回押します。  
+- 現在のセルが編集モードのときは、全体の行の変更を元に戻したり、ESC キーを 2 回押します。  
   
--   検証エラーが発生したときに、関連するエラー メッセージを表示する行ヘッダーのインジケーターの上にマウス ポインターを移動します。  
+- 検証エラーが発生したときに、関連するエラー メッセージを表示する行ヘッダーのインジケーターの上にマウス ポインターを移動します。  
   
  [!code-csharp[DataGrid_Validation#FullCode](~/samples/snippets/csharp/VS_Snippets_Wpf/datagrid_validation/cs/mainwindow.xaml.cs#fullcode)]
  [!code-vb[DataGrid_Validation#FullCode](~/samples/snippets/visualbasic/VS_Snippets_Wpf/datagrid_validation/vb/mainwindow.xaml.vb#fullcode)]  

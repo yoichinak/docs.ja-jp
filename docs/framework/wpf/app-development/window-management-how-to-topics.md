@@ -7,11 +7,11 @@ helpviewer_keywords:
 - windows [WPF], managing
 ms.assetid: 3090b408-94e4-446a-92ca-50f1fd36e5d8
 ms.openlocfilehash: 8de810843ea7de9bb7f27c6582a0254661dbf643
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57351659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788688"
 ---
 # <a name="window-management-how-to-topics"></a>ウィンドウの管理方法に関するトピック
 次のトピックを管理する方法を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]windows。  

@@ -3,11 +3,11 @@ title: COLLECTION (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 03228bfa-be3a-4ccc-82f8-eee429f85cf1
 ms.openlocfilehash: 8cd440571726796ee3d2c91e0d2f6b50571e8e27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217758"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785328"
 ---
 # <a name="collection-entity-sql"></a>COLLECTION (Entity SQL)
 COLLECTION キーワードは、インライン関数を定義する場合にのみ使用します。 コレクション関数は、値のコレクションを操作してスカラー出力を生成する関数です。  

@@ -3,11 +3,11 @@ title: < = (に等しいまたはそれよりも小さい) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 7c46da5c-fa09-4d90-adcc-c7e1b769d8e6
 ms.openlocfilehash: 7a65984da22d125bdbdd5cfadb5a2051fa3dafdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780277"
 ---
 # <a name="-less-than-or-equal-to-entity-sql"></a>\<= (以下) (Entity SQL)
 2 つの式を比較して、左の式の値が右の式の値以下であるかどうかを判別します。  

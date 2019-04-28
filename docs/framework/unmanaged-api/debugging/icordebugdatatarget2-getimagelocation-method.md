@@ -5,11 +5,11 @@ ms.assetid: 696afe71-5852-478d-a33f-b2d2dbc4b91f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c7acf08262c73df00a96cfb5c244cdfc352e51ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080482"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789754"
 ---
 # <a name="icordebugdatatarget2getimagelocation-method"></a>ICorDebugDataTarget2::GetImageLocation メソッド
 モジュールのベース アドレスからモジュールのパスを返します。  

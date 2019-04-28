@@ -3,11 +3,11 @@ title: レコード
 description: 学習方法F#レコードはオプションでメンバーの名前付きの値の単純な集計を表します。
 ms.date: 05/16/2016
 ms.openlocfilehash: a499755383654ddaf76af12776ee93f27834b7b0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795422"
 ---
 # <a name="records"></a>レコード
 

@@ -3,11 +3,11 @@ title: System.Runtime.Serialization.XsdImportEnd
 ms.date: 03/30/2017
 ms.assetid: f53f75ec-886c-4c87-845e-64339c779be6
 ms.openlocfilehash: fccd84ee775dacdb5e4c85f74b7b97bc40640627
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784489"
 ---
 # <a name="systemruntimeserializationxsdimportend"></a>System.Runtime.Serialization.XsdImportEnd
 System.Runtime.Serialization.XsdImportEnd  

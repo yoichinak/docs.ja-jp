@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 54dcd1d1-038f-4fc8-a3a4-56ba7a1ca0fd
 author: BrucePerlerMS
 ms.openlocfilehash: b7320b6504c252770bed803666201df633e161a1
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55280463"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791756"
 ---
 # <a name="clear"></a>\<clear>
 現在のトークン ハンドラー コレクションからすべてのセキュリティ トークン ハンドラーをクリアします。  

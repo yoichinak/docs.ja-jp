@@ -3,11 +3,11 @@ title: <privacyNoticeAt>
 ms.date: 03/30/2017
 ms.assetid: 4cc96942-4eb9-4241-b2fd-45aa239915e8
 ms.openlocfilehash: e2ce2111e4bb26cc6a51b4a772b1d8a4d3238c70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200767"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783163"
 ---
 # <a name="privacynoticeat"></a>\<privacyNoticeAt>
 `wsFederationHttp` バインディングで使用されるプライバシーに関する声明を指定する構成要素を表します。  

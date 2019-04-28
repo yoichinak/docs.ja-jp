@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /verbose compiler option [Visual Basic]
 ms.assetid: d1aec0c1-0261-421d-9adc-5b13756100be
 ms.openlocfilehash: f6d896fb0d41a8fa3ed613d29bc3fca2bd14cc5e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796092"
 ---
 # <a name="-verbose"></a>-詳細
 詳細なステータスおよびエラー メッセージを生成するためにコンパイラ ボックスをオンにします。  
@@ -24,7 +24,7 @@ ms.locfileid: "58832793"
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 省略可能です。 指定する`-verbose`は指定した場合と同じ`-verbose+`、これにより、コンパイラから詳細なメッセージを出力します。 このオプションの既定値は`-verbose-`します。  
+ 任意。 指定する`-verbose`は指定した場合と同じ`-verbose+`、これにより、コンパイラから詳細なメッセージを出力します。 このオプションの既定値は`-verbose-`します。  
   
 ## <a name="remarks"></a>Remarks  
  `-verbose`オプションについては、コンパイラによって発行されたエラーの総数が表示されます、アセンブリ、モジュールから読み込んでいるおよびファイルがコンパイルされている現在が表示されます。  

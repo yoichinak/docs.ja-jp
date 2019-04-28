@@ -3,11 +3,11 @@ title: <routing> の <serviceBehavior>
 ms.date: 03/30/2017
 ms.assetid: d8f9c844-4629-4a45-9599-856dc8f01794
 ms.openlocfilehash: b7a9be18395ef8878900d754b5aa5afdeee0cff8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202509"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783059"
 ---
 # <a name="routing-of-servicebehavior"></a>\<ルーティング > の\<serviceBehavior >
 ルーティング構成の動的な変更を可能にするルーティング サービスへの実行時アクセスを提供します。  

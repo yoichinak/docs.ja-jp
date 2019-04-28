@@ -3,11 +3,11 @@ title: '方法: サポート資格情報を作成する'
 ms.date: 03/30/2017
 ms.assetid: d0952919-8bb4-4978-926c-9cc108f89806
 ms.openlocfilehash: 7c6c4ea777f62541f8ca8fa79fdd024e5f5cf2ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326048"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787609"
 ---
 # <a name="how-to-create-a-supporting-credential"></a>方法: サポート資格情報を作成する
 カスタムのセキュリティ スキームでは、複数の資格情報が必要になることがあります。 たとえば、サービスが、ユーザー名とパスワードだけでなく、クライアントが 18 歳以上であることを証明する資格情報もクライアントに要求することがあります。 2 番目の資格情報が、*資格情報をサポートしている*します。 このトピックでは、Windows Communication Foundation (WCF) クライアントでこのような資格情報を実装する方法について説明します。  
@@ -39,28 +39,28 @@ ms.locfileid: "59326048"
   
  カスタム バインドを作成する最初の手順は、次の 3 種類のいずれかのセキュリティ バインド要素を作成することです。  
   
--   <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement>  
   
--   <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
+- <xref:System.ServiceModel.Channels.TransportSecurityBindingElement>  
   
  すべてのクラスは、次の 4 つの関連プロパティを備えた <xref:System.ServiceModel.Channels.SecurityBindingElement> から継承します。  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.EndpointSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OperationSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalEndpointSupportingTokenParameters%2A>  
   
--   <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
+- <xref:System.ServiceModel.Channels.SecurityBindingElement.OptionalOperationSupportingTokenParameters%2A>  
   
 #### <a name="scopes"></a>スコープ  
  サポート資格情報には、次の 2 つのスコープがあります。  
   
--   *エンドポイント サポート トークン*エンドポイントのすべての操作をサポートします。 つまり、サポート トークンによって表される資格情報は、エンドポイントの任意の操作が呼び出されたときにいつでも使用できます。  
+- *エンドポイント サポート トークン*エンドポイントのすべての操作をサポートします。 つまり、サポート トークンによって表される資格情報は、エンドポイントの任意の操作が呼び出されたときにいつでも使用できます。  
   
--   *操作サポート トークン*特定のエンドポイントの操作のみをサポートします。  
+- *操作サポート トークン*特定のエンドポイントの操作のみをサポートします。  
   
  プロパティ名に示されているように、サポート資格情報は必須またはオプションのどちらかになることができます。 つまり、サポート資格情報は必須ではありませんが、存在する場合は使用され、存在しない場合も認証は失敗しません。  
   

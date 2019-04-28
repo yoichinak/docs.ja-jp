@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /target compiler options [Visual Basic]
 ms.assetid: e0954147-548b-461f-9c4b-a8f88845616c
 ms.openlocfilehash: c91e69e3d9f17f758990b8385f6b8d0a1c03bef6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796254"
 ---
 # <a name="-target-visual-basic"></a>-ターゲット (Visual Basic)
 コンパイラの出力形式を指定します。  

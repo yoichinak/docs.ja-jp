@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1e2d7a344cabb1ab816e4fe696ebb47276397ec3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774557"
 ---
 # <a name="icordebugenumskip-method"></a>ICorDebugEnum::Skip メソッド
 指定数の項目では、列挙体にカーソルを移動します。  

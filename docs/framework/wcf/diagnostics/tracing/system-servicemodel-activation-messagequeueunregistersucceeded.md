@@ -3,11 +3,11 @@ title: System.ServiceModel.Activation.MessageQueueUnregisterSucceeded
 ms.date: 03/30/2017
 ms.assetid: c2e344a4-3b10-430b-bdf3-b065777861bb
 ms.openlocfilehash: 0334b223922c0bce95ca28151b6fde5e7d800ded
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132185"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792536"
 ---
 # <a name="systemservicemodelactivationmessagequeueunregistersucceeded"></a>System.ServiceModel.Activation.MessageQueueUnregisterSucceeded
 System.ServiceModel.Activation.MessageQueueUnregisterSucceeded  

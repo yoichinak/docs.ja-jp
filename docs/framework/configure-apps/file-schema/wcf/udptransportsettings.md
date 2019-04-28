@@ -3,11 +3,11 @@ title: <udpTransportSettings>
 ms.date: 03/30/2017
 ms.assetid: 842d92e9-6199-4ec5-b2d1-58533054e1f0
 ms.openlocfilehash: f5be9681dc69fd68dfdfa90f4eb305dc4aa4514b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788753"
 ---
 # <a name="udptransportsettings"></a>\<udpTransportSettings>
 この構成要素の UDP トランスポート設定を公開する[ \<udpDiscoveryEndpoint >](../../../../../docs/framework/configure-apps/file-schema/wcf/udpdiscoveryendpoint.md)します。  

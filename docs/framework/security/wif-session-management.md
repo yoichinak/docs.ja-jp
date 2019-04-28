@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 98bce126-18a9-401b-b20d-67ee462a5f8a
 author: BrucePerlerMS
 ms.openlocfilehash: 980d0c6dca9b0b5fadf2d4a841e4c95a9acaff52
-ms.sourcegitcommit: 15d99019aea4a5c3c91ddc9ba23692284a7f61f3
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49122787"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61780082"
 ---
 # <a name="wif-session-management"></a>WIF セッション管理
 証明書利用者によりホストされている保護リソースにクライアントが初めてアクセスしようとするとき、クライアントは最初に、証明書利用者が信頼しているセキュリティ トークン サービス (STS) に身元を証明する必要があります。 認証後、STS はセキュリティ トークンをクライアントに発行します。 クライアントは証明書利用者にこのトークンを提示します。証明書利用者は保護リソースへのアクセスをクライアントに許可します。 ただし、要求のたびにクライアントが STS に再認証するということは望ましくありません。コンピューターやドメインが証明書利用者のものと同じではないことがあるためです。 代わりに、Windows Identity Foundation (WIF) はクライアントと証明書利用者にセッションを確立させ、そのセッションで、最初の要求後のすべての要求に関して、クライアントはセッション セキュリティ トークンを利用して証明書利用者に身元を証明します。 証明書利用者は Cookie 内に保存されるこのセッション セキュリティ トークンを利用し、クライアントの <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> を再構築できます。  
@@ -29,4 +29,4 @@ ms.locfileid: "49122787"
 ## <a name="extensibility"></a>機能拡張  
  セッション管理メカニズムを拡張できます。 その理由の 1 つは、パフォーマンスを改善できることにあります。 たとえば、メモリ内の状態と Cookie の内容を比較し、セッション セキュリティ トークンを変換したり、最適化したりするカスタム Cookie ハンドラーを作成できます。 その場合、<xref:System.IdentityModel.Services.SessionAuthenticationModule?displayProperty=nameWithType> の <xref:System.IdentityModel.Services.SessionAuthenticationModule.CookieHandler%2A?displayProperty=nameWithType> プロパティを構成し、<xref:System.IdentityModel.Services.CookieHandler?displayProperty=nameWithType> から誘導されたカスタム Cookie ハンドラーを使用できます。 <xref:System.IdentityModel.Services.ChunkedCookieHandler?displayProperty=nameWithType> が既定の Cookie ハンドラーです。Cookie はハイパーテキスト転送プロトコル (HTTP) の許容サイズを超えるためです。代わりにカスタム Cookie ハンドラーを使用する場合、チャンクを実装してください。  
   
- 詳細については、[ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)サンプル。 このサンプルでは、(tokenreplycache ではなく) ファーム対応セッション キャッシュを確認できます。大きな Cookie を交換せず、参照でセッションを利用できます。このサンプルではまた、ファームで Cookie を保護する簡単な方法を確認できます。 このセッション キャッシュは WCF ベースを参照してください。 セッション セキュリティに関しては、このサンプルでは、MachineKey に基づく、Cookie 変換の WIF 4.5 の新機能を確認できます。これは、web.config に適切なスニペットを貼り付けるだけで有効にできます。サンプル自体は "ファーム化" されていませんが、アプリをファーム対応にするために必要なことを示します。
+ 詳細については、次を参照してください。 [ClaimsAwareWebFarm](https://go.microsoft.com/fwlink/?LinkID=248408)サンプル。 このサンプルでは、(tokenreplycache ではなく) ファーム対応セッション キャッシュを確認できます。大きな Cookie を交換せず、参照でセッションを利用できます。このサンプルではまた、ファームで Cookie を保護する簡単な方法を確認できます。 このセッション キャッシュは WCF ベースです。 セッション セキュリティに関しては、このサンプルでは、MachineKey に基づく、Cookie 変換の WIF 4.5 の新機能を確認できます。これは、web.config に適切なスニペットを貼り付けるだけで有効にできます。サンプル自体は "ファーム化" されていませんが、アプリをファーム対応にするために必要なことを示します。

@@ -3,11 +3,11 @@ title: WCF 拡張に対するカスタム メタデータのインポート
 ms.date: 03/30/2017
 ms.assetid: 78beb28f-408a-4c75-9c3c-caefe9595b1a
 ms.openlocfilehash: 830829be98202c97a9fc2b34e31da25967292efb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766767"
 ---
 # <a name="importing-custom-metadata-for-a-wcf-extension"></a>WCF 拡張に対するカスタム メタデータのインポート
 Windows Communication Foundation (WCF) では、メタデータのインポートは、メタデータからサービスまたはコンポーネントの抽象表現を生成するプロセスです。 たとえば、WCF をインポートできます<xref:System.ServiceModel.Description.ServiceEndpoint>インスタンス、<xref:System.ServiceModel.Channels.Binding>インスタンスまたは<xref:System.ServiceModel.Description.ContractDescription>サービスの WSDL からインスタンスを文書化します。 Wcf サービス メタデータをインポートするには、実装を使用、<xref:System.ServiceModel.Description.MetadataImporter?displayProperty=nameWithType>抽象クラス。 派生する型、<xref:System.ServiceModel.Description.MetadataImporter>クラスは、Ws-policy を利用したメタデータ形式をインポートする WCF のロジックをインポートするためのサポートを実装します。  

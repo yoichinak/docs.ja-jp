@@ -1,15 +1,10 @@
 ---
-title: F# の関数型プログラミングの概要
-description: 関数型プログラミングの基礎を学習F#します。
+title: 'F# の関数型プログラミングの概要'
+description: '関数型プログラミングの基礎を学習F#します。'
 ms.date: 10/29/2018
-ms.openlocfilehash: d4a9bb0cd826b41aca96e12e2bcb5aab80c18eb4
-ms.sourcegitcommit: db8b83057d052c1f9f249d128b08d4423af0f7c2
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 11/02/2018
-ms.locfileid: "25724479"
 ---
-# <a name="introduction-to-functional-programming-in-f"></a>F# の関数型プログラミングの概要 #
+
+# <a name="introduction-to-functional-programming-in-f"></a>F での関数型プログラミングの概要\#
 
 関数型プログラミングは、機能と変更不可のデータの使用を重視するプログラミングのスタイルです。 型指定された関数型プログラミングは関数型プログラミングと組み合わせると静的な型などとF#します。 一般に、次の概念が関数型プログラミングで強調表示します。
 
@@ -99,7 +94,7 @@ let addOneIfOdd input =
 
 ```fsharp
 let printString (str: string) =
-    printfn "String is: %s" s
+    printfn "String is: %s" str
 ```
 
 署名のようになります。
@@ -161,90 +156,15 @@ let addOneToValue x =
     x + 1
 ```
 
-値を書き込むが、この関数は、グローバルな値に依存しない、`x`プログラムの出力にします。 これを行うには本質的に問題はありませんが、関数が純粋でないことわけです。
+値を書き込むが、この関数は、グローバルな値に依存しない、`x`プログラムの出力にします。 これを行うには本質的に問題はありませんが、関数が純粋でないことわけです。 プログラムの別の部分は、出力バッファーなど、プログラム外の何かに依存する場合に、プログラムの他の部分に影響し、この関数を呼び出すことができます。
 
-削除、`printfn`ステートメント最後には、関数は、純粋な。
+削除、`printfn`ステートメントによって関数を純粋な。
 
 ```fsharp
 let addOneToValue x = x + 1
 ```
 
-この機能は本質的には_優れた_で以前のバージョンよりも、`printfn`ステートメントでは、その値を返すこの関数はすべて、保証は。 この関数を呼び出す関数の 1 回または 1 90億回は同じでも結果: 同じ値を生成します。 この予測は、任意の純粋関数がしいものに透過的なことを意味するために関数型プログラミングで重要です。
-
-### <a name="referential-transparency"></a>参照の透過性
-
-参照の透過性は、式と関数のプロパティです。 透明しいものである式をプログラムの動作を変更することがなく、結果の値に置き換えることがある場合があります。 すべての純粋関数では、しいもの透過的です。
-
-純粋関数と同様は数学的な観点からは参照の透過性を考えることができます。 算術式で`y = f(x)`、`f(x)`関数の結果を置き換えと等しくあってはまだ`y`します。 これは関数型プログラミングで参照の透過性を均等に当てはまります。
-
-以前に定義されたを呼び出してください`addOneIfOdd`関数を 2 回。
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 = addOneIffOdd 1 // Produces 2
-let res2 = addOneIffOdd 2 // Produces 2
-```
-
-引数の置換、関数本体の各関数呼び出しを置き換えることができます`input`個々 の値。
-
-```fsharp
-// Checks if 'x' is odd by using the mod operator
-let isOdd x = x % 2 <> 0
-
-let addOneIfOdd input =
-    let result =
-        if isOdd input then
-            input + 1
-        else
-            input
-
-    result
-
-let res1 =
-    let result =
-        if isOdd 1 then
-            1 + 1
-        else
-            1
-
-    result
-let res2 =
-    let result =
-        if isOdd 2 then
-            2 + 1
-        else
-            2
-
-    result
-```
-
-両方`res1`と`res2`関数が呼び出されたことを示す場合と同じ値を持つ`addOneIfOdd`はしいものに対して透過的です。
-
-さらに、関数は、純粋にも、透過的なしいものにありません。 以前の定義を検討してください`addOneTovalue`:。
-
-```fsharp
-let addOneToValue x = 
-    printfn "x is %d" x
-    x + 1
-```
-
-この関数への呼び出しは、その本体で置き換えることもでき、同じ処理には、毎回が行われます。
-
-* 出力に、追加される前に、値が出力されます。
-* 値が 1 の追加
-
-プログラミングするときF#、純粋性ではなく、目標は、参照の透過性がよくあります。 ただし、可能な場合に、純粋関数を記述することをおすすめなります。
+この機能は本質的には_優れた_で以前のバージョンよりも、`printfn`ステートメントでは、その値を返すこの関数はすべて、保証は。 何回でもこの関数を呼び出すには、同じ結果が生成されます。 値だけが生成されます。 機能の多くのプログラマが追求は純粋性によって指定された予測です。
 
 ### <a name="immutability"></a>不変性
 

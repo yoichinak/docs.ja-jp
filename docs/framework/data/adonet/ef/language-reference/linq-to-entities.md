@@ -3,11 +3,11 @@ title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
 ms.openlocfilehash: da9529da9b45fc8ac2fdf0b19d65634dd33450fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760715"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities は、開発者が Visual Basic または Visual C# を使用して Entity Framework 概念モデルに対するクエリを作成するための統合言語クエリ (LINQ) のサポートを提供します。 Entity Framework に対するクエリで代表的なものが、コマンド ツリー クエリです。これはオブジェクト コンテキストに対して実行されます。 LINQ to Entities では、統合言語クエリ (LINQ) クエリをコマンド ツリー クエリに変換し、そのクエリを Entity Framework に対して実行します。返されたオブジェクトは、Entity Framework でも LINQ でも使用できます。 次に、LINQ to Entities クエリを作成して実行する手順を示します。  
@@ -57,13 +57,13 @@ LINQ to Entities は、開発者が Visual Basic または Visual C# を使用�
   
  通常、クエリの結果は次のいずれかの形で返されます。  
   
--   0 個以上の型指定されたエンティティ オブジェクトのコレクション、または概念モデルで定義されている複合型のプロジェクション。  
+- 0 個以上の型指定されたエンティティ オブジェクトのコレクション、または概念モデルで定義されている複合型のプロジェクション。  
   
--   [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] でサポートされる CLR 型。  
+- [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] でサポートされる CLR 型。  
   
--   インライン コレクション。  
+- インライン コレクション。  
   
--   匿名型。  
+- 匿名型。  
   
  詳細については、次を参照してください。[クエリ結果](../../../../../../docs/framework/data/adonet/ef/language-reference/query-results.md)します。  
   

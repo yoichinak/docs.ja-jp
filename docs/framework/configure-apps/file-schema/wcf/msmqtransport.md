@@ -3,11 +3,11 @@ title: <msmqTransport>
 ms.date: 03/30/2017
 ms.assetid: 19d89f35-76ac-49dc-832b-e8bec2d5e33b
 ms.openlocfilehash: 9bdaccd6183bc4ea58ed610b58aceddcb6ba0351
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772425"
 ---
 # <a name="msmqtransport"></a>\<msmqTransport>
 チャネルがカスタム バインドに含まれているときに、MSMQ トランスポートでメッセージを転送するようにします。  

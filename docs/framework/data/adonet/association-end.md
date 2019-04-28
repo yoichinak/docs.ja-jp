@@ -3,27 +3,27 @@ title: アソシエーション End
 ms.date: 03/30/2017
 ms.assetid: 2c345213-0296-4d90-ac6d-cef179798a75
 ms.openlocfilehash: e549254533f8362ce3475fb3aa5dbaffb3e900e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769614"
 ---
 # <a name="association-end"></a>アソシエーション End
 *アソシエーション end*を識別、[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)の一端を[アソシエーション](../../../../docs/framework/data/adonet/association-type.md)とアソシエーションの end に存在できるインスタンスを入力するエンティティの数。 アソシエーション End はアソシエーションの一部として定義され、アソシエーションには必ず 2 つのアソシエーション End が必要です。 [ナビゲーション プロパティ](../../../../docs/framework/data/adonet/navigation-property.md)他の 1 つのアソシエーション end から移動できるようにします。  
   
  アソシエーション End の定義には、次の情報が含まれます。  
   
--   アソシエーションに含まれるエンティティ型の 1 つ。 (必須)  
+- アソシエーションに含まれるエンティティ型の 1 つ。 (必須)  
   
     > [!NOTE]
     >  アソシエーションでは、各アソシエーション End に同じエンティティ型を指定することができます。 これにより、自己アソシエーションが作成されます。  
   
--   [アソシエーション end の多重度](../../../../docs/framework/data/adonet/association-end-multiplicity.md)アソシエーションの 1 つの end に存在できるエンティティ型のインスタンスの数を示します。 値の 1 つ (1)、0 個または 1 (0..1)、または複数のアソシエーション end の多重度を持つことができます (\*)。  
+- [アソシエーション end の多重度](../../../../docs/framework/data/adonet/association-end-multiplicity.md)アソシエーションの 1 つの end に存在できるエンティティ型のインスタンスの数を示します。 値の 1 つ (1)、0 個または 1 (0..1)、または複数のアソシエーション end の多重度を持つことができます (\*)。  
   
--   アソシエーション End の名前。 (オプション)。  
+- アソシエーション End の名前。 (オプション)。  
   
--   アソシエーション End に実行する CASCADE ON DELETE などの操作の情報。 (オプション)。  
+- アソシエーション End に実行する CASCADE ON DELETE などの操作の情報。 (オプション)。  
   
 ## <a name="example"></a>例  
  下のダイアグラムは、`PublishedBy` および `WrittenBy` という 2 つのアソシエーションの概念モデルを示しています。 `PublishedBy` アソシエーションのアソシエーション End は `Book` および `Publisher` のエンティティ型です。 多重度、 `Publisher` end が 1 つ (1) との多重度、 `Book` end が多く (\*)、出版社が多くの書籍、書籍は 1 つのパブリッシャーによって公開されたことを示します。  

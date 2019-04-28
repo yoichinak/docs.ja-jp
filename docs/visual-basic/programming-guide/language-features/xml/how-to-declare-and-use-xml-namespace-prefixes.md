@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML namespace prefixes [Visual Basic]
 ms.assetid: 4292e1d9-eb8f-49d6-a3aa-f05a5fbe24d1
 ms.openlocfilehash: 244329058624bebb03440961c1dda4a50b4efb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791782"
 ---
 # <a name="how-to-declare-and-use-xml-namespace-prefixes-visual-basic"></a>方法: 宣言および XML Namespace プレフィックス (Visual Basic) を使用します。
 この例は、XML 名前空間プレフィックスをインポートする方法を示しています。`ns`を XML リテラルおよび XML 軸のプロパティで使用します。  
@@ -21,7 +21,7 @@ ms.locfileid: "58818664"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   <xref:System.Xml.Linq> 名前空間への参照  
+- <xref:System.Xml.Linq> 名前空間への参照  
   
 ## <a name="see-also"></a>関連項目
 

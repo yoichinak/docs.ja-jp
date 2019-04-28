@@ -7,8 +7,8 @@ ms.openlocfilehash: b6b84271fc450a325270bad5f9e0355fe81a8a5c
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792770"
 ---
 # <a name="custom-token-handlers"></a>カスタムのトークン ハンドラー
 このトピックでは、WIF のトークン ハンドラーと、それらを使用してトークンをどのように処理するかを説明します。 また、WIF で既定ではサポートされていないトークンの種類用にカスタム トークン ハンドラーを作成するために必要なことについても説明します。  
@@ -19,23 +19,23 @@ ms.locfileid: "59975677"
 ## <a name="built-in-security-token-handlers-in-wif"></a>WIF の組み込みセキュリティ トークン ハンドラー  
  WIF 4.5 には、抽象基本クラス <xref:System.IdentityModel.Tokens.SecurityTokenHandler> から派生する次の 9 つのセキュリティ トークン ハンドラー クラスが含まれています。  
   
--   <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.EncryptedSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.KerberosSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.RsaSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SamlSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.Saml2SecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.SessionSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.UserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.WindowsUserNameSecurityTokenHandler>  
   
--   <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
+- <xref:System.IdentityModel.Tokens.X509SecurityTokenHandler>  
   
 ## <a name="adding-a-custom-token-handler"></a>カスタム トークン ハンドラーの追加  
  SWT (Simple Web Token) や JWT (JSON Web Token) など、一部のトークン型には、WIF によって提供される組み込みトークン ハンドラーがありません。 これらのトークン型や、組み込みハンドラーがない他のトークン型の場合は、以下の手順を実行して、カスタム トークン ハンドラーを作成する必要があります。  
@@ -46,17 +46,17 @@ ms.locfileid: "59975677"
   
 2. 以下のメソッドをオーバーライドし、独自の実装を指定します。  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ReadToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanWriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.WriteToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.CanValidateToken%2A>  
   
-    -   <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
+    - <xref:System.IdentityModel.Tokens.SecurityTokenHandler.ValidateToken%2A>  
   
 3. WIF に適用される **\<system.identityModel>** セクション内の、*Web.config* または *App.config* ファイルの新しいカスタム トークン ハンドラーへの参照を追加します。 たとえば、次の構成マークアップでは、**CustomToken** 名前空間に存在する **MyCustomTokenHandler** という名前の新しいトークン ハンドラーを指定します。  
   

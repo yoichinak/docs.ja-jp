@@ -11,11 +11,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: 5d737319-0c34-4df9-a23d-188fc840becd
 ms.openlocfilehash: 651f08812032aa1c5aacc04fdb3d7f491f12b607
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836286"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784008"
 ---
 # <a name="parameter-list-visual-basic"></a>パラメーター リスト (Visual Basic)
 プロシージャは呼び出された場合、パラメーターを指定します。 複数のパラメーターは、コンマで区切られます。 1 つのパラメーターの構文を次に示します。  
@@ -63,23 +63,23 @@ parametername[( )] [ As parametertype ] [ = defaultvalue ]
   
 ## <a name="rules"></a>ルール  
   
--   **かっこです。** パラメーター リストを指定する場合は、かっこで囲む必要があります。 パラメーターがない場合は、空のリストを囲むかっこを引き続き使用できます。 これにより、プロシージャに要素が明確にすることによって、コードの読みやすさが向上します。  
+- **かっこです。** パラメーター リストを指定する場合は、かっこで囲む必要があります。 パラメーターがない場合は、空のリストを囲むかっこを引き続き使用できます。 これにより、プロシージャに要素が明確にすることによって、コードの読みやすさが向上します。  
   
--   **省略可能なパラメーター。** 使用する場合、`Optional`パラメーター修飾子の一覧ですべての後続のパラメーターはオプションもありを使用して宣言する、`Optional`修飾子。  
+- **省略可能なパラメーター。** 使用する場合、`Optional`パラメーター修飾子の一覧ですべての後続のパラメーターはオプションもありを使用して宣言する、`Optional`修飾子。  
   
      すべての省略可能なパラメーター宣言を指定する必要があります、`defaultvalue`句。  
   
      詳細については、次を参照してください。[省略可能なパラメーター](../../../visual-basic/programming-guide/language-features/procedures/optional-parameters.md)します。  
   
--   **パラメーターの配列。** 指定する必要があります`ByVal`の`ParamArray`パラメーター。  
+- **パラメーターの配列。** 指定する必要があります`ByVal`の`ParamArray`パラメーター。  
   
      両方を使用することはできません`Optional`と`ParamArray`パラメーター リストを同じにします。  
   
      詳細については、次を参照してください。[パラメーター配列](../../../visual-basic/programming-guide/language-features/procedures/parameter-arrays.md)します。  
   
--   **値渡し。** すべての引数について既定のメカニズムは`ByVal`手順、つまり基になる可変要素を変更できません。 ただし、要素が参照型の場合は、プロシージャが変更できます内容や、基になるオブジェクトのメンバーでも交換や、オブジェクト自体を再割り当てはできません。  
+- **値渡し。** すべての引数について既定のメカニズムは`ByVal`手順、つまり基になる可変要素を変更できません。 ただし、要素が参照型の場合は、プロシージャが変更できます内容や、基になるオブジェクトのメンバーでも交換や、オブジェクト自体を再割り当てはできません。  
   
--   **パラメーター名。** 次のパラメーターのデータ型が配列の場合は、`parametername`かっこの直後にします。 パラメーター名の詳細については、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
+- **パラメーター名。** 次のパラメーターのデータ型が配列の場合は、`parametername`かっこの直後にします。 パラメーター名の詳細については、次を参照してください。 [Declared Element Names](../../../visual-basic/programming-guide/language-features/declared-elements/declared-element-names.md)します。  
   
 ## <a name="example"></a>例  
  次の例は、`Function`プロシージャを 2 つのパラメーターを定義します。  

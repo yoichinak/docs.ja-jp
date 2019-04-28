@@ -8,11 +8,11 @@ helpviewer_keywords:
 - clients [WCF], consuming services
 ms.assetid: d780af9f-73c5-42db-9e52-077a5e4de7fe
 ms.openlocfilehash: 6bf683cdd0a03a5d1dbc452c28e7b33911464f09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782435"
 ---
 # <a name="accessing-services-using-a-wcf-client"></a>WCF クライアントを使用したサービスへのアクセス
 
@@ -178,11 +178,11 @@ Console.WriteLine("Add({0},{1}) = {2}", value1, value2, result)
 
 WCF クライアントによってスローされる多くの例外は、サービスで例外が原因です。 いくつかの例を次に示します。
 
--   <xref:System.Net.Sockets.SocketException>:既存の接続は、リモート ホストによって強制的に切断されました。
+- <xref:System.Net.Sockets.SocketException>:既存の接続は、リモート ホストによって強制的に切断されました。
 
--   <xref:System.ServiceModel.CommunicationException>:基になる接続が予期せず閉じられました。
+- <xref:System.ServiceModel.CommunicationException>:基になる接続が予期せず閉じられました。
 
--   <xref:System.ServiceModel.CommunicationObjectAbortedException>:ソケット接続が中止されました。 これは、メッセージ処理時のエラー、リモート ホストでの受信タイムアウトの超過、または基になるネットワーク リソースの問題が原因で発生する可能性があります。
+- <xref:System.ServiceModel.CommunicationObjectAbortedException>:ソケット接続が中止されました。 これは、メッセージ処理時のエラー、リモート ホストでの受信タイムアウトの超過、または基になるネットワーク リソースの問題が原因で発生する可能性があります。
 
 このような種類の例外が発生した場合、問題を解決するには、サービス側でトレースをオンにし、そこで発生した例外を特定することをお勧めします。 トレースの詳細については、次を参照してください。[トレース](../../../docs/framework/wcf/diagnostics/tracing/index.md)と[を使用して、アプリケーションのトラブルシューティングのトレース](../../../docs/framework/wcf/diagnostics/tracing/using-tracing-to-troubleshoot-your-application.md)します。
 

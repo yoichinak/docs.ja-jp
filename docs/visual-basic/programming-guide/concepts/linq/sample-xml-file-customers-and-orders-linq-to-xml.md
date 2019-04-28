@@ -3,11 +3,11 @@ title: サンプル XML ファイル:顧客と注文 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: ed319807-c432-4f8e-9694-dad4c7648310
 ms.openlocfilehash: 9d5bf7600f99085ec860e88ab58c5b97aa9fae4c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61786998"
 ---
 # <a name="sample-xml-file-customers-and-orders-linq-to-xml"></a>サンプル XML ファイル:顧客と注文 (LINQ to XML)
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには顧客と注文が含まれています。  

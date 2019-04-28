@@ -16,11 +16,11 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
 ms.openlocfilehash: 6399fb853162174895d892399fd3eb5226101515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792198"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>チュートリアル: バックグラウンド操作を使用するフォームの実装
 場合は、完了に長い時間がかかる操作があると応答を停止する、ユーザー インターフェイス (UI) を設定したくない、または「ハング」しを使用できます、<xref:System.ComponentModel.BackgroundWorker>クラスを別のスレッドで操作を実行します。  
@@ -29,13 +29,13 @@ ms.locfileid: "59343403"
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   Windows ベースのアプリケーションの作成  
+- Windows ベースのアプリケーションの作成  
   
--   作成、<xref:System.ComponentModel.BackgroundWorker>フォーム  
+- 作成、<xref:System.ComponentModel.BackgroundWorker>フォーム  
   
--   非同期イベント ハンドラーの追加  
+- 非同期イベント ハンドラーの追加  
   
--   進行状況の報告とキャンセルのサポートの追加  
+- 進行状況の報告とキャンセルのサポートの追加  
   
  この例で使用するコードの完全な一覧については、次を参照してください。[方法。バック グラウンド操作を使用してフォームを実装する](how-to-implement-a-form-that-uses-a-background-operation.md)します。  
   
@@ -68,7 +68,7 @@ ms.locfileid: "59343403"
   
 #### <a name="to-create-a-backgroundworker-with-the-designer"></a>デザイナーを使用して BackgroundWorker を作成するには  
   
--   **コンポーネント**のタブ、**ツールボックス**、ドラッグ、<xref:System.ComponentModel.BackgroundWorker>フォーム上にします。  
+- **コンポーネント**のタブ、**ツールボックス**、ドラッグ、<xref:System.ComponentModel.BackgroundWorker>フォーム上にします。  
   
 ## <a name="adding-asynchronous-event-handlers"></a>非同期イベント ハンドラーの追加  
  イベント ハンドラーを追加する準備が整いました、<xref:System.ComponentModel.BackgroundWorker>コンポーネントの非同期イベント。 バックグラウンドで実行される時間のかかる操作 (フィボナッチ数の計算) は、これらのイベント ハンドラーのいずれかによって呼び出されます。  
@@ -145,7 +145,7 @@ ms.locfileid: "59343403"
   
 #### <a name="to-test-your-project"></a>プロジェクトをテストするには  
   
--   F5 キーを押してアプリケーションをコンパイルし、実行します。  
+- F5 キーを押してアプリケーションをコンパイルし、実行します。  
   
      計算がバック グラウンドで実行しているときに表示されます、<xref:System.Windows.Forms.ProgressBar>完了するまでの進行状況を表示します。 また、保留中の操作をキャンセルすることもできます。  
   
@@ -154,11 +154,11 @@ ms.locfileid: "59343403"
 ## <a name="next-steps"></a>次の手順  
  使用するフォームを実装している、<xref:System.ComponentModel.BackgroundWorker>バック グラウンドで計算を実行するコンポーネントの他の非同期操作の可能性を調べることができます。  
   
--   複数回使用<xref:System.ComponentModel.BackgroundWorker>複数の同時操作のオブジェクト。  
+- 複数回使用<xref:System.ComponentModel.BackgroundWorker>複数の同時操作のオブジェクト。  
   
--   マルチ スレッド アプリケーションをデバッグするを参照してください。[方法。[スレッド] ウィンドウを使用して、](/visualstudio/debugger/how-to-use-the-threads-window)します。  
+- マルチ スレッド アプリケーションをデバッグするを参照してください。[方法。[スレッド] ウィンドウを使用して、](/visualstudio/debugger/how-to-use-the-threads-window)します。  
   
--   非同期プログラミング モデルをサポートする独自のコンポーネントを実装する。 詳細については、「[イベント ベースの非同期パターンの概要](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)」を参照してください。  
+- 非同期プログラミング モデルをサポートする独自のコンポーネントを実装する。 詳細については、「[イベント ベースの非同期パターンの概要](../../../standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)」を参照してください。  
   
     > [!CAUTION]
     >  どのような種類のマルチスレッドを使用している場合でも、非常に深刻で複雑なバグを引き起こしてしまう可能性があります。 マルチスレッドを使用するソリューションを実装する前に、「[マネージド スレッド処理の実施](../../../standard/threading/managed-threading-best-practices.md)」を参照してください。  

@@ -3,11 +3,11 @@ title: オブジェクトの状態と変更の追跡
 ms.date: 03/30/2017
 ms.assetid: 7a808b00-9c3c-479a-aa94-717280fefd71
 ms.openlocfilehash: 63b04d3a4b6e48594e9664833a6e539d62bbab0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794395"
 ---
 # <a name="object-states-and-change-tracking"></a>オブジェクトの状態と変更の追跡
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] オブジェクトは常にいくつか*状態*します。 たとえば、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が新しいオブジェクトを作成すると、そのオブジェクトは `Unchanged` 状態です。 自分で作成する新しいオブジェクトが認識できない、<xref:System.Data.Linq.DataContext>されて`Untracked`状態。 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> が正常に実行されると、すべてのオブジェクトが [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] にとって既知となり、`Unchanged` 状態になります  (データベースから削除されたオブジェクトは例外です。これは `Deleted` 状態であり、<xref:System.Data.Linq.DataContext> インスタンスの中で使用できません)。  
@@ -38,11 +38,11 @@ ms.locfileid: "59191156"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] オブジェクトが削除されたときに、次の処理を実行します (<xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A>) テーブルから。  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A> を呼び出すときに、そのオブジェクトに対して `DELETE` 操作が実行されます。  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A> を呼び出すときに、そのオブジェクトに対して `DELETE` 操作が実行されます。  
   
--   関連オブジェクトが読み込まれているかどうかにかかわらず、関連オブジェクトに削除は反映されません。 特に、リレーションシップ プロパティを更新するために関連オブジェクトが読み込まれることはありません。  
+- 関連オブジェクトが読み込まれているかどうかにかかわらず、関連オブジェクトに削除は反映されません。 特に、リレーションシップ プロパティを更新するために関連オブジェクトが読み込まれることはありません。  
   
--   <xref:System.Data.Linq.DataContext.SubmitChanges%2A> が正常に実行されると、オブジェクトは `Deleted` 状態に設定されます。 その結果、その `id` で、オブジェクトまたはその <xref:System.Data.Linq.DataContext> を使用することはできません。 データベース内でオブジェクトが削除された後でも、<xref:System.Data.Linq.DataContext> インスタンスによって保持される内部キャッシュは、取得されたオブジェクトや新規として追加されたオブジェクトを消去しません。  
+- <xref:System.Data.Linq.DataContext.SubmitChanges%2A> が正常に実行されると、オブジェクトは `Deleted` 状態に設定されます。 その結果、その `id` で、オブジェクトまたはその <xref:System.Data.Linq.DataContext> を使用することはできません。 データベース内でオブジェクトが削除された後でも、<xref:System.Data.Linq.DataContext> インスタンスによって保持される内部キャッシュは、取得されたオブジェクトや新規として追加されたオブジェクトを消去しません。  
   
  <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> によって追跡されたオブジェクトでのみ、<xref:System.Data.Linq.DataContext> を呼び出すことができます。 `Untracked` オブジェクトの場合は、<xref:System.Data.Linq.Table%601.Attach%2A> を呼び出す前に <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> を呼び出す必要があります。 <xref:System.Data.Linq.Table%601.DeleteOnSubmit%2A> オブジェクトで `Untracked` を呼び出すと、例外がスローされます。  
   

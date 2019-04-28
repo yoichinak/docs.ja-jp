@@ -15,11 +15,11 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], exponentiation
 ms.assetid: d89a1ca8-83da-4784-a87b-a9d7dceb3f62
 ms.openlocfilehash: 54de9c91d4e166b8ca1733952dfa9c98ebf11ffe
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778496"
 ---
 # <a name="-operator-visual-basic"></a>^ 演算子 (Visual Basic)
 
