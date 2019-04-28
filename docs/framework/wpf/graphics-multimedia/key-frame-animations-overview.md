@@ -7,11 +7,11 @@ helpviewer_keywords:
 - multiple animation target values [WPF]
 ms.assetid: 10028f97-bb63-41fc-b8ad-663dac7ea203
 ms.openlocfilehash: eda91ab6d81150749dc542139949fb92684c0fe1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316740"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785815"
 ---
 # <a name="key-frame-animations-overview"></a>キー フレーム アニメーションの概要
 このトピックでは、キー フレーム アニメーションの概要を説明します。 キー フレーム アニメーションでは、3 つ以上のターゲット値を使用してアニメーション化することができ、アニメーションの補間方式を制御できます。  
@@ -28,11 +28,11 @@ ms.locfileid: "59316740"
   
  キー フレーム アニメーションをアニメーション化するには、次の手順を完了します。  
   
--   アニメーションを宣言し、指定の<xref:System.Windows.Media.Animation.Timeline.Duration%2A>によって/アニメーションの場合と同様、します。  
+- アニメーションを宣言し、指定の<xref:System.Windows.Media.Animation.Timeline.Duration%2A>によって/アニメーションの場合と同様、します。  
   
--   各ターゲット値の適切な型のキー フレームを作成、その値を設定し、<xref:System.Windows.Media.Animation.KeyTime>に、アニメーションの追加と<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A>コレクション。  
+- 各ターゲット値の適切な型のキー フレームを作成、その値を設定し、<xref:System.Windows.Media.Animation.KeyTime>に、アニメーションの追加と<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames.KeyFrames%2A>コレクション。  
   
--   From/To/By アニメーションと同じように、アニメーションをプロパティに関連付けます。 ストーリーボードを使用したアニメーションのプロパティへの適用の詳細については、「[ストーリー ボードの概要](storyboards-overview.md)」を参照してください。  
+- From/To/By アニメーションと同じように、アニメーションをプロパティに関連付けます。 ストーリーボードを使用したアニメーションのプロパティへの適用の詳細については、「[ストーリー ボードの概要](storyboards-overview.md)」を参照してください。  
   
  次の例では、<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>をアニメーション化する、<xref:System.Windows.Shapes.Rectangle>要素を次の 4 つの異なる場所にします。  
   
@@ -85,33 +85,33 @@ ms.locfileid: "59316740"
   
  キー フレームの主な目的は、指定する、<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>と<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>します。 すべての種類のキー フレームには、次の 2 つのプロパティがあります。  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>プロパティがそのキー フレームのターゲット値を指定します。  
+- <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>プロパティがそのキー フレームのターゲット値を指定します。  
   
--   <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>プロパティでは、タイミングを指定します (アニメーションの内<xref:System.Windows.Media.Animation.Timeline.Duration%2A>) キー フレームの<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>に到達します。  
+- <xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>プロパティでは、タイミングを指定します (アニメーションの内<xref:System.Windows.Media.Animation.Timeline.Duration%2A>) キー フレームの<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>に到達します。  
   
  キー フレーム アニメーションの開始時に、によって定義された順序でキー フレームを反復処理、<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>プロパティ。  
   
--   アニメーションが、ターゲット プロパティの現在の値の間の遷移を作成する時間が 0 のキー フレームがない場合は、および<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>最初のキー フレームのそれ以外の場合、アニメーションの出力値の最初のキー フレームの値になります。  
+- アニメーションが、ターゲット プロパティの現在の値の間の遷移を作成する時間が 0 のキー フレームがない場合は、および<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>最初のキー フレームのそれ以外の場合、アニメーションの出力値の最初のキー フレームの値になります。  
   
--   アニメーションの間の遷移が作成されます、 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 2 番目のキー フレームで指定された補間メソッドを使用して、最初と 2 番目キー フレームの。 最初のキー フレームからの移行が開始<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>は終了と 2 番目のキー フレームの<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>に到達します。  
+- アニメーションの間の遷移が作成されます、 <xref:System.Windows.Media.Animation.IKeyFrame.Value%2A> 2 番目のキー フレームで指定された補間メソッドを使用して、最初と 2 番目キー フレームの。 最初のキー フレームからの移行が開始<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>は終了と 2 番目のキー フレームの<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>に到達します。  
   
--   アニメーションは、前後のキー フレームの間の遷移を作成しながら続行されます。  
+- アニメーションは、前後のキー フレームの間の遷移を作成しながら続行されます。  
   
--   最後に、最も大きなキー時刻をキー フレームの値にアニメーション遷移またはであると等しく、アニメーションのより小さい<xref:System.Windows.Media.Animation.Timeline.Duration%2A>します。  
+- 最後に、最も大きなキー時刻をキー フレームの値にアニメーション遷移またはであると等しく、アニメーションのより小さい<xref:System.Windows.Media.Animation.Timeline.Duration%2A>します。  
   
  場合、アニメーションの<xref:System.Windows.Media.Animation.Timeline.Duration%2A>は<xref:System.Windows.Duration.Automatic%2A>またはその<xref:System.Windows.Media.Animation.Timeline.Duration%2A>の最後のキー フレーム アニメーションの終了時刻と同じです。 の場合、アニメーションの<xref:System.Windows.Duration>が最後のキー フレーム アニメーション保留リストの末尾に到達するまで、キー フレーム値のキー時刻よりも大きい、<xref:System.Windows.Duration>します。 すべてのアニメーションのように、キー フレーム アニメーションを使用してその<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>かどうかを保持する最終的な値に達すると、アクティブな期間の終了を決定するプロパティ。 詳細については、「[タイミング動作の概要](timing-behaviors-overview.md)」を参照してください。  
   
  次の例では、<xref:System.Windows.Media.Animation.DoubleAnimationUsingKeyFrames>オブジェクトを示すために前の例で定義されている方法、<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>と<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>プロパティ。  
   
--   最初のキー フレームは、アニメーションの出力値をただちに 0 に設定します。  
+- 最初のキー フレームは、アニメーションの出力値をただちに 0 に設定します。  
   
--   2 番目のキー フレームは、0 から 350 までアニメーション化されます。 最初のキー フレームが終わった時点で開始され (時刻 = 0 秒)、2 秒間再生され、時刻 = 0:0:2 で終わります。  
+- 2 番目のキー フレームは、0 から 350 までアニメーション化されます。 最初のキー フレームが終わった時点で開始され (時刻 = 0 秒)、2 秒間再生され、時刻 = 0:0:2 で終わります。  
   
--   3 番目のキー フレームは、350 から 50 までアニメーション化されます。 2 番目のキー フレームが終わった時点で開始され (時刻 = 2 秒)、5 秒間再生され、時刻 = 0:0:7 で終わります。  
+- 3 番目のキー フレームは、350 から 50 までアニメーション化されます。 2 番目のキー フレームが終わった時点で開始され (時刻 = 2 秒)、5 秒間再生され、時刻 = 0:0:7 で終わります。  
   
--   4 番目のキー フレームは、50 から 200 までアニメーション化されます。 3 番目のキー フレームが終わった時点で開始され (時刻 = 7 秒)、1 秒間再生され、時刻 = 0:0:8 で終わります。  
+- 4 番目のキー フレームは、50 から 200 までアニメーション化されます。 3 番目のキー フレームが終わった時点で開始され (時刻 = 7 秒)、1 秒間再生され、時刻 = 0:0:8 で終わります。  
   
--   <xref:System.Windows.Media.Animation.Timeline.Duration%2A>アニメーションのプロパティが 10 秒に設定された、アニメーションが終了する前に 2 秒間、最終的な値を保持している時刻 = 0:0:10。  
+- <xref:System.Windows.Media.Animation.Timeline.Duration%2A>アニメーションのプロパティが 10 秒に設定された、アニメーションが終了する前に 2 秒間、最終的な値を保持している時刻 = 0:0:10。  
   
  [!code-xaml[keyframes_ovw_snippet#BasicKeyFrameExampleWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyFramesIntroduction.xaml#basickeyframeexamplewholepage)]  
   
@@ -204,26 +204,26 @@ ms.locfileid: "59316740"
 ### <a name="timespan-values"></a>TimeSpan 値  
  使用することが<xref:System.TimeSpan>値を指定する、<xref:System.Windows.Media.Animation.KeyTime>します。 値は、0 以上、アニメーションの継続時間以下にする必要があります。 次の例は、継続時間が 10 秒で、キー時刻が時刻値として指定されている 4 つのキー フレームがあるアニメーションを示しています。  
   
--   最初のキー フレームは、最初の 3 秒間で基準値から 100 までアニメーション化され、時刻 = 0:0:03 で終わります。  
+- 最初のキー フレームは、最初の 3 秒間で基準値から 100 までアニメーション化され、時刻 = 0:0:03 で終わります。  
   
--   2 番目のキー フレームは、100 から 200 までアニメーション化されます。 最初のキー フレームが終わった時点で開始され (時刻 = 3 秒)、5 秒間再生され、時刻 = 0:0:8 で終わります。  
+- 2 番目のキー フレームは、100 から 200 までアニメーション化されます。 最初のキー フレームが終わった時点で開始され (時刻 = 3 秒)、5 秒間再生され、時刻 = 0:0:8 で終わります。  
   
--   3 番目のキー フレームは、200 から 500 までアニメーション化されます。 2 番目のキー フレームが終わった時点で開始され (時刻 = 8 秒)、1 秒間再生され、時刻 = 0:0:9 で終わります。  
+- 3 番目のキー フレームは、200 から 500 までアニメーション化されます。 2 番目のキー フレームが終わった時点で開始され (時刻 = 8 秒)、1 秒間再生され、時刻 = 0:0:9 で終わります。  
   
--   4 番目のキー フレームは、500 から 600 までアニメーション化されます。 3 番目のキー フレームが終わった時点で開始され (時刻 = 9 秒)、1 秒間再生され、時刻 = 0:0:10 で終わります。  
+- 4 番目のキー フレームは、500 から 600 までアニメーション化されます。 3 番目のキー フレームが終わった時点で開始され (時刻 = 9 秒)、1 秒間再生され、時刻 = 0:0:10 で終わります。  
   
  [!code-xaml[keyframes_ovw_snippet#TimeSpanKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#timespankeytimeexample)]  
   
 ### <a name="percentage-values"></a>パーセント値  
  パーセント値では、アニメーションの割合でのキー フレームの終了を指定します<xref:System.Windows.Media.Animation.Timeline.Duration%2A>します。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では、後ろに `%` 記号が付いた数値として指定します。 コードで使用する、<xref:System.Windows.Media.Animation.KeyTime.FromPercent%2A>メソッドを渡して、<xref:System.Double>割合を示します。 値は、0 以上、100 パーセント以下にする必要があります。 次の例は、継続時間が 10 秒で、キー時刻がパーセントとして指定されている 4 つのキー フレームがあるアニメーションを示しています。  
   
--   最初のキー フレームは、最初の 3 秒間で基準値から 100 までアニメーション化され、時刻 = 0:0:3 で終わります。  
+- 最初のキー フレームは、最初の 3 秒間で基準値から 100 までアニメーション化され、時刻 = 0:0:3 で終わります。  
   
--   2 番目のキー フレームは、100 から 200 までアニメーション化されます。 最初のキー フレームが終わった時点で開始され (時刻 = 3 秒)、5 秒間再生され、時刻 = 0:0:8 (0.8 * 10 = 8) で終わります。  
+- 2 番目のキー フレームは、100 から 200 までアニメーション化されます。 最初のキー フレームが終わった時点で開始され (時刻 = 3 秒)、5 秒間再生され、時刻 = 0:0:8 (0.8 * 10 = 8) で終わります。  
   
--   3 番目のキー フレームは、200 から 500 までアニメーション化されます。 2 番目のキー フレームが終わった時点で開始され (時刻 = 8 秒)、1 秒間再生され、時刻 = 0:0:9 (0.9 * 10 = 9) で終わります。  
+- 3 番目のキー フレームは、200 から 500 までアニメーション化されます。 2 番目のキー フレームが終わった時点で開始され (時刻 = 8 秒)、1 秒間再生され、時刻 = 0:0:9 (0.9 * 10 = 9) で終わります。  
   
--   4 番目のキー フレームは、500 から 600 までアニメーション化されます。 3 番目のキー フレームが終わった時点で開始され (時刻 = 9 秒)、1 秒間再生され、時刻 = 0:0:10 (1 * 10 = 10)で終わります。  
+- 4 番目のキー フレームは、500 から 600 までアニメーション化されます。 3 番目のキー フレームが終わった時点で開始され (時刻 = 9 秒)、1 秒間再生され、時刻 = 0:0:10 (1 * 10 = 10)で終わります。  
   
  [!code-xaml[keyframes_ovw_snippet#PercentageKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#percentagekeytimeexample)]  
   
@@ -232,13 +232,13 @@ ms.locfileid: "59316740"
   
  A<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>キー時刻を数値で除算使用可能な時間もの各キー フレームの終了時刻を決定するキー フレームの数。 次の例では、期間が 10 秒のアニメーションとキーを持つが 4 つのキー フレームは、として指定<xref:System.Windows.Media.Animation.KeyTime.Uniform%2A>します。  
   
--   最初のキー フレームは、最初の 2.5 秒間で基準値から 100 までアニメーション化され、時刻 = 0:0:2.5 で終わります。  
+- 最初のキー フレームは、最初の 2.5 秒間で基準値から 100 までアニメーション化され、時刻 = 0:0:2.5 で終わります。  
   
--   2 番目のキー フレームは、100 から 200 までアニメーション化されます。 最初のキー フレームが終わった時点で開始され (時刻 = 0:0:2.5 秒)、2.5 秒間再生され、時刻 = 0:0:5 で終わります。  
+- 2 番目のキー フレームは、100 から 200 までアニメーション化されます。 最初のキー フレームが終わった時点で開始され (時刻 = 0:0:2.5 秒)、2.5 秒間再生され、時刻 = 0:0:5 で終わります。  
   
--   3 番目のキー フレームは、200 から 500 までアニメーション化されます。 2 番目のキー フレームが終わった時点で開始され (時刻 = 5 秒)、2.5 秒間再生され、時刻 = 0:0:7.5 で終わります。  
+- 3 番目のキー フレームは、200 から 500 までアニメーション化されます。 2 番目のキー フレームが終わった時点で開始され (時刻 = 5 秒)、2.5 秒間再生され、時刻 = 0:0:7.5 で終わります。  
   
--   4 番目のキー フレームは、500 から 600 までアニメーション化されます。 2 番目のキー フレームが終わった時点で開始され (時刻 = 7.5 秒)、2.5 秒間再生され、時刻 = 0:0:10 で終わります。  
+- 4 番目のキー フレームは、500 から 600 までアニメーション化されます。 2 番目のキー フレームが終わった時点で開始され (時刻 = 7.5 秒)、2.5 秒間再生され、時刻 = 0:0:10 で終わります。  
   
  [!code-xaml[keyframes_ovw_snippet#UniformKeyTimeExample](~/samples/snippets/csharp/VS_Snippets_Wpf/keyframes_ovw_snippet/CS/KeyTimesExample.xaml#uniformkeytimeexample)]  
   
@@ -263,11 +263,11 @@ ms.locfileid: "59316740"
   
 2. アニメーションの*合計補間時間*を決定します。これは、キー フレーム アニメーションが順方向の反復を完了するまでにかかる合計時間です。  
   
-    1.  場合、アニメーションの<xref:System.Windows.Media.Animation.Timeline.Duration%2A>ない<xref:System.Windows.Duration.Automatic%2A>または<xref:System.Windows.Duration.Forever%2A>、合計補間時間は、アニメーションの値<xref:System.Windows.Media.Animation.Timeline.Duration%2A>プロパティ。  
+    1. 場合、アニメーションの<xref:System.Windows.Media.Animation.Timeline.Duration%2A>ない<xref:System.Windows.Duration.Automatic%2A>または<xref:System.Windows.Duration.Forever%2A>、合計補間時間は、アニメーションの値<xref:System.Windows.Media.Animation.Timeline.Duration%2A>プロパティ。  
   
-    2.  それ以外の場合、合計補間時間は最大<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>存在する場合に、キー フレームの間で指定された値。  
+    2. それ以外の場合、合計補間時間は最大<xref:System.TimeSpan><xref:System.Windows.Media.Animation.KeyTime>存在する場合に、キー フレームの間で指定された値。  
   
-    3.  それ以外の場合、合計補間時間は 1 秒間です。  
+    3. それ以外の場合、合計補間時間は 1 秒間です。  
   
 3. 解決するのには、合計補間の時刻の値を使用して<xref:System.Windows.Media.Animation.KeyTimeType.Percent><xref:System.Windows.Media.Animation.KeyTime>値。  
   

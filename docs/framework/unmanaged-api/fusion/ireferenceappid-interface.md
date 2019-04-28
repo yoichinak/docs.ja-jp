@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 25733e459423500352595d6be0eee26ef75ca7e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789689"
 ---
 # <a name="ireferenceappid-interface"></a>IReferenceAppId インターフェイス
 現在のスコープ内でアプリケーションの一意の識別子への参照を表します。  

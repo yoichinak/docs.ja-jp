@@ -2,30 +2,24 @@
 title: インターフェイス (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-- Visual Basic code, interfaces
-- interfaces [Visual Basic], Visual Basic
-- interfaces
-- interfaces [Visual Basic]
+  - 'Visual Basic code, interfaces'
+  - 'interfaces [Visual Basic], Visual Basic'
+  - interfaces
+  - 'interfaces [Visual Basic]'
 ms.assetid: 61b06674-12c9-430b-be68-cc67ecee1f5b
-ms.openlocfilehash: 5f85eca1026d05d8dc3d862559ee48440edf2c4b
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56972386"
 ---
 # <a name="interfaces-visual-basic"></a>インターフェイス (Visual Basic)
 *インターフェイス*は、クラスが実装できるプロパティ、メソッド、およびイベントを定義します。 インターフェイスでは、密接に関連するプロパティ、メソッド、およびイベントの小さなグループとして機能を定義できます。これにより、既存のコードを損なうことなく、インターフェイスを拡張して実装を開発できるため、互換性の問題を減らすことができます。 追加のインターフェイスと実装を開発することで、いつでも新しい機能を追加できます。  
   
  クラスの継承の代わりにインターフェイスを使用する方が望ましい理由が、その他にもいくつかあります。  
   
--   インターフェイスは、アプリケーションが特定の機能を提供するために関連性の低い多数のオブジェクトの種類を必要とする状況に、より適しています。  
+- インターフェイスは、アプリケーションが特定の機能を提供するために関連性の低い多数のオブジェクトの種類を必要とする状況に、より適しています。  
   
--   インターフェイスは、複数のインターフェイスを実装できる単一の実装を定義できるため、基底クラスよりも柔軟です。  
+- インターフェイスは、複数のインターフェイスを実装できる単一の実装を定義できるため、基底クラスよりも柔軟です。  
   
--   インターフェイスは、基底クラスから実装を継承する必要がない状況に、より適しています。  
+- インターフェイスは、基底クラスから実装を継承する必要がない状況に、より適しています。  
   
--   インターフェイスは、クラスの継承を使用できない場合に便利です。 たとえば、構造体はクラスから継承できませんが、インターフェイスを実装できます。  
+- インターフェイスは、クラスの継承を使用できない場合に便利です。 たとえば、構造体はクラスから継承できませんが、インターフェイスを実装できます。  
   
 ## <a name="declaring-interfaces"></a>インターフェイスの宣言  
  インターフェイスの定義は、`Interface` ステートメントと `End Interface` ステートメントで囲みます。 `Interface` ステートメントの後に、オプションで`Inherits` ステートメントを追加して、継承されるインターフェイスを 1 つ以上指定することができます。 `Inherits` ステートメントは、宣言内のコメントを除く他のすべてのステートメントより前に記述する必要があります。 インターフェイス定義の残りのステートメントは、`Event`、`Sub`、`Function`、`Property`、`Interface`、`Class`、`Structure`、および `Enum` ステートメントです。 インターフェイスには、`End Sub` や `End Property` など、実装コードや実装コードに関連付けられているステートメントを含めることはできません。  

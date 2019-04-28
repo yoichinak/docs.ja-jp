@@ -10,11 +10,11 @@ helpviewer_keywords:
 - properties, AutomationId
 ms.assetid: a24e807b-d7c3-4e93-ac48-80094c4e1c90
 ms.openlocfilehash: 1f487e9d686ab82adb40cdc31aad68390fbdff3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173096"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61775750"
 ---
 # <a name="use-the-automationid-property"></a>AutomationID プロパティの使用
 > [!NOTE]
@@ -35,7 +35,7 @@ ms.locfileid: "59173096"
   
 #### <a name="use-a-unique-and-discoverable-automationid-to-locate-a-specific-element-in-the-ui-automation-tree"></a>一意で探索可能な AutomationID を使用して UI オートメーション ツリーで特定の要素を検索する  
   
--   [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] などのツールを使用して関心のある <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 要素の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] をレポートします。 この値をコピーし、その後の自動テストのテスト スクリプトなどのクライアント アプリケーションに貼り付けることができます。 この方法により、実行時に要素を特定して検索するために必要なコードを削減して簡略化します。  
+- [!INCLUDE[TLA#tla_uispy](../../../includes/tlasharptla-uispy-md.md)] などのツールを使用して関心のある <xref:System.Windows.Automation.AutomationElement.AutomationIdProperty> 要素の [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] をレポートします。 この値をコピーし、その後の自動テストのテスト スクリプトなどのクライアント アプリケーションに貼り付けることができます。 この方法により、実行時に要素を特定して検索するために必要なコードを削減して簡略化します。  
   
 > [!CAUTION]
 >  通常、 <xref:System.Windows.Automation.AutomationElement.RootElement%2A>の直接の子のみの取得を試行する必要があります。 子孫の検索は、数百または数千もの要素を反復処理する場合があり、スタック オーバーフローを引き起こす可能性があります。 下位レベルの特定の要素を取得しようとする場合、アプリケーション ウィンドウから、または下位レベルのコンテナーから検索を開始する必要があります。  
@@ -45,7 +45,7 @@ ms.locfileid: "59173096"
   
 #### <a name="use-a-persistent-path-to-return-to-a-previously-identified-automationelement"></a>永続的なパスを使用して、既に特定されている AutomationElement に戻る  
   
--   クライアント アプリケーションは (単純なテスト スクリプトから、堅牢な記録と再生のためのユーティリティまで)、ファイルを開くダイアログやメニュー項目など、現在インスタンス化されていないために UI オートメーション ツリーに存在しない要素にアクセスしなければならないことがあります。 これらの要素は、再現、または「再生」AutomationID、コントロール パターン、イベント リスナーなどの UI オートメーション プロパティを使用して UI アクション特定のシーケンスでのみインスタンス化できます。
+- クライアント アプリケーションは (単純なテスト スクリプトから、堅牢な記録と再生のためのユーティリティまで)、ファイルを開くダイアログやメニュー項目など、現在インスタンス化されていないために UI オートメーション ツリーに存在しない要素にアクセスしなければならないことがあります。 これらの要素は、再現、または「再生」AutomationID、コントロール パターン、イベント リスナーなどの UI オートメーション プロパティを使用して UI アクション特定のシーケンスでのみインスタンス化できます。
   
  [!code-csharp[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/csharp/VS_Snippets_Wpf/UIAAutomationID_snip/CSharp/FindByAutomationID.xaml.cs#uiaworkerthread)]
  [!code-vb[UIAAutomationID_snip#UIAWorkerThread](../../../samples/snippets/visualbasic/VS_Snippets_Wpf/UIAAutomationID_snip/VisualBasic/FindByAutomationID.xaml.vb#uiaworkerthread)]  
@@ -54,7 +54,7 @@ ms.locfileid: "59173096"
   
 #### <a name="use-a-relative-path-to-return-to-a-previously-identified-automationelement"></a>相対パスを使用して、既に特定されている AutomationElement に戻る  
   
--   特定の状況では、AutomationID が兄弟間でのみ一意であることが保証されているので、UI オートメーション ツリー内の複数の要素が同一の AutomationID プロパティの値を持っていることがあります。 このような場合、親 (または必要に応じて親の親) に基づいて、要素を一意に識別できます。 たとえば、開発者が複数のメニュー項目を持ち、それぞれに複数の子メニュー項目があるメニュー バーを提供するとします。ここで、子は "Item1"、"Item2" など、シーケンシャルの AutomationID で識別されます。 各メニュー項目は、それ自体の AutomationID と、その親の AutomationID (必要に応じて親の親の AutomationID も) によって一意に識別されます。  
+- 特定の状況では、AutomationID が兄弟間でのみ一意であることが保証されているので、UI オートメーション ツリー内の複数の要素が同一の AutomationID プロパティの値を持っていることがあります。 このような場合、親 (または必要に応じて親の親) に基づいて、要素を一意に識別できます。 たとえば、開発者が複数のメニュー項目を持ち、それぞれに複数の子メニュー項目があるメニュー バーを提供するとします。ここで、子は "Item1"、"Item2" など、シーケンシャルの AutomationID で識別されます。 各メニュー項目は、それ自体の AutomationID と、その親の AutomationID (必要に応じて親の親の AutomationID も) によって一意に識別されます。  
   
 ## <a name="see-also"></a>関連項目
 

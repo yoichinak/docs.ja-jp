@@ -8,11 +8,11 @@ helpviewer_keywords:
 - security [WCF], creating a session
 ms.assetid: b6f42b5a-bbf7-45cf-b917-7ec9fa7ae110
 ms.openlocfilehash: 4464100012fe9b3e1f0e8743707b1dc9a477c3d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787869"
 ---
 # <a name="how-to-create-a-secure-session"></a>方法: セキュリティで保護されたセッションを作成する
 例外として、 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)バインドするには、システム指定のバインディングでは、Windows Communication Foundation (WCF) に自動的を使用して、メッセージ セキュリティが有効な場合、セキュリティで保護されたセッションです。  
@@ -21,16 +21,16 @@ ms.locfileid: "59205889"
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-one-of-the-system-provided-bindings"></a>サービスが、システム提供のバインディングの 1 つを使用して、セキュリティで保護されたセッションを使用するように指定するには  
   
--   メッセージ セキュリティをサポートするシステム提供のバインディングを使用するようにサービスを構成します。  
+- メッセージ セキュリティをサポートするシステム提供のバインディングを使用するようにサービスを構成します。  
   
      例外として、 [ \<basicHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)セキュリティで保護されたセッションを使用して WCF メッセージ セキュリティを自動的に使用するシステム指定のバインディングを構成するときに、バインドします。 次の表は、メッセージ セキュリティをサポートするシステム提供のバインディングを示し、そのバインディングでメッセージ セキュリティが既定のセキュリティ機構であるかどうかを示しています。  
   
     |システム提供のバインディング|構成要素|既定でメッセージ セキュリティが有効|  
     |------------------------------|---------------------------|------------------------------------|  
     |<xref:System.ServiceModel.BasicHttpBinding>|[\<basicHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/basichttpbinding.md)|いいえ|  
-    |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|はい|  
-    |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|はい|  
-    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|はい|  
+    |<xref:System.ServiceModel.WSHttpBinding>|[\<wsHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)|[はい]|  
+    |<xref:System.ServiceModel.WSDualHttpBinding>|[\<wsDualHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsdualhttpbinding.md)|[はい]|  
+    |<xref:System.ServiceModel.WSFederationHttpBinding>|[\<wsFederationHttpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)|[はい]|  
     |<xref:System.ServiceModel.NetTcpBinding>|[\<netTcpBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/nettcpbinding.md)|いいえ|  
     |<xref:System.ServiceModel.NetMsmqBinding>|[\<netMsmqBinding>](../../../../docs/framework/configure-apps/file-schema/wcf/netmsmqbinding.md)|いいえ|  
   
@@ -58,7 +58,7 @@ ms.locfileid: "59205889"
   
 ### <a name="to-specify-that-a-service-uses-secure-sessions-by-using-a-custom-binding"></a>カスタム バインドを使用して、サービスでセキュリティで保護されたセッションが使用されるように指定するには  
   
--   セキュリティで保護されたセッションで SOAP メッセージが保護されるように指定したカスタム バインドを作成します。  
+- セキュリティで保護されたセッションで SOAP メッセージが保護されるように指定したカスタム バインドを作成します。  
   
      カスタム バインドを作成する方法の詳細については、次を参照してください。[方法。システム指定のバインディングをカスタマイズ](../../../../docs/framework/wcf/extending/how-to-customize-a-system-provided-binding.md)します。  
   
