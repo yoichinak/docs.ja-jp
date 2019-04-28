@@ -3,11 +3,11 @@ title: '条件式: if... then... else'
 description: 条件式を記述する方法について説明しますF#コードの別の分岐を実行します。
 ms.date: 05/16/2016
 ms.openlocfilehash: eade8c20c1b62a2e9a54700550d832798308f368
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766040"
 ---
 # <a name="conditional-expressions-ifthenelse"></a>条件式: `if...then...else`
 

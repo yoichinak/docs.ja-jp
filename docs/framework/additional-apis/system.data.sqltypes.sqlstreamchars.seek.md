@@ -13,11 +13,11 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: 6f802428a73f229e948099788ec21f07efbfab76
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705793"
 ---
 # <a name="sqlstreamcharsseekint64-seekorigin-method"></a>SqlStreamChars.Seek (Int64、SeekOrigin) メソッド
 

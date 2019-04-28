@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF Data Services, data binding
 ms.assetid: 2477af0a-676f-44f7-b73d-e66208785509
 ms.openlocfilehash: e1111077a407dc32475976b15ff71170978e3184
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765506"
 ---
 # <a name="how-to-bind-data-using-a-project-data-source-wcf-data-services"></a>方法: プロジェクト データ ソース (WCF Data Services) を使用してデータをバインドします。
 
@@ -31,19 +31,19 @@ WCF Data Services クライアント アプリケーションで生成された�
 
      ウィンドウの XAML ファイルに次のオブジェクト要素が作成されます。
 
-    -   <xref:System.Windows.Data.CollectionViewSource> という名前の `customersViewSource` 要素。 最上位レベルの <xref:System.Windows.FrameworkElement.DataContext%2A> オブジェクト要素の <xref:System.Windows.Controls.Grid> プロパティが、この新しい <xref:System.Windows.Data.CollectionViewSource> に設定されます。
+    - <xref:System.Windows.Data.CollectionViewSource> という名前の `customersViewSource` 要素。 最上位レベルの <xref:System.Windows.FrameworkElement.DataContext%2A> オブジェクト要素の <xref:System.Windows.Controls.Grid> プロパティが、この新しい <xref:System.Windows.Data.CollectionViewSource> に設定されます。
 
-    -   <xref:System.Windows.Controls.ComboBox> という名前のデータ バインド `CustomerID`。
+    - <xref:System.Windows.Controls.ComboBox> という名前のデータ バインド `CustomerID`。
 
-    -   <xref:System.Windows.Controls.Label>。
+    - <xref:System.Windows.Controls.Label>。
 
 4. ドラッグ、**注文**をデザイナーにナビゲーション プロパティ。
 
      ウィンドウの XAML ファイルに次の追加オブジェクト要素が作成されます。
 
-    -   <xref:System.Windows.Data.CollectionViewSource> という名前の 2 番目の `customersOrdersViewSource` 要素。このソースは `customerViewSource` です。
+    - <xref:System.Windows.Data.CollectionViewSource> という名前の 2 番目の `customersOrdersViewSource` 要素。このソースは `customerViewSource` です。
 
-    -   <xref:System.Windows.Controls.DataGrid> という名前のデータ バインド `ordersDataGrid` コントロール。
+    - <xref:System.Windows.Controls.DataGrid> という名前のデータ バインド `ordersDataGrid` コントロール。
 
 5. (省略可能)その他の項目をドラッグ、**顧客**ノードをデザイナーにします。
 
@@ -82,13 +82,13 @@ WCF Data Services クライアント アプリケーションで生成された�
 
      次のコントロールがフォーム上に作成されます。
 
-    -   <xref:System.Windows.Forms.BindingSource> という名前の `customersBindingSource` のインスタンス。
+    - <xref:System.Windows.Forms.BindingSource> という名前の `customersBindingSource` のインスタンス。
 
-    -   <xref:System.Windows.Forms.BindingNavigator> という名前の `customersBindingNavigator` のインスタンス。 このコントロールは必要ないので削除できます。
+    - <xref:System.Windows.Forms.BindingNavigator> という名前の `customersBindingNavigator` のインスタンス。 このコントロールは必要ないので削除できます。
 
-    -   <xref:System.Windows.Forms.ComboBox> という名前のデータ バインド `CustomerID`。
+    - <xref:System.Windows.Forms.ComboBox> という名前のデータ バインド `CustomerID`。
 
-    -   <xref:System.Windows.Forms.Label>。
+    - <xref:System.Windows.Forms.Label>。
 
 3. ドラッグ、**注文**フォームへのナビゲーション プロパティ。
 

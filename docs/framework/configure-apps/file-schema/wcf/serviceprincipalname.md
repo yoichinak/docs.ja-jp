@@ -3,11 +3,11 @@ title: <servicePrincipalName>
 ms.date: 03/30/2017
 ms.assetid: 3f3b85d3-20f2-4cd8-8a6a-ee18befbd165
 ms.openlocfilehash: 75e95bcbaee229f19bdfdd119b548ed612f4ddaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204407"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61758185"
 ---
 # <a name="serviceprincipalname"></a>\<servicePrincipalName>
 サービスの ID をサービス プリンシパル名 (SPN) により指定します。  

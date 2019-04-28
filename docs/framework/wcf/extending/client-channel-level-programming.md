@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 3b787719-4e77-4e77-96a6-5b15a11b995a
 ms.openlocfilehash: ea56c99d7d122dd20fc217f8ecb2937bcf81bec3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772584"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923267"
 ---
 # <a name="client-channel-level-programming"></a>クライアントのチャネル レベルのプログラミング
 このトピックを使用せず、Windows Communication Foundation (WCF) クライアント アプリケーションを記述する方法を説明します、<xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType>クラスとその関連付けられたオブジェクト モデルです。  

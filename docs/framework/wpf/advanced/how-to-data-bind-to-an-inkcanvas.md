@@ -6,11 +6,11 @@ helpviewer_keywords:
 - binding data [WPF], to InkCanvas
 ms.assetid: 8d6b4d9e-ea7f-4412-ba83-3feccec5a515
 ms.openlocfilehash: 5d3fc0ed7b6176d7bc68bf20af42c311b5563908
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372946"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776468"
 ---
 # <a name="how-to-data-bind-to-an-inkcanvas"></a>方法: InkCanvas にデータをバインドする
 ## <a name="example"></a>例  

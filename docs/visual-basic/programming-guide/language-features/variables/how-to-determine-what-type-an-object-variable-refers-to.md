@@ -7,11 +7,11 @@ helpviewer_keywords:
 - object variables [Visual Basic], determining type
 ms.assetid: 6f6a138d-58a4-40d1-9f4e-0a3c598eaf81
 ms.openlocfilehash: 6499dfce880cc9ce16e5d77887afc0598692f48e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342870"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938204"
 ---
 # <a name="how-to-determine-what-type-an-object-variable-refers-to-visual-basic"></a>方法: オブジェクト変数の参照 (Visual Basic) にどのような種類を決定します。
 オブジェクト変数には、別の場所に格納されているデータへのポインターが含まれています。 実行時にそのデータの種類を変更できます。 任意の時点では、使用することができます、<xref:System.Type.GetTypeCode%2A>する現在の実行時の型を判断するメソッド、または[TypeOf 演算子](../../../../visual-basic/language-reference/operators/typeof-operator.md)ことを確認する現在の実行時の型が指定された型との互換性。  
@@ -37,7 +37,7 @@ ms.locfileid: "59342870"
   
 ### <a name="to-determine-whether-an-object-variables-type-is-compatible-with-a-specified-type"></a>変数の型が指定した型と互換性がオブジェクトかどうかを判断するには  
   
--   使用して、`TypeOf`演算子と組み合わせて、 [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)でオブジェクトをテストする、 `TypeOf`.`Is`式。  
+- 使用して、`TypeOf`演算子と組み合わせて、 [Is 演算子](../../../../visual-basic/language-reference/operators/is-operator.md)でオブジェクトをテストする、 `TypeOf`.`Is`式。  
   
     ```  
     If TypeOf objA Is System.Windows.Forms.Control Then  

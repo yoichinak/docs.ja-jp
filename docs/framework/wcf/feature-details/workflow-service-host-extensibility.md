@@ -3,11 +3,11 @@ title: ワークフロー サービス ホストの拡張機能
 ms.date: 03/30/2017
 ms.assetid: c0e8f7bb-cb13-49ec-852f-b85d7c23972f
 ms.openlocfilehash: e37a33643fb58d93be953720303cd069e72a690e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929793"
 ---
 # <a name="workflow-service-host-extensibility"></a>ワークフロー サービス ホストの拡張機能
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] には、ワークフロー サービスをホストするための <xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスがあります。 このクラスは、マネージド アプリケーションまたは Windows サービスで、ワークフロー サービスを自己ホストするときに使用します。 また、このクラスは、インターネット インフォメーション サービス (IIS) または Windows プロセス アクティブ化サービス (WAS) を使用してワークフロー サービスをホストするときにも使用します。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスは、カスタムの拡張機能の追加、アイドル動作の変更、およびサービス以外のワークフロー (メッセージング アクティビティを使用しないワークフロー) のホストを可能にする拡張ポイントを提供します。  
@@ -18,13 +18,13 @@ ms.locfileid: "59196477"
 ## <a name="react-to-unhandled-exceptions"></a>ハンドルされない例外の処理  
  <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior> を使用すると、ワークフロー サービス内でハンドルされない例外が発生したときに実行されるアクションを指定できます。 <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionBehavior.Action%2A> プロパティには、次の <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction> 値のいずれかを指定します。  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> – ワークフロー サービス インスタンスを中止します。  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Abandon> – ワークフロー サービス インスタンスを中止します。  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> – 前回永続化された状態にロールバックし、ワークフロー サービス インスタンスを中断します。 これは、ワークフローが既に 1 回以上、永続化されている場合にのみ実行されます。 永続化されたことがない場合は、ワークフロー インスタンスが中止されます。  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.AbandonAndSuspend> – 前回永続化された状態にロールバックし、ワークフロー サービス インスタンスを中断します。 これは、ワークフローが既に 1 回以上、永続化されている場合にのみ実行されます。 永続化されたことがない場合は、ワークフロー インスタンスが中止されます。  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> – インスタンスを取り消します。  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Cancel> – インスタンスを取り消します。  
   
--   <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> – ワークフロー インスタンスを終了します。  
+- <xref:System.ServiceModel.Activities.Description.WorkflowUnhandledExceptionAction.Terminate> – ワークフロー インスタンスを終了します。  
   
  この動作は、次の例に示すように、コードで構成できます。  
   

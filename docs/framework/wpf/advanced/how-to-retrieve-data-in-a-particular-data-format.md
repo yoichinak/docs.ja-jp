@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataObject class [WPF], retrieving data
 ms.assetid: a625acf3-1144-44cd-add7-456aefc3859f
 ms.openlocfilehash: b3ec1b8fa873fd449956912e9e77e98b0362cb0e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768421"
 ---
 # <a name="how-to-retrieve-data-in-a-particular-data-format"></a>方法: 特定のデータ形式でデータを取得する
 次の例では、指定された形式でデータ オブジェクトからデータを取得する方法を示します。  

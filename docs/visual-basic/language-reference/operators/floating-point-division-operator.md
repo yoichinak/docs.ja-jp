@@ -17,11 +17,11 @@ helpviewer_keywords:
 - math operators [Visual Basic]
 ms.assetid: 335e97f2-c434-439e-9064-76973a051101
 ms.openlocfilehash: af2316f92e2904eee1e8c046b34b8147e40cb513
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825067"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778484"
 ---
 # <a name="-operator-visual-basic"></a>/ 演算子 (Visual Basic)
 2 つの数値を除算し、浮動小数点の結果を返します。  

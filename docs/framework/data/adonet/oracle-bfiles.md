@@ -3,11 +3,11 @@ title: Oracle BFILE
 ms.date: 03/30/2017
 ms.assetid: 341bbf84-4734-4d44-8723-ccedee954e21
 ms.openlocfilehash: 5bb9f7e67016cf4b1d467935fe302ab4a40edbfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304468"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771970"
 ---
 # <a name="oracle-bfiles"></a>Oracle BFILE
 .NET Framework Data Provider for Oracle には、<xref:System.Data.OracleClient.OracleBFile> クラスが含まれています。このクラスは、Oracle <xref:System.Data.OracleClient.OracleType.BFile> データ型で使用されます。  
@@ -16,11 +16,11 @@ ms.locfileid: "59304468"
   
  その他の特性、 **BFILE**から区別するためのデータ型、 **LOB**データ型はできることです。  
   
--   非構造化データの保持。  
+- 非構造化データの保持。  
   
--   サーバー側チャンキングのサポート。  
+- サーバー側チャンキングのサポート。  
   
--   参照コピーのセマンティクスの使用。 コピー操作を実行する場合など、 **BFILE**、のみ、 **BFILE** (つまり、ファイルへの参照) ロケーターをコピーします。 ファイル内のデータはコピーされません。  
+- 参照コピーのセマンティクスの使用。 コピー操作を実行する場合など、 **BFILE**、のみ、 **BFILE** (つまり、ファイルへの参照) ロケーターをコピーします。 ファイル内のデータはコピーされません。  
   
  **BFILE**サイズが大きい Lob を参照するデータ型を使用する必要があり、そのため、データベースに格納する実用的ではありません。 複数のクライアント、サーバー、および通信のオーバーヘッドを必要とを使用して、 **BFILE**と比較して、データ型、 **LOB**データ型。 アクセスする方が効率的です、 **BFILE**のみ少量のデータを取得する必要がある場合。 オブジェクト全体を取得したい場合は、データベースに常駐する LOB へのアクセスがいっそう効果的です。  
   

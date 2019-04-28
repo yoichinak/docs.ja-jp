@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30830
 ms.assetid: 4734bc1d-882e-4555-b498-1f1ec0399d16
 ms.openlocfilehash: c7a3e6bcd0db268a0e0acfc74c570e26f89cff6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339074"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921070"
 ---
 # <a name="line-statements-are-no-longer-supported-visual-basic-compiler-error"></a>'Line' ステートメントはサポートされていません (Visual Basic コンパイラ エラー)
 行のステートメントがサポートされていません。 ファイル I/O 機能は`Microsoft.VisualBasic.FileSystem.LineInput`グラフィックス機能は、`System.Drawing.Graphics.DrawLine`します。  

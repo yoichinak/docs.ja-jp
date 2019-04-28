@@ -12,11 +12,11 @@ helpviewer_keywords:
 - scroll bars [Windows Forms], about scroll bars
 ms.assetid: 8b307679-1cae-41d8-99aa-3d1efd207cd6
 ms.openlocfilehash: d4a7912a5781fc583357affa728f7d81059b5cf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928575"
 ---
 # <a name="hscrollbar-and-vscrollbar-controls-overview-windows-forms"></a>HScrollBar コントロールと VScrollBar コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.ScrollBar>または垂直方向に水平方向にスクロールすることにより、アプリケーションまたはコントロール内の項目または大量の情報の長いリストを簡単にナビゲートを提供するコントロールを使用します。 スクロール バー、Windows インターフェイスの一般的な要素は、そのため、<xref:System.Windows.Forms.ScrollBar>から派生していないコントロールのコントロールが使用される多くの場合、<xref:System.Windows.Forms.ScrollableControl>クラス。 同様に、多くの開発者が組み込む選択、<xref:System.Windows.Forms.ScrollBar>独自のユーザー コントロールを作成するときを制御します。  

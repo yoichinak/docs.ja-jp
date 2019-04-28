@@ -3,11 +3,11 @@ title: ODBC スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 1bb126a5-ceec-4649-a4bc-8aa19e801046
 ms.openlocfilehash: ffe80120ceffbe29c0a117cf1194860c5782be8c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772048"
 ---
 # <a name="odbc-schema-collections"></a>ODBC スキーマ コレクション
 
@@ -29,7 +29,7 @@ Microsoft SQL Server ODBC Driver には、共通のスキーマ コレクショ�
 
 - ProcedureParameters
 
-- ビュー
+- Views
 
 ### <a name="tables-and-views"></a>Tables と Views
 
@@ -168,7 +168,7 @@ Microsoft SQL Server Oracle ODBC ドライバーは、共通のスキーマ コ�
 
 - ProcedureParameters
 
-- ビュー
+- Views
 
 - Indexes
 
@@ -249,7 +249,7 @@ Microsoft Jet ODBC Driver は、共通のスキーマ コレクションに加�
 
 - ProcedureParameters
 
-- ビュー
+- Views
 
 ### <a name="tables-and-views"></a>Tables と Views
 

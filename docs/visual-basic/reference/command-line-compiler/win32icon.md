@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
 ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61774830"
 ---
 # <a name="-win32icon"></a>-win32icon
 .Ico ファイルを出力ファイルに挿入します。 この .ico ファイルは、出力ファイルを表す**ファイル エクスプ ローラー**します。  

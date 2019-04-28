@@ -7,67 +7,67 @@ helpviewer_keywords:
 - Visual Basic code, conventions
 ms.assetid: c1df130b-fec6-49a5-becf-0a7e494a1d0f
 ms.openlocfilehash: f73648888b28c349104a70e78c29eb208d438b78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761690"
 ---
 # <a name="visual-basic-coding-conventions"></a>Visual Basic のコーディング規則
 Microsoft は、ここで示すガイドラインに従ってサンプルおよびドキュメントを開発しています。 同じコーディング規則に従うと、次のような利点があります。  
   
--   コードの見た目が統一されるため、コードを読むときに、レイアウトではなく内容に重点を置くことができます。  
+- コードの見た目が統一されるため、コードを読むときに、レイアウトではなく内容に重点を置くことができます。  
   
--   これまでの経験に基づいて推測できるようになるため、コードをすばやく理解できます。  
+- これまでの経験に基づいて推測できるようになるため、コードをすばやく理解できます。  
   
--   コードのコピー、変更、保守がより簡単になります。  
+- コードのコピー、変更、保守がより簡単になります。  
   
--   コードが Visual Basic の "ベスト プラクティス" に従っていることを確認できます。  
+- コードが Visual Basic の "ベスト プラクティス" に従っていることを確認できます。  
   
 ## <a name="naming-conventions"></a>命名規則  
   
--   名前付けのガイドラインについては、次を参照してください。[の命名ガイドライン](../../../standard/design-guidelines/naming-guidelines.md)トピック。  
+- 名前付けのガイドラインについては、次を参照してください。[の命名ガイドライン](../../../standard/design-guidelines/naming-guidelines.md)トピック。  
   
--   "My" または "my" を変数名の一部として使用しないようにします。 `My` オブジェクトとの混同を招くからです。  
+- "My" または "my" を変数名の一部として使用しないようにします。 `My` オブジェクトとの混同を招くからです。  
   
--   自動生成されたコードに含まれるオブジェクトの名前をこのガイドラインに合わせて変更する必要はありません。  
+- 自動生成されたコードに含まれるオブジェクトの名前をこのガイドラインに合わせて変更する必要はありません。  
   
 ## <a name="layout-conventions"></a>レイアウト規則  
   
--   タブを空白として挿入し、4 文字インデントによるスマート インデントを使用します。  
+- タブを空白として挿入し、4 文字インデントによるスマート インデントを使用します。  
   
--   コード エディターでコードの書式を再整形するときは**コードの再フォーマット**を使用します。 詳細については、[オプション、[テキスト エディター]、基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)を参照してください。  
+- コード エディターでコードの書式を再整形するときは**コードの再フォーマット**を使用します。 詳細については、[オプション、[テキスト エディター]、基本 (Visual Basic)](/visualstudio/ide/reference/options-text-editor-basic-visual-basic)を参照してください。  
   
--   1 つの行には 1 つのステートメントのみを記述します。 Visual Basic の行区切り記号 (:) は使用しないでください。  
+- 1 つの行には 1 つのステートメントのみを記述します。 Visual Basic の行区切り記号 (:) は使用しないでください。  
   
--   言語で許可される場所では、明示的な行継続文字 "_" ではなく暗黙的な行継続を使用します。  
+- 言語で許可される場所では、明示的な行継続文字 "_" ではなく暗黙的な行継続を使用します。  
   
--   1 つの行には 1 つの宣言のみを記述します。  
+- 1 つの行には 1 つの宣言のみを記述します。  
   
--   **コードの再フォーマット**が自動で行継続を整形しない場合、手動で継続行を1個のタブ ストップでインデントします。 ただし、リストの項目は常に左揃えにします。  
+- **コードの再フォーマット**が自動で行継続を整形しない場合、手動で継続行を1個のタブ ストップでインデントします。 ただし、リストの項目は常に左揃えにします。  
   
     ```  
     a As Integer,  
     b As Integer  
     ```  
   
--   メソッド定義とプロパティ定義の間に少なくとも 1 行の空白行を追加します。  
+- メソッド定義とプロパティ定義の間に少なくとも 1 行の空白行を追加します。  
   
 ## <a name="commenting-conventions"></a>コメント規則  
   
--   コメントは、コード行の末尾ではなく別の行に記述します。  
+- コメントは、コード行の末尾ではなく別の行に記述します。  
   
--   英語でコメントを記述する場合、コメント テキストの始まりには英大文字を使用し、終わりにはピリオドを使用します。  
+- 英語でコメントを記述する場合、コメント テキストの始まりには英大文字を使用し、終わりにはピリオドを使用します。  
   
--   コメント デリミター (') とコメント テキストの間に空白を 1 つ挿入します。  
+- コメント デリミター (') とコメント テキストの間に空白を 1 つ挿入します。  
   
      [!code-vb[VbVbalrGuidelines#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#2)]  
   
--   整形されたアスタリスク のブロックでコメントを囲まないようにします。  
+- 整形されたアスタリスク のブロックでコメントを囲まないようにします。  
   
 ## <a name="program-structure"></a>プログラムの構造  
   
--   `Main` メソッドを使用するときには、新しいコンソール アプリケーションの既定の構造を使用し、コマンド ライン引数には `My` を使用します。  
+- `Main` メソッドを使用するときには、新しいコンソール アプリケーションの既定の構造を使用し、コマンド ライン引数には `My` を使用します。  
   
      [!code-vb[VbVbalrGuidelines#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#3)]  
   
@@ -75,11 +75,11 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 ### <a name="string-data-type"></a>文字列型 (String)  
   
--   文字列を連結するアンパサンド (&)。  
+- 文字列を連結するアンパサンド (&)。  
   
      [!code-vb[VbVbalrGuidelines#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#4)]  
   
--   ループ内での文字列の追加には <xref:System.Text.StringBuilder> オブジェクトを使用します。  
+- ループ内での文字列の追加には <xref:System.Text.StringBuilder> オブジェクトを使用します。  
   
      [!code-vb[VbVbalrGuidelines#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#5)]  
   
@@ -90,11 +90,11 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 ### <a name="unsigned-data-type"></a>Unsigned データ型  
   
--   特に必要でない限り、unsigned 型ではなく `Integer` を使用します。  
+- 特に必要でない限り、unsigned 型ではなく `Integer` を使用します。  
   
 ### <a name="arrays"></a>配列  
   
--   宣言行で配列を初期化するときは短い構文を使用します。 たとえば、次のような構文を使用します。  
+- 宣言行で配列を初期化するときは短い構文を使用します。 たとえば、次のような構文を使用します。  
   
      [!code-vb[VbVbalrGuidelines#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#8)]  
   
@@ -102,7 +102,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#9)]  
   
--   配列指定子は、変数ではなく型に指定します。 たとえば、次のような構文を使用します。  
+- 配列指定子は、変数ではなく型に指定します。 たとえば、次のような構文を使用します。  
   
      [!code-vb[VbVbalrGuidelines#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#11)]  
   
@@ -110,7 +110,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#10)]  
   
--   基本データ型の配列の宣言と初期化では、{ } 構文を使用します。 たとえば、次のような構文を使用します。  
+- 基本データ型の配列の宣言と初期化では、{ } 構文を使用します。 たとえば、次のような構文を使用します。  
   
      [!code-vb[VbVbalrGuidelines#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#12)]  
   
@@ -131,7 +131,7 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
 ### <a name="new-keyword"></a>New キーワード  
   
--   短い形式のインスタンス化を使用します。 たとえば、次のような構文を使用します。  
+- 短い形式のインスタンス化を使用します。 たとえば、次のような構文を使用します。  
   
      [!code-vb[VbVbalrGuidelines#21](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#21)]  
   
@@ -139,25 +139,25 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
   
      [!code-vb[VbVbalrGuidelines#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#22)]  
   
--   新しいオブジェクトには、パラメーターなしのコンストラクターの代わりにオブジェクト初期化子を使用します。  
+- 新しいオブジェクトには、パラメーターなしのコンストラクターの代わりにオブジェクト初期化子を使用します。  
   
      [!code-vb[VbVbalrGuidelines#23](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#23)]  
   
 ### <a name="event-handling"></a>イベント処理  
   
--   `AddHandler` ではなく `Handles` を使用します。  
+- `AddHandler` ではなく `Handles` を使用します。  
   
      [!code-vb[VbVbalrGuidelines#24](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#24)]  
   
--   `AddressOf` を使用し、デリゲートの明示的なインスタンス化は避けます。  
+- `AddressOf` を使用し、デリゲートの明示的なインスタンス化は避けます。  
   
      [!code-vb[VbVbalrGuidelines#25](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#25)]  
   
--   イベントを定義するときには、短い構文を使用し、デリゲートの定義はコンパイラに任せます。  
+- イベントを定義するときには、短い構文を使用し、デリゲートの定義はコンパイラに任せます。  
   
      [!code-vb[VbVbalrGuidelines#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#26)]  
   
--   `RaiseEvent` メソッドを呼び出す前にイベントが `Nothing` (null) かどうか確認しないようにします。 `RaiseEvent` は、イベントを発生させる前に `Nothing` かどうか確認します。  
+- `RaiseEvent` メソッドを呼び出す前にイベントが `Nothing` (null) かどうか確認しないようにします。 `RaiseEvent` は、イベントを発生させる前に `Nothing` かどうか確認します。  
   
 ### <a name="using-shared-members"></a>共有メンバーの使用  
  `Shared` メンバーの呼び出しにはクラス名を使用し、インスタンス変数からは行わないようにします。  
@@ -165,43 +165,43 @@ Microsoft は、ここで示すガイドラインに従ってサンプルおよ�
 ### <a name="use-xml-literals"></a>XML リテラルの使用  
  XML リテラルを使用すると、XML 操作時に行う最も一般的なタスク (読み込み、クエリ、変換など) を簡素化できます。 XML を使用して開発を行う場合は、次のガイドラインに従います。  
   
--   XML API を直接呼び出す代わりに XML リテラルを使用して XML ドキュメントおよびフラグメントを作成します。  
+- XML API を直接呼び出す代わりに XML リテラルを使用して XML ドキュメントおよびフラグメントを作成します。  
   
--   ファイル レベルまたはプロジェクト レベルで XML 名前空間をインポートし、XML リテラルによるパフォーマンスの最適化を利用します。  
+- ファイル レベルまたはプロジェクト レベルで XML 名前空間をインポートし、XML リテラルによるパフォーマンスの最適化を利用します。  
   
--   XML 軸プロパティを使用して XML ドキュメント内の要素と属性にアクセスします。  
+- XML 軸プロパティを使用して XML ドキュメント内の要素と属性にアクセスします。  
   
--   `Add` メソッドなどの API 呼び出しを使用する代わりに、埋め込み式を使用して既存の値から値を組み込んで XML を作成します。  
+- `Add` メソッドなどの API 呼び出しを使用する代わりに、埋め込み式を使用して既存の値から値を組み込んで XML を作成します。  
   
      [!code-vb[VbVbalrGuidelines#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#27)]  
   
 ### <a name="linq-queries"></a>LINQ クエリ  
   
--   クエリ変数にはわかりやすい名前を使用します。  
+- クエリ変数にはわかりやすい名前を使用します。  
   
      [!code-vb[VbVbalrGuidelines#28](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#28)]  
   
--   クエリ内で要素の名前を指定して、匿名型のプロパティ名の大文字と小文字の使用が正しい Pascal 形式になるようにします。  
+- クエリ内で要素の名前を指定して、匿名型のプロパティ名の大文字と小文字の使用が正しい Pascal 形式になるようにします。  
   
      [!code-vb[VbVbalrGuidelines#29](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#29)]  
   
--   結果のプロパティ名があいまいになる場合は、プロパティ名を変更します。 たとえば、クエリが顧客名と注文 ID を返す場合、それらの名前を結果の `Name` と `ID` のままにはせずに変更します。  
+- 結果のプロパティ名があいまいになる場合は、プロパティ名を変更します。 たとえば、クエリが顧客名と注文 ID を返す場合、それらの名前を結果の `Name` と `ID` のままにはせずに変更します。  
   
      [!code-vb[VbVbalrGuidelines#30](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#30)]  
   
--   クエリ変数と範囲変数の宣言で型の推論を使用します。  
+- クエリ変数と範囲変数の宣言で型の推論を使用します。  
   
      [!code-vb[VbVbalrGuidelines#31](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#31)]  
   
--   各クエリ句を `From` ステートメントの下に揃えます。  
+- 各クエリ句を `From` ステートメントの下に揃えます。  
   
      [!code-vb[VbVbalrGuidelines#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#32)]  
   
--   `Where` 句を他のクエリ句より先に使用し、それ以降のクエリ句では、フィルター化されたデータセットが処理されるようにします。  
+- `Where` 句を他のクエリ句より先に使用し、それ以降のクエリ句では、フィルター化されたデータセットが処理されるようにします。  
   
      [!code-vb[VbVbalrGuidelines#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#33)]  
   
--   `Where` 句を使用して暗黙的に結合操作を定義する代わりに、`Join` 句を使用して明示的に結合操作を定義します。  
+- `Where` 句を使用して暗黙的に結合操作を定義する代わりに、`Join` 句を使用して明示的に結合操作を定義します。  
   
      [!code-vb[VbVbalrGuidelines#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrGuidelines/VB/Class1.vb#34)]  
   

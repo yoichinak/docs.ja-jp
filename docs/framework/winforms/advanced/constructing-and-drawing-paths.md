@@ -9,11 +9,11 @@ helpviewer_keywords:
 - examples [Windows Forms], drawing paths
 ms.assetid: f16ec921-56cf-46d1-9741-d7316ad06b23
 ms.openlocfilehash: a698b93aac29a0a7f5c959b29a3feb41eb447e8c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716934"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935409"
 ---
 # <a name="constructing-and-drawing-paths"></a>パスの作成および描画
 パスは、一連の操作し、1 つの単位として描画が可能なグラフィックス プリミティブ (線、四角形、曲線、テキスト、およびなど)。 パスを分割できる*図表*オープンかクローズのいずれかにあります。 図は、複数のプリミティブを含めることができます。  

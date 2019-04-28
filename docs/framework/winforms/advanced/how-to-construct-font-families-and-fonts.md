@@ -9,32 +9,32 @@ helpviewer_keywords:
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
 ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937970"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>方法: フォント ファミリとフォントを作成する
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 同じタイプフェイスがさまざまなスタイルでのフォントのフォント ファミリにグループ化します。 たとえば、Arial フォント ファミリには、次のフォントが含まれています。  
   
--   Arial 通常  
+- Arial 通常  
   
--   Arial 太字  
+- Arial 太字  
   
--   Arial 斜体  
+- Arial 斜体  
   
--   Arial 太字斜体  
+- Arial 太字斜体  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] フォームのファミリの 4 つのスタイルを使用します。 標準、太字、斜体と太字斜体します。 など、形容詞*を絞り込む*と*丸め*スタイル; とは見なされませんではなく、ファミリ名の一部であります。 たとえば、ゴシックは、次のメンバーを持つフォント ファミリです。  
   
--   Arial 狭い通常  
+- Arial 狭い通常  
   
--   Arial ナロー太字  
+- Arial ナロー太字  
   
--   Arial 狭い斜体  
+- Arial 狭い斜体  
   
--   Arial 狭い太字斜体  
+- Arial 狭い太字斜体  
   
  テキストを描画する前に[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、構築する必要がある、<xref:System.Drawing.FontFamily>オブジェクトと<xref:System.Drawing.Font>オブジェクト。 <xref:System.Drawing.FontFamily>オブジェクト (たとえば、Arial) 書体を指定して、<xref:System.Drawing.Font>オブジェクトは、サイズ、スタイル、および単位を指定します。  
   

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Private Protected keyword [Visual Basic]
 - Private Protected keyword [Visual Basic], syntax
 ms.openlocfilehash: fea43558ac0fe8181f2786b69f2621346d446b2e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376391"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920498"
 ---
 # <a name="private-protected-visual-basic"></a>Private Protected (Visual Basic)
 
@@ -25,7 +25,7 @@ ms.locfileid: "57376391"
 </PropertyGroup>
 ```
 
-詳細については、[Visual Basic の言語バージョンを設定](../../language-reference/configure-language-version.md)を参照してください。
+詳細については、次を参照してください。 [Visual Basic の言語バージョンを設定](../../language-reference/configure-language-version.md)します。
 
 > [!NOTE]
 > Visual Studio での F1 ヘルプを選択する`private protected`のいずれかのヘルプを提供します。[プライベート](private.md)または[保護](protected.md)します。 IDE では、複合語ではなく、カーソルの下の 1 つのトークンを取得します。
@@ -38,7 +38,7 @@ ms.locfileid: "57376391"
 
 - **アクセス レベルです。** クラスのすべてのコードは、その要素にアクセスできます。 基本クラスから派生し、同じアセンブリに含まれているすべてのクラスでコードがすべてにアクセスできる、`Private Protected`基底クラスの要素。 基本クラスを基底クラスから派生し、別のアセンブリに含まれているすべてのクラスでのコードでアクセスできませんただし、`Private Protected`要素。
 
-- **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。
+- **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。
 
 `Private Protected` 修飾子は、次のコンテキストで使用できます。
 

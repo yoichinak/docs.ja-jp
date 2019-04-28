@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 4e5d2ea5-d8f8-4712-bd18-ea3c5461702c
 ms.openlocfilehash: 603ee57475b3e7b1af607d49050e3276fd3082d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929078"
 ---
 # <a name="how-to-implement-an-asynchronous-service-operation"></a>方法: 非同期サービス操作を実装する
 Windows Communication Foundation (WCF) アプリケーションでサービス操作を実装できます非同期的または同期的にその呼び出し方法をクライアントに指示することがなく。 たとえば、非同期サービス操作を同期的に呼び出すことができ、同期サービス操作を非同期的に呼び出すことができます。 クライアント アプリケーションで非同期的に操作を呼び出す方法を示す例を参照してください[方法。サービス操作を非同期的に呼び出す](../../../docs/framework/wcf/feature-details/how-to-call-wcf-service-operations-asynchronously.md)します。 同期および非同期操作の詳細については、次を参照してください。 [Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md)と[同期および非同期操作](../../../docs/framework/wcf/synchronous-and-asynchronous-operations.md)します。 このトピックでは、非同期サービス操作の基本構造について説明します。コードは部分的なコードです。 サービスとクライアントの両方の側の完全な例を参照してください。[非同期](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ms751505(v=vs.100))します。  
@@ -34,11 +34,11 @@ Windows Communication Foundation (WCF) アプリケーションでサービス�
   
 1. 次の操作とのサービス コントラクト インターフェイス  
   
-    1.  同期 `SampleMethod` 操作  
+    1. 同期 `SampleMethod` 操作  
   
-    2.  非同期 `BeginSampleMethod` 操作  
+    2. 非同期 `BeginSampleMethod` 操作  
   
-    3.  非同期`BeginServiceAsyncMethod` / `EndServiceAsyncMethod`操作のペア。  
+    3. 非同期`BeginServiceAsyncMethod` / `EndServiceAsyncMethod`操作のペア。  
   
 2. <xref:System.IAsyncResult?displayProperty=nameWithType> オブジェクトを使用したサービスの実装  
   

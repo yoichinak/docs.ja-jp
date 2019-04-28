@@ -5,11 +5,11 @@ ms.assetid: 9ffd5482-268e-4680-9fd1-bfb0b7d66450
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d687f2bbd3c20564368d4246961b56382ea14cf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61916553"
 ---
 # <a name="icordebugmemorybuffergetsize-method"></a>ICorDebugMemoryBuffer::GetSize メソッド
 メモリ バッファーのサイズ (バイト単位) を取得します。  

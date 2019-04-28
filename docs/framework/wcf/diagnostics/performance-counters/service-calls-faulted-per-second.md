@@ -3,11 +3,11 @@ title: サービス:1 秒あたりの失敗した呼び出し
 ms.date: 03/30/2017
 ms.assetid: 94247356-2b29-4b50-b639-91ca8c1cf3a9
 ms.openlocfilehash: 595b623d70bad82ea39ab3ef93fb5fd499268ff2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088477"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915708"
 ---
 # <a name="service-calls-faulted-per-second"></a>サービス:1 秒あたりの失敗した呼び出し
 カウンター名:1 秒あたりの失敗した呼び出し。  

@@ -5,17 +5,17 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: d165746ff2f03b0edc59a9284052323a0c1fd05b
-ms.sourcegitcommit: 4ac80713f6faa220e5a119d5165308a58f7ccdc8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54149678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784442"
 ---
-# <a name="serverless-design-examples"></a>サーバーレスの設計例
+# <a name="serverless-design-examples"></a>サーバーレス設計の例
 
 サーバレスには多くのデザインパターンが存在します。 このセクションでは、サーバーレスの一般的なシナリオをいくつか取り上げます。 すべての例で共通しているのは、イベント トリガーとビジネス ロジックの基本的な組み合わせであることです。
 
-## <a name="scheduling"></a>スケジュール設定
+## <a name="scheduling"></a>スケジューリング
 
 タスクのスケジュール設定は共通の機能です。 次の図は、適切な整合性チェックを持たない従来のデータベースを示しています。 データベースは定期的にスクラブする必要があります。 サーバーレスの関数は無効なデータを見つけ出し、消去します。 トリガーは、スケジュールに従ってコードを実行するタイマーです。
 
@@ -35,7 +35,7 @@ CQRS を使用すると、読み取りには、データを消費する方法を
 
 メッセージ ベースのシステムでは、多くの場合、キューまたは処理するパブリッシャー/サブスクライバーのトピックにイベントが収集されます。 これらのイベントは、ビジネス ロジックの一部を実行するサーバーレス関数をトリガーできます。 イベント ベースの処理の例は、イベント ソース システムです。 「イベント」は、タスクを完了のマークに発生します。 イベントによってトリガーされるサーバーレスの関数は、適切なデータベースのドキュメントを更新します。 2 番目のサーバーレス関数は、システムの読み取りモデルを更新するのにイベントを使用することがあります。 [Azure Event Grid](https://docs.microsoft.com/azure/event-grid/overview)サブスクライバーとしての関数とイベントを統合する方法を提供します。
 
-> イベントは、情報メッセージです。 詳細については、[イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)を参照してください。
+> イベントは、情報メッセージです。 詳細については、次を参照してください。[イベント ソーシング パターン](https://docs.microsoft.com/azure/architecture/patterns/event-sourcing)します。
 
 ## <a name="file-triggers-and-transformations"></a>ファイルのトリガーと変換
 

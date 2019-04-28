@@ -10,11 +10,11 @@ helpviewer_keywords:
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
 ms.openlocfilehash: 3ac5fdeaebfd67d6ad4f68166fda588b9e58ca98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119523"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61704584"
 ---
 # <a name="runtime-element"></a>\<ランタイム > 要素
 アプリケーションを構成する共通言語ランタイムで使用される情報を提供します。  

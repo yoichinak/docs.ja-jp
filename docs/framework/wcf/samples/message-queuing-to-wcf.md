@@ -3,11 +3,11 @@ title: Windows Communication Foundation へのメッセージ キュー
 ms.date: 03/30/2017
 ms.assetid: 6d718eb0-9f61-4653-8a75-d2dac8fb3520
 ms.openlocfilehash: c0674d23f1b4e611e8f3b51a6480a65e9b52d038
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295173"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756456"
 ---
 # <a name="message-queuing-to-windows-communication-foundation"></a>Windows Communication Foundation へのメッセージ キュー
 このサンプルでは、Windows Communication Foundation (WCF) サービスをメッセージ キュー (MSMQ) アプリケーションが MSMQ メッセージを送信する方法を示します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。  
@@ -118,15 +118,15 @@ Console.ReadLine();
 
 2. サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。
 
-    1.  Visual Studio 2012 では、サーバー マネージャーを開きます。
+    1. Visual Studio 2012 では、サーバー マネージャーを開きます。
 
-    2.  展開、**機能**タブ。
+    2. 展開、**機能**タブ。
 
-    3.  右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。
+    3. 右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。
 
-    4.  チェック、**トランザクション**ボックス。
+    4. チェック、**トランザクション**ボックス。
 
-    5.  入力`ServiceModelSamplesTransacted`として新しいキューの名前。
+    5. 入力`ServiceModelSamplesTransacted`として新しいキューの名前。
 
 3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
 

@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: b04c6edecf5b63f191cb2e0f808fb1d0f801d0a3
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936730"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウド シナリオへの移行
 
@@ -33,9 +33,9 @@ Azure Stack は、ハイブリッド クラウド プラットフォーム、組
 
 Azure Stack は、ニーズに合わせて、2 つのデプロイ オプションで提供されています。
 
--   Azure Stack 統合システム
+- Azure Stack 統合システム
 
--   Azure Stack Development Kit
+- Azure Stack Development Kit
 
 ### <a name="azure-stack-integrated-systems"></a>Azure Stack 統合システム
 
@@ -47,23 +47,23 @@ Microsoft Azure Stack Development Kit は、評価し、Azure Stack の学習に
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **Azure のハイブリッド クラウド**
+- **Azure のハイブリッド クラウド**
 
     <https://azure.microsoft.com/overview/hybrid-cloud/>
 
--   **Azure Stack**
+- **Azure Stack**
 
     <https://azure.microsoft.com/overview/azure-stack/>
 
--   **Windows コンテナーの active Directory サービス アカウントします。**
+- **Windows コンテナーの active Directory サービス アカウントします。**
 
     <https://docs.microsoft.com/virtualization/windowscontainers/manage-containers/manage-serviceaccounts>
 
--   **Active Directory のサポートによってコンテナーを作成します。**
+- **Active Directory のサポートによってコンテナーを作成します。**
 
     <https://blogs.msdn.microsoft.com/containerstuff/2017/01/30/create-a-container-with-active-directory-support/>
 
--   **Azure Hybrid Benefit のライセンス**
+- **Azure Hybrid Benefit のライセンス**
 
     <https://azure.microsoft.com/pricing/hybrid-benefit/>
 

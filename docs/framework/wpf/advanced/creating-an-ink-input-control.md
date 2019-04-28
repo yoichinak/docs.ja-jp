@@ -15,26 +15,26 @@ helpviewer_keywords:
 - StylusPlugIn objects [WPF]
 ms.assetid: c31f3a67-cb3f-4ded-af9e-ed21f6575b26
 ms.openlocfilehash: 105a44f90c1c654a21fc8920a149ad63b2dabc99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323851"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61928715"
 ---
 # <a name="creating-an-ink-input-control"></a>インク入力コントロールの作成
 できるカスタム コントロールを動的に作成し、静的にインクを描画します。 つまり、ユーザーが"flow"、タブレット ペンからおよびインクをその後に表示を追加するコントロールに、クリップボードから貼り付ける、タブレット ペンを使用していずれか、またはファイルから読み込まれたを表示するインク ストロークを描画するインクをレンダリングします。 インクを動的にレンダリングするコントロールを使用する必要があります、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>します。 静的にインクをレンダリングするには、スタイラス イベント メソッドをオーバーライドする必要があります (<xref:System.Windows.UIElement.OnStylusDown%2A>、 <xref:System.Windows.UIElement.OnStylusMove%2A>、および<xref:System.Windows.UIElement.OnStylusUp%2A>) を収集する<xref:System.Windows.Input.StylusPoint>データ、ストロークの作成に追加して、 <xref:System.Windows.Controls.InkPresenter> (このコントロールでインクを描画)。  
   
  このトピックは、次の内容で構成されています。  
   
--   [方法: スタイラス ポイントのデータを収集し、インク ストロークを作成します。](#CollectingStylusPointDataAndCreatingInkStrokes)  
+- [方法: スタイラス ポイントのデータを収集し、インク ストロークを作成します。](#CollectingStylusPointDataAndCreatingInkStrokes)  
   
--   [方法: マウスからの入力を受け入れるように、コントロールを有効にします。](#EnablingYourControlToAcceptInputTromTheMouse)  
+- [方法: マウスからの入力を受け入れるように、コントロールを有効にします。](#EnablingYourControlToAcceptInputTromTheMouse)  
   
--   [これをまとめる](#PuttingItTogether)  
+- [これをまとめる](#PuttingItTogether)  
   
--   [追加のプラグインと DynamicRenderers を使用してください。](#UsingAdditionalPluginsAndDynamicRenderers)  
+- [追加のプラグインと DynamicRenderers を使用してください。](#UsingAdditionalPluginsAndDynamicRenderers)  
   
--   [まとめ](#AdvancedInkHandling_Conclusion)  
+- [まとめ](#AdvancedInkHandling_Conclusion)  
   
 <a name="CollectingStylusPointDataAndCreatingInkStrokes"></a>   
 ## <a name="how-to-collect-stylus-point-data-and-create-ink-strokes"></a>方法: スタイラス ポイントのデータを収集し、インク ストロークを作成します。  

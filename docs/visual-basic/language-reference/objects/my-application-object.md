@@ -5,11 +5,11 @@ helpviewer_keywords:
 - My.Application object
 ms.assetid: a0ecfccf-acf7-49ec-a08b-72e6458c5c8d
 ms.openlocfilehash: c88e9da85357df5b0bbbb5957ed2f7ca8276a04b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61751465"
 ---
 # <a name="myapplication-object"></a>My.Application オブジェクト
 プロパティ、メソッド、および現在のアプリケーションに関連するイベントを提供します。  
@@ -17,11 +17,11 @@ ms.locfileid: "58818417"
 ## <a name="remarks"></a>Remarks  
  メソッドとプロパティについては、`My.Application`オブジェクトを次のリソースを参照してください。  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> すべてのプロジェクトで使用可能なメンバーにします。  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ApplicationBase> すべてのプロジェクトで使用可能なメンバーにします。  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Windows フォーム アプリケーションで使用可能なメンバーにします。  
+- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase> Windows フォーム アプリケーションで使用可能なメンバーにします。  
   
--   <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> コンソール アプリケーションで使用可能なメンバーにします。  
+- <xref:Microsoft.VisualBasic.ApplicationServices.ConsoleApplicationBase> コンソール アプリケーションで使用可能なメンバーにします。  
   
 ## <a name="requirements"></a>必要条件  
  **名前空間:** <xref:Microsoft.VisualBasic.ApplicationServices>  

@@ -3,11 +3,11 @@ title: System.ServiceModel.OverridingDuplicateConfigurationKey
 ms.date: 03/30/2017
 ms.assetid: 7d11700b-c035-467e-af02-686bca3b207a
 ms.openlocfilehash: ce5679ef736fcf1e2c6ed9e002d51ebf0185c64e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61926881"
 ---
 # <a name="systemservicemodeloverridingduplicateconfigurationkey"></a>System.ServiceModel.OverridingDuplicateConfigurationKey
 System.ServiceModel.OverridingDuplicateConfigurationKey  

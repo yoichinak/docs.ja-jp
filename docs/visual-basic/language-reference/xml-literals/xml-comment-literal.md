@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
 ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938646"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML コメント リテラル (Visual Basic)
 リテラルを表す、<xref:System.Xml.Linq.XComment>オブジェクト。  
@@ -39,9 +39,9 @@ ms.locfileid: "58827277"
 ## <a name="remarks"></a>Remarks  
  XML コメント リテラルにはドキュメントの内容が含まれていませんドキュメントに関する情報が含まれます。 XML コメントのセクションは、シーケンス"-->"で終了します。 これは、次の点を意味します。  
   
--   埋め込み式の区切り記号が有効な XML コメントのコンテンツであるので、XML コメント リテラルの埋め込み式を使うことはできません。  
+- 埋め込み式の区切り記号が有効な XML コメントのコンテンツであるので、XML コメント リテラルの埋め込み式を使うことはできません。  
   
--   XML コメントのセクションでは入れ子にできないため、 `content` "-->"値を含むことはできません。  
+- XML コメントのセクションでは入れ子にできないため、 `content` "-->"値を含むことはできません。  
   
  XML コメント リテラル、変数に割り当てることができます、または XML 要素リテラルに含めることができます。  
   

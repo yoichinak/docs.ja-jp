@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Claimset class
 ms.assetid: 389b5a57-4175-4bc0-ada0-fc750d51149f
 ms.openlocfilehash: c6c36641463a45b79d437ae3910bbe7474d425cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929299"
 ---
 # <a name="how-to-examine-the-security-context"></a>方法: セキュリティ コンテキストを調べる
 Windows Communication Foundation (WCF) サービスをプログラミングする場合、サービス セキュリティ コンテキストでは、クライアント資格情報と、サービスで認証するために使用するクレームの詳細を確認することができます。 これは、<xref:System.ServiceModel.ServiceSecurityContext> クラスのプロパティを使用することで可能になります。  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) サービスをプログラミングす�
   
 ### <a name="to-get-the-current-security-context"></a>現在のセキュリティ コンテキストを取得するには  
   
--   現在のセキュリティ コンテキストを取得するためには、静的プロパティ <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> にアクセスします。 参照から現在のコンテキストの任意のプロパティを調べます。  
+- 現在のセキュリティ コンテキストを取得するためには、静的プロパティ <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> にアクセスします。 参照から現在のコンテキストの任意のプロパティを調べます。  
   
 ### <a name="to-determine-the-identity-of-the-caller"></a>呼び出し元の ID を確認するには  
   
@@ -46,13 +46,13 @@ Windows Communication Foundation (WCF) サービスをプログラミングす�
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  コードでは、次の名前空間を使用します。  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.IdentityModel.Policy>  
+- <xref:System.IdentityModel.Policy>  
   
--   <xref:System.IdentityModel.Claims>  
+- <xref:System.IdentityModel.Claims>  
   
 ## <a name="see-also"></a>関連項目
 

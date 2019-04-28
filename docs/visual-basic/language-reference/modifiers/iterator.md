@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Iterator keyword [Visual Basic]
 ms.assetid: 69cb0b04-ac87-49d0-bcfe-810c0d60daff
 ms.openlocfilehash: 499949d1f4c20e1f465355bd076ba39f1496779b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822701"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920719"
 ---
 # <a name="iterator-visual-basic"></a>反復子 (Visual Basic)
 指定する関数または`Get`アクセサーが反復子です。  
@@ -34,9 +34,9 @@ ms.locfileid: "58822701"
 ## <a name="usage"></a>使用法  
  `Iterator` 修飾子は、次のコンテキストで使用できます。  
   
--   [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
 ## <a name="example"></a>例  
  次の例は、反復子関数を示します。 Iterator 関数が、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 各反復処理、[各](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント本体で`Main`への呼び出しを作成、 `Power` iterator 関数。 Iterator 関数を呼び出すごとに、`Yield` ステートメントの次の実行に進みます。これは、`For…Next` ループの次の反復処理で行われます。  

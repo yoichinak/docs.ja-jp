@@ -3,11 +3,11 @@ title: 信頼できるメッセージング プロトコル バージョン 1.1
 ms.date: 03/30/2017
 ms.assetid: 0da47b82-f8eb-42da-8bfe-e56ce7ba6f59
 ms.openlocfilehash: 6b8732e0b48797c219b53bb8bf70e1ba57e25c42
-ms.sourcegitcommit: d9a0071d0fd490ae006c816f78a563b9946e269a
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55073227"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933992"
 ---
 # <a name="reliable-messaging-protocol-version-11"></a>信頼できるメッセージング プロトコル バージョン 1.1
 このトピックでは、Windows Communication Foundation (WCF) の実装の詳細を説明 WS-ReliableMessaging の 2007 年 2 月 (バージョン 1.1) プロトコルが HTTP トランスポートを使用して相互運用のために必要です。 WCF では、制約と明確にでは、このトピックで説明されている、WS-ReliableMessaging 仕様に従います。 以降では、WS-ReliableMessaging のバージョン 1.1 プロトコルを実装することに注意してください、[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]します。  
@@ -427,7 +427,7 @@ Example TerminateSequenceResponse message:
   
 ### <a name="one-way-non-addressable-initiator"></a>一方向 : アドレス不可能なイニシエーター  
   
-#### <a name="binding"></a>バインド  
+#### <a name="binding"></a>バインディング  
  WCF には、1 つの HTTP チャネル経由で 1 つのシーケンスを使用して、一方向メッセージ交換パターンが用意されています。 WCF では、HTTP 要求を使用してレスポンダーからイニシエーターにすべてのメッセージを送信する応答側および HTTP 応答に、発信側からのすべてメッセージを送信します。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence の交換  
@@ -444,7 +444,7 @@ Example TerminateSequenceResponse message:
   
 ### <a name="one-way-addressable-initiator"></a>一方向 : アドレス可能なイニシエーター  
   
-#### <a name="binding"></a>バインド  
+#### <a name="binding"></a>バインディング  
  WCF は、1 つに 1 つのシーケンスを使用して一方向メッセージ交換パターンを提供します。 受信と送信の 1 つの HTTP チャネル。 WCF では、HTTP 要求を使用して、すべてのメッセージを送信します。 すべての HTTP 応答に、空の本文と HTTP 202 ステータス コードが含まれます。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence の交換  
@@ -452,7 +452,7 @@ Example TerminateSequenceResponse message:
   
 ### <a name="duplex-addressable-initiator"></a>双方向 : アドレス可能なイニシエーター  
   
-#### <a name="binding"></a>バインド  
+#### <a name="binding"></a>バインディング  
  WCF では、2 つを使用して、完全に非同期の双方向メッセージ交換パターンをシーケンス 1 つ以上用意されています受信と送信の 1 つの HTTP チャネル。 このメッセージ交換パターンは、限定された方法で `Request/Reply`、`Addressable` イニシエーター メッセージ交換パターンに組み込むことができます。 WCF では、HTTP 要求を使用して、すべてのメッセージを送信します。 すべての HTTP 応答に、空の本文と HTTP 202 ステータス コードが含まれます。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence の交換  
@@ -467,7 +467,7 @@ Example TerminateSequenceResponse message:
   
 ### <a name="request-reply-and-one-way-non-addressable-initiator"></a>要求/応答および一方向のアドレス不可能なイニシエーター  
   
-#### <a name="binding"></a>バインド  
+#### <a name="binding"></a>バインディング  
  WCF は、一方向と、要求/応答メッセージ交換のパターンを使用して 2 つのシーケンスの 1 つの HTTP チャネル。 WCF では、HTTP 要求を使用してレスポンダーからイニシエーターにすべてのメッセージを送信する応答側および HTTP 応答に、発信側からのすべてメッセージを送信します。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence の交換  
@@ -504,7 +504,7 @@ Example TerminateSequenceResponse message:
   
 ### <a name="requestreply-addressable-initiator"></a>要求/応答 : アドレス可能なイニシエーター  
   
-#### <a name="binding"></a>バインド  
+#### <a name="binding"></a>バインディング  
  WCF は、要求/応答メッセージ交換パターンを使用して 2 つのシーケンスの 1 つ以上受信と送信の 1 つの HTTP チャネル。 このメッセージ交換パターンは、限定された方法で `Duplex, Addressable` イニシエーター メッセージ交換パターンに組み込むことができます。 WCF では、HTTP 要求を使用して、すべてのメッセージを送信します。 すべての HTTP 応答に、空の本文と HTTP 202 ステータス コードが含まれます。  
   
 #### <a name="createsequence-exchange"></a>CreateSequence の交換  

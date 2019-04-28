@@ -9,11 +9,11 @@ helpviewer_keywords:
 - BC30933
 ms.assetid: 8182eea0-dd34-4d6e-9ca0-41d8713e9dc4
 ms.openlocfilehash: 7f2ae3bb0e7c09d966c53fb17b1cbe675dfce8b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921109"
 ---
 # <a name="latebound-overload-resolution-cannot-be-applied-to-procedurename-because-the-accessing-instance-is-an-interface-type"></a>遅延バインドされたオーバー ロードの解決には適用できません '\<procedurename >' へのアクセスのインスタンスがインターフェイス型であるため
 オーバー ロードされたプロパティまたはプロシージャへの参照を解決するのには、コンパイラがしようとしていますが、型の引数であるため、参照が失敗した`Object`インターフェイスのデータ型であり、参照元オブジェクト。 `Object`引数は、遅延バインディングとして参照を解決するのには、コンパイラを強制します。  
@@ -24,7 +24,7 @@ ms.locfileid: "58814056"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   使用`CType`から引数をキャストする`Object`呼び出そうとするオーバー ロードのシグネチャで指定された型にします。  
+- 使用`CType`から引数をキャストする`Object`呼び出そうとするオーバー ロードのシグネチャで指定された型にします。  
   
      基になるインターフェイスを参照しているオブジェクトをキャストする役立ちませんに注意してください。 このエラーを回避するために引数をキャストする必要があります。  
   

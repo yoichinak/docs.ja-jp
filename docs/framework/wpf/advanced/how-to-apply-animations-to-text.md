@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF], text
 ms.assetid: eec3d26c-0a21-420f-8012-671621c47089
 ms.openlocfilehash: 38aa432fecc5b5e10d8eb90be9c1c596728ed613
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108213"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776888"
 ---
 # <a name="how-to-apply-animations-to-text"></a>方法: アニメーションをテキストに適用する
 アニメーションを利用すると、アプリケーションのテキストの表示方法や見た目を変えることができます。 次の例のテキストの表示に影響を与えるさまざまな種類のアニメーションを使用して、<xref:System.Windows.Controls.TextBlock>コントロール。  

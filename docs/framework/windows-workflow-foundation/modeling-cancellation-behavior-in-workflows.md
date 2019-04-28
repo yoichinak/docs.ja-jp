@@ -3,11 +3,11 @@ title: ワークフローでの取り消し動作のモデル化
 ms.date: 03/30/2017
 ms.assetid: d48f6cf3-cdde-4dd3-8265-a665acf32a03
 ms.openlocfilehash: 8bbd746d40e9114eacd5a752481d5316c3f30e57
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934707"
 ---
 # <a name="modeling-cancellation-behavior-in-workflows"></a>ワークフローでの取り消し動作のモデル化
 アクティビティは、たとえば <xref:System.Activities.Statements.Parallel> アクティビティを使用して、ワークフロー内部で取り消すことができます。このアクティビティでは、<xref:System.Activities.Statements.Parallel.CompletionCondition%2A> の評価結果が `true` になると、完了していない分岐が取り消されます。また、ホストで <xref:System.Activities.WorkflowApplication.Cancel%2A> を呼び出すと、アクティビティをワークフロー外から取り消すこともできます。 取り消し処理を指定するには、ワークフローの作成者は、<xref:System.Activities.Statements.CancellationScope> アクティビティまたは <xref:System.Activities.Statements.CompensableActivity> アクティビティを使用するか、取り消しロジックを指定するカスタム アクティビティを作成します。 このトピックでは、ワークフローにおける取り消しの概要について説明します。  
@@ -16,7 +16,7 @@ ms.locfileid: "57713392"
  アプリケーションでトランザクションを使用すると、トランザクションのプロセスでエラーが発生した場合、トランザクション内で実行されたすべての変更を中止 (ロールバック) できます。 ただし、長期間にわたって実行される処理やトランザクション リソースを含まない処理など、取り消す (元に戻す) 必要がある処理によってはトランザクションに適さないものもあります。 補正は、ワークフローでエラーが発生した場合に、前に完了した非トランザクションの処理を元に戻すためのモデルを提供します。 取り消しは、完了していない非トランザクションの処理をワークフローやアクティビティの作成者が処理できるようにするためのモデルを提供します。 実行を完了していないアクティビティが取り消された場合、取り消しロジックが指定されていればそのロジックが呼び出されます。  
   
 > [!NOTE]
->  トランザクションと補正の詳細については、[トランザクション](workflow-transactions.md)と[補正](compensation.md)を参照してください。  
+>  トランザクションと補正の詳細については、次を参照してください。[トランザクション](workflow-transactions.md)と[補正](compensation.md)します。  
   
 ## <a name="using-cancellationscope"></a>CancellationScope の使用  
  <xref:System.Activities.Statements.CancellationScope> アクティビティには、子アクティビティを含めることができる <xref:System.Activities.Statements.CancellationScope.Body%2A> および <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> という 2 つのセクションがあります。 <xref:System.Activities.Statements.CancellationScope.Body%2A> には、アクティビティのロジックを構成するアクティビティを配置し、<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> には、アクティビティの取り消しロジックを指定するアクティビティを配置します。 アクティビティは、完了していない場合にのみ取り消すことができます。 <xref:System.Activities.Statements.CancellationScope> アクティビティの場合は、<xref:System.Activities.Statements.CancellationScope.Body%2A> のアクティビティが完了すると完了したことになります。 取り消し要求がスケジュールされている場合、<xref:System.Activities.Statements.CancellationScope.Body%2A> のアクティビティが完了していなければ、<xref:System.Activities.Statements.CancellationScope> が <xref:System.Activities.ActivityInstanceState.Canceled> とマークされ、<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> アクティビティが実行されます。  
@@ -32,8 +32,7 @@ ms.locfileid: "57713392"
 **Cancellationhandler が呼び出されました。**   
 **ワークフロー b30ebb30-df46-4d90-a211-e31c38d8db3c が取り消されました。**    
 > [!NOTE]
->  
-  <xref:System.Activities.Statements.CancellationScope> アクティビティを取り消して <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> を呼び出す場合、適切な取り消しロジックを指定するには、ワークフローの作成者が、アクティビティが取り消されるまでの進行状況を確認する必要があります。 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> からは、取り消されるアクティビティの進行状況に関する情報は提供されません。  
+>  <xref:System.Activities.Statements.CancellationScope> アクティビティを取り消して <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> を呼び出す場合、適切な取り消しロジックを指定するには、ワークフローの作成者が、アクティビティが取り消されるまでの進行状況を確認する必要があります。 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> からは、取り消されるアクティビティの進行状況に関する情報は提供されません。  
   
  ワークフローのルートの後に未処理の例外がバブルアップされ、<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> ハンドラーから <xref:System.Activities.UnhandledExceptionAction.Cancel> が返された場合も、ホストからワークフローを取り消すことができます。 次の例では、ワークフローの開始後に、ワークフローから <xref:System.ApplicationException> がスローされます。 この例外はワークフローで処理されないため、<xref:System.Activities.WorkflowApplication.OnUnhandledException%2A> ハンドラーが呼び出されます。 ハンドラーがランタイムにワークフローを取り消すように指示し、現在実行中の <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> アクティビティの <xref:System.Activities.Statements.CancellationScope> が呼び出されます。  
   

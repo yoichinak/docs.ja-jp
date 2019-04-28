@@ -7,11 +7,11 @@ helpviewer_keywords:
 - classes [WPF], custom classes in XAML
 ms.assetid: e7313137-581e-4a64-8453-d44e15a6164a
 ms.openlocfilehash: e71946ec06eb1b4c75f30084dfdb863d8e3b093e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122357"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61759935"
 ---
 # <a name="xaml-and-custom-classes-for-wpf"></a>WPF における XAML とカスタム クラス
 XAML に実装されている[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]フレームワークは、いずれかで、カスタムのクラスまたは構造体を定義する機能をサポートしている[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]言語、およびしアクセス クラスの XAML マークアップを使用しています。 組み合わせを使用できる[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]-XAML 名前空間のプレフィックスにカスタムの型をマップして、通常の種類と同じマークアップ ファイル内でカスタム型を定義します。 このトピックでは、XAML 要素として使用するのには、カスタム クラスが満たす必要がある要件について説明します。  
@@ -20,19 +20,19 @@ XAML に実装されている[!INCLUDE[TLA#tla_clr](../../../../includes/tlashar
 ## <a name="custom-classes-in-applications-or-assemblies"></a>アプリケーションまたはアセンブリのカスタム クラス  
  2 つの方法で XAML で使用されるカスタム クラスを定義することができます。 分離コードまたはその他のプライマリを生成するコード内で[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション、または実行可能ファイルなどの別のアセンブリ内のクラスまたはクラス ライブラリとして使用される DLL として。 これらのアプローチのそれぞれは、特定の長所と短所にあります。  
   
--   クラス ライブラリを作成する利点は、このような任意のカスタム クラスが異なる多くのアプリケーション間で共有できることです。 別のライブラリもアプリケーションのバージョン管理の問題を簡単に、コントロールと、目的のクラスの使用状況を XAML ページにルート要素としては、クラスの作成を簡素化します。  
+- クラス ライブラリを作成する利点は、このような任意のカスタム クラスが異なる多くのアプリケーション間で共有できることです。 別のライブラリもアプリケーションのバージョン管理の問題を簡単に、コントロールと、目的のクラスの使用状況を XAML ページにルート要素としては、クラスの作成を簡素化します。  
   
--   アプリケーションのカスタム クラスを定義する利点は、この手法が比較的軽量があり、展開とテストの問題がメイン アプリケーションの実行可能ファイルを超える個別のアセンブリを導入するときに発生しましたが最小限に抑えることです。  
+- アプリケーションのカスタム クラスを定義する利点は、この手法が比較的軽量があり、展開とテストの問題がメイン アプリケーションの実行可能ファイルを超える個別のアセンブリを導入するときに発生しましたが最小限に抑えることです。  
   
--   同じまたは別のアセンブリで定義されているかどうか、カスタム クラスを XAML で要素として使用するには CLR 名前空間と XML 名前空間の間にマップする必要があります。 参照してください[XAML 名前空間および WPF XAML の Namespace マッピング](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)します。  
+- 同じまたは別のアセンブリで定義されているかどうか、カスタム クラスを XAML で要素として使用するには CLR 名前空間と XML 名前空間の間にマップする必要があります。 参照してください[XAML 名前空間および WPF XAML の Namespace マッピング](xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)します。  
   
 <a name="Requirements_for_a_Custom_Class_as_a_XAML_Element"></a>   
 ## <a name="requirements-for-a-custom-class-as-a-xaml-element"></a>XAML 要素としてカスタム クラスの要件  
  オブジェクト要素としてインスタンス化できるようにするには、するには、クラスは、次の要件を満たす必要があります。  
   
--   カスタム クラスは、パブリックであるし、既定の (パラメーターなしの) パブリック コンス トラクターをサポートする必要があります。 (次の構造に関する注意事項のセクションを参照してください)。  
+- カスタム クラスは、パブリックであるし、既定の (パラメーターなしの) パブリック コンス トラクターをサポートする必要があります。 (次の構造に関する注意事項のセクションを参照してください)。  
   
--   入れ子になったクラスは、カスタム クラスではなければなりません。 入れ子になったクラスおよび CLR 使用する、一般的な構文で「ドット」が他の干渉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]や添付プロパティなどの XAML 機能。  
+- 入れ子になったクラスは、カスタム クラスではなければなりません。 入れ子になったクラスおよび CLR 使用する、一般的な構文で「ドット」が他の干渉[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]や添付プロパティなどの XAML 機能。  
   
  オブジェクトの定義はオブジェクト要素構文を有効にするだけでなく、値の型としては、そのオブジェクトを取得するその他のパブリック プロパティのプロパティ要素構文もできます。 これは、オブジェクトがオブジェクト要素としてインスタンス化するようになりましたことができます、このようなプロパティのプロパティ要素の値を入力できるためです。  
   
@@ -75,19 +75,19 @@ XAML に実装されている[!INCLUDE[TLA#tla_clr](../../../../includes/tlashar
 ## <a name="writing-collection-properties"></a>コレクション プロパティの作成  
  コレクション型を使用するプロパティには、コレクションに追加されるオブジェクトを指定することができる XAML 構文があります。 この構文では、2 つの注目すべき機能があります。  
   
--   コレクション オブジェクトであるオブジェクトは、オブジェクト要素構文で指定する必要はありません。 コレクション型を受け取る XAML でプロパティを指定するには、そのコレクションの種類の存在は暗黙的です。  
+- コレクション オブジェクトであるオブジェクトは、オブジェクト要素構文で指定する必要はありません。 コレクション型を受け取る XAML でプロパティを指定するには、そのコレクションの種類の存在は暗黙的です。  
   
--   マークアップでコレクションのプロパティの子要素は、コレクションのメンバーに処理されます。 通常、コレクションのメンバーにコード アクセスは、リストのディクショナリ/メソッドを通じて実行など`Add`、またはインデクサーを使用します。 XAML 構文ではメソッドまたはインデクサーをサポートしていませんが、(例外。XAML 2009 は、メソッドをサポートできますが、可能な WPF の使用法は XAML 2009 を使用して制限されます。参照してください[XAML 2009 言語機能](../../xaml-services/xaml-2009-language-features.md))。 コレクションは、要素のツリーを構築するための非常に一般的な要件と、宣言型の XAML でこれらのコレクションを設定する手段が必要です。 そのため、コレクション プロパティの子要素は、コレクション プロパティの型の値は、コレクションに追加することによって処理されます。  
+- マークアップでコレクションのプロパティの子要素は、コレクションのメンバーに処理されます。 通常、コレクションのメンバーにコード アクセスは、リストのディクショナリ/メソッドを通じて実行など`Add`、またはインデクサーを使用します。 XAML 構文ではメソッドまたはインデクサーをサポートしていませんが、(例外。XAML 2009 は、メソッドをサポートできますが、可能な WPF の使用法は XAML 2009 を使用して制限されます。参照してください[XAML 2009 言語機能](../../xaml-services/xaml-2009-language-features.md))。 コレクションは、要素のツリーを構築するための非常に一般的な要件と、宣言型の XAML でこれらのコレクションを設定する手段が必要です。 そのため、コレクション プロパティの子要素は、コレクション プロパティの型の値は、コレクションに追加することによって処理されます。  
   
  .NET Framework XAML サービス実装および WPF XAML プロセッサは、コレクション プロパティの構成内容を次の定義を使用します。 プロパティのプロパティの型には、次のいずれかを実装する必要があります。  
   
--   実装<xref:System.Collections.IList>します。  
+- 実装<xref:System.Collections.IList>します。  
   
--   実装<xref:System.Collections.IDictionary>または同等のジェネリック (<xref:System.Collections.Generic.IDictionary%602>)。  
+- 実装<xref:System.Collections.IDictionary>または同等のジェネリック (<xref:System.Collections.Generic.IDictionary%602>)。  
   
--   派生した<xref:System.Array>(XAML での配列の詳細については、次を参照してください[X:array マークアップ拡張機能](../../xaml-services/x-array-markup-extension.md)。)。  
+- 派生した<xref:System.Array>(XAML での配列の詳細については、次を参照してください[X:array マークアップ拡張機能](../../xaml-services/x-array-markup-extension.md)。)。  
   
--   実装<xref:System.Windows.Markup.IAddChild>(によって定義されたインターフェイス[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)])。  
+- 実装<xref:System.Windows.Markup.IAddChild>(によって定義されたインターフェイス[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)])。  
   
  CLR でこれらの型のそれぞれに、`Add`メソッドは、XAML プロセッサによって、オブジェクト グラフを作成するときに、基になるコレクションに項目を追加するために使用します。  
   

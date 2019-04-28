@@ -3,11 +3,11 @@ title: シーケンス
 description: 大規模な順序付けられたデータのコレクションを持っていてもすべての要素を使用すると必ずしも期待しないときに、F# シーケンスを使用する方法について説明します。
 ms.date: 02/19/2019
 ms.openlocfilehash: a7791be5e8bd07d81fe9e890fc5896b181f0cb39
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770475"
 ---
 # <a name="sequences"></a>シーケンス
 
@@ -120,7 +120,7 @@ The sequence fib contains Fibonacci numbers.
 
 ## <a name="searching-and-finding-elements"></a>検索して、要素の検索
 
-シーケンスは、リストで使用できる機能をサポートします。[Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1)、 [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565)、 [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8)、 [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3)、 [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d)、 [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)、および[Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)します。 シーケンスの使用可能なこれらの関数のバージョンの検索対象の要素に達するまでのシーケンスを評価します。 例については、[一覧](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d)を参照してください。
+シーケンスは、リストで使用できる機能をサポートします。[Seq.exists](https://msdn.microsoft.com/library/428c97bf-599d-4c39-a5b9-f8717c198ad1)、 [Seq.exists2](https://msdn.microsoft.com/library/efdf14a4-27f7-4dc1-9281-52639e66d565)、 [Seq.find](https://msdn.microsoft.com/library/02c21ecd-97e5-4e99-a4c1-b4d0b730b7d8)、 [Seq.findIndex](https://msdn.microsoft.com/library/96dfe86b-df15-4d92-8316-7cd6055e09f3)、 [Seq.pick](https://msdn.microsoft.com/library/a87bc771-55f7-43f9-94f9-33d8f9bf325d)、 [Seq.tryFind](https://msdn.microsoft.com/library/ac43c6f5-4dc7-4e9a-a222-00b5736aee47)、および[Seq.tryFindIndex](https://msdn.microsoft.com/library/c357b221-edf6-4f68-bf40-82a3156d945a)します。 シーケンスの使用可能なこれらの関数のバージョンの検索対象の要素に達するまでのシーケンスを評価します。 例については、次を参照してください。[一覧](https://msdn.microsoft.com/library/83102799-f251-42e1-93ef-64232e8c5b1d)します。
 
 ## <a name="obtaining-subsequences"></a>サブシーケンスの取得
 
@@ -191,8 +191,7 @@ Moving average:
 
 使用して 2 つのシーケンスを比較する、 [Seq.compareWith](https://msdn.microsoft.com/library/5a740135-0b3a-4545-816f-8f91cc31290f)関数。 関数は、さらに、一連の要素を比較し、最初の等しくないペアを見つけたときに停止します。 追加の要素は、比較には影響しません。
 
-
-  `Seq.compareWith` の使用方法を次のコードに示します。
+`Seq.compareWith` の使用方法を次のコードに示します。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet19.fs)]
 
@@ -224,8 +223,7 @@ Moving average:
 
 呼び出すことによって、重複する要素を排除するシーケンスを作成する[Seq.distinct](https://msdn.microsoft.com/library/99d01014-7e0e-4e7b-9d0a-41a61d93f401)します。 使用することもできます[Seq.distinctBy](https://msdn.microsoft.com/library/9293293b-9420-49c8-848f-401a9cd49b75)、各要素に対して呼び出されるキー生成関数を受け取ります。 結果のシーケンスに固有のキーのある、元のシーケンスの要素が含まれています以前の要素に重複するキーの生成後の要素は破棄されます。
 
-
-  `Seq.distinct` の使用方法を次のコード例に示します。 `Seq.distinct` バイナリの数値を表すシーケンスを生成して、表示のみの個別の要素には 0 と 1 で示されます。
+`Seq.distinct` の使用方法を次のコード例に示します。 `Seq.distinct` バイナリの数値を表すシーケンスを生成して、表示のみの個別の要素には 0 と 1 で示されます。
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/fssequences/snippet22.fs)]
 
@@ -245,7 +243,7 @@ Moving average:
 
 などは、一覧のような単純な算術演算[Seq.average](https://msdn.microsoft.com/library/609d793b-c70f-4e36-9ab4-d928056d65b8)、 [Seq.sum](https://msdn.microsoft.com/library/01208515-4880-4358-91f5-af34f66dc77a)、 [Seq.averageBy](https://msdn.microsoft.com/library/47c855c1-2dbd-415a-885e-b909d9d3e4f8)、 [Seq.sumBy](https://msdn.microsoft.com/library/68cca78c-94ed-4a45-9b8d-34d2c5f2b1b1)など。
 
-[Seq.fold](https://msdn.microsoft.com/library/30c4c95a-9563-4c96-bbe1-f7aacfd026e3)、 [Seq.reduce](https://msdn.microsoft.com/library/a2ad4f64-ac69-47d2-92f0-7173d9dfeae9)、および[Seq.scan](https://msdn.microsoft.com/library/7e2d23e9-f153-4411-a884-b6d415ff627e)はリストの使用できる対応する関数のようにします。 シーケンスは、リストをサポートするこれらの関数の完全なバリエーションのサブセットをサポートします。 詳細と例については、[一覧](lists.md)を参照してください。
+[Seq.fold](https://msdn.microsoft.com/library/30c4c95a-9563-4c96-bbe1-f7aacfd026e3)、 [Seq.reduce](https://msdn.microsoft.com/library/a2ad4f64-ac69-47d2-92f0-7173d9dfeae9)、および[Seq.scan](https://msdn.microsoft.com/library/7e2d23e9-f153-4411-a884-b6d415ff627e)はリストの使用できる対応する関数のようにします。 シーケンスは、リストをサポートするこれらの関数の完全なバリエーションのサブセットをサポートします。 詳細と例については、次を参照してください。[一覧](lists.md)します。
 
 ## <a name="see-also"></a>関連項目
 

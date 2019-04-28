@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], storing data
 ms.assetid: 93744f46-bf78-4fa0-9640-1de01bc38d9a
 ms.openlocfilehash: 30d1c0ab91724ac556e59b272782513ee8b8067b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818539"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756599"
 ---
 # <a name="how-to-move-data-into-and-out-of-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) との間のデータを移動します。
 変数にデータを格納するには、代入ステートメントの左側にある変数名を置きます。  
@@ -19,7 +19,7 @@ ms.locfileid: "58818539"
   
 #### <a name="to-store-a-value-in-a-variable"></a>変数に値を格納するには  
   
--   代入ステートメントの左側にある変数名を使用します。  
+- 代入ステートメントの左側にある変数名を使用します。  
   
      次の例では、変数の値を設定する`alpha`します。  
   
@@ -34,11 +34,11 @@ ms.locfileid: "58818539"
   
 #### <a name="to-retrieve-a-value-from-a-variable"></a>変数から値を取得するには  
   
--   式の中で変数名を使用します。 変数を使用する任意の場所またはを使用できます、定数、リテラル、以外の定数の値を定義する式の中でします。  
+- 式の中で変数名を使用します。 変数を使用する任意の場所またはを使用できます、定数、リテラル、以外の定数の値を定義する式の中でします。  
   
      - または -  
   
--   等号の後、変数名を使用して (`=`)、代入ステートメントにサインインします。  
+- 等号の後、変数名を使用して (`=`)、代入ステートメントにサインインします。  
   
      次の例は、変数の値を読み取ります`startValue`し、変数の値を使用して`counter`式で。  
   

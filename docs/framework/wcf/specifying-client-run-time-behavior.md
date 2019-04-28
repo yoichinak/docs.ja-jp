@@ -8,11 +8,11 @@ helpviewer_keywords:
 - behaviors [WCF], system-provided client
 ms.assetid: d16d3405-be70-4edb-8f62-b5f614ddeca5
 ms.openlocfilehash: f750978eaa617a5505bb27a1535797320a76b0d4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164373"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935461"
 ---
 # <a name="specifying-client-run-time-behavior"></a>クライアントのランタイム動作の指定
 クライアント アプリケーションに合わせて実行時の動作を変更するのには、Windows Communication Foundation (WCF) サービスと同様、Windows Communication Foundation (WCF) クライアントを構成できます。 クライアントのランタイム動作を指定する際には、3 つの属性を使用できます。 双方向クライアント コールバック オブジェクトは、<xref:System.ServiceModel.CallbackBehaviorAttribute> 属性と <xref:System.ServiceModel.Description.CallbackDebugBehavior> 属性を使用して、そのランタイム動作を変更できます。 もう 1 つの属性 <xref:System.ServiceModel.Description.ClientViaBehavior> は、論理送信先を直接のネットワーク送信先と区別するために使用できます。 さらに、双方向クライアントのコールバック型では、サービス側の動作の一部を使用できます。 詳細については、次を参照してください。[サービスの実行時の動作を指定する](../../../docs/framework/wcf/specifying-service-run-time-behavior.md)します。  
@@ -32,9 +32,9 @@ ms.locfileid: "59164373"
   
  セキュリティの問題にかかわるので、以下を強くお勧めします。  
   
--   <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> プロパティの値を `true` に設定するには、アプリケーション構成ファイルを使用します。  
+- <xref:System.ServiceModel.Description.CallbackDebugBehavior.IncludeExceptionDetailInFaults%2A> プロパティの値を `true` に設定するには、アプリケーション構成ファイルを使用します。  
   
--   これは、制御されたデバッグ シナリオの場合に限って行います。  
+- これは、制御されたデバッグ シナリオの場合に限って行います。  
   
  次のコード例は、クライアントをクライアントからのマネージ例外情報をコールバック オブジェクト返す SOAP メッセージでの WCF に指示する構成ファイルを示します。  
   

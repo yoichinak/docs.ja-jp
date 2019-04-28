@@ -21,11 +21,11 @@ helpviewer_keywords:
 - Long data type
 ms.assetid: b4770c34-1804-4f8c-b512-c10b0893e516
 ms.openlocfilehash: ca0f95342783d22559761294ccea6056cd3e4fa7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918451"
 ---
 # <a name="long-data-type-visual-basic"></a>Long データ型 (Visual Basic)
 
@@ -68,13 +68,13 @@ Dim number = &H_0FAC_0326_1489_D68CL
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
--   **相互運用の考慮事項。** .NET Framework、例のオートメーションまたは COM オブジェクト用に作成されていないコンポーネントとやり取りする場合に注意している`Long`に他の環境は別のデータ幅 (32 ビット)。 このようなコンポーネントに 32 ビットの引数を渡す場合の宣言として`Integer`の代わりに`Long`で新しい Visual Basic コードです。  
+- **相互運用の考慮事項。** .NET Framework、例のオートメーションまたは COM オブジェクト用に作成されていないコンポーネントとやり取りする場合に注意している`Long`に他の環境は別のデータ幅 (32 ビット)。 このようなコンポーネントに 32 ビットの引数を渡す場合の宣言として`Integer`の代わりに`Long`で新しい Visual Basic コードです。  
   
--   **拡大します。** `Long`拡大変換後のデータ型`Decimal`、 `Single`、または`Double`します。 これは、`Long` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。  
+- **拡大します。** `Long`拡大変換後のデータ型`Decimal`、 `Single`、または`Double`します。 これは、`Long` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。  
   
--   **型宣言文字。** あるリテラルにリテラルの型文字 `L` を付けると、そのリテラルは `Long` に変換されます。 ある識別子に識別子の型文字 `&` を付けると、その識別子は整数型 (`Long`) に変換されます。  
+- **型宣言文字。** あるリテラルにリテラルの型文字 `L` を付けると、そのリテラルは `Long` に変換されます。 ある識別子に識別子の型文字 `&` を付けると、その識別子は整数型 (`Long`) に変換されます。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Int64?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Int64?displayProperty=nameWithType> 構造体です。  
 
 ## <a name="see-also"></a>関連項目
 

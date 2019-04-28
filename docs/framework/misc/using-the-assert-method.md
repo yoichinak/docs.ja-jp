@@ -19,11 +19,11 @@ ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61869014"
 ---
 # <a name="using-the-assert-method"></a>Assert メソッドの使用
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -43,19 +43,19 @@ ms.locfileid: "59073729"
   
  次の図を使用するときに起こる**Assert**します。 次のステートメントについて、アセンブリ A、B、C、E、および F が true であり、P1 と P1A という 2 つのアクセス許可があると仮定してください。  
   
--   P1A は C ドライブ上の .txt ファイルを読み取る権限を表します。  
+- P1A は C ドライブ上の .txt ファイルを読み取る権限を表します。  
   
--   P1 は C ドライブ上のすべてのファイルを読み取る権限を表します。  
+- P1 は C ドライブ上のすべてのファイルを読み取る権限を表します。  
   
--   P1A と P1 はどちらも**FileIOPermission**型、および P1A は P1 のサブセットです。  
+- P1A と P1 はどちらも**FileIOPermission**型、および P1A は P1 のサブセットです。  
   
--   アセンブリ E と F には P1A のアクセス許可が付与されています。  
+- アセンブリ E と F には P1A のアクセス許可が付与されています。  
   
--   アセンブリ C には P1 のアクセス許可が付与されています。  
+- アセンブリ C には P1 のアクセス許可が付与されています。  
   
--   アセンブリ A と B には P1 と P1A のアクセス許可のいずれも付与されていません。  
+- アセンブリ A と B には P1 と P1A のアクセス許可のいずれも付与されていません。  
   
--   メソッド A はアセンブリ A 内にあり、メソッド B はアセンブリ B 内にあり、以下同様です。  
+- メソッド A はアセンブリ A 内にあり、メソッド B はアセンブリ B 内にあり、以下同様です。  
   
  ![Assert メソッドのアセンブリを示す図。](./media/using-the-assert-method/assert-method-assemblies.gif)    
   

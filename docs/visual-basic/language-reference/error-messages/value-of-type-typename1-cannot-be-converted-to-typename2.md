@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
 ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766806"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>型の値 '\<typename1 >' に変換できません'\<typename2 >'。
 型の値 '\<typename1 >' に変換できません。'\<typename2 >'。 型の不一致は、ファイル参照とアセンブリへの参照をプロジェクトの混合によって生じた可能性があります '\<assemblyname >'。 ファイル参照を置き換えてください '\<filepath >' プロジェクトで'\<projectname1 >' への参照をプロジェクトに '\<projectname2 >'。  
@@ -57,7 +57,7 @@ ms.locfileid: "58829025"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   ファイル参照をプロジェクト参照を変更します。  
+- ファイル参照をプロジェクト参照を変更します。  
   
 ## <a name="see-also"></a>関連項目
 

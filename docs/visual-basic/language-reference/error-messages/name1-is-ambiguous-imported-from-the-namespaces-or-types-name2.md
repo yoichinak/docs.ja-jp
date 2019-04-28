@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30561
 ms.assetid: 761091f7-1018-4299-b481-3966a4a2c126
 ms.openlocfilehash: ed988547e0be3ef934c46d725c41646c3a75e626
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59339061"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918347"
 ---
 # <a name="name1-is-ambiguous-imported-from-the-namespaces-or-types-name2"></a>'\<name1 >' があいまい、名前空間または型からインポートされた\<name2 >'
 あいまいな名前を指定したため、別の名前と競合しています。 Visual Basic コンパイラには、競合の解決ルールはありません。名前は、自分で明確する必要があります。  

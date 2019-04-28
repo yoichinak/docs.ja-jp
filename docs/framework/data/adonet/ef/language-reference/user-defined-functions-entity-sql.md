@@ -3,11 +3,11 @@ title: ユーザー定義関数 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 3f9e6bbd-8e5a-43e1-809f-f8a61338e522
 ms.openlocfilehash: 4922e7fada676a6c26042236ccdb6315d6d455ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104625"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61879750"
 ---
 # <a name="user-defined-functions-entity-sql"></a>ユーザー定義関数 (Entity SQL)
 Entity SQL では、クエリ内でのユーザー定義関数の呼び出しがサポートされます。 これらのクエリを使用して関数をインラインを定義することができます (を参照してください[方法。ユーザー定義関数を呼び出す](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd490951(v=vs.100))) または概念モデルの一部として (を参照してください[方法。概念モデルでカスタム関数を定義](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456812(v=vs.100)))。 Entity SQL コマンドを概念モデルの関数が定義されている、 [DefiningExpression](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#definingexpression-element-csdl)の要素を[関数](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#function-element-csdl)概念モデル内の要素。  

@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
 ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935227"
 ---
 # <a name="bad-file-name-or-number"></a>ファイル名または番号が正しくありません。
 指定したファイルにアクセスしているときにエラーが発生しました。 このエラーの考えられる原因には。  
   
--   ステートメントで指定されていないファイルの名前または番号のファイルを参照して、`FileOpen`で指定されたステートメントまたはを`FileOpen`ステートメントは、その後が終了します。  
+- ステートメントで指定されていないファイルの名前または番号のファイルを参照して、`FileOpen`で指定されたステートメントまたはを`FileOpen`ステートメントは、その後が終了します。  
   
--   ステートメントは、ファイル番号の範囲外にある数値を持つファイルを参照します。  
+- ステートメントは、ファイル番号の範囲外にある数値を持つファイルを参照します。  
   
--   ステートメントを指すファイルの名前または番号が無効です。  
+- ステートメントを指すファイルの名前または番号が無効です。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   

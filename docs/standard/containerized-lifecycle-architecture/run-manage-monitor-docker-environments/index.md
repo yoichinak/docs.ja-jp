@@ -4,13 +4,8 @@ description: Microsoft プラットフォームとツールでコンテナー化
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 7c470a2d24b8807bdda10e1816bc5a430a5c63f1
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56834941"
 ---
+
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Docker 実稼働環境の実行、管理、および監視
 
 ビジョン:エンタープライズ アプリケーションを高可用性と高スケーラビリティを実行する必要があります。IT 運用は、環境とアプリケーション自体を管理および監視できる必要があります。

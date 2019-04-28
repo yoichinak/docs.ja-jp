@@ -5,18 +5,18 @@ f1_keywords:
 - vbrNetwork_BadConnectionTimeout
 ms.assetid: 15ac09a7-47f0-44f3-9e84-5bd10bd07450
 ms.openlocfilehash: 26510832d196aa6418112e3a00d73c7a1d3aef92
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58038773"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922773"
 ---
 # <a name="the-connectiontimeout-must-be-greater-than-0"></a>ConnectionTimeout は 0 より大きくなければなりません。
 アップロードとダウンロード ファイルと、 [My.Computer.Network](xref:Microsoft.VisualBasic.Devices.Network)を指定する必要があります、`connectionTimeout`より大きい`0`。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   `connectionTimeout` より大きい `0`をご指定ください。  
+- `connectionTimeout` より大きい `0`をご指定ください。  
   
 ## <a name="see-also"></a>関連項目
 

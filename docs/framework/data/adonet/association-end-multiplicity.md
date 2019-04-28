@@ -3,22 +3,22 @@ title: アソシエーション End の多重度
 ms.date: 03/30/2017
 ms.assetid: 340926ee-aefb-4bef-92cc-453e5251fd03
 ms.openlocfilehash: 59eed56204543adf405cfc7c71a49697a9e18374
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135032"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769666"
 ---
 # <a name="association-end-multiplicity"></a>アソシエーション End の多重度
 *アソシエーション end の多重度*の数を定義[エンティティ型](../../../../docs/framework/data/adonet/entity-type.md)の 1 つの end に存在できるインスタンス、[アソシエーション](../../../../docs/framework/data/adonet/association-type.md)します。  
   
  アソシエーション End の多重度には、次のいずれかの値を指定できます。  
   
--   1 (1):その 1 つのエンティティ型のインスタンスは、アソシエーション end に存在することを示します。  
+- 1 (1):その 1 つのエンティティ型のインスタンスは、アソシエーション end に存在することを示します。  
   
--   0 または 1 (0..1)。アソシエーション end に 0 個または 1 つのエンティティ型のインスタンスが存在することを示します。  
+- 0 または 1 (0..1)。アソシエーション end に 0 個または 1 つのエンティティ型のインスタンスが存在することを示します。  
   
--   多数 (\*)。アソシエーション end に 0、1、または複数のエンティティ型のインスタンスが存在することを示します。  
+- 多数 (\*)。アソシエーション end に 0、1、または複数のエンティティ型のインスタンスが存在することを示します。  
   
  アソシエーションは、多くの場合、そのアソシエーション End の多重度により特徴付けられます。 たとえば、アソシエーションの end が 1 つ (1) と多くの多重度である場合 (\*)、アソシエーションは一対多のアソシエーションと呼ばれます。 次の例で、`PublishedBy` アソシエーションは一対多のアソシエーションです (出版社が多くの書籍を出版し、書籍は 1 社の出版社により出版されます)。 `WrittenBy` アソシエーションは多対多のアソシエーションです (書籍の著者が複数の場合があり、著者は複数の書籍を執筆することができます)。  
   

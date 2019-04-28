@@ -11,11 +11,11 @@ helpviewer_keywords:
 - strings [Visual Basic], concatenating
 ms.assetid: fefc3d00-cbf1-475c-8c5e-6fb213b3f85a
 ms.openlocfilehash: dd85363447e9b405241d608550d9484b4760a739
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778587"
 ---
 # <a name="amp-operator-visual-basic"></a>&amp; 演算子 (Visual Basic)
 2 つの式の文字列の連結を生成します。  

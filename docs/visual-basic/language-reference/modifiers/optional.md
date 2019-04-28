@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
 ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920667"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 プロシージャが呼び出されたときにプロシージャの引数を省略できますを指定します。  
@@ -25,13 +25,13 @@ ms.locfileid: "58820790"
   
  `Optional` 修飾子は、次のコンテキストで使用できます。  
   
--   [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
 > [!NOTE]
 >  省略可能なパラメーターの有無、プロシージャを呼び出すときに、位置または名前で引数を渡すことができます。 詳細については、次を参照してください。[位置と名前による引数を渡す](../../../visual-basic/programming-guide/language-features/procedures/passing-arguments-by-position-and-by-name.md)します。  

@@ -18,11 +18,11 @@ helpviewer_keywords:
 - OnSerializingAttribute class, custom serialization
 ms.assetid: 12ed422d-5280-49b8-9b71-a2ed129c0384
 ms.openlocfilehash: 83538dc971419ad7918c16c5ccbd2003d16e2c6b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54627992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61931743"
 ---
 # <a name="custom-serialization"></a>カスタムのシリアル化
 カスタムのシリアル化は、型のシリアル化と逆シリアル化を制御するプロセスです。 シリアル化を制御することで、シリアル化の互換性を保証できます。つまり、型のコア機能を損なうことなく、1 つの型の複数のバージョン間でシリアル化および逆シリアル化を行うことができます。 たとえば、最初のバージョンの型では、フィールドが 2 つだけあるとします。 新しいバージョンでは、これにいくつかのフィールドが追加されています。 この場合、2 番目のバージョンのアプリケーションでは、両方の型をシリアル化および逆シリアル化できる必要があります。 以下のセクションでは、シリアル化の制御方法について説明します。
@@ -35,13 +35,13 @@ ms.locfileid: "54627992"
 ## <a name="running-custom-methods-during-and-after-serialization"></a>シリアル化時およびシリアル化後のカスタム メソッドの実行  
  ベスト プラクティスかつ最も簡単な方法 (.Net Framework Version 2.0 で導入されました) は、シリアル化時およびシリアル化後にデータを修正するための各メソッドに、以下の属性を適用することです。  
   
--   <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
+- <xref:System.Runtime.Serialization.OnDeserializingAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializedAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializedAttribute>  
   
--   <xref:System.Runtime.Serialization.OnSerializingAttribute>  
+- <xref:System.Runtime.Serialization.OnSerializingAttribute>  
   
  これらの属性を適用すると、シリアル化プロセスと逆シリアル化プロセスの 4 つのフェーズのうち、いずれか、またはすべてに型を参加させることができます。 これらの属性は、各フェーズで呼び出す必要がある型のメソッドを指定します。 これらのメソッドはシリアル化ストリームにはアクセスしませんが、これらを使用すると、シリアル化の前後、または逆シリアル化の前後にオブジェクトを変更できます。 これらの属性は型の継承階層の全レベルで適用でき、各メソッドは、基本クラスから最派生クラスまで、階層内で呼び出されます。 このしくみでは、最派生実装でシリアル化および逆シリアル化が行われるため、<xref:System.Runtime.Serialization.ISerializable> インターフェイスの実装の複雑性やその実装によって発生する問題が回避されます。 また、フォーマッタは、フィールド値の設定およびシリアル化ストリームからの取得を無視できます。 シリアル化および逆シリアル化の制御の詳細と例については、上記の各リンクをクリックしてください。  
   

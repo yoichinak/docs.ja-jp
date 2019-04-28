@@ -14,11 +14,11 @@ helpviewer_keywords:
 - Internet Explorer security settings [WPF]
 ms.assetid: ee1baea0-3611-4e36-9ad6-fcd5205376fb
 ms.openlocfilehash: 968913a52a1d86746498aed7c97b63594d346a31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313568"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61696912"
 ---
 # <a name="security-wpf"></a>セキュリティ (WPF)
 <a name="introduction"></a> Windows Presentation Foundation (WPF) スタンドアロン アプリケーションとブラウザーによってホストされるアプリケーションを開発する場合は、セキュリティ モデルを検討する必要があります。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] 無制限のアクセス許可を持つスタンドアロン アプリケーションの実行 ( [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] **FullTrust**アクセス許可セット) Windows インストーラー (.msi)、XCopy を使用してデプロイするかどうか、または[!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)]します。 部分的に信頼されたスタンドアロンの WPF アプリケーションを ClickOnce で展開することはサポートされていません。 ただし、完全に信頼されたホスト アプリケーションは部分的に信頼を作成できます<xref:System.AppDomain>.NET Framework アドイン モデルを使用します。 詳細については、次を参照してください。 [WPF アドインの概要](./app-development/wpf-add-ins-overview.md)します。  
@@ -31,17 +31,17 @@ ms.locfileid: "59313568"
   
  このトピックは、次のセクションで構成されています。  
   
--   [安全なナビゲーション](#SafeTopLevelNavigation)  
+- [安全なナビゲーション](#SafeTopLevelNavigation)  
   
--   [Web ブラウザーのセキュリティ設定](#InternetExplorerSecuritySettings)  
+- [Web ブラウザーのセキュリティ設定](#InternetExplorerSecuritySettings)  
   
--   [WebBrowser コントロールと機能コントロール](#webbrowser_control_and_feature_controls)  
+- [WebBrowser コントロールと機能コントロール](#webbrowser_control_and_feature_controls)  
   
--   [部分信頼クライアント アプリケーションに対する APTCA の無効化](#APTCA)  
+- [部分信頼クライアント アプリケーションに対する APTCA の無効化](#APTCA)  
   
--   [Loose XAML ファイルに対するサンドボックスの動作](#LooseContentSandboxing)  
+- [Loose XAML ファイルに対するサンドボックスの動作](#LooseContentSandboxing)  
   
--   [セキュリティを向上する WPF アプリケーションを開発するためのリソース](#BestPractices)  
+- [セキュリティを向上する WPF アプリケーションを開発するためのリソース](#BestPractices)  
   
 <a name="SafeTopLevelNavigation"></a>   
 ## <a name="safe-navigation"></a>安全なナビゲーション  
@@ -69,19 +69,19 @@ ms.locfileid: "59313568"
   
  これらのコンテンツ タイプのファイルは、ユーザーまたはプログラムを使用して移動できます。  
   
--   **ユーザー ナビゲーション**。 ユーザーが移動する をクリックして、<xref:System.Windows.Documents.Hyperlink>要素。  
+- **ユーザー ナビゲーション**。 ユーザーが移動する をクリックして、<xref:System.Windows.Documents.Hyperlink>要素。  
   
--   **プログラム ナビゲーション**。 設定して、ユーザーに関連するせず、アプリケーションに移動した、<xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>プロパティ。  
+- **プログラム ナビゲーション**。 設定して、ユーザーに関連するせず、アプリケーションに移動した、<xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>プロパティ。  
   
 <a name="Browser_Navigation_Security"></a>   
 ### <a name="browser-navigation-security"></a>ブラウザー ナビゲーションのセキュリティ  
  ブラウザー ナビゲーションは、次の条件の下でのみ安全と見なされます。  
   
--   **ユーザー ナビゲーション**。 ユーザーが移動する をクリックして、<xref:System.Windows.Documents.Hyperlink>メイン内にある要素<xref:System.Windows.Navigation.NavigationWindow>ではなく、入れ子になった<xref:System.Windows.Controls.Frame>。  
+- **ユーザー ナビゲーション**。 ユーザーが移動する をクリックして、<xref:System.Windows.Documents.Hyperlink>メイン内にある要素<xref:System.Windows.Navigation.NavigationWindow>ではなく、入れ子になった<xref:System.Windows.Controls.Frame>。  
   
--   **ゾーン**。 移動先のコンテンツが、インターネットまたはローカル イントラネット上に存在する。  
+- **ゾーン**。 移動先のコンテンツが、インターネットまたはローカル イントラネット上に存在する。  
   
--   **プロトコル**。 使用されているプロトコルが**http**、 **https**、**ファイル**、または**mailto**します。  
+- **プロトコル**。 使用されているプロトコルが**http**、 **https**、**ファイル**、または**mailto**します。  
   
  場合、[!INCLUDE[TLA2#tla_xbap](../../../includes/tla2sharptla-xbap-md.md)]これらの条件に準拠していない方法でコンテンツに移動しようとしています、<xref:System.Security.SecurityException>がスローされます。  
   
@@ -91,15 +91,15 @@ ms.locfileid: "59313568"
   
  [!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)] またはを実行する許可されている機能を構成できますメカニズムを提供します[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]次を含みます。  
   
--   .NET framework に依存するコンポーネント  
+- .NET framework に依存するコンポーネント  
   
--   ActiveX コントロールおよびプラグイン  
+- ActiveX コントロールおよびプラグイン  
   
--   ダウンロード  
+- ダウンロード  
   
--   [スクリプティング]  
+- [スクリプティング]  
   
--   ユーザー認証  
+- ユーザー認証  
   
  この方法でセキュリティで保護することができる機能のコレクションがのゾーンごとに構成されている、**インターネット**、**イントラネット**、**信頼済みサイト**、および**制限付きサイト**ゾーン。 次の手順では、セキュリティ設定の構成方法について説明します。  
   
@@ -122,9 +122,9 @@ ms.locfileid: "59313568"
   
  以降で[!INCLUDE[TLA#tla_ie7](../../../includes/tlasharptla-ie7-md.md)]、具体的には .NET Framework の次のセキュリティ設定が含まれています。  
   
--   **Loose XAML**。 コントロールかどうか[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]できますに移動し、疎[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]ファイル。 ([有効]、[無効]、および [ダイアログを表示する] オプション)。  
+- **Loose XAML**。 コントロールかどうか[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]できますに移動し、疎[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]ファイル。 ([有効]、[無効]、および [ダイアログを表示する] オプション)。  
   
--   **XAML ブラウザー アプリケーション**。 コントロールかどうか[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]に移動し、実行できる[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]します。 ([有効]、[無効]、および [ダイアログを表示する] オプション)。  
+- **XAML ブラウザー アプリケーション**。 コントロールかどうか[!INCLUDE[TLA2#tla_iegeneric](../../../includes/tla2sharptla-iegeneric-md.md)]に移動し、実行できる[!INCLUDE[TLA2#tla_xbap#plural](../../../includes/tla2sharptla-xbapsharpplural-md.md)]します。 ([有効]、[無効]、および [ダイアログを表示する] オプション)。  
   
  既定では、これらの設定はすべて有効になっているため、**インターネット**、**ローカル イントラネット**、および**信頼済みサイト**ゾーン、および無効にするに、**制限付きサイト**ゾーン。  
   
@@ -232,11 +232,11 @@ ms.locfileid: "59313568"
   
  このキーにより、APTCA アセンブリのエントリが設定されます。 また、アセンブリを有効または無効にする値をこのキーに作成する必要があります。 値の詳細を次に示します。  
   
--   値の名前:**APTCA_FLAG**します。  
+- 値の名前:**APTCA_FLAG**します。  
   
--   値の種類:**REG_DWORD**します。  
+- 値の種類:**REG_DWORD**します。  
   
--   値のデータ:**1** ; を無効にするには**0**有効にします。  
+- 値のデータ:**1** ; を無効にするには**0**有効にします。  
   
  部分信頼クライアント アプリケーションに対してアセンブリを無効にする必要がある場合は、レジストリ キーおよび値を作成する更新プログラムを作成します。  
   

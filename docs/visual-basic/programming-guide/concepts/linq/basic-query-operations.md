@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
 ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826198"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925649"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本的なクエリ操作 (Visual Basic)
 このトピックで説明を簡単に紹介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]Visual Basic、およびいくつかのクエリを実行する操作の一般的な種類の式。 詳細については、次のトピックを参照してください。  
@@ -81,7 +81,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
  データ ソースから複数のフィールドを選択するには、2 つの選択肢があります。  
   
--   `Select`句では、結果に含めるフィールドを指定します。 コンパイラは、それらのフィールドとしてそのプロパティを含む匿名型を定義します。 詳細については、「[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
+- `Select`句では、結果に含めるフィールドを指定します。 コンパイラは、それらのフィールドとしてそのプロパティを含む匿名型を定義します。 詳細については、「[匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/anonymous-types.md)」を参照してください。  
   
      次の例で返される要素は、匿名型のインスタンスであるため、参照できません型に名前で別の場所、コード内。 コンパイラの指定、型名には、通常の Visual Basic コードでは無効な文字が含まれています。 次の例では、クエリでは、によって返されるコレクション内の要素で`londonCusts4`匿名型のインスタンスであります。  
   
@@ -89,7 +89,7 @@ Where cust.City = "London" Or cust.City = "Paris"
   
      - または -  
   
--   結果に含まれるを作成し、型のインスタンスを初期化する特定のフィールドを含む名前付きの型を定義、`Select`句。 これらは、返される、コレクションの外部の個別の結果を使用する必要がある場合にのみ、またはメソッドの呼び出しでパラメーターとして渡すことがある場合は、このオプションを使用します。 型`londonCusts5`次の例では、IEnumerable (Of NamePhone)。  
+- 結果に含まれるを作成し、型のインスタンスを初期化する特定のフィールドを含む名前付きの型を定義、`Select`句。 これらは、返される、コレクションの外部の個別の結果を使用する必要がある場合にのみ、またはメソッドの呼び出しでパラメーターとして渡すことがある場合は、このオプションを使用します。 型`londonCusts5`次の例では、IEnumerable (Of NamePhone)。  
   
      [!code-vb[VbLINQBasicOps#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbLINQBasicOps/VB/Class1.vb#7)]  
   

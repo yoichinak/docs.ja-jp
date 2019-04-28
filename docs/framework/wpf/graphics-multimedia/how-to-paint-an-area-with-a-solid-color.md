@@ -7,11 +7,11 @@ helpviewer_keywords:
 - painting [WPF], with solid colors
 ms.assetid: 5d27d8a7-4bd7-4063-bdf3-2c5c0f19f9d3
 ms.openlocfilehash: c85ba72c858d155f29875bb944824db1c44ffaab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086846"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922630"
 ---
 # <a name="how-to-paint-an-area-with-a-solid-color"></a>方法: 純色で領域を塗りつぶす
 純色で領域を塗りつぶすに、使用できる、定義済みのシステム ブラシなど<xref:System.Windows.Media.Brushes.Red%2A>または<xref:System.Windows.Media.Brushes.Blue%2A>、新規に作成することができますか<xref:System.Windows.Media.SolidColorBrush>について説明してその<xref:System.Windows.Media.SolidColorBrush.Color%2A>アルファ、赤、緑、および青の値を使用して。 XAML では、16 進数表記を使用して、純色で領域を塗りつぶすこともできます。  
@@ -45,7 +45,7 @@ ms.locfileid: "59086846"
   
  **関連トピック**  
   
- <xref:System.Windows.Media.SolidColorBrush> やその他の例の詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。
+ 詳細については<xref:System.Windows.Media.SolidColorBrush>し、その他の例を参照してください、[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)の概要。  
   
  このコード例が示されている例の一部、<xref:System.Windows.Media.SolidColorBrush>クラス。 完全なサンプルについては、「[ブラシのサンプル](https://go.microsoft.com/fwlink/?LinkID=159973)」をご覧ください。  
   

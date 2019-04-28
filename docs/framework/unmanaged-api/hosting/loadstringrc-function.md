@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f17ecfe683de0739e4e1e063d38836eecf949336
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147000"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765311"
 ---
 # <a name="loadstringrc-function"></a>LoadStringRC 関数
 現在のスレッドの既定のカルチャを使用して、HRESULT 値をエラー メッセージに変換します。  

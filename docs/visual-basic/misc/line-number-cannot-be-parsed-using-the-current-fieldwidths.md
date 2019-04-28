@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
 ms.openlocfilehash: f3184f023ab4663d5616e3878420e3a75a7f3cde
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55262388"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922383"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>行\<数 > 現在の Fieldwidth を使用して解析できません
 指定された行のフィールドの幅が指定よりも大きいため、その行を解析できません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   行が正しく解析できるように `FieldWidths` を調整するか、またはその行を処理するために例外処理コードを挿入します。  
+- 行が正しく解析できるように `FieldWidths` を調整するか、またはその行を処理するために例外処理コードを挿入します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42017
 ms.assetid: 45f552c8-57c6-44c0-97d3-e510119b257a
 ms.openlocfilehash: 4fe79c74b6ff634223a4f10d8c5dc54bb77571cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921148"
 ---
 # <a name="late-bound-resolution-runtime-errors-could-occur"></a>遅延バインドの解決です。ランタイム エラーが発生する可能性があります。
 オブジェクトが宣言する変数に割り当てられている、 [Object Data Type](../../../visual-basic/language-reference/data-types/object-data-type.md)します。  
@@ -27,7 +27,7 @@ ms.locfileid: "58822289"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   可能であれば、特定の型の変数を宣言します。  
+- 可能であれば、特定の型の変数を宣言します。  
   
 ## <a name="see-also"></a>関連項目
 

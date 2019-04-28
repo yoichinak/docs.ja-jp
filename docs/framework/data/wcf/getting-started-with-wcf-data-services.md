@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WCF Data Services, getting started
 ms.assetid: c832fa5b-cf86-4690-be5a-a226c0e49530
 ms.openlocfilehash: c4d3ec4ac0dcd02bc7f7a1d28ba383708d1e3f86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765607"
 ---
 # <a name="getting-started-with-wcf-data-services"></a>WCF Data Services を使用した作業の開始
 このセクションのトピックで簡単に理解できるように[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]を使用する方法と[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)]公開および使用する[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]フィードを基になるテクノロジを説明します。 このセクションには、両方の概念的なコンテンツが含まれています。 および[クイック スタート](../../../../docs/framework/data/wcf/quickstart-wcf-data-services.md)チュートリアル。  

@@ -7,20 +7,20 @@ helpviewer_keywords:
 - service contracts [WCF], defining one-way
 ms.assetid: 19053a36-4492-45a3-bfe6-0365ee0205a3
 ms.openlocfilehash: 011bca07890e706b86f2a0b1dbf11acf77058548
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231280"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762489"
 ---
 # <a name="one-way-services"></a>一方向サービス
 サービス操作の既定の動作は、要求/応答パターンです。 要求/応答パターンでは、サービス操作がコードで `void` 型のメソッドとして表される場合であっても、クライアントは応答メッセージを待機します。 一方向操作では、メッセージが 1 つ送信されるだけです。 受信者は応答メッセージを送信せず、送信者もこれを待機しません。  
   
  一方向デザイン パターンは次の場合に使用します。  
   
--   クライアントが操作を呼び出す必要があり、操作レベルで操作の結果に影響を受けない場合。  
+- クライアントが操作を呼び出す必要があり、操作レベルで操作の結果に影響を受けない場合。  
   
--   <xref:System.ServiceModel.NetMsmqBinding> クラスまたは <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> クラスを使用している場合  (このシナリオの詳細については、次を参照してください[WCF のキュー](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)。  
+- <xref:System.ServiceModel.NetMsmqBinding> クラスまたは <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> クラスを使用している場合  (このシナリオの詳細については、次を参照してください[WCF のキュー](../../../../docs/framework/wcf/feature-details/queues-in-wcf.md)。)。  
   
  操作が一方向の場合、エラー情報をクライアントに伝達する応答メッセージはありません。 エラー状態を検出するには、信頼できるセッションのような基になるバインディングの機能を使用できます。また、2 つの一方向操作 (1 つは、サービス操作を呼び出すための、クライアントからサービスへの一方向コントラクト、もう 1 つは、クライアントが実装するコールバックを使用してサービスがエラーを返せるようにする、サービスとクライアントの間の一方向コントラクト) を使用する双方向サービス コントラクトをデザインすることもできます。  
   

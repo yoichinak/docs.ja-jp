@@ -16,11 +16,11 @@ helpviewer_keywords:
 - procedure scope [Visual Basic]
 ms.assetid: 208106fe-79c9-4eec-93c6-55f08548895f
 ms.openlocfilehash: 6139af65958cefe43578f436204fa6836a71de0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917840"
 ---
 # <a name="scope-in-visual-basic"></a>Visual Basic におけるスコープ
 *スコープ*一連の名前を修飾したり、を通じて利用できるようにせずに参照できるすべてのコードは、宣言された要素の[Imports ステートメント (.NET Namespace よぶ型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)します。 要素は、次のレベルのいずれかのスコープを設定できます。  
@@ -37,11 +37,11 @@ ms.locfileid: "58823546"
 ## <a name="specifying-scope-and-defining-variables"></a>スコープを指定して、変数を定義します。  
  宣言するときに、要素のスコープを指定します。 スコープは、次の要因によって異なります。  
   
--   要素を宣言するリージョン (ブロック、プロシージャ、モジュール、クラスまたは構造体)  
+- 要素を宣言するリージョン (ブロック、プロシージャ、モジュール、クラスまたは構造体)  
   
--   要素の宣言を含む名前空間  
+- 要素の宣言を含む名前空間  
   
--   要素の宣言するアクセス レベル  
+- 要素の宣言するアクセス レベル  
   
  これを行うため、名前が同じで、異なるスコープを持つ変数を定義するときに、注意してについては、予期しない結果につながります。 詳細については、「 [References to Declared Elements](../../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。  
   
@@ -51,21 +51,21 @@ ms.locfileid: "58823546"
 ### <a name="block-scope"></a>ブロック スコープ  
  ブロックを開始して、次の宣言ステートメントの終了で囲まれたステートメントのセットを示します。  
   
--   `Do` および `Loop`  
+- `Do` および `Loop`  
   
--   `For` [`Each`] と `Next`  
+- `For` [`Each`] と `Next`  
   
--   `If` および `End If`  
+- `If` および `End If`  
   
--   `Select` および `End Select`  
+- `Select` および `End Select`  
   
--   `SyncLock` および `End SyncLock`  
+- `SyncLock` および `End SyncLock`  
   
--   `Try` および `End Try`  
+- `Try` および `End Try`  
   
--   `While` および `End While`  
+- `While` および `End While`  
   
--   `With` および `End With`  
+- `With` および `End With`  
   
  ブロック内で変数を宣言する場合は、そのブロック内でのみ使用できます。 次の例では、整数変数のスコープで`cube`間ブロック`If`と`End If`を参照することが不要になったと`cube`ブロックからの実行のパスとします。  
   
@@ -127,9 +127,9 @@ Public strMsg As String
 ### <a name="advantages-of-local-variables"></a>ローカル変数の利点  
  ローカル変数では、任意の種類の一時的な計算は、適切な選択が、次の理由です。  
   
--   **名前の競合を回避することです。** ローカルの変数名が競合を受けやすくなります。 たとえば、という名前の変数を含むいくつかの異なる手順を作成できます`intTemp`します。 それぞれ`intTemp`各プロシージャに独自のバージョンのみが認識されるローカル変数として宣言されての`intTemp`します。 任意の 1 つのプロシージャは、ローカルの値を変更できます`intTemp`影響を与えずに`intTemp`他のプロシージャでの変数。  
+- **名前の競合を回避することです。** ローカルの変数名が競合を受けやすくなります。 たとえば、という名前の変数を含むいくつかの異なる手順を作成できます`intTemp`します。 それぞれ`intTemp`各プロシージャに独自のバージョンのみが認識されるローカル変数として宣言されての`intTemp`します。 任意の 1 つのプロシージャは、ローカルの値を変更できます`intTemp`影響を与えずに`intTemp`他のプロシージャでの変数。  
   
--   **メモリ使用量。** ローカル変数は、そのプロシージャが実行中にのみ、メモリを消費します。 プロシージャが呼び出し元のコードに返されるときに、メモリは解放されます。 これに対し、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)と[静的](../../../../visual-basic/language-reference/modifiers/static.md)変数がメモリ リソースを消費するアプリケーションの実行が停止されるまで、そのために必要な場合にのみ使用します。 *インスタンス変数*間メモリを消費、インスタンスが存在しているローカル変数よりも効率的ですよりも非効率`Shared`または`Static`変数。  
+- **メモリ使用量。** ローカル変数は、そのプロシージャが実行中にのみ、メモリを消費します。 プロシージャが呼び出し元のコードに返されるときに、メモリは解放されます。 これに対し、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md)と[静的](../../../../visual-basic/language-reference/modifiers/static.md)変数がメモリ リソースを消費するアプリケーションの実行が停止されるまで、そのために必要な場合にのみ使用します。 *インスタンス変数*間メモリを消費、インスタンスが存在しているローカル変数よりも効率的ですよりも非効率`Shared`または`Static`変数。  
   
 ### <a name="minimizing-scope"></a>スコープを最小限に抑える  
  一般に、任意の変数または定数を宣言するときをお勧めできるだけスコープを作成するプログラミング手法 (ブロック スコープでは、最も狭い)。 これにより、メモリを節約でき、不正な変数を誤って参照するコードの可能性を最小限に抑えられます。 同様に、ある変数を宣言する必要があります[静的](../../../../visual-basic/language-reference/modifiers/static.md)プロシージャ呼び出しの間には、その値を保持するために必要な場合のみです。  

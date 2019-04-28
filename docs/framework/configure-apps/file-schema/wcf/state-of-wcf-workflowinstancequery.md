@@ -3,11 +3,11 @@ title: <state> WCF の <workflowInstanceQuery>
 ms.date: 03/30/2017
 ms.assetid: 40f21055-766c-4be9-86c4-d1d899007098
 ms.openlocfilehash: 1615c83ffe0735d9e55e822f2651da41d02b1610
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270854"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61757964"
 ---
 # <a name="state-of-wcf-workflowinstancequery"></a>\<状態 > WCF の\<workflowInstanceQuery >
 追跡レコードが作成されたときの追跡ワークフロー インスタンスの定期受信済み状態のコレクションを表します。  
@@ -73,14 +73,14 @@ ms.locfileid: "55270854"
 |状態|説明|  
 |-----------|-----------------|  
 |Aborted|ワークフロー インスタンスは中止されました。|  
-|Completed|ワークフロー インスタンスは完了しました。|  
+|完了|ワークフロー インスタンスは完了しました。|  
 |Deleted|ワークフロー インスタンスは削除されました。|  
 |Idle|ワークフロー インスタンスはアイドル状態です。|  
 |Persisted|ワークフロー インスタンスは永続化されました。|  
 |Resumed|ワークフロー インスタンスが再開されました。|  
-|Started|ワークフロー インスタンスが開始されました。|  
+|開始|ワークフロー インスタンスが開始されました。|  
 |UnhandledException|ワークフロー インスタンスで未処理の例外が発生しました。|  
-|アンロード|ワークフロー インスタンスはアンロードされました。|  
+|アンロードされました|ワークフロー インスタンスはアンロードされました。|  
 |Canceled|ワークフロー インスタンスは取り消されました。|  
 |Suspended|ワークフロー インスタンスが中断されています。|  
 |Terminated|ワークフロー インスタンスは終了しました。|  

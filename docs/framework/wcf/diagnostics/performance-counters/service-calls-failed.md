@@ -3,11 +3,11 @@ title: サービス:失敗した呼び出し
 ms.date: 03/30/2017
 ms.assetid: 6f688ff4-05ab-4528-98c9-99a6ace28ec6
 ms.openlocfilehash: 8c06f3d2365ac454be00a2f47037a3173dd75f89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145731"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61915734"
 ---
 # <a name="service-calls-failed"></a>サービス:失敗した呼び出し
 カウンター名:呼び出しが失敗しました。  

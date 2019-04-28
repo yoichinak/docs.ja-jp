@@ -11,11 +11,11 @@ helpviewer_keywords:
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
 ms.openlocfilehash: 79eae4d37c056fc95ac73c78e00dd1a2b68bcd24
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61937684"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>方法: 描画する Graphics オブジェクトを作成する
 直線と図形を描画することができます、前に、テキストのレンダリングまたは表示し、操作を使用したイメージ[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、作成する必要がある、<xref:System.Drawing.Graphics>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトが表す、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]描画面、およびグラフィカル イメージを作成するために使用するオブジェクトです。  
@@ -31,15 +31,15 @@ ms.locfileid: "59324202"
   
 #### <a name="to-create-a-graphics-object"></a>グラフィックス オブジェクトを作成するには  
   
--   一部として、グラフィックス オブジェクトへの参照を受け取る、<xref:System.Windows.Forms.PaintEventArgs>で、<xref:System.Windows.Forms.Control.Paint>フォームまたはコントロールのイベント。 これは、グラフィックス オブジェクトへの参照を取得する方法、コントロールの描画コードを作成するときに、通常は。 同様に、取得することも、グラフィックス オブジェクトのプロパティとして、<xref:System.Drawing.Printing.PrintPageEventArgs>処理するときに、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベントを<xref:System.Drawing.Printing.PrintDocument>します。  
+- 一部として、グラフィックス オブジェクトへの参照を受け取る、<xref:System.Windows.Forms.PaintEventArgs>で、<xref:System.Windows.Forms.Control.Paint>フォームまたはコントロールのイベント。 これは、グラフィックス オブジェクトへの参照を取得する方法、コントロールの描画コードを作成するときに、通常は。 同様に、取得することも、グラフィックス オブジェクトのプロパティとして、<xref:System.Drawing.Printing.PrintPageEventArgs>処理するときに、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベントを<xref:System.Drawing.Printing.PrintDocument>します。  
   
      - または -  
   
--   呼び出す、<xref:System.Windows.Forms.Control.CreateGraphics%2A>コントロールまたはフォームへの参照を取得する方法、<xref:System.Drawing.Graphics>コントロールまたはフォームの描画サーフェイスを表すオブジェクト。 フォームまたは既に存在しているコントロールを描画する場合は、このメソッドを使用します。  
+- 呼び出す、<xref:System.Windows.Forms.Control.CreateGraphics%2A>コントロールまたはフォームへの参照を取得する方法、<xref:System.Drawing.Graphics>コントロールまたはフォームの描画サーフェイスを表すオブジェクト。 フォームまたは既に存在しているコントロールを描画する場合は、このメソッドを使用します。  
   
      - または -  
   
--   作成、<xref:System.Drawing.Graphics>オブジェクトから継承する任意のオブジェクトから<xref:System.Drawing.Image>します。 この方法は、既存のイメージを変更するときに便利です。  
+- 作成、<xref:System.Drawing.Graphics>オブジェクトから継承する任意のオブジェクトから<xref:System.Drawing.Image>します。 この方法は、既存のイメージを変更するときに便利です。  
   
      次のセクションでは、これらの各プロセスの詳細を提供します。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "59324202"
   
 #### <a name="to-create-a-graphics-object-with-the-creategraphics-method"></a>CreateGraphics メソッドを使用して、グラフィックス オブジェクトを作成するには  
   
--   呼び出す、<xref:System.Windows.Forms.Control.CreateGraphics%2A>なるグラフィックスをレンダリングするフォームまたはコントロールのメソッド。  
+- 呼び出す、<xref:System.Windows.Forms.Control.CreateGraphics%2A>なるグラフィックスをレンダリングするフォームまたはコントロールのメソッド。  
   
     ```vb  
     Dim g as Graphics  
@@ -122,7 +122,7 @@ ms.locfileid: "59324202"
   
 #### <a name="to-create-a-graphics-object-from-an-image"></a>イメージから Graphics オブジェクトを作成するには  
   
--   呼び出す、<xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType>メソッドを作成したいイメージの変数の名前を指定して、<xref:System.Drawing.Graphics>オブジェクト。  
+- 呼び出す、<xref:System.Drawing.Graphics.FromImage%2A?displayProperty=nameWithType>メソッドを作成したいイメージの変数の名前を指定して、<xref:System.Drawing.Graphics>オブジェクト。  
   
      次の例は、使用する方法を示します、<xref:System.Drawing.Bitmap>オブジェクト。  
   
@@ -149,17 +149,17 @@ ms.locfileid: "59324202"
 ## <a name="drawing-and-manipulating-shapes-and-images"></a>描画と図形と画像の操作  
  作成した後、<xref:System.Drawing.Graphics>オブジェクトは、直線と図形の描画、テキストのレンダリングまたは表示、およびイメージを操作するために使用可能性があります。 使用されるプリンシパルのオブジェクト、<xref:System.Drawing.Graphics>オブジェクトには。  
   
--   <xref:System.Drawing.Pen>クラス: 線を描画、図形のアウトラインまたは他の幾何学的表現のレンダリングに使用します。  
+- <xref:System.Drawing.Pen>クラス: 線を描画、図形のアウトラインまたは他の幾何学的表現のレンダリングに使用します。  
   
--   <xref:System.Drawing.Brush>クラス、塗りつぶされた図形、イメージ、テキストなどのグラフィックスの領域を塗りつぶすときのために使用します。  
+- <xref:System.Drawing.Brush>クラス、塗りつぶされた図形、イメージ、テキストなどのグラフィックスの領域を塗りつぶすときのために使用します。  
   
--   <xref:System.Drawing.Font>クラス-テキストのレンダリング時に使用する図形の内容の説明を提供します。  
+- <xref:System.Drawing.Font>クラス-テキストのレンダリング時に使用する図形の内容の説明を提供します。  
   
--   <xref:System.Drawing.Color>構造体などを表示するさまざまな色を表します。  
+- <xref:System.Drawing.Color>構造体などを表示するさまざまな色を表します。  
   
 #### <a name="to-use-the-graphics-object-you-have-created"></a>作成したグラフィック オブジェクトを使用するには  
   
--   必要なものを描画するために上記の適切なオブジェクトを使用します。  
+- 必要なものを描画するために上記の適切なオブジェクトを使用します。  
   
      詳細については、次のトピックを参照してください。  
   

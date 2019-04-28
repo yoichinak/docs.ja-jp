@@ -3,11 +3,11 @@ title: LINQ to XML プログラミングの概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: a7c07d0a-1fae-4610-ae51-56dd7075cc14
 ms.openlocfilehash: 741a9bff54f856d7283cae8c748047d24c0377a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920277"
 ---
 # <a name="linq-to-xml-programming-overview-visual-basic"></a>LINQ to XML プログラミングの概要 (Visual Basic)
 以下のトピックでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] クラスに関する概要情報と、最も重要な 3 つのクラスに関する詳細情報について説明します。  

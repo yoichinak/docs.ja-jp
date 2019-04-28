@@ -3,20 +3,20 @@ title: メッセージ フローの概要
 ms.date: 03/30/2017
 ms.assetid: fb0899e1-84cc-4d90-b45b-dc5a50063943
 ms.openlocfilehash: d75a535a601612196ef66151a4685723e048848f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797484"
 ---
 # <a name="message-flow-overview"></a>メッセージ フローの概要
 相互接続されたサービスを持つ分散システムでは、サービス間の因果関係を調べる必要があります。 状態監視、トラブルシューティング、根本原因分析などの重要なシナリオをサポートするには、要求フローに含まれるさまざまなコンポーネントを理解することが重要です。 .NET Framework 4 では、多様なサービス間でトレースを関連付けることができるように、次の機能のサポートが追加されています。
 
--   分析トレース:高パフォーマンスと Event Tracing for Windows (ETW) を使用して、詳細度は低いトレース機能。
+- 分析トレース:高パフォーマンスと Event Tracing for Windows (ETW) を使用して、詳細度は低いトレース機能。
 
--   WCF/WF サービス用のエンド ツー エンド アクティビティ モデル:この機能によって生成されたトレースの相関関係をサポートする、<xref:System.ServiceModel>と<xref:System.Workflow.ComponentModel>名前空間。
+- WCF/WF サービス用のエンド ツー エンド アクティビティ モデル:この機能によって生成されたトレースの相関関係をサポートする、<xref:System.ServiceModel>と<xref:System.Workflow.ComponentModel>名前空間。
 
--   WF の ETW 追跡:この機能は、ワークフローの現在の状態と進行状況を可視化を提供するのに WF サービスによって生成された追跡レコードを使用します。
+- WF の ETW 追跡:この機能は、ワークフローの現在の状態と進行状況を可視化を提供するのに WF サービスによって生成された追跡レコードを使用します。
 
  追跡レコードまたはトレース レコードに記録されたエラーを使用して、コード障害や誤った形式のメッセージを検出できます。 エラー状態のアクティビティの特定には、イベントのメッセージ ヘッダーにある Correlation ノードの ActivityId プロパティを使用することができます。 アクティビティの ID でメッセージ フローのトレースを有効にするのを参照してください。 [Configuring Message Flow Tracing](../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)します。 このトピックでは、チュートリアル入門で作成されたプロジェクトでメッセージ フローのトレースを有効にする方法を示します。
 

@@ -3,11 +3,11 @@ title: 1039 - ExitNoPersistBlock
 ms.date: 03/30/2017
 ms.assetid: 3b46ea28-3ee0-43eb-96ff-a6d696da87f8
 ms.openlocfilehash: b456ed3ab1b26946e2682b1b121949fee6a35b31
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33510871"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61924463"
 ---
 # <a name="1039---exitnopersistblock"></a>1039 - ExitNoPersistBlock
 ## <a name="properties"></a>プロパティ  
@@ -25,7 +25,7 @@ ms.locfileid: "33510871"
 ## <a name="message"></a>メッセージ  
  no persist ブロックを終了します。  
   
-## <a name="details"></a>詳細  
+## <a name="details"></a>説明  
   
 |データ項目名|データ項目の型|説明|  
 |--------------------|--------------------|-----------------|  

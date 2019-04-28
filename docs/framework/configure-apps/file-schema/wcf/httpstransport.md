@@ -3,11 +3,11 @@ title: <httpsTransport>
 ms.date: 03/30/2017
 ms.assetid: f6ed4bc0-7e38-4348-9259-30bf61eb9435
 ms.openlocfilehash: c7e4dc540458bbfb69318d2f14cfa9776f444c55
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172823"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755117"
 ---
 # <a name="httpstransport"></a>\<httpsTransport>
 カスタム バインディングの SOAP メッセージを送信する HTTP トランスポートを指定します。  

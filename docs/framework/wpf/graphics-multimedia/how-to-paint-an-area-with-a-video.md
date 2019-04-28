@@ -10,11 +10,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with a video
 ms.assetid: 04dd6600-4a6e-4b43-a93e-21cce7dfbcb8
 ms.openlocfilehash: be09d1310847cd7214ea795a704c25d994f07b7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151178"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921733"
 ---
 # <a name="how-to-paint-an-area-with-a-video"></a>方法: ビデオを使用して領域を塗りつぶす
 この例では、メディアで領域を塗りつぶす方法を示します。 メディアで領域を塗りつぶす方法の 1 つが使用するには、<xref:System.Windows.Controls.MediaElement>と共に、<xref:System.Windows.Media.VisualBrush>します。 使用して、<xref:System.Windows.Controls.MediaElement>ロードし、メディアの再生設定に使用すること、<xref:System.Windows.Media.VisualBrush.Visual%2A>のプロパティ、<xref:System.Windows.Media.VisualBrush>します。 使用することができますし、<xref:System.Windows.Media.VisualBrush>読み込まれたメディアを使用して領域を描画します。  

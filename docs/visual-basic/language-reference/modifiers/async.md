@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Async keyword [Visual Basic]
 ms.assetid: 1be8b4b5-9689-41b5-bd33-b906bfd53bc5
 ms.openlocfilehash: ad6d671a45cee7d534347d23963bb5035ecc8dac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802714"
 ---
 # <a name="async-visual-basic"></a>Async (Visual Basic)
 `Async`修飾子には、ことを示します、メソッドまたは[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)は非同期ですが変更されます。 このようなメソッドとして参照されます*非同期メソッド*します。  

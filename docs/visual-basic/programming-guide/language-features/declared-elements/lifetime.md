@@ -11,11 +11,11 @@ helpviewer_keywords:
 - lifetime [Visual Basic]
 ms.assetid: bd91e390-690a-469a-9946-8dca70bc14e7
 ms.openlocfilehash: 7a8730834c5241ddb1271d689cdda8942741f15f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61917931"
 ---
 # <a name="lifetime-in-visual-basic"></a>Visual Basic における有効期間
 *有効期間*宣言された要素は、一定期間その中に、使用可能です。 変数は、有効期間を持つ要素ののみです。 このため、コンパイラは、プロシージャのパラメーターと変数の特殊なケースとして関数を返します。 変数の有効期間は、値を保持できる期間を表します。 その有効期間、その値を変更できますが、いくつかの値を常に保持します。  

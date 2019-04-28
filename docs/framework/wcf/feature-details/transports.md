@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Windows Communication Foundation, transports
 ms.assetid: 005c894b-af70-48aa-a1c1-c99338083c27
 ms.openlocfilehash: 6bb8e8b90c26533661684bd403b9ec439f1bb37e
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33498125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61933732"
 ---
 # <a name="transports-in-windows-communication-foundation"></a>Windows Communication Foundation のトランスポート
 トランスポート層は、チャネル スタックの最も低いレベルにあります。 Windows Communication Foundation (WCF) を使用する主なトランスポートは、HTTP、HTTPS、TCP、および名前付きパイプです。 このセクションのトピックでは、このようなトランスポートの選択、トランスポートの構成、およびチューニング プロパティの設定について説明します。  
   
- WCF には、追加のトランスポートが含まれています。 トランスポートのメッセージ キュー (MSMQ とも呼ばれます) については、次を参照してください。[キューと信頼できるセッション](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)です。 ピア ツー ピアのトランスポートの詳細については、次を参照してください。[ピア ツー ピア ネットワー キング](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)です。  
+ WCF には、追加のトランスポートが含まれています。 メッセージ キュー (MSMQ とも呼ばれます) トランスポートの詳細については、次を参照してください。 [Queues and Reliable Sessions](../../../../docs/framework/wcf/feature-details/queues-and-reliable-sessions.md)します。 ピア ツー ピア トランスポートについては、次を参照してください。[ピア ツー ピア ネットワー キング](../../../../docs/framework/wcf/feature-details/peer-to-peer-networking.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [トランスポートの選択](../../../../docs/framework/wcf/feature-details/choosing-a-transport.md)  
@@ -29,9 +29,9 @@ ms.locfileid: "33498125"
  ストリーミングが行われるようにトランスポート層を構成する方法について説明します。  
   
  [HTTP および HTTPS の構成](../../../../docs/framework/wcf/feature-details/configuring-http-and-https.md)  
- HTTP および HTTPS トランスポート バインド要素の構成方法について説明します。  
+ HTTP および HTTPS トランスポート バインディング要素の構成方法について説明します。  
   
- [方法 : WCF URL 予約を制限付きの予約に置き換える](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
+ [方法: 制限付きの予約 WCF URL 予約に置き換える](../../../../docs/framework/wcf/feature-details/how-to-replace-the-wcf-url-reservation-with-a-restricted-reservation.md)  
  制限付き WCFURL 予約を使用する方法について説明します。  
   
  [トランスポート クォータ](../../../../docs/framework/wcf/feature-details/transport-quotas.md)  

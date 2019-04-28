@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
 ms.openlocfilehash: f0802365ed07bdb57111d1b28e8d7ddfd800d41b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61929598"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation の基本概念
 このドキュメントでは、Windows Communication Foundation (WCF) のアーキテクチャの概要を説明します。 ここでは、主要概念およびこれらの概念がどのように組み合わされているかについて説明します。 最も単純な WCF サービスとクライアントの作成に関するチュートリアルについては、次を参照してください。[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)します。 WCF プログラミングについては、次を参照してください。[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)します。  
@@ -34,11 +34,11 @@ ms.locfileid: "59122305"
   
  通信スタックのもう 1 つの必須要素はエンコードです。エンコードは、特定のメッセージをどのように書式設定するかを指定します。 WCF には、次のエンコードが用意されています。  
   
--   テキスト エンコード。相互運用可能なエンコードです。  
+- テキスト エンコード。相互運用可能なエンコードです。  
   
--   MTOM (Message Transmission Optimization Mechanism) エンコード。これは、サービスとの間で構造化されていないバイナリ データを効率的に送信するための相互運用可能な方法です。  
+- MTOM (Message Transmission Optimization Mechanism) エンコード。これは、サービスとの間で構造化されていないバイナリ データを効率的に送信するための相互運用可能な方法です。  
   
--   バイナリ エンコード。このエンコードを使用すると、転送を効率的に行うことができます。  
+- バイナリ エンコード。このエンコードを使用すると、転送を効率的に行うことができます。  
   
  WCF の組み込み拡張ポイントを使用して、複数のエンコード メカニズムが (たとえば、圧縮エンコード) を追加できます。  
   

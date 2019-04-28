@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36563
 ms.assetid: 3ca8b873-e98d-419b-95f2-d75bd2a9eb6c
 ms.openlocfilehash: 925a17bef5147a5679a076af1801bdd305dd5bad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921031"
 ---
 # <a name="method-does-not-have-a-signature-compatible-with-the-delegate"></a>メソッドに、デリゲートと互換性のあるシグネチャがありません。
 メソッドのシグネチャとデリゲートを使用しようとすると、非互換性があります。 `Delegate` ステートメントでは、デリゲート クラスのパラメーターの型と戻り値の型を定義します。 プロシージャが互換性のある型パラメーターに一致して、戻り値の型は、このデリゲート型のインスタンスを作成する使用できます。  

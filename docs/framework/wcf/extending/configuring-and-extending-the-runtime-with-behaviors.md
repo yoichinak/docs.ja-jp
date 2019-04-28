@@ -5,11 +5,11 @@ helpviewer_keywords:
 - attaching extensions using behaviors [WCF]
 ms.assetid: 149b99b6-6eb6-4f45-be22-c967279677d9
 ms.openlocfilehash: 71057ec219f46cb8b51eb9b44d8b93af540d1b01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923280"
 ---
 # <a name="configuring-and-extending-the-runtime-with-behaviors"></a>動作を使用したランタイムの構成と拡張
 ビヘイビアーを使用すると、既定の動作を変更し、検査またはサービス構成を検証および Windows Communication Foundation (WCF) クライアントとサービス アプリケーションのランタイム動作を変更するカスタム拡張機能を追加できます。 ここでは、動作インターフェイスとその実装方法について説明します。また、動作インターフェイスをサービスの説明 (サービス アプリケーションの場合) またはエンドポイント (クライアント アプリケーションの場合) にプログラムによって追加する方法と、構成ファイル内で追加する方法についても説明します。 詳細については、システム指定の動作を使用して、次を参照してください。[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md)と[クライアントの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-client-run-time-behavior.md)します。  
@@ -20,11 +20,11 @@ ms.locfileid: "59768203"
 ### <a name="behavior-methods"></a>動作メソッド  
  すべての動作が、`AddBindingParameters`メソッド、`ApplyDispatchBehavior`メソッド、`Validate`メソッド、および`ApplyClientBehavior`例外が 1 つのメソッド。<xref:System.ServiceModel.Description.IServiceBehavior>を実行できません実装していないクライアントでは、`ApplyClientBehavior`します。  
   
--   カスタム オブジェクトを変更したり、ランタイム構築時に使用するためにカスタム バインディングがアクセスできるコレクションにカスタム オブジェクトを追加したりするには、`AddBindingParameters` メソッドを使用します。 たとえば、これによって、チャネルを構築する方法に影響するが、チャネル開発者には知られていない保護要件を指定します。  
+- カスタム オブジェクトを変更したり、ランタイム構築時に使用するためにカスタム バインディングがアクセスできるコレクションにカスタム オブジェクトを追加したりするには、`AddBindingParameters` メソッドを使用します。 たとえば、これによって、チャネルを構築する方法に影響するが、チャネル開発者には知られていない保護要件を指定します。  
   
--   説明ツリーと対応するランタイム オブジェクトを検査し、特定の基準セットに従っていることを確認するには、`Validate` メソッドを使用します。  
+- 説明ツリーと対応するランタイム オブジェクトを検査し、特定の基準セットに従っていることを確認するには、`Validate` メソッドを使用します。  
   
--   説明ツリーを検査し、サービスまたはクライアントの特定のスコープのランタイムを変更するには、`ApplyDispatchBehavior` メソッドと `ApplyClientBehavior` メソッドを使用します。 また、拡張オブジェクトを挿入することもできます。  
+- 説明ツリーを検査し、サービスまたはクライアントの特定のスコープのランタイムを変更するには、`ApplyDispatchBehavior` メソッドと `ApplyClientBehavior` メソッドを使用します。 また、拡張オブジェクトを挿入することもできます。  
   
     > [!NOTE]
     >  これらのメソッドでは説明ツリーが提供されますが、説明ツリーは検査にのみ使用します。 説明ツリーを変更すると、動作は未定義の状態になります。  
@@ -38,13 +38,13 @@ ms.locfileid: "59768203"
   
  WCF での動作の 4 つの種類があります。  
   
--   サービスの動作 (<xref:System.ServiceModel.Description.IServiceBehavior> 型) : <xref:System.ServiceModel.ServiceHostBase> を含むサービス ランタイム全体のカスタマイズを実現します。  
+- サービスの動作 (<xref:System.ServiceModel.Description.IServiceBehavior> 型) : <xref:System.ServiceModel.ServiceHostBase> を含むサービス ランタイム全体のカスタマイズを実現します。  
   
--   エンドポイントの動作 (<xref:System.ServiceModel.Description.IEndpointBehavior> 型) : サービス エンドポイントと、関連する <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> オブジェクトのカスタマイズを実現します。  
+- エンドポイントの動作 (<xref:System.ServiceModel.Description.IEndpointBehavior> 型) : サービス エンドポイントと、関連する <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> オブジェクトのカスタマイズを実現します。  
   
--   コントラクトの動作 (<xref:System.ServiceModel.Description.IContractBehavior> 型) : <xref:System.ServiceModel.Dispatcher.ClientRuntime> クラス (クライアント アプリケーションの場合) と、<xref:System.ServiceModel.Dispatcher.DispatchRuntime> クラス (サービス アプリケーションの場合) のカスタマイズを実現します。  
+- コントラクトの動作 (<xref:System.ServiceModel.Description.IContractBehavior> 型) : <xref:System.ServiceModel.Dispatcher.ClientRuntime> クラス (クライアント アプリケーションの場合) と、<xref:System.ServiceModel.Dispatcher.DispatchRuntime> クラス (サービス アプリケーションの場合) のカスタマイズを実現します。  
   
--   操作の動作 (<xref:System.ServiceModel.Description.IOperationBehavior> 型) : <xref:System.ServiceModel.Dispatcher.ClientOperation> クラス (クライアントの場合) と、<xref:System.ServiceModel.Dispatcher.DispatchOperation> クラス (サービスの場合) のカスタマイズを実現します。  
+- 操作の動作 (<xref:System.ServiceModel.Description.IOperationBehavior> 型) : <xref:System.ServiceModel.Dispatcher.ClientOperation> クラス (クライアントの場合) と、<xref:System.ServiceModel.Dispatcher.DispatchOperation> クラス (サービスの場合) のカスタマイズを実現します。  
   
  カスタム属性を実装するか、アプリケーション構成ファイルを使用することにより、これらの動作をさまざまな説明オブジェクトに追加できます。また、適切な説明オブジェクトの動作コレクションに直接追加することもできます。 ただし、<xref:System.ServiceModel.ICommunicationObject.Open%2A?displayProperty=nameWithType> または <xref:System.ServiceModel.ServiceHost> で <xref:System.ServiceModel.ChannelFactory%601> を呼び出す前に、サービス説明オブジェクトまたはサービス エンドポイント説明オブジェクトに追加する必要があります。  
   

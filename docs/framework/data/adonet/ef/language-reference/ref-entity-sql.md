@@ -3,11 +3,11 @@ title: REF (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: c5f4cb35-69e9-44cc-b63b-ee38922bbda1
 ms.openlocfilehash: 05e687f951930d92797a863410181585278b067d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797762"
 ---
 # <a name="ref-entity-sql"></a>REF (Entity SQL)
 エンティティ インスタンスへの参照を返します。  

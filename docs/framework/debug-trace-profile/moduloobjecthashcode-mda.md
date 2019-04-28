@@ -13,11 +13,11 @@ ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170782"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753811"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` マネージド デバッグ アシスタント (MDA) は、<xref:System.Object.GetHashCode%2A> メソッドによって返されるハッシュ コードに対してモジュロ演算を実行するように、<xref:System.Object> クラスの動作を変更します。 この MDA の既定の係数は 1 であり、これにより <xref:System.Object.GetHashCode%2A> はすべてのオブジェクトに対して 0 を返すようになります。  
@@ -25,13 +25,13 @@ ms.locfileid: "59170782"
 ## <a name="symptoms"></a>症状  
  新しいバージョンの共通言語ランタイム (CLR) に移行すると、プログラムが正しく動作しなくなります。  
   
--   プログラムは、<xref:System.Collections.Hashtable> から正しくないオブジェクトを取得します。  
+- プログラムは、<xref:System.Collections.Hashtable> から正しくないオブジェクトを取得します。  
   
--   <xref:System.Collections.Hashtable> からの列挙の順序に、プログラムが動作しなくなる変更があります。  
+- <xref:System.Collections.Hashtable> からの列挙の順序に、プログラムが動作しなくなる変更があります。  
   
--   以前は等しかった 2 つのオブジェクトが、等しくなくなっています。  
+- 以前は等しかった 2 つのオブジェクトが、等しくなくなっています。  
   
--   以前は等しくなかった 2 つのオブジェクトが、等しくなっています。  
+- 以前は等しくなかった 2 つのオブジェクトが、等しくなっています。  
   
 ## <a name="cause"></a>原因  
  <xref:System.Collections.Hashtable> へのキーに対するクラスの <xref:System.Object.Equals%2A> メソッドの実装は、<xref:System.Object.GetHashCode%2A> メソッドの呼び出しの結果を比較することによりオブジェクトの等価性をテストするため、プログラムが <xref:System.Collections.Hashtable> から正しくないオブジェクトを取得している可能性があります。 それぞれのフィールドの値が異なる場合であっても、2 つのオブジェクトのハッシュ コードが同じになる場合があるので、オブジェクトの等価性のテストにハッシュ コードを使うことはできません。 実際にはまれなことですが、ハッシュ コードの衝突が発生します。 このことによる <xref:System.Collections.Hashtable> のルックアップへの影響としては、等しくない 2 つのキーが等しいものと見なされ、正しくないオブジェクトが <xref:System.Collections.Hashtable> から返されます。 パフォーマンス上の理由から、<xref:System.Object.GetHashCode%2A> の実装はランタイム バージョンによって変更される場合があり、あるバージョンでは発生しない競合が後のバージョンでは発生する可能性があります。 ハッシュ コードが競合するときのバグがコードにあるかどうかをテストするには、この MDA を有効にします。 この MDA を有効にすると、<xref:System.Object.GetHashCode%2A> メソッドは 0 を返すようになり、結果としてすべてのハッシュ コードが競合します。 この MDA を有効にすることによるプログラムへの唯一の影響は、プログラムの実行が遅くなることです。  

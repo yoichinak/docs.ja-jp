@@ -3,11 +3,11 @@ title: (剰余) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 243ddc4f-3c4e-41e1-a3ef-4ed39e36248b
 ms.openlocfilehash: e2d2c4cd6fd62cf5785d6b69aa399a74f8d04d30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326737"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760481"
 ---
 # <a name="modulo-entity-sql"></a>(剰余) (Entity SQL)
 ある式を別の式で除算した結果の余りを返します。  

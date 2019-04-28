@@ -13,11 +13,11 @@ ms.assetid: dcc72283-caed-49ee-b45d-ccaf94e97129
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d5dd2829a9a00f869af3d7f370f99361979b8106
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758795"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61921317"
 ---
 # <a name="windowsruntimestreamextensionsasrandomaccessstreamsystemiostream-method"></a>WindowsRuntimeStreamExtensions.AsRandomAccessStream(System.IO.Stream) メソッド
 
@@ -57,11 +57,11 @@ A[!INCLUDE[wrt](../../../includes/wrt-md.md)]ランダム アクセス ストリ
 
 ## <a name="exceptions"></a>例外
 
-|例外|状態|
+|例外|条件|
 |---------------|---------------|
 |<xref:System.NotSupportedException>|変換するストリームがシークをサポートしていません。|
 
-## <a name="remarks"></a>解説
+## <a name="remarks"></a>Remarks
 
 この拡張メソッドは、Windows ストア アプリを開発する場合のみに使用できます。 このメソッドは、Windows ストア アプリのストリームを使用する便利な方法を提供します。 変換する .NET Framework ストリームはシークをサポートする必要があります。 詳細については、<xref:System.IO.Stream.Seek%2A?displayProperty=nameWithType> メソッドを参照してください。
 

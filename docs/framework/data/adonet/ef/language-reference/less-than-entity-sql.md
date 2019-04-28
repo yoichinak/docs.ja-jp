@@ -3,11 +3,11 @@ title: < (より小さい) (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 1fc2a039-3ad6-4b3c-b41d-09932e803f86
 ms.openlocfilehash: 1ca1cbdf1282782295b659393e8f54aae3ec5649
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772306"
 ---
 # <a name="-less-than-entity-sql"></a>\< (より小さい) (Entity SQL)
 2 つの式を比較して、左の式の値が右の式の値よりも小さいかどうかを判別します。  

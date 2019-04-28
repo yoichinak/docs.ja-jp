@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 697557463aa949036acb21e63b9a82b1fb84b415
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105496"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765285"
 ---
 # <a name="loadstringrcex-function"></a>LoadStringRCEx 関数
 HRESULT 値を、指定したカルチャの適切なエラー メッセージに変換します。  

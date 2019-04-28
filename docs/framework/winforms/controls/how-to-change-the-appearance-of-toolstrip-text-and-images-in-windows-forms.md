@@ -14,18 +14,18 @@ helpviewer_keywords:
 - toolbars [Windows Forms], text
 ms.assetid: d62dc9d1-2edd-4dfa-aed7-1335d6e13d86
 ms.openlocfilehash: 5c326c8f6a56c934d317305f85f4c88e95e75f8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088483"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781265"
 ---
 # <a name="how-to-change-the-appearance-of-toolstrip-text-and-images-in-windows-forms"></a>方法: Windows フォーム内の ToolStrip テキストとイメージの外観を変更する
 テキストとイメージを表示するかどうかを制御できます、<xref:System.Windows.Forms.ToolStripItem>と相対的な配置と<xref:System.Windows.Forms.ToolStrip>します。  
   
 ### <a name="to-define-what-is-displayed-on-a-toolstripitem"></a>Toolstripitem の表示される内容を定義するには  
   
--   設定、<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>プロパティを目的の値にします。 可能性は`Image`、 `ImageAndText`、 `None`、および`Text`します。 既定値は `ImageAndText` です。  
+- 設定、<xref:System.Windows.Forms.ToolStripItem.DisplayStyle%2A>プロパティを目的の値にします。 可能性は`Image`、 `ImageAndText`、 `None`、および`Text`します。 既定値は `ImageAndText` です。  
   
     ```vb  
     ToolStripButton2.DisplayStyle = _  
@@ -38,7 +38,7 @@ ms.locfileid: "59088483"
   
 ### <a name="to-align-text-on-a-toolstripitem"></a>Toolstripitem のテキストを配置するには  
   
--   設定、<xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>プロパティを目的の値にします。 可能性は、上部、中央、およびでは、left、center、および右下の任意の組み合わせです。 既定値は `MiddleCenter` です。  
+- 設定、<xref:System.Windows.Forms.ToolStripItem.TextAlign%2A>プロパティを目的の値にします。 可能性は、上部、中央、およびでは、left、center、および右下の任意の組み合わせです。 既定値は `MiddleCenter` です。  
   
     ```vb  
     ToolStripSplitButton1.TextAlign = _  
@@ -51,7 +51,7 @@ ms.locfileid: "59088483"
   
 ### <a name="to-align-an-image-on-a-toolstripitem"></a>Toolstripitem のイメージを配置するには  
   
--   設定、<xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>プロパティを目的の値にします。 可能性は、上部、中央、およびでは、left、center、および右下の任意の組み合わせです。 既定値は `MiddleLeft` です。  
+- 設定、<xref:System.Windows.Forms.ToolStripItem.ImageAlign%2A>プロパティを目的の値にします。 可能性は、上部、中央、およびでは、left、center、および右下の任意の組み合わせです。 既定値は `MiddleLeft` です。  
   
     ```vb  
     ToolStripSplitButton1.ImageAlign = _  
@@ -64,7 +64,7 @@ ms.locfileid: "59088483"
   
 ### <a name="to-define-how-toolstripitem-text-and-images-are-displayed-relative-to-each-other"></a>相互に比較した ToolStripItem テキストとイメージを表示する方法を定義するには  
   
--   設定、<xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>プロパティを目的の値にします。 可能性は`ImageAboveText`、 `ImageBeforeText`、 `Overlay`、 `TextAboveImage`、および`TextBeforeImage`します。 既定値は `ImageBeforeText` です。  
+- 設定、<xref:System.Windows.Forms.ToolStripItem.TextImageRelation%2A>プロパティを目的の値にします。 可能性は`ImageAboveText`、 `ImageBeforeText`、 `Overlay`、 `TextAboveImage`、および`TextBeforeImage`します。 既定値は `ImageBeforeText` です。  
   
     ```vb  
     ToolStripButton1.TextImageRelation = _  

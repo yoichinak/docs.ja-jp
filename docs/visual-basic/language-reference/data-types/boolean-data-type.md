@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
 ms.openlocfilehash: 7b64302d801a08f976de0ec969983c821f7a8471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796995"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean データ型 (Visual Basic)
 値を保持できるのみ`True`または`False`します。 キーワード`True`と`False`の 2 つの状態に対応して`Boolean`変数。  
@@ -36,11 +36,11 @@ ms.locfileid: "58841221"
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **負の数。** `Boolean` 数値型ではないと、負の値を表すことはできません。 いずれの場合も、行わないで`Boolean`数値の値を保持します。  
+- **負の数。** `Boolean` 数値型ではないと、負の値を表すことはできません。 いずれの場合も、行わないで`Boolean`数値の値を保持します。  
   
--   **型宣言文字。** `Boolean` リテラルの型文字または識別子の型文字がありません。  
+- **型宣言文字。** `Boolean` リテラルの型文字または識別子の型文字がありません。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Boolean?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Boolean?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="example"></a>例  
  次の例では、`runningVB`は、`Boolean`変数で、単純なはい/いいえの設定を格納します。  

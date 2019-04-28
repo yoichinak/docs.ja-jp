@@ -3,11 +3,11 @@ title: <message> の <netMsmqBinding>
 ms.date: 03/30/2017
 ms.assetid: 6ebf0240-d7be-4493-b0fe-f00fd5989d77
 ms.openlocfilehash: c623b7daf1e91c9c1800b9653525cd51b1087506
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58890567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61768954"
 ---
 # <a name="message-of-netmsmqbinding"></a>\<メッセージ > の\<netMsmqBinding >
 

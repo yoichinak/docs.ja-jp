@@ -3,11 +3,11 @@ title: 'チュートリアル: 非同期を使用して、Web にアクセスし
 ms.date: 07/20/2015
 ms.assetid: 84fd047f-fab8-4d89-8ced-104fb7310a91
 ms.openlocfilehash: 7f9b71bc76e8d17cf2fb6714070b4439265d1fda
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765922"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-visual-basic"></a>チュートリアル: 非同期を使用して、Web にアクセスして、Await (Visual Basic)
 async/await 機能を使用することで、非同期プログラムをより簡単かつ直感的に記述できます。 同期コードに似た非同期コードを記述し、通常の非同期コードが必要とする難しいコールバック関数や継続の処理をコンパイラに任せます。  
@@ -20,29 +20,29 @@ async/await 機能を使用することで、非同期プログラムをより�
   
  このチュートリアルでは、次のタスクを行います。  
   
--   [WPF アプリケーションを作成するには](#CreateWPFApp)  
+- [WPF アプリケーションを作成するには](#CreateWPFApp)  
   
--   [単純な WPF MainWindow をデザインするには](#MainWindow)  
+- [単純な WPF MainWindow をデザインするには](#MainWindow)  
   
--   [参照を追加するには](#AddRef)  
+- [参照を追加するには](#AddRef)  
   
--   [必要な Imports ステートメントを追加するには](#ImportsState)  
+- [必要な Imports ステートメントを追加するには](#ImportsState)  
   
--   [同期アプリケーションを作成するには](#synchronous)  
+- [同期アプリケーションを作成するには](#synchronous)  
   
--   [同期ソリューションをテストするには](#testSynch)  
+- [同期ソリューションをテストするには](#testSynch)  
   
--   [GetURLContents を非同期メソッドに変換するには](#GetURLContents)  
+- [GetURLContents を非同期メソッドに変換するには](#GetURLContents)  
   
--   [SumPageSizes を非同期メソッドに変換するには](#SumPageSizes)  
+- [SumPageSizes を非同期メソッドに変換するには](#SumPageSizes)  
   
--   [startButton_Click を非同期メソッドに変換するには](#startButton)  
+- [startButton_Click を非同期メソッドに変換するには](#startButton)  
   
--   [非同期ソリューションをテストするには](#testAsynch)  
+- [非同期ソリューションをテストするには](#testAsynch)  
   
--   [GetURLContentsAsync メソッドを .NET Framework メソッドに置き換えるには](#GetURLContentsAsync)  
+- [GetURLContentsAsync メソッドを .NET Framework メソッドに置き換えるには](#GetURLContentsAsync)  
   
--   [例](#BKMK_CompleteCodeExamples)  
+- [例](#BKMK_CompleteCodeExamples)  
   
 ## <a name="prerequisites"></a>必須コンポーネント  
  お使いのコンピューターに、Visual Studio 2012 以降がインストールされている必要があります。 詳しくは、[Microsoft Web サイト](https://go.microsoft.com/fwlink/?LinkId=235233)をご覧ください。  
@@ -72,19 +72,19 @@ async/await 機能を使用することで、非同期プログラムをより�
   
 4. **[TextBox]** コントロールを強調表示し、**[プロパティ]** ウィンドウで次の値を設定します。  
   
-    -   **[Name]** プロパティを `resultsTextBox` に設定します。  
+    - **[Name]** プロパティを `resultsTextBox` に設定します。  
   
-    -   **[Height]** プロパティを 250 に設定します。  
+    - **[Height]** プロパティを 250 に設定します。  
   
-    -   **[Width]** プロパティを 500 に設定します。  
+    - **[Width]** プロパティを 500 に設定します。  
   
-    -   **[テキスト]** タブで、Lucida Console や Global Monospace などの等幅フォントを指定します。  
+    - **[テキスト]** タブで、Lucida Console や Global Monospace などの等幅フォントを指定します。  
   
 5. **[Button]** コントロールを強調表示し、**[プロパティ]** ウィンドウで次の値を設定します。  
   
-    -   **[Name]** プロパティを `startButton` に設定します。  
+    - **[Name]** プロパティを `startButton` に設定します。  
   
-    -   **[Content]** プロパティの値を **[Button]** から **[Start]** に変更します。  
+    - **[Content]** プロパティの値を **[Button]** から **[Start]** に変更します。  
   
 6. テキスト ボックスとボタンの位置を調整し、両方が **[MainWindow]** ウィンドウ内に表示されるようにします。  
   
@@ -137,13 +137,13 @@ async/await 機能を使用することで、非同期プログラムをより�
   
 3. 同期ソリューションのコードには、次の 4 つのメソッドが含まれています。  
   
-    -   `SumPageSizes` は、`SetUpURLList` から Web ページ URL のリストを取得し、`GetURLContents` と `DisplayResults` を呼び出して各 URL を処理します。  
+    - `SumPageSizes` は、`SetUpURLList` から Web ページ URL のリストを取得し、`GetURLContents` と `DisplayResults` を呼び出して各 URL を処理します。  
   
-    -   `SetUpURLList` は、Web アドレスのリストを作成して返します。  
+    - `SetUpURLList` は、Web アドレスのリストを作成して返します。  
   
-    -   `GetURLContents` は、各 Web サイトのコンテンツをダウンロードし、バイト配列としてそのコンテンツを返します。  
+    - `GetURLContents` は、各 Web サイトのコンテンツをダウンロードし、バイト配列としてそのコンテンツを返します。  
   
-    -   `DisplayResults` は、各 URL のバイト配列内のバイト数を表示します。  
+    - `DisplayResults` は、各 URL のバイト配列内のバイト数を表示します。  
   
      次の 4 つのメソッドをコピーしてから下に、 `startButton_Click` MainWindow.xaml.vb 内のイベント ハンドラー。  
   
@@ -286,9 +286,9 @@ async/await 機能を使用することで、非同期プログラムをより�
   
 3. 前の手順で `Await` 演算子を追加したため、コンパイラ エラーが発生します。 演算子でマークされているメソッドでのみ使用できます、 [Async](../../../../visual-basic/language-reference/modifiers/async.md)修飾子。 `CopyTo` への呼び出しを `CopyToAsync` への呼び出しに置き換える変換手順を繰り返す間は、エラーを無視してください。  
   
-    -   呼び出されるメソッドの名前を <xref:System.IO.Stream.CopyToAsync%2A> に変更します。  
+    - 呼び出されるメソッドの名前を <xref:System.IO.Stream.CopyToAsync%2A> に変更します。  
   
-    -   `CopyTo` または `CopyToAsync` メソッドは、その引数 `content` にバイトをコピーし、意味のある値は返しません。 同期バージョンでは、`CopyTo` への呼び出しは値を返さない単純なステートメントです。 非同期バージョンでは、`CopyToAsync` は <xref:System.Threading.Tasks.Task> を返します。 タスクは "Task(void)" のように機能し、メソッドを待機できるようにします。 次のコードに示すように、`Await` または `await` を、`CopyToAsync` への呼び出しに適用します。  
+    - `CopyTo` または `CopyToAsync` メソッドは、その引数 `content` にバイトをコピーし、意味のある値は返しません。 同期バージョンでは、`CopyTo` への呼び出しは値を返さない単純なステートメントです。 非同期バージョンでは、`CopyToAsync` は <xref:System.Threading.Tasks.Task> を返します。 タスクは "Task(void)" のように機能し、メソッドを待機できるようにします。 次のコードに示すように、`Await` または `await` を、`CopyToAsync` への呼び出しに適用します。  
   
         ```vb  
         Await responseStream.CopyToAsync(content)  
@@ -317,9 +317,9 @@ async/await 機能を使用することで、非同期プログラムをより�
   
      メソッド `GetURLContents` には return ステートメントがあり、このステートメントはバイト配列を返します。 そのため、非同期バージョンの戻り値の型は Task(T) であり、T はバイト配列です。 メソッド シグネチャに、次の変更を加えます。  
   
-    -   戻り値の型を `Task(Of Byte())` に変更します。  
+    - 戻り値の型を `Task(Of Byte())` に変更します。  
   
-    -   規則により、非同期メソッドは "Async" で終わる名前を持つことになっているため、メソッドの名前を `GetURLContentsAsync` に変更します。  
+    - 規則により、非同期メソッドは "Async" で終わる名前を持つことになっているため、メソッドの名前を `GetURLContentsAsync` に変更します。  
   
      これらの変更を次のコードに示します。  
   
@@ -334,9 +334,9 @@ async/await 機能を使用することで、非同期プログラムをより�
   
 1. `SumPageSizes` に対して、前述した手順を繰り返します。 まずは、`GetURLContents` への呼び出しを非同期呼び出しに変更します。  
   
-    -   呼び出されるメソッドの名前を `GetURLContents` から `GetURLContentsAsync` に変更します (まだ変更していない場合)。  
+    - 呼び出されるメソッドの名前を `GetURLContents` から `GetURLContentsAsync` に変更します (まだ変更していない場合)。  
   
-    -   バイト配列値を取得するために、`Await` を、`GetURLContentsAsync` が返すタスクに適用します。  
+    - バイト配列値を取得するために、`Await` を、`GetURLContentsAsync` が返すタスクに適用します。  
   
      これらの変更を次のコードに示します。  
   
@@ -355,11 +355,11 @@ async/await 機能を使用することで、非同期プログラムをより�
   
 2. メソッドのシグネチャに、次の変更を加えます。  
   
-    -   メソッドを `Async` 修飾子でマークします。  
+    - メソッドを `Async` 修飾子でマークします。  
   
-    -   メソッド名に "Async" を追加します。  
+    - メソッド名に "Async" を追加します。  
   
-    -   今回、タスク戻り変数の T がない理由は、`SumPageSizesAsync` が T のための値を返さないからです (メソッドに `Return` ステートメントがありません)。ただし、メソッドは待機可能になるために `Task` を返す必要があります。 そのためからメソッドの型を変更`Sub`に`Function`します。 関数の戻り値の型は、`Task` です。  
+    - 今回、タスク戻り変数の T がない理由は、`SumPageSizesAsync` が T のための値を返さないからです (メソッドに `Return` ステートメントがありません)。ただし、メソッドは待機可能になるために `Task` を返す必要があります。 そのためからメソッドの型を変更`Sub`に`Function`します。 関数の戻り値の型は、`Task` です。  
   
      これらの変更を次のコードに示します。  
   
@@ -422,9 +422,9 @@ async/await 機能を使用することで、非同期プログラムをより�
   
 2. 同期ソリューションの出力に似た出力が表示されます。 ただし、次の相違点に注意してください。  
   
-    -   処理の完了後に、すべての結果が同時に表示されることはありません。 たとえば、両方のプログラムの `startButton_Click` には、テキスト ボックスをクリアする行が含まれています。 この目的は、実行ごとにテキスト ボックスをクリアすることです。1 つの結果セットが表示された後に、もう一度 **[Start]** ボタンをクリックすると、テキスト ボックスがクリアされます。 同期バージョンでは、2 回目のカウントが表示される直前、ダウンロードが完了して UI スレッドが他の処理を実行できる状態になったときにテキスト ボックスがクリアされます。 非同期バージョンでは、**[Start]** ボタンをクリックした直後にテキスト ボックスがクリアされます。  
+    - 処理の完了後に、すべての結果が同時に表示されることはありません。 たとえば、両方のプログラムの `startButton_Click` には、テキスト ボックスをクリアする行が含まれています。 この目的は、実行ごとにテキスト ボックスをクリアすることです。1 つの結果セットが表示された後に、もう一度 **[Start]** ボタンをクリックすると、テキスト ボックスがクリアされます。 同期バージョンでは、2 回目のカウントが表示される直前、ダウンロードが完了して UI スレッドが他の処理を実行できる状態になったときにテキスト ボックスがクリアされます。 非同期バージョンでは、**[Start]** ボタンをクリックした直後にテキスト ボックスがクリアされます。  
   
-    -   最も重要な点は、ダウンロード中に UI スレッドがブロックされないことです。 Web リソースをダウンロード、カウント、および表示している間に、ウィンドウの移動やサイズ変更を行うことができます。 いずれかの Web サイトの処理が遅い、または応答しない場合、**閉じる**ボタン (右上隅の赤色のフィールドにある [x]) をクリックすることで、操作を取り消すことができます。  
+    - 最も重要な点は、ダウンロード中に UI スレッドがブロックされないことです。 Web リソースをダウンロード、カウント、および表示している間に、ウィンドウの移動やサイズ変更を行うことができます。 いずれかの Web サイトの処理が遅い、または応答しない場合、**閉じる**ボタン (右上隅の赤色のフィールドにある [x]) をクリックすることで、操作を取り消すことができます。  
   
 ## <a name="BKMK_ReplaceGetByteArrayAsync"></a>   
 ### <a name="GetURLContentsAsync"></a> GetURLContentsAsync メソッドを .NET Framework メソッドに置き換えるには  
@@ -675,7 +675,7 @@ End Class
   
 ## <a name="see-also"></a>関連項目
 
-- [Async Sample:Accessing the Web Walkthrough (C#および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
+- [Async Sample:Web へのアクセスのチュートリアル (C# および Visual Basic)](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)
 - [Await 演算子](../../../../visual-basic/language-reference/operators/await-operator.md)
 - [Async](../../../../visual-basic/language-reference/modifiers/async.md)
 - [Async および Await を使用した非同期プログラミング (Visual Basic)](../../../../visual-basic/programming-guide/concepts/async/index.md)

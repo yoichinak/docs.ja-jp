@@ -3,11 +3,11 @@ title: メッセージ交換パターンの選択
 ms.date: 03/30/2017
 ms.assetid: 0f502ca1-6a8e-4607-ba15-59198c0e6146
 ms.openlocfilehash: 98788fb89fc68dc1220d9bf8d9ad89df5ca69e6e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61922854"
 ---
 # <a name="choosing-a-message-exchange-pattern"></a>メッセージ交換パターンの選択
 カスタム トランスポートを記述する最初の手順は、これを決定する*メッセージ交換パターン*(または Mep) を開発しているチャネルに必要な。 ここでは、使用できるオプションとさまざまな要件について説明します。 これは、最初のタスクで説明されているチャネル開発タスクの一覧で[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)します。  
@@ -15,15 +15,15 @@ ms.locfileid: "59157780"
 ## <a name="six-message-exchange-patterns"></a>6 つのメッセージ交換パターン  
  次の 3 つの MEP から選択できます。  
   
--   データグラム (<xref:System.ServiceModel.Channels.IInputChannel> と <xref:System.ServiceModel.Channels.IOutputChannel>)  
+- データグラム (<xref:System.ServiceModel.Channels.IInputChannel> と <xref:System.ServiceModel.Channels.IOutputChannel>)  
   
      クライアントが使用してメッセージを送信データグラム MEP を使用する場合、*ファイア アンド フォーゲット*exchange。 このような交換では、配信の成否について帯域外での確認が必要になります。 メッセージが移動中に失われて、サービスに到達しない可能性があります。 クライアントで送信操作が正常に完了したとしても、リモート エンドポイントでメッセージが受信されたとは限りません。 データグラムはメッセージングの基礎となるビルド ブロックであり、その上に信頼できるプロトコルや安全なプロトコルなどの独自のプロトコルを構築できます。 クライアント データグラム チャネルには、<xref:System.ServiceModel.Channels.IOutputChannel> インターフェイスが実装され、サービス データグラム チャネルには <xref:System.ServiceModel.Channels.IInputChannel> インターフェイスが実装されます。  
   
--   要求 - 応答 (<xref:System.ServiceModel.Channels.IRequestChannel> と <xref:System.ServiceModel.Channels.IReplyChannel>)  
+- 要求 - 応答 (<xref:System.ServiceModel.Channels.IRequestChannel> と <xref:System.ServiceModel.Channels.IReplyChannel>)  
   
      この MEP では、メッセージが送信されて、応答が受信されます。 パターンは、要求 - 応答のペアで構成されます。 要求 - 応答呼び出しの例として、リモート プロシージャ コール (RPC) やブラウザー GET 要求などがあります。 このパターンは、半二重とも呼ばれます。 この MEP では、クライアント チャネルには <xref:System.ServiceModel.Channels.IRequestChannel> が実装され、サービス チャネルには <xref:System.ServiceModel.Channels.IReplyChannel> が実装されます。  
   
--   二重 (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
+- 二重 (<xref:System.ServiceModel.Channels.IDuplexChannel>)  
   
      二重 MEP では、クライアントにより任意の数のメッセージを送信して、任意の順序で受信できます。 二重 MEP は、話される語の 1 つずつがメッセージである電話の会話に似ています。 この MEP ではどちらの側も送信および受信できるので、クライアントおよびサービス チャネルによって実装されるインターフェイスは <xref:System.ServiceModel.Channels.IDuplexChannel> になります。  
   
@@ -32,17 +32,17 @@ ms.locfileid: "59157780"
   
  これらの Mep それぞれをサポートできますも*セッション*します。 セッション (および <xref:System.ServiceModel.Channels.ISessionChannel%601?displayProperty=nameWithType> 型の <xref:System.ServiceModel.Channels.ISession?displayProperty=nameWithType> の実装) は、チャネルで送受信されるすべてのメッセージを相互に関連付けます。 要求 - 応答パターンはスタンドアロンの 2 メッセージ セッションで、要求と応答が相互に関連付けられています。 一方、セッションをサポートする要求 - 応答パターンは、そのチャネルのすべての要求 - 応答ペアが互いに関連付けられることを意味しています。 したがって、次のように合計 6 つの MEP から選択できます。  
   
--   データグラム  
+- データグラム  
   
--   要求 – 応答  
+- 要求 – 応答  
   
--   二重  
+- 二重  
   
--   セッション対応データグラム  
+- セッション対応データグラム  
   
--   セッション対応要求 – 応答  
+- セッション対応要求 – 応答  
   
--   セッション対応二重  
+- セッション対応二重  
   
 > [!NOTE]
 >  UDP トランスポートでは、サポートされている MEP はデータグラムだけです。これは、UDP がファイア アンド フォーゲット (撃ち放し) のプロトコルだからです。  
@@ -72,25 +72,25 @@ ms.locfileid: "59157780"
 ## <a name="writing-sessionful-channels"></a>セッションの多いチャネルの作成  
  セッションの多いチャネルを作成した場合、セッションを提供するためにチャネルで実行しなければならないことがいくつかあります。 送信側では、チャネルで以下を行う必要があります。  
   
--   新しいチャネルごとに、新しいセッションを作成し、新しいセッション ID (一意の文字列) に関連付けます。 または、スタック内で、作成したチャネルの下にあるセッションの多いチャネルから新しいセッションを取得します。  
+- 新しいチャネルごとに、新しいセッションを作成し、新しいセッション ID (一意の文字列) に関連付けます。 または、スタック内で、作成したチャネルの下にあるセッションの多いチャネルから新しいセッションを取得します。  
   
--   (下のレイヤーからセッションを取得したのではなく) チャネルでセッションを作成した場合は、このチャネルを使用して送信される各メッセージについて、メッセージをセッションに関連付ける必要があります。 プロトコル チャネルの場合、通常は SOAP ヘッダーを追加することによってこの関連付けを行います。 トランスポート チャネルの場合は、新しいトランスポート接続を作成するか、フレーミング プロトコルにセッション情報を追加します。  
+- (下のレイヤーからセッションを取得したのではなく) チャネルでセッションを作成した場合は、このチャネルを使用して送信される各メッセージについて、メッセージをセッションに関連付ける必要があります。 プロトコル チャネルの場合、通常は SOAP ヘッダーを追加することによってこの関連付けを行います。 トランスポート チャネルの場合は、新しいトランスポート接続を作成するか、フレーミング プロトコルにセッション情報を追加します。  
   
--   このチャネルを使用して送信される各メッセージについて、前述の配信保証を提供する必要があります。 下のレイヤーのチャネルを使用してセッションを提供している場合、そのチャネルでも配信保証を提供します。 セッションを独自に提供する場合は、これらの保証をプロトコルの一部として実装する必要があります。 通常、両方の側で WCF を想定したプロトコル チャネルを作成する場合、TCP トランスポート チャネルまたは信頼できるメッセージング チャネルが必要となり、セッションを提供するためにこれらのいずれかに依存します。  
+- このチャネルを使用して送信される各メッセージについて、前述の配信保証を提供する必要があります。 下のレイヤーのチャネルを使用してセッションを提供している場合、そのチャネルでも配信保証を提供します。 セッションを独自に提供する場合は、これらの保証をプロトコルの一部として実装する必要があります。 通常、両方の側で WCF を想定したプロトコル チャネルを作成する場合、TCP トランスポート チャネルまたは信頼できるメッセージング チャネルが必要となり、セッションを提供するためにこれらのいずれかに依存します。  
   
--   チャネルで <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> が呼び出されたときに、指定したタイムアウトまたは既定のタイムアウトを使用して、セッションを閉じるために必要な作業を実行します。 これは、下のレイヤーのチャネルで <xref:System.ServiceModel.ICommunicationObject.Close%2A> を呼び出すか (そのチャネルからセッションを取得しただけの場合)、特殊な SOAP メッセージを送信するか、またはトランスポート接続を閉じるだけです。  
+- チャネルで <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> が呼び出されたときに、指定したタイムアウトまたは既定のタイムアウトを使用して、セッションを閉じるために必要な作業を実行します。 これは、下のレイヤーのチャネルで <xref:System.ServiceModel.ICommunicationObject.Close%2A> を呼び出すか (そのチャネルからセッションを取得しただけの場合)、特殊な SOAP メッセージを送信するか、またはトランスポート接続を閉じるだけです。  
   
--   チャネルで <xref:System.ServiceModel.ICommunicationObject.Abort%2A> が呼び出されたときに、I/O を実行せずにセッションをその場で終了します。 これは、何も実行しないことを意味する場合もあれば、ネットワーク接続または他の何らかのリソースの中止を伴う場合もあります。  
+- チャネルで <xref:System.ServiceModel.ICommunicationObject.Abort%2A> が呼び出されたときに、I/O を実行せずにセッションをその場で終了します。 これは、何も実行しないことを意味する場合もあれば、ネットワーク接続または他の何らかのリソースの中止を伴う場合もあります。  
   
  受信側では、チャネルで以下を行う必要があります。  
   
--   各受信メッセージについて、チャネル リスナーは、そのメッセージが属しているセッションを検出する必要があります。 メッセージがセッションの最初のメッセージである場合、チャネル リスナーは新しいチャネルを作成し、<xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> の呼び出しからそのチャネルを返す必要があります。 それ以外の場合は、チャネル リスナーはセッションに対応する既存のチャネルを検出し、そのチャネルを介してメッセージを配信する必要があります。  
+- 各受信メッセージについて、チャネル リスナーは、そのメッセージが属しているセッションを検出する必要があります。 メッセージがセッションの最初のメッセージである場合、チャネル リスナーは新しいチャネルを作成し、<xref:System.ServiceModel.Channels.IChannelListener%601.AcceptChannel%2A?displayProperty=nameWithType> の呼び出しからそのチャネルを返す必要があります。 それ以外の場合は、チャネル リスナーはセッションに対応する既存のチャネルを検出し、そのチャネルを介してメッセージを配信する必要があります。  
   
--   独自のチャネルで (必要な配信保証と共に) セッションを提供する場合、受信側はメッセージの順序付けや受信確認の送信など、いくつかのアクションを実行することが必要になる場合があります。  
+- 独自のチャネルで (必要な配信保証と共に) セッションを提供する場合、受信側はメッセージの順序付けや受信確認の送信など、いくつかのアクションを実行することが必要になる場合があります。  
   
--   チャネルで <xref:System.ServiceModel.ICommunicationObject.Close%2A> が呼び出されたときに、指定したタイムアウトまたは既定のタイムアウトを使用して、セッションを閉じるために必要な作業を実行します。 この作業を実行すると、チャネルがタイムアウトになるのを待機している間にメッセージを受信した場合に、例外が発生することがあります。 これは、メッセージを受信したときに、チャネルが終了状態になっているためです。この場合、例外がスローされることになります。  
+- チャネルで <xref:System.ServiceModel.ICommunicationObject.Close%2A> が呼び出されたときに、指定したタイムアウトまたは既定のタイムアウトを使用して、セッションを閉じるために必要な作業を実行します。 この作業を実行すると、チャネルがタイムアウトになるのを待機している間にメッセージを受信した場合に、例外が発生することがあります。 これは、メッセージを受信したときに、チャネルが終了状態になっているためです。この場合、例外がスローされることになります。  
   
--   チャネルで <xref:System.ServiceModel.ICommunicationObject.Abort%2A> が呼び出されたときに、I/O を実行せずにセッションをその場で終了します。 このときも、何も実行しないことを意味する場合もあれば、ネットワーク接続または他のリソースの中止を伴う場合もあります。  
+- チャネルで <xref:System.ServiceModel.ICommunicationObject.Abort%2A> が呼び出されたときに、I/O を実行せずにセッションをその場で終了します。 このときも、何も実行しないことを意味する場合もあれば、ネットワーク接続または他のリソースの中止を伴う場合もあります。  
   
 ## <a name="see-also"></a>関連項目
 

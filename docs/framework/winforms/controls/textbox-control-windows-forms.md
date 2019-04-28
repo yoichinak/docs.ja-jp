@@ -6,11 +6,11 @@ helpviewer_keywords:
 - TextBox control [Windows Forms]
 ms.assetid: e5a06987-8aec-4271-b196-2245ba992d62
 ms.openlocfilehash: b687f83562b3a6f9dd5993f2af1c55ffe6dc8042
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61932510"
 ---
 # <a name="textbox-control-windows-forms"></a>TextBox コントロール (Windows フォーム)
 Windows フォームのテキスト ボックスは、ユーザーからの入力を取得する、またはテキストを表示するに使用されます。 `TextBox`コントロールもできる読み取り専用ですが、通常、編集可能なテキストに使用します。 テキスト ボックスでは、複数の行を表示、テキスト、コントロールのサイズをラップ、および基本的な書式設定を追加できます。 `TextBox`コントロールがテキスト コントロールに表示または入力の 1 つの形式を使用できます。  

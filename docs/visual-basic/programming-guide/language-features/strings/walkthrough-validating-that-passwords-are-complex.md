@@ -5,11 +5,11 @@ helpviewer_keywords:
 - String data type [Visual Basic], validation
 ms.assetid: 5d9a918f-6c1f-41a3-a019-b5c2b8ce0381
 ms.openlocfilehash: 829d6485acdca22fbf10160c734e5c7f931dd855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938256"
 ---
 # <a name="walkthrough-validating-that-passwords-are-complex-visual-basic"></a>チュートリアル: パスワードの複雑な検証 (Visual Basic)
 このメソッドは、いくつかの強力なパスワードの特性を確認し、失敗、パスワードをチェックに関する情報を含む文字列パラメーターを更新します。  
@@ -28,20 +28,20 @@ ms.locfileid: "58824937"
   
  この例で必要な要素は次のとおりです。  
   
--   <xref:System.Text.RegularExpressions> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
+- <xref:System.Text.RegularExpressions> 名前空間のメンバーへのアクセス許可。 コード内でメンバー名を完全修飾していない場合は、`Imports` ステートメントを追加します。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
   
 ## <a name="security"></a>セキュリティ  
  パスワードをネットワーク経由で移動する場合は、データを転送するためのセキュリティで保護されたメソッドを使用する必要があります。 詳細については、次を参照してください。 [ASP.NET Web アプリケーションのセキュリティ](https://docs.microsoft.com/previous-versions/aspnet/330a99hc(v=vs.100))します。
   
  精度を向上させることができます、`ValidatePassword`の他の複雑性チェックを追加することで機能します。  
   
--   パスワードとユーザーの名前、ユーザー識別子、およびアプリケーション定義の辞書からその部分文字列を比較します。 さらに、比較を実行するときに、視覚的に類似する文字と同等として扱われます。 たとえば、「1」と「3」の数字と同等として文字"l"と"e"を扱います。  
+- パスワードとユーザーの名前、ユーザー識別子、およびアプリケーション定義の辞書からその部分文字列を比較します。 さらに、比較を実行するときに、視覚的に類似する文字と同等として扱われます。 たとえば、「1」と「3」の数字と同等として文字"l"と"e"を扱います。  
   
--   1 つだけに大文字がある場合、パスワードの最初の文字ではないことを確認します。  
+- 1 つだけに大文字がある場合、パスワードの最初の文字ではないことを確認します。  
   
--   パスワードの最後の 2 つの文字がアルファベットの文字であることを確認してください。  
+- パスワードの最後の 2 つの文字がアルファベットの文字であることを確認してください。  
   
--   キーボードの一番上の行からのすべてのシンボルが入力されるパスワードは許可されません。  
+- キーボードの一番上の行からのすべてのシンボルが入力されるパスワードは許可されません。  
   
 ## <a name="see-also"></a>関連項目
 

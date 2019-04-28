@@ -16,15 +16,15 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: 47d4c39d-30e1-4c7b-8a2e-301325390647
 ms.openlocfilehash: 54660244c1b3cca8cb75539edbe23628b370afd5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61934506"
 ---
 # <a name="controlling-xml-serialization-using-attributes"></a>属性を使用した XML シリアル化の制御
 
-属性を使用すると、オブジェクトの XML シリアル化を制御したり、同じ一連のクラスから代替 XML ストリームを作成したりできます。 代替 XML ストリームを作成する方法の詳細については、[方法。XML Stream の代替要素名を指定](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)を参照してください。
+属性を使用すると、オブジェクトの XML シリアル化を制御したり、同じ一連のクラスから代替 XML ストリームを作成したりできます。 代替 XML ストリームを作成する方法の詳細については、次を参照してください。[方法。XML Stream の代替要素名を指定](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)します。
 
 > [!NOTE]
 > XML が生成される必要があります、World Wide Web Consortium (W3C) ドキュメントのセクション 5 に準拠しているかどうかは[簡易オブジェクト アクセス プロトコル (SOAP) 1.1](https://www.w3.org/TR/2000/NOTE-SOAP-20000508/)に記載の属性を使用して[属性をコントロールでエンコードされた SOAPシリアル化](attributes-that-control-encoded-soap-serialization.md)します。
@@ -241,7 +241,7 @@ public class Group {
 </Group>
 ```
 
-2 つの XML ストリームを区別するもう 1 つの方法は、XML スキーマ定義ツールを使用して、コンパイル済みのコードから XML スキーマ (XSD) ドキュメント ファイルを生成することです (ツールの使用の詳細については、「[The XML Schema Definition Tool and XML Serialization](the-xml-schema-definition-tool-and-xml-serialization.md)」(XML スキーマ定義ツールと XML シリアル化) を参照してください)。フィールドに属性を適用しないと、スキーマには次のように要素が記述されます。
+2 つの XML ストリームを区別するもう 1 つの方法は、XML スキーマ定義ツールを使用して、コンパイル済みのコードから XML スキーマ (XSD) ドキュメント ファイルを生成することです  (ツールの使用の詳細については、「[The XML Schema Definition Tool and XML Serialization](the-xml-schema-definition-tool-and-xml-serialization.md)」(XML スキーマ定義ツールと XML シリアル化) を参照してください)。フィールドに属性を適用しないと、スキーマには次のように要素が記述されます。
 
 ```xml
 <xs:element minOccurs="0" maxOccurs ="1" name="Employees" type="ArrayOfEmployee" />

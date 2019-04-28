@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], removing
 ms.assetid: 97cf4d9f-0596-429e-8526-32a30aa4ae99
 ms.openlocfilehash: 256dd6fa0117f88aec2ef6b60c6dcd4c33b57855
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770761"
 ---
 # <a name="how-to-remove-an-adorner-from-an-element"></a>方法: 要素から装飾を削除する
 この例は、プログラムで指定した特定の装飾を削除する方法を示しています。<xref:System.Windows.UIElement>します。  

@@ -3,11 +3,11 @@ title: WCF Web HTTP 形式
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
 ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61935474"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 形式
 WCF Web HTTP プログラミング モデルでは、サービス操作で返す応答の最適な形式を動的に判断できます。 適切な形式を判断するための方法として、自動と明示的の 2 つがサポートされます。  
@@ -125,15 +125,15 @@ public class Service : IService
   
  XML または JSON 以外の形式をサポートする必要がある場合は、操作に <xref:System.ServiceModel.Channels.Message> の戻り値の型があるように定義します。 操作コード内で、使用する適切な形式を決定し、次のメソッドのいずれかを使用して <xref:System.ServiceModel.Channels.Message> オブジェクトを作成します。  
   
--   `WebOperationContext.CreateAtom10Response`  
+- `WebOperationContext.CreateAtom10Response`  
   
--   `WebOperationContext.CreateJsonResponse`  
+- `WebOperationContext.CreateJsonResponse`  
   
--   `WebOperationContext.CreateStreamResponse`  
+- `WebOperationContext.CreateStreamResponse`  
   
--   `WebOperationContext.CreateTextResponse`  
+- `WebOperationContext.CreateTextResponse`  
   
--   `WebOperationContext.CreateXmlResponse`  
+- `WebOperationContext.CreateXmlResponse`  
   
  これらの各メソッドでは、この適切な形式でコンテンツを取得してメッセージを作成します。 `WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` メソッドは、クライアントで優先される形式の一覧を優先度が高い順に取得するために使用できます。 次の例では、`WebOperationContext.Current.IncomingRequest.GetAcceptHeaderElements` を使用して使用形式を決定し、適切な作成応答メソッドを使用して応答メッセージを作成する方法を示します。  
   

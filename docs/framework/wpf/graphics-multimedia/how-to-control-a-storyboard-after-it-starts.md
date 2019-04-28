@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
 ms.openlocfilehash: 107391386dfbb718f9436d9a039b08439fbc3279
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161487"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762138"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>方法: 開始後に、ストーリー ボードを制御します。
 この例では、コントロールにコードを使って、<xref:System.Windows.Media.Animation.Storyboard>開始後。 ストーリー ボードを制御する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、<xref:System.Windows.Trigger>と<xref:System.Windows.TriggerAction>オブジェクト。 例については、次を参照してください。 [、ストーリー ボード開始後の制御をイベント トリガーを使用して](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)します。  
@@ -21,19 +21,19 @@ ms.locfileid: "59161487"
   
  ストーリー ボードを制御するためには、使用する、<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>メソッドを指定して**true** 2 番目のパラメーター。 一時停止、再開、シーク、停止、高速化する、またはストーリー ボード、速度が低下または塗りつぶし期間まで進める、ストーリー ボードの対話型のメソッドを使用できます。 次には、ストーリー ボードの対話型のメソッドの一覧を示します。  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>:ストーリー ボードを一時停止します。  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>:ストーリー ボードを一時停止します。  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>:一時停止中のストーリー ボードを再開します。  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>:一時停止中のストーリー ボードを再開します。  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>:ストーリー ボードの対話型速度を設定します。  
+- <xref:System.Windows.Media.Animation.Storyboard.SetSpeedRatio%2A>:ストーリー ボードの対話型速度を設定します。  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>:指定した場所のストーリー ボードをシークします。  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>:指定した場所のストーリー ボードをシークします。  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>:指定した場所にストーリー ボードをシークします。 異なり、<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>メソッドでは、この操作は、次の目盛りの前に処理されます。  
+- <xref:System.Windows.Media.Animation.Storyboard.SeekAlignedToLastTick%2A>:指定した場所にストーリー ボードをシークします。 異なり、<xref:System.Windows.Media.Animation.Storyboard.Seek%2A>メソッドでは、この操作は、次の目盛りの前に処理されます。  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>:ある場合は、塗りつぶし期間、ストーリー ボードを進めます。  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>:ある場合は、塗りつぶし期間、ストーリー ボードを進めます。  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>:ストーリー ボードを停止します。  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>:ストーリー ボードを停止します。  
   
  次の例では、いくつかのストーリー ボード メソッドは、ストーリー ボードを対話的に制御に使用されます。  
   

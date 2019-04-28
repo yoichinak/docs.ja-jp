@@ -3,11 +3,11 @@ title: ファーストクラス関数
 description: ファーストクラス関数とは関数型プログラミングで重要な方法について説明しますF#します。
 ms.date: 10/29/2018
 ms.openlocfilehash: 505ad686614b53d779cb617fc04ac74c2a88b31b
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148636"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772763"
 ---
 # <a name="first-class-functions"></a>ファーストクラス関数
 
@@ -73,7 +73,7 @@ F#マップのメソッドを含め、ほとんどのコレクション型を提
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/contour/snippet28.fs)]
 
-詳細については、[一覧](../language-reference/lists.md)を参照してください。
+詳細については、次を参照してください。[一覧](../language-reference/lists.md)します。
 
 ## <a name="return-the-value-from-a-function-call"></a>関数呼び出しの結果値を返す
 

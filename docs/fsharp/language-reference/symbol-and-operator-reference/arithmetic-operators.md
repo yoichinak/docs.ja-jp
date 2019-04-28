@@ -3,11 +3,11 @@ title: 算術演算子
 description: 使用可能な算術演算子について説明します、F#プログラミング言語。
 ms.date: 04/04/2018
 ms.openlocfilehash: 826f334125a542855bf2fda43465618403d49d4c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614585"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61925854"
 ---
 # <a name="arithmetic-operators"></a>算術演算子
 
@@ -17,7 +17,7 @@ ms.locfileid: "53614585"
 
 次の表は、整数および浮動小数点型のボックス化解除された使用可能な二項算術演算子をまとめたものです。
 
-|二項演算子|ノート|
+|二項演算子|メモ|
 |---------------|-----|
 |`+` (さらに、plus)|オフにします。 番号が一緒に追加されたときに、オーバーフローが発生し、合計の種類でサポート絶対値の最大値を超えています。|
 |`-` (減算、マイナス記号)|オフにします。 アンダー フロー条件の符号なしの型が差し引かれるとき、または種類で表される浮動小数点値が小さすぎます。|

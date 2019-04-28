@@ -9,11 +9,11 @@ helpviewer_keywords:
 - attribute blocks, Module keyword
 ms.assetid: d971b940-05ab-4d56-8485-e3b8a661906b
 ms.openlocfilehash: f6ded1184aedf1702f4b6e5eebb85709cf8e39f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61920706"
 ---
 # <a name="module-keyword-visual-basic"></a>モジュール\<キーワード > (Visual Basic)
 ソース ファイルの先頭にある属性は、現在のアセンブリ モジュールに適用されることを指定します。  

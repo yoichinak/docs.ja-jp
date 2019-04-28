@@ -3,11 +3,11 @@ title: 失敗した呼び出し
 ms.date: 03/30/2017
 ms.assetid: 52afeff8-333c-44a5-96ce-1f3c418523fc
 ms.openlocfilehash: e844f18b96a28c807a6f10195c9ab20780f23306
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61797411"
 ---
 # <a name="calls-failed"></a>失敗した呼び出し
 カウンター名:失敗した呼び出し  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30737
 ms.assetid: 3f40bacd-3fac-4741-b204-852f693d4340
 ms.openlocfilehash: f5053bddf4b9ba791ad6d0733e1dd89c4ded91bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918269"
 ---
 # <a name="no-accessible-main-method-with-an-appropriate-signature-was-found-in-name"></a>適切なシグネチャを持つアクセス可能な 'Main' メソッドが見つかりませんでした '\<名 >'
 コマンド ライン アプリケーションが必要、`Sub Main`定義します。 `Main` として宣言する必要があります`Public Shared`クラス、またはとして定義されている場合`Public`モジュールで定義されている場合。  
@@ -21,7 +21,7 @@ ms.locfileid: "58818359"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   定義、`Public Sub Main`プロジェクト用のプロシージャです。 として宣言`Shared`クラス内で定義する場合にのみです。  
+- 定義、`Public Sub Main`プロジェクト用のプロシージャです。 として宣言`Shared`クラス内で定義する場合にのみです。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -3,11 +3,11 @@ title: ソースの Office Open XML ドキュメント (Visual Basic) の作成
 ms.date: 07/20/2015
 ms.assetid: 61ccd6fb-0c47-4075-afdf-5b5021330f21
 ms.openlocfilehash: 83cb7d0a325e11c9669f1331e57bed7bf09f27c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61923423"
 ---
 # <a name="creating-the-source-office-open-xml-document-visual-basic"></a>ソースの Office Open XML ドキュメント (Visual Basic) の作成
 このトピックでは、このチュートリアルの他の例で使用する Office Open XML WordprocessingML ドキュメントを作成する方法について説明します。 この手順に従うと、それぞれの例に記載されているとおりの出力が得られます。  

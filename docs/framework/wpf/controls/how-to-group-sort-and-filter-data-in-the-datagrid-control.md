@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGrid [WPF], filter
 ms.assetid: 03345e85-89e3-4aec-9ed0-3b80759df770
 ms.openlocfilehash: 81fdb0a6d5602f612c55d7e790ca9a0fe56c144e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365049"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61771096"
 ---
 # <a name="how-to-group-sort-and-filter-data-in-the-datagrid-control"></a>方法: グループ、並べ替え、およびデータ グリッド コントロールでデータのフィルター選択
 
@@ -130,7 +130,7 @@ ms.locfileid: "57365049"
     [!code-csharp[DataGrid_GroupSortFilter#113](~/samples/snippets/csharp/VS_Snippets_Wpf/DataGrid_GroupSortFilter/CS/MainWindow.xaml.cs#113)]
     [!code-vb[DataGrid_GroupSortFilter#113](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DataGrid_GroupSortFilter/VB/MainWindow.xaml.vb#113)]
 
-内の項目をフィルター処理する代わりに、<xref:System.Windows.Controls.DataGrid>フィルター処理のロジックと設定を提供するメソッドを作成して、<xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType>フィルターを適用するプロパティ。 このメソッドの例を表示するには、[ビュー内のフィルター データ](../data/how-to-filter-data-in-a-view.md)を参照してください。
+内の項目をフィルター処理する代わりに、<xref:System.Windows.Controls.DataGrid>フィルター処理のロジックと設定を提供するメソッドを作成して、<xref:System.Windows.Data.CollectionView.Filter%2A?displayProperty=nameWithType>フィルターを適用するプロパティ。 このメソッドの例を表示するには、次を参照してください。[ビュー内のフィルター データ](../data/how-to-filter-data-in-a-view.md)します。
 
 ## <a name="example"></a>例
 

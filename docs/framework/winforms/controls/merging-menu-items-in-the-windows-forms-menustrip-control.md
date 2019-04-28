@@ -6,11 +6,11 @@ helpviewer_keywords:
 - merging [Windows Forms], general concepts
 ms.assetid: 95e113ba-f362-4dda-8a76-6d95ddc45cee
 ms.openlocfilehash: dbe1c0325499e7b925d504fc80f9034f9e387475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936358"
 ---
 # <a name="merging-menu-items-in-the-windows-forms-menustrip-control"></a>Windows フォームの MenuStrip コントロールへのメニュー項目のマージ
 マルチ ドキュメント インターフェイス (MDI) アプリケーションがある場合は、親フォームのメニューにメニュー項目や子フォームの全体のメニューをマージできます。  
@@ -20,9 +20,9 @@ ms.locfileid: "59231566"
 ## <a name="general-concepts"></a>一般的な概念  
  マージ手順には、ターゲットとソース管理の両方が含まれます。  
   
--   ターゲットが、<xref:System.Windows.Forms.MenuStrip>メニュー項目のマージ先のメインまたは MDI 親フォームのコントロール。  
+- ターゲットが、<xref:System.Windows.Forms.MenuStrip>メニュー項目のマージ先のメインまたは MDI 親フォームのコントロール。  
   
--   ソースが、 <xref:System.Windows.Forms.MenuStrip> [ターゲット] メニューにマージするメニュー項目を含む MDI 子フォームのコントロール。  
+- ソースが、 <xref:System.Windows.Forms.MenuStrip> [ターゲット] メニューにマージするメニュー項目を含む MDI 子フォームのコントロール。  
   
  <xref:System.Windows.Forms.MenuStrip.MdiWindowListItem%2A>プロパティは、現在の MDI のタイトルが表示されます - ドロップダウン リストを持つ親フォームの MDI 子メニュー項目を識別します。 現在開いている MDI 子フォームを通常に一覧表示など、**ウィンドウ**メニュー。  
   

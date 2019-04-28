@@ -10,11 +10,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], data types
 ms.assetid: 057206d2-3a5b-40b9-b3af-57446f9b52fa
 ms.openlocfilehash: 50e36aa13439bafcca27a7153a8c5d6043f03975
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833504"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61906972"
 ---
 # <a name="constant-and-literal-data-types-visual-basic"></a>定数とリテラルのデータ型 (Visual Basic)
 リテラルは、変数の値または値 3 または文字列「こんにちは」など、式の結果ではなく自体として表現される値です。 定数とは、リテラルの代わりを受け取り、値が変化し、変数ではなく、プログラム全体で同じ値を保持するわかりやすい名前です。  

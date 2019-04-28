@@ -5,11 +5,11 @@ helpviewer_keywords:
 - GridSplitter control [WPF], ensuring visibility of
 ms.assetid: 0a62a964-89c8-48f0-9023-5df721a8cf47
 ms.openlocfilehash: b7543d14ba39d854b5a2c3f4d0d19b9a457ea89b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61770852"
 ---
 # <a name="how-to-make-sure-that-a-gridsplitter-is-visible"></a>方法: GridSplitter を表示されるようにする
 確認する方法を示します、<xref:System.Windows.Controls.GridSplitter>で他のコントロールによってコントロールが非、<xref:System.Windows.Controls.Grid>します。  
@@ -19,15 +19,15 @@ ms.locfileid: "59147148"
   
  防ぐために非表示<xref:System.Windows.Controls.GridSplitter>コントロールは、次のいずれかを実行します。  
   
--   確認します<xref:System.Windows.Controls.GridSplitter>コントロールは、最後の<xref:System.Windows.Controls.Panel.Children%2A>に追加、<xref:System.Windows.Controls.Grid>します。 次の例は、<xref:System.Windows.Controls.GridSplitter>の最後の要素として、<xref:System.Windows.Controls.Panel.Children%2A>のコレクション、<xref:System.Windows.Controls.Grid>します。  
+- 確認します<xref:System.Windows.Controls.GridSplitter>コントロールは、最後の<xref:System.Windows.Controls.Panel.Children%2A>に追加、<xref:System.Windows.Controls.Grid>します。 次の例は、<xref:System.Windows.Controls.GridSplitter>の最後の要素として、<xref:System.Windows.Controls.Panel.Children%2A>のコレクション、<xref:System.Windows.Controls.Grid>します。  
   
  [!code-xaml[GridSplitterSnips#GridSplitterLastChild](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterlastchild)]  
   
--   設定、<xref:System.Windows.Controls.Panel.ZIndexProperty>上、<xref:System.Windows.Controls.GridSplitter>にコントロールを非はそれ以外の場合よりも高くなります。 次の例では、<xref:System.Windows.Controls.GridSplitter>より高度な制御<xref:System.Windows.Controls.Panel.ZIndexProperty>よりも、<xref:System.Windows.Controls.Button>コントロール。  
+- 設定、<xref:System.Windows.Controls.Panel.ZIndexProperty>上、<xref:System.Windows.Controls.GridSplitter>にコントロールを非はそれ以外の場合よりも高くなります。 次の例では、<xref:System.Windows.Controls.GridSplitter>より高度な制御<xref:System.Windows.Controls.Panel.ZIndexProperty>よりも、<xref:System.Windows.Controls.Button>コントロール。  
   
  [!code-xaml[GridSplitterSnips#GridSplitterZIndex](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplitterzindex)]  
   
--   それ以外の場合非表示にするコントロールのマージンを設定、<xref:System.Windows.Controls.GridSplitter>ように、<xref:System.Windows.Controls.GridSplitter>公開されます。 次の例では、余白を設定コントロールをオーバーレイはそれ以外の場合と非表示にする、<xref:System.Windows.Controls.GridSplitter>します。  
+- それ以外の場合非表示にするコントロールのマージンを設定、<xref:System.Windows.Controls.GridSplitter>ように、<xref:System.Windows.Controls.GridSplitter>公開されます。 次の例では、余白を設定コントロールをオーバーレイはそれ以外の場合と非表示にする、<xref:System.Windows.Controls.GridSplitter>します。  
   
  [!code-xaml[GridSplitterSnips#GridSplitterMargin](~/samples/snippets/csharp/VS_Snippets_Wpf/GridSplitterSnips/CSharp/Window1.xaml#gridsplittermargin)]  
   

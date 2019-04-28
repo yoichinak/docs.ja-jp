@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC36629
 ms.assetid: 0a1e2dbc-d9a4-433d-9306-c5540782b81d
 ms.openlocfilehash: 9f7f878649d8b96f050b56d5b878eb3d67e027ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819243"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61918223"
 ---
 # <a name="nullable-type-inference-is-not-supported-in-this-context"></a>Null 許容型の推論はこのコンテキストではサポートされていません
 値型と構造体が null 許容宣言できます。  
@@ -34,7 +34,7 @@ Dim b As Integer?
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   使用して、 `As` null 許容型として変数を宣言する句。  
+- 使用して、 `As` null 許容型として変数を宣言する句。  
   
 ## <a name="see-also"></a>関連項目
 
