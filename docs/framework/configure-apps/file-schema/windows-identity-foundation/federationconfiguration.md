@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 8b14054c-6d07-46ab-ab58-03f14beac0f2
 author: BrucePerlerMS
 ms.openlocfilehash: e0ac3b663b2a65e00524fe0fba7997125721487c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297488"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791717"
 ---
 # <a name="federationconfiguration"></a>\<federationConfiguration>
 構成、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) と<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM) を使用する場合は、Ws-federation プロトコルを使用した認証をフェデレーションします。 構成、<xref:System.Security.Claims.ClaimsAuthorizationManager>を使用する場合、<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>または<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>クレーム ベースのアクセス制御を提供するクラス。  
@@ -32,7 +32,7 @@ ms.locfileid: "59297488"
   
 |属性|説明|  
 |---------------|-----------------|  
-|name|このフェデレーションの構成要素の名前。 主に、この属性は、将来のプロトコルの機能拡張ポイントを提供します。 任意。|  
+|name|このフェデレーションの構成要素の名前。 主に、この属性は、将来のプロトコルの機能拡張ポイントを提供します。 省略可能です。|  
 |identityConfigurationName|指定されている id の構成セクションの名前、 [ \<identityConfiguration >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/identityconfiguration.md)を使用する要素。 この属性が指定されていない場合は、既定の id 構成セクションが使用されます。 省略可能です。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -40,7 +40,7 @@ ms.locfileid: "59297488"
 |要素|説明|  
 |-------------|-----------------|  
 |[\<cookieHandler>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/cookiehandler.md)|SAM で使用されるクッキー ハンドラーを構成します。 省略可能です。|  
-|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|暗号化し、トークン暗号化解除に使用される証明書を構成します。 任意。|  
+|[\<serviceCertificate>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/servicecertificate.md)|暗号化し、トークン暗号化解除に使用される証明書を構成します。 省略可能です。|  
 |[\<wsFederation>](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/wsfederation.md)|Ws-federation 認証モジュール (WSFAM) を構成します。 任意。|  
   
 ### <a name="parent-elements"></a>親要素  
@@ -52,9 +52,9 @@ ms.locfileid: "59297488"
 ## <a name="remarks"></a>Remarks  
  \<FederationConfiguration > 要素が 2 つのシナリオでの設定を提供します。  
   
--   構成設定が要素に含まれる WS フェデレーション パッシブ Web アプリケーションを使用する場合、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) と<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。 セキュリティ トークン ハンドラーと証明書、およびクレーム承認マネージャーやクレーム認証マネージャーなどのコンポーネントの構成に使用する id の構成も参照します。  
+- 構成設定が要素に含まれる WS フェデレーション パッシブ Web アプリケーションを使用する場合、 <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> (WSFAM) と<xref:System.IdentityModel.Services.SessionAuthenticationModule>(SAM)。 セキュリティ トークン ハンドラーと証明書、およびクレーム承認マネージャーやクレーム認証マネージャーなどのコンポーネントの構成に使用する id の構成も参照します。  
   
--   使用する場合、<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>または<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>コード内のクレーム ベースのアクセス制御を提供するクラス、要素の参照クレーム承認マネージャーおよび承認を使用してポリシーを構成する id の構成決定します。 これが true の場合は受動的な Web シナリオ以外ではないシナリオであってもたとえば、Windows Communication Foundation (WCF) アプリケーションまたはアプリケーションを Web ベースではありません。 アプリケーションが、パッシブの Web アプリケーションではない場合、 [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)要素 (とその子ポリシー要素、存在する場合) によって参照される id の構成、`<federationConfiguration>`要素唯一の設定が適用されます。 他の属性はすべて無視されます。  
+- 使用する場合、<xref:System.IdentityModel.Services.ClaimsPrincipalPermission>または<xref:System.IdentityModel.Services.ClaimsPrincipalPermissionAttribute>コード内のクレーム ベースのアクセス制御を提供するクラス、要素の参照クレーム承認マネージャーおよび承認を使用してポリシーを構成する id の構成決定します。 これが true の場合は受動的な Web シナリオ以外ではないシナリオであってもたとえば、Windows Communication Foundation (WCF) アプリケーションまたはアプリケーションを Web ベースではありません。 アプリケーションが、パッシブの Web アプリケーションではない場合、 [ \<claimsAuthorizationManager >](../../../../../docs/framework/configure-apps/file-schema/windows-identity-foundation/claimsauthorizationmanager.md)要素 (とその子ポリシー要素、存在する場合) によって参照される id の構成、`<federationConfiguration>`要素唯一の設定が適用されます。 他の属性はすべて無視されます。  
   
  シナリオに関係なく、ランタイムは既定のフェデレーション構成を読み込みます。 動作の定義は次のとおりです。  
   

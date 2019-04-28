@@ -11,28 +11,28 @@ helpviewer_keywords:
 - drawing [Windows Forms], paths
 ms.assetid: a5500dec-666c-41fd-9da3-2169dd89c5eb
 ms.openlocfilehash: c9a43065210f5ef0fffcae01cc7eb88349696b6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938170"
 ---
 # <a name="graphics-paths-in-gdi"></a>GDI+ でのグラフィックス パス
 パスは、線、四角形、および単純な曲線を組み合わせることで形成されます。 メッセージの取り消し、[ベクター グラフィックスの概要](vector-graphics-overview.md)基本ビルディング ブロックを次に図を描画するために最も便利なことがわかっています。  
   
--   線  
+- 線  
   
--   四角形  
+- 四角形  
   
--   省略記号  
+- 省略記号  
   
--   円弧  
+- 円弧  
   
--   多角形  
+- 多角形  
   
--   カーディナル スプライン  
+- カーディナル スプライン  
   
--   ベジエ スプライン  
+- ベジエ スプライン  
   
  GDI + で、<xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクトでは、これらの構成要素のシーケンスを 1 つの単位に収集できます。 1 回の呼び出しで線、四角形、多角形、および曲線のシーケンス全体を描画することができますし、<xref:System.Drawing.Graphics.DrawPath%2A>のメソッド、<xref:System.Drawing.Graphics>クラス。 次の図には、行、円弧、本のベジエ スプライン、カーディナル スプラインを組み合わせることにより作成されたパスが表示されます。  
   

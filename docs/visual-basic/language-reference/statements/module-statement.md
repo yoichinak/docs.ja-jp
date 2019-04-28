@@ -14,11 +14,11 @@ helpviewer_keywords:
 - declarations [Visual Basic], modules
 ms.assetid: a1243afc-14a5-45df-95d5-51118aeac362
 ms.openlocfilehash: f546498e5282bcf58d07a06968bb4303e4e6d7b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784164"
 ---
 # <a name="module-statement"></a>Module ステートメント
 モジュールの名前を宣言し、変数、プロパティ、イベント、およびモジュールを構成するプロシージャの定義を紹介します。  
@@ -38,9 +38,9 @@ End Module
  `accessmodifier`  
  任意。 次のいずれかの値を指定します。  
   
--   [Public](../../../visual-basic/language-reference/modifiers/public.md)  
+- [Public](../../../visual-basic/language-reference/modifiers/public.md)  
   
--   [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
+- [Friend](../../../visual-basic/language-reference/modifiers/friend.md)  
   
  「 [Visual Basic でのアクセス レベル](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)」を参照してください。  
   
@@ -67,31 +67,31 @@ End Module
 ## <a name="classes-and-modules"></a>クラスとモジュール  
  これらの要素がある多くの類似点がいくつかの重要な違いがあります。  
   
--   **用語集。** Visual Basic の以前のバージョンは 2 種類のモジュールを認識:*クラス モジュール*(.cls ファイル) と*標準モジュール*(.bas ファイル)。 現在のバージョンを呼び出す*クラス*と*モジュール*、それぞれします。  
+- **用語集。** Visual Basic の以前のバージョンは 2 種類のモジュールを認識:*クラス モジュール*(.cls ファイル) と*標準モジュール*(.bas ファイル)。 現在のバージョンを呼び出す*クラス*と*モジュール*、それぞれします。  
   
--   **共有メンバー。** クラスのメンバーは、共有するかどうか、またはインスタンス メンバーを制御できます。  
+- **共有メンバー。** クラスのメンバーは、共有するかどうか、またはインスタンス メンバーを制御できます。  
   
--   **オブジェクト指向です。** クラスは、オブジェクト指向ですが、モジュールがないです。 したがって、クラスだけは、オブジェクトとしてインスタンス化できます。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)します。  
+- **オブジェクト指向です。** クラスは、オブジェクト指向ですが、モジュールがないです。 したがって、クラスだけは、オブジェクトとしてインスタンス化できます。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)します。  
   
 ## <a name="rules"></a>ルール  
   
--   **修飾子。** すべてのモジュールのメンバーは、暗黙的に[Shared](../../../visual-basic/language-reference/modifiers/shared.md)します。 使用することはできません、`Shared`キーワードと、任意のメンバーの共有状態を変更して、メンバーを宣言することはできません。  
+- **修飾子。** すべてのモジュールのメンバーは、暗黙的に[Shared](../../../visual-basic/language-reference/modifiers/shared.md)します。 使用することはできません、`Shared`キーワードと、任意のメンバーの共有状態を変更して、メンバーを宣言することはできません。  
   
--   **継承。** モジュールが以外の任意の型から継承できません<xref:System.Object>、どのすべてのモジュールから継承します。 具体的には、1 つのモジュールは、別の継承できません。  
+- **継承。** モジュールが以外の任意の型から継承できません<xref:System.Object>、どのすべてのモジュールから継承します。 具体的には、1 つのモジュールは、別の継承できません。  
   
      使用することはできません、 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)モジュールの定義を指定するも<xref:System.Object>します。  
   
--   **既定のプロパティ。** モジュールには、既定のプロパティを定義できません。 詳細については、次を参照してください。[既定](../../../visual-basic/language-reference/modifiers/default.md)します。  
+- **既定のプロパティ。** モジュールには、既定のプロパティを定義できません。 詳細については、次を参照してください。[既定](../../../visual-basic/language-reference/modifiers/default.md)します。  
   
 ## <a name="behavior"></a>動作  
   
--   **アクセス レベルです。** モジュール内には、アクセス レベルでは、各メンバーを宣言できます。 モジュール メンバー[パブリック](../../../visual-basic/language-reference/modifiers/public.md)変数および定数を除く、既定のアクセス[プライベート](../../../visual-basic/language-reference/modifiers/private.md)アクセスします。 モジュールがそのメンバーの 1 つ以上のアクセスが制限されてよりときに、指定されたモジュールへのアクセス レベルが優先されます。  
+- **アクセス レベルです。** モジュール内には、アクセス レベルでは、各メンバーを宣言できます。 モジュール メンバー[パブリック](../../../visual-basic/language-reference/modifiers/public.md)変数および定数を除く、既定のアクセス[プライベート](../../../visual-basic/language-reference/modifiers/private.md)アクセスします。 モジュールがそのメンバーの 1 つ以上のアクセスが制限されてよりときに、指定されたモジュールへのアクセス レベルが優先されます。  
   
--   **スコープ。** モジュールとは、名前空間全体のスコープ内で。  
+- **スコープ。** モジュールとは、名前空間全体のスコープ内で。  
   
      すべてのモジュール メンバーのスコープは、モジュール全体です。 すべてのメンバーに注意してください*の上位変換*、これにより、モジュールを含む名前空間に昇格するには、そのスコープ。 詳細については、次を参照してください。[型の上位変換](../../../visual-basic/programming-guide/language-features/declared-elements/type-promotion.md)します。  
   
--   **パス名です。** プロジェクトでは、複数のモジュールがあることができ、2 つまたは複数のモジュールで同じ名前を持つメンバーを宣言することができます。 ただし、モジュールの外部から参照がある場合は、このような適切なモジュール名を持つメンバーへの参照を修飾する必要があります。 詳細については、「 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。  
+- **パス名です。** プロジェクトでは、複数のモジュールがあることができ、2 つまたは複数のモジュールで同じ名前を持つメンバーを宣言することができます。 ただし、モジュールの外部から参照がある場合は、このような適切なモジュール名を持つメンバーへの参照を修飾する必要があります。 詳細については、「 [References to Declared Elements](../../../visual-basic/programming-guide/language-features/declared-elements/references-to-declared-elements.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-vb[VbVbalrStatements#69](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#69)]  

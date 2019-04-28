@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
 ms.openlocfilehash: e269a168c5aa594684a41a98338d961447acd536
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792835"
 ---
 # <a name="claims-based-authorization-using-wif"></a>WIF を使用したクレーム ベースの承認
 証明書利用者アプリケーションでは、承認によって、認証済み ID がアクセスできるリソースと、そのリソースで実行できる操作が決まります。 承認が不適切だったり弱かったりすると、それは情報漏えいとデータの改ざんにつながります。 ここでは、Windows Identity Foundation (WIF) とセキュリティ トークン サービス (STS)、たとえば Microsoft Azure のアクセス制御サービス (ACS) を使用して、クレーム対応 ASP.NET の Web アプリケーションとサービスの承認を実装する方法の概要を説明します。  
@@ -25,13 +25,13 @@ ms.locfileid: "59312177"
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole メソッド  
  クレーム対応アプリケーションで RBAC アプローチを実装するには、クレーム対応ではないアプリケーションと同じように、**IPrinicpal** インターフェイスで **IsInRole()** メソッドを使用します。 **IsInRole()** メソッドを使用する方法は複数あります。  
   
--   **IPrincipal.IsInRole(“Administrator”)** で明示的に呼び出す。 この場合、結果はブール値になります。 これを条件付きステートメントで使用します。 これはコード内のすべての場所で任意に使用できます。  
+- **IPrincipal.IsInRole(“Administrator”)** で明示的に呼び出す。 この場合、結果はブール値になります。 これを条件付きステートメントで使用します。 これはコード内のすべての場所で任意に使用できます。  
   
--   セキュリティ要求 **PrincipalPermission.Demand()** を使用する。 この場合、要求が満たされないと、結果は例外になります。 これは例外処理の方針に適合している必要があります。 パフォーマンスの観点から見た場合、例外をスローすることは、ブール値を返すよりもはるかに高くつきます。 これはコード内の任意の場所で使用できます。  
+- セキュリティ要求 **PrincipalPermission.Demand()** を使用する。 この場合、要求が満たされないと、結果は例外になります。 これは例外処理の方針に適合している必要があります。 パフォーマンスの観点から見た場合、例外をスローすることは、ブール値を返すよりもはるかに高くつきます。 これはコード内の任意の場所で使用できます。  
   
--   宣言属性 **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]** を使用する。 この方法は、メソッドの修飾に使用されるため宣言と呼ばれます。 メソッドの実装内のコード ブロックで使用することはできません。 要求が満たされない場合、結果は例外になります。 これが例外処理の方針に適合していることを確認する必要があります。  
+- 宣言属性 **[PrincipalPermission(SecurityAction.Demand, Role = "Administrator")]** を使用する。 この方法は、メソッドの修飾に使用されるため宣言と呼ばれます。 メソッドの実装内のコード ブロックで使用することはできません。 要求が満たされない場合、結果は例外になります。 これが例外処理の方針に適合していることを確認する必要があります。  
   
--   **web.config** の **\<authorization>** セクションを使って、URL 承認を使用する。URL レベルで承認を管理している場合は、この方法が適しています。 これは、前に説明した方法の中では最も大雑把です。 この方法の利点は、構成ファイルに変更が行われるため、コードをコンパイルしなくても変更を利用できるということです。  
+- **web.config** の **\<authorization>** セクションを使って、URL 承認を使用する。URL レベルで承認を管理している場合は、この方法が適しています。 これは、前に説明した方法の中では最も大雑把です。 この方法の利点は、構成ファイルに変更が行われるため、コードをコンパイルしなくても変更を利用できるということです。  
   
 ### <a name="expressing-roles-as-claims"></a>クレームとしてのロールの表現  
  **IsInRole()** メソッドが呼び出されると、現在のユーザーにそのロールがあるかどうかがチェックされます。 クレーム対応アプリケーションでは、ロールは、トークンで使用できるロール クレームの種類によって表されます。 ロール クレームの種類は、次の URI を使用して表されます。  
@@ -40,11 +40,11 @@ ms.locfileid: "59312177"
   
  ロール クレームの種類でトークンを強化する方法は複数あります。  
   
--   **トークン発行中**。 ユーザーが認証されるときに、Microsoft Azure のアクセス制御サービス (ACS) などのフェデレーション プロバイダーや ID プロバイダー STS によってロール クレームを発行できます。  
+- **トークン発行中**。 ユーザーが認証されるときに、Microsoft Azure のアクセス制御サービス (ACS) などのフェデレーション プロバイダーや ID プロバイダー STS によってロール クレームを発行できます。  
   
--   **ClaimsAuthenticationManager を使用して、任意のクレームを、ロール タイプのクレームに変換する**。 ClaimsAuthenticationManager は、WIF に含まれているコンポーネントです。 このコンポーネントは、トークンを調べ、クレームを追加、変更、または削除することでそれを変換し、アプリケーションの起動時に要求を受け取れるようにします。 ClaimsAuthenticationManager を使用しての要求を変換する方法の詳細については、次を参照してください[How To:。WIF および ACS を使用してクレーム対応 ASP.NET アプリケーションで実装ロール ベースのアクセス制御 (RBAC)](https://go.microsoft.com/fwlink/?LinkID=247445)します。  
+- **ClaimsAuthenticationManager を使用して、任意のクレームを、ロール タイプのクレームに変換する**。 ClaimsAuthenticationManager は、WIF に含まれているコンポーネントです。 このコンポーネントは、トークンを調べ、クレームを追加、変更、または削除することでそれを変換し、アプリケーションの起動時に要求を受け取れるようにします。 ClaimsAuthenticationManager を使用しての要求を変換する方法の詳細については、次を参照してください[How To:。WIF および ACS を使用してクレーム対応 ASP.NET アプリケーションで実装ロール ベースのアクセス制御 (RBAC)](https://go.microsoft.com/fwlink/?LinkID=247445)します。  
   
--   **samlSecurityTokenRequirement 構成セクションを使用して、任意のクレームをロールの種類に対応付ける**。宣言を使用したアプローチで、構成のみを使ってクレーム変換が行われます。その際、コーディングは必要ありません。  
+- **samlSecurityTokenRequirement 構成セクションを使用して、任意のクレームをロールの種類に対応付ける**。宣言を使用したアプローチで、構成のみを使ってクレーム変換が行われます。その際、コーディングは必要ありません。  
   
 <a name="BKMK_2"></a>   
 ## <a name="claims-based-authorization"></a>クレーム ベースの承認  

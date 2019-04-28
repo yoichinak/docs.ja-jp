@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 020cc56126249b27a52387e6efa3aa10c83d9126
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789988"
 ---
 # <a name="endmerge-method"></a>EndMerge メソッド
 すべてのカスタム属性が生成スコープにマージされたことを示します。  

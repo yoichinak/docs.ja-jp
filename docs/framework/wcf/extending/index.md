@@ -2,19 +2,13 @@
 title: WCF の拡張
 ms.date: 03/30/2017
 helpviewer_keywords:
-- WCF, extensibility
-- extensibility [WCF]
-- Windows Communication Foundation, extensibility
+  - 'WCF, extensibility'
+  - 'extensibility [WCF]'
+  - 'Windows Communication Foundation, extensibility'
 ms.assetid: c145e2f6-f402-41f5-8b5a-eee03978737b
-ms.openlocfilehash: 24ad74f04a3ac31d0b0d0d87f0d74f88c0521f50
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
-ms.translationtype: MT
-ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33803706"
 ---
 # <a name="extending-wcf"></a>WCF の拡張
-Windows Communication Foundation (WCF) を使用すると、変更、実行時コンポーネントを正確に制御を拡張し、およびサービス ベースのアプリケーションを拡張できます。 このセクションのトピックでは、その拡張アーキテクチャについて詳しく説明します。 基本的なプログラミングの詳細については、次を参照してください。[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)です。  
+Windows Communication Foundation (WCF) を変更し、実行時コンポーネントを正確に制御を拡張およびサービス ベースのアプリケーションを拡張することができます。 このセクションのトピックでは、その拡張アーキテクチャについて詳しく説明します。 基本的なプログラミングの詳細については、次を参照してください。[基本的な WCF プログラミング](../../../../docs/framework/wcf/basic-wcf-programming.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ServiceHost とサービス モデル レイヤーの拡張](../../../../docs/framework/wcf/extending/extending-servicehost-and-the-service-model-layer.md)  
@@ -27,10 +21,10 @@ Windows Communication Foundation (WCF) を使用すると、変更、実行時�
  チャネル レイヤーは、サービス モデル レイヤーより下に位置し、クライアントとサービス間のメッセージの交換を担います。 チャネル拡張は、セキュリティなどの新しいプロトコル機能を実装できます。 また、SOAP メッセージを伝達する新しいネットワーク トランスポートの実装など、トランスポート機能も実装できます。  
   
  [セキュリティの拡張](../../../../docs/framework/wcf/extending/extending-security.md)  
- WCF のセキュリティは、転送のセキュリティ (整合性、機密性、および認証)、アクセス制御 (承認) と監査します。 クラスで見つかった、`IdentityModel`名前空間は、WCF がアクセス制御に使用します。 セキュリティ アーキテクチャを理解することによって、カスタムのアクセス制御システムに対応したカスタムのクレーム タイプを作成できます。  
+ WCF のセキュリティは、転送のセキュリティ (整合性、機密性、および認証) へのアクセス制御 (承認) および監査します。 クラスにある、`IdentityModel`名前空間は、WCF がアクセス制御に使用します。 セキュリティ アーキテクチャを理解することによって、カスタムのアクセス制御システムに対応したカスタムのクレーム タイプを作成できます。  
   
  [メタデータ システムの拡張](../../../../docs/framework/wcf/extending/extending-the-metadata-system.md)  
- WCF のメタデータ システムは、サービス ベースのアプリケーションを実装するために必要なメタデータを表示するクラスとインターフェイスのグループです。 クラスを変更または拡張するか、WSDL (Web サービス記述言語) の拡張子やカスタム WS-PolicyAttachments アサーションなどのカスタム メタデータをエクスポート/インポートするインターフェイスを実装して構成します。  
+ WCF のメタデータ システムは、サービス ベースのアプリケーションを実装するために必要なメタデータを表現するクラスとインターフェイスのグループです。 クラスを変更または拡張するか、WSDL (Web サービス記述言語) の拡張子やカスタム WS-PolicyAttachments アサーションなどのカスタム メタデータをエクスポート/インポートするインターフェイスを実装して構成します。  
   
  [エンコーダーとシリアライザーの拡張](../../../../docs/framework/wcf/extending/extending-encoders-and-serializers.md)  
  エンコーダーとシリアライザーは、データをある形式から別の形式に変換します。 このセクションのトピックでは、提供されたクラスを特別な要件に合わせて拡張する方法を説明します。  

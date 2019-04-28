@@ -9,11 +9,11 @@ helpviewer_keywords:
 - dependency properties [WPF], adding classes as owners of
 ms.assetid: edcce050-0576-4edb-a31a-3f909637b452
 ms.openlocfilehash: 1b1f2b241868b02e430af82bac8e9f6a617e511b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61777118"
 ---
 # <a name="how-to-add-an-owner-type-for-a-dependency-property"></a>方法: 依存関係プロパティの所有者の種類を追加する
 この例では、異なる種類の登録されている依存関係プロパティの所有者としてクラスを追加する方法を示します。 この手順を実行して、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]リーダーとプロパティ システムの両方のプロパティの追加の所有者としてクラスを認識することができます。 必要に応じて所有者として追加すると、型固有のメタデータを提供する追加のクラスができます。  

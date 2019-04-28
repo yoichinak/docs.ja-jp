@@ -19,11 +19,11 @@ ms.assetid: d8461a44-aa2c-4ef4-b3e4-ab7cbaaee1b5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2268dc813d6f12b69bee99dd07f8f4431b12a283
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795084"
 ---
 # <a name="how-to-encrypt-xml-elements-with-symmetric-keys"></a>方法: 共通キーで XML 要素を暗号化する
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化することができます。  XML の暗号化を使用すると、データが簡単に読み取られる心配をせずに機密性の高い XML を格納またはトランスポートできます。  この手順では、Advanced Encryption Standard (AES) アルゴリズム (Rijndael としても知られる) を使用して XML 要素を復号化します。  
@@ -92,9 +92,9 @@ ms.locfileid: "59295628"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   この例をコンパイルするには、`System.Security.dll` への参照を含める必要があります。  
+- この例をコンパイルするには、`System.Security.dll` への参照を含める必要があります。  
   
--   名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
+- 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  暗号化キーをプレーンテキストで保存したり、コンピューター間でプレーンテキストでキーを転送したりしないでください。  代わりに、セキュリティで保護されたキー コンテナーを使用して暗号化キーを格納します。  

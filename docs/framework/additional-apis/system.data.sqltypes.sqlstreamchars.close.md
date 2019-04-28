@@ -13,11 +13,11 @@ api_location:
 api_type:
 - Assembly
 ms.openlocfilehash: d0c29bbc5c6bea98cf36e3c2b6bf7825d6843ccc
-ms.sourcegitcommit: d938c39afb9216db377d0f0ecdaa53936a851059
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58634025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705871"
 ---
 # <a name="sqlstreamcharsclose-method"></a>SqlStreamChars.Close メソッド
 

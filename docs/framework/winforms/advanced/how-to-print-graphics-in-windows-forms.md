@@ -10,11 +10,11 @@ helpviewer_keywords:
 - printing [Windows Forms], graphics
 ms.assetid: 32b891e6-52ff-4fea-a9ff-2ce5db20a4c6
 ms.openlocfilehash: 55459482d0994c581164128b17c08a7ca90d0717
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59339100"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756563"
 ---
 # <a name="how-to-print-graphics-in-windows-forms"></a>方法: Windows フォームでグラフィックスを印刷する
 多くの場合、Windows ベースのアプリケーションでグラフィックスを印刷するされます。 <xref:System.Drawing.Graphics>クラスは、画面やプリンターなどのデバイスにオブジェクトを描画するためのメソッドを提供します。  

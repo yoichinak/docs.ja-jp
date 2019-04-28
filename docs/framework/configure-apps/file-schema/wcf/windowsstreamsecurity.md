@@ -3,11 +3,11 @@ title: <windowsStreamSecurity>
 ms.date: 03/30/2017
 ms.assetid: 926bea29-90c7-4a26-9cf0-fb4aa44f6f70
 ms.openlocfilehash: 32e8ed6b70a23462fac3c53d1bc353167ff67560
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113634"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769708"
 ---
 # <a name="windowsstreamsecurity"></a>\<windowsStreamSecurity>
 カスタム バインディングの Windows ストリーム セキュリティ設定を指定します。  

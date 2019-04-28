@@ -13,20 +13,20 @@ ms.assetid: abf48c11-1e72-431d-9562-39cf23e1a8ff
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f141f21f80275a592caf3f87a5cbe0def6869c0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795006"
 ---
 # <a name="walkthrough-creating-a-cryptographic-application"></a>チュートリアル: 暗号化アプリケーションの作成
 このチュートリアルでは、コンテンツの暗号化および復号化の方法を示します。 コード例は、Windows フォーム アプリケーション向けに設計されています。 このアプリケーションは、スマート カードを使用するなどの実際のシナリオは示していません。 代わりに、暗号化と復号化の基礎を示しています。  
   
  このチュートリアルでは、次の暗号化のガイドラインを使用します。  
   
--   自動生成される <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> と <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> を使用すると、対称アルゴリズムである <xref:System.Security.Cryptography.RijndaelManaged> クラスでデータの暗号化と復号化を行えます。  
+- 自動生成される <xref:System.Security.Cryptography.SymmetricAlgorithm.Key%2A> と <xref:System.Security.Cryptography.SymmetricAlgorithm.IV%2A> を使用すると、対称アルゴリズムである <xref:System.Security.Cryptography.RijndaelManaged> クラスでデータの暗号化と復号化を行えます。  
   
--   非対称アルゴリズムである <xref:System.Security.Cryptography.RSACryptoServiceProvider> を使用すると、<xref:System.Security.Cryptography.RijndaelManaged> で暗号化されたデータのキーの暗号化と復号化を行えます。 非対称アルゴリズムは、キーなどの少量のデータに最適です。  
+- 非対称アルゴリズムである <xref:System.Security.Cryptography.RSACryptoServiceProvider> を使用すると、<xref:System.Security.Cryptography.RijndaelManaged> で暗号化されたデータのキーの暗号化と復号化を行えます。 非対称アルゴリズムは、キーなどの少量のデータに最適です。  
   
     > [!NOTE]
     >  暗号化されたコンテンツを他のユーザーと交換するのではなく、コンピューター上のデータを保護する場合は、<xref:System.Security.Cryptography.ProtectedData> クラスまたは <xref:System.Security.Cryptography.ProtectedMemory> クラスの使用を検討してください。  
@@ -48,7 +48,7 @@ ms.locfileid: "59341765"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   <xref:System.IO> 名前空間と <xref:System.Security.Cryptography> 名前空間への参照。  
+- <xref:System.IO> 名前空間と <xref:System.Security.Cryptography> 名前空間への参照。  
   
 ## <a name="creating-a-windows-forms-application"></a>Windows フォーム アプリケーションの作成  
  このチュートリアルにあるほとんどのコード例は、ボタン コントロールのイベント ハンドラーとして設計されています。 次の表は、サンプル アプリケーションに必要なコントロールと、コード例に一致する必要な名前を示しています。  
@@ -100,15 +100,15 @@ ms.locfileid: "59341765"
   
  暗号化パッケージでは、次の形式を使用します。  
   
--   キーの長さ: 0 - 3 バイト  
+- キーの長さ: 0 - 3 バイト  
   
--   IV の長さ: 4 - 7 バイト  
+- IV の長さ: 4 - 7 バイト  
   
--   暗号化されたキー  
+- 暗号化されたキー  
   
--   IV  
+- IV  
   
--   暗号化テキスト  
+- 暗号化テキスト  
   
  キーと IV の長さを使用すると、暗号化パッケージのすべての部分の開始点と長さを決定することができます。これを使用してファイルを復号化します。  
   

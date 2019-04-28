@@ -7,11 +7,11 @@ helpviewer_keywords:
 - out compiler option [Visual Basic]
 ms.assetid: 9f148c15-0909-4cb8-a2db-777f8a8b45ae
 ms.openlocfilehash: 5dcf9dc5cc0987e965aba7fd2b8821252e19a655
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788896"
 ---
 # <a name="-out-visual-basic"></a>-除外 (Visual Basic)
 出力ファイルの名前を指定します。  

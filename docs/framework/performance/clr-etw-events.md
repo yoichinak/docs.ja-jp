@@ -9,18 +9,18 @@ ms.assetid: ef2b31c3-7426-43e7-9924-92339b96556d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: cb7520518497b244be8be3751ca8a3063a02717a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61788012"
 ---
 # <a name="clr-etw-events"></a>CLR ETW イベント
 このセクションのトピックでは、Windows イベント トレーシング (ETW) イベントについて説明します。 各イベントは、キーワードとレベルに関連付けられています。詳細については、「[CLR ETW のキーワードとレベル](../../../docs/framework/performance/clr-etw-keywords-and-levels.md)」トピックを参照してください。 CLR には、イベントのプロバイダーが 2 つあります。  
   
--   ランタイム プロバイダー。有効になっているキーワードに応じてイベントを発生させます (キーワードとはイベントのカテゴリです)。 CLR ランタイム プロバイダーの GUID は e13c0d23-ccbc-4e12-931b-d9cc2eee27e4 です。  
+- ランタイム プロバイダー。有効になっているキーワードに応じてイベントを発生させます (キーワードとはイベントのカテゴリです)。 CLR ランタイム プロバイダーの GUID は e13c0d23-ccbc-4e12-931b-d9cc2eee27e4 です。  
   
--   ランダウン プロバイダー。特殊な用途があります。 CLR ランダウン プロバイダーの GUID は a669021c-c450-4609-a035-5af59af4df18 です。  
+- ランダウン プロバイダー。特殊な用途があります。 CLR ランダウン プロバイダーの GUID は a669021c-c450-4609-a035-5af59af4df18 です。  
   
  プロバイダーの詳細については、「[CLR ETW Providers](../../../docs/framework/performance/clr-etw-providers.md)」(CLR ETW プロバイダー) を参照してください。  
   

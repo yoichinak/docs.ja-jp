@@ -6,11 +6,11 @@ helpviewer_keywords:
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
 ms.openlocfilehash: b04266b15f786e3a5a93ac1e9fff1754c397ccd4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61762753"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP ポート共有
 Windows Communication Foundation (WCF) は、高パフォーマンス通信用の新しい TCP ベースのネットワーク プロトコル (net.tcp://) を提供します。 WCF には、新しいシステム コンポーネントでは、Net.TCP ポート共有サービスを複数のユーザー プロセスで共有できる net.tcp ポートをも導入されています。  
@@ -27,11 +27,11 @@ Windows Communication Foundation (WCF) は、高パフォーマンス通信用�
 ## <a name="port-sharing-architecture"></a>ポート共有アーキテクチャ  
  WCF でポート共有アーキテクチャには、次の 3 つの主要なコンポーネントがあります。  
   
--   ワーカー プロセス:共有ポートを使用して net.tcp:// で通信するプロセス。  
+- ワーカー プロセス:共有ポートを使用して net.tcp:// で通信するプロセス。  
   
--   WCF TCP トランスポート:Net.tcp:// protocol を実装します。  
+- WCF TCP トランスポート:Net.tcp:// protocol を実装します。  
   
--   Net.TCP ポート共有サービス:同じ TCP ポートを共有する多くのワーカー プロセスを使用します。  
+- Net.TCP ポート共有サービス:同じ TCP ポートを共有する多くのワーカー プロセスを使用します。  
   
  Net.TCP ポート共有サービスは、net.tcp:// を通じて通信されるワーカー プロセスの代わりに net.tcp:// 接続を受け入れるユーザー モードの Windows サービスです。 ソケット接続が到着すると、ポート共有サービスは受信メッセージ ストリームを検査して送信先アドレスを取得します。 このアドレスを基にポート共有サービスは、最終的に処理されるアプリケーションにデータ ストリームをルーティングできます。  
   

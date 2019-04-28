@@ -1,18 +1,18 @@
 ---
-title: '方法: SQL 永続性ワークフローとワークフロー サービスを有効にします。'
+title: '方法: ワークフローとワークフロー サービスの SQL 永続性を有効にする'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: ca7bf77f-3e5d-4b23-b17a-d0b60f46411d
 ms.openlocfilehash: 84a9220e39c0d79dc53bee576735d1062c1c037c
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710279"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61779211"
 ---
-# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>方法: SQL 永続性ワークフローとワークフロー サービスを有効にします。
+# <a name="how-to-enable-sql-persistence-for-workflows-and-workflow-services"></a>方法: ワークフローとワークフロー サービスの SQL 永続性を有効にする
 
 このトピックでは、ワークフローとワークフロー サービスの永続性をプログラムと構成ファイルの両方から使用して有効にできるように、SQL Workflow Instance Store の機能を構成する方法について説明します。
 
@@ -31,7 +31,7 @@ SQL Workflow Instance Store 機能を使用する前に、この機能におい�
 >
 > System.Data.SqlClient.SqlException:ストアド プロシージャ 'system.activities.durableinstancing.createlockowner'' が見つかりませんでした。
 
-以下のセクションでは、SQL Workflow Instance Store を使用してワークフローとワークフロー サービスの永続性を有効にする方法について説明します。 SQL Workflow Instance Store のプロパティの詳細については、[SQL Workflow Instance Store のプロパティ](properties-of-sql-workflow-instance-store.md)を参照してください。
+以下のセクションでは、SQL Workflow Instance Store を使用してワークフローとワークフロー サービスの永続性を有効にする方法について説明します。 SQL Workflow Instance Store のプロパティの詳細については、次を参照してください。 [SQL Workflow Instance Store のプロパティ](properties-of-sql-workflow-instance-store.md)します。
 
 ## <a name="enabling-persistence-for-self-hosted-workflows-that-use-workflowapplication"></a>WorkflowApplication を使用する自己ホスト型ワークフローの永続化の有効化
 

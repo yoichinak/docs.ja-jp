@@ -3,11 +3,11 @@ title: サンプル XML ファイル:書籍 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: 27ca5847-2289-40c0-8331-ede67ec59d1c
 ms.openlocfilehash: d16a67ba95f7fa9f940c12c61f9ab128abd55a57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58817085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787077"
 ---
 # <a name="sample-xml-file-books-linq-to-xml"></a>サンプル XML ファイル:書籍 (LINQ to XML)
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには、書籍に関する情報が含まれています。  

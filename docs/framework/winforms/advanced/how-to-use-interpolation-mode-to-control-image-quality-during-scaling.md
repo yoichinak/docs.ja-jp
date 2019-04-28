@@ -10,24 +10,24 @@ helpviewer_keywords:
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
 ms.openlocfilehash: 75f5077c2d969f026a28834144c219f289843dd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080983"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778974"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>方法: 補間モードを使用してスケーリング時の画質を制御する
 補間モードを<xref:System.Drawing.Graphics>オブジェクト方法に影響を与えます[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]スケール (拡大および縮小) イメージ。 <xref:System.Drawing.Drawing2D.InterpolationMode>列挙型は、次のリストに表示される一部のいくつかの補間モードを定義します。  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.Bilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBilinear>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.Bicubic>  
   
--   <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
+- <xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>  
   
  イメージを拡大するには、元のイメージ内の各ピクセルは大きいイメージのピクセルのグループにマップする必要があります。 イメージを縮小するには、小さいイメージの 1 つのピクセルに、元のイメージのピクセルのグループをマップする必要があります。 これらのマッピングを実行するアルゴリズムの効果は、スケーリングされたイメージの品質を決定します。 高品質な拡大縮小されたイメージを生成するアルゴリズムは、処理時間を必要とする傾向があります。 上記の一覧で<xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>最低の品質のモードと<xref:System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic>は最高品質のモードです。  
   

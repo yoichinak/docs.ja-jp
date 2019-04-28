@@ -10,11 +10,11 @@ helpviewer_keywords:
 - elements [WPF], changing color of
 ms.assetid: 7e246802-3625-47a7-ae9d-c8a2a40fd040
 ms.openlocfilehash: 744963cc543110121a777e1d4c3cdcb3cec40d9e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217641"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61776897"
 ---
 # <a name="how-to-change-the-color-of-an-element-using-focus-events"></a>方法: フォーカス イベントを使用して要素の色を変更する
 この例を取得しを使用してフォーカスを失ったときに、要素の色を変更する方法を示しています、<xref:System.Windows.UIElement.GotFocus>と<xref:System.Windows.UIElement.LostFocus>イベント。  

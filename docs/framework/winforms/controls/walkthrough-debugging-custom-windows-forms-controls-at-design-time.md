@@ -16,11 +16,11 @@ helpviewer_keywords:
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
 ms.openlocfilehash: db6266f30c4fb62364f3c40a75a4a11ef853c1cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325359"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792289"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ
 カスタム コントロールを作成するときに多くの場合、表示されますが、デザイン時の動作をデバッグするために必要です。 これは、カスタム コントロールのカスタム デザイナーを作成する場合に特に当てはまります。 詳細については、次を参照してください。[チュートリアル。Visual Studio のデザイン時機能を活用したコントロールをフォーム、Windows の作成](creating-a-wf-control-design-time-features.md)です。  
@@ -29,17 +29,17 @@ ms.locfileid: "59325359"
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   カスタム コントロールをホストする Windows フォーム プロジェクトを作成します。  
+- カスタム コントロールをホストする Windows フォーム プロジェクトを作成します。  
   
--   コントロール ライブラリ プロジェクトを作成します。  
+- コントロール ライブラリ プロジェクトを作成します。  
   
--   カスタム コントロールにプロパティを追加  
+- カスタム コントロールにプロパティを追加  
   
--   ホストのフォームにカスタム コントロールを追加します。  
+- ホストのフォームにカスタム コントロールを追加します。  
   
--   デザイン時のデバッグ プロジェクトの設定  
+- デザイン時のデバッグ プロジェクトの設定  
   
--   カスタム コントロールをデザイン時のデバッグ  
+- カスタム コントロールをデザイン時のデバッグ  
   
  完了したら、カスタム コントロールのデザイン時の動作をデバッグするために必要な作業について理解があります。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "59325359"
   
 #### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
--   "DebuggingExample"と呼ばれる Windows アプリケーション プロジェクトを作成 (**ファイル** > **新規** > **プロジェクト** >  **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
+- "DebuggingExample"と呼ばれる Windows アプリケーション プロジェクトを作成 (**ファイル** > **新規** > **プロジェクト** >  **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
   
 ## <a name="creating-a-control-library-project"></a>コントロール ライブラリ プロジェクトを作成します。  
  次の手順では、コントロール ライブラリ プロジェクトを作成し、カスタム コントロールを設定します。  
@@ -71,7 +71,7 @@ ms.locfileid: "59325359"
   
 #### <a name="to-check-your-progress"></a>進行状況をチェックするには  
   
--   という新しいタブを見つけます**DebugControlLibrary コンポーネント** をクリックして選択します。 開くときに、コントロールが表示されます**タブ**の横にある既定のアイコン。  
+- という新しいタブを見つけます**DebugControlLibrary コンポーネント** をクリックして選択します。 開くときに、コントロールが表示されます**タブ**の横にある既定のアイコン。  
   
 ## <a name="adding-a-property-to-your-custom-control"></a>カスタム コントロールにプロパティを追加  
  デザイン時にカスタム コントロールのコードが実行されていることを示すためは、プロパティを追加し、プロパティを実装するコードにブレークポイントを設定します。  
@@ -149,9 +149,9 @@ ms.locfileid: "59325359"
   
 2. F5 キーを押して、デバッグ セッションを開始します。 Visual Studio の新しいインスタンスが作成されたことに注意してください。 2 つの方法でインスタンスを区別することができます。  
   
-    -   デバッグ インスタンスが、word**を実行している**のタイトル バーに  
+    - デバッグ インスタンスが、word**を実行している**のタイトル バーに  
   
-    -   デバッグ インスタンスが、**開始**のボタンではその**デバッグ**ツールバーを無効になっています  
+    - デバッグ インスタンスが、**開始**のボタンではその**デバッグ**ツールバーを無効になっています  
   
      デバッグ インスタンスで、ブレークポイントが設定されます。  
   
@@ -166,11 +166,11 @@ ms.locfileid: "59325359"
 ## <a name="next-steps"></a>次の手順  
  これで、カスタム コントロールをデバッグするにはデザイン時に、Visual Studio IDE とコントロールの相互作用を拡張するためのさまざまな操作があります。  
   
--   使用することができます、<xref:System.ComponentModel.Component.DesignMode%2A>のプロパティ、<xref:System.ComponentModel.Component>クラスはデザイン時にのみ実行するコードを記述します。 詳細については、「<xref:System.ComponentModel.Component.DesignMode%2A>」を参照してください。  
+- 使用することができます、<xref:System.ComponentModel.Component.DesignMode%2A>のプロパティ、<xref:System.ComponentModel.Component>クラスはデザイン時にのみ実行するコードを記述します。 詳細については、「<xref:System.ComponentModel.Component.DesignMode%2A>」を参照してください。  
   
--   いくつかの属性があるデザイナーを使用したカスタム コントロールの相互作用を操作するコントロールのプロパティに適用することができます。 これらの属性を見つけることができます、<xref:System.ComponentModel?displayProperty=nameWithType>名前空間。  
+- いくつかの属性があるデザイナーを使用したカスタム コントロールの相互作用を操作するコントロールのプロパティに適用することができます。 これらの属性を見つけることができます、<xref:System.ComponentModel?displayProperty=nameWithType>名前空間。  
   
--   カスタム コントロールのカスタム デザイナーを記述できます。 これにより、Visual Studio によって公開される拡張可能なデザイナー インフラストラクチャを使用して、デザイン エクスペリエンスを完全に制御できるようにします。 詳細については、次を参照してください。[チュートリアル。Visual Studio のデザイン時機能を活用したコントロールをフォーム、Windows の作成](creating-a-wf-control-design-time-features.md)です。  
+- カスタム コントロールのカスタム デザイナーを記述できます。 これにより、Visual Studio によって公開される拡張可能なデザイナー インフラストラクチャを使用して、デザイン エクスペリエンスを完全に制御できるようにします。 詳細については、次を参照してください。[チュートリアル。Visual Studio のデザイン時機能を活用したコントロールをフォーム、Windows の作成](creating-a-wf-control-design-time-features.md)です。  
   
 ## <a name="see-also"></a>関連項目
 

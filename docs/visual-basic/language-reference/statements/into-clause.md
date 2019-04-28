@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Into keyword [Visual Basic]
 ms.assetid: e1534550-8f4b-4978-b043-fad7b8fd79ac
 ms.openlocfilehash: 8a94309b27ae3ad0c4fb6b13ae4824e4d5dece73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820232"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61784177"
 ---
 # <a name="into-clause-visual-basic"></a>Into 句 (Visual Basic)
 集計関数またはコレクションに適用するグループを識別します。  

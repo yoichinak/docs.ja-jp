@@ -13,18 +13,18 @@ helpviewer_keywords:
 - declared elements [Visual Basic], about declared elements
 ms.assetid: e39c0752-f19f-4d2e-a453-00df1b5fc7ee
 ms.openlocfilehash: 744c7aed50690d5591d1e8248e121cb66ef39108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794707"
 ---
 # <a name="how-to-hide-a-variable-with-the-same-name-as-your-variable-visual-basic"></a>方法: 変数 (Visual Basic) と同じ名前の変数を非表示にします。
 変数を非表示にすることができます*シャドウ*は、これによって、同じ名前の変数で再定義します。 2 つの方法で非表示に変数をシャドウすることができます。  
   
--   **スコープによるシャドウします。** その操作は、非表示に変数を格納しているリージョンのサブ領域内で再宣言することによってスコープによるシャドウできます。  
+- **スコープによるシャドウします。** その操作は、非表示に変数を格納しているリージョンのサブ領域内で再宣言することによってスコープによるシャドウできます。  
   
--   **継承によるシャドウします。** クラス レベルで非表示にする、変数が定義されている場合、することができます、継承によるシャドウを再度宣言することによって、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)派生クラスでのキーワード。  
+- **継承によるシャドウします。** クラス レベルで非表示にする、変数が定義されている場合、することができます、継承によるシャドウを再度宣言することによって、 [Shadows](../../../../visual-basic/language-reference/modifiers/shadows.md)派生クラスでのキーワード。  
   
 ## <a name="two-ways-to-hide-a-variable"></a>2 つの変数を非表示にする方法  
   

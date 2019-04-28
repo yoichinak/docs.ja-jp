@@ -3,11 +3,11 @@ title: <workflowControlEndpoint>
 ms.date: 03/30/2017
 ms.assetid: 6c89e76c-643b-4b6a-9b25-628f753d7027
 ms.openlocfilehash: a9c16d1036a8177120cd152d4ac211ad084d588e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61769643"
 ---
 # <a name="workflowcontrolendpoint"></a>\<workflowControlEndpoint>
 この構成要素は、ワークフロー インスタンスの実行の制御 (作成、実行、保留、終了など) に使用する標準エンドポイントを定義します。  

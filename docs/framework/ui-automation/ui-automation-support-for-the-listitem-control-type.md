@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, List Item control type
 ms.assetid: 34f533bf-fc14-4e78-8fee-fb7107345fab
 ms.openlocfilehash: c2cc96e575dc85459cf55e30d3cbe54bfb158b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783082"
 ---
 # <a name="ui-automation-support-for-the-listitem-control-type"></a>UI オートメーションによる ListItem コントロール型のサポート
 > [!NOTE]
@@ -59,7 +59,7 @@ ms.locfileid: "59189366"
   
 |コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|はい|リスト項目コントロールには、このコントロール パターンを実装する必要があります。 これにより、リスト項目コントロールは、選択されたことを伝達できます。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|[はい]|リスト項目コントロールには、このコントロール パターンを実装する必要があります。 これにより、リスト項目コントロールは、選択されたことを伝達できます。|  
 |<xref:System.Windows.Automation.Provider.IScrollItemProvider>|状況に依存|このリスト項目がスクロール可能なコンテナーに格納されている場合には、このコントロール パターンを実装する必要があります。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|状況に依存|このリスト項目がチェック可能で、アクションによって選択状態の変更が実行されない場合には、このコントロール パターンを実装する必要があります。|  
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider>|状況に依存|この項目を操作して情報を表示または非表示にできる場合は、このコントロール パターンを実装する必要があります。|  

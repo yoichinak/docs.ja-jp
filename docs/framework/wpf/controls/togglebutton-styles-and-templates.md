@@ -10,11 +10,11 @@ helpviewer_keywords:
 - parts [WPF], ToggleButton
 ms.assetid: 54f23f30-4bcb-4f09-8ce4-376a13a255a1
 ms.openlocfilehash: 46fd7d07c3904ee752ae3f467f65af4b0c031c84
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61790755"
 ---
 # <a name="togglebutton-styles-and-templates"></a>ToggleButton のスタイルとテンプレート
 
@@ -36,8 +36,8 @@ ms.locfileid: "57509511"
 |無効|CommonStates|コントロールが無効になっています。|
 |フォーカスされている|FocusStates|コントロールにフォーカスがあります。|
 |フォーカスされていない|FocusStates|コントロールにフォーカスがありません。|
-|チェック済み|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> は `true` です。|
-|オフ|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> は `false` です。|
+|チェック済み|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> は `true`です。|
+|オフ|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> は `false`です。|
 |不確定です|CheckStates|<xref:System.Windows.Controls.Primitives.ToggleButton.IsThreeState%2A> が `true` で、<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A> が `null` です。|
 |有効|ValidationStates|コントロールを使用して、<xref:System.Windows.Controls.Validation>クラスおよび<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`false`します。|
 |InvalidFocused|ValidationStates|<xref:System.Windows.Controls.Validation.HasError%2A?displayProperty=nameWithType>添付プロパティは`true`がコントロールにフォーカスします。|

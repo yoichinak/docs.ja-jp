@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
 ms.openlocfilehash: d05e071b97c9a1f3043949a6619a187dd418f9b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793680"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>トランザクション スコープを使用した暗黙的なトランザクションの実装
 <xref:System.Transactions.TransactionScope> クラスを使用すると、コード ブロックがトランザクションに参加しているものとして簡単にマークすることができ、トランザクション自体と対話する必要がありません。 トランザクション スコープは、アンビエント トランザクションを自動的に選択して管理することができます。 トランザクション アプリケーションを開発する際は、使いやすさと効率の点から、<xref:System.Transactions.TransactionScope> クラスを使用することをお勧めします。  
@@ -71,11 +71,11 @@ void SomeMethod()
   
  <xref:System.Transactions.TransactionScope> オブジェクトには次の 3 つのオプションがあります。  
   
--   アンビエント トランザクションに参加します (存在しない場合は新規に作成します)。  
+- アンビエント トランザクションに参加します (存在しない場合は新規に作成します)。  
   
--   新しいルート スコープになります。つまり、新しいトランザクションを開始して、そのトランザクションをそれ自身のスコープ内の新しいアンビエント トランザクションにします。  
+- 新しいルート スコープになります。つまり、新しいトランザクションを開始して、そのトランザクションをそれ自身のスコープ内の新しいアンビエント トランザクションにします。  
   
--   どのトランザクションにも参加しません。 その結果、アンビエント トランザクションは存在しません。  
+- どのトランザクションにも参加しません。 その結果、アンビエント トランザクションは存在しません。  
   
  スコープが <xref:System.Transactions.TransactionScopeOption.Required> でインスタンス化された場合、アンビエント トランザクションが存在しているときは、スコープはそのトランザクションに参加します。 一方、アンビエント トランザクションが存在しないときは、スコープは新しいトランザクションを作成して、ルート スコープになります。 これが既定値です。 <xref:System.Transactions.TransactionScopeOption.Required> を使用した場合、スコープがルートのときでも、アンビエント トランザクションに参加するだけのときでも、スコープ内のコードは異なる動作をする必要がありません。 いずれの場合にもスコープ内のコードは同じ動作をします。  
   

@@ -3,11 +3,11 @@ title: XElement クラスの概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 52331fcd-6023-4d19-b423-7b24f2d86ded
 ms.openlocfilehash: 7fbe1cc484ea3482bc455c161783bd7a4513d0bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830710"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783631"
 ---
 # <a name="xelement-class-overview-visual-basic"></a>XElement クラスの概要 (Visual Basic)
 <xref:System.Xml.Linq.XElement> クラスは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の基礎クラスの 1 つです。 これは XML 要素を表します。 このクラスを使用すると、要素の作成、要素のコンテンツの変更、子要素の追加、変更、削除、要素への属性の追加、および要素のコンテンツのテキスト形式へのシリアル化を行うことができます。 <xref:System.Xml?displayProperty=nameWithType>、<xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> などの、<xref:System.Xml.Xsl.XslCompiledTransform> の他のクラスと相互運用することもできます。  
@@ -18,13 +18,13 @@ ms.locfileid: "58830710"
 ### <a name="constructing-xml-trees"></a>XML ツリーの構築  
  次のようなさまざまな方法で XML ツリーを構築できます。  
   
--   コードで XML ツリーを構築できます。 詳細については、次を参照してください。 [XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)します。  
+- コードで XML ツリーを構築できます。 詳細については、次を参照してください。 [XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)します。  
   
--   <xref:System.IO.TextReader>、テキスト ファイル、Web アドレス (URL) など、さまざまなソースから XML を解析できます。 詳細については、次を参照してください。 [XML の解析 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)します。  
+- <xref:System.IO.TextReader>、テキスト ファイル、Web アドレス (URL) など、さまざまなソースから XML を解析できます。 詳細については、次を参照してください。 [XML の解析 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/parsing-xml.md)します。  
   
--   <xref:System.Xml.XmlReader> を使用してツリーを設定できます。 詳細については、「 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 」を参照してください。  
+- <xref:System.Xml.XmlReader> を使用してツリーを設定できます。 詳細については、「 <xref:System.Xml.Linq.XNode.ReadFrom%2A> 」を参照してください。  
   
--   <xref:System.Xml.XmlWriter> にコンテンツを書き込むことができるモジュールがある場合は、<xref:System.Xml.Linq.XContainer.CreateWriter%2A> メソッドを使用してライターを作成し、このライターをモジュールに渡し、<xref:System.Xml.XmlWriter> に書き込まれたコンテンツを使用して XML ツリーを設定できます。  
+- <xref:System.Xml.XmlWriter> にコンテンツを書き込むことができるモジュールがある場合は、<xref:System.Xml.Linq.XContainer.CreateWriter%2A> メソッドを使用してライターを作成し、このライターをモジュールに渡し、<xref:System.Xml.XmlWriter> に書き込まれたコンテンツを使用して XML ツリーを設定できます。  
   
  しかし、XML ツリーを作成する最も一般的な方法は次のとおりです。  
   

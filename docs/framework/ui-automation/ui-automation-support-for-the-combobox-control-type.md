@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ComboBox controls
 ms.assetid: bb321126-4770-41da-983a-67b7b89d45dd
 ms.openlocfilehash: 7e458d95f81893d61bcf19f7fe611e3424f27e37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785438"
 ---
 # <a name="ui-automation-support-for-the-combobox-control-type"></a>UI オートメーションによる ComboBox コントロール型のサポート
 > [!NOTE]

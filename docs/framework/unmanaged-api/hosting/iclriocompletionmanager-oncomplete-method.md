@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f0d9d4336b79b60e69f980b6d5931e2994732f30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191628"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61792692"
 ---
 # <a name="iclriocompletionmanageroncomplete-method"></a>ICLRIoCompletionManager::OnComplete メソッド
 共通言語ランタイム (CLR) の通知への呼び出しを使用して作成された I/O 要求の状態、 [ihostiocompletionmanager::bind](../../../../docs/framework/unmanaged-api/hosting/ihostiocompletionmanager-bind-method.md)メソッド。  
@@ -41,11 +41,11 @@ HRESULT OnComplete (
  `dwErrorCode`  
  [in]バインド操作の状態を示す HRESULT 値。  
   
--   S_OK では、操作が正常に完了したことを示します。  
+- S_OK では、操作が正常に完了したことを示します。  
   
--   HOST_E_INTERRUPTED では、呼び出しが完了する前に終了したことを示します。  
+- HOST_E_INTERRUPTED では、呼び出しが完了する前に終了したことを示します。  
   
--   E_FAIL では、未知の回復不能な壊滅的なエラーが発生したことを示します。  
+- E_FAIL では、未知の回復不能な壊滅的なエラーが発生したことを示します。  
   
  `NumberOfBytesTransferred`  
  [in]I/O 要求の処理中に転送されたバイト数。  

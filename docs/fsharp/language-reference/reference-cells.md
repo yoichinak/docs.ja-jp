@@ -3,11 +3,11 @@ title: 参照セル
 description: 学習方法F#参照セルは参照セマンティクスを持つ変更可能な値を作成するための記憶域の場所。
 ms.date: 05/16/2016
 ms.openlocfilehash: e4fcd3cf1abcf5f5e3b4d5439c9215b79ff8dbcd
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612765"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795403"
 ---
 # <a name="reference-cells"></a>参照セル
 
@@ -77,7 +77,7 @@ let ref x = { contents = x }
 
 C# プログラマことを知っている`ref`と同じものでない (C#) `ref` F# でします。 同等の構成体F#は[byref](byrefs.md)、参照セルから異なる概念であります。
 
-値がマーク`mutable`に自動的に昇格できる可能性があります`'a ref`; クロージャによってキャプチャされた場合は、[値](values/index.md)を参照してください。
+値がマーク`mutable`に自動的に昇格できる可能性があります`'a ref`; クロージャによってキャプチャされた場合は、次を参照してください。[値](values/index.md)します。
 
 ## <a name="see-also"></a>関連項目
 

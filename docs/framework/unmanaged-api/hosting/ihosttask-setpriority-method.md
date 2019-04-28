@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c5382341a8c0c6455438af9e8c476348ab2467a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61789507"
 ---
 # <a name="ihosttasksetpriority-method"></a>IHostTask::SetPriority メソッド
 現在によって表されるタスクのスレッドの優先順位を変更するホストの要求レベル[IHostTask](../../../../docs/framework/unmanaged-api/hosting/ihosttask-interface.md)インスタンス。  
@@ -53,19 +53,19 @@ HRESULT SetPriority (
 ## <a name="remarks"></a>Remarks  
  スレッドのスレッドの優先順位に基づく部分的ラウンド ロビン システムを使用して処理します。 `SetPriority` 現在のタスクそのスレッドの優先度レベルを設定する CLR を使用できます。 次`newPriority`値がサポートされています。  
   
--   THREAD_PRIORITY_ABOVE_NORMAL  
+- THREAD_PRIORITY_ABOVE_NORMAL  
   
--   THREAD_PRIORITY_BELOW_NORMAL  
+- THREAD_PRIORITY_BELOW_NORMAL  
   
--   THREAD_PRIORITY_HIGHEST  
+- THREAD_PRIORITY_HIGHEST  
   
--   THREAD_PRIORITY_IDLE  
+- THREAD_PRIORITY_IDLE  
   
--   THREAD_PRIORITY_LOWEST  
+- THREAD_PRIORITY_LOWEST  
   
--   THREAD_PRIORITY_NORMAL  
+- THREAD_PRIORITY_NORMAL  
   
--   THREAD_PRIORITY_TIME_CRITICAL  
+- THREAD_PRIORITY_TIME_CRITICAL  
   
  CLR 呼び出し`SetPriority`ときの値、<xref:System.Threading.Thread.Priority%2A?displayProperty=nameWithType>がユーザー コードによって変更します。 ホストは、スレッドの優先度の割り当て、独自のアルゴリズムを定義でき、この要求を無視します。  
   

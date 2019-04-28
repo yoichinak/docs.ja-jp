@@ -3,11 +3,11 @@ title: WCF エラー処理
 ms.date: 03/30/2017
 ms.assetid: 1e4b1e0f-9598-449d-9d73-90bda62305b8
 ms.openlocfilehash: d70edacd2447fbe0b0b6db42b93f699ce7c17003
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791223"
 ---
 # <a name="wcf-error-handling"></a>WCF エラー処理
 WCF アプリケーションで発生したエラーは次の 3 つのグループのいずれかに属します。  
@@ -26,13 +26,13 @@ WCF アプリケーションで発生したエラーは次の 3 つのグルー�
   
  WCF でのエラー処理は、次の 1 つ以上によって実行されます。  
   
--   スローされた例外の直接処理。 これは、通信エラーとプロキシ/チャネル エラーに対してのみ行われます。  
+- スローされた例外の直接処理。 これは、通信エラーとプロキシ/チャネル エラーに対してのみ行われます。  
   
--   エラー コントラクトの使用  
+- エラー コントラクトの使用  
   
--   <xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスの実装  
+- <xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスの実装  
   
--   <xref:System.ServiceModel.ServiceHost> イベントの処理  
+- <xref:System.ServiceModel.ServiceHost> イベントの処理  
   
 ## <a name="fault-contracts"></a>エラー コントラクト  
  エラー コントラクトでは、プラットフォームに依存しない方法で、サービス操作中に発生する可能性のあるエラーを定義できます。 既定では、サービス操作内からスローされたすべての例外はクライアントに <xref:System.ServiceModel.FaultException> オブジェクトとして返されます。 <xref:System.ServiceModel.FaultException> オブジェクトには、情報がほとんど含まれません。 エラー コントラクトを定義し、エラーを <xref:System.ServiceModel.FaultException%601> として返すことにより、クライアントに送信される情報を制御できます。 詳細については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  

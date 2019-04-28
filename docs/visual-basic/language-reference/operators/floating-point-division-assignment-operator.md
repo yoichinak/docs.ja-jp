@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: a1e22d0e-8380-4761-9da1-84fb51c34821
 ms.openlocfilehash: d9d3fa021654d3be1b9d304beb83caa737660264
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813991"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61778470"
 ---
 # <a name="-operator-visual-basic"></a>/= 演算子 (Visual Basic)
 変数またはプロパティの値式の値で除算し、浮動小数点の結果を変数またはプロパティに代入します。  

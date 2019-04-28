@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d17c353d8e2358a1651ba3fbbb1dd718cc681f7b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61782851"
 ---
 # <a name="icordebugregistersetsetregisters-method"></a>ICorDebugRegisterSet::SetRegisters メソッド
 `SetRegisters` .NET Framework version 2.0 では実装されていません。 このメソッドを呼び出さないでください。  

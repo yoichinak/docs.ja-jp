@@ -7,11 +7,11 @@ helpviewer_keywords:
 - /utf8output compiler option [Visual Basic]
 ms.assetid: 8ab36b1e-027a-49ac-85b4-f48997d9e4d6
 ms.openlocfilehash: 75369c3bcb19afbf98bfb80bc3e439f996d2a9d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61796079"
 ---
 # <a name="-utf8output-visual-basic"></a>-utf8output (Visual Basic)
 UTF-8 エンコードを使用してコンパイラ出力を表示します。  
@@ -24,7 +24,7 @@ UTF-8 エンコードを使用してコンパイラ出力を表示します。
   
 ## <a name="arguments"></a>引数  
  `+` &#124; `-`  
- 任意。 このオプションの既定値は`-utf8output-`、つまり、コンパイラの出力は utf-8 エンコードを使用しません。 `-utf8output` を指定することは、`-utf8output+` を指定することと同じです。  
+ 省略可能です。 このオプションの既定値は`-utf8output-`、つまり、コンパイラの出力は utf-8 エンコードを使用しません。 `-utf8output` を指定することは、`-utf8output+` を指定することと同じです。  
   
 ## <a name="remarks"></a>Remarks  
  国際対応の構成によっては、コンパイラの出力は、コンソールで正常に表示できません。 このような状況では、次のように使用します。`-utf8output`してコンパイラ出力をファイルにリダイレクトします。  

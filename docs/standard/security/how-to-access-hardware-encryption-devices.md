@@ -16,11 +16,11 @@ ms.assetid: b0e734df-6eb4-4b16-b48c-6f0fe82d5f17
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 33af618ac3971df76683fd64346e1aa1e5977177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795202"
 ---
 # <a name="how-to-access-hardware-encryption-devices"></a>方法: ハードウェア暗号化デバイスにアクセスする
 ハードウェア暗号化デバイスにアクセスするには、<xref:System.Security.Cryptography.CspParameters> クラスを使用します。 たとえば、このクラスを使用すると、アプリケーションをスマート カード、ハードウェアの乱数ジェネレーター、または特定の暗号化アルゴリズムのハードウェア実装と統合することができます。  
@@ -54,8 +54,8 @@ ms.locfileid: "59773416"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   <xref:System> 名前空間と <xref:System.Security.Cryptography> 名前空間を含めます。  
+- <xref:System> 名前空間と <xref:System.Security.Cryptography> 名前空間を含めます。  
   
--   スマート カード リーダーとドライバーをコンピューターにインストールしておく必要があります。  
+- スマート カード リーダーとドライバーをコンピューターにインストールしておく必要があります。  
   
--   カード リーダー固有の情報を使用して、<xref:System.Security.Cryptography.CspParameters> オブジェクトを初期化する必要があります。  詳細については、カード リーダーのドキュメントを参照してください。
+- カード リーダー固有の情報を使用して、<xref:System.Security.Cryptography.CspParameters> オブジェクトを初期化する必要があります。  詳細については、カード リーダーのドキュメントを参照してください。

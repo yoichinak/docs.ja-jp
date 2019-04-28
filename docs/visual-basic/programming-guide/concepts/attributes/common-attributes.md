@@ -3,24 +3,24 @@ title: 共通属性 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 11fe4894-1bf9-4525-a36b-cddcd3a5d22b
 ms.openlocfilehash: e001c9a637d2e5e34e77158704e4ad81d6973a50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794031"
 ---
 # <a name="common-attributes-visual-basic"></a>共通属性 (Visual Basic)
 このトピックでは、Visual Basic プログラムで最もよく使用される属性について説明します。  
   
--   [グローバル属性](#Global)  
+- [グローバル属性](#Global)  
   
--   [Obsolete 属性](#Obsolete)  
+- [Obsolete 属性](#Obsolete)  
   
--   [Conditional 属性](#Conditional)  
+- [Conditional 属性](#Conditional)  
   
--   [呼び出し元情報属性](#CallerInfo)  
+- [呼び出し元情報属性](#CallerInfo)  
   
--   [Visual Basic の属性](#VB)  
+- [Visual Basic の属性](#VB)  
   
 ## <a name="Global"></a> グローバル属性  
  ほとんどの属性は、クラスやメソッドなど、特定の言語要素に適用されます。ただし、属性の中にはグローバルなものがあり、アセンブリまたはモジュール全体に適用されます。 たとえば、<xref:System.Reflection.AssemblyVersionAttribute> 属性は、次のように、バージョン情報をアセンブリに埋め込むときに使用できます。  
@@ -33,11 +33,11 @@ ms.locfileid: "58834545"
   
  アセンブリの属性は、アセンブリに関する情報を提供する値です。 これらは次のカテゴリに分けられます。  
   
--   アセンブリ ID 属性  
+- アセンブリ ID 属性  
   
--   情報属性  
+- 情報属性  
   
--   アセンブリ マニフェスト属性  
+- アセンブリ マニフェスト属性  
   
 ### <a name="assembly-identity-attributes"></a>アセンブリ ID 属性  
  アセンブリの ID は、名前、バージョン、カルチャの 3 つの属性によって識別されます (適用できる場合は厳密な名前も使用されます)。 アセンブリの完全な名前を形成するこれらの属性は、コード内でアセンブリを参照するときに必要になります。 アセンブリのバージョンとカルチャは、属性を使用して設定できます。 ただし名前の値は、コンパイラ、Visual Studio IDE の [[アセンブリ情報]](/visualstudio/ide/reference/assembly-information-dialog-box) ダイアログ ボックス、またはアセンブリ リンカー (AI.exe) によってアセンブリの作成時に設定されます。このとき、設定はアセンブリ マニフェストが含まれたファイルに基づきます。 <xref:System.Reflection.AssemblyFlagsAttribute> 属性は、アセンブリの複数のコピーが共存できるかどうかを指定します。  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: fa1624dd-2d74-4ae3-942e-498cee261ac5
 author: BrucePerlerMS
 ms.openlocfilehash: 9728f3caee4dba367e4fc4a3e68213b1055cc3d1
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57362956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793784"
 ---
 # <a name="systemidentitymodelservices"></a>\<system.identityModel.services>
 Ws-federation プロトコルを使用して認証用の構成セクション。  

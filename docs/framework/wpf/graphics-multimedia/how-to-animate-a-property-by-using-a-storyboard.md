@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Storyboards [WPF], animation
 ms.assetid: f4a314e9-1da2-4367-85fc-1232487efa7a
 ms.openlocfilehash: f6064368b4f5e4fa8324b4039d734d4430cd9174
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57364711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761209"
 ---
 # <a name="how-to-animate-a-property-by-using-a-storyboard"></a>方法: ストーリーボードを使ってプロパティをアニメーション化する
 この例は、使用する方法を示します、<xref:System.Windows.Media.Animation.Storyboard>プロパティをアニメーション化します。 使用してプロパティをアニメーション化する、 <xref:System.Windows.Media.Animation.Storyboard>、アニメーション化しても作成する各プロパティのアニメーションを作成、<xref:System.Windows.Media.Animation.Storyboard>アニメーションを格納します。  
@@ -30,8 +30,7 @@ ms.locfileid: "57364711"
 > [!NOTE]
 >  アニメーション両方を対象にできますが、<xref:System.Windows.FrameworkElement>オブジェクトなど、<xref:System.Windows.Controls.Control>または<xref:System.Windows.Controls.Panel>と<xref:System.Windows.Freezable>などのオブジェクト、<xref:System.Windows.Media.Brush>または<xref:System.Windows.Media.Transform>、フレームワーク要素だけが、<xref:System.Windows.FrameworkElement.Name%2A>プロパティ。 名前をフリーズ可能オブジェクトに割り当てて、アニメーションの対象にできるようにするには、前の例で示したように [x:Name ディレクティブ](../../xaml-services/x-name-directive.md)を使用します。  
   
- 作成する必要があるコードを使用する場合、<xref:System.Windows.NameScope>の<xref:System.Windows.FrameworkElement>をアニメーション化するオブジェクトの名前の登録と<xref:System.Windows.FrameworkElement>します。 コードでアニメーションを開始するには使用、<xref:System.Windows.Media.Animation.BeginStoryboard>とアクション、<xref:System.Windows.EventTrigger>します。 必要に応じて、イベント ハンドラーを使用することができます、<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>メソッドの<xref:System.Windows.Media.Animation.Storyboard>します。 
-  <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> メソッドを使用する方法の例を次に示します。  
+ 作成する必要があるコードを使用する場合、<xref:System.Windows.NameScope>の<xref:System.Windows.FrameworkElement>をアニメーション化するオブジェクトの名前の登録と<xref:System.Windows.FrameworkElement>します。 コードでアニメーションを開始するには使用、<xref:System.Windows.Media.Animation.BeginStoryboard>とアクション、<xref:System.Windows.EventTrigger>します。 必要に応じて、イベント ハンドラーを使用することができます、<xref:System.Windows.Media.Animation.Storyboard.Begin%2A>メソッドの<xref:System.Windows.Media.Animation.Storyboard>します。 <xref:System.Windows.Media.Animation.Storyboard.Begin%2A> メソッドを使用する方法の例を次に示します。  
   
  [!code-csharp[AnimatePropertyStoryboards#11](~/samples/snippets/csharp/VS_Snippets_Wpf/AnimatePropertyStoryboards/CSharp/StoryboardExample.cs#11)]
  [!code-vb[AnimatePropertyStoryboards#11](~/samples/snippets/visualbasic/VS_Snippets_Wpf/AnimatePropertyStoryboards/VisualBasic/StoryboardExample.vb#11)]  

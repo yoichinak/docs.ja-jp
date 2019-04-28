@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 ms.assetid: 6207cad1-7a34-4bd6-bfc1-db823ca7a73e
 ms.openlocfilehash: 8fc92bf84def50bed54a054ae634a8a08c8835c2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212454"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936881"
 ---
 # <a name="managing-the-state-of-a-graphics-object"></a>Graphics オブジェクトの状態の管理
 <xref:System.Drawing.Graphics>クラスは、の中核[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]します。 取得するものを描画する、<xref:System.Drawing.Graphics>オブジェクトでそのプロパティを設定し、そのメソッドを呼び出す<xref:System.Drawing.Graphics.DrawLine%2A>、 <xref:System.Drawing.Graphics.DrawImage%2A>、<xref:System.Drawing.Graphics.DrawString%2A>など)。  
@@ -35,11 +35,11 @@ graphics.DrawRectangle(pen, 10, 10, 200, 100);
 ## <a name="graphics-state"></a>グラフィックスの状態  
  A<xref:System.Drawing.Graphics>オブジェクトによる描画メソッドは、の提供がなど複数の<xref:System.Drawing.Graphics.DrawLine%2A>と<xref:System.Drawing.Graphics.DrawRectangle%2A>します。 A<xref:System.Drawing.Graphics>オブジェクトでは、グラフィックスの状態は、次のカテゴリに分類できますも保持されます。  
   
--   品質の設定  
+- 品質の設定  
   
--   変換  
+- 変換  
   
--   クリッピング領域  
+- クリッピング領域  
   
 ### <a name="quality-settings"></a>品質の設定  
  A<xref:System.Drawing.Graphics>オブジェクトが描画されるアイテムの品質に影響を与えるいくつかのプロパティ。 たとえば、設定、<xref:System.Drawing.Graphics.TextRenderingHint%2A>プロパティをテキストに適用されます (ある場合) のアンチエイリアシングの種類を指定します。 品質に影響を与える他のプロパティは<xref:System.Drawing.Graphics.SmoothingMode%2A>、 <xref:System.Drawing.Graphics.CompositingMode%2A>、 <xref:System.Drawing.Graphics.CompositingQuality%2A>、および<xref:System.Drawing.Graphics.InterpolationMode%2A>します。  

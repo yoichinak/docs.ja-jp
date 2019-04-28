@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 678b7fbd595b1238b7025c22b0ed80b02ed4becd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61750211"
 ---
 # <a name="icordebugcodegetsize-method"></a>ICorDebugCode::GetSize メソッド
 この"ICorDebugCode"で表されるバイナリ コードのバイト単位のサイズを取得します。  

@@ -3,11 +3,11 @@ title: System.ServiceModel.CommunicationObjectOpenFailed
 ms.date: 03/30/2017
 ms.assetid: 8e188528-c4f4-499e-9ac2-a2fac4742f29
 ms.openlocfilehash: 5ec3ceefe6e0a0567c80b3a097b00a61fd4f4823
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795851"
 ---
 # <a name="systemservicemodelcommunicationobjectopenfailed"></a>System.ServiceModel.CommunicationObjectOpenFailed
 通信オブジェクトを開けませんでした。  

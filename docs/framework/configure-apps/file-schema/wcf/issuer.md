@@ -3,11 +3,11 @@ title: <issuer>
 ms.date: 03/30/2017
 ms.assetid: 8c49c6ae-fa1a-4179-a84b-613c3216dcde
 ms.openlocfilehash: 37d935287fa7dfba640c39071295fd660f4db7c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160824"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756261"
 ---
 # <a name="issuer"></a>\<発行者 >
 セキュリティ トークンを発行するセキュリティ トークン サービス (STS) を指定します。  

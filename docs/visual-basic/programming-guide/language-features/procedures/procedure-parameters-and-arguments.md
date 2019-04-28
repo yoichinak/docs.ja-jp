@@ -19,11 +19,11 @@ helpviewer_keywords:
 - procedures [Visual Basic], parameter lists
 ms.assetid: ff275aff-aa13-40df-bd4c-63486db8c1e9
 ms.openlocfilehash: 80065cabcacdcf44b04fef7bacb978ca9c8077ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825457"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791909"
 ---
 # <a name="procedure-parameters-and-arguments-visual-basic"></a>プロシージャのパラメーターと引数 (Visual Basic)
 ほとんどの場合、プロシージャには、呼び出されたときの状況に関する情報が必要があります。 繰り返される、または共有のタスクを実行する手順では、呼び出しごとに異なる情報を使用します。 この情報は、変数、定数、および呼び出しでは、プロシージャに渡す式で構成されます。  
@@ -49,11 +49,11 @@ ms.locfileid: "58825457"
   
  呼び出し元のコードがなど、対応するパラメーターの異なるデータ型の引数を指定するかどうかは`Byte`を`String`パラメーターを次のいずれかの操作にする必要があります。  
   
--   パラメーターのデータ型に拡大変換するデータ型の引数だけを渡す  
+- パラメーターのデータ型に拡大変換するデータ型の引数だけを渡す  
   
--   設定`Option Strict Off`暗黙的な縮小変換を許可するか、  
+- 設定`Option Strict Off`暗黙的な縮小変換を許可するか、  
   
--   変換キーワードを使用して、データ型を明示的に変換します。  
+- 変換キーワードを使用して、データ型を明示的に変換します。  
   
 ### <a name="type-parameters"></a>型パラメーター  
  A*ジェネリック プロシージャ*も 1 つまたは複数定義します*パラメーター入力*だけでなく、通常のパラメーター。 ジェネリック プロシージャでは、個々 の呼び出しの要件をデータ型を調整できるように、プロシージャを呼び出すたびに異なるデータ型を渡すコードの呼び出しを許可します。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  

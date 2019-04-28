@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: e69490734a03cf58bf8534bc9e31110a11d44c58
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61795328"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker コンテナー、イメージ、レジストリ
 

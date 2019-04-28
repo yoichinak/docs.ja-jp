@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 29efe5e5-897b-46c2-a35f-e599a273acc8
 ms.openlocfilehash: 1a02520ab7d1196b8071bda752ae30896958f372
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105418"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793719"
 ---
 # <a name="implementing-an-explicit-transaction-using-committabletransaction"></a>CommittableTransaction を使用した明示的なトランザクションの実装
 <xref:System.Transactions.CommittableTransaction> クラスは、<xref:System.Transactions.TransactionScope> クラスが暗黙的に使用されるのと対照的に、アプリケーションがトランザクションを明示的に使用する方法を提供します。 これは、複数の関数呼び出しまたは複数のスレッド呼び出しで同じトランザクションを使用するアプリケーションで役立ちます。 <xref:System.Transactions.TransactionScope> クラスとは異なり、アプリケーション作成者はトランザクションをコミットまたは中止するために、具体的に <xref:System.Transactions.CommittableTransaction.Commit%2A> メソッドまたは <xref:System.Transactions.Transaction.Rollback%2A> メソッドを呼び出す必要があります。  
@@ -22,9 +22,9 @@ ms.locfileid: "59105418"
   
  <xref:System.Transactions.CommittableTransaction> クラスを使用する場合には、次のことに注意する必要があります。  
   
--   <xref:System.Transactions.CommittableTransaction> トランザクションを作成しても、アンビエント トランザクションは設定されません。 リソース マネージャーが必要に応じて正しいトランザクション コンテキストで動作することを保証するには、アンビエント トランザクションを具体的に設定およびリセットする必要があります。 現在のアンビエント トランザクションを設定するには、グローバルな <xref:System.Transactions.Transaction.Current%2A> オブジェクトの静的な <xref:System.Transactions.Transaction> プロパティを設定します。  
+- <xref:System.Transactions.CommittableTransaction> トランザクションを作成しても、アンビエント トランザクションは設定されません。 リソース マネージャーが必要に応じて正しいトランザクション コンテキストで動作することを保証するには、アンビエント トランザクションを具体的に設定およびリセットする必要があります。 現在のアンビエント トランザクションを設定するには、グローバルな <xref:System.Transactions.Transaction.Current%2A> オブジェクトの静的な <xref:System.Transactions.Transaction> プロパティを設定します。  
   
--   <xref:System.Transactions.CommittableTransaction> オブジェクトは再利用できません。 <xref:System.Transactions.CommittableTransaction> オブジェクトがコミットまたはロールバックされると、トランザクションで再び使用することはできません。 つまり、現在のアンビエント トランザクション コンテキストとして設定することはできません。  
+- <xref:System.Transactions.CommittableTransaction> オブジェクトは再利用できません。 <xref:System.Transactions.CommittableTransaction> オブジェクトがコミットまたはロールバックされると、トランザクションで再び使用することはできません。 つまり、現在のアンビエント トランザクション コンテキストとして設定することはできません。  
   
 ## <a name="creating-a-committabletransaction"></a>CommittableTransaction の作成  
  新しい <xref:System.Transactions.CommittableTransaction> を作成してコミットする例を次に示します。  

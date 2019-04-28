@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb47fa8122a1c209d49d2928edea0e03b27a8480
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189327"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765454"
 ---
 # <a name="itypenamebuilder-interface"></a>ITypeNameBuilder インターフェイス
 型名を構築するためのメソッドを提供します。  

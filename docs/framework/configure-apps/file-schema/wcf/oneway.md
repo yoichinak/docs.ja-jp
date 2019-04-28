@@ -3,11 +3,11 @@ title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
 ms.openlocfilehash: bfda2b9d7b3aa5219a3e4c344347d3b10419a7bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61783488"
 ---
 # <a name="oneway"></a>\<oneWay>
 カスタム バインドのパケット ルーティングを有効にし、一方向メソッドを使用できるようにします。  

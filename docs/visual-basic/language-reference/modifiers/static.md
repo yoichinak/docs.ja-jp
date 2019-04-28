@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
 ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814176"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61781187"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 1 つまたは複数のローカル変数が存在し、宣言されているプロシージャの終了後、最新の値を保持し続けることを指定します。  
@@ -22,13 +22,13 @@ ms.locfileid: "58814176"
   
 ## <a name="rules"></a>ルール  
   
--   **宣言コンテキスト。** 使用することができます`Static`ローカル変数に対してのみです。 これは、意味の宣言コンテキスト、`Static`変数は、プロシージャまたはプロシージャでは、ブロックする必要があり、ソース ファイル、名前空間、クラス、構造体、またはモジュールにすることはできません。  
+- **宣言コンテキスト。** 使用することができます`Static`ローカル変数に対してのみです。 これは、意味の宣言コンテキスト、`Static`変数は、プロシージャまたはプロシージャでは、ブロックする必要があり、ソース ファイル、名前空間、クラス、構造体、またはモジュールにすることはできません。  
   
      使用することはできません`Static`構造プロシージャ内にあります。  
   
--   データ型`Static`ローカル変数を推論することはできません。 詳細については、次を参照してください。[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。  
+- データ型`Static`ローカル変数を推論することはできません。 詳細については、次を参照してください。[ローカル型推論](../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。  
   
--   **結合された修飾子。** 指定することはできません`Static`と共に`ReadOnly`、 `Shadows`、または`Shared`同じ宣言内。  
+- **結合された修飾子。** 指定することはできません`Static`と共に`ReadOnly`、 `Shadows`、または`Shared`同じ宣言内。  
   
 ## <a name="behavior"></a>動作  
  静的変数を宣言する場合、`Shared`プロシージャ、静的変数の 1 つだけコピーは、アプリケーション全体で使用します。 呼び出す、`Shared`クラスを使用してプロシージャ名、クラスのインスタンスを指す変数ではなく。  

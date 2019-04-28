@@ -3,11 +3,11 @@ title: サンプル XML ファイル:3 での複数の購買発注
 ms.date: 07/20/2015
 ms.assetid: 03f754c6-89f7-4143-8456-4963044be7e5
 ms.openlocfilehash: 4f7a25b9b56c5d37d45ee46928f3d4ceb3607c35
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61787011"
 ---
 # <a name="sample-xml-file-multiple-purchase-orders-in-a-namespace"></a>サンプル XML ファイル:名前空間内の複数の購買発注書
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには、複数の購買発注書が含まれています。 XML は名前空間に含まれています。  

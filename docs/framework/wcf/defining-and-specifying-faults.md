@@ -9,11 +9,11 @@ helpviewer_keywords:
 - handling faults [WCF], defining
 ms.assetid: c00c84f1-962d-46a7-b07f-ebc4f80fbfc1
 ms.openlocfilehash: 24c05bf41152fba2f54636cd0c15dde6fa71aa2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299333"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61785048"
 ---
 # <a name="defining-and-specifying-faults"></a>エラーの定義と指定
 SOAP エラーを使用する目的は、エラー状態情報をサービスからクライアントに伝達し、双方向のシナリオでは、相互利用が可能な手段でクライアントからサービスにも伝達することです。 ここでは、カスタムのエラー コンテンツをいつどのように定義し、そのエラーを返す操作をどのように指定するかについて説明します。 サービス、または双方向のクライアントがエラーを送信する方法と、クライアントまたはサービス アプリケーションがエラーを処理する方法の詳細については、次を参照してください。 [Sending and Receiving Faults](../../../docs/framework/wcf/sending-and-receiving-faults.md)します。 Windows Communication Foundation (WCF) アプリケーションのエラー処理の概要については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  

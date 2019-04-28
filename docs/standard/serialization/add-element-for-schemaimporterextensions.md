@@ -1,16 +1,16 @@
 ---
-title: <add> の <schemaImporterExtensions> 要素
+title: <schemaImporterExtensions> の <add> 要素
 ms.date: 03/30/2017
 helpviewer_keywords:
 - XML serialization, configuration
 - <add> element for <schemaImporterExtensions> element
 ms.assetid: c828a558-094b-441e-9065-790b87315fa0
 ms.openlocfilehash: 89196b094d5631c9e243a51a718e53f9c06db20d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55270564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61794980"
 ---
 # <a name="add-element-for-schemaimporterextensions"></a>\<追加 > 要素の\<schemaImporterExtensions >
 XSD 型を .NET Framework 型に対応付けるために、<xref:System.Xml.Serialization.XmlSchemaImporter> によって使用される型を追加します。 構成ファイルの詳細については、「[構成ファイル スキーマ](../../../docs/framework/configure-apps/file-schema/index.md)」を参照してください。  
