@@ -7,10 +7,10 @@ dev_langs:
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
 ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974858"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61876864"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL と CLR の型の不一致
 

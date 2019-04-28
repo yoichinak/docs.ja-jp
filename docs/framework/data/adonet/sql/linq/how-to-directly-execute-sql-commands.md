@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 04671bb0-40c0-4465-86e5-77986f454661
 ms.openlocfilehash: eeac6272f176ac8e780b72b0076d032ad9e8f108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078903"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61903228"
 ---
 # <a name="how-to-directly-execute-sql-commands"></a>方法: SQL コマンドを直接実行する
 <xref:System.Data.Linq.DataContext> 接続を使用すると仮定して、オブジェクトを返さない SQL コマンドを実行するために <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> を使用できます。  

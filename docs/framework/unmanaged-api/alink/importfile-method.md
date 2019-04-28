@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 69e48c6c3179ced167fdc39ae4df859f161727ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61753518"
 ---
 # <a name="importfile-method"></a>ImportFile メソッド
 アセンブリとバインドされていないモジュールをインポートします。  

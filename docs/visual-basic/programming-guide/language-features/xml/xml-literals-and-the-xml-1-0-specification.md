@@ -5,28 +5,28 @@ helpviewer_keywords:
 - XML literals [Visual Basic], XML 1.0 specification
 ms.assetid: 46f046e5-293c-41a3-b893-4e5f6e32e78a
 ms.openlocfilehash: 4cc64bc5469b86a35a9dc45e09fa8fc9260fdcad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61761716"
 ---
 # <a name="xml-literals-and-the-xml-10-specification-visual-basic"></a>XML リテラルと XML 1.0 仕様 (Visual Basic)
 Visual Basic で XML リテラルの構文には、Extensible Markup Language (XML) 1.0 仕様のほとんどがサポートしています。 詳細については、XML 1.0 仕様は、次を参照してください。 [Extensible Markup Language (XML) 1.0](https://www.w3.org/TR/xml) 、W3C Web サイト。  
   
 ## <a name="what-visual-basic-does-not-support"></a>どのような Visual Basic がサポートしていません  
   
--   XML リテラルには、ドキュメント型定義 (DTD) を含めることはできません。  
+- XML リテラルには、ドキュメント型定義 (DTD) を含めることはできません。  
   
--   XML ドキュメント リテラルは、XML ドキュメントの宣言を開始する必要があります。  
+- XML ドキュメント リテラルは、XML ドキュメントの宣言を開始する必要があります。  
   
--   XML リテラルには、1 つの行に 65,535 を超える文字を含めることはできません。  
+- XML リテラルには、1 つの行に 65,535 を超える文字を含めることはできません。  
   
--   XML 名前空間プレフィックス、要素名、および属性名は、1,024 を超える文字を含めることはできません。  
+- XML 名前空間プレフィックス、要素名、および属性名は、1,024 を超える文字を含めることはできません。  
   
 ## <a name="extra-features-that-visual-basic-supports"></a>Visual Basic をサポートする拡張機能を追加  
   
--   ドキュメントおよび要素リテラルに使用できる、埋め込み式の構文は、有効な XML ではありません。  
+- ドキュメントおよび要素リテラルに使用できる、埋め込み式の構文は、有効な XML ではありません。  
   
 ## <a name="see-also"></a>関連項目
 

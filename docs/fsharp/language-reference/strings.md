@@ -3,11 +3,11 @@ title: 文字列
 description: について説明しますが、どのようにF#'string' 型では、変更不可のテキストを表す Unicode 文字のシーケンスとして。
 ms.date: 05/16/2016
 ms.openlocfilehash: 5b55b0c87b6636346677b973e093e7bcba324e98
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755351"
 ---
 # <a name="strings"></a>文字列
 
@@ -78,7 +78,7 @@ ASCII 文字列型の符号なしバイトの配列で表現できます`byte[]`
 
 ## <a name="string-class"></a>String クラス
 
-文字列を入力するためF#.NET Framework では実際には、`System.String`すべての入力、`System.String`メンバーが使用可能です。 これが含まれています、`+`演算子、文字列の連結に使用される、`Length`プロパティ、および`Chars`プロパティで、文字列を Unicode 文字の配列として返します。 文字列の詳細については、`System.String`を参照してください。
+文字列を入力するためF#.NET Framework では実際には、`System.String`すべての入力、`System.String`メンバーが使用可能です。 これが含まれています、`+`演算子、文字列の連結に使用される、`Length`プロパティ、および`Chars`プロパティで、文字列を Unicode 文字の配列として返します。 文字列の詳細については、次を参照してください。`System.String`します。
 
 使用して、`Chars`プロパティの`System.String`文字列の個々 の文字の次のコードに示すように、インデックスを指定することでアクセスできます。
 
@@ -86,7 +86,7 @@ ASCII 文字列型の符号なしバイトの配列で表現できます`byte[]`
 
 ## <a name="string-module"></a>文字列のモジュール
 
-含まれている文字列の処理の追加機能、`String`でモジュール、`FSharp.Core`名前空間。 詳細については、[Core.String モジュール](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d)を参照してください。
+含まれている文字列の処理の追加機能、`String`でモジュール、`FSharp.Core`名前空間。 詳細については、次を参照してください。 [Core.String モジュール](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.string-module-%5bfsharp%5d)します。
 
 ## <a name="see-also"></a>関連項目
 

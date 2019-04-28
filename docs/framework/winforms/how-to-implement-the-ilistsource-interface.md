@@ -9,11 +9,11 @@ helpviewer_keywords:
 - IListSource interface
 ms.assetid: 63ce27aa-2e23-4fbd-8228-0c1726f6c421
 ms.openlocfilehash: bd4e554b7e4be51847496307b50be3084d0115d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61801765"
 ---
 # <a name="how-to-implement-the-ilistsource-interface"></a>方法: IListSource インターフェイスを実装する
 実装、<xref:System.ComponentModel.IListSource>インターフェイスを実装しないバインド可能なクラスを作成する<xref:System.Collections.IList>代わりに別の場所からリストを提供します。  
@@ -36,7 +36,7 @@ ms.locfileid: "59159784"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   System.Drawing アセンブリおよび System.Windows.Forms アセンブリへの参照。  
+- System.Drawing アセンブリおよび System.Windows.Forms アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: dfcd3cb1-2f07-4d0b-b16a-6b056c4f45fa
 ms.openlocfilehash: dbd14ba9ed24fb3f18946e817f61f8cbf2e9b1b5
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61936553"
 ---
 # <a name="how-to-define-a-service-operation-wcf-data-services"></a>方法: サービス操作 (WCF Data Services) の定義します。
 

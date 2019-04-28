@@ -7,20 +7,20 @@ helpviewer_keywords:
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
 ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172810"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61857416"
 ---
 # <a name="configuring-system-provided-bindings"></a>システムが提供するバインディングの構成
 バインディングにより、エンドポイントとの通信で使用する通信メカニズムが指定され、エンドポイントへの接続方法が示されます。 どのように Windows Communication Foundation (WCF) チャネルを階層化する必要な通信機能を提供するかを定義する要素のバインディングで構成されます。 バインディングには次の 3 種類の要素が含まれます。  
   
--   プロトコル チャネル バインド要素 : エンドポイントに送信されるメッセージで使用するセキュリティ、信頼性、コンテキスト フローの設定、またはユーザー定義のプロトコルを指定します。  
+- プロトコル チャネル バインド要素 : エンドポイントに送信されるメッセージで使用するセキュリティ、信頼性、コンテキスト フローの設定、またはユーザー定義のプロトコルを指定します。  
   
--   トランスポート チャネル バインド要素 : エンドポイントにメッセージを送信するときに使用する基礎トランスポート プロトコル (TCP や HTTP など) を指定します。  
+- トランスポート チャネル バインド要素 : エンドポイントにメッセージを送信するときに使用する基礎トランスポート プロトコル (TCP や HTTP など) を指定します。  
   
--   メッセージ エンコーディング バインド要素 : エンドポイントに送信されるメッセージに使用するネットワーク エンコード (text/XML、バイナリ、MTOM (Message Transmission Optimization Mechanism) など) を指定します。  
+- メッセージ エンコーディング バインド要素 : エンドポイントに送信されるメッセージに使用するネットワーク エンコード (text/XML、バイナリ、MTOM (Message Transmission Optimization Mechanism) など) を指定します。  
   
  このトピックでは、すべてのシステム指定の Windows Communication Foundation (WCF) バインドを表示します。 このバインディングがいずれもアプリケーションの要件を満たさない場合は、<xref:System.ServiceModel.Channels.CustomBinding> クラスを使用してバインディングを作成できます。 カスタム バインドを作成する方法の詳細については、「[カスタム バインディング](../../../../docs/framework/wcf/extending/custom-bindings.md)」を参照してください。  
   
@@ -56,13 +56,13 @@ ms.locfileid: "59172810"
 |<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(なし)、トランスポート、メッセージ、混在|なし、(なし)|(なし)|適用なし|  
 |<xref:System.ServiceModel.WSHttpBinding>|WS|なし、トランスポート、(メッセージ)、混在|(なし)、トランスポート、信頼できるセッション|(なし)、あり|適用なし|  
 |<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security、WS-Trust、WS-SecureConversation、WS-SecurityPolicy|なし、トランスポート、(メッセージ)、混在|(なし)、トランスポート、信頼できるセッション|(なし)、あり|適用なし|  
-|<xref:System.ServiceModel.WSDualHttpBinding>|WS|なし、(メッセージ)|(信頼できるセッション)|(なし)、あり|はい|  
+|<xref:System.ServiceModel.WSDualHttpBinding>|WS|なし、(メッセージ)|(信頼できるセッション)|(なし)、あり|[はい]|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|なし、(メッセージ)、混在|(なし)、信頼できるセッション|(なし)、あり|いいえ|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|なし、(メッセージ)、混在|(なし)、信頼できるセッション|(なし)、あり|いいえ|  
-|<xref:System.ServiceModel.NetTcpBinding>|.NET|なし、(トランスポート)、メッセージ、<br /><br /> 混合|信頼できるセッション、(トランスポート)|(なし)、あり|はい|  
+|<xref:System.ServiceModel.NetTcpBinding>|.NET|なし、(トランスポート)、メッセージ、<br /><br /> 混合|信頼できるセッション、(トランスポート)|(なし)、あり|[はい]|  
 |<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|なし、<br /><br /> (トランスポート)|なし、(トランスポート)|(なし)、あり|[はい]|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|なし、メッセージ、(トランスポート)、両方|(なし)|(なし)、あり|いいえ|  
-|<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|なし、メッセージ、(トランスポート)、混在|(なし)|(なし)|はい|  
+|<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|なし、メッセージ、(トランスポート)、混在|(なし)|(なし)|[はい]|  
 |<xref:System.ServiceModel.WebHttpBinding>|.Net|None, Transport, TransportCredentialOnly|(なし)|(なし)|適用なし|  
 |<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|なし、(トランスポート)|(なし)|(なし)、あり|適用なし|  
   

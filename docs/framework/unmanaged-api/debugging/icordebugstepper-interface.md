@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f83b9796bb692ce234a03c596387960bd879ebf3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212519"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61763738"
 ---
 # <a name="icordebugstepper-interface"></a>ICorDebugStepper インターフェイス
 デバッガーが実行するコード実行内のステップを表します。コマンドの発行から完了までの間は識別子として機能します。これを使用するとステップをキャンセルできます。  
@@ -42,11 +42,11 @@ ms.locfileid: "59212519"
 ## <a name="remarks"></a>Remarks  
  `ICorDebugStepper`インターフェイスは、次の目的で機能します。  
   
--   ステップ コマンドが発行されますが、そのコマンドの完了の間で識別子として機能します。  
+- ステップ コマンドが発行されますが、そのコマンドの完了の間で識別子として機能します。  
   
--   実行できるすべてのステップ実行をカプセル化する中央のインターフェイスを提供します。  
+- 実行できるすべてのステップ実行をカプセル化する中央のインターフェイスを提供します。  
   
--   ステップ実行操作の途中でキャンセルする方法を提供します。  
+- ステップ実行操作の途中でキャンセルする方法を提供します。  
   
  スレッドごとの 1 つ以上のステッパことができます。 たとえば、ステップ オーバー関数の場合、中に、ブレークポイントにヒットする可能性があり、ユーザーが関数の内部での新しいステップ実行操作を開始することがあります。 この状況に対処する方法については、デバッガーの責任です。 デバッガーは元のステップ実行操作をキャンセルするか、2 つの操作を入れ子にします。 `ICorDebugStepper`インターフェイスは、2 つの選択肢をサポートしています。  
   

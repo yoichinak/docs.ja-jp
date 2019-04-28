@@ -16,15 +16,15 @@ helpviewer_keywords:
 - controls [Windows Forms], multithreading
 ms.assetid: 138f38b6-1099-4fd5-910c-390b41cbad35
 ms.openlocfilehash: 3211df1f0e585780039471b80b5b913613ad9bbd
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57714009"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913797"
 ---
 # <a name="how-to-make-thread-safe-calls-to-windows-forms-controls"></a>方法: Windows フォーム コントロールのスレッド セーフな呼び出しを行う
 
-マルチ スレッドは、Windows フォームのアプリのパフォーマンスを向上させることができますが、Windows フォーム コントロールへのアクセスがスレッド セーフでは本質的にはありません。 マルチ スレッドは、非常に深刻かつ複雑なバグ、コードを公開できます。 2 つまたは複数のスレッドが、コントロールの操作では、コントロールが不整合な状態に強制的に移動でき、競合状態、デッドロック、およびがフリーズやハングすることができます。 実装する場合は、マルチ スレッド アプリケーションでは、スレッド セーフな方法で、スレッド間のコントロールを呼び出すことを確認します。 詳細については、[マネージ スレッド処理のベスト プラクティス](../../../standard/threading/managed-threading-best-practices.md)を参照してください。 
+マルチ スレッドは、Windows フォームのアプリのパフォーマンスを向上させることができますが、Windows フォーム コントロールへのアクセスがスレッド セーフでは本質的にはありません。 マルチ スレッドは、非常に深刻かつ複雑なバグ、コードを公開できます。 2 つまたは複数のスレッドが、コントロールの操作では、コントロールが不整合な状態に強制的に移動でき、競合状態、デッドロック、およびがフリーズやハングすることができます。 実装する場合は、マルチ スレッド アプリケーションでは、スレッド セーフな方法で、スレッド間のコントロールを呼び出すことを確認します。 詳細については、次を参照してください。[マネージ スレッド処理のベスト プラクティス](../../../standard/threading/managed-threading-best-practices.md)します。 
 
 Windows フォーム コントロールをそのコントロールを作成していないスレッドから安全に呼び出すに 2 つの方法はあります。 使用することができます、<xref:System.Windows.Forms.Control.Invoke%2A?displayProperty=fullName>コントロールを呼び出し、メイン スレッドで作成したデリゲートを呼び出すメソッド。 または、実装することができます、<xref:System.ComponentModel.BackgroundWorker?displayProperty=nameWithType>結果のレポートから、バック グラウンド スレッドで実行される作業を分離するにはイベント ドリブン モデルを使用します。 
 
@@ -65,7 +65,7 @@ Visual Studio デバッガーは、発生させることによってこれらの
 
 どちらの例では、シミュレートする 2 番目の 1 つのバック グラウンド スレッド スリープは、そのスレッドで実行されている動作します。 
 
-ビルドしてから、.NET Framework アプリとしてこれらの例を実行することができます、C#または Visual Basic のコマンド ライン。 詳細については、[csc.exe を](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)または[(Visual Basic) コマンドラインからビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)を参照してください。 
+ビルドしてから、.NET Framework アプリとしてこれらの例を実行することができます、C#または Visual Basic のコマンド ライン。 詳細については、次を参照してください。 [csc.exe を](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)または[(Visual Basic) コマンドラインからビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)します。 
 
 .NET Core 3.0 以降では、ことができますもビルドおよび実行する例では、.NET Core アプリを Windows として .NET Core の Windows フォームのあるフォルダーから *\<フォルダー名>.csproj* プロジェクト ファイル。 
 

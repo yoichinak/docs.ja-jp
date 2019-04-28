@@ -8,11 +8,11 @@ helpviewer_keywords:
 - FlowDocumentScrollViewer control [WPF]
 ms.assetid: 727b0a0a-b845-4aa9-9fd4-98f42ed738b4
 ms.openlocfilehash: e7f3f52ecbed792469c70c8736e3ca43e5a7a788
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912199"
 ---
 # <a name="flowdocumentscrollviewer"></a>FlowDocumentScrollViewer
 <xref:System.Windows.Controls.FlowDocumentScrollViewer>コントロールを使用する表示<xref:System.Windows.Documents.FlowDocument>スクロール コンテナー内のコンテンツ。 これと対照的<xref:System.Windows.Controls.FlowDocumentPageViewer>、ページごとにコンテンツを表示します。  

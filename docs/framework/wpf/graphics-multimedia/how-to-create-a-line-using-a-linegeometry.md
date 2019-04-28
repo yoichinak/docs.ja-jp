@@ -8,11 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], lines
 ms.assetid: 41231b22-1f74-4c26-a8e7-a55b29f8f6bd
 ms.openlocfilehash: f8c334a54f78aec7af91064a447fd18f23dcfbdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59123059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61905204"
 ---
 # <a name="how-to-create-a-line-using-a-linegeometry"></a>方法: LineGeometry を使用して線を作成する
 この例は、使用する方法を示します、<xref:System.Windows.Media.LineGeometry>行を記述するクラス。 A<xref:System.Windows.Media.LineGeometry>の始点と終点で定義されます。  

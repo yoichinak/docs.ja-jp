@@ -16,11 +16,11 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 ms.assetid: 4693977e-34a4-4f19-8221-68c3120c2b2b
 ms.openlocfilehash: a0b97073b2f9363a64bfc4a4ede7ffa69e2bce42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913264"
 ---
 # <a name="how-to-position-controls-on-windows-forms"></a>方法: Windows フォーム上のコントロールを位置設定する
 コントロールの位置、Windows フォーム デザイナーを使用するかを指定する、<xref:System.Windows.Forms.Control.Location%2A>プロパティ。  
@@ -30,7 +30,7 @@ ms.locfileid: "59334004"
   
 ### <a name="to-position-a-control-on-the-design-surface-of-the-windows-forms-designer"></a>Windows フォーム デザイナーのデザイン サーフェイス上のコントロールを配置するには  
   
--   マウスを使用して適切な場所にコントロールをドラッグします。  
+- マウスを使用して適切な場所にコントロールをドラッグします。  
   
     > [!NOTE]
     >  コントロールを選択しより正確に配置する矢印の付いたがキーに移動します。 また、*スナップ*コントロールをフォームに正確に配置できます。 詳細については、「[チュートリアル:フォームのスナップ線を使用して Windows 上のコントロール](walkthrough-arranging-controls-on-windows-forms-using-snaplines.md)します。  

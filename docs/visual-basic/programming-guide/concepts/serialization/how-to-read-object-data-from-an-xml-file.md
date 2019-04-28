@@ -3,11 +3,11 @@ title: '方法: XML ファイル (Visual Basic) からオブジェクト デー�
 ms.date: 07/20/2015
 ms.assetid: 1e1423bf-74a4-4dde-a3bb-ae1bfc0a68ed
 ms.openlocfilehash: f6233fc7ce74cbd39237bab07cfd2ed22b9c2240
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907349"
 ---
 # <a name="how-to-read-object-data-from-an-xml-file-visual-basic"></a>方法: XML ファイル (Visual Basic) からオブジェクト データを読み込む
 次の例では、<xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、XML ファイルに以前に書き込まれたオブジェクト データを読み込みます。  
@@ -39,11 +39,11 @@ End Sub
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   シリアル化されるクラスにパブリックなパラメーターなしのコンストラクターがない場合  
+- シリアル化されるクラスにパブリックなパラメーターなしのコンストラクターがない場合  
   
--   ファイル内のデータが、逆シリアル化されるクラスのデータを表していない場合。  
+- ファイル内のデータが、逆シリアル化されるクラスのデータを表していない場合。  
   
--   ファイルが存在しない (<xref:System.IO.IOException>)。  
+- ファイルが存在しない (<xref:System.IO.IOException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  入力を常に検証し、信頼できないソースから決してデータを逆シリアル化しないでください。 再作成されたオブジェクトは、そのオブジェクトを逆シリアル化したコードと同じアクセス許可を持つローカル コンピューターで実行されます。 アプリケーションでデータを使用する前に、入力をすべて検証してください。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC40008
 ms.assetid: 729e3eb5-76ac-4c55-9fdd-78350e0de55e
 ms.openlocfilehash: 545f0f4a56e72e32d2225217225d441a10f0e52e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61803442"
 ---
 # <a name="elementname-is-obsolete-visual-basic-warning"></a>'\<elementname >' は廃止されています (Visual Basic 警告)
 ステートメントが、<xref:System.ObsoleteAttribute> 属性でマーク付けされているプログラミング要素にアクセスしています。また、ディレクティブがそれを警告として扱うように設定されています。  
@@ -25,7 +25,7 @@ ms.locfileid: "58836364"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   ソース コード参照の要素名のスペルが正しいことを確認します。  
+- ソース コード参照の要素名のスペルが正しいことを確認します。  
   
 ## <a name="see-also"></a>関連項目
 

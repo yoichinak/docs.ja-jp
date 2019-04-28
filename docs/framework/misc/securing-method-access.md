@@ -13,11 +13,11 @@ ms.assetid: f7c2d6ec-3b18-4e0e-9991-acd97189d818
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 2159199fc12ef83a6bf4a44841d71799e0dad4dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868967"
 ---
 # <a name="securing-method-access"></a>メソッド アクセスの保護
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,17 +28,17 @@ ms.locfileid: "59166180"
   
  マネージ コードには、メソッド アクセスを制限するいくつかの方法があります。  
   
--   クラス、アセンブリ、派生クラスが信頼されている場合は、これらへのアクセシビリティのスコープを制限します。 これが、メソッド アクセスを制限する最も簡単な方法です。 派生クラスが親クラスの ID を共有することがありますが、一般的に、派生クラスは派生元のクラスよりも信頼度が低くなる可能性があります。 具体的には、キーワードの信頼を推測できません**保護**、必ずしもセキュリティ コンテキストで使用するされません。  
+- クラス、アセンブリ、派生クラスが信頼されている場合は、これらへのアクセシビリティのスコープを制限します。 これが、メソッド アクセスを制限する最も簡単な方法です。 派生クラスが親クラスの ID を共有することがありますが、一般的に、派生クラスは派生元のクラスよりも信頼度が低くなる可能性があります。 具体的には、キーワードの信頼を推測できません**保護**、必ずしもセキュリティ コンテキストで使用するされません。  
   
--   指定した id の基本的には、特定の呼び出し元にメソッド アクセスを制限[証拠](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)(厳密な名前、発行者、ゾーン、およびなど) を選択します。  
+- 指定した id の基本的には、特定の呼び出し元にメソッド アクセスを制限[証拠](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/7y5x1hcd%28v=vs.100%29)(厳密な名前、発行者、ゾーン、およびなど) を選択します。  
   
--   選択したアクセス許可を持つ呼び出し元だけにメソッド アクセスを制限します。  
+- 選択したアクセス許可を持つ呼び出し元だけにメソッド アクセスを制限します。  
   
  同様に、宣言セキュリティを使用すると、クラスの継承を制御できます。 使用することができます**InheritanceDemand**以下を実行します。  
   
--   派生したクラスに、特定の ID またはアクセス許可を要求します。  
+- 派生したクラスに、特定の ID またはアクセス許可を要求します。  
   
--   特定のメソッドをオーバーライドする派生クラスに、特定の ID またはアクセス許可を要求します。  
+- 特定のメソッドをオーバーライドする派生クラスに、特定の ID またはアクセス許可を要求します。  
   
  呼び出し元に特定の厳密な名前による署名を要求することによってアクセスを制限し、パブリック クラスの保護に役立つ方法の例を次に示します。 この例では、<xref:System.Security.Permissions.StrongNameIdentityPermissionAttribute>で、**デマンド**の厳密な名前。 厳密な名前でアセンブリに署名する方法のタスク ベースの情報を参照してください。[の作成と using strong-named Assemblies](../../../docs/framework/app-domains/create-and-use-strong-named-assemblies.md)します。  
   

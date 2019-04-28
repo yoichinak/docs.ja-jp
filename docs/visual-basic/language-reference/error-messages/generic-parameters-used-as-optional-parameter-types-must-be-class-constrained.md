@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC32124
 ms.assetid: 55aa8b2a-9ce3-4620-a710-2f9b0feb6143
 ms.openlocfilehash: 9b0293472f5eda74c2bf8fb215e15ae5cf8d8b98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813900"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61802331"
 ---
 # <a name="generic-parameters-used-as-optional-parameter-types-must-be-class-constrained"></a>省略可能なパラメーター型として使用されるジェネリック パラメーターは、クラスの制約がある型でなければなりません。
 プロシージャは、参照型に固定されていない型パラメーターを使用して、オプションのパラメーターで宣言されます。  
@@ -25,7 +25,7 @@ ms.locfileid: "58813900"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   参照型のみを受け入れるように型パラメーターを制限または省略可能なパラメーターを使用しないでください。  
+- 参照型のみを受け入れるように型パラメーターを制限または省略可能なパラメーターを使用しないでください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -14,11 +14,11 @@ helpviewer_keywords:
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
 ms.openlocfilehash: a5d7c06502b66298d530d0180ffaf63862b9fc28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298345"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017792"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>外観をカスタマイズできるコントロールの作成
 <a name="introduction"></a>
@@ -37,17 +37,17 @@ ms.locfileid: "59298345"
   
  このトピックは、次のセクションで構成されています。  
   
--   [必須コンポーネント](#prerequisites)  
+- [必須コンポーネント](#prerequisites)  
   
--   [パーツと状態モデル](#parts_and_states_model)  
+- [パーツと状態モデル](#parts_and_states_model)  
   
--   [ControlTemplate の視覚的な構造とコントロールの視覚的な動作の定義](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
+- [ControlTemplate の視覚的な構造とコントロールの視覚的な動作の定義](#defining_the_visual_structure_and_visual_behavior_of_a_control_in_a_controltemplate)  
   
--   [コードで ControlTemplate のパーツを使用してください。](#using_parts_of_the_controltemplate_in_code)  
+- [コードで ControlTemplate のパーツを使用してください。](#using_parts_of_the_controltemplate_in_code)  
   
--   [コントロール コントラクトを提供します。](#providing_the_control_contract)  
+- [コントロール コントラクトを提供します。](#providing_the_control_contract)  
   
--   [完全な例](#complete_example)  
+- [完全な例](#complete_example)  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -60,11 +60,11 @@ ms.locfileid: "59298345"
 ## <a name="parts-and-states-model"></a>パーツと状態モデル  
  パーツと状態のモデルでは、視覚的な構造とコントロールの視覚的な動作を定義する方法を指定します。 パーツと状態のモデルを実行するには、次の操作を行う必要があります。  
   
--   視覚的な構造と視覚的な動作の定義、<xref:System.Windows.Controls.ControlTemplate>コントロール。  
+- 視覚的な構造と視覚的な動作の定義、<xref:System.Windows.Controls.ControlTemplate>コントロール。  
   
--   コントロールのロジックは、コントロール テンプレートのパーツと対話するとき、特定のベスト プラクティスに従ってください。  
+- コントロールのロジックは、コントロール テンプレートのパーツと対話するとき、特定のベスト プラクティスに従ってください。  
   
--   何に含めるかを指定する、コントロール コントラクトの指定、<xref:System.Windows.Controls.ControlTemplate>します。  
+- 何に含めるかを指定する、コントロール コントラクトの指定、<xref:System.Windows.Controls.ControlTemplate>します。  
   
  視覚的な構造とで視覚的な動作を定義するとき、 <xref:System.Windows.Controls.ControlTemplate> 、コントロールのアプリケーションの作成者を変更できます、視覚的な構造と、コントロールの視覚的な動作を作成する新しい<xref:System.Windows.Controls.ControlTemplate>コードを記述する代わりにします。   人の作成者がアプリケーションに指示するコントロール コントラクトを提供する必要があります<xref:System.Windows.FrameworkElement>では、オブジェクトと状態を定義する必要があります、<xref:System.Windows.Controls.ControlTemplate>します。 部分と対話する際のベスト プラクティスを従う必要があります、<xref:System.Windows.Controls.ControlTemplate>コントロールを適切に処理を完了していないように<xref:System.Windows.Controls.ControlTemplate>します。  アプリケーションの作成者が作成できる場合、これら 3 つの原則に従う、<xref:System.Windows.Controls.ControlTemplate>だけで、コントロールの同じくらい簡単にできるコントロールのと共に出荷[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  次のセクションでは、これらの推奨事項の詳細について説明します。  
   
@@ -134,18 +134,18 @@ ms.locfileid: "59298345"
   
  <xref:System.Windows.VisualStateManager.GoToState%2A>メソッドを起動し、ストーリー ボードを適切に停止するのに必要なロジックを実行します。 コントロールを呼び出すと<xref:System.Windows.VisualStateManager.GoToState%2A>の状態を変更する、<xref:System.Windows.VisualStateManager>は次の処理します。  
   
--   場合、<xref:System.Windows.VisualState>コントロールはしようとしているが、 <xref:System.Windows.Media.Animation.Storyboard>、ストーリー ボードが開始されます。 場合はその後、<xref:System.Windows.VisualState>からコントロールが送信されたことが、 <xref:System.Windows.Media.Animation.Storyboard>、ストーリー ボードが終了します。  
+- 場合、<xref:System.Windows.VisualState>コントロールはしようとしているが、 <xref:System.Windows.Media.Animation.Storyboard>、ストーリー ボードが開始されます。 場合はその後、<xref:System.Windows.VisualState>からコントロールが送信されたことが、 <xref:System.Windows.Media.Animation.Storyboard>、ストーリー ボードが終了します。  
   
--   コントロールが指定されている状態で既に場合<xref:System.Windows.VisualStateManager.GoToState%2A>は何も実行し、返します`true`します。  
+- コントロールが指定されている状態で既に場合<xref:System.Windows.VisualStateManager.GoToState%2A>は何も実行し、返します`true`します。  
   
--   指定されている状態が存在しない場合、<xref:System.Windows.Controls.ControlTemplate>の`control`、<xref:System.Windows.VisualStateManager.GoToState%2A>は何も実行し、返します`false`します。  
+- 指定されている状態が存在しない場合、<xref:System.Windows.Controls.ControlTemplate>の`control`、<xref:System.Windows.VisualStateManager.GoToState%2A>は何も実行し、返します`false`します。  
   
 #### <a name="best-practices-for-working-with-the-visualstatemanager"></a>VisualStateManager を操作するためのベスト プラクティス  
  コントロールの状態を維持するために、次を実行することをお勧めします。  
   
--   プロパティを使用すると、その状態を追跡できます。  
+- プロパティを使用すると、その状態を追跡できます。  
   
--   状態間を移行するヘルパー メソッドを作成します。  
+- 状態間を移行するヘルパー メソッドを作成します。  
   
  `NumericUpDown`コントロール、`Value`内にあるかどうかを追跡するプロパティ、`Positive`または`Negative`状態。  `NumericUpDown`コントロールも定義、`Focused`と`UnFocused`状態、どのトラック、<xref:System.Windows.UIElement.IsFocused%2A>プロパティ。 コントロールのプロパティに対応する自然な状態を使用する場合は、状態を追跡するプライベート プロパティを定義できます。  
   
@@ -160,11 +160,11 @@ ms.locfileid: "59298345"
   
  コントロールの状態の変更可能性がありますが、3 つの一般的な場所があります。  
   
--   ときに、<xref:System.Windows.Controls.ControlTemplate>に適用される、<xref:System.Windows.Controls.Control>します。  
+- ときに、<xref:System.Windows.Controls.ControlTemplate>に適用される、<xref:System.Windows.Controls.Control>します。  
   
--   プロパティが変更されたとき。  
+- プロパティが変更されたとき。  
   
--   イベントが発生します。  
+- イベントが発生します。  
   
  次の例の状態を更新、`NumericUpDown`このような場合のコントロール。  
   
@@ -189,33 +189,33 @@ ms.locfileid: "59298345"
 ## <a name="providing-the-control-contract"></a>コントロール コントラクトを提供します。  
  コントロール コントラクトを指定するように<xref:System.Windows.Controls.ControlTemplate>作成者、テンプレートに記述する内容がわかります。 コントロール コントラクトには、次の 3 つの要素があります。  
   
--   コントロールのロジックが使用する視覚的要素。  
+- コントロールのロジックが使用する視覚的要素。  
   
--   コントロールの状態および各状態が所属するグループ。  
+- コントロールの状態および各状態が所属するグループ。  
   
--   コントロールに対して視覚的に作用するパブリック プロパティ。  
+- コントロールに対して視覚的に作用するパブリック プロパティ。  
   
  ユーザーを作成する<xref:System.Windows.Controls.ControlTemplate>内容を確認する必要がある<xref:System.Windows.FrameworkElement>オブジェクトは、コントロールのロジックを使用して、各オブジェクトの種類し、どのような名前が。 A<xref:System.Windows.Controls.ControlTemplate>も作成者をコントロールで使用される各状態との名前を知っている必要があります<xref:System.Windows.VisualStateGroup>です。  
   
  返す、`NumericUpDown`例では、コントロールが必要ですが、<xref:System.Windows.Controls.ControlTemplate>次のものを<xref:System.Windows.FrameworkElement>オブジェクト。  
   
--   A<xref:System.Windows.Controls.Primitives.RepeatButton>と呼ばれる`UpButton`します。  
+- A<xref:System.Windows.Controls.Primitives.RepeatButton>と呼ばれる`UpButton`します。  
   
--   A<xref:System.Windows.Controls.Primitives.RepeatButton>と呼ばれる `DownButton.`  
+- A<xref:System.Windows.Controls.Primitives.RepeatButton>と呼ばれる `DownButton.`  
   
  コントロールは、次の状態にできます。  
   
--   の `ValueStates`<xref:System.Windows.VisualStateGroup>  
+- の `ValueStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Positive`  
+    - `Positive`  
   
-    -   `Negative`  
+    - `Negative`  
   
--   の `FocusStates`<xref:System.Windows.VisualStateGroup>  
+- の `FocusStates`<xref:System.Windows.VisualStateGroup>  
   
-    -   `Focused`  
+    - `Focused`  
   
-    -   `Unfocused`  
+    - `Unfocused`  
   
  内容を指定する<xref:System.Windows.FrameworkElement>オブジェクト、コントロールが必要ですが、使用する、 <xref:System.Windows.TemplatePartAttribute>、予測される要素の型と名前を指定します。  使用するコントロールの状態を指定する、<xref:System.Windows.TemplateVisualStateAttribute>と状態の名前を指定する<xref:System.Windows.VisualStateGroup>に属しています。  配置、<xref:System.Windows.TemplatePartAttribute>と<xref:System.Windows.TemplateVisualStateAttribute>コントロールのクラス定義でします。  
   

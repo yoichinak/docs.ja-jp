@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [WPF], Grid
 ms.assetid: 90e07c2d-237f-47b4-a632-771570b77fd0
 ms.openlocfilehash: a9ef840d98a6c7aa5db841dd0ff860e2fb1d044a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377678"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61911535"
 ---
 # <a name="grid-how-to-topics"></a>グリッドに関する「方法」トピック
 このセクションのトピックを使用して要素を配置する方法を説明する、<xref:System.Windows.Controls.Grid>要素。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compiler element
 ms.assetid: 7a151659-b803-4c27-b5ce-1c4aa0d5a823
 ms.openlocfilehash: 34753d538ff37ac4ae621f653d47ac92ac6749a0
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674465"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61705377"
 ---
 # <a name="compiler-element"></a>\<compiler> 要素
 
@@ -45,7 +45,7 @@ ms.locfileid: "55674465"
 |---------------|-----------------|
 |`compilerOptions`|省略可能な属性です。<br /><br /> コンパイルのコンパイラ固有の追加の引数を指定します。 値、`compilerOptions`属性は、コンパイラ オプションには、コンパイラのトピックの「通常挙げます。|
 |`extension`|必須の属性です。<br /><br /> 言語プロバイダーのソース ファイルによって使用されるファイル名拡張子のセミコロン区切りの一覧を示します。 たとえば、".cs"とします。|
-|`language`|必須の属性です。<br /><br /> 言語プロバイダーがサポートする言語名のセミコロン区切りの一覧を示します。 たとえば、「C#; cs; csharp」。|
+|`language`|必須の属性です。<br /><br /> 言語プロバイダーがサポートする言語名のセミコロン区切りの一覧を示します。 たとえば、「c#; cs; csharp」。|
 |`type`|必須の属性です。<br /><br /> プロバイダーの実装を含むアセンブリの名前を含む言語プロバイダーの型名を指定します。 型名で定義されている要件を満たす必要があります[完全修飾型名の指定](../../../../../docs/framework/reflection-and-codedom/specifying-fully-qualified-type-names.md)します。|
 |`warningLevel`|省略可能な属性です。<br /><br /> 既定のコンパイラ警告レベルを指定します言語プロバイダーがエラーとしてコンパイルの警告を扱いますが、レベルを決定します。|
 

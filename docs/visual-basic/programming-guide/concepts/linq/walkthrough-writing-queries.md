@@ -8,11 +8,11 @@ helpviewer_keywords:
 - writing LINQ queries [Visual Basic]
 ms.assetid: f0045808-b9fe-4d31-88d1-473d9957211e
 ms.openlocfilehash: 8e3d893a21b36868f59d132bd8ba9a6f634cac62
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907609"
 ---
 # <a name="walkthrough-writing-queries-in-visual-basic"></a>チュートリアル: Visual Basic におけるクエリの作成
 このチュートリアルでは、Visual Basic 言語の機能を使用して、記述する方法について説明[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]クエリ式。 このチュートリアルでは、学生オブジェクトの一覧にクエリを作成する方法、クエリを実行する方法、およびそれらを変更する方法を示します。 クエリでは、オブジェクト初期化子、ローカル型推論では、匿名型など、いくつかの機能を組み込みます。  
@@ -40,14 +40,14 @@ ms.locfileid: "59296070"
   
 #### <a name="to-add-the-data-source"></a>データ ソースを追加するには  
   
--   定義、`Student`クラスおよびクラスのインスタンスの一覧を作成します。  
+- 定義、`Student`クラスおよびクラスのインスタンスの一覧を作成します。  
   
     > [!IMPORTANT]
     >  定義に必要なコード、`Student`クラスを使用するリストの作成のチュートリアルで例が提供されている[方法。項目の一覧を作成](../../../../visual-basic/programming-guide/concepts/linq/how-to-create-a-list-of-items.md)です。 そこからコピーして、プロジェクトに貼り付けます。 新しいコード プロジェクトを作成したときに表示されたコードで置き換えます。  
   
 #### <a name="to-add-a-new-student-to-the-students-list"></a>学生のリストに新しい生徒を追加するには  
   
--   パターンに従い、`getStudents`の別のインスタンスを追加するメソッドを`Student`クラスの一覧にします。 受講者を追加することをオブジェクト初期化子が紹介されます。 詳細については、次を参照してください。[オブジェクト初期化子。名前付きの匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)します。  
+- パターンに従い、`getStudents`の別のインスタンスを追加するメソッドを`Student`クラスの一覧にします。 受講者を追加することをオブジェクト初期化子が紹介されます。 詳細については、次を参照してください。[オブジェクト初期化子。名前付きの匿名型](../../../../visual-basic/programming-guide/language-features/objects-and-classes/object-initializers-named-and-anonymous-types.md)します。  
   
 ## <a name="create-a-query"></a>クエリを作成する  
  実行すると、このセクションでは追加のクエリは、学生の成績順位に上位 10 件の配置の一覧を生成します。 完全なクエリが選択されるので`Student`オブジェクトたびに、クエリ結果の型が`IEnumerable(Of Student)`します。 ただし、クエリの種類通常が指定されていないクエリの定義にします。 代わりに、コンパイラは、種類を決定するのにローカル型推論を使用します。 詳細については、次を参照してください。[ローカル型推論](../../../../visual-basic/programming-guide/language-features/variables/local-type-inference.md)します。 クエリの範囲変数、 `currentStudent`、それぞれへの参照として機能`Student`、ソース内のインスタンス`students`、内の各オブジェクトのプロパティへのアクセスを提供する`students`します。  

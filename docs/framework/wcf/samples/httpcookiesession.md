@@ -3,24 +3,24 @@ title: HttpCookieSession
 ms.date: 03/30/2017
 ms.assetid: 101cb624-8303-448a-a3af-933247c1e109
 ms.openlocfilehash: 801fc6baed623c920e5a20163782bc9d6551a6da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772987"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61752738"
 ---
 # <a name="httpcookiesession"></a>HttpCookieSession
 このサンプルでは、カスタム プロトコル チャネルを作成し、セッション管理用の HTTP クッキーを使用する方法を示します。 このチャネルでは、Windows Communication Foundation (WCF) サービスと ASMX クライアントまたは WCF クライアントと ASMX サービス間の通信ができます。  
   
  クライアントがセッション ベースの ASMX Web サービス内で Web メソッドを呼び出すと、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] エンジンは次の処理を行います。  
   
--   一意の ID (セッション ID) を生成します。  
+- 一意の ID (セッション ID) を生成します。  
   
--   セッション オブジェクトを生成し、一意の ID に関連付けます。  
+- セッション オブジェクトを生成し、一意の ID に関連付けます。  
   
--   一意の IDを Set-Cookie HTTP 応答ヘッダーに追加し、クライアントに送信します。  
+- 一意の IDを Set-Cookie HTTP 応答ヘッダーに追加し、クライアントに送信します。  
   
--   送信されるセッション ID に基づき、以降の呼び出しでクライアントを識別します。  
+- 送信されるセッション ID に基づき、以降の呼び出しでクライアントを識別します。  
   
  クライアントは、サーバーに対する以降の要求にこのセッション ID を含めます。 サーバーはクライアントのセッション ID を使用して、現在の HTTP コンテキストに適切なセッション オブジェクトを読み込みます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "59772987"
 ## <a name="service-channel"></a>サービス チャネル  
  このサンプルでは、`HttpCookieReplySessionChannelListener` クラスでサービス チャネルを提供します。 このクラスは <xref:System.ServiceModel.Channels.IChannelListener> インターフェイスを実装し、チャネル スタックの低いレベルにある <xref:System.ServiceModel.Channels.IReplyChannel> チャネルを <xref:System.ServiceModel.Channels.IReplySessionChannel> に変換します。 このプロセスは、次の部分に分かれています。  
   
--   チャネル リスナが開かれると、チャネル リスナは内部リスナの内部チャネルを受け入れます。 内部リスナはデータグラム リスナであり、受け入れられたチャネルの有効期間は内部リスナの有効期間から切り離されるため、次のように、内部リスナを閉じて内部チャネルの保持のみを行うことができます。  
+- チャネル リスナが開かれると、チャネル リスナは内部リスナの内部チャネルを受け入れます。 内部リスナはデータグラム リスナであり、受け入れられたチャネルの有効期間は内部リスナの有効期間から切り離されるため、次のように、内部リスナを閉じて内部チャネルの保持のみを行うことができます。  
   
     ```  
                 this.innerChannelListener.Open(timeoutHelper.RemainingTime());  
@@ -48,7 +48,7 @@ ms.locfileid: "59772987"
     this.innerChannelListener.Close(timeoutHelper.RemainingTime());  
     ```  
   
--   チャネル リスナを開くプロセスが完了したら、次のようにメッセージ ループをセットアップし、内部チャネルからメッセージを受信します。  
+- チャネル リスナを開くプロセスが完了したら、次のようにメッセージ ループをセットアップし、内部チャネルからメッセージを受信します。  
   
     ```  
     IAsyncResult result = BeginInnerReceiveRequest();  
@@ -63,7 +63,7 @@ ms.locfileid: "59772987"
     }  
     ```  
   
--   メッセージが到着したら、サービス チャネルはセッション識別子を調べ、非多重化を行って適切なセッション チャネルに変換します。 このチャネル リスナは、セッション識別子をセッション チャネル インスタンスにマップするディクショナリを保持します。  
+- メッセージが到着したら、サービス チャネルはセッション識別子を調べ、非多重化を行って適切なセッション チャネルに変換します。 このチャネル リスナは、セッション識別子をセッション チャネル インスタンスにマップするディクショナリを保持します。  
   
     ```  
     Dictionary<string, IReplySessionChannel> channelMapping;  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fb7f23c4-4572-4c38-9898-a287807d070c
 ms.openlocfilehash: ab5e2867ce85fcc82e1114696c129aae878bbee6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61877267"
 ---
 # <a name="how-to-dynamically-create-a-database"></a>方法: データベースを動的に作成する
 LINQ to SQL では、オブジェクト モデルをリレーショナル データベースに対応付けます。 マッピングを有効化するには、属性ベースの対応付けか、リレーショナル データベースの構造を記述した外部マッピング ファイルを使用します。 いずれの場合も、<xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドを使用してデータベースの新しいインスタンスを作成するために必要な、リレーショナル データベースに関する十分な情報が提供されます。  
@@ -19,9 +19,9 @@ LINQ to SQL では、オブジェクト モデルをリレーショナル デー
   
  <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドはさまざまなシナリオで使用できますが、特に、Microsoft SQL Server 2008 などの既知のデータ プロバイダーを利用できる場合に適しています。 一般的なシナリオとして、次のようなものが考えられます。  
   
--   顧客のシステムに自動的に自身をインストールするアプリケーションを作成している場合  
+- 顧客のシステムに自動的に自身をインストールするアプリケーションを作成している場合  
   
--   オフライン状態を保存するためにローカル データベースを必要とするクライアント アプリケーションを作成している場合  
+- オフライン状態を保存するためにローカル データベースを必要とするクライアント アプリケーションを作成している場合  
   
  接続文字列で .mdf ファイルまたは単にカタログ名を使用することにより、SQL Server でも <xref:System.Data.Linq.DataContext.CreateDatabase%2A?displayProperty=nameWithType> メソッドを使用できます。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、接続文字列を使用して、作成するデータベースおよびデータベースの作成先となるサーバーを定義します。  
   

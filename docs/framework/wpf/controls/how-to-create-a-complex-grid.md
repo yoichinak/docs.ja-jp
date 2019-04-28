@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Grid control [WPF], creating [WPF], complex grid
 ms.assetid: 4ce3040a-a156-4364-9596-98ca1eca5550
 ms.openlocfilehash: dd17dfeea85e2b404f7a284f93faceec63145b1f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61910997"
 ---
 # <a name="how-to-create-a-complex-grid"></a>複雑なグリッドを作成する方法
 

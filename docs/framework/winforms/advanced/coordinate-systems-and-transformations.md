@@ -7,11 +7,11 @@ helpviewer_keywords:
 - matrix transformations
 ms.assetid: 9fef7451-bddf-4c68-9350-400d1f1f25a3
 ms.openlocfilehash: 5093bfa6bc4051c1c6cf3ca059831b0cbe137ef0
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61755767"
 ---
 # <a name="coordinate-systems-and-transformations"></a>座標系と変換
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ワールド変換とページ変換を提供し、変換できるように (回転、拡大縮小、平行移動、およびなど) を描画する項目。 2 つの変換では、さまざまな座標システムで動作することもできます。  

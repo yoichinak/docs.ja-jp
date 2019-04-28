@@ -7,21 +7,21 @@ helpviewer_keywords:
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
 ms.openlocfilehash: bb279e6fa16b82bffbebc777f791ce7a6e06255d
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492648"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61875330"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Service クライアント ユーティリティ (DataSvcUtil.exe)
 
 DataSvcUtil.exe は、コマンド ライン ツールを使用する WCF Data Services によって提供される、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードし、.NET Framework クライアント アプリケーションからデータ サービスにアクセスするために必要なクライアント データ サービス クラスを生成します。 このユーティリティでは、以下のメタデータ ソースを使用してデータ クラスを生成できます。
 
--   データ サービスのルート URI。 ユーティリティは、データ サービスによって公開されるデータ モデルが記述されたサービス メタデータ ドキュメントを要求します。 詳細については、次を参照してください[OData:。サービス メタデータ ドキュメント](https://go.microsoft.com/fwlink/?LinkId=186070)します。
+- データ サービスのルート URI。 ユーティリティは、データ サービスによって公開されるデータ モデルが記述されたサービス メタデータ ドキュメントを要求します。 詳細については、次を参照してください[OData:。サービス メタデータ ドキュメント](https://go.microsoft.com/fwlink/?LinkId=186070)します。
 
--   定義されている概念スキーマ定義言語 (CSDL) を使用して定義されているデータ モデル ファイル (.csdl)、 [ \[MC-CSDL\]:概念スキーマ定義ファイル形式](https://go.microsoft.com/fwlink/?LinkID=159072)仕様。
+- 定義されている概念スキーマ定義言語 (CSDL) を使用して定義されているデータ モデル ファイル (.csdl)、 [ \[MC-CSDL\]:概念スキーマ定義ファイル形式](https://go.microsoft.com/fwlink/?LinkID=159072)仕様。
 
--   Entity Framework に付属する Entity Data Model ツールを使用して作成された .edmx ファイル。 詳細については、次を参照してください、 [ \[MC-EDMX\]:。データ サービス パッケージング形式のエンティティ データ モデル](https://go.microsoft.com/fwlink/?LinkID=178833)仕様。
+- Entity Framework に付属する Entity Data Model ツールを使用して作成された .edmx ファイル。 詳細については、次を参照してください、 [ \[MC-EDMX\]:。データ サービス パッケージング形式のエンティティ データ モデル](https://go.microsoft.com/fwlink/?LinkID=178833)仕様。
 
 詳細については、「[方法 :クライアント データ サービス クラスを手動で生成](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)します。
 
@@ -44,7 +44,7 @@ datasvcutil /out:file [/in:file | /uri:serviceuri] [/dataservicecollection] [/la
 |`/nologo`|著作権メッセージが表示されないようにします。|
 |`/out:` *\<file>*|生成されたクライアント データ サービス クラスを含むソース コード ファイルの名前を指定します。|
 |`/uri:` *\<string>*|OData フィードの URI。|
-|`/version:`[1.0&#124;2.0]|OData の許容される最上位のバージョンを指定します。 バージョンはに基づいて決定されます、`DataServiceVersion`返されたデータ サービス メタデータの DataService 要素の属性。 詳細については、[データ サービスのバージョン管理](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)を参照してください。 指定した場合、`/dataservicecollection`パラメーターも指定`/version:2.0`データ バインディングを有効にします。|
+|`/version:`[1.0&#124;2.0]|OData の許容される最上位のバージョンを指定します。 バージョンはに基づいて決定されます、`DataServiceVersion`返されたデータ サービス メタデータの DataService 要素の属性。 詳細については、次を参照してください。[データ サービスのバージョン管理](../../../../docs/framework/data/wcf/data-service-versioning-wcf-data-services.md)します。 指定した場合、`/dataservicecollection`パラメーターも指定`/version:2.0`データ バインディングを有効にします。|
 
 ## <a name="see-also"></a>関連項目
 

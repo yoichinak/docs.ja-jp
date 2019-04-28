@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BindingSource component [Windows Forms], examples
 ms.assetid: 622fce80-879d-44be-abbf-8350ec22ca2b
 ms.openlocfilehash: 481774e9127531bb38df0cc71ac8e7eab76da695
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61747058"
 ---
 # <a name="how-to-create-a-lookup-table-with-the-windows-forms-bindingsource-component"></a>方法: Windows フォーム BindingSource コンポーネントを使用してルックアップ テーブルを作成する
 ルックアップ テーブルは、関連するテーブル内のレコードのデータを表示する列を持つ、データ テーブルです。 以下の手順では、<xref:System.Windows.Forms.ComboBox> コントロールを使用して、親テーブルから子テーブルへの外部キー リレーションシップを持つフィールドを表示します。  
@@ -37,13 +37,13 @@ ms.locfileid: "59321901"
   
  ルックアップ テーブルを作成するには、[ComboBox コントロール](combobox-control-windows-forms.md)で次の 4 つの重要なプロパティを設定します。  
   
--   <xref:System.Windows.Forms.ComboBox.DataSource%2A> プロパティには、テーブルの名前が格納されます。  
+- <xref:System.Windows.Forms.ComboBox.DataSource%2A> プロパティには、テーブルの名前が格納されます。  
   
--   <xref:System.Windows.Forms.ListControl.DisplayMember%2A> プロパティには、コントロール テキスト (顧客名) に対して表示する、テーブルのデータ列が格納されます。  
+- <xref:System.Windows.Forms.ListControl.DisplayMember%2A> プロパティには、コントロール テキスト (顧客名) に対して表示する、テーブルのデータ列が格納されます。  
   
--   <xref:System.Windows.Forms.ListControl.ValueMember%2A> プロパティには、格納された情報 (親テーブルの ID 番号) を持つ、テーブルのデータ列が格納されます。  
+- <xref:System.Windows.Forms.ListControl.ValueMember%2A> プロパティには、格納された情報 (親テーブルの ID 番号) を持つ、テーブルのデータ列が格納されます。  
   
--   <xref:System.Windows.Forms.ListControl.SelectedValue%2A> プロパティは、<xref:System.Windows.Forms.ListControl.ValueMember%2A> に基づいて子テーブルのルックアップ値を提供します。  
+- <xref:System.Windows.Forms.ListControl.SelectedValue%2A> プロパティは、<xref:System.Windows.Forms.ListControl.ValueMember%2A> に基づいて子テーブルのルックアップ値を提供します。  
   
  以下の手順では、フォームをルックアップ テーブルとしてレイアウトし、フォームのコントロールにデータをバインドする方法を示します。 この手順を完了するには、データ ソース、および前述の外部キー リレーションシップを持つ親テーブルと子テーブルから構成されるデータ ソースが必要です。  
   
@@ -65,21 +65,21 @@ ms.locfileid: "59321901"
   
 3. **[データ ソース]** ドロップダウン ボックスの横の矢印をクリックします。 プロジェクトまたはフォームに対してデータ ソースがすでに構成されている場合はデータ ソースが表示されますが、設定されていない場合は、次の手順を実行します (この例では、Northwind サンプル データベースの Customers テーブルと Orders テーブルを使用します。これらのテーブルについては括弧の中で参照します)。  
   
-    1.  **[プロジェクト データ ソースの追加]** をクリックしてデータに接続し、データ ソースを作成します。  
+    1. **[プロジェクト データ ソースの追加]** をクリックしてデータに接続し、データ ソースを作成します。  
   
-    2.  **データ ソース構成ウィザード**の開始ページで **[次へ]** をクリックします。  
+    2. **データ ソース構成ウィザード**の開始ページで **[次へ]** をクリックします。  
   
-    3.  **[データソースの種類を選択]** ページで、**[データベース]** をクリックします。  
+    3. **[データソースの種類を選択]** ページで、**[データベース]** をクリックします。  
   
-    4.  **[データ接続の選択]** ページの利用可能な接続の一覧から、データ接続を選択します。 目的のデータ接続を選択できない場合は、**[新しい接続]** を選択して新しいデータ接続を作成します。  
+    4. **[データ接続の選択]** ページの利用可能な接続の一覧から、データ接続を選択します。 目的のデータ接続を選択できない場合は、**[新しい接続]** を選択して新しいデータ接続を作成します。  
   
-    5.  **[次の名前で接続を保存する]** をオンにして、接続文字列をアプリケーション構成ファイルに保存します。  
+    5. **[次の名前で接続を保存する]** をオンにして、接続文字列をアプリケーション構成ファイルに保存します。  
   
-    6.  アプリケーションで使用するデータベース オブジェクトを選択します。 この場合、外部キー リレーションシップを持つ親テーブルと子テーブル (Customers と Orders など) を選択します。  
+    6. アプリケーションで使用するデータベース オブジェクトを選択します。 この場合、外部キー リレーションシップを持つ親テーブルと子テーブル (Customers と Orders など) を選択します。  
   
-    7.  必要な場合は、既定のデータセット名を変更します。  
+    7. 必要な場合は、既定のデータセット名を変更します。  
   
-    8.  **[完了]** をクリックします。  
+    8. **[完了]** をクリックします。  
   
 4. **[表示メンバー]** ドロップダウン ボックスで、コンボ ボックスに表示する列名 (ContactName など) を選択します。  
   

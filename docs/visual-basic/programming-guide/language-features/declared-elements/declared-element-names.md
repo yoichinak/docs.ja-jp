@@ -24,11 +24,11 @@ helpviewer_keywords:
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
 ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61828621"
 ---
 # <a name="declared-element-names-visual-basic"></a>宣言された要素の名前 (Visual Basic)
 宣言された各要素とも呼ばれる、名前を持つ、*識別子*、これは、コードを使用して、それを参照してください。  
@@ -36,13 +36,13 @@ ms.locfileid: "58814069"
 ## <a name="rules"></a>ルール  
  Visual Basic では、要素名は、次の規則に従う必要があります。  
   
--   文字は英字またはアンダー スコアで始まる必要がありますが (`_`)。  
+- 文字は英字またはアンダー スコアで始まる必要がありますが (`_`)。  
   
--   アルファベット文字、10 進数字およびアンダー スコアのみでなければなりません。  
+- アルファベット文字、10 進数字およびアンダー スコアのみでなければなりません。  
   
--   アンダー スコアで始まる場合、少なくとも 1 つのアルファベット文字または 10 進数字でなければなりません。  
+- アンダー スコアで始まる場合、少なくとも 1 つのアルファベット文字または 10 進数字でなければなりません。  
   
--   長さが 1023 文字はできません。  
+- 長さが 1023 文字はできません。  
   
  1023 文字の長さの制限にも適用されます、完全修飾名では、文字列全体など`outerNamespace.middleNamespace.innerNamespace.thisClass.thisElement`します。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "58814069"
   
  一般に、エスケープされた名前を使用する必要がある場合にのみ。  
   
--   コードが名前として使用されているキーワードが確保されていない Visual Basic の以前のバージョンから移行します。または  
+- コードが名前として使用されているキーワードが確保されていない Visual Basic の以前のバージョンから移行します。または  
   
--   指定されたキーワードが予約されていない別の言語で記述されたコードを使用しています。  
+- 指定されたキーワードが予約されていない別の言語で記述されたコードを使用しています。  
   
  それ以外の場合、キーワードを使用してその名前が競合する場合、要素名の変更を検討してください。 統合開発環境 (IDE) では、これを行う簡単な方法を提供します。 詳細については、次を参照してください。[リファクタリング](/visualstudio/vb-ide/refactoring-vb)します。  
   

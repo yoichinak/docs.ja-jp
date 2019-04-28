@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ae9a8e9e26f05675611ac4c6acd8ecfe5704b0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104456"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61760195"
 ---
 # <a name="ihostassemblymanagergetnonhoststoreassemblies-method"></a>IHostAssemblyManager::GetNonHostStoreAssemblies メソッド
 インターフェイス ポインターを取得、 [ICLRAssemblyReferenceList](../../../../docs/framework/unmanaged-api/hosting/iclrassemblyreferencelist-interface.md)ホストは、共通言語ランタイム (CLR) を読み込むアセンブリの一覧を表します。  
@@ -54,13 +54,13 @@ HRESULT GetNonHostStoreAssemblies (
 ## <a name="remarks"></a>Remarks  
  CLR は、次のガイドラインのセットを使用して参照を解決します。  
   
--   によって返されるアセンブリ参照の一覧を参照して、最初に、`GetNonHostStoreAssemblies`します。  
+- によって返されるアセンブリ参照の一覧を参照して、最初に、`GetNonHostStoreAssemblies`します。  
   
--   アセンブリが一覧に表示された場合、CLR は通常どおりにバインドします。  
+- アセンブリが一覧に表示された場合、CLR は通常どおりにバインドします。  
   
--   アセンブリが一覧に表示されないと、ホストでの実装が提供されている場合[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)、CLR 呼び出し[ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)を指定するホストを許可するのにはバインドするアセンブリ。  
+- アセンブリが一覧に表示されないと、ホストでの実装が提供されている場合[IHostAssemblyStore](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-interface.md)、CLR 呼び出し[ihostassemblystore::provideassembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)を指定するホストを許可するのにはバインドするアセンブリ。  
   
--   それ以外の場合、CLR は、アセンブリのバインドに失敗します。  
+- それ以外の場合、CLR は、アセンブリのバインドに失敗します。  
   
  ホストが設定されている場合`ppReferenceList`、グローバル アセンブリ キャッシュの呼び出しを null に CLR の最初のプローブ`ProvideAssembly`とし、アセンブリ参照を解決するのには、アプリケーション ベースをプローブします。  
   

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Viewport property of TileBrush [WPF]
 ms.assetid: 04f41090-1b46-4e36-832f-d27d28708b8c
 ms.openlocfilehash: 80b5dfc668464df829db593668bea8a9a4ec09e4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61804209"
 ---
 # <a name="how-to-set-the-tile-size-for-a-tilebrush"></a>方法: TileBrush のタイル サイズを設定する
 

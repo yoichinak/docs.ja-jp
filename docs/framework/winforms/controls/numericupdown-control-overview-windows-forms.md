@@ -9,11 +9,11 @@ helpviewer_keywords:
 - spin button control [Windows Forms], Windows Forms
 ms.assetid: cff3cf30-4d46-4381-87df-37bfe83c71c5
 ms.openlocfilehash: 218eb685e546acac76a18450612a1601ab87276b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61805763"
 ---
 # <a name="numericupdown-control-overview-windows-forms"></a>NumericUpDown コントロールの概要 (Windows フォーム)
 <xref:System.Windows.Forms.NumericUpDown>コントロールがテキスト ボックスの組み合わせと 1 対の矢印、値を調整する、ユーザーがクリックできるようになります。 コントロールは、表示し、固定の数値の選択肢の一覧から 1 つの数値を設定します。 ユーザーは、増加し、上下の矢印キーを押すか、コントロールのテキスト ボックスの一部で数値を入力して下矢印をクリックして、数を減らします。 上矢印キーをクリックすると、数値が最大方向を移動します。下方向キーをクリックすると、数値が最低限の方向が移動します。  

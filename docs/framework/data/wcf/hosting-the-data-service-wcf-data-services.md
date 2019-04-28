@@ -9,32 +9,32 @@ helpviewer_keywords:
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
 ms.openlocfilehash: e738fa1feebdd91bdb84484340b31e599d7f5f76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61765574"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>データ サービスのホスティング (WCF Data Services)
 WCF Data Services を使用すると、データとして公開するサービスを作成することができます、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードします。 このデータ サービスは、<xref:System.Data.Services.DataService%601> から継承されたクラスとして定義されます。 このクラスは、要求メッセージの処理で、データ ソースに対して更新プログラムを実行し、OData に必要なの応答メッセージの生成に必要な機能を提供します。 ただし、データ サービスにバインドし、ネットワーク ソケットの受信 HTTP 要求をリッスンできません。 この機能要件のため、データ サービスはホスティング コンポーネントに依存します。
 
  データ サービス ホストは、データ サービスに代わって次のタスクを実行します。
 
--   要求をリッスンし、その要求をデータ サービスにルーティングする。
+- 要求をリッスンし、その要求をデータ サービスにルーティングする。
 
--   要求ごとにデータ サービスのインスタンスを作成する。
+- 要求ごとにデータ サービスのインスタンスを作成する。
 
--   受信要求を処理するようデータ サービスに要求する。
+- 受信要求を処理するようデータ サービスに要求する。
 
--   データ サービスに代わって応答を送信する。
+- データ サービスに代わって応答を送信する。
 
  データ サービスのホスティングを簡素化するには、WCF Data Services は、Windows Communication Foundation (WCF) を統合する設計されています。 データ サービスでデータ サービス ホストとして機能する既定の WCF 実装を提供する、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーション。 そのため、次のいずれかの方法でデータ サービスをホストできます。
 
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーション
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーション
 
--   自己ホスト型 WCF サービスをサポートするマネージ アプリケーション
+- 自己ホスト型 WCF サービスをサポートするマネージ アプリケーション
 
--   その他のカスタム データ サービス ホスト
+- その他のカスタム データ サービス ホスト
 
 ## <a name="hosting-a-data-service-in-an-aspnet-application"></a>ASP.NET アプリケーションでのデータ サービスのホスト
 
@@ -65,13 +65,13 @@ WCF Data Services を使用すると、データとして公開するサービ�
 ## <a name="defining-a-custom-data-service-host"></a>カスタム データ サービス ホストの定義
  WCF ホストの実装の制限が厳格すぎる場合、データ サービスのカスタム ホストを定義することもできます。 <xref:System.Data.Services.IDataServiceHost> インターフェイスを実装する任意のクラスをデータ サービスのネットワーク ホストとして使用できます。 カスタム ホストは、<xref:System.Data.Services.IDataServiceHost> インターフェイスを実装し、データ サービス ホストの次の基本的な役割を果たすことができるようにする必要があります。
 
--   データ サービスにサービス ルート パスを提供する。
+- データ サービスにサービス ルート パスを提供する。
 
--   適切な <xref:System.Data.Services.IDataServiceHost> メンバーの実装に対する要求ヘッダーおよび応答ヘッダーの情報を処理する。
+- 適切な <xref:System.Data.Services.IDataServiceHost> メンバーの実装に対する要求ヘッダーおよび応答ヘッダーの情報を処理する。
 
--   データ サービスで発生する例外を処理する。
+- データ サービスで発生する例外を処理する。
 
--   クエリ文字列のパラメーターを検証する。
+- クエリ文字列のパラメーターを検証する。
 
 ## <a name="see-also"></a>関連項目
 
