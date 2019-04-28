@@ -3,11 +3,11 @@ title: 'チュートリアル: 遅延実行 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: c80d53a8-1a30-4115-b232-52f0d089fec5
 ms.openlocfilehash: d78d298f7691c4f1df291fa865c92894414ead58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58838028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907752"
 ---
 # <a name="tutorial-deferred-execution-visual-basic"></a>チュートリアル: 遅延実行 (Visual Basic)
 このチュートリアルでは、クエリを連結する際の処理モデルを紹介します。 クエリの連結は、関数型変換を記述する際の重要な要素です。 連結されたクエリがどのように動作するのかを正確に把握することが重要です。  

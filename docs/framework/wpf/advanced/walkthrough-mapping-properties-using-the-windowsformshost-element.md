@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 74809167-bf8e-48b7-a2e7-b4ea08bc7d8c
 ms.openlocfilehash: edd9d6f698ba27cacb5e9a5eecab43f58d47b8e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296525"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007125"
 ---
 # <a name="walkthrough-mapping-properties-using-the-windowsformshost-element"></a>チュートリアル: WindowsFormsHost 要素を使用したプロパティの割り当て
 
@@ -21,17 +21,17 @@ ms.locfileid: "59296525"
 
 このチュートリアルでは、以下のタスクを行います。
 
--   プロジェクトの作成。
+- プロジェクトの作成。
 
--   アプリケーションのレイアウトを定義します。
+- アプリケーションのレイアウトを定義します。
 
--   新しいプロパティ マッピングを定義します。
+- 新しいプロパティ マッピングを定義します。
 
--   既定のプロパティ マッピングを削除しています。
+- 既定のプロパティ マッピングを削除しています。
 
--   既定のプロパティ マッピングを置換します。
+- 既定のプロパティ マッピングを置換します。
 
--   既定のプロパティ マッピングを拡張します。
+- 既定のプロパティ マッピングを拡張します。
 
 このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [WindowsFormsHost 要素のサンプルを使用してプロパティをマッピング](https://go.microsoft.com/fwlink/?LinkID=160019)します。
 
@@ -41,7 +41,7 @@ ms.locfileid: "59296525"
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="create-and-set-up-the-project"></a>作成し、プロジェクトを設定します。
 
@@ -76,7 +76,7 @@ ms.locfileid: "59296525"
 
 ### <a name="to-define-a-new-property-mapping"></a>新しいプロパティ マッピングを定義するには
 
--   定義に次のコードをコピー、`Window1`クラス。
+- 定義に次のコードをコピー、`Window1`クラス。
 
      [!code-csharp[PropertyMappingWithWfhSample#14](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#14)]
      [!code-vb[PropertyMappingWithWfhSample#14](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#14)]
@@ -93,7 +93,7 @@ ms.locfileid: "59296525"
 
 ### <a name="to-remove-a-default-property-mapping"></a>既定のプロパティ マッピングを削除するには
 
--   定義に次のコードをコピー、`Window1`クラス。
+- 定義に次のコードをコピー、`Window1`クラス。
 
      [!code-csharp[PropertyMappingWithWfhSample#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#13)]
      [!code-vb[PropertyMappingWithWfhSample#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#13)]
@@ -106,7 +106,7 @@ ms.locfileid: "59296525"
 
 ### <a name="to-replace-a-default-property-mapping"></a>既定のプロパティ マッピングを置換するには
 
--   定義に次のコードをコピー、`Window1`クラス。
+- 定義に次のコードをコピー、`Window1`クラス。
 
      [!code-csharp[PropertyMappingWithWfhSample#12](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#12)]
      [!code-vb[PropertyMappingWithWfhSample#12](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#12)]
@@ -123,7 +123,7 @@ ms.locfileid: "59296525"
 
 ### <a name="to-extend-a-default-property-mapping"></a>既定のプロパティ マッピングを拡張するには
 
--   定義に次のコードをコピー、`Window1`クラス。
+- 定義に次のコードをコピー、`Window1`クラス。
 
      [!code-csharp[PropertyMappingWithWfhSample#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithWfhSample/CSharp/PropertyMappingWithWfh/Window1.xaml.cs#15)]
      [!code-vb[PropertyMappingWithWfhSample#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithWfhSample/VisualBasic/PropertyMappingWithWfh/Window1.xaml.vb#15)]
@@ -145,11 +145,11 @@ ms.locfileid: "59296525"
 
      `WindowLoaded`メソッド ハンドル、<xref:System.Windows.FrameworkElement.Loaded>イベントと、次の初期化を実行します。
 
-    -   作成、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox>コントロール。
+    - 作成、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.CheckBox>コントロール。
 
-    -   プロパティ マッピングを設定するチュートリアルの前半で定義されているメソッドを呼び出します。
+    - プロパティ マッピングを設定するチュートリアルの前半で定義されているメソッドを呼び出します。
 
-    -   マップされたプロパティに初期値を割り当てます。
+    - マップされたプロパティに初期値を割り当てます。
 
 2. **F5** キーを押してアプリケーションをビルドし、実行します。 効果を確認するチェック ボックスをクリックして、<xref:System.Windows.FrameworkElement.FlowDirection%2A>マッピングします。 チェック ボックスをクリックすると、レイアウトは左から右方向を反転させます。
 

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], custom controls
 ms.assetid: 0ed0840a-616d-41ba-a27d-3573241932ad
 ms.openlocfilehash: 7c26e00acd4278ced53ad29c748ac076e0215a23
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61913212"
 ---
 # <a name="how-to-provide-a-toolbox-bitmap-for-a-control"></a>方法: コントロールにツールボックス ビットマップを指定する
 コントロールの特別なアイコンを表示する場合、**ツールボックス**、特定のイメージを使用して指定することができます、<xref:System.Drawing.ToolboxBitmapAttribute>します。 このクラスは "*属性*" であり、他のクラスに追加できる特殊なクラスです。 属性の詳細については、次を参照してください。[属性の概要 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md) Visual basic または[属性 (c#)](../../../csharp/programming-guide/concepts/attributes/index.md) (C#)。  

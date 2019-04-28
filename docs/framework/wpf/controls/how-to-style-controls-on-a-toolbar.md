@@ -7,32 +7,32 @@ helpviewer_keywords:
 - customizing controls on toolbar [WPF]
 ms.assetid: ba6ae056-d6a9-4c24-90f8-467ab0bc0b1a
 ms.openlocfilehash: 580b56ebb47aa7bd50da0a966ccf60f7ea9fb2a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699189"
 ---
 # <a name="how-to-style-controls-on-a-toolbar"></a>方法: ToolBar のコントロールのスタイルを設定する
 <xref:System.Windows.Controls.ToolBar>定義<xref:System.Windows.ResourceKey>内のコントロールのスタイルを指定するオブジェクト、<xref:System.Windows.Controls.ToolBar>します。  内のコントロールのスタイルを設定する、 <xref:System.Windows.Controls.ToolBar>、設定、`x:key`するスタイルの属性を<xref:System.Windows.ResourceKey>で定義されている<xref:System.Windows.Controls.ToolBar>します。  
   
  <xref:System.Windows.Controls.ToolBar> 、次の定義<xref:System.Windows.ResourceKey>オブジェクト。  
   
--   <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.ButtonStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.CheckBoxStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.CheckBoxStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.ComboBoxStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.ComboBoxStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.MenuStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.MenuStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.RadioButtonStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.RadioButtonStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.SeparatorStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.SeparatorStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.TextBoxStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.TextBoxStyleKey%2A>  
   
--   <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
+- <xref:System.Windows.Controls.ToolBar.ToggleButtonStyleKey%2A>  
   
 ## <a name="example"></a>例  
  次の例では、内のコントロールのスタイルを定義する、<xref:System.Windows.Controls.ToolBar>します。  

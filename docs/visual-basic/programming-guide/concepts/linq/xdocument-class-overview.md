@@ -3,11 +3,11 @@ title: XDocument クラスの概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 45cb7e71-196a-47da-bfe9-7a5589db1eed
 ms.openlocfilehash: f9a531b9e90a8d6511dd0a2c6fc3131c9bfe1e89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834284"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907817"
 ---
 # <a name="xdocument-class-overview-visual-basic"></a>XDocument クラスの概要 (Visual Basic)
 このトピックでは、<xref:System.Xml.Linq.XDocument> クラスについて説明します。  
@@ -22,15 +22,15 @@ ms.locfileid: "58834284"
 ## <a name="components-of-xdocument"></a>XDocument のコンポーネント  
  <xref:System.Xml.Linq.XDocument> には、次の要素を含めることができます。  
   
--   1 つの <xref:System.Xml.Linq.XDeclaration> オブジェクト。 <xref:System.Xml.Linq.XDeclaration> では、XML 宣言の関連部分である XML バージョン、ドキュメントのエンコード、および XML ドキュメントがスタンドアロンかどうかを指定できます。  
+- 1 つの <xref:System.Xml.Linq.XDeclaration> オブジェクト。 <xref:System.Xml.Linq.XDeclaration> では、XML 宣言の関連部分である XML バージョン、ドキュメントのエンコード、および XML ドキュメントがスタンドアロンかどうかを指定できます。  
   
--   1 つの <xref:System.Xml.Linq.XElement> オブジェクト。 これは XML ドキュメントのルート ノードです。  
+- 1 つの <xref:System.Xml.Linq.XElement> オブジェクト。 これは XML ドキュメントのルート ノードです。  
   
--   任意の数の <xref:System.Xml.Linq.XProcessingInstruction> オブジェクト。 処理命令は、XML を処理するアプリケーションに情報を伝達します。  
+- 任意の数の <xref:System.Xml.Linq.XProcessingInstruction> オブジェクト。 処理命令は、XML を処理するアプリケーションに情報を伝達します。  
   
--   任意の数の <xref:System.Xml.Linq.XComment> オブジェクト。 コメントは、ルート要素の兄弟になります。 XML ドキュメントをコメントで始めることは無効であるため、<xref:System.Xml.Linq.XComment> オブジェクトをリストの最初の引数にすることはできません。  
+- 任意の数の <xref:System.Xml.Linq.XComment> オブジェクト。 コメントは、ルート要素の兄弟になります。 XML ドキュメントをコメントで始めることは無効であるため、<xref:System.Xml.Linq.XComment> オブジェクトをリストの最初の引数にすることはできません。  
   
--   DTD 用の 1 つの <xref:System.Xml.Linq.XDocumentType>。  
+- DTD 用の 1 つの <xref:System.Xml.Linq.XDocumentType>。  
   
  <xref:System.Xml.Linq.XDocument> をシリアル化すると、`XDocument.Declaration` が `null` である場合でも、作成者が `Writer.Settings.OmitXmlDeclaration` を `false` (既定値) に設定していれば、出力には XML 宣言が含まれます。  
   

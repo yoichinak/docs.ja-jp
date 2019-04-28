@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Transforms [WPF]
 ms.assetid: 5c042f8d-d569-45e4-ab32-868b89759bf2
 ms.openlocfilehash: f2a675cad6e98078c409fbdee036c5b5555e6b2b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099316"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61699020"
 ---
 # <a name="how-to-apply-a-transform-to-a-bitmapimage"></a>方法: BitmapImage に変換を適用します。
 この例では、適用、<xref:System.Windows.Media.Transform>を<xref:System.Windows.Media.Imaging.BitmapImage>。  
