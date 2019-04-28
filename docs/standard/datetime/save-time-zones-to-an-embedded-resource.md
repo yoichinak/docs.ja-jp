@@ -1,5 +1,5 @@
 ---
-title: '方法: 埋め込みリソースにタイム ゾーンを保存します。'
+title: '方法: 埋め込みリソースにタイム ゾーンを保存する'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 3c96d83a-a057-4496-abb0-8f4b12712558
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c67a97193d186275e6a788f6b18bbc17c535f367
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54592875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61912705"
 ---
-# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>方法: 埋め込みリソースにタイム ゾーンを保存します。
+# <a name="how-to-save-time-zones-to-an-embedded-resource"></a>方法: 埋め込みリソースにタイム ゾーンを保存する
 
 多くの場合、タイム ゾーンに対応するアプリケーションでは、特定のタイム ゾーンの存在が必要です。 ただし、ため、個々 の可用性<xref:System.TimeZoneInfo>オブジェクトは、システムのローカル レジストリに格納されている情報によって異なります、慣例的でも使用可能なタイム ゾーンが存在しない可能性があります。 使用してさらに、カスタム タイム ゾーンに関する情報がインスタンス化、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッドは、レジストリ内の他のタイム ゾーン情報には格納されません。 必要なときにこれらのタイム ゾーンが使用できることを確認するには、シリアル化して保存し、それらを逆シリアル化して復元することができます。
 
@@ -37,7 +37,7 @@ ms.locfileid: "54592875"
 
 1. 既存のタイム ゾーンを取得するか、新しいタイム ゾーンを作成します。
 
-   既存のタイム ゾーンを取得するには、[方法。定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス](../../../docs/standard/datetime/access-utc-and-local.md)と[方法。TimeZoneInfo オブジェクトをインスタンス化](../../../docs/standard/datetime/instantiate-time-zone-info.md)を参照してください。
+   既存のタイム ゾーンを取得するには、次を参照してください。[方法。定義済みの UTC とローカル タイム ゾーン オブジェクトにアクセス](../../../docs/standard/datetime/access-utc-and-local.md)と[方法。TimeZoneInfo オブジェクトをインスタンス化](../../../docs/standard/datetime/instantiate-time-zone-info.md)します。
 
    新しいタイム ゾーンを作成するには、いずれかのオーバー ロードを呼び出す、<xref:System.TimeZoneInfo.CreateCustomTimeZone%2A>メソッド。 詳細については、「[方法 :調整規則のないタイム ゾーンを作成](../../../docs/standard/datetime/create-time-zones-without-adjustment-rules.md)と[方法。タイム ゾーン調整規則を作成](../../../docs/standard/datetime/create-time-zones-with-adjustment-rules.md)です。
 
@@ -49,9 +49,9 @@ ms.locfileid: "54592875"
 
 5. タイム ゾーンをパスに文字列をシリアル化、<xref:System.Resources.ResXResourceWriter.AddResource%2A?displayProperty=nameWithType>メソッド。
 
-6. <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> メソッドを呼び出します。
+6.  <xref:System.Resources.ResXResourceWriter.Generate%2A?displayProperty=nameWithType> メソッドを呼び出します。
 
-7. <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> メソッドを呼び出します。
+7.  <xref:System.Resources.ResXResourceWriter.Close%2A?displayProperty=nameWithType> メソッドを呼び出します。
 
 8. 閉じる、<xref:System.IO.StreamWriter>オブジェクトを呼び出すことによってその<xref:System.IO.StreamWriter.Close%2A>メソッド。
 
