@@ -13,20 +13,20 @@ helpviewer_keywords:
 - optional arguments [Visual Basic], and named arguments
 ms.assetid: 398d2845-1069-4e94-b934-a73b545c8b87
 ms.openlocfilehash: 4ae2366552426af0107c8d7a35bb5368fe30c8a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61791964"
 ---
 # <a name="optional-parameters-visual-basic"></a>省略可能なパラメーター (Visual Basic)
 プロシージャのパラメーターを省略可能にすると、呼び出し時に引数を指定する必要がなくなります。 *省略可能なパラメーター*で示されます、`Optional`プロシージャ定義内のキーワード。 次の規則が適用されます。  
   
--   プロシージャ定義のすべての省略可能なパラメーターについて、既定値を指定する必要があります。  
+- プロシージャ定義のすべての省略可能なパラメーターについて、既定値を指定する必要があります。  
   
--   省略可能なパラメーターの既定値には、定数式を指定する必要があります。  
+- 省略可能なパラメーターの既定値には、定数式を指定する必要があります。  
   
--   プロシージャ定義で省略可能なパラメーターの後に続くパラメーターは、すべて省略可能であることが必要です。  
+- プロシージャ定義で省略可能なパラメーターの後に続くパラメーターは、すべて省略可能であることが必要です。  
   
  次の構文は、省略可能なパラメーターを含むプロシージャ宣言を示しています。  
   

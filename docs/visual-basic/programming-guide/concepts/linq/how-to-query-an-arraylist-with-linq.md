@@ -3,11 +3,11 @@ title: '方法: ArrayList を照会する linq (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 176358a9-d765-4b57-9557-7feb4428138d
 ms.openlocfilehash: ed440a7970d0ef1a49af36fa56b1c7ca74715e5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61908168"
 ---
 # <a name="how-to-query-an-arraylist-with-linq-visual-basic"></a>方法: ArrayList を照会する linq (Visual Basic)
 LINQ を使用して <xref:System.Collections.ArrayList> などの非ジェネリックの <xref:System.Collections.IEnumerable> コレクションをクエリする場合、範囲変数の型を明示的に宣言して、オブジェクトの特定の型をコレクションに反映させる必要があります。 ある場合など、<xref:System.Collections.ArrayList>の`Student`、オブジェクト、 [From 句](../../../../visual-basic/language-reference/queries/from-clause.md)ようになります。  

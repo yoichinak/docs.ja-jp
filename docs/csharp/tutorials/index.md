@@ -2,12 +2,12 @@
 title: C# のチュートリアル
 description: 以下の C# のチュートリアルでは、C# プログラムをビルドする方法と C# 言語機能について説明します。
 ms.date: 10/25/2018
-ms.openlocfilehash: a82bd8e5ff28e0e006025de96f7da66505c0aff7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 72f159311397a0f4891709c16a4a6ecc937b5952
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706313"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773898"
 ---
 # <a name="c-tutorials"></a>C# のチュートリアル
 
@@ -50,6 +50,7 @@ Hello World レッスンに続くすべての入門用チュートリアルは�
 * [Null 許容参照型](nullable-reference-types.md): Null 許容参照型を使って null 参照の意図を表現する方法について説明します。
 * [Null 許容参照型を利用するようプロジェクトを更新する](upgrade-to-nullable-references.md): null 許容参照型を利用するよう既存のプロジェクトをアップグレードする手法について説明します。
 * [パターン マッチングを使ってデータの機能を拡張する](pattern-matching.md): パターン マッチングを使って、型をそのコア機能を超えて拡張する方法を示します。
+* [インデックスと範囲を使用してデータ シーケンスを操作する](ranges-indexes.md): 連続したデータ コンテナーの単一の要素または範囲にアクセスするための新しい便利な構文を説明します。
 
 ## <a name="general-tutorials"></a>全般的なチュートリアル
 

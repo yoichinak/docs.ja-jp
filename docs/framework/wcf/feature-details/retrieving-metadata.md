@@ -5,11 +5,11 @@ helpviewer_keywords:
 - metadata [WCF], retrieving
 ms.assetid: 18d8ba4c-af0f-4827-a50b-4202d767bacc
 ms.openlocfilehash: bb415d88c2bae75cb16aa137bdf867eb463afa63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61748305"
 ---
 # <a name="retrieving-metadata"></a>メタデータを取得する
 メタデータの取得は、WS-MetadataExchange (MEX) メタデータ エンドポイントや HTTP/GET メタデータ エンドポイントなどのメタデータ エンドポイントに対してメタデータを要求して取得する処理です。  

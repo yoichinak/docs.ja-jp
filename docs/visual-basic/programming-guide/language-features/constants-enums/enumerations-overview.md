@@ -6,11 +6,11 @@ helpviewer_keywords:
 - enumerations [Visual Basic], about enumerations
 ms.assetid: b42a38ee-5e77-4f99-a037-e3a127ead89c
 ms.openlocfilehash: 1c3465a3b2d12b110096ceedf2602d6560b82f4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821843"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61907401"
 ---
 # <a name="enumerations-overview-visual-basic"></a>列挙型の概要 (Visual Basic)
 列挙体は、関連する定数を使用して、名前の定数値を関連付ける便利な方法を提供します。 たとえば、一連の整数型の定数を曜日に関連付けて列挙型として宣言すると、コードで整数値ではなく曜日名を使用することができます。  

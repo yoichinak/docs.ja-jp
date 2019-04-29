@@ -64,4 +64,4 @@ ms.locfileid: "61778860"
 - <xref:System.Windows.Forms.Button>
 - [Windows フォームのビジュアルの継承](windows-forms-visual-inheritance.md)
 - [チュートリアル: ビジュアル継承のデモンストレーション](walkthrough-demonstrating-visual-inheritance.md)
-- [方法: Windows フォームを継承します。](how-to-inherit-windows-forms.md)
+- [方法: Windows フォームを継承する](how-to-inherit-windows-forms.md)

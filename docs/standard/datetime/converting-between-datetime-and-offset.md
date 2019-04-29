@@ -19,18 +19,18 @@ ms.assetid: b605ff97-0c45-4c24-833f-4c6a3e8be64c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d4bce84d26e8f498f065c887b583e18d8ea7c786
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54651202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61901928"
 ---
 # <a name="converting-between-datetime-and-datetimeoffset"></a>DateTime と DateTimeOffset 間の変換
 
 ですが、<xref:System.DateTimeOffset>構造体は、タイム ゾーンの処理よりも高い、<xref:System.DateTime>構造、<xref:System.DateTime>パラメーターがメソッドの呼び出しでよく使用されます。 このため、変換する機能<xref:System.DateTimeOffset>値<xref:System.DateTime>値し、その逆の場合は特に重要です。 このトピックでは、できるだけ多くのタイム ゾーン情報を保持するようにこれらの変換を実行する方法を示します。
 
 > [!NOTE]
-> 両方の<xref:System.DateTime>と<xref:System.DateTimeOffset>型タイム ゾーンの時刻を表す場合に制限事項があります。 その<xref:System.DateTime.Kind%2A>プロパティ、<xref:System.DateTime>は世界協定時刻 (UTC) と、システムのローカル タイム ゾーンのみを反映するようにできます。 <xref:System.DateTimeOffset> UTC からの時刻のオフセットが、実際のタイム ゾーン オフセットが属するは反映されませんが反映されます。 詳細については、時刻の値とタイム ゾーンのサポートは、[選択の間で DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)を参照してください。
+> 両方の<xref:System.DateTime>と<xref:System.DateTimeOffset>型タイム ゾーンの時刻を表す場合に制限事項があります。 その<xref:System.DateTime.Kind%2A>プロパティ、<xref:System.DateTime>は世界協定時刻 (UTC) と、システムのローカル タイム ゾーンのみを反映するようにできます。 <xref:System.DateTimeOffset> UTC からの時刻のオフセットが、実際のタイム ゾーン オフセットが属するは反映されませんが反映されます。 詳細については、時刻の値とタイム ゾーンのサポートは、次を参照してください。[選択の間で DateTime、DateTimeOffset、TimeSpan、および TimeZoneInfo](../../../docs/standard/datetime/choosing-between-datetime.md)します。
 
 ## <a name="conversions-from-datetime-to-datetimeoffset"></a>DateTime から DateTimeOffset への変換
 

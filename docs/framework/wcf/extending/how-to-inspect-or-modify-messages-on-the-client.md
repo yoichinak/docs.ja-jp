@@ -3,11 +3,11 @@ title: '方法: クライアントのメッセージを検査または変更す�
 ms.date: 03/30/2017
 ms.assetid: b8256335-f1c2-419f-b862-9f220ccad84c
 ms.openlocfilehash: 67fa0e092e6494ff55d71e666b5137cfc9a3069e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61766845"
 ---
 # <a name="how-to-inspect-or-modify-messages-on-the-client"></a>方法: クライアントのメッセージを検査または変更する
 検査または実装することで、WCF クライアントの受信または送信メッセージを変更できます、<xref:System.ServiceModel.Dispatcher.IClientMessageInspector?displayProperty=nameWithType>をクライアント ランタイムに挿入します。 詳細については、次を参照してください。[拡張クライアント](../../../../docs/framework/wcf/extending/extending-clients.md)します。 サービスの同等の機能は、<xref:System.ServiceModel.Dispatcher.IDispatchMessageInspector?displayProperty=nameWithType> です。 完全なコード例については、[メッセージ インスペクタ](../../../../docs/framework/wcf/samples/message-inspectors.md)サンプル。  
@@ -23,13 +23,13 @@ ms.locfileid: "59343299"
 ## <a name="example"></a>例  
  下のコード例では、次の項目を順番に示しています。  
   
--   クライアント インスペクター実装  
+- クライアント インスペクター実装  
   
--   インスペクターを挿入するエンドポイント動作  
+- インスペクターを挿入するエンドポイント動作  
   
--   構成ファイルで動作を追加できるようにする <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 派生クラス。  
+- 構成ファイルで動作を追加できるようにする <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> 派生クラス。  
   
--   クライアント メッセージ インスペクターをクライアント ランタイムに挿入するエンドポイント動作を追加する構成ファイル。  
+- クライアント メッセージ インスペクターをクライアント ランタイムに挿入するエンドポイント動作を追加する構成ファイル。  
   
 ```csharp  
 // Client message inspector  

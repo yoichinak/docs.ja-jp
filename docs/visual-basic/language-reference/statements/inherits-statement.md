@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61784203"
 ---
-# <a name="inherits-statement"></a>Inherits Statement
+# <a name="inherits-statement"></a>Inherits ステートメント
 現在のクラスまたは属性、変数、プロパティ、プロシージャ、およびイベントを別のクラスまたはインターフェイスのセットから継承するインターフェイスとします。  
   
 ## <a name="syntax"></a>構文  

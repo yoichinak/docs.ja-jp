@@ -7,11 +7,11 @@ helpviewer_keywords:
 - -keyfile compiler option [Visual Basic]
 ms.assetid: ffa82a4b-517a-4c6c-9889-5bae7b534bb8
 ms.openlocfilehash: c13f34c23cad9c909c2c5bd3447f1a8fa53f9b4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793963"
 ---
 # <a name="-keyfile"></a>-keyfile
 アセンブリに厳密な名前を付けるキーまたはキー ペアを含むファイルを指定します。  

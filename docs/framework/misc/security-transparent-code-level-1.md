@@ -12,11 +12,11 @@ ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161071"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61868759"
 ---
 # <a name="security-transparent-code-level-1"></a>透過的セキュリティ コード、レベル 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -28,11 +28,11 @@ ms.locfileid: "59161071"
   
  このトピックは、次のセクションで構成されています。  
   
--   [レベル 1 の透過性モデル](#the_level_1_transparency_model)  
+- [レベル 1 の透過性モデル](#the_level_1_transparency_model)  
   
--   [透過性属性](#transparency_attributes)  
+- [透過性属性](#transparency_attributes)  
   
--   [セキュリティ透過性の例](#security_transparency_examples)  
+- [セキュリティ透過性の例](#security_transparency_examples)  
   
 <a name="the_level_1_transparency_model"></a>   
 ## <a name="the-level-1-transparency-model"></a>レベル 1 の透過性モデル  
@@ -40,11 +40,11 @@ ms.locfileid: "59161071"
   
  アセンブリ全体、アセンブリ内の一部のクラス、またはクラス内の一部のメソッドを、セキュリティ透過的なコードとしてマークできます。 セキュリティ透過的なコードは特権を昇格することはできません。 この制限により、次の 3 つの効果が生まれます。  
   
--   セキュリティ透過的なコードは、<xref:System.Security.Permissions.SecurityAction.Assert> アクションを実行できません。  
+- セキュリティ透過的なコードは、<xref:System.Security.Permissions.SecurityAction.Assert> アクションを実行できません。  
   
--   セキュリティ透過的なコードによって満たされるリンク確認要求は、フル アクセス要求になります。  
+- セキュリティ透過的なコードによって満たされるリンク確認要求は、フル アクセス要求になります。  
   
--   セキュリティ透過的なコードで実行される必要のある安全でない (検証できない) コードは、<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> セキュリティ アクセス許可に対するフル アクセス要求を発生させます。  
+- セキュリティ透過的なコードで実行される必要のある安全でない (検証できない) コードは、<xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> セキュリティ アクセス許可に対するフル アクセス要求を発生させます。  
   
  これらの規則は、共通言語ランタイム (CLR: Common Language Runtime) による実行中に適用されます。 セキュリティ透過的なコードは、呼び出すコードのすべてのセキュリティ要件を、呼び出し元に返します。 セキュリティ透過的なコードを流れる確認要求では、特権を昇格できません。 信頼性の低いアプリケーションによってセキュリティ透過的なコードが呼び出され、高い特権の確認要求が発生した場合、その確認要求は信頼性の低いコードに戻されて失敗します。 セキュリティ透過的なコードはアサート アクションを実行できないので、確認要求を停止できません。 同じセキュリティ透過的なコードが、完全に信頼されているコードから呼び出された場合、確認要求は成功します。  
   
