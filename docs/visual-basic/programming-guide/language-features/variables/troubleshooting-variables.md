@@ -6,11 +6,11 @@ helpviewer_keywords:
 - variables [Visual Basic], troubleshooting
 ms.assetid: 928a2dc8-e565-4ae4-8ba3-80cc0cb50090
 ms.openlocfilehash: 55d0fdcdbed4f994e50e83e5a25baf83c3ad79cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61756755"
 ---
 # <a name="troubleshooting-variables-in-visual-basic"></a>Visual Basic における変数のトラブルシューティング
 このページには、Visual Basic における変数を使用する場合に発生する可能性がある一般的な問題が一覧表示されます。  
@@ -18,9 +18,9 @@ ms.locfileid: "58831125"
 ## <a name="unable-to-access-members-of-an-object"></a>オブジェクトのメンバーにアクセスできない  
  コードからオブジェクトのプロパティまたはメソッドにアクセスしようとしたときに、発生する可能性があるエラーは 2 つあります。  
   
--   オブジェクト変数を特定の型として宣言した後、その型で定義されていないメンバーを参照すると、コンパイラによってエラー メッセージが生成されることがあります。  
+- オブジェクト変数を特定の型として宣言した後、その型で定義されていないメンバーを参照すると、コンパイラによってエラー メッセージが生成されることがあります。  
   
--   オブジェクト変数に代入されたオブジェクトが、コードからアクセスしようとしたメンバーを公開していないと、ランタイム <xref:System.MemberAccessException> が発生します。 変数の場合[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)、メンバーでない場合に、この例外を取得することもできます`Public`します。 この原因は、遅延バインディングで許可されているのは、 `Public` メンバーへのアクセスのみのためです。  
+- オブジェクト変数に代入されたオブジェクトが、コードからアクセスしようとしたメンバーを公開していないと、ランタイム <xref:System.MemberAccessException> が発生します。 変数の場合[Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)、メンバーでない場合に、この例外を取得することもできます`Public`します。 この原因は、遅延バインディングで許可されているのは、 `Public` メンバーへのアクセスのみのためです。  
   
   [Option Strict Statement](../../../../visual-basic/language-reference/statements/option-strict-statement.md) で型チェックが `On`に設定されている場合、オブジェクト変数がアクセスできるのは、その変数の宣言時に指定したクラスのメソッドとプロパティだけです。 次に例を示します。  
 

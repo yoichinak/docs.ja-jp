@@ -16,11 +16,11 @@ ms.assetid: f3a93fa7-1717-467d-aaff-393e5c9828b4
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b39646655c175497533aa6dc358c6966acc27344
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61754539"
 ---
 # <a name="how-to-add-trace-statements-to-application-code"></a>方法: アプリケーション コードにトレース ステートメントを追加する
 トレース用に最もよく使用される方法は、リスナーに出力を書き込む方法を示します。**書き込み**、 **WriteIf**、 **WriteLine**、 **WriteLineIf**、**アサート**、および**失敗**します。 これらのメソッドは、2 つのカテゴリに分類できます。**書き込み**、 **WriteLine**、および**失敗**一方に出力を無条件に生成すべて**WriteIf**、 **WriteLineIf**、および**アサート**ブール条件のテストを記述したり、書き込みませんベースの条件の値。 **WriteIf** と **WriteLineIf** は条件が `true` の場合に出力を生成し、**Assert** は条件が `false` の場合に出力を生成します。  

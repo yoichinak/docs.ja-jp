@@ -3,11 +3,11 @@ title: Enterprise Services および COM+ トランザクションとの相互�
 ms.date: 03/30/2017
 ms.assetid: d0fd0d26-fe86-443b-b208-4d57d39fa4aa
 ms.openlocfilehash: 8b86a032e7cbc27332864c9cc96009f12b72c53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301907"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61793654"
 ---
 # <a name="interoperability-with-enterprise-services-and-com-transactions"></a>Enterprise Services および COM+ トランザクションとの相互運用性
 <xref:System.Transactions> 名前空間は、この名前空間を使用して作成されたトランザクション オブジェクトと COM+ によって作成されたトランザクションとの間の相互運用をサポートします。  
@@ -29,9 +29,9 @@ ms.locfileid: "59301907"
   
  <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> 次の要件を指定します。  
   
--   <xref:System.Transactions.Transaction.Current%2A> が検査されると、<xref:System.Transactions> は、既定のコンテキスト以外のコンテキストで実行されていることを検出した場合、COM+ コンテキスト内のトランザクションをサポートする必要があります。 既定のコンテキストには、トランザクションを含めることができません。 したがって、既定のコンテキストでは、<xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> を使用した場合でも、<xref:System.Transactions> によって使用されるスレッド ローカル ストレージに格納されているトランザクションが <xref:System.Transactions.Transaction.Current%2A> に対して返されます。  
+- <xref:System.Transactions.Transaction.Current%2A> が検査されると、<xref:System.Transactions> は、既定のコンテキスト以外のコンテキストで実行されていることを検出した場合、COM+ コンテキスト内のトランザクションをサポートする必要があります。 既定のコンテキストには、トランザクションを含めることができません。 したがって、既定のコンテキストでは、<xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> を使用した場合でも、<xref:System.Transactions> によって使用されるスレッド ローカル ストレージに格納されているトランザクションが <xref:System.Transactions.Transaction.Current%2A> に対して返されます。  
   
--   新しい <xref:System.Transactions.TransactionScope> オブジェクトが作成され、その作成が既定のコンテキスト以外のコンテキストで行われた場合は、<xref:System.Transactions.TransactionScope> オブジェクトにとって最新であるトランザクションが COM+ に反映される必要があります。 この場合、<xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> は、新しい COM+ コンテキストを作成するという点で、<xref:System.Transactions.EnterpriseServicesInteropOption.Full> と同様に動作します。  
+- 新しい <xref:System.Transactions.TransactionScope> オブジェクトが作成され、その作成が既定のコンテキスト以外のコンテキストで行われた場合は、<xref:System.Transactions.TransactionScope> オブジェクトにとって最新であるトランザクションが COM+ に反映される必要があります。 この場合、<xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> は、新しい COM+ コンテキストを作成するという点で、<xref:System.Transactions.EnterpriseServicesInteropOption.Full> と同様に動作します。  
   
  さらに、<xref:System.Transactions.Transaction.Current%2A> と <xref:System.Transactions.EnterpriseServicesInteropOption.Full> の両方で <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> が設定されると、これらのモードはいずれも、<xref:System.Transactions.Transaction.Current%2A> を直接設定できないことを示します。  <xref:System.Transactions.Transaction.Current%2A> を作成する以外に <xref:System.Transactions.TransactionScope> を直接設定しようとすると、<xref:System.InvalidOperationException> が発生します。 <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙値には、使用する値を明示的に指定しない新しいトランザクション スコープが継承されます。 たとえば、新しい <xref:System.Transactions.TransactionScope> オブジェクトを <xref:System.Transactions.EnterpriseServicesInteropOption.Full> で作成した後、2 番目の <xref:System.Transactions.TransactionScope> オブジェクトを作成した場合 (ただし、<xref:System.Transactions.EnterpriseServicesInteropOption> 値を指定しない)、その 2 番目の <xref:System.Transactions.TransactionScope> オブジェクトも <xref:System.Transactions.EnterpriseServicesInteropOption.Full> を持つことになります。  
   
@@ -39,11 +39,11 @@ ms.locfileid: "59301907"
   
 1. <xref:System.Transactions.Transaction.Current%2A> トランザクションがないかどうかチェックされます。 この検査の結果、次のことが行われます。  
   
-    -   スコープがあるかどうかが検査されます。  
+    - スコープがあるかどうかが検査されます。  
   
-    -   スコープがある場合は、そのスコープが最初に作成されたときに渡された <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体の値が検査されます。  
+    - スコープがある場合は、そのスコープが最初に作成されたときに渡された <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体の値が検査されます。  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体が <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> に設定された場合は、COM+ トランザクション (<xref:System.EnterpriseServices> トランザクション) がマネージド スレッド ローカル ストレージ内の <xref:System.Transactions> トランザクションよりも優先されます。  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体が <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic> に設定された場合は、COM+ トランザクション (<xref:System.EnterpriseServices> トランザクション) がマネージド スレッド ローカル ストレージ内の <xref:System.Transactions> トランザクションよりも優先されます。  
   
          値が <xref:System.Transactions.EnterpriseServicesInteropOption.None> に設定された場合は、マネージド スレッド ローカル ストレージ内の <xref:System.Transactions> トランザクションが優先されます。  
   
@@ -53,11 +53,11 @@ ms.locfileid: "59301907"
   
 3. 新しいトランザクションを作成する場合は、<xref:System.Transactions.EnterpriseServicesInteropOption> の値に応じてそれぞれ次のようになります。  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Full>:  COM+ コンテキストに関連付けられたトランザクションが作成されます。  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Full>:  COM+ コンテキストに関連付けられたトランザクションが作成されます。  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.None>:、<xref:System.Transactions>トランザクションが作成されます。  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.None>:、<xref:System.Transactions>トランザクションが作成されます。  
   
-    -   <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: COM + コンテキストがある場合、トランザクションが作成され、コンテキストにアタッチします。  
+    - <xref:System.Transactions.EnterpriseServicesInteropOption.Automatic>: COM + コンテキストがある場合、トランザクションが作成され、コンテキストにアタッチします。  
   
  次の表は、Enterprise Services (ES) コンテキストと、<xref:System.Transactions.EnterpriseServicesInteropOption> 列挙体を使用するトランザクションを必要とするトランザクション スコープを示しています。  
   
@@ -75,6 +75,6 @@ ms.locfileid: "59301907"
   
  注:   
   
--   ST は、スコープのアンビエント トランザクションが <xref:System.Transactions> によって管理され、どの <xref:System.EnterpriseServices> コンテキストのトランザクション (存在する場合) にも関連付けられていないことを示します。  
+- ST は、スコープのアンビエント トランザクションが <xref:System.Transactions> によって管理され、どの <xref:System.EnterpriseServices> コンテキストのトランザクション (存在する場合) にも関連付けられていないことを示します。  
   
--   ES は、スコープのアンビエント トランザクションが <xref:System.EnterpriseServices> コンテキストのトランザクションと同じものであることを示します。
+- ES は、スコープのアンビエント トランザクションが <xref:System.EnterpriseServices> コンテキストのトランザクションと同じものであることを示します。
