@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], cell styles
 ms.assetid: dbb75ed6-8804-4232-8382-f9920c2e380c
 ms.openlocfilehash: 41794c5ecadbcdc0b38c7c73afc7c010a4ea6989
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300022"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939156"
 ---
 # <a name="cell-styles-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでのセルのスタイル
 内の各セル、<xref:System.Windows.Forms.DataGridView>コントロールがテキスト形式、背景色、前景色、およびフォントなどの独自のスタイルを持つことができます。 通常、ただし、複数のセルが共有の特定のスタイル特性。  
@@ -21,23 +21,23 @@ ms.locfileid: "59300022"
 ## <a name="the-datagridviewcellstyle-class"></a>DataGridViewCellStyle クラス  
  <xref:System.Windows.Forms.DataGridViewCellStyle>クラスには、次の visual スタイルに関連するプロパティが含まれています。  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.BackColor%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.ForeColor%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionBackColor%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.SelectionForeColor%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Font%2A>  
   
  このクラスには、書式設定に関連する次のプロパティも含まれています。  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.FormatProvider%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.NullValue%2A> および <xref:System.Windows.Forms.DataGridViewCellStyle.DataSourceNullValue%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.WrapMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Alignment%2A>  
   
--   <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
+- <xref:System.Windows.Forms.DataGridViewCellStyle.Padding%2A>  
   
  これらのプロパティとその他のセル スタイル プロパティの詳細については、次を参照してください。、<xref:System.Windows.Forms.DataGridViewCellStyle>リファレンス ドキュメントとトピックでは、「参照」セクションに表示します。  
   

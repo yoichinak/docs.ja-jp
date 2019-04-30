@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
 ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973343"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>文字列名によるプロパティまたはメソッドの呼び出し (Visual Basic)
 ほとんどの場合は、デザイン時に、オブジェクトのメソッドとプロパティを検出し、それらを処理するコードを記述できます。 ただし、場合によっては可能性がありますいないオブジェクトのプロパティとメソッドを事前にわかって、またはプロパティを指定するか、実行時にメソッドを実行するエンドユーザーの有効化の柔軟性をするだけです。  

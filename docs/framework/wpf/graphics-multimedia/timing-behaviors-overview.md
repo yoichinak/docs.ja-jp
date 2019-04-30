@@ -6,11 +6,11 @@ helpviewer_keywords:
 - behaviors [WPF], timing
 ms.assetid: 5b714d46-bd46-48b8-b467-b4be89ba3091
 ms.openlocfilehash: c3403a8602cc874e993bd649851b77d7bf652cce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129598"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002340"
 ---
 # <a name="timing-behaviors-overview"></a>タイミング動作の概要
 このトピックでは、アニメーション、およびその他のタイミング動作を説明します。<xref:System.Windows.Media.Animation.Timeline>オブジェクト。  
@@ -106,9 +106,9 @@ ms.locfileid: "59129598"
   
  次の例では、作成、 <xref:System.Windows.Media.Animation.Storyboard> 2 つの子を持つ<xref:System.Windows.Media.Animation.DoubleAnimation>オブジェクト。 両方<xref:System.Windows.Media.Animation.DoubleAnimation>オブジェクトをアニメーション化する、<xref:System.Windows.FrameworkElement.Width%2A>の<xref:System.Windows.Shapes.Rectangle>0 ~ 100 です。 <xref:System.Windows.Shapes.Rectangle>要素がアニメーション化されていない<xref:System.Windows.FrameworkElement.Width%2A>500 [デバイス非依存ピクセル] の値。  
   
--   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>最初の<xref:System.Windows.Media.Animation.DoubleAnimation>に設定されている<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>既定値。 四角形の幅が 100 の後に保持する結果として、<xref:System.Windows.Media.Animation.DoubleAnimation>が終了します。  
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>最初の<xref:System.Windows.Media.Animation.DoubleAnimation>に設定されている<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>既定値。 四角形の幅が 100 の後に保持する結果として、<xref:System.Windows.Media.Animation.DoubleAnimation>が終了します。  
   
--   <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>プロパティは、2 つ目の<xref:System.Windows.Media.Animation.DoubleAnimation>に設定されている<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。 結果として、 <xref:System.Windows.FrameworkElement.Width%2A> 、2 つ目の<xref:System.Windows.Shapes.Rectangle>後 500 に戻ります、<xref:System.Windows.Media.Animation.DoubleAnimation>が終了します。  
+- <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>プロパティは、2 つ目の<xref:System.Windows.Media.Animation.DoubleAnimation>に設定されている<xref:System.Windows.Media.Animation.FillBehavior.Stop>します。 結果として、 <xref:System.Windows.FrameworkElement.Width%2A> 、2 つ目の<xref:System.Windows.Shapes.Rectangle>後 500 に戻ります、<xref:System.Windows.Media.Animation.DoubleAnimation>が終了します。  
   
  [!code-xaml[animation_ovws_snippet#TBFillBehaviorExample](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_snippet/CS/TimingBehaviorsExample1.xaml#tbfillbehaviorexample)]  
   
@@ -116,11 +116,11 @@ ms.locfileid: "59129598"
 ## <a name="properties-that-control-the-speed-of-a-timeline"></a>タイムラインの速度を制御するプロパティ  
  <xref:System.Windows.Media.Animation.Timeline>クラスの速度を指定するための 3 つのプロパティを提供します。  
   
--   <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – の時間の進行を親に対する相対的な速度を指定します、<xref:System.Windows.Media.Animation.Timeline>します。 1 より大きい値の処理速度の向上、<xref:System.Windows.Media.Animation.Timeline>とその子<xref:System.Windows.Media.Animation.Timeline>オブジェクトは 0 から 1 までの値遅きます。 いずれかの値が示す<xref:System.Windows.Media.Animation.Timeline>その親と同じ速度で進行します。 <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>コンテナー タイムラインの設定では、そのすべての子に影響<xref:System.Windows.Media.Animation.Timeline>オブジェクトもします。  
+- <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A> – の時間の進行を親に対する相対的な速度を指定します、<xref:System.Windows.Media.Animation.Timeline>します。 1 より大きい値の処理速度の向上、<xref:System.Windows.Media.Animation.Timeline>とその子<xref:System.Windows.Media.Animation.Timeline>オブジェクトは 0 から 1 までの値遅きます。 いずれかの値が示す<xref:System.Windows.Media.Animation.Timeline>その親と同じ速度で進行します。 <xref:System.Windows.Media.Animation.Timeline.SpeedRatio%2A>コンテナー タイムラインの設定では、そのすべての子に影響<xref:System.Windows.Media.Animation.Timeline>オブジェクトもします。  
   
--   <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – の割合を指定します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>タイムラインの加速に費やされたします。 例については、「[方法: 加速または減速するアニメーション](how-to-accelerate-or-decelerate-an-animation.md)します。 
+- <xref:System.Windows.Media.Animation.Timeline.AccelerationRatio%2A> – の割合を指定します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>タイムラインの加速に費やされたします。 例については、「[方法: 加速または減速するアニメーション](how-to-accelerate-or-decelerate-an-animation.md)します。 
   
--   <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -の割合を指定します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>タイムラインの減速に費やされたします。 例については、「[方法: 加速または減速するアニメーション](how-to-accelerate-or-decelerate-an-animation.md)します。  
+- <xref:System.Windows.Media.Animation.Timeline.DecelerationRatio%2A> -の割合を指定します、<xref:System.Windows.Media.Animation.Timeline.Duration%2A>タイムラインの減速に費やされたします。 例については、「[方法: 加速または減速するアニメーション](how-to-accelerate-or-decelerate-an-animation.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

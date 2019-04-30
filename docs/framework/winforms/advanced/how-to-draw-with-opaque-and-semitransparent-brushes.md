@@ -11,11 +11,11 @@ helpviewer_keywords:
 - brushes [Windows Forms], using semi-transparent
 ms.assetid: a4f6f6b8-3bc8-440a-84af-d62ef0f8ff40
 ms.openlocfilehash: a302b8bf978afcead5768fadeb6336c1ece986ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100928"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004134"
 ---
 # <a name="how-to-draw-with-opaque-and-semitransparent-brushes"></a>方法: 不透明ブラシおよび半透明ブラシを使用して描画する
 図形を塗りつぶすときに<xref:System.Drawing.Brush> オブジェクトを <xref:System.Drawing.Graphics> クラスの fill メソッドの 1 つに渡す必要があります。 <xref:System.Drawing.SolidBrush.%23ctor%2A> コンストラクターのパラメーターの 1 つは、<xref:System.Drawing.Color> オブジェクトです。 不透明な図形を塗りつぶすには、色のアルファ コンポーネントを 255 に設定します。 半透明な図形を塗りつぶすには、アルファ コンポーネントを 1 ～ 254 の値に設定します。  

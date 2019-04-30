@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 391ae170-de5c-40f8-8233-91cb2ee4683a
 ms.openlocfilehash: a4f87303954494e8e32d32e68fb3f1244f25680a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304559"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011717"
 ---
 # <a name="how-to-bind-windows-forms-controls-with-the-bindingsource-component-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム コントロールを BindingSource コンポーネントにバインドする
 コントロールがフォームに追加し、アプリケーションのユーザー インターフェイスを決定したら後、は、実行時に、ユーザーは変更して、アプリケーションに関連するデータを保存できるように、データ ソースにコントロールをバインドできます。  
@@ -31,9 +31,9 @@ ms.locfileid: "59304559"
   
 2. **プロパティ**ウィンドウ。  
   
-    1.  展開、 **(DataBindings)** ノード。  
+    1. 展開、 **(DataBindings)** ノード。  
   
-    2.  矢印をクリックして、<xref:System.Windows.Forms.TextBox.Text%2A>プロパティ。  
+    2. 矢印をクリックして、<xref:System.Windows.Forms.TextBox.Text%2A>プロパティ。  
   
          **DataSource** UI 型エディターを開きます。  
   

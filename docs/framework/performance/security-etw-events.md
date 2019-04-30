@@ -8,20 +8,20 @@ ms.assetid: 0ed69f73-5c01-4514-bd63-979c6e38d41d
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 11a19dce496423883e5fed62375c6db8ed5efdb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949202"
 ---
 # <a name="security-etw-events"></a>セキュリティ ETW イベント
 <a name="top"></a> セキュリティ イベントは、厳密な名前の検証時と Authenticode の検証時に発生します。  
   
  このカテゴリは、次のイベントで構成されます。  
   
--   [StrongNameVerificationStart_V1 イベントと StrongNameVerificationStop_V1 イベント](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
+- [StrongNameVerificationStart_V1 イベントと StrongNameVerificationStop_V1 イベント](#strongnameverificationstart_v1_and_strongnameverificationstop_v1_events)  
   
--   [AuthenticodeVerificationStart_V1 イベントと AuthenticodeVerificationStop_V1 イベント](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
+- [AuthenticodeVerificationStart_V1 イベントと AuthenticodeVerificationStop_V1 イベント](#authenticodeverificationstart_v1_and_authenticodeverificationstop_v1_events)  
   
 <a name="strongnameverificationstart_v1_and_strongnameverificationstop_v1_events"></a>   
 ## <a name="strongnameverificationstartv1-and-strongnameverificationstopv1-events"></a>StrongNameVerificationStart_V1 イベントと StrongNameVerificationStop_V1 イベント  

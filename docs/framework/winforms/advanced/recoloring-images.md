@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], recoloring images
 ms.assetid: f28c54fd-9c80-4f6f-b242-55f7ffcda84b
 ms.openlocfilehash: b6ec90f5102b562a252218be84aa7b3141e05b83
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948071"
 ---
 # <a name="recoloring-images"></a>イメージの色の変更
 色の変更は、イメージの色を調整するプロセスです。 色の変更の例をいくつかは、1 つの色を変更するもう 1 つ、別の色の基準とした色の輝度を調整すること、明るさやすべての色のコントラストを調整して灰色の網掛け色に変換するのには。  

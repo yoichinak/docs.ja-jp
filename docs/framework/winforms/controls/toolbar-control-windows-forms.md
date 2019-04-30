@@ -6,16 +6,15 @@ helpviewer_keywords:
 - ToolBar control [Windows Forms]
 ms.assetid: 6b40e9ce-6a7a-4784-bfc9-7f1d36b7462e
 ms.openlocfilehash: 3f0a1b6a7f83753ccae1a129528ed320a2613122
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57723040"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009548"
 ---
 # <a name="toolbar-control-windows-forms"></a>ToolBar コントロール (Windows フォーム)
 > [!NOTE]
->  
-  <xref:System.Windows.Forms.ToolStrip> コントロールは、`ToolBar` コントロールに代わると共に追加の機能を提供します。ただし、`ToolBar` コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+>  <xref:System.Windows.Forms.ToolStrip> コントロールは、`ToolBar` コントロールに代わると共に追加の機能を提供します。ただし、`ToolBar` コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  Windows フォーム `ToolBar` コントロールは、コマンドをアクティブ化するドロップダウン メニューとビットマップのボタンの行を表示するコントロール バーとしてフォームを使用します。 そのため、ツールバー ボタンのクリックは、メニュー コマンドと同じです。 ボタンは、プッシュ ボタン、ドロップダウン メニュー、または区切り記号として表示して機能するように構成できます。 通常、ツールバーには、アプリケーションのメニュー構造の項目に対応するボタンとメニューが含まれ、アプリケーションで最も頻繁に使用される関数やコマンドにすばやくアクセスできます。  
   
@@ -33,8 +32,7 @@ ms.locfileid: "57723040"
  アイコンを `ToolBar` コントロールのボタン内に表示する方法について説明します。  
   
  [方法: ツール バー ボタンのメニュー イベントのトリガー](how-to-trigger-menu-events-for-toolbar-buttons.md)  
- 
-  `ToolBar` コントロールでユーザーがクリックするボタンを解釈するコードの記述方法について説明します。  
+ `ToolBar` コントロールでユーザーがクリックするボタンを解釈するコードの記述方法について説明します。  
   
  参照してください[方法。デザイナーを使用してツール バー ボタンのアイコンを定義する](how-to-define-an-icon-for-a-toolbar-button-using-the-designer.md)、[方法。デザイナーを使用してツール バー コントロールにボタンを追加](how-to-add-buttons-to-a-toolbar-control-using-the-designer.md)します。  
   

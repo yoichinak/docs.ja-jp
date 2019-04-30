@@ -5,11 +5,11 @@ ms.assetid: 35ac4140-91ea-4c77-b1c4-1daf41986ca5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a5f9867dbdc244ed22948dbe9a07a7ea06292d6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079085"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994098"
 ---
 # <a name="icordebugsymbolprovidergettypeprops-method"></a>Icordebugsymbolprovider::gettypeprops メソッド
 Vtable の指定の相対仮想アドレス (RVA) における、ジェネリック パラメーターのシグネチャの数などの型のプロパティに関する情報を返します。  

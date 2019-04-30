@@ -3,11 +3,11 @@ title: ASP.NET Web サービスとの相互運用
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
 ms.openlocfilehash: c6fec1d520cd251473d8840b7b1afe879002a04c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972566"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET Web サービスとの相互運用
 間の相互運用[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]WS に両方のテクノロジを使用して実装されているサービスが準拠していることを確認して Web サービスと Windows Communication Foundation (WCF) Web サービスを実現できます-Basic Profile 1.1 仕様。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] WS に準拠している web サービスの基本プロファイル 1.1 は WCF のシステム指定のバインディングを使用して WCF クライアントと相互運用可能<xref:System.ServiceModel.BasicHttpBinding>します。  
@@ -38,11 +38,11 @@ public class Service : IEcho
   
  <xref:System.Xml.Serialization.XmlSerializer> によって既定で型のシリアル化が行われる XML は、XML の名前空間が明示的に定義されている場合、<xref:System.Runtime.Serialization.DataContractSerializer> によって型のシリアル化が行われる XML と意味的に同一です。 使用するためのデータ型を定義するときに[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web で WCF を採用する予定のサービスで、次の操作を行います。  
   
--   XML スキーマではなく、.NET Framework クラスを使用して型を定義します。  
+- XML スキーマではなく、.NET Framework クラスを使用して型を定義します。  
   
--   <xref:System.SerializableAttribute> と <xref:System.Xml.Serialization.XmlRootAttribute> だけをそのクラスに追加します。後者を使用して型の名前空間を明示的に定義してください。 .NET Framework クラスを XML に変換する方法を制御する目的で、<xref:System.Xml.Serialization> 名前空間の属性を追加しないでください。  
+- <xref:System.SerializableAttribute> と <xref:System.Xml.Serialization.XmlRootAttribute> だけをそのクラスに追加します。後者を使用して型の名前空間を明示的に定義してください。 .NET Framework クラスを XML に変換する方法を制御する目的で、<xref:System.Xml.Serialization> 名前空間の属性を追加しないでください。  
   
--   この手法を採用すると、後から <xref:System.Runtime.Serialization.DataContractAttribute> および <xref:System.Runtime.Serialization.DataMemberAttribute> を追加することで、転送のためにクラスをシリアル化する XML に大きな変更を加えることなく .NET クラスをデータ コントラクトにすることができます。 メッセージ内で使用される型[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web サービスは、WCF アプリケーションでパフォーマンスの向上を特にメリットが、応答して、WCF アプリケーションでデータ コントラクトとして処理できます。  
+- この手法を採用すると、後から <xref:System.Runtime.Serialization.DataContractAttribute> および <xref:System.Runtime.Serialization.DataMemberAttribute> を追加することで、転送のためにクラスをシリアル化する XML に大きな変更を加えることなく .NET クラスをデータ コントラクトにすることができます。 メッセージ内で使用される型[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]Web サービスは、WCF アプリケーションでパフォーマンスの向上を特にメリットが、応答して、WCF アプリケーションでデータ コントラクトとして処理できます。  
   
  インターネット インフォメーション サービス (IIS) に用意されている認証オプションは使用しないでください。 WCF クライアントでは、そのサポートしていません。 サービスをセキュリティで保護する必要があります、これらのオプションは、堅牢な標準プロトコルに基づいているために、WCF によって提供されるオプションを使用します。  
   

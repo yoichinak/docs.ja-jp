@@ -13,11 +13,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Null markup extension
 ms.assetid: 2e3ccc21-4996-481d-91b5-3910d8b3bfa3
 ms.openlocfilehash: e46d8561b62d9137d4fed4df447338a97fc0577b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100809"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938914"
 ---
 # <a name="xnull-markup-extension"></a>x:Null のマークアップ拡張機能
 指定します`null`XAML メンバーの値として。  

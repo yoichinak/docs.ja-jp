@@ -3,11 +3,11 @@ title: '方法: 署名されたフレンド アセンブリ (Visual Basic) を�
 ms.date: 03/14/2018
 ms.assetid: f2afd83d-b044-484b-a56d-56d0a8a40647
 ms.openlocfilehash: 4ff32015647a565f7f68e944ae028deb7f738e28
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324670"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022273"
 ---
 # <a name="how-to-create-signed-friend-assemblies-visual-basic"></a>方法: 署名されたフレンド アセンブリ (Visual Basic) を作成します。
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  
@@ -18,15 +18,15 @@ ms.locfileid: "59324670"
   
 2. 厳密な名前ツールで次のコマンド シーケンスを使用して、キー ファイルを生成し、公開鍵を表示します。 詳細については、次を参照してください。 [Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md))。  
   
-    1.  この例で使用する厳密な名前キーを生成し、FriendAssemblies.snk ファイルに格納します。  
+    1. この例で使用する厳密な名前キーを生成し、FriendAssemblies.snk ファイルに格納します。  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  FriendAssemblies.snk から公開鍵を抽出し、FriendAssemblies.publickey に追加します。  
+    2. FriendAssemblies.snk から公開鍵を抽出し、FriendAssemblies.publickey に追加します。  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  FriendAssemblies.publickey ファイルに格納されている公開鍵を表示します。  
+    3. FriendAssemblies.publickey ファイルに格納されている公開鍵を表示します。  
   
          `sn -tp FriendAssemblies.publickey`  
   

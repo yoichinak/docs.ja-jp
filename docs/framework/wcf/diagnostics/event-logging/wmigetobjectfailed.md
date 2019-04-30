@@ -3,11 +3,11 @@ title: WmiGetObjectFailed
 ms.date: 03/30/2017
 ms.assetid: 676691b5-705e-4422-8dca-c6f517964116
 ms.openlocfilehash: 2110ebe5edbf7ac454a34826fe4cb7607b748217
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944171"
 ---
 # <a name="wmigetobjectfailed"></a>WmiGetObjectFailed
 Id:120  

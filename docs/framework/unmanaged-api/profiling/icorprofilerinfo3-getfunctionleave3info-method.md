@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7d51462017287d42fd468ed0a74a2e83203a3d94
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000624"
 ---
 # <a name="icorprofilerinfo3getfunctionleave3info-method"></a>ICorProfilerInfo3::GetFunctionLeave3Info メソッド
 スタック フレームとによってプロファイラーに報告される関数の戻り値を提供します、 [FunctionLeave3WithInfo 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave3withinfo-function.md)関数。 このメソッドは、`FunctionLeave3WithInfo` コールバック中にのみ呼び出すことができます。  

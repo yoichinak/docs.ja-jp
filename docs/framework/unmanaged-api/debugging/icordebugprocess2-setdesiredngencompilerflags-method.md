@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e061c3f3dc95e63339d6fd5f82b3cb4d38a4b6c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206708"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948825"
 ---
 # <a name="icordebugprocess2setdesiredngencompilerflags-method"></a>ICorDebugProcess2::SetDesiredNGENCompilerFlags メソッド
 ランタイムにそのイメージを現在のプロセスに読み込むためにプリコンパイル済みのイメージに埋め込む必要があるフラグを設定します。  

@@ -3,11 +3,11 @@ title: プロパティ グリッドの拡張 - WF のサンプル
 ms.date: 03/30/2017
 ms.assetid: 3530c3a3-756d-4712-9f10-fb2897414d3a
 ms.openlocfilehash: f1cb64cb10e8d88359e8f94b57602ab127314cff
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57509551"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004875"
 ---
 # <a name="property-grid-extensibility"></a>プロパティ グリッドの拡張
 

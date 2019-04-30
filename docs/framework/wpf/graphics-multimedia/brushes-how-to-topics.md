@@ -8,11 +8,11 @@ helpviewer_keywords:
 - brushes [WPF]
 ms.assetid: 43e7f798-9558-4498-b5b6-4a4c6baf956b
 ms.openlocfilehash: 4bf49449cd51753e7dc59c169fe51f13dcc67a81
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57373258"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010216"
 ---
 # <a name="brushes-how-to-topics"></a>ブラシに関する「方法」トピック
 次のトピックを使用する方法について説明[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]画面にコンテンツを描画するブラシ。  

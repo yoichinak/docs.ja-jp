@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Off keyword [Visual Basic]
 ms.assetid: e0b5aa68-bde1-4cdd-b9e4-152798ae1b8b
 ms.openlocfilehash: 2934d0f44357ed8ae99586e8e3d38c75ae235bbe
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58044046"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944847"
 ---
 # <a name="off-visual-basic"></a>Off (Visual Basic)
 コンパイラ オプションをオフにします。  

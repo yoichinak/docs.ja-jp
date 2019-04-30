@@ -6,11 +6,11 @@ helpviewer_keywords:
 - printing [Windows Forms], documents
 ms.assetid: 5af6a51d-66f6-43cd-a8cd-d64eb18fe7e7
 ms.openlocfilehash: 4bb03ef95f10f5eb1795e50f5147d245623e18e8
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57719261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012603"
 ---
 # <a name="printdocument-component-windows-forms"></a>PrintDocument コンポーネント (Windows フォーム)
 Windows フォーム `PrintDocument` コンポーネントを使用して印刷する対象を記述するプロパティを設定し、Windows ベースのアプリケーション内でドキュメントを印刷します。 ドキュメント印刷のあらゆる側面を管理するために、<xref:System.Windows.Forms.PrintDialog> コンポーネントと組み合わせて使用することができます。  
@@ -34,5 +34,4 @@ Windows フォーム `PrintDocument` コンポーネントを使用して印刷�
  独自の印刷プレビュー ダイアログ ボックスまたはコンポーネントの設計に使用できる、<xref:System.Windows.Forms.PrintPreviewControl> の一般的な概念を説明しています。  
   
  [PrintPreviewDialog コントロール](printpreviewdialog-control-windows-forms.md)  
- 
-  <xref:System.Windows.Forms.PrintPreviewDialog> コントロールの全般的な概念を説明します。このコントロールにより、ユーザーがドキュメントの印刷イメージを見るために使用する事前構成済みダイアログ ボックスを表示できます。
+ <xref:System.Windows.Forms.PrintPreviewDialog> コントロールの全般的な概念を説明します。このコントロールにより、ユーザーがドキュメントの印刷イメージを見るために使用する事前構成済みダイアログ ボックスを表示できます。

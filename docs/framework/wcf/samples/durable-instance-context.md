@@ -3,11 +3,11 @@ title: 永続性インスタンス コンテキスト
 ms.date: 03/30/2017
 ms.assetid: 97bc2994-5a2c-47c7-927a-c4cd273153df
 ms.openlocfilehash: 25772e7f119ddd5a144d223f402e815380b3eba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773377"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990265"
 ---
 # <a name="durable-instance-context"></a>永続性インスタンス コンテキスト
 このサンプルでは、永続性インスタンス コンテキストを有効にする Windows Communication Foundation (WCF) ランタイムをカスタマイズする方法を示します。 バッキング ストアとして、SQL Server 2005 (この場合は SQL Server 2005 Express) を使用します。 ただし、カスタム ストレージ機構にアクセスする方法も示します。  
@@ -233,11 +233,11 @@ else
   
  WCF では、新しい状態と、拡張可能オブジェクト パターンを使用して動作を追加することで、InstanceContext ランタイム コンポーネントの拡張を使用します。 拡張可能オブジェクト パターンは、またはオブジェクトに新しい状態の機能を追加するか、新しい機能を既存のランタイム クラスを拡張する、WCF で使用されます。 拡張可能オブジェクト パターン - IExtensibleObject で 3 つのインターフェイスがある\<T >、IExtension\<T >、および IExtensionCollection\<T >:  
   
--   IExtensibleObject\<T > インターフェイスは、機能をカスタマイズする拡張機能を許可するオブジェクトによって実装されます。  
+- IExtensibleObject\<T > インターフェイスは、機能をカスタマイズする拡張機能を許可するオブジェクトによって実装されます。  
   
--   基準にして IExtension\<T > インターフェイスの型 T のクラスの拡張であるオブジェクトによって実装されます  
+- 基準にして IExtension\<T > インターフェイスの型 T のクラスの拡張であるオブジェクトによって実装されます  
   
--   IExtensionCollection\<T > インターフェイスは IExtensions をその型を取得するためにできる IExtensions のコレクション。  
+- IExtensionCollection\<T > インターフェイスは IExtensions をその型を取得するためにできる IExtensions のコレクション。  
   
  このため、IExtension インターフェイスを実装して、コンテキスト ID を保存するために必要な状態を定義する、InstanceContextExtension クラスを作成する必要があります。 このクラスではさらに、使用される記憶域マネージャを保持する状態も提供されます。 新しい状態が保存された後では、その状態を変更できません。 したがって、インスタンスが作成される際、読み取り専用のプロパティを使用してのみアクセス可能になった時点で、状態がインスタンスに提供され、保存されます。  
   

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - '# specifier for Date literals'
 ms.assetid: d9edf5b0-e85e-438b-a1cf-1f321e7c831b
 ms.openlocfilehash: 42a36351ad70bc16b6cad63450ee5fcb3ed4f1ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821380"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971809"
 ---
 # <a name="date-data-type-visual-basic"></a>日付型 (Date) (Visual Basic)
 IEEE 64 ビット (8 バイト) の値として格納され、西暦 0001 年 1 月 1 日から西暦 9999 年 12 月 31 日までの日付と、午前 12:00:00 (深夜) から午後 11:59:59.9999999 までの時刻を表します。 各インクリメントはグレゴリオ暦の西暦 1 年 1 月 1 日からの経過時間を 100 ナノ秒で表します。 最大値は、西暦 10000 年 1 月 1 日の 100 ナノ秒前です。  
@@ -61,11 +61,11 @@ Dim dateInMay As New System.DateTime(1993, 5, 31, 12, 14, 0)
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **相互運用の考慮事項。** オートメーションまたは COM オブジェクトのように、.NET Framework 向けに作成されていないコンポーネントとやり取りする場合、他の環境の日付/時刻の型は Visual Basic の `Date` 型と互換性がないことに注意してください。 そのようなコンポーネントに日付/時刻の引数を渡す場合は、新しい Visual Basic のコードで、`Date` 型ではなく `Double` 型として宣言し、<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> および <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType> の変換メソッドを使用します。  
+- **相互運用の考慮事項。** オートメーションまたは COM オブジェクトのように、.NET Framework 向けに作成されていないコンポーネントとやり取りする場合、他の環境の日付/時刻の型は Visual Basic の `Date` 型と互換性がないことに注意してください。 そのようなコンポーネントに日付/時刻の引数を渡す場合は、新しい Visual Basic のコードで、`Date` 型ではなく `Double` 型として宣言し、<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType> および <xref:System.DateTime.ToOADate%2A?displayProperty=nameWithType> の変換メソッドを使用します。  
   
--   **型宣言文字。** `Date` リテラルの型文字または識別子の型文字がありません。 ただし、コンパイラでは、シャープ記号 (`# #`) で囲まれたリテラルは、日付型 (`Date`) として処理されます。  
+- **型宣言文字。** `Date` リテラルの型文字または識別子の型文字がありません。 ただし、コンパイラでは、シャープ記号 (`# #`) で囲まれたリテラルは、日付型 (`Date`) として処理されます。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.DateTime?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.DateTime?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="example"></a>例  
  `Date` データ型の変数または定数は、日付と時刻の両方を格納します。 次に例を示します。  

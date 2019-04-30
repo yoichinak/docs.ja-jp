@@ -8,11 +8,11 @@ ms.assetid: 68b4edbc-7f3b-45f6-ab75-4fd066d6af9a
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: af27ddaa69d34976929f40055bc2cc668f877e87
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59117405"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949215"
 ---
 # <a name="runtime-information-etw-events"></a>ランタイム情報 ETW イベント
 これらの ETW イベントは、SKU、バージョン番号、ランタイムのアクティブ化の方法、起動時に使用されたコマンド ライン パラメーター、GUID (該当する場合) などのランタイムに関する情報をログに記録します。 1 つのプロセスで複数のランタイムが実行されている場合は、これらのイベントの情報 (ClrInstanceID) によって、ランタイムのあいまいさを解消できます。  

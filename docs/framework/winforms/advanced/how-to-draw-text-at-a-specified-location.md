@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, drawing text at a specified location
 ms.assetid: 60816423-1c38-465e-980d-2c2b64d74086
 ms.openlocfilehash: f7834ea45db8dd6e971defd9c3b2b152ffddf512
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336409"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004069"
 ---
 # <a name="how-to-draw-text-at-a-specified-location"></a>方法: テキストを指定の位置に描画する
 カスタム描画を実行するときに、指定された位置から始まる 1 つの水平方向にテキストを描画できます。 使用して、この方法でテキストを描画することができます、<xref:System.Drawing.Graphics.DrawString%2A>のメソッドをオーバー ロード、<xref:System.Drawing.Graphics>を受け取るクラス、<xref:System.Drawing.Point>または<xref:System.Drawing.PointF>パラメーター。 <xref:System.Drawing.Graphics.DrawString%2A>メソッドも必要になります、<xref:System.Drawing.Brush>と <xref:System.Drawing.Font>  
@@ -43,7 +43,7 @@ ms.locfileid: "59336409"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  前の例が必要です。  
   
--   <xref:System.Windows.Forms.PaintEventArgs>  `e`でのパラメーターである<xref:System.Windows.Forms.PaintEventHandler>します。  
+- <xref:System.Windows.Forms.PaintEventArgs>  `e`でのパラメーターである<xref:System.Windows.Forms.PaintEventHandler>します。  
   
 ## <a name="see-also"></a>関連項目
 

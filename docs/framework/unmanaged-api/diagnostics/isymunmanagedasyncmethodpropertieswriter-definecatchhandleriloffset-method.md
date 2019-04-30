@@ -5,11 +5,11 @@ ms.assetid: 92af7896-2201-408d-8b1b-23e28001eeac
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 923c85a9dff11753a338fcfd3673d3590fca607a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940128"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefinecatchhandleriloffset-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineCatchHandlerILOffset メソッド
 IL オフセットの非同期メソッドをラップする catch のコンパイラによって生成されたハンドラーを設定します。  

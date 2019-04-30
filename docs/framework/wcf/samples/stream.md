@@ -3,11 +3,11 @@ title: ストリーム
 ms.date: 03/30/2017
 ms.assetid: 58a3db81-20ab-4627-bf31-39d30b70b4fe
 ms.openlocfilehash: f6ca887240ec4f6a304f0d5972790837c0121721
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330221"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007800"
 ---
 # <a name="stream"></a>ストリーム
 このストリーム サンプルでは、ストリーミング転送モードの通信を使用する方法を示します。 サービスは、ストリームを送受信する複数の操作を公開します。 このサンプルは自己ホスト型です。 クライアントとサービスはどちらもコンソール プログラムです。  

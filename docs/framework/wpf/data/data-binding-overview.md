@@ -11,11 +11,11 @@ helpviewer_keywords:
 - conversion for data binding [WPF]
 ms.assetid: c707c95f-7811-401d-956e-2fffd019a211
 ms.openlocfilehash: f849cf306f4de0cbaa7623ded4ab7045bb5112a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024269"
 ---
 # <a name="data-binding-overview"></a>データ バインディングの概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] の形式のさまざまなデータ ソースのデータにバインドできます。 <xref:System.Windows.Controls.ContentControl>などの <xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.ItemsControl>など <xref:System.Windows.Controls.ListBox>と<xref:System.Windows.Controls.ListView>を 1 つのデータ項目の柔軟なスタイルまたはデータ項目のコレクションを有効にする機能が組み込まれました。 並べ替えビュー、フィルター ビュー、およびグループ ビューは、データの上に生成できます。  
@@ -36,15 +36,15 @@ ms.locfileid: "59315323"
   
  上記は、オークション品目の一覧を表示するアプリケーションの [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] です。 このアプリケーションは、データ バインディングの次の機能を示しています。  
   
--   コンテンツ、<xref:System.Windows.Controls.ListBox>のコレクションにバインドされた*AuctionItem*オブジェクト。 *AuctionItem* オブジェクトには、*Description*、*StartPrice*、*StartDate*、*Category*、*SpecialFeatures* などのプロパティがあります。  
+- コンテンツ、<xref:System.Windows.Controls.ListBox>のコレクションにバインドされた*AuctionItem*オブジェクト。 *AuctionItem* オブジェクトには、*Description*、*StartPrice*、*StartDate*、*Category*、*SpecialFeatures* などのプロパティがあります。  
   
--   データ (*AuctionItem*オブジェクト) に表示される、<xref:System.Windows.Controls.ListBox>説明と現在の価格は各項目に対して表示されるようには、テンプレート化されました。 これを使用して、<xref:System.Windows.DataTemplate>します。 さらに、各項目の外観は、表示されている *AuctionItem* の *SpecialFeatures* の値に依存します。 *AuctionItem* の *SpecialFeatures* の値が *Color* の場合、その項目には青の枠線が付きます。 値が *Highlight* の場合、その項目にはオレンジの枠線と星が付きます。 「[データ テンプレート](#data_templating)」セクションでは、データ テンプレートに関する情報を提供します。  
+- データ (*AuctionItem*オブジェクト) に表示される、<xref:System.Windows.Controls.ListBox>説明と現在の価格は各項目に対して表示されるようには、テンプレート化されました。 これを使用して、<xref:System.Windows.DataTemplate>します。 さらに、各項目の外観は、表示されている *AuctionItem* の *SpecialFeatures* の値に依存します。 *AuctionItem* の *SpecialFeatures* の値が *Color* の場合、その項目には青の枠線が付きます。 値が *Highlight* の場合、その項目にはオレンジの枠線と星が付きます。 「[データ テンプレート](#data_templating)」セクションでは、データ テンプレートに関する情報を提供します。  
   
--   ユーザーは、グループ化、フィルター、またはを使用してデータを並べ替える、 <xref:System.Windows.Controls.CheckBox>es を提供します。 上の図、「カテゴリでグループ」と「カテゴリと日付で並べ替え」 <xref:System.Windows.Controls.CheckBox>es が選択されています。 データが製品のカテゴリに基づいてグループ化され、カテゴリ名がアルファベット順になっていることが分かります。 図では分かりにくいですが、項目は各カテゴリ内での開始日でも並べ替えられています。 これは*コレクション ビュー*を使用して行えます。 コレクション ビューについては、「[コレクションにバインドする](#binding_to_collections)」セクションで説明します。  
+- ユーザーは、グループ化、フィルター、またはを使用してデータを並べ替える、 <xref:System.Windows.Controls.CheckBox>es を提供します。 上の図、「カテゴリでグループ」と「カテゴリと日付で並べ替え」 <xref:System.Windows.Controls.CheckBox>es が選択されています。 データが製品のカテゴリに基づいてグループ化され、カテゴリ名がアルファベット順になっていることが分かります。 図では分かりにくいですが、項目は各カテゴリ内での開始日でも並べ替えられています。 これは*コレクション ビュー*を使用して行えます。 コレクション ビューについては、「[コレクションにバインドする](#binding_to_collections)」セクションで説明します。  
   
--   ユーザーが、項目を選択すると、<xref:System.Windows.Controls.ContentControl>選択された項目の詳細が表示されます。 これは*マスター詳細シナリオ*と呼ばれます。 この種類のバインドのシナリオに関する情報は、「[マスター詳細シナリオ](#master_detail_scenario)」セクションにあります。  
+- ユーザーが、項目を選択すると、<xref:System.Windows.Controls.ContentControl>選択された項目の詳細が表示されます。 これは*マスター詳細シナリオ*と呼ばれます。 この種類のバインドのシナリオに関する情報は、「[マスター詳細シナリオ](#master_detail_scenario)」セクションにあります。  
   
--   種類、 *StartDate*プロパティは<xref:System.DateTime>、ミリ秒の時刻を含む日付が返されます。 このアプリケーションでは、より短い日付文字列を表示するため、カスタムのコンバーターが使用されています。 コンバーターに関する情報は、「[データ変換](#data_conversion)」セクションにあります。  
+- 種類、 *StartDate*プロパティは<xref:System.DateTime>、ミリ秒の時刻を含む日付が返されます。 このアプリケーションでは、より短い日付文字列を表示するため、カスタムのコンバーターが使用されています。 コンバーターに関する情報は、「[データ変換](#data_conversion)」セクションにあります。  
   
  ユーザーが [*Add Product (製品の追加)*] ボタンをクリックすると、次のフォームが表示されます。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59315323"
   
  上の図に示したように、データ バインディングは本質的に、バインディング ターゲットとバインディング ソース間の橋渡しです。 図には、次の基本的な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] データ バインディングの概念が示されています。  
   
--   通常、各バインディングには、バインディング ターゲット オブジェクト、ターゲット プロパティ、バインディング ソース、および使用するバインディング ソース内の値へのパスの 4 つのコンポーネントがあります。 内容をバインドする場合など、<xref:System.Windows.Controls.TextBox>を*名前*のプロパティ、*従業員*オブジェクト、ターゲット オブジェクトが、 <xref:System.Windows.Controls.TextBox>、target プロパティが、 <xref:System.Windows.Controls.TextBox.Text%2A>プロパティを使用する値は*名前*、ソース オブジェクトであり、*従業員*オブジェクト。  
+- 通常、各バインディングには、バインディング ターゲット オブジェクト、ターゲット プロパティ、バインディング ソース、および使用するバインディング ソース内の値へのパスの 4 つのコンポーネントがあります。 内容をバインドする場合など、<xref:System.Windows.Controls.TextBox>を*名前*のプロパティ、*従業員*オブジェクト、ターゲット オブジェクトが、 <xref:System.Windows.Controls.TextBox>、target プロパティが、 <xref:System.Windows.Controls.TextBox.Text%2A>プロパティを使用する値は*名前*、ソース オブジェクトであり、*従業員*オブジェクト。  
   
--   ターゲット プロパティは、依存関係プロパティである必要があります。 ほとんど<xref:System.Windows.UIElement>プロパティは、依存関係プロパティと、読み取り専用のものを除く、ほとんどの依存関係プロパティが既定ではデータ バインディングをサポートします。 (だけ<xref:System.Windows.DependencyObject>依存関係プロパティとそのすべての種類を定義できます<xref:System.Windows.UIElement>から派生する<xref:System.Windows.DependencyObject>)。  
+- ターゲット プロパティは、依存関係プロパティである必要があります。 ほとんど<xref:System.Windows.UIElement>プロパティは、依存関係プロパティと、読み取り専用のものを除く、ほとんどの依存関係プロパティが既定ではデータ バインディングをサポートします。 (だけ<xref:System.Windows.DependencyObject>依存関係プロパティとそのすべての種類を定義できます<xref:System.Windows.UIElement>から派生する<xref:System.Windows.DependencyObject>)。  
   
--   図では指定されていませんが、バインディング ソース オブジェクトはカスタム [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] オブジェクトに制限されないことに注意してください。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] データ バインディングは、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] オブジェクトおよび [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] の形式でデータをサポートします。 いくつかの例を提供する場合、バインディング ソースがあります、 <xref:System.Windows.UIElement>、任意のリスト オブジェクト、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]オブジェクトに関連付けられている[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]データまたは Web サービス、またはを含む XmlNode、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ。 詳しくは、「[バインディング ソースの概要](binding-sources-overview.md)」をご覧ください。  
+- 図では指定されていませんが、バインディング ソース オブジェクトはカスタム [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] オブジェクトに制限されないことに注意してください。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] データ バインディングは、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] オブジェクトおよび [!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)] の形式でデータをサポートします。 いくつかの例を提供する場合、バインディング ソースがあります、 <xref:System.Windows.UIElement>、任意のリスト オブジェクト、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]オブジェクトに関連付けられている[!INCLUDE[TLA#tla_adonet](../../../../includes/tlasharptla-adonet-md.md)]データまたは Web サービス、またはを含む XmlNode、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ。 詳しくは、「[バインディング ソースの概要](binding-sources-overview.md)」をご覧ください。  
   
  他の [!INCLUDE[TLA#tla_sdk](../../../../includes/tlasharptla-sdk-md.md)] トピックを読みながら、バインディングを確立すると、バインディング ターゲットをバインディング ソース*に*バインドしていることを理解することが重要です。 例では、基になるいくつかを表示する場合の[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]内のデータを<xref:System.Windows.Controls.ListBox>バインドするデータ バインディングを使用して、<xref:System.Windows.Controls.ListBox>を[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ。  
   
@@ -82,13 +82,13 @@ ms.locfileid: "59315323"
   
  ![データ バインディングのデータ フロー](./media/databinding-dataflow.png "DataBinding_DataFlow")  
   
--   <xref:System.Windows.Data.BindingMode.OneWay> バインディング ターゲット プロパティを自動的に更新するソース プロパティへの変更がターゲット プロパティへの変更は、ソース プロパティには反映されません。 この型のバインディングは、バインドされているコントロールが暗黙的な読み取り専用の場合に適しています。 たとえば、株価情報などのソースにバインドしたり、またはターゲット プロパティに、データ バインドされたテーブルの背景色などのように、変更用コントロール インターフェイスがない可能性もあります。 ターゲット プロパティの変更を監視する必要がない場合は、<xref:System.Windows.Data.BindingMode.OneWay> バインディング モードを使うことにより、<xref:System.Windows.Data.BindingMode.TwoWay> バインディング モードのオーバーヘッドを回避できます。  
+- <xref:System.Windows.Data.BindingMode.OneWay> バインディング ターゲット プロパティを自動的に更新するソース プロパティへの変更がターゲット プロパティへの変更は、ソース プロパティには反映されません。 この型のバインディングは、バインドされているコントロールが暗黙的な読み取り専用の場合に適しています。 たとえば、株価情報などのソースにバインドしたり、またはターゲット プロパティに、データ バインドされたテーブルの背景色などのように、変更用コントロール インターフェイスがない可能性もあります。 ターゲット プロパティの変更を監視する必要がない場合は、<xref:System.Windows.Data.BindingMode.OneWay> バインディング モードを使うことにより、<xref:System.Windows.Data.BindingMode.TwoWay> バインディング モードのオーバーヘッドを回避できます。  
   
--   <xref:System.Windows.Data.BindingMode.TwoWay> バインディングは、ソース プロパティまたはターゲット プロパティを自動的に他の更新のいずれかに変更します。 この型のバインディングは、編集可能なフォームや完全対話型の [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] シナリオに適しています。 ほとんどのプロパティは既定<xref:System.Windows.Data.BindingMode.OneWay>バインディングがいくつかの依存関係プロパティ (通常はユーザーが編集可能なコントロールなどのプロパティ、<xref:System.Windows.Controls.TextBox.Text%2A>プロパティの<xref:System.Windows.Controls.TextBox>と<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>プロパティの<xref:System.Windows.Controls.CheckBox>)に既定<xref:System.Windows.Data.BindingMode.TwoWay>バインドします。 依存関係プロパティが既定で一方向と双方向のどちらでバインドされるかをプログラムで判断する 1 つの方法として、<xref:System.Windows.DependencyProperty.GetMetadata%2A> を使用してそのプロパティのプロパティ メタデータを取得してから、<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> プロパティのブール値を確認することがきます。  
+- <xref:System.Windows.Data.BindingMode.TwoWay> バインディングは、ソース プロパティまたはターゲット プロパティを自動的に他の更新のいずれかに変更します。 この型のバインディングは、編集可能なフォームや完全対話型の [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] シナリオに適しています。 ほとんどのプロパティは既定<xref:System.Windows.Data.BindingMode.OneWay>バインディングがいくつかの依存関係プロパティ (通常はユーザーが編集可能なコントロールなどのプロパティ、<xref:System.Windows.Controls.TextBox.Text%2A>プロパティの<xref:System.Windows.Controls.TextBox>と<xref:System.Windows.Controls.Primitives.ToggleButton.IsChecked%2A>プロパティの<xref:System.Windows.Controls.CheckBox>)に既定<xref:System.Windows.Data.BindingMode.TwoWay>バインドします。 依存関係プロパティが既定で一方向と双方向のどちらでバインドされるかをプログラムで判断する 1 つの方法として、<xref:System.Windows.DependencyProperty.GetMetadata%2A> を使用してそのプロパティのプロパティ メタデータを取得してから、<xref:System.Windows.FrameworkPropertyMetadata.BindsTwoWayByDefault%2A> プロパティのブール値を確認することがきます。  
   
--   <xref:System.Windows.Data.BindingMode.OneWayToSource> 逆が<xref:System.Windows.Data.BindingMode.OneWay>バインディングです。 プロパティを更新ソースとターゲット プロパティが変更されます。 1 つのサンプル シナリオは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] からのソース値のみを再評価する必要があるかどうかです。  
+- <xref:System.Windows.Data.BindingMode.OneWayToSource> 逆が<xref:System.Windows.Data.BindingMode.OneWay>バインディングです。 プロパティを更新ソースとターゲット プロパティが変更されます。 1 つのサンプル シナリオは、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] からのソース値のみを再評価する必要があるかどうかです。  
   
--   図に示されていませんが<xref:System.Windows.Data.BindingMode.OneTime>バインド、それが原因で、ターゲット プロパティを初期化するために、ソース プロパティが、それ以降の変更は反映されません。 これは、データ コンテキストが変更されるか、データ コンテキスト内のオブジェクトが変更された場合に、その変更がターゲット プロパティに反映されないことを意味します。 この型のバインディングは、現在の状態のスナップショットが用途に合っている場合や、データが完全に静的である場合に適しています。 また、ソース プロパティの値を使用してターゲット プロパティを初期化するときにデータ コンテキストが事前にわからない場合にも、この型のバインディングは便利です。 基本的に、この型のバインディングは、ソース値が変わらない場合にパフォーマンスを向上させる <xref:System.Windows.Data.BindingMode.OneWay> バインディングを簡易化したものです。  
+- 図に示されていませんが<xref:System.Windows.Data.BindingMode.OneTime>バインド、それが原因で、ターゲット プロパティを初期化するために、ソース プロパティが、それ以降の変更は反映されません。 これは、データ コンテキストが変更されるか、データ コンテキスト内のオブジェクトが変更された場合に、その変更がターゲット プロパティに反映されないことを意味します。 この型のバインディングは、現在の状態のスナップショットが用途に合っている場合や、データが完全に静的である場合に適しています。 また、ソース プロパティの値を使用してターゲット プロパティを初期化するときにデータ コンテキストが事前にわからない場合にも、この型のバインディングは便利です。 基本的に、この型のバインディングは、ソース値が変わらない場合にパフォーマンスを向上させる <xref:System.Windows.Data.BindingMode.OneWay> バインディングを簡易化したものです。  
   
  ソースの変更を検出するために注意してください (に適用できる<xref:System.Windows.Data.BindingMode.OneWay>と<xref:System.Windows.Data.BindingMode.TwoWay>バインド) など、ソースが適切なプロパティ変更通知のメカニズムを実装する必要があります<xref:System.ComponentModel.INotifyPropertyChanged>します。 参照してください[プロパティ変更通知を実装](how-to-implement-property-change-notification.md)の例については、<xref:System.ComponentModel.INotifyPropertyChanged>実装します。  
   
@@ -174,9 +174,9 @@ ms.locfileid: "59315323"
   
  A<xref:System.Windows.Data.BindingExpression>呼び出しの戻り値を使用してオブジェクトを取得できる<xref:System.Windows.Data.BindingOperations.GetBindingExpression%2A>データ バインドされたオブジェクト。 次のトピックを紹介の使用法、<xref:System.Windows.Data.BindingExpression>クラス。  
   
--   [バインドされているターゲット プロパティからのバインディング オブジェクトの取得](how-to-get-the-binding-object-from-a-bound-target-property.md)  
+- [バインドされているターゲット プロパティからのバインディング オブジェクトの取得](how-to-get-the-binding-object-from-a-bound-target-property.md)  
   
--   [TextBox テキストでソースを更新するタイミングを制御する](how-to-control-when-the-textbox-text-updates-the-source.md)  
+- [TextBox テキストでソースを更新するタイミングを制御する](how-to-control-when-the-textbox-text-updates-the-source.md)  
   
 <a name="data_conversion"></a>   
 ## <a name="data-conversion"></a>データ変換  
@@ -201,13 +201,13 @@ ms.locfileid: "59315323"
   
  データ コンバーターを実装するのが合理的な典型的なシナリオをいくつか次に示します。  
   
--   カルチャに応じてデータを異なる方法で表示する必要がある場合。 たとえば、特定のカルチャで使用されている値または標準に基づいて、通貨コンバーターまたはカレンダー日付/時刻のコンバーターを実装することができます。  
+- カルチャに応じてデータを異なる方法で表示する必要がある場合。 たとえば、特定のカルチャで使用されている値または標準に基づいて、通貨コンバーターまたはカレンダー日付/時刻のコンバーターを実装することができます。  
   
--   使用されているデータが必ずしもプロパティのテキスト値を変更することを意図しているわけではく、イメージのソースや表示テキストの色やスタイルなど、他のいくつかの値を変更することを意図している場合。 この場合、コンバーターを使用して、適切と思われないプロパティのバインディング (テキスト フィールドをテーブルのセルの Background プロパティにバインドするなど) を変換することができます。  
+- 使用されているデータが必ずしもプロパティのテキスト値を変更することを意図しているわけではく、イメージのソースや表示テキストの色やスタイルなど、他のいくつかの値を変更することを意図している場合。 この場合、コンバーターを使用して、適切と思われないプロパティのバインディング (テキスト フィールドをテーブルのセルの Background プロパティにバインドするなど) を変換することができます。  
   
--   複数のコントロールまたはコントロールの複数のプロパティが同じデータにバインドされている場合。 この場合、プライマリ バインドがテキストだけを表示する可能性があるのに対し、他のバインドは特定の表示に関する問題を処理しますが、同じバインドをソース情報として使用します。  
+- 複数のコントロールまたはコントロールの複数のプロパティが同じデータにバインドされている場合。 この場合、プライマリ バインドがテキストだけを表示する可能性があるのに対し、他のバインドは特定の表示に関する問題を処理しますが、同じバインドをソース情報として使用します。  
   
--   これまでに説明していないまだ<xref:System.Windows.Data.MultiBinding>、ターゲット プロパティがバインディングのコレクションが。 場合、 <xref:System.Windows.Data.MultiBinding>、カスタムを使用する<xref:System.Windows.Data.IMultiValueConverter>バインドの値から最終的な値を生成します。 たとえば、色は赤、青、および緑の値から計算できますが、これらは同じまたは異なるバインディング ソース オブジェクトからの値にすることができます。 参照してください、<xref:System.Windows.Data.MultiBinding>例と情報クラスのページ。  
+- これまでに説明していないまだ<xref:System.Windows.Data.MultiBinding>、ターゲット プロパティがバインディングのコレクションが。 場合、 <xref:System.Windows.Data.MultiBinding>、カスタムを使用する<xref:System.Windows.Data.IMultiValueConverter>バインドの値から最終的な値を生成します。 たとえば、色は赤、青、および緑の値から計算できますが、これらは同じまたは異なるバインディング ソース オブジェクトからの値にすることができます。 参照してください、<xref:System.Windows.Data.MultiBinding>例と情報クラスのページ。  
   
 <a name="binding_to_collections"></a>   
 ## <a name="binding-to-collections"></a>コレクションにバインドする  
@@ -362,9 +362,9 @@ ms.locfileid: "59315323"
   
  A<xref:System.Windows.Controls.ValidationRule>オブジェクトは、プロパティの値が有効かどうかをチェックします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 組み込みの次の 2 種類が<xref:System.Windows.Controls.ValidationRule>オブジェクト。  
   
--   A<xref:System.Windows.Controls.ExceptionValidationRule>バインディング ソース プロパティの更新中にスローされる例外を確認します。 前述の例では、`StartPrice` は整数型です。 ユーザーが整数に変換できない値を入力すると、例外がスローされ、バインディングが無効としてマークされます。 設定に別の構文、<xref:System.Windows.Controls.ExceptionValidationRule>明示的に設定するのには、<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>プロパティを`true`上、<xref:System.Windows.Data.Binding>または<xref:System.Windows.Data.MultiBinding>オブジェクト。  
+- A<xref:System.Windows.Controls.ExceptionValidationRule>バインディング ソース プロパティの更新中にスローされる例外を確認します。 前述の例では、`StartPrice` は整数型です。 ユーザーが整数に変換できない値を入力すると、例外がスローされ、バインディングが無効としてマークされます。 設定に別の構文、<xref:System.Windows.Controls.ExceptionValidationRule>明示的に設定するのには、<xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>プロパティを`true`上、<xref:System.Windows.Data.Binding>または<xref:System.Windows.Data.MultiBinding>オブジェクト。  
   
--   A<xref:System.Windows.Controls.DataErrorValidationRule>オブジェクトを実装するオブジェクトによって発生するエラー チェック、<xref:System.ComponentModel.IDataErrorInfo>インターフェイス。 この検証規則を使用しての例は、次を参照してください。<xref:System.Windows.Controls.DataErrorValidationRule>します。 設定に別の構文、<xref:System.Windows.Controls.DataErrorValidationRule>明示的に設定するのには、<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>プロパティを`true`上、<xref:System.Windows.Data.Binding>または<xref:System.Windows.Data.MultiBinding>オブジェクト。  
+- A<xref:System.Windows.Controls.DataErrorValidationRule>オブジェクトを実装するオブジェクトによって発生するエラー チェック、<xref:System.ComponentModel.IDataErrorInfo>インターフェイス。 この検証規則を使用しての例は、次を参照してください。<xref:System.Windows.Controls.DataErrorValidationRule>します。 設定に別の構文、<xref:System.Windows.Controls.DataErrorValidationRule>明示的に設定するのには、<xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>プロパティを`true`上、<xref:System.Windows.Data.Binding>または<xref:System.Windows.Data.MultiBinding>オブジェクト。  
   
  派生することによって、独自の検証規則を作成することも、<xref:System.Windows.Controls.ValidationRule>クラスと実装、<xref:System.Windows.Controls.ValidationRule.Validate%2A>メソッド。 次の例で使用される規則、 *Add Product Listing* 「開始日」<xref:System.Windows.Controls.TextBox>から、[データ バインディングとは何ですか?](#what_is_data_binding)セクション。  
   

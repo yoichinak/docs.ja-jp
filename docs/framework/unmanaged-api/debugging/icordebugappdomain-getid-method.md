@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b0aefc19ca0c255c9c8ea40fcc12fc5cba1b00f6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57501450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996256"
 ---
 # <a name="icordebugappdomaingetid-method"></a>ICorDebugAppDomain::GetId メソッド
 アプリケーション ドメインの一意の識別子を取得します。  

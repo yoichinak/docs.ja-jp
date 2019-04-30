@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Geometry objects [WPF], hit tests on visual objects [WPF]
 ms.assetid: 6c8bdbf2-19e0-4fbb-bf89-c1252b2ebc61
 ms.openlocfilehash: 73420d6ae1386676ed900e91b3951df9e0934db8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947364"
 ---
 # <a name="how-to-hit-test-using-geometry-as-a-parameter"></a>方法: パラメーターとしてジオメトリを使用してヒット テストを実行する
 この例を使用して、ビジュアル オブジェクトに対してヒット テストを実行する方法を示しています、<xref:System.Windows.Media.Geometry>ヒット テスト パラメーター。  

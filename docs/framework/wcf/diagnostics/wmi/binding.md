@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 09511c6c-5749-4bb0-874e-0f0be36bfe04
 ms.openlocfilehash: a040cc6e12833d2c737eb14c591300e5873ddce7
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964075"
 ---
 # <a name="binding"></a>バインディング
 wmi バインディング  

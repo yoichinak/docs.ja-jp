@@ -5,11 +5,11 @@ ms.assetid: bc3410f6-ebca-4bca-9b45-fc38c74fa9cb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df142ea8f02d5cefc5c63a2d376afb331b4379ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964724"
 ---
 # <a name="icordebugmergedassemblyrecordgetsimplename-method"></a>ICorDebugMergedAssemblyRecord::GetSimpleName メソッド
 アセンブリの簡易名を取得します。  

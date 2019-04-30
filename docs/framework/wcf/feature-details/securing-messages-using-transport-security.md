@@ -3,11 +3,11 @@ title: トランスポート セキュリティを使用したメッセージの
 ms.date: 03/30/2017
 ms.assetid: 9029771a-097e-448a-a13a-55d2878330b8
 ms.openlocfilehash: f32e932bb6616911baa8991cb46a5940c8d285ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59160889"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990965"
 ---
 # <a name="securing-messages-using-transport-security"></a>トランスポート セキュリティを使用したメッセージのセキュリティ保護
 ここでは、キューに送信されるメッセージをセキュリティで保護するために使用できるメッセージ キュー (MSMQ) トランスポート セキュリティについて説明します。  
@@ -25,11 +25,11 @@ ms.locfileid: "59160889"
   
  <xref:System.ServiceModel.NetMsmqBinding> と <xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding> を使用するトランスポート セキュリティは、転送キューとターゲット キュー間を移動している MSMQ メッセージがセキュリティで保護される方法に影響します。この場合、"セキュリティで保護される" とは次のことを意味します。  
   
--   メッセージが改ざんされないように、メッセージに署名する。  
+- メッセージが改ざんされないように、メッセージに署名する。  
   
--   メッセージが読み取られたり、改ざんされたりしないしないように、メッセージを暗号化する。 これは推奨事項ですが、必須ではありません。  
+- メッセージが読み取られたり、改ざんされたりしないしないように、メッセージを暗号化する。 これは推奨事項ですが、必須ではありません。  
   
--   否認防止のため、ターゲット キュー マネージャーがメッセージの送信者を識別する。  
+- 否認防止のため、ターゲット キュー マネージャーがメッセージの送信者を識別する。  
   
  MSMQ では、認証とは別に、ターゲット キューがアクセス制御リスト (ACL: Access Control List) を持っており、これで、ターゲット キューにメッセージを送信するためのアクセス許可がクライアントに与えられているどうかをチェックします。 ターゲット キューからメッセージを受信するためのアクセス許可があるかどうかのチェックは、受信側のアプリケーションに対しても行われます。  
   

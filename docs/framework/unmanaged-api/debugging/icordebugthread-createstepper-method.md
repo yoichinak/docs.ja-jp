@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 89182739633984011aaab3d7900d376b6db5ef99
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57476205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987190"
 ---
 # <a name="icordebugthreadcreatestepper-method"></a>ICorDebugThread::CreateStepper メソッド
 この ICorDebugThread のアクティブなフレームをステップ実行できるようにする ICorDebugStepper オブジェクトを作成します。  

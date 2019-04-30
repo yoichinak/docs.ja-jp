@@ -5,11 +5,11 @@ ms.assetid: f2de5224-fd91-45de-9e58-bc600c6d22f1
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cd524446cd9fd5cf9c067ab5778a654ed000ffb3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940180"
 ---
 # <a name="isymunmanagedasyncmethod-interface"></a>ISymUnmanagedAsyncMethod インターフェイス
 このインターフェイスは、読み取りの補足[ISymUnmanagedAsyncMethodPropertiesWriter インターフェイス](../../../../docs/framework/unmanaged-api/diagnostics/isymunmanagedasyncmethodpropertieswriter-interface.md)します。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
 ms.openlocfilehash: 9dfffe8ea3f76d89823dfe2ef6bd0e4f3accf8f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59106783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956482"
 ---
 # <a name="structure-of-the-graphics-interface"></a>グラフィックス インターフェイスの構造体
 マネージ クラスのインターフェイスに[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]60 個のクラス、50 の列挙型、および 8 の構造が含まれています。 <xref:System.Drawing.Graphics>クラスは、の中核に[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]機能です。 これは、直線、曲線、図形、イメージ、およびテキストを実際に描画するクラス。  

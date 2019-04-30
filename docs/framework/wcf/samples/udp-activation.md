@@ -3,42 +3,42 @@ title: UDP アクティベーション
 ms.date: 03/30/2017
 ms.assetid: 4b0ccd10-0dfb-4603-93f9-f0857c581cb7
 ms.openlocfilehash: 6e19e92872c9b9344db7e787f0cd77e0a315f1a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337657"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007670"
 ---
 # <a name="udp-activation"></a>UDP アクティベーション
 このサンプルがに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。 拡張、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md) Windows プロセス アクティブ化サービス (WAS) を使用してプロセスのアクティブ化をサポートするためのサンプルです。  
   
  サンプルは、次の 3 つの主要素で構成されます。  
   
--   UDP プロトコル アクティベータ。アクティベーション対象のアプリケーションの代わりに UDP メッセージを受信するスタンドアロンのプロセスです。  
+- UDP プロトコル アクティベータ。アクティベーション対象のアプリケーションの代わりに UDP メッセージを受信するスタンドアロンのプロセスです。  
   
--   UDP カスタム トランスポートを使用してメッセージを送信するクライアント。  
+- UDP カスタム トランスポートを使用してメッセージを送信するクライアント。  
   
--   UDP カスタム トランスポート経由でメッセージを受信するサービス。WAS によってアクティブ化されるワーカー プロセス内でホストされています。  
+- UDP カスタム トランスポート経由でメッセージを受信するサービス。WAS によってアクティブ化されるワーカー プロセス内でホストされています。  
   
 ## <a name="udp-protocol-activator"></a>UDP プロトコル アクティベータ  
  UDP プロトコル アクティベータは、WCF クライアントと WCF サービスの間のブリッジです。 トランスポート層で UDP プロトコルを介するデータ通信を実現します。 主な機能は、次の 2 つです。  
   
--   WAS リスナ アダプタ (LA)。WAS と連携し、受信メッセージに応答してプロセスをアクティブ化します。  
+- WAS リスナ アダプタ (LA)。WAS と連携し、受信メッセージに応答してプロセスをアクティブ化します。  
   
--   UDP プロトコル リスナ。アクティベーション対象のアプリケーションの代わりに UDP メッセージを受け入れます。  
+- UDP プロトコル リスナ。アクティベーション対象のアプリケーションの代わりに UDP メッセージを受け入れます。  
   
  このアクティベータは、サーバー コンピュータ上でスタンドアロン プログラムとして実行される必要があります。 通常、WAS リスナ アダプタ (NetTcpActivator や NetPipeActivator など) は、長時間にわたって実行される Windows サービスに実装されます。 ただしこのサンプルでは、単純化してわかりやすくするために、このプロトコル アクティベータをスタンドアロン アプリケーションとして実装しています。  
   
 ### <a name="was-listener-adapter"></a>WAS リスナ アダプタ  
  UDP の WAS リスナ アダプタは `UdpListenerAdapter` クラスに実装されています。 これは WAS とやり取りするモジュールで、UDP プロトコル用アプリケーションのアクティベーションを実行します。 これは、次の Webhost API を呼び出すことによって実行されます。  
   
--   `WebhostRegisterProtocol`  
+- `WebhostRegisterProtocol`  
   
--   `WebhostUnregisterProtocol`  
+- `WebhostUnregisterProtocol`  
   
--   `WebhostOpenListenerChannelInstance`  
+- `WebhostOpenListenerChannelInstance`  
   
--   `WebhostCloseAllListenerChannelInstances`  
+- `WebhostCloseAllListenerChannelInstances`  
   
  このリスナ アダプタは、`WebhostRegisterProtocol` を最初に呼び出した後、applicationHost.config (%windir%\system32\inetsrv 内にあります) に登録されているすべてのアプリケーションの WAS からコールバック `ApplicationCreated` を受信します。 このサンプルで処理するのは、(プロトコル ID が "net.udp" の) UDP プロトコルが有効なアプリケーションだけです。 他の実装でこのアプリケーションへの動的な構成変更 (アプリケーションを無効から有効に移行する場合など) に応答する場合、そうした実装では異なる方法でアプリケーションを処理することがあります。  
   
@@ -83,17 +83,17 @@ ms.locfileid: "59337657"
   
 2. Windows Vista でプロジェクトをビルドします。 コンパイル後、ビルド後のフェーズで次の操作を実行します。  
   
-    -   UDP バインディングを [既定の Web サイト] のサイトにインストールします。  
+    - UDP バインディングを [既定の Web サイト] のサイトにインストールします。  
   
-    -   物理パス "%SystemDrive%\inetpub\wwwroot\servicemodelsamples" をポイントする、仮想アプリケーション "ServiceModelSamples" を作成します。  
+    - 物理パス "%SystemDrive%\inetpub\wwwroot\servicemodelsamples" をポイントする、仮想アプリケーション "ServiceModelSamples" を作成します。  
   
-    -   さらに、この仮想アプリケーションの "net.udp" プロトコルを有効にします。  
+    - さらに、この仮想アプリケーションの "net.udp" プロトコルを有効にします。  
   
 3. ユーザー インターフェイス アプリケーション "WasNetActivator.exe" を起動します。 をクリックして、**セットアップ** タブで、次のチェック ボックスをオンにし、をクリックし、**インストール**それらをインストールします。  
   
-    -   UDP リスナ アダプタ  
+    - UDP リスナ アダプタ  
   
-    -   UDP プロトコル ハンドラ  
+    - UDP プロトコル ハンドラ  
   
 4. をクリックして、**アクティベーション**ユーザー インターフェイス アプリケーション"WasNetActivator.exe"のタブ。 をクリックして、**開始**リスナ アダプタを開始するボタンをクリックします。 これで、プログラムを実行する準備ができました。  
   
@@ -103,21 +103,21 @@ ms.locfileid: "59337657"
 ## <a name="sample-usage"></a>サンプルの使用方法  
  コンパイル後、次の 4 つの異なるバイナリが生成されます。  
   
--   Client.exe:クライアント コード。 App.config は、クライアント構成ファイルの Client.exe.config にコンパイルされます。  
+- Client.exe:クライアント コード。 App.config は、クライアント構成ファイルの Client.exe.config にコンパイルされます。  
   
--   UDPActivation.dll: 主要なすべての UDP 実装を含むライブラリ。  
+- UDPActivation.dll: 主要なすべての UDP 実装を含むライブラリ。  
   
--   Service.dll:サービスのコードです。 これは、ServiceModelSamples 仮想アプリケーションの \bin ディレクトリにコピーされます。 このサービス ファイルは Service.svc で、構成ファイルは Web.config です。これらをコンパイルすると、%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples にコピーされます。  
+- Service.dll:サービスのコードです。 これは、ServiceModelSamples 仮想アプリケーションの \bin ディレクトリにコピーされます。 このサービス ファイルは Service.svc で、構成ファイルは Web.config です。これらをコンパイルすると、%SystemDrive%\Inetpub\wwwroot\ServiceModelSamples にコピーされます。  
   
--   WasNetActivator:UDP アクティベータ プログラム。  
+- WasNetActivator:UDP アクティベータ プログラム。  
   
--   必要なすべての要素が正しくインストールされていることを確認します。 サンプルを実行する方法を、次の手順に示します。  
+- 必要なすべての要素が正しくインストールされていることを確認します。 サンプルを実行する方法を、次の手順に示します。  
   
 1. 次の Windows サービスが開始されていることを確認します。  
   
-    -   Windows プロセス アクティブ化サービス (WAS)。  
+    - Windows プロセス アクティブ化サービス (WAS)。  
   
-    -   インターネット インフォメーション サービス (IIS):たとえば、W3SVC。  
+    - インターネット インフォメーション サービス (IIS):たとえば、W3SVC。  
   
 2. 次に、アクティベータ WasNetActivator.exe を起動します。 下、**アクティベーション** タブ、唯一のプロトコル**UDP**がドロップダウン リストで選択されています。 をクリックして、**開始**アクティベータを開始するボタンをクリックします。  
   

@@ -5,11 +5,11 @@ ms.assetid: a09e9ccc-0b37-43e3-95c1-bc5fa7ee5f42
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 639cfc514d2a206f0de72db4b0bac02b53305ae3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083401"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946160"
 ---
 # <a name="icordebugvirtualunwinder-interface"></a>ICorDebugVirtualUnwinder インターフェイス
 スタック アンワインドを支援するメソッドを提供します。  

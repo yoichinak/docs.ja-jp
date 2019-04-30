@@ -5,11 +5,11 @@ ms.assetid: 4609418d-71fa-44bc-9618-4d529d25cabb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5bfbadc5553e86b2db10d66298c8d24d2a0f8bde
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211577"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946173"
 ---
 # <a name="icordebugvariablesymbolsetvalue-method"></a>ICorDebugVariableSymbol::SetValue メソッド
 バイト配列の値を変数に代入します。  

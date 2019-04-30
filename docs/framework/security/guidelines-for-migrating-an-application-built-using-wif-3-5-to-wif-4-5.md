@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7a32fe6e-5f68-4693-9371-19411fa8063c
 author: BrucePerlerMS
 ms.openlocfilehash: ad8ff2b6daaaf48975b86c637435b31fa1869e1d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940570"
 ---
 # <a name="guidelines-for-migrating-an-application-built-using-wif-35-to-wif-45"></a>WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン
 
@@ -56,8 +56,7 @@ WIF は現在、.NET Framework に統合されています。 ほとんどの .N
 
 - .NET の ID およびプリンシパル クラスは、直接 <xref:System.Security.Claims.ClaimsIdentity?displayProperty=nameWithType> と <xref:System.Security.Claims.ClaimsPrincipal?displayProperty=nameWithType> から派生します。 したがって、WIF 3.5 インターフェイス `IClaimsIdentity` と `IClaimsPrincipal` は不要になり、WIF 4.5 では使用できません。
 
-- 
-  <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> および <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType> などの .NET の ID およびプリンシパル クラスは、<xref:System.Security.Claims.ClaimsIdentity> および <xref:System.Security.Claims.ClaimsPrincipal> から派生し、組み込みのクレーム機能を備えています。 したがって、WIF 3.5 にあった `WindowsClaimsIdentity` と `WindowsClaimsPrincipal` などのクレーム固有の ID およびプリンシパル クラスは不要になり、WIF 4.5 には存在しません。
+- <xref:System.Security.Principal.WindowsIdentity?displayProperty=nameWithType> および <xref:System.Security.Principal.WindowsPrincipal?displayProperty=nameWithType> などの .NET の ID およびプリンシパル クラスは、<xref:System.Security.Claims.ClaimsIdentity> および <xref:System.Security.Claims.ClaimsPrincipal> から派生し、組み込みのクレーム機能を備えています。 したがって、WIF 3.5 にあった `WindowsClaimsIdentity` と `WindowsClaimsPrincipal` などのクレーム固有の ID およびプリンシパル クラスは不要になり、WIF 4.5 には存在しません。
 
 ### <a name="other-changes-to-wif-functionality"></a>WIF 機能のその他の変更
 

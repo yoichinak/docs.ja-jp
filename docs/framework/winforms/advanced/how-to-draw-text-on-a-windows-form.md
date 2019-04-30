@@ -10,11 +10,11 @@ helpviewer_keywords:
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
 ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172979"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004082"
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>方法: Windows フォームにテキストを描画する
 次のコード例を使用する方法を示しています、<xref:System.Drawing.Graphics.DrawString%2A>のメソッド、<xref:System.Drawing.Graphics>フォームにテキストを描画します。 また、使用することができます<xref:System.Windows.Forms.TextRenderer>フォームにテキストを描画するためです。 詳細については、「[方法 :GDI を使用してテキストの描画](how-to-draw-text-with-gdi.md)します。  
@@ -30,7 +30,7 @@ ms.locfileid: "59172979"
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   Arial フォントがインストールされていません。  
+- Arial フォントがインストールされていません。  
   
 ## <a name="see-also"></a>関連項目
 

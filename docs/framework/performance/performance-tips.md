@@ -10,11 +10,11 @@ ms.assetid: ae275793-857d-4102-9095-b4c2a02d57f4
 author: BillWagner
 ms.author: wiwagn
 ms.openlocfilehash: c825ccc15ff7eeb736169f7ae120b4a3692ffe39
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949241"
 ---
 # <a name="net-performance-tips"></a>.NET のパフォーマンスに関するヒント
 *パフォーマンス*という用語は、プログラムの実行速度を表す一般的な用語です。 ソース コード内で特定の基本規則に従うことにより、実行速度を上げることができることもあります。 プログラムによっては、コードを綿密に調べることが重要で、プロファイラーを使用して、可能な限り速く実行しているかどうかを確認することが必要な場合もあります。 一方、記述どおりに許容可能な速度でコードが実行されているため、このような最適化が必要ないプログラムもあります。 ここでは、パフォーマンスの低下が発生する一般的な状況と、パフォーマンスを向上させるためのヒント、およびパフォーマンスに関する追加のトピックについて説明します。 パフォーマンスの計画と計測の詳細については、「[Performance](../../../docs/framework/performance/index.md)」(パフォーマンス) を参照してください。  
@@ -30,17 +30,17 @@ ms.locfileid: "59216471"
   
 ## <a name="other-resources"></a>その他の参照情報  
   
--   [マネージ コードの記述を高速化。モ ノのコストを把握します。](https://go.microsoft.com/fwlink/?LinkId=99294)  
+- [マネージ コードの記述を高速化。モ ノのコストを把握します。](https://go.microsoft.com/fwlink/?LinkId=99294)  
   
--   [マネージ アプリケーションの高パフォーマンスを作成します。入門](https://go.microsoft.com/fwlink/?LinkId=99295)  
+- [マネージ アプリケーションの高パフォーマンスを作成します。入門](https://go.microsoft.com/fwlink/?LinkId=99295)  
   
--   [ガベージ コレクターの基本とパフォーマンスのヒント](https://go.microsoft.com/fwlink/?LinkId=99296)  
+- [ガベージ コレクターの基本とパフォーマンスのヒント](https://go.microsoft.com/fwlink/?LinkId=99296)  
   
--   [.NET アプリケーションのパフォーマンス関連のヒントとトリック](https://go.microsoft.com/fwlink/?LinkId=99297)  
+- [.NET アプリケーションのパフォーマンス関連のヒントとトリック](https://go.microsoft.com/fwlink/?LinkId=99297)  
 
--   [Rico Mariani が紹介するパフォーマンスに関するニュース](https://go.microsoft.com/fwlink/?LinkId=115679)  
+- [Rico Mariani が紹介するパフォーマンスに関するニュース](https://go.microsoft.com/fwlink/?LinkId=115679)  
 
--   [Vance Morrison のブログ](https://blogs.msdn.microsoft.com/vancem/)
+- [Vance Morrison のブログ](https://blogs.msdn.microsoft.com/vancem/)
   
 ## <a name="see-also"></a>関連項目
 

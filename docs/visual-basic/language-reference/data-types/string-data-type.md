@@ -19,11 +19,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], $
 ms.assetid: 15ac03f5-cabd-42cc-a754-1df3893c25d9
 ms.openlocfilehash: 3e87dc6527b4351467b1155439ee8266157c16ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842292"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971716"
 ---
 # <a name="string-data-type-visual-basic"></a>文字列型 (String) (Visual Basic)
 0 ~ 65535 の値範囲の符号なし 16 ビット (2 バイト) コード ポイントのシーケンスを保持します。 各*コード ポイント*、または文字コードを 1 つの Unicode 文字を表します。 文字列は、0 からおよそ 20億を含めることができます (2 ^31) の Unicode 文字。  
@@ -70,13 +70,13 @@ S = Microsoft.VisualBasic.Left(S, 4)
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **負の数。** 文字がによって保持されていることに注意してください。`String`署名されていないと、負の値を表すことはできません。 いずれの場合も、行わないで`String`数値の値を保持します。  
+- **負の数。** 文字がによって保持されていることに注意してください。`String`署名されていないと、負の値を表すことはできません。 いずれの場合も、行わないで`String`数値の値を保持します。  
   
--   **相互運用の考慮事項。** 例のオートメーションまたは COM オブジェクト、.NET framework では、作成されていないコンポーネントとやり取りする場合、他の環境では文字列の文字の別のデータ幅 (8 ビット) ことに注意してください。 このようなコンポーネントに 8 ビット文字の文字列引数を渡す場合の宣言として`Byte()`、配列の`Byte`、要素の代わりに`String`新しい Visual Basic コードで。  
+- **相互運用の考慮事項。** 例のオートメーションまたは COM オブジェクト、.NET framework では、作成されていないコンポーネントとやり取りする場合、他の環境では文字列の文字の別のデータ幅 (8 ビット) ことに注意してください。 このようなコンポーネントに 8 ビット文字の文字列引数を渡す場合の宣言として`Byte()`、配列の`Byte`、要素の代わりに`String`新しい Visual Basic コードで。  
   
--   **型宣言文字。** 識別子の型文字を付加`$`任意の識別子に強制的に、`String`データ型。 `String` リテラルの型文字がありません。 ただし、コンパイラは、引用符で囲まれたリテラルを扱います (`" "`) として`String`します。  
+- **型宣言文字。** 識別子の型文字を付加`$`任意の識別子に強制的に、`String`データ型。 `String` リテラルの型文字がありません。 ただし、コンパイラは、引用符で囲まれたリテラルを扱います (`" "`) として`String`します。  
   
--   **フレームワークの型。** .NET Framework に対応する型は、<xref:System.String?displayProperty=nameWithType>クラス。  
+- **フレームワークの型。** .NET Framework に対応する型は、<xref:System.String?displayProperty=nameWithType>クラス。  
   
 ## <a name="see-also"></a>関連項目
 

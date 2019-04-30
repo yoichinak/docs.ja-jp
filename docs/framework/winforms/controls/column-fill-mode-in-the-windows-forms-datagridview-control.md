@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
 ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59214729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956282"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールの列フィル モード
 列フィル モードでは、<xref:System.Windows.Forms.DataGridView> コントロールの列は、コントロールの表示領域の幅を満たすように自動的にサイズ変更されます。 すべての列の幅を <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> プロパティの値以上にするために水平スクロール バーが必要な場合を除き、コントロールに水平スクロール バーは表示されません。  
@@ -45,22 +45,22 @@ ms.locfileid: "59214729"
 ### <a name="comments"></a>コメント  
  このデモ アプリケーションは、次のようにして使用します。  
   
--   フォームのサイズを変更します。 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> プロパティの値で示される比率が維持されたまま、列の幅が変わることを確認します。  
+- フォームのサイズを変更します。 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> プロパティの値で示される比率が維持されたまま、列の幅が変わることを確認します。  
   
--   マウスで列の区分線をドラッグして、列のサイズを変更します。 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 値がどのように変わるかを確認します。  
+- マウスで列の区分線をドラッグして、列のサイズを変更します。 <xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A> 値がどのように変わるかを確認します。  
   
--   1 つの列の <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 値を変更してから、フォームのサイズをドラッグで変更します。 フォームをどれだけ小さくしても <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 値が <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 値を下回らないことを確認します。  
+- 1 つの列の <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 値を変更してから、フォームのサイズをドラッグで変更します。 フォームをどれだけ小さくしても <xref:System.Windows.Forms.DataGridViewColumn.Width%2A> 値が <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 値を下回らないことを確認します。  
   
--   すべての列の <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 値を大きくして、その合計値がコントロールの幅を上回るようにします。 水平スクロール バーが表示されることを確認します。  
+- すべての列の <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> 値を大きくして、その合計値がコントロールの幅を上回るようにします。 水平スクロール バーが表示されることを確認します。  
   
--   一部の列の <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 値を変更します。 列またはフォームのサイズの変更によって何が起きるかを確認します。  
+- 一部の列の <xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A> 値を変更します。 列またはフォームのサイズの変更によって何が起きるかを確認します。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
+- System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
--   この例をコマンドラインから Visual Basic または Visual C# にビルドする方法の詳細については、[コマンドラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+- Visual Basic または Visual C# からこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)、または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 

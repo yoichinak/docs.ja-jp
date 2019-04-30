@@ -11,11 +11,11 @@ helpviewer_keywords:
 - From statement [Visual Basic]
 ms.assetid: 83e3665e-68a0-4540-a3a3-3d777a0f95d5
 ms.openlocfilehash: b18ef2f291e20d8a150972a980ba063377b0bc3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945341"
 ---
 # <a name="from-clause-visual-basic"></a>From 句 (Visual Basic)
 1 つまたは複数の範囲変数とクエリのコレクションを指定します。  
@@ -48,21 +48,21 @@ From element [ As type ] In collection [ _ ]
   
  各`From`句の後に、クエリを絞り込むの追加のクエリ句の任意の組み合わせをできます。 次の方法でクエリを絞り込むことができます。  
   
--   使用して暗黙的に複数のコレクションを組み合わせる、`From`と`Select`句、またはを使用して明示的に、`Join`または`Group Join`句。  
+- 使用して暗黙的に複数のコレクションを組み合わせる、`From`と`Select`句、またはを使用して明示的に、`Join`または`Group Join`句。  
   
--   使用して、`Where`句をクエリの結果をフィルター処理します。  
+- 使用して、`Where`句をクエリの結果をフィルター処理します。  
   
--   使用して、結果を並べ替える、`Order By`句。  
+- 使用して、結果を並べ替える、`Order By`句。  
   
--   使用して同様の結果をグループ化、`Group By`句。  
+- 使用して同様の結果をグループ化、`Group By`句。  
   
--   使用して、`Aggregate`句全体のクエリの結果を評価する集計関数を識別します。  
+- 使用して、`Aggregate`句全体のクエリの結果を評価する集計関数を識別します。  
   
--   使用して、`Let`句を反復変数の値は、コレクションではなく式によって決定されます。  
+- 使用して、`Let`句を反復変数の値は、コレクションではなく式によって決定されます。  
   
--   使用して、`Distinct`重複するクエリの結果を無視する句。  
+- 使用して、`Distinct`重複するクエリの結果を無視する句。  
   
--   使用して返される結果の部分を特定、 `Skip`、 `Take`、 `Skip While`、および`Take While`句。  
+- 使用して返される結果の部分を特定、 `Skip`、 `Take`、 `Skip While`、および`Take While`句。  
   
 ## <a name="example"></a>例  
  次のクエリ式は、`From`範囲変数を宣言する句`cust`各`Customer`オブジェクト、`customers`コレクション。 `Where`句では、範囲変数を使用して、指定されたリージョンからお客様に、出力を制限します。 `For Each`ループは、クエリ結果の各顧客の会社名を表示します。  

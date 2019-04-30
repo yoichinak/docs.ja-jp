@@ -9,30 +9,30 @@ helpviewer_keywords:
 - data binding [WPF interoperability]
 ms.assetid: 18997e71-745a-4425-9c69-2cbce1d8669e
 ms.openlocfilehash: f6fd1f2f5d0a729ee5610b81d4bfdca052a6e01e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300867"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981813"
 ---
 # <a name="walkthrough-binding-to-data-in-hybrid-applications"></a>チュートリアル: ハイブリッド アプリケーションでのデータへのバインディング
 使用しているかどうかをコントロールにデータ ソースのバインドは、基になるデータへのアクセス権を持つユーザーに提供するために不可欠な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]または[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 このチュートリアルでは、両方を含むハイブリッド アプリケーションでデータ バインディングを使用するどの[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロール。  
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   プロジェクトの作成。  
+- プロジェクトの作成。  
   
--   データ テンプレートを定義します。  
+- データ テンプレートを定義します。  
   
--   フォームのレイアウトを指定します。  
+- フォームのレイアウトを指定します。  
   
--   データ バインディングを指定します。  
+- データ バインディングを指定します。  
   
--   相互運用を使用してデータを表示しています。  
+- 相互運用を使用してデータを表示しています。  
   
--   プロジェクトへのデータ ソースを追加します。  
+- プロジェクトへのデータ ソースを追加します。  
   
--   データ ソースにバインドします。  
+- データ ソースにバインドします。  
   
  このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。[ハイブリッド アプリケーションのサンプルでのデータ バインディング](https://go.microsoft.com/fwlink/?LinkID=159983)します。  
   
@@ -41,9 +41,9 @@ ms.locfileid: "59300867"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを実行するには、次のコンポーネントが必要です。  
   
--   Visual Studio  
+- Visual Studio  
   
--   Microsoft SQL Server で実行されている Northwind サンプル データベースにアクセスします。  
+- Microsoft SQL Server で実行されている Northwind サンプル データベースにアクセスします。  
   
 ## <a name="creating-the-project"></a>プロジェクトの作成  
   
@@ -53,9 +53,9 @@ ms.locfileid: "59300867"
   
 2. ソリューション エクスプローラーで、次のアセンブリへの参照を追加します。  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
 3. MainWindow.xaml を開き、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "59300867"
   
 #### <a name="to-define-the-data-template"></a>データ テンプレートを定義するには  
   
--   次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
+- 次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
   
      [!code-xaml[WPFWithWFAndDatabinding#3](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#3)]  
   
@@ -83,13 +83,13 @@ ms.locfileid: "59300867"
   
 #### <a name="to-set-up-the-grid-layout"></a>グリッド レイアウトを設定するには  
   
--   次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
+- 次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
   
      [!code-xaml[WPFWithWFAndDatabinding#4](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#4)]  
   
 #### <a name="to-set-up-the-label-controls"></a>ラベル コントロールを設定するには  
   
--   次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
+- 次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
   
      [!code-xaml[WPFWithWFAndDatabinding#5](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#5)]  
   
@@ -100,7 +100,7 @@ ms.locfileid: "59300867"
   
 #### <a name="to-specify-data-bindings"></a>データ バインディングを指定するには  
   
--   次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
+- 次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
   
      <xref:System.Windows.Data.Binding>クラス バインド、<xref:System.Windows.Controls.TextBox>コントロールをデータベースに適切なフィールド。  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59300867"
   
 #### <a name="to-display-data-in-the-datagridview-control"></a>DataGridView コントロールでデータを表示するには  
   
--   次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
+- 次の XAML をコピー、<xref:System.Windows.Controls.Grid>要素の宣言。  
   
      [!code-xaml[WPFWithWFAndDatabinding#7](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFWithWFAndDatabinding/CSharp/WPFWithWFAndDatabinding/Window1.xaml#7)]  
   

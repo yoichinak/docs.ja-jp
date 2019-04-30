@@ -7,11 +7,11 @@ helpviewer_keywords:
 - color dialog box
 ms.assetid: 261793e0-8252-47c5-b76c-621857b8da44
 ms.openlocfilehash: d04794df6bce82573ff8f53b282a4d945933b1bb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707301"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956313"
 ---
 # <a name="colordialog-component-windows-forms"></a>ColorDialog コンポーネント (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.ColorDialog>コンポーネントは、ユーザー、パレットから色を選択して、そのパレットにカスタムの色を追加できる構成済みのダイアログ ボックス。 このダイアログ ボックスは、他の Windows ベースのアプリケーションで表示される色を選択するためのダイアログ ボックスと同じです。 このコントロールは、独自のダイアログ ボックスを使用しない簡易ソリューションとして、Windows ベースのアプリケーションの中で使用します。  
@@ -31,8 +31,7 @@ Windows フォーム<xref:System.Windows.Forms.ColorDialog>コンポーネント
  Windows フォーム コントロールの完全な一覧を、使用に関する情報リンクと共に提供します。  
   
  <xref:System.Windows.Forms.ColorDialog>  
- 
-  <xref:System.Windows.Forms.ColorDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
+ <xref:System.Windows.Forms.ColorDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
  [Windows フォーム ダイアログ ボックスの重要コード](assetId:///VS|dv_vstechart|~\html\vbtchessentialcodeforwindowsformsdialogboxes.htm)  
  Windows フォーム ダイアログ ボックスのコントロールとコンポーネント、基本的な機能を実行するために必要なコードについて説明します。  

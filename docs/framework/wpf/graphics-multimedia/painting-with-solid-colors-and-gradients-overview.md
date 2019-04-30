@@ -10,11 +10,11 @@ helpviewer_keywords:
 - painting with solid colors [WPF]
 ms.assetid: f5b182f3-c5c7-4cbe-9f2f-65e690d08255
 ms.openlocfilehash: 7945660f40e44596fe36a6b9d53223a0e264a064
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148305"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009432"
 ---
 # <a name="painting-with-solid-colors-and-gradients-overview"></a>純色およびグラデーションによる塗りつぶしの概要
 このトピックでは、使用する方法を説明します<xref:System.Windows.Media.SolidColorBrush>、 <xref:System.Windows.Media.LinearGradientBrush>、および<xref:System.Windows.Media.RadialGradientBrush>純色、線状グラデーション、および放射状グラデーションを描画するオブジェクト。  
@@ -27,15 +27,15 @@ ms.locfileid: "59148305"
 ### <a name="using-a-solidcolorbrush-in-xaml"></a>"XAML" での SolidColorBrush の使用  
  [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] で領域を純色で塗りつぶすには、次のオプションのいずれかを使用します。  
   
--   定義済みの純色のブラシを名前で選択します。  たとえば、ボタンを設定することができます<xref:System.Windows.Controls.Control.Background%2A>"Red"または"MediumBlue"にします。  他の定義済みの純色ブラシの静的プロパティを参照してください、<xref:System.Windows.Media.Brushes>クラス。 次に例を示します。  
+- 定義済みの純色のブラシを名前で選択します。  たとえば、ボタンを設定することができます<xref:System.Windows.Controls.Control.Background%2A>"Red"または"MediumBlue"にします。  他の定義済みの純色ブラシの静的プロパティを参照してください、<xref:System.Windows.Media.Brushes>クラス。 次に例を示します。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushNamedColor1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushnamedcolor1xaml)]  
   
--   赤、緑、および青の量を指定して単一の純色に結合することで、32 ビット カラー パレットからカラーを選択します。  32 ビット パレットからカラーを指定するための書式は、"*#rrggbb*" です。ここで、*rr* は赤の相対的な量を指定する 2 桁の 16 進数であり、*gg* は緑の量を、*bb*は青の量を指定します。  さらに、カラーは、"#*aarrggbb*" として指定することもできます。ここで、*aa* はカラーの*アルファ*値 (透明度) を指定します。 この方法により、部分的に透明な色を作成することができます。  次の例では、<xref:System.Windows.Controls.Control.Background%2A>の<xref:System.Windows.Controls.Button>は 16 進数表記を使用して完全に不透明な赤に設定します。  
+- 赤、緑、および青の量を指定して単一の純色に結合することで、32 ビット カラー パレットからカラーを選択します。  32 ビット パレットからカラーを指定するための書式は、"*#rrggbb*" です。ここで、*rr* は赤の相対的な量を指定する 2 桁の 16 進数であり、*gg* は緑の量を、*bb*は青の量を指定します。  さらに、カラーは、"#*aarrggbb*" として指定することもできます。ここで、*aa* はカラーの*アルファ*値 (透明度) を指定します。 この方法により、部分的に透明な色を作成することができます。  次の例では、<xref:System.Windows.Controls.Control.Background%2A>の<xref:System.Windows.Controls.Button>は 16 進数表記を使用して完全に不透明な赤に設定します。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushHex1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushhex1xaml)]  
   
--   プロパティ タグ構文を使用して記述する、<xref:System.Windows.Media.SolidColorBrush>します。 この構文は冗長ですが、ブラシの不透明度などの追加設定を指定することができます。 次の例では、 <xref:System.Windows.Controls.Control.Background%2A> 2 つのプロパティ<xref:System.Windows.Controls.Button>要素は完全に不透明な赤に設定します。 最初のブラシの色は、定義済みの色の名前を使用して記述されています。 2 番目のブラシの色は、16 進表記で記述されています。  
+- プロパティ タグ構文を使用して記述する、<xref:System.Windows.Media.SolidColorBrush>します。 この構文は冗長ですが、ブラシの不透明度などの追加設定を指定することができます。 次の例では、 <xref:System.Windows.Controls.Control.Background%2A> 2 つのプロパティ<xref:System.Windows.Controls.Button>要素は完全に不透明な赤に設定します。 最初のブラシの色は、定義済みの色の名前を使用して記述されています。 2 番目のブラシの色は、16 進表記で記述されています。  
   
      [!code-xaml[BrushOverviewExamples_snip#SolidColorBrushPropertyTag1XAML](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushOverviewExamples_snip/XAML/SolidColorBrushExample.xaml#solidcolorbrushpropertytag1xaml)]  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59148305"
 ### <a name="painting-with-a-solidcolorbrush-in-code"></a>コードでの SolidColorBrush による塗りつぶし  
  コードで領域を純色で塗りつぶすには、次のオプションのいずれかを使用します。  
   
--   によって提供される定義済みのブラシのいずれかを使用して、<xref:System.Windows.Media.Brushes>クラス。 次の例では、<xref:System.Windows.Controls.Control.Background%2A>の<xref:System.Windows.Controls.Button>に設定されている<xref:System.Windows.Media.Brushes.Red%2A>します。  
+- によって提供される定義済みのブラシのいずれかを使用して、<xref:System.Windows.Media.Brushes>クラス。 次の例では、<xref:System.Windows.Controls.Control.Background%2A>の<xref:System.Windows.Controls.Button>に設定されている<xref:System.Windows.Media.Brushes.Red%2A>します。  
   
      [!code-csharp[BrushOverviewExamples_snip#SolidColorBrushPredefinedBrush1CSharp](~/samples/snippets/csharp/VS_Snippets_Wpf/BrushOverviewExamples_snip/CSharp/SolidColorBrushExample.cs#solidcolorbrushpredefinedbrush1csharp)]  
   
--   作成、<xref:System.Windows.Media.SolidColorBrush>設定とその<xref:System.Windows.Media.SolidColorBrush.Color%2A>プロパティを使用して、<xref:System.Windows.Media.Color>構造体。 定義済みの色を使用することができます、<xref:System.Windows.Media.Colors>クラスを作成できる、<xref:System.Windows.Media.Color>静的<xref:System.Windows.Media.Color.FromArgb%2A>メソッド。  
+- 作成、<xref:System.Windows.Media.SolidColorBrush>設定とその<xref:System.Windows.Media.SolidColorBrush.Color%2A>プロパティを使用して、<xref:System.Windows.Media.Color>構造体。 定義済みの色を使用することができます、<xref:System.Windows.Media.Colors>クラスを作成できる、<xref:System.Windows.Media.Color>静的<xref:System.Windows.Media.Color.FromArgb%2A>メソッド。  
   
      次の例は、設定する方法を示します、<xref:System.Windows.Media.SolidColorBrush.Color%2A>のプロパティを<xref:System.Windows.Media.SolidColorBrush>定義済みの色を使用します。  
   
@@ -81,9 +81,9 @@ ms.locfileid: "59148305"
   
  <xref:System.Windows.Media.GradientStop>はグラデーション ブラシの基本的な構成要素です。  グラデーションの分岐点を指定します、<xref:System.Windows.Media.GradientStop.Color%2A>で、<xref:System.Windows.Media.GradientStop.Offset%2A>グラデーション軸に沿ったします。  
   
--   グラデーションの分岐点<xref:System.Windows.Media.GradientStop.Color%2A>プロパティは、グラデーションの分岐点の色を指定します。 定義済みの色を使用して、色を設定することがあります (によって提供される、<xref:System.Windows.Media.Colors>クラス) か、ScRGB 値または ARGB 値を指定しています。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では、16 進表記を使用してカラーを記述することもできます。 詳細については、次を参照してください。、<xref:System.Windows.Media.Color>構造体。  
+- グラデーションの分岐点<xref:System.Windows.Media.GradientStop.Color%2A>プロパティは、グラデーションの分岐点の色を指定します。 定義済みの色を使用して、色を設定することがあります (によって提供される、<xref:System.Windows.Media.Colors>クラス) か、ScRGB 値または ARGB 値を指定しています。 [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では、16 進表記を使用してカラーを記述することもできます。 詳細については、次を参照してください。、<xref:System.Windows.Media.Color>構造体。  
   
--   グラデーションの分岐点<xref:System.Windows.Media.GradientStop.Offset%2A>プロパティが、グラデーション軸上のグラデーションの分岐点の色の位置を指定します。 オフセットは、 <xref:System.Double> 1 ~ 0 の範囲をします。 グラデーション境界のオフセット値が 0 に近ければ近いほど、カラーはグラデーションの始まりに近づきます。 グラデーションのオフセット値が 1 に近ければ近いほど、カラーはグラデーションの終わりに近づきます。  
+- グラデーションの分岐点<xref:System.Windows.Media.GradientStop.Offset%2A>プロパティが、グラデーション軸上のグラデーションの分岐点の色の位置を指定します。 オフセットは、 <xref:System.Double> 1 ~ 0 の範囲をします。 グラデーション境界のオフセット値が 0 に近ければ近いほど、カラーはグラデーションの始まりに近づきます。 グラデーションのオフセット値が 1 に近ければ近いほど、カラーはグラデーションの終わりに近づきます。  
   
  グラデーション境界の間の各点のカラーは、2 つのグラデーション境界によって指定されたカラーの混合として線形補間されます。 次の図は、前の例のグラデーション境界を強調しています。 円はグラデーション境界の位置をマークし、破線はグラデーション軸を示しています。  
   

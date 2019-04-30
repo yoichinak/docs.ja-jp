@@ -1,17 +1,17 @@
 ---
-title: Icorprofilerinfo 6::enumngenmodulemethodsinliningthismethod メソッド
+title: ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod メソッド
 ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 67ae413ae8944757fc90bcde752b9a5fe53cc68f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57365322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948526"
 ---
-# <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>Icorprofilerinfo 6::enumngenmodulemethodsinliningthismethod メソッド
+# <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod メソッド
 
 特定の NGen モジュールと特定のメソッドをインラインで定義されているすべてのメソッドには、列挙子を返します。
 

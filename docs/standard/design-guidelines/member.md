@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: 0ce93180-1d7b-4f8c-9306-f828b2d66b8f
 author: KrzysztofCwalina
 ms.openlocfilehash: d7023bbe59eb3590af47952a2fe24c5f40b3ca68
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945523"
 ---
 # <a name="member-design-guidelines"></a>メンバーのデザインのガイドライン
 メソッド、プロパティ、イベント、コンス トラクター、およびフィールドは、メンバーとしてまとめて呼ばれます。 メンバーが、最終的に、フレームワークのエンドユーザーに、フレームワークの機能が公開されていることを意味します。  

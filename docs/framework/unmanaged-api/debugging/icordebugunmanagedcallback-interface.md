@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60a1546068ae6a8c8be1c0af1ef3c7d770c23d70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59128681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993760"
 ---
 # <a name="icordebugunmanagedcallback-interface"></a>ICorDebugUnmanagedCallback インターフェイス
 共通言語ランタイム (CLR) に直接関連していないネイティブ イベントについて通知を提供します。  

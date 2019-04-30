@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ScrollViewer [WPF], styles and templates
 ms.assetid: dffdd822-ae69-4946-abaf-710860cd65b2
 ms.openlocfilehash: 9c0edfd7ab4772eb9a1f5ecdd3db611fa36bf8d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59226834"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971029"
 ---
 # <a name="scrollviewer-styles-and-templates"></a>ScrollViewer のスタイルとテンプレート
 このトピックでは、スタイルとテンプレートについて説明します、<xref:System.Windows.Controls.ScrollViewer>コントロール。 既定値を変更する<xref:System.Windows.Controls.ControlTemplate>固有の外観を制御します。 詳細については、「[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)」を参照してください。  

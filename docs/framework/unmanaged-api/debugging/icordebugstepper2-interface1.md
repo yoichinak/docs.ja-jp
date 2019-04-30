@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 256f67d21a22ee4692d88311cc150736e61563a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073068"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987416"
 ---
 # <a name="icordebugstepper2-interface"></a>ICorDebugStepper2 インターフェイス
 だけマイ コード (のみ JMC) デバッグのサポートを提供します。  

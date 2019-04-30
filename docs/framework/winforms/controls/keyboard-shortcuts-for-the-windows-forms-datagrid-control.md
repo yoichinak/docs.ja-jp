@@ -6,11 +6,11 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], navigation keys
 ms.assetid: a01780f9-20d5-4f5f-808f-c790c9a007a5
 ms.openlocfilehash: 58e65ee9d95329c3583515b99db47b87b3749c8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59145978"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973785"
 ---
 # <a name="keyboard-shortcuts-for-the-windows-forms-datagrid-control"></a>Windows フォームの DataGrid コントロール内の移動に使用できるキーボード ショートカット
 > [!NOTE]

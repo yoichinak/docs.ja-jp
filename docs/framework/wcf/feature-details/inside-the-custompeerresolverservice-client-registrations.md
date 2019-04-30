@@ -3,11 +3,11 @@ title: CustomPeerResolverService 内部:クライアント登録
 ms.date: 03/30/2017
 ms.assetid: 40236953-a916-4236-84a6-928859e1331a
 ms.openlocfilehash: b3b5e22ad29f465d82e3d925f7168745fc5d04a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095790"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972550"
 ---
 # <a name="inside-the-custompeerresolverservice-client-registrations"></a>CustomPeerResolverService 内部:クライアント登録
 メッシュ内の各ノードは、`Register` 関数を介してエンドポイント情報をリゾルバー サービスに公開します。 リゾルバー サービスは、登録レコードとしてこの情報を保存します。 このレコードには、ノードの一意の識別子 (RegistrationID) およびエンドポイント情報 `(PeerNodeAddress) が格納されます。  
@@ -26,9 +26,9 @@ ms.locfileid: "59095790"
   
  独自のリゾルバー サービスを実装するためには、古い登録レコードを削除するメンテナンス関数を作成する必要があります。 これにはいくつかの方法があります。  
   
--   **定期的なメンテナンス**:、定期的に移動し、古いレコードを削除する、データ ストアを経由するタイマーを設定します。 <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> では、この方法を使用します。  
+- **定期的なメンテナンス**:、定期的に移動し、古いレコードを削除する、データ ストアを経由するタイマーを設定します。 <xref:System.ServiceModel.PeerResolvers.CustomPeerResolverService> では、この方法を使用します。  
   
--   **パッシブ削除**:検索する代りに古いレコードを一定の間隔で、識別し、サービスが既に別の関数を実行するときに、古いレコードを削除できます。 この方法では、リゾルバー クライアントからの要求に対する応答時間が遅くなる可能性がありますが、タイマーの必要がなくなるほか、一部のノードが `Unregister` を呼び出さずに離脱することが予想される場合には効果的です。  
+- **パッシブ削除**:検索する代りに古いレコードを一定の間隔で、識別し、サービスが既に別の関数を実行するときに、古いレコードを削除できます。 この方法では、リゾルバー クライアントからの要求に対する応答時間が遅くなる可能性がありますが、タイマーの必要がなくなるほか、一部のノードが `Unregister` を呼び出さずに離脱することが予想される場合には効果的です。  
   
 ## <a name="registrationlifetime-and-refresh"></a>RegistrationLifetime および Refresh  
  リゾルバー サービスに登録されると、ノードはサービスから <xref:System.ServiceModel.PeerResolvers.RegisterResponseInfo> オブジェクトを受け取ります。 このオブジェクトには、`RegistrationLifetime` プロパティが含まれます。このプロパティは、登録の期限が切れてリゾルバー サービスによって削除されるまでに、どれだけの時間があるかを示します。 たとえば、`RegistrationLifetime` が 2 分である場合、レコードが古くならず、削除されないようにするためには、ノードは 2 分以内に `Refresh` を呼び出す必要があります。 リゾルバー サービスは `Refresh` 要求を受け取ると、レコードを検索し、有効期限をリセットします。 Refresh は、<xref:System.ServiceModel.PeerResolvers.RefreshResponseInfo> プロパティのある `RegistrationLifetime` オブジェクトを返します。  

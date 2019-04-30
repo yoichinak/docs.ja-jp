@@ -6,11 +6,11 @@ helpviewer_keywords:
 - NT Service Host Sample [Windows Communication Foundation]
 ms.assetid: 1b2f45c5-2bed-4979-b0ee-8f9efcfec028
 ms.openlocfilehash: 85d089813a455784fde679e9200a9b29b956af8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338697"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006405"
 ---
 # <a name="windows-service-host"></a>Windows サービス ホスト
 このサンプルでは、マネージ Windows サービスでホストされる Windows Communication Foundation (WCF) サービスを使用します。 Windows サービスのサービス アプレットを使用して、制御 **コントロール パネルの** システムの再起動後に自動的に起動するように構成できます。 このサンプルは、クライアント プログラムと Windows サービス プログラムで構成されています。 サービスは .exe プログラムとして実装され、独自のホスティング コードが指定されます。 Windows プロセス アクティブ化サービス (WAS) やインターネット インフォメーション サービス (IIS) などの他のホスト環境では、ホスティング コードを記述する必要はありません。

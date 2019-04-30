@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5d60b9a9ae566b5bd686b27b2e09861a8414979
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000234"
 ---
 # <a name="strongnamesignaturegenerationex-function"></a>StrongNameSignatureGenerationEx 関数
 指定したフラグに基づいて、指定されたアセンブリの厳密な名前の署名を生成します。  
@@ -70,9 +70,9 @@ BOOLEAN StrongNameSignatureGenerationEx (
  `dwFlags`  
  [in]1 つ以上の次の値。  
   
--   `SN_SIGN_ALL_FILES` (0x00000001) - リンクされたモジュールのすべてのハッシュを再計算します。  
+- `SN_SIGN_ALL_FILES` (0x00000001) - リンクされたモジュールのすべてのハッシュを再計算します。  
   
--   `SN_TEST_SIGN` (0x00000002) - テスト アセンブリに署名します。  
+- `SN_TEST_SIGN` (0x00000002) - テスト アセンブリに署名します。  
   
 ## <a name="return-value"></a>戻り値  
  `true` 正常に終了します。それ以外の場合、`false`します。  

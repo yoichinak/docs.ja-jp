@@ -11,11 +11,11 @@ ms.assetid: 3eb14c49-68c2-4516-ac89-e5bd7473831c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 355e6c7b1cd77936d5ccfa5ccff7312c8e35ac63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59220403"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941648"
 ---
 # <a name="certfreeauthenticodetimestamperinfo-function"></a>CertFreeAuthenticodeTimestamperInfo 関数
 割り当てられているリソース、 [AXL_AUTHENTICODE_TIMESTAMPER_INFO](../../../../docs/framework/unmanaged-api/authenticode/axl-authenticode-timestamper-info-structure.md)構造体。  

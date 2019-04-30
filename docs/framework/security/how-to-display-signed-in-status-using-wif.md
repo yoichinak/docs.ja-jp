@@ -7,49 +7,49 @@ ms.openlocfilehash: b07a8930255786686fb1e587b2a29bbc708eff63
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940505"
 ---
 # <a name="how-to-display-signed-in-status-using-wif"></a>方法: WIF を使用してサインイン状態を表示する
 ## <a name="applies-to"></a>対象  
   
--   Microsoft® Windows® Identity Foundation (WIF) 4.5  
+- Microsoft® Windows® Identity Foundation (WIF) 4.5  
   
--   ASP.NET® Web フォーム  
+- ASP.NET® Web フォーム  
   
 ## <a name="summary"></a>まとめ  
  このトピックでは、WIF 対応 ASP.NET アプリケーションでサインイン状態を表示する方法について説明します。 WIF には、アプリケーションでクレームが認識されるようにする機能、およびアプリケーション リソースの認証と承認を管理する機能があります。  
   
 ## <a name="contents"></a>目次  
   
--   概要  
+- 概要  
   
--   手順の要約  
+- 手順の要約  
   
--   手順 1 – Identity and Access 拡張機能をインストールする  
+- 手順 1 – Identity and Access 拡張機能をインストールする  
   
--   手順 2 – 証明書利用者の ASP.NET アプリケーションの作成  
+- 手順 2 – 証明書利用者の ASP.NET アプリケーションの作成  
   
--   手順 3 – ユーザー認証のためのローカル開発用 STS の有効化  
+- 手順 3 – ユーザー認証のためのローカル開発用 STS の有効化  
   
--   手順 4 – ASP.NET アプリケーションを変更してサインイン状態を表示する  
+- 手順 4 – ASP.NET アプリケーションを変更してサインイン状態を表示する  
   
--   手順 5 – WIF と ASP.NET アプリケーション間の統合のテスト  
+- 手順 5 – WIF と ASP.NET アプリケーション間の統合のテスト  
   
 ## <a name="overview"></a>概要  
  このトピックでは、WIF を使用して簡単なクレーム対応アプリケーションを作成する方法と、ユーザーがサインインしているかどうかを簡単に表示する方法について説明します。 次の手順では、Visual Studio の Identity and Access 拡張機能に含まれるローカル開発用 STS を使用します。 ローカル開発用 STS は、アプリケーションにクレームを統合する簡単な方法を提供する目的で、テストおよび開発環境向けに用意されたものです。 これは、実際の認証を行わず、資格情報も不要なため、稼動環境で使用しないでください。 ただし、次の手順の命令型コードは、実際の認証を使用した運用環境で使用できるアプリケーションの場合と同じです。  
   
 ## <a name="summary-of-steps"></a>手順の要約  
   
--   手順 1 – Identity and Access 拡張機能をインストールする  
+- 手順 1 – Identity and Access 拡張機能をインストールする  
   
--   手順 2 – 証明書利用者の ASP.NET アプリケーションの作成  
+- 手順 2 – 証明書利用者の ASP.NET アプリケーションの作成  
   
--   手順 3 – ユーザー認証のためのローカル開発用 STS の有効化  
+- 手順 3 – ユーザー認証のためのローカル開発用 STS の有効化  
   
--   手順 4 – ASP.NET アプリケーションを変更してサインイン状態を表示する  
+- 手順 4 – ASP.NET アプリケーションを変更してサインイン状態を表示する  
   
--   手順 5 – WIF と ASP.NET アプリケーション間の統合のテスト  
+- 手順 5 – WIF と ASP.NET アプリケーション間の統合のテスト  
   
 ## <a name="step-1--install-the-identity-and-access-extension"></a>手順 1 – Identity and Access 拡張機能をインストールする  
  この手順では、Identity and Access 拡張機能を Visual Studio 2012 用に構成する方法を説明します。 この拡張機能により、STS エンドポイントと通信するようにアプリケーションを構成するプロセスが自動化されます。  

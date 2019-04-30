@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 218279684304b766a9bf009f5891ac4910254a3c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994384"
 ---
 # <a name="icordebugprocessreadmemory-method"></a>ICorDebugProcess::ReadMemory メソッド
 このプロセスのメモリの指定された領域を読み取ります。  

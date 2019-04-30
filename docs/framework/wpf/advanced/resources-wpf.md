@@ -9,11 +9,11 @@ helpviewer_keywords:
 - reusing commonly defined objects [WPF]
 ms.assetid: 12ae4b67-cd0c-4c4d-a188-2c3de173bbb9
 ms.openlocfilehash: 3097fe627377e98ab283a5b6178acb9f74fc487c
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981891"
 ---
 # <a name="resources-wpf"></a>リソース (WPF)
 リソースは、アプリケーション内の別の場所で再利用できるオブジェクトです。 WPF では、さまざまな種類のリソースをサポートします。 これらのリソースは、主に 2 種類のリソースです。XAML のリソースとリソース データ ファイル。 XAML リソースの例には、ブラシ、スタイルが含まれます。 リソース データ ファイルは、アプリケーションに必要なデータの非実行可能ファイルです。  

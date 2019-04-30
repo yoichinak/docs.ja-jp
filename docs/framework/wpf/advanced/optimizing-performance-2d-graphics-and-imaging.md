@@ -13,11 +13,11 @@ helpviewer_keywords:
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
 ms.openlocfilehash: 4fca9231872a268470c9bcfa73e7a0c0a26d300c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981943"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>パフォーマンスの最適化:2D グラフィックスとイメージング
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、アプリケーションの要件に合わせて最適化できる広範な 2D グラフィックス機能とイメージング機能が用意されています。 このトピックでは、この領域でのパフォーマンスの最適化に関する情報を提供します。  
@@ -34,13 +34,13 @@ ms.locfileid: "59074990"
   
  4 つの種類があります<xref:System.Windows.Media.Drawing>オブジェクト。  
   
--   <xref:System.Windows.Media.GeometryDrawing> 図形を描画します。  
+- <xref:System.Windows.Media.GeometryDrawing> 図形を描画します。  
   
--   <xref:System.Windows.Media.ImageDrawing> イメージを描画します。  
+- <xref:System.Windows.Media.ImageDrawing> イメージを描画します。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> テキストを描画します。  
+- <xref:System.Windows.Media.GlyphRunDrawing> テキストを描画します。  
   
--   <xref:System.Windows.Media.DrawingGroup> 他の描画を描画します。 他の描画を 1 つの複合描画に結合するには、描画グループを使用します。  
+- <xref:System.Windows.Media.DrawingGroup> 他の描画を描画します。 他の描画を 1 つの複合描画に結合するには、描画グループを使用します。  
   
  <xref:System.Windows.Media.GeometryDrawing>オブジェクトは、ジオメトリ コンテンツをレンダリングするために使用します。 <xref:System.Windows.Media.Geometry>クラスとなど、そこから派生する具象クラス<xref:System.Windows.Media.CombinedGeometry>、 <xref:System.Windows.Media.EllipseGeometry>、および<xref:System.Windows.Media.PathGeometry>、2D グラフィックスのレンダリングの手段を提供するだけでなくヒット テストとクリッピングのサポートを提供します。 ジオメトリ オブジェクトを使用すると、たとえば、コントロールの領域を定義したり、イメージに適用するクリップ領域を定義したりすることができます。 ジオメトリ オブジェクトは、四角形や円などの単純な領域にすることも、2 つ以上のジオメトリ オブジェクトから作成された複合的な領域にすることもできます。 複雑な幾何学領域を結合して作成できる<xref:System.Windows.Media.PathSegment>-など、オブジェクトの派生<xref:System.Windows.Media.ArcSegment>、 <xref:System.Windows.Media.BezierSegment>、および<xref:System.Windows.Media.QuadraticBezierSegment>します。  
   
@@ -70,13 +70,13 @@ ms.locfileid: "59074990"
   
  イメージを使用する際には、パフォーマンスを向上させるために以下の推奨事項をご検討ください。  
   
--   アプリケーションでサムネイル イメージを表示する必要がある場合は、縮小版のイメージを作成することをご検討ください。 既定では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は読み込んだイメージを本来のサイズにデコードします。 サムネイル バージョンのイメージのみが必要な場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] がイメージを本来のサイズにデコードしてからサムネイル サイズに縮小するという無駄が生じます。 この不要なオーバーヘッドを回避するには、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に対してイメージをサムネイル サイズにデコードするように要求するか、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] にサムネイル サイズのイメージを読み込むように要求します。  
+- アプリケーションでサムネイル イメージを表示する必要がある場合は、縮小版のイメージを作成することをご検討ください。 既定では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]は読み込んだイメージを本来のサイズにデコードします。 サムネイル バージョンのイメージのみが必要な場合は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] がイメージを本来のサイズにデコードしてからサムネイル サイズに縮小するという無駄が生じます。 この不要なオーバーヘッドを回避するには、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に対してイメージをサムネイル サイズにデコードするように要求するか、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] にサムネイル サイズのイメージを読み込むように要求します。  
   
--   イメージは常に、既定のサイズではなく必要なサイズにデコードするようにしてください。 前述のように、既定の実際のサイズではなく必要なサイズにイメージをデコードするように [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に要求します。 これにより、アプリケーションの作業セットを縮小できるだけでなく、実行速度も向上します。  
+- イメージは常に、既定のサイズではなく必要なサイズにデコードするようにしてください。 前述のように、既定の実際のサイズではなく必要なサイズにイメージをデコードするように [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に要求します。 これにより、アプリケーションの作業セットを縮小できるだけでなく、実行速度も向上します。  
   
--   可能であれば、複数のイメージを 1 つに結合します (複数のイメージから成るフィルム ストリップなど)。  
+- 可能であれば、複数のイメージを 1 つに結合します (複数のイメージから成るフィルム ストリップなど)。  
   
--   詳しくは、「 [イメージングの概要](../graphics-multimedia/imaging-overview.md)」をご覧ください。  
+- 詳しくは、「 [イメージングの概要](../graphics-multimedia/imaging-overview.md)」をご覧ください。  
   
 ### <a name="bitmapscalingmode"></a>BitmapScalingMode  
  ビットマップのスケーリングをアニメーション化する場合、既定の高品質イメージの再サンプリング アルゴリズムは、フレーム レートを低下させるほどシステム リソースを消費する場合があり、実際にはアニメーションの動きが滑らかでなくなることがあります。 設定して、<xref:System.Windows.Media.RenderOptions.BitmapScalingMode%2A>のプロパティ、<xref:System.Windows.Media.RenderOptions>オブジェクトを<xref:System.Windows.Media.BitmapScalingMode.LowQuality>ビットマップをスケーリングするときより滑らかなアニメーションを作成することができます。 <xref:System.Windows.Media.BitmapScalingMode.LowQuality> モードでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]イメージを処理するときに、品質に最適化されたアルゴリズムから速度に最適化されたアルゴリズムに切り替えるにレンダリング エンジン。  

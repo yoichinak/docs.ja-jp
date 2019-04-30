@@ -3,11 +3,11 @@ title: 'チュートリアル: 型プロバイダーを作成します。'
 description: F# 3.0 で基本的な概念を説明するためにいくつかの単純型プロバイダーを調べることで、独自の F# 型プロバイダーを作成する方法について説明します。
 ms.date: 02/02/2019
 ms.openlocfilehash: 14e3035d03438aaaa2f6e64210f99e1f149db274
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678424"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982619"
 ---
 # <a name="tutorial-create-a-type-provider"></a>チュートリアル: 型プロバイダーを作成します。
 
@@ -53,7 +53,7 @@ F#エコシステムには、一般的に使用されるインターネットや
 
 ## <a name="a-simple-type-provider"></a>単純な型プロバイダー
 
-このサンプルは、ある Samples.HelloWorldTypeProvider、サンプルでは、ような`examples`のディレクトリ、 [F# 型プロバイダーの SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)します。 このプロバイダーは、次のコードが示すように、F# シグネチャ構文を使用して `Type1` 以外の詳細を省略することで、消去型 100 個を含む "型空間" を使用可能にします。 消去型の詳細については、[の詳細については消去指定された型が](#details-about-erased-provided-types)このトピックで後述を参照してください。
+このサンプルは、ある Samples.HelloWorldTypeProvider、サンプルでは、ような`examples`のディレクトリ、 [F# 型プロバイダーの SDK](https://github.com/fsprojects/FSharp.TypeProviders.SDK/)します。 このプロバイダーは、次のコードが示すように、F# シグネチャ構文を使用して `Type1` 以外の詳細を省略することで、消去型 100 個を含む "型空間" を使用可能にします。 消去型の詳細については、次を参照してください。[の詳細については消去指定された型が](#details-about-erased-provided-types)このトピックで後述します。
 
 ```fsharp
 namespace Samples.HelloWorldTypeProvider
@@ -164,7 +164,7 @@ devenv.exe /debugexe fsc.exe -r:bin\Debug\HelloWorldTypeProvider.dll script.fsx
 
 代わりに、Visual Studio を開き、[デバッグ] メニューを開き、 `Debug/Attach to process…`、別にアタッチ`devenv`スクリプトを編集しているプロセス。 この方法を使用すると、2 番目のインスタンス (IntelliSense およびその他の機能をすべて備えている) に式を対話形式で入力できるので、型プロバイダー内の特定のロジックを簡単に対象とすることができます。
 
-生成されたコード内のエラーを特定しやすくするために、マイ コードのみのデバッグを無効にできます。 有効またはこの機能を無効にする方法については、[デバッガーでコード間の移動](/visualstudio/debugger/navigating-through-code-with-the-debugger)を参照してください。 また、初回例外のキャッチを開いて設定も、`Debug`メニューを`Exceptions`またはキーを押し、Ctrl + Alt + E キーを開く、 `Exceptions`  ダイアログ ボックス。 そのダイアログ ボックスで `Common Language Runtime Exceptions`を選択、`Thrown`チェック ボックスをオンします。
+生成されたコード内のエラーを特定しやすくするために、マイ コードのみのデバッグを無効にできます。 有効またはこの機能を無効にする方法については、次を参照してください。[デバッガーでコード間の移動](/visualstudio/debugger/navigating-through-code-with-the-debugger)します。 また、初回例外のキャッチを開いて設定も、`Debug`メニューを`Exceptions`またはキーを押し、Ctrl + Alt + E キーを開く、 `Exceptions`  ダイアログ ボックス。 そのダイアログ ボックスで `Common Language Runtime Exceptions`を選択、`Thrown`チェック ボックスをオンします。
 
 ### <a name="implementation-of-the-type-provider"></a>型プロバイダーの実装
 

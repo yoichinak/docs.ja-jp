@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ [Visual Basic], features supporting LINQ
 ms.assetid: c821bb50-b6f6-4cf9-8aba-2717e465bd3a
 ms.openlocfilehash: 155d5c36483accc12d066a5530fea20a563e1498
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814498"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977562"
 ---
 # <a name="visual-basic-features-that-support-linq"></a>LINQ をサポートする Visual Basic の機能
 名前[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]クエリ構文のサポートを言語で直接その他の言語を構築します、Visual Basic でのテクノロジを参照します。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]、外部データ ソースに対してクエリを新しい言語を習得する必要はありません。 Visual Basic を使用してリレーショナル データベース、XML ストア、またはオブジェクト内のデータのクエリを行うことができます。 この統合言語クエリ機能の有効に構文エラーとタイプ セーフのコンパイル時にチェックします。 この統合は、Visual Basic での高度でさまざまなクエリを記述するために必要なほとんどを既に把握しているにも確認します。  

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7bc409d409cd4da54b61b16d069ce50c2456b53d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330962"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985844"
 ---
 # <a name="corbindtoruntimeex-function"></a>CorBindToRuntimeEx 関数
 アンマネージ ホストが共通言語ランタイム (CLR: Common Language Runtime) をプロセスに読み込むことを有効にします。 [CorBindToRuntime](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntime-function.md)と`CorBindToRuntimeEx`関数は、同じ操作を実行が、`CorBindToRuntimeEx`関数では、CLR の動作を指定するフラグを設定することができます。  
@@ -31,18 +31,18 @@ ms.locfileid: "59330962"
   
  この関数は、次の操作をホストに許可するパラメーターを受け取ります。  
   
--   読み込むランタイムのバージョンを指定します。  
+- 読み込むランタイムのバージョンを指定します。  
   
--   サーバー ビルドまたはワークステーション ビルドのどちらを読み込むのかを指定します。  
+- サーバー ビルドまたはワークステーション ビルドのどちらを読み込むのかを指定します。  
   
--   同時実行ガベージ コレクションを実行するか、または非同時実行ガベージ コレクションを実行するかを制御します。  
+- 同時実行ガベージ コレクションを実行するか、または非同時実行ガベージ コレクションを実行するかを制御します。  
   
 > [!NOTE]
 >  同時実行ガベージ コレクションは、Intel Itanium アーキテクチャ (以前の IA-64) を実装する 64 ビット システム上で WOW64 x86 エミュレーターを実行しているアプリケーションではサポートされません。 64 ビット Windows システム上で WOW64 の使用に関する詳細については、次を参照してください。[を実行している 32 ビット アプリケーション](/windows/desktop/WinProg64/running-32-bit-applications)します。  
   
--   アセンブリをドメイン中立として読み込むかどうかを制御します。  
+- アセンブリをドメイン中立として読み込むかどうかを制御します。  
   
--   インターフェイス ポインターを取得、 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)が開始する前に、CLR のインスタンスを構成するための追加のオプションを設定できます。  
+- インターフェイス ポインターを取得、 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)が開始する前に、CLR のインスタンスを構成するための追加のオプションを設定できます。  
   
 ## <a name="syntax"></a>構文  
   
@@ -75,31 +75,31 @@ HRESULT CorBindToRuntimeEx (
  `startupFlags`  
  [in]値の組み合わせ、 [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)列挙体。 これらのフラグは、同時実行ガベージ コレクション、ドメインに中立なコード、および `pwszVersion` パラメーターの動作を制御します。 どのフラグも設定されていない場合は、既定はシングル ドメインになります。 有効な値は、次のとおりです。  
   
--   `STARTUP_CONCURRENT_GC`  
+- `STARTUP_CONCURRENT_GC`  
   
--   `STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`  
+- `STARTUP_LOADER_OPTIMIZATION_SINGLE_DOMAIN`  
   
--   `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`  
+- `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN`  
   
--   `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`  
+- `STARTUP_LOADER_OPTIMIZATION_MULTI_DOMAIN_HOST`  
   
--   `STARTUP_LOADER_SAFEMODE`  
+- `STARTUP_LOADER_SAFEMODE`  
   
--   `STARTUP_LEGACY_IMPERSONATION`  
+- `STARTUP_LEGACY_IMPERSONATION`  
   
--   `STARTUP_LOADER_SETPREFERENCE`  
+- `STARTUP_LOADER_SETPREFERENCE`  
   
--   `STARTUP_SERVER_GC`  
+- `STARTUP_SERVER_GC`  
   
--   `STARTUP_HOARD_GC_VM`  
+- `STARTUP_HOARD_GC_VM`  
   
--   `STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`  
+- `STARTUP_SINGLE_VERSION_HOSTING_INTERFACE`  
   
--   `STARTUP_LEGACY_IMPERSONATION`  
+- `STARTUP_LEGACY_IMPERSONATION`  
   
--   `STARTUP_DISABLE_COMMITTHREADSTACK`  
+- `STARTUP_DISABLE_COMMITTHREADSTACK`  
   
--   `STARTUP_ALWAYSFLOW_IMPERSONATION`  
+- `STARTUP_ALWAYSFLOW_IMPERSONATION`  
   
  これらのフラグの説明については、次を参照してください。、 [STARTUP_FLAGS](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)列挙体。  
   
@@ -124,9 +124,9 @@ HRESULT CorBindToRuntimeEx (
   
 2. 処理の既定のモードを、現在のスレッドの <xref:System.Security.Principal.WindowsIdentity> 設定がどの状態でも <xref:System.Threading.ExecutionContext> オブジェクトは非同期ポイント間をフローしない、バージョン 1 互換モードに変更します。 既定のモードを変更する方法は、CLR を読み込むときにマネージド実行可能ファイルを使用するか、アンマネージド ホスト インターフェイスを使用するかに応じて異なります。  
   
-    1.  マネージ実行可能ファイル、設定する必要があります、`enabled`の属性、 [ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)要素`true`します。  
+    1. マネージ実行可能ファイル、設定する必要があります、`enabled`の属性、 [ \<legacyImpersonationPolicy >](../../../../docs/framework/configure-apps/file-schema/runtime/legacyimpersonationpolicy-element.md)要素`true`します。  
   
-    2.  アンマネージ ホスト インターフェイスを使用する場合は、`STARTUP_LEGACY_IMPERSONATION` 関数を呼び出すときの `startupFlags` パラメーターに `CorBindToRuntimeEx` フラグを設定します。  
+    2. アンマネージ ホスト インターフェイスを使用する場合は、`STARTUP_LEGACY_IMPERSONATION` 関数を呼び出すときの `startupFlags` パラメーターに `CorBindToRuntimeEx` フラグを設定します。  
   
      バージョン 1 互換モードは、その処理全体および処理のすべてのアプリケーション ドメインに適用されます。  
   

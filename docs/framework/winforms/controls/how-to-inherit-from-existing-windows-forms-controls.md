@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms], inheritance
 ms.assetid: 1e1fc8ea-c615-4cf0-a356-16d6df7444ab
 ms.openlocfilehash: 788addee7c024577d029626da4aeb86d0ca9076a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941155"
 ---
 # <a name="how-to-inherit-from-existing-windows-forms-controls"></a>方法: 既存の Windows フォーム コントロールから継承する
 既存のコントロールの機能を拡張する場合は、継承によって既存のコントロールから派生したコントロールを作成できます。 既存のコントロールから継承すると、そのコントロールのすべての機能およびビジュアル プロパティが引き継がれます。 継承するコントロールを作成する場合など<xref:System.Windows.Forms.Button>は、新しいコントロールになります、act とまったく同じ標準<xref:System.Windows.Forms.Button>コントロール。 その後で、カスタム メソッドやカスタム プロパティの実装によって、新しいコントロールの機能を拡張または変更できます。 一部のコントロールで変更することできますも継承されたコントロールの外観をオーバーライドしてその<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド。  

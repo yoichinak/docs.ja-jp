@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms, keyboard input
 ms.assetid: 9a29433c-a180-49bb-b74c-d187786584c8
 ms.openlocfilehash: ddc2f3338b231ab3ae59e65bc82c00bb8f663540
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966968"
 ---
 # <a name="how-keyboard-input-works"></a>キーボード入力のしくみ
 Windows フォームは、Windows メッセージに応答してキーボード イベントを発生させることにより、キーボード入力を処理します。 多くの Windows フォーム アプリケーションは、キーボード イベントを処理することによってキーボード入力を排他的に処理します。 しかし、高度なキーボード入力のシナリオ (キーがコントロールに到達する前にインターセプトするなど) を実装するためには、キーボード メッセージのしくみについて理解することが必要です。 このトピックでは、Windows フォームが認識するキー データの種類について説明し、キーボード メッセージをルーティングする方法について概要を説明します。 キーボード イベントの詳細については、「[キーボード イベントの使用](using-keyboard-events.md)」を参照してください。  

@@ -8,20 +8,20 @@ ms.assetid: 926adde2-c123-452e-bf4f-4b977bf06ffb
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7261e5ce06a4ac20b1e7c816ababf8c8ba129b29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949280"
 ---
 # <a name="jit-tracing-etw-events"></a>JIT トレース ETW イベント
 <a name="top"></a> これらのイベントは、Just-in-time (JIT) インライン展開と JIT 末尾呼び出しの成功または失敗に関する情報を収集します。  
   
  JIT トレース イベントは、次の 2 つのカテゴリで構成されます。  
   
--   [JIT インライン展開イベント](#jit_inlining_events)  
+- [JIT インライン展開イベント](#jit_inlining_events)  
   
--   [JIT 末尾呼び出しイベント](#jit_tail_call_events)  
+- [JIT 末尾呼び出しイベント](#jit_tail_call_events)  
   
 <a name="jit_inlining_events"></a>   
 ## <a name="jit-inlining-events"></a>JIT インライン展開イベント  

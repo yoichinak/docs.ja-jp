@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
 ms.openlocfilehash: a535a6b951dc9872109527f78d7de5f3fcdd3292
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971645"
 ---
 # <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>プロパティ '\<propertyname >' は、すべてのコード パスで値を返しません
 プロパティ '\<propertyname >' は、すべてのコード パスで値を返しません。 この結果が使用されると、実行時に Null 参照例外が生じる可能性があります。  
@@ -21,11 +21,11 @@ ms.locfileid: "58821882"
   
  プロパティから値を返すことができます`Get`次の方法のいずれかの手順。  
   
--   プロパティ名に値を代入し、実行、`Exit Property`ステートメント。  
+- プロパティ名に値を代入し、実行、`Exit Property`ステートメント。  
   
--   プロパティ名に値を代入し、実行、`End Get`ステートメント。  
+- プロパティ名に値を代入し、実行、`End Get`ステートメント。  
   
--   値を含める、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)します。  
+- 値を含める、 [Return ステートメント](../../../visual-basic/language-reference/statements/return-statement.md)します。  
   
  コントロールに渡します`Exit Property`または`End Get`プロパティ名の後に任意の値が割り当てられていないと、`Get`プロパティのデータ型の既定値を返します。 詳細については、「動作」を参照してください[関数ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)します。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "58821882"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   制御フローのロジックを確認し、すべてが値を返すステートメントの前に値を代入するかどうかを確認します。  
+- 制御フローのロジックを確認し、すべてが値を返すステートメントの前に値を代入するかどうかを確認します。  
   
      常に使用する場合に、プロシージャからリターンごとに値を返すことを保証する方が簡単、`Return`ステートメント。 この場合、最後のステートメントの前に`End Get`する必要があります、`Return`ステートメント。  
   

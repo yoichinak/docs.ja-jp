@@ -9,11 +9,11 @@ helpviewer_keywords:
 - custom animation classes [WPF]
 ms.assetid: 9be69d50-3384-4938-886f-08ce00e4a7a6
 ms.openlocfilehash: 268d218097233aee795154226cc6f7c3ce318f5c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313945"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010151"
 ---
 # <a name="custom-animations-overview"></a>カスタム アニメーションの概要
 このトピックでは、カスタム キー フレームやアニメーション クラスを作成して、またはフレームごとのコールバックを使ってバイパスすることにより、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のアニメーション システムを拡張する方法と、それが必要な状況について説明します。  
@@ -28,11 +28,11 @@ ms.locfileid: "59313945"
 ## <a name="extending-the-animation-system"></a>アニメーション システムの拡張  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のアニメーション システムには、使う組み込み機能のレベルに応じて、さまざまな拡張方法があります。  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のアニメーション エンジンには、次の 3 つの主な機能拡張ポイントがあります。  
   
--   いずれかから継承することによって、カスタム キー フレーム オブジェクトを作成、 *\<型 >* などのキーフレーム クラス<xref:System.Windows.Media.Animation.DoubleKeyFrame>します。 この方法では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アニメーション エンジンの組み込み機能のほとんどを使います。  
+- いずれかから継承することによって、カスタム キー フレーム オブジェクトを作成、 *\<型 >* などのキーフレーム クラス<xref:System.Windows.Media.Animation.DoubleKeyFrame>します。 この方法では、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アニメーション エンジンの組み込み機能のほとんどを使います。  
   
--   継承することによって、独自のアニメーション クラスを作成する<xref:System.Windows.Media.Animation.AnimationTimeline>またはのいずれか、 *\<型 >* AnimationBase クラス。  
+- 継承することによって、独自のアニメーション クラスを作成する<xref:System.Windows.Media.Animation.AnimationTimeline>またはのいずれか、 *\<型 >* AnimationBase クラス。  
   
--   フレームごとのコールバックを使って、フレームごとにアニメーションを生成します。 この方法は、アニメーションおよびタイミング システムを完全にバイパスします。  
+- フレームごとのコールバックを使って、フレームごとにアニメーションを生成します。 この方法は、アニメーションおよびタイミング システムを完全にバイパスします。  
   
  次の表では、いくつかのアニメーション システム拡張シナリオについて説明します。  
   
@@ -47,11 +47,11 @@ ms.locfileid: "59313945"
 ## <a name="create-a-custom-key-frame"></a>カスタム キー フレームを作成する  
  カスタム キー フレーム クラスの作成は、アニメーション システムを拡張する最も簡単な方法です。 キー フレーム アニメーションに対して異なる補間方法が必要なときは、このアプローチを使います。  「[キー フレーム アニメーションの概要](key-frame-animations-overview.md)」で説明されているように、キー フレーム アニメーションはキー フレーム オブジェクトを使って出力値を生成します。 各キー フレーム オブジェクトは 3 つの機能を実行します。  
   
--   使用してターゲット値を指定します。 その<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>プロパティ。  
+- 使用してターゲット値を指定します。 その<xref:System.Windows.Media.Animation.IKeyFrame.Value%2A>プロパティ。  
   
--   これでその値に到達するを使用して時間を指定します、<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>プロパティ。  
+- これでその値に到達するを使用して時間を指定します、<xref:System.Windows.Media.Animation.IKeyFrame.KeyTime%2A>プロパティ。  
   
--   InterpolateValueCore メソッドを実装することで、前のキー フレームの値とそれ自体の値の間を補間します。  
+- InterpolateValueCore メソッドを実装することで、前のキー フレームの値とそれ自体の値の間を補間します。  
   
  **実装の説明**  
   
@@ -87,13 +87,13 @@ ms.locfileid: "59313945"
   
  派生、<xref:System.Windows.Media.Animation.AnimationTimeline>クラスし、次のメンバーをオーバーライドします。  
   
--   <xref:System.Windows.Freezable.CreateInstanceCore%2A> – オーバーライドする必要があります新しいクラスが具象の場合、<xref:System.Windows.Freezable.CreateInstanceCore%2A>クラスの新しいインスタンスを返します。  
+- <xref:System.Windows.Freezable.CreateInstanceCore%2A> – オーバーライドする必要があります新しいクラスが具象の場合、<xref:System.Windows.Freezable.CreateInstanceCore%2A>クラスの新しいインスタンスを返します。  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – アニメーションの現在の値を返すには、このメソッドをオーバーライドします。 3 つのパラメーターを受け取ります。 既定値は配信元、変換先の既定値では、および<xref:System.Windows.Media.Animation.AnimationClock>。 使用して、<xref:System.Windows.Media.Animation.AnimationClock>を現在の時刻またはアニメーションの進行状況を取得します。 既定の開始値と終了値を使うかどうかを選択できます。  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A> – アニメーションの現在の値を返すには、このメソッドをオーバーライドします。 3 つのパラメーターを受け取ります。 既定値は配信元、変換先の既定値では、および<xref:System.Windows.Media.Animation.AnimationClock>。 使用して、<xref:System.Windows.Media.Animation.AnimationClock>を現在の時刻またはアニメーションの進行状況を取得します。 既定の開始値と終了値を使うかどうかを選択できます。  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – アニメーションがで指定された既定の終了値を使用するかどうかを指定するには、このプロパティのオーバーライド、<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>メソッド。  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.IsDestinationDefault%2A> – アニメーションがで指定された既定の終了値を使用するかどうかを指定するには、このプロパティのオーバーライド、<xref:System.Windows.Media.Animation.AnimationTimeline.GetCurrentValue%2A>メソッド。  
   
--   <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – かを示すには、このプロパティのオーバーライド、<xref:System.Type>出力のアニメーションが生成されます。  
+- <xref:System.Windows.Media.Animation.AnimationTimeline.TargetPropertyType%2A> – かを示すには、このプロパティのオーバーライド、<xref:System.Type>出力のアニメーションが生成されます。  
   
  クラスが依存関係プロパティを使ってデータを保存しない場合、または作成の後で追加の初期化が必要な場合は、他のメソッドのオーバーライドが必要な場合があります。詳しくは、「[Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)」をご覧ください。  
   

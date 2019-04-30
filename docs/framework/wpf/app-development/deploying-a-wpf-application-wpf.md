@@ -6,11 +6,11 @@ helpviewer_keywords:
 - deployment [WPF], applications
 ms.assetid: 12cadca0-b32c-4064-9a56-e6a306dcc76d
 ms.openlocfilehash: 0ffd4fb05a5a409d74f8a9401a5fb021db0cd99b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981533"
 ---
 # <a name="deploying-a-wpf-application-wpf"></a>WPF アプリケーションの配置 (WPF)
 Windows Presentation Foundation (WPF) アプリケーションを構築した後、展開する必要があります。 [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] .NET Framework にはいくつかの展開テクノロジが含まれます。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの配置に使用される配置テクノロジは、アプリケーションの種類によって決まります。 このトピックでは、それぞれの配置テクノロジの概要と使用法を、それぞれの [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの種類の配置要件に関連して説明します。  
@@ -19,21 +19,21 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
 ## <a name="deployment-technologies"></a>配置テクノロジ  
  [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] .NET Framework など、いくつかの展開テクノロジのとおりです。  
   
--   XCopy による配置。  
+- XCopy による配置。  
   
--   [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] による配置。  
+- [!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] による配置。  
   
--   [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] による配置。  
+- [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] による配置。  
   
 <a name="XCopy_Deployment"></a>   
 ### <a name="xcopy-deployment"></a>XCopy による配置  
  XCopy による配置とは、XCopy コマンド ライン プログラムを使用して、ある場所から別の場所へファイルをコピーすることです。 XCopy による配置は、次のような状況に適しています。  
   
--   アプリケーションは自己完結型である。 実行するためにクライアントを更新する必要がない。  
+- アプリケーションは自己完結型である。 実行するためにクライアントを更新する必要がない。  
   
--   アプリケーション ファイルをある場所から別の場所へ、たとえば、ビルド場所 (ローカル ディスク、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] ファイル共有など) から公開場所 (Web サイト、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] ファイル共有など) へ移動する必要がある。  
+- アプリケーション ファイルをある場所から別の場所へ、たとえば、ビルド場所 (ローカル ディスク、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] ファイル共有など) から公開場所 (Web サイト、[!INCLUDE[TLA2#tla_unc](../../../../includes/tla2sharptla-unc-md.md)] ファイル共有など) へ移動する必要がある。  
   
--   アプリケーションはシェル統合 ([スタート] メニューのショートカット、デスクトップ アイコンなど) を必要としない。  
+- アプリケーションはシェル統合 ([スタート] メニューのショートカット、デスクトップ アイコンなど) を必要としない。  
   
  XCopy は、単純な配置シナリオには適していますが、複雑な配置機能が必要なシナリオには十分に対応できません。 特に、配置を堅牢な方法で管理する場合、XCopy を使用すると、スクリプトの作成、実行、および維持というオーバーヘッドが生じます。 さらに、XCopy は、バージョン管理、アンインストール、およびロールバックをサポートしません。  
   
@@ -49,15 +49,15 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
 ### <a name="clickonce-deployment"></a>ClickOnce 配置  
  [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] を使用すると、非 Web アプリケーションを Web スタイル アプリケーションと同じように配置できます。 アプリケーションは、Web サーバーまたはファイル サーバーに公開され、これらのサーバーから配置されます。 [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] は、[!INCLUDE[TLA2#tla_wininstall](../../../../includes/tla2sharptla-wininstall-md.md)] によってインストールされるアプリケーションがサポートするような広い範囲のクライアント機能をサポートするわけではありませんが、次のような機能をサポートします。  
   
--   [スタート] メニューおよび [プログラム] コントロール パネルとの統合。  
+- [スタート] メニューおよび [プログラム] コントロール パネルとの統合。  
   
--   バージョン管理、ロールバック、およびアンインストール。  
+- バージョン管理、ロールバック、およびアンインストール。  
   
--   アプリケーションを常に配置場所から起動するオンライン インストール モード。  
+- アプリケーションを常に配置場所から起動するオンライン インストール モード。  
   
--   新しいバージョンがリリースされたときの自動更新。  
+- 新しいバージョンがリリースされたときの自動更新。  
   
--   ファイル拡張子の登録。  
+- ファイル拡張子の登録。  
   
  [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] の詳細については、「[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。  
   
@@ -65,11 +65,11 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
 ## <a name="deploying-wpf-applications"></a>WPF アプリケーションの配置  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションの配置オプションは、アプリケーションの種類によって決まります。 配置の観点から見ると、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] には次の 3 種類のアプリケーションがあります。  
   
--   スタンドアロン アプリケーション。  
+- スタンドアロン アプリケーション。  
   
--   マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] アプリケーション。  
+- マークアップのみの [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] アプリケーション。  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)]。  
   
 <a name="Deploying_Standalone_Applications"></a>   
 ### <a name="deploying-standalone-applications"></a>スタンドアロン アプリケーションの配置  
@@ -89,11 +89,11 @@ Windows Presentation Foundation (WPF) アプリケーションを構築した後
 ### <a name="deploying-xaml-browser-applications"></a>XAML ブラウザー アプリケーションの配置  
  [!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] は、次の 3 つのファイルを配置する必要があるコンパイル済みのアプリケーションです。  
   
--   *ApplicationName*.exe:実行可能アセンブリのアプリケーション ファイル。  
+- *ApplicationName*.exe:実行可能アセンブリのアプリケーション ファイル。  
   
--   *ApplicationName*.xbap:配置マニフェスト。  
+- *ApplicationName*.xbap:配置マニフェスト。  
   
--   *ApplicationName*exe.manifest:。アプリケーション マニフェスト。  
+- *ApplicationName*exe.manifest:。アプリケーション マニフェスト。  
   
 > [!NOTE]
 >  配置マニフェストおよびアプリケーション マニフェストの詳細については、「[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md)」を参照してください。  

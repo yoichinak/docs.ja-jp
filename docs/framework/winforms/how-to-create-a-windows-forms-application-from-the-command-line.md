@@ -12,11 +12,11 @@ ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299872"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966872"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>方法: コマンドラインから Windows フォーム アプリケーションを作成します。
 次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  参照してください[チュートリアル。WPF でのフォーム コントロールのホストを Windows](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)します。  
@@ -44,11 +44,11 @@ ms.locfileid: "59299872"
   
 4. `Main` メソッドをクラスに追加します。  
   
-    1.  適用、 <xref:System.STAThreadAttribute> c# `Main` Windows フォーム アプリケーションを指定するメソッドは、シングル スレッド アパートメント。 (属性は必要ありません Visual basic で Windows フォーム アプリケーション開発された Visual Basic の使用をシングル スレッド アパートメント モデルを既定であるためです。)  
+    1. 適用、 <xref:System.STAThreadAttribute> c# `Main` Windows フォーム アプリケーションを指定するメソッドは、シングル スレッド アパートメント。 (属性は必要ありません Visual basic で Windows フォーム アプリケーション開発された Visual Basic の使用をシングル スレッド アパートメント モデルを既定であるためです。)  
   
-    2.  呼び出す<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>アプリケーションにオペレーティング システムのスタイルを適用します。  
+    2. 呼び出す<xref:System.Windows.Forms.Application.EnableVisualStyles%2A>アプリケーションにオペレーティング システムのスタイルを適用します。  
   
-    3.  フォームのインスタンスを作成して実行します。  
+    3. フォームのインスタンスを作成して実行します。  
   
      [!code-csharp[System.Windows.Forms.BasicForm#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#5)]
      [!code-vb[System.Windows.Forms.BasicForm#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#5)]  
@@ -59,11 +59,11 @@ ms.locfileid: "59299872"
   
 2. フォームをコンパイルします。  
   
-    -   C# を使用している場合は、次のように入力します。 `csc form1.cs`  
+    - C# を使用している場合は、次のように入力します。 `csc form1.cs`  
   
          `-or-`  
   
-    -   Visual Basic を使用している場合は、次のように入力します。 `vbc form1.vb`  
+    - Visual Basic を使用している場合は、次のように入力します。 `vbc form1.vb`  
   
 3. コマンド プロンプトで次のように入力します。 `Form1.exe`  
   
@@ -111,7 +111,7 @@ ms.locfileid: "59299872"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   コードをコンパイルするには、アプリケーションをコンパイルして実行する方法を説明した、前述の手順に従います。  
+- コードをコンパイルするには、アプリケーションをコンパイルして実行する方法を説明した、前述の手順に従います。  
   
 ## <a name="see-also"></a>関連項目
 

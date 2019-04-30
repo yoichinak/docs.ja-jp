@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], printing a form
 ms.assetid: c8dff5f8-f56a-4c07-ae31-64643b31f8fc
 ms.openlocfilehash: 85fb12028687578b76e0f16061deb9b9a4de70e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59121967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003978"
 ---
 # <a name="how-to-print-a-windows-form"></a>方法: Windows フォームを印刷する
 開発プロセスの一環として、通常は印刷する、Windows フォームのコピー。 次のコード例を使用して、現在のフォームのコピーを印刷する方法を示しています、<xref:System.Drawing.Graphics.CopyFromScreen%2A>メソッド。  
@@ -30,9 +30,9 @@ ms.locfileid: "59121967"
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   プリンターにアクセスするためのアクセス許可がありません。  
+- プリンターにアクセスするためのアクセス許可がありません。  
   
--   プリンターをインストールすることはありません。  
+- プリンターをインストールすることはありません。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  このコード例を実行するのには、コンピューターで使用するプリンターにアクセスするためのアクセス許可が必要です。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - progress controls [Windows Forms]
 ms.assetid: cb3eb0a8-60b1-483e-a03f-93b0b1351dae
 ms.openlocfilehash: 03f078da96a48ed0f53697661cb2add1d6c01901
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158965"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009293"
 ---
 # <a name="toolstripprogressbar-control"></a>ToolStripProgressBar コントロール
 <xref:System.Windows.Forms.ToolStripProgressBar>結合<xref:System.Windows.Forms.ToolStrip>レンダリングと、その一般的なプロセスの追跡機能と機能をラフティングします。  

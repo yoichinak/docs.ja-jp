@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 490aa0e5-5242-4f8d-b505-5ec6287633b4
 ms.openlocfilehash: 15304630eb8a14e01d4815ddddc84cd32796fdcf
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963450"
 ---
 # <a name="localservicesecuritysettings"></a>LocalServiceSecuritySettings
 LocalServiceSecuritySettings  

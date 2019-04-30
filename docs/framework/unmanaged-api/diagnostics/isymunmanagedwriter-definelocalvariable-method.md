@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c561eb70f0e3d243984decfb39629601f8eeea37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955403"
 ---
 # <a name="isymunmanagedwriterdefinelocalvariable-method"></a>ISymUnmanagedWriter::DefineLocalVariable メソッド
 現在の構文のスコープの変数を 1 つ定義します。 このメソッドをスコープ全体で複数のホームのある同じ名前の変数を複数回呼び出すことができます。 この場合、ただしの値、`startOffset`と`endOffset`パラメーターが重複しない必要があります。  

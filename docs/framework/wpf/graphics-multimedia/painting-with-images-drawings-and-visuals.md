@@ -13,11 +13,11 @@ helpviewer_keywords:
 - brushes [WPF], painting with visuals
 ms.assetid: 779aac3f-8d41-49d8-8130-768244aa2240
 ms.openlocfilehash: 826c5a0656a9a7e7cff0e96fc6755c5c9c717993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002288"
 ---
 # <a name="painting-with-images-drawings-and-visuals"></a>イメージ、描画、およびビジュアルによる塗りつぶし
 このトピックでは、使用する方法を説明します<xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、および<xref:System.Windows.Media.VisualBrush>イメージで領域を塗りつぶすオブジェクト、 <xref:System.Windows.Media.Drawing>、または<xref:System.Windows.Media.Visual>します。  
@@ -57,15 +57,15 @@ DrawingBrush で塗りつぶされたオブジェクト
   
  A<xref:System.Windows.Media.DrawingBrush>で領域を塗りつぶす、<xref:System.Windows.Media.Drawing>オブジェクト。 A<xref:System.Windows.Media.Drawing>オブジェクトには、図形、ビットマップ、ビデオ、または行のテキストなど、表示されるコンテンツがについて説明します。 さまざまな種類の描画で、さまざまな種類のコンテンツを記述します。 次の一覧に、さまざまな種類の描画オブジェクトを示します。  
   
--   <xref:System.Windows.Media.GeometryDrawing> – 図形を描画します。  
+- <xref:System.Windows.Media.GeometryDrawing> – 図形を描画します。  
   
--   <xref:System.Windows.Media.ImageDrawing> – イメージを描画します。  
+- <xref:System.Windows.Media.ImageDrawing> – イメージを描画します。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – テキストを描画します。  
+- <xref:System.Windows.Media.GlyphRunDrawing> – テキストを描画します。  
   
--   <xref:System.Windows.Media.VideoDrawing> – オーディオまたはビデオ ファイルを再生します。  
+- <xref:System.Windows.Media.VideoDrawing> – オーディオまたはビデオ ファイルを再生します。  
   
--   <xref:System.Windows.Media.DrawingGroup> – 他の描画を描画します。 他の描画を 1 つの複合描画に結合するには、描画グループを使用します。  
+- <xref:System.Windows.Media.DrawingGroup> – 他の描画を描画します。 他の描画を 1 つの複合描画に結合するには、描画グループを使用します。  
   
  詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください、 [Drawing オブジェクトの概要](drawing-objects-overview.md)します。  
   
@@ -89,9 +89,9 @@ DrawingBrush で塗りつぶされたオブジェクト
   
  2 つの方法を指定する、<xref:System.Windows.Media.VisualBrush.Visual%2A>のコンテンツを<xref:System.Windows.Media.VisualBrush>します。  
   
--   新規作成<xref:System.Windows.Media.Visual>に設定して、<xref:System.Windows.Media.VisualBrush.Visual%2A>のプロパティ、<xref:System.Windows.Media.VisualBrush>します。 例については、次を参照してください。、[例。ビジュアルを使用してオブジェクトのペイント](#examplevisualbrush1)以下のセクション。  
+- 新規作成<xref:System.Windows.Media.Visual>に設定して、<xref:System.Windows.Media.VisualBrush.Visual%2A>のプロパティ、<xref:System.Windows.Media.VisualBrush>します。 例については、次を参照してください。、[例。ビジュアルを使用してオブジェクトのペイント](#examplevisualbrush1)以下のセクション。  
   
--   既存の使用<xref:System.Windows.Media.Visual>、ターゲットの重複するイメージを作成する<xref:System.Windows.Media.Visual>します。 使用することができますし、<xref:System.Windows.Media.VisualBrush>反射や拡大などの興味深い効果を作成します。 例については、次を参照してください。、[例。反射を作成する](#examplevisualbrush2)セクション。  
+- 既存の使用<xref:System.Windows.Media.Visual>、ターゲットの重複するイメージを作成する<xref:System.Windows.Media.Visual>します。 使用することができますし、<xref:System.Windows.Media.VisualBrush>反射や拡大などの興味深い効果を作成します。 例については、次を参照してください。、[例。反射を作成する](#examplevisualbrush2)セクション。  
   
  新しいを定義するとき<xref:System.Windows.Media.VisualBrush.Visual%2A>の<xref:System.Windows.Media.VisualBrush>と<xref:System.Windows.Media.Visual>は、 <xref:System.Windows.UIElement> (パネルやコントロール) など、レイアウト システムがで実行、<xref:System.Windows.UIElement>とその子要素と、<xref:System.Windows.Media.VisualBrush.AutoLayoutContent%2A>プロパティに設定されて`true`。 ただし、ルート<xref:System.Windows.UIElement>は基本的に、システムの残りの部分から分離されます。 スタイル、および外部のレイアウトは、この境界を超えることはできません。 そのため、ルートのサイズを指定する必要があります明示的に<xref:System.Windows.UIElement>はの唯一の親であるため、<xref:System.Windows.Media.VisualBrush>し、そのため、できませんサイズを自動的に塗りつぶされる領域にします。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でのレイアウトの詳細については、「[レイアウト](../advanced/layout.md)」を参照してください。  
   

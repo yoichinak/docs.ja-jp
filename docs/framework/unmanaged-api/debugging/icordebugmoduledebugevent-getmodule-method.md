@@ -5,11 +5,11 @@ ms.assetid: b1141c35-4253-4e34-b3e4-ed406a9dea4f
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0c0cc1305f47f03c8c9b35bab5c980cb23d1b157
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138438"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942494"
 ---
 # <a name="icordebugmoduledebugeventgetmodule-method"></a>ICorDebugModuleDebugEvent::GetModule メソッド
 ロードまたはアンロードされたばかりのマージ モジュールを取得します。  

@@ -4,11 +4,11 @@ ms.date: 03/30/2017
 ms.assetid: 7eb50bcb-38d8-4afb-86aa-2573586697c2
 author: BrucePerlerMS
 ms.openlocfilehash: 36f7687f42c6e0d6f865a025f09c4ead6f79960c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481406"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983698"
 ---
 # <a name="windows-identity-foundation"></a>Windows Identity Foundation
 

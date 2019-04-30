@@ -10,11 +10,11 @@ helpviewer_keywords:
 ms.assetid: a49058d2-0276-43a7-9502-04adddf857b2
 author: KrzysztofCwalina
 ms.openlocfilehash: 0099c5c8a863023099b377e139461606de3e1e1c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54665137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940986"
 ---
 # <a name="names-of-namespaces"></a>名前空間の名前
 として他の名前付けのガイドラインと名前空間の名前を付けるときの目標を作成するための十分なわかりやすくするために名前空間のコンテンツがある可能性がありますをすぐにいるフレームワークを使用するプログラマにとって。 次のテンプレートは、名前空間の名前付けに関する一般的な規則を指定します。  
@@ -49,7 +49,7 @@ ms.locfileid: "54665137"
   
  異なるカテゴリの名前空間の型名の競合を回避するための特定のガイドラインがあります。  
   
--   **アプリケーション モデルの名前空間**  
+- **アプリケーション モデルの名前空間**  
   
      1 つのアプリケーション モデルに属している名前空間が同時に、使用される非常に多くの場合がほとんどない他のアプリケーション モデルの名前空間を使用します。 たとえば、<xref:System.Windows.Forms?displayProperty=nameWithType>と共に名前空間が使用される非常にまれ、<xref:System.Web.UI?displayProperty=nameWithType>名前空間。 よく知られたアプリケーション モデルの名前空間のグループの一覧を次には。  
   
@@ -60,11 +60,11 @@ ms.locfileid: "54665137"
   
      たとえば、という名前の型を追加しないでください`Page`に、<xref:System.Web.UI.Adapters?displayProperty=nameWithType>名前空間、ため、<xref:System.Web.UI?displayProperty=nameWithType>名前空間に既にという名前の型が含まれている`Page`。  
   
--   **インフラストラクチャの名前空間**  
+- **インフラストラクチャの名前空間**  
   
      このグループには、ほとんどの一般的なアプリケーションの開発時にインポートされる名前空間が含まれています。 たとえば、`.Design`プログラミングの開発ツールと名前空間は主に使用します。 これらの名前空間内の型との競合を避けるは重要ではありません。  
   
--   **コア名前空間**  
+- **コア名前空間**  
   
      すべてのコア名前空間を含める`System`アプリケーション モデルの名前空間およびインフラストラクチャの名前空間を除く、名前空間。 その他のコア名前空間が含まれます`System`、 `System.IO`、 `System.Xml`、および`System.Net`します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "54665137"
   
      たとえば、使用しないでください`Stream`型名として。 競合する<xref:System.IO.Stream?displayProperty=nameWithType>、非常によく型を使用します。  
   
--   **テクノロジの名前空間のグループ**  
+- **テクノロジの名前空間のグループ**  
   
      このカテゴリには、同じ最初の 2 つの名前空間ノードを持つすべての名前空間が含まれています。 `(<Company>.<Technology>*`)、など`Microsoft.Build.Utilities`と`Microsoft.Build.Tasks`します。 1 つのテクノロジに属している型が互いに競合しないことが重要です。  
   

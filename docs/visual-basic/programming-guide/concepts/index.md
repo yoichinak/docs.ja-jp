@@ -3,11 +3,11 @@ title: Visual Basic のプログラミング概念
 ms.date: 02/27/2017
 ms.assetid: cc9cac84-61f6-476e-b8c7-9bae7749bd90
 ms.openlocfilehash: 4c550002e1049fb716d2836737b6c3fa5b9df4f1
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966172"
 ---
 # <a name="programming-concepts-visual-basic"></a>プログラミングの概念 (Visual Basic)
 
@@ -15,7 +15,7 @@ ms.locfileid: "57677475"
 
 ## <a name="in-this-section"></a>このセクションの内容
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[Async および Await を使用した非同期プログラミング (Visual Basic)](../../../visual-basic/programming-guide/concepts/async/index.md)|[Async](../../../visual-basic/language-reference/modifiers/async.md) キーワードと [Await](../../../visual-basic/language-reference/operators/await-operator.md) キーワードを使用して非同期ソリューションを記述する方法を説明します。 チュートリアルが含まれています。|
 |[属性の概要 (Visual Basic)](../../../visual-basic/programming-guide/concepts/attributes/index.md)|属性を使用して、型、フィールド、メソッド、プロパティなどのプログラミング要素に関する追加情報を指定する方法について説明します。|

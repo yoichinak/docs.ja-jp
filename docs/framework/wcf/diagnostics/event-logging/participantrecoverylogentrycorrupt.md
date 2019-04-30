@@ -3,11 +3,11 @@ title: ParticipantRecoveryLogEntryCorrupt
 ms.date: 03/30/2017
 ms.assetid: ab34785f-f953-4428-93ca-3c50d3f50a4a
 ms.openlocfilehash: 566517a122e17078156a61e0d3808ae06d0cf93c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59075432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999090"
 ---
 # <a name="participantrecoverylogentrycorrupt"></a>ParticipantRecoveryLogEntryCorrupt
 Id:138  

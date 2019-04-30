@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, drag and drop
 ms.assetid: 65cd2c03-8782-474e-b958-cbe43eeb902c
 ms.openlocfilehash: 437b632706b27cd487d60c2ad23db3f9a3c96c09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108018"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966860"
 ---
 # <a name="drag-and-drop-functionality-in-windows-forms"></a>Windows フォームにおけるドラッグ アンド ドロップ機能
 Windows フォームには、ドラッグ アンド ドロップの動作を実装する一連のメソッド、イベント、およびクラスが含まれています。 このトピックでは、Windows フォームでのドラッグ アンド ドロップのサポートの概要について説明します。  参照してください[ドラッグ アンド ドロップ操作とクリップボードのサポート](./advanced/drag-and-drop-operations-and-clipboard-support.md)します。  

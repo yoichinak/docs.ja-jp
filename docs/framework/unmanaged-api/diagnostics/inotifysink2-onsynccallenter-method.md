@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 78aaa5d8031e7b554eee2a147d9940ff8d7f7e02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59201898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940388"
 ---
 # <a name="inotifysink2onsynccallenter-method"></a>INotifySink2::OnSyncCallEnter メソッド
 呼び出しを入力するときに呼び出されます。  

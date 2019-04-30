@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows Forms dialog boxes [Windows Forms], tabs
 ms.assetid: 2b4ea784-a39d-463c-81d8-af74ce068476
 ms.openlocfilehash: 4511882aa4c7804e535f228dd150c26a8f7689f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971939"
 ---
 # <a name="tabcontrol-control-overview-windows-forms"></a>TabControl コントロールの概要 (Windows フォーム)
 Windows フォーム <xref:System.Windows.Forms.TabControl> は、ノートの仕切りや書類キャビネットのフォルダー セットのラベルに似た、複数のタブを表示します。 タブには画像やその他のコントロールを含めることができます。 タブ コントロールは、Windows オペレーティング システムのコントロール パネルの表示プロパティなど、多くの場所に表示される複数のページ ダイアログ ボックスの種類を生成するために使用できます。 さらに、<xref:System.Windows.Forms.TabControl>関連のプロパティのグループの設定に使用されるプロパティ ページを作成するために使用できます。  

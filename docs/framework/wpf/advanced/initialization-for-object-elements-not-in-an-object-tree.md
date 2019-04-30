@@ -11,11 +11,11 @@ helpviewer_keywords:
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
 ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108967"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001469"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>オブジェクト ツリーに存在しないオブジェクト要素の初期化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の初期化処理では、プロセスに処理を委任することがあり、そのプロセスは、一般的にその要素が論理ツリーまたはビジュアル ツリーのいずれかに接続されていることを前提としています。 このトピックでは、どちらのツリーにも接続されていない要素を初期化するために必要となる場合がある手順について説明します。  

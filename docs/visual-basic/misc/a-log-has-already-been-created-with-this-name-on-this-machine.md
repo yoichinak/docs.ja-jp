@@ -3,20 +3,20 @@ title: ログは既に、この名前でこのコンピューターに作成さ�
 ms.date: 07/20/2015
 ms.assetid: 3dd78d9f-890e-4409-bebb-048fdf34711b
 ms.openlocfilehash: b3a488b668c00b8e9e77f6db6d99ea5b3f82c070
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58038153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940726"
 ---
 # <a name="a-log-has-already-been-created-with-this-name-on-this-machine"></a>ログは既に、この名前でこのコンピューターに作成されています
 既に使用されている名前でログを作成しようとしました。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   競合しているログを削除します。  
+- 競合しているログを削除します。  
   
--   ログに別の名前を使用します。  
+- ログに別の名前を使用します。  
   
 ## <a name="see-also"></a>関連項目
 

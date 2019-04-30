@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 392254efcd099aca60e58b3cc0bc61ca85aa2c66
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59099951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986519"
 ---
 # <a name="variablelocationtype-enumeration"></a>VariableLocationType 列挙型
 変数のネイティブの場所の種類を示します。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
 ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333614"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011373"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの既定のセル スタイルとデータ形式を設定する
 <xref:System.Windows.Forms.DataGridView>コントロールを使用する既定のセル スタイルを指定し、コントロール全体の特定の列、行および列のヘッダーおおよび台帳効果を作成する行を交互のデータ形式します。 既定のスタイルのコントロール全体の設定は、既定の列と交互の行のスタイル設定によって上書きされます。 さらに、個々 の行とセルのコードに設定するスタイルは、既定のスタイルをオーバーライドします。  

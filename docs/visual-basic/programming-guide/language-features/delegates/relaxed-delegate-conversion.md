@@ -7,11 +7,11 @@ helpviewer_keywords:
 - conversions [Visual Basic], relaxed delegate
 ms.assetid: 64f371d0-5416-4f65-b23b-adcbf556e81c
 ms.openlocfilehash: 57e863d9781721a997ae49e1a5c9d8f3562a1bd0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842721"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973286"
 ---
 # <a name="relaxed-delegate-conversion-visual-basic"></a>厳密でないデリゲート変換 (Visual Basic)
 厳密でないデリゲート変換を使用すると、そのシグネチャが同一でない場合でも sub や関数をデリゲートやハンドラーに割り当てることができます。 そのため、デリゲートへのバインドは既にメソッドの呼び出しは許可されているバインディングで一貫性のあるになります。  
@@ -19,7 +19,7 @@ ms.locfileid: "58842721"
 ## <a name="parameters-and-return-type"></a>パラメーターと戻り値の型  
  正確なシグネチャの一致の代わりに厳密でない変換が必要です、次の条件が満たされているときに`Option Strict`に設定されている`On`:  
   
--   各デリゲート パラメーターのデータ型から割り当てられている関数の対応するパラメーターのデータ型への拡大変換が存在する必要がありますまたは`Sub`します。 次の例では、デリゲート`Del1`1 つのパラメーター、`Integer`します。 パラメーター`m`式で割り当てられたラムダから拡大変換がある対象のデータ型である必要があります`Integer`など`Long`または`Double`します。  
+- 各デリゲート パラメーターのデータ型から割り当てられている関数の対応するパラメーターのデータ型への拡大変換が存在する必要がありますまたは`Sub`します。 次の例では、デリゲート`Del1`1 つのパラメーター、`Integer`します。 パラメーター`m`式で割り当てられたラムダから拡大変換がある対象のデータ型である必要があります`Integer`など`Long`または`Double`します。  
   
      [!code-vb[VbVbalrRelaxedDelegates#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#1)]  
   
@@ -29,7 +29,7 @@ ms.locfileid: "58842721"
   
      [!code-vb[VbVbalrRelaxedDelegates#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module2.vb#8)]  
   
--   割り当て済みの関数の戻り値の型から反対方向に拡大変換が存在する必要がありますまたは`Sub`デリゲートの戻り値の型にします。 次の例については、各割り当てられているラムダ式の本体に拡大変換をデータ型に評価する必要があります`Integer`戻り値の型のため、`del1`は`Integer`します。  
+- 割り当て済みの関数の戻り値の型から反対方向に拡大変換が存在する必要がありますまたは`Sub`デリゲートの戻り値の型にします。 次の例については、各割り当てられているラムダ式の本体に拡大変換をデータ型に評価する必要があります`Integer`戻り値の型のため、`del1`は`Integer`します。  
   
      [!code-vb[VbVbalrRelaxedDelegates#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrRelaxedDelegates/VB/Module1.vb#3)]  
   

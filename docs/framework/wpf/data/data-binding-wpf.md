@@ -8,11 +8,11 @@ helpviewer_keywords:
 - binding data [WPF]
 ms.assetid: 90f79b97-17e7-40d1-abf0-3ba600ad1d7e
 ms.openlocfilehash: 60308e4797f613940c2580e10d746fb712af9f6e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954194"
 ---
 # <a name="data-binding-wpf"></a>データ バインド (WPF)
 Windows Presentation Foundation (WPF) データ バインディングは、アプリケーション データの表示や操作するための単純で一貫した方法を提供します。 要素は、さまざまな共通言語ランタイム (CLR) オブジェクトと XML の形式でデータ ソースからデータにバインドできます。  

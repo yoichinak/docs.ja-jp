@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID746
 ms.assetid: 398ff5eb-b580-456f-8f24-b7a8318e1193
 ms.openlocfilehash: 4ac66aa6e48a81c49ac21d6d4a15ba0fe278bf29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965088"
 ---
 # <a name="replacements-too-long"></a>置換後の文字列が長すぎます
 許容される長さを超える置換文字列を指定しました。  

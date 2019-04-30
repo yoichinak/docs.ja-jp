@@ -5,11 +5,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], architecture
 ms.assetid: 1c6cabf0-02ee-4bbc-9574-b54bb7f5b19e
 ms.openlocfilehash: 892168ec282fbf168c43515e0718fe5486a345a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130261"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011639"
 ---
 # <a name="datagridview-control-architecture-windows-forms"></a>DataGridView コントロールのアーキテクチャ (Windows フォーム)
 <xref:System.Windows.Forms.DataGridView>コントロールとその関連クラスが表示および表形式のデータを編集するための柔軟で拡張性の高いシステムで設計されています。 これらのクラスがすべてに含まれる、<xref:System.Windows.Forms?displayProperty=nameWithType>名前空間、およびそれらのすべてが"DataGridView"プレフィックスを持つという名前です。  
@@ -26,19 +26,19 @@ ms.locfileid: "59130261"
 ### <a name="datagridviewelementstates"></a>DataGridViewElementStates  
  <xref:System.Windows.Forms.DataGridViewElementStates>列挙には、次の値が含まれています。  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.None>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.None>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Frozen>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.ReadOnly>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.ReadOnly>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Resizable>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Resizable>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.ResizableSet>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Selected>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Selected>  
   
--   <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
+- <xref:System.Windows.Forms.DataGridViewElementStates.Visible>  
   
  この列挙体の値はビットごとの論理演算子と組み合わせることができますので、<xref:System.Windows.Forms.DataGridViewElement.State%2A>プロパティは、一度に 1 つ以上の状態を表すことができます。 たとえば、<xref:System.Windows.Forms.DataGridViewElement>同時に実行できる<xref:System.Windows.Forms.DataGridViewElementStates.Frozen>、<xref:System.Windows.Forms.DataGridViewElementStates.Selected>と<xref:System.Windows.Forms.DataGridViewElementStates.Visible>します。  
   
@@ -58,27 +58,27 @@ ms.locfileid: "59130261"
   
  次の一覧から派生したクラスを示しています<xref:System.Windows.Forms.DataGridViewCell>:。  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewButtonCell>  
+- <xref:System.Windows.Forms.DataGridViewButtonCell>  
   
--   <xref:System.Windows.Forms.DataGridViewLinkCell>  
+- <xref:System.Windows.Forms.DataGridViewLinkCell>  
   
--   <xref:System.Windows.Forms.DataGridViewCheckBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewCheckBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxCell>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxCell>  
   
--   <xref:System.Windows.Forms.DataGridViewImageCell>  
+- <xref:System.Windows.Forms.DataGridViewImageCell>  
   
--   <xref:System.Windows.Forms.DataGridViewHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewRowHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewRowHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewColumnHeaderCell>  
   
--   <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
+- <xref:System.Windows.Forms.DataGridViewTopLeftHeaderCell>  
   
--   カスタムのセルの種類を  
+- カスタムのセルの種類を  
   
 ### <a name="datagridviewcolumn"></a>DataGridViewColumn  
  スキーマ、<xref:System.Windows.Forms.DataGridView>でコントロールの接続されたデータ ストアが表される、<xref:System.Windows.Forms.DataGridView>コントロールの列。 アクセスできる、<xref:System.Windows.Forms.DataGridView>コントロールの列を使用して、<xref:System.Windows.Forms.DataGridView.Columns%2A>コレクション。 選択した列を使用してアクセスすることができます、<xref:System.Windows.Forms.DataGridView.SelectedColumns%2A>コレクション。 この使用方法とを示しています、次のオブジェクト モデル、<xref:System.Windows.Forms.DataGridViewColumn>継承階層。  
@@ -89,19 +89,19 @@ ms.locfileid: "59130261"
   
  次の一覧から派生したクラスを示しています<xref:System.Windows.Forms.DataGridViewColumn>:。  
   
--   <xref:System.Windows.Forms.DataGridViewButtonColumn>  
+- <xref:System.Windows.Forms.DataGridViewButtonColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewCheckBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewImageColumn>  
+- <xref:System.Windows.Forms.DataGridViewImageColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxColumn>  
   
--   <xref:System.Windows.Forms.DataGridViewLinkColumn>  
+- <xref:System.Windows.Forms.DataGridViewLinkColumn>  
   
--   カスタム列の型  
+- カスタム列の型  
   
 ### <a name="datagridview-editing-controls"></a>DataGridView 編集コントロール  
  通常は高度な編集機能をサポートしているセルは、Windows フォーム コントロールから派生したホストされるコントロールを使用します。 これらのコントロールの実装も、<xref:System.Windows.Forms.IDataGridViewEditingControl>インターフェイス。 次のオブジェクト モデルでは、これらのコントロールの使用方法を示します。  
@@ -110,9 +110,9 @@ ms.locfileid: "59130261"
   
  次の編集コントロールが付属、<xref:System.Windows.Forms.DataGridView>コントロール。  
   
--   <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
+- <xref:System.Windows.Forms.DataGridViewComboBoxEditingControl>  
   
--   <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
+- <xref:System.Windows.Forms.DataGridViewTextBoxEditingControl>  
   
  独自の編集コントロールを作成する方法の詳細については、次を参照してください。[方法。Windows フォーム DataGridView Cells コントロールをホスト](how-to-host-controls-in-windows-forms-datagridview-cells.md)します。  
   

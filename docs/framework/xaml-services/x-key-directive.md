@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Key attribute
 ms.assetid: 1985cd45-f197-42d5-b75e-886add64b248
 ms.openlocfilehash: 6ac878f24de594f8557ded8b0c3356217021b035
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971822"
 ---
 # <a name="xkey-directive"></a>x:Key ディレクティブ
 XAML で定義されたディクショナリで作成および参照される要素を一意に識別します。 `x:Key` 値を XAML オブジェクトに追加するのは、リソース ディクショナリ (<xref:System.Windows.ResourceDictionary> など) のリソースを識別するための最も一般的な方法です。  
@@ -61,9 +61,9 @@ XAML で定義されたディクショナリで作成および参照される要
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意  
  通常、WPF の <xref:System.Collections.IDictionary> などの <xref:System.Windows.ResourceDictionary> の実装である親オブジェクトの子オブジェクトには、`x:Key` 属性を含める必要があります。また、キー値は、そのディクショナリ内で一意である必要があります。 ただし、次のように 2 つの重要な例外があります。  
   
--   一部の WPF 型は、ディクショナリの使用に対して暗黙のキーを宣言します。 たとえば、<xref:System.Windows.Style> が設定された <xref:System.Windows.Style.TargetType%2A> や、<xref:System.Windows.DataTemplate> が設定された <xref:System.Windows.DataTemplate.DataType%2A> は、<xref:System.Windows.ResourceDictionary> に格納して、暗黙のキーを使用できます。  
+- 一部の WPF 型は、ディクショナリの使用に対して暗黙のキーを宣言します。 たとえば、<xref:System.Windows.Style> が設定された <xref:System.Windows.Style.TargetType%2A> や、<xref:System.Windows.DataTemplate> が設定された <xref:System.Windows.DataTemplate.DataType%2A> は、<xref:System.Windows.ResourceDictionary> に格納して、暗黙のキーを使用できます。  
   
--   WPF は、マージされたリソース ディクショナリの概念をサポートしています。 キーは、マージされたディクショナリ間で共有できます。また、共有されたキーの動作には、<xref:System.Windows.FrameworkContentElement.FindResource%2A> を使用してアクセスできます。 詳細については、「[Merged Resource Dictionaries](../wpf/advanced/merged-resource-dictionaries.md)」を参照してください。  
+- WPF は、マージされたリソース ディクショナリの概念をサポートしています。 キーは、マージされたディクショナリ間で共有できます。また、共有されたキーの動作には、<xref:System.Windows.FrameworkContentElement.FindResource%2A> を使用してアクセスできます。 詳細については、「[Merged Resource Dictionaries](../wpf/advanced/merged-resource-dictionaries.md)」を参照してください。  
   
  通常、WPF XAML の実装およびアプリケーション モデルでは、キーの一意性が XAML マークアップ コンパイラによってチェックされることはありません。 その代わり、`x:Key` 値が指定されていない場合や一意でない場合は、読み込み時に XAML パーサー エラーが発生します。 ただし、WPF のディクショナリの処理を Visual Studio できます多くの場合、このようなエラー、設計フェーズで。  
   
@@ -101,11 +101,11 @@ keyObject
 |-|-|  
 |`keyObject`|専用のディクショナリで指定された `object` のキーとして使用されるオブジェクトの、オブジェクト要素。|  
   
--   この種類の使用方法のコンテナー/親は、ここには示しません。 `object` は、専用のディクショナリの実装を表すオブジェクト要素の子であると想定されます。 `keyObject` は、その専用のディクショナリの実装のキーとして適切なオブジェクト インスタンス (または値の型の値) であると想定されます。  
+- この種類の使用方法のコンテナー/親は、ここには示しません。 `object` は、専用のディクショナリの実装を表すオブジェクト要素の子であると想定されます。 `keyObject` は、その専用のディクショナリの実装のキーとして適切なオブジェクト インスタンス (または値の型の値) であると想定されます。  
   
--   WPF は、この使用方法を必要とするディクショナリを実装しません。 オブジェクト キーは XAML 言語のより一般的な機能であり、カスタム ディクショナリのシナリオで XAML でのディクショナリ作成が望まれる場合に有益であることがあります。 リソースに対して文字列以外のキーを使用する暗黙的なスタイルなどの WPF 機能については、別の方法によってキーを確立、または指定することができるので、オブジェクト キーを使用する必要はありません。  
+- WPF は、この使用方法を必要とするディクショナリを実装しません。 オブジェクト キーは XAML 言語のより一般的な機能であり、カスタム ディクショナリのシナリオで XAML でのディクショナリ作成が望まれる場合に有益であることがあります。 リソースに対して文字列以外のキーを使用する暗黙的なスタイルなどの WPF 機能については、別の方法によってキーを確立、または指定することができるので、オブジェクト キーを使用する必要はありません。  
   
--   *keyObject*直接オブジェクト インスタンスではなく、オブジェクト要素の形式でマークアップ拡張機能の使用可能性があります。  
+- *keyObject*直接オブジェクト インスタンスではなく、オブジェクト要素の形式でマークアップ拡張機能の使用可能性があります。  
   
 ## <a name="silverlight-usage-notes"></a>Silverlight の使用上の注意  
  Silverlight 用の `x:Key` に関しては、別途ドキュメントが用意されています。 詳細については、次を参照してください[XAML Namespace (x:)。言語機能 (Silverlight)](https://go.microsoft.com/fwlink/?LinkId=199081)します。  

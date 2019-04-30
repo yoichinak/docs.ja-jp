@@ -10,11 +10,11 @@ helpviewer_keywords:
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
 ms.openlocfilehash: 9b7fa33d9af8d364491d1c72813cb62f34378557
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100302"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947889"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>方法: UI であるアドインを作成する
 この例では、WPF のスタンドアロン アプリケーションでホストされている Windows Presentation Foundation (WPF) であるアドインを作成する方法を示します。  
@@ -25,9 +25,9 @@ ms.locfileid: "59100302"
   
  この例では、このシナリオを有効にする、.NET Framework アドイン モデルを WPF 拡張を強調表示し、前提条件は次。  
   
--   .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、次を参照してください。[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))します。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))します。  
+- .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、次を参照してください。[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))します。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](/previous-versions/dotnet/netframework-4.0/bb788290(v%3dvs.100))します。  
   
--   WPF の拡張機能を .NET Framework アドイン モデルの知識。 参照してください[WPF アドインの概要](wpf-add-ins-overview.md)します。  
+- WPF の拡張機能を .NET Framework アドイン モデルの知識。 参照してください[WPF アドインの概要](wpf-add-ins-overview.md)します。  
   
 ## <a name="example"></a>例  
  WPF の UI は、アドインを作成するには、各パイプライン セグメント、アドイン、およびホスト アプリケーションの特定のコードが必要です。  
@@ -87,9 +87,9 @@ ms.locfileid: "59100302"
   
  アドインの UI との対話を処理するためのコードは、アドインのアプリケーション ドメインで実行されます。 このような対話には、次のようなものがあります。  
   
--   処理、 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
+- 処理、 <xref:System.Windows.Controls.Button> <xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
--   表示、<xref:System.Windows.MessageBox>します。  
+- 表示、<xref:System.Windows.MessageBox>します。  
   
  このアクティビティは、ホスト アプリケーションから完全に分離されています。  
   

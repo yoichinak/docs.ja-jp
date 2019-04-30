@@ -3,11 +3,11 @@ title: WMI プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 462f0db3-f4a4-4a4b-ac26-41fc25c670a4
 ms.openlocfilehash: 519f63f8dfc558a83a98ca44f74e926beb81c190
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007501"
 ---
 # <a name="wmi-provider"></a>WMI プロバイダー
 このサンプルでは、WCF に組み込まれている Windows Management Instrumentation (WMI) プロバイダーを使用して、実行時に Windows Communication Foundation (WCF) サービスからデータを収集する方法を示します。 また、このサンプルでは、ユーザー定義の WMI オブジェクトをサービスに追加する方法も示します。 サンプルの WMI プロバイダーをアクティブ化、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)からデータを収集する方法について説明し、`ICalculator`実行時にサービス。  

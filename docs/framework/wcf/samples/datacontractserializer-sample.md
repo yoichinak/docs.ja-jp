@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XML Formatter
 ms.assetid: e0a2fe89-3534-48c8-aa3c-819862224571
 ms.openlocfilehash: 3cfa4691376689bb8e7b1f8e8f41ed5d93ba0e61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770595"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990354"
 ---
 # <a name="datacontractserializer-sample"></a>DataContractSerializer サンプル
 DataContractSerializer サンプルでは、<xref:System.Runtime.Serialization.DataContractSerializer> を示して、データ コントラクト クラスに対応した一般的なシリアル化および逆シリアル化の各サービスを実行します。 サンプルを作成、`Record`をメモリ ストリームにシリアル化して、メモリ ストリームを別の逆シリアル化オブジェクト`Record`オブジェクトの使用を示すために、<xref:System.Runtime.Serialization.DataContractSerializer>します。 サンプルではその後、バイナリ ライタを使用して `Record` オブジェクトをシリアル化し、バイナリ ライタがシリアル化にどのように影響するかを示します。  

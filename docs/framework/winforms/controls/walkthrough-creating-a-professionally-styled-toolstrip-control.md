@@ -11,22 +11,22 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating professionally styled controls
 ms.assetid: b52339ae-f1d3-494e-996e-eb455614098a
 ms.openlocfilehash: 526cb509d780abdbf3db6e15504616de19daae83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336552"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009098"
 ---
 # <a name="walkthrough-creating-a-professionally-styled-toolstrip-control"></a>チュートリアル: プロフェッショナル スタイルの ToolStrip コントロールの作成
 アプリケーションを与えることができます<xref:System.Windows.Forms.ToolStrip>から派生した独自のクラスを記述することで、プロフェッショナルな外観と動作を制御、<xref:System.Windows.Forms.ToolStripProfessionalRenderer>型。  
   
  このチュートリアルを使用する方法について説明<xref:System.Windows.Forms.ToolStrip>に似た複合コントロールを作成するコントロール、**ナビゲーション ウィンドウ**Microsoft® Outlook® で提供されます。 このチュートリアルで、次のタスクを示します。  
   
--   Windows コントロール ライブラリ プロジェクトを作成します。  
+- Windows コントロール ライブラリ プロジェクトを作成します。  
   
--   StackView コントロールをデザインします。  
+- StackView コントロールをデザインします。  
   
--   カスタム レンダラーの実装。  
+- カスタム レンダラーの実装。  
   
  完了したら、Microsoft Office® XP のコントロールのプロフェッショナルな外観のカスタム クライアントを再利用可能なコントロールがあります。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "59336552"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを完了するための要件は次のとおりです。  
   
--   作成し、Visual Studio がインストールされているコンピューターで Windows フォーム アプリケーション プロジェクトを実行できる十分なアクセスを許可します。  
+- 作成し、Visual Studio がインストールされているコンピューターで Windows フォーム アプリケーション プロジェクトを実行できる十分なアクセスを許可します。  
   
 ## <a name="creating-a-windows-control-library-project"></a>Windows コントロール ライブラリ プロジェクトを作成します。  
  最初の手順では、コントロール ライブラリ プロジェクトを作成します。  
@@ -178,11 +178,11 @@ ms.locfileid: "59336552"
 ## <a name="next-steps"></a>次の手順  
  このチュートリアルでは、Office XP のコントロールのプロフェッショナルな外観のカスタム クライアントを再利用可能なコントロールを作成しました。 使用することができます、<xref:System.Windows.Forms.ToolStrip>の他のさまざまな目的のコントロール ファミリ。  
   
--   ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、次を参照してください。 [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)します。  
+- ショートカット メニューを使用してコントロールを作成<xref:System.Windows.Forms.ContextMenuStrip>です。 詳細については、次を参照してください。 [ContextMenu コンポーネントの概要](contextmenu-component-overview-windows-forms.md)します。  
   
--   自動的に設定された標準メニューには、フォームを作成します。 詳細については、「[チュートリアル:フォームに標準メニュー項目を用意する](walkthrough-providing-standard-menu-items-to-a-form.md)します。  
+- 自動的に設定された標準メニューには、フォームを作成します。 詳細については、「[チュートリアル:フォームに標準メニュー項目を用意する](walkthrough-providing-standard-menu-items-to-a-form.md)します。  
   
--   ドッキングのマルチ ドキュメント インターフェイス (MDI) フォームを作成する<xref:System.Windows.Forms.ToolStrip>コントロール。 詳細については、「[方法 :メニューのマージと ToolStrip コントロールを MDI フォームを作成](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)です。  
+- ドッキングのマルチ ドキュメント インターフェイス (MDI) フォームを作成する<xref:System.Windows.Forms.ToolStrip>コントロール。 詳細については、「[方法 :メニューのマージと ToolStrip コントロールを MDI フォームを作成](how-to-create-an-mdi-form-with-menu-merging-and-toolstrip-controls.md)です。  
   
 ## <a name="see-also"></a>関連項目
 

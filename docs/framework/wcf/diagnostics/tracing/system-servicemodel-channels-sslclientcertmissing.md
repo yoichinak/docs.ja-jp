@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.SslClientCertMissing
 ms.date: 03/30/2017
 ms.assetid: d09f5336-c1e6-4b92-a04d-af556546bc69
 ms.openlocfilehash: 8c5e38d19aa64186d962597df5af90cd6cf886a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997435"
 ---
 # <a name="systemservicemodelchannelssslclientcertmissing"></a>System.ServiceModel.Channels.SslClientCertMissing
 System.ServiceModel.Channels.SslClientCertMissing  

@@ -3,11 +3,11 @@ title: '方法: Svcutil.exe を使用してメタデータ ドキュメントを
 ms.date: 03/30/2017
 ms.assetid: 15524274-3167-4627-b722-d6cedb9fa8c6
 ms.openlocfilehash: cc9fc4acaeafe4583b1e85a24cab97af1689c638
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328349"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972784"
 ---
 # <a name="how-to-use-svcutilexe-to-download-metadata-documents"></a>方法: Svcutil.exe を使用してメタデータ ドキュメントをダウンロードする
 Svcutil.exe を使用すると、実行中のサービスからメタデータをダウンロードして、ローカル ファイルに保存できます。 HTTP および HTTPS の URL スキームの場合、Svcutil.exe が Ws-metadataexchange を使用してメタデータを取得しようと[XML Web サービス探索](https://go.microsoft.com/fwlink/?LinkId=94950)します。 その他の URL スキームの場合、Svcutil.exe は WS-MetadataExchange のみを使用します。  

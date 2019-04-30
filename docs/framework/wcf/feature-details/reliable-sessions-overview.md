@@ -3,11 +3,11 @@ title: 信頼できるセッションの概要
 ms.date: 03/30/2017
 ms.assetid: a7fc4146-ee2c-444c-82d4-ef6faffccc2d
 ms.openlocfilehash: 6dd90ef800daf236d77c419d48c0857ac2d78aa2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54548025"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962657"
 ---
 # <a name="reliable-sessions-overview"></a>信頼できるセッションの概要
 
@@ -59,14 +59,14 @@ WCF SOAP リライアブル メッセージ数や、メッセージング エン
 
   - `NetTcpBinding` : 双方向、要求/応答、または一方向のコントラクトを公開します。
 
-HTTPS などのカスタム バインドを作成して、他のバインディングで信頼できるセッションを使用 (問題の詳細については、<a href="#reliable-sessions-and-security">信頼できるセッションとセキュリティ</a>) または名前付きパイプ バインドを参照してください。
+HTTPS などのカスタム バインドを作成して、他のバインディングで信頼できるセッションを使用 (問題の詳細については、次を参照してください。<a href="#reliable-sessions-and-security">信頼できるセッションとセキュリティ</a>) または名前付きパイプ バインドします。
 
 基になるチャネルの種類の異なるで信頼できるセッションを積み重ねることができ、結果として得られる、信頼できるセッション チャネルの形状が変化します。 クライアントとサーバーの両方でサポートされている信頼できるセッション チャネルの種類に使用される基になるチャネルの種類によって異なります。 次の表では、基になるチャネルの種類ごとに、クライアントでサポートされるセッション チャネルの種類を示します。
 
 | サポートされている信頼できるセッション チャネルの種類&#8224; | `IRequestChannel` | `IRequestSessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :---------------: | :----------------------: | :--------------: | :---------------------: |
-| `IOutputSessionChannel`                         | [はい]               | [はい]                      | [はい]              | [はい]                     |
-| `IRequestSessionChannel`                        | [はい]               | [はい]                      | ×               | ×                      |
+| `IOutputSessionChannel`                         | [はい]               | はい                      | はい              | はい                     |
+| `IRequestSessionChannel`                        | はい               | [はい]                      | ×               | ×                      |
 | `IDuplexSessionChannel`                         | ×                | ×                       | [はい]              | [はい]                     |
 
 &#8224;サポートされているチャネルの型がジェネリックの使用できる値`TChannel`に渡されるパラメーター値、<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelFactory%60%601%28System.ServiceModel.Channels.BindingContext%29>メソッド。
@@ -75,8 +75,8 @@ HTTPS などのカスタム バインドを作成して、他のバインディ�
 
 | サポートされている信頼できるセッション チャネルの種類&#8225; | `IReplyChannel` | `IReplySessionChannel` | `IDuplexChannel` | `IDuplexSessionChannel` |
 | ----------------------------------------------- | :-------------: | :--------------------: | :--------------: | :---------------------: |
-| `IInputSessionChannel`                          | [はい]             | [はい]                    | [はい]              | [はい]                     |
-| `IReplySessionChannel`                          | [はい]             | [はい]                    | ×               | ×                      |
+| `IInputSessionChannel`                          | [はい]             | はい                    | はい              | はい                     |
+| `IReplySessionChannel`                          | はい             | [はい]                    | ×               | ×                      |
 | `IDuplexSessionChannel`                         | ×              | ×                     | [はい]              | [はい]                     |
 
 &#8225;サポートされているチャネルの型がジェネリックの使用できる値`TChannel`に渡されるパラメーター値、<xref:System.ServiceModel.Channels.ReliableSessionBindingElement.BuildChannelListener%60%601%28System.ServiceModel.Channels.BindingContext%29>メソッド。
@@ -107,7 +107,7 @@ WCF の信頼できるセッションを使用するには、信頼できるセ�
 
 カスタム バインドを作成する方法の例は、次を参照してください。[方法。HTTPS で信頼できるセッションをカスタム バインディングを作成する](../../../../docs/framework/wcf/feature-details/how-to-create-a-custom-reliable-session-binding-with-https.md)します。
 
-信頼できるセッションをサポートする WCF バインドの詳細については、[System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)を参照してください。
+信頼できるセッションをサポートする WCF バインドの詳細については、次を参照してください。 [System-Provided Bindings](../../../../docs/framework/wcf/system-provided-bindings.md)します。
 
 ## <a name="when-to-use-reliable-sessions"></a>信頼できるセッションを使用する場合
 

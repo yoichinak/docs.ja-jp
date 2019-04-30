@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RepeatButton control [WPF]
 ms.assetid: 5702b603-95e6-438a-88c0-76509367e876
 ms.openlocfilehash: d1eaaaae2e42bc366d6859ad72a90b149341eef0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57367151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971133"
 ---
 # <a name="repeatbutton"></a>RepeatButton
 <xref:System.Windows.Controls.Primitives.RepeatButton>に似ていますが、<xref:System.Windows.Controls.Button>します。 ただし、<xref:System.Windows.Controls.Primitives.RepeatButton>タイミングを制御する要素のことする方法と、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベントが発生します。  

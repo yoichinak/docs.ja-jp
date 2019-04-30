@@ -7,11 +7,11 @@ helpviewer_keywords:
 - user interface virtualization [WPF]
 ms.assetid: 45a31c43-ea8a-4546-96c8-0631b9934179
 ms.openlocfilehash: 20b2b20c2f7f37b4ae01159e70bc8c0945777152
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55286430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961396"
 ---
 # <a name="optimizing-performance-controls"></a>パフォーマンスの最適化:コントロール
 

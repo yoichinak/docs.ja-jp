@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 480fc27bd41f7ca559ceee379b7f6f81c94da0ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188709"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989197"
 ---
 # <a name="icordebugdatatarget-interface"></a>ICorDebugDataTarget インターフェイス
 特定のターゲット プロセスにアクセスするためのコールバック インターフェイスが用意されています。  
@@ -37,13 +37,13 @@ ms.locfileid: "59188709"
 ## <a name="remarks"></a>Remarks  
  `ICorDebugDataTarget` そのメソッドに次の特性があります。  
   
--   デバッグ サービスは、メモリと、ターゲット プロセスの他のデータにアクセスするには、このインターフェイスでメソッドを呼び出します。  
+- デバッグ サービスは、メモリと、ターゲット プロセスの他のデータにアクセスするには、このインターフェイスでメソッドを呼び出します。  
   
--   デバッガー クライアントは、特定のターゲット (たとえば、ライブ プロセスまたはメモリ ダンプ) に適したには、このインターフェイスを実装する必要があります。  
+- デバッガー クライアントは、特定のターゲット (たとえば、ライブ プロセスまたはメモリ ダンプ) に適したには、このインターフェイスを実装する必要があります。  
   
--   `ICorDebugDataTarget`メソッドは、他の実装されているメソッド内からのみ呼び出すことが`ICorDebug*`インターフェイス。 これにより、どのスレッドが呼び出されると、デバッガーのクライアントが制御すること。  
+- `ICorDebugDataTarget`メソッドは、他の実装されているメソッド内からのみ呼び出すことが`ICorDebug*`インターフェイス。 これにより、どのスレッドが呼び出されると、デバッガーのクライアントが制御すること。  
   
--   `ICorDebugDataTarget`実装する必要があります、ターゲットに関する最新の情報を常に返します。  
+- `ICorDebugDataTarget`実装する必要があります、ターゲットに関する最新の情報を常に返します。  
   
  ターゲット プロセスを停止しているときに何らかの方法で変更されていない必要があります`ICorDebug*`インターフェイス (したがって`ICorDebugDataTarget`メソッド) が呼び出されます。 ターゲットがライブ プロセスとその状態の変更の場合、 [iclrdebugging::openvirtualprocess](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-openvirtualprocess-method.md)メソッドは、置換 ICorDebugProcess のインスタンスを指定してもう一度呼び出す必要があります。  
   

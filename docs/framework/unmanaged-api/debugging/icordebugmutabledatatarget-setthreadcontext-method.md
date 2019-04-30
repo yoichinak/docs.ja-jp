@@ -5,11 +5,11 @@ ms.assetid: 8c0d01d5-67e5-4522-9ccf-c8f3a78cb4fd
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d8b3fd9940bd11c3d026b46247e0657c82b18099
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120004"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942403"
 ---
 # <a name="icordebugmutabledatatargetsetthreadcontext-method"></a>ICorDebugMutableDataTarget::SetThreadContext メソッド
 スレッドのコンテキスト (レジスタの値) を設定します。  

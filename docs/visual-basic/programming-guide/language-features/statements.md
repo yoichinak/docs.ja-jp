@@ -16,11 +16,11 @@ helpviewer_keywords:
 - statements [Visual Basic], about statements
 ms.assetid: fcfdee1a-82b7-4846-98f7-9ca3f5160089
 ms.openlocfilehash: e66acae5e98d561883f4ad59853dfd862c8ebfee
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43506291"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946459"
 ---
 # <a name="statements-in-visual-basic"></a>Visual Basic におけるステートメント
 
@@ -34,7 +34,7 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 
 ## <a name="declaration-statements"></a>宣言ステートメント
 
-宣言ステートメントを使用して名前を指定し、プロシージャ、変数、プロパティ、配列、および定数を定義します。 プログラミング要素を宣言するときに、そのデータ型、アクセス レベル、およびスコープも定義できます。 詳細については、[宣言された要素の特性](./declared-elements/declared-element-characteristics.md)を参照してください。
+宣言ステートメントを使用して名前を指定し、プロシージャ、変数、プロパティ、配列、および定数を定義します。 プログラミング要素を宣言するときに、そのデータ型、アクセス レベル、およびスコープも定義できます。 詳細については、次を参照してください。[宣言された要素の特性](./declared-elements/declared-element-characteristics.md)します。
 
 次の例には、3 つの宣言が含まれています。
 
@@ -112,7 +112,7 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 
 [!code-vb[VbVbalrStatements#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class1.vb#78)]
 
-この種類の演算子を使用して、さまざまな複合代入演算を実行できます。 これらの演算子とその詳細情報の一覧は、[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)を参照してください。
+この種類の演算子を使用して、さまざまな複合代入演算を実行できます。 これらの演算子とその詳細情報の一覧は、次を参照してください。[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)します。
 
 連結代入演算子 (`&=`) の既存の末尾に文字列を追加する場合に便利ですが、次の例に示すように、文字列します。
 
@@ -122,9 +122,9 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 
 変換先の要素に適切なデータ型の変数、プロパティ、または配列要素に割り当てる値がある必要があります。 一般に、目的の要素のと同じデータ型の値を生成しようとする必要があります。 ただし、一部の種類は、割り当ての際に他の型に変換できます。
 
-データ型の間で変換する方法については、[Visual Basic における型変換](./data-types/type-conversions.md)を参照してください。 簡単に言うと Visual Basic は、他の型、拡大変換に指定された型の値を自動的に変換します。 A*拡大変換*は 1 つを常に実行時に成功すると、すべてのデータが失われない。 Visual Basic の変換など、`Integer`値を`Double`適切な場合、ため`Integer`に拡大変換されます`Double`します。 詳細については、「 [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md)」を参照してください。
+データ型の間で変換する方法については、次を参照してください。 [Visual Basic における型変換](./data-types/type-conversions.md)します。 簡単に言うと Visual Basic は、他の型、拡大変換に指定された型の値を自動的に変換します。 A*拡大変換*は 1 つを常に実行時に成功すると、すべてのデータが失われない。 Visual Basic の変換など、`Integer`値を`Double`適切な場合、ため`Integer`に拡大変換されます`Double`します。 詳細については、「 [Widening and Narrowing Conversions](./data-types/widening-and-narrowing-conversions.md)」を参照してください。
 
-*縮小変換*(拡大変換がないもの) の実行時に、エラーまたはデータ損失のリスクを実行します。 縮小変換を明示的に実行するには、型変換関数を使用して、または暗黙的に設定してすべての変換を実行するコンパイラに指示できます`Option Strict Off`します。 詳細については、[暗黙的および明示的な変換](./data-types/implicit-and-explicit-conversions.md)を参照してください。
+*縮小変換*(拡大変換がないもの) の実行時に、エラーまたはデータ損失のリスクを実行します。 縮小変換を明示的に実行するには、型変換関数を使用して、または暗黙的に設定してすべての変換を実行するコンパイラに指示できます`Option Strict Off`します。 詳細については、次を参照してください。[暗黙的および明示的な変換](./data-types/implicit-and-explicit-conversions.md)します。
 
 ## <a name="putting-multiple-statements-on-one-line"></a>1 つの行に複数のステートメントを配置します。
 
@@ -152,69 +152,69 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 
    [!code-vb[VbVbalrLineContinuation#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#2)]
 
-- かっこの後 (`{`) または右中かっこの前に (`}`)。 例えば:
+- かっこの後 (`{`) または右中かっこの前に (`}`)。 例:
 
     [!code-vb[VbVbalrLineContinuation#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#3)]
 
-    詳細については、[オブジェクト初期化子: 名前付きの匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)または[コレクション初期化子](./collection-initializers/index.md)を参照してください。
+    詳細については、次を参照してください。[オブジェクト初期化子。名前付きの匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)または[コレクション初期化子](./collection-initializers/index.md)します。
 
 - 埋め込み式、開かれた後 (`<%=`) または埋め込み式の終了前に (`%>`) XML リテラル内で。 例えば:
 
    [!code-vb[VbVbalrLineContinuation#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#4)]
 
-   詳細については、[XML での埋め込み式](./xml/embedded-expressions-in-xml.md)を参照してください。
+   詳細については、次を参照してください。 [XML での埋め込み式](./xml/embedded-expressions-in-xml.md)します。
 
 - 連結演算子の後に (`&`)。 例えば:
 
    [!code-vb[VbVbcnConventions#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/vb/Class1.vb#9)]
 
-   詳細については、[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)を参照してください。
+   詳細については、次を参照してください。[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)します。
 
 - 代入演算子の後 (`=`、 `&=`、 `:=`、 `+=`、 `-=`、 `*=`、 `/=`、 `\=`、 `^=`、 `<<=`、 `>>=`)。 例えば:
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   詳細については、[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)を参照してください。
+   詳細については、次を参照してください。[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)します。
 
 - 二項演算子の後 (`+`、 `-`、 `/`、 `*`、 `Mod`、 `<>`、 `<`、 `>`、 `<=`、 `>=`、 `^`、 `>>`、`<<`、 `And`、 `AndAlso`、 `Or`、 `OrElse`、 `Like`、 `Xor`) 式内で。 例えば:
 
    [!code-vb[VbVbalrLineContinuation#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#7)]
 
-   詳細については、[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)を参照してください。
+   詳細については、次を参照してください。[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)します。
 
 - 後に、`Is`と`IsNot`演算子。 例えば:
 
    [!code-vb[VbVbalrLineContinuation#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#8)]
 
-   詳細については、[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)を参照してください。
+   詳細については、次を参照してください。[機能別の演算子一覧](../../../visual-basic/language-reference/operators/operators-listed-by-functionality.md)します。
 
 - メンバー修飾子文字の後 (`.`) とメンバー名の前にします。 例えば:
 
    [!code-vb[VbVbalrLineContinuation#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#5)]
 
-   ただし、行連結文字を含める必要があります (`_`) を使用するメンバーの修飾子文字を以下に、`With`ステートメントまたは型の初期化リスト内の値を指定します。 代入演算子の後で改行を検討してください (たとえば、 `=`) を使用する場合`With`ステートメントやオブジェクトの初期化リスト。 例えば:
+   ただし、行連結文字を含める必要があります (`_`) を使用するメンバーの修飾子文字を以下に、`With`ステートメントまたは型の初期化リスト内の値を指定します。 代入演算子の後で改行を検討してください (たとえば、 `=`) を使用する場合`With`ステートメントやオブジェクトの初期化リスト。 例:
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   詳細については、次を参照してください[としています...ステートメントで終了して](../../../visual-basic/language-reference/statements/with-end-with-statement.md)または[オブジェクト初期化子: 名前付きおよび匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)です。
+   詳細については、次を参照してください[としています.。ステートメントで終了して](../../../visual-basic/language-reference/statements/with-end-with-statement.md)または[オブジェクト初期化子。名前付きの匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)します。
 
 - XML 軸プロパティ修飾子の後 (`.`または`.@`または`...`)。 ただし、行連結文字を含める必要があります (`_`) を使用するときにメンバー修飾子を指定すると、`With`キーワード。 例えば:
 
    [!code-vb[VbVbalrLineContinuation#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#9)]
 
-   詳細については、[XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)を参照してください。
+   詳細については、次を参照してください。 [XML 軸プロパティ](../../../visual-basic/language-reference/xml-axis/index.md)します。
 
 - 小後-不等号 (<)、または前に、大きい-不等号 (`>`) 属性を指定するとします。 大きい後も、不等号 (`>`) 属性を指定するとします。 ただし、行連結文字を含める必要があります (`_`) アセンブリ レベルまたはモジュール レベルの属性を指定するとします。 例えば:
 
    [!code-vb[VbVbalrLineContinuation#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#10)]
 
-   詳細については、[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)を参照してください。
+   詳細については、次を参照してください。[属性の概要](../../../visual-basic/programming-guide/concepts/attributes/index.md)します。
 
 - クエリ演算子の前後に (`Aggregate`、 `Distinct`、 `From`、 `Group By`、 `Group Join`、 `Join`、 `Let`、 `Order By`、 `Select`、 `Skip`、 `Skip While`、 `Take`、 `Take While`、 `Where`、 `In`、 `Into`、 `On`、 `Ascending`、および`Descending`)。 複数のキーワードで構成されているクエリ演算子のキーワードの間に行を分割することはできません (`Order By`、 `Group Join`、 `Take While`、および`Skip While`)。 例えば:
 
    [!code-vb[VbVbalrLineContinuation#11](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#11)]
 
-   詳細については、[クエリ](../../../visual-basic/language-reference/queries/index.md)を参照してください。
+   詳細については、次を参照してください。[クエリ](../../../visual-basic/language-reference/queries/index.md)します。
 
 - 後に、`In`キーワード、`For Each`ステートメント。 例えば:
 
@@ -246,5 +246,5 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 |---|---|
 |[代入演算子](../../../visual-basic/language-reference/operators/assignment-operators.md)|代入演算子をカバーするなどの言語リファレンスのページへのリンクを提供`=`、 `*=`、および`&=`します。|
 |[演算子および式](./operators-and-expressions/index.md)|新しい値を取得する演算子を含む要素を結合する方法を示します。|
-|[方法 : コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|1 つのステートメントを複数の行に分割する方法と同じ行に複数のステートメントを配置する方法を示します。|
-|[方法 : ステートメントへのラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|コードの行にラベル付けする方法を示します。|
+|[方法: コード内でステートメントを分割および連結する](../../../visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md)|1 つのステートメントを複数の行に分割する方法と同じ行に複数のステートメントを配置する方法を示します。|
+|[方法: ステートメントへのラベル付け](../../../visual-basic/programming-guide/program-structure/how-to-label-statements.md)|コードの行にラベル付けする方法を示します。|

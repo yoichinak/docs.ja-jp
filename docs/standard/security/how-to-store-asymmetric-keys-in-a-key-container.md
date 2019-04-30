@@ -18,11 +18,11 @@ ms.assetid: 0dbcbd8d-0dcf-40e9-9f0c-e3f162d35ccc
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c6fada360eda46dc695ab732a2573b135d823f0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326191"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018743"
 ---
 # <a name="how-to-store-asymmetric-keys-in-a-key-container"></a>方法: キー コンテナーに非対称キーを格納する
 非対称秘密キーは、ローカル コンピューターにそのまま平文として保存しないでください。 秘密キーを格納する必要がある場合は、キー コンテナーを使用することをお勧めします。 キー コンテナーの詳細については、「[コンピューター レベルおよびユーザー レベルの RSA キー コンテナーについて](https://docs.microsoft.com/previous-versions/aspnet/f5cs0acs(v=vs.100))」を参照してください。  

@@ -3,11 +3,11 @@ title: '方法: JSON データをシリアル化および逆シリアル化す�
 ms.date: 03/25/2019
 ms.assetid: 88abc1fb-8196-4ee3-a23b-c6934144d1dd
 ms.openlocfilehash: 7edce66a23021fa03a6f98b3b847a5b671c17124
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972992"
 ---
 # <a name="how-to-serialize-and-deserialize-json-data"></a>方法: および JSON データを逆シリアル化
 JSON (JavaScript Object Notation) は、クライアント ブラウザーと AJAX 対応の Web サービスとの間で、少量のデータを高速に交換できる効率的なデータ エンコード形式です。  

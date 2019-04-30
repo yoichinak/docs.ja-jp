@@ -11,11 +11,11 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], iterating through
 ms.assetid: 427f8928-ebcf-4beb-887f-695b905d5134
 ms.openlocfilehash: 4b287cecddd63ec6535feb70118c3466c8960531
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314231"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941090"
 ---
 # <a name="how-to-iterate-through-all-nodes-of-a-windows-forms-treeview-control"></a>方法: Windows フォーム TreeView コントロールのすべてのノードを反復処理する
 Windows フォーム内の各ノードをチェックすると役立つ場合があります<xref:System.Windows.Forms.TreeView>ノード値にいくつかの計算を実行するために制御します。 この操作は、ツリーの各コレクションの各ノードを反復処理する再帰プロシージャ (C# および C++ の場合は再帰メソッド) を使用して実行できます。  

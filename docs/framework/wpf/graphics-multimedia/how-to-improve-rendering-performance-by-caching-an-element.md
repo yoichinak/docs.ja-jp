@@ -9,11 +9,11 @@ helpviewer_keywords:
 - UIElement [WPF], caching
 ms.assetid: 4739c1fc-60ba-4c46-aba6-f6c1a2688f19
 ms.openlocfilehash: 118e8b0cca52c44788c9d5b291d710f765e7af2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153375"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947278"
 ---
 # <a name="how-to-improve-rendering-performance-by-caching-an-element"></a>方法: 要素をキャッシュしてレンダリングのパフォーマンスを向上させる
 使用して、 <xref:System.Windows.Media.BitmapCache> 、複雑なのレンダリング パフォーマンスを向上させるためにクラス<xref:System.Windows.UIElement>します。 要素をキャッシュするには、新しいインスタンスを作成、<xref:System.Windows.Media.BitmapCache>クラスし、要素に割り当てる<xref:System.Windows.UIElement.CacheMode%2A>プロパティ。 再利用することができます、<xref:System.Windows.Media.BitmapCache>で効率的に、<xref:System.Windows.Media.BitmapCacheBrush>します。  

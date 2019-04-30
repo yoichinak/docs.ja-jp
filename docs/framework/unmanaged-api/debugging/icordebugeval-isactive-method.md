@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0d992ea86b3221af222bb01f1985fe277cea5a2c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57480053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988992"
 ---
 # <a name="icordebugevalisactive-method"></a>ICorDebugEval::IsActive メソッド
 この ICorDebugEval オブジェクトが現在実行されているかどうかを示す値を取得します。  

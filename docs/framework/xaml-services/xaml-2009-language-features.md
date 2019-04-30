@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML 2009
 ms.assetid: f6bb18d8-c86a-4549-8862-323e6b32a8dd
 ms.openlocfilehash: 05f811cd0d95f7605963dae851430fb6bf0e9f7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938806"
 ---
 # <a name="xaml-2009-language-features"></a>XAML 2009 言語機能
 XAML 2009 とは、既存の XAML 言語仕様を拡張した、XAML の新しい言語機能の短縮名です。 XAML 2009 には、いくつかの新しいディレクティブとコンストラクトが導入されています。 含まれます、 [X:arguments ディレクティブ](x-arguments-directive.md)、 [X:factorymethod ディレクティブ](x-factorymethod-directive.md)、 [X:reference マークアップ拡張機能](x-reference-markup-extension.md)、 [X:typearguments ディレクティブ](x-typearguments-directive.md); 共通言語プリミティブの組み込み型 (たとえば`x:Char`)。  

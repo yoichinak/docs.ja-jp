@@ -11,24 +11,24 @@ helpviewer_keywords:
 - Blocks property [WPF], manipulating flow content elements
 ms.assetid: aeda4ece-b979-4818-a093-ef938e908751
 ms.openlocfilehash: e0e1e1333a54946f3bdf474e353de0301eb42447
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942832"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-blocks-property"></a>方法: Blocks プロパティを介してフロー コンテンツ要素を操作する
 これらの例を紹介を介してフロー コンテンツ要素に対して実行できる一般的な操作の**ブロック**プロパティ。 このプロパティを使用して項目を追加および削除を<xref:System.Windows.Documents.BlockCollection>します。 フロー コンテンツ要素にその機能、**ブロック**プロパティが含まれます。  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.ListItem>  
+- <xref:System.Windows.Documents.ListItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
  これらの例を使用する発生<xref:System.Windows.Documents.Section>フロー コンテンツ要素は、これらの手法はフロー コンテンツ要素のコレクションをホストするすべての要素に適用できます。  
   

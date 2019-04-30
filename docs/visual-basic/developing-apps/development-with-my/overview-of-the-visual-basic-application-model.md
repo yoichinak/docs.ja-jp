@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
 ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819763"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62014155"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic アプリケーション モデルの概要
 Visual Basic Windows フォーム アプリケーションの動作を制御するための適切に定義されたモデルを提供します。 Visual Basic アプリケーション モデルです。 このモデルには、アプリケーションのスタートアップとシャット ダウン、だけでなくハンドルされない例外をキャッチのイベントを処理するためのイベントが含まれています。 単一インスタンス アプリケーションを開発するためのサポートも提供します。 アプリケーション モデルとは、拡張可能なため、詳細に制御を必要がある開発者はそのオーバーライド可能なメソッドをカスタマイズできます。  
@@ -22,9 +22,9 @@ Visual Basic Windows フォーム アプリケーションの動作を制御す�
   
  単一インスタンス アプリケーションが起動し、最初のインスタンスまたは後続のアプリケーションのインスタンスがあるかどうかを確認します。  
   
--   最初のインスタンスの場合、通常どおりに起動します。  
+- 最初のインスタンスの場合、通常どおりに起動します。  
   
--   各後続の試行の最初のインスタンスの実行中にアプリケーションを起動は、非常に異なる動作になります。 後続の試行では、コマンドラインの引数の詳細については、最初のインスタンスに通知し、すぐに終了します。 最初のインスタンス ハンドル、`StartupNextInstance`イベントに、後続のインスタンスのコマンドライン引数を通知し、実行が継続されます。  
+- 各後続の試行の最初のインスタンスの実行中にアプリケーションを起動は、非常に異なる動作になります。 後続の試行では、コマンドラインの引数の詳細については、最初のインスタンスに通知し、すぐに終了します。 最初のインスタンス ハンドル、`StartupNextInstance`イベントに、後続のインスタンスのコマンドライン引数を通知し、実行が継続されます。  
   
      この図は、後続のインスタンスが最初のインスタンスを通知する方法を示しています。  
   
@@ -35,21 +35,21 @@ Visual Basic Windows フォーム アプリケーションの動作を制御す�
 ## <a name="events-in-the-application-model"></a>アプリケーション モデル内のイベント  
  アプリケーション モデルでは、次のイベントにあります。  
   
--   **アプリケーションの起動**します。 アプリケーションが、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>イベントの開始時にします。 このイベントを処理することによって、メイン フォームが読み込まれる前に、アプリケーションを初期化するコードを追加できます。 `Startup`必要な場合、このイベントも、起動プロセスのフェーズでは、そのアプリケーションの実行の取り消しの提供します。  
+- **アプリケーションの起動**します。 アプリケーションが、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Startup>イベントの開始時にします。 このイベントを処理することによって、メイン フォームが読み込まれる前に、アプリケーションを初期化するコードを追加できます。 `Startup`必要な場合、このイベントも、起動プロセスのフェーズでは、そのアプリケーションの実行の取り消しの提供します。  
   
      アプリケーションのスタートアップ コードが実行中に、スプラッシュ スクリーンを表示するアプリケーションを構成することができます。 既定では、アプリケーション モデルは、ロゴを抑制するときに画面か、`/nosplash`または`-nosplash`コマンドライン引数を使用します。  
   
--   **単一インスタンス アプリケーション**します。 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>単一インスタンスのアプリケーションの後続のインスタンスの起動時にイベントが発生します。 イベントは、後続のインスタンスのコマンドライン引数を渡します。  
+- **単一インスタンス アプリケーション**します。 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.StartupNextInstance>単一インスタンスのアプリケーションの後続のインスタンスの起動時にイベントが発生します。 イベントは、後続のインスタンスのコマンドライン引数を渡します。  
   
--   **未処理の例外**します。 アプリケーションには、ハンドルされない例外が発生すると、生成、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>イベント。 そのイベントのハンドラーは、例外を確認し、実行を続行するかどうかを判断できます。  
+- **未処理の例外**します。 アプリケーションには、ハンドルされない例外が発生すると、生成、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException>イベント。 そのイベントのハンドラーは、例外を確認し、実行を続行するかどうかを判断できます。  
   
      `UnhandledException`イベントは、いくつかの状況では発生しません。 詳細については、「 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UnhandledException> 」を参照してください。  
   
--   **ネットワーク接続の変更**します。 アプリケーションが発生しているコンピューターのネットワークの可用性が変更された場合、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>イベント。  
+- **ネットワーク接続の変更**します。 アプリケーションが発生しているコンピューターのネットワークの可用性が変更された場合、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged>イベント。  
   
      `NetworkAvailabilityChanged`イベントは、いくつかの状況では発生しません。 詳細については、「 <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.NetworkAvailabilityChanged> 」を参照してください。  
   
--   **アプリケーションのシャット ダウン**します。 アプリケーションでは、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>をシャット ダウンするときに通知するイベントです。 イベントのハンドラーを行うことができますを実行する必要が、アプリケーションを操作することを確認して — を閉じると、保存、たとえば: が完了します。 アプリケーションをメイン フォームが閉じたときにシャット ダウンするか、すべてのフォームを閉じるときのみをシャット ダウンを構成することができます。  
+- **アプリケーションのシャット ダウン**します。 アプリケーションでは、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.Shutdown>をシャット ダウンするときに通知するイベントです。 イベントのハンドラーを行うことができますを実行する必要が、アプリケーションを操作することを確認して — を閉じると、保存、たとえば: が完了します。 アプリケーションをメイン フォームが閉じたときにシャット ダウンするか、すべてのフォームを閉じるときのみをシャット ダウンを構成することができます。  
   
 ## <a name="availability"></a>可用性  
  既定では、Visual Basic アプリケーション モデルは Windows フォーム プロジェクトで使用できます。 異なるスタートアップ オブジェクトを使用するアプリケーションを構成またはカスタム アプリケーション コードを開始するかどうか`Sub Main`、し、そのオブジェクトまたはクラスは、の実装を提供する必要があります、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>アプリケーション モデルを使用するクラス。 スタートアップ オブジェクトを変更する方法の詳細については、次を参照してください。[アプリケーション ページで、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/application-page-project-designer-visual-basic)します。  

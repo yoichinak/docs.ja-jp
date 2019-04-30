@@ -12,18 +12,18 @@ helpviewer_keywords:
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
 ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311527"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943352"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) の可用性を制御します。
 指定することで、変数の可用性を制御するその*アクセス レベル*します。 どのようなコードは、変数に対する読み取りまたは書き込み権限を持つアクセス レベルを決定します。  
   
--   *メンバー変数*(モジュール レベルで、プロシージャの外に定義された) 既定でパブリック アクセスは、表示できるすべてのコードがアクセスできることを意味します。 これは、アクセス修飾子を指定することで変更できます。  
+- *メンバー変数*(モジュール レベルで、プロシージャの外に定義された) 既定でパブリック アクセスは、表示できるすべてのコードがアクセスできることを意味します。 これは、アクセス修飾子を指定することで変更できます。  
   
--   *ローカル変数*(プロシージャの内部で定義されている)、プロシージャ内のコードだけがアクセスできますが、パブリック アクセスがあるとします。 ローカル変数のアクセス レベルを変更することはできませんが、それを含むプロシージャのアクセス レベルを変更できます。  
+- *ローカル変数*(プロシージャの内部で定義されている)、プロシージャ内のコードだけがアクセスできますが、パブリック アクセスがあるとします。 ローカル変数のアクセス レベルを変更することはできませんが、それを含むプロシージャのアクセス レベルを変更できます。  
   
  詳細については、[ Visual Basic のアクセス レベル](../../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)を参照してください。  
   

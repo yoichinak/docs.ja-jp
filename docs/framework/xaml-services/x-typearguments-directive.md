@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:TypeArguments attribute
 ms.assetid: 86561058-d393-4a44-b5c3-993a4513ea74
 ms.openlocfilehash: 1d1b10b4da1263843bdce5447f0716569c7700e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982593"
 ---
 # <a name="xtypearguments-directive"></a>x:TypeArguments ディレクティブ
 パスの制約は、ジェネリック型のコンス トラクターに汎用の引数を入力します。  
@@ -62,13 +62,13 @@ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib"
 ## <a name="xaml-2006-and-wpf-generic-xaml-usages"></a>XAML 2006 および WPF XAML のジェネリックの使用法  
  XAML 2006 の使用状況、および XAML の WPF アプリケーションで使用する、次の制限の存在の`x:TypeArguments`および一般的な XAML のジェネリック型の使用状況。  
   
--   XAML ファイルのルート要素だけでは、ジェネリック型を参照する汎用的な XAML 使用量をサポートできます。  
+- XAML ファイルのルート要素だけでは、ジェネリック型を参照する汎用的な XAML 使用量をサポートできます。  
   
--   ルート要素は、少なくとも 1 つの型引数を持つジェネリック型にマップする必要があります。 例としては、<xref:System.Windows.Navigation.PageFunction%601>します。 ページ関数は、WPF における XAML のジェネリックの使用法サポートの主なシナリオです。  
+- ルート要素は、少なくとも 1 つの型引数を持つジェネリック型にマップする必要があります。 例としては、<xref:System.Windows.Navigation.PageFunction%601>します。 ページ関数は、WPF における XAML のジェネリックの使用法サポートの主なシナリオです。  
   
--   ジェネリックのルート要素の XAML オブジェクト要素が、部分クラスを使用して、宣言する必要がありますも`x:Class`します。 これは、ビルド アクションを WPF を定義する場合でも当てはまります。  
+- ジェネリックのルート要素の XAML オブジェクト要素が、部分クラスを使用して、宣言する必要がありますも`x:Class`します。 これは、ビルド アクションを WPF を定義する場合でも当てはまります。  
   
--   `x:TypeArguments` 入れ子になったジェネリック制約は参照できません。  
+- `x:TypeArguments` 入れ子になったジェネリック制約は参照できません。  
   
 ## <a name="xaml-2009-or-xaml-2006-with-no-wpf-30-or-wpf-35-dependency"></a>XAML 2009 または XAML 2006 なし、WPF 3.0 または 3.5 の WPF 依存関係  
  XAML 2006 または XAML 2009 のいずれかの .NET Framework XAML サービスでは、WPF に関連する XAML のジェネリックの使用法の制限が緩和されます。 バッキング型システムとオブジェクト モデルをサポートする XAML のマークアップ内の任意の位置にある汎用オブジェクトの要素をインスタンス化することができます。  

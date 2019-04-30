@@ -8,11 +8,11 @@ helpviewer_keywords:
 - UIElements [WPF], opacity
 ms.assetid: a49fc8d6-7b32-4f28-9122-39b632a19b4b
 ms.openlocfilehash: 1de9a7e11fee241ecb71242e9808e77b7e5e63b0
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370528"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942871"
 ---
 # <a name="how-to-make-a-uielement-transparent-or-semi-transparent"></a>方法: UIElement を透明または半透明にする
 この例では、作成、<xref:System.Windows.UIElement>透明または半透明にします。 設定する要素を透明または半透明にするその<xref:System.Windows.UIElement.Opacity%2A>プロパティ。 値`0.0`の値の中に、完全に透明な要素は、`1.0`要素を完全に不透明になります。 値`0.5`、不透明で、要素を 50% になります。 要素の<xref:System.Windows.UIElement.Opacity%2A>に設定されている`1.0`既定。  
@@ -38,4 +38,4 @@ ms.locfileid: "57370528"
   
  [!code-csharp[brushsamples_procedural_snip#4](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/OpacityExample.cs#4)]  
   
- ブラシ内の個々の色の不透明度を制御することもできます。色とブラシの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)」を参照してください。 要素の不透明度をアニメーション化する方法を示す例は、「[要素またはブラシの不透明度をアニメーション化する](../graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)」を参照してください。
+ ブラシ内の個々 の色の不透明度を制御することもできます。 色とブラシの詳細については、次を参照してください。[純色およびグラデーション概要](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)します。 要素の不透明度をアニメーション化する方法を示す例は、次を参照してください。[要素またはブラシの不透明度をアニメーション化する](../graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)します。

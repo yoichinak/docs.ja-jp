@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:FieldModifier attribute
 ms.assetid: ed427cd4-2f35-4d24-bd2f-0fa7b71ec248
 ms.openlocfilehash: c20564bcf8a25b1b59887fbefe6419671e0d6c03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971874"
 ---
 # <a name="xfieldmodifier-directive"></a>x:FieldModifier ディレクティブ
 名前付きオブジェクトの参照フィールドが定義されているように、XAML のコンパイルの動作を変更します<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>へのアクセスの代わりに、<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>既定の動作。  
@@ -36,11 +36,11 @@ ms.locfileid: "59144548"
   
  値、`x:FieldModifier`属性は、プログラミング言語によって異なるし、特定のフレームワークでの目的が異なることができます。 使用する文字列は、各言語の実装に依存、<xref:System.CodeDom.Compiler.CodeDomProvider>よぶ型コンバーターを返しますの意味を定義する<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>と<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>、その言語が、大文字小文字を区別するかどうか。  
   
--   C# の場合、文字列を指定する渡す<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>は`public`します。  
+- C# の場合、文字列を指定する渡す<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>は`public`します。  
   
--   Microsoft Visual Basic .net の指定に渡す文字列<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>は`Public`します。  
+- Microsoft Visual Basic .net の指定に渡す文字列<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>は`Public`します。  
   
--   [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]XAML のターゲットを現在存在しません。 以外に渡す文字列が定義されているため、します。  
+- [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]XAML のターゲットを現在存在しません。 以外に渡す文字列が定義されているため、します。  
   
  指定することも<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>(`internal`でC#、 `Friend` Visual Basic で) が指定する<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>通常でないため、`NotPublic`動作は、既定では既に。  
   

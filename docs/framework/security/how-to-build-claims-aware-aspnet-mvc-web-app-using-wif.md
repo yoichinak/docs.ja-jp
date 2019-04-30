@@ -4,49 +4,49 @@ ms.date: 03/30/2017
 ms.assetid: 0efb76bc-9f7b-4afe-be1c-2a57c917010b
 author: BrucePerlerMS
 ms.openlocfilehash: 04861b8c3f2673a5cd093be1351928b1da487147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940518"
 ---
 # <a name="how-to-build-claims-aware-aspnet-mvc-web-application-using-wif"></a>方法: WIF を使用してクレーム対応 ASP.NET MVC Web アプリケーションをビルドする
 ## <a name="applies-to"></a>対象  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® MVC  
+- ASP.NET® MVC  
   
 ## <a name="summary"></a>まとめ  
  この操作方法では、簡単なクレーム対応 ASP.NET MVC Web アプリケーションを作成するための詳細な手順を示します。 また、クレーム ベースの認証を正常に実装するために簡単なクレーム対応 ASP.NET MVC Web アプリケーションをテストする方法も示します。 この操作方法には、セキュリティ トークン サービス (STS) の詳細な作成手順は含まれていません。既に STS が構成済みであると想定します。  
   
 ## <a name="contents"></a>目次  
   
--   目的  
+- 目的  
   
--   手順の要約  
+- 手順の要約  
   
--   手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する  
+- 手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する  
   
--   手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する  
+- 手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する  
   
--   手順 3 – ソリューションをテストする  
+- 手順 3 – ソリューションをテストする  
   
--   関連項目  
+- 関連項目  
   
 ## <a name="objectives"></a>目的  
   
--   クレーム ベースの認証用の ASP.NET MVC Web アプリケーションを構成する  
+- クレーム ベースの認証用の ASP.NET MVC Web アプリケーションを構成する  
   
--   クレーム対応 ASP.NET MVC Web アプリケーションが正常であることをテストする  
+- クレーム対応 ASP.NET MVC Web アプリケーションが正常であることをテストする  
   
 ## <a name="summary-of-steps"></a>手順の要約  
   
--   手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する  
+- 手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する  
   
--   手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する  
+- 手順 2 – クレーム ベースの認証用の ASP.NET MVC アプリケーションを構成する  
   
--   手順 3 – ソリューションをテストする  
+- 手順 3 – ソリューションをテストする  
   
 ## <a name="step-1--create-simple-aspnet-mvc-application"></a>手順 1 – 簡単な ASP.NET MVC アプリケーションを作成する  
  この手順では、新しい ASP.NET MVC アプリケーションを作成します。  
@@ -218,4 +218,4 @@ ms.locfileid: "59335668"
   
 ## <a name="related-items"></a>関連項目  
   
--   [方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションを構築します。](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)
+- [方法: WIF を使用してクレーム対応 ASP.NET Web フォーム アプリケーションを構築します。](../../../docs/framework/security/how-to-build-claims-aware-aspnet-web-forms-app-using-wif.md)

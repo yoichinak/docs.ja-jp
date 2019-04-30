@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 236cebc0-bd71-4f18-9fd6-5d0e592375df
 ms.openlocfilehash: 3d628d75b75c311c266648886b3b971c4833d172
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57716440"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972251"
 ---
 # <a name="developing-custom-windows-forms-controls-with-the-net-framework"></a>.NET Framework を使用したカスタム Windows フォーム コントロールの開発
 Windows フォーム コントロールは、ユーザー インターフェイスの機能をカプセル化して、クライアント側の Windows ベースのアプリケーションで使用される再利用可能なコンポーネントです。 Windows フォームは、すぐに使用できる多数のコントロールを提供するだけでなく、独自のコントロールを開発するためのインフラストラクチャも提供します。 既存のコントロールの結合、既存のコントロールの拡張、または独自のカスタム コントロールの記述ができます。 このセクションでは、Windows フォーム コントロールの開発に役立つ背景情報とサンプルを提供します。  
@@ -20,8 +20,7 @@ Windows フォーム コントロールは、ユーザー インターフェイ�
  Windows フォーム アプリケーションでのコントロールの使用の重要な要素を示しています。  
   
  [さまざまなカスタム コントロール](varieties-of-custom-controls.md)  
- 
-  <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間を使用して作成できる様々な種類のカスタム コントロールについて説明します。  
+ <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間を使用して作成できる様々な種類のカスタム コントロールについて説明します。  
   
  [Windows フォーム コントロール開発の基本概念](windows-forms-control-development-basics.md)  
  Windows フォーム コントロールの開発の最初の手順について説明します。  

@@ -5,22 +5,22 @@ f1_keywords:
 - vbrID35
 ms.assetid: 661fdb90-ee7d-40ce-b30b-5e7267bd957a
 ms.openlocfilehash: 397648618ea3764efafb5cff41deaef320bbeff3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982437"
 ---
 # <a name="sub-or-function-not-defined-visual-basic"></a>Sub または Function が定義されていません。(Visual Basic)
 A`Sub`または`Function`呼び出すには定義する必要があります。 このエラーでは以下の原因が考えられます。  
   
--   プロシージャ名のスペルが間違っています。  
+- プロシージャ名のスペルが間違っています。  
   
--   別のプロジェクトからでは、そのプロジェクトへの参照を明示的に追加せず、プロシージャを呼び出そうとしている、**参照** ダイアログ ボックス。  
+- 別のプロジェクトからでは、そのプロジェクトへの参照を明示的に追加せず、プロシージャを呼び出そうとしている、**参照** ダイアログ ボックス。  
   
--   呼び出し元のプロシージャには表示されないプロシージャを指定します。  
+- 呼び出し元のプロシージャには表示されないプロシージャを指定します。  
   
--   Windows ダイナミック リンク ライブラリ (DLL) のルーチンまたは指定したライブラリまたはコード リソース内にない Macintosh コード リソースのルーチンを宣言します。  
+- Windows ダイナミック リンク ライブラリ (DLL) のルーチンまたは指定したライブラリまたはコード リソース内にない Macintosh コード リソースのルーチンを宣言します。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   

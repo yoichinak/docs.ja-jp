@@ -16,11 +16,11 @@ helpviewer_keywords:
 - count operator [LINQ in Visual Basic]
 ms.assetid: 51ca1f59-7770-4884-8b76-113002e54fc0
 ms.openlocfilehash: 9b29c738a953bb6260357b1b67cc46a97eeb4369
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000897"
 ---
 # <a name="how-to-count-sum-or-average-data-by-using-linq-visual-basic"></a>方法: 数、合計、または LINQ (Visual Basic) を使用したデータの平均
 統合言語クエリ (LINQ) により、簡単にデータベース情報にアクセスしてクエリを実行できます。  

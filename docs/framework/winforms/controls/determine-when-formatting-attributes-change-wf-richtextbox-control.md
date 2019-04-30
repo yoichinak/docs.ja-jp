@@ -12,11 +12,11 @@ helpviewer_keywords:
 - SelChange event
 ms.assetid: bdfed015-f77a-41e5-b38f-f8629b2fa166
 ms.openlocfilehash: a90affde9de36f1c83d5b7c21b40580cdf53402e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972290"
 ---
 # <a name="how-to-determine-when-formatting-attributes-change-in-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールにおける書式属性の変更を確認する
 Windows フォームの一般的な用途<xref:System.Windows.Forms.RichTextBox>コントロールがフォントのオプションや段落スタイルなどの属性を持つテキストを書式設定します。 アプリケーションは、多くのワード プロセッシング アプリケーションと同様に、ツールバーを表示できるように書式設定文字列のすべての変更を追跡する必要があります。  

@@ -3,11 +3,11 @@ title: 初期化のインスタンス化
 ms.date: 03/30/2017
 ms.assetid: 154d049f-2140-4696-b494-c7e53f6775ef
 ms.openlocfilehash: 1414908025416f4cdd6e5b51c052799631ab52cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322187"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989912"
 ---
 # <a name="instancing-initialization"></a>初期化のインスタンス化
 このサンプルを拡張、[プーリング](../../../../docs/framework/wcf/samples/pooling.md)インターフェイスを定義することでサンプル`IObjectControl`オブジェクトの初期化をアクティブ化して非アクティブ化をカスタマイズできます。 クライアントは、オブジェクトをプールに返すメソッドや、プールに返さないメソッドを呼び出します。  
@@ -23,9 +23,9 @@ ms.locfileid: "59322187"
 ## <a name="iinstanceprovider"></a>IInstanceProvider  
  WCF では、EndpointDispatcher を実装するインスタンス プロバイダーを使用して、サービス クラスのインスタンスを作成、<xref:System.ServiceModel.Dispatcher.IInstanceProvider>インターフェイス。 このインターフェイスに含まれるメソッドは、次の 2 つのみです。  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>:メッセージの受信時にディスパッチャーの呼び出し、<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>メッセージを処理するサービス クラスのインスタンスを作成します。 このメソッドの呼び出し頻度は <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> プロパティで決まります。 たとえば <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> プロパティが <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType> に設定されている場合、サービス クラスの新しいインスタンスが作成され、到着する各メッセージが処理されます。したがって、<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> はメッセージが到着するたびに呼び出されます。  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>:メッセージの受信時にディスパッチャーの呼び出し、<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A>メッセージを処理するサービス クラスのインスタンスを作成します。 このメソッドの呼び出し頻度は <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> プロパティで決まります。 たとえば <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> プロパティが <xref:System.ServiceModel.InstanceContextMode.PerCall?displayProperty=nameWithType> に設定されている場合、サービス クラスの新しいインスタンスが作成され、到着する各メッセージが処理されます。したがって、<xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> はメッセージが到着するたびに呼び出されます。  
   
--   <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>:サービス インスタンスでは、メッセージの処理が完了すると、EndpointDispatcher を呼び出す、<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>メソッド。 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> メソッドと同様、このメソッドへの呼び出し頻度は <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> プロパティで決まります。  
+- <xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>:サービス インスタンスでは、メッセージの処理が完了すると、EndpointDispatcher を呼び出す、<xref:System.ServiceModel.Dispatcher.IInstanceProvider.ReleaseInstance%2A>メソッド。 <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> メソッドと同様、このメソッドへの呼び出し頻度は <xref:System.ServiceModel.ServiceBehaviorAttribute.InstanceContextMode%2A> プロパティで決まります。  
   
 ## <a name="the-object-pool"></a>オブジェクト プール  
  `ObjectPoolInstanceProvider` クラスには、オブジェクト プールの実装が含まれています。 このクラスは、サービス モデルのレイヤと対話する <xref:System.ServiceModel.Dispatcher.IInstanceProvider> インターフェイスを実装しています。 EndpointDispatcher が、新しいインスタンスを作成する代わりに <xref:System.ServiceModel.Dispatcher.IInstanceProvider.GetInstance%2A> メソッドを呼び出すと、カスタム実装はメモリ内プールで既存のオブジェクトを検索します。 検索されたオブジェクトが使用可能な場合は、そのオブジェクトが返されます。 使用可能なオブジェクトがない場合、`ObjectPoolInstanceProvider` は `ActiveObjectsCount` プロパティ (プールから返されるオブジェクト数) が最大プール サイズに達しているかどうかをチェックします。 最大サイズに達していない場合は、新しいインスタンスが作成されて呼び出し元に返され、その後 `ActiveObjectsCount` がインクリメントされます。 最大サイズに達していると、構成期間中、オブジェクト作成要求がキューに置かれます。 `GetObjectFromThePool` の実装を次のサンプル コードに示します。  
@@ -136,29 +136,29 @@ if (activeObjectsCount == 0)
   
  ServiceModel のレイヤ拡張は、次の動作を使用してフックされます。  
   
--   サービスの動作:サービス ランタイム全体のカスタマイズを実現します。  
+- サービスの動作:サービス ランタイム全体のカスタマイズを実現します。  
   
--   エンドポイントの動作:EndpointDispatcher を含む、特定のサービス エンドポイントのカスタマイズを実現します。  
+- エンドポイントの動作:EndpointDispatcher を含む、特定のサービス エンドポイントのカスタマイズを実現します。  
   
--   コントラクトの動作:いずれかのカスタマイズを許可するこれら<xref:System.ServiceModel.Dispatcher.ClientRuntime>または<xref:System.ServiceModel.Dispatcher.DispatchRuntime>それぞれクライアントまたはサービスのクラスします。  
+- コントラクトの動作:いずれかのカスタマイズを許可するこれら<xref:System.ServiceModel.Dispatcher.ClientRuntime>または<xref:System.ServiceModel.Dispatcher.DispatchRuntime>それぞれクライアントまたはサービスのクラスします。  
   
--   操作の動作:いずれかのカスタマイズを許可するこれら<xref:System.ServiceModel.Dispatcher.ClientOperation>または<xref:System.ServiceModel.Dispatcher.DispatchOperation>それぞれクライアントまたはサービスのクラスします。  
+- 操作の動作:いずれかのカスタマイズを許可するこれら<xref:System.ServiceModel.Dispatcher.ClientOperation>または<xref:System.ServiceModel.Dispatcher.DispatchOperation>それぞれクライアントまたはサービスのクラスします。  
   
  オブジェクト プール拡張を行うには、エンドポイントの動作またはサービスの動作のどちらかを作成します。 この例ではサービスの動作を使用します。この動作では、オブジェクト プール機能がサービスの各エンドポイントに適用されます。 サービス動作を作成するには、<xref:System.ServiceModel.Description.IServiceBehavior> インターフェイスを実装します。 ServiceModel にカスタム動作を認識させるには、次のようにいくつかの方法があります。  
   
--   カスタム属性を使用する。  
+- カスタム属性を使用する。  
   
--   カスタム動作をサービス説明の動作コレクションに強制的に追加する。  
+- カスタム動作をサービス説明の動作コレクションに強制的に追加する。  
   
--   構成ファイルを拡張する。  
+- 構成ファイルを拡張する。  
   
  このサンプルではカスタム属性を使用します。 <xref:System.ServiceModel.ServiceHost> が構築されると、サービスの種類の定義で使用されている属性が調べられ、使用可能な動作がサービス説明の動作コレクションに追加されます。  
   
  <xref:System.ServiceModel.Description.IServiceBehavior>インターフェイスが 3 つの方法: <xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A> `,` <xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A> `,`と<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A>します。 これらのメソッドは、WCF によって呼び出されるときに、<xref:System.ServiceModel.ServiceHost>を初期化しています。 最初に、<xref:System.ServiceModel.Description.IServiceBehavior.Validate%2A?displayProperty=nameWithType> が呼び出されます。このメソッドによってサービスの不整合性を検査できます。 次に、<xref:System.ServiceModel.Description.IServiceBehavior.AddBindingParameters%2A?displayProperty=nameWithType> が呼び出されます。このメソッドは、非常に高度なシナリオでのみ必要です。 最後に、<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> が呼び出されます。このメソッドはランタイムを構成します。 次のパラメータは、<xref:System.ServiceModel.Description.IServiceBehavior.ApplyDispatchBehavior%2A?displayProperty=nameWithType> に渡されます。  
   
--   `Description`:このパラメーターは、サービス全体のサービスの説明を提供します。 これを使用すると、サービスのエンドポイント、コントラクト、バインディング、およびサービスに関連するその他のデータに関する説明データを検査できます。  
+- `Description`:このパラメーターは、サービス全体のサービスの説明を提供します。 これを使用すると、サービスのエンドポイント、コントラクト、バインディング、およびサービスに関連するその他のデータに関する説明データを検査できます。  
   
--   `ServiceHostBase`:このパラメーターでは、<xref:System.ServiceModel.ServiceHostBase>は現在初期化中です。  
+- `ServiceHostBase`:このパラメーターでは、<xref:System.ServiceModel.ServiceHostBase>は現在初期化中です。  
   
  カスタム <xref:System.ServiceModel.Description.IServiceBehavior> 実装では、`ObjectPoolInstanceProvider` の新しいインスタンスがインスタンス化され、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.InstanceProvider%2A> に関連付けられた各 <xref:System.ServiceModel.Dispatcher.EndpointDispatcher> 内の <xref:System.ServiceModel.ServiceHostBase> プロパティに割り当てられます。  
   

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, MultipleView
 ms.assetid: 5bf1b248-ffee-48c8-9613-0b134bbe9f6a
 ms.openlocfilehash: 74e5908dfcd42d031464ffccedb530be4a71a3f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983360"
 ---
 # <a name="implementing-the-ui-automation-multipleview-control-pattern"></a>UI オートメーション MultipleView コントロール パターンの実装
 > [!NOTE]
@@ -27,13 +27,13 @@ ms.locfileid: "59125199"
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
  Multiple View コントロール パターンを実装する場合は、次のガイドラインと規則にご注意ください。  
   
--   現在のビューを管理するコンテナーが現在のビューを提供するコントロールとは異なる場合は、現在のビューを管理するためのコンテナーにも<xref:System.Windows.Automation.Provider.IMultipleViewProvider> を実装する必要があります。 たとえば、Windows エクスプローラーには現在のフォルダーのコンテンツの List コントロールが含まれていますが、そのコントロールのビューは Windows エクスプローラーのアプリケーションから管理されています。  
+- 現在のビューを管理するコンテナーが現在のビューを提供するコントロールとは異なる場合は、現在のビューを管理するためのコンテナーにも<xref:System.Windows.Automation.Provider.IMultipleViewProvider> を実装する必要があります。 たとえば、Windows エクスプローラーには現在のフォルダーのコンテンツの List コントロールが含まれていますが、そのコントロールのビューは Windows エクスプローラーのアプリケーションから管理されています。  
   
--   自身のコンテンツを並べ替えることができるコントロールは、複数のビューをサポートしているとは見なされません。  
+- 自身のコンテンツを並べ替えることができるコントロールは、複数のビューをサポートしているとは見なされません。  
   
--   ビューのコレクションは、インスタンス間で同じである必要があります。  
+- ビューのコレクションは、インスタンス間で同じである必要があります。  
   
--   ビューの名前は、読み上げ、ブライユ点字、その他の人間が判読できるアプリケーションでの使用に適した名前にする必要があります。  
+- ビューの名前は、読み上げ、ブライユ点字、その他の人間が判読できるアプリケーションでの使用に適した名前にする必要があります。  
   
 <a name="Required_Members_for_IMultipleViewProvider"></a>   
 ## <a name="required-members-for-imultipleviewprovider"></a>IMultipleViewProvider の必須メンバー  

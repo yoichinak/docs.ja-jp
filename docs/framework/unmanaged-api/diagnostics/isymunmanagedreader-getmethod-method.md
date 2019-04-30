@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: ab6228866434b35525b16e97b8cba718b849dea1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993344"
 ---
 # <a name="isymunmanagedreadergetmethod-method"></a>ISymUnmanagedReader::GetMethod メソッド
 シンボル リーダー メソッドでは、指定したメソッドのトークンを取得します。  

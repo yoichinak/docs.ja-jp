@@ -11,24 +11,24 @@ helpviewer_keywords:
 - ', '
 ms.assetid: 791bb2f0-4e5c-4569-ac3c-211996808d44
 ms.openlocfilehash: 5c22c2862ae8b948787fd5e6ca16109aa2f52aef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218772"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031253"
 ---
 # <a name="intercepting-input-from-the-stylus"></a>スタイラスからの入力のインターセプト
 <xref:System.Windows.Input.StylusPlugIns>アーキテクチャに低レベルの制御を実装するためのメカニズムを提供する<xref:System.Windows.Input.Stylus>入力およびデジタル インクの作成<xref:System.Windows.Ink.Stroke>オブジェクト。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>クラスがカスタム動作を実装し、最適なパフォーマンスのスタイラス デバイスからのデータのストリームに適用するためのメカニズムを提供します。  
   
  このトピックは、次の内容で構成されています。  
   
--   [アーキテクチャ](#Architecture)  
+- [アーキテクチャ](#Architecture)  
   
--   [スタイラス プラグインを実装します。](#ImplementingStylusPlugins)  
+- [スタイラス プラグインを実装します。](#ImplementingStylusPlugins)  
   
--   [InkCanvas にプラグインを追加します。](#AddingYourPluginToAnInkCanvas)  
+- [InkCanvas にプラグインを追加します。](#AddingYourPluginToAnInkCanvas)  
   
--   [まとめ](#Conclusion)  
+- [まとめ](#Conclusion)  
   
 <a name="Architecture"></a>   
 ## <a name="architecture"></a>アーキテクチャ  

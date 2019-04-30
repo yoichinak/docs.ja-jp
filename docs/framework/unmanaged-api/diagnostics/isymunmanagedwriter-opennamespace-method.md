@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1585acce8bba0dff327c961f5e32ef6b46794401
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986025"
 ---
 # <a name="isymunmanagedwriteropennamespace-method"></a>ISymUnmanagedWriter::OpenNamespace メソッド
 新しい名前空間を開きます。 名前空間を使用するメソッドまたは変数を定義する前に、このメソッドを呼び出します。 名前空間を入れ子にすることができます。  

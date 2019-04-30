@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, about Windows Forms controls
 ms.assetid: f050de8f-4ebd-4042-94b8-edf9a1dbd52a
 ms.openlocfilehash: 2fb4ffd4d2f39f0b11f1db4d152c5922e1ac4d19
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973811"
 ---
 # <a name="windows-forms-controls"></a>Windows フォーム コントロール
 Windows フォーム アプリケーションのユーザー インターフェイスを設計および変更するときは、コントロールを追加、整列、配置する必要があります。 コントロールは、フォーム オブジェクトに含まれるオブジェクトです。 コントロールの各種類には、そのコントロールを特定の目的に適したものにする固有のプロパティ、メソッド、イベントのセットがあります。 デザイナーでコントロールを操作し、実行時にコントロールを動的に追加するコードを記述できます。  

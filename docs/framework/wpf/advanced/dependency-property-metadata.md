@@ -8,11 +8,11 @@ helpviewer_keywords:
 - overriding metadata [WPF]
 ms.assetid: d01ed009-b722-41bf-b82f-fe1a8cdc50dd
 ms.openlocfilehash: 98f8c6611340c89409697918ff8a16eaabe3c7a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170366"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010561"
 ---
 # <a name="dependency-property-metadata"></a>依存関係プロパティのメタデータ
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] プロパティ システムには、リフレクションや一般的な [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] 特性から得られる以上の詳細なプロパティ情報を提供するメタデータ報告システムがあります。 依存関係プロパティのメタデータは、依存関係プロパティを定義するクラスで個別に割り当てることも、依存関係プロパティを別のクラスに追加する際に変更することもできます。また、依存関係プロパティをその定義元の基本クラスから継承するすべての派生クラスで明確にオーバーライドすることもできます。  
@@ -25,11 +25,11 @@ ms.locfileid: "59170366"
 ## <a name="how-dependency-property-metadata-is-used"></a>依存関係プロパティのメタデータの使用方法  
  依存関係プロパティのメタデータは、依存プロパティの特性を照会して調べるためのオブジェクトとして存在します。 また、このメタデータは、特定の依存関係プロパティを処理するために、プロパティ システムによって頻繁にアクセスされます。 依存関係プロパティのメタデータ オブジェクトには、次のような情報が格納されます。  
   
--   依存関係プロパティの既定値 (ローカル値、スタイル、継承などによってその他の依存関係プロパティ値が指定されない場合)。依存関係プロパティの値を割り当てる際の、既定値と、プロパティ システムで使用される優先順位の関係に関する詳細な説明については、「[依存関係プロパティ値の優先順位](dependency-property-value-precedence.md)」を参照してください。  
+- 依存関係プロパティの既定値 (ローカル値、スタイル、継承などによってその他の依存関係プロパティ値が指定されない場合)。依存関係プロパティの値を割り当てる際の、既定値と、プロパティ システムで使用される優先順位の関係に関する詳細な説明については、「[依存関係プロパティ値の優先順位](dependency-property-value-precedence.md)」を参照してください。  
   
--   所有者型に基づく強制型変換または変更通知の動作に影響を与えるコールバック実装への参照。 多くの場合、これらのコールバックは非パブリックなアクセス レベルで定義されます。したがって、参照が、許可されたアクセス スコープ内にない限り、一般にメタデータから実際の参照を取得することはできません。 依存関係プロパティのコールバックの詳細については、「[依存関係プロパティのコールバックと検証](dependency-property-callbacks-and-validation.md)」を参照してください。  
+- 所有者型に基づく強制型変換または変更通知の動作に影響を与えるコールバック実装への参照。 多くの場合、これらのコールバックは非パブリックなアクセス レベルで定義されます。したがって、参照が、許可されたアクセス スコープ内にない限り、一般にメタデータから実際の参照を取得することはできません。 依存関係プロパティのコールバックの詳細については、「[依存関係プロパティのコールバックと検証](dependency-property-callbacks-and-validation.md)」を参照してください。  
   
--   対象の依存関係プロパティが WPF フレームワーク レベルのプロパティと見なされる場合、WPF フレームワーク レベルの依存関係プロパティ特性がメタデータに含まれる可能性があります。これは、WPF フレームワーク レベルのレイアウト エンジンやプロパティ継承ロジックなどのサービスの情報および状態を報告します。 この内容に関する依存関係プロパティのメタデータの詳細については、「[フレームワーク プロパティ メタデータ](framework-property-metadata.md)」を参照してください。  
+- 対象の依存関係プロパティが WPF フレームワーク レベルのプロパティと見なされる場合、WPF フレームワーク レベルの依存関係プロパティ特性がメタデータに含まれる可能性があります。これは、WPF フレームワーク レベルのレイアウト エンジンやプロパティ継承ロジックなどのサービスの情報および状態を報告します。 この内容に関する依存関係プロパティのメタデータの詳細については、「[フレームワーク プロパティ メタデータ](framework-property-metadata.md)」を参照してください。  
   
 <a name="APIs"></a>   
 ## <a name="metadata-apis"></a>メタデータ API  
@@ -62,15 +62,15 @@ ms.locfileid: "59170366"
   
  メタデータをオーバーライドすると、さまざまなメタデータ特性がマージされるか置き換えられます。  
   
--   <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 結合されます。 新しく追加した場合<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>、そのコールバックがメタデータに格納します。 指定しない場合、<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>はメタデータでそれを指定した最も近い先祖からの参照として昇格します。  
+- <xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A> 結合されます。 新しく追加した場合<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>、そのコールバックがメタデータに格納します。 指定しない場合、<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>はメタデータでそれを指定した最も近い先祖からの参照として昇格します。  
   
--   実際のプロパティ システム動作<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>は、階層内のすべてのメタデータ所有者用の実装が保持され、最派生クラスのコールバックが最初に呼び出されますが、プロパティ システムによる実行の順序で、テーブルに追加します。  
+- 実際のプロパティ システム動作<xref:System.Windows.PropertyMetadata.PropertyChangedCallback%2A>は、階層内のすべてのメタデータ所有者用の実装が保持され、最派生クラスのコールバックが最初に呼び出されますが、プロパティ システムによる実行の順序で、テーブルに追加します。  
   
--   <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 置き換えられます。 指定しない場合、<xref:System.Windows.PropertyMetadata.DefaultValue%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.DefaultValue%2A>メタデータでそれを指定した最も近い先祖します。  
+- <xref:System.Windows.PropertyMetadata.DefaultValue%2A> 置き換えられます。 指定しない場合、<xref:System.Windows.PropertyMetadata.DefaultValue%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.DefaultValue%2A>メタデータでそれを指定した最も近い先祖します。  
   
--   <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 実装は置き換えられます。 新しく追加した場合<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>、そのコールバックがメタデータに格納します。 指定しない場合、<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>はメタデータでそれを指定した最も近い先祖からの参照として昇格します。  
+- <xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A> 実装は置き換えられます。 新しく追加した場合<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>、そのコールバックがメタデータに格納します。 指定しない場合、<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>オーバーライドでは、値で<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>はメタデータでそれを指定した最も近い先祖からの参照として昇格します。  
   
--   プロパティ システム動作はのみですが、<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>直接のメタデータが呼び出されます。 その他への参照<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>階層内の実装が保持されます。  
+- プロパティ システム動作はのみですが、<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>直接のメタデータが呼び出されます。 その他への参照<xref:System.Windows.PropertyMetadata.CoerceValueCallback%2A>階層内の実装が保持されます。  
   
  この動作を実装して<xref:System.Windows.PropertyMetadata.Merge%2A>、派生メタデータ クラスでオーバーライドすることができます。  
   

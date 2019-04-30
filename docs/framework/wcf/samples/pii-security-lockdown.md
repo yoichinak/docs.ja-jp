@@ -3,20 +3,20 @@ title: PII セキュリティ ロックダウン
 ms.date: 03/30/2017
 ms.assetid: c44fb338-9527-4dd0-8607-b8787d15acb4
 ms.openlocfilehash: 13ed280e9b7de2b205e0878761dbf97e168f06d3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326646"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989652"
 ---
 # <a name="pii-security-lockdown"></a>PII セキュリティ ロックダウン
 このサンプルでは、によって、Windows Communication Foundation (WCF) サービスの複数のセキュリティ関連機能を制御する方法を示しています。  
   
--   サービスの構成ファイル内の機密情報を暗号化します。  
+- サービスの構成ファイル内の機密情報を暗号化します。  
   
--   入れ子になったサービス サブディレクトリが設定をオーバーライドできないように、構成ファイル内の要素をロックします。  
+- 入れ子になったサービス サブディレクトリが設定をオーバーライドできないように、構成ファイル内の要素をロックします。  
   
--   トレースおよびメッセージ ログで、個人を特定できる情報 (PII) のログ記録を制御します。  
+- トレースおよびメッセージ ログで、個人を特定できる情報 (PII) のログ記録を制御します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -124,9 +124,9 @@ ms.locfileid: "59326646"
   
  また、DPAPI や RSA を使用して構成ファイルの要素を暗号化することもできます。 詳細については、次のリンクを参照してください。  
   
--   [セキュリティで保護された ASP.NET アプリケーションの構築:認証、承認、およびセキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
+- [セキュリティで保護された ASP.NET アプリケーションの構築:認証、承認、およびセキュリティで保護された通信](https://go.microsoft.com/fwlink/?LinkId=95137)  
   
--   [方法: ASP.NET 2.0 の構成セクションを暗号化する RSA を使用して](https://go.microsoft.com/fwlink/?LinkId=95138)  
+- [方法: ASP.NET 2.0 の構成セクションを暗号化する RSA を使用して](https://go.microsoft.com/fwlink/?LinkId=95138)  
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルを設定、ビルド、および実行するには  
   

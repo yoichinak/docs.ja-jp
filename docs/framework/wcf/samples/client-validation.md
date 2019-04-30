@@ -3,11 +3,11 @@ title: クライアント検証
 ms.date: 03/30/2017
 ms.assetid: f0c1f805-1a81-4d0d-a112-bf5e2e87a631
 ms.openlocfilehash: 9659c262377af76294c52d1be97146923bc91b71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943976"
 ---
 # <a name="client-validation"></a>クライアント検証
 サービスは頻繁にメタデータを公開し、クライアント プロキシの型を自動的に生成して構成できるようにします。 サービスが信頼できない場合、クライアント アプリケーションでは、セキュリティ、トランザクション、サービス コントラクトの型などに関して、メタデータがクライアント アプリケーションのポリシーに合致しているかどうか検証する必要があります。 次のサンプルでは、サービス エンドポイントを検証するクライアント エンドポイントの動作を記述して、サービス エンドポイントを安全に使用できることを確認する方法を示します。  
@@ -54,11 +54,11 @@ ms.locfileid: "59315128"
   
 10. クライアント コンピューターで、client.exe を実行します。  
   
-    1.  クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+    1. クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
--   サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
+- サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
   
     > [!NOTE]
     >  このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間での証明書の使用、必ず、CurrentUser - でインストールされているサービス証明書をオフにする WCF サンプルを実行している場合 TrustedPeople を格納します。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>. For example: certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` を実行します。  

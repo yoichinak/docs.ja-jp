@@ -3,11 +3,11 @@ title: 操作フォーマッタと操作セレクター
 ms.date: 03/30/2017
 ms.assetid: 1c27e9fe-11f8-4377-8140-828207b98a0e
 ms.openlocfilehash: 45b489aeb88f57fe442cef9ffed1a2ee079b75e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989691"
 ---
 # <a name="operation-formatter-and-operation-selector"></a>操作フォーマッタと操作セレクター
 このサンプルでは、Windows Communication Foundation (WCF) の機能拡張ポイントを使用して、WCF で必要なものから別の形式でメッセージ データを許可する方法を示します。 既定では、WCF フォーマッタに想定の下に含まれるメソッドのパラメーター、`soap:body`要素。 このサンプルでは、代わりに HTTP GET クエリ文字列のパラメータ データを解析するカスタム操作フォーマッタを実装し、そのデータを使用してメソッドを呼び出す方法を示します。  
@@ -16,15 +16,15 @@ ms.locfileid: "59318924"
   
  これを行うために、サンプルには次の機能が用意されています。  
   
--   `QueryStringFormatter`。クライアントとサーバー用に、それぞれ <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> と <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> を実装し、クエリ文字列内のデータを処理します。  
+- `QueryStringFormatter`。クライアントとサーバー用に、それぞれ <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> と <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> を実装し、クエリ文字列内のデータを処理します。  
   
--   `UriOperationSelector`。サーバー上に、GET 要求内の操作名に基づいて操作ディスパッチを実行する <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> を実装します。  
+- `UriOperationSelector`。サーバー上に、GET 要求内の操作名に基づいて操作ディスパッチを実行する <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> を実装します。  
   
--   `EnableHttpGetRequestsBehavior` エンドポイント動作 (および対応する構成)。必要な操作セレクタをランタイムに追加します。  
+- `EnableHttpGetRequestsBehavior` エンドポイント動作 (および対応する構成)。必要な操作セレクタをランタイムに追加します。  
   
--   新しい操作フォーマッタをランタイムに挿入する方法を示します。  
+- 新しい操作フォーマッタをランタイムに挿入する方法を示します。  
   
--   このサンプルでは、クライアントとサービスは両方ともコンソール アプリケーション (.exe) です。  
+- このサンプルでは、クライアントとサービスは両方ともコンソール アプリケーション (.exe) です。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  
@@ -36,15 +36,15 @@ ms.locfileid: "59318924"
   
  要求 :  
   
--   このサンプルでは、<xref:System.ComponentModel.TypeConverter> クラスを使用して要求メッセージ内のパラメータ データを文字列に変換したり、その逆の処理を行ったりします。 <xref:System.ComponentModel.TypeConverter> が特定の型で使用できない場合は、サンプルのフォーマッタから例外がスローされます。  
+- このサンプルでは、<xref:System.ComponentModel.TypeConverter> クラスを使用して要求メッセージ内のパラメータ データを文字列に変換したり、その逆の処理を行ったりします。 <xref:System.ComponentModel.TypeConverter> が特定の型で使用できない場合は、サンプルのフォーマッタから例外がスローされます。  
   
--   クライアントの `IClientMessageFormatter.SerializeRequest` メソッドでは、フォーマッタは適切な宛先アドレスを使用して URI を作成し、操作名をサフィックスとして追加します。 この操作名は、サーバー上の適切な操作へのディスパッチに使用されます。 次にパラメータ名と <xref:System.ComponentModel.TypeConverter> によって変換された値を使用して、パラメータ オブジェクトの配列を取得し、そのパラメータ データを URI クエリ文字列にシリアル化します。 <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> プロパティおよび <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> プロパティは、この URI に設定されます。 <xref:System.ServiceModel.Channels.MessageProperties> にアクセスするには、<xref:System.ServiceModel.Channels.Message.Properties%2A> プロパティを使用します。  
+- クライアントの `IClientMessageFormatter.SerializeRequest` メソッドでは、フォーマッタは適切な宛先アドレスを使用して URI を作成し、操作名をサフィックスとして追加します。 この操作名は、サーバー上の適切な操作へのディスパッチに使用されます。 次にパラメータ名と <xref:System.ComponentModel.TypeConverter> によって変換された値を使用して、パラメータ オブジェクトの配列を取得し、そのパラメータ データを URI クエリ文字列にシリアル化します。 <xref:System.ServiceModel.Channels.MessageHeaders.To%2A> プロパティおよび <xref:System.ServiceModel.Channels.MessageProperties.Via%2A> プロパティは、この URI に設定されます。 <xref:System.ServiceModel.Channels.MessageProperties> にアクセスするには、<xref:System.ServiceModel.Channels.Message.Properties%2A> プロパティを使用します。  
   
--   サーバーの `IDispatchMessageFormatter.DeserializeRequest` メソッドでは、フォーマッタは受信要求メッセージ プロパティ内で`Via` URI を検索します。 次に URI クエリ文字列内にある名前と値の組み合わせを解析してパラメータ名と値に分け、そのパラメータ名と値を使用してこのメソッドに渡されるパラメータの配列を設定します。 操作ディスパッチは既に発生しているので、このメソッドでは操作名のサフィックスは無視されます。  
+- サーバーの `IDispatchMessageFormatter.DeserializeRequest` メソッドでは、フォーマッタは受信要求メッセージ プロパティ内で`Via` URI を検索します。 次に URI クエリ文字列内にある名前と値の組み合わせを解析してパラメータ名と値に分け、そのパラメータ名と値を使用してこのメソッドに渡されるパラメータの配列を設定します。 操作ディスパッチは既に発生しているので、このメソッドでは操作名のサフィックスは無視されます。  
   
  応答 :  
   
--   このサンプルでは、HTTP GET は要求のみに使用されます。 応答を送信するには、フォーマッタを XML メッセージの生成時に使用できたはずの最初のフォーマッタに代行させます。 このサンプルの目的の 1 つは、このような代行フォーマッタの実装方法を示すことです。  
+- このサンプルでは、HTTP GET は要求のみに使用されます。 応答を送信するには、フォーマッタを XML メッセージの生成時に使用できたはずの最初のフォーマッタに代行させます。 このサンプルの目的の 1 つは、このような代行フォーマッタの実装方法を示すことです。  
   
 ### <a name="uripathsuffixoperationselector-class"></a>UriPathSuffixOperationSelector クラス  
  <xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> インターフェイスを使用すると、特定のメッセージをディスパッチする必要がある操作で、ユーザー独自のロジックを実装できます。  
@@ -94,16 +94,16 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
   
  サーバー側 :  
   
--   <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> インターフェイスを実装して、HTTP GET 要求を読み込み、応答の書き出しを元のフォーマッタに代行させる必要があります。 これを行うには、クライアントと同じ`EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` ヘルパー メソッドを呼び出します (前述のコード サンプルを参照)。  
+- <xref:System.ServiceModel.Dispatcher.IDispatchMessageFormatter> インターフェイスを実装して、HTTP GET 要求を読み込み、応答の書き出しを元のフォーマッタに代行させる必要があります。 これを行うには、クライアントと同じ`EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` ヘルパー メソッドを呼び出します (前述のコード サンプルを参照)。  
   
--   この手順は、<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> を呼び出す前に行う必要があります。 このサンプルでは、<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> を呼び出す前にこのフォーマッタを手動で変更する方法を示します。 同じ結果を得るための別の方法としては、オープン操作の前に <xref:System.ServiceModel.ServiceHost> を呼び出す `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` からクラスを派生します (ホスティングのドキュメントおよびサンプル例を参照してください)。  
+- この手順は、<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> を呼び出す前に行う必要があります。 このサンプルでは、<xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> を呼び出す前にこのフォーマッタを手動で変更する方法を示します。 同じ結果を得るための別の方法としては、オープン操作の前に <xref:System.ServiceModel.ServiceHost> を呼び出す `EnableHttpGetRequestsBehavior.ReplaceFormatterBehavior` からクラスを派生します (ホスティングのドキュメントおよびサンプル例を参照してください)。  
   
 ### <a name="user-experience"></a>ユーザー側の表示と操作  
  サーバー側 :  
   
--   サーバーの `ICalculator` 実装は、変更する必要はありません。  
+- サーバーの `ICalculator` 実装は、変更する必要はありません。  
   
--   サービス用の App.config では、`messageVersion` 要素の `textMessageEncoding` 属性を `None` に設定するカスタムの POX バインディングを使用する必要があります。  
+- サービス用の App.config では、`messageVersion` 要素の `textMessageEncoding` 属性を `None` に設定するカスタムの POX バインディングを使用する必要があります。  
   
     ```xml  
     <bindings>  
@@ -116,7 +116,7 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   サービス用の App.config ではさらに、カスタムの `EnableHttpGetRequestsBehavior` を動作の拡張セクションに追加して使用することによって、これを指定する必要があります。  
+- サービス用の App.config ではさらに、カスタムの `EnableHttpGetRequestsBehavior` を動作の拡張セクションに追加して使用することによって、これを指定する必要があります。  
   
     ```xml  
     <behaviors>  
@@ -136,13 +136,13 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </extensions>  
     ```  
   
--   <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> を呼び出す前に操作フォーマッタを追加します。  
+- <xref:System.ServiceModel.Channels.CommunicationObject.Open%2A> を呼び出す前に操作フォーマッタを追加します。  
   
  クライアント側 :  
   
--   クライアントの実装は、変更する必要はありません。  
+- クライアントの実装は、変更する必要はありません。  
   
--   クライアント用の App.config では、`messageVersion` 要素の `textMessageEncoding` 属性を `None` に設定するカスタムの POX バインディングを使用する必要があります。 サービスとの違いは、クライアントでは送信先アドレスを変更できるように手動アドレス指定を有効にする必要があるという点です。  
+- クライアント用の App.config では、`messageVersion` 要素の `textMessageEncoding` 属性を `None` に設定するカスタムの POX バインディングを使用する必要があります。 サービスとの違いは、クライアントでは送信先アドレスを変更できるように手動アドレス指定を有効にする必要があるという点です。  
   
     ```xml  
     <bindings>  
@@ -155,9 +155,9 @@ void ReplaceFormatterBehavior(OperationDescription operationDescription, Endpoin
     </bindings>  
     ```  
   
--   クライアント用の App.config では、サーバーと同じカスタムの `EnableHttpGetRequestsBehavior` を指定する必要があります。  
+- クライアント用の App.config では、サーバーと同じカスタムの `EnableHttpGetRequestsBehavior` を指定する必要があります。  
   
--   <xref:System.ServiceModel.ChannelFactory%601.CreateChannel> を呼び出す前に操作フォーマッタを追加します。  
+- <xref:System.ServiceModel.ChannelFactory%601.CreateChannel> を呼び出す前に操作フォーマッタを追加します。  
   
  このサンプルを実行すると、操作要求および応答がクライアントのコンソール ウィンドウに表示されます。 4 つすべての操作 (加算、減算、乗算、および除算) が正常に行われる必要があります。  
   

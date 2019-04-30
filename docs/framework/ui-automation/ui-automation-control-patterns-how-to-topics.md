@@ -8,11 +8,11 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: 72c80262-8ca9-4624-9bd6-96984c5b7c5c
 ms.openlocfilehash: dc77d3798c9a79b5becf28e55c9f7e3be23eb352
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57677826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982684"
 ---
 # <a name="ui-automation-control-patterns-how-to-topics"></a>UI オートメーション コントロール パターンに関する「方法」トピック
 > [!NOTE]

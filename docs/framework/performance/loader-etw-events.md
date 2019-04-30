@@ -8,11 +8,11 @@ ms.assetid: cb403cc6-56f8-4609-b467-cdfa09f07909
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 87ec70b2b27c8886ac9b567498d75f9294437bed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949267"
 ---
 # <a name="loader-etw-events"></a>ローダー ETW イベント
 <a name="top"></a> これらのイベントは、アプリケーションのドメイン、アセンブリ、およびモジュールのロードとアンロードに関連する情報を収集します。  
@@ -21,15 +21,15 @@ ms.locfileid: "59141532"
   
  ローダー イベントは、次のように細分化されています。  
   
--   [アプリケーション ドメイン イベント](#application_domain_events)  
+- [アプリケーション ドメイン イベント](#application_domain_events)  
   
--   [CLR ローダー アセンブリ イベント](#clr_loader_assembly_events)  
+- [CLR ローダー アセンブリ イベント](#clr_loader_assembly_events)  
   
--   [モジュール イベント](#module_events)  
+- [モジュール イベント](#module_events)  
   
--   [CLR ドメイン モジュール イベント](#clr_domain_module_events)  
+- [CLR ドメイン モジュール イベント](#clr_domain_module_events)  
   
--   [モジュールの範囲イベント](#module_range_events)  
+- [モジュールの範囲イベント](#module_range_events)  
   
 <a name="application_domain_events"></a>   
 ## <a name="application-domain-events"></a>アプリケーション ドメイン イベント  
@@ -134,11 +134,11 @@ ms.locfileid: "59141532"
   
 ### <a name="remarks"></a>Remarks  
   
--   名前に"Pdb"が付いているフィールドは、プロファイル セッション中に読み込まれたモジュールに一致する PDB を検索するプロファイリング ツールによって使用できます。 これらのフィールドの値は、読み込まれたモジュールに一致する PDB の位置を特定するためにデバッガーが通常使用する、モジュールの IMAGE_DIRECTORY_ENTRY_DEBUG のセクションに書き込まれたデータに対応します。  
+- 名前に"Pdb"が付いているフィールドは、プロファイル セッション中に読み込まれたモジュールに一致する PDB を検索するプロファイリング ツールによって使用できます。 これらのフィールドの値は、読み込まれたモジュールに一致する PDB の位置を特定するためにデバッガーが通常使用する、モジュールの IMAGE_DIRECTORY_ENTRY_DEBUG のセクションに書き込まれたデータに対応します。  
   
--   "ManagedPdb"で始まるフィールド名は、マネージド コンパイラ (C# または Visual Basic コンパイラなど) によって生成された MSIL モジュールに対応する管理対象の PDB を参照します。 この PDB は、管理対象の PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージド ソース コードからの要素が MSIL モジュールにコンパイルされている MSIL 要素にどのようにマップされるかについて説明します。  
+- "ManagedPdb"で始まるフィールド名は、マネージド コンパイラ (C# または Visual Basic コンパイラなど) によって生成された MSIL モジュールに対応する管理対象の PDB を参照します。 この PDB は、管理対象の PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージド ソース コードからの要素が MSIL モジュールにコンパイルされている MSIL 要素にどのようにマップされるかについて説明します。  
   
--   "NativePdb"で始まるフィールド名は、 `NGEN createPDB`を呼び出すことによって生成された NGen PDB を参照します。 この PDB は、ネイティブ PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージド ソース コードからの要素が NGen モジュールにコンパイルされているネイティブ要素にどのようにマップされるかについて説明します。  
+- "NativePdb"で始まるフィールド名は、 `NGEN createPDB`を呼び出すことによって生成された NGen PDB を参照します。 この PDB は、ネイティブ PDB 形式を使用して、ファイル、行番号、およびシンボルの名前など、元のマネージド ソース コードからの要素が NGen モジュールにコンパイルされているネイティブ要素にどのようにマップされるかについて説明します。  
   
  [ページのトップへ](#top)  
   

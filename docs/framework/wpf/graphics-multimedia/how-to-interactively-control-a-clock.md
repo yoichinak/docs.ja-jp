@@ -9,11 +9,11 @@ helpviewer_keywords:
 - clocks [WPF], controlling interactively
 ms.assetid: d0b520e0-2f18-4cef-977f-2909e709548a
 ms.openlocfilehash: 05989b6a03e03fb5723a70c9c36d5e32f9117049
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947239"
 ---
 # <a name="how-to-interactively-control-a-clock"></a>方法: クロックを対話的に制御する
 A<xref:System.Windows.Media.Animation.Clock>オブジェクトの<xref:System.Windows.Media.Animation.ClockController>プロパティでは、対話形式で開始、一時停止、再開、シーク、塗りつぶし期間、クロックを進みおよびクロックを停止することができます。 タイミング ツリーのルート クロックのみを対話的に制御できます。  

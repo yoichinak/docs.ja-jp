@@ -3,11 +3,11 @@ title: PerformanceCounterInitializationFailure
 ms.date: 03/30/2017
 ms.assetid: 85050ac6-7f7b-4dd3-8e5e-f5116d7c9906
 ms.openlocfilehash: d55e3ee9b6dac6fd22fc6685cfef9c33f513ed4e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074041"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999134"
 ---
 # <a name="performancecounterinitializationfailure"></a>PerformanceCounterInitializationFailure
 Id:149  

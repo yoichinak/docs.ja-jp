@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, adding features
 ms.assetid: 733d1219-d6ad-4256-a55b-9eccf47f5a06
 ms.openlocfilehash: 82847add5b35fe767d42ee88d7754f789174e434
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57713554"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942910"
 ---
 # <a name="enhancing-windows-forms-applications"></a>Windows フォーム アプリケーションの拡張
 Windows フォームには、ユーザーの固有のニーズに合わせて、Windows ベースのアプリケーションを強化するために使用できる多くの機能が含まれます。 次のトピックは、これらの機能とその使用方法について説明します。  
@@ -34,7 +34,7 @@ Windows フォームには、ユーザーの固有のニーズに合わせて、
  [Windows フォーム アプリケーションのグローバル化](globalizing-windows-forms.md)  
  Windows フォーム アプリケーションをグローバル化する方法を示すトピックへのリンクが含まれます。  
   
- [Windows Forms and Unmanaged Applications](windows-forms-and-unmanaged-applications.md)  
+ [Windows フォームとアンマネージ アプリケーション](windows-forms-and-unmanaged-applications.md)  
  Windows フォーム アプリケーションから COM コンポーネントにアクセスする方法について説明したトピックへのリンクを示します。  
   
  [システム情報と Windows フォーム](system-information-and-windows-forms.md)  

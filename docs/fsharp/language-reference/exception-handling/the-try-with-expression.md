@@ -3,11 +3,11 @@ title: 例外:try...with 式
 description: 例外処理の F# の 'try...with' 式を使用する方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 742e0b595525c69b83a55682c3c8b9b650326ac7
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945536"
 ---
 # <a name="exceptions-the-trywith-expression"></a>例外:try...with 式
 
@@ -38,9 +38,9 @@ with
 
 |パターン|説明|
 |-------|-----------|
-|:? *例外の種類*|指定した種類の .NET 例外に一致します。|
+|:? *exception-type*|指定した種類の .NET 例外に一致します。|
 |:? *例外の種類*として*識別子*|指定された .NET 例外の種類と一致するが、例外の名前付きの値を示します。|
-|*例外名*(*引数*)|一致するF#例外の種類と、引数をバインドします。|
+|*exception-name*(*arguments*)|一致するF#例外の種類と、引数をバインドします。|
 |*identifier*|任意の例外に一致し、例外オブジェクトに名前をバインドします。 等価 **: でしょうか。System.Exception として**_識別子_|
 |*識別子*とき*条件*|条件が true の場合、すべての例外と一致します。|
 
@@ -54,10 +54,10 @@ with
 > `try...with`コンス トラクターは、個別の式から、`try...finally`式。 そのため、コードでは、両方が必要な場合、`with`ブロックと`finally`ブロック、2 つの式を入れ子にする必要があります。
 
 > [!NOTE]
-> 使用することができます`try...with`非同期ワークフローでおよびその他のコンピュテーション式でのカスタマイズされたバージョンの場合、`try...with`式を使用します。 詳細については、[非同期ワークフロー](../asynchronous-workflows.md)、および[コンピュテーション式](../computation-expressions.md)を参照してください。
+> 使用することができます`try...with`非同期ワークフローでおよびその他のコンピュテーション式でのカスタマイズされたバージョンの場合、`try...with`式を使用します。 詳細については、次を参照してください。[非同期ワークフロー](../asynchronous-workflows.md)、および[コンピュテーション式](../computation-expressions.md)します。
 
 ## <a name="see-also"></a>関連項目
 
 - [例外処理](index.md)
 - [例外の種類](exception-types.md)
-- [例外処理:`try...finally`式](the-try-finally-expression.md)
+- [例外: `try...finally`式](the-try-finally-expression.md)

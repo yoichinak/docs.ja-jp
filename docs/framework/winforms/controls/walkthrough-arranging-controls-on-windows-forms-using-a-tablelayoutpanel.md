@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
 ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009111"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置
 アプリケーションによっては、フォームのサイズを変更したり、コンテンツのサイズが変化したりしたときに、それに応じて自動的にレイアウトを調整するフォームが必要です。 動的なレイアウトが必要であり、かつコードで <xref:System.Windows.Forms.Control.Layout> イベントを明示的に処理しない場合は、レイアウト パネルの使用をご検討ください。  
@@ -28,21 +28,21 @@ ms.locfileid: "59341622"
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   Windows フォーム プロジェクトの作成  
+- Windows フォーム プロジェクトの作成  
   
--   行と列でコントロールの配置  
+- 行と列でコントロールの配置  
   
--   設定の行と列のプロパティ  
+- 設定の行と列のプロパティ  
   
--   コントロールを使って行および列にまたがりメモリ割り当てください。  
+- コントロールを使って行および列にまたがりメモリ割り当てください。  
   
--   オーバーフローの自動処理  
+- オーバーフローの自動処理  
   
--   ツールボックスでのダブルクリックによるコントロールの挿入  
+- ツールボックスでのダブルクリックによるコントロールの挿入  
   
--   アウトラインの描画によるコントロールの挿入  
+- アウトラインの描画によるコントロールの挿入  
   
--   別の親コントロールへの既存コントロールの再割り当て  
+- 別の親コントロールへの既存コントロールの再割り当て  
   
  終了すると、これらの重要なレイアウト機能が果たす役割について理解できます。  
   
@@ -158,25 +158,25 @@ ms.locfileid: "59341622"
   
 #### <a name="to-demonstrate-that-multiple-controls-within-cells-are-not-permitted"></a>示すセル内の複数のコントロールは許可されていません  
   
--   ドラッグ、<xref:System.Windows.Forms.Button>コントロールから、**ツールボックス**に、<xref:System.Windows.Forms.TableLayoutPanel>を制御し、占有されたセルの 1 つにドロップします。 なお、<xref:System.Windows.Forms.TableLayoutPanel>コントロールが削除を許可していない、<xref:System.Windows.Forms.Button>占有されたセルにコントロール。  
+- ドラッグ、<xref:System.Windows.Forms.Button>コントロールから、**ツールボックス**に、<xref:System.Windows.Forms.TableLayoutPanel>を制御し、占有されたセルの 1 つにドロップします。 なお、<xref:System.Windows.Forms.TableLayoutPanel>コントロールが削除を許可していない、<xref:System.Windows.Forms.Button>占有されたセルにコントロール。  
   
 ## <a name="swapping-controls"></a>コントロールの交換  
  <xref:System.Windows.Forms.TableLayoutPanel>コントロールでは、2 つの異なるセルを占有しているコントロールをスワップすることができます。  
   
 #### <a name="to-swap-controls"></a>コントロールをスワップするには  
   
--   1 つをドラッグ、<xref:System.Windows.Forms.Button>占有されたもう 1 つのセルにドロップしてセルを占有からコントロール。 他の 2 つのコントロールが 1 つのセルから移動したことに注意してください。  
+- 1 つをドラッグ、<xref:System.Windows.Forms.Button>占有されたもう 1 つのセルにドロップしてセルを占有からコントロール。 他の 2 つのコントロールが 1 つのセルから移動したことに注意してください。  
   
 ## <a name="next-steps"></a>次の手順  
  レイアウト パネルとコントロールを組み合わせて使用すると、複雑なレイアウトを作成できます。 さらに詳しく調べるための推奨事項を次に示します。  
   
--   いずれかのサイズを変更して、<xref:System.Windows.Forms.Button>コントロール サイズを大きくし、レイアウトへの影響に注意してください。  
+- いずれかのサイズを変更して、<xref:System.Windows.Forms.Button>コントロール サイズを大きくし、レイアウトへの影響に注意してください。  
   
--   選択した複数のコントロールに貼り付けて、<xref:System.Windows.Forms.TableLayoutPanel>制御し、コントロールを挿入する方法に注意してください。  
+- 選択した複数のコントロールに貼り付けて、<xref:System.Windows.Forms.TableLayoutPanel>制御し、コントロールを挿入する方法に注意してください。  
   
--   レイアウト パネルには、別のレイアウト パネルを含めることができます。 <xref:System.Windows.Forms.TableLayoutPanel> コントロールを既存のコントロールにドロップしてみます。  
+- レイアウト パネルには、別のレイアウト パネルを含めることができます。 <xref:System.Windows.Forms.TableLayoutPanel> コントロールを既存のコントロールにドロップしてみます。  
   
--   <xref:System.Windows.Forms.TableLayoutPanel> コントロールを親フォームにドッキングします。 フォームのサイズを変更し、レイアウトの変化を確認します。  
+- <xref:System.Windows.Forms.TableLayoutPanel> コントロールを親フォームにドッキングします。 フォームのサイズを変更し、レイアウトの変化を確認します。  
   
 ## <a name="see-also"></a>関連項目
 

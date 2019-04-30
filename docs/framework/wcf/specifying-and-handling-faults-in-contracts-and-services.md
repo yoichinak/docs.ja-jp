@@ -5,11 +5,11 @@ helpviewer_keywords:
 - handling faults [WCF]
 ms.assetid: a9696563-d404-4905-942d-1e0834c26dea
 ms.openlocfilehash: 7c64bdb0cf60fff2dad49c3ffc48629c53abecad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210673"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006400"
 ---
 # <a name="specifying-and-handling-faults-in-contracts-and-services"></a>コントラクトおよびサービスのエラーの指定と処理
 Windows Communication Foundation (WCF) アプリケーションは、マネージ例外オブジェクトを SOAP エラー オブジェクトを SOAP エラー オブジェクトをマネージ例外オブジェクトにマップすることによって、エラー状況を処理します。 ここでは、エラー状態がカスタムの SOAP エラーとして公開されるようにコントラクトを設計する方法、そのエラーをサービス実装の一部として返す方法、およびクライアントがそのエラーをキャッチする方法を説明します。  
@@ -25,9 +25,9 @@ Windows Communication Foundation (WCF) アプリケーションは、マネー�
   
  通常、サービス (および双方向クライアント) は、次の手順に従ってエラー処理をアプリケーションに統合します。  
   
--   例外状態をカスタム SOAP エラーにマップします。  
+- 例外状態をカスタム SOAP エラーにマップします。  
   
--   クライアントとサービスは、SOAP エラーを例外として送受信します。  
+- クライアントとサービスは、SOAP エラーを例外として送受信します。  
   
  さらに、WCF クライアントおよびサービス デバッグの目的で非宣言 soap エラーを使用することができ、既定のエラー動作を拡張することができます。 以下のセクションで、これらのタスクと概念について説明します。  
   

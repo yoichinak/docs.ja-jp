@@ -16,11 +16,11 @@ ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993162"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted メソッド
 ランタイムが開始されているかどうかを示します (つまり、かどうか、 [iclrruntimehost::start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)が呼び出され、成功しました)。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - StaticResource markup extensions [WPF]
 ms.assetid: 97af044c-71f1-4617-9a94-9064b68185d2
 ms.openlocfilehash: 8319e451268152e95326c02027157db72df631b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125147"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981904"
 ---
 # <a name="staticresource-markup-extension"></a>StaticResource のマークアップ拡張機能
 いずれかの値を提供[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]定義済みのリソースへの参照を検索することで、プロパティの属性。 そのリソースの検索動作が読み込み時の検索は、現在のマークアップから以前に読み込まれたリソースは検索に似ています[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ページおよびその他のアプリケーションのソースととしてそのリソースの値が生成されます、実行時のオブジェクトのプロパティの値です。  

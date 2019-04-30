@@ -3,11 +3,11 @@ title: Windows Workflow の基本概念
 ms.date: 03/30/2017
 ms.assetid: 0e930e80-5060-45d2-8a7a-95c0690105d4
 ms.openlocfilehash: ce17e5436ecff1937db605450d187184df9104a5
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703414"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945666"
 ---
 # <a name="fundamental-windows-workflow-concepts"></a>Windows Workflow の基本概念
 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] のワークフロー開発で使用される概念は、一部の開発者には不慣れなことも考えられます。 ここでは、そのいくつかの概念について、内容と実装方法を説明します。  
@@ -27,40 +27,40 @@ ms.locfileid: "57703414"
 ## <a name="workflow-runtime"></a>ワークフロー ランタイム  
  ワークフロー ランタイムはワークフローが実行される環境です。 <xref:System.Activities.WorkflowInvoker> はワークフローを実行する最も単純な方法です。 ホストは、次の処理に <xref:System.Activities.WorkflowInvoker> を使用します。  
   
--   ワークフローの同期呼び出しを実行する。  
+- ワークフローの同期呼び出しを実行する。  
   
--   ワークフローに入力を行ったり、ワークフローから出力を取り出したりする。  
+- ワークフローに入力を行ったり、ワークフローから出力を取り出したりする。  
   
--   アクティビティによって使用される拡張機能を追加する。  
+- アクティビティによって使用される拡張機能を追加する。  
   
  <xref:System.Activities.ActivityInstance> は、ホストがランタイムとのやり取りに使用できるスレッドセーフなプロキシです。 ホストは、次の処理に <xref:System.Activities.ActivityInstance> を使用します。  
   
--   インスタンスを作成するか、インスタンス ストアから読み込んで、インスタンスを取得する。  
+- インスタンスを作成するか、インスタンス ストアから読み込んで、インスタンスを取得する。  
   
--   インスタンスのライフサイクル イベントが通知されるようにする。  
+- インスタンスのライフサイクル イベントが通知されるようにする。  
   
--   ワークフローの実行を制御する。  
+- ワークフローの実行を制御する。  
   
--   ワークフローに入力を行ったり、ワークフローから出力を取り出したりする。  
+- ワークフローに入力を行ったり、ワークフローから出力を取り出したりする。  
   
--   ワークフローの継続を通知し、値をワークフローに渡す。  
+- ワークフローの継続を通知し、値をワークフローに渡す。  
   
--   ワークフローのデータを永続化する。  
+- ワークフローのデータを永続化する。  
   
--   アクティビティによって使用される拡張機能を追加する。  
+- アクティビティによって使用される拡張機能を追加する。  
   
  アクティビティは、<xref:System.Activities.ActivityContext> または <xref:System.Activities.NativeActivityContext> などの、適切な <xref:System.Activities.CodeActivityContext> 派生クラスを使用してワーク フローのランタイム環境にアクセスできます。 これらの要素がこのクラスを使用する目的は、引数や変数の解決や子アクティビティのスケジュール設定など、多岐にわたります。  
   
 ## <a name="services"></a>Services  
- ワークフローは、メッセージング アクティビティを使用して疎結合サービスの実装およびアクセスを行う、無理のない方法です。 メッセージング アクティビティは WCF で構築された、ワークフローの内外にデータを取得するために使用する主要なメカニズムです。 任意の種類のメッセージ交換パターンをモデル化するため、複数のメッセージング アクティビティを共に作成できます。 詳細については、[メッセージング アクティビティ](../wcf/feature-details/messaging-activities.md)を参照してください。 ワークフロー サービスは <xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用してホストされます。 詳細については、[ホスト ワークフロー サービスの概要](../wcf/feature-details/hosting-workflow-services-overview.md)を参照してください。 ワークフロー サービスの詳細については、次を参照してください[ワークフロー サービス。](../wcf/feature-details/workflow-services.md)  
+ ワークフローは、メッセージング アクティビティを使用して疎結合サービスの実装およびアクセスを行う、無理のない方法です。 メッセージング アクティビティは WCF で構築された、ワークフローの内外にデータを取得するために使用する主要なメカニズムです。 任意の種類のメッセージ交換パターンをモデル化するため、複数のメッセージング アクティビティを共に作成できます。 詳細については、次を参照してください。[メッセージング アクティビティ](../wcf/feature-details/messaging-activities.md)します。 ワークフロー サービスは <xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスを使用してホストされます。 詳細については、次を参照してください。[ホスト ワークフロー サービスの概要](../wcf/feature-details/hosting-workflow-services-overview.md)します。 ワークフロー サービスの詳細については、次を参照してください[ワークフロー サービス。](../wcf/feature-details/workflow-services.md)  
   
 ## <a name="persistence-unloading-and-long-running-workflows"></a>永続性、アンロード、実行時間の長いワークフロー  
  Windows Workflow は次の機能により、実行時間の長いリアクティブなプログラムの作成を簡素化しています。  
   
--   外部入力にアクセスするアクティビティ  
+- 外部入力にアクセスするアクティビティ  
   
--   ホストのリスナーが再開できる <xref:System.Activities.Bookmark> オブジェクトを作成する機能  
+- ホストのリスナーが再開できる <xref:System.Activities.Bookmark> オブジェクトを作成する機能  
   
--   ワークフローのデータを永続化してワークフローをアンロードした後、特定のワークフローでの <xref:System.Activities.Bookmark> オブジェクトの再開に反応してワークフローを再読み込みおよび再アクティブ化する機能  
+- ワークフローのデータを永続化してワークフローをアンロードした後、特定のワークフローでの <xref:System.Activities.Bookmark> オブジェクトの再開に反応してワークフローを再読み込みおよび再アクティブ化する機能  
   
  ワークフローは、実行するアクティビティがなくなるか、現在の実行中のすべてのアクティビティが入力を待機するまで、アクティビティを継続して実行します。 後者の場合、ワークフローはアイドル状態になります。 ホストでは、アイドル状態になったワークフローをアンロードし、メッセージが到着したときに実行を継続するためのワークフローを再読み込みすることは一般的です。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> によって、この機能が実現されるほか、拡張可能なアンロード ポリシーを使用できます。 揮発性状態のデータまたは永続化できない他のデータを使用する実行ブロックの場合、アクティビティは <xref:System.Activities.NoPersistHandle> を使用して永続化すべきではないホストを指定できます。 また、ワークフローは <xref:System.Activities.Statements.Persist> アクティビティを使用して、そのデータを永続ストレージ メディアに永続化することもできます。

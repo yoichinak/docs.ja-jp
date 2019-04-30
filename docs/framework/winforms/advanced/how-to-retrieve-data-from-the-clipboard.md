@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
 ms.openlocfilehash: e8f77a4fd1047598d51c2e0932d9c1309a305a86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003926"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>方法: クリップボードからデータを取得する
 <xref:System.Windows.Forms.Clipboard>クラスは、Windows オペレーティング システムのクリップボード機能との対話に使用できるメソッドを提供します。 多くのアプリケーションは、クリップボードをデータの一時的なリポジトリとして使用されます。 たとえば、ワード プロセッサでは、切り取りと貼り付けの操作中に、クリップボードを使用します。 クリップボードも別に 1 つのアプリケーションから情報を転送するために役立ちます。  

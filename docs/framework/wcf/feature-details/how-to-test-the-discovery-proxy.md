@@ -3,11 +3,11 @@ title: '方法: 探索プロキシをテストする'
 ms.date: 03/30/2017
 ms.assetid: d96e3fa2-3c42-4e5d-8244-2694081bdc32
 ms.openlocfilehash: 856b86241299585b80d58c6d37582463736a5935
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316397"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972914"
 ---
 # <a name="how-to-test-the-discovery-proxy"></a>方法: 探索プロキシをテストする
 これは、探索プロキシの実装方法に関する 4 つのトピックのうちの 4 番目のトピックです。 前のトピックで[方法。探索プロキシを使用して、サービスを検索するクライアント アプリケーションの実装](../../../../docs/framework/wcf/feature-details/client-app-discovery-proxy-to-find-a-service.md)、探索プロキシを使用して、サービスを検索して、サービスを呼び出している WCF クライアント アプリケーションを実装します。 このトピックでは、探索プロキシ、サービス、およびクライアント アプリケーションが予期したとおりに動作することを確認する方法について説明します。  

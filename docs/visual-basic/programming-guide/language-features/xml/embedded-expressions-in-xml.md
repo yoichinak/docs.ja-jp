@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: bf2eb779-b751-4b7c-854f-9f2161482352
 ms.openlocfilehash: 4c96665994a7e56bc70f72b66d5922f5a6472a13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961228"
 ---
 # <a name="embedded-expressions-in-xml-visual-basic"></a>XML での埋め込み式 (Visual Basic)
 埋め込み式を使用すると、実行時に評価される式が含まれる XML リテラルを作成できます。 埋め込み式の構文は、 `<%=` `expression` `%>`で使用するための構文は同じ[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]します。  
@@ -42,27 +42,27 @@ ms.locfileid: "58827576"
 |XML 要素の属性|<xref:System.Xml.Linq.XAttribute> またはのコレクション <xref:System.Xml.Linq.XAttribute>|無視|  
 |XML ドキュメントのルート要素|<xref:System.Xml.Linq.XElement> いずれかのコレクションまたは<xref:System.Xml.Linq.XElement>オブジェクトと任意の数の<xref:System.Xml.Linq.XProcessingInstruction>と<xref:System.Xml.Linq.XComment>オブジェクト|無視|  
   
--   XML 要素名での埋め込み式の例:  
+- XML 要素名での埋め込み式の例:  
   
      [!code-vb[VbXMLSamples#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#32)]  
   
--   XML 要素のコンテンツの埋め込み式の例:  
+- XML 要素のコンテンツの埋め込み式の例:  
   
      [!code-vb[VbXMLSamples#33](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#33)]  
   
--   XML 要素の属性名での埋め込み式の例:  
+- XML 要素の属性名での埋め込み式の例:  
   
      [!code-vb[VbXMLSamples#34](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#34)]  
   
--   XML 要素の属性値内の埋め込み式の例:  
+- XML 要素の属性値内の埋め込み式の例:  
   
      [!code-vb[VbXMLSamples#35](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#35)]  
   
--   XML 要素の属性での埋め込み式の例:  
+- XML 要素の属性での埋め込み式の例:  
   
      [!code-vb[VbXMLSamples#36](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#36)]  
   
--   XML ドキュメントのルート要素の埋め込み式の例:  
+- XML ドキュメントのルート要素の埋め込み式の例:  
   
      [!code-vb[VbXMLSamples#37](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples13.vb#37)]  
   

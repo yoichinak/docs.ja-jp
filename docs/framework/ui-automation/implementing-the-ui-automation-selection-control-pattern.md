@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection
 ms.assetid: 449c3068-a5d6-4f66-84c6-1bcc7dd4d209
 ms.openlocfilehash: 6b5e0e4e0a14410c23833db6cc90d23e7959ad22
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087723"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983269"
 ---
 # <a name="implementing-the-ui-automation-selection-control-pattern"></a>UI オートメーション Selection コントロール パターンの実装
 > [!NOTE]
@@ -25,16 +25,16 @@ ms.locfileid: "59087723"
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
  Selection コントロール パターンを実装する場合は、次のガイドラインと規則にご留意ください。  
   
--   <xref:System.Windows.Automation.Provider.ISelectionProvider> を実装するコントロールでは、単一の子または複数の子項目を選択できます。 たとえば、リスト ボックス、リスト ビュー、ツリー ビューでは複数の項目を選択できる一方、コンボ ボックス、スライダー、ラジオ ボタン グループでは 1 つの項目だけを選択できます。  
+- <xref:System.Windows.Automation.Provider.ISelectionProvider> を実装するコントロールでは、単一の子または複数の子項目を選択できます。 たとえば、リスト ボックス、リスト ビュー、ツリー ビューでは複数の項目を選択できる一方、コンボ ボックス、スライダー、ラジオ ボタン グループでは 1 つの項目だけを選択できます。  
   
--   **音量** スライダー コントロールなど、最小値、最大値、連続した値の範囲を持つコントロールは、 <xref:System.Windows.Automation.Provider.IRangeValueProvider> ではなく <xref:System.Windows.Automation.Provider.ISelectionProvider>を実装する必要があります。  
+- **音量** スライダー コントロールなど、最小値、最大値、連続した値の範囲を持つコントロールは、 <xref:System.Windows.Automation.Provider.IRangeValueProvider> ではなく <xref:System.Windows.Automation.Provider.ISelectionProvider>を実装する必要があります。  
   
--   <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>[画面のプロパティ] **ダイアログ ボックスの** [画面解像度] **スライダーや、** の **カラー ピッカー** 選択コントロールなど (以下を参照)、 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] を実装する子コントロールを管理する単一選択コントロールは <xref:System.Windows.Automation.Provider.ISelectionProvider>を実装する必要があり、その子は <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> と <xref:System.Windows.Automation.Provider.ISelectionItemProvider>の両方を実装する必要があります。  
+- <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>[画面のプロパティ] **ダイアログ ボックスの** [画面解像度] **スライダーや、** の **カラー ピッカー** 選択コントロールなど (以下を参照)、 [!INCLUDE[TLA#tla_word](../../../includes/tlasharptla-word-md.md)] を実装する子コントロールを管理する単一選択コントロールは <xref:System.Windows.Automation.Provider.ISelectionProvider>を実装する必要があり、その子は <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> と <xref:System.Windows.Automation.Provider.ISelectionItemProvider>の両方を実装する必要があります。  
   
  ![黄色が強調表示されたカラー ピッカー。](../../../docs/framework/ui-automation/media/uia-valuepattern-colorpicker.png "UIA_ValuePattern_ColorPicker")  
 色見本の文字列のマッピング例  
   
--   メニューは <xref:System.Windows.Automation.SelectionPattern>をサポートしていません。 グラフィックスとテキストの両方を含むメニュー項目 ( **の** [表示] **メニューにある** [プレビュー ウィンドウ] [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]項目など) を処理していて、状態を伝える必要がある場合は、 <xref:System.Windows.Automation.Provider.IToggleProvider>を実装する必要があります。  
+- メニューは <xref:System.Windows.Automation.SelectionPattern>をサポートしていません。 グラフィックスとテキストの両方を含むメニュー項目 ( **の** [表示] **メニューにある** [プレビュー ウィンドウ] [!INCLUDE[TLA#tla_outlook](../../../includes/tlasharptla-outlook-md.md)]項目など) を処理していて、状態を伝える必要がある場合は、 <xref:System.Windows.Automation.Provider.IToggleProvider>を実装する必要があります。  
   
 <a name="Required_Members_for_ISelectionProvider"></a>   
 ## <a name="required-members-for-iselectionprovider"></a>ISelectionProvider の必須メンバー  

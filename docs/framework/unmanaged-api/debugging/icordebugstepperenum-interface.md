@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 89552a099241f1bec61f9aa8a8321ef9932e886c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59173226"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987442"
 ---
 # <a name="icordebugstepperenum-interface"></a>ICorDebugStepperEnum インターフェイス
 ICorDebugEnum のメソッドを実装し、ICorDebugStepper 配列を列挙します。  

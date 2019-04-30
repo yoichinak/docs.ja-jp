@@ -8,11 +8,11 @@ ms.assetid: 167a4459-bb6e-476c-9046-7920880f2bb5
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c7969c0a3f5f828f1a1c0d4f33b82881130c6e15
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370164"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949254"
 ---
 # <a name="method-etw-events"></a>メソッド ETW イベント
 

@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.PeerNodeClosed
 ms.date: 03/30/2017
 ms.assetid: c1cf92c3-3d31-4978-b0df-750fcd21909f
 ms.openlocfilehash: 7ecc5b8a07dc401be0659520f6c9e7979a5c0394
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949878"
 ---
 # <a name="systemservicemodelchannelspeernodeclosed"></a>System.ServiceModel.Channels.PeerNodeClosed
 PeerNode が終了しました。  

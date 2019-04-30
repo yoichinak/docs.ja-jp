@@ -3,11 +3,11 @@ title: ステート マシン ワークフロー
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
 ms.openlocfilehash: 85d7fff680b11428173dc2684b30bf2b1f46640b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222992"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004680"
 ---
 # <a name="state-machine-workflows"></a>ステート マシン ワークフロー
 ステート マシンは、プログラムの開発に関する、よく知られたパラダイムの 1 つです。 <xref:System.Activities.Statements.StateMachine> アクティビティを、<xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> および他のアクティビティと共に使用することで、ステート マシン ワークフロー プログラムをビルドできます。 このトピックでは、ステート マシン ワークフローの概要について説明します。  
@@ -15,11 +15,11 @@ ms.locfileid: "59222992"
 ## <a name="state-machine-workflow-overview"></a>ステート マシン ワークフローの概要  
  ステート マシン ワークフローで使用するモデル化スタイルでは、ワークフローをイベント ドリブン型にモデル化します。 <xref:System.Activities.Statements.StateMachine> アクティビティは、ステート マシンのロジックを構成する状態および遷移を含んでおり、何かのアクティビティを使用する任意の場所で使用できます。 ステート マシン ランタイムには、次に示すいくつかのクラスがあります。  
   
--   <xref:System.Activities.Statements.StateMachine>  
+- <xref:System.Activities.Statements.StateMachine>  
   
--   <xref:System.Activities.Statements.State>  
+- <xref:System.Activities.Statements.State>  
   
--   <xref:System.Activities.Statements.Transition>  
+- <xref:System.Activities.Statements.Transition>  
   
  ステート マシン ワークフローを作成するときは、<xref:System.Activities.Statements.StateMachine> アクティビティに状態が追加され、状態間のフローのコントロールには遷移が使用されます。 次のスクリーン ショットから、[チュートリアル入門](getting-started-tutorial.md)手順[方法。ステート マシン ワークフロー作成](how-to-create-a-state-machine-workflow.md)、3 つの状態と遷移の 3 つのステート マシン ワークフローを示しています。 **ターゲットの初期化**初期状態であり、ワークフローの最初の状態を表します。 これから伸びる線によって示されますが、**開始**ノード。 ワークフローの最終的な状態の名前は**FinalState**ワークフローが完了した時点を表しているとします。  
   

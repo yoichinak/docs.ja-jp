@@ -5,11 +5,11 @@ ms.assetid: 34be6369-2e75-4a95-a538-3b29ac97cf6d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6e91dda9cbc5957768e98db2b2a9e1026d94c03e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200754"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946290"
 ---
 # <a name="icordebugloadedmodule-interface"></a>ICorDebugLoadedModule インターフェイス
 読み込まれたモジュールについての情報を提供します。  

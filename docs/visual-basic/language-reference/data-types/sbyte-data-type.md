@@ -15,11 +15,11 @@ helpviewer_keywords:
 - SByte data type
 ms.assetid: 5c38374a-18a1-4cc2-b493-299e3dcaa60f
 ms.openlocfilehash: 1da5de4971928ca23a23c4dcfc5f338c4d7a3875
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54719574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971783"
 ---
 # <a name="sbyte-data-type-visual-basic"></a>SByte データ型 (Visual Basic)
 
@@ -64,13 +64,13 @@ Dim number As SByte = &H_F9
 
 ## <a name="programming-tips"></a>プログラミングのヒント
   
--   **CLS 準拠です。** `SByte`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。
+- **CLS 準拠です。** `SByte`データ型がの一部、[共通言語仕様](https://www.ecma-international.org/publications/standards/Ecma-335.htm)(CLS) に CLS 準拠コードがそれを使用するコンポーネントを使用できないようにします。
 
--   **拡大します。** `SByte`拡大変換後のデータ型`Short`、 `Integer`、 `Long`、 `Decimal`、 `Single`、および`Double`します。 つまり、変換できる`SByte`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。
+- **拡大します。** `SByte`拡大変換後のデータ型`Short`、 `Integer`、 `Long`、 `Decimal`、 `Single`、および`Double`します。 つまり、変換できる`SByte`遭遇することがなくこれらの型のいずれにも、<xref:System.OverflowException?displayProperty=nameWithType>エラー。
   
--   **型宣言文字。** `SByte` リテラルの型文字または識別子の型文字がありません。  
+- **型宣言文字。** `SByte` リテラルの型文字または識別子の型文字がありません。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.SByte?displayProperty=nameWithType> 構造体です。
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.SByte?displayProperty=nameWithType> 構造体です。
   
 ## <a name="see-also"></a>関連項目
 

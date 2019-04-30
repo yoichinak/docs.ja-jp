@@ -10,11 +10,11 @@ helpviewer_keywords:
 - what's new [Windows Forms], toolbars
 ms.assetid: 81d067ed-297c-4dad-90de-1bcac15336ec
 ms.openlocfilehash: 3e532b040d3c7859220b7f73958b63e7208b988c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144574"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009527"
 ---
 # <a name="toolstrip-control-overview-windows-forms"></a>ToolStrip コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.ToolStrip>コントロールとその関連クラスは、ツールバー、ステータス バー、およびメニューにユーザー インターフェイス要素を結合するため、共通のフレームワークを提供します。 <xref:System.Windows.Forms.ToolStrip> コントロールでは、水平または垂直スペースを共有するツールバーの機能は、インプレース アクティブ化と編集、カスタム レイアウト、およびラフティング、豊富なデザイン時エクスペリエンスを提供します。  
@@ -24,19 +24,19 @@ Windows フォーム<xref:System.Windows.Forms.ToolStrip>コントロールと�
 ## <a name="features-of-the-toolstrip-controls"></a>ToolStrip コントロールの機能  
  使用して、<xref:System.Windows.Forms.ToolStrip>を制御します。  
   
--   コンテナー間には、一般的なユーザー インターフェイスを提供します。  
+- コンテナー間には、一般的なユーザー インターフェイスを提供します。  
   
--   簡単にカスタマイズされた作成、サポートするツールバーが一般的に使用されるユーザー インターフェイスとレイアウトの機能の詳細などのテキストとイメージ、ドロップダウン ボタン、およびコントロールのドッキング、ラフティング、ボタン、オーバーフロー ボタン、および実行時の並べ替えの<xref:System.Windows.Forms.ToolStrip>項目。  
+- 簡単にカスタマイズされた作成、サポートするツールバーが一般的に使用されるユーザー インターフェイスとレイアウトの機能の詳細などのテキストとイメージ、ドロップダウン ボタン、およびコントロールのドッキング、ラフティング、ボタン、オーバーフロー ボタン、および実行時の並べ替えの<xref:System.Windows.Forms.ToolStrip>項目。  
   
--   オーバーフローおよび実行時の項目の並べ替えをサポートします。 オーバーフロー機能がでそれらを表示する十分な空き領域がない場合に、ドロップダウン メニューに項目を移動、<xref:System.Windows.Forms.ToolStrip>します。  
+- オーバーフローおよび実行時の項目の並べ替えをサポートします。 オーバーフロー機能がでそれらを表示する十分な空き領域がない場合に、ドロップダウン メニューに項目を移動、<xref:System.Windows.Forms.ToolStrip>します。  
   
--   標準的な外観と動作の一般的なレンダリング モデルにより、オペレーティング システムをサポートします。  
+- 標準的な外観と動作の一般的なレンダリング モデルにより、オペレーティング システムをサポートします。  
   
--   同様に他のコントロールのイベントを処理するには、すべてのコンテナーと含まれる項目を一貫してイベントを処理します。  
+- 同様に他のコントロールのイベントを処理するには、すべてのコンテナーと含まれる項目を一貫してイベントを処理します。  
   
--   いずれかから項目をドラッグ<xref:System.Windows.Forms.ToolStrip>別、または、<xref:System.Windows.Forms.ToolStrip>します。  
+- いずれかから項目をドラッグ<xref:System.Windows.Forms.ToolStrip>別、または、<xref:System.Windows.Forms.ToolStrip>します。  
   
--   ドロップダウン コントロールとユーザー インターフェイス型エディターを高度なレイアウトを作成、<xref:System.Windows.Forms.ToolStripDropDown>します。  
+- ドロップダウン コントロールとユーザー インターフェイス型エディターを高度なレイアウトを作成、<xref:System.Windows.Forms.ToolStripDropDown>します。  
   
  使用して、<xref:System.Windows.Forms.ToolStripControlHost>クラスを他のコントロールを使用して、<xref:System.Windows.Forms.ToolStrip>行い、<xref:System.Windows.Forms.ToolStrip>それらの機能です。  
   

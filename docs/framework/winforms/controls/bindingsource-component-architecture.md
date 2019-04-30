@@ -8,28 +8,28 @@ helpviewer_keywords:
 - data binding [Windows Forms], BindingSource component
 ms.assetid: 7bc69c90-8a11-48b1-9336-3adab5b41591
 ms.openlocfilehash: 81559444b6e3da2861e48bdc637ae01d246c0758
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165348"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961578"
 ---
 # <a name="bindingsource-component-architecture"></a>BindingSource コンポーネント アーキテクチャ
 <xref:System.Windows.Forms.BindingSource>コンポーネント、ユニバーサル データ ソースにすべての Windows フォーム コントロールをバインドできます。  
   
  <xref:System.Windows.Forms.BindingSource>コンポーネントがデータ ソースにコントロールをバインドするプロセスを簡略化し、従来のデータ バインドに次の利点を提供します。  
   
--   ビジネス オブジェクトをデザイン時のバインドを有効にします。  
+- ビジネス オブジェクトをデザイン時のバインドを有効にします。  
   
--   カプセル化<xref:System.Windows.Forms.CurrencyManager>機能と公開<xref:System.Windows.Forms.CurrencyManager>デザイン時にイベント。  
+- カプセル化<xref:System.Windows.Forms.CurrencyManager>機能と公開<xref:System.Windows.Forms.CurrencyManager>デザイン時にイベント。  
   
--   サポートするリストの作成を簡素化、<xref:System.ComponentModel.IBindingList>変更通知の一覧をネイティブにサポートしないデータ ソースの一覧変更通知を提供することでインターフェイス。  
+- サポートするリストの作成を簡素化、<xref:System.ComponentModel.IBindingList>変更通知の一覧をネイティブにサポートしないデータ ソースの一覧変更通知を提供することでインターフェイス。  
   
--   機能拡張ポイントを提供します、<xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType>メソッド。  
+- 機能拡張ポイントを提供します、<xref:System.ComponentModel.IBindingList.AddNew%2A?displayProperty=nameWithType>メソッド。  
   
--   データ ソースとコントロールの間の間接参照のレベルを提供します。 実行時に、データ ソースを変更することがありますこの間接指定は重要です。  
+- データ ソースとコントロールの間の間接参照のレベルを提供します。 実行時に、データ ソースを変更することがありますこの間接指定は重要です。  
   
--   具体的には、他のデータに関連する Windows フォーム コントロールと相互運用、<xref:System.Windows.Forms.BindingNavigator>と<xref:System.Windows.Forms.DataGridView>コントロール。  
+- 具体的には、他のデータに関連する Windows フォーム コントロールと相互運用、<xref:System.Windows.Forms.BindingNavigator>と<xref:System.Windows.Forms.DataGridView>コントロール。  
   
  これらの理由から、<xref:System.Windows.Forms.BindingSource>コンポーネントは、Windows フォーム コントロールをデータ ソースにバインドすることをお勧めします。  
   
@@ -40,38 +40,38 @@ ms.locfileid: "59165348"
   
  によって提供される一貫性のあるインターフェイス、<xref:System.Windows.Forms.BindingSource>コンポーネントは、データをコントロールにバインドするプロセスを大幅に簡略化します。 データ ソースの種類を提供する変更の通知を<xref:System.Windows.Forms.BindingSource>コンポーネントは、コントロールとデータ ソース間の変更を自動的に通信します。 変更通知を提供しないデータ ソースの種類のイベントが変更通知を生成するための提供されます。 次に示しますでサポートされる機能、<xref:System.Windows.Forms.BindingSource>コンポーネント。  
   
--   間接参照します。  
+- 間接参照します。  
   
--   通貨管理します。  
+- 通貨管理します。  
   
--   データ ソースを一覧として。  
+- データ ソースを一覧として。  
   
--   <xref:System.Windows.Forms.BindingSource> として、<xref:System.ComponentModel.IBindingList>します。  
+- <xref:System.Windows.Forms.BindingSource> として、<xref:System.ComponentModel.IBindingList>します。  
   
--   カスタム アイテムを作成します。  
+- カスタム アイテムを作成します。  
   
--   トランザクションのアイテムを作成します。  
+- トランザクションのアイテムを作成します。  
   
--   <xref:System.Collections.IEnumerable> サポート。  
+- <xref:System.Collections.IEnumerable> サポート。  
   
--   デザイン時サポートします。  
+- デザイン時サポートします。  
   
--   静的<xref:System.Windows.Forms.ListBindingHelper>メソッド。  
+- 静的<xref:System.Windows.Forms.ListBindingHelper>メソッド。  
   
--   並べ替えとフィルタ リングを<xref:System.ComponentModel.IBindingListView>インターフェイス。  
+- 並べ替えとフィルタ リングを<xref:System.ComponentModel.IBindingListView>インターフェイス。  
   
--   統合<xref:System.Windows.Forms.BindingNavigator>します。  
+- 統合<xref:System.Windows.Forms.BindingNavigator>します。  
   
 ### <a name="indirection"></a>間接  
  <xref:System.Windows.Forms.BindingSource>コンポーネントは、コントロールとデータ ソース間の間接参照のレベルを提供します。 コントロールをバインドするデータ ソースへの直接のコントロールをバインドするのではなく、<xref:System.Windows.Forms.BindingSource>とにデータ ソースのアタッチ、<xref:System.Windows.Forms.BindingSource>コンポーネントの<xref:System.Windows.Forms.BindingSource.DataSource%2A>プロパティ。  
   
  このレベルの間接参照では、コントロールのバインドをリセットせず、データ ソースを変更できます。 これにより、次の機能。  
   
--   アタッチすることができます、<xref:System.Windows.Forms.BindingSource>さまざまなデータ ソース コントロールの現在のバインドを維持したままにします。  
+- アタッチすることができます、<xref:System.Windows.Forms.BindingSource>さまざまなデータ ソース コントロールの現在のバインドを維持したままにします。  
   
--   データ ソース内の項目を変更し、バインドされたコントロールに通知できます。 詳細については、「[方法 :BindingSource で Windows フォーム コントロール内のデータ ソースの更新を反映](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)します。  
+- データ ソース内の項目を変更し、バインドされたコントロールに通知できます。 詳細については、「[方法 :BindingSource で Windows フォーム コントロール内のデータ ソースの更新を反映](reflect-data-source-updates-in-a-wf-control-with-the-bindingsource.md)します。  
   
--   バインドすることができます、<xref:System.Type>メモリ内のオブジェクトの代わりにします。 詳細については、「[方法 :Windows フォーム コントロールを型にバインド](how-to-bind-a-windows-forms-control-to-a-type.md)します。 実行時にオブジェクトにバインドできます。  
+- バインドすることができます、<xref:System.Type>メモリ内のオブジェクトの代わりにします。 詳細については、「[方法 :Windows フォーム コントロールを型にバインド](how-to-bind-a-windows-forms-control-to-a-type.md)します。 実行時にオブジェクトにバインドできます。  
   
 ### <a name="currency-management"></a>通貨の管理  
  <xref:System.Windows.Forms.BindingSource>コンポーネントを実装して、<xref:System.Windows.Forms.ICurrencyManagerProvider>通貨管理を処理するインターフェイス。 <xref:System.Windows.Forms.ICurrencyManagerProvider>インターフェイス、アクセスすることも、通貨用のマネージャーに、 <xref:System.Windows.Forms.BindingSource>、別の通貨マネージャーだけでなく<xref:System.Windows.Forms.BindingSource>に同じバインド<xref:System.Windows.Forms.BindingSource.DataMember%2A>します。  
@@ -128,11 +128,11 @@ ms.locfileid: "59165348"
 ### <a name="transactional-item-creation"></a>トランザクションのアイテムの作成  
  <xref:System.Windows.Forms.BindingSource>コンポーネントを実装して、<xref:System.ComponentModel.ICancelAddNew>インターフェイスで、トランザクションの項目を作成できるようにします。 新しい項目は仮の呼び出しを使用して作成した後<xref:System.Windows.Forms.BindingSource.AddNew%2A>追加のコミットまたはロールバックし、次の方法で可能性があります。  
   
--   <xref:System.ComponentModel.ICancelAddNew.EndNew%2A>メソッドは、保留中の追加を明示的にコミットします。  
+- <xref:System.ComponentModel.ICancelAddNew.EndNew%2A>メソッドは、保留中の追加を明示的にコミットします。  
   
--   挿入、削除、移動などの別のコレクション操作を実行すると、保留中の追加を暗黙的にコミットされます。  
+- 挿入、削除、移動などの別のコレクション操作を実行すると、保留中の追加を暗黙的にコミットされます。  
   
--   <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>メソッドは元に戻す保留中の追加、メソッドは既にコミットされていない場合。  
+- <xref:System.ComponentModel.ICancelAddNew.CancelNew%2A>メソッドは元に戻す保留中の追加、メソッドは既にコミットされていない場合。  
   
 ### <a name="ienumerable-support"></a>IEnumerable のサポート  
  <xref:System.Windows.Forms.BindingSource>コンポーネントへコントロールのバインドを使用する<xref:System.Collections.IEnumerable>データ ソース。 このコンポーネントとにバインドできますデータ ソースなど、<xref:System.Data.SqlClient.SqlDataReader?displayProperty=nameWithType>します。  
@@ -147,13 +147,13 @@ ms.locfileid: "59165348"
 ### <a name="static-listbindinghelper-methods"></a>静的 ListBindingHelper メソッド  
  <xref:System.Windows.Forms.BindingContext?displayProperty=nameWithType>、 <xref:System.Windows.Forms.CurrencyManager?displayProperty=nameWithType>、および<xref:System.Windows.Forms.BindingSource>からリストを生成するすべての共有の共通ロジックの種類、 `DataSource` / `DataMember`ペア。 さらに、この共通のロジックがパブリックに公開用にコントロールを作成して、次に他のサード パーティ`static`メソッド。  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListItemProperties%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>。  
+- <xref:System.Windows.Forms.ListBindingHelper.GetList%2A>。  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListName%2A>  
   
--   <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A>  
+- <xref:System.Windows.Forms.ListBindingHelper.GetListItemType%2A>  
   
 ### <a name="sorting-and-filtering-with-the-ibindinglistview-interface"></a>並べ替えとフィルタ リングを IBindingListView インターフェイス  
  <xref:System.Windows.Forms.BindingSource>コンポーネントを実装して、<xref:System.ComponentModel.IBindingListView>インターフェイスで、拡張、<xref:System.ComponentModel.IBindingList>インターフェイス。 <xref:System.ComponentModel.IBindingList>は 1 つの列の並べ替えおよび<xref:System.ComponentModel.IBindingListView>先進的な並べ替えとフィルター処理を提供します。 <xref:System.ComponentModel.IBindingListView>場合は、データ ソースも、データ ソースの項目をフィルター処理を実装してこれらのインターフェイスのいずれか、並べ替えることができます。 <xref:System.Windows.Forms.BindingSource>コンポーネントがこれらのメンバーの参照の実装を提供していません。 代わりに、呼び出しは、基になるリストに転送されます。  

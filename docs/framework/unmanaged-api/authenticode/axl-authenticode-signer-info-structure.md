@@ -5,11 +5,11 @@ ms.assetid: 81c0f8b4-ce35-4716-8651-b642d40648a2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 024837870aade6b0beb76fe758a571b15fd14d59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948978"
 ---
 # <a name="axlauthenticodesignerinfo-structure"></a>AXL_AUTHENTICODE_SIGNER_INFO 構造体
 Authenticode の署名者情報を定義します。  

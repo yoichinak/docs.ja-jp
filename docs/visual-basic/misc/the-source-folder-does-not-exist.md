@@ -3,18 +3,18 @@ title: ソース フォルダーが存在しません
 ms.date: 07/20/2015
 ms.assetid: c891d006-b721-4d93-b57d-ce51d91fca00
 ms.openlocfilehash: 6194e6e92a69ce3b81fe554ae49934dde075fb99
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58047399"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942704"
 ---
 # <a name="the-source-folder-does-not-exist"></a>ソース フォルダーが存在しません
 存在しないソース フォルダーを参照する操作を実行しようとしました。 指定したパスが正しくないことが原因となっている可能性があります。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   相対パスを使用している場合は特に、正しいパスを使用していることを確認します。  
+- 相対パスを使用している場合は特に、正しいパスを使用していることを確認します。  
   
 ## <a name="see-also"></a>関連項目
 

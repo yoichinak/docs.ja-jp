@@ -3,11 +3,11 @@ title: WCF で使用されるセキュリティの概要
 ms.date: 03/30/2017
 ms.assetid: 3b9dfcf5-4bf1-4f35-9070-723171c823a1
 ms.openlocfilehash: 3ef2b9c104fa15de17a769c9ca9354e5cef085bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990874"
 ---
 # <a name="security-concepts-used-in-wcf"></a>WCF で使用されるセキュリティの概要
 Windows Communication Foundation (WCF) のセキュリティは既に使用されている概念に基づいて構築されており、さまざまなセキュリティ インフラストラクチャにデプロイされています。  

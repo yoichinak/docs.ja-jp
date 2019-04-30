@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], Help (using designer)
 ms.assetid: a8563d25-8a75-4bc7-a024-f1870591b50f
 ms.openlocfilehash: 207ceeafa2ea06340310577c636deb5ea1977aae
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942923"
 ---
 # <a name="integrating-user-help-in-windows-forms"></a>Windows フォームでのヘルプの統合
 Windows ベースのアプリケーションの構築の非常に重要ですが、見落とされがちな側面はヘルプ システムをこれは、ユーザーが混乱したときにアシスタンスを有効にします。 Windows フォームでは、2 つの異なる種類のヘルプをサポート、それぞれによって提供される、 [HelpProvider コンポーネント](../controls/helpprovider-component-windows-forms.md)します。 1 つ目は、HTML または HTML ヘルプ 1 のいずれかのヘルプ ファイルをユーザーを指す必要があります。*x*または大きい形式。 2 番目のことができますを表示する簡単な"と"-個々 のコントロールのヘルプを入力ダイアログ ボックスでは特に便利です。 両方の種類のヘルプは、同じフォームで使用できます。  

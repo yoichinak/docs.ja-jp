@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f9b4ee64022374cb4e1950acceb3f32925b736bb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57478688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994288"
 ---
 # <a name="icordebugsteppersetrangeil-method"></a>ICorDebugStepper::SetRangeIL メソッド
 指定する値を設定するかどうかを呼び出す[icordebugstepper::steprange](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-steprange-method.md)または Microsoft の基準としたネイティブ コードへの相対値の中間言語 (MSIL) コードがステップで実行されているメソッドの引数を渡す使用します。  

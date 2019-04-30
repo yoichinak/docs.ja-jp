@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: 6db61607-7e57-4a84-8d63-9d6a7ed7f9ff
 ms.openlocfilehash: cb3a826262a49a8653e3a344bd126d434f2522dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009189"
 ---
 # <a name="how-to-use-the-row-template-to-customize-rows-in-the-windows-forms-datagridview-control"></a>方法: 行テンプレートを使用して Windows フォーム DataGridView コントロールの行をカスタマイズする
 <xref:System.Windows.Forms.DataGridView>コントロール データ バインディングを使用または呼び出すときに、コントロールに追加されるすべての行の基礎として行テンプレートを使用して、<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A?displayProperty=nameWithType>メソッドを使用する既存の行を指定することなしです。  
@@ -28,7 +28,7 @@ ms.locfileid: "59073057"
   
 ### <a name="to-use-the-row-template"></a>行テンプレートを使用するには  
   
--   取得したオブジェクトのプロパティを設定、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>プロパティ。  
+- 取得したオブジェクトのプロパティを設定、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A?displayProperty=nameWithType>プロパティ。  
   
      [!code-cpp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CPP/datagridviewrowtemplate.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridView.RowTemplate#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridView.RowTemplate/CS/datagridviewrowtemplate.cs#1)]
@@ -37,9 +37,9 @@ ms.locfileid: "59073057"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   
--   <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType>、および <xref:System.Windows.Forms?displayProperty=nameWithType> の各アセンブリへの参照。  
+- <xref:System?displayProperty=nameWithType>、<xref:System.Drawing?displayProperty=nameWithType>、および <xref:System.Windows.Forms?displayProperty=nameWithType> の各アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 

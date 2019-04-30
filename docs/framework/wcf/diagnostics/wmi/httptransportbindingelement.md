@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 088a7bce-6bb2-4839-ad74-f68d4b1aa0f9
 ms.openlocfilehash: 5e23342d57621554aaec67c5c568bb75202a9454
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963489"
 ---
 # <a name="httptransportbindingelement"></a>HttpTransportBindingElement
 HttpTransportBindingElement  

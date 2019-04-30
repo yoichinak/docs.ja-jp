@@ -13,11 +13,11 @@ helpviewer_keywords:
 - dates [Visual Basic], converting
 ms.assetid: 8a8fb553-a8ac-424e-8103-26eea25eaa71
 ms.openlocfilehash: 6f867742aef5e5a56daa9e4557036d5b17b61f48
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949410"
 ---
 # <a name="conversion-functions-visual-basic"></a>変換関数 (Visual Basic)
 

@@ -3,11 +3,11 @@ title: 反復子 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f26b5c1e-fe9d-4004-b287-da7919d717ae
 ms.openlocfilehash: 313ce0c79a71af1b602ecd4ccc9bd0ebceb5696e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820850"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966175"
 ---
 # <a name="iterators-visual-basic"></a>反復子 (Visual Basic)
 *反復子*を使用して、リストや配列などのコレクションをステップ実行することができます。  
@@ -44,21 +44,21 @@ End Function
   
  **このトピックの内容**  
   
--   [単純な反復子](#BKMK_SimpleIterator)  
+- [単純な反復子](#BKMK_SimpleIterator)  
   
--   [コレクション クラスを作成する](#BKMK_CollectionClass)  
+- [コレクション クラスを作成する](#BKMK_CollectionClass)  
   
--   [Try ブロック](#BKMK_TryBlocks)  
+- [Try ブロック](#BKMK_TryBlocks)  
   
--   [匿名メソッド](#BKMK_AnonymousMethods)  
+- [匿名メソッド](#BKMK_AnonymousMethods)  
   
--   [ジェネリック リストと共に反復子を使用する](#BKMK_GenericList)  
+- [ジェネリック リストと共に反復子を使用する](#BKMK_GenericList)  
   
--   [構文情報](#BKMK_SyntaxInformation)  
+- [構文情報](#BKMK_SyntaxInformation)  
   
--   [技術的な実装](#BKMK_Technical)  
+- [技術的な実装](#BKMK_Technical)  
   
--   [反復子の使用](#BKMK_UseOfIterators)  
+- [反復子の使用](#BKMK_UseOfIterators)  
   
 > [!NOTE]
 >  例では、単純な反復子以外のトピックのすべての例についてには、次が含まれています。 [Imports](../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)のステートメント、`System.Collections`と`System.Collections.Generic`名前空間。  
@@ -438,11 +438,11 @@ End Class
 ## <a name="BKMK_UseOfIterators"></a> 反復子の使用  
  反復子を使用すると、複雑なコードを使用して一覧シーケンスを設定する必要がある場合に、`For Each` ループの単純さを維持することができます。 これは次のような場合に役立ちます。  
   
--   最初の `For Each` ループ イテレーションの後に一覧シーケンスを変更する。  
+- 最初の `For Each` ループ イテレーションの後に一覧シーケンスを変更する。  
   
--   最初の `For Each` ループ イテレーションの前に大きい一覧が完全に読み込まれないようにする。 例として、ページ フェッチでのテーブル行のバッチの読み込みなどがあります。 また、別の例として、<xref:System.IO.DirectoryInfo.EnumerateFiles%2A> メソッドでの .NET Framework 内の反復子の実装があります。  
+- 最初の `For Each` ループ イテレーションの前に大きい一覧が完全に読み込まれないようにする。 例として、ページ フェッチでのテーブル行のバッチの読み込みなどがあります。 また、別の例として、<xref:System.IO.DirectoryInfo.EnumerateFiles%2A> メソッドでの .NET Framework 内の反復子の実装があります。  
   
--   反復子に一覧の作成をカプセル化する。 iterator メソッドでは、一覧を作成してから、ループで各結果を生成することができます。  
+- 反復子に一覧の作成をカプセル化する。 iterator メソッドでは、一覧を作成してから、ループで各結果を生成することができます。  
   
 ## <a name="see-also"></a>関連項目
 

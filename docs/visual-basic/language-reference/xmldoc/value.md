@@ -6,11 +6,11 @@ helpviewer_keywords:
 - value XML tag
 ms.assetid: 0b84b02e-9e6d-41b5-a926-0d5dc76dacb5
 ms.openlocfilehash: 2938d485bf6c547c792431b93fc8959c9c36befa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940739"
 ---
 # <a name="value-visual-basic"></a>\<値 > (Visual Basic)
 プロパティの説明を指定します。  

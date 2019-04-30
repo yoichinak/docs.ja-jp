@@ -9,22 +9,22 @@ helpviewer_keywords:
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
 ms.openlocfilehash: 24cada3962339cae0608bbe01e070a0b8e256e73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948225"
 ---
 # <a name="how-to-obtain-font-metrics"></a>方法: フォント メトリックを取得する
 <xref:System.Drawing.FontFamily>クラスは、特定のファミリとスタイルの組み合わせに対してさまざまなメトリックを取得する次のメソッドを提供します。  
   
--   <xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)  
+- <xref:System.Drawing.FontFamily.GetEmHeight%2A>(FontStyle)  
   
--   <xref:System.Drawing.FontFamily.GetCellAscent%2A>(FontStyle)  
+- <xref:System.Drawing.FontFamily.GetCellAscent%2A>(FontStyle)  
   
--   <xref:System.Drawing.FontFamily.GetCellDescent%2A>(FontStyle)  
+- <xref:System.Drawing.FontFamily.GetCellDescent%2A>(FontStyle)  
   
--   <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
+- <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
   
  これらのメソッドによって返される数値は、サイズと、特定の単位から独立しているためフォント デザイン単位では<xref:System.Drawing.Font>オブジェクト。  
   

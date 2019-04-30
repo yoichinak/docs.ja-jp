@@ -3,11 +3,11 @@ title: '方法: デリゲート メソッド (Visual Basic) を呼び出す'
 ms.date: 07/20/2015
 ms.assetid: b56866ae-abf9-4a5a-a855-486359455e9c
 ms.openlocfilehash: ac3e32010e7c20ba76e39915d694b11ab3a65d40
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59319613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973330"
 ---
 # <a name="how-to-invoke-a-delegate-method-visual-basic"></a>方法: デリゲート メソッド (Visual Basic) を呼び出す
 この例では、メソッドをデリゲートに関連付け、デリゲートからメソッドを呼び出す方法を示します。  

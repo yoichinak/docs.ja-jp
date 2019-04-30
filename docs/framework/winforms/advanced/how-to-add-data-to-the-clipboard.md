@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
 ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325684"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004472"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>方法: クリップボードにデータを追加する
 <xref:System.Windows.Forms.Clipboard>クラスは、Windows オペレーティング システムのクリップボード機能との対話に使用できるメソッドを提供します。 多くのアプリケーションは、クリップボードをデータの一時的なリポジトリとして使用されます。 たとえば、ワード プロセッサでは、切り取りと貼り付けの操作中に、クリップボードを使用します。 クリップボードも別に 1 つのアプリケーションからデータを転送するために役立ちます。  

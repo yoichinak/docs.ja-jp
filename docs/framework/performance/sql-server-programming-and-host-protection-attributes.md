@@ -15,11 +15,11 @@ ms.assetid: 7dfa36b4-e773-4c75-a3ff-ff1af3ce4c4f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f1049187dabbea64599617bb4372ed50515a51e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088720"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949189"
 ---
 # <a name="sql-server-programming-and-host-protection-attributes"></a>SQL Server プログラミングとホスト保護属性
 SQL Server ホストにマネージド コードを読み込み、実行する機能を利用するには、コード アクセス セキュリティとホスト リソース保護の両方においてホストの要件を満たす必要があります。  コード アクセス セキュリティの要件については、次の 3 つの SQL Server アクセス許可セットのいずれかで指定します。SAFE、EXTERNAL-ACCESS、または UNSAFE です。 SAFE アクセス許可セット内か EXTERNAL-ACCESS アクセス許可セット内でコードを実行する場合、<xref:System.Security.Permissions.HostProtectionAttribute> 属性が適用されている特定の型またはメンバーを避ける必要があります。 <xref:System.Security.Permissions.HostProtectionAttribute> はセキュリティ アクセス許可ではなく、むしろ信頼性保証であり、ホストが許可しない可能性がある特定のコード コンストラクト (型またはメソッド) を識別します。  <xref:System.Security.Permissions.HostProtectionAttribute> を使用することで、ホストの安定性を保護するプログラミング モデルを適用します。  
@@ -27,11 +27,11 @@ SQL Server ホストにマネージド コードを読み込み、実行する�
 ## <a name="host-protection-attributes"></a>ホスト保護属性  
  ホスト保護属性は、ホスト プログラミング モデルに合わない型またはメンバーを特定し、以下の信頼性レベルの脅威の増加を表します。  
   
--   それ以外は害がない。  
+- それ以外は害がない。  
   
--   サーバーが管理するユーザー コードが不安定になる可能性がある。  
+- サーバーが管理するユーザー コードが不安定になる可能性がある。  
   
--   サーバー プロセス自体が不安定になる可能性がある。  
+- サーバー プロセス自体が不安定になる可能性がある。  
   
  SQL Server は、<xref:System.Security.Permissions.HostProtectionResource> 値として <xref:System.Security.Permissions.HostProtectionResource.SharedState>、<xref:System.Security.Permissions.HostProtectionResource.Synchronization>、<xref:System.Security.Permissions.HostProtectionResource.MayLeakOnAbort>、<xref:System.Security.Permissions.HostProtectionResource.ExternalProcessMgmt> を指定する <xref:System.Security.Permissions.HostProtectionAttribute> を持つ型またはメンバーの使用を禁止します。 これにより、共有状態を有効にし、同期を実行し、終了時にリソースを漏洩する可能性があり、SQL Server プロセスの整合性に影響を与えるメンバーの呼び出しをアセンブリに禁止します。  
   

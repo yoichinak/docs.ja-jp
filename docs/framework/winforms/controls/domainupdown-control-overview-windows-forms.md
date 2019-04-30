@@ -8,11 +8,11 @@ helpviewer_keywords:
 - DomainUpDown control [Windows Forms], about DomainUpDown control
 ms.assetid: 3f40f9c1-20ad-4331-b9b5-b0127eb36eb3
 ms.openlocfilehash: bfe3e7239f77c6f1a0d9bb46a96c704653b43364
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972069"
 ---
 # <a name="domainupdown-control-overview-windows-forms"></a>DomainUpDown コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.DomainUpDown>コントロールが本質的には、テキスト ボックスの組み合わせで、一覧内を上下に移動するボタンのペア。 コントロールは、表示し、選択肢の一覧からテキスト文字列を設定します。 ユーザーは、一覧内を移動するボタンと下矢印をクリックすると、上下の矢印キーを押して、または、リスト内の項目に一致する文字列を入力して、文字列を選択できます。 このコントロールの用途の 1 つは、名のアルファベット順に並べ替えられたリストから項目を選択するためです。  

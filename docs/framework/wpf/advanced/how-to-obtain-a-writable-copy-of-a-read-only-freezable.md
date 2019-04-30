@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Freezable objects [WPF], modifiable clones
 ms.assetid: d028de61-bbe9-4d62-b656-8fe3b1b2ca24
 ms.openlocfilehash: 910c5dada6ca82f68992722e4df6b35f9f7497c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206474"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942793"
 ---
 # <a name="how-to-obtain-a-writable-copy-of-a-read-only-freezable"></a>方法: 読み取り専用の Freezable の書き込み可能なコピーを取得する
 この例は、使用する方法を示します、<xref:System.Windows.Freezable.Clone%2A>読み取り専用の書き込み可能なコピーを作成するメソッドを<xref:System.Windows.Freezable>します。  

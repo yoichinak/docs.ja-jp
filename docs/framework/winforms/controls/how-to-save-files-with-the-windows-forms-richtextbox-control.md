@@ -16,24 +16,24 @@ helpviewer_keywords:
 - text files [Windows Forms], saving from RichTextBox control
 ms.assetid: 4a58ec19-84d1-4383-9110-298c06adcfca
 ms.openlocfilehash: 4784ddd563ccec0f7e6271700781ee1b5d3ac105
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318417"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013323"
 ---
 # <a name="how-to-save-files-with-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールを使用してファイルを保存する
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールがいくつかの形式のいずれかで表示される情報を書き込むことができます。  
   
--   プレーンテキスト  
+- プレーンテキスト  
   
--   Unicode のプレーン テキスト  
+- Unicode のプレーン テキスト  
   
--   リッチ テキスト形 (式 RTF)  
+- リッチ テキスト形 (式 RTF)  
   
--   OLE オブジェクトの代わりにスペースを含む RTF  
+- OLE オブジェクトの代わりにスペースを含む RTF  
   
--   プレーン テキストの OLE オブジェクトのテキスト表現を使用  
+- プレーン テキストの OLE オブジェクトのテキスト表現を使用  
   
  ファイルを保存する、<xref:System.Windows.Forms.RichTextBox.SaveFile%2A>メソッド。 使用することも、 **SaveFile**をストリームにデータを保存するメソッド。 詳細については、「 <xref:System.Windows.Forms.RichTextBox.SaveFile%28System.IO.Stream%2CSystem.Windows.Forms.RichTextBoxStreamType%29> 」を参照してください。  
   

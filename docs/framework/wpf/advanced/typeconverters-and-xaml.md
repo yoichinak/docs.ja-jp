@@ -5,11 +5,11 @@ helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
 ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007322"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters および XAML
 このトピックでは、一般的な XAML 言語機能として、文字列からの型変換の目的について説明します。 .NET Framework で、<xref:System.ComponentModel.TypeConverter>クラスは、特定の目的を XAML 属性の使用法のプロパティの値として使用できる管理対象のカスタム クラスの実装の一部として機能します。 カスタム クラスを作成する XAML 設定可能な属性の値として使用するのには、クラスのインスタンスが必要な場合は、可能性があります、適用する必要があります、<xref:System.ComponentModel.TypeConverterAttribute>カスタムを作成し、クラスに<xref:System.ComponentModel.TypeConverter>クラス、またはその両方です。  
@@ -59,13 +59,13 @@ ms.locfileid: "59164990"
   
  <xref:System.ComponentModel.TypeConverter> XAML 処理の目的の文字列から変換するために関連する 4 つのメンバーを定義します。  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.CanConvertFrom%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertTo%2A>  
   
--   <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
+- <xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>  
   
  最も重要なメソッドは、これらのうち、<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>します。 このメソッドは、入力文字列を必要なオブジェクト型に変換します。 厳密に言えば、<xref:System.ComponentModel.TypeConverter.ConvertFrom%2A>幅広い範囲の型をコンバーターの目的の型に変換、そのため、実行時の変換をサポートするなど、XAML の目的で XAML 以外の目的を提供するメソッドを実装する可能性があります処理できるコード パスのみである、<xref:System.String>重要な入力します。  
   

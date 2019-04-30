@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
 ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715192"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011763"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows フォームで使用するコントロール
 Windows フォームで使うことができるコントロールとコンポーネントのアルファベット順の一覧を次に示します。 このセクションで説明する Windows フォーム コントロールに加えて、ActiveX コントロールとカスタム コントロールを Windows フォームに追加できます。 必要なコントロールがここで見つからない場合は、独自に作成することもできます。 詳しくは、「[デザイン時の Windows フォーム コントロールの開発](developing-windows-forms-controls-at-design-time.md)」をご覧ください。 必要なコントロールの選択について詳しくは、「[Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)」をご覧ください。  
@@ -171,12 +171,10 @@ Windows フォームで使うことができるコントロールとコンポー
  ドッキングされたコントロールのサイズを変更できます ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] バージョン 1.x)。  
   
  [StatusBar コントロール](statusbar-control-windows-forms.md)  
- フォーカスを持つコントロールに関するステータス情報を表示します。 
-  <xref:System.Windows.Forms.StatusStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールも、下位互換性を保つ目的および必要に応じて将来使用する目的で保持されます。  
+ フォーカスを持つコントロールに関するステータス情報を表示します。 <xref:System.Windows.Forms.StatusStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールも、下位互換性を保つ目的および必要に応じて将来使用する目的で保持されます。  
   
  [StatusStrip コントロール](statusstrip-control.md)  
- Windows ステータス バー コントロールを表します。 
-  <xref:System.Windows.Forms.StatusStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールも、下位互換性を保つ目的および必要に応じて将来使用する目的で保持されます。  
+ Windows ステータス バー コントロールを表します。 <xref:System.Windows.Forms.StatusStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールも、下位互換性を保つ目的および必要に応じて将来使用する目的で保持されます。  
   
  [TabControl コントロール](tabcontrol-control-windows-forms.md)  
  画像や他のコントロールを含むことができる複数のタブを表示します。  
@@ -206,8 +204,7 @@ Windows フォームで使うことができるコントロールとコンポー
  処理の進行状況をグラフィカルに示します。 <xref:System.Windows.Forms.ToolStripProgressBar>に含まれる代表的な<xref:System.Windows.Forms.StatusStrip>します。  
   
  [ToolStripStatusLabel コントロール](toolstripstatuslabel-control.md)  
- 
-  <xref:System.Windows.Forms.StatusStrip> コントロールのパネルを表します。  
+ <xref:System.Windows.Forms.StatusStrip> コントロールのパネルを表します。  
   
  [ToolTip コンポーネント](tooltip-component-windows-forms.md)  
  ユーザーが他のコントロールをポイントしたときに、テキストを表示します。  

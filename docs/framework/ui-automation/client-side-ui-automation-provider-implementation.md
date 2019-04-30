@@ -7,11 +7,11 @@ helpviewer_keywords:
 - provider implementation, UI Automation
 ms.assetid: 3584c0a1-9cd0-4968-8b63-b06390890ef6
 ms.openlocfilehash: e68cf69830aef88f46ff2e288c5aad548db39bdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224469"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032379"
 ---
 # <a name="client-side-ui-automation-provider-implementation"></a>クライアント側 UI オートメーション プロバイダーの実装
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59224469"
   
  クライアント独自のコードで実装されたプロバイダーは、 <xref:System.Windows.Automation.ClientSettings.RegisterClientSideProviders%2A>を使用して登録されます。 このメソッドは引数として、 <xref:System.Windows.Automation.ClientSideProviderDescription> 構造体の配列を受け取ります。各構造体では、次のプロパティが指定されます。  
   
--   プロバイダー オブジェクトを作成するコールバック関数。  
+- プロバイダー オブジェクトを作成するコールバック関数。  
   
--   プロバイダーが使用されるコントロールのクラス名。  
+- プロバイダーが使用されるコントロールのクラス名。  
   
--   プロバイダーが使用されるアプリケーションのイメージ名 (通常は実行可能ファイルの完全名)。  
+- プロバイダーが使用されるアプリケーションのイメージ名 (通常は実行可能ファイルの完全名)。  
   
--   クラス名と、ターゲット アプリケーションで検出されたウィンドウ クラスを照合する方法を制御するフラグ。  
+- クラス名と、ターゲット アプリケーションで検出されたウィンドウ クラスを照合する方法を制御するフラグ。  
   
  最後の 2 つのパラメーターは省略できます。 クライアントでは、異なるアプリケーションに対して異なるプロバイダーを使用する必要がある場合、ターゲット アプリケーションのイメージ名を指定することができます。 たとえば、クライアントは、Multiple View パターンをサポートする既知のアプリケーションの [!INCLUDE[TLA2#tla_win32](../../../includes/tla2sharptla-win32-md.md)] リスト ビュー コントロールに対して、あるプロバイダーを使用し、そのパターンをサポートしない別の既知のアプリケーションの同様のコントロールに対して別のプロバイダーを使用できます。  
   

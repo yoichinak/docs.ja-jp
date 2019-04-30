@@ -3,11 +3,11 @@ title: let バインド
 description: 使用する方法について説明します、 F# 'let' バインドの値または関数の識別子を関連付けます。
 ms.date: 05/16/2016
 ms.openlocfilehash: 45de82acf6f4423698cd8037266968e023f40dcb
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612674"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941005"
 ---
 # <a name="let-bindings"></a>let バインド
 
@@ -68,7 +68,7 @@ A`let`最後の式の値に評価される式をバインドします。 その�
 
 明示的な型のパラメーターがない場合は、関数のパラメーターの種類を決定する型の推定が使用されます。 これをジェネリック パラメーターの型を自動的に一般化を含めることができます。
 
-詳細については、[自動ジェネリック化](../generics/automatic-generalization.md)と[型の推定](../type-inference.md)を参照してください。
+詳細については、次を参照してください。[自動ジェネリック化](../generics/automatic-generalization.md)と[型の推定](../type-inference.md)します。
 
 ## <a name="let-bindings-in-classes"></a>クラス内の let 束縛
 
@@ -76,7 +76,7 @@ A`let`構造体またはレコードの種類ではなく、クラス型にバ�
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet1110.fs)]
 
-スコープ`field1`と`field2`は宣言されている型に制限されます。 詳細については、[ `let`クラス内のバインディング](../members/let-bindings-in-classes.md)と[クラス](../classes.md)を参照してください。
+スコープ`field1`と`field2`は宣言されている型に制限されます。 詳細については、次を参照してください。 [ `let`クラス内のバインディング](../members/let-bindings-in-classes.md)と[クラス](../classes.md)します。
 
 ## <a name="type-parameters-in-let-bindings"></a>型パラメーターの let 束縛
 
@@ -112,7 +112,7 @@ let function3 x =
 
 一部のモジュールは、属性を持つ[RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)、つまり、モジュールの名前で公開されている関数を修飾する必要があります。 たとえば、F# List モジュールには、この属性があります。
 
-モジュールとアクセス制御の詳細については、[モジュール](../modules.md)と[アクセス制御](../access-control.md)を参照してください。
+モジュールとアクセス制御の詳細については、次を参照してください。[モジュール](../modules.md)と[アクセス制御](../access-control.md)します。
 
 ## <a name="see-also"></a>関連項目
 

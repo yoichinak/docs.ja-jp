@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID71
 ms.assetid: 5e2528f5-81b3-4e5e-a294-a43cc738a42e
 ms.openlocfilehash: 3e981a55158ae77ed8a2b5f3d33c02aea175abdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970366"
 ---
 # <a name="disk-not-ready"></a>ディスクが準備されていません
 指定したドライブにはディスクがないか、ドライブのドアが開いています。  

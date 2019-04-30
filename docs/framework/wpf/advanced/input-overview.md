@@ -25,11 +25,11 @@ helpviewer_keywords:
 - mouse position [WPF]
 ms.assetid: ee5258b7-6567-415a-9b1c-c0cbe46e79ef
 ms.openlocfilehash: 9553a66538297db9c2fa134e018f35ab9e2ddf37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001556"
 ---
 # <a name="input-overview"></a>入力の概要
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]サブシステムは、強力な[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]を提供しており、マウス、キーボード、タッチ、スタイラスを含むさまざまなデバイスからの入力を取得できます。
@@ -153,43 +153,43 @@ ms.locfileid: "59320016"
 ### <a name="prerequisites"></a>必須コンポーネント
  タッチに応答するアプリケーションを開発するには、次のコンポーネントが必要です。
 
--   Visual Studio 2010。
+- Visual Studio 2010。
 
--   Windows 7。
+- Windows 7。
 
--   Windows タッチをサポートするデバイス (タッチスクリーンなど)。
+- Windows タッチをサポートするデバイス (タッチスクリーンなど)。
 
 ### <a name="terminology"></a>用語
  タッチについて説明するときに使用される用語を次に示します。
 
--   **タッチ**は、Windows 7 で認識されるユーザー入力の種類です。 通常、タッチを検知するスクリーンに指を当てると、タッチが開始されます。 デバイスによって指の位置と動きがマウス入力として変換されるだけの場合、ノート PC で一般的なタッチパッドなどのデバイスでは、タッチがサポートされないことに注意してください。
+- **タッチ**は、Windows 7 で認識されるユーザー入力の種類です。 通常、タッチを検知するスクリーンに指を当てると、タッチが開始されます。 デバイスによって指の位置と動きがマウス入力として変換されるだけの場合、ノート PC で一般的なタッチパッドなどのデバイスでは、タッチがサポートされないことに注意してください。
 
--   **マルチタッチ**は、複数のポイントが同時に行われるときのタッチです。 Windows 7 および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、マルチタッチをサポートします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に関するドキュメントでタッチについて説明されている場合、その概念はマルチタッチを対象とします。
+- **マルチタッチ**は、複数のポイントが同時に行われるときのタッチです。 Windows 7 および [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、マルチタッチをサポートします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に関するドキュメントでタッチについて説明されている場合、その概念はマルチタッチを対象とします。
 
--   **操作**は、タッチが、オブジェクトに適用される物理的なアクションとして解釈されるときに発生します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、操作イベントによって、平行移動、拡大縮小、または回転の各操作として入力が解釈されます。
+- **操作**は、タッチが、オブジェクトに適用される物理的なアクションとして解釈されるときに発生します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、操作イベントによって、平行移動、拡大縮小、または回転の各操作として入力が解釈されます。
 
--   `touch device` は、タッチスクリーン上での 1 本の指など、タッチ入力を生成するデバイスを表します。
+- `touch device` は、タッチスクリーン上での 1 本の指など、タッチ入力を生成するデバイスを表します。
 
 ### <a name="controls-that-respond-to-touch"></a>タッチに応答するコントロール
  次のコントロールは、スクロールされて見えないコンテンツがある場合に、コントロール上を指でドラッグするとスクロールできます。
 
--   <xref:System.Windows.Controls.ComboBox>
+- <xref:System.Windows.Controls.ComboBox>
 
--   <xref:System.Windows.Controls.ContextMenu>
+- <xref:System.Windows.Controls.ContextMenu>
 
--   <xref:System.Windows.Controls.DataGrid>
+- <xref:System.Windows.Controls.DataGrid>
 
--   <xref:System.Windows.Controls.ListBox>
+- <xref:System.Windows.Controls.ListBox>
 
--   <xref:System.Windows.Controls.ListView>
+- <xref:System.Windows.Controls.ListView>
 
--   <xref:System.Windows.Controls.MenuItem>
+- <xref:System.Windows.Controls.MenuItem>
 
--   <xref:System.Windows.Controls.TextBox>
+- <xref:System.Windows.Controls.TextBox>
 
--   <xref:System.Windows.Controls.ToolBar>
+- <xref:System.Windows.Controls.ToolBar>
 
--   <xref:System.Windows.Controls.TreeView>
+- <xref:System.Windows.Controls.TreeView>
 
  <xref:System.Windows.Controls.ScrollViewer>定義、<xref:System.Windows.Controls.ScrollViewer.PanningMode%2A?displayProperty=nameWithType>添付プロパティかどうかタッチ パンを有効に水平、垂直方向に、両方、またはどちらも指定することができます。 <xref:System.Windows.Controls.ScrollViewer.PanningDeceleration%2A?displayProperty=nameWithType>プロパティは、どの程度の速度、スクロール速度を遅く、ユーザーがタッチ スクリーンから指を離したときに指定します。 <xref:System.Windows.Controls.ScrollViewer.PanningRatio%2A?displayProperty=nameWithType>添付プロパティは、スクロール オフセットと平行移動操作オフセットの比率を指定します。
 
@@ -198,25 +198,25 @@ ms.locfileid: "59320016"
 
  この 3 つのクラスはすべて、定義クラスに関係なく、動作がよく似た次のイベントを定義します。
 
--   <xref:System.Windows.UIElement.TouchDown>
+- <xref:System.Windows.UIElement.TouchDown>
 
--   <xref:System.Windows.UIElement.TouchMove>
+- <xref:System.Windows.UIElement.TouchMove>
 
--   <xref:System.Windows.UIElement.TouchUp>
+- <xref:System.Windows.UIElement.TouchUp>
 
--   <xref:System.Windows.UIElement.TouchEnter>
+- <xref:System.Windows.UIElement.TouchEnter>
 
--   <xref:System.Windows.UIElement.TouchLeave>
+- <xref:System.Windows.UIElement.TouchLeave>
 
--   <xref:System.Windows.UIElement.PreviewTouchDown>
+- <xref:System.Windows.UIElement.PreviewTouchDown>
 
--   <xref:System.Windows.UIElement.PreviewTouchMove>
+- <xref:System.Windows.UIElement.PreviewTouchMove>
 
--   <xref:System.Windows.UIElement.PreviewTouchUp>
+- <xref:System.Windows.UIElement.PreviewTouchUp>
 
--   <xref:System.Windows.UIElement.GotTouchCapture>
+- <xref:System.Windows.UIElement.GotTouchCapture>
 
--   <xref:System.Windows.UIElement.LostTouchCapture>
+- <xref:System.Windows.UIElement.LostTouchCapture>
 
  キーボード イベントやマウス イベントと同様に、タッチ イベントはルーティング イベントです。 `Preview` で始まるイベントはトンネル イベントで、`Touch` で始まるイベントはバブル イベントです。 ルーティング イベントの詳細については、「[ルーティング イベントの概要](routed-events-overview.md)」を参照してください。 これらのイベントを処理するときに呼び出すことで、任意の要素を基準とした、入力の位置を取得できます、<xref:System.Windows.Input.TouchEventArgs.GetTouchPoint%2A>または<xref:System.Windows.Input.TouchEventArgs.GetIntermediateTouchPoints%2A>メソッド。
 
@@ -241,11 +241,11 @@ ms.locfileid: "59320016"
 ### <a name="manipulation-events"></a>操作イベント
  アプリケーションが、オブジェクトを操作するユーザーを有効の場合、<xref:System.Windows.UIElement>クラスは、操作イベントを定義します。 単にタッチの位置を報告するタッチ イベントとは異なり、操作イベントは、入力がどのように解釈されるかを報告します。 操作には、平行移動、拡大縮小、および回転の 3 種類があります。 次のリストでは、3 種類の操作を呼び出す方法を示します。
 
--   平行移動の操作を呼び出すには、オブジェクトの上に指を置き、タッチスクリーン上で指を動かします。 通常、この操作を行うと、オブジェクトが移動します。
+- 平行移動の操作を呼び出すには、オブジェクトの上に指を置き、タッチスクリーン上で指を動かします。 通常、この操作を行うと、オブジェクトが移動します。
 
--   拡大縮小の操作を呼び出すには、オブジェクトの上に 2 本の指を置き、2 本の指を近づけたり離したりします。 通常、この操作を行うと、オブジェクトのサイズが変更されます。
+- 拡大縮小の操作を呼び出すには、オブジェクトの上に 2 本の指を置き、2 本の指を近づけたり離したりします。 通常、この操作を行うと、オブジェクトのサイズが変更されます。
 
--   回転の操作を呼び出すには、オブジェクトの上に 2 本の指を置き、一方の指を中心にもう一方の指を回転させます。 通常、この操作を行うと、オブジェクトが回転します。
+- 回転の操作を呼び出すには、オブジェクトの上に 2 本の指を置き、一方の指を中心にもう一方の指を回転させます。 通常、この操作を行うと、オブジェクトが回転します。
 
  2 種類以上の操作を同時に発生させることもできます。
 
@@ -255,17 +255,17 @@ ms.locfileid: "59320016"
 
  <xref:System.Windows.UIElement>次の操作イベントを定義します。
 
--   <xref:System.Windows.UIElement.ManipulationStarting>
+- <xref:System.Windows.UIElement.ManipulationStarting>
 
--   <xref:System.Windows.UIElement.ManipulationStarted>
+- <xref:System.Windows.UIElement.ManipulationStarted>
 
--   <xref:System.Windows.UIElement.ManipulationDelta>
+- <xref:System.Windows.UIElement.ManipulationDelta>
 
--   <xref:System.Windows.UIElement.ManipulationInertiaStarting>
+- <xref:System.Windows.UIElement.ManipulationInertiaStarting>
 
--   <xref:System.Windows.UIElement.ManipulationCompleted>
+- <xref:System.Windows.UIElement.ManipulationCompleted>
 
--   <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
+- <xref:System.Windows.UIElement.ManipulationBoundaryFeedback>
 
  既定で、<xref:System.Windows.UIElement>これらの操作イベントを受信しません。 操作イベントを受信する、<xref:System.Windows.UIElement>設定<xref:System.Windows.UIElement.IsManipulationEnabled%2A?displayProperty=nameWithType>に`true`します。
 
@@ -309,13 +309,13 @@ ms.locfileid: "59320016"
 
  次のリストに、前の図に示したタッチ イベントと操作イベントの関係を示します。
 
--   最初のタッチ デバイスを生成するとき、<xref:System.Windows.UIElement.TouchDown>上のイベントを<xref:System.Windows.UIElement>、操作ロジックの呼び出し、<xref:System.Windows.UIElement.CaptureTouch%2A>メソッドで、生成、<xref:System.Windows.UIElement.GotTouchCapture>イベント。
+- 最初のタッチ デバイスを生成するとき、<xref:System.Windows.UIElement.TouchDown>上のイベントを<xref:System.Windows.UIElement>、操作ロジックの呼び出し、<xref:System.Windows.UIElement.CaptureTouch%2A>メソッドで、生成、<xref:System.Windows.UIElement.GotTouchCapture>イベント。
 
--   ときに、<xref:System.Windows.UIElement.GotTouchCapture>発生すると、操作ロジックの呼び出し、<xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType>メソッドで、生成、<xref:System.Windows.UIElement.ManipulationStarting>イベント。
+- ときに、<xref:System.Windows.UIElement.GotTouchCapture>発生すると、操作ロジックの呼び出し、<xref:System.Windows.Input.Manipulation.AddManipulator%2A?displayProperty=nameWithType>メソッドで、生成、<xref:System.Windows.UIElement.ManipulationStarting>イベント。
 
--   ときに、<xref:System.Windows.UIElement.TouchMove>イベントが発生した、操作ロジックを生成、<xref:System.Windows.UIElement.ManipulationDelta>する前に発生するイベント、<xref:System.Windows.UIElement.ManipulationInertiaStarting>イベント。
+- ときに、<xref:System.Windows.UIElement.TouchMove>イベントが発生した、操作ロジックを生成、<xref:System.Windows.UIElement.ManipulationDelta>する前に発生するイベント、<xref:System.Windows.UIElement.ManipulationInertiaStarting>イベント。
 
--   最後デバイスをタッチすると、要素を発生させます、<xref:System.Windows.UIElement.TouchUp>イベント、操作ロジックが生成されます、<xref:System.Windows.UIElement.ManipulationInertiaStarting>イベント。
+- 最後デバイスをタッチすると、要素を発生させます、<xref:System.Windows.UIElement.TouchUp>イベント、操作ロジックが生成されます、<xref:System.Windows.UIElement.ManipulationInertiaStarting>イベント。
 
 <a name="focus"></a>
 ## <a name="focus"></a>フォーカス

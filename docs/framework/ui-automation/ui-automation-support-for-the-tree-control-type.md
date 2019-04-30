@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Tree control type
 ms.assetid: 312dd04d-a86b-4072-8b12-2beeabdff5e3
 ms.openlocfilehash: 001381eddf56022e2b3e934604e42d871a64d730
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157262"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996519"
 ---
 # <a name="ui-automation-support-for-the-tree-control-type"></a>UI オートメーションによる Tree コントロール型のサポート
 > [!NOTE]
@@ -33,9 +33,9 @@ ms.locfileid: "59157262"
   
  [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーのコントロール ビューは、次のものから構成されます。  
   
--   コンテナー内の 0 個以上の項目 (項目は、Tree Item コントロール型、Data Item コントロール型、またはその他のコントロール型に基づいて設定できます)。  
+- コンテナー内の 0 個以上の項目 (項目は、Tree Item コントロール型、Data Item コントロール型、またはその他のコントロール型に基づいて設定できます)。  
   
--   0、1、または 2 個のスクロール バー。  
+- 0、1、または 2 個のスクロール バー。  
   
  コンテンツ ビューの [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーは、コンテナー内の 0 個以上の項目から構成されます (項目は、TreeItem コントロール型、DataItem コントロール型、またはその他のコントロール型に基づいている可能性があります)。  
   

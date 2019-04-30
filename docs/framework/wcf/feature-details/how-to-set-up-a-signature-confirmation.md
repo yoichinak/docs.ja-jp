@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, security
 ms.assetid: 2424c137-c7c2-4aa9-8d5d-a066e12fefda
 ms.openlocfilehash: 56e8720a6130d2908fbfb83bd243a54fae9a2406
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315817"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972927"
 ---
 # <a name="how-to-set-up-a-signature-confirmation"></a>方法: 署名確認を設定する
 *署名確認*は送信者の元のメッセージへの応答で受信した応答が生成されたことを確認するメッセージのイニシエーターのメカニズムです。 署名確認は、WS-Security 1.1 仕様で定義されています。 エンドポイントが WS-Security 1.0 をサポートしている場合は、署名確認を使用できません。  
@@ -42,7 +42,7 @@ ms.locfileid: "59315817"
   
 4. `<security>` 子要素を追加し、`requireSignatureConfirmation` 属性を `true` に設定します。  
   
-5. 任意。 ブートス トラップ中に署名確認を有効にするには追加、 [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子要素とセット、`equireSignatureConfirmation`属性を`true`します。  
+5. 省略可能です。 ブートス トラップ中に署名確認を有効にするには追加、 [ \<secureConversationBootstrap >](../../../../docs/framework/configure-apps/file-schema/wcf/secureconversationbootstrap.md)子要素とセット、`equireSignatureConfirmation`属性を`true`します。  
   
 6. 適切なトランスポート要素を追加します。 次の例では、追加、 [ \<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md):  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
 ms.openlocfilehash: ee4d30b82ceada5c4f3fc4ad95dc8eeedd9355b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970834"
 ---
 # <a name="myresources-object"></a>My.Resources オブジェクト
 アプリケーションのリソースにアクセスするためのプロパティとクラスを提供します。  
@@ -32,11 +32,11 @@ ms.locfileid: "58821739"
   
  各リソースには、名前、カテゴリ、および値、およびこれらのリソースの設定は、リソースにアクセスするプロパティを表示する方法を決定、`My.Resources`オブジェクト。 追加するリソースの**プロジェクト デザイナー**:  
   
--   名前は、プロパティの名前を決定します。  
+- 名前は、プロパティの名前を決定します。  
   
--   リソース データは、プロパティの値  
+- リソース データは、プロパティの値  
   
--   カテゴリは、プロパティの型を決定します。  
+- カテゴリは、プロパティの型を決定します。  
   
 |Category|プロパティのデータ型|  
 |---|---|  

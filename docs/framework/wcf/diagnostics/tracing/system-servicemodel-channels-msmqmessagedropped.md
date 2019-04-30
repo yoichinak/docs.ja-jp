@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.MsmqMessageDropped
 ms.date: 03/30/2017
 ms.assetid: 8b6e644d-fa68-4be7-abe9-3659671a37c1
 ms.openlocfilehash: 3fa5ec62c5e8ac83f3f81fb406499b7e596b3dac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969508"
 ---
 # <a name="systemservicemodelchannelsmsmqmessagedropped"></a>System.ServiceModel.Channels.MsmqMessageDropped
 MSMQ はメッセージを破棄しました。  

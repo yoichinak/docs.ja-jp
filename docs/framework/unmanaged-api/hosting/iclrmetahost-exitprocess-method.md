@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 64c212d064ad658678926690d1e680afe27c7c99
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993253"
 ---
 # <a name="iclrmetahostexitprocess-method"></a>ICLRMetaHost::ExitProcess メソッド
 すべての読み込まれたランタイムを適切にシャット ダウンしようとしてのプロセスを終了します。 も優先されます、 [CorExitProcess](../../../../docs/framework/unmanaged-api/hosting/corexitprocess-function.md)関数。  

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ComboBox control [Windows Forms]
 ms.assetid: 86a1bbc3-0469-4290-91c5-99ff61b739ff
 ms.openlocfilehash: 9f9653069606ec81d7ece4372d67a0a0eba4c073
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956040"
 ---
 # <a name="combobox-control-windows-forms"></a>ComboBox コントロール (Windows フォーム)
 Windows フォーム`ComboBox`ドロップダウン コンボ ボックスにデータを表示するコントロールを使用します。 既定では、`ComboBox`コントロールは、2 つの部分が表示されます。 最上位部分は、ユーザーがリスト項目を入力できるテキスト ボックス。 2 番目の部分は、元のユーザーが選択できる 1 つの項目の一覧を表示するリスト ボックスです。  

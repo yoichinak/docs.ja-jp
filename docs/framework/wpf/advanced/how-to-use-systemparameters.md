@@ -8,11 +8,11 @@ helpviewer_keywords:
 - classes [WPF], SystemParameters
 ms.assetid: 02e7a5de-94eb-4953-b91c-52e6c872ad5b
 ms.openlocfilehash: 344fb54b48bcbf188b36a29d8205c21deff713c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001456"
 ---
 # <a name="how-to-use-systemparameters"></a>方法: SystemParameters を使用する
 この例のプロパティを使用してアクセスする方法を示しています。<xref:System.Windows.SystemParameters>のスタイル設定やボタンをカスタマイズするためにします。  

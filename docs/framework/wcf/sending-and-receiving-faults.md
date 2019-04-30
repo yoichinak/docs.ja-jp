@@ -8,11 +8,11 @@ helpviewer_keywords:
 - handling faults [WCF], sending
 ms.assetid: 7be6fb96-ce2a-450b-aebe-f932c6a4bc5d
 ms.openlocfilehash: 2757f98066931ca1b5e3ef147cee2c819ee22606
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949605"
 ---
 # <a name="sending-and-receiving-faults"></a>エラーの送受信
 SOAP エラーは、エラー状態情報をサービスからクライアントに伝達します。双方向通信の場合は、相互運用可能な方法でクライアントからサービスにも伝達します。 通常、サービスは、カスタムのエラー コンテンツを定義し、そのエラー コンテンツを返すことができる操作を指定します  (詳細については、次を参照してください[の定義と指定するエラー](../../../docs/framework/wcf/defining-and-specifying-faults.md)。)。ここでは、対応するエラー状態が発生したときにサービスまたは双方向クライアントがエラーを送信する方法、およびクライアントまたはサービス アプリケーションがエラーを処理する方法について説明します。 Windows Communication Foundation (WCF) アプリケーションのエラー処理の概要については、次を参照してください。[を指定すると処理のエラー コントラクトおよびサービスの](../../../docs/framework/wcf/specifying-and-handling-faults-in-contracts-and-services.md)します。  
@@ -47,9 +47,9 @@ SOAP エラーは、エラー状態情報をサービスからクライアント
 ## <a name="handling-faults"></a>エラーの処理  
  WCF クライアントではマネージ例外としてクライアント アプリケーションに関心のある通信中に発生した SOAP エラーが発生します。 任意のプログラムの実行中に発生することが多くの例外はありますが、通信の結果として次の 2 種類の例外を処理するために、WCF クライアントのプログラミング モデルを使用してアプリケーションが期待できます。  
   
--   <xref:System.TimeoutException>  
+- <xref:System.TimeoutException>  
   
--   <xref:System.ServiceModel.CommunicationException>  
+- <xref:System.ServiceModel.CommunicationException>  
   
  <xref:System.TimeoutException> オブジェクトは、操作が、指定されたタイムアウト期間を超えた場合にスローされます。  
   
@@ -81,13 +81,13 @@ SOAP エラーは、エラー状態情報をサービスからクライアント
   
  通常、クライアント オブジェクトのチャネルは、次のいずれかが発生すると閉じられます。  
   
--   WCF クライアント オブジェクトがリサイクルされる場合です。  
+- WCF クライアント オブジェクトがリサイクルされる場合です。  
   
--   クライアント アプリケーションが <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> を呼び出すとき。  
+- クライアント アプリケーションが <xref:System.ServiceModel.ClientBase%601.Close%2A?displayProperty=nameWithType> を呼び出すとき。  
   
--   クライアント アプリケーションが <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> を呼び出すとき。  
+- クライアント アプリケーションが <xref:System.ServiceModel.ICommunicationObject.Close%2A?displayProperty=nameWithType> を呼び出すとき。  
   
--   クライアント アプリケーションが、セッションの終了操作となる操作を呼び出すとき。  
+- クライアント アプリケーションが、セッションの終了操作となる操作を呼び出すとき。  
   
  いずれの場合でも、チャネルを閉じると、アプリケーション レベルで複雑な機能をサポートするためにメッセージを送信している可能性がある基になるチャネルをすべて閉じる操作を開始するように、チャネルに通知されます。 たとえば、コントラクトがセッションを要求している場合、バインディングは、セッションが確立されるまでサービス チャネルとメッセージを交換してセッションを確立しようとします。 チャネルが閉じられると、基になるセッション チャネルは、セッションが終了したことをサービスに通知します。 この場合、チャネルが既に中止されたり閉じられたりしている、または使用できない (たとえば、ネットワーク ケーブルが外れている) ときには、クライアント チャネルはサービス チャネルに対し、セッションが終了し例外が発生する可能性があることを通知できません。  
   

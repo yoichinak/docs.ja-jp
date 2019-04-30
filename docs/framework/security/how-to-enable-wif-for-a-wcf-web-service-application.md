@@ -7,38 +7,38 @@ ms.openlocfilehash: 6af0336e19df4ba2a99a52f8726e78ed92f5a79e
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977432"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940466"
 ---
 # <a name="how-to-enable-wif-for-a-wcf-web-service-application"></a>方法: WCF Web サービス アプリケーションの WIF を有効にする
 ## <a name="applies-to"></a>対象  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   Microsoft® Windows® Communication Foundation (WCF)  
+- Microsoft® Windows® Communication Foundation (WCF)  
   
 ## <a name="summary"></a>まとめ  
  ここでは、WCF Web サービスの WIF を有効にするための詳細な操作手順を示します。 また、アプリケーションの実行中に Web サービスが正しくクレームを表示しているかどうかを確認するためにアプリケーションをテストする方法についても説明します。 ここでは、セキュリティ トークン サービス (STS) を作成するための詳細な手順については説明しません。代わりに、Identity and Access Tool に付属している開発用 STS を使用します。 開発用 STS はテスト用に用意されたもので、実際の認証は行いません。 このページの内容を完了するには、Identity and Access Tool をインストールする必要があります。 これは、次の場所からダウンロードできます。[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
   
 ## <a name="contents"></a>目次  
   
--   目的  
+- 目的  
   
--   概要  
+- 概要  
   
--   手順の要約  
+- 手順の要約  
   
--   手順 1 – 簡単な WCF サービスの作成  
+- 手順 1 – 簡単な WCF サービスの作成  
   
--   手順 2 – WCF サービスのクライアント アプリケーションの作成  
+- 手順 2 – WCF サービスのクライアント アプリケーションの作成  
   
--   手順 3 – ソリューションをテストする  
+- 手順 3 – ソリューションをテストする  
   
 ## <a name="objectives"></a>目的  
   
--   発行済みトークンを必要とする WCF サービスを作成する  
+- 発行済みトークンを必要とする WCF サービスを作成する  
   
--   STS のトークンを要求し、それを WCF サービスに渡す WCF クライアントを作成する  
+- STS のトークンを要求し、それを WCF サービスに渡す WCF クライアントを作成する  
   
 ## <a name="overview"></a>概要  
  ここでは、WCF サービス開発時に開発者がフェデレーション認証を使用する方法を示します。 WCF サービスでフェデレーションを使用する利点には、次のものが含まれます。  
@@ -55,11 +55,11 @@ ms.locfileid: "59977432"
   
 ## <a name="summary-of-steps"></a>手順の要約  
   
--   手順 1 – 簡単な WCF サービスの作成  
+- 手順 1 – 簡単な WCF サービスの作成  
   
--   手順 2 – WCF サービスのクライアント アプリケーションの作成  
+- 手順 2 – WCF サービスのクライアント アプリケーションの作成  
   
--   手順 3 – ソリューションをテストする  
+- 手順 3 – ソリューションをテストする  
   
 ## <a name="step-1--create-a-simple-wcf-service"></a>手順 1 – 簡単な WCF サービスの作成  
  この手順では、Identity and Access Tool に付属している開発用 STS を使用する新しい WCF サービスを作成します。  

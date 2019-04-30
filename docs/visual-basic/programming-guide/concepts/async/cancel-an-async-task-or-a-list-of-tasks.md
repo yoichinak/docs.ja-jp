@@ -3,11 +3,11 @@ title: 非同期タスクまたはタスク (Visual Basic) の一覧をキャン
 ms.date: 07/20/2015
 ms.assetid: a9ee1b71-5bec-4736-a1e9-448042dd7215
 ms.openlocfilehash: 62321a5fc011f71ed6125fbaa315573d13667488
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022065"
 ---
 # <a name="cancel-an-async-task-or-a-list-of-tasks-visual-basic"></a>非同期タスクまたはタスク (Visual Basic) の一覧をキャンセルします。
 非同期のアプリケーションが終了するまで待機しない場合、それを取り消すために使用できるボタンを設定できます。 このトピックの例に従うと、1 つの Web サイトのコンテンツまたは Web サイトのリストをダウンロードするアプリケーションにキャンセル ボタンを追加できます。  
@@ -67,14 +67,14 @@ ms.locfileid: "59324761"
   
 3. **開始**ボタン `startButton_Click` のためのイベント ハンドラーに次の変更を行います。  
   
-    -   `CancellationTokenSource`、`cts` をインスタンス化します。  
+    - `CancellationTokenSource`、`cts` をインスタンス化します。  
   
         ```vb  
         ' ***Instantiate the CancellationTokenSource.  
         cts = New CancellationTokenSource()  
         ```  
   
-    -   指定された Web サイトのコンテンツをダウンロードする `AccessTheWebAsync` の呼び出しでは、引数として <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> の `cts` プロパティを送ります。 取り消しが要求されると、`Token` プロパティがメッセージを伝達します。 ユーザーがダウンロード操作の取り消しを選択するとメッセージを表示する catch ブロックを追加します。 次のコードは変更点を示しています。  
+    - 指定された Web サイトのコンテンツをダウンロードする `AccessTheWebAsync` の呼び出しでは、引数として <xref:System.Threading.CancellationTokenSource.Token%2A?displayProperty=nameWithType> の `cts` プロパティを送ります。 取り消しが要求されると、`Token` プロパティがメッセージを伝達します。 ユーザーがダウンロード操作の取り消しを選択するとメッセージを表示する catch ブロックを追加します。 次のコードは変更点を示しています。  
   
         ```vb  
         Try  
@@ -250,7 +250,7 @@ ms.locfileid: "59324761"
 ## <a name="BKMK_CompleteExamples"></a>コード例全体  
  次のセクションには、前の例の各コードが含まれています。 <xref:System.Net.Http> の参照を追加する必要があることに注意してください。  
   
- プロジェクトをダウンロードする[「Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」 (非同期のサンプル: アプリケーションの微調整) からダウンロードできます。  
+ プロジェクトは、「[Async Sample:Fine Tuning Your Application](https://code.msdn.microsoft.com/Async-Fine-Tuning-Your-a676abea)」 (非同期のサンプル: アプリケーションの微調整) からダウンロードできます。  
   
 ### <a name="cancel-a-task-example"></a>タスクを取り消す例  
  次のコードは、1 つのタスクをキャンセルする例については完全な MainWindow.xaml.vb ファイルです。  

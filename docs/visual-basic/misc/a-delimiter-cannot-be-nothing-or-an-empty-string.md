@@ -5,18 +5,18 @@ f1_keywords:
 - vbrTextFieldParser_DelimiterNothing
 ms.assetid: 8885fcd1-c201-409d-9a32-6ff2b13c0c13
 ms.openlocfilehash: ff21545bfe12fb8f6eccd50fd00c138bbab92b97
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58032099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940713"
 ---
 # <a name="a-delimiter-cannot-be-nothing-or-an-empty-string"></a>区切り記号は Nothing または空の文字列は使用できません
 `TextFieldParser` プロパティが `Delimiters` に設定されているか、または空 `Nothing` ("") であるため、 `String` をファイルから読み取ることができません。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   `Delimiters`に対して有効な値を指定します。  
+- `Delimiters`に対して有効な値を指定します。  
   
 ## <a name="see-also"></a>関連項目
 

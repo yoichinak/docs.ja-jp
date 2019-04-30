@@ -3,11 +3,11 @@ title: ThumbPrintNotFound
 ms.date: 03/30/2017
 ms.assetid: 0e901d43-5359-4f06-a564-6e5821253ece
 ms.openlocfilehash: 97b1106cb5618ca4278f273127da26296b91d858
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085364"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944431"
 ---
 # <a name="thumbprintnotfound"></a>ThumbPrintNotFound
 Id:152  

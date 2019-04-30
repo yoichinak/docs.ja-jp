@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Scroll Item control pattern
 ms.assetid: 903bab5c-80c1-44d7-bdc2-0a418893b987
 ms.openlocfilehash: c0bb852fa6c117ae8eb2644a0be75f20367b2054
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983308"
 ---
 # <a name="implementing-the-ui-automation-scrollitem-control-pattern"></a>UI オートメーション ScrollItem コントロール パターンの実装
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59095023"
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
  スクロール項目コントロール パターンを実装する場合は、次のガイドラインと規則にご留意ください。  
   
--   ウィンドウ コントロールまたはキャンバス コントロール内の項目で、IScrollItemProvider インターフェイスを実装する必要はありません。 代わりに、<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> の正しい位置を公開する必要があります。 これにより、UI オートメーション クライアント アプリケーションは、<xref:System.Windows.Automation.ScrollPattern> コントロール パターン メソッドをコンテナーで使用して、子項目を表示できます。  
+- ウィンドウ コントロールまたはキャンバス コントロール内の項目で、IScrollItemProvider インターフェイスを実装する必要はありません。 代わりに、<xref:System.Windows.Automation.AutomationElementIdentifiers.BoundingRectangleProperty> の正しい位置を公開する必要があります。 これにより、UI オートメーション クライアント アプリケーションは、<xref:System.Windows.Automation.ScrollPattern> コントロール パターン メソッドをコンテナーで使用して、子項目を表示できます。  
   
 <a name="Required_Members_for_IScrollItemProvider"></a>   
 ## <a name="required-members-for-iscrollitemprovider"></a>IScrollItemProvider の必須メンバー  

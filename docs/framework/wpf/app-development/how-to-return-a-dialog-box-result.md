@@ -8,11 +8,11 @@ helpviewer_keywords:
 - dialog boxes [WPF], returning results
 ms.assetid: 4c5cf286-746b-4052-934d-d80cbf8acba3
 ms.openlocfilehash: b574a5bbc08d947371837116915c2fc8c13ec81d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357769"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006709"
 ---
 # <a name="how-to-return-a-dialog-box-result"></a>方法: ダイアログ ボックスの結果を返す
 この例は、呼び出すことによって開かれたウィンドウのダイアログの結果を取得する方法を示します<xref:System.Windows.Window.ShowDialog%2A>します。  

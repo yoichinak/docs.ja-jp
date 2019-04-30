@@ -7,11 +7,11 @@ helpviewer_keywords:
 - menu items [Windows Forms], hiding
 ms.assetid: 8f1b057e-3d8a-4f11-88df-935f7b29a836
 ms.openlocfilehash: 31c597a0e2cbf41484f19c8d4179823e9fb929ba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317676"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941207"
 ---
 # <a name="how-to-hide-toolstripmenuitems-using-the-designer"></a>方法: デザイナーを使用して ToolStripMenuItems を非表示にする
 メニュー項目を非表示には、アプリケーションのユーザー インターフェイス (UI) を制御し、ユーザーのコマンドを制限する方法です。 多くの場合、すべてのメニュー項目が利用できない場合は、メニュー全体を非表示にするされます。 これは、ユーザーの混乱を表示します。 さらに、非表示だけでは、ユーザーはショートカット キーを使用してメニュー コマンドへのアクセスを非表示にして、メニューまたはメニュー項目を無効にする可能性があります。 メニュー項目を無効にする方法の詳細については、次を参照してください。[方法。デザイナーを使用して ToolStripMenuItems を無効にする](how-to-disable-toolstripmenuitems-using-the-designer.md)します。  

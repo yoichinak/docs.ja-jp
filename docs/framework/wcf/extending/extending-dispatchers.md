@@ -5,11 +5,11 @@ helpviewer_keywords:
 - dispatcher extensions [WCF]
 ms.assetid: d0ad15ac-fa12-4f27-80e8-7ac2271e5985
 ms.openlocfilehash: ac20e24eb9148ed9d403b7a9c2c260009f39d492
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335031"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967623"
 ---
 # <a name="extending-dispatchers"></a>ディスパッチャーの拡張
 ディスパッチャーには、基になるチャネルから受信メッセージをプルし、そのメッセージをアプリケーション コードでのメソッド呼び出しに変換し、結果を呼び出し元に送信する役割があります。 ディスパッチャーの拡張を使用することで、この処理を変更できます。  メッセージやパラメーターの内容を検査または変更するメッセージ インスペクターまたはパラメーター インスペクターを実装できます。  また、メッセージが操作にルーティングされる方法を変更することも、他の機能を提供することもできます。  
@@ -40,37 +40,37 @@ ms.locfileid: "59335031"
 ## <a name="scenarios"></a>シナリオ  
  ディスパッチャーを拡張する理由としては、次のようなさまざまなものがあります。  
   
--   カスタム メッセージの検証。 特定のスキーマに対してメッセージが有効になるようにすることができます。 これは、メッセージ インターセプター インターフェイスを実装することで対応できます。 例については、次を参照してください。[メッセージ インスペクタ](../../../../docs/framework/wcf/samples/message-inspectors.md)します。  
+- カスタム メッセージの検証。 特定のスキーマに対してメッセージが有効になるようにすることができます。 これは、メッセージ インターセプター インターフェイスを実装することで対応できます。 例については、次を参照してください。[メッセージ インスペクタ](../../../../docs/framework/wcf/samples/message-inspectors.md)します。  
   
--   カスタム メッセージのログ記録。 エンドポイントを通過するアプリケーション メッセージの一部を検査して記録することができます。 これはメッセージ インターセプター インターフェイスで実行可能です。  
+- カスタム メッセージのログ記録。 エンドポイントを通過するアプリケーション メッセージの一部を検査して記録することができます。 これはメッセージ インターセプター インターフェイスで実行可能です。  
   
--   カスタム メッセージの変換。 ランタイムのメッセージに特定の変換を適用できます (バージョン管理の場合など)。 これもまた、メッセージ インターセプター インターフェイスで実行可能です。  
+- カスタム メッセージの変換。 ランタイムのメッセージに特定の変換を適用できます (バージョン管理の場合など)。 これもまた、メッセージ インターセプター インターフェイスで実行可能です。  
   
--   カスタム データ モデル。 ユーザーは、WCF では既定でサポートされていないデータのシリアル化モデルを持つことができます (つまり、 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>、 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>、および未加工メッセージ)。 これは、メッセージ フォーマッタ インターフェイスを実装することで対応できます。 例については、次を参照してください。[操作フォーマッタと操作セレクター](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)します。  
+- カスタム データ モデル。 ユーザーは、WCF では既定でサポートされていないデータのシリアル化モデルを持つことができます (つまり、 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>、 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>、および未加工メッセージ)。 これは、メッセージ フォーマッタ インターフェイスを実装することで対応できます。 例については、次を参照してください。[操作フォーマッタと操作セレクター](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)します。  
   
--   カスタム パラメーターの検証。 XML ではなく、型指定されたパラメーターが有効になるようにすることができます。 これは、パラメーター インスペクター インターフェイスを使用して実行できます。  
+- カスタム パラメーターの検証。 XML ではなく、型指定されたパラメーターが有効になるようにすることができます。 これは、パラメーター インスペクター インターフェイスを使用して実行できます。  
   
--   カスタム操作ディスパッチ。 アクション以外の場所、たとえば、本文要素やカスタム メッセージ プロパティでディスパッチを実装できます。 これは、<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> インターフェイスを使用して実行できます。 例については、次を参照してください。[操作フォーマッタと操作セレクター](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)します。  
+- カスタム操作ディスパッチ。 アクション以外の場所、たとえば、本文要素やカスタム メッセージ プロパティでディスパッチを実装できます。 これは、<xref:System.ServiceModel.Dispatcher.IDispatchOperationSelector> インターフェイスを使用して実行できます。 例については、次を参照してください。[操作フォーマッタと操作セレクター](../../../../docs/framework/wcf/samples/operation-formatter-and-operation-selector.md)します。  
   
--   オブジェクト プール。 呼び出しごとに新しいインスタンスを割り当てるのではなく、インスタンスをプールできます。 これは、インスタンス プロバイダー インターフェイスを使用して実装できます。 例については、次を参照してください。[プーリング](../../../../docs/framework/wcf/samples/pooling.md)します。  
+- オブジェクト プール。 呼び出しごとに新しいインスタンスを割り当てるのではなく、インスタンスをプールできます。 これは、インスタンス プロバイダー インターフェイスを使用して実装できます。 例については、次を参照してください。[プーリング](../../../../docs/framework/wcf/samples/pooling.md)します。  
   
--   インスタンス リース。 インスタンスの有効期間にリース パターンを実装できます。これは、.NET Framework リモートのパターンに似ています。 これは、インスタンス コンテキスト有効期間インターフェイスを使用して実行できます。  
+- インスタンス リース。 インスタンスの有効期間にリース パターンを実装できます。これは、.NET Framework リモートのパターンに似ています。 これは、インスタンス コンテキスト有効期間インターフェイスを使用して実行できます。  
   
--   カスタム エラー処理。 ローカル エラーの処理方法とエラーをクライアントに戻す方法を制御できます。 これは、<xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスを使用して実装できます。  
+- カスタム エラー処理。 ローカル エラーの処理方法とエラーをクライアントに戻す方法を制御できます。 これは、<xref:System.ServiceModel.Dispatcher.IErrorHandler> インターフェイスを使用して実装できます。  
   
--   カスタム承認動作。 コントラクトまたは操作のランタイム要素を拡張し、メッセージに存在するトークンに基づくセキュリティ チェックを追加することによって、カスタムのアクセス制御を実装できます。 これは、メッセージ インターセプター インターフェイスまたはパラメーター インターセプター インターフェイスを使用して実行できます。 例については、次を参照してください。[セキュリティ拡張](../../../../docs/framework/wcf/samples/security-extensibility.md)します。  
+- カスタム承認動作。 コントラクトまたは操作のランタイム要素を拡張し、メッセージに存在するトークンに基づくセキュリティ チェックを追加することによって、カスタムのアクセス制御を実装できます。 これは、メッセージ インターセプター インターフェイスまたはパラメーター インターセプター インターフェイスを使用して実行できます。 例については、次を参照してください。[セキュリティ拡張](../../../../docs/framework/wcf/samples/security-extensibility.md)します。  
   
     > [!CAUTION]
     >  セキュリティ プロパティを変更すると、WCF アプリケーションのセキュリティを侵害する可能性があります、ため、セキュリティ関連の変更を慎重に着手し、展開する前に徹底的にテストすることを強くお勧めします。  
   
--   カスタム WCF ランタイム バリデーター。 WCF アプリケーションに関するエンタープライズ レベルのポリシーを適用するには、サービス、コントラクト、およびバインディングを調査するカスタム バリデーターをインストールすることができます。 (たとえばを参照してください[方法。企業内のエンドポイントをロックダウン](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md))。  
+- カスタム WCF ランタイム バリデーター。 WCF アプリケーションに関するエンタープライズ レベルのポリシーを適用するには、サービス、コントラクト、およびバインディングを調査するカスタム バリデーターをインストールすることができます。 (たとえばを参照してください[方法。企業内のエンドポイントをロックダウン](../../../../docs/framework/wcf/extending/how-to-lock-down-endpoints-in-the-enterprise.md))。  
   
 ### <a name="using-the-dispatchruntime-class"></a>DispatchRuntime クラスの使用  
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime> クラスを使用して、サービスまたは個別のエンドポイントの既定動作を変更するか、またはカスタム変更を実装したオブジェクトを次のサービス プロセス (または双方向クライアントの場合、クライアント プロセス) の一方または両方に挿入します。  
   
--   受信メッセージをオブジェクトに変換し、メソッド呼び出しとしてサービス オブジェクト上でそれらのオブジェクトを解放します。  
+- 受信メッセージをオブジェクトに変換し、メソッド呼び出しとしてサービス オブジェクト上でそれらのオブジェクトを解放します。  
   
--   サービス操作呼び出しに対する応答から受信したオブジェクトを送信メッセージに変換します。  
+- サービス操作呼び出しに対する応答から受信したオブジェクトを送信メッセージに変換します。  
   
  <xref:System.ServiceModel.Dispatcher.DispatchRuntime> を使用すると、メッセージが認識されない場合でも、特定のコントラクト全体のすべてのメッセージについて、特定のチャネルまたはエンドポイント ディスパッチャーを途中受信および拡張できます。 コントラクト内のどの宣言にも一致しないメッセージが到着した場合、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.UnhandledDispatchOperation%2A> プロパティにより返された操作にディスパッチされます。 特定の操作についてすべてのメッセージを途中受信または拡張する方法については、<xref:System.ServiceModel.Dispatcher.DispatchOperation> クラスを参照してください。  
   
@@ -84,17 +84,17 @@ ms.locfileid: "59335031"
   
 4. セキュリティ関連コンポーネントは、次のプロパティを使用できます。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> は、監査イベントが出力される場所を示します。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> は、監査イベントが出力される場所を示します。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> は、サービスが受信メッセージによって提供される資格情報を使用して偽装を試みるかどうかを制御します。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ImpersonateCallerForAllOperations%2A> は、サービスが受信メッセージによって提供される資格情報を使用して偽装を試みるかどうかを制御します。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> は、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> によって指定されたイベント ログに、メッセージ認証成功イベントを出力するかどうかを制御します。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageAuthenticationAuditLevel%2A> は、<xref:System.ServiceModel.Dispatcher.DispatchRuntime.SecurityAuditLogLocation%2A> によって指定されたイベント ログに、メッセージ認証成功イベントを出力するかどうかを制御します。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> は、<xref:System.Threading.Thread.CurrentPrincipal%2A> プロパティの設定方法を制御します。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.PrincipalPermissionMode%2A> は、<xref:System.Threading.Thread.CurrentPrincipal%2A> プロパティの設定方法を制御します。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> は、承認イベントの監査の実行方法を指定します。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.ServiceAuthorizationAuditLevel%2A> は、承認イベントの監査の実行方法を指定します。  
   
-    -   <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> は、ログ記録処理中に発生した致命的でない例外を抑制するかどうかを指定します。  
+    - <xref:System.ServiceModel.Dispatcher.DispatchRuntime.SuppressAuditFailure%2A> は、ログ記録処理中に発生した致命的でない例外を抑制するかどうかを指定します。  
   
  カスタムの拡張オブジェクトは通常、<xref:System.ServiceModel.Dispatcher.DispatchRuntime> プロパティに割り当てるか、サービス動作 (<xref:System.ServiceModel.Description.IServiceBehavior> を実装するオブジェクト)、コントラクト動作 (<xref:System.ServiceModel.Description.IContractBehavior> を実装するオブジェクト)、またはエンドポイント動作 (<xref:System.ServiceModel.Description.IEndpointBehavior> を実装するオブジェクト) によってコレクションに挿入します。 次に、インストール動作オブジェクトを、プログラムで直接、またはカスタムの <xref:System.ServiceModel.Configuration.BehaviorExtensionElement> オブジェクトを実装して適切な動作コレクションに追加し、アプリケーション構成ファイルを使用して動作を挿入できるようにします。  
   
@@ -109,23 +109,23 @@ ms.locfileid: "59335031"
   
  次のプロパティは、操作レベルでランタイム実行を制御します。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A>、および <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> の各プロパティは、操作の値をそれぞれ取得します。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Action%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.ReplyAction%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.FaultContractInfos%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.IsOneWay%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.IsTerminating%2A>、および <xref:System.ServiceModel.Dispatcher.DispatchOperation.Name%2A> の各プロパティは、操作の値をそれぞれ取得します。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> と <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> は、トランザクション動作を指定します。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionAutoComplete%2A> と <xref:System.ServiceModel.Dispatcher.DispatchOperation.TransactionRequired%2A> は、トランザクション動作を指定します。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> プロパティと <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> プロパティは、<xref:System.ServiceModel.InstanceContext> に応じてユーザー定義サービス オブジェクトの有効期間を制御します。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceBeforeCall%2A> プロパティと <xref:System.ServiceModel.Dispatcher.DispatchOperation.ReleaseInstanceAfterCall%2A> プロパティは、<xref:System.ServiceModel.InstanceContext> に応じてユーザー定義サービス オブジェクトの有効期間を制御します。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>、および <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> の各プロパティでは、メッセージからオブジェクトへの変換およびオブジェクトからメッセージへの変換を明示的に制御できます。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.DeserializeRequest%2A>、<xref:System.ServiceModel.Dispatcher.DispatchOperation.SerializeReply%2A>、および <xref:System.ServiceModel.Dispatcher.DispatchOperation.Formatter%2A> の各プロパティでは、メッセージからオブジェクトへの変換およびオブジェクトからメッセージへの変換を明示的に制御できます。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> プロパティは、操作の偽装レベルを指定します。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Impersonation%2A> プロパティは、操作の偽装レベルを指定します。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> プロパティは、操作のカスタム呼び出しコンテキスト拡張を挿入します。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.CallContextInitializers%2A> プロパティは、操作のカスタム呼び出しコンテキスト拡張を挿入します。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> プロパティは、パラメーター オブジェクトが破棄されるタイミングを制御します。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.AutoDisposeParameters%2A> プロパティは、パラメーター オブジェクトが破棄されるタイミングを制御します。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> プロパティは、カスタムの呼び出しオブジェクトを挿入します。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.Invoker%2A> プロパティは、カスタムの呼び出しオブジェクトを挿入します。  
   
--   <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> プロパティでは、パラメーターと戻り値の検査または変更に使用できるカスタム パラメーター インスペクターを挿入できます。  
+- <xref:System.ServiceModel.Dispatcher.DispatchOperation.ParameterInspectors%2A> プロパティでは、パラメーターと戻り値の検査または変更に使用できるカスタム パラメーター インスペクターを挿入できます。  
   
 ## <a name="see-also"></a>関連項目
 

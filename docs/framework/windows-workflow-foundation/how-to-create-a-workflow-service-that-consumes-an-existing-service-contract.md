@@ -3,11 +3,11 @@ title: '方法: 既存のサービス コントラクトを使用するワーク
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
 ms.openlocfilehash: c2ca9c349718c3939d74d052ff0ed448879cd045
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344716"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945575"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>方法: 既存のサービス コントラクトを使用するワークフロー サービスを作成する
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、コントラクト優先ワークフローの開発という形で、Web サービスとワークフローの統合が向上しています。 コントラクト優先ワークフローの開発ツールでは、コードのコントラクトを先に設計できます。 その後、ツールボックス内に、コントラクト内の操作用のアクティビティ テンプレートが自動的に生成されます。  

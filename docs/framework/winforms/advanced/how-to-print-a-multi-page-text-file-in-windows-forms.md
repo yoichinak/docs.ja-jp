@@ -11,11 +11,11 @@ helpviewer_keywords:
 - printing [Windows Forms], text
 ms.assetid: 362427f8-03d4-4826-b49f-60ab066ad322
 ms.openlocfilehash: b17ddcb22f3e1b7dc181e977a0227db5490b66fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330208"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003913"
 ---
 # <a name="how-to-print-a-multi-page-text-file-in-windows-forms"></a>方法: Windows フォームで複数ページのテキスト ファイルを印刷する
 Windows ベースのアプリケーションでは、テキストを印刷することは非常に一般的です。 <xref:System.Drawing.Graphics> クラスは、画面やプリンターなどのデバイスにオブジェクト (グラフィックスやテキスト) を描画するためのメソッドを提供します。  
@@ -54,11 +54,11 @@ Windows ベースのアプリケーションでは、テキストを印刷する
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   C:\\ ドライブのルートにある、印刷するテキストを含む testPage.txt という名前のテキスト ファイル。 別のファイルを印刷するようコードを編集します。  
+- C:\\ ドライブのルートにある、印刷するテキストを含む testPage.txt という名前のテキスト ファイル。 別のファイルを印刷するようコードを編集します。  
   
--   System、System.Windows.Forms、System.Drawing の各アセンブリへの参照。  
+- System、System.Windows.Forms、System.Drawing の各アセンブリへの参照。  
   
--   Visual Basic または Visual C# のコマンドラインからこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+- Visual Basic または Visual C# のコマンドラインからこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 

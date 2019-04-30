@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Group By clause [Visual Basic]
 ms.assetid: b1b5dcea-6654-473b-a2db-01f7e4c265d7
 ms.openlocfilehash: 71e0ffc7f03a27a878aeb48eda9fbc58e5faae82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945328"
 ---
 # <a name="group-by-clause-visual-basic"></a>Group By 句 (Visual Basic)
 クエリ結果の要素をグループ化します。 これを使用して、グループごとに集計関数を適用することもできます。 グループ化操作は、1 つ以上のキーに基づきます。  
@@ -31,19 +31,19 @@ Group [ listField1 [, listField2 [...] ] By keyExp1 [, keyExp2 [...] ]
   
 ## <a name="parts"></a>指定項目  
   
--   `listField1`, `listField2`  
+- `listField1`, `listField2`  
   
-     任意。 グループ化された結果に含めるフィールドを明示的に示す、クエリ変数の 1 つ以上のフィールドです。 フィールドを指定しない場合、グループ化された結果にはクエリ変数のすべてのフィールドが含まれます。  
+     省略可能です。 グループ化された結果に含めるフィールドを明示的に示す、クエリ変数の 1 つ以上のフィールドです。 フィールドを指定しない場合、グループ化された結果にはクエリ変数のすべてのフィールドが含まれます。  
   
--   `keyExp1`  
+- `keyExp1`  
   
      必須。 要素のグループを決定するために使用するキーを識別する式です。 複数のキーを指定して、複合キーを指定できます。  
   
--   `keyExp2`  
+- `keyExp2`  
   
      任意。 `keyExp1` と結合して複合キーを作成する 1 つ以上の追加キーです。  
   
--   `aggregateList`  
+- `aggregateList`  
   
      必須。 グループの集計方法を示す 1 つ以上の式です。 グループ化された結果のメンバー名を示すには、次のいずれかの形式で、 `Group` キーワードを使用します。  
   

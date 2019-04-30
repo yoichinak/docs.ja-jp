@@ -3,11 +3,11 @@ title: キャストと変換
 description: について説明しますが、どのようにF#さまざまなプリミティブ型間の算術変換の変換演算子を提供するプログラミング言語。
 ms.date: 05/16/2016
 ms.openlocfilehash: 2a12d48106a267edfc67c9e7b3d3a7bd41d8261c
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53655986"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966617"
 ---
 # <a name="casting-and-conversions-f"></a>キャストと変換 (F#)
 
@@ -62,7 +62,7 @@ let col3 = enum<Color> 3
 let col4 : Color = enum 2u
 ```
 
-詳細については、[列挙](enumerations.md)を参照してください。
+詳細については、次を参照してください。[列挙](enumerations.md)します。
 
 ## <a name="casting-object-types"></a>オブジェクト型のキャスト
 
@@ -72,7 +72,7 @@ F#これらの種類の変換の演算子を提供します。 `:>`演算子は�
 
 ### <a name="upcasting"></a>キャスト
 
-多くのオブジェクト指向言語でキャストは暗黙の型です。F# では、規則が若干異なります。 オブジェクトの種類のメソッドに引数を渡すときに、キャストが自動的に適用されます。 ただし、モジュール内の let バインドされた関数、キャスト自動ではありません、パラメーターの型は柔軟な型として宣言されていない場合。 詳細については、[フレキシブル型](flexible-Types.md)を参照してください。
+多くのオブジェクト指向言語でキャストは暗黙の型です。F# では、規則が若干異なります。 オブジェクトの種類のメソッドに引数を渡すときに、キャストが自動的に適用されます。 ただし、モジュール内の let バインドされた関数、キャスト自動ではありません、パラメーターの型は柔軟な型として宣言されていない場合。 詳細については、次を参照してください。[フレキシブル型](flexible-Types.md)します。
 
 `:>`演算子はキャスト、つまり、コンパイル時のキャストの成功が決定される静的なを実行します。 キャストを使用する場合、 `:>` 、正常にコンパイルし、有効なキャストは、実行時にエラーが発生する可能性がないです。
 
@@ -114,7 +114,7 @@ let base1 = upcast d1
 
 引数の型と戻り値の型が、上記のコードで`Derived1`と`Base1`、それぞれします。
 
-型のテストの詳細については、[一致式](match-Expressions.md)を参照してください。
+型のテストの詳細については、次を参照してください。[一致式](match-Expressions.md)します。
 
 ## <a name="see-also"></a>関連項目
 

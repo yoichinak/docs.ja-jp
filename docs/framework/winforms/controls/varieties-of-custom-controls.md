@@ -12,11 +12,11 @@ helpviewer_keywords:
 - controls [Windows Forms], composite
 ms.assetid: 3cea09e5-4344-4ccb-9858-b66ccac210ff
 ms.openlocfilehash: 765befcf88247e4b2101b13c4937352ba4b070fa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170706"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009150"
 ---
 # <a name="varieties-of-custom-controls"></a>さまざまなカスタム コントロール
 .NET Framework を使用して、新しいコントロールを開発し、実装できます。 継承によって、使い慣れたユーザー コントロールや既存のコントロールの機能を拡張できます。 また、独自の描画を実行するカスタム コントロールを作成することもできます。  
@@ -31,17 +31,17 @@ ms.locfileid: "59170706"
   
  <xref:System.Windows.Forms.Control>クラスは、Windows フォーム アプリケーションでのビジュアル表示を提供する、次のタスクを実行します。  
   
--   ウィンドウ ハンドルを公開する。  
+- ウィンドウ ハンドルを公開する。  
   
--   メッセージ ルーティングを管理する。  
+- メッセージ ルーティングを管理する。  
   
--   マウス イベントとキーボード イベント、および他のさまざまなユーザー インターフェイス イベントを提供する。  
+- マウス イベントとキーボード イベント、および他のさまざまなユーザー インターフェイス イベントを提供する。  
   
--   高度なレイアウト機能を提供する。  
+- 高度なレイアウト機能を提供する。  
   
--   ビジュアルの表示に固有の多くのプロパティを含む<xref:System.Windows.Forms.Control.ForeColor%2A>、 <xref:System.Windows.Forms.Control.BackColor%2A>、 <xref:System.Windows.Forms.Control.Height%2A>、および<xref:System.Windows.Forms.Control.Width%2A>します。  
+- ビジュアルの表示に固有の多くのプロパティを含む<xref:System.Windows.Forms.Control.ForeColor%2A>、 <xref:System.Windows.Forms.Control.BackColor%2A>、 <xref:System.Windows.Forms.Control.Height%2A>、および<xref:System.Windows.Forms.Control.Width%2A>します。  
   
--   Windows フォーム コントロールが Microsoft® ActiveX® コントロールとして機能するために必要なセキュリティとスレッドのサポートを提供する。  
+- Windows フォーム コントロールが Microsoft® ActiveX® コントロールとして機能するために必要なセキュリティとスレッドのサポートを提供する。  
   
  インフラストラクチャの大部分は基本クラスによって提供されるため、独自の Windows フォーム コントロールを比較的簡単に開発できます。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59170706"
   
  次の場合に、<xref:System.Windows.Forms.UserControl> クラスから継承します。  
   
--   いくつかの Windows フォーム コントロールの機能を再利用可能な 1 つの単位に結合します。  
+- いくつかの Windows フォーム コントロールの機能を再利用可能な 1 つの単位に結合します。  
   
 ### <a name="extended-controls"></a>拡張コントロール  
  既存の Windows フォーム コントロールから継承されたコントロールを派生できます。 この方法では、Windows フォーム コントロールの固有の機能をすべて保持し、カスタム プロパティやカスタム メソッドなどの機能を追加してその機能を拡張できます。 この方法を使用して、基本コントロールの描画ロジックをオーバーライドし、そのユーザー インターフェイスの外観を変更して拡張できます。  
@@ -74,9 +74,9 @@ ms.locfileid: "59170706"
   
  次の場合に、Windows フォーム コントロールから継承します。  
   
--   必要とする機能のほとんどが、既存の Windows フォーム コントロールと同じです。  
+- 必要とする機能のほとんどが、既存の Windows フォーム コントロールと同じです。  
   
--   カスタムのグラフィカル ユーザー インターフェイスが不要な場合、または既存のコントロールの新しいグラフィカル ユーザー インターフェイスをデザインする場合。  
+- カスタムのグラフィカル ユーザー インターフェイスが不要な場合、または既存のコントロールの新しいグラフィカル ユーザー インターフェイスをデザインする場合。  
   
 ### <a name="custom-controls"></a>カスタム コントロール  
  継承することによって実質的に最初から作成するコントロールを作成する別の方法は、<xref:System.Windows.Forms.Control>します。 <xref:System.Windows.Forms.Control>クラスはすべてのマウスやキーボード イベントを処理などのコントロールに必要な基本的な機能がないコントロール固有の機能やグラフィカル インターフェイスを提供します。  
@@ -91,9 +91,9 @@ ms.locfileid: "59170706"
   
  次の場合に、<xref:System.Windows.Forms.Control> クラスから継承します。  
   
--   コントロールのカスタムのグラフィカル表現を提供します。  
+- コントロールのカスタムのグラフィカル表現を提供します。  
   
--   標準コントロールでは使用できないカスタムの機能を実装する必要があります。  
+- 標準コントロールでは使用できないカスタムの機能を実装する必要があります。  
   
 ### <a name="activex-controls"></a>ActiveX コントロール  
  Windows フォーム インストラクチャは、Windows フォーム コントロールをホストするために最適化されていますが、ActiveX コントロールを使用することもできます。 Visual Studio では、このタスクに対するサポートが用意されています。 詳細については、「[方法 :Windows フォームに ActiveX コントロールを追加](how-to-add-activex-controls-to-windows-forms.md)します。  

@@ -5,11 +5,11 @@ ms.assetid: 89e41a81-0f41-45ad-8f20-a120e4ff24fb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3d82ed3299f967457fe967d096a238da6143751a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59219162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948922"
 ---
 # <a name="axlauthenticodetimestamperinfo-structure"></a>AXL_AUTHENTICODE_TIMESTAMPER_INFO 構造体
 Authenticode のタイム スタンパー情報を定義します。  

@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d6a43a264fcaa94ce4e629d8db504e9d416f6b89
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994735"
 ---
 # <a name="icordebugmodulebreakpoint-interface"></a>ICorDebugModuleBreakpoint インターフェイス
 

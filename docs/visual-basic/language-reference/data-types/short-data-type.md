@@ -17,11 +17,11 @@ helpviewer_keywords:
 - literal type characters [Visual Basic], S
 ms.assetid: 65fcbcf3-a841-400e-885e-301497729a8b
 ms.openlocfilehash: d4dab1a72d1e240bc428b2c6b83a722584e35ecc
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54587662"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971796"
 ---
 # <a name="short-data-type-visual-basic"></a>Short データ型 (Visual Basic)
 符号付き 16 ビット (2 バイト) 整数-32,768 32,767 の範囲です。  
@@ -62,11 +62,11 @@ Dim number = &H_3264S
 
 ## <a name="programming-tips"></a>プログラミングのヒント
 
--   **拡大します。** `Short`拡大変換後のデータ型`Integer`、 `Long`、 `Decimal`、 `Single`、または`Double`します。 これは、`Short` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。  
+- **拡大します。** `Short`拡大変換後のデータ型`Integer`、 `Long`、 `Decimal`、 `Single`、または`Double`します。 これは、`Short` エラーを発生させることなく、これらの型のいずれかに <xref:System.OverflowException?displayProperty=nameWithType> を変換できることを意味します。  
   
--   **型宣言文字。** あるリテラルにリテラルの型文字 `S` を付けると、そのリテラルは `Short` に変換されます。 `Short` 識別子の型文字がありません。  
+- **型宣言文字。** あるリテラルにリテラルの型文字 `S` を付けると、そのリテラルは `Short` に変換されます。 `Short` 識別子の型文字がありません。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Int16?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Int16?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="see-also"></a>関連項目
 

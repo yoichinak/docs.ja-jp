@@ -3,11 +3,11 @@ title: MessageEncodingBindingElement
 ms.date: 03/30/2017
 ms.assetid: 7f750742-b96b-498f-bf5e-05933a1a5961
 ms.openlocfilehash: f7af547148acacfb83d4e41aa1a085e3eabaafdc
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963476"
 ---
 # <a name="messageencodingbindingelement"></a>MessageEncodingBindingElement
 
