@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], modifying
 ms.assetid: 4e864522-a37a-43a2-8236-af80277c5482
 ms.openlocfilehash: 003715b04f3a5c0fb41e846beb189f117378ea58
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053029"
 ---
 # <a name="how-to-modify-xml-literals-visual-basic"></a>方法: XML リテラル (Visual Basic) の変更します。
 
@@ -110,7 +110,7 @@ Visual Basic では、XML リテラルを変更する便利な手段を提供し
     </Catalog>
     ```
 
-    XML 属性軸プロパティの詳細については、[XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)を参照してください。
+    XML 属性軸プロパティの詳細については、次を参照してください。 [XML 属性軸プロパティ](../../../../visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md)します。
 
 ### <a name="to-add-an-element-to-an-xml-literal"></a>XML リテラルに要素を追加するには
 

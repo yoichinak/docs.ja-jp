@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], configuring service settings
 ms.assetid: f42a55a8-3af8-4394-9fdd-bf12a93780eb
 ms.openlocfilehash: dd5625fd3f2c0cc2e1e2a261b091a029cd4226ed
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039417"
 ---
 # <a name="how-to-configure-com-service-settings"></a>方法: COM+ サービス設定を構成する
 COM+ サービス構成ツールを使用してアプリケーション インターフェイスを追加または削除すると、アプリケーション構成ファイル内の Web サービス構成が更新されます。 COM + ホスト モードで、Application.config ファイルはアプリケーションのルート ディレクトリに配置 (アプリケーション %PROGRAMFILES%\ComPlus\\{appid} は既定値)。 いずれの Web ホスト モードでも、Web.config ファイルは指定した vroot ディレクトリに配置されます。  

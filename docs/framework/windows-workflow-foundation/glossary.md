@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WF [WF], glossary
 ms.assetid: ab682b2f-3779-45ca-b831-b7c03d7dbb3a
 ms.openlocfilehash: 61d9acab1161302937e240eb8ebb506ca9f1585c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482848"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945627"
 ---
 # <a name="windows-workflow-foundation-glossary-for-net-framework-45"></a>.NET Framework 4.5 の Windows Workflow Foundation 用語集
 
@@ -18,9 +18,9 @@ Windows Workflow Foundation のドキュメントで使用される用語につ�
 
 ## <a name="terms"></a>用語
 
-|用語|定義|
+|項目|定義|
 |----------|----------------|
-|アクティビティ|Windows Workflow Foundation のプログラム動作の単位です。 それぞれのアクティビティをまとめて、より複雑なアクティビティを構成できます。|
+|活動|Windows Workflow Foundation のプログラム動作の単位です。 それぞれのアクティビティをまとめて、より複雑なアクティビティを構成できます。|
 |アクティビティ操作|ワークフローおよびアクティビティの実行のコールバックを公開するために使用されるデータ構造です。|
 |引数|アクティビティに出入りするデータ フローを定義します。 各引数には in、out、または in/out などの方向が指定されます。これらの値は、アクティビティの入力パラメーター、出力パラメーター、および入力/出力パラメーターを表します。|
 |ブックマーク|アクティビティの一時停止と再開まで待機することを可能にするポイントです。|

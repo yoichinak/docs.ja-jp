@@ -3,11 +3,11 @@ title: LINQ to XML およびDOM (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 18c36130-d598-40b7-9007-828232252978
 ms.openlocfilehash: 282df577808342a52a70f419b2a7559752103a0f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051495"
 ---
 # <a name="linq-to-xml-vs-dom-visual-basic"></a>LINQ to XML およびDOM (Visual Basic)
 このセクションでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] と、現在主流の XML プログラミング API である W3C ドキュメント オブジェクト モデル (DOM) との主な違いについて説明します。  
@@ -79,11 +79,11 @@ Dim contacts = _
 ## <a name="working-directly-with-xml-elements"></a>XML 要素の直接操作  
  一般に、XML によるプログラミングで重視されるのは XML 要素であり、その属性が重要となる場合が多くあります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では、XML 要素と XML 属性を直接操作できます。 たとえば、次のようなことが可能です。  
   
--   ドキュメント オブジェクトを一切使用せずに XML 要素を作成する。 これにより、XML ツリーのフラグメントを操作する際のプログラミングが単純化されます。  
+- ドキュメント オブジェクトを一切使用せずに XML 要素を作成する。 これにより、XML ツリーのフラグメントを操作する際のプログラミングが単純化されます。  
   
--   `T:System.Xml.Linq.XElement` オブジェクトを直接 XML ファイルから読み込む。  
+- `T:System.Xml.Linq.XElement` オブジェクトを直接 XML ファイルから読み込む。  
   
--   `T:System.Xml.Linq.XElement` オブジェクトをファイルやストリームにシリアル化する。  
+- `T:System.Xml.Linq.XElement` オブジェクトをファイルやストリームにシリアル化する。  
   
  これに対して、XML ドキュメントが XML ツリーの論理的コンテナーとして使用される W3C DOM では、 XML ノード (要素や属性を含む) は XML ドキュメントのコンテキストで作成する必要があります。 DOM で name 要素を作成するコード フラグメントを以下に示します。  
   

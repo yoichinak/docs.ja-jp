@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XML [Visual Basic], accessing
 ms.assetid: 7a4777e1-0618-4de9-9510-fb9ace2bf4db
 ms.openlocfilehash: a7a93608d14bcbec316228b59467b23e9247e043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828808"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025224"
 ---
 # <a name="xml-attribute-axis-property-visual-basic"></a>XML 属性軸プロパティ (Visual Basic)
 属性の値にアクセスできるように、<xref:System.Xml.Linq.XElement>オブジェクトまたは最初の要素のコレクションを<xref:System.Xml.Linq.XElement>オブジェクト。  

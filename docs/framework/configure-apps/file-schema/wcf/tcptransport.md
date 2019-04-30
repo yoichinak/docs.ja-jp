@@ -3,11 +3,11 @@ title: <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 8fcd18c1-9958-42e7-b442-7903f7bdb563
 ms.openlocfilehash: 6c5bb61f234c8d5b8ffc5e16195a2cb50022d142
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034620"
 ---
 # <a name="tcptransport"></a>\<tcpTransport>
 カスタム バインドのメッセージを転送するためにチャネルで使用できる TCP トランスポートを定義します。  

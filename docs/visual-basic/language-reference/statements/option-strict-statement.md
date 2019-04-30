@@ -12,11 +12,11 @@ helpviewer_keywords:
 - implicit conversions [Visual Basic]
 ms.assetid: 5883e0c1-a920-4274-8e46-b0ff047eaee5
 ms.openlocfilehash: 8547e8e1eaf73b266d737e33acd79dd4ec539c6f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051170"
 ---
 # <a name="option-strict-statement"></a>Option Strict Statement
 暗黙的なデータ型変換を拡大変換のみに制限、遅延バインディングが禁止および禁止になる暗黙的な型指定、`Object`型。  
@@ -37,11 +37,11 @@ Option Strict { On | Off }
 ## <a name="remarks"></a>Remarks  
  ときに`Option Strict On`または`Option Strict`ファイルでは、コンパイル時エラーが発生する、次の条件が表示されます。  
   
--   暗黙的な縮小変換  
+- 暗黙的な縮小変換  
   
--   遅延バインディング  
+- 遅延バインディング  
   
--   結果が `Object` 型となる暗黙の型指定  
+- 結果が `Object` 型となる暗黙の型指定  
   
 > [!NOTE]
 >  設定できる警告の構成で、 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)コンパイル時エラーが発生する 3 つの条件に対応する 3 つの設定があります。 これらの設定を使用する方法については、次を参照してください。 [IDE で警告の構成を設定する](../../../visual-basic/language-reference/statements/option-strict-statement.md#conditions)このトピックで後述します。  
@@ -52,11 +52,11 @@ Option Strict { On | Off }
   
  設定すると`Option Strict`に`On`、Visual Basic プログラミングのすべての要素のデータ型を指定することを確認します。 データ型を明示的に指定またはローカル型推論を使用して指定できます。 すべてのプログラミング要素のデータ型を指定することはお勧めしますが、次の理由。  
   
--   変数とパラメーターの IntelliSense のサポートが有効にするとします。 これにより、コードを入力すると、プロパティやその他のメンバーを参照してください。  
+- 変数とパラメーターの IntelliSense のサポートが有効にするとします。 これにより、コードを入力すると、プロパティやその他のメンバーを参照してください。  
   
--   これにより、コンパイラが型チェックを実行できます。 型チェックでは、型変換エラーのため実行時に失敗するステートメントを検索できます。 また、これらのメソッドをサポートしていないオブジェクトに対するメソッドの呼び出しを識別します。  
+- これにより、コンパイラが型チェックを実行できます。 型チェックでは、型変換エラーのため実行時に失敗するステートメントを検索できます。 また、これらのメソッドをサポートしていないオブジェクトに対するメソッドの呼び出しを識別します。  
   
--   これは、コードの実行が速くなります。 この理由の 1 つは、プログラミング要素のデータ型を指定しない場合、Visual Basic コンパイラが割り当てる、`Object`型。 コンパイル済みのコードは、間を気軽に変換する必要があります`Object`とその他のデータ型は、パフォーマンスが低下します。  
+- これは、コードの実行が速くなります。 この理由の 1 つは、プログラミング要素のデータ型を指定しない場合、Visual Basic コンパイラが割り当てる、`Object`型。 コンパイル済みのコードは、間を気軽に変換する必要があります`Object`とその他のデータ型は、パフォーマンスが低下します。  
   
 ## <a name="implicit-narrowing-conversion-errors"></a>暗黙的な縮小変換エラー  
  縮小変換する暗黙的なデータ型変換がある場合は、暗黙的な縮小変換エラーが発生します。  
@@ -65,15 +65,15 @@ Option Strict { On | Off }
   
  エラーが発生する変換には、式で発生する暗黙的な変換が含まれます。 詳細については、次のトピックを参照してください。  
   
--   [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)  
+- [+ 演算子](../../../visual-basic/language-reference/operators/addition-operator.md)  
   
--   [+= 演算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
+- [+= 演算子](../../../visual-basic/language-reference/operators/addition-assignment-operator.md)  
   
--   [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
+- [\ 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/integer-division-operator.md)  
   
--   [/= 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
+- [/= 演算子 (Visual Basic)](../../../visual-basic/language-reference/operators/floating-point-division-assignment-operator.md)  
   
--   [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
+- [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
  使用して文字列を連結するときに、 [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)、すべての文字列への変換は拡大変換と見なされます。 場合でも、暗黙的な縮小変換エラーは、これらの変換が生成されないように`Option Strict`にします。  
   
@@ -116,11 +116,11 @@ Option Strict { On | Off }
 ### <a name="conditions"></a> IDE で警告の構成を設定するには  
  使用すると、 [[コンパイル] ページ、プロジェクト デザイナー (Visual Basic)](/visualstudio/ide/reference/compile-page-project-designer-visual-basic)の代わりに、`Option Strict`ステートメントでは、エラーを生成する条件をさらに制御があります。 **警告の構成**のセクション、**コンパイル ページ**がコンパイル時エラーが発生する 3 つの条件に対応する設定と`Option Strict`にします。 これらの設定を次に示します。  
   
--   **暗黙的な変換**  
+- **暗黙的な変換**  
   
--   **遅延バインディング、呼び出しが実行時に失敗する可能性があります**  
+- **遅延バインディング、呼び出しが実行時に失敗する可能性があります**  
   
--   **暗黙的な型、オブジェクトと見なされます**  
+- **暗黙的な型、オブジェクトと見なされます**  
   
  **[Option Strict]** を **[オン]** に設定すると、これら 3 つの警告の構成設定のすべてが **[エラー]** に設定されます。 **[Option Strict]** を **[オフ]** に設定すると、3 つの設定すべてが **[なし]** に設定されます。  
   

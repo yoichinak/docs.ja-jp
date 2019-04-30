@@ -7,11 +7,11 @@ helpviewer_keywords:
 - styles [WPF], focus visual style
 ms.assetid: 786ac576-011b-4d72-913b-558deccb9b35
 ms.openlocfilehash: 745c2174c54ed072f91a6d5eb3b43d5385e96b90
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59172056"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053375"
 ---
 # <a name="styling-for-focus-in-controls-and-focusvisualstyle"></a>コントロールのフォーカスのスタイルと FocusVisualStyle
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] キーボード フォーカスを受け取るときに、コントロールの外観を変更するための 2 つの並列メカニズムを提供します。 最初のメカニズムは、プロパティなどのプロパティ set アクセス操作子を使用する<xref:System.Windows.UIElement.IsKeyboardFocused%2A>スタイルまたはコントロールに適用されているテンプレート内で。 2 つ目のメカニズムの値として別のスタイルを提供する、<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>プロパティまたはその他の UI コントロールのビジュアル ツリーを変更するのではなく、コントロールの上に描画される装飾の個別のビジュアル ツリーを作成する「フォーカスのビジュアル スタイル」置換することで要素。 このトピックでは、これらのメカニズムが適切なシナリオについて説明します。  

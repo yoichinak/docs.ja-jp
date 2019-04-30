@@ -3,11 +3,11 @@ title: フェデレーション サンプル
 ms.date: 03/30/2017
 ms.assetid: 7e9da0ca-e925-4644-aa96-8bfaf649d4bb
 ms.openlocfilehash: bc2c28300d9bfc3c30388f8d13e05a23a9f37287
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051911"
 ---
 # <a name="federation-sample"></a>フェデレーション サンプル
 このサンプルではフェデレーション セキュリティを示します。  
@@ -17,13 +17,13 @@ ms.locfileid: "59769919"
   
  シナリオは、次の 4 つの部分から構成されます。  
   
--   BookStore サービス  
+- BookStore サービス  
   
--   BookStore STS  
+- BookStore STS  
   
--   HomeRealm STS  
+- HomeRealm STS  
   
--   BookStore クライアント  
+- BookStore クライアント  
   
  BookStore サービスは、`BrowseBooks` と `BuyBook` の 2 つの操作をサポートします。 サービスでは、`BrowseBooks` 操作には匿名アクセスできますが、`BuyBooks` 操作にアクセスするには認証済みのアクセス権限が必要です。 認証は、BookStore STS によって発行されたトークンの形式を取ります。 BookStore サービス用の構成ファイルは、次のように `wsFederationHttpBinding` を使用して、クライアントを BookStore STS にポイントします。  
   

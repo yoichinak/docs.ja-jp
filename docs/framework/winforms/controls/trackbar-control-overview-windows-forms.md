@@ -9,11 +9,11 @@ helpviewer_keywords:
 - slider controls [Windows Forms], about slider controls
 ms.assetid: 95910ecb-8a4c-4776-89fa-206c89ed6973
 ms.openlocfilehash: 1606db73485944f3dfa8b9c084bffda817520c7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009267"
 ---
 # <a name="trackbar-control-overview-windows-forms"></a>TrackBar コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.TrackBar>コントロール ("slider"コントロールと呼ばれることもあります) が大量の情報をナビゲートするのか、数値の設定を視覚的に調整するために使用されます。 <xref:System.Windows.Forms.TrackBar>コントロールに 2 つの部分がある: 一般的に、スライダーとティックとも呼ばれます。 Thumb は、調整可能な部分です。 その位置に対応して、<xref:System.Windows.Forms.TrackBar.Value%2A>プロパティ。 目盛りは、一定の間隔で間隔が視覚インジケーターです。 単位を指定し、水平方向または垂直方向に配置することができますが、トラック バーが移動します。 たとえば、トラック バーを使用して、システムのカーソルの点滅速度やマウス速度を制御する可能性があります。  

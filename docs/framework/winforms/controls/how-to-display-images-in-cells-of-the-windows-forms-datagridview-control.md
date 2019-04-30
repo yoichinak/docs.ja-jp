@@ -11,11 +11,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], displaying images in cells
 ms.assetid: 53b13d31-1b56-476d-9ab4-18bfac138a22
 ms.openlocfilehash: 90aaff419ecc2c890a8b3802f3aaf12092febb73
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013401"
 ---
 # <a name="how-to-display-images-in-cells-of-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールのセルにイメージを表示する
 画像またはグラフィックは、データの行で表示できる値のいずれか。 多くの場合、これらのグラフィックな従業員の写真や会社のロゴの形式になります。  
@@ -33,11 +33,11 @@ ms.locfileid: "59082998"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   
--   という名前の埋め込まれたアイコン リソース`tree.ico`します。  
+- という名前の埋め込まれたアイコン リソース`tree.ico`します。  
   
--   <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、および <xref:System.Drawing?displayProperty=nameWithType> の各アセンブリへの参照。  
+- <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、および <xref:System.Drawing?displayProperty=nameWithType> の各アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Public access modifier
 ms.assetid: 284c9e1b-ed23-499b-9bc9-ad87c11485a5
 ms.openlocfilehash: 0c85564503f3c83e436044cd92ee3014945f1ef3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051872"
 ---
 # <a name="public-visual-basic"></a>Public (Visual Basic)
 1 つまたは複数の宣言されたプログラミング要素にアクセス制限があるないことを指定します。  
@@ -25,15 +25,15 @@ ms.locfileid: "58818385"
   
 ## <a name="rules"></a>ルール  
   
--   **宣言コンテキスト。** 使用することができます`Public`モジュール、インターフェイス、または名前空間レベルでのみです。 これは、意味の宣言のコンテキストを`Public`要素は、ソース ファイル、名前空間、インターフェイス、モジュール、クラスまたは構造体にある必要があるあり、プロシージャにすることはできません。  
+- **宣言コンテキスト。** 使用することができます`Public`モジュール、インターフェイス、または名前空間レベルでのみです。 これは、意味の宣言のコンテキストを`Public`要素は、ソース ファイル、名前空間、インターフェイス、モジュール、クラスまたは構造体にある必要があるあり、プロシージャにすることはできません。  
   
 ## <a name="behavior"></a>動作  
   
--   **アクセス レベルです。** モジュール、クラスまたは構造体にアクセスできるすべてのコードがアクセスできるその`Public`要素。  
+- **アクセス レベルです。** モジュール、クラスまたは構造体にアクセスできるすべてのコードがアクセスできるその`Public`要素。  
   
--   **既定のアクセス。** パブリック アクセスに既定のプロシージャ内のローカル変数は、それらでアクセス修飾子を使用できません。  
+- **既定のアクセス。** パブリック アクセスに既定のプロシージャ内のローカル変数は、それらでアクセス修飾子を使用できません。  
   
--   **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
+- **アクセス修飾子。** アクセス レベルを指定するキーワードが呼び出される*アクセス修飾子*します。 アクセス修飾子の比較は、次を参照してください。[アクセス レベルを Visual Basic で](../../../visual-basic/programming-guide/language-features/declared-elements/access-levels.md)します。  
   
  `Public` 修飾子は、次のコンテキストで使用できます。  
   

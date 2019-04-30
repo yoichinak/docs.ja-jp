@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Ports object
 ms.assetid: 244ede4e-25b7-445b-9fd6-163550cce193
 ms.openlocfilehash: 6639499291f203f355ec6e7f9c70e19c7555cd9a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832451"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054862"
 ---
 # <a name="mycomputerports-object"></a>My.Computer.Ports オブジェクト
 コンピューターのシリアル ポートにアクセスするためのプロパティとメソッドを提供します。  

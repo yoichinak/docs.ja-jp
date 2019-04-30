@@ -3,11 +3,11 @@ title: '方法: エンティティをシリアル化可能にする'
 ms.date: 03/30/2017
 ms.assetid: a6c5bf6e-064a-4f77-b74c-76b3a5dec309
 ms.openlocfilehash: bbe40ec448bef5f62d4182d96f82c6308639e27f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033801"
 ---
 # <a name="how-to-make-entities-serializable"></a>方法: エンティティをシリアル化可能にする
 コードを作成するときに、エンティティをシリアル化可能にできます。 エンティティ クラスは <xref:System.Runtime.Serialization.DataContractAttribute> 属性で装飾し、列は <xref:System.Runtime.Serialization.DataMemberAttribute> 属性で装飾します。  

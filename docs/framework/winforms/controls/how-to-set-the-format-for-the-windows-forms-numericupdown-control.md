@@ -10,18 +10,18 @@ helpviewer_keywords:
 - up-down controls [Windows Forms], formatting numeric values
 ms.assetid: fa7c5557-6bfb-45b2-975d-8887b23b0ba0
 ms.openlocfilehash: 5957a44c7b07aa1b8d8df32667f023c0873ec1de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013193"
 ---
 # <a name="how-to-set-the-format-for-the-windows-forms-numericupdown-control"></a>方法: Windows フォームの NumericUpDown コントロールの書式を設定する
 Windows フォームで値を表示する方法を構成する<xref:System.Windows.Forms.NumericUpDown>コントロール。 <xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>プロパティは、小数点より後に表示される番号の数を決定します。 既定値は 0。 <xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>プロパティが 3 桁ごとの間の区切り記号が挿入されるかどうかを決定します。 既定値は`false`します。 コントロールは、場合に、10 進数の形式ではなく 16 進数の値を表示できます、<xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A>プロパティに設定されて`true`; 既定値は`false`します。  
   
 ### <a name="to-format-the-numeric-value"></a>数値の書式設定  
   
--   10 進値を設定して、表示、<xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>プロパティを整数に設定、<xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>プロパティを`true`または`false`します。  
+- 10 進値を設定して、表示、<xref:System.Windows.Forms.NumericUpDown.DecimalPlaces%2A>プロパティを整数に設定、<xref:System.Windows.Forms.NumericUpDown.ThousandsSeparator%2A>プロパティを`true`または`false`します。  
   
     ```vb  
     NumericUpDown1.DecimalPlaces = 2  
@@ -40,7 +40,7 @@ Windows フォームで値を表示する方法を構成する<xref:System.Windo
   
      - または -  
   
--   16 進数の値を設定して表示、<xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A>プロパティを`true`します。  
+- 16 進数の値を設定して表示、<xref:System.Windows.Forms.NumericUpDown.Hexadecimal%2A>プロパティを`true`します。  
   
     ```vb  
     NumericUpDown1.Hexadecimal = True  

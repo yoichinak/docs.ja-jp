@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF walkthroughs [WPF]
 ms.assetid: c29bde96-0389-4aff-a9fb-cd678f66b7f7
 ms.openlocfilehash: 1ec147d4ec7b59a7ac8e01680266cbd24b644985
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352415"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010359"
 ---
 # <a name="wpf-walkthroughs"></a>WPF のチュートリアル
 チュートリアルでは、一般的なシナリオの手順を説明します。 このため、製品や特定の機能領域について知るための最初のステップとして適しています。  
@@ -19,7 +19,7 @@ ms.locfileid: "57352415"
   
 ## <a name="wpf-designer-walkthroughs"></a>WPF デザイナーのチュートリアル  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[チュートリアル: WPF デザイナーを使用した単純な WPF アプリケーションのビルド](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb546972(v=vs.100))|簡単な WPF アプリケーションを構築する方法を示します、[!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)]します。|  
 |[チュートリアル: 動的レイアウトを構築します。](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb514519(v=vs.100))|使用して動的なレイアウトを作成方法を示します、<xref:System.Windows.Controls.Grid>パネル コントロール。|  
@@ -29,7 +29,7 @@ ms.locfileid: "57352415"
   
 ## <a name="wpf-walkthroughs"></a>WPF のチュートリアル  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[チュートリアル: 初めての WPF デスクトップ アプリケーション](walkthrough-my-first-wpf-desktop-application.md)|WPF コントロール、レイアウトやデータ バインディングなどの一般的な機能の多くを使用して WPF アプリケーションを作成するかを示します。|  
 |[XAML を使用したボタンの作成](../controls/walkthrough-create-a-button-by-using-xaml.md)|アニメーションのボタンを作成する方法を示します。|  
@@ -38,7 +38,7 @@ ms.locfileid: "57352415"
   
 ## <a name="migration-and-interoperability-in-wpf"></a>移行と WPF の相互運用性  
   
-|タイトル|説明|  
+|Title|説明|  
 |-----------|-----------------|  
 |[チュートリアル: WPF での Windows フォーム コントロールのホスト](../advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)|Windows フォームをホストする方法を示します<xref:System.Windows.Forms.MaskedTextBox?displayProperty=nameWithType>WPF アプリケーションで制御します。|  
 |[チュートリアル: WPF で Windows フォーム複合コントロールのホスト](../advanced/walkthrough-hosting-a-windows-forms-composite-control-in-wpf.md)|Windows フォーム データ エントリの複合コントロールをホストする方法を示します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。|  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
 ms.openlocfilehash: d55c85ae0af567c5af0fd421b612809eaf5bb789
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037922"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 層アプリケーションでのデータ取得および CUD 操作 (LINQ to SQL)
 Customers または Orders のようなエンティティ オブジェクトをネットワークを介してクライアントにシリアル化すると、これらのエンティティはデータ コンテキストからデタッチされます。 変更内容、および他のオブジェクトとの関連付けはデータ コンテキストによって追跡されなくなります。 クライアントがデータを読み取るだけの場合は、これは問題にはなりません。 また、クライアントが新しい行をデータベースに追加できるようにすることも、ある程度簡単です。 しかし、アプリケーションでクライアントによるデータの更新または削除を可能にする必要がある場合には、<xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> を呼び出す前に、新しいデータ コンテキストにエンティティをアタッチする必要があります。 さらに、元の値によるオプティミスティック コンカレンシーチェックを使用する場合には、何らかの方法で、元のエンティティと変更後のエンティティをデータベースに渡す必要もあります。 エンティティがデタッチされた後に新しいデータ コンテキストにエンティティを入れるために、`Attach` メソッドが用意されています。  
@@ -85,9 +85,9 @@ private void GetProdsByCat_Click(object sender, EventArgs e)
 ### <a name="middle-tier-implementation"></a>中間層での実装  
  次の例は、中間層でのインターフェイス メソッドの実装を示しています。 ここでは、次の 2 つの点が重要です。  
   
--   <xref:System.Data.Linq.DataContext> はメソッドのスコープで宣言されます。  
+- <xref:System.Data.Linq.DataContext> はメソッドのスコープで宣言されます。  
   
--   メソッドは、実際の結果から成る <xref:System.Collections.IEnumerable> コレクションを返します。 シリアライザーは、結果をクライアント/プレゼンテーション層に戻すためのクエリを実行します。 中間層でクエリ結果にローカルにアクセスするには、クエリ変数に対して `ToList` または `ToArray` を呼び出すことで、実行を強制できます。 その後、そのリストまたは配列を `IEnumerable` として返すことができます。  
+- メソッドは、実際の結果から成る <xref:System.Collections.IEnumerable> コレクションを返します。 シリアライザーは、結果をクライアント/プレゼンテーション層に戻すためのクエリを実行します。 中間層でクエリ結果にローカルにアクセスするには、クエリ変数に対して `ToList` または `ToArray` を呼び出すことで、実行を強制できます。 その後、そのリストまたは配列を `IEnumerable` として返すことができます。  
   
 ```vb  
 Public Function GetProductsByCategory(ByVal categoryID As Integer) _  
@@ -210,11 +210,11 @@ public void DeleteOrder(Order order)
 ## <a name="updating-data"></a>データの更新  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、オプティミスティック コンカレンシーを行う次のようなシナリオでの更新をサポートします。  
   
--   タイムスタンプつまり RowVersion 番号に基づくオプティミスティック同時実行制御。  
+- タイムスタンプつまり RowVersion 番号に基づくオプティミスティック同時実行制御。  
   
--   エンティティ プロパティのサブセットの元の値に基づくオプティミスティック コンカレンシー。  
+- エンティティ プロパティのサブセットの元の値に基づくオプティミスティック コンカレンシー。  
   
--   元のエンティティ全体および変更後のエンティティ全体に基づくオプティミスティック コンカレンシー。  
+- 元のエンティティ全体および変更後のエンティティ全体に基づくオプティミスティック コンカレンシー。  
   
  また、エンティティとそのリレーションシップの両方に対して更新または削除を実行することもできます (たとえば Customer と、それに関連した Order オブジェクトのコレクション)。 エンティティ オブジェクトとその子 (`EntitySet`) コレクションから成るグラフをクライアント上で変更して、オプティミスティック コンカレンシー チェックで元の値が必要とされる場合には、クライアントはそれぞれのエンティティと <xref:System.Data.Linq.EntitySet%601> オブジェクトの元の値を提供する必要があります。 1 つのメソッド呼び出しで互いに関連する更新、削除、挿入のセットをクライアントが実行できるようにするには、各エンティティにどんな操作を実行するかを示す方法をクライアントに提供する必要があります。 その後、中間層で適切な <xref:System.Data.Linq.ITable.Attach%2A> メソッドを呼び出した後、<xref:System.Data.Linq.ITable.InsertOnSubmit%2A> を呼び出す前に、各エンティティに対して <xref:System.Data.Linq.ITable.DeleteAllOnSubmit%2A>, <xref:System.Data.Linq.Table%601.InsertOnSubmit%2A> または `Attach` (挿入の場合は <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 無し) を呼び出す必要があります。 更新を試行する前に元の値を入手するためにデータベースからデータを取得しないでください。  
   
@@ -379,11 +379,11 @@ public void UpdateProductInfo(Product newProd, Product originalProd)
 ### <a name="expected-entity-members"></a>必要なエンティティ メンバー  
  既に説明したように、`Attach` メソッドを呼び出す前に設定する必要があるのは、エンティティ オブジェクトのいくつかのメンバーだけです。 設定する必要のあるエンティティ メンバーは、次の条件を満たす必要があります。  
   
--   エンティティの ID の一部分である。  
+- エンティティの ID の一部分である。  
   
--   変更される予定である。  
+- 変更される予定である。  
   
--   タイムスタンプであるか、<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 属性が `Never` 以外の値に設定されている。  
+- タイムスタンプであるか、<xref:System.Data.Linq.Mapping.ColumnAttribute.UpdateCheck%2A> 属性が `Never` 以外の値に設定されている。  
   
  テーブルでオプティミスティック同時実行チェック用にタイムスタンプまたはバージョン番号を使用している場合は、<xref:System.Data.Linq.ITable.Attach%2A> を呼び出す前にこれらのメンバーを設定する必要があります。 Column 属性の <xref:System.Data.Linq.Mapping.ColumnAttribute.IsVersion%2A> プロパティが true に設定されている場合、メンバーはオプティミスティック コンカレンシー チェック専用です。 要求された更新は、データベース上のバージョン番号またはタイムスタンプ値が同じ場合にのみ、送信されます。  
   

@@ -19,11 +19,11 @@ helpviewer_keywords:
 - reentrancy [WPF]
 ms.assetid: 02d8fd00-8d7c-4604-874c-58e40786770b
 ms.openlocfilehash: 0bcb0e7369345aaae39d99a005a07304aaad7043
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200351"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036466"
 ---
 # <a name="threading-model"></a>スレッド モデル
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] スレッド処理の難しさから開発者を保存する設計されています。 その結果、ほとんどの[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]開発者は、複数のスレッドを使用するインターフェイスを記述する必要はありません。 マルチ スレッド プログラムは複雑になり、デバッグが困難であるため、シングル スレッドのソリューションが存在する場合、回避する必要があります。  
@@ -114,14 +114,14 @@ ms.locfileid: "59200351"
   
  記録する詳細の一部を次に示します。  
   
--   ボタンのハンドラーを作成します。  
+- ボタンのハンドラーを作成します。  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherbuttonhandler)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherButtonHandler](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherbuttonhandler)]  
   
  このボタンをクリックすると時計の図が表示されしてアニメーション化を開始します。 ボタンを無効にします。 呼び出して、`FetchWeatherFromServer`で新しいスレッドとし、メソッド戻り値が、許可、<xref:System.Windows.Threading.Dispatcher>天気予報を収集するまで待機中にイベントを処理します。  
   
--   天気の取得  
+- 天気の取得  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherfetchweather)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherFetchWeather](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherfetchweather)]  
@@ -130,7 +130,7 @@ ms.locfileid: "59200351"
   
  元に報告する時間は、遅延が完了したらと、天気予報をランダムに選択したら、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッド。 呼び出しをスケジュールすることによって、これを行って`UpdateUserInterface`で、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]スレッドのスレッドを使用して<xref:System.Windows.Threading.Dispatcher>します。 このスケジュールされたメソッド呼び出しに天気予報を説明する文字列を渡します。  
   
--   更新します [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
+- 更新します [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]  
   
      [!code-csharp[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](~/samples/snippets/csharp/VS_Snippets_Wpf/ThreadingWeatherForecast/CSharp/Window1.xaml.cs#threadingweatherupdateui)]
      [!code-vb[ThreadingWeatherForecast#ThreadingWeatherUpdateUI](~/samples/snippets/visualbasic/VS_Snippets_Wpf/ThreadingWeatherForecast/visualbasic/window1.xaml.vb#threadingweatherupdateui)]  

@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 6f4951dc85f739b92e56e84d0bd0262166181bd4
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53128844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62015045"
 ---
 # <a name="conclusion"></a>まとめ
 

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - FXCop tool [WPF]
 ms.assetid: f704b81c-449a-47a4-ace1-9332e3cc6d60
 ms.openlocfilehash: ba8b0a48b2b75a9191553392d5ec0a1f66575807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086729"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053510"
 ---
 # <a name="safe-constructor-patterns-for-dependencyobjects"></a>DependencyObject の安全なコンストラクター パターン
 一般的に、コンストラクターは派生クラスのコンストラクターの基底の初期化として呼び出されることがあるため、クラスのコンストラクターでは、仮想メソッドやデリゲートなどのコールバックを呼び出しません。 対象オブジェクトの初期化が不完全な状態で、仮想メソッドに入ることがあります。 ただし、プロパティ システム自体は、依存関係プロパティ システムの一部としてコールバックを呼び出し、内部的に公開します。 単純な操作で依存関係プロパティの値を設定すると<xref:System.Windows.DependencyObject.SetValue%2A>呼び出し組み込めますコールバックどこかを決定します。 このため、使用する型が基底クラスとして使われる場合に、コンストラクター本体内に依存関係プロパティ値を設定すると問題が発生する可能性があり、注意が必要です。 実装するための特定のパターンがある<xref:System.Windows.DependencyObject>コンス トラクターをここに記載されている依存関係プロパティの状態と固有のコールバックでは、特定の問題を回避できます。  

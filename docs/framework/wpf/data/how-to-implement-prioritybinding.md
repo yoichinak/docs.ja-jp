@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data binding [WPF], PriorityBinding class
 ms.assetid: d63b65ab-b3e9-4322-9aa8-1450f8d89532
 ms.openlocfilehash: aaf2caff1e2684e08c7eb65125536f1070203d70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207566"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020856"
 ---
 # <a name="how-to-implement-prioritybinding"></a>方法: PriorityBinding を実装する
 <xref:System.Windows.Data.PriorityBinding> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]のバインディングの一覧を指定することによって動作します。 バインディングのリストの順序は、最も高い優先度から最も低い優先順位。 最高の優先度のバインドは、値を返す場合が正常に処理されるときはありますありません、リスト内の他のバインディングを処理する必要が。 最高の優先度のバインドを評価する時間がかかる場合がある可能性がありますの優先順位の高いバインドが正常に値を返すまで正常に値を返す次の最も高い優先順位が使用されます。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 67f31ed4-e36b-4b02-9889-dcce245d7afc
 ms.openlocfilehash: 79dc7a3578c395ae8cdf5933e1249441f97071a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087990"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053705"
 ---
 # <a name="3-d-graphics-overview"></a>3-D グラフィックスの概要
 <a name="introduction"></a> [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] 機能を使うと、マークアップと手続き型コード両方の 3-D グラフィックスを描画、変換、およびアニメーション化することができます。 開発者は [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] グラフィックスと [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] グラフィックスを組み合わせて、リッチなコントロールを作成したり、データの複雑なイラストを提供したり、アプリケーションのインターフェイスのユーザー エクスペリエンスを拡張したりすることができます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] での [!INCLUDE[TLA2#tla_3d](../../../../includes/tla2sharptla-3d-md.md)] のサポートは、フル機能のゲーム開発プラットフォームを提供するようには設計されていません。 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グラフィックス システムでの [!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)] 機能の概要について説明します。  
@@ -86,11 +86,11 @@ ms.locfileid: "59087990"
   
  モデルのサーフェイスの特性を定義する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を使用して、<xref:System.Windows.Media.Media3D.Material>抽象クラス。 Material の具象サブクラスでは、モデルのサーフェイスの一部の外観特性が決まり、SolidColorBrush、TileBrush、または VisualBrush を渡すことができる Brush プロパティも提供されます。  
   
--   <xref:System.Windows.Media.Media3D.DiffuseMaterial> そのモデルがディフューズ点灯している場合と同様に、ブラシ、モデルに適用されることを指定します。 DiffuseMaterial を使うことは、[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] モデルにブラシを直接使うことと最もよく似ています。モデルのサーフェイスは光沢があるようにはライトを反射しません。  
+- <xref:System.Windows.Media.Media3D.DiffuseMaterial> そのモデルがディフューズ点灯している場合と同様に、ブラシ、モデルに適用されることを指定します。 DiffuseMaterial を使うことは、[!INCLUDE[TLA2#tla_2d](../../../../includes/tla2sharptla-2d-md.md)] モデルにブラシを直接使うことと最もよく似ています。モデルのサーフェイスは光沢があるようにはライトを反射しません。  
   
--   <xref:System.Windows.Media.Media3D.SpecularMaterial> モデルのサーフェイスのハードまたは光沢のある、ハイライトように、ブラシ、モデルに適用されることを指定します。 テクスチャがするこの反射品質、または「光沢」提案されます度を設定するにはの値を指定することによって、<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>プロパティ。  
+- <xref:System.Windows.Media.Media3D.SpecularMaterial> モデルのサーフェイスのハードまたは光沢のある、ハイライトように、ブラシ、モデルに適用されることを指定します。 テクスチャがするこの反射品質、または「光沢」提案されます度を設定するにはの値を指定することによって、<xref:System.Windows.Media.Media3D.SpecularMaterial.SpecularPower%2A>プロパティ。  
   
--   <xref:System.Windows.Media.Media3D.EmissiveMaterial> モデルがブラシの色が薄いと等しいに出力された場合と同様に、テクスチャを適用することを指定することができます。 これによってモデルが明るくなることはありませんが、DiffuseMaterial または SpecularMaterial のテクスチャとは異なるシャドウになります。  
+- <xref:System.Windows.Media.Media3D.EmissiveMaterial> モデルがブラシの色が薄いと等しいに出力された場合と同様に、テクスチャを適用することを指定することができます。 これによってモデルが明るくなることはありませんが、DiffuseMaterial または SpecularMaterial のテクスチャとは異なるシャドウになります。  
   
  背面のパフォーマンスを高めるため、 <xref:System.Windows.Media.Media3D.GeometryModel3D> (カメラからのモデルの反対側にあるので、非表示をこれらの面) が、シーンから除去できます。  指定する、<xref:System.Windows.Media.Media3D.Material>平面のようなモデルの背面に適用する設定、モデルの<xref:System.Windows.Media.Media3D.GeometryModel3D.BackMaterial%2A>プロパティ。  
   
@@ -111,13 +111,13 @@ ms.locfileid: "59087990"
   
  次のライトが基本クラスから派生<xref:System.Windows.Media.Media3D.Light>:  
   
--   <xref:System.Windows.Media.Media3D.AmbientLight>:位置や方向に均等に関係なくすべてのオブジェクトを照らす環境光を提供します。  
+- <xref:System.Windows.Media.Media3D.AmbientLight>:位置や方向に均等に関係なくすべてのオブジェクトを照らす環境光を提供します。  
   
--   <xref:System.Windows.Media.Media3D.DirectionalLight>:光源のように照らします。  ディレクショナル ライトが、<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>ロケーションを指定しないで、Vector3D として指定します。  
+- <xref:System.Windows.Media.Media3D.DirectionalLight>:光源のように照らします。  ディレクショナル ライトが、<xref:System.Windows.Media.Media3D.DirectionalLight.Direction%2A>ロケーションを指定しないで、Vector3D として指定します。  
   
--   <xref:System.Windows.Media.Media3D.PointLight>:光源が近くにあるように照らします。 PointLight には位置があり、その位置から光を投射します。 シーン内のオブジェクトは、その位置および光源からの距離に応じて照らされます。 <xref:System.Windows.Media.Media3D.PointLightBase> 公開、<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>プロパティで、これを超えるモデルはありませんがライトによって照らさ距離を指定します。 また、PointLight には減衰プロパティもあり、距離によって光の強度がどの程度低下するかを指定します。 光の減衰には、一定、線形、または 2 次補間を指定できます。  
+- <xref:System.Windows.Media.Media3D.PointLight>:光源が近くにあるように照らします。 PointLight には位置があり、その位置から光を投射します。 シーン内のオブジェクトは、その位置および光源からの距離に応じて照らされます。 <xref:System.Windows.Media.Media3D.PointLightBase> 公開、<xref:System.Windows.Media.Media3D.PointLightBase.Range%2A>プロパティで、これを超えるモデルはありませんがライトによって照らさ距離を指定します。 また、PointLight には減衰プロパティもあり、距離によって光の強度がどの程度低下するかを指定します。 光の減衰には、一定、線形、または 2 次補間を指定できます。  
   
--   <xref:System.Windows.Media.Media3D.SpotLight>:<xref:System.Windows.Media.Media3D.PointLight>から継承します。 SpotLight は PointLight と同じように照らし、位置と方向の両方を持ちます。 設定円錐形の領域に、光<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>と<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>度で指定されたプロパティ。  
+- <xref:System.Windows.Media.Media3D.SpotLight>:<xref:System.Windows.Media.Media3D.PointLight>から継承します。 SpotLight は PointLight と同じように照らし、位置と方向の両方を持ちます。 設定円錐形の領域に、光<xref:System.Windows.Media.Media3D.SpotLight.InnerConeAngle%2A>と<xref:System.Windows.Media.Media3D.SpotLight.OuterConeAngle%2A>度で指定されたプロパティ。  
   
  ライトが<xref:System.Windows.Media.Media3D.Model3D>オブジェクトを変換し、位置、色、方向、および範囲を含む、ライトのプロパティをアニメーション化できるようにします。  
   

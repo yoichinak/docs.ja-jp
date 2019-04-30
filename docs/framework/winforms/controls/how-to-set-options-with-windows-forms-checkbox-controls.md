@@ -13,11 +13,11 @@ helpviewer_keywords:
 - CheckBox control [Windows Forms], using to set options
 ms.assetid: 2ac70498-7e3e-4e07-8901-ccabaeb5fd3e
 ms.openlocfilehash: 881996563acef36a1981ca6236c155b8fc56ef0a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307321"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013206"
 ---
 # <a name="how-to-set-options-with-windows-forms-checkbox-controls"></a>方法: Windows フォームの CheckBox コントロールでオプションを設定する
 Windows フォーム<xref:System.Windows.Forms.CheckBox>コントロールは、True または False のユーザーに付与するために使用またははい/いいえオプションします。 コントロールが選択されているときに、チェック マークを表示します。  

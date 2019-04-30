@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: b3bc7f31-95ff-46e1-8308-d206ec426f6e
 ms.openlocfilehash: d6ed22790f5abc01b44accc05e09e75d105df429
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006617"
 ---
 # <a name="knownassemblyattribute"></a>KnownAssemblyAttribute
 このサンプルでは、<xref:System.Runtime.Serialization.DataContractResolver> クラスを使用して、シリアル化プロセスおよび逆シリアル化プロセスをカスタマイズする方法を示します。 このサンプルで示すのは、シリアル化および逆シリアル化時に既知の型を動的に追加する方法です。  

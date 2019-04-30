@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ, queries
 ms.assetid: 8edc717c-4a24-4cbc-9c16-11f479c935db
 ms.openlocfilehash: 1ea49b16f70c0af87bbd3a8978fb10fe08d5ce6b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836897"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052145"
 ---
 # <a name="queries-visual-basic"></a>クエリ (Visual Basic)
 Visual Basic では、作成できます。 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] 、コード内の式。  

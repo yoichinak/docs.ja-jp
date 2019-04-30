@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: ee3b8673-a2e7-4b2d-9b5c-4972ff9e665d
 ms.openlocfilehash: eea1439337b29fee51c422238425491fc2345211
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095088"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037558"
 ---
 # <a name="return-the-average-value-from-a-numeric-sequence"></a>一連の数値の平均値の取得
 <xref:System.Linq.Enumerable.Average%2A> 演算子は、一連の数値の平均値を計算します。  

@@ -22,11 +22,11 @@ helpviewer_keywords:
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
 ms.openlocfilehash: dba2f8b07134560abd77832293ce2a81e55e4875
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053445"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
 このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 開発者は、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] を使用して、イメージの表示、変換、および形式設定を実行できます。  
@@ -37,19 +37,19 @@ ms.locfileid: "59209711"
   
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] にアクセスする方法は 2 つあります (マネージド コンポーネントとアンマネージド コンポーネント)。 アンマネージ コンポーネントは、次の機能を提供します。  
   
--   新規または独自のイメージ形式の機能拡張モデル。  
+- 新規または独自のイメージ形式の機能拡張モデル。  
   
--   [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)]、[!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]、[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、[!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、[!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、[!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]、アイコン (.ico) を含むネイティブ イメージ形式のパフォーマンスとセキュリティの向上。  
+- [!INCLUDE[TLA#tla_bmp](../../../../includes/tlasharptla-bmp-md.md)]、[!INCLUDE[TLA#tla_jpegorg](../../../../includes/tlasharptla-jpegorg-md.md)]、[!INCLUDE[TLA#tla_png](../../../../includes/tlasharptla-png-md.md)]、[!INCLUDE[TLA#tla_tiff](../../../../includes/tlasharptla-tiff-md.md)]、[!INCLUDE[TLA#tla_wdp](../../../../includes/tlasharptla-wdp-md.md)]、[!INCLUDE[TLA#tla_gif](../../../../includes/tlasharptla-gif-md.md)]、アイコン (.ico) を含むネイティブ イメージ形式のパフォーマンスとセキュリティの向上。  
   
--   チャネルあたり最大 8 ビットのビット深度の高いイメージ データの保存 (ピクセルあたり 32 ビット)。  
+- チャネルあたり最大 8 ビットのビット深度の高いイメージ データの保存 (ピクセルあたり 32 ビット)。  
   
--   非破壊的なイメージのスケーリング、クロップ、および回転。  
+- 非破壊的なイメージのスケーリング、クロップ、および回転。  
   
--   単純化されたカラー管理。  
+- 単純化されたカラー管理。  
   
--   ファイル内での専用メタデータのサポート。  
+- ファイル内での専用メタデータのサポート。  
   
--   マネージド コンポーネントは、アンマネージド インフラストラクチャを利用して、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、アニメーション、グラフィックスなどの他の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 機能とイメージをシームレスに統合します。 マネージ コンポーネントの利点も活用、Windows Presentation Foundation (WPF) イメージング コーデック機能拡張モデルにより、新しいイメージ形式の自動認識[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーション。  
+- マネージド コンポーネントは、アンマネージド インフラストラクチャを利用して、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、アニメーション、グラフィックスなどの他の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 機能とイメージをシームレスに統合します。 マネージ コンポーネントの利点も活用、Windows Presentation Foundation (WPF) イメージング コーデック機能拡張モデルにより、新しいイメージ形式の自動認識[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーション。  
   
  ほとんどのマネージ[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]内に存在、<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>名前空間など、いくつかの重要な型が<xref:System.Windows.Media.ImageBrush>と<xref:System.Windows.Media.ImageDrawing>内に存在、<xref:System.Windows.Media?displayProperty=nameWithType>名前空間と<xref:System.Windows.Controls.Image>に存在します。<xref:System.Windows.Controls?displayProperty=nameWithType>名前空間。  
   
@@ -132,13 +132,13 @@ ms.locfileid: "59209711"
 #### <a name="stretching-images"></a>イメージの引き伸ばし  
  <xref:System.Windows.Controls.Image.Stretch%2A>プロパティは、イメージを拡大して、コンテナーを入力する方法を制御します。 <xref:System.Windows.Controls.Image.Stretch%2A>プロパティによって定義された、次の値では、<xref:System.Windows.Media.Stretch>列挙体。  
   
--   <xref:System.Windows.Media.Stretch.None>:イメージが出力領域に引き伸ばされません。 イメージが出力領域よりも大きい場合は、出力領域に収まらない部分がクリップされたイメージが出力領域に描画されます。  
+- <xref:System.Windows.Media.Stretch.None>:イメージが出力領域に引き伸ばされません。 イメージが出力領域よりも大きい場合は、出力領域に収まらない部分がクリップされたイメージが出力領域に描画されます。  
   
--   <xref:System.Windows.Media.Stretch.Fill>:イメージが出力領域に合わせて拡大縮小します。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
+- <xref:System.Windows.Media.Stretch.Fill>:イメージが出力領域に合わせて拡大縮小します。 イメージの高さと幅は個別に拡大縮小されるため、イメージの元の縦横比は保持されないことがあります。 つまり、イメージは、出力コンテナーを完全に埋めるためにゆがんで表示される可能性があります。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>:イメージに、出力領域内で完全に収まるようにスケーリングします。 イメージの縦横比は保持されます。  
+- <xref:System.Windows.Media.Stretch.Uniform>:イメージに、出力領域内で完全に収まるようにスケーリングします。 イメージの縦横比は保持されます。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>:イメージは、イメージの元の縦横比を維持しながら、出力領域を完全に塗りつぶすようにスケーリングします。  
+- <xref:System.Windows.Media.Stretch.UniformToFill>:イメージは、イメージの元の縦横比を維持しながら、出力領域を完全に塗りつぶすようにスケーリングします。  
   
  次の例では、適用の使用可能な各<xref:System.Windows.Media.Stretch>列挙を<xref:System.Windows.Controls.Image>します。  
   

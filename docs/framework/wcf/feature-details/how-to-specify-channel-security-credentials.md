@@ -3,11 +3,11 @@ title: '方法: チャネルのセキュリティ資格情報を指定する'
 ms.date: 03/30/2017
 ms.assetid: f8e03f47-9c4f-4dd5-8f85-429e6d876119
 ms.openlocfilehash: 0bfbb71ade3822b9f504c2f89a41145ce0d435f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297981"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038871"
 ---
 # <a name="how-to-specify-channel-security-credentials"></a>方法: チャネルのセキュリティ資格情報を指定する
 Windows Communication Foundation (WCF) サービス モニカーでは、COM アプリケーションで WCF サービスを呼び出すができます。 ほとんどの WCF サービスでは、クライアント認証と承認のための資格情報を指定する必要があります。 WCF クライアントから WCF サービスを呼び出すときに、マネージ コードで、またはアプリケーション構成ファイルで、これらの資格情報を指定できます。 COM アプリケーションから WCF サービスを呼び出すときに使用できます、<xref:System.ServiceModel.ComIntegration.IChannelCredentials>資格情報を指定するインターフェイス。 ここでは、<xref:System.ServiceModel.ComIntegration.IChannelCredentials> インターフェイスを使用して資格情報を指定するさまざまな方法を説明します。  

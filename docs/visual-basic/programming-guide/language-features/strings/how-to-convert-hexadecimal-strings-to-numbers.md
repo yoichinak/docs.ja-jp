@@ -9,11 +9,11 @@ helpviewer_keywords:
 - string conversion [Visual Basic], hexadecimal to numbers
 ms.assetid: 76675807-eadb-4c08-bd50-e6c6ff4b8ced
 ms.openlocfilehash: ddb7b39f7a47234c003ca16e1d7ea013e113c108
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054043"
 ---
 # <a name="how-to-convert-hexadecimal-strings-to-numbers-visual-basic"></a>方法: 16 進文字列を数値 (Visual Basic) に変換します。
 

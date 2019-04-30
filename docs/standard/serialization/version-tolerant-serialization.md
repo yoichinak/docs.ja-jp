@@ -14,18 +14,18 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: bea0ffe3-2708-4a16-ac7d-e586ed6b8e8d
 ms.openlocfilehash: c899cfe1015a25adc25fc28ee84d0a37a397defe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54584689"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028253"
 ---
 # <a name="version-tolerant-serialization"></a>バージョン トレラントなシリアル化
 .NET Framework のバージョン 1.0 および 1.1 では、アプリケーションのあるバージョンから次のバージョンに移行しても再利用できる、シリアル化可能な型の作成に問題がありました。 フィールドを追加して型を変更すると、次のような問題が発生していました。  
   
--   以前のバージョンのアプリケーションは、古い型の新しいバージョンを逆シリアル化するように要求すると例外をスローする。  
+- 以前のバージョンのアプリケーションは、古い型の新しいバージョンを逆シリアル化するように要求すると例外をスローする。  
   
--   新しいバージョンのアプリケーションは、データが欠落している以前のバージョンの型を逆シリアル化すると例外をスローする。  
+- 新しいバージョンのアプリケーションは、データが欠落している以前のバージョンの型を逆シリアル化すると例外をスローする。  
   
  バージョン トレラントなシリアル化 (VTS: Version Tolerant Serialization) は、.NET Framework 2.0 で導入された機能セットで、シリアル化可能な型を、長期にわたって簡単に変更できるようにします。 具体的には、VTS 機能が、ジェネリック型を含め、<xref:System.SerializableAttribute> 属性が適用されているクラスに対して有効です。 VTS を使用すると、他のバージョンの型との互換性を失うことなく、これらのクラスに新しいフィールドを追加できます。 動作するサンプル アプリケーションについては、「[Version Tolerant Serialization Technology Sample](../../../docs/standard/serialization/version-tolerant-serialization-technology-sample.md)」(バージョン トレラントなシリアル化テクノロジのサンプル) を参照してください。  
   
@@ -36,11 +36,11 @@ ms.locfileid: "54584689"
 ## <a name="feature-list"></a>機能の一覧  
  この機能セットの内容は次のとおりです。  
   
--   外部データまたは予期しないデータの複数バージョン対応。 これにより、型の新しいバージョンから以前のバージョンにデータを送信できます。  
+- 外部データまたは予期しないデータの複数バージョン対応。 これにより、型の新しいバージョンから以前のバージョンにデータを送信できます。  
   
--   欠落しているオプション データの複数バージョン対応。 これにより、以前のバージョンから新しいバージョンにデータを送信できます。  
+- 欠落しているオプション データの複数バージョン対応。 これにより、以前のバージョンから新しいバージョンにデータを送信できます。  
   
--   シリアル化のコールバック。 これにより、データが欠落している場合に、既定値の高度な設定ができます。  
+- シリアル化のコールバック。 これにより、データが欠落している場合に、既定値の高度な設定ができます。  
   
  さらに、オプション フィールドが新たに追加されたときに宣言を生成する機能があります。 これは、<xref:System.Runtime.Serialization.OptionalFieldAttribute.VersionAdded%2A> 属性の <xref:System.Runtime.Serialization.OptionalFieldAttribute> プロパティです。  
   
@@ -257,28 +257,28 @@ End Class
 ```  
   
 ## <a name="serializationbinder"></a>SerializationBinder  
- サーバー上とクライアント上では異なるバージョンのクラスが必要なため、ユーザーによっては、シリアル化するクラスと逆シリアル化するクラスを制御することが必要になる場合があります。 <xref:System.Runtime.Serialization.SerializationBinder> は、シリアル化中および逆シリアル化中に使用される実際の型を制御するために使用される抽象クラスです。  このクラスを使用するには、クラスを <xref:System.Runtime.Serialization.SerializationBinder> から派生させ、<xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> メソッドと <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> メソッドをオーバーライドします。 詳細については、[を制御するシリアル化と逆シリアル化 SerializationBinder を使用した](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)を参照してください。  
+ サーバー上とクライアント上では異なるバージョンのクラスが必要なため、ユーザーによっては、シリアル化するクラスと逆シリアル化するクラスを制御することが必要になる場合があります。 <xref:System.Runtime.Serialization.SerializationBinder> は、シリアル化中および逆シリアル化中に使用される実際の型を制御するために使用される抽象クラスです。  このクラスを使用するには、クラスを <xref:System.Runtime.Serialization.SerializationBinder> から派生させ、<xref:System.Runtime.Serialization.SerializationBinder.BindToName%2A> メソッドと <xref:System.Runtime.Serialization.SerializationBinder.BindToType%2A> メソッドをオーバーライドします。 詳細については、次を参照してください。[を制御するシリアル化と逆シリアル化 SerializationBinder を使用した](../../../docs/framework/wcf/feature-details/controlling-serialization-and-deserialization-with-serializationbinder.md)します。  
   
 ## <a name="best-practices"></a>ベスト プラクティス  
  バージョン管理が正しく行われるように、バージョン間で型を変更するときは次の規則に従ってください。  
   
--   シリアル化したフィールドを削除しない。  
+- シリアル化したフィールドを削除しない。  
   
--   以前のバージョンでフィールドに <xref:System.NonSerializedAttribute> 属性が適用されていない場合、新しいバージョンでもこの属性を適用しない。  
+- 以前のバージョンでフィールドに <xref:System.NonSerializedAttribute> 属性が適用されていない場合、新しいバージョンでもこの属性を適用しない。  
   
--   シリアル化したフィールドの名前または型を変更しない。  
+- シリアル化したフィールドの名前または型を変更しない。  
   
--   新しいシリアル化フィールドを追加する場合は、**OptionalFieldAttribute** 属性を適用する。  
+- 新しいシリアル化フィールドを追加する場合は、**OptionalFieldAttribute** 属性を適用する。  
   
--   以前のバージョンでシリアル化できなかったフィールドから **NonSerializedAttribute** 属性を削除する場合は、**OptionalFieldAttribute** 属性を適用する。  
+- 以前のバージョンでシリアル化できなかったフィールドから **NonSerializedAttribute** 属性を削除する場合は、**OptionalFieldAttribute** 属性を適用する。  
   
--   すべてのオプション フィールドに対して、既定値として 0 または **null** が許容される場合以外は、シリアル化コールバックを使用して意味のある既定値を設定する。  
+- すべてのオプション フィールドに対して、既定値として 0 または **null** が許容される場合以外は、シリアル化コールバックを使用して意味のある既定値を設定する。  
   
  型が今後のシリアル化エンジンと互換性を保つようにするには、次のガイドラインに従ってください。  
   
--   **OptionalFieldAttribute** 属性には常に **VersionAdded** を設定する。  
+- **OptionalFieldAttribute** 属性には常に **VersionAdded** を設定する。  
   
--   バージョンの分岐は避ける。  
+- バージョンの分岐は避ける。  
   
 ## <a name="see-also"></a>関連項目
 

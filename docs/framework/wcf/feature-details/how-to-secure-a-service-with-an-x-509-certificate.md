@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 2d06c2aa-d0d7-4e5e-ad7e-77416aa1c10b
 ms.openlocfilehash: 75c7a0e50301ce80d51b9b2a10ed650a1600ec79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300087"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047738"
 ---
 # <a name="how-to-secure-a-service-with-an-x509-certificate"></a>方法: X.509 証明書を使用してサービスをセキュリティで保護する
 X.509 証明書でサービスをセキュリティで保護するには、ほとんどのバインドでは、Windows Communication Foundation (WCF) を使用する基本的な手法です。 ここでは、X.509 証明書を使用して自己ホスト サービスを構成する手順を示します。  
@@ -70,17 +70,17 @@ X.509 証明書でサービスをセキュリティで保護するには、ほ�
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  コードのコンパイルには次の名前空間が必要です。  
   
--   <xref:System>  
+- <xref:System>  
   
--   <xref:System.ServiceModel>  
+- <xref:System.ServiceModel>  
   
--   <xref:System.ServiceModel.Channels>  
+- <xref:System.ServiceModel.Channels>  
   
--   <xref:System.Web.Services.Description>  
+- <xref:System.Web.Services.Description>  
   
--   <xref:System.Security.Cryptography.X509Certificates>  
+- <xref:System.Security.Cryptography.X509Certificates>  
   
--   <xref:System.Runtime.Serialization>  
+- <xref:System.Runtime.Serialization>  
   
 ## <a name="see-also"></a>関連項目
 

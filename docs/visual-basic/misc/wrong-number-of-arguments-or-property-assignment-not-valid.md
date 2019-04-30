@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID450
 ms.assetid: 61700dd4-ebd0-4088-b439-2cd1ef9fc8f4
 ms.openlocfilehash: 3da7d55bdf58bb11d65bdb064a39ac4c7e9f1a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022468"
 ---
 # <a name="wrong-number-of-arguments-or-property-assignment-not-valid"></a>引数の数か、プロパティの割り当てが正しくありません
 正しくない割り当てを行おうとしました。  

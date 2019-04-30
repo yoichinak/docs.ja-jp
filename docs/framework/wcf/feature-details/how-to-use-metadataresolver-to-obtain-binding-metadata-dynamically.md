@@ -3,11 +3,11 @@ title: '方法: MetadataResolver を使用してバインディング メタデ�
 ms.date: 03/30/2017
 ms.assetid: 56ffcb99-fff0-4479-aca0-e3909009f605
 ms.openlocfilehash: 3fe09699304de42ed00312f50f3b9e0edb20615d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047556"
 ---
 # <a name="how-to-use-metadataresolver-to-obtain-binding-metadata-dynamically"></a>方法: MetadataResolver を使用してバインディング メタデータを動的に取得する
 ここでは、<xref:System.ServiceModel.Description.MetadataResolver> クラスを使用してバインディング メタデータを動的に取得する方法を示します。  

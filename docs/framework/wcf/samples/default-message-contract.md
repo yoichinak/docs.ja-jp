@@ -6,10 +6,10 @@ helpviewer_keywords:
 ms.assetid: 5a200b78-1a46-4104-b7fb-da6dbab33893
 ms.openlocfilehash: 267cdffdc532aaa2b31de835c31d23e93aca8c54
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975937"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990341"
 ---
 # <a name="default-message-contract"></a>既定のメッセージ コントラクト
 既定のメッセージ コントラクトのサンプルでは、ユーザー定義のカスタム メッセージをサービス操作に渡したり、サービス操作から渡されたりするサービスを示します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)型指定されたサービスとしての電卓インターフェイスを実装します。 加算、減算、乗算、および除算で使用されるため、個々 のサービス操作ではなく、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、このサンプルには、オペランドと演算子の両方が含まれていますを返すカスタム メッセージが渡されます。算術計算の結果。  

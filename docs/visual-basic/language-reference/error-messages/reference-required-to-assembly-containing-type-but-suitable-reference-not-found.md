@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30969
 ms.assetid: 1b29dbc5-8268-45fe-bfc2-b2070a5c845c
 ms.openlocfilehash: 9868598b32ae17ef5bfb5dd738f8a7541515f5ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013748"
 ---
 # <a name="reference-required-to-assembly-assemblyidentity-containing-type-typename-but-a-suitable-reference-could-not-be-found-due-to-ambiguity-between-projects-projectname1-and-projectname2"></a>参照アセンブリが必要です '\<assemblyidentity >' 型を含む'\<typename >'、プロジェクトの間であいまいさのため、適切な参照が見つかりませんでしたが、\<projectname1 >' と '\<projectname2 >'
 プロジェクト外で定義されているクラス、構造体、インターフェイス、列挙型、デリゲートなどの型が式で使用されています。 しかし、その型を定義する複数のアセンブリへのプロジェクト参照があります。  

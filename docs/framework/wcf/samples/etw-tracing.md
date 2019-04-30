@@ -3,11 +3,11 @@ title: ETW トレース
 ms.date: 03/30/2017
 ms.assetid: ac99a063-e2d2-40cc-b659-d23c2f783f92
 ms.openlocfilehash: a5c2f173978f514aa4627caa476a595d8d45d4f9
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613747"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051924"
 ---
 # <a name="etw-tracing"></a>ETW トレース
 このサンプルでは、Event Tracing for Windows (ETW) と、このサンプルに用意されている `ETWTraceListener` を使用して、エンドツーエンド (E2E) のトレースを実装する方法を示します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md) ETW トレースが含まれています。  

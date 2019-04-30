@@ -3,11 +3,11 @@ title: WCF サービスの簡略化された構成
 ms.date: 03/30/2017
 ms.assetid: 1e39ec25-18a3-4fdc-b6a3-9dfafbd60112
 ms.openlocfilehash: 47af8dcba35ba31f25597c946596b0cbcac93b4d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304260"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007852"
 ---
 # <a name="simplified-configuration-for-wcf-services"></a>WCF サービスの簡略化された構成
 このサンプルでは、一般的なサービスおよび Windows Communication Foundation (WCF) を使用してクライアントを実装して構成する方法を示します。 このサンプルは、他のすべての基本的な技術サンプルの基礎になります。  
@@ -63,11 +63,11 @@ ms.locfileid: "59304260"
   
 3. 次の手順に従ってサンプルを実行します。  
   
-    1.  右クリックして、**サービス**順に選択して**スタートアップ プロジェクトとして設定**、キーを押します**Ctrl + F5**します。  
+    1. 右クリックして、**サービス**順に選択して**スタートアップ プロジェクトとして設定**、キーを押します**Ctrl + F5**します。  
   
-    2.  コンソール出力でサービスが動作していることが確認されるまで待機します。  
+    2. コンソール出力でサービスが動作していることが確認されるまで待機します。  
   
-    3.  右クリックして、**クライアント**順に選択して**スタートアップ プロジェクトとして設定**、キーを押します**Ctrl + F5**します。  
+    3. 右クリックして、**クライアント**順に選択して**スタートアップ プロジェクトとして設定**、キーを押します**Ctrl + F5**します。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

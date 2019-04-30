@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], features for
 ms.assetid: 7bf37ccb-5d09-4eae-9661-929582aeb259
 ms.openlocfilehash: 4dbe2e8257bfc92f354d032d7bb6e2ba7a693075
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206942"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052431"
 ---
 # <a name="documents"></a>ドキュメント
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] には、多彩なアプリケーション開発コンポーネントが用意されており、開発者は、こうしたコンポーネントを使って、高度なドキュメント機能を備えた読みやすいアプリケーションを構築できます。 また、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、機能と品質の向上を実現するだけでなく、ドキュメントのパッケージ化、セキュリティ、および保存を対象としたシンプルな管理サービスも提供します。  

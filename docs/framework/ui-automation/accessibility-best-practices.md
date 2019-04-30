@@ -6,11 +6,11 @@ helpviewer_keywords:
 - accessibility, best practices for
 ms.assetid: e6d5cd98-21a3-4b01-999c-fb953556d0e6
 ms.openlocfilehash: a20ecb8fb8d2ea4efdd244c3460dc9c07e22b538
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033229"
 ---
 # <a name="accessibility-best-practices"></a>ユーザー補助のベスト プラクティス
 > [!NOTE]
@@ -78,9 +78,9 @@ ms.locfileid: "59074236"
   
  アプリケーションは、次のキーボード インターフェイスを備えている必要があります。  
   
--   ボタン、リンク、またはリスト ボックスなど、ユーザーが操作できるすべてのコントロールのタブ ストップ  
+- ボタン、リンク、またはリスト ボックスなど、ユーザーが操作できるすべてのコントロールのタブ ストップ  
   
--   論理的なタブの順序  
+- 論理的なタブの順序  
   
 <a name="Show_the_Keyboard_Focus"></a>   
 ### <a name="show-the-keyboard-focus"></a>キーボード フォーカスの表示  
@@ -90,11 +90,11 @@ ms.locfileid: "59074236"
   
  アプリケーションは、キーボード フォーカスで以下を行う必要があります。  
   
--   1 つの項目が常にキーボード フォーカスされている必要がある  
+- 1 つの項目が常にキーボード フォーカスされている必要がある  
   
--   キーボード フォーカスは明確に表示されている必要がある  
+- キーボード フォーカスは明確に表示されている必要がある  
   
--   選択項目またはフォーカスされた項目は視覚的に強調表示されている必要がある  
+- 選択項目またはフォーカスされた項目は視覚的に強調表示されている必要がある  
   
 <a name="Support_Navigation_Standards_and_Powerful_Navigation"></a>   
 ### <a name="support-navigation-standards-and-powerful-navigation-schemes"></a>ナビゲーションの標準と強力なナビゲーション スキームをサポートする  
@@ -102,11 +102,11 @@ ms.locfileid: "59074236"
   
  アプリケーションは、次のキーボード インターフェイスを備えている必要があります。  
   
--   すべてのコマンド、メニュー、およびコントロール用のショートカット キーと下線付きのアクセス キー  
+- すべてのコマンド、メニュー、およびコントロール用のショートカット キーと下線付きのアクセス キー  
   
--   重要なリンクへのキーボード ショートカット  
+- 重要なリンクへのキーボード ショートカット  
   
--   すべてのメニュー項目にアクセス キーがあり、すべてのボタンにアクセラレータ キーがあり、すべてのコマンドにアクセラレータ キーがある  
+- すべてのメニュー項目にアクセス キーがあり、すべてのボタンにアクセラレータ キーがあり、すべてのコマンドにアクセラレータ キーがある  
   
 <a name="Do_not_let_Mouse_Location_Interfere_with_Keyboard"></a>   
 ### <a name="do-not-let-mouse-location-interfere-with-keyboard-navigation"></a>マウスの位置がキーボード ナビゲーションと干渉しないようにする  

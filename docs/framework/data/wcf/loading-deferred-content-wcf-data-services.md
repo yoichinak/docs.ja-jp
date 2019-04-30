@@ -10,11 +10,11 @@ helpviewer_keywords:
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
 ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518007"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037129"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>遅延コンテンツの読み込み (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] の既定では、クエリが返すデータの量が制限されます。 その一方で、関連エンティティ、ページングされた応答データ、およびバイナリ データ ストリームを含む追加データをデータ サービスから必要に応じて明示的に読み込むことができます。 このトピックでは、このような遅延コンテンツをアプリケーションに読み込む方法について説明します。  
@@ -22,14 +22,14 @@ ms.locfileid: "59518007"
 ## <a name="related-entities"></a>関連エンティティ  
  クエリを実行すると、アドレス指定したエンティティ セット内のエンティティだけが返されます。 たとえば、Northwind データ サービスに対するクエリが `Customers` エンティティを返す場合、`Orders` と `Customers` の間にリレーションシップがあっても、既定では関連 `Orders` エンティティは返されません。 また、データ サービスでページングが有効になった場合は、以降のデータ ページをサービスから明示的に読み込む必要があります。 関連エンティティを読み込むには、2 つの方法があります。  
   
--   **一括読み込み**:使用することができます、`$expand`クエリが、エンティティへのアソシエーションによって関連付けられたエンティティを返すことを要求するクエリ オプション セットを要求するクエリ。 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> に対して <xref:System.Data.Services.Client.DataServiceQuery%601> メソッドを使用して、データ サービスに送信されるクエリに `$expand` オプションを追加します。 次の例に示すように、エンティティ セットをコンマで区切ることによって関連する複数のエンティティ セットを要求できます。 クエリによって要求されたすべてのエンティティは、1 つの応答で返されます。 次の例では、`Order_Details` および `Customers` が `Orders` エンティティ セットと一緒に返されます。  
+- **一括読み込み**:使用することができます、`$expand`クエリが、エンティティへのアソシエーションによって関連付けられたエンティティを返すことを要求するクエリ オプション セットを要求するクエリ。 <xref:System.Data.Services.Client.DataServiceQuery%601.Expand%2A> に対して <xref:System.Data.Services.Client.DataServiceQuery%601> メソッドを使用して、データ サービスに送信されるクエリに `$expand` オプションを追加します。 次の例に示すように、エンティティ セットをコンマで区切ることによって関連する複数のエンティティ セットを要求できます。 クエリによって要求されたすべてのエンティティは、1 つの応答で返されます。 次の例では、`Order_Details` および `Customers` が `Orders` エンティティ セットと一緒に返されます。  
   
      [!code-csharp[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#expandorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#ExpandOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#expandorderdetailsspecific)]  
   
      [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、`$expand` クエリ オプションを使用して、1 つのクエリに含めることができるエンティティ セットの数を 12 に制限しています。  
   
--   **明示的読み込み**:呼び出すことができます、<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>メソッドを<xref:System.Data.Services.Client.DataServiceContext>を関連エンティティを明示的に読み込むインスタンス。 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> メソッドへの各呼び出しによって、データ サービスへの個別の要求が作成されます。 次の例では、`Order_Details` エンティティの `Orders` を明示的に読み込みます。  
+- **明示的読み込み**:呼び出すことができます、<xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A>メソッドを<xref:System.Data.Services.Client.DataServiceContext>を関連エンティティを明示的に読み込むインスタンス。 <xref:System.Data.Services.Client.DataServiceContext.LoadProperty%2A> メソッドへの各呼び出しによって、データ サービスへの個別の要求が作成されます。 次の例では、`Order_Details` エンティティの `Orders` を明示的に読み込みます。  
   
      [!code-csharp[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_northwind_client/cs/source.cs#loadrelatedorderdetailsspecific)]
      [!code-vb[Astoria Northwind Client#LoadRelatedOrderDetailsSpecific](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_northwind_client/vb/source.vb#loadrelatedorderdetailsspecific)]  

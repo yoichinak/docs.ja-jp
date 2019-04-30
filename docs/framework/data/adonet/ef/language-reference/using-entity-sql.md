@@ -3,11 +3,11 @@ title: USING (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 20f58b8f-6070-4456-b7e8-5ff3d6269273
 ms.openlocfilehash: e14b7857a65898683939647c872c48d0b3fe458a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034097"
 ---
 # <a name="using-entity-sql"></a>USING (Entity SQL)
 クエリ式で使用する名前空間を指定します。  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - AddHandler statement [Visual Basic]
 ms.assetid: cfe69799-2a0f-42c0-a99e-09fed954da01
 ms.openlocfilehash: 1e8d8f512f163d82f074a5ad53fbb38a10904dfa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054303"
 ---
 # <a name="addhandler-statement"></a>AddHandler ステートメント
 実行時にイベントをイベント ハンドラーに関連付けます。  

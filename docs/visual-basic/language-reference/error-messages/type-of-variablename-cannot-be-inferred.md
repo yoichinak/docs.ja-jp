@@ -8,20 +8,20 @@ helpviewer_keywords:
 - BC30982
 ms.assetid: 741e85d9-a747-42ad-a1e1-a3f1928aaff5
 ms.openlocfilehash: e90e881546c12df2c8b19ff03a4d4c7304c4596c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052678"
 ---
 # <a name="type-of-variablename-cannot-be-inferred-because-the-loop-bounds-and-the-step-variable-do-not-widen-to-the-same-type"></a>型 '\<variablename >' ループの境界とステップの変数が同じ型に変換されないため、推論することはできません
 記述した、`For...Next`をコンパイラを推論できませんループ コントロール変数のデータ型を次の条件に当てはまるため、ループ。  
   
--   ループ コントロール変数のデータ型が `As` 句で指定されていません。  
+- ループ コントロール変数のデータ型が `As` 句で指定されていません。  
   
--   ループ境界とステップ変数に少なくとも 2 つのデータ型が含まれています。  
+- ループ境界とステップ変数に少なくとも 2 つのデータ型が含まれています。  
   
--   データ型の間で変換する標準変換が存在しません。  
+- データ型の間で変換する標準変換が存在しません。  
   
  そのため、コンパイラはループの制御変数のデータ型を推論できません。  
   
@@ -42,7 +42,7 @@ Dim n = 20
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   少なくとも 1 つに、他のユーザーに拡大変換する型は、ループの境界と必要に応じて、ステップの変数の型を変更します。 前の例では、変更の種類`stepVar`に`Integer`します。  
+- 少なくとも 1 つに、他のユーザーに拡大変換する型は、ループの境界と必要に応じて、ステップの変数の型を変更します。 前の例では、変更の種類`stepVar`に`Integer`します。  
   
     ```  
     Dim stepVar = 1  
@@ -54,7 +54,7 @@ Dim n = 20
     Dim stepVar As Integer = 1  
     ```  
   
--   ループの境界とステップの変数を適切な型に変換するのにには、明示的な変換関数を使用します。 前の例では、適用、`Val`関数を`stepVar`します。  
+- ループの境界とステップの変数を適切な型に変換するのにには、明示的な変換関数を使用します。 前の例では、適用、`Val`関数を`stepVar`します。  
   
     ```  
     For i = 1 To 10 Step Val(stepVar)  

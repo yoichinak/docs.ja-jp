@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c4577590-7b12-42e1-84a6-95aa2562727e
 ms.openlocfilehash: 3dcc6f763acfff076bb03076a17e3a8f8916267c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033567"
 ---
 # <a name="implementing-business-logic-linq-to-sql"></a>ビジネス ロジックの実装 (LINQ to SQL)
 このトピックの「ビジネス ロジック」とは、データベースでデータを挿入、更新、または削除される前にデータに適用されるカスタム規則または検証テストのことです。 ビジネス ロジックは、「ビジネス ルール」または「ドメイン ロジック」とも呼ばれます。 n 層アプリケーションでは、通常、論理層として設計されるため、プレゼンテーション層やデータ アクセス層から独立して変更できます。 データベースのデータを更新、挿入、または削除する前または後に、データ アクセス層によってビジネス ロジックを呼び出すことができます。  

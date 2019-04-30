@@ -14,11 +14,11 @@ helpviewer_keywords:
 - DefaultDrawingAttributes property [WPF]
 ms.assetid: 66a3129d-9577-43eb-acbd-56c147282016
 ms.openlocfilehash: 0d0796eae469f8a40e01e3de02c00149eb3f00c7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374675"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051274"
 ---
 # <a name="collect-ink"></a>インクを収集します。
 

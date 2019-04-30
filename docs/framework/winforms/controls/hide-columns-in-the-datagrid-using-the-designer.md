@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: a81c38e6-2527-426a-bcb1-be691403be04
 ms.openlocfilehash: aa81eb7470b818fa2b65200503e5ce65b467c0f2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324449"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011295"
 ---
 # <a name="how-to-hide-columns-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列を非表示にする
 Windows フォームの <xref:System.Windows.Forms.DataGridView> コントロールで使用できる列の一部のみを表示したいときがあります。 たとえば、従業員を表示するたい給与の列には他のユーザーが非表示の管理資格情報を持つユーザーをします。 または、その一部のみを表示する多くの列を含むデータ ソースにコントロールをバインドすることがあります。 この場合、非表示にするのではなく、表示する必要のない列は通常削除されます。 詳細については、「[方法 :削除列で、Windows フォーム DataGridView コントロールのデザイナーを使用してを追加および](add-and-remove-columns-in-the-datagrid-using-the-designer.md)します。  

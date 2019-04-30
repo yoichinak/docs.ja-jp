@@ -3,20 +3,20 @@ title: 型システム (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 818a505b-a196-41dd-aaac-2ccd5f7a2f1a
 ms.openlocfilehash: 0afeffd3ad180d6cc6175010140754e279988b38
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034105"
 ---
 # <a name="type-system-entity-sql"></a>型システム (Entity SQL)
 [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 型の数をサポートしています。  
   
--   `Int32` や `String.` などのプリミティブ型 (単純型)。  
+- `Int32` や `String.` などのプリミティブ型 (単純型)。  
   
--   <xref:System.Data.Metadata.Edm.EntityType>、<xref:System.Data.Metadata.Edm.ComplexType>、<xref:System.Data.Metadata.Edm.RelationshipType> など、スキーマで定義される標準型。  
+- <xref:System.Data.Metadata.Edm.EntityType>、<xref:System.Data.Metadata.Edm.ComplexType>、<xref:System.Data.Metadata.Edm.RelationshipType> など、スキーマで定義される標準型。  
   
--   <xref:System.Data.Metadata.Edm.CollectionType>、<xref:System.Data.Metadata.Edm.RowType>、<xref:System.Data.Metadata.Edm.RefType> など、明示的にはスキーマで定義されない匿名型。  
+- <xref:System.Data.Metadata.Edm.CollectionType>、<xref:System.Data.Metadata.Edm.RowType>、<xref:System.Data.Metadata.Edm.RefType> など、明示的にはスキーマで定義されない匿名型。  
   
  このセクションでは、定義されていないスキーマで明示的には、Entity SQL でサポートされている匿名型について説明します。 プリミティブ型および標準型については、次を参照してください。[概念モデルの型 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#conceptual-model-types-csdl)します。  
   
@@ -31,13 +31,13 @@ ms.locfileid: "59134564"
   
  [!INCLUDE[esql](../../../../../../includes/esql-md.md)] では、参照の構築、分解、およびナビゲートを行うための次の演算子がサポートされています。  
   
--   [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
+- [REF](../../../../../../docs/framework/data/adonet/ef/language-reference/ref-entity-sql.md)  
   
--   [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)  
+- [CREATEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/createref-entity-sql.md)  
   
--   [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
+- [KEY](../../../../../../docs/framework/data/adonet/ef/language-reference/key-entity-sql.md)  
   
--   [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
+- [DEREF](../../../../../../docs/framework/data/adonet/ef/language-reference/deref-entity-sql.md)  
   
  メンバー アクセス (ドット) 演算子 (`.`) を使用して参照によるナビゲーションを行うことができます。 次のコード例では、r (参照) プロパティによるナビゲーションで Order の Id プロパティを取得します。  
   

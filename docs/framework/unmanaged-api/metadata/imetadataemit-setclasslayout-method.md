@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 80bf9de3eb274bf536b2794ba2ed14e7e9b553cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050052"
 ---
 # <a name="imetadataemitsetclasslayout-method"></a>IMetaDataEmit::SetClassLayout メソッド
 前回の呼び出しで定義されているクラスのフィールドのレイアウトが完了すると[DefineTypeDef メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetypedef-method.md)します。  
@@ -56,9 +56,9 @@ HRESULT SetClassLayout (
   
  ただし、フィールドをアンマネージ コードが使用する配置に従ってレイアウトたい場合があります。 この場合、レイアウトがシーケンシャルまたは明示的のいずれかと呼び出しを選択`SetClassLayout`フィールドのレイアウトを完了します。  
   
--   シーケンシャル レイアウト:パッキング サイズを指定します。 本来のサイズまたはパッキング サイズより小さなオフセット フィールドのいずれかの結果のいずれかに従って、フィールドが配置されます。 設定`rFieldOffsets`と`ulClassSize`をゼロにします。  
+- シーケンシャル レイアウト:パッキング サイズを指定します。 本来のサイズまたはパッキング サイズより小さなオフセット フィールドのいずれかの結果のいずれかに従って、フィールドが配置されます。 設定`rFieldOffsets`と`ulClassSize`をゼロにします。  
   
--   明示的なレイアウト:各フィールドのオフセットを指定するか、クラスのサイズとパッキング サイズを指定します。  
+- 明示的なレイアウト:各フィールドのオフセットを指定するか、クラスのサイズとパッキング サイズを指定します。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

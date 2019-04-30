@@ -5,20 +5,20 @@ f1_keywords:
 - vbrID10
 ms.assetid: de6713a6-51d7-4edb-8515-d5fb544e2091
 ms.openlocfilehash: c74d9524ff64101ba6002e133b93c9b80e8f50a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982450"
 ---
 # <a name="this-array-is-fixed-or-temporarily-locked-visual-basic"></a>この配列は固定か、または一時的にロックされています。(Visual Basic)
 このエラーは、次の考えられる原因があります。  
   
--   使用して`ReDim`固定サイズの配列の要素の数を変更します。  
+- 使用して`ReDim`固定サイズの配列の要素の数を変更します。  
   
--   1 つの要素に渡された引数としてプロシージャをモジュール レベル動的配列の次元。 防ぐために、配列がロックされている要素が渡された場合、プロシージャ内での参照パラメーターのメモリの割り当てを解除します。  
+- 1 つの要素に渡された引数としてプロシージャをモジュール レベル動的配列の次元。 防ぐために、配列がロックされている要素が渡された場合、プロシージャ内での参照パラメーターのメモリの割り当てを解除します。  
   
--   値を代入しようとして、`Variant`配列を含む変数が、`Variant`現在ロックされています。  
+- 値を代入しようとして、`Variant`配列を含む変数が、`Variant`現在ロックされています。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   

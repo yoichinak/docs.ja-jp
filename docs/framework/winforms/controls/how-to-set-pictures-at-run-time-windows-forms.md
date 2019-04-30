@@ -14,18 +14,18 @@ helpviewer_keywords:
 - PictureBox control [Windows Forms], adding pictures
 ms.assetid: 18ca41d0-68a5-4660-985e-a6c1fbc01d76
 ms.openlocfilehash: 8ed3ba9050a9117a53b5f4f1cccd26381f55ab32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59073599"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013232"
 ---
 # <a name="how-to-set-pictures-at-run-time-windows-forms"></a>方法: (Windows フォーム) の実行時にピクチャを設定します。
 Windows フォームが表示されるイメージをプログラムで設定できる<xref:System.Windows.Forms.PictureBox>コントロール。  
   
 ### <a name="to-set-a-picture-programmatically"></a>画像をプログラムで設定するには  
   
--   設定、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティを使用して、<xref:System.Drawing.Image.FromFile%2A>のメソッド、<xref:System.Drawing.Image>クラス。  
+- 設定、<xref:System.Windows.Forms.PictureBox.Image%2A>プロパティを使用して、<xref:System.Drawing.Image.FromFile%2A>のメソッド、<xref:System.Drawing.Image>クラス。  
   
      次の例では、イメージの場所に設定されているパスは、My Documents フォルダーです。 これは、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのディレクトリが含まれていると想定できます。 また、このようにすることで、最小限のシステム アクセス レベルしか持たないユーザーもアプリケーションを安全に実行できるようになります。 次の例でフォームを前提としています、<xref:System.Windows.Forms.PictureBox>コントロールが既に追加されています。  
   
@@ -67,7 +67,7 @@ Windows フォームが表示されるイメージをプログラムで設定で
   
 ### <a name="to-clear-a-graphic"></a>グラフィックをクリアするには  
   
--   最初に、イメージで使用されているメモリを解放し、グラフィックをオフにします。 メモリ管理が問題になる場合は、ガベージ コレクションがメモリを後で解放されます。  
+- 最初に、イメージで使用されているメモリを解放し、グラフィックをオフにします。 メモリ管理が問題になる場合は、ガベージ コレクションがメモリを後で解放されます。  
   
     ```vb  
     If Not (PictureBox1.Image Is Nothing) Then  

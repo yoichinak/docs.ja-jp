@@ -10,15 +10,14 @@ helpviewer_keywords:
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
 ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57710460"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011919"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>イメージ、ビットマップ、アイコン、およびメタファイルの操作
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] は、ラスター イメージを操作するための `Bitmap` クラスと、ベクター イメージを操作するための `Metafile` クラスを提供します。 
-  `Bitmap` クラスおよび `Metafile` クラスは、どちらも `Image` クラスから継承されます。  
+[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] は、ラスター イメージを操作するための `Bitmap` クラスと、ベクター イメージを操作するための `Metafile` クラスを提供します。 `Bitmap` クラスおよび `Metafile` クラスは、どちらも `Image` クラスから継承されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: 既存のビットマップを画面に描画します。](how-to-draw-an-existing-bitmap-to-the-screen.md)  
@@ -34,8 +33,7 @@ ms.locfileid: "57710460"
  回転、反転、および傾斜したイメージを描画する方法について説明します。  
   
  [方法: 画質を制御する補間モードを使用してスケーリング時](how-to-use-interpolation-mode-to-control-image-quality-during-scaling.md)  
- 
-  <xref:System.Drawing.Drawing2D.InterpolationMode> 列挙体を使用してイメージ品質を変更する方法を示しています。  
+ <xref:System.Drawing.Drawing2D.InterpolationMode> 列挙体を使用してイメージ品質を変更する方法を示しています。  
   
  [方法: サムネイル イメージを作成します。](how-to-create-thumbnail-images.md)  
  サムネイル イメージを作成する方法について説明しています。  

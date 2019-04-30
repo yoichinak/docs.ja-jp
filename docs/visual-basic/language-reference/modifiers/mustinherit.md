@@ -11,11 +11,11 @@ helpviewer_keywords:
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
 ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816565"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053939"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 クラスを基底クラスとしてのみ使用できることと、オブジェクトを直接作成できないことを指定します。  
@@ -29,9 +29,9 @@ ms.locfileid: "58816565"
   
 ## <a name="rules"></a>ルール  
   
--   **宣言コンテキスト。** 使用することができます`MustInherit`でのみ、`Class`ステートメント。  
+- **宣言コンテキスト。** 使用することができます`MustInherit`でのみ、`Class`ステートメント。  
   
--   **結合された修飾子。** 指定することはできません`MustInherit`と共に`NotInheritable`同じ宣言内。  
+- **結合された修飾子。** 指定することはできません`MustInherit`と共に`NotInheritable`同じ宣言内。  
   
 ## <a name="example"></a>例  
  次の例は、強制的な継承と強制的なオーバーライドを示しています。 基本クラス`shape`変数を定義します`acrossLine`します。 クラスは、`circle`と`square`から派生`shape`します。 定義を継承`acrossLine`、関数を定義する必要がありますが、`area`計算は図形の種類ごとに異なるためです。  

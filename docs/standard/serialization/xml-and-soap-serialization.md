@@ -10,11 +10,11 @@ helpviewer_keywords:
 - serialization
 ms.assetid: 832ac524-21bc-419a-a27b-ca8bfc45840f
 ms.openlocfilehash: d9dc68d8e7eced031af404aaec20784573c9930a
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028240"
 ---
 # <a name="xml-and-soap-serialization"></a>XML シリアル化および SOAP シリアル化
 
@@ -74,8 +74,7 @@ SOAP エンコード済みのシリアル化の制御に使用する属性を示
 XML シリアル化を制御する最上位の構成要素です。
 
 [\<dateTimeSerialization> 要素](datetimeserialization-element.md)  
-
-  <xref:System.DateTime> オブジェクトのシリアル化モードを制御します。
+<xref:System.DateTime> オブジェクトのシリアル化モードを制御します。
 
 [\<schemaImporterExtensions> 要素](schemaimporterextensions-element.md)  
 <xref:System.Xml.Serialization.XmlSchemaImporter> クラスによって使用される型を含みます。

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - SpecialDirectories object
 ms.assetid: d5f375c3-094b-4011-8438-17a31bc6df2b
 ms.openlocfilehash: f299792204c5a8db0e82ca20596eb1a9a2dd6623
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054485"
 ---
 # <a name="mycomputerfilesystemspecialdirectories-object"></a>My.Computer.FileSystem.SpecialDirectories オブジェクト
 一般的に参照されるディレクトリにアクセスするためのプロパティを提供します。  

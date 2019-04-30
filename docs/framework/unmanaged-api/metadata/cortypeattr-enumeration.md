@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 43e7c973ee22350f26b4f86bcc8b4c4c727291ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087288"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045189"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 列挙型
 メタデータ型を示す値が格納されます。  

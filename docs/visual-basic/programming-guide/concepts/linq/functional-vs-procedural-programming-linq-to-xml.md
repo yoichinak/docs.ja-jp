@@ -3,30 +3,30 @@ title: 関数型プログラミングと手続き型プログラミング (LINQ 
 ms.date: 07/20/2015
 ms.assetid: ea1015a5-d4c8-4d79-8e1e-ba17a40a4f39
 ms.openlocfilehash: 892c6b7113fe1efdb8e855749c86ac5f9da8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813459"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028396"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-visual-basic"></a>関数型プログラミングと手続き型プログラミング (LINQ to XML) (Visual Basic)
 XML アプリケーションには、次のようにさまざまな種類があります。  
   
--   ソース XML ドキュメントを受け取り、そのドキュメントとは構造の異なる新しい XML ドキュメントを生成するアプリケーション  
+- ソース XML ドキュメントを受け取り、そのドキュメントとは構造の異なる新しい XML ドキュメントを生成するアプリケーション  
   
--   ソース XML ドキュメントを受け取り、HTML や CSV テキスト ファイルなどのまったく異なる形式のドキュメントを生成するアプリケーション  
+- ソース XML ドキュメントを受け取り、HTML や CSV テキスト ファイルなどのまったく異なる形式のドキュメントを生成するアプリケーション  
   
--   ソース XML ドキュメントを受け取り、データベースにレコードを挿入するアプリケーション  
+- ソース XML ドキュメントを受け取り、データベースにレコードを挿入するアプリケーション  
   
--   データベースなどの別のソースからデータを受け取り、そのデータから XML ドキュメントを作成するアプリケーション  
+- データベースなどの別のソースからデータを受け取り、そのデータから XML ドキュメントを作成するアプリケーション  
   
  XML アプリケーションには他にも種類がありますが、上記のアプリケーションは XML プログラマが実装する必要がある代表的な機能です。  
   
  上記のすべてのアプリケーションで、開発者は 2 つの対照的な方法を使用できます。  
   
--   宣言型の方法を使用する関数型構築  
+- 宣言型の方法を使用する関数型構築  
   
--   プロシージャ コードを使用するメモリ内の XML ツリーの変更  
+- プロシージャ コードを使用するメモリ内の XML ツリーの変更  
   
  LINQ to XML は両方の方法をサポートします。  
   

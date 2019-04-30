@@ -9,11 +9,11 @@ helpviewer_keywords:
 - menus
 ms.assetid: b41cc5a3-cc59-4996-aa3c-8dd9c17d3c90
 ms.openlocfilehash: da1b76a7019f364e7463a8345aa80d9a9bd6089e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012785"
 ---
 # <a name="mainmenu-component-overview-windows-forms"></a>MainMenu コンポーネントの概要 (Windows フォーム)
 > [!IMPORTANT]

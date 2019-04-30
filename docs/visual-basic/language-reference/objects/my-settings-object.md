@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
 ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840368"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050312"
 ---
 # <a name="mysettings-object"></a>My.Settings オブジェクト
 プロパティと、アプリケーションの設定にアクセスするためのメソッドを提供します。  
@@ -25,13 +25,13 @@ ms.locfileid: "58840368"
   
  各設定は、**名前**、**型**、**スコープ**と**値**、これらの設定を確認する方法各設定にアクセスするプロパティ表示されます、`My.Settings`オブジェクト。  
   
--   **名前**プロパティの名前を指定します。  
+- **名前**プロパティの名前を指定します。  
   
--   **型**プロパティの種類を決定します。  
+- **型**プロパティの種類を決定します。  
   
--   **スコープ**プロパティは読み取り専用のかどうかを示します。 値が場合**アプリケーション**、プロパティは読み取り専用です。 値の場合**ユーザー**、プロパティが読み取り/書き込みです。  
+- **スコープ**プロパティは読み取り専用のかどうかを示します。 値が場合**アプリケーション**、プロパティは読み取り専用です。 値の場合**ユーザー**、プロパティが読み取り/書き込みです。  
   
--   **値**はプロパティの既定値です。  
+- **値**はプロパティの既定値です。  
   
 ## <a name="methods"></a>メソッド  
   

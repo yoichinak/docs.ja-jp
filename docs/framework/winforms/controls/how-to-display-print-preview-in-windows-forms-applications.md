@@ -11,11 +11,11 @@ helpviewer_keywords:
 - examples [Windows Forms], print preview
 ms.assetid: e394134c-0886-4517-bd8d-edc4a3749eb5
 ms.openlocfilehash: 22247c941eff575f0f3e5683e46376054ba13bb5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154363"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013415"
 ---
 # <a name="how-to-display-print-preview-in-windows-forms-applications"></a>方法: Windows フォーム アプリケーションに印刷プレビューを表示する
 使用することができます、<xref:System.Windows.Forms.PrintPreviewDialog>印刷する前に多くの場合、ドキュメントを表示するユーザーを有効にするコントロール。  
@@ -29,7 +29,7 @@ ms.locfileid: "59154363"
   
 ### <a name="to-view-pages-using-the-printpreviewdialog-control"></a>PrintPreviewDialog コントロールを使用してページを表示するには  
   
--   <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> メソッドを使用してダイアログ ボックスを表示し、使用する <xref:System.Drawing.Printing.PrintDocument> を指定します。  
+- <xref:System.Windows.Forms.CommonDialog.ShowDialog%2A> メソッドを使用してダイアログ ボックスを表示し、使用する <xref:System.Drawing.Printing.PrintDocument> を指定します。  
   
      次のコード例で、<xref:System.Windows.Forms.Button>コントロールの<xref:System.Windows.Forms.Control.Click>イベント ハンドラーのインスタンスを開き、<xref:System.Windows.Forms.PrintPreviewDialog>コントロール。 印刷ドキュメントがで指定された、<xref:System.Windows.Forms.PrintDialog.Document%2A>プロパティ。 次の例では、印刷ドキュメントは指定されません。  
   

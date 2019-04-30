@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, custom bindings
 ms.assetid: 491d1705-eb29-43c2-a44c-c0cf996f74eb
 ms.openlocfilehash: 1a8d99e5d2bd21a74318718f43b5d1c091ed073e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047543"
 ---
 # <a name="how-to-set-a-max-clock-skew"></a>方法: 時刻のずれの最大値を設定する
 時刻が重要な要素となる機能は、2 台のコンピューターで時刻の設定が異なっていると失敗する可能性があります。 この可能性を減らすには、`MaxClockSkew` プロパティを <xref:System.TimeSpan> に設定します。 このプロパティは、次の 2 つのクラスで使用できます。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, automated testing
 ms.assetid: 3a0435c0-a791-4ad7-ba92-a4c1d1231fde
 ms.openlocfilehash: ad5a14ed3baab5b25cb1ed15271474580faaf176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183977"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033151"
 ---
 # <a name="using-ui-automation-for-automated-testing"></a>UI オートメーションによる自動テスト
 > [!NOTE]
@@ -61,15 +61,15 @@ ms.locfileid: "59183977"
 ### <a name="programmatic-access"></a>プログラムによるアクセス  
  プログラムによるアクセスでは、従来のマウス入力やキーボード入力によって公開される対話やエクスペリエンスをコードによって模倣する機能が提供されます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] は、5 つのコンポーネントにより、プログラムによるアクセスを有効にします。  
   
--   [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]の構造全体にわたってナビゲーションを容易にします。 ツリーは、hWnd のツリーのコレクションから構築されます。 詳細については、「 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」を参照してください。  
+- [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリーは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]の構造全体にわたってナビゲーションを容易にします。 ツリーは、hWnd のツリーのコレクションから構築されます。 詳細については、「 [UI Automation Tree Overview](../../../docs/framework/ui-automation/ui-automation-tree-overview.md)」を参照してください。  
   
--   オートメーション要素は、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]の個々のコンポーネントです。 通常、これらは hWnd よりも細かい単位です。 詳細については、「 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)」を参照してください。  
+- オートメーション要素は、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)]の個々のコンポーネントです。 通常、これらは hWnd よりも細かい単位です。 詳細については、「 [UI Automation Control Types Overview](../../../docs/framework/ui-automation/ui-automation-control-types-overview.md)」を参照してください。  
   
--   オートメーション プロパティは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素に関する具体的な情報を提供します。 詳細については、「 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)」を参照してください。  
+- オートメーション プロパティは、 [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] 要素に関する具体的な情報を提供します。 詳細については、「 [UI Automation Properties Overview](../../../docs/framework/ui-automation/ui-automation-properties-overview.md)」を参照してください。  
   
--   コントロール パターンは、コントロールが持つ機能の特定の側面を定義します。プロパティ、メソッド、イベント、および構造体の情報で構成することができます。 詳細については、「 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)」を参照してください。  
+- コントロール パターンは、コントロールが持つ機能の特定の側面を定義します。プロパティ、メソッド、イベント、および構造体の情報で構成することができます。 詳細については、「 [UI Automation Control Patterns Overview](../../../docs/framework/ui-automation/ui-automation-control-patterns-overview.md)」を参照してください。  
   
--   オートメーション イベントは、イベント通知と情報を提供します。 詳細については、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」を参照してください。  
+- オートメーション イベントは、イベント通知と情報を提供します。 詳細については、「 [UI Automation Events Overview](../../../docs/framework/ui-automation/ui-automation-events-overview.md)」を参照してください。  
   
 <a name="Key_properties_critical_to_test_automation"></a>   
 ### <a name="key-properties-for-test-automation"></a>自動テストの主要なプロパティ  
@@ -103,9 +103,9 @@ ms.locfileid: "59183977"
 ## <a name="related-tools-and-technologies"></a>関連ツールと関連技術  
  複数の関連ツールや関連技術で、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を使用した自動テストがサポートされています。  
   
--   Inspect.exe は、[!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]収集するために使用できるアプリケーション[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロバイダーとクライアントの開発とデバッグの両方の情報。 含まれている Inspect.exe、[!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]します。  
+- Inspect.exe は、[!INCLUDE[TLA#tla_gui](../../../includes/tlasharptla-gui-md.md)]収集するために使用できるアプリケーション[!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]プロバイダーとクライアントの開発とデバッグの両方の情報。 含まれている Inspect.exe、[!INCLUDE[TLA#tla_winfxsdk](../../../includes/tlasharptla-winfxsdk-md.md)]します。  
   
--   MSAABridge は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] クライアントに対して [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 情報を公開します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] と [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] の間に継続性を持たせる主な目的は、既存の [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] クライアントが [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を実装済みの任意のフレームワークと対話できるようにすることです。  
+- MSAABridge は、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] クライアントに対して [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] 情報を公開します。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] と [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] の間に継続性を持たせる主な目的は、既存の [!INCLUDE[TLA2#tla_aa](../../../includes/tla2sharptla-aa-md.md)] クライアントが [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]を実装済みの任意のフレームワークと対話できるようにすることです。  
   
 <a name="Security"></a>   
 ## <a name="security"></a>セキュリティ  

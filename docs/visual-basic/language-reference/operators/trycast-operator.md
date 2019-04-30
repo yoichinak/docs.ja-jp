@@ -8,11 +8,11 @@ helpviewer_keywords:
 - TryCast keyword [Visual Basic]
 ms.assetid: d1ef5d47-fef4-491e-b014-1d910628f65c
 ms.openlocfilehash: c0eea4565d5040bb00743fc7864ac15b0fccdea9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831593"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013466"
 ---
 # <a name="trycast-operator-visual-basic"></a>TryCast 演算子 (Visual Basic)
 例外をスローしない型変換操作について説明します。  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - events [WPF], tablet pen
 ms.assetid: 577835be-b145-4226-8570-1d309e9b3901
 ms.openlocfilehash: 68003943041fe0ba405eff1236c43a8e7e9c2b71
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051677"
 ---
 # <a name="the-ink-object-model-windows-forms-and-com-versus-wpf"></a>インク オブジェクト モデル:Windows フォームおよび COM と WPF の比較
 
@@ -85,20 +85,20 @@ ms.locfileid: "57356833"
 [!code-vb[WinFormWPFInk#LoadWinforms](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WinformWPFInk/VisualBasic/Module1.vb#loadwinforms)]
 ## <a name="events-from-the-tablet-pen"></a>タブレット ペンからのイベント  
 
- [Microsoft.Ink.InkOverlay](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))、 [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))、および[Microsoft.Ink.InkPicture](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583740(v=vs.90))プラットフォームは Windows フォームおよび COM にイベントを受け取るときに、ユーザーペンのデータを入力します。 [Microsoft.Ink.InkOverlay](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))または[Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))はウィンドウやコントロールにアタッチされ、タブレット入力データによって発生したイベントにサブスクライブできます。 これらのイベントが発生するスレッドは、マウス、ペンを使用して、イベントが発生したかどうかに依存またはプログラムを使用します。 これらのイベントに関連スレッド処理の詳細については、[一般的なスレッド処理の考慮事項](/windows/desktop/tablet/general-threading-considerations)と[にイベントが起動できるスレッド](/windows/desktop/tablet/threads-on-which-an-event-can-fire)を参照してください。  
+ [Microsoft.Ink.InkOverlay](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))、 [Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))、および[Microsoft.Ink.InkPicture](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583740(v=vs.90))プラットフォームは Windows フォームおよび COM にイベントを受け取るときに、ユーザーペンのデータを入力します。 [Microsoft.Ink.InkOverlay](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms552322(v=vs.90))または[Microsoft.Ink.InkCollector](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms583683(v=vs.90))はウィンドウやコントロールにアタッチされ、タブレット入力データによって発生したイベントにサブスクライブできます。 これらのイベントが発生するスレッドは、マウス、ペンを使用して、イベントが発生したかどうかに依存またはプログラムを使用します。 これらのイベントに関連スレッド処理の詳細については、次を参照してください。[一般的なスレッド処理の考慮事項](/windows/desktop/tablet/general-threading-considerations)と[にイベントが起動できるスレッド](/windows/desktop/tablet/threads-on-which-an-event-can-fire)します。  
   
- Windows Presentation Foundation のプラットフォームで、<xref:System.Windows.UIElement>クラスのペン入力イベントがあります。 これは、すべてのコントロールがスタイラス イベントの完全なセットを公開していることを意味します。  スタイラス イベントがあるトンネルとバブル イベントのペアし、アプリケーションのスレッドで常に発生します。  詳細については、[ルーティング イベントの概要](routed-events-overview.md)を参照してください。  
+ Windows Presentation Foundation のプラットフォームで、<xref:System.Windows.UIElement>クラスのペン入力イベントがあります。 これは、すべてのコントロールがスタイラス イベントの完全なセットを公開していることを意味します。  スタイラス イベントがあるトンネルとバブル イベントのペアし、アプリケーションのスレッドで常に発生します。  詳細については、次を参照してください。[ルーティング イベントの概要](routed-events-overview.md)します。  
   
  次の図は、スタイラス イベントを発生させるクラスのオブジェクト モデルを比較します。 Windows Presentation Foundation オブジェクト モデルには、バブル イベント、のみであり、トンネリング イベント対応ではありませんが表示されます。  
   
  ![WPF と Winforms のスタイラス イベントのダイアグラム。](./media/ink-stylusevents.png "Ink_StylusEvents")  
   
 ## <a name="pen-data"></a>ペン データ  
- 3 つすべてのプラットフォームは、インターセプト、タブレット ペン由来するデータを操作する方法を提供します。  Windows フォームおよび COM のプラットフォームで、作成してこれは、 [Microsoft.StylusInput.RealTimeStylus](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms585724(v=vs.90))、ウィンドウやコントロールをそれにアタッチしを実装するクラスを作成、 [Microsoft.StylusInput.IStylusSyncPlugin](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms575201(v=vs.90))または[Microsoft.StylusInput.IStylusAsyncPlugin](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms575194(v=vs.90))インターフェイス。 カスタム プラグインがプラグインのコレクションに追加し、 [Microsoft.StylusInput.RealTimeStylus](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms585724(v=vs.90))します。 このオブジェクト モデルの詳細については、[StylusInput Api のアーキテクチャ](/windows/desktop/tablet/architecture-of-the-stylusinput-apis)を参照してください。  
+ 3 つすべてのプラットフォームは、インターセプト、タブレット ペン由来するデータを操作する方法を提供します。  Windows フォームおよび COM のプラットフォームで、作成してこれは、 [Microsoft.StylusInput.RealTimeStylus](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms585724(v=vs.90))、ウィンドウやコントロールをそれにアタッチしを実装するクラスを作成、 [Microsoft.StylusInput.IStylusSyncPlugin](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms575201(v=vs.90))または[Microsoft.StylusInput.IStylusAsyncPlugin](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms575194(v=vs.90))インターフェイス。 カスタム プラグインがプラグインのコレクションに追加し、 [Microsoft.StylusInput.RealTimeStylus](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms585724(v=vs.90))します。 このオブジェクト モデルの詳細については、次を参照してください。 [StylusInput Api のアーキテクチャ](/windows/desktop/tablet/architecture-of-the-stylusinput-apis)します。  
   
- [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 、プラットフォーム、<xref:System.Windows.UIElement>クラスのプラグイン、同様のデザインのコレクションを公開する、 [Microsoft.StylusInput.RealTimeStylus](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms585724(v=vs.90))します。  ペンのデータをインターセプトするから継承するクラスを作成<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>オブジェクトを追加して、<xref:System.Windows.UIElement.StylusPlugIns%2A>のコレクション、<xref:System.Windows.UIElement>します。 この操作の詳細については、[スタイラスからの入力のインターセプト](intercepting-input-from-the-stylus.md)を参照してください。  
+ [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 、プラットフォーム、<xref:System.Windows.UIElement>クラスのプラグイン、同様のデザインのコレクションを公開する、 [Microsoft.StylusInput.RealTimeStylus](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms585724(v=vs.90))します。  ペンのデータをインターセプトするから継承するクラスを作成<xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>オブジェクトを追加して、<xref:System.Windows.UIElement.StylusPlugIns%2A>のコレクション、<xref:System.Windows.UIElement>します。 この操作の詳細については、次を参照してください。[スタイラスからの入力のインターセプト](intercepting-input-from-the-stylus.md)します。  
   
- すべてのプラットフォームでは、スレッド プールは、スタイラス イベントを使用して、インク データを受信し、アプリケーション スレッドに送信します。  スレッドの COM および Windows プラットフォームの詳細については、[StylusInput Api に関する考慮事項をスレッド](/windows/desktop/tablet/threading-considerations-for-the-stylusinput-apis)を参照してください。  スレッドの Windows プレゼンテーション ソフトウェアの詳細については、[インク スレッド モデル](the-ink-threading-model.md)を参照してください。  
+ すべてのプラットフォームでは、スレッド プールは、スタイラス イベントを使用して、インク データを受信し、アプリケーション スレッドに送信します。  スレッドの COM および Windows プラットフォームの詳細については、次を参照してください。 [StylusInput Api に関する考慮事項をスレッド](/windows/desktop/tablet/threading-considerations-for-the-stylusinput-apis)します。  スレッドの Windows プレゼンテーション ソフトウェアの詳細については、次を参照してください。[インク スレッド モデル](the-ink-threading-model.md)します。  
   
  次の図は、ペン スレッド プールでペンのデータを受信するクラスのオブジェクト モデルを比較します。  
   

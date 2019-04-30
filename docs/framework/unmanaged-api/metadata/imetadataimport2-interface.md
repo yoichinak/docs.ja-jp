@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6717c48fca14f2200f783a984594388ef3b29c15
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211933"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62042472"
 ---
 # <a name="imetadataimport2-interface"></a>IMetaDataImport2 インターフェイス
 拡張、 [IMetaDataImport](../../../../docs/framework/unmanaged-api/metadata/imetadataimport-interface.md)ジェネリック型の操作の機能を提供するインターフェイス。  

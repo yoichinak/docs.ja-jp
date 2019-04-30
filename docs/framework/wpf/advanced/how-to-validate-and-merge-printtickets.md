@@ -11,11 +11,11 @@ helpviewer_keywords:
 - PrintTicket [WPF], validation
 ms.assetid: 4fe2d501-d0b0-4fef-86af-6ffe6c162532
 ms.openlocfilehash: be8b299c99515394bc676cfd7a715cb82ac4d58c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301153"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051109"
 ---
 # <a name="how-to-validate-and-merge-printtickets"></a>方法: PrintTickets を検証およびマージする
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] [印刷スキーマ](https://go.microsoft.com/fwlink/?LinkId=186397)柔軟性と拡張性が含まれています<xref:System.Printing.PrintCapabilities>と<xref:System.Printing.PrintTicket>要素。 印刷デバイスの機能を列記前者と後者の場合、デバイスが特定のシーケンスのドキュメント、個々 のドキュメント、または個々 のページに対してこれらの機能を使用する方法を指定します。  

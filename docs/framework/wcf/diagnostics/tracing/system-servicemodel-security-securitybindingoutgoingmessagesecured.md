@@ -3,11 +3,11 @@ title: System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured
 ms.date: 03/30/2017
 ms.assetid: 5b6cd812-63ba-4614-89f1-3c31d7540c5d
 ms.openlocfilehash: 828b439451f4b749aa322b432d32d9c0927e6c57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948461"
 ---
 # <a name="systemservicemodelsecuritysecuritybindingoutgoingmessagesecured"></a>System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured
 System.ServiceModel.Security.SecurityBindingOutgoingMessageSecured  

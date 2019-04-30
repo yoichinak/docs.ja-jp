@@ -3,11 +3,11 @@ title: 関連付けセット
 ms.date: 03/30/2017
 ms.assetid: a65247b6-ce59-44ea-974c-14ae20a7995f
 ms.openlocfilehash: af9297d9c827b12ed8611e99930234511f7f661c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204485"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034607"
 ---
 # <a name="association-set"></a>関連付けセット
 *アソシエーション セット*の論理コンテナー[アソシエーション](../../../../docs/framework/data/adonet/association-type.md)同じ型のインスタンス。 アソシエーション セットは、データ モデリング構造ではなく、データ構造やリレーションシップを表しません。 アソシエーション セットは、アソシエーション インスタンスをグループ化してデータ ストアにマップするための、ホスト環境またはストレージ環境 (共通言語ランタイムや SQL Server データベースなど) の構造を提供します。  
@@ -16,11 +16,11 @@ ms.locfileid: "59204485"
   
  アソシエーション セットの定義には、次の情報が含まれます。  
   
--   アソシエーション セット名。 (必須)  
+- アソシエーション セット名。 (必須)  
   
--   インスタンスを含むアソシエーション。 (必須)  
+- インスタンスを含むアソシエーション。 (必須)  
   
--   2 つ[アソシエーション セット end](../../../../docs/framework/data/adonet/association-set-end.md)します。  
+- 2 つ[アソシエーション セット end](../../../../docs/framework/data/adonet/association-set-end.md)します。  
   
 ## <a name="example"></a>例  
  下のダイアグラムは、`PublishedBy` および `WrittenBy` という 2 つのアソシエーションの概念モデルを示しています。 このダイアグラムにはアソシエーション セットに関する情報が示されていませんが、次のダイアグラムはこのモデルに基づくアソシエーション セットとエンティティ セットの例を示しています。  

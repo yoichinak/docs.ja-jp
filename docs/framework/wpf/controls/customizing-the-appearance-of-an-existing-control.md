@@ -13,11 +13,11 @@ helpviewer_keywords:
 - templates [WPF], custom for existing controls
 ms.assetid: 678dd116-43a2-4b8c-82b5-6b826f126e31
 ms.openlocfilehash: b52a63a0531d71c784ef12f29049754f4a9efddb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098963"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017840"
 ---
 # <a name="customizing-the-appearance-of-an-existing-control-by-creating-a-controltemplate"></a>ControlTemplate の作成による既存のコントロールの外観のカスタマイズ
 <a name="introduction"></a> A<xref:System.Windows.Controls.ControlTemplate>視覚的な構造とコントロールの視覚的な動作を指定します。 コントロールの外観をカスタマイズするには、新しい it 提供することにより<xref:System.Windows.Controls.ControlTemplate>します。 作成するときに、 <xref:System.Windows.Controls.ControlTemplate>、その機能を変更することがなく、既存のコントロールの外観を置き換えます。 たとえば、行うことができます、ボタン、アプリケーションで、既定の四角形から丸い形が、ボタンが引き続き発生、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
@@ -64,11 +64,11 @@ ms.locfileid: "59098963"
   
  この例では、以下のパーツで視覚的な構造を構成しています。  
   
--   A<xref:System.Windows.Controls.Border>という`RootElement`テンプレートのルートとして機能する<xref:System.Windows.FrameworkElement>します。  
+- A<xref:System.Windows.Controls.Border>という`RootElement`テンプレートのルートとして機能する<xref:System.Windows.FrameworkElement>します。  
   
--   A<xref:System.Windows.Controls.Grid>の子である`RootElement`します。  
+- A<xref:System.Windows.Controls.Grid>の子である`RootElement`します。  
   
--   A<xref:System.Windows.Controls.ContentPresenter>ボタンのコンテンツを表示します。 <xref:System.Windows.Controls.ContentPresenter>により、任意の種類のオブジェクトを表示できます。  
+- A<xref:System.Windows.Controls.ContentPresenter>ボタンのコンテンツを表示します。 <xref:System.Windows.Controls.ContentPresenter>により、任意の種類のオブジェクトを表示できます。  
   
  [!code-xaml[VSMButtonTemplate#BasicTemplate](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#basictemplate)]  
   
@@ -85,9 +85,9 @@ ms.locfileid: "59098963"
   
  <xref:System.Windows.Controls.Control>クラスに設定されている場合は、コントロールに影響を与える、コントロール テンプレートで使用する必要がありますをいくつかのプロパティを定義します。 どの<xref:System.Windows.Controls.ControlTemplate>使用して、プロパティ、プロパティに依存します。 <xref:System.Windows.Controls.ControlTemplate>で、次の方法のいずれかのプロパティを使用する必要があります。  
   
--   内の要素、<xref:System.Windows.Controls.ControlTemplate>テンプレートのプロパティにバインドします。  
+- 内の要素、<xref:System.Windows.Controls.ControlTemplate>テンプレートのプロパティにバインドします。  
   
--   内の要素、<xref:System.Windows.Controls.ControlTemplate>プロパティを親から継承<xref:System.Windows.FrameworkElement>します。  
+- 内の要素、<xref:System.Windows.Controls.ControlTemplate>プロパティを親から継承<xref:System.Windows.FrameworkElement>します。  
   
  次の表に、コントロールから継承されるビジュアル プロパティ、<xref:System.Windows.Controls.Control>クラス。 また、コントロールの既定のコントロール テンプレートで継承されたプロパティ値を使用するかどうか、テンプレート バインディングする必要があるかどうかも示します。  
   
@@ -167,11 +167,11 @@ ms.locfileid: "59098963"
   
  1 つの状態から別のコントロールを追加することでスムーズに移行するために発生するアニメーションが必要な時間の量を指定する<xref:System.Windows.VisualTransition>オブジェクトを<xref:System.Windows.Controls.ControlTemplate>します。 作成するときに、<xref:System.Windows.VisualTransition>次の 1 つ以上を指定します。  
   
--   状態間の遷移を開始するまでに要する時間。  
+- 状態間の遷移を開始するまでに要する時間。  
   
--   遷移時に発生するコントロールの外観への追加の変更。  
+- 遷移時に発生するコントロールの外観への追加の変更。  
   
--   どの状態、<xref:System.Windows.VisualTransition>に適用されます。  
+- どの状態、<xref:System.Windows.VisualTransition>に適用されます。  
   
 ### <a name="specifying-the-duration-of-a-transition"></a>遷移の継続時間の指定  
  設定の移行にかかる時間を指定することができます、<xref:System.Windows.VisualTransition.GeneratedDuration%2A>プロパティ。 上記の例では、<xref:System.Windows.VisualState>ボタンが押されたが、アニメーションがかかりすぎる場合、ボタンがすぐに押したときし、離したときに、ボタンの境界線が透明にことを指定します。 使用することができます、<xref:System.Windows.VisualTransition>押された状態に遷移するコントロールでは、時間数を指定します。 次の例では、コントロールが押された状態になるのに要する時間を 1/100 秒に指定しています。  
@@ -201,13 +201,13 @@ ms.locfileid: "59098963"
   
  次の例は、<xref:System.Windows.VisualStateGroup>の`CommonStates`します。 例では、定義、<xref:System.Windows.VisualTransition>のボタンの次の各遷移します。  
   
--   `Pressed` 状態への遷移。  
+- `Pressed` 状態への遷移。  
   
--   `MouseOver` 状態への遷移。  
+- `MouseOver` 状態への遷移。  
   
--   `Pressed` 状態から `MouseOver` 状態への遷移。  
+- `Pressed` 状態から `MouseOver` 状態への遷移。  
   
--   `MouseOver` 状態から `Normal` 状態への遷移。  
+- `MouseOver` 状態から `Normal` 状態への遷移。  
   
  [!code-xaml[VSMButtonTemplate#VisualTransitions](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmbuttontemplate/csharp/buttonstages.xaml#visualtransitions)]  
   
@@ -217,11 +217,11 @@ ms.locfileid: "59098963"
   
  コントロール コントラクトには、次の 3 つの要素があります。  
   
--   コントロールのロジックが使用する視覚的要素。  
+- コントロールのロジックが使用する視覚的要素。  
   
--   コントロールの状態および各状態が所属するグループ。  
+- コントロールの状態および各状態が所属するグループ。  
   
--   コントロールに対して視覚的に作用するパブリック プロパティ。  
+- コントロールに対して視覚的に作用するパブリック プロパティ。  
   
 ### <a name="visual-elements-in-the-control-contract"></a>コントロール コントラクトの視覚的要素  
  コントロールのロジックと対話することがあります、<xref:System.Windows.FrameworkElement>内にある、<xref:System.Windows.Controls.ControlTemplate>します。 たとえば、コントロールがその要素のイベントを処理する場合などです。 コントロールが特定の検索と<xref:System.Windows.FrameworkElement>で、 <xref:System.Windows.Controls.ControlTemplate>、その情報を伝える必要があります、<xref:System.Windows.Controls.ControlTemplate>作成者です。 コントロールを使用して、<xref:System.Windows.TemplatePartAttribute>を伝えるの種類が必要ですが、要素と要素の名前にする必要があります。 <xref:System.Windows.Controls.Button>が<xref:System.Windows.FrameworkElement>など、コントロール コントラクトが、他のコントロールのパーツ、 <xref:System.Windows.Controls.ComboBox>、操作を行います。  
@@ -250,9 +250,9 @@ ms.locfileid: "59098963"
   
  作成するときに、 <xref:System.Windows.Controls.ControlTemplate>、既存の開始する最も簡単なことがよくあります<xref:System.Windows.Controls.ControlTemplate>に変更を加えるとします。 既存を変更するには、次のいずれかを行うことができます<xref:System.Windows.Controls.ControlTemplate>:  
   
--   Expression Blend などのデザイナーを使用します。デザイナーには、コントロール テンプレートを作成するためのグラフィカル ユーザー インターフェイスが用意されています。 詳細については、「[テンプレートをサポートするコントロールのスタイル処理](https://go.microsoft.com/fwlink/?LinkId=161153)」を参照してください。  
+- Expression Blend などのデザイナーを使用します。デザイナーには、コントロール テンプレートを作成するためのグラフィカル ユーザー インターフェイスが用意されています。 詳細については、「[テンプレートをサポートするコントロールのスタイル処理](https://go.microsoft.com/fwlink/?LinkId=161153)」を参照してください。  
   
--   既定値を取得<xref:System.Windows.Controls.ControlTemplate>して編集できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に付属する既定のコントロール テンプレートについては、「[デフォルトの WPF テーマ](https://go.microsoft.com/fwlink/?LinkID=158252)」を参照してください。  
+- 既定値を取得<xref:System.Windows.Controls.ControlTemplate>して編集できます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] に付属する既定のコントロール テンプレートについては、「[デフォルトの WPF テーマ](https://go.microsoft.com/fwlink/?LinkID=158252)」を参照してください。  
   
 <a name="complete_example"></a>   
 ## <a name="complete-example"></a>コード例全体  

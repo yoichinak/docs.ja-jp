@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], text formatting
 ms.assetid: f0a7986e-f5b2-485c-a27d-f8e922022212
 ms.openlocfilehash: fa707ed9c409a2e6933629a658bfe650b43f3233
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085728"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032005"
 ---
 # <a name="advanced-text-formatting"></a>テキストの高度な書式設定
 Windows Presentation Foundation (WPF) は、堅牢な一連の[!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)]アプリケーションでテキストを含めるためです。 レイアウトと[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]など<xref:System.Windows.Controls.TextBlock>、最も一般的な提供および一般的な要素を使用して、テキスト表示にします。 描画[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]など<xref:System.Windows.Media.GlyphRunDrawing>と<xref:System.Windows.Media.FormattedText>図面の書式設定されたテキストを含めるための手段を提供します。 高度なレベルでは、一番[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]拡張可能なテキストを書式設定テキスト プレゼンテーションでは、テキスト保管管理、テキスト ラン書式設定の管理、および埋め込みオブジェクト管理などのすべての側面を制御するエンジンを提供します。  
@@ -55,11 +55,11 @@ Windows Presentation Foundation (WPF) は、堅牢な一連の[!INCLUDE[TLA#tla_
   
  テキスト ストアの仮想化を処理するために、テキスト ストアをから派生する必要があります<xref:System.Windows.Media.TextFormatting.TextSource>します。 <xref:System.Windows.Media.TextFormatting.TextSource> テキスト フォーマッタを使用して、テキスト ストアからテキスト ランを取得するメソッドを定義します。 <xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A> 行の書式設定で使用されるテキストを取得するテキスト フォーマッタで使用されるメソッドを実行します。 呼び出し<xref:System.Windows.Media.TextFormatting.TextSource.GetTextRun%2A>次の条件のいずれかが発生するまでに、テキスト フォーマッタによって繰り返し行われました。  
   
--   A<xref:System.Windows.Media.TextFormatting.TextEndOfLine>またはサブクラスが返されます。  
+- A<xref:System.Windows.Media.TextFormatting.TextEndOfLine>またはサブクラスが返されます。  
   
--   テキスト ランの幅が累積されはテキスト フォーマッタを作成するか、通話またはテキスト フォーマッタへの呼び出しで指定された行の最大の幅を超える<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>メソッド。  
+- テキスト ランの幅が累積されはテキスト フォーマッタを作成するか、通話またはテキスト フォーマッタへの呼び出しで指定された行の最大の幅を超える<xref:System.Windows.Media.TextFormatting.TextFormatter.FormatLine%2A>メソッド。  
   
--   A [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] "CF"、"LF"、"CRLF"などの改行シーケンスが返されます。  
+- A [!INCLUDE[TLA#tla_unicode](../../../../includes/tlasharptla-unicode-md.md)] "CF"、"LF"、"CRLF"などの改行シーケンスが返されます。  
   
 <a name="section4"></a>   
 ## <a name="providing-text-runs"></a>テキスト ランを提供する  

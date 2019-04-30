@@ -3,11 +3,11 @@ title: 継承のサポート
 ms.date: 03/30/2017
 ms.assetid: 19bb2794-b4e7-402e-8307-1d1517381a08
 ms.openlocfilehash: 668f4f1dd284550e644ce6b8a4491ca47105575e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033554"
 ---
 # <a name="inheritance-support"></a>継承のサポート
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] サポート*シングル テーブル マッピング*します。 これは、1 つの継承階層全体が単一のデータベース テーブルに保存されることを意味します。 テーブルには、階層構造内で使用され得るすべてのデータ列の平坦化された共用体が格納されます  (2 つのテーブルを 1 つに結合し、元のテーブルのいずれかにあった行が新しいテーブルに含まれるようにした結果、1 つの共用体が形成されます)。行によって表されるインスタンスの型に適合しない列には null が設定されます。  

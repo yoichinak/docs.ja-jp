@@ -10,11 +10,11 @@ helpviewer_keywords:
 - data contracts [WCF]
 ms.assetid: a3ae7b21-c15c-4c05-abd8-f483bcbf31af
 ms.openlocfilehash: 28033e3e90c5010eee63f35791b0c3c77e64d1ec
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050663"
 ---
 # <a name="using-data-contracts"></a>データ コントラクトの使用
 *データ コントラクト* は、サービスとクライアントの間の正式な取り決めであり、交換されるデータが抽象的に記述されています。 つまり、クライアントとサービスが通信するために必要なのは同じデータ コントラクトだけで、同じ型を共有する必要はありません。 データ コントラクトは、パラメーターまたは戻り値の型ごとに、交換するためにシリアル化する (XML に変換する) 必要があるデータを正確に定義します。  
@@ -38,21 +38,21 @@ ms.locfileid: "59129936"
 ### <a name="notes"></a>メモ  
  以下に、データ コントラクトを作成する際に考慮する必要がある項目を示します。  
   
--   <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性は、マークされていない型で使用した場合にのみ受け入れられます。 これには、 <xref:System.Runtime.Serialization.DataContractAttribute>、 <xref:System.SerializableAttribute>、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>、 <xref:System.Runtime.Serialization.EnumMemberAttribute> のいずれかの属性でマークされていない型、または他の方法 ( <xref:System.Xml.Serialization.IXmlSerializable>など) でシリアル化可能としてマークされた型が含まれます。  
+- <xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性は、マークされていない型で使用した場合にのみ受け入れられます。 これには、 <xref:System.Runtime.Serialization.DataContractAttribute>、 <xref:System.SerializableAttribute>、 <xref:System.Runtime.Serialization.CollectionDataContractAttribute>、 <xref:System.Runtime.Serialization.EnumMemberAttribute> のいずれかの属性でマークされていない型、または他の方法 ( <xref:System.Xml.Serialization.IXmlSerializable>など) でシリアル化可能としてマークされた型が含まれます。  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute> 属性は、フィールドおよびプロパティに適用できます。  
+- <xref:System.Runtime.Serialization.DataMemberAttribute> 属性は、フィールドおよびプロパティに適用できます。  
   
--   メンバーのアクセシビリティ レベル (内部、プライベート、保護、またはパブリック) は、データ コントラクトに影響しません。  
+- メンバーのアクセシビリティ レベル (内部、プライベート、保護、またはパブリック) は、データ コントラクトに影響しません。  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute> 属性が静的メンバーに適用されている場合は無視されます。  
+- <xref:System.Runtime.Serialization.DataMemberAttribute> 属性が静的メンバーに適用されている場合は無視されます。  
   
--   シリアル化中には、プロパティのデータ メンバーがシリアル化対象のプロパティの値を取得できるように、プロパティ取得コードが呼び出されます。  
+- シリアル化中には、プロパティのデータ メンバーがシリアル化対象のプロパティの値を取得できるように、プロパティ取得コードが呼び出されます。  
   
--   逆シリアル化中には、まず初期化されていないオブジェクトが、その型のコンストラクターを呼び出さずに作成されます。 次に、すべてのデータ メンバーが逆シリアル化されます。  
+- 逆シリアル化中には、まず初期化されていないオブジェクトが、その型のコンストラクターを呼び出さずに作成されます。 次に、すべてのデータ メンバーが逆シリアル化されます。  
   
--   逆シリアル化中には、プロパティのデータ メンバーが、プロパティを逆シリアル化されている値に設定できるように、プロパティ設定コードが呼び出されます。  
+- 逆シリアル化中には、プロパティのデータ メンバーが、プロパティを逆シリアル化されている値に設定できるように、プロパティ設定コードが呼び出されます。  
   
--   データ コントラクトが有効であるためには、すべてのデータ メンバーをシリアル化できる必要があります。 シリアル化できるすべての型の一覧については、「 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)」を参照してください。  
+- データ コントラクトが有効であるためには、すべてのデータ メンバーをシリアル化できる必要があります。 シリアル化できるすべての型の一覧については、「 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)」を参照してください。  
   
      ジェネリック型は、非ジェネリック型とまったく同じように処理されます。 ジェネリック パラメーターに対する特別な要件はありません。 たとえば、次の型について考えます。  
   

@@ -3,20 +3,20 @@ title: '方法: Svcutil.exe を使用してコンパイル済みのサービス 
 ms.date: 03/30/2017
 ms.assetid: 95d0aed3-16a2-4398-89bb-39418eeb7355
 ms.openlocfilehash: 5b905b6943127d483e001749c263242550ab28ea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047337"
 ---
 # <a name="how-to-use-svcutilexe-to-export-metadata-from-compiled-service-code"></a>方法: Svcutil.exe を使用してコンパイル済みのサービス コードからメタデータをエクスポートする
 Svcutil.exe は、次のように、コンパイル済みアセンブリのサービス、コントラクト、およびデータ型のメタデータをエクスポートできます。  
   
--   Svcutil.exe を使用して、アセンブリのセットに対するすべてのコンパイル済みサービス コントラクトのメタデータをエクスポートするには、入力パラメーターとして各アセンブリを指定します。 これが既定の動作です。  
+- Svcutil.exe を使用して、アセンブリのセットに対するすべてのコンパイル済みサービス コントラクトのメタデータをエクスポートするには、入力パラメーターとして各アセンブリを指定します。 これが既定の動作です。  
   
--   Svcutil.exe を使用して、コンパイル済みサービスのメタデータをエクスポートするには、入力パラメーターとしてサービス アセンブリを指定します。 `/serviceName` オプションを使用して、エクスポートするサービスの構成名を指定する必要があります。 Svcutil.exe を実行すると、指定した実行可能アセンブリの構成ファイルが自動的に読み込まれます。  
+- Svcutil.exe を使用して、コンパイル済みサービスのメタデータをエクスポートするには、入力パラメーターとしてサービス アセンブリを指定します。 `/serviceName` オプションを使用して、エクスポートするサービスの構成名を指定する必要があります。 Svcutil.exe を実行すると、指定した実行可能アセンブリの構成ファイルが自動的に読み込まれます。  
   
--   アセンブリ セットのすべてのデータ コントラクト型をエクスポートするには、`/dataContractOnly` オプションを使用します。  
+- アセンブリ セットのすべてのデータ コントラクト型をエクスポートするには、`/dataContractOnly` オプションを使用します。  
   
 > [!NOTE]
 >  `/reference` オプションを使用して、任意の依存アセンブリへのファイル パスを指定してください。  

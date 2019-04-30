@@ -8,11 +8,11 @@ helpviewer_keywords:
 - brushes [WPF], about brushes
 ms.assetid: ecea1955-420b-45c6-bf43-c1404c072c41
 ms.openlocfilehash: 14e3d095d50f41e5b20a79d76c464bcf28c99327
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053094"
 ---
 # <a name="wpf-brushes-overview"></a>WPF のブラシの概要
 画面に表示できるものは、ブラシによって描画されているために表示されます。 など、ブラシを使用して、ボタン、テキストの前景色および図形の塗りつぶしの背景について説明します。 このトピックでの描画の概念を説明する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ブラシし、例について説明します。 ブラシを使用すると、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] オブジェクトを単色で塗りつぶすことも、パターンとイメージの複雑な組み合わせで塗りつぶすこともできます。  
@@ -50,7 +50,7 @@ SolidColorBrush を使用して描画された四角形
  [!code-vb[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmsolidcolorbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMSolidColorBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmsolidcolorbrushexampleinline)]  
   
- <xref:System.Windows.Media.SolidColorBrush> クラスの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。  
+ 詳細については、<xref:System.Windows.Media.SolidColorBrush>クラスを参照してください[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)します。  
   
 <a name="paintwithlineargradientbrush"></a>   
 ## <a name="paint-with-a-linear-gradient"></a>線形グラデーションでの塗りつぶし  
@@ -65,7 +65,7 @@ LinearGradientBrush を使用して描画された四角形
  [!code-vb[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmlineargradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMLinearGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmlineargradientbrushexampleinline)]  
   
- <xref:System.Windows.Media.LinearGradientBrush> クラスの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。  
+ 詳細については、<xref:System.Windows.Media.LinearGradientBrush>クラスを参照してください[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)します。  
   
 <a name="paintwithradialgradientbrush"></a>   
 ## <a name="paint-with-a-radial-gradient"></a>放射状グラデーションの描画  
@@ -80,7 +80,7 @@ RadialGradientBrush を使用して描画された四角形
  [!code-vb[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/BrushesIntroduction_snip/visualbasic/brushtypesexample.vb#graphicsmmradialgradientbrushexampleinline)]
  [!code-xaml[BrushesIntroduction_snip#GraphicsMMRadialGradientBrushExampleInline](~/samples/snippets/xaml/VS_Snippets_Wpf/BrushesIntroduction_snip/XAML/BrushTypesExample.xaml#graphicsmmradialgradientbrushexampleinline)]  
   
- <xref:System.Windows.Media.RadialGradientBrush> クラスの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください 
+ 詳細については、<xref:System.Windows.Media.RadialGradientBrush>クラスを参照してください[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)します。  
   
 <a name="paintwithimage"></a>   
 ## <a name="paint-with-an-image"></a>イメージの描画  
@@ -131,9 +131,9 @@ VisualBrush を使用して描画された四角形
 ## <a name="paint-using-predefined-and-system-brushes"></a>定義済みおよびシステム ブラシを使用して描画します。  
  便宜上は、Windows Presentation Foundation (WPF) は、定義済みの一連のおよびシステム ブラシ オブジェクトの描画に使用できるを提供します。  
   
--   使用可能な定義済みのブラシの一覧は、次を参照してください。、<xref:System.Windows.Media.Brushes>クラス。 定義済みのブラシを使用する方法を示す例は、次を参照してください。[純色で領域を塗りつぶす](how-to-paint-an-area-with-a-solid-color.md)します。  
+- 使用可能な定義済みのブラシの一覧は、次を参照してください。、<xref:System.Windows.Media.Brushes>クラス。 定義済みのブラシを使用する方法を示す例は、次を参照してください。[純色で領域を塗りつぶす](how-to-paint-an-area-with-a-solid-color.md)します。  
   
--   使用可能なシステム ブラシの一覧は、次を参照してください。、<xref:System.Windows.SystemColors>クラス。 例については、次を参照してください。[システム ブラシで領域を塗りつぶす](how-to-paint-an-area-with-a-system-brush.md)します。  
+- 使用可能なシステム ブラシの一覧は、次を参照してください。、<xref:System.Windows.SystemColors>クラス。 例については、次を参照してください。[システム ブラシで領域を塗りつぶす](how-to-paint-an-area-with-a-system-brush.md)します。  
   
 <a name="commonbrushfeatures"></a>   
 ## <a name="common-brush-features"></a>ブラシの共通機能  

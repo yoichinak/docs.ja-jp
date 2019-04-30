@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 420ae24e-762b-4e09-b4c3-2112c470ee49
 ms.openlocfilehash: 015ce896e49b3a6a932c36db867271b4ac4c64c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303480"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033866"
 ---
 # <a name="large-udts"></a>大きな UDT
 開発者は、ユーザー定義型 (UDT) を使用すると、SQL Server データベースに共通言語ランタイム (CLR) オブジェクトを格納して、サーバーのスカラー型システムを拡張することができます。 UDT は複数の要素を持つことができ、動作を定義できます。この点は、1 つの SQL Server システム データ型から構成される従来の別名データ型と異なります。  
@@ -49,21 +49,21 @@ ms.locfileid: "59303480"
   
  <xref:System.Data.SqlClient.SqlDataReader> の次のメソッドは、<xref:System.Data.SqlTypes.SqlBinary> が SQL Server 2005 に設定されていると、UDT ではなく `Type System Version` を返します。  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificFieldType%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetProviderSpecificValues%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetSqlValues%2A>  
   
  次のメソッドは、`Byte[]` が SQL Server 2005 に設定されていると、UDT ではなく `Type System Version` の配列を返します。  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValue%2A>  
   
--   <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
+- <xref:System.Data.SqlClient.SqlDataReader.GetValues%2A>  
   
  現在のバージョンの ADO.NET では、変換は実行されません。  
   

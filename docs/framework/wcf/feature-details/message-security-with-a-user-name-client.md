@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 36335cb9-76b8-4443-92c7-44f081eabb21
 ms.openlocfilehash: 73e984193f87b20e0e00d8ab92a7c0fd67f7968f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59081555"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046571"
 ---
 # <a name="message-security-with-a-user-name-client"></a>ユーザー名クライアントを使用したメッセージ セキュリティ
 次の図は、Windows Communication Foundation (WCF) サービスとクライアントのメッセージ レベルのセキュリティを使用して保護します。 サービスは X.509 証明書を使用して認証されます。 クライアントはユーザー名とパスワードを使用して認証されます。  
@@ -33,9 +33,9 @@ ms.locfileid: "59081555"
 ## <a name="service"></a>サービス  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
+- 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
--   提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
+- 提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
   
 ### <a name="code"></a>コード  
  次のコードは、メッセージ セキュリティを使用するサービス エンドポイントの作成方法を示します。  

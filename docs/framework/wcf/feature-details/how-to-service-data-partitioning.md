@@ -3,11 +3,11 @@ title: '方法: サービス データのパーティション分割'
 ms.date: 03/30/2017
 ms.assetid: 1ccff72e-d76b-4e36-93a2-e51f7b32dc83
 ms.openlocfilehash: 17cb80bf253491eb563d6fd45b5997e452f542e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300386"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047530"
 ---
 # <a name="how-to-service-data-partitioning"></a>方法: サービス データのパーティション分割
 このトピックでは、メッセージを同じ送信先サービスの複数のインスタンスにパーティション分割するのに必要な、基本的な手順について説明します。 サービス データのパーティション分割は、一般的に、優れた品質のサービスを提供するためにサービスを拡張する必要がある場合や、さまざまな顧客からの要求を特定の方法で処理する必要がある場合に使用されます。 たとえば、高い値または「ゴールド」顧客からのメッセージは、標準的な顧客からのメッセージよりも高い優先度で処理する必要があります。  

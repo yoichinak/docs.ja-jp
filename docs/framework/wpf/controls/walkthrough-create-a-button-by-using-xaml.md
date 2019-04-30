@@ -5,11 +5,11 @@ helpviewer_keywords:
 - buttons [WPF]
 ms.assetid: 138c41c4-1759-4bbf-8d77-77031a06a8a0
 ms.openlocfilehash: 908a38485c879e3f28399bb7dbc8303afd4505da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023995"
 ---
 # <a name="walkthrough-create-a-button-by-using-xaml"></a>チュートリアル: XAML を使用したボタンの作成
 このチュートリアルでは、Windows Presentation Foundation (WPF) アプリケーションで使用するためのアニメーションのボタンを作成する方法について説明します。 このチュートリアルでは、スタイルとテンプレートを使用して、コードの再利用し、ボタンの宣言からボタンのロジックの分離を許可するカスタマイズされたボタンのリソースを作成します。 このチュートリアルが完全に記述された[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。  
@@ -421,15 +421,15 @@ ms.locfileid: "59309499"
 ## <a name="summary"></a>まとめ  
  このチュートリアルでは、次の演習を実行しました。  
   
--   対象となる、<xref:System.Windows.Style>オブジェクトの種類を (<xref:System.Windows.Controls.Button>)。  
+- 対象となる、<xref:System.Windows.Style>オブジェクトの種類を (<xref:System.Windows.Controls.Button>)。  
   
--   アプリケーション全体を使用して、ボタンの基本プロパティを制御、<xref:System.Windows.Style>します。  
+- アプリケーション全体を使用して、ボタンの基本プロパティを制御、<xref:System.Windows.Style>します。  
   
--   プロパティ値を使用するグラデーションなどのリソースを作成、 <xref:System.Windows.Style> set アクセス操作子。  
+- プロパティ値を使用するグラデーションなどのリソースを作成、 <xref:System.Windows.Style> set アクセス操作子。  
   
--   アプリケーション全体のボタンの外観をカスタマイズするには、ボタンにテンプレートを適用します。  
+- アプリケーション全体のボタンの外観をカスタマイズするには、ボタンにテンプレートを適用します。  
   
--   ユーザー操作に応じてボタンの動作をカスタマイズ (など<xref:System.Windows.UIElement.MouseEnter>、<xref:System.Windows.UIElement.MouseLeave>と<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) アニメーション効果が含まれています。  
+- ユーザー操作に応じてボタンの動作をカスタマイズ (など<xref:System.Windows.UIElement.MouseEnter>、<xref:System.Windows.UIElement.MouseLeave>と<xref:System.Windows.Controls.Primitives.ButtonBase.Click>) アニメーション効果が含まれています。  
   
 ## <a name="see-also"></a>関連項目
 

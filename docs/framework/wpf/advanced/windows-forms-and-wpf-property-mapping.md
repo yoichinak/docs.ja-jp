@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WindowsFormsHost element property mapping [WPF]
 ms.assetid: 999d8298-9c04-467d-a453-86e41002057d
 ms.openlocfilehash: a7d78837a141ed322da42629501cee6dcc9143e1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59088822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053133"
 ---
 # <a name="windows-forms-and-wpf-property-mapping"></a>Windows フォームと WPF プロパティの割り当て
 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]と[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]テクノロジに 2 つのプロパティが似ていますが、異なるモデルがあります。 *プロパティ マッピング*2 つのアーキテクチャ間の相互運用をサポートし、次の機能を提供します。  
   
--   ホスト環境で関連するプロパティの変更をホストされるコントロールまたは要素にマップする簡単にします。  
+- ホスト環境で関連するプロパティの変更をホストされるコントロールまたは要素にマップする簡単にします。  
   
--   既定の処理のほとんどを一般的にマッピングするために使用されるプロパティを提供します。  
+- 既定の処理のほとんどを一般的にマッピングするために使用されるプロパティを提供します。  
   
--   簡単に削除すると、オーバーライド、または既定のプロパティの拡張を許可します。  
+- 簡単に削除すると、オーバーライド、または既定のプロパティの拡張を許可します。  
   
--   ホストのプロパティ値の変更が自動的に検出され、ホストされるコントロールまたは要素に変換するようにします。  
+- ホストのプロパティ値の変更が自動的に検出され、ホストされるコントロールまたは要素に変換するようにします。  
   
 > [!NOTE]
 >  プロパティ変更イベントは、ホストしているコントロールまたは要素の階層は反映されません。 ローカル プロパティの値が直接設定、スタイル、継承、データ バインディング、またはプロパティの値を変更するその他のメカニズムのために変更されない場合は、プロパティの変換は実行されません。  
@@ -54,66 +54,66 @@ ms.locfileid: "59088822"
 ## <a name="updates-to-parent-properties"></a>親のプロパティの更新  
  ほとんどの親プロパティへの変更は、ホストされた子コントロールへの通知が。 次の一覧には、その値を変更するときに通知を発生させないプロパティについて説明します。  
   
--   <xref:System.Windows.Controls.Control.Background%2A>  
+- <xref:System.Windows.Controls.Control.Background%2A>  
   
--   <xref:System.Windows.FrameworkElement.Cursor%2A>  
+- <xref:System.Windows.FrameworkElement.Cursor%2A>  
   
--   <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
+- <xref:System.Windows.FrameworkElement.ForceCursor%2A>  
   
--   <xref:System.Windows.UIElement.Visibility%2A>  
+- <xref:System.Windows.UIElement.Visibility%2A>  
   
  値を変更する場合など、<xref:System.Windows.Controls.Control.Background%2A>のプロパティ、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素、<xref:System.Windows.Forms.Control.BackColor%2A>ホストされるコントロールのプロパティは変更されません。  
   
 ## <a name="property-mapping-with-the-elementhost-control"></a>ElementHost コントロールのプロパティ マッピング  
  次のプロパティは、組み込みの変更通知を提供します。 呼び出すのではない、<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>メソッドがこれらのプロパティをマップしているとき。  
   
--   AutoSize  
+- AutoSize  
   
--   背景色  
+- 背景色  
   
--   BackgroundImage  
+- BackgroundImage  
   
--   BackgroundImageLayout  
+- BackgroundImageLayout  
   
--   BindingContext  
+- BindingContext  
   
--   実行  
+- 実行  
   
--   ContextMenu  
+- ContextMenu  
   
--   ContextMenuStrip  
+- ContextMenuStrip  
   
--   カーソル  
+- カーソル  
   
--   ドッキング  
+- ドッキング  
   
--   有効  
+- 有効  
   
--   フォント  
+- フォント  
   
--   ForeColor  
+- ForeColor  
   
--   場所  
+- 場所  
   
--   Margin  
+- Margin  
   
--   [間隔]  
+- [間隔]  
   
--   親  
+- 親  
   
--   Region  
+- Region  
   
--   RightToLeft  
+- RightToLeft  
   
--   サイズ  
+- サイズ  
   
--   TabIndex  
+- TabIndex  
   
--   TabStop  
+- TabStop  
   
--   テキスト  
+- テキスト  
   
--   Visible  
+- Visible  
   
  <xref:System.Windows.Forms.Integration.ElementHost>コントロールが既定値を変換します[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]プロパティを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]次の変換テーブルを使用して対応します。  
   

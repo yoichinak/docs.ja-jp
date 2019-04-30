@@ -18,26 +18,26 @@ helpviewer_keywords:
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
 ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707613"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011815"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker コンポーネントの概要
 一般的な操作には、実行時間が長くかかるものが数多くあります。 次に例を示します。  
   
--   イメージのダウンロード  
+- イメージのダウンロード  
   
--   Web サービスの起動  
+- Web サービスの起動  
   
--   ファイルのダウンロードとアップロード (ピアツーピア アプリケーションの場合を含む)  
+- ファイルのダウンロードとアップロード (ピアツーピア アプリケーションの場合を含む)  
   
--   ローカルでの複雑な計算  
+- ローカルでの複雑な計算  
   
--   データベース トランザクション  
+- データベース トランザクション  
   
--   ローカル ディスク アクセス (前提としてメモリ アクセスに比べて低速です)  
+- ローカル ディスク アクセス (前提としてメモリ アクセスに比べて低速です)  
   
  以上のような操作の実行時には、ユーザー インターフェイスがハングアップすることがあります。 応答性に優れた UI を必要としながらも、このような操作との関連で長時間の遅延に直面する場合は、<xref:System.ComponentModel.BackgroundWorker> コンポーネントが便利なソリューションになります。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "57707613"
  [!code-csharp[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#5)]
  [!code-vb[System.ComponentModel.BackgroundWorker#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#5)]  
   
- イベント ハンドラーの使用に関する詳細については、[イベント](../../../standard/events/index.md)を参照してください。  
+ イベント ハンドラーの使用に関する詳細については、次を参照してください。[イベント](../../../standard/events/index.md)します。  
   
 > [!CAUTION]
 >  どのような種類のマルチスレッドを使用している場合でも、非常に深刻で複雑なバグを引き起こしてしまう可能性があります。 マルチスレッドを使用するソリューションを実装する前に、「[マネージド スレッド処理の実施](../../../standard/threading/managed-threading-best-practices.md)」を参照してください。  

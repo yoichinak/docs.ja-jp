@@ -6,11 +6,11 @@ helpviewer_keywords:
 - providers, UI Automation
 ms.assetid: 859557b8-51e1-4d15-92e8-318d2dcdb2f7
 ms.openlocfilehash: 9312f386198459d0d2dac110827cc6c0029eb247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222745"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033034"
 ---
 # <a name="ui-automation-providers-overview"></a>UI オートメーション プロバイダーの概要
 > [!NOTE]

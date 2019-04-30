@@ -3,11 +3,11 @@ title: 診断用の WMI (Windows Management Instrumentation) の使用
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
 ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048285"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>診断用の WMI (Windows Management Instrumentation) の使用
 Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時のサービスの検査データを公開します。  
@@ -112,13 +112,13 @@ Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentat
   
      この PowerShell スクリプトでは、組み込みのユーザー グループで、"root/servicemodel"WMI 名前空間へのアクセスを付与するのにセキュリティ記述子定義言語 (SDDL) を使用します。 次の ACL が指定されます。  
   
-    -   組み込みの管理者 (BA) – 既にアクセス権を持っています。  
+    - 組み込みの管理者 (BA) – 既にアクセス権を持っています。  
   
-    -   ネットワーク サービス (NS) - 既にアクセス権を持っています。  
+    - ネットワーク サービス (NS) - 既にアクセス権を持っています。  
   
-    -   ローカル システム (LS) - 既にアクセス権を持っています。  
+    - ローカル システム (LS) - 既にアクセス権を持っています。  
   
-    -   組み込みのユーザー – アクセス権を付与するグループ。  
+    - 組み込みのユーザー – アクセス権を付与するグループ。  
   
 #### <a name="to-grant-provider-registration-access"></a>プロバイダーに登録アクセス権を付与するには  
   

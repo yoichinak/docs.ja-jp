@@ -15,11 +15,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6e890629f307e3d3cff11dabdb2db90a5e88ece5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59105055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995554"
 ---
 # <a name="icordebugilcodegetehclauses-method"></a>ICorDebugILCode::GetEHClauses メソッド
 [.NET Framework 4.5.2 以降のバージョンでのみでサポート]  

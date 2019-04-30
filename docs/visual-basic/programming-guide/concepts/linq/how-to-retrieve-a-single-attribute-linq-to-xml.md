@@ -3,11 +3,11 @@ title: '方法: 1 つの属性 (LINQ to XML) を取得する (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 11b938d7-c011-4048-900e-8b9183c41c94
 ms.openlocfilehash: f56bdf86e4b63bc952c1d139aac9ee619b5a5f6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837142"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051287"
 ---
 # <a name="how-to-retrieve-a-single-attribute-linq-to-xml-visual-basic"></a>方法: 1 つの属性 (LINQ to XML) を取得する (Visual Basic)
 このトピックでは、属性名を指定して要素の単一の属性を取得する方法について説明します。 これは、特定の属性を持つ要素を検索するクエリ式を記述する場合に便利です。  

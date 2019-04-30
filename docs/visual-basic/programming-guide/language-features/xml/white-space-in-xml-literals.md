@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XML literals [Visual Basic], white space
 ms.assetid: dfe3a9ff-d69a-418e-a6b5-476f4ed84219
 ms.openlocfilehash: 08be345557d10a528aa03234883eba1b3a31beaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58832757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054940"
 ---
 # <a name="white-space-in-xml-literals-visual-basic"></a>XML リテラルでの空白文字 (Visual Basic)
 作成時に、Visual Basic コンパイラは XML リテラルの有意の空白文字だけが組み込まれて、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]オブジェクト。 余分な空白文字は組み込まれません。  
@@ -18,11 +18,11 @@ ms.locfileid: "58832757"
 ## <a name="significant-and-insignificant-white-space"></a>有意の空白文字  
  XML リテラルの空白文字は、のみの 3 つの領域には重要です。  
   
--   属性値に含まれる場合。  
+- 属性値に含まれる場合。  
   
--   要素のテキスト コンテンツの一部であるし、テキストには、その他の文字も含まれています。  
+- 要素のテキスト コンテンツの一部であるし、テキストには、その他の文字も含まれています。  
   
--   要素のテキスト コンテンツの埋め込み式に含まれる場合。  
+- 要素のテキスト コンテンツの埋め込み式に含まれる場合。  
   
  それ以外の場合、コンパイラとして意味のない空白文字を処理しでは、含まれません、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]リテラルのオブジェクト。  
   

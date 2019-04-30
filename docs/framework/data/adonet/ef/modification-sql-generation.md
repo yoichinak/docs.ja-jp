@@ -3,17 +3,17 @@ title: 変更 SQL 生成
 ms.date: 03/30/2017
 ms.assetid: 2188a39d-46ed-4a8b-906a-c9f15e6fefd1
 ms.openlocfilehash: 13ed7186981e82d47f00b6a38a4328ed75f527f4
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034139"
 ---
 # <a name="modification-sql-generation"></a>変更 SQL 生成
 
 ここでは、SQL:1999 準拠のデータベース プロバイダーのための変更 SQL 生成モジュールを開発する方法について説明します。 このモジュールは、変更コマンド ツリーを適切な SQL INSERT ステートメント、UPDATE ステートメント、または DELETE ステートメントに変換します。
 
-Select ステートメントの SQL 生成の詳細については、[SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)を参照してください。
+Select ステートメントの SQL 生成の詳細については、次を参照してください。 [SQL 生成](../../../../../docs/framework/data/adonet/ef/sql-generation.md)します。
 
 ## <a name="overview-of-modification-command-trees"></a>変更コマンド ツリーの概要
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - localization [WPF], comments
 ms.assetid: ead2d9ac-b709-4ec1-a924-39927a29d02f
 ms.openlocfilehash: a9d01b7cebea845ad67d846af5b08f59977b8cd6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036232"
 ---
 # <a name="localization-attributes-and-comments"></a>ローカリゼーション属性とコメント
 [!INCLUDE[TLA#tla_titlexaml](../../../../includes/tlasharptla-titlexaml-md.md)] ソース コード内部の [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ローカリゼーション コメントはプロパティで、ローカライズのルールとヒントを提供するために開発者によって提供されます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] ローカリゼーション コメントには、ローカライズ可否属性と自由形式のローカリゼーション コメントの 2 つの情報が含まれます。 ローカライズ可否属性は、ローカライズするリソースを示すために [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ローカリゼーション API によって使用されます。 自由形式のコメントは、アプリケーションの作成者が含めたい任意の情報です。  
@@ -27,11 +27,11 @@ ms.locfileid: "59301855"
   
 3. 割り当てることのできる値は次のとおりです。  
   
-    -   **None** - コメントと属性の両方がアセンブリ内に残り、別のファイルは生成されません。  
+    - **None** - コメントと属性の両方がアセンブリ内に残り、別のファイルは生成されません。  
   
-    -   **CommentsOnly** - アセンブリからコメントだけを取り除き、別の LocFile に配置します。  
+    - **CommentsOnly** - アセンブリからコメントだけを取り除き、別の LocFile に配置します。  
   
-    -   **All** - コメントと属性の両方をアセンブリから取り除き、両方とも別の 1 つの LocFile に配置します。  
+    - **All** - コメントと属性の両方をアセンブリから取り除き、両方とも別の 1 つの LocFile に配置します。  
   
 4. ローカライズ可能なリソースが [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] から抽出されると、ローカライズ可否属性が [!INCLUDE[TLA2#tla_baml](../../../../includes/tla2sharptla-baml-md.md)] ローカリゼーション API によって使用されます。  
   
@@ -74,11 +74,11 @@ ms.locfileid: "59301855"
   
  次の 3 種類の属性があります。  
   
--   **カテゴリ**。 これは、ローカライザー ツールで値を変更可能にするかどうかを指定します。 以下を参照してください。<xref:System.Windows.LocalizabilityAttribute.Category%2A>  
+- **カテゴリ**。 これは、ローカライザー ツールで値を変更可能にするかどうかを指定します。 以下を参照してください。<xref:System.Windows.LocalizabilityAttribute.Category%2A>  
   
--   **読みやすさ**。 これは、ローカライザー ツールで値を読み取る (および表示する) かどうかを指定します。 以下を参照してください。<xref:System.Windows.LocalizabilityAttribute.Readability%2A>  
+- **読みやすさ**。 これは、ローカライザー ツールで値を読み取る (および表示する) かどうかを指定します。 以下を参照してください。<xref:System.Windows.LocalizabilityAttribute.Readability%2A>  
   
--   **変更可能性**。 これは、ローカライザー ツールで値の変更を許可するかどうかを指定します。 以下を参照してください。<xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>  
+- **変更可能性**。 これは、ローカライザー ツールで値の変更を許可するかどうかを指定します。 以下を参照してください。<xref:System.Windows.LocalizabilityAttribute.Modifiability%2A>  
   
  これらの属性は、スペースで区切られた任意の順序で指定できます。 重複する属性が指定された場合、最後の属性にオーバーライドされます。 たとえば、Localization.Attributes = "Unmodifiable Modifiable" は、これが最後の値であるため、変更可能性を Modifiable に設定します。  
   

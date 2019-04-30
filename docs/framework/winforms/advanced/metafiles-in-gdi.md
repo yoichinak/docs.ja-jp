@@ -10,11 +10,11 @@ helpviewer_keywords:
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
 ms.openlocfilehash: bb972f158496192aa38f10564209bb2781837414
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59119861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010029"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+ でのメタファイル
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供、<xref:System.Drawing.Imaging.Metafile>クラスに記録し、メタファイルを表示できます。 ベクター イメージとも呼ばれる、メタファイルは、一連の描画コマンドと設定として格納されているイメージです。 コマンドおよび設定に記録する<xref:System.Drawing.Imaging.Metafile>オブジェクトをメモリに格納されているか、ファイルまたはストリームに保存します。  
@@ -22,11 +22,11 @@ ms.locfileid: "59119861"
 ## <a name="metafile-formats"></a>メタファイル形式  
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 次の形式で格納されているメタファイルを表示できます。  
   
--   Windows メタファイル (WMF)  
+- Windows メタファイル (WMF)  
   
--   拡張メタファイル (EMF)  
+- 拡張メタファイル (EMF)  
   
--   EMF +  
+- EMF +  
   
  [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] WMF の形式ではなく、EMF、EMF + 形式には、メタファイルを記録できます。  
   

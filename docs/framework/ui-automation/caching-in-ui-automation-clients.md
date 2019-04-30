@@ -6,11 +6,11 @@ helpviewer_keywords:
 - caching, UI Automation clients
 ms.assetid: 94c15031-4975-43cc-bcd5-c9439ed21c9c
 ms.openlocfilehash: 4c403fa6f0de34e970eb0c74df13d807e92f8a05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032358"
 ---
 # <a name="caching-in-ui-automation-clients"></a>UI オートメーション クライアントにおけるキャッシュ
 > [!NOTE]
@@ -64,9 +64,9 @@ ms.locfileid: "59175826"
 ## <a name="retrieving-cached-properties"></a>キャッシュされたプロパティの取得  
  要素のキャッシュされたプロパティを取得するには、次のメソッドとプロパティを使用します。  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPropertyValue%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
+- <xref:System.Windows.Automation.AutomationElement.Cached%2A>  
   
  要求されたプロパティがキャッシュ内にない場合、例外が発生します。  
   
@@ -76,9 +76,9 @@ ms.locfileid: "59175826"
 ## <a name="retrieving-cached-control-patterns"></a>キャッシュされたコントロール パターンの取得  
  要素のキャッシュされたコントロール パターンを取得するには、次のメソッドを使用します。  
   
--   <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A>  
   
--   <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
+- <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A>  
   
  パターンがキャッシュ内にない場合、 <xref:System.Windows.Automation.AutomationElement.GetCachedPattern%2A> で例外が発生し、 <xref:System.Windows.Automation.AutomationElement.TryGetCachedPattern%2A> が `false`を返します。  
   

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: f18b288f-b265-4bbe-957f-c6833c0645ef
 ms.openlocfilehash: 0d200ad35d3ab56bf97114b51b4f7fcc898eecdf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032475"
 ---
 # <a name="handling-null-values"></a>null 値の処理
 列の値が不明または欠落している場合は、リレーショナル データベースの NULL 値が使用されます。 NULL は空文字列 (文字または日付時刻データ型) でもゼロ値 (数値データ型) でもありません。 ANSI SQL-92 の規格では、すべてのデータ型について NULL は同一でなければならないと規定されているため、すべての NULL が一貫して処理されます。 <xref:System.Data.SqlTypes> 名前空間では、<xref:System.Data.SqlTypes.INullable> インターフェイスを実装することで NULL セマンティクスが提供されます。 <xref:System.Data.SqlTypes> 内の各データ型には、それぞれ独自に `IsNull` プロパティと `Null` 値があり、データ型のインスタンスに割り当てることができます。  
@@ -21,11 +21,11 @@ ms.locfileid: "59332145"
 ## <a name="nulls-and-three-valued-logic"></a>NULL および 3 つの値を持つロジック  
  列定義に NULL 値を許可することで、3 つの値を持つロジックをアプリケーションに定義できます。 比較によって、次の 3 つの条件のうちの 1 つを評価できます。  
   
--   True  
+- True  
   
--   False  
+- False  
   
--   不明  
+- 不明  
   
  NULL は不明であるとされるため、2 つの NULL 値を相互に比較した場合、同等であるとは見なされません。 算術演算子を使用する式では、オペランドのいずれかが NULL である場合は結果も NULL になります。  
   

@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 3ea381ee-ac7d-4d62-8c6c-12dc3650879f
 ms.openlocfilehash: 1eee814b17a7547bbbc07e17dd675c5f37860341
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979252"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002743"
 ---
 # <a name="asmx-client-with-a-wcf-service"></a>WCF サービス付き ASMX クライアント
 このサンプルでは、Windows Communication Foundation (WCF) を使用してサービスを作成し、ASMX クライアントなど、WCF 以外のクライアントからサービスにアクセスする方法を示します。  

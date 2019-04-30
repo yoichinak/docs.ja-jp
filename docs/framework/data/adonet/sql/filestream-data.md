@@ -3,11 +3,11 @@ title: FILESTREAM データ
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
 ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032488"
 ---
 # <a name="filestream-data"></a>FILESTREAM データ
 

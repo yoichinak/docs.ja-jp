@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 ms.assetid: a676b1eb-fc55-4355-93ab-df840c41cea0
 ms.openlocfilehash: 834160358d7b3e8e7f4c7c4f4fd06d403086e7e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307705"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032345"
 ---
 # <a name="walkthrough-hosting-a-win32-control-in-wpf"></a>チュートリアル: WPF での Win32 コントロールのホスト
 Windows Presentation Foundation (WPF) は、アプリケーションを作成するための豊富な環境を提供します。 ただし、Win32 コードのかなりの投資を存在する場合があります、少なくともいくつ再利用するより効果的なが、WPF アプリケーションでのコードではなく完全に書き換えます。 WPF には、WPF ページ上の Win32 ウィンドウをホストするための簡単なメカニズムが用意されています。  
@@ -47,9 +47,9 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
   
 6. 子コントロールからの通知など、ホスト ウィンドウに送信される選択したメッセージを処理します。 これには、2 つの方法があります。  
   
-    -   ホストするクラスでのメッセージを処理する場合は、オーバーライド、<xref:System.Windows.Interop.HwndHost.WndProc%2A>のメソッド、<xref:System.Windows.Interop.HwndHost>クラス。  
+    - ホストするクラスでのメッセージを処理する場合は、オーバーライド、<xref:System.Windows.Interop.HwndHost.WndProc%2A>のメソッド、<xref:System.Windows.Interop.HwndHost>クラス。  
   
-    -   WPF のメッセージを処理、処理を行う場合、<xref:System.Windows.Interop.HwndHost>クラス<xref:System.Windows.Interop.HwndHost.MessageHook>分離コードでイベント。 このイベントは、ホストされたウィンドウで受信されるすべてのメッセージに対して発生します。 まだをオーバーライドする必要がある場合、このオプションを選択すると、 <xref:System.Windows.Interop.HwndHost.WndProc%2A>、最小限の実装のみ必要しますが、あります。  
+    - WPF のメッセージを処理、処理を行う場合、<xref:System.Windows.Interop.HwndHost>クラス<xref:System.Windows.Interop.HwndHost.MessageHook>分離コードでイベント。 このイベントは、ホストされたウィンドウで受信されるすべてのメッセージに対して発生します。 まだをオーバーライドする必要がある場合、このオプションを選択すると、 <xref:System.Windows.Interop.HwndHost.WndProc%2A>、最小限の実装のみ必要しますが、あります。  
   
 7. 上書き、<xref:System.Windows.Interop.HwndHost.DestroyWindowCore%2A>と<xref:System.Windows.Interop.HwndHost.WndProc%2A>メソッドの<xref:System.Windows.Interop.HwndHost>します。 満たすためにこれらのメソッドをオーバーライドする必要があります、<xref:System.Windows.Interop.HwndHost>コントラクトが最小限の実装を提供する必要がありますのみです。  
   
@@ -129,13 +129,13 @@ Windows Presentation Foundation (WPF) は、アプリケーションを作成す
 ## <a name="implement-communication-between-the-control-and-the-page"></a>コントロールと、ページ間の通信を実装します。  
  Windows メッセージを送信することで、コントロールを操作します。 コントロールは、ユーザーがそのホスト ウィンドウに通知を送信することによってこれと対話するときに通知します。 [WPF での Win32 ListBox コントロールをホストしている](https://github.com/Microsoft/WPF-Samples/tree/master/Migration%20and%20Interoperability/WPFHostingWin32Control)サンプルには、この動作のいくつかの例を提供する UI が用意されています。  
   
--   リストに項目を追加します。  
+- リストに項目を追加します。  
   
--   一覧から選択した項目を削除します。  
+- 一覧から選択した項目を削除します。  
   
--   現在選択されている項目のテキストを表示します。  
+- 現在選択されている項目のテキストを表示します。  
   
--   一覧で項目の数を表示します。  
+- 一覧で項目の数を表示します。  
   
  ユーザー選択もできます項目、リスト ボックスをクリックして、従来の Win32 アプリケーションのと同様。 表示されるデータは、項目を追加するかを選択すると、追加すると、によって、ユーザーがリスト ボックスの状態を変更するたびが更新されます。  
   

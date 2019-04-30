@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Menu control type
 ms.assetid: 016323cb-f800-4938-b77b-2eb25d646090
 ms.openlocfilehash: 43a99e2f4b2eac0ec05d819f441c6324658d009e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033008"
 ---
 # <a name="ui-automation-support-for-the-menu-control-type"></a>UI オートメーションによる Menu コントロール型のサポート
 > [!NOTE]

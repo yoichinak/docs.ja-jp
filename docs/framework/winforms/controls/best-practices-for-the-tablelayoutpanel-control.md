@@ -15,11 +15,11 @@ helpviewer_keywords:
 - automatic sizing
 ms.assetid: b6706efb-d7a4-45ec-8cf4-08fa993e3afb
 ms.openlocfilehash: 57abf3527af146f1ce918bcabbc6a5a34bfb9b34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011737"
 ---
 # <a name="best-practices-for-the-tablelayoutpanel-control"></a>TableLayoutPanel コントロールの推奨される手順
 <xref:System.Windows.Forms.TableLayoutPanel>コントロールは、Windows フォームで使用する前に慎重に考慮すべき強力なレイアウト機能を提供します。  
@@ -30,17 +30,17 @@ ms.locfileid: "59773832"
 ### <a name="targeted-use"></a>対象の使用  
  使用して、<xref:System.Windows.Forms.TableLayoutPanel>慎重に制御します。 サイズ変更可能なレイアウトを必要とするすべての状況で使用する必要がありますできません。 次の一覧の使用を最大限に活用できるレイアウトの説明、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。  
   
--   レイアウトでは、相互に比例してサイズが変更されるフォームの複数の部分があります。  
+- レイアウトでは、相互に比例してサイズが変更されるフォームの複数の部分があります。  
   
--   変更または追加または削除されるユーザーにカスタマイズ可能なフィールドがデータ エントリ フォームなどの実行時に動的に生成されるレイアウトは、基本設定に基づいています。  
+- 変更または追加または削除されるユーザーにカスタマイズ可能なフィールドがデータ エントリ フォームなどの実行時に動的に生成されるレイアウトは、基本設定に基づいています。  
   
--   全体の固定サイズのままにレイアウトします。 たとえば、ダイアログ ボックスが 800 x 600 未満にしておく必要がありますが、ローカライズされた文字列をサポートする必要があります。  
+- 全体の固定サイズのままにレイアウトします。 たとえば、ダイアログ ボックスが 800 x 600 未満にしておく必要がありますが、ローカライズされた文字列をサポートする必要があります。  
   
  次に示しますを大幅に利用しないレイアウト、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。  
   
--   1 つの列のラベルとテキスト入力領域の 1 つの列のエントリのフォームが単純なデータ。  
+- 1 つの列のラベルとテキスト入力領域の 1 つの列のエントリのフォームが単純なデータ。  
   
--   1 つの大きなフォームには、サイズ変更が発生したときに使用可能なすべての領域の塗りつぶし領域が表示されます。 この例は、1 つを表示するフォーム<xref:System.Windows.Forms.PropertyGrid>コントロール。 この場合、アンカー、ために使用、フォームのサイズが変更されたときに他に何も展開する必要があります。  
+- 1 つの大きなフォームには、サイズ変更が発生したときに使用可能なすべての領域の塗りつぶし領域が表示されます。 この例は、1 つを表示するフォーム<xref:System.Windows.Forms.PropertyGrid>コントロール。 この場合、アンカー、ために使用、フォームのサイズが変更されたときに他に何も展開する必要があります。  
   
  どのコントロールでは、必要がありますは慎重に選択、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。 増加 30% がアンカーを使用して、文字列がある場合は、使用を検討して、<xref:System.Windows.Forms.Control.Anchor%2A>プロパティのみです。 場合は、レイアウトが必要な容量を見積もるを使用して<xref:System.Windows.Forms.Control.Dock%2A>と<xref:System.Windows.Forms.Control.Anchor%2A>が残りの領域の詳細を見積もるよりも簡単と<xref:System.Windows.Forms.Control.AutoSize%2A>動作します。  
   

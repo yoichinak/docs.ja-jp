@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.CoordinatorStateMachineFinished
 ms.date: 03/30/2017
 ms.assetid: 16cb428d-d886-4789-a961-6fded4b0dbba
 ms.openlocfilehash: bffaed4976d82202eaea9ce50f6d389548fdabfd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61998011"
 ---
 # <a name="microsofttransactionstransactionbridgecoordinatorstatemachinefinished"></a>Microsoft.Transactions.TransactionBridge.CoordinatorStateMachineFinished
 コーディネーターの登録リストのステート マシンが完了状態になりました。  

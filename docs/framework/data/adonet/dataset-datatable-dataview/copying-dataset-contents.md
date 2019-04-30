@@ -6,20 +6,20 @@ dev_langs:
 - vb
 ms.assetid: cb846617-2b1a-44ff-bd7f-5835f5ea37fa
 ms.openlocfilehash: cb2a172ac4e6a0ce4852f4c7cf7044583d9ab6c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034431"
 ---
 # <a name="copying-dataset-contents"></a>DataSet の内容のコピー
 コピーを作成することができます、<xref:System.Data.DataSet>元のデータに影響を与えずにデータを操作したり、作業するためのデータのサブセットを**データセット**。 コピーするときに、**データセット**を実行できます。  
   
--   正確なコピーを作成、**データセット**(スキーマ、データ、行状態情報、行のバージョンなど)。  
+- 正確なコピーを作成、**データセット**(スキーマ、データ、行状態情報、行のバージョンなど)。  
   
--   作成、**データセット**、既存のスキーマを格納している**データセット**、変更された行だけです。 変更されているすべての行を返すか、特定の指定**DataRowState**します。 行の状態の詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
+- 作成、**データセット**、既存のスキーマを格納している**データセット**、変更された行だけです。 変更されているすべての行を返すか、特定の指定**DataRowState**します。 行の状態の詳細については、次を参照してください。[行の状態と行バージョン](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/row-states-and-row-versions.md)します。  
   
--   スキーマ、またはリレーショナル構造のコピー、**データセット**のみ、すべての行をコピーすることがなく。 行は、<xref:System.Data.DataTable> を使用して、既存の <xref:System.Data.DataTable.ImportRow%2A> にインポートできます。  
+- スキーマ、またはリレーショナル構造のコピー、**データセット**のみ、すべての行をコピーすることがなく。 行は、<xref:System.Data.DataTable> を使用して、既存の <xref:System.Data.DataTable.ImportRow%2A> にインポートできます。  
   
  正確なコピーを作成する、**データセット**スキーマとデータの両方を含む、使用、<xref:System.Data.DataSet.Copy%2A>のメソッド、**データセット**します。 次のコード例の完全なコピーを作成する方法を示しています、**データセット**します。  
   

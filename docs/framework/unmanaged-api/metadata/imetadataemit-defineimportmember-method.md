@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 81acda4d395563fc8e0000e38036d1aaa0f14471
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222693"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043220"
 ---
 # <a name="imetadataemitdefineimportmember-method"></a>IMetaDataEmit::DefineImportMember メソッド
 型または現在のスコープ外に定義され、その参照のトークンを定義するモジュールの指定されたメンバーへの参照を作成します。  
@@ -72,11 +72,11 @@ HRESULT DefineImportMember (
   
  使用する前に、一般に、`DefineImportMember`メソッドを作成する必要が、現在のスコープは、型参照またはターゲット メンバーの親クラス、インターフェイス、またはモジュールのモジュール参照。 この参照のメタデータ トークンが渡されたし、`tkParent`引数。 コンパイラまたはリンカーによって後で解決する場合は、ターゲット メンバーの親への参照を作成する必要はありません。 まとめ  
   
--   対象のメンバーがフィールドまたはメソッドの場合は、いずれかを使用、 [imetadataemit::definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)または[imetadataemit::defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)の現在のスコープ内の型参照を作成する方法、メンバーの親クラスまたはインターフェイスの親。  
+- 対象のメンバーがフィールドまたはメソッドの場合は、いずれかを使用、 [imetadataemit::definetyperefbyname](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definetyperefbyname-method.md)または[imetadataemit::defineimporttype](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineimporttype-method.md)の現在のスコープ内の型参照を作成する方法、メンバーの親クラスまたはインターフェイスの親。  
   
--   グローバル変数またはグローバル関数 (つまり、いないメンバー クラスまたはインターフェイスの) の場合は、対象のメンバーを使用して、 [imetadataemit::definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)メソッド メンバーの親の現在のスコープ内のモジュール参照を作成するにはモジュール。  
+- グローバル変数またはグローバル関数 (つまり、いないメンバー クラスまたはインターフェイスの) の場合は、対象のメンバーを使用して、 [imetadataemit::definemoduleref](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemoduleref-method.md)メソッド メンバーの親の現在のスコープ内のモジュール参照を作成するにはモジュール。  
   
--   ターゲット メンバーの親はコンパイラまたはリンカーで後で解決される、その渡す`mdTokenNil`で`tkParent`します。 これが適用される唯一のシナリオは、グローバル関数またはグローバル変数が最終的には、現在のモジュールにリンクされる .obj ファイルからインポートされると、メタデータのマージします。  
+- ターゲット メンバーの親はコンパイラまたはリンカーで後で解決される、その渡す`mdTokenNil`で`tkParent`します。 これが適用される唯一のシナリオは、グローバル関数またはグローバル変数が最終的には、現在のモジュールにリンクされる .obj ファイルからインポートされると、メタデータのマージします。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

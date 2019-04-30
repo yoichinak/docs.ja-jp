@@ -3,22 +3,22 @@ title: UriTemplate テーブル ディスパッチャーのサンプル
 ms.date: 03/30/2017
 ms.assetid: 3b32975d-ba90-4c5c-83bc-2fbb48f11c0c
 ms.openlocfilehash: 800765c6b01e49b730414132ac64ab8eed3e9e5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007567"
 ---
 # <a name="uritemplate-table-dispatcher-sample"></a>UriTemplate テーブル ディスパッチャーのサンプル
 <xref:System.UriTemplateTable> クラスには、<xref:System.UriTemplate> インスタンスのセットを使用するための、ディクショナリに似た結合テーブル構造が用意されています。 このサンプルでは、`UriTemplateTable` クラスの一般的な使用シナリオとして、`UriTemplateTable` を使用してビルドされた基本的なディスパッチ エンジンを示します。  
   
  このサンプルでは、次の `UriTemplateTable` クラスに関連する重要な概念を示します。  
   
--   `UriTemplates` の `UriTemplateTable` とのデリゲートの関連付け。  
+- `UriTemplates` の `UriTemplateTable` とのデリゲートの関連付け。  
   
--   <xref:System.UriTemplateTable.MatchSingle%2A> を使用した特定の URI の正しいハンドラ デリゲートの取得。  
+- <xref:System.UriTemplateTable.MatchSingle%2A> を使用した特定の URI の正しいハンドラ デリゲートの取得。  
   
--   要求を処理するためのハンドラー デリゲートの呼び出し。  
+- 要求を処理するためのハンドラー デリゲートの呼び出し。  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Visual Basic code, labeling statements
 ms.assetid: 38f1ff43-2054-42cb-963b-1998e60c6ed4
 ms.openlocfilehash: 69ec8c7625410f140c59ba8dd492dca76857eb96
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828642"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050437"
 ---
 # <a name="how-to-label-statements-visual-basic"></a>方法: ラベル ステートメント (Visual Basic)
 ステートメント ブロックはコロンで区切られたコードの行で構成をされます。 行の識別文字列または整数に続くコードがあると言われますは*というラベルの付いた*します。 ステートメント ラベルは識別するために、使用するためのステートメントでなどのコード行をマークするために使用`On Error Goto`します。  
@@ -28,7 +28,7 @@ ms.locfileid: "58828642"
   
 ### <a name="to-label-a-line-of-code"></a>ラベルのコード行に  
   
--   識別子の後にソース コードの行の先頭のコロンを配置します。  
+- 識別子の後にソース コードの行の先頭のコロンを配置します。  
   
      たとえば、次のコード行ラベルが付けられます`Jump`と`120`、それぞれします。  
   

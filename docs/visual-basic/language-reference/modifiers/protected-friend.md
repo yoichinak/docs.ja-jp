@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Protected Friend keyword [Visual Basic]
 - Protected Friend keyword [Visual Basic], syntax
 ms.openlocfilehash: 331c63dc290d4096e8158f265ee869b47743a273
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151776"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053887"
 ---
 # <a name="protected-friend-visual-basic"></a>Protected Friend (Visual Basic)
 

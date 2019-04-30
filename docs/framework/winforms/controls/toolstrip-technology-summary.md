@@ -8,11 +8,11 @@ helpviewer_keywords:
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
 ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120961"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009488"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip テクノロジの概要
 ここでは、`ToolStrip` コントロールおよびその使用をサポートしているクラスの概要について説明します。  
@@ -25,23 +25,23 @@ ms.locfileid: "59120961"
 ## <a name="background"></a>背景  
  `ToolStrip` コントロールと関連クラスを使用すると、外観と動作に一貫性がある、プロフェッショナル レベルの高度なツール バー機能を作成できます。 `ToolStrip` コントロールとクラスでは、以前のコントロールから次の点が改善されました。  
   
--   より一貫性のあるイベント モデル。  
+- より一貫性のあるイベント モデル。  
   
--   タスク一覧と項目コレクション エディターを含む、より一貫性のあるデザイン時動作。  
+- タスク一覧と項目コレクション エディターを含む、より一貫性のあるデザイン時動作。  
   
--   `ToolStripManager` と `ToolStripRenderer` を使用したカスタム描画。  
+- `ToolStripManager` と `ToolStripRenderer` を使用したカスタム描画。  
   
--   `ToolStripContainer` と `ToolStripPanel` を使用したビルトイン ラフティング (ドッキング時にツール領域内の水平スペースと垂直スペースを共有すること)。  
+- `ToolStripContainer` と `ToolStripPanel` を使用したビルトイン ラフティング (ドッキング時にツール領域内の水平スペースと垂直スペースを共有すること)。  
   
--   <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> プロパティを使用した、デザイン時および実行時の項目の並べ替え。  
+- <xref:System.Windows.Forms.ToolStrip.AllowItemReorder%2A> プロパティを使用した、デザイン時および実行時の項目の並べ替え。  
   
--   <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> プロパティを使用した、オーバーフロー メニューへの項目の再配置。  
+- <xref:System.Windows.Forms.ToolStrip.CanOverflow%2A> プロパティを使用した、オーバーフロー メニューへの項目の再配置。  
   
--   `ToolStripContainer`、`ToolStripPanel`、`ToolStripContentPanel` を使用した、自由に構成可能なコントロール位置。  
+- `ToolStripContainer`、`ToolStripPanel`、`ToolStripContentPanel` を使用した、自由に構成可能なコントロール位置。  
   
--   `ToolStripControlHost` を使用した、`ToolStrip`、従来のコントロール、またはカスタム コントロールのホスト。  
+- `ToolStripControlHost` を使用した、`ToolStrip`、従来のコントロール、またはカスタム コントロールのホスト。  
   
--   `ToolStripPanel` を使用した `ToolStrip` コントロールのマージ。  
+- `ToolStripPanel` を使用した `ToolStrip` コントロールのマージ。  
   
  `ToolStrip` は、`MenuStrip`、`ContextMenuStrip`、`StatusStrip` の拡張可能な基底クラスです。 これらのコントロールは、共通の動作とイベント処理を継承する <xref:System.Windows.Forms.ToolStripItem> コンテナーで、それぞれの実装で適切な動作を処理できるように拡張されています。 <xref:System.Windows.Forms.ToolStripItem> から派生するコントロールについて、次の表に示します。 `ToolStrip` 基底クラスでは、コントロールの描画、ユーザー入力、ドラッグ アンド ドロップの各イベントを処理します。  
   
@@ -63,26 +63,26 @@ ms.locfileid: "59120961"
 ### <a name="task-dialog-boxes"></a>タスク ダイアログ ボックス  
  Visual Studio のデザイナーでコントロールのスマート タグをクリックすると、タスク一覧が表示されます。タスク一覧からは、よく使用する多くのコマンドに簡単にアクセスできます。  
   
--   [[MenuStrip タスク] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
+- [[MenuStrip タスク] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233645(v=vs.100))  
   
--   [[ToolStrip タスク] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
+- [[ToolStrip タスク] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233648(v=vs.100))  
   
--   [[ContextMenuStrip タスク] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
+- [[ContextMenuStrip タスク] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233646(v=vs.100))  
   
--   [[StatusStrip タスク] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
+- [[StatusStrip タスク] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233642(v=vs.100))  
   
--   [[ToolStripContainer タスク] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
+- [[ToolStripContainer タスク] ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233647(v=vs.100))  
   
 ### <a name="items-collection-editors"></a>項目コレクション エディター  
  クリックすると、Visual Studio で**アイテムの編集**タスクの一覧またはクリックし、コントロールを右クリックして**アイテムの編集**ショートカット メニューで、コントロールのコレクション エディターが表示されます。 コレクション エディターを使用すると、コントロールに含まれる項目の追加、削除、並べ替えを行うことができます。 また、コントロールとコントロール項目のプロパティを表示および変更することもできます。  
   
--   [MenuStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
+- [MenuStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233625(v=vs.100))  
   
--   [StatusStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
+- [StatusStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233631(v=vs.100))  
   
--   [ContextMenuStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
+- [ContextMenuStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233641(v=vs.100))  
   
--   [ToolStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
+- [ToolStrip Items コレクション エディター](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/ms233643(v=vs.100))  
   
 ## <a name="hosting-controls"></a>コントロールのホスト  
  <xref:System.Windows.Forms.ToolStripControlHost> クラスは、<xref:System.Windows.Forms.ToolStripComboBox> コントロール、<xref:System.Windows.Forms.ToolStripTextBox> コントロール、<xref:System.Windows.Forms.ToolStripProgressBar> コントロールのためのビルトイン ラッパーを提供します。 その他の既存のコントロールまたは COM コントロールを <xref:System.Windows.Forms.ToolStripControlHost> でホストすることもできます。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - best practices [WCF], security
 ms.assetid: 3639de41-1fa7-4875-a1d7-f393e4c8bd69
 ms.openlocfilehash: f0305807e76ca27e1979aa23bf0797c505fee566
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166128"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048245"
 ---
 # <a name="best-practices-for-security-in-wcf"></a>WCF のセキュリティのベスト プラクティス
 以下のセクションでは、Windows Communication Foundation (WCF) を使用してセキュリティで保護されたアプリケーションを作成する場合に考慮する必要のあるベスト プラクティスを示します。 セキュリティの詳細については、[セキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-in-wcf.md)に関するページ、「[セキュリティに関するデータの考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-for-data.md)」、「[メタデータを使用する場合のセキュリティ上の考慮事項](../../../../docs/framework/wcf/feature-details/security-considerations-with-metadata.md)」を参照してください。  
@@ -26,11 +26,11 @@ ms.locfileid: "59166128"
 ## <a name="use-x509-certificates-instead-of-ntlm"></a>NTLM の代わりに X509 証明書を使用する  
  WCF では、ピア ツー ピア認証用の 2 つのメカニズムを提供します。X509 証明書 (ピア チャネルで使用) と、SSPI ネゴシエーションにダウン グレード Kerberos から NTLM に Windows 認証。  1024 ビット以上のキー サイズを使用する証明書ベースの認証が NTLM より好ましい理由はいくつかあります。  
   
--   相互認証が可能  
+- 相互認証が可能  
   
--   暗号化アルゴリズムの強化  
+- 暗号化アルゴリズムの強化  
   
--   転送された X509 資格情報の利用が難しくなる  
+- 転送された X509 資格情報の利用が難しくなる  
    
 ## <a name="always-revert-after-impersonation"></a>偽装後は必ず元に戻す  
  クライアントの偽装を有効にする API を使用した後は、必ず元の ID に戻してください。 たとえば、<xref:System.Security.Principal.WindowsIdentity> と <xref:System.Security.Principal.WindowsImpersonationContext> を使用する場合は、次のコードに示すように、C# の `using` ステートメントまたは Visual Basic の `Using` ステートメントを使用します。 <xref:System.Security.Principal.WindowsImpersonationContext> クラスは <xref:System.IDisposable> インターフェイスを実装しているため、コードが `using` ブロックを抜けると共通言語ランタイム (CLR: Common Language Runtime) は自動的に元の ID に戻ります。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
 ms.openlocfilehash: 885e6bc011041320a3dc7b17d84b2541bf030adf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168312"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033463"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>シーケンスの要素の取得またはスキップ
 <xref:System.Linq.Queryable.Take%2A> 演算子を使用すると、シーケンス内の指定された数の要素を返し、残りをスキップできます。  
@@ -22,9 +22,9 @@ ms.locfileid: "59168312"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 変換<xref:System.Linq.Queryable.Skip%2A>サブクエリを使用して、SQL を使用した、`NOT EXISTS`句。 この変換には、次のような制限があります。  
   
--   引数は、セットである必要があります。 順序が指定されていてもマルチセットはサポートされません。  
+- 引数は、セットである必要があります。 順序が指定されていてもマルチセットはサポートされません。  
   
--   生成されるクエリは、<xref:System.Linq.Queryable.Skip%2A> が適用される基本クエリに対して生成されるクエリより複雑な場合があります。 複雑なために、パフォーマンスが低下したり、タイムアウトが発生することもあります。  
+- 生成されるクエリは、<xref:System.Linq.Queryable.Skip%2A> が適用される基本クエリに対して生成されるクエリより複雑な場合があります。 複雑なために、パフォーマンスが低下したり、タイムアウトが発生することもあります。  
   
 ## <a name="example"></a>例  
  次の例では、`Take` を使用して、雇用された最初の 5 人の `Employees` を選択します。 コレクションは最初、`HireDate` 順に並べられます。  

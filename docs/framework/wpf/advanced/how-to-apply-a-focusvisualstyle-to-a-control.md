@@ -6,11 +6,11 @@ helpviewer_keywords:
 - FocusVisualStyle property [WPF]
 ms.assetid: 363de99e-8ecc-438c-ac4a-f9147432ebd6
 ms.openlocfilehash: 53d4984946143c15c4a2b71095529fb5ee7de4b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051326"
 ---
 # <a name="how-to-apply-a-focusvisualstyle-to-a-control"></a>方法: FocusVisualStyle をコントロールに適用する
 この例は、リソースにフォーカスの visual スタイルを作成し、コントロールにスタイルを適用する方法を示しますを使用して、<xref:System.Windows.FrameworkElement.FocusVisualStyle%2A>プロパティ。  

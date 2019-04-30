@@ -3,11 +3,11 @@ title: LINQ to SQL におけるセキュリティ
 ms.date: 03/30/2017
 ms.assetid: d49787f7-414e-4c71-aa33-80a5895536b1
 ms.openlocfilehash: 6af073a86b0feaba2fdcd9facd9474bb334096e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078145"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62036999"
 ---
 # <a name="security-in-linq-to-sql"></a>LINQ to SQL におけるセキュリティ
 データベースに接続するときは、常にセキュリティのリスクがあります。 LINQ to SQL には SQL Server のデータを操作する新しい方法が含まれていますが、セキュリティ メカニズムは追加されていません。  
@@ -25,13 +25,13 @@ ms.locfileid: "59078145"
   
  統合セキュリティがない場合は、接続文字列にクリア テキストのパスワードが必要になります。 以下は、接続文字列のセキュリティ保護に最も有効な手段です。  
   
--   統合セキュリティを使用します。  
+- 統合セキュリティを使用します。  
   
--   接続文字列をパスワードで保護し、接続文字列の配布を最小限にします。  
+- 接続文字列をパスワードで保護し、接続文字列の配布を最小限にします。  
   
--   接続文字列の代わりに、表示時間に制限のある <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> クラスを使用します。 LINQ to SQL の <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> クラスは <xref:System.Data.SqlClient.SqlConnection> を使用してインスタンス化できます。  
+- 接続文字列の代わりに、表示時間に制限のある <xref:System.Data.SqlClient.SqlConnection?displayProperty=nameWithType> クラスを使用します。 LINQ to SQL の <xref:System.Data.Linq.DataContext?displayProperty=nameWithType> クラスは <xref:System.Data.SqlClient.SqlConnection> を使用してインスタンス化できます。  
   
--   すべての接続文字列の期限と接触点を最小限にします。  
+- すべての接続文字列の期限と接触点を最小限にします。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
 ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053289"
 ---
 # <a name="-operator-visual-basic"></a>>> 演算子 (Visual Basic)
 ビット パターン上で算術右シフトを実行します。  
@@ -64,15 +64,15 @@ result = pattern >> amount
   
  前の例の結果は次のとおりです。  
   
--   `result1` 2560 (0000 1010 0000 0000) です。  
+- `result1` 2560 (0000 1010 0000 0000) です。  
   
--   `result2` 160 (0000 0000 1010 0000) です。  
+- `result2` 160 (0000 0000 1010 0000) です。  
   
--   `result3` 2 (0000 0000 0000 0010) です。  
+- `result3` 2 (0000 0000 0000 0010) です。  
   
--   `result4` 640 (0000 0010 1000 0000) です。  
+- `result4` 640 (0000 0010 1000 0000) です。  
   
--   `result5` 0 (右側のシフト 15 の桁数) です。  
+- `result5` 0 (右側のシフト 15 の桁数) です。  
   
  シフト数`result4`18 として計算されますが 2 と等しいと 15 です。  
   
@@ -82,9 +82,9 @@ result = pattern >> amount
   
  前の例の結果は次のとおりです。  
   
--   `negresult1` (1111 1110 0000 0000) -512 です。  
+- `negresult1` (1111 1110 0000 0000) -512 です。  
   
--   `negresult2` -1 (符号ビットが反映されます) です。  
+- `negresult2` -1 (符号ビットが反映されます) です。  
   
 ## <a name="see-also"></a>関連項目
 

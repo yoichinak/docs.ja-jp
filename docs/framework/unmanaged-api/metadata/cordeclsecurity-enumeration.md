@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 5409d1b89ba3e50c4ae17ed5aa6bf063cf6c93cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046034"
 ---
 # <a name="cordeclsecurity-enumeration"></a>CorDeclSecurity 列挙型
 宣言型セキュリティを使用して実行できるセキュリティ アクションを指定します。  

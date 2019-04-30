@@ -8,11 +8,11 @@ helpviewer_keywords:
 - interoperability [WPF], Win32
 ms.assetid: 39ee888c-e5ec-41c8-b11f-7b851a554442
 ms.openlocfilehash: 74055ec3facb7db9145c4c0e969d57da24eccbc8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115077"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053419"
 ---
 # <a name="sharing-message-loops-between-win32-and-wpf"></a>Win32 と WPF 間でのメッセージ ループの共有
 このトピックとの相互運用のメッセージ ループを実装する方法を説明します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]、既存を使用していずれかのメッセージ ループ危険にさらされる<xref:System.Windows.Threading.Dispatcher>またはで個別のメッセージ ループを作成して、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]の相互運用コード側。  
@@ -29,26 +29,26 @@ ms.locfileid: "59115077"
 ## <a name="writing-message-loops"></a>メッセージ ループの記述  
  次のチェックリストは、<xref:System.Windows.Interop.ComponentDispatcher>独自のメッセージ ループを記述する場合に使用するメンバー。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>: メッセージ ループは、このスレッドがモーダルであることを示すを呼び出す必要があります。  
+- <xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>: メッセージ ループは、このスレッドがモーダルであることを示すを呼び出す必要があります。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>:、メッセージ ループには、これを、スレッドが nonmodal を元に戻ることを示すために呼び出す必要があります。  
+- <xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>:、メッセージ ループには、これを、スレッドが nonmodal を元に戻ることを示すために呼び出す必要があります。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>:、メッセージ ループには、このことを示すために呼び出す必要があります<xref:System.Windows.Interop.ComponentDispatcher>を発生させる、<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>イベント。 <xref:System.Windows.Interop.ComponentDispatcher> 発生しません<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>場合<xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>は`true`、メッセージ ループ呼び出しすることもできますが、<xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>場合でも<xref:System.Windows.Interop.ComponentDispatcher>モーダルの状態のときにそれに応答できません。  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>:、メッセージ ループには、このことを示すために呼び出す必要があります<xref:System.Windows.Interop.ComponentDispatcher>を発生させる、<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>イベント。 <xref:System.Windows.Interop.ComponentDispatcher> 発生しません<xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>場合<xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>は`true`、メッセージ ループ呼び出しすることもできますが、<xref:System.Windows.Interop.ComponentDispatcher.RaiseIdle%2A>場合でも<xref:System.Windows.Interop.ComponentDispatcher>モーダルの状態のときにそれに応答できません。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>: メッセージ ループは、この新しいメッセージが使用できることを示すを呼び出す必要があります。 戻り値を示しますリスナーがあるかどうかを<xref:System.Windows.Interop.ComponentDispatcher>イベントは、メッセージを処理します。 場合<xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>返します`true`(処理)、ディスパッチャーは何もさらに、メッセージを使用します。 場合は、戻り値は`false`、ディスパッチャーの呼び出しが想定されて、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数`TranslateMessage`、呼び出して`DispatchMessage`します。  
+- <xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>: メッセージ ループは、この新しいメッセージが使用できることを示すを呼び出す必要があります。 戻り値を示しますリスナーがあるかどうかを<xref:System.Windows.Interop.ComponentDispatcher>イベントは、メッセージを処理します。 場合<xref:System.Windows.Interop.ComponentDispatcher.RaiseThreadMessage%2A>返します`true`(処理)、ディスパッチャーは何もさらに、メッセージを使用します。 場合は、戻り値は`false`、ディスパッチャーの呼び出しが想定されて、[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]関数`TranslateMessage`、呼び出して`DispatchMessage`します。  
   
 ## <a name="using-componentdispatcher-and-existing-message-handling"></a>ComponentDispatcher を使用して、既存のメッセージの処理  
  次のチェックリストは、<xref:System.Windows.Interop.ComponentDispatcher>固有に依存する場合に使用するメンバー[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]メッセージ ループします。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>: アプリケーションをモーダルになったかどうかを返します (モーダルのメッセージ ループのプッシュなど)。 <xref:System.Windows.Interop.ComponentDispatcher> クラスの数を保持しているために、この状態を追跡できます<xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>と<xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>メッセージ ループからの呼び出し。  
+- <xref:System.Windows.Interop.ComponentDispatcher.IsThreadModal%2A>: アプリケーションをモーダルになったかどうかを返します (モーダルのメッセージ ループのプッシュなど)。 <xref:System.Windows.Interop.ComponentDispatcher> クラスの数を保持しているために、この状態を追跡できます<xref:System.Windows.Interop.ComponentDispatcher.PushModal%2A>と<xref:System.Windows.Interop.ComponentDispatcher.PopModal%2A>メッセージ ループからの呼び出し。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>イベント デリゲートの呼び出しの標準的な規則に従います。 デリゲートが不特定の順序で呼び出され、処理済みとして、1 つ目は、メッセージをマークする場合でも、すべてのデリゲートが呼び出されます。  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage> <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>イベント デリゲートの呼び出しの標準的な規則に従います。 デリゲートが不特定の順序で呼び出され、処理済みとして、1 つ目は、メッセージをマークする場合でも、すべてのデリゲートが呼び出されます。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>: アイドル処理を行う、適切かつ効率的な時間を示します (その他の保留中のスレッドのメッセージはありません)。 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> 発生しませんスレッドがモーダルの場合。  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle>: アイドル処理を行う、適切かつ効率的な時間を示します (その他の保留中のスレッドのメッセージはありません)。 <xref:System.Windows.Interop.ComponentDispatcher.ThreadIdle> 発生しませんスレッドがモーダルの場合。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>: メッセージ ポンプを処理するすべてのメッセージに対して発生します。  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>: メッセージ ポンプを処理するすべてのメッセージに対して発生します。  
   
--   <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>: 中に処理されていないすべてのメッセージに対して発生<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>します。  
+- <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>: 中に処理されていないすべてのメッセージに対して発生<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>します。  
   
  メッセージと見なされます後の処理済みの場合、<xref:System.Windows.Interop.ComponentDispatcher.ThreadFilterMessage>イベントまたは<xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage>イベント、`handled`イベント データの参照によって渡されたパラメーターが`true`します。 場合、イベント ハンドラーは、メッセージを無視する必要があります`handled`は`true`別のハンドラーが最初に、メッセージを処理するため、します。 両方のイベントをイベント ハンドラーは、メッセージを変更することができます。 変更されたメッセージと元変更されていないメッセージではなく、ディスパッチャーのディスパッチする必要があります。 <xref:System.Windows.Interop.ComponentDispatcher.ThreadPreprocessMessage> すべてのリスナーがアーキテクチャの目的に配信を対象となるメッセージがメッセージへの応答内のコードを呼び出す必要がある HWND を含むトップレベルのウィンドウのみです。  
   

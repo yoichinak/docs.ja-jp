@@ -3,11 +3,11 @@ title: ワークフローの追跡の構成
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
 ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/16/2019
-ms.locfileid: "58126202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052769"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>ワークフローの追跡の構成
 
@@ -52,7 +52,7 @@ instance.Extensions.Add(trackingParticipant);
 
 ホストされている場合は、WCF サービスとしてワークフローを公開することができます、<xref:System.ServiceModel.Activities.WorkflowServiceHost>サービス ホスト。 <xref:System.ServiceModel.Activities.WorkflowServiceHost> は、ワークフロー ベースのサービスの .NET ServiceHost の特殊な実装です。 ここでは、[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] で実行されている <xref:System.ServiceModel.Activities.WorkflowServiceHost> ワークフロー サービスの追跡を構成する方法について説明します。 Web.config ファイル (Web ホスト サービスの場合) または App.config ファイル (コンソール アプリケーションなどのスタンドアロン アプリケーションでホストされるサービスの場合) を介し、サービス動作を指定して構成するか、またはコードを介し、サービス ホスト用に <xref:System.ServiceModel.Description.ServiceDescription.Behaviors%2A> コレクションに追跡固有の動作を追加して構成できます。
 
-<xref:System.ServiceModel.WorkflowServiceHost> でホストされるワークフロー サービスの場合、次の例のように、構成ファイル内の <<xref:System.Activities.Tracking.EtwTrackingParticipant>> 要素を使用して `behavior` を追加できます。
+ワークフロー サービスがホストされている<xref:System.ServiceModel.WorkflowServiceHost>、追加することができます、<xref:System.Activities.Tracking.EtwTrackingParticipant>を使用して、<`behavior`> 次の例に示すように構成ファイル内の要素。
 
 ```xml
 <behaviors>

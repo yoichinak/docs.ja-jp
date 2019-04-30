@@ -9,11 +9,11 @@ helpviewer_keywords:
 - event handlers, troubleshooting
 ms.assetid: e1c8759f-5370-4308-8476-8c48b73509bf
 ms.openlocfilehash: 704ca667a6d14ade7be0192e872f5e40791cb864
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58830189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053809"
 ---
 # <a name="troubleshooting-inherited-event-handlers-in-visual-basic"></a>Visual Basic での継承されたイベント ハンドラーのトラブルシューティング
 このトピックでは、継承されたコンポーネントのイベント ハンドラーで発生する一般的な問題を一覧表示します。  
@@ -22,11 +22,11 @@ ms.locfileid: "58830189"
   
 #### <a name="code-in-event-handler-executes-twice-for-every-call"></a>イベント ハンドラーのコードは呼び出しごとに 2 回実行します  
   
--   継承されたイベント ハンドラーが含めることはできません、[処理](../../../../visual-basic/language-reference/statements/handles-clause.md)句。 基本クラスのメソッドは既に、イベントに関連付けられたが発生します。 削除、`Handles`句継承されたメソッドから。  
+- 継承されたイベント ハンドラーが含めることはできません、[処理](../../../../visual-basic/language-reference/statements/handles-clause.md)句。 基本クラスのメソッドは既に、イベントに関連付けられたが発生します。 削除、`Handles`句継承されたメソッドから。  
   
      [!code-vb[VbVbalrEvents#32](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#32)]  
   
--   継承されたメソッドがあるない場合、`Handles`キーワード、コードに追加が含まれていないことを確認します[AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)または他のメソッドを同じイベントを処理します。  
+- 継承されたメソッドがあるない場合、`Handles`キーワード、コードに追加が含まれていないことを確認します[AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md)または他のメソッドを同じイベントを処理します。  
   
 ## <a name="see-also"></a>関連項目
 

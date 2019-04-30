@@ -7,11 +7,11 @@ helpviewer_keywords:
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
 ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113283"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053432"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save のシリアル化の制限
 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A>の内容をシリアル化に使用できる、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]としてアプリケーションを[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイル。 ただし、シリアル化されるいくつかの注目すべき制限があります。 このトピックでは、これらの制限事項といくつかの一般的な考慮事項が記載されています。  
@@ -36,8 +36,8 @@ ms.locfileid: "59113283"
 ## <a name="realistic-scenarios-for-use-of-xamlwritersave"></a>(XAMLWriter.Save の) 使用するための現実的なシナリオ  
  制限事項が表示されているときにここでは相当を使用するためのいくつかの適切なシナリオはまだあります<xref:System.Windows.Markup.XamlWriter.Save%2A>のシリアル化します。  
   
--   ベクトルまたはグラフィカルな出力:レンダリングされた領域の出力は、同じベクターまたは再読み込み時のグラフィックスを再現するために使用できます。  
+- ベクトルまたはグラフィカルな出力:レンダリングされた領域の出力は、同じベクターまたは再読み込み時のグラフィックスを再現するために使用できます。  
   
--   リッチ テキストおよびフロー ドキュメント:テキストとすべての要素の書式設定と要素コンテインメント内には、出力に保持されます。 おおよそのクリップボード機能のメカニズムの便利なことができます。  
+- リッチ テキストおよびフロー ドキュメント:テキストとすべての要素の書式設定と要素コンテインメント内には、出力に保持されます。 おおよそのクリップボード機能のメカニズムの便利なことができます。  
   
--   ビジネス オブジェクト データの保持。保存しているかどうかのデータをカスタムの要素になど[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ、ビジネス オブジェクトは、次の基本的なかぎり[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]など、カスタム コンス トラクターと参照渡しでプロパティ値の変換を提供するルールは、これらのビジネス オブジェクトを指定できますシリアル化を通じて永続的なものです。
+- ビジネス オブジェクト データの保持。保存しているかどうかのデータをカスタムの要素になど[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]データ、ビジネス オブジェクトは、次の基本的なかぎり[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]など、カスタム コンス トラクターと参照渡しでプロパティ値の変換を提供するルールは、これらのビジネス オブジェクトを指定できますシリアル化を通じて永続的なものです。
