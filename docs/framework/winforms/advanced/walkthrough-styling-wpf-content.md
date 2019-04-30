@@ -1,4 +1,4 @@
----
+﻿---
 title: 'チュートリアル: WPF コンテンツへのスタイルの適用'
 ms.date: 03/30/2017
 helpviewer_keywords:
