@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS-AT protocol [WCF], configuring WS-Atomic Transaction
 ms.assetid: cb9f1c9c-1439-4172-b9bc-b01c3e09ac48
 ms.openlocfilehash: 987d6c12262fd6530c6ef6f14cedeec269d3f2f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315180"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048116"
 ---
 # <a name="configuring-ws-atomic-transaction-support"></a>WS-AtomicTransaction サポートの構成
 ここでは、WS-AtomicTransaction (WS-AT) 構成ユーティリティを使用して WS-AT サポートを構成する方法について説明します。  
@@ -106,17 +106,17 @@ ms.locfileid: "59315180"
   
 4. **値データ**入力ボックスに、有効にするトレース レベルを指定する有効な値は次のいずれかを入力します。  
   
--   0 : オフ  
+- 0 : オフ  
   
--   1 : クリティカル  
+- 1 : クリティカル  
   
--   3 : エラー ( 既定値)  
+- 3 : エラー ( 既定値)  
   
--   7 : 警告  
+- 7 : 警告  
   
--   15 : 情報  
+- 15 : 情報  
   
--   31 : 詳細  
+- 31 : 詳細  
   
 ## <a name="see-also"></a>関連項目
 

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM+ [WCF], using service model configuration tool
 ms.assetid: 7e68cd8d-5fda-4641-b92f-290db874376e
 ms.openlocfilehash: 5b330a727c0a4a20de13f43fd2844d0b745e5060
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972680"
 ---
 # <a name="how-to-use-the-com-service-model-configuration-tool"></a>方法: COM+ サービス モデル構成ツールを使用する
 適切なホスト モードを選択したら、COM+ サービス モデル構成コマンド ライン ツール (ComSvcConfig.exe) を使用して、Web サービスとして公開されるアプリケーション インターフェイスを構成します。  
@@ -33,7 +33,7 @@ ms.locfileid: "59322590"
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>COM+ ホスト モードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスを追加するには  
   
--   次の例に示すように、`/install` オプションと `/hosting:complus` オプションを使用して ComSvcConfig を実行します。  
+- 次の例に示すように、`/install` オプションと `/hosting:complus` オプションを使用して ComSvcConfig を実行します。  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus /verbose  
@@ -49,7 +49,7 @@ ms.locfileid: "59322590"
   
 ### <a name="to-add-only-specific-methods-from-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-com-hosting-mode"></a>COM+ ホスト モードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスの特定のメソッドだけを追加するには  
   
--   次の例に示すように、`/install` オプションと `/hosting:complus` オプション、および必要なメソッドの名前を明示的に指定して、ComSvcConfig を実行します。  
+- 次の例に示すように、`/install` オプションと `/hosting:complus` オプション、および必要なメソッドの名前を明示的に指定して、ComSvcConfig を実行します。  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineStore /contract:ItemOrders.Financial,IFinances.{Credit,Debit} /hosting:complus /verbose  
@@ -59,7 +59,7 @@ ms.locfileid: "59322590"
   
 ### <a name="to-add-an-interface-to-the-set-of-interfaces-that-are-to-be-exposed-as-web-services-using-the-web-hosting-mode"></a>Web ホスト モードを使用して、Web サービスとして公開されるインターフェイスのセットにインターフェイスを追加するには  
   
--   次の例に示すように、`/install` オプションと `/hosting:was` オプションを使用して ComSvcConfig を実行します。  
+- 次の例に示すように、`/install` オプションと `/hosting:was` オプションを使用して ComSvcConfig を実行します。  
   
     ```  
     ComSvcConfig.exe /install /application:OnlineWarehouse /contract:ItemInventory.Warehouse,IStockLevels /hosting:was /webDirectory:root/OnlineWarehouse /mex /verbose  
@@ -73,7 +73,7 @@ ms.locfileid: "59322590"
   
 ### <a name="to-remove-a-web-service-for-a-specified-interface"></a>指定したインターフェイスの Web サービスを削除するには  
   
--   次の例に示すように、`/uninstall` のオプションを使用して ComSvcConfig を実行します。  
+- 次の例に示すように、`/uninstall` のオプションを使用して ComSvcConfig を実行します。  
   
     ```  
     ComSvcConfig.exe /uninstall /application:OnlineStore /contract:ItemOrders.Financial,IFinances /hosting:complus  
@@ -83,7 +83,7 @@ ms.locfileid: "59322590"
   
 ### <a name="to-list-currently-exposed-interfaces"></a>現在公開されているインターフェイスを一覧表示するには  
   
--   次の例に示すように、`/list` のオプションを使用して ComSvcConfig を実行します。  
+- 次の例に示すように、`/list` のオプションを使用して ComSvcConfig を実行します。  
   
     ```  
     ComSvcConfig.exe /list  
@@ -93,7 +93,7 @@ ms.locfileid: "59322590"
   
 ### <a name="to-list-specific-currently-exposed-interfaces"></a>現在公開されている特定のインターフェイスを一覧表示するには  
   
--   次の例に示すように、`/list` のオプションを使用して ComSvcConfig を実行します。  
+- 次の例に示すように、`/list` のオプションを使用して ComSvcConfig を実行します。  
   
     ```  
     ComSvcConfig.exe /list /application:OnlineStore /hosting:complus  
@@ -103,7 +103,7 @@ ms.locfileid: "59322590"
   
 ### <a name="to-display-help-on-the-options-that-can-be-used-with-the-utility"></a>ユーティリティで使用できるオプションに関するヘルプを表示するには  
   
--   次の例に示すように、/? オプションを 使用して ComSvcConfig を実行します。  
+- 次の例に示すように、/? オプションを 使用して ComSvcConfig を実行します。  
   
     ```  
     ComSvcConfig.exe /?  

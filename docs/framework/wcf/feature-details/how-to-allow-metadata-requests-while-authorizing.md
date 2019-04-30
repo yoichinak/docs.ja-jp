@@ -8,11 +8,11 @@ helpviewer_keywords:
 - allowing metadata requests while authorizing [WCF]
 ms.assetid: 90cec34f-b619-452b-a056-8b1c0de49d05
 ms.openlocfilehash: bea4f7e90df29678697fe6708bdc6a73145522db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047803"
 ---
 # <a name="how-to-allow-metadata-requests-while-authorizing"></a>方法: 承認中にメタデータ要求を許可する
 カスタム承認中に、メタデータの処理要求を許可することがあります。 ここでは、このような要求を検証する手順を示します。  

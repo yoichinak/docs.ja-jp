@@ -5,11 +5,11 @@ helpviewer_keywords:
 - graphics [WPF], translations
 ms.assetid: 461c8273-15df-42f6-8672-89ba22887cc0
 ms.openlocfilehash: 9c1b873a89820e85efb99789f483c4832fb23cf7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051443"
 ---
 # <a name="how-to-translate-an-element"></a>方法: 要素を平行移動する
 この例では変換 (移動) に要素を使用して、<xref:System.Windows.Media.TranslateTransform>します。  

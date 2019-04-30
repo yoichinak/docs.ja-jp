@@ -1,5 +1,5 @@
 ---
-title: チュートリアル:カスタム アニメーション ボタンを作成します。
+title: チュートリアル:カスタム アニメーション ボタンの作成
 ms.date: 03/30/2017
 helpviewer_keywords:
 - custom animated buttons [WPF]
@@ -7,13 +7,13 @@ helpviewer_keywords:
 - animation [WPF], buttons [WPF]
 ms.assetid: e9532c72-460f-4898-9332-613fa21d746a
 ms.openlocfilehash: 3c601641a0eb1024722b4f449f0ab23e54fe93dd
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357210"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024470"
 ---
-# <a name="walkthroughs-create-a-custom-animated-button"></a>チュートリアル:カスタム アニメーション ボタンを作成します。
+# <a name="walkthroughs-create-a-custom-animated-button"></a>チュートリアル:カスタム アニメーション ボタンの作成
 その名前からわかるように、Windows Presentation Foundation (WPF) はお客様のエクスペリエンスのリッチ プレゼンテーションを行う最適です。 これらのチュートリアルでは、(アニメーションを含む) ボタンの動作と外観をカスタマイズする方法を示します。 このカスタマイズを行うスタイルとテンプレートを使用すると、このカスタム ボタンをアプリケーションで他のボタンに簡単に適用できます。 次の図はを作成してカスタマイズされたボタンを示しています。  
   
  ![作成するカスタマイズされたボタン](./media/custom-button-blend-intro.jpg "custom_button_blend_Intro")  

@@ -1,5 +1,5 @@
 ---
-title: '方法: ページの読み込みを停止します。'
+title: '方法: ページの読み込みを停止する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -13,13 +13,13 @@ helpviewer_keywords:
 - loading [WPF], stopping
 ms.assetid: e2b695b0-517e-462c-8ccf-90cc8d6ba864
 ms.openlocfilehash: c5694bb2cb6c618cd84bad3dc893ae3855e44892
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57357847"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006682"
 ---
-# <a name="how-to-stop-a-page-from-loading"></a>方法: ページの読み込みを停止します。
+# <a name="how-to-stop-a-page-from-loading"></a>方法: ページの読み込みを停止する
 この例では、呼び出し、<xref:System.Windows.Navigation.NavigationWindow.StopLoading%2A>ダウンロードが完了前に、コンテンツへの移動を停止するメソッド。  
   
 ## <a name="example"></a>例  

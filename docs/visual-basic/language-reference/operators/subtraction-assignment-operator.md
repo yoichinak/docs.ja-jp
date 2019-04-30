@@ -11,11 +11,11 @@ helpviewer_keywords:
 - compound assignment statements [Visual Basic]
 ms.assetid: 5ead0c37-ae50-48f7-8435-8e341d81cae1
 ms.openlocfilehash: be1ff4f10f6b30d8448d2441ee3ad2c1e2f80e2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815902"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013492"
 ---
 # <a name="--operator-visual-basic"></a>-= 演算子 (Visual Basic)
 変数またはプロパティの値から式の値を減算し、結果を変数またはプロパティに代入します。  

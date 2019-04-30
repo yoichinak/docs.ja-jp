@@ -6,11 +6,11 @@ helpviewer_keywords:
 - automatic layout [WPF], creating buttons
 ms.assetid: 96c206d0-9e77-4784-9d2d-5045aed2021c
 ms.openlocfilehash: 8eb1e93dd87c210812c9b7758c744a616ef2d862
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409784"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052392"
 ---
 # <a name="how-to-use-automatic-layout-to-create-a-button"></a>方法: 自動レイアウトを使用してボタンを作成する
 この例では、自動レイアウトの方法を使用して、ローカライズ可能なアプリケーションにボタンを作成する方法について説明します。  

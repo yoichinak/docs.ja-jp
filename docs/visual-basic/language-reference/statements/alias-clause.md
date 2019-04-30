@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Alias keyword [Visual Basic]
 ms.assetid: 58c06b11-465d-4d87-906a-73200a3d7f19
 ms.openlocfilehash: 84c8f39e632eebbe5382492669820910b38bc360
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053354"
 ---
 # <a name="alias-clause-visual-basic"></a>Alias 句 (Visual Basic)
 外部プロシージャにその DLL 内の別の名前があることを示します。  

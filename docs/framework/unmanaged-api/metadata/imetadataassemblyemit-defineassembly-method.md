@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b95a583aec87e3ba3e247d1ef800302b62657837
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044825"
 ---
 # <a name="imetadataassemblyemitdefineassembly-method"></a>IMetaDataAssemblyEmit::DefineAssembly メソッド
 作成、`Assembly`指定されたアセンブリのメタデータを含むを構造体し、関連付けられたメタデータ トークンを返します。  

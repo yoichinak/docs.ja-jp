@@ -6,44 +6,44 @@ helpviewer_keywords:
 - WPF [WPF], what's new
 ms.assetid: db086ae4-70bb-4862-95db-2eaca5216bc3
 ms.openlocfilehash: 03f785da018cacdec643fa196bdd0c6d5d7c7f70
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325827"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020310"
 ---
 # <a name="whats-new-in-wpf-version-45"></a>WPF Version 4.5 の新機能
 <a name="introduction"></a> このトピックには、新機能および強化機能に関する情報が含まれています。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] version 4.5。  
   
  このトピックは、次のセクションで構成されています。  
   
--   [リボン コントロール](#ribbon_control)  
+- [リボン コントロール](#ribbon_control)  
   
--   [グループ化された大きなデータ セットを表示する際のパフォーマンスが向上](#grouped_virtualization)  
+- [グループ化された大きなデータ セットを表示する際のパフォーマンスが向上](#grouped_virtualization)  
   
--   [VirtualizingPanel の新機能](#VirtualizingPanel)  
+- [VirtualizingPanel の新機能](#VirtualizingPanel)  
   
--   [静的プロパティへのバインド](#static_properties)  
+- [静的プロパティへのバインド](#static_properties)  
   
--   [非 UI スレッドでのコレクションへのアクセス](#xthread_access)  
+- [非 UI スレッドでのコレクションへのアクセス](#xthread_access)  
   
--   [データの同期および非同期検証](#INotifyDataErrorInfo)  
+- [データの同期および非同期検証](#INotifyDataErrorInfo)  
   
--   [データ バインディングのソースの自動更新](#delay)  
+- [データ バインディングのソースの自動更新](#delay)  
   
--   [ICustomTypeProvider を実装する型へのバインド](#ICustomTypeProvider)  
+- [ICustomTypeProvider を実装する型へのバインド](#ICustomTypeProvider)  
   
--   [バインディング式からのデータ バインディング情報の取得](#binding_state)  
+- [バインディング式からのデータ バインディング情報の取得](#binding_state)  
   
--   [有効な DataContext オブジェクトの確認](#DisconnectedSource)  
+- [有効な DataContext オブジェクトの確認](#DisconnectedSource)  
   
--   [データの値変更に伴うデータの再配置 (ライブ形成)](#live_shaping)  
+- [データの値変更に伴うデータの再配置 (ライブ形成)](#live_shaping)  
   
--   [イベントへの弱い参照確立のサポート強化](#weak_event_pattern)  
+- [イベントへの弱い参照確立のサポート強化](#weak_event_pattern)  
   
--   [ディスパッチャー クラスの新しいメソッド](#async)  
+- [ディスパッチャー クラスの新しいメソッド](#async)  
   
--   [イベントのマークアップ拡張機能](#events_markup_extenions)  
+- [イベントのマークアップ拡張機能](#events_markup_extenions)  
   
 <a name="ribbon_control"></a>   
 ## <a name="ribbon-control"></a>リボン コントロール  
@@ -64,9 +64,9 @@ ms.locfileid: "59325827"
 ## <a name="binding-to-static-properties"></a>静的プロパティへのバインド  
  データ バインディングのソースとして静的プロパティを使用できます。 データ バインディング エンジンは、静的イベントが発生した場合にプロパティの値が変更されたことを認識します。  たとえば、`SomeClass` クラスが `MyProperty` という静的プロパティを定義している場合、`SomeClass` は `MyProperty` の値が変更されたときに発生する静的イベントを定義できます。  静的イベントは、次のいずれかのシグネチャを使用できます。  
   
--   `public static event EventHandler MyPropertyChanged;`  
+- `public static event EventHandler MyPropertyChanged;`  
   
--   `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
+- `public static event EventHandler<PropertyChangedEventArgs> StaticPropertyChanged;`  
   
  最初のケースでのクラスが公開という名前の静的イベント注*PropertyName* `Changed`に合格する<xref:System.EventArgs>イベント ハンドラーにします。  2 番目のケースでは、イベント ハンドラーに `StaticPropertyChanged` を渡す <xref:System.ComponentModel.PropertyChangedEventArgs> という名前の静的イベントがクラスにより公開されています。 静的プロパティを実装するクラスは、いずれかの方法を使用してプロパティ変更通知を生成することを選択できます。  
   

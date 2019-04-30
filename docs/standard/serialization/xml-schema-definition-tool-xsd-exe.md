@@ -3,11 +3,11 @@ title: XML Schema Definition Tool (Xsd.exe)
 ms.date: 03/30/2017
 ms.assetid: a6e6e65c-347f-4494-9457-653bf29baac2
 ms.openlocfilehash: fa90110a803a97cd7a610fd33f94557c44660e2b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676435"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028227"
 ---
 # <a name="xml-schema-definition-tool-xsdexe"></a>XML Schema Definition Tool (Xsd.exe)
 
@@ -54,7 +54,7 @@ xsd {file.dll | file.exe} [/outputdir:directory] [/type:typename [...]][/paramet
 |------------|-----------------|
 |**/e\[lement\]:**_要素_|コードを生成する対象とする、スキーマ内の要素を指定します。 既定では、すべての要素が指定されます。 この引数は、複数回指定できます。|
 |**/enableDataBinding**|データ バインディングを有効にするために、生成されたすべての型に <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスを実装します。 短縮形は `/edb` です。|
-|**/enableLinqDataSet**|(短縮形 : `/eld`)。LINQ to DataSet を使用して、生成された DataSet を照会できるように指定します。 このオプションは /dataset オプションも指定した場合に使用されます。 詳細については、「[LINQ to DataSet の概要](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)」(LINQ to DataSet Overview) と「[Querying Typed DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)」(型指定された DataSet のクエリ) を参照してください。 LINQ の使用に関する概要については、[統合言語クエリ (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md)または[LINQ (Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)を参照してください。|
+|**/enableLinqDataSet**|(短縮形 : `/eld`)。LINQ to DataSet を使用して、生成された DataSet を照会できるように指定します。 このオプションは /dataset オプションも指定した場合に使用されます。 詳細については、「[LINQ to DataSet Overview](../../../docs/framework/data/adonet/linq-to-dataset-overview.md)」(LINQ to DataSet Overview) と「[Querying Typed DataSets](../../../docs/framework/data/adonet/querying-typed-datasets.md)」(型指定された DataSet のクエリ) を参照してください。 LINQ の使用に関する概要については、次を参照してください。[統合言語クエリ (LINQ) - C# ](../../csharp/programming-guide/concepts/linq/index.md)または[LINQ (Language-Integrated Query) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)します。|
 |**/f\[ields\]**|プロパティの代わりにフィールドを生成します。 既定では、プロパティが生成されます。|
 |**/l\[anguage\]:**_言語_|使用するプログラミング言語を指定します。 `CS` (C#、既定値)、`VB` (Visual Basic)、`JS` (JScript)、または `VJS` (Visual J#) から選択します。 <xref:System.CodeDom.Compiler.CodeDomProvider?displayProperty=nameWithType> を実装するクラスの完全修飾名を指定することもできます。|
 |**/n\[amespace\]:**_namespace_|生成する型のランタイム名前空間を指定します。 既定の名前空間は `Schemas` です。|
@@ -81,7 +81,7 @@ Xsd.exe が実行する操作を次の表に示します。
 |XSD からクラスへ|XSD スキーマ ファイルからランタイム クラスを生成します。 生成されたクラスを <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType> と組み合わせて使用すると、このスキーマに従う XML コードの読み書きを実行できます。|
 |クラスから XSD へ| ランタイム アセンブリ ファイルに含まれる 1 つ以上の型から XML スキーマを生成します。 生成されたスキーマで使用される XML 形式の定義、<xref:System.Xml.Serialization.XmlSerializer>します。|
 
- Xsd.exe によって操作できるのは、W3C (World Wide Web Consortium) が提唱する XSD (XML スキーマ定義) に準拠した XML スキーマだけです。 XML スキーマ定義の提案や XML 標準の詳細については、<https://w3.org>を参照してください。
+ Xsd.exe によって操作できるのは、W3C (World Wide Web Consortium) が提唱する XSD (XML スキーマ定義) に準拠した XML スキーマだけです。 XML スキーマ定義の提案や XML 標準の詳細については、次を参照してください。<https://w3.org>します。
 
 ## <a name="setting-options-with-an-xml-file"></a>XML ファイルによるオプションの設定
 

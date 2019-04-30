@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 4c4ea526-9203-486f-b72d-29d61c5b3c6d
 author: KrzysztofCwalina
 ms.openlocfilehash: 9a4cf94ca7fcada7dfc0886422b373abc807a0fe
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54670174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966479"
 ---
 # <a name="capitalization-conventions"></a>大文字の使用規則
 この章のレイアウトを使用するための単純なメソッドのガイドラインは、型、メンバー、およびパラメーターを読みやすくする識別子を一貫した適用されるときに場合です。  
@@ -23,9 +23,9 @@ ms.locfileid: "54670174"
 ## <a name="capitalization-rules-for-identifiers"></a>識別子の大文字と小文字の規則  
  識別子内の単語を区別するためには、識別子内の各単語の最初の文字を大文字に変換します。 アンダー スコアは、単語を区別するために使用しないでくださいまたはさらに言えば、識別子で任意の場所。 識別子の使用によって、識別子を大文字に変換する 2 つの適切な方法はあります。  
   
--   Pascal 表記を使用  
+- Pascal 表記を使用  
   
--   キャメル ケース  
+- キャメル ケース  
   
  Pascal 表記を使用規則は、パラメーター名を除くすべての識別子には、次の例に示すように、(2 文字の長さを頭字語を含む) の各単語の最初の文字を大文字になります。  
   

@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7613bc744ad4c2e172fc4f6dd7bf282fb3d9072c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59179752"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992759"
 ---
 # <a name="igcthreadcontrolsuspensionstarting-method"></a>IGCThreadControl::SuspensionStarting メソッド
 ランタイムがガベージ コレクションのスレッドの中断またはその他の中断を開始していることをホストに通知します。  

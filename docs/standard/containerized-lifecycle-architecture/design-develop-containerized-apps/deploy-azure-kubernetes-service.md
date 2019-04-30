@@ -5,13 +5,13 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.openlocfilehash: 82a1cf7f3cc367bfb8b8f67a130600815f2a21c4
-ms.sourcegitcommit: 2b986afe4ce9e13bbeec929c9737757eb61de60e
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56664966"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006544"
 ---
-# <a name="deploy-to-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) へのデプロイします。
+# <a name="deploy-to-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) へのデプロイ
 
 推奨されるクライアント オペレーティング システムを使用する AKS と対話できます、ここ方法について説明しますで Microsoft Windows と埋め込みのバージョンでは、Windows、Ubuntu Linux の Bash コマンドを使用しています。
 

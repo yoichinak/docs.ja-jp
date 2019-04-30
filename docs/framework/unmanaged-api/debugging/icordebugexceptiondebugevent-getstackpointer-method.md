@@ -5,11 +5,11 @@ ms.assetid: d8f66a1c-16be-4264-afc5-bc2dfbb4a682
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d9d4c0a1938edd3e2fe88ea6e418b3430f1b5cb8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163203"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995880"
 ---
 # <a name="icordebugexceptiondebugeventgetstackpointer-method"></a>ICorDebugExceptionDebugEvent::GetStackPointer メソッド
 この例外デバッグ イベントのスタック ポインターを取得します。  

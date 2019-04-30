@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: c14d364320c82f061ef606a402563dacfce28139
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186239"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986649"
 ---
 # <a name="icorpublishappdomainenumnext-method"></a>ICorPublishAppDomainEnum::Next メソッド
 現在の位置から、プロセス内には、現在存在しているアプリケーション ドメインの指定した数を取得します。  

@@ -15,11 +15,11 @@ ms.assetid: aa5930ad-f3d7-40aa-b6f6-c6edcd5c64f7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: c5b74f2608022d48dbd7e63e4ddf6112c333e3f4
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54604402"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018746"
 ---
 # <a name="principal-and-identity-objects"></a>プリンシパル オブジェクトと ID オブジェクト
 マネージ コードには、id またはでプリンシパルの役割を検出できる、<xref:System.Security.Principal.IPrincipal>への参照を含むオブジェクトを<xref:System.Security.Principal.IIdentity>オブジェクト。 ID オブジェクトとプリンシパル オブジェクトは、ユーザーとグループ アカウントのようななじみのある概念と比較するとわかりやすいでしょう。 ほとんどのネットワーク環境で、ユーザー アカウントは人またはプログラムを表し、グループ アカウントは特定のカテゴリのユーザーやそのユーザーが所有する権限を表します。 同様に、.NET Framework の ID オブジェクトはユーザーを表し、ロールはメンバーシップやセキュリティ コンテキストを表します。 .NET Framework で、プリンシパル オブジェクトは、ID オブジェクトとロールの両方をカプセル化します。 .NET Framework アプリケーションは、ID または一般的にはロール メンバーシップに基づいてプリンシパルに権限を付与します。  

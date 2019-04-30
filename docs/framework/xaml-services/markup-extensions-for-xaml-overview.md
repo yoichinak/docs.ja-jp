@@ -6,11 +6,11 @@ helpviewer_keywords:
 - XAML [XAML Services], markup extensions
 ms.assetid: 261b2b11-2dc0-462f-8c66-55b8c9c6e436
 ms.openlocfilehash: 41fe3cb368bed12ccb2dbe9bd31f95fd556e3968
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59224924"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971913"
 ---
 # <a name="markup-extensions-for-xaml-overview"></a>XAML のマークアップ拡張機能の概要
 マークアップ拡張機能は、プリミティブでも特定の XAML 型でもない値を取得するための XAML の手法です。 属性による使用では、マークアップ拡張機能は、左中かっこ `{` でマークアップ拡張機能スコープに入り、右中かっこ `}` で終了するという、既知の文字シーケンスを使用します。 .NET Framework XAML サービスを使用する場合は、System.Xaml アセンブリから XAML 言語の定義済みのマークアップ拡張機能をいくつか使用できます。 また、System.Xaml で定義された <xref:System.Windows.Markup.MarkupExtension> クラスからサブクラスを作成し、独自のマークアップ拡張機能を定義することもできます。 あるいは、特定のフレームワークを既に参照している場合は、そのフレームワークによって定義されたマークアップ拡張機能を使用することができます。  
@@ -54,9 +54,9 @@ ms.locfileid: "59224924"
 ## <a name="defining-the-support-type-for-a-custom-markup-extension"></a>カスタム マークアップ拡張機能のサポート型の定義  
  .NET Framework XAML サービス、または .NET Framework XAML サービスに基づいて構築されたフレームワークを使用する場合は、2 種類の方法でマークアップ拡張機能のサポート型に名前を付けることができます。 型名は、XAML オブジェクト ライターが XAML 内でマークアップ拡張機能の使用を検出したときに、マークアップ拡張機能のサポート型にアクセスして呼び出しを試みる方法に関連しています。 次のいずれかの方法で名前を付けます。  
   
--   XAML マークアップの使用トークンと完全に一致する型名を付ける。 たとえば、 `{Collate ...}` 拡張機能の使用をサポートするためには、サポート型に `Collate`という名前を付けます。  
+- XAML マークアップの使用トークンと完全に一致する型名を付ける。 たとえば、 `{Collate ...}` 拡張機能の使用をサポートするためには、サポート型に `Collate`という名前を付けます。  
   
--   使用トークンの文字列に `Extension`サフィックスを付加した型名を付ける。 たとえば、 `{Collate ...}` 拡張機能の使用をサポートするためには、サポート型に `CollateExtension`という名前を付けます。  
+- 使用トークンの文字列に `Extension`サフィックスを付加した型名を付ける。 たとえば、 `{Collate ...}` 拡張機能の使用をサポートするためには、サポート型に `CollateExtension`という名前を付けます。  
   
  検索は、まずサフィックス `Extension`が付加されたクラス名、次にサフィックス `Extension` が付加されていないクラス名という順序で行われます。  
   
@@ -81,9 +81,9 @@ public Collate(CollationMode collationMode) {...}
   
  この処理では、概念としては、マークアップ拡張機能を「作成するオブジェクト」と見なして、そのメンバー値を設定します。 設定するように指定された各プロパティは、作成するオブジェクトに指定されたメンバーが設定される場合と同じように、XAML が解析される時点で評価されます。 次の 2 つの重要な違いがあります。  
   
--   前述のとおり、マークアップ拡張機能のサポート型では、XAML でインスタンス化するための既定のコンストラクターが必須ではありません。 オブジェクトの構築は、テキスト構文で使用できる引数が位置指定引数または名前付き引数のいずれかとしてトークン化および評価されるまで遅延され、その時点で適切なコンストラクターが呼び出されます。  
+- 前述のとおり、マークアップ拡張機能のサポート型では、XAML でインスタンス化するための既定のコンストラクターが必須ではありません。 オブジェクトの構築は、テキスト構文で使用できる引数が位置指定引数または名前付き引数のいずれかとしてトークン化および評価されるまで遅延され、その時点で適切なコンストラクターが呼び出されます。  
   
--   マークアップ拡張機能の使用は入れ子にすることができます。 最も内側のマークアップ拡張機能が最初に評価されます。 そのため、そのような使用を想定して、いずれかの構築パラメーターを、生成するために値コンバーター (マークアップ拡張機能など) を必要とする型として宣言できます。  
+- マークアップ拡張機能の使用は入れ子にすることができます。 最も内側のマークアップ拡張機能が最初に評価されます。 そのため、そのような使用を想定して、いずれかの構築パラメーターを、生成するために値コンバーター (マークアップ拡張機能など) を必要とする型として宣言できます。  
   
  このような処理への依存については、前の例で説明したとおりです。 .NET Framework XAML サービスの XAML オブジェクト ライターは、列挙定数の名前を、ネイティブ レベルでの列挙値に処理します。  
   
@@ -124,9 +124,9 @@ public Collate(CollationMode collationMode, object collateThis) {...}
   
  <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute> は、 <xref:System.Type> が返すオブジェクトの型の <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> 情報を報告します。 純粋なシグネチャとしては、 <xref:System.Windows.Markup.ArrayExtension.ProvideValue%2A> は <xref:System.Object>を返します。 ただし、コンシューマーの種類によっては、戻り値の型についてさらに詳細な情報が必要になる場合があります。 バインディングには、以下の項目が含まれます。  
   
--   マークアップ拡張機能の使用に関して、型を認識したサポートを提供できるデザイナーや IDE を実現するための情報。  
+- マークアップ拡張機能の使用に関して、型を認識したサポートを提供できるデザイナーや IDE を実現するための情報。  
   
--   ターゲット クラスに対する `SetMarkupExtension` ハンドラーの高度な実装のための情報。特定の既知の <xref:System.Windows.Markup.MarkupExtension> 実装を名前で分岐して判別するのではなく、リフレクションに基づいてマークアップ拡張機能の戻り値の型を判別できるようになります。  
+- ターゲット クラスに対する `SetMarkupExtension` ハンドラーの高度な実装のための情報。特定の既知の <xref:System.Windows.Markup.MarkupExtension> 実装を名前で分岐して判別するのではなく、リフレクションに基づいてマークアップ拡張機能の戻り値の型を判別できるようになります。  
   
 <a name="serialization_of_markup_extension_usages"></a>   
 ## <a name="serialization-of-markup-extension-usages"></a>マークアップ拡張機能の使用のシリアル化  

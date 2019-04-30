@@ -11,11 +11,11 @@ helpviewer_keywords:
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
 ms.openlocfilehash: 6e361cbe89f4c51f28199b008de817c2d48ef326
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825392"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051859"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 ある変数またはプロパティを読み込めるが書き込まれませんを指定します。  
@@ -24,11 +24,11 @@ ms.locfileid: "58825392"
   
 ## <a name="rules"></a>ルール  
   
--   **宣言コンテキスト。** `ReadOnly` は、モジュール レベルでのみ使用できます。 これは、意味の宣言のコンテキストを`ReadOnly`要素は、クラス、構造体、またはモジュールにある必要があるあり、ソース ファイル、名前空間、またはプロシージャにすることはできません。  
+- **宣言コンテキスト。** `ReadOnly` は、モジュール レベルでのみ使用できます。 これは、意味の宣言のコンテキストを`ReadOnly`要素は、クラス、構造体、またはモジュールにある必要があるあり、ソース ファイル、名前空間、またはプロシージャにすることはできません。  
   
--   **結合された修飾子。** 指定することはできません`ReadOnly`と共に`Static`同じ宣言内。  
+- **結合された修飾子。** 指定することはできません`ReadOnly`と共に`Static`同じ宣言内。  
   
--   **値を代入します。** コードの使用、`ReadOnly`プロパティは、その値を設定できません。 基になるストレージにアクセスするコードが割り当てるまたは値をいつでもでも変更します。  
+- **値を代入します。** コードの使用、`ReadOnly`プロパティは、その値を設定できません。 基になるストレージにアクセスするコードが割り当てるまたは値をいつでもでも変更します。  
   
      値を割り当てることができます、`ReadOnly`変数の宣言でのみ、またはクラスまたは構造体が定義されているのコンス トラクター。  
   

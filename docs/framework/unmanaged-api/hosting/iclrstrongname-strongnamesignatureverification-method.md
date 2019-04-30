@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f9fb7098c29768821cafad6662b646eb0e08a138
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992824"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverification-method"></a>ICLRStrongName::StrongNameSignatureVerification メソッド
 指定されたパスにあるアセンブリ マニフェストが指定したフラグに従って検証される、厳密な名前の署名を含むかどうかを示す値を取得します。  
@@ -44,22 +44,22 @@ HRESULT StrongNameSignatureVerification (
  `dwInFlags`  
  [in]検証動作を変更するフラグを設定します。 次の値がサポートされています。  
   
--   `SN_INFLAG_FORCE_VER` (0x00000001) - レジストリ設定を上書きする必要がある場合でも、強制的に検証します。  
+- `SN_INFLAG_FORCE_VER` (0x00000001) - レジストリ設定を上書きする必要がある場合でも、強制的に検証します。  
   
--   `SN_INFLAG_INSTALL` (0x00000002) - これが初めてマニフェストの検証であることを指定します。  
+- `SN_INFLAG_INSTALL` (0x00000002) - これが初めてマニフェストの検証であることを指定します。  
   
--   `SN_INFLAG_ADMIN_ACCESS` (0x00000004) のキャッシュで管理者特権を持つユーザーにのみアクセスを許可することを指定します。  
+- `SN_INFLAG_ADMIN_ACCESS` (0x00000004) のキャッシュで管理者特権を持つユーザーにのみアクセスを許可することを指定します。  
   
--   `SN_INFLAG_USER_ACCESS` (0x00000008) のアセンブリが現在のユーザーのみがアクセスできることを指定します。  
+- `SN_INFLAG_USER_ACCESS` (0x00000008) のアセンブリが現在のユーザーのみがアクセスできることを指定します。  
   
--   `SN_INFLAG_ALL_ACCESS` (0x00000010) - キャッシュはしないことを指定のアクセス制限を保証します。  
+- `SN_INFLAG_ALL_ACCESS` (0x00000010) - キャッシュはしないことを指定のアクセス制限を保証します。  
   
--   `SN_INFLAG_RUNTIME` (0x80000000) - 内部デバッグのために予約されています。  
+- `SN_INFLAG_RUNTIME` (0x80000000) - 内部デバッグのために予約されています。  
   
  `pdwOutFlags`  
  [out]厳密な名前の署名が検証されたかどうかを示すフラグです。 次の値がサポートされています。  
   
--   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - この値に設定が`false`レジストリ設定のために、検証が成功したことを指定します。  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - この値に設定が`false`レジストリ設定のために、検証が成功したことを指定します。  
   
 ## <a name="return-value"></a>戻り値  
  `S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  

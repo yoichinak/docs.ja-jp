@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Windows Forms, inheritance
 ms.assetid: 857eb737-3602-4d49-bd8b-f70d33ace345
 ms.openlocfilehash: e94cdc38b97f95cfe8a8504733298525c25667df
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011867"
 ---
 # <a name="windows-forms-visual-inheritance"></a>Windows フォームのビジュアルの継承
 プロジェクトで、以前のプロジェクトで作成したフォームと類似するフォームが必要になる場合があります。 また、プロジェクトで再利用する透かしやコントロールの特定のレイアウトなどが設定された基本フォームを作成し、元のフォーム テンプレートに変更を加えながら繰り返し使用することが必要になる場合もあります。 フォームの継承を使用すると、基本フォームを作成してそのフォームを継承し、必要な元の設定を保持しながら変更を加えることができます。  
@@ -23,7 +23,7 @@ ms.locfileid: "57705299"
  派生クラスのフォームは、プログラムで作成することも、ビジュアル継承ピッカーを使用して作成することもできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: Windows フォームを継承します。](how-to-inherit-windows-forms.md)  
+ [方法: Windows フォームを継承する](how-to-inherit-windows-forms.md)  
  継承されたフォームをコードで作成する方法について説明します。  
   
  [方法: 継承ピッカー ダイアログ ボックスを使用してフォームを継承します。](how-to-inherit-forms-using-the-inheritance-picker-dialog-box.md)  

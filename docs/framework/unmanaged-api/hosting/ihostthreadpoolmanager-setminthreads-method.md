@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e290f20feacc59944bb1cafded327f4316ab88d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174162"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046216"
 ---
 # <a name="ihostthreadpoolmanagersetminthreads-method"></a>IHostThreadPoolManager::SetMinThreads メソッド
 要求に応じるため、ホストを管理する必要があるアイドル状態のスレッドの最小数を設定します。  

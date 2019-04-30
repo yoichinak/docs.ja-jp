@@ -3,11 +3,11 @@ title: ComPlusInstanceCreationError
 ms.date: 03/30/2017
 ms.assetid: f54078e6-7de0-4d0e-bda7-a420da110311
 ms.openlocfilehash: f88736cdf582d344df0e44f88489b5b6336bd6ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999371"
 ---
 # <a name="complusinstancecreationerror"></a>ComPlusInstanceCreationError
 Id:134  

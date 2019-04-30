@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.CoordinatorRecovered
 ms.date: 03/30/2017
 ms.assetid: a70f7b3c-e3fc-44e7-aace-32fb0086a566
 ms.openlocfilehash: 97d090e5855cbc0d103120435e747aad00196909
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997967"
 ---
 # <a name="microsofttransactionstransactionbridgecoordinatorrecovered"></a>Microsoft.Transactions.TransactionBridge.CoordinatorRecovered
 コーディネーターの登録リストが、トランザクション マネージャー ログから回復されました。  

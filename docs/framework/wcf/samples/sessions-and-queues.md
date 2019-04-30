@@ -3,11 +3,11 @@ title: セッションとキュー
 ms.date: 03/30/2017
 ms.assetid: 47d7c5c2-1e6f-4619-8003-a0ff67dcfbd6
 ms.openlocfilehash: 623077450157b0bf87b85a85309adc10511b32b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769516"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007878"
 ---
 # <a name="sessions-and-queues"></a>セッションとキュー
 このサンプルでは、メッセージ キュー (MSMQ) トランスポートを介して、キュー通信で一連の関連メッセージを送受信する方法を示します。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。  

@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 8911aa1b-e34b-4161-a3ae-7468d89a6861
 ms.openlocfilehash: 38282577c2f759bff9927a8369349c689e26808a
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973452"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997031"
 ---
 # <a name="xmlserializeroperationbehavior"></a>XmlSerializerOperationBehavior
 XmlSerializerOperationBehavior  

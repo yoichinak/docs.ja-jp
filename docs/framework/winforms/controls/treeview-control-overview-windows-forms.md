@@ -7,20 +7,19 @@ helpviewer_keywords:
 - TreeView control [Windows Forms], about TreeView control
 ms.assetid: 0ece823a-9508-478a-bbdb-7d7c3bae51d5
 ms.openlocfilehash: 046713745e7de18cefe5b4883af73034af2cfb31
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57712014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009228"
 ---
 # <a name="treeview-control-overview-windows-forms"></a>TreeView コントロールの概要 (Windows フォーム)
 
 Windows フォームの <xref:System.Windows.Forms.TreeView> コントロールでは、Windows オペレーティング システムの Windows エクスプローラーの左側のウィンドウにファイルやフォルダーが表示されるのと同じように、ノードの階層をユーザーに表示することができます。 ツリー ビュー内の各ノードと呼ばれるその他のノードを含む可能性があります*子ノード*します。 親ノード、または子ノードを含むノードを展開または折りたたんで表示できます。 また、ツリー ビューの <xref:System.Windows.Forms.TreeView.CheckBoxes%2A> プロパティを `true` に設定することで、ノードの横にチェック ボックスがあるツリー ビューを表示することもできます。 ノードの <xref:System.Windows.Forms.TreeNode.Checked%2A> プロパティを `true` または `false` に設定することにより、プログラムでノードをオンまたはオフにすることができます。
 
-## <a name="key-properties"></a>主要プロパティ
+## <a name="key-properties"></a>キー プロパティ
 
-<xref:System.Windows.Forms.TreeView> コントロールの主要プロパティは、<xref:System.Windows.Forms.TreeView.Nodes%2A> および <xref:System.Windows.Forms.TreeView.SelectedNode%2A> です。 <xref:System.Windows.Forms.TreeView.Nodes%2A> プロパティには、ツリー ビューの最上位のノードの一覧が含まれています。 <xref:System.Windows.Forms.TreeView.SelectedNode%2A> プロパティは、現在選択されているノードを設定します。 ノードの横にあるアイコンを表示することができます。 コントロールはツリー ビューの <xref:System.Windows.Forms.TreeView.ImageList%2A> プロパティで <xref:System.Windows.Forms.ImageList> という名前のイメージを使用します。 
-  <xref:System.Windows.Forms.TreeView.ImageIndex%2A> プロパティは、ツリー ビューでノードの既定のイメージを設定します。 イメージを表示する方法の詳細については、次を参照してください。[方法。Windows フォーム TreeView コントロール アイコンを設定](how-to-set-icons-for-the-windows-forms-treeview-control.md)します。 使用できる標準のイメージの大規模なライブラリにアクセス権がある Visual Studio 2005 を使用している場合、<xref:System.Windows.Forms.TreeView>コントロール。
+<xref:System.Windows.Forms.TreeView> コントロールの主要プロパティは、<xref:System.Windows.Forms.TreeView.Nodes%2A> および <xref:System.Windows.Forms.TreeView.SelectedNode%2A> です。 <xref:System.Windows.Forms.TreeView.Nodes%2A> プロパティには、ツリー ビューの最上位のノードの一覧が含まれています。 <xref:System.Windows.Forms.TreeView.SelectedNode%2A> プロパティは、現在選択されているノードを設定します。 ノードの横にあるアイコンを表示することができます。 コントロールはツリー ビューの <xref:System.Windows.Forms.TreeView.ImageList%2A> プロパティで <xref:System.Windows.Forms.ImageList> という名前のイメージを使用します。 <xref:System.Windows.Forms.TreeView.ImageIndex%2A> プロパティは、ツリー ビューでノードの既定のイメージを設定します。 イメージを表示する方法の詳細については、次を参照してください。[方法。Windows フォーム TreeView コントロール アイコンを設定](how-to-set-icons-for-the-windows-forms-treeview-control.md)します。 使用できる標準のイメージの大規模なライブラリにアクセス権がある Visual Studio 2005 を使用している場合、<xref:System.Windows.Forms.TreeView>コントロール。
 
 ## <a name="see-also"></a>関連項目
 

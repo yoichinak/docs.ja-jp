@@ -8,11 +8,11 @@ helpviewer_keywords:
 - My.WebServices object
 ms.assetid: f188dc05-2c75-41b6-bb68-122d1c3110a2
 ms.openlocfilehash: a60f32c4f581e42f240fca55ce496776c5511ba3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840433"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050287"
 ---
 # <a name="mywebservices-object"></a>My.WebServices オブジェクト
 プロパティは、作成して、現在のプロジェクトによって参照される各 XML Web サービスの 1 つのインスタンスへのアクセスを提供します。  

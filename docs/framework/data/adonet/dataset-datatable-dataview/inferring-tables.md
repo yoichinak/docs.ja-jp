@@ -3,20 +3,20 @@ title: テーブルの推論
 ms.date: 03/30/2017
 ms.assetid: 74a288d4-b8e9-4f1a-b2cd-10df92c1ed1f
 ms.openlocfilehash: 2c2a93d413f301dc3006b701e4bc7979a3fa7a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181832"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034256"
 ---
 # <a name="inferring-tables"></a>テーブルの推論
 XML ドキュメントから <xref:System.Data.DataSet> のスキーマを推論するときには、ADO.NET では、テーブルを表す XML 要素を最初に決定します。 次の XML 構造の結果のテーブルに、**データセット**スキーマ。  
   
--   属性を持つ要素  
+- 属性を持つ要素  
   
--   子要素を持つ要素  
+- 子要素を持つ要素  
   
--   繰り返し出現する要素  
+- 繰り返し出現する要素  
   
 ## <a name="elements-with-attributes"></a>属性を持つ要素  
  要素に属性が指定されている場合は、それらの要素はテーブルとして推論されます。 たとえば、次のような XML があるとします。  

@@ -3,11 +3,11 @@ title: 列の推論
 ms.date: 03/30/2017
 ms.assetid: 0e022699-c922-454c-93e2-957dd7e7247a
 ms.openlocfilehash: 53e77f624c5af8f61a32d5b1399d2728f32011a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034282"
 ---
 # <a name="inferring-columns"></a>列の推論
 ADO.NET は、<xref:System.Data.DataSet> のテーブルとして推論する要素を、XML ドキュメントから決定した後、それらのテーブルの列を推論します。 ADO.NET 2.0 にはそれぞれの厳密に型指定されたデータ型を推論する新しいスキーマ推論エンジンが導入された**simpleType**要素。 以前のバージョンで、データ型の推論される**simpleType**要素が常に**xsd:string**します。  

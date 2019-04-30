@@ -5,11 +5,11 @@ ms.assetid: a29b9233-ee67-4b53-b8bc-c00b281e7edb
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9ea9afdd2c032e99d7feee6b2935161c70c56787
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59187695"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994228"
 ---
 # <a name="icordebugsymbolprovidergetinstancefieldsymbols-method"></a>Icordebugsymbolprovider::getinstancefieldsymbols メソッド
 typespec シグネチャに対応するインスタンス フィールド シンボルを取得します。  

@@ -9,11 +9,11 @@ ms.assetid: efd4ee8d-6edd-47ec-88e4-4a4759bd2384
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 961b3c852f60a0917707bef07d4e26fc4215acca
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611121"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012556"
 ---
 # <a name="printpreviewdialog-control-overview-windows-forms"></a>PrintPreviewDialog コントロールの概要 (Windows フォーム)
 

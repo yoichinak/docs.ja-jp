@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: cfca06c656f3274f4c5ddb06373a0296dc5e6905
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164542"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995190"
 ---
 # <a name="icordebugmanagedcallbackloadmodule-method"></a>ICorDebugManagedCallback::LoadModule メソッド
 共通言語ランタイム (CLR) モジュールが正常に読み込まれたことをデバッガーに通知します。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ToolTip component [Windows Forms]
 ms.assetid: 82e71dc3-0159-4f91-9f22-499224f004a0
 ms.openlocfilehash: eb68b614046fc10c4af9d58354125f76e119c782
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705546"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009280"
 ---
 # <a name="tooltip-component-windows-forms"></a>ToolTip コンポーネント (Windows フォーム)
 Windows フォーム <xref:System.Windows.Forms.ToolTip> コンポーネントは、ユーザーがコントロールをポイントしたときにテキストを表示します。 ツールヒントは任意のコントロールに関連付けることができます。 このコントロールの使用例については:フォームの領域を節約するためには、ボタンに小さなアイコンを表示し、ボタンの機能を説明するツールヒントを使用します。  

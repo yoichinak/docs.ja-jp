@@ -8,11 +8,11 @@ helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
 ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032236"
 ---
 # <a name="attached-properties-overview"></a>添付プロパティの概要
 
@@ -46,11 +46,11 @@ XAML では、構文 *AttachedPropertyProvider*.*PropertyName* を使用して�
 
 添付プロパティはどのオブジェクトにも設定できますが、プロパティを設定したことによって自動的に意味のある結果が得られるわけでも、値が別のオブジェクトによって使用されるわけでもありません。 一般に、添付プロパティの目的は、想定されるさまざまなクラス階層または論理関係から生じるオブジェクトが、添付プロパティを定義する型に共通する情報をレポートできるようにすることです。 添付プロパティを定義する型は、一般的に次のいずれかのモデルに従っています。
 
--   添付プロパティを定義する型が、添付プロパティの値を設定する要素の親要素になるように設計されている。 この型の子オブジェクトは、一部のオブジェクト ツリー構造で内部ロジックを反復し、値を取得して、その値に対する処理を実行します。
+- 添付プロパティを定義する型が、添付プロパティの値を設定する要素の親要素になるように設計されている。 この型の子オブジェクトは、一部のオブジェクト ツリー構造で内部ロジックを反復し、値を取得して、その値に対する処理を実行します。
 
--   添付プロパティを定義する型が、想定されるさまざまな親要素およびコンテンツ モデルの子要素として使用される。
+- 添付プロパティを定義する型が、想定されるさまざまな親要素およびコンテンツ モデルの子要素として使用される。
 
--   添付プロパティを定義する型が、サービスを表す。 その他の型は、添付プロパティの値を設定します。 プロパティを設定する要素がサービスのコンテキストで評価されると、添付プロパティの値がサービス クラスの内部ロジックにより取得されます。
+- 添付プロパティを定義する型が、サービスを表す。 その他の型は、添付プロパティの値を設定します。 プロパティを設定する要素がサービスのコンテキストで評価されると、添付プロパティの値がサービス クラスの内部ロジックにより取得されます。
 
 ### <a name="an-example-of-a-parent-defined-attached-property"></a>親定義の添付プロパティの例
 
@@ -102,9 +102,9 @@ WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#t
 
 `public static object GetPropertyName(object target)`
 
--   `target` オブジェクトは、実装のより具体的な型として指定することができます。 たとえば、<xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType>メソッドの型パラメーターとして<xref:System.Windows.UIElement>添付プロパティに設定する目的のみであるため、<xref:System.Windows.UIElement>インスタンス。
+- `target` オブジェクトは、実装のより具体的な型として指定することができます。 たとえば、<xref:System.Windows.Controls.DockPanel.GetDock%2A?displayProperty=nameWithType>メソッドの型パラメーターとして<xref:System.Windows.UIElement>添付プロパティに設定する目的のみであるため、<xref:System.Windows.UIElement>インスタンス。
 
--   戻り値は、実装のより具体的な型として指定することができます。 たとえば、<xref:System.Windows.Controls.DockPanel.GetDock%2A>メソッドの型としては<xref:System.Windows.Controls.Dock>のため、値は、その列挙体にのみ設定できます。
+- 戻り値は、実装のより具体的な型として指定することができます。 たとえば、<xref:System.Windows.Controls.DockPanel.GetDock%2A>メソッドの型としては<xref:System.Windows.Controls.Dock>のため、値は、その列挙体にのみ設定できます。
 
 #### <a name="the-set-accessor"></a>Set アクセサー
 
@@ -112,9 +112,9 @@ WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#t
 
 `public static void SetPropertyName(object target, object value)`
 
--   `target` オブジェクトは、実装のより具体的な型として指定することができます。 たとえば、<xref:System.Windows.Controls.DockPanel.SetDock%2A>メソッドの型としては<xref:System.Windows.UIElement>添付プロパティに設定する目的のみであるため、<xref:System.Windows.UIElement>インスタンス。
+- `target` オブジェクトは、実装のより具体的な型として指定することができます。 たとえば、<xref:System.Windows.Controls.DockPanel.SetDock%2A>メソッドの型としては<xref:System.Windows.UIElement>添付プロパティに設定する目的のみであるため、<xref:System.Windows.UIElement>インスタンス。
 
--   `value` オブジェクトは、実装のより具体的な型として指定することができます。 たとえば、<xref:System.Windows.Controls.DockPanel.SetDock%2A>メソッドの型としては<xref:System.Windows.Controls.Dock>のため、値は、その列挙体にのみ設定できます。 このメソッドの値は、マークアップの添付プロパティの使用で添付プロパティが検出されたときに XAML ローダーから生じる入力であることに注意してください。 この入力はマークアップの XAML 属性値として指定された値です。 したがって、適切な型を属性値 (最終的には単なる文字列) から作成できるように、使用する型の型変換、値シリアライザー、またはマークアップ拡張サポートが必要です。
+- `value` オブジェクトは、実装のより具体的な型として指定することができます。 たとえば、<xref:System.Windows.Controls.DockPanel.SetDock%2A>メソッドの型としては<xref:System.Windows.Controls.Dock>のため、値は、その列挙体にのみ設定できます。 このメソッドの値は、マークアップの添付プロパティの使用で添付プロパティが検出されたときに XAML ローダーから生じる入力であることに注意してください。 この入力はマークアップの XAML 属性値として指定された値です。 したがって、適切な型を属性値 (最終的には単なる文字列) から作成できるように、使用する型の型変換、値シリアライザー、またはマークアップ拡張サポートが必要です。
 
 次の例では、依存関係プロパティの登録 (を使用して、<xref:System.Windows.DependencyProperty.RegisterAttached%2A>メソッド)、だけでなく**Get_PropertyName_** と**Set_PropertyName_** アクセサー。 この例では、添付プロパティ名は `IsBubbleSource` です。 したがって、アクセサーの名前は `GetIsBubbleSource` および `SetIsBubbleSource` である必要があります。
 
@@ -125,21 +125,21 @@ WPF で添付プロパティには、一般的なありません[!INCLUDE[TLA2#t
 
 WPF では、いくつかを定義します[!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]添付プロパティをリフレクション プロセス、およびデザイナーなどのリフレクションおよびプロパティ情報の一般的なユーザーに関する情報を提供するためのものですが。 添付プロパティに含まれる型は膨大な範囲に及ぶため、デザイナーには XAML を使用する特定のテクノロジの実装に定義されたすべての添付プロパティのグローバル リストがユーザーに表示されないようにするための手段が必要となります。 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]その WPF を添付プロパティを使用して、スコープのプロパティ ウィンドウで特定の添付プロパティを表示する必要があります、状況を定義します。 また、この属性をカスタム添付プロパティに適用するという選択肢もあります。 [!INCLUDE[TLA2#tla_netframewkattr#plural](../../../../includes/tla2sharptla-netframewkattrsharpplural-md.md)]の目的および構文は、次の参照ページに記載されています。
 
--   <xref:System.Windows.AttachedPropertyBrowsableAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForChildrenAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableForTypeAttribute>
 
--   <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
+- <xref:System.Windows.AttachedPropertyBrowsableWhenAttributePresentAttribute>
 
 ## 添付プロパティの詳細情報 <a name="more"></a>
 
--   添付プロパティの作成の詳細については、「[方法: 添付プロパティを登録する](how-to-register-an-attached-property.md)」を参照してください。
+- 添付プロパティの作成の詳細については、「[方法: 添付プロパティを登録する](how-to-register-an-attached-property.md)」を参照してください。
 
--   依存関係プロパティおよび添付プロパティの高度な使用シナリオについては、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」を参照してください。
+- 依存関係プロパティおよび添付プロパティの高度な使用シナリオについては、「[カスタム依存関係プロパティ](custom-dependency-properties.md)」を参照してください。
 
--   プロパティは添付プロパティとしても依存関係プロパティとしても登録できますが、"ラッパー" 実装は公開したままにすることができます。 この場合、プロパティをその要素に設定することも、XAML の添付プロパティの構文を使用して任意の要素に設定することもできます。 標準と接続の両方の使用状況を適切なシナリオでのプロパティの例は、<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>します。
+- プロパティは添付プロパティとしても依存関係プロパティとしても登録できますが、"ラッパー" 実装は公開したままにすることができます。 この場合、プロパティをその要素に設定することも、XAML の添付プロパティの構文を使用して任意の要素に設定することもできます。 標準と接続の両方の使用状況を適切なシナリオでのプロパティの例は、<xref:System.Windows.FrameworkElement.FlowDirection%2A?displayProperty=nameWithType>します。
 
 ## <a name="see-also"></a>関連項目
 

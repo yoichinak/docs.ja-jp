@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: cf09732a-ab54-4d98-89e2-4d0a1f28fbce
 ms.openlocfilehash: 99c52b93cee858511d50aba2f30f2b9f96d91ccd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090941"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034373"
 ---
 # <a name="creating-autoincrement-columns"></a>AutoIncrement 列の作成
 列値を一意にするために、新しい行がテーブルに追加されたときに列値が自動的にインクリメントされるように設定できます。 自動インクリメントを作成する<xref:System.Data.DataColumn>、設定、<xref:System.Data.DataColumn.AutoIncrement%2A>プロパティには、列の**true**します。 <xref:System.Data.DataColumn>で定義されている値から開始し、<xref:System.Data.DataColumn.AutoIncrementSeed%2A>プロパティ、各行の値を追加し、 **AutoIncrement**列で定義されている値が、<xref:System.Data.DataColumn.AutoIncrementStep%2A>列のプロパティ。  

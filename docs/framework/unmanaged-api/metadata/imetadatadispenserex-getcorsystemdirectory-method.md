@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 3dbfca942d61cd5667293d11f358f06bd000fa2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59118002"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050182"
 ---
 # <a name="imetadatadispenserexgetcorsystemdirectory-method"></a>IMetaDataDispenserEx::GetCORSystemDirectory メソッド
 現在の共通言語ランタイム (CLR) を保持するディレクトリを取得します。 このメソッドは、プロセス外のデバッガーでのみサポートします。 別のコンポーネントから呼び出す場合、E_NOTIMPL を返します。  

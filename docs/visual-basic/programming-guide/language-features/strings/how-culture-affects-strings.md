@@ -6,11 +6,11 @@ helpviewer_keywords:
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
 ms.openlocfilehash: d3c7ae9da9c18e53da393928e34dcfbf04fc891c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834622"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024691"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic においてカルチャが文字列に与える影響
 このヘルプ ページは、Visual Basic がカルチャ情報を使用して、文字列の変換との比較を実行する方法について説明します。  
@@ -29,9 +29,9 @@ ms.locfileid: "58834622"
   
  `Str` (数値を文字列に変換) と`Val`文字列や数値の間で変換するときに (文字列数値からに変換) 関数がアプリケーションのカルチャ情報を使用しないでください。 代わりに、有効な 10 進区切り記号としてピリオド (.) のみを認識できるとします。 これらの関数のカルチャに対応して類似のものは次のとおりです。  
   
--   **現在のカルチャを使用する変換。** `CStr`と`Format`関数は、数値を文字列に変換し、`CDbl`と`CInt`関数では、文字列を数値に変換します。  
+- **現在のカルチャを使用する変換。** `CStr`と`Format`関数は、数値を文字列に変換し、`CDbl`と`CInt`関数では、文字列を数値に変換します。  
   
--   **特定のカルチャを使用する変換。** 各数値のオブジェクトには、 `ToString(IFormatProvider)` 、文字列に数値を変換するメソッドと`Parse(String, IFormatProvider)`文字列を数値に変換するメソッド。 たとえば、`Double`型を提供、<xref:System.Double.ToString%28System.IFormatProvider%29>と<xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29>メソッド。  
+- **特定のカルチャを使用する変換。** 各数値のオブジェクトには、 `ToString(IFormatProvider)` 、文字列に数値を変換するメソッドと`Parse(String, IFormatProvider)`文字列を数値に変換するメソッド。 たとえば、`Double`型を提供、<xref:System.Double.ToString%28System.IFormatProvider%29>と<xref:System.Double.Parse%28System.String%2CSystem.IFormatProvider%29>メソッド。  
   
  詳細については、次のトピックを参照してください。 <xref:Microsoft.VisualBasic.Conversion.Str%2A> および <xref:Microsoft.VisualBasic.Conversion.Val%2A>  
   
@@ -52,9 +52,9 @@ ms.locfileid: "58834622"
 ## <a name="comparing-strings"></a>文字列の比較  
  これには、文字列比較が必要な 2 つの重要な状況があります。  
   
--   **ユーザーに表示するためのデータの並べ替え** 現在のカルチャに基づく文字列を適切に並べ替えるための操作を使用します。  
+- **ユーザーに表示するためのデータの並べ替え** 現在のカルチャに基づく文字列を適切に並べ替えるための操作を使用します。  
   
--   **アプリケーション内部の 2 つの文字列が (通常はセキュリティの目的で) 正確に一致するかどうかを決定します。** 現在のカルチャを無視して操作を使用します。  
+- **アプリケーション内部の 2 つの文字列が (通常はセキュリティの目的で) 正確に一致するかどうかを決定します。** 現在のカルチャを無視して操作を使用します。  
   
  両方の種類の Visual Basic での比較を行うことができます<xref:Microsoft.VisualBasic.Strings.StrComp%2A>関数。 省略可能な指定`Compare`比較の種類を制御する引数:`Text`ほとんどの入力と出力の`Binary`完全一致を判断するためです。  
   

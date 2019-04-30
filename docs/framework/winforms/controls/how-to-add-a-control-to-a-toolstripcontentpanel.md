@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ToolStripContentPanel [Windows Forms], adding controls
 ms.assetid: fa410960-bf1a-42fc-80e8-f2e27fb3dbb8
 ms.openlocfilehash: d228300e00a5c2be9cf530cd921865a01accab05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177880"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011217"
 ---
 # <a name="how-to-add-a-control-to-a-toolstripcontentpanel"></a>方法: ToolStripContentPanel にコントロールを追加する
 <xref:System.Windows.Forms.ToolStripContentPanel> に対して、1 つまたは複数のコントロールをプログラムで追加できます。  
@@ -26,9 +26,9 @@ ms.locfileid: "59177880"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  このコード例で必要な要素は次のとおりです。  
   
--   System、System.Data、および System.Windows.Forms の各アセンブリへの参照。  
+- System、System.Data、および System.Windows.Forms の各アセンブリへの参照。  
   
- この例をコマンドラインから Visual Basic または Visual C# にビルドする方法の詳細については、[コマンドラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。
+ Visual Basic または Visual C# からこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)、または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。
   
 ## <a name="see-also"></a>関連項目
 

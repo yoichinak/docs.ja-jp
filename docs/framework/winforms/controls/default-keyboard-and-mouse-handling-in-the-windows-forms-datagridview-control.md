@@ -11,11 +11,11 @@ helpviewer_keywords:
 - navigation keys [Windows Forms], DataGridView control
 ms.assetid: 4519b928-bfc8-4e8b-bb9c-b1e76a0ca552
 ms.openlocfilehash: 56585bf91a559844f15aede4519706674357a924
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708315"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011347"
 ---
 # <a name="default-keyboard-and-mouse-handling-in-the-windows-forms-datagridview-control"></a>既定のキーボードとマウスの Windows フォーム DataGridView コントロールでの処理
 
@@ -36,15 +36,15 @@ ms.locfileid: "57708315"
 |↑|現在のセルのすぐ上のセルにフォーカスを移動します。 最初の行にフォーカスがある場合は、何も行われません。|  
 |ホーム|現在の行の最初のセルにフォーカスを移動します。|  
 |End|現在の行の最後のセルにフォーカスを移動します。|  
-|PageDown|完全に表示されている行の数によって、コントロールを下をスクロールします。 最後に完全に表示されている行に列を変更することがなく、フォーカスを移動します。|  
-|PageUp|コントロールを完全に表示される行の数、スクロールします。 列を変更することがなく表示される最初の行にフォーカスを移動します。|  
+|PAGE DOWN|完全に表示されている行の数によって、コントロールを下をスクロールします。 最後に完全に表示されている行に列を変更することがなく、フォーカスを移動します。|  
+|PAGE UP|コントロールを完全に表示される行の数、スクロールします。 列を変更することがなく表示される最初の行にフォーカスを移動します。|  
 |Tab|場合、<xref:System.Windows.Forms.DataGridView.StandardTab%2A>プロパティの値が`false`、現在の行の次のセルにフォーカスを移動します。 行の最後のセルにフォーカスがある場合は、次の行の最初のセルにフォーカスを移動します。 コントロール内の最後のセルにフォーカスがある場合は、親コンテナーのタブ オーダー内で次のコントロールにフォーカスを移動します。<br /><br /> 場合、<xref:System.Windows.Forms.DataGridView.StandardTab%2A>プロパティの値が`true`、親コンテナーのタブ オーダーの次のコントロールにフォーカスを移動します。|  
 |Shift + Tab|場合、<xref:System.Windows.Forms.DataGridView.StandardTab%2A>プロパティの値が`false`、現在の行の前のセルにフォーカスを移動します。 行の最初のセルにフォーカスがある場合は、前の行の最後のセルにフォーカスを移動します。 コントロール内の最初のセルにフォーカスがある場合は、親コンテナーのタブ オーダー内で前のコントロールにフォーカスを移動します。<br /><br /> 場合、<xref:System.Windows.Forms.DataGridView.StandardTab%2A>プロパティの値が`true`、親コンテナーのタブ オーダー内で前のコントロールにフォーカスを移動します。|  
 |Ctrl + Tab|場合、<xref:System.Windows.Forms.DataGridView.StandardTab%2A>プロパティの値が`false`、親コンテナーのタブ オーダーの次のコントロールにフォーカスを移動します。<br /><br /> 場合、<xref:System.Windows.Forms.DataGridView.StandardTab%2A>プロパティの値が`true`、現在の行の次のセルにフォーカスを移動します。 行の最後のセルにフォーカスがある場合は、次の行の最初のセルにフォーカスを移動します。 コントロール内の最後のセルにフォーカスがある場合は、親コンテナーのタブ オーダー内で次のコントロールにフォーカスを移動します。|  
 |Ctrl + Shift + Tab|場合、<xref:System.Windows.Forms.DataGridView.StandardTab%2A>プロパティの値が`false`、親コンテナーのタブ オーダー内で前のコントロールにフォーカスを移動します。<br /><br /> 場合、<xref:System.Windows.Forms.DataGridView.StandardTab%2A>プロパティの値が`true`、現在の行の前のセルにフォーカスを移動します。 行の最初のセルにフォーカスがある場合は、前の行の最後のセルにフォーカスを移動します。 コントロール内の最初のセルにフォーカスがある場合は、親コンテナーのタブ オーダー内で前のコントロールにフォーカスを移動します。|  
 |CTRL + 方向キー|矢印の方向の一番下のセルにフォーカスを移動します。|  
-|CTRL + ホーム|コントロールの最初のセルにフォーカスを移動します。|  
-|CTRL + END|コントロールの最後のセルにフォーカスを移動します。|  
+|Ctrl + Home|コントロールの最初のセルにフォーカスを移動します。|  
+|Ctrl + End|コントロールの最後のセルにフォーカスを移動します。|  
 |CTRL + ページ/アップ ダウン|ページの下またはページの上と同じです。|  
 |F2|現在のセルを編集モードのセルには場合、<xref:System.Windows.Forms.DataGridView.EditMode%2A>プロパティの値が<xref:System.Windows.Forms.DataGridViewEditMode.EditOnF2>または<xref:System.Windows.Forms.DataGridViewEditMode.EditOnKeystrokeOrF2>します。|
 |F3|現在の列を並べ替える場合、<xref:System.Windows.Forms.DataGridViewColumn.SortMode%2A?displayProperty=nameWithType>プロパティの値が<xref:System.Windows.Forms.DataGridViewColumnSortMode.Automatic>します。 現在の列ヘッダーをクリックすると同じです。 .NET Framework 4.7.2 以降で使用可能です。 この機能を有効にするのには、アプリケーションは .NET Framework 4.7.2 以降のバージョンを対象または AppContext スイッチを使用してアクセシビリティ機能改善を明示的に選択する必要があります。|  
@@ -52,7 +52,7 @@ ms.locfileid: "57708315"
 |ALT + ↑ または ↓|現在のセルがある場合、<xref:System.Windows.Forms.DataGridViewComboBoxCell>をセルを編集モードに配置し、ドロップダウン リストを表示します。|  
 |Space|現在のセルがある場合、 <xref:System.Windows.Forms.DataGridViewButtonCell>、 <xref:System.Windows.Forms.DataGridViewLinkCell>、または<xref:System.Windows.Forms.DataGridViewCheckBoxCell>、発生させる、<xref:System.Windows.Forms.DataGridView.CellClick>と<xref:System.Windows.Forms.DataGridView.CellContentClick>イベント。 現在のセルがある場合、 <xref:System.Windows.Forms.DataGridViewButtonCell>、また、ボタンを押します。 現在のセルがある場合、<xref:System.Windows.Forms.DataGridViewCheckBoxCell>もチェックの状態を変更します。|  
 |Enter|現在のセルと行に変更をコミットし、現在のセルの直下のセルにフォーカスを移動します。 最後の行にフォーカスがある場合は、フォーカスを移動せず、変更をコミットします。|  
-|ESC|コントロールが編集モードにある場合は、編集をキャンセルします。 編集モードでコントロールがない場合は、コントロールが編集をサポートするデータ ソースにバインドされている場合に、現在の行に加えられた変更を元に戻します。 または行レベルのコミットのスコープを持つ仮想モードが実装されています。|  
+|Esc|コントロールが編集モードにある場合は、編集をキャンセルします。 編集モードでコントロールがない場合は、コントロールが編集をサポートするデータ ソースにバインドされている場合に、現在の行に加えられた変更を元に戻します。 または行レベルのコミットのスコープを持つ仮想モードが実装されています。|  
 |BACKSPACE キー|セルを編集するときに、挿入ポイントの前に文字を削除します。|  
 |Del|セルを編集するときに、カーソル位置の後の文字を削除します。|  
 |Ctrl + Enter|現在のセルにフォーカスを移動せず、変更をコミットします。 コミットで、コントロールが編集または仮想モードをサポートするデータ ソースにバインドされている場合は、現在の行への変更が実装されて行レベルのコミットのスコープ。|  

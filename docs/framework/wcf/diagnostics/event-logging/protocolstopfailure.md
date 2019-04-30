@@ -3,11 +3,11 @@ title: ProtocolStopFailure
 ms.date: 03/30/2017
 ms.assetid: 8b246f8f-eb0f-430b-a82b-3d55aad287a1
 ms.openlocfilehash: 1032305600526868fca5d2e1517238e3cabdc92b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59120797"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999025"
 ---
 # <a name="protocolstopfailure"></a>ProtocolStopFailure
 Id:147  

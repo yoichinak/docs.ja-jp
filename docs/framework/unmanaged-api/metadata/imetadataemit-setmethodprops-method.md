@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 534afdd5990435c6b4db5ef8ea27a8065b199496
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050013"
 ---
 # <a name="imetadataemitsetmethodprops-method"></a>IMetaDataEmit::SetMethodProps メソッド
 設定または更新、機能は、指定の相対仮想アドレス、前回の呼び出しによって定義されたメソッドに格納されている、 [imetadataemit::definemethod](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-definemethod-method.md)します。  

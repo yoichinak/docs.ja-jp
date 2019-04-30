@@ -6,17 +6,17 @@ helpviewer_keywords:
 - threading [Windows Forms], controls
 ms.assetid: c311d652-0f26-45fa-bdcc-b1615d73ce4e
 ms.openlocfilehash: cc7f358a62c8057abb77e1f5a28544bb6c858d98
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57703323"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012725"
 ---
 # <a name="multithreading-in-windows-forms-controls"></a>Windows フォーム コントロールのマルチスレッド処理
 多くのアプリケーションで行うことができます、ユーザー インターフェイス (UI) の高い別のスレッドで時間のかかる操作を実行することによって。 多数のツールがあるマルチ スレッドなど、Windows フォーム コントロール、<xref:System.Threading>名前空間、<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>メソッド、および`BackgroundWorker`コンポーネント。  
   
 > [!NOTE]
->  `BackgroundWorker`コンポーネントが置換および機能を追加、<xref:System.Threading>名前空間と<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>メソッドです。 ただし、これらは保持されます下位互換性と将来の使用を選択した場合。 詳細については、[BackgroundWorker コンポーネントの概要](backgroundworker-component-overview.md)を参照してください。  
+>  `BackgroundWorker`コンポーネントが置換および機能を追加、<xref:System.Threading>名前空間と<xref:System.Windows.Forms.Control.BeginInvoke%2A?displayProperty=nameWithType>メソッドです。 ただし、これらは保持されます下位互換性と将来の使用を選択した場合。 詳細については、次を参照してください。 [BackgroundWorker コンポーネントの概要](backgroundworker-component-overview.md)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: Windows フォーム コントロールのスレッド セーフな呼び出しを行う](how-to-make-thread-safe-calls-to-windows-forms-controls.md)  

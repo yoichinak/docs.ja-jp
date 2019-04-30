@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a7e09ac96a8803f41d78b532c9da67315e5dd6b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113738"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992811"
 ---
 # <a name="iclrstrongnamestrongnamesignatureverificationfromimage-method"></a>ICLRStrongName::StrongNameSignatureVerificationFromImage メソッド
 メモリに既にマップされているアセンブリが、関連付けられている公開キーに対して有効であるかどうかが確認されます。  
@@ -48,22 +48,22 @@ HRESULT StrongNameSignatureVerificationFromImage (
  `dwInFlags`  
  [in]検証の動作に影響するフラグ。 次の値がサポートされています。  
   
--   `SN_INFLAG_FORCE_VER` (0x00000001) - レジストリ設定を上書きする必要がある場合でも、強制的に検証します。  
+- `SN_INFLAG_FORCE_VER` (0x00000001) - レジストリ設定を上書きする必要がある場合でも、強制的に検証します。  
   
--   `SN_INFLAG_INSTALL` (0x00000002) - これはこのイメージ上で実行される最初の認証であることを指定します。  
+- `SN_INFLAG_INSTALL` (0x00000002) - これはこのイメージ上で実行される最初の認証であることを指定します。  
   
--   `SN_INFLAG_ADMIN_ACCESS` (0x00000004) のキャッシュで管理者特権を持つユーザーにのみアクセスを許可することを指定します。  
+- `SN_INFLAG_ADMIN_ACCESS` (0x00000004) のキャッシュで管理者特権を持つユーザーにのみアクセスを許可することを指定します。  
   
--   `SN_INFLAG_USER_ACCESS` (0x00000008) のアセンブリが現在のユーザーのみがアクセスできることを指定します。  
+- `SN_INFLAG_USER_ACCESS` (0x00000008) のアセンブリが現在のユーザーのみがアクセスできることを指定します。  
   
--   `SN_INFLAG_ALL_ACCESS` (0x00000010) - キャッシュはしないことを指定のアクセス制限を保証します。  
+- `SN_INFLAG_ALL_ACCESS` (0x00000010) - キャッシュはしないことを指定のアクセス制限を保証します。  
   
--   `SN_INFLAG_RUNTIME` (0x80000000) - 内部デバッグのために予約されています。  
+- `SN_INFLAG_RUNTIME` (0x80000000) - 内部デバッグのために予約されています。  
   
  `pdwOutFlags`  
  [out]追加の出力情報用のフラグです。 次の値がサポートされています。  
   
--   `SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - この値に設定が`false`レジストリ設定のために、検証が成功したことを指定します。  
+- `SN_OUTFLAG_WAS_VERIFIED` (0x00000001) - この値に設定が`false`レジストリ設定のために、検証が成功したことを指定します。  
   
 ## <a name="return-value"></a>戻り値  
  `S_OK` メソッドが正常に完了した場合それ以外の場合、エラーを示す HRESULT 値 (を参照してください[の共通 HRESULT 値](https://go.microsoft.com/fwlink/?LinkId=213878)一覧については)。  

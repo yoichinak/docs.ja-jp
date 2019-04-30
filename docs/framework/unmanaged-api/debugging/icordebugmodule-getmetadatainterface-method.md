@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 37710fbb7acc50b80d7acebe4194b019c0b64660
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59102597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994852"
 ---
 # <a name="icordebugmodulegetmetadatainterface-method"></a>ICorDebugModule::GetMetaDataInterface メソッド
 モジュールのメタデータの検査に使用できるメタデータ インターフェイス オブジェクトを取得します。  

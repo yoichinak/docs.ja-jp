@@ -22,11 +22,11 @@ helpviewer_keywords:
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
 ms.openlocfilehash: a8df6e48fd5bce9bb28d8aef7e031f36741ad0ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813393"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050481"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic における Me、My、MyBase、MyClass
 `Me`、 `My`、 `MyBase`、および`MyClass`Visual Basic で名前は似ていますが、さまざまな目的があります。 このトピックでは、それらを区別するために、これらのエンティティの各をについて説明します。  

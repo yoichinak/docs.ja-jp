@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 27c9f2fd-f64d-4b4e-bbf6-1d24f47067cb
 ms.openlocfilehash: 254f486fa19d8af30759d9a9fd6642a1a40e82a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165179"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034360"
 ---
 # <a name="datatable-constraints"></a>DataTable の制約
 制約を使用すると、データの整合性を維持するために <xref:System.Data.DataTable> のデータを強制的に制限できます。 制約は、1 つの列または関連付けられた複数の列に対して自動的に適用される規則であり、行の値がなんらかの方法で変更されたときに実行されるアクションを決定します。 制約はときに、`System.Data.DataSet.EnforceConstraints`のプロパティ、<xref:System.Data.DataSet>は**true**します。 `EnforceConstraints` プロパティの設定方法のコード例については、<xref:System.Data.DataSet.EnforceConstraints%2A> のリファレンス トピックを参照してください。  

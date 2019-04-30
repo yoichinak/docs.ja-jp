@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ActiveX controls [Windows Forms], adding
 ms.assetid: 54a61e5b-555e-4887-b41e-6244fed271eb
 ms.openlocfilehash: 780411949c543a2178de5e7c531bd2202703f27a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59166051"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011155"
 ---
 # <a name="how-to-add-activex-controls-to-windows-forms"></a>方法: Windows フォームに ActiveX コントロールを追加する
 Windows フォーム コントロールをホストするには、Windows フォーム デザイナーが最適化され、中には、Windows フォームで ActiveX コントロールも記述できます。  
@@ -26,7 +26,7 @@ Windows フォーム コントロールをホストするには、Windows フォ
   
 ### <a name="to-add-an-activex-control-to-your-windows-form"></a>Windows フォームに ActiveX コントロールを追加するには  
   
--   ツールボックスにコントロールをダブルクリックします。  
+- ツールボックスにコントロールをダブルクリックします。  
   
      Visual Studio では、プロジェクトのコントロールにすべての参照を追加します。 Windows フォームで ActiveX コントロールを使用する場合に留意すべき点の詳細については、次を参照してください。 [Windows フォームで ActiveX コントロールをホストしている場合の考慮事項](considerations-when-hosting-an-activex-control-on-a-windows-form.md)します。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Windows Forms controls, default button on form
 ms.assetid: a1da0590-755f-49f2-aca7-609fac6351bf
 ms.openlocfilehash: e0eaa90c8450888ea325470db5d4adae555f8d82
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304169"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972329"
 ---
 # <a name="how-to-designate-a-windows-forms-button-as-the-accept-button-using-the-designer"></a>方法: デザイナーを使用して Windows フォームの Button コントロールを承認ボタンとして指定する
 任意の Windows フォームで指定することができます、<xref:System.Windows.Forms.Button>コントロールを承認ボタン、既定のボタンとも呼ばれます。 ユーザーが ENTER キーを押すと、フォームの他のコントロールにフォーカスがあるの既定のボタンがクリックされました。 フォーカスを持つコントロールが別のボタン例外:、フォーカスのあるボタンをクリックする場合、-複数行テキスト ボックス、または ENTER キーをトラップするカスタム コントロール。  

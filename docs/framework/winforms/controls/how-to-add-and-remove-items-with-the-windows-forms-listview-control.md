@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ListView control [Windows Forms], adding list items
 ms.assetid: 1b35a80a-edd8-495f-a807-a28c4aae52c6
 ms.openlocfilehash: 8a97d73b9b2c46d02ae0794ad66b20a04db58af6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327660"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011126"
 ---
 # <a name="how-to-add-and-remove-items-with-the-windows-forms-listview-control"></a>方法: Windows フォーム ListView コントロールで項目を追加および削除する
 Windows フォームに項目を追加するプロセス<xref:System.Windows.Forms.ListView>コントロールは、主にアイテムを指定して、プロパティを割り当てます。 追加またはリスト項目の削除は、いつでも実行できます。  

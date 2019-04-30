@@ -3,11 +3,11 @@ title: カスタムの有効期間
 ms.date: 08/20/2018
 ms.assetid: 52806c07-b91c-48fe-b992-88a41924f51f
 ms.openlocfilehash: be6013d568e3625c5eac7e0c145db7df1c6917e3
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410382"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003160"
 ---
 # <a name="custom-lifetime"></a>カスタムの有効期間
 
@@ -64,8 +64,7 @@ WCF では、<xref:System.ServiceModel.InstanceContext>サービス インスタ
 
 <xref:System.ServiceModel.IExtensibleObject%601>インターフェイスが、機能をカスタマイズする拡張機能を許可するオブジェクトによって実装されます。
 
-
-  <xref:System.ServiceModel.IExtension%601> インターフェイスは、`T` 型のクラスの拡張が可能なオブジェクトによって実装されます。
+<xref:System.ServiceModel.IExtension%601> インターフェイスは、`T` 型のクラスの拡張が可能なオブジェクトによって実装されます。
 
 最後に、<xref:System.ServiceModel.IExtensionCollection%601>インターフェイスのコレクションである<xref:System.ServiceModel.IExtension%601>の実装を取得するためにできる実装<xref:System.ServiceModel.IExtension%601>をその型。
 
@@ -77,8 +76,7 @@ class CustomLeaseExtension : IExtension<InstanceContext>
 }
 ```
 
-
-  <xref:System.ServiceModel.IExtension%601> インターフェイスには、<xref:System.ServiceModel.IExtension%601.Attach%2A> と <xref:System.ServiceModel.IExtension%601.Detach%2A> の 2 つのメソッドが含まれています。 名前が示すように、これらの 2 つのメソッドは、ランタイムが <xref:System.ServiceModel.InstanceContext> クラスのインスタンスに拡張機能を関連付けるときと関連付けを解除するときに呼び出されます。 このサンプルでは、`Attach` メソッドを使用して、拡張機能の現在のインスタンスに属する <xref:System.ServiceModel.InstanceContext> オブジェクトを追跡します。
+<xref:System.ServiceModel.IExtension%601> インターフェイスには、<xref:System.ServiceModel.IExtension%601.Attach%2A> と <xref:System.ServiceModel.IExtension%601.Detach%2A> の 2 つのメソッドが含まれています。 名前が示すように、これらの 2 つのメソッドは、ランタイムが <xref:System.ServiceModel.InstanceContext> クラスのインスタンスに拡張機能を関連付けるときと関連付けを解除するときに呼び出されます。 このサンプルでは、`Attach` メソッドを使用して、拡張機能の現在のインスタンスに属する <xref:System.ServiceModel.InstanceContext> オブジェクトを追跡します。
 
 ```csharp
 InstanceContext owner;
@@ -144,8 +142,7 @@ void idleTimer_Elapsed(object sender, ElapsedEventArgs args)
 
 アイドル状態に移行中のインスタンスに新しいメッセージが届いたときに、実行中のタイマーを更新する方法はありません。
 
-このサンプルでは、<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> メソッドの呼び出しを受け取って <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> にルーティングするために `CustomLeaseExtension` を実装します。 
-  <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 実装は、`CustomLifetimeLease` クラスに含まれています。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> WCF がサービス インスタンスを解放するときにメソッドが呼び出されます。 ただし、ServiceBehavior の `ISharedSessionInstance` コレクションに存在する特定の <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 実装のインスタンスは 1 つだけです。 つまり、知る必要が場合の方法はありません、 <xref:System.ServiceModel.InstanceContext> WCF チェック時に、<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>メソッド。 そのため、このサンプルはスレッドへの要求をシリアル化するロックを使用、<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>メソッド。
+このサンプルでは、<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> メソッドの呼び出しを受け取って <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> にルーティングするために `CustomLeaseExtension` を実装します。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 実装は、`CustomLifetimeLease` クラスに含まれています。 <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A> WCF がサービス インスタンスを解放するときにメソッドが呼び出されます。 ただし、ServiceBehavior の `ISharedSessionInstance` コレクションに存在する特定の <xref:System.ServiceModel.Dispatcher.IInstanceContextProvider> 実装のインスタンスは 1 つだけです。 つまり、知る必要が場合の方法はありません、 <xref:System.ServiceModel.InstanceContext> WCF チェック時に、<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>メソッド。 そのため、このサンプルはスレッドへの要求をシリアル化するロックを使用、<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A>メソッド。
 
 > [!IMPORTANT]
 > シリアル化はアプリケーションのパフォーマンスに大きな影響を及ぼす可能性があるので、スレッド ロックは使用しないことをお勧めします。
@@ -188,8 +185,7 @@ public void NotifyIdle(InstanceContextIdleCallback callback,
 }
 ```
 
-前に、`ICustomLease.IsIdle`プロパティをチェックして、コールバック プロパティは、これには、重要な設定が必要`CustomLeaseExtension`アイドル状態になったときに、ディスパッチャーに通知します。 
-  `ICustomLease.IsIdle` が `true` を返す場合は、`isIdle` プライベート メンバーが `CustomLifetimeLease` で単に `true` に設定され、コールバック メソッドが呼び出されます。 コードでは、ロックを保持しているために、他のスレッドは、このプライベート メンバーの値を変更できません。 次回ディスパッチャーを呼び出すと、<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType>を返します`true`でき、ディスパッチャーのインスタンスを解放します。
+前に、`ICustomLease.IsIdle`プロパティをチェックして、コールバック プロパティは、これには、重要な設定が必要`CustomLeaseExtension`アイドル状態になったときに、ディスパッチャーに通知します。 `ICustomLease.IsIdle` が `true` を返す場合は、`isIdle` プライベート メンバーが `CustomLifetimeLease` で単に `true` に設定され、コールバック メソッドが呼び出されます。 コードでは、ロックを保持しているために、他のスレッドは、このプライベート メンバーの値を変更できません。 次回ディスパッチャーを呼び出すと、<xref:System.ServiceModel.Dispatcher.IInstanceContextProvider.IsIdle%2A?displayProperty=nameWithType>を返します`true`でき、ディスパッチャーのインスタンスを解放します。
 
 これでカスタム拡張機能の基礎が完成したので、この拡張機能をサービス モデルにフックする必要があります。 フックするため、`CustomLeaseExtension`を実装、 <xref:System.ServiceModel.InstanceContext>、WCF の提供、<xref:System.ServiceModel.Dispatcher.IInstanceContextInitializer>のブートス トラップを実行するインターフェイス<xref:System.ServiceModel.InstanceContext>。 このサンプルでは、`CustomLeaseInitializer` クラスでこのインターフェイスを実装し、`CustomLeaseExtension` のインスタンスを唯一のメソッドの初期化から得られる <xref:System.ServiceModel.InstanceContext.Extensions%2A> コレクションに追加します。 このメソッドは、<xref:System.ServiceModel.InstanceContext> の初期化中にディスパッチャーによって呼び出されます。
 

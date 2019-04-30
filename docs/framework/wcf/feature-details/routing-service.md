@@ -3,34 +3,34 @@ title: ルーティング サービス
 ms.date: 03/30/2017
 ms.assetid: ca7c216a-5141-4132-8193-102c181d2eba
 ms.openlocfilehash: 905c84d801a27e588e2c539f987d6280aae7b994
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129442"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991046"
 ---
 # <a name="routing-service"></a>ルーティング サービス
 ルーティング サービスは、メッセージ ルーターとして機能する、汎用の SOAP 中継局です。 ルーティング サービスの主要な機能は、メッセージのコンテンツに基づいてメッセージをルーティングする機能です。これにより、メッセージのヘッダーまたはメッセージ本文内に含まれる値に基づいて、メッセージをクライアント エンドポイントに転送できます。  
   
  <xref:System.ServiceModel.Routing.RoutingService>で Windows Communication Foundation (WCF) サービスとして実装されますが、<xref:System.ServiceModel.Routing>名前空間。 ルーティング サービスは、メッセージを受信し、その内容に基づいて各メッセージを 1 つ以上のクライアント エンドポイントにルーティングする、1 つ以上のサービス エンドポイントを公開します。 このサービスには、次の機能が用意されています。  
   
--   コンテンツ ベースのルーティング  
+- コンテンツ ベースのルーティング  
   
-    -   サービスの集計  
+    - サービスの集計  
   
-    -   サービスのバージョン管理  
+    - サービスのバージョン管理  
   
-    -   優先度ルーティング  
+    - 優先度ルーティング  
   
-    -   動的構成  
+    - 動的構成  
   
--   プロトコル ブリッジ  
+- プロトコル ブリッジ  
   
--   SOAP 処理  
+- SOAP 処理  
   
--   高度なエラー処理  
+- 高度なエラー処理  
   
--   バックアップ エンドポイント  
+- バックアップ エンドポイント  
   
  上記の機能の 1 つ以上を実現する中間サービスを作成することもできますが、このような実装では、特定のシナリオまたはソリューションに制限され、新しいアプリケーションにすぐに適用できません。  
   
@@ -48,13 +48,13 @@ ms.locfileid: "59129442"
   
  メッセージ フィルターをフィルター テーブルにグループ化することで、ルーティング ロジックを構築し、次のような複数のルーティング シナリオを処理できます。  
   
--   サービスの集計  
+- サービスの集計  
   
--   サービスのバージョン管理  
+- サービスのバージョン管理  
   
--   優先度ルーティング  
+- 優先度ルーティング  
   
--   動的構成  
+- 動的構成  
   
  メッセージ フィルターとフィルター テーブルの詳細については、次を参照してください。[ルーティングの概要](../../../../docs/framework/wcf/feature-details/routing-introduction.md)と[メッセージ フィルター](../../../../docs/framework/wcf/feature-details/message-filters.md)します。  
   
@@ -97,13 +97,13 @@ ms.locfileid: "59129442"
 ## <a name="streaming"></a>ストリーム  
  バインディングがストリーミングをサポートするように設定すると、ルーティング サービスはメッセージを正常にストリーミングできます。  ただし、メッセージのバッファーが必要となる可能性のある条件がいくつかあります。  
   
--   マルチキャスト (追加のメッセージ コピーを作成するためのバッファー)  
+- マルチキャスト (追加のメッセージ コピーを作成するためのバッファー)  
   
--   フェールオーバー (メッセージがバックアップに送信される必要がある場合のバッファー)  
+- フェールオーバー (メッセージがバックアップに送信される必要がある場合のバッファー)  
   
--   System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly は false です (フィルターが本文を検査できるように MessageBuffer と共に MessageFilterTable を示すバッファー)  
+- System.ServiceModel.Routing.RoutingConfiguration.RouteOnHeadersOnly は false です (フィルターが本文を検査できるように MessageBuffer と共に MessageFilterTable を示すバッファー)  
   
--   動的構成  
+- 動的構成  
   
 ## <a name="see-also"></a>関連項目
 

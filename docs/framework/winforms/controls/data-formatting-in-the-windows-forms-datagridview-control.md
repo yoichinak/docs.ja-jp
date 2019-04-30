@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], formatting data
 ms.assetid: 07bf558d-3748-42ba-8ba0-37fdef924081
 ms.openlocfilehash: b5c055bdd12a4bede6e77233726c697de424a055
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158647"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011431"
 ---
 # <a name="data-formatting-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでのデータの書式設定
 <xref:System.Windows.Forms.DataGridView>コントロールがセルの値と、親列に表示するデータ型間の自動変換を提供します。 たとえば、テキスト ボックスの列は、日付、時刻、数、および列挙の値の文字列形式を表示し、ユーザーが入力した文字列値をデータ ストアに必要な種類に変換します。  

@@ -6,8 +6,8 @@ ms.openlocfilehash: 1bc6dd2ef981115068cbd4cd491a14fea70d7e3a
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59979863"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990601"
 ---
 # <a name="data-binding-in-a-windows-presentation-foundation-client"></a>Windows Presentation Foundation クライアントでのデータ バインディング
 このサンプルでは、Windows Presentation Foundation (WPF) クライアントでのデータ バインディングの使用方法を示します。 サンプルは、クライアントに返すアルバムの配列をランダムに生成する Windows Communication Foundation (WCF) サービスを使用します。 各アルバムには、名前、価格、およびアルバム トラックの一覧が含まれます。 アルバム トラックには、名前と継続時間が含まれます。 サービスによって返される情報は、Windows Presentation Foundation (WPF) クライアントによって提供されるユーザー インターフェイス (UI) に自動的にバインドされます。  

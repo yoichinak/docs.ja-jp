@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: fe9bc9aea4ceb0f5b5c03416f43894b482c3294e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136631"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62044292"
 ---
 # <a name="imetadatadispenserexgetoption-method"></a>IMetaDataDispenserEx::GetOption メソッド
 現在のメタデータ スコープの指定したオプションの値を取得します。 オプションは、現在のメタデータ スコープへの呼び出しを処理する方法を制御します。  
@@ -46,19 +46,19 @@ HRESULT GetOption (
 ## <a name="remarks"></a>Remarks  
  このメソッドがサポートされている Guid を次に示します。 詳細については、次を参照してください。、 [imetadatadispenserex::setoption](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenserex-setoption-method.md)メソッド。 場合`optionId`は、この一覧にないは、このメソッドは HRESULT を返します。 `E_INVALIDARG`、無効なパラメーターを示します。  
   
--   MetaDataCheckDuplicatesFor  
+- MetaDataCheckDuplicatesFor  
   
--   MetaDataRefToDefCheck  
+- MetaDataRefToDefCheck  
   
--   MetaDataNotificationForTokenMovement  
+- MetaDataNotificationForTokenMovement  
   
--   MetaDataSetENC  
+- MetaDataSetENC  
   
--   MetaDataErrorIfEmitOutOfOrder  
+- MetaDataErrorIfEmitOutOfOrder  
   
--   MetaDataGenerateTCEAdapters  
+- MetaDataGenerateTCEAdapters  
   
--   MetaDataLinkerOptions  
+- MetaDataLinkerOptions  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

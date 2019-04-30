@@ -11,11 +11,11 @@ helpviewer_keywords:
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
 ms.openlocfilehash: c4a78569f6c0b14c32154611412d6b3ccd8a84ce
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146212"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004203"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>方法: ライン キャップを使用した直線を描画する
 ライン キャップと呼ばれるいくつかの図形のいずれかでは、先頭または末尾の行を描画できます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] round、正方形、ひし形、および矢印などのいくつかのライン キャップをサポートしています。  
@@ -32,7 +32,7 @@ ms.locfileid: "59146212"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   Windows フォームを作成し、フォームの処理<xref:System.Windows.Forms.Control.Paint>イベント。 例のコードを<xref:System.Windows.Forms.Control.Paint>イベント ハンドラーを渡す`e`として<xref:System.Windows.Forms.PaintEventArgs>します。  
+- Windows フォームを作成し、フォームの処理<xref:System.Windows.Forms.Control.Paint>イベント。 例のコードを<xref:System.Windows.Forms.Control.Paint>イベント ハンドラーを渡す`e`として<xref:System.Windows.Forms.PaintEventArgs>します。  
   
 ## <a name="see-also"></a>関連項目
 

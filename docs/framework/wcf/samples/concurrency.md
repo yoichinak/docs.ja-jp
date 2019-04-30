@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Concurrency Sample [Windows Communication Foundation]
 ms.assetid: f8dbdfb3-6858-4f95-abe3-3a1db7878926
 ms.openlocfilehash: 5de918f71f4361af3409c8382781844824747c83
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002457"
 ---
 # <a name="concurrency"></a>コンカレンシー
 コンカレンシーのサンプルでは、<xref:System.ServiceModel.ServiceBehaviorAttribute> を <xref:System.ServiceModel.ConcurrencyMode> 列挙体と共に使用する方法を示します。この列挙体は、サービスのインスタンスがメッセージを順番に処理するか、または同時に処理するかを制御します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、実装、`ICalculator`サービス コントラクト。 このサンプルでは、`ICalculatorConcurrency` から継承される新しいコントラクト `ICalculator` を定義します。これによって、サービスのコンカレンシーの状態を検査するための 2 つの操作が追加されます。 コンカレンシー設定を変更してから、クライアントを実行して動作の変更を確認します。  
@@ -22,11 +22,11 @@ ms.locfileid: "59296603"
   
  選択可能なコンカレンシー モードは次の 3 つです。  
   
--   `Single`:各サービス インスタンスは、一度に 1 つのメッセージを処理します。 これが既定のコンカレンシー モードです。  
+- `Single`:各サービス インスタンスは、一度に 1 つのメッセージを処理します。 これが既定のコンカレンシー モードです。  
   
--   `Multiple`:各サービス インスタンスは、同時に複数のメッセージを処理します。 このコンカレンシー モードを使用するには、サービスの実装がスレッドセーフである必要があります。  
+- `Multiple`:各サービス インスタンスは、同時に複数のメッセージを処理します。 このコンカレンシー モードを使用するには、サービスの実装がスレッドセーフである必要があります。  
   
--   `Reentrant`:各サービス インスタンスは、一度に 1 つのメッセージを処理しますが、再入可能呼び出しを受け入れます。 サービスがこの呼び出しを受け入れるのは、コール アウトするときだけです。再入方法については、 [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)サンプル。  
+- `Reentrant`:各サービス インスタンスは、一度に 1 つのメッセージを処理しますが、再入可能呼び出しを受け入れます。 サービスがこの呼び出しを受け入れるのは、コール アウトするときだけです。再入方法については、 [ConcurrencyMode.Reentrant](../../../../docs/framework/wcf/samples/concurrencymode-reentrant.md)サンプル。  
   
  コンカレンシーの使用は、インスタンス化モードに関連します。 <xref:System.ServiceModel.InstanceContextMode.PerCall> インスタンス化では、各メッセージが新しいサービス インスタンスによって処理されるため、コンカレンシーは関係しません。 <xref:System.ServiceModel.InstanceContextMode.Single> インスタンス化では、<xref:System.ServiceModel.ConcurrencyMode.Single> と <xref:System.ServiceModel.ConcurrencyMode.Multiple> のいずれかのコンカレンシーが関係します。これは 1 つのインスタンスがメッセージを順番に処理するか、同時に処理するかによって決まります。 <xref:System.ServiceModel.InstanceContextMode.PerSession> インスタンス化では、どのコンカレンシー モードも関係する可能性があります。  
   

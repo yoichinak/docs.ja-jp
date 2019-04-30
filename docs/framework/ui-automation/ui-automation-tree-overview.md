@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, tree
 ms.assetid: 03b98058-bdb3-47a0-8ff7-45e6cdf67166
 ms.openlocfilehash: a88822d6aed5af04ecf7deffe6936cfc4ebe296e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59225951"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033021"
 ---
 # <a name="ui-automation-tree-overview"></a>UI オートメーション ツリーの概要
 > [!NOTE]

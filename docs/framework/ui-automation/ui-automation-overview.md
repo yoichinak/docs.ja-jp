@@ -7,11 +7,11 @@ helpviewer_keywords:
 - accessibility, UI automation
 ms.assetid: 65847654-9994-4a9e-b36d-2dd5d998770b
 ms.openlocfilehash: 06cbc82f3636c4063b445a0ccbe871e0be1dd847
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59134671"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032397"
 ---
 # <a name="ui-automation-overview"></a>UI オートメーションの概要
 > [!NOTE]

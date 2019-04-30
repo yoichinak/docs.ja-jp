@@ -5,11 +5,11 @@ ms.assetid: 6f4e78ba-082b-489d-8b58-4c35fbcc7a5b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 610e46d5cb550a266c5558c49239d1818c1e85de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61988118"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickey-method"></a>Icordebugmergedassemblyrecord::getpublickey メソッド
 アセンブリの公開キーを取得します。  

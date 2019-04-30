@@ -3,24 +3,24 @@ title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
 ms.openlocfilehash: d1bffef127fe295aa41b1287da1c7104464ae0bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59180064"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990913"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 Windows Communication Foundation (WCF) での動作は、サービス レベルまたはエンドポイント レベルでの実行時の動作を変更します。 (一般に、表示動作の詳細については[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md))。*セキュリティ動作*および監査ログの資格情報、認証、承認、制御できるようにします。 動作は、プログラムまたは構成を通じて使用できます。 ここでは、セキュリティ機能に関連する以下の動作の構成について説明します。  
   
--   [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)します。  
+- [\<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)します。  
   
--   [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)します。  
+- [\<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)します。  
   
--   [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)します。  
+- [\<serviceAuthorization >](../../../../docs/framework/configure-apps/file-schema/wcf/serviceauthorization-element.md)します。  
   
--   [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)します。  
+- [\<serviceSecurityAudit >](../../../../docs/framework/configure-apps/file-schema/wcf/servicesecurityaudit.md)します。  
   
--   [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)クライアントがメタデータにアクセスできるセキュリティで保護されたエンドポイントを指定することがもできます。  
+- [\<serviceMetadata >](../../../../docs/framework/configure-apps/file-schema/wcf/servicemetadata.md)クライアントがメタデータにアクセスできるセキュリティで保護されたエンドポイントを指定することがもできます。  
   
 ## <a name="setting-credentials-with-behaviors"></a>動作を使用した資格情報の設定  
  使用して、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)と[ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)サービスまたはクライアントの資格情報の値を設定します。 基になるバインド構成によって、資格情報を設定する必要があるかどうかが決まります。 たとえば、セキュリティ モードが `None` に設定されている場合、クライアントとサービスは相互に認証を行わないため、どの種類の資格情報も必要ありません。  
@@ -78,9 +78,9 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
   
  使用する必要があります、 [ \<allowedAudienceUris >](../../../../docs/framework/configure-apps/file-schema/wcf/allowedaudienceuris.md)利用するフェデレーション アプリケーション内のコレクションを*セキュア トークン サービス*(STS) を発行する`SamlSecurityToken`セキュリティ トークン。 STS がセキュリティ トークンを発行する場合、このセキュリティ トークンに `SamlAudienceRestrictionCondition` を追加して、セキュリティ トークンの提供先となる Web サービスの URI を指定できます。 これにより、受け取り側 `SamlSecurityTokenAuthenticator` Web サービスは、次のようにしてこのチェックが行われるように指定することで、発行されたセキュリティ トークンがこの Web サービスを対象としていることを確認できます。  
   
--   設定、`audienceUriMode`属性の[ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)に`Always`または`BearerKeyOnly`します。  
+- 設定、`audienceUriMode`属性の[ \<issuedTokenAuthentication >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenauthentication-of-servicecredentials.md)に`Always`または`BearerKeyOnly`します。  
   
--   このコレクションに URI を追加して、有効な URI のセットを指定します。 これを行うには、挿入、 [\<追加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)の各 URI に対して  
+- このコレクションに URI を追加して、有効な URI のセットを指定します。 これを行うには、挿入、 [\<追加 >](../../../../docs/framework/configure-apps/file-schema/wcf/add-of-allowedaudienceuris.md)の各 URI に対して  
   
  詳細については、「 <xref:System.IdentityModel.Selectors.SamlSecurityTokenAuthenticator> 」を参照してください。  
   

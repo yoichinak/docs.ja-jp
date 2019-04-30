@@ -8,11 +8,11 @@ helpviewer_keywords:
 - request-reply contracts [WCF]
 ms.assetid: 2fa710f1-47f4-4598-b063-3ab3bd22ebba
 ms.openlocfilehash: 1ff11b1cae4ec8f6fe886a55cb0add27831048d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59177815"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991121"
 ---
 # <a name="request-reply-services"></a>要求/応答サービス
 要求/応答サービスは、操作コントラクトでは、Windows Communication Foundation (WCF) の既定の種類です。 クライアントはサービス操作を呼び出し、サービスからの応答を待機します。 サービス操作の呼び出しは、同期的または非同期的に実行できます。同期呼び出しでは、応答を受信するか、呼び出しがタイムアウトするまで、クライアントがブロックされます。非同期呼び出しでは、クライアントはサービス操作の呼び出し後、動作を続行し、別のスレッドのサービスからの応答を受信できます。  

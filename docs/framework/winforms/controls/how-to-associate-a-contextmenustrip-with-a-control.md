@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ContextMenuStrips [Windows Forms], relating
 ms.assetid: 6fc40a42-5d69-427f-aa30-0a146193226b
 ms.openlocfilehash: 5fe880a44afdbd79116541809972d1456aefb9c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323246"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010984"
 ---
 # <a name="how-to-associate-a-contextmenustrip-with-a-control"></a>方法: ContextMenuStrip をコントロールに関連付ける
 コントロールとショートカット メニューを作成した後、次の手順を使用することによって、ユーザーがコントロールを右クリックした時点で特定のショートカット メニューを表示します。 これらの手順は、<xref:System.Windows.Forms.ContextMenuStrip> を Windows フォームと <xref:System.Windows.Forms.ToolStrip> コントロールに関連付けます。  
@@ -37,9 +37,9 @@ ms.locfileid: "59323246"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
+- System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- この例をコマンドラインから Visual Basic または Visual C# にビルドする方法の詳細については、[コマンドラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ Visual Basic または Visual C# からこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)、または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 

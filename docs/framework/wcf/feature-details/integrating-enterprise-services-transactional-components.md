@@ -3,11 +3,11 @@ title: エンタープライズ サービスのトランザクション コン�
 ms.date: 03/30/2017
 ms.assetid: 05dab277-b8b2-48cf-b40c-826be128b175
 ms.openlocfilehash: 33e09eab1d7ad24dc234cfff21e352611e0b2ef9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047036"
 ---
 # <a name="integrating-enterprise-services-transactional-components"></a>エンタープライズ サービスのトランザクション コンポーネントの統合
 Windows Communication Foundation (WCF) は、Enterprise Services と統合するための自動メカニズムを提供します (を参照してください[COM + アプリケーションとの統合](../../../../docs/framework/wcf/feature-details/integrating-with-com-plus-applications.md))。 ただし、柔軟性を高めるために、エンタープライズ サービス内でホストされるトランザクション コンポーネントを内部的に使用するサービスを開発する場合があります。 WCF トランザクション機能に基づいているため、<xref:System.Transactions>インフラストラクチャ、WCF を使用した Enterprise Services を統合するためのプロセスは間の相互運用性を指定するのと同じですが<xref:System.Transactions>と」の説明に従って、エンタープライズ サービス[Enterprise Services および COM + トランザクションとの相互運用性](https://go.microsoft.com/fwlink/?LinkId=94949)します。  
@@ -17,9 +17,9 @@ Windows Communication Foundation (WCF) は、Enterprise Services と統合する
 ## <a name="integrating-enterprise-services-with-a-service-operation"></a>エンタープライズ サービスとサービス操作の統合  
  Allowed トランザクション フローで、<xref:System.Transactions.TransactionScope> オプションを指定して <xref:System.Transactions.EnterpriseServicesInteropOption.Full> を作成する操作を次のコードに示します。 このシナリオでは次の条件が適用されます。  
   
--   クライアントがトランザクションをフローする場合、エンタープライズ サービス コンポーネント呼び出しを含む操作は、トランザクションのスコープ内で実行されます。 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> を使用すると、トランザクションが <xref:System.EnterpriseServices> コンテキストと同期することが保証されます。つまり、<xref:System.Transactions> のアンビエント トランザクションと <xref:System.EnterpriseServices> とが同じになります。  
+- クライアントがトランザクションをフローする場合、エンタープライズ サービス コンポーネント呼び出しを含む操作は、トランザクションのスコープ内で実行されます。 <xref:System.Transactions.EnterpriseServicesInteropOption.Full> を使用すると、トランザクションが <xref:System.EnterpriseServices> コンテキストと同期することが保証されます。つまり、<xref:System.Transactions> のアンビエント トランザクションと <xref:System.EnterpriseServices> とが同じになります。  
   
--   クライアントがトランザクションをフローしない場合、<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> を `true` に設定すると操作の新しいトランザクション スコープが作成されます。 同様に、<xref:System.Transactions.EnterpriseServicesInteropOption.Full> を使用すると、操作のトランザクションが <xref:System.EnterpriseServices> コンポーネントのコンテキスト内で使用されるトランザクションと同じになることが保証されます。  
+- クライアントがトランザクションをフローしない場合、<xref:System.ServiceModel.OperationBehaviorAttribute.TransactionScopeRequired%2A> を `true` に設定すると操作の新しいトランザクション スコープが作成されます。 同様に、<xref:System.Transactions.EnterpriseServicesInteropOption.Full> を使用すると、操作のトランザクションが <xref:System.EnterpriseServices> コンポーネントのコンテキスト内で使用されるトランザクションと同じになることが保証されます。  
   
  任意の追加のメソッド呼び出しも、同じ操作のトランザクションのスコープ内で行われます。  
   

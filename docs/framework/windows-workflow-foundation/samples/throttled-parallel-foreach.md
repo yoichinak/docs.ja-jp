@@ -3,11 +3,11 @@ title: 制限された並列 ForEach
 ms.date: 03/30/2017
 ms.assetid: f2855b5f-e9a7-433d-96a4-40fc31025215
 ms.openlocfilehash: fd30a1ac587359a054a273b3deca2e9bb8bc2798
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55261829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004862"
 ---
 # <a name="throttled-parallel-foreach"></a>制限された並列 ForEach
 

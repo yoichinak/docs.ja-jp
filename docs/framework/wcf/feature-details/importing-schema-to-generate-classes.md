@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: b9170583-8c34-43bd-97bb-6c0c8dddeee0
 ms.openlocfilehash: 68890a5d86d2781e3c8079c86e941144e3796ea6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228589"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972667"
 ---
 # <a name="importing-schema-to-generate-classes"></a>クラスを作成するためのスキーマのインポート
 Windows Communication Foundation (WCF) で使用可能なスキーマからクラスを生成するには、使用、<xref:System.Runtime.Serialization.XsdDataContractImporter>クラス。 ここでは、生成時に指定できる各種のオプションについて解説します。  
@@ -148,13 +148,13 @@ Windows Communication Foundation (WCF) で使用可能なスキーマからク�
   
 ##### <a name="design-considerations"></a>設計上の考慮事項  
   
--   弱く型指定された XML 表現を直接扱うのは困難です。 データ コントラクトと互換性がないスキーマを厳密に型指定された方法で操作するには、<xref:System.Xml.Serialization.XmlSerializer> などの別のシリアル化エンジンの使用を検討します。 詳細については、次を参照してください。 [XmlSerializer クラスを使用して](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)します。  
+- 弱く型指定された XML 表現を直接扱うのは困難です。 データ コントラクトと互換性がないスキーマを厳密に型指定された方法で操作するには、<xref:System.Xml.Serialization.XmlSerializer> などの別のシリアル化エンジンの使用を検討します。 詳細については、次を参照してください。 [XmlSerializer クラスを使用して](../../../../docs/framework/wcf/feature-details/using-the-xmlserializer-class.md)します。  
   
--   スキーマ構造によっては、<xref:System.Runtime.Serialization.XsdDataContractImporter> プロパティを <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> に設定しても、`true` でインポートできない場合があります。 このような場合も、<xref:System.Xml.Serialization.XmlSerializer> の使用を検討します。  
+- スキーマ構造によっては、<xref:System.Runtime.Serialization.XsdDataContractImporter> プロパティを <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> に設定しても、`true` でインポートできない場合があります。 このような場合も、<xref:System.Xml.Serialization.XmlSerializer> の使用を検討します。  
   
--   正確なスキーマ構造には、両方がサポートされているときに<xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>は`true`または`false`記載されて[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。  
+- 正確なスキーマ構造には、両方がサポートされているときに<xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A>は`true`または`false`記載されて[Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。  
   
--   生成された <xref:System.Xml.Serialization.IXmlSerializable> 型に対するスキーマには、いったんインポートしてからエクスポートした場合、忠実性が維持されません。 つまり、生成された型を基にスキーマをエクスポートし、再びこれをクラスとしてインポートした場合、元どおりのスキーマにはなりません。  
+- 生成された <xref:System.Xml.Serialization.IXmlSerializable> 型に対するスキーマには、いったんインポートしてからエクスポートした場合、忠実性が維持されません。 つまり、生成された型を基にスキーマをエクスポートし、再びこれをクラスとしてインポートした場合、元どおりのスキーマにはなりません。  
   
  <xref:System.Runtime.Serialization.ImportOptions.ImportXmlType%2A> のオプションは、上記の <xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> オプションと組み合わせて指定できます。 <xref:System.Xml.Serialization.IXmlSerializable> を実装する形で生成される型に関しては、<xref:System.ServiceModel.Description.ServiceContractGenerator.ReferencedTypes%2A> で型を指定する際、構造がチェックされません。  
   
@@ -175,9 +175,9 @@ Windows Communication Foundation (WCF) で使用可能なスキーマからク�
 #### <a name="import-options-advanced-options"></a>インポート オプション:[詳細オプション]  
  他にも、次のようなオプションがあります。  
   
--   <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> プロパティ。 生成されたクラスに組み込むコードを生成するために使用する、<xref:System.CodeDom.Compiler.CodeDomProvider> を指定します。 インポートの際は、<xref:System.CodeDom.Compiler.CodeDomProvider> でサポートされていない機能が回避されます。 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> を設定しない場合は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のすべての機能が制限なく使用されます。  
+- <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> プロパティ。 生成されたクラスに組み込むコードを生成するために使用する、<xref:System.CodeDom.Compiler.CodeDomProvider> を指定します。 インポートの際は、<xref:System.CodeDom.Compiler.CodeDomProvider> でサポートされていない機能が回避されます。 <xref:System.Runtime.Serialization.ImportOptions.CodeProvider%2A> を設定しない場合は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のすべての機能が制限なく使用されます。  
   
--   <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> プロパティ。 <xref:System.Runtime.Serialization.IDataContractSurrogate> の実装を指定するために使います。 <xref:System.Runtime.Serialization.IDataContractSurrogate> は、インポート処理をカスタマイズします。 詳細については、次を参照してください。[データ コントラクト サロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)します。 既定では、サロゲートは使用されません。  
+- <xref:System.Runtime.Serialization.ImportOptions.DataContractSurrogate%2A> プロパティ。 <xref:System.Runtime.Serialization.IDataContractSurrogate> の実装を指定するために使います。 <xref:System.Runtime.Serialization.IDataContractSurrogate> は、インポート処理をカスタマイズします。 詳細については、次を参照してください。[データ コントラクト サロゲート](../../../../docs/framework/wcf/extending/data-contract-surrogates.md)します。 既定では、サロゲートは使用されません。  
   
 ## <a name="see-also"></a>関連項目
 

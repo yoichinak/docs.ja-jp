@@ -10,18 +10,18 @@ helpviewer_keywords:
 - transformation properties of brushes [WPF]
 ms.assetid: 8b9bfc09-12fd-4cd5-b445-99949f27bc39
 ms.openlocfilehash: 39b3ad9bebfc56002f77ad6e9026a4446c95455b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298332"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020679"
 ---
 # <a name="brush-transformation-overview"></a>ブラシの変換の概要
 Brush クラスには 2 つの変換プロパティ:<xref:System.Windows.Media.Brush.Transform%2A>と<xref:System.Windows.Media.Brush.RelativeTransform%2A>します。 これらのプロパティを使うと、ブラシの内容を回転、拡大縮小、傾斜、移動できます。 このトピックでは、これら 2 つのプロパティの違いについて説明し、それらの使用例を示します。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
- このトピックを理解するには、変換するブラシの機能を理解している必要があります。<xref:System.Windows.Media.LinearGradientBrush> および <xref:System.Windows.Media.RadialGradientBrush> については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。<xref:System.Windows.Media.ImageBrush>、<xref:System.Windows.Media.DrawingBrush>、または <xref:System.Windows.Media.VisualBrush> については、「[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)」を参照してください。また、「[変換の概要](transforms-overview.md)」で説明されている 2D 変換についても理解しておく必要があります。   
+ このトピックを理解するには、変換するブラシの機能を理解している必要があります。 <xref:System.Windows.Media.LinearGradientBrush>と<xref:System.Windows.Media.RadialGradientBrush>を参照してください、[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)します。 <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、または<xref:System.Windows.Media.VisualBrush>を参照してください[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)します。 また、「[変換の概要](transforms-overview.md)」で説明されている 2D 変換についても理解しておく必要があります。  
   
 <a name="transformversusrelativetransform"></a>   
 ## <a name="differences-between-the-transform-and-relativetransform-properties"></a>Transform プロパティと RelativeTransform プロパティの違い  

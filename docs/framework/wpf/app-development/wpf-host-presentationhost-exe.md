@@ -6,26 +6,26 @@ helpviewer_keywords:
 - PresentationHost.exe
 ms.assetid: 3215bfa1-722c-4ac8-a7c5-bdd02d30afbd
 ms.openlocfilehash: 586d306d0f375241c9382e1e24cf1af75b990ba9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019166"
 ---
 # <a name="wpf-host-presentationhostexe"></a>WPF ホスト (PresentationHost.exe)
 Windows Presentation Foundation (WPF) のホスト (PresentationHost.exe) は、アプリケーションを使用[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]互換性のあるブラウザーでホストされるアプリケーション (を含む[!INCLUDE[TLA#tla_ie6](../../../../includes/tlasharptla-ie6-md.md)]以降)。 シェルとして既定では、Windows Presentation Foundation (WPF) のホストが登録されていると[!INCLUDE[TLA2#tla_mime](../../../../includes/tla2sharptla-mime-md.md)]ハンドラーをブラウザーでホストされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コンテンツが含まれます。  
   
--   Loose (コンパイルされていない) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイル (.xaml)。  
+- Loose (コンパイルされていない) [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ファイル (.xaml)。  
   
--   [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
+- [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)] (.xbap)。  
   
  これらの型では、Windows Presentation Foundation (WPF) のホストのファイル。  
   
--   登録されている起動[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]Windows Presentation Foundation (WPF) コンテンツをホストするハンドラー。  
+- 登録されている起動[!INCLUDE[TLA2#tla_html](../../../../includes/tla2sharptla-html-md.md)]Windows Presentation Foundation (WPF) コンテンツをホストするハンドラー。  
   
--   必須の正しいバージョンを読み込みます[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]と Windows Presentation Foundation (WPF) のアセンブリ。  
+- 必須の正しいバージョンを読み込みます[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]と Windows Presentation Foundation (WPF) のアセンブリ。  
   
--   展開のゾーンに適切なアクセス許可レベルが設定されるようにします。  
+- 展開のゾーンに適切なアクセス許可レベルが設定されるようにします。  
   
  このトピックでは、PresentationHost.exe で使用できるコマンド ライン パラメーターについて説明します。  
   

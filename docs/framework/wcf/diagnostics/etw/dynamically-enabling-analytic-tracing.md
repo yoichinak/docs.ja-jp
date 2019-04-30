@@ -3,22 +3,22 @@ title: 分析トレースの動的な有効化
 ms.date: 03/30/2017
 ms.assetid: 58b63cfc-307a-427d-b69d-9917ff9f44ac
 ms.openlocfilehash: 219561b1acd2259daad4c984dcf0b15517166c3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59197478"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999467"
 ---
 # <a name="dynamically-enabling-analytic-tracing"></a>分析トレースの動的な有効化
 Windows オペレーティング システムに付属のツールでは、ETW (Event Tracing for Windows) を使用して、トレースを動的に有効化または無効化できます。 すべての[!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)]Windows Communication Foundation (WCF) サービスを有効およびなしで動的に無効なアプリケーションの Web.config ファイルを変更またはサービスを再起動して、分析トレースを指定できます。 このため、トレース イベントを生成するアプリケーションに影響が生じません。  
   
  同様の方法では、WCF トレース オプションを構成できます。 たとえば、アプリケーションに影響を与えずに、重大度レベルを **Error** から **Information** に変更できます。 これは、次のツールで実行できます。  
   
--   **Logman** : トレース データを構成、制御、および照会するためのコマンド ライン ツールです。 詳細については、次を参照してください。 [Logman 作成トレース](https://go.microsoft.com/fwlink/?LinkId=165426)と[Logman Update Trace](https://go.microsoft.com/fwlink/?LinkId=165427)します。  
+- **Logman** : トレース データを構成、制御、および照会するためのコマンド ライン ツールです。 詳細については、次を参照してください。 [Logman 作成トレース](https://go.microsoft.com/fwlink/?LinkId=165426)と[Logman Update Trace](https://go.microsoft.com/fwlink/?LinkId=165427)します。  
   
--   **EventViewer** : トレース結果を表示するための、Windows のグラフィカル管理ツールです。 詳細については、次を参照してください。 [WCF サービスと Windows のイベント トレース](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)と[イベント ビューアー](https://go.microsoft.com/fwlink/?LinkId=165428)します。  
+- **EventViewer** : トレース結果を表示するための、Windows のグラフィカル管理ツールです。 詳細については、次を参照してください。 [WCF サービスと Windows のイベント トレース](../../../../../docs/framework/wcf/samples/wcf-services-and-event-tracing-for-windows.md)と[イベント ビューアー](https://go.microsoft.com/fwlink/?LinkId=165428)します。  
   
--   **Perfmon** : カウンターを使用して、トレース カウンターおよびパフォーマンス トレースの効果を監視する、Windows のグラフィカル管理ツールです。 詳細については、次を参照してください。 [、データ コレクター設定を手動で作成](https://go.microsoft.com/fwlink/?LinkId=165429)です。  
+- **Perfmon** : カウンターを使用して、トレース カウンターおよびパフォーマンス トレースの効果を監視する、Windows のグラフィカル管理ツールです。 詳細については、次を参照してください。 [、データ コレクター設定を手動で作成](https://go.microsoft.com/fwlink/?LinkId=165429)です。  
   
 ### <a name="keywords"></a>キーワード  
  <xref:System.ServiceModel.Activation.Configuration.ServiceModelActivationSectionGroup.Diagnostics%2A> クラスを使用するときには、通常、.NET Framework トレース メッセージが重大度レベル (エラー、警告、情報など) でフィルターされます。 ETW は、重大度レベルの概念をサポートしますが、キーワードを使用して、新しい柔軟なフィルター機構も追加されています。 キーワードは任意のテキスト値で、これによって、トレース イベントでそのイベントの意味に関する追加のコンテキストが提供されます。  

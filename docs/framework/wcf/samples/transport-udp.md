@@ -3,11 +3,11 @@ title: トランスポート:UDP
 ms.date: 03/30/2017
 ms.assetid: 738705de-ad3e-40e0-b363-90305bddb140
 ms.openlocfilehash: 8d72ab5c7d8c461cd2ce4d4003d449ac9fe7e807
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772012"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007722"
 ---
 # <a name="transport-udp"></a>トランスポート:UDP
 UDP トランスポートのサンプルでは、UDP ユニキャストとマルチキャストをカスタムの Windows Communication Foundation (WCF) トランスポートとして実装する方法を示します。 このサンプルでは、チャネル フレームワークを使用して、WCF のベスト プラクティスに従うと、WCF では、カスタム トランスポートを作成するための推奨手順について説明します。 カスタム トランスポートを作成する手順は、次のとおりです。  
@@ -32,15 +32,15 @@ UDP トランスポートのサンプルでは、UDP ユニキャストとマル
 ## <a name="message-exchange-patterns"></a>メッセージ交換パターン  
  カスタム トランスポートを記述する最初の手順として、どのメッセージ交換パターン (MEP) がトランスポートに必要かを判断します。 次の 3 つの MEP から選択できます。  
   
--   データグラム (IInputChannel/IOutputChannel)  
+- データグラム (IInputChannel/IOutputChannel)  
   
      データグラム MEP を使用している場合、クライアントは "ファイア アンド フォーゲット (撃ち放し)" の交換を使用してメッセージを送信します。 このような交換では、配信の成否について帯域外での確認が必要になります。 メッセージが移動中に失われて、サービスに到達しない可能性があります。 クライアントで送信操作が正常に完了したとしても、リモート エンドポイントでメッセージが受信されたとは限りません。 データグラムはメッセージングの基礎となるビルド ブロックであり、その上に信頼できるプロトコルや安全なプロトコルなどの独自のプロトコルを構築できます。 クライアント データグラム チャネルには、<xref:System.ServiceModel.Channels.IOutputChannel> インターフェイスが実装され、サービス データグラム チャネルには <xref:System.ServiceModel.Channels.IInputChannel> インターフェイスが実装されます。  
   
--   要求 - 応答 (IRequestChannel/IReplyChannel)  
+- 要求 - 応答 (IRequestChannel/IReplyChannel)  
   
      この MEP では、メッセージが送信されて、応答が受信されます。 パターンは、要求 - 応答のペアで構成されます。 要求 - 応答呼び出しの例には、リモート プロシージャ コール (RPC) やブラウザ GET などがあります。 このパターンは、半二重とも呼ばれます。 この MEP では、クライアント チャネルには <xref:System.ServiceModel.Channels.IRequestChannel> が実装され、サービス チャネルには <xref:System.ServiceModel.Channels.IReplyChannel> が実装されます。  
   
--   二重 (IDuplexChannel)  
+- 二重 (IDuplexChannel)  
   
      二重 MEP では、クライアントにより任意の数のメッセージを送信して、任意の順序で受信できます。 二重 MEP は、話される語の 1 つずつがメッセージである電話の会話に似ています。 この MEP ではどちらの側も送信および受信できるので、クライアントおよびサービス チャネルによって実装されるインターフェイスは <xref:System.ServiceModel.Channels.IDuplexChannel> になります。  
   
@@ -52,17 +52,17 @@ UDP トランスポートのサンプルでは、UDP ユニキャストとマル
 ### <a name="the-icommunicationobject-and-the-wcf-object-lifecycle"></a>ICommunicationObject および WCF オブジェクトのライフサイクル  
  WCF などのオブジェクトのライフ サイクルを管理するために使用される一般的なステート マシン<xref:System.ServiceModel.Channels.IChannel>、 <xref:System.ServiceModel.Channels.IChannelFactory>、および<xref:System.ServiceModel.Channels.IChannelListener>の通信に使用します。 これらの通信オブジェクトには、5 つの状態があります。 これらの状態は、<xref:System.ServiceModel.CommunicationState> 列挙値で表され、次のようになります。  
   
--   作成されます。これは、状態、<xref:System.ServiceModel.ICommunicationObject>がいる最初にインスタンス化します。 この状態では、入出力 (I/O) は行われません。  
+- 作成されます。これは、状態、<xref:System.ServiceModel.ICommunicationObject>がいる最初にインスタンス化します。 この状態では、入出力 (I/O) は行われません。  
   
--   Opening:このオブジェクトの遷移状態<xref:System.ServiceModel.ICommunicationObject.Open%2A>が呼び出されます。 この時点では、プロパティは不変であり、入出力を開始できます。 この移行は、Created 状態からのみ有効です。  
+- Opening:このオブジェクトの遷移状態<xref:System.ServiceModel.ICommunicationObject.Open%2A>が呼び出されます。 この時点では、プロパティは不変であり、入出力を開始できます。 この移行は、Created 状態からのみ有効です。  
   
--   開かれます。オブジェクトを開いているプロセスが完了したら、この状態に遷移します。 この移行は、Opening 状態からのみ有効です。 この時点では、オブジェクトは完全に転送に使用可能です。  
+- 開かれます。オブジェクトを開いているプロセスが完了したら、この状態に遷移します。 この移行は、Opening 状態からのみ有効です。 この時点では、オブジェクトは完全に転送に使用可能です。  
   
--   終了します。このオブジェクトの遷移状態<xref:System.ServiceModel.ICommunicationObject.Close%2A>グレースフル シャット ダウンが呼び出されます。 この移行は、Opened 状態からのみ有効です。  
+- 終了します。このオブジェクトの遷移状態<xref:System.ServiceModel.ICommunicationObject.Close%2A>グレースフル シャット ダウンが呼び出されます。 この移行は、Opened 状態からのみ有効です。  
   
--   終了。Closed 状態オブジェクトは使用できません。 通常、ほとんどの構成には検査中もアクセスできますが、通信が発生することはありません。 この状態は、破棄されるのと同じです。  
+- 終了。Closed 状態オブジェクトは使用できません。 通常、ほとんどの構成には検査中もアクセスできますが、通信が発生することはありません。 この状態は、破棄されるのと同じです。  
   
--   エラーが発生しました。Faulted 状態でオブジェクトがアクセスして検査できますが、します。 回復不可能なエラーが発生した場合、オブジェクトはこの状態に移行します。 この状態からのみ、移行は、`Closed`状態。  
+- エラーが発生しました。Faulted 状態でオブジェクトがアクセスして検査できますが、します。 回復不可能なエラーが発生した場合、オブジェクトはこの状態に移行します。 この状態からのみ、移行は、`Closed`状態。  
   
  各状態移行には、発生するイベントがあります。 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> メソッドはいつでも呼び出すことができます。このメソッドを呼び出すことにより、オブジェクトは現在の状態から直ちに Closed 状態に移行します。 <xref:System.ServiceModel.ICommunicationObject.Abort%2A> を呼び出すと、完了していない作業が終了します。  
   
@@ -70,13 +70,13 @@ UDP トランスポートのサンプルでは、UDP ユニキャストとマル
 ## <a name="channel-factory-and-channel-listener"></a>チャネル ファクトリとチャネル リスナー  
  カスタム トランスポートを記述する次の手順では、クライアント チャネルでの <xref:System.ServiceModel.Channels.IChannelFactory> の実装とサービス チャネルでの <xref:System.ServiceModel.Channels.IChannelListener> の実装を作成します。 チャネル レイヤーでは、チャネルの構築にファクトリ パターンが使用されます。 WCF では、このプロセスの基本クラス ヘルパーを提供します。  
   
--   <xref:System.ServiceModel.Channels.CommunicationObject> クラスには <xref:System.ServiceModel.ICommunicationObject> が実装され、前述の手順 2. で説明したステート マシンが強制実行されます。 
+- <xref:System.ServiceModel.Channels.CommunicationObject> クラスには <xref:System.ServiceModel.ICommunicationObject> が実装され、前述の手順 2. で説明したステート マシンが強制実行されます。 
 
--   <xref:System.ServiceModel.Channels.ChannelManagerBase> クラスには <xref:System.ServiceModel.Channels.CommunicationObject> が実装され、<xref:System.ServiceModel.Channels.ChannelFactoryBase> と <xref:System.ServiceModel.Channels.ChannelListenerBase> の統合基本クラスが提供されます。 <xref:System.ServiceModel.Channels.ChannelManagerBase> クラスは、<xref:System.ServiceModel.Channels.ChannelBase> を実装する基本クラスである <xref:System.ServiceModel.Channels.IChannel> との組み合わせによって動作します。  
+- <xref:System.ServiceModel.Channels.ChannelManagerBase> クラスには <xref:System.ServiceModel.Channels.CommunicationObject> が実装され、<xref:System.ServiceModel.Channels.ChannelFactoryBase> と <xref:System.ServiceModel.Channels.ChannelListenerBase> の統合基本クラスが提供されます。 <xref:System.ServiceModel.Channels.ChannelManagerBase> クラスは、<xref:System.ServiceModel.Channels.ChannelBase> を実装する基本クラスである <xref:System.ServiceModel.Channels.IChannel> との組み合わせによって動作します。  
   
--   <xref:System.ServiceModel.Channels.ChannelFactoryBase>クラスが実装する<xref:System.ServiceModel.Channels.ChannelManagerBase>と<xref:System.ServiceModel.Channels.IChannelFactory>し、統合、`CreateChannel`を 1 つにオーバー ロード`OnCreateChannel`抽象メソッド。  
+- <xref:System.ServiceModel.Channels.ChannelFactoryBase>クラスが実装する<xref:System.ServiceModel.Channels.ChannelManagerBase>と<xref:System.ServiceModel.Channels.IChannelFactory>し、統合、`CreateChannel`を 1 つにオーバー ロード`OnCreateChannel`抽象メソッド。  
   
--   <xref:System.ServiceModel.Channels.ChannelListenerBase> クラスは、<xref:System.ServiceModel.Channels.IChannelListener> を実装しています。 基本状態管理を行います。  
+- <xref:System.ServiceModel.Channels.ChannelListenerBase> クラスは、<xref:System.ServiceModel.Channels.IChannelListener> を実装しています。 基本状態管理を行います。  
   
  このサンプルのファクトリの実装は UdpChannelFactory.cs に、リスナーの実装は UdpChannelListener.cs に含まれています。 <xref:System.ServiceModel.Channels.IChannel> 実装は、UdpOutputChannel.cs と UdpInputChannel.cs に含まれています。  
   
@@ -255,9 +255,9 @@ AddWSAddressingAssertion(context, encodingBindingElement.MessageVersion.Addressi
 ## <a name="adding-a-standard-binding"></a>標準バインド要素の追加  
  バインディング要素は、次の 2 つの方法で使用できます。  
   
--   カスタム バインド。カスタム バインドは、バインド要素の任意のセットに基づいて独自のバインディングを作成するユーザーを使用できます。  
+- カスタム バインド。カスタム バインドは、バインド要素の任意のセットに基づいて独自のバインディングを作成するユーザーを使用できます。  
   
--   バインディング要素が含まれるシステム指定のバインディングを使用することによって、 WCF などの多数のこれらのシステム定義のバインディングの提供`BasicHttpBinding`、 `NetTcpBinding`、および`WsHttpBinding`します。 これらの各バインドは、適切に定義されたプロファイルに関連付けられます。  
+- バインディング要素が含まれるシステム指定のバインディングを使用することによって、 WCF などの多数のこれらのシステム定義のバインディングの提供`BasicHttpBinding`、 `NetTcpBinding`、および`WsHttpBinding`します。 これらの各バインドは、適切に定義されたプロファイルに関連付けられます。  
   
  このサンプルでは、プロファイル バインディングを、`SampleProfileUdpBinding` から派生した <xref:System.ServiceModel.Channels.Binding> に実装します。 `SampleProfileUdpBinding` は、`UdpTransportBindingElement`、`TextMessageEncodingBindingElement CompositeDuplexBindingElement`、および `ReliableSessionBindingElement` の、最大 4 つのバインド要素を格納します。  
   

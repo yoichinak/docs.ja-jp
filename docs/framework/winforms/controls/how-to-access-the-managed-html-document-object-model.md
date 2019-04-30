@@ -9,18 +9,18 @@ helpviewer_keywords:
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
 ms.openlocfilehash: 04d5f9e6f128d9b4ed3f07a5faebe06ae4ffdebf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011256"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>方法: マネージド HTML DOM (Document Object Model) にアクセスする
 マネージド HTML ドキュメント オブジェクト モデル (DOM) には、次の 2 種類のアプリケーションからアクセスできます。  
   
--   マネージド <xref:System.Windows.Forms.WebBrowser> コントロールをホストする Windows フォーム アプリケーション (.exe)。 この 2 つのテクノロジは相互に補完します。つまり、<xref:System.Windows.Forms.WebBrowser> コントロールはユーザーに対してページを表示し、HTML DOM はドキュメントの論理構造体を表します。  
+- マネージド <xref:System.Windows.Forms.WebBrowser> コントロールをホストする Windows フォーム アプリケーション (.exe)。 この 2 つのテクノロジは相互に補完します。つまり、<xref:System.Windows.Forms.WebBrowser> コントロールはユーザーに対してページを表示し、HTML DOM はドキュメントの論理構造体を表します。  
   
--   Internet Explorer 内でホストされた Windows フォーム <xref:System.Windows.Forms.UserControl>。 <xref:System.Windows.Forms.UserControl> をホストするページを表す HTML DOM にアクセスして、ドキュメントの構造体を変更したり、モーダル ダイアログ ボックスを開いたりするなど、さまざまな操作を行うことができます。  
+- Internet Explorer 内でホストされた Windows フォーム <xref:System.Windows.Forms.UserControl>。 <xref:System.Windows.Forms.UserControl> をホストするページを表す HTML DOM にアクセスして、ドキュメントの構造体を変更したり、モーダル ダイアログ ボックスを開いたりするなど、さまざまな操作を行うことができます。  
   
 ### <a name="to-access-dom-from-a-windows-forms-application"></a>Windows フォーム アプリケーションから DOM にアクセスするには  
   

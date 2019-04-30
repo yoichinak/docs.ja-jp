@@ -8,11 +8,11 @@ helpviewer_keywords:
 ms.assetid: ca3c956e-725a-441b-b4e3-eab5d472f41c
 author: KrzysztofCwalina
 ms.openlocfilehash: 0e5b33839372e303b96bd6b84949f9a82da2f689
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54646621"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026309"
 ---
 # <a name="naming-parameters"></a>パラメーターに名前を付ける
 はっきりした理由の読みやすさを超えるパラメーターは、そのビジュアル デ ザイン ツール Intellisense および参照機能クラスを提供するときにドキュメントでは、デザイナーで表示されるため、パラメーター名のガイドラインに従う重要です。  

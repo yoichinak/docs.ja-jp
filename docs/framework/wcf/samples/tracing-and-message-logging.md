@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Tracing and logging
 ms.assetid: a4f39bfc-3c5e-4d51-a312-71c5c3ce0afd
 ms.openlocfilehash: 079decb76b45566f354418d671145f0c284628c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322135"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007735"
 ---
 # <a name="tracing-and-message-logging"></a>トレースとメッセージ ログ
 このサンプルでは、トレースとメッセージ ログを有効にする方法を示します。 結果のトレースとメッセージ ログを使用して表示、[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。  
@@ -52,11 +52,11 @@ ms.locfileid: "59322135"
   
  ユーザー定義のアクティビティ トレースを作成することにより、サービス モデルによって提供されるトレースを拡張することができます。 ユーザー定義のアクティビティ トレースによって、次の操作を可能にするトレース アクティビティを作成できます。  
   
--   複数のトレースを作業の論理単位ごとにグループ化します。  
+- 複数のトレースを作業の論理単位ごとにグループ化します。  
   
--   転送や伝達を利用してアクティビティを相互に関連付けます。  
+- 転送や伝達を利用してアクティビティを相互に関連付けます。  
   
--   (たとえば、ログ ファイルのディスク領域のコスト) WCF トレースのパフォーマンス コストを軽減します。  
+- (たとえば、ログ ファイルのディスク領域のコスト) WCF トレースのパフォーマンス コストを軽減します。  
   
  ユーザー定義のアクティビティ トレースの詳細についてを参照してください、[トレース拡張](../../../../docs/framework/wcf/samples/extending-tracing.md)サンプル。  
   

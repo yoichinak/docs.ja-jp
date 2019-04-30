@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b136e1fa480e53bcacfd9ea832d1dc4d1bd69f74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59162781"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000299"
 ---
 # <a name="strongnamegetblobfromimage-function"></a>StrongNameGetBlobFromImage 関数
 指定したメモリ アドレスにあるアセンブリ イメージのバイナリ表現が取得されます。  

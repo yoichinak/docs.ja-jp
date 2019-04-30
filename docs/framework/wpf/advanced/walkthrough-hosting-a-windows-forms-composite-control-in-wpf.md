@@ -9,11 +9,11 @@ helpviewer_keywords:
 - composite controls [WPF], hosting in WPF
 ms.assetid: 96fcd78d-1c77-4206-8928-3a0579476ef4
 ms.openlocfilehash: 90d0e2f3c6ebab070809a4813c87da3539fd14f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337852"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032189"
 ---
 # <a name="walkthrough-hosting-a-windows-forms-composite-control-in-wpf"></a>チュートリアル: WPF での Windows フォーム複合コントロールのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コードをより効果的か以上で再利用するには、そのコードの一部、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションではなく最初から修正します。 最も一般的なシナリオでは、既存の Windows フォーム コントロールがある場合です。 場合によってもがありませんこれらのコントロールのソース コードにアクセスします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] このようなコントロールをホストするため、簡単な手順を提供する[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。 たとえば、使用することができます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、特殊なをホストしているときに、プログラミングの大部分の<xref:System.Windows.Forms.DataGridView>コントロール。  
@@ -24,9 +24,9 @@ ms.locfileid: "59337852"
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   Windows フォーム複合コントロールを実装します。  
+- Windows フォーム複合コントロールを実装します。  
   
--   WPF ホスト アプリケーションの実装。  
+- WPF ホスト アプリケーションの実装。  
   
  このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [WPF サンプル Windows フォーム複合コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=159999)します。  
   
@@ -58,32 +58,32 @@ ms.locfileid: "59337852"
   
  プロジェクトは、以下のシステム DLL を参照している必要があります。 既定で含まれていないこれらの Dll のいずれかの場合は、プロジェクトに追加します。  
   
--   システム  
+- システム  
   
--   System.Data  
+- System.Data  
   
--   System.Drawing  
+- System.Drawing  
   
--   System.Windows.Forms  
+- System.Windows.Forms  
   
--   System.Xml  
+- System.Xml  
   
 ### <a name="adding-controls-to-the-form"></a>フォームへのコントロールの追加  
  コントロールをフォームに追加します。  
   
--   開いている`MyControl1`デザイナー。  
+- 開いている`MyControl1`デザイナー。  
   
  5 つ追加<xref:System.Windows.Forms.Label>コントロールとそれに対応する<xref:System.Windows.Forms.TextBox>コントロール、サイズ、およびフォーム上の図のように配置されます。 例では、<xref:System.Windows.Forms.TextBox>コントロールの名前が付けられます。  
   
--   `txtName`  
+- `txtName`  
   
--   `txtAddress`  
+- `txtAddress`  
   
--   `txtCity`  
+- `txtCity`  
   
--   `txtState`  
+- `txtState`  
   
--   `txtZip`  
+- `txtZip`  
   
  2 つ追加<xref:System.Windows.Forms.Button>というラベルの付いたコントロール**OK**と**キャンセル**します。 この例では、ボタン名は`btnOK`と`btnCancel`、それぞれします。  
   
@@ -159,11 +159,11 @@ ms.locfileid: "59337852"
 ### <a name="implementing-the-basic-layout"></a>基本的なレイアウトを実装します。
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] MainWindow.xaml で、ホストのアプリケーションを実装します。 このファイルを含む[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]レイアウトを定義し、Windows フォーム コントロールをホストするマークアップ。 アプリケーションは、3 つのリージョンに分かれています。
 
--   **コントロール プロパティ**パネルで、ホストされるコントロールのさまざまなプロパティを変更に使用できるオプション ボタンのコレクションが含まれています。
+- **コントロール プロパティ**パネルで、ホストされるコントロールのさまざまなプロパティを変更に使用できるオプション ボタンのコレクションが含まれています。
 
--   **コントロールからのデータ**パネルで、いくつか含む<xref:System.Windows.Controls.TextBlock>ホストされるコントロールからデータを表示する要素が返されます。
+- **コントロールからのデータ**パネルで、いくつか含む<xref:System.Windows.Controls.TextBlock>ホストされるコントロールからデータを表示する要素が返されます。
 
--   ホストされるコントロール自体。
+- ホストされるコントロール自体。
 
  次の XAML は、基本的なレイアウトに表示されます。 ために必要なマークアップをホストに`MyControl1`をこの例から省略するは、後ほど説明します。
 
@@ -183,18 +183,18 @@ ms.locfileid: "59337852"
 
  2 つの要素、XAML では、ホスティングを処理します。
 
--   `WindowsFormsHost` 表す、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素での Windows フォーム コントロールをホストすることができます、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。
+- `WindowsFormsHost` 表す、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素での Windows フォーム コントロールをホストすることができます、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーション。
 
--   `mcl:MyControl1`を表す`MyControl1`、に追加されます、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の子のコレクション。 一部としてこの Windows フォーム コントロールを表示する結果として、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ウィンドウ、およびするが、アプリケーションからコントロールと通信できます。
+- `mcl:MyControl1`を表す`MyControl1`、に追加されます、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の子のコレクション。 一部としてこの Windows フォーム コントロールを表示する結果として、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ウィンドウ、およびするが、アプリケーションからコントロールと通信できます。
 
 ### <a name="implementing-the-code-behind-file"></a>分離コード ファイルの実装
  MainWindow.xaml.vb または MainWindow.xaml.cs で、分離コード ファイルには機能を実装する手続き型コードが含まれています、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]前のセクションで説明します。 主な作業は次のとおりです。
 
--   イベント ハンドラーをアタッチする`MyControl1`の`OnButtonClick`イベント。
+- イベント ハンドラーをアタッチする`MyControl1`の`OnButtonClick`イベント。
 
--   さまざまなプロパティを変更する`MyControl1`オプション ボタンのコレクションの設定方法に基づいて、します。
+- さまざまなプロパティを変更する`MyControl1`オプション ボタンのコレクションの設定方法に基づいて、します。
 
--   コントロールによって収集されたデータを表示します。
+- コントロールによって収集されたデータを表示します。
 
 #### <a name="initializing-the-application"></a>アプリケーションの初期化
  ウィンドウのイベント ハンドラーの初期化コードが含まれている<xref:System.Windows.FrameworkElement.Loaded>イベントをコントロールのイベント ハンドラーをアタッチおよび`OnButtonClick`イベント。

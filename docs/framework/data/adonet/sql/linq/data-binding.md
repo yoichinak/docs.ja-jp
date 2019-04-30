@@ -7,10 +7,10 @@ dev_langs:
 ms.assetid: cbec8b02-a1e8-4ae8-a83b-bb5190413ac5
 ms.openlocfilehash: 66964497159c5c03a9070090ee60b43fa7d31abf
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59978927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032885"
 ---
 # <a name="data-binding"></a>データ バインディング
 

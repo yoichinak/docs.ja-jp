@@ -3,11 +3,11 @@ title: POCO サポート
 ms.date: 03/30/2017
 ms.assetid: 3846ca73-2819-4ca2-8367-dc739dde5a5b
 ms.openlocfilehash: 86ade3a6b045f6f7c57e4a95936b4f1574b51ff0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008021"
 ---
 # <a name="poco-support"></a>POCO サポート
 このサンプルでは、マークされていない型 (シリアル化属性が適用されていない型で、POCO (Plain Old CLR Object) 型と呼ばれる場合もあります) のシリアル化のサポートについて説明します。 <xref:System.Runtime.Serialization.DataContractSerializer> では、既定のコンストラクタを持つすべてのマークされていないパブリック型について、データ コントラクトを推測します。 データ コントラクトを使用すると、サービスと構造化データをやり取りできます。 マークされていない種類の詳細については、次を参照してください。[シリアル化できる型](../../../../docs/framework/wcf/feature-details/serializable-types.md)します。  

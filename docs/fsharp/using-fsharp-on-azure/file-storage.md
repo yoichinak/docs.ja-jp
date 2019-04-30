@@ -4,11 +4,11 @@ description: Azure File storage を使用してクラウドにファイル デ�
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: fa6dadc863bb9116cfac5afd7cd22a724bc7afe2
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56969597"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031227"
 ---
 # <a name="get-started-with-azure-file-storage-using-f"></a>F を使用した Azure File storage を概要します。\#
 
@@ -35,7 +35,7 @@ File storage の概念的概要についてを参照してください[file stor
 
 ### <a name="get-your-connection-string"></a>接続文字列を取得します。
 
-このチュートリアルでは、Azure Storage 接続文字列を必要があります。 接続文字列の詳細については、[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)を参照してください。
+このチュートリアルでは、Azure Storage 接続文字列を必要があります。 接続文字列の詳細については、次を参照してください。[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)します。
 
 チュートリアルでは、次のように、スクリプトで、接続文字列を入力します。
 
@@ -103,7 +103,7 @@ File storage からデータを読み書きするコードを記述する準備�
 
 [!code-fsharp[FileStorage](../../../samples/snippets/fsharp/azure/file-storage.fsx#L78-L94)]
 
-作成と共有アクセス署名の使用に関する詳細については、[を使用して Shared Access Signature (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1)と[の作成と使用して SAS を Blob storage](/azure/storage/storage-dotnet-shared-access-signature-part-2)を参照してください。
+作成と共有アクセス署名の使用に関する詳細については、次を参照してください。[を使用して Shared Access Signature (SAS)](/azure/storage/storage-dotnet-shared-access-signature-part-1)と[の作成と使用して SAS を Blob storage](/azure/storage/storage-dotnet-shared-access-signature-part-2)します。
 
 ### <a name="copy-files"></a>ファイルのコピー
 

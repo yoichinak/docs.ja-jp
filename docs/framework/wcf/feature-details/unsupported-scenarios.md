@@ -3,11 +3,11 @@ title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
 ms.openlocfilehash: 12012f3e0c0c3b0d10c5faebfb2de881f5de3917
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178777"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050754"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
 さまざまな理由は、Windows Communication Foundation (WCF) は一部の特定のセキュリティ シナリオをサポートしていません。 たとえば、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition は SSPI または Kerberos 認証プロトコルを実装していないため WCF サポートしていないプラットフォームで Windows 認証を使用したサービスを実行します。 ユーザー名/パスワードや HTTP/HTTPS 統合認証などの他の認証メカニズムは、Windows XP Home Edition で WCF を実行している場合にサポートされます。  
@@ -20,13 +20,13 @@ ms.locfileid: "59178777"
 ### <a name="windows-xp-and-secure-context-token-cookie-enabled"></a>Windows XP と有効化されたセキュリティ コンテキスト トークン クッキー  
  WCF が偽装をサポートしていません、<xref:System.InvalidOperationException>が、次の条件が存在する場合にスローされます。  
   
--   オペレーティング システムが [!INCLUDE[wxp](../../../../includes/wxp-md.md)] である。  
+- オペレーティング システムが [!INCLUDE[wxp](../../../../includes/wxp-md.md)] である。  
   
--   認証モードで Windows ID が生成された。  
+- 認証モードで Windows ID が生成された。  
   
--   <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> の <xref:System.ServiceModel.OperationBehaviorAttribute> プロパティが <xref:System.ServiceModel.ImpersonationOption.Required> に設定されます。  
+- <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> の <xref:System.ServiceModel.OperationBehaviorAttribute> プロパティが <xref:System.ServiceModel.ImpersonationOption.Required> に設定されます。  
   
--   状態ベースのセキュリティ コンテキスト トークン (SCT: Security Context Token) が作成された (既定では、作成は無効になっています)。  
+- 状態ベースのセキュリティ コンテキスト トークン (SCT: Security Context Token) が作成された (既定では、作成は無効になっています)。  
   
  状態ベースの SCT はカスタム バインドの使用によってのみ作成できます。 詳細については、「[方法 :セキュリティ コンテキストを作成、セキュリティで保護されたセッションのトークン](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md))。コードでトークンを有効にするには、<xref:System.ServiceModel.Channels.SymmetricSecurityBindingElement> メソッドまたは <xref:System.ServiceModel.Channels.AsymmetricSecurityBindingElement> メソッドを使用して、セキュリティ バインディング要素 (<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSspiNegotiationBindingElement%28System.Boolean%29?displayProperty=nameWithType> または <xref:System.ServiceModel.Channels.SecurityBindingElement.CreateSecureConversationBindingElement%28System.ServiceModel.Channels.SecurityBindingElement%2CSystem.Boolean%29?displayProperty=nameWithType>) を作成し、`requireCancellation` パラメーターを `false` に設定します。 このパラメーターは、SCT のキャッシュを参照します。 値を `false` に設定することによって、状態ベースの SCT 機能が有効になります。  
   
@@ -68,18 +68,18 @@ ms.locfileid: "59178777"
   
  証明書に KSP が使用されているかどうかを知る方法は 2 つあります。  
   
--   `p/invoke` を `CertGetCertificateContextProperty` に対して実行し、返された `dwProvType` で `CertGetCertificateContextProperty` を調べる。  
+- `p/invoke` を `CertGetCertificateContextProperty` に対して実行し、返された `dwProvType` で `CertGetCertificateContextProperty` を調べる。  
   
--   使用して、`certutil`証明書を調べるためのコマンドラインからコマンド。 詳細については、次を参照してください。[証明書のトラブルシューティングに関する Certutil タスク](https://go.microsoft.com/fwlink/?LinkId=120056)します。  
+- 使用して、`certutil`証明書を調べるためのコマンドラインからコマンド。 詳細については、次を参照してください。[証明書のトラブルシューティングに関する Certutil タスク](https://go.microsoft.com/fwlink/?LinkId=120056)します。  
   
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET の偽装と ASP.NET 互換を使用する必要がある場合にメッセージ セキュリティが失敗する  
  WCF では、クライアント認証を防止するため、次の設定の組み合わせはサポートされません。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の偽装を有効にしている。 これを行うには、Web.config ファイルで <`identity`> 要素の `impersonate` 属性を `true` に設定します。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の偽装を有効にしている。 これを行うには、Web.config ファイルで <`identity`> 要素の `impersonate` 属性を `true` に設定します。  
   
--   [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換性モードが有効になって、`aspNetCompatibilityEnabled`の属性、 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)に`true`します。  
+- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換性モードが有効になって、`aspNetCompatibilityEnabled`の属性、 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)に`true`します。  
   
--   メッセージ モード セキュリティを使用している。  
+- メッセージ モード セキュリティを使用している。  
   
  これを回避するには、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換モードを無効にします。 または、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互換モードが必要ですが、無効にする、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]権限借用機能し、WCF が提供する偽装の代わりに使用します。 詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
   

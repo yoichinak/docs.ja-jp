@@ -9,11 +9,11 @@ helpviewer_keywords:
 - typography [WPF]
 ms.assetid: e4ef38db-b7d1-4bda-87ab-8bb738440ddc
 ms.openlocfilehash: d8073ff272dd4c295dba11096126a535621727d0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981930"
 ---
 # <a name="typography"></a>タイポグラフィ
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] テキスト コンテンツのリッチ プレゼンテーションのサポートが含まれています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のテキストは、テキストのわかりやすさと読みやすさを高める [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] を使用して描画されます。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サポートしています[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]によって定義されたもの以外の他の機能を提供する、フォント、[!INCLUDE[TLA#tla_truetype](../../../../includes/tlasharptla-truetype-md.md)]形式。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - subroutines [Visual Basic], sub expressions
 ms.assetid: 36b6bfd1-6539-4d8f-a5eb-6541a745ffde
 ms.openlocfilehash: 5b26a091dc8eb7415702c3c2853a569324def7d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013505"
 ---
 # <a name="sub-expression-visual-basic"></a>部分式 (Visual Basic)
 パラメーターとサブルーチンのラムダ式を定義するコードを宣言します。  
@@ -40,17 +40,17 @@ End Sub
 ## <a name="lambda-expression-syntax"></a>ラムダ式の構文  
  標準的なサブルーチンのラムダ式の構文に似ています。 相違点は次のとおりです。  
   
--   ラムダ式の名前ではありません。  
+- ラムダ式の名前ではありません。  
   
--   ラムダ式はなどの修飾子を含めることはできません`Overloads`または`Overrides`します。  
+- ラムダ式はなどの修飾子を含めることはできません`Overloads`または`Overrides`します。  
   
--   単一行のラムダ式の本体は、ステートメント、式ではないである必要があります。 本文は、sub プロシージャへの呼び出しが、function プロシージャへの呼び出しではないので構成できます。  
+- 単一行のラムダ式の本体は、ステートメント、式ではないである必要があります。 本文は、sub プロシージャへの呼び出しが、function プロシージャへの呼び出しではないので構成できます。  
   
--   ラムダ式でデータ型またはすべてのパラメーターを推論する必要がありますかすべてのパラメーターが指定する必要があります。  
+- ラムダ式でデータ型またはすべてのパラメーターを推論する必要がありますかすべてのパラメーターが指定する必要があります。  
   
--   省略可能なと`ParamArray`パラメーターはラムダ式で許可されていません。  
+- 省略可能なと`ParamArray`パラメーターはラムダ式で許可されていません。  
   
--   ジェネリック パラメーターはラムダ式で許可されていません。  
+- ジェネリック パラメーターはラムダ式で許可されていません。  
   
 ## <a name="example"></a>例  
  値をコンソールに出力するラムダ式の例を次に示します。 この例では、サブルーチンの両方の単一行および複数行のラムダ式構文を示します。 例については、次を参照してください。[ラムダ式](../../../visual-basic/programming-guide/language-features/procedures/lambda-expressions.md)します。  

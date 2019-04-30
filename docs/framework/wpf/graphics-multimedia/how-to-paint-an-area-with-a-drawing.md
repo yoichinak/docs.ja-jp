@@ -10,11 +10,11 @@ helpviewer_keywords:
 - drawings [WPF], painting with
 ms.assetid: c10dc4b1-09b1-41e8-ad14-456b5fb377df
 ms.openlocfilehash: 6b204ae631912181333e2559ebadcdc37e7693b7
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57371562"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010075"
 ---
 # <a name="how-to-paint-an-area-with-a-drawing"></a>方法: 描画を使用して領域を塗りつぶす
 この例では、描画を使用して領域を塗りつぶす方法を示します。 使用する描画を使用して領域を描画する、<xref:System.Windows.Media.DrawingBrush>と 1 つ以上<xref:System.Windows.Media.Drawing>オブジェクト。   次の例では、<xref:System.Windows.Media.DrawingBrush>の 2 つの楕円の描画を使用してオブジェクトを描画します。  
@@ -42,4 +42,4 @@ ms.locfileid: "57371562"
   
  ![並べて表示された DrawingBrush の出力](./media/graphicsmm-drawingbrush-tiled.png "graphicsmm_drawingbrush_tiled")  
   
- 描画ブラシの詳細については、[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)を参照してください。 詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください、 [Drawing オブジェクトの概要](drawing-objects-overview.md)します。
+ 描画ブラシの詳細については、次を参照してください。[イメージ、描画、およびビジュアル](painting-with-images-drawings-and-visuals.md)します。 詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください、 [Drawing オブジェクトの概要](drawing-objects-overview.md)します。

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - world transformation [Windows Forms], examples
 ms.assetid: 1e717711-1361-448e-aa49-0f3ec43110c9
 ms.openlocfilehash: f40d7e8cb814344365e8b88c2659751903b79d77
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139959"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969144"
 ---
 # <a name="using-the-world-transformation"></a>ワールド変換の使用
 ワールド変換のプロパティである、<xref:System.Drawing.Graphics>クラス。 ワールド変換を指定する数値が格納されている、<xref:System.Drawing.Drawing2D.Matrix>オブジェクトで、3 × 3 行列を表します。 <xref:System.Drawing.Drawing2D.Matrix>と<xref:System.Drawing.Graphics>クラス ワールド変換行列の数値を設定するためのいくつかの方法があります。  

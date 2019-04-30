@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 143951b3-3aa0-4540-b4b7-d33e77e874a1
 ms.openlocfilehash: 9a2cd06c4c5a73d9fb5c4c7f09632e10c3eb0d87
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991160"
 ---
 # <a name="reliable-sessions"></a>信頼できるセッション
 

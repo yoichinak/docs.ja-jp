@@ -6,11 +6,11 @@ helpviewer_keywords:
 - UI Automation, control patterns
 ms.assetid: cc229b33-234b-469b-ad60-f0254f32d45d
 ms.openlocfilehash: fc07cc23498b2079aba41dfa57c26b88944d6a8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126361"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033086"
 ---
 # <a name="ui-automation-control-patterns-overview"></a>UI オートメーション コントロール パターンの概要
 > [!NOTE]
@@ -27,11 +27,11 @@ ms.locfileid: "59126361"
 ## <a name="ui-automation-control-pattern-components"></a>UI オートメーションのコントロール パターン コンポーネント  
  コントロール パターンは、コントロールで使用可能な機能の個々の部分を定義するために必要なメソッド、プロパティ、イベント、およびリレーションシップをサポートします。  
   
--   UI オートメーション要素とその親、子、兄弟との間の関係によって、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内の要素の構造を記述します。  
+- UI オートメーション要素とその親、子、兄弟との間の関係によって、 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] ツリー内の要素の構造を記述します。  
   
--   メソッドは、UI オートメーション クライアントがコントロールを操作できるようにします。  
+- メソッドは、UI オートメーション クライアントがコントロールを操作できるようにします。  
   
--   プロパティとイベントは、コントロール パターンの機能に関する情報だけでなく、コントロールの状態に関する情報も提供します。  
+- プロパティとイベントは、コントロール パターンの機能に関する情報だけでなく、コントロールの状態に関する情報も提供します。  
   
  コントロール パターンと [!INCLUDE[TLA2#tla_ui](../../../includes/tla2sharptla-ui-md.md)] の関係は、インターフェイスと [!INCLUDE[TLA#tla_com](../../../includes/tlasharptla-com-md.md)] オブジェクトの関係に似ています。 [!INCLUDE[TLA2#tla_com](../../../includes/tla2sharptla-com-md.md)]では、オブジェクトを照会してサポートされるインターフェイスを確認し、それらのインターフェイスを使用して機能にアクセスすることができます。 [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)]では、UI オートメーション クライアントは、サポートされるコントロール パターンをコントロールに対して確認し、サポートされているコントロール パターンによって公開されているプロパティ、メソッド、イベント、構造体を使用してコントロールとやり取りすることができます。 たとえば、複数行のエディット ボックスでは、UI オートメーション プロバイダーは <xref:System.Windows.Automation.Provider.IScrollProvider>を実装します。 クライアントは、 <xref:System.Windows.Automation.AutomationElement> が <xref:System.Windows.Automation.ScrollPattern> コントロール パターンをサポートしていることを認識すると、そのコントロール パターンによって公開されているプロパティ、メソッド、イベントを使用して、コントロールを操作したり、コントロールに関する情報にアクセスしたりできます。  
   

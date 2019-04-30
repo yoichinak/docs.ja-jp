@@ -6,17 +6,17 @@ dev_langs:
 - vb
 ms.assetid: cad53e1a-b7c9-4064-bc87-508c3d1dce49
 ms.openlocfilehash: 613b85e18109faa2a4386090e91aaddcfd8e0b68
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57680310"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038585"
 ---
 # <a name="message-security-with-an-anonymous-client"></a>メッセージ セキュリティと匿名クライアント
 
-次のシナリオでは、クライアントと Windows Communication Foundation (WCF) メッセージ セキュリティで保護されたサービスを説明します。 設計目標は、トランスポート セキュリティではなくメッセージ セキュリティを使用することです。これによって将来、多様なクレームに基づくモデルをサポートできます。 承認に多様なクレームの使用に関する詳細については、[管理クレームと Id モデルでの承認](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)を参照してください。
+次のシナリオでは、クライアントと Windows Communication Foundation (WCF) メッセージ セキュリティで保護されたサービスを説明します。 設計目標は、トランスポート セキュリティではなくメッセージ セキュリティを使用することです。これによって将来、多様なクレームに基づくモデルをサポートできます。 承認に多様なクレームの使用に関する詳細については、次を参照してください。[管理クレームと Id モデルでの承認](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)します。
 
-サンプル アプリケーションでは、[メッセージ セキュリティ匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)を参照してください。
+サンプル アプリケーションでは、次を参照してください。[メッセージ セキュリティ匿名](../../../../docs/framework/wcf/samples/message-security-anonymous.md)します。
 
 ![メッセージ セキュリティと匿名クライアント](../../../../docs/framework/wcf/feature-details/media/b361a565-831c-4c10-90d7-66d8eeece0a1.gif "b361a565-831c-4c10-90d7-66d8eeece0a1")
 

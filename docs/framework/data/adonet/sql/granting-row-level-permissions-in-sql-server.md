@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: a55aaa12-34ab-41cd-9dec-fd255b29258c
 ms.openlocfilehash: 891b5114551c5784b11504f2463525087125131f
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973084"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033905"
 ---
 # <a name="granting-row-level-permissions-in-sql-server"></a>SQL Server における行レベルの権限の付与
 

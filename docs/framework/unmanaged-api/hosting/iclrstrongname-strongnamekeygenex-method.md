@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f97e6f16029b9a273a68d52b830939819bfa5380
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993032"
 ---
 # <a name="iclrstrongnamestrongnamekeygenex-method"></a>ICLRStrongName::StrongNameKeyGenEx メソッド
 指定されたキー サイズ、厳密な名前を使用して新しい公開/秘密キー ペアを生成します。  
@@ -46,9 +46,9 @@ HRESULT StrongNameKeyGenEx (
  `dwFlags`  
  [in]登録されているキーのままにするかどうかを示す値。 次の値がサポートされています。  
   
--   0x00000000 の際に使用される`wszKeyContainer`一時的なキー コンテナーの名前を生成する場合は null です。  
+- 0x00000000 の際に使用される`wszKeyContainer`一時的なキー コンテナーの名前を生成する場合は null です。  
   
--   0x00000001 (`SN_LEAVE_KEY`) のキーを左に登録する必要がありますを指定します。  
+- 0x00000001 (`SN_LEAVE_KEY`) のキーを左に登録する必要がありますを指定します。  
   
  `dwKeySize`  
  [in]ビット単位で、キーの要求されたサイズ。  

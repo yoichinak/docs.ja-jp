@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: 3d726b71-4d8b-4581-a3bb-02b9af51d11b
 ms.openlocfilehash: a348fb7989a83ec9ee7903bd38896bedcf86ce3a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59074535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050741"
 ---
 # <a name="transport-security-with-certificate-authentication"></a>トランスポート セキュリティと証明書認証
 このトピックでは、トランスポート セキュリティを使用する場合にサーバーとクライアントの認証に X.509 証明書を使用する方法について説明します。 X.509 証明書の詳細については、「[X.509 Public Key Certificates](/windows/desktop/SecCertEnroll/about-x-509-public-key-certificates)」(X.509 公開キー証明書) を参照してください。 証明書のサードパーティ発行元は、多くの場合、証明機関証明書を発行する必要があります。 Windows サーバー ドメインでは、そのドメインのクライアント コンピューターに対して証明書を発行する際に Active Directory 証明書サービスを使用できます。 詳細については、次を参照してください。 [Windows 2008 R2 の証明書サービス](https://go.microsoft.com/fwlink/?LinkID=209949&clcid=0x409)します。 このシナリオでは、Secure Sockets Layer (SSL) を使用して構成されたインターネット インフォメーション サービス (IIS) でサービスをホストします。 サービスは、クライアントがサーバーの ID を確認するための SSL (X.509) 証明書を使用して構成されます。 クライアントも、サービスがクライアントの ID を確認するための X.509 証明書を使用して構成されます。 サーバーの証明書はクライアントによって信頼されている必要があり、クライアントの証明書はサーバーによって信頼されている必要があります。 サービスとクライアントが互いの ID を確認する方法の実際のしくみについては、このトピックでは説明しません。 詳細については、次を参照してください。 [Wikipedia のデジタル署名](https://go.microsoft.com/fwlink/?LinkId=253157)します。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - COM [WCF], integration overview
 ms.assetid: 02c5697f-6e2e-47d6-b715-f3a28aebfbd5
 ms.openlocfilehash: 182e5f41498d8f5e3fcbc4b84aa7e86b67ce3ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047010"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM アプリケーションとの統合の概要
 Windows Communication Foundation (WCF) は、マネージ コードを開発者には、接続型アプリケーションを作成するための豊富な環境を提供します。 ただし、アンマネージ COM ベースのコードにかなりの投資がある、移行したくない場合は、まだ統合できます WCF Web サービスの既存のコードに直接 WCF サービス モニカーを使用しています。 サービス モニカーは Office VBA、Visual Basic 6.0、または Visual C++ 6.0 などの幅広い COM ベースの開発環境で使用可能です。  
@@ -21,11 +21,11 @@ Windows Communication Foundation (WCF) は、マネージ コードを開発者�
   
  他の WCF クライアント、モニカーを使用する場合、共通のアプリケーションは、アドレス、バインド、およびサービスと通信するコントラクトを指定します。 コントラクトは、次のいずれかの方法で指定できます。  
   
--   型指定のあるコントラクト - クライアント コンピューターで COM から参照できる型として登録されます。  
+- 型指定のあるコントラクト - クライアント コンピューターで COM から参照できる型として登録されます。  
   
--   WSDL コントラクト - WSDL ドキュメントという形で供給されます。  
+- WSDL コントラクト - WSDL ドキュメントという形で供給されます。  
   
--   MEX コントラクト - 実行時に Metadata Exchange (MEX) エンドポイントから取得されます。  
+- MEX コントラクト - 実行時に Metadata Exchange (MEX) エンドポイントから取得されます。  
   
 ## <a name="parameters-supported-by-the-service-moniker"></a>サービス モニカーでサポートされるパラメーター  
  サービス モニカーでサポートされるパラメーターを次の表に示します。  

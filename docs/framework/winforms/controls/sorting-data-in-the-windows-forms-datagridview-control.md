@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], sorting data
 ms.assetid: c1d4f24c-d961-4181-809d-5a5caa6122e4
 ms.openlocfilehash: 606ffc7bd6136b775adaaaa79cf5042cf1e2dd70
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724922"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012148"
 ---
 # <a name="sorting-data-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロール内のデータの並べ替え
 
@@ -31,8 +31,7 @@ ms.locfileid: "57724922"
 ## <a name="reference"></a>参照
 
 <xref:System.Windows.Forms.DataGridView>  
-
-  <xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
+<xref:System.Windows.Forms.DataGridView> コントロールのリファレンス ドキュメントを提供します。  
 
 <xref:System.Windows.Forms.DataGridView.Sort%2A?displayProperty=nameWithType>  
 リファレンス ドキュメントを提供、<xref:System.Windows.Forms.DataGridView.Sort%2A>メソッド。

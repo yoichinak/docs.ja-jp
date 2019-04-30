@@ -3,11 +3,11 @@ title: ピアツーピア ネットワーク
 ms.date: 03/30/2017
 ms.assetid: ad6cb67b-fd1c-4ca1-a767-b410da2e16ca
 ms.openlocfilehash: 388f6659602276cd3f356da2af63e4d31b5e22d6
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332768"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046411"
 ---
 # <a name="peer-to-peer-networking"></a>ピアツーピア ネットワーク
 ピア チャネルとは、マルチパーティ、ピア ツー ピア (P2P) 通信技術では、Windows Communication Foundation (WCF) です。 この技術によって、アプリケーション開発者は安全で拡張可能なメッセージ ベースの P2P 通信チャネルを利用できます。 ピア チャネルのメリットを活用するマルチパーティ アプリケーションの一般的な例は、チャットなどの共同作業アプリケーションです。チャットでは、ユーザーのグループがサーバーなしのピアツーピア方式で互いに会話します。 ピア チャネルを使用することで、顧客シナリオや企業シナリオでの P2P コラボレーション、コンテンツ配布、負荷分散、および分散処理が実現します。  

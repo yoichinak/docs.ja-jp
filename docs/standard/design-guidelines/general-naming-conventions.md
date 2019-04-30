@@ -16,11 +16,11 @@ helpviewer_keywords:
 ms.assetid: d3a77ea1-75d2-4969-a8c3-3e1e3e1aaedc
 author: KrzysztofCwalina
 ms.openlocfilehash: ae1b7ce83f6698cef470aabf07a12d89042ab8a3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54667688"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026394"
 ---
 # <a name="general-naming-conventions"></a>一般的な名前付け規則
 このセクションでは、一般的な名前付け規則、単語の選択に関連する言語固有の名前を使用しないようにする方法の省略形と頭字語、および推奨事項の使用に関するガイドラインについて説明します。  

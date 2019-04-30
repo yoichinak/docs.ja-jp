@@ -17,11 +17,11 @@ helpviewer_keywords:
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
 ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199428"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053146"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主要なサブシステムの大半に対応し、それらがどのようにやり取りするかについて説明します。 また、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の構造設計者によって行われた選択についての幾つかを詳細に説明します。  

@@ -3,20 +3,20 @@ title: XML スキーマ (XSD) からの DataSet リレーションの生成
 ms.date: 03/30/2017
 ms.assetid: 1c9a1413-c0d2-4447-88ba-9a2b0cbc0aa8
 ms.openlocfilehash: 29c0e9ee96c376c6da392692febccbbae3c6a33f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170223"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034321"
 ---
 # <a name="generating-dataset-relations-from-xml-schema-xsd"></a>XML スキーマ (XSD) からの DataSet リレーションの生成
 <xref:System.Data.DataSet> では、親子のリレーションを作成することにより、2 つ以上の列間の関連付けを行います。 3 つの方法を表す、**データセット**XML スキーマ定義言語 (XSD) スキーマ内の関係。  
   
--   入れ子になった複合型を指定する方法  
+- 入れ子になった複合型を指定する方法  
   
--   使用して、 **msdata:Relationship**注釈。  
+- 使用して、 **msdata:Relationship**注釈。  
   
--   指定、 **xs:keyref**せず、 **msdata:ConstraintOnly**注釈。  
+- 指定、 **xs:keyref**せず、 **msdata:ConstraintOnly**注釈。  
   
 ## <a name="nested-complex-types"></a>入れ子になった複合型  
  スキーマ内で複数の複合型の定義が入れ子になっている場合は、それらの入れ子状の要素間に親子のリレーションシップがあります。 次の XML スキーマ フラグメントことを示しています**OrderDetail**の子要素には、**順序**要素。  

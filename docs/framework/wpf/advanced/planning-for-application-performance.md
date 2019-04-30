@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WPF application [WPF], optimizing
 ms.assetid: c91bd0c5-a193-46ff-9da1-eb7a3a76a3b3
 ms.openlocfilehash: 70dda68112d47d3e5a0609a5df7696920477c698
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59210205"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032865"
 ---
 # <a name="planning-for-application-performance"></a>アプリケーション パフォーマンスの計画
 パフォーマンスの目標を達成できるパフォーマンス戦略を開発するかによって異なります。 計画は、任意の製品の開発の最初のステージです。 このトピックでは、良好なパフォーマンスの戦略を開発するためのいくつかの非常に単純な規則について説明します。  

@@ -29,11 +29,11 @@ helpviewer_keywords:
 - displaying XAML pages [WPF]
 ms.assetid: 737d04ec-8861-46c3-8d44-fa11d3528d23
 ms.openlocfilehash: 5acebf0f88f3147bf274818f11697b480146701a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052730"
 ---
 # <a name="wpf-windows-overview"></a>WPF ウィンドウの概要
 ユーザーは、windows で Windows Presentation Foundation (WPF) スタンドアロン アプリケーションと対話します。 ウィンドウの主な目的は、データを視覚化してユーザーがデータと対話できるコンテンツをホストすることです。 スタンドアロン[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーションを使用して独自のウィンドウの提供、<xref:System.Windows.Window>クラス。 このトピックでは<xref:System.Windows.Window>を作成して、スタンドアロン アプリケーションで windows の管理の基礎を紹介します。  
@@ -51,29 +51,29 @@ ms.locfileid: "59296122"
   
  *非クライアント領域*によって実装されるウィンドウの[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]次を含む、ほとんどの windows に共通のウィンドウの部分が含まれています。  
   
--   境界線。  
+- 境界線。  
   
--   タイトル バー。  
+- タイトル バー。  
   
--   アイコン。  
+- アイコン。  
   
--   最小化ボタン、最大化ボタン、および元に戻すボタン。  
+- 最小化ボタン、最大化ボタン、および元に戻すボタン。  
   
--   閉じるボタン。  
+- 閉じるボタン。  
   
--   ウィンドウを最小化、最大化、元のサイズに戻す、移動、サイズ変更、および閉じるためのメニュー項目を含むシステム メニュー。  
+- ウィンドウを最小化、最大化、元のサイズに戻す、移動、サイズ変更、および閉じるためのメニュー項目を含むシステム メニュー。  
   
  *クライアント領域*ウィンドウがウィンドウの非クライアント領域内の領域と、メニュー バー、ツールバー、およびコントロールなどのアプリケーション固有のコンテンツを追加する開発者によって使用されます。  
   
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]、ウィンドウがカプセル化、<xref:System.Windows.Window>次の操作に使用するクラスです。  
   
--   ウィンドウを表示する。  
+- ウィンドウを表示する。  
   
--   ウィンドウのサイズ、位置、および外観を構成する。  
+- ウィンドウのサイズ、位置、および外観を構成する。  
   
--   アプリケーション固有のコンテンツをホストする。  
+- アプリケーション固有のコンテンツをホストする。  
   
--   ウィンドウの有効期間を管理する。  
+- ウィンドウの有効期間を管理する。  
   
 <a name="DefiningAWindow"></a>   
 ## <a name="implementing-a-window"></a>ウィンドウの実装  
@@ -88,11 +88,11 @@ ms.locfileid: "59296122"
   
  有効にする、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]マークアップ ファイルと分離コード ファイルを連携では、次が必要です。  
   
--   マークアップでは、`Window`要素を含める必要があります、`x:Class`属性。 ときに、アプリケーションがビルドが存在する`x:Class`ファイルにより、マークアップで[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]を作成する、`partial`クラスから派生した<xref:System.Windows.Window>によって指定された名前を持つ、`x:Class`属性。 追加する必要があります、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]名前空間宣言、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]スキーマ ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 生成された`partial`クラスが実装する、`InitializeComponent`メソッドが呼び出され、イベントを登録し、マークアップで実装されているプロパティを設定します。  
+- マークアップでは、`Window`要素を含める必要があります、`x:Class`属性。 ときに、アプリケーションがビルドが存在する`x:Class`ファイルにより、マークアップで[!INCLUDE[TLA#tla_msbuild](../../../../includes/tlasharptla-msbuild-md.md)]を作成する、`partial`クラスから派生した<xref:System.Windows.Window>によって指定された名前を持つ、`x:Class`属性。 追加する必要があります、[!INCLUDE[TLA2#tla_xml](../../../../includes/tla2sharptla-xml-md.md)]名前空間宣言、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]スキーマ ( `xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"` )。 生成された`partial`クラスが実装する、`InitializeComponent`メソッドが呼び出され、イベントを登録し、マークアップで実装されているプロパティを設定します。  
   
--   分離コード クラスがある必要があります、`partial`によって指定される同じ名前のクラス、`x:Class`のマークアップ、およびその属性がから派生する必要があります<xref:System.Windows.Window>します。 これにより、分離コード ファイルに関連付けられる、`partial`アプリケーションのビルド時にマークアップ ファイル用に生成されたクラス (を参照してください[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md))。  
+- 分離コード クラスがある必要があります、`partial`によって指定される同じ名前のクラス、`x:Class`のマークアップ、およびその属性がから派生する必要があります<xref:System.Windows.Window>します。 これにより、分離コード ファイルに関連付けられる、`partial`アプリケーションのビルド時にマークアップ ファイル用に生成されたクラス (を参照してください[WPF アプリケーションのビルド](building-a-wpf-application-wpf.md))。  
   
--   分離コードで、<xref:System.Windows.Window>クラスを呼び出すコンス トラクターを実装する必要があります、`InitializeComponent`メソッド。 `InitializeComponent` 実装ファイルの生成されたマークアップによって`partial`イベントを登録し、マークアップで定義されているプロパティを設定するクラス。  
+- 分離コードで、<xref:System.Windows.Window>クラスを呼び出すコンス トラクターを実装する必要があります、`InitializeComponent`メソッド。 `InitializeComponent` 実装ファイルの生成されたマークアップによって`partial`イベントを登録し、マークアップで定義されているプロパティを設定するクラス。  
   
 > [!NOTE]
 >  新しいを追加すると<xref:System.Windows.Window>を使用して、プロジェクトに[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]、<xref:System.Windows.Window>マークアップと分離コードの両方を使用して実装され、としてマークアップと分離コード ファイル間の関連付けを作成するために必要な構成が含まれていますここで説明します。  
@@ -108,9 +108,9 @@ ms.locfileid: "59296122"
 ## <a name="configuring-a-window-definition-for-msbuild"></a>MSBuild 用のウィンドウ定義の構成  
  ウィンドウを実装する方法の構成方法を決定[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]します。 両方を使用して定義されているウィンドウの[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]マークアップと分離コード。  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップ ファイルとして構成されている[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`項目。  
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップ ファイルとして構成されている[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`項目。  
   
--   分離コード ファイルとして構成されている[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile`項目。  
+- 分離コード ファイルとして構成されている[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Compile`項目。  
   
  これは、次に示すように、[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]プロジェクト ファイル。  
   
@@ -163,9 +163,9 @@ ms.locfileid: "59296122"
 #### <a name="window-ownership"></a>ウィンドウの所有権  
  使用して開かれるウィンドウ、<xref:System.Windows.Window.Show%2A>メソッドには、暗黙的なリレーションシップを作成したウィンドウではありません。 ユーザーのいずれかのウィンドウが、次を実行できますが、いずれかのウィンドウとは無関係に、その他の対話。  
   
--   一方 (、windows のいずれかの場合を除いて、その<xref:System.Windows.Window.Topmost%2A>プロパティに設定`true`)。  
+- 一方 (、windows のいずれかの場合を除いて、その<xref:System.Windows.Window.Topmost%2A>プロパティに設定`true`)。  
   
--   もう一方のウィンドウに影響を与えずに、最小化/最大化し、元のサイズに戻す。  
+- もう一方のウィンドウに影響を与えずに、最小化/最大化し、元のサイズに戻す。  
   
  一部のウィンドウには、そのウィンドウを開いたウィンドウとの関係が必要です。 たとえば、[!INCLUDE[TLA#tla_ide](../../../../includes/tlasharptla-ide-md.md)]アプリケーションは、プロパティ ウィンドウやツール ウィンドウが一般的な動作では、作成ウィンドウを開く場合があります。 また、そのようなウィンドウは、必ず作成元のウィンドウと一緒に閉じ、最小化/最大化し、元のサイズに戻す必要があります。 このようなリレーションシップは 1 つのウィンドウを確立することができます*独自*別、設定に達すると、<xref:System.Windows.Window.Owner%2A>のプロパティ、*所有されているウィンドウ*への参照、*所有者ウィンドウ*します。 これを次の例に示します。  
   
@@ -174,9 +174,9 @@ ms.locfileid: "59296122"
   
  所有権が確立されると、次のようになります。  
   
--   所有されているウィンドウの値を調べることによって、オーナー ウィンドウを参照できる、<xref:System.Windows.Window.Owner%2A>プロパティ。  
+- 所有されているウィンドウの値を調べることによって、オーナー ウィンドウを参照できる、<xref:System.Windows.Window.Owner%2A>プロパティ。  
   
--   オーナー ウィンドウの値を調べることによって、所有するすべての windows を検出できるその<xref:System.Windows.Window.OwnedWindows%2A>プロパティ。  
+- オーナー ウィンドウの値を調べることによって、所有するすべての windows を検出できるその<xref:System.Windows.Window.OwnedWindows%2A>プロパティ。  
   
 <a name="Preventing"></a>   
 #### <a name="preventing-window-activation"></a>ウィンドウのアクティブ化の防止  
@@ -184,21 +184,21 @@ ms.locfileid: "59296122"
   
  設定することがウィンドウに表示するときにアクティブにすることはできませんが、アプリケーションの場合は、その<xref:System.Windows.Window.ShowActivated%2A>プロパティを`false`呼び出す前に、<xref:System.Windows.Window.Show%2A>初めてメソッド。 結果は次のようになります。  
   
--   ウィンドウはアクティブになりません。  
+- ウィンドウはアクティブになりません。  
   
--   ウィンドウの<xref:System.Windows.Window.Activated>イベントは発生しません。  
+- ウィンドウの<xref:System.Windows.Window.Activated>イベントは発生しません。  
   
--   現在アクティブなウィンドウは、アクティブのままです。  
+- 現在アクティブなウィンドウは、アクティブのままです。  
   
  ただし、ユーザーがクライアント領域または非クライアント領域をクリックすると、ウィンドウは直ちにアクティブになります。 この場合、次のようになります。  
   
--   ウィンドウはアクティブになります。  
+- ウィンドウはアクティブになります。  
   
--   ウィンドウの<xref:System.Windows.Window.Activated>イベントが発生します。  
+- ウィンドウの<xref:System.Windows.Window.Activated>イベントが発生します。  
   
--   直前にアクティブだったウィンドウは非アクティブになります。  
+- 直前にアクティブだったウィンドウは非アクティブになります。  
   
--   ウィンドウの<xref:System.Windows.Window.Deactivated>と<xref:System.Windows.Window.Activated>ユーザー アクションに対する応答として、その後イベントが発生します。  
+- ウィンドウの<xref:System.Windows.Window.Deactivated>と<xref:System.Windows.Window.Activated>ユーザー アクションに対する応答として、その後イベントが発生します。  
   
 <a name="Window_Activation"></a>   
 ### <a name="window-activation"></a>ウィンドウのアクティブ化  
@@ -227,21 +227,21 @@ ms.locfileid: "59296122"
 ### <a name="closing-a-window"></a>ウィンドウを閉じる  
  ウィンドウの有効期間は、表示されたときに開始し、ユーザーが閉じたときに終了します。 ウィンドウを閉じるには、非クライアント領域の要素を使用します。これには、次のものが含まれます。  
   
--   **閉じる**の項目、**システム**メニュー。  
+- **閉じる**の項目、**システム**メニュー。  
   
--   Alt キーを押しながら F4 キーを押す。  
+- Alt キーを押しながら F4 キーを押す。  
   
--   キーを押して、**閉じる**ボタンをクリックします。  
+- キーを押して、**閉じる**ボタンをクリックします。  
   
  クライアント領域にさらに機構を追加してウィンドウを閉じることもできます。その一般的な例を、次に示します。  
   
--   **終了**内の項目、**ファイル**メイン アプリケーション ウィンドウの通常のメニュー。  
+- **終了**内の項目、**ファイル**メイン アプリケーション ウィンドウの通常のメニュー。  
   
--   A**閉じる**内の項目、**ファイル**一般に、セカンダリ アプリケーション ウィンドウのメニュー。  
+- A**閉じる**内の項目、**ファイル**一般に、セカンダリ アプリケーション ウィンドウのメニュー。  
   
--   A**キャンセル**一般にモーダル ダイアログ ボックス、ボタンをクリックします。  
+- A**キャンセル**一般にモーダル ダイアログ ボックス、ボタンをクリックします。  
   
--   A**閉じる**一般にモードレス ダイアログ ボックス、ボタンをクリックします。  
+- A**閉じる**一般にモードレス ダイアログ ボックス、ボタンをクリックします。  
   
  これらのカスタム機構のいずれかに対応したウィンドウを閉じるを呼び出す必要があります、<xref:System.Windows.Window.Close%2A>メソッド。 次の例を選択してウィンドウを閉じる機能を実装する、**終了**上、**ファイル**メニュー。  
   
@@ -266,13 +266,13 @@ ms.locfileid: "59296122"
   
  ウィンドウは、非クライアントおよびクライアント領域で提供される機構によって明示的に閉じることが、中にウィンドウを終了することも暗黙的に、アプリケーションの他の部分での動作の結果として、または[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]次を含みます。  
   
--   ユーザーはログオフまたはシャット ダウン Windows。  
+- ユーザーはログオフまたはシャット ダウン Windows。  
   
--   ウィンドウのオーナーが閉じた場合 (を参照してください<xref:System.Windows.Window.Owner%2A>)。  
+- ウィンドウのオーナーが閉じた場合 (を参照してください<xref:System.Windows.Window.Owner%2A>)。  
   
--   アプリケーションのメイン ウィンドウが閉じられると<xref:System.Windows.Application.ShutdownMode%2A>は<xref:System.Windows.ShutdownMode.OnMainWindowClose>します。  
+- アプリケーションのメイン ウィンドウが閉じられると<xref:System.Windows.Application.ShutdownMode%2A>は<xref:System.Windows.ShutdownMode.OnMainWindowClose>します。  
   
--   <xref:System.Windows.Application.Shutdown%2A> が呼ばれたとき。  
+- <xref:System.Windows.Application.Shutdown%2A> が呼ばれたとき。  
   
 > [!NOTE]
 >  ウィンドウを閉じると、再度開くことはできません。  
@@ -293,11 +293,11 @@ ms.locfileid: "59296122"
   
  最初の場所を指定することもできます、<xref:System.Windows.Window>ときに最初に表示される設定によって、<xref:System.Windows.Window.WindowStartupLocation%2A>プロパティは、次のいずれかで<xref:System.Windows.WindowStartupLocation>列挙値。  
   
--   <xref:System.Windows.WindowStartupLocation.CenterOwner> (既定値)  
+- <xref:System.Windows.WindowStartupLocation.CenterOwner> (既定値)  
   
--   <xref:System.Windows.WindowStartupLocation.CenterScreen>  
+- <xref:System.Windows.WindowStartupLocation.CenterScreen>  
   
--   <xref:System.Windows.WindowStartupLocation.Manual>  
+- <xref:System.Windows.WindowStartupLocation.Manual>  
   
  として、初期表示位置が指定されている場合<xref:System.Windows.WindowStartupLocation.Manual>、および<xref:System.Windows.Window.Left%2A>と<xref:System.Windows.Window.Top%2A>プロパティが設定されていない、<xref:System.Windows.Window>に表示される場所の Windows を求められます。  
   
@@ -325,13 +325,13 @@ ms.locfileid: "59296122"
   
  ウィンドウのサイズに合わせたサイズのコンテンツ、ウィンドウの高さと幅が希望される場合は、使用することができます、<xref:System.Windows.Window.SizeToContent%2A>プロパティで、次の値があります。  
   
--   <xref:System.Windows.SizeToContent.Manual>. 効果 (既定値)。  
+- <xref:System.Windows.SizeToContent.Manual>. 効果 (既定値)。  
   
--   <xref:System.Windows.SizeToContent.Width>. 両方の設定と同じ効果がありますが、コンテンツの幅に合わせる<xref:System.Windows.FrameworkElement.MinWidth%2A>と<xref:System.Windows.FrameworkElement.MaxWidth%2A>コンテンツの幅にします。  
+- <xref:System.Windows.SizeToContent.Width>. 両方の設定と同じ効果がありますが、コンテンツの幅に合わせる<xref:System.Windows.FrameworkElement.MinWidth%2A>と<xref:System.Windows.FrameworkElement.MaxWidth%2A>コンテンツの幅にします。  
   
--   <xref:System.Windows.SizeToContent.Height>. コンテンツの高さは、両方の設定と同じ効果に合わせる<xref:System.Windows.FrameworkElement.MinHeight%2A>と<xref:System.Windows.FrameworkElement.MaxHeight%2A>コンテンツの高さにします。  
+- <xref:System.Windows.SizeToContent.Height>. コンテンツの高さは、両方の設定と同じ効果に合わせる<xref:System.Windows.FrameworkElement.MinHeight%2A>と<xref:System.Windows.FrameworkElement.MaxHeight%2A>コンテンツの高さにします。  
   
--   <xref:System.Windows.SizeToContent.WidthAndHeight>. コンテンツの幅と高さで、両方の設定と同じ効果<xref:System.Windows.FrameworkElement.MinHeight%2A>と<xref:System.Windows.FrameworkElement.MaxHeight%2A>、コンテンツと設定の両方の高さに<xref:System.Windows.FrameworkElement.MinWidth%2A>と<xref:System.Windows.FrameworkElement.MaxWidth%2A>コンテンツの幅にします。  
+- <xref:System.Windows.SizeToContent.WidthAndHeight>. コンテンツの幅と高さで、両方の設定と同じ効果<xref:System.Windows.FrameworkElement.MinHeight%2A>と<xref:System.Windows.FrameworkElement.MaxHeight%2A>、コンテンツと設定の両方の高さに<xref:System.Windows.FrameworkElement.MinWidth%2A>と<xref:System.Windows.FrameworkElement.MaxWidth%2A>コンテンツの幅にします。  
   
  次の例では、ウィンドウを最初に表示するときに、そのコンテンツに合わせて垂直方向と水平方向の両方のサイズを自動的に変更するウィンドウを示しています。  
   
@@ -381,11 +381,11 @@ ms.locfileid: "59296122"
   
  ウィンドウの状態を設定して構成できますその<xref:System.Windows.Window.WindowState%2A>プロパティで、次のいずれかの<xref:System.Windows.WindowState>列挙値。  
   
--   <xref:System.Windows.WindowState.Normal> (既定値)  
+- <xref:System.Windows.WindowState.Normal> (既定値)  
   
--   <xref:System.Windows.WindowState.Maximized>  
+- <xref:System.Windows.WindowState.Maximized>  
   
--   <xref:System.Windows.WindowState.Minimized>  
+- <xref:System.Windows.WindowState.Minimized>  
   
  開くときに最大化されて表示されるウィンドウを作成する方法を、次の例に示します。  
   
@@ -405,13 +405,13 @@ ms.locfileid: "59296122"
   
  設定してウィンドウのサイズ変更する方法を構成することができます、<xref:System.Windows.Window.ResizeMode%2A>プロパティで、次のいずれかの<xref:System.Windows.ResizeMode>列挙値。  
   
--   <xref:System.Windows.ResizeMode.NoResize>  
+- <xref:System.Windows.ResizeMode.NoResize>  
   
--   <xref:System.Windows.ResizeMode.CanMinimize>  
+- <xref:System.Windows.ResizeMode.CanMinimize>  
   
--   <xref:System.Windows.ResizeMode.CanResize> (既定値)  
+- <xref:System.Windows.ResizeMode.CanResize> (既定値)  
   
--   <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
+- <xref:System.Windows.ResizeMode.CanResizeWithGrip>  
   
  同様<xref:System.Windows.Window.WindowStyle%2A>、ウィンドウのサイズ変更モードを設定することがほとんどの場合から、その有効期間中に変更する可能性がない[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]マークアップ。  
   
@@ -425,13 +425,13 @@ ms.locfileid: "59296122"
   
  ウィンドウの境界線の種類を制御するには、取得、設定したその<xref:System.Windows.Window.WindowStyle%2A>プロパティの値は次のいずれかで、<xref:System.Windows.WindowStyle>列挙体。  
   
--   <xref:System.Windows.WindowStyle.None>  
+- <xref:System.Windows.WindowStyle.None>  
   
--   <xref:System.Windows.WindowStyle.SingleBorderWindow> (既定値)  
+- <xref:System.Windows.WindowStyle.SingleBorderWindow> (既定値)  
   
--   <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
+- <xref:System.Windows.WindowStyle.ThreeDBorderWindow>  
   
--   <xref:System.Windows.WindowStyle.ToolWindow>  
+- <xref:System.Windows.WindowStyle.ToolWindow>  
   
  これらのウィンドウ スタイルの効果は、次の図に示します。  
   

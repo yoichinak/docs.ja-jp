@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: f9c0b295-55e7-48ea-b308-ba51c7d31143
 ms.openlocfilehash: c3e3378cd2465e26e4b6ff7b4c12a55050301095
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976197"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990107"
 ---
 # <a name="feed-formatter-json"></a>フィード フォーマッタ (JSON)
 このサンプルでは、カスタムの <xref:System.ServiceModel.Syndication.SyndicationFeed> および <xref:System.ServiceModel.Syndication.SyndicationFeedFormatter> を使用することにより JSON (JavaScript Object Notation) 形式の <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> クラスのインスタンスをシリアル化する方法を示します。  

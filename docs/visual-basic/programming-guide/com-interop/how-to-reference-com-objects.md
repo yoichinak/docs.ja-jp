@@ -9,11 +9,11 @@ helpviewer_keywords:
 - interop assemblies
 ms.assetid: 9c518fb4-27d9-4112-9e6a-5a7d0210af6f
 ms.openlocfilehash: 0327c497025630747e526503556f4a1705948850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295264"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022385"
 ---
 # <a name="how-to-reference-com-objects-from-visual-basic"></a>方法: Visual Basic から COM の参照オブジェクト
 Visual basic でタイプ ライブラリがある COM オブジェクトへの参照を追加する必要があります相互運用機能アセンブリの作成、COM ライブラリの。 COM オブジェクトのメンバーへの参照は、相互運用機能アセンブリにルーティングされ、実際の COM オブジェクトに転送されます。 COM オブジェクトからの応答が相互運用機能アセンブリにルーティングされ、転送、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アプリケーション。  
@@ -38,11 +38,11 @@ Visual basic でタイプ ライブラリがある COM オブジェクトへの�
   
 2. コマンド プロンプトで、次の情報を提供するには、Tlbimp を呼び出します。  
   
-    -   タイプ ライブラリを含んでいる DLL の名前と場所  
+    - タイプ ライブラリを含んでいる DLL の名前と場所  
   
-    -   名前と名前空間の場所に情報を配置する必要があります。  
+    - 名前と名前空間の場所に情報を配置する必要があります。  
   
-    -   ターゲットの相互運用機能アセンブリの名前と場所  
+    - ターゲットの相互運用機能アセンブリの名前と場所  
   
      次にコード例を示します。  
   

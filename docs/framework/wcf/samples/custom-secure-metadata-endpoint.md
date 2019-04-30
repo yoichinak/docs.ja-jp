@@ -3,11 +3,11 @@ title: カスタム セキュア メタデータ エンドポイント
 ms.date: 03/30/2017
 ms.assetid: 9e369e99-ea4a-49ff-aed2-9fdf61091a48
 ms.openlocfilehash: c835cfecab38a76f285767f918dfc082915ffcfc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990718"
 ---
 # <a name="custom-secure-metadata-endpoint"></a>カスタム セキュア メタデータ エンドポイント
 このサンプルを構成する方法と、サービス メタデータ以外の exchange バインディングのいずれかを使用するセキュア メタデータ エンドポイントを実装する方法を示します[ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)またはクライアントをフェッチして、このようなメタデータ エンドポイントからメタデータ。 メタデータ エンドポイントを公開する場合に使用できるシステム指定のバインディングには、mexHttpBinding と mexHttpsBinding の 2 つがあります。 mexHttpBinding は、メタデータ エンドポイントをセキュリティ保護されない HTTP を介して公開する場合に使用します。 mexHttpsBinding は、メタデータ エンドポイントをセキュリティ保護される HTTPS を介して公開する場合に使用します。 このサンプルでは、<xref:System.ServiceModel.WSHttpBinding> を使用してセキュア メタデータ エンドポイントを公開する方法を示します。 この方法は、HTTPS を使用せずにバインディングのセキュリティ設定を変更する場合に使用します。 mexHttpsBinding を使用すると、メタデータ エンドポイントがセキュリティ保護されますが、バインディング設定を変更できなくなります。  
@@ -168,11 +168,11 @@ ChannelFactory<ICalculator> cf = new    ChannelFactory<ICalculator>(endpoint.Bin
   
 10. クライアント コンピューター上の VS で、MetadataResolverClient または SvcutilClient を実行します。  
   
-    1.  クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
+    1. クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。  
   
 #### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
--   サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
+- サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
   
     > [!NOTE]
     >  このサンプルを別のマシンで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 マシン間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行すると、必ず、CurrentUser - TrustedPeople ストアにインストールされているサービス証明書をオフにします。 削除するには、コマンド `certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` を実行します。 たとえば、`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com` のように指定します。  

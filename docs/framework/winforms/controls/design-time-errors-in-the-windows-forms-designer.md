@@ -9,11 +9,11 @@ helpviewer_keywords:
 - design-time errors [Windows Forms Designer]
 ms.assetid: ad408380-825a-46d8-9a4a-531b130b88ce
 ms.openlocfilehash: 7ee4ce1d6efdc4927fc2d20100f0b12f7405261f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213143"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972355"
 ---
 # <a name="design-time-errors-in-the-windows-forms-designer"></a>Windows フォーム デザイナーでのデザイン時エラー
 このトピックでは、Windows フォーム デザイナーで読み込みに失敗したときに場合に Microsoft Visual Studio に表示されるデザイン時のエラー リストの意味と使用法について説明します。 このエラー リストが表示された場合、デザイナーのバグであると解釈するのではなく、コード内のエラーを修正するための参考情報であると考えてください。  
@@ -25,11 +25,11 @@ ms.locfileid: "59213143"
   
  エラー カテゴリの見出しをクリックするか、展開/折りたたみシェブロンをクリックすることで、エラー カテゴリを展開したり、折りたたんだりできます。 エラー カテゴリを展開すると、次の追加のヘルプが表示されます。  
   
--   このエラーのインスタンス。  
+- このエラーのインスタンス。  
   
--   このエラーのヘルプ。  
+- このエラーのヘルプ。  
   
--   このエラーに関するフォーラムの投稿。  
+- このエラーに関するフォーラムの投稿。  
   
 ### <a name="instances-of-this-error"></a>このエラーのインスタンス  
  追加のヘルプには、現在のプロジェクトにおけるエラーのすべてのインスタンスが一覧表示されます。 多くのエラーには、次の形式の正確な場所が含まれます: *[プロジェクト名]* *[フォーム名]* 行:*[行番号]* 列:*[列番号]*。 **[コードに移動]** リンクを使用して、エラーが発生したコード内の場所に移動できます。  
@@ -45,9 +45,9 @@ ms.locfileid: "59213143"
 ### <a name="forum-posts-about-this-error"></a>このエラーに関するフォーラムの投稿  
  追加のヘルプには、エラーに関連する MSDN フォーラムの投稿へのリンクが含まれています。 フォーラムは、エラー メッセージの文字列に基づいて検索されます。 次のフォーラムを検索することもできます。  
   
--   [Windows フォーム デザイナーのフォーラム](https://go.microsoft.com/fwlink/?LinkId=203524)  
+- [Windows フォーム デザイナーのフォーラム](https://go.microsoft.com/fwlink/?LinkId=203524)  
   
--   [Windows フォームのフォーラム](https://go.microsoft.com/fwlink/?LinkId=203523)  
+- [Windows フォームのフォーラム](https://go.microsoft.com/fwlink/?LinkId=203523)  
   
 ### <a name="ignore-and-continue"></a>無視して続行する  
  エラー状態を無視して、デザイナーの読み込みを続行することもできます。 この操作を選択すると、予期しない動作が発生する可能性があります。 たとえば、デザイン サーフェイスにコントロールが表示されない場合があります。  

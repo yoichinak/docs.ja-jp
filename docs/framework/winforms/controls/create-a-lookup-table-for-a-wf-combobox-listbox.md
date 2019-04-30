@@ -15,11 +15,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], creating lookup tables
 ms.assetid: 4ce35f12-1f4e-4317-92d1-af8686a8cfaa
 ms.openlocfilehash: a58522cc17ac379897a89a8e61485a1e271438a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344105"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011472"
 ---
 # <a name="how-to-create-a-lookup-table-for-a-windows-forms-combobox-listbox-or-checkedlistbox-control"></a>方法: Windows フォーム ComboBox、ListBox、または CheckedListBox コントロールのルックアップ テーブルを作成する
 Windows フォーム上ではわかりやすい形式でデータを表示し、一方プログラムにはより意味のある形式でデータを格納すると便利な場合があります。 たとえば、食品の注文書の場合、リスト ボックスにメニュー項目が名前で表示されます。 一方、注文を記録するデータ テーブルには、食品を表す一意の ID 番号が含まれることになります。 次の表は、食品の注文書データを格納および表示する方法の例を示しています。  

@@ -3,11 +3,11 @@ title: SQL Server の CLR 統合の概要
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
 ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336812"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033879"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server の CLR 統合の概要
 共通言語ランタイム (CLR) は、Microsoft .NET Framework の中核であり、すべての .NET Framework コードの実行環境を提供します。 CLR 内で実行されるコードを、マネージド コードと呼びます。 CLR は、ジャストインタイム (JIT) コンパイル、メモリの割り当てと管理、タイプ セーフの設定、例外処理、スレッド管理、セキュリティなど、プログラムの実行に必要なさまざまな機能やサービスを備えています。  
@@ -20,7 +20,7 @@ ms.locfileid: "59336812"
   
  **SQL Server オンライン ブック**  
   
--   [共通言語ランタイム (CLR) 統合の概要](https://go.microsoft.com/fwlink/?LinkId=115242)  
+- [共通言語ランタイム (CLR) 統合の概要](https://go.microsoft.com/fwlink/?LinkId=115242)  
   
 ## <a name="enabling-clr-integration"></a>CLR 統合の有効化  
  Microsoft SQL Server では共通言語ランタイム (CLR) 統合機能が既定でオフになっているため、CLR 統合を利用して実装されるオブジェクトを使用するには、CLR 統合機能を有効にする必要があります。 Transact-SQL を使用して CLR 統合を有効にするには、次に示すように、`clr enabled` ストアド プロシージャの `sp_configure` オプションを使用します。  
@@ -38,7 +38,7 @@ GO
   
  **SQL Server オンライン ブック**  
   
--   [CLR 統合を有効にします。](https://go.microsoft.com/fwlink/?LinkId=115230)  
+- [CLR 統合を有効にします。](https://go.microsoft.com/fwlink/?LinkId=115230)  
   
 ## <a name="deploying-a-clr-assembly"></a>CLR アセンブリの配置  
  CLR メソッドをテスト サーバーでテストおよび検証すると、配置スクリプトを使用してこれらを実稼働サーバーに配布できます。 配置スクリプトは手動で生成するか、SQL Server Management Studio を使用して生成することができます。 詳細については、ご使用中の SQL Server のバージョンに対応するバージョンの SQL Server オンライン ブックを参照してください。  
@@ -54,7 +54,7 @@ GO
   
  **SQL Server オンライン ブック**  
   
--   [CLR 統合のセキュリティ](https://go.microsoft.com/fwlink/?LinkId=115234)  
+- [CLR 統合のセキュリティ](https://go.microsoft.com/fwlink/?LinkId=115234)  
   
 ## <a name="debugging-a-clr-assembly"></a>CLR アセンブリのデバッグ  
  Microsoft SQL Server は、データベース内の Transact-SQL オブジェクトおよび共通言語ランタイム (CLR) オブジェクトのデバッグをサポートしています。 デバッグは言語をまたがって機能します。ユーザーは、Transact-SQL から CLR オブジェクトへ、または CLR オブジェクトから Transact-SQL へシームレスにデバッグできます。  
@@ -63,7 +63,7 @@ GO
   
  **SQL Server オンライン ブック**  
   
--   [CLR データベース オブジェクトのデバッグ](https://go.microsoft.com/fwlink/?LinkId=115236)  
+- [CLR データベース オブジェクトのデバッグ](https://go.microsoft.com/fwlink/?LinkId=115236)  
   
 ## <a name="see-also"></a>関連項目
 

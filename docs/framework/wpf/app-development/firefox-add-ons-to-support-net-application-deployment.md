@@ -8,11 +8,11 @@ helpviewer_keywords:
 - .NET Framework Assistant for Firefox
 ms.assetid: 2403403b-9b14-48e9-b70d-fa288a3c9081
 ms.openlocfilehash: 4b0552ab9f565d9118415bc2da2823762f34fe2c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007410"
 ---
 # <a name="firefox-add-ons-to-support-net-application-deployment"></a>.NET アプリケーションの配置をサポートするための Firefox のアドオン
 Firefox と、.NET Framework Assistant for Firefox プラグイン Windows Presentation Foundation (WPF) を有効にする[!INCLUDE[TLA#tla_winfxwebapp#plural](../../../../includes/tlasharptla-winfxwebappsharpplural-md.md)]、loose [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、Mozilla Firefox ブラウザーを使用する ClickOnce アプリケーションとします。  
@@ -27,9 +27,9 @@ Firefox と、.NET Framework Assistant for Firefox プラグイン Windows Prese
 ## <a name="net-framework-assistant-for-firefox"></a>.NET Framework Assistant for Firefox  
  Firefox ブラウザーから実行するスタンドアロンの ClickOnce アプリケーションを .NET Framework Assistant for Firefox にできます。 .NET Framework Assistant の Firefox 関数、Firefox ブラウザーの前後にインストールされているときに同じです。 Firefox ブラウザーが起動したときに、[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]がインストールされている場合、Firefox で検索し、Firefox の .NET Framework Assistant をインストールします。 ユーザーは、.NET Framework Assistant for Firefox では、次の操作を構成できます。  
   
--   ClickOnce アプリケーションを実行する前に確認します。  
+- ClickOnce アプリケーションを実行する前に確認します。  
   
--   インストールされているすべてのバージョンの .NET Framework または最新バージョンのみを報告します。  
+- インストールされているすべてのバージョンの .NET Framework または最新バージョンのみを報告します。  
   
  含まれている、.NET Framework Assistant for Firefox、[!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]します。 Firefox 用の .NET Framework Assistant の削除方法の詳細については、次を参照してください。 [Firefox 用の .NET Framework Assistant の削除方法](https://go.microsoft.com/fwlink/?LinkId=177944)します。  
   

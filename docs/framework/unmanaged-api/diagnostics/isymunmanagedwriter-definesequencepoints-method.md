@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 735b33ac1f049f8d4d3740239e7c34a6fa16dd32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59146940"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61969170"
 ---
 # <a name="isymunmanagedwriterdefinesequencepoints-method"></a>ISymUnmanagedWriter::DefineSequencePoints メソッド
 現在のメソッド内のシーケンス ポイントのグループを定義します。 各開始行と開始列は、メソッド内のステートメントの先頭を定義します。 それぞれの終了行と列の終了は、メソッド内のステートメントの末尾を定義します。 配列は、オフセットの昇順に並べ替える必要があります。 オフセットは常に (バイト単位)、メソッドの先頭から測定されます。  

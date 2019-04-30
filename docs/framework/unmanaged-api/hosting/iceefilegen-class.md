@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: fb0e7a676fdbbe3cf04108266471833b28275b1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083571"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985362"
 ---
 # <a name="iceefilegen-class"></a>ICeeFileGen クラス
 ネイティブ ポータブル実行可能 (PE) ファイルを作成するための機能を提供します。 インターフェイスは、実行可能ファイルのコンパイル済み出力を生成するコンパイラで通常使用されます。  

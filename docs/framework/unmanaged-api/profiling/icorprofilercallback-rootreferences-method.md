@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: b616017745d7cc33d57b1626b6c27c59a0a60a32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992291"
 ---
 # <a name="icorprofilercallbackrootreferences-method"></a>ICorProfilerCallback::RootReferences メソッド
 ガベージ コレクション後のルート参照に関する情報をプロファイラーに通知します。  

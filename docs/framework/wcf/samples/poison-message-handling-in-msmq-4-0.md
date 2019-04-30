@@ -3,11 +3,11 @@ title: MSMQ 4.0 での有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
 ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59316467"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052093"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 での有害メッセージ処理
 このサンプルでは、サービスで有害メッセージの処理を実行する方法を示します。 このサンプルがに基づいて、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプル。 このサンプルでは、`netMsmqBinding` を使用しています。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
@@ -27,13 +27,13 @@ ms.locfileid: "59316467"
 
  メッセージが有害としてマークされると、メッセージは <xref:System.ServiceModel.MsmqBindingBase.ReceiveErrorHandling%2A> 列挙体の設定に従って処理されます。 次にもう一度、使用可能な値を示します。
 
--   Fault (既定値):リスナーとも、サービス ホストをエラー。
+- Fault (既定値):リスナーとも、サービス ホストをエラー。
 
--   ドロップします。メッセージを破棄します。
+- ドロップします。メッセージを破棄します。
 
--   移動します。メッセージを有害メッセージ サブキューに移動します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
+- 移動します。メッセージを有害メッセージ サブキューに移動します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
 
--   拒否します。メッセージを送信者の配信不能キューに送信するメッセージを拒否します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
+- 拒否します。メッセージを送信者の配信不能キューに送信するメッセージを拒否します。 この値は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
 
  このサンプルは有害なメッセージに対する `Move` 処置の使用法を示します。 `Move` を指定すると、メッセージが有害メッセージ サブキューに移動されます。
 
@@ -277,15 +277,15 @@ Processing Purchase Order: 23e0b991-fbf9-4438-a0e2-20adf93a4f89
 
 2. サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。
 
-    1.  Visual Studio 2012 では、サーバー マネージャーを開きます。
+    1. Visual Studio 2012 では、サーバー マネージャーを開きます。
 
-    2.  展開、**機能**タブ。
+    2. 展開、**機能**タブ。
 
-    3.  右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。
+    3. 右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。
 
-    4.  チェック、**トランザクション**ボックス。
+    4. チェック、**トランザクション**ボックス。
 
-    5.  入力`ServiceModelSamplesTransacted`として新しいキューの名前。
+    5. 入力`ServiceModelSamplesTransacted`として新しいキューの名前。
 
 3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
 

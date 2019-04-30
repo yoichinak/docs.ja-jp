@@ -5,11 +5,11 @@ helpviewer_keywords:
 - collection initializers [Visual Basic]
 ms.assetid: c858db10-424d-47e0-92cd-e08087cc5ebc
 ms.openlocfilehash: 75c280b57df03bde173c740123cccda278536dc1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820309"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053627"
 ---
 # <a name="how-to-create-a-collection-used-by-a-collection-initializer-visual-basic"></a>方法: コレクション初期化子 (Visual Basic) を使用してコレクションを作成します。
 コレクション初期化子を使用してコレクションを作成するときに、Visual Basic コンパイラ検索、`Add`対象のコレクション型のメソッドのパラメーター、`Add`メソッド コレクション初期化子の値の型に一致します。 これは、`Add`メソッドを使用して、コレクション、コレクション初期化子の値に設定します。  

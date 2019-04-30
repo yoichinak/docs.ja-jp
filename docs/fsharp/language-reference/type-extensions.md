@@ -3,11 +3,11 @@ title: 型拡張
 description: 学習方法F#型の拡張機能により、定義済みのオブジェクト型に新しいメンバーを追加します。
 ms.date: 02/08/2019
 ms.openlocfilehash: 69fb3b771b5334c5771f2ac75341b38c1dad5b90
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092476"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982606"
 ---
 # <a name="type-extensions"></a>型の拡張機能
 

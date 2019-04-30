@@ -9,11 +9,11 @@ helpviewer_keywords:
 - JPEG images [Windows Forms], setting quality level
 ms.assetid: 4b9a74e3-9504-43c1-9f28-ace651d0772e
 ms.openlocfilehash: de9dce1b3c15070fda268c430ce5da641efef6f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130677"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62003887"
 ---
 # <a name="how-to-set-jpeg-compression-level"></a>方法: JPEG 圧縮レベルの設定
 イメージをディスクに保存するときに、ファイル サイズを最小化したり品質を向上させるために、イメージのパラメーターを修正したりする必要がある場合があります。 圧縮レベルを修正して、JPEG イメージの品質を調整することができます。 JPEG イメージを保存するときに、圧縮レベルを指定するに作成する必要があります、<xref:System.Drawing.Imaging.EncoderParameters>オブジェクトに渡すと、<xref:System.Drawing.Image.Save%2A>のメソッド、<xref:System.Drawing.Image>クラス。 初期化、<xref:System.Drawing.Imaging.EncoderParameters>オブジェクトのいずれかで構成される配列を持つこと、<xref:System.Drawing.Imaging.EncoderParameter>します。 作成するときに、 <xref:System.Drawing.Imaging.EncoderParameter>、指定、<xref:System.Drawing.Imaging.Encoder.Quality>エンコーダー、および、必要な圧縮レベル。  
@@ -123,11 +123,11 @@ End Function
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   Windows フォーム アプリケーション  
+- Windows フォーム アプリケーション  
   
--   A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
+- A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
   
--   `TestPhoto.jpg` という名前のイメージ ファイル。保存場所は **c:\\** です。  
+- `TestPhoto.jpg` という名前のイメージ ファイル。保存場所は **c:\\** です。  
   
 ## <a name="see-also"></a>関連項目
 

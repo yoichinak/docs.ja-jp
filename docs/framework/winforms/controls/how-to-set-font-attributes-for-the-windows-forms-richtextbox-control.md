@@ -15,11 +15,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 2bc23ddb-0529-4489-a1a2-ad253cb43f9a
 ms.openlocfilehash: a6fe5b30c457fae2d53c946092b214f492fe5e9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331209"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013271"
 ---
 # <a name="how-to-set-font-attributes-for-the-windows-forms-richtextbox-control"></a>方法: Windows フォームの RichTextBox コントロールのフォント属性を設定する
 Windows フォーム<xref:System.Windows.Forms.RichTextBox>コントロールが、表示するテキストを書式設定するためのさまざまなオプションです。 行うことができます、選択した文字太字、下線、または斜体などを使用して、<xref:System.Windows.Forms.RichTextBox.SelectionFont%2A>プロパティ。 また、このプロパティを使用して、選択した文字のサイズと書体を変更することもできます。 <xref:System.Windows.Forms.RichTextBox.SelectionColor%2A>プロパティでは、選択した文字の色を変更することができます。  

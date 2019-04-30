@@ -3,11 +3,11 @@ title: HTTP トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
 ms.openlocfilehash: b7415dcc1e6c4a5d47d9e7b6e70a86ab1b898783
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113803"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000845"
 ---
 # <a name="http-transport-security"></a>HTTP トランスポート セキュリティ
 トランスポートとして HTTP を使用すると、SSL (Secure Sockets Layer) によりセキュリティが提供されます。 SSL はクライアントに対してサービスの認証を行い、機密性 (暗号化) をチャネルに提供する技術としてインターネットで広く使用されています。 このトピックでは、SSL のしくみし、Windows Communication Foundation (WCF) でその実装方法について説明します。  
@@ -31,9 +31,9 @@ ms.locfileid: "59113803"
 ## <a name="implementing-ssl-with-wcf"></a>WCF を使用する SSL の実装  
  HTTP トランスポート セキュリティ (または SSL) は、WCF に外部から提供されます。 SSL は、次のいずれかの方法で実装できますが、その方法は、アプリケーションがどのようにホストされるかによって決まります。  
   
--   WCF ホストとインターネット インフォメーション サービス (IIS) を使用する場合は、IIS インフラストラクチャを使用して、SSL サービスを設定します。  
+- WCF ホストとインターネット インフォメーション サービス (IIS) を使用する場合は、IIS インフラストラクチャを使用して、SSL サービスを設定します。  
   
--   自己ホスト型 WCF アプリケーションを作成する場合は、HttpCfg.exe ツールを使用して、アドレスに SSL 証明書をバインドできます。  
+- 自己ホスト型 WCF アプリケーションを作成する場合は、HttpCfg.exe ツールを使用して、アドレスに SSL 証明書をバインドできます。  
   
 ### <a name="using-iis-for-transport-security"></a>トランスポート セキュリティのための IIS の使用  
   

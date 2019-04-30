@@ -5,11 +5,11 @@ f1_keywords:
 - vbrID11
 ms.assetid: 7dc22e29-8baa-4d82-a1a6-2de64ba9b25d
 ms.openlocfilehash: a628d802614e18ed1647c63f665a701a315a70cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337137"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61970418"
 ---
 # <a name="division-by-zero-visual-basic-error"></a>0 による除算 (Visual Basic エラー)
 除数として使用される式の値が 0 です。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - elements, UI Automation, obtaining
 ms.assetid: c2caaf45-e59c-42a1-bc9b-77a6de520171
 ms.openlocfilehash: 89c9397ba579f04d81eee7af6363f8fee3abfe1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59191277"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033198"
 ---
 # <a name="obtaining-ui-automation-elements"></a>UI オートメーション要素の取得
 > [!NOTE]

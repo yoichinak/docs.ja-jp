@@ -5,11 +5,11 @@ helpviewer_keywords:
 - hosting WPF content in Windows Forms [WPF]
 ms.assetid: 0ac41286-4c1b-4b17-9196-d985cb844ce1
 ms.openlocfilehash: 75e60a3a9b39c0dd63a24a1e71c4823e7cb0bd74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322837"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052548"
 ---
 # <a name="walkthrough-hosting-a-wpf-composite-control-in-windows-forms"></a>チュートリアル: Windows フォームでの WPF 複合コントロールのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただしがある場合、かなりの投資[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コード、ことができます、既存の拡張をより効果的な[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーションを[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ではなく最初から修正します。 一般的なシナリオで実装したコントロールを 1 つを埋め込む、または場合に、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] Windows フォーム アプリケーション内で。 WPF コントロールをカスタマイズする方法の詳細については、次を参照してください。[コントロールのカスタマイズ](../controls/control-customization.md)します。  
@@ -20,9 +20,9 @@ ms.locfileid: "59322837"
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   WPF 複合コントロールを実装する。  
+- WPF 複合コントロールを実装する。  
   
--   Windows フォーム ホスト アプリケーションを実装する。  
+- Windows フォーム ホスト アプリケーションを実装する。  
   
  このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [Windows フォームのサンプルでの WPF 複合コントロールをホストしている](https://go.microsoft.com/fwlink/?LinkID=159996)します。  
   
@@ -54,13 +54,13 @@ ms.locfileid: "59322837"
   
  プロジェクトは、以下のシステム DLL を参照している必要があります。 これらの DLL のいずれかが既定で含まれていない場合は、プロジェクトに追加します。  
   
--   PresentationCore  
+- PresentationCore  
   
--   PresentationFramework  
+- PresentationFramework  
   
--   システム  
+- システム  
   
--   WindowsBase  
+- WindowsBase  
   
 ### <a name="creating-the-user-interface"></a>ユーザー インターフェイスの作成  
  [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]で複合コントロールが実装済み[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 複合コントロール[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]5 から成る<xref:System.Windows.Controls.TextBox>要素。 各<xref:System.Windows.Controls.TextBox>要素に関連付けられている<xref:System.Windows.Controls.TextBlock>ラベルとして機能する要素。 2 つ<xref:System.Windows.Controls.Button>下部にある要素**OK**と**キャンセル**。 ユーザーがいずれかのボタンをクリックすると、コントロールは情報をホストに返すカスタム イベントを発生させます。  
@@ -139,11 +139,11 @@ namespace MyControls
 #### <a name="initializing-the-control"></a>コントロールの初期化  
  このコードでは、次の基本タスクを実装します。  
   
--   プライベートのイベントを宣言`OnButtonClick`、および関連するデリゲート、`MyControlEventHandler`します。  
+- プライベートのイベントを宣言`OnButtonClick`、および関連するデリゲート、`MyControlEventHandler`します。  
   
--   ユーザーのデータを格納するいくつかのプライベート グローバル変数を作成します。 このデータは、対応するプロパティを通じて公開されます。  
+- ユーザーのデータを格納するいくつかのプライベート グローバル変数を作成します。 このデータは、対応するプロパティを通じて公開されます。  
   
--   ハンドラーを実装する`Init`、コントロールの<xref:System.Windows.FrameworkElement.Loaded>イベント。 このハンドラーは、MyControl1.xaml で定義された値をグローバル変数に割り当てることで、グローバル変数を初期化します。 これを行うには、使用して、 <xref:System.Windows.FrameworkElement.Name%2A> 、標準的な割り当て<xref:System.Windows.Controls.TextBlock>要素、 `nameLabel`、その要素のプロパティの設定にアクセスします。  
+- ハンドラーを実装する`Init`、コントロールの<xref:System.Windows.FrameworkElement.Loaded>イベント。 このハンドラーは、MyControl1.xaml で定義された値をグローバル変数に割り当てることで、グローバル変数を初期化します。 これを行うには、使用して、 <xref:System.Windows.FrameworkElement.Name%2A> 、標準的な割り当て<xref:System.Windows.Controls.TextBlock>要素、 `nameLabel`、その要素のプロパティの設定にアクセスします。  
   
  既存のコンス トラクターを削除し、次のコードを追加、`MyControl1`クラス。  
   
@@ -152,11 +152,11 @@ namespace MyControls
 #### <a name="handling-the-buttons-click-events"></a>ボタンのクリック イベントの処理  
  ユーザーは、いずれかをクリックして、データ入力タスクが完了したことを示します、 **OK**ボタンまたは**キャンセル**ボタン。 両方のボタンを使用して同じ<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラー、`ButtonClicked`します。 両方のボタンの名前を付ける`btnOK`または`btnCancel`の値を調べることでクリックしてされたボタンを判断するハンドラーをできるようにする、`sender`引数。 ハンドラーは次の処理を行います。  
   
--   作成、`MyControlEventArgs`からデータを格納しているオブジェクト、<xref:System.Windows.Controls.TextBox>要素。  
+- 作成、`MyControlEventArgs`からデータを格納しているオブジェクト、<xref:System.Windows.Controls.TextBox>要素。  
   
--   ユーザーがクリックした場合、**キャンセル**ボタン、セット、`MyControlEventArgs`オブジェクトの`IsOK`プロパティを`false`します。  
+- ユーザーがクリックした場合、**キャンセル**ボタン、セット、`MyControlEventArgs`オブジェクトの`IsOK`プロパティを`false`します。  
   
--   発生させる、`OnButtonClick`渡しますが、収集したデータをユーザーが完了したら、ホストすることを示すイベント。  
+- 発生させる、`OnButtonClick`渡しますが、収集したデータをユーザーが完了したら、ホストすることを示すイベント。  
   
  次のコードを追加、`MyControl1`した後、クラス、`Init`メソッド。  
   
@@ -209,15 +209,15 @@ namespace MyControls
   
 4. 次のアセンブリへの参照を追加します。  
   
-    -   PresentationCore  
+    - PresentationCore  
   
-    -   PresentationFramework  
+    - PresentationFramework  
   
-    -   System.Xaml  
+    - System.Xaml  
   
-    -   WindowsBase  
+    - WindowsBase  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
 ### <a name="implementing-the-user-interface-for-the-application"></a>アプリケーションのユーザー インターフェイスの実装  
  Windows フォーム アプリケーションの UI には、WPF 複合コントロールを操作するいくつかのコントロールが含まれています。  
@@ -296,9 +296,9 @@ namespace MyControls
   
  残りの 2 つの行で、`Form1_Load`メソッドは、2 つのコントロール イベントにハンドラーをアタッチします。  
   
--   `OnButtonClick` カスタム イベント、ユーザーがクリックしたときに複合コントロールによって発生するは、 **[ok]** または**キャンセル**ボタンをクリックします。 このイベントを処理してユーザーの応答を取得し、ユーザーが指定したデータをすべて収集します。  
+- `OnButtonClick` カスタム イベント、ユーザーがクリックしたときに複合コントロールによって発生するは、 **[ok]** または**キャンセル**ボタンをクリックします。 このイベントを処理してユーザーの応答を取得し、ユーザーが指定したデータをすべて収集します。  
   
--   <xref:System.Windows.FrameworkElement.Loaded> 標準のイベントによって発生するは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールが完全に読み込まれる。 ここでこのイベントを使用するのは、この例ではこのコントロールからのプロパティを使用して複数のグローバル変数を初期化する必要があるからです。 フォームの時に<xref:System.Windows.Forms.Form.Load>イベント、コントロールが完全に読み込まれていないとそれらの値に設定されています`null`します。 コントロールのまで待機する必要がある<xref:System.Windows.FrameworkElement.Loaded>これらのプロパティにアクセスする前に、イベントが発生します。  
+- <xref:System.Windows.FrameworkElement.Loaded> 標準のイベントによって発生するは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コントロールが完全に読み込まれる。 ここでこのイベントを使用するのは、この例ではこのコントロールからのプロパティを使用して複数のグローバル変数を初期化する必要があるからです。 フォームの時に<xref:System.Windows.Forms.Form.Load>イベント、コントロールが完全に読み込まれていないとそれらの値に設定されています`null`します。 コントロールのまで待機する必要がある<xref:System.Windows.FrameworkElement.Loaded>これらのプロパティにアクセスする前に、イベントが発生します。  
   
  <xref:System.Windows.FrameworkElement.Loaded>イベント ハンドラーは、上記のコードに示します。 `OnButtonClick`ハンドラーは、次のセクションで説明します。  
   

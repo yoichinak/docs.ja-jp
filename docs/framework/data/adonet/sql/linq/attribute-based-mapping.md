@@ -3,11 +3,11 @@ title: 属性ベースの対応付け
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
 ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223564"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032969"
 ---
 # <a name="attribute-based-mapping"></a>属性ベースの対応付け
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] マップを SQL Server データベース、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]いずれかの属性の適用、または外部マッピング ファイルを使用してオブジェクト モデルです。 このトピックでは、属性ベースの方法について説明します。  

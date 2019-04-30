@@ -9,11 +9,11 @@ helpviewer_keywords:
 - commanding [WPF]
 ms.assetid: d8016266-58d9-48f7-8298-a86b7ed49fbd
 ms.openlocfilehash: bf01066a35672e1996f193abc6d76153e5e9dd46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181702"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031998"
 ---
 # <a name="how-to-enable-a-command"></a>方法: コマンドを有効にする
 次の例でコマンド処理を使用する方法を示します[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]します。  関連付ける方法の例を<xref:System.Windows.Input.RoutedCommand>を<xref:System.Windows.Controls.Button>、作成、<xref:System.Windows.Input.CommandBinding>を実装するイベント ハンドラーを作成し、 <xref:System.Windows.Input.RoutedCommand>。  コマンド実行の詳細については、次を参照してください。、[コマンド実行の概要](commanding-overview.md)します。  

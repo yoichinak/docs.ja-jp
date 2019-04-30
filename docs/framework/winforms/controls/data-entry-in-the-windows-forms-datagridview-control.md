@@ -7,11 +7,11 @@ helpviewer_keywords:
 - data grids [Windows Forms], data entry
 ms.assetid: 4a6d4676-d4e7-4b0e-9c22-50ce65ffe0d6
 ms.openlocfilehash: 3ebfcaaf22ca632e5784dc1f01a351583e78e865
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090707"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011504"
 ---
 # <a name="data-entry-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでのデータ入力
 `DataGridView`コントロールはユーザーを追加またはコントロール内のデータを変更する方法を変更できるのいくつかの機能を提供します。 たとえば、行うことができますデータ エントリより効率的なユーザーに警告するエラーが発生したときに、新しい行の既定値を提供することで。  

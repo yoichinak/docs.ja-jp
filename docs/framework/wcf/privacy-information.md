@@ -7,11 +7,11 @@ helpviewer_keywords:
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
 ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032995"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation のプライバシー情報
 マイクロソフトは、エンド ユーザーのプライバシー保護に力を入れています。 Windows Communication Foundation (WCF)、バージョン 3.0 を使用してアプリケーションをビルドすると、アプリケーションに、エンドユーザーのプライバシーに関する影響を与える可能性があります。 たとえば、アプリケーションが明示的にユーザーの連絡先情報を収集することがあります。つまり、アプリケーションがインターネットを経由して Web サイトに情報を要求したり、情報を送信したりすることがあります。 マイクロソフトの技術をアプリケーションに組み込んでいる場合、その技術にプライバシーに影響を与える可能性がある独自の動作が存在することがあります。 WCF 送信しませんすべての情報を Microsoft、アプリケーションからまたはエンドユーザーが選択する場合を除き。  
@@ -38,9 +38,9 @@ ms.locfileid: "59151503"
   
  認証は、クライアントとサービスとの間で資格情報を交換することによって実行されます。 認証は、次のように、トランスポート レベルのセキュリティまたは SOAP メッセージ レベルのセキュリティで実行できます。  
   
--   SOAP メッセージ セキュリティでは、発行者に応じて、ユーザー名とパスワード、X.509 証明書、Kerberos チケット、SAML トークンのような資格情報を使用して認証が実行されます。このすべての資格情報は、個人情報を含んでいる可能性があります。  
+- SOAP メッセージ セキュリティでは、発行者に応じて、ユーザー名とパスワード、X.509 証明書、Kerberos チケット、SAML トークンのような資格情報を使用して認証が実行されます。このすべての資格情報は、個人情報を含んでいる可能性があります。  
   
--   トランスポート セキュリティでは、HTTP 認証方式 (Basic、Digest、Negotiate、Integrated Windows Authorization、NTLM、None、および Anonymous) のような従来のトランスポート認証機構によって認証が実行されます。  
+- トランスポート セキュリティでは、HTTP 認証方式 (Basic、Digest、Negotiate、Integrated Windows Authorization、NTLM、None、および Anonymous) のような従来のトランスポート認証機構によって認証が実行されます。  
   
  認証によって、通信するエンドポイント間にセキュリティで保護されたセッションを確立できます。 このセッションは、セキュリティ セッションの有効期間が切れるまで有効な GUID によって識別されます。 格納されるデータと格納場所を次の表に示します。  
   

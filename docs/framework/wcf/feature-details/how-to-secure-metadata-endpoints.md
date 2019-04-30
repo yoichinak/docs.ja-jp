@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 9f71b6ae-737c-4382-8d89-0a7b1c7e182b
 ms.openlocfilehash: 8481048dd31652a69f9284a44145bd4abfed89bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307529"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047569"
 ---
 # <a name="how-to-secure-metadata-endpoints"></a>方法: セキュリティで保護されたメタデータ エンドポイント
 サービスのメタデータには、悪意のあるユーザーに利用される可能性がある、アプリケーションに関する機密情報が含まれています。 また、サービスのコンシューマーにも、サービスのメタデータを取得するためのセキュリティで保護された機構が必要です。 したがって、状況に応じて、セキュリティで保護されたエンドポイントを使用してメタデータを公開する必要があります。  
@@ -88,9 +88,9 @@ ms.locfileid: "59307529"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  このコード例では、次の名前空間を使用します。  
   
--   <xref:System.ServiceModel?displayProperty=nameWithType>  
+- <xref:System.ServiceModel?displayProperty=nameWithType>  
   
--   <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
+- <xref:System.ServiceModel.Description?displayProperty=nameWithType>  
   
 ## <a name="see-also"></a>関連項目
 

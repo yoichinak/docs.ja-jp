@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], customizing rows
 ms.assetid: d40b53d2-7e7c-48c5-8570-6e79d15c3bbb
 ms.openlocfilehash: 107ec75257907b934412d9ee333b00d5df05a99c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011428"
 ---
 # <a name="how-to-customize-the-appearance-of-rows-in-the-windows-forms-datagridview-control"></a>方法: Windows フォームの DataGridView コントロールの行の外観をカスタマイズする
 <xref:System.Windows.Forms.DataGridView> 行の外観を制御するには、<xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> イベントと <xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType> イベントの一方、または両方を処理します。 これらのイベントは、ユーザーが任意のものだけ描画し、残りは <xref:System.Windows.Forms.DataGridView> コントロールに描画させるようにデザインされています。 たとえば、カスタムの背景を描画する場合は、<xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> イベントを処理し、それぞれの前景の内容は個々のセルに描画させるようにします。 または、セルを自動的に描画させ、<xref:System.Windows.Forms.DataGridView.RowPostPaint?displayProperty=nameWithType> イベントのハンドラーでカスタムの前景の内容を追加することもできます。 さらに、<xref:System.Windows.Forms.DataGridView.RowPrePaint?displayProperty=nameWithType> イベント ハンドラーを使用すれば、セルの描画をすべて無効にし、ユーザー自身ですべてを描画することもできます。  
@@ -28,9 +28,9 @@ ms.locfileid: "59110320"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
+- System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
- この例をコマンドラインから Visual Basic または Visual C# にビルドする方法の詳細については、[コマンドラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+ Visual Basic または Visual C# からこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)、または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
 
 ## <a name="see-also"></a>関連項目
 

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - covariance, Out keyword [Visual Basic]
 ms.assetid: c4418369-1518-4a46-9a1e-054c61038eca
 ms.openlocfilehash: fa14e83af16cd30a72ca1c165596fa9320842fce
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57379225"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053926"
 ---
 # <a name="out-generic-modifier-visual-basic"></a>Out (ジェネリック修飾子) (Visual Basic)
 

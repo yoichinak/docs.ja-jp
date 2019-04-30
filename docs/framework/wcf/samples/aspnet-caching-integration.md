@@ -3,11 +3,11 @@ title: ASP.NET キャッシュ統合
 ms.date: 03/30/2017
 ms.assetid: f581923a-8a72-42fc-bd6a-46de2aaeecc1
 ms.openlocfilehash: 8ed546459479e9986d6bbecf6eaca350d2d73c98
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770023"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002730"
 ---
 # <a name="aspnet-caching-integration"></a>ASP.NET キャッシュ統合
 このサンプルでは、WCF WEB HTTP プログラミング モデルで ASP.NET 出力キャッシュを利用する方法を示します。 ここでは、ASP.NET 出力キャッシュ統合機能について集中的に説明します。  
@@ -34,11 +34,11 @@ ms.locfileid: "59770023"
 ## <a name="to-run-the-sample"></a>サンプルを実行するには  
  このサンプルは、3 つのプロジェクトで構成されます。  
   
--   **[サービス]**:Web アプリケーション プロジェクトを ASP.NET でホストされる WCF HTTP サービスが含まれています。  
+- **[サービス]**:Web アプリケーション プロジェクトを ASP.NET でホストされる WCF HTTP サービスが含まれています。  
   
--   **クライアント**:サービスを呼び出すコンソール アプリケーション プロジェクト。  
+- **クライアント**:サービスを呼び出すコンソール アプリケーション プロジェクト。  
   
--   **一般的な**:クライアントとサービスによって使用される Customer 型を含む共有ライブラリ。  
+- **一般的な**:クライアントとサービスによって使用される Customer 型を含む共有ライブラリ。  
   
  クライアント コンソール アプリケーションが実行されると、クライアントはサービスに要求を発行し、応答からの適切な情報をコンソール ウィンドウに書き込みます。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - 'resources [WPF], '
 ms.assetid: 9f986a6d-7cc8-45ac-bb0f-43177a57649d
 ms.openlocfilehash: 8ad776b8ed18d74a6804b0efd8853c7af6efee0e
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356224"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053484"
 ---
 # <a name="resources-how-to-topics"></a>リソースに関する「方法」トピック
 このセクションのトピックでは、Windows Presentation Foundation (WPF) のリソースを使用する方法について説明します。  

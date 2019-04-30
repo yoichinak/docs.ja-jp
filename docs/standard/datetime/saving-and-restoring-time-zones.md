@@ -1,5 +1,5 @@
 ---
-title: 保存とタイム ゾーンを復元
+title: タイム ゾーンの保存と復元
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -20,13 +20,13 @@ ms.assetid: 4028b310-e7ce-49d4-a646-1e83bfaf6f9d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 9d783f9e0d098e472dcf67aea394804d6eef2662
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54569462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026524"
 ---
-# <a name="saving-and-restoring-time-zones"></a>保存とタイム ゾーンを復元
+# <a name="saving-and-restoring-time-zones"></a>タイム ゾーンの保存と復元
 
 <xref:System.TimeZoneInfo>クラスが定義済みのタイム ゾーン データを取得するレジストリに依存します。 ただし、レジストリは、動的な構造です。 さらに、レジストリを含むタイム ゾーン情報は、現在の年の時刻の調整および変換を処理するには、主に、オペレーティング システムによって使用されます。 これは、正確なタイム ゾーン データに依存するアプリケーションの 2 つの主要な影響があります。
 

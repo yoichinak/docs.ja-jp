@@ -3,11 +3,11 @@ title: NamedPipe アクティベーション
 ms.date: 03/30/2017
 ms.assetid: f3c0437d-006c-442e-bfb0-6b29216e4e29
 ms.openlocfilehash: 3e6084e8334eddc16b115cc1199819c6ab637666
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051846"
 ---
 # <a name="namedpipe-activation"></a>NamedPipe アクティベーション
 

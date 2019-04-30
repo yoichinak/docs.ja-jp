@@ -10,11 +10,11 @@ helpviewer_keywords:
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
 ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59133783"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991017"
 ---
 # <a name="schema-import-and-export"></a>スキーマのインポートとエクスポート
 Windows Communication Foundation (WCF) には、新しいシリアル化エンジンが含まれています、<xref:System.Runtime.Serialization.DataContractSerializer>します。 `DataContractSerializer` は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトと XML を双方向で変換します。 シリアライザー自体だけでなく WCF には、関連付けられているスキーマのインポートとスキーマ エクスポート機構が含まれています。 *スキーマ*は、シリアライザーが生成する、またはデシリアライザーがアクセスできる、XML の構造の正式かつ正確であり、コンピューターが判読できる説明です。 WCF では、スキーマ表現として、これは広く、多数のサードパーティ プラットフォームと相互運用可能な World Wide Web Consortium (W3C) XML スキーマ定義言語 (XSD) を使用します。  
@@ -33,11 +33,11 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
  生成された型がいくつかのデータ コントラクトのベスト プラクティスに従うことに注意してください (ある[ベスト プラクティス。データ コントラクトのバージョン管理](../../../../docs/framework/wcf/best-practices-data-contract-versioning.md))。  
   
--   この型は <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装します。 詳細については、「[上位互換性のあるデータ コントラクト](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)」を参照してください。  
+- この型は <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装します。 詳細については、「[上位互換性のあるデータ コントラクト](../../../../docs/framework/wcf/feature-details/forward-compatible-data-contracts.md)」を参照してください。  
   
--   データ メンバーは、プライベート フィールドをラップするパブリック プロパティとして実装されます。  
+- データ メンバーは、プライベート フィールドをラップするパブリック プロパティとして実装されます。  
   
--   クラスは部分クラスであり、生成されたコードを変更せずに追加を行うことができます。  
+- クラスは部分クラスであり、生成されたコードを変更せずに追加を行うことができます。  
   
  <xref:System.Runtime.Serialization.XsdDataContractExporter> では反転を実行できます。つまり、`DataContractSerializer` によってシリアル化できる型を受け取って XSD スキーマ ドキュメントを生成できます。  
   

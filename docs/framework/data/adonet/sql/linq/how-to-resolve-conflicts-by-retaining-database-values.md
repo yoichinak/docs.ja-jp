@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: b475cf72-9e64-4f6e-99c1-af7737bc85ef
 ms.openlocfilehash: 8440ffe61e254403357970d771aea207a6eb6092
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230110"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037663"
 ---
 # <a name="how-to-resolve-conflicts-by-retaining-database-values"></a>方法: データベース値を維持することで競合を解決する
 変更内容を再送信する前に、データベース内の予期した値と実際の値の違いを調整するために、<xref:System.Data.Linq.RefreshMode.OverwriteCurrentValues> を使用することで、データベース内の値を維持できます。 この場合、オブジェクト モデル内の現在の値は上書きされます。 詳細については、次を参照してください。[オプティミスティック同時実行制御。概要](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)します。  

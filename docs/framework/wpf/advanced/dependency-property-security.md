@@ -11,11 +11,11 @@ helpviewer_keywords:
 - security [WPF], dependency properties
 ms.assetid: d10150ec-90c5-4571-8d35-84bafa2429a4
 ms.openlocfilehash: 85806ee9fb01cd2ca07697230c46a8847fdf8c6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077473"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053549"
 ---
 # <a name="dependency-property-security"></a>依存関係プロパティのセキュリティ
 依存関係プロパティは、一般に、パブリック プロパティと考える必要があります。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のプロパティ システムの性質のため、依存関係プロパティの値に関してセキュリティを保証することはできません。  

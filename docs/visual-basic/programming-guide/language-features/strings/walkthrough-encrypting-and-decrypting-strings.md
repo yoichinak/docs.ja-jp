@@ -8,11 +8,11 @@ helpviewer_keywords:
 - strings [Visual Basic], decrypting
 ms.assetid: 1f51e40a-2f88-43e2-a83e-28a0b5c0d6fd
 ms.openlocfilehash: 1d003df87327e14a6cbd65222f86c3dc4df169ff
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62024483"
 ---
 # <a name="walkthrough-encrypting-and-decrypting-strings-in-visual-basic"></a>チュートリアル: Visual Basic における文字列の暗号化および暗号化
 このチュートリアルは、使用する方法を示します、<xref:System.Security.Cryptography.DESCryptoServiceProvider>暗号化し、Triple Data Encryption Standard の暗号化サービス プロバイダー (CSP) のバージョンを使用して文字列を復号化するクラス (<xref:System.Security.Cryptography.TripleDES>) アルゴリズム。 最初の手順では、3 des アルゴリズムをカプセル化して、base 64 エンコード文字列として、暗号化されたデータを格納する単純なラッパー クラスを作成します。 次に、そのラッパーを使用して、ユーザーの個人データをパブリックにアクセスできるテキスト ファイルを安全に格納します。  

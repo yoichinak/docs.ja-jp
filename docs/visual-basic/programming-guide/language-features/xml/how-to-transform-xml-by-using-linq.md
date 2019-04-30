@@ -6,11 +6,11 @@ helpviewer_keywords:
 - LINQ to XML [Visual Basic], transforming XML
 ms.assetid: 815687f4-0bc2-4c0b-adc6-d78744aa356f
 ms.openlocfilehash: c34d3988c89e0ce07676e9181200fc039010b50a
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59324988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028435"
 ---
 # <a name="how-to-transform-xml-by-using-linq-visual-basic"></a>方法: LINQ (Visual Basic) を使用した XML を変換します。
 [XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)簡単に 1 つのソースから XML を読み取るし、新しい XML 形式に変換します。 変換、コンテンツを取得する LINQ クエリを利用したり、既存のドキュメントの内容を新しい XML 形式に変更できます。  
@@ -160,6 +160,6 @@ ms.locfileid: "59324988"
 - [XML リテラル](../../../../visual-basic/language-reference/xml-literals/index.md)
 - [Visual Basic での XML の操作](../../../../visual-basic/programming-guide/language-features/xml/manipulating-xml.md)
 - [XML](../../../../visual-basic/programming-guide/language-features/xml/index.md)
-- [方法: ファイル、文字列、またはストリームからの XML の読み込み](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
+- [方法: ファイル、文字列、または Stream から XML を読み込む](../../../../visual-basic/programming-guide/language-features/xml/how-to-load-xml-from-a-file-string-or-stream.md)
 - [LINQ](../../../../visual-basic/programming-guide/language-features/linq/index.md)
 - [Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/language-features/linq/introduction-to-linq.md)

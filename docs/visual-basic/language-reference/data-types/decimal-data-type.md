@@ -21,11 +21,11 @@ helpviewer_keywords:
 - identifier type characters [Visual Basic], @
 ms.assetid: 1d855b45-afe2-45b0-a623-96b6f63a43d5
 ms.openlocfilehash: 4d530a8c1f85d2f0045184c05df63849047a8204
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971770"
 ---
 # <a name="decimal-data-type-visual-basic"></a>10 進型 (Decimal) (Visual Basic)
 符号付き 10 の累乗によってスケーリング 96 ビット (12 バイト) の整数値を表す 128 ビット (16 バイト) 値を保持します。 スケール ファクターは小数点の右側にある数字の数を指定します。その範囲は 0 から 28 です。 最大有効値は 0 (数値) の小数点以下桁数、79,228,162,514,264,337,593,543,950,335 +/-(7 +/-.9228162514264337593543950335E + 28)。 小数点以下桁数が 28 7.9228162514264337593543950335 については、最大値は、および 0 以外の最小値は、(1 e ~ 28) +/-+/-0.0000000000000000000000000001。  
@@ -37,13 +37,13 @@ ms.locfileid: "58834102"
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **有効桁数です。** `Decimal` 浮動小数点データ型はありません。 `Decimal`構造体は、符号ビットとスケール ファクターがどの程度の値が 10 進数の割合を指定する整数値のバイナリ整数値を保持します。 このため、`Decimal`番号は、浮動小数点型よりもメモリ内でより正確な表現を持ち (`Single`と`Double`)。  
+- **有効桁数です。** `Decimal` 浮動小数点データ型はありません。 `Decimal`構造体は、符号ビットとスケール ファクターがどの程度の値が 10 進数の割合を指定する整数値のバイナリ整数値を保持します。 このため、`Decimal`番号は、浮動小数点型よりもメモリ内でより正確な表現を持ち (`Single`と`Double`)。  
   
--   **パフォーマンス。** `Decimal`データ型はすべての数値型の最も遅い。 データ型を選択する前にパフォーマンスと精度の重要性を比較検討する必要があります。  
+- **パフォーマンス。** `Decimal`データ型はすべての数値型の最も遅い。 データ型を選択する前にパフォーマンスと精度の重要性を比較検討する必要があります。  
   
--   **拡大します。** `Decimal`拡大変換後のデータ型`Single`または`Double`します。 つまり、変換できる`Decimal`遭遇することがなくこれらの型のいずれかに、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
+- **拡大します。** `Decimal`拡大変換後のデータ型`Single`または`Double`します。 つまり、変換できる`Decimal`遭遇することがなくこれらの型のいずれかに、<xref:System.OverflowException?displayProperty=nameWithType>エラー。  
   
--   **後続のゼロ。** Visual Basic では後続の 0 を格納しません、`Decimal`リテラル。 ただし、`Decimal`変数には、計算に必要なすべての後続のゼロが保持されます。 次に例を示します。  
+- **後続のゼロ。** Visual Basic では後続の 0 を格納しません、`Decimal`リテラル。 ただし、`Decimal`変数には、計算に必要なすべての後続のゼロが保持されます。 次に例を示します。  
   
     ```  
     Dim d1, d2, d3, d4 As Decimal  
@@ -59,9 +59,9 @@ ms.locfileid: "58834102"
   
      d1 2.375、d2 の = = 1.625、d3 4.000、d4 を = = 4  
   
--   **型宣言文字。** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 (`Decimal`) に変換されます。  
+- **型宣言文字。** あるリテラルにリテラルの型文字 `D` を付けると、そのリテラルは `Decimal` に変換されます。 ある識別子に識別子の型文字 `@` を付けると、その識別子は整数型 (`Decimal`) に変換されます。  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Decimal?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="range"></a>範囲  
  使用する必要があります、`D`文字入力すると大きな値を割り当てる、`Decimal`変数または定数。 この要件は、コンパイラがリテラルとして解釈されるので`Long`しない限り、リテラルの型文字以下、リテラルの例を次に示します。  

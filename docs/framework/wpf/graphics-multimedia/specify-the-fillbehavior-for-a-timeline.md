@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Timelines [WPF], FillBehavior property
 ms.assetid: db805f59-d513-4dac-af15-47005dae3199
 ms.openlocfilehash: 9f03c5b8d4585c32e0a9f119649dd15a23523033
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091125"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973668"
 ---
 # <a name="how-to-specify-the-fillbehavior-for-a-timeline-that-has-reached-the-end-of-its-active-period"></a>方法: アクティブな期間の末尾に到達したタイムラインの FillBehavior を指定する
 この例は、指定する方法を示します、 <xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A> 、非アクティブの<xref:System.Windows.Media.Animation.Timeline>アニメーション プロパティの。  

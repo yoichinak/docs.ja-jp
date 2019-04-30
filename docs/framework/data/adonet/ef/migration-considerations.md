@@ -3,11 +3,11 @@ title: 移行に関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
 ms.openlocfilehash: b6224dcf883daef7b35ef50b7556fc568e433a46
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59310422"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034035"
 ---
 # <a name="migration-considerations-entity-framework"></a>移行に関する注意事項 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework には、既存のアプリケーションにとっていくつかの利点があります。 特に重要な利点の 1 つが、概念モデルを使用して、アプリケーションで使用するデータ構造をデータ ソースのスキーマから分離できることです。 これにより、ストレージ モデルやデータ ソース自体の将来の変更が容易になり、その変更を補うための変更をアプリケーションに加える必要がなくなります。 使用する利点の詳細については、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を参照してください[Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)と[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)します。  
@@ -17,13 +17,13 @@ ms.locfileid: "59310422"
 ## <a name="general-migration-considerations"></a>全般的な移行の注意点  
  アプリケーションを [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] に移行する際には次の点に注意してください。  
   
--   使用するアプリケーション、 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 3.5 SP1 以降に移行できる、Entity Framework アプリケーションで使用されるデータ ソースのデータ プロバイダーは、Entity Framework をサポートしている限り、します。  
+- 使用するアプリケーション、 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 3.5 SP1 以降に移行できる、Entity Framework アプリケーションで使用されるデータ ソースのデータ プロバイダーは、Entity Framework をサポートしている限り、します。  
   
--   データ ソース プロバイダーが Entity Framework をサポートしていても、そのプロバイダーのすべての機能が Entity Framework でサポートされるとは限りません。  
+- データ ソース プロバイダーが Entity Framework をサポートしていても、そのプロバイダーのすべての機能が Entity Framework でサポートされるとは限りません。  
   
--   大規模なアプリケーションや複雑なアプリケーションの場合、アプリケーション全体を一度に Entity Framework に移行する必要はありません。 ただし、Entity Framework を使用しない部分がアプリケーションにある場合、それらの部分については、データ ソースが変更された場合に変更が必要になります。  
+- 大規模なアプリケーションや複雑なアプリケーションの場合、アプリケーション全体を一度に Entity Framework に移行する必要はありません。 ただし、Entity Framework を使用しない部分がアプリケーションにある場合、それらの部分については、データ ソースが変更された場合に変更が必要になります。  
   
--   [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] データ プロバイダーを使用してデータ ソースにアクセスするため、Entity Framework が使用するデータ プロバイダー接続をアプリケーションの他の部分と共有できます  (たとえば、Entity Framework は SqlClient プロバイダーを使用して SQL Server データベースにアクセスします)。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。  
+- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] データ プロバイダーを使用してデータ ソースにアクセスするため、Entity Framework が使用するデータ プロバイダー接続をアプリケーションの他の部分と共有できます  (たとえば、Entity Framework は SqlClient プロバイダーを使用して SQL Server データベースにアクセスします)。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。  
   
 ## <a name="common-migration-tasks"></a>共通の移行タスク  
  既存アプリケーションの [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] への移行パスは、アプリケーションの種類と既存のデータ アクセス計画の両方に依存します。 ただし、以下のタスクは、既存のアプリケーションを [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] に移行する際に常に実行する必要があります。  

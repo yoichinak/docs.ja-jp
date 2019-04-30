@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
 ms.openlocfilehash: 67c87b28f04b028f329663d6cf8215370a00ef2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184822"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009171"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールにおける新規レコード行の使用
 使用すると、<xref:System.Windows.Forms.DataGridView>アプリケーションでデータを編集するには、多くの場合することをデータ ストアに新しいデータ行を追加する機能をユーザーに提供します。 <xref:System.Windows.Forms.DataGridView>コントロールは、最後の行として常に表示されている、新しいレコードの行を指定してこの機能をサポートしています。 これは、行のヘッダーにアスタリスク (*) 記号でマークされます。 次のセクションでは、新しいレコードの行でプログラムが有効にした場合の考慮事項について説明します。  
@@ -29,9 +29,9 @@ ms.locfileid: "59184822"
 ## <a name="the-rows-collection"></a>行のコレクション  
  新しいレコードの行が含まれている、<xref:System.Windows.Forms.DataGridView>コントロールの<xref:System.Windows.Forms.DataGridView.Rows%2A>コレクションが、2 つの点では動作が異なります。  
   
--   新しいレコードの行を削除できません、<xref:System.Windows.Forms.DataGridView.Rows%2A>コレクション プログラムを使用します。 <xref:System.InvalidOperationException>が、これを試行した場合にスローされます。 また、ユーザーは、新しいレコードの行を削除できません。 <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType>メソッドでは、この行からは削除されません、<xref:System.Windows.Forms.DataGridView.Rows%2A>コレクション。  
+- 新しいレコードの行を削除できません、<xref:System.Windows.Forms.DataGridView.Rows%2A>コレクション プログラムを使用します。 <xref:System.InvalidOperationException>が、これを試行した場合にスローされます。 また、ユーザーは、新しいレコードの行を削除できません。 <xref:System.Windows.Forms.DataGridViewRowCollection.Clear%2A?displayProperty=nameWithType>メソッドでは、この行からは削除されません、<xref:System.Windows.Forms.DataGridView.Rows%2A>コレクション。  
   
--   新しいレコードの行の後に行を追加されません。 <xref:System.InvalidOperationException>が、これを試行した場合に発生します。 その結果、新しいレコードの行は常に最後の行で、<xref:System.Windows.Forms.DataGridView>コントロール。 メソッドを<xref:System.Windows.Forms.DataGridViewRowCollection>行を追加する-<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>、 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>、および<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— すべてメソッドを呼び出す挿入内部的に新しいレコードの行が存在する場合。  
+- 新しいレコードの行の後に行を追加されません。 <xref:System.InvalidOperationException>が、これを試行した場合に発生します。 その結果、新しいレコードの行は常に最後の行で、<xref:System.Windows.Forms.DataGridView>コントロール。 メソッドを<xref:System.Windows.Forms.DataGridViewRowCollection>行を追加する-<xref:System.Windows.Forms.DataGridViewRowCollection.Add%2A>、 <xref:System.Windows.Forms.DataGridViewRowCollection.AddCopy%2A>、および<xref:System.Windows.Forms.DataGridViewRowCollection.AddCopies%2A>— すべてメソッドを呼び出す挿入内部的に新しいレコードの行が存在する場合。  
   
 ## <a name="visual-customization-of-the-row-for-new-records"></a>新しいレコードの行のビジュアルのカスタマイズ  
  指定した行に基づいて新しいレコードの行が作成されたときに、<xref:System.Windows.Forms.DataGridView.RowTemplate%2A>プロパティ。 この行に指定されていないセルのスタイルは、その他のプロパティから継承されます。 セル スタイルの継承の詳細については、次を参照してください。 [Windows フォームの DataGridView コントロールのセル スタイル](cell-styles-in-the-windows-forms-datagridview-control.md)します。  

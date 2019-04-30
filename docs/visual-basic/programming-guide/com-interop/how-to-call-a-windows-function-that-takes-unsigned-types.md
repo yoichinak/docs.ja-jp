@@ -15,11 +15,11 @@ helpviewer_keywords:
 - unsigned types [Visual Basic], using
 ms.assetid: c2c0e712-8dc2-43b9-b4c6-345fbb02e7ce
 ms.openlocfilehash: d1a679242f89c17e58a837ac2d356e1594972fb3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57374558"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022364"
 ---
 # <a name="how-to-call-a-windows-function-that-takes-unsigned-types-visual-basic"></a>方法: 符号なしの型 (Visual Basic) を取得する Windows 関数を呼び出す
 
@@ -76,7 +76,7 @@ ms.locfileid: "57374558"
     > Windows アプリケーション プログラミング インターフェイス (API) など、アンマネージ コードに呼び出しを行う、潜在的なセキュリティ リスクにコードを公開します。
 
     > [!IMPORTANT]
-    > Windows API を呼び出すと、アンマネージ コード アクセス許可が必要です。 詳細については、<xref:System.Security.Permissions.SecurityPermission>と[コード アクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))を参照してください。
+    > Windows API を呼び出すと、アンマネージ コード アクセス許可が必要です。 詳細については、次を参照してください。<xref:System.Security.Permissions.SecurityPermission>と[コード アクセス許可](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h846e9b3(v=vs.100))します。
 
 ## <a name="see-also"></a>関連項目
 

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - COM objects, walkthroughs
 ms.assetid: 7b07a463-bc72-4392-9ba0-9dfcb697a44f
 ms.openlocfilehash: 97e917d568b31860979e54598350d1ae7a6fdb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331898"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022312"
 ---
 # <a name="walkthrough-creating-com-objects-with-visual-basic"></a>チュートリアル: Visual Basic で COM オブジェクトの作成
 新しいアプリケーションまたはコンポーネントを作成する場合は、.NET Framework アセンブリを作成することをお勧めします。 ただし、Visual Basic も簡単に .NET Framework コンポーネントを COM に公開 これにより、COM コンポーネントを必要とする以前のアプリケーション スイートの新しいコンポーネントを提供することができます。 Visual Basic を使用して公開する方法についても説明[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]COM クラス テンプレートの有無にかかわらず、COM オブジェクトとしてのオブジェクト。  

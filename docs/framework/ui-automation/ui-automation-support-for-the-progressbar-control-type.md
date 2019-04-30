@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation, Progress Bar control type
 ms.assetid: 302e778c-24b0-4789-814a-c8d37cf53a5f
 ms.openlocfilehash: 7a3347aa0fa272ea0b93ac2ad504943f37c65b2a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217732"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996698"
 ---
 # <a name="ui-automation-support-for-the-progressbar-control-type"></a>UI オートメーションによる ProgressBar コントロール型のサポート
 > [!NOTE]

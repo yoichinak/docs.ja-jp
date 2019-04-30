@@ -30,11 +30,11 @@ helpviewer_keywords:
 - XAML [WPF], property element syntax
 ms.assetid: 67cce290-ca26-4c41-a797-b68aabc45479
 ms.openlocfilehash: bf4118c6e811f409715b7b6684851b8b3e8bbb25
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298891"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981371"
 ---
 # <a name="xaml-syntax-in-detail"></a>XAML 構文の詳細
 このトピックでは、XAML 構文の要素の説明に使用される用語を定義します。 これらの用語は、具体的には、XAML または System.Xaml レベルでの XAML 言語のサポートを有効になっている XAML の基本的な概念を使用する他のフレームワークも、このドキュメントは、WPF のドキュメントの両方の残りの部分でよく使用されます。 このトピックでは、トピックで導入された基本的な用語で展開[XAML の概要 (WPF)](xaml-overview-wpf.md)します。  
@@ -58,9 +58,9 @@ ms.locfileid: "59298891"
 ## <a name="object-element-syntax"></a>オブジェクト要素構文  
  *オブジェクト要素構文*XML 要素を宣言することで、CLR クラスまたは構造体をインスタンス化する XAML マークアップ構文です。 この構文では、HTML などの他のマークアップ言語の要素の構文に似ています。 オブジェクト要素構文は、左の山かっこで始まります (\<)、クラスまたはインスタンス化されている構造体の型名ですぐにその後にします。 0 個以上のスペースは、型の名前、および 0 個以上の属性を宣言することも、オブジェクト要素上の各属性の名前を分離する 1 つまたは複数のスペースを含む ="value"ペア。 最後に、次のいずれかが true でする必要があります。  
   
--   要素とタグは、右の山かっこ (>) をすぐに続くフォワード スラッシュ (/) で閉じる必要があります。  
+- 要素とタグは、右の山かっこ (>) をすぐに続くフォワード スラッシュ (/) で閉じる必要があります。  
   
--   開始タグは、右の山かっこ (>) で完了する必要があります。 その他のオブジェクト要素、プロパティ要素、または内部のテキストは、開始タグをフォローできます。 通常、どのようなコンテンツをここで含めることが正確には要素のオブジェクト モデルによって制限されます。 対応するオブジェクト要素のタグを終了する必要がありますも適切な入れ子でが存在し、他の開始と終了タグのペアとバランスを取る。  
+- 開始タグは、右の山かっこ (>) で完了する必要があります。 その他のオブジェクト要素、プロパティ要素、または内部のテキストは、開始タグをフォローできます。 通常、どのようなコンテンツをここで含めることが正確には要素のオブジェクト モデルによって制限されます。 対応するオブジェクト要素のタグを終了する必要がありますも適切な入れ子でが存在し、他の開始と終了タグのペアとバランスを取る。  
   
  .NET で実装されている XAML では、オブジェクトの要素を型、プロパティまたはイベント、および CLR 名前空間とアセンブリに XAML 名前空間への属性にマッピングする規則のセットがあります。 WPF と .NET Framework では、XAML オブジェクト要素にマップされる[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]で定義された型には、アセンブリが参照されているし、属性、それらの型のメンバーにマップされます。 XAML で CLR 型を参照する場合も、その型の継承されたメンバーへのアクセスがあります。  
   
@@ -154,11 +154,11 @@ ms.locfileid: "59298891"
 ## <a name="collection-syntax"></a>コレクションの構文  
  XAML 仕様では、XAML プロセッサ実装で、値の型がコレクションのプロパティを識別する必要があります。 .NET での一般的な XAML プロセッサ実装をマネージ コードと、CLR に基づいておりで、次のいずれかのコレクション型を識別します。  
   
--   実装の入力<xref:System.Collections.IList>します。  
+- 実装の入力<xref:System.Collections.IList>します。  
   
--   実装の入力<xref:System.Collections.IDictionary>します。  
+- 実装の入力<xref:System.Collections.IDictionary>します。  
   
--   型から派生して<xref:System.Array>(XAML での配列の詳細については、次を参照してください[X:array マークアップ拡張機能](../../xaml-services/x-array-markup-extension.md)。)。  
+- 型から派生して<xref:System.Array>(XAML での配列の詳細については、次を参照してください[X:array マークアップ拡張機能](../../xaml-services/x-array-markup-extension.md)。)。  
   
  プロパティの型がコレクションの場合、推論されるコレクション型をマークアップにはオブジェクト要素として指定する必要はありません。 代わりに、コレクション内の項目となる要素は、プロパティ要素の 1 つまたは複数の子要素として指定されます。 それらの各項目が読み込み時にオブジェクトを評価し、呼び出すことによって、コレクションに追加、`Add`暗黙のコレクションのメソッド。 たとえば、<xref:System.Windows.Style.Triggers%2A>プロパティの<xref:System.Windows.Style>は特殊なコレクション型を受け取ります<xref:System.Windows.TriggerCollection>、実装する<xref:System.Collections.IList>します。 インスタンスを作成する必要はありません、<xref:System.Windows.TriggerCollection>マークアップ内のオブジェクト要素。 1 つまたは複数を指定する代わりに、<xref:System.Windows.Trigger>項目内の要素として、`Style.Triggers`プロパティ要素を<xref:System.Windows.Trigger>(または派生クラス) は厳密に型指定されたと暗黙的な項目の種類として期待される型です。 <xref:System.Windows.TriggerCollection>。  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59298891"
   
  添付プロパティは、一見プロパティ要素構文のような構文を使用で指定することも、 *typeName*.*propertyName*の組み合わせ。 次の 2 つの重要な違いがあります。  
   
--   使用することができます、 *typeName*.*propertyName*属性構文で添付プロパティを設定するときに、偶数の組み合わせ。 添付プロパティは、唯一のケースはプロパティ名を修飾する、属性構文の要件です。  
+- 使用することができます、 *typeName*.*propertyName*属性構文で添付プロパティを設定するときに、偶数の組み合わせ。 添付プロパティは、唯一のケースはプロパティ名を修飾する、属性構文の要件です。  
   
--   添付プロパティのプロパティ要素構文を使用することもできます。 ただし、一般的なプロパティ要素構文での*typeName*プロパティ要素が含まれるオブジェクトの要素を指定します。 添付プロパティを指定する場合、 *typeName*はオブジェクト要素ではなく、添付プロパティを定義するクラスです。  
+- 添付プロパティのプロパティ要素構文を使用することもできます。 ただし、一般的なプロパティ要素構文での*typeName*プロパティ要素が含まれるオブジェクトの要素を指定します。 添付プロパティを指定する場合、 *typeName*はオブジェクト要素ではなく、添付プロパティを定義するクラスです。  
   
 <a name="attached_events"></a>   
 ## <a name="attached-events"></a>アタッチされるイベント  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 1b84b852-3cad-41a7-8077-149a70d50c8b
 ms.openlocfilehash: f82e347ecdb3c69cee3749855d1e4cb457a460f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59112958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033614"
 ---
 # <a name="how-to-turn-off-deferred-loading"></a>方法: 遅延読み込みをオフにする
 <xref:System.Data.Linq.DataContext.DeferredLoadingEnabled%2A> を `false` に設定すると、遅延読み込みをオフにできます。 詳細については、次を参照してください。[遅延読み込みと即時読み込み](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)します。  

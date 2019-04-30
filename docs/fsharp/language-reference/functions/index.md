@@ -3,11 +3,11 @@ title: 関数
 description: 関数の F# と、F# が共通の関数型プログラミング構成要素をどのようにがサポートする方法について説明します。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6e9ef916388745d2dd6874295d06dca656971b3f
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53610919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996789"
 ---
 # <a name="functions"></a>関数
 
@@ -142,7 +142,7 @@ F# では、すべての関数が値と見なされ、実際に、*関数値*と
 
 [!code-fsharp[Main](../../../../samples/snippets/fsharp/lang-ref-1/snippet112.fs)]
 
-ラムダ式を定義するには、`fun` キーワードを使用します。 ラムダ式は関数定義に似ていますが、引数リストと関数本体の区切りに `=` トークンではなく `->` トークンを使用する点が異なります。 通常の関数定義と同様に、引数の型は、推論されるようにすることも、明示的に指定することもできます。ラムダ式の戻り値の型も、本体の最後の式の型から推論されます。 詳細については、[ラムダ式。`fun`キーワード](../functions/lambda-expressions-the-fun-keyword.md)を参照してください。
+ラムダ式を定義するには、`fun` キーワードを使用します。 ラムダ式は関数定義に似ていますが、引数リストと関数本体の区切りに `=` トークンではなく `->` トークンを使用する点が異なります。 通常の関数定義と同様に、引数の型は、推論されるようにすることも、明示的に指定することもできます。ラムダ式の戻り値の型も、本体の最後の式の型から推論されます。 詳細については、次を参照してください。[ラムダ式。`fun`キーワード](../functions/lambda-expressions-the-fun-keyword.md)します。
 
 ## <a name="function-composition-and-pipelining"></a>関数合成とパイプライン処理
 

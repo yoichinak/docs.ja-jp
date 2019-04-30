@@ -11,11 +11,11 @@ helpviewer_keywords:
 - tree nodes in TreeView control [Windows Forms], shortcut menus
 ms.assetid: a23c6752-fd8f-44ad-b781-bab37962fc7c
 ms.openlocfilehash: f818cccb3103866af993f1aff527a9c1a7c82109
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294174"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053016"
 ---
 # <a name="how-to-attach-a-shortcut-menu-to-a-treeview-node"></a>方法: ショートカット メニューを TreeView ノードに追加する
 Windows フォーム<xref:System.Windows.Forms.TreeView>コントロールは、ファイルと Windows エクスプ ローラーの左側のウィンドウに表示されるフォルダーと同様に、ノードの階層を表示します。 設定して、<xref:System.Windows.Forms.Control.ContextMenuStrip%2A>プロパティに提供できる状況依存の操作、ユーザーを右クリックすると、<xref:System.Windows.Forms.TreeView>コントロール。 関連付けることによって、<xref:System.Windows.Forms.ContextMenuStrip>個々 のコンポーネント<xref:System.Windows.Forms.TreeNode>項目のショートカット メニューの機能レベルをカスタマイズを追加することができます、<xref:System.Windows.Forms.TreeView>コントロール。  

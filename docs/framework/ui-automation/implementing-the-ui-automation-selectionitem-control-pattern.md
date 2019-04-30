@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control patterns, Selection Item
 ms.assetid: 76b0949a-5b23-4cfc-84cc-154f713e2e12
 ms.openlocfilehash: 00a2dae818091c20649deae79c093a61b6e93732
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183756"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61983256"
 ---
 # <a name="implementing-the-ui-automation-selectionitem-control-pattern"></a>UI オートメーション SelectionItem コントロール パターンの実装
 > [!NOTE]
@@ -25,7 +25,7 @@ ms.locfileid: "59183756"
 ## <a name="implementation-guidelines-and-conventions"></a>実装のガイドラインと規則  
  Selection Item コントロール パターンを実装する場合は、次のガイドラインと規則に留意してください。  
   
--   <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>[画面のプロパティ] **ダイアログ ボックスの** [画面解像度] **スライダーなどの** を実装する子コントロールを管理する単一選択コントロールは <xref:System.Windows.Automation.Provider.ISelectionProvider> を実装する必要があり、その子は <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> と <xref:System.Windows.Automation.Provider.ISelectionItemProvider>の両方を実装する必要があります。  
+- <xref:System.Windows.Automation.Provider.IRawElementProviderFragmentRoot>[画面のプロパティ] **ダイアログ ボックスの** [画面解像度] **スライダーなどの** を実装する子コントロールを管理する単一選択コントロールは <xref:System.Windows.Automation.Provider.ISelectionProvider> を実装する必要があり、その子は <xref:System.Windows.Automation.Provider.IRawElementProviderFragment> と <xref:System.Windows.Automation.Provider.ISelectionItemProvider>の両方を実装する必要があります。  
   
 <a name="Required_Members_for_the_IValueProvider_Interface"></a>   
 ## <a name="required-members-for-iselectionitemprovider"></a>ISelectionItemProvider の必須メンバー  
@@ -38,7 +38,7 @@ ms.locfileid: "59183756"
 |<xref:System.Windows.Automation.Provider.ISelectionProvider.GetSelection%2A>|メソッド|なし|  
 |<xref:System.Windows.Automation.SelectionPatternIdentifiers.InvalidatedEvent>|event|コンテナー内の選択が大幅に変更され、 <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent> 定数で許可されたよりも多くの <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent> イベントと <xref:System.Windows.Automation.Provider.AutomationInteropProvider.InvalidateLimit> イベントを送信する必要がある場合に発生します。|  
   
--   場合の結果、 <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>、 <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>、または<xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A>は選択した項目を 1 つ、<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>発生する必要があります。 それ以外の場合、送信<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>に応じて。  
+- 場合の結果、 <xref:System.Windows.Automation.SelectionItemPattern.Select%2A>、 <xref:System.Windows.Automation.SelectionItemPattern.AddToSelection%2A>、または<xref:System.Windows.Automation.SelectionItemPattern.RemoveFromSelection%2A>は選択した項目を 1 つ、<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementSelectedEvent>発生する必要があります。 それ以外の場合、送信<xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementAddedToSelectionEvent> /  <xref:System.Windows.Automation.SelectionItemPatternIdentifiers.ElementRemovedFromSelectionEvent>に応じて。  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>例外  

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], unbound data
 ms.assetid: f7bdc4d8-ba8e-421b-ad62-82d936f01372
 ms.openlocfilehash: 40308f7e8cc12dcff5b7d4393645f6a9007cc2b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59215839"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009202"
 ---
 # <a name="how-to-add-an-unbound-column-to-a-data-bound-windows-forms-datagridview-control"></a>方法: データバインドされた Windows フォーム DataGridView コントロールに非バインド列を追加する
 <xref:System.Windows.Forms.DataGridView> コントロールに表示するデータは、通常なんらかのデータ ソースから取得されるデータですが、データ ソース以外からのデータの列を表示する必要が生じることがあります。 この種類の列は、非バインド列と呼ばれます。 非バインド列の形式はさまざまです。 しばしば、データ行の詳細へのアクセスに使用されます。  
@@ -30,9 +30,9 @@ ms.locfileid: "59215839"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   
--   <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
+- <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 

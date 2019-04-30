@@ -7,11 +7,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], display modes
 ms.assetid: 9755a030-3f3f-4705-a661-ba5a48a81875
 ms.openlocfilehash: 673780909f6d66168548893e99d79bbfec70a0e0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079696"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011426"
 ---
 # <a name="data-display-modes-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでのデータ表示モード
 <xref:System.Windows.Forms.DataGridView>コントロールは、次の 3 つの異なるモードでデータを表示することができます。 バインド、バインドされていない、および仮想です。 要件に基づいて最も適したモードを選択します。  

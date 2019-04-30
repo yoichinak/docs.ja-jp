@@ -3,11 +3,11 @@ title: ルーティングの概要
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
 ms.openlocfilehash: d0f07d0dd171de428f7d556d84dfda04e35880b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991095"
 ---
 # <a name="routing-introduction"></a>ルーティングの概要
 ルーティング サービスは、メッセージの内容を基にメッセージをルーティングできる、プラグ可能な汎用の SOAP 中継局を提供します。 ルーティング サービスを使用すると、サービスの集計、サービスのバージョン管理、優先度ルーティング、マルチキャスト ルーティングなどのシナリオを実装できる複雑なルーティング ロジックを作成できます。 また、ルーティング サービスは、バックアップ エンドポイントのリストを設定できるエラー処理機能も提供します。バックアップ エンドポイントは、プライマリ送信先エンドポイントへの送信時に障害が発生した場合に、メッセージの送信先になります。  
@@ -156,9 +156,9 @@ rc.FilterTable.Add(new MatchAllMessageFilter(), endpointList);
   
  多くのルーティング サービス構成では、特定の 1 つのエンドポイントにのみメッセージをルーティングする排他的なフィルター ロジックが使用されますが、特定のメッセージを、複数の送信先エンドポイントにルーティングすることが必要な場合もあります。 メッセージを複数の送信先にマルチキャストするには、次の条件を満たす必要があります。  
   
--   要求への応答時にクライアント アプリケーションが受信できるのは 1 つの応答のみであるため、チャネル形状が要求/応答でない (一方向または二重のどちらでもよい) ことが必要である。  
+- 要求への応答時にクライアント アプリケーションが受信できるのは 1 つの応答のみであるため、チャネル形状が要求/応答でない (一方向または二重のどちらでもよい) ことが必要である。  
   
--   複数のフィルターが、メッセージの評価時に `true` を返す必要がある。  
+- 複数のフィルターが、メッセージの評価時に `true` を返す必要がある。  
   
  これらの条件が満たされる場合は、メッセージが、`true` に評価されたすべてのフィルターのすべてのエンドポイントにルーティングされます。 次の例は、結果、メッセージ内のエンドポイント アドレスがある場合、両方のエンドポイントにルーティングされるメッセージ ルーティングの構成を定義 `http://localhost:8000/routingservice/router/rounding` です。  
   
@@ -195,33 +195,33 @@ rc.FilterTable.Add(new EndpointAddressMessageFilter(new EndpointAddress(
   
  **要求の処理**  
   
--   取得、 **MessageVersion**送信バインドおよびチャネルの。  
+- 取得、 **MessageVersion**送信バインドおよびチャネルの。  
   
--   元のメッセージの本文のリーダーを取得します。  
+- 元のメッセージの本文のリーダーを取得します。  
   
--   新しいメッセージが作成、同じアクション、本文のリーダー、および新しい**MessageVersion**します。  
+- 新しいメッセージが作成、同じアクション、本文のリーダー、および新しい**MessageVersion**します。  
   
--   場合<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Addressing.None**、From、FaultTo、するをコピーし、新しいメッセージに RelatesTo ヘッダー。  
+- 場合<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Addressing.None**、From、FaultTo、するをコピーし、新しいメッセージに RelatesTo ヘッダー。  
   
--   新しいメッセージにすべてのメッセージ プロパティをコピーします。  
+- 新しいメッセージにすべてのメッセージ プロパティをコピーします。  
   
--   応答の処理時に使用するために、元の要求メッセージを保存します。  
+- 応答の処理時に使用するために、元の要求メッセージを保存します。  
   
--   新しい要求メッセージを返します。  
+- 新しい要求メッセージを返します。  
   
  **応答の処理**  
   
--   取得、 **MessageVersion**の元の要求メッセージ。  
+- 取得、 **MessageVersion**の元の要求メッセージ。  
   
--   受信した応答メッセージの本文のリーダーを取得します。  
+- 受信した応答メッセージの本文のリーダーを取得します。  
   
--   同じアクションでは、本文のリーダー、新しい応答メッセージを作成し、 **MessageVersion**の元の要求メッセージ。  
+- 同じアクションでは、本文のリーダー、新しい応答メッセージを作成し、 **MessageVersion**の元の要求メッセージ。  
   
--   場合<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Addressing.None**、From、FaultTo、するをコピーし、新しいメッセージに RelatesTo ヘッダー。  
+- 場合<xref:System.ServiceModel.Channels.MessageVersion.Addressing%2A>! = **Addressing.None**、From、FaultTo、するをコピーし、新しいメッセージに RelatesTo ヘッダー。  
   
--   新しいメッセージにメッセージ プロパティをコピーします。  
+- 新しいメッセージにメッセージ プロパティをコピーします。  
   
--   新しい応答メッセージを返します。  
+- 新しい応答メッセージを返します。  
   
  既定で、 **SoapProcessingBehavior**でクライアント エンドポイントが自動的に追加、<xref:System.ServiceModel.Routing.RoutingBehavior>サービスの開始時ただし、を使用してすべてのクライアント エンドポイントに SOAP 処理を追加するかどうかを制御できる、。<xref:System.ServiceModel.Routing.RoutingConfiguration.SoapProcessingEnabled%2A>プロパティ。 また、この動作を直接特定のエンドポイントに追加したり、SOAP 処理をより細かく制御する必要がある場合に、エンドポイント レベルでこの動作を無効にしたりすることもできます。  
   

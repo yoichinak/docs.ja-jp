@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 62efb546-c898-408f-af21-36e7c6fed217
 ms.openlocfilehash: 7edc60c7ab8510aadd9ac273529a88adeb41352a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124281"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037532"
 ---
 # <a name="return-the-set-difference-between-two-sequences"></a>2 つのシーケンスの差集合の取得
 2 つのシーケンスの差集合を返すには、<xref:System.Linq.Queryable.Except%2A> 演算子を使用します。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - encoder parameters [Windows Forms], determining supported
 ms.assetid: f47ae459-e3ce-4d41-a140-2f6c6aea3f44
 ms.openlocfilehash: 2626eee239d9876125340dd133c5a9b3e45c3d7e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59204576"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004329"
 ---
 # <a name="how-to-determine-the-parameters-supported-by-an-encoder"></a>方法: エンコーダーがサポートするパラメーターの確認
 品質と圧縮レベルでなどの画像のパラメーターを調整することができますが、パラメーターが指定したイメージ エンコーダーでサポートされているを知る必要があります。 <xref:System.Drawing.Image>クラスには、<xref:System.Drawing.Image.GetEncoderParameterList%2A>メソッドどのイメージ パラメーターを特定のエンコーダーのサポートを確認できるようにします。 GUID では、エンコーダーを指定します。 <xref:System.Drawing.Image.GetEncoderParameterList%2A>メソッドの配列を返します<xref:System.Drawing.Imaging.EncoderParameter>オブジェクト。  
@@ -26,9 +26,9 @@ ms.locfileid: "59204576"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   Windows フォーム アプリケーション  
+- Windows フォーム アプリケーション  
   
--   A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
+- A<xref:System.Windows.Forms.PaintEventArgs>はのパラメーター<xref:System.Windows.Forms.PaintEventHandler>します。  
   
 ## <a name="see-also"></a>関連項目
 

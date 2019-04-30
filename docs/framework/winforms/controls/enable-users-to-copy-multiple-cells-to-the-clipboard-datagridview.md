@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying multiple cells
 ms.assetid: fd0403b2-d0e3-4ae0-839c-0f737e1eb4a9
 ms.openlocfilehash: f7b6c37db0935dae703e9641b2c2605b2ec88126
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972043"
 ---
 # <a name="how-to-enable-users-to-copy-multiple-cells-to-the-clipboard-from-the-windows-forms-datagridview-control"></a>方法: ユーザーが、Windows フォーム DataGridView コントロールからクリップボードに複数のセルをコピーできるようにする
 セルのコピーを有効にすると、<xref:System.Windows.Forms.DataGridView> コントロール内のデータを <xref:System.Windows.Forms.Clipboard> 経由で他のアプリケーションが簡単に利用できるようになります。 選択したセルの値は文字列に変換されてクリップボードに追加され、メモ帳や Excel などのアプリケーションにはタブ区切りのテキスト値として貼り付けられ、Word などのアプリケーションには HTML 形式のテーブルとして貼り付けられます。  
@@ -26,7 +26,7 @@ ms.locfileid: "59142234"
   
 ### <a name="to-enable-cell-copying"></a>セルのコピーを有効にするには  
   
--   <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A?displayProperty=nameWithType> プロパティを設定します。  
+- <xref:System.Windows.Forms.DataGridView.ClipboardCopyMode%2A?displayProperty=nameWithType> プロパティを設定します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewClipboardDemo#15](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewClipboardDemo/CS/datagridviewclipboarddemo.cs#15)]
      [!code-vb[System.Windows.Forms.DataGridViewClipboardDemo#15](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewClipboardDemo/VB/datagridviewclipboarddemo.vb#15)]  
@@ -40,9 +40,9 @@ ms.locfileid: "59142234"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  このコードには、次のものが必要です。  
   
--   N:System アセンブリおよび N:System.Windows.Forms アセンブリへの参照。  
+- N:System アセンブリおよび N:System.Windows.Forms アセンブリへの参照。  
   
- Visual Basic または Visual C# のコマンドラインからこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 この例は、新しいプロジェクトにコードを貼り付けることによって Visual Studio で構築することもできます。  
+ Visual Basic または Visual C# からこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)、または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 

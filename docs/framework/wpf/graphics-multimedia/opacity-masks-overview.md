@@ -7,11 +7,11 @@ helpviewer_keywords:
 - opacity [WPF], masks
 ms.assetid: 22367fab-5f59-4583-abfd-db2bf86eaef7
 ms.openlocfilehash: 84525e58487ce9b0bc26f77ff8dbced734bc90a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080086"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008474"
 ---
 # <a name="opacity-masks-overview"></a>不透明度マスクの概要
 不透明度マスクを使用すると、要素またはビジュアルの一部を透明にするか、部分的に透明にすることができます。 適用する不透明度マスクを作成する、<xref:System.Windows.Media.Brush>を<xref:System.Windows.UIElement.OpacityMask%2A>要素のプロパティまたは<xref:System.Windows.Media.Visual>します。  ブラシが要素またはビジュアルにマップされ、ブラシの各ピクセルの不透明度値を使用して、要素またはビジュアルの対応する各ピクセルの不透明度が決まります。  
@@ -36,21 +36,21 @@ ms.locfileid: "59080086"
 ## <a name="creating-an-opacity-mask"></a>不透明度マスクの作成  
  作成する不透明度マスクを作成する、<xref:System.Windows.Media.Brush>に適用し、<xref:System.Windows.UIElement.OpacityMask%2A>要素またはビジュアルのプロパティ。 任意の型を使用する<xref:System.Windows.Media.Brush>不透明度マスクとして。  
   
--   <xref:System.Windows.Media.LinearGradientBrush>, <xref:System.Windows.Media.RadialGradientBrush>:要素またはビジュアルから徐々 に使用されます。  
+- <xref:System.Windows.Media.LinearGradientBrush>、<xref:System.Windows.Media.RadialGradientBrush>:要素またはビジュアルから徐々 に使用されます。  
   
      次の図は、<xref:System.Windows.Media.LinearGradientBrush>不透明度マスクとして使用します。  
   
      ![LinearGradientBrush 不透明度マスクを持つオブジェクト](./media/wcpsdk-graphicsmm-brushes-lineagradientopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_lineagradientopacitymasksingle")  
 LinearGradientBrush 不透明度マスクの例  
   
--   <xref:System.Windows.Media.ImageBrush>:テクスチャおよびエッジ効果のぼかしや破棄を作成するために使用します。  
+- <xref:System.Windows.Media.ImageBrush>:テクスチャおよびエッジ効果のぼかしや破棄を作成するために使用します。  
   
      次の図は、<xref:System.Windows.Media.ImageBrush>不透明度マスクとして使用します。  
   
      ![ImageBrush 不透明度マスクを含むオブジェクト](./media/wcpsdk-graphicsmm-brushes-imageasopacitymasksingle.jpg "wcpsdk_graphicsmm_brushes_imageasopacitymasksingle")  
 LinearGradientBrush 不透明度マスクの例  
   
--   <xref:System.Windows.Media.DrawingBrush>:図形、イメージ、およびグラデーションのパターンから複雑な不透明度マスクを作成するために使用します。  
+- <xref:System.Windows.Media.DrawingBrush>:図形、イメージ、およびグラデーションのパターンから複雑な不透明度マスクを作成するために使用します。  
   
      次の図は、<xref:System.Windows.Media.DrawingBrush>不透明度マスクとして使用します。  
   

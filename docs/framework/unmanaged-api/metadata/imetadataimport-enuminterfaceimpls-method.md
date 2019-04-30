@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: f6e4be2e05c573ec93cc23c8dd6eccc834b8b848
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136501"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992343"
 ---
 # <a name="imetadataimportenuminterfaceimpls-method"></a>IMetaDataImport::EnumInterfaceImpls メソッド
 指定したによって実装されるすべてのインターフェイスを列挙`TypeDef`します。 

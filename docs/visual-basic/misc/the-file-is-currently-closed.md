@@ -3,18 +3,18 @@ title: ファイルは現在閉じられています。
 ms.date: 07/20/2015
 ms.assetid: 095c38ae-a741-4b46-b099-bc6826a49c83
 ms.openlocfilehash: 28b60005dc4002ff1016df79a4cd3ed1f88d0057
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148656"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62023092"
 ---
 # <a name="the-file-is-currently-closed"></a>ファイルは現在閉じられています。
 ファイルが開いているときにのみ実行できる操作を実行しようとしますが、現在、ファイルは閉じられています。  
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   ファイルを開いて、操作をやり直します。  
+- ファイルを開いて、操作をやり直します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d4bc763d908156f3bbf8998c13073820686903f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59132757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986376"
 ---
 # <a name="isymunmanagedreadergetmethodbyversion-method"></a>ISymUnmanagedReader::GetMethodByVersion メソッド
 メソッドのトークンと編集、コピーのバージョン番号を指定のシンボル リーダー メソッドを取得します。 バージョン番号は、1 から開始し、メソッドは、編集、コピー操作の結果として変更されるたびにインクリメントします。  

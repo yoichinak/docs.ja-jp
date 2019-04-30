@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
 ms.openlocfilehash: b5a36d39e6e38f121bf3155c822681fb198f0850
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771115"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006420"
 ---
 # <a name="message-security-certificate"></a>メッセージ セキュリティ証明書
 このサンプルでは、クライアントの認証で X.509 v3 証明書による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、サーバーの X.509 v3 証明書を使用するサーバー認証が必要です。 このサンプルでは、クライアント/サーバー間のすべてのアプリケーション メッセージが署名されて暗号化される、既定の設定を使用します。 このサンプルがに基づいて、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)クライアント コンソール プログラムとインターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリで構成されます。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  
@@ -204,7 +204,7 @@ Press <ENTER> to terminate client.
   
  メッセージ セキュリティ サンプルに用意されている Setup.bat バッチ ファイルを使用すると、適切な証明書を使用してクライアントとサーバーを構成し、証明書ベースのセキュリティを必要とするホスト アプリケーションを実行できるようになります。 バッチ ファイルの実行には 3 つのモードを使用できます。 型の単一コンピューター モードで実行する**setup.bat** 、開発者コマンド プロンプトでサービス モードの種類は、Visual Studio のため**setup.bat service**; とクライアント モードの種類の**setup.bat client**. このサンプルを複数のコンピューターで実行している場合は、クライアントおよびサーバー モードを使用します。 詳細については、このトピック末尾のセットアップ手順を参照してください。 次に、バッチ ファイルのセクションのうち、適切な構成で実行するために変更が必要となる部分を示します。  
   
--   クライアント証明書の作成。  
+- クライアント証明書の作成。  
   
      バッチ ファイルの次の行では、クライアント証明書を作成します。 指定されたクライアント名が、作成される証明書のサブジェクト名に使用されます。 証明書は、`My` ストアの場所の `CurrentUser` ストアに格納されます。  
   
@@ -215,7 +215,7 @@ Press <ENTER> to terminate client.
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe  
     ```  
   
--   サーバーの信頼された証明書ストアへのクライアント証明書のインストール。  
+- サーバーの信頼された証明書ストアへのクライアント証明書のインストール。  
   
      バッチ ファイルの次の行では、クライアント証明書をサーバーの TrustedPeople ストアにコピーし、サーバーが信頼/非信頼を判断できるようにします。 TrustedPeople ストアにインストールされている証明書で Windows Communication Foundation (WCF) サービスから信頼されるためには、クライアントの証明書検証モードに設定する必要があります`PeerOrChainTrust`または`PeerTrust`します。 前のサービス構成サンプルを参照して、構成ファイルを使用してこれを行う手順を確認してください。  
   
@@ -226,7 +226,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople   
     ```  
   
--   サーバー証明書の作成。  
+- サーバー証明書の作成。  
   
      Setup.bat バッチ ファイルの次の行は、使用するサーバー証明書を作成します。  
   
@@ -242,7 +242,7 @@ Press <ENTER> to terminate client.
   
      %SERVER_NAME% 変数はサーバー名を指定します。 証明書は LocalMachine ストアに保存されます。 Setup.bat バッチ ファイルがサービスの引数で実行されているかどうか (など、 **setup.bat service**)、%server_name% には、コンピューターの完全修飾ドメイン名が含まれています。 それ以外の場合、既定値は localhost です。  
   
--   クライアントの信頼された証明書ストアへのサーバー証明書のインストール。  
+- クライアントの信頼された証明書ストアへのサーバー証明書のインストール。  
   
      次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。  
   
@@ -250,7 +250,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   証明書の秘密キーに関する権限の付与。  
+- 証明書の秘密キーに関する権限の付与。  
   
      Setup.bat ファイルの次の行は、LocalMachine ストアに保存されたサーバー証明書を [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ワーカー プロセス アカウントでアクセスできるようにします。  
   
@@ -329,7 +329,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
--   サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
+- サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
   
     > [!NOTE]
     >  このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行すると、必ず、CurrentUser - TrustedPeople ストアにインストールされているサービス証明書をオフにします。 これを行うには、次のコマンドを使用します。`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例:`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`します。  

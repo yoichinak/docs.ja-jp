@@ -3,11 +3,11 @@ title: '方法: 親 (XPATH-LINQ to XML) の属性を検索 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 9d2572fd-27d4-426c-b079-16854cb9ec7d
 ms.openlocfilehash: ded20c173063492d260aee5ba55f3c4c585bd961
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58828655"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021649"
 ---
 # <a name="how-to-find-an-attribute-of-the-parent-xpath-linq-to-xml-visual-basic"></a>方法: 親 (XPATH-LINQ to XML) の属性を検索 (Visual Basic)
 このトピックでは、親要素に移動してその属性を検索する方法を示します。  

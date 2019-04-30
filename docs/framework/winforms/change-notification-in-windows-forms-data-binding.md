@@ -6,20 +6,20 @@ helpviewer_keywords:
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
 ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097578"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011880"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows フォーム データ バインディングの変更通知
 Windows フォーム データ バインドの最も重要な概念の 1 つは*変更通知*します。 いることを確認、データ ソースとバインドされたコントロール常に最新のデータ、データ バインディングの変更通知を追加する必要があります。 具体的には、バインドされたコントロールがそのデータ ソースに加えられた変更の通知を受け取ることを保証して、データ ソースは、コントロールのバインド プロパティに加えられた変更の通知されます。  
   
  データ バインディングの種類に応じて、変更通知のさまざまな種類があります。  
   
--   1 つのコントロールのプロパティがオブジェクトの 1 つのインスタンスにバインドされている単純なバインディング。  
+- 1 つのコントロールのプロパティがオブジェクトの 1 つのインスタンスにバインドされている単純なバインディング。  
   
--   一覧内の項目のプロパティまたはコントロール プロパティにバインドされている 1 つのコントロールのプロパティを含めることができますリストベースのバインドは、オブジェクトの一覧にバインドされます。  
+- 一覧内の項目のプロパティまたはコントロール プロパティにバインドされている 1 つのコントロールのプロパティを含めることができますリストベースのバインドは、オブジェクトの一覧にバインドされます。  
   
  さらに場合に、データ バインドを使用する Windows フォーム コントロールを作成するには、適用、 *PropertyName*にコントロールのバインドされたプロパティに対する変更が反映されるように、コントロールにパターンを変更しますデータ ソース。  
   

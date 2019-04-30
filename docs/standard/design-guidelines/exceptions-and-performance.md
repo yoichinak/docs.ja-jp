@@ -11,11 +11,11 @@ helpviewer_keywords:
 ms.assetid: 3ad6aad9-08e6-4232-b336-0e301f2493e6
 author: KrzysztofCwalina
 ms.openlocfilehash: f9fe3045d8bd8b4d625c5cd49bc18574ebb740de
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54707727"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026433"
 ---
 # <a name="exceptions-and-performance"></a>例外とパフォーマンス
 例外に関連する一般的な懸念事項の 1 つを定期的に失敗したコードの例外を使用している場合、パフォーマンスの実装は受け入れられない。 これはもっともです。 メンバーは、例外をスローするときに、パフォーマンスが極端に遅くにできます。 ただし、エラー コードの使用を禁止する例外のガイドラインに厳密に準拠しつつ、良好なパフォーマンスを実現することができます。 このセクションで説明されている 2 つのパターンは、これを行う方法をお勧めします。  

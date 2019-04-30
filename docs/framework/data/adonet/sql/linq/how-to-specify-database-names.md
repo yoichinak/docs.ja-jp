@@ -3,11 +3,11 @@ title: '方法: データベースの名前を指定する'
 ms.date: 03/30/2017
 ms.assetid: b80f0fd2-7f75-45fe-9e12-496f80f183df
 ms.openlocfilehash: a43a7ac541adb984eeb8bb88b7ab96db86baf26c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037571"
 ---
 # <a name="how-to-specify-database-names"></a>方法: データベースの名前を指定する
 <xref:System.Data.Linq.Mapping.DatabaseAttribute.Name%2A> 属性の <xref:System.Data.Linq.Mapping.DatabaseAttribute> プロパティを使用すると、接続によってデータベースの名前が提供されない場合に、名前を指定できます。  

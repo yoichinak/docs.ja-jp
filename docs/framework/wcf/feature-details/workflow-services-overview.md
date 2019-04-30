@@ -3,15 +3,15 @@ title: ワークフロー サービスの概要 - WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
 ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55278669"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050338"
 ---
 # <a name="workflow-services-overview"></a>ワークフロー サービスの概要
 
-ワークフロー サービスは、ワークフローを使用して実装されている WCF ベースのサービスです。 ワークフロー サービスは、Windows Communication Foundation (WCF) メッセージを送受信するメッセージング アクティビティを使用するワークフローです。 .NET Framework 4.5 では、ワークフロー内からメッセージを送受信できるようにする多数のメッセージ アクティビティが導入されています。 メッセージング アクティビティおよびそれらを使用して異なるメッセージ交換パターンを実装する方法の詳細については、[メッセージング アクティビティ](messaging-activities.md)を参照してください。
+ワークフロー サービスは、ワークフローを使用して実装されている WCF ベースのサービスです。 ワークフロー サービスは、Windows Communication Foundation (WCF) メッセージを送受信するメッセージング アクティビティを使用するワークフローです。 .NET Framework 4.5 では、ワークフロー内からメッセージを送受信できるようにする多数のメッセージ アクティビティが導入されています。 メッセージング アクティビティおよびそれらを使用して異なるメッセージ交換パターンを実装する方法の詳細については、次を参照してください。[メッセージング アクティビティ](messaging-activities.md)します。
 
 ## <a name="benefits-of-using-workflow-services"></a>ワークフロー サービスを使用する利点
 

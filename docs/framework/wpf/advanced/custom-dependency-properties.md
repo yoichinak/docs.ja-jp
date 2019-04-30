@@ -15,11 +15,11 @@ helpviewer_keywords:
 - dependency properties [WPF], custom
 ms.assetid: e6bfcfac-b10d-4f58-9f77-a864c2a2938f
 ms.openlocfilehash: 12843c74a7519d29e869be0342b18a1137f2dc5a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57372218"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054251"
 ---
 # <a name="custom-dependency-properties"></a>カスタム依存関係プロパティ
 
@@ -47,21 +47,21 @@ ms.locfileid: "57372218"
 
 クラスのプロパティを実装する場合から派生している限り<xref:System.Windows.DependencyObject>、プロパティをバックアップするオプションがある、<xref:System.Windows.DependencyProperty>識別子と依存関係プロパティにします。 シナリオのニーズによっては、プロパティを依存関係プロパティにすることが必要ない場合や適切でない場合もあります。 場合によっては、プロパティをプライベート フィールドでバッキングする一般的な手法で十分な場合もあります。 ただし、プロパティで次の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 機能の 1 つ以上をサポートする場合には、常に依存関係プロパティとしてプロパティを実装する必要があります。
 
--   プロパティをスタイルで設定可能にする。 詳しくは、「 [スタイルとテンプレート](../controls/styling-and-templating.md)」をご覧ください。
+- プロパティをスタイルで設定可能にする。 詳しくは、「 [スタイルとテンプレート](../controls/styling-and-templating.md)」をご覧ください。
 
--   プロパティでデータ バインディングをサポートする。 データ バインディングの依存関係プロパティの詳細については、「[2 つのコントロールのプロパティをバインドする](../data/how-to-bind-the-properties-of-two-controls.md)」を参照してください。
+- プロパティでデータ バインディングをサポートする。 データ バインディングの依存関係プロパティの詳細については、「[2 つのコントロールのプロパティをバインドする](../data/how-to-bind-the-properties-of-two-controls.md)」を参照してください。
 
--   プロパティを動的リソース参照で設定可能にする。 詳細については、「[XAML リソース](xaml-resources.md)」を参照してください。
+- プロパティを動的リソース参照で設定可能にする。 詳細については、「[XAML リソース](xaml-resources.md)」を参照してください。
 
--   要素ツリーの親要素からプロパティ値を自動的に継承する。 この場合、登録、<xref:System.Windows.DependencyProperty.RegisterAttached%2A>メソッド、プロパティのラッパーも作成する場合でも[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]アクセスします。 詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。
+- 要素ツリーの親要素からプロパティ値を自動的に継承する。 この場合、登録、<xref:System.Windows.DependencyProperty.RegisterAttached%2A>メソッド、プロパティのラッパーも作成する場合でも[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]アクセスします。 詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。
 
--   プロパティをアニメーション化できるようにする。 詳しくは、「 [アニメーションの概要](../graphics-multimedia/animation-overview.md)」をご覧ください。
+- プロパティをアニメーション化できるようにする。 詳しくは、「 [アニメーションの概要](../graphics-multimedia/animation-overview.md)」をご覧ください。
 
--   プロパティの前の値が、プロパティ システム、環境、または、ユーザーによって行われたアクションによって変更された場合、または読み取りおよびスタイルの使用によって変更された場合に、プロパティ システムに報告させる。 プロパティのメタデータを使用すると、プロパティ システムがプロパティ値が明らかに変更されたと判断するたびに呼び出されるコールバック メソッドをプロパティで指定できます。 関連する概念は、プロパティ値の強制型変換です。 詳しくは、「[依存関係プロパティのコールバックと検証](dependency-property-callbacks-and-validation.md)」を参照してください。
+- プロパティの前の値が、プロパティ システム、環境、または、ユーザーによって行われたアクションによって変更された場合、または読み取りおよびスタイルの使用によって変更された場合に、プロパティ システムに報告させる。 プロパティのメタデータを使用すると、プロパティ システムがプロパティ値が明らかに変更されたと判断するたびに呼び出されるコールバック メソッドをプロパティで指定できます。 関連する概念は、プロパティ値の強制型変換です。 詳しくは、「[依存関係プロパティのコールバックと検証](dependency-property-callbacks-and-validation.md)」を参照してください。
 
--   プロパティ値の変更に、要素のビジュアルを再構成するためのレイアウト システムが必要かどうかを報告するなど、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロセスでも使用されている確立されたメタデータ規則を使用する。 または、派生クラスが既定値などのメタデータに基づく特性を変更できるように、メタデータのオーバーライドを使用できるようする。
+- プロパティ値の変更に、要素のビジュアルを再構成するためのレイアウト システムが必要かどうかを報告するなど、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] プロセスでも使用されている確立されたメタデータ規則を使用する。 または、派生クラスが既定値などのメタデータに基づく特性を変更できるように、メタデータのオーバーライドを使用できるようする。
 
--   などの Visual Studio WPF Designer を受信するカスタム コントロールのプロパティをサポートする**プロパティ**ウィンドウを編集します。 詳しくは、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。
+- などの Visual Studio WPF Designer を受信するカスタム コントロールのプロパティをサポートする**プロパティ**ウィンドウを編集します。 詳しくは、「[コントロールの作成の概要](../controls/control-authoring-overview.md)」を参照してください。
 
 これらのシナリオを検討するときに、完全に新しいプロパティを実装するよりも、既存の依存関係プロパティのメタデータをオーバーライドすることで、シナリオを実現できるかどうかも考慮する必要があります。 メタデータのオーバーライドが実用的かどうかは、シナリオとそのシナリオが既存の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 依存関係プロパティとクラスでの実装にどのくらい似ているかによって異なります。 既存のプロパティでメタデータをオーバーライドする方法の詳細については、「[依存関係プロパティのメタデータ](dependency-property-metadata.md)」を参照してください。
 
@@ -70,13 +70,13 @@ ms.locfileid: "57372218"
 
 依存関係プロパティの定義は、次の 4 つの異なる概念で構成されます。 これらの概念は、一部は実装で最終的に 1 行のコードとして結合されるため、必ずしも厳密な手順である必要はありません。
 
--   (省略可能) 依存関係プロパティのプロパティ メタデータを作成します。
+- (省略可能) 依存関係プロパティのプロパティ メタデータを作成します。
 
--   所有者型とプロパティ値の型を指定して、プロパティ システムにプロパティ名を登録します。 プロパティのメタデータも指定します (使用している場合)。
+- 所有者型とプロパティ値の型を指定して、プロパティ システムにプロパティ名を登録します。 プロパティのメタデータも指定します (使用している場合)。
 
--   定義、<xref:System.Windows.DependencyProperty>と識別子を`public` `static` `readonly`フィールドに、所有者型。
+- 定義、<xref:System.Windows.DependencyProperty>と識別子を`public` `static` `readonly`フィールドに、所有者型。
 
--   名前が依存関係プロパティの名前と一致する [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "ラッパー" プロパティを定義します。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "ラッパー" プロパティの `get` と `set` のアクセサーを実装して、バッキングする依存関係プロパティと接続します。
+- 名前が依存関係プロパティの名前と一致する [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "ラッパー" プロパティを定義します。 [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] "ラッパー" プロパティの `get` と `set` のアクセサーを実装して、バッキングする依存関係プロパティと接続します。
 
 <a name="registering"></a>
 ### <a name="registering-the-property-with-the-property-system"></a>プロパティ システムにプロパティを登録する
@@ -112,11 +112,11 @@ ms.locfileid: "57372218"
 
 ここでも、慣例により、ラッパー プロパティの名前があります選択しての最初のパラメーターとして指定した名前と同じ、<xref:System.Windows.DependencyProperty.Register%2A>プロパティを登録します。 プロパティが規則に従っていない場合、すべての可能な使用を無効にする必要はありませんが、次のような注目すべき問題がいくつか発生します。
 
--   スタイルとテンプレートの一部が機能しない。
+- スタイルとテンプレートの一部が機能しない。
 
--   ほとんどのツールとデザイナーは、適切に [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] をシリアル化するため、またはプロパティごとのレベルでのデザイナー環境のサポートを提供するために命名規則に依存する必要があります。
+- ほとんどのツールとデザイナーは、適切に [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] をシリアル化するため、またはプロパティごとのレベルでのデザイナー環境のサポートを提供するために命名規則に依存する必要があります。
 
--   [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ローダーの現在の実装は、属性値を処理するときに、ラッパーを完全にバイパスして、命名規則に依存しています。 詳しくは、「[XAML 読み込みと依存関係プロパティ](xaml-loading-and-dependency-properties.md)」を参照してください。
+- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] ローダーの現在の実装は、属性値を処理するときに、ラッパーを完全にバイパスして、命名規則に依存しています。 詳しくは、「[XAML 読み込みと依存関係プロパティ](xaml-loading-and-dependency-properties.md)」を参照してください。
 
 <a name="metadata"></a>
 ### <a name="property-metadata-for-a-new-dependency-property"></a>新しい依存関係プロパティのプロパティ メタデータ
@@ -129,25 +129,25 @@ ms.locfileid: "57372218"
 
 #### <a name="setting-appropriate-metadata-flags"></a>適切なメタデータ フラグの設定
 
--   プロパティ (またはその値の変更) の影響、 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、具体的には影響を与えますレイアウト システムのサイズまたは ページでは、要素のレンダリング方法を設定、次のフラグの 1 つ以上と: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>、 <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>、<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>します。
+- プロパティ (またはその値の変更) の影響、 [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、具体的には影響を与えますレイアウト システムのサイズまたは ページでは、要素のレンダリング方法を設定、次のフラグの 1 つ以上と: <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure>、 <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange>、<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender>します。
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> このプロパティの変更がへの変更が必要であることを示します[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]場所オブジェクトを含んでいる必要があります増減親内の領域をレンダリングします。 たとえば、"Width" プロパティには、このフラグが設定されている必要があります。
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsMeasure> このプロパティの変更がへの変更が必要であることを示します[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]場所オブジェクトを含んでいる必要があります増減親内の領域をレンダリングします。 たとえば、"Width" プロパティには、このフラグが設定されている必要があります。
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> このプロパティの変更がへの変更が必要であることを示します[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]専用の領域の変更は必要ありませんが、領域内の位置が変更されたこと示すものでは通常をレンダリングします。 たとえば、"Alignment" プロパティには、このフラグが設定されている必要があります。
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsArrange> このプロパティの変更がへの変更が必要であることを示します[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]専用の領域の変更は必要ありませんが、領域内の位置が変更されたこと示すものでは通常をレンダリングします。 たとえば、"Alignment" プロパティには、このフラグが設定されている必要があります。
 
-    -   <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 示すその他の変更が発生したことをレイアウトとメジャーを及ぼしませんが別のレンダリングでは必要です。 "Background" など、既存の要素の色を変更するプロパティはその一例です。
+    - <xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsRender> 示すその他の変更が発生したことをレイアウトとメジャーを及ぼしませんが別のレンダリングでは必要です。 "Background" など、既存の要素の色を変更するプロパティはその一例です。
 
-    -   これらのフラグは、プロパティ システムやレイアウトのコールバックの独自のオーバーライド実装のためのメタデータのプロトコルとしてよく使用されます。 たとえば、する必要があります、<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>が呼び出すコールバック<xref:System.Windows.UIElement.InvalidateArrange%2A>インスタンスの任意のプロパティの値の変更を報告されがあるかどうか<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>として`true`のメタデータ。
+    - これらのフラグは、プロパティ システムやレイアウトのコールバックの独自のオーバーライド実装のためのメタデータのプロトコルとしてよく使用されます。 たとえば、する必要があります、<xref:System.Windows.DependencyObject.OnPropertyChanged%2A>が呼び出すコールバック<xref:System.Windows.UIElement.InvalidateArrange%2A>インスタンスの任意のプロパティの値の変更を報告されがあるかどうか<xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>として`true`のメタデータ。
 
--   上記で説明した必要なサイズを変更する方法に加え、一部のプロパティは含まれる親要素のレンダリング特性に影響する場合があります。 例としては、<xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A>プロパティは、フロー ドキュメント モデルで使用される、そのプロパティへの変更が、段落を含むフロー ドキュメントの全体的なレンダリングを変更できます。 使用<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange>または<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure>独自のプロパティで同様のケースを特定します。
+- 上記で説明した必要なサイズを変更する方法に加え、一部のプロパティは含まれる親要素のレンダリング特性に影響する場合があります。 例としては、<xref:System.Windows.Documents.Paragraph.MinOrphanLines%2A>プロパティは、フロー ドキュメント モデルで使用される、そのプロパティへの変更が、段落を含むフロー ドキュメントの全体的なレンダリングを変更できます。 使用<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentArrange>または<xref:System.Windows.FrameworkPropertyMetadataOptions.AffectsParentMeasure>独自のプロパティで同様のケースを特定します。
 
--   既定では、依存関係プロパティはデータ バインディングをサポートします。 データ バインディングにとって現実的なシナリオがない場合や、大きなオブジェクトのデータ バインディングのパフォーマンスが問題として認識される場合には、意図的にデータ バインディングを無効にすることができます。
+- 既定では、依存関係プロパティはデータ バインディングをサポートします。 データ バインディングにとって現実的なシナリオがない場合や、大きなオブジェクトのデータ バインディングのパフォーマンスが問題として認識される場合には、意図的にデータ バインディングを無効にすることができます。
 
--   既定では、データ バインディングによって<xref:System.Windows.Data.Binding.Mode%2A>の依存関係プロパティの既定値に<xref:System.Windows.Data.BindingMode.OneWay>します。 バインドをいつでも変更できます<xref:System.Windows.Data.BindingMode.TwoWay>バインディング インスタンスごと、; 詳細についてを参照してください。[バインディングの方向を指定](../data/how-to-specify-the-direction-of-the-binding.md)します。 依存関係プロパティの作成者として、プロパティを選択できますが、<xref:System.Windows.Data.BindingMode.TwoWay>既定のバインド モード。 既存の依存関係プロパティの例は<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; このプロパティのシナリオは、<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>ロジックとの複合設定<xref:System.Windows.Controls.MenuItem>既定のテーマ スタイルと対話します。 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>プロパティ ロジックを使用してデータ バインディング ネイティブに従って他の状態のプロパティとメソッドの呼び出しにプロパティの状態を維持するためにします。 バインドする別の例プロパティ<xref:System.Windows.Data.BindingMode.TwoWay>既定では<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>します。
+- 既定では、データ バインディングによって<xref:System.Windows.Data.Binding.Mode%2A>の依存関係プロパティの既定値に<xref:System.Windows.Data.BindingMode.OneWay>します。 バインドをいつでも変更できます<xref:System.Windows.Data.BindingMode.TwoWay>バインディング インスタンスごと、; 詳細についてを参照してください。[バインディングの方向を指定](../data/how-to-specify-the-direction-of-the-binding.md)します。 依存関係プロパティの作成者として、プロパティを選択できますが、<xref:System.Windows.Data.BindingMode.TwoWay>既定のバインド モード。 既存の依存関係プロパティの例は<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A?displayProperty=nameWithType>; このプロパティのシナリオは、<xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>ロジックとの複合設定<xref:System.Windows.Controls.MenuItem>既定のテーマ スタイルと対話します。 <xref:System.Windows.Controls.MenuItem.IsSubmenuOpen%2A>プロパティ ロジックを使用してデータ バインディング ネイティブに従って他の状態のプロパティとメソッドの呼び出しにプロパティの状態を維持するためにします。 バインドする別の例プロパティ<xref:System.Windows.Data.BindingMode.TwoWay>既定では<xref:System.Windows.Controls.TextBox.Text%2A?displayProperty=nameWithType>します。
 
--   カスタム依存関係プロパティのプロパティの継承を有効にすることもできます、<xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits>フラグ。 プロパティの継承は、親要素と子要素に共通のプロパティがあるシナリオに便利で、子要素に、親に設定されたのと同じ値に設定した特定のプロパティ値を持たせることは理にかなっています。 継承可能なプロパティの例は、 <xref:System.Windows.FrameworkElement.DataContext%2A>、データ プレゼンテーションの重要なマスター詳細シナリオを有効にする操作のバインディングに使用されます。 で<xref:System.Windows.FrameworkElement.DataContext%2A>継承可能なすべての子要素をデータ コンテキストを継承もできます。 プロパティ値の継承により、ページまたはアプリケーションのルートでデータ コンテキストを指定できます。すべての使用可能な子要素内のバインディングに再度指定する必要はありません。 <xref:System.Windows.FrameworkElement.DataContext%2A> 継承には、既定値よりも優先されますことが常に設定する必要がローカルの任意の特定の子要素を示す良い例ではも詳細については、[階層データでマスター詳細パターンを使用して](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)を参照してください。 プロパティ値の継承にはパフォーマンスが低下する可能性があるため、控え目に使用する必要があります。詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。
+- カスタム依存関係プロパティのプロパティの継承を有効にすることもできます、<xref:System.Windows.FrameworkPropertyMetadataOptions.Inherits>フラグ。 プロパティの継承は、親要素と子要素に共通のプロパティがあるシナリオに便利で、子要素に、親に設定されたのと同じ値に設定した特定のプロパティ値を持たせることは理にかなっています。 継承可能なプロパティの例は、 <xref:System.Windows.FrameworkElement.DataContext%2A>、データ プレゼンテーションの重要なマスター詳細シナリオを有効にする操作のバインディングに使用されます。 で<xref:System.Windows.FrameworkElement.DataContext%2A>継承可能なすべての子要素をデータ コンテキストを継承もできます。 プロパティ値の継承により、ページまたはアプリケーションのルートでデータ コンテキストを指定できます。すべての使用可能な子要素内のバインディングに再度指定する必要はありません。 <xref:System.Windows.FrameworkElement.DataContext%2A> 継承には、既定値よりも優先されますことが常に設定する必要がローカルの任意の特定の子要素を示す良い例ではも詳細については、次を参照してください。[階層データでマスター詳細パターンを使用して](../data/how-to-use-the-master-detail-pattern-with-hierarchical-data.md)します。 プロパティ値の継承にはパフォーマンスが低下する可能性があるため、控え目に使用する必要があります。詳細については、「[プロパティ値の継承](property-value-inheritance.md)」を参照してください。
 
--   設定、<xref:System.Windows.FrameworkPropertyMetadataOptions.Journal>依存関係プロパティを検出するか、ナビゲーション ジャーナリング サービスで使用されるかどうかを示すフラグ。 例としては、<xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A>プロパティです。 選択範囲で選択された項目、ジャーナリング履歴が移動したときにコントロールを永続化する必要があります。
+- 設定、<xref:System.Windows.FrameworkPropertyMetadataOptions.Journal>依存関係プロパティを検出するか、ナビゲーション ジャーナリング サービスで使用されるかどうかを示すフラグ。 例としては、<xref:System.Windows.Controls.Primitives.Selector.SelectedIndex%2A>プロパティです。 選択範囲で選択された項目、ジャーナリング履歴が移動したときにコントロールを永続化する必要があります。
 
 <a name="RODP"></a>
 ## <a name="read-only-dependency-properties"></a>読み取り専用の依存関係プロパティ

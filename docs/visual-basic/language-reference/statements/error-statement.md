@@ -11,11 +11,11 @@ helpviewer_keywords:
 - errors [Visual Basic], simulating
 ms.assetid: 85cd5c59-5224-4f02-aaf5-fcfefab17a29
 ms.openlocfilehash: 8ac7cee2f9959bc75df165d00d3a0a67e1dd9af0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837534"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982398"
 ---
 # <a name="error-statement"></a>Error ステートメント
 エラーの発生をシミュレートします。  

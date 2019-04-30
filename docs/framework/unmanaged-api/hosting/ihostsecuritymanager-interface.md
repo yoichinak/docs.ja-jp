@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f45379fe8640ef7e7b3917bac8d10ca956d75ffb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223759"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61957587"
 ---
 # <a name="ihostsecuritymanager-interface"></a>IHostSecurityManager インターフェイス
 アクセスと、現在実行中のスレッドのセキュリティ コンテキストに対する制御を許可するメソッドを提供します。  
@@ -42,13 +42,13 @@ ms.locfileid: "59223759"
   
  CLR では、マネージ スレッドのコンテキストを内部的に処理します。 プロセス固有のクエリを実行`IHostSecurityManager`次の状況で。  
   
--   ファイナライザー スレッド、ファイナライザーの実行中です。  
+- ファイナライザー スレッド、ファイナライザーの実行中です。  
   
--   実行中にクラスとモジュールのコンス トラクター。  
+- 実行中にクラスとモジュールのコンス トラクター。  
   
--   呼び出しで、ワーカー スレッドで非同期の時点で、 [ihostthreadpoolmanager::queueuserworkitem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)メソッド。  
+- 呼び出しで、ワーカー スレッドで非同期の時点で、 [ihostthreadpoolmanager::queueuserworkitem](../../../../docs/framework/unmanaged-api/hosting/ihostthreadpoolmanager-queueuserworkitem-method.md)メソッド。  
   
--   I/O 完了ポートの使用中です。  
+- I/O 完了ポートの使用中です。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

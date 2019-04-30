@@ -6,11 +6,11 @@ helpviewer_keywords:
 - ClearType [WPF], technology
 ms.assetid: 7e2392e0-75dc-463d-a716-908772782431
 ms.openlocfilehash: 0127ee4112c4b42a7a55b9233217ea1e02604042
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59085195"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051352"
 ---
 # <a name="cleartype-overview"></a>ClearType の概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の [!INCLUDE[TLA#tla_ct](../../../../includes/tlasharptla-ct-md.md)] テクノロジの概要について説明します。  

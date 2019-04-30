@@ -8,11 +8,11 @@ helpviewer_keywords:
 - variables [Visual Basic], object
 ms.assetid: 31555704-58a3-49f1-9a0a-6421f605664f
 ms.openlocfilehash: c17c5f85952596f0a080ca473e8f792740e66b8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58840394"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054186"
 ---
 # <a name="object-variable-values-visual-basic"></a>オブジェクト変数の値 (Visual Basic)
 変数、 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)任意の型のデータを参照できます。 格納した値、`Object`変数が保持される別の場所をメモリに一方変数自体は、データへのポインターを保持します。  

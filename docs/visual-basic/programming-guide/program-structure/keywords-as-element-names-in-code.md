@@ -8,11 +8,11 @@ helpviewer_keywords:
 - element names [Visual Basic], in code
 ms.assetid: 2e4e8e02-23f7-49b9-a1c8-2b0402b6b525
 ms.openlocfilehash: c247ada67f6554362f287cf252dd49856c4995da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58841148"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955585"
 ---
 # <a name="keywords-as-element-names-in-code-visual-basic"></a>コード内の要素名としてのキーワード (Visual Basic)
 すべてのプログラム要素-変数、クラス、またはメンバーなど、予約されたキーワードと同じ名前を持つことができます。 たとえば、という名前の変数を作成することができます`Loop`します。 ただし、そのバージョンを参照する —、制限されたのと同じ名前を持つ`Loop`キーワード-先頭の完全修飾文字列か、角かっこで囲む必要があります (`[ ]`) 次の例に示すように。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Sessions
 ms.assetid: 36e1db50-008c-4b32-8d09-b56e790b8417
 ms.openlocfilehash: 539d897230fc69b2c30bd2a3930b305220d8345e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007891"
 ---
 # <a name="session"></a>セッション
 このセッションのサンプルでは、セッションを必要とするコントラクトを実装する方法を示します。 セッションは、複数の操作を実行するためのコンテキストを提供します。 これにより、サービスは特定のセッションに状態を関連付けることができ、後続の操作はその前の操作の状態を使用できます。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、電卓サービスを実装します。 `ICalculator` コントラクトは、一連の算術演算を実行して実行結果を保持できるように変更されました。 この機能は `ICalculatorSession` コントラクトによって定義されます。 サービスは、複数のサービス操作が呼び出されて計算を実行する際に、クライアントの状態を保持します。 クライアントは `Result()` を呼び出して現在の結果を取得したり、`Clear()` を呼び出してその結果をクリアし、0 にすることができます。  

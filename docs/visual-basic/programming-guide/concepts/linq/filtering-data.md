@@ -3,11 +3,11 @@ title: データのフィルター処理 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 7749519a-7edc-49fe-aef9-6a353864af6c
 ms.openlocfilehash: a673126d928a97bf522783e73fc254debe2a9de8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837448"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051456"
 ---
 # <a name="filtering-data-visual-basic"></a>データのフィルター処理 (Visual Basic)
 フィルター処理とは、特定の条件を満たす要素のみが含まれるように結果セットを限定する操作のことです。 選択とも呼ばれます。  

@@ -10,32 +10,32 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 43adb517-21a7-4df3-98e8-09e9cdf764c4
 ms.openlocfilehash: 4e005ea96df45da8326386f8b43aa5640ce810b1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344352"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050615"
 ---
 # <a name="pack-uris-in-wpf"></a>WPF におけるパッケージの URI
 Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]を識別し、次を含む、さまざまな方法でファイルを読み込むために使用します。  
   
--   指定する、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]を表示するときに、アプリケーションを初めて起動します。  
+- 指定する、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]を表示するときに、アプリケーションを初めて起動します。  
   
--   イメージの読み込み。  
+- イメージの読み込み。  
   
--   ページへの移動。  
+- ページへの移動。  
   
--   実行可能でないデータ ファイルの読み込み。  
+- 実行可能でないデータ ファイルの読み込み。  
   
  さらに、[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]を識別し、さまざまななど、次の場所からファイルを読み込むために使用できます。  
   
--   現在のアセンブリ。  
+- 現在のアセンブリ。  
   
--   参照アセンブリ。  
+- 参照アセンブリ。  
   
--   アセンブリに対して相対的な位置。  
+- アセンブリに対して相対的な位置。  
   
--   アプリケーションの起点サイト。  
+- アプリケーションの起点サイト。  
   
  識別し、これらの場所からこの種のファイルを読み込むのため、一貫性のあるメカニズムを提供する[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の拡張性を活用して、*パック URI スキーム*します。 このトピックでは、スキームの概要を説明します、パックを構築する方法について説明します[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]さまざまなシナリオ、絶対および相対について説明します[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]と[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]パックを使用する方法を表示する前に、解像度[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]両方マークアップからコード。  
 
@@ -59,15 +59,15 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
   
  パッケージとパーツは、アプリケーションとファイルに似ています。つまり、アプリケーション (パッケージ) は、次のような 1 つ以上のファイル (パーツ) を含むことができます。  
   
--   ローカル アセンブリにコンパイルされるリソース ファイル。  
+- ローカル アセンブリにコンパイルされるリソース ファイル。  
   
--   参照センブリにコンパイルされるリソース ファイル。  
+- 参照センブリにコンパイルされるリソース ファイル。  
   
--   参照元センブリにコンパイルされるリソース ファイル。  
+- 参照元センブリにコンパイルされるリソース ファイル。  
   
--   コンテンツ ファイル。  
+- コンテンツ ファイル。  
   
--   起点サイト ファイル。  
+- 起点サイト ファイル。  
   
  これらの種類のファイルにアクセスする[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]2 つのオーソリティをサポートしています: application:///と siteoforigin:///。 application:/// オーソリティは、リソース ファイルやコンテンツ ファイルなど、コンパイル時に既知のアプリケーション データ ファイルを識別します。 siteoforigin:/// オーソリティは、起点サイト ファイルを識別します。 各オーソリティのスコープを次の図に示します。  
   
@@ -86,9 +86,9 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
 ### <a name="local-assembly-resource-file"></a>ローカル アセンブリ リソース ファイル  
  パック[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]次のオーソリティとパスのリソースに対して、ローカル アセンブリにコンパイルされたファイルを使用します。  
   
--   **オーソリティ**: application:///。  
+- **オーソリティ**: application:///。  
   
--   **パス**:ローカル アセンブリのプロジェクト フォルダーのルートに対する相対パスを含むリソース ファイルの名前。  
+- **パス**:ローカル アセンブリのプロジェクト フォルダーのルートに対する相対パスを含むリソース ファイルの名前。  
   
  次の例は、パック[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]の[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ローカル アセンブリのプロジェクト フォルダーのルートに配置されているリソース ファイル。  
   
@@ -102,21 +102,21 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
 ### <a name="referenced-assembly-resource-file"></a>参照アセンブリ リソース ファイル  
  パック[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]次のオーソリティとパスには、リソースの参照アセンブリにコンパイルされたファイルを使用します。  
   
--   **オーソリティ**: application:///。  
+- **オーソリティ**: application:///。  
   
--   **パス**:参照先アセンブリにコンパイルされるリソース ファイルの名前。 パスは、次の書式に従う必要があります。  
+- **パス**:参照先アセンブリにコンパイルされるリソース ファイルの名前。 パスは、次の書式に従う必要があります。  
   
      *AssemblyShortName*{*;バージョン*] {*;公開鍵*]; component/*パス*  
   
-    -   **AssemblyShortName**: 参照アセンブリの短い名前。  
+    - **AssemblyShortName**: 参照アセンブリの短い名前。  
   
-    -   **;Version** (省略可能): リソース ファイルを含む参照アセンブリのバージョン。 これは、同じ短い名前を持つ 2 つ以上の参照アセンブリが読み込まれるときに使用されます。  
+    - **;Version** (省略可能): リソース ファイルを含む参照アセンブリのバージョン。 これは、同じ短い名前を持つ 2 つ以上の参照アセンブリが読み込まれるときに使用されます。  
   
-    -   **;PublicKey** (省略可能): 参照アセンブリの署名に使用された公開鍵。 これは、同じ短い名前を持つ 2 つ以上の参照アセンブリが読み込まれるときに使用されます。  
+    - **;PublicKey** (省略可能): 参照アセンブリの署名に使用された公開鍵。 これは、同じ短い名前を持つ 2 つ以上の参照アセンブリが読み込まれるときに使用されます。  
   
-    -   **;component**: 参照されるアセンブリが、ローカル アセンブリから参照されることを指定します。  
+    - **;component**: 参照されるアセンブリが、ローカル アセンブリから参照されることを指定します。  
   
-    -   **/Path**: 参照アセンブリのプロジェクト フォルダーのルートに対して相対的なパスを含むリソース ファイルの名前。  
+    - **/Path**: 参照アセンブリのプロジェクト フォルダーのルートに対して相対的なパスを含むリソース ファイルの名前。  
   
  次の例は、パック[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]の[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]参照アセンブリのプロジェクト フォルダーのルートに配置されているリソース ファイル。  
   
@@ -138,9 +138,9 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
 ## <a name="content-file-pack-uris"></a>コンテンツ ファイルのパック URI  
  パック[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]コンテンツ ファイルは、次のオーソリティとパスを使用します。  
   
--   **オーソリティ**: application:///。  
+- **オーソリティ**: application:///。  
   
--   **パス**:アプリケーションのメイン実行可能アセンブリのファイル システムの場所からの相対パスを含む、コンテンツ ファイルの名前。  
+- **パス**:アプリケーションのメイン実行可能アセンブリのファイル システムの場所からの相対パスを含む、コンテンツ ファイルの名前。  
   
  次の例は、パック[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]の[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]コンテンツ ファイル、実行可能アセンブリと同じフォルダーに配置します。  
   
@@ -157,9 +157,9 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
 ## <a name="site-of-origin-pack-uris"></a>起点サイトのパック URI  
  パック[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]次のオーソリティとパスの起点サイト ファイルを使用します。  
   
--   **オーソリティ**: siteoforigin:///。  
+- **オーソリティ**: siteoforigin:///。  
   
--   **パス**:実行可能アセンブリの起動元の場所からの相対パスを含む、配信元のファイルのサイトの名前。  
+- **パス**:実行可能アセンブリの起動元の場所からの相対パスを含む、配信元のファイルのサイトの名前。  
   
  次の例は、パック[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]の[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]起点サイト ファイル、実行可能アセンブリの起動元の場所に保存します。  
   
@@ -175,17 +175,17 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
   
  種類の[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]として一般的に構成されているファイル[!INCLUDE[TLA2#tla_msbuild](../../../../includes/tla2sharptla-msbuild-md.md)]`Page`がルート要素として次のいずれかの項目があります。  
   
--   <xref:System.Windows.Window?displayProperty=nameWithType>  
+- <xref:System.Windows.Window?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Page?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.PageFunction%601?displayProperty=nameWithType>  
   
--   <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
+- <xref:System.Windows.ResourceDictionary?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.FlowDocument?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.UserControl?displayProperty=nameWithType>  
   
 <a name="Absolute_vs_Relative_Pack_URIs"></a>   
 ## <a name="absolute-vs-relative-pack-uris"></a>絶対および相対パック URI  
@@ -246,11 +246,11 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
   
  [!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)] 解決は適用されない[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]するには、次を参照してください。  
   
--   参照されたアセンブリ内のコンテンツ ファイル: では、これらのファイルの種類はサポートされていない[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。  
+- 参照されたアセンブリ内のコンテンツ ファイル: では、これらのファイルの種類はサポートされていない[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。  
   
--   参照されたアセンブリ内の埋め込みファイル:[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]これらを識別する参照アセンブリの名前の両方を含めるためには、一意と`;component`サフィックス。  
+- 参照されたアセンブリ内の埋め込みファイル:[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]これらを識別する参照アセンブリの名前の両方を含めるためには、一意と`;component`サフィックス。  
   
--   起点サイト ファイル:[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]これらを識別するパックによって識別できるファイルのみであるために、固有[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]を含む、siteoforigin:///オーソリティします。  
+- 起点サイト ファイル:[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]これらを識別するパックによって識別できるファイルのみであるために、固有[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]を含む、siteoforigin:///オーソリティします。  
   
  パックの 1 つの単純化[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]解決によって、リソースやコンテンツ ファイルの場所に依存するコードです。 たとえば、コンテンツ ファイルをパックするように再構成するローカル アセンブリ内のリソース ファイルがある場合[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]は、パックを使用するコードも同じですが、リソースは[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]します。  
   
@@ -258,17 +258,17 @@ Windows Presentation Foundation (WPF) では、[!INCLUDE[TLA#tla_uri#plural](../
 ## <a name="programming-with-pack-uris"></a>パック URI を使用したプログラミング  
  多く[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]パックで設定できるプロパティを実装するクラス[!INCLUDE[TLA2#tla_uri#plural](../../../../includes/tla2sharptla-urisharpplural-md.md)]など。  
   
--   <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Application.StartupUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Frame.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Navigation.NavigationWindow.Source%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Documents.Hyperlink.NavigateUri%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Window.Icon%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Controls.Image.Source%2A?displayProperty=nameWithType>  
   
  これらのプロパティは、マークアップとコードのどちらからでも設定できます。 このセクションでは、両方の基本構造について説明してから、一般的なシナリオの例を示します。  
   

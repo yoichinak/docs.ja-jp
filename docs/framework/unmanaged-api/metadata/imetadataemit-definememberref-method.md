@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d5d386b1d3f95e703cc5d9ad1353ea6b84b5b455
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62043221"
 ---
 # <a name="imetadataemitdefinememberref-method"></a>IMetaDataEmit::DefineMemberRef メソッド
 現在のスコープ外にあるモジュールのメンバーへの参照を定義し、その参照定義トークンを取得します。  

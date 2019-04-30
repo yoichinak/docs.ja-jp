@@ -10,11 +10,11 @@ helpviewer_keywords:
 - typography [WPF], GlyphRun object
 ms.assetid: 746ca769-a331-4435-9b95-f72a883b67c1
 ms.openlocfilehash: 0e5ec2b89f015c7e061b59fea755eb368f1ac7a1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031305"
 ---
 # <a name="introduction-to-the-glyphrun-object-and-glyphs-element"></a>GlyphRun オブジェクトと Glyphs 要素の概要
 このトピックで説明します、<xref:System.Windows.Media.GlyphRun>オブジェクトと<xref:System.Windows.Documents.Glyphs>要素。  
@@ -27,13 +27,13 @@ ms.locfileid: "59341050"
   
 2. 印刷シナリオ。  
   
-    -   デバイス プリンター言語としての [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
+    - デバイス プリンター言語としての [!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]。  
   
-    -   [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]。  
+    - [!INCLUDE[TLA#tla_mxdw](../../../../includes/tlasharptla-mxdw-md.md)]。  
   
-    -   以前のプリンター ドライバー、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]アプリケーションから固定形式への出力。  
+    - 以前のプリンター ドライバー、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)]アプリケーションから固定形式への出力。  
   
-    -   印刷スプール形式。  
+    - 印刷スプール形式。  
   
 3. 以前のバージョンの [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] のクライアントおよびその他のコンピューティング デバイスを含む、固定形式のドキュメント表示。  
   
@@ -67,15 +67,15 @@ ms.locfileid: "59341050"
 ### <a name="indices-property"></a>Indices プロパティ  
  <xref:System.Windows.Documents.Glyphs.Indices%2A>プロパティは、グリフ仕様の文字列。 グリフのシーケンスが 1 つのクラスターを形成している場合、クラスター内の最初のグリフの仕様は、クラスターを形成するために組み合わせるグリフの数とコード ポイントの数の仕様によって先行されます。 <xref:System.Windows.Documents.Glyphs.Indices%2A>プロパティが 1 つの文字列で、次のプロパティを収集します。  
   
--   グリフ インデックス  
+- グリフ インデックス  
   
--   グリフのアドバンス幅  
+- グリフのアドバンス幅  
   
--   グリフの添付ファイルのベクトルを組み合わせること  
+- グリフの添付ファイルのベクトルを組み合わせること  
   
--   コード ポイントからグリフへのクラスターのマッピング  
+- コード ポイントからグリフへのクラスターのマッピング  
   
--   グリフのフラグ  
+- グリフのフラグ  
   
  各グリフの仕様には、次の形式があります。  
   

@@ -3,11 +3,11 @@ title: PiiLoggingNotAllowed
 ms.date: 03/30/2017
 ms.assetid: fc34a0b6-fee7-4da4-b146-b0c1c8b7519a
 ms.openlocfilehash: 7e1ee746c16eabfa84d96d9157a6248f640e5a1d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59150047"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61999156"
 ---
 # <a name="piiloggingnotallowed"></a>PiiLoggingNotAllowed
 Id:108  

@@ -1,5 +1,5 @@
 ---
-title: '方法: 日付と時刻の演算でタイム ゾーンを使用します。'
+title: '方法: 日付と時刻の演算でタイム ゾーンを使用する'
 ms.date: 04/10/2017
 ms.technology: dotnet-standard
 dev_langs:
@@ -13,13 +13,13 @@ ms.assetid: 83dd898d-1338-415d-8cd6-445377ab7871
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 053ca2d10deadf58d5bb8b4628fb5dee815d82c8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54682694"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026498"
 ---
-# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>方法: 日付と時刻の演算でタイム ゾーンを使用します。
+# <a name="how-to-use-time-zones-in-date-and-time-arithmetic"></a>方法: 日付と時刻の演算でタイム ゾーンを使用する
 
 通常とを実行して日付時刻の算術演算を使用して<xref:System.DateTime>または<xref:System.DateTimeOffset>結果の値は、タイム ゾーン調整規則が反映されません。 日付と時刻の値のタイム ゾーンが明確に識別できる場合でもこれが true (場合など、<xref:System.DateTime.Kind%2A>プロパティに設定されて<xref:System.DateTimeKind.Local>)。 このトピックでは、特定のタイム ゾーンに属している日付と時刻の値に対する算術演算を実行する方法を示します。 算術演算の結果には、タイム ゾーンの調整規則が反映されます。
 

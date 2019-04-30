@@ -14,11 +14,11 @@ helpviewer_keywords:
 - late binding [Visual Basic], Visual Basic compiler
 ms.assetid: d6ff7f1e-b94f-4205-ab8d-5cfa91758724
 ms.openlocfilehash: 20eb96d0d9f81ec9dfa359edf63a60f72a45aa01
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973226"
 ---
 # <a name="early-and-late-binding-visual-basic"></a>事前バインディングと遅延バインディング (Visual Basic)
 Visual Basic コンパイラと呼ばれるプロセスを実行する`binding`オブジェクトがオブジェクト変数に割り当てられるとき。 オブジェクトが特定のオブジェクト型として宣言された変数に代入される場合、オブジェクトは*事前バインディング*されます。 事前バインディングされたオブジェクトを使用すると、コンパイラは、アプリケーションを実行する前に、メモリの割り当てとその他の最適化を実行することができます。 たとえば、次のコードは、<xref:System.IO.FileStream> 型の変数を宣言します。  

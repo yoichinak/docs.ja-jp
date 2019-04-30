@@ -10,11 +10,11 @@ helpviewer_keywords:
 - animation [WPF], Points with key frames
 ms.assetid: d2e2ef10-0773-4133-856e-d41c09f60ded
 ms.openlocfilehash: b706568a0e8221aac737780592882f728f0f9e9c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328778"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010164"
 ---
 # <a name="how-to-animate-a-point-by-using-key-frames"></a>方法: キー フレームを使用して点をアニメーション化する
 この例は、使用する方法を示します、<xref:System.Windows.Media.Animation.PointAnimationUsingKeyFrames>をアニメーション化するクラス、<xref:System.Windows.Point>します。  

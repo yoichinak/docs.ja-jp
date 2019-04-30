@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data [WPF]
 ms.assetid: dea454e2-abd8-4c53-ba37-d3ed53187d64
 ms.openlocfilehash: ee45771a289804395387f9d6d49b667da1a76024
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077733"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020544"
 ---
 # <a name="data"></a>データ
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] データ バインディングは、データを表示したり操作するための単純で一貫した方法をアプリケーションに提供します。 要素は、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)] オブジェクトおよび XML の形式のさまざまなデータ ソースのデータにバインドできます。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] はまた、ドラッグ アンド ドロップ操作によるデータ転送のメカニズムも提供します。  

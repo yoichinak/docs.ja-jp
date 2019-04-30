@@ -3,11 +3,11 @@ title: サンプル
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
 ms.openlocfilehash: d06fe74280b713130142d6d7a881c97849598ce4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107175"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033411"
 ---
 # <a name="samples"></a>サンプル
 このトピックでは、Visual Basic および c# ソリューションが含まれているへのリンク[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]サンプル コード。  
@@ -21,11 +21,11 @@ ms.locfileid: "59107175"
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] コードおよびアプリケーションの他の例を参照するには、次の手順に従います。  
   
--   Microsoft Docs で特定の問題を検索します。  
+- Microsoft Docs で特定の問題を検索します。  
   
--   参加、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。  
+- 参加、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。  
   
--   詳細を示すホワイト ペーパー[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。 詳細については、次を参照してください。 [LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)します。  
+- 詳細を示すホワイト ペーパー[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。 詳細については、次を参照してください。 [LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)します。  
   
 ## <a name="see-also"></a>関連項目
 

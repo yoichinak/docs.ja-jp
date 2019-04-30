@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Thumb control type
 ms.assetid: 13636338-e320-4355-b071-ede20a3fb1de
 ms.openlocfilehash: be918910d3ef11c35c6fb2e8d42c848fec8c0678
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151893"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996542"
 ---
 # <a name="ui-automation-support-for-the-thumb-control-type"></a>UI オートメーションによる Thumb コントロール型のサポート
 > [!NOTE]

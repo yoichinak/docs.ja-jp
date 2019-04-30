@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: cd54861600127191b852e0a966baae6e0fe7914e
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613877"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012093"
 ---
 # <a name="modernize-your-apps-with-monitoring-and-telemetry"></a>監視と製品利用統計情報でアプリを最新化する
 
@@ -35,15 +35,15 @@ OMS ポータルまたは任意のブラウザーで実行して、Azure portal 
 
 [コンテナー監視ソリューション](https://docs.microsoft.com/azure/log-analytics/log-analytics-containers)Log Analytics での表示し、1 つの場所で Docker と Windows コンテナー ホストを管理します。 どのコンテナーが、ソリューションを示しています、どのようなコンテナー イメージを実行して、実行されているし、コンテナーが実行されています。 コンテナーで使用されているコマンドを含む、詳細な監査情報を表示することができます。 また、コンテナーを表示および Docker または Windows ホストをリモートで表示することがなく、一元化されたログを検索してトラブルシューティングすることもできます。 ホストで余分なリソースを簡潔にかかる可能性があるコンテナーが表示されます。 さらに、一元的な CPU、メモリ、ストレージ、およびネットワーク使用率およびパフォーマンスについては、コンテナーを表示することができます。 Windows を実行するコンピューターで、集中管理し、Windows サーバーからログを比較することができます、HYPER-V、および Docker コンテナー。 ソリューションには、次のようなコンテナー オーケストレーターがサポートされています。
 
--   Docker Swarm
+- Docker Swarm
 
--   DC OS/
+- DC OS/
 
--   Kubernetes
+- Kubernetes
 
--   Service Fabric
+- Service Fabric
 
--   Red Hat の OpenShift
+- Red Hat の OpenShift
 
 図 4-11 は、さまざまなコンテナー ホストとエージェントと OMS 間の関係を示しています。
 
@@ -53,45 +53,45 @@ OMS ポータルまたは任意のブラウザーで実行して、Azure portal 
 
 Log Analytics コンテナー監視ソリューションを使用できます。
 
--   1 つの場所ですべてのコンテナー ホストに関する情報を参照してください。
+- 1 つの場所ですべてのコンテナー ホストに関する情報を参照してください。
 
--   どのコンテナーが、どのようなイメージを実行して、実行されているし、実行しています。
+- どのコンテナーが、どのようなイメージを実行して、実行されているし、実行しています。
 
--   コンテナー操作の監査証跡を参照してください。
+- コンテナー操作の監査証跡を参照してください。
 
--   表示および Docker ホストへのリモート ログインに関係なく、一元化されたログを検索してトラブルシューティングを行います。
+- 表示および Docker ホストへのリモート ログインに関係なく、一元化されたログを検索してトラブルシューティングを行います。
 
--   「うるさい隣人」、可能性がありますし、ホストで余分なリソースを消費するコンテナーを検索します。
+- 「うるさい隣人」、可能性がありますし、ホストで余分なリソースを消費するコンテナーを検索します。
 
--   一元的な CPU、メモリ、ストレージ、およびネットワーク使用率およびパフォーマンスについては、コンテナーを表示します。
+- 一元的な CPU、メモリ、ストレージ、およびネットワーク使用率およびパフォーマンスについては、コンテナーを表示します。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **Microsoft Azure での監視の概要**
+- **Microsoft Azure での監視の概要**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Application Insights とは何か?**
+- **Application Insights とは何か?**
 
 <https://docs.microsoft.com/azure/azure-monitor/app/app-insights-overview>
 
--   **Log Analytics とは何ですか。**
+- **Log Analytics とは何ですか。**
 
 <https://docs.microsoft.com/azure/log-analytics/log-analytics-overview>
 
--   **Azure Monitor でのコンテナー監視ソリューション**
+- **Azure Monitor でのコンテナー監視ソリューション**
 
 <https://docs.microsoft.com/azure/azure-monitor/insights/containers>
 
--   **Azure Monitor の概要**
+- **Azure Monitor の概要**
 
 <https://docs.microsoft.com/azure/azure-monitor/overview>
 
--   **Operations Management Suite (OMS) とは何ですか。**
+- **Operations Management Suite (OMS) とは何ですか。**
 
 <https://docs.microsoft.com/azure/operations-management-suite/operations-management-suite-overview>
 
--   **OMS を使用して Service Fabric で Windows Server コンテナーの監視**
+- **OMS を使用して Service Fabric で Windows Server コンテナーの監視**
 
 <https://docs.microsoft.com/azure/service-fabric/service-fabric-diagnostics-containers-windowsserver>
 

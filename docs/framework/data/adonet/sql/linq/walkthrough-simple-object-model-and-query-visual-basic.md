@@ -5,11 +5,11 @@ dev_langs:
 - vb
 ms.assetid: c878e457-f715-46e4-a136-ff14d6c86018
 ms.openlocfilehash: 326caf550e8b138b4b968f0021a7fc475dc58c8d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338073"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037012"
 ---
 # <a name="walkthrough-simple-object-model-and-query-visual-basic"></a>チュートリアル: 簡単なオブジェクト モデルとクエリ (Visual Basic)
 このチュートリアルでは、複雑さを抑えた、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 全体の基本的なシナリオを示します。 サンプルの Northwind データベースにある Customers テーブルのモデル化を行うエンティティ クラスを作成します。 次に、住所がロンドンの顧客を表示するための簡単なクエリを作成します。  
@@ -22,24 +22,24 @@ ms.locfileid: "59338073"
   
 ## <a name="prerequisites"></a>必須コンポーネント  
   
--   このチュートリアルでは、専用フォルダー ("c:\linqtest") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
+- このチュートリアルでは、専用フォルダー ("c:\linqtest") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
   
--   このチュートリアルには、Northwind サンプル データベースが必要です。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。 データベースをダウンロードしたら、ファイルを c:\linqtest フォルダーにコピーします。  
+- このチュートリアルには、Northwind サンプル データベースが必要です。 開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。 データベースをダウンロードしたら、ファイルを c:\linqtest フォルダーにコピーします。  
   
 ## <a name="overview"></a>概要  
  このチュートリアルは、主に次の 6 つのタスクで構成されています。  
   
--   作成、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューション。  
+- 作成、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューション。  
   
--   データベース テーブルにクラスを割り当てます。  
+- データベース テーブルにクラスを割り当てます。  
   
--   クラスに対し、データベース列を表すプロパティを指定します。  
+- クラスに対し、データベース列を表すプロパティを指定します。  
   
--   Northwind データベースへの接続を指定します。  
+- Northwind データベースへの接続を指定します。  
   
--   データベースに対して実行する簡単なクエリを作成します。  
+- データベースに対して実行する簡単なクエリを作成します。  
   
--   クエリを実行して結果を観察する。  
+- クエリを実行して結果を観察する。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成する  
  この最初のタスクでは、ビルドおよび実行するために必要な参照を含む Visual Studio ソリューションを作成、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト。  
@@ -80,22 +80,22 @@ ms.locfileid: "59338073"
   
 #### <a name="to-create-an-entity-class-and-map-it-to-a-database-table"></a>エンティティ クラスを作成し、データベース テーブルに対応付けるには  
   
--   Module1.vb で、`Sub Main` の直前に次のコードを入力または貼り付けます。  
+- Module1.vb で、`Sub Main` の直前に次のコードを入力または貼り付けます。  
   
      [!code-vb[DLinqWalk1VB#2](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#2)]  
   
 ## <a name="designating-properties-on-the-class-to-represent-database-columns"></a>データベース列を表すプロパティをクラスに追加する  
  この手順では、いくつかのタスクを実行します。  
   
--   <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性を使用して、エンティティ クラスの `CustomerID` プロパティおよび `City` プロパティを、データベース テーブルの列を表すものとして指定します。  
+- <xref:System.Data.Linq.Mapping.ColumnAttribute> 属性を使用して、エンティティ クラスの `CustomerID` プロパティおよび `City` プロパティを、データベース テーブルの列を表すものとして指定します。  
   
--   `CustomerID` プロパティを、データベースの主キー列を表すものとして指定します。  
+- `CustomerID` プロパティを、データベースの主キー列を表すものとして指定します。  
   
--   プライベートでの格納用として `_CustomerID` フィールドおよび `_City` フィールドを指定します。 これで、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、ビジネス ロジックを含む場合があるパブリック アクセサーを使用せずに、値を直接格納および取得できます。  
+- プライベートでの格納用として `_CustomerID` フィールドおよび `_City` フィールドを指定します。 これで、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、ビジネス ロジックを含む場合があるパブリック アクセサーを使用せずに、値を直接格納および取得できます。  
   
 #### <a name="to-represent-characteristics-of-two-database-columns"></a>2 つのデータベース列の特性を指定するには  
   
--   Module1.vb で、`End Class` の直前に次のコードを入力または貼り付けます。  
+- Module1.vb で、`End Class` の直前に次のコードを入力または貼り付けます。  
   
      [!code-vb[DLinqWalk1VB#3](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1VB/vb/Module1.vb#3)]  
   
@@ -106,7 +106,7 @@ ms.locfileid: "59338073"
   
 #### <a name="to-specify-the-database-connection"></a>データベース接続を指定するには  
   
--   `Sub Main` メソッドに次のコードを入力または貼り付けます。  
+- `Sub Main` メソッドに次のコードを入力または貼り付けます。  
   
      `northwnd.mdf` ファイルは linqtest フォルダーに置かれているものとします。 詳細については、このチュートリアルの「前提条件」を参照してください。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "59338073"
   
 #### <a name="to-create-a-simple-query"></a>簡単なクエリを作成するには  
   
--   `Sub Main` メソッドの `Table(Of Customer)` 宣言の後に次のコードを入力または貼り付けます。  
+- `Sub Main` メソッドの `Table(Of Customer)` 宣言の後に次のコードを入力または貼り付けます。  
   
      [!code-vb[DLinqWalk1AVB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk1AVB/vb/Module1.vb#5)]  
   

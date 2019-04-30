@@ -5,11 +5,11 @@ helpviewer_keywords:
 - base elements [WPF]
 ms.assetid: 2c997092-72c6-4767-bc84-74267f4eee72
 ms.openlocfilehash: 0cd69a4d2d6087c1ebf93bb5931511f32a4c9c5f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110059"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032059"
 ---
 # <a name="base-elements-overview"></a>基本要素の概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のクラスの大部分は、[!INCLUDE[TLA2#tla_sdk](../../../../includes/tla2sharptla-sdk-md.md)] のドキュメントで一般に基本要素クラスと呼ばれている 4 つのクラスから派生しています。 これらのクラスは<xref:System.Windows.UIElement>、 <xref:System.Windows.FrameworkElement>、 <xref:System.Windows.ContentElement>、および<xref:System.Windows.FrameworkContentElement>します。 <xref:System.Windows.DependencyObject>クラスも関連が、両方の共通基本クラスであるため<xref:System.Windows.UIElement>と <xref:System.Windows.ContentElement>  
@@ -31,49 +31,49 @@ ms.locfileid: "59110059"
   
  派生したクラスを作成する場合<xref:System.Windows.DependencyObject>、次の機能を継承します。  
   
--   <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A>サポート、およびシステムのサポートの [全般] プロパティ。  
+- <xref:System.Windows.DependencyObject.GetValue%2A> <xref:System.Windows.DependencyObject.SetValue%2A>サポート、およびシステムのサポートの [全般] プロパティ。  
   
--   依存関係プロパティと、依存関係プロパティとして実装されている添付プロパティを使用する機能。  
+- 依存関係プロパティと、依存関係プロパティとして実装されている添付プロパティを使用する機能。  
   
  派生したクラスを作成する場合<xref:System.Windows.UIElement>、それに加えてによって提供される次の機能を継承する<xref:System.Windows.DependencyObject>:  
   
--   アニメーション化されたプロパティ値の基本的なサポート。 詳しくは、「 [アニメーションの概要](../graphics-multimedia/animation-overview.md)」をご覧ください。  
+- アニメーション化されたプロパティ値の基本的なサポート。 詳しくは、「 [アニメーションの概要](../graphics-multimedia/animation-overview.md)」をご覧ください。  
   
--   基本的な入力イベントのサポートと、コマンド実行のサポート。 詳細については、「[入力の概要](input-overview.md)」および「[コマンド実行の概要](commanding-overview.md)」を参照してください。  
+- 基本的な入力イベントのサポートと、コマンド実行のサポート。 詳細については、「[入力の概要](input-overview.md)」および「[コマンド実行の概要](commanding-overview.md)」を参照してください。  
   
--   レイアウト システムに情報を提供するためにオーバーライドできる仮想メソッド。  
+- レイアウト システムに情報を提供するためにオーバーライドできる仮想メソッド。  
   
  派生したクラスを作成する場合<xref:System.Windows.FrameworkElement>、それに加えてによって提供される次の機能を継承する<xref:System.Windows.UIElement>:  
   
--   スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)します。  
+- スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)します。  
   
--   データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。  
+- データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。  
   
--   動的リソース参照のサポート。 詳細については、「[XAML リソース](xaml-resources.md)」を参照してください。  
+- 動的リソース参照のサポート。 詳細については、「[XAML リソース](xaml-resources.md)」を参照してください。  
   
--   プロパティ値継承のサポート、および、データ バインディング、スタイル、またはレイアウトのフレームワークの実装などのフレームワーク サービスのプロパティに関する条件をレポートする場合に役立つ、メタデータ内の他のフラグ。 詳細については、「[フレームワーク プロパティ メタデータ](framework-property-metadata.md)」を参照してください。  
+- プロパティ値継承のサポート、および、データ バインディング、スタイル、またはレイアウトのフレームワークの実装などのフレームワーク サービスのプロパティに関する条件をレポートする場合に役立つ、メタデータ内の他のフラグ。 詳細については、「[フレームワーク プロパティ メタデータ](framework-property-metadata.md)」を参照してください。  
   
--   論理ツリーの概念。 詳細については、「[WPF のツリー](trees-in-wpf.md)」を参照してください。  
+- 論理ツリーの概念。 詳細については、「[WPF のツリー](trees-in-wpf.md)」を参照してください。  
   
--   レイアウト システムの実際的な WPF フレームワーク レベルの実装のサポートなど、<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>を検出する上書きのプロパティにその影響を与えるレイアウト変更します。  
+- レイアウト システムの実際的な WPF フレームワーク レベルの実装のサポートなど、<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>を検出する上書きのプロパティにその影響を与えるレイアウト変更します。  
   
  派生したクラスを作成する場合<xref:System.Windows.ContentElement>、それに加えてによって提供される次の機能を継承する<xref:System.Windows.DependencyObject>:  
   
--   アニメーションのサポート。 詳しくは、「 [アニメーションの概要](../graphics-multimedia/animation-overview.md)」をご覧ください。  
+- アニメーションのサポート。 詳しくは、「 [アニメーションの概要](../graphics-multimedia/animation-overview.md)」をご覧ください。  
   
--   基本的な入力イベントのサポートと、コマンド実行のサポート。 詳細については、「[入力の概要](input-overview.md)」および「[コマンド実行の概要](commanding-overview.md)」を参照してください。  
+- 基本的な入力イベントのサポートと、コマンド実行のサポート。 詳細については、「[入力の概要](input-overview.md)」および「[コマンド実行の概要](commanding-overview.md)」を参照してください。  
   
  派生したクラスを作成する場合<xref:System.Windows.FrameworkContentElement>、それに加えてによって提供される次の機能を取得する<xref:System.Windows.ContentElement>:  
   
--   スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[アニメーションの概要](../graphics-multimedia/animation-overview.md)します。  
+- スタイル設定とストーリーボードのサポート。 詳細については、次を参照してください。<xref:System.Windows.Style>と[アニメーションの概要](../graphics-multimedia/animation-overview.md)します。  
   
--   データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。  
+- データ バインディングのサポート。 詳しくは、「 [データ バインディングの概要](../data/data-binding-overview.md)」をご覧ください。  
   
--   動的リソース参照のサポート。 詳しくは、「[XAML リソース](xaml-resources.md)」を参照してください。  
+- 動的リソース参照のサポート。 詳しくは、「[XAML リソース](xaml-resources.md)」を参照してください。  
   
--   プロパティ値継承のサポート、および、データ バインディング、スタイル、またはレイアウトのフレームワークの実装などのフレームワーク サービスのプロパティに関する条件をレポートする場合に役立つ、メタデータ内の他のフラグ。 詳細については、「[フレームワーク プロパティ メタデータ](framework-property-metadata.md)」を参照してください。  
+- プロパティ値継承のサポート、および、データ バインディング、スタイル、またはレイアウトのフレームワークの実装などのフレームワーク サービスのプロパティに関する条件をレポートする場合に役立つ、メタデータ内の他のフラグ。 詳細については、「[フレームワーク プロパティ メタデータ](framework-property-metadata.md)」を参照してください。  
   
--   レイアウト システムの変更へのアクセスは継承しません (など<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>)。 使用可能なレイアウト システムの実装は<xref:System.Windows.FrameworkElement>します。 ただし、継承、<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>レイアウトに影響を与えるし、コンテンツ ホストに報告されるプロパティの変更を検出できるオーバーライドします。  
+- レイアウト システムの変更へのアクセスは継承しません (など<xref:System.Windows.FrameworkElement.ArrangeOverride%2A>)。 使用可能なレイアウト システムの実装は<xref:System.Windows.FrameworkElement>します。 ただし、継承、<xref:System.Windows.FrameworkElement.OnPropertyChanged%2A>レイアウトに影響を与えるし、コンテンツ ホストに報告されるプロパティの変更を検出できるオーバーライドします。  
   
  さまざまなクラスに関してコンテンツ モデルがドキュメント化されています。 派生元として適切なクラスを見つける必要がある場合、クラスのコンテンツ モデルは、考慮する必要がある項目の候補の 1 つです。 詳細については、「[WPF のコンテンツ モデル](../controls/wpf-content-model.md)」を参照してください。  
   

@@ -8,14 +8,14 @@ helpviewer_keywords:
 - XAML [WPF], object element usage
 ms.assetid: b8586241-a02d-486e-9223-e1e98e047f41
 ms.openlocfilehash: 32eefba26b5e04370599e4c97767b6662cfd1c13
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59082491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008203"
 ---
 # <a name="path-markup-syntax"></a>パス マークアップ構文
-パスについては、「[WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)」および「[ジオメトリの概要](geometry-overview.md)」で説明します。ただし、このトピックでは、Extensible Application Markup Language (XAML)[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] を使用してパス ジオメトリをよりコンパクトに指定できる、強力で複合的なミニ言語について詳細に説明します。
+パスは、後ほど[図形と基本描画の WPF の概要](shapes-and-basic-drawing-in-wpf-overview.md)と[ジオメトリの概要](geometry-overview.md)、ただし、このトピックで詳しく説明パスを指定するのに使用できる、強力で複雑なミニ言語ジオメトリを使用してよりコンパクト[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。  
   
 <a name="prerequisites"></a>   
 ## <a name="prerequisites"></a>必須コンポーネント  
@@ -25,11 +25,11 @@ ms.locfileid: "59082491"
 ## <a name="streamgeometry-and-pathfigurecollection-mini-languages"></a>StreamGeometry ミニ言語と PathFigureCollection ミニ言語  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ジオメトリック パスを記述するためのミニ言語を提供する 2 つのクラスを提供します。<xref:System.Windows.Media.StreamGeometry>と<xref:System.Windows.Media.PathFigureCollection>します。  
   
--   使用する、<xref:System.Windows.Media.StreamGeometry>型のプロパティを設定するときに、ミニ言語<xref:System.Windows.Media.Geometry>など、<xref:System.Windows.UIElement.Clip%2A>のプロパティを<xref:System.Windows.UIElement>または<xref:System.Windows.Shapes.Path.Data%2A>のプロパティを<xref:System.Windows.Shapes.Path>要素。 次の例では、属性構文を使用して、作成、<xref:System.Windows.Media.StreamGeometry>します。  
+- 使用する、<xref:System.Windows.Media.StreamGeometry>型のプロパティを設定するときに、ミニ言語<xref:System.Windows.Media.Geometry>など、<xref:System.Windows.UIElement.Clip%2A>のプロパティを<xref:System.Windows.UIElement>または<xref:System.Windows.Shapes.Path.Data%2A>のプロパティを<xref:System.Windows.Shapes.Path>要素。 次の例では、属性構文を使用して、作成、<xref:System.Windows.Media.StreamGeometry>します。  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMStreamGeometryAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmstreamgeometryattributesyntaxinline)]  
   
--   使用する、<xref:System.Windows.Media.PathFigureCollection>ミニ言語を設定するとき、<xref:System.Windows.Media.PathGeometry.Figures%2A>のプロパティを<xref:System.Windows.Media.PathGeometry>します。 次の例では、属性構文を使用して、作成、<xref:System.Windows.Media.PathFigureCollection>の<xref:System.Windows.Media.PathGeometry>します。  
+- 使用する、<xref:System.Windows.Media.PathFigureCollection>ミニ言語を設定するとき、<xref:System.Windows.Media.PathGeometry.Figures%2A>のプロパティを<xref:System.Windows.Media.PathGeometry>します。 次の例では、属性構文を使用して、作成、<xref:System.Windows.Media.PathFigureCollection>の<xref:System.Windows.Media.PathGeometry>します。  
   
      [!code-xaml[GeometrySample_snip_XAML#GraphicsMMPathFigureCollectionAttributeSyntaxInline](~/samples/snippets/csharp/VS_Snippets_Wpf/GeometrySample_snip_XAML/CS/MiniLanguageExample.xaml#graphicsmmpathfigurecollectionattributesyntaxinline)]  
   

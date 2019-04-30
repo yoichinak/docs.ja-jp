@@ -6,10 +6,10 @@ helpviewer_keywords:
 ms.assetid: bc5de6b6-1a63-42a3-919a-67d21bae24e0
 ms.openlocfilehash: 1dedc6d771e75acd0d657bb5430c178428c0f0ac
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976704"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990250"
 ---
 # <a name="duplex"></a>二重
 双方向サンプルでは、双方向コントラクトを定義して実装する方法を示します。 双方向通信は、クライアントがサービスとのセッションを確立し、サービスからクライアントにメッセージを返信できるチャネルがサービスに提供されると発生します。 このサンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)します。 双方向コントラクトは、クライアントからサービスへのプライマリ インターフェイスとサービスからクライアントへのコールバック インターフェイスという 2 つのインターフェイスのペアとして定義されます。 このサンプルでは、`ICalculatorDuplex` インターフェイスを使用することにより、クライアントは算術演算を実行し、セッション経由で結果を計算できます。 サービスは、`ICalculatorDuplexCallback` インターフェイスで結果を返します。 コンテキストを確立して、クライアントとサービスの間で送信される一連のメッセージを相互に関連付ける必要があるため、二重のコントラクトにはセッションが必要です。  

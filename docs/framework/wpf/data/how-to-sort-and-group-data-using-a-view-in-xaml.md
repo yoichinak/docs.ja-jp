@@ -12,11 +12,11 @@ helpviewer_keywords:
 - views [WPF], grouping data
 ms.assetid: 145c8c3f-dbdd-4d0d-816f-90b35eba7eda
 ms.openlocfilehash: ca4439b574264ebebfda745f0765f750099bc95f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59144522"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020739"
 ---
 # <a name="how-to-sort-and-group-data-using-a-view-in-xaml"></a>方法: XAML でビューを使用してデータの並べ替えおよびグループ化を行う
 この例でのデータ コレクションのビューを作成する方法を示しています。[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。 グループ化、並べ替え、フィルター処理、の機能と現在の項目の概念ビューを使用します。  

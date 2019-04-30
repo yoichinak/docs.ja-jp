@@ -8,11 +8,11 @@ helpviewer_keywords:
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
 ms.openlocfilehash: 81a19d063f31b3c28fc15a061b5173495e83f6fc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009124"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置
 アプリケーションによっては、フォームのサイズを変更したり、コンテンツのサイズが変化したりしたときに、それに応じて自動的にレイアウトを調整するフォームが必要です。 動的なレイアウトが必要であり、かつコードで <xref:System.Windows.Forms.Control.Layout> イベントを明示的に処理しない場合は、レイアウト パネルの使用をご検討ください。  
@@ -23,23 +23,23 @@ ms.locfileid: "59321888"
   
  <xref:System.Windows.Forms.FlowLayoutPanel> はその内容を特定のフローの方向 (水平または垂直) に配置します。 ある行から次の行、またはある列から次の列に内容をラップすることができます。 また、ラップする代わりにクリップすることもできます。 このチュートリアルでは、以下のタスクを行います。  
   
--   Windows フォーム プロジェクトの作成  
+- Windows フォーム プロジェクトの作成  
   
--   コントロールの水平配置と垂直配置  
+- コントロールの水平配置と垂直配置  
   
--   フロー方向の変更  
+- フロー方向の変更  
   
--   フロー中断の挿入  
+- フロー中断の挿入  
   
--   パディングと余白を使用したコントロールの配置  
+- パディングと余白を使用したコントロールの配置  
   
--   ツールボックスでのダブルクリックによるコントロールの挿入  
+- ツールボックスでのダブルクリックによるコントロールの挿入  
   
--   アウトラインの描画によるコントロールの挿入  
+- アウトラインの描画によるコントロールの挿入  
   
--   キャレットを使用したコントロールの挿入  
+- キャレットを使用したコントロールの挿入  
   
--   別の親コントロールへの既存コントロールの再割り当て  
+- 別の親コントロールへの既存コントロールの再割り当て  
   
  終了すると、これらの重要なレイアウト機能が果たす役割について理解できます。  
   
@@ -179,13 +179,13 @@ ms.locfileid: "59321888"
 ## <a name="next-steps"></a>次の手順  
  レイアウト パネルとコントロールを組み合わせて使用すると、複雑なレイアウトを作成できます。 さらに詳しく調べるための推奨事項を次に示します。  
   
--   いずれかの <xref:System.Windows.Forms.Button> コントロールのサイズを拡大して、レイアウトの変化を確認します。  
+- いずれかの <xref:System.Windows.Forms.Button> コントロールのサイズを拡大して、レイアウトの変化を確認します。  
   
--   レイアウト パネルには、別のレイアウト パネルを含めることができます。 <xref:System.Windows.Forms.TableLayoutPanel> コントロールを既存のコントロールにドロップしてみます。  
+- レイアウト パネルには、別のレイアウト パネルを含めることができます。 <xref:System.Windows.Forms.TableLayoutPanel> コントロールを既存のコントロールにドロップしてみます。  
   
--   <xref:System.Windows.Forms.FlowLayoutPanel> コントロールを親フォームにドッキングします。 フォームのサイズを変更し、レイアウトの変化を確認します。  
+- <xref:System.Windows.Forms.FlowLayoutPanel> コントロールを親フォームにドッキングします。 フォームのサイズを変更し、レイアウトの変化を確認します。  
   
--   いずれかのコントロールの <xref:System.Windows.Forms.Control.Visible%2A> プロパティを `false` に設定し、これに呼応して <xref:System.Windows.Forms.FlowLayoutPanel> のフローがどのように変化するか確認します。  
+- いずれかのコントロールの <xref:System.Windows.Forms.Control.Visible%2A> プロパティを `false` に設定し、これに呼応して <xref:System.Windows.Forms.FlowLayoutPanel> のフローがどのように変化するか確認します。  
   
 ## <a name="see-also"></a>関連項目
 

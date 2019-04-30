@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 64cc5b6e7c6fe44080b35dc07f029ad311b88ca7
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57489385"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989054"
 ---
 # <a name="icordebugevalgetthread-method"></a>ICorDebugEval::GetThread メソッド
 この評価が実行またはが実行スレッドを取得します。  

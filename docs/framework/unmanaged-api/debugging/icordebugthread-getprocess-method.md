@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 46aa2ec5a282ef56f28d5fa0499571028e6602e6
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57483629"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987032"
 ---
 # <a name="icordebugthreadgetprocess-method"></a>ICorDebugThread::GetProcess メソッド
 この ICorDebugThread が、一部を形成するプロセスにインターフェイス ポインターを取得します。  

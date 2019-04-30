@@ -7,11 +7,11 @@ helpviewer_keywords:
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
 ms.openlocfilehash: 6e8b4eba40cc1872cb289ca120679bb951f2652a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022381"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework アプリケーションにおける COM 相互運用性 (Visual Basic)
 

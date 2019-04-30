@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 745742df-0eda-479b-83f8-29bd8a80db96
 ms.openlocfilehash: e1f7a7da1ab2ce0ad7d7908ecd1f896d229b8e1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59223304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037909"
 ---
 # <a name="formulate-projections"></a>射影の作成
 次の例に示す方法、`select`ステートメントC#と`Select`Visual Basic でのステートメントは、クエリ射影を作成するには、その他の機能と組み合わせることができます。  
@@ -66,11 +66,11 @@ ms.locfileid: "59223304"
 ## <a name="example"></a>例  
  次の例では、入れ子になったクエリを使用して以下の結果を返します。  
   
--   すべての注文および対応する `OrderID` のシーケンス。  
+- すべての注文および対応する `OrderID` のシーケンス。  
   
--   注文内で割引のある項目から成るサブシーケンス。  
+- 注文内で割引のある項目から成るサブシーケンス。  
   
--   出荷コストが含まれない場合に節約される費用。  
+- 出荷コストが含まれない場合に節約される費用。  
   
  [!code-csharp[DLinqQueryExamples#65](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#65)]
  [!code-vb[DLinqQueryExamples#65](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#65)]  

@@ -17,11 +17,11 @@ ms.assetid: a4d5ceb1-b9f5-47e8-9e4a-a2b39110002f
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 19537fa3e3e27c3446d22f1f1a8cf2faf472158e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018568"
 ---
 # <a name="how-to-verify-the-digital-signatures-of-xml-documents"></a>方法: XML ドキュメントのデジタル署名を検証する
 <xref:System.Security.Cryptography.Xml> 名前空間にあるクラスを使用すると、デジタル署名で署名された XML データを検証できます。 XML デジタル署名 (XMLDSIG) を使用すると、データが署名後に変更されなかったことを確認できます。 XMLDSIG 標準の詳細についてにある World Wide Web Consortium (W3C) 仕様を参照して <https://www.w3.org/TR/xmldsig-core/> です。
@@ -75,9 +75,9 @@ ms.locfileid: "59307770"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   この例をコンパイルするには、`System.Security.dll` への参照を含める必要があります。  
+- この例をコンパイルするには、`System.Security.dll` への参照を含める必要があります。  
   
--   名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
+- 名前空間 <xref:System.Xml>、<xref:System.Security.Cryptography>、および <xref:System.Security.Cryptography.Xml> を含めます。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  非対称キー ペアの秘密キーをプレーンテキストで保存または転送しないでください。  対称暗号化キーと非対称暗号化キーの詳細については、[暗号化と復号化キーを生成する](../../../docs/standard/security/generating-keys-for-encryption-and-decryption.md)を参照してください。  

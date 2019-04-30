@@ -10,11 +10,11 @@ helpviewer_keywords:
 - ranking, arrays
 ms.assetid: 385e911b-18c1-4e98-9924-c6d279101dd9
 ms.openlocfilehash: 0b4e7c9e253f94e1e28700c8669d28799ab69d91
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053718"
 ---
 # <a name="array-dimensions-in-visual-basic"></a>Visual Basic における配列の次元
 A*ディメンション*は、方向が配列の要素の仕様を変更できます。 月の日付ごとの売上合計を保持する配列には、1 つのディメンション (月の日) があります。 1 か月の日付ごとに売上を部門別合計保持する配列には、2 つのディメンション (部門の番号と月の日) があります。 配列の次元数と呼ばれる、*ランク*します。  

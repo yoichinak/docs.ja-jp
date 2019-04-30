@@ -5,18 +5,18 @@ helpviewer_keywords:
 - HTTP activation [WCF]
 ms.assetid: 33a7054a-73ec-464d-83e5-b203aeded658
 ms.openlocfilehash: 2677c57c825675c884d057827e065f05d7c8bf30
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327985"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039144"
 ---
 # <a name="how-to-install-and-configure-wcf-activation-components"></a>方法: WCF アクティブ化コンポーネントをインストールして設定する
 このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を設定するために必要な手順を説明に[!INCLUDE[wv](../../../../includes/wv-md.md)]HTTP では通信しないサービスのネットワーク プロトコルの Windows Communication Foundation (WCF) をホストします。 以降の各セクションで、この構成に関する手順について概説します。  
   
--   インストール (またはのインストールの確認)、WCF のアクティブ化コンポーネント。  
+- インストール (またはのインストールの確認)、WCF のアクティブ化コンポーネント。  
   
--   非 HTTP プロトコルをサポートようにする WAS を構成します。 次の手順では、TCP アクティベーション用に [!INCLUDE[wv](../../../../includes/wv-md.md)] を構成します。  
+- 非 HTTP プロトコルをサポートようにする WAS を構成します。 次の手順では、TCP アクティベーション用に [!INCLUDE[wv](../../../../includes/wv-md.md)] を構成します。  
   
  インストールと構成を参照してください。 後[方法。WAS で WCF サービスをホスト](../../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)WAS を使用する非 HTTP エンドポイントを公開する WCF サービスを作成する手順についてはします。  
   
@@ -57,7 +57,7 @@ ms.locfileid: "59327985"
   
      便宜上次の 2 つの手順が、サンプル ディレクトリにある RemoveNetTcpSiteBinding.cmd というバッチ ファイルに実装されています。  
   
-    1.  管理者レベルのコマンド プロンプト ウィンドウで次のコマンドを実行して、有効なプロトコルの一覧から net.tcp を削除します。  
+    1. 管理者レベルのコマンド プロンプト ウィンドウで次のコマンドを実行して、有効なプロトコルの一覧から net.tcp を削除します。  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set app   
@@ -67,7 +67,7 @@ ms.locfileid: "59327985"
         > [!NOTE]
         >  このコマンドはテキスト 1 行です。  
   
-    2.  権限のレベルが高いコマンド プロンプト ウィンドウで次のコマンドを実行して、net.tcp サイト バインディングを削除します。  
+    2. 権限のレベルが高いコマンド プロンプト ウィンドウで次のコマンドを実行して、net.tcp サイト バインディングを削除します。  
   
         ```  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   

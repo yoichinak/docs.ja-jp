@@ -3,11 +3,11 @@ title: 要素操作 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 5fcb0631-dce5-45ff-8abb-353cae21e14f
 ms.openlocfilehash: d631c9d091d75c12366e17a862637bdc4f0633b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836923"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61977575"
 ---
 # <a name="element-operations-visual-basic"></a>要素操作 (Visual Basic)
 要素操作では、シーケンスから単一の特定の要素が返されます。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: fc07a26c-cbee-41c5-8fb0-329085fef749
 ms.openlocfilehash: 43bc222bb69aafa3fa3492d79d35fbc492055ead
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344833"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038600"
 ---
 # <a name="message-security-with-a-windows-client-without-credential-negotiation"></a>資格情報ネゴシエーションを使用しない Windows クライアントを使用するメッセージ セキュリティ
 次のシナリオでは、Windows Communication Foundation (WCF) クライアントと Kerberos のプロトコルで保護されたサービスを説明します。  
@@ -36,9 +36,9 @@ ms.locfileid: "59344833"
 ## <a name="service"></a>サービス  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
+- 構成を使用せずに、コードを使用してスタンドアロン サービスを作成します。  
   
--   提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
+- 提供された構成を使用してサービスを作成しますが、エンドポイントを定義しません。  
   
 ### <a name="code"></a>コード  
  次のコードは、メッセージ セキュリティを使用するサービス エンドポイントを作成します。 このコードは、サービス資格情報のネゴシエーションとセキュリティ コンテキスト トークン (SCT) の確立を無効にします。  
@@ -95,9 +95,9 @@ ms.locfileid: "59344833"
 ## <a name="client"></a>Client  
  次のコードと構成は、別々に実行します。 次のいずれかの操作を行います。  
   
--   コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
+- コード (およびクライアント コード) を使用してスタンドアロン クライアントを作成します。  
   
--   エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
+- エンドポイント アドレスを定義しないクライアントを作成します。 代わりに、引数として構成名を受け取るクライアント コンストラクターを使用します。 次に例を示します。  
   
      [!code-csharp[C_SecurityScenarios#0](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_securityscenarios/cs/source.cs#0)]
      [!code-vb[C_SecurityScenarios#0](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_securityscenarios/vb/source.vb#0)]  

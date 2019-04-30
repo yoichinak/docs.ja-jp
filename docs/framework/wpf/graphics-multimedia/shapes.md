@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 893253b8-c2df-4f22-961d-cbc533d64c79
 ms.openlocfilehash: c25e26130adc7f012d375f35a173a4b5dc9871f0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59217771"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008177"
 ---
 # <a name="shapes"></a>図形
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 使用して基本的な図形を描画するためのサポートの提供、<xref:System.Windows.Shapes.Shape>クラス。 図形オブジェクトから派生<xref:System.Windows.FrameworkElement>し、そのため、レイアウト システムに参加しを使用するだけに描画できる[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]します。  

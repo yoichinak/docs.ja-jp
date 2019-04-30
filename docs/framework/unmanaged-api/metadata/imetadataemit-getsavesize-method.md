@@ -18,11 +18,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: d9279808e4ad15b693d06ac8a99dd33a609e5a8f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169053"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61992512"
 ---
 # <a name="imetadataemitgetsavesize-method"></a>IMetaDataEmit::GetSaveSize メソッド
 現在のスコープ内のアセンブリとそのメタデータの推定のバイナリのサイズを取得します。  
@@ -40,11 +40,11 @@ HRESULT GetSaveSize (
  `fSave`  
  [in]値、 [CorSaveSize](../../../../docs/framework/unmanaged-api/metadata/corsavesize-enumeration.md)正確でないかおおよそのサイズを取得するかどうかを指定する列挙体。 のみの 3 つの値が無効です: cssAccurate、cssQuick、および cssDiscardTransientCAs:  
   
--   cssAccurate は正確なサイズの保存を返しますが、計算に時間がかかります。  
+- cssAccurate は正確なサイズの保存を返しますが、計算に時間がかかります。  
   
--   cssQuick は安全性、用に埋め込まれて、サイズを返しますが、計算時間がかかりません。  
+- cssQuick は安全性、用に埋め込まれて、サイズを返しますが、計算時間がかかりません。  
   
--   cssDiscardTransientCAs 指示`GetSaveSize`こと、破棄できる破棄できるカスタム属性。  
+- cssDiscardTransientCAs 指示`GetSaveSize`こと、破棄できる破棄できるカスタム属性。  
   
  `pdwSaveSize`  
  [out]ファイルを保存するために必要なサイズへのポインター。  

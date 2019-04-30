@@ -5,11 +5,11 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
 ms.openlocfilehash: 01d76f325480c7cf09fef36b02589a602e3ee11e
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53129507"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973655"
 ---
 # <a name="when-to-deploy-windows-containers-to-service-fabric"></a>Service Fabric に Windows コンテナーを展開するタイミング
 
@@ -17,9 +17,9 @@ Windows コンテナーに基づくアプリケーションは簡単に IaaS Vm 
 
 多くの組織はのリフト アンド シフト既存のモノリシック アプリケーションをコンテナーに 2 つの理由。
 
--   コストの削減、いずれかの理由の統合と既存のハードウェア、またはより高密度でアプリケーションを実行してから削除します。
+- コストの削減、いずれかの理由の統合と既存のハードウェア、またはより高密度でアプリケーションを実行してから削除します。
 
--   開発と運用の間で一貫したデプロイ コントラクト。
+- 開発と運用の間で一貫したデプロイ コントラクト。
 
 わかりやすいものには、コストの削減を追求し、すべての組織がその目標を追跡は高くなります。 評価するために一貫した展開が困難が重要なこととしては、同じようになります。 一貫したデプロイ コントラクトは、開発者は、それに合ったテクノロジを使用して選択する自由を運用チームは、アプリケーション デプロイおよび管理する方法を取得します。 を述べています。 本契約は、多くのさまざまなテクノロジの複雑さを処理操作または強制的に特定のテクノロジだけで使用する開発者の苦労を軽減します。 基本的には、各アプリケーションは自己完結型の展開イメージにコンテナー化されました。
 

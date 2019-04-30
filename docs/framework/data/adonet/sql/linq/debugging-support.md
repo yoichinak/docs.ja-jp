@@ -3,11 +3,11 @@ title: デバッグのサポート
 ms.date: 03/30/2017
 ms.assetid: 262d8e60-8e71-42d7-8340-1b5276a0ad35
 ms.openlocfilehash: eab6370614bab12955c18523c8accca4089a6bc5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126829"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032618"
 ---
 # <a name="debugging-support"></a>デバッグのサポート
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 一般的なデバッグ サポートを提供します[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト。  参照してください[LINQ のデバッグ](/visualstudio/debugger/debugging-linq)または[LINQ のデバッグ](/visualstudio/debugger/debugging-linq)します。  

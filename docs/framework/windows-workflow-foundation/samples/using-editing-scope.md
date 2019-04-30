@@ -3,11 +3,11 @@ title: 編集スコープの使用
 ms.date: 03/30/2017
 ms.assetid: 79306f9e-318b-4687-9863-8b93d1841716
 ms.openlocfilehash: 6417e51a29215ce2da22fa4c655642a5fe9b7d18
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769425"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004771"
 ---
 # <a name="using-editing-scope"></a>編集スコープの使用
 このサンプルでは、変更のセットを 1 つの分割不可能な単位で元に戻せるように、変更のセットをバッチ処理する方法を示します。 既定では、アクティビティ デザイナー作者が実行した操作は、"元に戻す/やり直し" システムに自動的に統合されます。  
@@ -28,9 +28,9 @@ ms.locfileid: "59769425"
   
 2. クリックして**編集スコープを開く**します。  
   
-    1.  このコマンドにより、編集スコープを作成して編集スタックにプッシュする <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> が呼び出されます。  
+    1. このコマンドにより、編集スコープを作成して編集スタックにプッシュする <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> が呼び出されます。  
   
-    2.  次に、選択した <xref:System.Activities.Presentation.Model.ModelItem> に 3 つのアクティビティを追加します。 編集スコープを <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> によって開かなかった場合は、3 つの新しいアクティビティがデザイナー キャンバスに表示されることに注意してください。 この操作は <xref:System.Activities.Presentation.Model.EditingScope> 内で保留中のままであるので、デザイナーはまだ更新されません。  
+    2. 次に、選択した <xref:System.Activities.Presentation.Model.ModelItem> に 3 つのアクティビティを追加します。 編集スコープを <xref:System.Activities.Presentation.Model.ModelItem.BeginEdit%2A> によって開かなかった場合は、3 つの新しいアクティビティがデザイナー キャンバスに表示されることに注意してください。 この操作は <xref:System.Activities.Presentation.Model.EditingScope> 内で保留中のままであるので、デザイナーはまだ更新されません。  
   
 3. キーを押して**Close Editing Scope**編集スコープをコミットします。 3 つのアクティビティがデザイナーに表示されます。  
   

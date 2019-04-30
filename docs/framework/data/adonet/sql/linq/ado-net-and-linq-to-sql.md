@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
 ms.openlocfilehash: 10e60ebd71c4615354c25d3a61a04e9d12d7c800
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167194"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033827"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET および LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 一部である、[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]テクノロジのファミリです。 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] プロバイダー モデルから提供されるサービスに基づいて動作します。 したがって組み合わせることができます[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]コードを既存[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]アプリケーションさせ、現在[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]の解決策を[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]します。 次の図は、この関係を高いレベルから見たものです。  

@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 ms.date: 03/30/2017
 ms.assetid: e5b820ae-504d-405a-926a-9effa41d2369
 ms.openlocfilehash: 0c9e79709f5929e1fa123a8d1695ca720046e9e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190874"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997511"
 ---
 # <a name="microsofttransactionstransactionbridgereplaymessageretry"></a>Microsoft.Transactions.TransactionBridge.ReplayMessageRetry
 リプレイ メッセージの再試行は、応答しないコーディネーターに送信されました。  

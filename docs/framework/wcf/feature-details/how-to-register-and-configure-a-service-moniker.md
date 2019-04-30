@@ -6,11 +6,11 @@ helpviewer_keywords:
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
 ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313581"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000806"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>方法: サービス モニカーを登録および構成する
 型指定されたコントラクトを持つ COM アプリケーション内で Windows Communication Foundation (WCF) サービス モニカーを使用する前を COM に必要な属性型を登録して必要なバインディングで、COM アプリケーションとモニカーを構成する必要があります。構成します。  
@@ -36,7 +36,7 @@ ms.locfileid: "59313581"
   
 ### <a name="to-configure-the-com-application-and-the-moniker-with-the-required-binding-configuration"></a>COM アプリケーションとモニカーに必要なバインディングを設定するには  
   
--   バインディングの定義の配置 (によって生成された、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成されたクライアント アプリケーションの構成ファイルで) クライアント アプリケーションの構成ファイルで。 たとえば、Visual Basic 6.0 で開発した実行可能ファイルの名前が CallCenterClient.exe の場合、これと同じディレクトリに、CallCenterConfig.exe.config という名前で構成ファイルを作成します。 するとクライアント アプリケーションはモニカーを使えるようになります。 バインド構成は必要ありません、標準バインド WCF に用意された型のいずれかを使用する場合に注意してください。  
+- バインディングの定義の配置 (によって生成された、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)生成されたクライアント アプリケーションの構成ファイルで) クライアント アプリケーションの構成ファイルで。 たとえば、Visual Basic 6.0 で開発した実行可能ファイルの名前が CallCenterClient.exe の場合、これと同じディレクトリに、CallCenterConfig.exe.config という名前で構成ファイルを作成します。 するとクライアント アプリケーションはモニカーを使えるようになります。 バインド構成は必要ありません、標準バインド WCF に用意された型のいずれかを使用する場合に注意してください。  
   
      次の型が登録されています。  
   

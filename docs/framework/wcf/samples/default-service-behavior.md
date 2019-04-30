@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Default Service Behavior Sample [Windows Communication Foundation]
 ms.assetid: 442d4f71-c64e-4c62-816a-a66c38e7d3ec
 ms.openlocfilehash: 6c144bddff4e485673dbdc7e218e82808c20aa61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768866"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990271"
 ---
 # <a name="default-service-behavior"></a>既定のサービスの動作
 このサンプルでは、サービスの動作設定を構成する方法を示します。 サンプルがに基づいて、 [Getting Started](../../../../docs/framework/wcf/samples/getting-started-sample.md)、実装、`ICalculator`サービス コントラクト。 このサンプルは、<xref:System.ServiceModel.ServiceBehaviorAttribute> 属性と <xref:System.ServiceModel.OperationBehaviorAttribute> 属性を使用して、サービスの動作と操作の動作を明示的に定義しています。 動作の構成は、このサンプルに示すように、構成ファイルで行うことも、コード内で強制的に行うこともできます。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - XAML [WPF], Binding markup extension
 ms.assetid: 83d6e2a4-1b0c-4fc8-bd96-b5e98800ab63
 ms.openlocfilehash: 3455c7ccdedb432fc05c7dc9e80f0f7509f4fa0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010684"
 ---
 # <a name="binding-markup-extension"></a>バインドのマークアップ拡張機能
 プロパティの値を中間式オブジェクトを作成して、要素とそのバインディングを実行時に適用されるデータ コンテキストを解釈する、データ バインドされた値を延期します。  
@@ -54,55 +54,55 @@ ms.locfileid: "59170314"
   
  これらのプロパティ値のいくつかは、オブジェクトの種類で、XAML テキスト構文からのネイティブな型変換をサポートしていないため、属性値として設定するためにマークアップ拡張機能を必要する必要があります。 詳細については、各プロパティの .NET Framework クラス ライブラリの XAML 属性の使用方法に関するセクションを確認します。XAML 属性の構文を使用する文字列またはマークアップ拡張機能をさらにせず使用量は基本的で指定した値と同じ、`Binding`式でそれぞれを囲む引用符を配置しないで例外`bindProp` =`value`で、`Binding`式。  
   
--   <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: バインドできるグループを識別する文字列。 これは、比較的高度なバインドの概念です。リファレンス ページを参照してください。<xref:System.Windows.Data.BindingBase.BindingGroupName%2A>します。  
+- <xref:System.Windows.Data.BindingBase.BindingGroupName%2A>: バインドできるグループを識別する文字列。 これは、比較的高度なバインドの概念です。リファレンス ページを参照してください。<xref:System.Windows.Data.BindingBase.BindingGroupName%2A>します。  
   
--   <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。  
+- <xref:System.Windows.Data.Binding.BindsDirectlyToSource%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。  
   
--   <xref:System.Windows.Data.Binding.Converter%2A>: として設定できる、 `bindProp` = `value`文字列式では、これを行うに参照が必要です、オブジェクトの値として、などを[StaticResource マークアップ拡張機能](staticresource-markup-extension.md)します。 ここで、値は、カスタムのコンバーター クラスのインスタンスです。  
+- <xref:System.Windows.Data.Binding.Converter%2A>: として設定できる、 `bindProp` = `value`文字列式では、これを行うに参照が必要です、オブジェクトの値として、などを[StaticResource マークアップ拡張機能](staticresource-markup-extension.md)します。 ここで、値は、カスタムのコンバーター クラスのインスタンスです。  
   
--   <xref:System.Windows.Data.Binding.ConverterCulture%2A>: 標準ベースの識別子としての式で設定可能リファレンス トピックを参照してください。<xref:System.Windows.Data.Binding.ConverterCulture%2A>します。  
+- <xref:System.Windows.Data.Binding.ConverterCulture%2A>: 標準ベースの識別子としての式で設定可能リファレンス トピックを参照してください。<xref:System.Windows.Data.Binding.ConverterCulture%2A>します。  
   
--   <xref:System.Windows.Data.Binding.ConverterParameter%2A>: として設定できる、 `bindProp` = `value` 、式がこの文字列が渡されるパラメーターの型に依存します。 この使用量が、入れ子になったなどのオブジェクト参照を必要と値の参照型を渡す場合[StaticResource マークアップ拡張機能](staticresource-markup-extension.md)します。  
+- <xref:System.Windows.Data.Binding.ConverterParameter%2A>: として設定できる、 `bindProp` = `value` 、式がこの文字列が渡されるパラメーターの型に依存します。 この使用量が、入れ子になったなどのオブジェクト参照を必要と値の参照型を渡す場合[StaticResource マークアップ拡張機能](staticresource-markup-extension.md)します。  
   
--   <xref:System.Windows.Data.Binding.ElementName%2A>: と相互に排他的な<xref:System.Windows.Data.Binding.RelativeSource%2A>と<xref:System.Windows.Data.Binding.Source%2A>; 各これらのプロパティをバインドする特定のバインド方法を表します。 参照してください[データ バインディングの概要](../data/data-binding-overview.md)します。  
+- <xref:System.Windows.Data.Binding.ElementName%2A>: と相互に排他的な<xref:System.Windows.Data.Binding.RelativeSource%2A>と<xref:System.Windows.Data.Binding.Source%2A>; 各これらのプロパティをバインドする特定のバインド方法を表します。 参照してください[データ バインディングの概要](../data/data-binding-overview.md)します。  
   
--   <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: として設定できる、 `bindProp` = `value` 、式がこの文字列が渡された値の型に依存します。 入れ子になったなどのオブジェクト参照の参照型を渡すことが必要な場合[StaticResource マークアップ拡張機能](staticresource-markup-extension.md)します。  
+- <xref:System.Windows.Data.BindingBase.FallbackValue%2A>: として設定できる、 `bindProp` = `value` 、式がこの文字列が渡された値の型に依存します。 入れ子になったなどのオブジェクト参照の参照型を渡すことが必要な場合[StaticResource マークアップ拡張機能](staticresource-markup-extension.md)します。  
   
--   <xref:System.Windows.Data.Binding.IsAsync%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。  
+- <xref:System.Windows.Data.Binding.IsAsync%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。  
   
--   <xref:System.Windows.Data.Binding.Mode%2A>:*値*の定数名は、<xref:System.Windows.Data.BindingMode>列挙体。 たとえば、`{Binding Mode=OneWay}` のようにします。  
+- <xref:System.Windows.Data.Binding.Mode%2A>:*値*の定数名は、<xref:System.Windows.Data.BindingMode>列挙体。 たとえば、`{Binding Mode=OneWay}` のようにします。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。  
+- <xref:System.Windows.Data.Binding.NotifyOnSourceUpdated%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。  
+- <xref:System.Windows.Data.Binding.NotifyOnTargetUpdated%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。  
   
--   <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。  
+- <xref:System.Windows.Data.Binding.NotifyOnValidationError%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。  
   
--   <xref:System.Windows.Data.Binding.Path%2A>: データ オブジェクト、または一般的なオブジェクト モデルへのパスを記述する文字列。 形式は、このトピックでは適切に記述できないオブジェクト モデルの走査のいくつかの異なる規則を提供します。 参照してください[PropertyPath の XAML 構文](propertypath-xaml-syntax.md)します。  
+- <xref:System.Windows.Data.Binding.Path%2A>: データ オブジェクト、または一般的なオブジェクト モデルへのパスを記述する文字列。 形式は、このトピックでは適切に記述できないオブジェクト モデルの走査のいくつかの異なる規則を提供します。 参照してください[PropertyPath の XAML 構文](propertypath-xaml-syntax.md)します。  
   
--   <xref:System.Windows.Data.Binding.RelativeSource%2A>: ではなく相互に排他的<xref:System.Windows.Data.Binding.ElementName%2A>と<xref:System.Windows.Data.Binding.Source%2A>; 各これらのプロパティをバインドする特定のバインド方法を表します。 参照してください[データ バインディングの概要](../data/data-binding-overview.md)します。 入れ子になった必要があります[RelativeSource のマークアップ拡張機能](relativesource-markupextension.md)使用状況の値を指定します。  
+- <xref:System.Windows.Data.Binding.RelativeSource%2A>: ではなく相互に排他的<xref:System.Windows.Data.Binding.ElementName%2A>と<xref:System.Windows.Data.Binding.Source%2A>; 各これらのプロパティをバインドする特定のバインド方法を表します。 参照してください[データ バインディングの概要](../data/data-binding-overview.md)します。 入れ子になった必要があります[RelativeSource のマークアップ拡張機能](relativesource-markupextension.md)使用状況の値を指定します。  
   
--   <xref:System.Windows.Data.Binding.Source%2A>: と相互に排他的な<xref:System.Windows.Data.Binding.RelativeSource%2A>と<xref:System.Windows.Data.Binding.ElementName%2A>; 各これらのプロパティをバインドする特定のバインド方法を表します。 参照してください[データ バインディングの概要](../data/data-binding-overview.md)します。 通常、入れ子になった拡張機能の使用が必要です、 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)キーを持つリソース ディクショナリからオブジェクト データ ソースを参照します。  
+- <xref:System.Windows.Data.Binding.Source%2A>: と相互に排他的な<xref:System.Windows.Data.Binding.RelativeSource%2A>と<xref:System.Windows.Data.Binding.ElementName%2A>; 各これらのプロパティをバインドする特定のバインド方法を表します。 参照してください[データ バインディングの概要](../data/data-binding-overview.md)します。 通常、入れ子になった拡張機能の使用が必要です、 [StaticResource マークアップ拡張機能](staticresource-markup-extension.md)キーを持つリソース ディクショナリからオブジェクト データ ソースを参照します。  
   
--   <xref:System.Windows.Data.BindingBase.StringFormat%2A>: バインドされたデータの文字列形式の表記法を説明する文字列。 これは、比較的高度なバインドの概念です。リファレンス ページを参照してください。<xref:System.Windows.Data.BindingBase.StringFormat%2A>します。  
+- <xref:System.Windows.Data.BindingBase.StringFormat%2A>: バインドされたデータの文字列形式の表記法を説明する文字列。 これは、比較的高度なバインドの概念です。リファレンス ページを参照してください。<xref:System.Windows.Data.BindingBase.StringFormat%2A>します。  
   
--   <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: として設定できる、 `bindProp` = `value` 、式がこの文字列が渡されるパラメーターの型に依存します。 入れ子になったなどのオブジェクト参照の値として、参照型を渡すことが必要な場合[StaticResource マークアップ拡張機能](staticresource-markup-extension.md)します。  
+- <xref:System.Windows.Data.BindingBase.TargetNullValue%2A>: として設定できる、 `bindProp` = `value` 、式がこの文字列が渡されるパラメーターの型に依存します。 入れ子になったなどのオブジェクト参照の値として、参照型を渡すことが必要な場合[StaticResource マークアップ拡張機能](staticresource-markup-extension.md)します。  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*値*の定数名は、<xref:System.Windows.Data.UpdateSourceTrigger>列挙体。 たとえば、`{Binding UpdateSourceTrigger=LostFocus}` のようにします。 特定のコントロールには、このバインドのプロパティの既定値がある可能性があります。 以下を参照してください。<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>  
+- <xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>:*値*の定数名は、<xref:System.Windows.Data.UpdateSourceTrigger>列挙体。 たとえば、`{Binding UpdateSourceTrigger=LostFocus}` のようにします。 特定のコントロールには、このバインドのプロパティの既定値がある可能性があります。 以下を参照してください。<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。 「解説」を参照してください。  
+- <xref:System.Windows.Data.Binding.ValidatesOnDataErrors%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。 「解説」を参照してください。  
   
--   <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。 「解説」を参照してください。  
+- <xref:System.Windows.Data.Binding.ValidatesOnExceptions%2A>:ブール値、いずれかになります`true`または`false`します。 既定値は `false` です。 「解説」を参照してください。  
   
--   <xref:System.Windows.Data.Binding.XPath%2A>: XML データ ソースの XMLDOM にパスを説明する文字列。 参照してください[XMLDataProvider と XPath クエリを使用して XML データにバインド](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)します。  
+- <xref:System.Windows.Data.Binding.XPath%2A>: XML データ ソースの XMLDOM にパスを説明する文字列。 参照してください[XMLDataProvider と XPath クエリを使用して XML データにバインド](../data/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries.md)します。  
   
  プロパティを次に<xref:System.Windows.Data.Binding>を使用して設定することはできません、`Binding`マークアップ拡張機能/`{Binding}`式のフォームです。  
   
--   <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>: このプロパティがコールバック実装への参照が必要です。 イベント ハンドラー以外のコールバック/メソッドは、XAML 構文では参照できません。  
+- <xref:System.Windows.Data.Binding.UpdateSourceExceptionFilter%2A>: このプロパティがコールバック実装への参照が必要です。 イベント ハンドラー以外のコールバック/メソッドは、XAML 構文では参照できません。  
   
--   <xref:System.Windows.Data.Binding.ValidationRules%2A>: プロパティのジェネリック コレクションを受け取る<xref:System.Windows.Controls.ValidationRule>オブジェクト。 プロパティ要素として表現できるこの、<xref:System.Windows.Data.Binding>要素、オブジェクトしますが、すぐに使用できる属性の解析の手法での使用を持たない、`Binding`式。 リファレンス トピックを参照してください。<xref:System.Windows.Data.Binding.ValidationRules%2A>します。  
+- <xref:System.Windows.Data.Binding.ValidationRules%2A>: プロパティのジェネリック コレクションを受け取る<xref:System.Windows.Controls.ValidationRule>オブジェクト。 プロパティ要素として表現できるこの、<xref:System.Windows.Data.Binding>要素、オブジェクトしますが、すぐに使用できる属性の解析の手法での使用を持たない、`Binding`式。 リファレンス トピックを参照してください。<xref:System.Windows.Data.Binding.ValidationRules%2A>します。  
   
--   <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
+- <xref:System.Windows.Data.Binding.XmlNamespaceManager%2A>  
   
 ## <a name="remarks"></a>Remarks  
   

@@ -5,11 +5,11 @@ ms.assetid: 72020b72-9611-4bc3-b1e7-5a16b023bfa3
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0a4a8e5f99a845d2befe55f5939b41224f2aa47b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994904"
 ---
 # <a name="icordebugmergedassemblyrecordgetpublickeytoken-method"></a>ICorDebugMergedAssemblyRecord::GetPublicKeyToken メソッド
 アセンブリの公開キー トークンを取得します。  

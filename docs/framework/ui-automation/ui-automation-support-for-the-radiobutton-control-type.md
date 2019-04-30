@@ -7,11 +7,11 @@ helpviewer_keywords:
 - RadioButton control type
 ms.assetid: 87170464-7857-41f1-bcf7-bb41be31cb53
 ms.openlocfilehash: b437e19b10b534ce1c1dfae8ef0cca083cac2d61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149569"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996711"
 ---
 # <a name="ui-automation-support-for-the-radiobutton-control-type"></a>UI オートメーションによる RadioButton コントロール型のサポート
 > [!NOTE]
@@ -56,7 +56,7 @@ ms.locfileid: "59149569"
   
 |コントロール パターン/コントロール パターン プロパティ|サポート/値|メモ|  
 |-----------------------------------------------|--------------------|-----------|  
-|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|[はい]|すべてのオプション ボタン コントロールが、それ自体を選択可能にする選択項目パターンをサポートする必要があります。|  
+|<xref:System.Windows.Automation.Provider.ISelectionItemProvider>|はい|すべてのオプション ボタン コントロールが、それ自体を選択可能にする選択項目パターンをサポートする必要があります。|  
 |<xref:System.Windows.Automation.Provider.ISelectionItemProvider.SelectionContainer%2A>|「ノート」をご覧ください。|UI オートメーション クライアントが特定のコンテキスト内で相互に関連する他のオプション ボタンを特定できるためには、 `SelectionContainerProperty` が設定されている必要があります。  オプション ボタンの [!INCLUDE[TLA#tla_win32](../../../includes/tlasharptla-win32-md.md)] バージョンでは、このプロパティがサポートされません。これは、従来のフレームワークからこの情報を取得できないためです。|  
 |<xref:System.Windows.Automation.Provider.IToggleProvider>|Never|オプション ボタンは、いったん設定されると、その状態を循環させることができません。  このパターンは、オプション ボタンではサポートしないでください。|  
   

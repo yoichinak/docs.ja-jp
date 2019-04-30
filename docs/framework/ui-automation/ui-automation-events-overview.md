@@ -10,11 +10,11 @@ helpviewer_keywords:
 - UI Automation, clients
 ms.assetid: 69eebd8b-39ed-40e7-93cc-4457c4caf746
 ms.openlocfilehash: ae780da7d6c6d45cb791333e5f0edcf0690f297b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59183743"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61989678"
 ---
 # <a name="ui-automation-events-overview"></a>UI オートメーション イベントの概要
 > [!NOTE]
@@ -39,13 +39,13 @@ ms.locfileid: "59183743"
   
  次のイベントは、UI の状態が変更されていない場合でも発生する可能性があります。  
   
--   `AutomationPropertyChangedEvent` (変更されたプロパティによって変わります)  
+- `AutomationPropertyChangedEvent` (変更されたプロパティによって変わります)  
   
--   `ElementSelectedEvent`  
+- `ElementSelectedEvent`  
   
--   `InvalidatedEvent`  
+- `InvalidatedEvent`  
   
--   `TextChangedEvent`  
+- `TextChangedEvent`  
   
 <a name="UI_Automation_Event_Identifiers"></a>   
 ## <a name="ui-automation-event-identifiers"></a>UI オートメーション イベント識別子  

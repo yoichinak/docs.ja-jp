@@ -9,11 +9,11 @@ helpviewer_keywords:
 - add-ins [WPF], returns a UI
 ms.assetid: c33980e8-36e7-45ce-a485-8c826dd29009
 ms.openlocfilehash: 27eb7acbab7d9c90f0c0c311ef6331a16b7896e8
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57358588"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006656"
 ---
 # <a name="how-to-topics"></a>方法のトピック
 次のトピックでは、Windows Presentation Foundation (WPF) アドインを作成する方法を説明します。  
@@ -23,4 +23,4 @@ ms.locfileid: "57358588"
  [UI であるアドインを作成する](how-to-create-an-add-in-that-is-a-ui.md)  
   
 ## <a name="related-sections"></a>関連項目  
- [WPF アドインの概要](wpf-add-ins-overview.md)
+ [WPF のアドインの概要](wpf-add-ins-overview.md)

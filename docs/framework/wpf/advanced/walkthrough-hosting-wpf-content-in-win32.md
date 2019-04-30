@@ -7,11 +7,11 @@ helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
 ms.openlocfilehash: ad31d5f58ae3d22ce8760a396b1f9696912dc475
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296109"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053211"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>チュートリアル: Win32 での WPF コンテンツのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードにかなりの投資がある場合は、元のコードを書き換えるより、アプリケーションに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の機能を追加するほうがより効果的であることがあります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ホストするための簡単なメカニズムを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。  
@@ -41,13 +41,13 @@ ms.locfileid: "59296109"
   
 4. 処理、 [WM_CREATE](/windows/desktop/winmsg/wm-create)ウィンドウ プロシージャと次の操作で通知します。  
   
-    1.  新しい <xref:System.Windows.Interop.HwndSource> オブジェクトを、親ウィンドウがその `parent` パラメーターとなるように指定して作成します。  
+    1. 新しい <xref:System.Windows.Interop.HwndSource> オブジェクトを、親ウィンドウがその `parent` パラメーターとなるように指定して作成します。  
   
-    2.  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ クラスのインスタンスを作成します。  
+    2. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツ クラスのインスタンスを作成します。  
   
-    3.  参照を割り当てる、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ オブジェクト、<xref:System.Windows.Interop.HwndSource.RootVisual%2A>のプロパティ、<xref:System.Windows.Interop.HwndSource>します。  
+    3. 参照を割り当てる、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ オブジェクト、<xref:System.Windows.Interop.HwndSource.RootVisual%2A>のプロパティ、<xref:System.Windows.Interop.HwndSource>します。  
   
-    4.  コンテンツの HWND を取得します。 <xref:System.Windows.Interop.HwndSource.Handle%2A> オブジェクトの <xref:System.Windows.Interop.HwndSource> プロパティにウィンドウ ハンドル (HWND) が格納されます。 アプリケーションのアンマネージ部分で使用できる HWND を取得するには、`Handle.ToPointer()` を HWND にキャストします。  
+    4. コンテンツの HWND を取得します。 <xref:System.Windows.Interop.HwndSource.Handle%2A> オブジェクトの <xref:System.Windows.Interop.HwndSource> プロパティにウィンドウ ハンドル (HWND) が格納されます。 アプリケーションのアンマネージ部分で使用できる HWND を取得するには、`Handle.ToPointer()` を HWND にキャストします。  
   
 5. [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コンテンツへの参照を保持する静的フィールドを含むマネージド クラスを実装します。 このクラスを使用すると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] コードから [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コンテンツへの参照を取得できるようになります。  
   
@@ -65,13 +65,13 @@ ms.locfileid: "59296109"
  このセクションの説明をホストする方法[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]で基本的なコンテンツ[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]アプリケーション。 コンテンツ自体は、マネージド クラスとして [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] に実装されます。 ほとんどの部分が、簡単な [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のプログラミングです。 コンテンツの実装の重要な側面は、後ほど[WPF コンテンツを実装する](#implementing_the_wpf_page)します。
 
 <a name="autoNestedSectionsOUTLINE1"></a>
--   [基本的なアプリケーション](#the_basic_application)
+- [基本的なアプリケーション](#the_basic_application)
 
--   [WPF コンテンツのホスティング](#hosting_the_wpf_page)
+- [WPF コンテンツのホスティング](#hosting_the_wpf_page)
 
--   [WPF コンテンツへの参照の保持](#holding_a_reference)
+- [WPF コンテンツへの参照の保持](#holding_a_reference)
 
--   [WPF コンテンツとの通信](#communicating_with_the_page)
+- [WPF コンテンツとの通信](#communicating_with_the_page)
 
 <a name="the_basic_application"></a>
 ### <a name="the-basic-application"></a>基本的なアプリケーション
@@ -87,11 +87,11 @@ ms.locfileid: "59296109"
 
  このテンプレートは、次のような基本的な [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] アプリケーションを作成します。
 
--   アプリケーションのエントリ ポイント。
+- アプリケーションのエントリ ポイント。
 
--   関連するウィンドウ プロシージャ (WndProc) を含むウィンドウ。
+- 関連するウィンドウ プロシージャ (WndProc) を含むウィンドウ。
 
--   持つメニュー**ファイル**と**ヘルプ**見出し。 **ファイル**メニューがあります、**終了**項目をアプリケーションを閉じます。 **ヘルプ**メニューがあります、**について**簡単なダイアログ ボックスを起動する項目。
+- 持つメニュー**ファイル**と**ヘルプ**見出し。 **ファイル**メニューがあります、**終了**項目をアプリケーションを閉じます。 **ヘルプ**メニューがあります、**について**簡単なダイアログ ボックスを起動する項目。
 
  ホストにコードを記述する前に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツ、する必要がある 2 つの基本的なテンプレートを変更します。
 
@@ -170,11 +170,11 @@ ms.locfileid: "59296109"
  ホストして、使用することができます、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]実際の実装の知識がなくてもコンテンツ。 場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]別でコンテンツをパッケージ化されていた[!INCLUDE[TLA2#tla_dll](../../../../includes/tla2sharptla-dll-md.md)]、いずれかで構築されたでした[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]言語。 以下は、このサンプルで使用する [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] の実装の簡単なチュートリアルです。 このセクションには、次のサブセクションが含まれています。
 
 <a name="autoNestedSectionsOUTLINE2"></a>
--   [レイアウト](#page_layout)
+- [レイアウト](#page_layout)
 
--   [データをホスト ウィンドウに返す](#returning_data_to_window)
+- [データをホスト ウィンドウに返す](#returning_data_to_window)
 
--   [WPF のプロパティを設定する](#set_page_properties)
+- [WPF のプロパティを設定する](#set_page_properties)
 
 <a name="page_layout"></a>
 ### <a name="layout"></a>レイアウト

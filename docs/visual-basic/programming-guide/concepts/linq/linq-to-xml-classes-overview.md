@@ -3,11 +3,11 @@ title: LINQ to XML クラスの概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f11b62b5-d522-4c23-92ae-23186dc16447
 ms.openlocfilehash: bd6990c387da3c687335561d1e13b7ec62fb5b84
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58822831"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051521"
 ---
 # <a name="linq-to-xml-classes-overview-visual-basic"></a>LINQ to XML クラスの概要 (Visual Basic)
 このトピックでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 名前空間内の <xref:System.Xml.Linq> クラスの一覧を示し、各クラスについて簡単に説明します。  
@@ -26,9 +26,9 @@ ms.locfileid: "58822831"
 ### <a name="xcontainer-class"></a>XContainer クラス  
  <xref:System.Xml.Linq.XContainer> は、子ノードを持つ可能性があるすべてのノードの抽象基本クラスです。 <xref:System.Xml.Linq.XContainer> からは次のクラスが派生します。  
   
--   <xref:System.Xml.Linq.XElement>  
+- <xref:System.Xml.Linq.XElement>  
   
--   <xref:System.Xml.Linq.XDocument>  
+- <xref:System.Xml.Linq.XDocument>  
   
 ### <a name="xdeclaration-class"></a>XDeclaration クラス  
  <xref:System.Xml.Linq.XDeclaration> は、XML 宣言を表します。 XML 宣言は、ドキュメントの XML バージョンとエンコーディングを宣言するために使用されます。 また、XML 宣言では、XML ドキュメントがスタンドアロンかどうかを指定します。 ドキュメントがスタンドアロンである場合、外部 DTD、または内部サブセットから参照されている外部パラメーター エンティティのいずれかに外部マークアップ宣言がありません。  
@@ -55,15 +55,15 @@ ms.locfileid: "58822831"
 ### <a name="xnode-class"></a>XNode クラス  
  <xref:System.Xml.Linq.XNode> は、XML ツリーのノードを表す抽象クラスです。 <xref:System.Xml.Linq.XNode> からは次のクラスが派生します。  
   
--   <xref:System.Xml.Linq.XText>  
+- <xref:System.Xml.Linq.XText>  
   
--   <xref:System.Xml.Linq.XContainer>  
+- <xref:System.Xml.Linq.XContainer>  
   
--   <xref:System.Xml.Linq.XComment>  
+- <xref:System.Xml.Linq.XComment>  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>  
+- <xref:System.Xml.Linq.XProcessingInstruction>  
   
--   <xref:System.Xml.Linq.XDocumentType>  
+- <xref:System.Xml.Linq.XDocumentType>  
   
 ### <a name="xnodedocumentordercomparer-class"></a>XNodeDocumentOrderComparer クラス  
  <xref:System.Xml.Linq.XNodeDocumentOrderComparer> には、ノードをドキュメント順で比較する機能が用意されています。  

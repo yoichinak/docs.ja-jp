@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30251
 ms.assetid: aff3e1df-abe6-4bc0-9abc-a1e70514c561
 ms.openlocfilehash: 8564499b9ff55514179314217b7d40d8d3cdf6a2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311653"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031149"
 ---
 # <a name="type-typename-has-no-constructors"></a>型 '\<typename >' のコンス トラクターがありません
 型が `Sub New()` の呼び出しをサポートしません。 コンパイラまたはバイナリ ファイルが破損していることが原因の 1 つとして考えられます。  

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
 ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315141"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009800"
 ---
 # <a name="how-to-create-an-activity"></a>方法: アクティビティを作成する
 

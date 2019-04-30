@@ -5,11 +5,11 @@ ms.assetid: 98701444-b9bc-4978-9548-89ac3394147d
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b8ba470325098125aee8ef7de01fa6aa70596d42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202600"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995008"
 ---
 # <a name="icordebugmergedassemblyrecordgetindex-method"></a>ICorDebugMergedAssemblyRecord::GetCulture メソッド
 アセンブリのプレフィックス インデックスを取得します。  

@@ -3,11 +3,11 @@ title: 構成を使用しない AJAX サービス
 ms.date: 03/30/2017
 ms.assetid: e6db7acd-5679-45d4-b98a-8449c6873838
 ms.openlocfilehash: f5ebc952fcc6c2ca4c7272a90dc1929d4b4a0eae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331612"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002821"
 ---
 # <a name="ajax-service-without-configuration"></a>構成を使用しない AJAX サービス
 このサンプルは、Windows Communication Foundation (WCF) を使用して、任意の構成を使用せずに基本的な ASP.NET Asynchronous JavaScript and XML (AJAX) サービス (Web ブラウザー クライアントから JavaScript コードを使用してアクセスできるサービス) を作成する方法を示します。設定。 このサービスは .svc ファイルの特殊な構文を使用して AJAX エンドポイントを自動的に有効にします。  

@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetad
 ms.date: 03/30/2017
 ms.assetid: 5d38eb27-bb00-4d7e-a234-50de8d90a0f9
 ms.openlocfilehash: 9d9b193df0e9db4a46b0febeeb183981d1ca2bb1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997764"
 ---
 # <a name="microsofttransactionstransactionbridgerecoveredparticipantinvalidmetadata"></a>Microsoft.Transactions.TransactionBridge.RecoveredParticipantInvalidMetadata
 参加要素の回復ログ エントリで見つかったエンドポイント参照は、無効であるか、互換性のないメタデータを含んでいます。  

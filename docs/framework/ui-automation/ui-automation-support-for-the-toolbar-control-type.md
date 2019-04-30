@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ToolBar control type
 ms.assetid: 85152efd-f4c5-430c-8878-3371cc598616
 ms.openlocfilehash: 936c3fab35c8da6d0b17092b7acfd51d1a41e717
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59184757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996503"
 ---
 # <a name="ui-automation-support-for-the-toolbar-control-type"></a>UI オートメーションによる ToolBar コントロール型のサポート
 > [!NOTE]

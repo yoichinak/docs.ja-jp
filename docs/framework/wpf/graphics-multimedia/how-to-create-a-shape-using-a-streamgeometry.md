@@ -9,11 +9,11 @@ helpviewer_keywords:
 - shapes [WPF], creating with StreamGeometry class
 ms.assetid: 08f7c8ce-074b-49cd-9aba-cc9592d4ee51
 ms.openlocfilehash: fd191e4cfdfa33c144389d4871a9641e9c811ed3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59108603"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054574"
 ---
 # <a name="how-to-create-a-shape-using-a-streamgeometry"></a>方法: StreamGeometry を使用して図形を作成する
 <xref:System.Windows.Media.StreamGeometry> 軽量の代わりには、<xref:System.Windows.Media.PathGeometry>幾何学的図形を作成するためです。 使用して、<xref:System.Windows.Media.StreamGeometry>複雑なジオメトリを記述する必要がある場合がデータ バインディング、アニメーション、または変更をサポートするオーバーヘッドを作成したくないです。 など、効率的であるため、<xref:System.Windows.Media.StreamGeometry>クラスは、装飾の記述に適しています。  

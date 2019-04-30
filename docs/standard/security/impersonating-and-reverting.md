@@ -13,11 +13,11 @@ ms.assetid: b93d402c-6c28-4f50-b2bc-d9607dc3e470
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 97b15ea2202ca410dd517db63a7145d27f62bb48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018594"
 ---
 # <a name="impersonating-and-reverting"></a>偽装と復帰
 場合によっては、Windows アカウント トークンを取得して、Windows アカウントを偽装する必要があります。 たとえば、ASP.NET ベースのアプリケーションが、時間によって複数のユーザーの代わりに操作しなければならない場合があります。 その場合、アプリケーションはインターネット インフォメーション サービス (IIS) から管理者を表すトークンを受け入れて、そのユーザーを偽装し、操作を実行してから前の ID に戻ります。 続いて、IIS から管理者より権限が少ないユーザーを表すトークンを受け入れ、操作を実行してから、また元に戻ります。  

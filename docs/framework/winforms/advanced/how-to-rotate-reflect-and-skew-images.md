@@ -10,11 +10,11 @@ helpviewer_keywords:
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
 ms.openlocfilehash: 505028c491228ffdf9c11d0c71dcd5e1afdc5103
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114050"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967185"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>方法: イメージを回転、反転、および傾斜させる
 回転、反転、および元のイメージの左上隅や右、左下角の終点を指定することで、イメージを傾けることができます。 次の 3 つの終点では、平行四辺形に元の四角形のイメージをマップするアフィン変換を決定します。  

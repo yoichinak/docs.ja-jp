@@ -3,24 +3,24 @@ title: '方法: 最大ファイルまたはディレクトリ ツリー (LINQ) (
 ms.date: 07/20/2015
 ms.assetid: 8c1c9f0c-95dd-4222-9be2-9ec026a13e81
 ms.openlocfilehash: 7ba330b18020b7c3b823b70d0541cdda199aa898
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820722"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008903"
 ---
 # <a name="how-to-query-for-the-largest-file-or-files-in-a-directory-tree-linq-visual-basic"></a>方法: 最大ファイルまたはディレクトリ ツリー (LINQ) (Visual Basic) 内のファイルのクエリ
 この例では、ファイル サイズ (バイト単位) に関連した 5 つのクエリを紹介しています。  
   
--   最もサイズ (バイト単位) の大きいファイルを取得する方法。  
+- 最もサイズ (バイト単位) の大きいファイルを取得する方法。  
   
--   最もサイズ (バイト単位) の小さいファイルを取得する方法。  
+- 最もサイズ (バイト単位) の小さいファイルを取得する方法。  
   
--   指定したルート フォルダー配下のフォルダーから <xref:System.IO.FileInfo> オブジェクトの最大ファイルまたは最小ファイルを取得する方法。  
+- 指定したルート フォルダー配下のフォルダーから <xref:System.IO.FileInfo> オブジェクトの最大ファイルまたは最小ファイルを取得する方法。  
   
--   サイズが上位 10 番目までのファイルなど、一定の条件に該当するファイルを取得する方法。  
+- サイズが上位 10 番目までのファイルなど、一定の条件に該当するファイルを取得する方法。  
   
--   指定サイズ未満のファイルを無視しながらバイト単位のサイズに基づいてファイルをグループ化する方法。  
+- 指定サイズ未満のファイルを無視しながらバイト単位のサイズに基づいてファイルをグループ化する方法。  
   
 ## <a name="example"></a>例  
  以下のコードでは 5 つのクエリを使用して、バイト単位のサイズに基づいてファイルを照会し、グループ化しています。 サンプル コードを参考にして、<xref:System.IO.FileInfo> オブジェクトが備えている他のさまざまなプロパティを簡単に照会することができます。  

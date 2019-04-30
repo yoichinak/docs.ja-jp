@@ -3,11 +3,11 @@ title: '方法: メタデータの取得および準拠サービスの実装を�
 ms.date: 03/30/2017
 ms.assetid: f6f3a2b9-c8aa-4b0b-832c-ec2927bf1163
 ms.openlocfilehash: edf8fe2f174202d19b075ec218f059ea9b988843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322668"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000793"
 ---
 # <a name="how-to-retrieve-metadata-and-implement-a-compliant-service"></a>方法: メタデータの取得および準拠サービスの実装をする
 サービスのデザイン担当者と実装担当者が同じであるとは限りません。 アプリケーションの相互運用が重要な環境では、コントラクトを Web サービス記述言語 (WSDL) でデザインまたは記述した場合、開発者はそのコントラクトに準拠するサービスを実装する必要があります。 既存のサービスを移行するには、Windows Communication Foundation (WCF) には、ワイヤ形式を保持することもできます。 さらに、双方向コントラクトでは、呼び出し元でコールバック コントラクトを実装する必要もあります。  
@@ -39,17 +39,17 @@ ms.locfileid: "59322668"
   
  このコードには、次の項目が示されています。  
   
--   コントラクトの要件に準拠するサービス コントラクト インターフェイス (実装する場合) (`ISampleService`)。  
+- コントラクトの要件に準拠するサービス コントラクト インターフェイス (実装する場合) (`ISampleService`)。  
   
--   サービス コントラクト インターフェイスと <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> の両方を拡張するクライアント用のヘルパー インターフェイス。これはクライアント アプリケーションでも使用されます(`ISampleServiceChannel`)。  
+- サービス コントラクト インターフェイスと <xref:System.ServiceModel.IClientChannel?displayProperty=nameWithType> の両方を拡張するクライアント用のヘルパー インターフェイス。これはクライアント アプリケーションでも使用されます(`ISampleServiceChannel`)。  
   
--   <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> を拡張するヘルパー クラス。クライアント アプリケーションで使用されます。(`SampleServiceClient`)  
+- <xref:System.ServiceModel.ClientBase%601?displayProperty=nameWithType> を拡張するヘルパー クラス。クライアント アプリケーションで使用されます。(`SampleServiceClient`)  
   
--   サービスから生成された構成ファイル。  
+- サービスから生成された構成ファイル。  
   
--   `ISampleService` サービスの簡単な実装。  
+- `ISampleService` サービスの簡単な実装。  
   
--   クライアント側の構成ファイルからサービス側バージョンへの変換。  
+- クライアント側の構成ファイルからサービス側バージョンへの変換。  
   
 [!code-csharp[ClientProxyCodeSample#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/clientproxycodesample/cs/proxycode.cs#1)]
 

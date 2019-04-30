@@ -10,11 +10,11 @@ helpviewer_keywords:
 - sharing brushes without copying [WPF]
 ms.assetid: 62b88488-c08e-4804-b7de-a1c34fbe929c
 ms.openlocfilehash: 362d0f0fd3282365e5e05dcd43c49a9fd2ddc9a7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59139426"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62017944"
 ---
 # <a name="optimizing-performance-application-resources"></a>パフォーマンスの最適化:アプリケーション リソース
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 同様に型指定された要素の間で一貫性のある外観や動作をサポートできるように、アプリケーションのリソースを共有することができます。 このトピックでは、この領域に役立ついくつかの推奨事項が、アプリケーションのパフォーマンスを向上します。  

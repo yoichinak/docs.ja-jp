@@ -3,20 +3,20 @@ title: セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 737ec121-bfc5-4b75-a504-2d53c2c8af39
 ms.openlocfilehash: c27ac9cf41436332d560e11987e3ce4b68576895
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57720632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004693"
 ---
 # <a name="security"></a>セキュリティ
 SQL Workflow Instance Store は、次のデータベース セキュリティ ロールを使用して、永続性データベースのインスタンス状態情報へのアクセスをセキュリティ保護します。  
   
--   **System.Activities.DurableInstancing.InstanceStoreUsers**します。 このロールには、パブリック ビューへの読み取りおよび書き込みのアクセス権と、インスタンスの作成、読み込み、保存に関連するストアド プロシージャへの実行権限があります。  
+- **System.Activities.DurableInstancing.InstanceStoreUsers**します。 このロールには、パブリック ビューへの読み取りおよび書き込みのアクセス権と、インスタンスの作成、読み込み、保存に関連するストアド プロシージャへの実行権限があります。  
   
--   **System.Activities.DurableInstancing.InstanceStoreObservers**します。 このロールには、パブリック ビューへの読み取り専用アクセス権があります。  
+- **System.Activities.DurableInstancing.InstanceStoreObservers**します。 このロールには、パブリック ビューへの読み取り専用アクセス権があります。  
   
--   **System.Activities.DurableInstancing.WorkflowActivationUsers**します。 このロールには、インスタンスのアクティベーション プロセスにかかわるストアド プロシージャへの実行権限があります。 インスタンスのアクティブ化の詳細については、[インスタンスのアクティベーション](instance-activation.md)を参照してください。 汎用ホスト ([!INCLUDE[dublin](../../../includes/dublin-md.md)] のワークフロー管理サービスなど) を実行するユーザー アカウントは、このデータベース ロールに追加する必要があります。  
+- **System.Activities.DurableInstancing.WorkflowActivationUsers**します。 このロールには、インスタンスのアクティベーション プロセスにかかわるストアド プロシージャへの実行権限があります。 インスタンスのアクティブ化の詳細については、次を参照してください。[インスタンスのアクティベーション](instance-activation.md)します。 汎用ホスト ([!INCLUDE[dublin](../../../includes/dublin-md.md)] のワークフロー管理サービスなど) を実行するユーザー アカウントは、このデータベース ロールに追加する必要があります。  
   
  Windows Server App Fabric で永続化ストアのセキュリティの詳細については、次を参照してください[App Fabric の永続化ストアのセキュリティの構成。](https://go.microsoft.com/fwlink/?LinkId=201208)  
   

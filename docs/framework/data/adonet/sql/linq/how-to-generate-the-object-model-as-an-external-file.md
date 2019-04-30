@@ -3,11 +3,11 @@ title: '方法: オブジェクト モデルを外部ファイルとして生成
 ms.date: 03/30/2017
 ms.assetid: 2496fa06-3df4-4ecb-86c4-70a49ea08565
 ms.openlocfilehash: 2e439cd6628daa5b574be2049393dc2964896679
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095583"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033749"
 ---
 # <a name="how-to-generate-the-object-model-as-an-external-file"></a>方法: オブジェクト モデルを外部ファイルとして生成する
 属性ベースのマッピングに代わる方法として、SQLMetal コマンド ライン ツールを使用することにより、外部 XML ファイルとしてオブジェクト モデルを生成できます。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。 外部 XML マッピング ファイルを使用すると、コードの煩雑さが軽減されます。 さらに、アプリケーションのバイナリを再コンパイルしなくても、外部ファイルを変更するだけで動作を変えることができます。 詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。  

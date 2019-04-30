@@ -9,44 +9,44 @@ helpviewer_keywords:
 - arranging controls [WPF]
 ms.assetid: a1db8049-15c7-45d6-ae3d-36a6735cb848
 ms.openlocfilehash: 5b759baebb7192c1ee94b4aa925198864ba7a31a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338775"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007163"
 ---
 # <a name="walkthrough-arranging-windows-forms-controls-in-wpf"></a>チュートリアル: WPF での Windows フォーム コントロールの配置
 このチュートリアルは、使用する方法を示します[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]を配置するためのレイアウト機能[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]ハイブリッド アプリケーションでコントロールできます。  
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   プロジェクトの作成。  
+- プロジェクトの作成。  
   
--   既定のレイアウト設定の使用。  
+- 既定のレイアウト設定の使用。  
   
--   コンテンツに合わせたサイズの変更。  
+- コンテンツに合わせたサイズの変更。  
   
--   絶対配置の使用。  
+- 絶対配置の使用。  
   
--   サイズの明示的な指定。  
+- サイズの明示的な指定。  
   
--   レイアウト プロパティの設定。  
+- レイアウト プロパティの設定。  
   
--   z オーダーの制限の理解。  
+- z オーダーの制限の理解。  
   
--   ドッキング。  
+- ドッキング。  
   
--   可視性の設定。  
+- 可視性の設定。  
   
--   伸縮しないコントロールのホスト。  
+- 伸縮しないコントロールのホスト。  
   
--   スケーリング。  
+- スケーリング。  
   
--   回転。  
+- 回転。  
   
--   パディングとマージンの設定。  
+- パディングとマージンの設定。  
   
--   動的レイアウト コンテナーの使用。  
+- 動的レイアウト コンテナーの使用。  
   
  このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [WPF のサンプルを使用した Windows フォーム コントロールを配置する](https://go.microsoft.com/fwlink/?LinkID=159971)します。  
   
@@ -64,11 +64,11 @@ ms.locfileid: "59338775"
   
 2. ソリューション エクスプローラーで、次のアセンブリへの参照を追加します。  
   
-    -   WindowsFormsIntegration  
+    - WindowsFormsIntegration  
   
-    -   System.Windows.Forms  
+    - System.Windows.Forms  
   
-    -   System.Drawing  
+    - System.Drawing  
   
 3. MainWindow.xaml をダブルクリックして、XAML ビューで開きます。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - paths [Visual Basic], validating
 ms.assetid: f673462d-57b7-4120-b13a-6a7592f7ab2c
 ms.openlocfilehash: c8e01a0f5a3f99fdbc424d6cd7d224367c7bad08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835805"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032176"
 ---
 # <a name="how-to-validate-file-names-and-paths-in-visual-basic"></a>方法: ファイル名と Visual Basic でのパスを検証します。
 この例を返します、`Boolean`文字列が、ファイル名またはパスを表すかどうかを示す値です。 ファイル システムで許可されていない文字が名前に含まれるかどうか、検証を確認します。  

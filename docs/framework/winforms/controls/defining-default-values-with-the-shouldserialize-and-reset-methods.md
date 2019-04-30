@@ -9,20 +9,20 @@ helpviewer_keywords:
 - ShouldPersist method
 ms.assetid: 7b6c5e00-3771-46b4-9142-5a80d5864a5e
 ms.openlocfilehash: f1f5a668c5d4f52ef7dd9f60a31c04f2173165f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59090616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972368"
 ---
 # <a name="defining-default-values-with-the-shouldserialize-and-reset-methods"></a>ShouldSerialize メソッドと Reset メソッドによる既定値の定義
 `ShouldSerialize` `Reset`プロパティで指定できる省略可能なメソッドをプロパティでない場合は、単純な既定値を設定します。 プロパティは、単純な既定値を持つ場合は適用して、<xref:System.ComponentModel.DefaultValueAttribute>代わりに、属性クラスのコンス トラクターを既定値を指定します。 これらのメカニズムのいずれかには、デザイナーで、次の機能が有効にします。  
   
--   プロパティが既定値から変更された場合、プロパティ ブラウザーでビジュアルを示す値を提供します。  
+- プロパティが既定値から変更された場合、プロパティ ブラウザーでビジュアルを示す値を提供します。  
   
--   ユーザーは、プロパティを右クリックし、選択**リセット**プロパティを既定値に復元します。  
+- ユーザーは、プロパティを右クリックし、選択**リセット**プロパティを既定値に復元します。  
   
--   デザイナーより効率的なコードを生成します。  
+- デザイナーより効率的なコードを生成します。  
   
     > [!NOTE]
     >  いずれかが当てはまる、<xref:System.ComponentModel.DefaultValueAttribute>提供または`Reset` *PropertyName*と`ShouldSerialize` *PropertyName*メソッド。 どちらも使用しないでください。  
@@ -44,7 +44,7 @@ public void ResetMyFont() {
 > [!NOTE]
 >  プロパティがない場合、`Reset`メソッドが設定されていない、<xref:System.ComponentModel.DefaultValueAttribute>に、その宣言で指定された既定値がないと、`Reset`オプションのショートカット メニューでそのプロパティが無効になっている、 **プロパティ** Visual Studio での Windows フォーム デザイナーのウィンドウ。  
   
- Visual Studio などのデザイナーを使用して、 `ShouldSerialize` *PropertyName*プロパティが既定値から変更されたかどうかを確認し、プロパティを場合にのみフォームにコードを記述するメソッドが変更されたためより効率的なコードのことができます生成します。 例:  
+ Visual Studio などのデザイナーを使用して、 `ShouldSerialize` *PropertyName*プロパティが既定値から変更されたかどうかを確認し、プロパティを場合にのみフォームにコードを記述するメソッドが変更されたためより効率的なコードのことができます生成します。 例えば:  
   
 ```vb  
 'Returns true if the font has changed; otherwise, returns false.  

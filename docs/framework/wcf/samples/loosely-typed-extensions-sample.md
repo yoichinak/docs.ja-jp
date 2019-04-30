@@ -3,11 +3,11 @@ title: 弱く型指定された拡張のサンプル
 ms.date: 03/30/2017
 ms.assetid: 56ce265b-8163-4b85-98e7-7692a12c4357
 ms.openlocfilehash: 2f80c3379ba9d7e0649a36c5dd1bd552c1da68c6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328739"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006578"
 ---
 # <a name="loosely-typed-extensions-sample"></a>弱く型指定された拡張のサンプル
 配信オブジェクト モデルでは、拡張データをさまざまな方法で処理できます。拡張データとは、配信フィードの XML 表現に含まれているが、<xref:System.ServiceModel.Syndication.SyndicationFeed> や <xref:System.ServiceModel.Syndication.SyndicationItem> などのクラスによって明示的に公開されない情報のことです。 このサンプルでは、拡張データを処理する基本的な方法を示します。  
@@ -54,15 +54,15 @@ w.w3.org/2001/XMLSchema" xmlns="">
   
  このドキュメントには、次の拡張データが含まれています。  
   
--   `myAttribute` 要素の `<feed>` 属性。  
+- `myAttribute` 要素の `<feed>` 属性。  
   
--   `<simpleString>` 要素。  
+- `<simpleString>` 要素。  
   
--   `<DataContractExtension>` 要素。  
+- `<DataContractExtension>` 要素。  
   
--   `<XmlSerializerExtension>` 要素。  
+- `<XmlSerializerExtension>` 要素。  
   
--   `<xElementExtension>` 要素。  
+- `<xElementExtension>` 要素。  
   
 ## <a name="writing-extension-data"></a>拡張データの書き込み  
  属性の拡張は、次のサンプル コードに示すように、エントリを <xref:System.ServiceModel.Syndication.SyndicationFeed.AttributeExtensions%2A> コレクションに追加することによって作成されます。  

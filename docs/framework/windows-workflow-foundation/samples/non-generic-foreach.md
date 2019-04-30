@@ -3,11 +3,11 @@ title: 非ジェネリックの ForEach
 ms.date: 03/30/2017
 ms.assetid: 576cd07a-d58d-4536-b514-77bad60bff38
 ms.openlocfilehash: 353128d1c313be62222e091c084e5b5e37a92b58
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303545"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004914"
 ---
 # <a name="non-generic-foreach"></a>非ジェネリックの ForEach
 [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] のツールボックスには、制御フロー アクティビティのセットが用意されています。これには、<xref:System.Activities.Statements.ForEach%601> コレクションを反復処理できる <xref:System.Collections.Generic.IEnumerable%601> が含まれています。  
@@ -97,9 +97,9 @@ public sealed class ForEachWithBodyFactory : IActivityTemplateFactory
   
 1. 選択したプロジェクトをソリューションのスタートアップ プロジェクトに設定します。  
   
-    1.  **CodeTestClient**コードを使用して、アクティビティを使用する方法を示しています。  
+    1. **CodeTestClient**コードを使用して、アクティビティを使用する方法を示しています。  
   
-    2.  **DesignerTestClient**デザイナー内でアクティビティを使用する方法を示しています。  
+    2. **DesignerTestClient**デザイナー内でアクティビティを使用する方法を示しています。  
   
 2. プロジェクトをビルドして実行します。  
   

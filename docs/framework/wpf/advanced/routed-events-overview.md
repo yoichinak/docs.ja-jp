@@ -16,11 +16,11 @@ helpviewer_keywords:
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
 ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330455"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982361"
 ---
 # <a name="routed-events-overview"></a>ルーティング イベントの概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でのルーティング イベントの概念について説明します。 ここでは、ルーティング イベントの用語を定義し、要素ツリーを通じたルーティング イベントのルーティング方法、ルーティング イベントの処理方法、カスタム ルーティング イベントの作成方法について説明します。
@@ -86,11 +86,11 @@ ms.locfileid: "59330455"
 ## <a name="routing-strategies"></a>ルーティング方法  
  ルーティング イベントは、3 つのルーティング方法のいずれかを使用します。  
   
--   **バブル。** イベント ソースのイベント ハンドラーが呼び出されます。 ルーティング イベントは、次に、要素ツリー ルートに到達するまで、連続する親要素にルーティングします。 ほとんどのルーティング イベントでは、このバブル ルーティング方法を使用します。 バブル ルーティング イベントは、一般に個別のコントロールまたはその他の UI 要素からの入力や状態変化を報告するために使用されます。  
+- **バブル。** イベント ソースのイベント ハンドラーが呼び出されます。 ルーティング イベントは、次に、要素ツリー ルートに到達するまで、連続する親要素にルーティングします。 ほとんどのルーティング イベントでは、このバブル ルーティング方法を使用します。 バブル ルーティング イベントは、一般に個別のコントロールまたはその他の UI 要素からの入力や状態変化を報告するために使用されます。  
   
--   **直接。** ソース要素自体の応答としてハンドラーを呼び出す機会が与えられます。 これは、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] がイベントに使用する "ルーティング" と似ています。 標準とは異なり、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]イベント、クラス処理をサポートするルーティング イベントを直接 (クラス処理を以下のセクションで説明します) で使用できると<xref:System.Windows.EventSetter>と<xref:System.Windows.EventTrigger>します。  
+- **直接。** ソース要素自体の応答としてハンドラーを呼び出す機会が与えられます。 これは、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] がイベントに使用する "ルーティング" と似ています。 標準とは異なり、[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]イベント、クラス処理をサポートするルーティング イベントを直接 (クラス処理を以下のセクションで説明します) で使用できると<xref:System.Windows.EventSetter>と<xref:System.Windows.EventTrigger>します。  
   
--   **トンネリングします。** 最初に、要素ツリーのルートにあるイベント ハンドラーが呼び出されます。 ルーティング イベントは、次に、経路沿いにルーティング イベント ソース (ルーティング イベントを発生させた要素) のノード要素まで、連続する子要素間の経路をたどります。 多くの場合にトンネル ルーティング イベントは、コントロールの複合部分として使用または処理されます。たとえば、複合部分で発生したイベントは、完全なコントロールに固有のイベントによって意図的に抑止されるか置き換えられます。 多くの場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] から提供される入力イベントはトンネルとバブルのペアとして実装されます。 トンネル イベントは、このペアに使用される名前付け規則から、プレビュー イベントと呼ばれることもあります。  
+- **トンネリングします。** 最初に、要素ツリーのルートにあるイベント ハンドラーが呼び出されます。 ルーティング イベントは、次に、経路沿いにルーティング イベント ソース (ルーティング イベントを発生させた要素) のノード要素まで、連続する子要素間の経路をたどります。 多くの場合にトンネル ルーティング イベントは、コントロールの複合部分として使用または処理されます。たとえば、複合部分で発生したイベントは、完全なコントロールに固有のイベントによって意図的に抑止されるか置き換えられます。 多くの場合、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] から提供される入力イベントはトンネルとバブルのペアとして実装されます。 トンネル イベントは、このペアに使用される名前付け規則から、プレビュー イベントと呼ばれることもあります。  
   
 <a name="why_use"></a>   
 ## <a name="why-use-routed-events"></a>ルーティング イベントを使用する理由  
@@ -104,9 +104,9 @@ ms.locfileid: "59330455"
   
  ルーティングの面以外でも、特定の [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] イベントを標準の [!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)] イベントではなくルーティング イベントとして実装する理由が他に 2 つあります。 独自のイベントを実装している場合は、次の原則も考慮します。  
   
--   特定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]などのスタイルとテンプレートの機能<xref:System.Windows.EventSetter>と<xref:System.Windows.EventTrigger>参照先のイベントのルーティング イベントである必要があります。 これは、前に説明したイベント識別子シナリオです。  
+- 特定[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]などのスタイルとテンプレートの機能<xref:System.Windows.EventSetter>と<xref:System.Windows.EventTrigger>参照先のイベントのルーティング イベントである必要があります。 これは、前に説明したイベント識別子シナリオです。  
   
--   ルーティング イベントは、クラス処理機構をサポートしています。この機構により、クラスに静的メソッドを指定して、登録されたインスタンス ハンドラーがルーティング イベントにアクセスする前にこの静的メソッドでイベントを処理することができます。 インスタンスでのイベント処理によって誤って抑止されずにイベント駆動のクラス動作を適用できるため、これはコントロールをデザインするときに便利です。  
+- ルーティング イベントは、クラス処理機構をサポートしています。この機構により、クラスに静的メソッドを指定して、登録されたインスタンス ハンドラーがルーティング イベントにアクセスする前にこの静的メソッドでイベントを処理することができます。 インスタンスでのイベント処理によって誤って抑止されずにイベント駆動のクラス動作を適用できるため、これはコントロールをデザインするときに便利です。  
   
  前に示した一連の考慮事項については、このトピックのセクションで個別に説明します。  
   
@@ -147,21 +147,21 @@ ms.locfileid: "59330455"
   
  ただし、というリスナー ハンドラーを実行できるルーティング イベントへの応答で"handledEventsToo"機構がある場所<xref:System.Windows.RoutedEventArgs.Handled%2A>は`true`イベント データ。 つまり、イベント データを処理済みとしてマークしてもイベントのルーティングは完全には停止されません。 コードでは、または handledEventsToo 機構を使用することができますのみ、 <xref:System.Windows.EventSetter>:  
   
--   一般的な動作する言語固有のイベント構文を使用する代わりに、コードで[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]イベントを呼び出し、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]メソッド<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>ハンドラーを追加します。 `handledEventsToo` の値として `true` を指定します。  
+- 一般的な動作する言語固有のイベント構文を使用する代わりに、コードで[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]イベントを呼び出し、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]メソッド<xref:System.Windows.UIElement.AddHandler%28System.Windows.RoutedEvent%2CSystem.Delegate%2CSystem.Boolean%29>ハンドラーを追加します。 `handledEventsToo` の値として `true` を指定します。  
   
--   <xref:System.Windows.EventSetter>、設定、<xref:System.Windows.EventSetter.HandledEventsToo%2A>属性を`true`します。  
+- <xref:System.Windows.EventSetter>、設定、<xref:System.Windows.EventSetter.HandledEventsToo%2A>属性を`true`します。  
   
  動作に加えを<xref:System.Windows.RoutedEventArgs.Handled%2A>状態での概念のルーティング イベントを生成<xref:System.Windows.RoutedEventArgs.Handled%2A>イベント ハンドラーのコードを記述し、アプリケーションを設計する必要がある方法に影響があります。 考えることができます<xref:System.Windows.RoutedEventArgs.Handled%2A>ルーティング イベントによって公開される単純なプロトコルとして。 方法の概念設計が、このプロトコルを使用する方法に正確には、値<xref:System.Windows.RoutedEventArgs.Handled%2A>使用するものでは、次に示します。  
   
--   ルーティング イベントが処理済みとしてマークされている場合、このイベントを経路上の他の要素でもう一度処理する必要はありません。  
+- ルーティング イベントが処理済みとしてマークされている場合、このイベントを経路上の他の要素でもう一度処理する必要はありません。  
   
--   ルーティング イベントが処理済みとしてマークされていないかどうかは、他のリスナーが経路は、ハンドラーまたはイベント データを操作し、設定が登録されている選択済みハンドラーが登録するいずれかを選択した<xref:System.Windows.RoutedEventArgs.Handled%2A>に`true`します。 (または、現在のリスナーが経路上の出発点である可能性もあります)。現在のリスナーのハンドラーでは、次の 3 つのアクションを選択できます。  
+- ルーティング イベントが処理済みとしてマークされていないかどうかは、他のリスナーが経路は、ハンドラーまたはイベント データを操作し、設定が登録されている選択済みハンドラーが登録するいずれかを選択した<xref:System.Windows.RoutedEventArgs.Handled%2A>に`true`します。 (または、現在のリスナーが経路上の出発点である可能性もあります)。現在のリスナーのハンドラーでは、次の 3 つのアクションを選択できます。  
   
-    -   アクションをまったく行いません。イベントは未処理のまま、次のリスナーにルーティングされます。  
+    - アクションをまったく行いません。イベントは未処理のまま、次のリスナーにルーティングされます。  
   
-    -   イベントに応答してコードを実行しますが、実行したアクションはイベントを処理済みとしてマークするのに十分とは確定されません。 イベントは次のリスナーにルーティングされます。  
+    - イベントに応答してコードを実行しますが、実行したアクションはイベントを処理済みとしてマークするのに十分とは確定されません。 イベントは次のリスナーにルーティングされます。  
   
-    -   イベントに応答してコードを実行します。 実行したアクションはイベントを処理済みとしてマークするのに十分と考えられるため、ハンドラーに渡されたイベント データでイベントを処理済みとしてマークします。 イベントは、次のリスナーにまだルーティング<xref:System.Windows.RoutedEventArgs.Handled%2A> = `true`イベント データ、のみで`handledEventsToo`リスナーにさらにハンドラーを呼び出す機会があります。  
+    - イベントに応答してコードを実行します。 実行したアクションはイベントを処理済みとしてマークするのに十分と考えられるため、ハンドラーに渡されたイベント データでイベントを処理済みとしてマークします。 イベントは、次のリスナーにまだルーティング<xref:System.Windows.RoutedEventArgs.Handled%2A> = `true`イベント データ、のみで`handledEventsToo`リスナーにさらにハンドラーを呼び出す機会があります。  
   
  この概念設計は前に説明したルーティング動作により補強: 経路上の以前のハンドラーが既にを設定した場合でも呼び出されるルーティングイベントのハンドラーをアタッチするより難しくなります(ただしコードやスタイルでは可能)は<xref:System.Windows.RoutedEventArgs.Handled%2A>に`true`します。  
   

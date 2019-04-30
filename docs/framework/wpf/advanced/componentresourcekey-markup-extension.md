@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [WPF], ComponentResourceKey markup extension
 ms.assetid: d6bcdbe6-61b3-40a7-b381-4e02185b5a85
 ms.openlocfilehash: 5f72d6c3273cfda4276383cfe72f90196e5d4340
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169755"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037753"
 ---
 # <a name="componentresourcekey-markup-extension"></a>ComponentResourceKey マークアップ拡張機能
 定義し、外部アセンブリから読み込まれたリソースのキーを参照します。 これにより、アセンブリ内、またはクラスの明示的なリソース ディクショナリではなく、アセンブリでは、対象の型を指定するリソースの検索ができます。  
@@ -52,9 +52,9 @@ ms.locfileid: "59169755"
 ## <a name="remarks"></a>Remarks  
  使用状況は、上記に示すよう、{`ComponentResourceKey`} マークアップ拡張機能の使用が 2 つの場所が見つかりました。  
   
--   コントロールの作成者によって提供される、テーマのリソース ディクショナリ内のキーの定義。  
+- コントロールの作成者によって提供される、テーマのリソース ディクショナリ内のキーの定義。  
   
--   テーマ リソースにアクセスするアセンブリから、ときにテンプレートを再設定、コントロールがコントロールのテーマによって提供されるリソースから取得したプロパティ値を使用します。  
+- テーマ リソースにアクセスするアセンブリから、ときにテンプレートを再設定、コントロールがコントロールのテーマによって提供されるリソースから取得したプロパティ値を使用します。  
   
  テーマに由来するコンポーネントのリソースを参照するには、一般にお勧めを使用すること`{DynamicResource}`なく`{StaticResource}`します。 これは、使用法に表示されます。 `{DynamicResource}` ユーザーがそれ自体のテーマを変更できるためお勧めします。 コンポーネント リソース、テーマをサポートするためのコントロールの作成者の意図に最も一致する場合は、コンポーネントのリソース参照も動的であるが有効にする必要があります。  
   

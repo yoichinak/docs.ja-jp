@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e01f94e9574ebc032bc45490fd88ff92e9104aa3
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482861"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994046"
 ---
 # <a name="icordebugthreadenumeratechains-method"></a>ICorDebugThread::EnumerateChains メソッド
 この ICorDebugThread オブジェクト内のすべてのスタック チェーンを含む ICorDebugChainEnum 列挙子へのインターフェイス ポインターを取得します。  
@@ -42,11 +42,11 @@ HRESULT EnumerateChains (
 ## <a name="remarks"></a>Remarks  
  スタック チェーンでは、スレッドの物理呼び出し履歴を表します。 次の状況では、スタック チェーンの境界を作成します。  
   
--   マネージとアンマネージまたはアンマネージからマネージへの移行。  
+- マネージとアンマネージまたはアンマネージからマネージへの移行。  
   
--   コンテキストの切り替え。  
+- コンテキストの切り替え。  
   
--   A のユーザー スレッドのハイジャックのデバッガーです。  
+- A のユーザー スレッドのハイジャックのデバッガーです。  
   
  純粋なマネージ コードを 1 つのコンテキストで実行しているスレッドの単純な場合は、1 対 1 の対応はスレッドとスタック チェーンの間存在します。  
   

@@ -10,30 +10,30 @@ helpviewer_keywords:
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
 ms.openlocfilehash: 1ffc665cb7ec5893dddf4efff5021e600b16fc45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330494"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054368"
 ---
 # <a name="layout"></a>レイアウト
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] レイアウト システムについて説明します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でユーザー インターフェイスを作成するには、レイアウトの計算が発生するタイミングと方法を理解することが非常に重要です。  
   
  このトピックは、次のセクションで構成されています。  
   
--   [要素の境界ボックス](#LayoutSystem_BoundingBox)  
+- [要素の境界ボックス](#LayoutSystem_BoundingBox)  
   
--   [レイアウト システム](#LayoutSystem_Overview)  
+- [レイアウト システム](#LayoutSystem_Overview)  
   
--   [子の測定と配置](#LayoutSystem_Measure_Arrange)  
+- [子の測定と配置](#LayoutSystem_Measure_Arrange)  
   
--   [パネル要素とカスタム レイアウトの動作](#LayoutSystem_PanelsCustom)  
+- [パネル要素とカスタム レイアウトの動作](#LayoutSystem_PanelsCustom)  
   
--   [レイアウトのパフォーマンスの考慮事項](#LayoutSystem_Performance)  
+- [レイアウトのパフォーマンスの考慮事項](#LayoutSystem_Performance)  
   
--   [サブピクセル レンダリングとレイアウトの丸め処理](#LayoutSystem_LayoutRounding)  
+- [サブピクセル レンダリングとレイアウトの丸め処理](#LayoutSystem_LayoutRounding)  
   
--   [次の内容](#LayoutSystem_whatsnext)  
+- [次の内容](#LayoutSystem_whatsnext)  
   
 <a name="LayoutSystem_BoundingBox"></a>   
 ## <a name="element-bounding-boxes"></a>要素の境界ボックス  
@@ -120,19 +120,19 @@ ms.locfileid: "59330494"
 ## <a name="layout-performance-considerations"></a>レイアウトのパフォーマンスの考慮事項  
  レイアウトは再帰的なプロセスです。 内の各子要素を<xref:System.Windows.Controls.Panel.Children%2A>コレクションは、レイアウト システムの呼び出しごとに処理を取得します。 そのため、必要ない場合はレイアウト システムをトリガーしないようにしてください。 次の考慮事項は、パフォーマンスを向上させるのに役立ちます。  
   
--   どのプロパティ値の変更がレイアウト システムによる再帰的な更新を強制するかに注意してください。  
+- どのプロパティ値の変更がレイアウト システムによる再帰的な更新を強制するかに注意してください。  
   
      レイアウト システムを初期化できる値が設定されている依存関係プロパティは、パブリック フラグでマークされます。 <xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A> <xref:System.Windows.FrameworkPropertyMetadata.AffectsArrange%2A>便利な手がかりがどのプロパティ値の変更が、再帰を強制は、レイアウト システムによる更新を提供します。 一般に、要素の境界ボックスのサイズに影響を与えるすべてのプロパティがあります、<xref:System.Windows.FrameworkPropertyMetadata.AffectsMeasure%2A>フラグを true に設定します。 依存関係プロパティの詳細については、「[依存関係プロパティの概要](dependency-properties-overview.md)」を参照してください。  
   
--   可能であればを使用して、<xref:System.Windows.UIElement.RenderTransform%2A>の代わりに、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>します。  
+- 可能であればを使用して、<xref:System.Windows.UIElement.RenderTransform%2A>の代わりに、<xref:System.Windows.FrameworkElement.LayoutTransform%2A>します。  
   
      A<xref:System.Windows.FrameworkElement.LayoutTransform%2A>の内容に影響を与える非常に便利なことができます、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]します。 ただし、変換の効果は、他の要素の位置に影響はありません、あるを使用して、<xref:System.Windows.UIElement.RenderTransform%2A>代わりに、ため<xref:System.Windows.UIElement.RenderTransform%2A>レイアウト システムは呼び出されません。 <xref:System.Windows.FrameworkElement.LayoutTransform%2A> その変換を適用し、影響を受ける要素の新しい位置に対応する再帰的なレイアウトの更新を強制します。  
   
--   不要な呼び出しを避けるため<xref:System.Windows.UIElement.UpdateLayout%2A>します。  
+- 不要な呼び出しを避けるため<xref:System.Windows.UIElement.UpdateLayout%2A>します。  
   
      <xref:System.Windows.UIElement.UpdateLayout%2A>メソッドは、再帰的なレイアウトの更新を強制し、頻繁には必要ありません。 完全な更新が必要であると確信できる場合を除き、このメソッドの呼び出しはレイアウト システムに任せます。  
   
--   大規模なを使用する場合<xref:System.Windows.Controls.Panel.Children%2A>、コレクションの使用を検討、 <xref:System.Windows.Controls.VirtualizingStackPanel> 、通常ではなく<xref:System.Windows.Controls.StackPanel>します。  
+- 大規模なを使用する場合<xref:System.Windows.Controls.Panel.Children%2A>、コレクションの使用を検討、 <xref:System.Windows.Controls.VirtualizingStackPanel> 、通常ではなく<xref:System.Windows.Controls.StackPanel>します。  
   
      子のコレクションを仮想化により、<xref:System.Windows.Controls.VirtualizingStackPanel>現在、親のビューポート内にあるメモリ内オブジェクトのみを保持します。 その結果、ほとんどのシナリオでパフォーマンスが大幅に向上します。  
   

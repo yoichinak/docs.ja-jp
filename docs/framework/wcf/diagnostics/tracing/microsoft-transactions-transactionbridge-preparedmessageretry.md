@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.PreparedMessageRetry
 ms.date: 03/30/2017
 ms.assetid: 2194292d-bf5f-4aef-9336-cd3c4795cb71
 ms.openlocfilehash: d8acdb2f94e752860025ee2963aa78682b43b079
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997894"
 ---
 # <a name="microsofttransactionstransactionbridgepreparedmessageretry"></a>Microsoft.Transactions.TransactionBridge.PreparedMessageRetry
 準備メッセージの再試行は、応答しないコーディネーターに送信されました。  

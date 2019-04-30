@@ -11,11 +11,11 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], drawing lines
 ms.assetid: 8f2508af-f495-4223-b5cc-646cbbb520eb
 ms.openlocfilehash: 7408722dc13e83828cfca3f0615a2730e3c53461
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188267"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004030"
 ---
 # <a name="how-to-draw-opaque-and-semitransparent-lines"></a>方法: 不透明な直線および半透明な直線を描画する
 線を描画するときは、<xref:System.Drawing.Pen> オブジェクトを <xref:System.Drawing.Graphics> クラスの <xref:System.Drawing.Graphics.DrawLine%2A> メソッドに渡す必要があります。 <xref:System.Drawing.Pen.%23ctor%2A> コンストラクターのパラメーターの 1 つは、<xref:System.Drawing.Color> オブジェクトです。 不透明な直線を描画するには、色のアルファ コンポーネントを 255 に設定します。 半透明な直線を描画するには、アルファ コンポーネントを 1 ～ 254 の値に設定します。  

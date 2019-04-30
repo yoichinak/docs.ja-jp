@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 5c14080e3ac128a6a7fbb48586f59d8a5ea4105f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049337"
 ---
 # <a name="loadtypelibwithresolver-function"></a>LoadTypeLibWithResolver 関数
 タイプ ライブラリを読み込み、指定された使用[ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)任意の内部で参照されるタイプ ライブラリを解決します。  
@@ -43,11 +43,11 @@ HRESULT LoadTypeLibWithResolver(
  `regkind`  
  [in]A [REGKIND 列挙](https://docs.microsoft.com/previous-versions/windows/desktop/api/oleauto/ne-oleauto-tagregkind)タイプ ライブラリを登録する方法を制御するフラグ。 指定できる値は次のとおりです。  
   
--   `REGKIND_DEFAULT`:既定の登録の動作を使用します。  
+- `REGKIND_DEFAULT`:既定の登録の動作を使用します。  
   
--   `REGKIND_REGISTER`:このタイプ ライブラリを登録します。  
+- `REGKIND_REGISTER`:このタイプ ライブラリを登録します。  
   
--   `REGKIND_NONE`:このタイプ ライブラリを登録できません。  
+- `REGKIND_NONE`:このタイプ ライブラリを登録できません。  
   
  `pTlbResolver`  
  [in]実装へのポインター、 [ITypeLibResolver インターフェイス](../../../../docs/framework/unmanaged-api/tlbexp/itypelibresolver-interface.md)します。  

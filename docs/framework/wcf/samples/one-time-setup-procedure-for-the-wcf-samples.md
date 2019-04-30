@@ -3,11 +3,11 @@ title: Windows Communication Foundation サンプルの 1 回限りのセット�
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
 ms.openlocfilehash: 2b9d84089cdd987f2e2b1e3d23354505520a80f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773052"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052106"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 Windows Communication Foundation (WCF) サンプルのほとんどがインターネット インフォメーション サービス (IIS) でホストされているし、共通の仮想ディレクトリから実行します。 この 1 回限りのセットアップ手順は、ディスクにフォルダーを作成しますという名前の iis 仮想ディレクトリも追加**ServiceModelSamples**します。
@@ -48,9 +48,9 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
   
 9. 実行、 **Setupvroot.bat**バッチ ファイル。 次の手順が実行されます。  
   
-    -   ServiceModelSamples という名前の仮想ディレクトリが IIS に作成されます。  
+    - ServiceModelSamples という名前の仮想ディレクトリが IIS に作成されます。  
   
-    -   %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples and %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin という名前の新しいディスク ディレクトリが作成されます。  
+    - %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples and %SystemDrive%\Inetpub\wwwroot\ServiceModelSamples\bin という名前の新しいディスク ディレクトリが作成されます。  
   
      これらのディレクトリを手動で設定する場合を参照してください、[仮想ディレクトリのセットアップ手順](../../../../docs/framework/wcf/samples/virtual-directory-setup-instructions.md)します。 この手順で行ったすべての変更を元に戻すには、サンプルの使用が終わった後で cleanupvroot.bat を実行します。  
   
@@ -66,11 +66,11 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
 
 12. Setupcerttool.bat ファイルを実行します。 このファイルにある、 \<InstallPath > \WF_WCF_Samples\WCF\Setup\ フォルダー。  このスクリプトでは、次のタスクが実行されます。
 
-    -   FindPrivateKey ツールをビルドします。
+    - FindPrivateKey ツールをビルドします。
 
-    -   %ProgramFiles%\ServiceModelSampleTools という名前のディレクトリを作成します。
+    - %ProgramFiles%\ServiceModelSampleTools という名前のディレクトリを作成します。
 
-    -   新しい FindPrivateKey ツールをこのディレクトリにコピーします。
+    - 新しい FindPrivateKey ツールをこのディレクトリにコピーします。
 
      このツールは、証明書を使用して IIS でホストされるサンプルで必要です。
 

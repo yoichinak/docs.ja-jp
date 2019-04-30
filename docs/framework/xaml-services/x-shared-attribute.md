@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Shared attribute in XAML [XAML Services]
 ms.assetid: c8cff434-2785-405f-9f95-16deb34c9e64
 ms.openlocfilehash: da35f209b632bdf9e4ab2298239a505df69d6048
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982632"
 ---
 # <a name="xshared-attribute"></a>x:Shared 属性
 設定すると`false`、属性付きのリソースの要求は、すべての要求の同じインスタンスを共有することがなく、各要求の新しいインスタンスを作成するために、WPF リソース検索の動作を変更します。  
@@ -45,9 +45,9 @@ ms.locfileid: "59125744"
   
  WPF では、`x:Shared`次の条件でのみ有効です。  
   
--   <xref:System.Windows.ResourceDictionary>で項目を含む`x:Shared`コンパイルする必要があります。 <xref:System.Windows.ResourceDictionary> Loose XAML 内にすることはできませんまたはテーマを使用します。  
+- <xref:System.Windows.ResourceDictionary>で項目を含む`x:Shared`コンパイルする必要があります。 <xref:System.Windows.ResourceDictionary> Loose XAML 内にすることはできませんまたはテーマを使用します。  
   
--   <xref:System.Windows.ResourceDictionary>項目を格納する他の中で入れ子にする必要がありますできません<xref:System.Windows.ResourceDictionary>します。 たとえば、使用することはできません`x:Shared`内の項目を<xref:System.Windows.ResourceDictionary>内にある、<xref:System.Windows.Style>にではない、<xref:System.Windows.ResourceDictionary>項目。  
+- <xref:System.Windows.ResourceDictionary>項目を格納する他の中で入れ子にする必要がありますできません<xref:System.Windows.ResourceDictionary>します。 たとえば、使用することはできません`x:Shared`内の項目を<xref:System.Windows.ResourceDictionary>内にある、<xref:System.Windows.Style>にではない、<xref:System.Windows.ResourceDictionary>項目。  
   
 ## <a name="see-also"></a>関連項目
 

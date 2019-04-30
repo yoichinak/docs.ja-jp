@@ -5,18 +5,18 @@ f1_keywords:
 - vbrID96
 ms.assetid: e40b19a2-8100-43ff-a1a4-0ddee3cc7f9a
 ms.openlocfilehash: a766fc9a854ea2ad7ebad2d74b33a67b508f7534
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58026304"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022624"
 ---
 # <a name="unable-to-sink-events-of-object-because-the-object-is-already-firing-events-to-the-maximum-number-of-event-receivers-it-supports"></a>オブジェクトはサポートされているイベント受信最大数のイベントを既に発生しているので、オブジェクトのイベントを受け取ることができません
 オブジェクトでサポートされているイベント レシーバーの最大数を超えています。  
   
 ### <a name="to-correct-the-error"></a>このエラーを解決するには  
   
--   イベント レシーバーの数を減らします。  
+- イベント レシーバーの数を減らします。  
   
 ## <a name="see-also"></a>関連項目
 

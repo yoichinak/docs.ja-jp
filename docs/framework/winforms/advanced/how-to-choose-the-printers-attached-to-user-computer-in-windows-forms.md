@@ -10,11 +10,11 @@ helpviewer_keywords:
 - printers [Windows Forms], choosing
 ms.assetid: 63c1172b-2931-4ac0-953f-37f629494bbf
 ms.openlocfilehash: efd65ff6417b1a63a7f87917c4d9a95dedc464ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004446"
 ---
 # <a name="how-to-choose-the-printers-attached-to-a-users-computer-in-windows-forms"></a>方法: Windows フォームでユーザーのコンピューターに接続されたプリンターを選択する
 既定のプリンター以外のプリンターに印刷することがよくあります。 <xref:System.Windows.Forms.PrintDialog> コンポーネントを使用すると、現在インストールされているプリンターからユーザーに選択させることができます。 <xref:System.Windows.Forms.PrintDialog> コンポーネントでは、 <xref:System.Windows.Forms.DialogResult> コンポーネントの <xref:System.Windows.Forms.PrintDialog> がキャプチャされ、プリンターの選択に使用されます。  

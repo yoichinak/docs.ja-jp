@@ -10,18 +10,18 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], creating toggle buttons
 ms.assetid: d9c197df-4c65-43f2-beee-b68b52b2befc
 ms.openlocfilehash: e688e9a220e6c82caa2d107589b5ca9a1e59e72b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59091253"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62052158"
 ---
 # <a name="how-to-create-toggle-buttons-in-toolstrip-controls"></a>方法: ToolStrip コントロールにトグル ボタンを作成する
 ユーザーには、トグル ボタンがクリックすると、くぼんで表示し、もう一度ボタンをクリックするまで、くぼんだ外観を保持します。  
   
 ### <a name="to-create-a-toggling-toolstripbutton"></a>切り替えのオブジェクトを作成するには  
   
--   次のコード例などのコードを使用します。 このコードでは、フォームが含まれている前提としています、<xref:System.Windows.Forms.ToolStrip>コントロール、およびその<xref:System.Windows.Forms.ToolStrip.Items%2A>コレクションに含まれる、<xref:System.Windows.Forms.ToolStripButton>と呼ばれる`toolStripButton1`します。 呼ばれるイベント ハンドラーを設定することも想定`toolStripButton1_CheckedChanged`します。  
+- 次のコード例などのコードを使用します。 このコードでは、フォームが含まれている前提としています、<xref:System.Windows.Forms.ToolStrip>コントロール、およびその<xref:System.Windows.Forms.ToolStrip.Items%2A>コレクションに含まれる、<xref:System.Windows.Forms.ToolStripButton>と呼ばれる`toolStripButton1`します。 呼ばれるイベント ハンドラーを設定することも想定`toolStripButton1_CheckedChanged`します。  
   
     ```vb  
     toolStripButton1.CheckOnClick = True  

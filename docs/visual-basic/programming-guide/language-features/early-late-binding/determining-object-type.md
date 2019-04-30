@@ -10,11 +10,11 @@ helpviewer_keywords:
 - objects [Visual Basic], type determining
 ms.assetid: d95e7ad1-cd63-41d6-9a28-d7a1380d49c1
 ms.openlocfilehash: 4014bef2e0c27a0f6a684bc1ed95019f392062a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302713"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050520"
 ---
 # <a name="determining-object-type-visual-basic"></a>オブジェクトの型の決定 (Visual Basic)
 汎用オブジェクト変数 (つまり、変数として宣言する`Object`) 任意のクラスからオブジェクトを保持できます。 型の変数を使用する場合`Object`オブジェクトのクラスに基づいて異なるアクションを実行する必要があります。 たとえば、一部のオブジェクト可能性がありますサポートしていませんが特定のプロパティまたはメソッドです。 Visual Basic のオブジェクト変数に保存するオブジェクトの種類を決定する 2 つの手段を提供します。、`TypeName`関数と`TypeOf...Is`演算子。  

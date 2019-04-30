@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], about ImageList component
 ms.assetid: 7e25d89b-5633-40c1-afc3-82e0e301ffa2
 ms.openlocfilehash: 9869e647613ccf009954a5d65445947fbced40e7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57709845"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971172"
 ---
 # <a name="imagelist-component-overview-windows-forms"></a>ImageList コンポーネントの概要 (Windows フォーム)
 

@@ -18,14 +18,14 @@ helpviewer_keywords:
 - serialization, attributes
 ms.assetid: a416192f-8102-458e-bc0a-0b8f3f784da9
 ms.openlocfilehash: 79cc53be0f099151db1b64190c844b1d57205a44
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018069"
 ---
 # <a name="xml-serialization-with-xml-web-services"></a>XML Web サービスを使用した XML シリアル化
-XML シリアル化は、XML Web サービス アーキテクチャで使用される基礎的なトランスポート機構であり、<xref:System.Xml.Serialization.XmlSerializer> クラスによって実行されます。 XML Web サービスによって生成される XML を制御するには、「[XML シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)」および「[エンコード済み SOAP シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)」の一覧に示されている属性を、XML Web サービスの作成に使用するファイル (.asmx) のクラス、戻り値、パラメーター、およびフィールドに適用します。 XML Web サービスを作成する方法の詳細については、[XML Web サービスを使用して ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))を参照してください。  
+XML シリアル化は、XML Web サービス アーキテクチャで使用される基礎的なトランスポート機構であり、<xref:System.Xml.Serialization.XmlSerializer> クラスによって実行されます。 XML Web サービスによって生成される XML を制御するには、「[XML シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)」および「[エンコード済み SOAP シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)」の一覧に示されている属性を、XML Web サービスの作成に使用するファイル (.asmx) のクラス、戻り値、パラメーター、およびフィールドに適用します。 XML Web サービスを作成する方法の詳細については、次を参照してください。 [XML Web サービスを使用して ASP.NET](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/ba0z6a33(v=vs.100))します。  
   
 ## <a name="literal-and-encoded-styles"></a>リテラル スタイルとエンコード済みスタイル  
  XML Web サービスによって生成された XML を 2 つの方法では、リテラルのいずれかで書式設定されたかで説明したように、エンコードされた[SOAP メッセージの書式設定をカスタマイズする](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkwy2d72(v=vs.100))します。 このため、XML シリアル化を制御する属性セットは 2 つになります。 「[XML シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-xml-serialization.md)」の一覧に示される属性は、リテラル スタイルの XML を制御するように設計されています。 一方、「[エンコード済み SOAP シリアル化を制御する属性](../../../docs/standard/serialization/attributes-that-control-encoded-soap-serialization.md)」の一覧に示される属性は、エンコード済みスタイルを制御します。 これらの属性を選択的に適用することで、2 つのスタイルのいずれかまたは両方を返すようにアプリケーションを調整できます。 さらに、これらの属性は、必要に応じて戻り値やパラメーターにも適用できます。  

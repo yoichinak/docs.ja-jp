@@ -10,34 +10,34 @@ helpviewer_keywords:
 - tables [WPF]
 ms.assetid: 5e1105f4-8fc4-473a-ba55-88c8e71386e6
 ms.openlocfilehash: 6485aa9f2094b734f796ff38a33f4e0d3434e004
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317663"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053107"
 ---
 # <a name="table-overview"></a>テーブルの概要
 <xref:System.Windows.Documents.Table> フロー ドキュメント コンテンツのグリッド ベースのプレゼンテーションをサポートするブロック レベル要素です。 この要素は、その柔軟性により非常に便利ですが、正しく理解して使用するのが難しいとも言えます。  
   
  このトピックは、次のセクションで構成されています。  
   
--   [テーブルの基本](#table_basics)  
+- [テーブルの基本](#table_basics)  
   
--   [テーブルとグリッドの相違点](#table_vs_Grid)  
+- [テーブルとグリッドの相違点](#table_vs_Grid)  
   
--   [テーブルの基本構造](#basic_table_structure)  
+- [テーブルの基本構造](#basic_table_structure)  
   
--   [テーブルの内容](#table_containment)  
+- [テーブルの内容](#table_containment)  
   
--   [行グループ](#row_groupings)  
+- [行グループ](#row_groupings)  
   
--   [背景のレンダリングの優先順位](#rendering_precedence)  
+- [背景のレンダリングの優先順位](#rendering_precedence)  
   
--   [複数の行または列にまたがるセル](#spanning_rows_or_columns)  
+- [複数の行または列にまたがるセル](#spanning_rows_or_columns)  
   
--   [テーブルとコードのバインディング](#building_a_table_with_code)  
+- [テーブルとコードのバインディング](#building_a_table_with_code)  
   
--   関連トピック 
+- 関連トピック 
   
 <a name="table_basics"></a>   
 ## <a name="table-basics"></a>テーブルの基本  
@@ -50,15 +50,15 @@ ms.locfileid: "59317663"
 ### <a name="basic-table-structure"></a>テーブルの基本構造  
  <xref:System.Windows.Documents.Table> 列で構成されるグリッド ベースのプレゼンテーションを提供します (によって表される<xref:System.Windows.Documents.TableColumn>要素) と行 (によって表される<xref:System.Windows.Documents.TableRow>要素)。 <xref:System.Windows.Documents.TableColumn> 要素のコンテンツをホストしていません。単に列と列の特性を定義します。 <xref:System.Windows.Documents.TableRow> 要素をホストする必要があります、<xref:System.Windows.Documents.TableRowGroup>要素で、テーブルの行のグループ化を定義します。 <xref:System.Windows.Documents.TableCell> テーブルに表示する実際のコンテンツが含まれる要素をホストする必要があります、<xref:System.Windows.Documents.TableRow>要素。 <xref:System.Windows.Documents.TableCell> 派生した要素を含めることができますのみ<xref:System.Windows.Documents.Block>します。  有効な子要素を<xref:System.Windows.Documents.TableCell>が含まれます。  
   
--   <xref:System.Windows.Documents.BlockUIContainer>  
+- <xref:System.Windows.Documents.BlockUIContainer>  
   
--   <xref:System.Windows.Documents.List>  
+- <xref:System.Windows.Documents.List>  
   
--   <xref:System.Windows.Documents.Paragraph>  
+- <xref:System.Windows.Documents.Paragraph>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Table>  
+- <xref:System.Windows.Documents.Table>  
   
 > [!NOTE]
 >  <xref:System.Windows.Documents.TableCell> 要素は、テキスト コンテンツを直接ホストしない可能性があります。 コンテンツ要素などのフローのコンテインメイト規則の詳細については<xref:System.Windows.Documents.TableCell>を参照してください[フロー ドキュメントの概要](flow-document-overview.md)します。  
@@ -78,19 +78,19 @@ ms.locfileid: "59317663"
 ### <a name="table-containment"></a>テーブルの内容  
  <xref:System.Windows.Documents.Table> 派生した、<xref:System.Windows.Documents.Block>要素の一般的な規則に準拠している<xref:System.Windows.Documents.Block>レベルの要素。  A<xref:System.Windows.Documents.Table>次の要素のいずれかで要素を含めることがあります。  
   
--   <xref:System.Windows.Documents.FlowDocument>  
+- <xref:System.Windows.Documents.FlowDocument>  
   
--   <xref:System.Windows.Documents.TableCell>  
+- <xref:System.Windows.Documents.TableCell>  
   
--   <xref:System.Windows.Controls.ListBoxItem>  
+- <xref:System.Windows.Controls.ListBoxItem>  
   
--   <xref:System.Windows.Controls.ListViewItem>  
+- <xref:System.Windows.Controls.ListViewItem>  
   
--   <xref:System.Windows.Documents.Section>  
+- <xref:System.Windows.Documents.Section>  
   
--   <xref:System.Windows.Documents.Floater>  
+- <xref:System.Windows.Documents.Floater>  
   
--   <xref:System.Windows.Documents.Figure>  
+- <xref:System.Windows.Documents.Figure>  
   
 <a name="row_groupings"></a>   
 ### <a name="row-groupings"></a>行グループ  

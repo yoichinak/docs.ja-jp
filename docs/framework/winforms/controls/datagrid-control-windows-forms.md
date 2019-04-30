@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying on Windows Forms
 ms.assetid: 1d9d5683-43d2-42dd-b6c3-e43f4cf0de99
 ms.openlocfilehash: 5f8fcd21802c52d61d354c5ba85d665bd17237db
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078916"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011386"
 ---
 # <a name="datagrid-control-windows-forms"></a>DataGrid コントロール (Windows フォーム)
 > [!NOTE]

@@ -5,11 +5,11 @@ ms.assetid: f07b73f3-188d-43a9-8f7d-44dce2f1ddb7
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b20d78abbfa1db43047872a596289028833de37d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098989"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994124"
 ---
 # <a name="icordebugsymbolprovider2getframeprops-method"></a>ICorDebugSymbolProvider2::GetFrameProps メソッド
 メソッドのメソッド開始位置を示す相対仮想アドレスと、指定されたコード相対仮想アドレスを持つ親フレームを返します。  

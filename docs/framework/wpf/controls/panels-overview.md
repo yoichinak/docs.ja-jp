@@ -10,30 +10,30 @@ helpviewer_keywords:
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
 ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59157873"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051027"
 ---
 # <a name="panels-overview"></a>パネルの概要
 <xref:System.Windows.Controls.Panel> 要素は要素のレンダリングを制御するコンポーネントなど、サイズ、ディメンション、位置、および、子コンテンツの配置。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]の数は、定義済み<xref:System.Windows.Controls.Panel>要素とカスタムを作成する機能<xref:System.Windows.Controls.Panel>要素。  
   
  このトピックは、次のセクションで構成されています。  
   
--   [パネル クラス](#Panels_view_from_10000_feet)  
+- [パネル クラス](#Panels_view_from_10000_feet)  
   
--   [パネルの要素の一般的なメンバー](#Panels_declared_members)  
+- [パネルの要素の一般的なメンバー](#Panels_declared_members)  
   
--   [派生パネル要素](#Panels_derived_elements)  
+- [派生パネル要素](#Panels_derived_elements)  
   
--   [ユーザー インターフェイス パネル](#Panels_main_UI_elements)  
+- [ユーザー インターフェイス パネル](#Panels_main_UI_elements)  
   
--   [入れ子になったパネル要素](#Panels_nested_panel_elements)  
+- [入れ子になったパネル要素](#Panels_nested_panel_elements)  
   
--   [カスタム パネル要素](#Panels_custom_panel_elements)  
+- [カスタム パネル要素](#Panels_custom_panel_elements)  
   
--   [ローカライズ/グローバリゼーション サポート](#Panels_global_localization)  
+- [ローカライズ/グローバリゼーション サポート](#Panels_global_localization)  
   
 <a name="Panels_view_from_10000_feet"></a>   
 ## <a name="the-panel-class"></a>パネル クラス  
@@ -64,16 +64,16 @@ ms.locfileid: "59157873"
   
 |要素名|UI パネル?|説明|  
 |------------------|---------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|はい|あるに対する相対座標により子要素を明示的に配置できる領域を定義、<xref:System.Windows.Controls.Canvas>領域。|  
-|<xref:System.Windows.Controls.DockPanel>|はい|子要素を互いに水平方向または垂直方向に整列する領域を定義します。|  
-|<xref:System.Windows.Controls.Grid>|はい|列と行で構成されている柔軟なグリッド領域を定義します。 子要素を<xref:System.Windows.Controls.Grid>正確に使用して配置することができます、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティ。|  
-|<xref:System.Windows.Controls.StackPanel>|はい|子要素を水平方向または垂直方向の単一行に整列します。|  
+|<xref:System.Windows.Controls.Canvas>|[はい]|あるに対する相対座標により子要素を明示的に配置できる領域を定義、<xref:System.Windows.Controls.Canvas>領域。|  
+|<xref:System.Windows.Controls.DockPanel>|[はい]|子要素を互いに水平方向または垂直方向に整列する領域を定義します。|  
+|<xref:System.Windows.Controls.Grid>|[はい]|列と行で構成されている柔軟なグリッド領域を定義します。 子要素を<xref:System.Windows.Controls.Grid>正確に使用して配置することができます、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティ。|  
+|<xref:System.Windows.Controls.StackPanel>|[はい]|子要素を水平方向または垂直方向の単一行に整列します。|  
 |<xref:System.Windows.Controls.Primitives.TabPanel>|いいえ|タブ ボタンのレイアウトを処理する<xref:System.Windows.Controls.TabControl>します。|  
 |<xref:System.Windows.Controls.Primitives.ToolBarOverflowPanel>|いいえ|内のコンテンツを配置、<xref:System.Windows.Controls.ToolBar>コントロール。|  
 |<xref:System.Windows.Controls.Primitives.UniformGrid>|いいえ|<xref:System.Windows.Controls.Primitives.UniformGrid> グリッド内の子をすべて同じセル サイズを調整に使用されます。|  
 |<xref:System.Windows.Controls.VirtualizingPanel>|いいえ|子コレクションを "仮想化" できるパネルに基本クラスを提供します。|  
 |<xref:System.Windows.Controls.VirtualizingStackPanel>|はい|水平方向または垂直方向の単一行でコンテンツを整列し、仮想化します。|  
-|<xref:System.Windows.Controls.WrapPanel>|はい|<xref:System.Windows.Controls.WrapPanel> 順に子要素は左から右、格納ボックスの端にある次の行に改行してコンテンツ。 上から下または右から左の値に応じて、順次発生後続の配置、<xref:System.Windows.Controls.WrapPanel.Orientation%2A>プロパティ。|  
+|<xref:System.Windows.Controls.WrapPanel>|[はい]|<xref:System.Windows.Controls.WrapPanel> 順に子要素は左から右、格納ボックスの端にある次の行に改行してコンテンツ。 上から下または右から左の値に応じて、順次発生後続の配置、<xref:System.Windows.Controls.WrapPanel.Orientation%2A>プロパティ。|  
   
 <a name="Panels_main_UI_elements"></a>   
 ## <a name="user-interface-panels"></a>ユーザー インターフェイス パネル  

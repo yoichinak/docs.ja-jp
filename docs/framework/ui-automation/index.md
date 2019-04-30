@@ -7,11 +7,11 @@ helpviewer_keywords:
 - UI Automation
 ms.assetid: e7ec856e-41ee-47b1-9d57-b75a3dad088c
 ms.openlocfilehash: 8903b6a47aa2800ef4fa4fba2cd2537d2b3896e2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033242"
 ---
 # <a name="accessibility"></a>ユーザー補助
 > [!NOTE]

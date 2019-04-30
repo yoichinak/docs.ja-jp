@@ -5,11 +5,11 @@ ms.assetid: c922b7d4-44e5-45e4-aef3-cc9c35a0be80
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 3f514acbd772c9d33ec4372cfaccb778d6bb41eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170171"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61993630"
 ---
 # <a name="icordebugvariablesymbolgetname-method"></a>ICorDebugVariableSymbol::GetName メソッド
 変数の名前を取得します。  

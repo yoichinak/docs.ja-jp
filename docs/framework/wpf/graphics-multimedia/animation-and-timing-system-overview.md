@@ -6,11 +6,11 @@ helpviewer_keywords:
 - animation [WPF]
 ms.assetid: 172cd5a8-a333-4c81-9456-fafccc19f382
 ms.openlocfilehash: f64431e7804ba6e068a3d05f512c6ead089d7712
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079319"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020366"
 ---
 # <a name="animation-and-timing-system-overview"></a>アニメーションとタイミング システムの概要
 このトピックでは、タイミング システムが、アニメーションを使用する方法について説明します<xref:System.Windows.Media.Animation.Timeline>、および<xref:System.Windows.Media.Animation.Clock>プロパティをアニメーション化するクラス。  

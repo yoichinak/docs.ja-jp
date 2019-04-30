@@ -8,11 +8,11 @@ helpviewer_keywords:
 - Panel control [Windows Forms], about Panel control
 ms.assetid: b6b83636-2c39-4dad-89d6-f0fa41049a74
 ms.openlocfilehash: d4976b3725d04162ac10242c486f57c4d2598769
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086365"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012686"
 ---
 # <a name="panel-control-overview-windows-forms"></a>Panel コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.Panel>コントロールを使用すると、他のコントロールの特定のグループ化を提供します。 通常、関数によってフォームを分割するのにパネルを使用します。 たとえば、どの宅配業者を使用するなどの絞り込みメール配信オプションを指定する注文書があります。 パネル内のすべてのオプションをグループ化と、ユーザーが論理視覚的に。 デザイン時にすべてのコントロールを簡単に移動できます-移動すると、<xref:System.Windows.Forms.Panel>もその格納されているコントロールが移動してすべての制御します。 パネルにグループ化コントロールを介してアクセスできるその<xref:System.Windows.Forms.Control.Controls%2A>プロパティ。 このプロパティのコレクションを返します<xref:System.Windows.Forms.Control>コントロールをキャストする必要があります通常のインスタンスがその特定の型には、この方法を取得します。  
