@@ -35,7 +35,7 @@ ms.locfileid: "57707912"
 
 ## <a name="creating-the-project"></a>プロジェクトの作成
 
-まず、Windows フォーム プロジェクトを作成します。 Visual Studio を開き、新しい作成**Windows フォーム アプリ (.NET Framework)** Visual Basic または Visual C# のという名前でプロジェクト`HostingWpf`します。
+まず、Windows フォーム プロジェクトを作成します。 Visual Studio を開き、`HostingWpf`という新しい **Windows フォーム アプリ (.NET Framework)** プロジェクトを Visual Basic または Visual C# で作成します。
 
 > [!NOTE]
 > WPF コンテンツをホストする場合は、C# プロジェクトと Visual Basic プロジェクトのみがサポートされます。
