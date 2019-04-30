@@ -8,11 +8,11 @@ helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
 ms.openlocfilehash: c2a62b61cb7b31c978a84a3d3f41c24f9fafb84d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312567"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946745"
 ---
 # <a name="application-settings-architecture"></a>アプリケーション設定アーキテクチャ
 このトピックでは、アプリケーション設定アーキテクチャのしくみについて説明します。また、グループ化された設定や設定キーなど、アーキテクチャの高度な機能についても説明します。  
@@ -24,15 +24,15 @@ ms.locfileid: "59312567"
 ## <a name="defining-settings"></a>設定の定義  
  アプリケーション設定アーキテクチャは、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 内と Windows フォーム内で使用されます。アーキテクチャには、この両方の環境で共有される多数の基本クラスが含まれます。 最も重要なの<xref:System.Configuration.SettingsBase>のコレクションを介して設定にアクセスと低レベルのメソッドの読み込みと保存の設定を提供します。 各環境から派生した独自のクラスを実装する<xref:System.Configuration.SettingsBase>その環境の追加の設定機能を提供します。 派生したクラスで Windows フォーム ベースのアプリケーションでは、すべてのアプリケーション設定を定義する必要があります、<xref:System.Configuration.ApplicationSettingsBase>クラスは、基底クラスに次の機能を追加します。  
   
--   上位レベルの読み込み操作と保存操作  
+- 上位レベルの読み込み操作と保存操作  
   
--   ユーザー スコープの設定のサポート  
+- ユーザー スコープの設定のサポート  
   
--   ユーザーの設定を定義済みの既定値に戻す機能  
+- ユーザーの設定を定義済みの既定値に戻す機能  
   
--   以前のバージョンのアプリケーションの設定のアップグレード  
+- 以前のバージョンのアプリケーションの設定のアップグレード  
   
--   設定の変更前または保存前の検証  
+- 設定の変更前または保存前の検証  
   
  設定の説明は、さまざまな内で定義されている属性を使用して、<xref:System.Configuration>名前空間は、後述[アプリケーション設定の属性](application-settings-attributes.md)します。 設定を定義するときに、いずれかで適用する必要があります<xref:System.Configuration.ApplicationScopedSettingAttribute>または<xref:System.Configuration.UserScopedSettingAttribute>、アプリケーション全体または現在のユーザーにのみ、設定が適用されるかどうかについて説明します。  
   
@@ -46,11 +46,11 @@ ms.locfileid: "59312567"
   
  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] と共にリリースされた構成システムでは、ローカル コンピューターの machine.config ファイルまたはアプリケーションと共に配置される `app.`exe.config ファイルを使用した静的なアプリケーション構成データの提供をサポートしています。 <xref:System.Configuration.LocalFileSettingsProvider>クラスは、次の方法でこのネイティブ サポートを拡張します。  
   
--   アプリケーション スコープの設定は、machine.config ファイルまたは `app.`exe.config ファイルに保存できます。 machine.config は常に読み取り専用です。`app`.exe.config は、セキュリティを考慮して、ほとんどのアプリケーションで読み取り専用に制限されています。  
+- アプリケーション スコープの設定は、machine.config ファイルまたは `app.`exe.config ファイルに保存できます。 machine.config は常に読み取り専用です。`app`.exe.config は、セキュリティを考慮して、ほとんどのアプリケーションで読み取り専用に制限されています。  
   
--   ユーザー スコープの設定は、`app`.exe.config ファイルに保存できます。この場合、設定は静的な既定値として扱われます。  
+- ユーザー スコープの設定は、`app`.exe.config ファイルに保存できます。この場合、設定は静的な既定値として扱われます。  
   
--   既定値以外のユーザー スコープの設定は、*user*.config という新しいファイルに保存されます。*user* は、アプリケーションを現在実行しているユーザーのユーザー名です。 ユーザー スコープの設定で、既定値を指定する<xref:System.Configuration.DefaultSettingValueAttribute>します。 ユーザー スコープの設定はアプリケーションの実行時に変更されることが多いため、`user`.config は常に読み取り/書き込みになります。  
+- 既定値以外のユーザー スコープの設定は、*user*.config という新しいファイルに保存されます。*user* は、アプリケーションを現在実行しているユーザーのユーザー名です。 ユーザー スコープの設定で、既定値を指定する<xref:System.Configuration.DefaultSettingValueAttribute>します。 ユーザー スコープの設定はアプリケーションの実行時に変更されることが多いため、`user`.config は常に読み取り/書き込みになります。  
   
  この 3 つの構成ファイルはいずれも XML 形式で設定を保存します。 アプリケーション スコープの設定の最上位の XML 要素は `<appSettings>` であり、ユーザー スコープの設定には `<userSettings>` が使用されます。 アプリケーション スコープの設定と、ユーザー スコープの設定の既定値が含まれた `app`.exe.config ファイルは、次のようになります。  
   

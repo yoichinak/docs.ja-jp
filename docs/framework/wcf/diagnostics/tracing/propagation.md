@@ -3,11 +3,11 @@ title: 伝達
 ms.date: 03/30/2017
 ms.assetid: f8181e75-d693-48d1-b333-a776ad3b382a
 ms.openlocfilehash: faa0e6ecb53963587e3fc253cd8beae1dc2c4bf5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59154038"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971380"
 ---
 # <a name="propagation"></a>伝達
 このトピックでは、Windows Communication Foundation (WCF) トレース モデルでのアクティビティ伝達について説明します。  
@@ -26,11 +26,11 @@ ms.locfileid: "59154038"
 ## <a name="propagation-definition"></a>伝達の定義  
  次のすべての条件に該当する場合に、アクティビティ M の gAId がアクティビティ N に伝達されます。  
   
--   M に起因して N が作成された。  
+- M に起因して N が作成された。  
   
--   M の gAId を N が認識している。  
+- M の gAId を N が認識している。  
   
--   N の gAId と M の gAId が同じである。  
+- N の gAId と M の gAId が同じである。  
   
  次の XML スキーマに示すように、gAId は ActivityId メッセージ ヘッダーによって伝達されます。  
   

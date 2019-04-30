@@ -5,11 +5,11 @@ ms.assetid: 90abece1-392e-4ade-94a1-30c75b0f7074
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 186d9eec0aa6ad9e327b1dd4d0f19e251c79ecf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59147278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946186"
 ---
 # <a name="icordebugvariablesymbolgetvalue-method"></a>ICorDebugVariableSymbol::GetValue メソッド
 変数の値をバイト配列として取得します。  

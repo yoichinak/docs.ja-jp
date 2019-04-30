@@ -5,11 +5,11 @@ ms.assetid: 670a7653-dac6-4171-98ee-d669e3adf4b2
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e5cddf34f1a6277e966901c9692bff63e26a3b8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59136735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940154"
 ---
 # <a name="isymunmanagedasyncmethodisasyncmethod-method"></a>ISymUnmanagedAsyncMethod::IsAsyncMethod メソッド
 かどうかのかどうか、メソッドは非同期の情報を確認します。  

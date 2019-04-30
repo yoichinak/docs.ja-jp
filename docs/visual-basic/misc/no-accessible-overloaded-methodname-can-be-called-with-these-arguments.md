@@ -5,11 +5,11 @@ f1_keywords:
 - vbrAmbiguousMatch_NarrowingConversion1
 ms.assetid: 2fdbadb9-8ef1-404a-a2ed-ce5f5e55cfcb
 ms.openlocfilehash: 5c55a767b1ea61117940b9c6f2a741174297274a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337865"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944977"
 ---
 # <a name="no-accessible-overloaded-methodname-can-be-called-with-these-arguments-without-a-narrowing-conversion"></a>ないオーバー ロードされた '\<methodname >' 縮小変換しないで、これらの引数と共に呼び出すことができます
 オーバーロードされたメソッドが呼び出されましたが、縮小変換せずに指定された引数のリストと一致するメソッドはありませんでした。  

@@ -13,11 +13,11 @@ helpviewer_keywords:
 - late binding [Visual Basic]
 ms.assetid: 2a5a41a3-1aa8-4236-b1f0-2382af7bf715
 ms.openlocfilehash: 4a3ef3a8254153fa8695ffacd9829ca9316d77a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837652"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959979"
 ---
 # <a name="object-variable-declaration-visual-basic"></a>オブジェクト変数の宣言 (Visual Basic)
 オブジェクト変数を宣言するのにには、通常の宣言ステートメントを使用します。 どちらかのデータ型を指定する`Object`(つまり、[オブジェクト データ型](../../../../visual-basic/language-reference/data-types/object-data-type.md)) または固有のオブジェクトの作成元のクラス。  
@@ -49,19 +49,19 @@ Dim objC As System.OperatingSystem
 ### <a name="advantages-of-early-binding"></a>事前バインディングの利点  
  特定のクラスとしてオブジェクト変数を宣言するにはいくつかの利点。  
   
--   自動的な型チェック  
+- 自動的な型チェック  
   
--   特定のクラスのすべてのメンバーへのアクセスを保証  
+- 特定のクラスのすべてのメンバーへのアクセスを保証  
   
--   コード エディターで Microsoft IntelliSense サポート  
+- コード エディターで Microsoft IntelliSense サポート  
   
--   コードの読みやすくします。  
+- コードの読みやすくします。  
   
--   コードのエラーの減少  
+- コードのエラーの減少  
   
--   エラーが検出は、コンパイル時ではなく実行時間  
+- エラーが検出は、コンパイル時ではなく実行時間  
   
--   コードの実行を高速化  
+- コードの実行を高速化  
   
 ## <a name="access-to-object-variable-members"></a>オブジェクト変数のメンバーへのアクセス  
  ときに`Option Strict`なって`On`メソッドとプロパティを宣言するクラスのオブジェクト変数にアクセスできます。 次に例を示します。  

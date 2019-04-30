@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.IncompatibleExistingTransportManager
 ms.date: 03/30/2017
 ms.assetid: 5366ec64-e8ef-4a34-a2f6-7251d89f1be9
 ms.openlocfilehash: f2a7c094dc151ef4eff5ef5703f651dc42f29476
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192070"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961891"
 ---
 # <a name="systemservicemodelchannelsincompatibleexistingtransportmanager"></a>System.ServiceModel.Channels.IncompatibleExistingTransportManager
 指定された URI に既存の互換性のないトランスポート マネージャーが見つかりました。  

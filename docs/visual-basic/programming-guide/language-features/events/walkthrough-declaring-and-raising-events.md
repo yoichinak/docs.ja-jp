@@ -10,11 +10,11 @@ helpviewer_keywords:
 - raising events [Visual Basic], walkthroughs
 ms.assetid: 8ffb3be8-097d-4d3c-b71e-04555ebda2a2
 ms.openlocfilehash: cab6c90947eae8abeb9387535eadb2f89e71454a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320692"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973091"
 ---
 # <a name="walkthrough-declaring-and-raising-events-visual-basic"></a>チュートリアル: 宣言と発生イベント (Visual Basic)
 このチュートリアルを宣言してという名前のクラスのイベントを発生させる方法について説明`Widget`します。 手順を完了した後可能性がある、関連トピック[チュートリアル。イベントの処理](../../../../visual-basic/programming-guide/language-features/events/walkthrough-handling-events.md)からのイベントを使用する方法を示す`Widget`アプリケーションで状態情報を提供するオブジェクト。  
@@ -44,7 +44,7 @@ ms.locfileid: "59320692"
   
 #### <a name="to-declare-an-event-for-the-widget-class"></a>ウィジェットのクラスのイベントを宣言するには  
   
--   使用して、`Event`でイベントを宣言するキーワード、`Widget`クラス。 イベントことがあります`ByVal`と`ByRef`、引数として`Widget`の`PercentDone`イベントを示します。  
+- 使用して、`Event`でイベントを宣言するキーワード、`Widget`クラス。 イベントことがあります`ByVal`と`ByRef`、引数として`Widget`の`PercentDone`イベントを示します。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#1](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Widget.vb#1)]  
   

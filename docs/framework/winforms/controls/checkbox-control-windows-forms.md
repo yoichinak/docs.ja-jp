@@ -10,15 +10,14 @@ helpviewer_keywords:
 - check boxes
 ms.assetid: 0719d798-c307-40d3-9040-72a62679c227
 ms.openlocfilehash: 207f8f884e8382614bf7d6cbc4a628d98fb3542b
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57711293"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956326"
 ---
 # <a name="checkbox-control-windows-forms"></a>CheckBox コントロール (Windows フォーム)
-Windows フォーム `CheckBox` コントロールは、特定の条件がオンかオフかを示します。 一般的に、はい/いいえ、または True/False の選択肢をユーザーに提示するために使用されます。 ユーザーが 1 つ以上選択可能な複数の選択肢を表示するために、チェック ボックス コントロールをグループの中で使用できます。 
-  <xref:System.Windows.Forms.RadioButton> コントロールに似ていますが、任意の数のグループ化された `CheckBox` コントロールを選択することができます。  
+Windows フォーム `CheckBox` コントロールは、特定の条件がオンかオフかを示します。 一般的に、はい/いいえ、または True/False の選択肢をユーザーに提示するために使用されます。 ユーザーが 1 つ以上選択可能な複数の選択肢を表示するために、チェック ボックス コントロールをグループの中で使用できます。 <xref:System.Windows.Forms.RadioButton> コントロールに似ていますが、任意の数のグループ化された `CheckBox` コントロールを選択することができます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CheckBox コントロールの概要](checkbox-control-overview-windows-forms.md)  

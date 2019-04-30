@@ -12,11 +12,11 @@ helpviewer_keywords:
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
 ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57715998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61960941"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>アルファ ブレンドの直線と塗りつぶし
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]色はそれぞれ 8 ビットでアルファ、赤、緑、および青の 32 ビット値。 アルファ値を色の透明度を示します: 範囲を色が背景色とブレンドされます。 アルファ値の範囲は 0 ~ 255、0 が完全に透明色を表します、255 は、完全に不透明な色を表します。  

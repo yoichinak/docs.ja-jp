@@ -3,11 +3,11 @@ title: 発行済みトークンを使用したメッセージ セキュリティ
 ms.date: 03/30/2017
 ms.assetid: 731fc871-54d0-4689-90fd-1c9415c45621
 ms.openlocfilehash: 3c2669a4f569d26be15fc7b338f7b01c3e94791c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59195099"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61950294"
 ---
 # <a name="message-security-with-issued-tokens"></a>発行済みトークンを使用したメッセージ セキュリティ
 発行済みトークン クライアントは、フェデレーション セキュリティ シナリオでは、Windows Communication Foundation (WCF) を使用できます。  

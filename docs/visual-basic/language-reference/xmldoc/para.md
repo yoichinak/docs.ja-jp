@@ -6,11 +6,11 @@ helpviewer_keywords:
 - para XML tag
 ms.assetid: a3a18b6c-6416-4358-94ec-37b22675fd37
 ms.openlocfilehash: 16d10b2f955a4d9a02075ee4cc40dfa2b18c3541
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58814511"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940873"
 ---
 # <a name="para-visual-basic"></a>\<para > (Visual Basic)
 コンテンツが文章としてフォーマットされているを指定します。  

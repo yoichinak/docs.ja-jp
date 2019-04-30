@@ -7,11 +7,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: b66057a6-5983-4864-b4e7-8cbc88a7010c
 ms.openlocfilehash: daac7dca27ac5dca8df4db24c9a3e22dae831377
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59231475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948006"
 ---
 # <a name="using-the-designer-with-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールでのデザイナーの使用
 Visual Studio のデザイナー サポートを提供する、`DataGridView`制御コードを記述することがなく多くのセットアップ タスクを実行することができます。 これらのタスクには、データを表示する列の変更、データ ソースにコントロールが使用されるバインディングと、コントロールの基本的な動作と外観を調整することが含まれます。  

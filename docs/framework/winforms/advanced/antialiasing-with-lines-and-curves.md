@@ -10,11 +10,11 @@ helpviewer_keywords:
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
 ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59078499"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961102"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>直線と曲線のアンチエイリアシング
 使用すると[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]直線を描画する開始点と、直線の終了点を提供するが、行の個々 のピクセルについての情報を提供する必要はありません。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 特定のディスプレイ デバイスに、行を表示するにどのピクセルはオンにする、ディスプレイ ドライバー ソフトウェアと連携して動作します。  

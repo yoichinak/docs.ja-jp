@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30043
 ms.assetid: 7973aa82-a681-440c-9bca-242627d7ba86
 ms.openlocfilehash: 5ff82b932f9bea4c7fd087651e34277ef94bc27c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58820719"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946641"
 ---
 # <a name="keyword-is-valid-only-within-an-instance-method"></a>'\<keyword>' は、インスタンス メソッド内でのみ有効です。
 `Me`、 `MyClass`、および`MyBase`キーワードは、特定のクラスのインスタンスを参照してください。 共有内で使用することはできません`Function`または`Sub`プロシージャ。  
@@ -21,7 +21,7 @@ ms.locfileid: "58820719"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   プロシージャからキーワードを削除または削除、`Shared`プロシージャ宣言からキーワード。  
+- プロシージャからキーワードを削除または削除、`Shared`プロシージャ宣言からキーワード。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 60d225d9794d5c15b0cd8e42800ccad4d7872756
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904794"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967822"
 ---
 # <a name="serverless-architecture"></a>サーバーレス アーキテクチャ
 
@@ -19,7 +19,7 @@ ms.locfileid: "55904794"
 
 ![Azure Functions のアーキテクチャ](./media/azure-functions-architecture.png)
 
-WebJobs Core では、関数の実行コンテキストを提供します。 言語ランタイムは、スクリプトを実行、ライブラリを実行し、対象言語のフレームワークをホストします。 たとえば、Node.js は JavaScript 関数を実行するために使用し、C# 関数の実行に .NET Framework を使用します。 この章の言語とプラットフォームのオプションについて説明します。
+WebJobs Core では、関数の実行コンテキストを提供します。 言語ランタイムは、スクリプトを実行、ライブラリを実行し、対象言語のフレームワークをホストします。 たとえば、Node.js は JavaScript 関数を実行するために使用し、c# 関数の実行に .NET Framework を使用します。 この章の言語とプラットフォームのオプションについて説明します。
 
 サーバーレスにする「オールインワン」アプローチを取るいくつかのプロジェクトが挙げられます。 マイクロ サービスに大きく依存するアプリケーションは、サーバーレス テクノロジを使用してすべてのマイクロ サービスを実装することができます。 ほとんどのアプリがハイブリッド、次の N 層デザインをおよび使用してサーバーレス コンポーネントが高まり、個別に拡張可能であるために、意味のあるコンポーネントの。 これらのシナリオを理解するには、このセクションはサーバーレスを使用する一般的なアーキテクチャ例を説明します。
 

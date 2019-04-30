@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list boxes [Windows Forms], about list boxes
 ms.assetid: e6cff3ce-e2ba-458e-851f-299e8e9c8abf
 ms.openlocfilehash: 8ff23ff449bc3b90fbd51bab1d73f8a7268bee05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229057"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956365"
 ---
 # <a name="checkedlistbox-control-overview-windows-forms"></a>CheckedListBox コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.CheckedListBox>コントロールは、<xref:System.Windows.Forms.ListBox>コントロール。 これは、ほぼすべてをリスト ボックスは、一覧の項目の横にチェック マークを表示できます。 2 つのコントロール間の相違点は、リスト ボックスのサポートのみをチェックする<xref:System.Windows.Forms.DrawMode.Normal?displayProperty=nameWithType>; リスト ボックスは、1 つの項目を持つことができますのみまたは選択されていない状態をチェックするとします。 選択した項目がフォーム上で強調表示されます、チェックされている項目と同じことに注意してください。  

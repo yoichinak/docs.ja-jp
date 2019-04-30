@@ -7,20 +7,20 @@ helpviewer_keywords:
 - Windows Forms controls, grouping
 ms.assetid: 0bda316d-bd2a-43aa-ac73-342453303169
 ms.openlocfilehash: d2bad0020d18cd262bc2fe3489a00209308bd7b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335876"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941324"
 ---
 # <a name="how-to-group-controls-with-the-windows-forms-groupbox-control"></a>方法: Windows フォーム GroupBox コントロールを使用してコントロールをグループ化する
 Windows フォーム<xref:System.Windows.Forms.GroupBox>コントロールを使用すると、その他のコントロールをグループ化します。 コントロールをグループ化の 3 つの理由があります。  
   
--   わかりやすいユーザー インターフェイスに関連するフォーム要素の視覚的にグループ化を作成します。  
+- わかりやすいユーザー インターフェイスに関連するフォーム要素の視覚的にグループ化を作成します。  
   
--   (たとえばのラジオ ボタン) のプログラムによるグループ化を作成します。  
+- (たとえばのラジオ ボタン) のプログラムによるグループ化を作成します。  
   
--   デザイン時に単位として、コントロールを移動します。  
+- デザイン時に単位として、コントロールを移動します。  
   
 ### <a name="to-create-a-group-of-controls"></a>コントロールのグループを作成するには  
   

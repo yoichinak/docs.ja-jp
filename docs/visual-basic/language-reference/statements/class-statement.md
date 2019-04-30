@@ -14,11 +14,11 @@ helpviewer_keywords:
 - data members [Visual Basic], of classes
 ms.assetid: f2664f38-eb5a-4d4b-a374-1d041521fb6c
 ms.openlocfilehash: 68401571645d77a41b827c13b3cfc3674076e218
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824573"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945042"
 ---
 # <a name="class-statement-visual-basic"></a>Class ステートメント (Visual Basic)
 クラスの名前を宣言し、変数、プロパティ、イベント、およびクラスを構成するプロシージャの定義を紹介します。  
@@ -65,23 +65,23 @@ End Class
   
 ## <a name="rules"></a>ルール  
   
--   **入れ子にします。** 別の 1 つのクラスを定義できます。 外側のクラス、*クラスを含む*、内部クラスを呼び出すと、*入れ子になったクラス*します。  
+- **入れ子にします。** 別の 1 つのクラスを定義できます。 外側のクラス、*クラスを含む*、内部クラスを呼び出すと、*入れ子になったクラス*します。  
   
--   **継承。** クラスを使用している場合、 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)、基底クラスまたはインターフェイスの 1 つだけ指定できます。 クラスは、1 つ以上の要素から継承できません。  
+- **継承。** クラスを使用している場合、 [Inherits Statement](../../../visual-basic/language-reference/statements/inherits-statement.md)、基底クラスまたはインターフェイスの 1 つだけ指定できます。 クラスは、1 つ以上の要素から継承できません。  
   
      クラスより制限の厳しいアクセス レベルを持つ別のクラスから継承できません。 たとえば、`Public`クラスから継承できません、`Friend`クラス。  
   
      クラスは、その中に入れ子になったクラスから継承できません。  
   
--   **実装です。** クラスを使用している場合、 [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)で指定したすべてのインターフェイスで定義されたすべてのメンバーを実装する必要があります`interfacenames`します。 この例外は、基底クラスのメンバーの再実装です。 詳細については、「再実装」を参照してください[実装](../../../visual-basic/language-reference/statements/implements-clause.md)します。  
+- **実装です。** クラスを使用している場合、 [Implements ステートメント](../../../visual-basic/language-reference/statements/implements-statement.md)で指定したすべてのインターフェイスで定義されたすべてのメンバーを実装する必要があります`interfacenames`します。 この例外は、基底クラスのメンバーの再実装です。 詳細については、「再実装」を参照してください[実装](../../../visual-basic/language-reference/statements/implements-clause.md)します。  
   
--   **既定のプロパティ。** クラスとして最大で 1 つのプロパティを指定できます、*プロパティの既定*します。 詳細については、次を参照してください。[既定](../../../visual-basic/language-reference/modifiers/default.md)します。  
+- **既定のプロパティ。** クラスとして最大で 1 つのプロパティを指定できます、*プロパティの既定*します。 詳細については、次を参照してください。[既定](../../../visual-basic/language-reference/modifiers/default.md)します。  
   
 ## <a name="behavior"></a>動作  
   
--   **アクセス レベルです。** クラス内には、各メンバーを独自のアクセス レベルを宣言できます。 クラス メンバーは既定[パブリック](../../../visual-basic/language-reference/modifiers/public.md)変数および定数を除く、既定のアクセス[プライベート](../../../visual-basic/language-reference/modifiers/private.md)アクセスします。 クラスがそのメンバーの 1 つ以上のアクセスが制限されてよりときに、クラスのアクセス レベルが優先されます。  
+- **アクセス レベルです。** クラス内には、各メンバーを独自のアクセス レベルを宣言できます。 クラス メンバーは既定[パブリック](../../../visual-basic/language-reference/modifiers/public.md)変数および定数を除く、既定のアクセス[プライベート](../../../visual-basic/language-reference/modifiers/private.md)アクセスします。 クラスがそのメンバーの 1 つ以上のアクセスが制限されてよりときに、クラスのアクセス レベルが優先されます。  
   
--   **スコープ。** クラスは、その親名前空間、クラス、構造体、またはモジュール全体にわたってスコープ内で。  
+- **スコープ。** クラスは、その親名前空間、クラス、構造体、またはモジュール全体にわたってスコープ内で。  
   
      すべてのクラス メンバーのスコープは、クラス全体です。  
   
@@ -89,18 +89,18 @@ End Class
   
      クラスのメンバーでは、によって宣言されている方法と場所の有効期間があります。 詳細については、次を参照してください。 [Visual Basic での有効期間](../../../visual-basic/programming-guide/language-features/declared-elements/lifetime.md)します。  
   
--   **パス名です。** クラスの外部のコードでは、そのクラスの名前を持つメンバーの名前を修飾する必要があります。  
+- **パス名です。** クラスの外部のコードでは、そのクラスの名前を持つメンバーの名前を修飾する必要があります。  
   
      入れ子になったクラス内でコードがプログラミング要素に参照を修飾されていない場合、Visual Basic 要素を検索、最初に、含まれるクラスにし、入れ子になったクラスでこれ外側のコンテナー要素にします。  
   
 ## <a name="classes-and-modules"></a>クラスとモジュール  
  これらの要素がある多くの類似点がいくつかの重要な違いがあります。  
   
--   **用語集。** Visual Basic の以前のバージョンは 2 種類のモジュールを認識:*クラス モジュール*(.cls ファイル) と*標準モジュール*(.bas ファイル)。 現在のバージョンを呼び出す*クラス*と*モジュール*、それぞれします。  
+- **用語集。** Visual Basic の以前のバージョンは 2 種類のモジュールを認識:*クラス モジュール*(.cls ファイル) と*標準モジュール*(.bas ファイル)。 現在のバージョンを呼び出す*クラス*と*モジュール*、それぞれします。  
   
--   **共有メンバー。** クラスのメンバーは、共有するかどうか、またはインスタンス メンバーを制御できます。  
+- **共有メンバー。** クラスのメンバーは、共有するかどうか、またはインスタンス メンバーを制御できます。  
   
--   **オブジェクト指向です。** クラスは、オブジェクト指向ですが、モジュールがないです。 クラスの 1 つまたは複数のインスタンスを作成することができます。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)します。  
+- **オブジェクト指向です。** クラスは、オブジェクト指向ですが、モジュールがないです。 クラスの 1 つまたは複数のインスタンスを作成することができます。 詳細については、次を参照してください。[オブジェクトとクラス](../../../visual-basic/programming-guide/language-features/objects-and-classes/index.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、`Class`クラスといくつかのメンバーを定義するステートメント。  

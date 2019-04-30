@@ -5,11 +5,11 @@ helpviewer_keywords:
 - Next method [WPF]
 ms.assetid: 3698b44d-510e-4d18-b32b-85f17188ee26
 ms.openlocfilehash: 05867af48b64cd1898b13fa055859c8cc0367c8c
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949579"
 ---
 # <a name="ienumrawinputdevicnext"></a>IEnumRAWINPUTDEVIC:Next
 次の列挙`celt` [RAWINPUTDEVICE](/windows/desktop/api/winuser/ns-winuser-rawinputdevice)構造体、列挙子の一覧で、それらを返す`rgelt`で列挙された要素の実際の数とともに`pceltFetched`します。  
@@ -34,7 +34,7 @@ HRESULT Next(
   
  `pceltFetched`  
   
- [out] `rgelt` に実際に指定された要素の数へのポインター。 `rgelt` が 1 の場合、呼び出し元は `NULL` に渡すことができます。  
+ [out] `rgelt` に実際に指定された要素の数へのポインター。 `NULL` が 1 の場合、呼び出し元は `rgelt` に渡すことができます。  
   
 ## <a name="property-valuereturn-value"></a>プロパティ値/戻り値  
  HRESULT:指定された要素の数は場合は S_OK `celt`;それ以外の場合は S_FALSE。

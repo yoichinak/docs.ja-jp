@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Font dialog box [Windows Forms], Windows Forms
 ms.assetid: 54015df3-aab2-4338-84e5-ba78cedbfdfc
 ms.openlocfilehash: de3a6b8f59d5ae83d55ea408f70d54d37761f693
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57707561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971354"
 ---
 # <a name="fontdialog-component-windows-forms"></a>FontDialog コンポーネント (Windows フォーム)
 Windows フォームの <xref:System.Windows.Forms.FontDialog> コンポーネントは、事前構成済みのダイアログ ボックスです。 これは同じ**フォント** ダイアログ ボックスが、Windows オペレーティング システムによって公開されています。 コンポーネントが継承、<xref:System.Windows.Forms.CommonDialog>クラス。  
@@ -25,8 +25,7 @@ Windows フォームの <xref:System.Windows.Forms.FontDialog> コンポーネ�
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.FontDialog>  
- 
-  <xref:System.Windows.Forms.FontDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
+ <xref:System.Windows.Forms.FontDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
 ## <a name="related-sections"></a>関連項目  
  [ダイアログ ボックス コントロールおよびコンポーネント](dialog-box-controls-and-components-windows-forms.md)  

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - service contracts [WCF], reliable services
 ms.assetid: 07814ed0-0775-47f2-987b-d8134fdd5099
 ms.openlocfilehash: a617100e46d4bcafb9325efa99c255f2f8ee5981
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216770"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955169"
 ---
 # <a name="reliable-services"></a>信頼できるサービス
 キューと信頼できるセッションは、信頼できるメッセージングを実装する Windows Communication Foundation (WCF) 機能を示します。 このトピックでは、WCF の信頼できるメッセージング機能について説明します。  
@@ -22,15 +22,15 @@ ms.locfileid: "59216770"
   
  信頼できるメッセージングは、次の機能を実行します。  
   
--   メッセージ転送エラーまたはトランスポート エラーに関係なく、送信元から送信先に送られるメッセージの転送が保証されること。  
+- メッセージ転送エラーまたはトランスポート エラーに関係なく、送信元から送信先に送られるメッセージの転送が保証されること。  
   
--   送信元と送信先を互いに分離すること。 これにより、送信元または送信先が利用できない場合でも、送信元と送信先でのそれぞれ独立したエラーと回復が可能になると共に、信頼できるメッセージの転送と配信が実現されます。  
+- 送信元と送信先を互いに分離すること。 これにより、送信元または送信先が利用できない場合でも、送信元と送信先でのそれぞれ独立したエラーと回復が可能になると共に、信頼できるメッセージの転送と配信が実現されます。  
   
  信頼できるメッセージングを実現すると、待ち時間が長くなることがよくあります。 *待機時間*は、メッセージ ソースから宛先に到達するためにかかる時間です。 WCF では、そのため、次の種類の信頼できるメッセージングを提供します。  
   
--   [信頼できるセッション](../../../docs/framework/wcf/feature-details/reliable-sessions.md)、高待機時間のコストをかけずに、信頼できる転送を提供しています。  
+- [信頼できるセッション](../../../docs/framework/wcf/feature-details/reliable-sessions.md)、高待機時間のコストをかけずに、信頼できる転送を提供しています。  
   
--   [WCF のキュー](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)、信頼できる転送と、ソースとターゲット間の分離の両方を提供しています。  
+- [WCF のキュー](../../../docs/framework/wcf/feature-details/queues-in-wcf.md)、信頼できる転送と、ソースとターゲット間の分離の両方を提供しています。  
   
 ## <a name="reliable-sessions"></a>信頼できるセッション  
  信頼できるセッションでは、メッセージング (送信元および送信先) エンドポイントを分離する中継局の数や種類に関係なく、WS-ReliableMessaging プロトコルを使用して、送信元から送信先へのエンドツーエンドの信頼できるメッセージ転送を実現します。 これには SOAP を使用しないトランスポート手段 (HTTP プロキシなど)、またはエンドポイント間でメッセージをやりとりする場合に必要となる SOAP を使用する手段 (SOAP ベースのルーターやブリッジなど) が含まれます。 信頼できるセッションでは、メモリ内転送ウィンドウを使用して、トランスポート エラーが発生した場合に SOAP メッセージ レベル エラーをマスクし、接続を再確立します。  

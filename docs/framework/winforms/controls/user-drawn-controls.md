@@ -10,20 +10,20 @@ helpviewer_keywords:
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
 ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59158445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947954"
 ---
 # <a name="user-drawn-controls"></a>ユーザー描画コントロール
 .NET Framework では、独自のコントロールを簡単に開発する機能を提供します。 コードによって結合されて標準のコントロールのセットである、ユーザー コントロールを作成することもをゼロから独自のコントロールをデザインすることができます。 既存のコントロールから継承するコントロールを作成し、本来の機能を追加する継承を使用することもできます。 どのようなアプローチを使用すると、.NET Framework は、任意のコントロールを作成するためのカスタムのグラフィカル インターフェイスを描画するために機能を提供します。  
   
  コントロールの描画には、コントロールのコードの実行、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッド。 1 つの引数、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドは、<xref:System.Windows.Forms.PaintEventArgs>すべての情報と、コントロールのレンダリングに必要な機能を提供するオブジェクト。 <xref:System.Windows.Forms.PaintEventArgs>プロパティとして、コントロールの描画に使用される 2 つのプリンシパル オブジェクトを提供します。  
   
--   <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> オブジェクトの描画されるコントロールの一部を表す四角形。 これには、全体をコントロール、またはコントロールの描画方法に応じたコントロールの一部です。  
+- <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> オブジェクトの描画されるコントロールの一部を表す四角形。 これには、全体をコントロール、またはコントロールの描画方法に応じたコントロールの一部です。  
   
--   <xref:System.Drawing.Graphics> オブジェクト - いくつかのグラフィック指向オブジェクトとコントロールを描画するために必要な機能を提供するメソッドをカプセル化します。  
+- <xref:System.Drawing.Graphics> オブジェクト - いくつかのグラフィック指向オブジェクトとコントロールを描画するために必要な機能を提供するメソッドをカプセル化します。  
   
  詳細については、<xref:System.Drawing.Graphics>オブジェクトとそれを使用して、参照してください方法[方法。描画の Graphics オブジェクトを作成](../advanced/how-to-create-graphics-objects-for-drawing.md)です。  
   

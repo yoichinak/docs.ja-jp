@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <paramref> XML tag
 ms.assetid: 8979d53b-beb1-41b7-b41e-6bbea1c17a03
 ms.openlocfilehash: 3e2bf7990343a325bbecc56f6d3754a77f1e08e2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940843"
 ---
 # <a name="paramref-visual-basic"></a>\<paramref > (Visual Basic)
 単語をパラメーターとして書式設定します。  

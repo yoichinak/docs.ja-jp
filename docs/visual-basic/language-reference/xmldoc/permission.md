@@ -6,11 +6,11 @@ helpviewer_keywords:
 - permission XML tag
 ms.assetid: 0edf0500-5cd7-49c0-9255-64c48f972b77
 ms.openlocfilehash: 7333d4a4d051c157f6732224da0fffe4d7cd35ee
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827667"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940830"
 ---
 # <a name="permission-visual-basic"></a>\<アクセス許可 > (Visual Basic)
 メンバーの必要なアクセス許可を指定します。  

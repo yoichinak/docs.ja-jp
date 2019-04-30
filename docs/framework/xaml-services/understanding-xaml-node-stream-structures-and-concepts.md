@@ -7,11 +7,11 @@ helpviewer_keywords:
 - XAML [XAML Services], XAML node streams
 ms.assetid: 7c11abec-1075-474c-9d9b-778e5dab21c3
 ms.openlocfilehash: babf98b7dd30cd60e72e310ae8ba8c9a42d9125f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824430"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954090"
 ---
 # <a name="understanding-xaml-node-stream-structures-and-concepts"></a>XAML ノード ストリームの構造と概念について
 
@@ -45,13 +45,13 @@ XAML ノード ストリームを検査するための基本的な読み取り�
 
 - どの <xref:System.Xaml.XamlNodeType> が現在のノードまたは現在のレコードとして報告されているかに基づいて、次のいずれかを呼び出して、ノードのコンテンツに関する情報を取得します。
 
-    - <xref:System.Xaml.XamlXmlReader.NodeType%2A> または <xref:System.Xaml.XamlNodeType.StartMember> の <xref:System.Xaml.XamlNodeType.EndMember>の場合、 <xref:System.Xaml.XamlXmlReader.Member%2A> を呼び出して、メンバーに関する <xref:System.Xaml.XamlMember> の情報を取得します。 メンバーは <xref:System.Xaml.XamlDirective>である可能性があるため、必ずしも前のオブジェクトの従来の型が定義されたメンバーでない可能性があることに注意してください。 たとえば、オブジェクトに適用された `x:Name` は XAML メンバーとして表示されます。ここで、 <xref:System.Xaml.XamlMember.IsDirective%2A> は true、メンバーの <xref:System.Xaml.XamlMember.Name%2A> は `Name`で、このディレクティブが XAML 言語の XAML 名前空間の下にあることを示すその他のプロパティがあります。
+  - <xref:System.Xaml.XamlXmlReader.NodeType%2A> または <xref:System.Xaml.XamlNodeType.StartMember> の <xref:System.Xaml.XamlNodeType.EndMember>の場合、 <xref:System.Xaml.XamlXmlReader.Member%2A> を呼び出して、メンバーに関する <xref:System.Xaml.XamlMember> の情報を取得します。 メンバーは <xref:System.Xaml.XamlDirective>である可能性があるため、必ずしも前のオブジェクトの従来の型が定義されたメンバーでない可能性があることに注意してください。 たとえば、オブジェクトに適用された `x:Name` は XAML メンバーとして表示されます。ここで、 <xref:System.Xaml.XamlMember.IsDirective%2A> は true、メンバーの <xref:System.Xaml.XamlMember.Name%2A> は `Name`で、このディレクティブが XAML 言語の XAML 名前空間の下にあることを示すその他のプロパティがあります。
 
-    - <xref:System.Xaml.XamlXmlReader.NodeType%2A> または <xref:System.Xaml.XamlNodeType.StartObject> の <xref:System.Xaml.XamlNodeType.EndObject>の場合は、 <xref:System.Xaml.XamlXmlReader.Type%2A> を呼び出して、オブジェクトに関する <xref:System.Xaml.XamlType> の情報を取得します。
+  - <xref:System.Xaml.XamlXmlReader.NodeType%2A> または <xref:System.Xaml.XamlNodeType.StartObject> の <xref:System.Xaml.XamlNodeType.EndObject>の場合は、 <xref:System.Xaml.XamlXmlReader.Type%2A> を呼び出して、オブジェクトに関する <xref:System.Xaml.XamlType> の情報を取得します。
 
-    - <xref:System.Xaml.XamlXmlReader.NodeType%2A> の <xref:System.Xaml.XamlNodeType.Value>で、 <xref:System.Xaml.XamlXmlReader.Value%2A>を呼び出します。 ノードがメンバーの最も単純な表現である場合、またはオブジェクトの初期化のテキストである場合のみ、ノードは値になります (ただし、このトピックの以下のセクションに記載する型変換の動作に注意する必要があります)。
+  - <xref:System.Xaml.XamlXmlReader.NodeType%2A> の <xref:System.Xaml.XamlNodeType.Value>で、 <xref:System.Xaml.XamlXmlReader.Value%2A>を呼び出します。 ノードがメンバーの最も単純な表現である場合、またはオブジェクトの初期化のテキストである場合のみ、ノードは値になります (ただし、このトピックの以下のセクションに記載する型変換の動作に注意する必要があります)。
 
-    - <xref:System.Xaml.XamlXmlReader.NodeType%2A> の <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>の場合は、 <xref:System.Xaml.XamlXmlReader.Namespace%2A> を呼び出して、名前空間ノードの名前空間情報を取得します。
+  - <xref:System.Xaml.XamlXmlReader.NodeType%2A> の <xref:System.Xaml.XamlNodeType.NamespaceDeclaration>の場合は、 <xref:System.Xaml.XamlXmlReader.Namespace%2A> を呼び出して、名前空間ノードの名前空間情報を取得します。
 
 - <xref:System.Xaml.XamlXmlReader.Read%2A> を呼び出して、XAML リーダーを XAML ノード ストリームの次のノードに進め、手順を繰り返します。
 
@@ -140,15 +140,15 @@ XAML ノード ストリームでは、次の動作に依存することがで�
 
 - `Value` ノードは値自体を表します。 "EndValue" はありません。 後には `EndMember`のみが続きます。
 
-    - 構築で使用される可能性があるオブジェクトの XAML 初期化テキストは、オブジェクト - 値構造の結果にはなりません。 代わりに、 `_Initialization` という名前のメンバーの専用のメンバー ノードが作成されます。 そのメンバー ノードには、初期化値の文字列が含まれています。 存在する場合は、 `_Initialization` が常に最初の `StartMember`になります。 一部の XAML サービス表記では、`_Initialization` が XAML 言語の XAML 名前スコープで修飾して、 `_Initialization` がバッキング タイプで定義されたプロパティでないことを明確にすることがあります。
+  - 構築で使用される可能性があるオブジェクトの XAML 初期化テキストは、オブジェクト - 値構造の結果にはなりません。 代わりに、 `_Initialization` という名前のメンバーの専用のメンバー ノードが作成されます。 そのメンバー ノードには、初期化値の文字列が含まれています。 存在する場合は、 `_Initialization` が常に最初の `StartMember`になります。 一部の XAML サービス表記では、`_Initialization` が XAML 言語の XAML 名前スコープで修飾して、 `_Initialization` がバッキング タイプで定義されたプロパティでないことを明確にすることがあります。
 
-    - メンバーと値の組み合わせは、値の属性設定を表します。 結局、この値の処理に関係する値コンバーターが使用されることがあり、値はプレーン文字列になります。 ただし、これは XAML オブジェクト ライターがこのノード ストリームを処理するまで評価されません。 XAML オブジェクト ライターには、必要な XAML スキーマ コンテキスト、型システムのマッピング、および値の変換に必要なその他のサポートが用意されています。
+  - メンバーと値の組み合わせは、値の属性設定を表します。 結局、この値の処理に関係する値コンバーターが使用されることがあり、値はプレーン文字列になります。 ただし、これは XAML オブジェクト ライターがこのノード ストリームを処理するまで評価されません。 XAML オブジェクト ライターには、必要な XAML スキーマ コンテキスト、型システムのマッピング、および値の変換に必要なその他のサポートが用意されています。
 
 - `EndMember` ノードの後には、後続のメンバーとして `StartMember` ノード、またはメンバーの所有者として `EndObject` ノードが続きます。
 
 - `EndObject` ノードの後には、 `EndMember` ノードが続きます。 さらに、オブジェクトがコレクション アイテムのピアである場合は、 `StartObject` ノードが後に続くこともあります。 または、 `Namespace` ノードが後に続きます。このノードは今後の `StartObject`に適用されます。
 
-    - ノード ストリーム全体を閉じるという独特なケースでは、ルートの `EndObject` の後には何も続きません。リーダーはファイルの終わりになり、 <xref:System.Xaml.XamlReader.Read%2A> は `false`を返します。
+  - ノード ストリーム全体を閉じるという独特なケースでは、ルートの `EndObject` の後には何も続きません。リーダーはファイルの終わりになり、 <xref:System.Xaml.XamlReader.Read%2A> は `false`を返します。
 
 <a name="value_converters_and_the_xaml_node_stream"></a>
 

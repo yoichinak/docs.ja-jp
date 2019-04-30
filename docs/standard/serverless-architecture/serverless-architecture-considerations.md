@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53155065"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940947"
 ---
 # <a name="serverless-architecture-considerations"></a>サーバーレス アーキテクチャの考慮事項
 
@@ -53,7 +53,7 @@ ms.locfileid: "53155065"
 
 一連の変更により、レガシ コードが引き続き新しいサーバーレス関数を利用して、新しいフィールドの中に、「現状有姿を実行します。
 
-サーバーレス アーキテクチャでデータの詳細については、[に関する課題とソリューションの分散データ管理](../microservices-architecture/architect-microservice-container-applications/distributed-data-management.md)を参照してください。
+サーバーレス アーキテクチャでデータの詳細については、次を参照してください。[に関する課題とソリューションの分散データ管理](../microservices-architecture/architect-microservice-container-applications/distributed-data-management.md)します。
 
 ## <a name="scaling"></a>スケーリング
 
@@ -75,7 +75,7 @@ DevOps の見落とされがちな側面には、1 回配置されたアプリ�
 
 サーキット ブレーカー パターンを続行するには、サービスはフォールト トレラントであり、回復力のあるを使用する必要があります。 フォールト トレランスは予期しない例外発生後も実行を継続するアプリケーションの機能、または無効な状態が発生しました。 フォールト トレランスは、通常、コード自体の関数と、例外を処理するために記述する方法。 回復性の障害から回復できる能力のアプリが指しています。 回復性は、多くの場合、サーバーレス プラットフォームによって管理されます。 プラットフォームは、既存のものが失敗したときに、新しいサーバーレスの関数インスタンスを起動できる必要があります。 プラットフォームは、インテリジェントなすべての新しいインスタンスが失敗したときに、新しいインスタンスをスピンアップを停止する必要があります。
 
-詳細については、[サーキット ブレーカー パターンを実装する](../microservices-architecture/implement-resilient-applications/implement-circuit-breaker-pattern.md)を参照してください。
+詳細については、次を参照してください。[サーキット ブレーカー パターンを実装する](../microservices-architecture/implement-resilient-applications/implement-circuit-breaker-pattern.md)します。
 
 ## <a name="versioning-and-greenblue-deployments"></a>バージョン管理、および緑/青の展開
 
