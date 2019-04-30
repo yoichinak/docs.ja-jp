@@ -7,11 +7,11 @@ helpviewer_keywords:
 - detecting WPF presence [WPF]
 ms.assetid: 7f71d652-1749-4379-945a-aa2e3994cb43
 ms.openlocfilehash: 27f856b895f48dc2365a1721dbc90294269899c7
-ms.sourcegitcommit: 3c1c3ba79895335ff3737934e39372555ca7d6d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2018
-ms.locfileid: "43746381"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947824"
 ---
 # <a name="how-to-detect-whether-the-net-framework-30-is-installed"></a>方法: .NET Framework 3.0 がインストールされているかどうかを確認する
 管理者がシステム上の Microsoft .NET Framework アプリケーションを展開できる前にまず、.NET Framework ランタイムが存在するを確認する必要があります。 このトピックでは、HTML または JavaScript で記述されたスクリプトを提供します。 管理者は、.NET Framework が、システム上に存在するかどうかを使用できます。  

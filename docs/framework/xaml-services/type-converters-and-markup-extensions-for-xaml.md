@@ -1,4 +1,4 @@
-﻿---
+---
 title: XAML の型コンバーターおよびマークアップ拡張機能
 ms.date: 03/30/2017
 helpviewer_keywords:
@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XAML [XAML Services], service context
 ms.assetid: db07a952-05ce-4aa4-b6f9-aac7397d0326
 ms.openlocfilehash: e6f8ed3b893319e771eb0af96da7a58a7fad5c9b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200988"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954263"
 ---
 # <a name="type-converters-and-markup-extensions-for-xaml"></a>XAML の型コンバーターおよびマークアップ拡張機能
 型コンバーターとマークアップ拡張機能は、XAML 型システムと XAML ライターが、オブジェクト グラフ コンポーネントを生成するために使用する 2 つの手法です。 型コンバーターとマークアップ拡張機能は、一部の特性を共有しますが、XAML ノード ストリームでは異なる方法で表現されます。 このドキュメント セットでは、型コンバーター、マークアップ拡張機能、およびこれに類似したコンストラクトを、値コンバーターと総称することがあります。  
@@ -22,13 +22,13 @@ ms.locfileid: "59200988"
 ## <a name="value-converters"></a>値コンバーター  
  XAML では、さまざまなシナリオで値コンバーターが使用されます。 XAML におけるさまざまな種類の値コンバーターは次のとおりです。  
   
--   型コンバーター  
+- 型コンバーター  
   
--   マークアップ拡張機能  
+- マークアップ拡張機能  
   
--   値シリアライザー  
+- 値シリアライザー  
   
--   XAML テキスト構文のロジックを提供する関連クラスまたはサポート クラス  
+- XAML テキスト構文のロジックを提供する関連クラスまたはサポート クラス  
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>型コンバーター  
@@ -42,7 +42,7 @@ ms.locfileid: "59200988"
   
  マークアップ拡張機能は、単一のサポート サービス クラスに関連付けられますが、任意のメンバー値に適用できます。 (ただし、マークアップ拡張機能の実装では、サービス コンテキストを使用することにより、その用途を特定のメンバーまたは変換先の型に意図的に制限することもできます。)マークアップ拡張機能は、型コンバーターの関連付けをオーバーライドできます。 または、テキスト構文をサポートしないメンバーの属性値を指定するためにマークアップ拡張機能を使用することもできます。  
   
- XAML でのマークアップ拡張機能の実装パターンの詳細については、「 [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)」を参照してください。  
+ XAML でのマークアップ拡張機能の実装パターンの詳細については、「 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)」を参照してください。  
   
 > [!NOTE]
 >  <xref:System.Windows.Markup.MarkupExtension> 型と <xref:System.Windows.Markup.ValueSerializer> 型はどちらも、 <xref:System.Windows.Markup> 名前空間ではなく、 <xref:System.Xaml> 名前空間にあります。 これらの型がそれ以外の場合、文字列を含む CLR 名前空間を設定、WPF、または Windows フォームのいずれかのテクノロジに固有であるわけ`Windows`します。 <xref:System.Windows.Markup.MarkupExtension> と <xref:System.Windows.Markup.ValueSerializer> は System.Xaml アセンブリにあり、特定のフレームワークとの依存関係はありません。 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] では、これらの型は CLR 名前空間に存在し、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] でも引き続き CLR 名前空間に残っているので、既存の WPF プロジェクトの参照は破損しません。 詳細については、「 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)」を参照してください。  

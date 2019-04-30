@@ -8,11 +8,11 @@ helpviewer_keywords:
 - endpoints [WCF], addressing
 ms.assetid: ac24f5ad-9558-4298-b168-c473c68e819b
 ms.openlocfilehash: 4fe21bb5b91143dff4d0a9f24bbc39be5e529985
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097532"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967857"
 ---
 # <a name="specifying-an-endpoint-address"></a>エンドポイント アドレスの指定
 Windows Communication Foundation (WCF) サービスとすべての通信は、そのエンドポイントを介して行われます。 各 <xref:System.ServiceModel.Description.ServiceEndpoint> は、<xref:System.ServiceModel.Description.ServiceEndpoint.Address%2A>、<xref:System.ServiceModel.Description.ServiceEndpoint.Binding%2A>、および <xref:System.ServiceModel.Description.ServiceEndpoint.Contract%2A> で構成されます。 コントラクトでは、使用できる操作を指定します。 バインディングでは、サービスとの通信方法を指定し、アドレスでは、サービスの場所を指定します。 各エンドポイントには、一意のアドレスを設定する必要があります。 エンドポイント アドレスは、<xref:System.ServiceModel.EndpointAddress> クラスによって表します。このクラスは、サービスのアドレスを表す URI (Uniform Resource Identifier)、サービスのセキュリティ ID を表す <xref:System.ServiceModel.EndpointAddress.Identity%2A>、およびオプションの <xref:System.ServiceModel.EndpointAddress.Headers%2A> のコレクションで構成されます。 オプション ヘッダーは、エンドポイントの識別または対話のために、より詳細なアドレス指定情報を提供します。 たとえば、ヘッダーを使用して、受信メッセージの処理方法や、エンドポイントからの応答メッセージの送信先を指定できるほか、複数のサービス インスタンスが使用できる場合に、特定ユーザーからの受信メッセージの処理に使用するインスタンスを指定できます。  
@@ -22,13 +22,13 @@ Windows Communication Foundation (WCF) サービスとすべての通信は、�
   
  ほとんどのトランスポートの URI アドレスは、4 つの部分から構成されます。 たとえば、この URI、`http://www.fabrikam.com:322/mathservice.svc/secureEndpoint`は次の 4 つの部分があります。  
   
--   スキーム : http:  
+- スキーム : http:  
   
--   マシンの場合: `www.fabrikam.com`  
+- マシンの場合: `www.fabrikam.com`  
   
--   (省略可能)ポート:322  
+- (省略可能)ポート:322  
   
--   パス : /mathservice.svc/secureEndpoint  
+- パス : /mathservice.svc/secureEndpoint  
   
  EPR モデルの一部では、各エンドポイント参照は、追加の識別情報を追加する複数の参照パラメーターを伝達できます。 WCF では、これらの参照パラメーターがのインスタンスとしてモデル化、<xref:System.ServiceModel.Channels.AddressHeader>クラス。  
   

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30202
 ms.assetid: 6f75060c-2db4-4a79-b5d1-5780c09a74cd
 ms.openlocfilehash: 71a25784f357a7e596093b314ed5b3d721d6f92c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946589"
 ---
 # <a name="optional-expected"></a>'Optional' が必要です。
 プロシージャ宣言の省略可能な引数には、必須の引数が続きます。 次のオプションの引数すべての引数も省略可能な場合があります。  

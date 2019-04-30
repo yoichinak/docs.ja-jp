@@ -3,11 +3,11 @@ title: X.509 証明書検証
 ms.date: 03/30/2017
 ms.assetid: 3b042379-02c4-4395-b927-e57c842fd3e0
 ms.openlocfilehash: 88364aabf5df3a4f41d83613c0c4328b2d5979a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949917"
 ---
 # <a name="x509-certificate-validator"></a>X.509 証明書検証
 このサンプルでは、カスタム X.509 証明書検証を実装する方法を示します。 これは、アプリケーションの要件に適した組み込みの X.509 証明書検証モードがない場合に便利です。 このサンプルでは、自己発行の証明書を許可するカスタム検証を備えたサービスを示します。 クライアントはこのような証明書を使用して、このサービスに認証されます。
@@ -16,11 +16,11 @@ ms.locfileid: "59772155"
 
  このサンプルで示す処理の概要は次のとおりです。
 
--   クライアントは X.509 証明書を使用して認証される。
+- クライアントは X.509 証明書を使用して認証される。
 
--   サーバーはクライアント資格情報をカスタム X509Certificate 検証と照合する。
+- サーバーはクライアント資格情報をカスタム X509Certificate 検証と照合する。
 
--   サーバーがそのサーバーの X.509 証明書を使用して認証される。
+- サーバーがそのサーバーの X.509 証明書を使用して認証される。
 
  サービスは、そのサービスとの通信に使用する単一エンドポイントを公開します。エンドポイントは構成ファイル (App.config) で定義します。エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 標準的なバインディングが構成されている`wsHttpBinding`を既定では使用`WSSecurity`とクライアント証明書の認証。 サービス動作では、クライアントの X.509 証明書を検証するためのカスタム モード、および検証クラスの型を指定します。 さらに、serviceCertificate 要素を使用しているサーバー証明書も指定します。 サーバー証明書が同じ値を格納するが、`SubjectName`として、`findValue`で、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)します。
 
@@ -254,7 +254,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
 
  次に、バッチ ファイルのセクションのうち、該当する構成で実行するために変更が必要となる部分を示します。
 
--   サーバー証明書の作成 :
+- サーバー証明書の作成 :
 
      Setup.bat バッチ ファイルの次の行は、使用するサーバー証明書を作成します。 %SERVER_NAME% 変数はサーバー名を指定します。 この変数を変更して、使用するサーバー名を指定します。 既定値は、localhost です。
 
@@ -268,7 +268,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   サーバー証明書のクライアントの信頼された証明書ストアへのインストール。
+- サーバー証明書のクライアントの信頼された証明書ストアへのインストール。
 
      Setup.bat バッチ ファイルの次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。
 
@@ -276,7 +276,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   クライアント証明書の作成 :
+- クライアント証明書の作成 :
 
      Setup.bat バッチ ファイルの次の行は、使用するクライアント証明書を作成します。 %USER_NAME% 変数はクライアント名を指定します。 この値は "test1" に設定されます。クライアント コードによってこの名前が検索されるためです。 %USER_NAME% の値を変更した場合は、Client.cs ソース ファイル内の対応する値を変更して、クライアントを再構築する必要があります。
 
@@ -292,7 +292,7 @@ serviceHost.Credentials.ClientCertificate.Authentication.CustomCertificateValida
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%USER_NAME% -sky exchange -pe
     ```
 
--   クライアント証明書のサーバーの信頼された証明書ストアへのインストール。
+- クライアント証明書のサーバーの信頼された証明書ストアへのインストール。
 
      Setup.bat バッチ ファイルの次の行は、クライアント証明書を信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がサーバー システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、信頼されたルート証明書に基づく証明書が既にある場合は、サーバー証明書ストアにクライアント証明書を配置するこの手順は不要です。
 

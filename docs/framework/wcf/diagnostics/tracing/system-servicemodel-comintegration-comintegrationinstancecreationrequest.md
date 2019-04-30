@@ -3,11 +3,11 @@ title: System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest
 ms.date: 03/30/2017
 ms.assetid: e9f3f224-cb6b-4c72-a808-d4905ca0c2b8
 ms.openlocfilehash: 34a7bab87eaf6ba8ad07a45da9e5626860d9dcf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164594"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61939322"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationinstancecreationrequest"></a>System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest
 System.ServiceModel.ComIntegration.ComIntegrationInstanceCreationRequest  

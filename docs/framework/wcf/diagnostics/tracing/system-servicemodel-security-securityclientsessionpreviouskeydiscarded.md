@@ -3,11 +3,11 @@ title: System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded
 ms.date: 03/30/2017
 ms.assetid: 339f0e2a-452b-43eb-9f6d-f48ceb1414f3
 ms.openlocfilehash: 6f1a8b4c880f78598a3a0f5477908cf20e0e3b78
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59137008"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948253"
 ---
 # <a name="systemservicemodelsecuritysecurityclientsessionpreviouskeydiscarded"></a>System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded
 System.ServiceModel.Security.SecurityClientSessionPreviousKeyDiscarded  

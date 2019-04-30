@@ -12,19 +12,19 @@ helpviewer_keywords:
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
 ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59164971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954350"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel コントロールにおける AutoSize 動作
 ## <a name="distinct-autosize-behaviors"></a>個別の AutoSize 動作  
  <xref:System.Windows.Forms.TableLayoutPanel>コントロールは、次の方法での自動サイズ変更動作をサポートしています。  
   
--   を通じて、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティです。  
+- を通じて、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティです。  
   
--   を通じて、<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>プロパティを<xref:System.Windows.Forms.TableLayoutPanel>コントロールの列と行のスタイル。  
+- を通じて、<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>プロパティを<xref:System.Windows.Forms.TableLayoutPanel>コントロールの列と行のスタイル。  
   
 ### <a name="the-autosize-property-with-row-and-column-styles"></a>行および列のスタイルと AutoSize プロパティ  
  次の表に、間の相互作用、<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティおよび<xref:System.Windows.Forms.TableLayoutPanel>コントロールの列と行のスタイル。  

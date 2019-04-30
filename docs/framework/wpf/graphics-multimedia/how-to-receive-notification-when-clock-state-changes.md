@@ -9,11 +9,11 @@ helpviewer_keywords:
 - notifications [WPF], clocks' state changes
 ms.assetid: ecb10fc9-d0c2-45c3-b0a1-7b11baa733da
 ms.openlocfilehash: dc3fffb88ce59ceb908d6febd2f078820513b641
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57363138"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942138"
 ---
 # <a name="how-to-receive-notification-when-a-clocks-state-changes"></a>方法: クロックの状態が変化したときに通知を受け取る
 クロックの<xref:System.Windows.Media.Animation.Clock.CurrentStateInvalidated>イベントが発生したときにその<xref:System.Windows.Media.Animation.Clock.CurrentState%2A>はクロックが開始または停止するなど、無効になります。 このイベントを使用して直接登録できます、 <xref:System.Windows.Media.Animation.Clock>、またはを使用して登録することができます、<xref:System.Windows.Media.Animation.Timeline>します。  

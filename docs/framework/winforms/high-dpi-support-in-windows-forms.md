@@ -10,11 +10,11 @@ ms.assetid: 075ea4c3-900c-4f8a-9dd2-13ea6804346b
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 1641702c7b1c3d3b0e83c59a96529de70f699d17
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57843610"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966947"
 ---
 # <a name="high-dpi-support-in-windows-forms"></a>Windows フォームで高 DPI のサポート
 
@@ -84,7 +84,7 @@ ms.locfileid: "57843610"
 </System.Windows.Forms.ApplicationConfigurationSection>
 ```
 
-個々 のキーおよび値の一覧は、[Windows フォームの追加の構成要素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)を参照してください。
+個々 のキーおよび値の一覧は、次を参照してください。 [Windows フォームの追加の構成要素](../configure-apps/file-schema/winforms/windows-forms-add-configuration-element.md)します。
 
 ## <a name="new-dpi-change-events"></a>新しい DPI 変更イベント
 

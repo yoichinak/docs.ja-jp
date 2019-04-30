@@ -5,11 +5,11 @@ helpviewer_keywords:
 - clients [WCF], security considerations
 ms.assetid: 44c8578c-9a5b-4acd-8168-1c30a027c4c5
 ms.openlocfilehash: b357ee12dce823e49e61171d21356ca36b74f7c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331807"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949618"
 ---
 # <a name="securing-clients"></a>クライアントのセキュリティ保護
 Windows Communication Foundation (WCF) サービスは、クライアントのセキュリティ要件を決定します。 つまり、使用するセキュリティ モード、およびクライアントが資格情報を提供するかどうかは、サービスによって指定されます。 そのため、クライアントをセキュリティで保護するプロセスは、サービスから取得したメタデータ (公開されている場合) を使用してクライアントを構築するという簡単なものになります。 クライアントを構成する方法は、メタデータによって指定されます。 クライアントが資格情報を提供することをサービスが要求する場合、要件に適した資格情報を取得する必要があります。 ここでは、このプロセスについて詳しく説明します。 セキュリティで保護されたサービスを作成する方法の詳細については、次を参照してください。 [Securing Services](../../../docs/framework/wcf/securing-services.md)します。  
@@ -71,7 +71,7 @@ Windows Communication Foundation (WCF) サービスは、クライアントの�
   
  X.509 証明書は広く使用されている資格情報の形式です。 資格情報は次の 2 つの方法で提供できます。  
   
--   クライアント コードで (`SetCertificate` メソッドを使用して) プログラミングする方法。  
+- クライアント コードで (`SetCertificate` メソッドを使用して) プログラミングする方法。  
   
  追加することで、 [\<動作 >](../../../docs/framework/configure-apps/file-schema/wcf/behaviors.md)クライアントの構成ファイルのセクションを使用して、`clientCredentials`要素 (下記参照)。  
   

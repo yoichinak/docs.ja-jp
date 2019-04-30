@@ -3,11 +3,11 @@ title: 4023 - WasCloseAllListenerChannelInstancesCompleted
 ms.date: 03/30/2017
 ms.assetid: 95dd5810-78a5-4183-98ef-77267dd64aac
 ms.openlocfilehash: c4b7516668c8d71a21f34a2aeeab1eb651f1cd66
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33467129"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61943196"
 ---
 # <a name="4023---wasclosealllistenerchannelinstancescompleted"></a>4023 - WasCloseAllListenerChannelInstancesCompleted
 ## <a name="properties"></a>プロパティ  
@@ -25,4 +25,4 @@ ms.locfileid: "33467129"
 ## <a name="message"></a>メッセージ  
  WAS がすべてのリスナー チャネル インスタンスのクローズを完了しました。  
   
-## <a name="details"></a>詳細
+## <a name="details"></a>説明

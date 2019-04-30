@@ -7,11 +7,11 @@ helpviewer_keywords:
 - printing [Windows Forms], displaying print dialog box
 ms.assetid: 745a8db7-0526-4b21-b09d-18e13ed32014
 ms.openlocfilehash: 198ae75d407bd1837033a1cc186d84ff972fdc2f
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55285156"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941571"
 ---
 # <a name="how-to-display-the-printdialog-component"></a>PrintDialog コンポーネントを表示する方法
 

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - summary XML tag
 ms.assetid: 861c847d-dd94-478a-aa23-bf4899cdc848
 ms.openlocfilehash: 0fbe07884f55b7e6f460929e54520de5f718e1af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815006"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940765"
 ---
 # <a name="summary-visual-basic"></a>\<概要 > (Visual Basic)
 メンバーの概要を指定します。  

@@ -16,11 +16,11 @@ helpviewer_keywords:
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
 ms.openlocfilehash: b648d62c9128f0864d60ace1ca56700f594b78c5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124619"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967090"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows フォームがサポートするデータ ソース
 これまでは、データ バインディングは、データベースに格納されたデータを活用するためにアプリケーション内で使用されています。 Windows フォーム データ バインドでは、特定の最小要件を満たしている限り、配列やコレクションなど、他の構造のデータだけでなく、データベースからデータにアクセスすることができます。  
@@ -47,15 +47,15 @@ ms.locfileid: "59124619"
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] データ オブジェクト  
  [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] データ構造にバインドするための適切な数を提供します。 その面の知識と複雑さでそれぞれ異なります。  
   
--   <xref:System.Data.DataColumn>。 A<xref:System.Data.DataColumn>の不可欠な要素には、<xref:System.Data.DataTable>列の数がテーブルを構成することで、します。 各<xref:System.Data.DataColumn>が、<xref:System.Data.DataColumn.DataType%2A>列が (たとえば、車を説明した表に、自動車の作成) を保持するデータの種類を決定するプロパティ。 コントロールを単純なバインドことができます (など、<xref:System.Windows.Forms.TextBox>コントロールの<xref:System.Windows.Forms.Control.Text%2A>プロパティ) のデータ テーブル内の列にします。  
+- <xref:System.Data.DataColumn>。 A<xref:System.Data.DataColumn>の不可欠な要素には、<xref:System.Data.DataTable>列の数がテーブルを構成することで、します。 各<xref:System.Data.DataColumn>が、<xref:System.Data.DataColumn.DataType%2A>列が (たとえば、車を説明した表に、自動車の作成) を保持するデータの種類を決定するプロパティ。 コントロールを単純なバインドことができます (など、<xref:System.Windows.Forms.TextBox>コントロールの<xref:System.Windows.Forms.Control.Text%2A>プロパティ) のデータ テーブル内の列にします。  
   
--   <xref:System.Data.DataTable>。 A<xref:System.Data.DataTable>行と列を含む、テーブルの表現が、[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]します。 データ テーブルに 2 つのコレクションが含まれています: <xref:System.Data.DataColumn>、(最終的にそのテーブルに入力できるデータの種類を決定) する特定のテーブル内のデータの列を表すと<xref:System.Data.DataRow>、特定のテーブル内のデータの行を表します。 複雑にバインドするコントロールをデータ テーブルに含まれる情報を (バインドなど、<xref:System.Windows.Forms.DataGridView>データ テーブル コントロール)。 バインドすると、ただし、<xref:System.Data.DataTable>テーブルの既定のビューに本当にバインドします。  
+- <xref:System.Data.DataTable>。 A<xref:System.Data.DataTable>行と列を含む、テーブルの表現が、[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]します。 データ テーブルに 2 つのコレクションが含まれています: <xref:System.Data.DataColumn>、(最終的にそのテーブルに入力できるデータの種類を決定) する特定のテーブル内のデータの列を表すと<xref:System.Data.DataRow>、特定のテーブル内のデータの行を表します。 複雑にバインドするコントロールをデータ テーブルに含まれる情報を (バインドなど、<xref:System.Windows.Forms.DataGridView>データ テーブル コントロール)。 バインドすると、ただし、<xref:System.Data.DataTable>テーブルの既定のビューに本当にバインドします。  
   
--   <xref:System.Data.DataView>。 A<xref:System.Data.DataView>はフィルター処理や並べ替えが 1 つのデータ テーブルのカスタマイズされたビューです。 データ ビューは、「スナップショット」複雑なバインド コントロールで使用されるデータです。 できます単純バインドまたはデータ ビューでは、データへの複雑なバインドがクリーンで更新のデータ ソースではなく、データの固定「画像」にバインドすることに注意してください。  
+- <xref:System.Data.DataView>。 A<xref:System.Data.DataView>はフィルター処理や並べ替えが 1 つのデータ テーブルのカスタマイズされたビューです。 データ ビューは、「スナップショット」複雑なバインド コントロールで使用されるデータです。 できます単純バインドまたはデータ ビューでは、データへの複雑なバインドがクリーンで更新のデータ ソースではなく、データの固定「画像」にバインドすることに注意してください。  
   
--   <xref:System.Data.DataSet>。 A<xref:System.Data.DataSet>テーブル、リレーションシップ、およびデータベース内のデータの制約のコレクションです。 できますが単純なバインドまたは複合バインド、データセット内のデータには、既定値にバインドすることに注意してください<xref:System.Data.DataViewManager>の<xref:System.Data.DataSet>(次の箇条書きをご覧ください)。  
+- <xref:System.Data.DataSet>。 A<xref:System.Data.DataSet>テーブル、リレーションシップ、およびデータベース内のデータの制約のコレクションです。 できますが単純なバインドまたは複合バインド、データセット内のデータには、既定値にバインドすることに注意してください<xref:System.Data.DataViewManager>の<xref:System.Data.DataSet>(次の箇条書きをご覧ください)。  
   
--   <xref:System.Data.DataViewManager>。 A<xref:System.Data.DataViewManager>全体のカスタマイズされたビューは、<xref:System.Data.DataSet>に似ています、<xref:System.Data.DataView>が含まれている関係を使用します。 <xref:System.Data.DataViewManager.DataViewSettings%2A>コレクション、および設定できます既定のフィルターされたビューの並べ替えオプションを<xref:System.Data.DataViewManager>が、特定のテーブル。  
+- <xref:System.Data.DataViewManager>。 A<xref:System.Data.DataViewManager>全体のカスタマイズされたビューは、<xref:System.Data.DataSet>に似ています、<xref:System.Data.DataView>が含まれている関係を使用します。 <xref:System.Data.DataViewManager.DataViewSettings%2A>コレクション、および設定できます既定のフィルターされたビューの並べ替えオプションを<xref:System.Data.DataViewManager>が、特定のテーブル。  
   
 ## <a name="see-also"></a>関連項目
 

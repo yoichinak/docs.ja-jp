@@ -8,11 +8,11 @@ helpviewer_keywords:
 - RadioButton control [Windows Forms], grouping
 ms.assetid: 58f8fe34-50b7-49d8-a2be-c271be3c6b32
 ms.openlocfilehash: 857e61bc89e072aebcf34793d7e8504ece3318c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307265"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941311"
 ---
 # <a name="how-to-group-windows-forms-radiobutton-controls-to-function-as-a-set"></a>方法: セットとして機能する Windows フォーム RadioButton コントロールをグループ化する
 Windows フォーム<xref:System.Windows.Forms.RadioButton>間うち 1 つだけをプロシージャまたはオブジェクトに割り当てることが、2 つ以上の設定の選択をユーザーに付与するコントロールが設計されています。 たとえばのグループ<xref:System.Windows.Forms.RadioButton>コントロールは、注文の配送業者をパッケージの選択を表示可能性がありますが、通信事業者の 1 つだけ使用されます。 そのため 1 つだけ<xref:System.Windows.Forms.RadioButton>一度に選択できる場合でも、機能グループの一部であります。  

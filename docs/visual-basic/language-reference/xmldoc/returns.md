@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <returns> XML tag
 ms.assetid: a03a6469-d907-425d-882f-083187950e7e
 ms.openlocfilehash: 5a0ff0da7cf26a1cea75a5b2e4678593d9b72f54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940791"
 ---
 # <a name="returns-visual-basic"></a>\<返します > (Visual Basic)
 プロパティまたは関数の戻り値を指定します。  

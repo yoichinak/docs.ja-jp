@@ -10,11 +10,11 @@ helpviewer_keywords:
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
 ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59115753"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947837"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>方法: UI を返すアドインを作成する
 この例では、スタンドアロンの WPF アプリケーションのホストに Windows Presentation Foundation (WPF) を返すアドインを作成する方法を示します。  
@@ -25,9 +25,9 @@ ms.locfileid: "59115753"
   
  この例では、このシナリオを有効にする、.NET Framework アドイン モデルを WPF 拡張を強調表示し、前提条件は次。  
   
--   .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、次を参照してください。[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))します。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](../../add-ins/walkthrough-create-extensible-app.md)します。  
+- .NET Framework アドイン モデルのパイプライン、アドイン、およびホストの開発を含むナレッジです。 これらの概念に慣れていない場合は、次を参照してください。[アドインおよび拡張](/previous-versions/dotnet/netframework-4.0/bb384200(v%3dvs.100))します。 パイプライン、アドイン、およびホスト アプリケーションの実装を示すチュートリアルについては、次を参照してください。[チュートリアル。拡張可能なアプリケーションを作成する](../../add-ins/walkthrough-create-extensible-app.md)します。  
   
--   WPF の拡張機能を .NET Framework アドイン モデルはこちらのサポート技術情報:[WPF アドインの概要](wpf-add-ins-overview.md)します。  
+- WPF の拡張機能を .NET Framework アドイン モデルはこちらのサポート技術情報:[WPF アドインの概要](wpf-add-ins-overview.md)します。  
   
 ## <a name="example"></a>例  
  WPF UI を返すアドインを作成するには、各パイプライン セグメント、アドイン、およびホスト アプリケーションの特定のコードが必要です。  

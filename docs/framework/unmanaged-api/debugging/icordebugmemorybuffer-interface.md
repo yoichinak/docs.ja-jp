@@ -5,11 +5,11 @@ ms.assetid: 85dc2d65-3657-4b93-9f23-9feaa95d37ff
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e12b50e964ec470b843ae35c960f20c5675fd572
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59072910"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955468"
 ---
 # <a name="icordebugmemorybuffer-interface"></a>ICorDebugMemoryBuffer インターフェイス
 メモリ内のバッファーを表します。  

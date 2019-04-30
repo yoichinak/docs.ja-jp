@@ -15,11 +15,11 @@ helpviewer_keywords:
 - Type markup extension in XAML [XAML Services]
 ms.assetid: e0e0ce6f-e873-49c7-8ad7-8b840eb353ec
 ms.openlocfilehash: eb0adb2e8140b20c8d52eced02f177b8c3560354
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211635"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938854"
 ---
 # <a name="xtype-markup-extension"></a>x:Type マークアップ拡張機能
 CLR の提供<xref:System.Type>指定の XAML 型の基になる型であるオブジェクト。  
@@ -71,11 +71,11 @@ CLR の提供<xref:System.Type>指定の XAML 型の基になる型であるオ�
 ## <a name="xaml-2009"></a>XAML 2009  
  XAML 2009 のジェネリック型し、の機能の動作を変更します。 その他のサポートを提供します`x:TypeArguments`と`x:Type`このサポートを提供します。  
   
--   `x:TypeArguments` ルート以外の要素に関連付けられたオブジェクト要素の汎用オブジェクトのインスタンス化ができます。 詳細については、の「XAML 2009」セクションを参照してください。 [X:typearguments ディレクティブ](x-typearguments-directive.md)します。  
+- `x:TypeArguments` ルート以外の要素に関連付けられたオブジェクト要素の汎用オブジェクトのインスタンス化ができます。 詳細については、の「XAML 2009」セクションを参照してください。 [X:typearguments ディレクティブ](x-typearguments-directive.md)します。  
   
--   XAML 2009 は、マークアップでジェネリック型の制約を指定するための構文をサポートします。 これで使用できる`x:TypeArguments`により、 `x:Type`、または組み合わせでは、2 つの機能です。  
+- XAML 2009 は、マークアップでジェネリック型の制約を指定するための構文をサポートします。 これで使用できる`x:TypeArguments`により、 `x:Type`、または組み合わせでは、2 つの機能です。  
   
--   負荷は、型を使用する特定のフレームワーク プロパティに対して暗黙的な型変換の動作にこの機能を追加するもの XAML 2009 を処理するときに、WPF XAML 実装<xref:System.Type>します。  
+- 負荷は、型を使用する特定のフレームワーク プロパティに対して暗黙的な型変換の動作にこの機能を追加するもの XAML 2009 を処理するときに、WPF XAML 実装<xref:System.Type>します。  
   
  WPF では、loose XAML (XAML マークアップ コンパイルされていない) については、XAML 2009 の機能を使用することができます。 WPF 向けにマークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 のキーワードと機能をサポートしていません。  
   

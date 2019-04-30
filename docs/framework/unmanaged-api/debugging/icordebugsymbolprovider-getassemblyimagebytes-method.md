@@ -5,11 +5,11 @@ ms.assetid: 3db215aa-e180-4f70-8d23-6d5a0ffbc8e5
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 103e724c37ae356729dd5bba3ff66c0f443f6eaa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59170236"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953531"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagebytes-method"></a>ICorDebugSymbolProvider::GetAssemblyImageBytes メソッド
 マージされたアセンブリ内の指定の相対仮想アドレス (RVA: relative virtual address) で、マージされたアセンブリのデータを読み取ります。  

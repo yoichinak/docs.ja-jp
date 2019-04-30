@@ -5,11 +5,11 @@ ms.assetid: c3c9de67-b865-4ecf-b887-1f1d0719a0c0
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 0be0722db374ff49541b3c4b68f295774f34163e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104131"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61953453"
 ---
 # <a name="icordebugsymbolprovidergetassemblyimagemetadata-method"></a>ICorDebugSymbolProvider::GetAssemblyImageMetadata メソッド
 マージされたアセンブリのメタデータを返します。  

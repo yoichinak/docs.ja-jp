@@ -5,11 +5,11 @@ ms.assetid: 790e0426-e5cd-49fd-a792-f8c8635d72fe
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 74be827dc97213507b96da9e025923f859011acd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076888"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946147"
 ---
 # <a name="icordebugvirtualunwindernext-method"></a>Icordebugvirtualunwinder::next メソッド
 呼び出し元のコンテキストに進みます。  

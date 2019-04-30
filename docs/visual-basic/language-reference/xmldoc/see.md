@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <see> XML tag
 ms.assetid: 7e18f60b-ef4a-4678-a797-5eb918635ca9
 ms.openlocfilehash: 828e55e0ddb0382c16c60ae3d9e5958c18e42c10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58821338"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940804"
 ---
 # <a name="see-visual-basic"></a>\<参照してください > (Visual Basic)
 別のメンバーへのリンクを指定します。  

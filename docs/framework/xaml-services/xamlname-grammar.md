@@ -9,11 +9,11 @@ helpviewer_keywords:
 - XamlName grammar [XAML Services]
 ms.assetid: 11e4cada-41d2-494d-9531-0d3df4dfcbe3
 ms.openlocfilehash: 642ca16142bdfe78a40ddf4e6a3a79ce6a8a4985
-ms.sourcegitcommit: 5c1abeec15fbddcc7dbaa729fabc1f1f29f12045
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58031609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938750"
 ---
 # <a name="xamlname-grammar"></a>XamlName の文法
 XamlName の文法では、便宜上、ここに再掲は、XAML 言語仕様 [MS-XAML] で定義されている特定の文法です。  
@@ -55,7 +55,7 @@ Nl
 Number, Letter  
 ```  
   
- XAML は、2 番目の文法、DottedXamlName、プロパティに使用されるを定義し、イベントの修飾参照、およびものメンバーをアタッチします。 詳細については、<xref:System.Windows.DependencyProperty>と[XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)を参照してください。  
+ XAML は、2 番目の文法、DottedXamlName、プロパティに使用されるを定義し、イベントの修飾参照、およびものメンバーをアタッチします。 詳細については、次を参照してください。<xref:System.Windows.DependencyProperty>と[XAML の概要 (WPF)](../wpf/advanced/xaml-overview-wpf.md)します。  
   
  次の文法に従う必要があります DottedXamlName 型の値を文字列には。  
   
@@ -64,4 +64,4 @@ DottedXamlName ::= XamlName '.' XamlName
 ```  
   
 ## <a name="remarks"></a>Remarks  
- 完全な仕様では、[ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)を参照してください。
+ 完全な仕様では、次を参照してください。 [ \[MS XAML\]](https://go.microsoft.com/fwlink/?LinkId=114525)します。

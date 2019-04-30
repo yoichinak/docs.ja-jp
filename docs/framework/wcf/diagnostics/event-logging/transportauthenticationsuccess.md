@@ -3,11 +3,11 @@ title: TransportAuthenticationSuccess
 ms.date: 03/30/2017
 ms.assetid: 7a7c3013-3d05-4d32-857b-759e98d91259
 ms.openlocfilehash: 8c815bf206489770162cd9169496a778fa48fe2e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208268"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61944363"
 ---
 # <a name="transportauthenticationsuccess"></a>TransportAuthenticationSuccess
 Id:173  

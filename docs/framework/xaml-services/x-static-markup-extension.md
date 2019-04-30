@@ -1,4 +1,4 @@
-﻿---
+---
 title: x:Static のマークアップ拡張機能
 ms.date: 03/30/2017
 f1_keywords:
@@ -11,11 +11,11 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Static markup extension
 ms.assetid: 056aee79-7cdd-434f-8174-dfc856cad343
 ms.openlocfilehash: 3da2f6afc7e7ecf20c91f0badca38bc26083d3ae
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295711"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938940"
 ---
 # <a name="xstatic-markup-extension"></a>x:Static のマークアップ拡張機能
 定義されている任意の静的な値をコード エンティティを参照、 [!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]– に準拠した方法。 XAML のプロパティの値を提供する、参照されている静的プロパティを使用できます。  
@@ -38,10 +38,10 @@ ms.locfileid: "59295711"
 
 参照されているコード エンティティは、次のいずれかである必要があります。  
   
--   定数  
--   静的プロパティ  
--   フィールド  
--   列挙値
+- 定数  
+- 静的プロパティ  
+- フィールド  
+- 列挙値
 
 非静的のプロパティなど、他のコード エンティティを指定すると、XAML がコンパイルされると、マークアップまたは XAML 読み込み時の解析の例外の場合は、コンパイル時エラーとします。  
 
@@ -74,11 +74,11 @@ ms.locfileid: "59295711"
 ## <a name="wpf-usage-notes"></a>WPF の使用上の注意  
  WPF プログラミングで使用する既定の XAML 名前空間に多数の便利な静的プロパティが含まれていないと、便利な静的プロパティのほとんどはなどを必要とせず、使用状況を容易にする型コンバーターをサポート`{x:Static}`します。 静的プロパティは、次のいずれかが true の場合、XAML 名前空間のプレフィックスをマップする必要があります。  
   
--   WPF に存在しますが、WPF の既定の XAML 名前空間の一部でない型を参照している ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)])。 これは、非常に一般的なシナリオを使用するため`x:Static`します。 たとえば、使用する場合があります、`x:Static`へのマッピングを XAML 名前空間を持つ参照、<xref:System>の静的プロパティを参照するには CLR 名前空間と mscorlib アセンブリ、<xref:System.Environment>クラス。  
+- WPF に存在しますが、WPF の既定の XAML 名前空間の一部でない型を参照している ([!INCLUDE[TLA#tla_wpfxmlnsv1](../../../includes/tlasharptla-wpfxmlnsv1-md.md)])。 これは、非常に一般的なシナリオを使用するため`x:Static`します。 たとえば、使用する場合があります、`x:Static`へのマッピングを XAML 名前空間を持つ参照、<xref:System>の静的プロパティを参照するには CLR 名前空間と mscorlib アセンブリ、<xref:System.Environment>クラス。  
   
--   カスタム アセンブリから型を参照しています。  
+- カスタム アセンブリから型を参照しています。  
   
--   その型が既定の WPF XAML 名前空間の一部としてマップされていませんでしたが CLR 名前空間は WPF アセンブリに存在する型を参照しています。 WPF の既定の XAML 名前空間に CLR 名前空間のマッピングは、さまざまな WPF アセンブリ内の定義によって実行されます (この概念の詳細については、次を参照してください。 [XAML 名前空間および WPF XAML の Namespace マッピング](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 CLR 名前空間のマッピングされていないがその CLR 名前空間が、通常は想定されていません、XAML などのクラス定義のほとんどの場合で構成される場合に存在できる<xref:System.Windows.Threading>します。  
+- その型が既定の WPF XAML 名前空間の一部としてマップされていませんでしたが CLR 名前空間は WPF アセンブリに存在する型を参照しています。 WPF の既定の XAML 名前空間に CLR 名前空間のマッピングは、さまざまな WPF アセンブリ内の定義によって実行されます (この概念の詳細については、次を参照してください。 [XAML 名前空間および WPF XAML の Namespace マッピング](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md))。 CLR 名前空間のマッピングされていないがその CLR 名前空間が、通常は想定されていません、XAML などのクラス定義のほとんどの場合で構成される場合に存在できる<xref:System.Windows.Threading>します。  
   
  WPF のプレフィックスと XAML 名前空間を使用する方法の詳細については、次を参照してください。 [XAML 名前空間および WPF XAML のマッピングの Namespace](../wpf/advanced/xaml-namespaces-and-namespace-mapping-for-wpf-xaml.md)します。  
   

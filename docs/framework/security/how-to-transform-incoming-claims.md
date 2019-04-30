@@ -7,51 +7,51 @@ ms.openlocfilehash: f836356125f1462f302b7e9f45a841c869c9a690
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977887"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940440"
 ---
 # <a name="how-to-transform-incoming-claims"></a>方法: 入力方向の要求の変換
 ## <a name="applies-to"></a>対象  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web フォーム  
+- ASP.NET® Web フォーム  
   
 ## <a name="summary"></a>まとめ  
  この操作方法では、単純なクレーム対応 ASP.NET Web フォーム アプリケーションを作成、受信した要求を変換する詳細な手順を示します。 また、アプリケーションの実行中に変換されたクレームが表示されることを確認するためにアプリケーションをテストする方法についても説明します。  
   
 ## <a name="contents"></a>目次  
   
--   目的  
+- 目的  
   
--   概要  
+- 概要  
   
--   手順の要約  
+- 手順の要約  
   
--   手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
+- 手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
   
--   手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する  
+- 手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する  
   
--   手順 3 – ソリューションをテストする  
+- 手順 3 – ソリューションをテストする  
   
 ## <a name="objectives"></a>目的  
   
--   クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成します。  
+- クレーム ベースの認証用の ASP.NET Web フォーム アプリケーションを構成します。  
   
--   管理者ロールのクレームを追加することによって、受信したクレームを変換します。  
+- 管理者ロールのクレームを追加することによって、受信したクレームを変換します。  
   
--   ASP.NET Web フォーム アプリケーションをテストして正しく機能することを確認する  
+- ASP.NET Web フォーム アプリケーションをテストして正しく機能することを確認する  
   
 ## <a name="overview"></a>概要  
  WIF が <xref:System.Security.Claims.ClaimsAuthenticationManager> という名前のクラスを公開し、これを使用してユーザーは、クレームが利用者 (RP) アプリケーションに表示される前に、クレームを変更できます。 <xref:System.Security.Claims.ClaimsAuthenticationManager> は、認証と基になるアプリケーション コードの間での問題の分離に役立ちます。 次の例は、RP で必要になる場合がある着信 <xref:System.Security.Claims.ClaimsPrincipal> 内のクレームにロールを追加する方法を示しています。  
   
 ## <a name="summary-of-steps"></a>手順の要約  
   
--   手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
+- 手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
   
--   手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する  
+- 手順 2 – カスタム ClaimsAuthenticationManager を使用してクレーム変換を実装する  
   
--   手順 3 – ソリューションをテストする  
+- 手順 3 – ソリューションをテストする  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
  この手順では、新しい ASP.NET Web フォーム アプリケーションを作成します。  

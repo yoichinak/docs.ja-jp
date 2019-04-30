@@ -4,41 +4,41 @@ ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
 ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59767969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940544"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>方法: Windows 認証を使用してクレーム対応 ASP.NET アプリケーションをビルドする
 ## <a name="applies-to"></a>対象  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web フォーム  
+- ASP.NET® Web フォーム  
   
 ## <a name="summary"></a>まとめ  
  この操作方法では、Windows 認証を使用する簡単なクレーム対応 ASP.NET Web フォーム アプリケーションを作成するための詳細な手順を示します。 また、Windows 認証を使用してユーザーがサインインするときにクレームが表示されることを確認するために、アプリケーションをテストする方法についても説明します。  
   
 ## <a name="contents"></a>目次  
   
--   目的  
+- 目的  
   
--   概要  
+- 概要  
   
--   手順の要約  
+- 手順の要約  
   
--   手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
+- 手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
   
--   手順 2 – Windows 認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションを構成する  
+- 手順 2 – Windows 認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションを構成する  
   
--   手順 3 – ソリューションをテストする  
+- 手順 3 – ソリューションをテストする  
   
 ## <a name="objectives"></a>目的  
   
--   Windows 認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションを構成する  
+- Windows 認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションを構成する  
   
--   ASP.NET Web フォーム アプリケーションをテストして正しく機能することを確認する  
+- ASP.NET Web フォーム アプリケーションをテストして正しく機能することを確認する  
   
 ## <a name="overview"></a>概要  
  .NET 4.5 には、WIF とそのクレーム ベースの認証が、Framework の不可欠な部分として組み込まれています。 以前は、ASP.NET ユーザーからのクレームが必要な場合に、WIF をインストールしてから、`Thread.CurrentPrincipal` または `HttpContext.Current.User` などのプリンシパル オブジェクトにインターフェイスをキャストする必要がありました。 現在は、これらのプリンシパル オブジェクトで自動的にクレームが処理されます。  
@@ -47,11 +47,11 @@ ms.locfileid: "59767969"
   
 ## <a name="summary-of-steps"></a>手順の要約  
   
--   手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
+- 手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
   
--   手順 2 – Windows 認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションを構成する  
+- 手順 2 – Windows 認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションを構成する  
   
--   手順 3 – ソリューションをテストする  
+- 手順 3 – ソリューションをテストする  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
  この手順では、新しい ASP.NET Web フォーム アプリケーションを作成します。  

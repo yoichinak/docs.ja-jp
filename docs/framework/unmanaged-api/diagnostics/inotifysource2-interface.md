@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 509d75e1e94a82e6a91cd235ab079603c267c70f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113335"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940323"
 ---
 # <a name="inotifysource2-interface"></a>INotifySource2 インターフェイス
 通知フィルターを設定するためのメソッドを宣言します。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - ToolStrip control [Windows Forms], moving from
 ms.assetid: 40f9e88b-09a3-428e-8da8-c00bb65079c6
 ms.openlocfilehash: d4de7345a4e3ce122c4e1fc0a92f09b447204eb6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113166"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941428"
 ---
 # <a name="how-to-enable-the-tab-key-to-move-out-of-a-toolstrip-control"></a>方法: Tab キーで ToolStrip コントロールから移動できるようにする
 タブ キーを押してから移動するユーザーを有効にする、次の手順を使用して、<xref:System.Windows.Forms.ToolStrip>タブ オーダー内で次のコントロールにします。  
@@ -20,7 +20,7 @@ ms.locfileid: "59113166"
   
 ### <a name="to-enable-the-user-to-press-the-tab-key-to-move-out-of-a-toolstrip-to-the-next-control"></a>次のコントロールにあるコマンド バーから移動するタブ キーを押すようにユーザーを有効にするには  
   
--   設定、<xref:System.Windows.Forms.ToolStrip.TabStop%2A>のプロパティ、<xref:System.Windows.Forms.ToolStrip>に`true`します。  
+- 設定、<xref:System.Windows.Forms.ToolStrip.TabStop%2A>のプロパティ、<xref:System.Windows.Forms.ToolStrip>に`true`します。  
   
 ## <a name="see-also"></a>関連項目
 

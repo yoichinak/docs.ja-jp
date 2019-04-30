@@ -4,55 +4,55 @@ ms.date: 03/30/2017
 ms.assetid: 3d51ba59-3adb-4ca4-bd33-5027531af687
 author: BrucePerlerMS
 ms.openlocfilehash: 43fa859aa84189817dffe74ecd72253ab9b82585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321550"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940492"
 ---
 # <a name="how-to-debug-claims-aware-applications-and-services-using-wif-tracing"></a>方法: WIF トレースを使用してクレーム対応アプリケーションおよびサービスをデバッグする
 ## <a name="applies-to"></a>対象  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   サービス トレース ビューアー ツール (SvcTraceViewer.exe)  
+- サービス トレース ビューアー ツール (SvcTraceViewer.exe)  
   
--   WIF アプリケーションのトラブルシューティングとデバッグ  
+- WIF アプリケーションのトラブルシューティングとデバッグ  
   
 ## <a name="summary"></a>まとめ  
  この方法では、WIF トレースの構成方法、トレース ログの収集方法、およびトレース ビューアー ツールを使用してトレース ログを分析する方法について、必要な手順を説明します。 WIF に関連する問題をトラブルシューティングするために、必要なアクションに対してトレース エントリの全般的なマッピングを行います。  
   
 ## <a name="contents"></a>目次  
   
--   目的  
+- 目的  
   
--   手順の要約  
+- 手順の要約  
   
--   手順 1 – Web.config 構成ファイルを使用して WIF のトレースを構成する  
+- 手順 1 – Web.config 構成ファイルを使用して WIF のトレースを構成する  
   
--   手順 2 – トレース ビューアー ツールを使用して WIF のトレース ファイルを分析する  
+- 手順 2 – トレース ビューアー ツールを使用して WIF のトレース ファイルを分析する  
   
--   手順 3 – WIF 関連の問題を修復するための解決策を特定する  
+- 手順 3 – WIF 関連の問題を修復するための解決策を特定する  
   
--   関連項目  
+- 関連項目  
   
 ## <a name="objectives"></a>目的  
   
--   WIF トレースを構成する。  
+- WIF トレースを構成する。  
   
--   トレース ビューアー ツールでトレース ログを表示する。  
+- トレース ビューアー ツールでトレース ログを表示する。  
   
--   トレース ログで WIF 関連の問題を特定する。  
+- トレース ログで WIF 関連の問題を特定する。  
   
--   トレース ログで検出された WIF 関連の問題に修正措置を適用する。  
+- トレース ログで検出された WIF 関連の問題に修正措置を適用する。  
   
 ## <a name="summary-of-steps"></a>手順の要約  
   
--   手順 1 – Web.config 構成ファイルを使用して WIF のトレースを構成する  
+- 手順 1 – Web.config 構成ファイルを使用して WIF のトレースを構成する  
   
--   手順 2 – トレース ビューアー ツールを使用して WIF のトレース ファイルを分析する  
+- 手順 2 – トレース ビューアー ツールを使用して WIF のトレース ファイルを分析する  
   
--   手順 3 – WIF 関連の問題を修復するための解決策を特定する  
+- 手順 3 – WIF 関連の問題を修復するための解決策を特定する  
   
 ## <a name="step-1--configure-wif-tracing-using-webconfig-configuration-file"></a>手順 1 – Web.config 構成ファイルを使用して WIF のトレースを構成する  
  この手順では、*Web.config* ファイルの構成セクションに変更を加えて、WIF がイベントをトレースしてトレース ログに格納できるようにします。  
@@ -108,4 +108,4 @@ ms.locfileid: "59321550"
   
 ## <a name="related-items"></a>関連項目  
   
--   [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)
+- [サービス トレース ビューアーを使用した相関トレースの表示とトラブルシューティング](../wcf/diagnostics/tracing/using-service-trace-viewer-for-viewing-correlated-traces-and-troubleshooting.md)

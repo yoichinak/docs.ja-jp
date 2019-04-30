@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 0d092f3a-b309-439b-920b-66d8f46a0e3c
 ms.openlocfilehash: 54bd025db4da8ed1d1484b11666a37c2c14a6023
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59974582"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949631"
 ---
 # <a name="ws-transport-with-message-credential"></a>メッセージ資格情報付き WS トランスポート
 このサンプルでは、メッセージに含まれるクライアント資格情報と組み合わせて SSL トランスポート セキュリティを使用する例を示します。 このサンプルでは、`wsHttpBinding` バインディングを使用します。  

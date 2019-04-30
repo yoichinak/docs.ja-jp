@@ -3,14 +3,14 @@ title: WS バインディング
 ms.date: 03/30/2017
 ms.assetid: 629945b2-d771-46d7-a87b-5df3b2e460da
 ms.openlocfilehash: 11480b91c6ac6a5501029dfdf10cd81d3fa18820
-ms.sourcegitcommit: 15109844229ade1c6449f48f3834db1b26907824
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2018
-ms.locfileid: "33804915"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949904"
 ---
 # <a name="ws-binding"></a>WS バインディング
-このセクションには、Windows サービスのバインディングで Windows Communication Foundation (WCF) を示すサンプルが含まれています。  
+このセクションには、Windows サービスのバインドでは、Windows Communication Foundation (WCF) を示すサンプルが含まれています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [WS トランザクション フロー](../../../../docs/framework/wcf/samples/ws-transaction-flow.md)  
@@ -35,7 +35,7 @@ ms.locfileid: "33804915"
  <xref:System.ServiceModel.WSHttpBinding> バインディングを使用した SSL トランスポート セキュリティの使用方法を示します。  
   
  [メッセージ セキュリティ バインディング](../../../../docs/framework/wcf/samples/message-security-binding.md)  
- WCF でのメッセージ セキュリティの使用方法を示します。  
+ Wcf メッセージ セキュリティを使用して示します。  
   
  [メッセージ資格情報付き WS トランスポート](../../../../docs/framework/wcf/samples/ws-transport-with-message-credential.md)  
  このサンプルでは、メッセージに含まれるクライアント資格情報と組み合わせて SSL トランスポート セキュリティを使用する例を示します。

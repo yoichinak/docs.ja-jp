@@ -7,11 +7,11 @@ helpviewer_keywords:
 - related tables [Windows Forms], displaying in DataGrid control
 ms.assetid: 19438ba2-f687-4417-a2fb-ab1cd69d4ded
 ms.openlocfilehash: f586572c850927ffe71566287986e6db6112c689
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332080"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961361"
 ---
 # <a name="how-to-create-master-details-lists-with-the-windows-forms-datagrid-control-using-the-designer"></a>方法: デザイナーで Windows フォーム DataGrid コントロールを使用してマスター/詳細リストを作成する
 
@@ -42,15 +42,15 @@ ms.locfileid: "59332080"
   
 6. 構成、<xref:System.Windows.Forms.DataGrid>マスター グリッドを次のように指定するコントロール。  
   
-    1.  選択、<xref:System.Data.DataSet>でドロップダウン リストから、<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティ。  
+    1. 選択、<xref:System.Data.DataSet>でドロップダウン リストから、<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティ。  
   
-    2.  マスター テーブル (たとえば、"Customers") でドロップダウン リストから選択、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティ。  
+    2. マスター テーブル (たとえば、"Customers") でドロップダウン リストから選択、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティ。  
   
 7. 構成、<xref:System.Windows.Forms.DataGrid>詳細グリッドを次のように指定するコントロール。  
   
-    1.  選択、<xref:System.Data.DataSet>でドロップダウン リストから、<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティ。  
+    1. 選択、<xref:System.Data.DataSet>でドロップダウン リストから、<xref:System.Windows.Forms.DataGrid.DataSource%2A>プロパティ。  
   
-    2.  ドロップダウン リストからマスター/詳細テーブル間のリレーションシップ (たとえば、"Customers.CustOrd") を選択して、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティ。 リレーションシップを表示するには、プラス記号をクリックして、ノードを展開します (**+**) ドロップダウン リストのマスター テーブルの横にサインオンします。  
+    2. ドロップダウン リストからマスター/詳細テーブル間のリレーションシップ (たとえば、"Customers.CustOrd") を選択して、<xref:System.Windows.Forms.DataGrid.DataMember%2A>プロパティ。 リレーションシップを表示するには、プラス記号をクリックして、ノードを展開します (**+**) ドロップダウン リストのマスター テーブルの横にサインオンします。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -9,8 +9,8 @@ ms.openlocfilehash: 124310497cc2a8e8a816ba90b2c68a16ed342ae6
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973453"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938789"
 ---
 # <a name="xaml-security-considerations"></a>XAML セキュリティの考慮事項
 このトピックでは、XAML と .NET Framework XAML サービス API を使用すると、アプリケーションのセキュリティのベスト プラクティスをについて説明します。  
@@ -34,9 +34,9 @@ ms.locfileid: "59973453"
 ## <a name="xaml-namespaces-and-assembly-trust"></a>XAML 名前空間とアセンブリの信頼レベル  
  非修飾の基本的な構文と XAML がアセンブリにカスタム XAML 名前空間のマッピングを解釈する方法の定義は、アプリケーション ドメインに読み込まれた、信頼できる、信頼されていないアセンブリは区別されません。 したがって、信頼されたアセンブリの目的の XAML 名前空間マッピングを偽装し、XAML ソースの宣言されたオブジェクトおよびプロパティ情報をキャプチャする信頼されていないアセンブリを技術的に可能は。 このような状況を回避するためにセキュリティ要件があれば、次の手法の 1 つを使用して、目的の XAML 名前空間のマッピングを行う必要があります。  
   
--   アプリケーションの XAML によって行われたすべての XAML 名前空間マッピングで厳密な名前でアセンブリの完全修飾名を使用します。  
+- アプリケーションの XAML によって行われたすべての XAML 名前空間マッピングで厳密な名前でアセンブリの完全修飾名を使用します。  
   
--   アセンブリの特定を構築することで、参照アセンブリの固定セットへのマッピングを制限する<xref:System.Xaml.XamlSchemaContext>XAML リーダーと XAML オブジェクト ライター。 以下を参照してください。<xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>  
+- アセンブリの特定を構築することで、参照アセンブリの固定セットへのマッピングを制限する<xref:System.Xaml.XamlSchemaContext>XAML リーダーと XAML オブジェクト ライター。 以下を参照してください。<xref:System.Xaml.XamlSchemaContext.%23ctor%28System.Collections.Generic.IEnumerable%7BSystem.Reflection.Assembly%7D%29>  
   
 ## <a name="xaml-type-mapping-and-type-system-access"></a>XAML の型マッピングとシステム アクセスの種類  
  XAML では、さまざまな方法では CLR が基本的な CLR 型システムを実装する方法のピアが独自の型システムをサポートします。 ただし、その型の情報に基づいた型に関する信頼の決定を行っている型の対応の特定の要素の型のバッキング CLR の型情報に従う必要があります。 これは、仮想メソッドとして開いたまま、XAML 型システムの特定のレポート機能の一部はそのため、完全に元の .NET Framework XAML サービス実装の管理下にあるためです。 XAML 型システムでは、XAML 自体の拡張機能と、既定の実装で CLR を基盤と既定の XAML スキーマ コンテキストと代替可能な型マッピング戦略に合わせて拡張可能なために、これらの拡張ポイントが存在します。 詳細については、のプロパティのいくつかの固有の注意事項を参照してください。<xref:System.Xaml.XamlType>と<xref:System.Xaml.XamlMember>します。  

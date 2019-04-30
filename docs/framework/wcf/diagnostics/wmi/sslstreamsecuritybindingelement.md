@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 18130d50-8996-4257-9c60-bc457f8654d8
 ms.openlocfilehash: 83929c46f57af35932dd8399d4f74b6a5b5debc3
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59976470"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956651"
 ---
 # <a name="sslstreamsecuritybindingelement"></a>SslStreamSecurityBindingElement
 SslStreamSecurityBindingElement  

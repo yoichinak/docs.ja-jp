@@ -5,11 +5,11 @@ ms.assetid: a4a8f259-b83a-4425-ae8b-72b067dbc0d9
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b5c0759989e069169c7e68b71206d9a50b04ad63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111489"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946398"
 ---
 # <a name="icordebuginstancefieldsymbol-interface"></a>ICorDebugInstanceFieldSymbol インターフェイス
 インスタンス フィールドのデバッグ シンボル情報を表します。  

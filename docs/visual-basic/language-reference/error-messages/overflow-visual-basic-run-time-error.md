@@ -5,11 +5,11 @@ f1_keywords:
 - vbrERRID_Overflow
 ms.assetid: c6a23279-3086-412a-bcff-ff8ed2cb8c6f
 ms.openlocfilehash: 63223a815e1c4ff8d4e0afbb6c732fff90aad465
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946550"
 ---
 # <a name="overflow-visual-basic-run-time-error"></a>オーバーフローしました。(Visual Basic ランタイム エラー)
 割り当てのターゲットの制限を超える割り当てしようとしたときに、オーバーフローが発生します。  

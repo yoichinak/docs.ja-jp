@@ -8,20 +8,20 @@ ms.assetid: eb6eac2e-45f4-4923-a32c-38f203da66df
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 09b2848619256a255cc27f0268d46e5e6db8cbe4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59083609"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949306"
 ---
 # <a name="interop-etw-events"></a>相互運用 ETW イベント
 <a name="top"></a> 相互運用イベントは、Microsoft intermediate language (MSIL) のスタブ生成とキャッシュに関する情報をキャプチャします。  
   
  このカテゴリは、次のイベントで構成されます。  
   
--   [ILStubGenerated イベント](#ilstubgenerated_event)  
+- [ILStubGenerated イベント](#ilstubgenerated_event)  
   
--   [ILStubCacheHit イベント](#ilstubcachehit_event)  
+- [ILStubCacheHit イベント](#ilstubcachehit_event)  
   
 <a name="ilstubgenerated_event"></a>   
 ## <a name="ilstubgenerated-event"></a>ILStubGenerated イベント  

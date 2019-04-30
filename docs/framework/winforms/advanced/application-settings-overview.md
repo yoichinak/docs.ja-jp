@@ -9,11 +9,11 @@ helpviewer_keywords:
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
 ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203627"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972420"
 ---
 # <a name="application-settings-overview"></a>アプリケーション設定の概要
 このトピックでは、アプリケーションとユーザーのために設定のデータを作成して格納する方法について説明します。  

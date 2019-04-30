@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 ms.assetid: 271b6889-3454-46ff-96ab-9feb15e742ee
 author: BrucePerlerMS
 ms.openlocfilehash: 83382a8375538acc04d293ee938a4e845d5e8820
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769035"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940453"
 ---
 # <a name="how-to-enable-wif-tracing"></a>方法: WIF トレースの有効化
 ## <a name="applies-to"></a>対象  
   
--   Microsoft® Windows® Identity Foundation (WIF)  
+- Microsoft® Windows® Identity Foundation (WIF)  
   
--   ASP.NET® Web フォーム  
+- ASP.NET® Web フォーム  
   
 ## <a name="summary"></a>まとめ  
  ここでは、ASP.NET アプリケーションの WIF トレースを有効にするための詳細な操作手順を示します。 また、トレース リスナーとログが正しく動作していることを確認するためにアプリケーションをテストする方法についても説明します。 ここでは、セキュリティ トークン サービス (STS) を作成するための詳細な手順については説明しません。代わりに、Identity and Access Tool に付属している開発用 STS を使用します。 開発用 STS はテスト用に用意されたもので、実際の認証は行いません。 このページの内容を完了するには、Identity and Access Tool をインストールする必要があります。 これは、次の場所からダウンロードできます。[Identity and Access Tool](https://go.microsoft.com/fwlink/?LinkID=245849)  
@@ -25,30 +25,30 @@ ms.locfileid: "59769035"
   
 ## <a name="contents"></a>目次  
   
--   目的  
+- 目的  
   
--   概要  
+- 概要  
   
--   手順の要約  
+- 手順の要約  
   
--   手順 1 – 簡単な ASP.NET Web フォーム アプリケーションの作成とトレースの有効化  
+- 手順 1 – 簡単な ASP.NET Web フォーム アプリケーションの作成とトレースの有効化  
   
--   手順 2 – ソリューションのテスト  
+- 手順 2 – ソリューションのテスト  
   
 ## <a name="objectives"></a>目的  
   
--   Identity and Access Tool の WIF および開発用 STS を使用する簡単な ASP.NET アプリケーションの作成  
+- Identity and Access Tool の WIF および開発用 STS を使用する簡単な ASP.NET アプリケーションの作成  
   
--   トレースの有効化と動作確認  
+- トレースの有効化と動作確認  
   
 ## <a name="overview"></a>概要  
  トレースすると、トークン、クッキー、クレーム、プロトコル メッセージなどを含む、さまざまな種類の WIF の問題をデバッグおよびトラブルシューティングすることができます。 WIF トレースは、WCF トレースに似ています。たとえば、トレースの詳細レベルを選択して、警告メッセージから全メッセージまで、すべてを表示させることができます。 WIF トレースは、**.xml** ファイル、またはサービス トレース ビューアー ツールを使用して表示できる **.svclog** ファイルで生成できます。 このツールにある、 **bin** Windows SDK のディレクトリのパスからコンピューターには、のインストールします。**C:\Program Files\Microsoft SDKs\Windows\v7.1\Bin\SvcTraceViewer.exe**.  
   
 ## <a name="summary-of-steps"></a>手順の要約  
   
--   手順 1 – 簡単な ASP.NET Web フォーム アプリケーションの作成とトレースの有効化  
+- 手順 1 – 簡単な ASP.NET Web フォーム アプリケーションの作成とトレースの有効化  
   
--   手順 2 – ソリューションのテスト  
+- 手順 2 – ソリューションのテスト  
   
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application-and-enable-tracing"></a>手順 1 – 簡単な ASP.NET Web フォーム アプリケーションの作成とトレースの有効化  
  この手順では、新しい ASP.NET Web フォーム アプリケーションを作成し、トレースを有効にするために *Web.config* ファイルを変更します。  

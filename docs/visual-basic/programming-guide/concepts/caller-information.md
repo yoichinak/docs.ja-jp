@@ -3,11 +3,11 @@ title: 呼び出し元情報 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 15d556eb-4d0c-4497-98a3-7f60abb7d6a1
 ms.openlocfilehash: 004cb003b6cf980f902d7625694e3d2fbfa5ee42
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826055"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951950"
 ---
 # <a name="caller-information-visual-basic"></a>呼び出し元情報 (Visual Basic)
 呼び出し元情報の属性を使用すると、メソッドへの呼び出し元に関する情報を取得できます。 ソース コードのファイル パス、ソース コードの行番号、および呼び出し元のメンバー名を取得できます。 この情報は、トレース、デバッグ、および診断ツールの作成に役立ちます。  
@@ -58,9 +58,9 @@ End Sub
 ### <a name="MEMBERNAMES"></a>メンバー名  
  `CallerMemberName` 属性を使用して、呼び出されたメソッドにメンバー名を `String` 引数として指定することを回避できます。 この方法を使用すると、**リファクタリングの名前の変更**で `String` 値が変更されないという問題が発生しなくなります。 この利点は、次のタスクで役立ちます。  
   
--   トレース ルーチンと診断ルーチンの使用。  
+- トレース ルーチンと診断ルーチンの使用。  
   
--   データ バインディング時の <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスの実装。 このインターフェイスを使用すると、オブジェクトのプロパティが、プロパティが変更されたことをデータ バインド コントロールに通知できます。これによって、このコントロールは、更新された情報を表示できます。 `CallerMemberName` 属性がない場合は、リテラルとしてプロパティ名を指定する必要があります。  
+- データ バインディング時の <xref:System.ComponentModel.INotifyPropertyChanged> インターフェイスの実装。 このインターフェイスを使用すると、オブジェクトのプロパティが、プロパティが変更されたことをデータ バインド コントロールに通知できます。これによって、このコントロールは、更新された情報を表示できます。 `CallerMemberName` 属性がない場合は、リテラルとしてプロパティ名を指定する必要があります。  
   
  次のグラフは、`CallerMemberName` 属性の使用時に返されるメンバー名を示します。  
   

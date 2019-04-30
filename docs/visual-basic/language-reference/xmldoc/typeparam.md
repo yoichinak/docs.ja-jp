@@ -6,11 +6,11 @@ helpviewer_keywords:
 - <typeparam> XML tag
 ms.assetid: 1bb5ba78-f060-478c-905c-77a2e43639af
 ms.openlocfilehash: 014623be84f9d7eb8a25ac4aadcce450f158c154
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827238"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940752"
 ---
 # <a name="typeparam-visual-basic"></a>\<typeparam > (Visual Basic)
 型パラメーターの名前と説明を定義します。  

@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 4970130ede0c96c645129ee6c8c7d54cb1114042
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57212184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61959387"
 ---
 # <a name="event-grid"></a>イベント グリッド
 
@@ -110,7 +110,7 @@ Event Grid の使用の大きな利点は、Azure によって生成された自
 | | Microsoft.Resources.ResourceDeleteFailure | リソースの削除操作が失敗したときに発生します。 |
 | | Microsoft.Resources.ResourceDeleteCancel | リソースの削除操作が取り消されたときに発生します。 このイベントは、テンプレートのデプロイが取り消されたときに発生します。 |
 
-詳細については、[Azure Event Grid イベント スキーマ](https://docs.microsoft.com/azure/event-grid/event-schema)を参照してください。
+詳細については、次を参照してください。 [Azure Event Grid イベント スキーマ](https://docs.microsoft.com/azure/event-grid/event-schema)します。
 
 Event Grid は、あらゆる種類のオンプレミスで実行されるものも含めて、アプリケーションからアクセスできます。
 

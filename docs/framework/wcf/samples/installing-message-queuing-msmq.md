@@ -3,11 +3,11 @@ title: メッセージ キュー (MSMQ) のインストール
 ms.date: 03/30/2017
 ms.assetid: 7ddcd497-3e04-427e-bc04-3610ad98b01e
 ms.openlocfilehash: 64736f8f0a34a53658dd2838738a3d36b3891d2d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954948"
 ---
 # <a name="installing-message-queuing-msmq"></a>メッセージ キュー (MSMQ) のインストール
 メッセージ キュー 4.0 およびメッセージ キュー 3.0 をインストールする方法を次の手順に示します。  
@@ -37,9 +37,9 @@ ms.locfileid: "59305092"
   
 3. [Microsoft Message Queue (MSMQ) Server]、[Microsoft Message Queue (MSMQ) Server Core] の順に展開して、インストールする次のメッセージ キュー機能のチェック ボックスをオンにします。  
   
-    -   [MSMQ Active Directory Domain Services Integration] (ドメインに参加するコンピューターの場合)  
+    - [MSMQ Active Directory Domain Services Integration] (ドメインに参加するコンピューターの場合)  
   
-    -   [MSMQ HTTP サポート]  
+    - [MSMQ HTTP サポート]  
   
 4. **[OK]** をクリックします。  
   

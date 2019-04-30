@@ -9,11 +9,11 @@ helpviewer_keywords:
 - detecting whether the WPF plug-in for Firefox is installed [WPF]
 ms.assetid: 5f839373-e3fb-44f1-88ad-4a0761f02189
 ms.openlocfilehash: 138c212e79654b8ac875628692b49bb6a38cb695
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57469314"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947876"
 ---
 # <a name="how-to-detect-whether-the-wpf-plug-in-for-firefox-is-installed"></a>方法: Firefox に対応した WPF プラグインがインストールされているかどうかを確認する
 

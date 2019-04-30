@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 6998be3daf0ab6a6290a3400b96c32227df3e022
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59175092"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942377"
 ---
 # <a name="icordebugobjectenumnext-method"></a>ICorDebugObjectEnum::Next メソッド
 列挙体の現在位置から指定した数のオブジェクトの相対仮想アドレス (Rva) を取得します。  

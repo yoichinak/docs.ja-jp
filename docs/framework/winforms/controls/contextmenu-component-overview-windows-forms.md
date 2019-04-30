@@ -10,10 +10,10 @@ helpviewer_keywords:
 ms.assetid: 49d6398f-d3c4-4679-84fa-1de07b68b05e
 ms.openlocfilehash: 2acbcc9197a630a993471c22e572a4f3ed682c64
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975144"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956053"
 ---
 # <a name="contextmenu-component-overview-windows-forms"></a>ContextMenu コンポーネントの概要 (Windows フォーム)
 > [!IMPORTANT]

@@ -11,11 +11,11 @@ helpviewer_keywords:
 - Subclass attribute in XAML [XAML Services]
 ms.assetid: 99f66072-8107-4362-ab99-8171dc83b469
 ms.openlocfilehash: 850fe8acf9e47149bd385e78b30e04ba77d7a8b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59140791"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938867"
 ---
 # <a name="xsubclass-directive"></a>x:Subclass ディレクティブ
 XAML マークアップのコンパイルの動作を変更するときに`x:Class`も提供されます。 基づいている部分クラスを作成する代わりに`x:Class`、提供されている`x:Class`は中間のクラスとして作成し、指定された派生クラスをベースにする予定ですし`x:Class`。  
@@ -32,7 +32,7 @@ XAML マークアップのコンパイルの動作を変更するときに`x:Cla
   
 |||  
 |-|-|  
-|`namespace`|省略可能です。 含む CLR 名前空間を指定します`classname`します。 場合`namespace`を指定すると、ドット (.) で区切られます`namespace`と`classname`します。|  
+|`namespace`|任意。 含む CLR 名前空間を指定します`classname`します。 場合`namespace`を指定すると、ドット (.) で区切られます`namespace`と`classname`します。|  
 |`classname`|必須。 読み込まれた XAML およびその XAML の分離コードで接続する部分クラスの CLR 名を指定します。 「解説」を参照してください。|  
 |`subclassNamespace`|省略可能です。 異なっていてもかまいません`namespace`他の各名前空間を解決できない場合。 含む CLR 名前空間を指定します`subclassName`します。 場合`subclassName`を指定すると、ドット (.) で区切られます`subclassNamespace`と`subclassName`します。|  
 |`subclassName`|必須。 サブクラスの CLR 名を指定します。|  

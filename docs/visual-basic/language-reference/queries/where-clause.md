@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Where clause [Visual Basic]
 ms.assetid: 48b5c2c5-3181-429c-8545-894296798c89
 ms.openlocfilehash: 5632e69039baebb3d1f1fd90c04586d9e50fe40f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58834505"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945211"
 ---
 # <a name="where-clause-visual-basic"></a>Where 句 (Visual Basic)
 クエリのフィルター処理条件を指定します。  

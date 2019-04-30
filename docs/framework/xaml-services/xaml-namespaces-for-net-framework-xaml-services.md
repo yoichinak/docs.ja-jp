@@ -3,11 +3,11 @@ title: .NET Framework XAML サービス用の XAML 名前空間
 ms.date: 03/30/2017
 ms.assetid: e4f15f13-c420-4c1e-aeab-9b6f50212047
 ms.openlocfilehash: dc2c424306b9ebd705f2541266e4b1e3afe94547
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59153557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938776"
 ---
 # <a name="xaml-namespaces-for-net-framework-xaml-services"></a>.NET Framework XAML サービス用の XAML 名前空間
 XAML 名前空間は、XML 名前空間の定義を拡張する概念です。 XML 名前空間と同様に、定義できますを使用して XAML 名前空間、`xmlns`マークアップ内の属性。 XAML 名前空間は、XAML ノード ストリームでその他の XAML サービス Api も表記されます。 このトピックでは、XAML 名前空間の概念を定義し、XAML 名前空間を定義することができますおよび XAML スキーマ コンテキストやその他のさまざまな .NET Framework XAML サービスで使用する方法について説明します。  
@@ -51,7 +51,7 @@ XAML 名前空間は、XML 名前空間の定義を拡張する概念です。 X
   
  または、XAML 型システムへの他のアクセスにより、XAML ノード ストリームの一部としての XAML 名前空間の情報が見つかった場合<xref:System.Xaml.NamespaceDeclaration.Namespace%2A?displayProperty=nameWithType>XAML 名前空間の識別子を報告および<xref:System.Xaml.NamespaceDeclaration.Prefix%2A?displayProperty=nameWithType>XAML 名前空間プレフィックスを報告します。  
   
- XAML ノード ストリームで XAML 名前空間の情報は、それを適用するエンティティの前にある XAML ノードとして表示できます。これには、XAML 名前空間の情報が XAML ルート要素の `StartObject`の前にある場合も含まれます。 詳細については、「 [XAML ノード ストリームの構造と概念について](understanding-xaml-node-stream-structures-and-concepts.md)」を参照してください。  
+ XAML ノード ストリームで XAML 名前空間の情報は、それを適用するエンティティの前にある XAML ノードとして表示できます。 XAML 名前空間の情報がよりも前の場合など、`StartObject`の XAML ルート要素。 詳細については、「 [Understanding XAML Node Stream Structures and Concepts](understanding-xaml-node-stream-structures-and-concepts.md)」を参照してください。  
   
  .NET Framework XAML サービス API を使用する多くのシナリオでは、存在しますが、少なくとも 1 つの XAML 名前空間宣言が必要ですし、宣言は必要がありますが含まれているか、XAML スキーマ コンテキストで必要な情報を参照してください。 XAML 名前空間は、アセンブリを読み込む、または名前空間と既に読み込まれてまたは XAML スキーマ コンテキストで認識されているアセンブリ内の特定の型の解決に役立つを指定する必要がありますか。  
   

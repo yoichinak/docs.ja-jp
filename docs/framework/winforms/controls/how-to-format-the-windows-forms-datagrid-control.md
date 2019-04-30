@@ -15,11 +15,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: a50fcc3b-8abf-47ec-9029-7f268af4ddb1
 ms.openlocfilehash: 8e5c41d6f146e6abef8d7670e6191b587ac86c92
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336123"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941363"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールの書式を設定する
 > [!NOTE]

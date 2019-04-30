@@ -7,11 +7,11 @@ helpviewer_keywords:
 - events [WPF], how-to topics
 ms.assetid: 00463181-36eb-4be0-bfa2-452854cce642
 ms.openlocfilehash: 54c69e57efb99f5008d5fa5a21f748cd8e535afe
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962444"
 ---
 # <a name="events-how-to-topics"></a>イベントに関する「方法」トピック
 このセクションのトピックでは、WPF でイベントを使用する方法について説明します。  

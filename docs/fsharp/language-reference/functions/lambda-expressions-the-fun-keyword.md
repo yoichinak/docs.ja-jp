@@ -3,11 +3,11 @@ title: ラムダ式:Fun キーワード
 description: 使用する方法について説明します、F#匿名関数は、ラムダ式を定義する '楽しい' キーワード。
 ms.date: 05/16/2016
 ms.openlocfilehash: 6ad15173bb8643bff330e3ca3823cba5d43ad445
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53614464"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941025"
 ---
 # <a name="lambda-expressions-the-fun-keyword-f"></a>ラムダ式:Fun キーワード (F#)
 

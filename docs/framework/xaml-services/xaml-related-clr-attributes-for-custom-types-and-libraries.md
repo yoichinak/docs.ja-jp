@@ -5,11 +5,11 @@ helpviewer_keywords:
 - CLR attributes for custom types [XAML Services]
 ms.assetid: 5dfb299a-b6e2-41b8-8694-e6ac987547f1
 ms.openlocfilehash: ace1b40b25bd12ff7092459e468a90f382434bf4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59086211"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938763"
 ---
 # <a name="xaml-related-clr-attributes-for-custom-types-and-libraries"></a>カスタム型およびライブラリの XAML 関連の CLR 属性
 このトピックでは、.NET Framework XAML サービスで定義されている共通言語ランタイム (CLR) の属性について説明します。 他の CLR 属性、.NET Framework で定義されているアセンブリまたは型へのアプリケーションの XAML に関連するシナリオについても説明します。 これらの CLR 属性を持つアセンブリ、型、またはメンバーの属性型に関連する XAML 型システム情報を提供します。 XAML ノード ストリームを直接処理するため、または専用の XAML リーダーと XAML ライターでは、.NET Framework XAML サービスを使用するすべての XAML のコンシューマーに情報が提供されます。  
@@ -81,7 +81,7 @@ ms.locfileid: "59086211"
   
  **引数:** A<xref:System.Type>として期待する最も正確な型を指定する、`ProvideValue`属性付きの結果<xref:System.Windows.Markup.MarkupExtension>します。  
   
-詳細については、[XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md) を参照してください。
+ 詳細については、次を参照してください。 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)します。  
   
 ### <a name="namescopepropertyattribute"></a>NameScopePropertyAttribute  
  **リファレンス ドキュメント。**  <xref:System.Windows.Markup.NameScopePropertyAttribute>  
@@ -90,9 +90,9 @@ ms.locfileid: "59086211"
   
  **引数:** 2 つの属性の形式をサポートしています。  
   
--   属性付く型のプロパティの名前を指定する文字列。  
+- 属性付く型のプロパティの名前を指定する文字列。  
   
--   プロパティの名前を指定する文字列と<xref:System.Type>名前付きプロパティを定義する型。 このフォームでは、XAML 名前スコープのプロパティとして、アタッチ可能なメンバーを指定するためです。  
+- プロパティの名前を指定する文字列と<xref:System.Type>名前付きプロパティを定義する型。 このフォームでは、XAML 名前スコープのプロパティとして、アタッチ可能なメンバーを指定するためです。  
   
  <xref:System.Windows.Markup.NameScopePropertyAttribute> 属性付きクラスの XAML 名前スコープの値を提供するプロパティを指定します。 実装するオブジェクトを参照する XAML 名前スコープのプロパティが期待どおり<xref:System.Windows.Markup.INameScope>し、実際の XAML 名前スコープ、そのストアとその動作を保持します。  
   
@@ -219,9 +219,9 @@ ms.locfileid: "59086211"
   
  **引数:**  
   
--   包含する XAML 名前空間の識別子を指定する文字列。  
+- 包含する XAML 名前空間の識別子を指定する文字列。  
   
--   前の引数から XAML 名前空間を包含できる XAML 名前空間の識別子を指定する文字列。  
+- 前の引数から XAML 名前空間を包含できる XAML 名前空間の識別子を指定する文字列。  
   
  <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute> XAML 名前空間を別の XAML 名前空間によって包括できることを指定します。 通常、包含する側の XAML 名前空間は、あらかじめ定義した <xref:System.Windows.Markup.XmlnsDefinitionAttribute> で示されます。 この方法は、以前に定義されたマークアップに対して以前のバージョン管理されたボキャブラリとの互換性には、ライブラリでは、XAML ボキャブラリのバージョン管理に使用します。  
   
@@ -230,40 +230,40 @@ ms.locfileid: "59086211"
   
  **引数:**  
   
--   定義する XAML 名前空間の識別子を指定する文字列。  
+- 定義する XAML 名前空間の識別子を指定する文字列。  
   
--   CLR 名前空間の名前を示す文字列。 CLR 名前空間は、独自のアセンブリでパブリック型を定義する必要があり、CLR 名前空間の型の少なくとも 1 つを XAML の使用状況を想定する必要があります。  
+- CLR 名前空間の名前を示す文字列。 CLR 名前空間は、独自のアセンブリでパブリック型を定義する必要があり、CLR 名前空間の型の少なくとも 1 つを XAML の使用状況を想定する必要があります。  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> XAML 名前空間と CLR 名前空間は、XAML オブジェクト ライターまたは XAML スキーマ コンテキストによって使用される型の解決し、アセンブリごとに、マッピングを指定します。  
   
  1 つ以上<xref:System.Windows.Markup.XmlnsDefinitionAttribute>をアセンブリに適用できます。 これは、次の理由の任意の組み合わせの実行可能性があります。  
   
--   ライブラリ デザインには、実行時に API アクセス; の論理構造の複数の CLR 名前空間が含まれています。ただし、それらの名前空間内のすべての型と同じ XAML 名前空間を参照することによって XAML-使用できるようにします。 この場合は、いくつか適用<xref:System.Windows.Markup.XmlnsDefinitionAttribute>属性を使用して同じ<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>値しますが、異なる<xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A>値。 これは、アプリケーション、フレームワークは、一般的な使用方法の既定の XAML 名前空間を意図している XAML 名前空間のマッピングを定義する場合に特に便利です。  
+- ライブラリ デザインには、実行時に API アクセス; の論理構造の複数の CLR 名前空間が含まれています。ただし、それらの名前空間内のすべての型と同じ XAML 名前空間を参照することによって XAML-使用できるようにします。 この場合は、いくつか適用<xref:System.Windows.Markup.XmlnsDefinitionAttribute>属性を使用して同じ<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>値しますが、異なる<xref:System.Windows.Markup.XmlnsDefinitionAttribute.ClrNamespace%2A>値。 これは、アプリケーション、フレームワークは、一般的な使用方法の既定の XAML 名前空間を意図している XAML 名前空間のマッピングを定義する場合に特に便利です。  
   
--   ライブラリ デザインには、複数の CLR 名前空間が含まれていますが、その CLR 名前空間の型の使用状況の間で意図的な XAML 名前空間の分離をたいとします。  
+- ライブラリ デザインには、複数の CLR 名前空間が含まれていますが、その CLR 名前空間の型の使用状況の間で意図的な XAML 名前空間の分離をたいとします。  
   
--   アセンブリの CLR 名前空間を定義して、1 つ以上の XAML 名前空間を介してアクセスできるようにします。 このシナリオでは、同じコードベースで複数のボキャブラリをサポートしているときに発生します。  
+- アセンブリの CLR 名前空間を定義して、1 つ以上の XAML 名前空間を介してアクセスできるようにします。 このシナリオでは、同じコードベースで複数のボキャブラリをサポートしているときに発生します。  
   
--   XAML 言語のサポートは、1 つまたは複数の CLR 名前空間で定義します。 これらの場合、<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>値は`http://schemas.microsoft.com/winfx/2006/xaml`します。  
+- XAML 言語のサポートは、1 つまたは複数の CLR 名前空間で定義します。 これらの場合、<xref:System.Windows.Markup.XmlnsDefinitionAttribute.XmlNamespace%2A>値は`http://schemas.microsoft.com/winfx/2006/xaml`します。  
   
 ### <a name="xmlnsprefixattribute"></a>XmlnsPrefixAttribute  
  **リファレンス ドキュメント。**  <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
  **引数:**  
   
--   XAML 名前空間の識別子を指定する文字列。  
+- XAML 名前空間の識別子を指定する文字列。  
   
--   推奨されるプレフィックスを指定する文字列。  
+- 推奨されるプレフィックスを指定する文字列。  
   
  <xref:System.Windows.Markup.XmlnsDefinitionAttribute> XAML 名前空間を使用する推奨されるプレフィックスを指定します。 プレフィックスは、.NET Framework XAML サービスによってシリアル化される XAML ファイルで要素と属性を記述するときに便利です<xref:System.Xaml.XamlXmlWriter>、または XAML を実装するライブラリを XAML を持つデザイン環境で操作するときの機能を編集します。  
   
  1 つ以上<xref:System.Windows.Markup.XmlnsPrefixAttribute>をアセンブリに適用できます。 これは、次の理由の任意の組み合わせの実行可能性があります。  
   
--   アセンブリは、1 つ以上の XAML 名前空間の種類を定義します。 この場合は XAML 名前空間ごとに別のプレフィックス値を定義する必要があります。  
+- アセンブリは、1 つ以上の XAML 名前空間の種類を定義します。 この場合は XAML 名前空間ごとに別のプレフィックス値を定義する必要があります。  
   
--   複数のボキャブラリをサポートしているし、ボキャブラリおよび XAML 名前空間ごとに異なるプレフィックスを使用します。  
+- 複数のボキャブラリをサポートしているし、ボキャブラリおよび XAML 名前空間ごとに異なるプレフィックスを使用します。  
   
--   アセンブリに XAML 言語のサポートを定義している、<xref:System.Windows.Markup.XmlnsDefinitionAttribute>の`http://schemas.microsoft.com/winfx/2006/xaml`します。 この場合、通常必要がありますを昇格するプレフィックス`x`します。  
+- アセンブリに XAML 言語のサポートを定義している、<xref:System.Windows.Markup.XmlnsDefinitionAttribute>の`http://schemas.microsoft.com/winfx/2006/xaml`します。 この場合、通常必要がありますを昇格するプレフィックス`x`します。  
   
 > [!NOTE]
 >  .NET framework XAML サービスでは、XAML 関連の属性も定義します<xref:System.Windows.Markup.RootNamespaceAttribute>します。 この属性は、プロジェクト システム サポートについては、アセンブリ レベル属性と、XAML のカスタム型に関係はありません。  

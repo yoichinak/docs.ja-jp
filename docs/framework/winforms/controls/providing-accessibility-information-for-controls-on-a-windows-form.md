@@ -7,24 +7,24 @@ helpviewer_keywords:
 - accessibility [Windows Forms], Windows Forms controls
 ms.assetid: 887dee6f-5059-4d57-957d-7c6fcd4acb10
 ms.openlocfilehash: 0f589f37d79c9ec8d55153aac4c846726a379055
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61948020"
 ---
 # <a name="providing-accessibility-information-for-controls-on-a-windows-form"></a>Windows フォーム上のコントロールのユーザー補助情報の提供
 ユーザー補助機能は専用のプログラムおよびデバイスで、障碍を持つユーザーがコンピューターをより効果的に使用するよう助けます。 たとえば、視覚障碍者のためのスクリーン リーダーや、マウスまたはキーボードではなく音声コマンド入力を利用するユーザーのための音声入力ユーティリティがあります。 これらのユーザー補助機能は、Windows フォーム コントロールによって公開されているアクセシビリティのプロパティと連携します。 これらのプロパティとは:  
   
--   **AccessibilityObject**  
+- **AccessibilityObject**  
   
--   **AccessibleDefaultActionDescription**  
+- **AccessibleDefaultActionDescription**  
   
--   **AccessibleDescription**  
+- **AccessibleDescription**  
   
--   **AccessibleName**  
+- **AccessibleName**  
   
--   **AccessibleRole**  
+- **AccessibleRole**  
   
 ## <a name="accessibilityobject-property"></a>AccessibilityObject プロパティ  
  この読み取り専用プロパティには <xref:System.Windows.Forms.AccessibleObject> インスタンスが含まれます。 **AccessibleObject** は、コントロールの説明、画面上の位置、ナビゲーション能力、および値に関する情報を提供する <xref:Accessibility.IAccessible> インターフェイスを実装します。 デザイナーは、コントロールがフォームに追加されたときにこの値を設定します。  

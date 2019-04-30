@@ -3,11 +3,11 @@ title: System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished
 ms.date: 03/30/2017
 ms.assetid: e0f1d5dc-92eb-42f9-8786-89cb8d4f22e6
 ms.openlocfilehash: efa26a50185464760ccc2f9eef6ce07e240f4c44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152010"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938997"
 ---
 # <a name="systemservicemodelcomintegrationcomintegrationtlbimportfinished"></a>System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished
 System.ServiceModel.ComIntegration.ComIntegrationTLBImportFinished  

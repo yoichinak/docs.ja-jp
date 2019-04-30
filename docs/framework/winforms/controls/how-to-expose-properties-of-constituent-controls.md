@@ -11,11 +11,11 @@ helpviewer_keywords:
 - constituent controls
 ms.assetid: 5c1ec98b-aa48-4823-986e-4712551cfdf1
 ms.openlocfilehash: 44b96218e674c754a1985f2f22a36707cd1776b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294913"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61941376"
 ---
 # <a name="how-to-expose-properties-of-constituent-controls"></a>方法: 内在コントロールのプロパティを公開する
 複合コントロールを構成するコントロールが呼び出される*内在コントロール*します。 これらのコントロールは通常プライベートで宣言されており、そのため、開発者がアクセスできません。 今後のユーザーにこれらのコントロールのプロパティを使用できるようにする場合は、ユーザーに公開する必要があります。 ユーザー コントロールでプロパティを作成して使用内在コントロールのプロパティを公開、`get`と`set`内在コントロールのプライベート プロパティの変更を有効にするためのプロパティのアクセサー。  

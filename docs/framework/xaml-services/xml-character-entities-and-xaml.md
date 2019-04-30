@@ -21,11 +21,11 @@ helpviewer_keywords:
 - less-than (<) character [XAML Services]
 ms.assetid: 6896d0ce-74f7-420a-9ab4-de9bbf390e8d
 ms.openlocfilehash: b4621da21200e6c9e2b174a0e2ba508a4f6bab92
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228199"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938711"
 ---
 # <a name="xml-character-entities-and-xaml"></a>XML 文字エンティティと XAML
 XAML は、特殊文字に、XML で定義される文字エンティティを使用します。 ここでは、いくつかの特定の文字エンティティ、および XAML における他の XML の概念に関する一般的な考慮事項について説明します。  
@@ -34,7 +34,7 @@ XAML は、特殊文字に、XML で定義される文字エンティティを�
 ## <a name="character-entities-and-escaping-issues-that-are-unique-to-xaml"></a>XAML に固有の文字のエンティティとエスケープの問題  
  XAML マークアップでは、一般に、XML で定義されているものと同じ文字エンティティおよびエスケープ シーケンスを使用します。  
   
- 大きな違いは、XAML では中かっこ ({ と }) が意味を持つ点です。中かっこで囲まれた文字シーケンスは、マークアップ拡張機能として解釈する必要があることを XAML プロセッサに通知します。 マークアップ拡張機能について詳しくは、「 [XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)」をご覧ください。  
+ 大きな違いは、XAML では中かっこ ({ と }) が意味を持つ点です。中かっこで囲まれた文字シーケンスは、マークアップ拡張機能として解釈する必要があることを XAML プロセッサに通知します。 マークアップ拡張機能について詳しくは、「 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)」をご覧ください。  
   
  ただし、XML ではなく XAML に固有のエスケープ シーケンスを使用すると、中かっこをリテラル文字として表示できます。 詳細については、次を参照してください。 [ {}エスケープ シーケンス/マークアップ拡張](escape-sequence-markup-extension.md)します。  
   

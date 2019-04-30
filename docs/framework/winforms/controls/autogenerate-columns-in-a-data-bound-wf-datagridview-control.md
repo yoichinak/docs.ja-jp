@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
 ms.openlocfilehash: 4490a24047f5cce1328d68c529783a1d7692ff32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59165998"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954311"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>方法: データバインドされた Windows フォーム DataGridView コントロールに列を自動生成する
 次のコード例は、バインドされたデータ ソースから列を表示する方法を示します、<xref:System.Windows.Forms.DataGridView>コントロール。 ときに、<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>プロパティの値が`true`(既定)、<xref:System.Windows.Forms.DataGridViewColumn>データ ソース テーブル内の各列が作成されます。  
@@ -28,11 +28,11 @@ ms.locfileid: "59165998"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   `customersDataGridView` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- `customersDataGridView` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   
--   A<xref:System.Data.DataSet>という名前のオブジェクト`customersDataSet`という名前のテーブルを持つ`Customers`します。  
+- A<xref:System.Data.DataSet>という名前のオブジェクト`customersDataSet`という名前のテーブルを持つ`Customers`します。  
   
--   <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、<xref:System.Data?displayProperty=nameWithType>、および <xref:System.Xml?displayProperty=nameWithType> の各アセンブリへの参照。  
+- <xref:System?displayProperty=nameWithType>、<xref:System.Windows.Forms?displayProperty=nameWithType>、<xref:System.Data?displayProperty=nameWithType>、および <xref:System.Xml?displayProperty=nameWithType> の各アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 

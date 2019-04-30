@@ -5,11 +5,11 @@ ms.assetid: f738a6ed-7cd9-4106-a5cd-355481e5771c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: a8305d0a562fd90e3fae32e372b663ca3942d2a4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080853"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61940141"
 ---
 # <a name="isymunmanagedasyncmethodpropertieswriterdefineasyncstepinfo-method"></a>ISymUnmanagedAsyncMethodPropertiesWriter::DefineAsyncStepInfo メソッド
 非同期のグループを定義、現在のメソッドでの操作を待機します。  

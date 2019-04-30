@@ -3,11 +3,11 @@ title: CacheMetadata を使用したデータの公開
 ms.date: 03/30/2017
 ms.assetid: 34832f23-e93b-40e6-a80b-606a855a00d9
 ms.openlocfilehash: a044c896e56541ee954fc33853376eb8293c6ede
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57482679"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945705"
 ---
 # <a name="exposing-data-with-cachemetadata"></a>CacheMetadata を使用したデータの公開
 
@@ -15,8 +15,7 @@ ms.locfileid: "57482679"
 
 ## <a name="default-cachemetadata-behavior"></a>CacheMetadata の既定の動作
 
-
-  <xref:System.Activities.NativeActivity.CacheMetadata%2A> から派生したアクティビティの <xref:System.Activities.NativeActivity> の既定の実装は、次のメソッド型を以下の方法で処理します。
+<xref:System.Activities.NativeActivity.CacheMetadata%2A> から派生したアクティビティの <xref:System.Activities.NativeActivity> の既定の実装は、次のメソッド型を以下の方法で処理します。
 
 - <xref:System.Activities.InArgument%601>、 <xref:System.Activities.OutArgument%601>、または<xref:System.Activities.InOutArgument%601>(ジェネリック引数)。これらの引数では、名前を引数としてランタイムに公開され、公開されているプロパティ名と型、引数の方向、およびいくつかの検証データに入力します。
 
@@ -32,8 +31,7 @@ ms.locfileid: "57482679"
 
 - <xref:System.Collections.ICollection> 型の<xref:System.Activities.ActivityDelegate>:コレクション内のすべての要素は、パブリック デリゲートとしてランタイムに公開されます。
 
-
-  <xref:System.Activities.Activity.CacheMetadata%2A>、<xref:System.Activities.Activity>、および <xref:System.Workflow.Activities.CodeActivity> から派生したアクティビティの <xref:System.Activities.AsyncCodeActivity> も次の相違点を除いて前述と同様に機能します。
+<xref:System.Activities.Activity.CacheMetadata%2A>、<xref:System.Activities.Activity>、および <xref:System.Workflow.Activities.CodeActivity> から派生したアクティビティの <xref:System.Activities.AsyncCodeActivity> も次の相違点を除いて前述と同様に機能します。
 
 - <xref:System.Activities.Activity> から派生したクラスは子アクティビティまたはデリゲートをスケジュールできないため、これらのメンバーはインポートされた子およびデリゲートとして公開されます。
 

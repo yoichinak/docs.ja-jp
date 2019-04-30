@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_SCNotSupported
 ms.assetid: 197d17cb-2904-4e12-8e45-aba23bddec8c
 ms.openlocfilehash: c9b2483ca51982d93f746d23d996d552a621c64d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320250"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61942624"
 ---
 # <a name="this-system-does-not-contain-support-for-the-simplifiedchinese-locale"></a>このシステムには、簡体字中国語ロケールのサポートは含まれていません。
 `VbStrConv.SimplifiedChinese` 列挙型メンバーを使用しようとしましたが、システムは簡体字中国語ロケールをサポートしていません。  

@@ -3,11 +3,11 @@ title: 動作クラス
 ms.date: 03/30/2017
 ms.assetid: 75d117f5-87f9-40fb-84c6-9e2fef6da6af
 ms.openlocfilehash: 7c7c25e63677ca2b48a5df18892d2e8ab946ad08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59769672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61964243"
 ---
 # <a name="behavior-class"></a>動作クラス
 ## <a name="syntax"></a>構文  

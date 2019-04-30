@@ -3,11 +3,11 @@ title: 宣言の制約
 ms.date: 03/30/2017
 ms.assetid: 67001ed1-7f4d-4ada-ae57-a31176901a53
 ms.openlocfilehash: e3ced8f6f88d698273ace5c8b74fe90b94fa9720
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708151"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945822"
 ---
 # <a name="declarative-constraints"></a>宣言の制約
 宣言の制約には、アクティビティ、およびそのアクティビティと他のアクティビティとの関係に関する検証の強力なメソッドが用意されています。 アクティビティに関する制約はプロセスの作成中に構成されますが、ワークフロー ホストによって追加の制約を指定することもできます。 ここでは、宣言の制約を使用してアクティビティを検証する方法の概要について説明します。  
@@ -63,8 +63,7 @@ public sealed class SampleActivity : CodeActivity
 
 複数の検証アクティビティが使用できます。これにより検証されるアクティビティに関連してワークフロー内の他のアクティビティに関する情報が提供されます。 <xref:System.Activities.Validation.GetParentChain> は現在のアクティビティとルート アクティビティ間のすべてのアクティビティを含むアクティビティのコレクションを返します。 <xref:System.Activities.Validation.GetChildSubtree> は再帰パターンで子アクティビティを含むアクティビティのコレクションを提供し、<xref:System.Activities.Validation.GetWorkflowTree> はワークフロー中のすべてのアクティビティを取得します。  
   
-次の例では、 `CreateState` アクティビティを定義します。 
-  `CreateState` アクティビティは `CreateCountry` アクティビティ内に含まれる必要があり、`GetParent` メソッドはこの要件を強制する制約を返します。 `GetParent` は <xref:System.Activities.Validation.GetParentChain> アクティビティを <xref:System.Activities.Statements.ForEach%601> アクティビティと組み合わせて使用し、`CreateState` のアクティビティの親アクティビティを確認し、要件を満たしているかどうか判断します。  
+次の例では、 `CreateState` アクティビティを定義します。 `CreateState` アクティビティは `CreateCountry` アクティビティ内に含まれる必要があり、`GetParent` メソッドはこの要件を強制する制約を返します。 `GetParent` は <xref:System.Activities.Validation.GetParentChain> アクティビティを <xref:System.Activities.Statements.ForEach%601> アクティビティと組み合わせて使用し、`CreateState` のアクティビティの親アクティビティを確認し、要件を満たしているかどうか判断します。  
   
 ```csharp  
 public sealed class CreateState : CodeActivity  
@@ -177,4 +176,4 @@ else
 }  
 ```  
   
- <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> の <xref:System.Activities.Validation.ValidationSettings> プロパティが `true` の場合、<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> を呼び出すことで検証が開始されると、指定した追加の制約のみが評価されます。 これは、特定の検証の構成についてワークフローを調べる場合に役立ちます。 ただし、ワークフローを呼び出すときに、ワークフロー内で構成されている検証ロジックが評価され、ワークフローが正常に開始するようにこれに合格する必要があります。 検証の呼び出しの詳細については、[アクティビティの検証を呼び出す](invoking-activity-validation.md)を参照してください。
+ <xref:System.Activities.Validation.ValidationSettings.OnlyUseAdditionalConstraints%2A> の <xref:System.Activities.Validation.ValidationSettings> プロパティが `true` の場合、<xref:System.Activities.Validation.ActivityValidationServices.Validate%2A> を呼び出すことで検証が開始されると、指定した追加の制約のみが評価されます。 これは、特定の検証の構成についてワークフローを調べる場合に役立ちます。 ただし、ワークフローを呼び出すときに、ワークフロー内で構成されている検証ロジックが評価され、ワークフローが正常に開始するようにこれに合格する必要があります。 検証の呼び出しの詳細については、次を参照してください。[アクティビティの検証を呼び出す](invoking-activity-validation.md)します。

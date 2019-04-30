@@ -3,11 +3,11 @@ title: '方法: 式ツリーを使用して動的クエリ (Visual Basic) を作
 ms.date: 07/20/2015
 ms.assetid: 16278787-7532-4b65-98b2-7a412406c4ee
 ms.openlocfilehash: 2f91d95f888ab98902cc300afb61c41b62e64050
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58827680"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966219"
 ---
 # <a name="how-to-use-expression-trees-to-build-dynamic-queries-visual-basic"></a>方法: 式ツリーを使用して動的クエリ (Visual Basic) を作成するには
 LINQ では、<xref:System.Linq.IQueryable%601> を実装するデータ ソースをターゲットとする構造化されたクエリを表すために、式ツリーが使われます。 たとえば、LINQ プロバイダーは、リレーショナル データ ストアのクエリを行うために、<xref:System.Linq.IQueryable%601> インターフェイスを実装します。 Visual Basic コンパイラでは、実行時に式ツリーをビルドするコードにこのようなデータ ソースをターゲットとするクエリをコンパイルします。 クエリ プロバイダーは式ツリー データ構造を走査して、データ ソースに適したクエリ言語に変換できます。  
@@ -101,13 +101,13 @@ Next
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   新しい**コンソール アプリケーション** プロジェクトを作成します。  
+- 新しい**コンソール アプリケーション** プロジェクトを作成します。  
   
--   System.Core.dll がまだ参照されていない場合は、参照を追加します。  
+- System.Core.dll がまだ参照されていない場合は、参照を追加します。  
   
--   System.Linq.Expressions 名前空間をインクルードします。  
+- System.Linq.Expressions 名前空間をインクルードします。  
   
--   例からコードをコピーして貼り付けます、 `Main` `Sub`プロシージャ。  
+- 例からコードをコピーして貼り付けます、 `Main` `Sub`プロシージャ。  
   
 ## <a name="see-also"></a>関連項目
 

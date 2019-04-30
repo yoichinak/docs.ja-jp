@@ -11,11 +11,11 @@ helpviewer_keywords:
 - x:XData XAML directive element [XAML Services]
 ms.assetid: 7ce209c2-621b-4977-b643-565f7e663534
 ms.openlocfilehash: c8044bc341ded6ef7b03bbdf701e724654460d54
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61938828"
 ---
 # <a name="xxdata-intrinsic-xaml-type"></a>x:XData 組み込み XAML 型
 XAML の運用環境での XML データ アイランドの配置を有効にします。 内の XML 要素`x:XData`が動作する既定の XAML 名前空間の一部かその他の XAML 名前空間かのように XAML プロセッサで扱うことはできません。 `x:XData` 任意の整形式 XML を含めることができます。  
@@ -35,7 +35,7 @@ XAML の運用環境での XML データ アイランドの配置を有効にし
 |||  
 |-|-|  
 |`elementDataRoot`|囲まれたデータ アイランドの単一のルート要素。 ほとんどの最終的なコンシューマーの単一のルートがない XML が無効と見なされます。 具体的には、単一のルートは、必要な場合、 `x:XData` WPF のデータ バインディングの XML ソースを使用する他の多くのテクノロジとして XML データ ソースを対象としています。|  
-|`[elementData]`|任意。 XML データを表す XML。 要素のデータとして格納できる要素の任意の数と、入れ子になった要素を他の要素に含めることができます。ただし、XML の一般的な規則が適用されます。|  
+|`[elementData]`|省略可能です。 XML データを表す XML。 要素のデータとして格納できる要素の任意の数と、入れ子になった要素を他の要素に含めることができます。ただし、XML の一般的な規則が適用されます。|  
   
 ## <a name="remarks"></a>Remarks  
  内の XML 要素、`x:XData`オブジェクトすべての可能な名前空間と、データ内に含む XMLDOM のプレフィックスを再宣言できます。  

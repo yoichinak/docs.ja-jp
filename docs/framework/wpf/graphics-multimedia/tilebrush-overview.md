@@ -9,11 +9,11 @@ helpviewer_keywords:
 - brushes [WPF], TileBrush
 ms.assetid: aa4a7b7e-d09d-44c2-8d61-310c50e08d68
 ms.openlocfilehash: a610acfef416a978ab8ecd9a561a135ecf3611cc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125303"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973751"
 ---
 # <a name="tilebrush-overview"></a>TileBrush の概要
 <xref:System.Windows.Media.TileBrush> オブジェクトを提供する非常に大量のイメージで領域を塗りつぶす方法を制御<xref:System.Windows.Media.Drawing>、または<xref:System.Windows.Media.Visual>します。 このトピックでは、使用する方法を説明します<xref:System.Windows.Media.TileBrush>方法の詳細に制御する機能、 <xref:System.Windows.Media.ImageBrush>、 <xref:System.Windows.Media.DrawingBrush>、または<xref:System.Windows.Media.VisualBrush>領域を塗りつぶします。  
@@ -40,11 +40,11 @@ Tile の TileMode を使用する TileBrush のコンポーネント
 ## <a name="brush-content"></a>ブラシのコンテンツ  
  3 つの種類がある<xref:System.Windows.Media.TileBrush>し、それぞれを異なる種類のコンテンツを描画します。  
   
--   ブラシがの場合、 <xref:System.Windows.Media.ImageBrush>、このコンテンツは、イメージ、<xref:System.Windows.Media.ImageBrush.ImageSource%2A>プロパティの内容を指定する、<xref:System.Windows.Media.ImageBrush>します。  
+- ブラシがの場合、 <xref:System.Windows.Media.ImageBrush>、このコンテンツは、イメージ、<xref:System.Windows.Media.ImageBrush.ImageSource%2A>プロパティの内容を指定する、<xref:System.Windows.Media.ImageBrush>します。  
   
--   ブラシがの場合、 <xref:System.Windows.Media.DrawingBrush>、このコンテンツは描画します。 <xref:System.Windows.Media.DrawingBrush.Drawing%2A>プロパティの内容を指定する、<xref:System.Windows.Media.DrawingBrush>します。  
+- ブラシがの場合、 <xref:System.Windows.Media.DrawingBrush>、このコンテンツは描画します。 <xref:System.Windows.Media.DrawingBrush.Drawing%2A>プロパティの内容を指定する、<xref:System.Windows.Media.DrawingBrush>します。  
   
--   ブラシがの場合、 <xref:System.Windows.Media.VisualBrush>、このコンテンツはビジュアル。 <xref:System.Windows.Media.VisualBrush.Visual%2A>プロパティの内容を指定する、<xref:System.Windows.Media.VisualBrush>します。  
+- ブラシがの場合、 <xref:System.Windows.Media.VisualBrush>、このコンテンツはビジュアル。 <xref:System.Windows.Media.VisualBrush.Visual%2A>プロパティの内容を指定する、<xref:System.Windows.Media.VisualBrush>します。  
   
  位置とのサイズを指定できます<xref:System.Windows.Media.TileBrush>コンテンツを使用して、<xref:System.Windows.Media.TileBrush.Viewbox%2A>プロパティのままにするが一般的ですが、<xref:System.Windows.Media.TileBrush.Viewbox%2A>が既定値に設定します。 既定で、<xref:System.Windows.Media.TileBrush.Viewbox%2A>ブラシの内容を完全に格納するように構成します。 構成の詳細については、<xref:System.Windows.Controls.Viewbox>を参照してください、<xref:System.Windows.Controls.Viewbox>プロパティ ページ。  
   
@@ -52,13 +52,13 @@ Tile の TileMode を使用する TileBrush のコンポーネント
 ## <a name="the-base-tile"></a>基本タイル  
  A<xref:System.Windows.Media.TileBrush>を基本タイルにそのコンテンツを射影します。 <xref:System.Windows.Media.TileBrush.Stretch%2A>プロパティ コントロール方法<xref:System.Windows.Media.TileBrush>コンテンツは、基本タイルをいっぱいに拡大されます。 <xref:System.Windows.Media.TileBrush.Stretch%2A>プロパティによって定義された、次の値では、<xref:System.Windows.Media.Stretch>列挙体。  
   
--   <xref:System.Windows.Media.Stretch.None>:ブラシのコンテンツは、タイルを塗りつぶすには引き伸ばされません。  
+- <xref:System.Windows.Media.Stretch.None>:ブラシのコンテンツは、タイルを塗りつぶすには引き伸ばされません。  
   
--   <xref:System.Windows.Media.Stretch.Fill>:ブラシのコンテンツは、タイルに合わせてスケーリングされます。 コンテンツの高さと幅は別々にスケーリングされるため、コンテンツの元の縦横比が維持されない場合があります。 つまり、出力タイルを完全に塗りつぶすために、ブラシのコンテンツがいびつになることがあります。  
+- <xref:System.Windows.Media.Stretch.Fill>:ブラシのコンテンツは、タイルに合わせてスケーリングされます。 コンテンツの高さと幅は別々にスケーリングされるため、コンテンツの元の縦横比が維持されない場合があります。 つまり、出力タイルを完全に塗りつぶすために、ブラシのコンテンツがいびつになることがあります。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>:ブラシのコンテンツに、タイル内で完全に収まるようにスケーリングされます。 コンテンツの縦横比は維持されます。  
+- <xref:System.Windows.Media.Stretch.Uniform>:ブラシのコンテンツに、タイル内で完全に収まるようにスケーリングされます。 コンテンツの縦横比は維持されます。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>:ブラシのコンテンツは、コンテンツの元の縦横比を維持しながら、出力領域が完全にいっぱいにように拡大縮小されます。  
+- <xref:System.Windows.Media.Stretch.UniformToFill>:ブラシのコンテンツは、コンテンツの元の縦横比を維持しながら、出力領域が完全にいっぱいにように拡大縮小されます。  
   
  次の図は、異なる<xref:System.Windows.Media.TileBrush.Stretch%2A>設定します。  
   
@@ -99,15 +99,15 @@ Tile の TileMode を使用する TileBrush のコンポーネント
 ### <a name="tiling-behavior"></a>並べて表示する動作  
  A<xref:System.Windows.Media.TileBrush>基本タイルが完全にいっぱいにならない、出力領域と、他のタイル モード時に並べて表示するパターンが生成されます<xref:System.Windows.Media.TileMode.None>を指定します。 タイル ブラシのタイルが出力領域を完全に塗りつぶしていないときにその<xref:System.Windows.Media.TileBrush.TileMode%2A>プロパティは、基本タイルは出力領域に複製する必要があり、基本のタイルを複製する必要があれば、かどうかを指定します。 <xref:System.Windows.Media.TileBrush.TileMode%2A>プロパティによって定義された、次の値では、<xref:System.Windows.Media.TileMode>列挙体。  
   
--   <xref:System.Windows.Media.TileMode.None>:基本タイルのみを描画します。  
+- <xref:System.Windows.Media.TileMode.None>:基本タイルのみを描画します。  
   
--   <xref:System.Windows.Media.TileMode.Tile>:基本タイルが描画され、残りの領域は基本タイルの繰り返しつまり、1 つのタイルの右端は、次の左端の横にある同様に上端と下端で塗りつぶされます。  
+- <xref:System.Windows.Media.TileMode.Tile>:基本タイルが描画され、残りの領域は基本タイルの繰り返しつまり、1 つのタイルの右端は、次の左端の横にある同様に上端と下端で塗りつぶされます。  
   
--   <xref:System.Windows.Media.TileMode.FlipX>:同じ<xref:System.Windows.Media.TileMode.Tile>タイルの代替列が水平方向に反転するがします。  
+- <xref:System.Windows.Media.TileMode.FlipX>:同じ<xref:System.Windows.Media.TileMode.Tile>タイルの代替列が水平方向に反転するがします。  
   
--   <xref:System.Windows.Media.TileMode.FlipY>:同じ<xref:System.Windows.Media.TileMode.Tile>が代替行のタイルが上下に反転します。  
+- <xref:System.Windows.Media.TileMode.FlipY>:同じ<xref:System.Windows.Media.TileMode.Tile>が代替行のタイルが上下に反転します。  
   
--   <xref:System.Windows.Media.TileMode.FlipXY>:<xref:System.Windows.Media.TileMode.FlipX> と <xref:System.Windows.Media.TileMode.FlipY> の組み合わせです。  
+- <xref:System.Windows.Media.TileMode.FlipXY>:<xref:System.Windows.Media.TileMode.FlipX> と <xref:System.Windows.Media.TileMode.FlipY> の組み合わせです。  
   
  並べて表示するさまざまなモードを次のイメージに示します。  
   
