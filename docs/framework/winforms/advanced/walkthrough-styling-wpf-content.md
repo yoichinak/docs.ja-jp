@@ -40,7 +40,7 @@ ms.locfileid: "59312151"
   
 #### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
--   Visual Basic または Visual C# のという名前で新しい Windows フォーム アプリケーション プロジェクトを作成する`StylingWpfContent`します。  
+-   `StylingWpfContent` という新しい Windows フォーム アプリケーション プロジェクトを Visual Basic または Visual C# で作成します。  
   
 ## <a name="creating-the-wpf-control-types"></a>WPF コントロール型の作成  
  プロジェクトに追加した WPF コントロール型は、<xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストできます。  
