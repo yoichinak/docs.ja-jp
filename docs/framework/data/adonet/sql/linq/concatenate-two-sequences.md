@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 76767e7c-0607-4e1d-9ca2-a94f311f45eb
 ms.openlocfilehash: a2f2510cb334f4e22a7b0c6015a0a93b4dc11579
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59142780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032792"
 ---
 # <a name="concatenate-two-sequences"></a>2 つのシーケンスの連結
 2 つのシーケンスを連結するには、<xref:System.Linq.Queryable.Concat%2A> 演算子を使用します。  

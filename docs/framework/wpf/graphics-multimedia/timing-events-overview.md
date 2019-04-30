@@ -9,11 +9,11 @@ helpviewer_keywords:
 - timing events [WPF]
 ms.assetid: 597e3280-0867-4359-a97b-5b2f4149e350
 ms.openlocfilehash: 91e335f4d5adaa5279fb16805604f2e2848eeb8b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59167168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002392"
 ---
 # <a name="timing-events-overview"></a>タイミング イベントの概要
 このトピックで使用可能な 5 つのタイミング イベントを使用する方法について説明<xref:System.Windows.Media.Animation.Timeline>と<xref:System.Windows.Media.Animation.Clock>オブジェクト。  
@@ -23,11 +23,11 @@ ms.locfileid: "59167168"
   
  いくつかの方法でプロパティをアニメーション化[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]:  
   
--   **Storyboard オブジェクトを使用して**(マークアップとコード)。使用することができます<xref:System.Windows.Media.Animation.Storyboard>および 1 つまたは複数のオブジェクトにアニメーションを均等配置するオブジェクト。 例については、次を参照してください。[ストーリー ボードを使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)します。  
+- **Storyboard オブジェクトを使用して**(マークアップとコード)。使用することができます<xref:System.Windows.Media.Animation.Storyboard>および 1 つまたは複数のオブジェクトにアニメーションを均等配置するオブジェクト。 例については、次を参照してください。[ストーリー ボードを使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-a-storyboard.md)します。  
   
--   **ローカル アニメーションを使用して**(コードのみ)。適用できる<xref:System.Windows.Media.Animation.AnimationTimeline>アニメーション化するプロパティに直接オブジェクト。 例については、「[ストーリーボードを使用せずにプロパティをアニメーション化する](how-to-animate-a-property-without-using-a-storyboard.md)」を参照してください。  
+- **ローカル アニメーションを使用して**(コードのみ)。適用できる<xref:System.Windows.Media.Animation.AnimationTimeline>アニメーション化するプロパティに直接オブジェクト。 例については、「[ストーリーボードを使用せずにプロパティをアニメーション化する](how-to-animate-a-property-without-using-a-storyboard.md)」を参照してください。  
   
--   **クロックを使用して**(コードのみ)。明示的にクロックを作成し、アニメーション クロックを自分で配布できます。  例については、次を参照してください。 [AnimationClock を使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-an-animationclock.md)します。  
+- **クロックを使用して**(コードのみ)。明示的にクロックを作成し、アニメーション クロックを自分で配布できます。  例については、次を参照してください。 [AnimationClock を使用してプロパティをアニメーション化する](how-to-animate-a-property-by-using-an-animationclock.md)します。  
   
  この概要の例を使用して、マークアップとコードで使用することができます、ため<xref:System.Windows.Media.Animation.Storyboard>オブジェクト。 ただし、説明されている概念は、プロパティをアニメーション化するためのその他の方法にも適用できます。  
   

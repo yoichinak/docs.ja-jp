@@ -10,11 +10,11 @@ helpviewer_keywords:
 - event handlers [Visual Basic], walkthroughs
 ms.assetid: f145b3fc-5ae0-4509-a2aa-1ff6934706bd
 ms.openlocfilehash: 2ae32f0ac31c504e86d5cf39ed6a36cc5523a4a0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59308563"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053796"
 ---
 # <a name="walkthrough-handling-events-visual-basic"></a>チュートリアル: イベントの処理 (Visual Basic)
 これは、2 番目のイベントを使用する方法を示す 2 つのトピックです。 最初のトピックでは、[チュートリアル。イベントを宣言して発生](../../../../visual-basic/programming-guide/language-features/events/walkthrough-declaring-and-raising-events.md)を宣言してイベントを発生させる方法を示しています。 このセクションでは、実行するときにイベントを処理するのに方法について説明フォームとそのチュートリアルからクラスを使用します。  
@@ -76,7 +76,7 @@ ms.locfileid: "59308563"
   
 #### <a name="to-call-the-longtask-method"></a>LongTask メソッドを呼び出す  
   
--   `Button1_Click` イベント ハンドラーに次のコードを追加します。  
+- `Button1_Click` イベント ハンドラーに次のコードを追加します。  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#8)]  
   
@@ -105,7 +105,7 @@ ms.locfileid: "59308563"
   
 #### <a name="to-handle-events-for-a-different-widget"></a>別のウィジェットのイベントを処理するには  
   
--   次のコードの行を追加、`Button1_Click`という行のすぐ前に、プロシージャ`mWidget.LongTask(12.2, 0.33)`:  
+- 次のコードの行を追加、`Button1_Click`という行のすぐ前に、プロシージャ`mWidget.LongTask(12.2, 0.33)`:  
   
      [!code-vb[VbVbcnWalkthroughDeclaringAndRaisingEvents#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnWalkthroughDeclaringAndRaisingEvents/VB/Form1.vb#9)]  
   

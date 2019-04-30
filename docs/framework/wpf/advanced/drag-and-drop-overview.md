@@ -13,11 +13,11 @@ helpviewer_keywords:
 - drop targets [WPF], drag-and-drop
 ms.assetid: 1a5b27b0-0ac5-4cdf-86c0-86ac0271fa64
 ms.openlocfilehash: 2b76c8fd3e2c6961b6ebdddc9b7ff9649f5196f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301400"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051638"
 ---
 # <a name="drag-and-drop-overview"></a>ドラッグ アンド ドロップの概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] アプリケーションでのドラッグ アンド ドロップのサポートの概要について説明します。 一般的に、ドラッグ アンド ドロップとは、マウス (または何らかのポインティング デバイス) を使用して 1 つ以上のオブジェクトを選択し、これらのオブジェクトを [!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)] の目的のドロップ先までドラッグしてからドロップするデータ転送方式をいいます。  
@@ -41,11 +41,11 @@ ms.locfileid: "59301400"
 ## <a name="data-transfer"></a>データ転送  
  ドラッグ アンド ドロップは、より一般的な領域のデータ転送の一部です。 データ転送には、ドラッグ アンド ドロップ操作およびコピーと貼り付けの操作があります。 ドラッグ アンド ドロップ操作は、システムのクリップボードを使用して、あるオブジェクトまたはアプリケーションから別のオブジェクトまたはアプリケーションへのデータ転送に使用する、コピーと貼り付け操作または切り取りと貼り付け操作に似ています。 いずれの種類の操作でも、次のものが必要です。  
   
--   データを提供するソース オブジェクト。  
+- データを提供するソース オブジェクト。  
   
--   転送されたデータを一時的に格納する方法。  
+- 転送されたデータを一時的に格納する方法。  
   
--   データを受け取るターゲット オブジェクト。  
+- データを受け取るターゲット オブジェクト。  
   
  コピーと貼り付け操作では、システムのクリップボードを使用して、転送されたデータを一時的に保存します。ドラッグ アンド ドロップ操作では、<xref:System.Windows.DataObject> を使用してデータを格納します。 データ オブジェクトは、概念的に、実際のデータと対応するデータ形式の識別子を格納する 1 組以上の <xref:System.Object> で構成されています。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "59301400"
   
 <a name="Drag_and_Drop_Events"></a>   
 ## <a name="drag-and-drop-events"></a>ドラッグ アンド ドロップのイベント  
- ドラッグ アンド ドロップの操作は、イベント ドリブン モデルをサポートしています。  ドラッグ元とドロップ先の両方でイベントの標準セットを使用して、ドラッグ アンド ドロップの操作を処理します。  次の表は、標準のドラッグ アンド ドロップのイベントをまとめたものです。 これらは、<xref:System.Windows.DragDrop> クラスでアタッチされるイベントです。 アタッチされるイベントの詳細については、「[添付イベントの概要](attached-events-overview.md)」を参照してください。  
+ ドラッグ アンド ドロップの操作は、イベント ドリブン モデルをサポートしています。  ドラッグ元とドロップ先の両方でイベントの標準セットを使用して、ドラッグ アンド ドロップの操作を処理します。  次の表は、標準のドラッグ アンド ドロップのイベントをまとめたものです。 これらは、<xref:System.Windows.DragDrop> クラスでアタッチされるイベントです。 アタッチされるイベントの詳細については、「[アタッチされるイベントの概要](attached-events-overview.md)」を参照してください。  
   
 ### <a name="drag-source-events"></a>ドラッグ元のイベント  
   
@@ -94,31 +94,31 @@ ms.locfileid: "59301400"
   
  基本的なドラッグ アンド ドロップを実装するには、次のタスクを実行します。  
   
--   ドラッグ元となる要素を特定します。 ドラッグ元には <xref:System.Windows.UIElement> または <xref:System.Windows.ContentElement> を指定できます。  
+- ドラッグ元となる要素を特定します。 ドラッグ元には <xref:System.Windows.UIElement> または <xref:System.Windows.ContentElement> を指定できます。  
   
--   ドラッグ アンド ドロップ操作を開始するドラッグ元のイベント ハンドラーを作成します。 通常、イベントは <xref:System.Windows.UIElement.MouseMove> イベントです。  
+- ドラッグ アンド ドロップ操作を開始するドラッグ元のイベント ハンドラーを作成します。 通常、イベントは <xref:System.Windows.UIElement.MouseMove> イベントです。  
   
--   ドラッグ アンド ドロップ操作を開始するには、ドラッグ元のイベント ハンドラーで <xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドを呼び出します。 <xref:System.Windows.DragDrop.DoDragDrop%2A> の呼び出しで、ドラッグ元、転送するデータ、および許可される効果を指定します。  
+- ドラッグ アンド ドロップ操作を開始するには、ドラッグ元のイベント ハンドラーで <xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドを呼び出します。 <xref:System.Windows.DragDrop.DoDragDrop%2A> の呼び出しで、ドラッグ元、転送するデータ、および許可される効果を指定します。  
   
--   ドロップ先となる要素を特定します。 ドロップ先には、<xref:System.Windows.UIElement> または <xref:System.Windows.ContentElement> を指定できます。  
+- ドロップ先となる要素を特定します。 ドロップ先には、<xref:System.Windows.UIElement> または <xref:System.Windows.ContentElement> を指定できます。  
   
--   ドロップ先で、<xref:System.Windows.UIElement.AllowDrop%2A> プロパティを `true` に設定します。  
+- ドロップ先で、<xref:System.Windows.UIElement.AllowDrop%2A> プロパティを `true` に設定します。  
   
--   ドロップ先で、ドロップしたデータを処理する <xref:System.Windows.DragDrop.Drop> イベント ハンドラーを作成します。  
+- ドロップ先で、ドロップしたデータを処理する <xref:System.Windows.DragDrop.Drop> イベント ハンドラーを作成します。  
   
--   <xref:System.Windows.DragDrop.Drop> イベント ハンドラーで、<xref:System.Windows.DragEventArgs> メソッドと <xref:System.Windows.DataObject.GetDataPresent%2A> メソッドを使用して、<xref:System.Windows.DataObject.GetData%2A> からデータを抽出します。  
+- <xref:System.Windows.DragDrop.Drop> イベント ハンドラーで、<xref:System.Windows.DragEventArgs> メソッドと <xref:System.Windows.DataObject.GetDataPresent%2A> メソッドを使用して、<xref:System.Windows.DataObject.GetData%2A> からデータを抽出します。  
   
--   <xref:System.Windows.DragDrop.Drop> イベント ハンドラーで、データを使用して、目的のドラッグ アンド ドロップ操作を実行します。  
+- <xref:System.Windows.DragDrop.Drop> イベント ハンドラーで、データを使用して、目的のドラッグ アンド ドロップ操作を実行します。  
   
  次のタスクに示すように、カスタム <xref:System.Windows.DataObject> を作成し、オプションのドラッグ元とドロップ先のイベントを処理すると、ドラッグ アンド ドロップの実装を拡張できます。  
   
--   カスタム データまたは複数のデータ項目を転送するには、<xref:System.Windows.DataObject> メソッドに渡す <xref:System.Windows.DragDrop.DoDragDrop%2A> を作成します。  
+- カスタム データまたは複数のデータ項目を転送するには、<xref:System.Windows.DataObject> メソッドに渡す <xref:System.Windows.DragDrop.DoDragDrop%2A> を作成します。  
   
--   ドラッグ中に他の操作を実行するには、ドロップ先で <xref:System.Windows.DragDrop.DragEnter>、<xref:System.Windows.DragDrop.DragOver>、および <xref:System.Windows.DragDrop.DragLeave> イベントを処理します。  
+- ドラッグ中に他の操作を実行するには、ドロップ先で <xref:System.Windows.DragDrop.DragEnter>、<xref:System.Windows.DragDrop.DragOver>、および <xref:System.Windows.DragDrop.DragLeave> イベントを処理します。  
   
--   マウス ポインターの外観を変更するには、ドラッグ元で <xref:System.Windows.DragDrop.GiveFeedback> イベントを処理します。  
+- マウス ポインターの外観を変更するには、ドラッグ元で <xref:System.Windows.DragDrop.GiveFeedback> イベントを処理します。  
   
--   ドラッグ アンド ドロップ操作の取り消し方法を変更するには、ドラッグ元で <xref:System.Windows.DragDrop.QueryContinueDrag> イベントを処理します。  
+- ドラッグ アンド ドロップ操作の取り消し方法を変更するには、ドラッグ元で <xref:System.Windows.DragDrop.QueryContinueDrag> イベントを処理します。  
   
 <a name="Drag_And_Drop_Example"></a>   
 ## <a name="drag-and-drop-example"></a>ドラッグ アンド ドロップの例  
@@ -129,13 +129,13 @@ ms.locfileid: "59301400"
 ### <a name="enabling-an-element-to-be-a-drag-source"></a>要素がドラッグ元になるようにする  
  ドラッグ元であるオブジェクトは次の役割を務めます。  
   
--   いつドラッグが発生するかを識別する。  
+- いつドラッグが発生するかを識別する。  
   
--   ドラッグ アンド ドロップ操作を開始する。  
+- ドラッグ アンド ドロップ操作を開始する。  
   
--   転送するデータを特定する。  
+- 転送するデータを特定する。  
   
--   ドラッグ アンド ドロップ操作によってデータ転送時に起こすことができる効果を指定する。  
+- ドラッグ アンド ドロップ操作によってデータ転送時に起こすことができる効果を指定する。  
   
  ドラッグ元には、許可される操作 (移動、コピー、なし) に関してユーザーにフィードバックすることもできます。また、ドラッグ中に Esc キーを押すなどのユーザーの追加の入力に基づいて、ドラッグ アンド ドロップ操作を取り消すことができます。  
   
@@ -146,11 +146,11 @@ ms.locfileid: "59301400"
   
  <xref:System.Windows.UIElement.MouseMove> イベント ハンドラー内で、<xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドを呼び出して、ドラッグ アンド ドロップ操作を開始します。 <xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドは 3 つのパラメーターを受け取ります。  
   
--   `dragSource` – 転送されたデータのソースである依存関係オブジェクトへの参照。通常、これは <xref:System.Windows.UIElement.MouseMove> イベントのソースです。  
+- `dragSource` – 転送されたデータのソースである依存関係オブジェクトへの参照。通常、これは <xref:System.Windows.UIElement.MouseMove> イベントのソースです。  
   
--   `data` - <xref:System.Windows.DataObject> にラップされる転送済みデータを含むオブジェクト。  
+- `data` - <xref:System.Windows.DataObject> にラップされる転送済みデータを含むオブジェクト。  
   
--   `allowedEffects` - ドラッグ アンド ドロップ操作の許可される効果を指定する <xref:System.Windows.DragDropEffects> 列挙値の 1 つ。  
+- `allowedEffects` - ドラッグ アンド ドロップ操作の許可される効果を指定する <xref:System.Windows.DragDropEffects> 列挙値の 1 つ。  
   
  シリアル化可能なオブジェクトはすべて `data` パラメーターに渡すことができます。 データがまだ <xref:System.Windows.DataObject> にラップされていない場合、データは新しい <xref:System.Windows.DataObject> に自動的にラップされます。 複数のデータ項目を渡すには、自分で <xref:System.Windows.DataObject> を作成し、<xref:System.Windows.DragDrop.DoDragDrop%2A> メソッドに渡す必要があります。 詳細については、「[データとデータ オブジェクト](data-and-data-objects.md)」を参照してください。  
   
@@ -171,13 +171,13 @@ ms.locfileid: "59301400"
 ### <a name="enabling-an-element-to-be-a-drop-target"></a>要素がドロップ先になるようにする  
  ドロップ先であるオブジェクトは次の役割を務めます。  
   
--   有効なドロップ先であることを指定する。  
+- 有効なドロップ先であることを指定する。  
   
--   ドラッグ元に対して、ターゲットの上にドラッグしたときに応答する。  
+- ドラッグ元に対して、ターゲットの上にドラッグしたときに応答する。  
   
--   転送されたデータが受信できる形式であることを確認する。  
+- 転送されたデータが受信できる形式であることを確認する。  
   
--   ドロップしたデータを処理する。  
+- ドロップしたデータを処理する。  
   
  要素がドロップ先であることを指定するには、<xref:System.Windows.UIElement.AllowDrop%2A> プロパティを `true` に設定します。 ドロップ先のイベントが要素で発生して、処理できるようになります。 ドラッグ アンド ドロップ操作中に、次の一連のイベントがドロップ先で発生します。  
   

@@ -9,11 +9,11 @@ helpviewer_keywords:
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
 ms.openlocfilehash: 1807170b2f5df2333ec3b271a11f9b929c1e7993
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59087184"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011581"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>組み込みのオーナー描画サポートを備えたコントロール
 Windows フォームのオーナー描画 (カスタム描画とも呼ばれます) は、特定のコントロールの外観を変更するための手法です。  
@@ -38,27 +38,27 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
  次の Windows フォーム コントロールは、すべてのバージョンの .NET Framework でオーナー描画をサポートします。  
   
--   <xref:System.Windows.Forms.ListBox>  
+- <xref:System.Windows.Forms.ListBox>  
   
--   <xref:System.Windows.Forms.ComboBox>  
+- <xref:System.Windows.Forms.ComboBox>  
   
--   <xref:System.Windows.Forms.MenuItem> (で使用される<xref:System.Windows.Forms.MainMenu>と<xref:System.Windows.Forms.ContextMenu>)  
+- <xref:System.Windows.Forms.MenuItem> (で使用される<xref:System.Windows.Forms.MainMenu>と<xref:System.Windows.Forms.ContextMenu>)  
   
--   <xref:System.Windows.Forms.TabControl>  
+- <xref:System.Windows.Forms.TabControl>  
   
  次のコントロールは、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] でのみオーナー描画をサポートします。  
   
--   <xref:System.Windows.Forms.ToolTip>  
+- <xref:System.Windows.Forms.ToolTip>  
   
--   <xref:System.Windows.Forms.ListView>  
+- <xref:System.Windows.Forms.ListView>  
   
--   <xref:System.Windows.Forms.TreeView>  
+- <xref:System.Windows.Forms.TreeView>  
   
  次のコントロールはオーナー描画をサポートし、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] での新機能です。  
   
--   <xref:System.Windows.Forms.DataGridView>  
+- <xref:System.Windows.Forms.DataGridView>  
   
--   <xref:System.Windows.Forms.ToolStrip>  
+- <xref:System.Windows.Forms.ToolStrip>  
   
  以下のセクションでは、これらの各コントロールについてさらに詳しく説明します。  
   
@@ -74,19 +74,19 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
  サンプル コードなど詳細については、次のトピックをご覧ください。  
   
--   <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListBox.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.MeasureItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ComboBox.DrawItem?displayProperty=nameWithType>  
   
--   [方法: コンボ ボックス コントロールにサイズ設定されたテキストを作成します。](how-to-create-variable-sized-text-in-a-combobox-control.md)  
+- [方法: コンボ ボックス コントロールにサイズ設定されたテキストを作成します。](how-to-create-variable-sized-text-in-a-combobox-control.md)  
   
 ### <a name="menuitem-component"></a>MenuItem コンポーネント  
  <xref:System.Windows.Forms.MenuItem>コンポーネント内の 1 つのメニュー項目を表す、<xref:System.Windows.Forms.MainMenu>または<xref:System.Windows.Forms.ContextMenu>コンポーネント。  
@@ -95,11 +95,11 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
  サンプル コードなど詳細については、次のトピックをご覧ください。  
   
--   <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.MenuItem.MeasureItem?displayProperty=nameWithType>  
   
 ### <a name="tabcontrol-control"></a>TabControl コントロール  
  <xref:System.Windows.Forms.TabControl>コントロールでは、コントロール内の個々 のタブを描画することができます。 オーナー描画タブのみに影響を与えます<xref:System.Windows.Forms.TabPage>内容には影響しません。  
@@ -108,9 +108,9 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
  サンプル コードなど詳細については、次のトピックをご覧ください。  
   
--   <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TabControl.DrawItem?displayProperty=nameWithType>  
   
 ### <a name="tooltip-component"></a>ToolTip コンポーネント  
  <xref:System.Windows.Forms.ToolTip>コンポーネントでは、表示される場合は、ToolTip 全体を描画することができます。  
@@ -119,11 +119,11 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
  サンプル コードなど詳細については、次のトピックをご覧ください。  
   
--   <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Draw?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ToolTip.Popup?displayProperty=nameWithType>  
   
 ### <a name="listview-control"></a>ListView コントロール  
  <xref:System.Windows.Forms.ListView>コントロールでは、コントロール内の個々 の項目、サブ項目、および列ヘッダーを描画することができます。  
@@ -136,13 +136,13 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
  サンプル コードなど詳細については、次のトピックをご覧ください。  
   
--   <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.OwnerDraw%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawSubItem?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.ListView.DrawColumnHeader?displayProperty=nameWithType>  
   
 ### <a name="treeview-control"></a>TreeView コントロール  
  <xref:System.Windows.Forms.TreeView>コントロールでは、コントロール内の個々 のノードを描画することができます。  
@@ -153,9 +153,9 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
  サンプル コードなど詳細については、次のトピックをご覧ください。  
   
--   <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawMode%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.TreeView.DrawNode?displayProperty=nameWithType>  
   
 ### <a name="datagridview-control"></a>DataGridView コントロール  
  <xref:System.Windows.Forms.DataGridView>コントロールでは、コントロール内の個々 のセルと行を描画することができます。  
@@ -166,15 +166,15 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
  サンプル コードなど詳細については、次のトピックをご覧ください。  
   
--   <xref:System.Windows.Forms.DataGridView.CellPainting>  
+- <xref:System.Windows.Forms.DataGridView.CellPainting>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPrePaint>  
   
--   <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
+- <xref:System.Windows.Forms.DataGridView.RowPostPaint>  
   
--   [方法: Windows フォームの DataGridView コントロール内のセルの外観をカスタマイズします。](customize-the-appearance-of-cells-in-the-datagrid.md)  
+- [方法: Windows フォームの DataGridView コントロール内のセルの外観をカスタマイズします。](customize-the-appearance-of-cells-in-the-datagrid.md)  
   
--   [方法: Windows フォームの DataGridView コントロール内の行の外観をカスタマイズします。](customize-the-appearance-of-rows-in-the-datagrid.md)  
+- [方法: Windows フォームの DataGridView コントロール内の行の外観をカスタマイズします。](customize-the-appearance-of-rows-in-the-datagrid.md)  
   
 ### <a name="toolstrip-control"></a>ToolStrip コントロール  
  <xref:System.Windows.Forms.ToolStrip> および派生コントロールでは、のどの側面の外観をカスタマイズできます。  
@@ -183,11 +183,11 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
  サンプル コードなど詳細については、次のトピックをご覧ください。  
   
--   <xref:System.Windows.Forms.ToolStripRenderer>  
+- <xref:System.Windows.Forms.ToolStripRenderer>  
   
--   [方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
+- [方法: 作成し、Windows フォームで ToolStrip コントロールのカスタム レンダラーを設定](create-and-set-a-custom-renderer-for-the-toolstrip-control-in-wf.md)  
   
--   [方法: ToolStrip コントロールをカスタム描画します。](how-to-custom-draw-a-toolstrip-control.md)  
+- [方法: ToolStrip コントロールをカスタム描画します。](how-to-custom-draw-a-toolstrip-control.md)  
   
 ## <a name="see-also"></a>関連項目
 

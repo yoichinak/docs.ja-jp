@@ -8,11 +8,11 @@ helpviewer_keywords:
 - directories [Windows Forms], browsing
 ms.assetid: d71a0c5e-898a-4eea-be74-93bdf50d1852
 ms.openlocfilehash: 6359ea9683b9a418b7fe92dacc6140865dd01a11
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57717155"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011334"
 ---
 # <a name="folderbrowserdialog-component-windows-forms"></a>FolderBrowserDialog コンポーネント (Windows フォーム)
 Windows フォーム`FolderBrowserDialog`コンポーネントをユーザー参照しフォルダーを選択したり、新しく作成インターフェイスを表示します。 補完するには、 [OpenFileDialog コンポーネント](openfiledialog-component-windows-forms.md)コンポーネントで、参照やファイルを選択するために使用します。  

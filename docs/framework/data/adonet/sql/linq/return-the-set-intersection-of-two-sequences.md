@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d09c344e-3548-4944-a3ed-051880e3f5b8
 ms.openlocfilehash: 07f48ab7ef1095ba80b1a955a4bd1ea602a75aa8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59205911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033424"
 ---
 # <a name="return-the-set-intersection-of-two-sequences"></a>2 つのシーケンスの積集合の取得
 2 つのシーケンスの積集合を返すには、<xref:System.Linq.Queryable.Intersect%2A> 演算子を使用します。  

@@ -14,22 +14,22 @@ helpviewer_keywords:
 - plug-ins [WPF], for ink
 ms.assetid: c85fcad1-cb50-4431-847c-ac4145a35c89
 ms.openlocfilehash: 80e7ef202c46a23069766512cf4e67bb21a49564
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335322"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007389"
 ---
 # <a name="the-ink-threading-model"></a>インク スレッド モデル
 よく似た書き込みと紙とペンの正規表現では、Tablet PC 上のインクの利点の 1 つ。  これを行うには、タブレット ペンは、マウスは、ユーザーの書き込みとして、インクをレンダリングするよりもはるかに高いレートで入力データを収集します。  ブロックになることができますがあるために、アプリケーションのユーザー インターフェイス (UI) スレッドはペン データとレンダリングのインクを収集するために十分ではありません。  これを解決するために、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションが、ユーザーがインクを書き込むときに、追加の 2 つのスレッドを使用します。  
   
  次の一覧には、収集およびデジタル インクの描画に参加しているスレッドがについて説明します。  
   
--   ペン スレッドのスレッド、スタイラスからの入力を受け取る。  (実際には、スレッド プールでは、これは、このトピックでは、ペン スレッドとしてそれを参照)。  
+- ペン スレッドのスレッド、スタイラスからの入力を受け取る。  (実際には、スレッド プールでは、これは、このトピックでは、ペン スレッドとしてそれを参照)。  
   
--   アプリケーション ユーザー インターフェイス スレッドで、アプリケーションのユーザー インターフェイスを制御するスレッド。  
+- アプリケーション ユーザー インターフェイス スレッドで、アプリケーションのユーザー インターフェイスを制御するスレッド。  
   
--   動的レンダリング スレッドで、ユーザーの中に、インクをレンダリングするスレッドは、ストロークを描画します。 Presentation Foundation のウィンドウで説明したように、動的レンダリング スレッドは、アプリケーションの他の UI 要素を描画するスレッドを異なる[スレッド モデル](threading-model.md)します。  
+- 動的レンダリング スレッドで、ユーザーの中に、インクをレンダリングするスレッドは、ストロークを描画します。 Presentation Foundation のウィンドウで説明したように、動的レンダリング スレッドは、アプリケーションの他の UI 要素を描画するスレッドを異なる[スレッド モデル](threading-model.md)します。  
   
  手描き入力のモデルは、同じアプリケーションを使用しているかどうか、<xref:System.Windows.Controls.InkCanvas>またはカスタム コントロールでのような[インク入力コントロールの作成](creating-an-ink-input-control.md)です。  このトピックの観点でスレッド処理について説明しますが、 <xref:System.Windows.Controls.InkCanvas>、カスタム コントロールを作成するときに、同じ概念が適用されます。  
   
@@ -40,17 +40,17 @@ ms.locfileid: "59335322"
   
 1. ユーザーがストロークを描画中に発生するアクション  
   
-    1.  ユーザーがストロークを描画、ときに、ペン スレッド上でスタイラス ポイントが提供されます。  スタイラス プラグインを含む、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>ペン スレッド上でスタイラス ポイントをそのまま使用する前にそれらを変更することや、<xref:System.Windows.Controls.InkCanvas>がそれらを受け取る。  
+    1. ユーザーがストロークを描画、ときに、ペン スレッド上でスタイラス ポイントが提供されます。  スタイラス プラグインを含む、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>ペン スレッド上でスタイラス ポイントをそのまま使用する前にそれらを変更することや、<xref:System.Windows.Controls.InkCanvas>がそれらを受け取る。  
   
-    2.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>動的レンダリング スレッド上でスタイラス ポイントを表示します。 これは、前の手順と同時に発生します。  
+    2. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>動的レンダリング スレッド上でスタイラス ポイントを表示します。 これは、前の手順と同時に発生します。  
   
-    3.  <xref:System.Windows.Controls.InkCanvas> UI スレッド上でスタイラス ポイントを受信します。  
+    3. <xref:System.Windows.Controls.InkCanvas> UI スレッド上でスタイラス ポイントを受信します。  
   
 2. ユーザーがストロークを終了した後に発生するアクション  
   
-    1.  ユーザーは、ストロークの描画が完了すると、<xref:System.Windows.Controls.InkCanvas>作成、<xref:System.Windows.Ink.Stroke>オブジェクトし、それに追加、 <xref:System.Windows.Controls.InkPresenter>、静的に表示されます。  
+    1. ユーザーは、ストロークの描画が完了すると、<xref:System.Windows.Controls.InkCanvas>作成、<xref:System.Windows.Ink.Stroke>オブジェクトし、それに追加、 <xref:System.Windows.Controls.InkPresenter>、静的に表示されます。  
   
-    2.  UI スレッドのアラート、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>します線が表示される静的にするため、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>ストロークのビジュアル表現を削除します。  
+    2. UI スレッドのアラート、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>します線が表示される静的にするため、<xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>ストロークのビジュアル表現を削除します。  
   
 ## <a name="ink-collection-and-stylus-plug-ins"></a>インクの収集とスタイラス プラグイン  
  各<xref:System.Windows.UIElement>が、<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>します。  <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>内のオブジェクト、<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>受信し、ペン スレッド上でスタイラス ポイントを変更することができます。 <xref:System.Windows.Input.StylusPlugIns.StylusPlugIn>オブジェクト内の順序に従ってスタイラス ポイントの受信、<xref:System.Windows.Input.StylusPlugIns.StylusPlugInCollection>します。  
@@ -85,16 +85,16 @@ ms.locfileid: "59335322"
   
 1. ユーザーがストロークを開始します。  
   
-    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>ビジュアル ツリーを作成します。  
+    1. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>ビジュアル ツリーを作成します。  
   
 2. ユーザーがストロークを描画します。  
   
-    1.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>ビジュアル ツリーを構築します。  
+    1. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>ビジュアル ツリーを構築します。  
   
 3. ユーザーがストロークを終了します。  
   
-    1.  <xref:System.Windows.Controls.InkPresenter>ストロークをそのビジュアル ツリーに追加します。  
+    1. <xref:System.Windows.Controls.InkPresenter>ストロークをそのビジュアル ツリーに追加します。  
   
-    2.  Media Integration Layer (MIL) は、静的にストロークをレンダリングします。  
+    2. Media Integration Layer (MIL) は、静的にストロークをレンダリングします。  
   
-    3.  <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>ビジュアルをクリーンアップします。
+    3. <xref:System.Windows.Input.StylusPlugIns.DynamicRenderer>ビジュアルをクリーンアップします。

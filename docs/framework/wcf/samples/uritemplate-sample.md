@@ -3,20 +3,20 @@ title: UriTemplate サンプル
 ms.date: 03/30/2017
 ms.assetid: 0aaf91d0-ce18-468d-8006-bc9bc2e48231
 ms.openlocfilehash: 5f8a969a9ddea633d12ebe2d922c152dbb0d7241
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322616"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007618"
 ---
 # <a name="uritemplate-sample"></a>UriTemplate サンプル
 <xref:System.UriTemplate> クラスには、共通構造を共有する URI のセットを使用するためのメソッドが用意されています。 このサンプルでは、次の `UriTemplate` に関連する重要な概念を示します。  
   
--   テンプレートを作成するための構文  
+- テンプレートを作成するための構文  
   
--   `UriTemplate` および <xref:System.UriTemplate.BindByName%2A> を使用した、<xref:System.UriTemplate.BindByPosition%2A> からの URI のインスタンス化  
+- `UriTemplate` および <xref:System.UriTemplate.BindByName%2A> を使用した、<xref:System.UriTemplate.BindByPosition%2A> からの URI のインスタンス化  
   
--   <xref:System.UriTemplateTable.Match%2A> および `BindByName` の逆の操作である `BindByPosition`  
+- <xref:System.UriTemplateTable.Match%2A> および `BindByName` の逆の操作である `BindByPosition`  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   

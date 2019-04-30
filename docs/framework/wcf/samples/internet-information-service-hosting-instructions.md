@@ -3,11 +3,11 @@ title: インターネット インフォメーション サービスのホス�
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
 ms.openlocfilehash: f5aa276bc1178f3e7c61af7505fcf54df8b934e6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954857"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>インターネット インフォメーション サービスのホスティング手順
 インターネット インフォメーション サービス (IIS) によってホストされているこのサンプルを実行するには、IIS が適切にインストールされて実行されていることを確認する必要があります。  
@@ -46,13 +46,13 @@ ms.locfileid: "59328960"
   
 8. 次の項目が選択されていることを確認します。  
   
-    1.  **.NET 拡張機能**  
+    1. **.NET 拡張機能**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **ISAPI 拡張機能**  
+    3. **ISAPI 拡張機能**  
   
-    4.  **ISAPI フィルター**  
+    4. **ISAPI フィルター**  
   
 9. アイテムの下のラベル付け**World Wide Web サービス**、展開**Http 共通機能**します。  
   
@@ -104,13 +104,13 @@ ms.locfileid: "59328960"
   
 8. 次の項目が選択されていることを確認します。  
   
-    1.  **.NET 拡張機能**  
+    1. **.NET 拡張機能**  
   
-    2.  **ASP.NET**  
+    2. **ASP.NET**  
   
-    3.  **ISAPI 拡張機能**  
+    3. **ISAPI 拡張機能**  
   
-    4.  **ISAPI フィルター**  
+    4. **ISAPI フィルター**  
   
 9. ラベル付き項目を展開**Web 管理ツール**、し、 **IIS 管理コンソール**します。  
   

@@ -18,14 +18,14 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f663f5134cf34bf9beb66da20bbb5886baff5415
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33419167"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61987429"
 ---
 # <a name="icordebugstepperstepout-method"></a>ICorDebugStepper::StepOut メソッド
-Icordebugstepper シングル ステップ実行に現在のフレームが呼び出し元のフレームに制御を返すときに完了してその格納スレッドを表示します。  
+Icordebugstepper シングル ステップ実行し、その格納のスレッドでは、現在のフレームが呼び出し元のフレームにコントロールを返されるときに完了するを表示します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -33,18 +33,18 @@ Icordebugstepper シングル ステップ実行に現在のフレームが呼�
 HRESULT StepOut ();  
 ```  
   
-## <a name="remarks"></a>コメント  
- A`StepOut`呼び出し元のフレームを現在のフレームから正常に返る後に操作を完了します。  
+## <a name="remarks"></a>Remarks  
+ A`StepOut`呼び出し元のフレームに、現在のフレームから正常に戻った後操作が完了します。  
   
- 場合`StepOut`時に呼び出される、現在のフレームが呼び出し元のマネージ コードに戻るときに、アンマネージ コードでステップを行います。  
+ 場合`StepOut`時に呼び出される、現在のフレームがそれを呼び出したマネージ コードに返されるときに、アンマネージ コードでの手順を行います。  
   
- .NET Framework version 2.0 では使用しないで`StepOut`STOP_UNMANAGED フラグをセットが失敗するためです。 (使用[icordebugstepper::setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)ステッピングのフラグを設定します)。相互運用機能デバッガー必要があります [ステップ アウト] ネイティブ コードに自体です。  
+ .NET Framework version 2.0 では使用しません`StepOut`STOP_UNMANAGED フラグ セット失敗します。 (使用[icordebugstepper::setunmappedstopmask](../../../../docs/framework/unmanaged-api/debugging/icordebugstepper-setunmappedstopmask-method.md)ステップ実行するためのフラグを設定します)。デバッガーの相互運用する必要があります ステップ アウトをネイティブ コードに自体。  
   
-## <a name="requirements"></a>要件  
- **プラットフォーム:** を参照してください[システム要件](../../../../docs/framework/get-started/system-requirements.md)です。  
+## <a name="requirements"></a>必要条件  
+ **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
  **ライブラリ:** CorGuids.lib  
   
- **.NET framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]
+ **.NET Framework のバージョン:** [!INCLUDE[net_current_v10plus](../../../../includes/net-current-v10plus-md.md)]

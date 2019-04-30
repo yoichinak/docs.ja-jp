@@ -4,11 +4,11 @@ description: Azure Blob storage を使用してクラウドでは、非構造化
 author: sylvanc
 ms.date: 09/20/2016
 ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846429"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61982515"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用した Azure Blob storage を概要します。\#
 
@@ -16,7 +16,7 @@ Azure BLOB Storage は、非構造化データをオブジェクト/BLOB とし�
 
 この記事では、Blob storage を使用して一般的なタスクを実行する方法を示します。 サンプルは、.NET 用 Azure Storage クライアント ライブラリを使用した F# を使用して記述します。 対象タスクには、アップロード、一覧表示、ダウンロード、および blob を削除する方法が含まれます。
 
-Blob storage の概念的概要については、[blob ストレージ用の .NET ガイド](/azure/storage/storage-dotnet-how-to-use-blobs)を参照してください。
+Blob storage の概念的概要については、次を参照してください。 [blob ストレージ用の .NET ガイド](/azure/storage/storage-dotnet-how-to-use-blobs)します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
@@ -36,7 +36,7 @@ Blob storage の概念的概要については、[blob ストレージ用の .NE
 
 ### <a name="get-your-connection-string"></a>接続文字列を取得します。
 
-このチュートリアルに Azure Storage の接続文字列が必要です。 接続文字列の詳細については、[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)を参照してください。
+このチュートリアルに Azure Storage の接続文字列が必要です。 接続文字列の詳細については、次を参照してください。[ストレージ接続文字列を構成](/azure/storage/storage-configure-connection-string)します。
 
 このチュートリアルでは、次のように、スクリプトで、接続文字列を入力します。
 
@@ -190,7 +190,7 @@ Blob を削除するには、まず blob の参照を取得を呼び出して、
 
 * **リース**の取得だけで、更新可能な書き込みまたは一定期間、blob へのアクセスを削除する方法を提供します。
 
-詳細については、[Microsoft Azure Storage 内の同時実行を管理する](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)を参照してください。
+詳細については、次を参照してください。 [Microsoft Azure Storage 内の同時実行を管理する](https://azure.microsoft.com/blog/managing-concurrency-in-microsoft-azure-storage-2/)します。
 
 ## <a name="naming-containers"></a>名前付けコンテナー
 

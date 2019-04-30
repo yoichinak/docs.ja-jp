@@ -16,11 +16,11 @@ ms.assetid: 43e61c4b-c435-45ec-9ef6-c68403aa4200
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 4c42297e848844617ffdc6c85c81846b5805eb4b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59181346"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984764"
 ---
 # <a name="iclrdomainmanagersetpropertiesfordefaultappdomain-method"></a>ICLRDomainManager::SetPropertiesForDefaultAppDomain メソッド
 既定のアプリケーション ドメインを初期化するために使用されるプロパティを設定します。  

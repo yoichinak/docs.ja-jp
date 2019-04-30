@@ -3,11 +3,11 @@ title: 構成サンプル
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
 ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768242"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002244"
 ---
 # <a name="configuration-sample"></a>構成サンプル
 このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。  
@@ -27,15 +27,15 @@ ms.locfileid: "59768242"
 ## <a name="service-configuration"></a>サービス構成  
  このサンプルの構成ファイルでは、次の 2 つの機能を示します。  
   
--   標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を介してサービスを探索できるようにします。  
+- 標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> を介してサービスを探索できるようにします。  
   
--   サービスのアプリケーション エンドポイントに対する探索関連の情報を調整し、標準エンドポイントに対する探索関連の設定を調整します。  
+- サービスのアプリケーション エンドポイントに対する探索関連の情報を調整し、標準エンドポイントに対する探索関連の設定を調整します。  
   
  探索を有効にするには、サービスのアプリケーション構成ファイルで次の変更を行う必要があります。  
   
--   探索エンドポイントを `<service>` 要素に追加する必要があります。 これは標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> エンドポイントです。 このエンドポイントが、ランタイムによって探索サービスに関連付けられるシステム エンドポイントになります。 探索サービスは、このエンドポイント上でメッセージをリッスンします。  
+- 探索エンドポイントを `<service>` 要素に追加する必要があります。 これは標準の <xref:System.ServiceModel.Discovery.UdpDiscoveryEndpoint> エンドポイントです。 このエンドポイントが、ランタイムによって探索サービスに関連付けられるシステム エンドポイントになります。 探索サービスは、このエンドポイント上でメッセージをリッスンします。  
   
--   `<serviceDiscovery>` 動作を `<serviceBehaviors>` セクションに追加します。 これにより、サービスが実行時に探索されるようになり、前述の探索エンドポイントを使用して探索の `Probe` メッセージおよび `Resolve` メッセージをリッスンするようになります。 この 2 つの追加により、指定した探索エンドポイントでサービスが探索可能になります。  
+- `<serviceDiscovery>` 動作を `<serviceBehaviors>` セクションに追加します。 これにより、サービスが実行時に探索されるようになり、前述の探索エンドポイントを使用して探索の `Probe` メッセージおよび `Resolve` メッセージをリッスンするようになります。 この 2 つの追加により、指定した探索エンドポイントでサービスが探索可能になります。  
   
  次の構成スニペットでは、アプリケーション エンドポイントのサービスと定義された探索エンドポイントが示されています。  
   

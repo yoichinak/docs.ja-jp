@@ -6,11 +6,11 @@ helpviewer_keywords:
 - Windows Forms, creating a new form
 ms.assetid: c725559c-803e-4725-80fa-96aba93de29a
 ms.openlocfilehash: 409dd945ebd26d212f62745ce6751f7507641bb2
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57708090"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009059"
 ---
 # <a name="creating-a-new-windows-form"></a>新しい Windows フォームの作成
 このトピックでは、初めての Windows フォーム アプリケーションを作成する方法について説明したトピックへのリンクを示します。 また、このセクションのトピックでは、Windows フォーム アプリケーションを作成する際に理解しておくべき基本的な用語とガイドラインもいくつか紹介します。 Windows フォーム アプリケーションについてに、イベントとイベントの処理、および、ユーザーからの入力を処理する方法で使用できるコントロールは、関連トピックの一覧を参照してください。  

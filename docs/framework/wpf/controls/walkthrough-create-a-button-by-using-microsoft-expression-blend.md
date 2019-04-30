@@ -7,11 +7,11 @@ helpviewer_keywords:
 - Expression Blend [WPF Designer]
 ms.assetid: ff5037c2-bba7-4cae-8abb-6475b686c48e
 ms.openlocfilehash: 3cf9d133aee5a2c3d93c1a464c96fdaebcf230f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300462"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018259"
 ---
 # <a name="walkthrough-create-a-button-by-using-microsoft-expression-blend"></a>チュートリアル: Microsoft Expression Blend を使用してボタンを作成する
 このチュートリアルを作成するプロセスを[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]Microsoft Expression Blend を使用してカスタマイズされたボタンをクリックします。  
@@ -117,17 +117,17 @@ ms.locfileid: "59300462"
   
 10. **GlassCube のガラスのように行います。** 設定、 <xref:System.Windows.Shapes.Shape.Fill%2A> 75% 不透明であり、白と交互 Transparent 6 以上約均等に分散される線形グラデーションの間隔の間隔を使用して、ガラスのような外観にします。 これは、何をグラデーションの分岐点を設定します。  
   
-    -   グラデーションの分岐点 1:白、75% のアルファ値  
+    - グラデーションの分岐点 1:白、75% のアルファ値  
   
-    -   グラデーションの分岐点 2:透明  
+    - グラデーションの分岐点 2:透明  
   
-    -   グラデーションの分岐点 3:白、75% のアルファ値  
+    - グラデーションの分岐点 3:白、75% のアルファ値  
   
-    -   グラデーションの分岐点 4:透明  
+    - グラデーションの分岐点 4:透明  
   
-    -   グラデーションの分岐点 5:白、75% のアルファ値  
+    - グラデーションの分岐点 5:白、75% のアルファ値  
   
-    -   グラデーションの分岐点 6:透明  
+    - グラデーションの分岐点 6:透明  
   
      これには、「波線」のガラスの外観が作成されます。  
   
@@ -173,9 +173,9 @@ ms.locfileid: "59300462"
   
 6. **IsFocused のプロパティ トリガーを作成します。** 場合と同じ手順を使用して<xref:System.Windows.UIElement.IsMouseOver%2A>(このセクションの最初の手順を参照) の別のプロパティ トリガーを作成、<xref:System.Windows.UIElement.IsFocused%2A>プロパティ。 中に**トリガーの記録がオン**、次のアクション、トリガーを追加します。  
   
-    -   **glassCube**取得、<xref:System.Windows.UIElement.Opacity%2A>の 100% です。  
+    - **glassCube**取得、<xref:System.Windows.UIElement.Opacity%2A>の 100% です。  
   
-    -   **サイズ**取得、 <xref:System.Windows.Shapes.Shape.Stroke%2A> "以下 {DynamicResource {x: 静的 SystemColors.HighlightBrushKey}}"のカスタム式の値。  
+    - **サイズ**取得、 <xref:System.Windows.Shapes.Shape.Stroke%2A> "以下 {DynamicResource {x: 静的 SystemColors.HighlightBrushKey}}"のカスタム式の値。  
   
  このチュートリアルの最後の手順としては、ボタンに、アニメーションを追加します。 これらのアニメーションはイベントによってトリガーされます-具体的には、<xref:System.Windows.UIElement.MouseEnter>と<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
@@ -208,19 +208,19 @@ ms.locfileid: "59300462"
   
 5. **別のイベント トリガーを作成し、さまざまなアニメーションを関連付けます。** さらに 1 つのアニメーションを追加してみましょう。 イベント トリガーの前のアニメーションを作成するために使用するのと同様の手順を使用します。  
   
-    1.  新しいイベント トリガーを作成、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
+    1. 新しいイベント トリガーを作成、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
-    2.  新しいタイムラインを関連付ける、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
+    2. 新しいタイムラインを関連付ける、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント。  
   
      ![新しいタイムラインを作成する方法](./media/custom-button-blend-clickeventtrigger1.png "custom_button_blend_ClickEventTrigger1")  
   
-    1.  このタイムラインの 2 つのキーフレーム、0.0 秒で 0.3 秒に 2 つ目を作成します。  
+    1. このタイムラインの 2 つのキーフレーム、0.0 秒で 0.3 秒に 2 つ目を作成します。  
   
-    2.  強調表示されている 0.3 の秒のキーフレーム、設定、**回転角度**を 360 度。  
+    2. 強調表示されている 0.3 の秒のキーフレーム、設定、**回転角度**を 360 度。  
   
      ![回転変換を作成する方法](./media/custom-button-blend-rotatetransform.gif "custom_button_blend_RotateTransform")  
   
-    1.  F5 キーを押してアプリケーションを実行します。 ボタンをクリックします。 グラス レイヤーが回転することに注意してください。  
+    1. F5 キーを押してアプリケーションを実行します。 ボタンをクリックします。 グラス レイヤーが回転することに注意してください。  
   
 ## <a name="conclusion"></a>まとめ  
  カスタマイズされたボタンが完了しました。 このアプリケーションのすべてのボタンに適用されているボタン テンプレートを使用して行いました。 テンプレート編集モードのままにする場合 (次の図を参照してください) と他のボタンを作成、外観し、動作は既定のボタンではなく、カスタム ボタンのように表示されます。  
@@ -237,15 +237,15 @@ ms.locfileid: "59300462"
   
  結論として、ボタン テンプレートをカスタマイズするプロセスでは Microsoft Expression Blend では、次を実行する方法について説明しました。  
   
--   コントロールの外観をカスタマイズします。  
+- コントロールの外観をカスタマイズします。  
   
--   プロパティ トリガーを設定します。 プロパティ トリガーは、コントロールにだけでなく、ほとんどのオブジェクトで使用されるあるために、非常に便利です。  
+- プロパティ トリガーを設定します。 プロパティ トリガーは、コントロールにだけでなく、ほとんどのオブジェクトで使用されるあるために、非常に便利です。  
   
--   イベント トリガーを設定します。 イベント トリガーは、コントロールにだけでなく、ほとんどのオブジェクトで使用されるあるために、非常に便利です。  
+- イベント トリガーを設定します。 イベント トリガーは、コントロールにだけでなく、ほとんどのオブジェクトで使用されるあるために、非常に便利です。  
   
--   アニメーションを作成します。  
+- アニメーションを作成します。  
   
--   BitmapEffects を追加する: その他のグラデーションを作成し、変換を使用するオブジェクトの基本プロパティを設定します。  
+- BitmapEffects を追加する: その他のグラデーションを作成し、変換を使用するオブジェクトの基本プロパティを設定します。  
   
 ## <a name="see-also"></a>関連項目
 

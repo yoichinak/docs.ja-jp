@@ -10,11 +10,11 @@ helpviewer_keywords:
 - regions
 ms.assetid: 52184f9b-16dd-4bbd-85be-029112644ceb
 ms.openlocfilehash: 33d4f4ecca7b9d777fa4eab5b6d031de10f03ccc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59076030"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61956811"
 ---
 # <a name="regions-in-gdi"></a>GDI+ での領域
 リージョンは、出力デバイスの表示領域の一部を示します。 リージョンは、単純な (1 つの四角形) または複合 (多角形と閉じた曲線の組み合わせ) を指定できます。 次の図は、2 つのリージョン: 四角形から構築された 1 つと、パスから構築されました。  

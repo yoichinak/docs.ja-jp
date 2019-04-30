@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: b4884d483de07c1c2077f7280b6b77c6059572c0
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53154263"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051235"
 ---
 # <a name="telemetry-with-application-insights"></a>Application Insights のテレメトリ
 
@@ -55,7 +55,7 @@ telemetry.TrackDependency("AzureTableStorageInsert", "Insert", startTime, timer.
 
 Application Insights では、サーバーレス アプリケーションに関する詳細な製品利用統計情報を記録する強力な便利な手段を提供します。 トレースのレベルに対するフル コントロールがあり、ログが提供されます。 イベント、依存関係、およびページ ビューなどのカスタムの統計を追跡することができます。 最後に、強力な分析では、重要な質問したり、グラフと高度な洞察を生成するクエリの作成を有効にします。
 
-詳細については、[Azure Functions を監視](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)を参照してください。
+詳細については、次を参照してください。 [Azure Functions を監視](https://docs.microsoft.com/azure/azure-functions/functions-monitoring)します。
 
 >[!div class="step-by-step"]
 >[前へ](azure-functions.md)

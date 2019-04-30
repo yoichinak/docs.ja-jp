@@ -5,11 +5,11 @@ helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
 ms.openlocfilehash: 947ef3c2120377fe33e0062d1ed508ddda432314
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335330"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972459"
 ---
 # <a name="message-security-user-name"></a>メッセージ セキュリティ ユーザー名
 このサンプルでは、クライアントのユーザー名認証による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、サーバーの X.509v3 証明書を使用するサーバー認証が必要です。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 既定では、クライアントによって提供されるユーザー名とパスワードが、有効な Windows アカウントへのログオンに使用されます。 このサンプルがに基づいて、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)します。 このサンプルは、クライアント コンソール プログラム (Client.exe) と、インターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリ (Service.dll) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  
@@ -19,9 +19,9 @@ ms.locfileid: "59335330"
   
  このサンプルでは、さらに次の方法も示します。  
   
--   追加の承認を実行できるようにするための、Windows アカウントへの既定のマッピング。  
+- 追加の承認を実行できるようにするための、Windows アカウントへの既定のマッピング。  
   
--   サービス コードから呼び出し元の ID 情報にアクセスする方法。  
+- サービス コードから呼び出し元の ID 情報にアクセスする方法。  
   
  サービスは、そのサービスとの通信に使用する単一エンドポイントを公開します。エンドポイントは構成ファイル Web.config で定義します。エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 標準的なバインディングが構成されている[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)、既定ではメッセージ セキュリティを使用します。 このサンプルの設定、標準[ \<wsHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wshttpbinding.md)クライアント ユーザー名認証を使用します。 この動作により、サービス認証でユーザーの資格情報が使用されることが指定されます。 サーバー証明書のサブジェクト名として同じ値を含める必要があります、`findValue`属性、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)します。  
   
@@ -147,7 +147,7 @@ Press <ENTER> to terminate client.
   
  次に、バッチ ファイルの各セクションの概要を簡単に説明します。  
   
--   サーバー証明書の作成  
+- サーバー証明書の作成  
   
      Setup.bat バッチ ファイルの次の行は、使用するサーバー証明書を作成します。  
   
@@ -163,7 +163,7 @@ Press <ENTER> to terminate client.
   
      %SERVER_NAME% 変数はサーバー名を指定します。 証明書は LocalMachine ストアに保存されます。 Setup.bat バッチ ファイルの実行にサービスの引数 (`setup.bat service` など) が使用された場合、%SERVER_NAME% にはコンピューターの完全修飾ドメイン名が含まれます。  それ以外の場合、既定値は localhost です。  
   
--   クライアントの信頼された証明書ストアへのサーバー証明書のインストール  
+- クライアントの信頼された証明書ストアへのサーバー証明書のインストール  
   
      次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。  
   
@@ -171,7 +171,7 @@ Press <ENTER> to terminate client.
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople  
     ```  
   
--   証明書の秘密キーに関する権限の付与  
+- 証明書の秘密キーに関する権限の付与  
   
      Setup.bat バッチ ファイルの次の行は、LocalMachine ストアに保存されたサーバー証明書を [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ワーカー プロセス アカウントでアクセスできるようにします。  
   
@@ -234,7 +234,7 @@ Press <ENTER> to terminate client.
   
 ### <a name="to-clean-up-after-the-sample"></a>サンプルの実行後にクリーンアップするには  
   
--   サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
+- サンプルの実行が終わったら、サンプル フォルダーにある Cleanup.bat を実行します。  
   
     > [!NOTE]
     >  このサンプルを複数のコンピューターで実行している場合、このスクリプトはサービス証明書をクライアントから削除しません。 コンピューター間で証明書を使用する Windows Communication Foundation (WCF) サンプルを実行すると、必ず、CurrentUser - TrustedPeople ストアにインストールされているサービス証明書をオフにします。 これを行うには、次のコマンドを使用します。`certmgr -del -r CurrentUser -s TrustedPeople -c -n <Fully Qualified Server Machine Name>` 例:`certmgr -del -r CurrentUser -s TrustedPeople -c -n server1.contoso.com`します。  

@@ -10,25 +10,25 @@ helpviewer_keywords:
 - data grids [Windows Forms], detecting changes in cells
 ms.assetid: 7fa44d01-97f4-4ccb-a149-bc72628d2c36
 ms.openlocfilehash: 0573199e9afb7e52c7542d36a2f3e39730dacdc4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59229161"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012673"
 ---
 # <a name="how-to-perform-a-custom-action-based-on-changes-in-a-cell-of-a-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールのセルの変更に基づいてカスタム動作を実行する
 <xref:System.Windows.Forms.DataGridView>コントロールが状態の変更を検出するために使用できるイベントの数が<xref:System.Windows.Forms.DataGridView>セル。 2 つの最も一般的に使用される、<xref:System.Windows.Forms.DataGridView.CellValueChanged>と<xref:System.Windows.Forms.DataGridView.CellStateChanged>イベント。  
   
 ### <a name="to-detect-changes-in-the-values-of-datagridview-cells"></a>DataGridView セルの値に変更を検出するには  
   
--   ハンドラーを記述、<xref:System.Windows.Forms.DataGridView.CellValueChanged>イベント。  
+- ハンドラーを記述、<xref:System.Windows.Forms.DataGridView.CellValueChanged>イベント。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#130)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#130](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#130)]  
   
 ### <a name="to-detect-changes-in-the-states-of-datagridview-cells"></a>DataGridView セルの状態の変更を検出するには  
   
--   ハンドラーを記述、<xref:System.Windows.Forms.DataGridView.CellStateChanged>イベント。  
+- ハンドラーを記述、<xref:System.Windows.Forms.DataGridView.CellStateChanged>イベント。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#135)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#135](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#135)]  
@@ -36,9 +36,9 @@ ms.locfileid: "59229161"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。 C#、対応するイベントにイベント ハンドラーを接続する必要があります。  
+- `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。 C#、対応するイベントにイベント ハンドラーを接続する必要があります。  
   
--   <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
+- <xref:System?displayProperty=nameWithType> アセンブリおよび <xref:System.Windows.Forms?displayProperty=nameWithType> アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 

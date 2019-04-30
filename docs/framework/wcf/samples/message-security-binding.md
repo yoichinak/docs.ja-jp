@@ -3,11 +3,11 @@ title: メッセージ セキュリティ バインディング
 ms.date: 03/30/2017
 ms.assetid: a4570ce7-864e-461b-85d8-0f7bcc53c2c8
 ms.openlocfilehash: 5c8f1cd9135f48d06beb19317910a1c13bac78ff
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50194437"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972446"
 ---
 # <a name="message-security-binding"></a>メッセージ セキュリティ バインディング
 このセクションには、WCF での Windows サービスでメッセージ セキュリティ バインディングを示すサンプルが含まれています。  

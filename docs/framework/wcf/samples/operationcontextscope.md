@@ -3,11 +3,11 @@ title: OperationContextScope
 ms.date: 03/30/2017
 ms.assetid: 11c11108-8eb4-4d49-95a0-83285a812262
 ms.openlocfilehash: cc0f8805410ff975458222547e8bde74ef0605f3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771570"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008047"
 ---
 # <a name="operationcontextscope"></a>OperationContextScope
 OperationContextScope サンプルでは、ヘッダーを使用して Windows Communication Foundation (WCF) の呼び出しで追加の情報を送信する方法を示します。 このサンプルでは、サーバーとクライアントは両方ともコンソール アプリケーションです。  

@@ -6,11 +6,11 @@ helpviewer_keywords:
 - spinning elements [WPF]
 ms.assetid: 1f011976-8b07-4c31-9faf-019e0ddaa24c
 ms.openlocfilehash: aca9bd577f2882e31e8d49abe5eeb5ade86f95f7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59110665"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61947253"
 ---
 # <a name="how-to-make-an-element-spin-in-place"></a>方法: 要素のスピンを設定する
 この例は、スピンを使用して要素を作成する方法を示しています、<xref:System.Windows.Media.RotateTransform>と<xref:System.Windows.Media.Animation.DoubleAnimation>します。  

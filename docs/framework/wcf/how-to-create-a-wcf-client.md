@@ -6,11 +6,11 @@ helpviewer_keywords:
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
 ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59174370"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002080"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>チュートリアル: Windows Communication Foundation クライアントを作成します。
 
@@ -47,7 +47,7 @@ WCF アプリケーションを作成するための次のタスクでは、WCF 
 
 2. 参照を追加、 **GettingStartedClient**プロジェクトを<xref:System.ServiceModel>アセンブリ。 
 
-    1.  **ソリューション エクスプ ローラー**ウィンドウで、**参照**の下のフォルダー、 **GettingStartedClient**プロジェクトを選び**参照の追加**ショートカット メニューから。 
+    1. **ソリューション エクスプ ローラー**ウィンドウで、**参照**の下のフォルダー、 **GettingStartedClient**プロジェクトを選び**参照の追加**ショートカット メニューから。 
 
     2. **参照の追加**ウィンドウで、**アセンブリ**ウィンドウの左側にある、次のように選択します。 **Framework**します。
     

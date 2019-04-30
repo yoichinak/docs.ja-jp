@@ -6,11 +6,11 @@ helpviewer_keywords:
 - media [WPF]
 ms.assetid: feb25b15-d741-4ac3-818f-1b19f63a3562
 ms.openlocfilehash: 66cb28fce9485898711b9029baf8a17dd9b2c011
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62030382"
 ---
 # <a name="multimedia-overview"></a>マルチメディアの概要
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] のマルチメディア機能を使用してアプリケーションにオーディオとビデオを統合することで、ユーザー エクスペリエンスを向上させることできます。 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のマルチメディア機能の概要を説明します。  
@@ -37,11 +37,11 @@ ms.locfileid: "59340491"
 ### <a name="independent-mode"></a>Independent モード  
  Independent モードでは、メディア コンテンツがメディアの再生を行います。 Independent モードには、次のオプションがあります。  
   
--   メディアの<xref:System.Uri>直接指定することができます。  
+- メディアの<xref:System.Uri>直接指定することができます。  
   
--   メディアの再生を直接制御できます。  
+- メディアの再生を直接制御できます。  
   
--   メディアの<xref:System.Windows.Controls.MediaElement.Position%2A>と<xref:System.Windows.Controls.MediaElement.SpeedRatio%2A>プロパティを変更できます。  
+- メディアの<xref:System.Windows.Controls.MediaElement.Position%2A>と<xref:System.Windows.Controls.MediaElement.SpeedRatio%2A>プロパティを変更できます。  
   
  いずれかの設定によってメディアが読み込まれる、<xref:System.Windows.Controls.MediaElement>オブジェクトの<xref:System.Windows.Controls.MediaElement.Source%2A>プロパティまたは呼び出すことによって、<xref:System.Windows.Media.MediaPlayer>オブジェクトの<xref:System.Windows.Media.MediaPlayer.Open%2A>メソッド。  
   
@@ -52,11 +52,11 @@ ms.locfileid: "59340491"
 ### <a name="clock-mode"></a>Clock モード  
  Clock モードで、<xref:System.Windows.Media.MediaTimeline>ドライブ メディアを再生します。 Clock モードには次の特徴があります。  
   
--   メディアの<xref:System.Uri>を通じて間接的に設定されて、<xref:System.Windows.Media.MediaTimeline>します。  
+- メディアの<xref:System.Uri>を通じて間接的に設定されて、<xref:System.Windows.Media.MediaTimeline>します。  
   
--   メディアの再生は、クロックによって制御できます。 メディア オブジェクトの制御メソッドは使用できません。  
+- メディアの再生は、クロックによって制御できます。 メディア オブジェクトの制御メソッドは使用できません。  
   
--   設定によってメディアが読み込まれて、<xref:System.Windows.Media.MediaTimeline>オブジェクトの<xref:System.Windows.Media.MediaTimeline.Source%2A>プロパティ、タイムラインからクロックを作成して、クロックをメディア オブジェクトに割り当てます。 メディアは、この方法にも読み込まはときに、<xref:System.Windows.Media.MediaTimeline>内で、<xref:System.Windows.Media.Animation.Storyboard>ターゲット、 <xref:System.Windows.Controls.MediaElement>。  
+- 設定によってメディアが読み込まれて、<xref:System.Windows.Media.MediaTimeline>オブジェクトの<xref:System.Windows.Media.MediaTimeline.Source%2A>プロパティ、タイムラインからクロックを作成して、クロックをメディア オブジェクトに割り当てます。 メディアは、この方法にも読み込まはときに、<xref:System.Windows.Media.MediaTimeline>内で、<xref:System.Windows.Media.Animation.Storyboard>ターゲット、 <xref:System.Windows.Controls.MediaElement>。  
   
  Clock モードでメディアの再生を制御する、<xref:System.Windows.Media.Animation.ClockController>制御メソッドを使用する必要があります。 A<xref:System.Windows.Media.Animation.ClockController>から取得したが、<xref:System.Windows.Media.Animation.ClockController>のプロパティ、<xref:System.Windows.Media.MediaClock>します。 いずれかの制御方法を使用しようとした場合、<xref:System.Windows.Controls.MediaElement>または<xref:System.Windows.Media.MediaPlayer>clock モード中にオブジェクトを<xref:System.InvalidOperationException>がスローされます。  
   

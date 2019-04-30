@@ -10,11 +10,11 @@ helpviewer_keywords:
 - events [Windows Forms], keyboard
 ms.assetid: d3f3e14b-a459-4ee6-9875-8957e34f8ee9
 ms.openlocfilehash: 9aefe6be17e5d72c86c2c47bf0d373d0a081ca76
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59114271"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966909"
 ---
 # <a name="using-keyboard-events"></a>キーボード イベントの使用
 多くの Windows フォーム プログラムは、キーボード イベントを処理することによってキーボード入力を処理します。 ここでは、どのような場合に各キーボード イベントを使用するか、また各イベントがどのようなデータを提供するかについての詳細を含め、キーボード イベントの概要について説明します。  参照してください[イベント ハンドラーの概要 (Windows フォーム)](event-handlers-overview-windows-forms.md)と[イベントの概要 (Windows フォーム)](events-overview-windows-forms.md)します。  
@@ -22,11 +22,11 @@ ms.locfileid: "59114271"
 ## <a name="keyboard-events"></a>キーボード イベント  
  Windows フォームは、ユーザーがキーボードのキーを押したときに発生する 2 つのイベントと、キーボードのキーを離したときに発生する 1 つのイベントを提供します。これらのイベントは次のとおりです。  
   
--   <xref:System.Windows.Forms.Control.KeyDown> イベント。キーを押したときに 1 回発生します。  
+- <xref:System.Windows.Forms.Control.KeyDown> イベント。キーを押したときに 1 回発生します。  
   
--   <xref:System.Windows.Forms.Control.KeyPress> イベント。ユーザーが同じキーを押したままにすると、繰り返し発生する可能性があります。  
+- <xref:System.Windows.Forms.Control.KeyPress> イベント。ユーザーが同じキーを押したままにすると、繰り返し発生する可能性があります。  
   
--   <xref:System.Windows.Forms.Control.KeyUp> イベント。ユーザーがキーを離したときに 1 回発生します。  
+- <xref:System.Windows.Forms.Control.KeyUp> イベント。ユーザーがキーを離したときに 1 回発生します。  
   
  ユーザーがキーを押すと、Windows フォームは、キーボード メッセージが文字キーまたは物理キーのどちらを示しているかに基づいて、発生させるイベントを決定します。 文字と物理キーの詳細については、次を参照してください。[キーボード入力のしくみ](how-keyboard-input-works.md)します。  
   

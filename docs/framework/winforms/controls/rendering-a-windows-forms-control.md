@@ -11,24 +11,24 @@ helpviewer_keywords:
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
 ms.openlocfilehash: 8de87e17d1baedccfe18bfded3ccab7ab59f0a09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125685"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012478"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Windows フォーム コントロールのレンダリング
 レンダリングは、ユーザーの画面にビジュアル表現を作成するプロセスを指します。 Windows フォームを使用して[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)](新しい Windows グラフィックス ライブラリ) をレンダリングします。 アクセスを提供するマネージ クラス[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]では、<xref:System.Drawing?displayProperty=nameWithType>名前空間とその下位の名前空間。  
   
  コントロールのレンダリングで、次の要素が含まれます。  
   
--   基本クラスによって提供される描画機能<xref:System.Windows.Forms.Control?displayProperty=nameWithType>します。  
+- 基本クラスによって提供される描画機能<xref:System.Windows.Forms.Control?displayProperty=nameWithType>します。  
   
--   重要な要素、[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]グラフィックス ライブラリ。  
+- 重要な要素、[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]グラフィックス ライブラリ。  
   
--   描画領域のジオメトリ。  
+- 描画領域のジオメトリ。  
   
--   グラフィックス リソースを解放するプロシージャです。  
+- グラフィックス リソースを解放するプロシージャです。  
   
 ## <a name="drawing-functionality-provided-by-control"></a>描画コントロールによって提供される機能  
  基本クラス<xref:System.Windows.Forms.Control>を通じて描画機能を提供します。 その<xref:System.Windows.Forms.Control.Paint>イベント。 コントロールを有効に、<xref:System.Windows.Forms.Control.Paint>イベントの表示を更新する必要があるたびにします。 .NET Framework のイベントの詳細については、次を参照してください。[処理とイベントの発生](../../../standard/events/index.md)します。  

@@ -7,11 +7,11 @@ helpviewer_keywords:
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
 ms.openlocfilehash: dcfad1c2b2f95783e2b348a3a1111501f958143f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116481"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006634"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF から System.Xaml に移行した型
 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]と[!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]の両方を[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Workflow Foundation には、XAML 言語の実装が含まれているとします。 WPF XAML 実装に拡張性を与えていたパブリック型の多くは、WindowsBase、PresentationCore、および PresentationFramework アセンブリに存在していました。 同様に、Windows Workflow Foundation の XAML 機能拡張を提供するパブリック型は System.Workflow.ComponentModel アセンブリに存在します。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]では、XAML 関連の型の一部が System.Xaml アセンブリに移行されました。 XAML 言語サービスの一般的な .NET Framework 実装では、もともと特定のフレームワークの XAML 実装によって定義されていた XAML 機能拡張のシナリオの多くを、今では全体的な [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] XAML 言語サポートの一部として使用できるようになりました。 このトピックでは、移行された型を紹介し、移行に伴う問題について説明します。  
@@ -27,11 +27,11 @@ ms.locfileid: "59116481"
 ### <a name="workflow-xaml-support-types"></a>ワークフロー XAML サポート型  
  Windows Workflow Foundation では、XAML サポート型も提供されており、多くの場合と同じ WPF に同じ短い名前でした。 Windows Workflow Foundation の XAML サポート型の一覧を次には。  
   
--   <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
+- <xref:System.Workflow.ComponentModel.Serialization.ContentPropertyAttribute>  
   
--   <xref:System.Workflow.ComponentModel.Serialization.RuntimeNamePropertyAttribute>  
+- <xref:System.Workflow.ComponentModel.Serialization.RuntimeNamePropertyAttribute>  
   
--   <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
+- <xref:System.Workflow.ComponentModel.Serialization.XmlnsPrefixAttribute>  
   
  これらのサポートの種類は、Windows Workflow Foundation のアセンブリにまだ存在[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]と特定の Windows Workflow Foundation アプリケーションを引き続き使用できますただし、この属性はアプリケーションまたはフレームワークを使用しないのではない参照する必要があります。Windows Workflow Foundation。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59116481"
 ## <a name="markupextension-supporting-service-classes"></a>MarkupExtension をサポートするサービス クラス  
  WPF 向けの[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] と [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] では、 <xref:System.Windows.Markup.MarkupExtension> implementers と <xref:System.ComponentModel.TypeConverter> の実装が提供されていました。 これらのサービスを次に示します。  
   
--   <xref:System.Windows.Markup.IProvideValueTarget>  
+- <xref:System.Windows.Markup.IProvideValueTarget>  
   
--   <xref:System.Windows.Markup.IUriContext>  
+- <xref:System.Windows.Markup.IUriContext>  
   
--   <xref:System.Windows.Markup.IXamlTypeResolver>  
+- <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
 >  マークアップ拡張機能に関連するもう 1 つの [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] のサービスとして、 <xref:System.Windows.Markup.IReceiveMarkupExtension> インターフェイスがあります。 <xref:System.Windows.Markup.IReceiveMarkupExtension> は移行されず、 `[Obsolete]` では [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]とマーク付けされています。 以前に <xref:System.Windows.Markup.IReceiveMarkupExtension> を使用していたシナリオは、代わりに <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> 属性付きコールバックを使用する必要があります。 <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> も `[Obsolete]`とマーク付けされています。  
@@ -75,35 +75,35 @@ ms.locfileid: "59116481"
 ## <a name="xaml-related-attributes"></a>XAML 関連の属性  
  WPF XAML には、XAML の動作について何かを示すために CLR 型に適用される属性がいくつか含まれています。 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] および [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]で WPF アセンブリ内に存在していた属性の一覧を次に示します。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]では、これらの属性は System.Xaml に移行されました。  
   
--   <xref:System.Windows.Markup.AmbientAttribute>  
+- <xref:System.Windows.Markup.AmbientAttribute>  
   
--   <xref:System.Windows.Markup.ContentPropertyAttribute>  
+- <xref:System.Windows.Markup.ContentPropertyAttribute>  
   
--   <xref:System.Windows.Markup.ContentWrapperAttribute>  
+- <xref:System.Windows.Markup.ContentWrapperAttribute>  
   
--   <xref:System.Windows.Markup.DependsOnAttribute>  
+- <xref:System.Windows.Markup.DependsOnAttribute>  
   
--   <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
+- <xref:System.Windows.Markup.MarkupExtensionReturnTypeAttribute>  
   
--   <xref:System.Windows.Markup.NameScopePropertyAttribute>  
+- <xref:System.Windows.Markup.NameScopePropertyAttribute>  
   
--   <xref:System.Windows.Markup.RootNamespaceAttribute>  
+- <xref:System.Windows.Markup.RootNamespaceAttribute>  
   
--   <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
+- <xref:System.Windows.Markup.RuntimeNamePropertyAttribute>  
   
--   <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
+- <xref:System.Windows.Markup.TrimSurroundingWhitespaceAttribute>  
   
--   <xref:System.Windows.Markup.ValueSerializerAttribute>  
+- <xref:System.Windows.Markup.ValueSerializerAttribute>  
   
--   <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
+- <xref:System.Windows.Markup.WhitespaceSignificantCollectionAttribute>  
   
--   <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
+- <xref:System.Windows.Markup.XmlLangPropertyAttribute>  
   
--   <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>  
+- <xref:System.Windows.Markup.XmlnsCompatibleWithAttribute>  
   
--   <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
+- <xref:System.Windows.Markup.XmlnsDefinitionAttribute>  
   
--   <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
+- <xref:System.Windows.Markup.XmlnsPrefixAttribute>  
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>その他のクラス  

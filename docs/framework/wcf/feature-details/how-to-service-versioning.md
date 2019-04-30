@@ -3,11 +3,11 @@ title: '方法: サービスのバージョン管理'
 ms.date: 03/30/2017
 ms.assetid: 4287b6b3-b207-41cf-aebe-3b1d4363b098
 ms.openlocfilehash: afc1a690cae020ded3988cfd41f0e926a2e86f1e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346289"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62047478"
 ---
 # <a name="how-to-service-versioning"></a>方法: サービスのバージョン管理
 このトピックでは、メッセージを同じサービスの異なるバージョンにルーティングするルーティング構成を作成するために必要な、基本的な手順について説明します。 この例では、電卓サービスの 2 つのバージョン `roundingCalc` (v1) および `regularCalc` (v2) にメッセージがルーティングされます。 これらの実装は両方とも同じ操作をサポートしますが、古い方のサービス `roundingCalc` では、戻る前にすべての計算を最も近い整数値に丸めます。 クライアント アプリケーションは、新しい方の `regularCalc` サービスを使用するかどうかを示すことが可能である必要があります。  
@@ -17,13 +17,13 @@ ms.locfileid: "59346289"
   
  次の操作が両方のサービスによって公開されます。  
   
--   追加  
+- 追加  
   
--   減算  
+- 減算  
   
--   乗算  
+- 乗算  
   
--   除算  
+- 除算  
   
  両方のサービス実装が同じ操作を処理し、返すデータを除いて基本的に同一であるため、クライアント アプリケーションから送信されるメッセージに含まれる基本データでは、要求をルーティングする方法を特定できません。 たとえば、両方のサービスの既定のアクションが同じであるために、アクション フィルターを使用できない場合があります。  
   

@@ -3,11 +3,11 @@ title: 型指定されていない要求/応答
 ms.date: 03/30/2017
 ms.assetid: 0bf0f9d9-7caf-4d3d-8c9e-2d468cca16a5
 ms.openlocfilehash: 6ff3a8c7f9f5c3d4731bb8946e290b265be61729
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773637"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007657"
 ---
 # <a name="untyped-requestreply"></a>型指定のない要求/応答
 このサンプルは、Message クラスを使用する操作コントラクトを定義する方法を示します。  

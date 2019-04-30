@@ -12,11 +12,11 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], localization
 ms.assetid: e96f9764-4e3f-4d1c-bf20-3fb890118aae
 ms.openlocfilehash: 0d01f7536c120f51372961d944804cfe0063fb9f
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57375182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010281"
 ---
 # <a name="globalization-and-localization"></a>グローバライズとローカライズ
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] 国際対応アプリケーションを開発するための広範なサポートを提供します。  

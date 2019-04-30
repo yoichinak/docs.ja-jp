@@ -3,11 +3,11 @@ title: 関数のオーバーロードの解決方法 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 9c648054-3808-4a69-9d3e-98e6a4f9c5ca
 ms.openlocfilehash: 0248fdd3f3ba6afb5c7edca740d9aad3ca74bd03
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302518"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034178"
 ---
 # <a name="function-overload-resolution-entity-sql"></a>関数のオーバーロードの解決方法 (Entity SQL)
 このトピックでは、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] 関数の解決方法について説明します。  

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - typography [WPF], about typography
 ms.assetid: 06cbf17b-6eff-4fe5-949d-2dd533e4e1f4
 ms.openlocfilehash: 0fba0b8814597f58018c4c5feba85082ef035e1b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111411"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031318"
 ---
 # <a name="typography-in-wpf"></a>WPF のタイポグラフィ
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の主要な文字体裁の機能について説明します。 これらの機能には、テキスト レンダリングの品質とパフォーマンスの向上、[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)] 文字体裁のサポート、国際対応テキストの強化、フォントのサポートの強化、新しいテキスト API (アプリケーション プログラミング インターフェイス) が含まれます。  
@@ -45,39 +45,39 @@ ClearType の y 方向アンチエイリアシングを適用したテキスト
 ## <a name="enhanced-international-text-support"></a>国際対応テキストのサポートの強化  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、次の機能を提供することで、国際対応テキストのサポートを強化しています。  
   
--   すべての書記体系における、適用可能な単位を使用した自動行間隔設定。  
+- すべての書記体系における、適用可能な単位を使用した自動行間隔設定。  
   
--   国際対応テキストの幅広いサポート。 詳細については、「[WPF のグローバリゼーション](globalization-for-wpf.md)」をご覧ください。  
+- 国際対応テキストの幅広いサポート。 詳細については、「[WPF のグローバリゼーション](globalization-for-wpf.md)」をご覧ください。  
   
--   言語に合わせた改行、ハイフネーション、両端揃え。  
+- 言語に合わせた改行、ハイフネーション、両端揃え。  
   
 <a name="Enhanced_Font_Support"></a>   
 ## <a name="enhanced-font-support"></a>フォントのサポートの強化  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では、次の機能を提供することで、フォントのサポートを強化しています。  
   
--   すべてのテキストに対応する Unicode。 フォントの動作や選択に文字セットやコードページが不要になりました。  
+- すべてのテキストに対応する Unicode。 フォントの動作や選択に文字セットやコードページが不要になりました。  
   
--   システム ロケールなど、グローバル設定に左右されないフォント動作。  
+- システム ロケールなど、グローバル設定に左右されないフォント動作。  
   
--   個別<xref:System.Windows.FontWeight>、 <xref:System.Windows.FontStretch>、および<xref:System.Windows.FontStyle>型を定義するため、<xref:System.Windows.Media.FontFamily>します。 これにより、斜体と太字のブール値の組み合わせでフォント ファミリを定義する [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] プログラミングよりも優れた柔軟性が提供されます。  
+- 個別<xref:System.Windows.FontWeight>、 <xref:System.Windows.FontStretch>、および<xref:System.Windows.FontStyle>型を定義するため、<xref:System.Windows.Media.FontFamily>します。 これにより、斜体と太字のブール値の組み合わせでフォント ファミリを定義する [!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] プログラミングよりも優れた柔軟性が提供されます。  
   
--   フォント名とは関係なく処理される書き込み方向 (横書きまたは縦書き)。  
+- フォント名とは関係なく処理される書き込み方向 (横書きまたは縦書き)。  
   
--   複合フォント技術を使用した、移植可能な [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] ファイルにおけるフォント リンクとフォントの代替。 複合フォントは、完全な多言語フォントの構築を可能にします。 また、複合フォントは、欠落グリフの表示を防ぐ機能も備えています。 詳細についてで「解説」を参照してください、<xref:System.Windows.Media.FontFamily>クラス。  
+- 複合フォント技術を使用した、移植可能な [!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)] ファイルにおけるフォント リンクとフォントの代替。 複合フォントは、完全な多言語フォントの構築を可能にします。 また、複合フォントは、欠落グリフの表示を防ぐ機能も備えています。 詳細についてで「解説」を参照してください、<xref:System.Windows.Media.FontFamily>クラス。  
   
--   単一言語フォントのグループを使用した、複合フォントから構築される国際対応フォント。 これにより、複数言語に対応するフォントの開発時にリソースのコストを節約できます。  
+- 単一言語フォントのグループを使用した、複合フォントから構築される国際対応フォント。 これにより、複数言語に対応するフォントの開発時にリソースのコストを節約できます。  
   
--   ドキュメントに埋め込むことで移植性が得られる複合フォント。 詳細についてで「解説」を参照してください、<xref:System.Windows.Media.FontFamily>クラス。  
+- ドキュメントに埋め込むことで移植性が得られる複合フォント。 詳細についてで「解説」を参照してください、<xref:System.Windows.Media.FontFamily>クラス。  
   
 <a name="New_Text_APIs"></a>   
 ## <a name="new-text-application-programming-interfaces-apis"></a>新しいテキスト API (アプリケーション プログラミング インターフェイス)  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、開発者がアプリケーションにテキストを含めるときに使用できるいくつかのテキスト [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を提供します。 これらの [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] は、次の 3 つのカテゴリに分類されます。  
   
--   **レイアウトとユーザー インターフェイス**:  [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] に対応した一般的なテキスト コントロールです。  
+- **レイアウトとユーザー インターフェイス**:  [!INCLUDE[TLA#tla_gui](../../../../includes/tlasharptla-gui-md.md)] に対応した一般的なテキスト コントロールです。  
   
--   **軽量テキスト描画**:  オブジェクトにテキストを直接描画できます。  
+- **軽量テキスト描画**:  オブジェクトにテキストを直接描画できます。  
   
--   **テキストの高度な書式設定**:  カスタム テキスト エンジンを実装できます。  
+- **テキストの高度な書式設定**:  カスタム テキスト エンジンを実装できます。  
   
 ### <a name="layout-and-user-interface"></a>レイアウトとユーザー インターフェイス  
  最上位レベルの機能、テキスト[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]一般的な提供[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]などのコントロール<xref:System.Windows.Controls.Label>、 <xref:System.Windows.Controls.TextBlock>、および<xref:System.Windows.Controls.TextBox>します。 これらのコントロールは、アプリケーション内に基本的な [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] 要素を提供し、テキストの表示や操作を簡単に実行できるようにします。 などのコントロール<xref:System.Windows.Controls.RichTextBox>と<xref:System.Windows.Controls.PasswordBox>より高度なのメッセージまたは専用のテキスト処理を有効にします。 などのクラスと<xref:System.Windows.Documents.TextRange>、 <xref:System.Windows.Documents.TextSelection>、および<xref:System.Windows.Documents.TextPointer>便利なテキスト操作を有効にします。 これら[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]コントロールなどのプロパティを提供<xref:System.Windows.Controls.Control.FontFamily%2A>、 <xref:System.Windows.Controls.Control.FontSize%2A>、および<xref:System.Windows.Controls.Control.FontStyle%2A>テキストを表示するために使用されるフォントを制御できます。  

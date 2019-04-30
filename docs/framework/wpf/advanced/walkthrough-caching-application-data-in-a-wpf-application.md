@@ -10,11 +10,11 @@ helpviewer_keywords:
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
 ms.openlocfilehash: 1d00c222dabf446c7c102307c3b904d3f1ff4bca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314396"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007280"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。
@@ -28,24 +28,24 @@ ms.locfileid: "59314396"
 
  このチュートリアルでは、以下のタスクを行います。
 
--   WPF アプリケーション プロジェクトを作成します。
+- WPF アプリケーション プロジェクトを作成します。
 
--   参照を追加、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。
+- 参照を追加、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。
 
--   キャッシュを初期化しています。
+- キャッシュを初期化しています。
 
--   テキスト ファイルの内容を格納するキャッシュ エントリを追加します。
+- テキスト ファイルの内容を格納するキャッシュ エントリを追加します。
 
--   キャッシュ エントリの削除ポリシーを提供します。
+- キャッシュ エントリの削除ポリシーを提供します。
 
--   キャッシュされたファイルのパスの監視と通知する、キャッシュ インスタンスは、監視対象の項目に変更します。
+- キャッシュされたファイルのパスの監視と通知する、キャッシュ インスタンスは、監視対象の項目に変更します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
  このチュートリアルを完了するための要件は次のとおりです。
 
--   Microsoft Visual Studio 2010。
+- Microsoft Visual Studio 2010。
 
--   少量のテキストを含むテキスト ファイル。 (テキスト ファイルの内容は、メッセージ ボックスに表示されます)。このチュートリアルで示すコードでは、次のファイルを使用していることを前提としています。
+- 少量のテキストを含むテキスト ファイル。 (テキスト ファイルの内容は、メッセージ ボックスに表示されます)。このチュートリアルで示すコードでは、次のファイルを使用していることを前提としています。
 
      `c:\cache\cacheText.txt`
 
@@ -109,9 +109,9 @@ ms.locfileid: "59314396"
 
 7. 次の手順では、キャッシュのアセンブリへの参照を追加します。
 
-    1.  **ソリューション エクスプ ローラー**プロジェクトの名前を右クリックし、クリックして**参照の追加**します。
+    1. **ソリューション エクスプ ローラー**プロジェクトの名前を右クリックし、クリックして**参照の追加**します。
 
-    2.  選択、 **.NET** ] タブで [ `System.Runtime.Caching`、順にクリックします**OK**します。
+    2. 選択、 **.NET** ] タブで [ `System.Runtime.Caching`、順にクリックします**OK**します。
 
 #### <a name="to-change-the-target-net-framework-in-a-visual-c-project"></a>Visual c# プロジェクトで .NET Framework ターゲットを変更するには
 
@@ -125,9 +125,9 @@ ms.locfileid: "59314396"
 
 4. 次の手順では、キャッシュのアセンブリへの参照を追加します。
 
-    1.  右クリックし、**参照**フォルダーをクリック**参照の追加**します。
+    1. 右クリックし、**参照**フォルダーをクリック**参照の追加**します。
 
-    2.  選択、 **.NET** ] タブで [ `System.Runtime.Caching`、順にクリックします**OK**します。
+    2. 選択、 **.NET** ] タブで [ `System.Runtime.Caching`、順にクリックします**OK**します。
 
 ## <a name="adding-a-button-to-the-wpf-window"></a>WPF ウィンドウにボタンの追加
  次に、ボタン コントロールを追加し、ボタンのイベント ハンドラーを作成`Click`イベント。 後で、テキスト ファイルの内容がキャッシュされ、表示されるボタンをクリックすると、コードを追加します。
@@ -143,13 +143,13 @@ ms.locfileid: "59314396"
 ## <a name="initializing-the-cache-and-caching-an-entry"></a>キャッシュの初期化とエントリをキャッシュ
  次に、次のタスクを実行するコードを追加します。
 
--   キャッシュ クラスのインスタンスを作成-これは、インスタンス化する新しい<xref:System.Runtime.Caching.MemoryCache>オブジェクト。
+- キャッシュ クラスのインスタンスを作成-これは、インスタンス化する新しい<xref:System.Runtime.Caching.MemoryCache>オブジェクト。
 
--   キャッシュが使用するように指定、<xref:System.Runtime.Caching.HostFileChangeMonitor>のテキスト ファイルの変更を監視するオブジェクト。
+- キャッシュが使用するように指定、<xref:System.Runtime.Caching.HostFileChangeMonitor>のテキスト ファイルの変更を監視するオブジェクト。
 
--   テキスト ファイルを読み取るし、キャッシュ エントリとしてその内容をキャッシュします。
+- テキスト ファイルを読み取るし、キャッシュ エントリとしてその内容をキャッシュします。
 
--   キャッシュされたテキスト ファイルの内容を表示します。
+- キャッシュされたテキスト ファイルの内容を表示します。
 
 #### <a name="to-create-the-cache-object"></a>キャッシュ オブジェクトを作成するには
 

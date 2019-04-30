@@ -8,11 +8,11 @@ helpviewer_keywords:
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
 ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307744"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010970"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>方法: Windows フォーム上の複数のコントロールを配置する
 Windows ベースのアプリケーションのユーザー インターフェイス (UI) のレイアウトを標準化するには、1 つのコマンドでコントロールのグループを配置することができます。  

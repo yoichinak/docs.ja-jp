@@ -10,11 +10,11 @@ helpviewer_keywords:
 - layout pass [WPF]
 ms.assetid: 005f4cda-a849-448b-916b-38d14d9a96fe
 ms.openlocfilehash: 8a76dd5de9f374d77345eeab3d259624546fed7c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59107069"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050221"
 ---
 # <a name="optimizing-performance-layout-and-design"></a>パフォーマンスの最適化:レイアウトとデザイン
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アプリケーションの設計によっては、レイアウトの計算やオブジェクト参照の検証で不要なオーバーヘッドが発生して、パフォーマンスに影響が及ぶことがあります。 オブジェクトの作成 (特に実行時の作成) はアプリケーションのパフォーマンス特性に影響する可能性があります。  
@@ -26,25 +26,25 @@ ms.locfileid: "59107069"
   
  レイアウト システムは、コレクションの子メンバーごとに、測定パスと配置パスという 2 つのパスを実行します。 各子オブジェクトのオーバーライドされた実装を提供する、<xref:System.Windows.UIElement.Measure%2A>と<xref:System.Windows.UIElement.Arrange%2A>メソッドは独自の特定のレイアウト動作を提供するためにします。 簡単に言うと、レイアウトは、要素のサイズ測定、配置、画面上への描画を繰り返す再帰的なシステムです。  
   
--   子<xref:System.Windows.UIElement>オブジェクトは最初そのコア プロパティを測定することで、レイアウト プロセスを開始します。  
+- 子<xref:System.Windows.UIElement>オブジェクトは最初そのコア プロパティを測定することで、レイアウト プロセスを開始します。  
   
--   オブジェクトの<xref:System.Windows.FrameworkElement>など、サイズに関連したプロパティ<xref:System.Windows.FrameworkElement.Width%2A>、 <xref:System.Windows.FrameworkElement.Height%2A>、および<xref:System.Windows.FrameworkElement.Margin%2A>、評価されます。  
+- オブジェクトの<xref:System.Windows.FrameworkElement>など、サイズに関連したプロパティ<xref:System.Windows.FrameworkElement.Width%2A>、 <xref:System.Windows.FrameworkElement.Height%2A>、および<xref:System.Windows.FrameworkElement.Margin%2A>、評価されます。  
   
--   <xref:System.Windows.Controls.Panel>-など特定のロジックが適用される、<xref:System.Windows.Controls.DockPanel.Dock%2A>のプロパティ、 <xref:System.Windows.Controls.DockPanel>、または<xref:System.Windows.Controls.StackPanel.Orientation%2A>のプロパティ、<xref:System.Windows.Controls.StackPanel>します。  
+- <xref:System.Windows.Controls.Panel>-など特定のロジックが適用される、<xref:System.Windows.Controls.DockPanel.Dock%2A>のプロパティ、 <xref:System.Windows.Controls.DockPanel>、または<xref:System.Windows.Controls.StackPanel.Orientation%2A>のプロパティ、<xref:System.Windows.Controls.StackPanel>します。  
   
--   すべての子オブジェクトが測定された後、コンテンツが配置されます。  
+- すべての子オブジェクトが測定された後、コンテンツが配置されます。  
   
--   子オブジェクトのコレクションが画面に描画されます。  
+- 子オブジェクトのコレクションが画面に描画されます。  
   
  以下のアクションが発生すると、再びレイアウト パス プロセスが呼び出されます。  
   
--   子オブジェクトがコレクションに追加された場合。  
+- 子オブジェクトがコレクションに追加された場合。  
   
--   A<xref:System.Windows.FrameworkElement.LayoutTransform%2A>子オブジェクトに適用されます。  
+- A<xref:System.Windows.FrameworkElement.LayoutTransform%2A>子オブジェクトに適用されます。  
   
--   <xref:System.Windows.UIElement.UpdateLayout%2A>子オブジェクトのメソッドが呼び出されます。  
+- <xref:System.Windows.UIElement.UpdateLayout%2A>子オブジェクトのメソッドが呼び出されます。  
   
--   測定パスや配置パスに影響を与えるものとしてメタデータでマークされている依存関係プロパティの値が変更された場合。  
+- 測定パスや配置パスに影響を与えるものとしてメタデータでマークされている依存関係プロパティの値が変更された場合。  
   
 ### <a name="use-the-most-efficient-panel-where-possible"></a>可能な場合は最も効率的なパネルを使用する  
  レイアウト動作に直接基づくレイアウト プロセスの複雑さ、 <xref:System.Windows.Controls.Panel>-派生を使用する要素。 たとえば、<xref:System.Windows.Controls.Grid>または<xref:System.Windows.Controls.StackPanel>コントロールよりも多くの機能を提供する、<xref:System.Windows.Controls.Canvas>コントロール。 はるかに多くの機能が用意されていますが、その代償として、パフォーマンスへの負荷も高くなります。 ただし、機能が必要としない場合、<xref:System.Windows.Controls.Grid>コントロールが提供するなどの低コストの代替手段を使用する必要があります、<xref:System.Windows.Controls.Canvas>やカスタム パネル。  

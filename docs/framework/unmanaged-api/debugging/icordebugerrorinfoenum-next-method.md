@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 29fb23dce20883e2a2a894972cc7c397c04517a3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103182"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995983"
 ---
 # <a name="icordebugerrorinfoenumnext-method"></a>ICorDebugErrorInfoEnum::Next メソッド
 `ICorDebugErrorInfoEnum::Next` は互換性のために残されています。 このメソッドを呼び出さないでください。  

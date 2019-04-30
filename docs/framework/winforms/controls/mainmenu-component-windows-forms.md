@@ -5,11 +5,11 @@ helpviewer_keywords:
 - MainMenu control [Windows Forms]
 ms.assetid: 7cd22f29-828b-42e8-9c88-f08aa4533850
 ms.openlocfilehash: 9e692f17dea3af1f7d5f5ccc3ae844b47c64f80a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59176632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012778"
 ---
 # <a name="mainmenu-component-windows-forms"></a>MainMenu コンポーネント (Windows フォーム)
 > [!NOTE]

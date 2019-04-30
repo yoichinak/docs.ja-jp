@@ -10,11 +10,11 @@ helpviewer_keywords:
 - device-independent pixels
 ms.assetid: 3c574597-bbde-440f-95cc-01371f1a5d9d
 ms.openlocfilehash: 93aaa8e21ef483fc21297e29189d86f93fbe138a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327855"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62001313"
 ---
 # <a name="layout-considerations-for-the-windowsformshost-element"></a>WindowsFormsHost 要素のレイアウトに関する考慮事項
 このトピックで説明する方法、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素と対話、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
@@ -38,13 +38,13 @@ ms.locfileid: "59327855"
 ## <a name="layout-limitations"></a>レイアウトの制限事項  
  一般に、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールを拡張しで可能な範囲に変換されることはできません[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 次の一覧が既知の制限事項について説明しますと、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素が、そのホスト型統合しようとしています。[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]にコントロールを、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
   
--   場合によっては、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールのサイズを変更できない、または特定のディメンションにのみサイズを設定することができます。 たとえば、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox>コントロールにのみ、1 つの高さ、コントロールのフォント サイズで定義されているがサポートしています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]場所要素延長される可能性が垂直方向に、ホストされる動的レイアウト<xref:System.Windows.Forms.ComboBox>期待どおりに、コントロールは拡張されません。  
+- 場合によっては、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールのサイズを変更できない、または特定のディメンションにのみサイズを設定することができます。 たとえば、 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] <xref:System.Windows.Forms.ComboBox>コントロールにのみ、1 つの高さ、コントロールのフォント サイズで定義されているがサポートしています。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]場所要素延長される可能性が垂直方向に、ホストされる動的レイアウト<xref:System.Windows.Forms.ComboBox>期待どおりに、コントロールは拡張されません。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールを回転または傾斜ことはできません。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の生成、<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>傾斜や回転変換を適用する場合のイベント。 処理しない場合、 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 、イベント、<xref:System.InvalidOperationException>が発生します。  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールを回転または傾斜ことはできません。 <xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の生成、<xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError>傾斜や回転変換を適用する場合のイベント。 処理しない場合、 <xref:System.Windows.Forms.Integration.WindowsFormsHost.LayoutError> 、イベント、<xref:System.InvalidOperationException>が発生します。  
   
--   ほとんどの場合、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールは比例してスケーリングをサポートしません。 コントロールの全体的なディメンションのスケーラビリティが子コントロールとコントロールのコンポーネント要素可能性がありますのサイズ変更されない期待どおりにします。 この制限はどの程度各依存[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールがスケーリングをサポートします。 さらに、スケールすることはできません[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]0 ピクセルのサイズまでコントロール。  
+- ほとんどの場合、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールは比例してスケーリングをサポートしません。 コントロールの全体的なディメンションのスケーラビリティが子コントロールとコントロールのコンポーネント要素可能性がありますのサイズ変更されない期待どおりにします。 この制限はどの程度各依存[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]コントロールがスケーリングをサポートします。 さらに、スケールすることはできません[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]0 ピクセルのサイズまでコントロール。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、自動スケールのフォームはそれ自体とそのコントロールのフォント サイズに基づいて自動的に変更をサポートします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]個々 の要素を動的に変更可能性がありますが、ユーザー インターフェイス、フォント サイズを変更するは全体のレイアウトのサイズを変更できません。  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] コントロールは、自動スケールのフォームはそれ自体とそのコントロールのフォント サイズに基づいて自動的に変更をサポートします。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]個々 の要素を動的に変更可能性がありますが、ユーザー インターフェイス、フォント サイズを変更するは全体のレイアウトのサイズを変更できません。  
   
 ### <a name="z-order"></a>Z オーダー  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ユーザー インターフェイスの動作が重複する制御する要素の z オーダーを変更することができます。 ホストされた[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]の上に常に描画するために個別の HWND では、コントロールが描画される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]要素。  
@@ -94,9 +94,9 @@ ms.locfileid: "59327855"
   
  場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約と一致しません、ホストされるコントロールは継続的なサイズ変更をサポートしていません。 たとえば、<xref:System.Windows.Forms.MonthCalendar>コントロールは、不連続のサイズだけを使用できます。 このコントロールの使用可能なサイズは、高さと幅の両方の整数 (月の数を表す) で構成されます。 、このような状況で、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素の次のように動作します。  
   
--   場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約より大きいサイズを返します、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素がホストされるコントロールをクリップします。 高さと幅は、いずれかの方向でホストされるコントロールをクリップすることがありますので、個別に処理されます。  
+- 場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約より大きいサイズを返します、<xref:System.Windows.Forms.Integration.WindowsFormsHost>要素がホストされるコントロールをクリップします。 高さと幅は、いずれかの方向でホストされるコントロールをクリップすることがありますので、個別に処理されます。  
   
--   場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約よりも小さいサイズを返します<xref:System.Windows.Forms.Integration.WindowsFormsHost>このサイズの値を受け取り、値を返します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
+- 場合、<xref:System.Windows.Forms.Control.Size%2A>プロパティが指定した制約よりも小さいサイズを返します<xref:System.Windows.Forms.Integration.WindowsFormsHost>このサイズの値を受け取り、値を返します、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]レイアウト システム。  
   
 ## <a name="see-also"></a>関連項目
 

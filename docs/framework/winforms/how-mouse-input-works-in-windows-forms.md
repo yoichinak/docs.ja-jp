@@ -6,11 +6,11 @@ helpviewer_keywords:
 - mouse [Windows Forms], input
 ms.assetid: 48fc5240-75a6-44bf-9fce-6aa21b49705a
 ms.openlocfilehash: c9193ffa9ef34f1e43a92feec230fa2282264147
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59203016"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966986"
 ---
 # <a name="how-mouse-input-works-in-windows-forms"></a>Windows フォームにおけるマウス入力のしくみ
 マウス入力の処理を受け取って、すべての Windows アプリケーションの重要な部分です。 アプリケーションでは、操作を実行するマウス イベントを処理したり、ヒット テストを実行するマウスの位置情報やその他のアクションを使用できます。 さらに、アプリケーションでは、コントロールがマウス入力を処理する方法を変更することができます。 このトピックでは、これらのマウス イベントの詳細と、取得して、マウスのシステム設定を変更する方法について説明します。 イベントと、マウスのクリック イベントを注文の発生をマウスで提供されるデータの詳細についてを参照してください[Windows フォームにおけるマウス イベント](mouse-events-in-windows-forms.md)します。  

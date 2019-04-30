@@ -3,22 +3,22 @@ title: 背景情報
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
 ms.openlocfilehash: cd2531dd141cfc6f0b67d1f58766327c218610f5
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43515633"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033788"
 ---
 # <a name="background-information"></a>背景情報
 このセクションのトピックでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の使用に関する基本事項の範囲を超えた概念と手順について説明します。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] コードおよびアプリケーションの他の例を参照するには、次の手順に従います。  
   
--   特定の問題について Microsoft のドキュメントを検索します。  
+- 特定の問題について Microsoft のドキュメントを検索します。  
   
--   参加、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。  
+- 参加、 [LINQ フォーラム](https://go.microsoft.com/fwlink/?LinkId=76488)専門家とより複雑なトピックを説明できます。  
   
--   ホワイト ペーパーを参照の詳細を示す[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。 詳細については、[LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)を参照してください。  
+- ホワイト ペーパーを参照の詳細を示す[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]テクノロジ、Visual Basic と c# のコード例を完了します。 詳細については、次を参照してください。 [LINQ to SQL: リレーショナル データ用 .net 統合言語クエリ](https://go.microsoft.com/fwlink/?LinkId=93205)します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ADO.NET および LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
@@ -51,7 +51,7 @@ ms.locfileid: "43515633"
  [オブジェクトの状態と変更の追跡](../../../../../../docs/framework/data/adonet/sql/linq/object-states-and-change-tracking.md)  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] が変更を追跡する方法について詳しく説明します。  
   
- [オプティミスティック同時実行の概要](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
+ [オプティミスティック同時実行制御。概要](../../../../../../docs/framework/data/adonet/sql/linq/optimistic-concurrency-overview.md)  
  オプティミスティック同時実行制御について説明し、用語を定義します。  
   
  [クエリの概念](../../../../../../docs/framework/data/adonet/sql/linq/query-concepts.md)  

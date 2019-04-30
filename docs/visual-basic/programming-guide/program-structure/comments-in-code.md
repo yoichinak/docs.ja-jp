@@ -15,11 +15,11 @@ helpviewer_keywords:
 - code comments
 ms.assetid: 90136fba-22eb-49f9-ba81-63db629b4a47
 ms.openlocfilehash: a8094397ff2a076cf474d735e65298b3d2f0a9cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59343013"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050554"
 ---
 # <a name="comments-in-code-visual-basic"></a>コード内のコメント (Visual Basic)
 コード例にはコメント記号 (`'`) がしばしば見られます。 このシンボルをそれに続くテキストを無視する Visual Basic コンパイラに指示または*コメント*します。 コメントは、コードを読むユーザーに役立つように追加される簡単な説明です。  
@@ -48,11 +48,11 @@ ms.locfileid: "59343013"
   
  次のことに留意してください。  
   
--   重要な変数を宣言する場合は、宣言した変数の用途を説明するためのインライン コメントを必ず前に配置します。  
+- 重要な変数を宣言する場合は、宣言した変数の用途を説明するためのインライン コメントを必ず前に配置します。  
   
--   コメントには複雑な実装の詳細だけを記述して済むように、変数、コントロール、およびプロシージャにはわかりやすい名前を付けます。  
+- コメントには複雑な実装の詳細だけを記述して済むように、変数、コントロール、およびプロシージャにはわかりやすい名前を付けます。  
   
--   同じ行の行連結シーケンスの後にコメントを付けることはできません。  
+- 同じ行の行連結シーケンスの後にコメントを付けることはできません。  
   
  追加し、コードのブロックのコメント記号を削除するには、1 つまたは複数の行のコードを選択し、選択、**コメント**(![. Visual Studio で、Visual Basic のコメント ボタン](./media/comments-in-code/visual-basic-comment-button.gif)) と**コメントを解除します** (![. Visual Studio で、Visual Basic のコメントを解除ボタン](./media/comments-in-code/visual-basic-uncomment-button.gif)) ボタンを**編集**ツールバー。  
   

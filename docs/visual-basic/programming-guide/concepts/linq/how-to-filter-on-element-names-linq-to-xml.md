@@ -3,11 +3,11 @@ title: '方法: 要素名 (LINQ to XML) をフィルター処理 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
 ms.openlocfilehash: 868647ba9536886ea84fa10d94738ff0f29d8f02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58836390"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037077"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>方法: 要素名 (LINQ to XML) をフィルター処理 (Visual Basic)
 <xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> を返すメソッドのいずれかを呼び出す際に、要素名をフィルター処理できます。  
@@ -36,19 +36,19 @@ ProductName:Baby Monitor
   
  <xref:System.Collections.Generic.IEnumerable%601> コレクションの <xref:System.Xml.Linq.XElement> を返す他のメソッドは、同じパターンに従います。 そのシグネチャは、<xref:System.Xml.Linq.XContainer.Elements%2A> および <xref:System.Xml.Linq.XContainer.Descendants%2A> と似ています。 類似するシグネチャを持つメソッドの一覧を次に示します。  
   
--   <xref:System.Xml.Linq.XNode.Ancestors%2A>  
+- <xref:System.Xml.Linq.XNode.Ancestors%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Descendants%2A>  
+- <xref:System.Xml.Linq.XContainer.Descendants%2A>  
   
--   <xref:System.Xml.Linq.XContainer.Elements%2A>  
+- <xref:System.Xml.Linq.XContainer.Elements%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsAfterSelf%2A>  
   
--   <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
+- <xref:System.Xml.Linq.XNode.ElementsBeforeSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
+- <xref:System.Xml.Linq.XElement.AncestorsAndSelf%2A>  
   
--   <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
+- <xref:System.Xml.Linq.XElement.DescendantsAndSelf%2A>  
   
 ## <a name="example"></a>例  
  次の例は名前空間に含まれている XML 用のクエリです。これらのクエリは上の例と同じ機能を表しています。 詳細については、次を参照してください。 [XML 名前空間 (Visual Basic) の使用](../../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md)します。  

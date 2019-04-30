@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
 ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299450"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048050"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 認証エラーのデバッグ
 セキュリティ機構として Windows 認証を使用する場合、セキュリティ サポート プロバイダー インターフェイス (SSPI: Security Support Provider Interface) がセキュリティ プロセスを処理します。 SSPI 層でセキュリティ エラーが発生すると、Windows Communication Foundation (WCF) によってが表示されます。 このトピックでは、エラーの診断に役立つフレームワークと一連の質問を示します。  
@@ -45,13 +45,13 @@ ms.locfileid: "59299450"
   
  具体的には、次の 4 種類のアカウントがあります。  
   
--   ローカル ユーザー:コンピューター専用のユーザー プロファイル。 例 : `MachineName\Administrator` または `MachineName\ProfileName`。  
+- ローカル ユーザー:コンピューター専用のユーザー プロファイル。 例 : `MachineName\Administrator` または `MachineName\ProfileName`。  
   
--   ローカル システム:ドメインに参加していないコンピューターのビルトイン アカウント システム。  
+- ローカル システム:ドメインに参加していないコンピューターのビルトイン アカウント システム。  
   
--   ドメイン ユーザー:Windows ドメイン ユーザー アカウント。 たとえば、`DomainName\ProfileName` のように指定します。  
+- ドメイン ユーザー:Windows ドメイン ユーザー アカウント。 たとえば、`DomainName\ProfileName` のように指定します。  
   
--   Domain Machine:マシン id の Windows ドメインに参加しているコンピューターで実行されているプロセスです。 たとえば、`MachineName\Network Service` のように指定します。  
+- Domain Machine:マシン id の Windows ドメインに参加しているコンピューターで実行されているプロセスです。 たとえば、`MachineName\Network Service` のように指定します。  
   
 > [!NOTE]
 >  サービス資格情報は、<xref:System.ServiceModel.ICommunicationObject.Open%2A> クラスの <xref:System.ServiceModel.ServiceHost> メソッドが呼び出されたときにキャプチャされます。 クライアント資格情報は、クライアントがメッセージを送信するたびに読み取られます。  
@@ -85,15 +85,15 @@ ms.locfileid: "59299450"
   
 2. 次のような SSPI ネゴシエーションが必要です。  
   
-    1.  標準バインディングを使用する場合は、`NegotiateServiceCredential` プロパティを `true` に設定します。  
+    1. 標準バインディングを使用する場合は、`NegotiateServiceCredential` プロパティを `true` に設定します。  
   
-    2.  カスタム バインドを使用する場合は、`AuthenticationMode` 要素の `Security` 属性を `SspiNegotiated` に設定します。  
+    2. カスタム バインドを使用する場合は、`AuthenticationMode` 要素の `Security` 属性を `SspiNegotiated` に設定します。  
   
 3. 次のように、NTLM を使用できないようにすることで、SSPI ネゴシエーションで Kerberos を使用する必要があります。  
   
-    1.  NTLM を使用できないようにするには、コードで `ChannelFactory.Credentials.Windows.AllowNtlm = false` ステートメントを使用します。  
+    1. NTLM を使用できないようにするには、コードで `ChannelFactory.Credentials.Windows.AllowNtlm = false` ステートメントを使用します。  
   
-    2.  構成ファイルで `allowNtlm` 属性を `false` に設定することもできます。 この属性に含まれている、 [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)します。  
+    2. 構成ファイルで `allowNtlm` 属性を `false` に設定することもできます。 この属性に含まれている、 [ \<windows >](../../../../docs/framework/configure-apps/file-schema/wcf/windows-of-clientcredentials-element.md)します。  
   
 ### <a name="ntlm-protocol"></a>NTLM プロトコル  
   

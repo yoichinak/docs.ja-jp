@@ -7,11 +7,11 @@ helpviewer_keywords:
 - documents [WPF], serialization
 ms.assetid: 4839cd87-e206-4571-803f-0200098ad37b
 ms.openlocfilehash: dbc78db0a3b6763af5270840fc56af648c7c6efc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59295901"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61962735"
 ---
 # <a name="document-serialization-and-storage"></a>ドキュメントのシリアル化および保存
 Microsoft .NET Framework では、作成して、高品質のドキュメントを表示するための強力な環境を提供します。  固定ドキュメントとフロー ドキュメント、詳細の両方をサポートする拡張機能は強力な 2D と組み合わせて表示コントロール、および 3D グラフィックス機能を .NET Framework アプリケーションの品質とユーザー エクスペリエンスの新しいレベルをします。  .NET Framework の主な機能は、ドキュメントのメモリ内表現を柔軟に管理できることと、ほとんどすべてのアプリケーションの必要があることを効率的に保存し、データ ストアからドキュメントを読み込みます。  内部のメモリ内表現から外部のデータ ストアにドキュメントを変換するプロセスは、シリアル化と呼ばれます。  データ ストアを読み取って元のメモリ内インスタンスを再作成する逆のプロセスは、逆シリアル化と呼ばれます。  
@@ -24,19 +24,19 @@ Microsoft .NET Framework では、作成して、高品質のドキュメント�
   
 ### <a name="features-of-net-framework-30-document-serializers"></a>.NET Framework 3.0 ドキュメント シリアライザーの機能  
   
--   上位レベルのドキュメント オブジェクト (論理ツリーとビジュアル) に直接アクセスすることにより、ページ分割されたコンテンツ、2D/3D 要素、イメージ、メディア、ハイパーリンク、注釈、およびその他のサポート コンテンツの効率的な保存が可能になります。  
+- 上位レベルのドキュメント オブジェクト (論理ツリーとビジュアル) に直接アクセスすることにより、ページ分割されたコンテンツ、2D/3D 要素、イメージ、メディア、ハイパーリンク、注釈、およびその他のサポート コンテンツの効率的な保存が可能になります。  
   
--   同期操作と非同期操作。  
+- 同期操作と非同期操作。  
   
--   拡張機能でのプラグイン シリアライザーのサポート:  
+- 拡張機能でのプラグイン シリアライザーのサポート:  
   
-    -   すべての .NET Framework アプリケーションで使用するためのシステム全体のアクセス。  
+    - すべての .NET Framework アプリケーションで使用するためのシステム全体のアクセス。  
   
-    -   簡単なアプリケーション プラグインの検出。  
+    - 簡単なアプリケーション プラグインの検出。  
   
-    -   カスタム サードパーティ プラグインの簡単な展開、インストール、更新。  
+    - カスタム サードパーティ プラグインの簡単な展開、インストール、更新。  
   
-    -   カスタム実行時設定とオプションのユーザー インターフェイス サポート。  
+    - カスタム実行時設定とオプションのユーザー インターフェイス サポート。  
   
 ### <a name="xps-print-path"></a>XPS 印刷パス  
  Microsoft .NET Framework[!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]印刷パスには、印刷出力によってドキュメントを作成するための拡張機構も用意されています。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] は、ドキュメント ファイル形式と、[!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] のネイティブ印刷スプール形式の両方として機能します。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] のドキュメントは [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] 互換性のあるプリンターに直接送信でき、中間形式に変換する必要はありません。  印刷パス出力オプションと機能について詳しくは、「[印刷の概要](printing-overview.md)」をご覧ください。  

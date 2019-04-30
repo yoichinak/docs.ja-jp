@@ -16,11 +16,11 @@ helpviewer_keywords:
 - Windows Forms, layout
 ms.assetid: f8ae2a6b-db13-4630-8e25-d104091205c7
 ms.openlocfilehash: 230c7cb80ce6b8a29f7334ed0f8d297fd829faf9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302466"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009085"
 ---
 # <a name="walkthrough-laying-out-windows-forms-controls-with-padding-margins-and-the-autosize-property"></a>チュートリアル: Padding、Margin、AutoSize プロパティを使用した Windows フォーム コントロールのレイアウト
 フォーム上のコントロールを正確に配置することは、多くのアプリケーションで優先度の高い作業です。 **Windows フォーム デザイナー**はこれを実現する多くのレイアウト ツールを提供します。 3 つ最も重要なは、 <xref:System.Windows.Forms.Control.Margin%2A>、 <xref:System.Windows.Forms.Control.Padding%2A>、および<xref:System.Windows.Forms.Control.AutoSize%2A>プロパティで、すべての Windows フォーム コントロールの上に存在します。  
@@ -37,13 +37,13 @@ ms.locfileid: "59302466"
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   Windows フォーム プロジェクトの作成  
+- Windows フォーム プロジェクトの作成  
   
--   コントロールのマージンの設定  
+- コントロールのマージンの設定  
   
--   コントロールの埋め込みの設定  
+- コントロールの埋め込みの設定  
   
--   コントロールを自動的にサイズ変更  
+- コントロールを自動的にサイズ変更  
   
  終了すると、これらの重要なレイアウト機能が果たす役割について理解できます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "59302466"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルを完了するための要件は次のとおりです。  
   
--   作成し、Visual Studio がインストールされているコンピューターで Windows フォーム アプリケーション プロジェクトを実行できる十分なアクセスを許可します。  
+- 作成し、Visual Studio がインストールされているコンピューターで Windows フォーム アプリケーション プロジェクトを実行できる十分なアクセスを許可します。  
   
 ## <a name="creating-the-project"></a>プロジェクトの作成  
  最初にプロジェクトを作成し、フォームを設定します。  
@@ -178,11 +178,11 @@ ms.locfileid: "59302466"
 ## <a name="next-steps"></a>次の手順  
  Windows フォーム アプリケーションでコントロールの配置の他の多くのレイアウト機能があります。 アクセスしてみて、いくつかの組み合わせを次に示します。  
   
--   使用してフォームを構築、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。 詳細については、次を参照してください。[チュートリアル。TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)します。 値を変更してみて、<xref:System.Windows.Forms.TableLayoutPanel>コントロールの<xref:System.Windows.Forms.Control.Padding%2A>プロパティだけでなく<xref:System.Windows.Forms.Control.Margin%2A>その子コントロールのプロパティ。  
+- 使用してフォームを構築、<xref:System.Windows.Forms.TableLayoutPanel>コントロール。 詳細については、次を参照してください。[チュートリアル。TableLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel.md)します。 値を変更してみて、<xref:System.Windows.Forms.TableLayoutPanel>コントロールの<xref:System.Windows.Forms.Control.Padding%2A>プロパティだけでなく<xref:System.Windows.Forms.Control.Margin%2A>その子コントロールのプロパティ。  
   
--   使用して同じ実験を実行してください、<xref:System.Windows.Forms.FlowLayoutPanel>コントロール。 詳細については、次を参照してください。[チュートリアル。FlowLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)します。  
+- 使用して同じ実験を実行してください、<xref:System.Windows.Forms.FlowLayoutPanel>コントロール。 詳細については、次を参照してください。[チュートリアル。FlowLayoutPanel を使用して Windows フォーム コントロールの配置](walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel.md)します。  
   
--   子コントロールのドッキングを使用した実験を<xref:System.Windows.Forms.Panel>コントロール。 <xref:System.Windows.Forms.Control.Padding%2A>プロパティの全般的な実現は、<xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>プロパティを満たすことが自分子コントロールを配置することで大文字と小文字である、<xref:System.Windows.Forms.Panel>コントロールと子コントロールの設定<xref:System.Windows.Forms.Control.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>. 設定、<xref:System.Windows.Forms.Panel>コントロールの<xref:System.Windows.Forms.Control.Padding%2A>プロパティをさまざまな値の影響に注意してください。  
+- 子コントロールのドッキングを使用した実験を<xref:System.Windows.Forms.Panel>コントロール。 <xref:System.Windows.Forms.Control.Padding%2A>プロパティの全般的な実現は、<xref:System.Windows.Forms.ScrollableControl.DockPadding%2A>プロパティを満たすことが自分子コントロールを配置することで大文字と小文字である、<xref:System.Windows.Forms.Panel>コントロールと子コントロールの設定<xref:System.Windows.Forms.Control.Dock%2A>プロパティを<xref:System.Windows.Forms.DockStyle.Fill>. 設定、<xref:System.Windows.Forms.Panel>コントロールの<xref:System.Windows.Forms.Control.Padding%2A>プロパティをさまざまな値の影響に注意してください。  
   
 ## <a name="see-also"></a>関連項目
 

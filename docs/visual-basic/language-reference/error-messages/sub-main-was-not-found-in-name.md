@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Sub Main error message
 ms.assetid: a006d57d-4dd3-46a7-9026-ca9a31470da7
 ms.openlocfilehash: e48968472fea2accd85544f2360a6732e2bcbe17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59338749"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013687"
 ---
 # <a name="sub-main-was-not-found-in-name"></a>'Sub Main' に見つかりませんでした '\<名 >'
 `Sub Main` が存在しないか、間違った場所が指定されています。  

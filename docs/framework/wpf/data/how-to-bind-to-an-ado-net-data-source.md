@@ -10,11 +10,11 @@ helpviewer_keywords:
 - binding [WPF], to ADO.NET data sources
 ms.assetid: a70c6d7b-7b38-4fdf-b655-4804db7c8315
 ms.openlocfilehash: 08933e67c2cc4b7ccfb6ae0c9dfde34f40e4e5f5
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57465548"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021043"
 ---
 # <a name="how-to-bind-to-an-adonet-data-source"></a>方法: ADO.NET データ ソースにバインドする
 

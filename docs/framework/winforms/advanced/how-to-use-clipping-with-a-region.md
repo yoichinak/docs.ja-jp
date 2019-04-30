@@ -9,11 +9,11 @@ helpviewer_keywords:
 - regions [Windows Forms], restricting drawing surface
 ms.assetid: 43d121b4-e14c-4901-b25c-2d6c25ba4e29
 ms.openlocfilehash: cf60b32df805a49f8da2760332dc32e34209f6dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59163736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954519"
 ---
 # <a name="how-to-use-clipping-with-a-region"></a>方法: 領域でクリッピングを使用する
 プロパティの 1 つ、<xref:System.Drawing.Graphics>クラスは、クリップ領域。 によって実行するすべての描画を指定した<xref:System.Drawing.Graphics>オブジェクトは、そのクリップ領域に制限<xref:System.Drawing.Graphics>オブジェクト。 クリップ領域を設定するには、呼び出すことによって、<xref:System.Drawing.Graphics.SetClip%2A>メソッド。  

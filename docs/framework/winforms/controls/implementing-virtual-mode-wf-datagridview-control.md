@@ -13,11 +13,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 74eb5276-5ab8-4ce0-8005-dae751d85f7c
 ms.openlocfilehash: 7f6bf1703a6536f4d22b3a2fbe412579c59d39dd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344326"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973772"
 ---
 # <a name="walkthrough-implementing-virtual-mode-in-the-windows-forms-datagridview-control"></a>チュートリアル: Windows フォーム DataGridView コントロールでの仮想モードを実装する
 非常に大量の表形式データを表示する場合、<xref:System.Windows.Forms.DataGridView>コントロールを設定できます、<xref:System.Windows.Forms.DataGridView.VirtualMode%2A>プロパティを`true`と明示的にそのデータ ストアと、コントロールの相互作用を管理します。 このような状況で、コントロールのパフォーマンスを微調整できます。  
@@ -112,16 +112,16 @@ ms.locfileid: "59344326"
   
 #### <a name="to-test-the-form"></a>フォームをテストするには  
   
--   アプリケーションをコンパイルして実行します。  
+- アプリケーションをコンパイルして実行します。  
   
      表示されます、<xref:System.Windows.Forms.DataGridView>コントロールの 3 つの顧客レコードを格納します。 行の複数のセルの値を変更して 2 回編集モードの内外で 1 回編集モードを元の値の行全体を元に戻すには、esc キーを押します。 変更、追加、または、コントロール内の行を削除するときに`Customer`データ ストア内のオブジェクトの変更、追加、またはも削除します。  
   
 ## <a name="next-steps"></a>次の手順  
  このアプリケーションでの仮想モードを実装する必要がありますを処理するイベントの基本を理解、<xref:System.Windows.Forms.DataGridView>コントロール。 さまざまな方法でこの基本的なアプリケーションを改善することができます。  
   
--   外部データベースから値をキャッシュするデータ ストアを実装します。 キャッシュは、取得し、クライアント コンピューターの少量のメモリを消費しているときに表示するために必要なだけが含まれるように、必要に応じて値を破棄する必要があります。  
+- 外部データベースから値をキャッシュするデータ ストアを実装します。 キャッシュは、取得し、クライアント コンピューターの少量のメモリを消費しているときに表示するために必要なだけが含まれるように、必要に応じて値を破棄する必要があります。  
   
--   要件に応じて、データ ストアのパフォーマンスを微調整します。 たとえば、キャッシュ サイズを大きくして、データベース クエリの数を最小限に抑えることで、クライアント コンピューターのメモリ制限ではなく、低速回線接続の補正する可能性があります。  
+- 要件に応じて、データ ストアのパフォーマンスを微調整します。 たとえば、キャッシュ サイズを大きくして、データベース クエリの数を最小限に抑えることで、クライアント コンピューターのメモリ制限ではなく、低速回線接続の補正する可能性があります。  
   
  外部データベースから値をキャッシュの詳細については、次を参照してください。[方法。フォームの DataGridView コントロールの Windows でジャストイン タイムのデータ読み込みによる仮想モードの実装](virtual-mode-with-just-in-time-data-loading-in-the-datagrid.md)します。  
   

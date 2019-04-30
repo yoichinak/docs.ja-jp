@@ -9,11 +9,11 @@ helpviewer_keywords:
 - notifications [WPF]
 ms.assetid: 6cf7e275-df76-41c6-a611-53b889b8fd5a
 ms.openlocfilehash: 45f8b097bfdb8d3d7994e53ea05146aa6de0fc21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188436"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020921"
 ---
 # <a name="how-to-create-and-bind-to-an-observablecollection"></a>方法: ObservableCollection を作成およびバインドする
 派生したコレクションを作成してバインドする方法を示します、<xref:System.Collections.ObjectModel.ObservableCollection%601>クラスは、項目が追加または削除された場合に、通知を提供するコレクション クラスです。  

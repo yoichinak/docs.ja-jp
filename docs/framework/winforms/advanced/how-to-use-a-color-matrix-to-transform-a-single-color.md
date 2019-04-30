@@ -9,11 +9,11 @@ helpviewer_keywords:
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
 ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342857"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954835"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>方法: カラー行列を使用して単一色を変換する
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供、<xref:System.Drawing.Image>と<xref:System.Drawing.Bitmap>クラスを格納すると、画像を操作します。 <xref:System.Drawing.Image> <xref:System.Drawing.Bitmap>オブジェクトは、32 ビットの数値として各ピクセルの色を格納します。8 ビットは赤、緑、青、およびアルファの各します。 4 つのコンポーネントのそれぞれは、0 ~ 255 の輝度がない、255 は最大輝度を表す 0 から番号です。 アルファ コンポーネントには、色の透明度を指定します。0 は完全に透明、255 は完全に不透明です。  

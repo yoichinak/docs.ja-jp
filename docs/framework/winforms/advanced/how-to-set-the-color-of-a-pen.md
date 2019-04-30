@@ -10,11 +10,11 @@ helpviewer_keywords:
 - colored pens
 ms.assetid: a9df06f9-a6d5-4d9b-a2d1-583943540775
 ms.openlocfilehash: dc067f5a131951bf3af7adc68e11b948d40fc0ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59213416"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61966870"
 ---
 # <a name="how-to-set-the-color-of-a-pen"></a>方法: ペンの色を設定する
 この例は、既存の色を変更<xref:System.Drawing.Pen>オブジェクト  
@@ -27,7 +27,7 @@ ms.locfileid: "59213416"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   A<xref:System.Drawing.Pen>という名前のオブジェクト`myPen`します。  
+- A<xref:System.Drawing.Pen>という名前のオブジェクト`myPen`します。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  呼び出す必要があります<xref:System.Drawing.Pen.Dispose%2A>システム リソースを消費するオブジェクト (など<xref:System.Drawing.Pen>オブジェクト) を使用してそれらが完了した後。  

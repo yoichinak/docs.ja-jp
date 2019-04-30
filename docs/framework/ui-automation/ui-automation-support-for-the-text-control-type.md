@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Text
 ms.assetid: ab0d0ada-8a71-4547-9c03-aadf675938f2
 ms.openlocfilehash: f98477117981504b9c4df43626c7bcb8c4088922
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103780"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996555"
 ---
 # <a name="ui-automation-support-for-the-text-control-type"></a>UI オートメーションによる Text コントロール型のサポート
 > [!NOTE]
@@ -33,11 +33,11 @@ ms.locfileid: "59103780"
   
  テキスト コントロールは、単独でラベルとして使用することも、フォーム上の静的テキストとして使用することもできます。 また、次の構造に含めることもできます。  
   
--   ListItem  
+- ListItem  
   
--   TreeItem  
+- TreeItem  
   
--   DataItem  
+- DataItem  
   
  テキストは多くの場合、別のコントロールの [!INCLUDE[TLA2#tla_uiautomation](../../../includes/tla2sharptla-uiautomation-md.md)] によって表示されるため、 `NameProperty` ツリーのコンテンツ ビューにテキスト コントロールは含まれないことがあります。 たとえば、コンボ ボックス コントロールのラベル付けに使用されるテキストは、そのコントロールの `NameProperty` 値を使用して公開されます。 コンボ ボックス コントロールが UI オートメーション ツリーのコンテンツ ビューに存在するので、テキスト コントロールがこのビューに存在する必要はありません。 コンテンツ ビューに、テキスト コントロールの子が存在することはありません。  
   

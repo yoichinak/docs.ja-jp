@@ -3,11 +3,11 @@ title: サービス トレース ビューアー ツール (SvcTraceViewer.exe)
 ms.date: 03/30/2017
 ms.assetid: 9027efd3-df8d-47ed-8bcd-f53d55ed803c
 ms.openlocfilehash: dd00b72396fe40a7577fabd5704a240f91d1e268
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341102"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051768"
 ---
 # <a name="service-trace-viewer-tool-svctraceviewerexe"></a>サービス トレース ビューアー ツール (SvcTraceViewer.exe)
 Windows Communication Foundation (WCF) サービス トレース ビューアー ツールを使用して、WCF によって生成される診断トレースを分析できます。 サービス トレース ビューアーは、簡単にマージし、表示、および、診断、修復、および WCF サービスの問題を確認できるように、ログにトレース メッセージのフィルターを適用する方法を提供します。  

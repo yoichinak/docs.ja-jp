@@ -10,11 +10,11 @@ helpviewer_keywords:
 - DrawingGroup objects [WPF]
 ms.assetid: 9b5ce5c0-e204-4320-a7a8-0b2210d62f88
 ms.openlocfilehash: c065b06e7542913ae7fb495a0f69ff09dc4238b9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325515"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020478"
 ---
 # <a name="drawing-objects-overview"></a>Drawing オブジェクトの概要
 このトピックでは<xref:System.Windows.Media.Drawing>オブジェクトし、それらを使用して、図形、ビットマップ、テキスト、およびメディアを効率的に描画する方法について説明します。 使用して、<xref:System.Windows.Media.Drawing>を使用して、クリップアートを作成するときに、オブジェクトのペイントを<xref:System.Windows.Media.DrawingBrush>を使用して、または<xref:System.Windows.Media.Visual>オブジェクト。  
@@ -23,25 +23,25 @@ ms.locfileid: "59325515"
 ## <a name="what-is-a-drawing-object"></a>Drawing オブジェクトとは  
  A<xref:System.Windows.Media.Drawing>オブジェクトには、図形、ビットマップ、ビデオ、または行のテキストなど、表示されるコンテンツがについて説明します。 さまざまな種類の描画で、さまざまな種類のコンテンツを記述します。 次の一覧に、さまざまな種類の描画オブジェクトを示します。  
   
--   <xref:System.Windows.Media.GeometryDrawing> – 図形を描画します。  
+- <xref:System.Windows.Media.GeometryDrawing> – 図形を描画します。  
   
--   <xref:System.Windows.Media.ImageDrawing> – イメージを描画します。  
+- <xref:System.Windows.Media.ImageDrawing> – イメージを描画します。  
   
--   <xref:System.Windows.Media.GlyphRunDrawing> – テキストを描画します。  
+- <xref:System.Windows.Media.GlyphRunDrawing> – テキストを描画します。  
   
--   <xref:System.Windows.Media.VideoDrawing> – オーディオまたはビデオ ファイルを再生します。  
+- <xref:System.Windows.Media.VideoDrawing> – オーディオまたはビデオ ファイルを再生します。  
   
--   <xref:System.Windows.Media.DrawingGroup> – 他の描画を描画します。 他の描画を 1 つの複合描画に結合するには、描画グループを使用します。  
+- <xref:System.Windows.Media.DrawingGroup> – 他の描画を描画します。 他の描画を 1 つの複合描画に結合するには、描画グループを使用します。  
   
  <xref:System.Windows.Media.Drawing> オブジェクトは汎用です。使用する多くの方法がある、<xref:System.Windows.Media.Drawing>オブジェクト。  
   
--   使用してイメージとして表示できます、<xref:System.Windows.Media.DrawingImage>と<xref:System.Windows.Controls.Image>コントロール。  
+- 使用してイメージとして表示できます、<xref:System.Windows.Media.DrawingImage>と<xref:System.Windows.Controls.Image>コントロール。  
   
--   と共に使用することができます、<xref:System.Windows.Media.DrawingBrush>など、オブジェクトを描画する、<xref:System.Windows.Controls.Page.Background%2A>の<xref:System.Windows.Controls.Page>します。  
+- と共に使用することができます、<xref:System.Windows.Media.DrawingBrush>など、オブジェクトを描画する、<xref:System.Windows.Controls.Page.Background%2A>の<xref:System.Windows.Controls.Page>します。  
   
--   外観の記述に使用することができます、<xref:System.Windows.Media.DrawingVisual>します。  
+- 外観の記述に使用することができます、<xref:System.Windows.Media.DrawingVisual>します。  
   
--   内容を列挙するために使用することができます、<xref:System.Windows.Media.Visual>します。  
+- 内容を列挙するために使用することができます、<xref:System.Windows.Media.Visual>します。  
   
  WPF には、図形、ビットマップ、テキスト、メディアを描画できる他の型のオブジェクトが用意されています。 たとえば、使用することできますも<xref:System.Windows.Shapes.Shape>、図形を描画するオブジェクト、<xref:System.Windows.Controls.MediaElement>コントロールには、ビデオ、アプリケーションを追加する別の方法が用意されています。 これを使用すると<xref:System.Windows.Media.Drawing>オブジェクトでしょうか。 パフォーマンスを向上するフレームワーク レベルの機能を犠牲にする必要がある場合または<xref:System.Windows.Freezable>機能します。 <xref:System.Windows.Media.Drawing>オブジェクトに対応していない[レイアウト](../advanced/layout.md)、入力、および、集中できるように、低レベルの描画の背景の記述、クリップアート、最適なパフォーマンス上の利点を提供する<xref:System.Windows.Media.Visual>オブジェクト。  
   
@@ -65,7 +65,7 @@ GeometryDrawing
   
  その他の<xref:System.Windows.Media.Geometry>などのクラス<xref:System.Windows.Media.PathGeometry>曲線や円弧を作成してより複雑な図形を作成することができます。 詳細については<xref:System.Windows.Media.Geometry>、オブジェクトを参照してください、[ジオメトリの概要](geometry-overview.md)します。  
   
- <xref:System.Windows.Media.Drawing> オブジェクトを使用していない図形を描画する他の方法の詳細については、「[WPF での図形と基本描画の概要](shapes-and-basic-drawing-in-wpf-overview.md)」を参照してください。  
+ 使用していない図形を描画するには、他の方法の詳細については<xref:System.Windows.Media.Drawing>、オブジェクトを参照してください[図形と基本描画の WPF の概要](shapes-and-basic-drawing-in-wpf-overview.md)します。  
   
 <a name="drawingimagessection"></a>   
 ## <a name="draw-an-image"></a>イメージの描画  

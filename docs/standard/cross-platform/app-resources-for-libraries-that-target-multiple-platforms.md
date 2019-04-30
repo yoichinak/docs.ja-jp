@@ -15,11 +15,11 @@ ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54641149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055018"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>複数のプラットフォームを対象とするライブラリのアプリケーション リソース
 .NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)プロジェクトの種類が、クラス ライブラリのリソースを複数のプラットフォームからアクセスできることを確認します。 このプロジェクトの種類では、Visual Studio 2012 で使用できる、.NET Framework クラス ライブラリの移植可能なサブセットを対象とします。 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] を使用すると、デスクトップ アプリケーション、Silverlight アプリケーション、Windows Phone アプリケーション、および [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからライブラリにアクセスできます。
@@ -65,7 +65,7 @@ ms.locfileid: "54641149"
 |ID.Length|12|
 |名前|名前|
 |NameLength|25|
-|タイトル|従業員データベース|
+|Title|従業員データベース|
 
  次のコード定義を`UILibrary`という名前のリソース マネージャーのラッパーを使用するクラス`resources`Visual Studio によって生成されたときに、**アクセス修飾子**にファイルが変更**パブリック**. UILibrary クラスは必要に応じて文字列データを解析します。 . このクラスは `MyCompany.Employees` 名前空間にあることに注意してください。
 
@@ -92,7 +92,7 @@ ms.locfileid: "54641149"
 |HiredLength|16|
 |ID|ID|
 |名前|Nom|
-|タイトル|Base de données des employés|
+|Title|Base de données des employés|
 
  次のコードは、`UILibrary` クラスとそのリソースをコンソールモード アプリケーションからアクセスする方法を示します。 コンソール アプリケーションのプロジェクトに追加するには UILIbrary.dll への参照が必要です。
 

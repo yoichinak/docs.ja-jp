@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 36070d5374a11daf4b7800481c86d61057989631
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57470079"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61994449"
 ---
 # <a name="icordebugprocessgetthread-method"></a>ICorDebugProcess::GetThread メソッド
 指定したオペレーティング システム (OS) のスレッド ID を持つこのプロセスのスレッドを取得します。  

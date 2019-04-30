@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 ms.assetid: ae4c79e0-08ea-489f-bdb2-5eb6d355f284
 ms.openlocfilehash: b690aa78a2cf07b0db5bdd28d7d71ed4a79fbf61
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58823299"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032085"
 ---
 # <a name="how-to-search-within-a-string-visual-basic"></a>方法: 文字列 (Visual Basic) 内の検索
 この例では、<xref:System.String.IndexOf%2A>メソッドを<xref:System.String>部分文字列の最初に見つかった位置のインデックスを報告するオブジェクト。  
@@ -22,7 +22,7 @@ ms.locfileid: "58823299"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   `Imports`ステートメントの指定、<xref:System>名前空間。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
+- `Imports`ステートメントの指定、<xref:System>名前空間。 詳細については、「[Imports ステートメント (.NET 名前空間および型)](../../../../visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md)」を参照してください。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  <xref:System.String.IndexOf%2A>メソッドは、最初に見つかった部分文字列の最初の文字の位置を報告します。 インデックスには文字列の最初の文字がインデックス 0 のことを意味する 0 から始まります。  

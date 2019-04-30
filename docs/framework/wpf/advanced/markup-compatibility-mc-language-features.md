@@ -12,11 +12,11 @@ helpviewer_keywords:
 - namespaces [WPF], XML
 ms.assetid: 67992d76-8bcc-456c-8232-03807803d69e
 ms.openlocfilehash: 2e81877eb41828a1d92edf0e8126c6e2ef966d20
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57370736"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62028666"
 ---
 # <a name="markup-compatibility-mc-language-features"></a>マークアップの互換性 (mc:)言語機能
 ## <a name="in-this-section"></a>このセクションの内容  

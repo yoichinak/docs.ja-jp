@@ -9,11 +9,11 @@ helpviewer_keywords:
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
 ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337735"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054329"
 ---
 # <a name="animation-overview"></a>アニメーションの概要
 <a name="introduction"></a>
@@ -27,13 +27,13 @@ ms.locfileid: "59337735"
   
  コンピューター上のアニメーションも同様です。 たとえば、四角形の描画をビューからフェードアウトするプログラムは次のように動作する可能性があります。  
   
--   プログラムがタイマーを作成します。  
+- プログラムがタイマーを作成します。  
   
--   設定された間隔でプログラムがタイマーをチェックして経過時間を確認します。  
+- 設定された間隔でプログラムがタイマーをチェックして経過時間を確認します。  
   
--   プログラムは、タイマーをチェックするたびに、経過時間に基づいて四角形の現在の不透明度値を計算します。  
+- プログラムは、タイマーをチェックするたびに、経過時間に基づいて四角形の現在の不透明度値を計算します。  
   
--   プログラムは、新しい値で四角形を更新し、再描画します。  
+- プログラムは、新しい値で四角形を更新し、再描画します。  
   
  前のバージョン[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]、[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)]開発者は、作成し、独自のタイミング システムを管理または特殊なカスタム ライブラリを使用する必要があります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] マネージ コードを通じて公開されている効率的なタイミング システムが含まれていますと[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]密接に統合されていると、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]フレームワーク。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] アニメーションを使うと、コントロールやその他のグラフィカル オブジェクトを簡単にアニメーション化できます。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59337735"
   
  プロパティにアニメーション機能を持たせるには、次の 3 つの要件を満たす必要があります。  
   
--   依存関係プロパティである必要があります。  
+- 依存関係プロパティである必要があります。  
   
--   継承するクラスに属している必要がある必要があります<xref:System.Windows.DependencyObject>を実装して、<xref:System.Windows.Media.Animation.IAnimatable>インターフェイス。  
+- 継承するクラスに属している必要がある必要があります<xref:System.Windows.DependencyObject>を実装して、<xref:System.Windows.Media.Animation.IAnimatable>インターフェイス。  
   
--   互換性のあるアニメーションの種類が使用可能である必要があります。 (場合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供されていない、独自に作成することができます。 参照してください、[カスタム アニメーションの概要](custom-animations-overview.md))。  
+- 互換性のあるアニメーションの種類が使用可能である必要があります。 (場合[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]提供されていない、独自に作成することができます。 参照してください、[カスタム アニメーションの概要](custom-animations-overview.md))。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 持つ多くのオブジェクトを含む<xref:System.Windows.Media.Animation.IAnimatable>プロパティ。 などのコントロール<xref:System.Windows.Controls.Button>と<xref:System.Windows.Controls.TabControl>、また<xref:System.Windows.Controls.Panel>と<xref:System.Windows.Shapes.Shape>オブジェクトから継承<xref:System.Windows.DependencyObject>します。 これらのプロパティの大部分は依存関係プロパティです。  
   
@@ -183,27 +183,27 @@ ms.locfileid: "59337735"
 ## <a name="animation-types"></a>アニメーションの種類  
  アニメーションはプロパティの値を生成するため、異なるプロパティの型ごとに異なるアニメーションの種類が存在します。 受け取るプロパティをアニメーション化する、<xref:System.Double>など、 <xref:System.Windows.FrameworkElement.Width%2A> 、要素のプロパティを生成するアニメーションを使用して、<xref:System.Double>値。 受け取るプロパティをアニメーション化する、<xref:System.Windows.Point>を生成するアニメーションを使用して、<xref:System.Windows.Point>値、という具合です。 プロパティの型の数のためには、いくつかのアニメーション クラスは、<xref:System.Windows.Media.Animation>名前空間。 幸いにも、それらは厳密な名前付け規則に従っているため、簡単に区別できます。  
   
--   \<*型*> アニメーション  
+- \<*型*> アニメーション  
   
      これらは "From/To/By" または "基本" アニメーションと呼ばれ、開始値と宛先値の間をアニメーション化するか、開始値にオフセット値を加算することでアニメーション化します。  
   
-    -   開始値を指定するには、アニメーションの From プロパティを設定します。  
+    - 開始値を指定するには、アニメーションの From プロパティを設定します。  
   
-    -   終了値を指定するには、アニメーションの To プロパティを設定します。  
+    - 終了値を指定するには、アニメーションの To プロパティを設定します。  
   
-    -   オフセット値を指定するには、アニメーションの By プロパティを設定します。  
+    - オフセット値を指定するには、アニメーションの By プロパティを設定します。  
   
      これらのアニメーションは最も簡単に使用できるため、この概要の例ではこれらを使っています。 From/を/、アニメーションは、From/To/By アニメーションの概要で詳しく説明します。  
   
--   \<*型*> AnimationUsingKeyFrames  
+- \<*型*> AnimationUsingKeyFrames  
   
      キー フレーム アニメーションは、任意の数のターゲット値を指定でき、補間方法も制御できるため、From/To/By アニメーションよりも強力です。 一部の型は、キー フレーム アニメーションでのみアニメーション化できます。 キー フレーム アニメーションがで詳しく説明されている、[キー フレーム アニメーションの概要](key-frame-animations-overview.md)します。  
   
--   \<*型*> AnimationUsingPath  
+- \<*型*> AnimationUsingPath  
   
      パス アニメーションでは、アニメーション値を生成するためにジオメトリック パスを使用できます。  
   
--   \<*型*> AnimationBase  
+- \<*型*> AnimationBase  
   
      それを実装するときにアニメーション化する抽象クラス、 \<*型*> 値。 このクラスの基本クラスとして機能\<*型*> アニメーションと\<*型*> AnimationUsingKeyFrames クラス。 これらのクラスは、ユーザー独自のカスタム アニメーションを作成する場合にのみ直接扱う必要があります。 それ以外の場合、使用、 \<*型*> Animation または KeyFrame\<*型*> アニメーション。  
   
@@ -264,9 +264,9 @@ ms.locfileid: "59337735"
   
  に対して名前が割り当て、<xref:System.Windows.FrameworkElement>に対して名前が割り当てとは異なります、<xref:System.Windows.Freezable>オブジェクト。 ほとんどのコントロールとパネルはフレームワーク要素ですが、ブラシ、変換、ジオメトリなどのほとんどの純粋なグラフィカル オブジェクトは Freezable オブジェクトです。 不明な型は、かどうかの場合、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.Freezable>を参照してください、**継承階層**リファレンス ドキュメントのセクション。  
   
--   させる、<xref:System.Windows.FrameworkElement>をアニメーションのターゲット名を指定することを設定してその<xref:System.Windows.FrameworkElement.Name%2A>プロパティ。 コードでは、使用することする必要がありますも、<xref:System.Windows.FrameworkElement.RegisterName%2A>が所属するページに要素名を登録するメソッド。  
+- させる、<xref:System.Windows.FrameworkElement>をアニメーションのターゲット名を指定することを設定してその<xref:System.Windows.FrameworkElement.Name%2A>プロパティ。 コードでは、使用することする必要がありますも、<xref:System.Windows.FrameworkElement.RegisterName%2A>が所属するページに要素名を登録するメソッド。  
   
--   させる、<xref:System.Windows.Freezable>オブジェクトをアニメーションのターゲットで[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用する、 [X:name ディレクティブ](../../xaml-services/x-name-directive.md)名前を指定します。 使用するだけのコードでは、<xref:System.Windows.FrameworkElement.RegisterName%2A>が所属するページ オブジェクトを登録します。  
+- させる、<xref:System.Windows.Freezable>オブジェクトをアニメーションのターゲットで[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用する、 [X:name ディレクティブ](../../xaml-services/x-name-directive.md)名前を指定します。 使用するだけのコードでは、<xref:System.Windows.FrameworkElement.RegisterName%2A>が所属するページ オブジェクトを登録します。  
   
  次のセクションでは、内の要素の名前付けの例を提供する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]とコード。 名前付けとターゲット設定の詳細については、次を参照してください。、[ストーリー ボードの概要](storyboards-overview.md)します。  
   
@@ -318,11 +318,11 @@ ms.locfileid: "59337735"
 ## <a name="animation-samples"></a>アニメーションのサンプル  
  以下のサンプルは、アプリケーションへのアニメーションの追加を開始するのに役立つ場合があります。  
   
--   [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)  
+- [アニメーションのターゲット値 (From、To、および By) のサンプル](https://go.microsoft.com/fwlink/?LinkID=159988)  
   
      さまざまな From/To/By 設定を示します。  
   
--   [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)  
+- [アニメーションのタイミング動作のサンプル](https://go.microsoft.com/fwlink/?LinkID=159970)  
   
      アニメーションのタイミング動作を制御するさまざまな方法を示します。 このサンプルは、アニメーションの宛先値をデータ バインドする方法も示しています。  
   

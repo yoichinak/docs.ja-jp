@@ -3,11 +3,11 @@ title: Entity SQL リファレンス
 ms.date: 03/30/2017
 ms.assetid: 61ce7ee1-ffe2-477d-8a9f-835b0a11d900
 ms.openlocfilehash: 9b666b83674cb2374409e321a2b715e9910bdd0e
-ms.sourcegitcommit: 3500c4845f96a91a438a02ef2c6b4eef45a5e2af
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55826643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034269"
 ---
 # <a name="entity-sql-reference"></a>Entity SQL リファレンス
 
@@ -17,7 +17,7 @@ ms.locfileid: "55826643"
 
 算術演算子は、数値データ型が 1 つ以上含まれる 2 つの式の間で、数学的な操作を実行します。 次の表では、Entity SQL の算術演算子を示します。
 
-|演算子|使用|
+|演算子|用途|
 |--------------|---------|
 |[+ (加算)](add.md)|加算。|
 |[/ (除算)](divide-entity-sql.md)|除算。|
@@ -73,7 +73,7 @@ ms.locfileid: "55826643"
 
 クエリ演算子は、エンティティ データを返すクエリ式を定義するために使用されます。 次の表では、クエリ演算子を示します。
 
-|演算子|使用|
+|演算子|用途|
 |--------------|---------|
 |[FROM](from-entity-sql.md)|使用されているコレクションを示す[選択](select-entity-sql.md)ステートメント。|
 |[GROUP BY](group-by-entity-sql.md)|クエリによって返さをオブジェクトにグループを指定します ([選択](select-entity-sql.md)) 式を配置するのには。|
@@ -90,7 +90,7 @@ ms.locfileid: "55826643"
 
 リファレンスは、特定のエンティティ セットにある特定のエンティティへの論理ポインター (外部キー) です。 Entity SQL では、構築、分解、および参照間を移動するには、次の演算子がサポートされています。
 
-|演算子|使用|
+|演算子|用途|
 |--------------|---------|
 |[CREATEREF](createref-entity-sql.md)|エンティティ セット内のエンティティへの参照を作成します。|
 |[DEREF](deref-entity-sql.md)|参照値を逆参照し、その逆参照の結果を生成します。|
@@ -102,7 +102,7 @@ ms.locfileid: "55826643"
 
 Entity SQL では、さまざまな強力な集合演算を提供します。 これには、set 演算子 UNION、INTERSECT、EXCEPT などの TRANSACT-SQL 演算子に似ていますが含まれます、および EXISTS です。 Entity SQL では、重複排除 (SET)、メンバーシップの判定 (IN)、および結合 (JOIN) 演算子もサポートします。 次の表では、Entity SQL の集合演算子を示します。
 
-|演算子|使用|
+|演算子|用途|
 |--------------|---------|
 |[ANYELEMENT](anyelement-entity-sql.md)|複数値のコレクションから要素を抽出します。|
 |[EXCEPT](except-entity-sql.md)|EXCEPT オペランドの右側に、クエリ式からも返されない、EXCEPT オペランドの左に、クエリ式から個別の値のコレクションを返します。|
@@ -118,7 +118,7 @@ Entity SQL では、さまざまな強力な集合演算を提供します。 �
 
 Entity SQL では、式 (値) を構築、照会、および操作の種類を許可する操作を提供します。 次の表では、型の操作に使用される演算子を示します。
 
-|演算子|使用|
+|演算子|用途|
 |--------------|---------|
 |[CAST](cast-entity-sql.md)|あるデータ型の式を別のデータ型に変換します。|
 |[COLLECTION](collection-entity-sql.md)|使用される、[関数](function-entity-sql.md)宣言エンティティ型または複合型のコレクションを操作します。|
@@ -133,7 +133,7 @@ Entity SQL では、式 (値) を構築、照会、および操作の種類を�
 
 次の表では、その他の Entity SQL 演算子を示します。
 
-|演算子|使用|
+|演算子|用途|
 |--------------|---------|
 |[+ (文字列連結)](string-concatenation-entity-sql.md)|Entity SQL で文字列を連結するために使用します。|
 |[。(メンバー アクセス)](member-access-entity-sql.md)|構造型概念モデル型のインスタンスのプロパティ値またはフィールド値にアクセスするために使用されます。|

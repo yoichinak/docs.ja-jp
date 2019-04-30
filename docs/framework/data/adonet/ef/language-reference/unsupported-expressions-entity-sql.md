@@ -5,15 +5,15 @@ ms.assetid: 5e79da7e-e78a-413c-8fb0-f3f9cd84f579
 dev_langs:
 - sql
 ms.openlocfilehash: a47ff46ca99a84500bc5dfecc19bb31652e9b4b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54628021"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034074"
 ---
 # <a name="unsupported-expressions"></a>サポートされていない式
 
-このトピックでは、[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] でサポートされていない [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 式について説明します。 詳細については、[Entity SQL の相違 TRANSACT-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)を参照してください。
+このトピックでは、[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] でサポートされていない [!INCLUDE[esql](../../../../../../includes/esql-md.md)] 式について説明します。 詳細については、次を参照してください。 [Entity SQL の相違 TRANSACT-SQL](../../../../../../docs/framework/data/adonet/ef/language-reference/how-entity-sql-differs-from-transact-sql.md)します。
 
 ## <a name="quantified-predicates"></a>定量化された述語
 

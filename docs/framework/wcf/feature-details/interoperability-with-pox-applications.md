@@ -3,11 +3,11 @@ title: POX アプリケーションとの相互運用性
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
 ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50192643"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62046893"
 ---
 # <a name="interoperability-with-pox-applications"></a>POX アプリケーションとの相互運用性
 
@@ -31,9 +31,9 @@ POX メッセージを使用して HTTP 経由で通信する WCF サービス�
 
 このカスタム バインドには、次の 2 つの要素があります。
 
-- [\<httpTransport >](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
+- [\<httpTransport>](../../../../docs/framework/configure-apps/file-schema/wcf/httptransport.md)
 
-- [\<textMessageEncoding >](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)
+- [\<textMessageEncoding>](../../../../docs/framework/configure-apps/file-schema/wcf/textmessageencoding.md)
 
 標準の WCF のテキスト メッセージ エンコーダーが使用する特別に構成された、<xref:System.ServiceModel.Channels.MessageVersion.None%2A>値で、XML メッセージ ペイロードされずに到着する SOAP エンベロープにラップを処理するようになります。
 

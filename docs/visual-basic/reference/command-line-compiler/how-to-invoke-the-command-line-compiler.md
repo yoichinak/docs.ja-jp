@@ -8,11 +8,11 @@ helpviewer_keywords:
 - command line [Visual Basic], arguments
 ms.assetid: 0fd9a8f6-f34e-4c35-a49d-9b9bbd8da4a9
 ms.openlocfilehash: 67cad0df3f10ff1fa1f6a58546fe150232fe1283
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302804"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032072"
 ---
 # <a name="how-to-invoke-the-command-line-compiler-visual-basic"></a>方法: コマンド ライン コンパイラ (Visual Basic) を呼び出す
 コマンドライン プロンプトとも呼ばれますにその実行可能ファイルの名前を入力して、コマンド ライン コンパイラを呼び出すことができます。 既定の Windows コマンド プロンプトからコンパイルする場合は、実行可能ファイルへの完全修飾パスを入力する必要があります。 この既定の動作を上書きするには、for Visual Studio は、開発者コマンド プロンプトを使用するか、PATH 環境変数を変更します。 コンパイラの名前を入力するだけで、任意のディレクトリからコンパイルをどちらもができます。  

@@ -22,18 +22,18 @@ helpviewer_keywords:
 - statements [Visual Basic], line breaks in
 ms.assetid: dea01dad-a8ac-484a-bb3a-8c45a1b1eccc
 ms.openlocfilehash: 680084c39b90d4f664f48559fa21388ce192d999
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837742"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61955624"
 ---
 # <a name="how-to-break-and-combine-statements-in-code-visual-basic"></a>方法: 分割および連結コード (Visual Basic) ステートメント
 コードを書くときにステートメントが長くなり、コード エディターでの水平方向スクロールが必要になるを作成する可能性があります。 方法は、これには影響しませんが、コードを実行、困難や他のユーザーをモニターに表示されるコードを読み取る。 このような場合は、1 つの長いステートメントを複数行に分割を検討してください。  
   
 ### <a name="to-break-a-single-statement-into-multiple-lines"></a>複数の行に 1 つのステートメントを分割するには  
   
--   アンダー スコアである行連結文字を使用して (`_`)、改行をポイントします。 アンダースコアは、スペースの直後、および行終端記号 (キャリッジ リターン) の直前に指定する必要があります。  
+- アンダー スコアである行連結文字を使用して (`_`)、改行をポイントします。 アンダースコアは、スペースの直後、および行終端記号 (キャリッジ リターン) の直前に指定する必要があります。  
   
     > [!NOTE]
     >  場合によっては、行連結文字を省略した場合、Visual Basic コンパイラ暗黙的には引き続きステートメントで次のコード行。 行連結文字を省略できます構文要素については、「暗黙的な行継続」を参照してください[ステートメント](../../../visual-basic/programming-guide/language-features/statements.md)します。  
@@ -54,7 +54,7 @@ ms.locfileid: "58837742"
   
 ### <a name="to-place-multiple-statements-on-the-same-line"></a>同じ行に複数のステートメントを配置するには  
   
--   ステートメントをコロンで区切ります (`:`)、次の例のようにします。  
+- ステートメントをコロンで区切ります (`:`)、次の例のようにします。  
   
      [!code-vb[VbVbcnConventions#10](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnConventions/VB/Class1.vb#10)]  
   

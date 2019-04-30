@@ -3,11 +3,11 @@ title: System.ServiceModel.Channels.MsmqPoisonMessageRejected
 ms.date: 03/30/2017
 ms.assetid: 0e64b9bd-1f12-43df-a189-d7be3c2bace1
 ms.openlocfilehash: 562399c1d45dc73c7c88bd165e9f95ee1bcfa19d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125083"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997496"
 ---
 # <a name="systemservicemodelchannelsmsmqpoisonmessagerejected"></a>System.ServiceModel.Channels.MsmqPoisonMessageRejected
 有害メッセージは拒否されました。  

@@ -3,11 +3,11 @@ title: カスタム エンコーダー
 ms.date: 03/30/2017
 ms.assetid: fa0e1d7f-af36-4bf4-aac9-cd4eab95bc4f
 ms.openlocfilehash: 7602e18a03f73f66dfd028d810c003db0b6653bb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996906"
 ---
 # <a name="custom-encoders"></a>カスタム エンコーダー
 このトピックでは、カスタム エンコーダーを作成する方法について説明します。  
@@ -30,11 +30,11 @@ ms.locfileid: "59190575"
   
  WCF は、次の種類から派生したバインド要素の<xref:System.ServiceModel.Channels.MessageEncodingBindingElement>テキスト、バイナリ、および Message Transmission Optimization Mechanism (MTOM) エンコーディングを提供できるクラス。  
   
--   <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>:最も相互運用が XML メッセージ用のエンコーダーの効率。 Web サービスまたは Web サービス クライアントは、一般に、テキスト形式の XML を認識できます。 ただし、大きいブロックのバイナリ データをテキストとして転送するのは効率的ではありません。  
+- <xref:System.ServiceModel.Channels.TextMessageEncodingBindingElement>:最も相互運用が XML メッセージ用のエンコーダーの効率。 Web サービスまたは Web サービス クライアントは、一般に、テキスト形式の XML を認識できます。 ただし、大きいブロックのバイナリ データをテキストとして転送するのは効率的ではありません。  
   
--   <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>:文字エンコーディングを指定するバインド要素と XML メッセージのバイナリ ベースのバージョン管理に使用するメッセージを表します。 これは、エンコーディングのオプションが、少なくとも相互運用の最も効率的な WCF エンドポイントでのみサポートされています。  
+- <xref:System.ServiceModel.Channels.BinaryMessageEncodingBindingElement>:文字エンコーディングを指定するバインド要素と XML メッセージのバイナリ ベースのバージョン管理に使用するメッセージを表します。 これは、エンコーディングのオプションが、少なくとも相互運用の最も効率的な WCF エンドポイントでのみサポートされています。  
   
--   <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>:Message Transmission Optimization Mechanism (MTOM) エンコーディングを使用してメッセージに使用するメッセージ バージョン管理および文字エンコーディングを指定するバインド要素を表します。 MTOM は、WCF メッセージでバイナリ データを転送するための効率的なテクノロジです。 MTOM エンコーダーは、効率と相互運用性のバランスをとろうとします。 MTOM エンコーディングは、ほとんどの XML をテキスト形式で転送しますが、大きいサイズのバイナリ データ ブロックはテキストに変換せずにそのまま転送することによって最適化します。  
+- <xref:System.ServiceModel.Channels.MtomMessageEncodingBindingElement>:Message Transmission Optimization Mechanism (MTOM) エンコーディングを使用してメッセージに使用するメッセージ バージョン管理および文字エンコーディングを指定するバインド要素を表します。 MTOM は、WCF メッセージでバイナリ データを転送するための効率的なテクノロジです。 MTOM エンコーダーは、効率と相互運用性のバランスをとろうとします。 MTOM エンコーディングは、ほとんどの XML をテキスト形式で転送しますが、大きいサイズのバイナリ データ ブロックはテキストに変換せずにそのまま転送することによって最適化します。  
   
  バインド要素は、バイナリ、MTOM、またはテキストの <xref:System.ServiceModel.Channels.MessageEncoderFactory> を作成します。 ファクトリは、バイナリ、MTOM、またはテキストの <xref:System.ServiceModel.Channels.MessageEncoderFactory> を作成します。 通常、インスタンスは 1 つだけあります。 ただし、セッションを使用すると、異なるエンコーダーを各セッションに提供できます。 バイナリ エンコーダーでは、これを利用して動的ディクショナリ (XML インフラストラクチャを参照) を調整します。  
   
@@ -69,19 +69,19 @@ ms.locfileid: "59190575"
 ## <a name="writing-your-own-encoder"></a>独自のエンコーダーの作成  
  独自のカスタム メッセージ エンコーダーを実装するには、次の抽象基本クラスのカスタム実装を提供する必要があります。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder>  
+- <xref:System.ServiceModel.Channels.MessageEncoder>  
   
--   <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
+- <xref:System.ServiceModel.Channels.MessageEncoderFactory>  
   
--   <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
+- <xref:System.ServiceModel.Channels.MessageEncodingBindingElement>  
   
  メッセージのメモリ内表現からストリームに書き込むことのできる表現への変換は、 <xref:System.ServiceModel.Channels.MessageEncoder> クラスにカプセル化されており、このクラスは、特定の種類の XML エンコーディングをサポートする XML リーダーおよび XML ライターに対するファクトリとして機能します。  
   
--   オーバーライドを必要とする、このクラスの主要なメソッドを次に示します。  
+- オーバーライドを必要とする、このクラスの主要なメソッドを次に示します。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>。<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> オブジェクトを受け取り、それを <xref:System.IO.Stream> オブジェクトに書き込みます。  
+- <xref:System.ServiceModel.Channels.MessageEncoder.WriteMessage%2A>。<xref:System.ServiceModel.Channels.MessageEncodingBindingElement> オブジェクトを受け取り、それを <xref:System.IO.Stream> オブジェクトに書き込みます。  
   
--   <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>。<xref:System.IO.Stream> オブジェクトと最大ヘッダー サイズを受け取り、<xref:System.ServiceModel.Channels.Message> オブジェクトを返します。  
+- <xref:System.ServiceModel.Channels.MessageEncoder.ReadMessage%2A>。<xref:System.IO.Stream> オブジェクトと最大ヘッダー サイズを受け取り、<xref:System.ServiceModel.Channels.Message> オブジェクトを返します。  
   
  これらのメソッドに記述するコードは、標準トランスポート プロトコルとカスタマイズしたエンコーディングの間の変換処理です。  
   

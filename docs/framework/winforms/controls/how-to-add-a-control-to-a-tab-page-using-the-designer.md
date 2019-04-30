@@ -7,11 +7,11 @@ helpviewer_keywords:
 - tab pages [Windows Forms], adding controls
 ms.assetid: 7ee734e1-e31e-4ed0-bbc0-a7e8a1f20fef
 ms.openlocfilehash: f30db784a51c98aebaa8b95926bc8c62003ee390
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011243"
 ---
 # <a name="how-to-add-a-control-to-a-tab-page-using-the-designer"></a>方法: デザイナーを使ってタブ ページにコントロールを追加する
 Windows フォームの使用<xref:System.Windows.Forms.TabControl>組織的に他のコントロールを表示することです。 これらの手順を使用すると、タブ ページの本体に画像を表示します。 タブ ページのラベルの部分にアイコンを追加する方法の詳細については、次を参照してください。[方法。Windows フォーム TabControl の外観を変更する](how-to-change-the-appearance-of-the-windows-forms-tabcontrol.md)します。  

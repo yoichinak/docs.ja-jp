@@ -3,22 +3,22 @@ title: カスタム WSDL パブリケーション
 ms.date: 03/30/2017
 ms.assetid: 3b3e8103-2c95-4db3-a05b-46aa8e9d4d29
 ms.openlocfilehash: 2085c145a58ecaa4ad2dd8ffbd6933b92e735a6c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59771895"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61990588"
 ---
 # <a name="custom-wsdl-publication"></a>カスタム WSDL パブリケーション
 このサンプルでは、次の方法を示します。  
   
--   カスタム <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 属性に <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> を実装し、属性プロパティを WSDL 注釈としてエクスポートします。  
+- カスタム <xref:System.ServiceModel.Description.IWsdlExportExtension?displayProperty=nameWithType> 属性に <xref:System.ServiceModel.Description.IContractBehavior?displayProperty=nameWithType> を実装し、属性プロパティを WSDL 注釈としてエクスポートします。  
   
--   <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> を実装し、カスタム WSDL 注釈をインポートします。  
+- <xref:System.ServiceModel.Description.IWsdlImportExtension?displayProperty=nameWithType> を実装し、カスタム WSDL 注釈をインポートします。  
   
--   カスタム コントラクトの動作とカスタム操作の動作に、それぞれ <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> と <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> を実装し、インポートされたコントラクトと操作の CodeDOM に、インポートされた注釈をコメントとして書き込みます。  
+- カスタム コントラクトの動作とカスタム操作の動作に、それぞれ <xref:System.ServiceModel.Description.IServiceContractGenerationExtension?displayProperty=nameWithType> と <xref:System.ServiceModel.Description.IOperationContractGenerationExtension?displayProperty=nameWithType> を実装し、インポートされたコントラクトと操作の CodeDOM に、インポートされた注釈をコメントとして書き込みます。  
   
--   使用、 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 、WSDL をダウンロードする、<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>カスタムの WSDL インポーターを使用して WSDL をインポートして<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>///として WSDL 注釈を使用した Windows Communication Foundation (WCF) クライアント コードを生成して '' c# および Visual 内のコメント基本的な。  
+- 使用、 <xref:System.ServiceModel.Description.MetadataExchangeClient?displayProperty=nameWithType> 、WSDL をダウンロードする、<xref:System.ServiceModel.Description.WsdlImporter?displayProperty=nameWithType>カスタムの WSDL インポーターを使用して WSDL をインポートして<xref:System.ServiceModel.Description.ServiceContractGenerator?displayProperty=nameWithType>///として WSDL 注釈を使用した Windows Communication Foundation (WCF) クライアント コードを生成して '' c# および Visual 内のコメント基本的な。  
   
 > [!NOTE]
 >  このサンプルのセットアップ手順とビルド手順については、このトピックの最後を参照してください。  

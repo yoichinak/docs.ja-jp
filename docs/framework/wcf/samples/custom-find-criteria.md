@@ -3,11 +3,11 @@ title: カスタム検索基準
 ms.date: 03/30/2017
 ms.assetid: b2723929-8829-424d-8015-a37ba2ab4f68
 ms.openlocfilehash: d676d7b2edbfb517f3fd8fe0c99fe7cc54eca2a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332535"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006370"
 ---
 # <a name="custom-find-criteria"></a>カスタム検索基準
 このサンプルでは、ロジックを使用するカスタム スコープ一致の作成方法とカスタム探索サービスの実装方法を示します。 クライアントは、カスタム スコープ一致機能を使用して、システムによって提供される WCF Discovery の検索機能を改良および拡張します。 このサンプルでは次のシナリオを扱います。  
@@ -20,9 +20,9 @@ ms.locfileid: "59332535"
   
 ## <a name="demonstrates"></a>使用例  
   
--   カスタム探索サービスの作成。  
+- カスタム探索サービスの作成。  
   
--   アルゴリズムに基づくカスタム スコープ一致の実装  
+- アルゴリズムに基づくカスタム スコープ一致の実装  
   
 ## <a name="discussion"></a>説明  
  クライアントは検索条件に一致する"OR"の型。 サービスは、エンドポイントのスコープがクライアントによって指定されたスコープのいずれかと一致した場合、応答を送り返します。 この場合、クライアントは、次のいずれかのスコープを含む電卓サービスを検索します。  

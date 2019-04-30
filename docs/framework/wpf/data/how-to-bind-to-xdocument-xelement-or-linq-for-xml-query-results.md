@@ -9,11 +9,11 @@ helpviewer_keywords:
 - data binding [WPF], binding to XElement
 ms.assetid: 6a629a49-fe1c-465d-b76a-3dcbf4307b64
 ms.openlocfilehash: afecb87dcfce1a8c48f1b2108edeae3cfd2aa16f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59209659"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020960"
 ---
 # <a name="how-to-bind-to-xdocument-xelement-or-linq-for-xml-query-results"></a>方法: XDocument、XElement、または LINQ for XML クエリの結果にバインドする
 この例では、XML データの連結、<xref:System.Windows.Controls.ItemsControl>を使用して<xref:System.Xml.Linq.XDocument>します。  

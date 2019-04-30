@@ -3,11 +3,11 @@ title: ユーザー名パスワード検証
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
 ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59773936"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006435"
 ---
 # <a name="user-name-password-validator"></a>ユーザー名パスワード検証
 このサンプルでは、カスタム UserNamePassword 検証を実装する方法を示します。 これは、アプリケーションの要件に適した組み込みの UserNamePassword 検証モードがない場合に便利です。たとえば、ユーザー名とパスワードの組み合わせがデータベースなどの外部ストアに保存されている場合などです。 このサンプルでは、2 つの特定のユーザー名とパスワードの組み合わせをチェックする、カスタム検証を備えたサービスを示します。 クライアントはそのようなユーザー名とパスワードの組み合わせを使用して、サービスに対する認証を行います。
@@ -26,11 +26,11 @@ ms.locfileid: "59773936"
 
  このサンプルで示す処理の概要は次のとおりです。
 
--   クライアントはユーザー名トークンを使用して認証される。
+- クライアントはユーザー名トークンを使用して認証される。
 
--   サーバーはクライアント資格情報をカスタム UserNamePassword 検証と照合し、カスタム エラーをユーザー名とパスワードの検証ロジックからクライアントに伝達する。
+- サーバーはクライアント資格情報をカスタム UserNamePassword 検証と照合し、カスタム エラーをユーザー名とパスワードの検証ロジックからクライアントに伝達する。
 
--   サーバーがそのサーバーの X.509 証明書を使用して認証される。
+- サーバーがそのサーバーの X.509 証明書を使用して認証される。
 
  サービスは、そのサービスとの通信に使用する単一エンドポイントを公開します。エンドポイントは構成ファイル (App.config) で定義します。エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 標準的なバインディングが構成されている`wsHttpBinding`WS Securityand ユーザー名認証を使用する既定値です。 サービス動作では、クライアントのユーザー名とパスワードの組み合わせを検証するための `Custom` モード、および検証クラスの型を指定します。 さらに、`serviceCertificate` 要素を使用しているサーバー証明書も指定します。 サーバー証明書が同じ値を格納するが、`SubjectName`として、`findValue`で、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)します。
 
@@ -254,7 +254,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
 
  次に、バッチ ファイルのセクションのうち、該当する構成で実行するために変更が必要となる部分を示します。
 
--   サーバー証明書の作成 :
+- サーバー証明書の作成 :
 
      Setup.bat バッチ ファイルの次の行は、使用するサーバー証明書を作成します。 %SERVER_NAME% 変数はサーバー名を指定します。 この変数を変更して、使用するサーバー名を指定します。 既定値は、localhost です。
 
@@ -268,7 +268,7 @@ serviceHost.Credentials. UserNameAuthentication.CustomUserNamePasswordValidator 
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   サーバー証明書のクライアントの信頼された証明書ストアへのインストール。
+- サーバー証明書のクライアントの信頼された証明書ストアへのインストール。
 
      Setup.bat バッチ ファイルの次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。
 

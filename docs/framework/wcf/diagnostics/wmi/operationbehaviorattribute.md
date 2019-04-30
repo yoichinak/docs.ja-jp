@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 8c9b0755-9e83-411f-bdcb-61a586022797
 ms.openlocfilehash: 79601308c66abe43dd5a7f72bd2a05b9d2346c2b
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59975157"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963047"
 ---
 # <a name="operationbehaviorattribute"></a>OperationBehaviorAttribute
 OperationBehaviorAttribute  

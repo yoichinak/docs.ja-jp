@@ -3,11 +3,11 @@ title: Web サービス プロトコルの相互運用性ガイド
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
 ms.openlocfilehash: 647212558b6be38e9b30239f7fb71213e6eb7d86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228270"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050351"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web サービス プロトコルの相互運用性ガイド
 Windows Communication Foundation (WCF) は、さまざまな Web サービス プロトコルを実装します。 これらのプロトコルの多くには、さまざまなオプションと拡張ポイントが用意されており、それらの実装は実装者の裁量に任されています。 このトピックでは、WCF が実装する Web サービス プロトコルの一覧を示します。 サポートされる各プロトコルの実装の詳細については、このセクションの他のトピックで説明します。  
@@ -76,29 +76,29 @@ Windows Communication Foundation (WCF) は、さまざまな Web サービス �
   
  <xref:System.ServiceModel.Description.MetadataExporter>、<xref:System.ServiceModel.Description.MetadataImporter>、<xref:System.ServiceModel.Description.WsdlExporter>、<xref:System.ServiceModel.Description.WsdlImporter>、および <xref:System.ServiceModel.Description.MetadataResolver> の各クラスは、次のメタデータ仕様をサポートします。  
   
--   [XML Schema Part 1:Structures Second Edition](https://go.microsoft.com/fwlink/?LinkId=3536)  
+- [XML Schema Part 1:Structures Second Edition](https://go.microsoft.com/fwlink/?LinkId=3536)  
   
--   [XML Schema Part 2:データ型の第 2 版](https://go.microsoft.com/fwlink/?LinkId=40138)  
+- [XML Schema Part 2:データ型の第 2 版](https://go.microsoft.com/fwlink/?LinkId=40138)  
   
--   [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
+- [WSDL 1.1](https://go.microsoft.com/fwlink/?LinkId=96160)  
   
--   [Ws-policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
+- [Ws-policy 1.2](https://go.microsoft.com/fwlink/?LinkId=96705)  
   
--   [Ws-policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
+- [Ws-policy 1.5](https://go.microsoft.com/fwlink/?LinkId=96706)  
   
--   [Ws-policyattachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
+- [Ws-policyattachment 1.2](https://go.microsoft.com/fwlink/?LinkId=96707)  
   
--   [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
+- [WS-MetadataExchange 1.1](https://go.microsoft.com/fwlink/?LinkId=94868)  
   
--   [メタデータの取得のための Ws-transfer Get](https://go.microsoft.com/fwlink/?LinkId=96708)  
+- [メタデータの取得のための Ws-transfer Get](https://go.microsoft.com/fwlink/?LinkId=96708)  
   
  さらに、次のような相互運用性プロファイルは、WCF で実装されます。  
   
--   [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
+- [Basic Profile 1.1](https://go.microsoft.com/fwlink/?LinkId=69313)  
   
--   [単純な SOAP が 1.0 のバインド](https://go.microsoft.com/fwlink/?LinkId=96710)  
+- [単純な SOAP が 1.0 のバインド](https://go.microsoft.com/fwlink/?LinkId=96710)  
   
--   [Basic Security Profile 1.0 ワーキング ドラフト](https://go.microsoft.com/fwlink/?LinkId=96711)  
+- [Basic Security Profile 1.0 ワーキング ドラフト](https://go.microsoft.com/fwlink/?LinkId=96711)  
   
 ## <a name="see-also"></a>関連項目
 

@@ -3,11 +3,11 @@ title: SystemWebRouting 統合サンプル
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
 ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302245"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007761"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 統合サンプル
 このサンプルでは、<xref:System.Web.Routing> 名前空間のクラスとのホスト層の統合を示します。 <xref:System.Web.Routing> 名前空間のクラスを使用すると、物理リソースに直接対応しない URL をアプリケーションで使用できます。 Web のルーティングを使用すると、開発者は実際の WCF サービスにバックアップし、マップされている HTTP 仮想アドレスの作成ができます。 これは、物理ファイルやリソースを配置せずに WCF サービスをホストする必要がある場合、または .html や .aspx などのファイルがない URL を使用してサービスにアクセスする必要がある場合に役立ちます。 このサンプルでは、<xref:System.Web.Routing.RouteTable> クラスを使用して、global.asax で定義された実行中のサービスにマップされる仮想 URI を作成する方法を示します。 
@@ -58,13 +58,13 @@ ms.locfileid: "59302245"
   
 3. インターネット インフォメーション サービス (IIS) マネージャーで Web アプリケーションを作成します。  
   
-    1.  IIS マネージャーで、右クリックして、**既定の Web サイト**選択**アプリケーションを追加**します。  
+    1. IIS マネージャーで、右クリックして、**既定の Web サイト**選択**アプリケーションを追加**します。  
   
-    2.  **エイリアス**、入力`WebRoutingIntegration`します。  
+    2. **エイリアス**、入力`WebRoutingIntegration`します。  
   
-    3.  **物理パス**プロジェクト内の Service フォルダーを選択します。  
+    3. **物理パス**プロジェクト内の Service フォルダーを選択します。  
   
-    4.  **[OK]** を押します。  
+    4. **[OK]** を押します。  
   
 4. Web アプリケーションを右クリックしてアプリケーションを起動**アプリケーションの管理**し**参照**します。  
   

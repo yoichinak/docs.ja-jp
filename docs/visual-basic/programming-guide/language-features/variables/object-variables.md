@@ -8,11 +8,11 @@ helpviewer_keywords:
 - object variables [Visual Basic]
 ms.assetid: 6169a196-2b13-4ba5-a205-154bc1b87844
 ms.openlocfilehash: cc5be13293a89e73d1790e94a99d7936f1711e12
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352972"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961235"
 ---
 # <a name="object-variables-in-visual-basic"></a>Visual Basic におけるオブジェクト変数
 

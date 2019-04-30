@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f546d7707c40f7f26a46177ae972a988e54e1e45
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57487864"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61965830"
 ---
 # <a name="createcordbobject-function"></a>CreateCordbObject 関数
 デバッガー インターフェイスを作成します ([ICorDebug](../../../../docs/framework/unmanaged-api/debugging/icordebug-interface.md)) リモート プロセスでマネージ デバッグ セッションをインスタンス化するための機能を提供します。  

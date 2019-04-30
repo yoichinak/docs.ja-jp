@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 7b523c5819994e6da0332188311b4b631e3f9072
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178764"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000585"
 ---
 # <a name="icorprofilerinfo3-interface"></a>ICorProfilerInfo3 インターフェイス
 コード プロファイラーが共通言語ランタイム (CLR: Common Language Runtime) とやり取りして、イベント監視を制御したり、情報を要求したりするために使用する各種メソッドを提供します。 `ICorProfilerInfo3`インターフェイスの拡張機能は、 [ICorProfilerInfo2](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-interface.md)インターフェイス。 このインターフェイスには、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 以降のバージョンでサポートされる新しいメソッドが用意されています。  

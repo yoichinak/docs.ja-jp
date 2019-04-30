@@ -6,11 +6,11 @@ helpviewer_keywords:
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
 ms.openlocfilehash: 73a740d8fa9b9f293e4babb1d2edef81aaeae8aa
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201106"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973200"
 ---
 # <a name="events-visual-basic"></a>イベント (Visual Basic)
 ほとんどのプログラムを実際には、シーケンスで実行するプロシージャのデータ系列として Visual Studio プロジェクトを視覚化する可能性がありますはイベント ドリブン-つまりの実行フローは外部の出現回数と呼ばれるによって決まります*イベント*します。  
@@ -53,11 +53,11 @@ ms.locfileid: "57201106"
   
  多くの場合、イベント ハンドラーを指定するための最善の選択は、`WithEvents` ステートメントと `Handles` 句を使用することです。これは、宣言型の構文により簡単にコーディング、読み取り、デバッグを実行できるためです。 ただし、`WithEvents` 変数には、次の使用制限があることに注意してください。  
   
--   `WithEvents` 変数をオブジェクト変数として使用することはできません。 つまり、`Object` として宣言することはできません。変数を宣言するときは、クラス名を指定する必要があります。  
+- `WithEvents` 変数をオブジェクト変数として使用することはできません。 つまり、`Object` として宣言することはできません。変数を宣言するときは、クラス名を指定する必要があります。  
   
--   共有イベントがクラスのインスタンスに関連付けられていないために、使用できません`WithEvents`を宣言によって共有されているイベントを処理します。 同様に、`WithEvents` または`Handles` を使用して `Structure` からイベントを処理することはできません。 どちらの場合も、`AddHandler` ステートメント使用して、これらのイベントを処理することができます。  
+- 共有イベントがクラスのインスタンスに関連付けられていないために、使用できません`WithEvents`を宣言によって共有されているイベントを処理します。 同様に、`WithEvents` または`Handles` を使用して `Structure` からイベントを処理することはできません。 どちらの場合も、`AddHandler` ステートメント使用して、これらのイベントを処理することができます。  
   
--   `WithEvents` 変数の配列を作成することはできません。  
+- `WithEvents` 変数の配列を作成することはできません。  
   
  `WithEvents` 変数を使用して、1 つのイベント ハンドラーで 1 つまたは複数の種類のイベントを、または 1 つまたは複数のイベント ハンドラーで同じ種類のイベントを処理することができます。  
   
@@ -91,7 +91,7 @@ ms.locfileid: "57201106"
   
 ### <a name="to-handle-events-from-a-base-class"></a>基本クラスのイベントを処理するには  
   
--   イベント ハンドラー プロシージャの宣言行に `Handles MyBase.`*eventname* ステートメントを追加して、派生クラスのイベント ハンドラーを宣言します。*eventname* は処理する基本クラスのイベント名です。 例:  
+- イベント ハンドラー プロシージャの宣言行に `Handles MyBase.`*eventname* ステートメントを追加して、派生クラスのイベント ハンドラーを宣言します。*eventname* は処理する基本クラスのイベント名です。 例:  
   
      [!code-vb[VbVbalrEvents#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrEvents/VB/Class1.vb#12)]  
   

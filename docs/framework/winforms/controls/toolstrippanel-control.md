@@ -9,11 +9,11 @@ helpviewer_keywords:
 - vertical space
 ms.assetid: aa47af39-1e71-40ee-bb75-2d2478f81bd0
 ms.openlocfilehash: 8dc45e1cedca6a4c73ada057168e0d3194bef741
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192278"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009315"
 ---
 # <a name="toolstrippanel-control"></a>ToolStripPanel コントロール
 `ToolStripPanel` コントロールは、ドッキングしたときにツールの領域内の水平方向または縦方向のスペースを共有し、<xref:System.Windows.Forms.ToolStripContainer> の 4 つのパネルと中庸のパネルが必要ないときに <xref:System.Windows.Forms.ToolStrip> コントロールを調整することができます。  

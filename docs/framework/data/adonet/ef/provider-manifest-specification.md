@@ -3,11 +3,11 @@ title: プロバイダー マニフェストの仕様
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
 ms.openlocfilehash: 3d396f6ecfc0eb4a884e4af0d84ef65d18c5586c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169911"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034009"
 ---
 # <a name="provider-manifest-specification"></a>プロバイダー マニフェストの仕様
 ここでは、データ ストア プロバイダーでデータ ストアの型および関数がどのようにサポートされているかについて説明します。  
@@ -45,18 +45,18 @@ ms.locfileid: "59169911"
   
  次の 2 つのセクションで構成される XML ファイルを記述します。  
   
--   ストア型またはストア関数の "対応する EDM 要素" で表現されるプロバイダー型の一覧。 ストア型には、対応する EDM 型があります。 ストア関数には、対応する EDM 関数があります。 たとえば、varchar は SQL Server の型ですが、対応する EDM 型は文字列になります。  
+- ストア型またはストア関数の "対応する EDM 要素" で表現されるプロバイダー型の一覧。 ストア型には、対応する EDM 型があります。 ストア関数には、対応する EDM 関数があります。 たとえば、varchar は SQL Server の型ですが、対応する EDM 型は文字列になります。  
   
--   パラメーターと戻り値の型が EDM 用語で表現される、プロバイダーがサポートする関数の一覧。  
+- パラメーターと戻り値の型が EDM 用語で表現される、プロバイダーがサポートする関数の一覧。  
   
 ### <a name="writing-a-provider-with-asymmetric-type-mapping"></a>非対照型マッピングによるプロバイダーの記述  
  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] のデータ ストア プロバイダーを記述する場合、一部の型の EDM からプロバイダーへの型マッピングが、プロバイダーから EDM への型マッピングとは異なることがあります。 たとえば、プロバイダー側で unbounded の EDM PrimitiveTypeKind.String が nvarchar(4000) にマップされるのに対して、nvarchar(4000) は EDM PrimitiveTypeKind.String(MaxLength=4000) にマップされる場合があります。  
   
  次の 2 つのセクションで構成される XML ファイルを記述します。  
   
--   プロバイダーの種類の一覧は、EDM 用語で表現し、両方向のマッピングを定義します。EDM からプロバイダーへのプロバイダーから EDM への.  
+- プロバイダーの種類の一覧は、EDM 用語で表現し、両方向のマッピングを定義します。EDM からプロバイダーへのプロバイダーから EDM への.  
   
--   パラメーターと戻り値の型が EDM 用語で表現される、プロバイダーがサポートする関数の一覧。  
+- パラメーターと戻り値の型が EDM 用語で表現される、プロバイダーがサポートする関数の一覧。  
   
 ## <a name="provider-manifest-discoverability"></a>プロバイダー マニフェストの探索可能性  
  マニフェストは、Entity Services の複数のコンポーネントの種類 (Tools や Query など) では間接的に使用されますが、データ ストア メタデータ ローダーを使用してメタデータからより直接的に使用することができます。  
@@ -250,15 +250,15 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名前|String|[はい]|適用なし|プロバイダー固有のデータ型の名前|  
-|PrimitiveTypeKind|PrimitiveTypeKind|[はい]|適用なし|EDM 型の名前|  
+|名前|String|はい|適用なし|プロバイダー固有のデータ型の名前|  
+|PrimitiveTypeKind|PrimitiveTypeKind|はい|適用なし|EDM 型の名前|  
   
 ###### <a name="function-node"></a>Function ノード  
  各 Function では、プロバイダーを介して使用できる 1 つの関数が定義されています。  
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名前|String|はい|適用なし|関数の識別子/名前|  
+|名前|String|[はい]|適用なし|関数の識別子/名前|  
 |ReturnType|String|いいえ|Void|関数の戻り値の EDM 型|  
 |Aggregate|ブール型|いいえ|False|関数が集計関数の場合は True|  
 |BuiltIn|ブール型|いいえ|True|関数がデータ ストアに組み込まれている場合は True|  
@@ -272,7 +272,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名前|String|はい|適用なし|パラメーターの識別子/名前|  
+|名前|String|[はい]|適用なし|パラメーターの識別子/名前|  
 |型|String|[はい]|適用なし|パラメーターの EDM 型|  
 |モード|パラメーター<br /><br /> Direction|[はい]|適用なし|パラメーターの方向<br /><br /> -で<br />-アウト<br />-inout|  
   

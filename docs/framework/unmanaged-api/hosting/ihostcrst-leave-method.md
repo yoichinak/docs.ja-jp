@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 2d60cdee0a5357f7e117dc902b073049f3bbaea9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198479"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61984387"
 ---
 # <a name="ihostcrstleave-method"></a>IHostCrst::Leave メソッド
 現在のインスタンスで表される、クリティカル セクションを離れる[IHostCrst](../../../../docs/framework/unmanaged-api/hosting/ihostcrst-interface.md)します。  

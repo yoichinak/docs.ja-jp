@@ -3,11 +3,11 @@ title: System.ServiceModel.GetBehaviorElement
 ms.date: 03/30/2017
 ms.assetid: c7332d23-e226-470c-b063-0fb9d919437f
 ms.openlocfilehash: 0e818660edf7491e4c96c93673b5fc4a0449747a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152036"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997309"
 ---
 # <a name="systemservicemodelgetbehaviorelement"></a>System.ServiceModel.GetBehaviorElement
 System.ServiceModel.GetBehaviorElement  

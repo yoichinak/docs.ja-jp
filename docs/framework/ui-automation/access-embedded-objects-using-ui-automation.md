@@ -10,11 +10,11 @@ helpviewer_keywords:
 - UI Automation, accessing embedded objects
 ms.assetid: a5b513ec-7fa6-4460-869f-c18ff04f7cf2
 ms.openlocfilehash: 07223b9e48905b0952e37a6acdb703f584d166d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59131249"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032375"
 ---
 # <a name="access-embedded-objects-using-ui-automation"></a>UI オートメーションを使用した、埋め込みオブジェクトへのアクセス
 > [!NOTE]

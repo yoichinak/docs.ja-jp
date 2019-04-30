@@ -17,11 +17,11 @@ topic_type:
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 1fd903cb4a9ce664b7a1c958a3fef0c639d6845d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122318"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62045319"
 ---
 # <a name="corsetenc-enumeration"></a>CorSetENC 列挙型
 メタデータの生成中の動作を決定する値が格納されます。  

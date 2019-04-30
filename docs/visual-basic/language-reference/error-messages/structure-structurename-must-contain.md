@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30941
 ms.assetid: 7054cc1e-bac3-4c3d-82f3-35772bd8dd3b
 ms.openlocfilehash: 598aef3943a53ee6eb97064819c9128de1839f52
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58813939"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62055109"
 ---
 # <a name="structure-structurename-must-contain-at-least-one-instance-member-variable-or-at-least-one-instance-event-declaration-not-marked-custom"></a>構造体 '\<structurename >' に少なくとも 1 つのインスタンス メンバー変数または 'Custom' にマークされていない少なくとも 1 つのインスタンス イベント宣言を含める必要があります
 構造体の定義は、すべての非共有変数または非共有の非カスタム イベントには含まれません。  
@@ -23,7 +23,7 @@ ms.locfileid: "58813939"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   少なくとも 1 つの変数またはイベントでない定義`Shared`します。 1 つのみのイベントを定義する場合は、カスタムではないと非共有があります。  
+- 少なくとも 1 つの変数またはイベントでない定義`Shared`します。 1 つのみのイベントを定義する場合は、カスタムではないと非共有があります。  
   
 ## <a name="see-also"></a>関連項目
 

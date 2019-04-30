@@ -6,11 +6,11 @@ helpviewer_keywords:
 - control patterns, UI Automation clients
 ms.assetid: 571561d8-5f49-43a9-a054-87735194e013
 ms.openlocfilehash: 1b0d374c9dc3e24302a8acfbc56cd9468f41def5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59159836"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033099"
 ---
 # <a name="ui-automation-control-patterns-for-clients"></a>クライアントの UI オートメーション コントロール パターン
 > [!NOTE]

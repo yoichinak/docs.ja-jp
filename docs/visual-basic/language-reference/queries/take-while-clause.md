@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Take While statement [Visual Basic]
 ms.assetid: db8f9f2f-fc9f-4a6c-b0b8-1bf048147e11
 ms.openlocfilehash: 080a106fc1deeb54165511ed03d7c7c5d2060f21
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58818750"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945198"
 ---
 # <a name="take-while-clause-visual-basic"></a>Take While 句 (Visual Basic)
 指定された条件が `true` である限り、コレクションの要素を含むようにし、残りの要素をバイパスします。  

@@ -8,11 +8,11 @@ helpviewer_keywords:
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
 ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084168"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031344"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックで作成する際に注意する必要がある問題が発生する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]グローバル市場向けアプリケーション。 グローバリゼーション プログラミングの要素がで定義されている[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]で`System.Globalization`します。
@@ -69,59 +69,59 @@ ms.locfileid: "59084168"
 
  現在、次の書体がサポートされています。
 
--   アラビア語
+- アラビア語
 
--   ベンガル語
+- ベンガル語
 
--   デバナガリ
+- デバナガリ
 
--   キリル言語
+- キリル言語
 
--   ギリシャ語
+- ギリシャ語
 
--   グジャラート語
+- グジャラート語
 
--   グルムキー
+- グルムキー
 
--   ヘブライ語
+- ヘブライ語
 
--   表意文字スクリプト
+- 表意文字スクリプト
 
--   カナラ語
+- カナラ語
 
--   ラオス語
+- ラオス語
 
--   ラテン語
+- ラテン語
 
--   マラヤーラム語
+- マラヤーラム語
 
--   モンゴル語
+- モンゴル語
 
--   オディア語
+- オディア語
 
--   シリア語
+- シリア語
 
--   タミール語
+- タミール語
 
--   テルグ語
+- テルグ語
 
--   ターナ
+- ターナ
 
--   タイ語*
+- タイ語*
 
--   チベット語
+- チベット語
 
  * このリリースでは、タイ語テキストを表示し、編集できますが、単語を分割することはできません。
 
  現在、次のスクリプトはサポートされていません。
 
--   クメール語
+- クメール語
 
--   韓国語の古いハングル
+- 韓国語の古いハングル
 
--   ミャンマー
+- ミャンマー
 
--   シンハラ語
+- シンハラ語
 
  すべての書記体系エンジン サポート[!INCLUDE[TLA#tla_opentype](../../../../includes/tlasharptla-opentype-md.md)]フォント。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)] フォントを含めることができます、[!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]より国際的およびハイエンドなタイポグラフィ フォントのデザイン、フォントの作成を有効にするレイアウト テーブル。 [!INCLUDE[TLA2#tla_opentype](../../../../includes/tla2sharptla-opentype-md.md)]フォント レイアウト テーブルは、テキストのレイアウトを向上させるためにテキスト処理アプリケーションを有効にするグリフ代用、グリフ配置、位置揃え、基線配置に関する情報を含めることができます。
 
@@ -133,9 +133,9 @@ ms.locfileid: "59084168"
 ### <a name="international-layout"></a>国際対応レイアウト
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] では非常に便利な方法で横書きレイアウト、双方向レイアウト、縦書きレイアウトを作成できます。 プレゼンテーション フレームワークで、<xref:System.Windows.FrameworkElement.FlowDirection%2A>レイアウトを定義するプロパティを使用できます。 フローの方向パターン:
 
--   *LeftToRight* - ラテン語や東アジア言語などのための横書きレイアウト。
+- *LeftToRight* - ラテン語や東アジア言語などのための横書きレイアウト。
 
--   *RightToLeft* - アラビア語やヘブライ語などのための双方向レイアウト。
+- *RightToLeft* - アラビア語やヘブライ語などのための双方向レイアウト。
 
 <a name="developing_localizable_apps"></a>
 ## <a name="developing-localizable-applications"></a>ローカライズ可能なアプリケーションの開発

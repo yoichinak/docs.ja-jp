@@ -1,20 +1,20 @@
 ---
-title: '方法 : コントラクトを SOAP クライアントおよび Web クライアントに公開する'
+title: '方法: コントラクトを SOAP クライアントおよび Web クライアントに公開する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
 ms.openlocfilehash: d82c5e3fc33528eadc3c404cca59a3dcf905e0e2
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47396956"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000923"
 ---
-# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>方法 : コントラクトを SOAP クライアントおよび Web クライアントに公開する
+# <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>方法: コントラクトを SOAP クライアントおよび Web クライアントに公開する
 
-既定では、Windows Communication Foundation (WCF) エンドポイント使用できるようにする SOAP クライアントにのみです。 [方法: 基本的な WCF Web HTTP サービスの作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)、SOAP 以外のクライアントに利用可能になってエンドポイント。 状況によっては、同じコントラクトを Web エンドポイントと SOAP エンドポイントのどちらとしても利用できることが望ましい場合があります。 ここでは、これを実現する方法の例について示します。
+既定では、Windows Communication Foundation (WCF) エンドポイント使用できるようにする SOAP クライアントにのみです。 [方法。基本的な WCF Web HTTP サービス作成](../../../../docs/framework/wcf/feature-details/how-to-create-a-basic-wcf-web-http-service.md)、SOAP 以外のクライアントに利用可能になってエンドポイント。 状況によっては、同じコントラクトを Web エンドポイントと SOAP エンドポイントのどちらとしても利用できることが望ましい場合があります。 ここでは、これを実現する方法の例について示します。
 
 ## <a name="to-define-the-service-contract"></a>サービス コントラクトを定義するには
 

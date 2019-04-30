@@ -6,11 +6,11 @@ helpviewer_keywords:
 - My.Computer.Audio object
 ms.assetid: ab5bdd04-b0ce-48b2-91c5-6404ceca31d0
 ms.openlocfilehash: 2ec6c71f8871ece2b0c1a2ec9bb47607f6a28871
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58837698"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62031111"
 ---
 # <a name="mycomputeraudio-object"></a>My.Computer.Audio オブジェクト
 サウンドを再生するためのメソッドを提供します。  

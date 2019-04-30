@@ -13,22 +13,22 @@ helpviewer_keywords:
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
 ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095491"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967038"
 ---
 # <a name="data-binding-and-windows-forms"></a>データ連結と Windows フォーム
 Windows フォームでは、従来のデータ ソースだけでなく、データを含むほぼすべての構造にバインドできます。 実行時に計算する値、ファイルから読み取る値、または他のコントロールの値から派生する値の配列にバインドできます。  
   
  さらに、任意のコントロールのプロパティをデータ ソースにバインドできます。 従来のデータ バインディングでは、通常は <xref:System.Windows.Forms.Control.Text%2A> コントロールの <xref:System.Windows.Forms.TextBox> プロパティなどの表示プロパティをデータ ソースにバインドします。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を使用すると、バインディングによってその他のプロパティを設定することもできます。 バインディングを使用して、次のタスクを実行できます。  
   
--   イメージ コントロールのグラフィックの設定。  
+- イメージ コントロールのグラフィックの設定。  
   
--   1 つ以上のコントロールの背景色の設定。  
+- 1 つ以上のコントロールの背景色の設定。  
   
--   コントロール サイズの設定。  
+- コントロール サイズの設定。  
   
  基本的には、データ バインディングは、フォーム上の任意のコントロールの実行時にアクセス可能なプロパティを自動的に設定する方法です。  
   
@@ -37,7 +37,7 @@ Windows フォームでは、従来のデータ ソースだけでなく、デ�
   
 |データ バインディングの種類|説明|  
 |--------------------------|-----------------|  
-|単純データ バインディング|データセット テーブル内の列の値など、1 つのデータ要素にバインドするコントロールの機能。 これは、<xref:System.Windows.Forms.TextBox> コントロールや <xref:System.Windows.Forms.Label> コントロールなどのコントロールで一般的に使用される種類のバインディングです。これらのコントロールでは通常、1 つの値のみが表示されます。 実際には、コントロールのどのプロパティもデータベース内のフィールドにバインドできます。 Visual Studio でこの機能の広範なサポートがあります。<br /><br /> 詳細については次を参照してください:<br /><br /> -   [データ バインディングに関連するインターフェイス](interfaces-related-to-data-binding.md)<br />-   [方法: Windows フォームでデータを移動します。](how-to-navigate-data-in-windows-forms.md)<br />-   [方法: Windows フォームに単純バインド コントロールを作成します。](how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
+|単純データ バインディング|データセット テーブル内の列の値など、1 つのデータ要素にバインドするコントロールの機能。 これは、<xref:System.Windows.Forms.TextBox> コントロールや <xref:System.Windows.Forms.Label> コントロールなどのコントロールで一般的に使用される種類のバインディングです。これらのコントロールでは通常、1 つの値のみが表示されます。 実際には、コントロールのどのプロパティもデータベース内のフィールドにバインドできます。 Visual Studio でこの機能の広範なサポートがあります。<br /><br /> 詳細については次を参照してください:<br /><br /> -   [データ バインディングに関連するインターフェイス](interfaces-related-to-data-binding.md)<br />-   [方法: Windows フォームでデータを移動します。](how-to-navigate-data-in-windows-forms.md)<br />-   [方法: Windows フォームに単純バインド コントロールを作成する](how-to-create-a-simple-bound-control-on-a-windows-form.md)|  
 |複合データ バインディング|複数のデータ要素、一般的にはデータベース内の複数のレコードにバインドするコントロールの機能。 複合バインディングは、リストベース バインディングとも呼ばれます。 複合バインディングをサポートするコントロールの例には、<xref:System.Windows.Forms.DataGridView>、<xref:System.Windows.Forms.ListBox>、および <xref:System.Windows.Forms.ComboBox> の各コントロールがあります。 複合データ バインディングの例は、次を参照してください。[方法。Windows フォームの ComboBox または ListBox コントロールをデータにバインド](./controls/how-to-bind-a-windows-forms-combobox-or-listbox-control-to-data.md)します。|  
   
 ## <a name="bindingsource-component"></a>BindingSource コンポーネント  

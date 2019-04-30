@@ -20,11 +20,11 @@ helpviewer_keywords:
 - Double data type
 ms.assetid: 0c5670f7-fcb1-453a-bef1-374730cd38fd
 ms.openlocfilehash: 701d10a334757a96ffd634204c1e1d5eb5418ce6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58824664"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054446"
 ---
 # <a name="double-data-type-visual-basic"></a>倍精度浮動小数点数型 (Double) (Visual Basic)
 -- をから IEEE の 64 ビット (8 バイト) の倍精度浮動小数点数の符号付き 4.94065645841246544E-負の値と 4.94065645841246544E から 324-324 1.79769313486231570 e + 308 ~正の値。 倍精度数値には、実数の概数が格納されます。  
@@ -36,11 +36,11 @@ ms.locfileid: "58824664"
   
 ## <a name="programming-tips"></a>プログラミングのヒント  
   
--   **有効桁数です。** 浮動小数点数を使用するときに、常にないことを正確に表現メモリ内に注意してください。 値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
+- **有効桁数です。** 浮動小数点数を使用するときに、常にないことを正確に表現メモリ内に注意してください。 値の比較などの特定の操作から予期しない結果に可能性と`Mod`演算子。 詳細については、次を参照してください。[データ型のトラブルシューティング](../../../visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md)します。  
   
--   **後続のゼロ。** 浮動小数点データ型には、末尾のゼロの文字の任意の内部表現はありません。 たとえば、これらは区別されません 4.2000 および 4.2 します。 その結果、末尾のゼロは表示されません表示した場合、または印刷の浮動小数点値。  
+- **後続のゼロ。** 浮動小数点データ型には、末尾のゼロの文字の任意の内部表現はありません。 たとえば、これらは区別されません 4.2000 および 4.2 します。 その結果、末尾のゼロは表示されません表示した場合、または印刷の浮動小数点値。  
   
--   **型宣言文字。** あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。 たとえば、整数値が続く場合`R`に値が変更された、`Double`します。  
+- **型宣言文字。** あるリテラルにリテラルの型文字 `R` を付けると、そのリテラルは `Double` に変換されます。 たとえば、整数値が続く場合`R`に値が変更された、`Double`します。  
   
     ```  
     ' Visual Basic expands the 4 in the statement Dim dub As Double = 4R to 4.0:  
@@ -53,7 +53,7 @@ ms.locfileid: "58824664"
     Dim num# = 3  
     ```  
   
--   **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。  
+- **フレームワークの型。** .NET Framework において対応する型は、<xref:System.Double?displayProperty=nameWithType> 構造体です。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: d1d7247f-a3b7-460b-b342-5c1a2365aa1a
 ms.openlocfilehash: ae20dbe557c3cf56a273556c24578056843e9af6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096993"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032462"
 ---
 # <a name="deferred-versus-immediate-loading"></a>遅延読み込みと即時読み込み
 オブジェクトに対してクエリを実行すると、要求したオブジェクトだけが実際に取得されます。 *関連*オブジェクトが同時に自動的にフェッチされていません。 (詳細については、次を参照してください[リレーションシップ間でクエリを実行する](../../../../../../docs/framework/data/adonet/sql/linq/querying-across-relationships.md)。)。ただし、関連オブジェクトにアクセスしようとすると、それらを取得する要求が生成されるため、関連オブジェクトがまだ読み込まれていない状態を識別することはできません。  
@@ -29,9 +29,9 @@ ms.locfileid: "59096993"
   
  ここで必要なのは、関連オブジェクトのセットを同時に取得することです。 このセットは、目的の用途に必要十分なデータだけを取得できるように、グラフ上に線引きされた区画に相当します。 このため、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]提供<xref:System.Data.Linq.DataLoadOptions>オブジェクト モデルの領域の即時読み込み。 次のメソッドがあります。  
   
--   <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> メソッド。メイン ターゲットに関連するデータを即時に読み込みます。  
+- <xref:System.Data.Linq.DataLoadOptions.LoadWith%2A> メソッド。メイン ターゲットに関連するデータを即時に読み込みます。  
   
--   <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> メソッド。特定のリレーションシップに対して取得されるオブジェクトにフィルターを適用します。  
+- <xref:System.Data.Linq.DataLoadOptions.AssociateWith%2A> メソッド。特定のリレーションシップに対して取得されるオブジェクトにフィルターを適用します。  
   
 ## <a name="see-also"></a>関連項目
 

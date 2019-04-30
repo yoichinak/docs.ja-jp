@@ -12,18 +12,18 @@ helpviewer_keywords:
 - carriage return
 ms.assetid: 43173201-0b74-4067-a472-605029ca5f35
 ms.openlocfilehash: 47404f02a753fe143dd573bdf73143416872af9d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324189"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012920"
 ---
 # <a name="how-to-view-multiple-lines-in-the-windows-forms-textbox-control"></a>方法: Windows フォーム TextBox コントロールで複数行を表示する
 既定では、Windows フォームで<xref:System.Windows.Forms.TextBox>コントロールが 1 行のテキストを表示し、スクロール バーは表示されません。 テキストが使用可能な領域よりも長い場合は、テキストの一部のみが表示されます。 この既定の動作を設定して変更することができます、 <xref:System.Windows.Forms.TextBox.Multiline%2A>、 <xref:System.Windows.Forms.TextBoxBase.WordWrap%2A>、および<xref:System.Windows.Forms.TextBox.ScrollBars%2A>プロパティを適切な値にします。  
   
 ### <a name="to-display-a-carriage-return-in-the-textbox-control"></a>テキスト ボックス コントロール内の復帰を表示するには  
   
--   複数の行に改行を表示する<xref:System.Windows.Forms.TextBox>を使用して、<xref:System.Environment.NewLine%2A>プロパティ。  
+- 複数の行に改行を表示する<xref:System.Windows.Forms.TextBox>を使用して、<xref:System.Environment.NewLine%2A>プロパティ。  
   
      注意してくださいをエスケープ文字の解釈 (\\) 言語に固有です。 Visual Basic で`Chr$(13) & Chr$(10)`のキャリッジ リターンとライン フィード文字の組み合わせ。  
   

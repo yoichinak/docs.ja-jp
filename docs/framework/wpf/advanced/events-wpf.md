@@ -9,11 +9,11 @@ helpviewer_keywords:
 - WPF [WPF], events
 ms.assetid: d3b93c6f-aa6b-486d-a010-d097ea8a516b
 ms.openlocfilehash: e6aa6fea3c19d452013e4e77d7ef4773a2f45343
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57361214"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010346"
 ---
 # <a name="events-wpf"></a>イベント (WPF)
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] では、アプリケーションの要素ツリー内のさまざまなリスナー上に存在するハンドラーを呼び出すことができるルーティング イベントが導入されています。  

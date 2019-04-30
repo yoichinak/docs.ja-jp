@@ -6,11 +6,11 @@ helpviewer_keywords:
 - delegates [Visual Basic], passing procedures
 ms.assetid: 5adbba15-5a1d-413f-ab3e-3ff6cc0a4669
 ms.openlocfilehash: 312c0e0f100e85256ad4ca856ccf7f35dbaa36dc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59305248"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61973285"
 ---
 # <a name="how-to-pass-procedures-to-another-procedure-in-visual-basic"></a>方法: Visual Basic での別のプロシージャに渡す
 この例では、プロシージャを別のプロシージャに渡すデリゲートを使用する方法を示します。  

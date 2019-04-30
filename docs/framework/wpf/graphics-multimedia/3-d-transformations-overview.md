@@ -9,11 +9,11 @@ helpviewer_keywords:
 - transformations [WPF], 3-D
 ms.assetid: e45e555d-ac1e-4b36-aced-e433afe7f27f
 ms.openlocfilehash: bbb3c413148bd2e2ab8de8a1a725f2d9a8acf2f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59190632"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020800"
 ---
 # <a name="3-d-transformations-overview"></a>3-D 変換の概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] グラフィックス システムで 3-D モデルに変換を適用する方法について説明します。 変換を使うと、モデルを定義する基本の値を変更することなく、モデルの位置、サイズ、向きを変更できます。  

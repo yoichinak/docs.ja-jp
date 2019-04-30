@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
 ms.openlocfilehash: 79133660adab6f8372e355509dc63fbc85ff30ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816240"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013715"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>文字列定数の終わりには、二重引用符を指定しなければなりません。
 文字列定数は、先頭し、末尾は引用符にする必要があります。  
@@ -21,7 +21,7 @@ ms.locfileid: "58816240"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   リテラルの文字列で終わる引用符 (") を確認します。 他のテキスト エディターからの値を貼り付けると場合、は、貼り付けられた文字が有効な引用符と、「スマート」または「中」の引用符などのような文字が 1 つないことを確認してください (「または」) または 2 つの単一引用符 (")。  
+- リテラルの文字列で終わる引用符 (") を確認します。 他のテキスト エディターからの値を貼り付けると場合、は、貼り付けられた文字が有効な引用符と、「スマート」または「中」の引用符などのような文字が 1 つないことを確認してください (「または」) または 2 つの単一引用符 (")。  
   
 ## <a name="see-also"></a>関連項目
 

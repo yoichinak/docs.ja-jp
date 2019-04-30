@@ -8,11 +8,11 @@ helpviewer_keywords:
 - BC41999
 ms.assetid: ae48c738-dff8-4c0f-8931-bbb70b2c8b03
 ms.openlocfilehash: 7b02659d96b08c592b25ddf3ef1f99114c3ee269
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831762"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013830"
 ---
 # <a name="implicit-conversion-from-typename1-to-typename2-in-copying-the-value-of-byref-parameter-parametername-back-to-the-matching-argument"></a>暗黙的な変換 '\<typename1 >' を'\<typename2 >' の 'ByRef' パラメーターの値をコピー '\<parametername >'、一致する引数に戻してします。
 プロシージャが呼び出される、 [ByRef](../../../visual-basic/language-reference/modifiers/byref.md)よりも、対応するパラメーターのさまざまな型の引数。  
@@ -27,9 +27,9 @@ ms.locfileid: "58831762"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   可能であれば、Visual Basic は、変換を行う必要はありませんので、プロシージャのパラメーターとして、同じ種類の呼び出し元の引数を使用します。  
+- 可能であれば、Visual Basic は、変換を行う必要はありませんので、プロシージャのパラメーターとして、同じ種類の呼び出し元の引数を使用します。  
   
--   パラメーター型とは異なる引数型を使用してプロシージャを呼び出す必要があり、呼び出し元の引数に値を返す必要がない場合は、 [ByRef](../../../visual-basic/language-reference/modifiers/byval.md) ではなく `ByRef`になるようにパラメーターを定義します。  
+- パラメーター型とは異なる引数型を使用してプロシージャを呼び出す必要があり、呼び出し元の引数に値を返す必要がない場合は、 [ByRef](../../../visual-basic/language-reference/modifiers/byval.md) ではなく `ByRef`になるようにパラメーターを定義します。  
   
 ## <a name="see-also"></a>関連項目
 

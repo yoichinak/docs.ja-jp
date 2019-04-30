@@ -1,21 +1,21 @@
 ---
-title: '方法: HTTPS で信頼できるセッションをカスタム バインディングを作成します。'
+title: '方法: カスタムの信頼できるセッションによる HTTPS を使用したバインディングを作成する'
 ms.date: 03/30/2017
 ms.assetid: fa772232-da1f-4c66-8c94-e36c0584b549
 ms.openlocfilehash: f39325829cf4b548482a6a570a5aa1fd65e61a1d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54516682"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039534"
 ---
-# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>方法: HTTPS で信頼できるセッションをカスタム バインディングを作成します。
+# <a name="how-to-create-a-custom-reliable-session-binding-with-https"></a>方法: カスタムの信頼できるセッションによる HTTPS を使用したバインディングを作成する
 
 ここでは、信頼できるセッションを使用した SSL (Secure Sockets Layer) トランスポート セキュリティの使用方法について説明します。 HTTPS 上で信頼できるセッションを使用するには、信頼できるセッションと HTTPS トランスポートを使用するカスタム バインドを作成する必要があります。 コードを使用して強制的に行う、または構成ファイルで宣言によって、信頼できるセッションが有効にします。 この手順では、クライアントとサービス構成ファイルを使用して、信頼できるセッションを有効にして、 [  **\<httpsTransport >** ](../../../../docs/framework/configure-apps/file-schema/wcf/httpstransport.md)要素。
 
 この手順の重要な部分は、 **\<エンドポイント >** 構成要素を含む、`bindingConfiguration`という名前のカスタム バインド構成を参照する属性`reliableSessionOverHttps`。 [ **\<バインド >** ](../../../../docs/framework/misc/binding.md)構成要素を含めることによって、信頼できるセッションと HTTPS トランスポートを使用することを指定するには、この名前を参照する **\<reliableSession >** と **\<httpsTransport >** 要素。
 
-この例のソースのコピーを[カスタム バインドの信頼できるセッションが HTTPS 経由で](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)を参照してください。
+この例のソースのコピーを次を参照してください。[カスタム バインドの信頼できるセッションが HTTPS 経由で](../../../../docs/framework/wcf/samples/custom-binding-reliable-session-over-https.md)します。
 
 ### <a name="configure-the-service-with-a-custombinding-to-use-a-reliable-session-with-https"></a>HTTPS で信頼できるセッションを使用するを CustomBinding でサービスを構成します。
 

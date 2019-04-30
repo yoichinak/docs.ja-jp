@@ -8,11 +8,11 @@ helpviewer_keywords:
 - ListBox control [Windows Forms], about ListBox control
 ms.assetid: 37ea226b-6fc8-4c70-936a-c6af4e0cad4c
 ms.openlocfilehash: f70246d4a4d158815ee9662036eca8edeb891d85
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59104202"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012894"
 ---
 # <a name="listbox-control-overview-windows-forms"></a>ListBox コントロールの概要 (Windows フォーム)
 Windows フォーム<xref:System.Windows.Forms.ListBox>コントロールは、ユーザーが 1 つまたは複数の項目を選択できるリストを表示します。 スクロール バーが自動的に追加する項目の合計数が表示できる数を超えた場合、<xref:System.Windows.Forms.ListBox>コントロール。 ときに、<xref:System.Windows.Forms.ListBox.MultiColumn%2A>プロパティに設定されて`true`、リスト ボックス項目を複数の列に表示して、水平スクロール バーが表示されます。 ときに、<xref:System.Windows.Forms.ListBox.MultiColumn%2A>プロパティに設定されて`false`、リスト ボックス項目を 1 つの列で表示して、垂直スクロール バーが表示されます。 ときに<xref:System.Windows.Forms.ListBox.ScrollAlwaysVisible%2A>に設定されている`true`項目の数に関係なく、スクロール バーが表示されます。 <xref:System.Windows.Forms.ListBox.SelectionMode%2A>プロパティは、一度に選択できるリスト項目の数を決定します。  

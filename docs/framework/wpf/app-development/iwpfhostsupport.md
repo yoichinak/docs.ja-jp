@@ -5,11 +5,11 @@ helpviewer_keywords:
 - IWpfHostSupport interface [WPF]
 ms.assetid: cc5a0281-de81-4cc1-87e4-0e46b1a811e9
 ms.openlocfilehash: 074167111b78edc517dda019465260d0acd54737
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57376014"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006695"
 ---
 # <a name="iwpfhostsupport"></a>IWpfHostSupport
 アプリケーションをホストする[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]PresentationHost.exe でコンテンツがホストと PresentationHost.exe 間の統合のポイントを提供するには、このインターフェイスを実装します。  
@@ -19,11 +19,11 @@ ms.locfileid: "57376014"
   
  有効になっている統合`IWpfHostSupport`PresentationHost.exe できます。  
   
--   検出し、ホスト アプリケーションが関心を未加工入力デバイス (ヒューマン インターフェイス デバイス) を登録します。  
+- 検出し、ホスト アプリケーションが関心を未加工入力デバイス (ヒューマン インターフェイス デバイス) を登録します。  
   
--   未加工入力デバイスを登録し、適切なメッセージを転送から、ホスト アプリケーションへの入力メッセージを受信します。  
+- 未加工入力デバイスを登録し、適切なメッセージを転送から、ホスト アプリケーションへの入力メッセージを受信します。  
   
--   ホスト アプリケーションの進行状況とエラーのカスタム ユーザー インターフェイスをクエリします。  
+- ホスト アプリケーションの進行状況とエラーのカスタム ユーザー インターフェイスをクエリします。  
   
 > [!NOTE]
 >  この API は、ローカル クライアント コンピューターでの使用のみを目的とし、サポートされています。  

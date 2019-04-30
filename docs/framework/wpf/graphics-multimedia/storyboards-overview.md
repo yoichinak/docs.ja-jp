@@ -10,11 +10,11 @@ helpviewer_keywords:
 - timelines [WPF]
 ms.assetid: 1a698c3c-30f1-4b30-ae56-57e8a39811bd
 ms.openlocfilehash: 6b178ac6b93205afebb1bea45f1b7e94826cb670
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59124840"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002171"
 ---
 # <a name="storyboards-overview"></a>ストーリーボードの概要
 このトピックでは、使用する方法を示します<xref:System.Windows.Media.Animation.Storyboard>オブジェクトを編成およびアニメーションを適用します。 対話的に操作する方法を説明<xref:System.Windows.Media.Animation.Storyboard>オブジェクトおよび構文を対象とする間接的なプロパティについて説明します。  
@@ -29,11 +29,11 @@ ms.locfileid: "59124840"
   
  A<xref:System.Windows.Media.Animation.Storyboard>が含まれているタイムラインの対象情報を提供するコンテナー タイムラインの一種です。 ストーリー ボードの任意の型を含めることができます<xref:System.Windows.Media.Animation.Timeline>、他のコンテナー タイムラインやアニメーションなど。 <xref:System.Windows.Media.Animation.Storyboard> オブジェクトを使用すると、オブジェクトとプロパティのさまざまなやすく整理し、複雑なタイミング動作を制御するため、1 つのタイムライン ツリーに影響を与えるタイムラインを組み合わせることができます。 たとえば、次の 3 つのことを実行するボタンを必要としているとします。  
   
--   ユーザーに選択されると、拡大して色が変わる。  
+- ユーザーに選択されると、拡大して色が変わる。  
   
--   クリックされると、いったん縮小してから元のサイズに戻る。  
+- クリックされると、いったん縮小してから元のサイズに戻る。  
   
--   無効にされると、縮小し、50% の不透明度になる。  
+- 無効にされると、縮小し、50% の不透明度になる。  
   
  この場合、同じオブジェクトに適用するアニメーションのセットを複数用意し、ボタンの状態に応じてさまざまな場合に再生します。 <xref:System.Windows.Media.Animation.Storyboard> オブジェクトを使用するアニメーションを編成し、1 つまたは複数のオブジェクトをグループに適用されます。  
   
@@ -43,11 +43,11 @@ ms.locfileid: "59124840"
   
  たとえば、使用する、<xref:System.Windows.Media.Animation.Storyboard>以下を実行します。  
   
--   アニメーション化する、<xref:System.Windows.Media.SolidColorBrush>ボタンの背景を描画する (非フレームワーク要素) (一種の<xref:System.Windows.FrameworkElement>)、  
+- アニメーション化する、<xref:System.Windows.Media.SolidColorBrush>ボタンの背景を描画する (非フレームワーク要素) (一種の<xref:System.Windows.FrameworkElement>)、  
   
--   アニメーション化する、<xref:System.Windows.Media.SolidColorBrush>の塗りつぶしを描画する (非フレームワーク要素)、 <xref:System.Windows.Media.GeometryDrawing> (非フレームワーク要素) の表示を使用して、 <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>)。  
+- アニメーション化する、<xref:System.Windows.Media.SolidColorBrush>の塗りつぶしを描画する (非フレームワーク要素)、 <xref:System.Windows.Media.GeometryDrawing> (非フレームワーク要素) の表示を使用して、 <xref:System.Windows.Controls.Image> (<xref:System.Windows.FrameworkElement>)。  
   
--   コードでは、アニメーション化する、<xref:System.Windows.Media.SolidColorBrush>も含まれているクラスで宣言された、<xref:System.Windows.FrameworkElement>場合は、<xref:System.Windows.Media.SolidColorBrush>の名前を登録する<xref:System.Windows.FrameworkElement>します。  
+- コードでは、アニメーション化する、<xref:System.Windows.Media.SolidColorBrush>も含まれているクラスで宣言された、<xref:System.Windows.FrameworkElement>場合は、<xref:System.Windows.Media.SolidColorBrush>の名前を登録する<xref:System.Windows.FrameworkElement>します。  
   
  ただし、使用できません、<xref:System.Windows.Media.Animation.Storyboard>をアニメーション化する、 <xref:System.Windows.Media.SolidColorBrush> 、その名前を登録しなかった、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>、またはのプロパティを設定するには使用されませんでした、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>します。  
   
@@ -140,9 +140,9 @@ ms.locfileid: "59124840"
   
  Where  
   
--   *ElementPropertyName*のプロパティである、<xref:System.Windows.FrameworkElement>を<xref:System.Windows.Freezable>を設定するために使用し、  
+- *ElementPropertyName*のプロパティである、<xref:System.Windows.FrameworkElement>を<xref:System.Windows.Freezable>を設定するために使用し、  
   
--   *FreezablePropertyName*のプロパティである、<xref:System.Windows.Freezable>をアニメーション化します。  
+- *FreezablePropertyName*のプロパティである、<xref:System.Windows.Freezable>をアニメーション化します。  
   
  次のコードは、アニメーション化する方法を示しています、<xref:System.Windows.Media.SolidColorBrush.Color%2A>の<xref:System.Windows.Media.SolidColorBrush>を設定するため、  
   
@@ -186,9 +186,9 @@ ms.locfileid: "59124840"
   
  Where  
   
--   *OwnerPropertyArrayIndex*のインデックス、<xref:System.Windows.DependencyProperty>の識別子を含む配列、<xref:System.Windows.FrameworkElement>オブジェクトのプロパティを<xref:System.Windows.Freezable>を設定するために使用し、  
+- *OwnerPropertyArrayIndex*のインデックス、<xref:System.Windows.DependencyProperty>の識別子を含む配列、<xref:System.Windows.FrameworkElement>オブジェクトのプロパティを<xref:System.Windows.Freezable>を設定するために使用し、  
   
--   *FreezablePropertyArrayIndex*のインデックス、<xref:System.Windows.DependencyProperty>をターゲットにするプロパティの識別子を含む配列。  
+- *FreezablePropertyArrayIndex*のインデックス、<xref:System.Windows.DependencyProperty>をターゲットにするプロパティの識別子を含む配列。  
   
  次の例は、<xref:System.Windows.PropertyPath.Path%2A>に付属する、<xref:System.Windows.PropertyPath.PathParameters%2A>前の例で定義されています。
   
@@ -225,17 +225,17 @@ ms.locfileid: "59124840"
 ## <a name="interactively-controlling-a-storyboard-in-xaml"></a>XAML での対話形式でのストーリーボードの制御  
  ストーリー ボードを起動する[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]を使用する、<xref:System.Windows.Media.Animation.BeginStoryboard>アクションをトリガーします。 <xref:System.Windows.Media.Animation.BeginStoryboard> オブジェクトとプロパティをアニメーション化する、ストーリー ボードを開始するアニメーションを配布します。 (詳細については、このプロセスは、次を参照してください、[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)。)。提供する場合、<xref:System.Windows.Media.Animation.BeginStoryboard>名前を指定してその<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>プロパティをできるようにする制御可能なストーリー ボード。 ストーリーボードが開始すると対話的に制御できます。 制御可能なストーリーボード アクションの一覧を次に示します。これらをイベント トリガーで使用して、ストーリーボードを制御します。  
   
--   <xref:System.Windows.Media.Animation.PauseStoryboard>:ストーリー ボードを一時停止します。  
+- <xref:System.Windows.Media.Animation.PauseStoryboard>:ストーリー ボードを一時停止します。  
   
--   <xref:System.Windows.Media.Animation.ResumeStoryboard>:一時停止中のストーリー ボードを再開します。  
+- <xref:System.Windows.Media.Animation.ResumeStoryboard>:一時停止中のストーリー ボードを再開します。  
   
--   <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>:ストーリー ボードの速度を変更します。  
+- <xref:System.Windows.Media.Animation.SetStoryboardSpeedRatio>:ストーリー ボードの速度を変更します。  
   
--   <xref:System.Windows.Media.Animation.SkipStoryboardToFill>:ある場合は、その保留期間の末尾にストーリー ボードを進めます。  
+- <xref:System.Windows.Media.Animation.SkipStoryboardToFill>:ある場合は、その保留期間の末尾にストーリー ボードを進めます。  
   
--   <xref:System.Windows.Media.Animation.StopStoryboard>:ストーリー ボードを停止します。  
+- <xref:System.Windows.Media.Animation.StopStoryboard>:ストーリー ボードを停止します。  
   
--   <xref:System.Windows.Media.Animation.RemoveStoryboard>:ストーリー ボードを削除します。  
+- <xref:System.Windows.Media.Animation.RemoveStoryboard>:ストーリー ボードを削除します。  
   
  次の例では、制御可能なストーリーボード アクションを使用して、ストーリーボードを対話的に制御しています。  
   
@@ -247,17 +247,17 @@ ms.locfileid: "59124840"
   
  次の一覧を操作するために使用する方法を示しています、<xref:System.Windows.Media.Animation.Storyboard>開始後。  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Pause%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Resume%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Seek%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.SkipToFill%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Stop%2A>  
   
--   <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
+- <xref:System.Windows.Media.Animation.Storyboard.Remove%2A>  
   
  これらのメソッドを使用する利点は、作成する必要があることを<xref:System.Windows.Trigger>または<xref:System.Windows.TriggerAction>オブジェクトは、制御可能なへの参照が必要なだけ<xref:System.Windows.Media.Animation.Storyboard>を操作します。  
   
@@ -272,13 +272,13 @@ ms.locfileid: "59124840"
 ## <a name="animate-in-a-style"></a>スタイル内でアニメーション化を行う  
  使用することができます<xref:System.Windows.Media.Animation.Storyboard>でアニメーションを定義するオブジェクト、<xref:System.Windows.Style>します。 アニメーション化、<xref:System.Windows.Media.Animation.Storyboard>で、<xref:System.Windows.Style>使用と似ています、<xref:System.Windows.Media.Animation.Storyboard>次の 3 つの例外で、他の場所。  
   
--   指定しない、 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>、<xref:System.Windows.Media.Animation.Storyboard>先の要素をターゲットと常に、<xref:System.Windows.Style>が適用されます。 ターゲットに<xref:System.Windows.Freezable>オブジェクト、間接的な対象化を使用する必要があります。 間接的な対象化の詳細については、次を参照してください。、[間接的な対象化](#pathsyntaxforchangeable)セクション。  
+- 指定しない、 <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>、<xref:System.Windows.Media.Animation.Storyboard>先の要素をターゲットと常に、<xref:System.Windows.Style>が適用されます。 ターゲットに<xref:System.Windows.Freezable>オブジェクト、間接的な対象化を使用する必要があります。 間接的な対象化の詳細については、次を参照してください。、[間接的な対象化](#pathsyntaxforchangeable)セクション。  
   
--   指定することはできません、<xref:System.Windows.EventTrigger.SourceName%2A>の<xref:System.Windows.EventTrigger>または<xref:System.Windows.Trigger>します。  
+- 指定することはできません、<xref:System.Windows.EventTrigger.SourceName%2A>の<xref:System.Windows.EventTrigger>または<xref:System.Windows.Trigger>します。  
   
--   動的リソース参照またはデータ バインディング式を使用して設定することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション プロパティの値。 だ内のすべてを<xref:System.Windows.Style>スレッド セーフである必要がありますとタイミング システムにする必要があります<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>スレッド セーフであるようにするオブジェクト。 A<xref:System.Windows.Media.Animation.Storyboard>またはその子タイムラインに動的リソース参照またはデータ バインディング式が含まれている場合に固定することはできません。 フリーズおよびその他の詳細については<xref:System.Windows.Freezable>については、「、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)します。  
+- 動的リソース参照またはデータ バインディング式を使用して設定することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション プロパティの値。 だ内のすべてを<xref:System.Windows.Style>スレッド セーフである必要がありますとタイミング システムにする必要があります<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>スレッド セーフであるようにするオブジェクト。 A<xref:System.Windows.Media.Animation.Storyboard>またはその子タイムラインに動的リソース参照またはデータ バインディング式が含まれている場合に固定することはできません。 フリーズおよびその他の詳細については<xref:System.Windows.Freezable>については、「、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)します。  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、用のイベント ハンドラーを宣言することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション イベント。  
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、用のイベント ハンドラーを宣言することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション イベント。  
   
  スタイル内でストーリー ボードを定義する方法を示す例は、次を参照してください。、[スタイル内でアニメーション化](how-to-animate-in-a-style.md)例。  
   
@@ -286,13 +286,13 @@ ms.locfileid: "59124840"
 ## <a name="animate-in-a-controltemplate"></a>ControlTemplate 内でアニメーション化を行う  
  使用することができます<xref:System.Windows.Media.Animation.Storyboard>でアニメーションを定義するオブジェクト、<xref:System.Windows.Controls.ControlTemplate>します。 アニメーション化、<xref:System.Windows.Media.Animation.Storyboard>で、<xref:System.Windows.Controls.ControlTemplate>使用と似ています、<xref:System.Windows.Media.Animation.Storyboard>次の 2 つの例外で、他の場所。  
   
--   <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>の子オブジェクトしか参照、<xref:System.Windows.Controls.ControlTemplate>します。 場合<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>が指定されていない、アニメーションのターゲット先の要素、<xref:System.Windows.Controls.ControlTemplate>が適用されます。  
+- <xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>の子オブジェクトしか参照、<xref:System.Windows.Controls.ControlTemplate>します。 場合<xref:System.Windows.Media.Animation.Storyboard.TargetName%2A>が指定されていない、アニメーションのターゲット先の要素、<xref:System.Windows.Controls.ControlTemplate>が適用されます。  
   
--   <xref:System.Windows.EventTrigger.SourceName%2A>の<xref:System.Windows.EventTrigger>または<xref:System.Windows.Trigger>の子オブジェクトしか参照、<xref:System.Windows.Controls.ControlTemplate>します。  
+- <xref:System.Windows.EventTrigger.SourceName%2A>の<xref:System.Windows.EventTrigger>または<xref:System.Windows.Trigger>の子オブジェクトしか参照、<xref:System.Windows.Controls.ControlTemplate>します。  
   
--   動的リソース参照またはデータ バインディング式を使用して設定することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション プロパティの値。 だ内のすべてを<xref:System.Windows.Controls.ControlTemplate>スレッド セーフである必要がありますとタイミング システムにする必要があります<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>スレッド セーフであるようにするオブジェクト。 A<xref:System.Windows.Media.Animation.Storyboard>またはその子タイムラインに動的リソース参照またはデータ バインディング式が含まれている場合に固定することはできません。 フリーズおよびその他の詳細については<xref:System.Windows.Freezable>については、「、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)します。  
+- 動的リソース参照またはデータ バインディング式を使用して設定することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション プロパティの値。 だ内のすべてを<xref:System.Windows.Controls.ControlTemplate>スレッド セーフである必要がありますとタイミング システムにする必要があります<xref:System.Windows.Freezable.Freeze%2A><xref:System.Windows.Media.Animation.Storyboard>スレッド セーフであるようにするオブジェクト。 A<xref:System.Windows.Media.Animation.Storyboard>またはその子タイムラインに動的リソース参照またはデータ バインディング式が含まれている場合に固定することはできません。 フリーズおよびその他の詳細については<xref:System.Windows.Freezable>については、「、 [Freezable オブジェクトの概要](../advanced/freezable-objects-overview.md)します。  
   
--   [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、用のイベント ハンドラーを宣言することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション イベント。  
+- [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]、用のイベント ハンドラーを宣言することはできません<xref:System.Windows.Media.Animation.Storyboard>またはアニメーション イベント。  
   
  ストーリー ボードを定義する方法を示す例については、<xref:System.Windows.Controls.ControlTemplate>を参照してください、 [ControlTemplate 内でアニメーション化](how-to-animate-in-a-controltemplate.md)例。  
   

@@ -3,11 +3,11 @@ title: LINQ to XML の概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
 ms.openlocfilehash: 987409aab9d3d12cc3cbbebaa64da0bffcee1c8c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54504042"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62021259"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML の概要 (Visual Basic)
 XML は、多くのコンテキストでデータを書式設定する方法として広く採用されてきました。 たとえば、Web、構成ファイル、Microsoft Office Word ファイル、データベースで XML が使用されています。  
@@ -22,13 +22,13 @@ XML は、多くのコンテキストでデータを書式設定する方法と�
 ## <a name="what-is-linq-to-xml"></a>LINQ to XML とは  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] プログラミング言語から XML を操作できるようにする、LINQ に対応したメモリ内 XML プログラミング インターフェイスです。  
   
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、XML ドキュメントをメモリに読み込むという点で、ドキュメント オブジェクト モデル (DOM) に似ています。 ドキュメントに対するクエリや変更を行うことができ、変更したドキュメントをファイルに保存したり、シリアル化してインターネット経由で送信したりできます。 ただし、 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] DOM と異なります。軽量である新しいオブジェクト モデルを提供し、使用すると、操作を簡単に利用している言語機能の Visual Basic で。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、XML ドキュメントをメモリに読み込むという点で、ドキュメント オブジェクト モデル (DOM) に似ています。 ドキュメントに対するクエリや変更を行うことができ、変更したドキュメントをファイルに保存したり、シリアル化してインターネット経由で送信したりできます。 ただし、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は DOM とは異なります。軽量である新しいオブジェクト モデルを提供し、使用すると、操作を簡単に利用している言語機能の Visual Basic で。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の最も重要な利点は、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] と統合されていることです。 この統合により、メモリ内の XML ドキュメントに対するクエリを記述して、要素および属性のコレクションを取得できます。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] のクエリ機能は、構文は異なりますが、XPath および XQuery と機能面で互換性があります。 統合[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]Visual Basic より強力な型指定とコンパイル時チェック、およびデバッガー サポートの強化を提供します。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] のもう 1 つの利点は、クエリの結果を <xref:System.Xml.Linq.XElement> および <xref:System.Xml.Linq.XAttribute> オブジェクト コンストラクターに対するパラメーターとして使用できるので、XML ツリーを作成するための強力な方法が利用可能になります。 *関数型構築*と呼ばれるこの方法では、開発者が XML ツリーの構造を簡単に変換できます。  
   
- たとえば、」の説明に従って、発注書の典型的な XML がある[サンプル XML ファイル。一般的な購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)します。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用することで、次のクエリを実行して購買発注書のすべての品目要素の部品番号属性を取得できます。  
+ たとえば、次の記事で説明されているように、典型的な XML の購買発注書を使用することもできます: 「[サンプル XML ファイル:一般的な購買発注書 (LINQ to XML)](../../../../visual-basic/programming-guide/concepts/linq/sample-xml-file-typical-purchase-order-linq-to-xml.md)」。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用することで、次のクエリを実行して購買発注書のすべての品目要素の部品番号属性を取得できます。  
   
 ```vb  
 Dim partNos = _  
@@ -49,19 +49,19 @@ Select item
   
  これらの [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] 機能に加え、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] では XML プログラミング インターフェイスが機能強化されています。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用すると、次のことを実行できます。  
   
--   ファイルまたはストリームからの XML の読み込み  
+- ファイルまたはストリームからの XML の読み込み  
   
--   ファイルまたはストリームへの XML のシリアル化  
+- ファイルまたはストリームへの XML のシリアル化  
   
--   関数型構築を使用した XML の新規作成  
+- 関数型構築を使用した XML の新規作成  
   
--   XPath に類似した軸を使用した XML に対するクエリの実行  
+- XPath に類似した軸を使用した XML に対するクエリの実行  
   
--   <xref:System.Xml.Linq.XContainer.Add%2A>、<xref:System.Xml.Linq.XNode.Remove%2A>、<xref:System.Xml.Linq.XNode.ReplaceWith%2A>、<xref:System.Xml.Linq.XElement.SetValue%2A> などのメソッドを使用した、メモリ内の XML ツリーの操作  
+- <xref:System.Xml.Linq.XContainer.Add%2A>、<xref:System.Xml.Linq.XNode.Remove%2A>、<xref:System.Xml.Linq.XNode.ReplaceWith%2A>、<xref:System.Xml.Linq.XElement.SetValue%2A> などのメソッドを使用した、メモリ内の XML ツリーの操作  
   
--   XSD を使用した XML ツリーの検証  
+- XSD を使用した XML ツリーの検証  
   
--   上記の機能を組み合わせて使用した XML ツリーの構造の変換  
+- 上記の機能を組み合わせて使用した XML ツリーの構造の変換  
   
 ## <a name="creating-xml-trees"></a>XML ツリーの作成  
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] でのプログラミングで最も重要な利点の 1 つは、XML ツリーを簡単に作成できるという点です。 たとえば、小さな XML ツリーを作成することができますコードを記述するには、次のように。  
@@ -85,7 +85,7 @@ Dim contacts = _
   
  Visual Basic コンパイラが XML リテラルに変換[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)]メソッドの呼び出し。  
   
- 詳細については、[XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)を参照してください。  
+ 詳細については、次を参照してください。 [XML ツリーの作成 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/creating-xml-trees.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

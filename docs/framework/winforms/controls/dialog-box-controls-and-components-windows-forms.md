@@ -8,43 +8,36 @@ helpviewer_keywords:
 - Windows Forms, dialog boxes
 ms.assetid: 6e5f5e9e-58d6-45f3-9df0-48b7bb6bfd5c
 ms.openlocfilehash: 9beacc84001aa1a5d505b8563794c49f3287cbc1
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57705793"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972277"
 ---
 # <a name="dialog-box-controls-and-components-windows-forms"></a>ダイアログ ボックス コントロールおよびコンポーネント (Windows フォーム)
 次の Windows フォーム コントロールおよびコンポーネントは、標準のダイアログ ボックスを表示します。 各ダイアログ ボックスで使用できる機能に関する詳細については、リンクに従ってください。  
   
 ## <a name="reference"></a>参照  
  <xref:System.Windows.Forms.ColorDialog>  
- 
-  <xref:System.Windows.Forms.ColorDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
+ <xref:System.Windows.Forms.ColorDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
  <xref:System.Windows.Forms.FontDialog>  
- 
-  <xref:System.Windows.Forms.FontDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
+ <xref:System.Windows.Forms.FontDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
  <xref:System.Windows.Forms.OpenFileDialog>  
- 
-  <xref:System.Windows.Forms.OpenFileDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
+ <xref:System.Windows.Forms.OpenFileDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
  <xref:System.Windows.Forms.PageSetupDialog>  
- 
-  <xref:System.Windows.Forms.PageSetupDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
+ <xref:System.Windows.Forms.PageSetupDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
  <xref:System.Windows.Forms.PrintDialog>  
- 
-  <xref:System.Windows.Forms.PrintDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
+ <xref:System.Windows.Forms.PrintDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
  <xref:System.Windows.Forms.PrintPreviewDialog>  
- 
-  <xref:System.Windows.Forms.PrintPreviewDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
+ <xref:System.Windows.Forms.PrintPreviewDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
  <xref:System.Windows.Forms.SaveFileDialog>  
- 
-  <xref:System.Windows.Forms.SaveFileDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
+ <xref:System.Windows.Forms.SaveFileDialog> クラスとそのメンバーに関するリファレンス情報を提供します。  
   
 ## <a name="related-sections"></a>関連項目  
  [Windows フォームのダイアログ ボックス](../dialog-boxes-in-windows-forms.md)  

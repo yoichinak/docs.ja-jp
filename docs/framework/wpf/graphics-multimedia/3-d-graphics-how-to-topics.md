@@ -8,11 +8,11 @@ helpviewer_keywords:
 - graphics [WPF], 3-D
 ms.assetid: 4f091835-28d1-498c-b660-9b3acf34ed13
 ms.openlocfilehash: 1f78d2f0ff8887ca5cf1cd1129fb946d2224246d
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57353557"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62020284"
 ---
 # <a name="3-d-graphics-how-to-topics"></a>3-D グラフィックスに関する「方法」トピック
 このセクションのトピックでは、使用する方法を示します[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]でグラフィックス[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。  

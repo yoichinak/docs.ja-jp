@@ -13,11 +13,11 @@ helpviewer_keywords:
 - Shape objects [WPF]
 ms.assetid: 66d7a6d6-e3b6-47bc-8dfe-8a1b26f7d901
 ms.openlocfilehash: 1ce0e661d88b7c4d5719c4f11ef0912c5bacb587
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189134"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62008329"
 ---
 # <a name="shapes-and-basic-drawing-in-wpf-overview"></a>WPF での図形と基本描画の概要
 このトピックを使用して描画する方法の概要を示します<xref:System.Windows.Shapes.Shape>オブジェクト。 A<xref:System.Windows.Shapes.Shape>の種類は、<xref:System.Windows.UIElement>画面に図形を描画することができます。 UI 要素であるため<xref:System.Windows.Shapes.Shape>オブジェクトは内で使用できる<xref:System.Windows.Controls.Panel>要素とほとんどのコントロール。  
@@ -28,13 +28,13 @@ ms.locfileid: "59189134"
 ## <a name="shape-objects"></a>図形オブジェクト  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] すぐに使用できるさまざまな<xref:System.Windows.Shapes.Shape>オブジェクト。  すべての図形オブジェクトの継承、<xref:System.Windows.Shapes.Shape>クラス。 使用可能な図形オブジェクトには、 <xref:System.Windows.Shapes.Ellipse>、 <xref:System.Windows.Shapes.Line>、 <xref:System.Windows.Shapes.Path>、 <xref:System.Windows.Shapes.Polygon>、 <xref:System.Windows.Shapes.Polyline>、および<xref:System.Windows.Shapes.Rectangle>します。 <xref:System.Windows.Shapes.Shape> オブジェクトは、次の一般的なプロパティを共有します。  
   
--   <xref:System.Windows.Shapes.Shape.Stroke%2A>:図形のアウトラインを描画する方法について説明します。  
+- <xref:System.Windows.Shapes.Shape.Stroke%2A>:図形のアウトラインを描画する方法について説明します。  
   
--   <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>:図形のアウトラインの太さについて説明します。  
+- <xref:System.Windows.Shapes.Shape.StrokeThickness%2A>:図形のアウトラインの太さについて説明します。  
   
--   <xref:System.Windows.Shapes.Shape.Fill%2A>:図形の内部を描画する方法について説明します。  
+- <xref:System.Windows.Shapes.Shape.Fill%2A>:図形の内部を描画する方法について説明します。  
   
--   デバイス非依存ピクセル単位で計測される座標と頂点を指定するデータ プロパティ。  
+- デバイス非依存ピクセル単位で計測される座標と頂点を指定するデータ プロパティ。  
   
  派生するため<xref:System.Windows.UIElement>、図形オブジェクトは、パネルおよびほとんどのコントロール内で使用できます。 <xref:System.Windows.Controls.Canvas>パネルはその子オブジェクトの絶対配置をサポートするため、複雑な描画の作成に特に適しています。  
   
@@ -146,7 +146,7 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  ![SolidColorBrush の図](./media/shape-ovw-solidcolorbrush.PNG "shape_ovw_solidcolorbrush")  
   
- 図形のストロークを描いたり、グラデーション、イメージ、パターンなどで塗りつぶすこともできます。 詳細については、「[純色およびグラデーションによる塗りつぶしの概要](painting-with-solid-colors-and-gradients-overview.md)」を参照してください。
+ 図形のストロークまたは塗りつぶしをグラデーション、イメージ、パターンなどで塗りつぶすこともできます。 詳細については、次を参照してください。、[純色およびグラデーション概要](painting-with-solid-colors-and-gradients-overview.md)します。  
   
 <a name="stretchableshapessection"></a>   
 ## <a name="stretchable-shapes"></a>伸縮可能な図形  
@@ -154,13 +154,13 @@ Data="M 100,200 C 100,25 400,350 400,175 H 280" />
   
  プロパティには、次のいずれかの値を指定します。  
   
--   <xref:System.Windows.Media.Stretch.None>:<xref:System.Windows.Shapes.Shape>オブジェクトのコンテンツは引き伸ばされません。  
+- <xref:System.Windows.Media.Stretch.None>:<xref:System.Windows.Shapes.Shape>オブジェクトのコンテンツは引き伸ばされません。  
   
--   <xref:System.Windows.Media.Stretch.Fill>:<xref:System.Windows.Shapes.Shape>レイアウト空間を入力するオブジェクトのコンテンツは引き伸ばされます。  縦横比は維持されません。  
+- <xref:System.Windows.Media.Stretch.Fill>:<xref:System.Windows.Shapes.Shape>レイアウト空間を入力するオブジェクトのコンテンツは引き伸ばされます。  縦横比は維持されません。  
   
--   <xref:System.Windows.Media.Stretch.Uniform>:<xref:System.Windows.Shapes.Shape>オブジェクトのコンテンツは元の縦横比を維持しながら、レイアウト空間を入力する可能な限り引き伸ばされます。  
+- <xref:System.Windows.Media.Stretch.Uniform>:<xref:System.Windows.Shapes.Shape>オブジェクトのコンテンツは元の縦横比を維持しながら、レイアウト空間を入力する可能な限り引き伸ばされます。  
   
--   <xref:System.Windows.Media.Stretch.UniformToFill>:<xref:System.Windows.Shapes.Shape>オブジェクトの内容は、元の縦横比を維持しながら、レイアウト空間を完全に埋めるに引き伸ばされます。  
+- <xref:System.Windows.Media.Stretch.UniformToFill>:<xref:System.Windows.Shapes.Shape>オブジェクトの内容は、元の縦横比を維持しながら、レイアウト空間を完全に埋めるに引き伸ばされます。  
   
  なお、ときに、<xref:System.Windows.Shapes.Shape>オブジェクトのコンテンツを引き伸ばす、<xref:System.Windows.Shapes.Shape>拡大した後はオブジェクトのアウトラインを描画します。  
   

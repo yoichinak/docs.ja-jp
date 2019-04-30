@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: b4eeecc22db5786f66b3d484b521989e71817d8e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59185043"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995120"
 ---
 # <a name="icordebugmanagedcallback2changeconnection-method"></a>ICorDebugManagedCallback2::ChangeConnection メソッド
 指定された接続に関連付けられているタスクのセットが変更されたことをデバッガーに通知します。  
@@ -46,9 +46,9 @@ HRESULT ChangeConnection (
 ## <a name="remarks"></a>Remarks  
  A`ChangeConnection`コールバックは、次の場合のいずれかで発生します。  
   
--   ときに、デバッガーは、接続を含むプロセスにアタッチされます。 ランタイムの生成し、ディスパッチここを[icordebugmanagedcallback 2::createconnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md)イベントと`ChangeConnection`プロセス内の各接続のイベント。 A`ChangeConnection`その接続の一連のタスクが作成されてから変更されたかどうかに関係なく、すべての既存の接続のイベントが生成されます。  
+- ときに、デバッガーは、接続を含むプロセスにアタッチされます。 ランタイムの生成し、ディスパッチここを[icordebugmanagedcallback 2::createconnection](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-createconnection-method.md)イベントと`ChangeConnection`プロセス内の各接続のイベント。 A`ChangeConnection`その接続の一連のタスクが作成されてから変更されたかどうかに関係なく、すべての既存の接続のイベントが生成されます。  
   
--   ホストが呼び出したときに[iclrdebugmanager::setconnectiontasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)で、[ホスト API](../../../../docs/framework/unmanaged-api/hosting/index.md)します。  
+- ホストが呼び出したときに[iclrdebugmanager::setconnectiontasks](../../../../docs/framework/unmanaged-api/hosting/iclrdebugmanager-setconnectiontasks-method.md)で、[ホスト API](../../../../docs/framework/unmanaged-api/hosting/index.md)します。  
   
  デバッガーでは、新しい変更を取得するプロセスのすべてのスレッドをスキャンする必要があります。  
   

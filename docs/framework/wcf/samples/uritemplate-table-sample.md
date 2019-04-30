@@ -3,22 +3,22 @@ title: UriTemplate テーブル サンプル
 ms.date: 03/30/2017
 ms.assetid: 5dd1d38f-1989-4c64-820d-821f5a02216a
 ms.openlocfilehash: 4543d4676344d10c3e380c3522a7ca5a6a8d6294
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59293960"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62006448"
 ---
 # <a name="uritemplate-table-sample"></a>UriTemplate テーブル サンプル
 <xref:System.UriTemplateTable> クラスには、`UriTemplate` インスタンスのセットを使用するための、ディクショナリに似た結合テーブル構造が用意されています。 特定の URI (Uniform Resource Identifier) をテーブル内のすべてのテンプレートと効率よく照合でき、照合されたテンプレートに関連付けられたデータを取得できます。  
   
  このサンプルでは、次の `UriTemplateTable` クラスに関連する重要な概念を示します。  
   
--   `UriTemplateTable` をインスタンス化する構文  
+- `UriTemplateTable` をインスタンス化する構文  
   
--   `UriTemplateTable` へのキー/値ペアのセットの追加  
+- `UriTemplateTable` へのキー/値ペアのセットの追加  
   
--   <xref:System.UriTemplateTable.MatchSingle%2A> を使用した候補 URI とテーブルの照合  
+- <xref:System.UriTemplateTable.MatchSingle%2A> を使用した候補 URI とテーブルの照合  
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   

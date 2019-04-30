@@ -3,11 +3,11 @@ title: NativeActivity の基本クラス
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
 ms.openlocfilehash: f718d247e7110b46cdd13038c7c93c1e45612c75
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296590"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009982"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity の基本クラス
 
@@ -16,21 +16,21 @@ ms.locfileid: "59296590"
 ## <a name="using-nativeactivitycontext"></a>NativeActivityContext の使用
  ワークフロー ランタイムの機能は、<xref:System.Activities.NativeActivity.Execute%2A> 型の `context` パラメーターを使用して、<xref:System.Activities.NativeActivityContext> メソッド内からアクセスできます。 <xref:System.Activities.NativeActivityContext> を介して、以下のような機能を使用できます。
 
--   引数と変数を取得および設定する。
+- 引数と変数を取得および設定する。
 
--   <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> を使用して子のアクティビティのスケジュールを設定する。
+- <xref:System.Activities.NativeActivityContext.ScheduleActivity%2A> を使用して子のアクティビティのスケジュールを設定する。
 
--   <xref:System.Activities.NativeActivityContext.Abort%2A> を使用してアクティビティの実行を中止する。
+- <xref:System.Activities.NativeActivityContext.Abort%2A> を使用してアクティビティの実行を中止する。
 
--   <xref:System.Activities.NativeActivityContext.CancelChild%2A> および <xref:System.Activities.NativeActivityContext.CancelChildren%2A> を使用して子の実行を取り消す。
+- <xref:System.Activities.NativeActivityContext.CancelChild%2A> および <xref:System.Activities.NativeActivityContext.CancelChildren%2A> を使用して子の実行を取り消す。
 
--   <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>、<xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>、および <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A> などのメソッドを使用して、アクティビティのブックマークにアクセスする。
+- <xref:System.Activities.NativeActivityContext.CreateBookmark%2A>、<xref:System.Activities.NativeActivityContext.RemoveBookmark%2A>、および <xref:System.Activities.NativeActivityContext.ResumeBookmark%2A> などのメソッドを使用して、アクティビティのブックマークにアクセスする。
 
--   <xref:System.Activities.CodeActivityContext.Track%2A> を使用したカスタムの追跡機能。
+- <xref:System.Activities.CodeActivityContext.Track%2A> を使用したカスタムの追跡機能。
 
--   <xref:System.Activities.CodeActivityContext.GetProperty%2A> および <xref:System.Activities.NativeActivityContext.GetValue%2A> を使用して、アクティビティの実行プロパティと値プロパティにアクセスする。
+- <xref:System.Activities.CodeActivityContext.GetProperty%2A> および <xref:System.Activities.NativeActivityContext.GetValue%2A> を使用して、アクティビティの実行プロパティと値プロパティにアクセスする。
 
--   <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> および <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A> を使用してアクティビティのアクションと機能のスケジュールを設定する。
+- <xref:System.Activities.NativeActivityContext.ScheduleAction%2A> および <xref:System.Activities.NativeActivityContext.ScheduleFunc%2A> を使用してアクティビティのアクションと機能のスケジュールを設定する。
 
 ### <a name="to-create-a-custom-activity-that-inherits-from-nativeactivity"></a>NativeActivity から継承するカスタム アクティビティを作成するには
 

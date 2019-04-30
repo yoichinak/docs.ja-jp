@@ -6,11 +6,11 @@ helpviewer_keywords:
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
 ms.openlocfilehash: 575598f48b3cfdf636be78a9de6e0c9a7fd9c208
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59079826"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032020"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF の双方向機能の概要
 その他の開発プラットフォームとは異なり[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]双方向コンテンツの迅速な開発をサポートする多くの機能、たとえば、データを同じドキュメント内まま混合の左から右、および右にします。 同時に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]双方向機能のアラビア語やヘブライ語を話すユーザーなどを必要とするユーザー用の優れたエクスペリエンスを作成します。  
@@ -166,11 +166,11 @@ ms.locfileid: "59079826"
   
  このプロパティは、数字のカルチャを決定する方法を指定します。 3 つの時間を要する<xref:System.Windows.Media.NumberCultureSource>列挙値。  
   
--   オーバーライドします。数字カルチャの<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>プロパティ。  
+- オーバーライドします。数字カルチャの<xref:System.Windows.Media.NumberSubstitution.CultureOverride%2A>プロパティ。  
   
--   テキスト:数字カルチャは、テキスト ランのカルチャです。 マークアップで`xml:lang`、またはそのエイリアス`Language`プロパティ (<xref:System.Windows.FrameworkElement.Language%2A>または<xref:System.Windows.FrameworkContentElement.Language%2A>)。 派生したクラスの既定値はまた、<xref:System.Windows.FrameworkContentElement>します。 このようなクラスを含める<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>、 <xref:System.Windows.Documents.Table?displayProperty=nameWithType>、<xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>など。  
+- テキスト:数字カルチャは、テキスト ランのカルチャです。 マークアップで`xml:lang`、またはそのエイリアス`Language`プロパティ (<xref:System.Windows.FrameworkElement.Language%2A>または<xref:System.Windows.FrameworkContentElement.Language%2A>)。 派生したクラスの既定値はまた、<xref:System.Windows.FrameworkContentElement>します。 このようなクラスを含める<xref:System.Windows.Documents.Paragraph?displayProperty=nameWithType>、 <xref:System.Windows.Documents.Table?displayProperty=nameWithType>、<xref:System.Windows.Documents.TableCell?displayProperty=nameWithType>など。  
   
--   ユーザー:数字カルチャは、現在のスレッドのカルチャです。 このプロパティのすべてのサブクラスの既定値は、<xref:System.Windows.FrameworkElement>など<xref:System.Windows.Controls.Page>、<xref:System.Windows.Window>と<xref:System.Windows.Controls.TextBlock>します。  
+- ユーザー:数字カルチャは、現在のスレッドのカルチャです。 このプロパティのすべてのサブクラスの既定値は、<xref:System.Windows.FrameworkElement>など<xref:System.Windows.Controls.Page>、<xref:System.Windows.Window>と<xref:System.Windows.Controls.TextBlock>します。  
   
  **CultureOverride**:  
   
@@ -180,15 +180,15 @@ ms.locfileid: "59079826"
   
  このプロパティは、実行する数字の置換の種類を指定します。 次のいずれかになります<xref:System.Windows.Media.NumberSubstitutionMethod>列挙値。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>:数字カルチャのに基づいて置換方法を決定<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>プロパティ。 既定値です。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.AsCulture>:数字カルチャのに基づいて置換方法を決定<xref:System.Globalization.NumberFormatInfo.DigitSubstitution%2A?displayProperty=nameWithType>プロパティ。 既定値です。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Context>:数字カルチャがアラビアまたはペルシャのカルチャの場合は、数字がコンテキストに依存するを指定します。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Context>:数字カルチャがアラビアまたはペルシャのカルチャの場合は、数字がコンテキストに依存するを指定します。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.European>:数値は常に、ヨーロッパ数字としてレンダリングされます。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.European>:数値は常に、ヨーロッパ数字としてレンダリングされます。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>:数字を表示する国の数字を使用して、カルチャの規定に従い、数字カルチャの<xref:System.Globalization.CultureInfo.NumberFormat%2A>します。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>:数字を表示する国の数字を使用して、カルチャの規定に従い、数字カルチャの<xref:System.Globalization.CultureInfo.NumberFormat%2A>します。  
   
--   <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>:数字を表示するには、数字カルチャの通常の数字を使用します。 ほとんどのカルチャでは、これと同じ<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>します。 ただし、<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>この値が結果のすべてのアラビア カルチャでアラビア数字が一部のアラビア カルチャでラテンの数字になります。  
+- <xref:System.Windows.Media.NumberSubstitutionMethod.Traditional>:数字を表示するには、数字カルチャの通常の数字を使用します。 ほとんどのカルチャでは、これと同じ<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>します。 ただし、<xref:System.Windows.Media.NumberSubstitutionMethod.NativeNational>この値が結果のすべてのアラビア カルチャでアラビア数字が一部のアラビア カルチャでラテンの数字になります。  
   
  これらの値は双方向コンテンツ開発者にとってどういった意味があるのでしょうか。 ほとんどの場合、開発者が定義にのみ必要があります<xref:System.Windows.FlowDirection>と各テキストの言語[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要素、たとえば`Language="ar-SA"`と<xref:System.Windows.Media.NumberSubstitution>ロジックに従って、正しい番号を表示する処理[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]。 次の例で、アラビア語および英語の番号を使用して、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]のアラビア語版で実行されるアプリケーション[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)]します。  
   

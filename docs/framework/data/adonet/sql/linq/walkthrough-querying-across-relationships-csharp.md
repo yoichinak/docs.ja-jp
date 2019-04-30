@@ -3,11 +3,11 @@ title: 'チュートリアル: リレーションシップを介したクエリ�
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
 ms.openlocfilehash: 6bd3255b49676b61a99f8416ab71c217d342e799
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325372"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033398"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>チュートリアル: リレーションシップを介したクエリの実行 (C#)
 このチュートリアルの使用を示します[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*アソシエーション*をデータベース内の外部キー リレーションシップを表します。  
@@ -22,18 +22,18 @@ ms.locfileid: "59325372"
 ## <a name="overview"></a>概要  
  このチュートリアルは、主に次の 3 つの手順で構成されています。  
   
--   エンティティ クラスを追加して、Northwind サンプル データベース内の Orders テーブルを表します。  
+- エンティティ クラスを追加して、Northwind サンプル データベース内の Orders テーブルを表します。  
   
--   `Customer` クラスに注釈を付けて、`Customer` クラスと `Order` クラス間のリレーションシップを強化します。  
+- `Customer` クラスに注釈を付けて、`Customer` クラスと `Order` クラス間のリレーションシップを強化します。  
   
--   クエリを作成および実行して、`Order` クラスによる `Customer` 情報の取得をテストします。  
+- クエリを作成および実行して、`Order` クラスによる `Customer` 情報の取得をテストします。  
   
 ## <a name="mapping-relationships-across-tables"></a>テーブル間のリレーションシップを指定する  
  `Customer` クラス定義の後に、次のコードから成る `Order` エンティティ クラス定義を作成します。これは、`Order.Customer` が外部キーとして `Customer.CustomerID` に関係することを示しています。  
   
 #### <a name="to-add-the-order-entity-class"></a>Order エンティティ クラスを追加するには  
   
--   `Customer` クラスの後に次のコードを入力または貼り付けます。  
+- `Customer` クラスの後に次のコードを入力または貼り付けます。  
   
      [!code-csharp[DLinqWalk2CS#1](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#1)]  
   
@@ -42,7 +42,7 @@ ms.locfileid: "59325372"
   
 #### <a name="to-annotate-the-customer-class"></a>Customer クラスに注釈を付けるには  
   
--   `Customer` クラスに次のコードを入力または貼り付けます。  
+- `Customer` クラスに次のコードを入力または貼り付けます。  
   
      [!code-csharp[DLinqWalk2CS#2](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqWalk2CS/cs/Program.cs#2)]  
   

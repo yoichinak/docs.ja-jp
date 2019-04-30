@@ -3,11 +3,11 @@ title: SOAP エンドポイントおよび HTTP エンドポイント
 ms.date: 03/30/2017
 ms.assetid: e3c8be75-9dda-4afa-89b6-a82cb3b73cf8
 ms.openlocfilehash: 07f0c5a5a66683cf636595824b2ccaeaf1ab6a63
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59768918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007815"
 ---
 # <a name="soap-and-http-endpoints"></a>SOAP エンドポイントおよび HTTP エンドポイント
 このサンプルでは、RPC ベースのサービスを実装して、SOAP 形式と WCF Web プログラミング モデルを使用して"Plain Old XML"(POX) 形式で公開する方法を示します。 参照してください、[基本 HTTP サービス](../../../../docs/framework/wcf/samples/basic-http-service.md)サービス用の HTTP バインドの詳細についてはサンプルです。 このサンプルでは、さまざまなバインドを使用して SOAP および HTTP で RPC ベースのサービスを公開する方法について詳しく示します。  
@@ -22,11 +22,11 @@ ms.locfileid: "59768918"
   
  Web.config ファイルでは、3 つのエンドポイントを持つ WCF サービスを構成します。  
   
--   SOAP ベースのクライアントからアクセスするためのサービス メタデータを公開する ~/service.svc/mex エンドポイント  
+- SOAP ベースのクライアントからアクセスするためのサービス メタデータを公開する ~/service.svc/mex エンドポイント  
   
--   クライアントが HTTP バインディングを使用してサービスにアクセスできる ~/service.svc/http エンドポイント  
+- クライアントが HTTP バインディングを使用してサービスにアクセスできる ~/service.svc/http エンドポイント  
   
--   クライアントが HTTP バインディングで SOAP を使用してサービスにアクセスできる ~/service.svc/soap endpoint エンドポイント  
+- クライアントが HTTP バインディングで SOAP を使用してサービスにアクセスできる ~/service.svc/soap endpoint エンドポイント  
   
  HTTP エンドポイントが構成されている、<`webHttp`> 標準エンドポイントを持つ`helpEnabled`に設定`true`します。 その結果、サービスは、HTTP ベースのクライアントがサービスにアクセスするために使用できる、XHTML ベースのヘルプ ページ (~/service.svc/http/help) を公開します。  
   

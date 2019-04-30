@@ -3,11 +3,11 @@ title: OperationContext へのアクセス
 ms.date: 03/30/2017
 ms.assetid: 4e92efe8-7e79-41f3-b50e-bdc38b9f41f8
 ms.openlocfilehash: c104ceb22117d7cc53050a6513a4aea58fdff8c1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59772883"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005603"
 ---
 # <a name="accessing-operationcontext"></a>OperationContext へのアクセス
 このサンプルでは、メッセージング アクティビティ (<xref:System.ServiceModel.Activities.Receive>と<xref:System.ServiceModel.Activities.Send>) にアクセスする、カスタムのスコープ アクティビティと共に使用できます<xref:System.ServiceModel.OperationContext.Current%2A>アタッチし、または、送信または受信メッセージ内のカスタム メッセージ ヘッダーを取得します。  
@@ -28,13 +28,13 @@ ms.locfileid: "59772883"
   
 2. URL ACL を追加したら、次の手順を実行します。  
   
-    1.  ソリューションをビルドします。  
+    1. ソリューションをビルドします。  
   
-    2.  複数のスタートアップ プロジェクトを設定するには、ソリューションを右クリックし、選択**スタートアップ プロジェクトの設定**します。  
+    2. 複数のスタートアップ プロジェクトを設定するには、ソリューションを右クリックし、選択**スタートアップ プロジェクトの設定**します。  
   
-    3.  追加**サービス**と**クライアント**(順序) で複数のスタートアップ プロジェクトとして。  
+    3. 追加**サービス**と**クライアント**(順序) で複数のスタートアップ プロジェクトとして。  
   
-    4.  アプリケーションを実行します。 クライアント コンソールに実行中のワークフローが 2 回示され、[サービス] ウィンドウにこれらのワークフローのインスタンス ID が示されます。  
+    4. アプリケーションを実行します。 クライアント コンソールに実行中のワークフローが 2 回示され、[サービス] ウィンドウにこれらのワークフローのインスタンス ID が示されます。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  

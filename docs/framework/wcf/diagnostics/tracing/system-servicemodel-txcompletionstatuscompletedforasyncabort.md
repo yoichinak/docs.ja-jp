@@ -3,11 +3,11 @@ title: System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 ms.date: 03/30/2017
 ms.assetid: 155c3203-2e17-4709-b896-2254e22da45e
 ms.openlocfilehash: f84cc9336d6cce7d8c477a1feb6caf45b0662177
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59188475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996932"
 ---
 # <a name="systemservicemodeltxcompletionstatuscompletedforasyncabort"></a>System.ServiceModel.TxCompletionStatusCompletedForAsyncAbort
 非同期中止が実行されたため、指定された操作の指定のトランザクションは完了されました。  

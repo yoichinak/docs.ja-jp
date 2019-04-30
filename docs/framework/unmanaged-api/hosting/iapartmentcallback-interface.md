@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: db933716cc0602ecda5da8a72726408ae4910179
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59129806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985512"
 ---
 # <a name="iapartmentcallback-interface"></a>IApartmentCallback インターフェイス
 アパートメント内でのコールバックを行うためのメソッドを提供します。 *アパートメント*は同じスレッドへのアクセス要件を共有するオブジェクトのプロセス内の論理コンテナーです。  

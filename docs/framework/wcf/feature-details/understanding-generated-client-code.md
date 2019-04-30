@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: c3f6e4b0-1131-4c94-aa39-a197c5c2f2ca
 ms.openlocfilehash: 226b77d1c638ec4f8505140332ad35d4029ef0b0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59189160"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050689"
 ---
 # <a name="understanding-generated-client-code"></a>生成されたクライアント コードの理解
 [ServiceModel Metadata Utility Tool (Svcutil.exe)](../../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md) は、クライアント アプリケーションの構築時に使用するクライアント コードとクライアント アプリケーション構成ファイルを生成します。 このトピックでは、標準サービス コントラクトのシナリオ向けに生成されたコード例について説明します。 生成されたコードを使用してクライアント アプリケーションの構築の詳細については、次を参照してください。 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)します。  
@@ -20,15 +20,15 @@ ms.locfileid: "59189160"
   
  Svcutil.exe には、生成された型情報を変更する多くのオプションがあるため、ここですべてのシナリオを説明することはできません。 ここでは、生成されたコードの検索に関する標準的な作業の例を紹介します。  
   
--   サービス コントラクト インターフェイスの識別  
+- サービス コントラクト インターフェイスの識別  
   
--   WCF クライアント クラスを識別します。  
+- WCF クライアント クラスを識別します。  
   
--   データ型の識別  
+- データ型の識別  
   
--   双方向サービスのコールバック コントラクトの識別  
+- 双方向サービスのコールバック コントラクトの識別  
   
--   ヘルパーのサービス コントラクトのチャネル インターフェイスの識別  
+- ヘルパーのサービス コントラクトのチャネル インターフェイスの識別  
   
 ### <a name="finding-service-contract-interfaces"></a>サービス コントラクト インターフェイスの検索  
  サービス コントラクトをモデル化するインターフェイスを検索するには、<xref:System.ServiceModel.ServiceContractAttribute?displayProperty=nameWithType> 属性でマークされたインターフェイスを検索します。 多くの場合、属性自体に設定された他の属性や明示的なプロパティが存在するため、この属性をすばやく読み取って見つけることは簡単ではありません。 サービス コントラクト インターフェイスとクライアント コントラクト インターフェイスは 2 つの別の種類だという点に注意してください。 次のコード例は、元のサービス コントラクトを示しています。  

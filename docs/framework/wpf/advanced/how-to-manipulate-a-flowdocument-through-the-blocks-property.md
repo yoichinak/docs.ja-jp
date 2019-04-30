@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ', '
 ms.assetid: cbb7291e-3f1b-433e-9e16-f4d93ced14e8
 ms.openlocfilehash: c307d85bf24e2d8a20226856181e0758758d40c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59130885"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051508"
 ---
 # <a name="how-to-manipulate-a-flowdocument-through-the-blocks-property"></a>方法: Blocks プロパティを介して FlowDocument を操作する
 これらの例で実行できる一般的な操作の一部を<xref:System.Windows.Documents.FlowDocument>を通じて、<xref:System.Windows.Documents.FlowDocument.Blocks%2A>プロパティ。  

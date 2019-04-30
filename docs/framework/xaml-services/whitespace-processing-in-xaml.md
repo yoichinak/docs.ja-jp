@@ -8,11 +8,11 @@ helpviewer_keywords:
 - characters [XAML Services], East Asian
 ms.assetid: cc9cc377-7544-4fd0-b65b-117b90bb0b23
 ms.openlocfilehash: dadfab948aff73714a2cf253100f89de3b4a2d57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294926"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025445"
 ---
 # <a name="white-space-processing-in-xaml"></a>XAML での空白の処理
 XAML の言語規則の状態によってその有意の空白を処理する必要があります、[!INCLUDE[TLA2#tla_xaml](../../../includes/tla2sharptla-xaml-md.md)]プロセッサの実装。 ここでは、それらの XAML 言語規則について説明します。 定義されている追加の空白文字の処理が文書化も、 [!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)] XAML プロセッサとシリアル化のための XAML ライターの実装。  
@@ -41,13 +41,13 @@ XAML の言語規則の状態によってその有意の空白を処理する必
 ## <a name="white-space-in-inner-text-and-string-primitives"></a>内部のテキスト、および文字列プリミティブ内の空白  
  前の正規化規則は、XAML 要素内で検出された内部テキストに適用されます。 正規化の後、XAML プロセッサは、次のようにして、すべての内部テキストを適切な型に変換します。  
   
--   プロパティの型がコレクションでなく、直接的に <xref:System.Object> 型でもない場合、XAML プロセッサはその型の型コンバーターを使用して、その型への変換を試みます。 その際、変換に失敗すると、コンパイル時のエラーが発生します。  
+- プロパティの型がコレクションでなく、直接的に <xref:System.Object> 型でもない場合、XAML プロセッサはその型の型コンバーターを使用して、その型への変換を試みます。 その際、変換に失敗すると、コンパイル時のエラーが発生します。  
   
--   プロパティの型がコレクションで、内部テキストが連続している (間に要素タグがない) 場合、その内部テキストは単一の <xref:System.String>として解析されます。 そのコレクション型が <xref:System.String>を受け入れない場合にも、コンパイル時のエラーが発生します。  
+- プロパティの型がコレクションで、内部テキストが連続している (間に要素タグがない) 場合、その内部テキストは単一の <xref:System.String>として解析されます。 そのコレクション型が <xref:System.String>を受け入れない場合にも、コンパイル時のエラーが発生します。  
   
--   プロパティの型が <xref:System.Object>である場合、その内部テキストは単一の <xref:System.String>として解析されます。 その内部テキストの中に要素タグが含まれている場合には、コンパイル時のエラーが発生します。これは、 <xref:System.Object> 型は単一のオブジェクト (<xref:System.String> またはそれ以外) であることを意味しているためです。  
+- プロパティの型が <xref:System.Object>である場合、その内部テキストは単一の <xref:System.String>として解析されます。 その内部テキストの中に要素タグが含まれている場合には、コンパイル時のエラーが発生します。これは、 <xref:System.Object> 型は単一のオブジェクト (<xref:System.String> またはそれ以外) であることを意味しているためです。  
   
--   プロパティの型がコレクションであり、内部テキストが連続していないことがあります。この場合、最初の部分文字列は <xref:System.String> に変換されてコレクション項目として追加されます。中間にある要素はコレクション項目として追加され、この要素の後に続く部分文字列 (存在する場合) は 3 番目の <xref:System.String> 項目としてコレクションに追加されます。  
+- プロパティの型がコレクションであり、内部テキストが連続していないことがあります。この場合、最初の部分文字列は <xref:System.String> に変換されてコレクション項目として追加されます。中間にある要素はコレクション項目として追加され、この要素の後に続く部分文字列 (存在する場合) は 3 番目の <xref:System.String> 項目としてコレクションに追加されます。  
   
 <a name="preserving_whitespace"></a>   
 ## <a name="preserving-white-space"></a>空白を維持  

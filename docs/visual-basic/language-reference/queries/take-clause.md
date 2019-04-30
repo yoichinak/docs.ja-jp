@@ -9,11 +9,11 @@ helpviewer_keywords:
 - Take clause [Visual Basic]
 ms.assetid: 77bf87b2-1476-4456-957f-fee922fbad8c
 ms.openlocfilehash: cb109eaf43fee19b77ac690492b85919c9d78301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58816955"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054394"
 ---
 # <a name="take-clause-visual-basic"></a>Take 句 (Visual Basic)
 コレクションの先頭から、指定された数の連続する要素を返します。  

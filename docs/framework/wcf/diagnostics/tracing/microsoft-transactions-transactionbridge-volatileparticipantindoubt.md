@@ -3,11 +3,11 @@ title: Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 ms.date: 03/30/2017
 ms.assetid: 3e8fc825-9f22-47e7-9c16-d64ef291c932
 ms.openlocfilehash: 9434f2f902a50a37fb3efee22fd3b18b33af9129
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59138971"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997453"
 ---
 # <a name="microsofttransactionstransactionbridgevolatileparticipantindoubt"></a>Microsoft.Transactions.TransactionBridge.VolatileParticipantInDoubt
 WS-AT プロトコル サービスは、認識されない不安定な参加要素からの準備メッセージまたはリプレイ メッセージを受信しました。 参加要素にエラーが返されました。この結果、トランザクションの結果が不明であると宣言します。  

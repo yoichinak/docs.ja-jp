@@ -8,11 +8,11 @@ helpviewer_keywords:
 - fill [WPF], controlling
 ms.assetid: c1c94575-9eca-48a5-a49a-2ec65259f229
 ms.openlocfilehash: 0ba07d8979a2910ce4ec775493e38c714240f642
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427475"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61997171"
 ---
 # <a name="how-to-control-the-fill-of-a-composite-shape"></a>方法: 複合図形の塗りつぶしを制御する
 <xref:System.Windows.Media.GeometryGroup.FillRule%2A>のプロパティを<xref:System.Windows.Media.GeometryGroup>または<xref:System.Windows.Media.PathGeometry>、複合図形を使用して、指定された点がジオメトリの一部であるかどうかを確認する「規則」を指定します。 2 つの値がある<xref:System.Windows.Media.FillRule>:<xref:System.Windows.Media.FillRule.EvenOdd>と<xref:System.Windows.Media.FillRule.Nonzero>します。 以下のセクションでは、これら 2 つの規則の使用方法を説明します。  

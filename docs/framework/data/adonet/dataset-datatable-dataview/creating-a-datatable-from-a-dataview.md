@@ -6,18 +6,18 @@ dev_langs:
 - vb
 ms.assetid: 2d45cf41-d8ae-4409-af3e-a96a7e476d85
 ms.openlocfilehash: 784072ecd133333dec13509d0ac10c69b2161cf8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080918"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034399"
 ---
 # <a name="creating-a-datatable-from-a-dataview"></a>DataView からの DataTable の作成
 データ ソースからデータを取得し、<xref:System.Data.DataTable> にデータを格納した後、再度データを取得せずに、返されたデータの並べ替え、フィルター処理、または制限の適用を行うことが必要になる場合があります。 これを行うには、<xref:System.Data.DataView> クラスを使用します。 さらに、新たに作成する必要がある場合<xref:System.Data.DataTable>から、 <xref:System.Data.DataView>、使用することができます、<xref:System.Data.DataView.ToTable%2A>メソッドは、新しいすべての行および列、またはデータのサブセットをコピーする<xref:System.Data.DataTable>します。 <xref:System.Data.DataView.ToTable%2A> メソッドには、次の操作を行うためのオーバーロード機能があります。  
   
--   <xref:System.Data.DataTable> 内の列のサブセットである列を含む <xref:System.Data.DataView> の作成  
+- <xref:System.Data.DataTable> 内の列のサブセットである列を含む <xref:System.Data.DataView> の作成  
   
--   作成、<xref:System.Data.DataTable>異なる行のみを含む、 <xref:System.Data.DataView>TRANSACT-SQL の DISTINCT キーワードと同様にします。  
+- 作成、<xref:System.Data.DataTable>異なる行のみを含む、 <xref:System.Data.DataView>TRANSACT-SQL の DISTINCT キーワードと同様にします。  
   
 ## <a name="example"></a>例  
  次のコンソール アプリケーションの例を作成、<xref:System.Data.DataTable>からデータを格納している、 **Person.Contact**テーブルに、 **AdventureWorks**サンプル データベース。 次に、例では、作成、並べ替え、フィルター<xref:System.Data.DataView>に基づいて、<xref:System.Data.DataTable>します。 内容を表示した後、<xref:System.Data.DataTable>と<xref:System.Data.DataView>、例は、作成、新しい<xref:System.Data.DataTable>から、<xref:System.Data.DataView>呼び出すことによって、<xref:System.Data.DataView.ToTable%2A>メソッドを使用できる列のサブセットのみを選択します。 最後に、新しい <xref:System.Data.DataTable> の内容が表示されます。  

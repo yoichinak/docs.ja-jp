@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 7c71b2b6d6f102d19d30d480ee9bafcac3c204be
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611082"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62049298"
 ---
 # <a name="initialize-function"></a>Initialize 関数
 

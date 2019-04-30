@@ -3,11 +3,11 @@ title: EXCEPT (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 69cc23e5-3f8f-4b49-b20e-2f84ff11c80d
 ms.openlocfilehash: 32b5148e43a38e5cf8dcce0ae16260d7a6b6a018
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341219"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034217"
 ---
 # <a name="except-entity-sql"></a>EXCEPT (Entity SQL)
 EXCEPT オペランドの左辺のクエリ式から返される結果のうち、右辺のクエリ式でも返される結果を除いた、重複しない値のコレクションを返します。 すべての式は、 `expression`と同じ型であるか、共通の基本型または派生型である必要があります。  

@@ -11,11 +11,11 @@ api_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: e1711def5e2aa41fd63912361ef8250ad160fb88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59227757"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61991992"
 ---
 # <a name="icorprofilercallback9-interface"></a>ICorProfilerCallback9 インターフェイス
 [.NET Framework 4.7.2 以降のバージョンでサポートされます]  

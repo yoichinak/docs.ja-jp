@@ -10,11 +10,11 @@ helpviewer_keywords:
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
 ms.openlocfilehash: fbe2aa724274022446498a89618f37787f0fa8bd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333575"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62013375"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>方法: デザイナーを使って Windows フォーム DataGrid コントロールの書式を設定する
 
@@ -25,11 +25,11 @@ ms.locfileid: "59333575"
   
  書式設定の 3 つの基本的な機能がある、<xref:System.Windows.Forms.DataGrid>コントロール。  
   
--   データを表示する既定のスタイルを確立するためにプロパティを設定することができます。  
+- データを表示する既定のスタイルを確立するためにプロパティを設定することができます。  
   
--   そのベースから、実行時に特定のテーブルの表示方法をカスタマイズできます。  
+- そのベースから、実行時に特定のテーブルの表示方法をカスタマイズできます。  
   
--   最後に、色と同様に、データ グリッドで表示する列を変更することができ、その他の書式を示します。  
+- 最後に、色と同様に、データ グリッドで表示する列を変更することができ、その他の書式を示します。  
   
  データ グリッドの書式設定に最初のステップとしてのプロパティを設定することができます、<xref:System.Windows.Forms.DataGrid>自体。 これらの色と書式の選択を加えることができますし、データ テーブルと表示される列によって、ベースを形成します。  
   

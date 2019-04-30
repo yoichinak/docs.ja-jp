@@ -3,11 +3,11 @@ title: '方法: DataContractSerializer の使用 (Visual Basic) をシリアル�
 ms.date: 07/20/2015
 ms.assetid: ecaea518-8a0f-4249-b4e5-9b3fb0cdd8ad
 ms.openlocfilehash: 9593dede3eb29aadc7ffb494e1d728cb8e679f0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58826714"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62054433"
 ---
 # <a name="how-to-serialize-using-datacontractserializer-visual-basic"></a>方法: DataContractSerializer の使用 (Visual Basic) をシリアル化します。
 このトピックでは、<xref:System.Runtime.Serialization.DataContractSerializer> を使用してシリアル化および逆シリアル化を行う例について説明します。  

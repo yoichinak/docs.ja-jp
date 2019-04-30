@@ -11,11 +11,11 @@ helpviewer_keywords:
 - menu items [Windows Forms], multicasting event-handling methods
 ms.assetid: 5a20749a-41b5-4acc-8eb1-9e5040b0a2c4
 ms.openlocfilehash: eec6a754b885cd169e5542221caefb3233c4c8af
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300724"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61967025"
 ---
 # <a name="how-to-connect-multiple-events-to-a-single-event-handler-in-windows-forms"></a>方法: Windows フォームの 1 つのイベント ハンドラーに複数のイベントを関連付ける
 アプリケーションの設計でする必要がありますを 1 つのイベント ハンドラーを使用して、複数のイベントまたは複数のイベントが、同じ手順を実行します。 たとえば、フォーム上のボタンの場合は、同じ機能を公開するように、同じイベントを発生させるメニュー コマンドを使用して強力な時間を節約では多くの場合です。 [プロパティ] ウィンドウのイベント ビューを使用してこれを行うC#またはを使用して、`Handles`キーワードと**クラス名**と**メソッド名**ドロップダウン ボックスでは、Visual Basic コード エディター。  

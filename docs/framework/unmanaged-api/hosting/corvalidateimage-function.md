@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: df9cc0cc86237b1ec439a4ec4fa6a75429c416d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59111177"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61985778"
 ---
 # <a name="corvalidateimage-function"></a>_CorValidateImage 関数
 マネージド モジュール イメージを検証し、それらが読み込まれると、オペレーティング システム ローダーに通知します。  
@@ -53,23 +53,23 @@ STDAPI _CorValidateImage (
 ## <a name="remarks"></a>Remarks  
  Windows XP およびそれ以降のバージョンでは、オペレーティング システム ローダーがマネージ モジュールの一般的なオブジェクト ファイルの形式 (COFF) ヘッダーで COM 記述子ディレクトリ ビットを調べることでチェックします。 設定済みビットでは、マネージ モジュールを示します。 MsCorEE.dll と呼び出しを読み込む場合は、ローダーは、マネージ モジュールを検出、 `_CorValidateImage`、次の操作を実行します。  
   
--   有効なマネージ モジュール イメージがあることを確認します。  
+- 有効なマネージ モジュール イメージがあることを確認します。  
   
--   共通言語ランタイム (CLR) のエントリ ポイントにイメージ内のエントリ ポイントを変更します。  
+- 共通言語ランタイム (CLR) のエントリ ポイントにイメージ内のエントリ ポイントを変更します。  
   
--   Windows の 64 ビット バージョンでは、PE32 から pe 32 + 形式に変換することによってメモリにある画像を変更します。  
+- Windows の 64 ビット バージョンでは、PE32 から pe 32 + 形式に変換することによってメモリにある画像を変更します。  
   
--   マネージ モジュール イメージが読み込まれるときにローダーに戻ります。  
+- マネージ モジュール イメージが読み込まれるときにローダーに戻ります。  
   
  実行可能イメージでは、オペレーティング システム ローダーを呼び出して、 [_CorExeMain](../../../../docs/framework/unmanaged-api/hosting/corexemain-function.md)関数の実行可能ファイルで指定されたエントリ ポイントに関係なく、します。 ローダーの呼び出し、DLL アセンブリのイメージ、 [_CorDllMain](../../../../docs/framework/unmanaged-api/hosting/cordllmain-function.md)関数。  
   
  `_CorExeMain` または`_CorDllMain`は、次の操作を実行します。  
   
--   CLR を初期化します。  
+- CLR を初期化します。  
   
--   アセンブリの CLR ヘッダーからマネージ エントリ ポイントを検索します。  
+- アセンブリの CLR ヘッダーからマネージ エントリ ポイントを検索します。  
   
--   実行を開始します。  
+- 実行を開始します。  
   
  ローダーの呼び出し、 [_CorImageUnloading](../../../../docs/framework/unmanaged-api/hosting/corimageunloading-function.md)を管理するときに関数モジュール イメージは読み込まれません。 ただし、この関数が任意のアクションを実行しません返すだけです。  
   

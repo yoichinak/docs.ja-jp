@@ -3,11 +3,11 @@ title: カスタム複合デザイナー - Workflow Item Presenter
 ms.date: 03/30/2017
 ms.assetid: f85224cf-9e30-44a5-9a81-3bc438a34364
 ms.openlocfilehash: f3c7620f719b8412b6b34bda7be5d607dccda75f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59311124"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62005234"
 ---
 # <a name="custom-composite-designers---workflow-item-presenter"></a>カスタム複合デザイナー - Workflow Item Presenter
 <xref:System.Activities.Presentation.WorkflowItemPresenter>任意のアクティビティを配置できる場所の「ドロップ ゾーン」を作成するため、WF デザイナー プログラミング モデル内の主要な型です。 このサンプルは、このような「ドロップ ゾーンです。」を表示するアクティビティ デザイナーを構築する方法を示しています。
@@ -16,18 +16,18 @@ ms.locfileid: "59311124"
 
 ## <a name="demonstrates"></a>使用例
 
--   <xref:System.Activities.Presentation.WorkflowItemPresenter> を使用したカスタム アクティビティ デザイナーの作成
+- <xref:System.Activities.Presentation.WorkflowItemPresenter> を使用したカスタム アクティビティ デザイナーの作成
 
--   メタデータ ストアを使用したカスタム デザイナーの登録。
+- メタデータ ストアを使用したカスタム デザイナーの登録。
 
--   宣言および命令による再ホストされたツールボックスのプログラミング。
+- 宣言および命令による再ホストされたツールボックスのプログラミング。
 
 ## <a name="sample-details"></a>サンプルの詳細
  このサンプルのコードを次に示します。
 
--   カスタム アクティビティ デザイナーは `SimpleNativeActivity` クラス用に作成されます。
+- カスタム アクティビティ デザイナーは `SimpleNativeActivity` クラス用に作成されます。
 
--   <xref:System.Activities.Presentation.WorkflowItemPresenter> を使用してカスタム アクティビティ デザイナーを作成します。
+- <xref:System.Activities.Presentation.WorkflowItemPresenter> を使用してカスタム アクティビティ デザイナーを作成します。
 
 ```xaml
 <sap:ActivityDesigner x:Class="Microsoft.Samples.UsingWorkflowItemPresenter.SimpleNativeDesigner"

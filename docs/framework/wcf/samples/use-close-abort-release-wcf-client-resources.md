@@ -1,14 +1,14 @@
 ---
-title: 閉じるを使用し、WCF クライアントのリソースを解放する中止
+title: close と abort を使用して WCF クライアントのリソースを解放する
 description: Dispose は失敗し、ネットワークが失敗したときに例外をスローすることができます。 動作が望ましくない可能性があります。 代わりに、閉じるを使用し、ネットワークが失敗したときに、クライアントのリソースを解放する中止します。
 ms.date: 11/12/2018
 ms.assetid: aff82a8d-933d-4bdc-b0c2-c2f7527204fb
 ms.openlocfilehash: 58f828d9cd85806f5f04c349a7de18828ab5f6f2
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678970"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62007574"
 ---
 # <a name="close-and-abort-release-resources-safely-when-network-connections-have-dropped"></a>終了、中止のネットワーク接続が削除されるときに安全に、リソースを解放
 
@@ -19,8 +19,7 @@ ms.locfileid: "57678970"
 
 このサンプルでは、C# の "using" ステートメントを型指定のあるクライアントと共に使用する際に発生する 2 つの一般的な問題と、例外が発生した後に正しくクリーンアップするコードを示します。
 
-C# の "using" ステートメントにより `Dispose`() が呼び出されます。 これは `Close`() と同じで、ネットワーク エラーが発生したときに例外をスローする場合があります。 
-  `Dispose`() への呼び出しは、"using" ブロックの閉じかっこで暗黙的に発生するので、コードを記述するユーザーとコードを読み取るユーザーの両者が、これを例外の発生元と気付かない可能性があります。 これは、アプリケーション エラーの潜在的な原因となります。
+C# の "using" ステートメントにより `Dispose`() が呼び出されます。 これは `Close`() と同じで、ネットワーク エラーが発生したときに例外をスローする場合があります。 `Dispose`() への呼び出しは、"using" ブロックの閉じかっこで暗黙的に発生するので、コードを記述するユーザーとコードを読み取るユーザーの両者が、これを例外の発生元と気付かない可能性があります。 これは、アプリケーション エラーの潜在的な原因となります。
 
 最初の問題は、次の `DemonstrateProblemUsingCanThrow` メソッドに示すように、閉じかっこで例外がスローされるとその後のコードが実行されないことです。
 
@@ -45,8 +44,7 @@ using (CalculatorClient client = new CalculatorClient())
 } // <-- this line might throw an exception.
 ```
 
-
-  `Dispose`() は "最後の" ブロック内で発生するので、`ApplicationException`() が失敗した場合、`Dispose` は using ブロックの外側には表示されません。 外側のコードで、`ApplicationException` の発生時期を認識できるよう考慮されている場合は、この例外をマスクすると、"using" コンストラクトが問題の原因となる場合があります。
+`Dispose`() は "最後の" ブロック内で発生するので、`ApplicationException`() が失敗した場合、`Dispose` は using ブロックの外側には表示されません。 外側のコードで、`ApplicationException` の発生時期を認識できるよう考慮されている場合は、この例外をマスクすると、"using" コンストラクトが問題の原因となる場合があります。
 
 最後に、このサンプルでは、`DemonstrateCleanupWithExceptions` で例外が発生した場合に正しくクリーンアップする方法を示します。 ここでは、try/catch ブロックを使用してエラーを報告し、`Abort` を呼び出します。 参照してください、[予想例外](../../../../docs/framework/wcf/samples/expected-exceptions.md)クライアントの呼び出しから例外をキャッチする詳細についてはサンプルです。
 

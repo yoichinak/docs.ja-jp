@@ -11,11 +11,11 @@ helpviewer_keywords:
 - documents [WPF], browser-viewable
 ms.assetid: 6e8db7bc-050a-4070-aa72-bb8c46e87ff8
 ms.openlocfilehash: b4057f54934fb5c7c9bb3d4fb97fe8e197e324ad
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313958"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051664"
 ---
 # <a name="documents-in-wpf"></a>WPF のドキュメント
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、[!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] の前の世代よりも簡単にアクセスおよび読み取りを行うことができるように設計されている、高品質なコンテンツの作成を可能にするさまざまなドキュメント機能を提供します。 拡張された機能と品質に加えて、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] は、ドキュメントの表示、パッケージ化、およびセキュリティの統合されたサービスも提供します。 ここでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] のドキュメントの種類とドキュメントのパッケージ化の概要を説明します。  
@@ -61,11 +61,11 @@ ms.locfileid: "59313958"
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] パッケージ アーキテクチャは、さまざまな重要な技術の基盤として機能します。  
   
--   [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] に準拠する [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ドキュメント。  
+- [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] に準拠する [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ドキュメント。  
   
--   Microsoft Office "12" Open XML 形式のドキュメント (.docx)。  
+- Microsoft Office "12" Open XML 形式のドキュメント (.docx)。  
   
--   独自のアプリケーション設計のカスタム保存形式。  
+- 独自のアプリケーション設計のカスタム保存形式。  
   
  パッケージ化 Api に基づいて、<xref:System.Windows.Xps.Packaging.XpsDocument>を格納するために設計されて[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]固定コンテンツ ドキュメント。 <xref:System.Windows.Xps.Packaging.XpsDocument>自己完結型のドキュメントに表示される、ビューアーで開くことができるは、 <xref:System.Windows.Controls.DocumentViewer> 、印刷スプールにルーティングまたはに直接出力の制御、 [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)]-互換性のあるプリンターです。  
   
@@ -99,11 +99,11 @@ ms.locfileid: "59313958"
 #### <a name="packagerelationships"></a>PackageRelationships  
  A <xref:System.IO.Packaging.PackageRelationship> (「リレーションシップ」) は、パッケージまたはパッケージ内のパーツと追加情報を関連付けるためのメカニズムを提供します。 リレーションシップは、実際のパーツのコンテンツを変更することなく追加情報をパーツに関連付けることができるパッケージ レベルの機能です。 パーツのコンテンツに新しいデータを直接挿入するのは、次のように多くの場合において実用的ではありません。  
   
--   パーツの実際の種類およびそのコンテンツ スキーマが不明な場合。  
+- パーツの実際の種類およびそのコンテンツ スキーマが不明な場合。  
   
--   わかっている場合でも、コンテンツ スキーマが新しい情報を追加する方法を提供しない可能性がある場合。  
+- わかっている場合でも、コンテンツ スキーマが新しい情報を追加する方法を提供しない可能性がある場合。  
   
--   パーツが、デジタル署名されたり、暗号化されたり、変更できなくされたりする可能性がある場合。  
+- パーツが、デジタル署名されたり、暗号化されたり、変更できなくされたりする可能性がある場合。  
   
  パッケージ リレーションシップは、追加情報を個別のパーツまたはパッケージ全体に追加または関連付けるための検出可能な方法を提供します。 パッケージ リレーションシップは、次の 2 つの主要な機能のために使用されます。  
   
@@ -125,13 +125,13 @@ ms.locfileid: "59313958"
 ## <a name="xps-documents"></a>XPS ドキュメント  
  [!INCLUDE[TLA#tla_xps](../../../../includes/tlasharptla-xps-md.md)] ドキュメントは、レンダリングのために必要なすべてのリソースおよび情報と共に 1 つ以上の固定ドキュメントを格納するパッケージです。  [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] はネイティブな [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] 印刷スプール ファイル形式でもあります。  <xref:System.Windows.Xps.Packaging.XpsDocument>は、標準 ZIP データセットに格納され、XML とイメージ、フォント ファイルなどのバイナリ コンポーネントの組み合わせを含めることができます。 [PackageRelationships](#PackageRelationships) は、ドキュメントを完全にレンダリングするために必要なコンテンツとリソースの間の依存関係を定義するために使用されます。  <xref:System.Windows.Xps.Packaging.XpsDocument>デザインが複数の使用をサポートする信頼性の高い 1 つのドキュメント ソリューションを提供します。  
   
--   単一の移植可能で配布しやすいファイルとして、固定ドキュメント コンテンツおよびリソースを読み取り、書き込み、および格納する。  
+- 単一の移植可能で配布しやすいファイルとして、固定ドキュメント コンテンツおよびリソースを読み取り、書き込み、および格納する。  
   
--   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ビューアー アプリケーションを使用してドキュメントを表示する。  
+- [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] ビューアー アプリケーションを使用してドキュメントを表示する。  
   
--   [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] のネイティブな印刷スプール出力形式でドキュメントを出力する。  
+- [!INCLUDE[TLA#tla_winvista](../../../../includes/tlasharptla-winvista-md.md)] のネイティブな印刷スプール出力形式でドキュメントを出力する。  
   
--   [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] と互換性があるプリンターにドキュメントを直接ルーティングする。  
+- [!INCLUDE[TLA2#tla_xps](../../../../includes/tla2sharptla-xps-md.md)] と互換性があるプリンターにドキュメントを直接ルーティングする。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -41,11 +41,11 @@ ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409875"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61949228"
 ---
 # <a name="reliability-best-practices"></a>信頼性に関するベスト プラクティス
 

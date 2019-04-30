@@ -12,11 +12,11 @@ helpviewer_keywords:
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
 ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58829028"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051820"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 プロパティの記述が読み取らないことを指定します。  
@@ -34,15 +34,15 @@ ms.locfileid: "58829028"
 > [!IMPORTANT]
 >  定義して使用するときに、`WriteOnly`プロパティ、次の追加の保護対策を検討してください。  
   
--   **オーバーライドします。** プロパティがクラスのメンバーである場合は、許可する既定の[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)を宣言していないと`Overridable`または`MustOverride`します。 これは派生クラスが上書きすることによって、不要なアクセスを作成することを防ぎます。  
+- **オーバーライドします。** プロパティがクラスのメンバーである場合は、許可する既定の[NotOverridable](../../../visual-basic/language-reference/modifiers/notoverridable.md)を宣言していないと`Overridable`または`MustOverride`します。 これは派生クラスが上書きすることによって、不要なアクセスを作成することを防ぎます。  
   
--   **アクセス レベルです。** 1 つまたは複数の変数で、プロパティの機密データを保持する場合では、宣言[プライベート](../../../visual-basic/language-reference/modifiers/private.md)できるように、その他のコードはアクセスできません。  
+- **アクセス レベルです。** 1 つまたは複数の変数で、プロパティの機密データを保持する場合では、宣言[プライベート](../../../visual-basic/language-reference/modifiers/private.md)できるように、その他のコードはアクセスできません。  
   
--   **暗号化。** プレーン テキストではなく、暗号化された形式では、すべての機密データを格納します。 何らかの方法で、悪意のあるコードのメモリの領域にアクセスできる場合より少なく、データを使用します。 暗号化も機密データをシリアル化する必要がある場合に役立ちます。  
+- **暗号化。** プレーン テキストではなく、暗号化された形式では、すべての機密データを格納します。 何らかの方法で、悪意のあるコードのメモリの領域にアクセスできる場合より少なく、データを使用します。 暗号化も機密データをシリアル化する必要がある場合に役立ちます。  
   
--   **リセットしています。** クラス、構造体、またはプロパティを定義するモジュールが終了するときに既定値または他の意味のない値に機微なデータをリセットします。 これにより、一般的なアクセスにそのメモリ領域が解放されるとき、保護を強化できます。  
+- **リセットしています。** クラス、構造体、またはプロパティを定義するモジュールが終了するときに既定値または他の意味のない値に機微なデータをリセットします。 これにより、一般的なアクセスにそのメモリ領域が解放されるとき、保護を強化できます。  
   
--   **永続化します。** 回避する場合、ディスクなどに、機密データは保持されません。 クリップボードには、機密データは書き込みませんも。  
+- **永続化します。** 回避する場合、ディスクなどに、機密データは保持されません。 クリップボードには、機密データは書き込みませんも。  
   
  `WriteOnly`修飾子は、このコンテキストで使用できます。  
   

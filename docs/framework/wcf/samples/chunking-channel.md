@@ -3,11 +3,11 @@ title: チャネルのチャンキング
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
 ms.openlocfilehash: a60cae7ad3dcfdaa139b8be974ed2d3996b5211d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302700"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62002368"
 ---
 # <a name="chunking-channel"></a>チャネルのチャンキング
 Windows Communication Foundation (WCF) を使用してサイズの大きいメッセージを送信するときに、それらのメッセージをバッファーに使用されるメモリの量を制限することが望ましいは多くの場合。 解決策の 1 つとして、メッセージ本文のストリーミングが考えられます (データの大部分が本文にある場合)。 ただし、一部のプロトコルではメッセージ全体のバッファが必要です。 たとえば、信頼できるメッセージとセキュリティの 2 つがこの例として挙げられます。 そこで別の解決策として、サイズの大きいメッセージをチャンクと呼ばれるサイズの小さいメッセージに分割し、そうしたチャンクを 1 つずつ送信し、受信側でサイズの大きいメッセージに再構成するという方法が考えられます。 アプリケーション自体でこうしたチャンキングおよびチャンキング解除を行うことができるほか、カスタム チャネルを使用して行うこともできます。 チャネルのチャンキングのサンプルでは、カスタム プロトコル チャネルまたはカスタム階層チャネルを使用して、サイズの大きい任意のメッセージのチャンキングおよびチャンキング解除を行う方法を示します。  
@@ -240,30 +240,30 @@ interface ITestService
   
  いくつかの細かい点に注意してください。  
   
--   Send は最初に `ThrowIfDisposedOrNotOpened` を呼び出し、`CommunicationState` が開かれた状態にします。  
+- Send は最初に `ThrowIfDisposedOrNotOpened` を呼び出し、`CommunicationState` が開かれた状態にします。  
   
--   Send は、セッションごとに一度に 1 つのメッセージだけを送信できるように同期されます。 `ManualResetEvent` という `sendingDone` があり、これはチャンキングが行われたメッセージが送信されたときにリセットされます。 チャンク終了メッセージが送信されると、このイベントが設定されます。 Send メソッドは、このイベントが設定されるのを待機した後でメッセージの送信を試行します。  
+- Send は、セッションごとに一度に 1 つのメッセージだけを送信できるように同期されます。 `ManualResetEvent` という `sendingDone` があり、これはチャンキングが行われたメッセージが送信されたときにリセットされます。 チャンク終了メッセージが送信されると、このイベントが設定されます。 Send メソッドは、このイベントが設定されるのを待機した後でメッセージの送信を試行します。  
   
--   Send は `CommunicationObject.ThisLock` をロックし、送信中に同期状態が変更されないようにします。 <xref:System.ServiceModel.Channels.CommunicationObject> の状態とステート マシンの詳細については、<xref:System.ServiceModel.Channels.CommunicationObject> のドキュメントを参照してください。  
+- Send は `CommunicationObject.ThisLock` をロックし、送信中に同期状態が変更されないようにします。 <xref:System.ServiceModel.Channels.CommunicationObject> の状態とステート マシンの詳細については、<xref:System.ServiceModel.Channels.CommunicationObject> のドキュメントを参照してください。  
   
--   Send に渡されるタイムアウトは、すべてのチャンクの送信を含む送信操作全体のタイムアウトとして使用されます。  
+- Send に渡されるタイムアウトは、すべてのチャンクの送信を含む送信操作全体のタイムアウトとして使用されます。  
   
--   元のメッセージ本文全体がバッファされないように、カスタムの <xref:System.Xml.XmlDictionaryWriter> デザインが選択されています。 <xref:System.Xml.XmlDictionaryReader> を使用して本文の `message.GetReaderAtBodyContents` を取得する場合、本文全体がバッファされます。 代わりに、カスタムある<xref:System.Xml.XmlDictionaryWriter>に渡される`message.WriteBodyContents`します。 メッセージがライタの WriteBase64 を呼び出すと、ライタはチャンクをパッケージ化してメッセージを作成し、内部チャンネルを使用して送信します。 WriteBase64 は、チャンクが送信されるまでブロックされます。  
+- 元のメッセージ本文全体がバッファされないように、カスタムの <xref:System.Xml.XmlDictionaryWriter> デザインが選択されています。 <xref:System.Xml.XmlDictionaryReader> を使用して本文の `message.GetReaderAtBodyContents` を取得する場合、本文全体がバッファされます。 代わりに、カスタムある<xref:System.Xml.XmlDictionaryWriter>に渡される`message.WriteBodyContents`します。 メッセージがライタの WriteBase64 を呼び出すと、ライタはチャンクをパッケージ化してメッセージを作成し、内部チャンネルを使用して送信します。 WriteBase64 は、チャンクが送信されるまでブロックされます。  
   
 ## <a name="implementing-the-receive-operation"></a>Receive 操作の実装  
  高レベルの Receive 操作では、最初に受信メッセージが `null` でないことをチェックすると共に、アクションが `ChunkingAction` であることをチェックします。 どちらかの条件が満たされていない場合、メッセージは Receive によって変更されないまま返されます。 それ以外の場合、Receive は新しい `ChunkingReader` と、それを (`ChunkingMessage` を呼び出して) ラップする新しい `GetNewChunkingMessage` を作成します。 Receive は、新しい `ChunkingMessage` を返す前に、スレッド プールのスレッドを使用して `ReceiveChunkLoop` を実行します。これによってループ内に `innerChannel.Receive` が呼び出され、チャンク終了メッセージを受信するか、または受信タイムアウトに達するまで、チャンクが `ChunkingReader` に渡されます。  
   
  いくつかの細かい点に注意してください。  
   
--   Send と同様、Receive は最初に `ThrowIfDisposedOrNotOepned` を呼び出して、`CommunicationState` が開かれた状態にします。  
+- Send と同様、Receive は最初に `ThrowIfDisposedOrNotOepned` を呼び出して、`CommunicationState` が開かれた状態にします。  
   
--   また Receive も、セッションから一度に 1 つのメッセージだけを受信できるように同期されます。 これは特に重要です。チャンク開始メッセージが受信されると、それ以降受信されるすべてのメッセージは、チャンク終了メッセージが受信されるまで、この新しいチャンク シーケンス内のチャンクであると想定されるためです。 Receive は、現在チャンキングを解除中のメッセージに属するすべてのチャンクが受信されるまでは、内部チャネルからメッセージをプルできません。 これを実現するため、Receive は `ManualResetEvent` という `currentMessageCompleted` を使用します。これはチャンク終了メッセージが受信されたときに設定され、新しいチャンク開始メッセージが受信されたときにリセットされます。  
+- また Receive も、セッションから一度に 1 つのメッセージだけを受信できるように同期されます。 これは特に重要です。チャンク開始メッセージが受信されると、それ以降受信されるすべてのメッセージは、チャンク終了メッセージが受信されるまで、この新しいチャンク シーケンス内のチャンクであると想定されるためです。 Receive は、現在チャンキングを解除中のメッセージに属するすべてのチャンクが受信されるまでは、内部チャネルからメッセージをプルできません。 これを実現するため、Receive は `ManualResetEvent` という `currentMessageCompleted` を使用します。これはチャンク終了メッセージが受信されたときに設定され、新しいチャンク開始メッセージが受信されたときにリセットされます。  
   
--   Receive は Send と異なり、受信中に同期状態の遷移を妨げません。 たとえば、受信中に Close を呼び出して、保留中の元のメッセージの受信が完了するか、または指定されたタイムアウト値に達するまで待機できます。  
+- Receive は Send と異なり、受信中に同期状態の遷移を妨げません。 たとえば、受信中に Close を呼び出して、保留中の元のメッセージの受信が完了するか、または指定されたタイムアウト値に達するまで待機できます。  
   
--   Receive に渡されるタイムアウトは、すべてのチャンクの受信を含む受信操作全体のタイムアウトとして使用されます。  
+- Receive に渡されるタイムアウトは、すべてのチャンクの受信を含む受信操作全体のタイムアウトとして使用されます。  
   
--   メッセージを処理するレイヤでメッセージ本文を処理する速度が、チャンク メッセージを受信する速度より遅い場合、`ChunkingReader` は、`ChunkingBindingElement.MaxBufferedChunks` で指定された上限に達するまでこうした受信チャンクをバッファします。 この上限に達すると、バッファされたチャンクが処理されるか、または受信タイムアウトに達するまで、チャンクは下位層からプルされなくなります。  
+- メッセージを処理するレイヤでメッセージ本文を処理する速度が、チャンク メッセージを受信する速度より遅い場合、`ChunkingReader` は、`ChunkingBindingElement.MaxBufferedChunks` で指定された上限に達するまでこうした受信チャンクをバッファします。 この上限に達すると、バッファされたチャンクが処理されるか、または受信タイムアウトに達するまで、チャンクは下位層からプルされなくなります。  
   
 ## <a name="communicationobject-overrides"></a>CommunicationObject のオーバーライド  
   

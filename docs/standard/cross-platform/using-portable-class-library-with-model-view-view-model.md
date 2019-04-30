@@ -12,11 +12,11 @@ ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
 ms.openlocfilehash: 8b48dc67e18411d82f03d29ab244d57575d6d720
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835786"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050498"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-View-View Model を利用した汎用性のあるクラス ライブラリの使用
 .NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)モデル-ビュー-ビュー モデル (MVVM) パターンを実装して、複数のプラットフォームでアセンブリを共有します。
@@ -27,32 +27,32 @@ ms.locfileid: "56835786"
 
  ![MVVM のダイアグラムを含むポータブル](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")
 
- このトピックでは、MVVM パターンに関する一般的な情報は提供されません。 使用する方法についての情報を提供するだけ[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]MVVM を実装します。 MVVM の詳細については、、 [MVVM クイック スタートで、wpf、Prism ライブラリ 5.0 が使用して](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))を参照してください。
+ このトピックでは、MVVM パターンに関する一般的な情報は提供されません。 使用する方法についての情報を提供するだけ[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]MVVM を実装します。 MVVM の詳細については、次を参照してください。、 [MVVM クイック スタートで、wpf、Prism ライブラリ 5.0 が使用して](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))します。
 
 ## <a name="classes-that-support-mvvm"></a>MVVM をサポートするクラス
  対象とする場合、 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、Silverlight、または Windows Phone 7.5 for、[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]プロジェクトでは、次のクラスは MVVM パターンを実装するために使用できます。
 
--   <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> クラス
+- <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> クラス
 
--   <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> クラス
+- <xref:System.Collections.ObjectModel.ReadOnlyObservableCollection%601?displayProperty=nameWithType> クラス
 
--   <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> クラス
+- <xref:System.Collections.Specialized.INotifyCollectionChanged?displayProperty=nameWithType> クラス
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> クラス
+- <xref:System.Collections.Specialized.NotifyCollectionChangedAction?displayProperty=nameWithType> クラス
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> クラス
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventArgs?displayProperty=nameWithType> クラス
 
--   <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> クラス
+- <xref:System.Collections.Specialized.NotifyCollectionChangedEventHandler?displayProperty=nameWithType> クラス
 
--   <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> クラス
+- <xref:System.ComponentModel.DataErrorsChangedEventArgs?displayProperty=nameWithType> クラス
 
--   <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> クラス
+- <xref:System.ComponentModel.INotifyDataErrorInfo?displayProperty=nameWithType> クラス
 
--   <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> クラス
+- <xref:System.ComponentModel.INotifyPropertyChanged?displayProperty=nameWithType> クラス
 
--   <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> クラス
+- <xref:System.Windows.Input.ICommand?displayProperty=nameWithType> クラス
 
--   すべてのクラス、<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>名前空間
+- すべてのクラス、<xref:System.ComponentModel.DataAnnotations?displayProperty=nameWithType>名前空間
 
 ## <a name="implementing-mvvm"></a>MVVM の実装
  MVVM を実装するために通常作成モデルとでは、ビュー モデルの両方を[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]、ため、プロジェクト、[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]プロジェクトがポータブルでないプロジェクトを参照できません。 モデルとビュー モデルは、同じプロジェクト内、または別のプロジェクトを指定できます。 個別のプロジェクトを使用する場合は、モデル プロジェクトにビューのモデル プロジェクトからの参照を追加します。
@@ -76,8 +76,7 @@ ms.locfileid: "56835786"
  [!code-csharp[PortableClassLibraryMVVM#3](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/viewmodelbase.cs#3)]
  [!code-vb[PortableClassLibraryMVVM#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/viewmodelbase.vb#3)]
 
- 実装、<xref:System.Windows.Input.ICommand>インターフェイスは、MVVM パターンでよく使用されます。 
-  <xref:System.Windows.Input.ICommand> インターフェイスを実装する例を次に示します。
+ 実装、<xref:System.Windows.Input.ICommand>インターフェイスは、MVVM パターンでよく使用されます。 <xref:System.Windows.Input.ICommand> インターフェイスを実装する例を次に示します。
 
  [!code-csharp[PortableClassLibraryMVVM#4](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/relaycommand.cs#4)]
  [!code-vb[PortableClassLibraryMVVM#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/relaycommand.vb#4)]

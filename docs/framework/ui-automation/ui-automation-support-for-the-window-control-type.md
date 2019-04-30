@@ -7,11 +7,11 @@ helpviewer_keywords:
 - control types, Window
 ms.assetid: 53be78a6-cdcc-4af3-a464-5927d19c54e8
 ms.openlocfilehash: a35076da60ecaf0a60fed339992b3d25c03f3452
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216510"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61996464"
 ---
 # <a name="ui-automation-support-for-the-window-control-type"></a>UI オートメーションによる Window コントロール型のサポート
 > [!NOTE]

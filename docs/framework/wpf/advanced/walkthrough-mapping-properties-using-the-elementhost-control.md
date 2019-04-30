@@ -9,11 +9,11 @@ helpviewer_keywords:
 - ElementHost control [WPF], mapping properties
 ms.assetid: bccd6e0d-2272-4924-9107-ff8ed58b88aa
 ms.openlocfilehash: 360f19e558f97e1807b329ad18e429fa893bbf86
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300919"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62053159"
 ---
 # <a name="walkthrough-mapping-properties-using-the-elementhost-control"></a>チュートリアル: ElementHost コントロールを使用したプロパティの割り当て
 
@@ -21,13 +21,13 @@ ms.locfileid: "59300919"
 
 このチュートリアルでは、以下のタスクを行います。
 
--   プロジェクトの作成。
+- プロジェクトの作成。
 
--   新しいプロパティ マッピングを定義します。
+- 新しいプロパティ マッピングを定義します。
 
--   既定のプロパティ マッピングを削除しています。
+- 既定のプロパティ マッピングを削除しています。
 
--   既定のプロパティ マッピングを拡張します。
+- 既定のプロパティ マッピングを拡張します。
 
 このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。 [ElementHost コントロールのサンプルを使用してプロパティをマッピング](https://go.microsoft.com/fwlink/?LinkID=160018)します。
 
@@ -37,7 +37,7 @@ ms.locfileid: "59300919"
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-project"></a>プロジェクトの作成
 
@@ -47,13 +47,13 @@ ms.locfileid: "59300919"
 
 2. **ソリューション エクスプ ローラー**、次の参照を追加[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ。
 
-    -   PresentationCore
+    - PresentationCore
 
-    -   PresentationFramework
+    - PresentationFramework
 
-    -   WindowsBase
+    - WindowsBase
 
-    -   WindowsFormsIntegration
+    - WindowsFormsIntegration
 
 3. 先頭に次のコードをコピー、`Form1`コード ファイル。
 
@@ -101,7 +101,7 @@ ms.locfileid: "59300919"
 
 ### <a name="to-remove-a-default-property-mapping"></a>既定のプロパティ マッピングを削除するには
 
--   定義に次のコードをコピー、`Form1`クラス。
+- 定義に次のコードをコピー、`Form1`クラス。
 
      [!code-csharp[PropertyMappingWithElementHost#13](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#13)]
      [!code-vb[PropertyMappingWithElementHost#13](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#13)]
@@ -114,7 +114,7 @@ ms.locfileid: "59300919"
 
 ### <a name="to-extend-a-default-property-mapping"></a>既定のプロパティ マッピングを拡張するには
 
--   定義に次のコードをコピー、`Form1`クラス。
+- 定義に次のコードをコピー、`Form1`クラス。
 
      [!code-csharp[PropertyMappingWithElementHost#15](~/samples/snippets/csharp/VS_Snippets_Wpf/PropertyMappingWithElementHost/CSharp/PropertyMappingWithElementHost/Form1.cs#15)]
      [!code-vb[PropertyMappingWithElementHost#15](~/samples/snippets/visualbasic/VS_Snippets_Wpf/PropertyMappingWithElementHost/VisualBasic/PropertyMappingWithElementHost/Form1.vb#15)]
@@ -132,11 +132,11 @@ ms.locfileid: "59300919"
 
      `Form1_Load`メソッド ハンドル、<xref:System.Windows.Forms.Form.Load>イベントと、次の初期化を実行します。
 
-    -   作成、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button>要素。
+    - 作成、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Controls.Button>要素。
 
-    -   プロパティ マッピングを設定するチュートリアルの前半で定義されているメソッドを呼び出します。
+    - プロパティ マッピングを設定するチュートリアルの前半で定義されているメソッドを呼び出します。
 
-    -   マップされたプロパティに初期値を割り当てます。
+    - マップされたプロパティに初期値を割り当てます。
 
 2. F5 キーを押してアプリケーションをビルドし、実行します。
 

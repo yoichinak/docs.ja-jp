@@ -8,11 +8,11 @@ helpviewer_keywords:
 - adorners [WPF], about adorners
 ms.assetid: 33d4c5c2-2daf-4e45-ba9a-5b673e2b8280
 ms.openlocfilehash: 6b710df45379ccce4daf340b4dbe2701d3c96604
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320471"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62019088"
 ---
 # <a name="adorners-overview"></a>装飾の概要
 装飾は特別な種類の<xref:System.Windows.FrameworkElement>ユーザーに視覚的な手掛かりを提供するために使用します。 装飾は、要素への機能ハンドル追加やコントロールに関する状態情報の提供など、さまざまな用途に使用できます。  
@@ -23,13 +23,13 @@ ms.locfileid: "59320471"
   
  装飾の一般的な用途は、次のとおりです。  
   
--   追加の機能ハンドルを<xref:System.Windows.UIElement>をユーザーが何らかの方法 (サイズ変更、回転、位置変更など) で要素を操作できるようにします。  
+- 追加の機能ハンドルを<xref:System.Windows.UIElement>をユーザーが何らかの方法 (サイズ変更、回転、位置変更など) で要素を操作できるようにします。  
   
--   視覚的なフィードバックによって、さまざまな状態を表示し、各種のイベントに応答する。  
+- 視覚的なフィードバックによって、さまざまな状態を表示し、各種のイベントに応答する。  
   
--   上で視覚的装飾をオーバーレイ、<xref:System.Windows.UIElement>します。  
+- 上で視覚的装飾をオーバーレイ、<xref:System.Windows.UIElement>します。  
   
--   視覚的にマスクまたはの一部またはすべてをオーバーライドする<xref:System.Windows.UIElement>します。  
+- 視覚的にマスクまたはの一部またはすべてをオーバーライドする<xref:System.Windows.UIElement>します。  
   
  [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、視覚的要素を装飾する基本的なフレームワークを提供します。 次の表に示すのは、オブジェクトの装飾に使用する主な種類と、その用途の一覧です。 その後に、使用例をいくつか示します。  
   

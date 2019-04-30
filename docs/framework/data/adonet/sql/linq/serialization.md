@@ -6,35 +6,35 @@ dev_langs:
 - vb
 ms.assetid: a15ae411-8dc2-4ca3-84d2-01c9d5f1972a
 ms.openlocfilehash: b6778522b5757c0ece899f7465d3ab500038fc49
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59202561"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037038"
 ---
 # <a name="serialization"></a>シリアル化
 このトピックで説明[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]シリアル化機能。 デザイン時のコード生成でシリアル化を追加する方法と、実行時の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のクラスのシリアル化の動作について説明します。  
   
  デザイン時には、次のいずれかの方法でシリアル化のコードを追加できます。  
   
--   [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]、変更、**シリアル化モード**プロパティを**Unidirectional**します。  
+- [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]、変更、**シリアル化モード**プロパティを**Unidirectional**します。  
   
--   SQLMetal コマンドラインに追加、 **/serialization**オプション。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
+- SQLMetal コマンドラインに追加、 **/serialization**オプション。 詳しくは、「[SqlMetal.exe (コード生成ツール)](../../../../../../docs/framework/tools/sqlmetal-exe-code-generation-tool.md)」をご覧ください。  
   
 ## <a name="overview"></a>概要  
  によって生成されたコード[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]既定では、遅延読み込み機能を提供します。 遅延読み込みは、中間層でデータを必要に応じて透過的に読み込むうえでは非常に便利です。 しかし、シリアル化のときには問題です。遅延読み込みが意図されているかどうかに関係なく、シリアライザーによって遅延読み込みが発生するためです。 具体的には、オブジェクトがシリアル化されるときには、遅延読み込みされるすべての外部参照の推移的閉包がシリアル化されます。  
   
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]シリアル化機能で主に 2 つのメカニズムを通じて、この問題に対応します。  
   
--   <xref:System.Data.Linq.DataContext> のモードにより、遅延読み込みをオフにします (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>)。 詳細については、「 <xref:System.Data.Linq.DataContext> 」を参照してください。  
+- <xref:System.Data.Linq.DataContext> のモードにより、遅延読み込みをオフにします (<xref:System.Data.Linq.DataContext.ObjectTrackingEnabled%2A>)。 詳細については、「 <xref:System.Data.Linq.DataContext> 」を参照してください。  
   
--   コード生成のスイッチにより、生成するエンティティに <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> 属性および <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> 属性を生成します。 この方法と、シリアル化での遅延読み込みクラスの動作が、このトピックの主な話題です。  
+- コード生成のスイッチにより、生成するエンティティに <xref:System.Runtime.Serialization.DataContractAttribute?displayProperty=nameWithType> 属性および <xref:System.Runtime.Serialization.DataMemberAttribute?displayProperty=nameWithType> 属性を生成します。 この方法と、シリアル化での遅延読み込みクラスの動作が、このトピックの主な話題です。  
   
 ### <a name="definitions"></a>定義  
   
--   *DataContract シリアライザー*:既定の .NET Framework 3.0 またはそれ以降のバージョンの Windows Communication Framework (WCF) のコンポーネントによって使用されるシリアライザー。  
+- *DataContract シリアライザー*:既定の .NET Framework 3.0 またはそれ以降のバージョンの Windows Communication Framework (WCF) のコンポーネントによって使用されるシリアライザー。  
   
--   *単方向シリアル化*:(循環を避けるため) には、一方向の関連付けプロパティのみが含まれるクラスのシリアル化されたバージョン。 慣例として、主キー/外部キーのリレーションシップの親側のプロパティをシリアル化の対象としてマークします。 双方向の関連付けの反対側はシリアル化しません。  
+- *単方向シリアル化*:(循環を避けるため) には、一方向の関連付けプロパティのみが含まれるクラスのシリアル化されたバージョン。 慣例として、主キー/外部キーのリレーションシップの親側のプロパティをシリアル化の対象としてマークします。 双方向の関連付けの反対側はシリアル化しません。  
   
      [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、シリアル化の種類として、単方向シリアル化のみがサポートされています。  
   

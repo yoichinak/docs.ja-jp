@@ -3,11 +3,11 @@ title: '方法: 構成を使用して ASP.NET AJAX エンドポイントを追�
 ms.date: 03/30/2017
 ms.assetid: 7cd0099e-dc3a-47e4-a38c-6e10f997f6ea
 ms.openlocfilehash: db5085d01dbed841109ac46fe4e8b2a0143352e3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337618"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039118"
 ---
 # <a name="how-to-use-configuration-to-add-an-aspnet-ajax-endpoint"></a>方法: 構成を使用して ASP.NET AJAX エンドポイントを追加する
 Windows Communication Foundation (WCF) をクライアントの Web サイトの JavaScript から呼び出すことが使用可能な ASP.NET AJAX 対応エンドポイントを利用するサービスを作成することができます。 このようなエンドポイントを作成するには、他のすべての Windows Communication Foundation (WCF) エンドポイントと同様に、構成ファイルを使用するか、構成要素を必要としないメソッドを使用します。 ここでは、構成を使用する方法について説明します。  

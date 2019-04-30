@@ -3,11 +3,11 @@ title: '方法: WAS で WCF サービスをホストする'
 ms.date: 03/30/2017
 ms.assetid: 9e3e213e-2dce-4f98-81a3-f62f44caeb54
 ms.openlocfilehash: 157c18d1640ccf1a61f871e5e3e9fef70b6a7e79
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326503"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039092"
 ---
 # <a name="how-to-host-a-wcf-service-in-was"></a>方法: WAS で WCF サービスをホストする
 このトピックでは、Windows プロセス アクティブ化サービス (WAS とも呼ばれます) を作成するために必要な基本的な手順について説明しますには、Windows Communication Foundation (WCF) サービスがホストされています。 WAS は、HTTP 以外のトランスポート プロトコルで動作するインターネット インフォメーション サービス (IIS) 機能を一般化した新しいプロセス アクティブ化サービスです。 WCF では、TCP、名前付きパイプ、およびメッセージ キューなど、WCF によってサポートされる非 HTTP プロトコルを介して受信されるアクティブ化要求を通信するために、リスナー アダプター インターフェイスを使用します。  
@@ -19,19 +19,19 @@ ms.locfileid: "59326503"
   
  WCF サービスが WAS でホストされている、ときに、標準のバインディングは、通常の方法で使用されます。 ただし、WAS でホストされるサービスを <xref:System.ServiceModel.NetTcpBinding> や <xref:System.ServiceModel.NetNamedPipeBinding> を使用して構成する場合は、制限を遵守する必要があります。 つまり、異なるエンドポイントが同じトランスポートを使用する場合、次の 7 つのプロパティでバインディング設定が一致する必要があります。  
   
--   ConnectionBufferSize  
+- ConnectionBufferSize  
   
--   ChannelInitializationTimeout  
+- ChannelInitializationTimeout  
   
--   MaxPendingConnections  
+- MaxPendingConnections  
   
--   MaxOutputDelay  
+- MaxOutputDelay  
   
--   MaxPendingAccepts  
+- MaxPendingAccepts  
   
--   ConnectionPoolSettings.IdleTimeout  
+- ConnectionPoolSettings.IdleTimeout  
   
--   ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
+- ConnectionPoolSettings.MaxOutboundConnectionsPerEndpoint  
   
  バインディングの設定が一致しない場合、これらのプロパティの値は常に最初に初期化されたエンドポイントによって決定されるため、後で追加されるエンドポイントは <xref:System.ServiceModel.ServiceActivationException> をスローします。  
   

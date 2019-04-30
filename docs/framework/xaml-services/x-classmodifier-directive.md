@@ -11,11 +11,11 @@ helpviewer_keywords:
 - ClassModifier attribute in XAML [XAML Services]
 ms.assetid: ef30ab78-d334-4668-917d-c9f66c3b6aea
 ms.openlocfilehash: fdbc69634e86992e71cfccdc080829b6b45f963c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59100930"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971900"
 ---
 # <a name="xclassmodifier-directive"></a>x:ClassModifier ディレクティブ
 XAML のコンパイルの動作を変更するときに`x:Class`も提供されます。 部分を作成する代わりに、具体的には、`class`を持つ、`Public`アクセス レベル (既定)、指定された`x:Class`で作成、`NotPublic`アクセス レベル。 この動作では、生成されたアセンブリ内のクラスのアクセス レベルに影響します。  
@@ -40,11 +40,11 @@ XAML のコンパイルの動作を変更するときに`x:Class`も提供され
 ## <a name="remarks"></a>Remarks  
  値`x:ClassModifier`.NET Framework XAML サービスの使用状況はプログラミング言語によって異なります。 使用する文字列は、各言語の実装に依存、<xref:System.CodeDom.Compiler.CodeDomProvider>よぶ型コンバーターを返しますの意味を定義する<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>と<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>、その言語が、大文字小文字を区別するかどうか。  
   
--   C# の場合、文字列を指定する渡す<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>は`internal`します。  
+- C# の場合、文字列を指定する渡す<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>は`internal`します。  
   
--   Microsoft Visual Basic .net の指定に渡す文字列<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>は`Friend`します。  
+- Microsoft Visual Basic .net の指定に渡す文字列<xref:System.Reflection.TypeAttributes.NotPublic?displayProperty=nameWithType>は`Friend`します。  
   
--   [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]ターゲットをサポートする XAML をコンパイルするが存在しない; そのため、に渡す値は指定されていません。  
+- [!INCLUDE[TLA2#tla_cppcli](../../../includes/tla2sharptla-cppcli-md.md)]ターゲットをサポートする XAML をコンパイルするが存在しない; そのため、に渡す値は指定されていません。  
   
  指定することも<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>(`public` c# で`Public`Visual Basic で)。 ただし、を指定する<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>ために頻繁に行われます<xref:System.Reflection.TypeAttributes.Public?displayProperty=nameWithType>が既に既定の動作。  
   

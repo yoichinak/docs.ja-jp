@@ -5,11 +5,11 @@ helpviewer_keywords:
 - auditing security events [WCF]
 ms.assetid: 5633f61c-a3c9-40dd-8070-1c373b66a716
 ms.openlocfilehash: 7d19c32994fdfc5587c06b979886f20ab2a04508
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101297"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62048272"
 ---
 # <a name="auditing-security-events"></a>セキュリティ イベントの監査
 Windows Communication Foundation (WCF) で作成されたアプリケーションは、監査機能とセキュリティ イベント (成功、失敗、またはその両方) にログインできます。 これらのイベントは Windows システム イベント ログに書き込まれ、イベント ビューアーを使用して確認できます。  
@@ -21,9 +21,9 @@ Windows Communication Foundation (WCF) で作成されたアプリケーショ�
 ## <a name="audit-level-and-behavior"></a>監査レベルと動作  
  セキュリティ監査には次の 2 つのレベルがあります。  
   
--   呼び出し元を承認するサービス承認レベル。  
+- 呼び出し元を承認するサービス承認レベル。  
   
--   メッセージ レベルで WCF をメッセージの有効性チェックし、呼び出し元を認証します。  
+- メッセージ レベルで WCF をメッセージの有効性チェックし、呼び出し元を認証します。  
   
  両方の監査の成功または失敗と呼ばれるレベルを確認することができます、*監査動作*します。  
   

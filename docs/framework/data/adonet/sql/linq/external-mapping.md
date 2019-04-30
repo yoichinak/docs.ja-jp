@@ -3,31 +3,31 @@ title: 外部マップ
 ms.date: 03/30/2017
 ms.assetid: 076606b8-d889-4ba0-b5da-ae577b146f23
 ms.openlocfilehash: 4b493279307f61847b72048c5bfa9dc14a38fe29
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218681"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62037896"
 ---
 # <a name="external-mapping"></a>外部マップ
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] サポート*外部マッピング*、これによって、データベースのデータ モデルと、オブジェクト モデル間のマッピングを指定する別の XML ファイルを使用するプロセス。 外部マッピング ファイルを使用すると、次のような利点があります。  
   
--   マッピング コードをアプリケーション コードから分離できます。 この方法により、アプリケーション コードの煩雑さが軽減されます。  
+- マッピング コードをアプリケーション コードから分離できます。 この方法により、アプリケーション コードの煩雑さが軽減されます。  
   
--   外部マッピング ファイルは、構成ファイルのような方法で扱うことができます。 たとえば、バイナリを配布した後、外部マッピング ファイルを交換するだけでアプリケーションの動作を更新できます。  
+- 外部マッピング ファイルは、構成ファイルのような方法で扱うことができます。 たとえば、バイナリを配布した後、外部マッピング ファイルを交換するだけでアプリケーションの動作を更新できます。  
   
 ## <a name="requirements"></a>必要条件  
  マッピング ファイルは、XML ファイルである必要があり、ファイルを検証する必要があります、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]スキーマ定義 (.xsd) ファイル。  
   
  次の規則が適用されます。  
   
--   マッピング ファイルは XML ファイルである必要があります。  
+- マッピング ファイルは XML ファイルである必要があります。  
   
--   XML マッピング ファイルは、XML スキーマ定義ファイルに対して有効である必要があります。 詳細については、「[方法 :DBML ファイルおよび外部マッピング ファイルを検証](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)です。  
+- XML マッピング ファイルは、XML スキーマ定義ファイルに対して有効である必要があります。 詳細については、「[方法 :DBML ファイルおよび外部マッピング ファイルを検証](../../../../../../docs/framework/data/adonet/sql/linq/how-to-validate-dbml-and-external-mapping-files.md)です。  
   
--   外部マッピングは、属性ベースのマッピングをオーバーライドします。 言い換えると、外部マッピング ソースを使って <xref:System.Data.Linq.DataContext> を作成した場合、<xref:System.Data.Linq.DataContext> はクラスに作成したすべてのマッピング属性を無視します。 この動作は、クラスが外部マッピング ファイルに含まれるかどうかにかかわらず適用されます。  
+- 外部マッピングは、属性ベースのマッピングをオーバーライドします。 言い換えると、外部マッピング ソースを使って <xref:System.Data.Linq.DataContext> を作成した場合、<xref:System.Data.Linq.DataContext> はクラスに作成したすべてのマッピング属性を無視します。 この動作は、クラスが外部マッピング ファイルに含まれるかどうかにかかわらず適用されます。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、2 つのマッピング方法 (属性ベースと外部) を組み合わせて使用することはできません。  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、2 つのマッピング方法 (属性ベースと外部) を組み合わせて使用することはできません。  
   
 ## <a name="xml-schema-definition-file"></a>XML スキーマ定義ファイル  
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の外部マッピングは、以下のような XML スキーマ定義に対して有効である必要があります。  

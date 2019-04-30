@@ -11,11 +11,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 196e99ab1f1a0baae53c6a1dc295b135e36fbfe0
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47080274"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62018760"
 ---
 # <a name="how-to-determine-if-a-net-standard-object-is-serializable"></a>.NET Standard のオブジェクトがシリアル化可能なかどうかを判断する方法
 

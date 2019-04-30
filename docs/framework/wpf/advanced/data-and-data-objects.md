@@ -10,18 +10,18 @@ helpviewer_keywords:
 - DataObject class [WPF]
 ms.assetid: 5967d557-1867-420f-a524-ae3af78402da
 ms.openlocfilehash: 9dc195ece60739cf0c137a2893c9e9150e0d4d3f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312060"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62010619"
 ---
 # <a name="data-and-data-objects"></a>データとデータ オブジェクト
 ドラッグ アンド ドロップ操作の一部として転送されるデータは、データ オブジェクトに格納されます。  概念的には、データ オブジェクトは、次のペアの 1 つ以上で構成されます。  
   
--   <xref:System.Object>実際のデータを格納しています。  
+- <xref:System.Object>実際のデータを格納しています。  
   
--   対応するデータ形式の識別子。  
+- 対応するデータ形式の識別子。  
   
  データ自体をベースとして表すことができるもので構成できます<xref:System.Object>します。  対応するデータ形式は、文字列または<xref:System.Type>はデータの書式設定についてのヒントを提供します。  は複数のデータ/データ形式のペアをホストしているデータ オブジェクトのサポートこれにより、複数の形式でデータを提供する 1 つのデータ オブジェクト。  
   

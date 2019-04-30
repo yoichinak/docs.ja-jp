@@ -3,11 +3,11 @@ title: 関数 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 52b3d776-5acc-4f69-b614-5a43ce56ef9f
 ms.openlocfilehash: f31f829b53160da5a043617b9aa999b398859f17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59080606"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62034165"
 ---
 # <a name="functions-entity-sql"></a>関数 (Entity SQL)
 Entity SQL では、ユーザー定義関数、正規の関数、およびプロバイダー固有の関数がサポートされています。 ユーザー定義関数は、概念モデルまたはクエリでインラインで指定されます。 詳細については、次を参照してください。[ユーザー定義関数](../../../../../../docs/framework/data/adonet/ef/language-reference/user-defined-functions-entity-sql.md)します。  

@@ -17,11 +17,11 @@ helpviewer_keywords:
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
 ms.openlocfilehash: 147c61badd680277480226b809df97d46b636c7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341193"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62022299"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>相互運用性のトラブルシューティング (Visual Basic)
 マネージ コードと COM の相互運用するときに、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]、1 つ以上の次の一般的な問題が発生する可能性があります。  
@@ -100,18 +100,18 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor10"></a> ActiveX コントロールに関する問題  
  問題が発生せずに、Visual Basic 6.0 で動作するほとんどの ActiveX コントロールが Visual Basic .NET で作業します。 コンテナー コントロール、またはその他のコントロールを視覚的に格納しているコントロールは、主な例外があります。 Visual Studio で正しく動作しない以前のコントロールのいくつかの例は次のとおりです。  
   
--   Microsoft Forms 2.0 フレーム コントロール  
+- Microsoft Forms 2.0 フレーム コントロール  
   
--   アップダウン コントロール、スピン コントロールとも呼ばれます  
+- アップダウン コントロール、スピン コントロールとも呼ばれます  
   
--   Sheridan タブ コントロール  
+- Sheridan タブ コントロール  
   
  サポートされていない ActiveX コントロールの問題のみのいくつか回避策があります。 元のソース コードを所有している場合は、既存のコントロールを Visual Studio に移行できます。 それ以外の場合、更新、ソフトウェア ベンダーに確認できます。NET と互換性のあるバージョン コントロールに置き換えるのでは、ActiveX コントロールがサポートされていません。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor11"></a> コントロールの ByRef の読み取り専用プロパティの引き渡し  
  Visual Basic .NET は、渡すときに場合があります"エラー 0x800A017F CTL_E_SETNOTSUPPORTED"などの COM エラーを生成`ReadOnly`プロパティとして、一部の古い ActiveX コントロールの`ByRef`他のプロシージャのパラメーター。 Visual Basic 6.0 からプロシージャの呼び出しでは、エラーは発生せず、パラメーターとして扱われます値で渡すと同様です。 Visual Basic .NET のエラー メッセージでは、プロパティがないプロパティを変更しようとしていることを示します`Set`プロシージャ。  
   
- 呼び出されるプロシージャにアクセスする場合を使用してこのエラーを防ぐことができます、`ByVal`を受け取るパラメーターを宣言するキーワード`ReadOnly`プロパティ。 例えば:  
+ 呼び出されるプロシージャにアクセスする場合を使用してこのエラーを防ぐことができます、`ByVal`を受け取るパラメーターを宣言するキーワード`ReadOnly`プロパティ。 例:  
   
  [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
 ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336188"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61981878"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement コンテンツ モデルの概要
 このコンテンツ モデルの概要についてのサポートされているコンテンツを説明します、<xref:System.Windows.Documents.TextElement>します。 <xref:System.Windows.Documents.Paragraph>クラスは、型の<xref:System.Windows.Documents.TextElement>します。 コンテンツ モデルは、他のオブジェクトや要素に含めることのできるオブジェクトや要素を記述します。 派生したオブジェクトに使用するコンテンツ モデルのこの概要を示します<xref:System.Windows.Documents.TextElement>します。 詳細については、次を参照してください。[フロー ドキュメントの概要](flow-document-overview.md)します。  
@@ -57,11 +57,11 @@ ms.locfileid: "59336188"
 ## <a name="working-with-textelement-content-programmatically"></a>TextElement のコンテンツをプログラムで操作する  
  内容を<xref:System.Windows.Documents.TextElement>コレクションの内容をプログラムで操作するため、作成されて<xref:System.Windows.Documents.TextElement>オブジェクトは、これらのコレクションの操作によって行われます。 使用される 3 つの異なるコレクションがある<xref:System.Windows.Documents.TextElement>-クラスを派生します。  
   
--   <xref:System.Windows.Documents.InlineCollection>:<xref:System.Windows.Documents.Inline> 要素のコレクションを表します。 <xref:System.Windows.Documents.InlineCollection> は、<xref:System.Windows.Documents.Paragraph>、<xref:System.Windows.Documents.Span>、<xref:System.Windows.Controls.TextBlock> の要素の使用できる子コンテンツを定義します。  
+- <xref:System.Windows.Documents.InlineCollection>:<xref:System.Windows.Documents.Inline> 要素のコレクションを表します。 <xref:System.Windows.Documents.InlineCollection> は、<xref:System.Windows.Documents.Paragraph>、<xref:System.Windows.Documents.Span>、<xref:System.Windows.Controls.TextBlock> の要素の使用できる子コンテンツを定義します。  
   
--   <xref:System.Windows.Documents.BlockCollection>:<xref:System.Windows.Documents.Block> 要素のコレクションを表します。 <xref:System.Windows.Documents.BlockCollection> は <xref:System.Windows.Documents.FlowDocument>、<xref:System.Windows.Documents.Section>、<xref:System.Windows.Documents.ListItem>、<xref:System.Windows.Documents.TableCell>、<xref:System.Windows.Documents.Floater>、<xref:System.Windows.Documents.Figure> 要素で許容される子コンテンツを定義します。  
+- <xref:System.Windows.Documents.BlockCollection>:<xref:System.Windows.Documents.Block> 要素のコレクションを表します。 <xref:System.Windows.Documents.BlockCollection> は <xref:System.Windows.Documents.FlowDocument>、<xref:System.Windows.Documents.Section>、<xref:System.Windows.Documents.ListItem>、<xref:System.Windows.Documents.TableCell>、<xref:System.Windows.Documents.Floater>、<xref:System.Windows.Documents.Figure> 要素で許容される子コンテンツを定義します。  
   
--   <xref:System.Windows.Documents.ListItemCollection>:順序付きで特定のコンテンツ項目を表すフロー コンテンツ要素を順序付けられていないまたは<xref:System.Windows.Documents.List>します。  
+- <xref:System.Windows.Documents.ListItemCollection>:順序付きで特定のコンテンツ項目を表すフロー コンテンツ要素を順序付けられていないまたは<xref:System.Windows.Documents.List>します。  
   
  操作することができます (追加または項目を削除) のそれぞれのプロパティを使用してこれらのコレクションから**Inlines**、**ブロック**、および**ListItems**します。 次の例は、Span を使用しての内容を操作する方法を示します、 **Inlines**プロパティ。  
   

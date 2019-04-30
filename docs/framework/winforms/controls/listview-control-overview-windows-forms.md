@@ -9,11 +9,11 @@ helpviewer_keywords:
 - list views
 ms.assetid: c9ef56c1-3bb1-4101-9f4e-e95e720f2756
 ms.openlocfilehash: a60c415427a1be994f8081725f20e867dca66aa1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101882"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012803"
 ---
 # <a name="listview-control-overview-windows-forms"></a>ListView コントロールの概要 (Windows フォーム)
 Windows フォーム <xref:System.Windows.Forms.ListView> コントロールにはアイコン表示で項目の一覧が表示されます。 リスト ビューを使用すると、Windows エクスプローラーの右側のペインのようなユーザー インターフェイスを作成することができます。 コントロールでは、次の 4 つの表示モードがあります。LargeIcon、SmallIcon、リスト、および詳細。  

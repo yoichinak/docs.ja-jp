@@ -3,11 +3,11 @@ title: カスタム追跡レコード
 ms.date: 03/30/2017
 ms.assetid: 24284565-c68b-40bf-b7f1-e148d151a6fc
 ms.openlocfilehash: d4733b4ffc0d866cf90fd5a5e7d649de261c45fb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57499122"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61945835"
 ---
 # <a name="custom-tracking-records"></a>カスタム追跡レコード
 

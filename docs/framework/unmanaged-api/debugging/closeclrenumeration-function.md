@@ -19,11 +19,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 60b6d9c302cd3af9f41e5a8dce62d7eb268c4198
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57491878"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61961175"
 ---
 # <a name="closeclrenumeration-function"></a>CloseCLREnumeration 関数
 有効な共通言語ランタイム (CLR) 継続スタートアップ イベントによって返されるハンドルの配列内にあるを閉じ、 [EnumerateCLRs 関数](../../../../docs/framework/unmanaged-api/debugging/enumerateclrs-function.md)、ハンドルおよび文字列パス配列のメモリを解放します。  
@@ -56,8 +56,7 @@ HRESULT CloseCLREnumeration (
  `pHandleArray` の長さが、`dwArrayLength` に渡された長さと一致しません。  
   
  E_FAIL (またはその他の E_ リターン コード)  
- 
-  `pHandleArray` および `pStringArray` のメモリを解放できません。  
+ `pHandleArray` および `pStringArray` のメモリを解放できません。  
   
 ## <a name="requirements"></a>必要条件  
  **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  

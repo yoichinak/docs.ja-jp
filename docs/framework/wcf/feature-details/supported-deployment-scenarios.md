@@ -3,11 +3,11 @@ title: サポートされているデプロイ シナリオ - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
 ms.openlocfilehash: c9b56bfd95717202d4ffade443cb88d1884a453d
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55284844"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62050793"
 ---
 # <a name="supported-deployment-scenarios"></a>サポートされる展開シナリオ
 
@@ -46,6 +46,6 @@ WCF は、いずれかで展開された部分的に信頼されたアプリケ�
 ## <a name="see-also"></a>関連項目
 
 - [コード アクセス セキュリティ](../../misc/code-access-security.md)
-- [WPF XAML ブラウザー アプリケーションの概要](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)
+- [Windows Presentation Foundation ブラウザーによってホストされるアプリケーションの概要](../../wpf/app-development/wpf-xaml-browser-applications-overview.md)
 - [部分信頼](partial-trust.md)
 - [ASP.NET の信頼レベルとポリシー ファイル](https://docs.microsoft.com/previous-versions/wyts434y(v=vs.140))

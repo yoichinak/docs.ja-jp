@@ -5,11 +5,11 @@ f1_keywords:
 - vbrArgument_GEMinusOne1
 ms.assetid: 4bdbef4c-6eff-4fab-a1d0-cb176d5f8798
 ms.openlocfilehash: e5b8237b26896891fc88d57e10cd310031971220
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59317520"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62025159"
 ---
 # <a name="argument-argumentname-must-be-greater-than-or-equal-to--1"></a>引数 '\<argumentname >' よりも大きいか-1 と等しくする必要があります
 引数の値が -1 未満です。  

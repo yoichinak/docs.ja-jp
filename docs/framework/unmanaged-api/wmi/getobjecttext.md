@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d34cb399ac0e8780c442eeb2e95cebfd0a22ca02
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59208320"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62040574"
 ---
 # <a name="getobjecttext-function"></a>GetObjectText 関数
 管理オブジェクト フォーマット (MOF) 構文では、オブジェクトのテキストのレンダリングを返します。

@@ -5,11 +5,11 @@ helpviewer_keywords:
 - authentication [WCF], user name and password
 ms.assetid: a5415be2-0ef3-464c-9f76-c255cb8165a4
 ms.openlocfilehash: 11a146e387171d6af95a7710fe96d6f35f6c611f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321039"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000871"
 ---
 # <a name="how-to-authenticate-with-a-user-name-and-password"></a>方法: ユーザー名とパスワードで認証する
 

@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 538def39-8399-46fb-b02d-60ede4e050af
 ms.openlocfilehash: 40e376f2c2584490273ec27b78fe5315cbb0315e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152881"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033723"
 ---
 # <a name="how-to-map-database-relationships"></a>方法: データベース リレーションシップを割り当てる
 データ リレーションシップが常に同じ場合は、これをエンティティ クラス内のプロパティ参照としてエンコードできます。 たとえば、Northwind サンプル データベースでは、通常は顧客が注文を発注するため、モデルには、顧客と注文のリレーションシップが常に存在します。  
@@ -22,11 +22,11 @@ ms.locfileid: "59152881"
   
  ほとんどのリレーションシップは、このトピックの例のように、一対多のリレーションシップです。 次に示すように、一対一および多対多のリレーションシップも表すことができます。  
   
--   一対一。含めることによって、この種のリレーションシップを表す<xref:System.Data.Linq.EntitySet%601>両方の側でします。  
+- 一対一。含めることによって、この種のリレーションシップを表す<xref:System.Data.Linq.EntitySet%601>両方の側でします。  
   
      たとえば、 `Customer` - `SecurityCode`作成されるため、お客様のセキュリティ コードが内に見つかりませんが、リレーションシップ、`Customer`テーブルし、承認されたユーザーのみアクセスできます。  
   
--   多対多:多対多リレーションシップのリンク テーブルの主キーで (とも呼ばれます、*接合*テーブル) の他の 2 つのテーブルから外部キーは、複合によって形式が多くの場合。  
+- 多対多:多対多リレーションシップのリンク テーブルの主キーで (とも呼ばれます、*接合*テーブル) の他の 2 つのテーブルから外部キーは、複合によって形式が多くの場合。  
   
      たとえば、 `Employee` - `Project`リンク テーブルを使用して形成された多対多のリレーションシップ`EmployeeProject`します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] では、このようなリレーションシップを、`Employee`、`Project`、および `EmployeeProject` という 3 つのクラスを使用してモデル化する必要があります。 この場合、`Employee` と `Project` の間のリレーションシップを変更すると、主キーの `EmployeeProject` の更新が必要であるように見える可能性がありす。 ただし、この状態は、既存の `EmployeeProject` の削除、および新しい `EmployeeProject` の作成として適切にモデル化されます。  
   

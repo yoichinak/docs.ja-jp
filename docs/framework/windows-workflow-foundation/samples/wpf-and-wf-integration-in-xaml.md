@@ -3,11 +3,11 @@ title: XAML での WPF と WF の統合
 ms.date: 03/30/2017
 ms.assetid: a4f53b48-fc90-4315-bca0-ba009562f488
 ms.openlocfilehash: 188702cfc13d7e353238e108066cc3d5f1c8bda9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298644"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62004713"
 ---
 # <a name="wpf-and-wf-integration-in-xaml"></a>XAML での WPF と WF の統合
 このサンプルでは、単一の XAML ドキュメントで Windows Presentation Foundation (WPF) および Windows Workflow Foundation (WF) の機能を使用するアプリケーションを作成する方法を示します。 これを行うには、サンプルは、Windows Workflow Foundation (WF) と XAML 機能拡張を使用します。

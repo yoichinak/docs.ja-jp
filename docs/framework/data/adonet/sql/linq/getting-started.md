@@ -1,18 +1,18 @@
 ---
-title: 作業の開始
+title: .NET ネイティブの概要
 ms.date: 03/30/2017
 dev_langs:
 - csharp
 - vb
 ms.assetid: db8a557a-fef8-4f4f-bb91-8cff7250ee25
 ms.openlocfilehash: 506257c13bbaada98dffa9d3a15c834037c1d971
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59155234"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038559"
 ---
-# <a name="getting-started"></a>作業の開始
+# <a name="getting-started"></a>.NET ネイティブの概要
 使用して[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]、使用することができます、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]メモリ内コレクションにアクセスするようデータベースを SQL にアクセスするテクノロジ。  
   
  たとえば、次のコードでは、`nw` データベースを表す `Northwind` オブジェクトが作成され、`Customers` テーブルが対象とされ、`Customers` からの `London` を選択するように行がフィルター処理され、取得する `CompanyName` の文字列が選択されます。  

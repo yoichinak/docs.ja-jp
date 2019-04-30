@@ -7,11 +7,11 @@ helpviewer_keywords:
 - examples [Windows Forms], gradient brushes
 ms.assetid: 2c6037b9-05bd-44c0-a22a-19584b722524
 ms.openlocfilehash: 5771aaabd283d71f5fa6934f86a1c24a57f38dca
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57704389"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61954467"
 ---
 # <a name="using-a-gradient-brush-to-fill-shapes"></a>グラデーション ブラシを使用した図形の塗りつぶし
 グラデーション ブラシを使用して、徐々 に変化する色で図形を塗りつぶすことができます。 たとえば、図形を塗りつぶす色、形状の左端から右端に移動する段階的に変化するように、水平方向のグラデーションを使用できます。 左端で黒の四角形を想像してみてください (0, 0, 0 は、赤、緑、および青のコンポーネントによって表される) と、右端が red (255, 0, 0 で表されます)。 四角形が 256 ピクセルである場合は、1 つの左側にピクセルの赤の要素より大きいを特定のピクセルの赤の要素になります。 行の左端のピクセルが (0, 0, 0) の色要素、2 番目のピクセルが (1, 0, 0)、3 番目のピクセルは、(2, 0, 0) というように、(255, 0, 0) の色要素の右端のピクセルが表示されるまでです。 これらの色の補間値は、色のグラデーションを構成します。  

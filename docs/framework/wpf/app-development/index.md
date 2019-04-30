@@ -6,22 +6,22 @@ helpviewer_keywords:
 - application development [WPF], about
 ms.assetid: 2996ce5e-81e9-49ae-881b-952db3dd1b7e
 ms.openlocfilehash: 3b7e1d04173741088935104e8d4225691927a27b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211063"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61951594"
 ---
 # <a name="application-development"></a>アプリケーション開発
 <a name="introduction"></a> Windows Presentation Foundation (WPF) とは、次の種類のアプリケーションの開発に使用できるプレゼンテーション フレームワークです。  
   
--   スタンドアロン アプリケーション (クライアント コンピューターにインストールし、そこから実行できる実行可能アセンブリとしてビルドされた従来スタイルの [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] アプリケーション)。  
+- スタンドアロン アプリケーション (クライアント コンピューターにインストールし、そこから実行できる実行可能アセンブリとしてビルドされた従来スタイルの [!INCLUDE[TLA#tla_mswin](../../../../includes/tlasharptla-mswin-md.md)] アプリケーション)。  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ([!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] や Mozilla Firefox などの Web ブラウザーによってホストされ、実行可能アセンブリとしてビルドされたナビゲーション ページで構成されるアプリケーション)。  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] ([!INCLUDE[TLA#tla_ie](../../../../includes/tlasharptla-ie-md.md)] や Mozilla Firefox などの Web ブラウザーによってホストされ、実行可能アセンブリとしてビルドされたナビゲーション ページで構成されるアプリケーション)。  
   
--   カスタム コントロール ライブラリ (再利用可能なコントロールを含む被実行可能アセンブリ)。  
+- カスタム コントロール ライブラリ (再利用可能なコントロールを含む被実行可能アセンブリ)。  
   
--   クラス ライブラリ (再利用可能なクラスを含む非実行可能アセンブリ)。  
+- クラス ライブラリ (再利用可能なクラスを含む非実行可能アセンブリ)。  
   
 > [!NOTE]
 >  Windows サービスで WPF 型を使用するのは避けることを強くお勧めします。 Windows サービスでこれらの機能を使用すると、期待どおりの動作が得られない場合があります。  
@@ -32,21 +32,21 @@ ms.locfileid: "59211063"
 ## <a name="application-management"></a>アプリケーション構成の管理  
  実行可能 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、一般に次のコアな機能セットを必要とします。  
   
--   共通アプリケーション インフラストラクチャを作成し、管理する (エントリ ポイント メソッドと、システム メッセージおよび入力メッセージを受け取るための Windows メッセージ ループの作成を含む)。  
+- 共通アプリケーション インフラストラクチャを作成し、管理する (エントリ ポイント メソッドと、システム メッセージおよび入力メッセージを受け取るための Windows メッセージ ループの作成を含む)。  
   
--   アプリケーションの有効期間を追跡し、これと相互作用する。  
+- アプリケーションの有効期間を追跡し、これと相互作用する。  
   
--   コマンド ライン パラメーターを取得し、処理する。  
+- コマンド ライン パラメーターを取得し、処理する。  
   
--   アプリケーション スコープのプロパティと [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] リソースを共有する。  
+- アプリケーション スコープのプロパティと [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)] リソースを共有する。  
   
--   未処理の例外を検出し、処理する。  
+- 未処理の例外を検出し、処理する。  
   
--   終了コードを返す。  
+- 終了コードを返す。  
   
--   スタンドアロン アプリケーションのウィンドウを管理する。  
+- スタンドアロン アプリケーションのウィンドウを管理する。  
   
--   [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] や、ナビゲーション ウィンドウとフレームを持つスタンドアロン アプリケーションで、ナビゲーションを追跡する。  
+- [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] や、ナビゲーション ウィンドウとフレームを持つスタンドアロン アプリケーションで、ナビゲーションを追跡する。  
   
  これらの機能は <xref:System.Windows.Application> クラスで実装します。このクラスをアプリケーションに追加するには、*アプリケーション定義*を使用します。  
   
@@ -62,13 +62,13 @@ ms.locfileid: "59211063"
 ## <a name="windows-and-dialog-boxes"></a>ウィンドウとダイアログ ボックス  
  ユーザーは、ウィンドウをとおして、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] スタンドアロン アプリケーションとやり取りします。 ウィンドウの目的は、アプリケーションのコンテンツをホストし、コンテンツとやり取りするためにユーザーが利用できるアプリケーション機能を公開することです。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] では、ウィンドウは <xref:System.Windows.Window> クラスにカプセル化されます。このクラスは、次の機能を備えています。  
   
--   ウィンドウを作成し、表示する。  
+- ウィンドウを作成し、表示する。  
   
--   所有者と所有ウィンドウの関係を確立する。  
+- 所有者と所有ウィンドウの関係を確立する。  
   
--   ウィンドウの外観を構成する (サイズ、位置、アイコン、タイトル バーのテキスト、境界など)。  
+- ウィンドウの外観を構成する (サイズ、位置、アイコン、タイトル バーのテキスト、境界など)。  
   
--   ウィンドウの有効期間を追跡し、これと相互作用する。  
+- ウィンドウの有効期間を追跡し、これと相互作用する。  
   
  詳細については、「[WPF ウィンドウの概要](wpf-windows-overview.md)」を参照してください。  
   
@@ -84,23 +84,23 @@ ms.locfileid: "59211063"
 ## <a name="navigation"></a>ナビゲーション  
  [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] では、ページ (<xref:System.Windows.Controls.Page>) およびハイパーリンク (<xref:System.Windows.Documents.Hyperlink>) を使用した Web スタイルのナビゲーションがサポートされます。 ナビゲーションは、次のようなさまざまな方法で実装できます。  
   
--   Web ブラウザーでホストされるスタンドアロンのページ。  
+- Web ブラウザーでホストされるスタンドアロンのページ。  
   
--   Web ブラウザーでホストされる [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] にコンパイルされるページ。  
+- Web ブラウザーでホストされる [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] にコンパイルされるページ。  
   
--   スタンドアロン アプリケーションにコンパイルされ、ナビゲーション ウィンドウ (<xref:System.Windows.Navigation.NavigationWindow>) によってホストされるページ。  
+- スタンドアロン アプリケーションにコンパイルされ、ナビゲーション ウィンドウ (<xref:System.Windows.Navigation.NavigationWindow>) によってホストされるページ。  
   
--   フレーム (<xref:System.Windows.Controls.Frame>) によってホストされるページ。フレームは、スタンドアロン ページか、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] またはスタンドアロン アプリケーションにコンパイルされたページでホストできます。  
+- フレーム (<xref:System.Windows.Controls.Frame>) によってホストされるページ。フレームは、スタンドアロン ページか、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] またはスタンドアロン アプリケーションにコンパイルされたページでホストできます。  
   
  ナビゲーションに役立つように、次の機能が [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] に実装されます。  
   
--   ナビゲーション要求を処理する共有ナビゲーション エンジンである <xref:System.Windows.Navigation.NavigationService>。このエンジンは <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow>、[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] で使用され、アプリケーション内ナビゲーションをサポートします。  
+- ナビゲーション要求を処理する共有ナビゲーション エンジンである <xref:System.Windows.Navigation.NavigationService>。このエンジンは <xref:System.Windows.Controls.Frame>、<xref:System.Windows.Navigation.NavigationWindow>、[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] で使用され、アプリケーション内ナビゲーションをサポートします。  
   
--   ナビゲーションを開始するためのナビゲーション メソッド。  
+- ナビゲーションを開始するためのナビゲーション メソッド。  
   
--   ナビゲーションの有効期間を追跡し、これと相互作用するためのナビゲーション イベント。  
+- ナビゲーションの有効期間を追跡し、これと相互作用するためのナビゲーション イベント。  
   
--   履歴を使用した前方や後方へのナビゲーションの記憶。履歴は、調べたり、操作したりすることもできます。  
+- 履歴を使用した前方や後方へのナビゲーションの記憶。履歴は、調べたり、操作したりすることもできます。  
   
  詳細については、「[ナビゲーションの概要](navigation-overview.md)」を参照してください。  
   

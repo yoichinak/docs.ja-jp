@@ -10,11 +10,11 @@ helpviewer_keywords:
 - custom controls [Windows Forms]
 ms.assetid: fddbe951-4485-459d-a5fd-665ea346dbc1
 ms.openlocfilehash: 247ec4fc11f33587e77c49244b239a574c8f3cfc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207358"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62012712"
 ---
 # <a name="overview-of-using-controls-in-windows-forms"></a>Windows フォームでのコントロールの使用方法の概要
 このトピックでは、Windows フォーム アプリケーションの重要な要素について説明し、コントロールを使用して Windows フォーム アプリケーションでイベントを処理する簡単な例を提供します。  
@@ -22,9 +22,9 @@ ms.locfileid: "59207358"
 ## <a name="simple-windows-forms-applications"></a>単純な Windows フォーム アプリケーション  
  少なくとも、Windows フォーム アプリケーションは、次の要素で構成されます。  
   
--   1 つまたは複数のクラスから派生した<xref:System.Windows.Forms.Form?displayProperty=nameWithType>します。  
+- 1 つまたは複数のクラスから派生した<xref:System.Windows.Forms.Form?displayProperty=nameWithType>します。  
   
--   A`Main`メソッドを呼び出す、 `static` (`shared` Visual Basic で)<xref:System.Windows.Forms.Application.Run%2A>メソッドを呼び出し、<xref:System.Windows.Forms.Form>のインスタンス。 <xref:System.Windows.Forms.Application.Run%2A>メソッドは、オペレーティング システムからアプリケーションへのメッセージを処理します。  
+- A`Main`メソッドを呼び出す、 `static` (`shared` Visual Basic で)<xref:System.Windows.Forms.Application.Run%2A>メソッドを呼び出し、<xref:System.Windows.Forms.Form>のインスタンス。 <xref:System.Windows.Forms.Application.Run%2A>メソッドは、オペレーティング システムからアプリケーションへのメッセージを処理します。  
   
  次のコード例では、Windows フォーム アプリケーションの重要な要素を示します。  
   

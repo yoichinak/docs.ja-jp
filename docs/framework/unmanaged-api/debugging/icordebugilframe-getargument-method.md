@@ -18,11 +18,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 46852ed8ac53c3a7720edff4833f3dc3cce42bbb
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57475789"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61995528"
 ---
 # <a name="icordebugilframegetargument-method"></a>ICorDebugILFrame::GetArgument メソッド
 この Microsoft intermediate language (MSIL) のスタック フレーム内には、指定された引数の値を取得します。  

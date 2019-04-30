@@ -8,11 +8,11 @@ helpviewer_keywords:
 - data [Windows Forms], displaying
 ms.assetid: d82bd69c-6799-4439-a32c-91139c5901d1
 ms.openlocfilehash: 966ffe131d10b97fe9632bb1ff23273b1dabd061
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59194969"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61972095"
 ---
 # <a name="how-to-enable-column-reordering-in-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの列の並べ替えを有効にする
 Windows フォームに表示されるデータを表示するときに<xref:System.Windows.Forms.DataGridView>コントロール、ユーザーことがありますする特定の列の値を比較します。 これは、できますしない列は、コントロールでは、広く区切られている場合に便利な特にで関心のあるすべての列を表示するには、ユーザーが前後へ水平方向にスクロールする必要があります。 列の順序を変更できるので、列の値を容易に比較を行うことができます。 列の並べ替えを有効にすると、ユーザーは、マウスで列ヘッダーをドラッグして列を新しい位置に移動できます。  
@@ -24,7 +24,7 @@ Windows フォームに表示されるデータを表示するときに<xref:Sys
   
 ### <a name="to-enable-column-reordering"></a>列の並べ替えを有効にするには  
   
--   スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) の右上隅で、 <xref:System.Windows.Forms.DataGridView> 、制御し、**列の並べ替えを有効にする**.  
+- スマート タグ グリフをクリックします (![スマート タグ グリフ](./media/vs-winformsmttagglyph.gif "VS_WinFormSmtTagGlyph")) の右上隅で、 <xref:System.Windows.Forms.DataGridView> 、制御し、**列の並べ替えを有効にする**.  
   
 ## <a name="see-also"></a>関連項目
 

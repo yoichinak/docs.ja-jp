@@ -3,11 +3,11 @@ title: チュートリアルによる学習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
 ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59329311"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033531"
 ---
 # <a name="learning-by-walkthroughs"></a>チュートリアルによる学習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメントには、いくつかのチュートリアルが用意されています。 このトピックでは、チュートリアルに関する全般的な話題 (トラブルシューティングを含む) を取り上げます。また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] について学ぶための、いくつかの入門レベルのチュートリアルへのリンクを示します。  
@@ -30,20 +30,20 @@ ms.locfileid: "59329311"
 ## <a name="general"></a>全般  
  以下の情報は、これらのチュートリアル全体に該当します。  
   
--   環境:各[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]チュートリアルでは、その統合開発環境 (IDE) として Visual Studio を使用します。  
+- 環境:各[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]チュートリアルでは、その統合開発環境 (IDE) として Visual Studio を使用します。  
   
--   SQL エンジン:SQL Server Express を使用して実装するのには、これらのチュートリアルが書き込まれます。 SQL Server Express を持っていない場合は、無料でダウンロードできます。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
+- SQL エンジン:SQL Server Express を使用して実装するのには、これらのチュートリアルが書き込まれます。 SQL Server Express を持っていない場合は、無料でダウンロードできます。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
   
     > [!NOTE]
     >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のチュートリアルでは、ファイル名を接続文字列として使用します。 ファイル名を指定するだけで済むのは、SQL Server Express ユーザーのために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に備わっている機能です。 セキュリティ問題には常に注意してください。 詳細については、次を参照してください。 [LINQ to SQL におけるセキュリティ](../../../../../../docs/framework/data/adonet/sql/linq/security-in-linq-to-sql.md)します。  
   
--   [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通常、チュートリアルには、Northwind サンプル データベースが必要です。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
+- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 通常、チュートリアルには、Northwind サンプル データベースが必要です。 詳細については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。  
   
--   アクティブな設定またはエディションの Visual Studio によって、ヘルプの説明から、ダイアログ ボックスとメニュー コマンドのチュートリアルが表示が異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
+- アクティブな設定またはエディションの Visual Studio によって、ヘルプの説明から、ダイアログ ボックスとメニュー コマンドのチュートリアルが表示が異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
   
--   多階層のシナリオに関連するチュートリアルでは、開発用コンピューターとは別のコンピューターにサーバーが配置されていることと、そのサーバーにアクセスするための適切なアクセス許可が必要です。  
+- 多階層のシナリオに関連するチュートリアルでは、開発用コンピューターとは別のコンピューターにサーバーが配置されていることと、そのサーバーにアクセスするための適切なアクセス許可が必要です。  
   
--   通常、Northwind サンプル データベースの Orders テーブルを表すクラスの名前は `[Order]` です。 に必要なエスケープが`Order`Visual Basic のキーワードです。  
+- 通常、Northwind サンプル データベースの Orders テーブルを表すクラスの名前は `[Order]` です。 に必要なエスケープが`Order`Visual Basic のキーワードです。  
   
 ## <a name="troubleshooting"></a>トラブルシューティング  
  これらのチュートリアルで使用するデータベースにアクセスするための十分なアクセス許可がない場合、ランタイム エラーが発生することがあります。 特に一般的な問題を解決するためのヒントについては、以下の手順を参照してください。  

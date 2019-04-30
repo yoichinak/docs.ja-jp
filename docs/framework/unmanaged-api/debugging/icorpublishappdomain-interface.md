@@ -17,11 +17,11 @@ topic_type:
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: d9dbaac5b08cf3f700b5f2581c60d0cb7bf3f545
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59152140"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61986675"
 ---
 # <a name="icorpublishappdomain-interface"></a>ICorPublishAppDomain インターフェイス
 アプリケーション ドメインの情報を表し、提供します。  

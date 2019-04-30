@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 626492c0-5ee3-4675-88e8-8c40379510b6
 ms.openlocfilehash: 8a69b3ae83d7f701428b3183f2b80e0d44a06537
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59103624"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62033775"
 ---
 # <a name="how-to-display-generated-sql"></a>方法: 生成された SQL を表示する
 <xref:System.Data.Linq.DataContext.Log%2A> プロパティを使用して、クエリに対して生成された SQL コードを表示し、処理を変更できます。 この方法は、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の機能を理解し、特定の問題をデバッグするのに役立ちます。  

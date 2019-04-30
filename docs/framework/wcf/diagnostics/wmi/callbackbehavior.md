@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 42acd302-2b62-4849-a2d1-a03084343ecd
 ms.openlocfilehash: 9d8f4335c304d164daafeb0ad4de5b4e3bba4590
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59973968"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61963957"
 ---
 # <a name="callbackbehavior"></a>CallbackBehavior
 CallbackBehavior  

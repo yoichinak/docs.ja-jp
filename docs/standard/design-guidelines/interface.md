@@ -9,11 +9,11 @@ helpviewer_keywords:
 ms.assetid: a016bd18-6710-4358-9438-9f190a295392
 author: KrzysztofCwalina
 ms.openlocfilehash: 1f982aa37f92b7270725574d949989ca120297d5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660149"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026368"
 ---
 # <a name="interface-design"></a>インターフェイスのデザイン
 ほとんどの Api は、クラスと構造体を使用して最適なモデル化、インターフェイスがより適切なまたは唯一のオプションの場合は。  

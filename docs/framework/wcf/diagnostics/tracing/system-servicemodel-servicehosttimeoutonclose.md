@@ -3,11 +3,11 @@ title: System.ServiceModel.ServiceHostTimeoutOnClose
 ms.date: 03/30/2017
 ms.assetid: 89f360d2-5bed-4677-ab55-26d9bd12695a
 ms.openlocfilehash: 3e3553ac1c2abd3d5dabc55a4e458babc1cc87bc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59228290"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62039807"
 ---
 # <a name="systemservicemodelservicehosttimeoutonclose"></a>System.ServiceModel.ServiceHostTimeoutOnClose
 System.ServiceModel.ServiceHostTimeoutOnClose  

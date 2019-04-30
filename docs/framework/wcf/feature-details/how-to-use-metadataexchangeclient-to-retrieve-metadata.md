@@ -4,10 +4,10 @@ ms.date: 03/30/2017
 ms.assetid: 0754e9dc-13c5-45c2-81b5-f3da466e5a87
 ms.openlocfilehash: 32acef65ee30d7b80b37c11bdd024e3c09a935ef
 ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59977672"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62038767"
 ---
 # <a name="how-to-use-metadataexchangeclient-to-retrieve-metadata"></a>方法: MetadataExchangeClient を使用してメタデータを取得する
 WS-MetadataExchange (MEX) プロトコルを使用してメタデータをダウンロードするには、<xref:System.ServiceModel.Description.MetadataExchangeClient> クラスを使用します。 取得されたメタデータ ファイルは、<xref:System.ServiceModel.Description.MetadataSet> オブジェクトとして返されます。 返された <xref:System.ServiceModel.Description.MetadataSet> オブジェクトには、<xref:System.ServiceModel.Description.MetadataSection> オブジェクトのコレクションが含まれ、コレクションの各オブジェクトには、特定のメタデータの言語と識別子が含まれます。 返されたメタデータはファイルに書き込むことができます。また、返されたメタデータに Web サービス記述言語 (WSDL: Web Services Description Language) ドキュメントが含まれている場合は、<xref:System.ServiceModel.Description.WsdlImporter> を使用してメタデータをインポートできます。  

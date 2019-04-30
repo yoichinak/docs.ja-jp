@@ -5,11 +5,11 @@ ms.technology: dotnet-standard
 ms.assetid: 5de945cb-88f4-49d7-b0e6-f098300cf357
 author: KrzysztofCwalina
 ms.openlocfilehash: bd5f67c3bd766625e7c22b3ca9986cfbca8854bf
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
-ms.translationtype: MT
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54621761"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62026420"
 ---
 # <a name="extension-methods"></a>拡張メソッド
 拡張メソッドは、言語機能により、インスタンス メソッドの呼び出し構文を使用して呼び出される静的メソッドです。 これらのメソッドは、メソッドは、操作の対象のインスタンスを表す 1 つ以上のパラメーターを取得する必要があります。  
@@ -22,9 +22,9 @@ ms.locfileid: "54621761"
   
  **✓ CONSIDER** 拡張メソッドを使用して、次のシナリオのいずれかで。  
   
--   ヘルパーを提供するには、コア インターフェイスの観点からは機能している場合、インターフェイスのすべての実装に関連する機能を記述できます。 具体的な実装は、インターフェイスにそれ以外の場合割り当てることはできないためにです。 たとえば、`LINQ to Objects`演算子は、すべての拡張メソッドとして実装されます<xref:System.Collections.Generic.IEnumerable%601>型。 そのため、いずれか`IEnumerable<>`実装は、LINQ で自動的に有効にします。  
+- ヘルパーを提供するには、コア インターフェイスの観点からは機能している場合、インターフェイスのすべての実装に関連する機能を記述できます。 具体的な実装は、インターフェイスにそれ以外の場合割り当てることはできないためにです。 たとえば、`LINQ to Objects`演算子は、すべての拡張メソッドとして実装されます<xref:System.Collections.Generic.IEnumerable%601>型。 そのため、いずれか`IEnumerable<>`実装は、LINQ で自動的に有効にします。  
   
--   インスタンス メソッドがいくつかの型への依存関係がこのような依存関係をどのように導入するときに、依存関係の管理規則ができなくなります。 依存関係など<xref:System.String>に<xref:System.Uri?displayProperty=nameWithType>はおそらく、望ましくないため、`String.ToUri()`インスタンス メソッドが返す`System.Uri`依存関係の管理の観点から正しくない設計になります。 静的な拡張メソッド`Uri.ToUri(this string str)`返す`System.Uri`はるかに優れた設計になります。  
+- インスタンス メソッドがいくつかの型への依存関係がこのような依存関係をどのように導入するときに、依存関係の管理規則ができなくなります。 依存関係など<xref:System.String>に<xref:System.Uri?displayProperty=nameWithType>はおそらく、望ましくないため、`String.ToUri()`インスタンス メソッドが返す`System.Uri`依存関係の管理の観点から正しくない設計になります。 静的な拡張メソッド`Uri.ToUri(this string str)`返す`System.Uri`はるかに優れた設計になります。  
   
  **X AVOID** で拡張メソッドを定義する<xref:System.Object?displayProperty=nameWithType>です。  
   

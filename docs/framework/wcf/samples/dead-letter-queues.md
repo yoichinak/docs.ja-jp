@@ -3,11 +3,11 @@ title: 配信不能キュー
 ms.date: 03/30/2017
 ms.assetid: ff664f33-ad02-422c-9041-bab6d993f9cc
 ms.openlocfilehash: 379b6901e835a6820d194edda1d7727df789bfd8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334095"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62051963"
 ---
 # <a name="dead-letter-queues"></a>配信不能キュー
 このサンプルでは、配信できなかったメッセージの処理方法を示します。 基にして、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプル。 このサンプルでは、`netMsmqBinding` バインディングを使用します。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。
@@ -24,15 +24,15 @@ ms.locfileid: "59334095"
 
  `NetMsmqBinding` バインディングの配信不能キューは、次のプロパティとして表されます。
 
--   <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> プロパティは、クライアントが必要とする配信不能キューの種類を表します。 この列挙体には、次の値があります。
+- <xref:System.ServiceModel.MsmqBindingBase.DeadLetterQueue%2A> プロパティは、クライアントが必要とする配信不能キューの種類を表します。 この列挙体には、次の値があります。
 
--   `None`:クライアントでは、配信不能キューは必要ありません。
+- `None`:クライアントでは、配信不能キューは必要ありません。
 
--   `System`:システム配信不能キューを使用して、配信不能メッセージを格納します。 システムの配信不能キューは、そのコンピューターで実行されているすべてのアプリケーションで共有されます。
+- `System`:システム配信不能キューを使用して、配信不能メッセージを格納します。 システムの配信不能キューは、そのコンピューターで実行されているすべてのアプリケーションで共有されます。
 
--   `Custom`:カスタム配信不能キューを使用して指定、<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>プロパティは、配信不能メッセージの格納に使用されます。 この機能は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。 同じコンピューターで実行されている他のアプリケーションとキューを共有するのではなく、そのアプリケーション専用の配信不能キューが必要な場合に、この値を使用します。
+- `Custom`:カスタム配信不能キューを使用して指定、<xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A>プロパティは、配信不能メッセージの格納に使用されます。 この機能は、[!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。 同じコンピューターで実行されている他のアプリケーションとキューを共有するのではなく、そのアプリケーション専用の配信不能キューが必要な場合に、この値を使用します。
 
--   <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> プロパティは、配信不能キューとして使用される特定のキューを表します。 このプロパティは [!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
+- <xref:System.ServiceModel.MsmqBindingBase.CustomDeadLetterQueue%2A> プロパティは、配信不能キューとして使用される特定のキューを表します。 このプロパティは [!INCLUDE[wv](../../../../includes/wv-md.md)] でのみ使用できます。
 
  このサンプルでは、クライアントがトランザクションのスコープ内からメッセージをまとめてサービスに送信しますが、メッセージの "有効期間" には意図的に小さい値 (約 2 秒) を指定しています。 さらに、有効期限切れのメッセージを入れるために使用するカスタムの配信不能キューを指定します。
 
@@ -314,15 +314,15 @@ Processing Purchase Order: 97897eff-f926-4057-a32b-af8fb11b9bf9
 
 2. サービスを最初に実行すると、サービスはキューが存在するかどうかを確認します。 キューが存在しない場合、サービスによってキューが作成されます。 最初にサービスを実行してキューを作成することも、MSMQ キュー マネージャーでキューを作成することもできます。 Windows 2008 でキューを作成するには、次の手順に従います。
 
-    1.  Visual Studio 2012 では、サーバー マネージャーを開きます。
+    1. Visual Studio 2012 では、サーバー マネージャーを開きます。
 
-    2.  展開、**機能**タブ。
+    2. 展開、**機能**タブ。
 
-    3.  右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。
+    3. 右クリック**プライベート メッセージ キュー**、選び**新規**、**プライベート キュー**します。
 
-    4.  チェック、**トランザクション**ボックス。
+    4. チェック、**トランザクション**ボックス。
 
-    5.  入力`ServiceModelSamplesTransacted`として新しいキューの名前。
+    5. 入力`ServiceModelSamplesTransacted`として新しいキューの名前。
 
 3. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
 
