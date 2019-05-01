@@ -8,11 +8,11 @@ helpviewer_keywords:
 - status bars
 ms.assetid: b7b9852c-633d-4416-bb2e-94852b989c6c
 ms.openlocfilehash: 5fdefa7d7e7c7ef543f677be7beb61dfee54e077
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59077317"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62009696"
 ---
 # <a name="statusbar-control-overview-windows-forms"></a>StatusBar コントロールの概要 (Windows フォーム)
 > [!IMPORTANT]

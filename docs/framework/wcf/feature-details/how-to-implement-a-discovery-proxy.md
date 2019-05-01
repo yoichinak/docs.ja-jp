@@ -3,22 +3,22 @@ title: '方法: 探索プロキシを実装する'
 ms.date: 03/30/2017
 ms.assetid: 78d70e0a-f6c3-4cfb-a7ca-f66ebddadde0
 ms.openlocfilehash: b3e0b5cef01998c1e509586ba1fab3924eb7bc0b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59321017"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62000910"
 ---
 # <a name="how-to-implement-a-discovery-proxy"></a>方法: 探索プロキシを実装する
 このトピックでは、探索プロキシの実装方法について説明します。 Windows Communication Foundation (WCF) の検出機能の詳細については、次を参照してください。 [WCF Discovery の概要](../../../../docs/framework/wcf/feature-details/wcf-discovery-overview.md)します。 探索プロキシを実装するには、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを作成します。 このサンプルでは、他の多くのサポート クラスも定義され、使用されています。 `OnResolveAsyncResult`、`OnFindAsyncResult`、および `AsyncResult`。 これらのクラスは、<xref:System.IAsyncResult> インターフェイスを実装します。 詳細については<xref:System.IAsyncResult>を参照してください[System.IAsyncResult インターフェイス](xref:System.IAsyncResult)します。
 
  このトピックでは、探索プロキシの実装を 3 つの主要な部分に分けて説明します。
 
--   データ ストアを含み、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを定義する。
+- データ ストアを含み、抽象クラス <xref:System.ServiceModel.Discovery.DiscoveryProxy> を拡張するクラスを定義する。
 
--   ヘルパー クラス `AsyncResult` を実装する。
+- ヘルパー クラス `AsyncResult` を実装する。
 
--   探索プロキシをホストする。
+- 探索プロキシをホストする。
 
 ### <a name="to-create-a-new-console-application-project"></a>新しいコンソール アプリケーション プロジェクトを作成するには
 
@@ -28,9 +28,9 @@ ms.locfileid: "59321017"
 
 3. プロジェクトに次の参照を追加します。
 
-    1.  System.ServiceModel.dll
+    1. System.ServiceModel.dll
 
-    2.  System.Servicemodel.Discovery.dll
+    2. System.Servicemodel.Discovery.dll
 
     > [!CAUTION]
     >  必ず、これらのアセンブリのバージョン 4.0 以降を参照してください。

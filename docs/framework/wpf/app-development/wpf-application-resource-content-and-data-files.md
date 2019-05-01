@@ -18,20 +18,20 @@ helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 7ad2943b-3961-41d3-8fc6-1582d43f5d99
 ms.openlocfilehash: 075f70e3ef053507dfe3d408246d179bb57c5891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59211927"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62032254"
 ---
 # <a name="wpf-application-resource-content-and-data-files"></a>WPF アプリケーションのリソース ファイル、コンテンツ ファイル、およびデータ ファイル
 [!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 多くの場合など、非実行可能ファイルのデータを含むファイルに依存するアプリケーション[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]イメージ、ビデオ、およびオーディオです。 Windows Presentation Foundation (WPF) の構成の識別、およびこれらの種類のアプリケーション データ ファイルと呼ばれる、データ ファイルを使用して特別なサポートを提供します。 このサポートの中心となるのは、次のような特定のアプリケーション データ ファイルの種類のセットです。  
   
--   **リソース ファイル**:データ ファイルも実行可能ファイルまたはライブラリにコンパイルされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
+- **リソース ファイル**:データ ファイルも実行可能ファイルまたはライブラリにコンパイルされる[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
   
--   **コンテンツ ファイル**:スタンドアロン データ ファイルを実行可能ファイルとの明示的な関連付けを持つ[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
+- **コンテンツ ファイル**:スタンドアロン データ ファイルを実行可能ファイルとの明示的な関連付けを持つ[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
   
--   **起点サイト ファイル**:実行可能ファイルとの関連付けを持たないスタンドアロン データ ファイル[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
+- **起点サイト ファイル**:実行可能ファイルとの関連付けを持たないスタンドアロン データ ファイル[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アセンブリ。  
   
  これらの 3 種類のファイルの重要な違いは、リソース ファイルとコンテンツ ファイルはビルド時に認識されるという点です。アセンブリは、これらを明確に認識します。 起点サイト ファイル、ただし、アセンブリがありますそれらの知識、またはパックを使用して暗黙的な知識[!INCLUDE[TLA#tla_uri](../../../../includes/tlasharptla-uri-md.md)]参照。 後者の場合、参照される起点サイト ファイルが実際に存在する保証はありません。  
   
@@ -45,11 +45,11 @@ ms.locfileid: "59211927"
   
  リソース ファイルは、次のときに使用します。  
   
--   コンパイルしてアセンブリに組み込んだ後に、リソース ファイルのコンテンツを更新する必要がない。  
+- コンパイルしてアセンブリに組み込んだ後に、リソース ファイルのコンテンツを更新する必要がない。  
   
--   ファイルの依存関係の数を減らして、アプリケーション配布の複雑さを軽減する必要がある。  
+- ファイルの依存関係の数を減らして、アプリケーション配布の複雑さを軽減する必要がある。  
   
--   アプリケーション データ ファイルがローカライズ可能にする必要があります (を参照してください[WPF のグローバリゼーションおよびローカリゼーションの概要](../advanced/wpf-globalization-and-localization-overview.md))。  
+- アプリケーション データ ファイルがローカライズ可能にする必要があります (を参照してください[WPF のグローバリゼーションおよびローカリゼーションの概要](../advanced/wpf-globalization-and-localization-overview.md))。  
   
 > [!NOTE]
 >  このセクションで説明されているリソース ファイルは、リソース ファイルで説明されているものと異なる[XAML リソース](../advanced/xaml-resources.md)しで説明されている埋め込みまたはリンクされたリソースとは異なる[管理アプリケーションのリソース (.NET)](/visualstudio/ide/managing-application-resources-dotnet).  
@@ -175,13 +175,13 @@ ms.locfileid: "59211927"
 ## <a name="site-of-origin-files"></a>起点サイト ファイル  
  リソース ファイルで定義されている、共に配布されるアセンブリを使用した明示的な関連付けがある場合、<xref:System.Windows.Resources.AssemblyAssociatedContentFileAttribute>します。 ただし、アセンブリとアプリケーション データ ファイル間に暗黙的な関係を持たせる、または関係を持たせない場合があります。たとえば次のような場合です。  
   
--   ファイルは、コンパイル時に存在しません。  
+- ファイルは、コンパイル時に存在しません。  
   
--   アセンブリが必要とするファイルが、実行時までわからない場合。  
+- アセンブリが必要とするファイルが、実行時までわからない場合。  
   
--   関連付けられているアセンブリを再コンパイルせずにファイルを更新可能にする場合。  
+- 関連付けられているアセンブリを再コンパイルせずにファイルを更新可能にする場合。  
   
--   オーディオやビデオなど大容量のデータ ファイルを使用するアプリケーションで、ユーザーが選択した場合にのみファイルをダウンロードする場合。  
+- オーディオやビデオなど大容量のデータ ファイルを使用するアプリケーションで、ユーザーが選択した場合にのみファイルをダウンロードする場合。  
   
  この種の従来型を使用してファイルをロードすることは[!INCLUDE[TLA2#tla_uri](../../../../includes/tla2sharptla-uri-md.md)]file:/// http:// 方式などのスキーム。  
   

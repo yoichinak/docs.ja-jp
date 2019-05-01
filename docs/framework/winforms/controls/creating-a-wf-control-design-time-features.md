@@ -11,11 +11,11 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
 ms.openlocfilehash: 70cd08a9d7d03cec4e946d2acb806dbecfe774f7
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57724626"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "62011568"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成
 
@@ -256,7 +256,7 @@ using MarqueeControlLibrary;
 
 5. ドラッグ、<xref:System.ComponentModel.BackgroundWorker>コンポーネントから、**ツールボックス**上に、`MarqueeText`コントロール。 このコンポーネントを許可するが、`MarqueeText`自体を非同期的に更新するコントロール。
 
-6. [プロパティ] ウィンドウで次のように設定します。、<xref:System.ComponentModel.BackgroundWorker>コンポーネントの`WorkerReportsProgress`と<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>プロパティ`true`します。 これらの設定により、<xref:System.ComponentModel.BackgroundWorker>定期的に発生させるコンポーネント、<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベントと非同期更新をキャンセルします。 詳細については、[BackgroundWorker コンポーネント](backgroundworker-component.md)を参照してください。
+6. [プロパティ] ウィンドウで次のように設定します。、<xref:System.ComponentModel.BackgroundWorker>コンポーネントの`WorkerReportsProgress`と<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>プロパティ`true`します。 これらの設定により、<xref:System.ComponentModel.BackgroundWorker>定期的に発生させるコンポーネント、<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベントと非同期更新をキャンセルします。 詳細については、次を参照してください。 [BackgroundWorker コンポーネント](backgroundworker-component.md)します。
 
 7. 開く、`MarqueeText`内のソース ファイル、**コード エディター**します。 ファイルの上部にある次の名前空間をインポートします。
 
@@ -315,7 +315,7 @@ using MarqueeControlLibrary;
 
 2. ドラッグ、<xref:System.ComponentModel.BackgroundWorker>コンポーネントから、**ツールボックス**上に、`MarqueeBorder`コントロール。 このコンポーネントを許可するが、`MarqueeBorder`自体を非同期的に更新するコントロール。
 
-3. [プロパティ] ウィンドウで次のように設定します。、<xref:System.ComponentModel.BackgroundWorker>コンポーネントの`WorkerReportsProgress`と<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>プロパティ`true`します。 これらの設定により、<xref:System.ComponentModel.BackgroundWorker>定期的に発生させるコンポーネント、<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベントと非同期更新をキャンセルします。 詳細については、[BackgroundWorker コンポーネント](backgroundworker-component.md)を参照してください。
+3. [プロパティ] ウィンドウで次のように設定します。、<xref:System.ComponentModel.BackgroundWorker>コンポーネントの`WorkerReportsProgress`と<xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A>プロパティ`true`します。 これらの設定により、<xref:System.ComponentModel.BackgroundWorker>定期的に発生させるコンポーネント、<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベントと非同期更新をキャンセルします。 詳細については、次を参照してください。 [BackgroundWorker コンポーネント](backgroundworker-component.md)します。
 
 4. [プロパティ] ウィンドウで、イベント ボタンをクリックします。 ハンドラーのアタッチ、<xref:System.ComponentModel.BackgroundWorker.DoWork>と<xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベント。
 
@@ -441,8 +441,7 @@ using MarqueeControlLibrary;
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#450](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#450)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#450](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#450)]
 
-5. 
-  <xref:System.Windows.Forms.Control.Enabled%2A> プロパティと <xref:System.Windows.Forms.Control.Visible%2A> プロパティを実装します。 これらの実装では、コントロールのプロパティをシャドウします。
+5. <xref:System.Windows.Forms.Control.Enabled%2A> プロパティと <xref:System.Windows.Forms.Control.Visible%2A> プロパティを実装します。 これらの実装では、コントロールのプロパティをシャドウします。
 
     [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#440](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/marqueeborderdesigner.cs#440)]
     [!code-vb[System.Windows.Forms.Design.DocumentDesigner#440](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/marqueeborderdesigner.vb#440)]
@@ -570,8 +569,7 @@ private IWindowsFormsEditorService editorService;
 
 4. **ソリューション エクスプローラー**で、**[すべてのファイルを表示]** ボタンをクリックします。 LightShapeSelectionControl.Designer.cs または LightShapeSelectionControl.Designer.vb ファイルを開きの既定の定義を削除、<xref:System.ComponentModel.Component.Dispose%2A>メソッド。
 
-5. 
-  `LightShape` プロパティを実装します。
+5. `LightShape` プロパティを実装します。
 
      [!code-csharp[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/CS/lightshapeselectioncontrol.cs#360)]
      [!code-vb[System.Windows.Forms.Design.DocumentDesigner#360](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Design.DocumentDesigner/VB/lightshapeselectioncontrol.vb#360)]
@@ -647,7 +645,7 @@ private void stopButton_Click(object sender, System.EventArgs e)
 
 - ライセンス、`MarqueeControl`します。 詳細については、「[方法 :コンポーネントとコントロールのライセンスの](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/fe8b1eh9(v=vs.120))します。
 
-- コントロールがシリアル化する方法とそれらのコードを生成する方法を制御します。 詳細については、[動的ソース コードの生成とコンパイル](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)を参照してください。
+- コントロールがシリアル化する方法とそれらのコードを生成する方法を制御します。 詳細については、次を参照してください。[動的ソース コードの生成とコンパイル](../../reflection-and-codedom/dynamic-source-code-generation-and-compilation.md)します。
 
 ## <a name="see-also"></a>関連項目
 

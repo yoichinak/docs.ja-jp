@@ -3,11 +3,11 @@ title: WF ワークフロー - からフィードの OData の利用
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
 ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58408996"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61946064"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>ワークフローからのフィードの OData の利用
 
@@ -30,14 +30,14 @@ Northwind クライアント ライブラリを生成するに使用すること
 サービスによって公開されるサービス操作はなく、 **[サービス]** ボックスの一覧には Northwind データ サービスによって公開されるエンティティを表す項目が含まれていることに注意してください。 サービス参照を追加すると、これらのエンティティに対するクラスが生成され、クライアント コードで使用できるようになります。 このトピックの例ではこれらのクラスと `NorthwindEntities` クラスを使用してクエリを実行します。
 
 > [!NOTE]
-> 詳細については、[データ サービス クライアント ライブラリ (WCF Data Services) を生成する](../data/wcf/generating-the-data-service-client-library-wcf-data-services.md)を参照してください。
+> 詳細については、次を参照してください。[データ サービス クライアント ライブラリ (WCF Data Services) を生成する](../data/wcf/generating-the-data-service-client-library-wcf-data-services.md)します。
 
 ### <a name="using-asynchronous-methods"></a>非同期メソッドの使用
 
 Web のリソースにアクセスするときに発生することのある、待機時間に伴う問題に対処するために、WCF Data Services には非同期でアクセスすることをお勧めします。 WCF Data Services クライアント ライブラリは、クエリを呼び出すための非同期のメソッドを含めるし、Windows Workflow Foundation (WF) の提供、<xref:System.Activities.AsyncCodeActivity>非同期アクティビティを作成するためのクラス。 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティを書き込んで、非同期メソッドを含む [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] クラスを利用するか、非同期で実行するコードをメソッドに含め、デリゲートを使用して呼び出すことができます。 ここでは、 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティの例を 2 つ紹介します。1 つは WCF Data Services クライアント ライブラリの非同期メソッドを使用し、もう 1 つはデリゲートを使用しています。
 
 > [!NOTE]
-> 詳細については、[非同期操作 (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md)と[非同期アクティビティを作成する](creating-asynchronous-activities-in-wf.md)を参照してください。
+> 詳細については、次を参照してください。[非同期操作 (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md)と[非同期アクティビティを作成する](creating-asynchronous-activities-in-wf.md)します。
 
 ### <a name="using-client-library-asynchronous-methods"></a>クライアント ライブラリの非同期メソッドの使用
 
@@ -82,7 +82,7 @@ Calling WCF Data Service...
 顧客がすべて追加されると、一覧が返されます。 `GetCustomers` メソッドはアクティビティの <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライドで指定されます。 メソッドには戻り値があるので、メソッドを指定するために `Func<string, List<Customer>>` が作成されます。
 
 > [!NOTE]
-> 非同期操作を実行するメソッドに戻り値がない場合は、<xref:System.Action> の代わりに <xref:System.Func%601> が使用されます。 両方のアプローチを使用して非同期の例を作成する例については、[非同期アクティビティを作成する](creating-asynchronous-activities-in-wf.md)を参照してください。
+> 非同期操作を実行するメソッドに戻り値がない場合は、<xref:System.Action> の代わりに <xref:System.Func%601> が使用されます。 両方のアプローチを使用して非同期の例を作成する例については、次を参照してください。[非同期アクティビティを作成する](creating-asynchronous-activities-in-wf.md)します。
 
 この <xref:System.Func%601> は <xref:System.Activities.AsyncCodeActivityContext.UserState%2A> に割り当てられ、`BeginInvoke` が呼び出されます。 呼び出すメソッドはアクティビティの引数の環境にアクセスできないので、引数 `ServiceUri` 値は <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A>に渡されたコールバックおよび状態と共に、最初のパラメーターとして渡されます。 `GetCustomers` が戻ると、ランタイムによって <xref:System.Activities.AsyncCodeActivity.EndExecute%2A>が呼び出されます。 <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> 内のコードはデリゲートを <xref:System.Activities.AsyncCodeActivityContext.UserState%2A>から取得し、 `EndInvoke`を呼び出し、結果を返します。この結果は、 `GetCustomers` メソッドから返された顧客の一覧です。
 

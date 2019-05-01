@@ -13,11 +13,11 @@ helpviewer_keywords:
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
 ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304806"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61971315"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF アドインの概要
 <a name="Introduction"></a> .NET Framework には、開発者がアドイン機能拡張をサポートするアプリケーションの作成に使用できるアドイン モデルが含まれています。 このアドイン モデルを使用することで、アプリケーション機能に統合され、アプリケーション機能を拡張するアドインを作成できます。 シナリオによっては、アプリケーションは、アドインによって提供されるユーザー インターフェイスの表示にも必要です。このトピックでは、WPF がこれらのシナリオ、その利点、および制限事項の背後にあるアーキテクチャを有効にする .NET Framework アドイン モデルを強化する方法を示します。  
@@ -30,33 +30,33 @@ ms.locfileid: "59304806"
 ## <a name="add-ins-overview"></a>アドインの概要  
  新しい機能を追加するためにアプリケーションを再コンパイルして再配置する手間を省くことを目的として、アプリケーションは機能拡張メカニズムを実装し、開発者 (ファーストパーティ、サードパーティのいずれも) が元のアプリケーションに統合される別のアプリケーションを作成できるようにしています。 こうした拡張機能をサポートする方法としては、アドイン ("アドオン"、"プラグイン" などとも呼ばれる) の使用が最も一般的です。 アドインによる機能拡張を公開する実際のアプリケーションとして、次のようなものが挙げられます。  
   
--   Internet Explorer のアドオン。  
+- Internet Explorer のアドオン。  
   
--   Windows Media Player のプラグイン。  
+- Windows Media Player のプラグイン。  
   
--   Visual Studio のアドイン。  
+- Visual Studio のアドイン。  
   
  たとえば、Windows Media Player のアドイン モデルにおいて、サードパーティの開発者は、Windows Media Player の機能をさまざまな形で拡張する "プラグイン" を実装できます。たとえば、Windows Media Player でネイティブにサポートされていないメディア形式 (DVD、MP3 など) のデコーダーおよびエンコーダー、オーディオ効果、スキンなどを作成できます。 各アドイン モデルは、アプリケーション固有の機能を公開するためにビルドされますが、どのアドイン モデルにも共通するエンティティや動作がいくつかあります。  
   
  典型的な機能拡張ソリューションの主な 3 つのエンティティは、*コントラクト*、*アドイン*、および*ホスト アプリケーション*です。 コントラクトは、次の 2 つの方法で、アドインとホスト アプリケーションとの統合方法を定義します。  
   
--   アドインは、ホスト アプリケーションによって実装される機能と統合されます。  
+- アドインは、ホスト アプリケーションによって実装される機能と統合されます。  
   
--   ホスト アプリケーションで、アドインを統合するための機能を公開します。  
+- ホスト アプリケーションで、アドインを統合するための機能を公開します。  
   
  アドインを使用するには、ホスト アプリケーションが実行時にアドインを検索して読み込む必要があります。 したがって、アドインをサポートするアプリケーションには次の機能が必要です。  
   
--   **探索**:ホスト アプリケーションによってサポートされるコントラクトに準拠しているアドインを検索します。  
+- **探索**:ホスト アプリケーションによってサポートされるコントラクトに準拠しているアドインを検索します。  
   
--   **アクティブ化**:読み込み、実行、およびアドインとの通信を確立します。  
+- **アクティブ化**:読み込み、実行、およびアドインとの通信を確立します。  
   
--   **分離**:アプリケーション ドメインまたはプロセスを使用して、潜在的なセキュリティとアドインの実行の問題からアプリケーションを保護する、分離境界を確立します。  
+- **分離**:アプリケーション ドメインまたはプロセスを使用して、潜在的なセキュリティとアドインの実行の問題からアプリケーションを保護する、分離境界を確立します。  
   
--   **通信**:アドインを許可して、メソッドを呼び出すと、データを渡すことによって分離境界を越えて互いと通信するアプリケーションをホストします。  
+- **通信**:アドインを許可して、メソッドを呼び出すと、データを渡すことによって分離境界を越えて互いと通信するアプリケーションをホストします。  
   
--   **有効期間管理**:読み込みとクリーニング、予測可能な方法でアプリケーション ドメインとプロセスをアンロード (を参照してください[アプリケーション ドメイン](../../app-domains/application-domains.md))。  
+- **有効期間管理**:読み込みとクリーニング、予測可能な方法でアプリケーション ドメインとプロセスをアンロード (を参照してください[アプリケーション ドメイン](../../app-domains/application-domains.md))。  
   
--   **バージョン管理**:アプリケーションをホストとアドイン通信できることも新しいバージョンのいずれかが作成されたときにすることです。  
+- **バージョン管理**:アプリケーションをホストとアドイン通信できることも新しいバージョンのいずれかが作成されたときにすることです。  
   
  このことからわかるように、堅牢なアドイン モデルの開発は簡単なことではありません。 このため、.NET Framework は、アドイン モデルを構築するためのインフラストラクチャを提供します。  
   
@@ -75,27 +75,27 @@ ms.locfileid: "59304806"
   
 1. **アドインが UI を返す**。 アドインの UI を返す、ホスト アプリケーションにメソッドの呼び出しを使用して、コントラクトで定義されています。 このシナリオは、次の場合に使用されます。  
   
-    -   アドインによって返される UI の外観はいずれかのデータに依存または条件に存在する、実行時にのみなど動的にレポートを生成します。  
+    - アドインによって返される UI の外観はいずれかのデータに依存または条件に存在する、実行時にのみなど動的にレポートを生成します。  
   
-    -   アドインによって提供されるサービスの UI アドインで使用できるホスト アプリケーションの UI と異なります。  
+    - アドインによって提供されるサービスの UI アドインで使用できるホスト アプリケーションの UI と異なります。  
   
-    -   アドインは主にサービスをホスト アプリケーションの実行し、UI を使用してホスト アプリケーションにステータスをレポートします。  
+    - アドインは主にサービスをホスト アプリケーションの実行し、UI を使用してホスト アプリケーションにステータスをレポートします。  
   
 2. **アドインが UI である**。 アドインのコントラクトで定義されている、UI であります。 このシナリオは、次の場合に使用されます。  
   
-    -   アドインは表示以外のサービス (広告など) を提供しない。  
+    - アドインは表示以外のサービス (広告など) を提供しない。  
   
-    -   アドインによって提供されるサービスの UI は、そのアドインを電卓、カラー ピッカーなどが使用できるすべてのホスト アプリケーションに共通です。  
+    - アドインによって提供されるサービスの UI は、そのアドインを電卓、カラー ピッカーなどが使用できるすべてのホスト アプリケーションに共通です。  
   
  これらのシナリオでは、ホスト アプリケーションとアドイン アプリケーション ドメイン間で UI オブジェクトを渡すことができますが必要です。 以降、.NET Framework アドイン モデルはアプリケーション ドメイン間で通信するリモート処理に依存それらの間で渡されるオブジェクトはリモート処理可能にする必要があります。  
   
  リモート処理可能なオブジェクトとは、次の 1 つ以上に該当するクラスのインスタンスです。  
   
--   派生した、<xref:System.MarshalByRefObject>クラス。  
+- 派生した、<xref:System.MarshalByRefObject>クラス。  
   
--   <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装します。  
+- <xref:System.Runtime.Serialization.ISerializable> インターフェイスを実装します。  
   
--   <xref:System.SerializableAttribute>属性が適用されています。  
+- <xref:System.SerializableAttribute>属性が適用されています。  
   
 > [!NOTE]
 >  リモート処理可能な .NET Framework オブジェクトの作成に関する詳細については、次を参照してください。[オブジェクトのためのリモート処理可能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/wcf3swha(v=vs.100))します。  
@@ -156,11 +156,11 @@ ms.locfileid: "59304806"
 ## <a name="add-ins-and-xaml-browser-applications"></a>アドインと XAML ブラウザー アプリケーション  
  ここまでの例では、ホスト アプリケーションはスタンドアロン アプリケーションとしてインストールされています。 [!INCLUDE[TLA#tla_xbap#plural](../../../../includes/tlasharptla-xbapsharpplural-md.md)] はアドインをホストすることもできますが、そのためには次に示すビルドと実装の要件を満たす必要があります。  
   
--   パイプライン (フォルダーとアセンブリ) とアドイン アセンブリを、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] と同じフォルダーにある、クライアント コンピューターの [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] アプリケーション キャッシュにダウンロードするよう、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] アプリケーション マニフェストを特別に構成する必要があります。  
+- パイプライン (フォルダーとアセンブリ) とアドイン アセンブリを、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] と同じフォルダーにある、クライアント コンピューターの [!INCLUDE[TLA#tla_clickonce](../../../../includes/tlasharptla-clickonce-md.md)] アプリケーション キャッシュにダウンロードするよう、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] アプリケーション マニフェストを特別に構成する必要があります。  
   
--   アドインを探索して読み込む [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] コードで、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] の [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] アプリケーション キャッシュを、パイプラインとアドインの場所として使用する必要があります。  
+- アドインを探索して読み込む [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] コードで、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] の [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] アプリケーション キャッシュを、パイプラインとアドインの場所として使用する必要があります。  
   
--   [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] は、アドインが起点サイトにある圧縮しないファイルを参照する場合、アドインを特別なセキュリティ コンテキストの下で読み込む必要があります。[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] によってホストされる場合、アドインが参照できるのは、ホスト アプリケーションの起点サイトにある圧縮しないファイルのみです。  
+- [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] は、アドインが起点サイトにある圧縮しないファイルを参照する場合、アドインを特別なセキュリティ コンテキストの下で読み込む必要があります。[!INCLUDE[TLA2#tla_xbap#plural](../../../../includes/tla2sharptla-xbapsharpplural-md.md)] によってホストされる場合、アドインが参照できるのは、ホスト アプリケーションの起点サイトにある圧縮しないファイルのみです。  
   
  これらのタスクについて、次のサブセクションで詳しく説明します。  
   
@@ -194,13 +194,13 @@ ms.locfileid: "59304806"
 ### <a name="using-the-pipeline-and-add-in-from-the-application-base"></a>アプリケーション ベースからのパイプラインとアドインの使用  
  パイプラインとアドインは [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] 配置用に構成されると、同じ [!INCLUDE[TLA2#tla_clickonce](../../../../includes/tla2sharptla-clickonce-md.md)] キャッシュ フォルダーに [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] としてダウンロードされます。 このパイプラインとアドインを [!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] から使用するには、[!INCLUDE[TLA2#tla_xbap](../../../../includes/tla2sharptla-xbap-md.md)] コードがそれらをアプリケーション ベースから取得する必要があります。 さまざまな種類とパイプラインとアドインを使用して .NET Framework アドイン モデルのメンバーは、このシナリオで特別なサポートを提供します。 まず、パスがで識別される、<xref:System.AddIn.Hosting.PipelineStoreLocation.ApplicationBase>列挙値。 この値を適切なアドイン メンバーのオーバーロードと併用することで、次のようなパイプラインを使用できます。  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.FindAddIns%28System.Type%2CSystem.AddIn.Hosting.PipelineStoreLocation%2CSystem.String%5B%5D%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Rebuild%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
--   <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
+- <xref:System.AddIn.Hosting.AddInStore.Update%28System.AddIn.Hosting.PipelineStoreLocation%29?displayProperty=nameWithType>  
   
 ### <a name="accessing-the-hosts-site-of-origin"></a>ホストの起点サイトへのアクセス  
  アドインが起点サイトのファイルを参照できるように、アドインはホスト アプリケーションと等価なセキュリティ分離を使用して読み込む必要があります。 このセキュリティ レベルがで識別される、<xref:System.AddIn.Hosting.AddInSecurityLevel.Host?displayProperty=nameWithType>列挙の値に渡されると、<xref:System.AddIn.Hosting.AddInToken.Activate%2A>メソッド、アドインをアクティブ化します。  
@@ -213,9 +213,9 @@ ms.locfileid: "59304806"
   
  基本的には、WPF に合格しなかった UI アドインからホスト アプリケーションです。代わりに、WPF は、WPF の相互運用性を使用して、UI の Win32 ウィンドウ ハンドルを渡します。 そのため、アドインからの UI は、ホスト アプリケーションに渡される、次のようにします。  
   
--   アドイン側では、WPF は、ホスト アプリケーションによって表示される UI のウィンドウ ハンドルを取得します。 ウィンドウ ハンドルがから派生する内部の WPF クラスによってカプセル化された<xref:System.Windows.Interop.HwndSource>実装と<xref:System.AddIn.Contract.INativeHandleContract>します。 このクラスのインスタンスがによって返される<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>はアドインのアプリケーション ドメインからホスト アプリケーションのアプリケーション ドメインにマーシャ リングとします。  
+- アドイン側では、WPF は、ホスト アプリケーションによって表示される UI のウィンドウ ハンドルを取得します。 ウィンドウ ハンドルがから派生する内部の WPF クラスによってカプセル化された<xref:System.Windows.Interop.HwndSource>実装と<xref:System.AddIn.Contract.INativeHandleContract>します。 このクラスのインスタンスがによって返される<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>はアドインのアプリケーション ドメインからホスト アプリケーションのアプリケーション ドメインにマーシャ リングとします。  
   
--   WPF には、ホスト アプリケーション側で、<xref:System.Windows.Interop.HwndSource>内部の WPF クラスから派生したとして<xref:System.Windows.Interop.HwndHost>消費<xref:System.AddIn.Contract.INativeHandleContract>します。 このクラスのインスタンスがによって返される<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>ホスト アプリケーションにします。  
+- WPF には、ホスト アプリケーション側で、<xref:System.Windows.Interop.HwndSource>内部の WPF クラスから派生したとして<xref:System.Windows.Interop.HwndHost>消費<xref:System.AddIn.Contract.INativeHandleContract>します。 このクラスのインスタンスがによって返される<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ContractToViewAdapter%2A>ホスト アプリケーションにします。  
   
  <xref:System.Windows.Interop.HwndHost> 存在すると、WPF ユーザー インターフェイスから、ウィンドウ ハンドルによって識別される、ユーザー インターフェイスを表示します。 詳細については、「[WPF と Win32 の相互運用性](../advanced/wpf-and-win32-interoperation.md)」を参照してください。  
   
@@ -230,51 +230,51 @@ ms.locfileid: "59304806"
 ## <a name="wpf-add-in-benefits"></a>WPF アドインの利点  
  WPF アドインのユーザー インターフェイスがから派生する内部クラスを使用してホスト アプリケーションから表示されるため、 <xref:System.Windows.Interop.HwndHost>、それらのユーザー インターフェイスは、の機能によって制限されます<xref:System.Windows.Interop.HwndHost>レイアウトなどの WPF UI サービスに関してレンダリング、データ バインディング、スタイル、テンプレート、およびリソース。 ただし、WPF はその内部<xref:System.Windows.Interop.HwndHost>次を含む追加の機能を備えたサブクラスです。  
   
--   ホスト アプリケーションの UI と、アドインの UI 間のタブ移動します。 「UI であるアドイン」プログラミング モデルには、オーバーライドする追加アドイン側アダプターが必要があります<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>アドインが完全に信頼できるか部分的に信頼されているかどうか、tab キーを有効にします。  
+- ホスト アプリケーションの UI と、アドインの UI 間のタブ移動します。 「UI であるアドイン」プログラミング モデルには、オーバーライドする追加アドイン側アダプターが必要があります<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>アドインが完全に信頼できるか部分的に信頼されているかどうか、tab キーを有効にします。  
   
--   ホスト アプリケーションのユーザー インターフェイスから表示されるアドインのユーザー インターフェイスのアクセシビリティ要件を順守します。  
+- ホスト アプリケーションのユーザー インターフェイスから表示されるアドインのユーザー インターフェイスのアクセシビリティ要件を順守します。  
   
--   WPF アプリケーションを複数のアプリケーション ドメインのシナリオで安全に実行を有効にします。  
+- WPF アプリケーションを複数のアプリケーション ドメインのシナリオで安全に実行を有効にします。  
   
--   アドインの UI に不正なアクセスを防止 ウィンドウでは、セキュリティの分離 (つまり、部分信頼セキュリティ サンド ボックス) でアドインが実行される場合を処理します。 呼び出す<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>このセキュリティを確保します。  
+- アドインの UI に不正なアクセスを防止 ウィンドウでは、セキュリティの分離 (つまり、部分信頼セキュリティ サンド ボックス) でアドインが実行される場合を処理します。 呼び出す<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>このセキュリティを確保します。  
   
-    -   ウィンドウ ハンドルをアドインの UI の分離の境界を越えて渡す唯一の方法は"アドインが UI を返す"プログラミング モデルを呼び出す<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>します。  
+    - ウィンドウ ハンドルをアドインの UI の分離の境界を越えて渡す唯一の方法は"アドインが UI を返す"プログラミング モデルを呼び出す<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>します。  
   
-    -   「アドインが UI を」プログラミング モデルのオーバーライド<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>追加アドイン側アダプターと呼び出し元の<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>(として上記の例に示すように) を呼び出して追加アドイン側アダプターの処理として必要です`QueryContract`実装から、ホスト側アダプター。  
+    - 「アドインが UI を」プログラミング モデルのオーバーライド<xref:System.AddIn.Pipeline.ContractBase.QueryContract%2A>追加アドイン側アダプターと呼び出し元の<xref:System.AddIn.Pipeline.FrameworkElementAdapters.ViewToContractAdapter%2A>(として上記の例に示すように) を呼び出して追加アドイン側アダプターの処理として必要です`QueryContract`実装から、ホスト側アダプター。  
   
--   アプリケーション ドメインの実行を何重にも保護します。 アプリケーション ドメインの制約に起因して、アドイン アプリケーション ドメインでスローされた未処理の例外は、分離境界が存在していても、アプリケーション全体のクラッシュにつながります。 ただし、WPF と .NET Framework アドイン モデルは、この問題を回避し、アプリケーションの安定性を向上させる簡単な方法を提供します。 UI を表示する WPF アドインを作成、<xref:System.Windows.Threading.Dispatcher>のアプリケーション ドメインは、ホスト アプリケーションが WPF アプリケーションの場合で実行されるスレッドの。 処理することにより、アプリケーション ドメインで発生するすべての未処理の例外を検出することができます、 <xref:System.Windows.Threading.Dispatcher.UnhandledException> 、WPF アドインのイベント<xref:System.Windows.Threading.Dispatcher>します。 取得することができます、<xref:System.Windows.Threading.Dispatcher>から、<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>プロパティ。  
+- アプリケーション ドメインの実行を何重にも保護します。 アプリケーション ドメインの制約に起因して、アドイン アプリケーション ドメインでスローされた未処理の例外は、分離境界が存在していても、アプリケーション全体のクラッシュにつながります。 ただし、WPF と .NET Framework アドイン モデルは、この問題を回避し、アプリケーションの安定性を向上させる簡単な方法を提供します。 UI を表示する WPF アドインを作成、<xref:System.Windows.Threading.Dispatcher>のアプリケーション ドメインは、ホスト アプリケーションが WPF アプリケーションの場合で実行されるスレッドの。 処理することにより、アプリケーション ドメインで発生するすべての未処理の例外を検出することができます、 <xref:System.Windows.Threading.Dispatcher.UnhandledException> 、WPF アドインのイベント<xref:System.Windows.Threading.Dispatcher>します。 取得することができます、<xref:System.Windows.Threading.Dispatcher>から、<xref:System.Windows.Threading.Dispatcher.CurrentDispatcher%2A>プロパティ。  
   
 <a name="WPFAddInModelLimitations"></a>   
 ## <a name="wpf-add-in-limitations"></a>WPF アドインの制約  
  WPF によって提供される既定の動作に追加するメリットを超える<xref:System.Windows.Interop.HwndSource>、 <xref:System.Windows.Interop.HwndHost>、およびウィンドウのハンドル、ホスト アプリケーションから表示されるアドインのユーザー インターフェイスの制限があります。  
   
--   ホスト アプリケーションから表示されるアドインのユーザー インターフェイスでは、ホスト アプリケーションのクリッピング動作が反映されません。  
+- ホスト アプリケーションから表示されるアドインのユーザー インターフェイスでは、ホスト アプリケーションのクリッピング動作が反映されません。  
   
--   相互運用性シナリオの*空域*の概念もアドインに適用されます (「[技術領域の概要](../advanced/technology-regions-overview.md)」を参照)。  
+- 相互運用性シナリオの*空域*の概念もアドインに適用されます (「[技術領域の概要](../advanced/technology-regions-overview.md)」を参照)。  
   
--   リソースの継承、データ バインディング、およびコマンドを実行するは自動的に追加で使用できるなど、ホスト アプリケーションの UI のサービスのユーザー インターフェイス。 これらのサービスをアドインに提供するには、パイプラインを更新する必要があります。  
+- リソースの継承、データ バインディング、およびコマンドを実行するは自動的に追加で使用できるなど、ホスト アプリケーションの UI のサービスのユーザー インターフェイス。 これらのサービスをアドインに提供するには、パイプラインを更新する必要があります。  
   
--   アドインの UI ことはできません回転、拡大縮小、傾斜、またはそれ以外の場合、変換によって影響を受ける (を参照してください[変換の概要](../graphics-multimedia/transforms-overview.md))。  
+- アドインの UI ことはできません回転、拡大縮小、傾斜、またはそれ以外の場合、変換によって影響を受ける (を参照してください[変換の概要](../graphics-multimedia/transforms-overview.md))。  
   
--   描画からの操作によって表示されるアドインのユーザー インターフェイス内のコンテンツ、<xref:System.Drawing>アルファ ブレンド名前空間を含めることができます。 ただし、アドインの UI とホスト アプリケーションが含まれる UI 不透明になります。 100% でなければなりませんつまり、`Opacity`両方のプロパティを 1 に設定する必要があります。  
+- 描画からの操作によって表示されるアドインのユーザー インターフェイス内のコンテンツ、<xref:System.Drawing>アルファ ブレンド名前空間を含めることができます。 ただし、アドインの UI とホスト アプリケーションが含まれる UI 不透明になります。 100% でなければなりませんつまり、`Opacity`両方のプロパティを 1 に設定する必要があります。  
   
--   場合、<xref:System.Windows.Window.AllowsTransparency%2A>アドインの UI を含むホスト アプリケーションのウィンドウのプロパティに設定されて`true`、アドインは表示されません。 これは、アドインの UI が 100% 不透明である場合でも当てはまります (つまり、`Opacity`プロパティが 1 の値を持つ)。  
+- 場合、<xref:System.Windows.Window.AllowsTransparency%2A>アドインの UI を含むホスト アプリケーションのウィンドウのプロパティに設定されて`true`、アドインは表示されません。 これは、アドインの UI が 100% 不透明である場合でも当てはまります (つまり、`Opacity`プロパティが 1 の値を持つ)。  
   
--   アドインの UI は、同じトップレベル ウィンドウ内の他の WPF 要素の上に表示する必要があります。  
+- アドインの UI は、同じトップレベル ウィンドウ内の他の WPF 要素の上に表示する必要があります。  
   
--   アドインの UI の一部をレンダリングできませんを使用して、<xref:System.Windows.Media.VisualBrush>します。 代わりに、アドインは、コントラクトによって定義されたメソッドを使用してホスト アプリケーションに渡すことができるビットマップを作成する生成された UI のスナップショットをかかる場合があります。  
+- アドインの UI の一部をレンダリングできませんを使用して、<xref:System.Windows.Media.VisualBrush>します。 代わりに、アドインは、コントラクトによって定義されたメソッドを使用してホスト アプリケーションに渡すことができるビットマップを作成する生成された UI のスナップショットをかかる場合があります。  
   
--   メディア ファイルを再生することはできません、<xref:System.Windows.Controls.MediaElement>アドインの UI にします。  
+- メディア ファイルを再生することはできません、<xref:System.Windows.Controls.MediaElement>アドインの UI にします。  
   
--   アドインの UI の生成されたマウス イベントが受信も、ホスト アプリケーションによって生成されると、`IsMouseOver`ホスト アプリケーションの UI のプロパティの値を持つ`false`します。  
+- アドインの UI の生成されたマウス イベントが受信も、ホスト アプリケーションによって生成されると、`IsMouseOver`ホスト アプリケーションの UI のプロパティの値を持つ`false`します。  
   
--   アドインの UI でコントロールの間でフォーカスが移動したとき、`GotFocus`と`LostFocus`イベントが受信も、ホスト アプリケーションによって発生します。  
+- アドインの UI でコントロールの間でフォーカスが移動したとき、`GotFocus`と`LostFocus`イベントが受信も、ホスト アプリケーションによって発生します。  
   
--   アドインの UI を含むホスト アプリケーションの部分では、印刷時に白の項目が表示されます。  
+- アドインの UI を含むホスト アプリケーションの部分では、印刷時に白の項目が表示されます。  
   
--   すべてのディスパッチャー (を参照してください<xref:System.Windows.Threading.Dispatcher>)、アドインによって作成された UI する必要がありますが手動でシャット ダウン、オーナー アドインがアンロードの直前、ホスト アプリケーションが実行を継続する場合。 コントラクトは、アドインができるため、そのディスパッチャーをシャット ダウンするアドインの UI、アンロードする前に、アドインをホスト アプリケーションを許可するメソッドを実装できます。  
+- すべてのディスパッチャー (を参照してください<xref:System.Windows.Threading.Dispatcher>)、アドインによって作成された UI する必要がありますが手動でシャット ダウン、オーナー アドインがアンロードの直前、ホスト アプリケーションが実行を継続する場合。 コントラクトは、アドインができるため、そのディスパッチャーをシャット ダウンするアドインの UI、アンロードする前に、アドインをホスト アプリケーションを許可するメソッドを実装できます。  
   
--   アドインの UI がある場合、<xref:System.Windows.Controls.InkCanvas>または含まれている、 <xref:System.Windows.Controls.InkCanvas>、アドインをアンロードすることはできません。  
+- アドインの UI がある場合、<xref:System.Windows.Controls.InkCanvas>または含まれている、 <xref:System.Windows.Controls.InkCanvas>、アドインをアンロードすることはできません。  
   
 <a name="PerformanceOptimization"></a>   
 ## <a name="performance-optimization"></a>パフォーマンスの最適化  
