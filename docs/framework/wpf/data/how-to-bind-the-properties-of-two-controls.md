@@ -6,12 +6,12 @@ helpviewer_keywords:
 - binding properties of two controls [WPF]
 - controls [WPF], binding properties of
 ms.assetid: 06318fac-6afd-4c7d-a277-6d7ef50f47bc
-ms.openlocfilehash: 0dd7b817b632758cfca8b5c45d88e333510485f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 332e8e0dfa30ff7aff27c95652f07446baf6511a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59222068"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809539"
 ---
 # <a name="how-to-bind-the-properties-of-two-controls"></a>方法: 2 つのコントロールのプロパティをバインドする
 この例を使用して別の 1 つのインスタンス化されたコントロールのプロパティをバインドする方法を示しています、<xref:System.Windows.Data.Binding.ElementName%2A>プロパティ。  
@@ -23,9 +23,10 @@ ms.locfileid: "59222068"
   
  この例をレンダリングすると、次のようになります。  
   
- ![背景が緑のキャンバス](./media/databindingbindingdpssample.PNG "DataBindingBindingDPsSample")  
-  
- **注**バインディング ターゲット プロパティ (この例で、<xref:System.Windows.Controls.Panel.Background%2A>プロパティ) 依存関係プロパティである必要があります。 詳しくは、「 [データ バインディングの概要](data-binding-overview.md)」をご覧ください。  
+![緑の値のボックスをオンし、緑色の四角形にコンボを示すスクリーン ショット。](./media/how-to-bind-the-properties-of-two-controls/data-binding-bind-background-canvas.png)
+
+> [!NOTE]
+> バインディング ターゲット プロパティ (この例で、<xref:System.Windows.Controls.Panel.Background%2A>プロパティ) 依存関係プロパティである必要があります。 詳しくは、「 [データ バインディングの概要](data-binding-overview.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 

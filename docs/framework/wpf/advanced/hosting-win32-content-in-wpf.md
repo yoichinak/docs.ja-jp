@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 3cc8644a-34f3-4082-9ddc-77623e4df2d8
-ms.openlocfilehash: 8773cac1e421ecdca036e88d79797dae16f72b17
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 3c00539eb5f2a96fec974accda2fea1c0200aeec
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59055080"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807752"
 ---
 # <a name="hosting-win32-content-in-wpf"></a>WPF での Win32 コンテンツのホスト
 
@@ -366,7 +366,7 @@ public partial class Window1 : Window {
 
 提示されます。
 
-![WPF アプリケーションのスクリーン ショット](./media/interoparch09.PNG "InteropArch09")
+![実行されている WPF アプリのスクリーン ショット。](./media/hosting-win32-content-in-wpf/windows-presentation-foundation-application.png)
 
 ## <a name="see-also"></a>関連項目
 

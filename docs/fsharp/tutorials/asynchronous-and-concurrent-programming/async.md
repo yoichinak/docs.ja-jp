@@ -2,12 +2,12 @@
 title: 非同期プログラミング
 description: 学習方法F#非同期プログラミングが言語レベルのプログラミング モデルを簡単に使用し、自然言語を使用して実現されます。
 ms.date: 06/20/2016
-ms.openlocfilehash: 6925a0132f9beed6be5f9dded3630b551072bea2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8cd7d7bcecabe8ea2c33a4787fe9ebbadd67fe67
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61901820"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808223"
 ---
 # <a name="async-programming-in-f"></a>F での非同期プログラミング\#
 

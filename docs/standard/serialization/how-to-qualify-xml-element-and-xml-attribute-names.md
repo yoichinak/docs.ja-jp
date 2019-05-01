@@ -1,5 +1,5 @@
 ---
-title: '方法 : XML 要素および XML 属性名を修飾する'
+title: '方法: XML 要素および XML 属性名を修飾する'
 ms.date: 03/30/2017
 dev_langs:
 - csharp
@@ -9,14 +9,14 @@ helpviewer_keywords:
 - qualifying XML elements
 - XML namespaces, qualifying elements and names in
 ms.assetid: 44719f90-7e15-42e8-a9e2-282287e2b5bf
-ms.openlocfilehash: 3c477923387e5a28dcc14b44b0f77bb6acb686e5
-ms.sourcegitcommit: 213292dfbb0c37d83f62709959ff55c50af5560d
-ms.translationtype: MT
+ms.openlocfilehash: 04e9dd3c135c516fa5554b9b547306337fb6a668
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2018
-ms.locfileid: "47176735"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807818"
 ---
-# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>方法 : XML 要素および XML 属性名を修飾する
+# <a name="how-to-qualify-xml-element-and-xml-attribute-names"></a>方法: XML 要素および XML 属性名を修飾する
 
 インスタンスに格納される XML 名前空間、<xref:System.Xml.Serialization.XmlSerializerNamespaces>クラスは、World Wide Web Consortium (W3C) 仕様に準拠する必要があります[Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)します。
 
@@ -32,7 +32,7 @@ XML 名前空間を使用すると、XML ドキュメント内の XML 要素お�
 
 3. `System.Xml.Serialization` が XML ドキュメントにシリアル化する各メンバーやクラスに、適切な <xref:System.Xml.Serialization.XmlSerializer> 属性を適用します。
 
-  適用できる属性は、<xref:System.Xml.Serialization.XmlAnyElementAttribute>、<xref:System.Xml.Serialization.XmlArrayAttribute>、<xref:System.Xml.Serialization.XmlArrayItemAttribute>、<xref:System.Xml.Serialization.XmlAttributeAttribute>、<xref:System.Xml.Serialization.XmlElementAttribute>、<xref:System.Xml.Serialization.XmlRootAttribute>、および <xref:System.Xml.Serialization.XmlTypeAttribute> です。
+    適用できる属性は、<xref:System.Xml.Serialization.XmlAnyElementAttribute>、<xref:System.Xml.Serialization.XmlArrayAttribute>、<xref:System.Xml.Serialization.XmlArrayItemAttribute>、<xref:System.Xml.Serialization.XmlAttributeAttribute>、<xref:System.Xml.Serialization.XmlElementAttribute>、<xref:System.Xml.Serialization.XmlRootAttribute>、および <xref:System.Xml.Serialization.XmlTypeAttribute> です。
 
 4. 各属性の `Namespace` プロパティを、`XmlSerializerNamespaces` のいずれかの名前空間値に設定します。
 
@@ -176,6 +176,6 @@ public class Book
 - [XML シリアル化の概要](introducing-xml-serialization.md)
 - [XmlSerializer クラス](xref:System.Xml.Serialization.XmlSerializer)
 - [XML シリアル化を制御する属性](attributes-that-control-xml-serialization.md)
-- [方法 : XML ストリームの代替要素名を指定する](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
-- [方法 : オブジェクトをシリアル化する](how-to-serialize-an-object.md)
-- [方法 : オブジェクトを逆シリアル化する](how-to-deserialize-an-object.md)
+- [方法: XML Stream の代替要素名を指定します。](how-to-specify-an-alternate-element-name-for-an-xml-stream.md)
+- [方法: オブジェクトをシリアル化します。](how-to-serialize-an-object.md)
+- [方法: オブジェクトを逆シリアル化します。](how-to-deserialize-an-object.md)

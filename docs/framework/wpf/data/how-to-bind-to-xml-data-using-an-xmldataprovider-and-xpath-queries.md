@@ -6,12 +6,12 @@ helpviewer_keywords:
 - data binding [WPF], binding to XML data using XmlDataProvider queries
 - binding [WPF], to XML data using XmlDataProvider queries
 ms.assetid: 7dcd018f-16aa-4870-8e47-c1b4ea31e574
-ms.openlocfilehash: f6cd09279cf23d3273e7a4083950a5f42714c8bf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 3a3df65f0c20cff49f9bd2a8790e8d9ae0032391
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59097227"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809580"
 ---
 # <a name="how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries"></a>方法: XMLDataProvider と XPath クエリを使用して XML データにバインドする
 この例にバインドする方法を示しています。[!INCLUDE[TLA#tla_xml](../../../../includes/tlasharptla-xml-md.md)]を使用してデータを<xref:System.Windows.Data.XmlDataProvider>します。  
@@ -30,19 +30,19 @@ ms.locfileid: "59097227"
   
  <xref:System.Windows.Controls.ListBox>この例の実行時に次の項目が表示されます。 これらは、*Books* の下のすべての要素のうち、*Stock* の値が "*out*" か、*Number* の値が 3 に等しいか 8 以上のものの *Title* です。 注意していない*CD*ために、項目が返されます、<xref:System.Windows.Data.XmlDataProvider.XPath%2A>で一連の値を<xref:System.Windows.Data.XmlDataProvider>だけであることを示します、*ブックの「* (基本的にフィルターを設定する) 要素を公開する必要があります。  
   
- ![XPath の例](./media/xpathexample.PNG "XPathExample")  
+ ![次の 4 つの書籍のタイトルを表示する XPath の例のスクリーン ショット。](./media/how-to-bind-to-xml-data-using-an-xmldataprovider-and-xpath-queries/xpath-example-listbox-details.png)  
   
  ため、この例で書籍のタイトルが表示される、<xref:System.Windows.Data.Binding.XPath%2A>の<xref:System.Windows.Controls.TextBlock>バインド、<xref:System.Windows.DataTemplate>に設定されている"*タイトル*"。 属性の値を表示するかどうか、 *ISBN*を設定する<xref:System.Windows.Data.Binding.XPath%2A>値を"`@ISBN`"。  
   
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 内の **XPath** プロパティは、XmlNode.SelectNodes メソッドによって処理されます。 別の結果を得るために、**XPath** クエリを変更できます。 いくつかの例を次のとおり、<xref:System.Windows.Data.Binding.XPath%2A>にバインドされているクエリを<xref:System.Windows.Controls.ListBox>前の例。  
   
--   `XPath="Book[1]"` は、最初の書籍要素 ("XML in Action") を返します。 **XPath** のインデックスが 0 ではなく 1 から開始することにご注意ください。  
+- `XPath="Book[1]"` は、最初の書籍要素 ("XML in Action") を返します。 **XPath** のインデックスが 0 ではなく 1 から開始することにご注意ください。  
   
--   `XPath="Book[@*]"` は、任意の属性を持つすべての書籍要素を返します。  
+- `XPath="Book[@*]"` は、任意の属性を持つすべての書籍要素を返します。  
   
--   `XPath="Book[last()-1]"` は、最後から 2 番目の書籍要素 ("Introducing Microsoft .NET") を返します。  
+- `XPath="Book[last()-1]"` は、最後から 2 番目の書籍要素 ("Introducing Microsoft .NET") を返します。  
   
--   `XPath="*[position()>3]"` は、最初の 3 つを除くすべての書籍要素を返します。  
+- `XPath="*[position()>3]"` は、最初の 3 つを除くすべての書籍要素を返します。  
   
  実行すると、 **XPath**クエリを返します、<xref:System.Xml.XmlNode>または Xmlnode のリスト。 <xref:System.Xml.XmlNode> [!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]オブジェクトは、使用できる、<xref:System.Windows.Data.Binding.Path%2A>プロパティにバインドする、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]プロパティ。 前の例をもう一度考えてみます。 この例の残りの部分は同じままで変更した場合、 <xref:System.Windows.Controls.TextBlock> 、次のバインド、返された Xmlnode の名前が表示されます、 <xref:System.Windows.Controls.ListBox>。 この場合、返されたノードの名前はすべて "*Book*" です。  
   

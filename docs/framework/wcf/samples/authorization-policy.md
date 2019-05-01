@@ -2,12 +2,12 @@
 title: 承認ポリシー
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 87deedb2bd28cd86619eb48d0ff9c3e566174d31
-ms.sourcegitcommit: 0069cb3de8eed4e92b2195d29e5769a76111acdd
-ms.translationtype: MT
+ms.openlocfilehash: 50e868645d7e7ccbcf4be697f8bdb1814dd90e9c
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56332677"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63807974"
 ---
 # <a name="authorization-policy"></a>承認ポリシー
 
@@ -18,17 +18,17 @@ ms.locfileid: "56332677"
 
  このサンプルで示す処理の概要は次のとおりです。
 
--   クライアントはユーザー名とパスワードを使用して認証される。
+- クライアントはユーザー名とパスワードを使用して認証される。
 
--   クライアントは X.509 証明書を使用して認証される。
+- クライアントは X.509 証明書を使用して認証される。
 
--   サーバーはクライアント資格情報をカスタム `UsernamePassword` 検証と照合する。
+- サーバーはクライアント資格情報をカスタム `UsernamePassword` 検証と照合する。
 
--   サーバーがそのサーバーの X.509 証明書を使用して認証される。
+- サーバーがそのサーバーの X.509 証明書を使用して認証される。
 
--   サーバーが <xref:System.ServiceModel.ServiceAuthorizationManager> を使用して、サービス内の特定メソッドへのアクセスを制御する。
+- サーバーが <xref:System.ServiceModel.ServiceAuthorizationManager> を使用して、サービス内の特定メソッドへのアクセスを制御する。
 
--   <xref:System.IdentityModel.Policy.IAuthorizationPolicy> の実装方法。
+- <xref:System.IdentityModel.Policy.IAuthorizationPolicy> の実装方法。
 
 サービスは、そのサービスとの通信に使用する 2 つのエンドポイントを公開します。エンドポイントは構成ファイル App.config で定義します。各エンドポイントは、アドレス、バインディング、およびコントラクトがそれぞれ 1 つずつで構成されます。 1 つのバインディングの構成には、WS-Security とクライアントのユーザー名認証を使用する、標準の `wsHttpBinding` バインディングが使用されます。 もう 1 つのバインディングの構成には、WS-Security とクライアント証明書による認証を使用する、標準の `wsHttpBinding` バインディングが使用されます。 [\<動作 >](../../../../docs/framework/configure-apps/file-schema/wcf/behavior-of-endpointbehaviors.md)ユーザーの資格情報がサービスの認証に使用することを指定します。 サーバー証明書が同じ値を含める必要があります、`SubjectName`プロパティとして、`findValue`属性、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)します。
 
@@ -397,9 +397,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 次に、バッチ ファイルのセクションのうち、該当する構成で実行するために変更が必要となる部分を示します。
 
--   サーバー証明書の作成。
+- サーバー証明書の作成。
 
-     Setup.bat バッチ ファイルの次の行は、使用するサーバー証明書を作成します。 %SERVER_NAME% 変数はサーバー名を指定します。 この変数を変更して、使用するサーバー名を指定します。 既定値は、localhost です。
+    Setup.bat バッチ ファイルの次の行は、使用するサーバー証明書を作成します。 %SERVER_NAME% 変数はサーバー名を指定します。 この変数を変更して、使用するサーバー名を指定します。 既定値は、localhost です。
 
     ```
     echo ************
@@ -411,19 +411,19 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     makecert.exe -sr LocalMachine -ss MY -a sha1 -n CN=%SERVER_NAME% -sky exchange -pe
     ```
 
--   サーバー証明書のクライアントの信頼された証明書ストアへのインストール。
+- サーバー証明書のクライアントの信頼された証明書ストアへのインストール。
 
-     Setup.bat バッチ ファイルの次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。
+    Setup.bat バッチ ファイルの次の行は、サーバー証明書をクライアントの信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がクライアント システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、クライアントの信頼されたルート証明書に基づいた証明書が既にある場合は、クライアント証明書ストアにサーバー証明書を配置するこの手順は不要です。
 
     ```
     certmgr.exe -add -r LocalMachine -s My -c -n %SERVER_NAME% -r CurrentUser -s TrustedPeople
     ```
 
--   クライアント証明書の作成。
+- クライアント証明書の作成。
 
-     Setup.bat バッチ ファイルの次の行は、使用するクライアント証明書を作成します。 %USER_NAME% 変数はユーザー名を指定します。 この値は "test1" に設定されます。`IAuthorizationPolicy` によってこの名前が検索されたためです。 %USER_NAME% の値を変更した場合は、`IAuthorizationPolicy.Evaluate` メソッド内の対応する値を変更する必要があります。
+    Setup.bat バッチ ファイルの次の行は、使用するクライアント証明書を作成します。 %USER_NAME% 変数はユーザー名を指定します。 この値は "test1" に設定されます。`IAuthorizationPolicy` によってこの名前が検索されたためです。 %USER_NAME% の値を変更した場合は、`IAuthorizationPolicy.Evaluate` メソッド内の対応する値を変更する必要があります。
 
-     証明書は、CurrentUser ストアの場所の My (Personal) ストアに保存されます。
+    証明書は、CurrentUser ストアの場所の My (Personal) ストアに保存されます。
 
     ```
     echo ************
@@ -432,9 +432,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     makecert.exe -sr CurrentUser -ss MY -a sha1 -n CN=%CLIENT_NAME% -sky exchange -pe
     ```
 
--   クライアント証明書のサーバーの信頼された証明書ストアへのインストール。
+- クライアント証明書のサーバーの信頼された証明書ストアへのインストール。
 
-     Setup.bat バッチ ファイルの次の行は、クライアント証明書を信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がサーバー システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、信頼されたルート証明書に基づく証明書が既にある場合は、サーバー証明書ストアにクライアント証明書を配置するこの手順は不要です。
+    Setup.bat バッチ ファイルの次の行は、クライアント証明書を信頼されたユーザーのストアにコピーします。 この手順が必要なのは、Makecert.exe によって生成される証明書がサーバー システムにより暗黙には信頼されないからです。 マイクロソフト発行の証明書など、信頼されたルート証明書に基づく証明書が既にある場合は、サーバー証明書ストアにクライアント証明書を配置するこの手順は不要です。
 
     ```
     certmgr.exe -add -r CurrentUser -s My -c -n %CLIENT_NAME% -r LocalMachine -s TrustedPeople
@@ -460,7 +460,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 1. Client.exe を起動します*\client\bin*します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
 
-  クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。
+クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。
 
 ### <a name="to-run-the-sample-across-computers"></a>サンプルを複数のコンピューターで実行するには
 
@@ -474,7 +474,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 5. サーバーで実行`setup.bat service`管理者特権で開いた Visual Studio 用開発者コマンド プロンプトでします。
 
-   実行している`setup.bat`で、`service`引数が、コンピューターの完全修飾ドメイン名でサービス証明書を作成し、という名前のファイルに、サービス証明書をエクスポートします*Service.cer*します。
+    実行している`setup.bat`で、`service`引数が、コンピューターの完全修飾ドメイン名でサービス証明書を作成し、という名前のファイルに、サービス証明書をエクスポートします*Service.cer*します。
 
 6. 編集*Service.exe.config*新しい証明書名を反映するように (で、`findValue`属性、 [ \<serviceCertificate >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecertificate-of-servicecredentials.md)) 完全修飾ドメイン名と同じです。コンピューター。 変更することも、 **computername**で、 \<service >/\<baseAddresses > 要素を localhost からサービス コンピューターの完全修飾名。
 
@@ -482,7 +482,7 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 8. クライアントでは、次のように実行します。`setup.bat client`管理者特権で開いた Visual Studio 用開発者コマンド プロンプトでします。
 
-   実行している`setup.bat`で、`client`引数というクライアント証明書を作成します**test1**とという名前のファイルに、クライアント証明書をエクスポート*Client.cer*します。
+    実行している`setup.bat`で、`client`引数というクライアント証明書を作成します**test1**とという名前のファイルに、クライアント証明書をエクスポート*Client.cer*します。
 
 9. *Client.exe.config*クライアント コンピューターのファイルで、サービスの新しいアドレスに一致するエンドポイントのアドレス値を変更します。 これには、置き換える**localhost**サーバーの完全修飾ドメイン名を使用します。
 
@@ -490,17 +490,17 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
 
 11. クライアントでは、次のように実行します。 *ImportServiceCert.bat*管理者特権で開いた Visual Studio 用開発者コマンド プロンプトでします。
 
-   これにより、また、サービス証明書に Service.cer ファイルからインポート、 **CurrentUser - TrustedPeople**を格納します。
+    これにより、また、サービス証明書に Service.cer ファイルからインポート、 **CurrentUser - TrustedPeople**を格納します。
 
 12. サーバーで実行*ImportClientCert.bat*管理者特権で開いた Visual Studio 用開発者コマンド プロンプトでします。
 
-   クライアント証明書が Client.cer ファイルからインポートこれ、 **LocalMachine - TrustedPeople**を格納します。
+    クライアント証明書が Client.cer ファイルからインポートこれ、 **LocalMachine - TrustedPeople**を格納します。
 
 13. サーバー コンピューターで、コマンド プロンプト ウィンドウから Service.exe を起動します。
 
 14. クライアント コンピューターで、コマンド プロンプト ウィンドウから Client.exe を起動します。
 
-   クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。
+    クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。
 
 ### <a name="clean-up-after-the-sample"></a>サンプルの実行後のクリーンアップします。
 

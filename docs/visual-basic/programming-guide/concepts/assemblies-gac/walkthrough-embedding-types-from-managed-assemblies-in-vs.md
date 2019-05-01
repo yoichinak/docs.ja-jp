@@ -1,15 +1,15 @@
 ---
-title: 'チュートリアル: Visual Studio (Visual Basic) でマネージ アセンブリから型を埋め込む'
+title: 'チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: 56ed12ba-adff-4e9c-a668-7fcba80c4795
-ms.openlocfilehash: 836d035aab06f18c13e3675fbd72c5ab9879a3d2
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
-ms.translationtype: MT
+ms.openlocfilehash: 18f22a771ab7279f177fe39d8c372a8517056890
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57359464"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63809127"
 ---
-# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio (Visual Basic) でマネージ アセンブリから型を埋め込む
+# <a name="walkthrough-embedding-types-from-managed-assemblies-in-visual-studio-visual-basic"></a>チュートリアル: Visual Studio でマネージド アセンブリからの型を埋め込む (Visual Basic)
 
 厳密な名前を持つマネージド アセンブリから型情報を埋め込むと、アプリケーション内で型を疎結合して、バージョンに依存しないプログラムを実現できます。 つまり、各バージョン用の再コンパイルを必要とすることなく、マネージド ライブラリの複数のバージョンから型を使用するプログラムを記述できます。
 
@@ -209,13 +209,13 @@ ms.locfileid: "57359464"
 
 3. SampleClass.vb ファイルを開きます。 SampleClass クラスに次のコード行を追加します。
 
-```vb
-Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
-    Return Now
-End Function
-```
+    ```vb
+    Public Function GetDate() As DateTime Implements ISampleInterface.GetDate
+        Return Now
+    End Function
+    ```
 
-    Save the file.
+    ファイルを保存します。
 
 4. プロジェクトを保存します。
 

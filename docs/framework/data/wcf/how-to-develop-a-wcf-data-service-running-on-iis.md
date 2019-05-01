@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deploying
 - WCF Data Services, hosting
 ms.assetid: f6f768c5-4989-49e3-a36f-896ab4ded86e
-ms.openlocfilehash: 78e8c3cacd89f88cbfa062cb30e5b3474c2614ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 74c31c748dd3483aa87afb2c9a7d926965c9f1ed
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59517839"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63773929"
 ---
 # <a name="how-to-develop-a-wcf-data-service-running-on-iis"></a>方法: IIS で実行されている WCF データ サービスを開発します。
 
@@ -23,9 +23,9 @@ ms.locfileid: "59517839"
 > [!NOTE]
 > Northwind データ サービスを作成するには、ローカル コンピューターに Northwind サンプル データベースをインストールしておく必要があります。 このサンプル データベースをダウンロードするには、ダウンロード ページ「 [SQL Server 用サンプル データベース](https://go.microsoft.com/fwlink/?linkid=24758)」を参照してください。
 
- このトピックでは、Entity Framework プロバイダーを使用してデータ サービスを作成する方法を示します。 その他のデータ サービス プロバイダーを利用することもできます。 詳細については、次を参照してください。[データ サービス プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)します。
+このトピックでは、Entity Framework プロバイダーを使用してデータ サービスを作成する方法を示します。 その他のデータ サービス プロバイダーを利用することもできます。 詳細については、次を参照してください。[データ サービス プロバイダー](../../../../docs/framework/data/wcf/data-services-providers-wcf-data-services.md)します。
 
- サービスを作成した後に、データ サービス リソースへのアクセスを明示的に提供する必要があります。 詳細については、「[方法 :データ サービスへのアクセスを有効にする](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)します。
+サービスを作成した後に、データ サービス リソースへのアクセスを明示的に提供する必要があります。 詳細については、「[方法 :データ サービスへのアクセスを有効にする](../../../../docs/framework/data/wcf/how-to-enable-access-to-the-data-service-wcf-data-services.md)します。
 
 ## <a name="create-the-aspnet-web-application-that-runs-on-iis"></a>IIS で実行されている ASP.NET web アプリケーションを作成します。
 
@@ -35,7 +35,7 @@ ms.locfileid: "59517839"
 
 3. 選択、 **ASP.NET Web アプリケーション**テンプレート。
 
-1. 入力`NorthwindService`としてプロジェクトの名前。
+4. 入力`NorthwindService`としてプロジェクトの名前。
 
 5. **[OK]** をクリックします。
 
@@ -47,13 +47,13 @@ ms.locfileid: "59517839"
 
 9. 管理特権を持つコマンド プロンプトから、次のコマンドを実行します (オペレーティング システムによって異なります)。
 
-    -   32 ビット システム: 
+    - 32 ビット システム: 
 
         ```console
         "%windir%\Microsoft.NET\Framework\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
         ```
 
-    -   64 ビット システム: 
+    - 64 ビット システム: 
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v3.0\Windows Communication Foundation\ServiceModelReg.exe" -i
@@ -63,13 +63,13 @@ ms.locfileid: "59517839"
 
 10. 管理特権を持つコマンド プロンプトから、次のコマンドを実行します (オペレーティング システムによって異なります)。
 
-    -   32 ビット システム: 
+    - 32 ビット システム: 
 
         ```console
         "%windir%\Microsoft.NET\Framework\v4.0.30319\aspnet_regiis.exe" -i -enable
         ```
 
-    -   64 ビット システム: 
+    - 64 ビット システム: 
 
         ```console
         "%windir%\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe" -i -enable
@@ -132,11 +132,11 @@ ms.locfileid: "59517839"
 
 5. 次の手順のいずれかの手順を実行して、データ モデルをデータベースに接続し、**次**:
 
-    -   データベース接続が既に構成されていない場合は、クリックして**新しい接続**し、新しい接続を作成します。 詳細については、「[方法 :SQL Server データベースへの接続を作成する](https://go.microsoft.com/fwlink/?LinkId=123631)します。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
+    - データベース接続が既に構成されていない場合は、クリックして**新しい接続**し、新しい接続を作成します。 詳細については、「[方法 :SQL Server データベースへの接続を作成する](https://go.microsoft.com/fwlink/?LinkId=123631)します。 この SQL Server インスタンスには、Northwind サンプル データベースがアタッチされている必要があります。
 
          \- または -
 
-    -   Northwind データベースに接続するようにデータベース接続が既に構成されている場合は、一覧からその接続を選択します。
+    - Northwind データベースに接続するようにデータベース接続が既に構成されている場合は、一覧からその接続を選択します。
 
 6. ウィザードの最終ページで、データベース内のすべてのテーブルのチェック ボックスをオンにし、ビューおよびストアド プロシージャのチェック ボックスをオフにします。
 

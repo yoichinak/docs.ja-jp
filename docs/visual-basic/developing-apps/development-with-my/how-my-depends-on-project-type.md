@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - _MYTYPE
 ms.assetid: c188b38e-bd9d-4121-9983-41ea6a94d28e
-ms.openlocfilehash: 743160889c4f24a9edb2d0f9799662a74c5061fb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: 72b9799d1f5ba7efa37d5f8f2a633e6806a58607
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842084"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808108"
 ---
 # <a name="how-my-depends-on-project-type-visual-basic"></a>プロジェクトの種類に応じた My の機能 (Visual Basic)
 `My` 特定のプロジェクトの種類で必要なオブジェクトのみを公開します。 たとえば、`My.Forms`オブジェクトは、Windows フォーム アプリケーションで使用できますが、コンソール アプリケーションでは使用できません。 このトピックで説明する`My`オブジェクトは異なる種類のプロジェクトで使用できます。  
@@ -17,11 +17,11 @@ ms.locfileid: "58842084"
 ## <a name="my-in-windows-applications-and-web-sites"></a>自分の Windows アプリケーションや Web サイト  
  `My` 現在、プロジェクトの種類の有用なオブジェクトのみを公開します。適用されないオブジェクトが抑制されます。 たとえば、次の図は、 `My` Windows フォーム プロジェクトでオブジェクト モデルです。  
   
- ![図形の Windows フォーム アプリケーションで](../../../visual-basic/developing-apps/development-with-my/media/myinwinform.png "MyInWinForm")  
+ ![ダイアグラムを表示する、Windows フォーム アプリケーションでオブジェクト モデルです。](./media/how-my-depends-on-project-type/my-object-model-windows-forms.png)  
   
  Web サイト プロジェクトで`My`Web 開発者に関連するオブジェクトを公開します (など、`My.Request`と`My.Response`オブジェクト) 関連のないオブジェクトの抑制中に (など、`My.Forms`オブジェクト)。 次の図は、 `My` Web サイト プロジェクトのオブジェクト モデル。  
   
- ![図形の Web アプリケーションで](../../../visual-basic/developing-apps/development-with-my/media/myinweb.png "MyInWeb")  
+ ![示す図、Web アプリケーションでオブジェクト モデルです。](./media/how-my-depends-on-project-type/my-object-model-web.png)  
   
 ## <a name="project-details"></a>プロジェクトの詳細  
  次の表では`My`8 プロジェクトの種類のオブジェクトが既定で有効にします。Windows アプリケーション、クラス ライブラリ、コンソール アプリケーション、Windows コントロール ライブラリ、Web コントロール ライブラリ、Windows サービス、空、および Web サイト。  
