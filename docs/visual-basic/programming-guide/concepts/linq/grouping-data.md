@@ -2,19 +2,19 @@
 title: データのグループ化 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 8f3a0871-6958-4aef-8f6f-493e189fd57d
-ms.openlocfilehash: c658ac5c46baec1bfa976074b78ac86d791b6515
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: b5a6a3795e02e0638b81824701ad0cbacbcca91a
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58842058"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808124"
 ---
 # <a name="grouping-data-visual-basic"></a>データのグループ化 (Visual Basic)
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
   
  次の図は、文字のシーケンスをグループ化した結果を示しています。 各グループのキーは文字です。  
   
- ![LINQ グループ化操作](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![LINQ グループ化操作を示す図。](./media/grouping-data/linq-group-operation.png)  
   
  次のセクションでは、データ要素をグループ化する標準クエリ演算子メソッドの一覧を示します。  
   

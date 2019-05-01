@@ -17,17 +17,17 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 1415042110a074b270cf1afd286d487ec7369747
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: MT
+ms.openlocfilehash: dfcc11c78ffc408de71c88e2c1c7b0522ffe3732
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59212415"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808338"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF のセキュリティ方針 - プラットフォーム セキュリティ
 オペレーティング システムが含まれている、基になるプラットフォームのセキュリティ機能も活用のさまざまなセキュリティ サービスを提供しますが、Windows Presentation Foundation (WPF)、 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]、および[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]します。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
   
- ![WPF セキュリティの図](./media/windowplatformsecurity.PNG "windowplatformsecurity")  
+ ![WPF のセキュリティ モデルを示す図。](./media/wpf-security-strategy-platform-security/windows-presentation-foundation-security.png)  
   
  このトピックの残りの部分では、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に関連するこれらの各層の機能について具体的に説明します。  
 
@@ -39,9 +39,9 @@ ms.locfileid: "59212415"
 ### <a name="microsoft-windows-xp-service-pack-2-sp2"></a>Microsoft Windows XP Service Pack 2 (SP2)  
  次の 3 つの主要機能がある一般的なレビューと Windows の強化に加えて[!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)]はこのトピックで説明します。  
   
--   /GS のコンパイル  
+- /GS のコンパイル  
   
--   [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
+- [!INCLUDE[TLA#tla_win_update](../../../includes/tlasharptla-win-update-md.md)].  
   
 #### <a name="gs-compilation"></a>/GS のコンパイル  
  [!INCLUDE[TLA2#tla_winxpsp2](../../../includes/tla2sharptla-winxpsp2-md.md)] は、バッファー オーバーランを軽減するために、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)] など、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] の依存関係のすべてを含む多数のコア システム ライブラリを再コンパイルして、保護を行います。 これは、C や C++ のコマンド ライン コンパイラの /GS パラメーターを使用して実現されます。 バッファー オーバーランを明示的に避ける必要はありますが、/GS コンパイルは、故意であるかないかにかかわらずバッファー オーバーランによって生み出される潜在的な脆弱性に対する多重防御の一例となります。  
@@ -66,9 +66,9 @@ ms.locfileid: "59212415"
   
  このセキュリティの脅威から保護するための 1 つの方法は、必要最小限の特権でアプリケーションを実行することです。 これは、最小特権の原則として知られ、[!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] オペレーティング システムの主要機能となっています。 この機能をユーザー アカウント制御 (UAC) といい、[!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] UAC によって主に次の 2 つの方法で使用されます。  
   
--   ユーザーが管理者であっても、既定で UAC 特権を持つほとんどのアプリケーションを実行するために、管理者特権を必要とするアプリケーションのみが管理者特権で実行されます。 管理者特権で実行するためには、アプリケーションは、アプリケーション マニフェストで、またはセキュリティ ポリシーのエントリとして明示的にマークされる必要があります。  
+- ユーザーが管理者であっても、既定で UAC 特権を持つほとんどのアプリケーションを実行するために、管理者特権を必要とするアプリケーションのみが管理者特権で実行されます。 管理者特権で実行するためには、アプリケーションは、アプリケーション マニフェストで、またはセキュリティ ポリシーのエントリとして明示的にマークされる必要があります。  
   
--   仮想化のような互換性に関する解決策を提供します。 たとえば、多くのアプリケーションが C:\Program Files のような制限された場所への書き込みを試みるなどです。 UAC の下で実行するアプリケーションでは、書き込みに管理者特権が必要でない、ユーザーごとの代替の場所が存在します。 UAC の下で実行するアプリケーションでは、UAC は C:\Program Files を仮想化して、書き込もうとしているアプリケーションが、実際はユーザーごとの代替の場所に書き込むようにします。 このような互換性の作業により、オペレーティング システムは、以前は UAC で実行できなかった多くのアプリケーションを実行できるようになります。  
+- 仮想化のような互換性に関する解決策を提供します。 たとえば、多くのアプリケーションが C:\Program Files のような制限された場所への書き込みを試みるなどです。 UAC の下で実行するアプリケーションでは、書き込みに管理者特権が必要でない、ユーザーごとの代替の場所が存在します。 UAC の下で実行するアプリケーションでは、UAC は C:\Program Files を仮想化して、書き込もうとしているアプリケーションが、実際はユーザーごとの代替の場所に書き込むようにします。 このような互換性の作業により、オペレーティング システムは、以前は UAC で実行できなかった多くのアプリケーションを実行できるようになります。  
   
 #### <a name="code-integrity-checks"></a>コードの整合性チェック  
  [!INCLUDE[TLA#tla_longhorn](../../../includes/tlasharptla-longhorn-md.md)] には、読み込み時または実行時に、悪意のあるコードがシステム ファイルやカーネルに挿入されないようにするための、より詳細なコード整合性チェックが組み込まれています。 これは、システム ファイルの保護を超えて動作します。  
@@ -100,11 +100,11 @@ ms.locfileid: "59212415"
   
  マネージド アプリケーションは、Microsoft Intermediate Language (MSIL) にコンパイルされます。 マネージド アプリケーション内のメソッドを実行する際、その MSIL は Just-In-Time (JIT) コンパイルを通じてネイティブ コードにコンパイルされます。 JIT コンパイルには、コードが以下を行わないようにする多数の安全性と堅牢性ルールを適用する検証プロセスがあります。  
   
--   型のコントラクトの違反  
+- 型のコントラクトの違反  
   
--   バッファー オーバーランの導入  
+- バッファー オーバーランの導入  
   
--   乱暴なメモリへのアクセス  
+- 乱暴なメモリへのアクセス  
   
  マネージド コードが信頼されたコードと見なされない限り、検証ルールに適合しないマネージド コードの実行は許可されません。  
   
@@ -116,29 +116,29 @@ ms.locfileid: "59212415"
   
  マネージ アプリケーションが実行を開始する際に [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] によって付与される一連のアクセス許可は、アクセス許可セットとして知られ、アプリケーションが提供する証拠によって決定されます。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでは、提供される証拠は、アプリケーションが起動される場所またはゾーンです。 [!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] は次のゾーンを識別します。  
   
--   **マイ コンピューター**。 クライアント コンピューターから起動するアプリケーション (完全信頼)。  
+- **マイ コンピューター**。 クライアント コンピューターから起動するアプリケーション (完全信頼)。  
   
--   **ローカル イントラネット**。 イントラネットから起動するアプリケーション。 (部分信頼)。  
+- **ローカル イントラネット**。 イントラネットから起動するアプリケーション。 (部分信頼)。  
   
--   **インターネット**。 インターネットから起動するアプリケーション。 (最小信頼)。  
+- **インターネット**。 インターネットから起動するアプリケーション。 (最小信頼)。  
   
--   **信頼済みサイト**。 ユーザーから信頼すると特定されたアプリケーション。 (最小信頼)。  
+- **信頼済みサイト**。 ユーザーから信頼すると特定されたアプリケーション。 (最小信頼)。  
   
--   **信頼されないサイト**。 ユーザーから信頼しないと特定されたアプリケーション。 (非信頼)。  
+- **信頼されないサイト**。 ユーザーから信頼しないと特定されたアプリケーション。 (非信頼)。  
   
  これらのゾーンごとに、[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)] は、それぞれが関連付けられている信頼レベルと一致するアクセス許可を含む定義済みの権限セットを提供します。 不足している機能には次が含まれます。  
   
--   **FullTrust**。 起動するアプリケーションの**マイ コンピューター**ゾーン。 可能性のあるすべてのアクセス許可が付与されます。  
+- **FullTrust**。 起動するアプリケーションの**マイ コンピューター**ゾーン。 可能性のあるすべてのアクセス許可が付与されます。  
   
--   **LocalIntranet**。 起動するアプリケーションの**ローカル イントラネット**ゾーン。 分離ストレージ、UI の無制限のアクセス、制約のないファイル ダイアログ、制限付きのリフレクション、環境変数へのアクセス制限など、クライアント コンピューターのリソースへの中程度のアクセスを提供するアクセス許可のサブセットが付与されます。 レジストリのような重要なリソースに対するアクセス許可は提供されません。  
+- **LocalIntranet**。 起動するアプリケーションの**ローカル イントラネット**ゾーン。 分離ストレージ、UI の無制限のアクセス、制約のないファイル ダイアログ、制限付きのリフレクション、環境変数へのアクセス制限など、クライアント コンピューターのリソースへの中程度のアクセスを提供するアクセス許可のサブセットが付与されます。 レジストリのような重要なリソースに対するアクセス許可は提供されません。  
   
--   **インターネット**。 起動するアプリケーションの**インターネット**または**信頼済みサイト**ゾーン。 分離ストレージ、ファイルを開くのみ、および制限付きの UI など、クライアント コンピューターに制限付きのアクセス権を付与するため、アクセス許可のサブセットを付与します。 基本的に、このアクセス許可セットでは、アプリケーションはクライアント コンピューターから分離されます。  
+- **インターネット**。 起動するアプリケーションの**インターネット**または**信頼済みサイト**ゾーン。 分離ストレージ、ファイルを開くのみ、および制限付きの UI など、クライアント コンピューターに制限付きのアクセス権を付与するため、アクセス許可のサブセットを付与します。 基本的に、このアクセス許可セットでは、アプリケーションはクライアント コンピューターから分離されます。  
   
  アプリケーションからのものとして識別されたアプリケーション、**信頼されていないサイト**ゾーンでのアクセス許可を与えない[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]まったくです。 その結果、定義済みのアクセス許可セットは存在しません。  
   
- 次の図は、ゾーン、アクセス許可セット、アクセス許可、およびリソース間の関係を示しています。  
+ 次の図は、ゾーン、アクセス許可セット、アクセス許可、およびリソース間のリレーションシップを示しています。  
   
- ![CAS アクセス許可セット](./media/caspermissionsets.png "CASPermissionSets")  
+ ![CAS アクセス許可セットを示す図。](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
  インターネット ゾーンのセキュリティ サンドボックスの制約は、[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] が [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] を含むシステム ライブラリからインポートする任意のコードに等しく適用されます。 これにより、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] であっても、コードはビットごとにロック ダウンされます。 残念ながら、実行できるようにするためには、[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] は、インターネット ゾーンのセキュリティ サンドボックスで有効化されたアクセス許可より多くのアクセス許可を必要とする機能を実行する必要があります。  
   
@@ -149,11 +149,11 @@ ms.locfileid: "59212415"
   
  この [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] を実行するために、基になる [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] コードは、呼び出し元の [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] で使用できるより多くの機能を実行する必要があります。それらは次のとおりです。  
   
--   表示するためのウィンドウ ハンドル (hWnd) の作成  
+- 表示するためのウィンドウ ハンドル (hWnd) の作成  
   
--   メッセージのディスパッチ  
+- メッセージのディスパッチ  
   
--   Tahoma フォントの読み込み  
+- Tahoma フォントの読み込み  
   
  セキュリティの観点から、セキュリティで保護されたアプリケーションからこれらの操作のいずれかに直接アクセスを許可すると、致命的な状態になります。  
   
@@ -190,11 +190,11 @@ ms.locfileid: "59212415"
   
  [!INCLUDE[TLA2#tla_ie6sp2](../../../includes/tla2sharptla-ie6sp2-md.md)] の前のバージョンでは、ユーザーは次のいずれかの影響を受ける可能性がありました。  
   
--   ランダムなポップアップ ウィンドウ。  
+- ランダムなポップアップ ウィンドウ。  
   
--   スクリプトのリダイレクトの混乱。  
+- スクリプトのリダイレクトの混乱。  
   
--   一部の Web サイトでの多数のセキュリティ ダイアログ。  
+- 一部の Web サイトでの多数のセキュリティ ダイアログ。  
   
  場合によっては、信頼できない Web サイトで [!INCLUDE[TLA#tla_ui](../../../includes/tlasharptla-ui-md.md)] のインストールのなりすましをしたり、ユーザーがキャンセルしていても [!INCLUDE[TLA#tla_actx](../../../includes/tlasharptla-actx-md.md)] のインストールのダイアログ ボックスを繰り返し表示したりしてユーザーを騙そうとします。 これらの方法によって、大多数のユーザーが騙されて不適切な判断を行い、スパイウェア アプリケーションのインストールにつながる可能性があります。  
   

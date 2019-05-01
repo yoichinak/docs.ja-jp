@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 555e55a7-0851-4ec8-b1c6-0acba7e9b648
-ms.openlocfilehash: a13e21281a4bdb365c3a0541d88cd94b6476492e
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
-ms.translationtype: MT
+ms.openlocfilehash: 4001c34f6673e036bdbf731baed782c6dc0a16b0
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57494949"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808065"
 ---
 # <a name="walkthrough-hosting-a-wpf-clock-in-win32"></a>チュートリアル: Win32 での WPF クロックのホスト
 
@@ -29,11 +29,11 @@ ms.locfileid: "57494949"
 
 次の図は、このチュートリアルの目的の最終製品を示します。
 
-![日付と時刻のプロパティ ダイアログ ボックス](./media/interoparch06.PNG "InteropArch06")
+![日付と時刻のプロパティ ダイアログ ボックスのスクリーン ショット。](./media/walkthrough-hosting-a-wpf-clock-in-win32/date-time-properties-dialog.png)
 
-C++ を作成してこのダイアログ ボックスを再作成できます[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]プロジェクト[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]、ダイアログ エディターを使用して、次を作成するとします。
+このダイアログ ボックスを作成して再作成できます、 C++ Win32 プロジェクトを Visual Studio、およびダイアログ エディターを使用して、次を作成します。
 
-![日付と時刻のプロパティ ダイアログ ボックス](./media/interoparch07.PNG "InteropArch07")
+![再作成された日付と時刻のプロパティ ダイアログ ボックス](./media/walkthrough-hosting-a-wpf-clock-in-win32/recreated-date-time-properties-dialog.png)
 
 (を使用する必要はありません[!INCLUDE[TLA#tla_visualstu](../../../../includes/tlasharptla-visualstu-md.md)]を使用する<xref:System.Windows.Interop.HwndSource>、C++ を使用して記述する必要はありません[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]、これを行う非常に典型的な方法であり、プログラムが、このステップ チュートリアルについてにも適しています)。
 
@@ -229,7 +229,7 @@ HWND clock = ManagedCode::GetHwnd(hDlg, point.x, point.y, width, height);
 
 最終的な結果は、ようになります。
 
-![日付と時刻のプロパティ ダイアログ ボックス](./media/interoparch08.PNG "InteropArch08")
+![最終的な結果の日付と時刻のプロパティ ダイアログ ボックス](./media/walkthrough-hosting-a-wpf-clock-in-win32/final-result-date-time-properties-dialog.png)
 
 このスクリーン ショットを生成するコードに、最終結果を比較するを参照してください。 [Win32 クロックの相互運用性サンプル](https://go.microsoft.com/fwlink/?LinkID=160051)します。
 

@@ -2,12 +2,12 @@
 title: Visual Studio での F# の概要します。
 description: Visual Studio で F# を使用する方法について説明します。
 ms.date: 07/03/2018
-ms.openlocfilehash: 020e5d32b3aa5d5a2195c19d70d8fe684fbd56ef
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9b02a5d295f982b1911dab567213fa9a2b6c4304
+ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331911"
+ms.lasthandoff: 04/24/2019
+ms.locfileid: "63808017"
 ---
 # <a name="get-started-with-f-in-visual-studio"></a>Visual Studio での F# の概要します。
 
@@ -25,7 +25,7 @@ Visual Studio で最も基本的なプロジェクトの 1 つは、コンソー
 
 3. いずれかを選択 **.NET Core コンソール アプリ**または**コンソール アプリ**します。
 
-3. 選択、**わかりました**F# プロジェクトを作成するボタン。  ソリューション エクスプ ローラーで F# プロジェクトが表示されます。
+4. 選択、**わかりました**F# プロジェクトを作成するボタン。  ソリューション エクスプ ローラーで F# プロジェクトが表示されます。
 
 ## <a name="writing-your-code"></a>コードの記述
 
@@ -35,7 +35,7 @@ Visual Studio で最も基本的なプロジェクトの 1 つは、コンソー
 
 上記のコード サンプルは、関数で`square`という名前の入力を受け取るが定義されている`x`単独で乗算します。  F#使用[型の推定](../language-reference/type-inference.md)の型`x`を指定する必要はありません。  F#コンパイラを選択し、乗算が有効な場合は、型を認識する型が割り当てられます`x`方法に基づいて`square`が呼び出されます。  ポインターを合わせる場合`square`次を参照する必要があります。
 
-```
+```fsharp
 val square: x:int -> int
 ```
 
