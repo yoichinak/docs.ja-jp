@@ -1,4 +1,4 @@
----
+﻿---
 title: 'チュートリアル: 設計時に Windows フォームで新しい WPF コンテンツを作成'
 ms.date: 08/18/2018
 helpviewer_keywords:
