@@ -26,7 +26,7 @@ ms.locfileid: "61802090"
  セキュリティの制限が発生した場合、アクセス許可をアサートする (アプリケーションに付与されていると仮定した場合)、または部分信頼で動作するよう作成されたバージョンの機能を使用するという 2 つのオプションがあります。 次のセクションでは、部分信頼環境で実行されているアプリケーションからファイル、データベース、およびレジストリ アクセスを操作する方法について説明します。  
   
 > [!NOTE]
->  既定では、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] の配置を生成するツールは、これらの配置が、実行するコンピューターから完全信頼を要求するよう既定で設定されます。 部分信頼で実行されている追加のセキュリティ上の利点をする場合は、Visual Studio またはのいずれかのいずれかでこの既定の設定を変更する必要があります、[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]ツール (Mage.exe または MageUI.exe)。 Windows フォームのセキュリティ、およびアプリケーションの適切な信頼レベルを決定する方法の詳細については、次を参照してください。[のセキュリティの Windows フォームの概要](security-in-windows-forms-overview.md)します。  
+>  既定では、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] の配置を生成するツールは、これらの配置が、実行するコンピューターから完全信頼を要求するよう既定で設定されます。 部分信頼で実行することによるセキュリティ上の利点を追加したい場合は、Visual Studio または[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]ツール (Mage.exe または MageUI.exe) のいずれかでこの既定の設定を変更する必要があります。 Windows フォームのセキュリティ、およびアプリケーションの適切な信頼レベルを決定する方法の詳細については、[Windows フォームのセキュリティの概要](security-in-windows-forms-overview.md)を参照してください。  
   
 ## <a name="file-access"></a>ファイル アクセス  
  <xref:System.Security.Permissions.FileIOPermission> クラスは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のファイルとフォルダーへのアクセスを制御します。 既定では、セキュリティ システムは、ローカルのイントラネットやインターネット ゾーンなどの部分信頼環境に <xref:System.Security.Permissions.FileIOPermission> を付与しません。 ただし、ファイルへのアクセスを必要とするアプリケーションは、アプリケーションの設計を変更するかファイルにアクセスする別の方法を使用すると、引き続きこれらの環境で機能することが可能です。 既定では、ローカル イントラネット ゾーンに、同じサイトと同じディレクトリにアクセスして、その起点のサイトに接続し、インストール ディレクトリから読み取るための権限が付与されます。 既定では、インターネット ゾーンは、起点のサイトに接続する権限のみが付与されます。  
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  Visual C# では、イベント ハンドラーを有効にするコードを追加することを確認します。 前の例でのコードを使用することで、次のコードではイベント ハンドラー `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);` を有効にする方法を示します。  
+>  Visual C# では、イベント ハンドラーを有効にするコードを必ず追加してください。 前の例のコードを使用して、次のコードのイベント ハンドラー `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);` を有効にする方法を示します。  
   
 ### <a name="other-files"></a>その他のファイル  
  場合によって、アプリケーション設定を保存しなければならないという場合など、ユーザーが指定しないファイルへの読み取りまたは書き込みを実行する必要があります。 ローカルのイントラネット ゾーンとインターネット ゾーンでは、アプリケーションにローカル ファイルにデータを格納するためのアクセス許可がありません。 ただし、アプリケーションが分離ストレージにデータを格納できるようにします。 分離ストレージは (特定の記憶場所ではなく) 抽象的なデータ コンパートメントであり、データが保存される実際のディレクトリの場所を含む、ストアと呼ばれる 1 つ以上の分離ストレージ ファイルが含まれます。 <xref:System.Security.Permissions.FileIOPermission> のようなファイルのアクセス許可は必要なく、代わりに <xref:System.Security.Permissions.IsolatedStoragePermission> クラスが分離ストレージのアクセス許可を制御します。 既定では、ローカル イントラネット ゾーンとインターネット ゾーンで実行されているアプリケーションが、分離ストレージを使用してデータを格納できます。ただし、ディスク クォータのように設定が変わることがあります。 分離ストレージの詳細については、次を参照してください。[分離ストレージ](../../standard/io/isolated-storage.md)します。  

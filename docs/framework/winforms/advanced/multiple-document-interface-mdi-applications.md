@@ -21,17 +21,17 @@ ms.locfileid: "61952049"
 >  Windows フォームの MDI フォームと、シングル ドキュメント インターフェイス (SDI) ウィンドウをいくつかの動作違いがあります。 `Opacity`プロパティが MDI 子フォームの外観に影響しません。 さらに、<xref:System.Windows.Forms.Form.CenterToParent%2A>メソッドでは MDI 子フォームの動作には影響しません。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: MDI 親フォームを作成します。](how-to-create-mdi-parent-forms.md)  
+ [方法: MDI 親フォームを作成する](how-to-create-mdi-parent-forms.md)  
  MDI アプリケーション内で複数のドキュメントのコンテナーを作成するための手順を示します。  
   
- [方法: MDI 子フォームを作成します。](how-to-create-mdi-child-forms.md)  
+ [方法: MDI 子フォームを作成する](how-to-create-mdi-child-forms.md)  
  MDI 親フォーム内で動作する 1 つまたは複数の windows を作成するための手順を示します。  
   
- [方法: アクティブな MDI 子を決定します。](how-to-determine-the-active-mdi-child.md)  
+ [方法: アクティブな MDI 子フォームを特定する](how-to-determine-the-active-mdi-child.md)  
  フォーカスを持つ子ウィンドウを確認するための手順を示します (とその内容をクリップボードに送信) します。  
   
- [方法: アクティブな MDI 子ウィンドウにデータを送信します。](how-to-send-data-to-the-active-mdi-child.md)  
+ [方法: アクティブな MDI 子フォームにデータを送信する](how-to-send-data-to-the-active-mdi-child.md)  
  アクティブな子ウィンドウに情報を転送するための手順を示します。  
   
- [方法: MDI 子フォームを配置します。](how-to-arrange-mdi-child-forms.md)  
+ [方法: MDI 子フォームを配置する](how-to-arrange-mdi-child-forms.md)  
  並べて表示、重ねて表示したり、または MDI アプリケーションの子ウィンドウの配置の手順を示します。
