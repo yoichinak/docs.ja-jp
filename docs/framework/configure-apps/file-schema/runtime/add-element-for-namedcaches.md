@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674325"
 ---
-# <a name="add-element-for-namedcaches"></a>\<追加 > 要素の\<namedCaches >
+# <a name="add-element-for-namedcaches"></a><namedCaches> の <add> 要素
 追加、`namedCache`エントリを`namedCaches`メモリ キャッシュのコレクション。  
   
  \<system.runtime.caching>  
