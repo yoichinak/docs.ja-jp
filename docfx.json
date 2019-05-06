@@ -286,7 +286,7 @@
 		"docs/visual-basic/programming-guide/**.md": false,
 		"docs/visual-basic/reference/**.md": false,
 		"_csharplang/spec/**.md": false,
-	        "_vblang/spec/**.md": false,
+	        "_vblang/spec/**.md": false
       }
     },
     "dest": "_site",
