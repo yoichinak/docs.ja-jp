@@ -484,7 +484,7 @@ ms.locfileid: "61922962"
 >
 > - [セキュリティ](../security-wpf.md)
 >
-> - [WPF のグローバリゼーションとローカライズ](../advanced/wpf-globalization-and-localization-overview.md)
+> - [WPF のグローバリゼーションおよびローカリゼーションの概要](../advanced/wpf-globalization-and-localization-overview.md)
 >
 > - [WPF のパフォーマンス](../advanced/optimizing-wpf-application-performance.md)
 
