@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61704727"
 ---
-# <a name="remove-element-for-namedcaches"></a>\<namedCaches> の \<remove> 要素
+# <a name="remove-element-for-namedcaches"></a><namedCaches> の <remove> 要素
 名前付きキャッシュ エントリを、メモリ キャッシュの `namedCaches` コレクションから削除します。  
   
  \<system.runtime.caching>  
