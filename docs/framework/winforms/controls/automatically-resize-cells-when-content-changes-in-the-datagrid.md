@@ -54,4 +54,4 @@ ms.locfileid: "61954324"
 - <xref:System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode>
 - [Windows フォーム DataGridView コントロール内の列と行のサイズ変更](resizing-columns-and-rows-in-the-windows-forms-datagridview-control.md)
 - [Windows フォーム DataGridView コントロールのサイズ変更オプション](sizing-options-in-the-windows-forms-datagridview-control.md)
-- [方法: プログラムで Windows フォームの DataGridView コントロールのコンテンツに合わせてセルのサイズを変更します。](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)
+- [方法: Windows フォームの DataGridView コントロールの内容に合わせてセルのサイズをプログラムで変更する](programmatically-resize-cells-to-fit-content-in-the-datagrid.md)
