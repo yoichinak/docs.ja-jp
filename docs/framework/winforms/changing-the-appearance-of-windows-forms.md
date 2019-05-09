@@ -15,7 +15,7 @@ ms.locfileid: "61640420"
 罫線、不透明度、図形、スタイルの変更、または Windows フォーム アプリケーションの背景画像の設定など、Windows フォーム アプリケーションの外観をさまざまな方法でカスタマイズできます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- [方法: Windows フォームの境界線を変更します。](how-to-change-the-borders-of-windows-forms.md)  
+ [方法: Windows フォームの境界線を変更する](how-to-change-the-borders-of-windows-forms.md)  
  フォームの罫線のスタイルを変更する方法を示します。  
   
 ## <a name="reference"></a>参照  

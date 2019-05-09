@@ -12,7 +12,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674169"
 ---
-# <a name="clear-element-for-namedcaches"></a>\<namedCaches> の <clear> 要素
+# <a name="clear-element-for-namedcaches"></a>\<namedCaches> の \<clear> 要素
 すべてクリア`namedCache`内のエントリ、`namedCaches`メモリ キャッシュのコレクション。  
   
  \<system.runtime.caching>  

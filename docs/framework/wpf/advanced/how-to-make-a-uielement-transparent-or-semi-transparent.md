@@ -38,4 +38,4 @@ ms.locfileid: "61942871"
   
  [!code-csharp[brushsamples_procedural_snip#4](~/samples/snippets/csharp/VS_Snippets_Wpf/brushsamples_procedural_snip/CSharp/OpacityExample.cs#4)]  
   
- ブラシ内の個々 の色の不透明度を制御することもできます。 色とブラシの詳細については、次を参照してください。[純色およびグラデーション概要](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)します。 要素の不透明度をアニメーション化する方法を示す例は、次を参照してください。[要素またはブラシの不透明度をアニメーション化する](../graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)します。
+ ブラシ内の個々の色の不透明度を制御することもできます。 色とブラシの詳細については、「[純色およびグラデーションによる塗りつぶしの概要](../graphics-multimedia/painting-with-solid-colors-and-gradients-overview.md)」を参照してください。 要素の不透明度をアニメーション化する方法を示す例は、「[要素またはブラシの不透明度をアニメーション化する](../graphics-multimedia/how-to-animate-the-opacity-of-an-element-or-brush.md)」を参照してください。

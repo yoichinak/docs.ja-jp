@@ -32,7 +32,7 @@ ms.locfileid: "61954263"
   
 <a name="type_converters"></a>   
 ## <a name="type-converters"></a>型コンバーター  
- .NET Framework XAML サービスの定義では、型コンバーターは CLR の <xref:System.ComponentModel.TypeConverter> クラスから派生したクラスです。 <xref:System.ComponentModel.TypeConverter> XAML が導入される前に、Microsoft .NET Framework でいたクラスです。 当初の目的は、プロパティ ウィンドウや、 [!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] プロパティの同様のテキスト ベースの編集をサポートすることでした。 .NET Framework に導入された XAML では、 <xref:System.ComponentModel.TypeConverter> を使用して、テキスト構文 (属性値または XAML 値ノードに含まれる) をオブジェクトに変換します。 また、<xref:System.ComponentModel.TypeConverter> を使用して、オブジェクト値をテキスト構文にシリアル化することもできます。 <xref:System.ComponentModel.TypeConverter> でも Windows Presentation Foundation (WPF) や Windows Communication Foundation (WCF) で以前のフレームワーク固有 XAML 実装で使用されていました。 XAML の <xref:System.ComponentModel.TypeConverter> の詳細については、「 [Type Converters for XAML Overview](type-converters-for-xaml-overview.md)といった以前のフレームワーク固有の XAML 実装でも使用されていました。  
+ .NET Framework XAML サービスの定義では、型コンバーターは CLR の <xref:System.ComponentModel.TypeConverter> クラスから派生したクラスです。 <xref:System.ComponentModel.TypeConverter> XAML が導入される前に、Microsoft .NET Framework にあったクラスです。 当初の目的は、プロパティ ウィンドウや、[!INCLUDE[TLA2#tla_ide](../../../includes/tla2sharptla-ide-md.md)] プロパティの同様のテキスト ベースの編集をサポートすることでした。 XAML への .NET Framework の導入では、<xref:System.ComponentModel.TypeConverter> を使用して、テキスト構文 (属性値または XAML 値ノードに含まれる) をオブジェクトに変換します。 <xref:System.ComponentModel.TypeConverter> オブジェクトの値をテキスト構文にシリアル化にも使用できます。 <xref:System.ComponentModel.TypeConverter> でも Windows Presentation Foundation (WPF) や Windows Communication Foundation (WCF) で以前のフレームワーク固有 XAML 実装で使用されていました。 XAML の <xref:System.ComponentModel.TypeConverter> の詳細については、「[XAML の型コンバーターの概要](type-converters-for-xaml-overview.md) といった以前のフレームワーク固有の XAML 実装でも使用されていました。  
   
 <a name="markup_extensions"></a>   
 ## <a name="markup-extensions"></a>マークアップ拡張機能  
@@ -42,7 +42,7 @@ ms.locfileid: "61954263"
   
  マークアップ拡張機能は、単一のサポート サービス クラスに関連付けられますが、任意のメンバー値に適用できます。 (ただし、マークアップ拡張機能の実装では、サービス コンテキストを使用することにより、その用途を特定のメンバーまたは変換先の型に意図的に制限することもできます。)マークアップ拡張機能は、型コンバーターの関連付けをオーバーライドできます。 または、テキスト構文をサポートしないメンバーの属性値を指定するためにマークアップ拡張機能を使用することもできます。  
   
- XAML でのマークアップ拡張機能の実装パターンの詳細については、「 [Markup Extensions for XAML Overview](markup-extensions-for-xaml-overview.md)」を参照してください。  
+ XAML でのマークアップ拡張機能の実装パターンの詳細については、「[XAML のマークアップ拡張機能の概要](markup-extensions-for-xaml-overview.md)」を参照してください。  
   
 > [!NOTE]
 >  <xref:System.Windows.Markup.MarkupExtension> 型と <xref:System.Windows.Markup.ValueSerializer> 型はどちらも、 <xref:System.Windows.Markup> 名前空間ではなく、 <xref:System.Xaml> 名前空間にあります。 これらの型がそれ以外の場合、文字列を含む CLR 名前空間を設定、WPF、または Windows フォームのいずれかのテクノロジに固有であるわけ`Windows`します。 <xref:System.Windows.Markup.MarkupExtension> と <xref:System.Windows.Markup.ValueSerializer> は System.Xaml アセンブリにあり、特定のフレームワークとの依存関係はありません。 [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] では、これらの型は CLR 名前空間に存在し、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] でも引き続き CLR 名前空間に残っているので、既存の WPF プロジェクトの参照は破損しません。 詳細については、「 [Types Migrated from WPF to System.Xaml](types-migrated-from-wpf-to-system-xaml.md)」を参照してください。  
