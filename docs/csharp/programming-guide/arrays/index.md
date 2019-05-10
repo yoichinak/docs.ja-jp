@@ -6,12 +6,12 @@ helpviewer_keywords:
 - arrays [C#]
 - C# language, arrays
 ms.assetid: bb79bdde-e570-4c30-adb0-1dd5759ae041
-ms.openlocfilehash: 1b1a3d2e61507a497349deeb857e4333356f66a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 258ade63ab7c9008f6c892ed109bf5ea5ab974f3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684017"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584607"
 ---
 # <a name="arrays-c-programming-guide"></a>配列 (C# プログラミング ガイド)
 
@@ -27,27 +27,27 @@ ms.locfileid: "61684017"
 
  配列には、次の特徴があります。  
   
--   配列は、[1 次元配列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)、[多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)、または[ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)のいずれかになります。  
+- 配列は、[1 次元配列](../../../csharp/programming-guide/arrays/single-dimensional-arrays.md)、[多次元配列](../../../csharp/programming-guide/arrays/multidimensional-arrays.md)、または[ジャグ配列](../../../csharp/programming-guide/arrays/jagged-arrays.md)のいずれかになります。  
   
--   次元数と各次元の長さは、配列インスタンスの作成時に設定されます。 インスタンスの有効期間中にこれらの値を変更することはできません。  
+- 次元数と各次元の長さは、配列インスタンスの作成時に設定されます。 インスタンスの有効期間中にこれらの値を変更することはできません。  
   
--   数値配列要素の既定値はゼロに設定され、参照要素は null に設定されます。  
+- 数値配列要素の既定値はゼロに設定され、参照要素は null に設定されます。  
   
--   ジャグ配列は配列の配列です。そのため、配列要素は参照型で、`null` に初期化されます。  
+- ジャグ配列は配列の配列です。そのため、配列要素は参照型で、`null` に初期化されます。  
   
--   配列には、ゼロから始まるインデックスが付けられます。`n` 個の要素を含む配列には、`0` から `n-1` までのインデックスが付けられます。  
+- 配列には、ゼロから始まるインデックスが付けられます。`n` 個の要素を含む配列には、`0` から `n-1` までのインデックスが付けられます。  
   
--   配列の要素および配列型は、どのような型でもかまいません。  
+- 配列の要素および配列型は、どのような型でもかまいません。  
   
--   配列型は、抽象基本型 <xref:System.Array> から派生した[参照型](../../../csharp/language-reference/keywords/reference-types.md)です。 この型は <xref:System.Collections.IEnumerable> と <xref:System.Collections.Generic.IEnumerable%601> を実装するので、C# のすべての配列で [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 反復処理を使用できます。  
+- 配列型は、抽象基本型 <xref:System.Array> から派生した[参照型](../../../csharp/language-reference/keywords/reference-types.md)です。 この型は <xref:System.Collections.IEnumerable> と <xref:System.Collections.Generic.IEnumerable%601> を実装するので、C# のすべての配列で [foreach](../../../csharp/language-reference/keywords/foreach-in.md) 反復処理を使用できます。  
   
 ## <a name="related-sections"></a>関連項目  
   
--   [オブジェクトとしての配列](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
+- [オブジェクトとしての配列](../../../csharp/programming-guide/arrays/arrays-as-objects.md)  
   
--   [配列での foreach の使用](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
+- [配列での foreach の使用](../../../csharp/programming-guide/arrays/using-foreach-with-arrays.md)  
   
--   [引数としての配列の受け渡し](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
+- [引数としての配列の受け渡し](../../../csharp/programming-guide/arrays/passing-arrays-as-arguments.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様
 

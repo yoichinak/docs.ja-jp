@@ -2,12 +2,12 @@
 title: エンティティ コンテナー
 ms.date: 03/30/2017
 ms.assetid: 16e80405-2c75-42fc-b0e4-b1df53b1c584
-ms.openlocfilehash: 4a629a800df63c67dc17d3fc1531a9862861e9c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 58642c6cc794f931387ac7a76dd64d368957f14b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667243"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586956"
 ---
 # <a name="entity-container"></a>エンティティ コンテナー
 *エンティティ コンテナー*の論理的なグループは、[エンティティ セット](../../../../docs/framework/data/adonet/entity-set.md)、[アソシエーション セット](../../../../docs/framework/data/adonet/association-set.md)、および[関数インポート](../../../../docs/framework/data/adonet/model-declared-function.md)します。  

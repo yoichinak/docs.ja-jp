@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 530f6cb8fbe80df3ad374f8ad0e4836be82830a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e8717ca50f7275e2739be4d4ee5d677e081d552d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62054329"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615989"
 ---
 # <a name="animation-overview"></a>アニメーションの概要
 <a name="introduction"></a>

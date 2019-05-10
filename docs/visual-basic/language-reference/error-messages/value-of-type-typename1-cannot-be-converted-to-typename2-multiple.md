@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30961
 ms.assetid: 8be5aa0d-d236-4ac3-aa9c-5044f9f6562b
-ms.openlocfilehash: 58b334eb5e6db443bcfaba72729d59cb1d798e70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7371cbd4fef4abced95744071ff222b40e160e3e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766819"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620307"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2-multiple-file-references"></a>型の値 '\<typename1 >' に変換できません'\<typename2 >' (複数ファイル参照)。
 型の値 '\<typename1 >' に変換できません。'\<typename2 >'。 型の不一致がへの参照をファイルの混合によって生じた可能性があります '\<filepath1 >' プロジェクトで'\<projectname1 >' への参照をファイルに '\<filepath2 >' プロジェクトで'\<projectname2 >'。 両方のアセンブリが同一である場合は、これらの参照を同じ場所から参照するように置き換えてください。  

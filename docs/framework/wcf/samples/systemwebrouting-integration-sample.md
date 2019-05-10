@@ -2,12 +2,12 @@
 title: SystemWebRouting 統合サンプル
 ms.date: 03/30/2017
 ms.assetid: f1c94802-95c4-49e4-b1e2-ee9dd126ff93
-ms.openlocfilehash: f4f9772583bbd66d19cc59f453489965aabf74b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a9f9dc871b92b8cd689234c79b09c98e38a2848d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007761"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650998"
 ---
 # <a name="systemwebrouting-integration-sample"></a>SystemWebRouting 統合サンプル
 このサンプルでは、<xref:System.Web.Routing> 名前空間のクラスとのホスト層の統合を示します。 <xref:System.Web.Routing> 名前空間のクラスを使用すると、物理リソースに直接対応しない URL をアプリケーションで使用できます。 Web のルーティングを使用すると、開発者は実際の WCF サービスにバックアップし、マップされている HTTP 仮想アドレスの作成ができます。 これは、物理ファイルやリソースを配置せずに WCF サービスをホストする必要がある場合、または .html や .aspx などのファイルがない URL を使用してサービスにアクセスする必要がある場合に役立ちます。 このサンプルでは、<xref:System.Web.Routing.RouteTable> クラスを使用して、global.asax で定義された実行中のサービスにマップされる仮想 URI を作成する方法を示します。 

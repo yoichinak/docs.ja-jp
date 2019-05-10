@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data [Windows Forms], unbound
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: 5a8d6afa-1b4b-4b24-8db8-501086ffdebe
-ms.openlocfilehash: 99561490786f3f3569f272138001ea5ad8937410
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ba821b461434cb7a5247d2962a161a1c171bbd14
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792263"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651455"
 ---
 # <a name="walkthrough-creating-an-unbound-windows-forms-datagridview-control"></a>チュートリアル: バインドされていない Windows フォーム DataGridView コントロールを作成する
 頻繁にデータベースから表形式のデータを表示することがあります。 たとえば、文字列の 2 次元配列の内容を表示したい場合があります。 <xref:System.Windows.Forms.DataGridView>クラスには、データ ソースにバインドせずにデータを表示する簡単で高度にカスタマイズ可能な方法が用意されています。 このチュートリアルで作成する方法、<xref:System.Windows.Forms.DataGridView>加算と「バインドされていない」モードでの行の削除制御および管理します。 既定では、ユーザーは、新しい行を追加できます。 行の追加を防ぐためには、設定、<xref:System.Windows.Forms.DataGridView.AllowUserToAddRows%2A>プロパティは`false`します。  

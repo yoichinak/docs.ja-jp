@@ -2,12 +2,12 @@
 title: サンプル
 ms.date: 03/30/2017
 ms.assetid: 3fcc0c4a-b952-4cfe-9e09-0c0cf874ba2c
-ms.openlocfilehash: d06fe74280b713130142d6d7a881c97849598ce4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a4f51c59791b0d65e99987e0e14a6fbedf1ee0a0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033411"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616209"
 ---
 # <a name="samples"></a>サンプル
 このトピックでは、Visual Basic および c# ソリューションが含まれているへのリンク[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]サンプル コード。  
@@ -19,7 +19,8 @@ ms.locfileid: "62033411"
  SampleQueries ソリューションの C# バージョン  
  [サンプル クエリ](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb397972(v=vs.90))  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] コードおよびアプリケーションの他の例を参照するには、次の手順に従います。  
+ 
+  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] コードおよびアプリケーションの他の例を参照するには、次の手順に従います。  
   
 - Microsoft Docs で特定の問題を検索します。  
   

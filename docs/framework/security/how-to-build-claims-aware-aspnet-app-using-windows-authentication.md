@@ -3,12 +3,12 @@ title: '方法: Windows 認証を使用してクレーム対応 ASP.NET アプ�
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 48b1b4715e9e2613757a981ba692d84ad06a1ec6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940544"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650404"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>方法: Windows 認証を使用してクレーム対応 ASP.NET アプリケーションをビルドする
 ## <a name="applies-to"></a>対象  

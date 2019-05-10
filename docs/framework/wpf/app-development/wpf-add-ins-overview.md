@@ -12,12 +12,12 @@ helpviewer_keywords:
 - add-ins [WPF], architecture
 - add-ins [WPF], limitations
 ms.assetid: 00b4c776-29a8-4dba-b603-280a0cdc2ade
-ms.openlocfilehash: 7c02ddca01260a68880630bcb014c5cc4dc4370b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 93fa26927a6afc9d9f7a96198abeef6f45fc35b4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971315"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651914"
 ---
 # <a name="wpf-add-ins-overview"></a>WPF アドインの概要
 <a name="Introduction"></a> .NET Framework には、開発者がアドイン機能拡張をサポートするアプリケーションの作成に使用できるアドイン モデルが含まれています。 このアドイン モデルを使用することで、アプリケーション機能に統合され、アプリケーション機能を拡張するアドインを作成できます。 シナリオによっては、アプリケーションは、アドインによって提供されるユーザー インターフェイスの表示にも必要です。このトピックでは、WPF がこれらのシナリオ、その利点、および制限事項の背後にあるアーキテクチャを有効にする .NET Framework アドイン モデルを強化する方法を示します。  
