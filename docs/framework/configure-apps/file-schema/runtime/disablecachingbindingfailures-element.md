@@ -23,7 +23,7 @@ ms.locfileid: "64592721"
 バインディングを調査して、アセンブリが見つからなかったために発生したエラーのキャッシュを無効にするかどうかを指定します。  
   
  \<configuration > 要素  
-\<ランタイム > 要素  
+\<runtime> 要素  
 \<disableCachingBindingFailures>  
   
 ## <a name="syntax"></a>構文  
