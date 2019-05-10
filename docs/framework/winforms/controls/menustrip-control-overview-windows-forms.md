@@ -7,12 +7,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms], about MenuStrip control
 - menus [Windows Forms], creating
 ms.assetid: f45516e5-bf01-4468-b851-d45f4c33c055
-ms.openlocfilehash: 7cd761697a09205294727043efc6cf73816803ce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b72fcf75aeebc297d09cbaa9dbf00bb2370b1222
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761372"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625764"
 ---
 # <a name="menustrip-control-overview-windows-forms"></a>MenuStrip コントロールの概要 (Windows フォーム)
 メニューは、共通のテーマでグループ化されているコマンドを保持して、ユーザーに機能を公開します。  

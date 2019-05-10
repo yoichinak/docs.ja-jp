@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID455
 ms.assetid: 67a269bf-f436-4913-bc3c-af7f68116b7d
-ms.openlocfilehash: 32fd18d84e3f402dbd27bdfd3370327a456eaa43
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fb416e5bf88642ab08e6f7ccdf2b915045528910
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769942"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614941"
 ---
 # <a name="code-resource-lock-error"></a>コード リソースのロック エラーです。
 コード リソース内のプロシージャが呼び出されました。 コード リソースが見つかりましたが、使用中の可能性があるリソースをロックしようとしたときに、エラーが発生しました。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -doc compiler option [Visual Basic]
 - /doc compiler option [Visual Basic]
 ms.assetid: 5fc32ec9-a149-4648-994c-a8d0cccd0a65
-ms.openlocfilehash: 13005eb55b430f6ff9b3a6408582a02e53838742
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c3bff4e44ddee1c4dfb6ab366464ad54e991b595
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61969209"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624272"
 ---
 # <a name="-doc"></a>-doc
 ドキュメント コメントを XML ファイルに出力します。  

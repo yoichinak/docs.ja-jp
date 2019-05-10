@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing add-in pipeline segments [WPF]
 - add-in [WPF], returns a UI
 ms.assetid: 57f274b7-4c66-4b72-92eb-81939a393776
-ms.openlocfilehash: faed11bb02037ea42b31402d431e1bcdd8b70339
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ccc918a9e8ca5e09cfebf1724519e8e6f9d1d32e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947837"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627351"
 ---
 # <a name="how-to-create-an-add-in-that-returns-a-ui"></a>方法: UI を返すアドインを作成する
 この例では、スタンドアロンの WPF アプリケーションのホストに Windows Presentation Foundation (WPF) を返すアドインを作成する方法を示します。  

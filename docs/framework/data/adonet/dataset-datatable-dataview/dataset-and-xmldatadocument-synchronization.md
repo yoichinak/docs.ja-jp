@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0ce3793d-54b2-47e4-8cf7-b0591cc4dd21
-ms.openlocfilehash: ea597d7caca3174b17ce16a1e9d70c022e3e75c0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7763e7065e74d99ee5521ea1e4f48fa0108f235a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879815"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623393"
 ---
 # <a name="dataset-and-xmldatadocument-synchronization"></a>DataSet と XmlDataDocument の同期
 ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナル表現があります。 階層データにアクセスするには、.NET Framework で使用できる XML クラスを使用できます。 従来、この 2 つのデータ表現は個別に使用されていました。 ただし、.NET Framework により、リアルタイムの同期のアクセスを使用してデータのリレーショナルで階層的な表現の両方に、**データセット**オブジェクトと<xref:System.Xml.XmlDataDocument>オブジェクトに、それぞれします。  
@@ -19,7 +19,7 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
   
  同期するいくつかの方法がある、**データセット**で、 **XmlDataDocument**します。 次の操作を行うことができます。  
   
--   設定、**データセット**スキーマ (つまり、リレーショナル構造) およびデータを使用し、それを新しい同期**XmlDataDocument**。 この方法では、既存のリレーショナル データの階層ビューが作成されます。 例:  
+- 設定、**データセット**スキーマ (つまり、リレーショナル構造) およびデータを使用し、それを新しい同期**XmlDataDocument**。 この方法では、既存のリレーショナル データの階層ビューが作成されます。 例:  
   
     ```vb  
     Dim dataSet As DataSet = New DataSet  
@@ -37,7 +37,7 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
     XmlDataDocument xmlDoc = new XmlDataDocument(dataSet);  
     ```  
   
--   設定、**データセット**スキーマのみを使用 (など、厳密に型指定された**データセット**) と同期する**XmlDataDocument**、し、ロード、 **XmlDataDocument** XML ドキュメントから。 この方法では、既存の階層データのリレーショナル ビューが作成されます。 テーブル名と列名、**データセット**スキーマは同期をとる XML 要素の名前と一致する必要があります。 この名前の一致では、大文字と小文字が区別されます。  
+- 設定、**データセット**スキーマのみを使用 (など、厳密に型指定された**データセット**) と同期する**XmlDataDocument**、し、ロード、 **XmlDataDocument** XML ドキュメントから。 この方法では、既存の階層データのリレーショナル ビューが作成されます。 テーブル名と列名、**データセット**スキーマは同期をとる XML 要素の名前と一致する必要があります。 この名前の一致では、大文字と小文字が区別されます。  
   
      注意のスキーマ、**データセット**のみ、リレーショナル ビューで公開する、XML 要素との一致する必要があります。 つまり、このドキュメント上に非常に大きい XML ドキュメントと非常に小さなリレーショナル ウィンドウを作成できます。 **XmlDataDocument**場合でも、XML ドキュメント全体を保持、**データセット**のみの一部を公開します。 (この詳細な例についてを参照してください[DataSet と XmlDataDocument の同期](../../../../../docs/framework/data/adonet/dataset-datatable-dataview/synchronizing-a-dataset-with-an-xmldatadocument.md)。)。  
   
@@ -63,7 +63,7 @@ ADO.NET の <xref:System.Data.DataSet> には、データのリレーショナ�
   
      読み込むことはできません、 **XmlDataDocument**と同期されている場合、**データセット**データを格納します。 読み込もうとすると例外がスローされます。  
   
--   新規作成**XmlDataDocument** 、XML ドキュメントからそれを読み込むしを使用して、データのリレーショナル ビューにアクセスし、**データセット**のプロパティ、 **XmlDataDocument**します。 スキーマを設定する必要がある、**データセット**内のデータのいずれかを表示する前に、 **XmlDataDocument**を使用して、**データセット**します。 テーブル名と列の名前、もう一度、**データセット**スキーマは同期をとる XML 要素の名前と一致する必要があります。 この名前の一致では、大文字と小文字が区別されます。  
+- 新規作成**XmlDataDocument** 、XML ドキュメントからそれを読み込むしを使用して、データのリレーショナル ビューにアクセスし、**データセット**のプロパティ、 **XmlDataDocument**します。 スキーマを設定する必要がある、**データセット**内のデータのいずれかを表示する前に、 **XmlDataDocument**を使用して、**データセット**します。 テーブル名と列の名前、もう一度、**データセット**スキーマは同期をとる XML 要素の名前と一致する必要があります。 この名前の一致では、大文字と小文字が区別されます。  
   
      次のコード例のデータのリレーショナル ビューにアクセスする方法を示しています、 **XmlDataDocument**します。  
   

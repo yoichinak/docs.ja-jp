@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code
 - programming [Visual Basic], Visual Basic coding conventions
 ms.assetid: dd9be76f-6944-4e78-ad72-0b6084a3fc13
-ms.openlocfilehash: b79e339ebe81a7228a02837e5c0c23c80a8132e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9dbe8fe977b2aa11573ab7a1ac1d79be0b5204af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916943"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624331"
 ---
 # <a name="program-structure-and-code-conventions-visual-basic"></a>プログラム構造とコード規則 (Visual Basic)
 このセクションは、一般的な Visual Basic プログラムの構造が導入されています、単純な Visual Basic プログラムを「こんにちは, World」を提供し、Visual Basic コードの規則について説明します。 コード規則は、プログラムのロジックではなくプログラムの物理的な構造と外観に焦点を合わせた提案です。 コード規則に従うと、コードの読み取り、理解、保守が簡単になります。 コード規則には、以下の内容が含まれます。  

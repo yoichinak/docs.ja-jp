@@ -2,12 +2,12 @@
 title: ファイルは現在書き込み用に開かれています
 ms.date: 07/20/2015
 ms.assetid: 80b3c5e8-3a5c-4d60-b1ac-b7460f0b30b0
-ms.openlocfilehash: 8d8d01ef1929fbfbdf18304108237b00487eac76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 47608be3dab42c5cf4484ed4bffb59c9052e6e6f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788454"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620165"
 ---
 # <a name="the-file-is-currently-open-for-writing"></a>ファイルは現在書き込み用に開かれています
 現在書き込み用に開かれているファイルにアクセスしようとしました。  

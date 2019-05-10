@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application object [Visual Basic], Visual Basic application model
 - Visual Basic application model
 ms.assetid: 17538984-84fe-43c9-82c8-724c9529fe8b
-ms.openlocfilehash: 02cc71dbda47d078284d9a2ec07538dfa063ac75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0144c92e01e617081ae05003e6a7175c63166891
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014155"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622793"
 ---
 # <a name="overview-of-the-visual-basic-application-model"></a>Visual Basic アプリケーション モデルの概要
 Visual Basic Windows フォーム アプリケーションの動作を制御するための適切に定義されたモデルを提供します。 Visual Basic アプリケーション モデルです。 このモデルには、アプリケーションのスタートアップとシャット ダウン、だけでなくハンドルされない例外をキャッチのイベントを処理するためのイベントが含まれています。 単一インスタンス アプリケーションを開発するためのサポートも提供します。 アプリケーション モデルとは、拡張可能なため、詳細に制御を必要がある開発者はそのオーバーライド可能なメソッドをカスタマイズできます。  

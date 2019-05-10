@@ -5,12 +5,12 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 16207c3f3c711d06b71cafb2b67c5d29f3f14e39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 548f7de2753ef0c30aa787f4c879af87987bfbde
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698578"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621512"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 要素 (Web 設定)
 ASP.NET アプリケーションが統合モードで実行されている場合に、プロセス全体の動作を管理する、ASP.NET で使用される構成設定を指定します[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン。  

@@ -4,12 +4,12 @@ description: コンテナー化された .NET アプリケーションの .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 8497f5cbd15fae6e289791393ea779833be27be6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1b36f5a6ddc2176e344dfe2a216429190dcc1dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61818311"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615142"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ
 
@@ -57,7 +57,7 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル)** (ダウンロード可能な e-book)  
+- **Containerized Docker Application Lifecycle with Microsoft Platform and Tools (Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル)** (ダウンロード可能な e-book)  
     <https://aka.ms/dockerlifecycleebook>
 
 ## <a name="who-should-use-this-guide"></a>対象読者

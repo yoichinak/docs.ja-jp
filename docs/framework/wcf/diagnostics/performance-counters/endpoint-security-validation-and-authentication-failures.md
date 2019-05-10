@@ -2,12 +2,12 @@
 title: エンドポイント:セキュリティ検証と認証エラー
 ms.date: 03/30/2017
 ms.assetid: 5bad60aa-6084-4c7b-aefd-9b581f04382e
-ms.openlocfilehash: e69549a276e2f9cece966dd44f6a1b3a3d3cb59f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9e0192ea600bb52abd555f2f83cfe8e96d3fe203
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916332"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619339"
 ---
 # <a name="endpoint-security-validation-and-authentication-failures"></a>エンドポイント:セキュリティ検証と認証エラー
 カウンター名:セキュリティ検証と認証エラー  

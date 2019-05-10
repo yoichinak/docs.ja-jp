@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: f9532629-6594-4a41-909f-d083f30a42f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e7ec1280f3b7ba25367fac21d5160046915636a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a32e12b593f273c8b812390306c81b311da7c2a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868980"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624691"
 ---
 # <a name="apis-that-rely-on-reflection"></a>リフレクションに依存する API
 コード内でのリフレクションの使用は明確ではない場合があるため、[!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンでは、実行時に必要なメタデータを保存しません。 このトピックでは、リフレクション API の一部であるとは見なされないが、正常に実行するためにリフレクションを必要とする、一般的な API と一般的なプログラミング パターンについて説明します。 これらをソース コードで使用している場合、これらに関する情報をランタイム ディレクティブ (.rd.xml) ファイルに追加して、これらの API を呼び出しても [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外やその他の例外が実行時にスローされないようにできます。  
@@ -51,11 +51,11 @@ App1.AppClass`1<System.Int32>.
   
  このコードを正常に実行するには、次のようないくつかのメタデータ項目が必要です。  
   
--   呼び出すメソッドを持つ型の `Browse` メタデータ。  
+- 呼び出すメソッドを持つ型の `Browse` メタデータ。  
   
--   呼び出すメソッドの `Browse` メタデータ。  パブリック メソッドの場合、それを含む型のパブリック `Browse` メタデータを追加しても、メソッドが含められます。  
+- 呼び出すメソッドの `Browse` メタデータ。  パブリック メソッドの場合、それを含む型のパブリック `Browse` メタデータを追加しても、メソッドが含められます。  
   
--   呼び出すメソッドの動的メタデータ。これにより、リフレクション呼び出しデリゲートが [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンにより削除されなくなります。 メソッドの動的メタデータが欠落している場合、<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> メソッドを呼び出すと、次の例外がスローされます。  
+- 呼び出すメソッドの動的メタデータ。これにより、リフレクション呼び出しデリゲートが [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンにより削除されなくなります。 メソッドの動的メタデータが欠落している場合、<xref:System.Reflection.MethodInfo.MakeGenericMethod%2A?displayProperty=nameWithType> メソッドを呼び出すと、次の例外がスローされます。  
   
     ```  
     MakeGenericMethod() cannot create this generic method instantiation because the instantiation was not metadata-enabled: 'App1.Class1.GenMethod<Int32>(Int32)'.  

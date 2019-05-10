@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - rounting [WCF], scenarios
 ms.assetid: ec22f308-665a-413e-9f94-7267cb665dab
-ms.openlocfilehash: fa5d588211cfe40cde9e9db3161a931e3287cd39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cab683c11c20f3373a1140a9fd5ad499b2e696e5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991056"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626046"
 ---
 # <a name="routing-scenarios"></a>ルーティング シナリオ
 ルーティング サービスは自由にカスタマイズできますが、まったく新しい構成を作成するときは、効率的なルーティング ロジックを設計するのが困難である場合があります。  しかし、ほとんどのルーティング サービスの構成で想定されている一般的なシナリオがいくつかあります。 これらのシナリオは、特定の構成に直接、適用できない場合もありますが、これらのシナリオに対応するルーティング サービスの構成方法を理解しておくことは、ルーティング サービスを理解する助けとなります。  

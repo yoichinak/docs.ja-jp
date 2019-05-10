@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data validation [Windows Forms], Windows Forms
 - walkthroughs [Windows Forms], DataGridView control
 ms.assetid: a4f1d015-2969-430c-8ea2-b612d179c290
-ms.openlocfilehash: a4bf0850b28b7101ba76f1c1fedc6633eccb81a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c14edebb7fd5ee133ce60769327e6b32dac1c7af
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61759857"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623706"
 ---
 # <a name="walkthrough-validating-data-in-the-windows-forms-datagridview-control"></a>チュートリアル: Windows フォーム DataGridView コントロールのデータの妥当性検査
 データ エントリの機能をユーザーに表示するときに頻繁に、フォームに入力されたデータを検証する必要があります。 <xref:System.Windows.Forms.DataGridView>クラスには、データがデータ ストアにコミットする前に検証を実行する便利な方法が用意されています。 データを検証するには、処理することによって、<xref:System.Windows.Forms.DataGridView.CellValidating>によって発生するイベント、<xref:System.Windows.Forms.DataGridView>現在のセルが変更されたとき。  

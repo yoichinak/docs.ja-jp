@@ -2,12 +2,12 @@
 title: WCF 拡張に対するカスタム メタデータのエクスポート
 ms.date: 03/30/2017
 ms.assetid: 53c93882-f8ba-4192-965b-787b5e3f09c0
-ms.openlocfilehash: 5134b57c59268b139239021bc2b4f6f4538ad27d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ecca7e311e113e2aade360e4718d1bed4ea7feef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857962"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627112"
 ---
 # <a name="exporting-custom-metadata-for-a-wcf-extension"></a>WCF 拡張に対するカスタム メタデータのエクスポート
 Windows Communication Foundation (WCF) では、メタデータのエクスポートはサービス エンドポイントを記述して、クライアントを使用してサービスを使用する方法を理解する標準化表現に投影するそれらのプロセスです。 カスタム メタデータは、システム指定のメタデータ エクスポーターでエクスポートできない XML 要素で構成されます。 通常、これは、ユーザー定義動作のカスタム WSDL 要素とバインド要素、およびバインディングとコントラクトの機能と要件に関するポリシー アサーションを含みます。  
@@ -28,9 +28,9 @@ Windows Communication Foundation (WCF) では、メタデータのエクスポ�
 ## <a name="exporting-custom-wsdl-elements"></a>カスタム WSDL 要素のエクスポート  
  操作の動作、コントラクトの動作、エンドポイントの動作、またはバインド要素 <xref:System.ServiceModel.Description.IWsdlExportExtension> (それぞれ <xref:System.ServiceModel.Description.IOperationBehavior>、<xref:System.ServiceModel.Description.IContractBehavior>、<xref:System.ServiceModel.Description.IEndpointBehavior>、<xref:System.ServiceModel.Channels.BindingElement?displayProperty=nameWithType>) を実装し、エクスポートしようとしているサービスの説明に動作またはバインド要素を挿入します  (動作を挿入する方法の詳細については、次を参照してください。[構成と、ランタイムの動作を拡張](../../../../docs/framework/wcf/extending/configuring-and-extending-the-runtime-with-behaviors.md))。 <xref:System.ServiceModel.Description.IWsdlExportExtension> はエンドポイントごとに呼び出され、コントラクトがエクスポートされていない場合は、各エンドポイントによって最初にコントラクトがエクスポートされます。 必要に応じて、次のいずれかのエクスポート プロセスに参加できます。  
   
--   <xref:System.ServiceModel.Description.WsdlContractConversionContext> を使用して、エクスポートされたメタデータを <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> メソッドで変更する。  
+- <xref:System.ServiceModel.Description.WsdlContractConversionContext> を使用して、エクスポートされたメタデータを <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> メソッドで変更する。  
   
--   <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> を使用して、エンドポイントに対してエクスポートされたメタデータを <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> メソッドで変更する。  
+- <xref:System.ServiceModel.Description.WsdlEndpointConversionContext> を使用して、エンドポイントに対してエクスポートされたメタデータを <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> メソッドで変更する。  
   
  <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportContract%2A> メソッドは、エクスポートされる <xref:System.ServiceModel.Description.IWsdlExportExtension> インスタンスに含まれるすべての <xref:System.ServiceModel.Description.ContractDescription?displayProperty=nameWithType> 実装で呼び出されます。  <xref:System.ServiceModel.Description.IWsdlExportExtension.ExportEndpoint%2A> メソッドは、エクスポートされる <xref:System.ServiceModel.Description.IWsdlExportExtension> インスタンスを持つすべての <xref:System.ServiceModel.Description.ServiceEndpoint?displayProperty=nameWithType> 実装で呼び出されます。  
   

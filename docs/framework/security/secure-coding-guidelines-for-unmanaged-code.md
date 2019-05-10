@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a8d15139-d368-4c9c-a747-ba757781117c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 138713c4a1397369ea18792a3b2742389b107a6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 59a25eb9b854f0f303d8b1d97db40406c2818df8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61951711"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626276"
 ---
 # <a name="secure-coding-guidelines-for-unmanaged-code"></a>アンマネージド コードの安全なコーディングのガイドライン
 一部のライブラリ コードは、アンマネージド コードを呼び出す必要があります (たとえば、Win32 などのネイティブ コード API)。 これは、マネージド コード用のセキュリティの境界の外部に出ることなので、注意が必要です。 セキュリティ的に中立なコードである場合、コードとそのコードを呼び出すコードは、アンマネージド コードのアクセス許可 (<xref:System.Security.Permissions.SecurityPermission> フラグを指定した <xref:System.Security.Permissions.SecurityPermissionFlag.UnmanagedCode> ) を持つ必要があります。  
