@@ -2,12 +2,12 @@
 title: 長時間のワークフロー サービスの作成
 ms.date: 03/30/2017
 ms.assetid: 4c39bd04-5b8a-4562-a343-2c63c2821345
-ms.openlocfilehash: ac0cb83ad428ce98a05fd0626fff835162ad0e41
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 10a2c568f14c3f3c1818fd8b3240279b798777b8
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048146"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063800"
 ---
 # <a name="creating-a-long-running-workflow-service"></a>長時間のワークフロー サービスの作成
 ここでは、実行時間の長いワークフロー サービスを作成する方法について説明します。 実行時間の長いワークフロー サービスは、長期間にわたって実行できます。 ワークフローでは、いくつかの追加情報を待つ間アイドル状態になることがあります。 アイドル状態になると、ワークフローは SQL データベースに永続化され、メモリから削除されます。 追加情報が使用可能になると、ワークフロー インスタンスがメモリに読み込み直されて、実行を継続します。  このシナリオでは、非常に簡略化された注文システムを実装します。  クライアントは、最初のメッセージをワークフロー サービスに送信して注文を開始します。 ワークフロー サービスは、注文 ID をクライアントに返します。 この時点で、ワークフロー サービスは、クライアントからの別のメッセージを待機しており、アイドル状態に入って、SQL Server データベースに永続化されます。  クライアントが次のメッセージを送信して項目を注文すると、ワークフロー サービスはメモリに読み込み直されて、注文の処理を終了します。 次のコード例では、項目が注文に追加されたことを示す文字列を返します。 このコード例は、テクノロジの実際の適用を意図するものではなく、実行時間の長いワークフロー サービスを示す簡単な例です。 このトピックでは、Visual Studio 2012 プロジェクトとソリューションの作成方法を知っていると仮定します。
@@ -100,10 +100,15 @@ ms.locfileid: "62048146"
     1. 選択、**シーケンス**、新しく追加したを格納している**受信**と**SendReply**アクティビティをクリックして、**変数**ボタンをクリックします。 次の図で強調表示されている変数を追加します。
 
          ![新しい変数を追加する](./media/creating-a-long-running-workflow-service/add-the-itemid-variable.png "ItemId 変数を追加します。")
+         
+         追加も`orderResult`として**文字列**で、`Sequence`スコープ。
 
     2. 選択、**受信**アクティビティし、次の図に示すようにプロパティを設定します。
 
          ![Receive アクティビティのプロパティを設定](./media/creating-a-long-running-workflow-service/set-receive-activities-properties.png "受信アクティビティのプロパティを設定します。")
+         
+         > [!NOTE]
+         >  変更することを忘れないでください**servicecontractname プロパティ**フィールド`../IAddItem`します。
 
     3. をクリックして、**を定義しています.** のリンクを**ReceiveAddItem**アクティビティし、次の図に示すようにパラメーターを追加します。 注文 ID、および注文されている項目の ID の 2 つのパラメーターを受け入れるように、receive アクティビティを構成します。
 

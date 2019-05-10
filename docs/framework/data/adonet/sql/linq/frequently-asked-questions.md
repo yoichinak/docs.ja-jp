@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 16c06ddade79c2b3a48401f5620431e46e18f5ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903358"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64657059"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 ここでは、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] を実装するときに発生する可能性のある一般的な問題の対処法について説明します。  
@@ -34,18 +34,18 @@ ms.locfileid: "61903358"
   
  接続が厳密にどのように使用されるかは、以下に応じて異なります。  
   
--   接続オブジェクトを使って <xref:System.Data.Linq.DataContext> が作成されている場合は、接続状態。  
+- 接続オブジェクトを使って <xref:System.Data.Linq.DataContext> が作成されている場合は、接続状態。  
   
--   接続文字列の設定 (たとえば、複数のアクティブな結果セット (MARS) の有効化)。 詳細については、「 [複数のアクティブな結果セット (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)」を参照してください。  
+- 接続文字列の設定 (たとえば、複数のアクティブな結果セット (MARS) の有効化)。 詳細については、「 [複数のアクティブな結果セット (MARS)](../../../../../../docs/framework/data/adonet/sql/multiple-active-result-sets-mars.md)」を参照してください。  
   
 ## <a name="updating-without-querying"></a>クエリを使用しない更新  
  Q. データベースに対してあらかじめクエリを実行せずに、テーブル データを更新できますか?  
   
  A:  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] にはセットベースの更新コマンドはありませんが、次のいずれかの技法を使用すると、あらかじめクエリを実行せずに更新できます。  
   
--   <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> を使って SQL コードを送信する。  
+- <xref:System.Data.Linq.DataContext.ExecuteCommand%2A> を使って SQL コードを送信する。  
   
--   オブジェクトの新しいインスタンスを作成し、更新に関連したすべての現在値 (フィールド) を初期化する。 その後、<xref:System.Data.Linq.DataContext> を使ってオブジェクトを <xref:System.Data.Linq.Table%601.Attach%2A> に関連付け、更新対象のフィールドを変更します。  
+- オブジェクトの新しいインスタンスを作成し、更新に関連したすべての現在値 (フィールド) を初期化する。 その後、<xref:System.Data.Linq.DataContext> を使ってオブジェクトを <xref:System.Data.Linq.Table%601.Attach%2A> に関連付け、更新対象のフィールドを変更します。  
   
 ## <a name="unexpected-query-results"></a>予期しないクエリ結果  
  Q. 予期しない結果がクエリから返されます。 どうなっているのか調べる方法はありますか。  
@@ -57,9 +57,9 @@ ms.locfileid: "61903358"
   
  A:  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] には、ストアド プロシージャを介して、データベースによって生成される値を返す方法が 2 つあります。  
   
--   出力結果に名前を付ける。  
+- 出力結果に名前を付ける。  
   
--   出力パラメーターを明示的に指定する。  
+- 出力パラメーターを明示的に指定する。  
   
  間違っている出力例を以下に示します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は結果をマップできないため、常に 0 が返されます。  
   

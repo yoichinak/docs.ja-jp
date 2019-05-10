@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d93c55cec3d35fd4208a4a8a7c9b235dd10fb9ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 82d81be7a9e0843dfe382767de582f93371acb4c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59156170"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584484"
 ---
 # <a name="imetadataemitdefinetyperefbyname-method"></a>IMetaDataEmit::DefineTypeRefByName メソッド
 現在のスコープ外には、指定したスコープで定義されている型のメタデータ トークンを取得します。  
@@ -41,15 +41,15 @@ HRESULT DefineTypeRefByName (
  `tkResolutionScope`  
  [in]解決スコープを指定するトークンです。 次のトークン型は有効です。  
   
--   `mdModuleRef`、呼び出し元が定義されている同じアセンブリで型が定義されている場合。  
+- `mdModuleRef`、呼び出し元が定義されている同じアセンブリで型が定義されている場合。  
   
--   `mdAssemblyRef`、呼び出し元が定義されているもの以外のアセンブリで型が定義されている場合。  
+- `mdAssemblyRef`、呼び出し元が定義されているもの以外のアセンブリで型が定義されている場合。  
   
--   `mdTypeRef`、型が入れ子にされた型の場合。  
+- `mdTypeRef`、型が入れ子にされた型の場合。  
   
--   `mdModule`、、型が、呼び出し元が定義されている同じモジュールで定義されている場合。  
+- `mdModule`、、型が、呼び出し元が定義されている同じモジュールで定義されている場合。  
   
--   型がグローバルに定義されている場合は null です。  
+- 型がグローバルに定義されている場合は null です。  
   
  `szName`  
  [in]Unicode で対象の型の名前。  

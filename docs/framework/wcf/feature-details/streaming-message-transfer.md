@@ -2,12 +2,12 @@
 title: メッセージ転送ストリーミング
 ms.date: 03/30/2017
 ms.assetid: 72a47a51-e5e7-4b76-b24a-299d51e0ae5a
-ms.openlocfilehash: e58b0ce698df310a5e18bcd24201fb2e27a9c1aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6f16ab16235c9fcbe0a151d5c404df96080192c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747577"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585927"
 ---
 # <a name="streaming-message-transfer"></a>メッセージ転送ストリーミング
 Windows Communication Foundation (WCF) トランスポートでは、メッセージを転送するため 2 つのモードをサポートします。  

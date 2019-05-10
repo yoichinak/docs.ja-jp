@@ -11,12 +11,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], changing border styles
 - DataGridView control [Windows Forms], gridline styles
 ms.assetid: 2f413c7a-4025-4171-8e3a-66ef908ea583
-ms.openlocfilehash: d24adb98c339f911d6bea0312bce4d4b4f198a61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7e68bb2f6a3bff0a0a5ff7f8011c2642c141eaf3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61939010"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593441"
 ---
 # <a name="how-to-change-the-border-and-gridline-styles-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの境界線とグリッド線のスタイルを変更する
 <xref:System.Windows.Forms.DataGridView>コントロール、コントロールの境界線と、ユーザー エクスペリエンスを向上させるためにグリッド線の外観をカスタマイズすることができます。 グリッド線の色とだけでなく、コントロール内のセルの境界線スタイル コントロールの境界線のスタイルを変更することができます。 通常のセル、行のヘッダー セルと列ヘッダー セルの別のセルの境界線スタイルを適用することもできます。  
@@ -26,7 +26,8 @@ ms.locfileid: "61939010"
   
 ### <a name="to-change-the-gridline-color-programmatically"></a>プログラムで枠線の色を変更するには  
   
-- <xref:System.Windows.Forms.DataGridView.GridColor%2A> プロパティを設定します。  
+- 
+  <xref:System.Windows.Forms.DataGridView.GridColor%2A> プロパティを設定します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF [WCF], system-provided bindings
 - bindings [WCF], system-provided
 ms.assetid: 443f8d65-f1f2-4311-83b3-4d8fdf7ccf16
-ms.openlocfilehash: 0dc213c2d25558dc447b49d2b2378f9aa72f80a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 49aacdc7db6bc9e8b951f69bcd880835bb9182f2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857416"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654508"
 ---
 # <a name="configuring-system-provided-bindings"></a>システムが提供するバインディングの構成
 バインディングにより、エンドポイントとの通信で使用する通信メカニズムが指定され、エンドポイントへの接続方法が示されます。 どのように Windows Communication Foundation (WCF) チャネルを階層化する必要な通信機能を提供するかを定義する要素のバインディングで構成されます。 バインディングには次の 3 種類の要素が含まれます。  
@@ -53,18 +53,18 @@ ms.locfileid: "61857416"
   
 |バインディング|相互運用性|セキュリティ モード (既定)|セッション<br /><br /> (既定)|トランザクション|二重|  
 |-------------|----------------------|----------------------------------|-----------------------------|------------------|------------|  
-|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(なし)、トランスポート、メッセージ、混在|なし、(なし)|(なし)|適用なし|  
-|<xref:System.ServiceModel.WSHttpBinding>|WS|なし、トランスポート、(メッセージ)、混在|(なし)、トランスポート、信頼できるセッション|(なし)、あり|適用なし|  
-|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security、WS-Trust、WS-SecureConversation、WS-SecurityPolicy|なし、トランスポート、(メッセージ)、混在|(なし)、トランスポート、信頼できるセッション|(なし)、あり|適用なし|  
+|<xref:System.ServiceModel.BasicHttpBinding>|Basic Profile 1.1|(なし)、トランスポート、メッセージ、混在|なし、(なし)|(なし)|N/A|  
+|<xref:System.ServiceModel.WSHttpBinding>|WS|なし、トランスポート、(メッセージ)、混在|(なし)、トランスポート、信頼できるセッション|(なし)、あり|N/A|  
+|<xref:System.ServiceModel.WS2007HttpBinding>|WS-Security、WS-Trust、WS-SecureConversation、WS-SecurityPolicy|なし、トランスポート、(メッセージ)、混在|(なし)、トランスポート、信頼できるセッション|(なし)、あり|N/A|  
 |<xref:System.ServiceModel.WSDualHttpBinding>|WS|なし、(メッセージ)|(信頼できるセッション)|(なし)、あり|[はい]|  
 |<xref:System.ServiceModel.WSFederationHttpBinding>|WS-Federation|なし、(メッセージ)、混在|(なし)、信頼できるセッション|(なし)、あり|いいえ|  
 |<xref:System.ServiceModel.WS2007FederationHttpBinding>|WS-Federation|なし、(メッセージ)、混在|(なし)、信頼できるセッション|(なし)、あり|いいえ|  
 |<xref:System.ServiceModel.NetTcpBinding>|.NET|なし、(トランスポート)、メッセージ、<br /><br /> 混合|信頼できるセッション、(トランスポート)|(なし)、あり|[はい]|  
-|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|なし、<br /><br /> (トランスポート)|なし、(トランスポート)|(なし)、あり|[はい]|  
+|<xref:System.ServiceModel.NetNamedPipeBinding>|.NET|なし、<br /><br /> (トランスポート)|なし、(トランスポート)|(なし)、あり|はい|  
 |<xref:System.ServiceModel.NetMsmqBinding>|.NET|なし、メッセージ、(トランスポート)、両方|(なし)|(なし)、あり|いいえ|  
 |<xref:System.ServiceModel.NetPeerTcpBinding>|Peer|なし、メッセージ、(トランスポート)、混在|(なし)|(なし)|[はい]|  
-|<xref:System.ServiceModel.WebHttpBinding>|.Net|None, Transport, TransportCredentialOnly|(なし)|(なし)|適用なし|  
-|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|なし、(トランスポート)|(なし)|(なし)、あり|適用なし|  
+|<xref:System.ServiceModel.WebHttpBinding>|.Net|None, Transport, TransportCredentialOnly|(なし)|(なし)|N/A|  
+|<xref:System.ServiceModel.MsmqIntegration.MsmqIntegrationBinding>|MSMQ|なし、(トランスポート)|(なし)|(なし)、あり|N/A|  
   
  次の表では、前の表内の機能について説明します。  
   

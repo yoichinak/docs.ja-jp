@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - transport quotas [WCF]
 ms.assetid: 3e71dd3d-f981-4d9c-9c06-ff8abb61b717
-ms.openlocfilehash: 12c266a473aa7c20ab35d6047fedafbfa04dac4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a40fa9beec1eabeb02c6ccc4e2ab8179aa49288c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050715"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585774"
 ---
 # <a name="transport-quotas"></a>トランスポート クォータ
 トランスポート クォータは、接続がリソースを過剰に消費している時期を特定するポリシー機構です。 クォータとは、クォータ値を超えた場合に、それ以上のリソースの使用を禁止する確実な制限です。 トランスポート クォータは、悪質な、または意図的でないサービス拒否攻撃を防ぎます。  
@@ -61,19 +61,19 @@ ms.locfileid: "62050715"
   
 |名前|HTTP|TCP/IP|名前付きパイプ|  
 |----------|----------|-------------|----------------|  
-|`ChannelInitializationTimeout`||x|x|  
+|`ChannelInitializationTimeout`||x|X|  
 |`CloseTimeout`||||  
-|`ConnectionBufferSize`||x|x|  
-|`IdleTimeout`||x|x|  
-|`LeaseTimeout`||x||  
-|`ListenBacklog`||x||  
-|`MaxBufferPoolSize`|x|x|x|  
-|`MaxBufferSize`|x|x|x|  
-|`MaxOutboundConnectionsPerEndpoint`||x|x|  
-|`MaxOutputDelay`||x|x|  
-|`MaxPendingAccepts`||x|x|  
-|`MaxPendingConnections`||x|x|  
-|`MaxReceivedMessageSize`|x|x|x|  
+|`ConnectionBufferSize`||X|X|  
+|`IdleTimeout`||X|X|  
+|`LeaseTimeout`||X||  
+|`ListenBacklog`||X||  
+|`MaxBufferPoolSize`|X|X|X|  
+|`MaxBufferSize`|X|X|X|  
+|`MaxOutboundConnectionsPerEndpoint`||X|X|  
+|`MaxOutputDelay`||X|X|  
+|`MaxPendingAccepts`||X|X|  
+|`MaxPendingConnections`||X|X|  
+|`MaxReceivedMessageSize`|X|X|x|  
 |`OpenTimeout`||||  
 |`ReceiveTimeout`||||  
 |`SendTimeout`||||  
@@ -84,21 +84,21 @@ ms.locfileid: "62050715"
 |名前|HTTP|TCP/IP|名前付きパイプ|  
 |----------|----------|-------------|----------------|  
 |`ChannelInitializationTimeout`||||  
-|`CloseTimeout`|x|x|x|  
+|`CloseTimeout`|x|X|X|  
 |`ConnectionBufferSize`||||  
 |`IdleTimeout`||||  
 |`LeaseTimeout`||||  
-|`ListenBacklog`||x||  
-|`MaxBufferPoolSize`|x|x|x|  
+|`ListenBacklog`||X||  
+|`MaxBufferPoolSize`|X|X|x|  
 |`MaxBufferSize`|1|x|x|  
 |`MaxOutboundConnectionsPerEndpoint`||2|2|  
 |`MaxOutputDelay`||||  
 |`MaxPendingAccepts`||||  
 |`MaxPendingConnections`||2|2|  
-|`MaxReceivedMessageSize`|x|x|x|  
-|`OpenTimeout`|x|x|x|  
-|`ReceiveTimeout`|x|x|x|  
-|`SendTimeout`|x|x|x|  
+|`MaxReceivedMessageSize`|x|X|X|  
+|`OpenTimeout`|X|X|X|  
+|`ReceiveTimeout`|X|X|X|  
+|`SendTimeout`|X|X|x|  
   
 1. `MaxBufferSize` トランスポート クォータは、`BasicHttp` バインディングでのみ使用可能です。 `WSHttp` バインディングは、ストリーミング トランスポート モードがサポートされないシナリオに対応します。  
   

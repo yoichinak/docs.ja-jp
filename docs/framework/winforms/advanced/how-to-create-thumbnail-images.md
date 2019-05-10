@@ -8,12 +8,12 @@ helpviewer_keywords:
 - thumbnail images [Windows Forms], creating
 - images [Windows Forms], creating thumbnails
 ms.assetid: e956242a-1e5b-4217-a3cf-5f3fb45d00ba
-ms.openlocfilehash: b9afbac85dee90938e2bd55ebe19d3b02c0d66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 275041372bd5e7da5dd0b32dc0a3d70a38bd0dcd
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937640"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063767"
 ---
 # <a name="how-to-create-thumbnail-images"></a>方法: サムネイル イメージを作成する
 サムネイル イメージは、小さいイメージのバージョンです。 サムネイル イメージを作成するには呼び出すことによって、<xref:System.Drawing.Image.GetThumbnailImage%2A>のメソッド、<xref:System.Drawing.Image>オブジェクト。  
@@ -23,7 +23,7 @@ ms.locfileid: "61937640"
   
  次の図は、サムネイル画像を示します。  
   
- ![サムネイル画像](./media/thumbnail1.png "Thumbnail1")  
+ ![出力サムネイルを示すスクリーン ショット。](./media/how-to-create-thumbnail-images/construct-thumbnail-image.png)  
   
 > [!NOTE]
 >  この例では、コールバック メソッドが宣言されるが、使用されていません。 これには、GDI + のすべてのバージョンがサポートしています。  

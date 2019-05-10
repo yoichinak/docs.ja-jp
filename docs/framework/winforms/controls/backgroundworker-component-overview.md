@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: da535da0b0d1416597d2a62a96cec544d7be68fb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: da1d87464ef30fb549a2c201170e81c45cbdf6fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011815"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587738"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker コンポーネントの概要
 一般的な操作には、実行時間が長くかかるものが数多くあります。 次に例を示します。  

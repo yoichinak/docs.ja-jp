@@ -9,12 +9,12 @@ helpviewer_keywords:
 - decision structures [Visual Basic]
 - conditional statements [Visual Basic], decision structures
 ms.assetid: 2e2e0895-4483-442a-b17c-26aead751ec2
-ms.openlocfilehash: 4a76b2565c343e69ac3c11441035a7682a8f08ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8b653b941c5959036256cde097a41f8c6251c7a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907006"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601241"
 ---
 # <a name="decision-structures-visual-basic"></a>条件判断構造 (Visual Basic)
 Visual Basic では、条件をテストし、そのテストの結果に応じてさまざまな操作を実行することができます。 true または false の場合、さまざまな値の式、または一連のステートメントを実行するときに生成された例外のさまざまな条件をテストできます。  
@@ -26,13 +26,13 @@ Visual Basic では、条件をテストし、そのテストの結果に応じ�
 ## <a name="ifthenelse-construction"></a>If...Then...Else 構造  
  `If...Then...Else` 構造では、1 つまたは複数の条件をテストし、各条件に応じて 1 つまたは複数のステートメントを実行できます。 条件をテストし、次の方法でアクションを実行できます。  
   
--   条件の場合は、1 つまたは複数のステートメントを実行します。 `True`  
+- 条件の場合は、1 つまたは複数のステートメントを実行します。 `True`  
   
--   条件の場合は、1 つまたは複数のステートメントを実行します。 `False`  
+- 条件の場合は、1 つまたは複数のステートメントを実行します。 `False`  
   
--   条件の場合は、いくつかのステートメントを実行`True`や他のユーザーである場合 `False`  
+- 条件の場合は、いくつかのステートメントを実行`True`や他のユーザーである場合 `False`  
   
--   前の条件の場合、追加の条件をテストします。 `False`  
+- 前の条件の場合、追加の条件をテストします。 `False`  
   
  これらすべての可能性を提供する制御構造が、[If ... Then ... Else ステートメント](../../../../visual-basic/language-reference/statements/if-then-else-statement.md)です。 1 つのテストと 1 つのステートメントを実行する必要がある場合は、単一行のバージョンを使用できます。 複雑な一連の条件とアクションがある場合は、複数行のバージョンを使用することができます。  
   

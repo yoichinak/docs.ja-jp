@@ -20,7 +20,7 @@ ms.locfileid: "61704964"
 暗号化アルゴリズムが連邦情報処理規格 (FIPS: Federal Information Processing Standard) に準拠する必要があるコンピューターの構成要件を強制するかどうかを指定します。  
   
  \<configuration > 要素  
-\<ランタイム > 要素  
+\<runtime> 要素  
 \<enforceFIPSPolicy > 要素  
   
 ## <a name="syntax"></a>構文  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - embedded expressions [Visual Basic]
 - XML literals [Visual Basic], embedded expressions
 ms.assetid: 75016fad-0141-42de-8564-5051be29487e
-ms.openlocfilehash: 31e79a8787978ffab2e35cd2827b80a8f1ed843e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca80ac666e8676e4e58a9741b00125c0126570fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61861362"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598380"
 ---
 # <a name="how-to-embed-expressions-in-xml-literals-visual-basic"></a>方法: XML リテラル (Visual Basic) に式を埋め込む
 埋め込み式 XML ドキュメント、フラグメント、または実行時に作成されたコンテンツを含む要素を作成するには、XML リテラルを組み合わせることができます。 次の例では、組み込み式を使用して、実行時にコンテンツの要素、属性、および要素名を設定する方法を示します。  
@@ -23,7 +23,7 @@ ms.locfileid: "61861362"
   
 #### <a name="to-insert-text-as-element-content"></a>要素の内容としてテキストを挿入するには  
   
--   次の例に含まれているテキストを挿入する方法を示しています、`contactName`かっこと右の名前の要素間変数。  
+- 次の例に含まれているテキストを挿入する方法を示しています、`contactName`かっこと右の名前の要素間変数。  
   
      [!code-vb[VbXMLSamples#39](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#39)]  
   
@@ -37,7 +37,7 @@ ms.locfileid: "61861362"
   
 #### <a name="to-insert-text-as-an-attribute-value"></a>属性値としてテキストを挿入するには  
   
--   次の例に含まれているテキストを挿入する方法を示しています、`phoneType`変数の値として、`type`属性。  
+- 次の例に含まれているテキストを挿入する方法を示しています、`phoneType`変数の値として、`type`属性。  
   
      [!code-vb[VbXMLSamples#40](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbXMLSamples/VB/XMLSamples14.vb#40)]  
   
@@ -51,7 +51,7 @@ ms.locfileid: "61861362"
   
 #### <a name="to-insert-text-for-an-element-name"></a>要素名のテキストを挿入するには  
   
--   次の例に含まれているテキストを挿入する方法を示しています、`elementName`変数としての要素の名前。  
+- 次の例に含まれているテキストを挿入する方法を示しています、`elementName`変数としての要素の名前。  
   
      この手法を使用して要素を作成するときに、それらを閉じる必要があります、 \</> タグです。  
   

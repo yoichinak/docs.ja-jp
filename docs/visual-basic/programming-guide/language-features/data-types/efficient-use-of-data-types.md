@@ -13,12 +13,12 @@ helpviewer_keywords:
 - data types [Visual Basic], optimizing
 - ChrW function [Visual Basic], preferred to Chr
 ms.assetid: 28f5e4ba-ec24-4f37-b90a-e8ee822f778a
-ms.openlocfilehash: 0b517bca3a9e296eb891e30df91c1d32eb357432
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f85acfe7592d7b90423107e0d45bb007fce5f4a8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907219"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601156"
 ---
 # <a name="efficient-use-of-data-types-visual-basic"></a>データ型の有効な使用方法 (Visual Basic)
 宣言されていない変数とデータ型なしで宣言された変数が割り当てられている、`Object`データ型。 プログラムを迅速に記述が簡単になります。 ただし、ことより緩やかに変化を実行することがあります。  
@@ -26,11 +26,11 @@ ms.locfileid: "61907219"
 ## <a name="strong-typing"></a>厳密な型指定  
  すべての変数のデータ型の指定と呼びます*厳密な型指定*します。 厳密な型指定を使用して、いくつかの利点があります。  
   
--   変数に IntelliSense をサポートをできます。 これにより、コードに入力すると、プロパティやその他のメンバーを表示することができます。  
+- 変数に IntelliSense をサポートをできます。 これにより、コードに入力すると、プロパティやその他のメンバーを表示することができます。  
   
--   コンパイラの型チェックの利点がかかります。 これは、オーバーフローなどのエラーにより実行時に失敗するステートメントをキャッチします。 サポートしていないオブジェクトに対するメソッドの呼び出しをキャッチします。  
+- コンパイラの型チェックの利点がかかります。 これは、オーバーフローなどのエラーにより実行時に失敗するステートメントをキャッチします。 サポートしていないオブジェクトに対するメソッドの呼び出しをキャッチします。  
   
--   コードの実行速度が速くなります。  
+- コードの実行速度が速くなります。  
   
 ## <a name="most-efficient-data-types"></a>最も効率的なデータ型  
  決して分数を含む変数、整数データ型は非整数の型よりも効率的です。 Visual basic で`Integer`と`UInteger`は最も効率的な数値型。  

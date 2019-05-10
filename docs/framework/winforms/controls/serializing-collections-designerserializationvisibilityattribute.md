@@ -11,33 +11,28 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: c113dcf814a252808ae3232751028947c26821ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c8321f98b25026e32e7c69f7029f2c589d0567f7
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012439"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211597"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化
 
 カスタム コントロールでは、プロパティとしてコレクションを公開が場合があります。 このチュートリアルを使用する方法について説明、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute>デザイン時にコレクションをシリアル化する方法を制御するクラス。 適用、<xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>値をコレクション プロパティにより、プロパティをシリアル化されます。
 
- このトピックのコードを単一のリストとしてコピーするには、「[方法:Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))します。
-
-> [!NOTE]
-> 実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。
+このトピックのコードを単一のリストとしてコピーするには、「[方法:Designerserializationvisibilityattribute を使用、基本データ型のコレクションをシリアル化](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/ms171833(v=vs.120))します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
- このチュートリアルを完了するための要件は次のとおりです。
 
-- 作成し、Visual Studio がインストールされているコンピューターで Windows フォーム アプリケーション プロジェクトを実行できる十分なアクセスを許可します。
+このチュートリアルを完了するには Visual Studio が必要です。
 
-## <a name="creating-a-control-that-has-a-serializable-collection"></a>シリアル化可能なコレクションを持つコントロールを作成します。
- 最初の手順では、プロパティとしてシリアル化可能なコレクションを持つコントロールを作成します。 使用してこのコレクションの内容を編集することができます、**コレクション エディター**からアクセスできますが、**プロパティ**ウィンドウ。
+## <a name="create-a-control-with-a-serializable-collection"></a>シリアル化可能なコレクションを使用してコントロールを作成します。
 
-### <a name="to-create-a-control-with-a-serializable-collection"></a>シリアル化可能なコレクションを使用してコントロールを作成するには
+最初の手順では、プロパティとしてシリアル化可能なコレクションを持つコントロールを作成します。 使用してこのコレクションの内容を編集することができます、**コレクション エディター**からアクセスできますが、**プロパティ**ウィンドウ。
 
-1. という名前の Windows コントロール ライブラリ プロジェクトを作成する`SerializationDemoControlLib`します。 詳細については、次を参照してください。 [Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))します。
+1. Visual Studio で、という名前の Windows コントロール ライブラリ プロジェクトを作成`SerializationDemoControlLib`です。 詳細については、次を参照してください。 [Windows コントロール ライブラリ テンプレート](https://docs.microsoft.com/previous-versions/kxczf775(v=vs.100))します。
 
 2. 名前を変更`UserControl1`に`SerializationDemoControl`します。 詳細については、次を参照してください。[コード シンボルのリファクタリングの名前を変更](/visualstudio/ide/reference/rename)します。
 
@@ -62,21 +57,21 @@ ms.locfileid: "62012439"
 
 7. 定義、`Strings`プロパティを`SerializationDemoControl`します。
 
-> [!NOTE]
-> <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>値を使用して、コレクションのシリアル化を有効にします。
+   > [!NOTE]
+   > <xref:System.ComponentModel.DesignerSerializationVisibilityAttribute.Content>値を使用して、コレクションのシリアル化を有効にします。
 
- [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
- [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
- [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]
+   [!code-cpp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/cpp/form1.cpp#5)]
+   [!code-csharp[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/CS/form1.cs#5)]
+   [!code-vb[System.ComponentModel.DesignerSerializationVisibilityAttribute#5](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.DesignerSerializationVisibilityAttribute/VB/form1.vb#5)]
 
-1. F5 キーを押してプロジェクトをビルドし、**UserControl Test Container** でコントロールを実行します。
+8. キーを押して**F5**プロジェクトをビルドしでコントロールを実行する、 **UserControl Test Container**します。
 
-2. 検索、`Strings`プロパティ、<xref:System.Windows.Forms.PropertyGrid>の**UserControl Test Container**します。 をクリックして、`Strings`プロパティ、省略記号をクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、 **の文字列コレクションエディター**.
+9. 検索、`Strings`プロパティ、<xref:System.Windows.Forms.PropertyGrid>の**UserControl Test Container**します。 をクリックして、`Strings`プロパティ、省略記号をクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、 **の文字列コレクションエディター**.
 
-3. 内のいくつかの文字列を入力、**文字列コレクション エディター**します。 各文字列の最後に ENTER キーを押すで区切ります。 クリックして**OK**文字列の入力が完了したら。
+10. 内のいくつかの文字列を入力、**文字列コレクション エディター**します。 キーを押して区切ります、 **Enter**各文字列の末尾にあるキー。 クリックして**OK**文字列の入力が完了したら。
 
-> [!NOTE]
-> 入力した文字列に表示されます、<xref:System.Windows.Forms.TextBox>の`SerializationDemoControl`します。
+   > [!NOTE]
+   > 入力した文字列に表示されます、<xref:System.Windows.Forms.TextBox>の`SerializationDemoControl`します。
 
 ## <a name="serializing-a-collection-property"></a>コレクション プロパティをシリアル化します。
 

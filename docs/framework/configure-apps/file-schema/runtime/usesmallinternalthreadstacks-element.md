@@ -18,7 +18,7 @@ ms.locfileid: "61673987"
 要求の共通言語ランタイム (CLR) がメモリを減らすことは、内部的には、これらのスレッドの既定のスタック サイズを使用する代わりに使用する特定のスレッドの作成時に、明示的なスタック サイズを指定することによって使用されます。  
   
  \<configuration > 要素  
-\<ランタイム > 要素  
+\<runtime> 要素  
 \<UseSmallInternalThreadStacks > 要素  
   
 ## <a name="syntax"></a>構文  

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a731df84af0991f80c560db417df0ffe053a5e2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d05475f06a206dcb88d198c713767618453d742e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598936"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586910"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 関数
 コントロールが関数に渡されることをプロファイラーに通知します。  
