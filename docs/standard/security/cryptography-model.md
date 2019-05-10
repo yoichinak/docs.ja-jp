@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 12fecad4-fbab-432a-bade-2f05976a2971
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7a60f03d85997d20b54366360f104519c9c75f5e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 42e5c7018f83f3849f46f33e09e09ea1749e7c70
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795266"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753287"
 ---
 # <a name="net-framework-cryptography-model"></a>.NET Framework の暗号モデル
 

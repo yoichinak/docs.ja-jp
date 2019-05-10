@@ -11,12 +11,12 @@ helpviewer_keywords:
 - variables [Visual Basic], enumeration
 - constants [Visual Basic], enumerated
 ms.assetid: a45e51f1-65ff-48e1-bf32-79130f137377
-ms.openlocfilehash: fa97a374d4570e014222bf44844271b3394453da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0a761c39b51a8d71919a84cbbbf6739fc1f5bcea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638130"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754621"
 ---
 # <a name="enum-statement-visual-basic"></a>Enum ステートメント (Visual Basic)
 
