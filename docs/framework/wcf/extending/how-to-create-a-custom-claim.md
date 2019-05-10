@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d619976b-eda3-475e-ac23-c7988a2dceb0
-ms.openlocfilehash: 1892e910a86e01b7b2ee0f6a2403ad7af4688808
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c1c1e050cfef36aa53b83a764c0b7e308783394
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857780"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619617"
 ---
 # <a name="how-to-create-a-custom-claim"></a>方法: カスタム クレームを作成する
 Id モデル インフラストラクチャでは、Windows Communication Foundation (WCF) を作成するための組み込みクレームの種類とヘルパー関数の権限のセットを提供する<xref:System.IdentityModel.Claims.Claim>その種類と権限を持つインスタンス。 この組み込みクレームは、モデルに関する情報を WCF がサポートするクライアント資格情報の種類に既定で設計されています。 多くの場合はこの組み込みクレームで十分ですが、一部のアプリケーションでカスタム クレームが必要になる場合があります。 クレームは、クレームが適用されるリソースを示すクレームの種類と、リソースにアサートされる権限で構成されます。 このトピックでは、カスタム クレームを作成する方法について説明します。  
@@ -19,15 +19,15 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
   
 1. クレームの種類、リソースの値、<xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> コンストラクターへの権限を渡すことで、カスタム クレームを作成します。  
   
-    1.  クレームの種類の一意の値を指定します。  
+    1. クレームの種類の一意の値を指定します。  
   
          クレームの種類は一意の文字列識別子です。 カスタム クレームを作成する場合、クレームの種類に使用されている文字列識別子が一意になるようにしてください。 WCF で定義されている要求の種類の一覧は、次を参照してください。、<xref:System.IdentityModel.Claims.ClaimTypes>クラス。  
   
-    2.  プリミティブ データ型とリソースの値を選択します。  
+    2. プリミティブ データ型とリソースの値を選択します。  
   
          リソースはオブジェクトです。 CLR 型のリソースにはプリミティブを指定できます。たとえば、<xref:System.String> や <xref:System.Int32>、または任意のシリアル化可能な型を指定できます。 リソースの CLR 型は、要求は、さまざまなポイントに、WCF によってシリアル化されるため、シリアル化可能である必要があります。 プリミティブ型はシリアル化できます。  
   
-    3.  WCF またはカスタムの権利に一意の値によって定義されている権限を選択します。  
+    3. WCF またはカスタムの権利に一意の値によって定義されている権限を選択します。  
   
          権限は一意の文字列識別子です。 WCF によって定義されている権限が定義されている、<xref:System.IdentityModel.Claims.Rights>クラス。  
   
@@ -42,11 +42,11 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
   
 1. クレームの種類、リソースの値、<xref:System.IdentityModel.Claims.Claim.%23ctor%28System.String%2CSystem.Object%2CSystem.String%29> コンストラクターへの権限を渡すことで、カスタム クレームを作成します。  
   
-    1.  クレームの種類の一意の値を指定します。  
+    1. クレームの種類の一意の値を指定します。  
   
          クレームの種類は一意の文字列識別子です。 カスタム クレームを作成する場合、クレームの種類に使用されている文字列識別子が一意になるようにしてください。 WCF で定義されている要求の種類の一覧は、次を参照してください。、<xref:System.IdentityModel.Claims.ClaimTypes>クラス。  
   
-    2.  リソース用のシリアル化可能な、プリミティブ型以外の型を選択または定義します。  
+    2. リソース用のシリアル化可能な、プリミティブ型以外の型を選択または定義します。  
   
          リソースはオブジェクトです。 リソースの CLR 型は、要求は、さまざまなポイントに、WCF によってシリアル化されるため、シリアル化可能である必要があります。 プリミティブ型は既にシリアル化できます。  
   
@@ -57,7 +57,7 @@ Id モデル インフラストラクチャでは、Windows Communication Founda
          [!code-csharp[c_CustomClaim#2](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_customclaim/cs/c_customclaim.cs#2)] 
          [!code-vb[c_CustomClaim#2](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_customclaim/vb/c_customclaim.vb#2)]        
   
-    3.  WCF またはカスタムの権利に一意の値によって定義されている権限を選択します。  
+    3. WCF またはカスタムの権利に一意の値によって定義されている権限を選択します。  
   
          権限は一意の文字列識別子です。 WCF によって定義されている権限が定義されている、<xref:System.IdentityModel.Claims.Rights>クラス。  
   

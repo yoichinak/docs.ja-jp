@@ -2,21 +2,21 @@
 title: WCF Web HTTP プログラミング モデルの概要
 ms.date: 03/30/2017
 ms.assetid: 381fdc3a-6e6c-4890-87fe-91cca6f4b476
-ms.openlocfilehash: a6f267232085a46d481199eac83e464f5f774273
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a5438857114fba890aac78565ef128bfc5ea95f0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59199584"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613065"
 ---
 # <a name="wcf-web-http-programming-model-overview"></a>WCF Web HTTP プログラミング モデルの概要
 Windows Communication Foundation (WCF) WEB HTTP プログラミング モデルでは、wcf WEB HTTP サービスの構築に必要な基本的な要素を提供します。 WCF WEB HTTP サービスへのアクセスを可能なクライアント、Web ブラウザーなどの広い範囲に設計されていて、次の一意の要件があります。  
   
--   **Uri および URI 処理**Uri は、WEB HTTP サービスの設計で中心的な役割を果たします。 WCF WEB HTTP プログラミング モデルは、<xref:System.UriTemplate>と<xref:System.UriTemplateTable>URI 処理機能を提供するクラス。  
+- **Uri および URI 処理**Uri は、WEB HTTP サービスの設計で中心的な役割を果たします。 WCF WEB HTTP プログラミング モデルは、<xref:System.UriTemplate>と<xref:System.UriTemplateTable>URI 処理機能を提供するクラス。  
   
--   **GET と POST 操作のサポート**WEB HTTP サービスは、起動データの変更やリモート呼び出しの動詞のさまざまなだけでなく、データの取得 GET 動詞を使用します。 WCF WEB HTTP プログラミング モデルは、<xref:System.ServiceModel.Web.WebGetAttribute>と<xref:System.ServiceModel.Web.WebInvokeAttribute>POST、GET と PUT などの他の HTTP 動詞の両方にサービス操作を関連付けるし、削除します。  
+- **GET と POST 操作のサポート**WEB HTTP サービスは、起動データの変更やリモート呼び出しの動詞のさまざまなだけでなく、データの取得 GET 動詞を使用します。 WCF WEB HTTP プログラミング モデルは、<xref:System.ServiceModel.Web.WebGetAttribute>と<xref:System.ServiceModel.Web.WebInvokeAttribute>POST、GET と PUT などの他の HTTP 動詞の両方にサービス操作を関連付けるし、削除します。  
   
--   **複数のデータ形式**Web スタイル サービスは、さまざまな種類の SOAP メッセージ以外にもデータを処理します。 WCF WEB HTTP プログラミング モデルは、<xref:System.ServiceModel.WebHttpBinding>と<xref:System.ServiceModel.Description.WebHttpBehavior>XML ドキュメント、JSON データ オブジェクトでは、イメージ、ビデオ ファイル、またはプレーン テキストなどのバイナリ コンテンツのストリームなど、さまざまなデータ形式をサポートするためにします。  
+- **複数のデータ形式**Web スタイル サービスは、さまざまな種類の SOAP メッセージ以外にもデータを処理します。 WCF WEB HTTP プログラミング モデルは、<xref:System.ServiceModel.WebHttpBinding>と<xref:System.ServiceModel.Description.WebHttpBehavior>XML ドキュメント、JSON データ オブジェクトでは、イメージ、ビデオ ファイル、またはプレーン テキストなどのバイナリ コンテンツのストリームなど、さまざまなデータ形式をサポートするためにします。  
   
  WCF WEB HTTP プログラミング モデルでは、WCF WEB HTTP サービス、AJAX および JSON サービス、および配信 (ATOM および RSS) フィードを含む Web スタイルのシナリオに対応のリーチを拡張します。 AJAX および JSON サービスの詳細については、次を参照してください。 [AJAX の統合と JSON のサポート](../../../../docs/framework/wcf/feature-details/ajax-integration-and-json-support.md)します。 配信の詳細については、次を参照してください。 [WCF 配信の概要](../../../../docs/framework/wcf/feature-details/wcf-syndication-overview.md)します。  
   
@@ -33,23 +33,23 @@ Windows Communication Foundation (WCF) WEB HTTP プログラミング モデル�
   
  このテンプレートによって、次のような URI が記述されます。  
   
--   a/x/c  
+- a/x/c  
   
--   a/y/c  
+- a/y/c  
   
--   a/z/c  
+- a/z/c  
   
--   など。  
+- など。  
   
  このテンプレートでは、中かっこによる表記 ("{segment}") で、リテラル値ではなく、変数のセグメントを示しています。  
   
  .NET Framework は <xref:System.UriTemplate> という URI テンプレートでの作業に使用できる新しい API を提供します。 `UriTemplates` を使用すると、次のことができます。  
   
--   いずれかを呼び出すことができます、`Bind`を生成するパラメーターのセットを持つメソッドを*完全にクローズ URI*テンプレートに一致します。 つまり、URI テンプレート内の変数がすべて、実際の値に置き換えられます。  
+- いずれかを呼び出すことができます、`Bind`を生成するパラメーターのセットを持つメソッドを*完全にクローズ URI*テンプレートに一致します。 つまり、URI テンプレート内の変数がすべて、実際の値に置き換えられます。  
   
--   候補の URI を使用して `Match`() を呼び出すことができます。このメソッドは、テンプレートを使用して候補の URI を構成要素に分解し、テンプレート内の変数に従って分類される URI のさまざまな要素を収めたディクショナリを返します。  
+- 候補の URI を使用して `Match`() を呼び出すことができます。このメソッドは、テンプレートを使用して候補の URI を構成要素に分解し、テンプレート内の変数に従って分類される URI のさまざまな要素を収めたディクショナリを返します。  
   
--   `Bind`() と `Match`() は逆のもので、`Match`( `Bind`( x ) ) を呼び出し、最初と同じ環境に戻ることができます。  
+- `Bind`() と `Match`() は逆のもので、`Match`( `Bind`( x ) ) を呼び出し、最初と同じ環境に戻ることができます。  
   
  包含されたテンプレートを個別に扱うことができるデータ構造内の一連の <xref:System.UriTemplate> オブジェクトを追跡することが必要になる場合がよくあります (特に、URI に基づいて要求をサービス操作にディスパッチすることが必要なサーバー上)。 <xref:System.UriTemplateTable> は、URI テンプレートのセットを表し、テンプレート セットと候補の URI が与えられると、最適の組み合わせを選択します。 これはられません (WCF が含まれている) 特定のネットワーク スタックで必要な場所に使用できるようにします。  
   
@@ -127,11 +127,11 @@ interface ICustomer
 ## <a name="formats-and-the-wcf-web-http-programming-model"></a>形式と WCF WEB HTTP プログラミング モデル  
  WCF WEB HTTP プログラミング モデルには、さまざまなデータ形式を使用する新しい機能があります。 <xref:System.ServiceModel.WebHttpBinding> は、バインディング層で次のさまざまな種類のデータを読み書きできます。  
   
--   XML  
+- XML  
   
--   JSON  
+- JSON  
   
--   不透明なバイナリ ストリーム  
+- 不透明なバイナリ ストリーム  
   
  つまり、WCF WEB HTTP プログラミング モデルは、あらゆる種類のデータを処理できますが、に対してプログラミングすることも<xref:System.IO.Stream>します。  
   

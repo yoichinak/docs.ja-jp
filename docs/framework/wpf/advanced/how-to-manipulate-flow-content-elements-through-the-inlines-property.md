@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Inlines property [WPF], manipulating flow Content elements
 - properties [WPF], Inlines [WPF], manipulating flow Content elements
 ms.assetid: 510780d2-3da1-4360-8763-7054bda22ea3
-ms.openlocfilehash: cfff958bb4c87e6bfecf2d280224cda233c31806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 92f23fbf44464eb7658f3382f873f3db63f7cb26
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942846"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614577"
 ---
 # <a name="how-to-manipulate-flow-content-elements-through-the-inlines-property"></a>方法: Inlines プロパティを介してフロー コンテンツ要素を操作する
 これらの例では、インライン フロー コンテンツ要素に対して実行できる一般的な操作の一部を示します (および、このような要素のコンテナーなど<xref:System.Windows.Controls.TextBlock>) を通じて、 **Inlines**プロパティ。 このプロパティを使用して項目を追加および削除を<xref:System.Windows.Documents.InlineCollection>します。 フロー コンテンツ要素にその機能、 **Inlines**プロパティが含まれます。  

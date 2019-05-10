@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ContextMenuOpening properties [WPF]
 ms.assetid: 789652fb-1951-4217-934a-7843e355adf4
-ms.openlocfilehash: 65a1e34d5b078c49bf59c2d9787812940c9a7494
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b3d0f5c77ebf8527e4854d4edf12d6fa8a4b5f0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340400"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614626"
 ---
 # <a name="how-to-handle-the-contextmenuopening-event"></a>方法: ContextMenuOpening イベントを処理する
 <xref:System.Windows.FrameworkElement.ContextMenuOpening>か、既存のコンテキスト メニューの前を表示するかを設定して表示されるメニューを抑制するを調整するアプリケーションでイベントを処理すること、<xref:System.Windows.RoutedEventArgs.Handled%2A>プロパティを`true`イベント データ。 設定の一般的な理由<xref:System.Windows.RoutedEventArgs.Handled%2A>に`true`メニューを置き換えるだけで、新しいデータのイベントは<xref:System.Windows.Controls.ContextMenu>オブジェクト、操作を取り消すと、新しいオープンを開始することもあります必要があります。 ハンドラーを記述する場合、<xref:System.Windows.FrameworkElement.ContextMenuOpening>イベント、注意すべきタイミングの問題との間の<xref:System.Windows.Controls.ContextMenu>コントロールとサービスを開くと、コントロールのコンテキスト メニューを通常配置を担当します。 このトピックでは、コンテキスト メニューのさまざまなシナリオを開くコードの手法の一部を示していて、タイミングの問題が関係する状況を示しています。  
   
  処理のためのいくつかのシナリオ、<xref:System.Windows.FrameworkElement.ContextMenuOpening>イベント。  
   
--   表示する前に、メニュー項目を調整します。  
+- 表示する前に、メニュー項目を調整します。  
   
--   表示する前にメニュー全体を置き換えます。  
+- 表示する前にメニュー全体を置き換えます。  
   
--   完全に任意の既存のコンテキスト メニューを抑制して、コンテキスト メニューを表示していません。  
+- 完全に任意の既存のコンテキスト メニューを抑制して、コンテキスト メニューを表示していません。  
   
 ## <a name="example"></a>例  
   

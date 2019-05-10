@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID52
 ms.assetid: d0e96aea-7621-48f6-a78b-5d37d18aaa4e
-ms.openlocfilehash: 2e5d4a3ddd66df85dc4758e22b36ac1ed495659a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7a16e951030731bdcbb48b5fbb1a0d1881d5e1ec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935227"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619389"
 ---
 # <a name="bad-file-name-or-number"></a>ファイル名または番号が正しくありません。
 指定したファイルにアクセスしているときにエラーが発生しました。 このエラーの考えられる原因には。  

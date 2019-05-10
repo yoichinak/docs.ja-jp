@@ -12,12 +12,12 @@ helpviewer_keywords:
 - deferred execution
 - iteration variables [Visual Basic]
 ms.assetid: 3047d86e-0d49-40e2-928b-dc02e46c7984
-ms.openlocfilehash: 6987263854b0d0372bc08bb7e4d6efb498e265f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d9af75474f6b0aec2bdf6aa2f550c280209f91e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781005"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633495"
 ---
 # <a name="introduction-to-linq-in-visual-basic"></a>Visual Basic における LINQ の概要
 統合言語クエリ (LINQ) は、Visual Basic にクエリ機能を追加し、あらゆる種類のデータを操作する場合は、単純かつ強力な機能を提供します。 処理対象のデータベースにクエリを送信または検索するデータの種類ごとに異なるクエリ構文の使用ではなく、LINQ は、Visual Basic 言語の一部としてクエリを紹介します。 LINQ では、データの型に関係なく、統一された構文を使用します。  
@@ -48,7 +48,9 @@ ms.locfileid: "61781005"
 ## <a name="structure-of-a-linq-query"></a>LINQ クエリの構造  
  LINQ クエリは多くの場合と呼ばれる、*クエリ式*、データ ソースとクエリの反復変数を識別するクエリ句の組み合わせで構成されています。 クエリ式には、並べ替え、フィルター処理、グループ化、および結合を実行する命令や、ソース データに適用する演算も指定できます。 クエリ式の構文は SQL の構文に似ているので、ほとんどの構文は、改めて覚える必要はありません。  
   
- クエリ式は、`From` 句で始まります。 この句は、クエリのソース データと、ソース データの各要素を個別に参照するために使用される変数を識別します。 これらの変数の名前は*範囲変数*または*反復変数*します。 `From` 句は、`Aggregate` クエリ以外のクエリでは必須です。このクエリでは、`From` 句は省略できます。 `From` 句または `Aggregate` 句でクエリのスコープとソースを識別した後、クエリを絞り込むためのクエリ句を自由に組み合わせて記述できます。 詳細については、クエリ句は、このトピックの「Visual Basic の LINQ クエリ演算子を参照してください。 たとえば、次のクエリでは、顧客データのソース コレクションを `customers` 変数として識別し、`cust` という名前の反復変数を識別します。  
+ クエリ式は、`From` 句で始まります。 この句は、クエリのソース データと、ソース データの各要素を個別に参照するために使用される変数を識別します。 これらの変数の名前は*範囲変数*または*反復変数*します。 
+  `From` 句は、`Aggregate` クエリ以外のクエリでは必須です。このクエリでは、`From` 句は省略できます。 
+  `From` 句または `Aggregate` 句でクエリのスコープとソースを識別した後、クエリを絞り込むためのクエリ句を自由に組み合わせて記述できます。 詳細については、クエリ句は、このトピックの「Visual Basic の LINQ クエリ演算子を参照してください。 たとえば、次のクエリでは、顧客データのソース コレクションを `customers` 変数として識別し、`cust` という名前の反復変数を識別します。  
   
  [!code-vb[VbVbalrIntroToLINQ#2](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#2)]  
   
@@ -56,7 +58,9 @@ ms.locfileid: "61781005"
   
  [!code-vb[VbVbalrIntroToLINQ#3](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#3)]  
   
- 別の強力なクエリ句として、`Select` 句があります。この句を使用すると、データ ソースから選択したフィールドだけを返すことができます。 LINQ クエリは、厳密に型指定されたオブジェクトの列挙可能なコレクションを返します。 クエリは、匿名型または名前付きの型のコレクションを返すことができます。 `Select` 句を使用して、データ ソースから単一のフィールドを返すことができます。 これを行った場合、返されるコレクションの型は、その単一のフィールドの型になります。 `Select` 句を使用して、データ ソースから複数のフィールドを返すこともできます。 これを行った場合、返されるコレクションの型は、新しい匿名型になります。 クエリで返されたフィールドを、指定した名前付きの型のフィールドと一致させることもできます。 次のコード例は、データ ソースから選択されたフィールドのデータが設定されたメンバーのコレクションで、匿名型のコレクションを返すクエリ式を示します。  
+ 別の強力なクエリ句として、`Select` 句があります。この句を使用すると、データ ソースから選択したフィールドだけを返すことができます。 LINQ クエリは、厳密に型指定されたオブジェクトの列挙可能なコレクションを返します。 クエリは、匿名型または名前付きの型のコレクションを返すことができます。 
+  `Select` 句を使用して、データ ソースから単一のフィールドを返すことができます。 これを行った場合、返されるコレクションの型は、その単一のフィールドの型になります。 
+  `Select` 句を使用して、データ ソースから複数のフィールドを返すこともできます。 これを行った場合、返されるコレクションの型は、新しい匿名型になります。 クエリで返されたフィールドを、指定した名前付きの型のフィールドと一致させることもできます。 次のコード例は、データ ソースから選択されたフィールドのデータが設定されたメンバーのコレクションで、匿名型のコレクションを返すクエリ式を示します。  
   
  [!code-vb[VbVbalrIntroToLINQ#4](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#4)]  
   
@@ -64,7 +68,8 @@ ms.locfileid: "61781005"
   
  [!code-vb[VbVbalrIntroToLINQ#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#5)]  
   
- `Group Join` 句を使用して、顧客オブジェクトのコレクションを格納する階層的なクエリ結果を作成できます。 各顧客オブジェクトには、その顧客のすべての注文のコレクションを含むプロパティがあります。 次のコード例は、顧客データと注文データを階層的な結果として結合し、匿名型のコレクションを返すクエリ式を示します。 このクエリは、顧客の注文データのコレクションを格納する `CustomerOrders` プロパティを含む型を返します。 その顧客のすべての注文の合計を格納する `OrderTotal` プロパティも含まれます  (このクエリは、LEFT OUTER JOIN と同等です)。  
+ 
+  `Group Join` 句を使用して、顧客オブジェクトのコレクションを格納する階層的なクエリ結果を作成できます。 各顧客オブジェクトには、その顧客のすべての注文のコレクションを含むプロパティがあります。 次のコード例は、顧客データと注文データを階層的な結果として結合し、匿名型のコレクションを返すクエリ式を示します。 このクエリは、顧客の注文データのコレクションを格納する `CustomerOrders` プロパティを含む型を返します。 その顧客のすべての注文の合計を格納する `OrderTotal` プロパティも含まれます  (このクエリは、LEFT OUTER JOIN と同等です)。  
   
  [!code-vb[VbVbalrIntroToLINQ#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/class2.vb#6)]  
   
@@ -76,7 +81,8 @@ LINQ クエリをサポートする <xref:System.Linq> 名前空間とその他�
 
 ### <a name="from-clause"></a>From 句
 
-いずれかを[`From`句](../../../../visual-basic/language-reference/queries/from-clause.md)または`Aggregate`クエリを開始する句が必要です。 `From` 句は、クエリのソース コレクションと反復変数を指定します。 例:
+いずれかを[`From`句](../../../../visual-basic/language-reference/queries/from-clause.md)または`Aggregate`クエリを開始する句が必要です。 
+  `From` 句は、クエリのソース コレクションと反復変数を指定します。 例:
 
  [!code-vb[VbVbalrIntroToLINQ#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#7)]
 
@@ -86,7 +92,8 @@ LINQ クエリをサポートする <xref:System.Linq> 名前空間とその他�
 
  [!code-vb[VbVbalrIntroToLINQ#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#8)]
 
-`Select` 句の指定がない場合、クエリの反復変数は、`From` 句または `Aggregate` 句で指定された反復変数で構成されます。
+
+  `Select` 句の指定がない場合、クエリの反復変数は、`From` 句または `Aggregate` 句で指定された反復変数で構成されます。
 
 ### <a name="where-clause"></a>Where 句
 
@@ -120,11 +127,13 @@ LINQ クエリをサポートする <xref:System.Linq> 名前空間とその他�
 
 ### <a name="aggregate-clause"></a>Aggregate 句
 
-いずれか、 [ `Aggregate`句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)または`From`クエリを開始する句が必要です。 `Aggregate` 句は、1 つ以上の集計関数をコレクションに適用します。 たとえば、使用することができます、`Aggregate`句を次の例のように、クエリによって返されるすべての要素の合計を計算します。
+いずれか、 [ `Aggregate`句](../../../../visual-basic/language-reference/queries/aggregate-clause.md)または`From`クエリを開始する句が必要です。 
+  `Aggregate` 句は、1 つ以上の集計関数をコレクションに適用します。 たとえば、使用することができます、`Aggregate`句を次の例のように、クエリによって返されるすべての要素の合計を計算します。
 
  [!code-vb[VbVbalrIntroToLINQ#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#14)]
 
-`Aggregate` 句を使用してクエリを変更することもできます。 たとえば、`Aggregate` 句を使用して、関連するクエリ コレクションに対して計算を実行できます。 例:
+
+  `Aggregate` 句を使用してクエリを変更することもできます。 たとえば、`Aggregate` 句を使用して、関連するクエリ コレクションに対して計算を実行できます。 例:
 
  [!code-vb[VbVbalrIntroToLINQ#15](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrIntroToLINQ/VB/Class1.vb#15)]
 
@@ -196,9 +205,11 @@ LINQ によって提供される列挙可能でクエリ可能な型のメンバ
   
  既定では、クエリを作成しても、クエリ自体が直ちに実行されることはありません。 代わりに、クエリ結果を参照するために使用される変数にクエリ定義が格納されます。 そのクエリ結果変数が、後でコード内の `For…Next` ループなどでアクセスされると、クエリが実行されます。 このプロセスと呼ばれます*遅延実行*します。  
   
- 定義されていると呼ばれるときに、クエリを実行することも*即時実行*します。 即時実行は、クエリ結果の個々の要素にアクセスする必要があるメソッドを適用することで開始できます。 `Count`、`Sum`、`Average`、`Min`、`Max` などの集計関数を含めることで、この結果を得ることができます。 集計関数の詳細については、次を参照してください。 [Aggregate 句](../../../language-reference/queries/aggregate-clause.md)します。  
+ 定義されていると呼ばれるときに、クエリを実行することも*即時実行*します。 即時実行は、クエリ結果の個々の要素にアクセスする必要があるメソッドを適用することで開始できます。 
+  `Count`、`Sum`、`Average`、`Min`、`Max` などの集計関数を含めることで、この結果を得ることができます。 集計関数の詳細については、次を参照してください。 [Aggregate 句](../../../language-reference/queries/aggregate-clause.md)します。  
   
- `ToList` メソッドまたは `ToArray` メソッドを使用することでも、即時実行を開始できます。 これは、クエリを直ちに実行し、結果をキャッシュする場合に役に立ちます。 これらのメソッドの詳細については、次を参照してください。[データ型の変換](../../concepts/linq/converting-data-types.md)します。  
+ 
+  `ToList` メソッドまたは `ToArray` メソッドを使用することでも、即時実行を開始できます。 これは、クエリを直ちに実行し、結果をキャッシュする場合に役に立ちます。 これらのメソッドの詳細については、次を参照してください。[データ型の変換](../../concepts/linq/converting-data-types.md)します。  
   
  クエリの実行の詳細については、次を参照してください。[書き込みで初めて Your の LINQ クエリ](../../concepts/linq/writing-your-first-linq-query.md)します。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - control types, Data Grid
 - UI Automation, Data Grid control type
 ms.assetid: a3db4a3f-feb5-4e5f-9b42-aae7fa816e8a
-ms.openlocfilehash: 9bf036271652f8056b79f4c5e389347cd09989e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 45eaa66396049b619c9164b20eed798505d478a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59161032"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607035"
 ---
 # <a name="ui-automation-support-for-the-datagrid-control-type"></a>UI オートメーションによる DataGrid コントロール型のサポート
 > [!NOTE]
@@ -54,20 +54,20 @@ ms.locfileid: "59161032"
   
 |コントロール パターン|サポート|メモ|  
 |---------------------|-------------|-----------|  
-|<xref:System.Windows.Automation.Provider.IGridProvider>|はい|データ グリッド コントロール自体は、メタデータを格納する項目がグリッドに配置されるため、常に、グリッド コントロール パターンをサポートします。|  
+|<xref:System.Windows.Automation.Provider.IGridProvider>|[はい]|データ グリッド コントロール自体は、メタデータを格納する項目がグリッドに配置されるため、常に、グリッド コントロール パターンをサポートします。|  
 |<xref:System.Windows.Automation.Provider.IScrollProvider>|状況に依存|データ グリッドをスクロールする機能はコンテンツ、およびスクロール バーが存在するかどうかによって異なります。|  
 |<xref:System.Windows.Automation.Provider.ISelectionProvider>|状況に依存|データ グリッドを選択する機能は、コンテンツに依存します。|  
 |<xref:System.Windows.Automation.Provider.ITableProvider>|[はい]|データ グリッド コントロールはサブツリー内に常にヘッダーがあるため、Table コントロール パターンがサポートされる必要があります。|  
   
  データ グリッド コンテナー内のデータ項目は、少なくとも次をサポートします。  
   
--   選択項目コントロール パターン (データ グリッドが選択可能な場合)  
+- 選択項目コントロール パターン (データ グリッドが選択可能な場合)  
   
--   スクロール項目コントロール パターン (データ グリッドがスクロール可能な場合)  
+- スクロール項目コントロール パターン (データ グリッドがスクロール可能な場合)  
   
--   グリッド項目コントロール パターン  
+- グリッド項目コントロール パターン  
   
--   テーブル項目コントロール パターン  
+- テーブル項目コントロール パターン  
   
 <a name="Required_UI_Automation_Events"></a>   
 ## <a name="required-ui-automation-events"></a>必須の UI オートメーション イベント  

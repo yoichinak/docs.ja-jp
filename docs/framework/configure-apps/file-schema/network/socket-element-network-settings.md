@@ -8,12 +8,12 @@ helpviewer_keywords:
 - <socket> element
 - socket element
 ms.assetid: 366c634c-7d16-478f-aedf-053eda94a1a0
-ms.openlocfilehash: 82bfe3b6e3107ff787716657dbf0b31dcadde911
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5e8ec13a0bb991accff080db502552e46913c66d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674390"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607508"
 ---
 # <a name="socket-element-network-settings"></a>\<ソケット > 要素 (ネットワーク設定)
 ソケット操作が完了ポートを使用するかどうかを指定します。  

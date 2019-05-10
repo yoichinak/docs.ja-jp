@@ -2,12 +2,12 @@
 title: CAST (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 07b6d750-dfd4-48a9-b86c-3badcbba6f70
-ms.openlocfilehash: 51de041a4b06d5da31071ea2b3cb31c86feff137
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 36bf627c7dfabdcf4bbc279bec8f3933f7aafb2a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606136"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64631645"
 ---
 # <a name="cast-entity-sql"></a>CAST (Entity SQL)
 あるデータ型の式を別のデータ型に変換します。  
