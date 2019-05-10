@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Main method [Visual Basic]
 - main function
 ms.assetid: f0db283e-f283-4464-b521-b90858cc1b44
-ms.openlocfilehash: 641edd2d0e0dde5f509c8fa77ccf65358fa76a31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a1eebc3d384d2efef050672a9c589b14559977f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920115"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648753"
 ---
 # <a name="main-procedure-in-visual-basic"></a>Visual Basic の Main プロシージャ
 すべての Visual Basic アプリケーションが呼び出されるプロシージャを含める必要があります`Main`します。 この手順では、開始ポイントし、アプリケーションの総合的な制御として機能します。 .NET Framework の呼び出し、`Main`に制御を渡す準備ができてし、アプリケーションが読み込まれたときにプロシージャ。 記述する必要がある、Windows フォーム アプリケーションを作成する場合を除き、`Main`自身で実行されるアプリケーションのプロシージャです。  

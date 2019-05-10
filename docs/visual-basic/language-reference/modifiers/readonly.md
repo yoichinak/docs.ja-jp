@@ -10,12 +10,12 @@ helpviewer_keywords:
 - properties [Visual Basic], read-only
 - read-only variables
 ms.assetid: e868185d-6142-4359-a2fd-a7965cadfce8
-ms.openlocfilehash: 6e361cbe89f4c51f28199b008de817c2d48ef326
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1a486d0fadce8135fe01d9eecd611081c986bfae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051859"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647687"
 ---
 # <a name="readonly-visual-basic"></a>ReadOnly (Visual Basic)
 ある変数またはプロパティを読み込めるが書き込まれませんを指定します。  

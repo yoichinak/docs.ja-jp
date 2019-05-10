@@ -2,12 +2,12 @@
 title: コンテキスト交換プロトコル
 ms.date: 03/30/2017
 ms.assetid: 3dfd38e0-ae52-491c-94f4-7a862b9843d4
-ms.openlocfilehash: a6bc0ac45282d94a6aea8dbbdb5a7d34163c692e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb6e52b5622316cfaa9c56b26c3aac6764c71cca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651110"
 ---
 # <a name="context-exchange-protocol"></a>コンテキスト交換プロトコル
 このセクションでは、Windows Communication Foundation (WCF) リリースの .NET Framework version 3.5 で導入されたコンテキスト交換プロトコルについて説明します。 このプロトコルを使用すると、クライアント チャネルはサービスから送られたコンテキストを受け入れ、以降はそのコンテキストを、同じクライアント チャネル インスタンス経由でそのサービスに送信されるすべての要求に適用できます。 コンテキスト交換プロトコルの実装は、次の 2 つのメカニズムのいずれかを使用、サーバーとクライアントの間でコンテキストを伝達できます。HTTP クッキーまたは SOAP ヘッダー。  
@@ -21,16 +21,16 @@ ms.locfileid: "61857351"
   
  このモードのインバリアントの一覧を次に示します。  
   
--   チャネルを開いた後に `SetContext` を使用してコンテキストをリセットしようとすると、<xref:System.InvalidOperationException> がスローされます。  
+- チャネルを開いた後に `SetContext` を使用してコンテキストをリセットしようとすると、<xref:System.InvalidOperationException> がスローされます。  
   
--   送信メッセージで <xref:System.ServiceModel.Channels.ContextMessageProperty> を使用してコンテキストを送信しようとすると、<xref:System.InvalidOperationException> がスローされます。  
+- 送信メッセージで <xref:System.ServiceModel.Channels.ContextMessageProperty> を使用してコンテキストを送信しようとすると、<xref:System.InvalidOperationException> がスローされます。  
   
--   特定のコンテキストを持つサーバーからメッセージを受信する場合に、チャネルが既に特定のコンテキストで初期化されていると、<xref:System.ServiceModel.ProtocolException> が発生します。  
+- 特定のコンテキストを持つサーバーからメッセージを受信する場合に、チャネルが既に特定のコンテキストで初期化されていると、<xref:System.ServiceModel.ProtocolException> が発生します。  
   
     > [!NOTE]
     >  明示的にコンテキストが設定されていないチャネルを開いている場合に限り、サーバーから初期コンテキストを受信するのが適切です。  
   
--   受信メッセージの <xref:System.ServiceModel.Channels.ContextMessageProperty> は常に null です。  
+- 受信メッセージの <xref:System.ServiceModel.Channels.ContextMessageProperty> は常に null です。  
   
 ## <a name="mode-2-application-context-management"></a>モード 2:アプリケーション コンテキスト管理  
  これは、<xref:System.ServiceModel.Channels.IContextManager.Enabled%2A> を `false` に設定した場合のモードです。 このモードでは、コンテキスト チャネルでコンテキストを管理しません。 コンテキストの取得、管理、および適用は、<xref:System.ServiceModel.Channels.ContextMessageProperty> を使用してアプリケーションで行う必要があります。 `GetContext` または `SetContext` を呼び出そうとすると、<xref:System.InvalidOperationException> が発生します。  
@@ -53,7 +53,7 @@ ms.locfileid: "61857351"
   
  サービス エンドポイントでコンテキスト交換プロトコルのサポートを必要とする場合は、公開するポリシーにそのことを明示できます。 新たに 2 つのポリシー アサーションが導入され、SOAP レベルでコンテキスト交換プロトコルをサポートしたり、HTTP クッキーのサポートを有効化したりするクライアント要件を示すことができます。 このアサーションはサービスのポリシー内に生成されます。生成は次のように、<xref:System.ServiceModel.Channels.ContextBindingElement.ContextExchangeMechanism%2A> プロパティの値によって制御します。  
   
--   <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> の場合は、次のアサーションが生成されます。  
+- <xref:System.ServiceModel.Channels.ContextExchangeMechanism.ContextSoapHeader> の場合は、次のアサーションが生成されます。  
   
     ```xml  
     <IncludeContext   
@@ -61,7 +61,7 @@ ms.locfileid: "61857351"
     protectionLevel="Sign" />  
     ```  
   
--   <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie> の場合は、次のアサーションが生成されます。  
+- <xref:System.ServiceModel.Channels.ContextExchangeMechanism.HttpCookie> の場合は、次のアサーションが生成されます。  
   
     ```xml  
     <HttpUseCookie xmlns="http://schemas.xmlsoap.org/soap/http"/>  
