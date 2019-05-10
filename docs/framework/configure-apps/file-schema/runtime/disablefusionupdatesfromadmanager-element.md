@@ -17,9 +17,9 @@ ms.locfileid: "61704909"
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > 要素
 アプリケーション ドメインの構成設定をランタイム ホストがオーバーライドする既定の動作を無効化するかどうかを指定します。  
   
- \<configuration > 要素  
-\<ランタイム > 要素  
-\<disableFusionUpdatesFromADManager >  
+ \<configuration> 要素  
+\<runtime> 要素  
+\<disableFusionUpdatesFromADManager>  
   
 ## <a name="syntax"></a>構文  
   
