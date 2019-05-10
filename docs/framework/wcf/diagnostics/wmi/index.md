@@ -2,12 +2,12 @@
 title: 診断用の WMI (Windows Management Instrumentation) の使用
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 9acb1b280248f8552680ea3fbba831b3de53b2c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048285"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662461"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>診断用の WMI (Windows Management Instrumentation) の使用
 Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時のサービスの検査データを公開します。  

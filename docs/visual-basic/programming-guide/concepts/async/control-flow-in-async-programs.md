@@ -2,12 +2,12 @@
 title: (Visual Basic) の非同期プログラムにおける制御フロー
 ms.date: 07/20/2015
 ms.assetid: b0443af7-c586-4cb0-b476-742ae4098a96
-ms.openlocfilehash: ed993943bcf7341f900c575744a1faa53a4a8a2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c6afd7e166e08ea30637bd3f05026ef71d781ab6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923670"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624759"
 ---
 # <a name="control-flow-in-async-programs-visual-basic"></a>(Visual Basic) の非同期プログラムにおける制御フロー
 `Async` キーワードと `Await` キーワードを使用すると、非同期のプログラムの作成と保守をより簡単に行えます。 ただし、プログラムがどのように動作するかを理解しないと、その結果は予想に反するものになる場合があります。 このトピックでは、簡単な非同期プログラムによる制御フローをトレースして、制御があるメソッドから別のメソッドに移るタイミングと、その都度転送される情報について説明します。  

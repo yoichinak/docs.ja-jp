@@ -6,12 +6,12 @@ helpviewer_keywords:
 - UI Automation GridItem control pattern
 - GridItem control pattern
 ms.assetid: bffbae08-fe2a-42fd-ab84-f37187518916
-ms.openlocfilehash: 932eb0af6afbe958695d5c084d2cb0c0bc188830
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 81be2c07f9fd3cc449527c389b0e6bf46182c382
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609588"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659842"
 ---
 # <a name="implementing-the-ui-automation-griditem-control-pattern"></a>UI オートメーション GridItem コントロール パターンの実装
 > [!NOTE]

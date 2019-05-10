@@ -5,12 +5,12 @@ helpviewer_keywords:
 - MenuStrip control [Windows Forms]
 - menus
 ms.assetid: e361bf98-eed8-4ed3-9dfb-5a2e865e3ce6
-ms.openlocfilehash: 9d3956c10467e80f370188138d6c50b39986ba76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4b2a3d3d3c5a953710984c86c6754d72589a9779
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723005"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623980"
 ---
 # <a name="menustrip-control-windows-forms"></a>MenuStrip コントロール (Windows フォーム)
 このコントロールは、アプリケーション コマンドをグループ化して簡単にアクセスできるようにします。  

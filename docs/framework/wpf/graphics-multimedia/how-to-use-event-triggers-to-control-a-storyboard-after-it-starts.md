@@ -6,12 +6,12 @@ helpviewer_keywords:
 - event triggers [WPF], controlling Storyboards
 - Storyboards [WPF], controlling after start
 ms.assetid: 3b115594-6a93-4972-b24d-61aa16f1c15f
-ms.openlocfilehash: d444349f8bc9236e1d15f484f35b1326c77e2425
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e0bc019ee361cba6a28ac573da3d2ee09e2168ed
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61769292"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663297"
 ---
 # <a name="how-to-use-event-triggers-to-control-a-storyboard-after-it-starts"></a>方法: 開始後のストーリーボードをイベント トリガーを使用して制御する
 この例では、制御、<xref:System.Windows.Media.Animation.Storyboard>開始後にします。 開始する、<xref:System.Windows.Media.Animation.Storyboard>を使用して[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、<xref:System.Windows.Media.Animation.BeginStoryboard>オブジェクトとプロパティをアニメーション化して、ストーリー ボードを起動しにアニメーションを配布します。 付ける場合<xref:System.Windows.Media.Animation.BeginStoryboard>名前を指定してその<xref:System.Windows.Media.Animation.BeginStoryboard.Name%2A>プロパティをできるようにする制御可能なストーリー ボード。 ことができます対話的に制御、ストーリー ボードが開始されます。  

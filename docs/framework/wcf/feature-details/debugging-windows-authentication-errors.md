@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, authentication
 - WCF, Windows authentication
 ms.assetid: 181be4bd-79b1-4a66-aee2-931887a6d7cc
-ms.openlocfilehash: 28c70ca860083808c93fa58b498e22ea4e4ca6cb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b5bd821e328d2d25d499e85b130e54a794986ac0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048050"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627010"
 ---
 # <a name="debugging-windows-authentication-errors"></a>Windows 認証エラーのデバッグ
 セキュリティ機構として Windows 認証を使用する場合、セキュリティ サポート プロバイダー インターフェイス (SSPI: Security Support Provider Interface) がセキュリティ プロセスを処理します。 SSPI 層でセキュリティ エラーが発生すると、Windows Communication Foundation (WCF) によってが表示されます。 このトピックでは、エラーの診断に役立つフレームワークと一連の質問を示します。  

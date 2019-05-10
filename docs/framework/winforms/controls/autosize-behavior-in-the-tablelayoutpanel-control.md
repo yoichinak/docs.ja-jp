@@ -11,12 +11,12 @@ helpviewer_keywords:
 - automatic sizing
 - AutoSizeMode property
 ms.assetid: 9233e0c3-2fa6-405e-8701-959479b1250e
-ms.openlocfilehash: 466edeee5f45ec72ef265ef4855049c7852641b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1f349981125097af4a3ca8a1950b820a0334bd11
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954350"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621480"
 ---
 # <a name="autosize-behavior-in-the-tablelayoutpanel-control"></a>TableLayoutPanel コントロールにおける AutoSize 動作
 ## <a name="distinct-autosize-behaviors"></a>個別の AutoSize 動作  

@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID54
 ms.assetid: 74891e96-884b-4c8d-872d-cd11ae272372
-ms.openlocfilehash: d3d0ebd003f178567ec9e9b19d6baccb8bc15f60
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a59faf1b6f845858e36efcabdf0758e41ad75dc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935240"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619744"
 ---
 # <a name="bad-file-mode"></a>ファイル モードが正しくありません。
 ファイルの内容を操作するときに使用するステートメントは、ファイルを開いたモードに適切なである必要があります。 以下の原因が考えられます。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Optional keyword [Visual Basic], contexts
 - Optional keyword [Visual Basic]
 ms.assetid: 4571ce88-a539-4115-b230-54eb277c6aa7
-ms.openlocfilehash: 67ceedffecdfba8ec0c2829a3af31d194f18bd88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 40605d4843bfccf9d2819b3ec6f2ef65f9e9cf9a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920667"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661323"
 ---
 # <a name="optional-visual-basic"></a>Optional (Visual Basic)
 プロシージャが呼び出されたときにプロシージャの引数を省略できますを指定します。  

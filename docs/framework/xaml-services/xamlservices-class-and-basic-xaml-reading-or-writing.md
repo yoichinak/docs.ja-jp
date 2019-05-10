@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [XAML Services], XamlServices class
 - XamlServices class [XAML Services], how to use
 ms.assetid: 6ac27fad-3687-4d7a-add1-3e90675fdfde
-ms.openlocfilehash: c9ef6a215587750f66d2cf8b5b54cbc51f89037e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a47436d9f7df099f54d450f6f8176b8cba6d7f5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938737"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622897"
 ---
 # <a name="xamlservices-class-and-basic-xaml-reading-or-writing"></a>XAMLServices クラスおよび基本的な XAML の読み取りまたは書き込み
 <xref:System.Xaml.XamlServices> は、XAML ノード ストリーム、またはこれらのノードから取得された XAML 型システム情報への固有のアクセスを必要としない XAML シナリオに対応するために使用できる、.NET Framework XAML サービスによって提供されるクラスです。 要約すると、<xref:System.Xaml.XamlServices> API は次のように説明できます。 `Load` または `Parse` to suppまたはt a XAML load path, `Save` to suppまたはt a XAML save path, and `Transform` で読み込みパスと保存パスを連結する方法を指定します。 `Transform` は、XAML スキーマを別の XAML スキーマに変更するために使用できます。 このトピックでは、それぞれの API 分類について要約し、特定のメソッド オーバーロード間の相違点について説明します。  

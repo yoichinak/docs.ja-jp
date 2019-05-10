@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c0043c89-2192-43c9-986d-3ecec4dd8c9c
-ms.openlocfilehash: 7940d1d8869d3b82c1aa19cb038a68b8724345dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fd7bf92750c6e314a5c9105bb961bf68b68182cb
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773423"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063822"
 ---
 # <a name="how-to-create-and-run-a-long-running-workflow"></a>方法: 長時間にわたって実行されるワークフローを作成して実行する
 Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは、永続化およびデータベースへのアイドル状態のワークフローをアンロードするランタイムの機能です。 手順では、[方法。ワークフローを実行する](how-to-run-a-workflow.md)コンソール アプリケーションを使用したワークフロー ホスティングの基本を説明します。 ワークフローの開始、ワークフロー ライフサイクル ハンドラー、およびブックマークの再開の例を紹介しました。 ワークフローの永続化を効果的に説明するためには、複数のワークフロー インスタンスの開始と再開をサポートするより複雑なワークフロー ホストが必要です。 チュートリアルのこの手順では、複数のワークフロー インスタンスの開始と再開およびワークフローの永続化をサポートする Windows フォーム ホスト アプリケーションを作成する方法について説明します。また、この手順は、以降の手順で説明する追跡やバージョン管理などの高度な機能の基礎となります。  
@@ -119,7 +119,7 @@ Windows Workflow Foundation (WF) のサーバーの全体の機能の 1 つは�
   
  次の例は完成したフォームを示しています。  
   
- ![WF45 チュートリアル ワークフロー ホスト フォームを概要](./media/wf45gettingstartedtutorialworkflowhostform.png "WF45GettingStartedTutorialWorkflowHostForm")  
+ ![Windows Workflow Foundation ワークフロー ホスト フォームのスクリーン ショット。](./media/how-to-create-and-run-a-long-running-workflow/windows-workflow-foundation-workflowhostform.png)  
   
 ### <a name="BKMK_AddHelperMethods"></a> フォームのヘルパー メソッドとプロパティを追加するには  
  このセクションの手順では、フォーム クラスに、数値推測ワークフローの実行と再開をサポートするようフォームの UI を構成するプロパティとヘルパー メソッドを追加します。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - UI Automation, invoking controls
 - controls, invoking
 ms.assetid: 5ee2de3f-256c-43ec-b64c-62ace91f9983
-ms.openlocfilehash: 3c04892fc0f1ec89b1b6555c60231ecf968a1345
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 19087cfaa22d166017bcf4e3ce5e6caf73ae5fe5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779926"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624552"
 ---
 # <a name="invoke-a-control-using-ui-automation"></a>UI オートメーションを使用したコントロールの呼び出し
 > [!NOTE]

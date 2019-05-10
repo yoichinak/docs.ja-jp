@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30910
 ms.assetid: 68fc05c5-5d55-4742-9a3b-ea04312594f4
-ms.openlocfilehash: dc979a66c73fdf15a4349a003680156e0ce27ed3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e21eea20d953e64e91522074c25f037451145bf8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764362"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664209"
 ---
 # <a name="typename-cannot-inherit-from-type-basetypename-because-it-expands-the-access-of-the-base-type-outside-the-assembly"></a>'\<typename >' から継承できません\<型 >'\<basetypename >' ベースのアクセスを展開するので、\<型 >、アセンブリ外
 クラスまたはインターフェイスは、基本クラスから継承されているかインターフェイスより制限の少ないアクセス レベル。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: 11790e14ed1fde9a42e642400161cfb92bf33293
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011763"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469524"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows フォームで使用するコントロール
 Windows フォームで使うことができるコントロールとコンポーネントのアルファベット順の一覧を次に示します。 このセクションで説明する Windows フォーム コントロールに加えて、ActiveX コントロールとカスタム コントロールを Windows フォームに追加できます。 必要なコントロールがここで見つからない場合は、独自に作成することもできます。 詳しくは、「[デザイン時の Windows フォーム コントロールの開発](developing-windows-forms-controls-at-design-time.md)」をご覧ください。 必要なコントロールの選択について詳しくは、「[Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)」をご覧ください。  
@@ -229,7 +229,7 @@ Windows フォームで使うことができるコントロールとコンポー
  手順トピックへのリンク、作成するコントロールの種類に関する推奨事項、および独自のコントロールの作成に関する他の情報を提供します。  
   
  [各言語およびライブラリにおける、コントロールとプログラミング可能オブジェクトの比較](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/0061wezk(v=vs.100))  
- Visual Basic 6.0 のコントロールを [!INCLUDE[vbprvblong](../../../../includes/vbprvblong-md.md)] の対応するコントロールにマップするテーブルを提供します。 コントロールは [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のクラスになっていることに注意してください。  
+ Visual Basic では、対応するコントロールを Visual Basic 6.0 でコントロールをマップするテーブルを提供します。 コントロールは、.NET Framework のクラスではようになりましたことに注意してください。  
   
  [方法: Windows フォームに ActiveX コントロールを追加します。](how-to-add-activex-controls-to-windows-forms.md)  
  Windows フォームで ActiveX コントロールを使う方法について説明します。

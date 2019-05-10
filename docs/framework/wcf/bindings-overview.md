@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: 90da8f4a2b4efeb684cbe9e5513084e6d1c6f515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703687"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652112"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation のバインディングの概要
 バインドは、Windows Communication Foundation (WCF) サービスのエンドポイントに接続するために必要な通信の詳細の指定に使用されるオブジェクトです。 WCF サービスでは、各エンドポイントでは、バインドを正しく指定する必要があります。 このトピックでは、通信の詳細、バインドを定義するバインドを WCF では、どのようなバインドが含まれているエンドポイントのバインディングを指定する方法の要素の種類について説明します。  

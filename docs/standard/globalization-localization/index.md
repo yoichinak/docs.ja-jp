@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9a59696b-d89b-45bd-946d-c75da4732d02
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 31f975b45ee854c73e6d502ece69bee24a7fcc3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 501e23656b3a31dc14e0b2213252ef52c598140f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683133"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622643"
 ---
 # <a name="globalizing-and-localizing-net-applications"></a>.NET アプリケーションのグローバライズとローカライズ
 
@@ -38,9 +38,9 @@ ms.locfileid: "61683133"
 
 この 3 つの手順に従うことにより、次の 2 つの利点があります。
 
--   米国英語などのような 1 つのカルチャだけをサポートするアプリケーションを、他のカルチャもサポートするように変更する作業を行う必要がなくなります。
+- 米国英語などのような 1 つのカルチャだけをサポートするアプリケーションを、他のカルチャもサポートするように変更する作業を行う必要がなくなります。
 
--   ローカライズされたアプリケーションが、より安定してバグがより少ないものになります。
+- ローカライズされたアプリケーションが、より安定してバグがより少ないものになります。
 
 .NET には、国際対応アプリケーションやローカライズされたアプリケーションの開発の拡張サポートが備わっています。 特に、.NET クラス ライブラリの多くの型メンバーは、現在のユーザーのカルチャまたは特定のカルチャの規則を表す値を返すことができ、グローバリゼーションに役立ちます。 また、.NET はサテライト アセンブリをサポートし、アプリケーションのローカライズ プロセスを容易にします。
 

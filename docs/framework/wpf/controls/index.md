@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - controls [WPF], about WPF controls
 ms.assetid: 3f255a8a-35a8-4712-9065-472ff7d75599
-ms.openlocfilehash: 5abafe1edfdbac1966a98d5eef28265e6504c868
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0727bb8ac4f0ff25640ae6f8e292d89f903e4eb5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696360"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627319"
 ---
 # <a name="controls"></a>コントロール
 <a name="introduction"></a>

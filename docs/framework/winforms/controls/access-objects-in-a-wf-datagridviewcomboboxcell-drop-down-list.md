@@ -9,12 +9,12 @@ helpviewer_keywords:
 - combo boxes [Windows Forms], in DataGridView control
 - combo boxes [Windows Forms], accessing objects in DataGridViewComboBoxCell drop-down lists
 ms.assetid: bcbe794a-d1fa-47f8-b5a3-5f085b32097d
-ms.openlocfilehash: 17b7c93effe9338a9e2d6cb207a948a956d9b666
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8df9ef1c30704c8b0d0dc7bbec48e53252cf9ae6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640431"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665867"
 ---
 # <a name="how-to-access-objects-in-a-windows-forms-datagridviewcomboboxcell-drop-down-list"></a>方法: Windows フォームの DataGridViewComboBoxCell ドロップダウン リストのオブジェクトにアクセスする
 ように、<xref:System.Windows.Forms.ComboBox>コントロール、<xref:System.Windows.Forms.DataGridViewComboBoxColumn>と<xref:System.Windows.Forms.DataGridViewComboBoxCell>型では、ドロップダウン リストに任意のオブジェクトを追加できます。 この機能により、個別のコレクションの対応するオブジェクトを保存することがなく、ドロップダウン リストで複雑な状態を表すことができます。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - param XML tag
 - <param> XML tag
 ms.assetid: 4e32e86f-f6f3-4301-b7fc-2f321fb54368
-ms.openlocfilehash: 4bcfe96361de9e196cb684ac4ba734f82442e25c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 91489ee1664da22cc8897cdf8d12b61d962d1c83
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940895"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664183"
 ---
 # <a name="param-visual-basic"></a>\<param > (Visual Basic)
 パラメーターの名前と説明を定義します。  

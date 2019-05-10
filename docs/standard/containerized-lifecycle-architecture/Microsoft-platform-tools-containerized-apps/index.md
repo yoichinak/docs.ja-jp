@@ -4,6 +4,12 @@ description: Docker アプリケーションのライフ サイクルをサポ�
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: cdaac06ffd907783c7ebe9b62ecd726158a02484
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664397"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft プラットフォームとコンテナー化アプリ用ツールの概要
 
@@ -25,7 +31,7 @@ ms.date: 02/15/2019
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
 | Docker アプリのプラットフォーム   | • Microsoft Visual Studio および Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Container Service<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • 任意のコード エディター (Sublime など)<br /> • 任意の言語 (Node.js、Java、Go など)<br /> • 任意のオーケストレーターとスケジューラ<br /> • 任意の Docker レジストリ<br /> |
 | Docker アプリ用の DevOps     | • Azure DevOps サービス<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub、Git、Subversion など<br /> • Jenkins、Chef、Puppet、Velocity、CircleCI、TravisCI など<br /> • On-premises Docker Datacenter、Docker Swarm、Mesos DC/OS、Kubernetes など<br /> |
-| 管理と監視  | • Operations Management Suite<br /> • Applications Insights<br /> | • Marathon、Chronos など<br />
+| 管理と監視  | • Azure Monitor | • Marathon、Chronos など<br />|
 
 Microsoft プラットフォームとコンテナー化された Docker アプリ用ツールは表 3-1 に示すように、定義されている次のコンポーネントから成ります。
 

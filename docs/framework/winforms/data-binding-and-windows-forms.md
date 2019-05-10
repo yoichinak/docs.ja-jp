@@ -12,12 +12,12 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: 3d420e5cb4d9e7f2ad6f8136b8dd33f5901326d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967038"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626852"
 ---
 # <a name="data-binding-and-windows-forms"></a>データ連結と Windows フォーム
 Windows フォームでは、従来のデータ ソースだけでなく、データを含むほぼすべての構造にバインドできます。 実行時に計算する値、ファイルから読み取る値、または他のコントロールの値から派生する値の配列にバインドできます。  

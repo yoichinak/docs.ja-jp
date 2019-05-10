@@ -2,12 +2,12 @@
 title: '方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張します。'
 ms.date: 07/20/2015
 ms.assetid: c06d386d-e996-4da9-bf3d-05a3b6c0a258
-ms.openlocfilehash: 7ad2d9cdd85a7bdb67bbf091a38274fd20e5a66f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9020f09e5e72e5620e954c3a6f9aa1e5a0d4f545
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756508"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626474"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-visual-basic"></a>方法: Task.WhenAll (Visual Basic) を使用して Async Walkthrough を拡張します。
 「[チュートリアル: 使用して Async と Await (Visual Basic) した Web へのアクセス](../../../../visual-basic/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)を使用して、<xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType>メソッド。 このメソッドは、タスクのコレクションとして表される、複数の非同期操作を非同期に待機します。  

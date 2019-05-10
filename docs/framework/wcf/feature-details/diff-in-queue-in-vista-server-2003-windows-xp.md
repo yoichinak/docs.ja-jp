@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - queues [WCF], differences in operating systems
 ms.assetid: aa809d93-d0a3-4ae6-a726-d015cca37c04
-ms.openlocfilehash: d13cb3e732d0276902def5de6ca7c007f61b0ec9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 694d7af8e6e869a7a21a3414be6c69cf9f5e7c8f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62039729"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626997"
 ---
 # <a name="differences-in-queuing-features-in-windows-vista-windows-server-2003-and-windows-xp"></a>Windows Vista、Windows Server 2003、および Windows XP におけるキュー機能の相違点
 このトピックでは、Windows Communication Foundation (WCF) キューの機能との間の違いをまとめたものです。 [!INCLUDE[wv](../../../../includes/wv-md.md)]、 [!INCLUDE[ws2003](../../../../includes/ws2003-md.md)]、および[!INCLUDE[wxp](../../../../includes/wxp-md.md)]します。  

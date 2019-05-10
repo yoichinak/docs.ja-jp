@@ -8,12 +8,12 @@ helpviewer_keywords:
 - optionstrict compiler option [Visual Basic]
 - /optionstrict compiler option [Visual Basic]
 ms.assetid: c7b10086-0fa4-49db-b3c8-4ae0db5957da
-ms.openlocfilehash: e18fe451ea4a80ac959ed61b66394920f8bf177f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 22423877325806e6e6abe535ad98530eb924780e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788935"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625908"
 ---
 # <a name="-optionstrict"></a>-optionstrict
 暗黙の型変換を制限するための厳密な型のセマンティクスを適用します。  

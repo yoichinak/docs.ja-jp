@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f2fc441f-d62e-4f72-a011-354ea13c8c59
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8c65ec6acc5ff87501392eb41909fcd6ebf1e3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 087518cc43776848785d005f0b6c4c8aa5e2e43e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621450"
 ---
 # <a name="corprofeunsupportedcallsequence-hresult"></a>CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT
 CORPROF_E_UNSUPPORTED_CALL_SEQUENCE HRESULT は、.NET Framework version 2.0 で導入されました。 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)] 2 つのシナリオでこの HRESULT を返します。  

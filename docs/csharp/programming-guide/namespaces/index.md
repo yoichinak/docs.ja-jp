@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, namespaces
 - namespaces [C#]
 ms.assetid: b1c4ab46-3fad-4ffa-9deb-dd50a2d8c65a
-ms.openlocfilehash: 3e05e18225b198e9e34b4b96717cc813dab836c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d3b77a506186166c9ad76490ef47f8759c704eb
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61710109"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452717"
 ---
 # <a name="namespaces-c-programming-guide"></a>名前空間 (C# プログラミング ガイド)
 
@@ -48,12 +48,11 @@ C# プログラミングでは、名前空間が 2 つの方法でよく使用�
   
 ## <a name="see-also"></a>関連項目
 
+- [C# プログラミング ガイド](../index.md)
 - [名前空間の使用](using-namespaces.md)
 - [方法: グローバル名前空間エイリアスを使用する](how-to-use-the-global-namespace-alias.md)
 - [方法: My 名前空間を使用する](how-to-use-the-my-namespace.md)
-- [C# プログラミング ガイド](../index.md)
 - [識別子名](../inside-a-program/identifier-names.md)
 - [名前空間キーワード](../../language-reference/keywords/namespace-keywords.md)
 - [using ディレクティブ](../../language-reference/keywords/using-directive.md)
 - [::演算子](../../language-reference/operators/namespace-alias-qualifer.md)
-- [。演算子](../../language-reference/operators/member-access-operator.md)

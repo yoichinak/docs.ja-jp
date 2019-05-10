@@ -5,12 +5,12 @@ author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
 ms.custom: vs-dotnet
-ms.openlocfilehash: 431a0f34ba913c18c35e28ca45660495403bf688
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d361b0c471402c097dfac799eb58ef08209d4343
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795563"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664350"
 ---
 # <a name="use-docker-tools-in-visual-studio-2017-on-windows"></a>Windows 上の Visual Studio 2017 での Docker ツールの使用
 
@@ -79,7 +79,7 @@ Docker サポートを有効にすると、Visual Studio の追加、 *Dockerfil
 | プロジェクトの読み込みで必要な Docker イメージを自動的にプルします。 | オン | Docker Compose | プロジェクトを読み込むときのパフォーマンスを高める Visual Studio は、イメージが既にダウンロードしてコードを実行する準備ができたら、ダウンロード処理中にまたは、バック グラウンドで Docker プルの操作が開始されます。 プロジェクトをロードする場合だけ、コードを参照するには、これをオフにできます必要はありません、コンテナー イメージをダウンロードしないようにする場合。 |
 | コンテナーをバック グラウンドで自動的に開始します。 | オン | Docker Compose | もう一度パフォーマンスを向上させる Visual Studio によりコンテナーとボリューム マウント ビルドおよびコンテナーを実行する場合に対応。 コンテナーが作成されたときを制御するには、これをオフにします。 |
 | 自動的に強制終了のコンテナー ソリューションを閉じる | オン | Docker Compose | コンテナー ソリューションを閉じるか、Visual Studio の終了後も引き続き実行に、ソリューションが希望される場合は、これをオフにします。 |
-| Localhost SSL 証明書を信頼する側は表示しません | オフ | ASP.NET Core 2.1 プロジェクト | Localhost SSL 証明書が信頼されていない場合は、Visual Studio は必要ない限り、このチェック ボックスをオンになって、プロジェクトを実行するたびと求められます。 |
+| Localhost SSL 証明書を信頼する側は表示しません | オフ | ASP.NET Core 2.2 プロジェクト | Localhost SSL 証明書が信頼されていない場合は、Visual Studio は必要ない限り、このチェック ボックスをオンになって、プロジェクトを実行するたびと求められます。 |
 
 > [!WARNING]
 > Localhost SSL 証明書は信頼されず、プロンプトを抑制するボックスをチェックする場合は、アプリまたはサービスの実行時に HTTPS web 要求が失敗します。 その場合は、オフにして、**を求めない** チェック ボックスは、プロジェクトを実行し、プロンプトでの信頼関係を示します。

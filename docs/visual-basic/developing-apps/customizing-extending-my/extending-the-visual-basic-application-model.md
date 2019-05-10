@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - Visual Basic Application Model, extending
 ms.assetid: e91d3bed-4c27-40e3-871d-2be17467c72c
-ms.openlocfilehash: bb87879fdf584a439e09839bf4321b85e7dd6a43
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: f4857d410b16c3bbcb2129cec0d753a1c3d7a726
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64602446"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469498"
 ---
 # <a name="extending-the-visual-basic-application-model"></a>Visual Basic アプリケーション モデルの拡張
 アプリケーション モデルに機能を追加するにはオーバーライドすることで、`Overridable`のメンバー、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>クラス。 この手法を使用すると、アプリケーション モデルの動作をカスタマイズし、アプリケーションの起動およびシャット ダウン、独自のメソッドの呼び出しを追加できます。  
@@ -76,10 +76,10 @@ ms.locfileid: "64602446"
   
  アプリケーションの後続のインスタンスを呼び出すアプリケーションが単一インスタンス アプリケーションでは、アプリケーションが既に実行中の場合、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance%2A>アプリケーション、および 終了の元のインスタンス上のメソッド。  
  
- <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)>コンス トラクターの呼び出し、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>アプリケーションのフォームを使用するどのテキスト レンダリング エンジンを決定するプロパティ。 既定で、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>プロパティが返す`False`、これには、既定で GDI のテキスト レンダリング エンジンを使用することを示す、[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]します。 オーバーライドすることができます、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>プロパティを返す`True`GDI + テキスト レンダリング エンジンを使用することを示します Visual Basic .NET 2002 および Visual Basic .NET 2003 の既定値します。  
+ <xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.OnStartupNextInstance(Microsoft.VisualBasic.ApplicationServices.StartupNextInstanceEventArgs)>コンス トラクターの呼び出し、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>アプリケーションのフォームを使用するどのテキスト レンダリング エンジンを決定するプロパティ。 既定で、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>プロパティが返す`False`、これには、既定では、Visual Basic 2005 およびそれ以降のバージョン、GDI テキスト レンダリング エンジンを使用することを示す、します。 オーバーライドすることができます、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering%2A>プロパティを返す`True`GDI + テキスト レンダリング エンジンを使用することを示します Visual Basic .NET 2002 および Visual Basic .NET 2003 の既定値します。  
   
 ## <a name="configuring-the-application"></a>アプリケーションを構成します。  
- Visual Basic アプリケーション モデルの一部として、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase.UseCompatibleTextRendering>クラスには、アプリケーションを構成する保護対象のプロパティが用意されています。 これらのプロパティは、実装するクラスのコンス トラクターで設定する必要があります。  
+ Visual Basic アプリケーション モデルの一部として、<xref:Microsoft.VisualBasic.ApplicationServices.WindowsFormsApplicationBase>クラスには、アプリケーションを構成する保護対象のプロパティが用意されています。 これらのプロパティは、実装するクラスのコンス トラクターで設定する必要があります。  
   
  既定の Windows フォーム プロジェクトで、**プロジェクト デザイナー**デザイナーの設定とプロパティを設定するコードを作成します。 アプリケーションの起動時にのみ、プロパティを使用します。アプリケーションの起動後に設定しても効果はありません。  
   

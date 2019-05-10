@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40025
 ms.assetid: adbd34bb-43d2-4266-90e7-cd1afaf49b4e
-ms.openlocfilehash: 0d87adee65f491f8c968e4ba93cf4b9df03aff85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 03962a3004b975dec86099307346aa5cc8829020
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013622"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664287"
 ---
 # <a name="type-of-member-membername-is-not-cls-compliant"></a>メンバーの型 '\<membername >' は CLS 準拠
 このメンバーが指定されたデータ型の一部、 [Language Independence and Language-independent Components](../../../standard/language-independence-and-language-independent-components.md) (CLS)。 これはないため、エラー、コンポーネント内で、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]と Visual Basic は、このデータ型をサポートします。 ただし、厳密に CLS 準拠コードで記述された別のコンポーネントでは、このデータ型がサポートしない可能性があります。 このようなコンポーネントはできないコンポーネントを正常にやり取りすることがあります。  

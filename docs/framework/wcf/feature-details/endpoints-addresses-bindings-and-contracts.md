@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], endpoints
 - WCF [WCF], endpoints
 ms.assetid: 9ddc46ee-1883-4291-9926-28848c57e858
-ms.openlocfilehash: 3e78e7cf0c5acde53d7ee23294fd52134414e860
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3d345cfa3169e22e7c5e85cd1c7d11c2feef4f5f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856540"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665959"
 ---
 # <a name="endpoints-addresses-bindings-and-contracts"></a>エンドポイント:アドレス、バインディング、およびコントラクト
 を介して Windows Communication Foundation (WCF) サービスとすべての通信が行われます、*エンドポイント*サービス。 エンドポイントは、WCF サービスによって提供される機能へのアクセスをクライアントに提供します。  

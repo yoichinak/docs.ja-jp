@@ -3,12 +3,12 @@ title: <workflowInstanceQueries>
 ms.date: 03/30/2017
 ms.topic: reference
 ms.assetid: 4fe7ce85-cf9a-4dbf-a8f7-bc9b1fc2fe35
-ms.openlocfilehash: e54f98c980f60d02377e38d53d9d0eb48581eec0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc92b030e8f6643a856446142842c492db703253
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613309"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624796"
 ---
 # <a name="workflowinstancequeries"></a>\<workflowInstanceQueries>
 開始したイベントや完了したイベントなど、ワークフロー インスタンスのライフサイクルの変化を追跡する構成要素のコレクションを表します。  

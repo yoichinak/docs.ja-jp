@@ -2,12 +2,12 @@
 title: Windows Communication Foundation サンプルの実行
 ms.date: 03/30/2017
 ms.assetid: db8a83da-95c1-4a21-a9d2-48caeb6398ea
-ms.openlocfilehash: b7a719aeeba2c14e79d790dfa5cbb4090d50009a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f2d28ac8c1cfc13a8d2f17c9d4e1bcc92cf559e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050585"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664744"
 ---
 # <a name="running-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの実行
 1 台のコンピューターまたはコンピューター間の構成では、Windows Communication Foundation (WCF) サンプルを実行できます。 サンプルは、単一コンピューターでそのまま実行できます。 複数コンピューター構成で実行するには、サンプルの構成ファイルの設定を変更する必要があります。 単一コンピューターおよび複数コンピューターの構成でサンプルを実行する手順を、次に示します。 インターネット インフォメーション サービス (IIS) でホストされるサービスと自己ホスト型のサービスのサンプルとでは、手順が異なります。 ほとんどのサンプルは IIS でホストされます。サンプルのホスト方法を判断するには、サンプルの Readme 情報を参照してください。  

@@ -2,12 +2,12 @@
 title: 非同期アプリケーション (Visual Basic) の微調整
 ms.date: 07/20/2015
 ms.assetid: 4c3e7997-a95f-4fbe-a6ac-60ba042d30b9
-ms.openlocfilehash: 88b26aea0740bb4a5c5e9d87790746a708bf45a1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3e9a6d02ec4948103b892ae012b8c51f66dd06c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663590"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624728"
 ---
 # <a name="fine-tuning-your-async-application-visual-basic"></a>非同期アプリケーション (Visual Basic) の微調整
 <xref:System.Threading.Tasks.Task> 型を使用できるメソッドとプロパティを使用して、非同期アプリケーションに精度と柔軟性を追加できます。 このセクションのトピックでは <xref:System.Threading.CancellationToken> および `Task` などのような、重要な <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Threading.Tasks.Task.WhenAny%2A?displayProperty=nameWithType> の使用例を示します。  

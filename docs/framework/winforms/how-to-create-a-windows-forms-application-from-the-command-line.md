@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 45ad3f8b-1c26-4c9f-91a9-3bb0759a47a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ce97089ec71fc910079910957e784605387f3e06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 91261e5077352179719e631ebeb26670ffd74792
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61966872"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665241"
 ---
 # <a name="how-to-create-a-windows-forms-application-from-the-command-line"></a>方法: コマンド ラインから Windows フォーム アプリケーションを作成する。
 次の手順では、コマンドラインから Windows フォーム アプリケーションを作成して実行するために完了する必要のある基本的な手順について説明します。 Visual Studio では、これらの手順に対する広範なサポートが用意されています。  [チュートリアル: WPF での Windows フォーム コントロールのホスト](../wpf/advanced/walkthrough-hosting-a-windows-forms-control-in-wpf.md)を参照してください。  
@@ -35,14 +35,16 @@ ms.locfileid: "61966872"
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. `Form1` の既定のコンストラクターを作成します。  
+3. 
+  `Form1` の既定のコンストラクターを作成します。  
   
      後続の手順で、コンストラクターにさらにコードを追加します。  
   
      [!code-csharp[System.Windows.Forms.BasicForm#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.BasicForm#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4. `Main` メソッドをクラスに追加します。  
+4. 
+  `Main` メソッドをクラスに追加します。  
   
     1. 適用、 <xref:System.STAThreadAttribute> c# `Main` Windows フォーム アプリケーションを指定するメソッドは、シングル スレッド アパートメント。 (属性は必要ありません Visual basic で Windows フォーム アプリケーション開発された Visual Basic の使用をシングル スレッド アパートメント モデルを既定であるためです。)  
   
@@ -94,7 +96,8 @@ ms.locfileid: "61966872"
      [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
-6. <xref:System.Windows.Forms.Control.Click> イベントを作成したメソッドに関連付けます。  
+6. 
+  <xref:System.Windows.Forms.Control.Click> イベントを作成したメソッドに関連付けます。  
   
      次のコード例は、イベントをメソッドに関連付ける方法を示します。  
   

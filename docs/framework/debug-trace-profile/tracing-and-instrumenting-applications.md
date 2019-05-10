@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: HT
+ms.openlocfilehash: 84af29aa169710f8de86c383429bf391fbc20bd3
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614224"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469529"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>アプリケーションのトレースとインストルメント
 トレースとは、実行中のアプリケーションの実行状態を監視する方法です。 .NET Framework アプリケーションの開発時に、トレースとデバッグのインストルメンテーションをアプリケーションに追加できます。このインストルメンテーションは、アプリケーションの開発中でも開発したアプリケーションの配置後でも使用できます。 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>、および <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> の各クラスを使用すると、エラーおよびアプリケーションの実行についての情報を後で分析するために、ログ、テキスト ファイル、またはその他のデバイスに記録できます。  
@@ -134,7 +134,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
  独自のリスナーを実装することにより、結果をカスタマイズできます。 たとえば、メッセージ ボックスにメッセージを表示するカスタム トレース リスナーや、データベースに接続してメッセージをテーブルに追加するトレース リスナーなどを実装できます。 すべてのカスタム リスナーは、前に示した 6 つのメソッドをサポートする必要があります。 開発者が定義するリスナーの作成については、「.NET Framework リファレンス」の「<xref:System.Diagnostics.TraceListener>」を参照してください。  
   
 > [!NOTE]
->  [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] では、以前のバージョンの Visual Basic で利用できた **Debug.Print** メソッドから **Debug.Write**、**Debug.WriteIf**、**Debug.WriteLine**、および **Debug.WriteLineIf** の各メソッドに置き換えられました。  
+>  Visual basic で、 **Debug.Write**、 **Debug.WriteIf**、 **Debug.WriteLine**、および**Debug.WriteLineIf**メソッドが置き換えられます、**Debug.Print**以前のバージョンの Visual Basic で使用可能だったメソッド。  
   
  **Write** メソッドおよび **WriteLine** メソッドでは、必ず指定されたテキストが書き込まれます。 **Assert**、**WriteIf**、および **WriteLineIf** は、指定されたテキストを書き込むかどうかを制御するブール型の引数を必要とします。式が **true** (**WriteIf** および **WriteLineIf** の場合)、または **false** (**Assert** の場合) の場合のみ、指定されたテキストを書き込みます。 **Fail** メソッドでは、常に指定されたテキストが書き込まれます。 詳細については、「[方法 :アプリケーション コードにトレース ステートメントを追加](../../../docs/framework/debug-trace-profile/how-to-add-trace-statements-to-application-code.md)と .NET Framework の参照。  
   

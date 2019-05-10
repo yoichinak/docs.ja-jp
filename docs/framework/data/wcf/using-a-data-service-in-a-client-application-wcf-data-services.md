@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, getting started
 ms.assetid: 90872d0c-e989-4490-b3e9-54afb10d33d4
-ms.openlocfilehash: c2923a1940e3d58b6e3434f5b02edfb02995a202
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fc14b6a2b3782ae7ed3d26f9878646f004504d1c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875312"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660557"
 ---
 # <a name="using-a-data-service-in-a-client-application-wcf-data-services"></a>クライアント アプリケーションでのデータ サービスの使用 (WCF Data Services)
 公開するサービスにアクセスすることができます、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードで Web ブラウザーに URI を指定します。 URI はリソースのアドレスを提供し、要求メッセージがこれらのアドレスに送信されてリソースが表す基になるデータのアクセスまたは変更を行います。 ブラウザーは HTTP GET コマンドを発行して、要求されたリソースを [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] フィードとして返します。 詳細については、次を参照してください。 [Web ブラウザーからサービスへのアクセス](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)します。  

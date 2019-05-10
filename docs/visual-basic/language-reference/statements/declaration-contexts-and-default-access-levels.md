@@ -9,12 +9,12 @@ helpviewer_keywords:
 - access levels, Visual Basic
 - access levels, default levels
 ms.assetid: bf63b96e-e825-4745-88c8-5dae222728db
-ms.openlocfilehash: 0d899342383bdf9d262fc9a1ab5e00bbe43066e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 05c2d6420526b660ead2f50eba7feb6b20524705
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638188"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623939"
 ---
 # <a name="declaration-contexts-and-default-access-levels-visual-basic"></a>宣言コンテキストと既定のアクセス レベル (Visual Basic)
 このトピックでは、他の種類内でどの Visual Basic の型を宣言することができ、どのようなアクセス レベルを既定の指定されていない場合について説明します。  

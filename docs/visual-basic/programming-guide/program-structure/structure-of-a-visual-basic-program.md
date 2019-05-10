@@ -7,12 +7,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], structure
 - Visual Basic code, program structure
 ms.assetid: ad0c6531-d762-4c77-a700-de16b07b6119
-ms.openlocfilehash: 42e366a844f9c5e80a8f617bf73dfd869608540d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f4136a2c8fb7ca98ff22aa6a5fc676f30cd1c5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839407"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624306"
 ---
 # <a name="structure-of-a-visual-basic-program"></a>Visual Basic プログラムの構造
 Visual Basic プログラムは、標準の構成ブロックから構築します。 A*ソリューション*は 1 つまたは複数のプロジェクトで構成されます。 A*プロジェクト*さらに、1 つまたは複数のアセンブリを含めることができます。 各*アセンブリ*が 1 つまたは複数のソース ファイルからコンパイルします。 A*ソース ファイル*定義とクラス、構造体、モジュール、および、最終的には、すべてのコードが含まれているインターフェイスの実装を提供します。  
@@ -47,30 +47,30 @@ Visual Basic プログラムは、標準の構成ブロックから構築しま�
 ## <a name="namespace-level-programming-elements"></a>Namespace レベルのプログラミング要素  
  クラス、構造、およびモジュールは、ソース ファイル内のすべてのコードを含めることができます。 *名前空間レベル*要素、または、ソース ファイル レベルで、名前空間内に表示されることができます。 その他のすべてのプログラミング要素の宣言を保持します。 要素のシグネチャを定義して実装を提供しないには、インターフェイスは、モジュール レベルも表示されます。 モジュール レベルの要素の詳細については、次を参照してください。  
   
--   [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
+- [Class ステートメント](../../../visual-basic/language-reference/statements/class-statement.md)  
   
--   [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)  
+- [Structure ステートメント](../../../visual-basic/language-reference/statements/structure-statement.md)  
   
--   [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)  
+- [Module ステートメント](../../../visual-basic/language-reference/statements/module-statement.md)  
   
--   [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)  
+- [Interface ステートメント](../../../visual-basic/language-reference/statements/interface-statement.md)  
   
  名前空間レベルでのデータ要素は、列挙体およびデリゲートです。  
   
 ## <a name="module-level-programming-elements"></a>モジュール レベルのプログラミング要素  
  プロシージャ、演算子、プロパティ、およびイベントは、実行可能コード (実行時にアクションを実行するステートメント) を保持できる唯一のプログラミング要素です。 *モジュール レベル*プログラムの要素。 プロシージャ レベルの要素の詳細については、次を参照してください。  
   
--   [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
+- [Function ステートメント](../../../visual-basic/language-reference/statements/function-statement.md)  
   
--   [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
+- [Sub ステートメント](../../../visual-basic/language-reference/statements/sub-statement.md)  
   
--   [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
+- [Declare ステートメント](../../../visual-basic/language-reference/statements/declare-statement.md)  
   
--   [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
+- [Operator ステートメント](../../../visual-basic/language-reference/statements/operator-statement.md)  
   
--   [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
+- [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
--   [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)  
+- [Event ステートメント](../../../visual-basic/language-reference/statements/event-statement.md)  
   
  モジュール レベルのデータ要素は、変数、定数、列挙型、およびデリゲート。  
   
@@ -82,13 +82,13 @@ Visual Basic プログラムは、標準の構成ブロックから構築しま�
 ## <a name="the-main-procedure"></a>メインのプロシージャ  
  `Main`プロシージャは、アプリケーションが読み込まれたときに実行する最初のコード。 `Main` 開始点と、アプリケーションの全体的なコントロールとして機能します。 次の 4 種類がある`Main`:  
   
--   `Sub Main()`  
+- `Sub Main()`  
   
--   `Sub Main(ByVal cmdArgs() As String)`  
+- `Sub Main(ByVal cmdArgs() As String)`  
   
--   `Function Main() As Integer`  
+- `Function Main() As Integer`  
   
--   `Function Main(ByVal cmdArgs() As String) As Integer`  
+- `Function Main(ByVal cmdArgs() As String) As Integer`  
   
  この手順の最も一般的なさまざまなの`Sub Main()`します。 詳細については、次を参照してください。 [Visual basic の Main プロシージャ](../../../visual-basic/programming-guide/program-structure/main-procedure.md)します。  
   

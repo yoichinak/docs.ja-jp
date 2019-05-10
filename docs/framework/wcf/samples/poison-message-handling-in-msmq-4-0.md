@@ -2,12 +2,12 @@
 title: MSMQ 4.0 での有害メッセージ処理
 ms.date: 03/30/2017
 ms.assetid: ec8d59e3-9937-4391-bb8c-fdaaf2cbb73e
-ms.openlocfilehash: b4711d344a6ce08adc6e993c19f2c3d97f56e7b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 86d42e567d6d0f2b306d4def6746d32bfe7c6ab4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052093"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664764"
 ---
 # <a name="poison-message-handling-in-msmq-40"></a>MSMQ 4.0 での有害メッセージ処理
 このサンプルでは、サービスで有害メッセージの処理を実行する方法を示します。 このサンプルがに基づいて、[トランザクション MSMQ バインディング](../../../../docs/framework/wcf/samples/transacted-msmq-binding.md)サンプル。 このサンプルでは、`netMsmqBinding` を使用しています。 サービスは自己ホスト型コンソール アプリケーションであるので、キューに置かれたメッセージをサービスが受信するようすを観察できます。

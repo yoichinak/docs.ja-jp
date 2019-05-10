@@ -12,12 +12,12 @@ helpviewer_keywords:
 - arithmetic operators [Visual Basic], Mod
 - math operators [Visual Basic]
 ms.assetid: 6ff7e40e-cec8-4c77-bff6-8ddd2791c25b
-ms.openlocfilehash: b127c50f3319d4fe7c4890fc3bffb295baa37466
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f1334ff7aa07f49139bfe684746ae9cc3cf8087c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936670"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663170"
 ---
 # <a name="mod-operator-visual-basic"></a>Mod 演算子 (Visual Basic)
 2 つの数値を除算し、残りの部分のみを返します。  

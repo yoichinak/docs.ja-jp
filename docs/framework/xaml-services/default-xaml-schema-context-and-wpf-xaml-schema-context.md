@@ -2,12 +2,12 @@
 title: 既定の XAML スキーマ コンテキストと WPF XAML スキーマ コンテキスト
 ms.date: 03/30/2017
 ms.assetid: 04e06a15-09b3-4210-9bdf-9a64c2eccb83
-ms.openlocfilehash: 0d6a0aa80d8490c509fa9036f88d4f6863ff040c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f29d9eb481903b06ee1f35424baeb055a396b7c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689399"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663272"
 ---
 # <a name="default-xaml-schema-context-and-wpf-xaml-schema-context"></a>既定の XAML スキーマ コンテキストと WPF XAML スキーマ コンテキスト
 XAML スキーマ コンテキストとは、特定の XAML ボキャブラリを使用する XAML の運用環境とやり取りする方法などの型のマッピングが解決する方法、アセンブリが読み込まれる方法、特定のリーダーとライターの動作を記述するオブジェクトを修飾するエンティティの概念設定が解釈されます。 このトピックでは、.NET Framework XAML サービスと CLR 型システムに基づく関連付けられた既定の XAML スキーマ コンテキストの機能について説明します。 このトピックでは、WPF に使用される XAML スキーマ コンテキストにも説明します。  

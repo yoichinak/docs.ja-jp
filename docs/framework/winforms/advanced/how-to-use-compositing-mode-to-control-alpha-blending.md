@@ -9,12 +9,12 @@ helpviewer_keywords:
 - colors [Windows Forms], blending
 - colors [Windows Forms], controlling transparency
 ms.assetid: f331df2d-b395-4b0a-95be-24fec8c9bbb5
-ms.openlocfilehash: 15cb111a68cedaec011e88fa4916c292786d16b4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ad9437d9c250f067f26f61638b66fbc30fa3b599
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779042"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623930"
 ---
 # <a name="how-to-use-compositing-mode-to-control-alpha-blending"></a>方法: 複合モードを使用してアルファ ブレンドを制御する
 次の特性を持つオフスクリーン ビットマップを作成する場合がある可能性があります。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40041
 ms.assetid: 634132c2-5646-44aa-98c6-f773e2e63882
-ms.openlocfilehash: 243f51b3e6c798c82fdbe7b28557c4f96c728bf2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4adbf38e448dad7634a4336d20b3fce8702be1db
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764375"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664273"
 ---
 # <a name="type-typename-is-not-cls-compliant"></a>型\<typename > CLS 準拠ではありません
 変数、プロパティ、または関数の戻り値は、CLS 準拠でないデータ型で宣言されています。  

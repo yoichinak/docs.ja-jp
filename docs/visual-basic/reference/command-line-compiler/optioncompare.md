@@ -9,12 +9,12 @@ helpviewer_keywords:
 - -optioncompare compiler option [Visual Basic]
 - /optioncompare compiler option [Visual Basic]
 ms.assetid: 7237b766-b44d-4cc5-9a3c-885348a7d9e4
-ms.openlocfilehash: b88cba4d16c5a770a72b47868d11b16cbba6cae8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fd26643c2c289459b1e7b158952c402e42bae39b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788961"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639878"
 ---
 # <a name="-optioncompare"></a>-optioncompare
 文字列比較の方法を指定します。  
