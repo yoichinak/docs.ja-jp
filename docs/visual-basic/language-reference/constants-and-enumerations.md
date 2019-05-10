@@ -6,12 +6,12 @@ helpviewer_keywords:
 - constants [Visual Basic]
 - constants [Visual Basic], list of
 ms.assetid: 309c0ad5-83e4-4f96-99ea-83cd95107417
-ms.openlocfilehash: 0a9c01269e12c2d84be4f30c236c439012a88153
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d2d5c34a501368ed77d6ceef73b57c6bd79be
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013908"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469508"
 ---
 # <a name="constants-and-enumerations-visual-basic"></a>定数と列挙型 (Visual Basic)
 Visual Basic では、さまざまな定義済みの定数と開発者の列挙体を提供します。 定数は、アプリケーションの実行全体で一定の値を格納します。 一連の関連する定数を操作する場合や、定数値に名前を関連付ける場合は、列挙型を使うと便利です。  
@@ -27,7 +27,7 @@ Visual Basic では、さまざまな定義済みの定数と開発者の列挙�
 |`DEBUG`|A`Boolean`で設定できる値、**プロジェクト プロパティ** ダイアログ ボックス。 既定では、プロジェクトのデバッグ構成を定義します`DEBUG`します。 ときに`DEBUG`が定義されている<xref:System.Diagnostics.Debug>クラスのメソッドへの出力を生成する、**出力**ウィンドウ。 定義されていない場合<xref:System.Diagnostics.Debug>クラスのメソッドはコンパイルされず、デバッグ出力は生成されません。|  
 |`TARGET`|出力の種類のプロジェクトまたはコマンドラインの設定を表す文字列 **/target**オプション。 可能な値`TARGET`は。<br /><br /> -Windows アプリケーションの"winexe"。<br />-"exe"コンソール アプリケーションです。<br />-クラス ライブラリの「ライブラリ」です。<br />-モジュールの「モジュール」。<br />- **/Target**オプションは、Visual Studio 統合開発環境で設定することがあります。 詳細については、次を参照してください。 [/target (Visual Basic)](../../visual-basic/reference/command-line-compiler/target.md)します。|  
 |`TRACE`|A`Boolean`で設定できる値、**プロジェクト プロパティ** ダイアログ ボックス。 既定では、プロジェクトのすべての構成を定義`TRACE`します。 ときに`TRACE`が定義されている<xref:System.Diagnostics.Trace>クラスのメソッドへの出力を生成する、**出力**ウィンドウ。 定義されていない場合<xref:System.Diagnostics.Trace>クラスのメソッドはコンパイルされず、いいえ`Trace`出力が生成されます。|  
-|`VBC_VER`|Visual Basic バージョンを表す数値*メジャー*.*マイナー*形式。 バージョン番号[!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)]8.0 です。|  
+|`VBC_VER`|Visual Basic バージョンを表す数値*メジャー*.*マイナー*形式。|  
   
 ### <a name="print-and-display-constants"></a>印刷と表示の定数  
  印刷を呼び出す関数を表示すると、実際の値の代わりに、コードで、次の定数を使用することができます。  
