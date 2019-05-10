@@ -2,12 +2,12 @@
 title: レジストリ ハイブを削除できません
 ms.date: 07/20/2015
 ms.assetid: 53ed771c-83f8-4657-a70d-5f9252cd448e
-ms.openlocfilehash: 3b76128f538b51977202c70e70882686219ec8cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b359c0c38e344a64fd844fc996bc43705f663628
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61912666"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644138"
 ---
 # <a name="cannot-delete-a-registry-hive"></a>レジストリ ハイブを削除できません
 レジストリ ハイブの削除が試行されました。 ハイブとは、 `HKEY_CURRENT_USER` や `HKEY_LOCAL_MACHINE`などの最上位のレジストリ キーのことです。ハイブは削除できません。  

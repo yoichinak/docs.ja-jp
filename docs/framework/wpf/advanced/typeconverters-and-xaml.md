@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - XAML [WPF], TypeConverter class
 ms.assetid: f6313e4d-e89d-497d-ac87-b43511a1ae4b
-ms.openlocfilehash: ec6eaadae1dd7a7db84538c24e396a14db1a65a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 17a4a7f4a514c07280dd5f58935fea3eed1ca4e3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007322"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662207"
 ---
 # <a name="typeconverters-and-xaml"></a>TypeConverters および XAML
 このトピックでは、一般的な XAML 言語機能として、文字列からの型変換の目的について説明します。 .NET Framework で、<xref:System.ComponentModel.TypeConverter>クラスは、特定の目的を XAML 属性の使用法のプロパティの値として使用できる管理対象のカスタム クラスの実装の一部として機能します。 カスタム クラスを作成する XAML 設定可能な属性の値として使用するのには、クラスのインスタンスが必要な場合は、可能性があります、適用する必要があります、<xref:System.ComponentModel.TypeConverterAttribute>カスタムを作成し、クラスに<xref:System.ComponentModel.TypeConverter>クラス、またはその両方です。  

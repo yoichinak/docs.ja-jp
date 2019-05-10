@@ -2,12 +2,12 @@
 title: 高可用性障害復旧のための SqlClient サポート
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: 40054378319b81113dcb8f40cb82a8b1d02fc594
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a2cc63cb0b9118da6eb3c381e853165f800fe61f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876091"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645919"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性障害復旧のための SqlClient サポート
 このトピックでは、高可用性、ディザスター リカバリーのための SqlClient サポート ([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] に追加) である AlwaysOn 可用性グループについて説明します。  AlwaysOn 可用性グループ機能は、SQL Server 2012 に追加されました。 AlwaysOn 可用性グループの詳細については、SQL Server オンライン ブックを参照してください。  
@@ -21,9 +21,9 @@ ms.locfileid: "61876091"
   
  次の接続プロパティが、[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] の SqlClient に追加されました。  
   
--   `ApplicationIntent`  
+- `ApplicationIntent`  
   
--   `MultiSubnetFailover`  
+- `MultiSubnetFailover`  
   
  プログラムによって、これらの接続文字列キーワードを次のとおりに変更できます。  
   
@@ -45,17 +45,17 @@ ms.locfileid: "61876091"
   
  可用性グループ内のサーバーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続するには、次のガイドラインを使用します。  
   
--   単一のサブネットまたは複数のサブネットへの接続時には、`MultiSubnetFailover` 接続プロパティを使用します。これにより、両方の場合でパフォーマンスが向上します。  
+- 単一のサブネットまたは複数のサブネットへの接続時には、`MultiSubnetFailover` 接続プロパティを使用します。これにより、両方の場合でパフォーマンスが向上します。  
   
--   可用性グループに接続するには、使用する接続文字列でサーバーとして可用性グループの可用性グループ リスナーを指定します。  
+- 可用性グループに接続するには、使用する接続文字列でサーバーとして可用性グループの可用性グループ リスナーを指定します。  
   
--   SQL Server に接続する 64 を超える IP アドレスで構成されているインスタンスの接続エラーが発生します。  
+- SQL Server に接続する 64 を超える IP アドレスで構成されているインスタンスの接続エラーが発生します。  
   
--   使用するアプリケーションの動作、`MultiSubnetFailover`接続プロパティが認証の種類に基づく影響を受けません。SQL Server 認証、Kerberos 認証、または Windows 認証。  
+- 使用するアプリケーションの動作、`MultiSubnetFailover`接続プロパティが認証の種類に基づく影響を受けません。SQL Server 認証、Kerberos 認証、または Windows 認証。  
   
--   フェールオーバー時に対応し、アプリケーションの接続の再試行を減らすには、`Connect Timeout` の値を増やします。  
+- フェールオーバー時に対応し、アプリケーションの接続の再試行を減らすには、`Connect Timeout` の値を増やします。  
   
--   分散トランザクションはサポートされていません。  
+- 分散トランザクションはサポートされていません。  
   
  読み取り専用のルーティングが有効でない場合は、セカンダリ レプリカの場所への接続は、次の場合に失敗します。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - My namespace
 - My namespace [Visual Basic], extending
 ms.assetid: 808e8617-b01c-4135-8b21-babe87389e8e
-ms.openlocfilehash: 4d7bb6eef398746a4bd2dc4dbf3d526da1c1e0f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 31593fa8b0cc2670b9d59b8cd61ae66efd219269
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62014220"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659751"
 ---
 # <a name="extending-the-my-namespace-in-visual-basic"></a>Visual Basic における My 名前空間の拡張
 `My`プロパティとメソッドを .NET Framework の能力を簡単に利用できるようにする Visual Basic における名前空間を公開します。 `My`名前空間には一般的なプログラミングの問題を 1 行のコードに多くの場合、困難な作業を減らすことが簡略化します。 さらに、`My`の動作をカスタマイズできるように、名前空間が完全に拡張可能`My`特定のアプリケーションのニーズに対応するには、その階層に新しいサービスを追加します。 このトピックでは両方の既存のメンバーをカスタマイズする方法、`My`名前空間と、独自のカスタム クラスを追加する方法、`My`名前空間。  

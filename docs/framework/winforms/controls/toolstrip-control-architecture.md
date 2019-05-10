@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - ToolStrip control [Windows Forms], architecture
 ms.assetid: 71df2d18-862e-4701-9ff9-c1fe606f94f2
-ms.openlocfilehash: 91813928344f9210ce1383daa9ba7f765117833a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e02b9daa40a5f8a2f8bfd8874d006550628a70b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009607"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654718"
 ---
 # <a name="toolstrip-control-architecture"></a>ToolStrip コントロールのアーキテクチャ
 <xref:System.Windows.Forms.ToolStrip>と<xref:System.Windows.Forms.ToolStripItem>クラスは、ツールバー、ステータス、およびメニュー項目を表示するため、柔軟で拡張性の高いシステムを提供します。 これらのクラスがすべてに含まれる、<xref:System.Windows.Forms>名前空間と、通常、すべて"ToolStrip"プレフィックスを持つという名前 (など<xref:System.Windows.Forms.ToolStripOverflow>) または「ストリップ」サフィックスを持つ (など<xref:System.Windows.Forms.MenuStrip>)。  
@@ -263,7 +263,7 @@ ms.locfileid: "62009607"
   
 |含まれるアイテム|ToolStrip|MenuStrip|ContextMenuStrip|StatusStrip|ToolStripDropDown|  
 |--------------------|---------------|---------------|----------------------|-----------------|-----------------------|  
-|<xref:System.Windows.Forms.ToolStripButton>|[はい]|×|×|×|[はい]|  
+|<xref:System.Windows.Forms.ToolStripButton>|はい|×|×|×|[はい]|  
 |<xref:System.Windows.Forms.ToolStripComboBox>|はい|はい|[はい]|×|[はい]|  
 |<xref:System.Windows.Forms.ToolStripSplitButton>|[はい]|×|×|[はい]|はい|  
 |<xref:System.Windows.Forms.ToolStripLabel>|[はい]|×|×|[はい]|はい|  
@@ -273,7 +273,7 @@ ms.locfileid: "62009607"
 |<xref:System.Windows.Forms.ToolStripMenuItem>|×|[はい]|[はい]|×|×|  
 |<xref:System.Windows.Forms.ToolStripStatusLabel>|×|×|×|はい|×|  
 |<xref:System.Windows.Forms.ToolStripProgressBar>|はい|×|×|はい|×|  
-|<xref:System.Windows.Forms.ToolStripControlHost>|[はい]|[はい]|×|[はい]|はい|  
+|<xref:System.Windows.Forms.ToolStripControlHost>|[はい]|[はい]|×|[はい]|[はい]|  
   
 ### <a name="toolstripbutton"></a>オブジェクト  
  <xref:System.Windows.Forms.ToolStripButton> ボタンの項目は、<xref:System.Windows.Forms.ToolStrip>します。 これを表示するにはさまざまな境界線のスタイル、およびを表し、操作状態をアクティブ化に使用できます。 既定でフォーカスを持つことを定義することもできます。  

@@ -81,12 +81,12 @@ helpviewer_keywords:
 - rounding numbers [Visual Basic], banker's rounding
 - type conversion [Visual Basic], Visual Basic vs. .NET Framework
 ms.assetid: d9d8d165-f967-44ff-a6cd-598e4740a99e
-ms.openlocfilehash: 56dad921b2900061dbe2db0d8f1faaf759641f87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3321a9a290e6ba49be289848e4d16907ad9edbda
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802298"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662586"
 ---
 # <a name="type-conversion-functions-visual-basic"></a>データ型変換関数 (Visual Basic)
 これらの関数は、インラインでのコンパイル、つまり、変換コード式を評価するコードの一部です。 場合によってパフォーマンスを向上させると、変換を実行するプロシージャの呼び出しではありません。 各関数は、特定のデータ型に式を変換します。  
@@ -171,21 +171,21 @@ Dim i3 As Integer = CInt(Math.Round(s))        ' Result: 174
 
 ## <a name="behavior"></a>動作  
   
--   **強制型変換。** 一般に、既定のデータ型ではなく、特定のデータ型を操作の結果を強制的にデータ型の変換関数を使用することができます。 たとえば、使用して`CDec`単精度、倍精度、または整数演算が通常行う場所の場合の 10 進数の演算を強制的にします。  
+- **強制型変換。** 一般に、既定のデータ型ではなく、特定のデータ型を操作の結果を強制的にデータ型の変換関数を使用することができます。 たとえば、使用して`CDec`単精度、倍精度、または整数演算が通常行う場所の場合の 10 進数の演算を強制的にします。  
   
--   **変換の失敗。** 場合、`expression`先は、変換されるデータ型の範囲外は、関数に渡される、<xref:System.OverflowException>に発生します。  
+- **変換の失敗。** 場合、`expression`先は、変換されるデータ型の範囲外は、関数に渡される、<xref:System.OverflowException>に発生します。  
   
--   **小数部分。** 整数以外の値を整数に変換すると、型、整数の変換関数 (`CByte`、 `CInt`、 `CLng`、 `CSByte`、 `CShort`、 `CUInt`、 `CULng`、および`CUShort`) を削除します小数部し、を最も近い整数値に切り上げられます。  
+- **小数部分。** 整数以外の値を整数に変換すると、型、整数の変換関数 (`CByte`、 `CInt`、 `CLng`、 `CSByte`、 `CShort`、 `CUInt`、 `CULng`、および`CUShort`) を削除します小数部し、を最も近い整数値に切り上げられます。  
   
      小数部が正確に場合は 0.5、整数の変換関数に丸める、近い偶数の整数。 たとえば、0.5 は、0、および 1.5 および 2.5 は 2 にどちらに丸められます。 これと呼ぶことが*銀行型丸め*目的は、このような多くの数値を一緒に追加するときに蓄積する偏りを補正するためにします。  
   
      `CInt` `CLng`とは異なる、<xref:Microsoft.VisualBasic.Conversion.Int%2A>と<xref:Microsoft.VisualBasic.Conversion.Fix%2A>切り上げるには、数値の小数部ではなく、切り捨て関数。 また、`Fix`と`Int`内を通過すると常に同じデータ型の値を返します。  
   
--   **日付/時刻の変換。** 使用して、<xref:Microsoft.VisualBasic.Information.IsDate%2A>値を日付と時刻に変換できるかどうかを判断する関数。 `CDate` リテラルの日付と時刻リテラルが数値以外の値を認識します。 Visual Basic 6.0 を変換する`Date`値を`Date`Visual Basic 2005 での値、または以降のバージョンを使用できます、<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType>メソッド。  
+- **日付/時刻の変換。** 使用して、<xref:Microsoft.VisualBasic.Information.IsDate%2A>値を日付と時刻に変換できるかどうかを判断する関数。 `CDate` リテラルの日付と時刻リテラルが数値以外の値を認識します。 Visual Basic 6.0 を変換する`Date`値を`Date`Visual Basic 2005 での値、または以降のバージョンを使用できます、<xref:System.DateTime.FromOADate%2A?displayProperty=nameWithType>メソッド。  
   
--   **中立的な日付/時刻値。** [Date データ型](../../../visual-basic/language-reference/data-types/date-data-type.md)常に 日付と時刻の両方の情報が含まれます。 型変換のために、Visual Basic であると見なす 1/1/0001 (年 1 月 1日年 1 月)、*ニュートラル値*を時間のニュートラル値の日付、および 00時 00分: 00 (午前 0 時)。 変換する場合、`Date`値を文字列では、`CStr`結果の文字列に基準値を含めません。 たとえば、変換する`#January 1, 0001 9:30:00#`結果は"9時 30分: 00 AM"を文字列には、日付情報は表示されません。 ただし、日付情報は、元に引き続き存在`Date`値し、などの関数で回復できる<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>関数。  
+- **中立的な日付/時刻値。** [Date データ型](../../../visual-basic/language-reference/data-types/date-data-type.md)常に 日付と時刻の両方の情報が含まれます。 型変換のために、Visual Basic であると見なす 1/1/0001 (年 1 月 1日年 1 月)、*ニュートラル値*を時間のニュートラル値の日付、および 00時 00分: 00 (午前 0 時)。 変換する場合、`Date`値を文字列では、`CStr`結果の文字列に基準値を含めません。 たとえば、変換する`#January 1, 0001 9:30:00#`結果は"9時 30分: 00 AM"を文字列には、日付情報は表示されません。 ただし、日付情報は、元に引き続き存在`Date`値し、などの関数で回復できる<xref:Microsoft.VisualBasic.DateAndTime.DatePart%2A>関数。  
   
--   **カルチャの区別。** 文字列に関係する型変換関数は、アプリケーションの現在のカルチャ設定に基づいて変換を実行します。 たとえば、`CDate`システムのロケール設定に従って日付形式を認識します。 日、月、および使用されるロケールの正しい順序で年を指定するか、日付が正しく解釈されない可能性があります。 長い日付形式は、"Wednesday"などの曜日の文字列が含まれている場合は認識されません。  
+- **カルチャの区別。** 文字列に関係する型変換関数は、アプリケーションの現在のカルチャ設定に基づいて変換を実行します。 たとえば、`CDate`システムのロケール設定に従って日付形式を認識します。 日、月、および使用されるロケールの正しい順序で年を指定するか、日付が正しく解釈されない可能性があります。 長い日付形式は、"Wednesday"などの曜日の文字列が含まれている場合は認識されません。  
   
      または現在のロケールで指定した以外の形式で値の文字列形式からに変換する必要がある場合は、Visual Basic の型変換関数を使用することはできません。 これを行うには、使用、`ToString(IFormatProvider)`と`Parse(String, IFormatProvider)`値の型のメソッド。 などを使用して、<xref:System.Double.Parse%2A?displayProperty=nameWithType>を文字列に変換するときに、`Double`を使用して<xref:System.Double.ToString%2A?displayProperty=nameWithType>型の値を変換するときに`Double`文字列にします。  
   

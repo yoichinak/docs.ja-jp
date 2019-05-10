@@ -7,12 +7,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], technology summary
 - menus [Windows Forms], technology summary
 ms.assetid: e8d61973-7af9-429f-9df5-05a899c15a7b
-ms.openlocfilehash: b6537faa3be7ee28a934927fc95100a34a64e176
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d447f78a6b6d8a71ea2e67d4c991655eb4712199
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009488"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654708"
 ---
 # <a name="toolstrip-technology-summary"></a>ToolStrip テクノロジの概要
 ここでは、`ToolStrip` コントロールおよびその使用をサポートしているクラスの概要について説明します。  
