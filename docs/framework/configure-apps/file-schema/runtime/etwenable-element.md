@@ -17,8 +17,8 @@ ms.locfileid: "61704805"
 # <a name="etwenable-element"></a>\<etwEnable > 要素
 共通言語ランタイム イベントで Windows イベント トレーシング (ETW) を有効にするかどうかを指定します。  
   
- \<configuration > 要素  
-\<ランタイム > 要素  
+\<configuration> 要素  
+\<runtime> 要素  
 \<etwEnabled>  
   
 ## <a name="syntax"></a>構文  

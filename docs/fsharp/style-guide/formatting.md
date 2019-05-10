@@ -2,12 +2,12 @@
 title: F#コードの書式設定に関するガイドライン
 description: 書式設定するためのガイドラインについて説明しますF#コード。
 ms.date: 02/08/2019
-ms.openlocfilehash: 259d4bb2147d1fc8bc5d35d7ff2e3c34ec2185d0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902591"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063609"
 ---
 # <a name="f-code-formatting-guidelines"></a>F#コードの書式設定に関するガイドライン
 
@@ -86,6 +86,46 @@ type MyFun = int -> int -> string
 
 // Bad
 type MyFunBad = int->int->string
+```
+
+### <a name="surround-function-arguments-with-white-space"></a>空白文字でブロックの挿入関数の引数
+
+関数を定義するときに、各引数の周囲の空白文字を使用します。
+
+```fsharp
+// OK
+let myFun (a: decimal) b c = a + b + c
+
+// Bad
+let myFunBad (a:decimal)(b)c = a + b + c
+```
+
+### <a name="type-annotations"></a>型の注釈
+
+#### <a name="right-pad-function-argument-type-annotations"></a>引数型の注釈の右側を埋める関数
+
+型の注釈の引数を定義するときに、後の空白文字を使用して、`:`シンボル。
+
+```fsharp
+// OK
+let complexFunction (a: int) (b: int) c = a + b + c
+
+// Bad
+let complexFunctionBad (a :int) (b :int) (c:int) = a + b + c
+```
+
+#### <a name="surround-return-type-annotations-with-white-space"></a>空白の戻り値の型注釈がブロックの挿入
+
+Let バインドされた関数または値型の注釈 (戻り値の型、関数の場合)、空白文字は使用前に、と後、`:`シンボル。
+
+```fsharp
+// OK
+let expensiveToCompute : int = 0 // Type annotation for let-bound value
+let myFun (a: decimal) b c : decimal = a + b + c // Type annotation for the return type of a function
+// Bad
+let expensiveToComputeBad1:int = 1
+let expensiveToComputeBad2 :int = 2
+let myFunBad (a: decimal) b c:decimal = a + b + c
 ```
 
 ## <a name="formatting-blank-lines"></a>空白行を書式設定

@@ -2,12 +2,12 @@
 title: 引数 BasePath はフォルダーへのパスである必要があります
 ms.date: 07/20/2015
 ms.assetid: b180ce60-ad57-41a6-a313-491d86d84cc7
-ms.openlocfilehash: 30f84bd1a903ae7c6e5e370cea3de0468091b9f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9c15e2a7135ef3453e514735f7091097eeaa96c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61977185"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64659113"
 ---
 # <a name="argument-basepath-must-be-a-path-to-a-folder"></a>引数 BasePath はフォルダーへのパスである必要があります
 引数 `BasePath` はフォルダーへのパスで構成されている必要があります。 文字列を間違って解析し、有効なパスとして認識されない値を指定している可能性があります。  

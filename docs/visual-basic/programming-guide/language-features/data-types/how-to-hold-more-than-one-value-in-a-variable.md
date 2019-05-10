@@ -11,12 +11,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], compilation errors
 - types [Visual Basic], composite
 ms.assetid: 5fe0e558-aac2-4a40-b7f2-7cfea7336917
-ms.openlocfilehash: e2e1648ea508ecdd744adb8d2a4f7fdbc1e586c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c3df9873d184ead2de3f82b89a081955ade93b3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906491"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601122"
 ---
 # <a name="how-to-hold-more-than-one-value-in-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) では、複数の値を保持します。
 として宣言する場合、変数が 1 つ以上の値を保持する*複合データ型*します。  
@@ -29,11 +29,11 @@ ms.locfileid: "61906491"
   
 2. 複合データ型が既に定義されていない場合、変数が使用できるように定義します。  
   
-    -   含む構造体の定義、 [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)します。  
+    - 含む構造体の定義、 [Structure ステートメント](../../../../visual-basic/language-reference/statements/structure-statement.md)します。  
   
-    -   配列を定義、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)します。  
+    - 配列を定義、 [Dim ステートメント](../../../../visual-basic/language-reference/statements/dim-statement.md)します。  
   
-    -   クラスを定義、[クラス ステートメント](../../../../visual-basic/language-reference/statements/class-statement.md)します。  
+    - クラスを定義、[クラス ステートメント](../../../../visual-basic/language-reference/statements/class-statement.md)します。  
   
 3. 使用して変数を宣言、`Dim`ステートメント。  
   

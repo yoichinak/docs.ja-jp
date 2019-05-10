@@ -8,12 +8,12 @@ helpviewer_keywords:
 - MDI [Windows Forms], creating window lists
 - MenuStrip control [Windows Forms], creating window lists
 ms.assetid: 04fb414b-811f-4a83-aab6-b4a24646dec5
-ms.openlocfilehash: ec0d8af81e320bea3d9d69305f91bd56666ba7cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 229afc879be6407340e2fca6c3b2474475bcb5a6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746824"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611968"
 ---
 # <a name="how-to-create-an-mdi-window-list-with-menustrip-windows-forms"></a>方法: MenuStrip (Windows フォーム) を MDI ウィンドウ リストを作成します。
 マルチ ドキュメント インターフェイス (MDI) を使用して、同じ時およびコピーにいくつかのドキュメントを開くし、他の 1 つのドキュメントのコンテンツを貼り付けることができますアプリケーションを作成します。  
@@ -83,6 +83,6 @@ ms.locfileid: "61746824"
   
 ## <a name="see-also"></a>関連項目
 
-- [方法: MDI 親フォームを作成します。](../advanced/how-to-create-mdi-parent-forms.md)
-- [方法: MDI 子フォームを作成します。](../advanced/how-to-create-mdi-child-forms.md)
+- [方法: MDI 親フォームを作成する](../advanced/how-to-create-mdi-parent-forms.md)
+- [方法: MDI 子フォームを作成する](../advanced/how-to-create-mdi-child-forms.md)
 - [MenuStrip コントロール](menustrip-control-windows-forms.md)

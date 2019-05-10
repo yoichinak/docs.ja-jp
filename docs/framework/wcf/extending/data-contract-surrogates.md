@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - data contracts [WCF], surrogates
 ms.assetid: 8c31134c-46c5-4ed7-94af-bab0ac0dfce5
-ms.openlocfilehash: f97826cb5154035b535b5eac3a8818d8b366d639
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7b1e8585755bbbff900bd621d8bc3a25fd23961c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858027"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587504"
 ---
 # <a name="data-contract-surrogates"></a>データ コントラクト サロゲート
 データ コントラクト*サロゲート*は高度な機能、データ コントラクト モデルに基づいて構築されています。 この機能は、型をシリアル化または逆シリアル化する方法や、型をメタデータに投影する方法をユーザーが変更する場合に、型のカスタマイズと置換に使用することを目的としています。 サロゲートを使用できるのは、型のデータ コントラクトが指定されていない場合、フィールドやプロパティが <xref:System.Runtime.Serialization.DataMemberAttribute> 属性でマークされていない場合、またはユーザーがスキーマのバリエーションを動的に作成することを希望している場合などです。  
@@ -37,13 +37,13 @@ ms.locfileid: "61858027"
   
  [!code-csharp[C_IDataContractSurrogate#3](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_idatacontractsurrogate/cs/source.cs#3)]  
   
--   シリアル化では、後で <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> メソッドを呼び出して、元のインスタンスをサロゲートされたインスタンスに変換する際に、このメソッドによって返されたマッピングが使用されます。  
+- シリアル化では、後で <xref:System.Runtime.Serialization.IDataContractSurrogate.GetObjectToSerialize%2A> メソッドを呼び出して、元のインスタンスをサロゲートされたインスタンスに変換する際に、このメソッドによって返されたマッピングが使用されます。  
   
--   逆シリアル化では、サロゲート型のインスタンスに逆シリアル化する際に、シリアライザーはこのメソッドによって返されたマッピングを使用します。 その後、<xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> が呼び出されて、サロゲートされたインスタンスが元の型のインスタンスに変換されます。  
+- 逆シリアル化では、サロゲート型のインスタンスに逆シリアル化する際に、シリアライザーはこのメソッドによって返されたマッピングを使用します。 その後、<xref:System.Runtime.Serialization.IDataContractSurrogate.GetDeserializedObject%2A> が呼び出されて、サロゲートされたインスタンスが元の型のインスタンスに変換されます。  
   
--   エクスポートでは、メタデータの生成に使用するデータ コントラクトを取得する際に、このメソッドによって返されたサロゲート型が反映されます。  
+- エクスポートでは、メタデータの生成に使用するデータ コントラクトを取得する際に、このメソッドによって返されたサロゲート型が反映されます。  
   
--   インポートでは、最初の型がサロゲート型に変更されます。このサロゲート型は、参照のサポートなどの目的で使用するデータ コントラクトを取得する際に反映されます。  
+- インポートでは、最初の型がサロゲート型に変更されます。このサロゲート型は、参照のサポートなどの目的で使用するデータ コントラクトを取得する際に反映されます。  
   
  <xref:System.Type> パラメーターは、シリアル化、逆シリアル化、インポート、またはエクスポートするオブジェクトの型です。 サロゲートが型を処理しない場合、<xref:System.Runtime.Serialization.IDataContractSurrogate.GetDataContractType%2A> メソッドは入力の型を返す必要があります。 それ以外の場合は、サロゲートされた適切な型を返します。 複数のサロゲート型が存在する場合は、このメソッドで多数のマッピングを定義できます。  
   

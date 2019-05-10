@@ -2,12 +2,12 @@
 title: WCF サービス発行
 ms.date: 03/30/2017
 ms.assetid: c806b253-cd47-4b96-b831-e73cbf08808f
-ms.openlocfilehash: 33725c2f393529a7e59ed0b3ae1db01a359fb9a5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f10aabd2a2258f98915f1bbcc8b30fc1b7f677ac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61791210"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654582"
 ---
 # <a name="wcf-service-publishing"></a>WCF サービス発行
 

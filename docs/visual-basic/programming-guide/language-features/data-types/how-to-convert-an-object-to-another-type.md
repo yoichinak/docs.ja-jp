@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - objects [Visual Basic], converting
 ms.assetid: 60cb5fc7-7ba4-4ab5-9c24-480fa12ddcdc
-ms.openlocfilehash: 1e515c0f4ce8e787754c61a9b53d247fa93c49f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d80dc542f71aaf3eec6891006d77c5d39c985abf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906530"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600991"
 ---
 # <a name="how-to-convert-an-object-to-another-type-in-visual-basic"></a>方法: オブジェクトを Visual Basic で別の型に変換します。
 変換する、`Object`変数などの変換キーワードを使用して、別のデータ型を[CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)します。  
@@ -31,7 +31,7 @@ End Sub
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   <xref:System?displayProperty=nameWithType> 名前空間への参照  
+- <xref:System?displayProperty=nameWithType> 名前空間への参照  
   
 ## <a name="see-also"></a>関連項目
 

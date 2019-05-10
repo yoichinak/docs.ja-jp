@@ -10,11 +10,11 @@ helpviewer_keywords:
 - Control class [Windows Forms], Windows Forms
 ms.assetid: 86cbe435-45b7-4cb4-9b5a-47418369758d
 ms.openlocfilehash: a190d86f5ebe258427ac4a73c16c7f271462b69c
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63807921"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753224"
 ---
 # <a name="how-to-develop-a-simple-windows-forms-control"></a>方法: シンプルな Windows フォーム コントロールを開発する
 

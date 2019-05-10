@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: bbc77c0074b35a95140b35d71e89c51ad8abac62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800179"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211779"
 ---
 # <a name="windows-forms-overview"></a>Windows フォームの概要
 
@@ -32,7 +32,7 @@ ms.locfileid: "61800179"
 
  Windows フォームには、Microsoft Office のようなハイエンド アプリケーションの機能をエミュレートする豊富な UI コントロールが用意されています。 <xref:System.Windows.Forms.ToolStrip> コントロールと <xref:System.Windows.Forms.MenuStrip> コントロールを使用する場合、テキストとイメージを含むツールバーとメニューを作成したり、サブメニューを表示したり、テキスト ボックスやコンボ ボックスなど、その他のコントロールをホストしたりできます。
 
- Visual Studio ドラッグ アンド ドロップ**Windows フォーム デザイナー**、Windows フォーム アプリケーションを簡単に作成することができます。 コントロールをカーソルで選択して、フォームの任意の場所に追加するだけです。 デザイナーがグリッド線やスナップ線などのツールを提供するので、コントロールの調整が楽になります。 Visual Studio を使用するか、またはコマンドラインでコンパイルするかどうかを使用できます、 <xref:System.Windows.Forms.FlowLayoutPanel>、<xref:System.Windows.Forms.TableLayoutPanel>と<xref:System.Windows.Forms.SplitContainer>短時間で高度なを作成するコントロールのフォーム レイアウト。
+ ドラッグ アンド ドロップで**Windows フォーム デザイナー** Visual Studio で、Windows フォーム アプリケーションを簡単に作成できます。 コントロールをカーソルで選択して、フォームの任意の場所に追加するだけです。 デザイナーがグリッド線やスナップ線などのツールを提供するので、コントロールの調整が楽になります。 Visual Studio を使用するか、またはコマンドラインでコンパイルするかどうかを使用できます、 <xref:System.Windows.Forms.FlowLayoutPanel>、<xref:System.Windows.Forms.TableLayoutPanel>と<xref:System.Windows.Forms.SplitContainer>短時間で高度なを作成するコントロールのフォーム レイアウト。
 
  最後に、独自のカスタム UI 要素を作成する必要がある場合は、<xref:System.Drawing> 名前空間に、線、円、およびその他の図形をフォーム上に直接表示するクラスが多数含まれています。
 

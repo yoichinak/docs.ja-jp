@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNetwork_NetworkNotAvailable
 ms.assetid: 8d2bac12-bc6a-42ae-b28b-80b026dfabce
-ms.openlocfilehash: 10d03ce67776a4d4942c2c9f016a55a70b5a3374
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4c5790349c9262481a96490a7880a22378169317
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922370"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913269"
 ---
 # <a name="unable-to-ping-because-a-network-connection-is-not-available"></a>ネットワーク接続が利用できないため、ping を実行できません
 ネットワーク接続が利用できないため、操作を実行できません。  

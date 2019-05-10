@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MaxLineSizeExceeded
 ms.assetid: c59116d9-9856-47af-b32d-616d8f2d10d3
-ms.openlocfilehash: 26739ce4e6e188b71f3af9435d53105807aede92
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d716d7dcaaf338489c952615622f70f9d384ccd7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945003"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604148"
 ---
 # <a name="line-number-cannot-be-read-because-it-exceeds-the-maximum-line-size"></a>行\<数 > 行の最大サイズを超えているために読み取ることができません。
 最大行サイズを超えているため、行を解析できません。 通常、これはファイルに始まりの引用符がありますが、閉じの引用符がないことを意味します。  

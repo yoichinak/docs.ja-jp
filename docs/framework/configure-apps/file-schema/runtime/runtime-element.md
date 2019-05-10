@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61704584"
 ---
-# <a name="runtime-element"></a>\<ランタイム > 要素
+# <a name="runtime-element"></a>\<runtime> 要素
 アプリケーションを構成する共通言語ランタイムで使用される情報を提供します。  
   
  \<configuration>  
@@ -85,9 +85,9 @@ ms.locfileid: "61704584"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
   
 ## <a name="remarks"></a>Remarks  
- 内の子要素、 [\<ランタイム >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)構成ファイルのセクションは、アプリケーションを実行する方法を構成する共通言語ランタイムによって使用されます。 たとえば、 [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)要素は、ガベージ コレクターがワークステーションのガベージ コレクションまたはサーバーのガベージ コレクションを使用するかどうかを決定、 [ \<UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)要素は、共通言語ランタイムがアプリケーションごと、またはアプリケーションごとのドメインごとに文字列のハッシュ コードを計算するかどうかを決定し、`AppContextSwitchOverrides`要素により、ライブラリ ユーザー有効または無効にするライブラリによって提供される変更された機能です。  
+ 内の子要素、 [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)構成ファイルのセクションは、アプリケーションを実行する方法を構成する共通言語ランタイムによって使用されます。 たとえば、 [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)要素は、ガベージ コレクターがワークステーションのガベージ コレクションまたはサーバーのガベージ コレクションを使用するかどうかを決定、 [ \<UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)要素は、共通言語ランタイムがアプリケーションごと、またはアプリケーションごとのドメインごとに文字列のハッシュ コードを計算するかどうかを決定し、`AppContextSwitchOverrides`要素により、ライブラリ ユーザー有効または無効にするライブラリによって提供される変更された機能です。  
   
- 内の要素、 [\<ランタイム >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)セクションは、アプリケーションの起動時に、共通言語ランタイムによって自動的に読み取られます。 その名前を指定することによって、既定以外のアプリケーション ドメインの構成ファイルを定義することも、<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>プロパティの設定は、アプリケーション ドメインが読み込まれるときに自動的に読み込まれます。 まれには場合、これまでが必要で設定を直接読み取る必要がある、 [\<ランタイム >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)アプリケーションの構成ファイルでセクション。  
+ 内の要素、 [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)セクションは、アプリケーションの起動時に、共通言語ランタイムによって自動的に読み取られます。 その名前を指定することによって、既定以外のアプリケーション ドメインの構成ファイルを定義することも、<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>プロパティの設定は、アプリケーション ドメインが読み込まれるときに自動的に読み込まれます。 まれには場合、これまでが必要で設定を直接読み取る必要がある、 [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)アプリケーションの構成ファイルでセクション。  
   
 ## <a name="see-also"></a>関連項目
 

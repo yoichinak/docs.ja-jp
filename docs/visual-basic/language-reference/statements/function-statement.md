@@ -28,12 +28,12 @@ helpviewer_keywords:
 - End keyword [Visual Basic], Function statements
 - Handles keyword [Visual Basic], Function statements
 ms.assetid: a4497077-0f46-4ede-a27f-9e8670df52b9
-ms.openlocfilehash: dffe67d1c31b0fe7c037839ba0588793a461f276
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3a6184164fdc6f2517caf45f7b5e1455c9299666
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638059"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754727"
 ---
 # <a name="function-statement-visual-basic"></a>Function ステートメント (Visual Basic)
 

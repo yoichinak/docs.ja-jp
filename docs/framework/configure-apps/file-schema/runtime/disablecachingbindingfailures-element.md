@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: bf598873-83b7-48de-8955-00b0504fbad0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4893adaf528f1a9ef8fc8eab8027406fd8520cc2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6c2ed46e1d26d829fbe832e44efb40844ae7d56f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704792"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592721"
 ---
 # <a name="disablecachingbindingfailures-element"></a>\<disableCachingBindingFailures > 要素
 バインディングを調査して、アセンブリが見つからなかったために発生したエラーのキャッシュを無効にするかどうかを指定します。  
   
  \<configuration > 要素  
-\<ランタイム > 要素  
+\<runtime> 要素  
 \<disableCachingBindingFailures>  
   
 ## <a name="syntax"></a>構文  

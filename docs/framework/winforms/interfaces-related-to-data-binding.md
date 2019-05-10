@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: ffda85b2704212ea5323117447e0cfe17ffb33db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801778"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754079"
 ---
 # <a name="interfaces-related-to-data-binding"></a>データ連結に関連するインターフェイス
 

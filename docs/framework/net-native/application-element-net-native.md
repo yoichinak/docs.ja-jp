@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b4e9b37a-059b-4076-8f56-cb3f9cef0cd9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b858b9daad22cdda6df30be7b28cdecfd275b8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c346b23bd49abaabde9cc4adfdeb134c4267cbf8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868607"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64657186"
 ---
 # <a name="application-element-net-native"></a>\<Application > 要素 (.NET ネイティブ)
 実行時にリフレクションに使用可能なメタデータを持つアプリケーション全体の型と型のメンバーのコンテナーとして機能し、アプリ内のすべてのプログラム要素にランタイム リフレクション ポリシーを適用します。  
@@ -81,9 +81,9 @@ ms.locfileid: "61868607"
   
  `<Application>` 要素は、次の 2 とおりの方法で使用できます。  
   
--   実行時に必要なメタデータを持つプログラム要素を定義するためのコンテナーとして。 この場合、`<Application>` 要素に属性は必要ありません。 コンパイル時に、コンパイラ ツールは、.NET Framework コア ライブラリを含むすべてのライブラリで、`<Application>` 要素の子要素により示されるプログラム要素を検索します。 一方、[\<Library>](../../../docs/framework/net-native/library-element-net-native.md) の子要素により示されるプログラム要素を検索する場合、コンパイラ ツールは [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素により指定されたライブラリのみを検索します。  
+- 実行時に必要なメタデータを持つプログラム要素を定義するためのコンテナーとして。 この場合、`<Application>` 要素に属性は必要ありません。 コンパイル時に、コンパイラ ツールは、.NET Framework コア ライブラリを含むすべてのライブラリで、`<Application>` 要素の子要素により示されるプログラム要素を検索します。 一方、[\<Library>](../../../docs/framework/net-native/library-element-net-native.md) の子要素により示されるプログラム要素を検索する場合、コンパイラ ツールは [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素により指定されたライブラリのみを検索します。  
   
--   リフレクション、シリアル化、および相互運用に関するアプリケーション全体のポリシーを設定する要素として。 `<Application>` 要素の属性はアプリケーション全体のポリシーを定義します。このポリシーは、`<Application>` 要素または [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素により定義される子要素によってオーバーライドできます。  
+- リフレクション、シリアル化、および相互運用に関するアプリケーション全体のポリシーを設定する要素として。 `<Application>` 要素の属性はアプリケーション全体のポリシーを定義します。このポリシーは、`<Application>` 要素または [\<Library>](../../../docs/framework/net-native/library-element-net-native.md) 要素により定義される子要素によってオーバーライドできます。  
   
 ## <a name="see-also"></a>関連項目
 

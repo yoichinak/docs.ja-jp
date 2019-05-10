@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - animation [WPF], changing property values after
 ms.assetid: 79466556-4dbf-40bd-9c1e-a77613b07077
-ms.openlocfilehash: 2e1389392c6465ed56b2c71e53b2e3c1947acbe2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 593d3fcefe3bb81518d0886afde82f9a172874ba
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651104"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912386"
 ---
 # <a name="how-to-set-a-property-after-animating-it-with-a-storyboard"></a>方法: ストーリーボードを使用してアニメーション化した後にプロパティを設定する
 場合によっては、表示にアニメーション化した後、プロパティの値を変更できないことがあります。  
