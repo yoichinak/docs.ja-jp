@@ -3,12 +3,12 @@ title: WIF のガイドライン
 ms.date: 03/30/2017
 ms.assetid: 2fc76a0b-e33c-44c1-8f32-44934eb03dd4
 author: BrucePerlerMS
-ms.openlocfilehash: f9f520a444ef8062600c40186be309f56c3c6bbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d64d40806e043a38fe671f8e5144b2c52dbacf73
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780121"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592325"
 ---
 # <a name="wif-guidelines"></a>WIF のガイドライン
 - [WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)  

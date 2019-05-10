@@ -2,12 +2,12 @@
 title: チュートリアルによる学習
 ms.date: 03/30/2017
 ms.assetid: a8ae2965-6a49-4155-89b0-7fab2c488ab1
-ms.openlocfilehash: 611644ce9d6f95bc4113b81bfff36ecaf9cf0b4a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d5c8457bc1e484d3c7c2b57225261a3ef74023d1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033531"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582918"
 ---
 # <a name="learning-by-walkthroughs"></a>チュートリアルによる学習
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ドキュメントには、いくつかのチュートリアルが用意されています。 このトピックでは、チュートリアルに関する全般的な話題 (トラブルシューティングを含む) を取り上げます。また、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] について学ぶための、いくつかの入門レベルのチュートリアルへのリンクを示します。  
