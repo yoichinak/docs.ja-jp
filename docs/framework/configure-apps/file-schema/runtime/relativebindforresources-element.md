@@ -18,7 +18,7 @@ ms.locfileid: "64592669"
 サテライト アセンブリのプローブを最適化します。  
   
  \<configuration > 要素  
-\<ランタイム > 要素  
+\<runtime> 要素  
 \<relativeBindForResources > 要素  
   
 ## <a name="syntax"></a>構文  
