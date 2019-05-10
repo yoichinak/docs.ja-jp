@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30955
 ms.assetid: 966b61eb-441e-48b0-bedf-ca95384ecb8b
-ms.openlocfilehash: 5f313a43bc3a2f983dabbd45477d120fdb80d063
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 027cccc9ad406d5bc2fd686ddeb4c674dc8f3c90
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766806"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621201"
 ---
 # <a name="value-of-type-typename1-cannot-be-converted-to-typename2"></a>型の値 '\<typename1 >' に変換できません'\<typename2 >'。
 型の値 '\<typename1 >' に変換できません。'\<typename2 >'。 型の不一致は、ファイル参照とアセンブリへの参照をプロジェクトの混合によって生じた可能性があります '\<assemblyname >'。 ファイル参照を置き換えてください '\<filepath >' プロジェクトで'\<projectname1 >' への参照をプロジェクトに '\<projectname2 >'。  

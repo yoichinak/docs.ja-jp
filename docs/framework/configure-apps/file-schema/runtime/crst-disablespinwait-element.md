@@ -7,16 +7,16 @@ helpviewer_keywords:
 - Crst_DisableSpinWait element
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6cde26250db0b3d11c51a18b7ebd378953ae0958
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f89f0558c11e229fef2ca3cd619e3c033f12c858
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704831"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754674"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > 要素
 
-競合の多い場合、クリティカル セクションのスピン待機時間を無効にするかどうかを指定します。 
+競合の多い場合、クリティカル セクションのスピン待機時間を無効にするかどうかを指定します。  
   
  \<configuration>  
 \<runtime>  
@@ -36,14 +36,14 @@ ms.locfileid: "61704831"
   
 |属性|説明|  
 |---------------|-----------------|  
-|**enabled**|競合の多いときにクリティカル セクションのスピン待機時間が有効かどうかを指定します。|  
+|**enabled**|重要なセクションでは、競合の多いときの待機中のスピンが無効になっているかどうかを指定します。|  
   
 ## <a name="enabled-attribute"></a>enabled 属性  
   
 |値|説明|  
 |-----------|-----------------|  
-|1|スピン待ちになっています。|  
-|0|スピン待ちを無効になります。 これは、既定値です。|  
+|1|クリティカル セクションを取得できない場合は、スピン待ちを無効にします。|  
+|0|クリティカル セクションを取得できない場合にスピン待ちを無効にしないでください。 これが既定値です。|  
   
 ### <a name="child-elements"></a>子要素  
  なし。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - TextElement content model [WPF]
 - flow content elements [WPF], TextElement content model
 ms.assetid: d0a7791c-b090-438c-812f-b9d009d83ee9
-ms.openlocfilehash: 990642d288481fff8eeef900a86070d54790f151
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1e1f67440377db95a5e0896b8fd31b1ab720b188
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981878"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630656"
 ---
 # <a name="textelement-content-model-overview"></a>TextElement コンテンツ モデルの概要
 このコンテンツ モデルの概要についてのサポートされているコンテンツを説明します、<xref:System.Windows.Documents.TextElement>します。 <xref:System.Windows.Documents.Paragraph>クラスは、型の<xref:System.Windows.Documents.TextElement>します。 コンテンツ モデルは、他のオブジェクトや要素に含めることのできるオブジェクトや要素を記述します。 派生したオブジェクトに使用するコンテンツ モデルのこの概要を示します<xref:System.Windows.Documents.TextElement>します。 詳細については、次を参照してください。[フロー ドキュメントの概要](flow-document-overview.md)します。  
