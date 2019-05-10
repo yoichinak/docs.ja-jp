@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 56d051c3-012c-42c1-9a58-7270edc624aa
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a010b2ee1de17741b2d0bdd6e7c50d5f602256ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c9b60cdef2af25ce712fcb2401b7f776d3add5b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754558"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660398"
 ---
 # <a name="how-to-compile-conditionally-with-trace-and-debug"></a>方法: トレースとデバッグを指定して条件付きコンパイルを実行する
 開発時にアプリケーションをデバッグするときは、トレース出力とデバッグ出力の両方が Visual Studio の [出力] ウィンドウに表示されます。 ただし、配置されるアプリケーションにトレース機能を組み込むには、**TRACE** コンパイラ ディレクティブを有効にして、インストルメント化されたアプリケーションをコンパイルする必要があります。 これにより、コンパイルされたアプリケーションのリリース バージョンに、トレース コードが組み込まれます。 **TRACE** ディレクティブを有効にしないと、コンパイル時にすべてのトレース コードが無視され、配置する実行可能コードに含まれなくなります。  

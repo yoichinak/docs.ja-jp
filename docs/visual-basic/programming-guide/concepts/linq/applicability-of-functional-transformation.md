@@ -2,12 +2,12 @@
 title: 関数型変換 (Visual Basic) の適用性
 ms.date: 07/20/2015
 ms.assetid: 3b74e134-e19b-44bc-8d06-e26c48305040
-ms.openlocfilehash: 7efeab82dafc284f64a950eb7f5e4a6ee3f2e73d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 1903a59ec666c7d0b4c585abe5424cc1a0fd902d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689841"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642420"
 ---
 # <a name="applicability-of-functional-transformation-visual-basic"></a>関数型変換 (Visual Basic) の適用性
 純粋関数型変換は、さまざまな状況で適用できます。  

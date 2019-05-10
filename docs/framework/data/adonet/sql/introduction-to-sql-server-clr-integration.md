@@ -2,12 +2,12 @@
 title: SQL Server の CLR 統合の概要
 ms.date: 03/30/2017
 ms.assetid: 551d2290-ed80-49be-b377-44b32444da1c
-ms.openlocfilehash: dc7d19bf361ed5fcda1fd5edf64eeb5e4ce15a71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 380666ae9a3ebc18ef470e5ab719360f40510f41
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033879"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650608"
 ---
 # <a name="introduction-to-sql-server-clr-integration"></a>SQL Server の CLR 統合の概要
 共通言語ランタイム (CLR) は、Microsoft .NET Framework の中核であり、すべての .NET Framework コードの実行環境を提供します。 CLR 内で実行されるコードを、マネージド コードと呼びます。 CLR は、ジャストインタイム (JIT) コンパイル、メモリの割り当てと管理、タイプ セーフの設定、例外処理、スレッド管理、セキュリティなど、プログラムの実行に必要なさまざまな機能やサービスを備えています。  

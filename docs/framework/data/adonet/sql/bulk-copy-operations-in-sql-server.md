@@ -2,12 +2,12 @@
 title: SQL Server でのバルク コピー操作
 ms.date: 03/30/2017
 ms.assetid: 83a7a0d2-8018-4354-97b9-0b1d99f8342b
-ms.openlocfilehash: 086b3b997cf0915be7cfa603a651eb412d52e985
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e538e48400d955a0013a12dbf2d10f1f96c3ddfe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878645"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649544"
 ---
 # <a name="bulk-copy-operations-in-sql-server"></a>SQL Server でのバルク コピー操作
 Microsoft SQL Server には、という一般的なコマンド ライン ユーティリティが含まれています。 **bcp**の高速で一括 SQL Server データベースのテーブルまたはビューに大きなファイルをコピーします。 <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用すると、同様の機能を備えたマネージド コード ソリューションを作成できます。 SQL Server のテーブルにデータを読み込むには、INSERT ステートメントを使用するなどの方法もありますが、<xref:System.Data.SqlClient.SqlBulkCopy> を使用すれば他の方法よりもパフォーマンス面で大幅に有利になります。  
@@ -16,11 +16,11 @@ Microsoft SQL Server には、という一般的なコマンド ライン ユー
   
  <xref:System.Data.SqlClient.SqlBulkCopy> クラスを使用すると、次のことを実行できます。  
   
--   単一のバルク コピー操作  
+- 単一のバルク コピー操作  
   
--   複数のバルク コピー操作  
+- 複数のバルク コピー操作  
   
--   トランザクション内でのバルク コピー操作  
+- トランザクション内でのバルク コピー操作  
   
 > [!NOTE]
 >  .NET Framework バージョン 1.1 以前を使用する場合 (サポートされていません、<xref:System.Data.SqlClient.SqlBulkCopy>クラス)、SQL Server TRANSACT-SQL を実行できる**BULK INSERT**ステートメントを使用して、<xref:System.Data.SqlClient.SqlCommand>オブジェクト。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - UI (user interface), automation
 - UI Automation
 ms.assetid: 4380cad7-e509-448f-b9a5-6de042605fd4
-ms.openlocfilehash: 18cb28de04737973876e70cdb7b87e720836bcba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5b9af742558cd1a672c739040aef9e80dcaaabe5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032328"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64652208"
 ---
 # <a name="ui-automation-and-screen-scaling"></a>UI オートメーションおよび画面の拡大縮小
 > [!NOTE]

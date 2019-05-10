@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00c12376-cb26-4317-86ad-e6e9c089be57
-ms.openlocfilehash: b456549daefa0fdf67524b0b039a091652cf41ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eb9b61f0c0b787a2de0a39a0d47c5767acad9cc5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876279"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645889"
 ---
 # <a name="sql-server-express-user-instances"></a>SQL Server Express ユーザー インスタンス
 Microsoft SQL Server Express Edition (SQL Server Express) でサポートされる機能に、ユーザー インスタンスがあります。ユーザー インスタンスは、.NET Framework Data Provider for SQL Server (`SqlClient`) を使用している場合にしか利用できません。 ユーザー インスタンスは、親インスタンスによって生成される SQL Server Express データベース エンジンの独立したインスタンスです。 ユーザー インスタンスを使用すると、ローカル コンピューターの管理者以外のユーザーが、SQL Server Express データベースにアタッチして接続できます。 それぞれのインスタンスは、1 ユーザーあたり 1 インスタンスの原則に基づいて、個々のユーザーのセキュリティ コンテキストで実行されます。  
@@ -41,15 +41,15 @@ sp_configure 'user instances enabled','0'
   
  以下にサンプルの接続文字列を示します。次の点に注意してください。  
   
--   `Data Source` キーワードは、ユーザー インスタンスを生成している SQL Server Express の親インスタンスを指します。 既定のインスタンスは、.\sqlexpress です。  
+- `Data Source` キーワードは、ユーザー インスタンスを生成している SQL Server Express の親インスタンスを指します。 既定のインスタンスは、.\sqlexpress です。  
   
--   `Integrated Security` が `true` に設定されます。 ユーザー インスタンスに接続するには Windows 認証が必要です。SQL Server ログインはサポートされません。  
+- `Integrated Security` が `true` に設定されます。 ユーザー インスタンスに接続するには Windows 認証が必要です。SQL Server ログインはサポートされません。  
   
--   `User Instance` は `true` に設定されます。これにより、ユーザー インスタンスが呼び出されます。 既定値は `false` です。  
+- `User Instance` は `true` に設定されます。これにより、ユーザー インスタンスが呼び出されます。 既定値は `false` です。  
   
--   プライマリ データベース ファイル (.mdf) にアタッチするには、`AttachDbFileName` 接続文字列キーワードで完全パス名を指定します。 また、`AttachDbFileName` は、<xref:System.Data.SqlClient.SqlConnection> 接続文字列内の "extended properties" キーおよび "initial file name" キーに対応しています。  
+- プライマリ データベース ファイル (.mdf) にアタッチするには、`AttachDbFileName` 接続文字列キーワードで完全パス名を指定します。 また、`AttachDbFileName` は、<xref:System.Data.SqlClient.SqlConnection> 接続文字列内の "extended properties" キーおよび "initial file name" キーに対応しています。  
   
--   パイプ記号で囲まれた `|DataDirectory|` の部分には、接続元のアプリケーションのデータ ディレクトリを表す文字列が入ります。データベース ファイルである .mdf と .ldf、およびログ ファイルの格納場所を相対パスで指定します。 これらのファイルを別の場所に移す場合は、ファイルの完全パスを指定する必要があります。  
+- パイプ記号で囲まれた `|DataDirectory|` の部分には、接続元のアプリケーションのデータ ディレクトリを表す文字列が入ります。データベース ファイルである .mdf と .ldf、およびログ ファイルの格納場所を相対パスで指定します。 これらのファイルを別の場所に移す場合は、ファイルの完全パスを指定する必要があります。  
   
 ```  
 Data Source=.\\SQLExpress;Integrated Security=true;  
@@ -144,11 +144,11 @@ private static void OpenSqlConnection()
   
  ユーザー インスタンスのシナリオ  
   
--   データの共有を必要としないシングル ユーザー アプリケーション。  
+- データの共有を必要としないシングル ユーザー アプリケーション。  
   
--   ClickOnce 配置。 .NET Framework 2.0 以降および SQL Server Express が既にターゲット コンピューターにインストールされている場合、管理者以外のユーザーでも、ClickOnce アクションの結果としてダウンロードされたインストール パッケージをインストールして使用できます。 ただし、SQL Server Express がセットアップの一部として含まれている場合は、管理者が SQL Server Express をインストールする必要があります。 詳細については、次を参照してください。 [Windows フォームの ClickOnce 配置](../../../winforms/clickonce-deployment-for-windows-forms.md)します。
+- ClickOnce 配置。 .NET Framework 2.0 以降および SQL Server Express が既にターゲット コンピューターにインストールされている場合、管理者以外のユーザーでも、ClickOnce アクションの結果としてダウンロードされたインストール パッケージをインストールして使用できます。 ただし、SQL Server Express がセットアップの一部として含まれている場合は、管理者が SQL Server Express をインストールする必要があります。 詳細については、次を参照してください。 [Windows フォームの ClickOnce 配置](../../../winforms/clickonce-deployment-for-windows-forms.md)します。
   
--   Windows 認証を使用した ASP.NET 専用ホスティング。 イントラネット上で、単一の SQL Server Express インスタンスをホストできます。 アプリケーションは、権限の借用ではなく、ASPNET Windows アカウントを使ってこのインスタンスに接続することになります。 サードパーティ製品を使ったホスティングや共有ホスティングのシナリオでユーザー インスタンスを使用することは避けてください。すべてのアプリケーションで同じユーザー インスタンスが使用され、アプリケーションを互いに分離することができなくなります。  
+- Windows 認証を使用した ASP.NET 専用ホスティング。 イントラネット上で、単一の SQL Server Express インスタンスをホストできます。 アプリケーションは、権限の借用ではなく、ASPNET Windows アカウントを使ってこのインスタンスに接続することになります。 サードパーティ製品を使ったホスティングや共有ホスティングのシナリオでユーザー インスタンスを使用することは避けてください。すべてのアプリケーションで同じユーザー インスタンスが使用され、アプリケーションを互いに分離することができなくなります。  
   
 ## <a name="see-also"></a>関連項目
 

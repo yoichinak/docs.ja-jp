@@ -10,12 +10,12 @@ helpviewer_keywords:
 - initializers [Visual Basic]
 - named types [Visual Basic]
 ms.assetid: e2df3807-a70f-49dd-ac94-f1e07f472b1b
-ms.openlocfilehash: 6602a68555e37bf793ba41076ba8f484b4a0dbc3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bf608ebb36a2e8f29e8429b77e023eced67273e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760754"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649771"
 ---
 # <a name="object-initializers-named-and-anonymous-types-visual-basic"></a>オブジェクト初期化子:名前付きの匿名型 (Visual Basic)
 オブジェクト初期化子を使用すると、1 つの式を使用して複雑なオブジェクトのプロパティを指定できます。 これらは、匿名型の名前付きの型のインスタンスを作成する使用できます。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - flicker [Windows Forms], reducing in Windows Forms
 - graphics [Windows Forms], reducing double-buffered flicker
 ms.assetid: 91083d3a-653f-4f15-a467-0f37b2aa39d6
-ms.openlocfilehash: ef05b72b33d3f28d1811389dfae65554a1567d43
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a719381863d560a5666c7fc1a5e7260a1d4c4823
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967129"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650900"
 ---
 # <a name="how-to-reduce-graphics-flicker-with-double-buffering-for-forms-and-controls"></a>方法: フォームとコントロールのダブル バッファリングを行うことによってグラフィックスのちらつきを軽減する
 ダブル バッファリングでは、メモリ バッファーを使用して、複数の描画操作に関連するちらつきの問題に対処します。 ダブル バッファリングを有効にすると、すべての描画操作が画面上の描画サーフェイスではなく、最初にメモリ バッファーに描画されます。 描画操作がすべて完了すると、メモリ バッファーが、関連付けられている描画サーフェイスに直接コピーされます。 画面に 1 つだけのグラフィックス操作を実行するため、複雑な描画操作に関連付けられているイメージのちらつきがなくなります。ほとんどのアプリケーションの既定のダブル バッファリングによって提供される、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]最良の結果を提供します。 標準の Windows フォーム コントロールは、既定でバッファリング double です。 既定のダブル バッファリング、フォーム内で有効にすることができ、2 つの方法でコントロールを作成します。 設定するか、<xref:System.Windows.Forms.Control.DoubleBuffered%2A>プロパティを`true`、または呼び出すことができます、<xref:System.Windows.Forms.Control.SetStyle%2A>を設定するメソッド、<xref:System.Windows.Forms.ControlStyles.OptimizedDoubleBuffer>フラグを`true`します。 どちらの方法は、フォームまたはコントロールのダブル バッファリングを既定値を有効にして、グラフィックスのちらつきのないレンダリングを提供します。 呼び出す、<xref:System.Windows.Forms.Control.SetStyle%2A>メソッドがすべてのレンダリング コードを記述したカスタム コントロールに対してのみお勧めします。  

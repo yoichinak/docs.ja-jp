@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 1e40f4d3-fb7d-4f19-b334-b6076d469ea9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08b46d96f9fb950602766639559a375a25747010
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9634370b0031ac2e19ab5b357d7e9da5a5dcea1c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61869014"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639851"
 ---
 # <a name="using-the-assert-method"></a>Assert メソッドの使用
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

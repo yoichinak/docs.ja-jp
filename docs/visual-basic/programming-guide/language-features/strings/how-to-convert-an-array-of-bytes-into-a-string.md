@@ -7,12 +7,12 @@ helpviewer_keywords:
 - examples [Visual Basic], strings
 - arrays [Visual Basic], converting to strings
 ms.assetid: d0dc8317-9ab3-4324-99f7-3f5788c0e72a
-ms.openlocfilehash: f0676548bea2d4037f66fb15498c175b2d110d8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 50acfdbfb9b093f719928f68d90a40f09da5ade5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024626"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665370"
 ---
 # <a name="how-to-convert-an-array-of-bytes-into-a-string-in-visual-basic"></a>方法: Visual Basic で文字列のバイト配列に変換します。
 このトピックでは、バイト配列からバイトを文字列に変換する方法を示します。  

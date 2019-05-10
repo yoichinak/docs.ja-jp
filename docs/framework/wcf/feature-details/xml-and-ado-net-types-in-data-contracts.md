@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c2ce8461-3c15-4c41-8c81-1cb78f5b59a6
-ms.openlocfilehash: 1053a543a23ed36a5c06c45044c8fdbe25a60538
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 0d052c0f178c2dc6e2eb5a740faa42239fb91068
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929520"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637230"
 ---
 # <a name="xml-and-adonet-types-in-data-contracts"></a>データ コントラクトの XML および ADO.NET の種類
 Windows Communication Foundation (WCF) のデータ コントラクト モデルでは、XML を直接表す特定の種類をサポートします。 シリアライザーは、これらの型を XML にシリアル化するとき、型の XML コンテンツを書き出しますが、それ以上の処理は行いません。 サポートされている型は、<xref:System.Xml.XmlElement>、<xref:System.Xml.XmlNode> の配列 (`XmlNode` 型自体はサポートされていません)、および <xref:System.Xml.Serialization.IXmlSerializable> を実装した型です。 データベース プログラミングでは、<xref:System.Data.DataSet> 型、<xref:System.Data.DataTable> 型、および型指定されたデータセットが一般的に使用されます。 これらの型は `IXmlSerializable` インターフェイスを実装するので、データ コントラクト モデルでシリアル化可能です。 この型に関する考慮事項について、このトピックの最後に説明します。  

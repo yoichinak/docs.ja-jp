@@ -2,12 +2,12 @@
 title: WCF Web HTTP 形式
 ms.date: 03/30/2017
 ms.assetid: e2414896-5463-41cd-b0a6-026a713eac2c
-ms.openlocfilehash: f3d3a2d992f234c690f3fb87514b700a6596a5fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 884193dc26794be5e8a3c95e05be2ca43a90f6e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935474"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643476"
 ---
 # <a name="wcf-web-http-formatting"></a>WCF Web HTTP 形式
 WCF Web HTTP プログラミング モデルでは、サービス操作で返す応答の最適な形式を動的に判断できます。 適切な形式を判断するための方法として、自動と明示的の 2 つがサポートされます。  

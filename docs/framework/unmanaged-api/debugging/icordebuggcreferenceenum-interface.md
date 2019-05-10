@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8f83d2ac9ca96145fa89b283fec42c71858097f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 57f09a8974dc1e8cb20185975c42c1cb3ad86a5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651624"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647156"
 ---
 # <a name="icordebuggcreferenceenum-interface"></a>ICorDebugGCReferenceEnum インターフェイス
 ガベージ コレクトされるオブジェクトの列挙子を提供します。  

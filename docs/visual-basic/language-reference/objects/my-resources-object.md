@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Resources object
 ms.assetid: 34c3f2dc-7b87-432c-9d5f-17ea666bb266
-ms.openlocfilehash: ee4d30b82ceada5c4f3fc4ad95dc8eeedd9355b0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 02e29b17404da0e868973364b0b17b5c4ca418c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970834"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647626"
 ---
 # <a name="myresources-object"></a>My.Resources オブジェクト
 アプリケーションのリソースにアクセスするためのプロパティとクラスを提供します。  

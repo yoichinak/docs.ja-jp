@@ -10,12 +10,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], MustInherit class
 - MustInherit keyword [Visual Basic]
 ms.assetid: b8f05185-90e3-4dd7-adc2-90d852fab5b4
-ms.openlocfilehash: 0bda03d3c01356317fbcc56d44199ff4f9484b5b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 05b1e6b646c519216eba2d4f0df7a3e32f3dafbf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053939"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661261"
 ---
 # <a name="mustinherit-visual-basic"></a>MustInherit (Visual Basic)
 クラスを基底クラスとしてのみ使用できることと、オブジェクトを直接作成できないことを指定します。  

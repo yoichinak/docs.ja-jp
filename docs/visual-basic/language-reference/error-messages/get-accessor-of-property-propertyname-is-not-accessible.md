@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31103
 ms.assetid: 3c346c32-7669-4b04-841d-7a9df9cb703e
-ms.openlocfilehash: 8fb78f3c14708c79f1910e202287c25a3b2213b7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 92cc6d732b59617a6043bd71a9549649ff1ad356
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803052"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662057"
 ---
 # <a name="get-accessor-of-property-propertyname-is-not-accessible"></a>プロパティのアクセサーを 'get''\<propertyname >' にアクセスできません
 ステートメントが、プロパティへのアクセスがあるない場合は、プロパティの値を取得しようとしています。`Get`プロシージャ。  

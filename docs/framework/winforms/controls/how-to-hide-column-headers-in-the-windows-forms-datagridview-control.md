@@ -9,12 +9,12 @@ helpviewer_keywords:
 - column headers [Windows Forms], hiding
 - DataGridView control [Windows Forms], column headers
 ms.assetid: e4ad5f68-50d2-4b9e-93ee-9d622423a8ab
-ms.openlocfilehash: 85332bfdbb80e4c49bab1ff208228a88337fbb43
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 888ff59d42f44db652d3188e016b9e10a9590139
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941285"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651669"
 ---
 # <a name="how-to-hide-column-headers-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの列ヘッダーを非表示にする
 表示することもありますが、<xref:System.Windows.Forms.DataGridView>列ヘッダーのないです。 <xref:System.Windows.Forms.DataGridView>コントロール、<xref:System.Windows.Forms.DataGridView.ColumnHeadersVisible%2A>プロパティの値が列ヘッダーを表示するかどうかを判断します。  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - attached properties [WPF Designer]
 ms.assetid: 75928354-dc01-47e8-a018-8409aec1f32d
-ms.openlocfilehash: de17fb30358bdf1a8e2a1d6cfc4f5f80fefa1268
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 41be2862eef52a3731792096ff198e1aa629f4c0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032236"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64655545"
 ---
 # <a name="attached-properties-overview"></a>添付プロパティの概要
 

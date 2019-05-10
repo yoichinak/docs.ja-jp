@@ -4,12 +4,12 @@ description: Docker アプリケーションの開発の「内部ループ」ワ
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 36fcf5769376375854c2a2631e26e8b136df0de6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dda75e120b0f17a591fadc22944c78d1174ca156
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050572"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664380"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 
@@ -21,11 +21,11 @@ ms.locfileid: "62050572"
 
 コンテナーまたは Docker イメージのインスタンスは、これらのコンポーネントが含まれます。
 
--   (たとえば、Linux ディストリビューションまたは Windows)、オペレーティング システムの選択
+- (たとえば、Linux ディストリビューションまたは Windows)、オペレーティング システムの選択
 
 - (たとえば、アプリ バイナリ) の開発者によって追加されたファイル
 
--   構成 (たとえば、環境の設定との依存関係)
+- 構成 (たとえば、環境の設定との依存関係)
 
 - Docker で実行するどのようなプロセスの手順
 
@@ -115,7 +115,7 @@ Docker 拡張機能のインストールに Ctrl + Shift + P キーを押して`
 
 ```Dockerfile
 # Base Docker image to use  
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.1
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
   
 # Set the Working Directory and files to be copied to the image  
 ARG source  
@@ -129,7 +129,7 @@ EXPOSE 80
 ENTRYPOINT ["dotnet", "MyCustomMicroservice.dll"]
 ```
 
-この場合、イメージが、行に従って公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチ アーキテクチャ) の version 2.1 に基づきます。`FROM mcr.microsoft.com/dotnet/core/aspnet:2.1`します。 (詳細については、このトピックでは、次を参照してください。、 [ASP.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)ページと[.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)ページ)。
+この場合、イメージが、行に従って公式の ASP.NET Core Docker イメージ (Linux および Windows 用マルチ アーキテクチャ) の version 2.2 に基づきます。`FROM mcr.microsoft.com/dotnet/core/aspnet:2.2`します。 (詳細については、このトピックでは、次を参照してください。、 [ASP.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core-aspnet/)ページと[.NET Core Docker イメージ](https://hub.docker.com/_/microsoft-dotnet-core/)ページ)。
 
 DockerFile では、(ポート 80) などの実行時に使用する TCP ポートをリッスンするように Docker を指示することもできます。
 

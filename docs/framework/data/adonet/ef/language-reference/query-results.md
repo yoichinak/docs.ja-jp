@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bcd7b699-4e50-4523-8c33-2f54a103d94e
-ms.openlocfilehash: 70aa2ad6385ec4791b05b202dc5dc6d4fe9e57b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 98dbb0185de88c6fd69c6daf1540e997c14cc9e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797840"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641426"
 ---
 # <a name="query-results"></a>クエリ結果
 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリをコマンド ツリーに変換して実行すると、通常、次のいずれかの形でクエリの結果が返されます。  

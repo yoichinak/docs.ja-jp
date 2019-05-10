@@ -2,12 +2,12 @@
 title: SAML トークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: eb16e5e2-4c8d-4f61-a479-9c965fcec80c
-ms.openlocfilehash: e662d9b84bbc43178946fdadc8ddbec6f6b6e042
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 90ae5d27d046ad02de0bfd2c7ac1cec6ec0417fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787505"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664723"
 ---
 # <a name="saml-token-provider"></a>SAML トークン プロバイダー
 このサンプルでは、カスタム クライアントの SAML トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF にも付属、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。

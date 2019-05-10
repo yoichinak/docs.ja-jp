@@ -8,12 +8,12 @@ helpviewer_keywords:
 - serialization, guidelines
 - binary serialization, guidelines
 ms.assetid: ebbeddff-179d-443f-bf08-9c373199a73a
-ms.openlocfilehash: 05cbe8b18a0d9635091b373d0acddb2ba665cc37
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 603306ad4a739f168716fd7f6169a79923585b82
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794310"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645049"
 ---
 # <a name="serialization-guidelines"></a>シリアル化のガイドライン
 このドキュメントには、シリアル化できるように API をデザインする際に考慮すべきガイドラインを示します。  

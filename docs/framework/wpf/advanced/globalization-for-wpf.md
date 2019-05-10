@@ -7,12 +7,12 @@ helpviewer_keywords:
 - international user interface [WPF], XAML
 - globalization [WPF]
 ms.assetid: 4571ccfe-8a60-4f06-9b37-7ac0b1c2d10f
-ms.openlocfilehash: 9a08fdeaa3517b1483af3f9958ad2db1c64648b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bfd901d10fe3158c1c5cb32c3a75f3bc15efd0ba
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62031344"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640928"
 ---
 # <a name="globalization-for-wpf"></a>WPF のグローバリゼーション
 このトピックで作成する際に注意する必要がある問題が発生する[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]グローバル市場向けアプリケーション。 グローバリゼーション プログラミングの要素がで定義されている[!INCLUDE[TLA#tla_net](../../../../includes/tlasharptla-net-md.md)]で`System.Globalization`します。

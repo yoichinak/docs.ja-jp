@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application settings [Windows Forms], Windows Forms
 - application settings [Windows Forms], validating
 ms.assetid: 9f145ada-4267-436a-aa4c-c4dcffd0afb7
-ms.openlocfilehash: b7aba4935756fc218a1fadaa1dd9f20a5bc3034f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e10bad5f746ae8777b9a7d4a65173b8abdeef00f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778847"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64636960"
 ---
 # <a name="how-to-validate-application-settings"></a>方法: アプリケーション設定を検証する
 このトピックでは、アプリケーション設定を永続化する前に検証する方法について説明します。  
@@ -23,7 +23,7 @@ ms.locfileid: "61778847"
   
  次の表に示すように、使用するイベントは設定をいつ検証する必要があるかによって決まります。  
   
-|event|発生と使用|  
+|イベント|発生と使用|  
 |-----------|------------------------|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingsLoaded>|設定プロパティ グループの初期読み込み後に発生します。<br /><br /> プロパティ グループ全体の初期値がアプリケーション内で使用される前に値を検証するには、このイベントを使用します。|  
 |<xref:System.Configuration.ApplicationSettingsBase.SettingChanging>|1 つの設定プロパティの値が変更される前に発生します。<br /><br /> 1 つのプロパティが変更される前にプロパティを検証するには、このイベントを使用します。 アクションと選択に関するフィードバックをユーザーにすぐに提供できます。|  

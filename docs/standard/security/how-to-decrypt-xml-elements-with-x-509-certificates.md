@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: bd015722-d88d-408d-8ca8-e4e475c441ed
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 72e5f1e72d3ce7ec954d61216bbac2e0e1b5a428
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4d033911151ef5cdf8143ad9d64f9c21897fc975
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795123"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654108"
 ---
 # <a name="how-to-decrypt-xml-elements-with-x509-certificates"></a>方法: X.509 証明書で XML 要素を復号化する
 <xref:System.Security.Cryptography.Xml> 名前空間のクラスを使用して、XML ドキュメント内の要素を暗号化および復号化することができます。  XML 暗号化は、データが簡単に読み取られる心配なく、暗号化された XML データを交換または保存する標準的な方法です。  標準の XML 暗号化の詳細については、仕様を参照して、World Wide Web Consortium (W3C) XML の暗号化にあるに対して <https://www.w3.org/TR/xmldsig-core/> です。  

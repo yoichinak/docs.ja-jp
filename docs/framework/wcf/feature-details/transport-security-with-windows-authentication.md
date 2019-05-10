@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 96dd26e2-46e7-4de0-9a29-4fcb05bf187b
-ms.openlocfilehash: d199acf6b32275503127adc65fb2463e993a6a44
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 38f425e50b7981c17a96a78e1e28bafb2cf258fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932895"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64635133"
 ---
 # <a name="transport-security-with-windows-authentication"></a>トランスポート セキュリティと Windows 認証
 次のシナリオでは、Windows Communication Foundation (WCF) クライアントと Windows セキュリティで保護されたサービスを説明します。 プログラミングの詳細については、次を参照してください。[方法。Windows 資格情報でサービスをセキュリティで保護された](../../../../docs/framework/wcf/how-to-secure-a-service-with-windows-credentials.md)します。  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - static modifier
 - Static keyword [Visual Basic]
 ms.assetid: 19013910-4658-47b6-a22e-1744b527979e
-ms.openlocfilehash: de4f67fc5b60de48383a8ca886cff02b03830318
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f1031fe005a2fc264b50116b8ea3311dc7065dbc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781187"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647637"
 ---
 # <a name="static-visual-basic"></a>Static (Visual Basic)
 1 つまたは複数のローカル変数が存在し、宣言されているプロシージャの終了後、最新の値を保持し続けることを指定します。  
