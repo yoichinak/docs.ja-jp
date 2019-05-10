@@ -75,13 +75,13 @@ NET Framework 1.1 から 3.5 までのランタイムの複数のバージョン
 |.NET Framework のバージョン|`sku` 属性|
 |----------------------------|---------------------|
 |4.0|".NETFramework,Version=v4.0"|
-|4.0、Client Profile|".NETFramework,Version=v4.0,Profile=Client"|
-|4.0、プラットフォームの更新プログラム 1|".NETFramework,Version=v4.0.1"|
-|4.0、Client Profile、更新プログラム 1|".NETFramework、バージョン v4.0.1、プロファイルの = = クライアント"|
-|4.0、プラットフォームの更新プログラム 2|".NETFramework,Version=v4.0.2"|
-|4.0、Client Profile、更新プログラム 2|".NETFramework、バージョン = v4.0.2 以降を予定プロファイル、クライアントを ="|
-|4.0、プラットフォームの更新プログラム 3|".NETFramework、バージョン = v4.0.3"|
-|4.0、Client Profile、更新プログラム 3|".NETFramework、バージョン v4.0.3、プロファイルの = = クライアント"|
+|4.0, Client Profile|".NETFramework,Version=v4.0,Profile=Client"|
+|4.0, platform update 1|".NETFramework,Version=v4.0.1"|
+|4.0, Client Profile, update 1|".NETFramework,Version=v4.0.1,Profile=Client"|
+|4.0, platform update 2|".NETFramework,Version=v4.0.2"|
+|4.0, Client Profile, update 2|".NETFramework,Version=v4.0.2,Profile=Client"|
+|4.0, platform update 3|".NETFramework,Version=v4.0.3"|
+|4.0, Client Profile, update 3|".NETFramework,Version=v4.0.3,Profile=Client"|
 |4.5|".NETFramework,Version=v4.5"|
 |4.5.1|".NETFramework,Version=v4.5.1"|
 |4.5.2|".NETFramework,Version=v4.5.2"|
@@ -91,7 +91,7 @@ NET Framework 1.1 から 3.5 までのランタイムの複数のバージョン
 |4.7|".NETFramework,Version=v4.7"|
 |4.7.1|".NETFramework,Version=v4.7.1"|
 |4.7.2|".NETFramework,Version=v4.7.2"|
-|4.8|".NETFramework、バージョン = v4.8"|
+|4.8|".NETFramework,Version=v4.8"|
 
 ## <a name="example"></a>例
 
