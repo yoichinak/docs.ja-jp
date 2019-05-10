@@ -11,12 +11,12 @@ helpviewer_keywords:
 - classes [Visual Basic], composite types
 - types [Visual Basic], composite
 ms.assetid: 62970f2e-52c0-4369-8963-613820f1f434
-ms.openlocfilehash: ea719b60a6bcd40494666d4923fad296a8ddae70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65ee23c59958eefb94c7ab0c6bef4a7e992a121c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907388"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601180"
 ---
 # <a name="composite-data-types-visual-basic"></a>複合データ型 (Visual Basic)
 Visual Basic に用意されている基本データ型だけでなくを作成するさまざまな種類の項目をアセンブルすることができますも*複合データ型*構造体、配列、およびクラスなどです。 基本型およびその他の複合型からは、複合データ型を構築できます。 たとえば、配列のメンバーを持つ構造体または構造体の要素の配列を定義できます。  
@@ -36,11 +36,11 @@ Visual Basic に用意されている基本データ型だけでなくを作成�
 ## <a name="array-types"></a>配列型  
  すべてのアレイを構成する 1 つのデータ型はありません。 配列の特定のインスタンスのデータ型は、次のように決定されます。  
   
--   配列であること  
+- 配列であること  
   
--   配列のランク (次元数)  
+- 配列のランク (次元数)  
   
--   配列の要素型  
+- 配列の要素型  
   
  具体的には、次元の長さはインスタンスのデータ型の一部ではありません。 次に例を示します。  
   
