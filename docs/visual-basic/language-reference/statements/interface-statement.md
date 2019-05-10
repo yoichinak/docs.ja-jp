@@ -7,12 +7,12 @@ helpviewer_keywords:
 - interface statement [Visual Basic]
 - interfaces [Visual Basic], interface definition
 ms.assetid: 8997af73-bda3-4f79-bd41-ca396b610260
-ms.openlocfilehash: db39759a804905450e7f8913f45e8ddab39d8416
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 42d0f86dd6561806701d17846bae6d88252ce46a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784190"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625488"
 ---
 # <a name="interface-statement-visual-basic"></a>Interface ステートメント (Visual Basic)
 インターフェイスの名前を宣言し、インターフェイスに含まれるメンバーの定義を紹介します。  

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30020
 ms.assetid: 228afebd-1203-4bd3-8d7a-c5c56f3cedc4
-ms.openlocfilehash: b828de196a12128a9f34ee1f9ff1e57fee22c687
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65fbba9689ae01d8156bd0b3e2efeb6b75bd79e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61799191"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625953"
 ---
 # <a name="is-requires-operands-that-have-reference-types-but-this-operand-has-the-value-type-typename"></a>'Is' には、参照の型を持つオペランドが必要ですが、このオペランドの値の型は '\<typename >'
 `Is`比較演算子は、同じインスタンスに 2 つのオブジェクト変数が参照しているかどうかを判断します。 この比較値の型が定義されていません。  
@@ -21,7 +21,7 @@ ms.locfileid: "61799191"
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   適切な算術比較演算子を使用して、または`Like`2 つの値の型を比較する演算子。  
+- 適切な算術比較演算子を使用して、または`Like`2 つの値の型を比較する演算子。  
   
 ## <a name="see-also"></a>関連項目
 

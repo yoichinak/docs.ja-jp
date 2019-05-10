@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: 773b6fc4-9013-4322-b728-5dec7a72e743
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6749f54db106bffaba57b7cb77cb13808175af3a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: ad2c41cc99422217b9f85acbd32f91ac78a9a7c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876149"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614224"
 ---
 # <a name="tracing-and-instrumenting-applications"></a>アプリケーションのトレースとインストルメント
 トレースとは、実行中のアプリケーションの実行状態を監視する方法です。 .NET Framework アプリケーションの開発時に、トレースとデバッグのインストルメンテーションをアプリケーションに追加できます。このインストルメンテーションは、アプリケーションの開発中でも開発したアプリケーションの配置後でも使用できます。 <xref:System.Diagnostics.Trace?displayProperty=nameWithType>、<xref:System.Diagnostics.Debug?displayProperty=nameWithType>、および <xref:System.Diagnostics.TraceSource?displayProperty=nameWithType> の各クラスを使用すると、エラーおよびアプリケーションの実行についての情報を後で分析するために、ログ、テキスト ファイル、またはその他のデバイスに記録できます。  
   
  ここでの*インストルメンテーション*という用語は、製品のパフォーマンスのレベルを監視または測定し、エラーを診断する具体的な機能を意味しています。 プログラミングでは、組み込むアプリケーションの機能を指します。  
   
--   **コードのトレース** - 実行時に、アプリケーションの実行状態について示すメッセージを受け取ります。  
+- **コードのトレース** - 実行時に、アプリケーションの実行状態について示すメッセージを受け取ります。  
   
--   **デバッグ** - 開発中のアプリケーションのプログラミング エラーを追跡して修正します。 詳細については、「[デバッグ](/visualstudio/debugger/debugging-in-visual-studio)」を参照してください。  
+- **デバッグ** - 開発中のアプリケーションのプログラミング エラーを追跡して修正します。 詳細については、「[デバッグ](/visualstudio/debugger/debugging-in-visual-studio)」を参照してください。  
   
--   **パフォーマンス カウンター** - アプリケーションのパフォーマンスを追跡するためのコンポーネントです。 詳細については、「[パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)」を参照してください。  
+- **パフォーマンス カウンター** - アプリケーションのパフォーマンスを追跡するためのコンポーネントです。 詳細については、「[パフォーマンス カウンター](../../../docs/framework/debug-trace-profile/performance-counters.md)」を参照してください。  
   
--   **イベント ログ** - アプリケーションの実行中に発生した重要なイベントを受け取って追跡するためのコンポーネントです。 詳細については、<xref:System.Diagnostics.EventLog> クラスを参照してください。  
+- **イベント ログ** - アプリケーションの実行中に発生した重要なイベントを受け取って追跡するためのコンポーネントです。 詳細については、<xref:System.Diagnostics.EventLog> クラスを参照してください。  
   
  トレース ステートメントをコード内に計画的に配置することによってアプリケーションをインストルメントすることは、分散アプリケーションでは特に便利です。 トレース ステートメントを使用してアプリケーションをインストルメントすると、不適切な動作についての情報を表示できるだけでなく、アプリケーションの実行状態を監視するための情報も表示できます。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "61876149"
  <xref:System.Diagnostics.Trace> クラスおよび <xref:System.Diagnostics.Debug> クラスは、アプリケーションの開発中または配置後に、アプリケーションのパフォーマンスをモニターおよび検査する手段を提供します。 たとえば、(新しいデータベース接続の作成など) が配置されたアプリケーションの操作の特定の種類を追跡するために <xref:System.Diagnostics.Trace> クラスを使用すると、アプリケーションの効率を監視できるようになります。  
   
 ## <a name="code-tracing-and-debugging"></a>コードのトレースとデバッグ  
- 開発時に、Visual Studio 統合開発環境 (IDE) の出力ウィンドウにメッセージを表示するために <xref:System.Diagnostics.Debug> クラスの出力メソッドを使用できます。 例えば:  
+ 開発時に、Visual Studio 統合開発環境 (IDE) の出力ウィンドウにメッセージを表示するために <xref:System.Diagnostics.Debug> クラスの出力メソッドを使用できます。 例:  
   
 ```vb  
 Trace.WriteLine("Hello World!")  
@@ -91,11 +91,11 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
 6. 次のいずれかのプロシージャを使用して、アプリケーションを実行可能なコードにコンパイルします。  
   
-    -   **ソリューション エクスプローラー**の **[プロパティ ページ]** ダイアログ ボックスの **[デバッグ]** ページで **[ビルド]** メニューを使用します。 Visual Studio でコンパイルをする場合は、この方法を使用してください。  
+    - **ソリューション エクスプローラー**の **[プロパティ ページ]** ダイアログ ボックスの **[デバッグ]** ページで **[ビルド]** メニューを使用します。 Visual Studio でコンパイルをする場合は、この方法を使用してください。  
   
          \- または -  
   
-    -   コマンド ラインによるコンパイル用の **Trace** コンパイラ ディレクティブおよび **Debug** コンパイラ ディレクティブを使用します。 詳細については、「[トレースとデバッグによる条件付きコンパイル](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)」を参照してください。 コマンド ラインからコンパイルする場合はこの方法を使用してください。  
+    - コマンド ラインによるコンパイル用の **Trace** コンパイラ ディレクティブおよび **Debug** コンパイラ ディレクティブを使用します。 詳細については、「[トレースとデバッグによる条件付きコンパイル](../../../docs/framework/debug-trace-profile/how-to-compile-conditionally-with-trace-and-debug.md)」を参照してください。 コマンド ラインからコンパイルする場合はこの方法を使用してください。  
   
 7. 問題が実行時に発生する場合は、適切なトレース スイッチをオンにしてください。 詳細については、「[トレース スイッチを設定する](../../../docs/framework/debug-trace-profile/how-to-create-initialize-and-configure-trace-switches.md)」を参照してください。  
   
@@ -120,7 +120,7 @@ System.Diagnostics.Debug.WriteLine("Hello World!");
   
  トレース情報を書き込む <xref:System.Diagnostics.Trace> の <xref:System.Diagnostics.Debug> の 6 種類のメンバーとメソッドを次の表に示します。  
   
-|メソッド|出力|  
+|メソッド|Output|  
 |------------|------------|  
 |**Assert**|指定されたテキスト。何も指定されない場合は、呼び出し履歴。 **Assert** ステートメントの引数として指定された条件が **false** の場合にだけ、出力が書き込まれます。|  
 |**失敗**|指定されたテキスト。何も指定されない場合は、呼び出し履歴。|  

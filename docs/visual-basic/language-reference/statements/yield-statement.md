@@ -8,12 +8,12 @@ helpviewer_keywords:
 - iterators [Visual Basic]
 - Yield statement [Visual Basic]
 ms.assetid: f33126c5-d7c4-43e2-8e36-4ae3f0703d97
-ms.openlocfilehash: fea91731694f18625e43c5545b353851e72234a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 645b8c4908095bc8d38c47836658325c9b47a569
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698617"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615063"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield ステートメント (Visual Basic)
 コレクションの次の要素の送信、`For Each...Next`ステートメント。  

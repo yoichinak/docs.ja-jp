@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3cfced4f-ea02-4e66-ae98-d69286363e98
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c483baeca9efcbc4a38020a7b2f4fa221a6b4028
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 82a739d3823ff93bf2f797eabf3a8a326b10741c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018620"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64602532"
 ---
 # <a name="key-security-concepts"></a>セキュリティの基本概念
 Microsoft .NET Framework では、モバイル コードに関するセキュリティへの対応を支援し、各ユーザーにどのような権限を与えるかをコンポーネントで決定できるようにするためのサポートを提供するロールベースのセキュリティがあります。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - document viewers
 - Windows Forms, creating document viewers
 ms.assetid: 6a6338fe-f7ee-4f5e-9d8f-0465c57e9039
-ms.openlocfilehash: 99609e4bf5a352c436986e0773375d1c8e15e790
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 4118f526af1e02982f181dba9e86f8ce5b806fbb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61746992"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64612156"
 ---
 # <a name="how-to-create-an-html-document-viewer-in-a-windows-forms-application"></a>方法: Windows フォーム アプリケーションで HTML ドキュメントビューアーを作成する
 使用することができます、<xref:System.Windows.Forms.WebBrowser>コントロールを表示し、インターネットの Web ブラウザーの完全な機能を提供することがなく HTML ドキュメントを印刷します。 これは、機能は、HTML の書式設定機能を活用することが信頼されていない Web コントロールや悪意のあるスクリプト コードを含む可能性のある任意の Web ページの読み込みにユーザーを作成したくない場合に便利です。 機能を制限したい場合があります、 <xref:System.Windows.Forms.WebBrowser> HTML 電子メール ビューアーとして使用するか、アプリケーションで HTML 形式のヘルプを提供するなど、この方法を制御します。  

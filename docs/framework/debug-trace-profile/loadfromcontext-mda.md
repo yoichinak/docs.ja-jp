@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a9b14db1-d3a9-4150-a767-dcf3aea0071a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 01b2cf06a5ab921f5ae89da4856e8164b6f57db5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 632d9119cf32aab66c87e345ec98c6867ed51592
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754259"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614372"
 ---
 # <a name="loadfromcontext-mda"></a>loadFromContext MDA
 アセンブリが `LoadFrom` コンテキストに読み込まれると、`loadFromContext` マネージド デバッグ アシスタント (MDA) がアクティブになります。 このような状況は、<xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> または他の同様のメソッドを呼び出した結果として発生する可能性があります。  
@@ -39,7 +39,7 @@ ms.locfileid: "61754259"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  MDA は、CLR にまったく影響がありません。 MDA では、読み込み要求の結果として使用されたコンテキストが報告されます。  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
  MDA では、アセンブリが `LoadFrom` コンテキストに読み込まれたことが報告されます。 また、アセンブリの簡易名とパスが指定されます。 `LoadFrom` コンテキストの使用を回避する軽減策も提案されます。  
   
 ## <a name="configuration"></a>構成  
