@@ -18,7 +18,7 @@ ms.locfileid: "61704662"
 64 ビット プラットフォームで、合計サイズが 2 GB (ギガバイト) を超える配列を有効にします。  
   
  \<configuration > 要素  
-\<ランタイム > 要素  
+\<runtime> 要素  
 \<gcAllowVeryLargeObjects > 要素  
   
 ## <a name="syntax"></a>構文  
