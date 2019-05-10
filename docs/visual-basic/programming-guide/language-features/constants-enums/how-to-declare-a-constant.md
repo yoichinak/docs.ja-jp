@@ -23,12 +23,12 @@ helpviewer_keywords:
 - module-level constants and variables
 - Object data type [Visual Basic], declaring constants
 ms.assetid: f901b4fa-481f-4621-822e-427060577ad1
-ms.openlocfilehash: 95bfa3da5499c518dad0c235b539784fee2bb522
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b84afe4e354d4029bc61ba67bc93bd36a3430de4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61975976"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610599"
 ---
 # <a name="how-to-declare-a-constant-visual-basic"></a>方法: 定数 (Visual Basic) の宣言します。
 使用する、`Const`定数を宣言し、その値を設定するステートメント。 定数を宣言すると、値に意味のある名前を割り当てます。 定数が宣言されると、変更または新しい値を代入することはできません。  
@@ -41,7 +41,7 @@ ms.locfileid: "61975976"
   
 ### <a name="to-declare-a-constant"></a>定数を宣言するには  
   
--   アクセス指定子を含む宣言を記述、`Const`キーワード、および次の例のように、式。  
+- アクセス指定子を含む宣言を記述、`Const`キーワード、および次の例のように、式。  
   
      [!code-vb[VbEnumsTask#8](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#8)]  
   
@@ -51,7 +51,7 @@ ms.locfileid: "61975976"
   
 ### <a name="to-declare-a-constant-that-has-an-explicitly-stated-data-type"></a>明示的な型を持つ定数を宣言するのには  
   
--   含む宣言を記述、`As`次の例のように、キーワードと、明示的なデータを入力します。  
+- 含む宣言を記述、`As`次の例のように、キーワードと、明示的なデータを入力します。  
   
      [!code-vb[VbEnumsTask#9](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbEnumsTask/VB/Class2.vb#9)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "61975976"
   
 ### <a name="to-declare-multiple-constants-on-a-single-line"></a>1 行に複数の定数を宣言するには  
   
--   宣言をコンマと次の例のように、スペースで区切ります。  
+- 宣言をコンマと次の例のように、スペースで区切ります。  
   
     ```  
     Public Const Four As Integer = 4, Five As Integer = 5, Six As Integer = 44  

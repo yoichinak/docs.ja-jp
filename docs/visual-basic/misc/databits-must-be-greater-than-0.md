@@ -2,12 +2,12 @@
 title: データビットは 0 より大きくなければなりません
 ms.date: 07/20/2015
 ms.assetid: b0e1d53f-ed19-47bf-b7ef-06479aa76338
-ms.openlocfilehash: cc4c667bb3140b088461fc340e94330dec2c014a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8a6ae7472f864bbecc9a8325b883e63d41fc492e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61970496"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604227"
 ---
 # <a name="databits-must-be-greater-than-0"></a>データビットは 0 より大きくなければなりません
 `DataBits` メソッドに指定された `My.Computer.Ports.OpenSerialPort` 引数は、0 より大きくなければなりません。  
