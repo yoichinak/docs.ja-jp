@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f14b6fd7-0966-4d87-bc89-54ef3a44a94a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f9bf0e309ec8c77d4b1d6afbf111e7eeae629ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e5e10a1dc1ad3230213a20b850741a6ec0468294
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61722940"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616424"
 ---
 # <a name="garbage-collection-etw-events"></a>ガベージ コレクション ETW イベント
 <a name="top"></a> これらのイベントは、ガベージ コレクションに関連する情報を収集します。 ガベージ コレクションが実行された回数、ガベージ コレクションの間に解放されたメモリの量など、診断やデバッグに役立つ情報を入手できます。  
@@ -211,7 +211,7 @@ ms.locfileid: "61722940"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|いつ発生するか|  
+|イベント|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`GCRestartEEEnd_V1`|3|共通言語ランタイムの中断からの再開が終了しました。|  
   
@@ -253,7 +253,7 @@ ms.locfileid: "61722940"
   
  次の表に、イベント情報を示します。  
   
-|event|イベント ID|いつ発生するか|  
+|イベント|イベント ID|いつ発生するか|  
 |-----------|--------------|-----------------|  
 |`GCSuspendEEEnd_V1`|8|ガベージ コレクションのための実行エンジンの中断の終了。|  
   

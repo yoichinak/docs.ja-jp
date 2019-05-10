@@ -9,12 +9,12 @@ helpviewer_keywords:
 - navigation topologies [WPF]
 - dynamically-generated topology
 ms.assetid: 5d5ee837-629a-4933-869a-186dc22ac43d
-ms.openlocfilehash: 716cfbe7d12ccc2233d018f0346f84cf2fc5e733
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bbbdca72cd1ac1bd77ad54fff8f7b683fb7dc850
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794681"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626823"
 ---
 # <a name="navigation-topologies-overview"></a>ナビゲーション トポロジの概要
 <a name="introduction"></a> この概要でのナビゲーション トポロジの概要については、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 3 つの一般的なナビゲーション トポロジをサンプルと共に説明します。  
