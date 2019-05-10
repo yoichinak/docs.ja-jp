@@ -9,12 +9,12 @@ helpviewer_keywords:
 - structures [Visual Basic], structure variables
 - structure variables [Visual Basic]
 ms.assetid: a221e74a-ffcf-4bdc-a0f6-a088a9bf26cc
-ms.openlocfilehash: 3635729705520518d4c950f8a79da7d1249285bf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b947109f99d94b0ecb1d798835c311f2374e96fc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61751073"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64601032"
 ---
 # <a name="structures-and-classes-visual-basic"></a>構造体とクラス (Visual Basic)
 Visual Basic では、構造体と 2 つのエンティティに同じ機能のほとんどがサポートされる結果と共に、クラスの構文は統一します。 ただし、構造体とクラスの重要な違いもします。  
@@ -53,7 +53,7 @@ Visual Basic では、構造体と 2 つのエンティティに同じ機能の�
   
 - 構造体の要素として宣言できません`Protected`; クラスのメンバーのことができます。  
   
-- 構造体のプロシージャはイベントを処理できる場合にのみ、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`プロシージャとのことによってのみ、 [AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md); 任意のクラスのプロシージャは、いずれかのを使用して、イベントを処理できます[処理](../../../../visual-basic/language-reference/statements/handles-clause.md)キーワードまたは`AddHandler`ステートメント。 詳細については、「 [イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)で定義されているインターフェイスのプライベート C++ 固有の実装です。  
+- 構造体のプロシージャはイベントを処理できる場合にのみ、 [Shared](../../../../visual-basic/language-reference/modifiers/shared.md) `Sub`プロシージャとのことによってのみ、 [AddHandler ステートメント](../../../../visual-basic/language-reference/statements/addhandler-statement.md); 任意のクラスのプロシージャは、いずれかのを使用して、イベントを処理できます[処理](../../../../visual-basic/language-reference/statements/handles-clause.md)キーワードまたは`AddHandler`ステートメント。 詳細については、「[イベント](../../../../visual-basic/programming-guide/language-features/events/index.md)」を参照してください。  
   
 - 構造体の変数宣言は、初期化子または配列の初期サイズを指定できません。クラスの変数宣言できます。  
   

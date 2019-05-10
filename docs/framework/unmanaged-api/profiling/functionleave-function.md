@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b1fe219c4c852792390b48b0ea4d38adb702281
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 412a01dc1dd498c2f55307958e5feec36a556b9c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598871"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586920"
 ---
 # <a name="functionleave-function"></a>FunctionLeave 関数
 関数が呼び出し元に戻ることをプロファイラーに通知します。  

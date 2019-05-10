@@ -29,12 +29,12 @@ helpviewer_keywords:
 - Dim statement [Visual Basic], syntax
 - variables [Visual Basic], member and local
 ms.assetid: fae3eca1-f0b2-4400-994b-7aa58a848448
-ms.openlocfilehash: cab1cc07d23a44e57bdb0962a323b014308cb1e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a16060efc45cc0642aa6612d02644e252cd53d9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638231"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751800"
 ---
 # <a name="dim-statement-visual-basic"></a>Dim ステートメント (Visual Basic)
 

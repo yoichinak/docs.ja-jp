@@ -7,27 +7,25 @@ helpviewer_keywords:
 - controls [Windows Forms], positioning
 - controls [Windows Forms], aligning
 ms.assetid: b7175656-f532-49e9-b0b1-177d1b40af3e
-ms.openlocfilehash: 262487eabb3f0ab27efe8bc7fdb31a822ed07823
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a184312b1df7c0736fa9c6b6ef787451add0465e
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62010970"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211800"
 ---
 # <a name="how-to-align-multiple-controls-on-windows-forms"></a>方法: Windows フォーム上の複数のコントロールを配置する
-Windows ベースのアプリケーションのユーザー インターフェイス (UI) のレイアウトを標準化するには、1 つのコマンドでコントロールのグループを配置することができます。  
-  
-> [!NOTE]
->  実際に画面に表示されるダイアログ ボックスとメニュー コマンドは、アクティブな設定またはエディションによっては、ヘルプの説明と異なる場合があります。 設定を変更するには、 **[ツール]** メニューの **[設定のインポートとエクスポート]** をクリックします。 詳細については、「[Visual Studio IDE のカスタマイズ](/visualstudio/ide/personalizing-the-visual-studio-ide)」を参照してください。  
-  
-### <a name="to-align-multiple-controls-on-a-form"></a>フォーム上の複数のコントロールを配置するには  
-  
-1. 位置するコントロールを含むフォームを開いて、 **Windows フォーム デザイナー**します。  
-  
-2. 最初に選択したコントロールがプライマリのコントロールを配置する、他のユーザーをするように配置するコントロールを選択します。  
-  
-3. **形式**メニューで、 **Align**、利用可能な 7 つの選択肢のいずれかをクリックします。  
-  
+
+Windows ベースのアプリケーションのユーザー インターフェイス (UI) のレイアウトを標準化するには、1 つのコマンドでコントロールのグループを配置することができます。
+
+### <a name="to-align-multiple-controls-on-a-form"></a>フォーム上の複数のコントロールを配置するには
+
+1. Visual Studio に移動するコントロールを含むフォームを開いて、 **Windows フォーム デザイナー**します。
+
+2. 最初に選択したコントロールがプライマリのコントロールを配置する、他のユーザーをするように配置するコントロールを選択します。
+
+3. **形式**メニューで、 **Align**、利用可能な 7 つの選択肢のいずれかをクリックします。
+
 ## <a name="see-also"></a>関連項目
 
 - [Windows フォーム コントロール](index.md)

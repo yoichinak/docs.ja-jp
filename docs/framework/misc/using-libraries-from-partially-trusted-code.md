@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd66cd4c-b087-415f-9c3e-94e3a1835f74
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7a3bbbaa565a6c118082456a1ab6d7af59db7067
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8500abe590d4c85dcb5ecda54212a1ba9cc7950d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982476"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586987"
 ---
 # <a name="using-libraries-from-partially-trusted-code"></a>部分信頼コードからのライブラリの使用
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  

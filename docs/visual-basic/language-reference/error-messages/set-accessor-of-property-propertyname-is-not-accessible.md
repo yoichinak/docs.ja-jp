@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31102
 ms.assetid: 6f7b31b7-3656-4ae1-8851-90f5f4c6950a
-ms.openlocfilehash: 3bc50d6762998ca5d8f445d84c8b698c9f46436f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: cf0158692c1154a8a903c893ba287e51c1e34ac8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055148"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593272"
 ---
 # <a name="set-accessor-of-property-propertyname-is-not-accessible"></a>'Set' アクセサー プロパティの '\<propertyname >' にアクセスできません
 ステートメントが、プロパティへのアクセスがあるないときに、プロパティの値を格納しようとしています。`Set`プロシージャ。  

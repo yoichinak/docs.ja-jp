@@ -5,11 +5,11 @@ author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
 ms.openlocfilehash: 4febcc01eebf3efce3fc1eb42e19c2ec6c0baa52
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63807896"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754232"
 ---
 # <a name="azure-functions"></a>Azure Functions 
 

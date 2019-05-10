@@ -3,11 +3,11 @@ title: 1 つは、完全な (Visual Basic) 後の残りの非同期タスクの�
 ms.date: 07/20/2015
 ms.assetid: c928b5a1-622f-4441-8baf-adca1dde197f
 ms.openlocfilehash: 587c863ba110f035ace5207d8404fd70b3befe37
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63809116"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755833"
 ---
 # <a name="cancel-remaining-async-tasks-after-one-is-complete-visual-basic"></a>1 つは、完全な (Visual Basic) 後の残りの非同期タスクのキャンセルします。
 

@@ -2,12 +2,12 @@
 title: 資格情報の種類の選択
 ms.date: 03/30/2017
 ms.assetid: bf707063-3f30-4304-ab53-0e63413728a8
-ms.openlocfilehash: 8aa959aa952e839039bebffddddd951fbc1eb0d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 20c070e9351219a649735ac404231cf6f265d814
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61748807"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64586123"
 ---
 # <a name="selecting-a-credential-type"></a>資格情報の種類の選択
 *資格情報* とはWindows Communication Foundation (WCF) が要求された身分証明または資格を確立するために使用するデータです。 たとえば、パスポートは、政府によって発行される、国籍または地域籍を証明するための資格情報です。 WCF では、資格情報は、ユーザー名トークンと X.509 証明書などのさまざまな形式を実行できます。 このトピックでは、資格情報、WCF では、使用する方法と、アプリケーションの適切な資格情報を選択する方法について説明します。  

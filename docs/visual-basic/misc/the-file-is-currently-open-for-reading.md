@@ -2,12 +2,12 @@
 title: ファイルは現在読み取り用に開かれています
 ms.date: 07/20/2015
 ms.assetid: 7f662a68-021a-4432-947a-6bde48061257
-ms.openlocfilehash: 7d29c86c7994f1f1ac3bec08021539da8fc53bac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 68cd8f3a4251f595039a1613e0ad9155394da092
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61788480"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912524"
 ---
 # <a name="the-file-is-currently-open-for-reading"></a>ファイルは現在読み取り用に開かれています
 現在読み取り用に開かれているファイルにアクセスしようとしました。  

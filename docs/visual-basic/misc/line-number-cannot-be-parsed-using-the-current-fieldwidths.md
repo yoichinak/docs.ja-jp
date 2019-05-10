@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_MalFormedFixedWidthLine
 ms.assetid: 84e14245-dfdf-4b62-8b84-e83a31608899
-ms.openlocfilehash: f3184f023ab4663d5616e3878420e3a75a7f3cde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dc6253dc925ed004fbbeb64547054461c39adffc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922383"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64604162"
 ---
 # <a name="line-number-cannot-be-parsed-using-the-current-fieldwidths"></a>行\<数 > 現在の Fieldwidth を使用して解析できません
 指定された行のフィールドの幅が指定よりも大きいため、その行を解析できません。  
