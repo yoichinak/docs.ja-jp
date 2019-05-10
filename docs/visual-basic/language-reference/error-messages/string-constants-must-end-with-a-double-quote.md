@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30648
 ms.assetid: eefb77a4-efbc-4000-8871-edce7ef7f2df
-ms.openlocfilehash: 79133660adab6f8372e355509dc63fbc85ff30ac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6b727d0ee6c87b4c8b3e19af56d35bc6335dcc81
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013715"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593237"
 ---
 # <a name="string-constants-must-end-with-a-double-quote"></a>文字列定数の終わりには、二重引用符を指定しなければなりません。
 文字列定数は、先頭し、末尾は引用符にする必要があります。  

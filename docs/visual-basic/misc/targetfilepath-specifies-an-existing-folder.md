@@ -2,12 +2,12 @@
 title: TargetFilePath は既存のフォルダーを指定します
 ms.date: 07/20/2015
 ms.assetid: 2334f49e-d080-4ee2-b036-f95c7f76c3ec
-ms.openlocfilehash: fcf8f9a8172ccece2175fc27bbc96aa421d853ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e13bf7a2b4fc13092707ab019b3115358c723c58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61593880"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660954"
 ---
 # <a name="targetfilepath-specifies-an-existing-folder"></a>TargetFilePath は既存のフォルダーを指定します
 パラメーター `TargetFilePath` は、既存のディレクトリを指定していますが、新しいディレクトリの名前を指定する必要があります。  

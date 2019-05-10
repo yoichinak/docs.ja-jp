@@ -2,12 +2,12 @@
 title: エンティティ型
 ms.date: 03/30/2017
 ms.assetid: a6dee9ab-9e4a-48f2-a169-3f79cc15821c
-ms.openlocfilehash: 026b0aef7cf2de8fe222721191afa459859701ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dd1e8a7605c29b3dacaa7ccf9156af2a9b65d5b5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61667178"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599614"
 ---
 # <a name="entity-type"></a>エンティティ型
 *エンティティ型*Entity Data Model (EDM) でのデータの構造を記述するための基本的なビルド ブロックです。 概念モデルでのエンティティ型は、顧客や注文のように、トップレベル概念の構造を表します。 エンティティ型は、エンティティ型のインスタンスのテンプレートです。 各テンプレートには、次の情報が含まれています。  
