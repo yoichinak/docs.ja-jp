@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 392d548a5f89c31d94af9134b8cc3a37b28d8c6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9f72d6d560f82d7d80036f07ec865d78a4ab9955
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009111"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606400"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置
 アプリケーションによっては、フォームのサイズを変更したり、コンテンツのサイズが変化したりしたときに、それに応じて自動的にレイアウトを調整するフォームが必要です。 動的なレイアウトが必要であり、かつコードで <xref:System.Windows.Forms.Control.Layout> イベントを明示的に処理しない場合は、レイアウト パネルの使用をご検討ください。  
@@ -136,7 +136,7 @@ ms.locfileid: "62009111"
   
 2. 1 回、<xref:System.Windows.Forms.TableLayoutPanel>コントロールは完全なをダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**別に挿入する<xref:System.Windows.Forms.Button>コントロール。 なお、<xref:System.Windows.Forms.TableLayoutPanel>コントロールは、新しいコントロールを対応するために新しいセルを作成します。 さらに、いくつかのコントロールを挿入し、サイズ変更動作を確認します。  
   
-3. <xref:System.Windows.Forms.TableLayoutPanel> コントロールの <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> プロパティの値を <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize> に変更します。 ダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**を挿入する<xref:System.Windows.Forms.Button>まで制御、<xref:System.Windows.Forms.TableLayoutPanel>コントロールが完全にします。 ダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**もう一度です。 エラー メッセージが表示されることに注意してください、 **Windows フォーム デザイナー**追加の行と列を作成できないことを通知します。  
+3. <xref:System.Windows.Forms.TableLayoutPanel> コントロールの <xref:System.Windows.Forms.TableLayoutPanel.GrowStyle%2A> プロパティの値を <xref:System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize>に変更します。 ダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**を挿入する<xref:System.Windows.Forms.Button>まで制御、<xref:System.Windows.Forms.TableLayoutPanel>コントロールが完全にします。 ダブルクリックして、<xref:System.Windows.Forms.Button>アイコン、**ツールボックス**もう一度です。 エラー メッセージが表示されることに注意してください、 **Windows フォーム デザイナー**追加の行と列を作成できないことを通知します。  
   
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>アウトラインの描画によるコントロールの挿入  
  セルにアウトラインを描画すると、コントロールを <xref:System.Windows.Forms.TableLayoutPanel> コントロールに挿入し、サイズを指定できます。  

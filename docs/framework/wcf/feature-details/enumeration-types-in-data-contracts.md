@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 1837a3630424ff2a9ee4a84e9ed63f44a06bbecf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856441"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587615"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>データ コントラクトの列挙型
 列挙はデータ コントラクト モデルで表現できます。 このトピックでは、いくつかの例を通してプログラミング モデルを説明します。  
@@ -43,9 +43,9 @@ ms.locfileid: "61856441"
   
  これには、次のような 2 つの例外があります。  
   
--   フラグ列挙体 (このトピックの後で説明)  
+- フラグ列挙体 (このトピックの後で説明)  
   
--   <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> プロパティが `false` に設定された列挙データ メンバー (この場合、値がゼロの列挙はシリアル化されたデータから除外される)  
+- <xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A> プロパティが `false` に設定された列挙データ メンバー (この場合、値がゼロの列挙はシリアル化されたデータから除外される)  
   
 ### <a name="customizing-enumeration-member-values"></a>列挙メンバー値のカスタマイズ  
  データ コントラクトの一部を形成する列挙メンバー値は、<xref:System.Runtime.Serialization.EnumMemberAttribute.Value%2A> 属性の <xref:System.Runtime.Serialization.EnumMemberAttribute> プロパティを使ってカスタマイズできます。  

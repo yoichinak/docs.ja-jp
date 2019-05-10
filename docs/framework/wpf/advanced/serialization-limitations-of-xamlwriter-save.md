@@ -6,12 +6,12 @@ helpviewer_keywords:
 - limitations of XamlWriter.Save
 - serialization limitations of XamlWriter.Save
 ms.assetid: f86acc91-2b67-4039-8555-505734491d36
-ms.openlocfilehash: 89cb36dba63dccdf7e52b7fcafbe3d9fc2fea1e5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bf752a5bd05d8a0601f3c1dcd53ab856315c0b84
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053432"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611762"
 ---
 # <a name="serialization-limitations-of-xamlwritersave"></a>XamlWriter.Save のシリアル化の制限
 [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] <xref:System.Windows.Markup.XamlWriter.Save%2A>の内容をシリアル化に使用できる、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]としてアプリケーションを[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)]ファイル。 ただし、シリアル化されるいくつかの注目すべき制限があります。 このトピックでは、これらの制限事項といくつかの一般的な考慮事項が記載されています。  

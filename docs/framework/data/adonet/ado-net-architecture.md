@@ -2,12 +2,12 @@
 title: ADO.NET のアーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 3f3fc0c8c125c57116da4f1de467d738ac36ca29
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e85100733e20b69cf6b8c52c58d250be869971cb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61880088"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592639"
 ---
 # <a name="adonet-architecture"></a>ADO.NET のアーキテクチャ
 従来のデータ処理は、主に接続をベースとした 2 層モデルに基づいていました。 近年、データ処理では多層アーキテクチャの採用が増えてきており、アプリケーションのスケーラビリティを高める非接続型アプローチが主流になりつつあります。  
@@ -29,13 +29,13 @@ ADO.NET のアーキテクチャ
 ### <a name="choosing-a-datareader-or-a-dataset"></a>DataReader または DataSet の選択  
  アプリケーションが使用する必要があるかどうかを決定する際に、 `DataReader` (を参照してください[DataReader によるデータの取得](../../../../docs/framework/data/adonet/retrieving-data-using-a-datareader.md)) または`DataSet`(を参照してください[Dataset、Datatable、および Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)) の種類を検討してください。アプリケーションに必要な機能です。 以下を実行する場合は `DataSet` を使用します。  
   
--   アプリケーションでデータをローカルにキャッシュすると、そのデータを操作できます。 クエリの実行結果を読み取るだけで良い場合は、`DataReader` の使用をお勧めします。  
+- アプリケーションでデータをローカルにキャッシュすると、そのデータを操作できます。 クエリの実行結果を読み取るだけで良い場合は、`DataReader` の使用をお勧めします。  
   
--   層間で、または XML Web サービスからデータをリモート処理する場合。  
+- 層間で、または XML Web サービスからデータをリモート処理する場合。  
   
--   Windows フォーム コントロールとの連結、または複数ソースに属するデータの組み合わせや関連付けなど、データと動的に対話する場合。  
+- Windows フォーム コントロールとの連結、または複数ソースに属するデータの組み合わせや関連付けなど、データと動的に対話する場合。  
   
--   データ ソースとの接続を開かずにデータに対する広範な処理を実行する場合。他のクライアントが使用できるように、接続が解放されます。  
+- データ ソースとの接続を開かずにデータに対する広範な処理を実行する場合。他のクライアントが使用できるように、接続が解放されます。  
   
  `DataSet` の機能が必要ない場合は、`DataReader` を使用して前方参照専用、読み取り専用の方法でデータを返すことにより、アプリケーションのパフォーマンスを向上させることができます。 ですが、`DataAdapter`を使用して、`DataReader`の内容を格納する、 `DataSet` (を参照してください[DataAdapter からの Dataset](../../../../docs/framework/data/adonet/populating-a-dataset-from-a-dataadapter.md)) を使用して、`DataReader`メモリを保存するため、パフォーマンスを向上させることができますによって使用される、`DataSet`を作成しの内容を格納するために必要な処理を回避し、`DataSet`します。  
   

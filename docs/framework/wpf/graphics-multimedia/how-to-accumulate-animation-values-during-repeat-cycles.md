@@ -5,12 +5,12 @@ helpviewer_keywords:
 - accumulating animation values across repeating cycles [WPF]
 - animation [WPF], accumulating values across repeating cycles
 ms.assetid: 548df369-c7cc-4dab-b569-08b95ced2e7e
-ms.openlocfilehash: 4b739883322751e2df86e13bfd07249abdb10a08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bccdc9b7bf2d5a0ea476e39e8d54107854db7ae3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762177"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591468"
 ---
 # <a name="how-to-accumulate-animation-values-during-repeat-cycles"></a>方法: 反復サイクル中にアニメーション値を累積する
 この例は、使用する方法を示します、<xref:System.Windows.Media.Animation.DoubleAnimation.IsCumulative%2A>プロパティを反復サイクル中にアニメーション値を累積します。  

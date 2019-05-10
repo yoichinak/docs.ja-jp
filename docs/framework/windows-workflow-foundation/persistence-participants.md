@@ -2,12 +2,12 @@
 title: 永続参加要素
 ms.date: 03/30/2017
 ms.assetid: f84d2d5d-1c1b-4f19-be45-65b552d3e9e3
-ms.openlocfilehash: 18614962708eafa192d8163638fce2b8154d6106
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 73799fd66dd619d2573a1d334a6dbd23a9ff5b4e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672654"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592145"
 ---
 # <a name="persistence-participants"></a>永続参加要素
 永続参加要素は、アプリケーション ホストによってトリガーされる永続化操作 (保存または読み込み) に参加できます。 [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] 2 つの抽象クラスが付属しています**PersistenceParticipant**と**PersistenceIOParticipant**、永続参加要素を作成に使用できます。 永続参加要素はこれらのクラスの 1 つから派生し、目的のメソッドを実装して、このクラスのインスタンスを <xref:System.ServiceModel.Activities.WorkflowServiceHost.WorkflowExtensions%2A> の <xref:System.ServiceModel.Activities.WorkflowServiceHost> コレクションに追加します。 アプリケーション ホストは、ワークフロー インスタンスを永続化するときにこのようなワークフロー拡張機能を必要とする場合があり、適切なときに永続参加要素の適切なメソッドを呼び出します。  
@@ -48,17 +48,17 @@ ms.locfileid: "61672654"
   
  ワークフロー インスタンスを読み込む場合、永続化プロバイダーはそのインスタンスのロックを作成します。 これにより、各インスタンスが複数ノードのシナリオでは、複数のホストによって読み込まれることはありません。 ロックされたワークフロー インスタンスを読み込もうとした場合は、次のような例外が表示されます。例外"System.ServiceModel.Persistence.InstanceLockException:要求された操作を完了できませんでした、ロックのインスタンス ' 00000000-0000-0000-0000-000000000000' を取得できませんでした"。 このエラーが発生するのは、次のいずれかが発生した場合です。  
   
--   複数ノード シナリオで、インスタンスが他のホストによって読み込まれます。  これらの種類の競合を解決する方法がいくつかあります。ロックと再試行を所有するノードへ処理を転送するか、または他のホストでの作業を保存できないようにする読み込みを強制します。  
+- 複数ノード シナリオで、インスタンスが他のホストによって読み込まれます。  これらの種類の競合を解決する方法がいくつかあります。ロックと再試行を所有するノードへ処理を転送するか、または他のホストでの作業を保存できないようにする読み込みを強制します。  
   
--   単一ノード シナリオで、ホストがクラッシュしました。  ホストが再度起動されるとき (プロセスのリサイクル、または新しい永続化プロバイダー ファクトリの作成)、新しいホストが、ロックの期限がまだ切れていないために古いホストによってまだロックされているインスタンスの読み込みを試みます。  
+- 単一ノード シナリオで、ホストがクラッシュしました。  ホストが再度起動されるとき (プロセスのリサイクル、または新しい永続化プロバイダー ファクトリの作成)、新しいホストが、ロックの期限がまだ切れていないために古いホストによってまだロックされているインスタンスの読み込みを試みます。  
   
--   単一ノード シナリオで、当該インスタンスがあるポイントで中止され、別のホスト ID を持つ新しい永続化プロバイダー インスタンスが作成されます。  
+- 単一ノード シナリオで、当該インスタンスがあるポイントで中止され、別のホスト ID を持つ新しい永続化プロバイダー インスタンスが作成されます。  
   
  ロックのタイムアウト値の既定値は 5 分です。 <xref:System.ServiceModel.Persistence.PersistenceProvider.Load%2A> の呼び出し時に、別のタイムアウト値を指定できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [方法: カスタム永続参加要素を作成します。](how-to-create-a-custom-persistence-participant.md)  
+- [方法: カスタム永続参加要素を作成します。](how-to-create-a-custom-persistence-participant.md)  
   
 ## <a name="see-also"></a>関連項目
 

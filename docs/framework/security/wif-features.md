@@ -3,12 +3,12 @@ title: WIF の機能
 ms.date: 03/30/2017
 ms.assetid: 7e13cae9-7cd1-491f-aa75-0735320a7be6
 author: BrucePerlerMS
-ms.openlocfilehash: 2c5da5d534e5bf086c2ee80cfbdd6406694f1f8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: faccf8a9705355943a74daa975fc0d88a420a1f7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780147"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592249"
 ---
 # <a name="wif-features"></a>WIF の機能
 - [Visual Studio 2012 の ID およびアクセス ツール](../../../docs/framework/security/identity-and-access-tool-for-vs.md)  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data binding [WPF], timing of source updates
 - timing of source updates [WPF]
 ms.assetid: ffb7b96a-351d-4c68-81e7-054033781c64
-ms.openlocfilehash: 5272a19f69b3caf80fd7d5187c9a6a386cd44621
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f7770db59c346f0981dd89a9995f11e41d17a1d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052002"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063484"
 ---
 # <a name="how-to-control-when-the-textbox-text-updates-the-source"></a>方法: TextBox テキストでソースを更新するタイミングを制御する
 このトピックでは、使用する方法を説明します、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>プロパティ バインディングのソースの更新のタイミングを制御するためです。 トピックを使用して、<xref:System.Windows.Controls.TextBox>などのコントロール。  
@@ -28,7 +28,7 @@ ms.locfileid: "62052002"
   
  結果として、<xref:System.Windows.Controls.TextBlock>にテキストを入力すると、(変更) ため、同じテキストを表示、<xref:System.Windows.Controls.TextBox>サンプルの次のスクリーン ショットに示しますように。  
   
- ![単純なデータ バインド サンプルのスクリーン ショット](./media/databindingsimplebindingsample2.png "DataBindingSimpleBindingSample2")  
+ ![単純データ バインディングを示すスクリーン ショット。](./media/how-to-control-when-the-textbox-text-updates-the-source/data-binding-simple-binding-sample.png)  
   
  ダイアログまたはユーザーが編集できるフォームがあると、ユーザーがフィールドの編集が完了し、[OK] をクリックするまで、ソースの更新プログラムを延期する場合、設定することができる場合、<xref:System.Windows.Data.Binding.UpdateSourceTrigger%2A>に、バインディングの<xref:System.Windows.Data.UpdateSourceTrigger.Explicit>、次の例。  
   

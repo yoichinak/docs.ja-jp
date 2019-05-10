@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declared elements [Visual Basic], access level
 - Protected keyword [Visual Basic], accessing variables
 ms.assetid: eaf4f073-7922-43ce-ae1e-90ff376ae947
-ms.openlocfilehash: fb400b113e3f3305f5b724734b2bf9aa9425d03f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 419f3eed30a5d4b35bcb9dde5242b9092ee9cb79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943352"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610500"
 ---
 # <a name="how-to-control-the-availability-of-a-variable-visual-basic"></a>方法: 変数 (Visual Basic) の可用性を制御します。
 指定することで、変数の可用性を制御するその*アクセス レベル*します。 どのようなコードは、変数に対する読み取りまたは書き込み権限を持つアクセス レベルを決定します。  
