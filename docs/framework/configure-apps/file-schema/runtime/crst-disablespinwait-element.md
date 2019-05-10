@@ -16,7 +16,7 @@ ms.locfileid: "61704831"
 ---
 # <a name="crstdisablespinwait-element"></a>\<Crst_DisableSpinWait > 要素
 
-競合の多い場合、クリティカル セクションのスピン待機時間を無効にするかどうかを指定します。 \ 
+競合の多い場合、クリティカル セクションのスピン待機時間を無効にするかどうかを指定します。 
   
  \<configuration>  
 \<runtime>  
