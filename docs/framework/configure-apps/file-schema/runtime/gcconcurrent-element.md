@@ -22,8 +22,8 @@ ms.locfileid: "61674104"
 
 共通言語ランタイムがガベージ コレクションを別のスレッドで実行するかどうかを指定します。
 
-\<configuration>\
-\<runtime>\
+\<configuration>
+\<runtime>
 \<gcConcurrent>
 
 ## <a name="syntax"></a>構文
