@@ -8,12 +8,12 @@ helpviewer_keywords:
 - font families [Windows Forms], constructing
 - fonts [Windows Forms], constructing
 ms.assetid: d3a4a223-9492-4b54-9afd-db1c31c3cefd
-ms.openlocfilehash: 0a9dcd00d4bc3e64ae4fc9a1d4884fac18521825
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 84c3cd07ec27c7ce000962e14801ac171a6bba8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937970"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648291"
 ---
 # <a name="how-to-construct-font-families-and-fonts"></a>方法: フォント ファミリとフォントを作成する
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 同じタイプフェイスがさまざまなスタイルでのフォントのフォント ファミリにグループ化します。 たとえば、Arial フォント ファミリには、次のフォントが含まれています。  

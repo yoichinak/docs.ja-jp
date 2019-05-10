@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ae3b72cb5a1281899cdfdb514bbf5a1dc289c949
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61872847"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648494"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF (Managed Extensibility Framework)
 
@@ -475,11 +475,11 @@ public class Mod : SimpleCalculator.IOperation
 ## <a name="conclusion"></a>まとめ
  ここでは、MEF の基本的な概念について説明しました。
 
--   パート、カタログ、および合成コンテナー
+- パート、カタログ、および合成コンテナー
 
      パートと合成コンテナーは、MEF アプリケーションの基本のビルド ブロックです。 パートは、それ自体までの (自身を含む) 値をインポートまたはエクスポートするオブジェクトです。 カタログは、特定のソースからのパートのコレクションを提供します。 合成コンテナーは、カタログによって提供されるパートを使用して合成 (インポートのエクスポートへの結合) を実行します。
 
--   インポートとエクスポート
+- インポートとエクスポート
 
      インポートとエクスポートは、コンポーネントが通信を行う手段です。 インポートを使用して、コンポーネントは特定の値またはオブジェクトが必要であることを指定します。エクスポートを使用して、コンポーネントは値が使用可能であることを指定します。 各インポートは、コントラクトを通じて、エクスポートの一覧と対応付けされます。
 

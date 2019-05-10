@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [WPF], namescopes
 - classes [WPF], FrameworkContentElement
 ms.assetid: 52bbf4f2-15fc-40d4-837b-bb4c21ead7d4
-ms.openlocfilehash: a46942188fd417b46ba4feb44d436800e1362098
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d4a4e1eee5dc60e330a5425d5075c7e5b8c44127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764648"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666341"
 ---
 # <a name="wpf-xaml-namescopes"></a>WPF XAML 名前スコープ
 XAML 名前スコープは、XAML で定義されているオブジェクトを識別する概念です。 XAML 名前スコープ内の名前は、オブジェクト ツリーで XAML 定義のオブジェクトの名前と、対応するインスタンス間の関係を確立するために使用できます。 通常、XAML 名前スコープ[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]XAML アプリケーションのルート個々 の XAML ページの読み込みとマネージ コードが作成されます。 プログラミング オブジェクトとしての XAML 名前スコープが定義されている、<xref:System.Windows.Markup.INameScope>インターフェイスし、実際のクラスによって実装も<xref:System.Windows.NameScope>します。  

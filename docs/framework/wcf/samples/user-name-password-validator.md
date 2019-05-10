@@ -2,12 +2,12 @@
 title: ユーザー名パスワード検証
 ms.date: 03/30/2017
 ms.assetid: 42f03841-286b-42d8-ba58-18c75422bc8e
-ms.openlocfilehash: 52c22660e56d63121181bdcb618e0bed598ca585
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ee0e0e85389ecba39c140f383f57be95f15ae879
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006435"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662381"
 ---
 # <a name="user-name-password-validator"></a>ユーザー名パスワード検証
 このサンプルでは、カスタム UserNamePassword 検証を実装する方法を示します。 これは、アプリケーションの要件に適した組み込みの UserNamePassword 検証モードがない場合に便利です。たとえば、ユーザー名とパスワードの組み合わせがデータベースなどの外部ストアに保存されている場合などです。 このサンプルでは、2 つの特定のユーザー名とパスワードの組み合わせをチェックする、カスタム検証を備えたサービスを示します。 クライアントはそのようなユーザー名とパスワードの組み合わせを使用して、サービスに対する認証を行います。

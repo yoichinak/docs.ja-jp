@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], autogenerating
 - DataGridView control [Windows Forms], data-bound columns
 ms.assetid: 699f6f9e-6aa5-4811-902b-6a2c57dec7d6
-ms.openlocfilehash: 4490a24047f5cce1328d68c529783a1d7692ff32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: eb74c1ef1661fc8bd7a57f079f10d24a7eef8187
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954311"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639761"
 ---
 # <a name="how-to-autogenerate-columns-in-a-data-bound-windows-forms-datagridview-control"></a>方法: データバインドされた Windows フォーム DataGridView コントロールに列を自動生成する
 次のコード例は、バインドされたデータ ソースから列を表示する方法を示します、<xref:System.Windows.Forms.DataGridView>コントロール。 ときに、<xref:System.Windows.Forms.DataGridView.AutoGenerateColumns%2A>プロパティの値が`true`(既定)、<xref:System.Windows.Forms.DataGridViewColumn>データ ソース テーブル内の各列が作成されます。  

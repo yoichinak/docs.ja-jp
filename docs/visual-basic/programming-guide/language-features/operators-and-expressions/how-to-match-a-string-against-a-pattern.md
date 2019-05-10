@@ -13,12 +13,12 @@ helpviewer_keywords:
 - pattern matching, empty strings
 - operators [Visual Basic], comparison
 ms.assetid: 19a83804-b5af-4739-928b-ac93e64e457f
-ms.openlocfilehash: c14aa35ce15549ad9eccabe2330a7c43b6795140
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5eb6bd5b5e7b2f0c3692c0fa2431a0b8f295299
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61864703"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649725"
 ---
 # <a name="how-to-match-a-string-against-a-pattern-visual-basic"></a>方法: (Visual Basic) パターンとの比較の文字列と一致します。
 式かどうかを検索する場合、[文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)を使用して、パターンを満たす、 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)します。  
@@ -29,7 +29,7 @@ ms.locfileid: "61864703"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-specific-character"></a>特定の文字の文字列式での文字と一致するには  
   
--   特定の文字をパターン文字列に直接配置します。 特定の特殊文字は、角かっこで囲む必要があります (`[ ]`)。 詳細については、次を参照してください。 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)します。  
+- 特定の文字をパターン文字列に直接配置します。 特定の特殊文字は、角かっこで囲む必要があります (`[ ]`)。 詳細については、次を参照してください。 [Like 演算子](../../../../visual-basic/language-reference/operators/like-operator.md)します。  
   
      次の例をテストするかどうか`myString`1 文字だけで構成されます`H`します。  
   
@@ -37,7 +37,7 @@ ms.locfileid: "61864703"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-wildcard-character"></a>ワイルドカード文字の文字列式の文字と一致するには  
   
--   疑問符 () の配置 (`?`) パターン文字列にします。 この位置に任意の有効な文字は、検索が成功します。  
+- 疑問符 () の配置 (`?`) パターン文字列にします。 この位置に任意の有効な文字は、検索が成功します。  
   
      次の例のテストするかどうか`myString`1 文字から成る`W`の後ろに任意の値の 2 つの文字。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "61864703"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-list-of-characters"></a>文字の一覧に対して、文字列式での文字と一致するには  
   
--   角かっこを配置 (`[ ]`) で、パターン文字列とかっこ文字の一覧に格納します。 コンマまたはその他の任意の区切り記号の文字を分離されません。 任意の 1 文字の一覧では、検索が成功します。  
+- 角かっこを配置 (`[ ]`) で、パターン文字列とかっこ文字の一覧に格納します。 コンマまたはその他の任意の区切り記号の文字を分離されません。 任意の 1 文字の一覧では、検索が成功します。  
   
      次の例のテストかどうか`myString`続く文字を 1 つの有効な任意の文字から成る`A`、 `C`、または`E`します。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "61864703"
   
 ### <a name="to-match-a-character-in-the-string-expression-against-a-range-of-characters"></a>文字の範囲に対して文字列式での文字と一致するには  
   
--   角かっこを配置 (`[ ]`) パターン文字列、および最低と最高の文字の範囲に、かっこ内では、ハイフンで区切られた (`–`)。 範囲内の任意の 1 文字では、成功した一致。  
+- 角かっこを配置 (`[ ]`) パターン文字列、および最低と最高の文字の範囲に、かっこ内では、ハイフンで区切られた (`–`)。 範囲内の任意の 1 文字では、成功した一致。  
   
      次の例のテストかどうか`myString`文字から成る`num`文字 1 個続く`i`、 `j`、 `k`、 `l`、 `m`、または`n`します。  
   

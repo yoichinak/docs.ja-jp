@@ -6,11 +6,11 @@ dev_langs:
 - vb
 ms.assetid: 09c575df-e0a3-4f3b-9e01-a7ac59d65287
 ms.openlocfilehash: 061a8c7b73903b763de27e614e9b3067777afe58
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63809458"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64756029"
 ---
 # <a name="how-to-host-multiple-versions-of-a-workflow-side-by-side"></a>方法: ワークフローの複数のバージョンを同時にホストする
 

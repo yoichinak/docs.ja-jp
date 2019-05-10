@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 5a736a30-ba66-4adb-b87c-57d19476e862
-ms.openlocfilehash: 1527e3b4b614d4e700ae0c2c0fc555e14c7bc8d2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22db347afb45b981602d5a92516271f75b8e4359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876734"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648680"
 ---
 # <a name="walkthrough-using-only-stored-procedures-visual-basic"></a>チュートリアル: ストアド プロシージャのみの使用 (Visual Basic)
 このチュートリアルでは、ストアド プロシージャのみを使用してデータにアクセスする、基本の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 この方法は、データ ストアへのアクセス方法を制限する目的で、データベース管理者によってよく使用されます。  
@@ -28,13 +28,13 @@ ms.locfileid: "61876734"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルの前提条件は次のとおりです。  
   
--   このチュートリアルでは、専用フォルダー ("c:\linqtest3") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
+- このチュートリアルでは、専用フォルダー ("c:\linqtest3") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
   
--   Northwind サンプル データベース。  
+- Northwind サンプル データベース。  
   
      開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。 データベースをダウンロードしたら、northwnd.mdf ファイルを c:\linqtest3 フォルダーにコピーします。  
   
--   Northwind データベースから生成された Visual Basic コード ファイル。  
+- Northwind データベースから生成された Visual Basic コード ファイル。  
   
      このチュートリアルは、SqlMetal ツールを使用して次のコマンド ラインで作成されています。  
   
@@ -45,17 +45,17 @@ ms.locfileid: "61876734"
 ## <a name="overview"></a>概要  
  このチュートリアルは、主に次の 6 つのタスクで構成されています。  
   
--   設定する、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューション。  
+- 設定する、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューション。  
   
--   プロジェクトに System.Data.Linq アセンブリを追加します。  
+- プロジェクトに System.Data.Linq アセンブリを追加します。  
   
--   プロジェクトにデータベース コード ファイルを追加します。  
+- プロジェクトにデータベース コード ファイルを追加します。  
   
--   データベースへの接続を作成します。  
+- データベースへの接続を作成します。  
   
--   ユーザー インターフェイスを設定します。  
+- ユーザー インターフェイスを設定します。  
   
--   アプリケーションを実行およびテストします。  
+- アプリケーションを実行およびテストします。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成する  
  この最初のタスクでは、ビルドおよび実行するために必要な参照を含む Visual Studio ソリューションを作成、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト。  

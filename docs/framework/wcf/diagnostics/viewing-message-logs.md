@@ -2,12 +2,12 @@
 title: メッセージ ログを参照する
 ms.date: 03/30/2017
 ms.assetid: 3012fa13-f650-45fb-aaea-c5cca8c7d372
-ms.openlocfilehash: 2322d2a6e0c5a6f26ad103be72230666f6bca191
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5e72aef7addb1e517bdf8cab4e300f6f8df5f833
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61964399"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662833"
 ---
 # <a name="viewing-message-logs"></a>メッセージ ログを参照する
 ここでは、メッセージ ログの表示方法について説明します。  

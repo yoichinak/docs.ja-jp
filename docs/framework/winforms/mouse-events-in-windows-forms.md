@@ -15,12 +15,12 @@ helpviewer_keywords:
 - mouse [Windows Forms], events
 - MouseUp event
 ms.assetid: 8cf0070d-793b-4876-b09e-d20d28280fab
-ms.openlocfilehash: 671e37c7d6dc40046d6d717d7785b03b6b545c7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 818364ceddb03df51ed656c8ff7b69fd433ac86a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61800721"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750883"
 ---
 # <a name="mouse-events-in-windows-forms"></a>Windows フォームにおけるマウス イベント
 

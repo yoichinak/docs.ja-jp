@@ -5,12 +5,12 @@ helpviewer_keywords:
 - clients [WCF], running
 - WCF clients [WCF], running
 ms.assetid: a67884cc-1c4b-416b-8c96-5c954099f19f
-ms.openlocfilehash: a16a0ccabfd0f9fbe69db1ea88d4613185f3c1da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 39f63b22257fb67d9caa5f84c886ead161508a33
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002080"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625820"
 ---
 # <a name="tutorial-create-a-windows-communication-foundation-client"></a>チュートリアル: Windows Communication Foundation クライアントを作成します。
 

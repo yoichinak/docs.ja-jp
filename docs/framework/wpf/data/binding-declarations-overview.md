@@ -12,12 +12,12 @@ helpviewer_keywords:
 - syntax [WPF], object elements
 - binding declarations [WPF]
 ms.assetid: b97fd626-4c0d-4761-872a-2bca5820da2c
-ms.openlocfilehash: c0fcbc8054272356c39ba7925041ecef05a0322c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3cf128a8d05dbc089f2b481da6b51865b419e25c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024366"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754445"
 ---
 # <a name="binding-declarations-overview"></a>バインディング宣言の概要
 

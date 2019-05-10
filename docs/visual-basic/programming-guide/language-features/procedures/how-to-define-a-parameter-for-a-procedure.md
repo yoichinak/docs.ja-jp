@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Visual Basic code, procedures
 - procedure parameters [Visual Basic], defining
 ms.assetid: 7962808d-407e-4e84-984e-43e9857c53c9
-ms.openlocfilehash: 55925b0f007b1be2f5d46ffc0854601f483b2e2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bf57d4dbd7e8596396fb2e9099d5984759d6e90d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863702"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665380"
 ---
 # <a name="how-to-define-a-parameter-for-a-procedure-visual-basic"></a>方法: プロシージャ (Visual Basic) のパラメーターを定義します。
 A*パラメーター*それを呼び出すときに、プロシージャに値を渡すコードの呼び出しを許可します。 プロシージャの各パラメーターは、変数を宣言すると、その名前とデータ型を指定することと同じ方法で宣言します。 渡す方法を指定するかどうか、パラメーターは省略可能です。  
@@ -46,11 +46,11 @@ A*パラメーター*それを呼び出すときに、プロシージャに値�
   
      すべてのプログラミング要素のデータ型の指定と呼びます*厳密な型指定*します。 設定すると`Option Strict On`、Visual Basic は、厳密な型指定を適用します。 これは強くお勧めします、次の理由。  
   
-    -   変数とパラメーターの IntelliSense のサポートが有効にするとします。 これにより、コードに入力すると、プロパティやその他のメンバーを表示することができます。  
+    - 変数とパラメーターの IntelliSense のサポートが有効にするとします。 これにより、コードに入力すると、プロパティやその他のメンバーを表示することができます。  
   
-    -   これにより、コンパイラが型チェックを実行できます。 これは、オーバーフローなどのエラーにより実行時に失敗するステートメントを検出するのに役立ちます。 サポートしていないオブジェクトに対するメソッドの呼び出しをキャッチします。  
+    - これにより、コンパイラが型チェックを実行できます。 これは、オーバーフローなどのエラーにより実行時に失敗するステートメントを検出するのに役立ちます。 サポートしていないオブジェクトに対するメソッドの呼び出しをキャッチします。  
   
-    -   コードの実行速度が速くなります。 この理由の 1 つは、プログラミング要素のデータ型を指定しない場合、Visual Basic コンパイラが割り当てる、`Object`型。 コンパイル済みのコードは、間を気軽に変換する必要があります`Object`とその他のデータ型は、パフォーマンスが低下します。  
+    - コードの実行速度が速くなります。 この理由の 1 つは、プログラミング要素のデータ型を指定しない場合、Visual Basic コンパイラが割り当てる、`Object`型。 コンパイル済みのコードは、間を気軽に変換する必要があります`Object`とその他のデータ型は、パフォーマンスが低下します。  
   
 ## <a name="see-also"></a>関連項目
 

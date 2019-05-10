@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - message contracts [WCF]
 ms.assetid: 1e19c64a-ae84-4c2f-9155-91c54a77c249
-ms.openlocfilehash: 4c5f1ab0b6fa56e4836a950ca3f2bbad19cfbff2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 829bdda3f3302d8d3c41e704dc8caf88720d1ebc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932796"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637588"
 ---
 # <a name="using-message-contracts"></a>メッセージ コントラクトの使用
 通常 Windows Communication Foundation (WCF) アプリケーションを構築するときに、開発者はデータ構造とシリアル化の問題に細心の注意し、データを送信するメッセージの構造を意識する必要はありません。 このようなアプリケーションでは、パラメーターまたは戻り値用にデータ コントラクトを作成するのは簡単です  (詳細については、次を参照してください[Data Transfer in Service Contracts にを指定する](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)。)。  

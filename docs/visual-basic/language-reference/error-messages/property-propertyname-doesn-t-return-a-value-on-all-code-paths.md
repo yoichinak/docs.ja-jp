@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42107
 ms.assetid: 06800966-9c3b-4844-9f13-83ac95607d32
-ms.openlocfilehash: a535a6b951dc9872109527f78d7de5f3fcdd3292
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a5cb28a024274e58da1755b437d6ba4ca6712610
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971645"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661711"
 ---
 # <a name="property-propertyname-doesnt-return-a-value-on-all-code-paths"></a>プロパティ '\<propertyname >' は、すべてのコード パスで値を返しません
 プロパティ '\<propertyname >' は、すべてのコード パスで値を返しません。 この結果が使用されると、実行時に Null 参照例外が生じる可能性があります。  
