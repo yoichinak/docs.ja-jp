@@ -5,12 +5,12 @@ helpviewer_keywords:
 - control patterns, for UI Automation clients
 - UI Automation, clients, control patterns for
 ms.assetid: 8b81645b-8be3-4e26-9c98-4fb0fceca06b
-ms.openlocfilehash: 829df66f49d5df5f5c8cf8d2b6cfa74f0a2172dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 78274e2a5597291adcdafccf759b826f54a264ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609894"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647200"
 ---
 # <a name="control-pattern-mapping-for-ui-automation-clients"></a>UI オートメーション クライアントのコントロール パターン マッピング
 > [!NOTE]
@@ -52,7 +52,7 @@ ms.locfileid: "61609894"
 |メニュー|なし|なし|なし|  
 |メニュー バー|なし|展開/折りたたみ、ドック、変換|なし|  
 |メニュー項目|なし|展開/折りたたみ、呼び出し、選択項目、トグル|なし|  
-|ペイン|なし|ドック、 スクロール、変換|ウィンドウ|  
+|ペイン|なし|ドック、 スクロール、変換|[Window]|  
 |進行状況バー|なし|範囲の値、値|なし|  
 |オプション ボタン|選択項目|なし|切り替え|  
 |スクロール バー|なし|範囲値|スクロール|  

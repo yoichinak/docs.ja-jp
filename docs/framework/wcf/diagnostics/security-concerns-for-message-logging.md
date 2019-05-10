@@ -2,12 +2,12 @@
 title: メッセージ ログ記録のセキュリティの考慮事項
 ms.date: 03/30/2017
 ms.assetid: 21f513f2-815b-47f3-85a6-03c008510038
-ms.openlocfilehash: 372449c816f32ee30b89bf4ba2e46f82c56b3228
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e1503249d5fd33e320ccb6642eb6e97c3029ba85
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998154"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651824"
 ---
 # <a name="security-concerns-for-message-logging"></a>メッセージ ログ記録のセキュリティの考慮事項
 ここでは、メッセージ ログに表示される機密データだけでなく、メッセージ ログによって生成されるイベントを保護する方法についても説明します。  

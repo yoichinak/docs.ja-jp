@@ -5,12 +5,12 @@ helpviewer_keywords:
 - firewalls [WCF]
 - NATs [WCF]
 ms.assetid: 74db0632-1bf0-428b-89c8-bd53b64332e7
-ms.openlocfilehash: 5495d8198d30f4462fa9772f7d663664c82c6dee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5415fc173be10834f73b5959481951407bcee0b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050364"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637324"
 ---
 # <a name="working-with-nats-and-firewalls"></a>NAT とファイアウォールの使用
 ネットワーク接続のクライアントとサーバーには、直接開いている通信用のパスが存在しないことがよくあります。 パケットは、エンドポイント コンピューター上だけでなく、ネットワーク上の中間コンピューターによってもフィルター処理、ルーティング、分析、および変換されます。 ネットワーク アドレス変換 (NAT: Network Address Translation) とファイアウォールは、ネットワーク通信に参加できる中間アプリケーションの一般的な例です。  

@@ -2,12 +2,12 @@
 title: 情報の漏えい
 ms.date: 03/30/2017
 ms.assetid: 4064c89f-afa6-444a-aa7e-807ef072131c
-ms.openlocfilehash: b42faeb4043302e5e70379cc4e1de3cb8bd96af4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ef660262925260ab5181829c38e32fd2c78b44e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972602"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64638681"
 ---
 # <a name="information-disclosure"></a>情報の漏えい
 情報が漏えいすると、攻撃者はシステムに関する重要情報を入手できます。 そのため、どのような情報を公開しているか、また、その情報が悪意のあるユーザーによって使用される可能性があるかどうかに常に気を配る必要があります。 考えられる情報漏えい攻撃とその軽減策を以下に示します。  

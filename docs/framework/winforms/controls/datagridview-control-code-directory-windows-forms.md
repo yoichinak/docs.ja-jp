@@ -7,12 +7,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], examples
 - DataGridView control [Windows Forms], code directory
 ms.assetid: ea8bd66a-5ed6-491b-b9da-63873e275a0a
-ms.openlocfilehash: 55c57d123cfcd2861b12b522ff6d09577b6f64c3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 06f720e2ccb69e5bf09c23b663d9cc32296042c2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909611"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648122"
 ---
 # <a name="datagridview-control-code-directory-windows-forms"></a>DataGridView コントロールのコード ディレクトリ (Windows フォーム)
 このトピックへのリンクを提供します。 <xref:System.Windows.Forms.DataGridView>-関連のコード例のマニュアルを参照します。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], default functionality in DataGridView control
 - DataGridView control [Windows Forms], default functionality
 ms.assetid: 4405f697-cad1-4839-9bcd-8ddb09d9f00e
-ms.openlocfilehash: 26633b0abaa8c1c2916153b2236ecf9e4982fd68
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b84d5a279bfe7cd99262ca904daeceabc9d0355d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011360"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648070"
 ---
 # <a name="default-functionality-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールの既定の機能
 Windows フォーム<xref:System.Windows.Forms.DataGridView>コントロールは多くの既定の機能をユーザーに提供します。  

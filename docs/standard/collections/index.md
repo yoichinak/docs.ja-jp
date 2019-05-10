@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 60cc581f-1db5-445b-ba04-a173396bf872
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d6b9e3d3f5ebc122e2031dac5999a80445ee03a8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba780692d59157438da1e04f3bdc3577a3eaef65
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909138"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664573"
 ---
 # <a name="collections-and-data-structures"></a>コレクションとデータ構造体
 多くの場合、類似するデータはコレクションとして格納および操作すると、より効率的に処理できます。 <xref:System.Array?displayProperty=nameWithType> クラスまたは <xref:System.Collections>、<xref:System.Collections.Generic>、<xref:System.Collections.Concurrent>、System.Collections.Immutable の各名前空間のクラスを使用して、コレクションの個々の要素または一定の範囲の要素を追加、削除、および変更することができます。  
@@ -30,17 +30,17 @@ ms.locfileid: "61909138"
 ## <a name="common-collection-features"></a>一般的なコレクションの機能  
  すべてのコレクションに、コレクション内の項目を追加、削除、または検索するためのメソッドが用意されています。 また、<xref:System.Collections.ICollection> インターフェイスまたは <xref:System.Collections.Generic.ICollection%601> インターフェイスを直接または間接的に実装するすべてのコレクションで、次の機能を共有しています。  
   
--   **コレクションを列挙する機能**  
+- **コレクションを列挙する機能**  
   
      .NET Framework のコレクションでは <xref:System.Collections.IEnumerable?displayProperty=nameWithType> または <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> を実装すると、コレクションを反復処理できます。 列挙子は、コレクション内の任意の要素への移動可能なポインターと考えることができます。 [foreach, in](../../csharp/language-reference/keywords/foreach-in.md) ステートメントと [For Each...Next ステートメント](../../visual-basic/language-reference/statements/for-each-next-statement.md) では、<xref:System.Collections.IEnumerable.GetEnumerator%2A> メソッドによって公開される列挙子を使用して、列挙子の操作の複雑さを隠しています。 また、<xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> を実装するコレクションはいずれも*クエリ可能型*と見なされ、LINQ で照会できます。 LINQ クエリでは、データにアクセスするための共通パターンが提供されます。 通常、これらは、標準の `foreach` ループよりも簡潔で読みやすく、フィルター処理、並べ替え、およびグループ化の機能を利用できます。 さらに、LINQ クエリによってパフォーマンスを向上させることができます。 詳細については、[LINQ to Objects (C#)](../../csharp/programming-guide/concepts/linq/linq-to-objects.md)、[LINQ to Objects (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/linq-to-objects.md)、[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、[LINQ クエリの概要 (C#)](../../csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)、および[基本的なクエリ操作 (Visual Basic)](../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md) を参照してください。  
   
--   **コレクションの内容を配列にコピーする機能**  
+- **コレクションの内容を配列にコピーする機能**  
   
      **CopyTo** メソッドを使ってすべてのコレクションを配列にコピーできます。ただし、新しい配列の要素の順序は、列挙子が返す順序に基づきます。 結果の配列は、常に下限がゼロの 1 次元です。  
   
  また、多くのコレクション クラスに次の機能が含まれています。  
   
--   **容量とカウントのプロパティ**  
+- **容量とカウントのプロパティ**  
   
      コレクションの容量とは、そこに含むことのできる要素の数です。 コレクションのカウントとは、実際に含まれている要素の数です。 コレクションによっては、容量またはカウント、あるいはその両方を内部で処理する場合があります。  
   
@@ -48,11 +48,11 @@ ms.locfileid: "61909138"
   
      <xref:System.Collections.BitArray> は特殊なケースで、その容量はその長さと同じで、長さはそのカウントと同じです。  
   
--   **一貫した下限**  
+- **一貫した下限**  
   
      コレクションの下限とは、最初の要素のインデックスです。 <xref:System.Collections> 名前空間のすべてのインデックス付きコレクションの下限がゼロです。つまり、インデックスがゼロから始まります。 <xref:System.Array> の下限は既定でゼロですが、<xref:System.Array.CreateInstance%2A?displayProperty=nameWithType> を使用して **Array** クラスのインスタンスを作成する場合には、別の下限を定義できます。  
   
--   **複数のスレッドからのアクセスの同期** (<xref:System.Collections> クラスのみ)。  
+- **複数のスレッドからのアクセスの同期** (<xref:System.Collections> クラスのみ)。  
   
      <xref:System.Collections> 名前空間の非ジェネリック コレクション型では、同期によるスレッド セーフが提供され、通常、<xref:System.Collections.ICollection.SyncRoot%2A> メンバーと <xref:System.Collections.ICollection.IsSynchronized%2A> メンバーを介して公開されます。 既定では、これらのコレクションはスレッド セーフではありません。 拡張性が高く効率的な、コレクションへのマルチスレッド アクセスが必要な場合は、<xref:System.Collections.Concurrent> 名前空間のいずれかのクラスを使用するか、変更できないコレクションを使用することを検討します。 詳しくは、「[スレッド セーフなコレクション](../../../docs/standard/collections/thread-safe/index.md)」を参照してください。  
   

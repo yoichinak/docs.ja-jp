@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: 29ce9b165c3823d7d06008431294f67716ccf8e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18674a5410cd411ff78e2d3f768b02687cd13f6d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61933069"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637357"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer クラスの使用
 Windows Communication Foundation (WCF) は、2 つの別のシリアル化テクノロジを使用して、クライアントとサービス、シリアル化と呼ばれるプロセス間で送信される XML に、アプリケーションでデータを有効にできます。  

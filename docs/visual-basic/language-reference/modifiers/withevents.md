@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 75d118ee2bd4918c3a936cb341864ddc5315726b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 41d38dcb3f44ccda19253adcd39401b0ac8dfb02
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778639"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647664"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 1 つまたは複数の宣言されたメンバー変数がイベントを発生させるクラスのインスタンスを参照しているを指定します。  

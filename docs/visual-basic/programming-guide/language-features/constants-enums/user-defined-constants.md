@@ -9,12 +9,12 @@ helpviewer_keywords:
 - constants [Visual Basic], user-defined
 - circular references between constants [Visual Basic]
 ms.assetid: a1206d5c-c45e-4ac2-970a-4a0be6a05fdd
-ms.openlocfilehash: f0196457235ad77df545a367573f62b43209269d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d4fe5d1b9048f4a8ae22a84e14456318ca38f0f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906985"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645862"
 ---
 # <a name="user-defined-constants-visual-basic"></a>ユーザー定義定数 (Visual Basic)
 定数とは、数値または変更されない文字列の代わりに使用されるわかりやすい名前です。 定数に格納された値は、その名が示すとおり、アプリケーションの実行中に変わることはありません。 コントロールまたは使用するコンポーネントで定義されている定数を使用することができますか、独自に作成することができます。 自分で作成した定数は*ユーザー定義*します。  
@@ -37,13 +37,13 @@ ms.locfileid: "61906985"
 ## <a name="scope-of-user-defined-constants"></a>ユーザー定義関数のスコープ  
  A`Const`ステートメントのスコープは、同じ場所で宣言された変数の場合と同じです。 スコープは、次の方法のいずれかで指定できます。  
   
--   プロシージャ内でのみ存在する定数を作成するには、そのプロシージャ内で宣言します。  
+- プロシージャ内でのみ存在する定数を作成するには、そのプロシージャ内で宣言します。  
   
--   使用できるは、そのモジュール外のコードではなく、クラス内のすべてのプロシージャに定数を作成するには、クラスの宣言セクションに宣言します。  
+- 使用できるは、そのモジュール外のコードではなく、クラス内のすべてのプロシージャに定数を作成するには、クラスの宣言セクションに宣言します。  
   
--   アセンブリの外部のクライアントではなく、アセンブリでは、すべてのメンバーに使用できる定数を作成するには、宣言を使用して、`Friend`クラスの宣言セクション内のキーワード。  
+- アセンブリの外部のクライアントではなく、アセンブリでは、すべてのメンバーに使用できる定数を作成するには、宣言を使用して、`Friend`クラスの宣言セクション内のキーワード。  
   
--   アプリケーション全体で使用できる定数を作成するには、宣言を使用して、`Public`セクション クラスの宣言でキーワード。  
+- アプリケーション全体で使用できる定数を作成するには、宣言を使用して、`Public`セクション クラスの宣言でキーワード。  
   
  詳細については、「[方法 :定数を宣言](../../../../visual-basic/programming-guide/language-features/constants-enums/how-to-declare-a-constant.md)します。  
   

@@ -2,12 +2,12 @@
 title: Web サービス プロトコルの相互運用性ガイド
 ms.date: 03/30/2017
 ms.assetid: f2981678-ebdb-433d-899b-467f7df95fb2
-ms.openlocfilehash: 647212558b6be38e9b30239f7fb71213e6eb7d86
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ffa7da4c723a2cd0054f4f79dd22792a9db67068
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050351"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648388"
 ---
 # <a name="web-services-protocols-interoperability-guide"></a>Web サービス プロトコルの相互運用性ガイド
 Windows Communication Foundation (WCF) は、さまざまな Web サービス プロトコルを実装します。 これらのプロトコルの多くには、さまざまなオプションと拡張ポイントが用意されており、それらの実装は実装者の裁量に任されています。 このトピックでは、WCF が実装する Web サービス プロトコルの一覧を示します。 サポートされる各プロトコルの実装の詳細については、このセクションの他のトピックで説明します。  

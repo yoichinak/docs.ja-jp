@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 635c791f81107a1800e2ef381f6bea78cbc18e18
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61830363"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649757"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic における算術演算子
 算術演算子を使用して、多くのリテラル、変数、その他の式、関数とプロパティの呼び出し、および定数によって表される数値の計算に関連する一般的な算術演算を実行します。 算術演算子にも分類は、ビット シフト演算子のオペランドのビットごとのレベルで動作し、ビット パターンを左または右にシフトです。  
@@ -70,13 +70,13 @@ ms.locfileid: "61830363"
   
  算術シフトは循環、つまり、もう一方の端に結果の 1 つの端のシフトは行われません。 シフトによって空いたビット位置は、次のように設定されます。  
   
--   算術左シフトの場合は 0  
+- 算術左シフトの場合は 0  
   
--   正の数の算術右シフトの場合は 0  
+- 正の数の算術右シフトの場合は 0  
   
--   符号なしのデータ型の算術右シフトの場合は 0 (`Byte`、 `UShort`、 `UInteger`、 `ULong`)  
+- 符号なしのデータ型の算術右シフトの場合は 0 (`Byte`、 `UShort`、 `UInteger`、 `ULong`)  
   
--   負の数値の算術右シフトの 1 (`SByte`、 `Short`、 `Integer`、または`Long`)  
+- 負の数値の算術右シフトの 1 (`SByte`、 `Short`、 `Integer`、または`Long`)  
   
  次の例では、シフト、`Integer`左と右の両方の値します。  
   

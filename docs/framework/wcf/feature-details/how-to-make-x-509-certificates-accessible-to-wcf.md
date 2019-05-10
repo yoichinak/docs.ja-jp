@@ -9,12 +9,12 @@ helpviewer_keywords:
 - certificates [WCF], making X.509 certificates accessible to WCF
 - X.509 certificates [WCF], making accessible to WCF
 ms.assetid: a54e407c-c2b5-4319-a648-60e43413664b
-ms.openlocfilehash: 0177533f11b7dfa6c2561f1f519eacf8073bcd45
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3972b1c68fa4012de01d4b675523814911f6bae8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047946"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634998"
 ---
 # <a name="how-to-make-x509-certificates-accessible-to-wcf"></a>方法: X.509 証明書を WCF からアクセス可能にする
 アプリケーション コードには、X.509 証明書を Windows Communication Foundation (WCF) にアクセスすることができるようにするには、証明書ストアの名前と場所を指定する必要があります。 特定の状況では、X.509 証明書に関連付けられた秘密キーを格納しているファイルにプロセス ID がアクセスできる必要があります。 証明書ストアに X.509 証明書に関連付けられている秘密キーを取得するには、WCF は、そのアクセス許可が必要です。 既定では、所有者と System アカウントだけが証明書の秘密キーにアクセスできます。  
@@ -32,7 +32,7 @@ ms.locfileid: "62047946"
         |送信 SOAP メッセージにデジタル署名する。|はい|  
         |受信 SOAP メッセージの署名を検証する。|いいえ|  
         |送信 SOAP メッセージを暗号化する。|いいえ|  
-        |受信 SOAP メッセージを復号化する。|[はい]|  
+        |受信 SOAP メッセージを復号化する。|はい|  
   
     2. 証明書が格納されている証明書ストアの場所と名前を決定します。  
   

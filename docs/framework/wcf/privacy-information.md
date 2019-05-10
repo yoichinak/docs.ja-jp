@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: e506908299109f94be6d190017b381fe7b4ee044
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032995"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651071"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation のプライバシー情報
 マイクロソフトは、エンド ユーザーのプライバシー保護に力を入れています。 Windows Communication Foundation (WCF)、バージョン 3.0 を使用してアプリケーションをビルドすると、アプリケーションに、エンドユーザーのプライバシーに関する影響を与える可能性があります。 たとえば、アプリケーションが明示的にユーザーの連絡先情報を収集することがあります。つまり、アプリケーションがインターネットを経由して Web サイトに情報を要求したり、情報を送信したりすることがあります。 マイクロソフトの技術をアプリケーションに組み込んでいる場合、その技術にプライバシーに影響を与える可能性がある独自の動作が存在することがあります。 WCF 送信しませんすべての情報を Microsoft、アプリケーションからまたはエンドユーザーが選択する場合を除き。  

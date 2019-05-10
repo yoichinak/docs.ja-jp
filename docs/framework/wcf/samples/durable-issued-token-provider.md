@@ -2,12 +2,12 @@
 title: 永続性発行済みトークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: f91f603e91b1f640ebe97229a1a433446cddb0cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b7f204fcb2c1b72a73e091ecf37c2921f7575516
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990211"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650079"
 ---
 # <a name="durable-issued-token-provider"></a>永続性発行済みトークン プロバイダー
 このサンプルでは、カスタム クライアントの発行済みトークン プロバイダーを実装する方法を示します。  

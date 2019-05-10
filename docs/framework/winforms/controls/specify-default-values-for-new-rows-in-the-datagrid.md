@@ -10,12 +10,12 @@ helpviewer_keywords:
 - rows [Windows Forms], specifying default values
 - DataGridView control [Windows Forms], default values for new rows
 ms.assetid: 8d127963-d9f8-4e4e-9f7f-beb66688f1f2
-ms.openlocfilehash: 8a90cbef7032fd3753a6c9ec0b856a4e2ea1db27
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 879c035366c4686ceff3250a63c6ae8d8d3cfec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009735"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651958"
 ---
 # <a name="how-to-specify-default-values-for-new-rows-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの新しい行に既定値を指定する
 行うことができますデータ エントリより便利なアプリケーションがいっぱいになる既定の新しく追加された行の値。 <xref:System.Windows.Forms.DataGridView>クラスを入力できる既定の値を<xref:System.Windows.Forms.DataGridView.DefaultValuesNeeded>イベント。 ユーザーが新しいレコードの行を入力すると、このイベントが発生します。 コードでは、このイベントを処理する場合は、任意のセルに独自の値を設定できます。  

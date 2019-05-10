@@ -5,12 +5,12 @@ helpviewer_keywords:
 - ink data [WPF], adding custom data
 - InkCanvas [WPF], displaying
 ms.assetid: f02aac6f-3436-4f7c-b6ea-0452cba5332c
-ms.openlocfilehash: c524e30943a21426e2e5e8fe6ae009999924fead
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7c59a205df5358daec101339cc6a308c8e38a9d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777053"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64640867"
 ---
 # <a name="how-to-add-custom-data-to-ink-data"></a>方法: インク データにカスタム データを追加する
 カスタム データは、インクはインクがシリアル化された形式 (ISF) として保存するときに保存されるインクを追加することができます。  カスタム データを保存することができます、 <xref:System.Windows.Ink.DrawingAttributes>、 <xref:System.Windows.Ink.StrokeCollection>、または<xref:System.Windows.Ink.Stroke>します。  次の 3 つのオブジェクトに対するカスタム データを保存することを使用するデータを保存する最適な場所を決定できます。  次の 3 つのすべてのクラスは、カスタム データを格納し、アクセスのようなメソッドを使用します。  

@@ -2,12 +2,12 @@
 title: 構成サンプル
 ms.date: 03/30/2017
 ms.assetid: 75515b4a-8d70-44c8-99e0-7423df41380e
-ms.openlocfilehash: 48f66c4110d048f714dae0943f97f3f4aa7cd419
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8c96b41877fa56f486bec03a10dcbf47bac9e37a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002244"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651040"
 ---
 # <a name="configuration-sample"></a>構成サンプル
 このサンプルでは、構成ファイルを使用してサービスを探索可能にする方法を示します。  

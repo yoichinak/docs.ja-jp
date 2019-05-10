@@ -5,12 +5,12 @@ helpviewer_keywords:
 - COM [WCF], configure service monikers
 - COM [WCF], register service monikers
 ms.assetid: e5e16c80-8a8e-4eef-af53-564933b651ef
-ms.openlocfilehash: dfac833cc7517af00d0264fc5d11fc83ae543569
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f1f2b462ef0412b0f11a9ba5074f7546e6ee84f2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000806"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64643765"
 ---
 # <a name="how-to-register-and-configure-a-service-moniker"></a>方法: サービス モニカーを登録および構成する
 型指定されたコントラクトを持つ COM アプリケーション内で Windows Communication Foundation (WCF) サービス モニカーを使用する前を COM に必要な属性型を登録して必要なバインディングで、COM アプリケーションとモニカーを構成する必要があります。構成します。  

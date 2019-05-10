@@ -2,12 +2,12 @@
 title: トランスポート セキュリティでの偽装の使用
 ms.date: 03/30/2017
 ms.assetid: 426df8cb-6337-4262-b2c0-b96c2edf21a9
-ms.openlocfilehash: 6209007b60effe5403caf3db8855f029d0c47a0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f392dbe5806532eba181adef4ba3c8bebce9eddd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050676"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64637443"
 ---
 # <a name="using-impersonation-with-transport-security"></a>トランスポート セキュリティでの偽装の使用
 *権限借用*はクライアントの id で実行するサーバー アプリケーションの機能です。 リソースへのアクセスを検証するときに、サービスでは偽装が広く使用されます。 サーバー アプリケーションはサービス アカウントを使用して実行されますが、クライアントの接続を受け入れたサーバーは、クライアントの資格情報を使用してアクセス チェックが実行できるようにクライアントを偽装します。 トランスポート セキュリティは、資格情報を渡すこと、および渡された資格情報を使用して通信をセキュリティで保護することの 2 つの機構から成ります。 このトピックでは、偽装機能を Windows Communication Foundation (WCF) でトランスポート セキュリティの使用について説明します。 メッセージ セキュリティを使用して権限借用の詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ab6c0ac7-aac4-45ba-93d6-a0e9afd1756f
-ms.openlocfilehash: 2e294b7970a58fad9385802470a514e5a9240495
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5a15de504a27180c19d3450f7e4ddd490999b916
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766865"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651125"
 ---
 # <a name="how-to-inspect-or-modify-parameters"></a>方法: パラメーターを検査または変更する
 検査または実装することで、Windows Communication Foundation (WCF) クライアント オブジェクトまたは WCF サービスの 1 つの操作の受信または送信メッセージを変更することができます、<xref:System.ServiceModel.Dispatcher.IParameterInspector?displayProperty=nameWithType>インターフェイスとそれをクライアントまたはサービス ランタイムに挿入します。 通常、操作の動作は、1 回の操作に対してパラメーター インスペクターを追加するために使用します。他の動作は、広い範囲でランタイムへの簡単なアクセスを提供するために使用できます。 詳細については、次を参照してください。[拡張クライアント](../../../../docs/framework/wcf/extending/extending-clients.md)と[ディスパッチャーの拡張](../../../../docs/framework/wcf/extending/extending-dispatchers.md)します。  

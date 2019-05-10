@@ -2,12 +2,12 @@
 title: 指定されたレジストリ パスには、先頭に有効なハイブ名がありません
 ms.date: 07/20/2015
 ms.assetid: afb1a03b-4516-450b-aab1-827a93f9e99d
-ms.openlocfilehash: 52a075257f91e469552c85b425a88bdaee635689
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9686ade2043e48bebceb53fadc647b9229aeb660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61594725"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660977"
 ---
 # <a name="specified-registry-path-does-not-start-with-a-valid-hive-name"></a>指定されたレジストリ パスには、先頭に有効なハイブ名がありません
 指定されたレジストリ パスには、先頭に正しいハイブ名がありません。 正しいハイブ名は、以下のとおりです。  

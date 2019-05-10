@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8b559e44-2393-4e4e-8160-7558d37a4a89
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 87094532a52d8f6309998486375ef4eb33b07f20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 5f5d529451f30a6785547410f5121dbb6f91fe01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61754454"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660385"
 ---
 # <a name="fatalexecutionengineerror-mda"></a>fatalExecutionEngineError MDA
 `fatalExecutionEngineError` マネージド デバッグ アシスタント (MDA) は、共通言語ランタイム (CLR) で致命的なエラーが検出されたときにアクティブ化されます。 プロセスは終了されます。  
@@ -60,7 +60,7 @@ ms.locfileid: "61754454"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA は、ランタイムの動作への影響はありません。  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
  致命的なエラーの原因となった CLR 関数のアドレス、エラーが発生したスレッドの ID、およびエラー コード。  
   
 ## <a name="configuration"></a>構成  

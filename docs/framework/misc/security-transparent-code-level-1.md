@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5fd8f46d-3961-46a7-84af-2eb1f48e75cf
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: afec37a6510e445f1fe2c430684099af967be0ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 01f9784cc2263c282d75251556a1f000027ca2ae
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868759"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64639786"
 ---
 # <a name="security-transparent-code-level-1"></a>透過的セキュリティ コード、レベル 1
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
