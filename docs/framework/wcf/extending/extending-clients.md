@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - proxy extensions [WCF]
 ms.assetid: 1328c61c-06e5-455f-9ebd-ceefb59d3867
-ms.openlocfilehash: 99b4dd5e4acfce8bea4d3c2cae3a53152585675d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 48e6177e7098f8131d2a0fd62bda9c505fa8bcc9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857936"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662800"
 ---
 # <a name="extending-clients"></a>クライアントの拡張
 呼び出し側のアプリケーションでは、サービス モデル レイヤーが、アプリケーション コードでのメソッド呼び出しを送信メッセージに変換し、それらを基になるチャネルにプッシュし、結果をアプリケーション コードで戻り値と出力パラメーターに変換して、変換結果を呼び出し側に返します。 サービス モデル拡張は、クライアントやディスパッチャーの機能、カスタム動作、メッセージとパラメーターの途中受信、およびその他の拡張機能に関連する実行や通信の動作と機能を変更または実装します。  
@@ -28,46 +28,46 @@ ms.locfileid: "61857936"
 ## <a name="scenarios"></a>シナリオ  
  クライアント システムを拡張する理由としては、次のようなさまざまなものがあります。  
   
--   カスタム メッセージの検証。 特定のスキーマに対してメッセージが有効になるようにする必要が生じる場合があります。 これは、<xref:System.ServiceModel.Dispatcher.IClientMessageInspector> インターフェイスを実装し、この実装を <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A> プロパティに割り当てることで可能になります。 たとえば、「[方法:クライアントのメッセージ検査または変更](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)と[方法。クライアントのメッセージ検査または変更](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)します。  
+- カスタム メッセージの検証。 特定のスキーマに対してメッセージが有効になるようにする必要が生じる場合があります。 これは、<xref:System.ServiceModel.Dispatcher.IClientMessageInspector> インターフェイスを実装し、この実装を <xref:System.ServiceModel.Dispatcher.DispatchRuntime.MessageInspectors%2A> プロパティに割り当てることで可能になります。 たとえば、「[方法:クライアントのメッセージ検査または変更](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)と[方法。クライアントのメッセージ検査または変更](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-messages-on-the-client.md)します。  
   
--   カスタム メッセージのログ記録。 エンドポイントを通過するアプリケーション メッセージの一部を検査して記録する必要が生じる場合があります。 これはメッセージ インターセプター インターフェイスで実行可能です。  
+- カスタム メッセージのログ記録。 エンドポイントを通過するアプリケーション メッセージの一部を検査して記録する必要が生じる場合があります。 これはメッセージ インターセプター インターフェイスで実行可能です。  
   
--   カスタム メッセージの変換。 アプリケーション コードを変更するのではなく、ランタイムのメッセージに特定の変換を適用する必要が生じる場合があります (バージョン管理の場合など)。 これもまた、メッセージ インターセプター インターフェイスで実行可能です。  
+- カスタム メッセージの変換。 アプリケーション コードを変更するのではなく、ランタイムのメッセージに特定の変換を適用する必要が生じる場合があります (バージョン管理の場合など)。 これもまた、メッセージ インターセプター インターフェイスで実行可能です。  
   
--   カスタム データ モデル。 ユーザーが WCF では既定でサポートされていないデータまたはシリアル化モデルが存在する可能性があります (つまり、 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>、 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>、および<xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>オブジェクト)。 これは、メッセージ フォーマッタ インターフェイスを実装することで対応できます。 詳細については、<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> および <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType> プロパティのトピックを参照してください。  
+- カスタム データ モデル。 ユーザーが WCF では既定でサポートされていないデータまたはシリアル化モデルが存在する可能性があります (つまり、 <xref:System.Runtime.Serialization.DataContractSerializer?displayProperty=nameWithType>、 <xref:System.Xml.Serialization.XmlSerializer?displayProperty=nameWithType>、および<xref:System.ServiceModel.Channels.Message?displayProperty=nameWithType>オブジェクト)。 これは、メッセージ フォーマッタ インターフェイスを実装することで対応できます。 詳細については、<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter?displayProperty=nameWithType> および <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A?displayProperty=nameWithType> プロパティのトピックを参照してください。  
   
--   カスタム パラメーターの検証。 XML ではなく、型指定されたパラメーターが有効になるようにする必要が生じる場合があります。 これは、パラメーター インスペクター インターフェイスを使用して実行できます。 例については、「[方法: 検査または変更パラメーター](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)または[クライアント検証](../../../../docs/framework/wcf/samples/client-validation.md)です。  
+- カスタム パラメーターの検証。 XML ではなく、型指定されたパラメーターが有効になるようにする必要が生じる場合があります。 これは、パラメーター インスペクター インターフェイスを使用して実行できます。 例については、「[方法: 検査または変更パラメーター](../../../../docs/framework/wcf/extending/how-to-inspect-or-modify-parameters.md)または[クライアント検証](../../../../docs/framework/wcf/samples/client-validation.md)です。  
   
 ### <a name="using-the-clientruntime-class"></a>ClientRuntime クラスの使用  
  <xref:System.ServiceModel.Dispatcher.ClientRuntime> クラスは、メッセージを途中受信してクライアントの動作を拡張する拡張オブジェクトを追加できる拡張ポイントです。 途中受信オブジェクトには、特定のコントラクト内のすべてのメッセージを処理する、特定の操作用のメッセージだけを処理する、カスタムのチャネル初期化を実行する、その他のカスタム クライアント アプリケーションの動作を実行する、などの機能があります。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> プロパティは、サービス側開始のコールバック クライアント用のディスパッチ ランタイム オブジェクトを返します。  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A> プロパティは、サービス側開始のコールバック クライアント用のディスパッチ ランタイム オブジェクトを返します。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A> プロパティは、カスタムの操作セレクター オブジェクトを受け取ります。  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.OperationSelector%2A> プロパティは、カスタムの操作セレクター オブジェクトを受け取ります。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A> プロパティを使用すると、クライアント チャネルを検査または変更できるチャネル初期化子を追加できます。  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ChannelInitializers%2A> プロパティを使用すると、クライアント チャネルを検査または変更できるチャネル初期化子を追加できます。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> プロパティは、<xref:System.ServiceModel.Dispatcher.ClientOperation> オブジェクトのコレクションを取得します。このコレクションにカスタムのメッセージ インターセプターを追加すれば、その操作のメッセージに固有の機能を提供できます。  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> プロパティは、<xref:System.ServiceModel.Dispatcher.ClientOperation> オブジェクトのコレクションを取得します。このコレクションにカスタムのメッセージ インターセプターを追加すれば、その操作のメッセージに固有の機能を提供できます。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A> プロパティをアプリケーションで使用すると、自動アドレス指定ヘッダーをオフにしてアドレス指定を直接制御できます。  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ManualAddressing%2A> プロパティをアプリケーションで使用すると、自動アドレス指定ヘッダーをオフにしてアドレス指定を直接制御できます。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A> プロパティは、トランスポート レベルでメッセージの送信先の値を設定して、メッセージの中継者やその他のシナリオをサポートします。  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.Via%2A> プロパティは、トランスポート レベルでメッセージの送信先の値を設定して、メッセージの中継者やその他のシナリオをサポートします。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A>プロパティのコレクションを取得する<xref:System.ServiceModel.Dispatcher.IClientMessageInspector>オブジェクトは、WCF クライアント経由のすべてのメッセージのカスタム メッセージ インターセプターを追加することができます。  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.MessageInspectors%2A>プロパティのコレクションを取得する<xref:System.ServiceModel.Dispatcher.IClientMessageInspector>オブジェクトは、WCF クライアント経由のすべてのメッセージのカスタム メッセージ インターセプターを追加することができます。  
   
  また、コントラクト情報を取得するその他のプロパティも多数用意されています。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractName%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractName%2A>  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractNamespace%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractNamespace%2A>  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.ContractClientType%2A>  
   
  WCF クライアントが双方向の WCF クライアントの場合、次のプロパティはコールバック WCF クライアントの情報も取得します。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackClientType%2A>  
   
--   <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
+- <xref:System.ServiceModel.Dispatcher.ClientRuntime.CallbackDispatchRuntime%2A>  
   
  WCF クライアントの実行全体の WCF クライアントを拡張する上で使用できるプロパティを確認、<xref:System.ServiceModel.Dispatcher.ClientRuntime>クラスにプロパティを変更またはインターフェイスを実装して、プロパティに追加することが求めている機能を作成するかどうかを参照してください。 作成する特定の拡張を選択した後は、適切な <xref:System.ServiceModel.Dispatcher.ClientRuntime> プロパティにその拡張を挿入します。挿入するには、実行時に <xref:System.ServiceModel.Dispatcher.ClientRuntime> クラスにアクセスを提供するクライアント動作を実装します。  
   
@@ -80,31 +80,31 @@ ms.locfileid: "61857936"
   
  <xref:System.ServiceModel.Dispatcher.ClientRuntime.Operations%2A> プロパティを使用して、特定のサービス操作を表す <xref:System.ServiceModel.Dispatcher.ClientOperation> オブジェクトを検索します。 次のプロパティでは、WCF クライアント システムにカスタム オブジェクトを挿入することができます。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> プロパティは、特定の操作用に <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> のカスタムの実装を挿入したり、現在のフォーマッタを変更するために使用します。  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.Formatter%2A> プロパティは、特定の操作用に <xref:System.ServiceModel.Dispatcher.IClientMessageFormatter> のカスタムの実装を挿入したり、現在のフォーマッタを変更するために使用します。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A> プロパティは、<xref:System.ServiceModel.Dispatcher.IParameterInspector> のカスタムの実装を挿入したり、現在の実装を変更するために使用します。  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.ParameterInspectors%2A> プロパティは、<xref:System.ServiceModel.Dispatcher.IParameterInspector> のカスタムの実装を挿入したり、現在の実装を変更するために使用します。  
   
  次の各プロパティを使用すると、フォーマッタおよびカスタムのパラメーター インスペクターとやり取りしてシステムを変更できます。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A> プロパティは、送信メッセージのシリアル化を制御するために使用します。  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.SerializeRequest%2A> プロパティは、送信メッセージのシリアル化を制御するために使用します。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> プロパティは、受信メッセージの逆シリアル化を制御するために使用します。  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.DeserializeReply%2A> プロパティは、受信メッセージの逆シリアル化を制御するために使用します。  
   
--   要求メッセージの WS-Addressing 操作を制御する場合に <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> プロパティを使用します。  
+- 要求メッセージの WS-Addressing 操作を制御する場合に <xref:System.ServiceModel.Dispatcher.ClientOperation.Action%2A> プロパティを使用します。  
   
--   使用して、<xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A>と<xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A>WCF クライアント メソッドが非同期の操作に関連付けられているを指定します。  
+- 使用して、<xref:System.ServiceModel.Dispatcher.ClientOperation.BeginMethod%2A>と<xref:System.ServiceModel.Dispatcher.ClientOperation.EndMethod%2A>WCF クライアント メソッドが非同期の操作に関連付けられているを指定します。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A> プロパティは、SOAP エラーの際に詳細な型として表示できる型を含むコレクションを取得するために使用します。  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.FaultContractInfos%2A> プロパティは、SOAP エラーの際に詳細な型として表示できる型を含むコレクションを取得するために使用します。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A> プロパティおよび <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A> プロパティは、操作が呼び出されたとき、それぞれセッションを起動するか終了するかを制御するために使用します。  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.IsInitiating%2A> プロパティおよび <xref:System.ServiceModel.Dispatcher.ClientOperation.IsTerminating%2A> プロパティは、操作が呼び出されたとき、それぞれセッションを起動するか終了するかを制御するために使用します。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A> プロパティは、操作が一方向の操作であるかどうかを制御するために使用します。  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.IsOneWay%2A> プロパティは、操作が一方向の操作であるかどうかを制御するために使用します。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A> プロパティは、<xref:System.ServiceModel.Dispatcher.ClientRuntime> の親オブジェクトを取得するために使用します。  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.Parent%2A> プロパティは、<xref:System.ServiceModel.Dispatcher.ClientRuntime> の親オブジェクトを取得するために使用します。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A> プロパティは、操作の名前を取得するために使用します。  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.Name%2A> プロパティは、操作の名前を取得するために使用します。  
   
--   <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> プロパティは、操作にマップされるメソッドを制御するために使用します。  
+- <xref:System.ServiceModel.Dispatcher.ClientOperation.SyncMethod%2A> プロパティは、操作にマップされるメソッドを制御するために使用します。  
   
  WCF クライアントの実行を 1 つのサービス操作にわたってにで使用可能なプロパティを確認、<xref:System.ServiceModel.Dispatcher.ClientOperation>クラスにプロパティを変更またはインターフェイスを実装して、プロパティに追加することが求めている機能を作成するかどうかを参照してください。 作成する特定の拡張を選択した後は、適切な <xref:System.ServiceModel.Dispatcher.ClientOperation> プロパティにその拡張を挿入します。挿入するには、実行時に <xref:System.ServiceModel.Dispatcher.ClientOperation> クラスにアクセスを提供するクライアント動作を実装します。 これで、その動作の内部で、<xref:System.ServiceModel.Dispatcher.ClientRuntime> プロパティを要件に合わせて変更できるようになります。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: ec34c19da9cd642f5de51166bef0264c2e75c58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f86636cd244ce53ed00f80b38777e78a3278d6f
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856714"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64912506"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF の委任と偽装
 *偽装* は、サービス ドメインのリソースへのクライアント アクセスを制限するためにサービスが使用する一般的な手法です。 サービス ドメインのリソースは、ローカル ファイルなどのコンピューター リソースの場合もあれば (偽装)、ファイル共有などの別のコンピューター上のリソースの場合もあります (委任)。 サンプル アプリケーションについては、「 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)」を参照してください。 権限借用の使用方法の例は、次を参照してください。[方法。サービスのクライアントを偽装](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)します。  
@@ -37,22 +37,22 @@ ms.locfileid: "61856714"
 ### <a name="cached-token-impersonation"></a>キャッシュされたトークンの偽装  
  キャッシュされたトークンの偽装は、以下で実行できます。  
   
--   Windows クライアント資格情報を使用する<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>、および <xref:System.ServiceModel.NetTcpBinding> 。  
+- Windows クライアント資格情報を使用する<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>、および <xref:System.ServiceModel.NetTcpBinding> 。  
   
--   <xref:System.ServiceModel.BasicHttpBinding> が <xref:System.ServiceModel.BasicHttpSecurityMode> 資格情報に設定された <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 。または、サービスが有効な Windows アカウントにマップできるユーザー名資格情報をクライアントが提示する、その他の標準バインディング。  
+- <xref:System.ServiceModel.BasicHttpBinding> が <xref:System.ServiceModel.BasicHttpSecurityMode> 資格情報に設定された <xref:System.ServiceModel.BasicHttpSecurityMode.TransportWithMessageCredential> 。または、サービスが有効な Windows アカウントにマップできるユーザー名資格情報をクライアントが提示する、その他の標準バインディング。  
   
--   <xref:System.ServiceModel.Channels.CustomBinding> が `requireCancellation` に設定された Windows クライアント資格情報を使用する `true`  (このプロパティは、<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters>、および <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters> の各クラスで使用できます)。セキュリティで保護されたメッセージ交換をバインディングで使用する場合は、`requireCancellation` プロパティを `true` に設定することも必要です。  
+- <xref:System.ServiceModel.Channels.CustomBinding> が `requireCancellation` に設定された Windows クライアント資格情報を使用する `true`  (このプロパティは、<xref:System.ServiceModel.Security.Tokens.SecureConversationSecurityTokenParameters>、<xref:System.ServiceModel.Security.Tokens.SslSecurityTokenParameters>、および <xref:System.ServiceModel.Security.Tokens.SspiSecurityTokenParameters> の各クラスで使用できます)。セキュリティで保護されたメッセージ交換をバインディングで使用する場合は、`requireCancellation` プロパティを `true` に設定することも必要です。  
   
--   クライアントがユーザー名資格情報を提示する <xref:System.ServiceModel.Channels.CustomBinding> 。 セキュリティで保護されたメッセージ交換をバインディングで使用する場合は、 `requireCancellation` プロパティを `true`に設定することも必要です。  
+- クライアントがユーザー名資格情報を提示する <xref:System.ServiceModel.Channels.CustomBinding> 。 セキュリティで保護されたメッセージ交換をバインディングで使用する場合は、 `requireCancellation` プロパティを `true`に設定することも必要です。  
   
 ### <a name="s4u-based-impersonation"></a>S4U ベースの偽装  
  S4U ベースの偽装は、以下で実行できます。  
   
--   サービスが有効な Windows アカウントにマップできる証明書クライアント資格情報を使用する<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>、および <xref:System.ServiceModel.NetTcpBinding> 。  
+- サービスが有効な Windows アカウントにマップできる証明書クライアント資格情報を使用する<xref:System.ServiceModel.WSHttpBinding>, <xref:System.ServiceModel.WSDualHttpBinding>、および <xref:System.ServiceModel.NetTcpBinding> 。  
   
--   <xref:System.ServiceModel.Channels.CustomBinding> プロパティが `requireCancellation` に設定された Windows クライアント資格情報を使用する `false`。  
+- <xref:System.ServiceModel.Channels.CustomBinding> プロパティが `requireCancellation` に設定された Windows クライアント資格情報を使用する `false`。  
   
--   <xref:System.ServiceModel.Channels.CustomBinding> プロパティが `requireCancellation` に設定されたユーザー名資格情報または Windows クライアント資格情報とセキュリティで保護されたメッセージ交換を使用する `false`。  
+- <xref:System.ServiceModel.Channels.CustomBinding> プロパティが `requireCancellation` に設定されたユーザー名資格情報または Windows クライアント資格情報とセキュリティで保護されたメッセージ交換を使用する `false`。  
   
  サービスがクライアントを偽装できるエクステントは、偽装を試みるときにサービス アカウントが保持している特権、使用する偽装の種類、およびクライアントが許可すると考えられる偽装のエクステントによって異なります。  
   
@@ -201,9 +201,9 @@ sh.Credentials.ClientCertificate.Authentication.MapClientCertificateToWindowsAcc
   
  制約された委任を構成する手順の詳細については、MSDN の次のトピックを参照してください。  
   
--   [Kerberos 委任のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=36724)  
+- [Kerberos 委任のトラブルシューティング](https://go.microsoft.com/fwlink/?LinkId=36724)  
   
--   [Kerberos プロトコルの遷移および制約委任](https://go.microsoft.com/fwlink/?LinkId=36725)  
+- [Kerberos プロトコルの遷移および制約委任](https://go.microsoft.com/fwlink/?LinkId=36725)  
   
 ## <a name="see-also"></a>関連項目
 

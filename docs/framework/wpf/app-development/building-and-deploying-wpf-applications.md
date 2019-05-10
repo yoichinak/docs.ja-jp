@@ -8,12 +8,12 @@ helpviewer_keywords:
 - deploying applications [WPF]
 - builds [WPF]
 ms.assetid: 5198df5e-dda0-4ddc-a275-e0a7a4693524
-ms.openlocfilehash: 0c3ddc042586df1164618d2a169df98934779b30
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9e47a140b1fed80618ba4279515cd45721a8e52f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756976"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662160"
 ---
 # <a name="building-and-deploying-wpf-applications"></a>WPF アプリケーションのビルドと配置
 ビルドおよび展開モデルは、次のようをビルドし、ローカルとリモートのアプリケーションの展開機能を提供します。  

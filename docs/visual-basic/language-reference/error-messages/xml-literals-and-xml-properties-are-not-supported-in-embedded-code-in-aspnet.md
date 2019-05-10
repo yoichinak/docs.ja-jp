@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC31200
 ms.assetid: 053e8cba-8584-45cc-9fa0-43d122779772
-ms.openlocfilehash: 79be695478983055ae1f016cf841d733d3f4c430
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: edd8032e693c233a51248daa6ffdfc830b0648a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766605"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662594"
 ---
 # <a name="xml-literals-and-xml-properties-are-not-supported-in-embedded-code-within-aspnet"></a>XML リテラルおよび XML プロパティは、ASP.NET 内の埋め込みコードではサポートされません
 ASP.NET 内の埋め込みコードでは、XML リテラルおよび XML プロパティがサポートされていません。 XML の機能を使用するには、分離コードにコードを移動します。  

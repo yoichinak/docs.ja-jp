@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: a6baf073e25635f0a6dd666d681d8bc641128ea0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982361"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063894"
 ---
 # <a name="routed-events-overview"></a>ルーティング イベントの概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でのルーティング イベントの概念について説明します。 ここでは、ルーティング イベントの用語を定義し、要素ツリーを通じたルーティング イベントのルーティング方法、ルーティング イベントの処理方法、カスタム ルーティング イベントの作成方法について説明します。
@@ -197,10 +197,9 @@ ms.locfileid: "61982361"
   
  ペアになった [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] 入力イベントを実装する場合、マウス ボタンを押すなどの入力による 1 つのユーザー操作で、ペアになった両方のルーティング イベントが順次発生するようにします。 まず、トンネル イベントが発生し、その経路をたどります。 次に、バブル イベントが発生し、その経路をたどります。 2 つのイベントは、ため、文字どおり同じイベント データ インスタンスを共有、<xref:System.Windows.UIElement.RaiseEvent%2A>バブル イベントを実装するクラスでメソッドの呼び出しは、トンネル イベントからイベント データをリッスンし、新しい発生したイベントでそれを再利用します。 トンネル イベントのハンドラーを持つリスナーは、ルーティング イベントを処理済みとしてマークする機会を最初に与えられます (最初がクラス ハンドラーで、その次がインスタンス ハンドラーです)。 トンネル経路上の要素がルーティング イベントを処理済みとしてマークした場合、処理済みイベントのデータがバブル イベントに送信され、同等のバブル入力イベントにアタッチされた標準のハンドラーは呼び出されません。 外部からは、処理済みのバブル イベントが発生しなかったように見えます。 この処理動作が便利なのは、コントロールの複合化の場合です。この場合、すべてのヒット テスト ベースの入力イベントまたはフォーカス ベースの入力イベントが、コントロールの複合部分ではなく最終的なコントロールから報告される必要があるためです。 最終的なコントロール要素は、複合のルート近くにあるため、トンネル イベントを最初にクラス処理し、コントロール クラスをサポートするコードの一部としてそのルーティング イベントをコントロール固有のイベントで "置き換える" 機会があります。  
   
- 入力イベント処理のしくみを説明するため、次の入力イベント例について考えます。 次のツリー図の `leaf element #2` は、`PreviewMouseDown` と `MouseDown` の両方のイベントの発生元です。  
+ 入力イベント処理のしくみを説明するため、次の入力イベント例について考えます。 ツリーの次の図で`leaf element #2`両方のソースである、`PreviewMouseDown`をクリックし、`MouseDown`イベント。  
   
- ![イベント ルーティング ダイアグラム](./media/wcsdkcoreinputevents.png "wcsdkCoreInputEvents")  
-入力イベントのバブルとトンネル  
+ ![イベント ルーティング ダイアグラム](./media/routed-events-overview/input-event-routing.png)  
   
  次の順序でイベントが処理されます。  
   

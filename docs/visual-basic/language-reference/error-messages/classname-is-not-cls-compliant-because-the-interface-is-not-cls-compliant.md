@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40029
 ms.assetid: 178452f3-5575-4da0-9d6c-53bcddb6a338
-ms.openlocfilehash: 063c42249abbfb506fd15311659599b4777d397f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 24a0866544cc3cd058672d18c6a7670b0b1bb489
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649882"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584212"
 ---
 # <a name="classname-is-not-cls-compliant-because-the-interface-interfacename-it-implements-is-not-cls-compliant"></a>'\<classname >' ため、CLS 準拠は、インターフェイス'\<interfacename >' に実装が CLS 準拠ではありません
 クラスまたはインターフェイスが `<CLSCompliant(True)>` としてマークされていますが、これらの派生元の型、またはこれらが実装している型が `<CLSCompliant(False)>` としてマークされているか、マークされていません。  

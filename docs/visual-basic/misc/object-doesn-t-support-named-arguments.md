@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID446
 ms.assetid: f4812db8-e85d-4d5b-b7c9-d54a1f850034
-ms.openlocfilehash: 9cbdfa92b2880b75a048520ad846492304ccdac5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 39940e23f210ecf96f96ae69adea22a57ac11268
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944886"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591824"
 ---
 # <a name="object-doesnt-support-named-arguments"></a>オブジェクトは名前付き引数をサポートしていません
 メソッドが、名前付き引数をサポートしていないオブジェクトにアクセスしようとしました。  

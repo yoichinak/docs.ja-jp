@@ -11,12 +11,12 @@ helpviewer_keywords:
 - declaring variables [Visual Basic], inferred
 - inferred variable declaration
 ms.assetid: 4ad3e6e9-8f5b-4209-a248-de22ef6e4652
-ms.openlocfilehash: 59766999c5b03aac7aec13b293feaa8c17f2ced0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a85d8012eea14abe4ddcdb35fa154245894a7f97
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784112"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582939"
 ---
 # <a name="option-infer-statement"></a>Option Infer ステートメント
 変数の宣言でローカル型推論を使用できるようにします。  

@@ -6,27 +6,27 @@ helpviewer_keywords:
 - My.Computer object [Visual Basic], tasks
 - computer resources [Visual Basic], accessing
 ms.assetid: 75b81c88-f7c0-46e0-95c8-0c006d2120f9
-ms.openlocfilehash: 7128a71f28d1755a14fcda5f09bee11202ab4154
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c53358d483868317887258c92b1aad2d9dcba00
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973878"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662691"
 ---
 # <a name="accessing-computer-resources-visual-basic"></a>コンピューター リソースへのアクセス (Visual Basic)
 
 `My.Computer` オブジェクトは、`My` の中心となる 3 つのオブジェクトの 1 つであり、情報とよく使用される機能へのアクセスを提供します。 `My.Computer` には、アプリケーションが実行されているコンピューターにアクセスするためのメソッド、プロパティ、イベントが用意されています。 そのオブジェクトには、以下のものがあります。  
   
--   <xref:Microsoft.VisualBasic.Devices.Audio>
--   クリップボード (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
--   <xref:Microsoft.VisualBasic.Devices.Clock>
--   <xref:Microsoft.VisualBasic.FileIO.FileSystem>
--   <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
--   <xref:Microsoft.VisualBasic.Devices.Keyboard>
--   <xref:Microsoft.VisualBasic.Devices.Mouse>
--   <xref:Microsoft.VisualBasic.Devices.Network>
--   <xref:Microsoft.VisualBasic.Devices.Ports>
--   レジストリ (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
+- <xref:Microsoft.VisualBasic.Devices.Audio>
+- クリップボード (<xref:Microsoft.VisualBasic.MyServices.ClipboardProxy>)
+- <xref:Microsoft.VisualBasic.Devices.Clock>
+- <xref:Microsoft.VisualBasic.FileIO.FileSystem>
+- <xref:Microsoft.VisualBasic.Devices.ServerComputer.Info%2A>
+- <xref:Microsoft.VisualBasic.Devices.Keyboard>
+- <xref:Microsoft.VisualBasic.Devices.Mouse>
+- <xref:Microsoft.VisualBasic.Devices.Network>
+- <xref:Microsoft.VisualBasic.Devices.Ports>
+- レジストリ (<xref:Microsoft.VisualBasic.MyServices.RegistryProxy>)
   
 ## <a name="in-this-section"></a>このセクションの内容
 

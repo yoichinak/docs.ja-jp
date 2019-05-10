@@ -8,23 +8,23 @@ helpviewer_keywords:
 - scenes [WPF], 3-D
 - 3-D scenes
 ms.assetid: adb4a598-71a2-4dd5-b677-ea3fc11b78b2
-ms.openlocfilehash: 8e176cb437055787da86d56770dd71323134fa33
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a431b78993d197dac99f0b6e365823acb295f0b8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910183"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64611646"
 ---
 # <a name="how-to-create-a-3-d-scene"></a>方法: 3-D シーンを作成する
 この例では、回転紙のフラットなシートのような 3-D オブジェクトを作成する方法を示します。 A<xref:System.Windows.Controls.Viewport3D>次のコンポーネントと共にこのシンプルな 3-D シーンを作成に使用されます。  
   
--   使用して、カメラを作成、<xref:System.Windows.Media.Media3D.PerspectiveCamera>します。 カメラでは、表示可能な 3-D シーンの部分を指定します。  
+- 使用して、カメラを作成、<xref:System.Windows.Media.Media3D.PerspectiveCamera>します。 カメラでは、表示可能な 3-D シーンの部分を指定します。  
   
--   使用して 3-D オブジェクト (枚の用紙) の形状を指定するメッシュが作成、<xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>プロパティの<xref:System.Windows.Media.Media3D.GeometryModel3D>します。  
+- 使用して 3-D オブジェクト (枚の用紙) の形状を指定するメッシュが作成、<xref:System.Windows.Media.Media3D.GeometryModel3D.Geometry%2A>プロパティの<xref:System.Windows.Media.Media3D.GeometryModel3D>します。  
   
--   使用して、オブジェクト (このサンプルでの線形グラデーション) の表面に表示される素材が指定されて、<xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>プロパティの<xref:System.Windows.Media.Media3D.GeometryModel3D>します。  
+- 使用して、オブジェクト (このサンプルでの線形グラデーション) の表面に表示される素材が指定されて、<xref:System.Windows.Media.Media3D.GeometryModel3D.Material%2A>プロパティの<xref:System.Windows.Media.Media3D.GeometryModel3D>します。  
   
--   オブジェクトを使用して、洗練するため、ライトが作成された<xref:System.Windows.Media.Media3D.DirectionalLight>します。  
+- オブジェクトを使用して、洗練するため、ライトが作成された<xref:System.Windows.Media.Media3D.DirectionalLight>します。  
   
 ## <a name="example"></a>例  
  次のコードでは、XAML で 3-D シーンを作成する方法を示します。  

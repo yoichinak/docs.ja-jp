@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - enumerations [Visual Basic]
 ms.assetid: e6e47b5b-3ed9-452d-a481-9c3fed88519a
-ms.openlocfilehash: ff2d8c324aee8bbccef050c020e5392368b05b1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a43c55d4ad6a895957b53ae18c3641c5383a24ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907310"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64585076"
 ---
 # <a name="when-to-use-an-enumeration-visual-basic"></a>列挙型を使用する状況 (Visual Basic)
 列挙体は、関連する定数のセットを操作する簡単な方法を提供します。 列挙型で、または`Enum`一連の値のシンボリック名です。 列挙体は、データ型として扱われ、それらを使用して、変数とプロパティを使用するための定数のセットを作成することができます。  
@@ -19,13 +19,13 @@ ms.locfileid: "61907310"
   
  列挙体を使用する利点は次のとおりです。  
   
--   置き換えや数値の入力ミスによって発生したエラーを軽減します。  
+- 置き換えや数値の入力ミスによって発生したエラーを軽減します。  
   
--   簡単に、将来の値を変更します。  
+- 簡単に、将来の値を変更します。  
   
--   により、コードを読みやすくするので、そこにエラーが生じる可能性がある可能性が低くなります。  
+- により、コードを読みやすくするので、そこにエラーが生じる可能性がある可能性が低くなります。  
   
--   前方の互換性を確保します。 列挙型をコードがメンバー名に対応する値が、今後だれかが変更された場合に失敗する可能性を低減します。  
+- 前方の互換性を確保します。 列挙型をコードがメンバー名に対応する値が、今後だれかが変更された場合に失敗する可能性を低減します。  
   
 ## <a name="naming-enumerations"></a>名前付けの列挙型  
  列挙型メンバーの名前付け規則を使用します。 Visual Basic では、列挙体のメンバー名が検出されると、他の参照先のタイプ ライブラリには、同じ名前が含まれている場合に例外がスローする可能性があります。 アプリケーションまたはコンポーネントの値を識別する一意のプレフィックスを使用します。  

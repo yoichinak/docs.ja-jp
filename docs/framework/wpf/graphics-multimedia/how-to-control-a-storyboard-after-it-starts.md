@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - Storyboards [WPF], controlling after start
 ms.assetid: 040f13f0-69f9-4ab5-be2b-079f4f80c7c0
-ms.openlocfilehash: 107391386dfbb718f9436d9a039b08439fbc3279
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 680676921e14ad69d97f3ee1c39e3ec955e66dec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61762138"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662139"
 ---
 # <a name="how-to-control-a-storyboard-after-it-starts"></a>方法: 開始後に、ストーリー ボードを制御します。
 この例では、コントロールにコードを使って、<xref:System.Windows.Media.Animation.Storyboard>開始後。 ストーリー ボードを制御する[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、<xref:System.Windows.Trigger>と<xref:System.Windows.TriggerAction>オブジェクト。 例については、次を参照してください。 [、ストーリー ボード開始後の制御をイベント トリガーを使用して](how-to-use-event-triggers-to-control-a-storyboard-after-it-starts.md)します。  

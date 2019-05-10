@@ -8,23 +8,23 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], edit mode
 - data grids [Windows Forms], edit mode
 ms.assetid: 93e117e8-94c4-411b-ba31-645e475ed85c
-ms.openlocfilehash: 7cb9278cd311d211ef95df238b930970ae472d05
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a999582aeb629646fa1843f973b10a039c29e1a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012946"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630534"
 ---
 # <a name="how-to-specify-the-edit-mode-for-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの編集モードを指定する
 既定では、ユーザーが現在の内容を編集できる<xref:System.Windows.Forms.DataGridView>テキスト ボックスのセルに入力するか、F2 キーを押します。 これにより、セル編集モードでのすべての次の条件が満たされた場合。  
   
--   基になるデータ ソースは、編集をサポートします。  
+- 基になるデータ ソースは、編集をサポートします。  
   
--   <xref:System.Windows.Forms.DataGridView>制御を有効にします。  
+- <xref:System.Windows.Forms.DataGridView>制御を有効にします。  
   
--   <xref:System.Windows.Forms.DataGridView.EditMode%2A>プロパティの値が<xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>します。  
+- <xref:System.Windows.Forms.DataGridView.EditMode%2A>プロパティの値が<xref:System.Windows.Forms.DataGridViewEditMode.EditProgrammatically>します。  
   
--   `ReadOnly`セル、行、列、およびコントロールのプロパティは、すべてのセットを`false`します。  
+- `ReadOnly`セル、行、列、およびコントロールのプロパティは、すべてのセットを`false`します。  
   
  編集モードで、ユーザーはセルの値を変更して、元の値にセルを元に戻すには、esc キー、変更をコミットするには ENTER キーを押します。  
   
@@ -32,7 +32,7 @@ ms.locfileid: "62012946"
   
 ### <a name="to-change-the-edit-mode-of-a-datagridview-control"></a>DataGridView コントロールの編集モードを変更するには  
   
--   設定、<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>プロパティを適切な<xref:System.Windows.Forms.DataGridViewEditMode>列挙体。  
+- 設定、<xref:System.Windows.Forms.DataGridView.EditMode%2A?displayProperty=nameWithType>プロパティを適切な<xref:System.Windows.Forms.DataGridViewEditMode>列挙体。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#067)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#067](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#067)]  
@@ -40,9 +40,9 @@ ms.locfileid: "62012946"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
+- `dataGridView1` という名前の <xref:System.Windows.Forms.DataGridView> コントロール。  
   
--   <xref:System> アセンブリおよび <xref:System.Windows.Forms> アセンブリへの参照。  
+- <xref:System> アセンブリおよび <xref:System.Windows.Forms> アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 

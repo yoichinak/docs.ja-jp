@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3fa0ac7d-e266-4954-bfac-3fbe2f913153
-ms.openlocfilehash: ecfd2c3a31b42b380c593aef0bbc23775874cc7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d9f349bf4e7e2a2a698dc988e5c366291169200
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878203"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211450"
 ---
 # <a name="populating-a-dataset-from-a-dataadapter"></a>DataAdapter からの DataSet の読み込み
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の <xref:System.Data.DataSet> は、データ ソースに依存しない一貫したリレーショナル プログラミング モデルを提供するメモリ常駐型のデータ表現です。 `DataSet` はテーブル、制約、およびテーブル間のリレーションシップを含む完全なデータのセットを表します。 `DataSet` はデータ ソースとは独立しているため、 `DataSet` にはそのアプリケーションに固有のデータと複数のデータ ソースからのデータを含めることができます。 既存のデータ ソースとの対話は `DataAdapter`によって制御されます。  
+[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] <xref:System.Data.DataSet>一貫性のあるリレーショナル プログラミング モデルに依存しないデータ ソースを提供するデータのメモリ常駐型の表現です。 `DataSet` はテーブル、制約、およびテーブル間のリレーションシップを含む完全なデータのセットを表します。 `DataSet` はデータ ソースとは独立しているため、 `DataSet` にはそのアプリケーションに固有のデータと複数のデータ ソースからのデータを含めることができます。 既存のデータ ソースとの対話は `DataAdapter`によって制御されます。  
   
  `SelectCommand` の `DataAdapter` プロパティは、データ ソースからデータを取得する `Command` オブジェクトです。 `InsertCommand`の `UpdateCommand`、 `DeleteCommand` 、 `DataAdapter` の各プロパティは、 `Command` のデータに対して行われた変更に基づいてデータ ソースのデータ更新を管理する `DataSet`オブジェクトです。 これらのプロパティについては説明で[Dataadapter によるデータ ソースを更新](../../../../docs/framework/data/adonet/updating-data-sources-with-dataadapters.md)します。  
   

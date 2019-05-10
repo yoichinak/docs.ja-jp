@@ -2,12 +2,12 @@
 title: 構成とメタデータのサポート
 ms.date: 03/30/2017
 ms.assetid: 27c240cb-8cab-472c-87f8-c864f4978758
-ms.openlocfilehash: abc9177fcc7b338a365d61721b63041ddcd68ab9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74dab4528ae11b60fc930a826962b71595073a7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858365"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64587723"
 ---
 # <a name="configuration-and-metadata-support"></a>構成とメタデータのサポート
 ここでは、バインディングおよびバインド要素用に構成とメタデータのサポートを有効にする方法を説明します。  
@@ -15,13 +15,13 @@ ms.locfileid: "61858365"
 ## <a name="overview-of-configuration-and-metadata"></a>構成とメタデータの概要  
  このトピックでは省略可能な項目 1、2、および 4 の次のタスクの説明で、[開発チャネル](../../../../docs/framework/wcf/extending/developing-channels.md)タスク一覧。  
   
--   バインド要素の構成ファイル サポートを有効にします。  
+- バインド要素の構成ファイル サポートを有効にします。  
   
--   バインディングの構成ファイル サポートを有効にします。  
+- バインディングの構成ファイル サポートを有効にします。  
   
--   バインド要素の WSDL とポリシー アサーションをエクスポートします。  
+- バインド要素の WSDL とポリシー アサーションをエクスポートします。  
   
--   バインディングまたはバインド要素に挿入して構成する WSDL とポリシー アサーションを特定します。  
+- バインディングまたはバインド要素に挿入して構成する WSDL とポリシー アサーションを特定します。  
   
  ユーザー定義のバインディングとバインド要素を作成する方法の詳細については、次を参照してください。[ユーザー定義バインディング](../../../../docs/framework/wcf/extending/creating-user-defined-bindings.md)と[BindingElement の作成](../../../../docs/framework/wcf/extending/creating-a-bindingelement.md)、それぞれします。  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC36532
 ms.assetid: 493f292c-d81e-40ef-8b47-61f020571829
-ms.openlocfilehash: 04eae6d2c6d64e8a0f46ae3c2801a7eb6d893dca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 912962e2ab39c4811294ccc225814b230100e12a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61918256"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592014"
 ---
 # <a name="nested-function-does-not-have-a-signature-that-is-compatible-with-delegate-delegatename"></a>入れ子になった関数には、デリゲートと互換性のあるシグネチャはありません '\<delegatename >'。
 ラムダ式は、互換性のないシグネチャを持つデリゲートに割り当てられています。 たとえば、次のコードでは、委任`Del`は 2 つの整数パラメーターがあります。  

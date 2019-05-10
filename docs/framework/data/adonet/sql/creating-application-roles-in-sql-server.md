@@ -2,12 +2,12 @@
 title: SQL Server でのアプリケーション ロールの作成
 ms.date: 03/30/2017
 ms.assetid: 27442435-dfb2-4062-8c59-e2960833a638
-ms.openlocfilehash: f836fd239eca30d0a1f4a667cddc844446d1d951
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7934c58f837cd5a4b01f823701025190be3dfe6d
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878021"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64910719"
 ---
 # <a name="creating-application-roles-in-sql-server"></a>SQL Server でのアプリケーション ロールの作成
 アプリケーション ロールは、データベース ロールやユーザーに対してではなく、アプリケーションに権限を割り当てる手段です。 ユーザーはデータベースに接続し、アプリケーション ロールをアクティブ化して、そのアプリケーションに付与された権限を使用することになります。 アプリケーション ロールに付与された権限は、接続している間のみ有効です。  

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], column fill mode
 - data grids [Windows Forms], column fill mode
 ms.assetid: b4ef7411-ebf4-4e26-bb33-aecec90de80c
-ms.openlocfilehash: a85745d39903719ec1e44ccf70df72d472720b7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 344f9856c1f3b1483bfda6f36a7e025ff2e5c78d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956282"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593433"
 ---
 # <a name="column-fill-mode-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールの列フィル モード
 列フィル モードでは、<xref:System.Windows.Forms.DataGridView> コントロールの列は、コントロールの表示領域の幅を満たすように自動的にサイズ変更されます。 すべての列の幅を <xref:System.Windows.Forms.DataGridViewColumn.MinimumWidth%2A> プロパティの値以上にするために水平スクロール バーが必要な場合を除き、コントロールに水平スクロール バーは表示されません。  
@@ -60,7 +60,7 @@ ms.locfileid: "61956282"
   
 - System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
   
-- Visual Basic または Visual C# からこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)、または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
+- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 

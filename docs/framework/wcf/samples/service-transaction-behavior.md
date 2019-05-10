@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Service Transaction Behavior Sample [Windows Communication Foundation]
 ms.assetid: 1a9842a3-e84d-427c-b6ac-6999cbbc2612
-ms.openlocfilehash: db120df1b2efd28cc484c3749bb22fc2196e9dd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 63d7fed125396e809eb2cba89663db73a56f7cec
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007904"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753037"
 ---
 # <a name="service-transaction-behavior"></a>サービス トランザクションの動作
 
