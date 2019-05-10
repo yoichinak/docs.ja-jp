@@ -2,12 +2,12 @@
 title: 型定義 (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 306b204a-ade5-47ef-95b5-c785d2da4a7e
-ms.openlocfilehash: 2e068db0ce202c26cad36c8ed7adf0acdfb8e363
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a8a0cae4599057a627cce6abebf34c7f05e821f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879555"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641393"
 ---
 # <a name="type-definitions-entity-sql"></a>型定義 (Entity SQL)
 型定義は、[!INCLUDE[esql](../../../../../../includes/esql-md.md)] Inline 関数の宣言ステートメントで使用されます。  
@@ -19,25 +19,25 @@ ms.locfileid: "61879555"
   
  型定義は、次のいずれかになります。  
   
--   識別子の型 ("Int32" や "AdventureWorks.Order" など)。  
+- 識別子の型 ("Int32" や "AdventureWorks.Order" など)。  
   
--   キーワード `COLLECTION` とそれに続くかっこに囲まれた別の型定義 (例 : "Collection(AdventureWorks.Order)")。  
+- キーワード `COLLECTION` とそれに続くかっこに囲まれた別の型定義 (例 : "Collection(AdventureWorks.Order)")。  
   
--   キーワード ROW とそれに続くかっこに囲まれたプロパティ定義リスト (例 : "Row(x AdventureWorks.Order)")。 プロパティの定義などの形式である"`identifier type_definition`、 `identifier type_definition`,..."です。  
+- キーワード ROW とそれに続くかっこに囲まれたプロパティ定義リスト (例 : "Row(x AdventureWorks.Order)")。 プロパティの定義などの形式である"`identifier type_definition`、 `identifier type_definition`,..."です。  
   
--   キーワード REF とそれに続くかっこに囲まれた識別子の型 (例 : "Ref(AdventureWorks.Order)")。 REF 型定義演算子は、引数としてエンティティ型を必要とします。 引数としてプリミティブ型を指定することはできません。  
+- キーワード REF とそれに続くかっこに囲まれた識別子の型 (例 : "Ref(AdventureWorks.Order)")。 REF 型定義演算子は、引数としてエンティティ型を必要とします。 引数としてプリミティブ型を指定することはできません。  
   
  型定義を入れ子にできます (例 : "Collection(Row(x Ref(AdventureWorks.Order)))")。  
   
  型定義のオプションは、次のとおりです。  
   
--   `IdentifierName supported_type`、または  
+- `IdentifierName supported_type`、または  
   
--   `IdentifierName` COLLECTION(`type_definition`)、または  
+- `IdentifierName` COLLECTION(`type_definition`)、または  
   
--   `IdentifierName` ROW(`property_definition`)、または  
+- `IdentifierName` ROW(`property_definition`)、または  
   
--   `IdentifierName` REF(`supported_entity_type`)  
+- `IdentifierName` REF(`supported_entity_type`)  
   
  プロパティ定義オプションは、`IdentifierName type_definition` です。  
   

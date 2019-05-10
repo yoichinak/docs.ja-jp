@@ -2,12 +2,12 @@
 title: ROW (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 06da96e8-55d7-486c-991a-4e514d837ff9
-ms.openlocfilehash: b83020601373ba93124dfb24308dd048bfa3c6dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 676080a6cc4208ea1a4d72b85a4a55e01fafe638
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797827"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641447"
 ---
 # <a name="row-entity-sql"></a>ROW (Entity SQL)
 1 つまたは複数の値から構造的に型付けされた匿名レコードを構築します。  
