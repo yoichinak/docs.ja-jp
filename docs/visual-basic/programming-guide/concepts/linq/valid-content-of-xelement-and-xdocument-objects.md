@@ -2,12 +2,12 @@
 title: XElement オブジェクトと XDocument Objects2 の有効なコンテンツ
 ms.date: 07/20/2015
 ms.assetid: 400bb692-478a-40b6-ac1b-4ccbb4cbbd02
-ms.openlocfilehash: bb5dda6bee0863a2ef951975e92c55184df9d516
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5e9b5ec54b3005d18a1a0da10d78d3c8ad5300ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61907583"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614357"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
 ここでは、コンストラクターやメソッドに渡すことができる有効な引数について説明します。これらのコンストラクターやメソッドは、コンテンツを要素やドキュメントに追加するためのものです。  
@@ -17,35 +17,35 @@ ms.locfileid: "61907583"
   
  単純コンテンツを追加するときに、さまざまな型をこのメソッドに渡すことができます。 有効な型は、次のとおりです。  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.Decimal>  
+- <xref:System.Decimal>  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.DateTime>  
+- <xref:System.DateTime>  
   
--   <xref:System.TimeSpan>  
+- <xref:System.TimeSpan>  
   
--   <xref:System.DateTimeOffset>  
+- <xref:System.DateTimeOffset>  
   
--   `Object.ToString` を実装する任意の型  
+- `Object.ToString` を実装する任意の型  
   
--   <xref:System.Collections.Generic.IEnumerable%601> を実装する任意の型  
+- <xref:System.Collections.Generic.IEnumerable%601> を実装する任意の型  
   
  複合コンテンツを追加するときは、次のような型をこのメソッドに渡すことができます。  
   
--   <xref:System.Xml.Linq.XObject>  
+- <xref:System.Xml.Linq.XObject>  
   
--   <xref:System.Xml.Linq.XNode>  
+- <xref:System.Xml.Linq.XNode>  
   
--   <xref:System.Xml.Linq.XAttribute>  
+- <xref:System.Xml.Linq.XAttribute>  
   
--   <xref:System.Collections.Generic.IEnumerable%601> を実装する任意の型  
+- <xref:System.Collections.Generic.IEnumerable%601> を実装する任意の型  
   
  オブジェクトが <xref:System.Collections.Generic.IEnumerable%601> を実装している場合、オブジェクト内のコレクションが列挙され、コレクション内のすべての項目が追加されます。 コレクションに <xref:System.Xml.Linq.XNode> オブジェクトまたは <xref:System.Xml.Linq.XAttribute> オブジェクトが含まれている場合、コレクション内の各項目が個別に追加されます。 コレクションにテキスト (またはテキストに変換されるオブジェクト) が含まれている場合、コレクション内のテキストが連結され、1 つのテキスト ノードとして追加されます。  
   
@@ -62,15 +62,15 @@ ms.locfileid: "61907583"
   
  ドキュメントの有効なコンテンツは次のとおりです。  
   
--   0 個または 1 個の <xref:System.Xml.Linq.XDocumentType> オブジェクト。 ドキュメントの型は、要素の前に置く必要があります。  
+- 0 個または 1 個の <xref:System.Xml.Linq.XDocumentType> オブジェクト。 ドキュメントの型は、要素の前に置く必要があります。  
   
--   0 個または 1 個の要素。  
+- 0 個または 1 個の要素。  
   
--   0 個以上のコメント。  
+- 0 個以上のコメント。  
   
--   0 個以上の処理命令。  
+- 0 個以上の処理命令。  
   
--   空白のみを含む、0 個以上のテキスト ノード。  
+- 空白のみを含む、0 個以上のテキスト ノード。  
   
 ## <a name="constructors-and-functions-that-allow-adding-content"></a>コンテンツの追加が可能なコンストラクターと関数  
  次のメソッドを使用すると、<xref:System.Xml.Linq.XElement> または <xref:System.Xml.Linq.XDocument> に子コンテンツを追加できます。  

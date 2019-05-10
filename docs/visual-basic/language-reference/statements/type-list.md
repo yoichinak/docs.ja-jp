@@ -24,12 +24,12 @@ helpviewer_keywords:
 - type parameters
 - constraints, Class keyword
 ms.assetid: 56db947a-2ae8-40f2-a70a-960764e9d0db
-ms.openlocfilehash: d071e59d94e51ca55167983d0ee3098bd5c7dd8f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aae9135207bbd3f9d0cc7c072e423a50902c372a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698630"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751504"
 ---
 # <a name="type-list-visual-basic"></a>型リスト (Visual Basic)
 

@@ -2,12 +2,12 @@
 title: モデル宣言関数
 ms.date: 03/30/2017
 ms.assetid: aba87f13-5685-4f6b-ad14-918e8a7d5c2a
-ms.openlocfilehash: c9abf9a3340cd22ab5d654588b1d22e10b5c05fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a0bea36693122c77d9c1abdf4484ee8e68627a0c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772113"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645870"
 ---
 # <a name="model-declared-function"></a>モデル宣言関数
 A*モデル宣言関数*が概念モデルで宣言されていますが、その概念モデルで定義されていない関数です。 この関数は、ホスト環境またはストレージ環境で定義します。 たとえば、モデル宣言関数は、データベースに定義された関数にマップされ、これによって概念モデルにおけるサーバー側の機能が公開される場合があります。  

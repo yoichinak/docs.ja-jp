@@ -9,12 +9,12 @@ helpviewer_keywords:
 - SyncLock statement [Visual Basic]
 - locks, threads
 ms.assetid: 14501703-298f-4d43-b139-c4b6366af176
-ms.openlocfilehash: 3a12c3ac7250ee2904d571406d5008d451c9dc35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a2bd6ca11072113d8acff78032c19d48c30933c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783826"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615123"
 ---
 # <a name="synclock-statement"></a>SyncLock ステートメント
 ブロックを実行する前にステートメント ブロックの排他ロックを取得します。  
@@ -32,7 +32,7 @@ End SyncLock
  必須。 オブジェクト参照に評価される式。  
   
  `block`  
- 任意。 ロックが取得されるときに実行されるステートメントのブロックです。  
+ 省略可能です。 ロックが取得されるときに実行されるステートメントのブロックです。  
   
  `End SyncLock`  
  終了、`SyncLock`ブロックします。  

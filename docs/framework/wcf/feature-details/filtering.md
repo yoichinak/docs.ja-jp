@@ -2,12 +2,12 @@
 title: フィルター処理
 ms.date: 03/30/2017
 ms.assetid: 4002946c-e34a-4356-8cfb-e25912a4be63
-ms.openlocfilehash: 7051e69f6a38d536251c26365a634d4ffbc46f1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46716d1a96da6ddc729992b546be56c2aec0bf5d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856701"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593502"
 ---
 # <a name="filtering"></a>フィルター処理
 Windows Communication Foundation (WCF) のフィルター処理システムは、メッセージと一致し、操作を決定する宣言型のフィルターを使用できます。 フィルターを使用してメッセージの一部を調べることで、そのメッセージで必要な操作を決定できます。 たとえば、キュー プロセスでは、XPath 1.0 クエリを使用して既知のヘッダー優先度要素をチェックし、メッセージをキューの先頭に移動するべきかどうかを決定します。  
@@ -36,9 +36,9 @@ Windows Communication Foundation (WCF) のフィルター処理システムは�
 ### <a name="endpoint-address-filters"></a>エンドポイント アドレス フィルター  
  <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> は、メッセージのヘッダー コレクションに示されるエンドポイント アドレスに基づいて、メッセージおよびメッセージ バッファーのフィルター処理を行います。 メッセージがこのようなフィルターを通過するには、次の条件を満たす必要があります。  
   
--   フィルターのアドレス URI (Uniform Resource Identifier) がメッセージの To ヘッダーのアドレスと同じであること。  
+- フィルターのアドレス URI (Uniform Resource Identifier) がメッセージの To ヘッダーのアドレスと同じであること。  
   
--   フィルターのアドレス (`address.Headers` コレクション) にある各エンドポイント パラメーターが、マッピング対象のヘッダーをメッセージ内で見つけることができること。 メッセージまたはメッセージ バッファーの追加のヘッダーは、一致を `true` の状態にしておくためであれば、許容されます。  
+- フィルターのアドレス (`address.Headers` コレクション) にある各エンドポイント パラメーターが、マッピング対象のヘッダーをメッセージ内で見つけることができること。 メッセージまたはメッセージ バッファーの追加のヘッダーは、一致を `true` の状態にしておくためであれば、許容されます。  
   
 ### <a name="prefix-endpoint-address-filters"></a>プレフィックス エンドポイント アドレス フィルター  
   
@@ -79,9 +79,9 @@ Windows Communication Foundation (WCF) のフィルター処理システムは�
 ### <a name="de-multiplexing"></a>分離化  
  複数のエンドポイントがネットワーク上の同じ `ServiceListener` から分散している場合、メッセージを分離化し、メッセージが特定のエンドポイント アドレスに属しているかどうかを確認する唯一の方法は、<xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> を使用することです。このフィルターは、ヘッダーに格納されている情報に対して検索を実行して、登録されているエンドポイントに向けられたメッセージを選択します。 このようなフィルターを通過するのは、次の両方に対応する必要なヘッダーをすべて持っているメッセージだけです。  
   
--   `EndpointAddress` にある URI  
+- `EndpointAddress` にある URI  
   
--   `EndpointAddress` で指定された <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> にある残りのエンドポイント パラメーター  
+- `EndpointAddress` で指定された <xref:System.ServiceModel.Dispatcher.EndpointAddressMessageFilter> にある残りのエンドポイント パラメーター  
   
 ## <a name="see-also"></a>関連項目
 

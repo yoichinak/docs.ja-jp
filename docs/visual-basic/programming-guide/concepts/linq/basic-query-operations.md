@@ -15,12 +15,12 @@ helpviewer_keywords:
 - grouping data [LINQ in Visual Basic]
 - Select clause [LINQ in Visual Basic]
 ms.assetid: 1146f6d0-fcb8-4f4d-8223-c9db52620d21
-ms.openlocfilehash: ed5ed56366911c3676c4413711207ac0a8f85765
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: af99a6c22239be1f9f03bafd8323c73f83df5c51
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925649"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64642273"
 ---
 # <a name="basic-query-operations-visual-basic"></a>基本的なクエリ操作 (Visual Basic)
 このトピックで説明を簡単に紹介[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]Visual Basic、およびいくつかのクエリを実行する操作の一般的な種類の式。 詳細については、次のトピックを参照してください。  

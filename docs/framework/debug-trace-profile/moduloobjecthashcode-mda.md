@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: b45366ff-2a7a-4b8e-ab01-537b72e9de68
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d8f6975d117d9920d2199c3996246822d1fdb6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9b1223839be3747b04810d6b5bd131733c41631f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753811"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614387"
 ---
 # <a name="moduloobjecthashcode-mda"></a>moduloObjectHashcode MDA
 `moduloObjectHashcode` マネージド デバッグ アシスタント (MDA) は、<xref:System.Object.GetHashCode%2A> メソッドによって返されるハッシュ コードに対してモジュロ演算を実行するように、<xref:System.Object> クラスの動作を変更します。 この MDA の既定の係数は 1 であり、これにより <xref:System.Object.GetHashCode%2A> はすべてのオブジェクトに対して 0 を返すようになります。  
@@ -46,7 +46,7 @@ ms.locfileid: "61753811"
 ## <a name="effect-on-the-runtime"></a>ランタイムへの影響  
  この MDA を有効にすると、アプリケーションの速度が低下します。 この MDA は、返されたハッシュ コードを取得し、代わりに係数で除算したときの余りを返します。  
   
-## <a name="output"></a>出力  
+## <a name="output"></a>Output  
  この MDA に出力はありません。  
   
 ## <a name="configuration"></a>構成  

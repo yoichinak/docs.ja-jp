@@ -2,12 +2,12 @@
 title: WCF Web HTTP エラー処理
 ms.date: 03/30/2017
 ms.assetid: 02891563-0fce-4c32-84dc-d794b1a5c040
-ms.openlocfilehash: 834c642e36e1551081dbe1f14529ed7596df1360
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 491c39d97c48e2f92ff258ac42b9576d407b898e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935487"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648419"
 ---
 # <a name="wcf-web-http-error-handling"></a>WCF Web HTTP エラー処理
 Windows Communication Foundation (WCF) Web HTTP エラー処理を使用すると、HTTP ステータス コードを指定する操作 (たとえば、XML または JSON) と同じ形式を使用してエラーの詳細を返す WCF Web HTTP サービスからエラーが返されることができます。  

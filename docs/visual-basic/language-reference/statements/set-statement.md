@@ -10,12 +10,12 @@ helpviewer_keywords:
 - write-only properties
 - properties [Visual Basic], write-only
 ms.assetid: 9ecc27b4-df84-420d-9075-db25455fb3cd
-ms.openlocfilehash: 0a8d95ffbabf03a0e6c9d88edb28c248b60f3252
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fb51dfbae4d9c4ef205e67ac15c5027e62a9a938
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783878"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663196"
 ---
 # <a name="set-statement-visual-basic"></a>Set ステートメント (Visual Basic)
 宣言を`Set`プロパティ プロシージャのプロパティに値を代入するために使用します。  

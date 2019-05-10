@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrID423
 ms.assetid: 471d8c1d-9edf-4014-8427-1a01b634a72d
-ms.openlocfilehash: abb272cc7cad04161b4da26de119d6ac1d4fea4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9dbb1fe51a8f2a0f788e9d19f8f2342162af3f2b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971679"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661732"
 ---
 # <a name="property-or-method-not-found"></a>プロパティまたはメソッドが見つかりません。
 参照先オブジェクトのメソッドまたはプロパティが定義されていません。  

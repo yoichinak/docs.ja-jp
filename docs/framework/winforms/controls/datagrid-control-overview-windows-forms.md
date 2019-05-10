@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 34bf38a59e4f2b1f975cf1836973d24d8a3bae32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8deb151572b8a83396e4204378783304b66216c3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904455"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648130"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid コントロールの概要 (Windows フォーム)
 > [!NOTE]
@@ -57,13 +57,13 @@ ms.locfileid: "61904455"
   
  <xref:System.Windows.Forms.DataGrid> の有効なデータ ソースには、次が含まれます。  
   
--   <xref:System.Data.DataTable> クラス  
+- <xref:System.Data.DataTable> クラス  
   
--   <xref:System.Data.DataView> クラス  
+- <xref:System.Data.DataView> クラス  
   
--   <xref:System.Data.DataSet> クラス  
+- <xref:System.Data.DataSet> クラス  
   
--   <xref:System.Data.DataViewManager> クラス  
+- <xref:System.Data.DataViewManager> クラス  
   
  ソースがデータセットの場合、データセットは、フォーム内のオブジェクト、または XML Web サービスによってフォームに渡されるオブジェクトの可能性があります。 型指定されたか、型指定されていないデータセットにバインドできます。  
   
@@ -71,11 +71,11 @@ ms.locfileid: "61904455"
   
  要素がパブリック プロパティを公開する場合は、次の構造にバインドできます。  
   
--   <xref:System.Collections.IList> インターフェイスを実装するコンポーネント。 これには 1 次元の配列が含まれます。  
+- <xref:System.Collections.IList> インターフェイスを実装するコンポーネント。 これには 1 次元の配列が含まれます。  
   
--   <xref:System.ComponentModel.IListSource> インターフェイスを実装するコンポーネント。  
+- <xref:System.ComponentModel.IListSource> インターフェイスを実装するコンポーネント。  
   
--   <xref:System.ComponentModel.IBindingList> インターフェイスを実装するコンポーネント。  
+- <xref:System.ComponentModel.IBindingList> インターフェイスを実装するコンポーネント。  
   
  使用できるデータ ソースの詳細については、「[Windows フォームがサポートするデータ ソース](../data-sources-supported-by-windows-forms.md)」を参照してください。  
   

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30001
 ms.assetid: 43c1b509-15f9-4e91-bcad-90bcb5f6f191
-ms.openlocfilehash: 1c2b30045b25c1ef6542eff74716e9919ab8af93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3110241d2c10c3018b2144dbc8234a9b6633e0c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013721"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593246"
 ---
 # <a name="statement-is-not-valid-in-a-namespace"></a>名前空間のステートメントが無効です。
 ステートメントは、名前空間のレベルに表示できません。 名前空間レベルで許可されている唯一の宣言では、モジュール、インターフェイス、クラス、デリゲート、列挙、および構造体の宣言です。  

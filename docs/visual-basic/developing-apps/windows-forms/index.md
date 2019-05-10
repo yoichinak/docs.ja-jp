@@ -2,9 +2,15 @@
 title: Windows フォーム アプリケーションの基礎 (Visual Basic)
 ms.date: 07/20/2015
 helpviewer_keywords:
-  - Windows applications
-  - 'Windows Forms, Visual Basic'
+- Windows applications
+- Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
+ms.openlocfilehash: 125c577710ed9c2b8a53e367cd22924a3ccb483c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615110"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows フォーム アプリケーションの基礎 (Visual Basic)
 Visual Basic の重要な部分は、ユーザーのコンピューターでローカルに実行する Windows フォーム アプリケーションを作成する機能です。 Visual Studio を使用して、Windows フォームを使用すると、アプリケーションとユーザー インターフェイスを作成することができます。 クラスを Windows フォーム アプリケーションが構築された、<xref:System.Windows.Forms>名前空間。  
@@ -38,7 +44,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
  これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
   
-|目的|参照トピック|  
+|目的|解決方法|  
 |--------|---------|  
 |Visual Studio で新しい Windows フォーム アプリケーションを作成します。|[チュートリアル 1: ピクチャ ビューアーを作成します。](/visualstudio/ide/tutorial-1-create-a-picture-viewer)|  
 |フォーム上のコントロールを使用します。|[方法: Windows フォームにコントロールを追加します。](../../../framework/winforms/controls/how-to-add-controls-to-windows-forms.md)|   
@@ -58,7 +64,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
  これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
   
-|目的|参照トピック|  
+|目的|解決方法|  
 |--------|---------|  
 |使用して、<xref:System.Windows.Forms.BindingSource>コンポーネント|[方法: デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインドします。](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
 |使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]データ ソース|[方法: 並べ替えとフィルター処理で ADO.NET データを Windows フォーム BindingSource コンポーネント](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
@@ -73,7 +79,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
  [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] の概要については、「[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。 これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
   
-|目的|参照トピック|  
+|目的|解決方法|  
 |--------|---------|  
 |アプリケーションをデプロイします。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
 |更新プログラム、[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]展開|[方法: ClickOnce アプリケーションの更新プログラムを管理する](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
@@ -84,7 +90,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
   
  これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
   
-|目的|参照トピック|  
+|目的|解決方法|  
 |--------|---------|  
 |フォームのコンテンツを印刷します。|[方法: Windows フォームでグラフィックスを印刷します。](../../../framework/winforms/advanced/how-to-print-graphics-in-windows-forms.md)<br /><br /> [方法: Windows フォームで複数ページのテキスト ファイルを印刷します。](../../../framework/winforms/advanced/how-to-print-a-multi-page-text-file-in-windows-forms.md)|   
 |Windows フォームのセキュリティについての詳細|[Windows フォームのセキュリティの概要](../../../framework/winforms/security-in-windows-forms-overview.md)|  

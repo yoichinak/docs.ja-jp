@@ -9,12 +9,12 @@ helpviewer_keywords:
 - resources [Visual Basic], disposing
 - Using statement [Visual Basic]
 ms.assetid: 665d1580-dd54-4e96-a9a9-6be2a68948f1
-ms.openlocfilehash: fe53ea58dc98a4de793fe9dad1c3ceeac71622fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 111dba1316691b9c6c999b4c021ac06dac7c7a8d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698656"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615103"
 ---
 # <a name="using-statement-visual-basic"></a>Using ステートメント (Visual Basic)
 宣言の先頭を`Using`をブロックし、必要に応じて、ブロックを制御するシステム リソースを取得します。  

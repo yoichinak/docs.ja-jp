@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: 7ce759de004d479f5162d2ce3a965f5c40afa450
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917603"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063111"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL オブジェクト モデル
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]開発者のプログラミング言語で表されるオブジェクト モデルはリレーショナル データベースのデータ モデルにマップされます。 データ操作はオブジェクト モデルに従って行われます。  
   
  このシナリオでは、データベースに対してデータベース コマンド (`INSERT` など) を実行する必要はありません。 代わりに、オブジェクト モデル内で値を変更し、メソッドを実行します。 データベースに対してクエリを実行したり、変更を送信する必要がある場合、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、要求を正しい SQL コマンドに変換し、そのコマンドをデータベースに送信します。  
   
- ![DLinqObjectModel](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinqobjectmodel.png "DLinqObjectModel")  
+ ![Linq のオブジェクト モデルを示すスクリーン ショット。](./media/the-linq-to-sql-object-model/linq-object-model-two-tier.png)  
   
  内の最も基本的な要素、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]オブジェクト モデルとリレーショナル データ モデル内の要素との関係は、次の表に集計されます。  
   

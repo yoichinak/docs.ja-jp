@@ -2,12 +2,12 @@
 title: メッセージ配布の制限
 ms.date: 03/30/2017
 ms.assetid: 8b5ec4b8-1ce9-45ef-bb90-2c840456bcc1
-ms.openlocfilehash: d09a2be4a59a08a4bddbb1e0f4d038cd2c5ff3e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 113244e6c7eb356d70e9ffb7b85367e9feb34c54
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046694"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750652"
 ---
 # <a name="limiting-message-distribution"></a>メッセージ配布の制限
 

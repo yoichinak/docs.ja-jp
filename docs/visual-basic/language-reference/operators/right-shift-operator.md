@@ -10,12 +10,12 @@ helpviewer_keywords:
 - operator >>
 - right shift operators [Visual Basic]
 ms.assetid: 054dc6a6-47d9-47ef-82da-cfa2b59fbf8f
-ms.openlocfilehash: 8803dc2e25edde756958a243d429dd30c5c78bcf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 870460d78eb2e627de2984c79571fd5172672b55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053289"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64629131"
 ---
 # <a name="-operator-visual-basic"></a>>> 演算子 (Visual Basic)
 ビット パターン上で算術右シフトを実行します。  
@@ -46,7 +46,7 @@ result = pattern >> amount
 |データ型 `pattern`|サイズのマスク (10 進数)|サイズのマスク (16 進数)|  
 |----------------------------|---------------------------|-------------------------------|  
 |`SByte`, `Byte`|7|&AMP; H00000007|  
-|`Short`, `UShort`|16|&AMP; H0000000F|  
+|`Short`, `UShort`|15|&AMP; H0000000F|  
 |`Integer`, `UInteger`|31|&AMP; H0000001F|  
 |`Long`, `ULong`|63|&AMP; H0000003F|  
   

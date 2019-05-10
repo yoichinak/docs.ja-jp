@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: 41e099cdca4f02231fd4b1cc8bce2c4b1e511c71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878827"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645686"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView によるフィルター処理 (LINQ to DataSet)
 特定の条件に基づいてデータをフィルター処理し、UI コントロールを介してそのデータをクライアントに提供する機能は、データ バインドの重要な特徴です。 <xref:System.Data.DataView> は、データにフィルターを適用し、特定のフィルター条件を満たすデータ行のサブセットを返す方法をいくつか提供します。 フィルター処理の機能だけでなく、文字列ベース<xref:System.Data.DataView>を使用する機能もあります。[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]フィルター条件の式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 式を使用する文字列ベースのフィルターよりも、はるかに複雑で強力なフィルター処理します。  
   
  <xref:System.Data.DataView> を使用してデータをフィルター処理する方法は 2 つあります。  
   
--   Where 句を含む <xref:System.Data.DataView> クエリから [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を作成します。  
+- Where 句を含む <xref:System.Data.DataView> クエリから [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を作成します。  
   
--   <xref:System.Data.DataView> の既存の文字列ベースのフィルター機能を使用します。  
+- <xref:System.Data.DataView> の既存の文字列ベースのフィルター機能を使用します。  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>フィルター情報を含むクエリによる DataView の作成  
  <xref:System.Data.DataView> オブジェクトは [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] クエリから作成できます。 このクエリに `Where` 句が含まれている場合、<xref:System.Data.DataView> はクエリのフィルター情報を使用して作成されます。 `Where` 句内の式は、<xref:System.Data.DataView> に含めるデータ行の決定に使用され、これがフィルターの基礎となります。  
@@ -76,9 +76,9 @@ ms.locfileid: "61878827"
 ## <a name="clearing-the-filter"></a>フィルターのクリア  
  <xref:System.Data.DataView> のフィルターは、<xref:System.Data.DataView.RowFilter%2A> プロパティを使用すると、フィルタリングが設定された後にクリアできます。 <xref:System.Data.DataView> のフィルターは、2 つの異なる方法でクリアできます。  
   
--   <xref:System.Data.DataView.RowFilter%2A> プロパティを `null` に設定します。  
+- <xref:System.Data.DataView.RowFilter%2A> プロパティを `null` に設定します。  
   
--   <xref:System.Data.DataView.RowFilter%2A> プロパティを空の文字列に設定します。  
+- <xref:System.Data.DataView.RowFilter%2A> プロパティを空の文字列に設定します。  
   
 ### <a name="example"></a>例  
  次の例では、クエリから <xref:System.Data.DataView> を作成した後、<xref:System.Data.DataView.RowFilter%2A> プロパティを `null` に設定してフィルターをクリアします。  

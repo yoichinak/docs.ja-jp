@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 5e3a8bc58d0828f50feb7752eb438d41695460fa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 12296fbd503a7e9f1866f407964a5e223d1afadd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857793"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650332"
 ---
 # <a name="bindings-and-security"></a>バインディングとセキュリティ
 Windows Communication Foundation (WCF) に含まれるシステム指定のバインディングは、WCF アプリケーションをプログラムする簡単な方法を提供します。 1 つの例外を除き、すべてのバインディングにはセキュリティ スキームが含まれており、既定で有効になっています。 ここでは、セキュリティ ニーズに適した正しいバインディングの選択方法について説明します。  
@@ -35,21 +35,21 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
  このバインディングは、次のような既存のさまざまなテクノロジと共に使用できるようにデザインされています。  
   
--   ASP.NET Web サービス (ASMX) Version 1  
+- ASP.NET Web サービス (ASMX) Version 1  
   
--   Web サービス拡張 (WSE) アプリケーション  
+- Web サービス拡張 (WSE) アプリケーション  
   
--   Web サービス相互運用性で定義されている基本プロファイル (WS-は) 仕様 (<https://go.microsoft.com/fwlink/?LinkId=38955>)。  
+- Web サービス相互運用性で定義されている基本プロファイル (WS-は) 仕様 (<https://go.microsoft.com/fwlink/?LinkId=38955>)。  
   
--   WS-I で定義されている基本セキュリティ プロファイル  
+- WS-I で定義されている基本セキュリティ プロファイル  
   
  既定では、このバインディングはセキュリティで保護されません。 ASMX サービスと相互運用するように設計されています。 セキュリティを有効にした場合、このバインディングは、インターネット インフォメーション サービス (IIS: Internet Information Services) のセキュリティ機構 (基本認証、ダイジェスト、Windows 統合セキュリティなど) とシームレスに相互運用できるように設計されています。 詳細については、次を参照してください。[トランスポート セキュリティの概要](../../../../docs/framework/wcf/feature-details/transport-security-overview.md)します。 このバインディングでは、以下をサポートしています。  
   
--   HTTPS トランスポート セキュリティ  
+- HTTPS トランスポート セキュリティ  
   
--   HTTP 基本認証  
+- HTTP 基本認証  
   
--   WS-Security。  
+- WS-Security。  
   
  詳細については、「<xref:System.ServiceModel.BasicHttpSecurity>」、「<xref:System.ServiceModel.BasicHttpMessageSecurity>」、「<xref:System.ServiceModel.BasicHttpMessageCredentialType>」、および「<xref:System.ServiceModel.BasicHttpSecurityMode>」を参照してください。  
   
@@ -58,11 +58,11 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
  既定では、このバインディングは WS-Security 仕様を実装しており、WS-* 仕様を実装するサービスとの相互運用性があります。 次のセキュリティをサポートします。  
   
--   HTTPS トランスポート セキュリティ  
+- HTTPS トランスポート セキュリティ  
   
--   WS-Security。  
+- WS-Security。  
   
--   SOAP メッセージ資格情報セキュリティを使用した、HTTPS トランスポート保護による呼び出し元の認証。  
+- SOAP メッセージ資格情報セキュリティを使用した、HTTPS トランスポート保護による呼び出し元の認証。  
   
  詳細については、次を参照してください。 <xref:System.ServiceModel.WSHttpSecurity>、 <xref:System.ServiceModel.MessageSecurityOverHttp>、 <xref:System.ServiceModel.MessageCredentialType>、 <xref:System.ServiceModel.SecurityMode>、 <xref:System.ServiceModel.HttpTransportSecurity>、 <xref:System.ServiceModel.HttpClientCredentialType>、および<xref:System.ServiceModel.HttpProxyCredentialType>します。  
   
@@ -71,23 +71,23 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
  このバインディングは、双方向サービス アプリケーションを有効にするために設計されています。 このバインディングは、メッセージ ベースの転送セキュリティ用に WS-Security 仕様を実装しています。 トランスポート セキュリティは使用できません。 既定では、次の機能を提供します。  
   
--   WS-ReliableMessaging を実装して信頼性を確保します。  
+- WS-ReliableMessaging を実装して信頼性を確保します。  
   
--   WS-Security を実装して転送セキュリティおよび認証を実現します。  
+- WS-Security を実装して転送セキュリティおよび認証を実現します。  
   
--   HTTP を使用してメッセージを配信します。  
+- HTTP を使用してメッセージを配信します。  
   
--   テキスト/XML メッセージ エンコーディングを使用します。  
+- テキスト/XML メッセージ エンコーディングを使用します。  
   
  バインディングで WS-Security (メッセージ層セキュリティ) を使用すると、次のパラメーターを構成できるようになります。  
   
--   暗号アルゴリズムを決定するためのセキュリティ アルゴリズム スイート  
+- 暗号アルゴリズムを決定するためのセキュリティ アルゴリズム スイート  
   
--   以下を行うためのバインディング オプション  
+- 以下を行うためのバインディング オプション  
   
-    -   クライアントで帯域外で使用可能なサービス資格情報の提供  
+    - クライアントで帯域外で使用可能なサービス資格情報の提供  
   
-    -   チャネル セットアップの一部としてサービスからネゴシエートされるサービス資格情報の提供  
+    - チャネル セットアップの一部としてサービスからネゴシエートされるサービス資格情報の提供  
   
  詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.WSDualHttpSecurity> および <xref:System.ServiceModel.WSDualHttpSecurityMode>  
   
@@ -96,21 +96,21 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
  このバインディングは複数のコンピューター間での通信に最適化されています。 既定では、次の特性があります。  
   
--   トランスポート層セキュリティを実装します。  
+- トランスポート層セキュリティを実装します。  
   
--   Windows セキュリティを利用して、転送セキュリティと認証を確保します。  
+- Windows セキュリティを利用して、転送セキュリティと認証を確保します。  
   
--   トランスポートに TCP を使用します。  
+- トランスポートに TCP を使用します。  
   
--   バイナリ メッセージのエンコードを実装します。  
+- バイナリ メッセージのエンコードを実装します。  
   
--   WS-ReliableMessaging を実装します。  
+- WS-ReliableMessaging を実装します。  
   
  選択できる方法は次のとおりです。  
   
--   メッセージ層セキュリティ (WS-Security を使用)  
+- メッセージ層セキュリティ (WS-Security を使用)  
   
--   メッセージ資格情報を使用するトランスポート セキュリティ (TLS (Transport Layer Security) over TCP によって実現される機密性と整合性、および WS-Security によって提供される承認に使用する資格情報)  
+- メッセージ資格情報を使用するトランスポート セキュリティ (TLS (Transport Layer Security) over TCP によって実現される機密性と整合性、および WS-Security によって提供される承認に使用する資格情報)  
   
  詳細については、次を参照してください。 <xref:System.ServiceModel.NetTcpSecurity>、 <xref:System.ServiceModel.TcpTransportSecurity>、 <xref:System.ServiceModel.TcpClientCredentialType>、 <xref:System.ServiceModel.MessageSecurityOverTcp>、および<xref:System.ServiceModel.MessageCredentialType>します。  
   
@@ -119,17 +119,17 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
  このバインディングは、(通常では同じコンピューター上の) 複数プロセス間の通信に最適化されています。 既定では、このバインディングには次の特性があります。  
   
--   トランスポート セキュリティを使用して、メッセージ転送と認証を実現します。  
+- トランスポート セキュリティを使用して、メッセージ転送と認証を実現します。  
   
--   名前付きパイプを使用してメッセージを配信します。  
+- 名前付きパイプを使用してメッセージを配信します。  
   
--   バイナリ メッセージのエンコードを実装します。  
+- バイナリ メッセージのエンコードを実装します。  
   
--   暗号化とメッセージの署名を使用します。  
+- 暗号化とメッセージの署名を使用します。  
   
  選択できる方法は次のとおりです。  
   
--   Windows セキュリティを使用した認証  
+- Windows セキュリティを使用した認証  
   
  詳細については、「<xref:System.ServiceModel.NetNamedPipeSecurity>「<xref:System.ServiceModel.NetNamedPipeSecurityMode>および「<xref:System.ServiceModel.NamedPipeTransportSecurity>」を参照してください。  
   
@@ -140,9 +140,9 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
  既定では、このバインディングはトランスポート セキュリティを使用し、次のセキュリティ特性があります。  
   
--   セキュリティは無効 (なし) にできます。  
+- セキュリティは無効 (なし) にできます。  
   
--   MSMQ トランスポート セキュリティ (トランスポート)。  
+- MSMQ トランスポート セキュリティ (トランスポート)。  
   
  詳細については、次のトピックを参照してください。 <xref:System.ServiceModel.NetMsmqSecurity> および <xref:System.ServiceModel.NetMsmqSecurityMode>  
   
@@ -153,15 +153,15 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
   
  既定では、このバインディングはトランスポート セキュリティを使用し、次のセキュリティ特性があります。  
   
--   セキュリティは無効 (なし) にできます。  
+- セキュリティは無効 (なし) にできます。  
   
--   MSMQ トランスポート セキュリティ (トランスポート)。  
+- MSMQ トランスポート セキュリティ (トランスポート)。  
   
--   SOAP に基づくメッセージ セキュリティ (メッセージ)。  
+- SOAP に基づくメッセージ セキュリティ (メッセージ)。  
   
--   トランスポート セキュリティとメッセージ セキュリティ (両方)。  
+- トランスポート セキュリティとメッセージ セキュリティ (両方)。  
   
--   クライアント資格情報の種類がサポートされています。None、Windows、UserName、証明書、IssuedToken。  
+- クライアント資格情報の種類がサポートされています。None、Windows、UserName、証明書、IssuedToken。  
   
  <xref:System.ServiceModel.MessageCredentialType.Certificate> 資格情報は、セキュリティ モードが <xref:System.ServiceModel.NetMsmqSecurityMode.Both> または <xref:System.ServiceModel.NetMsmqSecurityMode.Message> に設定されている場合にのみサポートされます。  
   

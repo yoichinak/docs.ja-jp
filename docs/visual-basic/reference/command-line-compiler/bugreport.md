@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: e7b4ebc58b6fe9850b92ef945cb0d715e4369efe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ff9aa23fb6d7dee5c245ed174318f6589e7d245
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839567"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624318"
 ---
 # <a name="-bugreport"></a>-bugreport
 バグ報告を提出するときに使用できるファイルを作成します。  
@@ -31,17 +31,17 @@ ms.locfileid: "61839567"
 ## <a name="remarks"></a>Remarks  
  次の情報に追加されます`file`:  
   
--   コンパイルですべてのソース コード ファイルのコピー。  
+- コンパイルですべてのソース コード ファイルのコピー。  
   
--   コンパイルで使用されるコンパイラ オプションの一覧。  
+- コンパイルで使用されるコンパイラ オプションの一覧。  
   
--   コンパイラ、共通言語ランタイム、およびオペレーティング システムのバージョン情報。  
+- コンパイラ、共通言語ランタイム、およびオペレーティング システムのバージョン情報。  
   
--   コンパイラの出力 (指定されている場合)。  
+- コンパイラの出力 (指定されている場合)。  
   
--   求められることが、問題の説明です。  
+- 求められることが、問題の説明です。  
   
--   求められることが問題をどのように考えるの説明を修正する必要があります。  
+- 求められることが問題をどのように考えるの説明を修正する必要があります。  
   
  内のすべてのソース コード ファイルのコピーが含まれているため`file`、できるだけ小さなプログラムで (疑わしい) コード障害を再現したい場合があります。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Forms, data binding
 - Windows Forms, adding change notification for data binding
 ms.assetid: b5b10f90-0585-41d9-a377-409835262a92
-ms.openlocfilehash: 559cdee1cce84df1c4b838e249d11ba235a0c636
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b4a70f96ad256b22ce0d933a633475161160e5a4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011880"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665855"
 ---
 # <a name="change-notification-in-windows-forms-data-binding"></a>Windows フォーム データ バインディングの変更通知
 Windows フォーム データ バインドの最も重要な概念の 1 つは*変更通知*します。 いることを確認、データ ソースとバインドされたコントロール常に最新のデータ、データ バインディングの変更通知を追加する必要があります。 具体的には、バインドされたコントロールがそのデータ ソースに加えられた変更の通知を受け取ることを保証して、データ ソースは、コントロールのバインド プロパティに加えられた変更の通知されます。  

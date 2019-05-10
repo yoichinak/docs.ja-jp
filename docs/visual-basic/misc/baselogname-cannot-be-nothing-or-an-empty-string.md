@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrApplicationLogBaseNameNull
 ms.assetid: 8e7665e3-5343-45fa-bc79-64e235a0477f
-ms.openlocfilehash: 9bc6ba8af909fc3d0825297e2d9f80fc867e0bff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 32f7e149c4d93235725dd124099cd99c74e98ada
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61976976"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64658956"
 ---
 # <a name="baselogname-cannot-be-nothing-or-an-empty-string"></a>BaseLogName は、Nothing または空文字列にできません
 <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener.BaseFileName%2A> プロパティの値を `Nothing` または空の文字列にすることはできません。  

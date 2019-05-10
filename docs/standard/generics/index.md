@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 104a0018896eb95255cf4054f9402ce5160b95f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6a8792698d78b37fa42721f0ad82c0e0d3f7c8dd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61683302"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622810"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
@@ -41,17 +41,17 @@ ms.locfileid: "61683302"
   
  このトピックでは、.NET におけるジェネリックの概要と、ジェネリック型またはジェネリック メソッドの概要について説明します。 このチュートリアルは、次のセクションで構成されています。  
   
--   [ジェネリックの定義と使用](#defining_and_using_generics)  
+- [ジェネリックの定義と使用](#defining_and_using_generics)  
   
--   [ジェネリックの用語](#generics_terminology)  
+- [ジェネリックの用語](#generics_terminology)  
   
--   [クラス ライブラリと言語サポート](#class_library_and_language_support)  
+- [クラス ライブラリと言語サポート](#class_library_and_language_support)  
   
--   [入れ子にされた型とジェネリック](#nested_types_and_generics)  
+- [入れ子にされた型とジェネリック](#nested_types_and_generics)  
   
--   [関連トピック](#related_topics)  
+- [関連トピック](#related_topics)  
   
--   [参照](#reference)  
+- [参照](#reference)  
   
 <a name="defining_and_using_generics"></a>   
 ## <a name="defining-and-using-generics"></a>ジェネリックの定義と使用  
@@ -71,21 +71,21 @@ ms.locfileid: "61683302"
 ### <a name="generics-terminology"></a>ジェネリックの用語  
  .NET におけるジェネリックの説明では、次の用語が使用されます。  
   
--   *ジェネリック型定義* は、テンプレートとして機能するクラス、構造体、またはインターフェイスの宣言で、格納または使用できる型のプレースホルダーを含みます。 たとえば、 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> クラスには、キーと値の 2 つの型を含めることができます。 ジェネリック型定義は単なるテンプレートであるため、ジェネリック型定義のクラス、構造体、またはインターフェイスのインスタンスを作成することはできません。  
+- *ジェネリック型定義* は、テンプレートとして機能するクラス、構造体、またはインターフェイスの宣言で、格納または使用できる型のプレースホルダーを含みます。 たとえば、 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> クラスには、キーと値の 2 つの型を含めることができます。 ジェネリック型定義は単なるテンプレートであるため、ジェネリック型定義のクラス、構造体、またはインターフェイスのインスタンスを作成することはできません。  
   
--   *ジェネリック型パラメーター*(または *型パラメーター*) は、ジェネリック型定義またはジェネリック メソッド定義のプレースホルダーです。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ジェネリック型には、そのキーと値の型を表す 2 つの型パラメーター `TKey` と `TValue`があります。  
+- *ジェネリック型パラメーター*(または *型パラメーター*) は、ジェネリック型定義またはジェネリック メソッド定義のプレースホルダーです。 <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> ジェネリック型には、そのキーと値の型を表す 2 つの型パラメーター `TKey` と `TValue`があります。  
   
--   *構築ジェネリック型*(または *構築型*) は、ジェネリック型定義のジェネリック型パラメーターに型を指定することによって得られる結果です。  
+- *構築ジェネリック型*(または *構築型*) は、ジェネリック型定義のジェネリック型パラメーターに型を指定することによって得られる結果です。  
   
--   *ジェネリック型引数* は、ジェネリック型パラメーターを置き換える任意の型です。  
+- *ジェネリック型引数* は、ジェネリック型パラメーターを置き換える任意の型です。  
   
--   一般的な用語である *ジェネリック型* には、構築型とジェネリック型定義の両方が含まれます。  
+- 一般的な用語である *ジェネリック型* には、構築型とジェネリック型定義の両方が含まれます。  
   
--   ジェネリック型パラメーターの*共変性*と*反変性*を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、*"分散"* と総称されます。 詳細については、「[共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)」を参照してください。  
+- ジェネリック型パラメーターの*共変性*と*反変性*を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、*"分散"* と総称されます。 詳細については、「[共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)」を参照してください。  
   
--   *制約* は、ジェネリック型パラメーターに適用される制限です。 たとえば、型パラメーターを、 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ジェネリック インターフェイスを実装する型に制限して、型のインスタンスを並べ替えることができるようにできます。 また、型パラメーターを、特定の基本クラスや既定のコンストラクターを持つ型、または参照型や値型に制約できます。 ジェネリック型のユーザーは、制約を満たさない型引数に置き換えることはできません。  
+- *制約* は、ジェネリック型パラメーターに適用される制限です。 たとえば、型パラメーターを、 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ジェネリック インターフェイスを実装する型に制限して、型のインスタンスを並べ替えることができるようにできます。 また、型パラメーターを、特定の基本クラスや既定のコンストラクターを持つ型、または参照型や値型に制約できます。 ジェネリック型のユーザーは、制約を満たさない型引数に置き換えることはできません。  
   
--   *ジェネリック メソッド定義* は、ジェネリック型パラメーターのリストと仮パラメーターのリストの 2 つのパラメーター リストを持つメソッドです。 次のコードに示すように、型パラメーターは、戻り値の型または仮パラメーターの型として指定できます。  
+- *ジェネリック メソッド定義* は、ジェネリック型パラメーターのリストと仮パラメーターのリストの 2 つのパラメーター リストを持つメソッドです。 次のコードに示すように、型パラメーターは、戻り値の型または仮パラメーターの型として指定できます。  
   
  [!code-cpp[Conceptual.Generics.Overview#4](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.generics.overview/cpp/source.cpp#4)]
  [!code-csharp[Conceptual.Generics.Overview#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.generics.overview/cs/source.cs#4)]
@@ -103,29 +103,29 @@ ms.locfileid: "61683302"
 ## <a name="advantages-and-disadvantages-of-generics"></a>ジェネリックの利点と欠点  
  ジェネリック コレクションやジェネリック デリゲートを使用することには多くの利点があります。  
   
--   インライン関数はタイプ セーフです。 ジェネリックによって、タイプ セーフの負担がユーザーからコンパイラに移ります。 コンパイル時に正しいデータ型が適用されるため、これをテストするためのコードを記述する必要はありません。 型キャストの必要性や、ランタイム エラーが発生する可能性が減少します。  
+- インライン関数はタイプ セーフです。 ジェネリックによって、タイプ セーフの負担がユーザーからコンパイラに移ります。 コンパイル時に正しいデータ型が適用されるため、これをテストするためのコードを記述する必要はありません。 型キャストの必要性や、ランタイム エラーが発生する可能性が減少します。  
   
--   コードは少なければ少ないほど再利用が容易になります。 基本型から継承してメンバーをオーバーライドする必要はありません。 たとえば、 <xref:System.Collections.Generic.LinkedList%601> はすぐに使える状態になっています。 たとえば、次の変数宣言で文字列のリンク リストを作成できます。  
+- コードは少なければ少ないほど再利用が容易になります。 基本型から継承してメンバーをオーバーライドする必要はありません。 たとえば、 <xref:System.Collections.Generic.LinkedList%601> はすぐに使える状態になっています。 たとえば、次の変数宣言で文字列のリンク リストを作成できます。  
   
      [!code-cpp[HowToGeneric#24](../../../samples/snippets/cpp/VS_Snippets_CLR/HowToGeneric/cpp/source2.cpp#24)]
      [!code-csharp[HowToGeneric#24](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToGeneric/CS/source2.cs#24)]
      [!code-vb[HowToGeneric#24](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToGeneric/VB/source2.vb#24)]  
   
--   パフォーマンスが向上します。 通常、ジェネリック コレクション型では、値型をボックス化する必要がないため、値型の格納と操作のパフォーマンスが向上します。  
+- パフォーマンスが向上します。 通常、ジェネリック コレクション型では、値型をボックス化する必要がないため、値型の格納と操作のパフォーマンスが向上します。  
   
--   汎用デリゲートによって、複数のデリゲート クラスを作成せずにタイプ セーフなコールバックを使用できます。 たとえば、 <xref:System.Predicate%601> 汎用デリゲートを使用すると、特定の型を対象とした独自の検索条件を実装するメソッドを作成し、 <xref:System.Array> 、 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>などの <xref:System.Array.FindAll%2A>型のメソッドと共に自分のメソッドを使用することができます。  
+- 汎用デリゲートによって、複数のデリゲート クラスを作成せずにタイプ セーフなコールバックを使用できます。 たとえば、 <xref:System.Predicate%601> 汎用デリゲートを使用すると、特定の型を対象とした独自の検索条件を実装するメソッドを作成し、 <xref:System.Array> 、 <xref:System.Array.Find%2A>、 <xref:System.Array.FindLast%2A>などの <xref:System.Array.FindAll%2A>型のメソッドと共に自分のメソッドを使用することができます。  
   
--   ジェネリックによって、動的に生成されるコードが簡略化されます。 動的に生成されるコードでジェネリックを使用する場合、型を生成する必要がありません。 これにより、アセンブリ全体を生成する代わりに軽量の動的メソッドを使用できるシナリオの数が増えます。 詳細については、「[方法 :動的メソッドを定義および実行する](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)」と <xref:System.Reflection.Emit.DynamicMethod> をご覧ください。  
+- ジェネリックによって、動的に生成されるコードが簡略化されます。 動的に生成されるコードでジェネリックを使用する場合、型を生成する必要がありません。 これにより、アセンブリ全体を生成する代わりに軽量の動的メソッドを使用できるシナリオの数が増えます。 詳細については、「[方法 :動的メソッドを定義および実行する](../../../docs/framework/reflection-and-codedom/how-to-define-and-execute-dynamic-methods.md)」と <xref:System.Reflection.Emit.DynamicMethod> をご覧ください。  
   
  ジェネリックの制限事項を次に示します。  
   
--   ジェネリック型は、 <xref:System.MarshalByRefObject> などのほとんどの基本クラスから派生できます (制約を使用して、ジェネリック型パラメーターが <xref:System.MarshalByRefObject>のような基本クラスから派生することを要求できます)。 ただし、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、コンテキスト バインドのジェネリック型はサポートしていません。 ジェネリック型は、 <xref:System.ContextBoundObject>から派生できますが、その型のインスタンスを作成しようとすると、 <xref:System.TypeLoadException>が発生します。  
+- ジェネリック型は、 <xref:System.MarshalByRefObject> などのほとんどの基本クラスから派生できます (制約を使用して、ジェネリック型パラメーターが <xref:System.MarshalByRefObject>のような基本クラスから派生することを要求できます)。 ただし、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、コンテキスト バインドのジェネリック型はサポートしていません。 ジェネリック型は、 <xref:System.ContextBoundObject>から派生できますが、その型のインスタンスを作成しようとすると、 <xref:System.TypeLoadException>が発生します。  
   
--   列挙型にジェネリック型パラメーターを含めることはできません。 列挙型が、単なる偶然によってジェネリックのみになる可能性はあります (たとえば、Visual Basic、C#、または C++ を使用して定義されたジェネリック型に入れ子にされているため)。 詳細については、「 [Common Type System](../../../docs/standard/base-types/common-type-system.md)」の「列挙型」を参照してください。  
+- 列挙型にジェネリック型パラメーターを含めることはできません。 列挙型が、単なる偶然によってジェネリックのみになる可能性はあります (たとえば、Visual Basic、C#、または C++ を使用して定義されたジェネリック型に入れ子にされているため)。 詳細については、「 [Common Type System](../../../docs/standard/base-types/common-type-system.md)」の「列挙型」を参照してください。  
   
--   軽量の動的メソッドをジェネリックにすることはできません。  
+- 軽量の動的メソッドをジェネリックにすることはできません。  
   
--   Visual Basic、C#、および C++ で、ジェネリック型に囲まれている入れ子にされた型は、外側のすべての型の型パラメーターに型が割り当てられていない限り、インスタンス化できません。 言い換えると、リフレクションでは、これらの言語を使用して定義されている入れ子にされた型には、その外側のすべての型の型パラメーターが含まれます。 これによって、外側の型の型パラメーターを、入れ子にされた型のメンバー定義で使用できます。 詳細については、「 <xref:System.Type.MakeGenericType%2A>」の「入れ子にされた型」を参照してください。  
+- Visual Basic、C#、および C++ で、ジェネリック型に囲まれている入れ子にされた型は、外側のすべての型の型パラメーターに型が割り当てられていない限り、インスタンス化できません。 言い換えると、リフレクションでは、これらの言語を使用して定義されている入れ子にされた型には、その外側のすべての型の型パラメーターが含まれます。 これによって、外側の型の型パラメーターを、入れ子にされた型のメンバー定義で使用できます。 詳細については、「 <xref:System.Type.MakeGenericType%2A>」の「入れ子にされた型」を参照してください。  
   
     > [!NOTE]
     >  動的アセンブリでコードを出力するか [Ilasm.exe (IL アセンブラー)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) を使用して定義されている入れ子にされた型に、外側の型の型パラメーターを含める必要はありません。ただし、これらを含んでいない場合、型パラメーターは入れ子にされたクラスのスコープから外れます。  
@@ -138,9 +138,9 @@ ms.locfileid: "61683302"
 ## <a name="class-library-and-language-support"></a>クラス ライブラリと言語サポート  
  .NET では、次の名前空間に多数のジェネリック コレクション クラスが用意されています。  
   
--   <xref:System.Collections.Generic> 名前空間には、<xref:System.Collections.Generic.List%601> ジェネリック クラスや <xref:System.Collections.Generic.Dictionary%602> ジェネリック クラスなど、.NET で用意されているほとんどのジェネリック コレクション型が含まれています。  
+- <xref:System.Collections.Generic> 名前空間には、<xref:System.Collections.Generic.List%601> ジェネリック クラスや <xref:System.Collections.Generic.Dictionary%602> ジェネリック クラスなど、.NET で用意されているほとんどのジェネリック コレクション型が含まれています。  
   
--   <xref:System.Collections.ObjectModel> 名前空間には、<xref:System.Collections.ObjectModel.ReadOnlyCollection%601> ジェネリック クラスなど、クラスのユーザーにオブジェクト モデルを公開するために役立つ追加のジェネリック コレクション型が含まれています。  
+- <xref:System.Collections.ObjectModel> 名前空間には、<xref:System.Collections.ObjectModel.ReadOnlyCollection%601> ジェネリック クラスなど、クラスのユーザーにオブジェクト モデルを公開するために役立つ追加のジェネリック コレクション型が含まれています。  
   
  並べ替えと等価比較を実装するためのジェネリック インターフェイスは、イベント ハンドラー、変換、および検索述語の汎用デリゲート型と共に、 <xref:System> 名前空間に用意されています。  
   

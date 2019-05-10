@@ -2,13 +2,19 @@
 title: 管理と診断
 ms.date: 03/30/2017
 helpviewer_keywords:
-  - 'Windows Communication Foundation, diagnostics'
-  - 'Windows Communication Foundation, administration'
-  - 'diagnostics [WCF]'
-  - 'WCF, diagnostics'
-  - 'administration [WCF]'
-  - 'WCF, administration'
+- Windows Communication Foundation, diagnostics
+- Windows Communication Foundation, administration
+- diagnostics [WCF]
+- WCF, diagnostics
+- administration [WCF]
+- WCF, administration
 ms.assetid: 34c81c08-0e0f-4fbc-9ae8-91948640ee43
+ms.openlocfilehash: 5df95c6b5f91cd4f36bd03c1bd291f7a44025ee9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600085"
 ---
 # <a name="administration-and-diagnostics"></a>管理と診断
 Windows Communication Foundation (WCF) は、アプリケーションのライフ サイクルのさまざまな段階を監視するのに役立つ機能の豊富なセットを提供します。 たとえば、展開時に構成を使用してサービスとクライアントを設定できます。 WCF には、多数アプリケーションのパフォーマンスの測定に役立つパフォーマンス カウンターにはが含まれています。 WCF には、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時のサービスの検査データも公開します。 アプリケーションにエラーが発生したり、適切に動作しなくなったりした場合は、イベント ログを使用して、何か重大なことが発生していないかを確認できます。 メッセージ ログとトレースを使用して、アプリケーションでどのようなイベントが発生しているのかをエンドツーエンドで確認することもできます。 これらの機能は、開発者や IT プロフェッショナルの両方が正しく動作しない場合、WCF アプリケーションのトラブルシューティングに役立ちます。  

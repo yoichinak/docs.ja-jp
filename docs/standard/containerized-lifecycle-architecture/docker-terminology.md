@@ -4,12 +4,12 @@ description: Docker を使用する場合は、毎日が使用したいくつか
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 79b1c6e01c96a906925e5b81b8ea14f988becd7c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d465065341bc58295c965853f4178b05b12a3d9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785594"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591222"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語
 
@@ -33,7 +33,7 @@ ms.locfileid: "61785594"
 
 **レジストリ**:リポジトリへのアクセス権を提供するサービスです。 ほとんどのパブリック イメージの既定のレジストリは [Docker Hub](https://hub.docker.com/) です (Docker によって組織として所有されている)。 レジストリには、通常、複数のチームからのリポジトリが含まれています。 企業は、多くの場合、自社で作成したイメージを格納および管理するためのプライベート レジストリを持っています。 Azure Container Registry は別の例となります。
 
-**マルチアーキテクチャ イメージ**:マルチ アーキテクチャは、Docker が実行されている、たとえば、Dockerfile は、基本イメージを要求したときにプラットフォームに応じて、適切なイメージの選択を簡略化する機能は、 **`FROM mcr.microsoft.com/dotnet/core/sdk:2.1`** レジストリから実際に取得 **`2.1-nanoserver-1709`**、 **`2.1-nanoserver-1803`**、 **`2.1-nanoserver-1809`** または **`2.1-stretch`**、オペレーティング システムと Docker が実行されているバージョンによって異なります。
+**マルチアーキテクチャ イメージ**:マルチ アーキテクチャは、Docker が実行されている、たとえば、Dockerfile は、基本イメージを要求したときにプラットフォームに応じて、適切なイメージの選択を簡略化する機能は、 **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** レジストリから実際に取得 **`2.2-nanoserver-1709`**、 **`2.2-nanoserver-1803`**、 **`2.2-nanoserver-1809`** または **`2.2-stretch`**、オペレーティング システムと Docker が実行されているバージョンによって異なります。
 
 **Docker Hub**:イメージをアップロードし、それらを操作するパブリック レジストリです。 Docker Hub は、Docker イメージ ホスティング、パブリックまたはプライベート レジストリ、ビルド トリガーおよび Web フック、さらに GitHub および Bitbucket との統合を提供します。
 

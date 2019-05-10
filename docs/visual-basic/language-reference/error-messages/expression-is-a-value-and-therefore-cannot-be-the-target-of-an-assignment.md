@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30068
 ms.assetid: d65141e1-f31e-4ac5-a3b8-0b2e02a71ebf
-ms.openlocfilehash: 3027be6ee4ed3664b81c661b6a086a3604573833
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c7fb92c963ea7fa4129cddf060fe7c0b0261fc7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802610"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665142"
 ---
 # <a name="expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment"></a>Expression は値であるため、代入式のターゲットにすることはできません。
 ステートメントは、式に値を代入しようとします。 実行時に、書き込み可能な変数、プロパティ、または配列要素にのみ値を割り当てることができます。 次の例では、このエラーは発生する方法を示しています。  
@@ -49,13 +49,13 @@ exitButton.Location = exitLocation
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   ステートメントは、式に値を割り当てます場合、は、書き込み可能な 1 つの変数、プロパティ、または配列要素で式を置き換えます。  
+- ステートメントは、式に値を割り当てます場合、は、書き込み可能な 1 つの変数、プロパティ、または配列要素で式を置き換えます。  
   
--   ステートメントが値型 (通常は構造体) を通じて間接的にアクセスする場合、値の型を保持する変数を作成します。  
+- ステートメントが値型 (通常は構造体) を通じて間接的にアクセスする場合、値の型を保持する変数を作成します。  
   
--   適切な構造体 (またはその他の値の型) を変数に割り当てます。  
+- 適切な構造体 (またはその他の値の型) を変数に割り当てます。  
   
--   値を代入するのにプロパティにアクセスするのにには、変数を使用します。  
+- 値を代入するのにプロパティにアクセスするのにには、変数を使用します。  
   
 ## <a name="see-also"></a>関連項目
 

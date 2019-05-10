@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ByVal keyword [Visual Basic], Sub statements
 - Visual Basic code, Sub procedures
 ms.assetid: e347d700-d06c-405b-b302-e9b1edb57dfc
-ms.openlocfilehash: ab94865f4881b40b38f67eb40d2f9fa2e1982af8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 00e2f313e283259ea44dd6da71530bed4bff31c5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783839"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751176"
 ---
 # <a name="sub-statement-visual-basic"></a>Sub ステートメント (Visual Basic)
 

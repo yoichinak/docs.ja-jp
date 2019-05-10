@@ -2,12 +2,12 @@
 title: '方法: 要素名 (LINQ to XML) をフィルター処理 (Visual Basic)'
 ms.date: 07/20/2015
 ms.assetid: b1437b4a-48aa-4546-834a-d6d3ab015fe1
-ms.openlocfilehash: 868647ba9536886ea84fa10d94738ff0f29d8f02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 18b1fff128c648d04f0b1217214d3c055674e5f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037077"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614902"
 ---
 # <a name="how-to-filter-on-element-names-linq-to-xml-visual-basic"></a>方法: 要素名 (LINQ to XML) をフィルター処理 (Visual Basic)
 <xref:System.Collections.Generic.IEnumerable%601> の <xref:System.Xml.Linq.XElement> を返すメソッドのいずれかを呼び出す際に、要素名をフィルター処理できます。  

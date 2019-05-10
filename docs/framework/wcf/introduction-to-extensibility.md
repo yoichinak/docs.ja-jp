@@ -6,12 +6,12 @@ helpviewer_keywords:
 - Windows Communication Foundation [WCF], extensibility
 - extensibility [WCF]
 ms.assetid: ef56c251-d63c-4b3f-944f-b0c67bfb0f68
-ms.openlocfilehash: 8d7b9c811c557b10160c2581a59f5ebf72882bfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8ac605b562531329333b5f05e081d89de55d8cd2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61928610"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645445"
 ---
 # <a name="introduction-to-extensibility"></a>拡張機能の概要
 Windows Communication Foundation (WCF) アプリケーションのモデルは、分散アプリケーションの通信要件の大部分を解決するために設計されています。 ただし、既定のアプリケーション モデルとシステム提供の実装でサポートされないシナリオが必ず存在します。 WCF 機能拡張モデルの目的は、アプリケーション モデル全体を置き換える点にも、すべてのレベルでシステムの動作の変更を有効にしてカスタム シナリオをサポートします。 ここでは、拡張のさまざまな領域を提示し、各領域の詳細について説明します。  

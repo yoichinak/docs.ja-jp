@@ -2,12 +2,12 @@
 title: 雇用プロセス
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: c6f542cef8e1417ed9c8d3a185252a91062e2161
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005057"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622478"
 ---
 # <a name="hiring-process"></a>雇用プロセス
 このサンプルでは、メッセージング アクティビティ、およびワークフロー サービスとしてホストされる 2 つのワークフローを使用して、ビジネス プロセスを実装する方法を示します。 この 2 つのワークフローは、Contoso, Inc という架空の会社の IT インフラストラクチャの一部です。  
@@ -18,35 +18,35 @@ ms.locfileid: "62005057"
   
  このサンプルでは、次の [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] の機能について説明します。  
   
--   ビジネス プロセスをモデル化する <xref:System.Activities.Statements.Flowchart> および <xref:System.Activities.Statements.Sequence> ワークフロー。  
+- ビジネス プロセスをモデル化する <xref:System.Activities.Statements.Flowchart> および <xref:System.Activities.Statements.Sequence> ワークフロー。  
   
--   ワークフロー サービス。  
+- ワークフロー サービス。  
   
--   メッセージング アクティビティ。  
+- メッセージング アクティビティ。  
   
--   コンテンツ ベースの相関関係。  
+- コンテンツ ベースの相関関係。  
   
--   カスタム アクティビティ (宣言型およびコードベース)。  
+- カスタム アクティビティ (宣言型およびコードベース)。  
   
--   システムで指定された SQL サーバー永続性。  
+- システムで指定された SQL サーバー永続性。  
   
--   カスタム <xref:System.Activities.Persistence.PersistenceParticipant>。  
+- カスタム <xref:System.Activities.Persistence.PersistenceParticipant>。  
   
--   カスタム追跡  
+- カスタム追跡  
   
--   Event Tracking for Windows (ETW) 追跡。  
+- Event Tracking for Windows (ETW) 追跡。  
   
--   アクティビティの構成。  
+- アクティビティの構成。  
   
--   <xref:System.Activities.Statements.Parallel> アクティビティ。  
+- <xref:System.Activities.Statements.Parallel> アクティビティ。  
   
--   <xref:System.Activities.Statements.CancellationScope> アクティビティ。  
+- <xref:System.Activities.Statements.CancellationScope> アクティビティ。  
   
--   永続的なタイマー (<xref:System.Activities.Statements.Delay> アクティビティ)。  
+- 永続的なタイマー (<xref:System.Activities.Statements.Delay> アクティビティ)。  
   
--   トランザクション。  
+- トランザクション。  
   
--   同一ソリューションの複数のワークフロー。  
+- 同一ソリューションの複数のワークフロー。  
   
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -64,25 +64,25 @@ ms.locfileid: "62005057"
   
 2. 要求者のマネージャーは、要求を承認する必要があります。  
   
-    1.  マネージャーは要求を拒否できます。  
+    1. マネージャーは要求を拒否できます。  
   
-    2.  マネージャーは、追加情報が必要な場合、要求者に要求を戻すことができます。  
+    2. マネージャーは、追加情報が必要な場合、要求者に要求を戻すことができます。  
   
-        1.  要求者は要求をレビューし、マネージャーに再承認を求めることができます。  
+        1. 要求者は要求をレビューし、マネージャーに再承認を求めることができます。  
   
-    3.  マネージャーはこれを承認します。  
+    3. マネージャーはこれを承認します。  
   
 3. 要求者のマネージャーの承認後は、その部門の責任者が要求を承認する必要があります。  
   
-    1.  部門の責任者は要求を拒否できます。  
+    1. 部門の責任者は要求を拒否できます。  
   
-    2.  部門の責任者は要求を承認できます。  
+    2. 部門の責任者は要求を承認できます。  
   
 4. 部門の責任者の承認後は、HR (人事部) の 2名のマネージャーまたは CEO (最高経営責任者) の承認を受ける必要があります。  
   
-    1.  プロセスは承認状態または拒否状態のいずれかになります。  
+    1. プロセスは承認状態または拒否状態のいずれかになります。  
   
-    2.  プロセスが [承諾済み] になると、`ResumeRequest` ワークフローの新しいインスタンスが開始されます (`ResumeRequest` はサービス参照を使用して HiringRequest.csproj にリンクされます)。  
+    2. プロセスが [承諾済み] になると、`ResumeRequest` ワークフローの新しいインスタンスが開始されます (`ResumeRequest` はサービス参照を使用して HiringRequest.csproj にリンクされます)。  
   
  マネージャーが新しい従業員の雇用を承認すると、HR は適切な応募者を採用する必要があります。 このプロセスは、2 番目のワークフロー (`ResumeRequest`。ResumeRequestService.csproj で定義。) で実行されます。 このワークフローによって、Contoso 社の外部 Careers Web サイトに求人情報を送信するプロセスが定義され、応募者から履歴書を受信し、募集の状況が監視されます。 求人は、指定した期間 (有効期間が過ぎるまで) または Contoso の従業員が削除を指定するまで有効です。 `ResumeRequest` ワークフローは、次のステップから構成されています。  
   
@@ -215,19 +215,19 @@ ms.locfileid: "62005057"
   
 2. ソリューションをビルドできない場合は、次の項目を確認してください。  
   
-    -   参照を`ContosoHR`が、`InternalClient`または`CareersWebSite`プロジェクト。  
+    - 参照を`ContosoHR`が、`InternalClient`または`CareersWebSite`プロジェクト。  
   
 3. ソフトウェアを実行できない場合は、次の項目を確認してください。  
   
-    1.  すべてのサービスが実行中である。  
+    1. すべてのサービスが実行中である。  
   
-    2.  サービス参照が更新されている。  
+    2. サービス参照が更新されている。  
   
-        1.  App_WebReferences フォルダーを開きます。  
+        1. App_WebReferences フォルダーを開きます。  
   
-        2.  右クリック**Contoso**選択**Web/サービス参照の更新**します。  
+        2. 右クリック**Contoso**選択**Web/サービス参照の更新**します。  
   
-        3.  Visual Studio で、CTRL + SHIFT + B を押して、ソリューションをリビルドします。  
+        3. Visual Studio で、CTRL + SHIFT + B を押して、ソリューションをリビルドします。  
   
 ## <a name="uninstalling"></a>アンインストール  
   

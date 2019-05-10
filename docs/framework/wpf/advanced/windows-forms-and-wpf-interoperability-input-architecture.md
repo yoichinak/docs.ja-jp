@@ -13,23 +13,23 @@ helpviewer_keywords:
 - WindowsFormsHost keyboard and messages [WPF]
 - modeless dialog boxes [WPF]
 ms.assetid: 0eb6f137-f088-4c5e-9e37-f96afd28f235
-ms.openlocfilehash: 2df754c0c47ea99c0892e0b9365da5589f2eab76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 10c3ced3bc69f12c107b8d49139f829fab4e312a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007098"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662219"
 ---
 # <a name="windows-forms-and-wpf-interoperability-input-architecture"></a>Windows フォームと WPF の相互運用性入力アーキテクチャ
 間の相互運用、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]と[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]両方のテクノロジは、適切なキーボード入力の処理である必要があります。 このトピックでは、これらのテクノロジがキーボードとメッセージ ハイブリッド アプリケーションでのスムーズな相互運用性を有効にする処理を実装する方法について説明します。  
   
  このトピックは、次の内容で構成されています。  
   
--   モードレス フォームとダイアログ ボックス  
+- モードレス フォームとダイアログ ボックス  
   
--   WindowsFormsHost のキーボードとメッセージの処理  
+- WindowsFormsHost のキーボードとメッセージの処理  
   
--   ElementHost のキーボードとメッセージの処理  
+- ElementHost のキーボードとメッセージの処理  
   
 ## <a name="modeless-forms-and-dialog-boxes"></a>モードレス フォームとダイアログ ボックス  
  呼び出す、<xref:System.Windows.Forms.Integration.WindowsFormsHost.EnableWindowsFormsInterop%2A>メソッドを<xref:System.Windows.Forms.Integration.WindowsFormsHost>からモードレス フォームまたはダイアログ ボックスを開き、要素、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーション。  
@@ -39,13 +39,13 @@ ms.locfileid: "62007098"
 ## <a name="windowsformshost-keyboard-and-message-processing"></a>WindowsFormsHost のキーボードとメッセージの処理  
  によってホストされている場合、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]-ベースのアプリケーション、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]キーボードとメッセージの処理は、以下で構成します。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>クラスからのメッセージの取得、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]によって実装されるメッセージ ループ、<xref:System.Windows.Interop.ComponentDispatcher>クラス。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>クラスからのメッセージの取得、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]によって実装されるメッセージ ループ、<xref:System.Windows.Interop.ComponentDispatcher>クラス。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>クラス作成のためのサロゲート[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]通常そのことを確認するメッセージ ループ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]キーボード処理が行われます。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>クラス作成のためのサロゲート[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]通常そのことを確認するメッセージ ループ[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]キーボード処理が行われます。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>クラスが実装する、<xref:System.Windows.Interop.IKeyboardInputSink>とフォーカス管理を調整するためのインターフェイス[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>クラスが実装する、<xref:System.Windows.Interop.IKeyboardInputSink>とフォーカス管理を調整するためのインターフェイス[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
   
--   <xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールが自身を登録し、メッセージ ループを開始します。  
+- <xref:System.Windows.Forms.Integration.WindowsFormsHost>コントロールが自身を登録し、メッセージ ループを開始します。  
   
  次のセクションでは、プロセスの詳細のこれらの部分について説明します。  
   
@@ -88,13 +88,13 @@ ms.locfileid: "62007098"
 ## <a name="elementhost-keyboard-and-message-processing"></a>ElementHost のキーボードとメッセージの処理  
  によってホストされている場合、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]アプリケーション、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]キーボードとメッセージの処理は、以下で構成します。  
   
--   <xref:System.Windows.Interop.HwndSource>、 <xref:System.Windows.Interop.IKeyboardInputSink>、および<xref:System.Windows.Interop.IKeyboardInputSite>インターフェイスの実装。  
+- <xref:System.Windows.Interop.HwndSource>、 <xref:System.Windows.Interop.IKeyboardInputSink>、および<xref:System.Windows.Interop.IKeyboardInputSite>インターフェイスの実装。  
   
--   Tab キーによる移動し、方向キー。  
+- Tab キーによる移動し、方向キー。  
   
--   コマンド キーとダイアログ ボックスのキー。  
+- コマンド キーとダイアログ ボックスのキー。  
   
--   [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アクセラレータ処理します。  
+- [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] アクセラレータ処理します。  
   
  次に、これらの部分で詳しく説明します。  
   
@@ -118,11 +118,11 @@ ms.locfileid: "62007098"
   
  既定<xref:System.Windows.Interop.HwndSource>の実装、<xref:System.Windows.Interop.IKeyboardInputSink.TranslateChar%2A>メソッドを返します。 `false`、WM_CHAR メッセージは、次のロジックを使用して処理されます。  
   
--   <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType>メソッドをオーバーライドして、ホストされている要素をすべての WM_CHAR メッセージが転送されることを確認します。  
+- <xref:System.Windows.Forms.Control.IsInputChar%2A?displayProperty=nameWithType>メソッドをオーバーライドして、ホストされている要素をすべての WM_CHAR メッセージが転送されることを確認します。  
   
--   ALT キーが押された場合、メッセージは WM_SYSCHAR です。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 使用してこのメッセージを前処理せず、<xref:System.Windows.Forms.Control.IsInputChar%2A>メソッド。 そのため、<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>メソッドをオーバーライドするクエリ、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager>登録済みのアクセラレータの。 登録済みのアクセラレータが見つかった場合<xref:System.Windows.Input.AccessKeyManager>はそれを処理します。  
+- ALT キーが押された場合、メッセージは WM_SYSCHAR です。 [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)] 使用してこのメッセージを前処理せず、<xref:System.Windows.Forms.Control.IsInputChar%2A>メソッド。 そのため、<xref:System.Windows.Forms.Control.ProcessMnemonic%2A>メソッドをオーバーライドするクエリ、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.AccessKeyManager>登録済みのアクセラレータの。 登録済みのアクセラレータが見つかった場合<xref:System.Windows.Input.AccessKeyManager>はそれを処理します。  
   
--   ALT キーが押されていない場合、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>クラスは、未処理の入力を処理します。 入力が、アクセラレータの場合、<xref:System.Windows.Input.AccessKeyManager>はそれを処理します。 <xref:System.Windows.Input.InputManager.PostProcessInput>イベントが処理されなかった WM_CHAR メッセージを処理します。  
+- ALT キーが押されていない場合、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] <xref:System.Windows.Input.InputManager>クラスは、未処理の入力を処理します。 入力が、アクセラレータの場合、<xref:System.Windows.Input.AccessKeyManager>はそれを処理します。 <xref:System.Windows.Input.InputManager.PostProcessInput>イベントが処理されなかった WM_CHAR メッセージを処理します。  
   
  ユーザーは、ALT キーを押すと、アクセラレータの視覚的な手掛かりがフォーム全体に表示されます。 この動作をサポートするためにすべて<xref:System.Windows.Forms.Integration.ElementHost>アクティブなフォーム上のコントロールがコントロールにフォーカスがある、WM_SYSKEYDOWN のメッセージを受信します。  
   

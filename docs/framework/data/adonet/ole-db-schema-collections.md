@@ -2,12 +2,12 @@
 title: OLE DB スキーマ コレクション
 ms.date: 03/30/2017
 ms.assetid: 6380c36b-658e-4d67-91e8-7131ef4a7c2c
-ms.openlocfilehash: 6dc187b0a876d9e167a74f2381db156dde2764fe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6c3441e86d4c5267418cf8002ba17d539c464d5c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771996"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645896"
 ---
 # <a name="ole-db-schema-collections"></a>OLE DB スキーマ コレクション
 ここでは、Microsoft SQL Server、Oracle、および Microsoft Jet 用の各 OLE DB プロバイダーでのスキーマ コレクションのサポートについて説明します。  
@@ -35,7 +35,7 @@ ms.locfileid: "61771996"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
+|TABLE_GUID|GUID|  
 |DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
@@ -49,7 +49,7 @@ ms.locfileid: "61771996"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|ブール型|  
@@ -57,7 +57,7 @@ ms.locfileid: "61771996"
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|ブール型|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -143,7 +143,7 @@ ms.locfileid: "61771996"
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal (10 進数型)|  
@@ -176,7 +176,7 @@ ms.locfileid: "61771996"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
+|TABLE_GUID|GUID|  
 |DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
@@ -190,7 +190,7 @@ ms.locfileid: "61771996"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|ブール型|  
@@ -198,7 +198,7 @@ ms.locfileid: "61771996"
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|ブール型|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -236,13 +236,13 @@ ms.locfileid: "61771996"
 |PROCEDURE_SCHEMA|String|  
 |PROCEDURE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ROWSET_NUMBER|Int64|  
 |ORDINAL_POSITION|Int64|  
 |IS_NULLABLE|ブール型|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -286,7 +286,7 @@ ms.locfileid: "61771996"
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal (10 進数型)|  
@@ -315,7 +315,7 @@ ms.locfileid: "61771996"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |TABLE_TYPE|String|  
-|TABLE_GUID|Guid|  
+|TABLE_GUID|GUID|  
 |DESCRIPTION|String|  
 |TABLE_PROPID|Int64|  
 |DATE_CREATED|DateTime|  
@@ -329,7 +329,7 @@ ms.locfileid: "61771996"
 |TABLE_SCHEMA|String|  
 |TABLE_NAME|String|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_HASDEFAULT|ブール型|  
@@ -337,7 +337,7 @@ ms.locfileid: "61771996"
 |COLUMN_FLAGS|Int64|  
 |IS_NULLABLE|ブール型|  
 |DATA_TYPE|Int32|  
-|TYPE_GUID|Guid|  
+|TYPE_GUID|GUID|  
 |CHARACTER_MAXIMUM_LENGTH|Int64|  
 |CHARACTER_OCTET_LENGTH|Int64|  
 |NUMERIC_PRECISION|Int32|  
@@ -403,7 +403,7 @@ ms.locfileid: "61771996"
 |NULL_COLLATION|Int32|  
 |ORDINAL_POSITION|Int64|  
 |COLUMN_NAME|String|  
-|COLUMN_GUID|Guid|  
+|COLUMN_GUID|GUID|  
 |COLUMN_PROPID|Int64|  
 |COLLATION|Int16|  
 |CARDINALITY|Decimal (10 進数型)|  

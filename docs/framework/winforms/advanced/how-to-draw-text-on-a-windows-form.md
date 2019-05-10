@@ -9,12 +9,12 @@ helpviewer_keywords:
 - forms [Windows Forms], drawing text
 - text [Windows Forms], drawing
 ms.assetid: 5d2447a9-21a1-4adc-b954-5516f2bb9b2c
-ms.openlocfilehash: ae7749deedba03f0a63bb74099d071d5da4fe27e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: dc99a863765cd617c2ab4a636286f42f5e8daf79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004082"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626192"
 ---
 # <a name="how-to-draw-text-on-a-windows-form"></a>方法: Windows フォームにテキストを描画する
 次のコード例を使用する方法を示しています、<xref:System.Drawing.Graphics.DrawString%2A>のメソッド、<xref:System.Drawing.Graphics>フォームにテキストを描画します。 また、使用することができます<xref:System.Windows.Forms.TextRenderer>フォームにテキストを描画するためです。 詳細については、「[方法 :GDI を使用してテキストの描画](how-to-draw-text-with-gdi.md)します。  

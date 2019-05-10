@@ -9,12 +9,12 @@ helpviewer_keywords:
 - arrays [Visual Basic], declaration errors
 - arrays [Visual Basic], troubleshooting
 ms.assetid: f4e971c7-c0a4-4ed7-a77a-8d71039f266f
-ms.openlocfilehash: 2b051d22fe3d331626f2e181c008043e576b7526
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69d5294eacc59718adb1b0a226594d2cf69273f5
+ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908129"
+ms.lasthandoff: 04/29/2019
+ms.locfileid: "64913462"
 ---
 # <a name="troubleshooting-arrays-visual-basic"></a>配列のトラブルシューティング (Visual Basic)
 このページには、配列を使用する場合に発生する可能性がある一般的な問題が一覧表示されます。  
@@ -22,7 +22,7 @@ ms.locfileid: "61908129"
 ## <a name="compilation-errors-declaring-and-initializing-an-array"></a>コンパイル エラーを宣言して、配列の初期化  
  宣言、作成、および配列の初期化の規則の誤解からコンパイル エラーが発生します。 エラーの最も一般的な原因は次のとおりです。  
   
--   指定する、 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)配列変数の宣言に次元の長さを指定した後の句。 次のコード行では、この型の無効な宣言を表示します。  
+- 指定する、 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)配列変数の宣言に次元の長さを指定した後の句。 次のコード行では、この型の無効な宣言を表示します。  
   
      `Dim INVALIDsingleDimByteArray(2) As Byte = New Byte()`  
   
@@ -30,15 +30,15 @@ ms.locfileid: "61908129"
   
      `Dim INVALIDjaggedByteArray(1)() As Byte = New Byte()()`  
   
--   ジャグ配列の最上位の配列の次元の長さを指定します。 次のコード行は、この型の無効な宣言を示しています。  
+- ジャグ配列の最上位の配列の次元の長さを指定します。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDjaggedByteArray(1)(1) As Byte`  
   
--   省略すると、`New`キーワード要素の値を指定する場合。 次のコード行は、この型の無効な宣言を示しています。  
+- 省略すると、`New`キーワード要素の値を指定する場合。 次のコード行は、この型の無効な宣言を示しています。  
   
      `Dim INVALIDoneDimShortArray() As Short = Short() {0, 1, 2, 3}`  
   
--   指定する、`New`中かっこのない句 (`{}`)。 次のコード行では、この型の無効な宣言を表示します。  
+- 指定する、`New`中かっこのない句 (`{}`)。 次のコード行では、この型の無効な宣言を表示します。  
   
      `Dim INVALIDsingleDimByteArray() As Byte = New Byte()`  
   

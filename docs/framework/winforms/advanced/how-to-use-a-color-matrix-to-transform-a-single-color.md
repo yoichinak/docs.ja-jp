@@ -8,12 +8,12 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 78fc498b0689026fb74ec0c422948c1879495560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954835"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063727"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>方法: カラー行列を使用して単一色を変換する
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供、<xref:System.Drawing.Image>と<xref:System.Drawing.Bitmap>クラスを格納すると、画像を操作します。 <xref:System.Drawing.Image> <xref:System.Drawing.Bitmap>オブジェクトは、32 ビットの数値として各ピクセルの色を格納します。8 ビットは赤、緑、青、およびアルファの各します。 4 つのコンポーネントのそれぞれは、0 ~ 255 の輝度がない、255 は最大輝度を表す 0 から番号です。 アルファ コンポーネントには、色の透明度を指定します。0 は完全に透明、255 は完全に不透明です。  
@@ -32,13 +32,13 @@ ms.locfileid: "61954835"
   
  次の行列の乗算を順番に、2 つの変換を実行します。  
   
- ![色の変更](./media/recoloring01.gif "recoloring01")  
+ ![変換行列乗算のスクリーン ショット。](./media/how-to-use-a-color-matrix-to-transform-a-single-color/multiplication-color-matrix.gif)
   
  カラー行列の要素は、行と列 (0 から始まる) インデックス付けられます。 たとえば、5 行目と 3 番目の列の行列 M のエントリは、M [4] [2] で表されます。  
   
  (次の図に示すように) 5 つ × 5 単位行列では、対角線上の 1 と 0 それ以外の場所が。 恒等行列によって色ベクトルを乗算する場合、色のベクターは変更されません。 色変換の行列を形成する便利な方法では、恒等行列で開始し、必要な変換を生成する少し変更します。  
   
- ![色の変更](./media/recoloring02.gif "recoloring02")  
+ ![色変換用 5 x 5 の行列のスクリーン ショット。](./media/how-to-use-a-color-matrix-to-transform-a-single-color/5x5-identity-matrix-color-transformation.gif)  
   
  マトリックスと変換の詳細については、次を参照してください。[座標系と変換](coordinate-systems-and-transformations.md)します。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "61954835"
   
  次の図は、右側の左側に、元のイメージと変換後のイメージを示します。  
   
- ![色](./media/colortrans1.png "colortrans1")  
+ ![紫色の左側と右側の正方形が赤紫の四角形。](./media/how-to-use-a-color-matrix-to-transform-a-single-color/color-transformation.png)  
   
  次の例のコードでは、次の手順を使用して、色の変更を実行します。  
   

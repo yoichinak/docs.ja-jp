@@ -4,21 +4,21 @@ ms.date: 03/30/2017
 ms.assetid: ee8c5e17-35ea-48a1-8767-83298caac1e8
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f81ff8a347235ab1a765b4f41051dab2da786b89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6bc5697e20c21d988afe6017d05e0e4de53d40d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866874"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614919"
 ---
 # <a name="net-native-general-troubleshooting"></a>.NET ネイティブの一般的なトラブルシューティング
 このトピックでは、[!INCLUDE[net_native](../../../includes/net-native-md.md)]でアプリを開発するときに発生する可能性のある問題のトラブルシューティング方法を説明します。  
   
--   **問題点:** ビルド出力ウィンドウが正しく更新されません。  
+- **問題点:** ビルド出力ウィンドウが正しく更新されません。  
   
      **解決方法:** ビルド出力ウィンドウは、ビルドが完了するまで更新されません。 ビルドには数分かかる場合があるため、更新が表示されるまでに遅延が発生することがあります。  
   
--   **問題点:** ARM のアプリの製品版ビルド時間が増加します。  
+- **問題点:** ARM のアプリの製品版ビルド時間が増加します。  
   
      **解決方法:** ARM デバイスにアプリを展開するときに、[!INCLUDE[net_native](../../../includes/net-native-md.md)]インフラストラクチャが呼び出されます。 このコンパイルは、リフレクションなどの非静的セマンティクスの実行が継続された状態で、多数の最適化を実行します。 さらに、パフォーマンスの最適化のために、.NET Framework でアプリが使用する部分は静的リンクされるため、コンパイルしてネイティブ コードにも含める必要があります。 このため、コンパイルの時間が長くなります。  
   
@@ -26,19 +26,19 @@ ms.locfileid: "61866874"
   
      現在も、マルチスレッド コンパイルやその他の最適化を調査して、コンパイルのパフォーマンスを改善する取り組みが続いています。  
   
--   **問題点:** 使用して、アプリがコンパイルされたかどうかはわからない[!INCLUDE[net_native](../../../includes/net-native-md.md)]します。  
+- **問題点:** 使用して、アプリがコンパイルされたかどうかはわからない[!INCLUDE[net_native](../../../includes/net-native-md.md)]します。  
   
      **解決方法:** 場合、[!INCLUDE[net_native](../../../includes/net-native-md.md)]コンパイラが呼び出される、ビルド、時間が長くわかりますおよびタスク マネージャーがさまざまな表示[!INCLUDE[net_native](../../../includes/net-native-md.md)]ILC.exe や nutc_driver.exe などのコンポーネントのプロセス。  
   
      [!INCLUDE[net_native](../../../includes/net-native-md.md)] でのプロジェクトのビルドが正常に完了すると、obj\\*config*\ *arch*\\*projectname*.ilc\out に出力が生成されます。最終的なネイティブ パッケージ コンテンツは、bin\\*arch*\\*config*\AppX にあります。 アプリを配置した場合、最終的なネイティブ パッケージ コンテンツは \bin\\*arch*\\*config*\AppX にあります。  
   
--   **問題点:**.NET ネイティブでコンパイルされたアプリは、ランタイムの例外のスロー (通常[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)または[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)例外) なしでコンパイルするスローされない場合。NET ネイティブです。  
+- **問題点:**.NET ネイティブでコンパイルされたアプリは、ランタイムの例外のスロー (通常[MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md)または[MissingRuntimeArtifactException](../../../docs/framework/net-native/missingruntimeartifactexception-class-net-native.md)例外) なしでコンパイルするスローされない場合。NET ネイティブです。  
   
      **解決方法:**.NET ネイティブは提供されなかったため、メタデータまたは実装コードはリフレクションを介して使用できる場合は、これらの例外がスローされます。 (詳細については、「[.NET ネイティブとコンパイル](../../../docs/framework/net-native/net-native-and-compilation.md)」を参照してください)。例外を取り除くには、[ランタイム ディレクティブ (rd.xml) ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加して、.NET Native ツール チェーンがメタデータまたは実装コードを実行時に使用できるようにする必要があります。 次の 2 つのトラブルシューティング ツールを使用して、ランタイム ディレクティブ ファイルに追加する必要があるエントリを生成できます。  
   
-    -   [MissingMetadataException トラブルシューティング ツール](https://dotnet.github.io/native/troubleshooter/type.html) (型の場合)。  
+    - [MissingMetadataException トラブルシューティング ツール](https://dotnet.github.io/native/troubleshooter/type.html) (型の場合)。  
   
-    -   [MissingMetadataException トラブルシューティング ツール](https://dotnet.github.io/native/troubleshooter/method.html) (メソッドの場合)。  
+    - [MissingMetadataException トラブルシューティング ツール](https://dotnet.github.io/native/troubleshooter/method.html) (メソッドの場合)。  
   
      詳細については、「[リフレクションおよび .NET ネイティブ](../../../docs/framework/net-native/reflection-and-net-native.md)」を参照してください。  
   

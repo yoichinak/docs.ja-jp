@@ -9,12 +9,12 @@ helpviewer_keywords:
 - drawing [Windows Forms], cardinal splines
 - graphics [Windows Forms], cardinal splines
 ms.assetid: a4a41e80-4461-4b47-b6bd-2c5e68881994
-ms.openlocfilehash: 2f03177bf97936a2ca9558972d4d82fa3e07463c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 12e938567d529b33ead93e081d380a650a803f23
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703732"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626217"
 ---
 # <a name="how-to-draw-cardinal-splines"></a>方法: カーディナル スプラインを描画する
 カーディナル スプラインは、指定した点のセットをスムーズに通過する曲線です。 カーディナル スプラインを描画するために作成、<xref:System.Drawing.Graphics>オブジェクトし、へのポインターの配列のアドレスを渡す、<xref:System.Drawing.Graphics.DrawCurve%2A>メソッド。  

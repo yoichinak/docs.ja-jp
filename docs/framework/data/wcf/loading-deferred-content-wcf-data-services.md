@@ -9,12 +9,12 @@ helpviewer_keywords:
 - WCF Data Services, deferred content
 - WCF Data Services, loading data
 ms.assetid: 32f9b588-c832-44c4-a7e0-fcce635df59a
-ms.openlocfilehash: ee7b0b40d74d908dc4f25372273f852662370df0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: db0127712ab0cb4586b364abf899bcf4765632d7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62037129"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645604"
 ---
 # <a name="loading-deferred-content-wcf-data-services"></a>遅延コンテンツの読み込み (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] の既定では、クエリが返すデータの量が制限されます。 その一方で、関連エンティティ、ページングされた応答データ、およびバイナリ データ ストリームを含む追加データをデータ サービスから必要に応じて明示的に読み込むことができます。 このトピックでは、このような遅延コンテンツをアプリケーションに読み込む方法について説明します。  
@@ -55,7 +55,7 @@ ms.locfileid: "62037129"
  詳細については、「[方法 :ページングされた結果を読み込む](../../../../docs/framework/data/wcf/how-to-load-paged-results-wcf-data-services.md)します。  
   
 ## <a name="binary-data-streams"></a>バイナリ データ ストリーム  
- [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、バイナリ ラージ オブジェクト (BLOB) データにデータ ストリームとしてアクセスできます。 ストリーミングは必要になるまでバイナリ データの読み込みを待機し、クライアントは、このデータを効率的に処理できます。 この機能を活用するには、データ サービスは <xref:System.Data.Services.Providers.IDataServiceStreamProvider> プロバイダーを実装する必要があります。 詳細については、次を参照してください。[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)します。 ストリーミングが有効である場合、エンティティ型は関連バイナリ データなしで返されます。 この場合、使用する必要があります、<xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A>のメソッド、<xref:System.Data.Services.Client.DataServiceContext>サービスからバイナリ データのデータ ストリームにアクセスするクラス。 同様に、<xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> メソッドを使用して、エンティティのバイナリ データをストリームとして追加または変更します。 詳細については、次を参照してください。[バイナリ データを扱う](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)します。  
+ [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] では、バイナリ ラージ オブジェクト (BLOB) データにデータ ストリームとしてアクセスできます。 ストリーミングは必要になるまでバイナリ データの読み込みを待機し、クライアントは、このデータを効率的に処理できます。 この機能を活用するには、データ サービスは <xref:System.Data.Services.Providers.IDataServiceStreamProvider> プロバイダーを実装する必要があります。 詳細については、[ストリーミング プロバイダー](../../../../docs/framework/data/wcf/streaming-provider-wcf-data-services.md)を参照してください。 ストリーミングが有効である場合、エンティティ型は関連バイナリ データなしで返されます。 この場合、使用する必要があります、<xref:System.Data.Services.Client.DataServiceContext.GetReadStream%2A>のメソッド、<xref:System.Data.Services.Client.DataServiceContext>サービスからバイナリ データのデータ ストリームにアクセスするクラス。 同様に、<xref:System.Data.Services.Client.DataServiceContext.SetSaveStream%2A> メソッドを使用して、エンティティのバイナリ データをストリームとして追加または変更します。 詳細については、次を参照してください。[バイナリ データを扱う](../../../../docs/framework/data/wcf/working-with-binary-data-wcf-data-services.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

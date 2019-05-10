@@ -2,12 +2,12 @@
 title: 基本データ型
 ms.date: 03/30/2017
 ms.assetid: eca2c472-9548-4800-bd31-5d8d9f11752b
-ms.openlocfilehash: 00d5c6d866453fe9ece7f2e22a579aa43c09c23e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f4ae61d4fb8e666f6d2e6663bb72cc78e777cc8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903371"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651896"
 ---
 # <a name="basic-data-types"></a>基本データ型
 LINQ to SQL クエリは、Microsoft SQL Server で実行される前に Transact-SQL に変換されるため、 LINQ to SQL は、SQL Server が基本データ型に対してサポートするのと同じ組み込み機能の多くをサポートします。  
@@ -18,9 +18,9 @@ LINQ to SQL クエリは、Microsoft SQL Server で実行される前に Transac
 ## <a name="equality-operators"></a>等値演算子  
  LINQ to SQL は、LINQ to SQL クエリ内の基本データ型で次の等値演算子をサポートします。  
   
--   等しいと非等値演算子。数値、等値演算子および非等値演算子がサポートされている<xref:System.Boolean>、 <xref:System.DateTime>、および<xref:System.TimeSpan>型。 詳細については、Visual Basic の演算子は`=`と`<>`を参照してください[比較演算子](~/docs/visual-basic/language-reference/operators/comparison-operators.md)します。 詳細についてはC#比較演算子`==`と`!=`を参照してください[等値演算子](~/docs/csharp/language-reference/operators/equality-operators.md)します。
+- 等しいと非等値演算子。数値、等値演算子および非等値演算子がサポートされている<xref:System.Boolean>、 <xref:System.DateTime>、および<xref:System.TimeSpan>型。 詳細については、Visual Basic の演算子は`=`と`<>`を参照してください[比較演算子](~/docs/visual-basic/language-reference/operators/comparison-operators.md)します。 詳細についてはC#比較演算子`==`と`!=`を参照してください[等値演算子](~/docs/csharp/language-reference/operators/equality-operators.md)します。
   
--   演算子を示します。`IS`継承のマッピングが使用されているときに、演算子がサポートされている変換します。 これは、オブジェクトが特定の種類のエンティティであるかどうかを検査する場合に、判別列を直接調べる代わりとして使用でき、判別列のチェックに変換されます。 Visual Basic の詳細については、 C# Is 演算子を参照してください[Is 演算子](~/docs/visual-basic/language-reference/operators/is-operator.md)と[は](~/docs/csharp/language-reference/keywords/is.md)します。  
+- 演算子を示します。`IS`継承のマッピングが使用されているときに、演算子がサポートされている変換します。 これは、オブジェクトが特定の種類のエンティティであるかどうかを検査する場合に、判別列を直接調べる代わりとして使用でき、判別列のチェックに変換されます。 Visual Basic の詳細については、 C# Is 演算子を参照してください[Is 演算子](~/docs/visual-basic/language-reference/operators/is-operator.md)と[は](~/docs/csharp/language-reference/keywords/is.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

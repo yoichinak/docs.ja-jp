@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XML comment literal [Visual Basic]
 - XML literals [Visual Basic], comment
 ms.assetid: 634c1cee-5e01-48d0-88d7-2dd55e4a9e52
-ms.openlocfilehash: 149bbac6d301a9c2f166d05698e3780171126cb3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7af01bda05b113be02261051421a91bdea776851
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61938646"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644571"
 ---
 # <a name="xml-comment-literal-visual-basic"></a>XML コメント リテラル (Visual Basic)
 リテラルを表す、<xref:System.Xml.Linq.XComment>オブジェクト。  

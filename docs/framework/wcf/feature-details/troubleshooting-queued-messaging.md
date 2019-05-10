@@ -2,12 +2,12 @@
 title: キューに置かれたメッセージングのトラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: a5f2836f-018d-42f5-a571-1e97e64ea5b0
-ms.openlocfilehash: c85b0701c870fe2b4a3c11dc384e890e1ed001dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 760ef4801c0881829dbc57b4022dcea4ed8c64bb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050767"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64645218"
 ---
 # <a name="troubleshooting-queued-messaging"></a>キューに置かれたメッセージングのトラブルシューティング
 このセクションには、一般的な質問とトラブルシューティングについては、Windows Communication Foundation (WCF) でキューを使用してが含まれています。  

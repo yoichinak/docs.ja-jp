@@ -11,12 +11,12 @@ helpviewer_keywords:
 - property procedures [Visual Basic], Property statements
 - Property keyword [Visual Basic]
 ms.assetid: 3155edaf-8ebd-45c6-9cef-11d5d2dc8d38
-ms.openlocfilehash: 7b2d388cbcd1995178adf4102520ecaa1c9b1889
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 55da13eec9dc555c320ecd48d22d984dfcfea84c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783995"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751056"
 ---
 # <a name="property-statement"></a>Property Statement
 
@@ -45,11 +45,11 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `attributelist`
 
-  任意。 このプロパティに適用される属性の一覧または`Get`または`Set`プロシージャ。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。
+  省略可能です。 このプロパティに適用される属性の一覧または`Get`または`Set`プロシージャ。 参照してください[属性リスト](../../../visual-basic/language-reference/statements/attribute-list.md)します。
 
 - `Default`
 
-  任意。 このプロパティは、クラスまたは構造体が定義されている既定のプロパティを指定します。 既定のプロパティのパラメーターを受け入れる必要がありますと設定し、取得できるプロパティの名前を指定せず。 としてプロパティを宣言する場合`Default`、使用することはできません`Private`プロパティまたはプロパティ プロシージャのいずれか。
+  省略可能です。 このプロパティは、クラスまたは構造体が定義されている既定のプロパティを指定します。 既定のプロパティのパラメーターを受け入れる必要がありますと設定し、取得できるプロパティの名前を指定せず。 としてプロパティを宣言する場合`Default`、使用することはできません`Private`プロパティまたはプロパティ プロシージャのいずれか。
 
 - `accessmodifier`
 
@@ -105,7 +105,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `Iterator`
 
-  任意。 参照してください[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)します。
+  省略可能です。 参照してください[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)します。
 
 - `name`
 
@@ -144,7 +144,7 @@ Property name ( [ parameterlist ] ) [ As returntype ] [ Implements implementslis
 
 - `statements`
 
-  任意。 内で実行するステートメントのブロック、`Get`または`Set`プロシージャ。
+  省略可能です。 内で実行するステートメントのブロック、`Get`または`Set`プロシージャ。
 
 - `End Get`
 

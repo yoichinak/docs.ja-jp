@@ -2,12 +2,12 @@
 title: トランザクション アプリケーションの診断
 ms.date: 03/30/2017
 ms.assetid: 4a993492-1088-4d10-871b-0c09916af05f
-ms.openlocfilehash: aca5f95e2085dfadf06da35dfd86af72c0b6092d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9a4f064d903092b04f8885fb00b56e18c9cfeb74
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856740"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751124"
 ---
 # <a name="diagnosing-transactional-applications"></a>トランザクション アプリケーションの診断
 このトピックでは、Windows Communication Foundation (WCF) の管理と診断機能を使用して、トランザクション アプリケーションをトラブルシューティングする方法について説明します。  

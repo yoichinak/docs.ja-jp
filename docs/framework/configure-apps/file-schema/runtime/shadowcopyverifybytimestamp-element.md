@@ -17,8 +17,8 @@ ms.locfileid: "61674013"
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> 要素
 シャドウ コピーが [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] で導入された既定の起動の動作を使用するか、.NET Framework の以前のバージョンの起動の動作に戻すかどうかを指定します。  
   
- \<configuration > 要素  
-\<ランタイム > 要素  
+ \<configuration> 要素  
+\<runtime> 要素  
 \<shadowCopyVerifyByTimestamp> 要素  
   
 ## <a name="syntax"></a>構文  

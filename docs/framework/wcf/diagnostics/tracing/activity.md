@@ -2,12 +2,12 @@
 title: アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 70471705-f55f-4da1-919f-4b580f172665
-ms.openlocfilehash: b93960d4006499c935c27ee18e066d091632d3d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7f498c1f2222add197f428386076148cccc9ad06
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998024"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656288"
 ---
 # <a name="activity"></a>アクティビティ
 このトピックでは、Windows Communication Foundation (WCF) トレース モデルでのアクティビティ トレースについて説明します。 アクティビティは、ユーザーがエラーの範囲を絞り込む上で役立つ処理単位です。 同じアクティビティで発生したエラーは直接関連します。 たとえば、メッセージを復号化できなかったために、ある操作が失敗したとします。 この操作とメッセージ復号化失敗のトレースは同じアクティビティ内に表示され、復号化エラーと要求エラー間の直接相関関係が示されます。  

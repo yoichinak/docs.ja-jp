@@ -5,12 +5,12 @@ helpviewer_keywords:
 - layout [WPF], automatic
 - automatic layout [WPF]
 ms.assetid: 6fed9264-18bb-4d05-8867-1fe356c6f687
-ms.openlocfilehash: 5df6d39bef137bd4005316eac252ca0952df5e7f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a9f04f6da4dc4024f4c9ece19f045eb8e3775e6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098781"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620882"
 ---
 # <a name="use-automatic-layout-overview"></a>自動レイアウトの使用の概要
 このトピックで作成する方法に関する開発者向けのガイドラインは[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]ローカライズ可能なアプリケーション[!INCLUDE[TLA#tla_ui#plural](../../../../includes/tlasharptla-uisharpplural-md.md)]します。 以前は、UI のローカライズは時間のかかるプロセスでした。 各言語 UI が変更するには、ピクセル単位で調整が必要です。 今日は、適切な設計とコーディング標準、[!INCLUDE[TLA2#tla_ui#plural](../../../../includes/tla2sharptla-uisharpplural-md.md)]ローカライザーがあるサイズ変更や、実行する位置を変更できるように構築できます。 簡単にサイズ変更や位置が変更された可能性のあるアプリケーションを作成する方法は、自動レイアウトをという名前を使用して実現できます[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アプリケーションの設計。  
@@ -19,15 +19,15 @@ ms.locfileid: "59098781"
 ## <a name="advantages-of-using-automatic-layout"></a>自動レイアウトを使用する利点  
  [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プレゼンテーション システムは強力で柔軟なさまざまな言語の要件に合わせて調整できるアプリケーションの要素をレイアウトする機能を提供します。 次の一覧は、自動レイアウトの利点の一部を示しています。  
 
--   任意の言語で UI を表示します。  
+- 任意の言語で UI を表示します。  
 
--   テキストの翻訳後のコントロールの位置とサイズを再調整する必要性が軽減されます。  
+- テキストの翻訳後のコントロールの位置とサイズを再調整する必要性が軽減されます。  
   
--   ウィンドウのサイズを再調整する必要性を軽減します。  
+- ウィンドウのサイズを再調整する必要性を軽減します。  
 
--   UI のレイアウトは、任意の言語で正しく表示します。  
+- UI のレイアウトは、任意の言語で正しく表示します。  
 
--   ローカリゼーションは、文字列の翻訳より若干高であるポイントに削減できます。  
+- ローカリゼーションは、文字列の翻訳より若干高であるポイントに削減できます。  
   
 <a name="autolayout_controls"></a>   
 ## <a name="automatic-layout-and-controls"></a>自動レイアウトとコントロール  

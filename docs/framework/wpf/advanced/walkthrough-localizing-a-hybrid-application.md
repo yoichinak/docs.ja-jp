@@ -5,12 +5,12 @@ helpviewer_keywords:
 - localization [WPF interoperability]
 - hybrid applications [WPF interoperability]
 ms.assetid: fbc0c54e-930a-4c13-8e9c-27b83665010a
-ms.openlocfilehash: 01530d4ae9779934948bbaff60fbbd392de6e701
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 86779197004f2a8e84d44aaeff2df2dacb05fb01
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007127"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621209"
 ---
 # <a name="walkthrough-localizing-a-hybrid-application"></a>チュートリアル: ハイブリッド アプリケーションのローカライズ
 
@@ -18,15 +18,15 @@ ms.locfileid: "62007127"
 
 このチュートリアルでは、以下のタスクを行います。
 
--   作成、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]ホスト プロジェクト。
+- 作成、[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]ホスト プロジェクト。
 
--   ローカライズ可能なコンテンツを追加します。
+- ローカライズ可能なコンテンツを追加します。
 
--   ローカライズを有効にします。
+- ローカライズを有効にします。
 
--   リソース識別子を割り当てます。
+- リソース識別子を割り当てます。
 
--   LocBaml ツールを使用して、サテライト アセンブリを生成します。
+- LocBaml ツールを使用して、サテライト アセンブリを生成します。
 
 このチュートリアルで示すタスクの完全なコード一覧については、次を参照してください。[ハイブリッド アプリケーションのサンプルのローカライズ](https://go.microsoft.com/fwlink/?LinkID=160015)します。
 
@@ -36,7 +36,7 @@ ms.locfileid: "62007127"
 
 このチュートリアルを実行するには、次のコンポーネントが必要です。
 
--   Visual Studio 2017
+- Visual Studio 2017
 
 ## <a name="creating-the-windows-forms-host-project"></a>Windows フォームのホスト プロジェクトの作成
 
@@ -64,7 +64,8 @@ ms.locfileid: "62007127"
 
 3. **ソリューション エクスプ ローラー**、ダブルクリックして**Form1** Windows フォーム デザイナーで開きます。
 
-4. 開く、**ツールボックス** をダブルクリックします**ラベル**ラベル コントロールをフォームに追加します。 <xref:System.Windows.Forms.Control.Text%2A> プロパティの値を `"Hello"` に設定します。
+4. 開く、**ツールボックス** をダブルクリックします**ラベル**ラベル コントロールをフォームに追加します。 
+  <xref:System.Windows.Forms.Control.Text%2A> プロパティの値を `"Hello"` に設定します。
 
 5. **F5** キーを押してアプリケーションをビルドし、実行します。
 

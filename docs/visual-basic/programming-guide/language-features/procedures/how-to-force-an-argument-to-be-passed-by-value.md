@@ -14,12 +14,12 @@ helpviewer_keywords:
 - procedure arguments [Visual Basic], in parentheses
 - arguments [Visual Basic], changing value
 ms.assetid: 77b4f2d2-1055-4c2f-a521-874d1db86946
-ms.openlocfilehash: 497ae11b858b7d164ba3b5607ff2109254a154de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 540271c414ac295c419533a4622657d60d123796
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863624"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665395"
 ---
 # <a name="how-to-force-an-argument-to-be-passed-by-value-visual-basic"></a>方法: (Visual Basic) の値によって渡される引数を強制します。
 プロシージャ宣言では、引き渡し方法を決定します。 パラメーターが宣言されている場合[ByRef](../../../../visual-basic/language-reference/modifiers/byref.md)、Visual Basic で参照によって、対応する引数を渡す必要があります。 これにより、呼び出し元のコードで引数を基になるプログラミングの要素の値を変更する手順です。 オーバーライドすることができます、基になる要素に対してこのような変更を保護する場合、`ByRef`引き渡し方法の手順では、引数名をかっこで囲んで呼び出し。 このかっこは、呼び出しの引数リストを囲むかっこだけでなく、します。  
@@ -28,9 +28,9 @@ ms.locfileid: "61863624"
   
 ### <a name="to-force-an-argument-to-be-passed-by-value"></a>引数の値渡しを強制するには  
   
--   対応するパラメーターが宣言されている場合`ByVal`の手順では、追加の手順を実行する必要はありません。 Visual Basic は、既に、値渡しの引数が必要です。  
+- 対応するパラメーターが宣言されている場合`ByVal`の手順では、追加の手順を実行する必要はありません。 Visual Basic は、既に、値渡しの引数が必要です。  
   
--   対応するパラメーターが宣言されている場合`ByRef`の手順で、プロシージャの呼び出しにかっこで囲まれた引数を囲みます。  
+- 対応するパラメーターが宣言されている場合`ByRef`の手順で、プロシージャの呼び出しにかっこで囲まれた引数を囲みます。  
   
 ## <a name="example"></a>例  
  次の例では、上書き、`ByRef`パラメーター宣言します。 強制する呼び出しで`ByVal`かっこの 2 つのレベルに注意してください。  

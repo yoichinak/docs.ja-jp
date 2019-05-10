@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - My.Settings object
 ms.assetid: 41f30dc1-202a-4273-b9b7-5728941f996c
-ms.openlocfilehash: a962f7cce961b1ee6829702a6815ba02c534efb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9533e8e1ccc51078fefcf6bf73feb2683ae8febb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050312"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625278"
 ---
 # <a name="mysettings-object"></a>My.Settings オブジェクト
 プロパティと、アプリケーションの設定にアクセスするためのメソッドを提供します。  
@@ -45,7 +45,7 @@ ms.locfileid: "62050312"
 ## <a name="tasks"></a>[タスク]  
  次の表に、関連するタスクの例については、`My.Settings`オブジェクト。  
   
-|目的|参照トピック|  
+|目的|解決方法|  
 |---|---|  
 |アプリケーション設定を読み取り|[方法: Visual Basic でアプリケーション設定を読み取る](../../../visual-basic/developing-apps/programming/app-settings/how-to-read-application-settings.md)|  
 |ユーザー設定を変更します。|[方法: Visual Basic でユーザー設定を変更する](../../../visual-basic/developing-apps/programming/app-settings/how-to-change-user-settings.md)|  

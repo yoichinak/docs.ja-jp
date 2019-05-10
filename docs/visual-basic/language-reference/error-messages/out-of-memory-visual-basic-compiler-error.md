@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC2004
 ms.assetid: 6bc0939c-e279-4875-a91c-f4076860b5b9
-ms.openlocfilehash: 2ea12139118af32df18bac805aa0b4f1267c175c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f8246c1d9d45f2e20cbecb83f61fe91de8a821d9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772516"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661896"
 ---
 # <a name="out-of-memory-visual-basic-compiler-error"></a>メモリが不足しています。(Visual Basic コンパイラ エラー)
 必要なメモリが使用可能なメモリを超えました。  

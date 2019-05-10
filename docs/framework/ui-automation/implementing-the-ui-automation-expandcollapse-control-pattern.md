@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ExpandCollapse control pattern
 - control patterns, ExpandCollapse
 ms.assetid: 1dbabb8c-0d68-47c1-a35e-1c01cb01af26
-ms.openlocfilehash: ff07f5264ccb3ec699e3676a2e9ba64443b2875f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c8607074702ab1ff5f59d447d6dd4eef3a9ef74a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61610011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64660289"
 ---
 # <a name="implementing-the-ui-automation-expandcollapse-control-pattern"></a>UI オートメーション ExpandCollapse コントロール パターンの実装
 > [!NOTE]
@@ -53,7 +53,7 @@ ms.locfileid: "61610011"
 |<xref:System.Windows.Automation.Provider.IExpandCollapseProvider.ExpandCollapseState%2A>|プロパティ|なし|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Expand%2A>|メソッド|なし|  
 |<xref:System.Windows.Automation.ExpandCollapsePattern.Collapse%2A>|メソッド|なし|  
-|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|event|このコントロールには関連付けられているイベントがありません。この汎用デリゲートを使用します。|  
+|<xref:System.Windows.Automation.AutomationPropertyChangedEventHandler>|イベント|このコントロールには関連付けられているイベントがありません。この汎用デリゲートを使用します。|  
   
 <a name="Exceptions"></a>   
 ## <a name="exceptions"></a>例外  

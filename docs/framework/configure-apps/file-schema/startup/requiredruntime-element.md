@@ -20,7 +20,9 @@ ms.locfileid: "61673843"
 
 バージョン 1.0 の共通言語ランタイムのみがアプリケーションでサポートされることを指定します。 この要素は非推奨し、使用できなくする必要があります。 [ `supportedRuntime` ](supportedruntime-element.md)要素を代わりに使用する必要があります。
 
-\<configuration> \<startup> \<requiredRuntime>
+\<configuration>
+\<startup>
+\<requiredRuntime>
 
 ## <a name="syntax"></a>構文
 

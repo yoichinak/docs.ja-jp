@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30655
 ms.assetid: 756db378-e758-48a9-88ff-496bc55bc0b6
-ms.openlocfilehash: 35bddac0ed65499e2eb400639ab5028c6cc6ddcb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ef1fd4fa94d2fe225077d8b7ed0e04fa29843e7d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787427"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622626"
 ---
 # <a name="unable-to-find-required-file-filename"></a>必要なファイルが見つかりません '\<filename >'
 Visual Studio で必要とされるファイルがないか、破損しています。  

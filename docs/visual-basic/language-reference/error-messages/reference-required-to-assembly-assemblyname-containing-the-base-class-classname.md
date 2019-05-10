@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30007
 ms.assetid: 5f34cf47-6c6e-4954-bd8e-d6b020b75fb7
-ms.openlocfilehash: 54848fdbd2547fe021f0386843f9666760396cb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 8218a3325d5d47bf85aacab1724221d233d92ba4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013778"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661703"
 ---
 # <a name="reference-required-to-assembly-assemblyname-containing-the-base-class-classname"></a>参照アセンブリが必要です '\<assemblyname >' 基底クラスを含む\<classname >'
 参照アセンブリが必要です '\<assemblyname >' 基底クラスを含む\<classname >'。 プロジェクトに参照を追加してください。  

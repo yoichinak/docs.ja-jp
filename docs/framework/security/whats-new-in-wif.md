@@ -3,12 +3,12 @@ title: Windows Identity Foundation 4.5 の新機能
 ms.date: 03/30/2017
 ms.assetid: 3b381f04-593b-471f-bd33-0362be1aade5
 author: BrucePerlerMS
-ms.openlocfilehash: 07e1aee85e22f6dd5257cdd49e8af99b423cb17f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: ec5015be3acab14d6cb96d775ed9818a9a5e456b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645883"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591673"
 ---
 # <a name="whats-new-in-windows-identity-foundation-45"></a>Windows Identity Foundation 4.5 の新機能
 Windows Identity Foundation (WIF) の最初のバージョンは、スタンドアロンのダウンロードとして提供され、.NET 3.5 SP1 タイム フレームで導入されたため、WIF 3.5 と呼ばれています。 .NET 4.5 以降、WIF は .NET Framework の一部になっています。 .NET Framework で直接 WIF クラスを使用できるようになったため、.NET でクレーム ベースの ID をより深く統合できるようになり、クレームを簡単に使用できるようになりました。 WIF 3.5 用に作成されたアプリケーションは、新しいモデルを利用するために、変更する必要があります。詳細については、「[Guidelines for Migrating an Application Built Using WIF 3.5 to WIF 4.5](../../../docs/framework/security/guidelines-for-migrating-an-application-built-using-wif-3-5-to-wif-4-5.md)」(WIF 3.5 でビルドされたアプリケーションを WIF 4.5 に移行するためのガイドライン) を参照してください。  

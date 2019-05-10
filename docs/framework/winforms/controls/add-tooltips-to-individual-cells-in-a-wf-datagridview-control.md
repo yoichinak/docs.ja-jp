@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], adding tooltips
 - data grids [Windows Forms], adding tooltips
 ms.assetid: 2a81f9de-d58b-4ea8-bc0b-8d93c2f4cf78
-ms.openlocfilehash: 3307c92a13e5730de6dce0fe45b924e44b7af554
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d0e9b3ad742633b135a2fe1c00af3fa72af7b44a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640297"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663454"
 ---
 # <a name="how-to-add-tooltips-to-individual-cells-in-a-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの各セルにツールヒントを追加する
 既定では、ツールヒントを使用しての値を表示する<xref:System.Windows.Forms.DataGridView>は小さすぎて全体の内容を表示するセル。 ただし、この動作をオーバーライドする個々 のセルのツールヒントのテキスト値を設定します。 これは、セルに関する追加情報をユーザーに表示する、または他のセルの内容の説明をユーザーに提供するには便利です。 たとえば、状態アイコンを表示する行がある場合は、場合、ツールヒントを使用した説明を提供します。  
@@ -24,7 +24,8 @@ ms.locfileid: "61640297"
   
 ### <a name="to-add-a-tooltip-to-a-cell"></a>セルにツールヒントを追加するには  
   
-- <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> プロパティを設定します。  
+- 
+  <xref:System.Windows.Forms.DataGridViewCell.ToolTipText%2A?displayProperty=nameWithType> プロパティを設定します。  
   
      [!code-cpp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/cpp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/cpp/datagridviewcell.tooltiptext.cpp#1)]
      [!code-csharp[System.Windows.Forms.DataGridViewCell.ToolTipText#1](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewCell.ToolTipText/CS/datagridviewcell.tooltiptext.cs#1)]

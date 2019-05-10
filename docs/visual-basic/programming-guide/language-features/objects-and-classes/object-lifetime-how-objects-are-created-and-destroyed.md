@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 553868ae82501e479acadd04b3d5e4447bcea36e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61867141"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469706"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>オブジェクトの有効期間:オブジェクトの作成し、破棄 (Visual Basic)
 クラスのインスタンス (オブジェクト) を作成するには、`New` キーワードを使用します。 新しいオブジェクトを使用する前に、多くの場合、そのオブジェクトに対して初期化タスクを実行する必要があります。 一般的な初期化タスクとして、ファイルを開く、データベースに接続する、レジストリ キーの値を読み取る、などがあります。 Visual Basic と呼ばれるプロシージャを使用して新しいオブジェクトの初期化を制御する*コンス トラクター* (初期化を制御する特殊なメソッド)。  
@@ -38,7 +38,7 @@ ms.locfileid: "61867141"
  コンストラクターとデストラクターは、オブジェクトの作成および破棄を制御します。 `Sub New`と`Sub Finalize`置き換え; Visual Basic におけるプロシージャの初期化しオブジェクトを破棄する、`Class_Initialize`と`Class_Terminate`Visual Basic 6.0 と以前のバージョンで使用される方法です。  
   
 ### <a name="sub-new"></a>Sub New  
- `Sub New` コンストラクターは、クラスの作成時に 1 回だけ実行できます。 同じクラスまたは派生クラスから別のコンストラクターの最初のコード行以外の任意の場所で、明示的に呼び出すことはできません。 また、`Sub New` メソッド内のコードは常に、クラス内の他のすべてのコードより先に実行されます。 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] 以降のバージョンを暗黙的に作成し、`Sub New`明示的に定義していない場合、実行時にコンス トラクター、`Sub New`クラスのプロシージャです。  
+ `Sub New` コンストラクターは、クラスの作成時に 1 回だけ実行できます。 同じクラスまたは派生クラスから別のコンストラクターの最初のコード行以外の任意の場所で、明示的に呼び出すことはできません。 また、`Sub New` メソッド内のコードは常に、クラス内の他のすべてのコードより先に実行されます。 Visual Basic および以降のバージョンを暗黙的に作成、`Sub New`明示的に定義していない場合、実行時にコンス トラクター、`Sub New`クラスのプロシージャです。  
   
  クラスのコンストラクターを作成するには、クラス定義の任意の場所に `Sub New` という名前のプロシージャを作成します。 パラメーター化されたコンストラクターを作成するには、次のコードに示すように、他のプロシージャの引数を指定する場合と同じく、`Sub New` に引数の名前とデータ型を指定します。  
   
@@ -60,7 +60,7 @@ ms.locfileid: "61867141"
   
  `Finalize` デストラクターは、所属先のクラスまたは派生クラスからのみ呼び出し可能な保護されたメソッドです。 `Finalize` はオブジェクトが破棄されるときに自動的に呼び出されるため、派生クラスの `Finalize` 実装の外部から `Finalize` を明示的に呼び出す必要はありません。  
   
- オブジェクトが nothing に設定されるとすぐに実行される `Class_Terminate` と異なり、通常、オブジェクトがスコープを失ってから Visual Basic が `Finalize` デストラクターを呼び出すまでに遅延が発生します。 [!INCLUDE[vbprvblong](~/includes/vbprvblong-md.md)] およびそれ以降のバージョンでは、2 つ目の種類のデストラクターとして <xref:System.IDisposable.Dispose%2A> が使用可能であり、いつでも明示的に呼び出してすぐにリソースを解放できます。  
+ オブジェクトが nothing に設定されるとすぐに実行される `Class_Terminate` と異なり、通常、オブジェクトがスコープを失ってから Visual Basic が `Finalize` デストラクターを呼び出すまでに遅延が発生します。 Visual Basic と以降のバージョンは、2 つ目の種類のデストラクターとしてを<xref:System.IDisposable.Dispose%2A>、すぐにリソースを解放するには、いつでも明示的に呼び出すします。  
   
 > [!NOTE]
 >  `Finalize` デストラクターからは例外をスローしません。これは、その例外をアプリケーションで処理できないために、アプリケーションが異常終了する可能性があるためです。  
@@ -84,13 +84,13 @@ ms.locfileid: "61867141"
 ### <a name="implementing-idisposable"></a>IDisposable の実装  
  <xref:System.IDisposable> インターフェイスを実装するクラスには、次のコード セクションを含める必要があります。  
   
--   オブジェクトが破棄されているかどうかを追跡するためのフィールド。  
+- オブジェクトが破棄されているかどうかを追跡するためのフィールド。  
   
     ```  
     Protected disposed As Boolean = False  
     ```  
   
--   クラスのリソースを解放する <xref:System.IDisposable.Dispose%2A> のオーバーロード。 このメソッドは、基本クラスの <xref:System.IDisposable.Dispose%2A> メソッドおよび `Finalize` メソッドによって呼び出す必要があります。  
+- クラスのリソースを解放する <xref:System.IDisposable.Dispose%2A> のオーバーロード。 このメソッドは、基本クラスの <xref:System.IDisposable.Dispose%2A> メソッドおよび `Finalize` メソッドによって呼び出す必要があります。  
   
     ```  
     Protected Overridable Sub Dispose(ByVal disposing As Boolean)  
@@ -104,7 +104,7 @@ ms.locfileid: "61867141"
     End Sub  
     ```  
   
--   次のコードのみを含む <xref:System.IDisposable.Dispose%2A> の実装。  
+- 次のコードのみを含む <xref:System.IDisposable.Dispose%2A> の実装。  
   
     ```  
     Public Sub Dispose() Implements IDisposable.Dispose  
@@ -113,7 +113,7 @@ ms.locfileid: "61867141"
     End Sub  
     ```  
   
--   次のコードのみを含む `Finalize` メソッドのオーバーライド。  
+- 次のコードのみを含む `Finalize` メソッドのオーバーライド。  
   
     ```  
     Protected Overrides Sub Finalize()  

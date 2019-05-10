@@ -2,41 +2,41 @@
 title: WCF Web HTTP プログラミング オブジェクト モデル
 ms.date: 03/30/2017
 ms.assetid: ed96b5fc-ca2c-4b0d-bdba-d06b77c3cb2a
-ms.openlocfilehash: f1772220ed5f425ec603fd8927f4617446d106eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f8bda6292506b64057dee006fa59b7723fa406b2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59096011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648410"
 ---
 # <a name="wcf-web-http-programming-object-model"></a>WCF Web HTTP プログラミング オブジェクト モデル
 WCF WEB HTTP プログラミング モデルでは、SOAP は必要ありません、基本的な HTTP 要求から、Windows Communication Foundation (WCF) Web サービスを公開できます。 WCF WEB HTTP プログラミング モデルは、既存の WCF 機能拡張モデル上に構築されます。 Web HTTP プログラミング モデルでは、次のクラスが定義されます。  
   
  **プログラミング モデル:**  
   
--   <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
+- <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute>  
   
--   <xref:System.ServiceModel.Web.WebGetAttribute>  
+- <xref:System.ServiceModel.Web.WebGetAttribute>  
   
--   <xref:System.ServiceModel.Web.WebInvokeAttribute>  
+- <xref:System.ServiceModel.Web.WebInvokeAttribute>  
   
--   <xref:System.ServiceModel.Web.WebServiceHost>  
+- <xref:System.ServiceModel.Web.WebServiceHost>  
   
  **チャネルおよびディスパッチャー インフラストラクチャ:**  
   
--   <xref:System.ServiceModel.WebHttpBinding>  
+- <xref:System.ServiceModel.WebHttpBinding>  
   
--   <xref:System.ServiceModel.Description.WebHttpBehavior>  
+- <xref:System.ServiceModel.Description.WebHttpBehavior>  
   
  **ユーティリティ クラスと機能拡張ポイント:**  
   
--   <xref:System.UriTemplate>  
+- <xref:System.UriTemplate>  
   
--   <xref:System.UriTemplateTable>  
+- <xref:System.UriTemplateTable>  
   
--   <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
+- <xref:System.ServiceModel.Dispatcher.QueryStringConverter>  
   
--   <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
+- <xref:System.ServiceModel.Dispatcher.WebHttpDispatchOperationSelector>  
   
 ## <a name="aspnetcacheprofileattribute"></a>AspNetCacheProfileAttribute  
  <xref:System.ServiceModel.Web.AspNetCacheProfileAttribute> は、サービス操作に適用された場合に、構成ファイル内の ASP.NET 出力キャッシュ プロファイルを示します。この構成ファイルを使用して ASP .NET 出力キャッシュに操作の応答がキャッシュされます。 このプロパティが受け取るパラメーターは 1 つ (構成ファイルでキャッシュ設定を指定するキャッシュ プロファイル名) だけです。  

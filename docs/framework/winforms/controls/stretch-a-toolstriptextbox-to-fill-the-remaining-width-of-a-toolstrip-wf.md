@@ -8,12 +8,12 @@ helpviewer_keywords:
 - text boxes [Windows Forms], stretching in ToolStrip control [Windows Forms]
 - ToolStrip control [Windows Forms], stretching a text box
 ms.assetid: 0e610fbf-85fe-414c-900c-9704a5dd5cc6
-ms.openlocfilehash: 707fd2e470a9be1d61d2878eeff845b3cad270db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7a9fd703206caadf2d9c63d92567f8b1c3b51e61
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971926"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751421"
 ---
 # <a name="how-to-stretch-a-toolstriptextbox-to-fill-the-remaining-width-of-a-toolstrip-windows-forms"></a>方法: Toolstriptextbox (Windows フォーム) にあるコマンド バーの残りの幅を入力するには
 設定すると、<xref:System.Windows.Forms.ToolStrip.Stretch%2A>のプロパティを<xref:System.Windows.Forms.ToolStrip>に制御を`true`コントロールがエンド ツー エンドのコンテナーを入力し、そのコンテナーのサイズ変更時のサイズを変更します。 この構成ですることが有用かもしれませんなど、コントロールの項目を拡張する、<xref:System.Windows.Forms.ToolStripTextBox>空き領域の塗りつぶし、およびコントロールのサイズ変更時にサイズを変更します。 この引き伸ばし役に立ちます、たとえば、外観と Microsoft® Internet Explorer のアドレス バーに似た動作を実現する場合。  

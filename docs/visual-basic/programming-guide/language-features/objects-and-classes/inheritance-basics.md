@@ -20,12 +20,12 @@ helpviewer_keywords:
 - abstract classes [Visual Basic], inheritance
 - overriding, Overrides keyword
 ms.assetid: dfc8deba-f5b3-4d1d-a937-7cb826446fc5
-ms.openlocfilehash: 5e4b8511145e758bf3d6328141be0e526965dccf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a31f69459465368dc7519b5126c6c4eb72e25d29
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758471"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64663006"
 ---
 # <a name="inheritance-basics-visual-basic"></a>継承の基本 (Visual Basic)
 `Inherits`ステートメントを使用して、という新しいクラスを宣言、*クラスを派生*と呼ばれる、既存のクラスに基づいて、*基本クラス*します。 派生クラスでは、継承、およびプロパティ、メソッド、イベント、フィールド、および基底クラスで定義された定数は、拡張できます。 次のセクションでは、いくつかの継承のルールについて説明し、方法クラスを変更する際、修飾子を継承または継承されます。  

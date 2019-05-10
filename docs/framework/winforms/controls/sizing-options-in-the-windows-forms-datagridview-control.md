@@ -9,12 +9,12 @@ helpviewer_keywords:
 - data grids [Windows Forms], row sizing
 - data grids [Windows Forms], sizing options
 ms.assetid: a5620a9c-0d06-41e3-8934-c25ddb16c9e6
-ms.openlocfilehash: 2f76bbca3d4b6e642c0eec2129c4a2abee752655
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1da98dfa58651eca2052f7d180912d1aa2898385
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903163"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651971"
 ---
 # <a name="sizing-options-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールのサイズ変更オプション
 <xref:System.Windows.Forms.DataGridView> 行、列、およびヘッダーは、多くの異なるオカレンスの結果としてのサイズを変更できます。 次の表では、これらの出現回数を示します。  
@@ -46,13 +46,13 @@ ms.locfileid: "61903163"
 ## <a name="resizing-with-the-mouse"></a>マウスを使用してサイズ変更  
  既定では、ユーザーは行、列、およびセルの値に基づいて、自動サイズ変更モードを使用してヘッダーをサイズ変更できます。 ユーザーが列フィル モードなど、他のモードでのサイズを変更することを防ぐために、次の 1 つ以上を設定<xref:System.Windows.Forms.DataGridView>プロパティ。  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
  個々 の行または列をサイズ変更を設定してからユーザーを防ぐことができますもその<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>プロパティ。 既定では、<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>プロパティの値がに基づいて、<xref:System.Windows.Forms.DataGridView.AllowUserToResizeColumns%2A>列のプロパティの値と<xref:System.Windows.Forms.DataGridView.AllowUserToResizeRows%2A>行のプロパティの値。 明示的に設定する場合<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>に<xref:System.Windows.Forms.DataGridViewTriState.True>または<xref:System.Windows.Forms.DataGridViewTriState.False>、ただし、コントロールの値がその行または列が、指定した値で上書きされます。 設定<xref:System.Windows.Forms.DataGridViewBand.Resizable%2A>に<xref:System.Windows.Forms.DataGridViewTriState.NotSet>継承を復元します。  
   
@@ -74,13 +74,13 @@ ms.locfileid: "61903163"
   
  次の 1 つ以上設定とコントロールの値をオーバーライドしない列のヘッダーと行のサイズ変更モードを構成するには、<xref:System.Windows.Forms.DataGridView>プロパティ。  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeightSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidthSizeMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoSizeRowsMode%2A>  
   
  個々 の列のコントロールの列のサイズ変更モードを無効にする次のように設定します。 その<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>プロパティ以外の値を<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>します。 列のサイズ変更モードが実際に続くその<xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>プロパティ。 このプロパティの値が列のに基づいて<xref:System.Windows.Forms.DataGridViewColumn.AutoSizeMode%2A>プロパティ値の値がない限り<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.NotSet>その場合、コントロールの<xref:System.Windows.Forms.DataGridView.AutoSizeColumnsMode%2A>値が継承されます。  
   
@@ -93,27 +93,27 @@ ms.locfileid: "61903163"
 ## <a name="programmatic-resizing"></a>プログラムによるサイズ変更  
  自動サイズ設定を無効にすると、実際の幅または行、列、または、次のプロパティでヘッダーの高さをプログラムで設定できます。  
   
--   <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.RowHeadersWidth%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridView.ColumnHeadersHeight%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewRow.Height%2A?displayProperty=nameWithType>  
   
--   <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
+- <xref:System.Windows.Forms.DataGridViewColumn.Width%2A?displayProperty=nameWithType>  
   
  行、列、および、次のメソッドを使用してその内容に合わせてヘッダー サイズを変更することができますもプログラムで。  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumn%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumns%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeColumnHeadersHeight%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRow%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRows%2A>  
   
--   <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
+- <xref:System.Windows.Forms.DataGridView.AutoResizeRowHeadersWidth%2A>  
   
  これらのメソッドは、行、列、またはヘッダーを 1 回ではなく継続的なサイズ変更するための構成にサイズ変更されます。 クリッピングなしすべてのセルの内容を表示する新しいサイズが自動的に計算します。 ときにプログラムでサイズを変更する列を持つ<xref:System.Windows.Forms.DataGridViewColumn.InheritedAutoSizeMode%2A>プロパティの値を<xref:System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill>、ただし、計算のコンテンツ ベースの幅を使用すると、列を比例的に調整<xref:System.Windows.Forms.DataGridViewColumn.FillWeight%2A>プロパティ値、および幅は、実際には列すべての列は、コントロールの使用可能な表示領域を入力できるようにこれらの新しい比率に従って計算されます。  
   

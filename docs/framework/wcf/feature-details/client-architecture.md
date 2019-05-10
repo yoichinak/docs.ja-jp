@@ -2,12 +2,12 @@
 title: クライアント アーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: 02624403-0d77-41cb-9a86-ab55e98c7966
-ms.openlocfilehash: 4ced24f370e2ab54528c6adb2b3617d3d849e745
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 6ed00054de45abc23fdd9ad69f61c758f567b973
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781525"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64656057"
 ---
 # <a name="client-architecture"></a>クライアント アーキテクチャ
 アプリケーションでは、Windows Communication Foundation (WCF) クライアント オブジェクトを使用して、サービス操作を呼び出します。 このトピックでは、WCF クライアント オブジェクト、WCF クライアント チャネル、およびそれらの関係を基になるチャネル アーキテクチャについて説明します。 WCF クライアント オブジェクトの基本的な概要については、次を参照してください。 [WCF Client Overview](../../../../docs/framework/wcf/wcf-client-overview.md)します。 チャネル レイヤーの詳細については、次を参照してください。[チャネル レイヤーの拡張](../../../../docs/framework/wcf/extending/extending-the-channel-layer.md)します。  

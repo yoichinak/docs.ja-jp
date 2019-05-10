@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC42326
 ms.assetid: 63214dc6-0112-4245-8ebf-7c9e8f5a5782
-ms.openlocfilehash: 20e83306925e91e579aca52f2e7c209c8c686dee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a9e51ddfd9956ea3267a4323bc2d6e7fa865b207
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946628"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661963"
 ---
 # <a name="lambda-expression-will-not-be-removed-from-this-event-handler"></a>ラムダ式はこのイベント ハンドラーから削除されません
 ラムダ式は、このイベント ハンドラーからは削除されません。 変数にラムダ式を割り当てるし、変数の追加し、削除イベントを使用します。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - controls [WPF], Popup
 - Popup control [WPF], about Popup control
 ms.assetid: 774f53ca-bff8-470e-9ce9-3928b4cf3d4c
-ms.openlocfilehash: 370970c80221e371db5a97303ef2650d14300b14
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 53283619d1bd2727bdca1df6a3a408ec0ce873a5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61770566"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625709"
 ---
 # <a name="popup-overview"></a>ポップアップの概要
 <xref:System.Windows.Controls.Primitives.Popup>コントロールには、指定された要素や画面座標を基準と現在のアプリケーション ウィンドウから浮遊した別のウィンドウの内容を表示する方法が用意されています。 このトピックでは、<xref:System.Windows.Controls.Primitives.Popup>を制御し、その使用方法についての情報を提供します。  

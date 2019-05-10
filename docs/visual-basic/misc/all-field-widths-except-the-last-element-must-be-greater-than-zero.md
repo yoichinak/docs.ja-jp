@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrTextFieldParser_FieldWidthsMustPositive
 ms.assetid: 41d8c661-a749-4c89-be56-905c6e7c3c9d
-ms.openlocfilehash: 806dcef7b7a29afa8804a581659023c817662434
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c1537133300ac4de33d0d7ebc3ea0ad6768e8ec9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940661"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64609147"
 ---
 # <a name="all-field-widths-except-the-last-element-must-be-greater-than-zero"></a>最後の要素以外のすべてのフィールド幅は 0 より大きくなければなりません
 最後の要素以外のすべてのフィールド幅は 0 より大きくなければなりません。 最後の要素内の 0 以下のフィールド幅は、最後のフィールドが可変長であることを示しています。  

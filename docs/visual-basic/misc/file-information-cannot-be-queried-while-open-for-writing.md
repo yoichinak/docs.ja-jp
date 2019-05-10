@@ -2,12 +2,12 @@
 title: 書き込みのためにファイルが開いている間は、ファイル情報を照会することはできません
 ms.date: 07/20/2015
 ms.assetid: 2198af10-f128-4b1d-baba-a251e1369146
-ms.openlocfilehash: d07efac07c2728199314e16188a64d03b2f86185
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: aeb8dbbfe0928263c1c40d308584dc5d17e0f04a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61756313"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624923"
 ---
 # <a name="file-information-cannot-be-queried-while-open-for-writing"></a>書き込みのためにファイルが開いている間は、ファイル情報を照会することはできません
 書き込み用に現在開いているファイルに関する情報を取得しようとしました。  

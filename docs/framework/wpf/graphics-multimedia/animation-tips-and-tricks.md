@@ -14,12 +14,12 @@ helpviewer_keywords:
 - performance troubleshooting [WPF], animation
 - animations [WPF], use of system resources
 ms.assetid: e467796b-d5d4-45a6-a108-8c5d7ff69a0f
-ms.openlocfilehash: 3a22c83eb739a735d42fa0f670716a0e75bbd54c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d24e7ad22eeebfb1c129306451aefbd393a9d087
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62020271"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615805"
 ---
 # <a name="animation-tips-and-tricks"></a>アニメーションのヒントとテクニック
 アニメーションを扱うときに[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]ヒントがいくつか、およびアニメーションを実行できるテクニックはパフォーマンスを向上させ、不満を解消します。  

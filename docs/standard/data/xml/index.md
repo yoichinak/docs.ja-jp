@@ -5,57 +5,57 @@ ms.technology: dotnet-standard
 ms.assetid: e695047f-3c0f-4045-8708-5baea91cc380
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2e96515240cdbc1cb05c4d58aee6eb2500e0e313
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d9cc44b8a5d43a3fe0414ddeeb51f37e239480b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62027174"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647901"
 ---
 # <a name="xml-documents-and-data"></a>XML ドキュメントと XML データ
 .NET Framework には、XML 対応アプリを容易に構築するための、包括的で統合された一連のクラスが用意されています。 次の名前空間のクラスでは、XML の解析と書き込み、メモリ内での XML データの編集、データの検証、および XSLT 変換がサポートされます。  
   
--   <xref:System.Xml>  
+- <xref:System.Xml>  
   
--   <xref:System.Xml.XPath>  
+- <xref:System.Xml.XPath>  
   
--   <xref:System.Xml.Xsl>  
+- <xref:System.Xml.Xsl>  
   
--   <xref:System.Xml.Schema>  
+- <xref:System.Xml.Schema>  
   
--   <xref:System.Xml.Linq>  
+- <xref:System.Xml.Linq>  
   
  完全な一覧で、[.NET API ブラウザー](https://docs.microsoft.com/dotnet/api/?term=system.xml)で "System.Xml" を検索、ます。  
   
  次の名前空間のクラスでは、World Wide Web Consortium (W3C) 勧告がサポートされます。 次に例を示します。  
   
--   <xref:System.Xml.XmlDocument?displayProperty=nameWithType> クラスは、[W3C ドキュメント オブジェクト モデル (DOM) 勧告の DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/) および [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/) を実装しています。  
+- <xref:System.Xml.XmlDocument?displayProperty=nameWithType> クラスは、[W3C ドキュメント オブジェクト モデル (DOM) 勧告の DOM Level 1 Core](https://www.w3.org/TR/REC-DOM-Level-1/) および [DOM Level 2 Core](https://www.w3.org/TR/DOM-Level-2-Core/) を実装しています。  
   
--   <xref:System.Xml.XmlReader?displayProperty=nameWithType> クラスと <xref:System.Xml.XmlWriter?displayProperty=nameWithType> クラスは、W3C 勧告『[XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/)』および『[Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)』をサポートしています。  
+- <xref:System.Xml.XmlReader?displayProperty=nameWithType> クラスと <xref:System.Xml.XmlWriter?displayProperty=nameWithType> クラスは、W3C 勧告『[XML 1.0](https://www.w3.org/TR/2006/REC-xml-20060816/)』および『[Namespaces in XML](https://www.w3.org/TR/REC-xml-names/)』をサポートしています。  
   
--   <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> クラスのスキーマが以下をサポートします: 「[W3C XML Schema Part 1:Structures](https://www.w3.org/TR/xmlschema-1/)」 (XML スキーマ パート 1: 構造体) および「[XML Schema Part 2:Datatypes](https://www.w3.org/TR/xmlschema-2/)」 (XML スキーマ パート 2: データ型) の推奨事項。  
+- <xref:System.Xml.Schema.XmlSchemaSet?displayProperty=nameWithType> クラスのスキーマが以下をサポートします: 「[W3C XML Schema Part 1:Structures](https://www.w3.org/TR/xmlschema-1/)」 (XML スキーマ パート 1: 構造体) および「[XML Schema Part 2:Datatypes](https://www.w3.org/TR/xmlschema-2/)」 (XML スキーマ パート 2: データ型) の推奨事項。  
   
--   <xref:System.Xml.Xsl?displayProperty=nameWithType> 名前空間のクラスは、W3C 勧告『[XSLT version 1.0](https://www.w3.org/TR/xslt)』に準拠する XSLT 変換をサポートしています。  
+- <xref:System.Xml.Xsl?displayProperty=nameWithType> 名前空間のクラスは、W3C 勧告『[XSLT version 1.0](https://www.w3.org/TR/xslt)』に準拠する XSLT 変換をサポートしています。  
   
  .NET Framework の XML クラスの利点を次に示します。  
   
--   **生産性** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) および [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) により XML でのプログラミングがさらに容易になるほか、SQL と同じようにクエリを利用できます。  
+- **生産性** [LINQ to XML (C#)](../../../csharp/programming-guide/concepts/linq/linq-to-xml.md) および [LINQ to XML (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) により XML でのプログラミングがさらに容易になるほか、SQL と同じようにクエリを利用できます。  
   
--   **拡張性** .NET Framework の XML クラスは、抽象基本クラスと仮想メソッドを使用することによって拡張できます。 たとえば、キャッシュ ストリームをローカルのディスクに格納する <xref:System.Xml.XmlUrlResolver> クラスの派生クラスを作成できます。  
+- **拡張性** .NET Framework の XML クラスは、抽象基本クラスと仮想メソッドを使用することによって拡張できます。 たとえば、キャッシュ ストリームをローカルのディスクに格納する <xref:System.Xml.XmlUrlResolver> クラスの派生クラスを作成できます。  
   
--   **プラグ可能なアーキテクチャ。** .NET Framework が提供するアーキテクチャでは、コンポーネントが相互に利用できます。また、コンポーネント間でデータをストリーム転送できます。 たとえば、<xref:System.Xml.XPath.XPathDocument> オブジェクト、<xref:System.Xml.XmlDocument> オブジェクトなどのデータ ストアは、<xref:System.Xml.Xsl.XslCompiledTransform> クラスを使って変換でき、その出力は、別のストアにストリーム転送することも、Web サービスからのストリームとして返すこともできます。  
+- **プラグ可能なアーキテクチャ。** .NET Framework が提供するアーキテクチャでは、コンポーネントが相互に利用できます。また、コンポーネント間でデータをストリーム転送できます。 たとえば、<xref:System.Xml.XPath.XPathDocument> オブジェクト、<xref:System.Xml.XmlDocument> オブジェクトなどのデータ ストアは、<xref:System.Xml.Xsl.XslCompiledTransform> クラスを使って変換でき、その出力は、別のストアにストリーム転送することも、Web サービスからのストリームとして返すこともできます。  
   
--   **パフォーマンス。** アプリのパフォーマンスを高めるために、.NET Framework の一部の XML クラスはストリーム ベースのモデルをサポートし、次の特性を備えています。  
+- **パフォーマンス。** アプリのパフォーマンスを高めるために、.NET Framework の一部の XML クラスはストリーム ベースのモデルをサポートし、次の特性を備えています。  
   
-    -   キャッシング処理を最小限に抑える前方参照専用のプル モデル解析 (<xref:System.Xml.XmlReader>)。  
+    - キャッシング処理を最小限に抑える前方参照専用のプル モデル解析 (<xref:System.Xml.XmlReader>)。  
   
-    -   前方参照専用の検証 (<xref:System.Xml.XmlReader>)。  
+    - 前方参照専用の検証 (<xref:System.Xml.XmlReader>)。  
   
-    -   作成するノードを単一の仮想ノードに抑えながら、ドキュメントへのランダム アクセスを可能にする、カーソル スタイルのナビゲーション (<xref:System.Xml.XPath.XPathNavigator>)。  
+    - 作成するノードを単一の仮想ノードに抑えながら、ドキュメントへのランダム アクセスを可能にする、カーソル スタイルのナビゲーション (<xref:System.Xml.XPath.XPathNavigator>)。  
   
      XSLT 処理が必要になるときのパフォーマンスを常に高めるために、<xref:System.Xml.XPath.XPathDocument> クラスを使用できます。このクラスは、<xref:System.Xml.Xsl.XslCompiledTransform> クラスと効率よく連携するように設計された、XPath クエリ用の最適化された読み取り専用ストアです。  
   
--   **ADO.NET との統合。** XML クラスと [ADO.NET](../../../../docs/framework/data/adonet/index.md) が緊密に統合されることで、リレーショナル データと XML が結合されます。 <xref:System.Data.DataSet> クラスは、データベースから取得されたデータのメモリ内キャッシュです。 <xref:System.Data.DataSet> クラスは、<xref:System.Xml.XmlReader> クラスと <xref:System.Xml.XmlWriter> クラスを使用して XML を読み書きする機能、内部リレーショナル スキーマ構造を XML スキーマ (XSD) として永続化する機能、および XML ドキュメントからスキーマ構造を推論する機能を備えています。  
+- **ADO.NET との統合。** XML クラスと [ADO.NET](../../../../docs/framework/data/adonet/index.md) が緊密に統合されることで、リレーショナル データと XML が結合されます。 <xref:System.Data.DataSet> クラスは、データベースから取得されたデータのメモリ内キャッシュです。 <xref:System.Data.DataSet> クラスは、<xref:System.Xml.XmlReader> クラスと <xref:System.Xml.XmlWriter> クラスを使用して XML を読み書きする機能、内部リレーショナル スキーマ構造を XML スキーマ (XSD) として永続化する機能、および XML ドキュメントからスキーマ構造を推論する機能を備えています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [XML の処理オプション](../../../../docs/standard/data/xml/xml-processing-options.md)  

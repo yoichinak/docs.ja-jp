@@ -11,12 +11,12 @@ helpviewer_keywords:
 - properties [Visual Basic], write-only
 - sensitive data
 ms.assetid: 488d2899-b09f-4cee-92f0-6f9f9fc4f944
-ms.openlocfilehash: 1b8de27e872914ba59d73126d2a9a7c42609165e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 163ec17f3ea96744290c54a73054ab132f842127
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051820"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647668"
 ---
 # <a name="writeonly-visual-basic"></a>WriteOnly (Visual Basic)
 プロパティの記述が読み取らないことを指定します。  

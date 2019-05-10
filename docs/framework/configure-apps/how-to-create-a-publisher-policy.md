@@ -7,12 +7,12 @@ helpviewer_keywords:
 - GAC (global assembly cache), publisher policy assembly
 - global assembly cache, publisher policy assembly
 ms.assetid: 8046bc5d-2fa9-4277-8a5e-6dcc96c281d9
-ms.openlocfilehash: ce2df9d4cea601652ebde2032758137b01faacdc
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: b37b00cfbeee10f217d1dbe1c754c50b65e31de9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344664"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625865"
 ---
 # <a name="how-to-create-a-publisher-policy"></a>方法: 発行者ポリシーを作成する
 アセンブリの販売できる状態の監視アプリケーションがアップグレード済みのアセンブリに発行者ポリシー ファイルを含めることによって、新しいバージョンのアセンブリを使用する必要があります。 発行者ポリシー ファイルは、アセンブリのリダイレクトとコードの基本設定を指定し、アプリケーション構成ファイルと同じ形式を使用します。 発行者ポリシー ファイルがアセンブリにコンパイルし、グローバル アセンブリ キャッシュに配置します。  
@@ -57,15 +57,15 @@ ms.locfileid: "59344664"
   
      このコマンドでは。  
   
-    -   *PublisherPolicyFile*引数は、発行者ポリシー ファイルの名前です。  
+    - *PublisherPolicyFile*引数は、発行者ポリシー ファイルの名前です。  
   
-    -   *PublisherPolicyAssemblyFile*引数は、このコマンドに起因する発行者ポリシー アセンブリの名前。 アセンブリ ファイルの名前は、形式に従う必要があります。  
+    - *PublisherPolicyAssemblyFile*引数は、このコマンドに起因する発行者ポリシー アセンブリの名前。 アセンブリ ファイルの名前は、形式に従う必要があります。  
   
          **policy.** *majorNumber* **.** *minorNumber* **.** *mainAssemblyName* **.dll**  
   
-    -   *KeyPairFile*引数はキー ペアを含むファイルの名前です。 アセンブリと同じキーのペアで発行者ポリシー アセンブリに署名する必要があります。  
+    - *KeyPairFile*引数はキー ペアを含むファイルの名前です。 アセンブリと同じキーのペアで発行者ポリシー アセンブリに署名する必要があります。  
   
-    -   *ProcessorArchitecture*引数は、プロセッサ固有のアセンブリの対象となるプラットフォームを識別します。  
+    - *ProcessorArchitecture*引数は、プロセッサ固有のアセンブリの対象となるプラットフォームを識別します。  
   
         > [!NOTE]
         >  特定のプロセッサ アーキテクチャを対象とする機能は、.NET Framework version 2.0 の新機能です。  

@@ -2,12 +2,12 @@
 title: カスタムのフロー制御アクティビティの作成
 ms.date: 03/30/2017
 ms.assetid: 27f409f6-2d1d-4cfb-9765-93eb2ad667d5
-ms.openlocfilehash: 2be47281335066def5c1d267cd709db5a8ff1187
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: f457e6f8cefd7183ca20cb449adf1ac15d7bde79
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774063"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647142"
 ---
 # <a name="creating-custom-flow-control-activities"></a>カスタムのフロー制御アクティビティの作成
 .NET Framework には、さまざまなプログラミング構造を抽象化するために同様に機能するフロー制御アクティビティが含まれています (など<xref:System.Activities.Statements.Flowchart>) または標準的なプログラミング ステートメント (など<xref:System.Activities.Statements.If>)。 このトピックでは、サンプル プロジェクトのいずれかのアーキテクチャを説明[非ジェネリックの ForEach](./samples/non-generic-foreach.md)します。  

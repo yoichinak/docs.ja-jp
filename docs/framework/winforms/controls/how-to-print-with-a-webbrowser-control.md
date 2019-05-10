@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Web pages [Windows Forms], printing
 - examples [Windows Forms], WebBrowser control
 ms.assetid: 3fb2a305-64ce-4b6c-9258-5330d3f21b6c
-ms.openlocfilehash: 3ec8edbca86dda1c67d03e5c0c34c54b2c365abf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fcc0e83b833181b731d33f3869e1229b6444f4ff
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913186"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662362"
 ---
 # <a name="how-to-print-with-a-webbrowser-control"></a>方法: WebBrowser コントロールを使用して印刷する
 コード例を次に示しますを使用する方法、<xref:System.Windows.Forms.WebBrowser>コントロールを表示せず、Web ページを印刷します。  
@@ -30,7 +30,7 @@ ms.locfileid: "61913186"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   `System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。  
+- `System` アセンブリおよび `System.Windows.Forms` アセンブリへの参照。  
   
 ## <a name="see-also"></a>関連項目
 

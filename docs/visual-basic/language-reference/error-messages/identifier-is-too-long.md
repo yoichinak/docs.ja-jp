@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30033
 ms.assetid: 3d07f6d0-9a2f-49ca-94e8-1e354932e855
-ms.openlocfilehash: ea0469d623bab226d410b5cf1401d08fc60710cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 91a5cc5c822b837657502aa82d2dd9b48b237b9b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649791"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662001"
 ---
 # <a name="identifier-is-too-long"></a>識別子が長すぎます。
 名前または識別子、プログラミングのすべての要素の 1023 文字に制限されます。 さらに、完全修飾名は 1023 文字を超えることはできません。 つまり、全体の識別子の文字列 (`<namespace>.<...>.<namespace>.<class>.<element>`) メンバー アクセス演算子を含めてが 1023 文字にすることはできません (`.`) 文字。  

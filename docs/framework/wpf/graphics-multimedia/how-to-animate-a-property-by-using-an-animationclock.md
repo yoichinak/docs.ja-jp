@@ -8,12 +8,12 @@ helpviewer_keywords:
 - animation [WPF], properties [WPF], with AnimationClocks
 - AnimationClocks [WPF]
 ms.assetid: e6542021-714c-4675-9567-04f1c7380834
-ms.openlocfilehash: 4fa9efc593461d26eabaee5e2f62c1a17da1b543
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 13d91e8589c40d84ba374ffc613388e24407796a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761014"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591287"
 ---
 # <a name="how-to-animate-a-property-by-using-an-animationclock"></a>方法: AnimationClock を使用してプロパティをアニメーション化する
 この例は、使用する方法を示します<xref:System.Windows.Media.Animation.Clock>プロパティをアニメーション化するオブジェクト。  

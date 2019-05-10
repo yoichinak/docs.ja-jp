@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: a226737a-cb99-4e97-bd94-9a37094ded41
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 550cb6379ef0d5d17a3446b3f21120208b5a3dad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 013cdfbb6a2904e60d6f7b4df6d40e3d65606fcd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61989167"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64606819"
 ---
 # <a name="icordebugdebugevent-interface"></a>ICorDebugDebugEvent インターフェイス
 すべての `ICorDebug` デバッグ イベントを派生させる基本インターフェイスを定義します。  

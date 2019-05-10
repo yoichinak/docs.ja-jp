@@ -2,12 +2,12 @@
 title: データベース アクセス アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 174a381e-1343-46a8-a62c-7c2ae2c4f0b2
-ms.openlocfilehash: 2463c3a87be7f7e248572d45e018b72661f4f8c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a7c6fa6664acee8000c100513b2cc955ffa3392
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62005211"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622456"
 ---
 # <a name="database-access-activities"></a>データベース アクセス アクティビティ
 データベース アクセス アクティビティを使用すると、ワークフロー内でデータベースにアクセスできます。 これらのアクティビティは、取得、情報を変更または使用するデータベースへのアクセスを許可する[ADO.NET](https://go.microsoft.com/fwlink/?LinkId=166081)データベースにアクセスします。  
@@ -247,7 +247,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 ## <a name="configuring-connection-information"></a>接続情報の構成
  すべての DbActivities は同じ構成パラメーターを共有します。 パラメーターを構成するには次の 2 つの方法があります。
 
--   `ConnectionString + InvariantName`:ADO.NET プロバイダーの不変の名前と接続文字列を設定します。
+- `ConnectionString + InvariantName`:ADO.NET プロバイダーの不変の名前と接続文字列を設定します。
 
     ```
     Activity dbSelectCount = new DbQueryScalar<DateTime>()
@@ -260,7 +260,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
     };
     ```
 
--   `ConfigName`:接続情報を含む構成セクションの名前を設定します。
+- `ConfigName`:接続情報を含む構成セクションの名前を設定します。
 
     ```xml
     <connectionStrings>
@@ -270,7 +270,7 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
       </connectionStrings>
     ```
 
--   アクティビティで次のように設定します。
+- アクティビティで次のように設定します。
 
     ```
     Activity dbSelectCount = new DbQueryScalar<int>()
@@ -287,15 +287,15 @@ public class DbQueryDataSet : AsyncCodeActivity<DataSet>
 
  Setup.cmd スクリプトは、CreateDb.sql スクリプト ファイルを呼び出します。このスクリプト ファイルには、次の操作を実行する SQL コマンドが含まれています。
 
--   DbActivitiesSample という名前のデータベースを作成します。
+- DbActivitiesSample という名前のデータベースを作成します。
 
--   Roles テーブルを作成します。
+- Roles テーブルを作成します。
 
--   Employees テーブルを作成します。
+- Employees テーブルを作成します。
 
--   3 個のレコードを Roles テーブルに挿入します。
+- 3 個のレコードを Roles テーブルに挿入します。
 
--   12 個のレコードを Employees テーブルに挿入します。
+- 12 個のレコードを Employees テーブルに挿入します。
 
 ##### <a name="to-run-setupcmd"></a>Setup.cmd を実行するには
 

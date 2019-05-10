@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e887747a3f036d10e5e5fec6c0cadaf9f34050df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674299"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210439"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 要素
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
@@ -90,15 +90,17 @@ ms.locfileid: "61674299"
 |`Switch.System.Net.`<br/>`DontEnableSchUseStrongCrypto`|コントロールかどうか、<xref:System.Net.ServicePointManager?displayProperty=nameWithType>と<xref:System.Net.Security.SslStream?displayProperty=nameWithType>クラスは、SSL 3.0 プロトコルを使用できます。 詳細については、「[軽減策:TLS Protocols (軽減策: TLS プロトコル)](../../../migration-guide/mitigation-tls-protocols.md)」をご覧ください。|.NET Framework 4.6|
 |`Switch.System.Net.`<br/>`DontEnableSystemDefaultTlsVersions`|Tls12、Tls11、Tls の既定値に戻します SystemDefault TLS バージョンを無効にします。|.NET Framework 4.7|
 |`Switch.System.Net.`<br/>`DontEnableTlsAlerts`|SslStream TLS サーバー側の警告を無効にします。|.NET Framework 4.7|
+|`Switch.System.Runtime.InteropServices.`<br/>`DoNotMarshalOutByrefSafeArrayOnInvoke`|COM 相互運用イベントのパラメーターを ByRef SafeArray をネイティブ コードにマーシャ リングするかどうかを制御する (`false`) またはネイティブ コードにマーシャ リングを無効にするかどうか (`true`)。|.NET Framework 4.8|
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseECMAScriptV6EscapeControlCharacter` |コントロールかどうか、 [DataContractJsonSerializer](xref:System.Runtime.Serialization.Json.DataContractJsonSerializer) ECMAScript V6 および V8 標準に基づくいくつかの制御文字をシリアル化します。 詳細については、「[軽減策:DataContractJsonSerializer による制御文字のシリアル化](../../../migration-guide/mitigation-serialization-control-characters.md)| .NET Framework 4.7 |
 |`Switch.System.Runtime.Serialization.`<br/>`DoNotUseTimeZoneInfo`|コントロールかどうか、<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>のタイム ゾーンに対して複数の調整または単一の調整のみをサポートしています。 場合`true`を使用して、<xref:System.TimeZoneInfo>をシリアル化する型し日付と時刻のデータを逆シリアル化。 それ以外の場合、使用して、<xref:System.TimeZone>型で、複数の調整規則をサポートしていません。|.NET Framework 4.6.2|
 |`Switch.System.Runtime.Serialization.UseNewMaxArraySize`|コントロールかどうか<xref:System.Runtime.Serialization.ObjectManager?displayProperty=nameWithType>オブジェクトのシリアル化および逆シリアル化中に大きな配列のサイズを使用します。 このスイッチを設定`true`などと大きなオブジェクト グラフの種類での逆シリアル化のシリアル化パフォーマンスを向上させるために<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>します。 |.NET Framework 4.7.2|
 |`Switch.System.Security.ClaimsIdentity.`<br/>`SetActorAsReferenceWhenCopyingClaimsIdentity`|コントロールかどうか、<xref:System.Security.Claims.ClaimsIdentity.%23ctor%28System.Security.Principal.IIdentity%29?displayProperty=nameWithType>コンス トラクターの設定、新しいオブジェクトの<xref:System.Security.Claims.ClaimsIdentity.Actor%2A?displayProperty=nameWithType>既存のオブジェクト参照を持つプロパティです。 詳細については、「[軽減策:ClaimsIdentity コンス トラクター](../../../migration-guide/mitigation-claimsidentity-constructor.md)します。|.NET Framework 4.6.2|  
 |`Switch.System.Security.Cryptography.`<br/>`AesCryptoServiceProvider.DontCorrectlyResetDecryptor`|コントロールかどうかを再利用しようとすると、<xref:System.Security.Cryptography.AesCryptoServiceProvider>復号化がスローされます、<xref:System.Security.Cryptography.CryptographicException>します。 詳細については、次を参照してください。 [AesCryptoServiceProvider の復号化は、再利用可能な変換を提供します。](../../../migration-guide/retargeting/4.6.1-4.6.2.md#aescryptoserviceprovider-decryptor-provides-a-reusable-transform)します。|.NET Framework 4.6.2|
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|コントロールかどうかの値、 [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)プロパティは、 [IntPtr](xref:System.IntPtr)こと表しますウィンドウのメモリ位置を処理するかどうか、ウィンドウ ハンドル (HWND)。 詳細については、「[軽減策:CspParameters.ParentWindowHandle で HWND を](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)します。 |.NET Framework 4.7|   
-|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|SignedCMS のいくつかの操作の既定値は SHA1 または SHA256 であるかどうかを判断します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|一部の SignedXML 操作の既定値が SHA1 または SHA256 かどうかを判断します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|管理対象の暗号化の使用が FIPS モードがスローされますクラスかどうかを制御、 <xref:System.Security.Cryptography.CryptographicException> (`true`)、またはシステム ライブラリの実装に依存 (`false`)。|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|SignedCMS のいくつかの操作の既定値は SHA1 または SHA256 であるかどうかを判断します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
+|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|コントロールかどうか、<xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithtype>メソッドは、オペレーティング システムでサポートされているすべての名前付き曲線を正しく処理 (`false`) または従来の動作に戻ります。|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|一部の SignedXML 操作の既定値が SHA1 または SHA256 かどうかを判断します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|決定かどうか、`TransportWithMessageCredential`セキュリティ モードで、符号なしのメッセージは、"to"ヘッダー。 これは、オプトイン スイッチです。 詳細については、次を参照してください。 [、.NET Framework 4.6.1 におけるランタイムの変更](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)します。|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|コントロールかどうか、<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>コンス トラクターがスローされます、<xref:System.ArgumentException>場合は、要素の 1 つ`null`します。|.NET Framework 4.7.1| 
 |`Switch.System.ServiceModel.`<br />`DisableCngCertificates`|CSG キー ストレージ プロバイダーが例外をスローします X509 を使用しようとすると、証明書を使用するかどうかを判断します。 詳細については、次を参照してください。 [WCF トランスポート セキュリティは、CNG を使用して格納される証明書をサポートしている](../../../migration-guide/retargeting/4.6.1-4.6.2.md#wcf-transport-security-supports-certificates-stored-using-cng)します。|.NET Framework 4.6.1|

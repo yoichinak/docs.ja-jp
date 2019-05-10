@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cad7b319a20bce09779821af6f50aea086880c26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: e51ff24698a2839972f9a36eac6c18d4f6709ebd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968325"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600153"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager メソッド
 指定したホストのインターフェイスの実装にインターフェイス ポインターを取得します。`IID`します。  

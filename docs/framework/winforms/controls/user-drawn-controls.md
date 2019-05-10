@@ -9,12 +9,12 @@ helpviewer_keywords:
 - OnPaint method [Windows Forms]
 - user-drawn controls [Windows Forms]
 ms.assetid: 034af4b5-457f-4160-a937-22891817faa8
-ms.openlocfilehash: 06513fc44782c78d2d69b82130542949519c0107
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: bd7ce150e4dc0ecfe53f92ec8b557459f1e14e3a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947954"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64651566"
 ---
 # <a name="user-drawn-controls"></a>ユーザー描画コントロール
 .NET Framework では、独自のコントロールを簡単に開発する機能を提供します。 コードによって結合されて標準のコントロールのセットである、ユーザー コントロールを作成することもをゼロから独自のコントロールをデザインすることができます。 既存のコントロールから継承するコントロールを作成し、本来の機能を追加する継承を使用することもできます。 どのようなアプローチを使用すると、.NET Framework は、任意のコントロールを作成するためのカスタムのグラフィカル インターフェイスを描画するために機能を提供します。  

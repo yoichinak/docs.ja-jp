@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e89fda72371f197efeeeef8f31ec396c334cfcb2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5702fac139ba602828bb8722a1e3e25d6f1c58f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59122032"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625435"
 ---
 # <a name="imetadataassemblyemitdefineexportedtype-method"></a>IMetaDataAssemblyEmit::DefineExportedType メソッド
 指定してエクスポートした型のメタデータが含まれる `ExportedType` 構造体を作成し、関連付けられたメタデータ トークンを返します。  
@@ -46,13 +46,13 @@ HRESULT DefineExportedType (
  `tkImplementation`  
  [in]エクスポートされる型が実装されているを指定するトークンです。 有効な値とその意味は。  
   
--   `mdFile` 種類は、このアセンブリ内の別のファイルに実装されます。  
+- `mdFile` 種類は、このアセンブリ内の別のファイルに実装されます。  
   
--   `mdAssemblyRef` 種類は、別のアセンブリに実装されます。  
+- `mdAssemblyRef` 種類は、別のアセンブリに実装されます。  
   
--   `mdExportedTYpe` 型が他の何らかの種類内で入れ子になった。  
+- `mdExportedTYpe` 型が他の何らかの種類内で入れ子になった。  
   
--   `mdFileNil` 種類は、マニフェストと同じファイルであり、入れ子になった型ではありません。  
+- `mdFileNil` 種類は、マニフェストと同じファイルであり、入れ子になった型ではありません。  
   
  `tkTypeDef`  
  [in]エクスポートする型を指定するメタデータ トークンです。 この値が入力される、`TypeDef`内の型を実装、そのファイルがこのアセンブリ内にある場合にのみ関連するファイル内のテーブル。  

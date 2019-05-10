@@ -2,12 +2,12 @@
 title: バイトストリーム エンコーダーを使用したバイナリ オブジェクトのエンコーディング
 ms.date: 03/30/2017
 ms.assetid: 020ee981-c889-4b12-a3ea-91823ef46444
-ms.openlocfilehash: 9619fdf6979833c30159e1ea02b3f8d6b98a6629
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09a919e11971f81bc76dca0e45a7eb0e70ef749e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61856506"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626926"
 ---
 # <a name="encoding-binary-objects-with-bytestream-encoder"></a>バイトストリーム エンコーダーを使用したバイナリ オブジェクトのエンコーディング
 Windows Communication Foundation (WCF) の生のバイナリ データを送受信することを使用してを構成、<xref:System.ServiceModel.Channels.ByteStreamMessageEncodingBindingElement>します。  
@@ -39,8 +39,8 @@ void ProcessMessage(Message message) ;
 ## <a name="scenarios"></a>シナリオ  
  バイト ストリーム エンコーダーは、次のシナリオに役立ちます。  
   
--   WCF を使用してコンピューター間で JPEG イメージを転送しています。 このシナリオでは、イメージは外部ソースから転送によって到着し、送信されたデータはイメージを構成する生バイトになります。 サービスはバイナリ データを受信してイメージを表示します。  
+- WCF を使用してコンピューター間で JPEG イメージを転送しています。 このシナリオでは、イメージは外部ソースから転送によって到着し、送信されたデータはイメージを構成する生バイトになります。 サービスはバイナリ データを受信してイメージを表示します。  
   
--   メッセージ キューからの情報の読み取りと処理。 メッセージはメッセージ キュー マネージャーから読み取られ、処理対象のメッセージ キュー チャネルに渡されます。 メッセージ キュー チャネルは、WCF チャネル スタックのキュー マネージャーとして機能します。  
+- メッセージ キューからの情報の読み取りと処理。 メッセージはメッセージ キュー マネージャーから読み取られ、処理対象のメッセージ キュー チャネルに渡されます。 メッセージ キュー チャネルは、WCF チャネル スタックのキュー マネージャーとして機能します。  
   
  メッセージをメッセージ キュー チャネルを介して送信する場合、送信者はキュー マネージャーから受信したバイトを制御できません。 受信プロセスで生バイトを読み取ることができない場合、メッセージは不適切な書式として受信され処理されません。受信プロセスは受信したバイトを利用可能な形式に変換する機能があると見なされます。

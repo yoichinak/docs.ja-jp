@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability [WPF], airspace
 - Win32 code [WPF], window regions
 ms.assetid: b7cc350f-b9e2-48b1-be14-60f3d853222e
-ms.openlocfilehash: 40ec8d033852bba5cb5ccb0739309cfe988a3ce5
-ms.sourcegitcommit: 89fcad7e816c12eb1299128481183f01c73f2c07
-ms.translationtype: HT
+ms.openlocfilehash: afea62dfe7ba26375cb23b661c6682bf1b59a19d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63808379"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621037"
 ---
 # <a name="technology-regions-overview"></a>技術領域の概要
 WPF、Win32、DirectX などのアプリケーションで複数のプレゼンテーション テクノロジを使用する場合は、一般的な最上位ウィンドウ内のレンダリング領域を共有する必要があります。 このトピックでは、プレゼンテーション層と、WPF の相互運用アプリケーションの入力に影響を与える問題について説明します。  

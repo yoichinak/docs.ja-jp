@@ -4,12 +4,12 @@ ms.date: 07/20/2015
 f1_keywords:
 - vbrNoValidOperator_OneOperand
 ms.assetid: 9d5e01db-d3e7-446a-8d39-6600c73fea20
-ms.openlocfilehash: ac0d331ba255eaf11b80ad39e698048aa1a04d92
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 81c4f511861568fe58c3b92e311c3f842ef7aa1d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944808"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591776"
 ---
 # <a name="operator-is-not-valid-for-type-typename"></a>演算子で型に対して有効でない '\<typename >'
 演算子は、型に適切ではありません。  

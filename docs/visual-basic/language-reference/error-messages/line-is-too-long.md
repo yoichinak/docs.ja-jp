@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30494
 ms.assetid: 27270ec3-82a4-4693-a948-dd4664a5f060
-ms.openlocfilehash: 5f67c5ad5fdc64b0a023b0472072be10987c3437
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 3baf2ec11db72102439b86e151be80d3031cc5d1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921057"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64661930"
 ---
 # <a name="line-is-too-long"></a>行が長すぎます。
 ソース テキストの行には、65535 文字を超えることはできません。  

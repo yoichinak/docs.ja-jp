@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 dev_langs:
 - vb
 ms.assetid: 1f6a54f6-ec33-452a-a37d-48122207bf14
-ms.openlocfilehash: 0b013cff36fc9063f30aaa4356e9e8249dd960d8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 0dd70eb5d3b3ad56a8597ce0658a296a03d5f4a7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306496"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64618048"
 ---
 # <a name="walkthrough-manipulating-data-visual-basic"></a>チュートリアル: データの操作 (Visual Basic)
 このチュートリアルでは、データベースに対してデータの追加、変更、および削除を行う、基本の [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] シナリオ全体を示します。 顧客の追加、顧客名の変更、および注文の削除を行うため、サンプルの Northwind データベースのコピーを使用します。  
@@ -21,13 +21,13 @@ ms.locfileid: "59306496"
 ## <a name="prerequisites"></a>必須コンポーネント  
  このチュートリアルの前提条件は次のとおりです。  
   
--   このチュートリアルでは、専用フォルダー ("c:\linqtest2") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
+- このチュートリアルでは、専用フォルダー ("c:\linqtest2") を使用してファイルを保持します。 チュートリアルを開始する前に、このフォルダーを作成してください。  
   
--   Northwind サンプル データベース。  
+- Northwind サンプル データベース。  
   
      開発用コンピューターにこのデータベースがない場合は、Microsoft ダウンロード サイトからダウンロードします。 手順については、次を参照してください。[サンプル データベースのダウンロード](../../../../../../docs/framework/data/adonet/sql/linq/downloading-sample-databases.md)します。 データベースをダウンロードしたら、northwnd.mdf ファイルを c:\linqtest2 フォルダーにコピーします。  
   
--   Northwind データベースから生成された Visual Basic コード ファイル。  
+- Northwind データベースから生成された Visual Basic コード ファイル。  
   
      このファイルを生成するには、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]または SQLMetal ツールを使用します。 このチュートリアルは、SQLMetal ツールを使用して次のコマンド ラインで作成されています。  
   
@@ -38,17 +38,17 @@ ms.locfileid: "59306496"
 ## <a name="overview"></a>概要  
  このチュートリアルは、主に次の 6 つのタスクで構成されています。  
   
--   作成、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューション。  
+- 作成、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Visual Studio でソリューション。  
   
--   プロジェクトにデータベース コード ファイルを追加します。  
+- プロジェクトにデータベース コード ファイルを追加します。  
   
--   新しい顧客オブジェクトを作成します。  
+- 新しい顧客オブジェクトを作成します。  
   
--   顧客の連絡先名を変更します。  
+- 顧客の連絡先名を変更します。  
   
--   注文を削除します。  
+- 注文を削除します。  
   
--   これらの変更を Northwind データベースに送信します。  
+- これらの変更を Northwind データベースに送信します。  
   
 ## <a name="creating-a-linq-to-sql-solution"></a>LINQ to SQL ソリューションを作成する  
  この最初のタスクでは、ビルドおよび実行するために必要な参照を含む Visual Studio ソリューションを作成、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]プロジェクト。  
@@ -136,7 +136,7 @@ ms.locfileid: "59306496"
   
 #### <a name="to-change-the-name-of-a-customer"></a>顧客の名前を変更するには  
   
--   `Console.ReadLine()` の前に次のコードを追加します。  
+- `Console.ReadLine()` の前に次のコードを追加します。  
   
      [!code-vb[DLinqWalk3VB#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#4)]  
   
@@ -147,7 +147,7 @@ ms.locfileid: "59306496"
   
 #### <a name="to-delete-a-row"></a>行を削除するには  
   
--   `Console.ReadLine()` の直前に次のコードを追加します。  
+- `Console.ReadLine()` の直前に次のコードを追加します。  
   
      [!code-vb[DLinqWalk3VB#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqWalk3VB/vb/Module1.vb#5)]  
   

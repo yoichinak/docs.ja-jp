@@ -2,12 +2,12 @@
 title: パフォーマンスに関する考慮事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 61913f3b-4f42-4d9b-810f-2a13c2388a4a
-ms.openlocfilehash: ec7f3571f60dc7f10816cad90911e50d271a9ce1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6cd12948d16eea66efb6ee4b427a2c979e0aab3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879399"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641281"
 ---
 # <a name="performance-considerations-entity-framework"></a>パフォーマンスに関する考慮事項 (Entity Framework)
 このトピックでは、ADO.NET Entity Framework のパフォーマンス特性を示し、Entity Framework アプリケーションのパフォーマンスを向上させるために役立つ注意事項について説明します。  
@@ -55,12 +55,12 @@ ms.locfileid: "61879399"
 #### <a name="query-complexity"></a>クエリの複雑さ  
  データソースに対して実行されるコマンド内に多数の結合を必要とするクエリや、データを大量に返すクエリは、次のようにパフォーマンスを低下させることがあります。  
   
--   単純に見える概念モデルに対してクエリを実行したところ、より複雑なクエリをデータ ソースに対して実行する結果になることがあります。 これは、Entity Framework が、概念モデルに対するクエリをデータ ソースに対する等価のクエリに変換するからです。 概念モデルの 1 つのエンティティ セットが、データ ソースの複数のテーブルにマップされている場合や、エンティティ間のリレーションシップが結合テーブルにマップされている場合には、データ ソース クエリに対して実行されるクエリ コマンドで 1 つ以上の結合が必要になる場合があります。  
+- 単純に見える概念モデルに対してクエリを実行したところ、より複雑なクエリをデータ ソースに対して実行する結果になることがあります。 これは、Entity Framework が、概念モデルに対するクエリをデータ ソースに対する等価のクエリに変換するからです。 概念モデルの 1 つのエンティティ セットが、データ ソースの複数のテーブルにマップされている場合や、エンティティ間のリレーションシップが結合テーブルにマップされている場合には、データ ソース クエリに対して実行されるクエリ コマンドで 1 つ以上の結合が必要になる場合があります。  
   
     > [!NOTE]
     >  所定のクエリでデータ ソースに対して実行されるコマンドを表示するには、<xref:System.Data.Objects.ObjectQuery.ToTraceString%2A> クラスまたは <xref:System.Data.Objects.ObjectQuery%601> クラスの <xref:System.Data.EntityClient.EntityCommand> メソッドを使用します。 詳細については、「[方法 :格納コマンドを表示](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896348(v=vs.100))します。  
   
--   Entity SQL クエリが入れ子になっていると、サーバー上で結合が作成され、その結果多数の行が返されることがあります。  
+- Entity SQL クエリが入れ子になっていると、サーバー上で結合が作成され、その結果多数の行が返されることがあります。  
   
      projection 句内の入れ子になったクエリの例を次に示します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "61879399"
   
      さらに、このようなクエリでは、入れ子になったクエリ全体でオブジェクトを複製する単一クエリがクエリ パイプラインで生成されます。 そのため、1 つの列が複数回複製されることがあります。 SQL Server など、一部のデータベースでは、これによって TempDB テーブルのサイズが非常に大きくなり、サーバーのパフォーマンスに悪影響を及ぼす場合があります。 入れ子になったクエリを実行するときには、注意を払う必要があります。  
   
--   クライアントが、結果セットのサイズに比例してリソースを消費するような操作を実行している場合、データを大量に返すクエリを実行すると、パフォーマンスが低下することがあります。 このような場合には、クエリによって返されるデータの量を制限することを検討してください。 詳細については、「[方法 :結果をページング クエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))します。  
+- クライアントが、結果セットのサイズに比例してリソースを消費するような操作を実行している場合、データを大量に返すクエリを実行すると、パフォーマンスが低下することがあります。 このような場合には、クエリによって返されるデータの量を制限することを検討してください。 詳細については、「[方法 :結果をページング クエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738702(v=vs.100))します。  
   
  Entity Framework によって自動的に生成されるコマンドは、データベース開発者が明示的に記述した同様のコマンドより複雑になることがあります。 データ ソースに対して実行されるコマンドを明示的に制御する必要がある場合には、テーブル値関数またはストアド プロシージャへのマッピングを定義することを検討してください。  
   
@@ -114,9 +114,9 @@ ms.locfileid: "61879399"
 ### <a name="distributed-transactions"></a>分散トランザクション  
  明示的トランザクションでの操作で、分散トランザクション コーディネーター (DTC: Distributed Transaction Coordinator) によって管理されるリソースが必要とされることがありますが、このような操作は DTC を必要としない同様の操作より高コストになります。 DTC への昇格は、次の状況で発生します。  
   
--   明示的トランザクションを常に DTC に昇格する SQL Server 2000 データベースやその他のデータ ソースに対して、明示的トランザクションで操作を実行する場合。  
+- 明示的トランザクションを常に DTC に昇格する SQL Server 2000 データベースやその他のデータ ソースに対して、明示的トランザクションで操作を実行する場合。  
   
--   SQL Server 2005 に対して明示的トランザクションで操作を実行し、かつ接続が [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって管理される場合。 これは、接続が閉じられてから同じトランザクション内で再度開かれると、SQL Server 2005 が DTC に必ず昇格するためです。この動作は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の既定の動作です。 この DTC 昇格は、SQL Server 2008 使用時には生じません。 SQL Server 2005 使用時にこの昇格を回避するには、トランザクション内で接続を明示的に開いて閉じる必要があります。 詳細については、次を参照してください。[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))です。  
+- SQL Server 2005 に対して明示的トランザクションで操作を実行し、かつ接続が [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって管理される場合。 これは、接続が閉じられてから同じトランザクション内で再度開かれると、SQL Server 2005 が DTC に必ず昇格するためです。この動作は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の既定の動作です。 この DTC 昇格は、SQL Server 2008 使用時には生じません。 SQL Server 2005 使用時にこの昇格を回避するには、トランザクション内で接続を明示的に開いて閉じる必要があります。 詳細については、次を参照してください。[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))です。  
   
  明示的トランザクションが使用されるのは、1 つの <xref:System.Transactions> トランザクション内で操作を 1 つ以上実行するときです。 詳細については、次を参照してください。[接続の管理とトランザクション](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896325(v=vs.100))です。  
   
@@ -147,11 +147,11 @@ ms.locfileid: "61879399"
 ## <a name="performance-data"></a>パフォーマンス データ  
  次の投稿で Entity Framework の一部のパフォーマンス データが公開されて、 [ADO.NET チームのブログ](https://go.microsoft.com/fwlink/?LinkId=91905):  
   
--   [ADO.NET Entity Framework - パート 1 のパフォーマンスを探索します。](https://go.microsoft.com/fwlink/?LinkId=123907)  
+- [ADO.NET Entity Framework - パート 1 のパフォーマンスを探索します。](https://go.microsoft.com/fwlink/?LinkId=123907)  
   
--   [第 2 部: ADO.NET Entity Framework のパフォーマンスを探索します。](https://go.microsoft.com/fwlink/?LinkId=123909)  
+- [第 2 部: ADO.NET Entity Framework のパフォーマンスを探索します。](https://go.microsoft.com/fwlink/?LinkId=123909)  
   
--   [ADO.NET Entity Framework パフォーマンス比較](https://go.microsoft.com/fwlink/?LinkID=123913)  
+- [ADO.NET Entity Framework パフォーマンス比較](https://go.microsoft.com/fwlink/?LinkID=123913)  
   
 ## <a name="see-also"></a>関連項目
 

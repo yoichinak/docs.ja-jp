@@ -14,8 +14,6 @@
           href: foreground-and-background-threads.md
         - name: Windows でのマネージド スレッド処理とアンマネージド スレッド処理
           href: managed-and-unmanaged-threading-in-windows.md
-        - name: Thread.Suspend、ガベージ コレクション、およびセーフ ポイント
-          href: thread-suspend-garbage-collection-and-safe-points.md
         - name: 'スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット'
           href: thread-local-storage-thread-relative-static-fields-and-data-slots.md
     - name: スレッドの使用とスレッド処理

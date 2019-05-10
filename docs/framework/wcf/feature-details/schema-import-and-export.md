@@ -9,12 +9,12 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 9f13f9d95c40b964c5eb416c590a5d603d714bac
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 43b9ca115f3eeae7a28d8ed8a0642ad6e5439bd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61991017"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603705"
 ---
 # <a name="schema-import-and-export"></a>スキーマのインポートとエクスポート
 Windows Communication Foundation (WCF) には、新しいシリアル化エンジンが含まれています、<xref:System.Runtime.Serialization.DataContractSerializer>します。 `DataContractSerializer` は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトと XML を双方向で変換します。 シリアライザー自体だけでなく WCF には、関連付けられているスキーマのインポートとスキーマ エクスポート機構が含まれています。 *スキーマ*は、シリアライザーが生成する、またはデシリアライザーがアクセスできる、XML の構造の正式かつ正確であり、コンピューターが判読できる説明です。 WCF では、スキーマ表現として、これは広く、多数のサードパーティ プラットフォームと相互運用可能な World Wide Web Consortium (W3C) XML スキーマ定義言語 (XSD) を使用します。  

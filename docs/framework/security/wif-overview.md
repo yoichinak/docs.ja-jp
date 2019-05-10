@@ -3,12 +3,12 @@ title: Windows Identity Foundation 4.5 の概要
 ms.date: 03/30/2017
 ms.assetid: 5f723345-7270-49e2-b638-b3a34bd40517
 author: BrucePerlerMS
-ms.openlocfilehash: 6165dbf32b777a8d82e756f84ed2415d6ed3d774
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: d3076bbda47ac4aac0c8f0b9f9c69d17f370e765
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61780095"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592411"
 ---
 # <a name="windows-identity-foundation-45-overview"></a>Windows Identity Foundation 4.5 の概要
 Windows Identity Foundation 4.5 は、アプリケーション内でクレーム ベース ID を実装するための一連の .NET Framework クラスです。 このクラスを使用することで、クレーム対応アプリケーションおよびサービスのメリットを簡単に得られるようになります。 WIF 4.5 は、.NET Framework Version 4.5 以降が使用されているすべての Web アプリケーションまたは Web サービスで使用できます。 WIF は、オープン スタンダードに基づく業界共通の構想を取り入れた Microsoft のフェデレーション ID ソフトウェア ファミリの 1 つにすぎません。 フェデレーション Id には、3 つのコンポーネントが構成されています。[Active Directory® フェデレーション サービス](https://go.microsoft.com/fwlink/?LinkID=247516)(AD FS) 2.0 では、 [Windows Azure の Access Control Services](https://go.microsoft.com/fwlink/?LinkID=247517) (ACS) は、WIF とします。 この 3 つのコンポーネントが一体となって、Microsoft の新しいクレーム ベースのクラウド ID およびアクセス プラットフォームのコアを形成しています。  

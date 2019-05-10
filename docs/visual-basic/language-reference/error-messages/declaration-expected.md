@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30188
 ms.assetid: da6b1df3-fe6b-4415-88e6-0977e5189e0b
-ms.openlocfilehash: 64ee75c93615f57b15fea29f06fff500a395ba0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e6f8bf2b4ce9789a1715971b8262bdd162ba8035
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61803832"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64619530"
 ---
 # <a name="declaration-expected"></a>宣言が必要です。
 Loop ステートメント、または割り当てなどの代入ステートメントは、プロシージャの外に発生します。 のみの宣言には、外部のプロシージャは許可されています。  
@@ -23,11 +23,11 @@ Loop ステートメント、または割り当てなどの代入ステートメ
   
 ## <a name="to-correct-this-error"></a>このエラーを解決するには  
   
--   代入ステートメントをプロシージャの本体に移動します。  
+- 代入ステートメントをプロシージャの本体に移動します。  
   
--   適切な宣言キーワードを使用して宣言を開始します。  
+- 適切な宣言キーワードを使用して宣言を開始します。  
   
--   宣言キーワードのスペルが間違っていないことを確認します。  
+- 宣言キーワードのスペルが間違っていないことを確認します。  
   
 ## <a name="see-also"></a>関連項目
 

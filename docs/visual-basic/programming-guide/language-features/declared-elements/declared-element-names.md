@@ -23,12 +23,12 @@ helpviewer_keywords:
 - names [Visual Basic], naming conventions
 - identifiers [Visual Basic], elements
 ms.assetid: 09d8843b-c0dc-4afe-9dab-87c439a69e66
-ms.openlocfilehash: 5b1f8ccc402f7f5928a33f434664b0f28d108e6d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7642aea72ddaa3789dba3b2328f271afcb92a16a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61828621"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610550"
 ---
 # <a name="declared-element-names-visual-basic"></a>宣言された要素の名前 (Visual Basic)
 宣言された各要素とも呼ばれる、名前を持つ、*識別子*、これは、コードを使用して、それを参照してください。  

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data sources [Windows Forms], binding to DataGridView control
 - DataGridView control [Windows Forms], data binding
 ms.assetid: 0a45c661-89dc-4390-9cc6-c47eee501488
-ms.openlocfilehash: 095c89fd305b1eeb73e2919760abe48e848c6aa0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4db2a8b0e30a6bb3db0c5c629d868bc01dc15a8c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902318"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648081"
 ---
 # <a name="datagridview-control-overview-windows-forms"></a>DataGridView コントロールの概要 (Windows フォーム)
 > [!NOTE]
@@ -36,13 +36,13 @@ ms.locfileid: "61902318"
   
  <xref:System.Windows.Forms.DataGridView>コントロールの次の一覧で説明されているクラスのインスタンスにバインドするための標準の Windows フォーム データ バインディング モデルをサポートしています。  
   
--   実装するクラス、 <xref:System.Collections.IList> 1 次元配列を含むインターフェイス。  
+- 実装するクラス、 <xref:System.Collections.IList> 1 次元配列を含むインターフェイス。  
   
--   実装するクラス、<xref:System.ComponentModel.IListSource>インターフェイスなど、<xref:System.Data.DataTable>と<xref:System.Data.DataSet>クラス。  
+- 実装するクラス、<xref:System.ComponentModel.IListSource>インターフェイスなど、<xref:System.Data.DataTable>と<xref:System.Data.DataSet>クラス。  
   
--   実装するクラス、<xref:System.ComponentModel.IBindingList>インターフェイスなど、<xref:System.ComponentModel.BindingList%601>クラス。  
+- 実装するクラス、<xref:System.ComponentModel.IBindingList>インターフェイスなど、<xref:System.ComponentModel.BindingList%601>クラス。  
   
--   実装するクラス、<xref:System.ComponentModel.IBindingListView>インターフェイスなど、<xref:System.Windows.Forms.BindingSource>クラス。  
+- 実装するクラス、<xref:System.ComponentModel.IBindingListView>インターフェイスなど、<xref:System.Windows.Forms.BindingSource>クラス。  
   
  <xref:System.Windows.Forms.DataGridView>コントロールは、これらのインターフェイスによって返されるオブジェクトのパブリック プロパティまたはによって返されるプロパティのコレクションにデータ バインディングをサポートしている、<xref:System.ComponentModel.ICustomTypeDescriptor>インターフェイスを実装して、返されたオブジェクトの場合。  
   

@@ -4,12 +4,12 @@ description: Azure クラウドおよび Windows コンテナーで既存の .NE
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 801d017457d1cdc3c8a495c8127b203380cb1d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7af5e189ea930f9eac8aadab2ba1497f43f8d2b1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61811837"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64614513"
 ---
 # <a name="build-resilient-services-ready-for-the-cloud-embrace-transient-failures-in-the-cloud"></a>クラウドの準備が整っている回復力のあるサービスの構築:クラウド内の一時的な障害を受け入れる
 
@@ -43,19 +43,19 @@ HTTP リソースとデータベース リソースの両方に、これらの�
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **部分的なエラーを処理するために回復力のある通信を実装します。**
+- **部分的なエラーを処理するために回復力のある通信を実装します。**
 
     [https://docs.microsoft.com/dotnet/standard/microservices-architecture/implement-resilient-applications/partial-failure-strategies](../../microservices-architecture/implement-resilient-applications/partial-failure-strategies.md)
 
--   **Entity Framework 接続の回復性と再試行ロジック (バージョン 6 以降)**
+- **Entity Framework 接続の回復性と再試行ロジック (バージョン 6 以降)**
 
     [https://docs.microsoft.com/ef/ef6/fundamentals/connection-resiliency/retry-logic](/ef/ef6/fundamentals/connection-resiliency/retry-logic)
 
--   **Transient Fault Handling Application Block**
+- **Transient Fault Handling Application Block**
 
--   <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
+- <https://docs.microsoft.com/previous-versions/msp-n-p/hh680934(v=pandp.50)>
 
--   **回復力のある HTTP 通信 Polly ライブラリ**
+- **回復力のある HTTP 通信 Polly ライブラリ**
 
     https://github.com/App-vNext/Polly
 

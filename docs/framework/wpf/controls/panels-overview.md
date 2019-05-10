@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Panel control [WPF], about Panel control
 - controls [WPF], Panel
 ms.assetid: f73644af-9941-4611-8754-6d4cef03fc44
-ms.openlocfilehash: 946e0f5ee90235498b8089732ae526ab6f35665c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 9bd2af8cd74c32bcda3a6105f39af470f961289d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051027"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625727"
 ---
 # <a name="panels-overview"></a>パネルの概要
 <xref:System.Windows.Controls.Panel> 要素は要素のレンダリングを制御するコンポーネントなど、サイズ、ディメンション、位置、および、子コンテンツの配置。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]の数は、定義済み<xref:System.Windows.Controls.Panel>要素とカスタムを作成する機能<xref:System.Windows.Controls.Panel>要素。  
@@ -64,7 +64,7 @@ ms.locfileid: "62051027"
   
 |要素名|UI パネル?|説明|  
 |------------------|---------------|-----------------|  
-|<xref:System.Windows.Controls.Canvas>|[はい]|あるに対する相対座標により子要素を明示的に配置できる領域を定義、<xref:System.Windows.Controls.Canvas>領域。|  
+|<xref:System.Windows.Controls.Canvas>|はい|あるに対する相対座標により子要素を明示的に配置できる領域を定義、<xref:System.Windows.Controls.Canvas>領域。|  
 |<xref:System.Windows.Controls.DockPanel>|[はい]|子要素を互いに水平方向または垂直方向に整列する領域を定義します。|  
 |<xref:System.Windows.Controls.Grid>|[はい]|列と行で構成されている柔軟なグリッド領域を定義します。 子要素を<xref:System.Windows.Controls.Grid>正確に使用して配置することができます、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティ。|  
 |<xref:System.Windows.Controls.StackPanel>|[はい]|子要素を水平方向または垂直方向の単一行に整列します。|  

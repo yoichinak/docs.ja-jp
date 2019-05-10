@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9483cf8671b7d3ad5430081d93925af30b3d8368
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c0f4b6e024d75d9334f91373f9d3bbd2c5e41093
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765155"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622512"
 ---
 # <a name="runtimeinfoflags-enumeration"></a>RUNTIME_INFO_FLAGS 列挙型
 共通言語ランタイム (CLR) に関する情報を返す必要があるかを示す値が含まれています。  

@@ -5,17 +5,17 @@ helpviewer_keywords:
 - shadowing, vs. overriding
 - overriding, vs. shadowing
 ms.assetid: 2d014a0b-7630-407d-8f4e-24bd87987923
-ms.openlocfilehash: b935184f0e4d0378bfea69811aa4e6c068a9776f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8fcf43040e9cbbcb2a59b1e1cf8c1f58951d5d87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61827945"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64610476"
 ---
 # <a name="differences-between-shadowing-and-overriding-visual-basic"></a>シャドウとオーバーライドの違い (Visual Basic)
 基本クラスから継承するクラスを定義するときに場合がありますを 1 つまたは複数の派生クラスで基底クラスの要素を再定義します。 シャドウとオーバーライドは、この目的のためです。  
   
-## <a name="comparison"></a>比較  
+## <a name="comparison"></a>条件式  
  派生クラスは基底クラスから継承し、1 つの宣言された要素と他の再定義、シャドウとオーバーライドの両方が使用します。 2 つの重要な違いがあります。  
   
  次の表では、シャドウとオーバーライドを比較します。  
@@ -41,15 +41,15 @@ ms.locfileid: "61827945"
 ## <a name="guidelines"></a>ガイドライン  
  通常、次の場合にオーバーライドする使用します。  
   
--   ポリモーフィックな派生クラスを定義します。  
+- ポリモーフィックな派生クラスを定義します。  
   
--   安全のために、コンパイラが、同一の要素型と呼び出し元の順序を適用します。  
+- 安全のために、コンパイラが、同一の要素型と呼び出し元の順序を適用します。  
   
  通常、シャドウ次の場合に使用します。  
   
--   予想される基底クラスが変更される可能性があるし、他の人と同じ名前を使用して要素を定義します。  
+- 予想される基底クラスが変更される可能性があるし、他の人と同じ名前を使用して要素を定義します。  
   
--   要素の型を変更またはシーケンスを呼び出す必要です。  
+- 要素の型を変更またはシーケンスを呼び出す必要です。  
   
 ## <a name="see-also"></a>関連項目
 

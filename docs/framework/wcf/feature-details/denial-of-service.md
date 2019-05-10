@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 4c49e721ce4934c041b6636776c72db7839a1b1b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857091"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64627025"
 ---
 # <a name="denial-of-service"></a>サービス拒否
 サービス拒否は、メッセージを処理できなくしたり、メッセージ処理を大幅に遅延させたりするなど、システムに過大な負荷が生じた場合に発生します。  
@@ -19,22 +19,22 @@ ms.locfileid: "61857091"
   
  回避事項を次に示します。  
   
--   <xref:System.Xml.NameTable> からの派生クラスを作成し、最大サイズのクォータを指定します  (<xref:System.Xml.NameTable> の使用を回避したり、サイズが上限に達したときに <xref:System.Xml.NameTable> を切り替えたりすることはできません)。  
+- <xref:System.Xml.NameTable> からの派生クラスを作成し、最大サイズのクォータを指定します  (<xref:System.Xml.NameTable> の使用を回避したり、サイズが上限に達したときに <xref:System.Xml.NameTable> を切り替えたりすることはできません)。  
   
--   可能であれば、前述のプロパティを使用せずに、<xref:System.Xml.XmlReader.MoveToAttribute%2A> メソッドと <xref:System.Xml.XmlReader.IsStartElement%2A> メソッドを使用します。これらのメソッドでは、文字列が返されないため、<xref:System.Xml.NameTable> コレクションがあふれてしまう問題を回避できます。  
+- 可能であれば、前述のプロパティを使用せずに、<xref:System.Xml.XmlReader.MoveToAttribute%2A> メソッドと <xref:System.Xml.XmlReader.IsStartElement%2A> メソッドを使用します。これらのメソッドでは、文字列が返されないため、<xref:System.Xml.NameTable> コレクションがあふれてしまう問題を回避できます。  
   
 ## <a name="malicious-client-sends-excessive-license-requests-to-service"></a>悪質なクライアントにより過度のライセンス要求がサービスに送信される  
  悪質なクライアントが過度のライセンス要求を実行してサービスを攻撃する場合、サーバーは過度のメモリを使用することになります。  
   
  軽減策:次のプロパティを使用して、<xref:System.ServiceModel.Channels.LocalServiceSecuritySettings>クラス。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A> : `SecurityContextToken` または `SPNego` ネゴシエーションの後にサーバーがキャッシュする、期限付きの `SSL` の最大数を制御します。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxCachedCookies%2A> : `SecurityContextToken` または `SPNego` ネゴシエーションの後にサーバーがキャッシュする、期限付きの `SSL` の最大数を制御します。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A> : `SecurityContextTokens` または `SPNego` ネゴシエーションに続いてサーバーが発行する `SSL` の有効期限を制御します。 サーバーは、この期間の `SecurityContextToken` をキャッシュします。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.IssuedCookieLifetime%2A> : `SecurityContextTokens` または `SPNego` ネゴシエーションに続いてサーバーが発行する `SSL` の有効期限を制御します。 サーバーは、この期間の `SecurityContextToken` をキャッシュします。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: サーバーで確立されているが、そのアプリケーション メッセージが処理されていない、セキュリティで保護されたメッセージ交換の最大数を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.MaxPendingSessions%2A>: サーバーで確立されているが、そのアプリケーション メッセージが処理されていない、セキュリティで保護されたメッセージ交換の最大数を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
   
--   <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A> : サービスが、セキュリティで保護されたメッセージ交換を、その当事者のクライアントからのアプリケーション メッセージを受信しなくても確立したままにする最長時間を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
+- <xref:System.ServiceModel.Channels.LocalServiceSecuritySettings.InactivityTimeout%2A> : サービスが、セキュリティで保護されたメッセージ交換を、その当事者のクライアントからのアプリケーション メッセージを受信しなくても確立したままにする最長時間を制御します。 このクォータは、クライアントが、セキュリティで保護されたメッセージ交換をサービスで確立しないようにします。それによって、サービスはクライアントごとの状態を保持できますが、それらの状態を使用することはありません。  
   
 ## <a name="wsdualhttpbinding-or-dual-custom-bindings-require-client-authentication"></a>WSDualHttpBinding または二重カスタム バインディングにクライアント認証が必要になる  
  既定では、<xref:System.ServiceModel.WSDualHttpBinding> のセキュリティは有効になっています。 ただし、<xref:System.ServiceModel.MessageSecurityOverHttp.ClientCredentialType%2A> プロパティを <xref:System.ServiceModel.MessageCredentialType.None> に設定してクライアント認証を無効にすると、第 3 のサービスで悪質なユーザーからサービス拒否攻撃を受ける可能性があります。 これは、悪質なクライアントが、メッセージ ストリームを第 3 のサービスに送信するようサービスに指示できるためです。  

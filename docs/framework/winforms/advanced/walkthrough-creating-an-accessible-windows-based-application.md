@@ -6,27 +6,27 @@ helpviewer_keywords:
 - Windows applications [Windows Forms], accessibility
 - applications [Windows Forms], accessibility
 ms.assetid: 654c7f2f-1586-480b-9f12-9d9b8f5cc32b
-ms.openlocfilehash: e7bc996c3d64c0ea3ac8fca5fef759ad309f2967
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: c324e4956d6db29e4de12bd7639a69daaf65d872
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747548"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665923"
 ---
 # <a name="walkthrough-creating-an-accessible-windows-based-application"></a>チュートリアル: ユーザー補助対応の Windows ベースのアプリケーションの作成
 ユーザー補助に対応するアプリケーションを作成することは、ビジネスに重要な影響を与えます。 多くの政府は、ソフトウェアの購入に関するユーザー補助の規制があります。 Certified for Windows ロゴには、ユーザー補助に関する要件が含まれています。 米国だけでも 3000 万人 (その多くは潜在的な顧客) が、ソフトウェアのアクセシビリティ機能によって影響を受けると推定されています。  
   
  このチュートリアルにより、Certified for Windows ロゴの 5 つのユーザー補助機能の要件に対応します。 これらの要件によると、ユーザー補助機能を持つアプリケーションとは、次のようなアプリケーションです。  
   
--   コントロール パネルのサイズ、色、フォント、および入力設定をサポートします。 ユーザーがコントロール パネルの設定を変更すると、メニュー バー、タイトル バー、罫線、およびステータス バーはすべてサイズが変更されます。 このアプリケーションでは、コントロールまたはコードに追加の変更は必要ありません。  
+- コントロール パネルのサイズ、色、フォント、および入力設定をサポートします。 ユーザーがコントロール パネルの設定を変更すると、メニュー バー、タイトル バー、罫線、およびステータス バーはすべてサイズが変更されます。 このアプリケーションでは、コントロールまたはコードに追加の変更は必要ありません。  
   
--   ハイ コントラスト モードをサポートします。  
+- ハイ コントラスト モードをサポートします。  
   
--   すべての機能に対して文書化されたキーボード アクセスを提供します。  
+- すべての機能に対して文書化されたキーボード アクセスを提供します。  
   
--   キーボード フォーカスの場所を視覚的およびプログラムで公開します。  
+- キーボード フォーカスの場所を視覚的およびプログラムで公開します。  
   
--   サウンドだけで重要な情報を伝達しないようにします。  
+- サウンドだけで重要な情報を伝達しないようにします。  
   
  詳細については、「[ユーザー補助アプリケーションのデザイン リソース](/visualstudio/ide/reference/resources-for-designing-accessible-applications)」を参照してください。  
   
@@ -41,29 +41,29 @@ ms.locfileid: "61747548"
   
 #### <a name="to-begin-making-the-application"></a>アプリケーションの作成を開始するには  
   
--   Visual Basic または Visual で新しい Windows アプリケーションを作成C#します。 プロジェクトに **PizzaOrder** という名前を付けます。 (詳細については、「[ソリューションとプロジェクトの作成](/visualstudio/ide/creating-solutions-and-projects)」を参照。)  
+- Visual Basic または Visual で新しい Windows アプリケーションを作成C#します。 プロジェクトに **PizzaOrder** という名前を付けます。 (詳細については、「[ソリューションとプロジェクトの作成](/visualstudio/ide/creating-solutions-and-projects)」を参照。)  
   
 ## <a name="adding-the-controls-to-the-form"></a>フォームへのコントロールの追加  
  フォームにコントロールを追加するときは、ユーザー補助に対応したアプリケーション作成のガイドラインに従うよう注意してください。  
   
--   <xref:System.Windows.Forms.Control.AccessibleDescription%2A> プロパティと <xref:System.Windows.Forms.Control.AccessibleName%2A> プロパティを設定します。 この例では、<xref:System.Windows.Forms.Control.AccessibleRole%2A> の既定の設定で十分です。 アクセシビリティのプロパティの詳細については「[Windows フォーム上のコントロールのユーザー補助情報の提供](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)」を参照してください。  
+- <xref:System.Windows.Forms.Control.AccessibleDescription%2A> プロパティと <xref:System.Windows.Forms.Control.AccessibleName%2A> プロパティを設定します。 この例では、<xref:System.Windows.Forms.Control.AccessibleRole%2A> の既定の設定で十分です。 アクセシビリティのプロパティの詳細については「[Windows フォーム上のコントロールのユーザー補助情報の提供](../controls/providing-accessibility-information-for-controls-on-a-windows-form.md)」を参照してください。  
   
--   フォント サイズを 10 ポイント以上に設定します。  
+- フォント サイズを 10 ポイント以上に設定します。  
   
     > [!NOTE]
     >  開始するときに、フォームのフォント サイズを 10 に設定すると、その後フォームに追加されるすべてのコントロールのフォント サイズが 10 になります。  
   
--   TextBox コントロールを説明するラベル コントロールが、タブ オーダーで TextBox コントロールのすぐ前になるようにします。  
+- TextBox コントロールを説明するラベル コントロールが、タブ オーダーで TextBox コントロールのすぐ前になるようにします。  
   
--   "&"の文字を使用して、アクセス キーを追加、<xref:System.Windows.Forms.Control.Text%2A>ユーザーが に移動する先のコントロールのプロパティ。  
+- "&"の文字を使用して、アクセス キーを追加、<xref:System.Windows.Forms.Control.Text%2A>ユーザーが に移動する先のコントロールのプロパティ。  
   
--   "&"の文字を使用して、アクセス キーを追加、<xref:System.Windows.Forms.Control.Text%2A>ユーザーに移動する必要があるコントロールの前にあるラベルのプロパティ。 ラベルの <xref:System.Windows.Forms.Label.UseMnemonic%2A> プロパティを `true` に設定し、ユーザーがアクセス キーを押したときに、フォーカスがタブ オーダーで次のコントロールに設定されるようにします。  
+- "&"の文字を使用して、アクセス キーを追加、<xref:System.Windows.Forms.Control.Text%2A>ユーザーに移動する必要があるコントロールの前にあるラベルのプロパティ。 ラベルの <xref:System.Windows.Forms.Label.UseMnemonic%2A> プロパティを `true` に設定し、ユーザーがアクセス キーを押したときに、フォーカスがタブ オーダーで次のコントロールに設定されるようにします。  
   
--   アクセス キーをすべてのメニュー項目に追加します。  
+- アクセス キーをすべてのメニュー項目に追加します。  
   
 #### <a name="to-make-your-windows-application-accessible"></a>Windows アプリケーションをユーザー補助に対応させるには  
   
--   フォームにコントロールを追加し、以下に示すように、プロパティを設定します。 フォームにコントロールを配置する方法のモデルについては、表の最後の画像を参照してください。  
+- フォームにコントロールを追加し、以下に示すように、プロパティを設定します。 フォームにコントロールを配置する方法のモデルについては、表の最後の画像を参照してください。  
   
     |Object|プロパティ|[値]|  
     |------------|--------------|-----------|  
@@ -137,20 +137,20 @@ ms.locfileid: "61747548"
     |MenuItem|名前|exitApp|  
     ||テキスト|終了(&X)|
     
-      フォームは、次の図のようになります。
+      Your form will look something like the following image:
     
-      ![名前テキスト ボックスに、およびサイズとトッピングの選択のピザ オーダー フォーム。](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
+      ![The pizza order form with a name textbox, and size and toppings selection.](./media/walkthrough-creating-an-accessible-windows-based-application/visual-basic-pizza-order-form.gif)  
 
 ## <a name="supporting-high-contrast-mode"></a>ハイ コントラスト モードのサポート  
  ハイコントラスト モードとは、視覚的に障碍のあるユーザーの役に立つ対照的な色とフォント サイズを使用して、読みやすさを向上する Windows のシステム設定です。 <xref:System.Windows.Forms.SystemInformation.HighContrast%2A>ハイ コントラスト モードが設定されているかどうかを決定するプロパティを指定します。  
   
  SystemInformation.HighContrast が `true` の場合、アプリケーションは次のようになります  
   
--   システムの配色を使用して、すべてのユーザー インターフェイス要素を表示します。  
+- システムの配色を使用して、すべてのユーザー インターフェイス要素を表示します。  
   
--   色で伝達される情報を、視覚的手掛かりまたはサウンドで伝達します。 たとえば、特定のリスト項目が赤いフォントを使用して強調表示されている場合に、フォントに太字を追加することで、項目が強調されていることをユーザーが色以外の手掛かりで確認できます。  
+- 色で伝達される情報を、視覚的手掛かりまたはサウンドで伝達します。 たとえば、特定のリスト項目が赤いフォントを使用して強調表示されている場合に、フォントに太字を追加することで、項目が強調されていることをユーザーが色以外の手掛かりで確認できます。  
   
--   テキストの背後にあるイメージやパターンを省略します。  
+- テキストの背後にあるイメージやパターンを省略します。  
   
  アプリケーションが開始し、システム イベント <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> に応答する際、アプリケーションで <xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の設定を確認する必要があります。 <xref:Microsoft.Win32.SystemEvents.UserPreferenceChanged> イベントは、<xref:System.Windows.Forms.SystemInformation.HighContrast%2A> の値が変更されるたびに発生します。  
   

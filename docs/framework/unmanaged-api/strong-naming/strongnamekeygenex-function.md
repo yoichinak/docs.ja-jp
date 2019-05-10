@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: af75a645b11325b96740807f9a3df65f5a676026
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 736e537a3f773acbd61dbad013b8dfb7cc429076
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000247"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64666017"
 ---
 # <a name="strongnamekeygenex-function"></a>StrongNameKeyGenEx 関数
 指定されたキー サイズ、厳密な名前を使用して新しい公開/秘密キー ペアを生成します。  
