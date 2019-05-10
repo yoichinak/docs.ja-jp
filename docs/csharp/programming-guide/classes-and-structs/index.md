@@ -11,12 +11,12 @@ helpviewer_keywords:
 - objects [C#]
 - C# language, classes
 ms.assetid: cc39dbda-8754-423e-b5b1-16a1db0734c0
-ms.openlocfilehash: 7b85940f8ce64139d056497a8007379f1658010d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c26b8deb6036c13a9a61d8929b4cabba5f3ef67
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61646333"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64584539"
 ---
 # <a name="classes-and-structs-c-programming-guide"></a>クラスと構造体 (C# プログラミング ガイド)
 クラスと構造体は、.NET Framework の共通型システムの 2 つの基本構成です。 クラスと構造体は、どちらも基本的にはデータと動作のセットを 1 つの論理単位としてカプセル化するデータ構造です。 データと動作はクラスまたは構造体の "*メンバー*" です。このトピックで後述するように、メソッド、プロパティ、イベントなどが含まれます。  
@@ -44,25 +44,25 @@ ms.locfileid: "61646333"
 ### <a name="members"></a>メンバー  
  すべてのメソッド、フィールド、定数、プロパティ、およびイベントは型で宣言する必要があります。これらは、型の*メンバー*と呼ばれます。 C# にはグローバル変数やグローバル メソッドはありません (言語によっては、グローバル変数やグローバル メソッドが存在する場合もあります)。 プログラムのエントリ ポイントである `Main` メソッドでも、クラスまたは構造体で宣言する必要があります。 クラスまたは構造体で宣言できるすべてのメンバーを次に示します。  
   
--   [フィールド](../../../csharp/programming-guide/classes-and-structs/fields.md)  
+- [フィールド](../../../csharp/programming-guide/classes-and-structs/fields.md)  
   
--   [定数](../../../csharp/programming-guide/classes-and-structs/constants.md)  
+- [定数](../../../csharp/programming-guide/classes-and-structs/constants.md)  
   
--   [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
+- [プロパティ](../../../csharp/programming-guide/classes-and-structs/properties.md)  
   
--   [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
+- [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)  
   
--   [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [イベント](../../../csharp/programming-guide/events/index.md)  
+- [イベント](../../../csharp/programming-guide/events/index.md)  
   
--   [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
+- [インデクサー](../../../csharp/programming-guide/indexers/index.md)  
   
--   [演算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [演算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
--   [入れ子にされた型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
+- [入れ子にされた型](../../../csharp/programming-guide/classes-and-structs/nested-types.md)  
   
 ### <a name="accessibility"></a>ユーザー補助  
  メソッドやプロパティの中には、クラスまたは構造体の外部にあるコード ("*クライアント コード*" と呼ばれます) から呼び出されたりアクセスされたりするように用意されているものがあります。 その他のメソッドやプロパティは、クラスまたは構造体それ自体でのみ使用されるようになっています。 意図したクライアント コードだけがアクセスできるように、コードのアクセシビリティを制限することが重要です。 型やメンバーがクライアント コードにアクセスする方法を指定するには、アクセス修飾子 [public](../../../csharp/language-reference/keywords/public.md)、[protected](../../../csharp/language-reference/keywords/protected.md)、[internal](../../../csharp/language-reference/keywords/internal.md)、[protected internal](../../../csharp/language-reference/keywords/protected-internal.md)、[private](../../../csharp/language-reference/keywords/private.md)、および [private protected](../../../csharp/language-reference/keywords/private-protected.md) を使用します。 既定のアクセシビリティは `private` です。 詳細については、「[アクセス修飾子](../../../csharp/programming-guide/classes-and-structs/access-modifiers.md)」を参照してください。  
