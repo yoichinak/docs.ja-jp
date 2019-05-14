@@ -17,27 +17,27 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2cb07389ad68985362993e76f82e58d2a59e237
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59178881"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623287"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (リソース ファイル ジェネレーター)
 リソース ファイル ジェネレーター (Resgen.exe) は、テキスト (.txt または .restext) ファイルおよび XML ベースのリソース形式 (.resx) ファイルを共通言語ランタイムのバイナリ (.resources) ファイルに変換します。この .resources ファイルは、ランタイム バイナリ実行可能ファイルまたはサテライト アセンブリに埋め込むことができます。 「[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)」をご覧ください。  
   
  Resgen.exe は、次のタスクを実行する汎用のリソース変換ユーティリィティです。  
   
--   .txt または .restext ファイルから .resources または .resx ファイルへの変換。 (.restext ファイルの形式は .txt ファイルの形式と同じです。 ただし、拡張子 .restext を使用すると、リソース定義を含むテキスト ファイルをより簡単に識別できます)。  
+- .txt または .restext ファイルから .resources または .resx ファイルへの変換。 (.restext ファイルの形式は .txt ファイルの形式と同じです。 ただし、拡張子 .restext を使用すると、リソース定義を含むテキスト ファイルをより簡単に識別できます)。  
   
--   .resources ファイルからテキスト ファイルまたは .resx ファイルへの変換。  
+- .resources ファイルからテキスト ファイルまたは .resx ファイルへの変換。  
   
--   .resx ファイルからテキスト ファイルまたは .resources ファイルへの変換。  
+- .resx ファイルからテキスト ファイルまたは .resources ファイルへの変換。  
   
--   アセンブリからの文字列リソースを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションでの使用に適した .resw ファイルに抽出します。  
+- アセンブリからの文字列リソースを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションでの使用に適した .resw ファイルに抽出します。  
   
--   個々の名前付きリソースと <xref:System.Resources.ResourceManager> インスタンスへのアクセスを提供する厳密に型指定されたクラスを作成します。  
+- 個々の名前付きリソースと <xref:System.Resources.ResourceManager> インスタンスへのアクセスを提供する厳密に型指定されたクラスを作成します。  
   
  何らかの理由により Resgen.exe が失敗した場合は、戻り値は –1 です。  
   
@@ -116,17 +116,17 @@ resgen filename.extension [outputDirectory]
 ## <a name="performing-specific-resgenexe-tasks"></a>特定の Resgen.exe タスクの実行  
  さまざまな方法で Resgen.exe を使用できます。テキストベースまたは XML ベースのリソース ファイルをバイナリ ファイルにコンパイルすることや、リソース ファイル形式を別のリソース ファイル形式に変換することや、<xref:System.Resources.ResourceManager> 機能をラップしてリソースへのアクセスを提供するクラスを生成することができます。 このセクションには、各タスクに関する詳細な情報があります。  
   
--   [リソースのバイナリ ファイルへのコンパイル](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
+- [リソースのバイナリ ファイルへのコンパイル](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Compiling)  
   
--   [リソース ファイルの種類間の変換](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
+- [リソース ファイルの種類間の変換](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Convert)  
   
--   [複数のファイルのコンパイルまたは変換](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
+- [複数のファイルのコンパイルまたは変換](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Multiple)  
   
--   [.resw ファイルへのリソースのエクスポート](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
+- [.resw ファイルへのリソースのエクスポート](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Exporting)  
   
--   [リソースの条件付きコンパイル](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
+- [リソースの条件付きコンパイル](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Conditional)  
   
--   [厳密に型指定されたリソース クラスの生成](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
+- [厳密に型指定されたリソース クラスの生成](../../../docs/framework/tools/resgen-exe-resource-file-generator.md#Strong)  
   
 <a name="Compiling"></a>   
 ### <a name="compiling-resources-into-a-binary-file"></a>リソースのバイナリ ファイルへのコンパイル  
@@ -170,13 +170,13 @@ resgen Resources.resx Resources.resources
 ### <a name="converting-between-resource-file-types"></a>リソース ファイルの種類間の変換  
  テキストベースか XML ベースのリソース ファイルをバイナリ .resources ファイルにコンパイルすることに加えて、Resgen.exe は、任意のサポートされるファイルの種類を他のサポートされるファイルの種類に変換できます。 これによって、次の変換を実行できます。  
   
--   .txt および .restext ファイルから .resx ファイル。  
+- .txt および .restext ファイルから .resx ファイル。  
   
--   .resx ファイルから .txt および .restext ファイル。  
+- .resx ファイルから .txt および .restext ファイル。  
   
--   .resources ファイルから .txt および .restext ファイル。  
+- .resources ファイルから .txt および .restext ファイル。  
   
--   .resources ファイルから .resx ファイル。  
+- .resources ファイルから .resx ファイル。  
   
  構文は、前のセクションの構文と同じです。  
   
@@ -315,13 +315,13 @@ resgen inputFilename [outputFilename] /str:language[,namespace,[classname[,filen
   
  厳密に型指定されたリソース クラスには、次のメンバーがあります。  
   
--   厳密に入力されたリソース クラスをインスタンス化するために使用できる、パラメーターなしのコンストラクター。  
+- 厳密に入力されたリソース クラスをインスタンス化するために使用できる、パラメーターなしのコンストラクター。  
   
--   `static` (C#) または `Shared` (Visual Basic)、および厳密に入力されたリソースを管理する `ResourceManager` のインスタンスを返す読み取り専用 <xref:System.Resources.ResourceManager> プロパティ。  
+- `static` (C#) または `Shared` (Visual Basic)、および厳密に入力されたリソースを管理する `ResourceManager` のインスタンスを返す読み取り専用 <xref:System.Resources.ResourceManager> プロパティ。  
   
--   リソース検索に使用するカルチャを設定する `Culture` 静的プロパティ。 既定値は `null` です。したがって、現在の UI カルチャが使用されることを意味します。  
+- リソース検索に使用するカルチャを設定する `Culture` 静的プロパティ。 既定値は `null` です。したがって、現在の UI カルチャが使用されることを意味します。  
   
--   1 つの `static` (C#) または `Shared` (Visual Basic)、および .resources ファイルのリソースごとの読み取り専用プロパティ。 プロパティの名前はリソースの名前です。  
+- 1 つの `static` (C#) または `Shared` (Visual Basic)、および .resources ファイルのリソースごとの読み取り専用プロパティ。 プロパティの名前はリソースの名前です。  
   
  たとえば、次のコマンドでは、StringResources.txt という名前のリソース ファイルを StringResources.resources にコンパイルし、リソース マネージャーへのアクセスに使用できる StringResources.vb という名前の Visual Basic ソース コード ファイルに `StringResources` という名前のクラスを生成します。  
   

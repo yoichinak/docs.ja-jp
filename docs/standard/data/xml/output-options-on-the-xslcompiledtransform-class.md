@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 91ce8cba-386c-411e-bb38-0891a0393c0a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 694d2be51d025ab054caf19e4aa2900216ad5b2e
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 0f56e27b2ae9a32385aa9a44db631d2909023206
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2018
-ms.locfileid: "47205020"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647852"
 ---
 # <a name="output-options-on-the-xslcompiledtransform-class"></a>XslCompiledTransform クラスの出力オプション
 このトピックでは、XSLT で使用できる出力オプションについて説明します。 出力オプションは、スタイル シート内で、または <xref:System.Xml.Xsl.XslCompiledTransform.Transform%2A> メソッドで指定できます。  
@@ -55,7 +55,7 @@ ms.locfileid: "47205020"
   
 ## <a name="notes"></a>メモ  
   
--   空要素タグを書き出すとき、要素名の最後の文字とバック主ラッシュとの間に 1 つのスペースが書かれます。たとえば `<myElement />` です。 これにより、生成された HTML ページが古いブラウザーで正しく表示されます。  
+- 空要素タグを書き出すとき、要素名の最後の文字とバック主ラッシュとの間に 1 つのスペースが書かれます。たとえば `<myElement />` です。 これにより、生成された HTML ページが古いブラウザーで正しく表示されます。  
   
 ## <a name="see-also"></a>関連項目
 

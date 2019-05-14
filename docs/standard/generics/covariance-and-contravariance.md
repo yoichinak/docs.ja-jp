@@ -13,29 +13,29 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 931edf3610d083f6821ec87d3e05db855e88c6f9
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56836423"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64622736"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>ジェネリックの共変性と反変性
 <a name="top"></a> 共変性と反変性は、元の指定よりも強い派生型 (具体性が高い) と弱い派生型 (具体性が低い) を使用する能力を示す用語です。 ジェネリック型パラメーターは、ジェネリック型の代入と使用の柔軟性を向上させるために、共変性と反変性をサポートしています。 型システムにおいて、共変性、反変性、および不変性は、次のように定義されます。 各例では、基底クラスが `Base` という名前であり、派生クラスが `Derived`という名前であるとします。  
   
--   `Covariance`  
+- `Covariance`  
   
      最初に指定された型よりも強い派生型を使用できるようにします。  
   
      `IEnumerable<Derived>` (Visual Basic では `IEnumerable(Of Derived)`) のインスタンスを `IEnumerable<Base>` 型の変数に割り当てることができます。  
   
--   `Contravariance`  
+- `Contravariance`  
   
      最初に指定された型よりも一般的な (弱い派生の) 型を使用できるようにします。  
   
      `Action<Base>` (Visual Basic では`Action(Of Base)` ) のインスタンスを `Action<Derived>`型の変数に割り当てることができます。  
   
--   `Invariance`  
+- `Invariance`  
   
      最初に指定された型のみを使用できることを意味します。そのため、不変のジェネリック型パラメーターは、共変でも反変でもありません。  
   
@@ -59,25 +59,25 @@ ms.locfileid: "56836423"
   
  共変性と反変性は、"*分散*" と総称されます。 共変または反変としてマークされていないジェネリック型パラメーターは、 *不変*と呼ばれます。 共通言語ランタイムにおける分散について、簡潔な概要を示します。  
   
--   [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]のバリアント型パラメーターは、ジェネリック インターフェイス型と汎用デリゲート型に制限されています。  
+- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]のバリアント型パラメーターは、ジェネリック インターフェイス型と汎用デリゲート型に制限されています。  
   
--   ジェネリック インターフェイス型や汎用デリゲート型では、共変と反変の両方の型パラメーターを使用できます。  
+- ジェネリック インターフェイス型や汎用デリゲート型では、共変と反変の両方の型パラメーターを使用できます。  
   
--   分散が適用されるのは参照型のみです。バリアント型パラメーターに対して値型を指定すると、その型パラメーターが、結果の構築型で不変になります。  
+- 分散が適用されるのは参照型のみです。バリアント型パラメーターに対して値型を指定すると、その型パラメーターが、結果の構築型で不変になります。  
   
--   分散は、デリゲートの組み合わせには適用されません。 つまり、 `Action<Derived>` 型と `Action<Base>` 型 (Visual Basic では`Action(Of Derived)` と `Action(Of Base)` ) の 2 つのデリゲートがある場合、結果はタイプ セーフになりますが、2 つ目のデリゲートに 1 つ目のデリゲートを組み合わせることはできません。 分散によって 2 つ目のデリゲートを `Action<Derived>`型の変数に代入できますが、デリゲートを組み合わせることができるのは、それらの型が完全に一致している場合だけです。  
+- 分散は、デリゲートの組み合わせには適用されません。 つまり、 `Action<Derived>` 型と `Action<Base>` 型 (Visual Basic では`Action(Of Derived)` と `Action(Of Base)` ) の 2 つのデリゲートがある場合、結果はタイプ セーフになりますが、2 つ目のデリゲートに 1 つ目のデリゲートを組み合わせることはできません。 分散によって 2 つ目のデリゲートを `Action<Derived>`型の変数に代入できますが、デリゲートを組み合わせることができるのは、それらの型が完全に一致している場合だけです。  
   
  以降では、共変と反変の型パラメーターについて詳しく説明します。  
   
--   [共変の型パラメーターを持つジェネリック インターフェイス](#InterfaceCovariantTypeParameters)  
+- [共変の型パラメーターを持つジェネリック インターフェイス](#InterfaceCovariantTypeParameters)  
   
--   [反変のジェネリック型パラメーターを持つジェネリック インターフェイス](#InterfaceCovariantTypeParameters)  
+- [反変のジェネリック型パラメーターを持つジェネリック インターフェイス](#InterfaceCovariantTypeParameters)  
   
--   [バリアント型パラメーターを持つ汎用デリゲート](#DelegateVariantTypeParameters)  
+- [バリアント型パラメーターを持つ汎用デリゲート](#DelegateVariantTypeParameters)  
   
--   [バリアント ジェネリック インターフェイスとバリアント汎用デリゲートの定義](#DefiningVariantTypeParameters)  
+- [バリアント ジェネリック インターフェイスとバリアント汎用デリゲートの定義](#DefiningVariantTypeParameters)  
   
--   [バリアント ジェネリック インターフェイス型とバリアント汎用デリゲート型の一覧](#VariantList)  
+- [バリアント ジェネリック インターフェイス型とバリアント汎用デリゲート型の一覧](#VariantList)  
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>共変の型パラメーターを持つジェネリック インターフェイス  

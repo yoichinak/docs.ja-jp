@@ -6,19 +6,19 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bb87115f4649a890d1fb2aab1595c3b6848bc74
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59322083"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583071"
 ---
 # <a name="polymorphism-c-programming-guide"></a>ポリモーフィズム (C# プログラミング ガイド)
 ポリモーフィズムは、カプセル化と継承に次ぐ、オブジェクト指向プログラミングの第 3 の柱と言われることがよくあります。 ポリモーフィズムは、ギリシャ語で "多形" を意味し、次の 2 つの側面を持っています。  
   
--   メソッド パラメーター、コレクション、配列などに渡された派生クラスのオブジェクトは、実行時に基底クラスのオブジェクトとして扱われることがあります。 この場合、オブジェクトの宣言された型は、その実行時の型と同じではなくなります。  
+- メソッド パラメーター、コレクション、配列などに渡された派生クラスのオブジェクトは、実行時に基底クラスのオブジェクトとして扱われることがあります。 この場合、オブジェクトの宣言された型は、その実行時の型と同じではなくなります。  
   
--   基底クラスでは、[virtual](../../../csharp/language-reference/keywords/virtual.md) *メソッド*を定義して実行できます。派生クラスでそれを[オーバーライド](../../../csharp/language-reference/keywords/override.md)すると、独自の定義と実装を提供できます。 実行時には、クライアント コードがメソッドを呼び出したとき、CLR によってオブジェクトの実行時の型が検索され、仮想メソッドのオーバーライドが呼び出されます。 このように、ソース コード内で基底クラスのメソッドを呼び出して、派生クラスのメソッドが実行されるようにできます。  
+- 基底クラスでは、[virtual](../../../csharp/language-reference/keywords/virtual.md) *メソッド*を定義して実行できます。派生クラスでそれを[オーバーライド](../../../csharp/language-reference/keywords/override.md)すると、独自の定義と実装を提供できます。 実行時には、クライアント コードがメソッドを呼び出したとき、CLR によってオブジェクトの実行時の型が検索され、仮想メソッドのオーバーライドが呼び出されます。 このように、ソース コード内で基底クラスのメソッドを呼び出して、派生クラスのメソッドが実行されるようにできます。  
   
  仮想メソッドを使用すると、関連するオブジェクトのグループを同一の方法で扱うことができます。 たとえば、描画サーフェイスにさまざまな種類の図形を作成できる描画アプリケーションがあるとします。 コンパイル時には、ユーザーがどのような種類の図形を作成するかわかりません。 しかし、アプリケーションでは、作成されたさまざまな種類の図形を追跡し、ユーザーのマウス操作に応じて更新する必要があります。 ポリモーフィズムを使用すると、2 つの基本的な手順でこの問題を解決できます。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "59322083"
 ### <a name="virtual-members"></a>仮想メンバー  
  基底クラスから派生クラスを継承すると、派生クラスは、基底クラスのすべてのメソッド、フィールド、プロパティ、およびイベントを継承します。 派生クラスの設計者は、次の点を選択できます。  
   
--   基底クラスの仮想メンバーをオーバーライドするかどうか  
+- 基底クラスの仮想メンバーをオーバーライドするかどうか  
   
--   最も近い基底クラスのメソッドを、オーバーライドせずに継承するかどうか  
+- 最も近い基底クラスのメソッドを、オーバーライドせずに継承するかどうか  
   
--   これらのメンバーの仮想でない実装を新しく定義して、基底クラスの実装を隠ぺいするかどうか  
+- これらのメンバーの仮想でない実装を新しく定義して、基底クラスの実装を隠ぺいするかどうか  
   
  派生クラスが基底クラスのメンバーをオーバーライドできるのは、基底クラスのメンバーが [virtual](../../../csharp/language-reference/keywords/virtual.md) または [abstract](../../../csharp/language-reference/keywords/abstract.md) として宣言されている場合だけです。 派生メンバーでは、[override](../../../csharp/language-reference/keywords/override.md) キーワードを使用して、そのメソッドが仮想呼び出しに加わることを明示的に示す必要があります。 次にコード例を示します。  
   
@@ -89,11 +89,11 @@ ms.locfileid: "59322083"
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
--   [Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
+- [Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)  
   
--   [Override キーワードと New キーワードを使用する場合について](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
+- [Override キーワードと New キーワードを使用する場合について](../../../csharp/programming-guide/classes-and-structs/knowing-when-to-use-override-and-new-keywords.md)  
   
--   [方法: ToString メソッドをオーバーライドする](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
+- [方法: ToString メソッドをオーバーライドする](../../../csharp/programming-guide/classes-and-structs/how-to-override-the-tostring-method.md)  
   
 ## <a name="see-also"></a>関連項目
 

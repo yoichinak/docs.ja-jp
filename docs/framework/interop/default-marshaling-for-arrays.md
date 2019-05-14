@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 8a3cca8b-dd94-4e3d-ad9a-9ee7590654bc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e3eb5c9686f54bcaacef8d593f0ace4804d4ae60
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1f29420038276739623c534656a94e13080637c6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59098222"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626364"
 ---
 # <a name="default-marshaling-for-arrays"></a>配列に対する既定のマーシャリング
 全体がマネージド コードで構成されるアプリケーションでは、共通言語ランタイムは、配列型を In/Out パラメーターとして渡します。 これに対し、相互運用マーシャラーは、既定で In パラメーターとして配列を渡します。  
@@ -146,7 +146,7 @@ void New3(ref String ar);
   
  Tlbimp.exe によって生成された Microsoft Intermediate Language (MSIL) コードを編集して、マーシャラーに配列サイズを提供してから再コンパイルすることができます。 MSIL コードの変更方法の詳細については、「[Customizing Runtime Callable Wrappers](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/e753eftz(v=vs.100))」(ランタイム呼び出し可能ラッパーのカスタマイズ) を参照してください。 配列内の要素の数を示すには、次の方法のいずれかの方法で、<xref:System.Runtime.InteropServices.MarshalAsAttribute> 型をマネージド メソッド定義の配列パラメーターに適用します。  
   
--   配列内の要素数を含む別のパラメーターを特定します。 パラメーターは位置によって識別され、最初のパラメーターは番号 0 から始まります。     
+- 配列内の要素数を含む別のパラメーターを特定します。 パラメーターは位置によって識別され、最初のパラメーターは番号 0 から始まります。     
   
     ```vb  
     Sub [New](ElemCnt As Integer, _  
@@ -160,7 +160,7 @@ void New3(ref String ar);
        [MarshalAs(UnmanagedType.LPArray, SizeParamIndex=0)] int[] ar );  
     ```  
   
--   配列のサイズを定数として定義します。 次に例を示します。  
+- 配列のサイズを定数として定義します。 次に例を示します。  
   
     ```vb  
     Sub [New](\<MarshalAs(UnmanagedType.LPArray, SizeConst:=128)> _  

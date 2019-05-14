@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54917f6f-cb18-4103-b622-856b55da93f3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1e033ba4b3b98367452b355363058adc7f1a5887
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 081548f9004d2fedf4d49845d3f44d4609fa508e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59198401"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626303"
 ---
 # <a name="how-to-reference-net-types-from-com"></a>方法: COM から .NET 型を参照する
 クライアント アンド サーバー コードの観点からすると、COM と .NET Framework の違いはほとんどわかりません。 Microsoft Visual Basic クライアントでは、オブジェクト ブラウザーを使って .NET オブジェクトを表示できます。オブジェクト ブラウザーには、オブジェクトのメソッドと構文、プロパティ、およびフィールドが、他の COM オブジェクトの場合と同様に公開されます。  
@@ -28,7 +28,7 @@ ms.locfileid: "59198401"
   
 ### <a name="to-import-a-library"></a>ライブラリをインポートするには  
   
--   **#import** ディレクティブで **raw_interfaces_only** オプションを指定します。 次に例を示します。  
+- **#import** ディレクティブで **raw_interfaces_only** オプションを指定します。 次に例を示します。  
   
     ```cpp  
     #import "..\LoanLib\LoanLib.tlb" raw_interfaces_only  
@@ -36,7 +36,7 @@ ms.locfileid: "59198401"
   
      - または -  
   
--   Mscorlib.tlb の #import ディレクティブを含めます。 次に例を示します。  
+- Mscorlib.tlb の #import ディレクティブを含めます。 次に例を示します。  
   
     ```cpp  
     #import "mscorlib.tlb"  

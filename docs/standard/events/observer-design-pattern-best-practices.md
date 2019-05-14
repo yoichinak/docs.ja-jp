@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c834760f-ddd4-417f-abb7-a059679d5b8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 839772fac51ab006d03875920360824a73b033e2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c37480f18c100d66e78e851439bd15e2ecfdd381
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54599999"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615193"
 ---
 # <a name="observer-design-pattern-best-practices"></a>オブサーバー デザイン パターンのベスト プラクティス
 .NET Framework では、オブザーバー デザイン パターンは、一連のインターフェイスとして実装されます。 <xref:System.IObservable%601?displayProperty=nameWithType> インターフェイスはデータ プロバイダーを表し、データ プロバイダーはオブザーバーで通知のサブスクリプションを解除できるようにする <xref:System.IDisposable> 実装も提供します。 <xref:System.IObserver%601?displayProperty=nameWithType> インターフェイスはオブザーバーを表します。 このトピックでは、これらのインターフェイスを使用してオブザーバー デザイン パターンを実装するときに、開発者が適用することが望ましいベスト プラクティスについて説明します。  
@@ -31,11 +31,11 @@ ms.locfileid: "54599999"
   
  例外を処理して <xref:System.IObserver%601.OnError%2A> メソッドを呼び出す場合、プロバイダーが次のベスト プラクティスに従うことをお勧めします。  
   
--   プロバイダーに固有の要件がある場合、プロバイダーは独自の例外を処理する必要があります。  
+- プロバイダーに固有の要件がある場合、プロバイダーは独自の例外を処理する必要があります。  
   
--   プロバイダーは、オブザーバーが特定の方法で例外を処理することを期待または要求しないようにします。  
+- プロバイダーは、オブザーバーが特定の方法で例外を処理することを期待または要求しないようにします。  
   
--   更新を提供する機能を損なうような例外を処理する場合、プロバイダーは <xref:System.IObserver%601.OnError%2A> メソッドを呼び出す必要があります。 このような例外の情報はオブザーバーに渡すことができます。 それ以外の場合は、オブザーバーに例外を通知する必要はありません。  
+- 更新を提供する機能を損なうような例外を処理する場合、プロバイダーは <xref:System.IObserver%601.OnError%2A> メソッドを呼び出す必要があります。 このような例外の情報はオブザーバーに渡すことができます。 それ以外の場合は、オブザーバーに例外を通知する必要はありません。  
   
  プロバイダーが <xref:System.IObserver%601.OnError%2A> メソッドまたは <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> メソッドを呼び出すと、それ以上の通知は行われなくなるため、プロバイダーはそのオブザーバーのサブスクリプションを解除することができます。 ただし、オブザーバーも、<xref:System.IObserver%601.OnError%2A> 通知または <xref:System.IObserver%601.OnCompleted%2A?displayProperty=nameWithType> 通知を受信する前と後の両方を含め、いつでも自分自身のサブスクリプションを解除できます。 オブザーバー デザイン パターンでは、プロバイダーとオブザーバーのどちらがサブスクリプションの解除を行うかは指定しません。そのため、両方でサブスクリプションの解除を試みる可能性があります。 通常、オブザーバーは、サブスクリプションを解除すると、サブスクライバーのコレクションから削除されます。 シングルスレッド アプリケーションでは、削除を試みる前に、オブジェクト参照が有効であること、およびオブジェクトがサブスクライバーのコレクションのメンバーであることを、<xref:System.IDisposable.Dispose%2A?displayProperty=nameWithType> の実装で確認する必要があります。 マルチスレッド アプリケーションでは、<xref:System.Collections.Concurrent.BlockingCollection%601?displayProperty=nameWithType> オブジェクトなどのスレッド セーフなコレクション オブジェクトを使用する必要があります。  
   
@@ -44,9 +44,9 @@ ms.locfileid: "54599999"
   
  プロバイダーからの <xref:System.IObserver%601.OnError%2A> メソッド呼び出しに応答する場合、オブザーバーが次のベスト プラクティスに従うことをお勧めします。  
   
--   <xref:System.IObserver%601.OnNext%2A> または <xref:System.IObserver%601.OnError%2A> などのインターフェイス実装からオブザーバーが例外をスローすることを回避するようにします。 オブザーバーが例外をスローする場合は、これらの例外が未処理になることを想定する必要があります。  
+- <xref:System.IObserver%601.OnNext%2A> または <xref:System.IObserver%601.OnError%2A> などのインターフェイス実装からオブザーバーが例外をスローすることを回避するようにします。 オブザーバーが例外をスローする場合は、これらの例外が未処理になることを想定する必要があります。  
   
--   呼び出し履歴を保持するために、<xref:System.Exception> メソッドに渡された <xref:System.IObserver%601.OnError%2A> オブジェクトをスローするオブザーバーは、オブジェクトをスローする前に例外をラップする必要があります。 このためには、標準の例外オブジェクトを使用する必要があります。  
+- 呼び出し履歴を保持するために、<xref:System.Exception> メソッドに渡された <xref:System.IObserver%601.OnError%2A> オブジェクトをスローするオブザーバーは、オブジェクトをスローする前に例外をラップする必要があります。 このためには、標準の例外オブジェクトを使用する必要があります。  
   
 ## <a name="additional-best-practices"></a>その他のベスト プラクティス  
  <xref:System.IObservable%601.Subscribe%2A?displayProperty=nameWithType> メソッドで登録を解除しようとすると、null 参照になる場合があります。 そのため、この方法は避けることをお勧めします。  

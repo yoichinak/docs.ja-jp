@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e053a04ba0587a4eca166fa710bc465094feca80
-ms.sourcegitcommit: dcc8feeff4718664087747529638ec9b47e65234
+ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55479569"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644821"
 ---
 # <a name="managed-threading-basics"></a>マネージド スレッド処理の基本
 
@@ -43,16 +43,13 @@ ms.locfileid: "55479569"
  [Windows でのマネージド スレッド処理とアンマネージド スレッド処理](../../../docs/standard/threading/managed-and-unmanaged-threading-in-windows.md)  
  マネージド スレッド処理とアンマネージド スレッド処理の関係について説明し、Windows のスレッド処理 API に相当するマネージド API をリストし、COM アパートメントとマネージド スレッドの相互作用について説明します。  
   
- [Thread.Suspend、ガベージ コレクション、およびセーフ ポイント](../../../docs/standard/threading/thread-suspend-garbage-collection-and-safe-points.md)  
- スレッドの中断とガベージ コレクションについて説明します。  
-  
  [スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  スレッド相対ストレージ メカニズムについて説明します。  
   
  [マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
  取り消しトークンを使用して、非同期または長時間実行されている同期操作の取り消し方法について説明します。  
   
-## <a name="reference"></a>参照
+## <a name="reference"></a>関連項目
 
  <xref:System.Threading.Thread>  
  **Thread** クラスのリファレンス ドキュメントです。このクラスは、アンマネージド コードから作成されたか、マネージド アプリケーションで作成されたかにかかわらず、マネージド スレッドを表します。  

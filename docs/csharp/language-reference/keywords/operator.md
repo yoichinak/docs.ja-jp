@@ -9,14 +9,14 @@ f1_keywords:
 helpviewer_keywords:
 - operator keyword [C#]
 ms.assetid: 59218cce-e90e-42f6-a6bb-30300981b86a
-ms.openlocfilehash: cdc052da4457a59cc66848780e944ccf203acf39
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 47ce91c343092ac2f7555c1edf3418527776e131
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235595"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64754761"
 ---
-# <a name="operator-c-reference"></a>operator (C# リファレンス)
+# <a name="operator-c-reference"></a>演算子 (C# リファレンス)
 
 `operator` キーワードを使用して、組み込みの演算子をオーバーロードしたり、クラスまたは構造体宣言内でユーザー定義の変換を行ったりすることができます。
 

@@ -12,33 +12,33 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8c238f0aebd7c81443eb55fe0ee84844f0c9aee8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59207514"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591513"
 ---
 # <a name="security-considerations-for-reflection"></a>リフレクションに関するセキュリティ上の考慮事項
 リフレクションを使用すると、型とメンバーに関する情報を取得し、メンバーにアクセスできます (つまり、メソッドやコンストラクターの呼び出し、プロパティ値の取得と設定、イベント ハンドラーの追加と削除などを実行できます)。 リフレクションを使用した型とメンバーに関する情報の取得には、制限がありません。 すべてのコードで、次のタスクを実行するためにリフレクションを使用できます。  
   
--   型とメンバーを列挙し、そのメタデータを確認する。  
+- 型とメンバーを列挙し、そのメタデータを確認する。  
   
--   アセンブリとモジュールを列挙し、確認する。  
+- アセンブリとモジュールを列挙し、確認する。  
   
  これに対して、リフレクションを使用したメンバーへのアクセスには、制限があります。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降、リフレクションを使用してセキュリティ クリティカルなメンバーにアクセスできるのは、信頼されているコードだけになりました。 さらに、コンパイル済みコードに直接アクセスできない非パブリック メンバーに、リフレクションを使用してアクセスできるのも信頼されたコードだけです。 最後に、セーフ クリティカルなメンバーにアクセスするリフレクションを使用するコードには、コンパイル済みコードと同様、セーフ クリティカル メンバーが要求するすべてのアクセス許可が必要です。  
   
  必要なアクセス許可がある場合、コードはリフレクションを使用して次の種類のアクセスを実行できます。  
   
--   セキュリティ クリティカルではないをパブリック メンバーへのアクセス。  
+- セキュリティ クリティカルではないをパブリック メンバーへのアクセス。  
   
--   コンパイル済みコードにアクセスできる非パブリック メンバーへのアクセス (そのメンバーがセキュリティ クリティカルでない場合)。 このような非パブリック メンバーの例を次に示します。  
+- コンパイル済みコードにアクセスできる非パブリック メンバーへのアクセス (そのメンバーがセキュリティ クリティカルでない場合)。 このような非パブリック メンバーの例を次に示します。  
   
-    -   呼び出し元コードの基本クラスのプロテクト メンバー。 (リフレクションの場合、これはファミリレベル アクセスと呼ばれます。)  
+    - 呼び出し元コードの基本クラスのプロテクト メンバー。 (リフレクションの場合、これはファミリレベル アクセスと呼ばれます。)  
   
-    -   呼び出し元コードのアセンブリの `internal` メンバー (Visual Basic では `Friend` メンバー) (リフレクションの場合、これはアセンブリレベル アクセスと呼ばれます)。  
+    - 呼び出し元コードのアセンブリの `internal` メンバー (Visual Basic では `Friend` メンバー) (リフレクションの場合、これはアセンブリレベル アクセスと呼ばれます)。  
   
-    -   呼び出し元コードを含むクラスの他のインスタンスのプライベート メンバー。  
+    - 呼び出し元コードを含むクラスの他のインスタンスのプライベート メンバー。  
   
  たとえば、サンドボックス化されたアプリケーション ドメインで実行されるコードは、アプリケーション ドメインから追加のアクセス許可が付与されていない限り、この一覧に示したアクセスに限定されます。  
   
@@ -50,9 +50,9 @@ ms.locfileid: "59207514"
 ## <a name="accessing-security-critical-members"></a>セキュリティ クリティカルなメンバーへのアクセス  
  メンバーは、<xref:System.Security.SecurityCriticalAttribute> が指定されている場合、<xref:System.Security.SecurityCriticalAttribute> が指定されている型に属する場合、またはセキュリティ クリティカルなアセンブリ内にある場合は、セキュリティ クリティカルです。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、セキュリティ クリティカルなメンバーにアクセスする場合の規則は次のとおりです。  
   
--   透過的なコードでは、コードが完全に信頼されている場合でも、リフレクションを使用してセキュリティ クリティカルなメンバーにアクセスすることはできません。 <xref:System.MethodAccessException>、<xref:System.FieldAccessException>、または <xref:System.TypeAccessException> がスローされます。  
+- 透過的なコードでは、コードが完全に信頼されている場合でも、リフレクションを使用してセキュリティ クリティカルなメンバーにアクセスすることはできません。 <xref:System.MethodAccessException>、<xref:System.FieldAccessException>、または <xref:System.TypeAccessException> がスローされます。  
   
--   部分信頼で実行されているコードは透過的として扱われます。  
+- 部分信頼で実行されているコードは透過的として扱われます。  
   
  これらの規則は、セキュリティ クリティカルなメンバーにコンパイルされたコードから直接アクセスする場合でも、リフレクションを使用してアクセスする場合でも同じです。  
   
@@ -77,18 +77,18 @@ ms.locfileid: "59207514"
 ## <a name="accessing-members-that-are-normally-inaccessible"></a>通常はアクセスできないメンバーへのアクセス  
  リフレクションを使用して、共通言語ランタイムのアクセシビリティ規則によりアクセスできないメンバーを呼び出すには、次の 2 つのアクセス許可のどちらかをコードに許可する必要があります。  
   
--   コードから非パブリック メンバーを呼び出せるようにするには、<xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグが設定された <xref:System.Security.Permissions.ReflectionPermission> をコードに与える必要があります。  
+- コードから非パブリック メンバーを呼び出せるようにするには、<xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグが設定された <xref:System.Security.Permissions.ReflectionPermission> をコードに与える必要があります。  
   
     > [!NOTE]
     >  既定で、インターネットを起源とするコードにこのアクセス許可を与えることは、セキュリティ ポリシーによって禁じられています。 インターネットを起源とするコードには、このアクセス許可を絶対に与えないでください。  
   
--   呼び出されるメンバーが格納されているアセンブリの許可セットが、呼び出し元のコードが格納されているアセンブリの許可セットと同じか、またはそのサブセットである場合に限り、コードから非パブリック メンバーを呼び出せるようにするには、<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグが設定された <xref:System.Security.Permissions.ReflectionPermission> をコードに与える必要があります。  
+- 呼び出されるメンバーが格納されているアセンブリの許可セットが、呼び出し元のコードが格納されているアセンブリの許可セットと同じか、またはそのサブセットである場合に限り、コードから非パブリック メンバーを呼び出せるようにするには、<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグが設定された <xref:System.Security.Permissions.ReflectionPermission> をコードに与える必要があります。  
   
  たとえば、アプリケーション ドメインにインターネット アクセス許可を付与すると共に、<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> に <xref:System.Security.Permissions.ReflectionPermission> フラグを指定するとします。次に、A と B の 2 つのアセンブリを使用して、インターネット アプリケーションを実行します。  
   
--   アセンブリ B の許可セットには、アセンブリ A に付与されていないアクセス許可が含まれていないため、アセンブリ A でリフレクションを使用してアセンブリ B のプライベート メンバーにアクセスできます。  
+- アセンブリ B の許可セットには、アセンブリ A に付与されていないアクセス許可が含まれていないため、アセンブリ A でリフレクションを使用してアセンブリ B のプライベート メンバーにアクセスできます。  
   
--   アセンブリ A では、リフレクションを使用して mscorlib.dll などの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アセンブリのプライベート メンバーにアクセスすることはできません。これは、mscorlib.dll が完全に信頼されており、アセンブリ A に付与されていないアクセス許可を持つためです。実行時にコード アクセス セキュリティによりスタックを走査すると、<xref:System.MemberAccessException> がスローされます。  
+- アセンブリ A では、リフレクションを使用して mscorlib.dll などの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アセンブリのプライベート メンバーにアクセスすることはできません。これは、mscorlib.dll が完全に信頼されており、アセンブリ A に付与されていないアクセス許可を持つためです。実行時にコード アクセス セキュリティによりスタックを走査すると、<xref:System.MemberAccessException> がスローされます。  
   
 ## <a name="serialization"></a>シリアル化  
  シリアル化の目的で、<xref:System.Security.Permissions.SecurityPermission> に <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> フラグを指定することで、アクセシビリティに関係なく、シリアル化が可能な型のメンバーを取得および設定できるようになります。 このアクセス許可があると、コードで、インスタンスのプライベート状態を探索したり、変更したりできます。 型に対して適切なアクセス許可が与えられていると同時に、メタデータ内でシリアル化可能として[マークされている](../../../docs/standard/attributes/applying-attributes.md)必要があります。  
@@ -98,11 +98,11 @@ ms.locfileid: "59207514"
   
 ## <a name="version-information"></a>バージョン情報  
   
--   [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、透過的なコードからリフレクションを使用してセキュリティ クリティカルなメンバーにアクセスすることはできません。  
+- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、透過的なコードからリフレクションを使用してセキュリティ クリティカルなメンバーにアクセスすることはできません。  
   
--   <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグは、[!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] で導入されました。 以前のバージョンの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、コードから非パブリック メンバーにアクセスするためにリフレクションを使用するには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグを指定する必要がありました。 このアクセス許可は、部分的に信頼されるコードには絶対に付与しないでください。  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグは、[!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] で導入されました。 以前のバージョンの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、コードから非パブリック メンバーにアクセスするためにリフレクションを使用するには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグを指定する必要がありました。 このアクセス許可は、部分的に信頼されるコードには絶対に付与しないでください。  
   
--   [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 以降、リフレクションを使用して非パブリックな型とメンバーに関する情報を取得する場合、アクセス許可が不要になりました。 以前のバージョンでは、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。  
+- [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 以降、リフレクションを使用して非パブリックな型とメンバーに関する情報を取得する場合、アクセス許可が不要になりました。 以前のバージョンでは、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 

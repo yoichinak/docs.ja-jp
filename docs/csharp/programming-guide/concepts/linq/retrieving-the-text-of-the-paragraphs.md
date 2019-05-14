@@ -2,12 +2,12 @@
 title: 段落のテキストの取得 (C#)
 ms.date: 07/20/2015
 ms.assetid: 127d635e-e559-408f-90c8-2bb621ca50ac
-ms.openlocfilehash: 070bf4a3254f8e30ff7f4568c283f37ca288348c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d1f526374c56a5195438be72748ba15d0ab6741c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737099"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595710"
 ---
 # <a name="retrieving-the-text-of-the-paragraphs-c"></a>段落のテキストの取得 (C#)
 この例は、前の例の「[段落とそのスタイルの取得 (C#)](../../../../csharp/programming-guide/concepts/linq/retrieving-the-paragraphs-and-their-styles.md)」を基にしています。 この新しい例では、各段落のテキストを文字列として取得します。  
@@ -140,7 +140,7 @@ StyleName:Code >Hello World<
 ## <a name="next-steps"></a>次の手順  
  次の例では、<xref:System.Linq.Enumerable.Aggregate%2A> の代わりに拡張メソッドを使用して、複数の文字列を 1 つの文字列に連結する方法を示します。  
   
--   [拡張メソッドを使用したリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
+- [拡張メソッドを使用したリファクタリング (C#)](../../../../csharp/programming-guide/concepts/linq/refactoring-using-an-extension-method.md)  
   
 ## <a name="see-also"></a>関連項目
 

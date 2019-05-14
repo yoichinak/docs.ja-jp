@@ -15,23 +15,23 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2aa7c35ebc06fb67d9cf6216233d2bed65ae76ab
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54645900"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634339"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正規表現でのグループ化構成体
 グループ化構成体は、正規表現の部分式を表し、入力文字列の部分文字列をキャプチャします。 グループ化構成体を使用して、以下を実行できます。  
   
--   入力文字列で繰り返し使用されている部分式を照合する。  
+- 入力文字列で繰り返し使用されている部分式を照合する。  
   
--   複数の正規表現言語要素を含む部分式に量指定子を適用する。 量指定子について詳しくは、「 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」をご覧ください。  
+- 複数の正規表現言語要素を含む部分式に量指定子を適用する。 量指定子について詳しくは、「 [Quantifiers](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」をご覧ください。  
   
--   <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドによって返される文字列に部分式を含める。  
+- <xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドおよび <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドによって返される文字列に部分式を含める。  
   
--   <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> プロパティから個々の部分式を取得し、一致したテキスト全体とは別に処理する。  
+- <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> プロパティから個々の部分式を取得し、一致したテキスト全体とは別に処理する。  
   
  次の表に、.NET 正規表現エンジンでサポートされているグループ化構成体と、これらの構成体がキャプチャまたは非キャプチャのいずれであるかを示します。  
   
@@ -63,13 +63,13 @@ ms.locfileid: "54645900"
   
  キャプチャされたグループにアクセスする方法は 4 つあります。  
   
--   正規表現内で前方参照構成体を使用する。 `\`*number* という構文を使うと、一致した部分式が同じ正規表現内で参照されます。ここで、*number* はキャプチャされた部分式の序数です。  
+- 正規表現内で前方参照構成体を使用する。 `\`*number* という構文を使うと、一致した部分式が同じ正規表現内で参照されます。ここで、*number* はキャプチャされた部分式の序数です。  
   
--   正規表現内で名前付き前方参照構成体を使用する。 `\k<`*name*`>` という構文 (*name* はキャプチャ グループの名前)、または `\k<`*number*`>` という構文 (*number* はキャプチャ グループの序数) を使用すると、一致した部分式が同じ正規表現内で参照されます。 キャプチャ グループには、その序数と同じ既定の名前が付いています。 詳細については、このトピックで後述する「 [一致した名前付き部分式](#named_matched_subexpression) 」を参照してください。  
+- 正規表現内で名前付き前方参照構成体を使用する。 `\k<`*name*`>` という構文 (*name* はキャプチャ グループの名前)、または `\k<`*number*`>` という構文 (*number* はキャプチャ グループの序数) を使用すると、一致した部分式が同じ正規表現内で参照されます。 キャプチャ グループには、その序数と同じ既定の名前が付いています。 詳細については、このトピックで後述する「 [一致した名前付き部分式](#named_matched_subexpression) 」を参照してください。  
   
--   `$`*number* 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、*number* はキャプチャされた部分式の序数です。  
+- `$`*number* 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、*number* はキャプチャされた部分式の序数です。  
   
--   プログラムで <xref:System.Text.RegularExpressions.GroupCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトを使用する。 コレクション内の位置 0 にあるメンバーは、正規表現に一致した文字列全体を表します。 後続の各メンバーは、一致した部分式を表します。 詳しくは、「 [Grouping Constructs and Regular Expression Objects](#Objects) 」セクションをご覧ください。  
+- プログラムで <xref:System.Text.RegularExpressions.GroupCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトを使用する。 コレクション内の位置 0 にあるメンバーは、正規表現に一致した文字列全体を表します。 後続の各メンバーは、一致した部分式を表します。 詳しくは、「 [Grouping Constructs and Regular Expression Objects](#Objects) 」セクションをご覧ください。  
   
  次の例は、テキスト内で重複している単語を識別する正規表現を示しています。 正規表現パターンの 2 つのキャプチャ グループは、2 つの重複する単語を表します。 2 番目の単語は、入力文字列内の開始位置を報告するためにキャプチャされます。  
   
@@ -112,17 +112,17 @@ ms.locfileid: "54645900"
   
  キャプチャされた名前付きグループには次の方法でアクセスできます。  
   
--   正規表現内で名前付き前方参照構成体を使用する。 `\k<`*name*`>` という構文を使用すると、一致した部分式が同じ正規表現内で参照されます。ここで、*name* はキャプチャされた部分式の名前です。  
+- 正規表現内で名前付き前方参照構成体を使用する。 `\k<`*name*`>` という構文を使用すると、一致した部分式が同じ正規表現内で参照されます。ここで、*name* はキャプチャされた部分式の名前です。  
   
--   正規表現内で前方参照構成体を使用する。 `\`*number* という構文を使うと、一致した部分式が同じ正規表現内で参照されます。ここで、*number* はキャプチャされた部分式の序数です。 一致した名前付き部分式には、一致した部分式の後、左から右に連続した番号が付けられます。  
+- 正規表現内で前方参照構成体を使用する。 `\`*number* という構文を使うと、一致した部分式が同じ正規表現内で参照されます。ここで、*number* はキャプチャされた部分式の序数です。 一致した名前付き部分式には、一致した部分式の後、左から右に連続した番号が付けられます。  
   
--   `${`*name*`}` 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、*name* はキャプチャされた部分式の名前です。  
+- `${`*name*`}` 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、*name* はキャプチャされた部分式の名前です。  
   
--   `$`*number* 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、*number* はキャプチャされた部分式の序数です。  
+- `$`*number* 置換シーケンスを、<xref:System.Text.RegularExpressions.Regex.Replace%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.RegularExpressions.Match.Result%2A?displayProperty=nameWithType> メソッドの呼び出しで使用する。ここで、*number* はキャプチャされた部分式の序数です。  
   
--   プログラムで <xref:System.Text.RegularExpressions.GroupCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトを使用する。 コレクション内の位置 0 にあるメンバーは、正規表現に一致した文字列全体を表します。 後続の各メンバーは、一致した部分式を表します。 キャプチャされた名前付きグループは、キャプチャされた番号付きグループの後にコレクションに格納されます。  
+- プログラムで <xref:System.Text.RegularExpressions.GroupCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトを使用する。 コレクション内の位置 0 にあるメンバーは、正規表現に一致した文字列全体を表します。 後続の各メンバーは、一致した部分式を表します。 キャプチャされた名前付きグループは、キャプチャされた番号付きグループの後にコレクションに格納されます。  
   
--   プログラムで <xref:System.Text.RegularExpressions.GroupCollection> オブジェクトのインデクサー (C# の場合) またはその <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> プロパティ (Visual Basic の場合) に部分式名を指定する。  
+- プログラムで <xref:System.Text.RegularExpressions.GroupCollection> オブジェクトのインデクサー (C# の場合) またはその <xref:System.Text.RegularExpressions.GroupCollection.Item%2A> プロパティ (Visual Basic の場合) に部分式名を指定する。  
   
  簡単な正規表現パターンで、プログラムまたは正規表現言語構文を使用して番号付き (名前のない) グループおよび名前付きグループをどのように参照できるかを示します。 正規表現 `((?<One>abc)\d+)?(?<Two>xyz)(.*)` からは、次のように番号と名前の付いたキャプチャ グループが作成されます。 最初のキャプチャ グループ (番号 0) は、常にパターン全体を指します。  
   
@@ -239,7 +239,7 @@ ms.locfileid: "54645900"
 |12|`)+`|"<mno" が 2 番目のキャプチャ グループの値になります。<br /><br /> 入力文字列内の次の文字は左山かっこなので、正規表現エンジンは `(?'Open'<)[^<>]*)` サブパターンに戻ります。|  
 |13|`(((?'Open'<)`|"\<xyz>" の左山かっこと一致し、そのかっこを `Open` グループに代入します。 `Open` グループの <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> コレクションには、現在、"\<mno>" の左山かっこと "\<xyz>" の左山かっこの 2 つのキャプチャが含まれています。|  
 |14|`[^<>]*`|"xyz" と一致します。|  
-|16|`)+`|"<xyz" が 2 番目のキャプチャ グループの値になります。<br /><br /> 入力文字列内の次の文字は左山かっこではないので、正規表現エンジンは `(?'Open'<)[^<>]*)` サブパターンに戻りません。|  
+|15|`)+`|"<xyz" が 2 番目のキャプチャ グループの値になります。<br /><br /> 入力文字列内の次の文字は左山かっこではないので、正規表現エンジンは `(?'Open'<)[^<>]*)` サブパターンに戻りません。|  
 |16|`((?'Close-Open'>)`|"\<xyz>" の右山かっこと一致します。 "xyz" は `Open` グループと右山かっこの間の部分文字列を `Close` グループに代入して、 `Open` グループの現在の値を削除します。 前のキャプチャの値 ("\<mno>" の左山かっこ) が `Open` グループの現在の値になります。 `Open` グループの <xref:System.Text.RegularExpressions.Group.Captures%2A> コレクションには、現在、単一のキャプチャ ("\<xyz>" の左山かっこ) が含まれています。|  
 |17|`[^<>]*`|山かっこではない文字を検索します。一致する項目は見つかりません。|  
 |18|`)+`|3 番目のキャプチャ グループの値は ">" です。<br /><br /> 入力文字列内の次の文字は右山かっこなので、正規表現エンジンは `((?'Close-Open'>)[^<>]*)` サブパターンに戻ります。|  
@@ -446,11 +446,11 @@ ms.locfileid: "54645900"
 ## <a name="grouping-constructs-and-regular-expression-objects"></a>グループ化構成体および正規表現オブジェクト  
  正規表現キャプチャ グループと一致する部分文字列は、 <xref:System.Text.RegularExpressions.Group?displayProperty=nameWithType> オブジェクトで表されます。このオブジェクトは、 <xref:System.Text.RegularExpressions.GroupCollection?displayProperty=nameWithType> プロパティによって返される <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトから取得できます。 <xref:System.Text.RegularExpressions.GroupCollection> オブジェクトの値は次のように設定されます。  
   
--   コレクション内の最初の <xref:System.Text.RegularExpressions.Group> オブジェクト (インデックス 0 の位置にあるオブジェクト) は、一致した文字列全体を表します。  
+- コレクション内の最初の <xref:System.Text.RegularExpressions.Group> オブジェクト (インデックス 0 の位置にあるオブジェクト) は、一致した文字列全体を表します。  
   
--   次の <xref:System.Text.RegularExpressions.Group> オブジェクト セットは、名前のない (番号付き) キャプチャ グループを表します。 正規表現で定義されている順序で左から右に並びます。 これらのグループのインデックス値の範囲は、1 からコレクション内の名前のないキャプチャ グループの数までです。 (特定のグループのインデックスは、その番号付き前方参照と同等です。 前方参照について詳しくは、「 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)」をご覧ください。)  
+- 次の <xref:System.Text.RegularExpressions.Group> オブジェクト セットは、名前のない (番号付き) キャプチャ グループを表します。 正規表現で定義されている順序で左から右に並びます。 これらのグループのインデックス値の範囲は、1 からコレクション内の名前のないキャプチャ グループの数までです。 (特定のグループのインデックスは、その番号付き前方参照と同等です。 前方参照について詳しくは、「 [Backreference Constructs](../../../docs/standard/base-types/backreference-constructs-in-regular-expressions.md)」をご覧ください。)  
   
--   最後の <xref:System.Text.RegularExpressions.Group> オブジェクト セットは、名前付きキャプチャ グループを表します。 正規表現で定義されている順序で左から右に並びます。 最初の名前付きキャプチャ グループのインデックス値は、最後の名前のないキャプチャ グループのインデックスよりも 1 大きい数値になります。 正規表現に名前のないキャプチャ グループがない場合、最初の名前付きキャプチャ グループのインデックス値は 1 になります。  
+- 最後の <xref:System.Text.RegularExpressions.Group> オブジェクト セットは、名前付きキャプチャ グループを表します。 正規表現で定義されている順序で左から右に並びます。 最初の名前付きキャプチャ グループのインデックス値は、最後の名前のないキャプチャ グループのインデックスよりも 1 大きい数値になります。 正規表現に名前のないキャプチャ グループがない場合、最初の名前付きキャプチャ グループのインデックス値は 1 になります。  
   
  量指定子をキャプチャ グループに適用する場合、対応する <xref:System.Text.RegularExpressions.Group> オブジェクトの <xref:System.Text.RegularExpressions.Capture.Value%2A?displayProperty=nameWithType>、 <xref:System.Text.RegularExpressions.Capture.Index%2A?displayProperty=nameWithType>、および <xref:System.Text.RegularExpressions.Capture.Length%2A?displayProperty=nameWithType> の各プロパティには、キャプチャ グループによってキャプチャされた最後の部分文字列が反映されます。 量指定子を持つグループによってキャプチャされたすべての部分文字列は、 <xref:System.Text.RegularExpressions.CaptureCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> オブジェクトから取得できます。  
   

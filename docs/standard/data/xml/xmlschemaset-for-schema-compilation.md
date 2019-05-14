@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 55c4b175-3170-4071-9d60-dd5a42f79b54
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e56680a74bc6800242ff56d27bcf179ee372df74
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 742f031961a24475d67718c595431e36bfca8c22
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54579590"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615375"
 ---
 # <a name="xmlschemaset-for-schema-compilation"></a>スキーマをコンパイルするための XmlSchemaSet
 XML スキーマ定義言語 (XSD) スキーマの格納と検証が可能なキャッシュである <xref:System.Xml.Schema.XmlSchemaSet> について説明します。  
@@ -37,9 +37,9 @@ XML スキーマ定義言語 (XSD) スキーマの格納と検証が可能なキ
 ## <a name="migrating-to-the-xmlschemaset"></a>XmlSchemaSet への移行  
  次のサンプル コードでは、廃止された <xref:System.Xml.Schema.XmlSchemaSet> クラスから新しい <xref:System.Xml.Schema.XmlSchemaCollection> クラスへの移行のガイドを提供します。 このコード サンプルは、次に挙げるこれら 2 つのクラスの主な相違点を説明するものです。  
   
--   <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> クラスの <xref:System.Xml.Schema.XmlSchemaCollection> メソッドとは異なり、スキーマは <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッド呼び出し時にはコンパイルされません。 サンプル コード内では、<xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッドが明示的に呼び出されます。  
+- <xref:System.Xml.Schema.XmlSchemaCollection.Add%2A> クラスの <xref:System.Xml.Schema.XmlSchemaCollection> メソッドとは異なり、スキーマは <xref:System.Xml.Schema.XmlSchemaSet.Add%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッド呼び出し時にはコンパイルされません。 サンプル コード内では、<xref:System.Xml.Schema.XmlSchemaSet.Compile%2A> の <xref:System.Xml.Schema.XmlSchemaSet> メソッドが明示的に呼び出されます。  
   
--   <xref:System.Xml.Schema.XmlSchemaSet> を繰り返すには、<xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> の <xref:System.Xml.Schema.XmlSchemaSet> プロパティを使用する必要があります。  
+- <xref:System.Xml.Schema.XmlSchemaSet> を繰り返すには、<xref:System.Xml.Schema.XmlSchemaSet.Schemas%2A> の <xref:System.Xml.Schema.XmlSchemaSet> プロパティを使用する必要があります。  
   
  廃止された <xref:System.Xml.Schema.XmlSchemaCollection> のコード サンプルを次に示します。  
   

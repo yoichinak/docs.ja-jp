@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: e08e4c34-0223-45f7-aa55-a3d8dd979b0f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 399ad6649016e53d91d5d9d30ecc031ae8a97a4a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 6b204eacd43db2c562fbe6d519b5fa91df3466cc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149358"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626411"
 ---
 # <a name="creating-a-class-to-hold-dll-functions"></a>DLL 関数を保持するクラスの作成
 マネージド クラス内の頻繁に使用される DLL 関数をラップすることは、プラットフォームの機能をカプセル化するための効果的な方法です。 これはすべてのケースで必須であるわけではありませんが、DLL 関数の定義には手間がかかり、エラーが発生しやすくなるため、クラス ラッパーを用意しておくと便利です。 Visual Basic や C# でプログラミングしている場合は、DLL 関数をクラスまたは Visual Basic モジュール内で宣言する必要があります。  
@@ -28,11 +28,11 @@ ms.locfileid: "59149358"
   
  プラットフォーム呼び出しのためにマネージド クラスをデザインする場合は、クラスと DLL 関数との関係を考慮してください。 たとえば、次のように操作できます。  
   
--   既存のクラス内で DLL 関数を宣言する。  
+- 既存のクラス内で DLL 関数を宣言する。  
   
--   関数を分離し、検索しやすくするために、DLL 関数ごとに別のクラスを作成する。  
+- 関数を分離し、検索しやすくするために、DLL 関数ごとに別のクラスを作成する。  
   
--   論理的なグループを形成し、オーバーヘッドを減らすため、一連の関連する DLL 関数に対して 1 つのクラスを作成する。  
+- 論理的なグループを形成し、オーバーヘッドを減らすため、一連の関連する DLL 関数に対して 1 つのクラスを作成する。  
   
  クラスおよびそのメソッドには、任意の名前を付けることができます。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](../../../docs/framework/interop/marshaling-data-with-platform-invoke.md)」を参照してください。  
   
