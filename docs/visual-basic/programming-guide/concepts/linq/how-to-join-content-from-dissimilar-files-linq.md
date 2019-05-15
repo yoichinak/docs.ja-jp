@@ -2,12 +2,12 @@
 title: '方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。'
 ms.date: 06/27/2018
 ms.assetid: e7530857-c467-41ea-9730-84e6b1065a4d
-ms.openlocfilehash: 91337e6a20329cbf3d4d6f0d30a2d604e80474a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0ac91ffaf914a8b799ad1124e9361595d482366b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778067"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593488"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-visual-basic"></a>方法: 異種ファイル (LINQ) (Visual Basic) からコンテンツを結合します。
 
@@ -120,14 +120,6 @@ End Class
 ' 12 total names in list 
 ```  
 
-## <a name="compiling-the-code"></a>コードのコンパイル
-
-次のいずれかのオプションを対象とするプロジェクトを作成してコンパイルします。
-
-- System.Core.dll の参照を含む .NET Framework バージョン 3.5。
-- .NET Framework バージョン 4.0 以降
-- .NET Core バージョン 1.0 以降。
-  
 ## <a name="see-also"></a>関連項目
 
 - [LINQ と文字列 (Visual Basic)](../../../../visual-basic/programming-guide/concepts/linq/linq-and-strings.md)

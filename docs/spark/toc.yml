@@ -1,0 +1,23 @@
+- name: .NET for Apache Spark ガイド
+  href: index.yml
+- name: 概要
+  expanded: true
+  items:
+    - name: .NET for Apache Spark とは
+      href: what-is-apache-spark-dotnet.md
+- name: チュートリアル
+  items:
+    - name: 作業開始
+      href: tutorials/get-started.md
+- name: 関連項目
+  items:
+    - name: API リファレンス
+      href: 'https://docs.microsoft.com/dotnet/api/?view=spark-dotnet'
+- name: リソース
+  items:
+    - name: リソースの概要
+      href: resources/index.md
+    - name: GitHub
+      href: 'https://github.com/dotnet/spark'
+    - name: スタック オーバーフロー
+      href: 'https://stackoverflow.com/questions/tagged/spark-dotnet'

@@ -11,12 +11,12 @@ helpviewer_keywords:
 - network, proxy configuration
 - proxies, configuring
 ms.assetid: 353c0a8b-4cee-44f6-8e65-60e286743df9
-ms.openlocfilehash: c6b3808a2d73070cc07b31eb0fca7ca9d6af8cdb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 328f67c5afe22f336aa6337903b6569fb6ecc359
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59200546"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623059"
 ---
 # <a name="proxy-configuration"></a>プロキシの構成
 プロキシ サーバーは、リソースに対するクライアント要求を処理します。 プロキシは、要求されたリソースをキャッシュから返したり、リソースが存在するサーバーに要求を転送したりできます。 プロキシは、リモート サーバーに送信された要求の数を減らすことで、ネットワークのパフォーマンスを向上できます。 プロキシを使用して、リソースへのアクセスを制限することもできます。  
@@ -45,11 +45,11 @@ ms.locfileid: "59200546"
   
  いくつかのオプションで静的プロキシの動作を制御します。 以下を指定できます。  
   
--   プロキシのアドレス。  
+- プロキシのアドレス。  
   
--   ローカル アドレスに対してプロキシをバイパスするかかどうか。  
+- ローカル アドレスに対してプロキシをバイパスするかかどうか。  
   
--   一連のアドレスに対してプロキシをバイパスするかかどうか。  
+- 一連のアドレスに対してプロキシをバイパスするかかどうか。  
   
  次の表に、静的プロキシの構成オプションを示します。  
   

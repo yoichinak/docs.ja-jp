@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 96153688-9a01-47c4-8430-909cee9a2887
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 73c745fbbdb66777b50478623d969c125f92474b
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d08be327d4c6bf6dd1add3c7ea40ed491619a9ca
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54698892"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625618"
 ---
 # <a name="custom-partitioners-for-plinq-and-tpl"></a>PLINQ および TPL 用のカスタム パーティショナー
 データ ソース上で操作を並列化する場合の必須の手順の 1 つは、ソースを複数のスレッドによって同時にアクセスできる複数のセクションに*パーティション分割*することです。 PLINQ およびタスク並列ライブラリ (TPL: Task Parallel Library) には、並列クエリまたは <xref:System.Threading.Tasks.Parallel.ForEach%2A> ループを記述するときに透過的に機能する既定のパーティショナーが用意されています。 より高度なシナリオでは、独自のパーティショナーをプラグインできます。  
@@ -100,25 +100,25 @@ ms.locfileid: "54698892"
 ### <a name="contract-for-partitioners"></a>パーティショナーのコントラクト  
  カスタム パーティショナーを実装するときは、次のガイドラインに従って、PLINQ および TPL 内の <xref:System.Threading.Tasks.Parallel.ForEach%2A> との適切な相互作用を保証します。  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> が `partitionsCount` に 0 以下の引数を指定して呼び出された場合は、<xref:System.ArgumentOutOfRangeException> をスローします。 PLINQ および TPL が 0 と等しい `partitionCount` を渡すことはありませんが、このような場合に備えることをお勧めします。  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> が `partitionsCount` に 0 以下の引数を指定して呼び出された場合は、<xref:System.ArgumentOutOfRangeException> をスローします。 PLINQ および TPL が 0 と等しい `partitionCount` を渡すことはありませんが、このような場合に備えることをお勧めします。  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> および <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> では、常に `partitionsCount` 個のパーティションを返す必要があります。 パーティショナーがデータを使い果たし、要求された数のパーティションを作成できない場合、このメソッドでは残りのパーティションのそれぞれについて、空の列挙子を返す必要があります。 それ以外の場合、PLINQ と TPL はいずれも <xref:System.InvalidOperationException> をスローします。  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A> および <xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A> では、常に `partitionsCount` 個のパーティションを返す必要があります。 パーティショナーがデータを使い果たし、要求された数のパーティションを作成できない場合、このメソッドでは残りのパーティションのそれぞれについて、空の列挙子を返す必要があります。 それ以外の場合、PLINQ と TPL はいずれも <xref:System.InvalidOperationException> をスローします。  
   
--   <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>、<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>、<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>、<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> では、`null` (Visual Basic では `Nothing`) を返さないようにします。 返した場合、PLINQ または TPL は <xref:System.InvalidOperationException> をスローします。  
+- <xref:System.Collections.Concurrent.Partitioner%601.GetPartitions%2A>、<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderablePartitions%2A>、<xref:System.Collections.Concurrent.Partitioner%601.GetDynamicPartitions%2A>、<xref:System.Collections.Concurrent.OrderablePartitioner%601.GetOrderableDynamicPartitions%2A> では、`null` (Visual Basic では `Nothing`) を返さないようにします。 返した場合、PLINQ または TPL は <xref:System.InvalidOperationException> をスローします。  
   
--   パーティションを返すメソッドでは、データ ソースを完全かつ一意に列挙できるパーティションを常に返す必要があります。 パーティショナーの設計により特別に必要な場合を除いて、データ ソース内の項目が重複したり、スキップされたりすることがないようにします。 この規則に従わないと、出力順序が乱れる場合があります。  
+- パーティションを返すメソッドでは、データ ソースを完全かつ一意に列挙できるパーティションを常に返す必要があります。 パーティショナーの設計により特別に必要な場合を除いて、データ ソース内の項目が重複したり、スキップされたりすることがないようにします。 この規則に従わないと、出力順序が乱れる場合があります。  
   
--   次のブール型の getter では、常に以下の値を正確に返して、出力順序が乱れないようにする必要があります。  
+- 次のブール型の getter では、常に以下の値を正確に返して、出力順序が乱れないようにする必要があります。  
   
-    -   `KeysOrderedInEachPartition`:各パーティションは、昇順のキー インデックスを持つ要素を返します。  
+    - `KeysOrderedInEachPartition`:各パーティションは、昇順のキー インデックスを持つ要素を返します。  
   
-    -   `KeysOrderedAcrossPartitions`:返されるすべてのパーティションについて、パーティション *i* のキー インデックスは、パーティション *i*-1 のキー インデックスよりも大きくなります。  
+    - `KeysOrderedAcrossPartitions`:返されるすべてのパーティションについて、パーティション *i* のキー インデックスは、パーティション *i*-1 のキー インデックスよりも大きくなります。  
   
-    -   `KeysNormalized`:すべてのキー インデックスは、0 から始まりギャップなしで単調に増加します。  
+    - `KeysNormalized`:すべてのキー インデックスは、0 から始まりギャップなしで単調に増加します。  
   
--   どのインデックスも一意である必要があります。 インデックスを重複させることはできません。 この規則に従わないと、出力順序が乱れる場合があります。  
+- どのインデックスも一意である必要があります。 インデックスを重複させることはできません。 この規則に従わないと、出力順序が乱れる場合があります。  
   
--   どのインデックスも負数以外である必要があります。 この規則に従わないと、PLINQ または TPL が例外をスローする場合があります。  
+- どのインデックスも負数以外である必要があります。 この規則に従わないと、PLINQ または TPL が例外をスローする場合があります。  
   
 ## <a name="see-also"></a>関連項目
 

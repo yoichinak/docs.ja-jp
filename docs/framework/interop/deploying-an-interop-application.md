@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: ea8a403e-ae03-4faa-9d9b-02179ec72992
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e9bacc8f67755319b416c14766204f6eb2be52de
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b23edb1c23a7f0c7043fc5be6e7e0eabcdda0316
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59192083"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64626321"
 ---
 # <a name="deploying-an-interop-application"></a>相互運用アプリケーションの配置
 通常、相互運用アプリケーションには、.NET クライアント アセンブリ、個別の COM タイプ ライブラリを表す 1 つ以上の相互運用機能アセンブリ、および 1 つ以上の登録済み COM コンポーネントが含まれています。 Visual Studio および [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] には、タイプ ライブラリを相互運用機能アセンブリにインポートして変換するためのツールが用意されています。詳細については、「[タイプ ライブラリのアセンブリとしてのインポート](importing-a-type-library-as-an-assembly.md)」を参照してください。 相互運用アプリケーションを配置する方法には、次の 2 つがあります。  
   
--   埋め込まれた相互運用機能型を使用する:[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、相互運用機能アセンブリから実行可能ファイルに型情報を埋め込むようにコンパイラに指示できます。 コンパイラは、アプリケーションで使用する型情報のみを埋め込みます。 アプリケーションで相互運用機能アセンブリを配置する必要はありません。 この手法を使用することをお勧めします。  
+- 埋め込まれた相互運用機能型を使用する:[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、相互運用機能アセンブリから実行可能ファイルに型情報を埋め込むようにコンパイラに指示できます。 コンパイラは、アプリケーションで使用する型情報のみを埋め込みます。 アプリケーションで相互運用機能アセンブリを配置する必要はありません。 この手法を使用することをお勧めします。  
   
--   相互運用機能アセンブリの配置:相互運用機能アセンブリへの標準の参照を作成できます。 この場合、アプリケーションで相互運用機能アセンブリを展開する必要があります。 この手法を採用し、プライベートの COM コンポーネントを使用しない場合は、常に、マネージド コードに組み込む予定の COM コンポーネントの作成者によって発行されたプライマリ相互運用機能アセンブリ (PIA) を参照します。 プライマリ相互運用機能アセンブリの生成と使用の詳細については、「[プライマリ相互運用機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))」を参照してください。  
+- 相互運用機能アセンブリの配置:相互運用機能アセンブリへの標準の参照を作成できます。 この場合、アプリケーションで相互運用機能アセンブリを展開する必要があります。 この手法を採用し、プライベートの COM コンポーネントを使用しない場合は、常に、マネージド コードに組み込む予定の COM コンポーネントの作成者によって発行されたプライマリ相互運用機能アセンブリ (PIA) を参照します。 プライマリ相互運用機能アセンブリの生成と使用の詳細については、「[プライマリ相互運用機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))」を参照してください。  
   
  埋め込まれた相互運用機能型を使用すると、配置を簡単に行うことができます。 特別な操作を行う必要はありません。 ここからは、アプリケーションで相互運用機能アセンブリを配置するシナリオについて説明します。  
   

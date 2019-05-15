@@ -2,18 +2,18 @@
 title: 名前空間の概要 (LINQ to XML)
 ms.date: 07/20/2015
 ms.assetid: b8eb31fa-4b26-4acf-8050-6e705687f458
-ms.openlocfilehash: 45328fe0ac549086b8abea22c42c7be37fb12b3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3133a96c356138ddb70df01c11ee0dac8cf11b16
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61665963"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592881"
 ---
 # <a name="namespaces-overview-linq-to-xml"></a>名前空間の概要 (LINQ to XML)
 このトピックでは、名前空間、<xref:System.Xml.Linq.XName> クラス、および <xref:System.Xml.Linq.XNamespace> クラスについて説明します。  
   
 ## <a name="xml-names"></a>XML 名  
- XML 名は、多くの場合、XML プログラミングを複雑にしている原因です。 XML 名は、XML 名前空間 (XML 名前空間 URI) とローカル名で構成されます。 XML 名前空間は、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] ベースのプログラムにおける名前空間と似ています。 これを使用すると、要素と属性の名前を一意に修飾できます。 このため、XML ドキュメントのさまざまな部分の間で、名前の競合を回避するのに役立ちます。 XML 名前空間を宣言した後は、その名前空間内でのみ一意であるローカル名を選択できます。  
+ XML 名は、多くの場合、XML プログラミングを複雑にしている原因です。 XML 名は、XML 名前空間 (XML 名前空間 URI) とローカル名で構成されます。 XML 名前空間は、.NET Framework ベースのプログラムの名前空間に似ています。 これを使用すると、要素と属性の名前を一意に修飾できます。 このため、XML ドキュメントのさまざまな部分の間で、名前の競合を回避するのに役立ちます。 XML 名前空間を宣言した後は、その名前空間内でのみ一意であるローカル名を選択できます。  
   
  XML 名には、XML *名前空間プレフィックス*という側面もあります。 XML プレフィックスは、XML 名の複雑さの主要な原因です。 このプレフィックスを使用すると、XML 名前空間に対するショートカットを作成できるため、XML ドキュメントがより簡潔でわかりやすくなります。 ただし XML プレフィックスはコンテキストによって意味が異なり、これが複雑さの原因となります。 たとえば、XML プレフィックス `aw` に関連付けられている XML 名前空間が、同じ XML ツリー内でも部分によって異なる可能性があります。  
   

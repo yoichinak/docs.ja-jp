@@ -13,15 +13,15 @@ helpviewer_keywords:
 - file access [Windows Forms]
 - security [Windows Forms], data access
 ms.assetid: 3cd3e55b-2f5e-40dd-835d-f50f7ce08967
-ms.openlocfilehash: 557c3296310a7eb3922a6c18b7b3de19ffac953c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c161cc27bd45f8f29e4d48c572d26d3c153b8f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61802090"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592666"
 ---
 # <a name="more-secure-file-and-data-access-in-windows-forms"></a>Windows フォームにおけるファイルおよびデータへのより安全なアクセス
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] は、リソースとデータを保護できるアクセス許可を使用します。 アプリケーションでデータを読み取りまたは書き込みできる場所は、アプリケーションに付与されるアクセス許可に依存します。 部分信頼環境でアプリケーションを実行すると、データにアクセス許可がないか、またはデータにアクセスする方法を変更しなければならない可能性があります。  
+.NET Framework では、リソースとデータを保護するためのアクセス許可を使用します。 アプリケーションでデータを読み取りまたは書き込みできる場所は、アプリケーションに付与されるアクセス許可に依存します。 部分信頼環境でアプリケーションを実行すると、データにアクセス許可がないか、またはデータにアクセスする方法を変更しなければならない可能性があります。  
   
  セキュリティの制限が発生した場合、アクセス許可をアサートする (アプリケーションに付与されていると仮定した場合)、または部分信頼で動作するよう作成されたバージョンの機能を使用するという 2 つのオプションがあります。 次のセクションでは、部分信頼環境で実行されているアプリケーションからファイル、データベース、およびレジストリ アクセスを操作する方法について説明します。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "61802090"
 >  既定では、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] の配置を生成するツールは、これらの配置が、実行するコンピューターから完全信頼を要求するよう既定で設定されます。 部分信頼で実行することによるセキュリティ上の利点を追加したい場合は、Visual Studio または[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]ツール (Mage.exe または MageUI.exe) のいずれかでこの既定の設定を変更する必要があります。 Windows フォームのセキュリティ、およびアプリケーションの適切な信頼レベルを決定する方法の詳細については、[Windows フォームのセキュリティの概要](security-in-windows-forms-overview.md)を参照してください。  
   
 ## <a name="file-access"></a>ファイル アクセス  
- <xref:System.Security.Permissions.FileIOPermission> クラスは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のファイルとフォルダーへのアクセスを制御します。 既定では、セキュリティ システムは、ローカルのイントラネットやインターネット ゾーンなどの部分信頼環境に <xref:System.Security.Permissions.FileIOPermission> を付与しません。 ただし、ファイルへのアクセスを必要とするアプリケーションは、アプリケーションの設計を変更するかファイルにアクセスする別の方法を使用すると、引き続きこれらの環境で機能することが可能です。 既定では、ローカル イントラネット ゾーンに、同じサイトと同じディレクトリにアクセスして、その起点のサイトに接続し、インストール ディレクトリから読み取るための権限が付与されます。 既定では、インターネット ゾーンは、起点のサイトに接続する権限のみが付与されます。  
+ <xref:System.Security.Permissions.FileIOPermission>クラスの .NET Framework のファイルおよびフォルダー アクセスを制御します。 既定では、セキュリティ システムは、ローカルのイントラネットやインターネット ゾーンなどの部分信頼環境に <xref:System.Security.Permissions.FileIOPermission> を付与しません。 ただし、ファイルへのアクセスを必要とするアプリケーションは、アプリケーションの設計を変更するかファイルにアクセスする別の方法を使用すると、引き続きこれらの環境で機能することが可能です。 既定では、ローカル イントラネット ゾーンに、同じサイトと同じディレクトリにアクセスして、その起点のサイトに接続し、インストール ディレクトリから読み取るための権限が付与されます。 既定では、インターネット ゾーンは、起点のサイトに接続する権限のみが付与されます。  
   
 ### <a name="user-specified-files"></a>ユーザー指定のファイル  
  ファイルへのアクセス許可を持たないときに処理する方法の 1 つは、<xref:System.Windows.Forms.OpenFileDialog> クラスまたは <xref:System.Windows.Forms.SaveFileDialog> クラスを使用して、特定のファイル情報の入力をユーザーに求める方法です。 このユーザーの操作では、アプリケーションが悪意を持ってプライベート ファイルを読み込んだり、重要なファイルを上書きしたりできないことを、ある程度保証できます。 <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> メソッドと <xref:System.Windows.Forms.SaveFileDialog.OpenFile%2A> メソッドは、ユーザーが指定したファイルのファイル ストリームを開くことで、ファイルの読み取りアクセスと書き込みアクセスを提供します。 メソッドは、ファイルのパスを隠すことで、ユーザーのファイルの保護にも役立ちます。  
@@ -47,7 +47,7 @@ ms.locfileid: "61802090"
 > [!NOTE]
 >  <xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> メソッドが実際に呼び出されるまでは、特定のアクセス許可は要求されません。  
   
- ファイル ダイアログ ボックスを表示するためのアクセス許可は、<xref:System.Windows.Forms.FileDialog>、<xref:System.Windows.Forms.OpenFileDialog>、および <xref:System.Windows.Forms.SaveFileDialog> の各クラスのすべてのメンバーに対するフルアクセスをアプリケーションに付与しません。 各メソッドを呼び出すために必要とされる正確なアクセス許可については、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] クラス ライブラリのドキュメントのそのメソッドに関するリファレンス トピックを参照してください。  
+ ファイル ダイアログ ボックスを表示するためのアクセス許可は、<xref:System.Windows.Forms.FileDialog>、<xref:System.Windows.Forms.OpenFileDialog>、および <xref:System.Windows.Forms.SaveFileDialog> の各クラスのすべてのメンバーに対するフルアクセスをアプリケーションに付与しません。 各メソッドを呼び出すために必要な正確なアクセス許可は、.NET Framework クラス ライブラリのドキュメントでは、そのメソッドのリファレンス トピックを参照してください。  
   
  次のコード例では、<xref:System.Windows.Forms.OpenFileDialog.OpenFile%2A> メソッドを使用して、ユーザーが指定したファイルを <xref:System.Windows.Forms.RichTextBox> コントロールに開きます。 この例では、<xref:System.Security.Permissions.FileDialogPermission> および関連付けられた <xref:System.Security.Permissions.FileDialogPermissionAttribute.Open%2A> 列挙値が必要です。 例では、保存機能を無効にする必要があるかどうかを判断するために、<xref:System.Security.SecurityException> を処理する方法を示しています。 この例では、<xref:System.Windows.Forms.Form> が `ButtonOpen` という名前の <xref:System.Windows.Forms.Button> コントロールと、`RtfBoxMain` という名前の <xref:System.Windows.Forms.RichTextBox> コントロールを必要とします。  
   
@@ -133,7 +133,7 @@ private void ButtonOpen_Click(object sender, System.EventArgs e)
 ```  
   
 > [!NOTE]
->  Visual C# では、イベント ハンドラーを有効にするコードを必ず追加してください。 前の例のコードを使用して、次のコードのイベント ハンドラー `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);` を有効にする方法を示します。  
+>  Visual C# では、イベント ハンドラーを有効にするコードを必ず追加してください。 前の例でのコードを使用することで、次のコードではイベント ハンドラー `this.ButtonOpen.Click += newSystem.Windows.Forms.EventHandler(this.ButtonOpen_Click);` を有効にする方法を示します。  
   
 ### <a name="other-files"></a>その他のファイル  
  場合によって、アプリケーション設定を保存しなければならないという場合など、ユーザーが指定しないファイルへの読み取りまたは書き込みを実行する必要があります。 ローカルのイントラネット ゾーンとインターネット ゾーンでは、アプリケーションにローカル ファイルにデータを格納するためのアクセス許可がありません。 ただし、アプリケーションが分離ストレージにデータを格納できるようにします。 分離ストレージは (特定の記憶場所ではなく) 抽象的なデータ コンパートメントであり、データが保存される実際のディレクトリの場所を含む、ストアと呼ばれる 1 つ以上の分離ストレージ ファイルが含まれます。 <xref:System.Security.Permissions.FileIOPermission> のようなファイルのアクセス許可は必要なく、代わりに <xref:System.Security.Permissions.IsolatedStoragePermission> クラスが分離ストレージのアクセス許可を制御します。 既定では、ローカル イントラネット ゾーンとインターネット ゾーンで実行されているアプリケーションが、分離ストレージを使用してデータを格納できます。ただし、ディスク クォータのように設定が変わることがあります。 分離ストレージの詳細については、次を参照してください。[分離ストレージ](../../standard/io/isolated-storage.md)します。  

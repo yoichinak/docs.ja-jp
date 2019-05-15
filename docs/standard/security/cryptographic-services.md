@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f2ca5c26b7e5b830ee8dccffb452b8509c8b0d1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795305"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592738"
 ---
 # <a name="cryptographic-services"></a>暗号化サービス
 
@@ -112,7 +112,7 @@ CBC 暗号によって暗号化されたデータを解読する 1 つの方法�
 
 Alice と Bob は、安全でないチャネル経由で通信を希望する 2 つのパーティには、仮定ように秘密キーの暗号化を使用する場合があります。Alice と Bob は、1 つの特定のアルゴリズム (たとえば AES) を使用して、特定のキーと IV を使用することに同意します。 Alice は、メッセージを作成し、メッセージを送信するためのネットワーク ストリーム (おそらく、名前付きパイプやネットワーク電子メール) を作成します。 次に、キーと IV を使用してテキストを暗号化し、暗号化されたメッセージと IV をインターネット経由で Bob に送信します。 暗号化されたテキストを受信した Bob は、IV とあらかじめ決めてあるキーを使用して復号化を行います。 通信が傍受されたとしても、傍受した人にはキーがわからないため、元のメッセージが復元されることはありません。 このシナリオでは、秘密にしておく必要があるのはキーだけです。 実際のシナリオでは、Alice または Bob のどちらかが共有キーを生成し、公開キー (非対称) 暗号方式を使用して相手に共有 (対称) キーを転送することになります。 公開キー暗号方式の詳細については、次のセクションを参照してください。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には、共有キー暗号化アルゴリズムを実装する次のクラスが用意されています。
+.NET Framework は、秘密キーの暗号化アルゴリズムを実装する次のクラスを提供します。
 
 - <xref:System.Security.Cryptography.AesManaged> ( [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]で導入)。
 
@@ -154,7 +154,7 @@ Alice の公開キーの転送中に、承認されていないエージェン�
 
 - 公開キー アルゴリズムは秘密キー アルゴリズムと比較してきわめて低速であり、大量のデータを暗号化するようには設計されていません。 公開キー アルゴリズムが便利なのは、少量のデータを転送する場合に限られます。 一般に、公開キー暗号方式は、共有キー アルゴリズムで使われるキーと IV を暗号化するために使用されます。 キーと IV を転送した後の残りのセッションでは、共有キー暗号方式が使用されます。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には、公開キー暗号化アルゴリズムを実装する次のクラスが用意されています。
+.NET Framework には、公開キー暗号化アルゴリズムを実装する次のクラスが用意されています。
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -185,7 +185,7 @@ Alice は、公開キー暗号方式を使用してメッセージにデジタ�
 > [!NOTE]
 > 送信者の公開キーは公開された情報であり、通常はデジタル署名の書式に含まれるため、だれでも署名を検査できます。 この方法では、メッセージの秘密性は保持されません。メッセージを秘密にしておくためには、メッセージ自体も暗号化する必要があります。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には、デジタル署名アルゴリズムを実装する次のクラスが用意されています。
+.NET Framework は、デジタル署名アルゴリズムを実装する次のクラスを提供します。
 
 - <xref:System.Security.Cryptography.DSACryptoServiceProvider>
 
@@ -223,7 +223,7 @@ Alice は、公開キー暗号方式を使用してメッセージにデジタ�
 
 Alice のメッセージはプレーンテキストで送信されるため、前に説明した方法では、Alice のメッセージがだれかから読み取られないように防ぐことはできません。 セキュリティを完全にするには、一般に、デジタル署名 (メッセージ署名) と暗号化が必要です。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には、ハッシュ アルゴリズムを実装する次のクラスが用意されています。
+.NET Framework は、ハッシュ アルゴリズムを実装する次のクラスを提供します。
 
 - <xref:System.Security.Cryptography.HMACSHA1>。
 
@@ -256,7 +256,7 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 ## <a name="random-number-generation"></a>乱数生成
 
-乱数生成は、多くの暗号化操作に欠かせない部分です。 たとえば、暗号キーはできるだけランダムにして、再現できないようにする必要があります。 暗号乱数ジェネレーターは、予測される確率が 50% よりも低い、計算上は不可能な出力を生成しなければなりません。 したがって、当て推量をされた場合でも予測できないような手段を使用する必要があります。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] に含まれるクラスは、乱数ジェネレーターを使用して暗号キーを生成します。
+乱数生成は、多くの暗号化操作に欠かせない部分です。 たとえば、暗号キーはできるだけランダムにして、再現できないようにする必要があります。 暗号乱数ジェネレーターは、予測される確率が 50% よりも低い、計算上は不可能な出力を生成しなければなりません。 したがって、当て推量をされた場合でも予測できないような手段を使用する必要があります。 .NET Framework のクラスは、暗号化キーを生成するのに乱数ジェネレーターを使用します。
 
 乱数ジェネレーター アルゴリズムは、 <xref:System.Security.Cryptography.RNGCryptoServiceProvider> クラスに実装されています。
 

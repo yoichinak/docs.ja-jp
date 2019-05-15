@@ -10,15 +10,15 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: b97ce0e4ce32e272ff884240b566c1c1c0e0d271
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614660"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592607"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>visual スタイルが使用されているコントロールのレンダリング
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] は、視覚スタイルをサポートするオペレーティング システムでの、それらを使用したコントロールと他の Windows ユーザー インターフェイス (UI) 要素のレンダリングをサポートします。 このトピックでは、オペレーティング システムの現在の視覚スタイルを使用したコントロールと他の UI 要素のレンダリングに関して [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] でのいくつかのサポート レベルについて説明します。  
+.NET Framework は、インターフェイス (UI) 要素をサポートするオペレーティング システムで visual スタイルを使用して、コントロールのレンダリングとその他の Windows ユーザーのサポートを提供します。 このトピックでは、オペレーティング システムの現在の visual スタイルを使用して、複数のコントロールのレンダリングやその他の UI 要素の .NET Framework でのサポートのレベルについて説明します。  
   
 ## <a name="rendering-classes-for-common-controls"></a>一般的なコントロールのクラスをレンダリングする  
  コントロールのレンダリングとは、コントロールのユーザー インターフェイスを描画することを意味します。 <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間は、いくつかの一般的な Windows フォーム コントロールをレンダリングするための <xref:System.Windows.Forms.ControlPaint> クラスを提供します。 ただし、このクラスは従来の Windows スタイルでコントロールを描画するため、視覚スタイルが有効になったアプリケーションでカスタム コントロールを描画する際の一貫した UI エクスペリエンスの維持が困難になる可能性があります。  
@@ -61,7 +61,7 @@ ms.locfileid: "64614660"
  使用しての詳細については<xref:System.Windows.Forms.VisualStyles.VisualStyleRenderer>と<xref:System.Windows.Forms.VisualStyles.VisualStyleElement>を参照してください[方法。Visual スタイル要素を描画](how-to-render-a-visual-style-element.md)します。  
   
 ## <a name="enabling-visual-styles"></a>視覚スタイルを有効にする  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] バージョン 1.0 用に作成されたアプリケーションの視覚スタイルを有効にするには、プログラマーが、ComCtl32.dll バージョン 6 以降をコントロールの描画に使用することを指定するアプリケーション マニフェストを含める必要があります。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] バージョン 1.1 以降を使用してビルドされたアプリケーションは、 <xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType> クラスの <xref:System.Windows.Forms.Application> メソッドを使用できます。  
+ .NET Framework version 1.0 用に記述されたアプリケーションの visual スタイルを有効にするには、プログラマは、ComCtl32.dll バージョン 6 以降がコントロールの描画に使用されることを指定するアプリケーション マニフェストを含める必要があります。 .NET Framework version 1.1 以降でビルドされたアプリケーションを使用できる、<xref:System.Windows.Forms.Application.EnableVisualStyles%2A?displayProperty=nameWithType>のメソッド、<xref:System.Windows.Forms.Application>クラス。  
   
 ## <a name="checking-for-visual-styles-support"></a>視覚スタイルのサポートの確認  
  <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> クラスの <xref:System.Windows.Forms.Application> プロパティは、現在のアプリケーションが視覚スタイルを使用してコントロールを描画しているかどうかを示します。 カスタム コントロールを描画するときには、 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> の値を確認して、コントロールのレンダリングに視覚スタイルを使用する必要があるかどうかを判断できます。 次の表に、 <xref:System.Windows.Forms.Application.RenderWithVisualStyles%2A> が `true`を返すために満たす必要がある 4 つの条件を示します。  

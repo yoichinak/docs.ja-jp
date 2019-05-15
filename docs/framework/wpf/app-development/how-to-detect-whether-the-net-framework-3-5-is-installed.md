@@ -7,18 +7,18 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: af2428ece79803953b8c90431d905824dd18fec8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c373d9fd5934be98735cd814dafb35ed81fddfe
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947863"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592636"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>方法: .NET Framework 3.5 がインストールされているかどうかを確認する
 管理者が対象とするシステム上の Windows Presentation Foundation (WPF) アプリケーションを展開する前に、 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]、ことを確認する必要があります最初、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]ランタイムが存在します。 このトピックで記述されたスクリプトは、管理者は、判断に使用できる HTML または JavaScript でかどうか、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]は、システムに存在します。  
   
 > [!NOTE]
->  詳細なインストール、展開、および検出については、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]を参照してください[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)します。  
+>  配置、および、.NET Framework の検出が参照してインストールする方法についての詳細、[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)します。  
   
 ## <a name="example"></a>例  
  ときに、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]がインストールされている場合、MSI を追加します".NET CLR"とバージョン番号 UserAgent 文字列。 次の例では、単純な HTML ページに埋め込まれたスクリプトを示します。 スクリプトを決定する UserAgent 文字列を検索するかどうか、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]がインストールされているし、検索の結果にステータス メッセージが表示されます。  

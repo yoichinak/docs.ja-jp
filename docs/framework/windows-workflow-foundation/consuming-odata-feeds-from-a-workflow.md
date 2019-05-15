@@ -2,16 +2,16 @@
 title: WF ワークフロー - からフィードの OData の利用
 ms.date: 03/30/2017
 ms.assetid: 1b26617c-53e9-476a-81af-675c36d95919
-ms.openlocfilehash: aec23667e7388d6bc31d122617795ff5dfdefa5f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e7d5230bb15474d63b2381d3906e07e48ac0134d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61946064"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592984"
 ---
 # <a name="consuming-odata-feeds-from-a-workflow"></a>ワークフローからのフィードの OData の利用
 
-WCF Data Services は [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のコンポーネントです。このコンポーネントを使用すると、Representational State Transfer (REST) のセマンティクスを使用して、Web またはイントラネット上のデータを公開および使用するために Open Data Protocol (OData) を使用するサービスを作成できます。 OData は、URI でアドレス指定できるリソースとしてデータを公開します。 HTTP 要求を送信し、データ サービスが返す OData フィードを処理できるのであれば、どのようなアプリケーションでも OData ベースのデータ サービスと対話できます。 さらに、WCF Data Services には [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションから OData フィードを使用する際のプログラミング エクスペリエンスを向上させるクライアント ライブラリが含まれています。 このトピックでは、クライアント ライブラリを使用した場合と使用しない場合のワークフローでの OData フィードの使用の概要について説明します。
+WCF Data Services は、Open Data Protocol (OData) を使用して、公開および representational state transfer (REST) のセマンティクスを使用して、Web またはイントラネット上のデータを使用するサービスを作成することができます .NET Framework のコンポーネントです。 OData は、URI でアドレス指定できるリソースとしてデータを公開します。 HTTP 要求を送信し、データ サービスが返す OData フィードを処理できるのであれば、どのようなアプリケーションでも OData ベースのデータ サービスと対話できます。 さらに、WCF Data Services には、.NET Framework アプリケーションから OData フィードを使用するときより豊富なプログラミング エクスペリエンスを提供するクライアント ライブラリが含まれています。 このトピックでは、クライアント ライブラリを使用した場合と使用しない場合のワークフローでの OData フィードの使用の概要について説明します。
 
 ## <a name="using-the-sample-northwind-odata-service"></a>サンプルの Northwind OData サービスの使用
 
@@ -19,7 +19,7 @@ WCF Data Services は [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md
 
 ## <a name="consuming-an-odata-feed-using-the-client-libraries"></a>クライアント ライブラリを使用してフィード、OData の利用
 
-WCF Data Services には、 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションおよびクライアント アプリケーションから OData フィードを簡単に使用できるクライアント ライブラリが含まれています。 これらのライブラリは、HTTP メッセージの送受信を簡略化します。 また、メッセージ ペイロードをエンティティ データを表す CLR オブジェクトに変換します。 クライアント ライブラリには、 <xref:System.Data.Services.Client.DataServiceContext> および <xref:System.Data.Services.Client.DataServiceQuery%601>という 2 つのコア クラスがあります。 これらのクラスを使用すると、データ サービスをクエリして、返されるエンティティ データを CLR オブジェクトとして処理できます。 ここではクライアント ライブラリを使用するアクティビティを作成するための 2 つの方法を説明します。
+WCF Data Services には、.NET Framework とクライアント アプリケーションから OData フィードをより簡単に使用できるようにクライアント ライブラリが含まれています。 これらのライブラリは、HTTP メッセージの送受信を簡略化します。 また、メッセージ ペイロードをエンティティ データを表す CLR オブジェクトに変換します。 クライアント ライブラリには、 <xref:System.Data.Services.Client.DataServiceContext> および <xref:System.Data.Services.Client.DataServiceQuery%601>という 2 つのコア クラスがあります。 これらのクラスを使用すると、データ サービスをクエリして、返されるエンティティ データを CLR オブジェクトとして処理できます。 ここではクライアント ライブラリを使用するアクティビティを作成するための 2 つの方法を説明します。
 
 ### <a name="adding-a-service-reference-to-the-wcf-data-service"></a>WCF データ サービスにサービス参照の追加
 
@@ -34,7 +34,7 @@ Northwind クライアント ライブラリを生成するに使用すること
 
 ### <a name="using-asynchronous-methods"></a>非同期メソッドの使用
 
-Web のリソースにアクセスするときに発生することのある、待機時間に伴う問題に対処するために、WCF Data Services には非同期でアクセスすることをお勧めします。 WCF Data Services クライアント ライブラリは、クエリを呼び出すための非同期のメソッドを含めるし、Windows Workflow Foundation (WF) の提供、<xref:System.Activities.AsyncCodeActivity>非同期アクティビティを作成するためのクラス。 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティを書き込んで、非同期メソッドを含む [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] クラスを利用するか、非同期で実行するコードをメソッドに含め、デリゲートを使用して呼び出すことができます。 ここでは、 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティの例を 2 つ紹介します。1 つは WCF Data Services クライアント ライブラリの非同期メソッドを使用し、もう 1 つはデリゲートを使用しています。
+Web のリソースにアクセスするときに発生することのある、待機時間に伴う問題に対処するために、WCF Data Services には非同期でアクセスすることをお勧めします。 WCF Data Services クライアント ライブラリは、クエリを呼び出すための非同期のメソッドを含めるし、Windows Workflow Foundation (WF) の提供、<xref:System.Activities.AsyncCodeActivity>非同期アクティビティを作成するためのクラス。 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティを書き込んで、非同期メソッドのある .NET Framework クラスを活用するために、または非同期的に実行されるコードをメソッドに配置し、デリゲートを使用して呼び出されます。 ここでは、 <xref:System.Activities.AsyncCodeActivity> 派生アクティビティの例を 2 つ紹介します。1 つは WCF Data Services クライアント ライブラリの非同期メソッドを使用し、もう 1 つはデリゲートを使用しています。
 
 > [!NOTE]
 > 詳細については、次を参照してください。[非同期操作 (WCF Data Services)](../data/wcf/asynchronous-operations-wcf-data-services.md)と[非同期アクティビティを作成する](creating-asynchronous-activities-in-wf.md)します。
@@ -72,7 +72,7 @@ Calling WCF Data Service...
 
 ### <a name="using-a-delegate"></a>デリゲートを使用してください。
 
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] クラスの非同期メソッドを呼び出すほかに、 <xref:System.Activities.AsyncCodeActivity>ベースのアクティビティでは独自のメソッドのいずれかに非同期ロジックを定義することもできます。 このメソッドは、アクティビティの <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライド内でデリゲートを使用することで指定します。 このメソッドが戻ると、ランタイムによってアクティビティの <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> オーバーライドが呼び出されます。 OData サービスをワークフローから呼び出すときは、このメソッドを使用してサービスを照会し、追加の処理を実行できます。
+.NET Framework クラスの非同期メソッドを呼び出すだけでなく、 <xref:System.Activities.AsyncCodeActivity>-ベースのアクティビティは、そのメソッドのいずれかで非同期ロジックを定義もできます。 このメソッドは、アクティビティの <xref:System.Activities.AsyncCodeActivity.BeginExecute%2A> オーバーライド内でデリゲートを使用することで指定します。 このメソッドが戻ると、ランタイムによってアクティビティの <xref:System.Activities.AsyncCodeActivity.EndExecute%2A> オーバーライドが呼び出されます。 OData サービスをワークフローから呼び出すときは、このメソッドを使用してサービスを照会し、追加の処理を実行できます。
 
 次の例では、 `ListCustomers` アクティビティを定義します。 このアクティビティは、Northwind データ サービス サンプルを照会し、Northwind データベース内の顧客をすべて含む `List<Customer>` を返します。 非同期操作は `GetCustomers` メソッドによって実行されます。 このメソッドは、サービスに対してすべての顧客を照会し、これらの顧客を `List<Customer>`にコピーします。 次に、結果がページングされているかどうかを確認します。 ページングされている場合は、サービスに対して結果の次のページを照会し、それを一覧に追加します。処理は顧客データをすべて取得するまで続行されます。
 

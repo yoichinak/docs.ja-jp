@@ -11,12 +11,12 @@ helpviewer_keywords:
 - application configuration files, network tracing
 - sockets, trace output
 ms.assetid: 5ef9fe4b-8d3d-490e-9259-1d014b2181af
-ms.openlocfilehash: cc08faba7edede3dd527b7c05fe47f6408e18a04
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c2c2718d79ce9aa4fed343cf368bbf541e493d0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151555"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613710"
 ---
 # <a name="how-to-configure-network-tracing"></a>方法: ネットワークのトレースを構成する
 アプリケーションまたはコンピューターの構成ファイルには、ネットワークのトレースの形式と内容を決定する設定が保持されます。 この手順に従う前に、トレースが有効になっていることを確認します。 トレースの有効化については、「[ネットワークのトレースの有効化](../../../docs/framework/network-programming/enabling-network-tracing.md)」を参照してください。  
@@ -27,7 +27,7 @@ ms.locfileid: "59151555"
   
 ### <a name="to-configure-network-tracing"></a>ネットワークのトレースを構成するには  
   
--   適切な構成ファイルに次の行を追加します。 これらの設定の値とオプションを次の表に示します。  
+- 適切な構成ファイルに次の行を追加します。 これらの設定の値とオプションを次の表に示します。  
   
     ```xml  
     <configuration>  

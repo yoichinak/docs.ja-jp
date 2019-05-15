@@ -12,17 +12,17 @@ helpviewer_keywords:
 - Windows Forms controls, data binding
 - data-bound controls [Windows Forms], Windows Forms
 ms.assetid: 419aac5e-819b-4aad-88b0-73a2f8c0bd27
-ms.openlocfilehash: e8a3011828fd3b3f7aaaa062e837570c86f4fd65
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 240b68f901f819313fcae7aab0474abd5535c30d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626852"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592311"
 ---
 # <a name="data-binding-and-windows-forms"></a>データ連結と Windows フォーム
 Windows フォームでは、従来のデータ ソースだけでなく、データを含むほぼすべての構造にバインドできます。 実行時に計算する値、ファイルから読み取る値、または他のコントロールの値から派生する値の配列にバインドできます。  
   
- さらに、任意のコントロールのプロパティをデータ ソースにバインドできます。 従来のデータ バインディングでは、通常は <xref:System.Windows.Forms.Control.Text%2A> コントロールの <xref:System.Windows.Forms.TextBox> プロパティなどの表示プロパティをデータ ソースにバインドします。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] を使用すると、バインディングによってその他のプロパティを設定することもできます。 バインディングを使用して、次のタスクを実行できます。  
+ さらに、任意のコントロールのプロパティをデータ ソースにバインドできます。 従来のデータ バインディングでは、通常は <xref:System.Windows.Forms.Control.Text%2A> コントロールの <xref:System.Windows.Forms.TextBox> プロパティなどの表示プロパティをデータ ソースにバインドします。 .NET Framework にもバインディングによってその他のプロパティを設定するオプションがあります。 バインディングを使用して、次のタスクを実行できます。  
   
 - イメージ コントロールのグラフィックの設定。  
   

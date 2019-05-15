@@ -2,12 +2,12 @@
 title: '方法: 多くのファイルのファイル グループ (LINQ) (Visual Basic) を使用して分割します。'
 ms.date: 07/20/2015
 ms.assetid: 5e8b2a2b-0b1d-4933-8a2b-03e91dfaf77f
-ms.openlocfilehash: 578b4921ac8ae3ea0fe8c871996e1a5dce3fbf39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c3d0d4d8c45ba2d7016636f0272ace0fdc6ffa3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61614471"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592483"
 ---
 # <a name="how-to-split-a-file-into-many-files-by-using-groups-linq-visual-basic"></a>方法: 多くのファイルのファイル グループ (LINQ) (Visual Basic) を使用して分割します。
 この例では、2 つのファイルの内容をマージし、新しい方法でデータを整理する一連の新しいファイルを作成するための、1 つの方法を示します。  
@@ -116,7 +116,7 @@ End Class
  このプログラムは、データ ファイルとしてグループごとに異なるファイルを同じフォルダーに書き込みます。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。  
+VB.NET コンソール アプリケーション プロジェクトを作成、 `Imports` System.Linq 名前空間のステートメント。
   
 ## <a name="see-also"></a>関連項目
 

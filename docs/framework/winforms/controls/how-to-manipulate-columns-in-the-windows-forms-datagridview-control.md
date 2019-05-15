@@ -10,12 +10,12 @@ helpviewer_keywords:
 - columns [Windows Forms], manipulating
 - data grids [Windows Forms], manipulating columns
 ms.assetid: d8cfe6b3-bbab-4182-bec2-0517d9f1eaf6
-ms.openlocfilehash: 95d41093178c56c999ecfe515a380927513e715d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1f964314b9fe2f4b1ca235f9e74ca80391a58105
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61913719"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592337"
 ---
 # <a name="how-to-manipulate-columns-in-the-windows-forms-datagridview-control"></a>方法: Windows フォーム DataGridView コントロールの列を操作する
 
@@ -32,8 +32,6 @@ ms.locfileid: "61913719"
 この例で必要な要素は次のとおりです。
 
 - System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。
-
-Visual Basic または Visual C# からこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)、または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。
 
 ## <a name="see-also"></a>関連項目
 

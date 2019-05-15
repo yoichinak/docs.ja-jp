@@ -36,12 +36,12 @@ helpviewer_keywords:
 - type arguments [Visual Basic], defining
 - arguments [Visual Basic], type
 ms.assetid: 89f771d9-ecbb-4737-88b8-116b63c6cf4d
-ms.openlocfilehash: 9c8ccf2404c4d8fd6e71f7aa41445c3d26ef5da7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 813ee167fdc09c7c7ea12f5f09602230e711d362
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64601069"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593386"
 ---
 # <a name="generic-types-in-visual-basic-visual-basic"></a>Visual Basic におけるジェネリック型 (Visual Basic)
 *ジェネリック型* はさまざまなデータ型に対して同じ機能を実行するために必要な処理を行う、1 つのプログラミング要素です。 ジェネリック クラスまたはジェネリック プロシージャを定義すると、同じ機能を実行させる各データ型に対して、その機能を別々に定義する必要がありません。  
@@ -76,7 +76,7 @@ ms.locfileid: "64601069"
  より完全なコード例については、「[方法:異なるデータ型に同一の機能を提供するクラスを定義](../../../../visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md)します。  
   
 ## <a name="eligible-programming-elements"></a>使用できるプログラミング要素  
- ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] では、よく使われるジェネリックな要素を表すジェネリックのクラス、構造体、インターフェイスが定義されています。 <xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間には、ディクショナリ、リスト、キュー、スタックが用意されています。 独自のジェネリックな要素を定義する前に、それに相当する要素が既に <xref:System.Collections.Generic?displayProperty=nameWithType>に用意されていないかをご確認ください。  
+ ジェネリック クラス、構造体、インターフェイス、プロシージャ、およびデリゲートを定義して使用することができます。 .NET Framework には、いくつかのジェネリック クラス、構造、および一般的に使用されるジェネリックな要素を表すインターフェイスが定義されてことに注意してください。 <xref:System.Collections.Generic?displayProperty=nameWithType> 名前空間には、ディクショナリ、リスト、キュー、スタックが用意されています。 独自のジェネリックな要素を定義する前に、それに相当する要素が既に <xref:System.Collections.Generic?displayProperty=nameWithType>に用意されていないかをご確認ください。  
   
  プロシージャは型ではありませんが、ジェネリック プロシージャを定義し、使用できます。 「 [Generic Procedures in Visual Basic](../../../../visual-basic/programming-guide/language-features/data-types/generic-procedures.md)」を参照してください。  
   

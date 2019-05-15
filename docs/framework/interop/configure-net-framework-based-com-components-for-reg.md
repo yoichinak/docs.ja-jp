@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: 32f8b7c6-3f73-455d-8e13-9846895bd43b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ea62f7dc5c47f52f94567857427e7add929b8b1c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8f78e926835e86fdc20da5e4e1bc66c4b6ab1a2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336578"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64625447"
 ---
 # <a name="how-to-configure-net-framework-based-com-components-for-registration-free-activation"></a>方法: 登録を必要としないアクティベーション用の .NET Framework ベースの COM コンポーネントを構成する
 .NET Framework ベースのコンポーネントの登録を必要としないアクティベーションは、COM コンポーネントの場合よりも少しだけ複雑です。 セットアップには 2 つのマニフェストが必要です。  
   
--   COM アプリケーションには、マネージド コンポーネントを識別するための Win32 スタイルのアプリケーション マニフェストが必要です。  
+- COM アプリケーションには、マネージド コンポーネントを識別するための Win32 スタイルのアプリケーション マニフェストが必要です。  
   
--   .NET Framework ベースのコンポーネントには、実行時に必要なアクティベーション情報のコンポーネント マニフェストが必要です。  
+- .NET Framework ベースのコンポーネントには、実行時に必要なアクティベーション情報のコンポーネント マニフェストが必要です。  
   
  このトピックでは、アプリケーション マニフェストをアプリケーションに関連付ける方法、コンポーネント マニフェストをコンポーネントに関連付ける方法、およびコンポーネント マニフェストをアセンブリに埋め込む方法について説明します。  
   

@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: fe2e4b4c-6483-4106-a4b4-a33e2e306591
-ms.openlocfilehash: 3d4aa5e60ab9bb134716bddcf90b6fc6b07c2ea0
-ms.sourcegitcommit: 3d0c29b878f00caec288dfecb3a5c959de5aa629
+ms.openlocfilehash: e392f6b2e57bebf1ab916bc6142aebbc8f341db2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53656155"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615309"
 ---
 # <a name="delegates-and-lambdas"></a>デリゲートとラムダ
 
@@ -46,9 +46,9 @@ public class Program
 
 開発プロセスを効率化するため、.NET にはプログラマが再利用できるデリゲート型のセットが含まれているため、新しい型を作成する必要はありません。 これらは `Func<>`、`Action<>`、および `Predicate<>` で、新しいデリゲート型を定義することなく、.NET API を通じてさまざまな場所で使用できます。 もちろん、これらの 3 つの間にはそのシグネチャで見られるように、いくつかの違いがあり、ほとんどがその用途に関係しています。
 
-*   `Action<>` は、デリゲートの引数を使用してアクションを実行する必要がある場合に使用されます。
-*   `Func<>` は、通常、変換が手元にあるときに使用されます。つまり、デリゲートの引数を異なる結果に変換する必要があります。 これの典型的な例が予測です。
-*   `Predicate<>` は、引数がデリゲートの条件を満たすかどうかを判断する必要がある場合に使用されます。 `Func<T, bool>` として書き込むこともできます。
+* `Action<>` は、デリゲートの引数を使用してアクションを実行する必要がある場合に使用されます。
+* `Func<>` は、通常、変換が手元にあるときに使用されます。つまり、デリゲートの引数を異なる結果に変換する必要があります。 これの典型的な例が予測です。
+* `Predicate<>` は、引数がデリゲートの条件を満たすかどうかを判断する必要がある場合に使用されます。 `Func<T, bool>` として書き込むこともできます。
 
 ここで、上記の例を使用して、カスタム型の代わりに `Func<>` デリゲートを使用して書き換えることができます。 プログラムは引き続きまったく同じに実行されます。
 
@@ -159,6 +159,6 @@ public MainWindow()
 
 ## <a name="further-reading-and-resources"></a>参考資料とリソース
 
-*   [デリゲート](../../docs/csharp/programming-guide/delegates/index.md)
-*   [匿名関数](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
-*   [ラムダ式](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)
+* [デリゲート](../../docs/csharp/programming-guide/delegates/index.md)
+* [匿名関数](../../docs/csharp/programming-guide/statements-expressions-operators/anonymous-functions.md)
+* [ラムダ式](../../docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)

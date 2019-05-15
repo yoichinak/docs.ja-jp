@@ -7,44 +7,44 @@ helpviewer_keywords:
 - ReadAllBytes method [Visual Basic], reading from binary files
 - My.Computer.FileSystem object, reading from binary files
 ms.assetid: d2b1269e-24b6-42e0-9414-ae708db282d8
-ms.openlocfilehash: 88c9952818f6cb94db7b2da7ad44aa0da0eb43d2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 72e9361193a5b099841d989e842ff36662cf690d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58825054"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623720"
 ---
 # <a name="how-to-read-from-binary-files-in-visual-basic"></a>方法: Visual Basic でバイナリ ファイルを読み取る
 `My.Computer.FileSystem` オブジェクトには、バイナリ ファイルを読み取るための `ReadAllBytes` メソッドが用意されています。  
   
 ### <a name="to-read-from-a-binary-file"></a>バイナリ ファイルを読み取るには  
   
--   `ReadAllBytes` メソッドを使用します。このメソッドは、ファイルの内容をバイト配列として返します。 次のコードは、`C:/Documents and Settings/selfportrait.jpg` ファイルから読み取りを行う例です。  
+- `ReadAllBytes` メソッドを使用します。このメソッドは、ファイルの内容をバイト配列として返します。 次のコードは、`C:/Documents and Settings/selfportrait.jpg` ファイルから読み取りを行う例です。  
   
      [!code-vb[VbVbcnMyFileSystem#78](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#78)]  
   
--   大きいバイナリ ファイルの場合は、<xref:System.IO.FileStream> オブジェクトの <xref:System.IO.FileStream.Read%2A> メソッドを使用して、一度に指定した量だけファイルから読み取ることができます。 その後、各読み取り操作でファイルからメモリに読み込まれる量を制限することができます。 次のコード例では、ファイルをコピーし、各読み取り操作でファイルからメモリに読み込まれる量を呼び出し元が指定できるようにします。  
+- 大きいバイナリ ファイルの場合は、<xref:System.IO.FileStream> オブジェクトの <xref:System.IO.FileStream.Read%2A> メソッドを使用して、一度に指定した量だけファイルから読み取ることができます。 その後、各読み取り操作でファイルからメモリに読み込まれる量を制限することができます。 次のコード例では、ファイルをコピーし、各読み取り操作でファイルからメモリに読み込まれる量を呼び出し元が指定できるようにします。  
   
      [!code-vb[VbVbcnMyFileSystem#91](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#91)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外がスローされる可能性があります。  
   
--   パスが無効である場合。1) 長さが 0 の文字列である、2) 空白だけが含まれている、3) 無効な文字が含まれている、4) デバイス パスである、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。  
+- パスが無効である場合。1) 長さが 0 の文字列である、2) 空白だけが含まれている、3) 無効な文字が含まれている、4) デバイス パスである、のいずれかの理由が考えられる (<xref:System.ArgumentException>)。  
   
--   パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)  
+- パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)  
   
--   ファイルが存在しない (<xref:System.IO.FileNotFoundException>)。  
+- ファイルが存在しない (<xref:System.IO.FileNotFoundException>)。  
   
--   他のプロセスがファイルを使用しているか、または I/O エラーが発生した (<xref:System.IO.IOException>)。  
+- 他のプロセスがファイルを使用しているか、または I/O エラーが発生した (<xref:System.IO.IOException>)。  
   
--   パスがシステムで定義されている最大長を超えている (<xref:System.IO.PathTooLongException>)。  
+- パスがシステムで定義されている最大長を超えている (<xref:System.IO.PathTooLongException>)。  
   
--   パス内のファイル名またはディレクトリ名にコロン (:) が含まれているか、または形式が無効である (<xref:System.NotSupportedException>)  
+- パス内のファイル名またはディレクトリ名にコロン (:) が含まれているか、または形式が無効である (<xref:System.NotSupportedException>)  
   
--   文字列をバッファーに書き込むための十分なメモリがない (<xref:System.OutOfMemoryException>)  
+- 文字列をバッファーに書き込むための十分なメモリがない (<xref:System.OutOfMemoryException>)  
   
--   ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)  
+- ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)  
   
  ファイル名からファイルの内容を判断しないでください。 たとえば、Form1.vb というファイルは Visual Basic のソース ファイルではない可能性もあります。  
   

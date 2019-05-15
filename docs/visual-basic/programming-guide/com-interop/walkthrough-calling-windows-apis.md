@@ -11,21 +11,21 @@ helpviewer_keywords:
 - DllImport attribute, calling Windows API
 - Declare statement [Visual Basic], declaring DLL functions
 ms.assetid: 9280ca96-7a93-47a3-8d01-6d01be0657cb
-ms.openlocfilehash: 8fd63c2abedcd416937e2c281486bdc1716a275f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 70914d63773c6a94ad92cf6301a8e2bc1368e7a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62022403"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592709"
 ---
 # <a name="walkthrough-calling-windows-apis-visual-basic"></a>チュートリアル: Windows API の呼び出し (Visual Basic)
 Windows API は、Windows オペレーティング システムの一部であるダイナミック リンク ライブラリ (Dll) です。 それらを使用するには、独自の同等のプロシージャを記述するのにことは困難である場合は、タスクを実行します。 たとえば、という名前の関数は、Windows`FlashWindowEx`を可能にすること、アプリケーションのタイトル バーを薄いおよび濃い網掛けを切り替える。  
   
  Windows API を使用して、コード内の利点は、数十個は既に書き込まれている便利な関数の使用を待機しているが含まれているため、開発時間を保存することができます。 欠点は、問題が生じた場合、および晙の処理が難しくなって Windows API であることができます。  
   
- Windows API では、相互運用性の特殊なカテゴリを表します。 Windows API では、マネージ コードを使用しないでください、タイプ ライブラリ、および Visual Studio で使用されるものとは異なるデータ型を使用して、組み込みはありません。 これらの違いにより、Windows API は COM オブジェクト、Windows API との相互運用ではなく、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]プラットフォームを使用して実行されます呼び出すには、pinvoke です。 プラットフォーム呼び出しはマネージ Dll で実装されたアンマネージ関数を呼び出すコードを有効するサービスです。 詳細については、次を参照してください。[アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)します。 Visual Basic で PInvoke を使用するにはいずれかを使用して、`Declare`ステートメントまたは適用する、`DllImport`属性を空のプロシージャです。  
+ Windows API では、相互運用性の特殊なカテゴリを表します。 Windows API では、マネージ コードを使用しないでください、タイプ ライブラリ、および Visual Studio で使用されるものとは異なるデータ型を使用して、組み込みはありません。 ため、これらの相違点し、Windows Api は COM オブジェクト、Windows Api との相互運用ではなく、.NET Framework を使用して実行するため、プラットフォームが呼び出す、または PInvoke です。 プラットフォーム呼び出しはマネージ Dll で実装されたアンマネージ関数を呼び出すコードを有効するサービスです。 詳細については、次を参照してください。[アンマネージ DLL 関数の処理](../../../framework/interop/consuming-unmanaged-dll-functions.md)します。 Visual Basic で PInvoke を使用するにはいずれかを使用して、`Declare`ステートメントまたは適用する、`DllImport`属性を空のプロシージャです。  
   
- Windows API の呼び出しでは、Visual Basic では、以前は、プログラミングの重要な部分をされたが、Visual Basic .NET を使用して必要なことはほとんどありません。 可能であればからマネージ コードを使用する必要があります、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Windows API の呼び出しではなく、タスクを実行します。 このチュートリアルは、使用する必要のある状況についての情報を提供します。 Windows API が必要です。  
+ Windows API の呼び出しでは、Visual Basic では、以前は、プログラミングの重要な部分をされたが、Visual Basic .NET を使用して必要なことはほとんどありません。 可能であれば、.NET Framework からマネージ コードを使用して Windows API の呼び出しではなく、タスクを実行する必要があります。 このチュートリアルは、使用する必要のある状況についての情報を提供します。 Windows API が必要です。  
   
 [!INCLUDE[note_settings_general](~/includes/note-settings-general-md.md)]  
   

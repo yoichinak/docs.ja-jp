@@ -2,12 +2,12 @@
 title: Windows Workflow Foundation 4 のパフォーマンス
 ms.date: 03/30/2017
 ms.assetid: 67d2b3e8-3777-49f8-9084-abbb33b5a766
-ms.openlocfilehash: 4351955eeed722cfd10db79b9dbe5ec6692ed2ec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 701e05301e82537aa6119ab3ec894483daee41f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592162"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592538"
 ---
 # <a name="windows-workflow-foundation-4-performance"></a>Windows Workflow Foundation 4 のパフォーマンス
 
@@ -18,7 +18,7 @@ ms.locfileid: "64592162"
 ## <a name="terminology"></a>用語
  [!INCLUDE[wf1](../../../includes/wf1-md.md)] で導入された [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] のバージョンは、このトピックではこれから WF4 と呼びます。  [!INCLUDE[wf1](../../../includes/wf1-md.md)] .NET 3.0 で導入されたにあり、いくつかの小さな変更を[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]SP1。 また、以後 [!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)] バージョンの Workflow Foundation を WF3 と呼びます。 WF3 は WF4 と共に [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] に付属しています。 WF4 に移行する WF3 の成果物の詳細については、次を参照してください。[Windows Workflow Foundation 4 移行ガイド](https://go.microsoft.com/fwlink/?LinkID=153313)
 
- Windows Communication Foundation (WCF) は、Microsoft の統一プログラミング モデルをサービス指向アプリケーションを構築するためです。 WF3 と共に .NET 3.0 の一部として初めて導入されたの主要なコンポーネントの 1 つは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]します。
+ Windows Communication Foundation (WCF) は、Microsoft の統一プログラミング モデルをサービス指向アプリケーションを構築するためです。 WF3 と共に .NET 3.0 の一部として初めて導入し、ここでは、.NET Framework の主要なコンポーネントの 1 つ。
 
  Windows Server AppFabric はインターネット インフォメーション サービス (IIS) 上で実行する Web アプリケーションおよび複合アプリケーションの構築、拡張、および管理を容易にする一連の統合テクノロジです。 監視およびサービスとワークフローの管理を行うためのツールを提供します。 詳細については、次を参照してください。 [Windows Server AppFabric 1.0](https://docs.microsoft.com/previous-versions/appfabric/ff384253(v=azure.10))します。
 
@@ -401,7 +401,7 @@ public class Workflow1 : Activity
 
  WF3 には SQL ベースの追跡サービスが付属しています。  このサービスはバッチ モードと非バッチ モードで動作します。  非バッチ モードでは、イベントの追跡はデータベースに直接書き込まれます。  バッチ モードでは、追跡イベントは同じバッチ内にワークフロー インスタンスの状態として収集されます。  バッチ モードは多様なワークフロー デザインを高パフォーマンスで処理します。  ただし、ワークフローが永続化せずに多数のアクティビティを実行し、そのアクティビティを追跡する場合、バッチ処理によってパフォーマンスが低下する可能性があります。  このような状態は一般にループで発生するので、大規模なループに永続化ポイントを含めることが最善の回避策になります。  ループに永続化ポイントを導入することによってもパフォーマンスが低下する可能性があるので、両者のコストを測定してバランスを考慮することが重要です。
 
- WF4 には SQL 追跡サービスは付属していません。  SQL データベースへの追跡情報の記録は [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] に組み込むよりもアプリケーション サーバーから処理する方が適しているため、 SQL 追跡は AppFabric によって処理するようになりました。  WF4 の標準追跡プロバイダーは Event Tracing for Windows (ETW) に基づいています。
+ WF4 には SQL 追跡サービスは付属していません。  SQL データベースに追跡情報の記録よりすることはアプリケーション サーバーからより適切に処理ではなく、.NET Framework に組み込まれています。 SQL 追跡は AppFabric によって処理するようになりました。  WF4 の標準追跡プロバイダーは Event Tracing for Windows (ETW) に基づいています。
 
  ETW は Windows に組み込まれた、カーネル レベルの待機時間が短いイベント システムです。  このシステムは、実際に使用したときにのみイベント追跡のコストが発生するようにすることが可能なプロバイダー/コンシューマー モデルを使用しています。  プロセッサ、ディスク、メモリ、ネットワーク使用量などのカーネル イベント以外にも、多くのアプリケーションが ETW を利用しています。  ETW イベントは、イベントをアプリケーションに応じてカスタマイズできるという点でパフォーマンス カウンターより高機能です。  イベントにワークフロー ID や情報メッセージなどのテキストを含めることができます。  また、すべてのイベントをキャプチャするより一定のイベントのサブセットを使用した方がパフォーマンスへの影響が少ないため、イベントはビットマスクを使用して分類されています。
 
