@@ -2,12 +2,12 @@
 title: 完了時の非同期タスクの処理
 ms.date: 09/12/2018
 ms.assetid: 25331850-35a7-43b3-ab76-3908e4346b9d
-ms.openlocfilehash: 335eb5dce74a7f0a2b8af550250105d460212b6a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 562da04b48af6f6cbaaca8ea8eccf062b470696e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304858"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600281"
 ---
 # <a name="start-multiple-async-tasks-and-process-them-as-they-complete-c"></a>完了時での複数の非同期タスクとプロセスの実行 (C#)
 
@@ -51,27 +51,27 @@ IEnumerable<Task<int>> downloadTasksQuery = from url in urlList select ProcessUR
 
 プロジェクトの MainWindow.xaml.cs ファイルで、`AccessTheWebAsync` メソッドに次の変更を行います。
 
--   <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> の代わりに <xref:System.Linq.Enumerable.ToArray%2A> を適用して、クエリを実行します。
+- <xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType> の代わりに <xref:System.Linq.Enumerable.ToArray%2A> を適用して、クエリを実行します。
 
     ```csharp
     List<Task<int>> downloadTasks = downloadTasksQuery.ToList();
     ```
 
--   コレクションの各タスクで次の手順を実行する `while` ループを追加します。
+- コレクションの各タスクで次の手順を実行する `while` ループを追加します。
 
-    1.  `WhenAny` への呼び出しを待機し、ダウンロードを終了する、コレクションの最初のタスクを識別します。
+    1. `WhenAny` への呼び出しを待機し、ダウンロードを終了する、コレクションの最初のタスクを識別します。
 
         ```csharp
         Task<int> firstFinishedTask = await Task.WhenAny(downloadTasks);
         ```
 
-    2.  コレクションからそのタスクを削除します。
+    2. コレクションからそのタスクを削除します。
 
         ```csharp
         downloadTasks.Remove(firstFinishedTask);
         ```
 
-    3.  `firstFinishedTask` への呼び出しから返される、`ProcessURLAsync` を待機します。 `firstFinishedTask` 変数は <xref:System.Threading.Tasks.Task%601> が整数である `TReturn` です。 次の例に示すように、タスクは既に完了していますが、ダウンロードした Web サイトの長さの取得を待機します。
+    3. `firstFinishedTask` への呼び出しから返される、`ProcessURLAsync` を待機します。 `firstFinishedTask` 変数は <xref:System.Threading.Tasks.Task%601> が整数である `TReturn` です。 次の例に示すように、タスクは既に完了していますが、ダウンロードした Web サイトの長さの取得を待機します。
 
         ```csharp
         int length = await firstFinishedTask;

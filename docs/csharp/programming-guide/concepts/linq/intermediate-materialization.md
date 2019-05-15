@@ -2,12 +2,12 @@
 title: 中間結果の具体化 (C#)
 ms.date: 07/20/2015
 ms.assetid: 7922d38f-5044-41cf-8e17-7173d6553a5e
-ms.openlocfilehash: 065a7e0ffadaa48d400d4f4e3e045014b3658213
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fa1e11c6b4cacff3b5a5a7ca1cc311f5fabda6c7
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54686011"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596615"
 ---
 # <a name="intermediate-materialization-c"></a>中間結果の具体化 (C#)
 不注意なユーザーは、クエリ内でコレクションを早期に具体化して、アプリケーションのメモリおよびパフォーマンスのプロファイルを大幅に変更してしまうことがあります。 一部の標準クエリ演算子では、単一の要素を生成する前に、ソース コレクションを具体化する場合があります。 たとえば、<xref:System.Linq.Enumerable.OrderBy%2A?displayProperty=nameWithType> は最初にソース コレクション全体を反復処理し、次にすべての項目を並べ替えて、最後に最初の項目を生成します。 これは、順序付けられたコレクションの最初の項目の取得が高コストであることを意味しています。これ以降の各項目の取得は高コストではありません。 このクエリ演算子は他の方法では処理を実行できないため、これは処理方法として適切なものです。  
@@ -84,7 +84,7 @@ Main: str >GHI!!!<
   
  標準クエリ演算子も連結することができます。 これについては、このチュートリアルの最後のトピックで説明します。  
   
--   [標準クエリ演算子の連結 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
+- [標準クエリ演算子の連結 (C#)](../../../../csharp/programming-guide/concepts/linq/chaining-standard-query-operators-together.md)  
   
 ## <a name="see-also"></a>関連項目
 

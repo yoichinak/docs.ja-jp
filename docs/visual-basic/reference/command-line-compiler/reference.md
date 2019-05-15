@@ -9,12 +9,12 @@ helpviewer_keywords:
 - reference compiler option [Visual Basic]
 - -r compiler option [Visual Basic]
 ms.assetid: 66bdfced-bbf6-43d1-a554-bc0990315737
-ms.openlocfilehash: a205682bb15b5d25ba0a2df895533d3443a41409
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2394a23ddd59d09ce53c78fc4486fc5bae9e8516
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663465"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583361"
 ---
 # <a name="-reference-visual-basic"></a>-参照 (Visual Basic)
 コンパイラで型情報をコンパイルする現在のプロジェクトで使用できる、指定されたアセンブリでようにします。  
@@ -46,7 +46,7 @@ ms.locfileid: "64663465"
   
  コンパイラがアセンブリ (モジュールではなく) 内の型を認識するには、型の解決を強制する必要があります。 これを実行する方法の 1 つの例では、型のインスタンスを定義します。 その他の方法、コンパイラのアセンブリ内の型名を解決するのには利用できます。 たとえば、アセンブリ内の型から継承する場合、型名し既知となるコンパイラに。  
   
- 参照がよく使用される、Vbc.rsp 応答ファイル[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリでは、既定で使用されます。 使用して、`-noconfig`コンパイラが Vbc.rsp を使用したくない場合。  
+ 一般、参照するには、.NET Framework アセンブリが使用され、Vbc.rsp 応答ファイルは、既定で使用されます。 使用して、`-noconfig`コンパイラが Vbc.rsp を使用したくない場合。  
   
  `-reference` の省略形は `/r` です。  
   

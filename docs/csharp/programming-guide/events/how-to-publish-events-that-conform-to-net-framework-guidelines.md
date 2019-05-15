@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: 3ea5f5fb3b94c3edfd129a08a57c4c584b1412aa
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f67789159cee64e928ae88cede9f4dbf33df1b40
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306587"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608695"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>方法: .NET Framework ガイドラインに準拠したイベントを発行する (C# プログラミング ガイド)
 ここでは、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] の標準のパターンに従うイベントをクラスおよび構造体に追加する方法について説明します。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] クラス ライブラリ内のすべてのイベントは、次のように定義されている <xref:System.EventHandler> デリゲートに基づいています。  
@@ -51,19 +51,19 @@ public delegate void EventHandler(object sender, EventArgs e);
   
 3. 次のいずれかの手順を使用して、パブリッシャー クラスでイベントを宣言します。  
   
-    1.  カスタムの EventArgs クラスがない場合、Event 型は非ジェネリック バージョンの EventHandler デリゲートになります。 このデリゲートは、C# プロジェクトを作成したときに含まれている <xref:System> 名前空間で既に宣言されているため、ここで宣言する必要はありません。 パブリッシャー クラスに次のコードを追加します。  
+    1. カスタムの EventArgs クラスがない場合、Event 型は非ジェネリック バージョンの EventHandler デリゲートになります。 このデリゲートは、C# プロジェクトを作成したときに含まれている <xref:System> 名前空間で既に宣言されているため、ここで宣言する必要はありません。 パブリッシャー クラスに次のコードを追加します。  
   
         ```csharp  
         public event EventHandler RaiseCustomEvent;  
         ```  
   
-    2.  非ジェネリック バージョンの <xref:System.EventHandler> を使用し、<xref:System.EventArgs> から派生したカスタム クラスがある場合は、パブリッシャー クラス内でイベントを宣言し、手順 2 のデリゲートを型として使用します。  
+    2. 非ジェネリック バージョンの <xref:System.EventHandler> を使用し、<xref:System.EventArgs> から派生したカスタム クラスがある場合は、パブリッシャー クラス内でイベントを宣言し、手順 2 のデリゲートを型として使用します。  
   
         ```csharp  
         public event CustomEventHandler RaiseCustomEvent;  
         ```  
   
-    3.  ジェネリック バージョンを使用する場合、カスタム デリゲートは不要です。 代わりに、パブリッシャー クラスでイベントの種類として `EventHandler<CustomEventArgs>` を指定します。山かっこの部分は、実際のクラス名で置き換えます。  
+    3. ジェネリック バージョンを使用する場合、カスタム デリゲートは不要です。 代わりに、パブリッシャー クラスでイベントの種類として `EventHandler<CustomEventArgs>` を指定します。山かっこの部分は、実際のクラス名で置き換えます。  
   
         ```csharp  
         public event EventHandler<CustomEventArgs> RaiseCustomEvent;  

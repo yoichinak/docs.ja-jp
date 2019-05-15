@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9b9f0cd44e5ab9a33db4dd2ef52681f40ca54080
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: db6630a6c1e68a776641db7ec7960f47fd260552
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835162"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64603282"
 ---
 # <a name="compiling-an-interop-project"></a>相互運用プロジェクトのコンパイル
 
@@ -24,9 +24,9 @@ ms.locfileid: "56835162"
 
  相互運用機能アセンブリを参照する方法には、次の 2 つがあります。
 
--   埋め込まれた相互運用機能型:[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] および Visual Studio 2010 以降では、相互運用機能アセンブリから実行可能ファイルに型情報を埋め込むようにコンパイラに指示できます。 この手法を使用することをお勧めします。
+- 埋め込まれた相互運用機能型:[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] および Visual Studio 2010 以降では、相互運用機能アセンブリから実行可能ファイルに型情報を埋め込むようにコンパイラに指示できます。 この手法を使用することをお勧めします。
 
--   相互運用機能アセンブリの配置:相互運用機能アセンブリへの標準の参照を作成できます。 この場合、アプリケーションで相互運用機能アセンブリを展開する必要があります。
+- 相互運用機能アセンブリの配置:相互運用機能アセンブリへの標準の参照を作成できます。 この場合、アプリケーションで相互運用機能アセンブリを展開する必要があります。
 
  この 2 つの手法の違いの詳細については、「[Using COM Types in Managed Code](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/3y76b69k(v=vs.100))」(マネージド コードでの COM 型の使用) を参照してください。
 

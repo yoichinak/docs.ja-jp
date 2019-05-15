@@ -16,24 +16,24 @@ helpviewer_keywords:
 - naming conventions [Visual Basic], naming conflicts
 - namespaces
 ms.assetid: cffac744-ab8c-4f1f-ba50-732c22ab4b88
-ms.openlocfilehash: 792741dc4df7b65ddef124615032c06a7ff1bcb8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbd8d901f018d95b8a1f5c81c813853838c4a4cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050468"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586298"
 ---
 # <a name="namespaces-in-visual-basic"></a>Visual Basic における名前空間
 アセンブリ内で定義されているオブジェクトは、名前空間によって編成されています。 アセンブリには複数の名前空間を含めることができます。さらに、名前空間の中に他の名前空間を含めることもできます。 名前空間を使用するとあいまいさがなくなるため、クラス ライブラリを使用する場合など、多数のオブジェクトを使用する場合に参照が簡単になります。  
   
- たとえば、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] では <xref:System.Windows.Forms.ListBox> 名前空間に <xref:System.Windows.Forms?displayProperty=nameWithType> クラスが定義されています。 次のコードは、このクラスの完全修飾名を使用して変数を宣言する方法を示しています。  
+ たとえば、.NET Framework の定義、<xref:System.Windows.Forms.ListBox>クラス、<xref:System.Windows.Forms?displayProperty=nameWithType>名前空間。 次のコードは、このクラスの完全修飾名を使用して変数を宣言する方法を示しています。  
   
  [!code-vb[VbVbalrApplication#6](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#6)]  
   
 ## <a name="avoiding-name-collisions"></a>名前の競合の回避  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] の名前空間は、他のライブラリで似た名前が使用されている場合にクラス ライブラリの開発者が遭遇する、 *名前空間の汚染*と呼ばれる問題に対処しています。 このような既存コンポーネントとの競合は、 *名前の競合*とも呼ばれます。  
+ .NET framework 名前空間とも呼ばれる問題に対処*名前空間の汚染*、別のライブラリで似た名前を使用しているが、クラス ライブラリの開発者。 このような既存コンポーネントとの競合は、 *名前の競合*とも呼ばれます。  
   
- たとえば、 `ListBox`という名前の新しいクラスを作成した場合、プロジェクト内ではこのクラスを修飾子を付けずに使用できます。 ただし、使用する場合、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] <xref:System.Windows.Forms.ListBox>クラスと同じプロジェクトで参照を一意にする完全修飾参照を使用する必要があります。 参照が一意でない場合、Visual Basic には、名前があいまいであることを示すエラーが生成されます。 次のコード例では、これらのオブジェクトを宣言する方法を示しています。  
+ たとえば、 `ListBox`という名前の新しいクラスを作成した場合、プロジェクト内ではこのクラスを修飾子を付けずに使用できます。 ただし、.NET Framework を使用したい場合<xref:System.Windows.Forms.ListBox>クラスと同じプロジェクトで参照を一意にする完全修飾参照を使用する必要があります。 参照が一意でない場合、Visual Basic には、名前があいまいであることを示すエラーが生成されます。 次のコード例では、これらのオブジェクトを宣言する方法を示しています。  
   
  [!code-vb[VbVbalrApplication#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrApplication/VB/Class1.vb#7)]  
   

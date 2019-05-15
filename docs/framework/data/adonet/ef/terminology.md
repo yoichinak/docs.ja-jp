@@ -2,12 +2,12 @@
 title: Entity Framework の用語
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: a4befe4c45f11a59982edc9f976258f795a18cde
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764336"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583528"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework の用語
 このトピックで頻繁に参照用語の定義[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]ドキュメント。 追加情報を確認できる関連トピックへのリンクも示しています。  
@@ -18,7 +18,7 @@ ms.locfileid: "61764336"
 |関連付けセット|同じ型のアソシエーションのインスタンスの論理コンテナー。<br /><br /> 詳細については、次を参照してください。 [AssociationSet 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#associationset-element-csdl)と[アソシエーション セット](../../../../../docs/framework/data/adonet/association-set.md)します。|  
 |Code First|Entity Framework 4.1 以降では、Code First の開発を使用してモデルをプログラムで作成することもできます。 Code First の開発に対しては、2 つの異なるシナリオがあります。 どちらの場合でも、開発者は .NET Framework のクラス定義をコーディングしてモデルを定義し、データ注釈または Fluent API を使用してオプションで追加のマッピングまたは構成を指定します。<br /><br /> ただし、Code First の開発が含まれている、 [Entity Framework 5.0](https://go.microsoft.com/fwlink/?LinkId=234900)します。 Entity Framework 5.0 は .NET Framework の一部ではありませんが、.NET Framework 4.5 で構成されます。 Entity Framework 5.0 は、 [' Entity Framework'](https://go.microsoft.com/fwlink/?LinkID=215714)[NuGet](https://go.microsoft.com/fwlink/?LinkId=232488)パッケージ。 詳細については、次を参照してください。 [Entity Framework リリースおよびバージョン管理](https://go.microsoft.com/fwlink/?LinkId=234899)します。|  
 |コマンド ツリー|すべての共通プログラム表現[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]クエリの 1 つまたは複数の式で構成されます。<br /><br /> 詳細については、次を参照してください。 [Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)します。|  
-|複合型|概念モデルで定義されている複合プロパティを表す [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] クラス。 複合型により、スカラー プロパティをエンティティ内で整理することができます。 複合オブジェクトは、複合型のインスタンスです。 詳細については、次を参照してください。 [ComplexType 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl)と[複合型](../../../../../docs/framework/data/adonet/complex-type.md)します。|  
+|複合型|概念モデルに定義されている複合プロパティを表す .NET Framework クラス。 複合型により、スカラー プロパティをエンティティ内で整理することができます。 複合オブジェクトは、複合型のインスタンスです。 詳細については、次を参照してください。 [ComplexType 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl)と[複合型](../../../../../docs/framework/data/adonet/complex-type.md)します。|  
 |ComplexType|キー プロパティを持たないエンティティ型の非スカラー プロパティを表すデータ型の仕様。<br /><br /> 詳細については、次を参照してください。 [ComplexType 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#complextype-element-csdl)と[複合型](../../../../../docs/framework/data/adonet/complex-type.md)します。|  
 |概念モデル|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] のアプリケーションのドメインにおけるエンティティ型、複合型、アソシエーション、エンティティ コンテナー、エンティティ セット、およびアソシエーション セットの抽象的な仕様。 概念モデルは、CSDL で .csdl ファイルに定義されます。<br /><br /> 詳細については、次を参照してください。[モデリング ファイルとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)します。|  
 |.csdl ファイル|CSDL で表現された概念モデルを含む XML ファイル。|  
@@ -36,7 +36,7 @@ ms.locfileid: "61764336"
 |Entity Framework|開発者がデータ ソースの論理スキーマにマップされた概念モデルを使用できるようにすることで、データ指向のソフトウェア アプリケーションの開発をサポートするテクノロジ セット。<br /><br /> 詳細については、次を参照してください。 [Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)します。|  
 |エンティティ セット|指定された型とそのサブタイプのエンティティの論理コンテナー。 エンティティ セットは、データベース内のテーブルにマップされます。<br /><br /> 詳細については、次を参照してください。 [EntitySet 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entityset-element-csdl)と[エンティティ セット](../../../../../docs/framework/data/adonet/entity-set.md)します。|  
 |Entity SQL|エンティティの概念スキーマを直接操作し、継承やリレーションシップなどの概念モデルの概念をサポートする、ストレージの影響を受けない SQL の言語。<br /><br /> 詳細については、次を参照してください。 [Entity SQL 言語](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-language.md)します。|  
-|エンティティ型|概念モデルでの定義に従ってエンティティを表す [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] クラス。 エンティティ型には、スカラー プロパティ、複合プロパティ、およびナビゲーション プロパティが含まれる場合があります。 オブジェクトは、エンティティ型のインスタンスです。 詳細については、次を参照してください。[オブジェクトの操作](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)します。|  
+|エンティティ型|概念モデルで定義されているエンティティを表す .NET Framework クラスです。 エンティティ型には、スカラー プロパティ、複合プロパティ、およびナビゲーション プロパティが含まれる場合があります。 オブジェクトは、エンティティ型のインスタンスです。 詳細については、次を参照してください。[オブジェクトの操作](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)します。|  
 |EntityType|キーやプロパティの名前付きセットを含み、概念モデルまたはストレージ モデルの最上位項目を表すデータ型の仕様。<br /><br /> 詳細については、次を参照してください。 [EntityType 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl)と[エンティティ型](../../../../../docs/framework/data/adonet/entity-type.md)します。|  
 |明示的な読み込み|クエリがオブジェクトを返す場合、関連オブジェクトは同時に読み込まれません。 既定では、関連オブジェクトは、ナビゲーション プロパティの `Load` メソッドを使用して明示的に要求されるまで読み込まれません。|  
 |外部キーの関連付け (アソシエーション)|外部キー プロパティで管理されるエンティティ間のアソシエーション。|  
@@ -57,7 +57,7 @@ ms.locfileid: "61764336"
 |オブジェクト レイヤー|Entity Framework によって使用されるエンティティ型およびオブジェクト コンテキストの定義。|  
 |オブジェクト クエリ|データをオブジェクトとして返す概念モデルに対してオブジェクト コンテキスト内で実行されるクエリ。<br /><br /> 詳細については、次を参照してください。[オブジェクト クエリ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896241(v=vs.100))します。|  
 |オブジェクト リレーショナル マッピング|リレーショナル データベースのデータをオブジェクト指向のソフトウェア アプリケーションで使用できるデータ型に変換する手法。<br /><br /> [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] では、ストレージ モデルで定義されたリレーショナル データを概念モデルで定義されたデータ型にマップして、オブジェクト リレーショナル マッピング サービスを提供します。<br /><br /> 詳細については、次を参照してください。[モデリング ファイルとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)します。|  
-|オブジェクト サービス|によって提供されるサービス、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]などのエンティティを操作するアプリケーション コードを有効にする[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]オブジェクト。|  
+|オブジェクト サービス|によって提供されるサービス、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] .NET Framework オブジェクトなどのエンティティを操作するアプリケーション コードを有効にします。|  
 |永続化非依存オブジェクト|データ ストレージに関連するロジックが含まれていないオブジェクト。 POCO エンティティとも呼ばれます。|  
 |POCO|Plain Old CLR Object の略。 別のクラスから継承しないオブジェクト、またはインターフェイスを実装しないオブジェクト。|  
 |POCO エンティティ|[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の、<xref:System.Data.Objects.DataClasses.EntityObject> または <xref:System.Data.Objects.DataClasses.ComplexObject> から継承しないエンティティ、または [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] インターフェイスを実装しないエンティティ。 多くの場合、POCO エンティティは既存のドメイン オブジェクトで使用する、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アプリケーション。 このようなエンティティは、永続化非依存性をサポートしています。 詳細については、次を参照してください。 [POCO エンティティの操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))します。|  

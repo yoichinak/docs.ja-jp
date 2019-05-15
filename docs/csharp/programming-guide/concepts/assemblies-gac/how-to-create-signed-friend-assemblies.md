@@ -2,12 +2,12 @@
 title: '方法: 署名されたフレンド アセンブリを作成する (C#)'
 ms.date: 07/20/2015
 ms.assetid: bab62063-61e6-453f-905f-77673df9534e
-ms.openlocfilehash: b80d22aa68a969a5468aa1395195058e47f300c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: df04f6f5a006c7eea7984004e20578c85e51efe0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325203"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64582979"
 ---
 # <a name="how-to-create-signed-friend-assemblies-c"></a>方法: 署名されたフレンド アセンブリを作成する (C#)
 この例では、厳密な名前を持つアセンブリと共にフレンド アセンブリを使用する方法を示します。 両方のアセンブリに厳密な名前が付けられている必要があります。 この例のアセンブリは両方とも同じキーを使用していますが、2 つのアセンブリそれぞれが別々のキーを使用することもできます。  
@@ -18,15 +18,15 @@ ms.locfileid: "59325203"
   
 2. 厳密な名前ツールで次のコマンド シーケンスを使用して、キー ファイルを生成し、公開鍵を表示します。 詳細については、「[Sn.exe (厳密名ツール)](../../../../framework/tools/sn-exe-strong-name-tool.md)」を参照してください。  
   
-    1.  この例で使用する厳密な名前キーを生成し、FriendAssemblies.snk ファイルに格納します。  
+    1. この例で使用する厳密な名前キーを生成し、FriendAssemblies.snk ファイルに格納します。  
   
          `sn -k FriendAssemblies.snk`  
   
-    2.  FriendAssemblies.snk から公開鍵を抽出し、FriendAssemblies.publickey に追加します。  
+    2. FriendAssemblies.snk から公開鍵を抽出し、FriendAssemblies.publickey に追加します。  
   
          `sn -p FriendAssemblies.snk FriendAssemblies.publickey`  
   
-    3.  FriendAssemblies.publickey ファイルに格納されている公開鍵を表示します。  
+    3. FriendAssemblies.publickey ファイルに格納されている公開鍵を表示します。  
   
          `sn -tp FriendAssemblies.publickey`  
   

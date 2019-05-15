@@ -2,19 +2,19 @@
 title: 非同期の戻り値の型 (C#)
 ms.date: 05/29/2017
 ms.assetid: ddb2539c-c898-48c1-ad92-245e4a996df8
-ms.openlocfilehash: c2a15b87e97dea43c37f720856be2892ad6966a3
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 327168e3ac77ab1ed7c9841d592781c704839660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57368182"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599780"
 ---
 # <a name="async-return-types-c"></a>非同期の戻り値の型 (C#)
 非同期メソッドには、次の戻り値の型があります。
 
 - <xref:System.Threading.Tasks.Task%601>: 値を返す非同期メソッドの場合。 
  
--  <xref:System.Threading.Tasks.Task>: 操作を実行し、値を返さない非同期メソッドの場合。
+- <xref:System.Threading.Tasks.Task>: 操作を実行し、値を返さない非同期メソッドの場合。
 
 - `void`: イベント ハンドラーの場合。 
 
@@ -33,12 +33,10 @@ ms.locfileid: "57368182"
 
 `GetLeisureHours` が `ShowTodaysInfo` メソッドの await 式の中から呼び出されると、await 式は `GetLeisureHours` メソッドから返されるタスクに格納されている整数値 (`leisureHours` の値) を取得します。 await 式の詳細については、「[await](../../../../csharp/language-reference/keywords/await.md)」を参照してください。  
   
-次のコードに示すように、`GetLeisureHours` の呼び出しと、`await` の適用を分離すると、この仕組みをよく理解できます。 メソッドの宣言から予想されるように、直ちに待機しない `GetLeisureHours` メソッドの呼び出しは、`Task<int>` を返します。 タスクは、この例の `integerTask` 変数に割り当てられます。 
-  `integerTask` は <xref:System.Threading.Tasks.Task%601> であるため、<xref:System.Threading.Tasks.Task%601.Result> 型の `TResult` プロパティが含まれています。 この場合、`TResult` は整数型を表します。 `await` が `integerTask` に適用されると、`integerTask` の <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの内容が await 式の評価となります。 この値は `ret` 変数に割り当てられます。  
+次のコードに示すように、`GetLeisureHours` の呼び出しと、`await` の適用を分離すると、この仕組みをよく理解できます。 メソッドの宣言から予想されるように、直ちに待機しない `GetLeisureHours` メソッドの呼び出しは、`Task<int>` を返します。 タスクは、この例の `integerTask` 変数に割り当てられます。 `integerTask` は <xref:System.Threading.Tasks.Task%601> であるため、<xref:System.Threading.Tasks.Task%601.Result> 型の `TResult` プロパティが含まれています。 この場合、`TResult` は整数型を表します。 `await` が `integerTask` に適用されると、`integerTask` の <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの内容が await 式の評価となります。 この値は `ret` 変数に割り当てられます。  
   
 > [!IMPORTANT]
->  
-  <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティは Blocking プロパティです。 タスクが終了する前にアクセスしようとすると、現在アクティブなスレッドは、タスクが完了して値が使用可能になるまで、ブロックされます。 多くの場合、プロパティに直接アクセスする代わりに、`await` を使用して値にアクセスする必要があります。 <br/> 前の例では、アプリケーションが終了する前に `ShowTodaysInfo` メソッドが実行を終了できるように、<xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの値を取得してメイン スレッドをブロックしました。  
+>  <xref:System.Threading.Tasks.Task%601.Result%2A> プロパティは Blocking プロパティです。 タスクが終了する前にアクセスしようとすると、現在アクティブなスレッドは、タスクが完了して値が使用可能になるまで、ブロックされます。 多くの場合、プロパティに直接アクセスする代わりに、`await` を使用して値にアクセスする必要があります。 <br/> 前の例では、アプリケーションが終了する前に `ShowTodaysInfo` メソッドが実行を終了できるように、<xref:System.Threading.Tasks.Task%601.Result%2A> プロパティの値を取得してメイン スレッドをブロックしました。  
 
 [!code-csharp[return-value](../../../../../samples/snippets/csharp/programming-guide/async/async-returns1a.cs#1)]
   

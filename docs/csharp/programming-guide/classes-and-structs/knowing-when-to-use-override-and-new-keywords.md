@@ -7,12 +7,12 @@ helpviewer_keywords:
 - new keyword [C#]
 - polymorphism [C#], using override and new [C#]
 ms.assetid: 323db184-b136-46fc-8839-007886e7e8b0
-ms.openlocfilehash: b1d99b0c5241a99ba7f621faff7c39d20776b2ad
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d653761236cae580eb78a35f9697764f600ec6ee
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54496258"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583110"
 ---
 # <a name="knowing-when-to-use-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードを使用する場合について (C# プログラミング ガイド)
 C# では、派生クラスのメソッドを基底クラスのメソッドと同じ名前にすることができます。 [new](../../../csharp/language-reference/keywords/new.md) および [override](../../../csharp/language-reference/keywords/override.md) キーワードを使って、メソッドでの処理を指定できます。 `override` 修飾子は基底クラスのメソッドを "*拡張*" し、`new` 修飾子は "*隠ぺい*" します。 このトピックの例ではその違いを示します。  
@@ -39,11 +39,11 @@ class DerivedClass : BaseClass
   
  `Main` メソッドで、変数 `bc`、`dc`、`bcdc` を宣言します。  
   
--   `bc` は `BaseClass` 型であり、その値は `BaseClass` です。  
+- `bc` は `BaseClass` 型であり、その値は `BaseClass` です。  
   
--   `dc` は `DerivedClass` 型であり、その値は `DerivedClass` です。  
+- `dc` は `DerivedClass` 型であり、その値は `DerivedClass` です。  
   
--   `bcdc` は `BaseClass` 型であり、その値は `DerivedClass` です。 この変数には注意する必要があります。  
+- `bcdc` は `BaseClass` 型であり、その値は `DerivedClass` です。 この変数には注意する必要があります。  
   
  `bc` と `bcdc` は `BaseClass` 型なので、キャストを使わない限り、直接アクセスできるのは `Method1` だけです。 変数 `dc` は、`Method1` と `Method2` の両方にアクセスできます。 これらの関係を次のコードに示します。  
   

@@ -2,12 +2,12 @@
 title: シリアル化時の空白の維持3
 ms.date: 07/20/2015
 ms.assetid: 0c4f8b98-483b-4cf8-86be-fa146eef90dc
-ms.openlocfilehash: c02524fbd22f56761189ed9ba7bd658dadeda19a
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 2f1e59728dc353a86421c9071710aba23c8f7f6f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57377172"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608733"
 ---
 # <a name="preserving-white-space-while-serializing"></a>シリアル化時の空白の維持
 このトピックでは、XML ツリーをシリアル化するときに空白を制御する方法について説明します。  
@@ -19,13 +19,13 @@ ms.locfileid: "57377172"
 ## <a name="white-space-behavior-of-methods-that-serialize-xml-trees"></a>XML ツリーをシリアル化するメソッドの空白に関する動作  
  <xref:System.Xml.Linq.XElement> クラスと <xref:System.Xml.Linq.XDocument> クラスにある次のメソッドは、XML ツリーをシリアル化します。 XML ツリーは、ファイル、<xref:System.IO.TextReader>、または <xref:System.Xml.XmlReader> にシリアル化できます。 `ToString` メソッドは、文字列にシリアル化します。  
   
--   <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Save%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Save%2A?displayProperty=nameWithType>  
   
--   [XElement.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
+- [XElement.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
   
--   [XDocument.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
+- [XDocument.ToString()](xref:System.Xml.Linq.XNode.ToString%2A?displayProperty=nameWithType)
   
  メソッドが <xref:System.Xml.Linq.SaveOptions> を引数として受け取らない場合は、シリアル化された XML が書式設定 (インデント) されます。 この場合、XML ツリー内の意味のない空白はすべて破棄されます。  
   

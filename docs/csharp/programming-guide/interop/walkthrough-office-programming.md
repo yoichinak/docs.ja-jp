@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 1f46d6594c249db394a5493ad9cdbbb1937a5d45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328453"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608276"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>チュートリアル: Office のプログラミング (C# および Visual Basic)
 Visual Studio には、Microsoft Office のプログラミングを改善する C# および Visual Basic の新機能が導入されています。 便利な C# の機能には、名前付き引数、省略可能な引数、型 `dynamic` の戻り値があります。 COM プログラミングでは、`ref` キーワードを省略し、インデックス付きプロパティにアクセスできます。 Visual Basic の機能には、自動実装プロパティ、ラムダ式内のステートメント、コレクション初期化子などがあります。
@@ -93,11 +93,11 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
      C# の 2 つの新しい機能は、このメソッドで使用されます。 これら両方の機能は、Visual Basic で既に存在します。  
   
-    -   [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) メソッドには、特定のテンプレートを指定する*省略可能なパラメーター*があります。 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] の新機能であるオプションのパラメーターでは、パラメーターの既定値を使用する場合は、そのパラメーターの引数を省略することができます。 前の例では引数が渡されないため、`Add` は、既定のテンプレートを使用して、新しいブックを作成します。 以前のバージョンの C# では、同等のステートメントには、プレースホルダーの引数 `excelApp.Workbooks.Add(Type.Missing)` が必要です。  
+    - [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) メソッドには、特定のテンプレートを指定する*省略可能なパラメーター*があります。 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] の新機能であるオプションのパラメーターでは、パラメーターの既定値を使用する場合は、そのパラメーターの引数を省略することができます。 前の例では引数が渡されないため、`Add` は、既定のテンプレートを使用して、新しいブックを作成します。 以前のバージョンの C# では、同等のステートメントには、プレースホルダーの引数 `excelApp.Workbooks.Add(Type.Missing)` が必要です。  
   
          詳細については、「[名前付き引数と省略可能な引数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)」を参照してください。  
   
-    -   [Range](<xref:Microsoft.Office.Interop.Excel.Range>) オブジェクトの `Range` および `Offset` プロパティでは*インデックス付きプロパティ*機能を使用します。 この機能では、次の一般的な C# 構文を使用して COM 型からこれらのプロパティを使用することができます。 また、インデックス付きプロパティを使用すると、`Value` プロパティを使用せずに、`Range` オブジェクトの `Value2` プロパティを使用できます。 `Value` プロパティはインデックス付きですが、インデックスはオプションです。 次の例では、省略可能な引数とインデックス付きプロパティは連携しています。  
+    - [Range](<xref:Microsoft.Office.Interop.Excel.Range>) オブジェクトの `Range` および `Offset` プロパティでは*インデックス付きプロパティ*機能を使用します。 この機能では、次の一般的な C# 構文を使用して COM 型からこれらのプロパティを使用することができます。 また、インデックス付きプロパティを使用すると、`Value` プロパティを使用せずに、`Range` オブジェクトの `Value2` プロパティを使用できます。 `Value` プロパティはインデックス付きですが、インデックスはオプションです。 次の例では、省略可能な引数とインデックス付きプロパティは連携しています。  
   
          [!code-csharp[csOfficeWalkthrough#5](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csofficewalkthrough/cs/thisaddin.cs#5)]  
   

@@ -2,12 +2,12 @@
 title: XML の読み込み時または解析時の空白の維持1
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 3dbbbc8412cdef6ea62197171bb950d6c5344350
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 68b52f1d69c57b4292f02fea932e392de4a3ffc8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54704944"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596799"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>XML の読み込み時または解析時の空白の維持
 このトピックでは、空白に対する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の動作を制御する方法について説明します。  
@@ -21,13 +21,13 @@ ms.locfileid: "54704944"
 ## <a name="behavior-of-methods-that-populate-xml-trees"></a>XML ツリーを設定するメソッドの動作  
  <xref:System.Xml.Linq.XElement> クラスと <xref:System.Xml.Linq.XDocument> クラスにある次のメソッドは、XML ツリーを設定します。 XML ツリーは、ファイル、<xref:System.IO.TextReader>、<xref:System.Xml.XmlReader>、または文字列から設定することができます。  
   
--   <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XElement.Parse%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Load%2A?displayProperty=nameWithType>  
   
--   <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
+- <xref:System.Xml.Linq.XDocument.Parse%2A?displayProperty=nameWithType>  
   
  メソッドが <xref:System.Xml.Linq.LoadOptions> を引数として受け取らない場合、意味のない空白は維持されません。  
   

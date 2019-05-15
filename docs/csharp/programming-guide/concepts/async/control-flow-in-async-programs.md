@@ -2,12 +2,12 @@
 title: 非同期プログラムにおける制御フロー (C#)
 ms.date: 07/20/2015
 ms.assetid: fc92b08b-fe1d-4d07-84ab-5192fafe06bb
-ms.openlocfilehash: 6a7b8f3f41b2096e3e7524d03217bdc123f26f10
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d8d9f1dd0963ee9074122473e0eeab9254866660
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326204"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599734"
 ---
 # <a name="control-flow-in-async-programs-c"></a>非同期プログラムにおける制御フロー (C#)
 
@@ -17,9 +17,9 @@ ms.locfileid: "59326204"
 
 次の例では、非同期メソッドを使用して、指定した Web サイトのコンテンツを文字列としてダウンロードし、その文字列の長さを表示します。 この例には、次の 2 つのメソッドが含まれています。
 
--   `startButton_Click` を呼び出して結果を表示する `AccessTheWebAsync`。
+- `startButton_Click` を呼び出して結果を表示する `AccessTheWebAsync`。
 
--   Web サイトのコンテンツを文字列としてダウンロードして、その文字列の長さを返す `AccessTheWebAsync`。 `AccessTheWebAsync` は、非同期 <xref:System.Net.Http.HttpClient> メソッドである <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を使用してコンテンツをダウンロードします。
+- Web サイトのコンテンツを文字列としてダウンロードして、その文字列の長さを返す `AccessTheWebAsync`。 `AccessTheWebAsync` は、非同期 <xref:System.Net.Http.HttpClient> メソッドである <xref:System.Net.Http.HttpClient.GetStringAsync%28System.String%29> を使用してコンテンツをダウンロードします。
 
 番号付き表示行はプログラム全体で重要なポイントを示し、プログラムがどのように実行され、マークされている各ポイントで何が発生するかを理解するために役立ちます。 表示行には「1」から「6」までのラベルが付けられています。 このラベルは、プログラムがこれらのコード行に到達する順序を表します。
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fc90bedeee2d04c28a3860713ca5952a4564d3bd
-ms.sourcegitcommit: b8ace47d839f943f785b89e2fff8092b0bf8f565
+ms.openlocfilehash: 8bad0abdba4c14659fdfa9b8064ebb8203100b33
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/03/2019
-ms.locfileid: "55674738"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607885"
 ---
 # <a name="64-bit-applications"></a>64 ビット アプリケーション
 アプリケーションをコンパイルするときに、Windows 64 ビット オペレーティング システム上で、ネイティブ アプリケーションとして実行するか、WOW64 (Windows 64 ビット上の Windows 32 ビット) の制御下で実行するかを指定できます。 WOW64 は互換環境であり、32 ビット アプリケーションを 64 ビット オペレーティング システム上で実行できるようにします。 WOW64 は、Windows オペレーティング システムのすべての 64 ビット バージョンに含まれています。  
@@ -30,26 +30,26 @@ ms.locfileid: "55674738"
   
  多くのアセンブリは 32 ビットの CLR と 64 ビットの CLR で同じように実行します。 しかし、次の条件が当てはまる場合、一部のプログラムでは動作が CLR によって異なります。  
   
--   プラットフォームによってメンバーのサイズが変わる構造体 (ポインター型など)  
+- プラットフォームによってメンバーのサイズが変わる構造体 (ポインター型など)  
   
--   定数のサイズを含むポインター演算  
+- 定数のサイズを含むポインター演算  
   
--   ハンドルに `Int32` ではなく `IntPtr` を使用した不適切なプラットフォーム呼び出しまたは COM 宣言  
+- ハンドルに `Int32` ではなく `IntPtr` を使用した不適切なプラットフォーム呼び出しまたは COM 宣言  
   
--   `IntPtr` を `Int32` にキャストするコード  
+- `IntPtr` を `Int32` にキャストするコード  
   
  32 ビット アプリケーションを 64 ビットの CLR に移行して実行する方法の詳細については、「[32 ビット マネージド コードを 64 ビットに移行する](https://docs.microsoft.com/previous-versions/dotnet/articles/ms973190(v=msdn.10))」を参照してください。  
   
 ## <a name="general-64-bit-programming-information"></a>一般的な 64 ビット プログラミングについて  
  64 ビット プログラミングの一般的な問題については、次のドキュメントを参照してください。  
   
--   64 ビット Windows コンピューター上の 64 ビット版 CLR の詳細については、MSDN Web サイトの「[.NET Framework Developer Center (.NET Framework デベロッパー センター)](https://go.microsoft.com/fwlink/?LinkId=37079)」を参照してください。  
+- 64 ビット Windows コンピューター上の 64 ビット版 CLR の詳細については、MSDN Web サイトの「[.NET Framework Developer Center (.NET Framework デベロッパー センター)](https://go.microsoft.com/fwlink/?LinkId=37079)」を参照してください。  
   
--   [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] ドキュメントの「[64 ビット Windows プログラミング ガイド](https://go.microsoft.com/fwlink/p/?LinkId=253512)」を参照してください。  
+- [!INCLUDE[winsdkshort](../../includes/winsdkshort-md.md)] ドキュメントの「[64 ビット Windows プログラミング ガイド](https://go.microsoft.com/fwlink/p/?LinkId=253512)」を参照してください。  
   
--   64 ビット版 CLR をダウンロードする方法については、MSDN Web サイトの「[.NET Framework ダウンロード](https://go.microsoft.com/fwlink/?LinkId=50953)」を参照してください。  
+- 64 ビット版 CLR をダウンロードする方法については、MSDN Web サイトの「[.NET Framework ダウンロード](https://go.microsoft.com/fwlink/?LinkId=50953)」を参照してください。  
   
--   64 ビット アプリケーションを作成するための Visual Studio のサポート機能については、「[Visual Studio 開発環境の 64 ビット サポート](/visualstudio/ide/visual-studio-ide-64-bit-support)」を参照してください。  
+- 64 ビット アプリケーションを作成するための Visual Studio のサポート機能については、「[Visual Studio 開発環境の 64 ビット サポート](/visualstudio/ide/visual-studio-ide-64-bit-support)」を参照してください。  
   
 ## <a name="compiler-support-for-creating-64-bit-applications"></a>64 ビット アプリケーションを作成するためのコンパイラのサポート  
  既定では、.NET Framework を使用して 32 ビット コンピューターまたは 64 ビット コンピューターでアプリケーションをビルドする場合、アプリケーションは 64 ビット コンピューターでネイティブ アプリケーションとして (WOW64 の制御下ではなく) 実行します。 次の表に、Visual Studio コンパイラを使用して、ネイティブなアプリケーションとして実行する 64 ビット アプリケーション、WOW64 の下で実行する 64 ビット アプリケーション、またはその両方が可能な 64 ビット アプリケーションを作成するための方法を説明するドキュメントを示します。  

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: d1442e02d651cd283e5ff63d28f3cfe80e99cc7d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 56c236e2e061b473f0b188b24d3ebdd98e013aa8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306600"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595992"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>方法: イベント サブスクリプションとサブスクリプションの解除 (C# プログラミング ガイド)
 別のクラスによってパブリッシュされるイベントが発生したときに呼び出されるカスタム コードを作成するときは、そのイベントをサブスクライブします。 たとえば、ユーザーがボタンをクリックしたらアプリケーションで何かを行うには、ボタンの `click` イベントをサブスクライブします。  
@@ -74,7 +74,7 @@ ms.locfileid: "59306600"
   
 ### <a name="to-subscribe-to-events-by-using-an-anonymous-method"></a>匿名メソッドを使ってイベントをサブスクライブするには  
   
--   後でイベントのサブスクリプションを解除する必要がない場合は、加算代入演算子 (`+=`) を使って匿名メソッドをイベントにアタッチできます。 次の例では、`publisher` オブジェクトに `RaiseCustomEvent` という名前のイベントがあり、`CustomEventArgs` クラスもある種の特別なイベント情報を保持するように定義されているものとします。 イベントをサブスクライブするには、サブスクライバー クラスがその `publisher` クラスを参照する必要があることに注意してください。  
+- 後でイベントのサブスクリプションを解除する必要がない場合は、加算代入演算子 (`+=`) を使って匿名メソッドをイベントにアタッチできます。 次の例では、`publisher` オブジェクトに `RaiseCustomEvent` という名前のイベントがあり、`CustomEventArgs` クラスもある種の特別なイベント情報を保持するように定義されているものとします。 イベントをサブスクライブするには、サブスクライバー クラスがその `publisher` クラスを参照する必要があることに注意してください。  
   
     ```csharp
     publisher.RaiseCustomEvent += delegate(object o, CustomEventArgs e)  
@@ -91,7 +91,7 @@ ms.locfileid: "59306600"
   
 #### <a name="to-unsubscribe-from-an-event"></a>イベントのサブスクリプションを解除するには  
   
--   イベントのサブスクリプションを解除するには、減算代入演算子 (`-=`) を使います。  
+- イベントのサブスクリプションを解除するには、減算代入演算子 (`-=`) を使います。  
   
     ```csharp
     publisher.RaiseCustomEvent -= HandleCustomEvent;  

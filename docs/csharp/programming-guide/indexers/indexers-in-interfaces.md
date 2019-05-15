@@ -6,19 +6,19 @@ helpviewer_keywords:
 - indexers [C#], in interfaces
 - accessors [C#], indexers
 ms.assetid: e16b54bd-4a83-4f52-bd75-65819fca79e8
-ms.openlocfilehash: c56369b28f8e1bab1ca8e8c13ebd9710c8f1d9fb
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: f277758a10b045a6365adfe931ce95d64eb8e445
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57200105"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608573"
 ---
 # <a name="indexers-in-interfaces-c-programming-guide"></a>インターフェイスのインデクサー (C# プログラミング ガイド)
 [interface](../../../csharp/language-reference/keywords/interface.md) でインデクサーを宣言することができます。 インターフェイスのインデクサーのアクセサーは、[クラス](../../../csharp/language-reference/keywords/class.md)のインデクサーのアクセサーと次の点で異なります。  
   
--   インターフェイスのアクセサーは、修飾子は使用しません。  
+- インターフェイスのアクセサーは、修飾子は使用しません。  
   
--   インターフェイスのアクセサーには、本文はありません。  
+- インターフェイスのアクセサーには、本文はありません。  
   
  したがって、アクセサーの目的は、インデクサーが読み取り/書き込み、読み取り専用、または書き込み専用のどれかを示すことです。  
   

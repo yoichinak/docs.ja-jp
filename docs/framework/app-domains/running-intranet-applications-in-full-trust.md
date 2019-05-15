@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: ee13c0a8-ab02-49f7-b8fb-9eab16c6c4f0
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e8731e90a66c20f06e8afcd7458349cbc0b93484
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d7608ed964313774b806ba6f1bb4d8f0d322c361
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59084104"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592768"
 ---
 # <a name="running-intranet-applications-in-full-trust"></a>イントラネット アプリケーションの完全信頼での実行
 .NET Framework 3.5 Service Pack 1 (SP1) 以降、アプリケーションとそのライブラリ アセンブリをネットワーク共有から完全信頼アセンブリとして実行できます。 イントラネット上の共有から読み込まれたアセンブリに、<xref:System.Security.SecurityZone.MyComputer> ゾーンの証拠が自動的に追加されます。 この証拠は、コンピューター上に存在するアセンブリと同じ許可セット (通常は完全な信頼) をこれらのアセンブリに付与します。 この機能は、ClickOnce アプリケーションまたはホスト上で実行するように設計されたアプリケーションには適用されません。  
@@ -21,18 +21,18 @@ ms.locfileid: "59084104"
 ## <a name="rules-for-library-assemblies"></a>ライブラリ アセンブリのルール  
  ネットワーク共有上の実行可能ファイルによって読み込まれるアセンブリには、次のルールが適用されます。  
   
--   ライブラリ アセンブリは、実行可能アセンブリと同じフォルダーに存在する必要があります。 サブフォルダーに存在するアセンブリまたは異なるパスで参照されているアセンブリには、完全な信頼の許可セットは付与されません。  
+- ライブラリ アセンブリは、実行可能アセンブリと同じフォルダーに存在する必要があります。 サブフォルダーに存在するアセンブリまたは異なるパスで参照されているアセンブリには、完全な信頼の許可セットは付与されません。  
   
--   実行可能ファイルがアセンブリの遅延読み込みを行う場合は、実行可能ファイルの開始に使ったものと同じパスを使う必要があります。 たとえば、共有 \\\\*network-computer*\\*share* がドライブ文字にマップされていて、そのパスから実行可能ファイルが実行される場合、ネットワーク パスを使って実行可能ファイルにより読み込まれるアセンブリには、完全な信頼は付与されません。 <xref:System.Security.SecurityZone.MyComputer> ゾーン内のアセンブリを遅延読み込みするには、実行可能ファイルはドライブ文字のパスを使う必要があります。  
+- 実行可能ファイルがアセンブリの遅延読み込みを行う場合は、実行可能ファイルの開始に使ったものと同じパスを使う必要があります。 たとえば、共有 \\\\*network-computer*\\*share* がドライブ文字にマップされていて、そのパスから実行可能ファイルが実行される場合、ネットワーク パスを使って実行可能ファイルにより読み込まれるアセンブリには、完全な信頼は付与されません。 <xref:System.Security.SecurityZone.MyComputer> ゾーン内のアセンブリを遅延読み込みするには、実行可能ファイルはドライブ文字のパスを使う必要があります。  
   
 ## <a name="restoring-the-former-intranet-policy"></a>以前のイントラネット ポリシーの復元  
  以前のバージョンの .NET Framework では、共有アセンブリに <xref:System.Security.SecurityZone.Intranet> ゾーンの証拠が付与されていました。 共有上のアセンブリに完全な信頼を付与するには、コード アクセス セキュリティ ポリシーを指定する必要がありました。  
   
  この新しい動作は、イントラネットのアセンブリの既定値です。 コンピューター上のすべてのアプリケーションに適用されるレジストリ キーを設定することで、<xref:System.Security.SecurityZone.Intranet> の証拠を提供する以前の動作に戻すことができます。 この手順は、32 ビット コンピューターと 64 ビット コンピューターでは異なります。  
   
--   32 ビット コンピューターでは、システム レジストリの HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework キーの下にサブキーを作成します。 キーの名前は LegacyMyComputerZone、DWORD 値は 1 です。  
+- 32 ビット コンピューターでは、システム レジストリの HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework キーの下にサブキーを作成します。 キーの名前は LegacyMyComputerZone、DWORD 値は 1 です。  
   
--   64 ビット コンピューターでは、システム レジストリの HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework キーの下にサブキーを作成します。 キーの名前は LegacyMyComputerZone、DWORD 値は 1 です。 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework キーの下に、同じサブキーを作成します。  
+- 64 ビット コンピューターでは、システム レジストリの HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework キーの下にサブキーを作成します。 キーの名前は LegacyMyComputerZone、DWORD 値は 1 です。 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework キーの下に、同じサブキーを作成します。  
   
 ## <a name="see-also"></a>関連項目
 

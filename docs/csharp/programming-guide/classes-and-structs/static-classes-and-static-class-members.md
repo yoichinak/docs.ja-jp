@@ -9,12 +9,12 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: bcf4cd9d4ac4e4de3174cb57d83c8cab7de86c21
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 28253a46e8da48cfc2812d7f3fef1a2dd3d1cf87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57202406"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599849"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>静的クラスと静的クラス メンバー (C# プログラミング ガイド)
 [静的](../../../csharp/language-reference/keywords/static.md)クラスは基本的には非静的クラスと同じですが、静的クラスはインスタンス化できないという点が異なります。 つまり、[new](../../../csharp/language-reference/keywords/new.md) キーワードを使用して、そのクラス型の変数を作成することはできません。 インスタンス変数がないため、静的クラスのメンバーにアクセスするには、クラス名自体を使用します。 たとえば、`UtilityClass` という静的クラスがあり、`MethodA` というパブリック静的メソッドが定義されている場合、このメソッドを呼び出すには次の例のようにします。  
@@ -44,13 +44,13 @@ Console.WriteLine(Math.Round(Math.Abs(dub)));
   
  静的クラスの主な特徴を以下に示します。  
   
--   静的メンバーだけが含まれます。  
+- 静的メンバーだけが含まれます。  
   
--   インスタンス化できません。  
+- インスタンス化できません。  
   
--   シールされています。  
+- シールされています。  
   
--   [インスタンス コンストラクター](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)を含めることはできません。  
+- [インスタンス コンストラクター](../../../csharp/programming-guide/classes-and-structs/instance-constructors.md)を含めることはできません。  
   
  したがって、静的クラスを作成することと、静的メンバーとプライベート コンストラクターのみを含むクラスを作成することは、基本的に同じです。 プライベート コンストラクターは、クラスのインスタンス化を防ぎます。 静的クラスを使用する利点は、インスタンス メンバーが誤って追加されないことをコンパイラで確認できるという点です。 コンパイラによって、このクラスのインスタンスを作成できないことが保証されます。  
   

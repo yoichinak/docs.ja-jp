@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bdc9d6e954c75ccfeea15ec163bc81e7a3ab8ab7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59300698"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607682"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>厳密な名前付きアセンブリの作成と使用
 
@@ -36,9 +36,9 @@ ms.locfileid: "59300698"
 
 1. アセンブリ A は、次のいずれかの方法を使用して厳密な名前で作成されます。
 
-    -   Visual Studio など、厳密な名前の作成をサポートする開発環境を使用する。
+    - Visual Studio など、厳密な名前の作成をサポートする開発環境を使用する。
 
-    -   [厳密名ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用して暗号化キー ペアを作成し、コマンド ライン コンパイラまたは[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) のいずれかを使用してそのキー ペアをアセンブリに割り当てる。 Windows ソフトウェア開発キット (SDK) には、Sn.exe と Al.exe の両方が用意されています。
+    - [厳密名ツール (Sn.exe)](../../../docs/framework/tools/sn-exe-strong-name-tool.md) を使用して暗号化キー ペアを作成し、コマンド ライン コンパイラまたは[アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) のいずれかを使用してそのキー ペアをアセンブリに割り当てる。 Windows ソフトウェア開発キット (SDK) には、Sn.exe と Al.exe の両方が用意されています。
 
 2. 開発環境またはツールは、アセンブリのマニフェストを含むファイルのハッシュに、開発者の秘密キーで署名します。 このデジタル署名は、アセンブリ A のマニフェストを含むポータブル実行可能 (PE) ファイルに格納されます。
 
@@ -55,13 +55,13 @@ ms.locfileid: "59300698"
 
 バイ パス機能は、厳密な名前で署名されていて、次の特性を持つアセンブリに適用されます。
 
--   <xref:System.Security.Policy.StrongName> 証拠なしで完全に信頼されている (たとえば、`MyComputer` ゾーン証拠を持っている)。
+- <xref:System.Security.Policy.StrongName> 証拠なしで完全に信頼されている (たとえば、`MyComputer` ゾーン証拠を持っている)。
 
--   完全に信頼された <xref:System.AppDomain> に読み込まれる。
+- 完全に信頼された <xref:System.AppDomain> に読み込まれる。
 
--   その <xref:System.AppDomain> の <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティに基づいた場所から読み込まれる。
+- その <xref:System.AppDomain> の <xref:System.AppDomainSetup.ApplicationBase%2A> プロパティに基づいた場所から読み込まれる。
 
--   遅延署名されていない。
+- 遅延署名されていない。
 
 この機能は、個々のアプリケーションに対して、またはコンピューターに対して無効にすることができます。 「[方法:厳密な名前のバイパス機能を無効にする](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)」を参照してください。
 

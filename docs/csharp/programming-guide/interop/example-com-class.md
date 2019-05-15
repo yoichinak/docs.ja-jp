@@ -6,25 +6,25 @@ helpviewer_keywords:
 - examples [C#], COM classes
 - COM, exposing Visual C# objects to
 ms.assetid: 6504dea9-ad1c-4993-a794-830fec5270af
-ms.openlocfilehash: e36dfe1117cc724f5388e3486a81310f2326ab7e
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: d4ea445339057bc65c3597d30a46f46d58b6e696
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978697"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595531"
 ---
 # <a name="example-com-class-c-programming-guide"></a>COM クラスの例 (C# プログラミング ガイド)
 ここでは、COM オブジェクトとして公開されるクラスの例を紹介します。 このコードを .cs ファイルに保存して、プロジェクトに追加したあと、**[COM の相互運用機能に登録]** プロパティを **[True]** に設定します。 詳細については、「[方法 :コンポーネントを COM 相互運用機能に登録する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/w29wacsy(v=vs.100))」をご覧ください。
   
  Visual C# オブジェクトを COM に公開するには、クラス インターフェイス、イベント インターフェイス (必要な場合)、クラス自体を宣言する必要があります。 クラスのメンバーを COM で参照するには、次の規則に従う必要があります。  
   
--   クラスはパブリックであること。  
+- クラスはパブリックであること。  
   
--   プロパティ、メソッド、およびイベントがパブリックであること。  
+- プロパティ、メソッド、およびイベントがパブリックであること。  
   
--   プロパティとメソッドがクラス インターフェイスで宣言されていること。  
+- プロパティとメソッドがクラス インターフェイスで宣言されていること。  
   
--   イベントがイベント インターフェイスで宣言されていること。  
+- イベントがイベント インターフェイスで宣言されていること。  
   
  これらのインターフェイスで宣言されていない、クラス内の他のパブリック メンバーは、COM から参照されませんが、他の .NET Framework オブジェクトからは参照されます。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - custom log listeners
 - My.Application.Log object, custom log listeners
 ms.assetid: 0e019115-4b25-4820-afb1-af8c6e391698
-ms.openlocfilehash: 07c13d22235f1198188d26122c137db1d91e64e8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 50eb1bc1588602bf562efc31b0f4dd01bc29cad0
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342457"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593328"
 ---
 # <a name="walkthrough-creating-custom-log-listeners-visual-basic"></a>チュートリアル: カスタム ログ リスナーの作成 (Visual Basic)
 このチュートリアルでは、カスタム ログ リスナーを作成する方法と、`My.Application.Log` オブジェクトの出力を待機するように構成する方法について説明します。  
@@ -20,7 +20,7 @@ ms.locfileid: "59342457"
   
 #### <a name="to-create-the-listener"></a>リスナーを作成するには  
   
--   アプリケーションで、<xref:System.Diagnostics.TraceListener> を継承する `SimpleListener` という名前のクラスを作成します。  
+- アプリケーションで、<xref:System.Diagnostics.TraceListener> を継承する `SimpleListener` という名前のクラスを作成します。  
   
      [!code-vb[VbVbalrMyApplicationLog#16](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#16)]  
   
@@ -64,7 +64,7 @@ ms.locfileid: "59342457"
   
 #### <a name="to-determine-the-strong-name-of-the-listener"></a>リスナーの厳密な名前を確認するには  
   
--   次のコードは、厳密に名前指定された `SimpleListener` の型名を確認する方法を示しています。  
+- 次のコードは、厳密に名前指定された `SimpleListener` の型名を確認する方法を示しています。  
   
      [!code-vb[VbVbalrMyApplicationLog#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrMyApplicationLog/VB/Form1.vb#17)]  
   
@@ -80,11 +80,11 @@ ms.locfileid: "59342457"
   
      app.config ファイルがある場合は、次の操作を行います。  
   
-    1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
+    1. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
-    2.  **[新しい項目の追加]** ダイアログ ボックスで、 **[アプリケーション構成ファイル]** を選択します。  
+    2. **[新しい項目の追加]** ダイアログ ボックスで、 **[アプリケーション構成ファイル]** を選択します。  
   
-    3.  **[追加]** をクリックします。  
+    3. **[追加]** をクリックします。  
   
 2. `<listeners>` セクション内にある、 `<source>` 属性が "DefaultSource" の `name` セクションで、 `<sources>` セクションを見つけます。 `<sources>` セクションは、最上位の `<system.diagnostics>` セクション内の `<configuration>` セクションにあります。  
   

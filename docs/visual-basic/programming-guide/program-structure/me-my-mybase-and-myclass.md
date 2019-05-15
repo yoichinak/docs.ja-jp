@@ -21,12 +21,12 @@ helpviewer_keywords:
 - current instance [Visual Basic], Me keyword
 - MyBase keyword [Visual Basic], relationship to similar programming elements
 ms.assetid: f8e241ae-b1ed-4886-9aa0-08c632154029
-ms.openlocfilehash: a8df6e48fd5bce9bb28d8aef7e031f36741ad0ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eca756429c5fec8f324a17350844b59baf9ccf7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050481"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586260"
 ---
 # <a name="me-my-mybase-and-myclass-in-visual-basic"></a>Visual Basic における Me、My、MyBase、MyClass
 `Me`、 `My`、 `MyBase`、および`MyClass`Visual Basic で名前は似ていますが、さまざまな目的があります。 このトピックでは、それらを区別するために、これらのエンティティの各をについて説明します。  
@@ -50,7 +50,7 @@ ChangeFormColor(Me)
 ```  
   
 ## <a name="my"></a>My  
- `My`機能の数を簡単かつ直感的なアクセスを提供する[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]コンピューター、アプリケーション、設定、リソースとやり取りする Visual Basic のユーザーを有効にするクラス。  
+ `My`機能が多数のコンピューター、アプリケーション、設定、リソースとやり取りする Visual Basic のユーザーを有効にすると、.NET Framework クラスを簡単かつ直感的なアクセスを提供します。  
   
 ## <a name="mybase"></a>MyBase  
  `MyBase`キーワードはクラスの現在のインスタンスの基本クラスを参照するオブジェクト変数のように動作します。 `MyBase` 通常オーバーライドまたは派生クラスでシャドウされている基本クラスのメンバーへのアクセスに使用されます。 `MyBase.New` 派生クラスのコンス トラクターから基本クラスのコンス トラクターを明示的に呼び出すに使用されます。  

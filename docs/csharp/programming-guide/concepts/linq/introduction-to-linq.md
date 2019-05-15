@@ -2,12 +2,12 @@
 title: LINQ の概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 54874feb-55e5-4ca8-a9d6-1c1127fd7fb1
-ms.openlocfilehash: ea17de41bbbc03158179f207aa0bc9fc9cceb863
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: b8a577c7f1cb89df5534ae0eca893f4db434301e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410694"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596571"
 ---
 # <a name="introduction-to-linq-c"></a>LINQ の概要 (C#)
 統合言語クエリ (LINQ) は、.NET Framework Version 3.5 で導入された、オブジェクトとデータの溝を埋める画期的な手法です。  
@@ -25,13 +25,13 @@ ms.locfileid: "58410694"
 ## <a name="next-steps"></a>次の手順  
  LINQ の詳細については、最初に「[C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)」の概要に関するセクションで基本的な概念を理解し、次に関心のある LINQ テクノロジのドキュメントを参照してください。  
   
--   SQL Server データベース:[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
+- SQL Server データベース:[LINQ to SQL](../../../../../docs/framework/data/adonet/sql/linq/index.md)  
   
--   XML ドキュメント:[LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+- XML ドキュメント:[LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
   
--   ADO.NET データセット:[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
+- ADO.NET データセット:[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
--   .NET のコレクション、ファイル、文字列など:[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
+- .NET のコレクション、ファイル、文字列など:[LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>関連項目
 

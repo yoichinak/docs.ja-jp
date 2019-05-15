@@ -10,12 +10,12 @@ helpviewer_keywords:
 - strings [Windows Forms], drawing vertical
 - vertical text [Windows Forms], drawing
 ms.assetid: 50c69046-4188-47d9-b949-cc2610ffd337
-ms.openlocfilehash: 8398b3f18b764743bac19022b69e7f6fac0f7d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 009e8e392841ac6b846007a88efc33ef79f56967
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625993"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582683"
 ---
 # <a name="how-to-create-vertical-text"></a>方法: 垂直方向のテキストを作成する
 使用することができます、<xref:System.Drawing.StringFormat>水平方向にではなく縦方向にテキストを描画することを指定するオブジェクト。  

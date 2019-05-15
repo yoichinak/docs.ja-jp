@@ -13,12 +13,12 @@ helpviewer_keywords:
 - public type information [C#]
 - -reference compiler option [C#]
 ms.assetid: 8d13e5b0-abf6-4c46-bf71-2daf2cd0a6c4
-ms.openlocfilehash: 7965dd2682591cc0840030dfbc9f28401e2a15b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fbf93a87cede753ebd41c148f4fb4bb761846954
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54679436"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593082"
 ---
 # <a name="-reference-c-compiler-options"></a>-reference (C# コンパイラ オプション)
 **-reference** オプションを指定すると、コンパイラは指定されたファイルの [public](../../../csharp/language-reference/keywords/public.md) 型の情報を現在のプロジェクトにインポートし、指定されたアセンブリ ファイルからメタデータを参照できるようにします。  
@@ -37,7 +37,7 @@ ms.locfileid: "54679436"
  `alias`  
  アセンブリ内のすべての名前空間を格納するルート名前空間を表す有効な C# 識別子。  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>解説  
  複数のファイルからインポートするには、ファイルごとに **-reference** オプションを指定します。  
   
  インポートするファイルは、マニフェストが含まれている必要があります。出力ファイルは、[-target:module](../../../csharp/language-reference/compiler-options/target-module-compiler-option.md) 以外のいずれかの [-target](../../../csharp/language-reference/compiler-options/target-compiler-option.md) オプションでコンパイルされている必要があります。  
@@ -48,9 +48,9 @@ ms.locfileid: "54679436"
   
  あるアセンブリ (アセンブリ A) を参照していて、そのアセンブリが別のアセンブリ (アセンブリ B) を参照している場合は、以下の条件が当てはまる場合はアセンブリ B を参照する必要があります。  
   
--   アセンブリ A から使う型がアセンブリ B の型から継承されているか、アセンブリ B からインターフェイスを実装している。  
+- アセンブリ A から使う型がアセンブリ B の型から継承されているか、アセンブリ B からインターフェイスを実装している。  
   
--   アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドを呼び出す。  
+- アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドを呼び出す。  
   
  アセンブリ参照が存在するディレクトリを指定するには、[-lib](../../../csharp/language-reference/compiler-options/lib-compiler-option.md) を使います。 **-lib** のトピックでは、コンパイラがアセンブリを検索するディレクトリについても説明されています。  
   
