@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0a90c33f-7ed7-4501-ad5f-6224c5da8e9b
-ms.openlocfilehash: 13d8d68140b68652b5e059ae9fb106f32142f698
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e51d999d5fcaf8180b4ea5189a3db9b6143a57db
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876864"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582722"
 ---
 # <a name="sql-clr-type-mismatches"></a>SQL と CLR の型の不一致
 
@@ -39,7 +39,7 @@ SQL Server にクエリを実行する前に、Transact-SQL パラメーター�
   - **TimeSpan**します。 この型は、2 つの `DateTime` 値の差分を表します。SQL Server の `timestamp` には相当しません。 CLR の <xref:System.TimeSpan?displayProperty=nameWithType> は、場合によっては SQL Server の `TIME` 型にもマッピングします。 SQL Server の `TIME` 型は、24 時間未満の正の値を表すだけが目的でした。 CLR の <xref:System.TimeSpan> の範囲はこれよりずっと大きくなります。
 
   > [!NOTE]
-  > SQL Server に固有[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)]型<xref:System.Data.SqlTypes>この比較には含まれません。
+  > SQL Server に固有の .NET Framework 型<xref:System.Data.SqlTypes>この比較には含まれません。
 
 - SQL Server の不一致 :
 
@@ -167,7 +167,7 @@ Where Col1 = Col2
 
   - 柔軟に変換する`AND` / `OR`場合、演算子の予期しないエラーが発生する、C#式では、最初のオペランドの評価の結果に基づく 2 番目のオペランドを評価の設定に依存します。
 
-- `Round()` 関数のセマンティクスは、[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] と T-SQL で異なります。
+- `Round()` 関数では、.NET Framework および T-SQL で異なるセマンティクスがあります。
 
 - 文字列のインデックスは、CLR では 0 から始まりますが、SQL では 1 から始まります。 したがって、インデックスのある関数にはインデックスの変換が必要です。
 
@@ -194,7 +194,7 @@ Where Col1 = Col2
 [!code-csharp[DLinqMismatch#5](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqMismatch/cs/Program.cs#5)]
 [!code-vb[DLinqMismatch#5](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqMismatch/vb/Module1.vb#5)]
 
-- SQL では対称的な算術型丸めが実行されますが、[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] では銀行型丸めが使用されます。 詳細については、サポート技術情報の文書「丸めを行うカスタム プロシージャを実装する方法」(196652) を参照してください。
+- SQL は、.NET Framework では、銀行型丸めで使用中に、対称な算術型丸めを実行します。 詳細については、サポート技術情報の文書「丸めを行うカスタム プロシージャを実装する方法」(196652) を参照してください。
 
 - 既定で、共通ロケールの SQL で文字や文字列を比較する場合に大文字と小文字は区別されません。 Visual Basic と C# では、大文字と小文字は区別されます。 たとえば、 `s == "Food"` (`s = "Food"` Visual basic) と`s == "Food"`場合は、異なる結果を生成できます`s`は`food`します。
 

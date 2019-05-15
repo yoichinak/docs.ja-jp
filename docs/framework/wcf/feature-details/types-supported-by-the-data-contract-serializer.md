@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 364d3924d9db2c85959c1e41011c6d659823774c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b98b6b3da08ba7a0a37e0c26f58dd4d3ef115b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614828"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592203"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>データ コントラクト シリアライザーでサポートされる型
 Windows Communication Foundation (WCF) を使用して、<xref:System.Runtime.Serialization.DataContractSerializer>データを XML に変換して、XML をデータに変換する既定のシリアル化エンジンとして。 <xref:System.Runtime.Serialization.DataContractSerializer> は、 *データ コントラクト* 型をシリアル化するように設計されています。 ただし、暗黙のデータ コントラクトを持つと考えられるその他の型も多数サポートされています。 以下は、シリアル化可能なすべての型です。  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) を使用して、<xref:System.Runtime.Se
     > [!NOTE]
     >  他のプリミティブ型とは異なり、 <xref:System.DateTimeOffset> は既定では既知の型ではありません。 詳細については、次を参照してください。 [Data Contract Known Types](../../../../docs/framework/wcf/feature-details/data-contract-known-types.md))。  
   
-- <xref:System.SerializableAttribute> 属性でマークされた型。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 基本クラス ライブラリに含まれる多くの型は、このカテゴリに分類されます。 <xref:System.Runtime.Serialization.DataContractSerializer> は、.NET Framework リモート処理、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>、および <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>で使用されていたこのシリアル化プログラミング モデルを完全にサポートします。これは、 <xref:System.Runtime.Serialization.ISerializable> インターフェイスのサポートを含みます。  
+- <xref:System.SerializableAttribute> 属性でマークされた型。 .NET Framework の基本クラス ライブラリに含まれる多くの種類は、このカテゴリに分類されます。 <xref:System.Runtime.Serialization.DataContractSerializer> は、.NET Framework リモート処理、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>、および <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>で使用されていたこのシリアル化プログラミング モデルを完全にサポートします。これは、 <xref:System.Runtime.Serialization.ISerializable> インターフェイスのサポートを含みます。  
   
 - 未処理の XML を表す型、または [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] のリレーショナル データを表す型。 <xref:System.Xml.XmlElement> 型および <xref:System.Xml.XmlNode> 型の配列は、XML を直接表す方法としてサポートされています。 また、 <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装する型 (関連する <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性、および <xref:System.Xml.Linq.XDocument> 型と <xref:System.Xml.Linq.XElement> 型を含む) もサポートされています。 部分信頼環境では、 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> 型と <xref:System.Data.DataSet> 型 (およびその型指定された派生クラス) はすべて <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装するので、このカテゴリに属します。 詳細については、次を参照してください。 [XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)します。  
   

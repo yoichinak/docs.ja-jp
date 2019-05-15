@@ -2,22 +2,22 @@
 title: 移行に関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: 6453e0960af5a91e5abc40d1ce6002b7733175dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f65c558b0cbc02bdff8e78189a38d06a7502434f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641274"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583565"
 ---
 # <a name="migration-considerations-entity-framework"></a>移行に関する注意事項 (Entity Framework)
 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework には、既存のアプリケーションにとっていくつかの利点があります。 特に重要な利点の 1 つが、概念モデルを使用して、アプリケーションで使用するデータ構造をデータ ソースのスキーマから分離できることです。 これにより、ストレージ モデルやデータ ソース自体の将来の変更が容易になり、その変更を補うための変更をアプリケーションに加える必要がなくなります。 使用する利点の詳細については、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を参照してください[Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)と[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)します。  
   
- 利点を活用するために、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]、既存のアプリケーションを移行することができます、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]します。 移行作業の一部はすべてのアプリケーションに共通です。 これらの一般的なタスクには、使用するアプリケーションのアップグレードが含まれて、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]バージョン 3.5 Service Pack 1 (SP1) 以降、モデルの定義、マッピング、および Entity Framework を構成します。 そのほか、アプリケーションを [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] に移行する際には、 移行するアプリケーションの種類やアプリケーションの特定の機能に依存する注意点もあります。 このトピックでは、既存のアプリケーションをアップグレードする際に最適な方法を選択するために役立つ情報を紹介します。  
+ 利点を活用するために、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]、既存のアプリケーションを移行することができます、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]します。 移行作業の一部はすべてのアプリケーションに共通です。 これらの一般的なタスクには、.NET Framework version 3.5 Service Pack 1 (SP1) 以降を使用するアプリケーションのアップグレードが含まれて定義モデルとマッピング、および Entity Framework を構成します。 そのほか、アプリケーションを [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] に移行する際には、 移行するアプリケーションの種類やアプリケーションの特定の機能に依存する注意点もあります。 このトピックでは、既存のアプリケーションをアップグレードする際に最適な方法を選択するために役立つ情報を紹介します。  
   
 ## <a name="general-migration-considerations"></a>全般的な移行の注意点  
  アプリケーションを [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] に移行する際には次の点に注意してください。  
   
-- 使用するアプリケーション、 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 3.5 SP1 以降に移行できる、Entity Framework アプリケーションで使用されるデータ ソースのデータ プロバイダーは、Entity Framework をサポートしている限り、します。  
+- Version 3.5 SP1 以降、.NET Framework を使用するアプリケーションは、アプリケーションによって使用されるデータ ソースのデータ プロバイダーが Entity Framework をサポートしていれば、Entity Framework に移行できます。  
   
 - データ ソース プロバイダーが Entity Framework をサポートしていても、そのプロバイダーのすべての機能が Entity Framework でサポートされるとは限りません。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64641274"
   
 1. アプリケーションをアップグレードします。  
   
-     Visual Studio の以前のバージョンを使用して作成されたプロジェクトと[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]使用して、Visual Studio 2008 SP1 にアップグレードする必要があります、 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] version 3.5 SP1 以降します。  
+     Visual Studio 2008 SP1 と .NET Framework version 3.5 SP1 以降を使用する Visual Studio および .NET Framework の以前のバージョンを使用して作成されたプロジェクトをアップグレードする必要があります。  
   
 2. モデルおよびマッピングを定義します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "64641274"
      参照[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]アセンブリおよびモデルとマッピング ファイルは、Visual Studio プロジェクトに追加する必要があります。 これらのマッピング ファイルをプロジェクトに追加することで、接続文字列で指定された場所にアプリケーションと共に配置されるようにすることができます。 詳細については、「[方法 :Entity Framework プロジェクトを手動で構成](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738546(v=vs.100))します。  
   
 ## <a name="considerations-for-applications-with-existing-objects"></a>既存のオブジェクトを含むアプリケーションの注意点  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 4 以降では、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は POCO ("plain old" CLR object、永続化非依存オブジェクトとも呼ばれます) をサポートしています。 ほとんどの場合、既存のオブジェクトを少し変更すれば [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] で使用できます。 詳細については、次を参照してください。 [POCO エンティティの操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))します。 アプリケーションを移行することも、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]と Entity Framework ツールによって生成されるデータ クラスを使用します。 詳細については、「[方法 :エンティティ データ モデル ウィザードを使用して](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))します。  
+ .NET Framework 4 以降で、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] "plain old"をサポートしています。 CLR オブジェクト (POCO) 永続化非依存オブジェクトとも呼ばれます。 ほとんどの場合、既存のオブジェクトを少し変更すれば [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] で使用できます。 詳細については、次を参照してください。 [POCO エンティティの操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))します。 アプリケーションを移行することも、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]と Entity Framework ツールによって生成されるデータ クラスを使用します。 詳細については、「[方法 :エンティティ データ モデル ウィザードを使用して](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))します。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>ADO.NET プロバイダーを使用するアプリケーションの注意点  
  [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] SqlClient などのプロバイダーでは、表形式のデータを返すデータ ソースのクエリを有効にします。 データを読み込むことも、[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]データセット。 以下は、既存の [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] プロバイダーを使用するアプリケーションをアップグレードする場合の注意点です。  
@@ -69,7 +69,7 @@ ms.locfileid: "64641274"
   場合、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 、機能は提供されません、アプリケーションに必要なデータセットのことができますも活用する LINQ クエリのメリットを使用して[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]します。 詳細については、「[LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)」を参照してください。  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>データをコントロールにバインドするアプリケーションの注意点  
- [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] DataSet やなどのデータ ソース内でデータをカプセル化できる[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]データのソース管理、およびそれらのデータ コントロールをユーザー インターフェイス要素をバインドします。 以下は、コントロールを Entity Framework データにバインドする場合の注意点です。  
+ .NET Framework では、DataSet やなどのデータ ソース内でデータをカプセル化できます。[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]データのソース管理、およびそれらのデータ コントロールをユーザー インターフェイス要素をバインドします。 以下は、コントロールを Entity Framework データにバインドする場合の注意点です。  
   
 - コントロールへのデータ バインディング  
 

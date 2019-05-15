@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - analytic tracing [WCF], overview
 ms.assetid: ae55e9cc-0809-442f-921f-d644290ebf15
-ms.openlocfilehash: 9918f07d9c26c1779a1eedfbc423c31e61659334
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b8241485d75932cd0b8be85d231897b0bc199f0a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62048744"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592119"
 ---
 # <a name="analytic-tracing-overview"></a>分析トレースの概要
 [!INCLUDE[netfx_current_long](../../../../../includes/netfx-current-long-md.md)] の分析トレースは、Event Tracing for Windows (ETW) を基盤とするトレース機能のセットです。詳細度は低いのですが、パフォーマンスに優れています。 ETW は、カーネル レベルで実行され、トレース操作のオーバーヘッドを大幅に削減します。 ユーザー モードおよびカーネル モードのイベントを効率よくバッファーし、サービスの再起動を必要とすることなく、動的にログを有効化できます。 トレース データは、生成および受信されると、イベント ログから確認できます。  
@@ -47,4 +47,4 @@ ms.locfileid: "62048744"
  メッセージ フローのトレースを有効にする方法の詳細については、次を参照してください。 [Configuring Message Flow Tracing](../../../../../docs/framework/wcf/diagnostics/etw/configuring-message-flow-tracing.md)します。  
   
 ### <a name="keywords"></a>キーワード  
- キーワードは、トレース メッセージをフィルター処理するため、およびイベントを生成した [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] コンポーネントを定義するために使用されます。 詳細については、次を参照してください。[動的に有効にする分析トレース](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)します。
+ キーワードは、トレース メッセージをフィルター処理し、.NET Framework のコンポーネントがイベントを生成した定義に使用されます。 詳細については、次を参照してください。[動的に有効にする分析トレース](../../../../../docs/framework/wcf/diagnostics/etw/dynamically-enabling-analytic-tracing.md)します。

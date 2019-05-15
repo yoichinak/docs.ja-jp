@@ -6,12 +6,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [ASP.NET]
 ms.assetid: c4b47ee0-4b82-4124-9bce-818088385e34
-ms.openlocfilehash: c761a4a866aed3f8d42b28cdc8a360cd4923a7fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 14565c3e73618a4290166d89f0ae6c2c9150f3b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616670"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586190"
 ---
 # <a name="caching-in-net-framework-applications"></a>.NET Framework アプリケーションでのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。  
@@ -19,7 +19,7 @@ ms.locfileid: "64616670"
  .NET Framework には、Windows クライアントおよびサーバー アプリケーション (ASP.NET など) のパフォーマンスとスケーラビリティの改善に使用できるキャッシュ機能があります。  
   
 > [!NOTE]
->  [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 以前のバージョンでは、ASP.NET は <xref:System.Web.Caching> 名前空間でメモリ内キャッシュ実装を提供していました。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の以前のバージョンでは、キャッシュは <xref:System.Web> 名前空間でのみ使用可能だったため、ASP.NET クラスへの依存が必要でした。 .NET Framework 4 では、Web アプリケーションと非 Web アプリケーション両方のために設計された API が <xref:System.Runtime.Caching> 名前空間に含まれています。  
+>  [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] 以前のバージョンでは、ASP.NET は <xref:System.Web.Caching> 名前空間でメモリ内キャッシュ実装を提供していました。 以前のバージョンの .NET Framework では、キャッシュでのみ使用できますが、<xref:System.Web>名前空間と、このため ASP.NET クラスへの依存関係が必要です。 .NET Framework 4 では、Web アプリケーションと非 Web アプリケーション両方のために設計された API が <xref:System.Runtime.Caching> 名前空間に含まれています。  
   
 ## <a name="caching-data"></a>キャッシュされたデータ  
  情報をキャッシュするには、<xref:System.Runtime.Caching> 名前空間のクラスを使用します。 この名前空間のキャッシュ クラスには、次の機能があります。  

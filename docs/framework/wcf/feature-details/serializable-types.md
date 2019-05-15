@@ -2,12 +2,12 @@
 title: シリアル化可能な型
 ms.date: 03/30/2017
 ms.assetid: f1c8539a-6a79-4413-b294-896f0957b2cd
-ms.openlocfilehash: df00623ba45b356561d4d80d970fdf36ee6a377f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0913d523e93505934b1cf231284e356baba5ded3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586153"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591674"
 ---
 # <a name="serializable-types"></a>シリアル化可能な型
 既定では、<xref:System.Runtime.Serialization.DataContractSerializer> は公開されている型をすべてシリアル化します。 その型の読み書き可能なパブリック プロパティおよびパブリック フィールドは、すべてシリアル化されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "64586153"
 - パブリック メンバー、プロパティ、またはフィールドのシリアル化のプロセスを "取り消す" には、<xref:System.Runtime.Serialization.IgnoreDataMemberAttribute> 属性をそのメンバーに適用します。  
   
 ## <a name="inheritance"></a>継承  
- マークされていない型 (<xref:System.Runtime.Serialization.DataContractAttribute> 属性のない型) は、この属性を持つ型から継承できます。ただし、その反対はできません。つまり、マークされていない型から属性を持つ型を継承することはできません。 このルールは、主に以前のバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] で書かれたコードとの下位互換性を保つために適用されます。  
+ マークされていない型 (<xref:System.Runtime.Serialization.DataContractAttribute> 属性のない型) は、この属性を持つ型から継承できます。ただし、その反対はできません。つまり、マークされていない型から属性を持つ型を継承することはできません。 このルールは、以前のバージョンの .NET Framework で記述されたコードの旧バージョンとの互換性を確保するには、主に適用されます。  
   
 ## <a name="see-also"></a>関連項目
 

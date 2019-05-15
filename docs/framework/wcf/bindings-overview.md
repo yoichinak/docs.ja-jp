@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: a8593c5dce30fc71750515ccedb4fc9cce9a4868
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64652112"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592232"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation のバインディングの概要
 バインドは、Windows Communication Foundation (WCF) サービスのエンドポイントに接続するために必要な通信の詳細の指定に使用されるオブジェクトです。 WCF サービスでは、各エンドポイントでは、バインドを正しく指定する必要があります。 このトピックでは、通信の詳細、バインドを定義するバインドを WCF では、どのようなバインドが含まれているエンドポイントのバインディングを指定する方法の要素の種類について説明します。  
@@ -36,9 +36,9 @@ ms.locfileid: "64652112"
   
 - <xref:System.ServiceModel.WSHttpBinding>:Ws-に準拠するエンドポイントに接続するための適切な相互運用可能なバインドを * プロトコル。  
   
-- <xref:System.ServiceModel.NetNamedPipeBinding>:使用して、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]同じコンピューター上の他の WCF エンドポイントに接続します。  
+- <xref:System.ServiceModel.NetNamedPipeBinding>:.NET Framework を使用して、同じコンピューター上の他の WCF エンドポイントに接続します。  
   
-- <xref:System.ServiceModel.NetMsmqBinding>:使用して、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]他の WCF エンドポイントでメッセージをキューに置かれた接続を作成します。  
+- <xref:System.ServiceModel.NetMsmqBinding>:使用して作成する .NET Framework のキューに置かれたメッセージの他の WCF エンドポイントとの接続です。  
 
 - <xref:System.ServiceModel.NetTcpBinding>:このバインディングでは、HTTP バインドよりも高いパフォーマンスを提供しはローカル ネットワークで使用するために最適です。
   

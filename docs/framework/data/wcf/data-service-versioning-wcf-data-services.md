@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: 283d3a0a0350823be8c0680dd24e04999b040363
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641130"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583586"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>データ サービスのバージョン管理 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]クライアントは、Uri を使用してデータ モデルに基づくリソースとしてデータをアクセスできるように、データ サービスを作成することができます。 OData では、サービス操作の定義もサポートしています。 ビジネス ニーズの変化、情報テクノロジの要件、その他の問題への対処などのさまざまな理由により、サービスの初期導入後と、場合によっては有効期間中に数回、これらのデータ サービスを変更することが必要になる場合があります。 既存のデータ サービスに変更を加える場合は、新しいバージョンのデータ サービスを定義する必要性や、既存のクライアント アプリケーションへの影響を最小限に抑える最善の方法を検討する必要があります。 ここでは、新しいバージョンのデータ サービスをいつどのように作成するかに関するガイダンスを示します。 また、WCF Data Services がクライアントと、OData プロトコルの異なるバージョンをサポートするデータ サービスの間の交換を処理する方法についても説明します。
@@ -60,7 +60,7 @@ ms.locfileid: "64641130"
 
  アプリケーションでは、データ サービスにアクセスする、WCF Data Services クライアント ライブラリを使用するときに、ライブラリはこれらのヘッダーを自動的に OData と、アプリケーションで使用されている機能のバージョンに応じて、適切な値に設定します。 既定では、WCF Data Services は、要求された操作をサポートする最も低いプロトコル バーションを使用します。
 
- 次の表に、バージョンの[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]と[!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]OData プロトコルの特定のバージョンの WCF Data Services のサポートが含まれる。
+ 次の表に、.NET Framework のバージョンと[!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]OData プロトコルの特定のバージョンの WCF Data Services のサポートが含まれる。
 
 |OData プロトコルのバージョン|サポートが用意されているバージョン|
 |-----------------------------------------------------------------------------------|----------------------------|

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - managed HTML DOM
 ms.assetid: a017dd5c-cd7b-47e4-952c-f4f54cb48409
-ms.openlocfilehash: c18c6df29f79e9bde8474fa38e45dea03d4e0020
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fe84cabfaabdc14c7dec6cb69653d41b4c6f6416
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009166"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590159"
 ---
 # <a name="using-the-managed-html-document-object-model"></a>マネージド HTML DOM (Document Object Model) の使用
-マネージ HTML ドキュメント オブジェクト モデル (DOM) に基づくラッパーを提供する、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]の Internet Explorer によって公開されている HTML クラス。 ホストされている HTML ページを操作するこれらのクラスを使用して、<xref:System.Windows.Forms.WebBrowser>コントロール、または最初から新しいページを構築します。  
+マネージ HTML ドキュメント オブジェクト モデル (DOM) は、Internet Explorer によって公開されている HTML のクラスの .NET Framework ベースのラッパーを提供します。 ホストされている HTML ページを操作するこれらのクラスを使用して、<xref:System.Windows.Forms.WebBrowser>コントロール、または最初から新しいページを構築します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: マネージ HTML ドキュメント オブジェクト モデルにアクセスします。](how-to-access-the-managed-html-document-object-model.md)  

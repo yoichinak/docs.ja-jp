@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9d50ece4b800b77ac0447d1f22f1929f5a38a7d9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7f02cbac83bd1e849c30f6c732395335464e6e4e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61874238"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582810"
 ---
 # <a name="runtime-profiling"></a>ランタイム プロファイリング
 プロファイリングは、任意の開発シナリオまたは配置シナリオでパフォーマンス データを収集する方法の 1 つです。 このセクションは、アプリケーションのパフォーマンスに関する情報の収集を必要とする開発者およびシステム管理者を対象にしています。  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>パフォーマンス モニター (Perfmon.exe) を使用したパフォーマンスの追跡  
- パフォーマンス モニターは、 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アプリケーションをプロファイリングする場合に最も使いやすいツールです。 パフォーマンス モニターは、共通言語ランタイムおよび [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]と共にインストールされる .NET Framework パフォーマンス カウンター内のデータをグラフィカルに表示します。 これらのカウンターを使用することにより、メモリ管理から Just-In-Time (JIT) コンパイラのパフォーマンスまで、あらゆる情報を監視できます。 .NET パフォーマンス カウンターは、アプリケーションが使用するリソースに関する情報を提供します。この情報は、アプリケーションのパフォーマンスを判断するための間接的な指標となります。 これらのカウンターは、アプリケーション内部の動作状況を把握するために使用します。  
+ パフォーマンス モニターは、.NET Framework アプリケーションにプロファイルを使用する最も簡単なツールです。 パフォーマンス モニターは、共通言語ランタイムおよび [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]と共にインストールされる .NET Framework パフォーマンス カウンター内のデータをグラフィカルに表示します。 これらのカウンターを使用することにより、メモリ管理から Just-In-Time (JIT) コンパイラのパフォーマンスまで、あらゆる情報を監視できます。 .NET パフォーマンス カウンターは、アプリケーションが使用するリソースに関する情報を提供します。この情報は、アプリケーションのパフォーマンスを判断するための間接的な指標となります。 これらのカウンターは、アプリケーション内部の動作状況を把握するために使用します。  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>perfmon.exe を Windows Vista 以降のバージョンで実行するには  
   
@@ -57,7 +57,7 @@ ms.locfileid: "61874238"
 >  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] がインストールされているシステムでは、パフォーマンス モニターで、 **を使用して開発されたアプリケーションについて、** .NET CLR データ **や**.NET CLR ネットワーク [!INCLUDE[net_v11_short](../../../includes/net-v11-short-md.md)]などの一部のカテゴリでパフォーマンス カウンターのデータが表示されない場合があります。 このような場合、[\<forcePerformanceCounterUniqueSharedMemoryReads>](../../../docs/framework/configure-apps/file-schema/runtime/forceperformancecounteruniquesharedmemoryreads-element.md) 要素をアプリケーションの構成ファイルに追加することで、このデータを表示するようにパフォーマンス モニターを構成できます。  
   
 ## <a name="reading-and-creating-performance-counters-programmatically"></a>プログラムを使用したパフォーマンス カウンターの読み取りと作成  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には、パフォーマンス コンソールで利用できるものと同じパフォーマンス情報にコードからアクセスするのに使用するクラスが用意されています。 また、これらのクラスを使用すると、カスタム パフォーマンス カウンターを作成できます。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]に用意されているパフォーマンス監視クラスの一部について、次の表に説明を示します。  
+ .NET Framework では、パフォーマンス コンソールで使用できるのと同じパフォーマンス情報をプログラムでアクセスするために使用できるクラスを提供します。 また、これらのクラスを使用すると、カスタム パフォーマンス カウンターを作成できます。 次の表では、.NET Framework に用意されているクラスの監視パフォーマンスの一部について説明します。  
   
 |クラス|説明|  
 |-----------|-----------------|  

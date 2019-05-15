@@ -9,22 +9,22 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: 65dfe906276912b5f6dc8d49af6a2662e3a09157
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630783"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591206"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。
 
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]でキャッシュを使用するためのクラスを提供します[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アプリケーション。 これらのクラスにある、<xref:System.Runtime.Caching>名前空間。
+ .NET Framework は、.NET Framework アプリケーションでキャッシュを使用するためのクラスを提供します。 これらのクラスにある、<xref:System.Runtime.Caching>名前空間。
 
 > [!NOTE]
->  <xref:System.Runtime.Caching>名前空間はの新機能、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。 この名前空間は、すべてに使用可能なキャッシュは[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アプリケーション。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の以前のバージョンでは、キャッシュは <xref:System.Web> 名前空間でのみ使用可能だったため、ASP.NET クラスへの依存が必要でした。
+>  <xref:System.Runtime.Caching>名前空間はの新機能、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。 この名前空間は、キャッシュは、すべての .NET Framework アプリケーションで使用します。 以前のバージョンの .NET Framework では、キャッシュでのみ使用できますが、<xref:System.Web>名前空間と、このため ASP.NET クラスへの依存関係が必要です。
 
- このチュートリアルで使用できるキャッシュ機能を使用する方法、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]の一部として、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 チュートリアルでは、テキスト ファイルの内容をキャッシュします。
+ このチュートリアルは、キャッシュの一部として .NET Framework で提供される機能を使用する方法を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 チュートリアルでは、テキスト ファイルの内容をキャッシュします。
 
  このチュートリアルでは、以下のタスクを行います。
 
@@ -67,7 +67,7 @@ ms.locfileid: "64630783"
 4. **新しいプロジェクト**ダイアログ ボックスで、 **WPF アプリケーション**します。
 
     > [!NOTE]
-    >  表示されない場合、 **WPF アプリケーション**テンプレートのバージョンをターゲットにするかどうかを確認、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] WPF をサポートします。 **新しいプロジェクト**ダイアログ ボックスで、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]一覧から。
+    >  表示されない場合、 **WPF アプリケーション**テンプレート、WPF をサポートする .NET Framework のバージョンをターゲットにするかどうかを確認します。 **新しいプロジェクト**ダイアログ ボックスで、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]一覧から。
 
 5. **名前**テキスト ボックスに、プロジェクトの名前を入力します。 たとえば、入力**WPFCaching**します。
 

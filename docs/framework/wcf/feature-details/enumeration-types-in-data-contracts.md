@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data contracts [WCF], enumeration types
 ms.assetid: b5d694da-68cb-4b74-a5fb-75108a68ec3b
-ms.openlocfilehash: 8e793fc130252caf91d9b1c15b41beba1cc8ae1f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f8d399859e4f861158ab74db9ed410aec280dbe2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587615"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586678"
 ---
 # <a name="enumeration-types-in-data-contracts"></a>データ コントラクトの列挙型
 列挙はデータ コントラクト モデルで表現できます。 このトピックでは、いくつかの例を通してプログラミング モデルを説明します。  
@@ -39,7 +39,7 @@ ms.locfileid: "64587615"
   
  たとえば、`CarConditionEnum` を送信側で使用し、`CarConditionWithNumbers` を受信側で使用できます。 送信側で `Used` に値 "1" を使用し、受信側で値 "20" を使用しても、XML 表現は送信側と受信側共に `<condition>Used</condition>` です。  
   
- データ コントラクトに含めるには、<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を適用する必要があります。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] では、列挙に特殊な値 0 (ゼロ) を常に割り当てることができます。これはまた、すべての列挙の既定値になります。 ただし、この特殊値ゼロも <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を使用してマークされない限りシリアル化できません。  
+ データ コントラクトに含めるには、<xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を適用する必要があります。 .NET framework では、常に特別な値が 0 (ゼロ) も任意の列挙体の既定値は、列挙型に適用できます。 ただし、この特殊値ゼロも <xref:System.Runtime.Serialization.EnumMemberAttribute> 属性を使用してマークされない限りシリアル化できません。  
   
  これには、次のような 2 つの例外があります。  
   

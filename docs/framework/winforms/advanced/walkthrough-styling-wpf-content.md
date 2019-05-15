@@ -6,12 +6,12 @@ helpviewer_keywords:
 - interoperability [WDF]
 - styles [Windows Forms], WPF content
 ms.assetid: e574aac7-7ea4-4cdb-8034-bab541f000df
-ms.openlocfilehash: d815311a89ba09ade7e3092ca4eeab67cbe20bd0
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: b689bb7299d541708db7ae786bff62a1007608e5
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211260"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557887"
 ---
 # <a name="walkthrough-style-wpf-content"></a>チュートリアル: WPF コンテンツのスタイル
 
@@ -58,16 +58,16 @@ Visual Studio を開き、Visual Basic または Visual で新しい Windows フ
 
 1. Windows フォーム デザイナーで `Form1` を開きます。
 
-2. **ツールボックス**、 をダブルクリックします`UserControl1`のインスタンスを作成する`UserControl1`形式にします。
+1. **ツールボックス**、 をダブルクリックします`UserControl1`のインスタンスを作成する`UserControl1`形式にします。
 
      
   `UserControl1` のインスタンスは、`elementHost1` という名前の新しい <xref:System.Windows.Forms.Integration.ElementHost> コントロールでホストされます。
 
-3. スマート タグ パネルで`elementHost1`、 をクリックして**ホストされているコンテンツの編集**ドロップダウン リストから。
+1. スマート タグ パネルで`elementHost1`、 をクリックして**ホストされているコンテンツの編集**ドロップダウン リストから。
 
      `UserControl1` が [!INCLUDE[wpfdesigner_current_short](../../../../includes/wpfdesigner-current-short-md.md)] で開きます。
 
-4. XAML ビューで、次の XAML を `<UserControl>` の開始タグの後に挿入します。
+1. XAML ビューで、次の XAML を `<UserControl>` の開始タグの後に挿入します。
 
      この XAML は、明暗のあるグラデーション境界を持つグラデーションを作成します。 このコントロールをクリックすると、グラデーションが変わり、ボタンを押したような外観が生成されます。 詳しくは、「 [スタイルとテンプレート](../../wpf/controls/styling-and-templating.md)」をご覧ください。
 
@@ -119,7 +119,7 @@ Visual Studio を開き、Visual Basic または Visual で新しい Windows フ
    </UserControl.Resources>
    ```
 
-4. [Cancel] ボタンの `<Button>` タグに次の XAML を挿入することで、前の手順で定義した `SimpleButton` スタイルを [Cancel] ボタンに適用します。
+1. [Cancel] ボタンの `<Button>` タグに次の XAML を挿入することで、前の手順で定義した `SimpleButton` スタイルを [Cancel] ボタンに適用します。
 
    ```xaml
    Style="{StaticResource SimpleButton}
@@ -132,15 +132,15 @@ Visual Studio を開き、Visual Basic または Visual で新しい Windows フ
                 Style="{StaticResource SimpleButton}">Cancel</Button>
    ```
 
-5. プロジェクトをビルドします。
+1. プロジェクトをビルドします。
 
-6. Windows フォーム デザイナーで `Form1` を開きます。
+1. Windows フォーム デザイナーで `Form1` を開きます。
 
-7. 新しいスタイルが Button コントロールに適用されます。
+1. 新しいスタイルが Button コントロールに適用されます。
 
-8. **デバッグ**メニューの [**デバッグの開始]** アプリケーションを実行します。
+1. **デバッグ**メニューの [**デバッグの開始]** アプリケーションを実行します。
 
-9. [OK] ボタンと [Cancel] ボタンをクリックして、違いを確認します。
+1. [OK] ボタンと [Cancel] ボタンをクリックして、違いを確認します。
 
 ## <a name="see-also"></a>関連項目
 

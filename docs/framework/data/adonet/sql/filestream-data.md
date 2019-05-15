@@ -2,12 +2,12 @@
 title: FILESTREAM データ
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: 1dea5d1e2f40c44e8f24bdbc9742288429d9933a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032488"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582707"
 ---
 # <a name="filestream-data"></a>FILESTREAM データ
 
@@ -20,7 +20,7 @@ varbinary(max) 列に FILESTREAM 属性を指定すると、SQL Server ではデ
 
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM の SqlClient サポート
 
-[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server、 <xref:System.Data.SqlClient>、読み取りと書き込みを使用して FILESTREAM データをサポートしています、<xref:System.Data.SqlTypes.SqlFileStream>クラスで定義されている、<xref:System.Data.SqlTypes>名前空間。 `SqlFileStream` は <xref:System.IO.Stream> クラスを継承します。このクラスは、データのストリームへの読み込みと書き込みを行うためのメソッドを提供します。 ストリームからデータを読み取ると、データはストリームからバイトの配列などのデータ構造に転送されます。 書き込みを行うと、データはデータ構造からストリームに転送されます。
+SQL server、.NET Framework Data Provider <xref:System.Data.SqlClient>、読み取りと書き込みを使用して FILESTREAM データをサポートしています、<xref:System.Data.SqlTypes.SqlFileStream>クラスで定義されている、<xref:System.Data.SqlTypes>名前空間。 `SqlFileStream` は <xref:System.IO.Stream> クラスを継承します。このクラスは、データのストリームへの読み込みと書き込みを行うためのメソッドを提供します。 ストリームからデータを読み取ると、データはストリームからバイトの配列などのデータ構造に転送されます。 書き込みを行うと、データはデータ構造からストリームに転送されます。
 
 ### <a name="creating-the-sql-server-table"></a>SQL Server テーブルの作成
 

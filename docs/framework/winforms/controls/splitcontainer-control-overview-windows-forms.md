@@ -6,18 +6,18 @@ f1_keywords:
 helpviewer_keywords:
 - SplitContainer control [Windows Forms], about SplitContainer control
 ms.assetid: 6de5a5f7-97a5-402d-be6d-7e2785483db5
-ms.openlocfilehash: 4afdd764b2f6ef7f15e8bd26459f0fa4c7d345e1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6dcdbde480c1900ea488c6db3cc320b20f9f182
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971991"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591487"
 ---
 # <a name="splitcontainer-control-overview-windows-forms"></a>SplitContainer コントロールの概要 (Windows フォーム)
 Windows フォームの <xref:System.Windows.Forms.SplitContainer> コントロールは複合と考えることができ、移動可能なバーで区切られた 2 つのパネルです。 マウス ポインターがバーの上に移動すると、ポインターの形が変わり、バーが移動可能であることを示します。  
   
 > [!IMPORTANT]
->  **ツールボックス**、<xref:System.Windows.Forms.SplitContainer>置換を制御、 <xref:System.Windows.Forms.Splitter> Visual Studio の以前のバージョンであるコントロール。 <xref:System.Windows.Forms.SplitContainer> コントロールは <xref:System.Windows.Forms.Splitter> コントロールより優先されます。 <xref:System.Windows.Forms.Splitter>クラスも含める、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]既存のアプリケーションとの互換性のために使用するぜひが、<xref:System.Windows.Forms.SplitContainer>新しいプロジェクトのコントロール。  
+>  **ツールボックス**、<xref:System.Windows.Forms.SplitContainer>置換を制御、 <xref:System.Windows.Forms.Splitter> Visual Studio の以前のバージョンであるコントロール。 <xref:System.Windows.Forms.SplitContainer> コントロールは <xref:System.Windows.Forms.Splitter> コントロールより優先されます。 <xref:System.Windows.Forms.Splitter> クラスは、既存のアプリケーションの互換性のために .NET Framework に含まれていますが、新しいプロジェクトでは <xref:System.Windows.Forms.SplitContainer> コントロールを使用することを強くお勧めします。  
   
  <xref:System.Windows.Forms.SplitContainer>コントロール、複雑なユーザー インターフェイスを作成することができます。 多くの場合、1 つのパネルで選択範囲を決定、その他のパネルに表示されるオブジェクト。 この配置は、情報の表示と参照に対して非常に効果的です。 2 つのパネルで地域では、情報を集計して、バー、または「分割」により、パネルのサイズを変更するユーザーに簡単です。  
   

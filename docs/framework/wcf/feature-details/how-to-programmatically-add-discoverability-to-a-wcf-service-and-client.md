@@ -2,12 +2,12 @@
 title: '方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する'
 ms.date: 03/30/2017
 ms.assetid: 4f7ae7ab-6fc8-4769-9730-c14d43f7b9b1
-ms.openlocfilehash: 54d838967fcc19501ff7385aba29e8d79025ce70
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: de227e8df895dd4c031aadce16102559c43e47ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761547"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586624"
 ---
 # <a name="how-to-programmatically-add-discoverability-to-a-wcf-service-and-client"></a>方法: プログラムを使用して探索可能性に WCF サービスとクライアントを追加する
 このトピックでは、Windows Communication Foundation (WCF) サービスを探索可能にする方法について説明します。 基にして、[セルフホスト](https://go.microsoft.com/fwlink/?LinkId=145523)サンプル。  
@@ -16,7 +16,7 @@ ms.locfileid: "61761547"
   
 1. Visual Studio 2012 では、自己ホスト ソリューションを開きます。 このサンプルは、TechnologySamples\Basic\Service\Hosting\SelfHost ディレクトリにあります。  
   
-2. `System.ServiceModel.Discovery.dll` への参照をサービス プロジェクトに追加します。 "System エラー メッセージが表示することがあります. ServiceModel.Discovery.dll またはその依存関係の 1 つの以降のバージョンが必要です、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ... プロジェクトで指定されている"ソリューション エクスプ ローラーでプロジェクトを右クリックして、このメッセージを表示する場合**プロパティ**します。 **プロジェクトのプロパティ**ウィンドウで、ことを確認、**ターゲット フレームワーク**は[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。  
+2. `System.ServiceModel.Discovery.dll` への参照をサービス プロジェクトに追加します。 "System エラー メッセージが表示することがあります. ServiceModel.Discovery.dll またはその依存関係のいずれかの [...]、プロジェクトで指定されている .NET Framework の以降のバージョンが必要です"ソリューション エクスプ ローラーでプロジェクトを右クリックして、このメッセージを表示する場合**プロパティ**します。 **プロジェクトのプロパティ**ウィンドウで、ことを確認、**ターゲット フレームワーク**は[!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)]します。  
   
 3. Service.cs ファイルを開き、次の `using` ステートメントを追加します。  
   
