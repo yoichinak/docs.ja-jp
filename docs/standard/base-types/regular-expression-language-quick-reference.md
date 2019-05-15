@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9224e78a422b20f33f19d05e43ed1e2ec8d1c5ce
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58410525"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664674"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正規表現言語 - クイック リファレンス
  正規表現とは、入力テキスト内で正規表現エンジンによる照合が試行されるパターンです。 パターンは、1 個以上の文字リテラル、演算子、または構成体で構成されます。  簡単な概要については、「[.NET の正規表現](../../../docs/standard/base-types/regular-expressions.md)」を参照してください。  
@@ -170,9 +170,9 @@ ms.locfileid: "58410525"
   
  インライン オプションは、次の 2 種類の方法で指定できます。  
   
--   [その他の構成体](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`の使用。オプションまたはオプション セットの前に負符号 (-) がある場合、そのオプションが無効になります。 たとえば、`(?i-mn)` では、大文字と小文字を区別しない一致 (`i`) がオン、複数行モード (`m`) がオフ、名前のないグループ キャプチャ (`n`) がオフになります。 このオプションは、このオプションが定義されている位置から正規表現パターンに適用され、パターンの末尾まで、または別の構成体によってオプションが反転する位置まで有効になります。  
+- [その他の構成体](miscellaneous-constructs-in-regular-expressions.md) `(?imnsx-imnsx)`の使用。オプションまたはオプション セットの前に負符号 (-) がある場合、そのオプションが無効になります。 たとえば、`(?i-mn)` では、大文字と小文字を区別しない一致 (`i`) がオン、複数行モード (`m`) がオフ、名前のないグループ キャプチャ (`n`) がオフになります。 このオプションは、このオプションが定義されている位置から正規表現パターンに適用され、パターンの末尾まで、または別の構成体によってオプションが反転する位置まで有効になります。  
   
--   [グループ化構造体 ](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)` を使用する。これは、指定されたグループのみに対してオプションを定義します。  
+- [グループ化構造体 ](grouping-constructs-in-regular-expressions.md)`(?imnsx-imnsx:`*subexpression*`)` を使用する。これは、指定されたグループのみに対してオプションを定義します。  
   
  .NET の正規表現エンジンでは、次のインライン オプションがサポートされます。  
   

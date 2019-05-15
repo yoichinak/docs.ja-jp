@@ -6,12 +6,12 @@ helpviewer_keywords:
 - registry keys, creating [C#]
 - keys, creating in registry
 ms.assetid: 8fa475b0-e01f-483a-9327-fd03488fdf5d
-ms.openlocfilehash: af796affa669d0f21e9d503f5263ad26b537fb91
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0982baea2327daf23726ef269d53388d6011703d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54553770"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596147"
 ---
 # <a name="how-to-create-a-key-in-the-registry-visual-c"></a>方法: レジストリにキーを作成する (Visual C#)
 現在のユーザーのレジストリに存在する "Names" というキーの下に "Name" と "Isabella" という値のペアを追加する例を次に示します。  
@@ -27,26 +27,26 @@ key.Close();
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   コードをコピーし、コンソール アプリケーションの `Main` メソッドに貼り付けます。  
+- コードをコピーし、コンソール アプリケーションの `Main` メソッドに貼り付けます。  
   
--   `Names` パラメーターをレジストリの HKEY_CURRENT_USER ノードの直下にあるキーの名前に置き換えます。  
+- `Names` パラメーターをレジストリの HKEY_CURRENT_USER ノードの直下にあるキーの名前に置き換えます。  
   
--   `Name` パラメーターを Names ノードの直下にある値の名前に置き換えます。  
+- `Name` パラメーターを Names ノードの直下にある値の名前に置き換えます。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  レジストリの構造を調べて、キーの適切な場所を見つけることができます。 たとえば、現在のユーザーの Software キーを開き、会社名のキーを作成できます。 その後で、会社名のキーにレジストリ値を追加します。  
   
  次の条件では例外が発生する可能性があります。  
   
--   キーの名前が null である場合。  
+- キーの名前が null である場合。  
   
--   レジストリ キーを作成するためのアクセス許可がユーザーにない場合。  
+- レジストリ キーを作成するためのアクセス許可がユーザーにない場合。  
   
--   キー名が 255 文字の制限を超えている場合。  
+- キー名が 255 文字の制限を超えている場合。  
   
--   キーが閉じている場合。  
+- キーが閉じている場合。  
   
--   レジストリ キーが読み取り専用の場合。  
+- レジストリ キーが読み取り専用の場合。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  ローカル コンピューター (`Microsoft.Win32.Registry.CurrentUser`) よりもユーザー フォルダー (`Microsoft.Win32.Registry.LocalMachine`) にデータを書き込む方が安全です。  

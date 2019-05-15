@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: b3cfc44c430a02ec9ffce75ebff5c8f9cc46505c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53143377"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615173"
 ---
 # <a name="framework-libraries"></a>フレームワーク ライブラリ
 
@@ -41,23 +41,23 @@ BCL は最も基本的な型およびユーティリティの機能を提供し�
 
 .NET には、ほとんどの .NET アプリの主力となるデータ構造体のセットが含まれています。 これらはほとんどがコレクションですが、その他の型も含まれています。
 
-*   <xref:System.Array>: インデックスを使用してアクセスできる、厳密に型指定されたオブジェクトの配列を表します。 その構造ごとの固定サイズがあります。
-*   <xref:System.Collections.Generic.List%601>: インデックスを使用してアクセスできる、厳密に型指定されたオブジェクトのリストを表します。 必要に応じてサイズを自動調整します。
-*   <xref:System.Collections.Generic.Dictionary%602>: キーによってインデックスが作成される値のコレクションを表します。 値は、キーを使用してアクセスできます。 必要に応じてサイズを自動調整します。
-*   <xref:System.Uri>: URI (Uniform Resource Identifier) のオブジェクト表現を可能にし、URI の一部へ簡単にアクセスできるようにします。
-*   <xref:System.DateTime>: 通常、日付や時刻として表現される瞬間を表します。
+* <xref:System.Array>: インデックスを使用してアクセスできる、厳密に型指定されたオブジェクトの配列を表します。 その構造ごとの固定サイズがあります。
+* <xref:System.Collections.Generic.List%601>: インデックスを使用してアクセスできる、厳密に型指定されたオブジェクトのリストを表します。 必要に応じてサイズを自動調整します。
+* <xref:System.Collections.Generic.Dictionary%602>: キーによってインデックスが作成される値のコレクションを表します。 値は、キーを使用してアクセスできます。 必要に応じてサイズを自動調整します。
+* <xref:System.Uri>: URI (Uniform Resource Identifier) のオブジェクト表現を可能にし、URI の一部へ簡単にアクセスできるようにします。
+* <xref:System.DateTime>: 通常、日付や時刻として表現される瞬間を表します。
 
 ## <a name="utility-apis"></a>ユーティリティ API
 
 .NET には多くの重要なタスクの機能を提供するユーティリティ API のセットが含まれています。
 
-*   <xref:System.Net.Http.HttpClient>: URI で識別されるリソースに HTTP 要求を送信し、そのリソースから HTTP 応答を受信するための基底クラスを提供する API です。
-*   <xref:System.Xml.Linq.XDocument>: LINQ を使用して XML ドキュメントのロードと照会をするための API です。
-*   <xref:System.IO.StreamReader>: ファイルを読み取るための API です。 
-*   <xref:System.IO.StreamWriter>: ファイルを書き込むための API です。
+* <xref:System.Net.Http.HttpClient>: URI で識別されるリソースに HTTP 要求を送信し、そのリソースから HTTP 応答を受信するための基底クラスを提供する API です。
+* <xref:System.Xml.Linq.XDocument>: LINQ を使用して XML ドキュメントのロードと照会をするための API です。
+* <xref:System.IO.StreamReader>: ファイルを読み取るための API です。 
+* <xref:System.IO.StreamWriter>: ファイルを書き込むための API です。
 
 ## <a name="app-model-apis"></a>アプリ モデル API
 
 .NET で使用できる多くのアプリ モデルが、複数の企業から提供されています。
 
-*   [ASP.NET](https://www.asp.net): Web サイトとサービスを構築するための Web フレームワークを提供します。 Windows、Linux、macOS でサポートされます (ASP.NET のバージョンによって異なります)。
+* [ASP.NET](https://www.asp.net): Web サイトとサービスを構築するための Web フレームワークを提供します。 Windows、Linux、macOS でサポートされます (ASP.NET のバージョンによって異なります)。

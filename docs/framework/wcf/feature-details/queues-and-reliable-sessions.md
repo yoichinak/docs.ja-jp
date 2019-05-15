@@ -2,12 +2,12 @@
 title: キューと信頼できるセッション
 ms.date: 03/30/2017
 ms.assetid: 7e794d03-141c-45ed-b6b1-6c0e104c1464
-ms.openlocfilehash: d6b1e62e2b0f91856867128c2c0695ab0bdf1c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7a60e6f92f6875b6fb446d29abc7d858bfdefe73
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643529"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557154"
 ---
 # <a name="queues-and-reliable-sessions"></a>キューと信頼できるセッション
 キューと信頼できるセッションは、信頼できるメッセージングを実装する Windows Communication Foundation (WCF) 機能を示します。 このセクションに含まれるトピックでは、WCF の信頼できるメッセージング機能について説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "64643529"
   
  信頼できるセッションは、待ち時間の短い、信頼できるメッセージ転送を実現します。 これらは、TCP が IP ブリッジ経由のパケットで実現するものと同等の転送を、プロキシや中継局経由の SOAP メッセージで実現します。 信頼できるセッションの詳細については、次を参照してください。[信頼できるセッション](../../../../docs/framework/wcf/feature-details/reliable-sessions.md)します。  
   
-### <a name="queues"></a>キュー  
+## <a name="queues"></a>キュー  
  WCF のキューでは、ソースと待機時間が長くなりますが送信先の間のメッセージと分離の両方の信頼できる転送を提供します。 WCF のキューに置かれた通信は、メッセージ キュー (MSMQ とも呼ばれます) 上に構築されます。  
   
  MSMQ は Windows にオプションとして付属し、NT サービスの 1 つとして実行されます。 MSMQ サービスは、送信元の代わりに転送キューで転送用のメッセージを取得し、ターゲット キューに配信します。 ターゲット キューは、送信先の代わりにメッセージを受け取り、後で送信先がメッセージを要求したときに配信します。 MSMQ キュー マネージャーは信頼できるメッセージ転送プロトコルを実装して、送信中にメッセージが失われないようにします。 このプロトコルは、ネイティブまたは SOAP リライアブル メッセージ プロトコル (SRMP) などの SOAP ベースのプロトコルです。  

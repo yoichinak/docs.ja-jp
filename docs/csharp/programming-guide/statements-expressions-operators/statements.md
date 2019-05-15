@@ -6,12 +6,12 @@ helpviewer_keywords:
 - statements [C#], about statements
 - C# language, statements
 ms.assetid: 901bcde7-87de-4e15-833c-f9cfd40c8ce3
-ms.openlocfilehash: 232368d2b019b8c265bbb48bd197776f9e03a132
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 6dcf5a69be7817351a9e250506ba51471918a772
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971508"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608130"
 ---
 # <a name="statements-c-programming-guide"></a>ステートメント (C# プログラミング ガイド)
 プログラムが実行する処理は、ステートメントとして表されます。 一般的な処理には、変数の宣言、値の代入、メソッドの呼び出し、コレクションに対するループ処理、条件に応じたコード ブロックへの分岐などがあります。 プログラム内でステートメントが実行される順序は、制御フローまたは実行フローと呼ばれます。 制御フローは、実行時に渡された入力に対するプログラムの応答に応じて、プログラムを実行するたびに変わる可能性があります。  
@@ -83,11 +83,11 @@ ms.locfileid: "56971508"
   
 ## <a name="related-sections"></a>関連項目  
   
--   [ステートメントのキーワード](../../../csharp/language-reference/keywords/statement-keywords.md)  
+- [ステートメントのキーワード](../../../csharp/language-reference/keywords/statement-keywords.md)  
   
--   [式](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
+- [式](../../../csharp/programming-guide/statements-expressions-operators/expressions.md)  
   
--   [演算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
+- [演算子](../../../csharp/programming-guide/statements-expressions-operators/operators.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
  [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]  

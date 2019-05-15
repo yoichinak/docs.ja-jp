@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ed324eff-4aff-4a76-b6c0-04e6c0d8f5a9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 224e8e82b7e71d7efbfdf0ce26cc4bd783cce3c8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1928980f24f08e0379639090cab8d2ac7ba014e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313308"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633996"
 ---
 # <a name="how-to-display-dates-in-non-gregorian-calendars"></a>方法: グレゴリオ暦以外の暦の日付を表示する
 <xref:System.DateTime> 型と <xref:System.DateTimeOffset> 型は既定の暦としてグレゴリオ暦を使用しています。 つまり、日付と時刻値の `ToString` メソッドを呼び出すと、その日付の時刻が別の暦を使用して作成された場合でも、その日付の時刻はグレゴリオ暦の文字列形式で表示されます。 これを次の例で示します。この例では、2 つの方法を使用してペルシャ暦で日付と時刻の値を作成していますが、<xref:System.DateTime.ToString%2A> メソッドを呼び出すと、これらの日付と時刻の値はグレゴリオ暦で表示されます。 この例では、一般的に使われているものの、特定の暦で日付を表示するには正しくない 2 つの手法が反映されています。  
@@ -51,19 +51,19 @@ ms.locfileid: "59313308"
   
 3. 表示する日付と時刻の要素ごとに、暦オブジェクトの `Get`  メソッドをオーバーライドします。 次のメソッドが使用できます。  
   
-    -   <xref:System.Globalization.Calendar.GetYear%2A>: 適切な暦で年を表示します。  
+    - <xref:System.Globalization.Calendar.GetYear%2A>: 適切な暦で年を表示します。  
   
-    -   <xref:System.Globalization.Calendar.GetMonth%2A>: 適切な暦で月を表示します。  
+    - <xref:System.Globalization.Calendar.GetMonth%2A>: 適切な暦で月を表示します。  
   
-    -   <xref:System.Globalization.Calendar.GetDayOfMonth%2A>: 適切な暦で月の日付を表示します。  
+    - <xref:System.Globalization.Calendar.GetDayOfMonth%2A>: 適切な暦で月の日付を表示します。  
   
-    -   <xref:System.Globalization.Calendar.GetHour%2A>: 適切な暦で日の時間を表示します。  
+    - <xref:System.Globalization.Calendar.GetHour%2A>: 適切な暦で日の時間を表示します。  
   
-    -   <xref:System.Globalization.Calendar.GetMinute%2A>: 適切な暦で時間の分を表示します。  
+    - <xref:System.Globalization.Calendar.GetMinute%2A>: 適切な暦で時間の分を表示します。  
   
-    -   <xref:System.Globalization.Calendar.GetSecond%2A>: 適切な暦で分の秒を表示します。  
+    - <xref:System.Globalization.Calendar.GetSecond%2A>: 適切な暦で分の秒を表示します。  
   
-    -   <xref:System.Globalization.Calendar.GetMilliseconds%2A>: 適切な暦で秒のミリ秒を表示します。  
+    - <xref:System.Globalization.Calendar.GetMilliseconds%2A>: 適切な暦で秒のミリ秒を表示します。  
   
 ## <a name="example"></a>例  
  この例では、2 つの異なる暦を使用して日付を表示します。 ar-JO カルチャの既定の暦としてイスラム暦を定義した後の日付を表示し、その日付を fa-IR カルチャでオプションの暦としてサポートされていないペルシャ暦を使用して表示します。  
@@ -75,13 +75,13 @@ ms.locfileid: "59313308"
   
  例では、特定の暦を使用して日付の文字列形式を生成する詳細の多くを処理するため、再利用可能な暦ユーティリティ クラス `CalendarUtility` を定義しています。 `CalendarUtility` クラスには次のメンバーがあります。  
   
--   パラメーター化されたコンストラクター。その単一のパラメーターが <xref:System.Globalization.Calendar> オブジェクトで、この中で日付が表示されます。 これは、クラスのプライベート フィールドに割り当てられます。  
+- パラメーター化されたコンストラクター。その単一のパラメーターが <xref:System.Globalization.Calendar> オブジェクトで、この中で日付が表示されます。 これは、クラスのプライベート フィールドに割り当てられます。  
   
--   `CalendarExists` は、`CalendarUtility` オブジェクトによって表される暦が、パラメーターとしてメソッドに渡される <xref:System.Globalization.CultureInfo> オブジェクトによってサポートされているかどうかを示すブール値を返すプライベート メソッドです。 このメソッドは、<xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 配列が渡される <xref:System.Array.Exists%2A?displayProperty=nameWithType> メソッドの呼び出しをラップします。  
+- `CalendarExists` は、`CalendarUtility` オブジェクトによって表される暦が、パラメーターとしてメソッドに渡される <xref:System.Globalization.CultureInfo> オブジェクトによってサポートされているかどうかを示すブール値を返すプライベート メソッドです。 このメソッドは、<xref:System.Globalization.CultureInfo.OptionalCalendars%2A?displayProperty=nameWithType> 配列が渡される <xref:System.Array.Exists%2A?displayProperty=nameWithType> メソッドの呼び出しをラップします。  
   
--   `HasSameName` は、パラメーターとして <xref:System.Array.Exists%2A?displayProperty=nameWithType> メソッドに渡される <xref:System.Predicate%601> デリゲートに割り当てられるプライベート メソッドです。 メソッドが `true` を返すまで、配列の各メンバーがメソッドに渡されます。 このメソッドは、オプションの暦の名前が `CalendarUtility` オブジェクトによって表される暦と同じかどうかを判断します。  
+- `HasSameName` は、パラメーターとして <xref:System.Array.Exists%2A?displayProperty=nameWithType> メソッドに渡される <xref:System.Predicate%601> デリゲートに割り当てられるプライベート メソッドです。 メソッドが `true` を返すまで、配列の各メンバーがメソッドに渡されます。 このメソッドは、オプションの暦の名前が `CalendarUtility` オブジェクトによって表される暦と同じかどうかを判断します。  
   
--   `DisplayDate` は、2 つのパラメーターに渡されるオーバーロードされたパブリック メソッドです。<xref:System.DateTime> または <xref:System.DateTimeOffset> のいずれかの値を `CalendarUtility` オブジェクトによって表される暦で表し、カルチャの書式指定規則が使用されます。 日付の文字列表現を返す際の動作は、ターゲットの暦が、使用される書式指定規則のカルチャでサポートされているかどうかによって異なります。  
+- `DisplayDate` は、2 つのパラメーターに渡されるオーバーロードされたパブリック メソッドです。<xref:System.DateTime> または <xref:System.DateTimeOffset> のいずれかの値を `CalendarUtility` オブジェクトによって表される暦で表し、カルチャの書式指定規則が使用されます。 日付の文字列表現を返す際の動作は、ターゲットの暦が、使用される書式指定規則のカルチャでサポートされているかどうかによって異なります。  
   
  この例では、<xref:System.DateTime> または <xref:System.DateTimeOffset> 値を作成するために使用する暦に関係なく、その値は通常、グレゴリオ暦の日付として表現されます。 これは、<xref:System.DateTime> と <xref:System.DateTimeOffset> 型は、どの暦情報も保持しないからです。 これらは内部的に 0001 年 1 月 1 日の午前 0 時から経過したタイマー刻みの数として表されます。 その数の解釈は、暦に依存します。 ほとんどのカルチャでは、既定の暦はグレゴリオ暦です。  
   

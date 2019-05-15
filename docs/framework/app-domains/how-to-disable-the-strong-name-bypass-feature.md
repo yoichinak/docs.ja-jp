@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 234e088c-3b11-495a-8817-e0962be79d82
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 86fc35ae20211bd32a21d60b7313074361aef671
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 20b482ee94446ffa863697d8c25276658a4bb122
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296174"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593613"
 ---
 # <a name="how-to-disable-the-strong-name-bypass-feature"></a>方法: 厳密な名前のバイパス機能を無効にする
 .NET Framework Version 3.5 Service Pack 1 (SP1) 以降、アセンブリが完全信頼の <xref:System.AppDomain> オブジェクト (`MyComputer` ゾーンに既定の <xref:System.AppDomain> など) に読み込まれている場合は、厳密な名前の署名の検証が行われなくなりました。 これは厳密な名前のバイパス機能と呼ばれます。 完全に信頼された環境では、<xref:System.Security.Permissions.StrongNameIdentityPermission> に対する完全に信頼された署名済みアセンブリの要求は、その署名に関係なく、常に成功します。 ゾーンは完全に信頼されているため、唯一の制限として、アセンブリは完全に信頼されている必要があります。 このような状況では厳密な名前は決定要因ではないため、これを検証する理由はありません。 厳密な名前の署名の検証をバイパスすることで、パフォーマンスが大幅に向上します。  
@@ -28,9 +28,9 @@ ms.locfileid: "59296174"
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-all-applications"></a>すべてのアプリケーションに対して厳密な名前のバイパス機能を無効にするには  
   
--   32 ビット コンピューターでは、システム レジストリの HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework キーの下に、値が 0 の `AllowStrongNameBypass` という名前のダブルワード エントリを作成します。  
+- 32 ビット コンピューターでは、システム レジストリの HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework キーの下に、値が 0 の `AllowStrongNameBypass` という名前のダブルワード エントリを作成します。  
   
--   64 ビット コンピューターでは、システム レジストリの HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework キーと HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework キーの下に、値が 0 の `AllowStrongNameBypass` という名前のダブルワード エントリを作成します。  
+- 64 ビット コンピューターでは、システム レジストリの HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\\.NETFramework キーと HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\\.NETFramework キーの下に、値が 0 の `AllowStrongNameBypass` という名前のダブルワード エントリを作成します。  
   
 ### <a name="to-disable-the-strong-name-bypass-feature-for-a-single-application"></a>単一のアプリケーションに対して厳密な名前のバイパス機能を無効にするには  
   

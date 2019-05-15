@@ -15,12 +15,12 @@ helpviewer_keywords:
 - receiving data, Secure Sockets Layer
 - Internet, Secure Sockets Layer
 ms.assetid: 6e4289e6-d1b7-4e82-ab0d-e83e3b6063ed
-ms.openlocfilehash: a0af2fa8bbe2efb2dc4fb3d1177c4950dcec87cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9cfa8d6a71898a1d1ea91825ffc9a37f4654ebd5
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59135805"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583532"
 ---
 # <a name="using-secure-sockets-layer"></a>Secure Sockets Layerの使用
 <xref:System.Net> クラスは、Secure Sockets Layer (SSL) を使用して、複数のネットワーク プロトコルの接続を暗号化します。  
@@ -60,7 +60,7 @@ FtpWebResponse response = (FtpWebResponse)request.GetResponse();
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   **System.Net** 名前空間への参照。  
+- **System.Net** 名前空間への参照。  
   
 ## <a name="see-also"></a>関連項目
 

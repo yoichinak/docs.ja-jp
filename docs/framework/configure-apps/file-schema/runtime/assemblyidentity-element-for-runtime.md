@@ -16,7 +16,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61674234"
 ---
-# <a name="assemblyidentity-element-for-runtime"></a><runtime> の <assemblyIdentity> 要素
+# <a name="assemblyidentity-element-for-runtime"></a>\<runtime> の \<assemblyIdentity> 要素
 アセンブリに関する識別情報が含まれています。  
   
  \<configuration>  

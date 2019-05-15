@@ -1,6 +1,6 @@
 ---
 title: C# 演算子
-ms.date: 04/04/2018
+ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
 helpviewer_keywords:
@@ -18,34 +18,34 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: f4267caeb6301950b9f6a8b9545a47b9f48e7920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61689815"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452373"
 ---
 # <a name="c-operators"></a>C# 演算子
 
-C# には、多くの演算子が用意されています。演算子とは、式で実行する演算 (数値演算、インデックス作成、関数呼び出しなど) を指定する記号のことです。 多くの演算子は、ユーザー定義型に適用する際に[オーバーロード](../../programming-guide/statements-expressions-operators/overloadable-operators.md)して、その意味を変更できます。
+C# は組み込み型でサポートされている定義済みの演算子を多数提供します。 たとえば、[算術演算子](arithmetic-operators.md)は組み込み数値型のオペランドの算術演算を実行し、[ブール論理演算子](boolean-logical-operators.md)は [bool](../keywords/bool.md) オペランドの論理演算を実行します。
 
-整数型に対する演算 (`==`、`!=`、`<`、`>`、`&`、`|`) は、通常、列挙型 (`enum`) で使用できます。
+ユーザー定義型は、その型のオペランドに対応する動作を定義する特定の演算子をオーバーロードできます。 詳細については、[operator](../keywords/operator.md) キーワードの記事を参照してください。
 
-ここでは、C# の演算子を優先順位の高い順に示します。 各セクションの演算子の優先順位は同じです。
+次のセクションは、C# の演算子を優先順位の高い順に示しています。 各セクションの演算子の優先順位は同じです。
 
 ## <a name="primary-operators"></a>主な演算子
 
 優先順位が最も高い演算子です。
 
-[x.y](member-access-operator.md) – メンバー アクセス。
+[x.y](member-access-operators.md#member-access-operator-) – メンバー アクセス。
 
-[x?.y](null-conditional-operators.md) – null 条件付きのメンバー アクセス。 左側のオペランドが `null` に評価される場合に `null` を返します。
+[x?.y](member-access-operators.md#null-conditional-operators--and-) – null 条件付きのメンバー アクセス。 左側のオペランドが `null` に評価される場合に `null` を返します。
 
-[x?[y]](null-conditional-operators.md) - null 条件付きのインデックス アクセス。 左側のオペランドが `null` に評価される場合に `null` を返します。
+[x?[y]](member-access-operators.md#null-conditional-operators--and-) - null 条件付き配列要素または型インデクサーのアクセス。 左側のオペランドが `null` に評価される場合に `null` を返します。
 
-[f(x)](invocation-operator.md) – 関数の呼び出し。
+[f(x)](member-access-operators.md#invocation-operator-) – メソッドの呼び出しまたはデリゲートの呼び出し。
 
-[a&#91;x&#93;](index-operator.md) – 集約オブジェクトのインデックス作成。
+[a&#91;x&#93;](member-access-operators.md#indexer-operator-) – 配列要素または型インデクサーのアクセス。
 
 [x++](arithmetic-operators.md#increment-operator-) – 後置インクリメント。 x の値を返した後、1 大きくなった (通常は整数 1 が加算された) x の値で格納場所を更新します。
 
@@ -61,9 +61,13 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 [default(T)](../../programming-guide/statements-expressions-operators/default-value-expressions.md) – 型 T の既定の値を生成します。
 
+[nameof](../keywords/nameof.md) – 変数、型、またはメンバーの単純な (修飾されていない) 名前を定数文字列として取得します。
+
 [Delegate](../../programming-guide/statements-expressions-operators/anonymous-methods.md) – delegate インスタンスを宣言して返します。
 
 [sizeof](../keywords/sizeof.md) – 型オペランドのサイズをバイト単位で返します。
+
+[stackalloc](../keywords/stackalloc.md) – スタックにメモリ ブロックを割り当てます。
 
 [->](dereference-operator.md) – メンバー アクセスと組み合わせてポインターを逆参照します。
 
@@ -125,13 +129,13 @@ C# には、多くの演算子が用意されています。演算子とは、�
 
 これらの演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x \< y](less-than-operator.md) – より小さい (x が y より小さい場合は true)。
+[x \< y](comparison-operators.md#less-than-operator-) – より小さい (x が y より小さい場合は true)。
 
-[x > y](greater-than-operator.md) – より大きい (x が y より大きい場合は true)。
+[x > y](comparison-operators.md#greater-than-operator-) – より大きい (x が y より大きい場合は true)。
 
-[x \<= y](less-than-equal-operator.md) – 以下。
+[x \<= y](comparison-operators.md#less-than-or-equal-operator-) – 以下。
 
-[x >= y](greater-than-equal-operator.md) – 以上。
+[x >= y](comparison-operators.md#greater-than-or-equal-operator-) – 以上。
 
 [is](../keywords/is.md) – 型の互換性。 評価される左側のオペランドを右側のオペランドで指定された型 (静的な型) にキャストできる場合は、true を返します。
 

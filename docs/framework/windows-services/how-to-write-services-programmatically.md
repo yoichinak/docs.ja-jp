@@ -9,33 +9,33 @@ helpviewer_keywords:
 - Windows Service applications, creating
 ms.assetid: 3abbb2ec-78d2-41e6-b9f9-6662d4e2cdc7
 author: ghogen
-ms.openlocfilehash: baa7655481c24ebe96b76a0accbff63b6965a021
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e709db257c839dc7e583412a87af6d25b80de969
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328427"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591428"
 ---
 # <a name="how-to-write-services-programmatically"></a>方法: プログラムでサービスを作成する
 Windows サービス プロジェクトのテンプレートを使用しない場合は、継承などの基本要素を設定して独自のサービスを作成できます。 プログラミングによってサービスを作成する場合は、テンプレートでは自動化される手順を手動で行う必要があります。  
   
--   サービス クラスが <xref:System.ServiceProcess.ServiceBase> クラスから継承されるように設定します。  
+- サービス クラスが <xref:System.ServiceProcess.ServiceBase> クラスから継承されるように設定します。  
   
--   サービス プロジェクトの `Main` メソッドを作成します。このメソッドは、実行するサービスを定義し、それに対して <xref:System.ServiceProcess.ServiceBase.Run%2A> メソッドを呼び出します。  
+- サービス プロジェクトの `Main` メソッドを作成します。このメソッドは、実行するサービスを定義し、それに対して <xref:System.ServiceProcess.ServiceBase.Run%2A> メソッドを呼び出します。  
   
--   <xref:System.ServiceProcess.ServiceBase.OnStart%2A> プロシージャと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> プロシージャをオーバーライドし、任意の処理内容を記述します。  
+- <xref:System.ServiceProcess.ServiceBase.OnStart%2A> プロシージャと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> プロシージャをオーバーライドし、任意の処理内容を記述します。  
   
 ### <a name="to-write-a-service-programmatically"></a>プログラミングによってサービスを作成するには  
   
 1. 空のプロジェクトを作成し、必要な名前空間への参照を作成するには、次の手順を実行します。  
   
-    1.  **ソリューション エクスプローラー**で、**[参照]** ノードを右クリックし、**[参照の追加]** をクリックします。  
+    1. **ソリューション エクスプローラー**で、**[参照]** ノードを右クリックし、**[参照の追加]** をクリックします。  
   
-    2.  **[.NET Framework]** タブで **System.dll** までスクロールして選択し、**[選択]** をクリックします。  
+    2. **[.NET Framework]** タブで **System.dll** までスクロールして選択し、**[選択]** をクリックします。  
   
-    3.  **System.ServiceProcess.dll** までスクロールして選択し、**[選択]** をクリックします。  
+    3. **System.ServiceProcess.dll** までスクロールして選択し、**[選択]** をクリックします。  
   
-    4.  **[OK]** をクリックします。  
+    4. **[OK]** をクリックします。  
   
 2. クラスを追加し、<xref:System.ServiceProcess.ServiceBase> から継承されるように設定します。  
   

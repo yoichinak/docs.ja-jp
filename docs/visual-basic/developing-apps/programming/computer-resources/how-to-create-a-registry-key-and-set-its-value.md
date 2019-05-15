@@ -11,12 +11,12 @@ helpviewer_keywords:
 - registry keys [Visual Basic], setting values
 - examples [Visual Basic], registry
 ms.assetid: d3e40f74-c283-480c-ab18-e5e9052cd814
-ms.openlocfilehash: 0cadff8b44c60041e2664b1d3b70830209014301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5c286c240c405fc2d01b267bb4395701ec091c8a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59312615"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64620695"
 ---
 # <a name="how-to-create-a-registry-key-and-set-its-value-in-visual-basic"></a>方法: レジストリ キーを作成し、その値を設定する (Visual Basic)
 レジストリ キーを作成するには、`My.Computer.Registry` オブジェクトの `CreateSubKey` メソッドを使用します。  
@@ -25,7 +25,7 @@ ms.locfileid: "59312615"
   
 #### <a name="to-create-a-registry-key"></a>レジストリ キーを作成するには  
   
--   `CreateSubKey` メソッドを使用し、キーを入れるハイブとキー名を指定します。 パラメーター `Subkey` では、大文字と小文字は区別されません。 この例では、HKEY_CURRENT_USER の下にレジストリ キー `MyTestKey` を作成します。  
+- `CreateSubKey` メソッドを使用し、キーを入れるハイブとキー名を指定します。 パラメーター `Subkey` では、大文字と小文字は区別されません。 この例では、HKEY_CURRENT_USER の下にレジストリ キー `MyTestKey` を作成します。  
   
      [!code-vb[VbResourceTasks#17](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbResourceTasks/VB/Class1.vb#17)]  
   
@@ -57,15 +57,15 @@ ms.locfileid: "59312615"
   
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   キーの名前が `Nothing` である場合 (<xref:System.ArgumentNullException>)。  
+- キーの名前が `Nothing` である場合 (<xref:System.ArgumentNullException>)。  
   
--   レジストリ キーを作成するためのアクセス許可がユーザーにない場合 (<xref:System.Security.SecurityException>)。  
+- レジストリ キーを作成するためのアクセス許可がユーザーにない場合 (<xref:System.Security.SecurityException>)。  
   
--   キー名が 255 文字の制限を超えている場合 (<xref:System.ArgumentException>)。  
+- キー名が 255 文字の制限を超えている場合 (<xref:System.ArgumentException>)。  
   
--   キーが閉じている場合 (<xref:System.IO.IOException>)。  
+- キーが閉じている場合 (<xref:System.IO.IOException>)。  
   
--   レジストリ キーが読み取り専用の場合 (<xref:System.UnauthorizedAccessException>)。  
+- レジストリ キーが読み取り専用の場合 (<xref:System.UnauthorizedAccessException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  このプロセスを実行するには、アセンブリに対して <xref:System.Security.Permissions.RegistryPermission> クラスで特権レベルが許可されている必要があります。 部分的に信頼されたコンテキストで実行している場合、プロセスは、特権がないために例外をスローする可能性があります。 同様に、ユーザーには、設定に対する作成や書き込みを行うための適切な ACL が必要です。 たとえば、コード アクセス セキュリティのアクセス許可を持つローカル アプリケーションには、オペレーティング システムのアクセス許可がない可能性があります。 詳しくは、「[コード アクセス セキュリティの基礎](../../../../framework/misc/code-access-security-basics.md)」をご覧ください。  

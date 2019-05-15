@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - WPF application [WPF], building
 ms.assetid: a58696fd-bdad-4b55-9759-136dfdf8b91c
-ms.openlocfilehash: ff0c9ab4c4257e39b0d0ae0f9f3799e2847e7068
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 31b6bf1c58b965a6e96c24cb960cc542a990a7c7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662168"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589390"
 ---
 # <a name="building-a-wpf-application-wpf"></a>WPF アプリケーション (WPF) のビルド
-Windows Presentation Foundation (WPF) アプリケーションとしてビルドできます[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]実行可能ファイル (.exe)、ライブラリ (.dll)、またはアセンブリの両方の種類の組み合わせ。 このトピックでは、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションをビルドする方法を紹介し、ビルド プロセスの主な手順について説明します。  
+.NET Framework の実行可能ファイル (.exe)、ライブラリ (.dll)、またはアセンブリの両方の種類の組み合わせとしては、Windows Presentation Foundation (WPF) アプリケーションを構築することができます。 このトピックでは、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションをビルドする方法を紹介し、ビルド プロセスの主な手順について説明します。  
 
 <a name="Building_a_WPF_Application_using_Command_Line"></a>   
 ## <a name="building-a-wpf-application"></a>WPF アプリケーションのビルド  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1e357177-e699-4b8f-9e49-56d3513ed128
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c251bfc15ce588d426dd30f2ff1634a1f2a01336
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: f6cf6120af21c6b8fcaf09203fcb3b77e4dcdfac
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971950"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64621000"
 ---
 # <a name="potential-pitfalls-in-data-and-task-parallelism"></a>データとタスクの並列化における注意点
 <xref:System.Threading.Tasks.Parallel.For%2A?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Parallel.ForEach%2A?displayProperty=nameWithType> を使用すると、多くの場合、通常の順次ループよりもパフォーマンスが大幅に向上します。 ただし、ループを並列化すると複雑になるため、逐次コードでは一般的でない、またはまったく発生しない問題の原因になる可能性があります。 このトピックでは、並列ループを記述するときに回避すべきプラクティスをいくつか説明します。  
@@ -31,11 +31,11 @@ ms.locfileid: "56971950"
   
  過剰な並列化が発生する可能性が特に高い一般的な状況が、入れ子になったループ内です。 ほとんどの場合、次の条件のうち 1 つ以上該当しない限り、外側のループのみを並列化することをお勧めします。  
   
--   内側のループが非常に長いことが判明している。  
+- 内側のループが非常に長いことが判明している。  
   
--   各順序で高負荷の計算を実行している  (この例に示す操作の負荷は大きくありません)。  
+- 各順序で高負荷の計算を実行している  (この例に示す操作の負荷は大きくありません)。  
   
--   対象システムに、`cust.Orders` でクエリを並列化することで生成されるスレッドの数を十分に処理できるプロセッサが存在している。  
+- 対象システムに、`cust.Orders` でクエリを並列化することで生成されるスレッドの数を十分に処理できるプロセッサが存在している。  
   
  どの場合も、最適なクエリの形式を決定する最善の方法は、テストおよび測定することです。  
   

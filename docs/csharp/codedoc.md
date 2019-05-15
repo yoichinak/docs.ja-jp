@@ -3,12 +3,12 @@ title: XML コメントによるコードの文書化
 description: XML ドキュメント コメントを含むコードを文書化し、コンパイル時に XML ドキュメント ファイルを生成する方法を説明します。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: b52fba24750747772c36959324cd16e21067910e
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: 956598d7c8193f70e094fcb578c041b8972b9b0c
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56583707"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063127"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML コメントによるコードの文書化
 
@@ -53,7 +53,7 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 このライブラリを利用するサード パーティの開発者向けに、ソース コードへのアクセスを許可することなく、コードから API リファレンス ドキュメントを作成できます。
 前述のように、このために XML ドキュメント タグを使用できます。 そこで、C# コンパイラがサポートする標準の XML タグを紹介します。
 
-### <a name="summary"></a>\<summary>
+## <a name="summary"></a>\<summary>
 
 `<summary>` タグは、型またはメンバーに関する簡単な情報を追加します。
 この例では、タグの使い方を示すために、このタグを `Math` クラス定義と最初の `Add` メソッドに追加しています。 コードのそれ以外の部分にも適用してかまいません。
@@ -62,27 +62,27 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 
 `<summary>` は非常に重要なタグです。IntelliSense や API のリファレンス ドキュメントでは、このタグの内容が型やメンバーに関する主要な情報源であるため、このタグを記述に含めることをお勧めします。
 
-### <a name="remarks"></a>\<remarks>
+## <a name="remarks"></a>\<remarks>
 
 `<remarks>` タグは、`<summary>` タグで提供される型やメンバーに関する情報を補足します。 この例では、このタグをクラスに追加します。
 
 [!code-csharp[Remarks Tag](../../samples/snippets/csharp/concepts/codedoc/remarks-tag.cs)]
 
-### <a name="returns"></a>\<returns>
+## <a name="returns"></a>\<returns>
 
 `<returns>` タグは、メソッド宣言の戻り値を記述します。
 前と同様に、次の例は最初の `Add` メソッドに追加した `<returns>` タグを示しています。 その他のメソッドにも同様に追加できます。
 
 [!code-csharp[Returns Tag](../../samples/snippets/csharp/concepts/codedoc/returns-tag.cs)]
 
-### <a name="value"></a>\<value>
+## <a name="value"></a>\<value>
 
 `<value>` タグは、プロパティに対して使用する点を除いて、`<returns>` タグと同じです。
 `Math` ライブラリに `PI` という静的プロパティがある場合、このタグを次のように使用します。
 
 [!code-csharp[Value Tag](../../samples/snippets/csharp/concepts/codedoc/value-tag.cs)]
 
-### <a name="example"></a>\<example>
+## <a name="example"></a>\<example>
 
 `<example>` タグを使用して XML 文書化情報に例を挿入します。
 そのために、子 `<code>` タグを使用します。
@@ -91,14 +91,14 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 
 `code` タグは、長い例で改行とインデント設定を維持します。
 
-### <a name="para"></a>\<para>
+## <a name="para"></a>\<para>
 
 `<para>` タグは、親タグ内の内容を書式設定するために使用します。 通常、`<para>` は `<remarks>` や `<returns>` などのタグの内側で使用して、テキストを段落に分割します。
 クラス定義で `<remarks>` タグの内容を書式設定できます。
 
 [!code-csharp[Para Tag](../../samples/snippets/csharp/concepts/codedoc/para-tag.cs)]
 
-### <a name="c"></a>\<c>
+## <a name="c"></a>\<c>
 
 これも書式設定のタグです。`<c>` タグは、テキストの一部をコードとしてマークするために使用します。
 `<code>` タグに似ていますが、インラインで記述する点が異なります。 タグの内容の一部として簡単なコード例を示すときに便利です。
@@ -106,7 +106,7 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 
 [!code-csharp[C Tag](../../samples/snippets/csharp/concepts/codedoc/c-tag.cs)]
 
-### <a name="exception"></a>\<exception>
+## <a name="exception"></a>\<exception>
 
 `<exception>` タグを使用すると、メソッドで特定の例外がスローされる可能性を開発者に知らせることができます。
 `Math` ライブラリを見てみると、特定の条件が満たされた場合、両方の `Add` メソッドで例外がスローされることがわかります。 一方、少しわかりにくいですが、`b`パラメーターが 0 の場合は整数の `Divide` メソッドでも例外がスローされます。 ここで、このメソッドに例外のドキュメントを追加します。
@@ -116,7 +116,7 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 `cref` 属性は、現在のコンパイル環境から使用できる例外の参照を表します。
 プロジェクトまたは参照されたアセンブリに定義されている任意の型を指定できます。 コンパイラはその値を解決できない場合、警告を出します。
 
-### <a name="see"></a>\<see>
+## <a name="see"></a>\<see>
 
 `<see>` タグでは、別のコード要素のドキュメント ページへのクリック可能なリンクを作成できます。 次の例では、2 つの `Add` メソッドの間にクリック可能なリンクを作成します。
 
@@ -125,7 +125,7 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 `cref` は**必須**属性です。現在のコンパイル環境から使用できる型またはその型のメンバーへの参照を表します。
 プロジェクトまたは参照されたアセンブリに定義されている任意の型を指定できます。
 
-### <a name="seealso"></a>\<seealso>
+## <a name="seealso"></a>\<seealso>
 
 `<seealso>` タグは、`<see>` タグと同じように使用します。 唯一の違いは、このタグの内容が一般的に「関連項目」セクションに配置されることです。 ここで、`seealso` タグを整数の `Add` メソッドに追加して、クラス内の、整数パラメーターを受け取る他のメソッドを参照します。
 
@@ -134,33 +134,33 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 `cref` 属性は、現在のコンパイル環境から使用できる型またはその型のメンバーへの参照を表します。
 プロジェクトまたは参照されたアセンブリに定義されている任意の型を指定できます。
 
-### <a name="param"></a>\<param>
+## <a name="param"></a>\<param>
 
 `<param>` タグは、メソッドのパラメーターを記述するために使用します。 double 型の `Add` メソッドでの例を示します。タグで記述するパラメーターは**必須** `name` 属性です。
 
 [!code-csharp[Param Tag](../../samples/snippets/csharp/concepts/codedoc/param-tag.cs)]
 
-### <a name="typeparam"></a>\<typeparam>
+## <a name="typeparam"></a>\<typeparam>
 
 `<typeparam>` タグは、`<param>` タグと同じように使用しますが、ジェネリック型またはメソッド宣言で、ジェネリック パラメーターを記述するために使用する点が異なります。
 簡単なジェネリック メソッドを `Math` クラスに追加して、ある数量が別の数量より大きいかどうかを確認します。
 
 [!code-csharp[Typeparam Tag](../../samples/snippets/csharp/concepts/codedoc/typeparam-tag.cs)]
 
-### <a name="paramref"></a>\<paramref>
+## <a name="paramref"></a>\<paramref>
 
 場合によって、`<summary>` タグでメソッドの動作を記述している最中に、パラメーターを参照することが必要になることがあります。 そのような場合は、`<paramref>` タグがまさに適しています。 double 型に基づく `Add` メソッドの概要を更新しましょう。 `<param>` タグと同様に、パラメーター名は**必須**`name`属性で指定されます。
 
 [!code-csharp[Paramref Tag](../../samples/snippets/csharp/concepts/codedoc/paramref-tag.cs)]
 
-### <a name="typeparamref"></a>\<typeparamref>
+## <a name="typeparamref"></a>\<typeparamref>
 
 `<typeparamref>` タグは、`<paramref>` タグと同じように使用しますが、ジェネリック型またはメソッド宣言で、ジェネリック パラメーターを記述するために使用する点が異なります。
 以前に作成した同じジェネリック メソッドを使用することができます。
 
 [!code-csharp[Typeparamref Tag](../../samples/snippets/csharp/concepts/codedoc/typeparamref-tag.cs)]
 
-### <a name="list"></a>\<list>
+## <a name="list"></a>\<list>
 
 `<list>` タグは、文書化の情報を順序付きリスト、順不同のリスト、または表として書式設定するために使用します。
 `Math` ライブラリがサポートするそれぞれの算術演算の順不同のリストを作成します。
@@ -179,7 +179,7 @@ XML 文書化コメントには、3 つのスラッシュ (`///`) と、XML 形�
 大量の情報を処理する必要があり、このコードを利用する開発者にとって非常に厄介です。
 さいわい、これに対処するのに役立つ XML タグがあります。
 
-### <a name="include"></a>\<include>
+## <a name="include"></a>\<include>
 
 `<include>` タグでは、文書化コメントをソース コード ファイルに直接配置するのではなく、ソース コードの型とメンバーを記述した別個の XML ファイル内のコメントを参照できます。
 

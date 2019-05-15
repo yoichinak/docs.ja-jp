@@ -2,12 +2,12 @@
 title: '方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)'
 ms.date: 07/20/2015
 ms.assetid: f6927ef2-dc6c-43f8-bc82-bbeac42de423
-ms.openlocfilehash: 9710e5f31b9d01c5151b548c1b642293122d44b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8e1f617040bd902ab53500fbfeeafff35677280a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297955"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583421"
 ---
 # <a name="how-to-extend-the-async-walkthrough-by-using-taskwhenall-c"></a>方法: Task.WhenAll を使用して AsyncWalkthrough を拡張する (C#)
 「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」の非同期ソリューションのパフォーマンスを <xref:System.Threading.Tasks.Task.WhenAll%2A?displayProperty=nameWithType> メソッドを使用して向上させることができます。 このメソッドは、タスクのコレクションとして表される、複数の非同期操作を非同期に待機します。  
@@ -25,9 +25,9 @@ ms.locfileid: "59297955"
   
 1. `ProcessURLAsync` メソッドを「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した最初のアプリケーションに追加します。  
   
-    -   コードを[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からダウンロードした場合は、AsyncWalkthrough プロジェクトを開き、`ProcessURLAsync` を MainWindow.xaml.cs ファイルに追加します。  
+    - コードを[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からダウンロードした場合は、AsyncWalkthrough プロジェクトを開き、`ProcessURLAsync` を MainWindow.xaml.cs ファイルに追加します。  
   
-    -   チュートリアルを実行してコードを開発する場合は、`ProcessURLAsync` メソッドを含むアプリケーションに `GetURLContentsAsync` を追加します。 このアプリケーションの MainWindow.xaml.cs ファイルは、「チュートリアルの完全なコード例」のセクションにある 1 つ目の例です。  
+    - チュートリアルを実行してコードを開発する場合は、`ProcessURLAsync` メソッドを含むアプリケーションに `GetURLContentsAsync` を追加します。 このアプリケーションの MainWindow.xaml.cs ファイルは、「チュートリアルの完全なコード例」のセクションにある 1 つ目の例です。  
   
      `ProcessURLAsync` メソッドは、元のチュートリアルの `SumPageSizesAsync` の `foreach` ループの本体にあるアクションを統合します。 このメソッドは、指定した Web サイトのコンテンツをバイト配列として非同期的にダウンロードし、バイト配列の長さを表示して返します。  
   
@@ -97,9 +97,9 @@ ms.locfileid: "59297955"
   
 1. `ProcessURLAsync` の次のバージョンを「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」で開発した 2 番目のアプリケーションに追加します。  
   
-    -   コードを[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からダウンロードした場合は、AsyncWalkthrough_HttpClient プロジェクトを開き、`ProcessURLAsync` を MainWindow.xaml.cs ファイルに追加します。  
+    - コードを[開発者コード サンプル](https://code.msdn.microsoft.com/Async-Sample-Accessing-the-9c10497f)からダウンロードした場合は、AsyncWalkthrough_HttpClient プロジェクトを開き、`ProcessURLAsync` を MainWindow.xaml.cs ファイルに追加します。  
   
-    -   チュートリアルを実行してコードを開発する場合は、`ProcessURLAsync` メソッドを使うアプリケーションに `HttpClient.GetByteArrayAsync` を追加します。 このアプリケーションの MainWindow.xaml.cs ファイルは、「チュートリアルの完全なコード例」のセクションにある 2 つ目の例です。  
+    - チュートリアルを実行してコードを開発する場合は、`ProcessURLAsync` メソッドを使うアプリケーションに `HttpClient.GetByteArrayAsync` を追加します。 このアプリケーションの MainWindow.xaml.cs ファイルは、「チュートリアルの完全なコード例」のセクションにある 2 つ目の例です。  
   
      `ProcessURLAsync` メソッドは、元のチュートリアルの `SumPageSizesAsync` の `foreach` ループの本体にあるアクションを統合します。 このメソッドは、指定した Web サイトのコンテンツをバイト配列として非同期的にダウンロードし、バイト配列の長さを表示して返します。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "59297955"
   
 ### <a name="to-test-the-taskwhenall-solutions"></a>Task.WhenAll ソリューションをテストするには  
   
--   各ソリューションで、F5 キーを押してプログラムを実行し、**[Start]** を複数回クリックします。 出力は「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」の非同期ソリューションからの出力に似たものになります。 ただし、Web サイトは毎回、異なる順序で表示されることに注意してください。  
+- 各ソリューションで、F5 キーを押してプログラムを実行し、**[Start]** を複数回クリックします。 出力は「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」の非同期ソリューションからの出力に似たものになります。 ただし、Web サイトは毎回、異なる順序で表示されることに注意してください。  
   
 ## <a name="example"></a>例  
  次のコードは、`GetURLContentsAsync` メソッドを使用して Web からコンテンツをダウンロードするプロジェクトの拡張機能を示します。  

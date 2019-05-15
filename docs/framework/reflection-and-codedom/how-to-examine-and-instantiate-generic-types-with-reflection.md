@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f93b03b0-1778-43fc-bc6d-35983d210e74
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddddc746eb29c526adb8a15fc6ac40acc22954cf
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 949760026bc965fbb9a94d1f40eb0996a1ce7e92
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337228"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592396"
 ---
 # <a name="how-to-examine-and-instantiate-generic-types-with-reflection"></a>方法: リフレクションを使用してジェネリック型をチェックおよびインスタンス化する
 ジェネリック型の情報は、他の型の情報と同じ方法で取得します。つまり、ジェネリック型を表す <xref:System.Type> オブジェクトをチェックすることによって取得します。 根本的な違いとして、ジェネリック型には、そのジェネリック型パラメーターを表す <xref:System.Type> オブジェクトの一覧が含まれています。 このセクションでは、まず、ジェネリック型をチェックする手順を示します。  
@@ -117,11 +117,11 @@ ms.locfileid: "59337228"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   このコードには、コンパイルに必要な C# の `using` ステートメント (Visual Basic では `Imports`) が含まれています。  
+- このコードには、コンパイルに必要な C# の `using` ステートメント (Visual Basic では `Imports`) が含まれています。  
   
--   追加のアセンブリ参照は不要です。  
+- 追加のアセンブリ参照は不要です。  
   
--   コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
+- コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
 ## <a name="see-also"></a>関連項目
 

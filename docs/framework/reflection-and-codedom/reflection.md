@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: d1a58e7f-fb39-4d50-bf84-e3b8f9bf9775
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20dd6f9ab601277161079230effdaeeabd1bb13a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7cd9fb96f69da977efd2eee6f740cc93ad58e6ea
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59101576"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591478"
 ---
 # <a name="reflection-in-the-net-framework"></a>.NET Framework のリフレクション
 <xref:System.Reflection> 名前空間のクラスを <xref:System.Type?displayProperty=nameWithType> と共に使用すると、読み込まれた[アセンブリ](../app-domains/assemblies-in-the-common-language-runtime.md)についての情報、およびそのアセンブリ内に定義されている[クラス](../../standard/base-types/common-type-system.md#classes)、[インターフェイス](../../standard/base-types/common-type-system.md#interfaces)、[値型](../../csharp/language-reference/keywords/value-types.md)などの型を取得できます。 また、リフレクションを使用すると、実行時に型インスタンスを作成したり、作成した型インスタンスを呼び出したり、アクセスしたりできます。 リフレクションのさまざまな面に関するトピックについては、この概要の最後の「[関連トピック](#related_topics)」を参照してください。
@@ -37,23 +37,23 @@ ms.locfileid: "59101576"
   
  [アセンブリ](../../../docs/framework/app-domains/assemblies-in-the-common-language-runtime.md)には、モジュールが含まれています。モジュールには、型が含まれています。また、型にはメンバーが含まれています。 リフレクションは、アセンブリ、モジュール、および型をカプセル化するオブジェクトを提供します。 リフレクションを使用すると、動的に型のインスタンスを作成したり、その型を既存のオブジェクトにバインドしたり、既存のオブジェクトから型を取得できます。 その後で、型のメソッドを呼び出したり、型のフィールドやプロパティにアクセスしたりできます。 リフレクションの代表的な用途は、次のとおりです。  
   
--   <xref:System.Reflection.Assembly> を使用して、アセンブリを定義または読み込み、アセンブリ マニフェストにリストされているモジュールを読み込み、そのアセンブリから型を検索し、そのインスタンスを作成します。  
+- <xref:System.Reflection.Assembly> を使用して、アセンブリを定義または読み込み、アセンブリ マニフェストにリストされているモジュールを読み込み、そのアセンブリから型を検索し、そのインスタンスを作成します。  
   
--   モジュールを含んでいるアセンブリや、モジュール内のクラスなどの情報を探索するには、<xref:System.Reflection.Module> を使用します。 また、すべてのグローバル メソッドも取得できます。その他、モジュールに定義されている固有の非グローバルなメソッドも取得できます。  
+- モジュールを含んでいるアセンブリや、モジュール内のクラスなどの情報を探索するには、<xref:System.Reflection.Module> を使用します。 また、すべてのグローバル メソッドも取得できます。その他、モジュールに定義されている固有の非グローバルなメソッドも取得できます。  
   
--   名前、パラメーター、アクセス修飾子 (`public` または `private` など)、およびコンストラクターの実装詳細 (`abstract` または `virtual` など) の情報を探索するには、<xref:System.Reflection.ConstructorInfo> を使用します。 特定のコンストラクターを呼び出すには、<xref:System.Type> の <xref:System.Type.GetConstructors%2A> メソッドまたは <xref:System.Type.GetConstructor%2A> メソッドを使用します。  
+- 名前、パラメーター、アクセス修飾子 (`public` または `private` など)、およびコンストラクターの実装詳細 (`abstract` または `virtual` など) の情報を探索するには、<xref:System.Reflection.ConstructorInfo> を使用します。 特定のコンストラクターを呼び出すには、<xref:System.Type> の <xref:System.Type.GetConstructors%2A> メソッドまたは <xref:System.Type.GetConstructor%2A> メソッドを使用します。  
   
--   名前、戻り値の型、パラメーター、アクセス修飾子 (`public` または `private` など)、およびメソッドの実装詳細 (`abstract` または `virtual` など) の情報を探索するには、<xref:System.Reflection.MethodInfo> を使用します。 特定のメソッドを呼び出すには、<xref:System.Type> の <xref:System.Type.GetMethods%2A> メソッドまたは <xref:System.Type.GetMethod%2A> メソッドを使用します。  
+- 名前、戻り値の型、パラメーター、アクセス修飾子 (`public` または `private` など)、およびメソッドの実装詳細 (`abstract` または `virtual` など) の情報を探索するには、<xref:System.Reflection.MethodInfo> を使用します。 特定のメソッドを呼び出すには、<xref:System.Type> の <xref:System.Type.GetMethods%2A> メソッドまたは <xref:System.Type.GetMethod%2A> メソッドを使用します。  
   
--   フィールドの名前、アクセス修飾子 (`public` または `private` など)、フィールドの実装詳細 (`static` など) などの情報を探索したり、フィールドの値を取得または設定したりするには、<xref:System.Reflection.FieldInfo> を使用します。  
+- フィールドの名前、アクセス修飾子 (`public` または `private` など)、フィールドの実装詳細 (`static` など) などの情報を探索したり、フィールドの値を取得または設定したりするには、<xref:System.Reflection.FieldInfo> を使用します。  
   
--   名前、イベント ハンドラーのデータ型、カスタム属性、宣言型、イベントのリフレクションされた型などの情報を探索したり、イベント ハンドラーを追加および削除したりするには、<xref:System.Reflection.EventInfo> を使用します。  
+- 名前、イベント ハンドラーのデータ型、カスタム属性、宣言型、イベントのリフレクションされた型などの情報を探索したり、イベント ハンドラーを追加および削除したりするには、<xref:System.Reflection.EventInfo> を使用します。  
   
--   プロパティの名前、データ型、宣言型、リフレクションされた型、読み取り専用または書き込み可能のステータスなどの情報を探索したり、プロパティの値を取得または設定したりするには、<xref:System.Reflection.PropertyInfo> を使用します。  
+- プロパティの名前、データ型、宣言型、リフレクションされた型、読み取り専用または書き込み可能のステータスなどの情報を探索したり、プロパティの値を取得または設定したりするには、<xref:System.Reflection.PropertyInfo> を使用します。  
   
--   パラメーターの名前、データ型、パラメーターが入力パラメーターか出力パラメーターかなどの情報を探索したり、メソッド シグネチャ内のパラメーターの位置を探索したりするには、<xref:System.Reflection.ParameterInfo> を使用します。  
+- パラメーターの名前、データ型、パラメーターが入力パラメーターか出力パラメーターかなどの情報を探索したり、メソッド シグネチャ内のパラメーターの位置を探索したりするには、<xref:System.Reflection.ParameterInfo> を使用します。  
   
--   アプリケーション ドメインのリフレクション専用のコンテキストで作業する際に、カスタム属性に関する情報を検索するには、<xref:System.Reflection.CustomAttributeData> を使用します。 <xref:System.Reflection.CustomAttributeData> を使用すると、それらのインスタンスを作成せずに属性を調べることができます。  
+- アプリケーション ドメインのリフレクション専用のコンテキストで作業する際に、カスタム属性に関する情報を検索するには、<xref:System.Reflection.CustomAttributeData> を使用します。 <xref:System.Reflection.CustomAttributeData> を使用すると、それらのインスタンスを作成せずに属性を調べることができます。  
   
  <xref:System.Reflection.Emit> 名前空間のクラスは、実行時に型を作成できる特殊な形態のリフレクションを提供します。  
   

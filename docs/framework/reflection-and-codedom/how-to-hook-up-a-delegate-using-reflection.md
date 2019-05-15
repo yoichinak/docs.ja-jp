@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c7c2956a222a47cea36abbc2f21da2d7e2061e09
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8bc4b4df6829f5b86dff400c5cd7cbd3d86f5507
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314530"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591531"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>方法: リフレクションを使用してデリゲートをフックする
 リフレクションを使用して、アセンブリを読み込んで実行する場合、C# の `+=` 演算子や Visual Basic の [AddHandler ステートメント](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)のような言語機能を使用してイベントをフックすることはできません。 次の手順では、必要なすべての型をリフレクションによって取得することで、既存のメソッドをイベントにフックする方法と、リフレクション出力を使用して動的メソッドを作成し、それをイベントにフックする方法を示します。  
@@ -107,11 +107,11 @@ ms.locfileid: "59314530"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   このコードには、コンパイルに必要な C# の `using` ステートメント (Visual Basic では `Imports`) が含まれています。  
+- このコードには、コンパイルに必要な C# の `using` ステートメント (Visual Basic では `Imports`) が含まれています。  
   
--   コマンド ラインからコンパイルするために、追加のアセンブリ参照は必要ありません。 この例はコンソール アプリケーションであるため、Visual Studio では、System.Windows.Forms.dll への参照を追加する必要があります。  
+- コマンド ラインからコンパイルするために、追加のアセンブリ参照は必要ありません。 この例はコンソール アプリケーションであるため、Visual Studio では、System.Windows.Forms.dll への参照を追加する必要があります。  
   
--   コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
+- コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
 ## <a name="see-also"></a>関連項目
 

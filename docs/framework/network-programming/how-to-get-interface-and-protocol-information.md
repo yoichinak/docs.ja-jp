@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - Network
 ms.assetid: fd88d26c-4063-495e-a253-736ac3e6b23f
-ms.openlocfilehash: fec8fd294c0408bfb16df1c5cfa1f3a96c1f28ee
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: e70afa6b3633a5868491e421c7e8e44bf9f3e895
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202619"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64624577"
 ---
 # <a name="how-to-get-interface-and-protocol-information"></a>方法: インターフェイス情報とプロトコル情報を取得する
 このサンプルでは、ネットワーク インターフェイスの TCP 統計情報を読み取る方法を示します。  
@@ -72,4 +72,4 @@ public static void ShowTcpStatistics(NetworkInterfaceComponent version)
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  この例で必要な要素は次のとおりです。  
   
--   **System.Net** 名前空間への参照。
+- **System.Net** 名前空間への参照。

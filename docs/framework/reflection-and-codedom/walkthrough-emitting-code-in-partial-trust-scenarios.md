@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0483f1477ee215537d1081fde791d0742d5aec50
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59299476"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592447"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>チュートリアル: 部分信頼シナリオにおけるコード出力
 リフレクション出力は、完全信頼または部分信頼において同じ API セットを使用しますが、部分的に信頼されるコードでは実行する機能によって特定のアクセス許可が必要になります。 リフレクション出力には、匿名でホストされる動的メソッドという機能があります。この機能は、透過的セキュリティ アセンブリによって部分信頼で使用されます。  
@@ -31,14 +31,14 @@ ms.locfileid: "59299476"
   
  このチュートリアルでは、次の作業について説明します。  
   
--   [部分的に信頼されたコードのテスト用に単純なサンドボックスを設定する](#Setting_up)  
+- [部分的に信頼されたコードのテスト用に単純なサンドボックスを設定する](#Setting_up)  
   
     > [!IMPORTANT]
     >  これは、部分信頼でコードを試す簡単な方法です。 実際には信頼されていない場所から取得したコードを実行する場合は、「[How to:Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 (方法: サンドボックスで部分信頼コードを実行する) を参照してください。  
   
--   [部分的に信頼されたアプリケーション ドメインでコードを実行する](#Running_code)  
+- [部分的に信頼されたアプリケーション ドメインでコードを実行する](#Running_code)  
   
--   [匿名でホストされる動的メソッドを使用して部分信頼でコードを出力し実行する](#Using_methods)  
+- [匿名でホストされる動的メソッドを使用して部分信頼でコードを出力し実行する](#Using_methods)  
   
  部分信頼シナリオでのコード出力の詳細については、「[リフレクション出力のセキュリティ関連事項](../../../docs/framework/reflection-and-codedom/security-issues-in-reflection-emit.md)」を参照してください。  
   
@@ -48,9 +48,9 @@ ms.locfileid: "59299476"
 ## <a name="setting-up-partially-trusted-locations"></a>部分的に信頼された場所を設定する  
  次の 2 つの手順では、部分信頼でテストできるコードの場所を設定する方法を説明します。  
   
--   最初の手順では、サンドボックス化されたアプリケーション ドメインを作成する方法について説明します。このドメインでは、インターネット アクセス許可がコードに付与されます。  
+- 最初の手順では、サンドボックス化されたアプリケーション ドメインを作成する方法について説明します。このドメインでは、インターネット アクセス許可がコードに付与されます。  
   
--   2 番目の手順では、部分的に信頼されたアプリケーション ドメインに対し、<xref:System.Security.Permissions.ReflectionPermission> フラグを設定して <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> を追加する方法を説明します。これにより、信頼レベルが同等以下のアセンブリでプライベート データにアクセスできるようになります。  
+- 2 番目の手順では、部分的に信頼されたアプリケーション ドメインに対し、<xref:System.Security.Permissions.ReflectionPermission> フラグを設定して <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> を追加する方法を説明します。これにより、信頼レベルが同等以下のアセンブリでプライベート データにアクセスできるようになります。  
   
 ### <a name="creating-sandboxed-application-domains"></a>サンドボックス化されたアプリケーション ドメインを作成する  
  部分信頼でアセンブリを実行するアプリケーション ドメインを作成するには、<xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> メソッド オーバーロードを使用して、アセンブリに付与するアクセス許可セットを指定する必要があります。 許可セットを指定するための最も簡単な方法として、セキュリティ ポリシーから名前付きアクセス許可セットを取得する方法があります。  
@@ -155,7 +155,7 @@ ms.locfileid: "59299476"
   
 #### <a name="to-use-anonymously-hosted-dynamic-methods"></a>匿名でホストされる動的メソッドを使用するには  
   
--   関連付けられたモジュールや型を指定しないコンストラクターを使用して、匿名でホストされる動的メソッドを作成します。  
+- 関連付けられたモジュールや型を指定しないコンストラクターを使用して、匿名でホストされる動的メソッドを作成します。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#15)]
      [!code-vb[HowToEmitCodeInPartialTrust#15](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#15)]  
@@ -164,7 +164,7 @@ ms.locfileid: "59299476"
   
      動的メソッドの出力に必要なアクセス許可はありませんが、出力コードには、そのコードが使用する型やメソッドに応じたアクセス許可が必要です。 たとえば、ファイルにアクセスするメソッドを呼び出す出力コードには、<xref:System.Security.Permissions.FileIOPermission> が必要です。 信頼レベルに該当のアクセス許可が含まれていないと、出力コードの実行時にセキュリティ例外がスローされます。 ここでは、<xref:System.Console.WriteLine%2A?displayProperty=nameWithType> メソッドのみを使用する動的メソッドを出力するコードを示します。 このコードは、部分的に信頼された場所から実行できます。  
   
--   または、JIT 参照範囲チェックをスキップするために機能を制限した、匿名でホストされる動的メソッドを作成します。これを行うには、<xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> コンストラクターを使用して、`true` パラメーターに `restrictedSkipVisibility` を指定します。  
+- または、JIT 参照範囲チェックをスキップするために機能を制限した、匿名でホストされる動的メソッドを作成します。これを行うには、<xref:System.Reflection.Emit.DynamicMethod.%23ctor%28System.String%2CSystem.Type%2CSystem.Type%5B%5D%2CSystem.Boolean%29> コンストラクターを使用して、`true` パラメーターに `restrictedSkipVisibility` を指定します。  
   
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
@@ -191,15 +191,15 @@ ms.locfileid: "59299476"
   
  この例では、ヘルパー メソッドを使用して、`Internet` アクセス許可に制限される許可セットを作成します。次に、<xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> メソッド オーバーロードを使用してアプリケーション ドメインを作成し、この許可セットを使用するドメインで実行するすべてのコードを指定します。 アプリケーション ドメインに `Worker` クラスのインスタンスを作成し、`AccessPrivateMethod` メソッドを 2 回実行します。  
   
--   `AccessPrivateMethod` メソッドを初めて実行すると、JIT の参照範囲チェックが強制的に実行されます。 動的メソッドは、JIT の参照範囲チェックによってプライベート メソッドにアクセスできなくなるため、呼び出し時に失敗します。  
+- `AccessPrivateMethod` メソッドを初めて実行すると、JIT の参照範囲チェックが強制的に実行されます。 動的メソッドは、JIT の参照範囲チェックによってプライベート メソッドにアクセスできなくなるため、呼び出し時に失敗します。  
   
--   `AccessPrivateMethod` メソッドの 2 回目の実行では、JIT 参照範囲チェックをスキップします。 `Internet` 許可セットでは、参照範囲チェックをスキップするのに十分なアクセス許可が付与されていないため、動的メソッドはコンパイル時に失敗します。  
+- `AccessPrivateMethod` メソッドの 2 回目の実行では、JIT 参照範囲チェックをスキップします。 `Internet` 許可セットでは、参照範囲チェックをスキップするのに十分なアクセス許可が付与されていないため、動的メソッドはコンパイル時に失敗します。  
   
  この例では、<xref:System.Security.Permissions.ReflectionPermission> を指定した <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> を許可セットに追加します。 次に、2 番目のドメインを作成し、新しい許可セットにアクセス許可が付与されるドメインで実行するすべてのコードを指定します。 新しいアプリケーション ドメインに `Worker` クラスのインスタンスを作成し、`AccessPrivateMethod` メソッドの両方のオーバーロードを実行します。  
   
--   `AccessPrivateMethod` メソッドの最初のオーバーロードが実行され、JIT の参照範囲チェックがスキップされます。 コードを出力するアセンブリがプライベート メソッドを含むアセンブリと同じであるため、動的メソッドのコンパイルと実行は成功します。 したがって、信頼レベルは同等です。 `Worker` クラスを含むアプリケーションに複数のアセンブリが存在する場合、これらは同じ信頼レベルにあるため、どのアセンブリでも同じプロセスが成功します。  
+- `AccessPrivateMethod` メソッドの最初のオーバーロードが実行され、JIT の参照範囲チェックがスキップされます。 コードを出力するアセンブリがプライベート メソッドを含むアセンブリと同じであるため、動的メソッドのコンパイルと実行は成功します。 したがって、信頼レベルは同等です。 `Worker` クラスを含むアプリケーションに複数のアセンブリが存在する場合、これらは同じ信頼レベルにあるため、どのアセンブリでも同じプロセスが成功します。  
   
--   `AccessPrivateMethod` メソッドの 2 番目のオーバーロードが実行され、JIT の参照範囲チェックは再度スキップされます。 <xref:System.String> クラスの `internal` `FirstChar` プロパティへのアクセスを試行するため、ここでは、動的メソッドはコンパイル時に失敗します。 <xref:System.String> クラスを含むアセンブリは完全に信頼されます。 したがって、コードを出力するアセンブリよりも信頼レベルが高くなります。  
+- `AccessPrivateMethod` メソッドの 2 番目のオーバーロードが実行され、JIT の参照範囲チェックは再度スキップされます。 <xref:System.String> クラスの `internal` `FirstChar` プロパティへのアクセスを試行するため、ここでは、動的メソッドはコンパイル時に失敗します。 <xref:System.String> クラスを含むアセンブリは完全に信頼されます。 したがって、コードを出力するアセンブリよりも信頼レベルが高くなります。  
   
  この比較により、<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> によって、信頼されたコードのセキュリティを損なうことなく、部分的に信頼されたコードが、部分的に信頼された他のコードの参照範囲チェックをスキップできるようにする方法を示します。  
   
@@ -209,7 +209,7 @@ ms.locfileid: "59299476"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   このコード例を Visual Studio でビルドする場合は、クラスを <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> メソッドに渡すときに、名前空間を含むようにクラスの名前を変更する必要があります。 既定では、名前空間がプロジェクト名になります。 たとえば、プロジェクト名が "PartialTrust" である場合、クラス名は "PartialTrust.Worker" にする必要があります。  
+- このコード例を Visual Studio でビルドする場合は、クラスを <xref:System.AppDomain.CreateInstanceAndUnwrap%2A> メソッドに渡すときに、名前空間を含むようにクラスの名前を変更する必要があります。 既定では、名前空間がプロジェクト名になります。 たとえば、プロジェクト名が "PartialTrust" である場合、クラス名は "PartialTrust.Worker" にする必要があります。  
   
 ## <a name="see-also"></a>関連項目
 

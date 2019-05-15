@@ -12,23 +12,23 @@ helpviewer_keywords:
 ms.assetid: 36a98a81-b5b5-4c19-912a-11f91eff7f4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6d07fe8ec61ee4515696eb3cf3d808483b50dfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 638ea8c1f01c62075fc4399cada282128e07422d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59186564"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64607543"
 ---
 # <a name="setting-assembly-attributes"></a>アセンブリ属性の設定
 アセンブリの属性は、アセンブリに関する情報を提供する値です。 属性は、次のような情報に分類されます。  
   
--   アセンブリ ID 属性。  
+- アセンブリ ID 属性。  
   
--   情報属性。  
+- 情報属性。  
   
--   アセンブリ マニフェスト属性。  
+- アセンブリ マニフェスト属性。  
   
--   厳密な名前の属性。  
+- 厳密な名前の属性。  
   
 ## <a name="assembly-identity-attributes"></a>アセンブリ ID 属性  
  アセンブリは、名前、バージョン、およびカルチャの 3 つの属性と、適用される場合は厳密な名前によって識別されます。 これらの属性は、アセンブリの完全な名前を形成し、コード内でアセンブリを参照するときに必要になります。 属性を使用して、アセンブリのバージョンとのカルチャを設定できます。 コンパイラまたは [アセンブリ リンカー (Al.exe)](../../../docs/framework/tools/al-exe-assembly-linker.md) は、アセンブリの作成時に、アセンブリ マニフェストを含むファイルに基づいて名前の値を設定します。  

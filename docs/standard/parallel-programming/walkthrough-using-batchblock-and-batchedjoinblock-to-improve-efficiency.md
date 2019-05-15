@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5beb4983-80c2-4f60-8c51-a07f9fd94cb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79bbf33ff1b1e843836aa1b93188970b6a1c8ede
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 91520b8967445a70a7775b99faef0cefc5e01cc2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302980"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654403"
 ---
 # <a name="walkthrough-using-batchblock-and-batchedjoinblock-to-improve-efficiency"></a>チュートリアル: BatchBlock および BatchedJoinBlock を使用した効率の向上
 TPL データ フロー ライブラリが提供する <xref:System.Threading.Tasks.Dataflow.BatchBlock%601?displayProperty=nameWithType> および <xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602?displayProperty=nameWithType> クラスを使って、1 つ以上のソースからデータを受信してバッファーに格納し、それを 1 つのコレクションとして反映することができます。 このバッチ メカニズムは、1 つ以上のソースからデータを収集し、複数のデータ要素をバッチとして処理する場合に便利です。 例として、データフローを使ってレコードをデータベースに挿入するアプリケーションについて考えてみましょう。 この操作は、1 つずつ順番にではなく、複数の項目が同時に挿入される場合により効率的となります。 このドキュメントでは、<xref:System.Threading.Tasks.Dataflow.BatchBlock%601> クラスを使用して、そのようなデータベースの挿入操作を効率的に行う方法について説明します。 また、<xref:System.Threading.Tasks.Dataflow.BatchedJoinBlock%602> クラスを使用して、プログラムでデータベースを読み取る場合に、その結果と発生する例外の両方をキャプチャする方法について説明します。
@@ -34,19 +34,19 @@ TPL データ フロー ライブラリが提供する <xref:System.Threading.Ta
   
  このチュートリアルは、次のセクションで構成されています。  
   
--   [コンソール アプリケーションの作成](#creating)  
+- [コンソール アプリケーションの作成](#creating)  
   
--   [Employee クラスの定義](#employeeClass)  
+- [Employee クラスの定義](#employeeClass)  
   
--   [従業員データベースの操作の定義](#operations)  
+- [従業員データベースの操作の定義](#operations)  
   
--   [バッファリングを使用しない従業員データのデータベースへの追加](#nonBuffering)  
+- [バッファリングを使用しない従業員データのデータベースへの追加](#nonBuffering)  
   
--   [バッファリングを使用した従業員データのデータベースへの追加](#buffering)  
+- [バッファリングを使用した従業員データのデータベースへの追加](#buffering)  
   
--   [バッファリングされた結合を使用した従業員データのデータベースからの読み込み](#bufferedJoin)  
+- [バッファリングされた結合を使用した従業員データのデータベースからの読み込み](#bufferedJoin)  
   
--   [コード例全体](#complete)  
+- [コード例全体](#complete)  
   
 <a name="creating"></a>   
 ## <a name="creating-the-console-application"></a>コンソール アプリケーションの作成  

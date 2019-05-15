@@ -2,23 +2,23 @@
 title: データ型の変換 (C#)
 ms.date: 07/20/2015
 ms.assetid: 46e5682f-77a1-4302-8f93-a2b53c408808
-ms.openlocfilehash: ea1f204ab59ecdd3e3e7e65d12c1be37e9b09f01
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 918a9fbfc523e62c7b4a5d915c28c00ea781d3e4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54736887"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597723"
 ---
 # <a name="converting-data-types-c"></a>データ型の変換 (C#)
 変換メソッドは、入力オブジェクトの型を変更します。  
   
  LINQ クエリの変換操作は、さまざまなアプリケーションで役に立ちます。 次にいくつかの例を示します。  
   
--   <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> メソッドを使用すると、標準クエリ演算子の型のカスタム実装を非表示することができます。  
+- <xref:System.Linq.Enumerable.AsEnumerable%2A?displayProperty=nameWithType> メソッドを使用すると、標準クエリ演算子の型のカスタム実装を非表示することができます。  
   
--   <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> メソッドを使用すると、LINQ クエリのパラメーター化されていないコレクションを有効にすることができます。  
+- <xref:System.Linq.Enumerable.OfType%2A?displayProperty=nameWithType> メソッドを使用すると、LINQ クエリのパラメーター化されていないコレクションを有効にすることができます。  
   
--   <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>、<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>、<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>、および <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> メソッドを使用すると、クエリが列挙されるまで延期させるのではなく、即時のクエリ実行を強制することができます。  
+- <xref:System.Linq.Enumerable.ToArray%2A?displayProperty=nameWithType>、<xref:System.Linq.Enumerable.ToDictionary%2A?displayProperty=nameWithType>、<xref:System.Linq.Enumerable.ToList%2A?displayProperty=nameWithType>、および <xref:System.Linq.Enumerable.ToLookup%2A?displayProperty=nameWithType> メソッドを使用すると、クエリが列挙されるまで延期させるのではなく、即時のクエリ実行を強制することができます。  
   
 ## <a name="methods"></a>メソッド  
  次の表には、データ型の変換を実行する標準クエリ演算子メソッドの一覧が示されています。  

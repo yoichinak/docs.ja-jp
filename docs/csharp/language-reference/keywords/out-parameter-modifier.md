@@ -5,12 +5,12 @@ ms.date: 03/26/2019
 helpviewer_keywords:
 - parameters [C#], out
 - out parameters [C#]
-ms.openlocfilehash: 769d1ac0b6266c87e99605c76a25e016f15eb11c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 704b66e6cdec5caa47f85ed8e3acbd2a6a73b730
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59125753"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64598240"
 ---
 # <a name="out-parameter-modifier-c-reference"></a>out パラメーター修飾子 (C# リファレンス)
 `out` キーワードによって、参照により引数が渡されます。 仮パラメーターを引数 (変数にする必要があります) の別名にします。 つまり、パラメーターに対するすべての操作は引数に対して行われます。 これは、[ref](ref.md) キーワードと似ていますが、`ref` では、変数を初期化してから渡す必要があります。 [in](in-parameter-modifier.md) キーワードとも似ていますが、`in` では、呼び出されたメソッドで引数の値を変更することはできません。 `out` パラメーターを使用するには、メソッド定義と呼び出し元のメソッドの両方で `out` キーワードを明示的に使用する必要があります。 次に例を示します。  
@@ -44,9 +44,9 @@ class CS0663_Example
   
 次の種類のメソッドには、`in`、`ref`、`out` キーワードを使用することはできません。  
   
--   [async](../../../csharp/language-reference/keywords/async.md) 修飾子を使用して定義した Async メソッド。  
+- [async](../../../csharp/language-reference/keywords/async.md) 修飾子を使用して定義した Async メソッド。  
   
--   [yield return](../../../csharp/language-reference/keywords/yield.md) または `yield break` ステートメントを含む Iterator メソッド。  
+- [yield return](../../../csharp/language-reference/keywords/yield.md) または `yield break` ステートメントを含む Iterator メソッド。  
 
 ## <a name="declaring-out-parameters"></a>`out` パラメーターの宣言   
 
