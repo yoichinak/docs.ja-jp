@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: d93d10ff0fbef1b4aa0ddc24e10e907746d3c85a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 74e4f8047c14f40f306dcd34c648793d4a2d2bf5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703313"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671405"
 ---
 API

@@ -2,12 +2,12 @@
 title: 構造体
 description: について、F#構造体、多くの場合、コンパクトなオブジェクト型で少量のデータと動作が単純な型のクラスよりも効率的です。
 ms.date: 05/16/2016
-ms.openlocfilehash: c091dc91765d6e828426de21e9bc5f79bfdebc6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc302b975604bebcd145a385fb59b21417547c5e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61925880"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645337"
 ---
 # <a name="structures"></a>構造体
 
@@ -34,7 +34,7 @@ type [accessibility-modifier] type-name =
 
 上記の構文では、2 つの形式が示されています。 1 番目のものは軽量構文ではないものの、頻繁に使用されます。これは、`struct` キーワードと `end` キーワードを使用する場合に、2 番目のものに出現する `StructAttribute` 属性を省略できるためです。 `StructAttribute` は省略して単に `Struct` とすることができます。
 
-*型定義の要素-と-メンバー*前の構文でメンバーの宣言と定義を表します。 構造体にはコンス トラクター、可変フィールド、および不変フィールドを含めることができ、メンバーとインターフェイス実装を宣言できます。 詳細については、次を参照してください。[メンバー](members/index.md)します。
+*型定義の要素-と-メンバー*前の構文でメンバーの宣言と定義を表します。 構造体にはコンストラクター、可変フィールド、および不変フィールドを含めることができ、メンバーとインターフェイス実装を宣言できます。 詳細については、次を参照してください。[メンバー](members/index.md)します。
 
 構造体は、継承に参加することも、`let` または `do` バインディングを含めることも、それ自身の型のフィールドを再帰的に含めることもできません (ただし、それ自身の型を参照する参照セルを含めることができます)。
 

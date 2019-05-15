@@ -2,12 +2,12 @@
 title: サービスのサンプルの WCF
 ms.date: 03/30/2017
 ms.assetid: 462a2218-f8c6-4fb7-95bc-64765459c429
-ms.openlocfilehash: 3fbca09a7b50a15299cb8e805ac84c60e4b78fa7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4531e72711d17c57bb4e365b458f0b35d6b42577
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967545"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637597"
 ---
 # <a name="services"></a>Services
 

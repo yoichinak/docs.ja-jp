@@ -2,12 +2,12 @@
 title: 強制
 ms.date: 03/30/2017
 ms.assetid: 4f7ce807-c0e4-407a-92a6-22abafb40b51
-ms.openlocfilehash: b0a1b1dfca78a844364cfe977860915769980a04
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7404dca1ff6442d0daac3bfef8d09a0a9b6c524
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990055"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637644"
 ---
 # <a name="imperative"></a>強制
 

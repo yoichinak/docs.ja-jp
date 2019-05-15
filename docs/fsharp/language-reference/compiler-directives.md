@@ -2,12 +2,12 @@
 title: コンパイラ ディレクティブ
 description: についてF#言語プリプロセッサ ディレクティブ、条件付きコンパイル ディレクティブ、行のディレクティブとコンパイラ ディレクティブ。
 ms.date: 12/10/2018
-ms.openlocfilehash: 3fade7407f84b00163bd5b3d7774104bce8a25af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b62fb930a3b0c55103d6b0edbe20ae056ba86bd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766104"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645489"
 ---
 # <a name="compiler-directives"></a>コンパイラ ディレクティブ
 

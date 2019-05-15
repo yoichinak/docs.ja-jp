@@ -2,12 +2,12 @@
 title: NativeActivity の基本クラス
 ms.date: 03/30/2017
 ms.assetid: 254a4c50-425b-426d-a32f-0f7234925bac
-ms.openlocfilehash: 188181211c6171cfce07120b262c2cb798e52ad6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d746bb92dab79e7e68075ad003c420e7e37ed683
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649355"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637510"
 ---
 # <a name="nativeactivity-base-class"></a>NativeActivity の基本クラス
 

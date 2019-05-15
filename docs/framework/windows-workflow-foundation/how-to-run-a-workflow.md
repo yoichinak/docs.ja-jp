@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: f814ff82-fe2b-4614-aebb-b768c3e61179
-ms.openlocfilehash: 06ac34f5ba5d95bd9f000a35036cf288d3c8f7f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c47e1ba89179b38055244c01507318836c899fda
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779159"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637518"
 ---
 # <a name="how-to-run-a-workflow"></a>方法: ワークフローを実行する
 このトピックでは、Windows Workflow Foundation チュートリアル入門の続きと、ワークフロー ホストを作成し、以前に定義されているワークフローを実行する方法について説明します[方法。ワークフロー作成](how-to-create-a-workflow.md)トピック。

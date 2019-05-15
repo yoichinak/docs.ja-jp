@@ -2,12 +2,12 @@
 title: 例外:failwith 関数
 description: "'Failwith' 関数は F# の例外を生成する方法について説明します。"
 ms.date: 05/16/2016
-ms.openlocfilehash: 05d385ddfc98a910779a6f59949a7187c38f0812
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08107966ddc2f55625347deb92d224b286df7761
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772685"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641951"
 ---
 # <a name="exceptions-the-failwith-function"></a>例外:failwith 関数
 

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - nullable types [Visual Basic]
 - data types [Visual Basic], nullable
 ms.assetid: 9ac3b602-6f96-4e6d-96f7-cd4e81c468a6
-ms.openlocfilehash: d17d2ad3fd99c6d563c21ddd646396ccb1c1ca48
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 46564d2c509fe2b53b9662ee441ab8b85fccc693
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008229"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642134"
 ---
 # <a name="nullable-value-types-visual-basic"></a>null 許容値型 (Visual Basic)
 

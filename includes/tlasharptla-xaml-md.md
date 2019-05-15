@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 51c5734ea5783831db4ff90a710fd1eb28dc0a87
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e11e3b30f19011511c6280a35d54a2f5904f581b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696266"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672451"
 ---
 Extensible Application Markup Language (XAML)

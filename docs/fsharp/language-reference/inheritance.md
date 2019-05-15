@@ -2,12 +2,12 @@
 title: 継承
 description: "'Inherit' キーワードを使用して F# 継承リレーションシップを指定する方法について説明します。"
 ms.date: 05/16/2016
-ms.openlocfilehash: 775ee52039caf4c4ab65f82fa21d4e536135a12a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2fad2ddafbc0174903d3d24be3ce5412f7e1f9ed
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937463"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641819"
 ---
 # <a name="inheritance"></a>継承
 
@@ -62,7 +62,7 @@ override [self-identifier].[method-name] [argument-list] = [method-body]
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-1/snippet2602.fs)]
 
-複数のコンス トラクターの場合、次のコードを使用していることができます。 派生クラスのコンス トラクターの最初の行は、`inherit`句と、フィールドで宣言された明示的なフィールドとして表示されます、`val`キーワード。 詳細については、次を参照してください。[明示的なフィールド:`val`キーワード](members/explicit-fields-the-val-keyword.md)します。
+複数のコンストラクターの場合、次のコードを使用していることができます。 派生クラスのコンストラクターの最初の行は、`inherit`句と、フィールドで宣言された明示的なフィールドとして表示されます、`val`キーワード。 詳細については、次を参照してください。[明示的なフィールド:`val`キーワード](members/explicit-fields-the-val-keyword.md)します。
 
 ```fsharp
 type BaseClass =

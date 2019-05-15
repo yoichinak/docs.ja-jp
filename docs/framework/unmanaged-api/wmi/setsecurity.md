@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7200e3a19fcadabb5e149c38b620b3f60907c392
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5cecd8538b8f2b5d04cb9f1822751661ce9f8728
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948540"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636216"
 ---
 # <a name="setsecurity-function"></a>SetSecurity 関数
 

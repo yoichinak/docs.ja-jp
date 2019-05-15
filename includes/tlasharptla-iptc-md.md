@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: c007597bd593aee3e0ae1dedb2f0b6a2448da7a4
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 1cef49480e5b3d8483d4b8cf9d659a5d3713c1ef
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "25704789"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670981"
 ---
 国際新聞通信委員会 (IPTC)

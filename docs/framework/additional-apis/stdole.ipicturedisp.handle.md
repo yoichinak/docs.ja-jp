@@ -10,12 +10,12 @@ api_location:
 - stdole.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 6b56403809bf70ec3902f1061f3d125471e9cb55
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27a081b0faee348d8ff2064aa473fef315ee5d1c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675209"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634404"
 ---
 # <a name="ipicturedisphandle-property"></a>IPictureDisp.Handle プロパティ
 

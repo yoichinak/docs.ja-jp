@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c09b1e99-21b5-4d96-9c04-ec31db3f4436
-ms.openlocfilehash: 48df9b90a92468858bd3ac5498bd83fd0d57fe75
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6d74af6af6cea0d65c33db67ecbfd71ac1d5c346
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62009800"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636956"
 ---
 # <a name="how-to-create-an-activity"></a>方法: アクティビティを作成する
 

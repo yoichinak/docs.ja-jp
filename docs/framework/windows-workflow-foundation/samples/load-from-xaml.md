@@ -2,12 +2,12 @@
 title: XAML からの読み込み
 ms.date: 03/30/2017
 ms.assetid: 1f103ef6-7bed-4f16-ae52-9e665c5a43d7
-ms.openlocfilehash: 5a3b3673812c0b5500a13ae9ce79ce8206aa4834
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e0cac1b6dfb9568ba08079cf5194b3432eea856f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004888"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637713"
 ---
 # <a name="load-from-xaml"></a>XAML からの読み込み
 このサンプルでは、XamlBuildTask ツールを実行することなく、XAML ワークフローを動的に読み込む方法を示します。 代わりに、このサンプルでは <xref:System.Activities.XamlIntegration.ActivityXamlServices.Load%2A> メソッドを呼び出します。 このサンプルは、Windows Presentation Foundation (WPF) クライアント アプリケーションを使用して XAML ワークフローを読み込む、<xref:System.Activities.XamlIntegration.ActivityXamlServices>クラスし、それらを実行します。 <xref:System.Activities.XamlIntegration.ActivityXamlServices> クラスを使用して XAML ワークフローが読み込まれると、実行可能な <xref:System.Activities.DynamicActivity%601> が返されます。

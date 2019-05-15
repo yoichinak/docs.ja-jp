@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: de1acafde57da0534201e1656e9c5b0d62a0ae8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: db5ad1eae510ed1b2614fc2ef77f9294bb8b937e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757863"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671696"
 ---
 Windows XP Home Edition、Windows XP Professional、Windows Server 2003

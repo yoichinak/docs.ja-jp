@@ -1,15 +1,13 @@
 ---
 title: ハイブリッド クラウド シナリオへの移行
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |ハイブリッド クラウドのシナリオへの移行します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/30/2018
-ms.openlocfilehash: 6cba29ad654b09b01f9b6969fa6688dd5f165fbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 04c618681c61f5584e641e0a4735e1261ab34fa3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636587"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643716"
 ---
 # <a name="migrate-to-hybrid-cloud-scenarios"></a>ハイブリッド クラウド シナリオへの移行
 

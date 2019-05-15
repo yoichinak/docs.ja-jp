@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8a1d082cae19bd83c90e063d841a0c9e4602bc40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db325296d85dc6d4780583731a6cab10fb884fd1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62040704"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636482"
 ---
 # <a name="createinstanceenumwmi-function"></a>CreateInstanceEnumWmi 関数
 

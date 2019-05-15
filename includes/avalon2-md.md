@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 07439a554abfd0a5b6ae407d2d029d2e4a0970cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: b68d99522245fbbd50675927b4d63f97b2fb1cca
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61808264"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637669"
 ---
 WPF
