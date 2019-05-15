@@ -2,12 +2,12 @@
 title: LINQ to XML の概要 (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: 502661e0-bc5d-438d-94c2-7efb63bb6fbd
-ms.openlocfilehash: 0de0180b9863bbc709dad6bec1f6ad4dd5876978
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4b40acaaf3787e67e4d6efb1efb1ecd4f117427
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610718"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586328"
 ---
 # <a name="linq-to-xml-overview-visual-basic"></a>LINQ to XML の概要 (Visual Basic)
 XML は、多くのコンテキストでデータを書式設定する方法として広く採用されてきました。 たとえば、Web、構成ファイル、Microsoft Office Word ファイル、データベースで XML が使用されています。  
@@ -20,7 +20,7 @@ XML は、多くのコンテキストでデータを書式設定する方法と�
  熟練した開発者は、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用することで生産性を大きく高めることができます。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用すると、より少ないコードで、表現性と簡潔性に優れた強力なコードを記述できます。 また、同時に複数のデータ ドメインからクエリ式を使用できます。  
   
 ## <a name="what-is-linq-to-xml"></a>LINQ to XML とは  
- [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] プログラミング言語から XML を操作できるようにする、LINQ に対応したメモリ内 XML プログラミング インターフェイスです。  
+ [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] LINQ が有効なメモリ内 XML プログラミング インターフェイスから .NET Framework 内での XML を使用することができるプログラミング言語を使用します。  
   
  [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は、XML ドキュメントをメモリに読み込むという点で、ドキュメント オブジェクト モデル (DOM) に似ています。 ドキュメントに対するクエリや変更を行うことができ、変更したドキュメントをファイルに保存したり、シリアル化してインターネット経由で送信したりできます。 ただし、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] は DOM とは異なります。軽量である新しいオブジェクト モデルを提供し、使用すると、操作を簡単に利用している言語機能の Visual Basic で。  
   

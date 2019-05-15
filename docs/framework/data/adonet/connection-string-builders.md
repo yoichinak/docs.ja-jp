@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8434b608-c4d3-43d3-8ae3-6d8c6b726759
-ms.openlocfilehash: 17ef057fccbea48da698e0ecfa5c789e125adbb0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8788c97842d157e09f7058411db43f86c66769cd
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62034542"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583806"
 ---
 # <a name="connection-string-builders"></a>接続文字列ビルダー
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の以前のバージョンでは、コンパイル時に文字列の値を連結した接続文字列のチェックが行われなかったために、実行時に不正なキーワードによる <xref:System.ArgumentException> が発生していました。 接続文字列のキーワードの構文は [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のデータ プロバイダーごとに異なるため、有効な接続文字列を手動で作成するのが難しいという問題がありました。 この問題に対処するため、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] 2.0 では、各 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダー用の新しい接続文字列ビルダーが導入されました。 各データ プロバイダーは、<xref:System.Data.Common.DbConnectionStringBuilder> から継承した、厳密に型指定された接続文字列ビルダー クラスを提供しています。 次の表は、各 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダーおよび対応する接続文字列ビルダー クラスの一覧です。  
+[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の以前のバージョンでは、コンパイル時に文字列の値を連結した接続文字列のチェックが行われなかったために、実行時に不正なキーワードによる <xref:System.ArgumentException> が発生していました。 .NET Framework データ プロバイダーの各接続文字列キーワードは、構築の有効な接続文字列を手動で行う場合は、困難に異なる構文がサポートされています。 この問題に対処する[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0 には、各 .NET Framework データ プロバイダー用の新しい接続文字列ビルダーがで導入されました。 各データ プロバイダーは、<xref:System.Data.Common.DbConnectionStringBuilder> から継承した、厳密に型指定された接続文字列ビルダー クラスを提供しています。 次の表は、.NET Framework データ プロバイダーと、関連付けられている接続文字列ビルダー クラスを示します。  
   
 |プロバイダー|ConnectionStringBuilder クラス|  
 |--------------|-----------------------------------|  

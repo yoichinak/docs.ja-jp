@@ -9,12 +9,12 @@ helpviewer_keywords:
 - columns [Windows Forms], customizing in DataGridView control
 - cells [Windows Forms], customizing in DataGridView control
 ms.assetid: 9b7dc7b6-5ce6-4566-9949-902f74f17a81
-ms.openlocfilehash: ae55752a5a317b749c755ea5f4f479a9faec5745
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecf8fb93688c0e7566083f43581ada8dce53d2ca
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648176"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589587"
 ---
 # <a name="how-to-customize-cells-and-columns-in-the-windows-forms-datagridview-control-by-extending-their-behavior-and-appearance"></a>方法: Windows フォーム DataGridView コントロールのセルと列を、それぞれの動作と外観を拡張してカスタマイズする
 <xref:System.Windows.Forms.DataGridView> コントロールは、プロパティ、イベント、およびコンパニオン クラスを使用して外観と動作をカスタマイズする様々な方法を提供します。 場合によっては、これらの機能が提供するもの以外にも、セルの要件がある場合があります。 独自のカスタム <xref:System.Windows.Forms.DataGridViewCell> クラスを作成して、拡張機能を提供することができます。  
@@ -67,9 +67,7 @@ ms.locfileid: "64648176"
  この例で必要な要素は次のとおりです。  
   
 - System、System.Windows.Forms、および System.Drawing の各アセンブリへの参照。  
-  
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。
-  
+ 
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.DataGridView>

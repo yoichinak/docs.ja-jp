@@ -9,12 +9,12 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: d7c3bcba8e62d62904ed778a48d0e8ae6738ce00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b64c55b73a9c835ded0d7c81ff36329b8d6a8bc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794000"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586548"
 ---
 # <a name="-netcf"></a>-netcf
 
@@ -28,7 +28,7 @@ ms.locfileid: "61794000"
 
 ## <a name="remarks"></a>Remarks
 
-`-netcf`オプションは、ターゲットに Visual Basic コンパイラ、[!INCLUDE[Compact](~/includes/compact-md.md)]完全ではなく[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。 言語機能は、完全にのみ存在する[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]は無効です。
+`-netcf`オプションは、ターゲットに Visual Basic コンパイラ、[!INCLUDE[Compact](~/includes/compact-md.md)]完全な .NET Framework ではなく。 完全な .NET Framework でのみ存在する言語機能は無効です。
 
 `-netcf`オプションがと共に使用するように設計[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)します。 無効になっている言語機能`-netcf`同じ言語機能を対象となるファイルに存在しない`-sdkpath`します。
 

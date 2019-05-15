@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: bb7a42ab-6bd9-4c5c-b734-5546d51f8669
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 697cd40482aee73fd150359acb710ffc258c3df2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82898e80f5acb2cb0dcab65390701efc8d48115b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61908675"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586563"
 ---
 # <a name="how-to-enumerate-time-zones-present-on-a-computer"></a>方法: コンピューター上に存在するタイム ゾーンを列挙する
 
@@ -62,8 +62,6 @@ Windows アプリケーションを例に示します。
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
 この例で必要な要素は次のとおりです。
-
-* System.Core.dll への参照をプロジェクトに追加します。
 
 * 次の名前空間は、インポートします。
 

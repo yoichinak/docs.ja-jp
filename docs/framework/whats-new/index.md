@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3dec3cea200f388a904296542776a02d838b3e19
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 0c4a4ba28116965db1d4dfdef3cdfb0496aad123
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063868"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557924"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 

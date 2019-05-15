@@ -2,17 +2,17 @@
 title: OLE DB データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: 04bcb259-59d3-4fd7-894d-4f0dd0c68069
-ms.openlocfilehash: 09fab7c5df99ffdb0aef6d32a8ad5ca1ed446d42
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a5c4b7264b9f8abb842fff3295d53ed8ab626671
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772061"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584525"
 ---
 # <a name="ole-db-data-type-mappings"></a>OLE DB データ型のマッピング
-.NET Framework Data Provider for ADO および OLE DB ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]) のデータ型から推論される <xref:System.Data.OleDb> の型を次の表に示します。 <xref:System.Data.OleDb.OleDbDataReader> の型指定されたアクセサー メソッドも示します。  
+次の表は、.NET Framework Data Provider for ADO および OLE DB からのデータ型の推定の .NET Framework 型を示します (<xref:System.Data.OleDb>)。 <xref:System.Data.OleDb.OleDbDataReader> の型指定されたアクセサー メソッドも示します。  
   
-|ADO 型|OLE DB 型|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型|[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の型指定されたアクセサー|  
+|ADO 型|OLE DB 型|.NET Framework 型|.NET framework の型指定されたアクセサー|  
 |--------------|-----------------|----------------------------------------------------------------------|--------------------------------------------------------------------------------|  
 |adBigInt|DBTYPE_I8|Int64|GetInt64()|  
 |adBinary|DBTYPE_BYTES|Byte[]|GetBytes()|  
@@ -29,7 +29,7 @@ ms.locfileid: "61772061"
 |adDouble|DBTYPE_R8|倍精度浮動小数点型|GetDouble()|  
 |adError|DBTYPE_ERROR|ExternalException|GetValue()|  
 |adFileTime|DBTYPE_FILETIME|DateTime|GetDateTime()|  
-|adGUID|DBTYPE_GUID|Guid|GetGuid()|  
+|adGUID|DBTYPE_GUID|GUID|GetGuid()|  
 |adIDispatch|DBTYPE_IDISPATCH *|Object|GetValue()|  
 |adInteger|DBTYPE_I4|Int32|GetInt32()|  
 |adIUnknown|DBTYPE_IUNKNOWN *|Object|GetValue()|  

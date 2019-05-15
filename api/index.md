@@ -8,12 +8,12 @@ quickFilterColumn3: azure-dotnet,aspnetcore-2.2,ml-dotnet
 ms.topic: landing-page
 ms.custom: updateeachrelease
 ms.date: 04/02/2019
-ms.openlocfilehash: f8677ba0b1896df292c656900b914e6f00b221d3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92288ebb5a299b3091bff447f7f435ebc55fbc6a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61637948"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632323"
 ---
 # <a name="net-api-browser"></a>.NET API ブラウザー
 

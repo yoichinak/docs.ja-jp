@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: f823d9e80eb644487eab1ed84345dd8bdc10efc2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600941"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589824"
 ---
 # <a name="value-types-and-reference-types"></a>値型と参照型
 Visual basic でのデータ型は、分類に基づいて実装されます。 Visual Basic のデータ型は、特定の型の変数が独自のデータまたはデータへのポインターを格納するかどうかに基づいて分類できます。 独自のデータを格納する場合は、*値の型*別の場所はメモリ内のデータへのポインターを保持する場合、*参照型*。  
@@ -46,7 +46,7 @@ Visual basic でのデータ型は、分類に基づいて実装されます。 
   
 - デリゲート  
   
- クラスは、*参照型*します。 参照型など、このため、`Object`と`String`でサポートされている[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]クラス。 場合でも、そのメンバーが値型は、すべての配列が参照型であるに注意してください。  
+ クラスは、*参照型*します。 参照型など、このため、`Object`と`String`は .NET Framework のクラスでサポートされています。 場合でも、そのメンバーが値型は、すべての配列が参照型であるに注意してください。  
   
  使用する必要がありますすべての参照型は、基になる .NET Framework クラスを表すため、 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)初期化するときに、キーワード。 次のステートメントでは、配列を初期化します。  
   

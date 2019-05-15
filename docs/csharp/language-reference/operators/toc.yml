@@ -13,14 +13,14 @@
     - name: 等値演算子
       href: equality-operators.md
       displayName: '==, !='
-    - name: '[] 演算子'
-      href: index-operator.md
+    - name: 比較演算子
+      href: comparison-operators.md
+      displayName: '>, <, >=, <=, greater, less'
+    - name: メンバー アクセス演算子
+      href: member-access-operators.md
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, invocation'
     - name: () 演算子
       href: invocation-operator.md
-    - name: . 演算子
-      href: member-access-operator.md
-    - name: '?. および ?[] 演算子'
-      href: null-conditional-operators.md
     - name: '::演算子'
       href: namespace-alias-qualifer.md
     - name: + 演算子
@@ -33,16 +33,8 @@
       href: and-operator.md
     - name: = 演算子
       href: assignment-operator.md
-    - name: < 演算子
-      href: less-than-operator.md
-    - name: '> 演算子'
-      href: greater-than-operator.md
     - name: '?:演算子'
       href: conditional-operator.md
-    - name: <= 演算子
-      href: less-than-equal-operator.md
-    - name: '>= 演算子'
-      href: greater-than-equal-operator.md
     - name: += 演算子
       href: addition-assignment-operator.md
     - name: '-= 演算子'

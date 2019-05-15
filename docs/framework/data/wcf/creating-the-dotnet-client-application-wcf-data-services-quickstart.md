@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 41ade767-eeab-437d-9121-9797e8fb8045
-ms.openlocfilehash: 19506d051442dc841a28c14f212addf66af71cf5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 50e8d24698bd8451b90da05ffe52b473a13b3a20
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750816"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583612"
 ---
 # <a name="creating-the-net-framework-client-application-wcf-data-services-quickstart"></a>.NET Framework クライアント アプリケーションの作成 (WCF Data Services クイック スタート)
 
@@ -84,7 +84,7 @@ ms.locfileid: "64750816"
 
 サンプルの Northwind OData フィードにアクセスするクライアント アプリケーションが正常に作成しました。 WCF Data Services クイック スタートも完了しました。
 
-OData へのアクセスの詳細についてはフィードから、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アプリケーションを参照してください[WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)します。
+OData へのアクセスの詳細については、.NET Framework アプリケーションからフィードを参照してください[WCF Data Services クライアント ライブラリ](../../../../docs/framework/data/wcf/wcf-data-services-client-library.md)します。
 
 ## <a name="see-also"></a>関連項目
 

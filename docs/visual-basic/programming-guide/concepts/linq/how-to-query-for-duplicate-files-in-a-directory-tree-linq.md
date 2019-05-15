@@ -2,12 +2,12 @@
 title: '方法: クエリ (LINQ) (Visual Basic) ディレクトリ ツリーで重複するファイル'
 ms.date: 07/20/2015
 ms.assetid: 387d7c97-95dd-4a50-9761-7e9cf8ae9e6a
-ms.openlocfilehash: 81955b18755f41a582aed7768c709c8e77cffba6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 192f279a74cfbbd35e67d8f166a3d35248409459
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024340"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586333"
 ---
 # <a name="how-to-query-for-duplicate-files-in-a-directory-tree-linq-visual-basic"></a>方法: クエリ (LINQ) (Visual Basic) ディレクトリ ツリーで重複するファイル
 同じ名前のファイルが複数のフォルダーに存在することがあります。 たとえば、Visual Studio インストール フォルダーでは、複数のフォルダーに readme.htm ファイルが含まれています。 次の例は、指定したルート フォルダーの下で、このような重複したファイル名をクエリする方法を示しています。 また、2 番目の例では、名前のほかにサイズと作成時刻が一致するファイルをクエリする方法を示します。  
@@ -101,7 +101,7 @@ End Module
  最初のクエリでは、単純なキーを使用して一致を判断します。これにより、同じ名前を持つファイルが検索されますが、この場合、各ファイルの内容が一致するとは限りません。 2 番目のクエリでは、複合キーを使用して、<xref:System.IO.FileInfo> オブジェクトの 3 つのプロパティと照合します。 このクエリでは、名前が同じで、内容も類似または一致するファイルが検索される可能性が高くなります。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll および System.Linq 名前空間の `Imports` ステートメントを参照設定します。  
+VB.NET コンソール アプリケーション プロジェクトを作成、 `Imports` System.Linq 名前空間のステートメント。
   
 ## <a name="see-also"></a>関連項目
 

@@ -5,22 +5,22 @@ helpviewer_keywords:
 - controls [Windows Forms]
 - Windows Forms controls, list of
 ms.assetid: dec51976-eae0-4398-a537-20bca7974722
-ms.openlocfilehash: a05ddd714e85491d29aa5de574b4cdc36165c224
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: 3d8e6d37a5c27eac6af303819fb50b28acd225c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469524"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589048"
 ---
 # <a name="controls-to-use-on-windows-forms"></a>Windows フォームで使用するコントロール
 Windows フォームで使うことができるコントロールとコンポーネントのアルファベット順の一覧を次に示します。 このセクションで説明する Windows フォーム コントロールに加えて、ActiveX コントロールとカスタム コントロールを Windows フォームに追加できます。 必要なコントロールがここで見つからない場合は、独自に作成することもできます。 詳しくは、「[デザイン時の Windows フォーム コントロールの開発](developing-windows-forms-controls-at-design-time.md)」をご覧ください。 必要なコントロールの選択について詳しくは、「[Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)」をご覧ください。  
   
 > [!NOTE]
->  Visual Basic のコントロールによって提供されるクラスに基づく、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]します。  
+>  Visual Basic のコントロールは、.NET Framework によって提供されるクラスに基づいています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Windows フォーム コントロールの機能別一覧](windows-forms-controls-by-function.md)  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] に基づく Windows フォーム コントロールの一覧を示して説明します。  
+ .NET Framework に基づく Windows フォーム コントロールを示しています。  
   
  [組み込みのオーナー描画サポートを備えたコントロール](controls-with-built-in-owner-drawing-support.md)  
  コントロールの外観のうち、プロパティでは使用できない部分を変更する方法について説明します。  
@@ -168,7 +168,7 @@ Windows フォームで使うことができるコントロールとコンポー
  ドッキングされたコントロールのサイズを変更できます。  
   
  [Splitter コントロール](splitter-control-windows-forms.md)  
- ドッキングされたコントロールのサイズを変更できます ([!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] バージョン 1.x)。  
+ ドッキングされたコントロールのサイズを変更するユーザーは、(.NET Framework のバージョン 1.x)。  
   
  [StatusBar コントロール](statusbar-control-windows-forms.md)  
  フォーカスを持つコントロールに関するステータス情報を表示します。 <xref:System.Windows.Forms.StatusStrip> コントロールは、以前のバージョンの <xref:System.Windows.Forms.StatusBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.StatusBar> コントロールも、下位互換性を保つ目的および必要に応じて将来使用する目的で保持されます。  

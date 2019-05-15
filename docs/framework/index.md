@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f61f02f2-2f20-483d-8f56-a9c8f3a54986
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6e21d2514ad357c906885750d9320575bdb75b9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9d93dea42dbb854d8d52bd5cf3e54d1ce0d892d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61643934"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635526"
 ---
 # <a name="net-framework-guide"></a>.NET Framework ガイド
 
@@ -28,7 +28,7 @@ ms.locfileid: "61643934"
 
 ユーザーと開発者のための .NET Framework の概要については、「[.NET Framework の概要](./get-started/index.md)」を参照してください。 .NET Framework のアーキテクチャおよび主要機能の概要については、[「.NET Framework overview の概要」](./get-started/overview.md) を参照してください。
 
-.NET Framework は、Docker との併用および [Windows コンテナー](/virtualization/windowscontainers/about/)との併用が可能です。 Docker コンテナーでアプリケーションを実行する方法については、「[Deploying .NET Framework applications with Docker](./docker/index.md)」 (Docker を使用して .NET Framework アプリケーションを配置する) を参照してください。
+.NET Framework は、Docker との併用および [Windows コンテナー](/virtualization/windowscontainers/about/)との併用が可能です。
 
 ## <a name="installation"></a>インストール
 
@@ -51,9 +51,6 @@ ms.locfileid: "61643934"
 
 * [移行ガイド](./migration-guide/index.md)  
 アプリケーションを新しいバージョンの .NET Framework に移行する場合に検討する必要のあるリソースと変更の一覧を示します。
-
-* [Docker 上の .NET Framework のガイド](./docker/index.md)  
-Windows コンテナーを使用して Docker で .NET Framework アプリケーションを実行するためのリソースを提供します。
 
 * [開発ガイド](./development-guide.md)  
 アプリケーションの作成、構成、デバッグ、セキュリティ、配置、および動的プログラミング、相互運用性、拡張性、メモリ管理、スレッド処理に関する情報を含む、アプリケーション開発用の主要な技術領域とタスクのすべてについての手引書です。

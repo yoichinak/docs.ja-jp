@@ -11,12 +11,12 @@ helpviewer_keywords:
 - forms [Windows Forms], creating resizable
 - Windows Forms, resizable
 ms.assetid: babdf198-404c-485d-a914-ed370c6ecd99
-ms.openlocfilehash: 724dfa79358548530eab49683f1cb2db55f889c8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b27c0e67aae1935c4216654d9f3ddf557719572
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625975"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588938"
 ---
 # <a name="how-to-create-a-resizable-windows-form-for-data-entry"></a>方法: データ入力用のサイズ変更可能な Windows フォームを作成する
 レイアウトが優れていると、その親フォームの寸法の変更に柔軟に対応できます。 <xref:System.Windows.Forms.TableLayoutPanel> コントロールを使用すると、フォームの寸法の変更に応じて一貫した方法でコントロールの位置とサイズが変更されるように、フォームのレイアウトを調整できます。 <xref:System.Windows.Forms.TableLayoutPanel> コントロールは、コントロールの内容の変更によってレイアウトの変更が生じる場合にも便利です。 この手順で説明するプロセスは、Visual Studio 環境内で実行できます。  [チュートリアル: データ エントリのサイズ変更可能な Windows フォームを作成する](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/991eahec(v=vs.100))します。  
@@ -32,8 +32,6 @@ ms.locfileid: "64625975"
  この例で必要な要素は次のとおりです。  
   
 - System、System.Data、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
-  
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 02d55147-9b3a-4557-a45f-fa936fadae3b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb51a0be57992d65a88e958d76a5e371dc028a00
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b1cda82125a2d4a6eb3102b01bea639a4f3e3df
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61871450"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636085"
 ---
 # <a name="migration-guide-to-the-net-framework-48-47-46-and-45"></a>.NET Framework 4.8、4.7、4.6、4.5 移行ガイド
 

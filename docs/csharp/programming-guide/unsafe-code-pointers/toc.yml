@@ -4,12 +4,12 @@
     - name: 固定サイズ バッファー
       href: fixed-size-buffers.md
     - name: ポインター型
-      href: pointer-types.md
       items:
+        - name: 概要
+          href: pointer-types.md
         - name: ポインター変換
           href: pointer-conversions.md
         - name: ポインター式
-          href: pointer-expressions.md
           items:
             - name: '方法: ポインター変数の値を取得する'
               href: how-to-obtain-the-value-of-a-pointer-variable.md
@@ -20,7 +20,6 @@
             - name: '方法: ポインターを使用して配列要素にアクセスする'
               href: how-to-access-an-array-element-with-a-pointer.md
             - name: ポインターの操作
-              href: manipulating-pointers.md
               items:
                 - name: '方法: ポインターのインクリメントとデクリメント'
                   href: how-to-increment-and-decrement-pointers.md

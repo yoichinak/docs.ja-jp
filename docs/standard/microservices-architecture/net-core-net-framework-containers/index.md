@@ -1,15 +1,13 @@
 ---
 title: Docker コンテナー用 .NET Core と .NET Framework の選択
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Docker コンテナー用 .NET Core と .NET Framework の選択'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/11/2018
-ms.openlocfilehash: e71739b06275d4ee786d246004930d7b66fbc72b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 771d23cf4610e5778f0a144386754ce10d6ae144
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62019608"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639019"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-docker-containers"></a>Docker コンテナー用 .NET Core と .NET Framework の選択
 

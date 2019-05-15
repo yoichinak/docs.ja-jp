@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, programming concepts
 - C# language, concepts
 ms.assetid: ac0f23a2-6bf3-4077-be99-538ae5fd3bc5
-ms.openlocfilehash: 701086c76d4e7b811ca67a9dd2112e69a45ba254
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a31b1dc01fe1f9d9dd97775ae3c65f762b167079
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61679948"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65635266"
 ---
 # <a name="c-programming-guide"></a>C# プログラミング ガイド
 このセクションでは、C# 言語の重要な機能に関する詳細と、.NET Framework 経由でアクセスできる C# の機能について説明します。  
@@ -66,7 +66,7 @@ ms.locfileid: "61679948"
   
  [アンセーフ コードとポインター](../../csharp/programming-guide/unsafe-code-pointers/index.md)  
   
- [XML ドキュメント コメント](../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)  
+ [XML ドキュメント コメント](../../csharp/programming-guide/xmldoc/index.md)  
   
 ## <a name="platform-sections"></a>プラットフォーム セクション  
  [アプリケーション ドメイン](../../framework/app-domains/application-domains.md)  

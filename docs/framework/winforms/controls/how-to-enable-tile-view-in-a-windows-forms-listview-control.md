@@ -11,12 +11,12 @@ helpviewer_keywords:
 - Windows Forms, controls
 - ListView control [Windows Forms], tile view
 ms.assetid: c20e67a3-2d94-413d-9fcf-ecbd0fe251da
-ms.openlocfilehash: 3244f9560467de7a63b22d279a3fd277fd14876c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd152d19567806cf1cc7b1b38d9a3c0e47d2a960
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64609733"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591690"
 ---
 # <a name="how-to-enable-tile-view-in-a-windows-forms-listview-control"></a>方法: Windows フォーム ListView コントロールの "並べて表示" ビューを有効にする
 <xref:System.Windows.Forms.ListView> コントロールの並べて表示ビュー機能を使用すると、グラフィカルな情報とテキスト情報をバランスよく表示できます。 並べて表示ビューの項目で表示されるテキスト情報は、詳細ビュー用に定義されている列情報と同じ情報です。 並べて表示ビューは、<xref:System.Windows.Forms.ListView> コントロールのグループ化機能または挿入マーク機能のいずれかと組み合わせて使用できます。  
@@ -55,8 +55,6 @@ ms.locfileid: "64609733"
 - System アセンブリおよび System.Windows.Forms アセンブリへの参照。  
   
 - book.ico という名前のアイコン ファイルは、実行可能ファイルと同じディレクトリにあります。  
-  
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -3,12 +3,12 @@ title: ML.NET 使い方ガイド
 description: カスタム AI ソリューションの作成と、.NET アプリケーションへの Machine Learning 統合を支援するための、特定のタスクを実行する方法について説明します。
 ms.custom: seodec18
 ms.date: 03/01/2019
-ms.openlocfilehash: 83188e65ccd02e6928cb4b87577105a75ee96245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c16adf6bf85aec1aef51751c6d4fe8c7f0f3c9f4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649148"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645030"
 ---
 # <a name="net-machine-learning-how-to-guides"></a>.NET の機械学習に関するハウツー ガイド 
 

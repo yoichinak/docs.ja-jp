@@ -9,12 +9,12 @@ helpviewer_keywords:
 - images [Windows Forms], rotating
 - images [Windows Forms], skewing
 ms.assetid: a3bf97eb-63ed-425a-ba07-dcc65efb567c
-ms.openlocfilehash: 505028c491228ffdf9c11d0c71dcd5e1afdc5103
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80ac92d545d9be7a4a611038eaaadbbdbe2e8ecf
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967185"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590331"
 ---
 # <a name="how-to-rotate-reflect-and-skew-images"></a>方法: イメージを回転、反転、および傾斜させる
 回転、反転、および元のイメージの左上隅や右、左下角の終点を指定することで、イメージを傾けることができます。 次の 3 つの終点では、平行四辺形に元の四角形のイメージをマップするアフィン変換を決定します。  
@@ -46,7 +46,7 @@ ms.locfileid: "61967185"
  [!code-vb[System.Drawing.WorkingWithImages#61](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.WorkingWithImages/VB/Class1.vb#61)]  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.PaintEventArgs> イベント ハンドラーのパラメーターである `e`<xref:System.Windows.Forms.Control.Paint> を必要とします。 置き換えてください`Stripes.bmp`システム上で有効であるイメージへのパス。  
+ 前の例は、Windows フォームで使用するために設計されていて、<xref:System.Windows.Forms.Control.Paint> イベント ハンドラーのパラメーターである <xref:System.Windows.Forms.PaintEventArgs> `e` を必要とします。 置き換えてください`Stripes.bmp`システム上で有効であるイメージへのパス。  
   
 ## <a name="see-also"></a>関連項目
 

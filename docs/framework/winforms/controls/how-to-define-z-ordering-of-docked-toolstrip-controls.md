@@ -10,12 +10,12 @@ helpviewer_keywords:
 - toolbars [Windows Forms], specifying z-order
 - z-order
 ms.assetid: 8b595429-ba9f-46af-9c55-3d5cc53f7fff
-ms.openlocfilehash: b7643c9599ceeba08cbe9f5580739043f6d89edc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 514c9dd1c91adcadf6f5d383ba734886dec3151d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666327"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591910"
 ---
 # <a name="how-to-define-z-ordering-of-docked-toolstrip-controls"></a>方法: ドッキングされた ToolStrip コントロールの Z オーダーを定義する
 ドッキングを使用して <xref:System.Windows.Forms.ToolStrip> コントロールを正しく配置するには、フォームの z オーダーでコントロールを正しく配置する必要があります。  
@@ -39,8 +39,6 @@ ms.locfileid: "64666327"
  この例で必要な要素は次のとおりです。  
   
 - System.Design、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
-  
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,15 +1,13 @@
 ---
 title: .NET マイクロサービス。 コンテナー化された .NET アプリケーションのアーキテクチャ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスはモジュール式で独自に展開可能なサービスです。 Docker コンテナー (Linux と Windows 向け) は、サービスとその依存関係を 1 つの単位にバンドル化する (その後、分離された環境で実行される) ことで、展開とテストを簡略化します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: e1b36f5a6ddc2176e344dfe2a216429190dcc1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bbd72b02ae446bbd0df31889679023d3b5040db8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615142"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644406"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ
 

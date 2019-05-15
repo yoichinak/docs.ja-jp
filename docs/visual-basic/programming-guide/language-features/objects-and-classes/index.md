@@ -5,12 +5,12 @@ helpviewer_keywords:
 - classes [Visual Basic]
 - objects [Visual Basic]
 ms.assetid: c68c5752-1006-46e1-975a-6717b62a42fc
-ms.openlocfilehash: ec5825dacaf67ee2544302f4f95a1b341ecf1bf7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 216de8f70e0ad6856bf5d708347a7e5f852fe4c6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753618"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591570"
 ---
 # <a name="objects-and-classes-in-visual-basic"></a>Visual Basic のオブジェクトとクラス
 
@@ -176,7 +176,7 @@ safetyTimer.Start()
 
 オブジェクトを使用すると、変数とプロシージャを 1 度宣言した後、必要に応じていつでもそれらを再利用できます。 たとえば、スペル チェック機能をアプリケーションに追加する場合は、スペル チェック機能を提供するためのすべての変数とサポート機能を定義することができます。 スペル チェック機能をクラスとして作成した場合は、コンパイルされたアセンブリへの参照を追加することで、他のアプリケーションで再利用できます。 さらに、誰かが既に開発したスペル チェック機能のクラスを使用することで、作業の手間を省くことができます。
 
-[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] には、使用可能なコンポーネントの例が多数用意されています。 次の例では、<xref:System> 名前空間に <xref:System.TimeZone> クラスが使用されています。 <xref:System.TimeZone> は、現在のコンピューター システムのタイム ゾーンに関する情報を取得できるメンバーを提供します。
+.NET Framework では、使用可能なコンポーネントの多くの例を示します。 次の例では、<xref:System> 名前空間に <xref:System.TimeZone> クラスが使用されています。 <xref:System.TimeZone> は、現在のコンピューター システムのタイム ゾーンに関する情報を取得できるメンバーを提供します。
 
 ```vb
 Public Sub examineTimeZone()

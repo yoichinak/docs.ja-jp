@@ -13,12 +13,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 5b56e2aa-dc05-444f-930c-2d7b23f9ad5b
-ms.openlocfilehash: a27c6d83a6a132ed5a83031d469e2f527b730d49
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77f75a7eb1d7cc536df7110ef55727fbdf789f23
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638374"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591604"
 ---
 # <a name="how-to-run-an-operation-in-the-background"></a>方法: バックグラウンドで操作を実行する
 完了に長い時間がかかる操作を実行しており、ユーザー インターフェイスで遅延が発生しないようにするには<xref:System.ComponentModel.BackgroundWorker> クラスを使用して別のスレッドで操作を実行できます。  
@@ -37,8 +37,6 @@ ms.locfileid: "64638374"
  この例で必要な要素は次のとおりです。  
   
 - System、System.Drawing、および System.Windows.Forms の各アセンブリへの参照。  
-  
- Visual Basic または Visual C# からこの例をビルドする方法については、[コマンド ラインからのビルド](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)、または[csc.exe を使用したコマンド ラインからのビルド](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md) を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 

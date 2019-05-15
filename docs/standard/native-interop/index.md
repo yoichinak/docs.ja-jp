@@ -4,12 +4,12 @@ description: .Net のネイティブ コンポーネントとやり取りする�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 29aacc9210b4103f379b7776c36fc3c29b9e6dec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b01ea9c17db6da32755309d9c1c2359cecaa1155
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973559"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062713"
 ---
 # <a name="native-interoperability"></a>ネイティブ相互運用性
 
@@ -29,5 +29,5 @@ ms.locfileid: "61973559"
 ## <a name="see-also"></a>関連項目
 
 - [プラットフォーム呼び出し (P/Invoke)](pinvoke.md)
-- [型のマーシャリング](type-marshalling.md)
+- [型のマーシャリング](type-marshaling.md)
 - [ネイティブ相互運用性のベスト プラクティス](best-practices.md)

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - events [Visual Basic], about events
 - events [Visual Basic]
 ms.assetid: 8fb0353a-e41b-4e23-b78f-da65db832f70
-ms.openlocfilehash: 5986923b10700b1795886c24343a4b45e6bff46e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76d074d2870a2d7efa62516b5868cdd7faaacd79
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616700"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586709"
 ---
 # <a name="events-visual-basic"></a>イベント (Visual Basic)
 ほとんどのプログラムを実際には、シーケンスで実行するプロシージャのデータ系列として Visual Studio プロジェクトを視覚化する可能性がありますはイベント ドリブン-つまりの実行フローは外部の出現回数と呼ばれるによって決まります*イベント*します。  
@@ -104,6 +104,6 @@ ms.locfileid: "64616700"
 |[方法: ブロックを回避するためにカスタム イベントを宣言します。](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-avoid-blocking.md)|イベント ハンドラーを非同期に呼び出すことができるカスタム イベントの定義方法を示します。|  
 |[方法: カスタム イベントを宣言してメモリを節約する](../../../../visual-basic/programming-guide/language-features/events/how-to-declare-custom-events-to-conserve-memory.md)|イベントを処理するときにのみ、メモリを使用するカスタム イベントを定義する方法を示します。|  
 |[Visual Basic での継承されたイベント ハンドラーのトラブルシューティング](../../../../visual-basic/programming-guide/language-features/events/troubleshooting-inherited-event-handlers.md)|継承されたコンポーネントのイベント ハンドラーで生じる一般的な問題を一覧表示します。|  
-|[イベント](../../../../standard/events/index.md)|[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] のイベント モデルについて概説します。|  
+|[イベント](../../../../standard/events/index.md)|.NET Framework のイベント モデルについて概説します。|  
 |[Windows フォーム内でのイベント ハンドラーの作成](../../../../framework/winforms/creating-event-handlers-in-windows-forms.md)|Windows フォーム オブジェクトに関連付けられているイベントの処理方法について説明します。|  
 |[デリゲート](../../../../visual-basic/programming-guide/language-features/delegates/index.md)|Visual Basic でのデリゲートの概要を示します。|

@@ -2,16 +2,16 @@
 title: 非同期プログラミング
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: b13ff7f67e7a62e071a27a77e72b7844dcb74d73
-ms.sourcegitcommit: 69bf8b719d4c289eec7b45336d0b933dd7927841
+ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/14/2019
-ms.locfileid: "57846130"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584497"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
-このトピックでの非同期プログラミングのサポート、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for SQL Server (SqlClient) で導入された非同期のプログラミング機能をサポートするために行われた機能強化を含む[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。
+このトピックでの非同期プログラミング、.NET Framework Data Provider for SQL Server (SqlClient) で導入された非同期のプログラミング機能をサポートする拡張機能などのサポート[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。
 
 ## <a name="legacy-asynchronous-programming"></a>従来の非同期プログラミング
 
@@ -181,7 +181,7 @@ class A {
 
 異なるデータベースに接続してクエリを実行できるツールを作成することが必要になる場合があります。 基本プロバイダー モデルと新しい非同期機能を使用できます。
 
-分散トランザクションを使用するには、サーバー上で Microsoft Distributed Transaction Controller (MSDTC) サービスを有効にする必要があります。 MSDTC を有効にする方法については、[Web サーバーで MSDTC を有効にする方法](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90))を参照してください。
+分散トランザクションを使用するには、サーバー上で Microsoft Distributed Transaction Controller (MSDTC) サービスを有効にする必要があります。 MSDTC を有効にする方法については、次を参照してください。 [Web サーバーで MSDTC を有効にする方法](https://docs.microsoft.com/previous-versions/commerce-server/dd327979(v=cs.90))します。
 
 ```csharp
 using System;

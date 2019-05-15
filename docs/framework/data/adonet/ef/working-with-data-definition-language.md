@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ec50083d-44f4-4093-9b23-5eacd601f96e
-ms.openlocfilehash: 59d19128b8fbb0af2c8b24dd18763347a53cfd9e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: da37dc2ff08f127e17cd4e6f7cbeab88f2c8d5e9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643985"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583449"
 ---
 # <a name="working-with-data-definition-language"></a>データ定義言語の操作
-以降では、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]バージョン 4、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]データ定義言語 (DDL) をサポートしています。 これにより、接続文字列、およびストレージ (SSDL) モデルのメターデータに基づいて、データベース インスタンスを作成または削除できます。  
+.NET Framework バージョン 4 以降、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]データ定義言語 (DDL) をサポートしています。 これにより、接続文字列、およびストレージ (SSDL) モデルのメターデータに基づいて、データベース インスタンスを作成または削除できます。  
   
  <xref:System.Data.Objects.ObjectContext> の次のメソッドでは、接続文字列と SSDL の内容を使用して、データベースの作成と削除、データベースが存在するかどうかの確認、生成された DDL スクリプトの表示を実行します。  
   

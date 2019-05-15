@@ -5,22 +5,22 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: ce92705d22edfc832e894dd2feaafcd11088bf26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772022"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583409"
 ---
 # <a name="oracle-and-adonet"></a>Oracle および ADO.NET
 > [!NOTE]
 >  <xref:System.Data.OracleClient> の型は非推奨とされました。 これらの型は、.NET Framework の現在のバージョンでは引き続きサポートされていますが、今後のリリースでは削除される予定です。 サードパーティの Oracle プロバイダーを使用することをお勧めします。  
   
- このセクションでは、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle 固有の機能および動作について説明します。  
+ このセクションでは、.NET Framework Data Provider for Oracle に固有の機能および動作について説明します。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle では、Oracle Client ソフトウェアとして提供されている Oracle Call Interface (OCI) を使用して Oracle データベースにアクセスできます。 データ プロバイダーの機能はのように設計されています、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] SQL Server、OLE DB および ODBC 用データ プロバイダー。  
+ .NET Framework Data Provider for Oracle では、Oracle クライアント ソフトウェアによって提供される Oracle Call Interface (OCI) を使用して Oracle データベースへのアクセスを提供します。 データ プロバイダーの機能は、SQL Server、OLE DB および ODBC 用の .NET Framework データ プロバイダーのように設計されています。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle を使用するには、アプリケーションで以下のように <xref:System.Data.OracleClient> 名前空間を参照する必要があります。  
+ .NET Framework Data Provider for Oracle を使用するアプリケーションを参照する必要があります、<xref:System.Data.OracleClient>次のように名前空間。  
   
 ```vb  
 Imports System.Data.OracleClient  
@@ -38,7 +38,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [システム要件](../../../../docs/framework/data/adonet/system-requirements-for-the-dotnet-data-provider-for-oracle.md)  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle を使用するための要件を説明し、その際に知っておくべきさまざまなことについて説明します。  
+ Oracle の場合、.NET Framework Data Provider を使用するための要件について説明し、さまざまなことを使用する場合は、注意すべき問題について説明します。  
   
  [Oracle BFILE](../../../../docs/framework/data/adonet/oracle-bfiles.md)  
  <xref:System.Data.OracleClient.OracleBFile> クラスについて説明します。このクラスは、Oracle BFILE データ型を操作するために使用されます。  

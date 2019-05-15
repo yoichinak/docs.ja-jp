@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data navigation
 - examples [Windows Forms], BindingNavigator control
 ms.assetid: 0e5d4f34-bc9b-47cf-9b8d-93acbb1f1dbb
-ms.openlocfilehash: 0702532627fe4425a7c5e3ade5530939c8df5500
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 81a265d13e94cb623040ad28cf279c0ec5b7887b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649243"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590958"
 ---
 # <a name="how-to-navigate-data-with-the-windows-forms-bindingnavigator-control"></a>方法: Windows フォーム BindingNavigator コントロールを使用してデータ間を移動する
 Windows フォームに <xref:System.Windows.Forms.BindingNavigator> コントロールが登場したことで、開発者はエンドユーザーに、作成したフォームにおける単純なデータ移動および操作のためのユーザー インターフェイスを提供できるようになります。  
@@ -50,8 +50,6 @@ Windows フォームに <xref:System.Windows.Forms.BindingNavigator> コント�
  この例で必要な要素は次のとおりです。  
   
 - System、System.Data、System.Drawing、System.Windows.Forms、および System.Xml アセンブリへの参照。  
-  
- コマンドラインからこの例を Visual Basic または Visual C# の構築方法の詳細については、[、コマンドラインからビルドする](../../../visual-basic/reference/command-line-compiler/building-from-the-command-line.md)または[コマンド ライン ビルドで csc.exe](../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)を参照してください。 新しいプロジェクトにコードを貼り付けることによって、この例では、Visual Studio を構築することもできます。  
   
 ## <a name="see-also"></a>関連項目
 
