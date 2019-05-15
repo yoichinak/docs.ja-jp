@@ -2,22 +2,22 @@
 title: Entity Framework データ プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 5252e639-ff11-4818-82e7-07221ed6ae23
-ms.openlocfilehash: 897afcd606a9b9b6c3b316d03dd5cb8e2adedbc0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c81508324da6040754cc64c6456420d59fe40512
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61606755"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584596"
 ---
 # <a name="entity-framework-data-providers"></a>Entity Framework データ プロバイダー
 ここでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] をサポートするデータ プロバイダーについて説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)  
- EntityClient データ プロバイダーについて説明します。 このプロバイダーは、データ モデルに対するクエリを正規コマンド ツリーに変換します。 すると、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] 用の [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] データ プロバイダーが、このコマンド ツリーを消費できるようになります。  
+ EntityClient データ プロバイダーについて説明します。 このプロバイダーは、データ モデルに対するクエリを正規コマンド ツリーに変換します。 コマンド ツリーの .NET Framework データ プロバイダーで使用できます、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]します。  
   
  [Entity Framework 用 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)  
- について説明します、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]をサポートするデータ プロバイダー、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server データベースで使用するためです。  
+ サポートする .NET Framework データ プロバイダーについて説明します、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] SQL Server データベースで使用するためです。  
   
 ## <a name="related-sections"></a>関連項目  
  [Entity Framework (SQL Server Compact)](https://go.microsoft.com/fwlink/?LinkId=135638)  

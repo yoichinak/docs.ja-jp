@@ -6,17 +6,17 @@ helpviewer_keywords:
 - GDI+
 - graphics [Windows Forms], GDI+
 ms.assetid: a98a76ab-e455-49c9-891c-0491ac932f2c
-ms.openlocfilehash: b1676189582596ad69981b330ffb081539e949da
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4c7632933e29a59c1db46f84360e271f27edf8b8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960954"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588618"
 ---
 # <a name="about-gdi-managed-code"></a>GDI+ マネージド コードについて
 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] は、2 次元ベクター グラフィックス、イメージング、および文字体裁を提供する Windows オペレーティング システムの部分です。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] は新機能を追加し、既存の機能を最適化することで、[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] (以前のバージョンの Windows に含まれているグラフィックス デバイス インターフェイス) を強化しています。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] マネージ クラスのインターフェイス (ラッパーのセット) は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 一部である XML Web サービスとその他のアプリケーションの構築、配置、および実行のための環境です。  
+ [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]マネージ クラスのインターフェイス (ラッパーのセット) は、ビルド、配置、および XML Web サービスとその他のアプリケーションを実行するための環境である .NET Framework の一部です。  
   
  このセクションは、マネージド コードを使用するプログラマのための [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API に関する情報を示しています。  
   

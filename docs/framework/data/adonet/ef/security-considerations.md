@@ -2,15 +2,15 @@
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 14d07fcb1d97a4e71747d6517f63fbc4108493da
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641183"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583486"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
-このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 このほかに、安全な [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] アプリケーションを作成するための推奨事項にも従うようにしてください。 詳細については、次を参照してください。[セキュリティの概要](../../../../../docs/framework/data/adonet/security-overview.md)します。  
+このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 また、セキュリティで保護された .NET Framework アプリケーションを作成するための推奨事項に従ってください。 詳細については、次を参照してください。[セキュリティの概要](../../../../../docs/framework/data/adonet/security-overview.md)します。  
   
 ## <a name="general-security-considerations"></a>セキュリティについての全般的な考慮事項  
  以下のセキュリティの注意点は、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] を使用するすべてのアプリケーションに当てはまります。  
@@ -63,7 +63,7 @@ ms.locfileid: "64641183"
  データ ソースの管理者は、必要なアクセス許可のみをユーザーに与えるようにしてください。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] では、データを変更する DML ステートメント (INSERT、UPDATE、DELETE など) はサポートされていませんが、データ ソースへの接続にアクセスすることはできます。 悪質なユーザーによって、その接続を使用してデータ ソースのネイティブ言語で DML ステートメントを実行される可能性があります。  
   
 #### <a name="run-applications-with-the-minimum-permissions"></a>最小限のアクセス許可でアプリケーションを実行する  
- マネージ アプリケーションを完全信頼のアクセス許可で実行できるようにすると、[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] でアプリケーションのコンピューターへのアクセスが制限されなくなります。 これは、システム全体を危険にさらすセキュリティの脆弱性の原因になります。 [!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)] のコード アクセス セキュリティやその他のセキュリティ メカニズムを使用するには、部分信頼のアクセス許可を使用して、アプリケーションが機能するために必要な最小限のアクセス許可でアプリケーションを実行する必要があります。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションに必要な最小限のアクセス許可を以下に示します。  
+ マネージ アプリケーションを完全信頼アクセス許可で実行を許可すると、.NET Framework では、このコンピューターへのアプリケーションのアクセスは制限されません。 これは、システム全体を危険にさらすセキュリティの脆弱性の原因になります。 .NET framework コード アクセス セキュリティと他のセキュリティ メカニズムを使用するには、部分信頼アクセス許可を使用してをアプリケーションが機能を有効にするために必要なアクセス許可の最小セット アプリケーションを実行する必要があります。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションに必要な最小限のアクセス許可を以下に示します。  
   
 - <xref:System.Security.Permissions.FileIOPermission>: <xref:System.Security.Permissions.FileIOPermissionAccess.Write> (指定されたメタデータ ファイルを開くため) または <xref:System.Security.Permissions.FileIOPermissionAccess.PathDiscovery> (メタデータ ファイルのディレクトリを検索するため)。  
   

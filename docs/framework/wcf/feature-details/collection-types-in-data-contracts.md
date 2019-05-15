@@ -9,17 +9,17 @@ helpviewer_keywords:
 - data contracts [WCF], collection types
 - collection types [WCF]
 ms.assetid: 9b45b28e-0a82-4ea3-8c33-ec0094aff9d5
-ms.openlocfilehash: ee6de112dcf92b1780fd331b581e6794d61f9406
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6425b0df5735c2469079e1c5a07a1ddd3be414a1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64654450"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588807"
 ---
 # <a name="collection-types-in-data-contracts"></a>データ コントラクトのコレクション型
-*"コレクション"* は、特定の型の項目のリストです。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]では、このようなリストは、配列や他のさまざまな型を使用して表すことができます (ジェネリック List、ジェネリック <xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>、または <xref:System.Collections.ArrayList>)。 たとえば、コレクションでは指定された顧客のアドレスのリストを保持できます。 これらのコレクションは、実際の型に関係なく、 *リスト コレクション*と呼びます。  
+*"コレクション"* は、特定の型の項目のリストです。 .NET framework では、このようなリストは配列またはその他の種類のさまざまなを使用して (ジェネリック List、ジェネリック<xref:System.ComponentModel.BindingList%601>、 <xref:System.Collections.Specialized.StringCollection>、または<xref:System.Collections.ArrayList>)。 たとえば、コレクションでは指定された顧客のアドレスのリストを保持できます。 これらのコレクションは、実際の型に関係なく、 *リスト コレクション*と呼びます。  
   
- コレクションには、ある項目 ("キー") と別の項目 ("値") の関連付けを表す特殊な形式のものがあります。 これらのコレクションは、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]では <xref:System.Collections.Hashtable> やジェネリック ディクショナリなどの型によって表されます。 たとえば、関連付けコレクションでは、都市 ("キー") をその人口 ("値") に関連付けることができます。 これらのコレクションは、実際の型に関係なく、 *ディクショナリ コレクション*と呼びます。  
+ コレクションには、ある項目 ("キー") と別の項目 ("値") の関連付けを表す特殊な形式のものがあります。 .NET framework では、この型によって表されますなど<xref:System.Collections.Hashtable>やジェネリック ディクショナリ。 たとえば、関連付けコレクションでは、都市 ("キー") をその人口 ("値") に関連付けることができます。 これらのコレクションは、実際の型に関係なく、 *ディクショナリ コレクション*と呼びます。  
   
  データ コントラクト モデルでは、コレクションは特別な扱いを受けます。  
   

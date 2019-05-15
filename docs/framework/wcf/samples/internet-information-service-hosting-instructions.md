@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービスのホスティング手順
 ms.date: 03/30/2017
 ms.assetid: 959a21c8-9d9d-4757-b255-4e57793ae9d6
-ms.openlocfilehash: a537f37132e5014901d415cd96bc72a55ae0b750
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 92ee270426dbb7fdd166964c1b10e37f280e28f3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600249"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591877"
 ---
 # <a name="internet-information-service-hosting-instructions"></a>インターネット インフォメーション サービスのホスティング手順
 インターネット インフォメーション サービス (IIS) によってホストされているこのサンプルを実行するには、IIS が適切にインストールされて実行されていることを確認する必要があります。  
@@ -163,7 +163,7 @@ ms.locfileid: "64600249"
 4. Web ページに、テキスト "Hello World" が表示されます。  
   
 > [!NOTE]
->  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の新しいバージョンをインストールするたびに、IIS の Web サービス拡張として aspnet_isapi を再登録する必要があります。 これを行うには、`aspnet_regiis –I –enable` コマンドを実行します。  
+>  たびに、.NET Framework の新しいバージョンをインストールする必要があります再登録する aspnet_isapi Web サービス拡張として IIS 用。 これを行うには、`aspnet_regiis –I –enable` コマンドを実行します。  
   
 ## <a name="sample-code"></a>サンプル コード  
   

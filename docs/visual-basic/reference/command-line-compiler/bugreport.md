@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bugreport compiler option [Visual Basic]
 - /bugreport compiler option [Visual Basic]
 ms.assetid: e4325406-8dbd-4b48-b311-9ee0799e48bb
-ms.openlocfilehash: 6ff9aa23fb6d7dee5c245ed174318f6589e7d245
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 440e583b55765d680ee72f8574f929e335e10cdb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624318"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590634"
 ---
 # <a name="-bugreport"></a>-bugreport
 バグ報告を提出するときに使用できるファイルを作成します。  
@@ -46,7 +46,7 @@ ms.locfileid: "64624318"
  内のすべてのソース コード ファイルのコピーが含まれているため`file`、できるだけ小さなプログラムで (疑わしい) コード障害を再現したい場合があります。  
   
 > [!IMPORTANT]
->  `-bugreport`オプションは、機密性の高い情報を含むファイルを生成します。 これにより、コンパイラのバージョン、現在の時刻が含まれます。[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]バージョン、OS のバージョン、ユーザー名、、のコマンドライン引数をコンパイラが実行されたすべてのソース コードと参照アセンブリのいずれかのバイナリ形式です。 このオプションは、Web.config ファイルのサーバー側のコンパイルでのコマンド ライン オプションを指定することでアクセスできる、[!INCLUDE[vstecasp](~/includes/vstecasp-md.md)]アプリケーション。 これを回避するには、サーバーでのコンパイルからユーザーを禁止する Machine.config ファイルを変更します。  
+>  `-bugreport`オプションは、機密性の高い情報を含むファイルを生成します。 これには、現在の時刻、コンパイラのバージョン、.NET Framework のバージョン、OS のバージョン、ユーザー名、すべてのソース コード、および参照されるアセンブリのバイナリ形式をコンパイラが実行されたコマンドライン引数が含まれます。 このオプションは、サーバー側のコンパイル、ASP.NET アプリケーションの Web.config ファイルでのコマンド ライン オプションを指定することでアクセスできます。 これを回避するには、サーバーでのコンパイルからユーザーを禁止する Machine.config ファイルを変更します。  
   
  このオプションを使用した場合`-errorreport:prompt`、 `-errorreport:queue`、または`-errorreport:send`、アプリケーションでの情報は、内部コンパイラ エラーが発生して`file`Microsoft Corporation に送信されます。 この情報は、Microsoft のエンジニアが、エラーの原因の特定に役立つし、Visual Basic の次期リリースの改善に役立てます。 既定では、Microsoft に情報は送信されません。 ただしを使用してアプリケーションをコンパイルするときに`-errorreport:queue`アプリケーションは、エラー レポートを収集、既定で有効になっています。 次に、コンピューターの管理者がログインすると、エラー レポート システムにログオン以降に発生したエラー レポートをマイクロソフトに送信できるようにするポップアップ ウィンドウが表示されます。  
   

@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 3d71814c-bda7-424b-85b7-15084ff9377a
-ms.openlocfilehash: cf68834c5612ed51fb3e6c0ed18667cbc13482bc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 87788906cfbf5b230c3b976395d9a40c655ae41a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586219"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591663"
 ---
 # <a name="serialization-and-deserialization"></a>シリアル化と逆シリアル化
-Windows Communication Foundation (WCF) には、新しいシリアル化エンジンが含まれています、<xref:System.Runtime.Serialization.DataContractSerializer>します。 <xref:System.Runtime.Serialization.DataContractSerializer> は、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトと XML を双方向で変換します。 ここでは、シリアライザーのしくみについて説明します。  
+Windows Communication Foundation (WCF) には、新しいシリアル化エンジンが含まれています、<xref:System.Runtime.Serialization.DataContractSerializer>します。 <xref:System.Runtime.Serialization.DataContractSerializer>双方向で .NET Framework のオブジェクトと XML を変換します。 ここでは、シリアライザーのしくみについて説明します。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトをシリアル化するときに、シリアライザーは新しい *データ コントラクト* モデルも含めて、さまざまなシリアル化プログラミング モデルを認識します。 サポートされるすべての型の一覧については、「 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)」を参照してください。 データ コントラクトの概要については、「 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)」を参照してください。  
+ シリアライザーがさまざまなプログラミング モデルを含む、新しいシリアル化を認識する .NET Framework オブジェクトをシリアル化するとき*データ コントラクト*モデル。 サポートされるすべての型の一覧については、「 [Types Supported by the Data Contract Serializer](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)」を参照してください。 データ コントラクトの概要については、「 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)」を参照してください。  
   
  XML を逆シリアル化するときに、シリアライザーは <xref:System.Xml.XmlReader> クラスと <xref:System.Xml.XmlWriter> クラスを使用します。 サポートしています、<xref:System.Xml.XmlDictionaryReader>と<xref:System.Xml.XmlDictionaryWriter>フォーマット WCF バイナリ XML を使用する場合などのいくつかのケースで最適化された XML を生成できるようにするためのクラス。  
   
- WCF には、コンパニオン シリアライザーも含まれています、<xref:System.Runtime.Serialization.NetDataContractSerializer>します。 <xref:System.Runtime.Serialization.NetDataContractSerializer> は、シリアル化されたデータの一部として <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 型名を出力するため、 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter> シリアライザーや [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] シリアライザーに似ています。 このシリアライザーは、シリアル化と逆シリアル化の終了時に、同じ型を共有する場合に使用します。 <xref:System.Runtime.Serialization.DataContractSerializer> と <xref:System.Runtime.Serialization.NetDataContractSerializer> は、共通の基本クラスである <xref:System.Runtime.Serialization.XmlObjectSerializer>から派生します。  
+ WCF には、コンパニオン シリアライザーも含まれています、<xref:System.Runtime.Serialization.NetDataContractSerializer>します。 <xref:System.Runtime.Serialization.NetDataContractSerializer>に似ていますが、<xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>と<xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>シリアライザーのためシリアル化されたデータの一部として .NET Framework 型の名前を生成します。 このシリアライザーは、シリアル化と逆シリアル化の終了時に、同じ型を共有する場合に使用します。 <xref:System.Runtime.Serialization.DataContractSerializer> と <xref:System.Runtime.Serialization.NetDataContractSerializer> は、共通の基本クラスである <xref:System.Runtime.Serialization.XmlObjectSerializer>から派生します。  
   
 > [!WARNING]
 >  <xref:System.Runtime.Serialization.DataContractSerializer> は、20 未満の 16 進数値と制御文字を含む文字列を XML エンティティとしてシリアル化します。 このようなデータを WCF サービスに送信するときに、WCF 以外のクライアントで問題があります。  
@@ -226,7 +226,7 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
  ラッパー要素のこの名前チェックを無効にする方法があります。 `ReadObject` メソッドの一部のオーバーロードは、ブール型パラメーター `verifyObjectName`を取得します。このパラメーターは、既定で `true` に設定されています。 このパラメーターを `false`に設定すると、ラッパー要素の名前と名前空間が無視されます。 これは、前述の段階的なシリアル化機構を使用して書き込まれた XML を読み取る際に役立ちます。  
   
 ## <a name="using-the-netdatacontractserializer"></a>NetDataContractSerializer の使用  
- `DataContractSerializer` と <xref:System.Runtime.Serialization.NetDataContractSerializer> の大きな違いは、 `DataContractSerializer` は、データ コントラクト名を使用するのに対し、 `NetDataContractSerializer` は、シリアル化された XML に [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] アセンブリと型の完全名を出力するという点です。 これは、シリアル化エンドポイントと逆シリアル化エンドポイント間で、まったく同じ型を共有する必要があることを意味します。 逆シリアル化する正確な型が常にわかっているため、 `NetDataContractSerializer` では既知の型機構は必要ないということです。  
+ 主な違い、`DataContractSerializer`と<xref:System.Runtime.Serialization.NetDataContractSerializer>です、 `DataContractSerializer` 、データ コントラクト名を使用しますが、`NetDataContractSerializer`完全な .NET Framework アセンブリと型名、シリアル化された xml を出力します。 これは、シリアル化エンドポイントと逆シリアル化エンドポイント間で、まったく同じ型を共有する必要があることを意味します。 逆シリアル化する正確な型が常にわかっているため、 `NetDataContractSerializer` では既知の型機構は必要ないということです。  
   
  ただし、次のようないくつかの問題が発生する可能性があります。  
   
@@ -234,11 +234,11 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
 - バージョン管理。 XML で型とアセンブリの完全名を使用する場合、型をバージョン管理する方法が厳しく制限されます。 型名、名前空間、アセンブリ名、およびアセンブリのバージョンを変更することはできません。 <xref:System.Runtime.Serialization.NetDataContractSerializer.AssemblyFormat%2A> プロパティまたはコンストラクター パラメーターを既定値の <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Simple> ではなく、 <xref:System.Runtime.Serialization.Formatters.FormatterAssemblyStyle.Full> に設定すると、アセンブリのバージョンを変更できるようになりますが、ジェネリック パラメーターの型を変更することはできません。  
   
-- 相互運用性。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型名とアセンブリ名は XML に含まれるため、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 以外のプラットフォームでは、生成されたデータにアクセスできません。  
+- 相互運用性。 XML では、.NET Framework 型とアセンブリ名が含まれている、ため、.NET Framework 以外のプラットフォームは、結果のデータにアクセスできません。  
   
 - パフォーマンス。 型名とアセンブリ名を書き込むと、生成される XML のサイズが大幅に増加します。  
   
- この機構は、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] リモート処理で使用されるバイナリ シリアル化または SOAP シリアル化 (具体的には、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> と <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>) に似ています。  
+ このメカニズムはバイナリまたは .NET Framework リモート処理で使用される SOAP のシリアル化に似ています (具体的には、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> 、 <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>)。  
   
  `NetDataContractSerializer` の使用方法と `DataContractSerializer`の使用方法は似ていますが、次のような違いがあります。  
   
@@ -258,7 +258,7 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
  通常、 `NetDataContractSerializer` と `DataContractSerializer` が使用する XML 形式には互換性がありません。 したがって、これらのシリアライザーの一方を使用してシリアル化し、もう一方を使用して逆シリアル化するシナリオはサポートされていません。  
   
- また、 `NetDataContractSerializer` は、オブジェクト グラフの各ノードについて、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型とアセンブリの完全名を出力しません。 この情報を出力するのは、情報が不明確な場合だけです。 つまり、ポリモーフィックである場合に、ルート オブジェクト レベルで出力します。  
+ また、`NetDataContractSerializer`オブジェクト グラフ内の各ノードの完全な .NET Framework 型とアセンブリ名を出力しません。 この情報を出力するのは、情報が不明確な場合だけです。 つまり、ポリモーフィックである場合に、ルート オブジェクト レベルで出力します。  
   
 ## <a name="see-also"></a>関連項目
 

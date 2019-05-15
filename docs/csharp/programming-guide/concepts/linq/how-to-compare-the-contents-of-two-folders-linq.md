@@ -2,21 +2,21 @@
 title: '方法: 2 つのフォルダーの内容を比較する (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: c6a44070e251a1521e7ea94c47a3c0c9360df1b5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54543043"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597109"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>方法: 2 つのフォルダーの内容を比較する (LINQ) (C#)
 この例では、2 つのファイル リストを比較する 3 つの方法を示します。  
   
--   2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法  
+- 2 つのファイル リストが同一であるかどうかを指定するブール値をクエリする方法  
   
--   両方のフォルダー内にあるファイルを取得するために、共通部分をクエリする方法  
+- 両方のフォルダー内にあるファイルを取得するために、共通部分をクエリする方法  
   
--   1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法  
+- 1 つのフォルダーにあり、もう 1 つのフォルダーにはないファイルを取得するために、差集合をクエリする方法  
   
     > [!NOTE]
     >  ここに示す方法は、任意の型のオブジェクトのシーケンスを比較するために適用させることができます。  

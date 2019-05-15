@@ -2,12 +2,12 @@
 title: 追跡プロファイル
 ms.date: 03/30/2017
 ms.assetid: 22682566-1cd9-4672-9791-fb3523638e18
-ms.openlocfilehash: 2fa4d65a6f0056824b2fc9dd67b93608777fc75d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c934ec9fd0524506577ab4457a2ec194d4d0cba7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699676"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589935"
 ---
 # <a name="tracking-profiles"></a>追跡プロファイル
 
@@ -17,7 +17,7 @@ ms.locfileid: "61699676"
 
 追跡プロファイルは、どの追跡情報をワーク フロー インスタンスに出力するかを指定するために使用されます。 プロファイルが指定されていない場合、すべての追跡イベントが出力されます。 プロファイルを指定した場合、プロファイルで指定された追跡イベントが出力されます。 監視の要件に応じて、ワークフローの主な状態変化の少数のセットを定期受信する、非常に一般的なプロファイルを作成できます。 それとは反対に、結果として得られるイベントが、後で詳細な実行フローを十分に再構築できる極めて詳細なプロファイルを作成することもできます。
 
-追跡プロファイルは、標準の [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] 構成ファイル内の XML 要素や、コードで指定される XML 要素として出現します。 追跡参加要素が [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] と `Started` のワークフロー イベントを定期受信できるようにする構成ファイルの `Completed` 追跡プロファイルの例を次に示します。
+追跡プロファイルは、標準の .NET Framework 構成ファイル内の XML 要素となって現れます。 またはコード内で指定します。 追跡参加要素が [!INCLUDE[netfx_current_long](../../../includes/netfx-current-long-md.md)] と `Started` のワークフロー イベントを定期受信できるようにする構成ファイルの `Completed` 追跡プロファイルの例を次に示します。
 
 ```xml
 <system.serviceModel>

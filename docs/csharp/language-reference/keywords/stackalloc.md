@@ -1,18 +1,18 @@
 ---
 title: stackalloc キーワード - C# リファレンス
 ms.custom: seodec18
-ms.date: 04/12/2018
+ms.date: 04/10/2019
 f1_keywords:
 - stackalloc_CSharpKeyword
 - stackalloc
 helpviewer_keywords:
 - stackalloc keyword [C#]
-ms.openlocfilehash: 61a27e777a1919a2a6fc5140a311835a8f3daba9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 654e225ef98b13aeb4f689e17b1ff378e6002d28
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480808"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063916"
 ---
 # <a name="stackalloc-c-reference"></a>stackalloc (C# リファレンス)
 

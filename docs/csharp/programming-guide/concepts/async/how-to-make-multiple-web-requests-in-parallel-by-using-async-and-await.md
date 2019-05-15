@@ -2,12 +2,12 @@
 title: '方法: async と await を使用して複数の Web 要求を並列実行する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 19745899-f97a-4499-a7c7-e813d1447580
-ms.openlocfilehash: 3ea41c1fa0fce3a35635e069061f1953c6395406
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 57c40626fcaf0c52d09fa3a2c8b74ba8b7816677
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335421"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64600241"
 ---
 # <a name="how-to-make-multiple-web-requests-in-parallel-by-using-async-and-await-c"></a>方法: async と await を使用して複数の Web 要求を並列実行する (C#)
 非同期メソッドでは、タスクは作成されると開始されます。 [await](../../../../csharp/language-reference/keywords/await.md) 演算子は、メソッド内でタスクが終了するまで処理が続行できなくなった時点で、タスクに適用されます。 次の例に示すように、タスクは多くの場合、作成されるとすぐに待機します。  
@@ -45,11 +45,11 @@ var result = await myTask;
   
 1. WPF アプリケーションを設定するには、次の手順を実行します。 これらの手順の詳細については、「[チュートリアル: Async と Await を使用した Web へのアクセス (C#)](../../../../csharp/programming-guide/concepts/async/walkthrough-accessing-the-web-by-using-async-and-await.md)」を参照してください。  
   
-    -   テキスト ボックスとボタンを含む WPF アプリケーションを作成します。 ボタンに `startButton` という名前を付け、テキスト ボックスに `resultsTextBox` という名前を付けます。  
+    - テキスト ボックスとボタンを含む WPF アプリケーションを作成します。 ボタンに `startButton` という名前を付け、テキスト ボックスに `resultsTextBox` という名前を付けます。  
   
-    -   <xref:System.Net.Http> への参照を追加します。  
+    - <xref:System.Net.Http> への参照を追加します。  
   
-    -   MainWindow.xaml.cs ファイルで、`System.Net.Http` に `using` ディレクティブを追加します。  
+    - MainWindow.xaml.cs ファイルで、`System.Net.Http` に `using` ディレクティブを追加します。  
   
 ### <a name="to-add-the-code"></a>コードを追加するには  
   
@@ -67,9 +67,9 @@ var result = await myTask;
   
 3. プロジェクトに次のサポート メソッドを追加します。  
   
-    -   `ProcessURLAsync` は <xref:System.Net.Http.HttpClient> メソッドを使用して、Web サイトのコンテンツをバイト配列としてダウンロードします。 次に `ProcessURLAsync` サポート メソッドは、配列の長さを表示して返します。  
+    - `ProcessURLAsync` は <xref:System.Net.Http.HttpClient> メソッドを使用して、Web サイトのコンテンツをバイト配列としてダウンロードします。 次に `ProcessURLAsync` サポート メソッドは、配列の長さを表示して返します。  
   
-    -   `DisplayResults` は各 URL のバイト配列内のバイトの数を表示します。 この表示は、各タスクがいつダウンロードを完了したかを示します。  
+    - `DisplayResults` は各 URL のバイト配列内のバイトの数を表示します。 この表示は、各タスクがいつダウンロードを完了したかを示します。  
   
      次のメソッドをコピーし、MainWindow.xaml.cs の `startButton_Click` イベント ハンドラーの後に貼り付けます。  
   
@@ -95,13 +95,13 @@ var result = await myTask;
   
 4. 最後に、次の手順を実行するメソッド `CreateMultipleTasksAsync` を定義します。  
   
-    -   このメソッドは、`HttpClient` の <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> メソッドにアクセスするために必要な `ProcessURLAsync` オブジェクトを宣言します。  
+    - このメソッドは、`HttpClient` の <xref:System.Net.Http.HttpClient.GetByteArrayAsync%2A> メソッドにアクセスするために必要な `ProcessURLAsync` オブジェクトを宣言します。  
   
-    -   このメソッドは <xref:System.Threading.Tasks.Task%601> が整数である `TResult` 型の 3 つのタスクを作成して開始します。 各タスクが終了すると、`DisplayResults` はタスクの URL とダウンロードしたコンテンツの長さを表示します。 タスクは非同期的に実行されるため、結果が表示される順序は、宣言された順序と異なる場合があります。  
+    - このメソッドは <xref:System.Threading.Tasks.Task%601> が整数である `TResult` 型の 3 つのタスクを作成して開始します。 各タスクが終了すると、`DisplayResults` はタスクの URL とダウンロードしたコンテンツの長さを表示します。 タスクは非同期的に実行されるため、結果が表示される順序は、宣言された順序と異なる場合があります。  
   
-    -   メソッドは、各タスクの完了を待機します。 各 `await` 演算子は、待機したタスクが終了するまで `CreateMultipleTasksAsync` の実行を中断します。 さらに演算子は、完了した各タスクから `ProcessURLAsync` への呼び出しからの戻り値を取得します。  
+    - メソッドは、各タスクの完了を待機します。 各 `await` 演算子は、待機したタスクが終了するまで `CreateMultipleTasksAsync` の実行を中断します。 さらに演算子は、完了した各タスクから `ProcessURLAsync` への呼び出しからの戻り値を取得します。  
   
-    -   タスクが完了して整数値が取得されると、メソッドは Web サイトの長さの合計し、その結果を表示します。  
+    - タスクが完了して整数値が取得されると、メソッドは Web サイトの長さの合計し、その結果を表示します。  
   
      次のメソッドをコピーしてソリューションに貼り付けます。  
   

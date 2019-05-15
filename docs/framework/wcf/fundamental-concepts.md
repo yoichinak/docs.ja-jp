@@ -7,12 +7,12 @@ helpviewer_keywords:
 - fundamentals [WCF]
 - Windows Communication Foundation [WCF], concepts
 ms.assetid: 3e7e0afd-7913-499d-bafb-eac7caacbc7a
-ms.openlocfilehash: 05e61a33005cd0458c5bcdde758f3b1a9cc3869c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 429e019d87800c9487f73ebf37c4d7870835b323
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637265"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591939"
 ---
 # <a name="fundamental-windows-communication-foundation-concepts"></a>Windows Communication Foundation の基本概念
 このドキュメントでは、Windows Communication Foundation (WCF) のアーキテクチャの概要を説明します。 ここでは、主要概念およびこれらの概念がどのように組み合わされているかについて説明します。 最も単純な WCF サービスとクライアントの作成に関するチュートリアルについては、次を参照してください。[チュートリアル入門](../../../docs/framework/wcf/getting-started-tutorial.md)します。 WCF プログラミングについては、次を参照してください。[基本的な WCF プログラミング](../../../docs/framework/wcf/basic-wcf-programming.md)します。  
@@ -126,7 +126,7 @@ HTTPS://cohowinery:8005/ServiceModelSamples/CalculatorService
  バインディング要素の具象実装です。 バインディングは構成を表し、チャネルはその構成に関連付けられた実装です。 したがって、各バインディング要素に関連付けられたチャネルが存在します。 チャネルが積み重ねられて、バインディングの具象実装 (チャネル スタック) が作成されます。  
   
  WCF クライアント  
- サービス操作を (Visual Basic や Visual C# など、開発者が選択した [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] プログラミング言語の) メソッドとして公開するクライアント アプリケーション構造体です。 サービスをホストするアプリケーションも含め、すべてのアプリケーションが WCF クライアントをホストできます。 したがって、他のサービスの WCF クライアントを含むサービスを作成できます。  
+ メソッドとして、サービス操作を公開するクライアント アプリケーション構造体 (Visual Basic または Visual など、好みの言語のプログラミング、.NET Framework でC#)。 サービスをホストするアプリケーションも含め、すべてのアプリケーションが WCF クライアントをホストできます。 したがって、他のサービスの WCF クライアントを含むサービスを作成できます。  
   
  使用して、WCF クライアントを自動的に生成することができます、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)メタデータを公開する実行中のサービスを指し示すようとします。  
   

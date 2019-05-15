@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -l compiler option [Visual Basic]
 - /l compiler option [Visual Basic]
 ms.assetid: 1885f24a-86f5-486c-a064-9fb7e455ccec
-ms.openlocfilehash: 2064c21d3ec0cd29ed5c41a2f4ba2fd8870926b0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b13d8266d0702d831a0f5ebb3a9586864fe22ccb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618203"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586533"
 ---
 # <a name="-link-visual-basic"></a>-リンク (Visual Basic)
 指定したアセンブリ内の COM 型情報を、現在のコンパイル対象のプロジェクトで使用できるようにします。  
@@ -55,7 +55,7 @@ ms.locfileid: "64618203"
   
  使用[-libpath](../../../visual-basic/reference/command-line-compiler/libpath.md)を 1 つ以上のアセンブリ参照があるディレクトリを指定します。  
   
- ように、 [/reference](../../../visual-basic/reference/command-line-compiler/reference.md)コンパイラ オプション、`-link`コンパイラ オプションの参照が頻繁に使用される、Vbc.rsp 応答ファイルを使用して[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリ。 使用して、 [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)コンパイラ オプション、コンパイラが Vbc.rsp ファイルを使用したくない場合。  
+ ように、 [/reference](../../../visual-basic/reference/command-line-compiler/reference.md)コンパイラ オプション、`-link`コンパイラ オプションは頻繁に使用される .NET Framework アセンブリを参照する、Vbc.rsp 応答ファイルを使用します。 使用して、 [-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)コンパイラ オプション、コンパイラが Vbc.rsp ファイルを使用したくない場合。  
   
  `-link` の省略形は `-l` です。  
   

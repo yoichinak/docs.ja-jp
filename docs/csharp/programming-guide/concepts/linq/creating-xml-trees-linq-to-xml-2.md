@@ -2,12 +2,12 @@
 title: C# での XML ツリーの作成 (LINQ to XML)
 ms.date: 08/31/2018
 ms.assetid: cc74234a-0bac-4327-9c8c-5a2ead15b595
-ms.openlocfilehash: 3bac7b62d04c9690cdd08d1993b64db33c4e6ab8
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 00f528bca00b2c2316d949ceb3b6c4bba2499146
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54503171"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597673"
 ---
 # <a name="creating-xml-trees-in-c-linq-to-xml"></a>C# での XML ツリーの作成 (LINQ to XML)
 ここでは、C# での XML ツリーの作成について説明します。  
@@ -50,17 +50,17 @@ XElement contacts =
   
  `content` パラメーターは非常に柔軟です。 <xref:System.Xml.Linq.XElement> の有効な子オブジェクトの型すべてがサポートされています。 このパラメーターで渡されるさまざまな型のオブジェクトには、次の規則が適用されます。  
   
--   文字列はテキスト コンテンツとして追加されます。  
+- 文字列はテキスト コンテンツとして追加されます。  
   
--   <xref:System.Xml.Linq.XElement> は子要素として追加されます。  
+- <xref:System.Xml.Linq.XElement> は子要素として追加されます。  
   
--   <xref:System.Xml.Linq.XAttribute> は属性として追加されます。  
+- <xref:System.Xml.Linq.XAttribute> は属性として追加されます。  
   
--   <xref:System.Xml.Linq.XProcessingInstruction>、<xref:System.Xml.Linq.XComment>、または <xref:System.Xml.Linq.XText> は、子コンテンツとして追加されます。  
+- <xref:System.Xml.Linq.XProcessingInstruction>、<xref:System.Xml.Linq.XComment>、または <xref:System.Xml.Linq.XText> は、子コンテンツとして追加されます。  
   
--   <xref:System.Collections.IEnumerable> は列挙され、その結果にこれらの規則が再帰的に適用されます。  
+- <xref:System.Collections.IEnumerable> は列挙され、その結果にこれらの規則が再帰的に適用されます。  
   
--   その他の型に対しては `ToString` メソッドが呼び出され、その結果がテキスト コンテンツとして追加されます。  
+- その他の型に対しては `ToString` メソッドが呼び出され、その結果がテキスト コンテンツとして追加されます。  
   
 ### <a name="creating-an-xelement-with-content"></a>コンテンツを持つ XElement の作成  
  単純コンテンツが含まれる <xref:System.Xml.Linq.XElement> は、1 回のメソッド呼び出しで作成できます。 そのためには、次のように、コンテンツを 2 番目のパラメーターとして指定します。  

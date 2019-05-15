@@ -2,12 +2,12 @@
 title: シリアル化バインダーの使用
 ms.date: 03/30/2017
 ms.assetid: ab46c087-200c-45bf-9c95-5a6cda6e8b98
-ms.openlocfilehash: 47a1974386927316ea9230ec27cf647d7245c44a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 677decebcf444fed95311bd02acf8a96e0a4eca9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007592"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591779"
 ---
 # <a name="usage-of-serialization-binder"></a>シリアル化バインダーの使用
 このサンプルでは、<xref:System.Runtime.Serialization.SerializationBinder> を使用して、ジェネリック型のバージョンをシリアル化する際に変更する方法を示します。  
@@ -16,7 +16,7 @@ ms.locfileid: "62007592"
  <xref:System.Runtime.Serialization.SerializationBinder>, <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>  
   
 ## <a name="discussion"></a>説明  
- このサンプルでは、さまざまなバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を対象とする 2 つのエンティティで、バイナリ フォーマッタとシリアル化バインダーを使用して通信する方法を示します。  
+ このサンプルはターゲットの異なるバージョンの .NET Framework は、通信をバイナリ フォーマッタとシリアル化バインダーを使用して 2 つのエンティティを示します。  
   
  このサンプルの開発は、.NET リモート処理を使用して行われました。 このサンプルは、[!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] を対象とするサーバー (ジェネリック型を含むコントラクトを実装しています) と、2 つの異なるクライアント (1 つは [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] を対象とし、もう 1 つは [!INCLUDE[netfx40_short](../../../../includes/netfx40-short-md.md)] を対象としています) で構成されています。  
   

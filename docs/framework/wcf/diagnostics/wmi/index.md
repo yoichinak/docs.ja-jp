@@ -2,12 +2,12 @@
 title: 診断用の WMI (Windows Management Instrumentation) の使用
 ms.date: 03/30/2017
 ms.assetid: fe48738d-e31b-454d-b5ec-24c85c6bf79a
-ms.openlocfilehash: 47aece36368be12a2a63283367e95dcaa64ef484
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ecc5c754a51a8e1a52797dfd0af0891704eaad1f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662461"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591238"
 ---
 # <a name="using-windows-management-instrumentation-for-diagnostics"></a>診断用の WMI (Windows Management Instrumentation) の使用
 Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentation (WMI) プロバイダーを介して実行時のサービスの検査データを公開します。  
@@ -30,7 +30,7 @@ Windows Communication Foundation (WCF) は、WCF Windows Management Instrumentat
  この構成エントリには、WMI インターフェイスが開示されます。 管理アプリケーションはこのインターフェイスを通して接続し、アプリケーションの Management Instrumentation にアクセスできるようになります。  
   
 ## <a name="accessing-wmi-data"></a>WMI データへのアクセス  
- WMI データには、複数の異なる方法でアクセスできます。 マイクロソフトでは、WMI Api を提供するスクリプト、Visual Basic アプリケーション、C++ アプリケーションでは、および[!INCLUDE[dnprdnshort](../../../../../includes/dnprdnshort-md.md)]します。 詳細については、次を参照してください。 [WMI を使用した](https://go.microsoft.com/fwlink/?LinkId=95183)します。  
+ WMI データには、複数の異なる方法でアクセスできます。 Microsoft Visual Basic アプリケーション、スクリプトは、WMI Api を提供するC++アプリケーション、および .NET Framework です。 詳細については、次を参照してください。 [WMI を使用した](https://go.microsoft.com/fwlink/?LinkId=95183)します。  
   
 > [!CAUTION]
 >  .NET Framework 提供のメソッドを使用し、プログラムで WMI データにアクセスする場合、そのようなメソッドは接続確立時に例外をスローする場合があることを認識しておく必要があります。 接続は、<xref:System.Management.ManagementObject> インスタンスの構築中に確立されませんが、実際のデータ交換が含まれた最初の要求時に確立されます。 したがって、`try..catch` ブロックを使用して例外をキャッチする必要があります。  

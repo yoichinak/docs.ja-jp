@@ -2,12 +2,12 @@
 title: ワークフロー サービスの概要 - WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 1461ef545c4b31f84e62d82453320179d9aa74e0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5d5f8636bec57cee1cb72c2796fc4bafc6b9c044
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050338"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590076"
 ---
 # <a name="workflow-services-overview"></a>ワークフロー サービスの概要
 
@@ -48,7 +48,7 @@ WCF は、2 つの MSMQ ベースのバインディングである <xref:System.
 
 WCF のサービスと同様に、ワークフロー サービスをホストする必要があります。 WCF サービスの使用、<xref:System.ServiceModel.ServiceHost>クラスがサービスをホストおよびワークフローを使用するサービス<xref:System.ServiceModel.Activities.WorkflowServiceHost>サービスをホストします。 WCF のサービスと同様にワークフロー サービスでホストできるさまざまな方法では、たとえば。
 
-- マネージド [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] アプリケーション。
+- 管理対象の .NET Framework アプリケーション。
 
 - インターネット インフォメーション サービス (IIS)。
 
@@ -56,7 +56,7 @@ WCF のサービスと同様に、ワークフロー サービスをホストす
 
 - マネージ Windows サービス。
 
-マネージド [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] アプリケーションまたはマネージド Windows サービスでホストされるワークフロー サービスは、<xref:System.ServiceModel.Activities.WorkflowServiceHost> クラスのインスタンスを作成し、このインスタンスに、<xref:System.ServiceModel.Activities.WorkflowService> プロパティ内のワークフロー定義を含む <xref:System.ServiceModel.Activities.WorkflowService.Body%2A> のインスタンスを渡します。 メッセージ アクティビティを格納するワークフロー定義は、ワークフロー サービスとして公開されます。
+.NET Framework のマネージ アプリケーションでホストされるワークフロー サービスまたはマネージ Windows サービスのインスタンスを作成、<xref:System.ServiceModel.Activities.WorkflowServiceHost>クラスし、のインスタンスを渡す、<xref:System.ServiceModel.Activities.WorkflowService>内のワークフロー定義を格納している、<xref:System.ServiceModel.Activities.WorkflowService.Body%2A>プロパティ。 メッセージ アクティビティを格納するワークフロー定義は、ワークフロー サービスとして公開されます。
 
 ワークフロー サービスを IIS または WAS でホストするには、ワークフロー サービス定義を格納する .xamlx ファイルを仮想ディレクトリに配置します。 既定のエンドポイント (を使用して<xref:System.ServiceModel.BasicHttpBinding>) は、詳細については自動的に作成を参照してください[Simplified Configuration](../../../../docs/framework/wcf/simplified-configuration.md)します。 また、Web.config ファイルを仮想ディレクトリに配置し、独自のエンドポイントを指定することもできます。 ワークフロー定義がアセンブリ内にある場合は、.svc ファイルを仮想ディレクトリに配置し、ワークフロー アセンブリを App_Code ディレクトリに配置できます。 この .svc ファイルには、サービス ホスト ファクトリと、ワークフロー サービスを実装するクラスを指定する必要があります。 次の例に、サービス ホスト ファクトリを指定し、ワークフロー サービスを実装するクラスを指定する方法を示します。
 

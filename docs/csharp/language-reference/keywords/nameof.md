@@ -6,12 +6,12 @@ f1_keywords:
 - nameof_CSharpKeyword
 - nameof
 ms.assetid: 33601bf3-cc2c-4496-846d-f9679bccf2a7
-ms.openlocfilehash: 04de4dc6f320213c1a9c95b1abb92488fac0a81f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: be60593ea5339db700140a6c7fb3fbd17af92912
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59614091"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063790"
 ---
 # <a name="nameof-c-reference"></a>nameof (C# リファレンス)
 

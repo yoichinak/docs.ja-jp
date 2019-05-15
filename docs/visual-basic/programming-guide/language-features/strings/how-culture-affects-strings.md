@@ -5,12 +5,12 @@ helpviewer_keywords:
 - locale [Visual Basic], effect on strings
 - strings [Visual Basic], locale dependence
 ms.assetid: c4664444-ee0d-47bf-bef1-eaa3c54bdd7f
-ms.openlocfilehash: c498ae0a9d39240e715e6ba66e57c5e1d3ebbfbc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7301d52cf2c55394f731a8b7af5427e5fa66ba88
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64610417"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591951"
 ---
 # <a name="how-culture-affects-strings-in-visual-basic"></a>Visual Basic においてカルチャが文字列に与える影響
 このヘルプ ページは、Visual Basic がカルチャ情報を使用して、文字列の変換との比較を実行する方法について説明します。  
@@ -38,7 +38,7 @@ ms.locfileid: "64610417"
 ## <a name="using-a-specific-culture"></a>特定のカルチャを使用します。  
  (文字列として書式設定) の日付を Web サービスに送信するアプリケーションを開発していることを想像してください。 この場合、アプリケーションでは、文字列変換のため、特定のカルチャを使用する必要があります。 その理由を示すためには、日付の使用の結果を検討してください。<xref:System.DateTime.ToString>メソッド。返しますが、アプリケーションでそのメソッドを使用して、2005 年 7 月 4 日の日付の書式設定するかどうかは"7/4/2005 12時 00分: 00 AM"、米国英語 (EN-US) カルチャの実行とは"04.07.2005 00時 00分: 00"ドイツ (DE-DE) のカルチャに実行するとします。  
   
- 使用する必要がある、特定のカルチャの形式で文字列の変換を実行する必要がある場合、`CultureInfo`に組み込まれているクラス、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。 新規に作成することができます`CultureInfo`カルチャの名前を渡すことによって、特定のカルチャのオブジェクト、<xref:System.Globalization.CultureInfo.%23ctor%2A>コンス トラクター。 サポートされているカルチャの名前にある、<xref:System.Globalization.CultureInfo>ヘルプ ページのクラス。  
+ 使用する必要がある、特定のカルチャの形式で文字列の変換を実行する必要がある場合、 `CultureInfo` .NET Framework に組み込まれているクラス。 新規に作成することができます`CultureInfo`カルチャの名前を渡すことによって、特定のカルチャのオブジェクト、<xref:System.Globalization.CultureInfo.%23ctor%2A>コンス トラクター。 サポートされているカルチャの名前にある、<xref:System.Globalization.CultureInfo>ヘルプ ページのクラス。  
   
  インスタンスを取得する代わりに、*インバリアント カルチャ*から、<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType>プロパティ。 インバリアント カルチャが英語のカルチャに基づきますが、いくつか違いがあります。 たとえば、インバリアント カルチャでは、12 時間制ではなく、24 時間制を指定します。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64610417"
   
  [!code-vb[VbVbalrStrings#22](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#22)]  
   
- 使用することも、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]のパートナー、`StrComp`関数の場合、<xref:System.String.Compare%2A?displayProperty=nameWithType>メソッド。 これは、文字列の基本クラスの静的、オーバー ロードされたメソッドです。 次の例では、このメソッドを使用する方法を示しています。  
+ .NET Framework のパートナーを使用することも、`StrComp`関数の場合、<xref:System.String.Compare%2A?displayProperty=nameWithType>メソッド。 これは、文字列の基本クラスの静的、オーバー ロードされたメソッドです。 次の例では、このメソッドを使用する方法を示しています。  
   
  [!code-vb[VbVbalrStrings#48](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class2.vb#48)]  
   

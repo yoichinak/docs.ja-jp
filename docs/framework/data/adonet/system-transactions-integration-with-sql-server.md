@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 4ff415adf57bf72cb4da6d405f652a4a50c19041
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033372"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583497"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server と System.Transactions の統合
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] バージョン 2.0 では、 <xref:System.Transactions> 名前空間を介してアクセスできるトランザクション フレームワークが導入されました。 このフレームワークでは、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]を含む [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]に完全に統合された形でトランザクションが公開されます。  
+.NET Framework version 2.0 に導入された新しいトランザクション フレームワークが経由でアクセスできる、<xref:System.Transactions>名前空間。 このフレームワークには、.NET framework では、完全に統合されている方法でトランザクションが公開されます。 など[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]します。  
   
  プログラミング上の強化に加えて、 <xref:System.Transactions> と [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の連係により、トランザクション処理が最適化されます。 昇格可能なトランザクションとは、必要に応じて完全な分散トランザクションに自動的に昇格する、軽量の (ローカル) トランザクションです。  
   
  以降で[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0、 <xref:System.Data.SqlClient> SQL Server を使用する場合は、昇格可能なトランザクションをサポートしています。 昇格可能なトランザクションは、必要な場合以外、分散トランザクションのオーバーヘッドの増加を引き起こすことはありません。 昇格可能なトランザクションは、自動、開発者による介入は必要ありません。  
   
- 昇格可能なトランザクションは、使用するときにのみ使用可能な[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for SQL Server (`SqlClient`) と SQL Server。  
+ 昇格可能なトランザクションは、.NET Framework Data Provider for SQL Server に使用する場合にのみ使用できます (`SqlClient`) と SQL Server。  
   
 ## <a name="creating-promotable-transactions"></a>昇格可能なトランザクションの作成  
-  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Provider for SQL Server では昇格可能なトランザクションをサポートしており、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] <xref:System.Transactions> 名前空間内のクラスを介して処理されます。 昇格可能なトランザクションでは、必要が生じるまで分散トランザクションの作成を延期することで、分散トランザクションが最適化されます。 必要なリソース マネージャーが 1 つだけである場合は、分散トランザクションは発生しません。  
+ .NET Framework Provider for SQL Server では、.NET Framework のクラスによって処理されますが、昇格可能なトランザクションのサポート<xref:System.Transactions>名前空間。 昇格可能なトランザクションでは、必要が生じるまで分散トランザクションの作成を延期することで、分散トランザクションが最適化されます。 必要なリソース マネージャーが 1 つだけである場合は、分散トランザクションは発生しません。  
   
 > [!NOTE]
 >  部分信頼のシナリオで分散トランザクションに昇格するには、 <xref:System.Transactions.DistributedTransactionPermission> が必要です。  

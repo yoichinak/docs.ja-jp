@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Sub Dispose destructor
 - garbage collection [Visual Basic], Visual Basic
 ms.assetid: f1ee8458-b156-44e0-9a8a-5dd171648cd8
-ms.openlocfilehash: 430041f5f4315c5ad20cd2495f01a6f776f239c7
-ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
+ms.openlocfilehash: a63134b966fe6e6cd0cd40f69ac04a7cd986513d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65469706"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591547"
 ---
 # <a name="object-lifetime-how-objects-are-created-and-destroyed-visual-basic"></a>オブジェクトの有効期間:オブジェクトの作成し、破棄 (Visual Basic)
 クラスのインスタンス (オブジェクト) を作成するには、`New` キーワードを使用します。 新しいオブジェクトを使用する前に、多くの場合、そのオブジェクトに対して初期化タスクを実行する必要があります。 一般的な初期化タスクとして、ファイルを開く、データベースに接続する、レジストリ キーの値を読み取る、などがあります。 Visual Basic と呼ばれるプロシージャを使用して新しいオブジェクトの初期化を制御する*コンス トラクター* (初期化を制御する特殊なメソッド)。  
@@ -140,7 +140,7 @@ End Sub
  派生クラスでは、基本クラスの <xref:System.IDisposable.Dispose%2A> メソッドおよび `Finalize` メソッドをオーバーライドする必要はありません。 これらのメソッドが派生クラスのインスタンスから呼び出されると、基本クラスでのこれらのメソッドの実装によって、派生クラスでの `Dispose(disposing)` メソッドのオーバーライドが呼び出されます。  
   
 ## <a name="garbage-collection-and-the-finalize-destructor"></a>ガベージ コレクションと Finalize デストラクター  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]を使用して、*参照トレース ガベージ コレクション*システムを定期的に未使用のリソースを解放します。 Visual Basic 6.0 と以前のバージョンの使用と呼ばれるさまざまなシステム*参照カウント*リソースを管理します。 どちらのシステムも同じ機能を自動的に実行しますが、いくつかの重要な違いがあります。  
+ .NET Framework を使用して、*参照トレース ガベージ コレクション*システムを定期的に未使用のリソースを解放します。 Visual Basic 6.0 と以前のバージョンの使用と呼ばれるさまざまなシステム*参照カウント*リソースを管理します。 どちらのシステムも同じ機能を自動的に実行しますが、いくつかの重要な違いがあります。  
   
  CLR は、不要と判断したオブジェクトを定期的に破棄します。 オブジェクトは、システム リソースが不足したときには迅速に解放され、それ以外の場合には解放の頻度が低くなります。 オブジェクトがスコープを失ってから CLR が解放するまでに遅延が発生します。つまり、Visual Basic 6.0 とそれ以前のバージョンのオブジェクトとは異なり、オブジェクトがいつ破棄されるかを正確に特定することはできません。 このような場合は、オブジェクト、持つと言います*有効期間が不明確*します。 ほとんどの場合、有効期間が不明確でもアプリケーションの作成方法は変わりません。ただし、オブジェクトがスコープを失ってもすぐには `Finalize` デストラクターが実行されない可能性があることに留意する必要があります。  
   

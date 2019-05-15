@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - structured navigation [WPF]
 ms.assetid: 025d30ef-fec5-436d-ad7a-5d5483331c26
-ms.openlocfilehash: 8092289d6adc6a017999d14dc7439323a7fc0d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a0da874c74562822d521d4a44782d9372cd62f90
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751003"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588650"
 ---
 # <a name="structured-navigation-overview"></a>構造化ナビゲーションの概要
 ホストされるコンテンツ、 [!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]、 <xref:System.Windows.Controls.Frame>、または<xref:System.Windows.Navigation.NavigationWindow>はパックによって識別できるページで構成されます[!INCLUDE[TLA#tla_uri#plural](../../../../includes/tlasharptla-urisharpplural-md.md)]ハイパーリンクに移動するとします。 ページの構造、およびハイパーリンクで定義される移動方法を、ナビゲーション トポロジと呼びます。 このトポロジはさまざまな種類のアプリケーションに対応しますが、特にドキュメント間を移動するアプリケーションに適しています。 このようなアプリケーションでは、互いのページの情報を必要とせずに、ユーザーはページ間を移動できます。  
@@ -70,7 +70,7 @@ ms.locfileid: "64751003"
   
  宣言を<xref:System.Windows.Navigation.PageFunction%601>の宣言に似ていますが、<xref:System.Windows.Controls.Page>に型引数を追加します。 コード例に示されているように、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] マークアップ (`x:TypeArguments` 属性を使用) と分離コード (標準のジェネリック型引数構文を使用) の両方で型引数が指定されています。  
   
- 型引数として [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] クラスのみを使用する必要はありません。 A<xref:System.Windows.Navigation.PageFunction%601>カスタム型として抽象化は、ドメイン固有のデータを収集するために呼び出すことができます。 次のコードに対して型引数としてカスタムの型を使用する方法を示しています、<xref:System.Windows.Navigation.PageFunction%601>します。  
+ 型引数として .NET Framework のクラスのみを使用する必要はありません。 A<xref:System.Windows.Navigation.PageFunction%601>カスタム型として抽象化は、ドメイン固有のデータを収集するために呼び出すことができます。 次のコードに対して型引数としてカスタムの型を使用する方法を示しています、<xref:System.Windows.Navigation.PageFunction%601>します。  
   
  [!code-csharp[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/csharp/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/CSharp/CustomType.cs#customtypecode1)]
  [!code-vb[CustomTypePageFunctionSnippets#CustomTypeCODE1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/CustomTypePageFunctionSnippets/VisualBasic/CustomType.vb#customtypecode1)]  

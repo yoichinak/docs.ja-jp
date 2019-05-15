@@ -2,17 +2,17 @@
 title: SQL Server データ型のマッピング
 ms.date: 03/30/2017
 ms.assetid: fafdc31a-f435-4cd3-883f-1dfadd971277
-ms.openlocfilehash: f90f44666fa5843ccf9bd1cd9ccb5c20b812f494
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 04a3bbd9ba18b30a24b425888cce78597deb068a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664091"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583729"
 ---
 # <a name="sql-server-data-type-mappings"></a>SQL Server データ型のマッピング
 SQL Server と .NET Framework は異なる型システムを使用しています。 たとえば、.NET Framework の <xref:System.Decimal> 構造体の最大小数点以下桁数は 28 ですが、SQL Server の decimal データ型と numeric データ型の最大小数点以下桁数は 38 です。 データを読み書きするときにデータの整合性を保つために、<xref:System.Data.SqlClient.SqlDataReader> では、.NET Framework の型を返すアクセサー メソッドと共に、<xref:System.Data.SqlTypes> のオブジェクトを返す SQL Server 固有の型指定されたアクセサー メソッドを公開しています。 SQL Server の型と .NET Framework の型は、両方とも <xref:System.Data.DbType> および <xref:System.Data.SqlDbType> クラスの列挙によって表されます。これらは <xref:System.Data.SqlClient.SqlParameter> データ型を指定するときに使用できます。  
   
- 推論される [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型、<xref:System.Data.DbType> 列挙と <xref:System.Data.SqlDbType> 列挙、および <xref:System.Data.SqlClient.SqlDataReader> のアクセサー メソッドを次の表に示します。  
+ 次の表は、.NET Framework 型と推論、<xref:System.Data.DbType>と<xref:System.Data.SqlDbType>列挙型、およびアクセサー メソッドについて、<xref:System.Data.SqlClient.SqlDataReader>します。  
   
 |SQL Server データベース エンジンの型|.NET Framework 型|SqlDbType 列挙|SqlDataReader SqlTypes の型指定されたアクセサー|DbType 列挙|SqlDataReader DbType の型指定されたアクセサー|  
 |-------------------------------------|-------------------------|---------------------------|-------------------------------------------|------------------------|-----------------------------------------|  

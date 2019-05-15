@@ -6,12 +6,12 @@ title: .NET ドキュメント
 description: .NET で、C#、Visual Basic、および F# を使用して任意のプラットフォームでさまざまなアプリケーションを作成する方法を説明します。 API リファレンス、サンプル コード、チュートリアルなどを参照します。
 ms.custom: updateeachrelease
 ms.date: 12/04/2018
-ms.openlocfilehash: c1e60b9a9b642542c543da2520906b59a59ddff5
-ms.sourcegitcommit: bad2d2f2311cc689130f15a7500060f446c8d8c7
+ms.openlocfilehash: 7cf46b0c4d88b7657a5c82c7aa0ae30655c9d5ce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65188807"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589986"
 ---
 <!-- markdownlint-disable MD033 -->
 <div id="main" class="v2">
@@ -253,7 +253,7 @@ ms.locfileid: "65188807"
                                                 <h3><a href="/dotnet/spark">.NET for Apache Spark ガイド</a></h3>
                                                 <p><a href="/dotnet/spark/tutorials">チュートリアル</a></p>
                                                 <p><a href="/dotnet/spark/resources">リソース</a></p>
-                                                <p><a href="/dotnet/api?view=spark-dotnet">.NET for Apache Spark API リファレンス</a></p>
+                                                <p><a href="/dotnet/api/?view=spark-dotnet">.NET for Apache Spark API リファレンス</a></p>
                                             </div>
                                         </div>
                                     </div>

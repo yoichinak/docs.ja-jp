@@ -2,15 +2,15 @@
 title: '方法: 同じ型の複数のセキュリティ トークンを使用する'
 ms.date: 03/30/2017
 ms.assetid: cf179f48-4ed4-4caa-86a5-ef8eecc231cd
-ms.openlocfilehash: e82c2e256b057f45863d0533efd0c53b921cadce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b383c6ccd96d1b3d7b091b2d7c67bb166da51df
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650280"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589421"
 ---
 # <a name="how-to-use-multiple-security-tokens-of-the-same-type"></a>方法: 同じ型の複数のセキュリティ トークンを使用する
-- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 では、クライアント メッセージには任意の型のトークンを 1 つしか含めることができませんでしたが、 現在は、同じ型の複数のトークンをクライアント メッセージに含めることができるようになりました。 このトピックでは、同じ型の複数のトークンをクライアント メッセージに含める方法について説明します。  
+- .NET Framework 3.0 では、クライアント メッセージには、指定された型のトークンを 1 つのみ含まれています。 現在は、同じ型の複数のトークンをクライアント メッセージに含めることができるようになりました。 このトピックでは、同じ型の複数のトークンをクライアント メッセージに含める方法について説明します。  
   
 - この方法でサービスを構成することはできません。サービスに含めることができるサポート トークンは 1 つだけです。  
   

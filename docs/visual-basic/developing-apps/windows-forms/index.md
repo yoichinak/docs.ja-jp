@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 125c577710ed9c2b8a53e367cd22924a3ccb483c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615110"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590785"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows フォーム アプリケーションの基礎 (Visual Basic)
 Visual Basic の重要な部分は、ユーザーのコンピューターでローカルに実行する Windows フォーム アプリケーションを作成する機能です。 Visual Studio を使用して、Windows フォームを使用すると、アプリケーションとユーザー インターフェイスを作成することができます。 クラスを Windows フォーム アプリケーションが構築された、<xref:System.Windows.Forms>名前空間。  
@@ -25,7 +25,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
 - [Windows サービス アプリケーション](../../../framework/windows-services/index.md)します。 Windows サービスを作成する方法を説明するトピックを示します。  
   
 ## <a name="building-rich-interactive-user-interfaces"></a>リッチで対話型のユーザー インターフェイスの構築  
- Windows フォームのスマート クライアント コンポーネントは、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]、読み取りと書き込みをファイル システムなどの一般的なアプリケーション タスクを有効にする管理対象のライブラリのセット。 Visual Studio などの開発環境を使用して、作成を情報を表示し、ユーザーからの入力を要求、通信する Windows フォーム アプリケーションをリモート コンピューターで、ネットワーク経由でします。  
+ Windows フォームは、.NET Framework は、一連の読み取りと書き込みをファイル システムなどの一般的なアプリケーション タスクを有効にする管理対象のライブラリのスマート クライアント コンポーネントです。 Visual Studio などの開発環境を使用して、作成を情報を表示し、ユーザーからの入力を要求、通信する Windows フォーム アプリケーションをリモート コンピューターで、ネットワーク経由でします。  
   
  Windows フォームでは、フォームは、ユーザーに情報を表示するビジュアル サーフェイスです。 通常、Windows フォーム アプリケーションをビルドするには、コントロールをフォームに配置し、マウス クリックやキーの押下などのユーザー アクションに対する応答を開発します。 "*コントロール*" は、データを表示したりデータ入力を受け入れたりする独立したユーザー インターフェイス (UI) 要素です。  
   
@@ -86,7 +86,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
 |セキュリティを管理します。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[方法: [ClickOnce セキュリティ設定を有効にする]](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>その他のコントロールおよび機能  
- Windows フォームには、ダイアログ ボックスの作成、ヘルプやドキュメントの印刷や追加、アプリケーションの複数言語へのローカライズのサポートなど、一般的なタスクを高速で簡単に実装できる機能が他にも多数あります。 さらに、Windows フォームは、の堅牢なセキュリティ システムに依存しています。、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]、をお客様により安全なアプリケーションをリリースできます。  
+ Windows フォームには、ダイアログ ボックスの作成、ヘルプやドキュメントの印刷や追加、アプリケーションの複数言語へのローカライズのサポートなど、一般的なタスクを高速で簡単に実装できる機能が他にも多数あります。 さらに、Windows フォームより安全なアプリケーションを顧客にリリースできるように、.NET Framework の堅牢なセキュリティ システムに依存します。  
   
  これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
   

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - floating-point numbers [Visual Basic], comparison
 - floating-point numbers
 ms.assetid: 90040d67-b630-4125-a6ae-37195b079042
-ms.openlocfilehash: 851be5bdf4a3adced724dc2df33657a84226270d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 837022cf1675097af5ebce63441cad1ce63eaabb
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906959"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591099"
 ---
 # <a name="troubleshooting-data-types-visual-basic"></a>データ型のトラブルシューティング (Visual Basic)
 このページには、組み込みデータ型の操作を実行するときに発生する一般的な問題が一覧表示されます。  
@@ -66,7 +66,7 @@ ms.locfileid: "61906959"
  宣言するための十分ながないことに注意してください。`decimalRemainder`として`Decimal`します。 リテラルを強制することも必要があります。 `Decimal`、使用することも`Double`既定と`decimalRemainder`として同じ不正確な値を受け取る`doubleRemainder`します。  
   
 ## <a name="boolean-type-does-not-convert-to-numeric-type-accurately"></a>Boolean データで正確な数値型に変換されません。  
- [Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)値は、数値として格納されず、格納された値は数値と同等であることを意図していません。 以前のバージョンとの互換性のために、Visual Basic には、`Boolean`と数値型の間の変換を行うための変換キーワード ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)、 `CBool`、`CInt`など) が用意されています。 ただし、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]メソッドと同様に、他の言語でもこれらの変換の実行方法が異なる場合があります。  
+ [Boolean データ型](../../../../visual-basic/language-reference/data-types/boolean-data-type.md)値は、数値として格納されず、格納された値は数値と同等であることを意図していません。 以前のバージョンとの互換性のために、Visual Basic には、`Boolean`と数値型の間の変換を行うための変換キーワード ([CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)、 `CBool`、`CInt`など) が用意されています。 ただし、他の言語場合があります実行これらの変換、異なる .NET Framework のメソッドの操作を行います。  
   
  数値と等価の値に依存するコードを記述する必要がありますしない`True`と`False`します。 使用を制限する必要があります、可能な限り`Boolean`変数を論理値に設計されています。 組み合わせる必要がある場合`Boolean`数値、選択した変換の方法を理解することを確認します。  
   
@@ -96,7 +96,7 @@ ms.locfileid: "61906959"
 ## <a name="string-conversion-fails-at-run-time"></a>String の変換は実行時に失敗します。  
  [文字列データ型](../../../../visual-basic/language-reference/data-types/string-data-type.md)がごく少数の拡大変換に参加します。 `String` 自体にのみ拡大変換と`Object`とのみ`Char`と`Char()`(、`Char`配列) に拡大変換`String`。 これは、ため`String`変数と定数は、他のデータ型を含めることはできませんの値を含めることができます。  
   
- 型チェックを切り替えると ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) は`On`コンパイラには、すべての暗黙的な縮小変換が許可されていません。 関連するものが含まれます`String`します。 コードの変換キーワードをなど、使用もできる`CStr`と[CType 関数](../../../../visual-basic/language-reference/functions/ctype-function.md)、どのダイレクト、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]変換を試みます。  
+ 型チェックを切り替えると ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) は`On`コンパイラには、すべての暗黙的な縮小変換が許可されていません。 関連するものが含まれます`String`します。 コードの変換キーワードをなど、使用もできる`CStr`と[CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)変換を試行する .NET Framework を直接します。  
   
 > [!NOTE]
 >  縮小変換エラーが抑制されて内の要素からの変換、`For Each…Next`ループ コントロール変数のコレクション。 詳細と例については、"Narrowing Conversions"セクションを参照してください[ごとにしています...次のステートメントの](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  

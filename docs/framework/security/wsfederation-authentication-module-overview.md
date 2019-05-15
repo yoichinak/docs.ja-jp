@@ -3,12 +3,12 @@ title: WSFederation 認証モジュールの概要
 ms.date: 03/30/2017
 ms.assetid: 02c4d5e8-f0a7-49ee-9cf5-3647578510ad
 author: BrucePerlerMS
-ms.openlocfilehash: f4dc63272c47dc0cd9eaa15986e4369d9d689b64
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63090efdf97066b4a276880d4f4be0f843de6800
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592369"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586042"
 ---
 # <a name="wsfederation-authentication-module-overview"></a>WSFederation 認証モジュールの概要
 Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-FAM) を通じて ASP.NET アプリケーションでのフェデレーション認証をサポートします。 このトピックは、フェデレーション認証の動作とその使用方法の理解に役立ちます。  
@@ -44,7 +44,7 @@ Windows Identity Foundation (WIF) は、WS-Federated Authentication Module (WS-F
  また WS-FAM は、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] アプリケーションで機能をカスタマイズするための複数のイベントを発生させます。  
   
 ### <a name="how-the-ws-fam-works"></a>WS-FAM の動作  
- WS-FAM は <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> クラスに実装されます。 通常、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] RP アプリケーションの HTTP パイプラインに WS-FAM を追加します。 未認証のユーザーが保護されたリソースにアクセスしようとすると、RP は "401 authorization denied" (401 承認が拒否されました) という HTTP 応答を返します。 WS-FAM は、クライアントがこれを受け取ることを許可する代わりにこの応答を先に取得し、指定されている STS にユーザーをリダイレクトします。 STS はセキュリティ トークンを発行し、WS-FAM がそれを再び受け取ります。 WS-FAM はトークンを使用して、認証ユーザー向けに <xref:System.Security.Claims.ClaimsPrincipal> のインスタンスを作成します。これにより、通常の [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の承認機能が機能します。  
+ WS-FAM は <xref:System.IdentityModel.Services.WSFederationAuthenticationModule> クラスに実装されます。 通常、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] RP アプリケーションの HTTP パイプラインに WS-FAM を追加します。 未認証のユーザーが保護されたリソースにアクセスしようとすると、RP は "401 authorization denied" (401 承認が拒否されました) という HTTP 応答を返します。 WS-FAM は、クライアントがこれを受け取ることを許可する代わりにこの応答を先に取得し、指定されている STS にユーザーをリダイレクトします。 STS はセキュリティ トークンを発行し、WS-FAM がそれを再び受け取ります。 WS-FAM はトークンを使用してのインスタンスを作成する<xref:System.Security.Claims.ClaimsPrincipal>関数を通常の .NET Framework の承認メカニズムができるように、認証されたユーザー。  
   
  HTTP はステートレスであるため、保護されている別のリソースにユーザーがアクセスしようとするたびに、このプロセス全体が繰り返し行われないようにする必要があります。 このような場合に <xref:System.IdentityModel.Services.SessionAuthenticationModule> が役に立ちます。 STS がユーザーにセキュリティ トークンを発行すると、<xref:System.IdentityModel.Services.SessionAuthenticationModule> もユーザーにセッションのセキュリティ トークンを作成して、クッキーにします。 以降の要求では、<xref:System.IdentityModel.Services.SessionAuthenticationModule> はこのクッキーを受け取り、これを使用してユーザーの <xref:System.Security.Claims.ClaimsPrincipal> を構築します。  
   

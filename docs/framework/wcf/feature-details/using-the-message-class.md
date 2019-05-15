@@ -5,21 +5,21 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: d1d62bfb-2aa3-4170-b6f8-c93d3afdbbed
-ms.openlocfilehash: 00b64bdd3795cf282847a3bbaa0940f76faa1c2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1db509d8f1c672bf51cac7f1ca6b1af91b34fa4d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637525"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591262"
 ---
 # <a name="using-the-message-class"></a>メッセージ クラスの使用
 <xref:System.ServiceModel.Channels.Message>クラスは、基本的な Windows Communication Foundation (WCF) にします。 クライアントとサービスの間のすべての通信は、最終的には <xref:System.ServiceModel.Channels.Message> インスタンスの送受信となります。  
   
  通常は、<xref:System.ServiceModel.Channels.Message> クラスと直接対話することはありません。 代わりに、データ コントラクト、メッセージ コントラクトおよび操作コントラクトなど、WCF サービス モデルの構文を使用して受信および送信メッセージを記述します。 ただし、一部の高度なシナリオでは、<xref:System.ServiceModel.Channels.Message> を直接使用してプログラムを作成することができます。 たとえば、次のような場合に <xref:System.ServiceModel.Channels.Message> クラスを使用できます。  
   
-- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトをシリアル化する以外の方法で送信メッセージの内容を作成する必要がある場合 (ディスク上のファイルからメッセージを直接作成する場合など)。  
+- .NET Framework オブジェクトをシリアル化ではなく、送信メッセージの内容 (たとえば、ディスク上のファイルから直接メッセージを作成する) を作成する方法を必要がある場合、します。  
   
-- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトに逆シリアル化する以外の方法で受信メッセージの内容を使用する必要がある場合 (XSLT 変換を XML の未処理コンテンツに適用する場合など)。  
+- ときに別の方法 (たとえば、生の XML 内容に XSLT 変換を適用する場合) .NET Framework のオブジェクトに逆シリアル化ではなく受信メッセージの内容を使用する必要があります。  
   
 - メッセージ コンテンツに関係なく、一般的な方法でメッセージを処理する必要がある場合 (メッセージをルーティングまたは転送する場合や、ルーターシステム、負荷分散システム、または発行/定期受信システムを構築する場合など)。  
   

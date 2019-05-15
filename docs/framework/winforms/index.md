@@ -6,15 +6,15 @@ helpviewer_keywords:
 - user interface
 - user interface [Windows Forms], forms
 ms.assetid: 627df1e9-b254-41af-bbac-9a4f02810c54
-ms.openlocfilehash: aa3f3d8adc34d8c51cd2cfa6b087d01e9af1ad82
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00e359e7c2440b6d88f2c42fd0267fc1f12b7bb7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61801180"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583425"
 ---
 # <a name="windows-forms"></a>Windows フォーム
-フォームはアプリケーションの基本単位であるため、機能とデザインにある程度の配慮を与えることが重要です。 フォームは、最終的には開発者がユーザー インターフェイスを作成するコントロールとデータを操作するコードを拡張する白紙状態です。 そのために、Visual Studio を使用する、豊富なコントロール セットで書き込まれたと同様に、統合開発環境 (IDE)、コードの記述を支援するために、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]します。 これらのコントロールの機能をコードに補完することにより、必要なソリューションを簡単に素早く開発できます。  
+フォームはアプリケーションの基本単位であるため、機能とデザインにある程度の配慮を与えることが重要です。 フォームは、最終的には開発者がユーザー インターフェイスを作成するコントロールとデータを操作するコードを拡張する白紙状態です。 そのために、Visual Studio を使用する、.NET Framework で書き込まれた設定の機能豊富なコントロールと同様に、統合開発環境 (IDE) でコードの記述を支援します。 これらのコントロールの機能をコードに補完することにより、必要なソリューションを簡単に素早く開発できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [Windows フォームについて](getting-started-with-windows-forms.md)  

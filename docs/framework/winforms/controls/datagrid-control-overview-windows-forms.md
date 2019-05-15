@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 8deb151572b8a83396e4204378783304b66216c3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648130"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589016"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid コントロールの概要 (Windows フォーム)
 > [!NOTE]
@@ -41,7 +41,7 @@ ms.locfileid: "64648130"
   
  <xref:System.Windows.Forms.DataGrid> はデータセットのユーザー インターフェイス、関連するテーブル間のナビゲーション、および豊富な書式設定および編集機能を提供することができます。  
   
- 表示とデータの操作は、個別の関数には。Windows フォーム データ バインディング アーキテクチャと、データの更新プログラムが処理されますが、コントロールが、ユーザー インターフェイスを処理[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]データ プロバイダー。 このため、同じデータ ソースにバインドされる複数のコントロールが同期状態を保ちます。  
+ 表示とデータの操作は、個別の関数には。コントロールは、データの更新プログラムは .NET Framework データ プロバイダーと Windows フォーム データ バインディング アーキテクチャによって処理されますが、ユーザー インターフェイスを処理します。 このため、同じデータ ソースにバインドされる複数のコントロールが同期状態を保ちます。  
   
 > [!NOTE]
 >  Visual Basic 6.0 の DataGrid コントロールに慣れている場合、Windows フォームの <xref:System.Windows.Forms.DataGrid> コントロールには大きな違いがあります。  

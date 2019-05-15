@@ -2,12 +2,12 @@
 title: '方法: 式ツリー (Visual Basic) を実行します。'
 ms.date: 07/20/2015
 ms.assetid: 9dfb5ab3-f48f-417e-975f-f8f6f1cdc18d
-ms.openlocfilehash: d7e0f5f6687ffb4293209a29279ca16361e7424e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 62d3febf7090c6662e5593bbaf94c04236a162e9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642340"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592143"
 ---
 # <a name="how-to-execute-expression-trees-visual-basic"></a>方法: 式ツリー (Visual Basic) を実行します。
 このトピックでは、式ツリーを実行する方法について説明します。 式ツリーを実行すると値が返される場合がありますが、メソッドの呼び出しなどの処理が実行されるだけの場合もあります。  
@@ -43,8 +43,6 @@ MsgBox(result)
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
-  
-- System.Core.dll がまだ参照されていない場合は、System.Core.dll へのプロジェクト参照を追加します。  
   
 - System.Linq.Expressions 名前空間をインクルードします。  
   

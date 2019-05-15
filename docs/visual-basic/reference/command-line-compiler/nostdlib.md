@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -nostdlib compiler option [Visual Basic]
 - /nostdlib compiler option [Visual Basic]
 ms.assetid: 140381b8-dc96-4ad5-ae11-792c9ed0be4d
-ms.openlocfilehash: 4f3dc61a6e78b0fb2135d4132c53e7efc22447a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1c3c70b24de5163ca004b41a21017205a19d9730
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789052"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583378"
 ---
 # <a name="-nostdlib-visual-basic"></a>-nostdlib (Visual Basic)
 コンパイラが自動的に標準のライブラリを参照します。  
@@ -23,7 +23,7 @@ ms.locfileid: "61789052"
 ```  
   
 ## <a name="remarks"></a>Remarks  
- `-nostdlib`オプションは、System.dll アセンブリへの自動参照を削除し、コンパイラが Vbc.rsp ファイルを読み取ることを防ぎます。 Vbc.exe のファイルと同じディレクトリにある、Vbc.rsp ファイルを一般的に使用される参照[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリとインポート、`System`と`Microsoft.VisualBasic`名前空間。  
+ `-nostdlib`オプションは、System.dll アセンブリへの自動参照を削除し、コンパイラが Vbc.rsp ファイルを読み取ることを防ぎます。 Vbc.exe ファイルと同じディレクトリにある、Vbc.rsp ファイルは、一般的に使用される .NET Framework アセンブリを参照し、インポート、`System`と`Microsoft.VisualBasic`名前空間。  
   
 > [!NOTE]
 >  Mscorlib.dll および Microsoft.VisualBasic.dll のアセンブリは、常に参照されます。  

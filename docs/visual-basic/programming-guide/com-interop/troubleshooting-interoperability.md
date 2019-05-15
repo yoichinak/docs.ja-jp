@@ -16,18 +16,18 @@ helpviewer_keywords:
 - interoperability, sharing components
 - shared components, using with assemblies
 ms.assetid: b324cc1e-b03c-4f39-aea6-6a6d5bfd0e37
-ms.openlocfilehash: af28ba1a167415a59b8e2a4db860497122a5c2c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 60a61dfa7302611800c0b808a31a386e46304756
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624811"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592152"
 ---
 # <a name="troubleshooting-interoperability-visual-basic"></a>相互運用性のトラブルシューティング (Visual Basic)
-マネージ コードと COM の相互運用するときに、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]、1 つ以上の次の一般的な問題が発生する可能性があります。  
+COM と .NET Framework のマネージ コードの相互運用するときに 1 つ以上の次の一般的な問題が発生する可能性があります。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor1"></a> 相互運用マーシャ リング  
- データ型でないを使用する必要がありますの一部、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。 相互運用機能アセンブリ、COM オブジェクトの作業のほとんどを処理するが、マネージ オブジェクトが COM に公開するときに使用されるデータ型を制御する必要があります。 たとえば、クラス ライブラリ内の構造体を指定する必要があります、`BStr`アンマネージド型 Visual Basic 6.0 と以前のバージョンで作成された COM オブジェクトに送信される文字列。 このような場合は、使用することができます、<xref:System.Runtime.InteropServices.MarshalAsAttribute>がアンマネージ型として公開するマネージ型の属性。  
+ .NET Framework の一部ではないデータ型を使用する必要があります。 相互運用機能アセンブリ、COM オブジェクトの作業のほとんどを処理するが、マネージ オブジェクトが COM に公開するときに使用されるデータ型を制御する必要があります。 たとえば、クラス ライブラリ内の構造体を指定する必要があります、`BStr`アンマネージド型 Visual Basic 6.0 と以前のバージョンで作成された COM オブジェクトに送信される文字列。 このような場合は、使用することができます、<xref:System.Runtime.InteropServices.MarshalAsAttribute>がアンマネージ型として公開するマネージ型の属性。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor2"></a> アンマネージ コードへの固定長文字列のエクスポート  
  Visual Basic 6.0 と以前のバージョンでは、文字列は、終端の null 文字を使用せずにバイトのシーケンスとして COM オブジェクトにエクスポートされます。 他の言語と互換性のため、Visual Basic .NET には、文字列をエクスポートするときに終端文字が含まれます。 この非互換性に対処する最善の方法は、文字列の配列として、終了文字がないをエクスポートする`Byte`または`Char`します。  
@@ -55,7 +55,7 @@ ms.locfileid: "64624811"
  標準のアセンブリ、クラスとは異なり、COM クラスは、COM クラスを表すクラスとインターフェイスの両方と相互運用機能アセンブリで公開されます。 インターフェイスの名前は、COM クラスのと同じです。 相互運用機能のクラスの名前は、元の COM クラスのと同じですが、「クラス」を追加、word とします。 たとえば、COM オブジェクトの相互運用機能アセンブリへの参照を使用して、プロジェクトがあるとします。 COM クラスの名前は場合`MyComClass`、IntelliSense やオブジェクト ブラウザーには、という名前のインターフェイスを表示する`MyComClass`という名前のクラスと`MyComClassClass`します。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor6"></a> .NET Framework クラスのインスタンスを作成します。  
- 通常のインスタンスを作成する、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]クラスを使用して、`New`クラス名を含むステートメント。 相互運用機能アセンブリによって表される COM クラスは、1 つのケースを使用することができます、`New`ステートメント インターフェイスを使用します。 使用して、COM クラスを使用している場合を除き、`Inherits`ステートメントでは、クラスと同様に、インターフェイスを使用することができます。 次のコードを作成する方法を示します、 `Command` Microsoft ActiveX データ オブジェクト 2.8 ライブラリ COM オブジェクトへの参照があるプロジェクト内のオブジェクト。  
+ 使用して .NET Framework クラスのインスタンスを作成する、一般に、`New`クラス名を含むステートメント。 相互運用機能アセンブリによって表される COM クラスは、1 つのケースを使用することができます、`New`ステートメント インターフェイスを使用します。 使用して、COM クラスを使用している場合を除き、`Inherits`ステートメントでは、クラスと同様に、インターフェイスを使用することができます。 次のコードを作成する方法を示します、 `Command` Microsoft ActiveX データ オブジェクト 2.8 ライブラリ COM オブジェクトへの参照があるプロジェクト内のオブジェクト。  
   
  [!code-vb[VbVbalrInterop#20](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#20)]  
   
@@ -67,7 +67,7 @@ ms.locfileid: "64624811"
 >  相互運用機能アセンブリは、COM クラスを表すインターフェイスを暗黙的に実装します。 使用してください、`Implements`これらのインターフェイスまたはエラーを実装するステートメントになります。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor7"></a> パラメーターと戻り値のデータ型  
- 相互運用機能アセンブリのメンバーは、標準のアセンブリのメンバーとは異なりの元のオブジェクトの宣言で使用されるものとは異なるデータ型があります。 相互運用機能アセンブリは COM 型を互換性のある共通言語ランタイムの型に暗黙的に変換しますが、両方の側で実行時エラーを防ぐために使用されるデータ型に注意する必要があります。 たとえば、Visual Basic 6.0 以前のバージョンでは、型の値で作成された COM オブジェクトで`Integer`前提としています、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]同等の型、`Short`します。 使用する前に、インポートされたメンバーの特性を調べるオブジェクト ブラウザーを使用することをお勧めします。  
+ 相互運用機能アセンブリのメンバーは、標準のアセンブリのメンバーとは異なりの元のオブジェクトの宣言で使用されるものとは異なるデータ型があります。 相互運用機能アセンブリは COM 型を互換性のある共通言語ランタイムの型に暗黙的に変換しますが、両方の側で実行時エラーを防ぐために使用されるデータ型に注意する必要があります。 たとえば、Visual Basic 6.0 以前のバージョンでは、型の値で作成された COM オブジェクトで`Integer`.NET Framework の同等の型を想定しています。`Short`します。 使用する前に、インポートされたメンバーの特性を調べるオブジェクト ブラウザーを使用することをお勧めします。  
   
 ## <a name="vbconinteroperabilitymarshalinganchor8"></a> モジュール レベルの COM メソッド  
  ほとんどの COM オブジェクトを使用して COM クラスのインスタンスを作成して使用、`New`キーワードと、オブジェクトのメソッドを呼び出しています。 このルールの 1 つの例外は、COM オブジェクトが含まれている`AppObj`または`GlobalMultiUse`COM クラス。 このようなクラスには、Visual Basic .NET のクラスで、モジュール レベル メソッドに似ています。 Visual Basic 6.0 と以前のバージョンを暗黙的に作成のようなオブジェクトのインスタンスが初めてのメソッドのいずれかを呼び出します。 たとえば、Visual Basic 6.0 で追加できます 3.6 DAO オブジェクト ライブラリの呼び出しへの参照、`DBEngine`インスタンスを作成しなくてもメソッド。  
@@ -111,7 +111,7 @@ Set db = DBEngine.OpenDatabase("C:\nwind.mdb")
 ## <a name="vbconinteroperabilitymarshalinganchor11"></a> コントロールの ByRef の読み取り専用プロパティの引き渡し  
  Visual Basic .NET は、渡すときに場合があります"エラー 0x800A017F CTL_E_SETNOTSUPPORTED"などの COM エラーを生成`ReadOnly`プロパティとして、一部の古い ActiveX コントロールの`ByRef`他のプロシージャのパラメーター。 Visual Basic 6.0 からプロシージャの呼び出しでは、エラーは発生せず、パラメーターとして扱われます値で渡すと同様です。 Visual Basic .NET のエラー メッセージでは、プロパティがないプロパティを変更しようとしていることを示します`Set`プロシージャ。  
   
- 呼び出されるプロシージャにアクセスする場合を使用してこのエラーを防ぐことができます、`ByVal`を受け取るパラメーターを宣言するキーワード`ReadOnly`プロパティ。 例えば:  
+ 呼び出されるプロシージャにアクセスする場合を使用してこのエラーを防ぐことができます、`ByVal`を受け取るパラメーターを宣言するキーワード`ReadOnly`プロパティ。 例:  
   
  [!code-vb[VbVbalrInterop#26](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrInterop/VB/Class1.vb#26)]  
   

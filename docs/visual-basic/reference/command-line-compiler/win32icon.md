@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -win32icon compiler option [Visual Basic]
 - /win32icon compiler option [Visual Basic]
 ms.assetid: aecaab01-9353-46c5-941c-6edabd4eff92
-ms.openlocfilehash: e36e9187ab8c9c2b4950a66ff8ff3fc93adbd9c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: dc48a8f79aa04892c514917da00b8fd6489695b1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61774830"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593086"
 ---
 # <a name="-win32icon"></a>-win32icon
 .Ico ファイルを出力ファイルに挿入します。 この .ico ファイルは、出力ファイルを表す**ファイル エクスプ ローラー**します。  
@@ -31,7 +31,7 @@ ms.locfileid: "61774830"
 ## <a name="remarks"></a>Remarks  
  .Ico ファイルは、Microsoft Windows リソース コンパイラ (RC) を作成できます。 リソース コンパイラが、Visual C プログラムをコンパイルするときに呼び出されます.ico ファイルは .rc ファイルから作成されます。 `-win32icon`と`-win32resource`オプションは相互に排他的です。  
   
- 参照してください[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md)参照に、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]リソース ファイル、または[-リソース (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md)をアタッチする、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]リソース ファイル。 参照してください[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) .res ファイルをインポートします。  
+ 参照してください[-linkresource (Visual Basic)](../../../visual-basic/reference/command-line-compiler/linkresource.md) 、.NET Framework リソース ファイルを参照または[-リソース (Visual Basic)](../../../visual-basic/reference/command-line-compiler/resource.md) .NET Framework リソース ファイルを添付します。 参照してください[-win32resource](../../../visual-basic/reference/command-line-compiler/win32resource.md) .res ファイルをインポートします。  
   
 |Visual Studio IDE で win32icon を設定するには|  
 |---|  

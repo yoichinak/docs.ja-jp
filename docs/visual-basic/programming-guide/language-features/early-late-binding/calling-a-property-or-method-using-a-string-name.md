@@ -12,12 +12,12 @@ helpviewer_keywords:
 - properties [Visual Basic], setting at run time
 - CallByName function
 ms.assetid: 79a7b8b4-b8c7-4ad8-aca8-12a9a2b32f03
-ms.openlocfilehash: e267c0c4d1d3e8f986348863d933c984f686b33b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 92430f23b3d4d6237d0b6ec606ce2cb9b945f6f8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973343"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590032"
 ---
 # <a name="calling-a-property-or-method-using-a-string-name-visual-basic"></a>文字列名によるプロパティまたはメソッドの呼び出し (Visual Basic)
 ほとんどの場合は、デザイン時に、オブジェクトのメソッドとプロパティを検出し、それらを処理するコードを記述できます。 ただし、場合によっては可能性がありますいないオブジェクトのプロパティとメソッドを事前にわかって、またはプロパティを指定するか、実行時にメソッドを実行するエンドユーザーの有効化の柔軟性をするだけです。  
@@ -31,7 +31,7 @@ ms.locfileid: "61973343"
   
  最初の引数*オブジェクト*、に対して操作を実行するオブジェクトの名前を受け取ります。 *ProcedureName*引数には、呼び出されるメソッドまたはプロパティ プロシージャの名前を含む文字列。 *CallType*引数には、プロシージャを呼び出すの型を表す定数。 メソッド (`Microsoft.VisualBasic.CallType.Method`)、読み取りプロパティ (`Microsoft.VisualBasic.CallType.Get`)、またはプロパティの設定 (`Microsoft.VisualBasic.CallType.Set`)。 *引数*引数は省略可能な型の配列を受け取る`Object`プロシージャに引数を格納しています。  
   
- 使用することができます`CallByName`が、現在のソリューションでのクラスは COM オブジェクトへのアクセスは使用ほとんどの場合からオブジェクトまたは[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]アセンブリ。  
+ 使用することができます`CallByName`が、現在のソリューション内のクラスとは .NET Framework アセンブリから COM オブジェクトまたはオブジェクトへのアクセスには使用ほとんどの場合は。  
   
  という名前のクラスを格納するアセンブリへの参照を追加するとします`MathClass`、という名前の新しい関数を持つ`SquareRoot`次のコードに示すように、します。  
   

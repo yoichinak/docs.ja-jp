@@ -2,19 +2,19 @@
 title: POX アプリケーションとの相互運用性
 ms.date: 03/30/2017
 ms.assetid: 449276b8-4633-46f0-85c9-81f01d127636
-ms.openlocfilehash: b7fdb4e16bce52025515ced065d0f48cffb7fa3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 17b85ab41589a130e950cd52c759305cc17e92b7
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046893"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591050"
 ---
 # <a name="interoperability-with-pox-applications"></a>POX アプリケーションとの相互運用性
 
 "Plain Old XML"(POX) アプリケーションは、SOAP エンベロープで囲まれていない XML アプリケーション データのみを含んだ生の HTTP メッセージの交換によって通信します。 Windows Communication Foundation (WCF) には、サービスと POX メッセージを使用するクライアントの両方を提供できます。 サービスでは、Web ブラウザーなどのクライアント エンドポイントを公開するサービスと POX メッセージを送受信するためのスクリプト言語を実装するために WCF を使用できます。 クライアントでは、POX ベースのサービスと通信するクライアントを実装するために、WCF プログラミング モデルを使用できます。  
   
 > [!NOTE]
-> このドキュメントはもともと [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.0 用に書かれたものです。  [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 3.5 には POX アプリケーション用のサポートが組み込まれています。 参照の詳細については[WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)します。
+> このドキュメントは、.NET Framework 3.0 用に作成されたでした。  .NET framework 3.5 POX アプリケーションを操作するための組み込みサポートしています。 参照の詳細については[WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)します。
   
 ## <a name="pox-programming-with-wcf"></a>WCF による POX プログラミング
 

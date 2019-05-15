@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 29c24d9920bff38beced8f5995ec328571e6b5d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309226"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595787"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>チュートリアル: C# でのクエリの作成 (LINQ)
 このチュートリアルでは、LINQ クエリ式の記述に使用される C# 言語機能について説明します。  
@@ -41,17 +41,17 @@ ms.locfileid: "59309226"
 ## <a name="create-an-in-memory-data-source"></a>メモリ内データ ソースの作成  
  クエリのデータ ソースは、`Student` オブジェクトのシンプルなリストです。 各 `Student` レコードには、名前、姓、およびクラスでのテストの点数を表す整数の配列が含まれます。 このコードをプロジェクトにコピーします。 これには、次のような特徴があります。  
   
--   `Student` クラスは自動実装プロパティで構成されています。  
+- `Student` クラスは自動実装プロパティで構成されています。  
   
--   リスト内の各生徒は、オブジェクト初期化子で初期化されます。  
+- リスト内の各生徒は、オブジェクト初期化子で初期化されます。  
   
--   リスト自体は、コレクション初期化子で初期化されます。  
+- リスト自体は、コレクション初期化子で初期化されます。  
   
  この全体的なデータ構造は、コンストラクターへの明示的な呼び出しや、明示的なメンバー アクセスを行うことなく初期化され、インスタンス化されます。 これらの新機能について詳しくは、「[自動実装プロパティ](../../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)」および「[オブジェクト初期化子とコレクション初期化子](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)」をご覧ください。  
   
 #### <a name="to-add-the-data-source"></a>データ ソースを追加するには  
   
--   `Student` クラスと、初期化された生徒リストを、プロジェクト内の `Program` クラスに追加します。  
+- `Student` クラスと、初期化された生徒リストを、プロジェクト内の `Program` クラスに追加します。  
   
      [!code-csharp[CsLinqGettingStarted#11](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#11)]  
   
@@ -63,7 +63,7 @@ ms.locfileid: "59309226"
   
 #### <a name="to-create-a-simple-query"></a>簡単なクエリを作成するには  
   
--   アプリケーションの `Main` メソッドで、シンプルなクエリを作成します。このクエリでは、実行時に、最初のテストの点数が 90 を超える全生徒のリストを生成するようにします。 `Student` オブジェクト全体が選択されているため、クエリの型は `IEnumerable<Student>` です。 コードでは、[var](../../../../csharp/language-reference/keywords/var.md) キーワードを使用して暗黙的型指定を使用することもできますが、結果を明確に示すために、明示的型指定を使用します。 (`var` について詳しくは、「[暗黙的に型指定されたローカル変数](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」をご覧ください。)  
+- アプリケーションの `Main` メソッドで、シンプルなクエリを作成します。このクエリでは、実行時に、最初のテストの点数が 90 を超える全生徒のリストを生成するようにします。 `Student` オブジェクト全体が選択されているため、クエリの型は `IEnumerable<Student>` です。 コードでは、[var](../../../../csharp/language-reference/keywords/var.md) キーワードを使用して暗黙的型指定を使用することもできますが、結果を明確に示すために、明示的型指定を使用します。 (`var` について詳しくは、「[暗黙的に型指定されたローカル変数](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」をご覧ください。)  
   
      なお、クエリの範囲変数 (`student`) は、ソース内の各 `Student` への参照として機能し、各オブジェクトのメンバー アクセスを提供します。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "59309226"
   
 1. クエリを実行する `foreach` ループを記述します。 コードについては、以下の点に注意してください。  
   
-    -   返されたシーケンス内の各要素は、`foreach` ループ内の反復変数を通じてアクセスされます。  
+    - 返されたシーケンス内の各要素は、`foreach` ループ内の反復変数を通じてアクセスされます。  
   
-    -   この変数の型は `Student` で、クエリ変数の型は互換性があります (`IEnumerable<Student>`)。  
+    - この変数の型は `Student` で、クエリ変数の型は互換性があります (`IEnumerable<Student>`)。  
   
 2. このコードを追加したら、アプリケーションをビルドして実行し、**[コンソール]** ウィンドウで結果を表示します。  
   

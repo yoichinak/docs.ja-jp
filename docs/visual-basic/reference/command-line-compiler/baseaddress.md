@@ -9,12 +9,12 @@ helpviewer_keywords:
 - /baseaddress compiler option [Visual Basic]
 - baseaddress compiler option [Visual Basic]
 ms.assetid: c982bcf2-46e5-47a2-bc8f-a5cc32b7dc47
-ms.openlocfilehash: 0550e4ad700494c8773a5d9b5b282dfa116adfed
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8dfe95ef3385635f5839ecc96047911544a256e
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61839554"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591452"
 ---
 # <a name="-baseaddress"></a>-baseaddress
 DLL を作成するときに、既定のベース アドレスを指定します。  
@@ -32,7 +32,7 @@ DLL を作成するときに、既定のベース アドレスを指定します
 |`address`|必須。 DLL のベース アドレス。 このアドレスは、16 進数として指定する必要があります。|  
   
 ## <a name="remarks"></a>Remarks  
- DLL の既定のベース アドレスの設定、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。  
+ DLL の既定のベース アドレスは、.NET Framework によって設定されます。  
   
  このアドレスの下位ワードは丸められますことに注意します。 たとえば、0x11110001 とを指定する場合は丸められて 0x11110000 に丸められます。  
   

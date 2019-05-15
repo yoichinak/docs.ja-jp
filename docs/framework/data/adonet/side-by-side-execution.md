@@ -2,48 +2,48 @@
 title: ADO.NET での side-by-side 実行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: a8747d749ed7e751ba577a2cd29c2048065f2645
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664143"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583620"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET での side-by-side 実行
-[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の side-by-side 実行は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の複数のバージョンがインストールされている 1 台のコンピューター上で、アプリケーションのコンパイル時のバージョンのみを使用して、アプリケーションを実行する機能です。 サイド バイ サイドで実行を構成する方法の詳細については、次を参照してください。[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)します。  
+.NET Framework でのサイド バイ サイドで実行、アプリケーションのコンパイル対象のバージョンを排他的に使用して、インストールされている .NET Framework の複数のバージョンをあるコンピューター上でアプリケーションを実行する機能があります。 サイド バイ サイドで実行を構成する方法の詳細については、次を参照してください。[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)します。  
   
- あるバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を使用してコンパイルされたアプリケーションを、別のバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] で実行することもできます。 ただし、インストールされている [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のバージョンごとにアプリケーションをコンパイルして、各バージョンを別々に実行することをお勧めします。 いずれの場合でも、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の各リリース間の変更によって生じるアプリケーションの上位互換性または下位互換性の問題に注意する必要があります。  
+ .NET Framework の 1 つのバージョンを使用してコンパイルされたアプリケーションは、.NET Framework の別のバージョンで実行できます。 ただし、バージョンの .NET Framework のインストールされている各バージョンのアプリケーションをコンパイルして、別々 に実行することお勧めします。 いずれの場合でも、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の各リリース間の変更によって生じるアプリケーションの上位互換性または下位互換性の問題に注意する必要があります。  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>上位互換性と下位互換性  
- 上位互換性とは、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の旧バージョンでコンパイルしたアプリケーションが、新しいバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] でも実行できることを意味します。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] version 1.1 用に書かれた [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] コードは、後のバージョンとの上位互換性があります。  
+ 上位互換性は、アプリケーションは、.NET Framework の以前のバージョンでコンパイルすることができますが、.NET Framework の以降のバージョンで正常に実行も意味します。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] .NET Framework version 1.1 用に記述されたコードでは、以降のバージョンとの上位互換性です。  
   
- 下位互換性とは、アプリケーションが [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の新しいバージョン用にコンパイルされ、機能を低下させずに、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の以前のバージョンで引き続き実行できることを意味します。 当然のことながら、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の新しいバージョンで導入された機能については、これは該当しません。  
+ 旧バージョンとの互換性は、アプリケーションは、.NET Framework の新しいバージョンがコンパイルされるが、機能を失うことがなく、.NET Framework の以前のバージョンで引き続き実行を意味します。 もちろん、この操作が、.NET Framework の新しいバージョンで導入された機能の場合です。  
   
 ## <a name="the-net-framework-data-provider-for-odbc"></a>.NET Framework Data Provider for ODBC  
- Version 1.1 以降、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for ODBC (<xref:System.Data.Odbc>) は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の一部として同梱されています。 ODBC データ プロバイダーが使用できる[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]からバージョン 1.0 の開発者がダウンロード、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?linkid=4173)します。 名前空間をダウンロードした[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]Data Provider for ODBC は**Microsoft.Data.Odbc**します。  
+ バージョン 1.1 では、.NET Framework Data Provider for ODBC (<xref:System.Data.Odbc>) は、.NET Framework の一部として含まれます。 ODBC データ プロバイダーを利用できる .NET Framework バージョン 1.0 の開発者から Web ダウンロードとして、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?linkid=4173)します。 ダウンロードした .NET Framework Data Provider for ODBC の名前空間は**Microsoft.Data.Odbc**します。  
   
- 用に開発されたアプリケーションがある場合、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]して、データ ソースに接続する ODBC データ プロバイダーを使用するバージョン 1.0 がでそのアプリケーションを実行する、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] version 1.1 または以降のバージョンが、ODBC の名前空間を更新する必要がありますデータ プロバイダーを**System.Data.Odbc**します。 その後で、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の新しいバージョン用に再コンパイルする必要があります。  
+ .NET Framework version 1.0、ODBC データ プロバイダーを使用して、データ ソースに接続するために開発されたアプリケーションがあり、.NET Framework version 1.1 またはそれ以降のバージョンでそのアプリケーションを実行する場合は、ODBC dat の名前空間を更新する必要があります。プロバイダーを**System.Data.Odbc**します。 する必要がありますを再コンパイルすること、.NET Framework の新しいバージョンの。  
   
- ODBC データ プロバイダーを使用してデータ ソースに接続する [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 以降用に開発したアプリケーションがあり、そのアプリケーションを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 で実行する場合は、ODBC データ プロバイダーをダウンロードし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 システムにインストールする必要があります。 必要があります変更する名前空間に ODBC データ プロバイダーの**Microsoft.Data.Odbc**のアプリケーションをコンパイルし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]バージョン 1.0。  
+ ODBC データ プロバイダーを使用して、データ ソースに接続する .NET Framework バージョン 2.0 以降用に開発されたアプリケーションがあり、.NET Framework version 1.0 でそのアプリケーションを実行する場合、ODBC データ プロバイダーをダウンロードしてインストールする必要があります.NET Framework version 1.0 システム。 必要があります変更する名前空間に ODBC データ プロバイダーの**Microsoft.Data.Odbc**、および .NET Framework version 1.0 用にアプリケーションを再コンパイルします。  
   
 ## <a name="the-net-framework-data-provider-for-oracle"></a>.NET Framework Data Provider for Oracle  
- Version 1.1 以降、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Data Provider for Oracle (<xref:System.Data.OracleClient>) は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の一部として同梱されています。 データ プロバイダーが使用できる[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]からバージョン 1.0 の開発者がダウンロード、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?linkid=4173)します。  
+ バージョン 1.1 では、.NET Framework Data Provider for Oracle (<xref:System.Data.OracleClient>) は、.NET Framework の一部として含まれます。 データ プロバイダーを利用できる .NET Framework バージョン 1.0 の開発者から Web ダウンロードとして、[データ アクセスおよびストレージ デベロッパー センター](https://go.microsoft.com/fwlink/?linkid=4173)します。  
   
- このデータ プロバイダーを使用してデータ ソースに接続する、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 以降用に開発したアプリケーションがあり、そのアプリケーションを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 で実行する場合は、該当するデータ プロバイダーをダウンロードし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 システムにインストールする必要があります。  
+ データ プロバイダーを使用して、データ ソースに接続する .NET Framework バージョン 2.0 以降用に開発されたアプリケーションがあり、.NET Framework version 1.0 でそのアプリケーションを実行する場合は、データ プロバイダーをダウンロードし、.NE にインストールする必要があります。T Framework version 1.0 システム。  
   
 ## <a name="code-access-security"></a>コード アクセス セキュリティ  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダー (<xref:System.Data.SqlClient>、<xref:System.Data.OleDb>) を実行するには、FullTrust 権限が必要です。 権限レベルが FullTrust より低いゾーンで [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダーを使用しようとすると、<xref:System.Security.SecurityException> がスローされます。  
+ .NET Framework version 1.0 で .NET Framework データ プロバイダー (<xref:System.Data.SqlClient>、 <xref:System.Data.OleDb>) FullTrust アクセス許可を持つ実行に必要な。 FullTrust アクセス許可の原因がより少ないゾーンで、.NET Framework データ プロバイダーを .NET Framework version 1.0 を使用すると、<xref:System.Security.SecurityException>します。  
   
- ただし、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 2.0 以降では、部分的に信頼されたゾーンで [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダーのすべてを使用できるようになりました。 さらに、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.1 の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダーに新しいセキュリティ機能が追加されました。 この機能により、特定のセキュリティ ゾーンで使用できる接続文字列を制限することができます。 特定のセキュリティ ゾーンに対して空白のパスワードの使用を禁止することもできます。 詳細については、「 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)」を参照してください。  
+ ただし、以降、.NET Framework version 2.0 では、.NET Framework データ プロバイダーをすべて使用できますで部分的に信頼されたゾーン。 さらに、新しいセキュリティ機能は、.NET Framework version 1.1 での .NET Framework データ プロバイダーに追加されました。 この機能により、特定のセキュリティ ゾーンで使用できる接続文字列を制限することができます。 特定のセキュリティ ゾーンに対して空白のパスワードの使用を禁止することもできます。 詳細については、「 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)」を参照してください。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のインストールごとに個別の Security.config ファイルがあるため、セキュリティ設定については、互換性の問題はありません。 ただし、アプリケーションが、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] Version 1.1 以降に同梱されている [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の追加のセキュリティ機能に依存している場合は、アプリケーションを Version 1.0 システムに配布することはできません。  
+ .NET Framework の各インストールには、個別の Security.config ファイルがあるために、セキュリティ設定と互換性の問題はありません。 ただし、アプリケーションがの追加のセキュリティ機能に依存するかどうかは[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].NET Framework version 1.1 以降に含まれていることはできません、version 1.0 システムに配布します。  
   
 ## <a name="sqlcommand-execution"></a>SqlCommand の実行  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.1 以降では、<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> がデータ ソースでコマンドを実行する方法が変更されました。  
+ 方法は、.NET Framework version 1.1 以降を<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>コマンドを実行、データ ソースが変更されました。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 で<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>のコンテキストですべてのコマンドを実行、 **sp_executesql**ストアド プロシージャ。 その結果、接続の状態に影響を与えるコマンド (たとえば、SET NOCOUNT ON) は、現在のコマンドの実行だけに適用されます。 接続が開かれている間に実行される後続のコマンドについては、接続の状態は変更されません。  
+ .NET framework version 1.0、<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>のコンテキストですべてのコマンドを実行、 **sp_executesql**ストアド プロシージャ。 その結果、接続の状態に影響を与えるコマンド (たとえば、SET NOCOUNT ON) は、現在のコマンドの実行だけに適用されます。 接続が開かれている間に実行される後続のコマンドについては、接続の状態は変更されません。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.1 以降<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>のみのコンテキストでコマンドを実行、 **sp_executesql**ストアド プロシージャの場合は、コマンドにパラメーター、これにより、パフォーマンスの向上。 その結果、接続の状態に影響を与えるコマンドが、非パラメーター化コマンドに含まれている場合、接続が開いている間に実行される後続のすべてのコマンドに対して、接続の状態を変更します。  
+ .NET Framework version 1.1 以降で<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>のみのコンテキストでコマンドを実行、 **sp_executesql**ストアド プロシージャの場合は、コマンドにパラメーター、これにより、パフォーマンスの向上。 その結果、接続の状態に影響を与えるコマンドが、非パラメーター化コマンドに含まれている場合、接続が開いている間に実行される後続のすべてのコマンドに対して、接続の状態を変更します。  
   
  たとえば、<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> への呼び出しで次のバッチ コマンドが実行されるとします。  
   
@@ -52,11 +52,11 @@ SET NOCOUNT ON;
 SELECT * FROM dbo.Customers;  
 ```  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.1 以降では、NOCOUNT は、接続が開いている間に実行される後続のコマンドに対して ON のままです。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] Version 1.0 では、NOCOUNT は、現在のコマンドの実行に対してだけ ON です。  
+ .NET framework version 1.1 以降では、NOCOUNT は、接続が開いている間に実行される後続のコマンドの ON はとどまります。 .NET Framework version 1.0 では、NOCOUNT は、コマンドの現在の実行に対してだけをします。  
   
- アプリケーションが、どちらかのバージョンの <xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A> の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の動作に依存している場合は、この変更が上位互換性と下位互換性の両方に影響することがあります。  
+ この変更は、の動作に依存している場合、アプリケーションの上位および下位の互換性に影響は<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>.NET Framework のいずれかのバージョン。  
   
- アプリケーションを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の以前のバージョンと新しいバージョンの両方で動作させる場合は、どのバージョンで実行された場合にも動作が同じになるように、コードを記述できます。 変更された接続状態が後続のすべてのコマンドでも有効になるようにする場合は、<xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> を使用してコマンドを実行することをお勧めします。 変更された接続状態が後続のコマンドでは無効になるようにする場合は、接続状態をリセットするコマンドを含めるようにしてください。 例:  
+ 前と後の両方のバージョンの .NET Framework 上で実行されるアプリケーションでは、動作が実行しているバージョンに関係なく同じであるかどうかを確認するコードを記述することができます。 変更された接続状態が後続のすべてのコマンドでも有効になるようにする場合は、<xref:System.Data.SqlClient.SqlCommand.ExecuteNonQuery%2A> を使用してコマンドを実行することをお勧めします。 変更された接続状態が後続のコマンドでは無効になるようにする場合は、接続状態をリセットするコマンドを含めるようにしてください。 例:  
   
 ```sql
 SET NOCOUNT ON;  

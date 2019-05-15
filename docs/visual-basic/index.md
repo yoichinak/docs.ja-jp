@@ -4,12 +4,12 @@ ms.date: 03/28/2018
 helpviewer_keywords:
 - programming, Visual Basic
 - Visual Basic
-ms.openlocfilehash: b10c520c1940b150566ab5766ca5afd2e0f03e08
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 13b887d6d01d3dc0f2018539a5893b261a3f5de3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797086"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590393"
 ---
 # <a name="visual-basic-guide"></a>Visual Basic のガイド
 
@@ -37,7 +37,7 @@ LINQ や XML リテラルなど、Visual Basic の重要な機能に関するト
 Visual Basic 言語とコンパイラの情報が含まれます。  
 
 [Visual Basic でのアプリケーションの開発](../visual-basic/developing-apps/index.md)\
-セキュリティ、例外処理、 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]クラス ライブラリの使用など、Visual Basic での開発におけるさまざまな側面について説明します。
+セキュリティ、例外処理、.NET Framework クラス ライブラリの使用など、Visual Basic での開発におけるさまざまな側面について説明します。
 
 [COM 相互運用](../visual-basic/programming-guide/com-interop/index.md)\
 Visual Basic でのコンポーネント オブジェクト モデル (COM) オブジェクトの作成と使用に関連する相互運用性の問題について説明します。  
@@ -54,4 +54,4 @@ Visual Basic でのコンポーネント オブジェクト モデル (COM) オ�
 Visual Studio の基本についての学習に役立つトピックへのリンクを示します。  
   
 [.NET API ブラウザー](../../api/index.md)\
-Microsoft [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] SDK に含まれるクラス、インターフェイス、および値型のライブラリを紹介します。
+Microsoft .NET Framework SDK に含まれるクラス、インターフェイス、および値型のライブラリを紹介します。

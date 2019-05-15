@@ -5,12 +5,12 @@ helpviewer_keywords:
 - My.Application.Log object, walkthroughs
 - event logs, changing output location
 ms.assetid: ecc74f95-743c-450d-93f6-09a30db0fe4a
-ms.openlocfilehash: 56fef77448f3523732e755f57e8cdabe6ad71379
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cba90119fa6f26946e72ce097074f275178ff33b
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327647"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593340"
 ---
 # <a name="walkthrough-changing-where-myapplicationlog-writes-information-visual-basic"></a>チュートリアル: My.Application.Log による情報の書き込み先の変更 (Visual Basic)
 `My.Application.Log` オブジェクトおよび `My.Log` オブジェクトを使用すると、アプリケーション内で発生したイベントに関する情報をログに記録できます。 このチュートリアルでは、既定の設定をオーバーライドして、 `Log` オブジェクトによる書き込み先を他のログ リスナーに変更する方法を示します。  
@@ -28,11 +28,11 @@ ms.locfileid: "59327647"
   
      app.config ファイルがない場合は、次の操作を行います。  
   
-    1.  **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
+    1. **[プロジェクト]** メニューの **[新しい項目の追加]** をクリックします。  
   
-    2.  **[新しい項目の追加]** ダイアログ ボックスで、 **[アプリケーション構成ファイル]** をクリックします。  
+    2. **[新しい項目の追加]** ダイアログ ボックスで、 **[アプリケーション構成ファイル]** をクリックします。  
   
-    3.  **[追加]** をクリックします。  
+    3. **[追加]** をクリックします。  
   
 2. `<listeners>` セクション内にある、 `<source>` 属性が "DefaultSource" の `name` セクションで、 `<sources>` セクションを見つけます。 `<sources>` セクションは、最上位の `<system.diagnostics>` セクション内の `<configuration>` セクションにあります。  
   
@@ -153,13 +153,13 @@ ms.locfileid: "59327647"
   
      使用できる型のいくつかを以下に示します。  
   
-    -   <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> リスナー。ファイル ログに書き込みます。  
+    - <xref:Microsoft.VisualBasic.Logging.FileLogTraceListener?displayProperty=nameWithType> リスナー。ファイル ログに書き込みます。  
   
-    -   <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> リスナー。`initializeData` パラメーターで指定された、コンピューターのイベント ログに情報を書き込みます。  
+    - <xref:System.Diagnostics.EventLogTraceListener?displayProperty=nameWithType> リスナー。`initializeData` パラメーターで指定された、コンピューターのイベント ログに情報を書き込みます。  
   
-    -   <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> リスナーおよび <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> リスナー。`initializeData` パラメーターで指定されたファイルに書き込みます。  
+    - <xref:System.Diagnostics.DelimitedListTraceListener?displayProperty=nameWithType> リスナーおよび <xref:System.Diagnostics.XmlWriterTraceListener?displayProperty=nameWithType> リスナー。`initializeData` パラメーターで指定されたファイルに書き込みます。  
   
-    -   <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> リスナー。コマンド ライン コンソールに書き込みます。  
+    - <xref:System.Diagnostics.ConsoleTraceListener?displayProperty=nameWithType> リスナー。コマンド ライン コンソールに書き込みます。  
   
      他の型のログ リスナーが情報を書き込む先については、その型のドキュメントを参照してください。  
   

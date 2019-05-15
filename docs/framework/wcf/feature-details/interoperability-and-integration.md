@@ -2,12 +2,12 @@
 title: 相互運用性と統合
 ms.date: 03/30/2017
 ms.assetid: 0d925119-01a1-45c2-9ea0-23061323ad33
-ms.openlocfilehash: 5a50a8ebece72a0f2f8dc95fd87e73bef5db3195
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2410c52e99f3498d8dbd6ec66a5abe0e169f4b91
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61919153"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591229"
 ---
 # <a name="interoperability-and-integration"></a>相互運用性と統合
 このセクションでは、相互運用性と Windows Communication Foundation (WCF) との統合について説明します。  
@@ -23,7 +23,7 @@ ms.locfileid: "61919153"
  WCF サービスを呼び出す COM アプリケーションのさまざまな方法について説明します。  
   
  [.NET リモート処理アプリケーションの WCF への移行](../../../../docs/framework/wcf/feature-details/migrating-net-remoting-applications-to-wcf.md)  
- WCF を使用する方法について説明します。[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]リモート処理します。  
+ .NET Framework リモート処理で WCF を使用する方法について説明します。  
   
  [Web サービス拡張 3.0 との相互運用](../../../../docs/framework/wcf/feature-details/interoperability-with-web-services-enhancements-3-0.md)  
  Web Services Enhancements (WSE) 3.0 で実装された Web サービスで WCF を使用する方法について説明します。  

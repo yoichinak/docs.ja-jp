@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a7eb98da-4a93-4692-8b59-9d670c79ffb2
-ms.openlocfilehash: 13e596ea64fc62ed6280e74636243619178ce069
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4114c974da9c108f641aebdb69f32fb3b0c484c9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990887"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591531"
 ---
 # <a name="security-considerations-for-data"></a>セキュリティに関するデータの考慮事項
 
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) インフラストラクチャの桁数�
 
 コード作成者は、コードにセキュリティの脆弱性が存在しないことを確認する必要があります。 たとえば、整数型のデータ メンバー プロパティを使用してデータ コントラクト型を作成し、 `set` アクセサー実装でこのプロパティ値に基づいて配列を割り当てた場合、悪質なメッセージにこのデータ メンバーの極端に大きな値が含まれていると、サービス拒否攻撃の危険にさらされることになります。 一般的に、受信データに基づく割り当てや、ユーザー指定のコードでの長時間に及ぶ処理は回避します (特に、長時間に及ぶ処理が少量の受信データによって発生する可能性がある場合)。 ユーザー指定のコードのセキュリティ分析を実行するときは、必ず失敗した場合 (つまり、例外をスローするすべてのコード分岐) も考慮してください。
 
-ユーザー指定コードの特に重要な例は、各操作に対するサービス実装内部のコードです。 サービス実装のセキュリティを確保することはユーザーの責任です。 サービス拒否の脆弱性を生じるような、セキュリティで保護されていない操作実装は、不注意によって容易に作成されてしまいます。 たとえば、文字列を受け取り、名前がその文字列で始まる顧客のリストをデータベースから返す操作があるとします。 使用しているデータベースの規模が大きく、渡された文字列が 1 文字の場合、ユーザーのコードは、使用可能なメモリより大きなメッセージを作成しようとする可能性があります。これによって、サービス全体が失敗します ( <xref:System.OutOfMemoryException> では [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] を回復できないため、アプリケーションは必ず強制終了されます)。
+ユーザー指定コードの特に重要な例は、各操作に対するサービス実装内部のコードです。 サービス実装のセキュリティを確保することはユーザーの責任です。 サービス拒否の脆弱性を生じるような、セキュリティで保護されていない操作実装は、不注意によって容易に作成されてしまいます。 たとえば、文字列を受け取り、名前がその文字列で始まる顧客のリストをデータベースから返す操作があるとします。 使用しているデータベースの規模が大きく、渡された文字列が 1 文字の場合、ユーザーのコードは、使用可能なメモリより大きなメッセージを作成しようとする可能性があります。これによって、サービス全体が失敗します (、 <xref:System.OutOfMemoryException> .NET Framework で回復可能でないし、常に、アプリケーションの終了になります)。
 
 悪質なコードがさまざまな機能拡張ポイントに接続されないようにする必要があります。 これが特に関係するのは、部分信頼で実行する場合、部分信頼アセンブリの型を処理する場合、または部分信頼コードで使用できるコンポーネントを作成する場合です。 詳細については、後のセクションの「部分信頼に関する脅威」を参照してください。
 
@@ -54,7 +54,7 @@ Windows Communication Foundation (WCF) インフラストラクチャの桁数�
 
 サービス拒否攻撃の緩和には通常、クォータを使用します。 クォータを超えると、通常は <xref:System.ServiceModel.QuotaExceededException> 例外がスローされます。 クォータが設定されていないと、悪質なメッセージが使用可能なすべてのメモリにアクセスし、 <xref:System.OutOfMemoryException> 例外が発生したり、使用可能なすべてのスタックにアクセスし、 <xref:System.StackOverflowException>例外が発生したりする可能性があります。
 
-クォータが超過した状況は、回復可能です。実行中のサービスでこの状況が発生した場合、現在処理されているメッセージは破棄されますが、サービスの実行は続行され、次のメッセージが処理されます。 ただし、メモリ不足とスタック オーバーフローの場合は、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]のどの場所でも回復不可能です。このような例外が発生した場合、サービスは強制終了されます。
+クォータが超過した状況は、回復可能です。実行中のサービスでこの状況が発生した場合、現在処理されているメッセージは破棄されますが、サービスの実行は続行され、次のメッセージが処理されます。 メモリ不足とスタック オーバーフローの場合は復旧できません、.NET Framework で任意の場所このような例外が発生した場合、サービスを終了します。
 
 WCF でのクォータは、事前割り当てを伴いません。 たとえば、さまざまなクラスにある <xref:System.ServiceModel.Channels.TransportBindingElement.MaxReceivedMessageSize%2A> クォータを 128 KB に設定した場合、各メッセージに 128 KB が自動的に割り当てられるわけではありません。 実際の割当量は、実際の受信メッセージのサイズによって異なります。
 
@@ -274,7 +274,7 @@ XML リーダーを直接使用する場合 (など、独自のカスタム エ�
 
 - データ コントラクト型は、プロパティの setter が特定の順序で呼び出されなくてもよいように設計します。
 
-- <xref:System.SerializableAttribute> 属性でマークされた従来の型を使用する場合は十分に注意します。 このような型のほとんどは、信頼されたデータのみで使用するために、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] リモート処理で操作することを目的に設計されています。 この属性でマークされた既存の型は、状態の安全性を考えて設計されていない可能性があります。
+- <xref:System.SerializableAttribute> 属性でマークされた従来の型を使用する場合は十分に注意します。 それらの多くは、信頼できるデータのみで使用するための .NET Framework リモート処理を使用する設計されました。 この属性でマークされた既存の型は、状態の安全性を考えて設計されていない可能性があります。
 
 - 状態の安全性に関しては、データの存在を保証するために、 <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> 属性の <xref:System.Runtime.Serialization.DataMemberAttribute> プロパティに依存することはできません。 データは常に `null`、 `zero`、または `invalid`になります。
 
@@ -282,7 +282,7 @@ XML リーダーを直接使用する場合 (など、独自のカスタム エ�
 
 ### <a name="using-the-netdatacontractserializer-securely"></a>NetDataContractSerializer の安全な使用
 
-<xref:System.Runtime.Serialization.NetDataContractSerializer> は、型に対して密結合を使用するシリアル化エンジンです。 これは、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> および <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>に類似しています。 つまり、このシリアル化エンジンでは、受信データから [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] アセンブリと型名を読み取って、インスタンス化する型を決定します。 このシリアル化エンジンにプラグインする指定された方法はありませんが、WCF の一部である、カスタム コードを記述する必要があります。 `NetDataContractSerializer`から移行を容易に主に提供される[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]WCF へのリモート処理します。 詳細については、関連するセクションを参照してください。[シリアル化および逆シリアル化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)します。
+<xref:System.Runtime.Serialization.NetDataContractSerializer> は、型に対して密結合を使用するシリアル化エンジンです。 これは、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter> および <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>に類似しています。 つまり、受信データから、.NET Framework アセンブリと型名を読み取ることによってインスタンス化する種類を決定します。 このシリアル化エンジンにプラグインする指定された方法はありませんが、WCF の一部である、カスタム コードを記述する必要があります。 `NetDataContractSerializer`主に、.NET Framework リモート処理から WCF への移行を容易に提供されます。 詳細については、関連するセクションを参照してください。[シリアル化および逆シリアル化](../../../../docs/framework/wcf/feature-details/serialization-and-deserialization.md)します。
 
 読み込むことができる型はメッセージ自身が示すことができるため、 <xref:System.Runtime.Serialization.NetDataContractSerializer> のメカニズムは本質的にセキュリティで保護されていません。このエンジンでは、信頼されたデータだけを使用してください。 <xref:System.Runtime.Serialization.NetDataContractSerializer.Binder%2A> プロパティを使用して、セキュリティで保護され、型を限定する型バインダーを記述して、安全な型の読み込みだけを許可することによって、このエンジンをセキュリティで保護された状態にすることができます。
 
