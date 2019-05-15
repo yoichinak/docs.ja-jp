@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 5eee8b4b046bd4d3f9c71b692f4bac3dd6bcea2c
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: e9d117b272cea8ebb96dc579fa1d8faf65d42c45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211779"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583468"
 ---
 # <a name="windows-forms-overview"></a>Windows フォームの概要
 
@@ -22,7 +22,7 @@ ms.locfileid: "65211779"
 
 ### <a name="build-rich-interactive-user-interfaces"></a>リッチで対話型ユーザー インターフェイスを構築します。
 
- Windows フォームは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のためのスマート クライアント テクノロジであり、ファイル システムへの読み書きなど、アプリケーションの一般的なタスクを簡略化するマネージド ライブラリのセットです。 Visual Studio などの開発環境を使用する場合は、ネットワーク経由でリモート コンピューターを情報を表示し、ユーザーからの入力を要求、通信する Windows フォームのスマート クライアント アプリケーションを作成できます。
+ Windows フォームは、一連の読み取りと書き込みをファイル システムなどの一般的なアプリケーション タスクを簡略化するマネージ ライブラリ、.NET framework のスマート クライアント テクノロジです。 Visual Studio などの開発環境を使用する場合は、ネットワーク経由でリモート コンピューターを情報を表示し、ユーザーからの入力を要求、通信する Windows フォームのスマート クライアント アプリケーションを作成できます。
 
  Windows フォームでは、"*フォーム*" はユーザーに情報を表示するビジュアル サーフェイスです。 通常は、コントロールをフォームに追加して、マウスのクリックやキーの押下などのユーザー アクションへの応答を開発することで、Windows フォーム アプリケーションを開発します。 "*コントロール*" は、データを表示したりデータ入力を受け入れたりする独立したユーザー インターフェイス (UI) 要素です。
 
@@ -90,7 +90,7 @@ ms.locfileid: "65211779"
 
 ### <a name="other-controls-and-features"></a>その他のコントロールと機能
 
-Windows フォームには、ダイアログ ボックスの作成、ヘルプやドキュメントの印刷や追加、アプリケーションの複数言語へのローカライズのサポートなど、一般的なタスクを高速で簡単に実装できる機能が他にも多数あります。 さらに、Windows フォームは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の堅牢なセキュリティ システムを利用しています。 このシステムを使用することで、顧客により安全なアプリケーションをリリースできます。
+Windows フォームには、ダイアログ ボックスの作成、ヘルプやドキュメントの印刷や追加、アプリケーションの複数言語へのローカライズのサポートなど、一般的なタスクを高速で簡単に実装できる機能が他にも多数あります。 さらに、Windows フォームは、.NET Framework の堅牢なセキュリティ システムに依存します。 このシステムを使用することで、顧客により安全なアプリケーションをリリースできます。
 
 #### <a name="implement-other-controls-and-features"></a>その他のコントロールと機能を実装します。
 

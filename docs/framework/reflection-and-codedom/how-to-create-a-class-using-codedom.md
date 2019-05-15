@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ceb70fe-36e1-49bb-922b-e9f615c20a14
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5d431fd472df329dd0a8421483eb36b573dce775
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 906007902c6b66d88da0d3145625e56f2a7e2b55
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333172"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592520"
 ---
 # <a name="how-to-create-a-class-using-codedom"></a>方法: CodeDOM を使用してクラスを作成する
 2 つのフィールド、3 つのプロパティ、1 つのメソッド、1 つのコンストラクター、1 つのエントリ ポイントを含むクラスを生成する CodeDOM グラフを作成し、コンパイルする方法を次に示します。  
@@ -39,48 +39,48 @@ ms.locfileid: "59333172"
   
 ### <a name="to-create-the-application-that-will-execute-the-codedom-code"></a>CodeDOM コードを実行するアプリケーションを作成するには  
   
--   CodeDOM コードを含むコンソール アプリケーション クラスを作成します。 このクラスでアセンブリ (<xref:System.CodeDom.CodeCompileUnit>) とクラス (<xref:System.CodeDom.CodeTypeDeclaration>) を参照するためのグローバル フィールドを定義し、生成されるソース ファイルの名前を指定し、`Main` メソッドを宣言します。  
+- CodeDOM コードを含むコンソール アプリケーション クラスを作成します。 このクラスでアセンブリ (<xref:System.CodeDom.CodeCompileUnit>) とクラス (<xref:System.CodeDom.CodeTypeDeclaration>) を参照するためのグローバル フィールドを定義し、生成されるソース ファイルの名前を指定し、`Main` メソッドを宣言します。  
   
      [!code-csharp[CodeDOM Class Sample Main#1](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample Main/CS/program.cs#1)]
      [!code-vb[CodeDOM Class Sample Main#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample Main/VB/program.vb#1)]  
   
 ### <a name="to-initialize-the-codedom-graph"></a>CodeDOM グラフを初期化するには  
   
--   コンソール アプリケーション クラスのコンストラクターで、アセンブリとクラスを初期化し、適切な宣言を CodeDOM グラフに追加します。  
+- コンソール アプリケーション クラスのコンストラクターで、アセンブリとクラスを初期化し、適切な宣言を CodeDOM グラフに追加します。  
   
      [!code-csharp[CodeDOM Class Sample#2](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#2)]
      [!code-vb[CodeDOM Class Sample#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#2)]  
   
 ### <a name="to-add-members-to-the-codedom-graph"></a>CodeDOM グラフにメンバーを追加するには  
   
--   クラスの <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> プロパティに <xref:System.CodeDom.CodeMemberField> オブジェクトを追加することで CodeDOM グラフにフィールドを追加します。  
+- クラスの <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> プロパティに <xref:System.CodeDom.CodeMemberField> オブジェクトを追加することで CodeDOM グラフにフィールドを追加します。  
   
      [!code-csharp[CodeDOM Class Sample#3](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#3)]
      [!code-vb[CodeDOM Class Sample#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#3)]  
   
--   クラスの <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> プロパティに <xref:System.CodeDom.CodeMemberProperty> オブジェクトを追加することで CodeDOM グラフにプロパティを追加します。  
+- クラスの <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> プロパティに <xref:System.CodeDom.CodeMemberProperty> オブジェクトを追加することで CodeDOM グラフにプロパティを追加します。  
   
      [!code-csharp[CodeDOM Class Sample#4](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#4)]
      [!code-vb[CodeDOM Class Sample#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#4)]  
   
--   クラスの <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> プロパティに <xref:System.CodeDom.CodeMemberMethod> オブジェクトを追加することで CodeDOM グラフにメソッドを追加します。  
+- クラスの <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> プロパティに <xref:System.CodeDom.CodeMemberMethod> オブジェクトを追加することで CodeDOM グラフにメソッドを追加します。  
   
      [!code-csharp[CodeDOM Class Sample#5](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#5)]
      [!code-vb[CodeDOM Class Sample#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#5)]  
   
--   クラスの <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> プロパティに <xref:System.CodeDom.CodeConstructor> オブジェクトを追加することで CodeDOM グラフにコンストラクターを追加します。  
+- クラスの <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> プロパティに <xref:System.CodeDom.CodeConstructor> オブジェクトを追加することで CodeDOM グラフにコンストラクターを追加します。  
   
      [!code-csharp[CodeDOM Class Sample#6](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#6)]
      [!code-vb[CodeDOM Class Sample#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#6)]  
   
--   クラスの <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> プロパティに <xref:System.CodeDom.CodeEntryPointMethod> オブジェクトを追加することで CodeDOM グラフにエントリ ポイントを追加します。  
+- クラスの <xref:System.CodeDom.CodeTypeDeclaration.Members%2A> プロパティに <xref:System.CodeDom.CodeEntryPointMethod> オブジェクトを追加することで CodeDOM グラフにエントリ ポイントを追加します。  
   
      [!code-csharp[CodeDOM Class Sample#7](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#7)]
      [!code-vb[CodeDOM Class Sample#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#7)]  
   
 ### <a name="to-generate-the-code-from-the-codedom-graph"></a>CodeDOM グラフからコードを生成するには  
   
--   <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> メソッドを呼び出すことで CodeDOM グラフからソース コードを生成します。  
+- <xref:System.CodeDom.Compiler.CodeDomProvider.GenerateCodeFromCompileUnit%2A> メソッドを呼び出すことで CodeDOM グラフからソース コードを生成します。  
   
      [!code-csharp[CodeDOM Class Sample#8](../../../samples/snippets/csharp/VS_Snippets_CLR/CodeDOM Class Sample/CS/program.cs#8)]
      [!code-vb[CodeDOM Class Sample#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/CodeDOM Class Sample/VB/program.vb#8)]  
@@ -116,7 +116,7 @@ The object:
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   このコード サンプルを正しく実行するには、`FullTrust` アクセス許可を設定する必要があります。  
+- このコード サンプルを正しく実行するには、`FullTrust` アクセス許可を設定する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 

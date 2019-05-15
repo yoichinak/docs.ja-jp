@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: ef6402be-2f8e-4be2-8d3e-a80891cdef8b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5f35725f5e1a08f2fcb1d6bc87765f50308c963f
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 0704e78a0e7fbf3987b3bc75bb46e135f00110e9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54566321"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615346"
 ---
 # <a name="xpath-queries-and-namespaces"></a>XPath クエリおよび名前空間
 XPath クエリは XML ドキュメント中の名前空間を認識し、名前空間プレフィックスを使用して要素と属性名を修飾することができます。 名前空間プレフィックスで要素や属性の名前を修飾すると、XPath クエリで返されるノードを特定の名前空間に属するノードだけに限定することができます。  
@@ -25,17 +25,17 @@ XPath クエリは XML ドキュメント中の名前空間を認識し、名前
   
  <xref:System.Xml.XmlNamespaceManager> オブジェクトは次の方法でクエリで使用することができます。  
   
--   <xref:System.Xml.XmlNamespaceManager> オブジェクトの <xref:System.Xml.XPath.XPathExpression> メソッドを使用して、<xref:System.Xml.XPath.XPathExpression.SetContext%2A> オブジェクトを既存の <xref:System.Xml.XPath.XPathExpression> オブジェクトに関連付ける。 静的 <xref:System.Xml.XPath.XPathExpression> メソッドを使用して、新しい <xref:System.Xml.XPath.XPathExpression.Compile%2A> オブジェクトをコンパイルすることもできます。このメソッドは XPath 式を表す文字列と <xref:System.Xml.XmlNamespaceManager> オブジェクトをパラメーターとして取り、新しい <xref:System.Xml.XPath.XPathExpression> オブジェクトを返します。  
+- <xref:System.Xml.XmlNamespaceManager> オブジェクトの <xref:System.Xml.XPath.XPathExpression> メソッドを使用して、<xref:System.Xml.XPath.XPathExpression.SetContext%2A> オブジェクトを既存の <xref:System.Xml.XPath.XPathExpression> オブジェクトに関連付ける。 静的 <xref:System.Xml.XPath.XPathExpression> メソッドを使用して、新しい <xref:System.Xml.XPath.XPathExpression.Compile%2A> オブジェクトをコンパイルすることもできます。このメソッドは XPath 式を表す文字列と <xref:System.Xml.XmlNamespaceManager> オブジェクトをパラメーターとして取り、新しい <xref:System.Xml.XPath.XPathExpression> オブジェクトを返します。  
   
--   XPath 式を表す文字列と共に <xref:System.Xml.XmlNamespaceManager> オブジェクト自体をパラメーターとして受け入れ側の <xref:System.Xml.XPath.XPathNavigator> クラス メソッドに渡す。  
+- XPath 式を表す文字列と共に <xref:System.Xml.XmlNamespaceManager> オブジェクト自体をパラメーターとして受け入れ側の <xref:System.Xml.XPath.XPathNavigator> クラス メソッドに渡す。  
   
  次は、<xref:System.Xml.XPath.XPathNavigator> インターフェイスから派生したオブジェクトをパラメーターとして受け付ける <xref:System.Xml.IXmlNamespaceResolver> クラスのメソッドです。  
   
--   <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Evaluate%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.Select%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.SelectSingleNode%2A>  
   
 ### <a name="the-default-namespace"></a>既定の名前空間  
  次の XML ドキュメントでは、`http://www.contoso.com/books` 名前空間を宣言するために、空のプレフィックスの既定の名前空間が使用されています。  

@@ -8,17 +8,17 @@ helpviewer_keywords:
 - battery states
 - power states
 ms.assetid: ad04a801-5682-4d88-92c5-26eb9cdb209a
-ms.openlocfilehash: 6bb9b4f30a88ece93b17ff2510087b220d538738
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 36c152a9e388fe61b1c82a8783bf74bbe6c8f123
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61757652"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592519"
 ---
 # <a name="power-management-in-windows-forms"></a>Windows フォームでの電源管理
 Windows フォーム アプリケーションによっては、Windows オペレーティング システムの電源管理機能を活用がかかります。 アプリケーションでは、コンピューターの電源の状態を監視でき、状態の変更が発生したときにアクションを実行することができます。 など、アプリケーションがポータブル コンピューターで実行している場合、コンピューターのバッテリ残量が一定のレベルを下回ったときに、アプリケーションで特定の機能を無効にします。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]提供、 <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> AC 電源の状態またはバッテリの状態が変更されたときや、ユーザーが中断またはオペレーティング システムが再開されるなどの電源ステータスの変更があるたびに発生するイベントです。 <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>のプロパティ、<xref:System.Windows.Forms.SystemInformation>クラスにすることが次のコード例に示すように現在の状態では、クエリに使用されます。  
+ .NET Framework には、 <xref:Microsoft.Win32.SystemEvents.PowerModeChanged> AC 電源の状態またはバッテリの状態が変更されたときや、ユーザーが中断またはオペレーティング システムが再開されるなどの電源ステータスの変更があるたびに発生するイベントです。 <xref:System.Windows.Forms.SystemInformation.PowerStatus%2A>のプロパティ、<xref:System.Windows.Forms.SystemInformation>クラスにすることが次のコード例に示すように現在の状態では、クエリに使用されます。  
   
  [!code-csharp[PowerMode#1](~/samples/snippets/csharp/VS_Snippets_Winforms/powermode/cs/form1.cs#1)]
  [!code-vb[PowerMode#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/powermode/vb/form1.vb#1)]  

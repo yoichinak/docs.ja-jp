@@ -5,21 +5,21 @@ ms.technology: dotnet-standard
 ms.assetid: a4ebdbad-087c-4cfe-acc0-17c48142f81a
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7b10ab992089e2e9280162c4cd2273bc1d9dc35e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2efe31ce8ece241bdfeb95687c5496c7ba0fd626
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320419"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64615303"
 ---
 # <a name="xslt-extension-objects"></a>XSLT 拡張オブジェクト
 拡張オブジェクトは、スタイル シートの機能を拡張する場合に使用します。 拡張オブジェクトは、<xref:System.Xml.Xsl.XsltArgumentList> クラスによって維持されます。  
   
  埋め込みスクリプトではなく、拡張オブジェクトを使用する利点を次に示します。  
   
--   クラスをより効果的にカプセル化および再利用できます。  
+- クラスをより効果的にカプセル化および再利用できます。  
   
--   スタイル シートを小さくすることができ、管理が簡単になります。  
+- スタイル シートを小さくすることができ、管理が簡単になります。  
   
  XSLT 拡張オブジェクトを <xref:System.Xml.Xsl.XsltArgumentList> オブジェクトに追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddExtensionObject%2A> メソッドを使用します。 その時点で、修飾名と名前空間 URI がその拡張オブジェクトに関連付けられます。  
   

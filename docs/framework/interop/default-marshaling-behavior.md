@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: c0a9bcdf-3df8-4db3-b1b6-abbdb2af809a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6bf6acc719b4697534e845f64890ddcd9cac550f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a057f872d15ca1fcd49d86d08606776a0c0bea0
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59315765"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063327"
 ---
 # <a name="default-marshaling-behavior"></a>既定のマーシャリングの動作
 相互運用マーシャリングは、メソッドのパラメーターに関連付けられたデータが、マネージド メモリとアンマネージド メモリの間で渡されるときに、どのように動作するかを指示する規則に従って機能します。 これらの組み込みの規則は、データ型の変換などのマーシャリング動作、呼び出し先が渡されたデータを変更してその変更を呼び出し元にこ返すことが可能かどうか、およびどのような状況のときにマーシャラーがパフォーマンスの最適化を実現するかを制御します。  
@@ -58,9 +58,9 @@ BSTR MethodOne (BSTR b) {
   
  たとえば、マーシャラーは、マネージド コードに渡されたインターフェイスをラップするために、クラス ラッパーを使用する必要があると判別します。 インターフェイスが初めてマーシャラーを介して渡されるとき、マーシャラーは、インターフェイスが既知のオブジェクトからのものかどうかを確認します。 このチェックは、以下の 2 つの状況で発生します。  
   
--   インターフェイスは、他の場所で COM に渡された別のマネージド オブジェクトによって実装されています。 マーシャラーは、マネージド オブジェクトによって公開されるインターフェイスを簡単に特定し、インターフェイスと実装を提供するマネージド オブジェクトとで突き合わせすることができます。 その後、マネージド オブジェクトはメソッドに渡され、ラッパーは必要ありません。  
+- インターフェイスは、他の場所で COM に渡された別のマネージド オブジェクトによって実装されています。 マーシャラーは、マネージド オブジェクトによって公開されるインターフェイスを簡単に特定し、インターフェイスと実装を提供するマネージド オブジェクトとで突き合わせすることができます。 その後、マネージド オブジェクトはメソッドに渡され、ラッパーは必要ありません。  
   
--   既ににラップされているオブジェクトは、インターフェイスを実装しています。 このような状況かどうかを確認するために、マーシャラーは **IUnknown** インターフェイスのためにオブジェクトのクエリを実行して、返されたインターフェイスを既にラップされているその他のオブジェクトのインターフェイスと比較します。 インターフェイスが別のラッパーのものと同じ場合、それらのオブジェクトには同じ ID があり、既存のラッパーがメソッドに渡されます。  
+- 既ににラップされているオブジェクトは、インターフェイスを実装しています。 このような状況かどうかを確認するために、マーシャラーは **IUnknown** インターフェイスのためにオブジェクトのクエリを実行して、返されたインターフェイスを既にラップされているその他のオブジェクトのインターフェイスと比較します。 インターフェイスが別のラッパーのものと同じ場合、それらのオブジェクトには同じ ID があり、既存のラッパーがメソッドに渡されます。  
   
  インターフェイスが既知のオブジェクトからのものではない場合、マーシャラーは以下を実行します。  
   
@@ -73,9 +73,9 @@ BSTR MethodOne (BSTR b) {
 ## <a name="default-marshaling-for-delegates"></a>デリゲートに対する既定のマーシャリング  
  マネージド デリゲートは、呼び出し元のメカニズムに基づいて、COM インターフェイスまたは関数ポインターとしてマーシャリングされます。  
   
--   プラットフォーム呼び出しの場合、デリゲートは、既定でアンマネージ関数ポインターとしてマーシャリングされます。  
+- プラットフォーム呼び出しの場合、デリゲートは、既定でアンマネージ関数ポインターとしてマーシャリングされます。  
   
--   COM 相互運用の場合、デリゲートは、既定で **_Delegate** 型の COM インターフェイスとしてマーシャリングされます。 **_Delegate** インターフェイスは Mscorlib.tlb のタイプ ライブラリで定義され、デリゲートが参照するメソッドの呼び出しを可能にする <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> メソッドが含まれています。  
+- COM 相互運用の場合、デリゲートは、既定で **_Delegate** 型の COM インターフェイスとしてマーシャリングされます。 **_Delegate** インターフェイスは Mscorlib.tlb のタイプ ライブラリで定義され、デリゲートが参照するメソッドの呼び出しを可能にする <xref:System.Delegate.DynamicInvoke%2A?displayProperty=nameWithType> メソッドが含まれています。  
   
  次の表は、マネージド デリゲート データ型のマーシャリング オプションを示しています。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は、デリゲートをマーシャリングする <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を提供します。  
   
@@ -166,23 +166,23 @@ internal class DelegateTest {
   
  このセクションでは、次の書式設定された値に関する情報を提供します。  
   
--   [プラットフォーム呼び出しで使用される値型](#value-types-used-in-platform-invoke)  
+- [プラットフォーム呼び出しで使用される値型](#value-types-used-in-platform-invoke)  
   
--   [COM 相互運用で使用される値型](#value-types-used-in-com-interop)  
+- [COM 相互運用で使用される値型](#value-types-used-in-com-interop)  
   
  書式指定された型について説明することに加えて、このトピックでは、マーシャリング動作が通常ではない[システム値型](#system-value-types)について示します。  
   
  書式設定された型は、メモリ内のメンバーのレイアウトを明示的に制御するための情報を含む複合型です。 メンバーのレイアウト情報は、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性を使用して示すことができます。 レイアウトは、次のいずれかの <xref:System.Runtime.InteropServices.LayoutKind> 列挙値です。  
   
--   **LayoutKind.Automatic**  
+- **LayoutKind.Automatic**  
   
      共通言語ランタイムで、効率を上げるのために、型のメンバーを自由に再配置できることを示します。 ただし、値型がアンマネージ コードに渡されると、メンバーのレイアウトは予測可能です。 このような構造体を自動的にマーシャリングしようとすると、例外が発生します。  
   
--   **LayoutKind.Sequential**  
+- **LayoutKind.Sequential**  
   
      型のメンバーは、マネージド型定義での順序と同じ順序で、アンマネージド メモリにレイアウトされることを示します。  
   
--   **LayoutKind.Explicit**  
+- **LayoutKind.Explicit**  
   
      メンバーが、各フィールドに指定された <xref:System.Runtime.InteropServices.FieldOffsetAttribute> に基づいてレイアウトされることを示します。  
   
@@ -229,14 +229,14 @@ BOOL PtInRect(const RECT *lprc, POINT pt);
  次のプラットフォーム呼び出し定義を使用して、構造体を渡すことができます  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function PtInRect Lib "User32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function PtInRect Lib "User32.dll" (
         ByRef r As Rect, p As Point) As Boolean
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("User32.dll")]
    internal static extern bool PtInRect(ref Rect r, Point p);
@@ -291,14 +291,14 @@ void GetSystemTime(SYSTEMTIME* SystemTime);
  **GetSystemTime** に対する同等のプラットフォーム呼び出し定義は、次のようになります。  
   
 ```vb
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Sub GetSystemTime Lib "Kernel32.dll" (
         ByVal sysTime As SystemTime)
 End Class
 ```
   
 ```csharp
-internal static class WindowsAPI
+internal static class NativeMethods
 {
    [DllImport("Kernel32.dll", CharSet = CharSet.Auto)]
    internal static extern void GetSystemTime(SystemTime st);

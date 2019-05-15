@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: f6976502-a000-4fbe-aaf5-a7aab9ce4ec2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0258edb552b53130e7df47df6ccefa9b30def843
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e72e091d9b120042254df5de323169f6f67c61d4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306340"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64616068"
 ---
 # <a name="mpgoexe-managed-profile-guided-optimization-tool"></a>Mpgo.exe (マネージド プロファイル ガイド付き最適化ツール)
 
@@ -102,9 +102,9 @@ mpgo –Scenario <packageName> -AppID <appId> -Timeout <seconds>
 ## <a name="using-mpgoexe-from-visual-studio"></a>Visual Studio の Mpgo.exe の使用  
  Visual Studio から次の制限で Mpgo.exe を実行できます ([方法: ビルド イベントを指定する (C#)](/visualstudio/ide/how-to-specify-build-events-csharp) という記事を参照してください)。  
   
--   既定では Visual Studio マクロも末尾でスラッシュを使用するので、末尾にスラッシュを含む引用符付きのパスを使用することはできません。 (たとえば、`–OutDir "C:\Output Folder\"` は無効です。)この制限を回避するために、末尾のスラッシュをエスケープできます。 (たとえば、代わりに `-OutDir "$(OutDir)\"` を使用します。)  
+- 既定では Visual Studio マクロも末尾でスラッシュを使用するので、末尾にスラッシュを含む引用符付きのパスを使用することはできません。 (たとえば、`–OutDir "C:\Output Folder\"` は無効です。)この制限を回避するために、末尾のスラッシュをエスケープできます。 (たとえば、代わりに `-OutDir "$(OutDir)\"` を使用します。)  
   
--   既定では、Mpgo.exe は Visual Studio のビルド パス上にありません。 Visual Studio にこのパスを追加するか、Mpgo のコマンド ラインで完全パスを指定する必要があります。 Visual Studio でビルド後イベントに `–Scenario` または `–Import` パラメーターのいずれかを使用できます。 ただし、通常のプロセスでは、Visual Studio 用開発者コマンド プロンプトから `–Scenario` を一度使用し、その後 `–Import` を使用し、各ビルド後に最適化されたアセンブリを更新します (たとえば、`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`)。  
+- 既定では、Mpgo.exe は Visual Studio のビルド パス上にありません。 Visual Studio にこのパスを追加するか、Mpgo のコマンド ラインで完全パスを指定する必要があります。 Visual Studio でビルド後イベントに `–Scenario` または `–Import` パラメーターのいずれかを使用できます。 ただし、通常のプロセスでは、Visual Studio 用開発者コマンド プロンプトから `–Scenario` を一度使用し、その後 `–Import` を使用し、各ビルド後に最適化されたアセンブリを更新します (たとえば、`"C:\Program Files\Microsoft Visual Studio 11.0\Team Tools\Performance Tools\mpgo.exe" -import "$(OutDir)tmp" -assemblylist "$(TargetPath)" -outdir "$(OutDir)\"`)。  
   
 <a name="samples"></a>   
 ## <a name="examples"></a>使用例  

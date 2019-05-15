@@ -2,23 +2,23 @@
 title: データ ソースの LINQ クエリの有効化1
 ms.date: 07/20/2015
 ms.assetid: d2ef04a5-31a6-45cb-af9a-a5ce7732662c
-ms.openlocfilehash: d3faeb15c5c8deedec3c3347c6317cac872224f3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4d7922c5dbe4f6185777dba4f33662eb2e4aee61
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54515720"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597157"
 ---
 # <a name="enabling-a-data-source-for-linq-querying"></a>データ ソースの LINQ クエリの有効化
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] を拡張して、データ ソースを [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] パターンでクエリできるようにする方法はいくつかあります。 データ ソースは、いくつか例を挙げると、データ構造体、Web サービス、ファイル システム、またはデータベースの場合があります。 クエリの構文とパターンは変わらないため、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] パターンを使用すると、クライアントは [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリが有効になっているデータ ソースを簡単にクエリできます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] は、次の方法によってこれらのデータ ソースに拡張することができます。  
   
--   型に <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装し、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] でその型のオブジェクト クエリを実行できるようにする。  
+- 型に <xref:System.Collections.Generic.IEnumerable%601> インターフェイスを実装し、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] でその型のオブジェクト クエリを実行できるようにする。  
   
--   型を拡張する <xref:System.Linq.Enumerable.Where%2A> や <xref:System.Linq.Enumerable.Select%2A> などの標準クエリ演算子メソッドを作成し、その型のカスタム [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを有効にする。  
+- 型を拡張する <xref:System.Linq.Enumerable.Where%2A> や <xref:System.Linq.Enumerable.Select%2A> などの標準クエリ演算子メソッドを作成し、その型のカスタム [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを有効にする。  
   
--   データ ソース用に、<xref:System.Linq.IQueryable%601> インターフェイスを実装したプロバイダーを作成する。 このインターフェイスを実装したプロバイダーは、式ツリーの形式で [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを受け取ります。プロバイダーはこれをカスタマイズされた方法 (たとえばリモート) で実行できます。  
+- データ ソース用に、<xref:System.Linq.IQueryable%601> インターフェイスを実装したプロバイダーを作成する。 このインターフェイスを実装したプロバイダーは、式ツリーの形式で [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを受け取ります。プロバイダーはこれをカスタマイズされた方法 (たとえばリモート) で実行できます。  
   
--   データ ソース用に、既存の [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] テクノロジを利用するプロバイダーを作成する。 そのようなプロバイダーは、クエリだけでなく、挿入、更新、および削除などの操作や、ユーザー定義型のマッピングも有効にします。  
+- データ ソース用に、既存の [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] テクノロジを利用するプロバイダーを作成する。 そのようなプロバイダーは、クエリだけでなく、挿入、更新、および削除などの操作や、ユーザー定義型のマッピングも有効にします。  
   
  このトピックでは、これらのオプションについて説明します。  
   

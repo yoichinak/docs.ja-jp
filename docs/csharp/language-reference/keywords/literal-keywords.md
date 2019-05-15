@@ -5,23 +5,23 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - literal keywords [C#]
 ms.assetid: 95b3f075-47d7-4990-8ea8-9e637678bf3c
-ms.openlocfilehash: bd657901c8cc4f5b63442f4f7001dfb9ea1ef8b9
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bd19d58bbcb5eca1cc8479f245bd607a98a3e2ef
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54577405"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592991"
 ---
 # <a name="literal-keywords-c-reference"></a>リテラル キーワード (C# リファレンス)
 C# には、次のリテラル キーワードがあります。  
   
--   [null](../../../csharp/language-reference/keywords/null.md)  
+- [null](../../../csharp/language-reference/keywords/null.md)  
   
--   [true](../../../csharp/language-reference/keywords/true.md)  
+- [true](../../../csharp/language-reference/keywords/true.md)  
   
--   [false](../../../csharp/language-reference/keywords/false.md)  
+- [false](../../../csharp/language-reference/keywords/false.md)  
   
--   [default](../../../csharp/language-reference/keywords/default.md)  
+- [default](../../../csharp/language-reference/keywords/default.md)  
   
 ## <a name="see-also"></a>関連項目
 

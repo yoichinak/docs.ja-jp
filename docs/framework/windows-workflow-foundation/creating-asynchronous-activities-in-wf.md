@@ -2,12 +2,12 @@
 title: WF 内での非同期アクティビティの作成
 ms.date: 03/30/2017
 ms.assetid: 497e81ed-5eef-460c-ba55-fae73c05824f
-ms.openlocfilehash: 5d8659ee57f9bb576cd7066652a294717811432f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b990631d6efdb4644274c8a4606af07495b1979c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945887"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592977"
 ---
 # <a name="creating-asynchronous-activities-in-wf"></a>WF 内での非同期アクティビティの作成
 <xref:System.Activities.AsyncCodeActivity> は使用する基本クラスをアクティビティ作成者に提供します。その結果、派生アクティビティが非同期実行ロジックを実装できるようになります。 これは、ワークフローのスケジューラ スレッドを保持したり、並行して実行される可能性があるすべてのアクティビティをブロックしたりすることなく、非同期作業を実行する必要があるカスタム アクティビティに役立ちます。 ここでは、<xref:System.Activities.AsyncCodeActivity> を使用してカスタムの非同期アクティビティを作成する方法の概要を説明します。  
@@ -31,7 +31,7 @@ ms.locfileid: "61945887"
  [!code-csharp[CFX_ActivityExample#10](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#10)]  
   
 ### <a name="invoking-asynchronous-methods-on-a-class"></a>クラスでの非同期メソッドの呼び出し  
- [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の多くのクラスには、非同期機能が用意されています。この非同期機能は、<xref:System.Activities.AsyncCodeActivity> ベースのアクティビティを使用して非同期に呼び出すことができます。 次の例では、アクティビティが作成を使用して非同期的にファイルを作成する、<xref:System.IO.FileStream>クラス。  
+ 非同期機能を提供する .NET Framework のクラスの多くと、この機能を使用して非同期的に呼び出すことができます、<xref:System.Activities.AsyncCodeActivity>ベースのアクティビティ。 次の例では、アクティビティが作成を使用して非同期的にファイルを作成する、<xref:System.IO.FileStream>クラス。  
   
  [!code-csharp[CFX_ActivityExample#12](~/samples/snippets/csharp/VS_Snippets_CFX/CFX_ActivityExample/cs/Program.cs#12)]  
   

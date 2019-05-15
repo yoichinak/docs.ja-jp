@@ -4,12 +4,12 @@ description: .NET Core、ASP.NET Core、C# 言語に関する、.NET の学習�
 author: BillWagner
 ms.author: wiwagn
 ms.date: 04/11/2017
-ms.openlocfilehash: 265ac7aa996014ea24e9c128076e12c937de0857
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba0d7e4163a1c4afe08ea3f871c2bccc2335ac48
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61950853"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469463"
 ---
 # <a name="net-samples-and-tutorials"></a>.NET サンプルおよびチュートリアル
 
@@ -60,6 +60,10 @@ ms.locfileid: "61950853"
 **LINQ のサンプル**
 
 この一連のサンプルは、統合言語クエリ (LINQ) の多くの機能を示しています。 [完全なサンプル](https://github.com/dotnet/samples/tree/master/core/linq/csharp)は、GitHub の dotnet/samples リポジトリにあります。
+
+**マネージド COM サーバーのサンプル**
+
+[COM サーバー](https://github.com/dotnet/samples/tree/master/core/extensions/COMServerDemo)のサンプルは、マネージド COM サーバーの作成と、そのグローバルな登録方法を示します。
 
 **Microsoft Office PIA サンプル**
 

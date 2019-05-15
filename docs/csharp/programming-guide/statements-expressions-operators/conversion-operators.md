@@ -8,12 +8,12 @@ helpviewer_keywords:
 - operators [C#], conversion
 - user-defined conversions [C#]
 ms.assetid: c5ad73a3-d57b-4d2b-b4c9-24e3c2856efc
-ms.openlocfilehash: 539a554da2ea2f785a54bd7e5ff81d09b908c9e4
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 43e81a342377b155fafe26bd0430384cddad5fd4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965216"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64608231"
 ---
 # <a name="conversion-operators-c-programming-guide"></a>変換演算子 (C# プログラミング ガイド)
 
@@ -25,27 +25,27 @@ C# を使用すると、クラスまたは構造体に関する変換を宣言�
 
  変換演算子には、次の特徴があります。  
   
--   `implicit` として宣言される変換は、必要なときに自動的に発生します。  
+- `implicit` として宣言される変換は、必要なときに自動的に発生します。  
   
--   `explicit` として宣言される変換には、キャストの呼び出しが必要です。  
+- `explicit` として宣言される変換には、キャストの呼び出しが必要です。  
   
--   すべての変換は、`static` として宣言する必要があります。  
+- すべての変換は、`static` として宣言する必要があります。  
   
 ## <a name="related-sections"></a>関連項目
 
  詳細情報  
   
--   [変換演算子の使用](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
+- [変換演算子の使用](../../../csharp/programming-guide/statements-expressions-operators/using-conversion-operators.md)  
   
--   [キャストと型変換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
+- [キャストと型変換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)  
   
--   [方法: 構造体間にユーザー定義の変換を実装する](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
+- [方法: 構造体間にユーザー定義の変換を実装する](../../../csharp/programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)  
   
--   [explicit](../../../csharp/language-reference/keywords/explicit.md)  
+- [explicit](../../../csharp/language-reference/keywords/explicit.md)  
   
--   [implicit](../../../csharp/language-reference/keywords/implicit.md)  
+- [implicit](../../../csharp/language-reference/keywords/implicit.md)  
   
--   [static](../../../csharp/language-reference/keywords/static.md)  
+- [static](../../../csharp/language-reference/keywords/static.md)  
   
 ## <a name="see-also"></a>関連項目
 
