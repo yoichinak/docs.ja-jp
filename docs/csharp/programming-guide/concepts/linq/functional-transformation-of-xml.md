@@ -2,12 +2,12 @@
 title: XML の関数型変換 (C#)
 ms.date: 07/20/2015
 ms.assetid: 0ccb9251-38d7-44e3-9b84-1b5fe25e4b59
-ms.openlocfilehash: 75ad909994d75387648dbfa72f827cf63b85739e
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 237a96e3cc1a2e2cb231b23954613f6a0ad0761c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54643035"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596659"
 ---
 # <a name="functional-transformation-of-xml-c"></a>XML の関数型変換 (C#)
 このトピックでは、XML ドキュメントを変更するための純粋関数型変換の方法について説明し、手続き型の方法と比較します。  
@@ -15,11 +15,11 @@ ms.locfileid: "54643035"
 ## <a name="modifying-an-xml-document"></a>XML ドキュメントの変更  
  XML プログラマにとって最も一般的なタスクの 1 つが、XML の形式の変換です。 XML ドキュメントの形式とはドキュメントの構造のことで、次のものが含まれます。  
   
--   ドキュメントによって表される階層。  
+- ドキュメントによって表される階層。  
   
--   要素名および属性名。  
+- 要素名および属性名。  
   
--   要素と属性のデータ型。  
+- 要素と属性のデータ型。  
   
  一般に、XML の形式を変換するために最も効果的なのは、純粋関数型変換の方法です。 この方法におけるプログラマの主なタスクは、XML ドキュメント全体 (または 1 つ以上の厳密に定義されたノード) に適用する変換を作成することです。 関数型変換は、(プログラマがこの方法をいったん理解すれば) コードの記述が最も簡単で、最も保守しやすいコードが得られ、多くの場合、その他の方法よりもコンパクトです。  
   

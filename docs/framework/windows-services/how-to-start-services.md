@@ -6,12 +6,12 @@ helpviewer_keywords:
 - services, starting
 ms.assetid: 9ea77955-2d96-4c3d-913c-14db7604cdad
 author: ghogen
-ms.openlocfilehash: db66e8a264bc0381a2ff4689c4427047a158eb32
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8ad61eaa292ec4cce17ba029186caf1536afacdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336838"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591455"
 ---
 # <a name="how-to-start-services"></a>方法: サービスを開始する
 サービスをインストールした後で、サービスを起動します。 起動することで、サービス クラスの <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドが呼び出されます。 通常、<xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドにはサービスが本来行う処理を定義します。 サービスの起動後は、手動で一時停止または停止するまで、アクティブの状態を維持します。  
@@ -58,11 +58,11 @@ ms.locfileid: "59336838"
   
 1. **サービス コントロール マネージャー**を次のいずれかの方法で開きます。  
   
-    -   Windows XP および Windows 2000 Professional のデスクトップで、**[マイ コンピューター]** を右クリックし、**[管理]** をクリックします。 表示されるダイアログ ボックスで、**[サービスとアプリケーション]** ノードを展開します。  
+    - Windows XP および Windows 2000 Professional のデスクトップで、**[マイ コンピューター]** を右クリックし、**[管理]** をクリックします。 表示されるダイアログ ボックスで、**[サービスとアプリケーション]** ノードを展開します。  
   
          \- または  
   
-    -   Windows Server 2003 および Windows 2000 Server では、**[スタート]** メニューの **[プログラム]** をポイントし、**[管理ツール]** をポイントして、**[サービス]** をクリックします。  
+    - Windows Server 2003 および Windows 2000 Server では、**[スタート]** メニューの **[プログラム]** をポイントし、**[管理ツール]** をポイントして、**[サービス]** をクリックします。  
   
         > [!NOTE]
         >  Windows NT Version 4.0 では、**[コントロール パネル]** でこのダイアログ ボックスを開くことができます。  

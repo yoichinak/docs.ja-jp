@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [C#]
 - creating folders [C#]
 ms.assetid: 4582ee2d-d72d-4687-bcb9-08d336c62c25
-ms.openlocfilehash: d94c3624b84b2fea6760ac8f36fc592928a55834
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 3163598de5d03bf1691379cddae031841b9865d6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56970715"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595637"
 ---
 # <a name="how-to-create-a-file-or-folder-c-programming-guide"></a>方法: ファイルまたはフォルダーを作成する (C# プログラミング ガイド)
 プログラムによって、コンピューター上でのフォルダーの作成、サブフォルダーの作成、サブフォルダー内でのファイルの作成、およびファイルへのデータの記述を行うことができます。  
@@ -25,7 +25,7 @@ ms.locfileid: "56970715"
   
  この例に次の変更を加えることによって、特定の名前のファイルが既に存在するかどうかに基づいて異なる結果を指定できます。 そのようなファイルが存在しない場合、コードによって作成されます。 このようなファイルがある場合、コードはそのファイルにデータを追加します。  
   
--   ランダムではないファイル名を指定します。  
+- ランダムではないファイル名を指定します。  
   
     ```csharp  
     // Comment out the following line.  
@@ -35,7 +35,7 @@ ms.locfileid: "56970715"
     string fileName = "MyNewFile.txt";  
     ```  
   
--   次のコードで、`if`-`else` ステートメントを `using` に置き換えます。  
+- 次のコードで、`if`-`else` ステートメントを `using` に置き換えます。  
   
     ```csharp  
     using (System.IO.FileStream fs = new System.IO.FileStream(pathString, FileMode.Append))   
@@ -53,15 +53,15 @@ ms.locfileid: "56970715"
   
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   フォルダー名が不適切である場合。 たとえば、不正な文字が含まれている場合や、空白だけの場合などがその例です (<xref:System.ArgumentException> クラス)。 有効なパス名を作成するには、<xref:System.IO.Path> クラスを使用します。  
+- フォルダー名が不適切である場合。 たとえば、不正な文字が含まれている場合や、空白だけの場合などがその例です (<xref:System.ArgumentException> クラス)。 有効なパス名を作成するには、<xref:System.IO.Path> クラスを使用します。  
   
--   作成するフォルダーの親フォルダーが読み取り専用である場合 (<xref:System.IO.IOException> クラス)。  
+- 作成するフォルダーの親フォルダーが読み取り専用である場合 (<xref:System.IO.IOException> クラス)。  
   
--   フォルダー名が `null` である場合 (<xref:System.ArgumentNullException> クラス)。  
+- フォルダー名が `null` である場合 (<xref:System.ArgumentNullException> クラス)。  
   
--   フォルダー名が長すぎる場合 (<xref:System.IO.PathTooLongException> クラス)。  
+- フォルダー名が長すぎる場合 (<xref:System.IO.PathTooLongException> クラス)。  
   
--   フォルダー名がコロン (":") だけである場合 (<xref:System.IO.PathTooLongException> クラス)。  
+- フォルダー名がコロン (":") だけである場合 (<xref:System.IO.PathTooLongException> クラス)。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  部分的に信頼された状況では、<xref:System.Security.SecurityException> クラスのインスタンスがスローされることがあります。  

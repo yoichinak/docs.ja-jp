@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 7ede6f9e-a3ac-49a4-8488-ab8360a44aa4
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0e38ad777112e5e88fe40c530da6107d0de0e3ac
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7031d34916c520f52550d215a1a8e62880209c87
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59336136"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590033"
 ---
 # <a name="removing-attributes-from-an-element-node-in-the-dom"></a>DOM の要素ノードからの属性の削除
 属性を削除するには、さまざまな方法があります。 その 1 つとして、属性コレクションから属性を削除する方法があります。 属性コレクションから属性を削除するには、次の手順を実行します。  
@@ -19,19 +19,19 @@ ms.locfileid: "59336136"
   
 2. 属性コレクションから属性を削除するには、次の 3 つのメソッドのいずれかを使用します。  
   
-    -   <xref:System.Xml.XmlAttributeCollection.Remove%2A> メソッドを使用して、特定の属性を削除する。  
+    - <xref:System.Xml.XmlAttributeCollection.Remove%2A> メソッドを使用して、特定の属性を削除する。  
   
-    -   <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> メソッドを使用して、コレクションからずべての属性を削除し、属性のない要素を残す。  
+    - <xref:System.Xml.XmlAttributeCollection.RemoveAll%2A> メソッドを使用して、コレクションからずべての属性を削除し、属性のない要素を残す。  
   
-    -   <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> メソッドを使用して、コレクションのインデックス番号を使用して 1 つの属性を属性コレクションから削除する。  
+    - <xref:System.Xml.XmlAttributeCollection.RemoveAt%2A> メソッドを使用して、コレクションのインデックス番号を使用して 1 つの属性を属性コレクションから削除する。  
   
  要素ノードから属性を削除するには、次のメソッドを使用します。  
   
--   <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> メソッドを使用して、属性のコレクションを削除する。  
+- <xref:System.Xml.XmlElement.RemoveAllAttributes%2A> メソッドを使用して、属性のコレクションを削除する。  
   
--   <xref:System.Xml.XmlElement.RemoveAttribute%2A> メソッドを使用して、名前を指定して単一の属性をコレクションから削除する。  
+- <xref:System.Xml.XmlElement.RemoveAttribute%2A> メソッドを使用して、名前を指定して単一の属性をコレクションから削除する。  
   
--   <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> メソッドを使用して、インデックス番号を指定して単一の属性をコレクションから削除する。  
+- <xref:System.Xml.XmlElement.RemoveAttributeAt%2A> メソッドを使用して、インデックス番号を指定して単一の属性をコレクションから削除する。  
   
  もう 1 つの方法として、要素を取得し、属性コレクションから属性を取得して、属性ノードを直接削除する方法もあります。 属性コレクションから属性を取得するには、名前 (`XmlAttribute attr = attrs["attr_name"];`)、インデックス (`XmlAttribute attr = attrs[0];`)、または名前空間を指定した完全修飾名 (`XmlAttribute attr = attrs["attr_localName", "attr_namespace"]`) を使用できます。  
   

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: c4122237cccc154d9dc9034ea047f5f44a4b1134
-ms.sourcegitcommit: 4a8c2b8d0df44142728b68ebc842575840476f6d
+ms.openlocfilehash: 665fdd3d19008e7725983ea621a64514238639ce
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58545742"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599958"
 ---
 # <a name="objects-c-programming-guide"></a>オブジェクト (C# プログラミング ガイド)
 クラスまたは構造体の定義は、型の動作を指定する設計図に似ています。 オブジェクトは基本的に、設計図に従って割り当てられて構成されたメモリのブロックです。 プログラムでは、同じクラスのオブジェクトを多数作成できます。 オブジェクトはインスタンスとも呼ばれ、名前付きの変数または配列やコレクションに格納できます。 クライアント コードとは、これらの変数を使ってメソッドを呼び出し、オブジェクトのパブリック プロパティにアクセスするコードです。 C# などのオブジェクト指向言語では、一般的なプログラムは動的に対話する複数のオブジェクトで構成されています。  
@@ -38,28 +38,28 @@ ms.locfileid: "58545742"
 ## <a name="object-identity-vs-value-equality"></a>オブジェクト ID と値の等価性  
  2 つのオブジェクトが等しいかどうかを比較するときは、最初に、2 つの変数がメモリ内の同じオブジェクトを表しているかどうかを知りたいのか、それともオブジェクトの 1 つ以上のフィールドの値が等しいかどうかを知りたいのかを、区別する必要があります。 値を比較する場合は、オブジェクトが値型 (構造体) のインスタンスか、または参照型 (クラス、デリゲート、配列) のインスタンスかを、検討する必要があります。  
   
--   クラスの 2 つのインスタンスがメモリ内の同じ場所を参照しているかどうか (つまり、同じ *ID* か) を調べるには、静的な <xref:System.Object.Equals%2A> メソッドを使います (<xref:System.Object?displayProperty=nameWithType> は、ユーザー定義の構造体やクラスを含む、すべての値型と参照型の暗黙の基底クラスです)。  
+- クラスの 2 つのインスタンスがメモリ内の同じ場所を参照しているかどうか (つまり、同じ *ID* か) を調べるには、静的な <xref:System.Object.Equals%2A> メソッドを使います (<xref:System.Object?displayProperty=nameWithType> は、ユーザー定義の構造体やクラスを含む、すべての値型と参照型の暗黙の基底クラスです)。  
   
--   2 つの構造体インスタンスのインスタンス フィールドが同じ値を持つかどうかを調べるには、<xref:System.ValueType.Equals%2A?displayProperty=nameWithType> メソッドを使います。 すべての構造体は <xref:System.ValueType?displayProperty=nameWithType> を暗黙的に継承するので、次の例で示すように、オブジェクトで直接メソッドを呼び出します。  
+- 2 つの構造体インスタンスのインスタンス フィールドが同じ値を持つかどうかを調べるには、<xref:System.ValueType.Equals%2A?displayProperty=nameWithType> メソッドを使います。 すべての構造体は <xref:System.ValueType?displayProperty=nameWithType> を暗黙的に継承するので、次の例で示すように、オブジェクトで直接メソッドを呼び出します。  
   
  [!code-csharp[csProgGuideStatements#32](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#32)]  
   
  <xref:System.ValueType?displayProperty=nameWithType> での `Equals` の実装は、構造体に存在するフィールドを特定できる必要があるため、リフレクションを使います。 独自の構造体を作成するときは、`Equals` メソッドをオーバーライドして、独自の型に固有の効率的な等値アルゴリズムを提供します。  
   
--   クラスの 2 つのインスタンスのフィールドの値が等しいかどうかを調べるには、<xref:System.Object.Equals%2A> メソッドまたは [== 演算子](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-)を使用できる場合があります。 ただし、この方法を使用できるのは、その型のオブジェクトにおける "等値" の意味のカスタム定義が、クラスのオーバーライドまたはオーバーロードによって提供されている場合だけです。 クラスは、<xref:System.IEquatable%601> インターフェイスまたは <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスを実装することもできます。 どちらのインターフェイスも、値の等価性をテストするために使うことができるメソッドを提供します。 `Equals` をオーバーライドするクラスをご自分で設計するときは、「[方法: 型の値の等価性を定義する](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)」および「<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>」に記載されているガイドラインに従ってください。  
+- クラスの 2 つのインスタンスのフィールドの値が等しいかどうかを調べるには、<xref:System.Object.Equals%2A> メソッドまたは [== 演算子](../../../csharp/language-reference/operators/equality-operators.md#equality-operator-)を使用できる場合があります。 ただし、この方法を使用できるのは、その型のオブジェクトにおける "等値" の意味のカスタム定義が、クラスのオーバーライドまたはオーバーロードによって提供されている場合だけです。 クラスは、<xref:System.IEquatable%601> インターフェイスまたは <xref:System.Collections.Generic.IEqualityComparer%601> インターフェイスを実装することもできます。 どちらのインターフェイスも、値の等価性をテストするために使うことができるメソッドを提供します。 `Equals` をオーバーライドするクラスをご自分で設計するときは、「[方法: 型の値の等価性を定義する](../../../csharp/programming-guide/statements-expressions-operators/how-to-define-value-equality-for-a-type.md)」および「<xref:System.Object.Equals%28System.Object%29?displayProperty=nameWithType>」に記載されているガイドラインに従ってください。  
   
 ## <a name="related-sections"></a>関連項目  
  詳細情報  
   
--   [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
+- [クラス](../../../csharp/programming-guide/classes-and-structs/classes.md)  
   
--   [構造体](../../../csharp/programming-guide/classes-and-structs/structs.md)  
+- [構造体](../../../csharp/programming-guide/classes-and-structs/structs.md)  
   
--   [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
+- [コンストラクター](../../../csharp/programming-guide/classes-and-structs/constructors.md)  
   
--   [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
+- [ファイナライザー](../../../csharp/programming-guide/classes-and-structs/destructors.md)  
   
--   [イベント](../../../csharp/programming-guide/events/index.md)  
+- [イベント](../../../csharp/programming-guide/events/index.md)  
   
 ## <a name="see-also"></a>関連項目
 

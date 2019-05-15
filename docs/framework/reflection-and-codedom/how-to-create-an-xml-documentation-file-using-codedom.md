@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: e3b80484-36b9-41dd-9d21-a2f9a36381dc
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d4088fe35d919cd579ed9f9a6275db8bb88300fe
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9ae041ae278dc6f2423a679dab8982f4ccc35620
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59297526"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592490"
 ---
 # <a name="how-to-create-an-xml-documentation-file-using-codedom"></a>方法: CodeDOM を使用して XML ドキュメント ファイルを作成する
 CodeDOM を利用し、XML ドキュメントを生成するコードを作成できます。 XML ドキュメント コメントを含む CodeDOM グラフを作成する、コードを生成する、XML 文書出力を作成するコンパイラ オプションでその生成されたコードをコンパイルするというプロセスが行われます。  
@@ -77,7 +77,7 @@ CodeDOM を利用し、XML ドキュメントを生成するコードを作成�
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
--   このコード サンプルを正しく実行するには、`FullTrust` アクセス許可を設定する必要があります。  
+- このコード サンプルを正しく実行するには、`FullTrust` アクセス許可を設定する必要があります。  
   
 ## <a name="see-also"></a>関連項目
 
