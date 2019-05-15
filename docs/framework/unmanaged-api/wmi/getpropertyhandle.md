@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 92d48caf7de873850135c7410a5e4b5861131212
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1397188b38066bac6375da0c76e7d66724a75d7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723239"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636242"
 ---
 # <a name="getpropertyhandle-function"></a>GetPropertyHandle 関数
 

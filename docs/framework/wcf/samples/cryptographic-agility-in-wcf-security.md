@@ -2,12 +2,12 @@
 title: WCF セキュリティ暗号化方式の指定
 ms.date: 03/30/2017
 ms.assetid: c2c549e5-ac19-40c5-b686-8f67f52b6dbf
-ms.openlocfilehash: 64519e51b82780ce2b355251245d77bff0a9e73b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a4171d6e753be9fbdd6974850fc6757ff585ae0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62002210"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637846"
 ---
 # <a name="cryptographic-agility-in-wcf-security"></a>WCF セキュリティ暗号化方式の指定
 

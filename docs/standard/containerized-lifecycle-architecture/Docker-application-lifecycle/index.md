@@ -1,9 +1,13 @@
 ---
 title: Docker アプリケーションのライフ サイクルの概要
 description: ここでコンテナー化されたアプリケーションの開発の体験を開始します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 11/23/2018
+ms.openlocfilehash: 825226e0004af16deccfe1418596d91d6438b076
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644811"
 ---
 # <a name="introduction-tothe-docker-application-life-cycle"></a>Docker アプリケーションのライフ サイクルの概要
 

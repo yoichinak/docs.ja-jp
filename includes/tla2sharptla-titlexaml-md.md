@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ff5adbcca612d030180437f495c7c9664a999d24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25073d5238a051e1cdff40843ef9be7ec8ee111e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776523"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669559"
 ---
 XAML

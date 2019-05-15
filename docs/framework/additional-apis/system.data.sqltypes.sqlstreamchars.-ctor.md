@@ -12,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 17bfd9af4fe0d255bb1dcd1bd4ce714f4abb6782
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7de715d2833f4aa26f8251e32e6bf8853b0bd704
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705923"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634590"
 ---
 # <a name="sqlstreamchars-constructor"></a>SqlStreamChars コンストラクター
 

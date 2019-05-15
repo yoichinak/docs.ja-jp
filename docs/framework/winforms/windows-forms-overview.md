@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: e9d117b272cea8ebb96dc579fa1d8faf65d42c45
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c9215d1072060c4272c7d61056d51297dd997197
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583468"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645754"
 ---
 # <a name="windows-forms-overview"></a>Windows フォームの概要
 

@@ -1,15 +1,13 @@
 ---
 title: Docker に関する用語
 description: Docker を使用する場合は、毎日が使用したいくつかの基本的な用語について説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: d465065341bc58295c965853f4178b05b12a3d9b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c352bf7235e8a3dc2d52bbbfe4390863fff9991f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591222"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644747"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語
 

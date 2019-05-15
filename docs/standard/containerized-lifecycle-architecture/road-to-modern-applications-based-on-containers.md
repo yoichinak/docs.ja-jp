@@ -1,15 +1,13 @@
 ---
 title: コンテナーに基づく最新のアプリケーションへの道
 description: Docker、コンテナーとマイクロ サービス アーキテクチャがないこと画一的なソリューションを理解します。 ここで決定に役立ついくつかの参照があります。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 11/23/2018
-ms.openlocfilehash: 94f7bc27409048ec80a4e485cea4a16d30e7c1e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bd5a53ec557b7dd90733a93d0cb03f19e3bc2940
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922617"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641265"
 ---
 # <a name="road-to-modern-applications-based-on-containers"></a>コンテナーに基づく最新のアプリケーションへの道
 

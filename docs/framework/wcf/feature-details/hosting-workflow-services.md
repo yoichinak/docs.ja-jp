@@ -2,12 +2,12 @@
 title: ワークフロー サービスのホスティング
 ms.date: 03/30/2017
 ms.assetid: 2d55217e-8697-4113-94ce-10b60863342e
-ms.openlocfilehash: dbb5e9b687a735376d720b83607fc67350cd429f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 07e4f7779c06e6c95b45d59bcdd0890fb5a9cf55
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613334"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636138"
 ---
 # <a name="hosting-workflow-services"></a>ワークフロー サービスのホスティング
 ワークフロー サービスが受信メッセージに応答するには、ワークフロー サービスがホストされている必要があります。 ワークフロー サービスは WCF メッセージング インフラストラクチャを使用するため、これと似た方法でホストされます。 WCF のサービスと同様に、インターネット インフォメーション サービス (IIS)、または Windows プロセス アクティブ化サービス (WAS) の下で、任意の管理対象のアプリケーションでワークフロー サービスをホストできます。 さらに、ワークフロー サービスは、Windows Server Appfabric でホストできます。 Windows Server App Fabric の詳細については、次を参照してください。 [Windows Server App Fabric のドキュメント](https://go.microsoft.com/fwlink/?LinkId=193037)、 [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=196494)、および[AppFabric ホスティングの概念](https://go.microsoft.com/fwlink/?LinkId=196495)します。 WCF をホストするさまざまな方法の詳細については、「」を参照をサービスの[ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)します。

@@ -11,12 +11,12 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 9033a513-c255-4f31-b6d7-09b8d8c50e2d
-ms.openlocfilehash: ab71ab6aa2b0ed454b86388ba369204a2131cca5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad9bc0ecf4b7a8e5f3ef13fdff5aa59ca8915922
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706001"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634656"
 ---
 # <a name="sisdebuggercheckdisabledfortestpurposes-field"></a>s_isDebuggerCheckDisabledForTestPurposes フィールド
 

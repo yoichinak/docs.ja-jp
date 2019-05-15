@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 056653a5-384e-4a02-ae3c-1b0157d2ccb4
-ms.openlocfilehash: 20d7e59ba2b4b9dedc0b0daff1c1aa9c5210e61b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aac3b2ac6cfcca137bddaefafd290e744ee991eb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61932956"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637436"
 ---
 # <a name="transport-security-with-an-anonymous-client"></a>トランスポート セキュリティと匿名クライアント
 

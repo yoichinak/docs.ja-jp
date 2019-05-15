@@ -13,12 +13,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 52f88a3551e20c74d7a1144c3cd6859a023980db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b85e21c6bc89d2a00ff8d302f67a3d074d5e7b8f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675183"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634384"
 ---
 # <a name="sqlstreamcharscanseek-property"></a>SqlStreamChars.CanSeek プロパティ
 

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb8919e8760616676ea5ff99069e2d2ceb5f7451
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 419fb33155cfa91199e52110da29efd44d606f4b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608919"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636605"
 ---
 # <a name="getmethod-function"></a>GetMethod 関数
 

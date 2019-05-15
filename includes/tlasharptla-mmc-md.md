@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 362671715713b17bf9870d7ba10b54784bdfa88c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: feb73acb99b438d4a074b512cb8e91ec14cabeaa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61981435"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670447"
 ---
 Microsoft 管理コンソール (MMC)

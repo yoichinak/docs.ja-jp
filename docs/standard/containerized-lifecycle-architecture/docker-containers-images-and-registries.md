@@ -1,15 +1,13 @@
 ---
 title: Docker コンテナー、イメージ、レジストリ
 description: レジストリにアプリケーションを展開する Docker の方法で全体的な再生される重要な役割について説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e69490734a03cf58bf8534bc9e31110a11d44c58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 7becadc3de16d96f8d6f167cf49c6cdd3bcc0d32
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61795328"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641324"
 ---
 # <a name="docker-containers-images-and-registries"></a>Docker コンテナー、イメージ、レジストリ
 

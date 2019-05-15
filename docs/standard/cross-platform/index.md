@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: b153baaa-130c-4169-860b-e580591de91e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 69c9cd480181d497eda7e67e57d53c32d4a8932f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2167f74c5d1dd9f49995b6407e65feb474084dc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055005"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641439"
 ---
 # <a name="developing-for-multiple-platforms-with-the-net-framework"></a>.NET Framework による複数のプラットフォームの開発
 

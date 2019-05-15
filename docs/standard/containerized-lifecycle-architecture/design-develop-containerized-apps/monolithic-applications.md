@@ -1,15 +1,13 @@
 ---
 title: モノリシック アプリケーション
 description: モノリシック アプリケーションをコンテナー化の主要な概念を理解します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: e7454100b09f602e1e103c38685609e1dab62fe9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e577f9a8d9ce4f9d2c8180318b1df181db730e2f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61644965"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641278"
 ---
 # <a name="monolithic-applications"></a>モノリシック アプリケーション
 

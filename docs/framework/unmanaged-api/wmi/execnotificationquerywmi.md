@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9cac00ff96d0c7007bdd6135282c3f767217385e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aa2233bab82f3cd4d1bbcb59f5714c6e4dc91aa5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61935617"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636555"
 ---
 # <a name="execnotificationquerywmi-function"></a>ExecNotificationQueryWmi 関数
 

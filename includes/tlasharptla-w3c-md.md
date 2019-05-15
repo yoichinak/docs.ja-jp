@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 2a5682c45bf3751ca557a16be8721a90f400a239
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d7f2a58c01a99a0305a8d02411c92d1b911c0888
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62051094"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671217"
 ---
 World Wide Web Consortium (W3C)

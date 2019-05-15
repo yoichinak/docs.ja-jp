@@ -4,12 +4,12 @@ description: ログ、トレースと診断の状態の管理とスケールに�
 author: JEREMYLIKNESS
 ms.author: jeliknes
 ms.date: 06/26/2018
-ms.openlocfilehash: b12a09c0fcef7e7ff954a3f959fb9e3080a6e859
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d1654375be1c815d1f46bd8983c38baf063eee04
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61940947"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643581"
 ---
 # <a name="serverless-architecture-considerations"></a>サーバーレス アーキテクチャの考慮事項
 

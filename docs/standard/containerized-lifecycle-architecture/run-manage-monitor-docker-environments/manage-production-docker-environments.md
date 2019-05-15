@@ -1,15 +1,13 @@
 ---
 title: Docker の実稼働環境を管理する
 description: コンテナー ベースの実稼働環境を管理する重要な点を把握するを取得します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 3f8c51b95f52a655de470ac237c51dd4ee9c13eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d10f670745f8bac1084b8c33c5acde67bac6229
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61922578"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641070"
 ---
 # <a name="manage-production-docker-environments"></a>Docker の実稼働環境を管理する
 

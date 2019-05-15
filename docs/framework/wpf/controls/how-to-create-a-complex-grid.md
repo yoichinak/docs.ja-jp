@@ -7,12 +7,12 @@ helpviewer_keywords:
 - monthly calendar [WPF], creating
 - Grid control [WPF], creating [WPF], complex grid
 ms.assetid: 4ce3040a-a156-4364-9596-98ca1eca5550
-ms.openlocfilehash: dd17dfeea85e2b404f7a284f93faceec63145b1f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab5490d608b21fe8b29a078dc1f0147f038c27a3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61910997"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645670"
 ---
 # <a name="how-to-create-a-complex-grid"></a>複雑なグリッドを作成する方法
 

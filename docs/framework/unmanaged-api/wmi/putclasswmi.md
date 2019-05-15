@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f9d537f7713233d363f7d408b1cef0485d99d981
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 422de614d2e2ddb93cc1e932a8672e1e8269b2c0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000169"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636643"
 ---
 # <a name="putclasswmi-function"></a>PutClassWmi 関数
 

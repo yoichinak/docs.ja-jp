@@ -2,12 +2,12 @@
 title: ワークフロー サービスの概要 - WCF
 ms.date: 03/30/2017
 ms.assetid: e536dda3-e286-441e-99a7-49ddc004b646
-ms.openlocfilehash: 5d5f8636bec57cee1cb72c2796fc4bafc6b9c044
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 757a55363a8cb92fc547750183d1261f51f8f682
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590076"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639237"
 ---
 # <a name="workflow-services-overview"></a>ワークフロー サービスの概要
 

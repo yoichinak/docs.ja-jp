@@ -1,15 +1,13 @@
 ---
 title: リフト アンド既存の .NET アプリを Azure IaaS (クラウド インフラストラクチャの準備完了) にシフト
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 0f9ff19c8e346560960a09d3b7c52976c478f2f3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651201"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65643707"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>リフト アンド既存の .NET アプリを Azure IaaS (クラウド インフラストラクチャの準備完了) にシフト
 

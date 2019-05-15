@@ -6,12 +6,12 @@ helpviewer_keywords:
 - COM interop [Visual Basic]
 - shared components
 ms.assetid: f5a72143-c268-4dff-a019-974ad940e17d
-ms.openlocfilehash: 8e45f8eafa696c61f917e333c665380c454401e0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 76c953941d2b8e7af5e4894fd1c521d62e64860f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589000"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642127"
 ---
 # <a name="com-interoperability-in-net-framework-applications-visual-basic"></a>.NET Framework アプリケーションにおける COM 相互運用性 (Visual Basic)
 

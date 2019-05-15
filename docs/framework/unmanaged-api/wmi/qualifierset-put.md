@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0e42cf3440bef030f5c7bec71ed1b4b875b79a61
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 42bef9ab728af251b043e29af4cee9e5cb3f405d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000273"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636542"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 関数
 

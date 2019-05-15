@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - extending [WF], Workflow Designer
 ms.assetid: 98135077-0f5d-4d16-9337-01094e843537
-ms.openlocfilehash: 2d6ef24d00baa4df6dfc8e0af69c1d489b79a41f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 926edb4478551affa03619f44ee886d5eb591e4d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945991"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637271"
 ---
 # <a name="customizing-the-workflow-design-experience"></a>ワークフロー デザイン操作のカスタマイズ
 

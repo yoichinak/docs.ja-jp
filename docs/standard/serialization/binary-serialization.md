@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2b1ea3be-1152-4032-b2b3-07794054c405
 author: ViktorHofer
 ms.author: mairaw
-ms.openlocfilehash: 81d79ec0add7f8b73cced5c64a470fa9d699063c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4a061b3128f8d0952f800be7173203b62f89c672
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61776052"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639107"
 ---
 # <a name="binary-serialization"></a>バイナリ シリアル化
 

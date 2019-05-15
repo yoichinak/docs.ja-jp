@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC30145
 ms.assetid: 2e7eb2b9-eda6-4bdb-95cc-72c7f0be7528
-ms.openlocfilehash: d564f4f4462a691504297d65575956c5f06691ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 012284aa42dfa29ad1a5e4ec4a4df5eaacbd4fb7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61936280"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65642273"
 ---
 # <a name="unable-to-emit-assembly-error-message"></a>アセンブリを作成できません:\<エラー メッセージ >
 

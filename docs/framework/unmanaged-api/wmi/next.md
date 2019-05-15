@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 240544330fa352cbfdc01944e4be6bcad28dc96f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b5b456feeb1cb09e4957e470344146cf4358d8c7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000221"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636182"
 ---
 # <a name="next-function"></a>次の関数
 呼び出しで開始する列挙体では、次のプロパティを取得します。 [BeginEnumeration](beginenumeration.md)します。

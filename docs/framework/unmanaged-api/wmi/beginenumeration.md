@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4221dbea2b5ad98f889e04eb8a9b6d992b59066e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07396428dafbaa76e7771a4022bb493768f9f6c1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61767456"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636801"
 ---
 # <a name="beginenumeration-function"></a>BeginEnumeration 関数
 列挙子を列挙体の先頭にリセットします。  

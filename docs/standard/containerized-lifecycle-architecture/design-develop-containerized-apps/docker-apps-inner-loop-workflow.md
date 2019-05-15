@@ -1,15 +1,13 @@
 ---
 title: Docker アプリの内部ループ開発ワークフロー
 description: Docker アプリケーションの開発の「内部ループ」ワークフローをについて説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: dda75e120b0f17a591fadc22944c78d1174ca156
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ce573546f61b98c2f93e998203497fa949e9efe8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664380"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644854"
 ---
 # <a name="inner-loop-development-workflow-for-docker-apps"></a>Docker アプリの内部ループ開発ワークフロー
 

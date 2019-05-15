@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 755063ca6da29a2e4733dd653306192ac0434ec0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7d04e5630bd196ef534f72a0c3924019315f3774
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775454"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632223"
 ---
 # <a name="ixclrdatamodulerequest-method"></a>IXCLRDataModule::Request メソッド
 

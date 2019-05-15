@@ -1,15 +1,13 @@
 ---
 title: クラウドに最適化されたアプリケーションでの Microsoft テクノロジ
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |クラウドに最適化されたアプリケーションでの Microsoft テクノロジ
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 21ba318c3a59175dadde86ff247c6e41e7f85c0b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627282"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639028"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>クラウドに最適化されたアプリケーションでの Microsoft テクノロジ
 

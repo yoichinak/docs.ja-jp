@@ -3,12 +3,12 @@ title: レコード式のコピーと更新
 description: "'コピーと更新レコード式を' 既存のレコード、更新プログラムをコピーするフィールドを指定および更新されたレコードを返します記述する方法について説明します。"
 author: ChrSteinert
 ms.date: 06/04/2016
-ms.openlocfilehash: 5f9b13ebf6c456aff73872b7522d7670c068dd88
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7657b0295c9437890baea258295f9e9ab10073dd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766052"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645582"
 ---
 # <a name="copy-and-update-record-expressions"></a>レコード式のコピーと更新
 

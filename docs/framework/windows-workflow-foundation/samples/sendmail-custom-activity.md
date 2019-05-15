@@ -2,12 +2,12 @@
 title: SendMail カスタム アクティビティ
 ms.date: 03/30/2017
 ms.assetid: 947a9ae6-379c-43a3-9cd5-87f573a5739f
-ms.openlocfilehash: 3bbb16fd99d5d7de4183b26030c0afe65ebc90cd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d760f95b8e98bae52341296b90008e72d5c47d1f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617310"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637662"
 ---
 # <a name="sendmail-custom-activity"></a>SendMail カスタム アクティビティ
 このサンプルでは、<xref:System.Activities.AsyncCodeActivity> から派生するカスタム アクティビティを作成して、SMTP を使用して電子メールを送信し、ワークフロー アプリケーション内で使用する方法を示します。 カスタム アクティビティの機能を使用して<xref:System.Net.Mail.SmtpClient>非同期的に電子メールを送信して、認証を使用したメールを送信します。 また、テスト モード、トークン置換、ファイル テンプレート、テスト ドロップ パスなどのエンドユーザーの機能も提供しています。  

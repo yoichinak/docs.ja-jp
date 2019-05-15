@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 396b875a-d203-4ebe-a3a1-6a330d962e95
-ms.openlocfilehash: a8197dfc877842be824a5b10c742ef4fb7792858
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5fef151fe9149e2693ee217e7be642427162322d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592750"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636280"
 ---
 # <a name="duplex-services"></a>双方向サービス
 
@@ -87,7 +87,7 @@ binding.ClientBaseAddress = New Uri("http://localhost:8000/DuplexTestUsingCode/C
 ```
 
 > [!WARNING]
-> 双方向モデルでは、サービスまたはクライアントによってチャネルがいつ閉じられたかが自動的に検出されません。 したがって、クライアントが予期せず終了した場合は既定では、サービス通知されません、またはサービスが予期せず終了した場合、クライアントは通知されません。 クライアントとサービスは、独自のプロトコルを実装して、互いに通知するように選択できます。 エラー処理の詳細については、次を参照してください[WCF エラー処理。](../wcf-error-handling.md)
+> 双方向のモデルには、サービスまたはクライアントがそのチャネルを閉じるときに自動的に検出しません。 したがって、クライアントが予期せず終了した場合は既定では、サービス通知されません、またはサービスが予期せず終了した場合、クライアントは通知されません。 切断されているサービスを使用する場合、<xref:System.ServiceModel.CommunicationException>例外が発生します。 クライアントとサービスは、独自のプロトコルを実装して、互いに通知するように選択できます。 エラー処理の詳細については、次を参照してください[WCF エラー処理。](../wcf-error-handling.md)
 
 ## <a name="see-also"></a>関連項目
 

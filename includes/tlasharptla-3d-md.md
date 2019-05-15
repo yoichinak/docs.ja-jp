@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: b1db086fac78b00f4d17a8b49d559233957f9c79
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2165079a556684ad58290e58855d77cd600a46e4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699108"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671726"
 ---
 3-D

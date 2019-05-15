@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: e863f14676acc84f4d9f59d0898dee5b291bd30f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ec18bcf079c7687df4ac9b7c5db23b84383c517
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775441"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632306"
 ---
 # <a name="ixclrdatamodulegetversionid-method"></a>IXCLRDataModule::GetVersionId メソッド
 

@@ -2,12 +2,12 @@
 title: 承認ポリシー
 ms.date: 03/30/2017
 ms.assetid: 1db325ec-85be-47d0-8b6e-3ba2fdf3dda0
-ms.openlocfilehash: 50e868645d7e7ccbcf4be697f8bdb1814dd90e9c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f148af25f85731c4ff15727b328f3f905356fe6e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750586"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65637469"
 ---
 # <a name="authorization-policy"></a>承認ポリシー
 

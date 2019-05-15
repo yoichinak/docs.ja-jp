@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fb5a26fccf7ceb56089aae4bd4f0732b8a405ba0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3566b9b8a3b4183f936c82c39c38dc5daa3aeae1
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049272"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636687"
 ---
 # <a name="compareto-function"></a>CompareTo 関数
 

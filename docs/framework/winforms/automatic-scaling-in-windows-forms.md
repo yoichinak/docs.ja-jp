@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: 4902cd8ab97771f75e5421a9de7ed1150a7443a8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586586"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636967"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows フォームにおける自動スケーリング
 

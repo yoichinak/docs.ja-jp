@@ -1,11 +1,14 @@
 ---
 title: Docker 実稼働環境の実行、管理、および監視
 description: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 900c361d5604f7fdaf41613287aa48c5381a9af7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644874"
 ---
-
 # <a name="run-manage-and-monitor-docker-production-environments"></a>Docker 実稼働環境の実行、管理、および監視
 
 ビジョン:エンタープライズ アプリケーションを高可用性と高スケーラビリティを実行する必要があります。IT 運用は、環境とアプリケーション自体を管理および監視できる必要があります。

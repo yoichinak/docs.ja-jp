@@ -2,12 +2,12 @@
 title: FileName で指定されたファイルは、正しい XML ファイルではありません
 ms.date: 07/20/2015
 ms.assetid: c4c30bf3-e0ad-4bc8-89e0-2c3e49e9793b
-ms.openlocfilehash: 1615722d19e1a24ee4e72bc702dbce3fe30411a4
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5a54e5e7e7c75bb7d766b1bbda10f401fa8b99af
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592894"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640831"
 ---
 # <a name="file-specified-in-filename-is-not-a-valid-xml-file"></a>FileName で指定されたファイルは、正しい XML ファイルではありません
 

@@ -1,11 +1,14 @@
 ---
 title: Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
 description: Microsoft のツールを使用して Microsoft プラットフォームとツールの DevOps ワークフローにコンテナー化された Docker アプリケーション ライフ サイクル
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
+ms.openlocfilehash: 6b138301a7e6794ce0a7b15957684b3b73e9f89f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644819"
 ---
-
 # <a name="docker-application-devops-workflow-with-microsoft-tools"></a>Microsoft ツールを使用した Docker アプリケーション DevOps ワークフロー
 
 *Microsoft Visual Studio、Azure DevOps サービス、Team Foundation Server、および Azure Monitor のテスト、および展開の開発と IT 運用チームのプロジェクト管理と迅速にビルドすると、ツールを提供するコンテナー化包括的なエコシステムを提供します。アプリケーション。*

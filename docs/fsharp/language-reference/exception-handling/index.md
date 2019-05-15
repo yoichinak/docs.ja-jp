@@ -2,12 +2,12 @@
 title: 例外処理
 description: 例外処理の基礎を習得F#例外処理の式と関数へのリンクを検索します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 187236ca380c7de0b3714160f6c3703f8fb93d5a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f4e57bfd643cba3dab5281df484ebb6162cb4b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025094"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645474"
 ---
 # <a name="exception-handling"></a>例外処理
 
@@ -23,8 +23,8 @@ ms.locfileid: "62025094"
 |タイトル|説明|
 |-----|-----------|
 |[例外の種類](exception-types.md)|例外の種類を宣言する方法について説明します。|
-|[例外処理:`try...with`式](the-try-with-expression.md)|例外処理をサポートする言語構成要素について説明します。|
-|[例外処理:`try...finally`式](the-try-finally-expression.md)|例外がスローされたときに、クリーンアップ コードをスタック アンワインドとして実行するための言語構成要素について説明します。|
+|[例外: `try...with`式](the-try-with-expression.md)|例外処理をサポートする言語構成要素について説明します。|
+|[例外: `try...finally`式](the-try-finally-expression.md)|例外がスローされたときに、クリーンアップ コードをスタック アンワインドとして実行するための言語構成要素について説明します。|
 |[例外: `raise` 関数](the-raise-Function.md)|例外オブジェクトをスローする方法について説明します。|
-|[例外処理:`failwith`関数](the-failwith-function.md)|F# の一般的な例外を生成する方法について説明します。|
-|[例外処理:`invalidArg`関数](the-invalidArg-function.md)|無効な引数の例外を生成する方法について説明します。|
+|[例外: `failwith`関数](the-failwith-function.md)|F# の一般的な例外を生成する方法について説明します。|
+|[例外: `invalidArg`関数](the-invalidArg-function.md)|無効な引数の例外を生成する方法について説明します。|

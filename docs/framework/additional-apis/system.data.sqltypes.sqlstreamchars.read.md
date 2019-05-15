@@ -12,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: df92acfd4050eb16d3a101b20b9b44560273f4d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: df715f622f874b3c9297c421eab9f4c7504e696b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675235"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634318"
 ---
 # <a name="sqlstreamcharsreadchar-int32-int32-method"></a>SqlStreamChars.Read (Char、Int32, Int32) メソッド
 

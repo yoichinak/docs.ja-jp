@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02c8ab3aa7fcc603b76fb4b1d09e7e73d04494be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fba929e5a1a1e4c2b69e15bf6c855211e25a67a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749021"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636620"
 ---
 # <a name="put-function"></a>Put 関数
 

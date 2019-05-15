@@ -1,15 +1,13 @@
 ---
 title: 既存 .NET アプリケーションを Azure クラウドおよび Windows コンテナーを最新化 (2 nd edition)
 description: リフト アンド シフトし、Azure クラウドとこの電子書籍をコンテナーに既存のアプリケーションを最新化について説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 04/28/2018
-ms.openlocfilehash: 7e56238e129cadd128240d51f03a5926e6de3e6b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 00460569ee96832e2774c623ff236a6fbb7af349
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628420"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639067"
 ---
 # <a name="modernize-existing-net-applications-with-azure-cloud-and-windows-containers-2nd-edition"></a>Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 (2 nd edition)
 

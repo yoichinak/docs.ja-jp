@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ff9ea8cdc8aea66b1dd1f54c8be881882f6e27f7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e88129f737ee493432d06acc6ad45f8653dd1eb4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61703609"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636769"
 ---
 # <a name="connectserverwmi-function"></a>ConnectServerWmi 関数
 
@@ -71,7 +71,7 @@ HRESULT ConnectServerWmi (
 `strAuthority`\
 [in]ユーザーのドメイン名。 次の値のいずれかを取ります。
 
-| [値] | 説明 |
+| 値 | 説明 |
 |---------|---------|
 | 空白 | NTLM 認証を使用して、現在のユーザーの NTLM ドメインが使用されます。 場合`strUser`ドメイン (推奨される場所) を指定します。 ここで指定しない必要がありますに。 関数を返します`WBEM_E_INVALID_PARAMETER`両方のパラメーターでドメインを指定する場合。 |
 | Kerberos:*プリンシパル名* | Kerberos 認証を使用して、このパラメーターには、Kerberos プリンシパル名が含まれています。 |

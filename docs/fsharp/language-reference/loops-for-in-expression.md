@@ -2,12 +2,12 @@
 title: 'ループ: for...in 式'
 description: 参照してください方法 F# for….. 式で列挙可能なコレクション内のパターンの一致を反復処理するループ コンストラクトが使用されます。
 ms.date: 05/16/2016
-ms.openlocfilehash: adaf448a49cf53c63c41f9156d40ee5d1ad3caeb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5346713b1747227f3fe79e308455d976e506f968
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62024444"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641811"
 ---
 # <a name="loops-forin-expression"></a>ループ: for...in 式
 

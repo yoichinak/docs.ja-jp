@@ -2,12 +2,12 @@
 title: クラス
 description: 学習方法F#クラスは、プロパティ、メソッド、およびイベントを保持できるオブジェクトを表す型。
 ms.date: 05/16/2016
-ms.openlocfilehash: 6bf838e98acecb89436d3e87809d9eb6da0c66d5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a233fea538274216db3c6751f6fbabbf70cc2841
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61870293"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645531"
 ---
 # <a name="classes"></a>クラス
 
@@ -51,7 +51,7 @@ and [access-modifier] type-name2 ...
 
 ## <a name="constructors"></a>コンストラクター
 
-コンス トラクターは、クラス型のインスタンスを作成するコードを示します。 これは、他の .NET 言語で、クラスのコンス トラクターは F# のやや異なる方法で機能します。 F#クラスは、常にプライマリ コンス トラクターの引数が記載されて、`parameter-list`続く型の名前、および本文で構成されます、 `let` (と`let rec`)、クラス宣言の先頭にバインドし、`do`に従ってバインドします。 プライマリ コンス トラクターの引数は、クラス宣言全体のスコープになります。
+コンス トラクターは、クラス型のインスタンスを作成するコードを示します。 これは、他の .NET 言語で、クラスのコンストラクターは F# のやや異なる方法で機能します。 F#クラスは、常にプライマリ コンス トラクターの引数が記載されて、`parameter-list`続く型の名前、および本文で構成されます、 `let` (と`let rec`)、クラス宣言の先頭にバインドし、`do`に従ってバインドします。 プライマリ コンス トラクターの引数は、クラス宣言全体のスコープになります。
 
 使用して追加のコンス トラクターを追加することができます、`new`キーワードを次のように、メンバーを追加します。
 

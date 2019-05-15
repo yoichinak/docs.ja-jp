@@ -2,12 +2,12 @@
 title: 基本型
 description: 使用される基本的な基本的な型を検出、F#言語。
 ms.date: 07/09/2018
-ms.openlocfilehash: 74a276792e2566b8f18b87f4bdcfb923b713b9c5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fb9f275490cb402ff36e959774cd65450de77115
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61959116"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645586"
 ---
 # <a name="basic-types"></a>基本的な型
 

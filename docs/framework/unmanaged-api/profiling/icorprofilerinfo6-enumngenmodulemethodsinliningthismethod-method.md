@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: b933dfe6-7833-40cb-aad8-40842dc3034f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 67ae413ae8944757fc90bcde752b9a5fe53cc68f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 870a71de2aee2e9b725749157791c49836c6ea00
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948526"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636882"
 ---
 # <a name="icorprofilerinfo6enumngenmodulemethodsinliningthismethod-method"></a>ICorProfilerInfo6::EnumNgenModuleMethodsInliningThisMethod メソッド
 

@@ -1,15 +1,13 @@
 ---
 title: 実稼働環境で構成される microservices ベースのアプリケーションを実行する
 description: 運用環境でコンテナー ベースのアプリケーションを実行する主要なコンポーネントについて理解します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 02/15/2019
-ms.openlocfilehash: 52cf273194bff10192b06d236bda7c1cbea1abd8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 69df3d39a00b91cbe59c96e5fcab841a60943bcc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921590"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644962"
 ---
 # <a name="run-composed-and-microservices-based-applications-in-production-environments"></a>実稼働環境で構成される microservices ベースのアプリケーションを実行する
 

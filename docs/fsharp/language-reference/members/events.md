@@ -2,12 +2,12 @@
 title: イベント
 description: 学習方法F#イベントには、GUI プログラミングの重要なユーザー アクションと関数の呼び出しを関連付けることが有効にします。
 ms.date: 05/16/2016
-ms.openlocfilehash: 8972d9ab358ff9ff903e8bbbe42b74beea683233
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad2e8001b81f48fdeb783bee2423a3dc9e22ac79
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903930"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645222"
 ---
 # <a name="events"></a>イベント
 

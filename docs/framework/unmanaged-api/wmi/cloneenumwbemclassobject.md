@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac85ed86ea968fa945e07f95db8977a33c5d12a6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f7b384bb24cbf7ab7379949fd85a22121a1310e3
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968169"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636866"
 ---
 # <a name="cloneenumwbemclassobject-function"></a>CloneEnumWbemClassObject 関数
 列挙型内での位置を維持して、列挙子の論理コピーが作成されます。

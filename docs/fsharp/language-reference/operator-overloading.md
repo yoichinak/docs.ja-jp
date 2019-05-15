@@ -2,12 +2,12 @@
 title: 演算子のオーバーロード
 description: クラスまたはレコードの種類と F# でのグローバル レベルで算術演算子をオーバー ロードする方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: c4b52b02522b750aa55ca6cf4097295e35ab1739
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f4b63818cbdc44d214dca6446162ec9a8922f601
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666249"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645360"
 ---
 # <a name="operator-overloading"></a>演算子のオーバーロード
 

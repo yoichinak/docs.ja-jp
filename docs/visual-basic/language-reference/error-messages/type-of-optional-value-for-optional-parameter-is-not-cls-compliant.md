@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - BC40042
 ms.assetid: 1d6eae29-4ad3-4434-bde4-a53b6051adf5
-ms.openlocfilehash: 35ddf1d42efae20be477c20b89775de64ceee176
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 88f8b7ea1e0a9b4cb115646f40abbf8a567a2b1d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589837"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641389"
 ---
 # <a name="type-of-optional-value-for-optional-parameter-parametername-is-not-cls-compliant"></a>省略可能なパラメーターの省略可能な値の型\<parametername > CLS 準拠ではありません
 プロシージャは `<CLSCompliant(True)>` に設定されていますが、非準拠の型が既定値である [Optional](../../../visual-basic/language-reference/modifiers/optional.md) パラメーターが宣言されています。  
