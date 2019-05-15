@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 66f002b8-a97d-4a6e-a503-2cec01689113
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f6f70b4c67de892c3b66a0099dae9f618a99b3f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3009bf9eb24c44cedc4021f3d09f1707ae2e40d8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59770491"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593605"
 ---
 # <a name="how-to-receive-first-chance-exception-notifications"></a>方法: 初回例外通知を受け取る
 <xref:System.AppDomain> クラスの <xref:System.AppDomain.FirstChanceException>イベントを使用すると、共通言語ランタイムが例外ハンドラーの検索を開始する前に、例外がスローされたことを知らせる通知を受け取ることができます。
@@ -100,7 +100,7 @@ ms.locfileid: "59770491"
 
 ## <a name="compiling-the-code"></a>コードのコンパイル
 
--   この例はコマンド ライン アプリケーションです。 Visual Studio でこのコードをコンパイルして実行するには、出力結果を確認する前にコマンド ウィンドウが閉じないように、`Main()` の最後に C# コード `Console.ReadLine();` (Visual Basic では `Console.ReadLine()`) を追加します。
+- この例はコマンド ライン アプリケーションです。 Visual Studio でこのコードをコンパイルして実行するには、出力結果を確認する前にコマンド ウィンドウが閉じないように、`Main()` の最後に C# コード `Console.ReadLine();` (Visual Basic では `Console.ReadLine()`) を追加します。
 
 ## <a name="see-also"></a>関連項目
 

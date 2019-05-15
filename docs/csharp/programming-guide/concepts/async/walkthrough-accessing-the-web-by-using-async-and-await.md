@@ -2,12 +2,12 @@
 title: 'チュートリアル: Async と Await を使用した Web へのアクセス (C#)'
 ms.date: 07/20/2015
 ms.assetid: c95d8d71-5a98-4bf0-aaf4-45fed2ebbacd
-ms.openlocfilehash: eac19135c2506fdd324a2f425c23548690189ed9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2c9616cc7bed3170803ee3c917fa651afc5ae6fa
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59306730"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64599678"
 ---
 # <a name="walkthrough-accessing-the-web-by-using-async-and-await-c"></a>チュートリアル: Async と Await を使用した Web へのアクセス (C#)
 
@@ -46,19 +46,19 @@ async/await 機能を使用することで、非同期プログラムをより�
 
 4. **[TextBox]** コントロールを強調表示し、**[プロパティ]** ウィンドウで次の値を設定します。
 
-    -   **[Name]** プロパティを `resultsTextBox` に設定します。
+    - **[Name]** プロパティを `resultsTextBox` に設定します。
 
-    -   **[Height]** プロパティを 250 に設定します。
+    - **[Height]** プロパティを 250 に設定します。
 
-    -   **[Width]** プロパティを 500 に設定します。
+    - **[Width]** プロパティを 500 に設定します。
 
-    -   **[テキスト]** タブで、Lucida Console や Global Monospace などの等幅フォントを指定します。
+    - **[テキスト]** タブで、Lucida Console や Global Monospace などの等幅フォントを指定します。
 
 5. **[Button]** コントロールを強調表示し、**[プロパティ]** ウィンドウで次の値を設定します。
 
-    -   **[Name]** プロパティを `startButton` に設定します。
+    - **[Name]** プロパティを `startButton` に設定します。
 
-    -   **[Content]** プロパティの値を **[Button]** から **[Start]** に変更します。
+    - **[Content]** プロパティの値を **[Button]** から **[Start]** に変更します。
 
 6. テキスト ボックスとボタンの位置を調整し、両方が **[MainWindow]** ウィンドウ内に表示されるようにします。
 
@@ -108,13 +108,13 @@ async/await 機能を使用することで、非同期プログラムをより�
 
 3. 同期ソリューションのコードには、次の 4 つのメソッドが含まれています。
 
-    -   `SumPageSizes` は、`SetUpURLList` から Web ページ URL のリストを取得し、`GetURLContents` と `DisplayResults` を呼び出して各 URL を処理します。
+    - `SumPageSizes` は、`SetUpURLList` から Web ページ URL のリストを取得し、`GetURLContents` と `DisplayResults` を呼び出して各 URL を処理します。
 
-    -   `SetUpURLList` は、Web アドレスのリストを作成して返します。
+    - `SetUpURLList` は、Web アドレスのリストを作成して返します。
 
-    -   `GetURLContents` は、各 Web サイトのコンテンツをダウンロードし、バイト配列としてそのコンテンツを返します。
+    - `GetURLContents` は、各 Web サイトのコンテンツをダウンロードし、バイト配列としてそのコンテンツを返します。
 
-    -   `DisplayResults` は、各 URL のバイト配列内のバイト数を表示します。
+    - `DisplayResults` は、各 URL のバイト配列内のバイト数を表示します。
 
     次の 4 つのメソッドをコピーし、それを MainWindow.xaml.cs の `startButton_Click` イベント ハンドラーの下に貼り付けます。
 
@@ -258,9 +258,9 @@ Control returned to startButton_Click.
 
 3. 前の手順で `await` 演算子を追加したため、コンパイラ エラーが発生します。 この演算子は、[async](../../../../csharp/language-reference/keywords/async.md) 修飾子でマークされているメソッドでのみ使用できます。 `CopyTo` への呼び出しを `CopyToAsync` への呼び出しに置き換える変換手順を繰り返す間は、エラーを無視してください。
 
-    -   呼び出されるメソッドの名前を <xref:System.IO.Stream.CopyToAsync%2A> に変更します。
+    - 呼び出されるメソッドの名前を <xref:System.IO.Stream.CopyToAsync%2A> に変更します。
 
-    -   `CopyTo` または `CopyToAsync` メソッドは、その引数 `content` にバイトをコピーし、意味のある値は返しません。 同期バージョンでは、`CopyTo` への呼び出しは値を返さない単純なステートメントです。 非同期バージョンでは、`CopyToAsync` は <xref:System.Threading.Tasks.Task> を返します。 タスクは "Task(void)" のように機能し、メソッドを待機できるようにします。 次のコードに示すように、`Await` または `await` を、`CopyToAsync` への呼び出しに適用します。
+    - `CopyTo` または `CopyToAsync` メソッドは、その引数 `content` にバイトをコピーし、意味のある値は返しません。 同期バージョンでは、`CopyTo` への呼び出しは値を返さない単純なステートメントです。 非同期バージョンでは、`CopyToAsync` は <xref:System.Threading.Tasks.Task> を返します。 タスクは "Task(void)" のように機能し、メソッドを待機できるようにします。 次のコードに示すように、`Await` または `await` を、`CopyToAsync` への呼び出しに適用します。
 
         ```csharp
         await responseStream.CopyToAsync(content);
@@ -289,9 +289,9 @@ Control returned to startButton_Click.
 
      メソッド `GetURLContents` には return ステートメントがあり、このステートメントはバイト配列を返します。 そのため、非同期バージョンの戻り値の型は Task(T) であり、T はバイト配列です。 メソッド シグネチャに、次の変更を加えます。
 
-    -   戻り値の型を `Task<byte[]>` に変更します。
+    - 戻り値の型を `Task<byte[]>` に変更します。
 
-    -   規則により、非同期メソッドは "Async" で終わる名前を持つことになっているため、メソッドの名前を `GetURLContentsAsync` に変更します。
+    - 規則により、非同期メソッドは "Async" で終わる名前を持つことになっているため、メソッドの名前を `GetURLContentsAsync` に変更します。
 
      これらの変更を次のコードに示します。
 
@@ -305,9 +305,9 @@ Control returned to startButton_Click.
 
 1. `SumPageSizes` に対して、前述した手順を繰り返します。 まずは、`GetURLContents` への呼び出しを非同期呼び出しに変更します。
 
-    -   呼び出されるメソッドの名前を `GetURLContents` から `GetURLContentsAsync` に変更します (まだ変更していない場合)。
+    - 呼び出されるメソッドの名前を `GetURLContents` から `GetURLContentsAsync` に変更します (まだ変更していない場合)。
 
-    -   バイト配列値を取得するために、`await` を、`GetURLContentsAsync` が返すタスクに適用します。
+    - バイト配列値を取得するために、`await` を、`GetURLContentsAsync` が返すタスクに適用します。
 
      これらの変更を次のコードに示します。
 
@@ -326,11 +326,11 @@ Control returned to startButton_Click.
 
 2. メソッドのシグネチャに、次の変更を加えます。
 
-    -   メソッドを `async` 修飾子でマークします。
+    - メソッドを `async` 修飾子でマークします。
 
-    -   メソッド名に "Async" を追加します。
+    - メソッド名に "Async" を追加します。
 
-    -   今回、タスク戻り変数の T がない理由は、`SumPageSizesAsync` が T のための値を返さないからです (メソッドに `return` ステートメントがありません)。ただし、メソッドは待機可能になるために `Task` を返す必要があります。 そのため、メソッドの戻り値の型を `void` から `Task` に変更します。
+    - 今回、タスク戻り変数の T がない理由は、`SumPageSizesAsync` が T のための値を返さないからです (メソッドに `return` ステートメントがありません)。ただし、メソッドは待機可能になるために `Task` を返す必要があります。 そのため、メソッドの戻り値の型を `void` から `Task` に変更します。
 
     これらの変更を次のコードに示します。
 
@@ -391,9 +391,9 @@ Control returned to startButton_Click.
 
 2. 同期ソリューションの出力に似た出力が表示されます。 ただし、次の相違点に注意してください。
 
-    -   処理の完了後に、すべての結果が同時に表示されることはありません。 たとえば、両方のプログラムの `startButton_Click` には、テキスト ボックスをクリアする行が含まれています。 この目的は、実行ごとにテキスト ボックスをクリアすることです。1 つの結果セットが表示された後に、もう一度 **[Start]** ボタンをクリックすると、テキスト ボックスがクリアされます。 同期バージョンでは、2 回目のカウントが表示される直前、ダウンロードが完了して UI スレッドが他の処理を実行できる状態になったときにテキスト ボックスがクリアされます。 非同期バージョンでは、**[Start]** ボタンをクリックした直後にテキスト ボックスがクリアされます。
+    - 処理の完了後に、すべての結果が同時に表示されることはありません。 たとえば、両方のプログラムの `startButton_Click` には、テキスト ボックスをクリアする行が含まれています。 この目的は、実行ごとにテキスト ボックスをクリアすることです。1 つの結果セットが表示された後に、もう一度 **[Start]** ボタンをクリックすると、テキスト ボックスがクリアされます。 同期バージョンでは、2 回目のカウントが表示される直前、ダウンロードが完了して UI スレッドが他の処理を実行できる状態になったときにテキスト ボックスがクリアされます。 非同期バージョンでは、**[Start]** ボタンをクリックした直後にテキスト ボックスがクリアされます。
 
-    -   最も重要な点は、ダウンロード中に UI スレッドがブロックされないことです。 Web リソースをダウンロード、カウント、および表示している間に、ウィンドウの移動やサイズ変更を行うことができます。 いずれかの Web サイトの処理が遅い、または応答しない場合、**閉じる**ボタン (右上隅の赤色のフィールドにある [x]) をクリックすることで、操作を取り消すことができます。
+    - 最も重要な点は、ダウンロード中に UI スレッドがブロックされないことです。 Web リソースをダウンロード、カウント、および表示している間に、ウィンドウの移動やサイズ変更を行うことができます。 いずれかの Web サイトの処理が遅い、または応答しない場合、**閉じる**ボタン (右上隅の赤色のフィールドにある [x]) をクリックすることで、操作を取り消すことができます。
 
 ## <a name="replace-method-geturlcontentsasync-with-a-net-framework-method"></a>GetURLContentsAsync メソッドを .NET Framework メソッドに置き換える
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: b609b277-edc6-4c74-b03e-ea73324ecbdb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0aef9a1c81172cda9b6df4574edb331e0ed137ca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 9eb9eabe006dd10b0c36d0fb477637a519853ef2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59340608"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633829"
 ---
 # <a name="how-to-round-trip-date-and-time-values"></a>方法: 日付と時刻の値をラウンドトリップさせる
 ある特定の時点を明確に表すように日付と時刻の値を保つことは、多くのアプリケーションに共通する要件です。 このトピックでは、<xref:System.DateTime> 値、<xref:System.DateTimeOffset> 値、日時値と時間帯の情報を保存し、復元する方法について説明します。復元した値によって、保存した値と同じ時刻が識別されるようにします。  
@@ -83,21 +83,21 @@ ms.locfileid: "59340608"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  これらの例には次の項目が必要です。  
   
--   次の名前空間を C# `using` ステートメントまたは Visual Basic `Imports` ステートメントでインポートすること:  
+- 次の名前空間を C# `using` ステートメントまたは Visual Basic `Imports` ステートメントでインポートすること:  
   
-    -   <xref:System> (C# のみ)。  
+    - <xref:System> (C# のみ)。  
   
-    -   <xref:System.Globalization?displayProperty=nameWithType>。  
+    - <xref:System.Globalization?displayProperty=nameWithType>。  
   
-    -   <xref:System.IO?displayProperty=nameWithType>.  
+    - <xref:System.IO?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
+    - <xref:System.Runtime.Serialization?displayProperty=nameWithType>.  
   
-    -   <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>。  
+    - <xref:System.Runtime.Serialization.Formatters.Binary?displayProperty=nameWithType>。  
   
--   System.Core.dll の参照。  
+- System.Core.dll の参照。  
   
--   `DateInTimeZone` クラス以外、各コード例はクラスまたは Visual Basic モジュールに含め、メソッドでラップし、`Main` メソッドから呼び出します。  
+- `DateInTimeZone` クラス以外、各コード例はクラスまたは Visual Basic モジュールに含め、メソッドでラップし、`Main` メソッドから呼び出します。  
   
 ## <a name="see-also"></a>関連項目
 

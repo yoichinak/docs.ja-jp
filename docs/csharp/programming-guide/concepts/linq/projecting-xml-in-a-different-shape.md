@@ -2,12 +2,12 @@
 title: 異なる構造の XML の射影 (C#)
 ms.date: 07/20/2015
 ms.assetid: 4cb6b14a-32dc-4a2a-813e-bf9368fa8d86
-ms.openlocfilehash: 381d674c420128f75d27394c21a7b622b2d78402
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: ac9c6e05b366c9d34f82c6da9bf154d741840b3d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54723785"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596809"
 ---
 # <a name="projecting-xml-in-a-different-shape-c"></a>異なる構造の XML の射影 (C#)
 このトピックでは、ソース XML とは異なる構造の XML を射影する例について説明します。  
@@ -233,7 +233,7 @@ class Program
 ## <a name="next-steps"></a>次の手順  
  次の例では、クエリを実行して Word 文書内のテキストをすべて検索します。  
   
--   [Word 文書内のテキストの検索 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
+- [Word 文書内のテキストの検索 (C#)](../../../../csharp/programming-guide/concepts/linq/finding-text-in-word-documents.md)  
   
 ## <a name="see-also"></a>関連項目
 

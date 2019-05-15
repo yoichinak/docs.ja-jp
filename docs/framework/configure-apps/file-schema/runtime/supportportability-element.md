@@ -14,13 +14,13 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61704753"
 ---
-# <a name="supportportability-element"></a>\<supportPortability > 要素
+# <a name="supportportability-element"></a>\<supportPortability> 要素
 .NET Framework の 2 つの異なる実装にある同じアセンブリを 1 つのアプリケーションから参照できるように、既定の動作を無効にすることができます。既定の動作では、アプリケーションの移植性を高めるために、このようなアセンブリは同等のものとして扱われます。  
   
-\<configuration > 要素  
+ \<configuration> 要素  
 \<runtime> 要素  
-\<assemblyBinding > 要素  
-\<supportPortability > 要素  
+\<assemblyBinding> 要素  
+\<supportPortability> 要素  
   
 ## <a name="syntax"></a>構文  
   

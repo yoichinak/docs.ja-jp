@@ -5,26 +5,27 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - namespaces [C#], keywords
 ms.assetid: 091a66eb-b10d-4f54-9102-5ac0d4bdb84b
-ms.openlocfilehash: 5db71465bbba6c91c971a3bd570fdd97d362608d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: bc8ce3383bac9453c3963696c4ac2be520ad8110
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54547255"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452425"
 ---
 # <a name="namespace-keywords-c-reference"></a>名前空間キーワード (C# リファレンス)
+
 このセクションでは、名前空間の利用に関連するキーワードと演算子について説明します。  
   
-- [namespace](../../../csharp/language-reference/keywords/namespace.md)  
-- [using](../../../csharp/language-reference/keywords/using.md)  
+- [namespace](namespace.md)  
+- [using](using-directive.md)  
 - [using static](using-static.md)
-- [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)  
-- [::演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)  
-- [extern エイリアス](../../../csharp/language-reference/keywords/extern-alias.md)  
+- [。演算子](../operators/member-access-operators.md#member-access-operator-)  
+- [::演算子](../operators/namespace-alias-qualifer.md)  
+- [extern エイリアス](extern-alias.md)  
   
 ## <a name="see-also"></a>関連項目
 
-- [C# リファレンス](../../../csharp/language-reference/index.md)
-- [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
-- [名前空間](../../../csharp/programming-guide/namespaces/index.md)
+- [C# リファレンス](../index.md)
+- [C# プログラミング ガイド](../../programming-guide/index.md)
+- [C# のキーワード](index.md)
+- [名前空間](../../programming-guide/namespaces/index.md)

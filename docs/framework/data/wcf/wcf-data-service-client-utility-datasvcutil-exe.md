@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF Data Services, client library
 - WCF Data Services, consuming
 ms.assetid: 9d0af606-929b-4c03-b307-3ef5f705afce
-ms.openlocfilehash: 06bf058fe51c59b6619a296ab3d6093224ab8937
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf812f45e4a4090becd8dfafe035d39d1d851860
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660528"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583643"
 ---
 # <a name="wcf-data-service-client-utility-datasvcutilexe"></a>WCF Data Service クライアント ユーティリティ (DataSvcUtil.exe)
 
@@ -25,7 +25,7 @@ DataSvcUtil.exe は、コマンド ライン ツールを使用する WCF Data S
 
 詳細については、「[方法 :クライアント データ サービス クラスを手動で生成](../../../../docs/framework/data/wcf/how-to-manually-generate-client-data-service-classes-wcf-data-services.md)します。
 
-DataSvcUtil.exe ツールは [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ディレクトリにインストールされます。 多くの場合、これにある*C:\Windows\Microsoft.NET\Framework\v4.0*します。 64 ビット システムでは、これにある*C:\Windows\Microsoft.NET\Framework64\v4.0*します。 アクセスすることできますも DataSvcUtil.exe ツール開発者コマンド プロンプトから Visual Studio の。
+DataSvcUtil.exe ツールは、.NET Framework ディレクトリにインストールされます。 多くの場合、これにある*C:\Windows\Microsoft.NET\Framework\v4.0*します。 64 ビット システムでは、これにある*C:\Windows\Microsoft.NET\Framework64\v4.0*します。 アクセスすることできますも DataSvcUtil.exe ツール開発者コマンド プロンプトから Visual Studio の。
 
 ## <a name="syntax"></a>構文
 

@@ -9,12 +9,12 @@ dev_langs:
 ms.assetid: 2c61c920-d0f8-4c72-bfcc-6524570f3060
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd60916302877692ac011e6c0743fae40a10dd34
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fabd95d8fee6f6d8590036001ce2b0c7c23b12da
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59298423"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589861"
 ---
 # <a name="validating-an-xml-document-in-the-dom"></a>DOM における XML ドキュメントの検証
 既定では、<xref:System.Xml.XmlDocument> クラスは、ドキュメント オブジェクト モデル (DOM) 内の XML ドキュメントを XML スキーマ定義言語 (XSD) スキーマまたはドキュメント型定義 (DTD) に対して検証しません。XML が整形式であることだけが検証されます。  
@@ -56,9 +56,9 @@ ms.locfileid: "59298423"
   
  DOM への読み込み時に XML データを検証する場合は、以下を検討します。  
   
--   上の例では、無効な型が見つかるたびに <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> が呼び出されます。 検証を行う <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> で <xref:System.Xml.XmlReader> を設定しなかった場合は、<xref:System.Xml.Schema.XmlSchemaValidationException> を呼び出したときに属性や要素の型が検証スキーマで指定されている型と一致しないと、<xref:System.Xml.XmlDocument.Load%2A> がスローされます。  
+- 上の例では、無効な型が見つかるたびに <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> が呼び出されます。 検証を行う <xref:System.Xml.XmlReaderSettings.ValidationEventHandler> で <xref:System.Xml.XmlReader> を設定しなかった場合は、<xref:System.Xml.Schema.XmlSchemaValidationException> を呼び出したときに属性や要素の型が検証スキーマで指定されている型と一致しないと、<xref:System.Xml.XmlDocument.Load%2A> がスローされます。  
   
--   XML ドキュメントが既定値を定義した関連付けられたスキーマと共に <xref:System.Xml.XmlDocument> オブジェクトに読み込まれる場合、<xref:System.Xml.XmlDocument> は、これらの既定値があたかも XML ドキュメント内にあるかのように扱います。 これは、スキーマから既定値を得た要素に対して <xref:System.Xml.XmlReader.IsEmptyElement%2A> プロパティは常に `false` を返すことを意味します。 XML ドキュメント内で空要素として書かれている場合も同様です。  
+- XML ドキュメントが既定値を定義した関連付けられたスキーマと共に <xref:System.Xml.XmlDocument> オブジェクトに読み込まれる場合、<xref:System.Xml.XmlDocument> は、これらの既定値があたかも XML ドキュメント内にあるかのように扱います。 これは、スキーマから既定値を得た要素に対して <xref:System.Xml.XmlReader.IsEmptyElement%2A> プロパティは常に `false` を返すことを意味します。 XML ドキュメント内で空要素として書かれている場合も同様です。  
   
 ## <a name="validating-an-xml-document-in-the-dom"></a>DOM における XML ドキュメントの検証  
  <xref:System.Xml.XmlDocument.Validate%2A> クラスの <xref:System.Xml.XmlDocument> メソッドは、DOM に読み込まれた XML データを <xref:System.Xml.XmlDocument> オブジェクトの <xref:System.Xml.XmlDocument.Schemas%2A> プロパティに対して検証します。 検証が正常に終了すると、スキーマの既定値が適用され、必要に応じてテキスト値がアトミック値に変換され、型情報が検証済みの情報項目に関連付けられます。 その結果、以前の型指定されていない XML データは、型指定された XML データに置き換わります。  

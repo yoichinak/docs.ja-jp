@@ -5,21 +5,21 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access keywords [C#]
 ms.assetid: 3b680d9c-0998-42df-8ba7-5783f7abda75
-ms.openlocfilehash: 0c97b24da9ecbdecce54e437650ab1445c1f26da
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 783c65984c1aab831644dc5c960f31fcffa9804d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54737021"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64592777"
 ---
 # <a name="access-keywords-c-reference"></a>アクセス キーワード (C# リファレンス)
 このセクションでは、以下のアクセス キーワードについて説明します。  
   
--   [base](../../../csharp/language-reference/keywords/base.md)  
+- [base](../../../csharp/language-reference/keywords/base.md)  
   
      基底クラスのメンバーにアクセスします。  
   
--   [this](../../../csharp/language-reference/keywords/this.md)  
+- [this](../../../csharp/language-reference/keywords/this.md)  
   
      クラスの現在のインスタンスを参照します。  
   

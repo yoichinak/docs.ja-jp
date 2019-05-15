@@ -2,12 +2,12 @@
 title: 判別共用体
 description: 使用する方法について説明しますF#判別共用体。
 ms.date: 05/16/2016
-ms.openlocfilehash: 9d3f423d068df1c43791919b0d71ca82304ae85e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 27fb9205f3f216adc435483fd1dcc839a6e13e03
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766023"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557969"
 ---
 # <a name="discriminated-unions"></a>判別共用体
 
@@ -80,7 +80,7 @@ let getShapeHeight shape =
     | Prism(height = h) -> h
 ```
 
-通常は、共用体の名前で、修飾せずにケース識別子を使用できます。 適用することが常に、共用体の名前を持つ修飾名を使用する場合、 [RequireQualifiedAccess](https://msdn.microsoft.com/library/8b9b6ade-0471-4413-ac5d-638cd0de5f15)属性を共用体型の定義。
+通常は、共用体の名前で、修飾せずにケース識別子を使用できます。 適用することが常に、共用体の名前を持つ修飾名を使用する場合、 [RequireQualifiedAccess](https://msdn.microsoft.com/visualfsharpdocs/conceptual/core.requirequalifiedaccessattribute-class-[fsharp])属性を共用体型の定義。
 
 ### <a name="unwrapping-discriminated-unions"></a>判別共用体のラップを解除
 

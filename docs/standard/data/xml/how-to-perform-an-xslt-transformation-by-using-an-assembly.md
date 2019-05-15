@@ -8,19 +8,19 @@ dev_langs:
 ms.assetid: 76ee440b-d134-4f8f-8262-b917ad6dcbf6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dcf869d77882810d063532b2cf0c8139be163b7a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 596ea34dce17d21a151007cad3ebb0ccb615d136
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59345405"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590411"
 ---
 # <a name="how-to-perform-an-xslt-transformation-by-using-an-assembly"></a>方法: アセンブリを使用して XSLT 変換を実行する
 XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパイルしてアセンブリを生成します。 このアセンブリを <xref:System.Xml.Xsl.XslCompiledTransform.Load%28System.Type%29?displayProperty=nameWithType> メソッドに直接渡すことができます。  
   
 ### <a name="to-copy-the-xml-and-xslt-files-to-your-local-computer"></a>XML ファイルと XSLT ファイルをローカル コンピューターにコピーするには  
   
--   XSLT ファイルをローカル コンピューターにコピーし、Transform.xsl という名前を付けます。  
+- XSLT ファイルをローカル コンピューターにコピーし、Transform.xsl という名前を付けます。  
   
     ```xml  
     <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"  
@@ -87,7 +87,7 @@ XSLT コンパイラ (xsltc.exe) は、XSLT スタイル シートをコンパ�
     </xsl:stylesheet>  
     ```  
   
--   XML ファイルをローカル コンピューターにコピーし、`books.xml` という名前を付けます。  
+- XML ファイルをローカル コンピューターにコピーし、`books.xml` という名前を付けます。  
   
     ```xml  
     <?xml version="1.0"?>  

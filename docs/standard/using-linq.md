@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: eb1ba14bbcfe4e561fa575b9802126fab59d31fc
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56968037"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644742"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (統合言語クエリ)
 
@@ -103,15 +103,15 @@ API 構文は単に、クエリ構文を実行するより簡潔な方法であ�
 
 次のような場合には、使用する必要が**あります**。
 
-*   既存のコードベースで既にクエリ構文を使用している。
-*   複雑になるため、クエリ内で変数をスコープする必要がある。
-*   クエリ構文が好ましく、コードベースから注意がそれることはない。
+* 既存のコードベースで既にクエリ構文を使用している。
+* 複雑になるため、クエリ内で変数をスコープする必要がある。
+* クエリ構文が好ましく、コードベースから注意がそれることはない。
 
 次のような場合には、使用する必要は**ありません**。
 
-*   既存のコードベースで既に API 構文を使用している。
-*   クエリ内で変数をスコープする必要はない。
-*   API 構文が好ましく、コードベースから注意がそれることはない。
+* 既存のコードベースで既に API 構文を使用している。
+* クエリ内で変数をスコープする必要はない。
+* API 構文が好ましく、コードベースから注意がそれることはない。
 
 ## <a name="essential-samples"></a>重要なサンプル
 
@@ -119,7 +119,7 @@ LINQ サンプルの一覧については、「[101 LINQ Samples](https://code.m
 
 以下に、LINQ の重要な要素をいくつか簡単に示します。 これは決して包括的なものではありません。LINQ ではここで紹介するものよりはるかに多くの機能が提供されます。
 
-*   最も基本的かつ重要な要素 - `Where`、`Select`、および `Aggregate`:
+* 最も基本的かつ重要な要素 - `Where`、`Select`、および `Aggregate`:
 
 ```csharp
 // Filtering a list
@@ -142,14 +142,14 @@ int seed = 0;
 int sumOfStrings = strings.Aggregate(seed, (s1, s2) => s1.Length + s2.Length);
 ```
 
-*   リストをまとめてフラット化する場合:
+* リストをまとめてフラット化する場合:
 
 ```csharp
 // Transforms the list of kennels into a list of all their dogs.
 var allDogsFromKennels = kennels.SelectMany(kennel => kennel.Dogs);
 ```
 
-*   2 つのセットの和集合 (カスタム比較子を含む):
+* 2 つのセットの和集合 (カスタム比較子を含む):
 
 ```csharp
 public class DogHairLengthComparer : IEqualityComparer<Dog>
@@ -184,7 +184,7 @@ public class DogHairLengthComparer : IEqualityComparer<Dog>
 var allShortHairedDogs = kennel1.Dogs.Union(kennel2.Dogs, new DogHairLengthComparer());
 ```
 
-*   2 つのセットの積集合:
+* 2 つのセットの積集合:
 
 ```csharp
 // Gets the volunteers who spend share time with two humane societies.
@@ -192,7 +192,7 @@ var volunteers = humaneSociety1.Volunteers.Intersect(humaneSociety2.Volunteers,
                                                      new VolunteerTimeComparer());
 ```
 
-*   並べ替え:
+* 並べ替え:
 
 ```csharp
 // Get driving directions, ordering by if it's toll-free before estimated driving time.
@@ -201,7 +201,7 @@ var results = DirectionsProcessor.GetDirections(start, end)
               .ThenBy(direction => direction.EstimatedTime);
 ```
 
-*   最後に、より高度なサンプルを以下に示します。同じ型の 2 つのインスタンスのプロパティ値が等しいかどうかを判断します ([この StackOverflow の投稿](https://stackoverflow.com/a/844855)から借用し、変更したもの)。
+* 最後に、より高度なサンプルを以下に示します。同じ型の 2 つのインスタンスのプロパティ値が等しいかどうかを判断します ([この StackOverflow の投稿](https://stackoverflow.com/a/844855)から借用し、変更したもの)。
 
 ```csharp
 public static bool PublicInstancePropertiesEqual<T>(this T self, T to, params string[] ignore) where T : class
@@ -252,6 +252,6 @@ LINQ で簡単に表すことができる (つまり、純粋関数で副作用�
 
 ## <a name="further-resources"></a>他のリソース:
 
-*   [101 個の LINQ サンプル](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
-*   [Linqpad](https://www.linqpad.net/)。プレイグラウンド環境とデータベース クエリ エンジン (C#/F#/VB 用)
-*   [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)。LINQ to Objects の実装方法を学習するための電子書籍
+* [101 個の LINQ サンプル](https://code.msdn.microsoft.com/101-LINQ-Samples-3fb9811b)
+* [Linqpad](https://www.linqpad.net/)。プレイグラウンド環境とデータベース クエリ エンジン (C#/F#/VB 用)
+* [EduLinq](https://codeblog.jonskeet.uk/2011/02/23/reimplementing-linq-to-objects-part-45-conclusion-and-list-of-posts/)。LINQ to Objects の実装方法を学習するための電子書籍

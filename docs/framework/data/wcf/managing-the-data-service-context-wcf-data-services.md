@@ -2,12 +2,12 @@
 title: データ サービス コンテキストの管理 (WCF Data Services)
 ms.date: 03/30/2017
 ms.assetid: 15b19d09-7de7-4638-9556-6ef396cc45ec
-ms.openlocfilehash: 33e7ce17eea5d534b941d778fd13144ad51b4094
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 329e3ee222b8375d82e6d1234dd89b4fa2c6c7c0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875798"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582662"
 ---
 # <a name="managing-the-data-service-context-wcf-data-services"></a>データ サービス コンテキストの管理 (WCF Data Services)
 <xref:System.Data.Services.Client.DataServiceContext> クラスは、特定のデータ サービスに対してサポートされている操作をカプセル化します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] サービスはステートレスですが、コンテキストはステートレスではありません。 そのため、使用することができます、<xref:System.Data.Services.Client.DataServiceContext>変更管理などの機能をサポートするために、データ サービスとの対話操作間におけるクライアントの状態を維持するクラス。 このクラスは、ID の管理と変更の追跡も行います。  
@@ -23,7 +23,7 @@ ms.locfileid: "61875798"
  <xref:System.Data.Services.Client.DataServiceContext> は、<xref:System.Data.Services.Client.DataServiceContext.AddObject%2A>、<xref:System.Data.Services.Client.DataServiceContext.UpdateObject%2A>、および <xref:System.Data.Services.Client.DataServiceContext.DeleteObject%2A> を使用して手動で報告しているか、または <xref:System.Data.Services.Client.DataServiceCollection%601> によって報告されているオブジェクトへの変更を追跡します。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> メソッドを呼び出すと、クライアントはデータ サービスに変更を送り返します。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> は、クライアントでのデータ変更がデータ サービスでの変更と競合する場合に失敗する可能性があります。 このような状況が発生した場合、エンティティ リソースに対してクエリを再度実行し、更新データを受信する必要があります。 データ サービスの変更を上書きするには、<xref:System.Data.Services.Client.MergeOption.PreserveChanges> マージ オプションを使用してクエリを実行します。 <xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> を再度呼び出すと、データ サービスのリソースに対してその他の変更がまだ行われていない場合に限り、クライアントに保存されている変更がデータ サービスに永続化されます。  
   
 ## <a name="saving-changes"></a>変更の保存  
- 変更は、<xref:System.Data.Services.Client.DataServiceContext> インスタンスで追跡されますが、サーバーには直ちに送信されません。 指定されたアクティビティに対して必要な変更が完了した後、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> を呼び出して、すべての変更をデータ サービスに送信します。 <xref:System.Data.Services.Client.DataServiceResponse> 操作が完了した後、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> オブジェクトが返されます。 <xref:System.Data.Services.Client.DataServiceResponse> オブジェクトには、<xref:System.Data.Services.Client.OperationResponse> オブジェクトのシーケンスが含まれます。さらに、これらの各オブジェクトには、永続化または試行された変更を表す、<xref:System.Data.Services.Client.EntityDescriptor> インスタンスまたは <xref:System.Data.Services.Client.LinkDescriptor> インスタンスのシーケンスが含まれます。 データ サービス内でエンティティが作成または変更されると、前の例で生成された <xref:System.Data.Services.Client.EntityDescriptor> 値のようなサーバー生成のプロパティ値も含めて、更新されたエンティティへの参照が `ProductID` に含められます。 クライアント ライブラリは、これらの新しい値を持つように [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトを自動的に更新します。  
+ 変更は、<xref:System.Data.Services.Client.DataServiceContext> インスタンスで追跡されますが、サーバーには直ちに送信されません。 指定されたアクティビティに対して必要な変更が完了した後、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> を呼び出して、すべての変更をデータ サービスに送信します。 <xref:System.Data.Services.Client.DataServiceResponse> 操作が完了した後、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> オブジェクトが返されます。 <xref:System.Data.Services.Client.DataServiceResponse> オブジェクトには、<xref:System.Data.Services.Client.OperationResponse> オブジェクトのシーケンスが含まれます。さらに、これらの各オブジェクトには、永続化または試行された変更を表す、<xref:System.Data.Services.Client.EntityDescriptor> インスタンスまたは <xref:System.Data.Services.Client.LinkDescriptor> インスタンスのシーケンスが含まれます。 データ サービス内でエンティティが作成または変更されると、前の例で生成された <xref:System.Data.Services.Client.EntityDescriptor> 値のようなサーバー生成のプロパティ値も含めて、更新されたエンティティへの参照が `ProductID` に含められます。 クライアント ライブラリは、これらの新しい値で .NET Framework オブジェクトを自動的に更新します。  
   
  挿入操作と更新操作を適切に実行するため、その操作に関連付けられている <xref:System.Data.Services.Client.EntityDescriptor> オブジェクトまたは <xref:System.Data.Services.Client.LinkDescriptor> オブジェクトの状態プロパティが <xref:System.Data.Services.Client.EntityStates.Unchanged> に設定され、新しい値は <xref:System.Data.Services.Client.MergeOption.OverwriteChanges> を使用してマージされます。 データ サービス内で挿入、更新、または削除操作が失敗した場合、エンティティ状態は、<xref:System.Data.Services.Client.DataServiceContext.SaveChanges%2A> が呼び出される前と同じままになり、<xref:System.Data.Services.Client.OperationResponse.Error%2A> の <xref:System.Data.Services.Client.OperationResponse> プロパティは、エラーに関する情報を含む <xref:System.Data.Services.Client.DataServiceRequestException> に設定されます。 詳細については、次を参照してください。[データ サービスの更新](../../../../docs/framework/data/wcf/updating-the-data-service-wcf-data-services.md)します。  
   

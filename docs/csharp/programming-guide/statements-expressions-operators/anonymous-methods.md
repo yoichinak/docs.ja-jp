@@ -7,12 +7,12 @@ helpviewer_keywords:
 - methods [C#], anonymous
 - delegates [C#], anonymous methods
 ms.assetid: a62441fa-f0a3-4acb-9aa6-93762a635275
-ms.openlocfilehash: 94e9f7133c9a78ece7df5bd10cfc27c79d0652c2
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: d7823611df5e02040fd8735e1fa6ea7841298836
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203014"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595048"
 ---
 # <a name="anonymous-methods-c-programming-guide"></a>匿名メソッド (C# プログラミング ガイド)
 C# 2.0 より前のバージョンでは、[デリゲート](../../../csharp/language-reference/keywords/delegate.md)を宣言するには[名前付きメソッド](../../../csharp/programming-guide/delegates/delegates-with-named-vs-anonymous-methods.md)を使用するしかありませんでした。 C# 2.0 では匿名メソッドが導入され、C# 3.0 以降では、インライン コードを記述するための本来の方法として、匿名メソッドに代わってラムダ式が使用されるようになりました。 ただし、このトピックに記載した匿名メソッドに関する情報は、ラムダ式にも適用されます。 ラムダ式にはない機能を匿名メソッドが備えているケースが 1 つあります。 匿名メソッドではパラメーター リストを省略できます。 つまり、匿名メソッドを、さまざまなシグネチャを持つデリゲートに変換できます。 これはラムダ式では不可能です。 ラムダ式の詳細については、「[ラムダ式](../../../csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。  
@@ -49,9 +49,9 @@ C# 2.0 より前のバージョンでは、[デリゲート](../../../csharp/lan
 ## <a name="example"></a>例  
  次の例は、デリゲートをインスタンス化する 2 つの方法を示しています。  
   
--   デリゲートと匿名メソッドを関連付ける。  
+- デリゲートと匿名メソッドを関連付ける。  
   
--   デリゲートと名前付きメソッド (`DoWork`) を関連付ける。  
+- デリゲートと名前付きメソッド (`DoWork`) を関連付ける。  
   
  どちらの場合も、デリゲートを呼び出すと、メッセージが表示されます。  
   

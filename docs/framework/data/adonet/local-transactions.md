@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ae3712f-ef5e-41a1-9ea9-b3d0399439f1
-ms.openlocfilehash: e139cafa168b0a6851e5d8474e6bb4db94f36e9a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1897116389aaa1b4c953612364c7302e9ca2f35a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61878515"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584456"
 ---
 # <a name="local-transactions"></a>ローカル トランザクション
 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] でのトランザクションは、複数のタスクをバインドして単一の作業単位として実行する場合に使用します。 たとえば、あるアプリケーションが 2 つのタスクを実行するものとします。 まず、注文情報に従ってテーブルが更新されます。 次に、在庫情報を含むテーブルが更新され、注文品の金額が借方記入されます。 いずれかのタスクが失敗すると両方の更新がロールバックされます。  
@@ -18,7 +18,7 @@ ms.locfileid: "61878515"
 ## <a name="determining-the-transaction-type"></a>トランザクションの種類の判別  
  トランザクションは、単一フェーズは、データベースによって直接処理されるときにローカル トランザクションであると見なされます。 トランザクションがトランザクション モニターによって調整は、トランザクションの解決にフェール セーフ機構 (2 フェーズ コミット) などを使用する場合、分散トランザクションであると見なされます。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] データ プロバイダーは、それぞれ独自の `Transaction` オブジェクトを使用してローカル トランザクションを実行しています。 トランザクションを SQL Server データベースで実行できるようにする場合は、<xref:System.Data.SqlClient> トランザクションを選択します。 Oracle トランザクションの場合は、<xref:System.Data.OracleClient> プロバイダーを使用します。 さらに、<xref:System.Data.Common.DbTransaction>トランザクションを必要とするプロバイダーに依存しないコードを記述するために使用できるクラス。  
+ 独自の .NET Framework データ プロバイダーの各`Transaction`ローカル トランザクションを実行するオブジェクト。 トランザクションを SQL Server データベースで実行できるようにする場合は、<xref:System.Data.SqlClient> トランザクションを選択します。 Oracle トランザクションの場合は、<xref:System.Data.OracleClient> プロバイダーを使用します。 さらに、<xref:System.Data.Common.DbTransaction>トランザクションを必要とするプロバイダーに依存しないコードを記述するために使用できるクラス。  
   
 > [!NOTE]
 > トランザクションは、サーバーで実行されるときに最も効率的です。 明示的なトランザクションを広範に使用する SQL Server データベースを操作する場合は、Transact-SQL の BEGIN TRANSACTION ステートメントを使用して、ストアド プロシージャとしてトランザクション処理を記述するとよいでしょう。

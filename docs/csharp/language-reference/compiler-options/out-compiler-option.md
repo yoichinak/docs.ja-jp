@@ -8,12 +8,12 @@ helpviewer_keywords:
 - out compiler option [C#]
 - -out compiler option [C#]
 ms.assetid: 70d91d01-7bd2-4aea-ba8b-4e9807e9caa5
-ms.openlocfilehash: 459f83ee52d0ab6421fe7be4a597d8e5174b4fd9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0cb0b78396731a9b8e127430cd06a9e71812d4fd
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59331300"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64593028"
 ---
 # <a name="-out-c-compiler-options"></a>-out (C# コンパイラ オプション)
 **-out** オプションは、出力ファイルの名前を指定します。  
@@ -35,9 +35,9 @@ ms.locfileid: "59331300"
   
  出力ファイルの名前を指定しない場合:  
   
--   .exe は **Main** メソッドを含むソース コード ファイルからその名前を取得します。  
+- .exe は **Main** メソッドを含むソース コード ファイルからその名前を取得します。  
   
--   .dll または .netmodule は最初のソース コード ファイルからその名前を取得します。  
+- .dll または .netmodule は最初のソース コード ファイルからその名前を取得します。  
   
  1 つの出力ファイルをコンパイルするために使用されるソース コード ファイルは、別の出力ファイルのコンパイルの同じコンパイルでは使用できません。  
   

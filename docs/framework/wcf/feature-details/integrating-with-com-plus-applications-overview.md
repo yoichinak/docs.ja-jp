@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, COM+ integration
 - WCF, COM+ integration
 ms.assetid: e481e48f-7096-40eb-9f20-7f0098412941
-ms.openlocfilehash: fbe27403920d8c85665e585ca461602131574038
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fbe1617aa8ade89258bb7f4b46180b5e18805e3a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638649"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590539"
 ---
 # <a name="integrating-with-com-applications-overview"></a>COM+ アプリケーションとの統合の概要
 Windows Communication Foundation (WCF) は、分散アプリケーションを作成するための豊富な環境を提供します。 COM + でホストされるコンポーネント ベースのアプリケーション ロジックを既に使用している場合は、既存のロジックを修正することがなく拡張する WCF を使用できます。 既存の COM+ サービスまたはエンタープライズ サービスの業務ロジックを、Web サービスを介して公開する場合に役立ちます。  
@@ -49,7 +49,7 @@ Windows Communication Foundation (WCF) は、分散アプリケーションを�
   
 - オブジェクト参照をパラメーターとして渡すインターフェイス。ただし、「オブジェクト参照を渡せる場合」で説明されているようにいくつか例外があります。  
   
-- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] COM 相互運用変換ができない型を渡すインターフェイス。  
+- .NET Framework の COM 相互運用性の変換を使用した互換性のない型を渡すインターフェイス。  
   
 - COM+ でサービスを提供する場合にアプリケーション プールが有効になるアプリケーションに対するインターフェイス。  
   

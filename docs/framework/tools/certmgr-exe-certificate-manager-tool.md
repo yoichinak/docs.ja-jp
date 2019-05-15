@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e953b43-1374-4bbc-814f-53ca1b6b52bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 14dc09ff8ceaa5e754c2a8ee64846fbcac55e37f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 12415c6d461f3c8040aaa407edf9567633c5b108
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59221102"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591572"
 ---
 # <a name="certmgrexe-certificate-manager-tool"></a>Certmgr.exe (証明書マネージャー ツール)
 証明書マネージャー ツール (Certmgr.exe) は、証明書、証明書信頼リスト (CTL: Certificate Trust List)、および証明書失効リスト (CRL: Certificate Revocation List) を管理します。  
@@ -75,13 +75,13 @@ ms.locfileid: "59221102"
 ## <a name="remarks"></a>解説  
  Certmgr.exe は次の基本的な機能を実行します。  
   
--   証明書、CTL、および CRL をコンソールに表示します。  
+- 証明書、CTL、および CRL をコンソールに表示します。  
   
--   証明書、CTL、および CRL を証明書ストアに追加します。  
+- 証明書、CTL、および CRL を証明書ストアに追加します。  
   
--   証明書、CTL、および CRL を証明書ストアから削除します。  
+- 証明書、CTL、および CRL を証明書ストアから削除します。  
   
--   証明書ストアに含まれている X.509 証明書、CTL、または CRL をファイルに保存します。  
+- 証明書ストアに含まれている X.509 証明書、CTL、または CRL をファイルに保存します。  
   
  Certmgr.exe は、**StoreFile** とシステム ストアという 2 つの種類の証明書ストアに対して機能します。 証明書ストアの種類を指定する必要はありません。Certmgr.exe がストアの種類を識別し、適切な操作を実行します。  
   

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c8c9fe05049feff6e15c765212b72e35265fd844
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59345431"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634545"
 ---
 # <a name="custom-date-and-time-format-strings"></a>カスタム日時書式指定文字列
 
@@ -348,11 +348,11 @@ ms.locfileid: "59345431"
 
 "K" カスタム書式指定子は、日付と時刻の値のタイム ゾーン情報を表します。 この書式指定子を <xref:System.DateTime> 値で使用した場合、書式設定後の文字列は、<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティの値によって定義されます。
 
--   ローカル タイム ゾーンの場合 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティ値 = <xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、この指定子は "zzz" 指定子に相当し、書式設定後の文字列には世界協定時刻 (UTC: Coordinated Universal Time) からのローカル オフセットが含まれます ("-07:00" など)。
+- ローカル タイム ゾーンの場合 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティ値 = <xref:System.DateTimeKind.Local?displayProperty=nameWithType>)、この指定子は "zzz" 指定子に相当し、書式設定後の文字列には世界協定時刻 (UTC: Coordinated Universal Time) からのローカル オフセットが含まれます ("-07:00" など)。
 
--   UTC 時刻の場合 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティ値 = <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>)、書式設定後の文字列には UTC 日付を表す "Z" 文字が含まれます。
+- UTC 時刻の場合 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティ値 = <xref:System.DateTimeKind.Utc?displayProperty=nameWithType>)、書式設定後の文字列には UTC 日付を表す "Z" 文字が含まれます。
 
--   タイム ゾーンが指定されていない時刻の場合 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティ = <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)、<xref:System.String.Empty?displayProperty=nameWithType> と同じ結果になります。
+- タイム ゾーンが指定されていない時刻の場合 (<xref:System.DateTime.Kind%2A?displayProperty=nameWithType> プロパティ = <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType>)、<xref:System.String.Empty?displayProperty=nameWithType> と同じ結果になります。
 
 "K" 書式指定子を <xref:System.DateTimeOffset> 値で使用した場合、この指定子は "zzz" 書式指定子に相当し、書式設定後の文字列には <xref:System.DateTimeOffset> 値の UTC を基準としたオフセットが含まれます。
 
@@ -699,5 +699,5 @@ AM と PM を区別する必要のある言語の場合、必ず "tt" 指定子�
 - <xref:System.DateTime?displayProperty=nameWithType>
 - <xref:System.IFormatProvider?displayProperty=nameWithType>
 - [型の書式設定](../../../docs/standard/base-types/formatting-types.md)
-- [標準の日時書式指定文字列](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
+- [Standard Date and Time Format Strings](../../../docs/standard/base-types/standard-date-and-time-format-strings.md)
 - [サンプル: .NET Framework 4 の書式設定ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)

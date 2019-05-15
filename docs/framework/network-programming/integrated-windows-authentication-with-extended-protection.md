@@ -2,12 +2,12 @@
 title: 統合 Windows 認証と拡張保護
 ms.date: 03/30/2017
 ms.assetid: 81731998-d5e7-49e4-ad38-c8e6d01689d0
-ms.openlocfilehash: 3088d59a91b5caa75cda3e40a5203874c24325cd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 672737471c7c73e7ddd03d26d00d30cff3e23ec4
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59325723"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647402"
 ---
 # <a name="integrated-windows-authentication-with-extended-protection"></a>統合 Windows 認証と拡張保護
 <xref:System.Net> 名前空間および関連名前空間の <xref:System.Net.HttpWebRequest>、<xref:System.Net.HttpListener>、<xref:System.Net.Mail.SmtpClient>、<xref:System.Net.Security.SslStream>、<xref:System.Net.Security.NegotiateStream>、および関連クラスによる統合 Windows 認証の処理方法に影響を与える、機能強化が行われました。 セキュリティ強化のため、拡張保護のサポートが追加されました。  
@@ -39,21 +39,21 @@ ms.locfileid: "59325723"
   
  サービス バインディング情報は、特定のサービス エンドポイントを認証するクライアントの意思表示です。 これは、次のプロパティを使用してクライアントからサーバーに伝達されます。  
   
--   SPN 値は、クライアント認証を実行するサーバーにクリア テキスト形式で提供する必要があります。  
+- SPN 値は、クライアント認証を実行するサーバーにクリア テキスト形式で提供する必要があります。  
   
--   SPN の値はパブリックです。  
+- SPN の値はパブリックです。  
   
--   SPN は、man-in-the-middle 攻撃で値が挿入、削除、または変更されないように、転送中は暗号で保護する必要があります。  
+- SPN は、man-in-the-middle 攻撃で値が挿入、削除、または変更されないように、転送中は暗号で保護する必要があります。  
   
  CBT は、クライアントが認証した内部チャネルを介して会話に結び付ける (バインド) ために使用されるセキュリティで保護された外部チャネル (TLS など) のプロパティです。 CBT には、次のプロパティ (これらも IETF RFC 5056 で定義されています) が必要です。  
   
--   外部チャネルが存在する場合は、CBT の値は、外部チャネル、またはサーバーのエンドポイントのどちらが、会話のクライアント側とサーバー側の両方によって個別に到着したかを識別するプロパティである必要があります。  
+- 外部チャネルが存在する場合は、CBT の値は、外部チャネル、またはサーバーのエンドポイントのどちらが、会話のクライアント側とサーバー側の両方によって個別に到着したかを識別するプロパティである必要があります。  
   
--   クライアントによって送信された CBT の値は、攻撃者が影響を与えられるものであってはなりません。  
+- クライアントによって送信された CBT の値は、攻撃者が影響を与えられるものであってはなりません。  
   
--   CBT 値の機密性については、保証は一切されません。 ただしこれは、CBT を実行するプロトコルが暗号化している可能性があるため、サービス バインディング情報とチャネル バインディング情報の値が、認証を実行するサーバー以外で常に検査されることを意味しているわけではありません。  
+- CBT 値の機密性については、保証は一切されません。 ただしこれは、CBT を実行するプロトコルが暗号化している可能性があるため、サービス バインディング情報とチャネル バインディング情報の値が、認証を実行するサーバー以外で常に検査されることを意味しているわけではありません。  
   
--   CBT は、攻撃者が値を挿入、削除、または変更できないようにするため、転送中は暗号で完全に保護する必要があります。  
+- CBT は、攻撃者が値を挿入、削除、または変更できないようにするため、転送中は暗号で完全に保護する必要があります。  
   
  チャネル バインディングは、クライアントが改ざんを防止する方法で SPN および CBT をサーバーに転送することで実現されます。 サーバーは、そのポリシーに従ってチャネル バインディング情報を検証し、目的のターゲットであると信じられない認証試行を拒否します。 これにより、2 つのチャンネルが暗号でバインドされます。  
   
@@ -72,37 +72,37 @@ ms.locfileid: "59325723"
   
  次の要素を持つ <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy>:  
   
--   オペレーティング システムが統合 Windows 認証と拡張保護をサポートしているかどうかを示す <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> プロパティ。  
+- オペレーティング システムが統合 Windows 認証と拡張保護をサポートしているかどうかを示す <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy.OSSupportsExtendedProtection%2A> プロパティ。  
   
--   拡張保護ポリシーを適用するタイミングを示す <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 値。  
+- 拡張保護ポリシーを適用するタイミングを示す <xref:System.Security.Authentication.ExtendedProtection.PolicyEnforcement> 値。  
   
--   展開シナリオを示す <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 値。 これは、拡張保護がチェックされる方法に影響します。  
+- 展開シナリオを示す <xref:System.Security.Authentication.ExtendedProtection.ProtectionScenario> 値。 これは、拡張保護がチェックされる方法に影響します。  
   
--   認証の目的のターゲットとしてクライアントから提供された SPN と照合するために使用されるカスタム SPN のリストを含む <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> (省略可能)。  
+- 認証の目的のターゲットとしてクライアントから提供された SPN と照合するために使用されるカスタム SPN のリストを含む <xref:System.Security.Authentication.ExtendedProtection.ServiceNameCollection> (省略可能)。  
   
--   検証に使用するカスタム チャネル バインディングを含む <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> (省略可能)。 このシナリオは、一般的なケースではありません。  
+- 検証に使用するカスタム チャネル バインディングを含む <xref:System.Security.Authentication.ExtendedProtection.ChannelBinding> (省略可能)。 このシナリオは、一般的なケースではありません。  
   
  <xref:System.Security.Authentication.ExtendedProtection.Configuration> 名前空間は、アプリケーションの拡張保護を使用した認証の構成のサポートを提供します。  
   
  既存の <xref:System.Net> 名前空間で拡張保護をサポートするため、多くの機能変更が行われました。 主な変更点は以下のとおりです。  
   
--   トランスポート コンテキストを表す <xref:System.Net> 名前空間に追加された新しい <xref:System.Net.TransportContext> クラス。  
+- トランスポート コンテキストを表す <xref:System.Net> 名前空間に追加された新しい <xref:System.Net.TransportContext> クラス。  
   
--   クライアント アプリケーションの拡張保護をサポートするために <xref:System.Net.TransportContext> の取得を許可する <xref:System.Net.HttpWebRequest> クラス内の新しい <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> および <xref:System.Net.HttpWebRequest.GetRequestStream%2A> オーバーロード メソッド。  
+- クライアント アプリケーションの拡張保護をサポートするために <xref:System.Net.TransportContext> の取得を許可する <xref:System.Net.HttpWebRequest> クラス内の新しい <xref:System.Net.HttpWebRequest.EndGetRequestStream%2A> および <xref:System.Net.HttpWebRequest.GetRequestStream%2A> オーバーロード メソッド。  
   
--   サーバー アプリケーションをサポートするための <xref:System.Net.HttpListener> クラスと <xref:System.Net.HttpListenerRequest> クラスへの追加。  
+- サーバー アプリケーションをサポートするための <xref:System.Net.HttpListener> クラスと <xref:System.Net.HttpListenerRequest> クラスへの追加。  
   
  既存の <xref:System.Net.Mail> 名前空間で SMTP クライアント アプリケーションの拡張保護をサポートするため、次の機能変更が行われました。  
   
--   SMTP クライアント アプリケーションに拡張保護を使用する際に、認証に使用する SPN を表す <xref:System.Net.Mail.SmtpClient> クラス内の <xref:System.Net.Mail.SmtpClient.TargetName%2A> プロパティ。  
+- SMTP クライアント アプリケーションに拡張保護を使用する際に、認証に使用する SPN を表す <xref:System.Net.Mail.SmtpClient> クラス内の <xref:System.Net.Mail.SmtpClient.TargetName%2A> プロパティ。  
   
  既存の <xref:System.Net.Security> 名前空間で拡張保護をサポートするため、多くの機能変更が行われました。 主な変更点は以下のとおりです。  
   
--   クライアント アプリケーションの拡張保護をサポートするために CBT を渡すことを許可する <xref:System.Net.Security.NegotiateStream> クラス内の新しい <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> および <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> オーバーロード メソッド。  
+- クライアント アプリケーションの拡張保護をサポートするために CBT を渡すことを許可する <xref:System.Net.Security.NegotiateStream> クラス内の新しい <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsClient%2A> および <xref:System.Net.Security.NegotiateStream.AuthenticateAsClient%2A> オーバーロード メソッド。  
   
--   サーバー アプリケーションの拡張保護をサポートするために <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> を渡すことを許可する <xref:System.Net.Security.NegotiateStream> クラス内の新しい <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> および <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> オーバーロード メソッド。  
+- サーバー アプリケーションの拡張保護をサポートするために <xref:System.Security.Authentication.ExtendedProtection.ExtendedProtectionPolicy> を渡すことを許可する <xref:System.Net.Security.NegotiateStream> クラス内の新しい <xref:System.Net.Security.NegotiateStream.BeginAuthenticateAsServer%2A> および <xref:System.Net.Security.NegotiateStream.AuthenticateAsServer%2A> オーバーロード メソッド。  
   
--   クライアントおよびサーバー アプリケーションの拡張保護をサポートするための <xref:System.Net.Security.SslStream> クラス内の新しい <xref:System.Net.Security.SslStream.TransportContext%2A> プロパティ。  
+- クライアントおよびサーバー アプリケーションの拡張保護をサポートするための <xref:System.Net.Security.SslStream> クラス内の新しい <xref:System.Net.Security.SslStream.TransportContext%2A> プロパティ。  
   
  <xref:System.Net.Security> 名前空間で SMTP クライアントに拡張保護の構成をサポートするため、<xref:System.Net.Configuration.SmtpNetworkElement> プロパティが追加されました。  
   

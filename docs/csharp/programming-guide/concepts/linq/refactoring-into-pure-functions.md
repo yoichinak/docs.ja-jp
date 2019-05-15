@@ -2,12 +2,12 @@
 title: 純粋関数へのリファクタリング (C#)
 ms.date: 07/20/2015
 ms.assetid: 2944a0d4-fd33-4e2e-badd-abb0f9be2fcc
-ms.openlocfilehash: 3e856c1e32d4b0dc16291e1b913e9a5cc19717c2
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3a498588e9ca1ab85602946b75b593804fa0953a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54497132"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64596890"
 ---
 # <a name="refactoring-into-pure-functions-c"></a>純粋関数へのリファクタリング (C#)
 
@@ -18,9 +18,9 @@ ms.locfileid: "54497132"
   
  このセクションで既に説明したように、純粋関数には 2 つの実用的な特性があります。  
   
--   副作用がありません。 この関数は、関数の外部にある変数やあらゆる型のデータを一切変更しません。  
+- 副作用がありません。 この関数は、関数の外部にある変数やあらゆる型のデータを一切変更しません。  
   
--   一貫性があります。 同じ入力データを与えられると、常に同じ出力値を返します。  
+- 一貫性があります。 同じ入力データを与えられると、常に同じ出力値を返します。  
   
  関数型プログラミングに移行するには、既存のコードをリファクターして不要な副作用や外部依存関係を排除するのが 1 つの方法です。 この方法で、既存のコードの純粋関数バージョンを作成できます。  
   

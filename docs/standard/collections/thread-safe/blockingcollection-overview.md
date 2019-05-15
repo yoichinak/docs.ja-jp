@@ -10,35 +10,35 @@ helpviewer_keywords:
 ms.assetid: 987ea3d7-0ad5-4238-8b64-331ce4eb3f0b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: abf6f193f97319db0cdff7e2a33846cdf011fbdb
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 07dbffff9f3d93a33fa458fb9c2f16e64aeaf977
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54673999"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664543"
 ---
 # <a name="blockingcollection-overview"></a>BlockingCollection の概要
 <xref:System.Collections.Concurrent.BlockingCollection%601> は、次の機能を提供するスレッド セーフなコレクション クラスです。  
   
--   Producer-Consumer パターンの実装。  
+- Producer-Consumer パターンの実装。  
   
--   複数のスレッドから同時に項目を追加し、取得する。  
+- 複数のスレッドから同時に項目を追加し、取得する。  
   
--   最大容量 (オプション)。  
+- 最大容量 (オプション)。  
   
--   コレクションが空またはいっぱいになったときにブロックする挿入操作と削除操作。  
+- コレクションが空またはいっぱいになったときにブロックする挿入操作と削除操作。  
   
--   ブロックせずに実行されるか、指定された時間が経過するまでブロックする、挿入および削除の "試行" 操作。  
+- ブロックせずに実行されるか、指定された時間が経過するまでブロックする、挿入および削除の "試行" 操作。  
   
--   <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> を実装する任意のコレクション型のカプセル化。  
+- <xref:System.Collections.Concurrent.IProducerConsumerCollection%601> を実装する任意のコレクション型のカプセル化。  
   
--   キャンセル トークンを使用したキャンセル。  
+- キャンセル トークンを使用したキャンセル。  
   
--   `foreach` を使用した 2 種類の列挙 (Visual Basic の場合は `For Each`)。  
+- `foreach` を使用した 2 種類の列挙 (Visual Basic の場合は `For Each`)。  
   
-    1.  読み取り専用の列挙。  
+    1. 読み取り専用の列挙。  
   
-    2.  列挙された項目を削除する列挙。  
+    2. 列挙された項目を削除する列挙。  
   
 ## <a name="bounding-and-blocking-support"></a>境界とブロッキングのサポート  
  <xref:System.Collections.Concurrent.BlockingCollection%601> はバインドとブロックに対応しています。 境界は、コレクションの最大容量を設定できることを意味します。 境界を使用すると、メモリ内のコレクションの最大サイズを制御し、producer スレッドが consumer スレッドよりも先に進行しすぎるのを防ぐことができます。これは、特定のシナリオで重要になります。  

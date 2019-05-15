@@ -5,23 +5,23 @@ ms.technology: dotnet-standard
 ms.assetid: f6ebb1a1-f2ca-49b9-92c9-0150940cf6e6
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fbc381395720b6b63a8cdfb44c55808d4608e77f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 93b414eea5849ed020b521fcd5e5d5f5d194c35f
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58831983"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589804"
 ---
 # <a name="xml-integration-with-relational-data-and-adonet"></a>XML とリレーショナル データおよび ADO.NET との統合
 **XmlDocument** の派生クラスである **XmlDataDocument** クラスには XML データが格納されます。 **XmlDataDocument** の利点は、リレーショナル データと階層データとを仲介できることです。 **DataSet** に連結できるのは **XmlDocument** であり、どちらのクラスも、それぞれが格納しているデータが変更されたときに、変更内容の同期をとることができます。 **DataSet** に連結した **XmlDocument** では XML をリレーショナル データと統合できるため、データ表現は XML でもリレーショナル形式でもかまいません。 両方の処理ができ、一方のデータ表現だけに制限されることもありません。  
   
  2 つの形式でデータが使用できる利点は次のとおりです。  
   
--   XML ドキュメントの構造部分はデータセットに対応付けることができ、効率的な格納、インデックス付け、および検索ができる。  
+- XML ドキュメントの構造部分はデータセットに対応付けることができ、効率的な格納、インデックス付け、および検索ができる。  
   
--   リレーション形式で格納された XML データに対して、カーソル モデルを使用して、効率的な変換、検証、および移動ができる。 **XmlDocument** モデルに XML が格納されている場合よりも、リレーショナル構造の方が効率的に処理できる場合があります。  
+- リレーション形式で格納された XML データに対して、カーソル モデルを使用して、効率的な変換、検証、および移動ができる。 **XmlDocument** モデルに XML が格納されている場合よりも、リレーショナル構造の方が効率的に処理できる場合があります。  
   
--   **DataSet** に XML の一部を格納できる。 **XPath** または **XslTransform** を使用して、目的の要素や属性だけを **DataSet** に格納できます。 この場合は、抽出された部分的なデータに対して変更を行い、その変更を **XmlDataDocument** 内のデータに反映させることができます。  
+- **DataSet** に XML の一部を格納できる。 **XPath** または **XslTransform** を使用して、目的の要素や属性だけを **DataSet** に格納できます。 この場合は、抽出された部分的なデータに対して変更を行い、その変更を **XmlDataDocument** 内のデータに反映させることができます。  
   
  SQL サーバーから **DataSet** に読み込まれたデータを変換することもできます。 また、.NET Framework のクラスの形式で管理されている WinForm および WebForm のコントロールを、XML 入力ストリームからデータを読み込んだ **DataSet** に連結することもできます。  
   

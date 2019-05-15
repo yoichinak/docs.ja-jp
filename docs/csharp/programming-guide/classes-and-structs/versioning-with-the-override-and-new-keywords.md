@@ -6,29 +6,29 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: 39aae39a761414947c14f0a78aedcdbf89ddfbda
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56975859"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583122"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードによるバージョン管理 (C# プログラミング ガイド)
 C# 言語は、異なるライブラリ内の[基底](../../../csharp/language-reference/keywords/base.md)クラスと派生クラス間でのバージョン管理を進化させると同時に、下位互換性も維持されるよう設計されています。 そのため、たとえば、派生クラスのメンバーと同じ名前を使用して基底[クラス](../../../csharp/language-reference/keywords/class.md)の新規メンバーが導入されても、C# では完全にサポートされ、予期しない動作は発生しません。 ただしこのことは、メソッドが派生メソッドをオーバーライドするためのものなのか、それとも同じ名前の派生メソッドを非表示にする新規メソッドなのかを、クラスで明示的に記述しなければならないということでもあります。  
   
  C# では、派生クラスに基底クラスと同じ名前のメソッドを含めることができます。  
   
--   基底クラスのメソッドは、[virtual](../../../csharp/language-reference/keywords/virtual.md) で定義する必要があります。  
+- 基底クラスのメソッドは、[virtual](../../../csharp/language-reference/keywords/virtual.md) で定義する必要があります。  
   
--   派生クラスのメソッドの前に [new](../../../csharp/language-reference/keywords/new.md) または [override](../../../csharp/language-reference/keywords/override.md) キーワードがない場合、コンパイラは警告を発し、メソッドは `new` キーワードが存在する場合と同様に動作します。  
+- 派生クラスのメソッドの前に [new](../../../csharp/language-reference/keywords/new.md) または [override](../../../csharp/language-reference/keywords/override.md) キーワードがない場合、コンパイラは警告を発し、メソッドは `new` キーワードが存在する場合と同様に動作します。  
   
--   派生クラスのメソッドの前に `new` キーワードがある場合、そのメソッドは基底クラスのメソッドに依存しないメソッドとして定義されます。  
+- 派生クラスのメソッドの前に `new` キーワードがある場合、そのメソッドは基底クラスのメソッドに依存しないメソッドとして定義されます。  
   
--   派生クラスのメソッドの前に `override` キーワードがある場合、派生クラスのオブジェクトは、基底クラスのメソッドの代わりにそのメソッドを呼び出します。  
+- 派生クラスのメソッドの前に `override` キーワードがある場合、派生クラスのオブジェクトは、基底クラスのメソッドの代わりにそのメソッドを呼び出します。  
   
--   基底クラスのメソッドは、`base` キーワードを使用して派生クラス内から呼び出すことができます。  
+- 基底クラスのメソッドは、`base` キーワードを使用して派生クラス内から呼び出すことができます。  
   
--   `override`、 `virtual`、および `new` キーワードは、プロパティ、インデクサー、およびイベントにも適用できます。  
+- `override`、 `virtual`、および `new` キーワードは、プロパティ、インデクサー、およびイベントにも適用できます。  
   
  既定では、C# のメソッドは仮想ではありません。 メソッドが仮想として宣言されている場合、そのメソッドを継承しているすべてのクラスは、独自のバージョンを実装できます。 仮想メソッドを仮想にするには、基底クラスのメソッド宣言で `virtual` 修飾子を使用します。 その後、派生クラスは `override` キーワードを使用して基底の仮想メソッドをオーバーライドするか、または `new` キーワードを使用して基底クラスの仮想メソッドを非表示にできます。 `override` と `new` のいずれのキーワードも指定されていない場合、コンパイラは警告を発し、派生クラスのメソッドは基底クラスのメソッドを非表示にします。  
   
