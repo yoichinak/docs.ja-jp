@@ -5,12 +5,12 @@ helpviewer_keywords:
 - text files [Visual Basic], creating
 - files [Visual Basic], creating
 ms.assetid: 0253bb6d-5519-4a50-b882-b93ef5cca0d9
-ms.openlocfilehash: a05e73a2096c82c9299e4483bbaf69e560fc2e45
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f24fdd6ce1fea7540c33e4a2fdfc06885825f76a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58839419"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628980"
 ---
 # <a name="how-to-create-a-file-in-visual-basic"></a>方法: Visual Basic でファイルを作成する
 この例では、<xref:System.IO.File> クラスで <xref:System.IO.File.Create%2A> メソッドを使用して、指定したパスに空のテキスト ファイルを作成します。  
@@ -26,17 +26,17 @@ ms.locfileid: "58839419"
   
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   パス名が不適切である場合。 たとえば、不正な文字が含まれている場合や、空白だけの場合などです (<xref:System.ArgumentException>)。  
+- パス名が不適切である場合。 たとえば、不正な文字が含まれている場合や、空白だけの場合などです (<xref:System.ArgumentException>)。  
   
--   パスが読み取り専用の場合 (<xref:System.IO.IOException>)。  
+- パスが読み取り専用の場合 (<xref:System.IO.IOException>)。  
   
--   パス名が `Nothing` の場合 (<xref:System.ArgumentNullException>)。  
+- パス名が `Nothing` の場合 (<xref:System.ArgumentNullException>)。  
   
--   パス名が長すぎる場合 (<xref:System.IO.PathTooLongException>)。  
+- パス名が長すぎる場合 (<xref:System.IO.PathTooLongException>)。  
   
--   パスが無効な場合 (<xref:System.IO.DirectoryNotFoundException>)。  
+- パスが無効な場合 (<xref:System.IO.DirectoryNotFoundException>)。  
   
--   パスがコロン ":" のみである場合 (<xref:System.NotSupportedException>)。  
+- パスがコロン ":" のみである場合 (<xref:System.NotSupportedException>)。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  部分信頼環境では、<xref:System.Security.SecurityException> がスローされる場合があります。  

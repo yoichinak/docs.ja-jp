@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c5ac9920-5b6e-4dc9-bf2d-1f6f8ad3b0bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cafb15f691daa8d0d0e6c1ebab3cb89f7c811612
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fadccdf35429babce6e101d336c9ea1de150b276
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59095101"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648607"
 ---
 # <a name="marshaling-different-types-of-arrays"></a>さまざまな型の配列のマーシャリング
 配列は、同じ型の 1 つ以上の要素を含むマネージド コード内の参照型です。 配列は参照型ですが、アンマネージ関数には In パラメーターとして渡されます。 この動作は、マネージド配列がマネージド オブジェクトに渡される方法 (In/Out パラメーターとして渡される) と一致しません。 詳細については、「 [コピーと固定](copying-and-pinning.md)」を参照してください。  
@@ -34,53 +34,53 @@ ms.locfileid: "59095101"
 ## <a name="example"></a>例  
  このサンプルは、以下の種類の配列差を渡す法を示します。  
   
--   値による整数の配列。  
+- 値による整数の配列。  
   
--   サイズを変更できる、参照による整数の配列。  
+- サイズを変更できる、参照による整数の配列。  
   
--   値による整数の多次元配列 (マトリックス)。  
+- 値による整数の多次元配列 (マトリックス)。  
   
--   値による文字列の配列。  
+- 値による文字列の配列。  
   
--   整数による構造体の配列。  
+- 整数による構造体の配列。  
   
--   文字列による構造体の配列。  
+- 文字列による構造体の配列。  
   
  配列が参照によって明示的にマーシャリングされない限り、既定の動作は、配列を In パラメーターとしてマーシャリングすることです。 この動作は、 <xref:System.Runtime.InteropServices.InAttribute> と <xref:System.Runtime.InteropServices.OutAttribute> 属性を明示的に適用することで変更できます。  
   
  Arrays のサンプルで使用するアンマネージ関数とその元の関数宣言を次に示します。  
   
--   PinvokeLib.dll からエクスポートされる**TestArrayOfInts** 。  
+- PinvokeLib.dll からエクスポートされる**TestArrayOfInts** 。  
   
     ```  
     int TestArrayOfInts(int* pArray, int pSize);  
     ```  
   
--   PinvokeLib.dll からエクスポートされる**TestRefArrayOfInts** 。  
+- PinvokeLib.dll からエクスポートされる**TestRefArrayOfInts** 。  
   
     ```  
     int TestRefArrayOfInts(int** ppArray, int* pSize);  
     ```  
   
--   PinvokeLib.dll からエクスポートされる**TestMatrixOfInts** 。  
+- PinvokeLib.dll からエクスポートされる**TestMatrixOfInts** 。  
   
     ```  
     int TestMatrixOfInts(int pMatrix[][COL_DIM], int row);  
     ```  
   
--   PinvokeLib.dll からエクスポートされる**TestArrayOfStrings** 。  
+- PinvokeLib.dll からエクスポートされる**TestArrayOfStrings** 。  
   
     ```  
     int TestArrayOfStrings(char** ppStrArray, int size);  
     ```  
   
--   PinvokeLib.dll からエクスポートされる**TestArrayOfStructs** 。  
+- PinvokeLib.dll からエクスポートされる**TestArrayOfStructs** 。  
   
     ```  
     int TestArrayOfStructs(MYPOINT* pPointArray, int size);  
     ```  
   
--   PinvokeLib.dll からエクスポートされる**TestArrayOfStructs2** 。  
+- PinvokeLib.dll からエクスポートされる**TestArrayOfStructs2** 。  
   
     ```  
     int TestArrayOfStructs2 (MYPERSON* pPersonArray, int size);  

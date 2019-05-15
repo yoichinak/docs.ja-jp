@@ -12,25 +12,25 @@ helpviewer_keywords:
 - Internet, proxy instances
 - Network Resources
 ms.assetid: cbf46f63-ce28-486d-b827-ec0f1a9d8319
-ms.openlocfilehash: 14e5a7f47c1c1f2cbaf0457be34019454ff041f4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d9bd2ee7dab36172cba68532e50cfcd14fd884db
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59230565"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649533"
 ---
 # <a name="accessing-the-internet-through-a-proxy"></a>プロキシを介したインターネットへのアクセス
 サイトでプロキシを使用してインターネットへのアクセスを提供する場合、アプリケーションが Web プロキシと通信できるようにプロキシ インスタンスを構成する必要があります。  
   
  ここでは、次のトピックについて説明します。  
   
--   [プロキシ構成](../../../docs/framework/network-programming/proxy-configuration.md)  
+- [プロキシ構成](../../../docs/framework/network-programming/proxy-configuration.md)  
   
--   [自動プロキシ検出](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
+- [自動プロキシ検出](../../../docs/framework/network-programming/automatic-proxy-detection.md)  
   
--   [方法: WebRequest でインターネットとの通信にプロキシを使用できるようにする](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
+- [方法: WebRequest でインターネットとの通信にプロキシを使用できるようにする](../../../docs/framework/network-programming/how-to-enable-a-webrequest-to-use-a-proxy-to-communicate-with-the-internet.md)  
   
--   [方法: グローバル プロキシの選択をオーバーライドする](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
+- [方法: グローバル プロキシの選択をオーバーライドする](../../../docs/framework/network-programming/how-to-override-a-global-proxy-selection.md)  
   
 ## <a name="see-also"></a>関連項目
 

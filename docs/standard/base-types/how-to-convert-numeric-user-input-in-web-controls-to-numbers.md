@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f27ddfb8-7479-4b79-8879-02a3bd8402d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0f732f5bf61ed65fe7e62d110494d874262e30fd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 29141cb43d914dd3781e9307b6a553361152a645
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296161"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634173"
 ---
 # <a name="how-to-convert-numeric-user-input-in-web-controls-to-numbers"></a>方法: Web コントロールでの数値のユーザー入力を数値に変換する
 Web ページは世界中のあらゆる場所で表示され、利用者はほぼ無限の形式で <xref:System.Web.UI.WebControls.TextBox> コントロールに数値データを入力できます。 結果として、Web ページの利用者の住んでいる地域 (ロケール) や文化 (カルチャ) を判断することが非常に重要となります。 ユーザー入力を解析するとき、ユーザーのロケールとカルチャによって定義される書式設定規則を適用できます。  
@@ -35,9 +35,9 @@ Web ページは世界中のあらゆる場所で表示され、利用者はほ�
   
 4. ユーザーの入力の変換後の形となる数値型の `TryParse` または `Parse` メソッドを呼び出します。 `provider` パラメーターを指定して `TryParse` または `Parse` メソッドのオーバー ロードを使用し、次のいずれかを渡します。  
   
-    -   手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクト。  
+    - 手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクト。  
   
-    -   手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクトの <xref:System.Globalization.CultureInfo.NumberFormat%2A> プロパティによって返された <xref:System.Globalization.NumberFormatInfo> オブジェクト。  
+    - 手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクトの <xref:System.Globalization.CultureInfo.NumberFormat%2A> プロパティによって返された <xref:System.Globalization.NumberFormatInfo> オブジェクト。  
   
 5. 変換に失敗する場合、<xref:System.Web.HttpRequest.UserLanguages%2A> プロパティから返された文字列の配列内のそれぞれの残りの要素に対して、手順 2 から 4 を繰り返します。  
   
@@ -60,11 +60,11 @@ Web ページは世界中のあらゆる場所で表示され、利用者はほ�
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  コードをコンパイルするには、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] 分離コード ページにそれをコピーします。すべての既存コードが置換されます。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web には、次のコントロールを含めてください。  
   
--   <xref:System.Web.UI.WebControls.Label> コントロール。これはコードで参照されません。 その <xref:System.Web.UI.WebControls.TextBox.Text%2A> プロパティを "Enter a Number:\(数字を入力:\)" に設定します。  
+- <xref:System.Web.UI.WebControls.Label> コントロール。これはコードで参照されません。 その <xref:System.Web.UI.WebControls.TextBox.Text%2A> プロパティを "Enter a Number:\(数字を入力:\)" に設定します。  
   
--   `NumericString` という名前の <xref:System.Web.UI.WebControls.TextBox> コントロール。  
+- `NumericString` という名前の <xref:System.Web.UI.WebControls.TextBox> コントロール。  
   
--   `OKButton` という名前の <xref:System.Web.UI.WebControls.Button> コントロール。 その <xref:System.Web.UI.WebControls.Button.Text%2A> プロパティを "OK" に設定します。  
+- `OKButton` という名前の <xref:System.Web.UI.WebControls.Button> コントロール。 その <xref:System.Web.UI.WebControls.Button.Text%2A> プロパティを "OK" に設定します。  
   
  名前を `NumericUserInput` から、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] ページの `Page` ディレクティブの `Inherits` 属性によって定義されるクラスの名前に変更します。 `NumericInput` オブジェクト参照の名前を、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] ページの `form` タグの `id` 属性によって定義される名前に変更します。  
   

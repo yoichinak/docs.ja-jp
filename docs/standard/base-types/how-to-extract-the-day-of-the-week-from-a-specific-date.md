@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c665cb590a090c546d50f780477c254344914a2f
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8012d2898e9722d1cfb93f5c9dcacce291fe6e78
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59327764"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633897"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>方法: 特定の日付から曜日を抽出する
 .NET Framework では、特定の日付が週の何日目であるかを容易に判別でき、また特定の日付のローカライズされた曜日名を表示できます。 特定の日付に対応する曜日を示す列挙値は、<xref:System.DateTime.DayOfWeek%2A> または <xref:System.DateTimeOffset.DayOfWeek%2A> プロパティから取得できます。 対照的に、曜日名の取得は、書式指定メソッド （日付と時刻の値の `ToString` メソッドや <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドなど） を呼び出して実行できる書式指定操作です。 このトピックでは、このような書式指定操作を実行する方法について説明します。  
@@ -53,12 +53,12 @@ ms.locfileid: "59327764"
   
 2. 次の手順で現在のカルチャまたは特定のカルチャの曜日の省略名を抽出できます。  
   
-    1.  現在のカルチャの曜日の省略名を抽出するには、日付と時刻の値の <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドまたは <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドを呼び出し、`format` パラメーターとして文字列 "ddd" を渡します。 次の例に、<xref:System.DateTime.ToString%28System.String%29> メソッドの呼び出しを示します。  
+    1. 現在のカルチャの曜日の省略名を抽出するには、日付と時刻の値の <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドまたは <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドを呼び出し、`format` パラメーターとして文字列 "ddd" を渡します。 次の例に、<xref:System.DateTime.ToString%28System.String%29> メソッドの呼び出しを示します。  
   
          [!code-csharp[Formatting.Howto.WeekdayName#1](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname1.cs#1)]
          [!code-vb[Formatting.Howto.WeekdayName#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname1.vb#1)]  
   
-    2.  特定のカルチャの曜日の省略名を抽出するには、日付と時刻の値の <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> インスタンス メソッドまたは <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> インスタンス メソッドを呼び出します。 `format` パラメーターとして文字列 "ddd" を渡します。 曜日名を取得するカルチャを表す <xref:System.Globalization.CultureInfo> または <xref:System.Globalization.DateTimeFormatInfo> オブジェクトのいずれかを`provider` パラメーターとして渡します。 次のコードは、fr-FR カルチャを表す <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> オブジェクトを使用した <xref:System.Globalization.CultureInfo> メソッドの呼び出しを示します。  
+    2. 特定のカルチャの曜日の省略名を抽出するには、日付と時刻の値の <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> インスタンス メソッドまたは <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> インスタンス メソッドを呼び出します。 `format` パラメーターとして文字列 "ddd" を渡します。 曜日名を取得するカルチャを表す <xref:System.Globalization.CultureInfo> または <xref:System.Globalization.DateTimeFormatInfo> オブジェクトのいずれかを`provider` パラメーターとして渡します。 次のコードは、fr-FR カルチャを表す <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> オブジェクトを使用した <xref:System.Globalization.CultureInfo> メソッドの呼び出しを示します。  
   
          [!code-csharp[Formatting.Howto.WeekdayName#2](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/abbrname2.cs#2)]
          [!code-vb[Formatting.Howto.WeekdayName#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/abbrname2.vb#2)]  
@@ -69,12 +69,12 @@ ms.locfileid: "59327764"
   
 2. 現在のカルチャまたは特定のカルチャでの曜日の正式な名前を抽出できます。  
   
-    1.  現在のカルチャの曜日名を抽出するには、日付と時刻の値の <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドまたは <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドを呼び出し、`format` パラメーターとして文字列 "dddd" を渡します。 次の例に、<xref:System.DateTime.ToString%28System.String%29> メソッドの呼び出しを示します。  
+    1. 現在のカルチャの曜日名を抽出するには、日付と時刻の値の <xref:System.DateTime.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドまたは <xref:System.DateTimeOffset.ToString%28System.String%29?displayProperty=nameWithType> インスタンス メソッドを呼び出し、`format` パラメーターとして文字列 "dddd" を渡します。 次の例に、<xref:System.DateTime.ToString%28System.String%29> メソッドの呼び出しを示します。  
   
          [!code-csharp[Formatting.Howto.WeekdayName#4](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname4.cs#4)]
          [!code-vb[Formatting.Howto.WeekdayName#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname4.vb#4)]  
   
-    2.  特定のカルチャの曜日名を抽出するには、日付と時刻の値の <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> インスタンス メソッドまたは <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> インスタンス メソッドを呼び出します。 `format` パラメーターとして文字列 "dddd" を渡します。 曜日名を取得するカルチャを表す <xref:System.Globalization.CultureInfo> または <xref:System.Globalization.DateTimeFormatInfo> オブジェクトのいずれかを`provider` パラメーターとして渡します。 次のコードは、es-ES カルチャを表す <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> オブジェクトを使用した <xref:System.Globalization.CultureInfo> メソッドの呼び出しを示します。  
+    2. 特定のカルチャの曜日名を抽出するには、日付と時刻の値の <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> インスタンス メソッドまたは <xref:System.DateTimeOffset.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> インスタンス メソッドを呼び出します。 `format` パラメーターとして文字列 "dddd" を渡します。 曜日名を取得するカルチャを表す <xref:System.Globalization.CultureInfo> または <xref:System.Globalization.DateTimeFormatInfo> オブジェクトのいずれかを`provider` パラメーターとして渡します。 次のコードは、es-ES カルチャを表す <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29> オブジェクトを使用した <xref:System.Globalization.CultureInfo> メソッドの呼び出しを示します。  
   
          [!code-csharp[Formatting.Howto.WeekdayName#5](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/fullname5.cs#5)]
          [!code-vb[Formatting.Howto.WeekdayName#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/fullname5.vb#5)]  
@@ -87,9 +87,9 @@ ms.locfileid: "59327764"
   
  それぞれの言語には、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の機能と重複する機能または補足する機能が存在していることがあります。 たとえば Visual Basic には次の 2 つの関数があります。  
   
--   `Weekday`: 特定の日付の曜日を示す番号を返します。 この関数では週の初日の序数値が 1 ですが、<xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> プロパティでは週の初日の序数値はゼロです。  
+- `Weekday`: 特定の日付の曜日を示す番号を返します。 この関数では週の初日の序数値が 1 ですが、<xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> プロパティでは週の初日の序数値はゼロです。  
   
--   `WeekdayName`: 現在のカルチャで、特定の曜日番号に対応する曜日名を返します。  
+- `WeekdayName`: 現在のカルチャで、特定の曜日番号に対応する曜日名を返します。  
   
  次の例は、Visual Basic の `Weekday` 関数と `WeekdayName` 関数の使い方を示します。  
   

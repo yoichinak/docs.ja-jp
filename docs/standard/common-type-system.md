@@ -4,12 +4,12 @@ description: 共通型システム (CTS) と共通言語仕様 (CLS) を使用�
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 3b1f5725-ac94-4f17-8e5f-244442438a4d
-ms.openlocfilehash: a6704b09a51a509cb7fbd786f9040454f78cc862
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: d162a736b8f7b56293fc75a445c2a80cce597768
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675369"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664518"
 ---
 # <a name="common-type-system--common-language-specification"></a>共通型システムと共通言語仕様
 
@@ -21,10 +21,10 @@ ms.locfileid: "57675369"
 
 これを透過的に行うには、すべてのサポートされる種類を記述するための共通の方法が存在している必要があります。 これは、共通型システム (CTS) の役割です。 CTS には、次のようないくつかの目的があります。
 
-*   多言語での実行のためのフレームワークを確立する。
-*   .NET 実装でさまざまな言語の実装をサポートするためのオブジェクト指向モデルを提供する。
-*   型を扱うときにすべての言語が従う必要がある規則のセットを定義する。
-*   アプリケーション開発に使用される基本的なプリミティブ データ型 (`Boolean`、`Byte`、`Char` など) を含んだライブラリを提供します。
+* 多言語での実行のためのフレームワークを確立する。
+* .NET 実装でさまざまな言語の実装をサポートするためのオブジェクト指向モデルを提供する。
+* 型を扱うときにすべての言語が従う必要がある規則のセットを定義する。
+* アプリケーション開発に使用される基本的なプリミティブ データ型 (`Boolean`、`Byte`、`Char` など) を含んだライブラリを提供します。
 
 CTS が定義する、参照型と値型という 2 つの主要な型をサポートする必要があります。 それらの名前が空の定義を示します。
 
@@ -34,11 +34,11 @@ CTS が定義する、参照型と値型という 2 つの主要な型をサポ�
 
 CTS では、いくつかの型のカテゴリが定義され、それぞれに固有のセマンティックスと使用方法があります。
 
-*   クラス
-*   構造体
-*   列挙体
-*   インターフェイス
-*   デリゲート
+* クラス
+* 構造体
+* 列挙体
+* インターフェイス
+* デリゲート
 
 CTS では、アクセス修飾子、有効な型のメンバー、継承とオーバーロードの動作など、型の他のすべてのプロパティも定義されます。 残念ながら、これらのプロパティについての詳しい説明は概要の記事の範囲外ですが、これらのトピックの詳細情報については、最後の「[その他のリソース](#more-resources)」のリンクを参照してください。
 
@@ -52,5 +52,5 @@ CMS のすべての機能の概要については、下の「[その他のリソ
 
 ## <a name="more-resources"></a>その他のリソース
 
-*   [共通型システム](./base-types/common-type-system.md)
-*   [共通言語仕様](language-independence-and-language-independent-components.md)
+* [共通型システム](./base-types/common-type-system.md)
+* [共通言語仕様](language-independence-and-language-independent-components.md)

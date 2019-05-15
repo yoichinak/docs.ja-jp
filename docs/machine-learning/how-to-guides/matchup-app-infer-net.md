@@ -1,21 +1,16 @@
 ---
 title: Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成する
 description: 確率論的プログラミングと Infer.NET を使用して、TrueSkill の簡易バージョンに基づいたゲーム対戦リスト アプリについて紹介します。
-ms.date: 03/05/2019
+ms.date: 05/06/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: 06538ec9de26f5aeabe474fbcae69f0a313c8d32
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 85cb3753ae19e7ca64002eb7c26b44b6f7d41e4f
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679135"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211435"
 ---
 # <a name="create-a-game-match-up-list-app-with-infernet-and-probabilistic-programming"></a>Infer.NET と確率論的プログラミングでゲーム対戦リスト アプリを作成する
-
-> [!NOTE]
-> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
-
-ここで説明する方法と関連サンプルでは、現時点では **ML.NET バージョン 0.10** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 このハウツー ガイドでは、Infer.NET を使用した確率論的プログラミングについて説明します。 確率論的プログラミングは、カスタム モデルがコンピューター プログラムとして表現される機械学習アプローチです。 ドメインの知識をモデルに組み込み、機械学習システムから解釈可能にすることができます。 また、新しいデータを取得したときの学習プロセスであるオンライン推論もサポートしています。 Infer.NET は、Microsoft で Azure、Xbox、Bing のさまざまな製品で使用されています。
 
@@ -56,7 +51,7 @@ dotnet add package Microsoft.ML.Probabilistic.Compiler
 
 *ゲーム結果のサンプル データ*
 
-ゲーム |勝者 | 敗者
+Game |勝者 | 敗者
 ---------|----------|---------
  1 | プレーヤー 0 | プレーヤー 1
  2 | プレーヤー 0 | プレーヤー 3

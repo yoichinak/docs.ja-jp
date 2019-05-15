@@ -9,33 +9,33 @@ helpviewer_keywords:
 ms.assetid: b980eb4c-71d5-4860-864a-6dfe3692430a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cb44fad991c8184686fcda90878bae2ec53260c5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 55b973e9eb795ef2f5bd69b4ec67c1c194f043a9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54617916"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644763"
 ---
 # <a name="synchronizing-data-for-multithreading"></a>マルチスレッド処理のためのデータの同期
 複数のスレッドが同じオブジェクトのプロパティとメソッドを呼び出す場合は、これらの呼び出しを同期することが重要です。 同期しないと、1 つのスレッドが行っていることを別のスレッドが中断し、オブジェクトが無効な状態になってしまう可能性があります。 メンバーがこのように中断されないように保護されているクラスを、スレッドセーフと呼びます。  
   
  共通言語基盤には、インスタンスや静的メンバーへのアクセスを同期するためのいくつかの方法が備わっています。  
   
--   同期されたコード領域。 <xref:System.Threading.Monitor> クラス、またはこのクラスに対するコンパイラ サポートを使用して、パフォーマンスを向上させながら、同期を必要とするコード ブロックだけを同期できます。  
+- 同期されたコード領域。 <xref:System.Threading.Monitor> クラス、またはこのクラスに対するコンパイラ サポートを使用して、パフォーマンスを向上させながら、同期を必要とするコード ブロックだけを同期できます。  
   
--   手動での同期。 .NET Framework クラス ライブラリによって提供されている同期オブジェクトを使用できます。 「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。これには、<xref:System.Threading.Monitor> クラスの説明が含まれています。  
+- 手動での同期。 .NET Framework クラス ライブラリによって提供されている同期オブジェクトを使用できます。 「[同期プリミティブの概要](../../../docs/standard/threading/overview-of-synchronization-primitives.md)」を参照してください。これには、<xref:System.Threading.Monitor> クラスの説明が含まれています。  
   
--   同期されたコンテキスト。 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> を使用することで、<xref:System.ContextBoundObject> オブジェクトの単純な自動同期を有効にすることができます。  
+- 同期されたコンテキスト。 <xref:System.Runtime.Remoting.Contexts.SynchronizationAttribute> を使用することで、<xref:System.ContextBoundObject> オブジェクトの単純な自動同期を有効にすることができます。  
   
--   <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間のコレクション クラス。 これらのクラスには、同期された追加操作および削除操作が組み込まれています。 詳しくは、「[スレッド セーフなコレクション](../../../docs/standard/collections/thread-safe/index.md)」を参照してください。  
+- <xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間のコレクション クラス。 これらのクラスには、同期された追加操作および削除操作が組み込まれています。 詳しくは、「[スレッド セーフなコレクション](../../../docs/standard/collections/thread-safe/index.md)」を参照してください。  
   
  共通言語ランタイムにはスレッド モデルが用意されていて、要件に応じたさまざまな方法で同期することができる多数のカテゴリにクラスを分類できます。 次の表に、各同期カテゴリで提供されるフィールドおよびメソッドに対する同期サポートを示します。  
   
 |カテゴリ|グローバル フィールド|静的フィールド|静的メソッド|インスタンス フィールド|インスタンス メソッド|特定のコード ブロック|  
 |--------------|-------------------|-------------------|--------------------|---------------------|----------------------|--------------------------|  
-|同期なし|×|×|×|×|×|×|  
-|同期されたコンテキスト|×|×|×|[はい]|[はい]|×|  
-|同期されたコード領域|×|×|マークされている場合にのみ|×|マークされている場合にのみ|マークされている場合にのみ|  
+|同期なし|いいえ|×|×|×|×|いいえ|  
+|同期されたコンテキスト|いいえ|×|×|[はい]|はい|いいえ|  
+|同期されたコード領域|いいえ|いいえ|マークされている場合にのみ|いいえ|マークされている場合にのみ|マークされている場合にのみ|  
 |手動での同期|手動|手動|手動|手動|手動|手動|  
   
 ## <a name="no-synchronization"></a>同期なし  

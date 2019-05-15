@@ -18,12 +18,12 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: da6f21ba452c5c0413881759879cca371507a290
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334290"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628922"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
@@ -34,19 +34,19 @@ ms.locfileid: "59334290"
   
  このチュートリアルでは、以下のタスクを行います。  
   
--   コンポーネントの作成  
+- コンポーネントの作成  
   
--   パブリックの非同期イベントとデリゲートの定義  
+- パブリックの非同期イベントとデリゲートの定義  
   
--   プライベート デリゲートの定義  
+- プライベート デリゲートの定義  
   
--   パブリック イベントの実装  
+- パブリック イベントの実装  
   
--   完了メソッドの実装  
+- 完了メソッドの実装  
   
--   ワーカー メソッドの実装  
+- ワーカー メソッドの実装  
   
--   開始メソッドとキャンセル メソッドの実装  
+- 開始メソッドとキャンセル メソッドの実装  
   
  このトピックのコードを単一のリストとしてコピーするには、「[方法:イベントベースの非同期パターンのクライアントを実装する](../../../docs/standard/asynchronous-programming-patterns/how-to-implement-a-client-of-the-event-based-asynchronous-pattern.md)」をご覧ください。  
   
@@ -55,7 +55,7 @@ ms.locfileid: "59334290"
   
 #### <a name="to-create-the-component"></a>コンポーネントを作成するには  
   
--   <xref:System.ComponentModel.Component> を継承する `PrimeNumberCalculator` というクラスを作成します。  
+- <xref:System.ComponentModel.Component> を継承する `PrimeNumberCalculator` というクラスを作成します。  
   
 ## <a name="defining-public-asynchronous-events-and-delegates"></a>パブリックの非同期イベントとデリゲートの定義  
  コンポーネントは、イベントを使ってクライアントと通信します。 _MethodName_**Completed** イベントは非同期タスクの完了をクライアントに通知し、_MethodName_**ProgressChanged** イベントは非同期タスクの進行状況をクライアントに通知します。  
@@ -87,7 +87,7 @@ ms.locfileid: "59334290"
   
 #### <a name="to-test-your-component"></a>コンポーネントをテストするには  
   
--   コンポーネントをコンパイルします。  
+- コンポーネントをコンパイルします。  
   
      コンパイラの警告が 2 つ表示されます。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "59334290"
   
 #### <a name="to-complete-an-asynchronous-operation"></a>非同期操作を完了するには:  
   
--   完了メソッドを実装します。 このメソッドは 6 つのパラメーターを受け取り、それを使って、クライアントの `CalculatePrimeCompletedEventHandler` によってクライアントに返される `CalculatePrimeCompletedEventArgs` を設定します。 また、クライアントのタスク ID トークンを内部コレクションから削除し、<xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> を呼び出して非同期操作の有効期間を終了します。 <xref:System.ComponentModel.AsyncOperation> は、アプリケーション モデルに適したスレッドまたはコンテキストへの呼び出しをマーシャリングします。  
+- 完了メソッドを実装します。 このメソッドは 6 つのパラメーターを受け取り、それを使って、クライアントの `CalculatePrimeCompletedEventHandler` によってクライアントに返される `CalculatePrimeCompletedEventArgs` を設定します。 また、クライアントのタスク ID トークンを内部コレクションから削除し、<xref:System.ComponentModel.AsyncOperation.PostOperationCompleted%2A> を呼び出して非同期操作の有効期間を終了します。 <xref:System.ComponentModel.AsyncOperation> は、アプリケーション モデルに適したスレッドまたはコンテキストへの呼び出しをマーシャリングします。  
   
      [!code-csharp[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/CS/primenumbercalculatormain.cs#26)]
      [!code-vb[System.ComponentModel.AsyncOperationManager#26](../../../samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.AsyncOperationManager/VB/primenumbercalculatormain.vb#26)]  
@@ -158,7 +158,7 @@ ms.locfileid: "59334290"
   
 #### <a name="to-test-your-component"></a>コンポーネントをテストするには  
   
--   コンポーネントをコンパイルします。  
+- コンポーネントをコンパイルします。  
   
      コンパイラの警告が 1 つ表示されます。  
   
@@ -212,7 +212,7 @@ ms.locfileid: "59334290"
   
 #### <a name="to-test-your-component"></a>コンポーネントをテストするには  
   
--   コンポーネントをコンパイルします。  
+- コンポーネントをコンパイルします。  
   
      残っているのは、非同期操作を開始およびキャンセルするメソッドである `CalculatePrimeAsync` と `CancelAsync` です。  
   
@@ -238,7 +238,7 @@ ms.locfileid: "59334290"
   
 #### <a name="to-test-your-component"></a>コンポーネントをテストするには  
   
--   コンポーネントをコンパイルします。  
+- コンポーネントをコンパイルします。  
   
  `PrimeNumberCalculator` コンポーネントが完全して使用できるようになります。  
   

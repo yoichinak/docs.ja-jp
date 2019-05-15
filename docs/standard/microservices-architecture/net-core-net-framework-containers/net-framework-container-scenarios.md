@@ -4,12 +4,12 @@ description: '.NET マイクロサービス: コンテナー化された .NET �
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 4c1149c02c32c357c4817af539eb0cf529266181
-ms.sourcegitcommit: a532e8314c3a4b5b039656567fedff9787a31957
+ms.openlocfilehash: 012eecbef669ada64392c43b92e8053873956210
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/02/2019
-ms.locfileid: "57251015"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650703"
 ---
 # <a name="when-to-choose-net-framework-for-docker-containers"></a>Docker コンテナー用 .NET Framework を選択するタイミング
 
@@ -35,11 +35,11 @@ ms.locfileid: "57251015"
 
 .NET Core 2.x で利用できないテクノロジのほとんどを次に示します。
 
--   ASP.NET Web フォーム。 このテクノロジは .NET Framework のみで利用できます。 現時点では、ASP.NET Web フォームを .NET Core で使用できるようにする予定はありません。
+- ASP.NET Web フォーム。 このテクノロジは .NET Framework のみで利用できます。 現時点では、ASP.NET Web フォームを .NET Core で使用できるようにする予定はありません。
 
--   WCF サービス。 .NET Core から WCF サービスを使用する [WCF クライアント ライブラリ](https://github.com/dotnet/wcf)が利用可能な場合でも、2017 年半ばの時点では、WCF サーバーの実装は .NET Framework でのみ可能です。 このシナリオは、.NET Core の将来のリリースで検討対象となる可能性があります。また、[Windows 互換機能パック](../../../core/porting/windows-compat-pack.md)への組み込みが検討されている API もあります。
+- WCF サービス。 .NET Core から WCF サービスを使用する [WCF クライアント ライブラリ](https://github.com/dotnet/wcf)が利用可能な場合でも、2017 年半ばの時点では、WCF サーバーの実装は .NET Framework でのみ可能です。 このシナリオは、.NET Core の将来のリリースで検討対象となる可能性があります。また、[Windows 互換機能パック](../../../core/porting/windows-compat-pack.md)への組み込みが検討されている API もあります。
 
--   ワークフロー関連サービス。 Windows Workflow Foundation (WF)、ワークフロー サービス (1 つのサービスに WCF と WF) および WCF Data Services (旧称: ADO.NET Data Services) は、NET Framework でのみ使用できます。 現在、この機能を .NET Core に含める計画はありません。
+- ワークフロー関連サービス。 Windows Workflow Foundation (WF)、ワークフロー サービス (1 つのサービスに WCF と WF) および WCF Data Services (旧称: ADO.NET Data Services) は、NET Framework でのみ使用できます。 現在、この機能を .NET Core に含める計画はありません。
 
 公式の [.NET Core ロードマップ](https://github.com/aspnet/Home/wiki/Roadmap)に記載されているテクノロジに加え、他の機能が .NET Core に移植される可能性があります。 完全な一覧については、CoreFX GitHub サイトで [port-to-core](https://github.com/dotnet/corefx/issues?q=is%3Aopen+is%3Aissue+label%3Aport-to-core) のタグが付いた項目をご覧ください。 この一覧は Microsoft がこれらのコンポーネントを .NET Core に提供することを約束するものではなく、単にコミュニティの要望に応じた項目であることに注意してください。 前述のコンポーネントが気になる場合には、GitHub でのディスカッションに参加して意見を述べることを検討してください。 また、何か足りないと感じた場合は、[CoreFX リポジトリで新しい案件を作成](https://github.com/dotnet/corefx/issues/new)してください。
 
@@ -53,16 +53,16 @@ Microsoft やサードパーティ製のプラットフォームの中には、.
 
 ### <a name="additional-resources"></a>その他の技術情報
 
--   **.NET Core のガイド**  
+- **.NET Core のガイド**  
     [https://docs.microsoft.com/dotnet/core/index](../../../core/index.md)
 
--   **.NET Framework から .NET Core への移植**  
+- **.NET Framework から .NET Core への移植**  
     [https://docs.microsoft.com/dotnet/core/porting/index](../../../core/porting/index.md)
 
--   **Docker 上の .NET Framework のガイド**  
+- **Docker 上の .NET Framework のガイド**  
     [https://docs.microsoft.com/dotnet/framework/docker/](../../../framework/docker/index.md)
 
--   **.NET コンポーネントの概要**  
+- **.NET コンポーネントの概要**  
     [https://docs.microsoft.com/dotnet/standard/components](../../components.md)
 
 >[!div class="step-by-step"]

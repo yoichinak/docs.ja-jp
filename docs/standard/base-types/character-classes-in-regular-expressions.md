@@ -15,37 +15,37 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 079cb3e969ee2c6d4e0163106769765cd96e96b7
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54622950"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634701"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
 <a name="Top"></a> 文字クラスは、いずれかが入力文字列に含まれると一致と見なされる文字のセットを定義します。 .NET の正規表現言語では、次の文字クラスがサポートされます。  
   
--   文字グループの肯定。 入力文字列内の文字が指定した文字のセットのいずれかと一致する必要があります。 詳細については、「[文字グループの肯定](#PositiveGroup)」を参照してください。  
+- 文字グループの肯定。 入力文字列内の文字が指定した文字のセットのいずれかと一致する必要があります。 詳細については、「[文字グループの肯定](#PositiveGroup)」を参照してください。  
   
--   文字グループの否定。 入力文字列内の文字が指定した文字のセットのいずれかと一致しない必要があります。 詳細については、「[文字グループの否定](#NegativeGroup)」を参照してください。  
+- 文字グループの否定。 入力文字列内の文字が指定した文字のセットのいずれかと一致しない必要があります。 詳細については、「[文字グループの否定](#NegativeGroup)」を参照してください。  
   
--   任意の文字。 正規表現の `.` (ドットまたはピリオド) 文字は、`\n` を除く任意の文字と一致するワイルドカード文字です。 詳細については、「[任意の文字](#AnyCharacter)」を参照してください。  
+- 任意の文字。 正規表現の `.` (ドットまたはピリオド) 文字は、`\n` を除く任意の文字と一致するワイルドカード文字です。 詳細については、「[任意の文字](#AnyCharacter)」を参照してください。  
   
--   Unicode 一般カテゴリまたは名前付きブロック。 入力文字列内の文字が一致と見なされるには、その文字が特定の Unicode カテゴリのメンバーであるか、または Unicode 文字の連続した範囲内に含まれる必要があります。 詳細については、「[Unicode カテゴリまたは Unicode ブロック](#CategoryOrBlock)」を参照してください。  
+- Unicode 一般カテゴリまたは名前付きブロック。 入力文字列内の文字が一致と見なされるには、その文字が特定の Unicode カテゴリのメンバーであるか、または Unicode 文字の連続した範囲内に含まれる必要があります。 詳細については、「[Unicode カテゴリまたは Unicode ブロック](#CategoryOrBlock)」を参照してください。  
   
--   Unicode 一般カテゴリまたは名前付きブロックの否定。 入力文字列内の文字が一致と見なされるには、その文字が特定の Unicode カテゴリのメンバーでないか、または Unicode 文字の連続した範囲内に含まれない必要があります。 詳細については、「[Unicode カテゴリまたは Unicode ブロックの否定](#NegativeCategoryOrBlock)」を参照してください。  
+- Unicode 一般カテゴリまたは名前付きブロックの否定。 入力文字列内の文字が一致と見なされるには、その文字が特定の Unicode カテゴリのメンバーでないか、または Unicode 文字の連続した範囲内に含まれない必要があります。 詳細については、「[Unicode カテゴリまたは Unicode ブロックの否定](#NegativeCategoryOrBlock)」を参照してください。  
   
--   単語に使用される文字。 入力文字列内の文字が、単語内の文字に適した Unicode カテゴリのいずれかに属することができます。 詳細については、「[単語に使用される文字](#WordCharacter)」を参照してください。  
+- 単語に使用される文字。 入力文字列内の文字が、単語内の文字に適した Unicode カテゴリのいずれかに属することができます。 詳細については、「[単語に使用される文字](#WordCharacter)」を参照してください。  
   
--   単語に使用されない文字。 入力文字列内の文字が、単語に使用される文字ではない Unicode カテゴリのいずれかに属することができます。 詳細については、「[単語に使用されない文字](#NonWordCharacter)」を参照してください。  
+- 単語に使用されない文字。 入力文字列内の文字が、単語に使用される文字ではない Unicode カテゴリのいずれかに属することができます。 詳細については、「[単語に使用されない文字](#NonWordCharacter)」を参照してください。  
   
--   空白文字。 入力文字列内の文字が、Unicode 区切り記号および各種制御文字のいずれかです。 詳細については、「[空白文字](#WhitespaceCharacter)」を参照してください。  
+- 空白文字。 入力文字列内の文字が、Unicode 区切り記号および各種制御文字のいずれかです。 詳細については、「[空白文字](#WhitespaceCharacter)」を参照してください。  
   
--   空白以外の文字。 入力文字列内の文字が、空白文字以外の文字のいずれかです。 詳細については、「[空白以外の文字](#NonWhitespaceCharacter)」を参照してください。  
+- 空白以外の文字。 入力文字列内の文字が、空白文字以外の文字のいずれかです。 詳細については、「[空白以外の文字](#NonWhitespaceCharacter)」を参照してください。  
   
--   10 進数。 入力文字列内の文字が、Unicode 10 進数に分類される各種文字のいずれかです。 詳細については、「[10 進数字](#DigitCharacter)」を参照してください。  
+- 10 進数。 入力文字列内の文字が、Unicode 10 進数に分類される各種文字のいずれかです。 詳細については、「[10 進数字](#DigitCharacter)」を参照してください。  
   
--   10 進数字以外の文字。 入力文字列内の文字が、Unicode 10 進数以外の文字のいずれかです。 詳細については、「[10 進数字](#NonDigitCharacter)」を参照してください。  
+- 10 進数字以外の文字。 入力文字列内の文字が、Unicode 10 進数以外の文字のいずれかです。 詳細については、「[10 進数字](#NonDigitCharacter)」を参照してください。  
   
  .NET は、文字クラスの減算式をサポートしています。これにより、ある文字クラスから別の文字クラスを除外した結果を文字のセットとして定義できます。 詳細については、「[文字クラス減算](#CharacterClassSubtraction)」を参照してください。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "54622950"
 ## <a name="any-character-"></a>任意の文字: .  
  ピリオド文字 (.) は、`\n` (改行文字、\u000A) を除く任意の文字と一致しますが、次の 2 つの制限があります。  
   
--   正規表現パターンが <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションで修飾されている場合、または `.` 文字クラスを含むパターンの一部が `s` オプションで修飾されている場合は、`.` は任意の文字と一致します。 詳細については、「 [正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」を参照してください。  
+- 正規表現パターンが <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションで修飾されている場合、または `.` 文字クラスを含むパターンの一部が `s` オプションで修飾されている場合は、`.` は任意の文字と一致します。 詳細については、「 [正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」を参照してください。  
   
      `.` 文字クラスの既定の動作と <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションが指定されている場合の動作の違いの例を次に示します。 正規表現 `^.+` は文字列の先頭から開始し、すべての文字と一致します。 既定では、照合は 1 行目の末尾で終了します。正規表現パターンは復帰文字 `\r` (\u000D) と一致しますが、`\n` とは一致しません。 <xref:System.Text.RegularExpressions.RegexOptions.Singleline?displayProperty=nameWithType> オプションは入力文字列全体を単一行として解釈するので、`\n` を含む入力文字列内のすべての文字と一致します。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "54622950"
 > [!NOTE]
 >  `.` 文字クラスは `\n` を除く任意の文字と一致するので、このクラスも `\r` (復帰文字、\u000D) と一致します。  
   
--   文字グループの肯定または文字グループの否定に含まれているピリオドは、文字クラスではなくリテラルのピリオド文字として扱われます。 詳細については、このトピックで前述した「[文字グループの肯定](#PositiveGroup)」および「[文字グループの否定](#NegativeGroup)」を参照してください。 ピリオド文字 (`.`) を文字クラスとしても文字グループの肯定のメンバーとしても含む正規表現を定義する例を次に示します。 正規表現 `\b.*[.?!;:](\s|\z)` はワード境界から開始し、ピリオドを含む 5 つの句読点のいずれかが検出されるまで任意の文字と一致し、空白文字または文字列の末尾と一致します。  
+- 文字グループの肯定または文字グループの否定に含まれているピリオドは、文字クラスではなくリテラルのピリオド文字として扱われます。 詳細については、このトピックで前述した「[文字グループの肯定](#PositiveGroup)」および「[文字グループの否定](#NegativeGroup)」を参照してください。 ピリオド文字 (`.`) を文字クラスとしても文字グループの肯定のメンバーとしても含む正規表現を定義する例を次に示します。 正規表現 `\b.*[.?!;:](\s|\z)` はワード境界から開始し、ピリオドを含む 5 つの句読点のいずれかが検出されるまで任意の文字と一致し、空白文字または文字列の末尾と一致します。  
   
      [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/any1.cs#4)]
      [!code-vb[Conceptual.RegEx.Language.CharacterClasses#4](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/any1.vb#4)]  

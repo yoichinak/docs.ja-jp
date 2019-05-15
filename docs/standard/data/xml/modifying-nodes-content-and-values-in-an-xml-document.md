@@ -5,25 +5,25 @@ ms.technology: dotnet-standard
 ms.assetid: 761773e0-db72-4986-b9f5-a522213d8397
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ee45d983483d907b2a1e8b9e5ee12841e5c89c91
-ms.sourcegitcommit: c7f3e2e9d6ead6cc3acd0d66b10a251d0c66e59d
+ms.openlocfilehash: 976c34d72f9fcc89193658e50727a0ad365f2dd8
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/08/2018
-ms.locfileid: "44208583"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647891"
 ---
 # <a name="modifying-nodes-content-and-values-in-an-xml-document"></a>XML ドキュメントのノード、コンテンツ、値の変更
 ドキュメントのノードおよびコンテンツを変更するには、さまざまな方法があります。 次の操作を行うことができます。  
   
--   <xref:System.Xml.XmlNode.Value%2A> プロパティを使用してノードの値を変更する。  
+- <xref:System.Xml.XmlNode.Value%2A> プロパティを使用してノードの値を変更する。  
   
--   ノードを新しいノードに置き換えることにより、ノード セット全体を変更します。 これは <xref:System.Xml.XmlNode.InnerXml%2A> プロパティを使用して実行できます。  
+- ノードを新しいノードに置き換えることにより、ノード セット全体を変更します。 これは <xref:System.Xml.XmlNode.InnerXml%2A> プロパティを使用して実行できます。  
   
--   <xref:System.Xml.XmlNode.RemoveChild%2A> メソッドを使用して既存のノードを新しいノードに置き換える。  
+- <xref:System.Xml.XmlNode.RemoveChild%2A> メソッドを使用して既存のノードを新しいノードに置き換える。  
   
--   <xref:System.Xml.XmlCharacterData>、<xref:System.Xml.XmlCharacterData.AppendData%2A>、または <xref:System.Xml.XmlCharacterData.InsertData%2A> メソッドを使用して <xref:System.Xml.XmlCharacterData.ReplaceData%2A> クラスから継承した追加の文字をノードに追加する。  
+- <xref:System.Xml.XmlCharacterData>、<xref:System.Xml.XmlCharacterData.AppendData%2A>、または <xref:System.Xml.XmlCharacterData.InsertData%2A> メソッドを使用して <xref:System.Xml.XmlCharacterData.ReplaceData%2A> クラスから継承した追加の文字をノードに追加する。  
   
--   <xref:System.Xml.XmlCharacterData.DeleteData%2A> から継承したノード型に対し、<xref:System.Xml.XmlCharacterData> メソッドを使用することにより、文字範囲を削除してコンテンツを変更する。  
+- <xref:System.Xml.XmlCharacterData.DeleteData%2A> から継承したノード型に対し、<xref:System.Xml.XmlCharacterData> メソッドを使用することにより、文字範囲を削除してコンテンツを変更する。  
   
  ノードの値を簡単に変更するには、`node.Value = "new value";` を使用します。 この 1 行のコードを実行できるノード型と、そのノード型で変更されるデータを次の表に示します。  
   

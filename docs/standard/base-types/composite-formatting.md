@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 87b7d528-73f6-43c6-b71a-f23043039a49
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 93abf6e91c2e13173184faee281de52eb83e17f5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d0574c7e0910a658f1dc80d8394f55b472c31a3
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59314010"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634567"
 ---
 # <a name="composite-formatting"></a>複合書式指定
 
@@ -126,11 +126,11 @@ ms.locfileid: "59314010"
   
 3. 値が <xref:System.IFormattable> インターフェイスを実装している場合は、インターフェイスの <xref:System.IFormattable.ToString%28System.String%2CSystem.IFormatProvider%29> メソッドが呼び出されます。 メソッドは、*formatString* 値 (書式指定項目内に値がある場合) または `null` (ない場合) を受け取ります。 <xref:System.IFormatProvider> 引数は、次のように判断されます。  
   
-    -   数値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.NumberFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.NumberFormatInfo> オブジェクトが使用されます。  
+    - 数値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.NumberFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.NumberFormatInfo> オブジェクトが使用されます。  
   
-    -   日付と時刻の値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.DateTimeFormatInfo> オブジェクトが使用されます。  
+    - 日付と時刻の値の場合、null 以外の <xref:System.IFormatProvider> 引数を持つ複合書式指定メソッドが呼び出されると、ランタイムは <xref:System.IFormatProvider.GetFormat%2A?displayProperty=nameWithType> メソッドから <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを要求します。 オブジェクトを 1 つも取得できないか、引数の値が `null` であるか、または複合書式指定メソッドに <xref:System.IFormatProvider> パラメーターがない場合は、現在のスレッド カルチャの <xref:System.Globalization.DateTimeFormatInfo> オブジェクトが使用されます。  
   
-    -   他の型のオブジェクトの場合、<xref:System.IFormatProvider> 引数を使用して複合書式のメソッドを呼び出すと、その値は <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 実装に直接渡されます。 それ以外の場合は、`null` が <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 実装に渡されます。  
+    - 他の型のオブジェクトの場合、<xref:System.IFormatProvider> 引数を使用して複合書式のメソッドを呼び出すと、その値は <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 実装に直接渡されます。 それ以外の場合は、`null` が <xref:System.IFormattable.ToString%2A?displayProperty=nameWithType> 実装に渡されます。  
   
 4. `ToString` をオーバーライドするか、基底クラスの動作を継承する、型のパラメーターなしの <xref:System.Object.ToString?displayProperty=nameWithType> メソッドが呼び出されます。 この場合、書式指定項目の *formatString* コンポーネントで指定されている書式指定文字列は、存在していても無視されます。  
   

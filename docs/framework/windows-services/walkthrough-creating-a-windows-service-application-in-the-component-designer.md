@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows service applications, creating
 ms.assetid: e24d8a3d-edc6-485c-b6e0-5672d91fb607
 author: ghogen
-ms.openlocfilehash: 35ef113acffbebdcd4cb585970e575f17959f75b
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 8d30b7b98648e36a3008ac015f9560620f77b363
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59518033"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751822"
 ---
 # <a name="tutorial-create-a-windows-service-app"></a>チュートリアル: Windows サービス アプリを作成する
 
@@ -32,13 +32,13 @@ ms.locfileid: "59518033"
 
    > [!NOTE]
    > **[Windows サービス]** テンプレートが表示されない場合は、**.NET デスクトップ開発**ワークロードのインストールが必要である可能性があります。
-   >  
+   >
    > **[新しいプロジェクト]** ダイアログの左側にある **[Visual Studio インストーラーを開く]** を選択します。 **[.NET デスクトップ開発]** ワークロードを選択し、**[変更]** を選択します。
 
 3. **[名前]** に「*MyNewService*」と入力し、**[OK]** を選択します。
 
    **[デザイン]** タブが表示されます (**[Service1.cs [デザイン]]** または **[Service1.vb [デザイン]]**)。
-   
+
    プロジェクト テンプレートには、<xref:System.ServiceProcess.ServiceBase?displayProperty=nameWithType> から継承される `Service1` という名前のコンポーネント クラスが含まれます。 それは、サービスを開始するコードなどの多数の基本的なサービス コードを含んでいます。
 
 ## <a name="rename-the-service"></a>サービスの名前を変更する
@@ -53,11 +53,11 @@ ms.locfileid: "59518033"
 
     ![名前の変更のプロンプト](media/windows-service-rename.png "Windows サービスの名前の変更のプロンプト")
 
-2. **[デザイン]** タブで、ショートカット メニューから **[プロパティ]** を選択します。 **[プロパティ]** ウィンドウで **ServiceName** の値を *MyNewService* に変更します。
+3. **[デザイン]** タブで、ショートカット メニューから **[プロパティ]** を選択します。 **[プロパティ]** ウィンドウで **ServiceName** の値を *MyNewService* に変更します。
 
     ![サービスのプロパティ](media/windows-service-properties.png "Windows サービスのプロパティ")
 
-3. **[ファイル]** メニューから **[すべて保存]** を選択します。
+4. **[ファイル]** メニューから **[すべて保存]** を選択します。
 
 ## <a name="add-features-to-the-service"></a>サービスに機能を追加する
 
@@ -97,7 +97,7 @@ ms.locfileid: "59518033"
 
 #### <a name="polling"></a>ポーリング
 
-サービス アプリケーションは長期間実行するように設計されているため、通常は、(<xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドの設定に従って) システムをポーリングまたは監視しています。 `OnStart` メソッドは、サービスの操作が開始された後にオペレーティング システムに戻る必要があります。そのため、システムはブロックされません。 
+サービス アプリケーションは長期間実行するように設計されているため、通常は、(<xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドの設定に従って) システムをポーリングまたは監視しています。 `OnStart` メソッドは、サービスの操作が開始された後にオペレーティング システムに戻る必要があります。そのため、システムはブロックされません。
 
 単純なポーリング メカニズムを設定するには、<xref:System.Timers.Timer?displayProperty=nameWithType> コンポーネントを使用します。 このタイマーによって、定期的な間隔で <xref:System.Timers.Timer.Elapsed> イベントが発生します。サービスは、イベントが発生するごとに監視を実行できます。 <xref:System.Timers.Timer> コンポーネントは次のように使用します。
 
@@ -173,7 +173,7 @@ ms.locfileid: "59518033"
 
 ### <a name="define-other-actions-for-the-service"></a>サービスに対して他の処理を定義する
 
-<xref:System.ServiceProcess.ServiceBase.OnPause%2A>、<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>、および <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> の各メソッドをオーバーライドして、コンポーネントの処理をさらに定義できます。 
+<xref:System.ServiceProcess.ServiceBase.OnPause%2A>、<xref:System.ServiceProcess.ServiceBase.OnContinue%2A>、および <xref:System.ServiceProcess.ServiceBase.OnShutdown%2A> の各メソッドをオーバーライドして、コンポーネントの処理をさらに定義できます。
 
 次のコードは、`MyNewService` クラスで <xref:System.ServiceProcess.ServiceBase.OnContinue%2A> メソッドをオーバーライドする方法を示しています。
 
@@ -182,7 +182,7 @@ ms.locfileid: "59518033"
 
 ## <a name="set-service-status"></a>サービスの状態を設定する
 
-サービスは、その状態を[サービス コントロール マネージャー](/windows/desktop/Services/service-control-manager)に報告します。これによりユーザーは、サービスが正常に機能しているかどうかを確認することができます。 既定では、<xref:System.ServiceProcess.ServiceBase> から継承したサービスは、SERVICE_STOPPED、SERVICE_PAUSED、および SERVICE_RUNNING など、限られたセットの状態設定を報告します。 サービスの開始に時間がかかる場合は、SERVICE_START_PENDING 状態を報告すると便利です。 
+サービスは、その状態を[サービス コントロール マネージャー](/windows/desktop/Services/service-control-manager)に報告します。これによりユーザーは、サービスが正常に機能しているかどうかを確認することができます。 既定では、<xref:System.ServiceProcess.ServiceBase> から継承したサービスは、SERVICE_STOPPED、SERVICE_PAUSED、および SERVICE_RUNNING など、限られたセットの状態設定を報告します。 サービスの開始に時間がかかる場合は、SERVICE_START_PENDING 状態を報告すると便利です。
 
 Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatus) 関数を呼び出すコードを追加することで、SERVICE_START_PENDING および SERVICE_STOP_PENDING 状態設定を実装できます。
 
@@ -319,7 +319,7 @@ Windows [SetServiceStatus](/windows/desktop/api/winsvc/nf-winsvc-setservicestatu
 
     ' Update the service state to Stopped.
     serviceStatus.dwCurrentState = ServiceState.SERVICE_STOPPED
-    SetServiceStatus(Me.ServiceHandle, serviceStatus)    
+    SetServiceStatus(Me.ServiceHandle, serviceStatus)
     ```
 
 ## <a name="add-installers-to-the-service"></a>サービスにインストーラーを追加する
@@ -332,27 +332,27 @@ Windows サービスを実行するには、まず、サービスをインスト
 
      Visual Studio の既定では、2 つのインストーラーを含む `ProjectInstaller` というコンポーネント クラスがプロジェクトに追加されます。 これらのインストーラーはサービス用とサービスの関連プロセス用です。
 
-4. **[ProjectInstaller]** の **[デザイン]** ビューで、**[serviceInstaller1]** (Visual C# プロジェクトの場合) または **[ServiceInstaller1]** (Visual Basic プロジェクトの場合) を選択してから、ショートカット メニューから **[プロパティ]** を選択します。
+3. **[ProjectInstaller]** の **[デザイン]** ビューで、**[serviceInstaller1]** (Visual C# プロジェクトの場合) または **[ServiceInstaller1]** (Visual Basic プロジェクトの場合) を選択してから、ショートカット メニューから **[プロパティ]** を選択します。
 
-5. **[プロパティ]** ウィンドウで、<xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> プロパティが **MyNewService** に設定されていることを確認します。
+4. **[プロパティ]** ウィンドウで、<xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> プロパティが **MyNewService** に設定されていることを確認します。
 
-6. *サンプル サービス*などのテキストを <xref:System.ServiceProcess.ServiceInstaller.Description%2A> プロパティに追加します。 
+5. *サンプル サービス*などのテキストを <xref:System.ServiceProcess.ServiceInstaller.Description%2A> プロパティに追加します。
 
      このテキストは **[サービス]** ウィンドウの **[説明]** 列に表示され、サービスに関する説明をユーザーに示します。
 
     ![サービス ウィンドウのサービスの説明](media/windows-service-description.png "サービスの説明")
 
-7. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> プロパティにテキストを追加します。 たとえば、*MyNewService Display Name* です。 
+6. <xref:System.ServiceProcess.ServiceInstaller.DisplayName%2A> プロパティにテキストを追加します。 たとえば、*MyNewService Display Name* です。
 
      このテキストは、**[サービス]** ウィンドウの **[表示名]** 列に表示されます。 この名前は、システムによって使用される (たとえば、<xref:System.ServiceProcess.ServiceInstaller.ServiceName%2A> コマンドを使用してサービスを開始する場合) 名前である `net start` プロパティとは異なる名前にすることができます。
 
-8. ドロップダウン リストから <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> プロパティを <xref:System.ServiceProcess.ServiceStartMode.Automatic> に設定します。
+7. ドロップダウン リストから <xref:System.ServiceProcess.ServiceInstaller.StartType%2A> プロパティを <xref:System.ServiceProcess.ServiceStartMode.Automatic> に設定します。
 
-9. 完了すると、**[プロパティ]** ウィンドウは次の図のようになります。
+8. 完了すると、**[プロパティ]** ウィンドウは次の図のようになります。
 
      ![Windows サービスのインストーラー プロパティ](media/windows-service-installer-properties.png "Windows サービスのインストーラー プロパティ")
 
-9. **[ProjectInstaller]** の **[デザイン]** ビューで、**[serviceProcessInstaller1]** (Visual C# プロジェクトの場合) または **[ServiceProcessInstaller1]** (Visual Basic プロジェクトの場合) を選択してから、ショートカット メニューから **[プロパティ]** を選択します。 ドロップダウン リストから <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> プロパティを <xref:System.ServiceProcess.ServiceAccount.LocalSystem> に設定します。 
+9. **[ProjectInstaller]** の **[デザイン]** ビューで、**[serviceProcessInstaller1]** (Visual C# プロジェクトの場合) または **[ServiceProcessInstaller1]** (Visual Basic プロジェクトの場合) を選択してから、ショートカット メニューから **[プロパティ]** を選択します。 ドロップダウン リストから <xref:System.ServiceProcess.ServiceProcessInstaller.Account%2A> プロパティを <xref:System.ServiceProcess.ServiceAccount.LocalSystem> に設定します。
 
      この設定で、ローカル システム アカウントを使用してサービスがインストールされ、実行されます。
 
@@ -364,7 +364,7 @@ Windows サービスを実行するには、まず、サービスをインスト
 ## <a name="optional-set-startup-parameters"></a>(省略可能) スタートアップ パラメーターを設定する
 
 > [!NOTE]
-> スタートアップ パラメーターを追加するよう決定する前に、これがサービスに情報を渡す最適な方法であるかどうかを検討してください。 使用や解析は簡単であり、ユーザーが簡単にオーバーライドできますが、ドキュメントなしでは検索や使用が困難である可能性があります。 一般的に、サービスに必要なスタートアップ パラメーターが複数ある場合は、代わりにレジストリまたは構成ファイルの使用することをお勧めします。 
+> スタートアップ パラメーターを追加するよう決定する前に、これがサービスに情報を渡す最適な方法であるかどうかを検討してください。 使用や解析は簡単であり、ユーザーが簡単にオーバーライドできますが、ドキュメントなしでは検索や使用が困難である可能性があります。 一般的に、サービスに必要なスタートアップ パラメーターが複数ある場合は、代わりにレジストリまたは構成ファイルの使用することをお勧めします。
 
 Windows サービスは、コマンド ライン引数 (スタートアップ パラメーター) を受け入れることができます。 スタートアップ パラメーターを処理するコードを追加すると、ユーザーは、サービス プロパティ ウィンドウでカスタムのスタートアップ パラメーターを使用してサービスを開始できます。 ただし、これらのスタートアップ パラメーターは、次回のサービスの開始時には保持されません。 スタートアップ パラメーターを永続的に設定するには、レジストリに設定します。
 
@@ -480,13 +480,13 @@ Windows サービスを構築済みであるため、サービスをインスト
     installutil MyNewService.exe
     ```
 
-    サービスが正常にインストールされると、正常に実行されたことが報告されます。 
+    サービスが正常にインストールされると、正常に実行されたことが報告されます。
 
     システムで *installutil.exe* を見付けることができない場合は、コンピューター上に存在することを確認してください。 このツールは、.NET Framework と共に *%windir%\Microsoft.NET\Framework[64]\\&lt;framework version&gt;* フォルダーにインストールされます。 たとえば、64 ビット バージョンでの既定のパスは *%windir%\Microsoft.NET\Framework64\v4.0.30319\InstallUtil.exe* です。
 
-    **installutil.exe** プロセスが失敗する場合は、インストール ログを調べて理由を確認します。 既定で、ログはサービスの実行可能ファイルと同じフォルダーにあります。 インストールは次の場合に失敗することがあります。 
+    **installutil.exe** プロセスが失敗する場合は、インストール ログを調べて理由を確認します。 既定で、ログはサービスの実行可能ファイルと同じフォルダーにあります。 インストールは次の場合に失敗することがあります。
     - <xref:System.ComponentModel.RunInstallerAttribute> クラスが `ProjectInstaller` クラスに存在しない。
-    -  属性が `true` に設定されていない。 
+    - 属性が `true` に設定されていない。
     - `ProjectInstaller` クラスが `public` として定義されていない。
 
 詳細については、「[方法 :サービスをインストールおよびアンインストールする](how-to-install-and-uninstall-services.md)」を参照してください。
@@ -520,7 +520,7 @@ Windows サービスを構築済みであるため、サービスをインスト
 
 ## <a name="clean-up-resources"></a>リソースをクリーンアップする
 
-Windows サービス アプリが不要になったら、削除することができます。 
+Windows サービス アプリが不要になったら、削除することができます。
 
 1. 管理者資格情報を使用して、**Visual Studio 用開発者コマンド プロンプト**を開きます。
 

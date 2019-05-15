@@ -9,21 +9,21 @@ helpviewer_keywords:
 - LINQ to SQL, DBML files
 - LINQ to SQL, SQLMetal
 ms.assetid: 819e5a96-7646-4fdb-b14b-fe31221b0614
-ms.openlocfilehash: 80e0bcd341f9059fc6787756f8e743aedc5dc43e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: e91859d4aa6e30877bfdae5da9063a1e2a6b3b44
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59206422"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647263"
 ---
 # <a name="sqlmetalexe-code-generation-tool"></a>SqlMetal.exe (コード生成ツール)
 SqlMetal コマンド ライン ツールは、 [!INCLUDE[vbtecdlinq](../../../includes/vbtecdlinq-md.md)] の [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]コンポーネント用のコードとマッピングを生成します。 このトピックで後述するオプションを適用することにより、次のようなアクションを SqlMetal で実行できます。  
   
--   データベースから、ソース コードとマッピング属性またはマッピング ファイルを生成する。  
+- データベースから、ソース コードとマッピング属性またはマッピング ファイルを生成する。  
   
--   データベースから、カスタマイズ用の中間的なデータベース マークアップ言語 (.dbml) ファイルを生成する。  
+- データベースから、カスタマイズ用の中間的なデータベース マークアップ言語 (.dbml) ファイルを生成する。  
   
--   .dbml ファイルから、コードとマッピング属性またはマッピング ファイルを生成する。  
+- .dbml ファイルから、コードとマッピング属性またはマッピング ファイルを生成する。  
   
  このツールは、Visual Studio と共に自動的にインストールされます。 既定では、このファイルは `drive`:\Program Files\Microsoft SDKs\Windows\v`n.nn`\bin にあります。 Visual Studio をインストールしない場合は、 [Windows SDK](https://go.microsoft.com/fwlink/?LinkId=142225)をダウンロードすることによって SQLMetal ファイルを入手することもできます。  
   
@@ -88,9 +88,9 @@ sqlmetal [options] [<input file>]
 ## <a name="remarks"></a>解説  
  SqlMetal の実際の機能には、次の 2 つの段階が含まれています。  
   
--   データベースのメタデータを .dbml ファイルに抽出する。  
+- データベースのメタデータを .dbml ファイルに抽出する。  
   
--   コード出力ファイルを生成する。  
+- コード出力ファイルを生成する。  
   
      適切なコマンド ライン オプションを使用することで、Visual Basic または C# ソース コードを生成するか、XML マッピング ファイルを生成できます。  
   
@@ -100,9 +100,9 @@ sqlmetal [options] [<input file>]
   
  次の条件が少なくとも 1 つ満たされる場合、[!INCLUDE[sqprsqext](../../../includes/sqprsqext-md.md)] は例外をスローします。  
   
--   自身を呼び出すストアド プロシージャを SqlMetal が抽出しようとした。  
+- 自身を呼び出すストアド プロシージャを SqlMetal が抽出しようとした。  
   
--   ストアド プロシージャ、関数、またはビューの入れ子レベルが 32 を超える。  
+- ストアド プロシージャ、関数、またはビューの入れ子レベルが 32 を超える。  
   
      SqlMetal はこの例外をキャッチして、それを警告として報告します。  
   

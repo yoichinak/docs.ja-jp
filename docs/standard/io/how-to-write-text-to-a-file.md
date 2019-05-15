@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 060cbe06-2adf-4337-9e7b-961a5c840208
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 93d87dc98284fad6b8159f681f7d99ce460d60d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 59b33c24c2821d0aef17f5feb67c1178810b939e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54524196"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647781"
 ---
 # <a name="how-to-write-text-to-a-file"></a>方法: テキストのファイルへの書き込み
 このトピックでは、.NET アプリ用のファイルにテキストを書き込むさまざまな方法を示します。 
 
 テキストをファイルに書き込むには、一般に次のクラスおよびメソッドを使用します。  
   
--   <xref:System.IO.StreamWriter> には、同期的にファイルに書き込むメソッド (<xref:System.IO.StreamWriter.Write%2A> と <xref:System.IO.TextWriter.WriteLine%2A>) または非同期的に書き込むメソッド (<xref:System.IO.StreamWriter.WriteAsync%2A> と <xref:System.IO.StreamWriter.WriteLineAsync%2A>) が含まれています。  
+- <xref:System.IO.StreamWriter> には、同期的にファイルに書き込むメソッド (<xref:System.IO.StreamWriter.Write%2A> と <xref:System.IO.TextWriter.WriteLine%2A>) または非同期的に書き込むメソッド (<xref:System.IO.StreamWriter.WriteAsync%2A> と <xref:System.IO.StreamWriter.WriteLineAsync%2A>) が含まれています。  
   
--   <xref:System.IO.File> では、ファイルにテキストを書き込む静的メソッド (<xref:System.IO.File.WriteAllLines%2A>、<xref:System.IO.File.WriteAllText%2A> など)、またはファイルにテキストを追加する静的メソッド (<xref:System.IO.File.AppendAllLines%2A>、<xref:System.IO.File.AppendAllText%2A>、<xref:System.IO.File.AppendText%2A> など) が提供されています。  
+- <xref:System.IO.File> では、ファイルにテキストを書き込む静的メソッド (<xref:System.IO.File.WriteAllLines%2A>、<xref:System.IO.File.WriteAllText%2A> など)、またはファイルにテキストを追加する静的メソッド (<xref:System.IO.File.AppendAllLines%2A>、<xref:System.IO.File.AppendAllText%2A>、<xref:System.IO.File.AppendText%2A> など) が提供されています。  
   
 - <xref:System.IO.Path> は、ファイルまたはディレクトリのパスの情報を含む文字列用です。 これには、<xref:System.IO.Path.Combine%2A> メソッドと、.NET Core 2.1 以降においてファイルまたはディレクトリのパスを作成するために文字列を連結できる <xref:System.IO.Path.Join%2A> および <xref:System.IO.Path.TryJoin%2A> メソッドが含まれます。
 

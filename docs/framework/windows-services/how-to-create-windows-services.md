@@ -6,12 +6,12 @@ helpviewer_keywords:
 - templates, Windows Service
 ms.assetid: 0f5e2cbb-d95d-477c-b2b5-4b990e6b86ff
 author: ghogen
-ms.openlocfilehash: 469074336c8aa49fee1acf871360f8dbc1363247
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 124e8a0dff18f02c178b56167cd12faa1fc97992
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313269"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64649412"
 ---
 # <a name="how-to-create-windows-services"></a>方法: Windows サービスを作成する
 サービスを作成するときには、**Windows サービス**と呼ばれる、Visual Studio プロジェクトのテンプレートを使用できます。 このテンプレートを使用すると、作業の多くを自動化できます。この自動化は、適切なクラスと名前空間を参照し、サービスの基底クラスからの継承を設定し、メソッドのいくつかをオーバーライドすることで実現されます。  
@@ -21,11 +21,11 @@ ms.locfileid: "59313269"
   
  実用的なサービスを作成するには、少なくとも以下の作業を行う必要があります。  
   
--   <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティを設定します。  
+- <xref:System.ServiceProcess.ServiceBase.ServiceName%2A> プロパティを設定します。  
   
--   サービス アプリケーションに必要なインストーラーを作成します。  
+- サービス アプリケーションに必要なインストーラーを作成します。  
   
--   <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドのオーバーライドとコーディングを行い、サービスの動作をカスタマイズします。  
+- <xref:System.ServiceProcess.ServiceBase.OnStart%2A> メソッドと <xref:System.ServiceProcess.ServiceBase.OnStop%2A> メソッドのオーバーライドとコーディングを行い、サービスの動作をカスタマイズします。  
   
 ### <a name="to-create-a-windows-service-application"></a>Windows サービス アプリケーションを作成するには  
   

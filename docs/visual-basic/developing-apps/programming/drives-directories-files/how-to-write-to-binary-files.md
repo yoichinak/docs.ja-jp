@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WriteAllBytes method [Visual Basic]
 - binary files [Visual Basic], writing in Visual Basic
 ms.assetid: 59fae125-de5b-4c96-883c-209f4a55112c
-ms.openlocfilehash: e8aa1c96766fc1b63326415c879e9821dc1de7f6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 79d104d7e4750bdd9f2a80bd2e2ef16ca6d9d7e1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58833691"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64665766"
 ---
 # <a name="how-to-write-to-binary-files-in-visual-basic"></a>方法: Visual Basic でバイナリ ファイルに書き込む
 <xref:Microsoft.VisualBasic.FileIO.FileSystem.WriteAllBytes%2A> メソッドは、バイナリ ファイルにデータを書き込みます。 `append` パラメーターが `True` の場合、データはファイルに追加されます。それ以外の場合は、ファイル内のデータが上書きされます。  
@@ -20,26 +20,26 @@ ms.locfileid: "58833691"
   
 ### <a name="to-write-to-a-binary-file"></a>バイナリ ファイルに書き込むには  
   
--   `WriteAllBytes` メソッドを使い、ファイルのパス、ファイルの名前、書き込むバイトを指定します。 この例では、データ配列 `CustomerData` を `CollectedData.dat` という名前のファイルに追加します。  
+- `WriteAllBytes` メソッドを使い、ファイルのパス、ファイルの名前、書き込むバイトを指定します。 この例では、データ配列 `CustomerData` を `CollectedData.dat` という名前のファイルに追加します。  
   
      [!code-vb[VbVbcnMyFileSystem#27](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbcnMyFileSystem/VB/Class1.vb#27)]  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  
   
--   文字列の長さが 0 である、空白文字だけが含まれる、または無効な文字が含まれるために、パスが無効である (<xref:System.ArgumentException>).  
+- 文字列の長さが 0 である、空白文字だけが含まれる、または無効な文字が含まれるために、パスが無効である (<xref:System.ArgumentException>).  
   
--   パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)  
+- パスが `Nothing` であるため、有効でない (<xref:System.ArgumentNullException>)  
   
--   `File` が、存在しないパスを指している (<xref:System.IO.FileNotFoundException> または <xref:System.IO.DirectoryNotFoundException>)。  
+- `File` が、存在しないパスを指している (<xref:System.IO.FileNotFoundException> または <xref:System.IO.DirectoryNotFoundException>)。  
   
--   他のプロセスがファイルを使用しているか、または I/O エラーが発生した (<xref:System.IO.IOException>)。  
+- 他のプロセスがファイルを使用しているか、または I/O エラーが発生した (<xref:System.IO.IOException>)。  
   
--   パスがシステムで定義されている最大長を超えている (<xref:System.IO.PathTooLongException>)。  
+- パスがシステムで定義されている最大長を超えている (<xref:System.IO.PathTooLongException>)。  
   
--   パス内のファイル名またはディレクトリ名にコロン (:) が含まれているか、または形式が無効である (<xref:System.NotSupportedException>)  
+- パス内のファイル名またはディレクトリ名にコロン (:) が含まれているか、または形式が無効である (<xref:System.NotSupportedException>)  
   
--   ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)  
+- ユーザーがパスを参照するのに必要なアクセス許可がない (<xref:System.Security.SecurityException>)  
   
 ## <a name="see-also"></a>関連項目
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: eca16922-1c46-4f68-aefe-e7a12283641f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74469948ffe4045e6d367f1f60b8e66dc2a7810d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 64df7a4dc859c5d4035dd640a011a813348a0334
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59109799"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64650503"
 ---
 # <a name="retrieving-resources-in-desktop-apps"></a>デスクトップ アプリケーションのリソースの取得
 ローカライズされたリソースを NET Framework デスクトップ アプリケーションで使用する場合は、既定カルチャまたはニュートラル カルチャ用のリソースをメイン アセンブリと共にパッケージ化し、アプリでサポートされている言語またはカルチャごとに個別のサテライト アセンブリを作成することが理想的です。 名前付きリソースには、次のセクションで説明する <xref:System.Resources.ResourceManager> クラスを使用してアクセスすることができます。 目的のリソースをメイン アセンブリおよびサテライト アセンブリに埋め込まない場合でも、.resources バイナリ ファイルには直接アクセスすることができます。詳細については、「 [.resources ファイルからのリソースの取得](#from_file) 」セクションを参照してください。  [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでリソースを取得するには、Windows デベロッパー センターの「 [Windows ストア アプリでのリソースの作成と取得](https://go.microsoft.com/fwlink/p/?LinkID=241674) 」を参照してください。  
@@ -34,9 +34,9 @@ ms.locfileid: "59109799"
 ## <a name="retrieving-resources-from-assemblies"></a>アセンブリからのリソースの取得  
  <xref:System.Resources.ResourceManager> クラスでは、実行時にリソースにアクセスすることができます。 文字列リソースを取得するには <xref:System.Resources.ResourceManager.GetString%2A?displayProperty=nameWithType> メソッドを使用し、文字列以外のリソースを取得するには <xref:System.Resources.ResourceManager.GetObject%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Resources.ResourceManager.GetStream%2A?displayProperty=nameWithType> メソッドを使用します。 各メソッドには、次の 2 つのオーバーロードが含まれます。  
   
--   唯一のパラメーターがリソースの名前を含む文字列であるオーバーロード。 メソッドでは、現在のスレッド カルチャ用にそのリソースの取得を試みます。 詳細については、 <xref:System.Resources.ResourceManager.GetString%28System.String%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>メソッド、および <xref:System.Resources.ResourceManager.GetStream%28System.String%29> メソッドを参照してください。  
+- 唯一のパラメーターがリソースの名前を含む文字列であるオーバーロード。 メソッドでは、現在のスレッド カルチャ用にそのリソースの取得を試みます。 詳細については、 <xref:System.Resources.ResourceManager.GetString%28System.String%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%29>メソッド、および <xref:System.Resources.ResourceManager.GetStream%28System.String%29> メソッドを参照してください。  
   
--   2 つのパラメーターを持つオーバー ロード。1 つは、リソースの名前が含まれる文字列で、もう 1 つは、リソースが取得されるカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトです。 そのカルチャ用に設定されたリソースが見つからない場合、リソース マネージャーはフォールバック規則を使用して適切なリソースを取得します。 詳細については、 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、および <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> メソッドを参照してください。  
+- 2 つのパラメーターを持つオーバー ロード。1 つは、リソースの名前が含まれる文字列で、もう 1 つは、リソースが取得されるカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトです。 そのカルチャ用に設定されたリソースが見つからない場合、リソース マネージャーはフォールバック規則を使用して適切なリソースを取得します。 詳細については、 <xref:System.Resources.ResourceManager.GetString%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、 <xref:System.Resources.ResourceManager.GetObject%28System.String%2CSystem.Globalization.CultureInfo%29>メソッド、および <xref:System.Resources.ResourceManager.GetStream%28System.String%2CSystem.Globalization.CultureInfo%29> メソッドを参照してください。  
   
  リソース マネージャーでは、アプリケーションでカルチャ固有のリソースを取得する方法を、リソース フォールバック プロセスを使用して制御します。 詳細については、「 [Packaging and Deploying Resources](../../../docs/framework/resources/packaging-and-deploying-resources-in-desktop-apps.md)」の「リソース フォールバック プロセス」セクションを参照してください。 <xref:System.Resources.ResourceManager> オブジェクトをインスタンス化する方法については、 <xref:System.Resources.ResourceManager> クラスに関するトピックの「ResourceManager オブジェクトのインスタンス化」セクションを参照してください。  
   

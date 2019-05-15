@@ -4,12 +4,12 @@ description: Docker ベースのアプリケーションを開発するための
 author: CESARDELATORRE
 ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: f23a2352d86d5c77d2f05af2a2452fb3c944e049
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3d2a57c7dda722bcc39895b41c35a3a29ddd17e2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613370"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751459"
 ---
 # <a name="development-workflow-for-docker-apps"></a>Docker アプリの開発ワークフロー
 
@@ -181,7 +181,7 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
  5  FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS build
  6  WORKDIR /src
  7  COPY src/Services/Catalog/Catalog.API/Catalog.API.csproj …
- 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks … 
+ 8  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.AspNetCore.HealthChecks …
  9  COPY src/BuildingBlocks/HealthChecks/src/Microsoft.Extensions.HealthChecks …
 10  COPY src/BuildingBlocks/EventBus/IntegrationEventLogEF/ …
 11  COPY src/BuildingBlocks/EventBus/EventBus/EventBus.csproj …
@@ -206,6 +206,7 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 
 行ごとの詳細は次のとおりです。
 
+<!-- markdownlint-disable MD029-->
 1. "小さな" ランタイムのみの基本イメージを使用するステージを開始します。参照用にこれを**基本**と呼びます。
 2. イメージに **/app** ディレクトリを作成します。
 3. ポート **80** を公開します。
@@ -226,6 +227,7 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 26. 現在のディレクトリを **/app** に変更します
 27. **/app** ディレクトリを、**発行**ステージから現在のディレクトリにコピーします
 28. コンテナーの開始時に実行するコマンドを定義します。
+<!-- markdownlint-enable MD029-->
 
 次は、プロセス全体のパフォーマンスを向上させるための最適化についていくつか見ていきます。eShopOnContainers の場合、Linux コンテナーの完全なソリューションをビルドするには約 22 分以上かかることになります。
 
@@ -233,7 +235,7 @@ Dockerfile はバッチ スクリプトに似ています。 コマンド ライ
 
 次は、**ビルド** ステージについて詳しく見ていきます。5 行目から 6 行目まではほとんど同じですが、eShopOnContainers からのすべてのサービスについては、7 行目から 17 行目までが異なります。したがって、毎回実行する必要があります。しかし、7 行目から 16 行目を次のように変更したとします。
 
-```
+```Dockerfile
 COPY . .
 ```
 
@@ -245,7 +247,7 @@ COPY . .
 
 次の大幅な最適化は、17 行目で実行される `restore` コマンドに関係します。これも、eShopOnContainers のすべてサービスについて異なります。 その行を次のように変更したとします。
 
-```console
+```Dockerfile
 RUN dotnet restore
 ```
 
@@ -253,13 +255,13 @@ RUN dotnet restore
 
 しかし、フォルダーに 1 つのプロジェクトまたはソリューション ファイルがある場合にのみ、`dotnet restore` が実行されるため、これを実現するのは少し複雑になります。これを解決するための方法を簡単に説明すると、次のようになります。
 
-1) 次の行を **.dockerignore** に追加します。
+1. 次の行を **.dockerignore** に追加します。
 
    - `*.sln`。メイン フォルダー ツリーのすべてのソリューション ファイルを無視します
 
    - `!eShopOnContainers-ServicesAndWebApps.sln`。このソリューション ファイルのみを含めます。
 
-2) `dotnet restore` への `/ignoreprojectextensions:.dcproj` 引数を含めます。したがって、docker-compose プロジェクトも無視され、eShopOnContainers-ServicesAndWebApps ソリューションのパッケージのみが復元されます。
+2. `dotnet restore` への `/ignoreprojectextensions:.dcproj` 引数を含めます。したがって、docker-compose プロジェクトも無視され、eShopOnContainers-ServicesAndWebApps ソリューションのパッケージのみが復元されます。
 
 最終的な最適化では、20 行目が余分になります。23 行目でもアプリケーションがビルドされ、本質的には 20 行目のすぐ後に続くため、別のコマンドで時間がかかることになります。
 
@@ -542,7 +544,7 @@ Visual Studio を使用するワークフローは、エディター/CLI アプ�
 - **作成者: Steve Lasker。Visual Studio 2017 を使用した .NET Docker の開発** \
   <https://channel9.msdn.com/Events/Visual-Studio/Visual-Studio-2017-Launch/T111>
 
-## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows コンテナーを設定するための PowerShell コマンドの使用 
+## <a name="using-powershell-commands-in-a-dockerfile-to-set-up-windows-containers"></a>Windows コンテナーを設定するための PowerShell コマンドの使用
 
 [Windows コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/about/index)は、既存の Windows アプリケーションを Docker イメージに変換して、Docker エコシステムの残りと同じツールで展開できます。 Windows コンテナーを使用するには、次の例のように、Dockerfile で PowerShell コマンドを実行します。
 

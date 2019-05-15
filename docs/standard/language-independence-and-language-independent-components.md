@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4f0b77d0-4844-464f-af73-6e06bedeafc6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b64b0dd843f408f9a6d064aff935f8d18b3dbddd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 57934742e378df9bf77938e8c6b3b49cb25e6ecf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59313373"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647753"
 ---
 # <a name="language-independence-and-language-independent-components"></a>言語への非依存性、および言語非依存コンポーネント
 .NET Framework は言語に依存しません。 つまり、C++/CLI、Eiffel、F#、IronPython、IronRuby、PowerBuilder、Visual Basic、Visual COBOL、Windows PowerShell など、.NET Framework を対象とする多くの言語の 1 つを開発に使用できます。 .NET Framework 用に開発されたクラス ライブラリの型とメンバーには、最初に記述された言語を知らなくてもアクセスできます。元の言語の規則に従う必要もありません。 コンポーネントを開発しているのであれば、コンポーネントの言語にかかわらず、すべての .NET Framework アプリからそのコンポーネントにアクセスできます。  
@@ -34,41 +34,41 @@ ms.locfileid: "59313373"
   
  この記事の内容:  
   
--   [CLS 準拠の規則](#Rules)  
+- [CLS 準拠の規則](#Rules)  
   
-    -   [型および型メンバーのシグネチャ](#Types)  
+    - [型および型メンバーのシグネチャ](#Types)  
   
-    -   [名前付け規則](#naming)  
+    - [名前付け規則](#naming)  
   
-    -   [型変換](#conversion)  
+    - [型変換](#conversion)  
   
-    -   [配列](#arrays)  
+    - [配列](#arrays)  
   
-    -   [インターフェイス](#Interfaces)  
+    - [インターフェイス](#Interfaces)  
   
-    -   [列挙型](#enums)  
+    - [列挙型](#enums)  
   
-    -   [一般的な型メンバー](#members)  
+    - [一般的な型メンバー](#members)  
   
-    -   [メンバーのアクセシビリティ](#MemberAccess)  
+    - [メンバーのアクセシビリティ](#MemberAccess)  
   
-    -   [ジェネリック型とメンバー](#Generics)  
+    - [ジェネリック型とメンバー](#Generics)  
   
-    -   [コンストラクター](#ctors)  
+    - [コンストラクター](#ctors)  
   
-    -   [プロパティ](#properties)  
+    - [プロパティ](#properties)  
   
-    -   [イベント](#events)  
+    - [イベント](#events)  
   
-    -   [Overloads](#overloads)  
+    - [Overloads](#overloads)  
   
-    -   [例外](#exceptions)  
+    - [例外](#exceptions)  
   
-    -   [属性](#attributes)  
+    - [属性](#attributes)  
   
--   [CLSCompliantAttribute 属性](#CLSAttribute)  
+- [CLSCompliantAttribute 属性](#CLSAttribute)  
   
--   [言語間の相互運用性](#CrossLang)  
+- [言語間の相互運用性](#CrossLang)  
   
 <a name="Rules"></a>   
 ## <a name="cls-compliance-rules"></a>CLS 準拠の規則  
@@ -94,11 +94,11 @@ ms.locfileid: "59313373"
   
  ライブラリのパブリック インターフェイスは、次の要素で構成されます。  
   
--   パブリック クラスの定義。  
+- パブリック クラスの定義。  
   
--   パブリック クラスのパブリック メンバーの定義、および派生クラスからアクセスできるメンバー (つまり、protected メンバー) の定義。  
+- パブリック クラスのパブリック メンバーの定義、および派生クラスからアクセスできるメンバー (つまり、protected メンバー) の定義。  
   
--   パブリック クラスのパブリック メソッドのパラメーターおよび戻り値の型、派生クラスからアクセスできるメソッドのパラメーターおよび戻り値の型。  
+- パブリック クラスのパブリック メソッドのパラメーターおよび戻り値の型、派生クラスからアクセスできるメソッドのパラメーターおよび戻り値の型。  
   
  CLS 準拠の規則を次の表に示します。 これらの規則のテキストは、「[ECMA-335 Standard: Common Language Infrastructure](https://www.ecma-international.org/publications/standards/Ecma-335.htm)」(標準の ECMA-335: 共通言語基盤) からの引用で、Ecma International が 2012 年の著作権を保有しています。 これらの規則の詳細については、以降のセクションを参照してください。  
   
@@ -163,9 +163,9 @@ ms.locfileid: "59313373"
   
  メソッドの戻り値の型、プロパティ型を含め、メンバー シグネチャに表示されるすべての型が CLS に準拠する必要があります。 さらに、ジェネリック型の場合は、次の要件もあります。  
   
--   ジェネリック型のインスタンスを構成するすべての型が、CLS に準拠する必要があります。  
+- ジェネリック型のインスタンスを構成するすべての型が、CLS に準拠する必要があります。  
   
--   ジェネリック パラメーターで制約として使用されるすべての型が、CLS に準拠する必要があります。  
+- ジェネリック パラメーターで制約として使用されるすべての型が、CLS に準拠する必要があります。  
   
  .NET Framework の[共通型システム](../../docs/standard/base-types/common-type-system.md)には、共通言語ランタイムが直接サポートする組み込み型がいくつか含まれ、アセンブリのメタデータで特別にエンコードされています。 これらの組み込み型のうち、次の表に示す型は CLS に準拠しています。  
   
@@ -196,11 +196,11 @@ ms.locfileid: "59313373"
   
  .NET Framework のクラス ライブラリまたはその他のクラス ライブラリには、CLS に準拠していない他の型が含まれる場合があります。次に例を示します。  
   
--   ボックス化された値型。 次の C# コード例では、`int*` という名前の型 `Value` のパブリック プロパティを持つクラスを作成します。 `int*` はボックス化された値型であるため、コンパイラは CLS 非準拠としてフラグを設定します。  
+- ボックス化された値型。 次の C# コード例では、`int*` という名前の型 `Value` のパブリック プロパティを持つクラスを作成します。 `int*` はボックス化された値型であるため、コンパイラは CLS 非準拠としてフラグを設定します。  
   
      [!code-csharp[Conceptual.CLSCompliant#26](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/box2.cs#26)]  
   
--   型指定された参照。オブジェクトへの参照および型への参照を含む特別なコンストラクトです。 型指定された参照は、.NET Framework では <xref:System.TypedReference> クラスによって表されます。  
+- 型指定された参照。オブジェクトへの参照および型への参照を含む特別なコンストラクトです。 型指定された参照は、.NET Framework では <xref:System.TypedReference> クラスによって表されます。  
   
  型が CLS に準拠していない場合は、<xref:System.CLSCompliantAttribute> 値が `isCompliant` に指定された `false` 属性を適用する必要があります。 詳細については、「[CLSCompliantAttribute 属性](#CLSAttribute)」を参照してください。  
   
@@ -228,9 +228,9 @@ ms.locfileid: "59313373"
   
  名前空間、型、メンバーの名前など、プログラミング言語の識別子は [Unicode Standard 3.0 の Technical Report 15 の Annex 7](https://www.unicode.org/reports/tr15/tr15-18.html) に準拠する必要があります。 これによって、次のことが起こります。  
   
--   識別子の最初の文字は Unicode の大文字と小文字、大文字と小文字の組み合わせ、修飾子文字、その他の文字、または文字数の番号を指定できます。 Unicode 文字のカテゴリの詳細については、「<xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> 列挙体」を参照してください。  
+- 識別子の最初の文字は Unicode の大文字と小文字、大文字と小文字の組み合わせ、修飾子文字、その他の文字、または文字数の番号を指定できます。 Unicode 文字のカテゴリの詳細については、「<xref:System.Globalization.UnicodeCategory?displayProperty=nameWithType> 列挙体」を参照してください。  
   
--   2 文字目以降には、最初の文字で使用できる文字のほかに、非空白記号、空白結合記号、10 進数、接続符号、書式指定コードを使用できます。  
+- 2 文字目以降には、最初の文字で使用できる文字のほかに、非空白記号、空白結合記号、10 進数、接続符号、書式指定コードを使用できます。  
   
  識別子を比較する場合は、その前に書式設定コードを除外してから、識別子を Unicode 正規形 C に変換する必要があります。これは 1 つの文字を、UTF-16 でエンコードされた複数のコード単位で表すことができるからです。 同じコード単位を Unicode 正規形 C で生成する文字シーケンスは CLS に準拠していません。 次の例では、最初にオングストローム文字 (U+212B) である `Å` という名前のプロパティを定義し、次に、上に丸が付く LATIN の大文字 A (U+00C5) である `Å` という名前のプロパティを定義します。 C# と Visual Basic の両方のコンパイラが、CLS 非準拠としてソース コードにフラグを設定します。  
   
@@ -239,9 +239,9 @@ ms.locfileid: "59313373"
   
  特定のスコープ内のメンバー名 (アセンブリ内の名前空間、名前空間内の型、型内のメンバーなど) は一意である必要があります。ただし、オーバーロードによって解決される名前は除きます。 この要件は、共通型システムの要件よりも厳格です。共通型システムでは、スコープ内のメンバーは種類が異なっていれば、たとえば、種類がメソッドのメンバーとフィールドのメンバーは、同じ名前を持つことができます。 特に、型メンバーの場合は次の要件もあります。  
   
--   フィールドと入れ子になった型は名前でのみ識別されます。  
+- フィールドと入れ子になった型は名前でのみ識別されます。  
   
--   名前が同じメソッド、プロパティ、およびイベントは、戻り値の型以外で区別できるようにする必要があります。  
+- 名前が同じメソッド、プロパティ、およびイベントは、戻り値の型以外で区別できるようにする必要があります。  
   
  次の例は、メンバー名がスコープ内で一意でなければならない要件を示しています。 ここでは、`Converter` という名前の 4 つのメンバーを含む `Conversion` という名前のクラスを定義します。 3 つがメソッドで、1 つはプロパティです。 <xref:System.Int64> パラメーターを含むメソッドには一意の名前が付けられますが、<xref:System.Int32> パラメーターが指定された 2 つのメソッドには一意の名前は付けられません。これは戻り値がメンバーのシグネチャの一部と見なされないからです。 また、`Conversion` プロパティもこの要件に違反しています。プロパティの名前は、オーバーロードされたメソッドと同じにできないからです。  
   
@@ -260,9 +260,9 @@ ms.locfileid: "59313373"
 ### <a name="type-conversion"></a>型変換  
  共通言語仕様では、次の 2 つの変換演算子が定義されます。  
   
--   `op_Implicit`。データまたは精度の損失につながらない拡大変換に使用されます。 たとえば、<xref:System.Decimal> 構造体には、整数型の値と `op_Implicit` 値を <xref:System.Char> 値に変換できるように、オーバーロードされた <xref:System.Decimal> 演算子が含まれます。  
+- `op_Implicit`。データまたは精度の損失につながらない拡大変換に使用されます。 たとえば、<xref:System.Decimal> 構造体には、整数型の値と `op_Implicit` 値を <xref:System.Char> 値に変換できるように、オーバーロードされた <xref:System.Decimal> 演算子が含まれます。  
   
--   `op_Explicit`。絶対値 (狭い範囲の値に変換される値) または精度の損失につながる可能性がある縮小変換に使用されます。 たとえば、<xref:System.Decimal> 構造体には、`op_Explicit` 値と <xref:System.Double> 値を <xref:System.Single> に変換し、<xref:System.Decimal> 値を整数値、<xref:System.Decimal>、<xref:System.Double>、および <xref:System.Single> に変換できるように、オーバーロードされた <xref:System.Char> 演算子が含まれます。  
+- `op_Explicit`。絶対値 (狭い範囲の値に変換される値) または精度の損失につながる可能性がある縮小変換に使用されます。 たとえば、<xref:System.Decimal> 構造体には、`op_Explicit` 値と <xref:System.Double> 値を <xref:System.Single> に変換し、<xref:System.Decimal> 値を整数値、<xref:System.Decimal>、<xref:System.Double>、および <xref:System.Single> に変換できるように、オーバーロードされた <xref:System.Char> 演算子が含まれます。  
   
  ただし、すべての言語で、演算子のオーバーロードまたはカスタム演算子の定義がサポートされているわけではありません。 これらの変換演算子を実装する場合は、他の方法で変換を実行する方法も用意する必要があります。 ここでは、`From`*Xxx* メソッドと `To`*Xxx* メソッドを用意することをお勧めします。  
   
@@ -275,17 +275,17 @@ ms.locfileid: "59313373"
 ### <a name="arrays"></a>配列  
  CLS 準拠の配列は、次の規則に従います。  
   
--   配列の次元の下限値は 0 にする必要があります。 次の例では、下限が 1 の CLS 非準拠の配列を作成します。 <xref:System.CLSCompliantAttribute> 属性の有無に関係なく、コンパイラでは、`Numbers.GetTenPrimes` メソッドによって返される配列が CLS に準拠していないことは検出されません。  
+- 配列の次元の下限値は 0 にする必要があります。 次の例では、下限が 1 の CLS 非準拠の配列を作成します。 <xref:System.CLSCompliantAttribute> 属性の有無に関係なく、コンパイラでは、`Numbers.GetTenPrimes` メソッドによって返される配列が CLS に準拠していないことは検出されません。  
   
      [!code-csharp[Conceptual.CLSCompliant#8](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array1.cs#8)]
      [!code-vb[Conceptual.CLSCompliant#8](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array1.vb#8)]  
   
--   すべての配列の要素が、CLS 準拠の型で構成されている必要があります。 次の例では、CLS 非準拠の配列を返す 2 つのメソッドを定義します。 最初のメソッドは、<xref:System.UInt32> 値の配列を返します。 2 番目のメソッドは <xref:System.Object> 値と <xref:System.Int32> 値を含む <xref:System.UInt32> 配列を返します。 最初の配列は <xref:System.UInt32> 型であるため、コンパイラによって非準拠として識別されますが、2 番目の配列に CLS 非準拠の要素が含まれていることは認識されません。  
+- すべての配列の要素が、CLS 準拠の型で構成されている必要があります。 次の例では、CLS 非準拠の配列を返す 2 つのメソッドを定義します。 最初のメソッドは、<xref:System.UInt32> 値の配列を返します。 2 番目のメソッドは <xref:System.Object> 値と <xref:System.Int32> 値を含む <xref:System.UInt32> 配列を返します。 最初の配列は <xref:System.UInt32> 型であるため、コンパイラによって非準拠として識別されますが、2 番目の配列に CLS 非準拠の要素が含まれていることは認識されません。  
   
      [!code-csharp[Conceptual.CLSCompliant#9](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array2.cs#9)]
      [!code-vb[Conceptual.CLSCompliant#9](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array2.vb#9)]  
   
--   配列パラメーターを持つメソッドのオーバーロードの解決は、配列であるという事実とその要素型に基づきます。 したがって、次のオーバーロードされた `GetSquares` メソッドの定義は CLS に準拠しています。  
+- 配列パラメーターを持つメソッドのオーバーロードの解決は、配列であるという事実とその要素型に基づきます。 したがって、次のオーバーロードされた `GetSquares` メソッドの定義は CLS に準拠しています。  
   
      [!code-csharp[Conceptual.CLSCompliant#10](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/array3.cs#10)]
      [!code-vb[Conceptual.CLSCompliant#10](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/array3.vb#10)]  
@@ -294,11 +294,11 @@ ms.locfileid: "59313373"
 ### <a name="interfaces"></a>インターフェイス  
  CLS 準拠のインターフェイスでは、プロパティ、イベント、および仮想メソッド (実装のないメソッド) を定義できます。 次の項目は、このインターフェイスには指定できません。  
   
--   静的メソッドまたは静的フィールド。 インターフェイスで静的メンバーを定義すると、C# と Visual Basic の両方のコンパイラでコンパイラ エラーが発生します。  
+- 静的メソッドまたは静的フィールド。 インターフェイスで静的メンバーを定義すると、C# と Visual Basic の両方のコンパイラでコンパイラ エラーが発生します。  
   
--   フィールド。 インターフェイスでフィールドを定義すると、C# と Visual Basic の両方のコンパイラでコンパイラ エラーが発生します。  
+- フィールド。 インターフェイスでフィールドを定義すると、C# と Visual Basic の両方のコンパイラでコンパイラ エラーが発生します。  
   
--   CLS に準拠していないメソッド。 たとえば、次のインターフェイス定義には、CLS 非準拠とマークされているメソッド、`INumber.GetUnsigned` が含まれています。 この例では、コンパイラの警告が生成されます。  
+- CLS に準拠していないメソッド。 たとえば、次のインターフェイス定義には、CLS 非準拠とマークされているメソッド、`INumber.GetUnsigned` が含まれています。 この例では、コンパイラの警告が生成されます。  
   
      [!code-csharp[Conceptual.CLSCompliant#6](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/interface2.cs#6)]
      [!code-vb[Conceptual.CLSCompliant#6](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/interface2.vb#6)]  
@@ -314,24 +314,24 @@ ms.locfileid: "59313373"
 ### <a name="enumerations"></a>列挙  
  CLS 準拠の列挙型は、次の規則に従う必要があります。  
   
--   列挙体の基になる型は、組み込みの CLS 準拠の整数 (<xref:System.Byte>、<xref:System.Int16>、<xref:System.Int32>、または <xref:System.Int64>) である必要があります。 たとえば、次のコードでは、基になる型が <xref:System.UInt32> の列挙体を定義しようとしますが、コンパイラの警告が生成されます。  
+- 列挙体の基になる型は、組み込みの CLS 準拠の整数 (<xref:System.Byte>、<xref:System.Int16>、<xref:System.Int32>、または <xref:System.Int64>) である必要があります。 たとえば、次のコードでは、基になる型が <xref:System.UInt32> の列挙体を定義しようとしますが、コンパイラの警告が生成されます。  
   
      [!code-csharp[Conceptual.CLSCompliant#7](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/enum3.cs#7)]
      [!code-vb[Conceptual.CLSCompliant#7](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/enum3.vb#7)]  
   
--   列挙型には、`Value__` 属性でマークされた <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType> という名前の単一インスタンス フィールドが必要です。 これにより、フィールド値を暗黙的に参照できます。  
+- 列挙型には、`Value__` 属性でマークされた <xref:System.Reflection.FieldAttributes.RTSpecialName?displayProperty=nameWithType> という名前の単一インスタンス フィールドが必要です。 これにより、フィールド値を暗黙的に参照できます。  
   
--   列挙体には、その列挙体自体の型と同じ型を持つリテラルな静的フィールドが含まれます。 たとえば、`State` および `State.On` の値を持つ `State.Off` 列挙体を定義すると、`State.On` と `State.Off` は両方ともリテラルな静的フィールドで、その型は `State` です。  
+- 列挙体には、その列挙体自体の型と同じ型を持つリテラルな静的フィールドが含まれます。 たとえば、`State` および `State.On` の値を持つ `State.Off` 列挙体を定義すると、`State.On` と `State.Off` は両方ともリテラルな静的フィールドで、その型は `State` です。  
   
--   列挙体は 2 種類あります。  
+- 列挙体は 2 種類あります。  
   
-    -   同時に指定できない一連の名前付き整数値を表す列挙体。 この列挙体の型は、<xref:System.FlagsAttribute?displayProperty=nameWithType> カスタム属性が存在しないことによって示されます。  
+    - 同時に指定できない一連の名前付き整数値を表す列挙体。 この列挙体の型は、<xref:System.FlagsAttribute?displayProperty=nameWithType> カスタム属性が存在しないことによって示されます。  
   
-    -   名前のない値を生成するために結合できる一連のビット フラグを表す列挙体。 この列挙体の型は、<xref:System.FlagsAttribute?displayProperty=nameWithType> カスタム属性が存在することによって示されます。  
+    - 名前のない値を生成するために結合できる一連のビット フラグを表す列挙体。 この列挙体の型は、<xref:System.FlagsAttribute?displayProperty=nameWithType> カスタム属性が存在することによって示されます。  
   
      詳細については、<xref:System.Enum> 構造体のドキュメントを参照してください。  
   
--   列挙体の値は、その列挙体の指定された値に限定されません。 つまり、列挙体の値の範囲は、その列挙体の基になる値の範囲です。 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> メソッドを使用すると、指定された値が列挙体のメンバーかどうかを確認できます。  
+- 列挙体の値は、その列挙体の指定された値に限定されません。 つまり、列挙体の値の範囲は、その列挙体の基になる値の範囲です。 <xref:System.Enum.IsDefined%2A?displayProperty=nameWithType> メソッドを使用すると、指定された値が列挙体のメンバーかどうかを確認できます。  
   
 <a name="members"></a>   
 ### <a name="type-members-in-general"></a>一般的な型メンバー  
@@ -390,34 +390,34 @@ ms.locfileid: "59313373"
 ### <a name="constructors"></a>コンストラクター  
  CLS 準拠のクラスと構造体のコンストラクターは、次の規則に従う必要があります。  
   
--   派生クラスのコンストラクターは、継承されたインスタンス データにアクセスする前に、基底クラスのインスタンス コンストラクターを呼び出す必要があります。 これは、基底クラスのコンストラクターは派生クラスには継承されないからです。 この規則は、直接継承をサポートしない構造体に適用されません。  
+- 派生クラスのコンストラクターは、継承されたインスタンス データにアクセスする前に、基底クラスのインスタンス コンストラクターを呼び出す必要があります。 これは、基底クラスのコンストラクターは派生クラスには継承されないからです。 この規則は、直接継承をサポートしない構造体に適用されません。  
   
      次の例に示すように、コンパイラは、通常、CLS 準拠とは別にこの規則を適用します。 これにより、`Doctor` クラスから派生した `Person` クラスが作成されますが、`Doctor` クラスでは、継承されたインスタンス フィールドを初期化するための `Person` クラス コンストラクターは呼び出されません。  
   
      [!code-csharp[Conceptual.CLSCompliant#11](../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.clscompliant/cs/ctor1.cs#11)]
      [!code-vb[Conceptual.CLSCompliant#11](../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.clscompliant/vb/ctor1.vb#11)]  
   
--   オブジェクト作成以外の目的で、オブジェクト コンストラクターを呼び出すことはできません。 また、オブジェクトを 2 度初期化することもできません。 たとえば、これは <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> メソッド、および <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> などの逆シリアル化メソッドでは、コンストラクターを呼び出してはいけないことを意味します。  
+- オブジェクト作成以外の目的で、オブジェクト コンストラクターを呼び出すことはできません。 また、オブジェクトを 2 度初期化することもできません。 たとえば、これは <xref:System.Object.MemberwiseClone%2A?displayProperty=nameWithType> メソッド、および <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize%2A?displayProperty=nameWithType> などの逆シリアル化メソッドでは、コンストラクターを呼び出してはいけないことを意味します。  
   
 <a name="properties"></a>   
 ### <a name="properties"></a>プロパティ  
  CLS 準拠型のプロパティは、次の規則に従う必要があります。  
   
--   プロパティには setter、getter、またはこの両方が必ず必要です。 アセンブリでは、これらは特殊なメソッドとして実装されます。つまり、個別のメソッドとして (getter は `get_`*propertyname*、setter は `set_`*propertyname* という名前で) 表示され、アセンブリのメタデータでは `SpecialName` としてマークされます。 C# コンパイラおよび Visual Basic コンパイラでは、この規則が自動的に適用されます。<xref:System.CLSCompliantAttribute> 属性を適用する必要はありません。  
+- プロパティには setter、getter、またはこの両方が必ず必要です。 アセンブリでは、これらは特殊なメソッドとして実装されます。つまり、個別のメソッドとして (getter は `get_`*propertyname*、setter は `set_`*propertyname* という名前で) 表示され、アセンブリのメタデータでは `SpecialName` としてマークされます。 C# コンパイラおよび Visual Basic コンパイラでは、この規則が自動的に適用されます。<xref:System.CLSCompliantAttribute> 属性を適用する必要はありません。  
   
--   プロパティの型は、プロパティ get アクセス操作子、および set アクセス操作子の最後の引数の戻り値の型です。 これらの型は CLS に準拠している必要があり、引数を参照によってプロパティに割り当てることはできません (つまり、マネージド ポインターにできません)。  
+- プロパティの型は、プロパティ get アクセス操作子、および set アクセス操作子の最後の引数の戻り値の型です。 これらの型は CLS に準拠している必要があり、引数を参照によってプロパティに割り当てることはできません (つまり、マネージド ポインターにできません)。  
   
--   プロパティに get アクセス操作子と set アクセス操作子の両方がある場合は、両方が仮想、両方が静的、または両方がインスタンスである必要があります。 C# コンパイラおよび Visual Basic コンパイラでは、この規則がプロパティ定義構文によって自動的に適用されます。  
+- プロパティに get アクセス操作子と set アクセス操作子の両方がある場合は、両方が仮想、両方が静的、または両方がインスタンスである必要があります。 C# コンパイラおよび Visual Basic コンパイラでは、この規則がプロパティ定義構文によって自動的に適用されます。  
   
 <a name="events"></a>   
 ### <a name="events"></a>イベント  
  イベントは、名前と型によって定義されます。 イベントの型は、イベントの表示に使用されるデリゲートです。 たとえば、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントは <xref:System.ResolveEventHandler> 型です。 イベント自体のほか、イベント名に基づく名前の 3 つのメソッドがイベントの実装を提供し、アセンブリのメタデータで `SpecialName` としてマークされています。  
   
--   イベント ハンドラーを追加するメソッド (`add_`*EventName*)。 たとえば、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントのイベント サブスクリプション メソッドの名前は `add_AssemblyResolve` です。  
+- イベント ハンドラーを追加するメソッド (`add_`*EventName*)。 たとえば、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントのイベント サブスクリプション メソッドの名前は `add_AssemblyResolve` です。  
   
--   イベント ハンドラーを削除するメソッド (`remove_`*EventName*)。 たとえば、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントの削除メソッドの名前は `remove_AssemblyResolve` です。  
+- イベント ハンドラーを削除するメソッド (`remove_`*EventName*)。 たとえば、<xref:System.AppDomain.AssemblyResolve?displayProperty=nameWithType> イベントの削除メソッドの名前は `remove_AssemblyResolve` です。  
   
--   イベントが発生したことを示すメソッド (`raise_`*EventName*)。  
+- イベントが発生したことを示すメソッド (`raise_`*EventName*)。  
   
 > [!NOTE]
 >  イベントに関する共通言語仕様の規則は、ほとんどが言語コンパイラによって実装され、コンポーネント開発者が意識せずに使用できます。  
@@ -433,11 +433,11 @@ ms.locfileid: "59313373"
 ### <a name="overloads"></a>Overloads  
  共通言語仕様では、次の要件がオーバーロード メンバーに適用されます。  
   
--   メンバーは、パラメーターの数および型に基づいてオーバーロードできます。 オーバーロードを区別するときに、呼び出し規約、戻り値の型、メソッドまたはそのパラメーターに適用されているカスタム修飾子、およびパラメーターが値渡しか参照渡しかは考慮されません。 例については、「[名前付け規則](#naming)」で、名前がスコープ内で一意であることを要求する要件のコードを参照してください。  
+- メンバーは、パラメーターの数および型に基づいてオーバーロードできます。 オーバーロードを区別するときに、呼び出し規約、戻り値の型、メソッドまたはそのパラメーターに適用されているカスタム修飾子、およびパラメーターが値渡しか参照渡しかは考慮されません。 例については、「[名前付け規則](#naming)」で、名前がスコープ内で一意であることを要求する要件のコードを参照してください。  
   
--   プロパティおよびメソッドのみオーバーロードできる。 フィールドとイベントはオーバーロードできません。  
+- プロパティおよびメソッドのみオーバーロードできる。 フィールドとイベントはオーバーロードできません。  
   
--   ジェネリック メソッドは、ジェネリック パラメーターの数に基づいてオーバーロードできます。  
+- ジェネリック メソッドは、ジェネリック パラメーターの数に基づいてオーバーロードできます。  
   
 > [!NOTE]
 >  `op_Explicit` 演算子および `op_Implicit` 演算子にはこの規則が適用されず、戻り値は、オーバーロード解決のためのメソッド シグネチャの一部として見なされません。 この 2 つの演算子は、そのパラメーターと戻り値の両方に基づいてオーバーロードできます。  
@@ -465,27 +465,27 @@ ms.locfileid: "59313373"
   
  CLS 準拠の属性のコンストラクターまたはプロパティは、次の型のみを公開できます。  
   
--   <xref:System.Boolean>  
+- <xref:System.Boolean>  
   
--   <xref:System.Byte>  
+- <xref:System.Byte>  
   
--   <xref:System.Char>  
+- <xref:System.Char>  
   
--   <xref:System.Double>  
+- <xref:System.Double>  
   
--   <xref:System.Int16>  
+- <xref:System.Int16>  
   
--   <xref:System.Int32>  
+- <xref:System.Int32>  
   
--   <xref:System.Int64>  
+- <xref:System.Int64>  
   
--   <xref:System.Single>  
+- <xref:System.Single>  
   
--   <xref:System.String>  
+- <xref:System.String>  
   
--   <xref:System.Type>  
+- <xref:System.Type>  
   
--   基になる型が <xref:System.Byte>、<xref:System.Int16>、<xref:System.Int32>、または <xref:System.Int64> である列挙体の型。  
+- 基になる型が <xref:System.Byte>、<xref:System.Int16>、<xref:System.Int32>、または <xref:System.Int64> である列挙体の型。  
   
  次の例では、`DescriptionAttribute` から派生する <xref:System.Attribute> クラスを定義します。 クラス コンストラクターには型 `Descriptor` のパラメーターがあるので、クラスは CLS に準拠していません。 C# コンパイラでは警告が出力されますが、コンパイルは正常に行われます。一方、Visual Basic コンパイラでは警告もエラーも出力されません。  
   
@@ -500,9 +500,9 @@ ms.locfileid: "59313373"
   
  コンポーネント開発者は、次の 2 とおりの目的で <xref:System.CLSCompliantAttribute> 属性を使用できます。  
   
--   コンポーネントによって公開されたパブリック インターフェイスの CLS 準拠部分と CLS 非準拠部分を定義する。 この属性を使用して特定のプログラム要素を CLS 準拠としてマークすると、.NET Framework を対象とするすべてのツールおよび言語から、これらの要素に必ずアクセスできるようになります。  
+- コンポーネントによって公開されたパブリック インターフェイスの CLS 準拠部分と CLS 非準拠部分を定義する。 この属性を使用して特定のプログラム要素を CLS 準拠としてマークすると、.NET Framework を対象とするすべてのツールおよび言語から、これらの要素に必ずアクセスできるようになります。  
   
--   コンポーネント ライブラリのパブリック インターフェイスが CLS に準拠するプログラム要素のみを公開するように保証する。 要素が CLS 非準拠の場合は、通常、警告が表示されます。  
+- コンポーネント ライブラリのパブリック インターフェイスが CLS に準拠するプログラム要素のみを公開するように保証する。 要素が CLS 非準拠の場合は、通常、警告が表示されます。  
   
 > [!WARNING]
 >  言語コンパイラでは、<xref:System.CLSCompliantAttribute> 属性が使用されているかどうかに関係なく、CLS 準拠の規則が適用される場合があります。 たとえば、インターフェイスの静的メンバーを定義すると CLS の規則に違反します。 この点に関して、インターフェイスで `static` メンバー (C# の場合) または `Shared` メンバー (Visual Basic の場合) を定義すると、C# と Visual Basic の両方のコンパイラでエラー メッセージが表示され、アプリはコンパイルされません。  

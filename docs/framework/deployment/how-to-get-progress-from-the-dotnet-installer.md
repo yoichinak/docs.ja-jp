@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8c070f043d306cfc67cc2a05cb474d92c1d382ae
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57355637"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64750427"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>方法: .NET Framework 4.5 インストーラーの進行状況を表示する
 
@@ -40,13 +40,13 @@ ms.locfileid: "57355637"
 
 - **終了コード**。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 再頒布可能プログラムを呼び出すためのコマンドからの以下の終了コードは、セットアップが成功または失敗したことを示します。
 
-    - 0: セットアップは、正常に完了しました。
+  - 0: セットアップは、正常に完了しました。
 
-    - 3010: セットアップは正常に完了しました。システムの再起動が必要です。
+  - 3010: セットアップは正常に完了しました。システムの再起動が必要です。
 
-    - 1602: セットアップは取り消されました。
+  - 1602: セットアップは取り消されました。
 
-    - 他のすべてのコード: セットアップでエラーが発生しました。詳細については、%temp% に作成されるログ ファイルを調べてください。
+  - 他のすべてのコード: セットアップでエラーが発生しました。詳細については、%temp% に作成されるログ ファイルを調べてください。
 
 - **セットアップの取り消し**。 `Abort` メソッドを使用して MMIO セクションの `m_downloadAbort` フラグと `m_ installAbort` フラグを設定することで、いつでもセットアップを取り消すことができます。
 

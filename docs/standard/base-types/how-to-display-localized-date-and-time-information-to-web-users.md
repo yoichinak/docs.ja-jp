@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e97bc095332e626d79561ab5fdc7bad531e3ba31
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59320159"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633894"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>方法: ローカライズされた日付/時刻情報を Web ユーザーに表示する
 Web ページは世界中で表示されるため、ユーザーとの通信時の日時値の解析処理は、(通常は Web サーバーのローカル カルチャの形式である) 既定の形式には依存しないようにする必要があります。 代わりに、ユーザーが入力する日時文字列を処理する Web フォームで、ユーザーの優先カルチャで文字列が解析されるようにする必要があります。 同様に、日時データは、ユーザーのカルチャに準拠する形式でユーザーに表示されるようにする必要があります。 このトピックでは、その方法について説明します。  
@@ -35,9 +35,9 @@ Web ページは世界中で表示されるため、ユーザーとの通信時�
   
 4. 変換の試行に <xref:System.DateTime> または <xref:System.DateTimeOffset> 型の `TryParse` または `Parse` メソッドのいずれかを呼び出します。 `provider` パラメーターを指定して、`TryParse` または `Parse` メソッドのオーバー ロードを使用し、次のいずれかを渡します。  
   
-    -   手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクト。  
+    - 手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクト。  
   
-    -   手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクトの <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> プロパティによって返された <xref:System.Globalization.DateTimeFormatInfo> オブジェクト。  
+    - 手順 3 で作成した <xref:System.Globalization.CultureInfo> オブジェクトの <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> プロパティによって返された <xref:System.Globalization.DateTimeFormatInfo> オブジェクト。  
   
 5. 変換に失敗する場合、<xref:System.Web.HttpRequest.UserLanguages%2A> プロパティから返された文字列の配列内のそれぞれの残りの要素に対して、手順 2 から 4 を繰り返します。  
   
@@ -65,9 +65,9 @@ Web ページは世界中で表示されるため、ユーザーとの通信時�
   
 10. <xref:System.DateTime.Parse%2A?displayProperty=nameWithType> または <xref:System.DateTime.TryParse%28System.String%2CSystem.IFormatProvider%2CSystem.Globalization.DateTimeStyles%2CSystem.DateTime%40%29?displayProperty=nameWithType> メソッドのいずれかを呼び出し、ユーザーの要求の日時を <xref:System.DateTime> 値に変換します。 `provider` パラメーターを指定してメソッドのオーバー ロードを使用し、次のいずれかを渡します。  
   
-    -   手順 8 で作成した <xref:System.Globalization.CultureInfo> オブジェクト。  
+    - 手順 8 で作成した <xref:System.Globalization.CultureInfo> オブジェクト。  
   
-    -   手順 8 で作成した <xref:System.Globalization.CultureInfo> オブジェクトの <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> プロパティによって返された <xref:System.Globalization.DateTimeFormatInfo> オブジェクト。  
+    - 手順 8 で作成した <xref:System.Globalization.CultureInfo> オブジェクトの <xref:System.Globalization.CultureInfo.DateTimeFormat%2A> プロパティによって返された <xref:System.Globalization.DateTimeFormatInfo> オブジェクト。  
   
 11. 手順 10 の解析操作に失敗した場合は、手順 13 に進みます。 それ以外の場合、<xref:System.UInt32.Parse%28System.String%29?displayProperty=nameWithType> メソッドを呼び出し、文字列形式のユーザーのタイム ゾーン オフセットを整数に変換します。  
   
@@ -100,13 +100,13 @@ Web ページは世界中で表示されるため、ユーザーとの通信時�
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  コードをコンパイルするには、コードビハインドなしに [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web ページを作成します。 次いで、すべての既存のコードが置換されるよう、例を Web ページにコピーします。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web ページには、次のコントロールが含まれている必要があります。  
   
--   <xref:System.Web.UI.WebControls.Label> コントロール。これはコードで参照されません。 その <xref:System.Web.UI.WebControls.TextBox.Text%2A> プロパティを "Enter a Number:\(数字を入力:\)" に設定します。  
+- <xref:System.Web.UI.WebControls.Label> コントロール。これはコードで参照されません。 その <xref:System.Web.UI.WebControls.TextBox.Text%2A> プロパティを "Enter a Number:\(数字を入力:\)" に設定します。  
   
--   `DateString` という名前の <xref:System.Web.UI.WebControls.TextBox> コントロール。  
+- `DateString` という名前の <xref:System.Web.UI.WebControls.TextBox> コントロール。  
   
--   `OKButton` という名前の <xref:System.Web.UI.WebControls.Button> コントロール。 その <xref:System.Web.UI.WebControls.Button.Text%2A> プロパティを "OK" に設定します。  
+- `OKButton` という名前の <xref:System.Web.UI.WebControls.Button> コントロール。 その <xref:System.Web.UI.WebControls.Button.Text%2A> プロパティを "OK" に設定します。  
   
--   `DateInfo` という名前の <xref:System.Web.UI.WebControls.HiddenField> コントロール。  
+- `DateInfo` という名前の <xref:System.Web.UI.WebControls.HiddenField> コントロール。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  ユーザーが HTML ストリームにスクリプトを挿入する行為を防ぐために、サーバー応答でユーザー入力がエコーのように返されないようにしてください。 代わりに、<xref:System.Web.HttpServerUtility.HtmlEncode%2A?displayProperty=nameWithType> メソッドを利用して暗号化されるようにします。  

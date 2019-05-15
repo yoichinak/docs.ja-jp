@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 9c65cdf7-660c-409f-89ea-59d7ec8e127c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fd75bd14b2393d9b316d90070894f214dfa60c88
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: d0c9447e53a874da856eb59932ec3871a9a1371d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344378"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64654425"
 ---
 # <a name="walkthrough-using-dataflow-in-a-windows-forms-application"></a>チュートリアル: Windows フォーム アプリケーションでのデータフローの使用
 このドキュメントでは、Windows フォーム アプリケーションでイメージ処理を実行する、データフロー ブロックのネットワークを作成する方法を説明します。  
@@ -29,13 +29,13 @@ ms.locfileid: "59344378"
 ## <a name="sections"></a>セクション  
  このチュートリアルは、次のセクションで構成されています。  
   
--   [Windows フォーム アプリケーションの作成](#winforms)  
+- [Windows フォーム アプリケーションの作成](#winforms)  
   
--   [データフロー ネットワークの作成](#network)  
+- [データフロー ネットワークの作成](#network)  
   
--   [ユーザー インターフェイスへのデータフロー ネットワークの接続](#ui)  
+- [ユーザー インターフェイスへのデータフロー ネットワークの接続](#ui)  
   
--   [コード例全体](#complete)  
+- [コード例全体](#complete)  
   
 <a name="winforms"></a>   
 ## <a name="creating-the-windows-forms-application"></a>Windows フォーム アプリケーションの作成  

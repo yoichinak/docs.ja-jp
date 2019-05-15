@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b81212-6511-49ed-a8f1-ff080415312f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b7ccee788a00e56da16d1e78597815553d3c6212
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 788229053f5702b44c6ac351b59ad1c464e4e133
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54678266"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64633638"
 ---
 # <a name="quantifiers-in-regular-expressions"></a>量指定子 (正規表現)
 量指定子は、一致と見なされるために入力中に存在する必要がある文字、グループ、または文字クラスの出現数を指定します。  次の表に、.NET でサポートされている量指定子の一覧を示します。  
@@ -228,11 +228,11 @@ ms.locfileid: "54678266"
 ## <a name="greedy-and-lazy-quantifiers"></a>最長一致と最短一致の量指定子  
  いくつかの量指定子には次の 2 つのバージョンがあります。  
   
--   最長一致バージョン。  
+- 最長一致バージョン。  
   
      最長一致の量指定子は、要素をできるだけ多く一致させようとします。  
   
--   最短一致バージョン。  
+- 最短一致バージョン。  
   
      最短一致の量指定子は、要素をできるだけ少なく一致させようとします。 最長一致の量指定子に `?` を追加するだけで最短一致の量指定子にすることができます。  
   

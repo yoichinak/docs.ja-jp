@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 649f1342-766b-49e6-a90d-5b019a751e11
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9ee17426e3ac8d5351490276a8c71cdfe996eb1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7c500b9343bdfa3481e8e5d9b938ebec8a323bdb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341076"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64641038"
 ---
 # <a name="side-by-side-execution-in-the-net-framework"></a>.NET Framework での side-by-side 実行
 side-by-side 実行は、アプリケーションまたはコンポーネントの複数のバージョンを同じコンピューターで実行する機能です。 共通言語ランタイムの複数のバージョン、および 1 つの共通言語ランタイムを使用するアプリケーションとコンポーネントの複数のバージョンを同じコンピューターで同時に実行できます。  
@@ -33,15 +33,15 @@ side-by-side 実行は、アプリケーションまたはコンポーネント�
   
  side-by-side 実行と .NET Framework によって、DLL の競合を防ぐ次の機能が得られます。  
   
--   厳密な名前付きアセンブリ  
+- 厳密な名前付きアセンブリ  
   
      side-by-side 実行機能は、厳密な名前付きアセンブリを使用して、型情報をアセンブリの特定のバージョンにバインドします。 これによって、アプリケーションまたはコンポーネントが、アセンブリの無効なバージョンをバインドするのを防げます。 また、厳密な名前付きアセンブリによって、1 つのファイルの複数のバージョンが同じコンピューター上に存在することが可能で、アプリケーションはこれらを使用できます。 詳細については、「[厳密な名前付きアセンブリ](../../../docs/framework/app-domains/strong-named-assemblies.md)」を参照してください。  
   
--   バージョンを認識するコード ストレージ  
+- バージョンを認識するコード ストレージ  
   
      .NET Framework のグローバル アセンブリ キャッシュには、バージョンを認識するコード ストレージが用意されています。 グローバル アセンブリ キャッシュは、コンピューター全体にわたるコード キャッシュで、.NET Framework がインストールされているすべてのコンピューターに存在します。 グローバル アセンブリ キャッシュは、バージョン、カルチャ、発行者の情報に基づいてアセンブリを格納し、コンポーネントおよびアプリケーションの複数バージョンをサポートします。 詳細については、「[グローバル アセンブリ キャッシュ](../../../docs/framework/app-domains/gac.md)」を参照してください。  
   
--   分離。  
+- 分離。  
   
      .NET Framework を使用すると、分離して実行できるアプリケーションとコンポーネントを作成できます。 分離は、side-by-side 実行に欠くことのできない構成要素です。 分離には、使用しているリソースを認識し、アプリケーションまたはコンポーネントの複数のバージョンでこれを確実に共有する処理も含まれます。 また、分離には、バージョンに固有の方法でファイルを格納する方法も含まれます。 分離の詳細については、「[Guidelines for Creating Components for Side-by-Side Execution](../../../docs/framework/deployment/guidelines-for-creating-components-for-side-by-side-execution.md)」(side-by-side 実行用のコンポーネントを作成するためのガイドライン) を参照してください。  
   
@@ -66,9 +66,9 @@ side-by-side 実行は、アプリケーションまたはコンポーネント�
 ## <a name="determining-which-version-of-the-runtime-to-load"></a>読み込むランタイム バージョンの決定  
  共通言語ランタイムは、次の情報を使用して、アプリケーションのために読み込むランタイム バージョンを決定します。  
   
--   利用できるランタイム バージョン  
+- 利用できるランタイム バージョン  
   
--   アプリケーションがサポートするランタイム バージョン  
+- アプリケーションがサポートするランタイム バージョン  
   
 ### <a name="supported-runtime-versions"></a>サポートされているランタイム バージョン  
  ランタイムは、アプリケーション構成ファイルとポータブル実行可能 (PE) ファイル ヘッダーを使用して、アプリケーションがサポートするランタイムのバージョンを決定します。 アプリケーション構成ファイルが存在しない場合、ランタイムはアプリケーションの PE ファイル ヘッダーで指定されているランタイム バージョンを読み込みます。ただし、このバージョンが利用できる場合です。  

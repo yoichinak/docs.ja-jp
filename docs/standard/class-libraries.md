@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: a67484c3-fe92-44d8-8fa3-36fa2071d880
-ms.openlocfilehash: d5b067f299d96b687d44b83e431d89667f2d84f8
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: c918883d8620513749826680f9f1b6d89ae87585
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56745769"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664602"
 ---
 # <a name="net-class-libraries"></a>.NET クラス ライブラリ
 
@@ -19,9 +19,9 @@ ms.locfileid: "56745769"
 
 次の 3 種類のクラス ライブラリを使用できます。
 
-*   **プラットフォーム固有** クラス ライブラリは、特定のプラットフォーム (たとえば、.NET Framework、Xamarin iOS) のすべての API にアクセスできますが、そのプラットフォームを対象とするアプリケーションとライブラリでのみ使用できます。
-*   **ポータブル** クラス ライブラリは、API のサブセットへのアクセスがあり、複数のプラットフォームを対象とするアプリケーションとライブラリで使用できます。
-*   **.NET Standard** クラス ライブラリは、プラットフォーム固有のライブラリとポータブル ライブラリの概念を両方の長所を持つ 1 つのモデルに統合しています。
+* **プラットフォーム固有** クラス ライブラリは、特定のプラットフォーム (たとえば、.NET Framework、Xamarin iOS) のすべての API にアクセスできますが、そのプラットフォームを対象とするアプリケーションとライブラリでのみ使用できます。
+* **ポータブル** クラス ライブラリは、API のサブセットへのアクセスがあり、複数のプラットフォームを対象とするアプリケーションとライブラリで使用できます。
+* **.NET Standard** クラス ライブラリは、プラットフォーム固有のライブラリとポータブル ライブラリの概念を両方の長所を持つ 1 つのモデルに統合しています。
 
 ## <a name="platform-specific-class-libraries"></a>プラットフォーム固有のクラス ライブラリ
 

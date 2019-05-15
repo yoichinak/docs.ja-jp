@@ -17,21 +17,21 @@ helpviewer_keywords:
 ms.assetid: d1898229-cd40-426e-a275-f3eb65fbc79f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4104ddba1942f9cb9bd860d53dc54968de5af891
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 23a05279615a589bca7bb61507caf8dcc3630020
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59151269"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64648708"
 ---
 # <a name="importing-a-type-library-as-an-assembly"></a>タイプ ライブラリのアセンブリとしてのインポート
 通常、COM 型の定義は、タイプ ライブラリに存在します。 これに対し、CLS 準拠のコンパイラはアセンブリ内に型のメタデータを生成します。 型情報の 2 つのソースは大きく異なります。 このトピックでは、タイプ ライブラリからメタデータを生成する方法について説明します。 結果のアセンブリは相互運用機能アセンブリと呼ばれ、含まれる型情報により、.NET Framework アプリケーションで COM 型を使用できます。  
   
  この型情報をアプリケーションに使用できるようにする 2 つの方法があります。  
   
--   デザイン時専用の相互運用アセンブリの使用:[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、相互運用機能アセンブリから実行可能ファイルに型情報を埋め込むようにコンパイラに指示できます。 コンパイラは、アプリケーションで使用する型情報のみを埋め込みます。 アプリケーションで相互運用機能アセンブリを配置する必要はありません。 この手法を使用することをお勧めします。  
+- デザイン時専用の相互運用アセンブリの使用:[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、相互運用機能アセンブリから実行可能ファイルに型情報を埋め込むようにコンパイラに指示できます。 コンパイラは、アプリケーションで使用する型情報のみを埋め込みます。 アプリケーションで相互運用機能アセンブリを配置する必要はありません。 この手法を使用することをお勧めします。  
   
--   相互運用機能アセンブリの展開:相互運用機能アセンブリへの標準の参照を作成できます。 この場合、アプリケーションで相互運用機能アセンブリを展開する必要があります。 この手法を採用し、プライベートの COM コンポーネントを使用しない場合は、常に、マネージド コードに組み込む予定の COM コンポーネントの作成者によって発行されたプライマリ相互運用機能アセンブリ (PIA) を参照します。 プライマリ相互運用機能アセンブリの生成と使用の詳細については、「[プライマリ相互運用機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))」を参照してください。  
+- 相互運用機能アセンブリの展開:相互運用機能アセンブリへの標準の参照を作成できます。 この場合、アプリケーションで相互運用機能アセンブリを展開する必要があります。 この手法を採用し、プライベートの COM コンポーネントを使用しない場合は、常に、マネージド コードに組み込む予定の COM コンポーネントの作成者によって発行されたプライマリ相互運用機能アセンブリ (PIA) を参照します。 プライマリ相互運用機能アセンブリの生成と使用の詳細については、「[プライマリ相互運用機能](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/aax7sdch(v=vs.100))」を参照してください。  
   
  設計時専用の相互運用機能アセンブリを使用する場合は、COM コンポーネントの作成者によってパブリッシュされたプライマリ相互運用機能アセンブリから型情報を埋め込むことができます。 ただし、アプリケーションを使用してプライマリ相互運用機能アセンブリを展開する必要はありません。  
   
@@ -42,29 +42,29 @@ ms.locfileid: "59151269"
   
  対象とする COM 型の実装を格納するタイプ ライブラリを特定した後は、型のメタデータを含む相互運用機能アセンブリを生成するための次のオプションがあります。  
   
--   Visual Studio  
+- Visual Studio  
   
      Visual Studio は、タイプ ライブラリ内の COM 型をアセンブリ内のメタデータに自動的に変換します。 手順については、「[方法:タイプ ライブラリへの参照を追加する](../../../docs/framework/interop/how-to-add-references-to-type-libraries.md)」にあります。  
   
--   [タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
+- [タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md)  
   
      タイプ ライブラリ インポーターは、結果の相互運用機能のファイルのメタデータを調整するコマンド ライン オプションを提供し、既存のタイプ ライブラリから型をインポートし、相互運用機能アセンブリと名前空間を生成します。 手順については、「[方法:相互運用機能アセンブリをタイプ ライブラリから生成する](../../../docs/framework/interop/how-to-generate-interop-assemblies-from-type-libraries.md)」をご覧ください。  
   
--   <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> クラス  
+- <xref:System.Runtime.InteropServices.TypeLibConverter?displayProperty=nameWithType> クラス  
   
      このクラスは、コクラスとタイプ ライブラリ内のインターフェイスをアセンブリ内のメタデータに変換するメソッドを提供します。 これは Tlbimp.exe と同じメタデータ出力を生成します。 ただし、Tlbimp.exe とは異なり、<xref:System.Runtime.InteropServices.TypeLibConverter> クラスは、メモリ内のタイプ ライブラリをメタデータに変換できます。  
   
--   カスタム ラッパー  
+- カスタム ラッパー  
   
      タイプ ライブラリが使用できないか正しくない場合、1 つのオプションは、マネージド ソース コードでクラスまたはインターフェイスの重複する定義を作成することです。 その後で、アセンブリ内のメタデータを生成するためにランタイムを対象とするコンパイラでソース コードをコンパイルします。  
   
      COM 型を手動で定義するには、次の項目へのアクセスが必要です。  
   
-    -   定義されているコクラスとインターフェイスの正確な説明。  
+    - 定義されているコクラスとインターフェイスの正確な説明。  
   
-    -   C# コンパイラなど、適切な .NET Framework のクラス定義を生成できるコンパイラ。  
+    - C# コンパイラなど、適切な .NET Framework のクラス定義を生成できるコンパイラ。  
   
-    -   タイプ ライブラリからアセンブリへの変換規則の知識。  
+    - タイプ ライブラリからアセンブリへの変換規則の知識。  
   
      カスタム ラッパーの作成は、高度な手法です。 カスタム ラッパーを生成する方法の詳細については、「[標準ラッパーのカスタマイズ](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/h7hx9abd(v=vs.100))」を参照してください。  
   

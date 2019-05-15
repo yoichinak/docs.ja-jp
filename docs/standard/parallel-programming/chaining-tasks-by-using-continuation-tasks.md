@@ -10,33 +10,33 @@ helpviewer_keywords:
 ms.assetid: 0b45e9a2-de28-46ce-8212-1817280ed42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b924f281a2a543ff98e9ae681a6100150898f240
-ms.sourcegitcommit: 30e2fe5cc4165aa6dde7218ec80a13def3255e98
+ms.openlocfilehash: 1f88308dcea250c02d9c6cd7f326570f8bc0133c
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56219907"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64630120"
 ---
 # <a name="chaining-tasks-by-using-continuation-tasks"></a>継続タスクを使用したタスクの連結
 非同期プログラミングでは、非同期操作で完了時に 2 番目の操作を呼び出してデータを渡すのが一般的です。 これまで、継続はコールバック メソッドを使用して行っていました。 タスク並列ライブラリでは、 *継続タスク*に同じ機能が用意されています。 継続タスク (単に "継続" とも呼ばれます) とは、別のタスク (" *継続元*" と呼ばれます) が終了したときにそのタスクによって呼び出される非同期タスクのことです。  
   
  継続は比較的簡単に使用できますが、強力な機能と柔軟性を備えています。 たとえば、次のように操作できます。  
   
--   継続元のデータを継続に渡します。  
+- 継続元のデータを継続に渡します。  
   
--   継続を呼び出す場合、呼び出さない場合についての正確な条件を指定します。  
+- 継続を呼び出す場合、呼び出さない場合についての正確な条件を指定します。  
   
--   継続が開始される前、または継続の実行中に継続を取り消します。  
+- 継続が開始される前、または継続の実行中に継続を取り消します。  
   
--   継続をスケジュールする方法についてのヒントを提供します。  
+- 継続をスケジュールする方法についてのヒントを提供します。  
   
--   同じ継続元から複数の継続を呼び出します。  
+- 同じ継続元から複数の継続を呼び出します。  
   
--   複数の継続元のすべてまたはいずれか 1 つが完了したときに 1 つの継続を呼び出します。  
+- 複数の継続元のすべてまたはいずれか 1 つが完了したときに 1 つの継続を呼び出します。  
   
--   任意の長さで連続して継続を実行します。  
+- 任意の長さで連続して継続を実行します。  
   
--   継続元によってスローされた例外を処理するために継続を使用します。  
+- 継続元によってスローされた例外を処理するために継続を使用します。  
   
 ## <a name="about-continuations"></a>継続について  
  継続とは、 <xref:System.Threading.Tasks.TaskStatus.WaitingForActivation> 状態で作成されるタスクです。 継続は、その継続元タスクが完了すると自動的に開始されます。 ユーザー コード内の継続で <xref:System.Threading.Tasks.Task.Start%2A?displayProperty=nameWithType> を呼び出すと、 <xref:System.InvalidOperationException?displayProperty=nameWithType> 例外がスローされます。  
@@ -85,11 +85,11 @@ ms.locfileid: "56219907"
 ## <a name="canceling-a-continuation"></a>継続のキャンセル  
  継続の <xref:System.Threading.Tasks.Task.Status%2A?displayProperty=nameWithType> プロパティが <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状態になるのは、次のような場合です。  
   
--   キャンセル要求への応答として <xref:System.OperationCanceledException> 例外をスローした場合。 他のタスクと同様に、例外には継続に渡されたのと同じトークンが含まれ、連携によるキャンセルの受信確認として扱われます。  
+- キャンセル要求への応答として <xref:System.OperationCanceledException> 例外をスローした場合。 他のタスクと同様に、例外には継続に渡されたのと同じトークンが含まれ、連携によるキャンセルの受信確認として扱われます。  
   
--   <xref:System.Threading.CancellationToken?displayProperty=nameWithType> プロパティが <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> である `true`が継続に渡された場合。 この場合、継続は開始されずに、 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状態に遷移します。  
+- <xref:System.Threading.CancellationToken?displayProperty=nameWithType> プロパティが <xref:System.Threading.CancellationToken.IsCancellationRequested%2A> である `true`が継続に渡された場合。 この場合、継続は開始されずに、 <xref:System.Threading.Tasks.TaskStatus.Canceled?displayProperty=nameWithType> 状態に遷移します。  
   
--   継続の <xref:System.Threading.Tasks.TaskContinuationOptions> 引数により設定された条件が満たされないために、継続が実行されない場合。 たとえば、継続元が <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 状態になった場合、 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> オプションが渡された継続は <xref:System.Threading.Tasks.TaskStatus.Canceled> 状態に遷移し、実行されません。  
+- 継続の <xref:System.Threading.Tasks.TaskContinuationOptions> 引数により設定された条件が満たされないために、継続が実行されない場合。 たとえば、継続元が <xref:System.Threading.Tasks.TaskStatus.Faulted?displayProperty=nameWithType> 状態になった場合、 <xref:System.Threading.Tasks.TaskContinuationOptions.NotOnFaulted?displayProperty=nameWithType> オプションが渡された継続は <xref:System.Threading.Tasks.TaskStatus.Canceled> 状態に遷移し、実行されません。  
   
  タスクとその継続が同じ論理的操作の 2 つの部分を表す場合は、次の例に示すように、同じキャンセル トークンを両方のタスクに渡すことができます。 これは、33 で割り切れる整数のリストを生成する継続元からなります。このリストは継続に渡されます。 次に継続により、このリストが表示されます。 継続元と継続の両方は、ランダムな間隔で定期的に一時停止します。 さらに、 <xref:System.Threading.Timer?displayProperty=nameWithType> オブジェクトを使用して、5 秒のタイムアウト間隔の経過後に `Elapsed` メソッドが実行されます。 この例では、<xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドが呼び出され、これにより現在実行中のタスクが <xref:System.Threading.CancellationToken.ThrowIfCancellationRequested%2A?displayProperty=nameWithType> メソッドを呼び出します。 継続元またはその継続の実行時に <xref:System.Threading.CancellationTokenSource.Cancel%2A?displayProperty=nameWithType> メソッドが呼び出されるかどうかは、ランダムに生成される一時停止の期間に基づきます。 継続元が取り消された場合、継続は開始されません。 継続元が取り消されない場合は、継続を取り消すためにそのトークンを引き続き使用できます。  
   
@@ -133,12 +133,12 @@ ms.locfileid: "56219907"
 ## <a name="handling-exceptions-thrown-from-continuations"></a>継続からスローされた例外の処理  
  継続元と継続の関係は、親と子の関係とは異なります。 継続によってスローされた例外は継続元へは反映されません。 したがって、継続によってスローされた例外は、他のタスクでの処理と同様、次のように処理します。  
   
--   <xref:System.Threading.Tasks.Task.Wait%2A>メソッド、 <xref:System.Threading.Tasks.Task.WaitAll%2A>メソッド、または <xref:System.Threading.Tasks.Task.WaitAny%2A> メソッドを使用するか、ジェネリック メソッドを使用して、継続での待機を指定します。 次の例に示すように、継続元とその継続は、同じ `try` ステートメントで待機できます。  
+- <xref:System.Threading.Tasks.Task.Wait%2A>メソッド、 <xref:System.Threading.Tasks.Task.WaitAll%2A>メソッド、または <xref:System.Threading.Tasks.Task.WaitAny%2A> メソッドを使用するか、ジェネリック メソッドを使用して、継続での待機を指定します。 次の例に示すように、継続元とその継続は、同じ `try` ステートメントで待機できます。  
   
      [!code-csharp[TPL_Continuations#6](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception1.cs#6)]
      [!code-vb[TPL_Continuations#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception1.vb#6)]  
   
--   最初の継続の <xref:System.Threading.Tasks.Task.Exception%2A> プロパティを確認するには、2 番目の継続を使用します。 次の例でタスクは、存在しないファイルからの読み取りを試行します。 その後、継続により、継続元タスクの例外に関する情報が表示されます。  
+- 最初の継続の <xref:System.Threading.Tasks.Task.Exception%2A> プロパティを確認するには、2 番目の継続を使用します。 次の例でタスクは、存在しないファイルからの読み取りを試行します。 その後、継続により、継続元タスクの例外に関する情報が表示されます。  
   
      [!code-csharp[TPL_Continuations#4](../../../samples/snippets/csharp/VS_Snippets_Misc/tpl_continuations/cs/exception2.cs#4)]
      [!code-vb[TPL_Continuations#4](../../../samples/snippets/visualbasic/VS_Snippets_Misc/tpl_continuations/vb/exception2.vb#4)]  
@@ -150,7 +150,7 @@ ms.locfileid: "56219907"
   
      詳細については、「[例外処理](../../../docs/standard/parallel-programming/exception-handling-task-parallel-library.md)」を参照してください。  
   
--   アタッチされた子タスクで、 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> オプションを使用して継続が作成された場合、アタッチされているその他の子と同様、その例外は親によって呼び出し元のスレッドに反映されます。 詳細については、「[アタッチされた子タスクとデタッチされた子タスク](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)」を参照してください。  
+- アタッチされた子タスクで、 <xref:System.Threading.Tasks.TaskContinuationOptions.AttachedToParent?displayProperty=nameWithType> オプションを使用して継続が作成された場合、アタッチされているその他の子と同様、その例外は親によって呼び出し元のスレッドに反映されます。 詳細については、「[アタッチされた子タスクとデタッチされた子タスク](../../../docs/standard/parallel-programming/attached-and-detached-child-tasks.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

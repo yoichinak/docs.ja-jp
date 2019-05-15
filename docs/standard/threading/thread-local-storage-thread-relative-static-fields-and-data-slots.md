@@ -10,19 +10,19 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 69107cd7f1f84fa402479bb8a76c4b9b8a825d69
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54718261"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64644893"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット
 1 つのスレッドとアプリケーション ドメインに固有のデータを格納するには、マネージド スレッド ローカル ストレージ (TLS: Thread Local Storage) を使用します。 .NET Framework は、マネージド TLS の使用に関して、スレッド相対静的フィールドとデータ スロットという 2 つの機構を備えています。  
   
--   コンパイル時に要件を正確に予測できる場合は、スレッド相対静的フィールド (Visual Basic ではスレッド相対 `Shared` フィールド) を使用します。 スレッド相対静的フィールドは、最適なパフォーマンスを提供します。 また、コンパイル時に型チェックを利用することもできます。  
+- コンパイル時に要件を正確に予測できる場合は、スレッド相対静的フィールド (Visual Basic ではスレッド相対 `Shared` フィールド) を使用します。 スレッド相対静的フィールドは、最適なパフォーマンスを提供します。 また、コンパイル時に型チェックを利用することもできます。  
   
--   実行時にならないと実際の要件がわからない場合は、データ スロットを使用します。 データ スロットは、スレッド相対静的フィールドと比べると低速で使いにくく、データは <xref:System.Object> 型として格納されるため、使用前に適切な型にキャストする必要があります。  
+- 実行時にならないと実際の要件がわからない場合は、データ スロットを使用します。 データ スロットは、スレッド相対静的フィールドと比べると低速で使いにくく、データは <xref:System.Object> 型として格納されるため、使用前に適切な型にキャストする必要があります。  
   
  アンマネージ C++ では、`TlsAlloc` を使用してスロットを動的に割り当て、`__declspec(thread)` を使用して、変数をスレッド相対ストレージに割り当てることを宣言します。 スレッド相対静的フィールドおよびデータ スロットには、この動作のマネージド バージョンが用意されています。  
   
@@ -31,9 +31,9 @@ ms.locfileid: "54718261"
 ## <a name="uniqueness-of-data-in-managed-tls"></a>マネージド TLS でのデータの一意性  
  スレッド相対静的フィールドとデータ スロットのどちらを使用しても、マネージド TLS でのデータはスレッドとアプリケーション ドメインの組み合わせに対して一意になります。  
   
--   アプリケーション ドメインでは、両方のスレッドが同じフィールドまたはスロットを使用していたとしても、一方のスレッドが、もう一方のスレッドからのデータを変更することはできません。  
+- アプリケーション ドメインでは、両方のスレッドが同じフィールドまたはスロットを使用していたとしても、一方のスレッドが、もう一方のスレッドからのデータを変更することはできません。  
   
--   あるスレッドが、複数のアプリケーション ドメインから 1 つのフィールドまたはスロットにアクセスする場合、アプリケーション ドメインごとに個別の値が維持されます。  
+- あるスレッドが、複数のアプリケーション ドメインから 1 つのフィールドまたはスロットにアクセスする場合、アプリケーション ドメインごとに個別の値が維持されます。  
   
  たとえば、スレッドがスレッド相対静的フィールドの値を設定し、別のアプリケーション ドメインに移動して、設定したフィールドの値を取得した場合、2 番目のアプリケーション ドメインで取得した値は、最初のアプリケーション ドメインでの値とは異なります。 2 番目のアプリケーション ドメインのフィールドに新しい値を設定しても、最初のアプリケーション ドメインにあるフィールドの値には影響しません。  
   
@@ -49,9 +49,9 @@ ms.locfileid: "54718261"
 ## <a name="data-slots"></a>データ スロット  
  .NET Framework には、スレッドとアプリケーション ドメインの組み合わせに対して一意の、動的なデータ スロットが用意されています。 このデータ スロットには 2 つのタイプがあります。名前付きスロットと名前のないスロットです。 いずれも、<xref:System.LocalDataStoreSlot> 構造体を使用して実装されます。  
   
--   名前付きデータ スロットを作成するには、<xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> メソッドを使用します。 既存の名前付きスロットへの参照を取得するには、その名前を <xref:System.Threading.Thread.GetNamedDataSlot%2A> メソッドに渡します。  
+- 名前付きデータ スロットを作成するには、<xref:System.Threading.Thread.AllocateNamedDataSlot%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Threading.Thread.GetNamedDataSlot%2A?displayProperty=nameWithType> メソッドを使用します。 既存の名前付きスロットへの参照を取得するには、その名前を <xref:System.Threading.Thread.GetNamedDataSlot%2A> メソッドに渡します。  
   
--   名前のないデータ スロットを作成するには、<xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> メソッドを使用します。  
+- 名前のないデータ スロットを作成するには、<xref:System.Threading.Thread.AllocateDataSlot%2A?displayProperty=nameWithType> メソッドを使用します。  
   
  名前付きスロットと名前のないスロットはいずれも、<xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> メソッドと <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> メソッドを使用して、スロット内のデータの設定や取得を行います。 これらは静的メソッドであり、現在実行中であるスレッドのデータを操作する役割を果たします。  
   

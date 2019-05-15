@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 23975f88-e0af-4b88-93de-9e20e11880ad
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fd3b1cacc73743622aaaad72bfd4edb26dc26390
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 3f2be5881a7f663b13dd13ffc0e0faf88afd7efc
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54740477"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64647962"
 ---
 # <a name="attribute-and-namespace-node-navigation-using-xpathnavigator"></a>XPathNavigator を使用する属性と名前空間のナビゲーション
 <xref:System.Xml.XPath.XPathNavigator> クラスは、2 セットの移動メソッドを提供します。「[XPathNavigator を使用するノード セットのナビゲーション](../../../../docs/standard/data/xml/node-set-navigation-using-xpathnavigator.md)」に記載されている最初のセットは <xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内の*ノード セット*の移動に使用されます。 ここに記載されている 2 つ目のセットは、<xref:System.Xml.XPath.XPathDocument> または <xref:System.Xml.XmlDocument> オブジェクト内の*属性ノードと名前空間ノード*の移動に使用されます。  
@@ -22,11 +22,11 @@ ms.locfileid: "54740477"
   
  以下は、<xref:System.Xml.XPath.XPathNavigator> クラスの属性移動メソッドです。  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A>  
   
  現在のノードが要素のとき、その要素に関連付けられている属性があるかどうかを調べるには、<xref:System.Xml.XPath.XPathNavigator.HasAttributes%2A> プロパティを使用できます。 要素に属性がある場合は、各種のメソッドで属性にアクセスできます。 要素から 1 つの属性を取り出すには、<xref:System.Xml.XPath.XPathNavigator.GetAttribute%2A> メソッドを使用します。 <xref:System.Xml.XPath.XPathNavigator> を特定の属性に移動するには、<xref:System.Xml.XPath.XPathNavigator.MoveToAttribute%2A> メソッドを使用します。 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstAttribute%2A> メソッドに続けて複数の <xref:System.Xml.XPath.XPathNavigator.MoveToNextAttribute%2A> メソッド呼び出しを使用し、要素の各属性について繰り返すこともできます。  
   
@@ -40,11 +40,11 @@ ms.locfileid: "54740477"
   
  以下は、<xref:System.Xml.XPath.XPathNavigator> クラスの名前空間移動メソッドです。  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A>  
   
--   <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
+- <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A>  
   
  XML ドキュメント内のすべての要素には常に少なくとも 1 つの名前空間ノードがあります。 これは、プレフィックス `xml` および名前空間 URI `http://www.w3.org/XML/1998/namespace` を持つ名前空間ノードです。 特定のプレフィックスを指定してスコープ内の名前空間 URI を取り出すには、<xref:System.Xml.XPath.XPathNavigator.GetNamespace%2A> メソッドを使用します。 <xref:System.Xml.XPath.XPathNavigator> オブジェクトを特定の名前空間ノードに移動するには、<xref:System.Xml.XPath.XPathNavigator.MoveToNamespace%2A> メソッドを使用します。 <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> メソッドに続けて複数の <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> メソッド呼び出しを使用し、要素のスコープ内の各名前空間ノードについて繰り返すこともできます。  
   
@@ -66,11 +66,11 @@ ms.locfileid: "54740477"
   
  名前空間の順序 (<xref:System.Xml.XPath.XPathNavigator> メソッドとそれに続く一連の <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> メソッド呼び出し後に <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> が位置する名前空間) は次のとおりです。  
   
--   `element2` の位置にある場合 : `xmlns:books="http://www.contoso.com/books"`、`xmlns="http://www.contoso.com"`、`xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
+- `element2` の位置にある場合 : `xmlns:books="http://www.contoso.com/books"`、`xmlns="http://www.contoso.com"`、`xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
   
--   `element1` の位置にある場合 : `xmlns:books="http://www.contoso.com/books"`、`xmlns="http://www.contoso.com"`、`xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
+- `element1` の位置にある場合 : `xmlns:books="http://www.contoso.com/books"`、`xmlns="http://www.contoso.com"`、`xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
   
--   `root` の位置にある場合 : `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
+- `root` の位置にある場合 : `xmlns:xml="http://www.w3.org/XML/1998/namespace".`  
   
 > [!NOTE]
 >  <xref:System.Xml.XPath.XPathNavigator> クラスは、ドキュメントの逆順で名前空間ノードを返します。 したがって、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> は原則的に、現在のスコープ内の最後の名前空間ノードに移動します。  
@@ -87,11 +87,11 @@ ms.locfileid: "54740477"
   
  `child2` の位置にある場合、名前空間の順序 (<xref:System.Xml.XPath.XPathNavigator> メソッドとそれに続く一連の <xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> メソッド呼び出し後に <xref:System.Xml.XPath.XPathNavigator.MoveToNextNamespace%2A> が位置する名前空間) は次のとおりです。  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"`、`xmlns="http://www.contoso.com"`、および `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
+- <xref:System.Xml.XPath.XPathNamespaceScope.All>: `xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"`、`xmlns="http://www.contoso.com"`、および `xmlns:xml="http://www.w3.org/XML/1998/namespace"`。  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"`、および `xmlns="http://www.contoso.com"`。  
+- <xref:System.Xml.XPath.XPathNamespaceScope.ExcludeXml>: `xmlns:c="urn:c"`、`xmlns:a="urn:a"`、`xmlns=""`、`xmlns:b="http://www.contoso.com/b"`、`xmlns:a="http://www.contoso.com/a"`、および `xmlns="http://www.contoso.com"`。  
   
--   <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`。  
+- <xref:System.Xml.XPath.XPathNamespaceScope.Local>: `xmlns:c="urn:c"`。  
   
 > [!NOTE]
 >  <xref:System.Xml.XPath.XPathNavigator> クラスは、ドキュメントの逆順で名前空間ノードを返します。 したがって、<xref:System.Xml.XPath.XPathNavigator.MoveToFirstNamespace%2A> は原則的に、現在のスコープ内の最後の名前空間ノードに移動します。  

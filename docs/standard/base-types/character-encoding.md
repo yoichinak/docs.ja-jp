@@ -14,19 +14,19 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: e8edc747c003cd5527df509af83325816671ddfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59346107"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634678"
 ---
 # <a name="character-encoding-in-net"></a>.NET での文字エンコード
 文字は、さまざまな方法で表現できる抽象エンティティです。 文字エンコーディングとは、サポートされている文字セットの各文字を、その文字を表す値と組み合わせる体系です。 たとえばモールス符号は、ローマ字の各文字を、電信線での送信に適したドットとダッシュのパターンと組み合わせる文字エンコーディングです。 コンピューターの文字エンコーディングは、サポートされている文字セットの各文字を、その文字を表す数値と組み合わせます。 文字エンコーディングには、次の 2 つの異なるコンポーネントがあります。  
   
--   エンコーダー。文字シーケンスを数値 (バイト) シーケンスに変換します。  
+- エンコーダー。文字シーケンスを数値 (バイト) シーケンスに変換します。  
   
--   デコーダー。バイト シーケンスを文字シーケンスに変換します。  
+- デコーダー。バイト シーケンスを文字シーケンスに変換します。  
   
  文字エンコーディングは、エンコーダーとデコーダーの動作を決める規則を表します。 たとえば、 <xref:System.Text.UTF8Encoding> クラスは、1 ～ 4 バイトを使用して 1 つの Unicode 文字を表現する UTF-8 (8-bit Unicode Transformation Format) をエンコードおよびデコードするための規則を表します。 エンコードとデコードに検証を含めることもできます。 たとえば、 <xref:System.Text.UnicodeEncoding> クラスは、すべてのサロゲートを検証して、有効なサロゲート ペアが構成されていることを確認します (サロゲート ペアは、U+D800 ～ U+DBFF の範囲のコード ポイントを持つ文字と、それに続く U+DC00 ～ U+DFFF の範囲のコード ポイントを持つ文字で構成されます)。エンコーダーが無効な文字を処理する方法や、デコーダーが無効なバイトを処理する方法は、フォールバック ストラテジによって決まります。  
   
@@ -37,27 +37,27 @@ ms.locfileid: "59346107"
   
  このトピックは、次のセクションで構成されています。  
   
--   [.NET でのエンコード](../../../docs/standard/base-types/character-encoding.md#Encodings)  
+- [.NET でのエンコード](../../../docs/standard/base-types/character-encoding.md#Encodings)  
   
--   [エンコーディング クラスの選択](../../../docs/standard/base-types/character-encoding.md#Selecting)  
+- [エンコーディング クラスの選択](../../../docs/standard/base-types/character-encoding.md#Selecting)  
   
--   [エンコーディング オブジェクトの使用](../../../docs/standard/base-types/character-encoding.md#Using)  
+- [エンコーディング オブジェクトの使用](../../../docs/standard/base-types/character-encoding.md#Using)  
   
--   [フォールバック ストラテジの選択](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
+- [フォールバック ストラテジの選択](../../../docs/standard/base-types/character-encoding.md#FallbackStrategy)  
   
--   [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
+- [Implementing a Custom Fallback Strategy](../../../docs/standard/base-types/character-encoding.md#Custom)  
   
 <a name="Encodings"></a>   
 ## <a name="encodings-in-net"></a>.NET でのエンコード  
  .NET のすべての文字エンコーディング クラスは、すべての文字エンコーディングに共通の機能を定義する抽象クラスの <xref:System.Text.Encoding?displayProperty=nameWithType> クラスを継承します。 .NET に実装されている個々のエンコーディング オブジェクトにアクセスするには次の方法があります。  
   
--   <xref:System.Text.Encoding> クラスの静的プロパティを使います。これらのプロパティは、.NET で使用できる標準の文字エンコーディング (ASCII、UTF-7、UTF-8、UTF-16、および UTF-32) を表すオブジェクトを返します。 たとえば、 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> プロパティは <xref:System.Text.UnicodeEncoding> オブジェクトを返します。 各オブジェクトでは、エンコードできない文字列とデコードできないバイトを処理するために、置換フォールバックが使用されます (詳しくは、「 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 」セクションをご覧ください。)  
+- <xref:System.Text.Encoding> クラスの静的プロパティを使います。これらのプロパティは、.NET で使用できる標準の文字エンコーディング (ASCII、UTF-7、UTF-8、UTF-16、および UTF-32) を表すオブジェクトを返します。 たとえば、 <xref:System.Text.Encoding.Unicode%2A?displayProperty=nameWithType> プロパティは <xref:System.Text.UnicodeEncoding> オブジェクトを返します。 各オブジェクトでは、エンコードできない文字列とデコードできないバイトを処理するために、置換フォールバックが使用されます (詳しくは、「 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 」セクションをご覧ください。)  
   
--   エンコーディングのクラス コンストラクターを呼び出します。 ASCII、UTF-7、UTF-8、UTF-16、および UTF-32 の各エンコーディングのオブジェクトは、この方法でインスタンス化できます。 既定では、各オブジェクトはエンコードできない文字列とデコードできないバイトを処理するために置換フォールバックを使用します。ただし、代わりに例外がスローされるように指定することもできます (詳しくは、「 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 」セクションおよび「 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 」セクションをご覧ください。)  
+- エンコーディングのクラス コンストラクターを呼び出します。 ASCII、UTF-7、UTF-8、UTF-16、および UTF-32 の各エンコーディングのオブジェクトは、この方法でインスタンス化できます。 既定では、各オブジェクトはエンコードできない文字列とデコードできないバイトを処理するために置換フォールバックを使用します。ただし、代わりに例外がスローされるように指定することもできます (詳しくは、「 [Replacement Fallback](../../../docs/standard/base-types/character-encoding.md#Replacement) 」セクションおよび「 [Exception Fallback](../../../docs/standard/base-types/character-encoding.md#Exception) 」セクションをご覧ください。)  
   
--   <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> コンストラクターを呼び出して、エンコーディングを表す整数を渡します。 エンコードできない文字列とデコードできないバイトの処理には、標準エンコーディングのエンコーディング オブジェクトでは置換フォールバックが、コード ページ エンコーディングと 2 バイト文字セット (DBCS) エンコーディングのエンコーディング オブジェクトでは最適フォールバックが使用されます (詳しくは、「 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 」セクションをご覧ください。)  
+- <xref:System.Text.Encoding.%23ctor%28System.Int32%29?displayProperty=nameWithType> コンストラクターを呼び出して、エンコーディングを表す整数を渡します。 エンコードできない文字列とデコードできないバイトの処理には、標準エンコーディングのエンコーディング オブジェクトでは置換フォールバックが、コード ページ エンコーディングと 2 バイト文字セット (DBCS) エンコーディングのエンコーディング オブジェクトでは最適フォールバックが使用されます (詳しくは、「 [Best-Fit Fallback](../../../docs/standard/base-types/character-encoding.md#BestFit) 」セクションをご覧ください。)  
   
--   <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> メソッドを呼び出します。このメソッドは、.NET で使用できる任意のエンコーディング (標準、コード ページ、または DBCS) を返します。 オーバーロードを使用すると、エンコーダーおよびデコーダーの両方のフォールバック オブジェクトを指定できます。  
+- <xref:System.Text.Encoding.GetEncoding%2A?displayProperty=nameWithType> メソッドを呼び出します。このメソッドは、.NET で使用できる任意のエンコーディング (標準、コード ページ、または DBCS) を返します。 オーバーロードを使用すると、エンコーダーおよびデコーダーの両方のフォールバック オブジェクトを指定できます。  
   
 > [!NOTE]
 >  Unicode 規格では、サポートされるすべてのスクリプトについて、各文字にコード ポイント (数値) と名前を割り当てています。 たとえば、文字 "A" は U+0041 というコード ポイントと、"LATIN CAPITAL LETTER A" という名前で表されます。 UTF (Unicode Transformation Format) エンコーディングは、そのコード ポイントを 1 つ以上のバイトのシーケンスにエンコードする方法を定義します。 Unicode エンコーディング方式を使用すると、任意の文字セットの文字を 1 つのエンコーディング方式で表現できるため、国際対応アプリケーションの開発が簡素化されます。 これにより、アプリケーション開発者が、特定の言語または書記体系の文字を表すために使用されるエンコーディング方式を追跡する必要はなくなります。また、データを破損することなく、各国のシステム間でデータを共有できます。  
@@ -87,17 +87,17 @@ ms.locfileid: "59346107"
   
  ASCII エンコーディング (<xref:System.Text.ASCIIEncoding>) を使用しようとしている場合は、代わりに <xref:System.Text.UTF8Encoding> を選択してください。 この 2 つのエンコーディングは、ASCII 文字セットに対する動作は変わりませんが、 <xref:System.Text.UTF8Encoding> には次のような利点があります。  
   
--   すべての Unicode 文字を表現できます ( <xref:System.Text.ASCIIEncoding> でサポートされているのは U+0000 ～ U+007F の Unicode 文字値だけです)。  
+- すべての Unicode 文字を表現できます ( <xref:System.Text.ASCIIEncoding> でサポートされているのは U+0000 ～ U+007F の Unicode 文字値だけです)。  
   
--   エラー検出に対応しており、セキュリティも強化されます。  
+- エラー検出に対応しており、セキュリティも強化されます。  
   
--   できるだけ高速になるように調整されているため、他のエンコーディングよりも高速です。 全体が ASCII のコンテンツの場合でも、 <xref:System.Text.UTF8Encoding> で実行される演算は、 <xref:System.Text.ASCIIEncoding>で実行される演算よりも高速になります。  
+- できるだけ高速になるように調整されているため、他のエンコーディングよりも高速です。 全体が ASCII のコンテンツの場合でも、 <xref:System.Text.UTF8Encoding> で実行される演算は、 <xref:System.Text.ASCIIEncoding>で実行される演算よりも高速になります。  
   
  <xref:System.Text.ASCIIEncoding> は、レガシ アプリケーションの場合にのみ使用を検討するようにしてください。 ただし、レガシ アプリケーションでも、次のような理由で <xref:System.Text.UTF8Encoding> の方が適していることもあります (既定の設定の場合)。  
   
--   厳密には ASCII でないコンテンツがアプリケーションに含まれている場合、それを <xref:System.Text.ASCIIEncoding>でエンコードすると、ASCII 以外の各文字は疑問符 (?) としてエンコードされます。 アプリケーションがこのデータをデコードすると、情報は失われます。  
+- 厳密には ASCII でないコンテンツがアプリケーションに含まれている場合、それを <xref:System.Text.ASCIIEncoding>でエンコードすると、ASCII 以外の各文字は疑問符 (?) としてエンコードされます。 アプリケーションがこのデータをデコードすると、情報は失われます。  
   
--   厳密には ASCII でないコンテンツがアプリケーションに含まれている場合、それを <xref:System.Text.UTF8Encoding>でエンコードすると、結果を ASCII として解釈しようとしても一見理解不能になります。 ただし、アプリケーションがこのデータを UTF-8 デコーダーを使用してデコードすると、データのラウンド トリップが正常に行われます。  
+- 厳密には ASCII でないコンテンツがアプリケーションに含まれている場合、それを <xref:System.Text.UTF8Encoding>でエンコードすると、結果を ASCII として解釈しようとしても一見理解不能になります。 ただし、アプリケーションがこのデータを UTF-8 デコーダーを使用してデコードすると、データのラウンド トリップが正常に行われます。  
   
  Web アプリケーションでは、Web 要求への応答としてクライアントに送信される文字に、クライアントで使用されているエンコーディングが反映されるようにする必要があります。 ほとんどの場合は、ユーザーが期待するエンコーディングでテキストを表示するために、 <xref:System.Web.HttpResponse.ContentEncoding%2A?displayProperty=nameWithType> プロパティを <xref:System.Web.HttpRequest.ContentEncoding%2A?displayProperty=nameWithType> プロパティの戻り値に設定する必要があります。  
   
@@ -130,11 +130,11 @@ ms.locfileid: "59346107"
 ## <a name="choosing-a-fallback-strategy"></a>フォールバック ストラテジの選択  
  メソッドから文字のエンコードまたはデコードを行おうとしたときにマッピングが存在しない場合は、失敗したマッピングの処理方法を決めるフォールバック ストラテジを実装する必要があります。 次の 3 種類のフォールバック ストラテジがあります。  
   
--   Best-Fit Fallback  
+- Best-Fit Fallback  
   
--   Replacement Fallback  
+- Replacement Fallback  
   
--   Exception Fallback  
+- Exception Fallback  
   
 > [!IMPORTANT]
 >  エンコード操作で最も一般的な問題は、Unicode 文字を特定のコード ページ エンコーディングにマップできない場合に発生します。 デコード操作で最も一般的な問題は、無効なバイト シーケンスを有効な Unicode 文字に変換できない場合に発生します。 そのため、個々のエンコーディング オブジェクトで使用されるフォールバック ストラテジを把握しておく必要があります。 エンコーディング オブジェクトをインスタンス化するときには、可能な限り、そのオブジェクトで使用されるフォールバック ストラテジを指定するようにしてください。  
@@ -195,9 +195,9 @@ ms.locfileid: "59346107"
   
  <xref:System.Text.EncoderFallbackException> オブジェクトと <xref:System.Text.DecoderFallbackException> オブジェクトは、例外を引き起こした状況について以下の情報を提供します。  
   
--   <xref:System.Text.EncoderFallbackException> オブジェクトに含まれている <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> メソッドにより、エンコードできない文字が不明なサロゲート ペアか (この場合は `true`が返されます)、不明な単一文字か (この場合は `false`が返されます) が示されます。 サロゲート ペアの文字は、 <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> プロパティと <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> プロパティから取得できます。 不明な単一文字は、 <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> プロパティから取得できます。 また、 <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> プロパティにより、エンコードできない最初の文字が見つかった文字列内の位置が示されます。  
+- <xref:System.Text.EncoderFallbackException> オブジェクトに含まれている <xref:System.Text.EncoderFallbackException.IsUnknownSurrogate%2A> メソッドにより、エンコードできない文字が不明なサロゲート ペアか (この場合は `true`が返されます)、不明な単一文字か (この場合は `false`が返されます) が示されます。 サロゲート ペアの文字は、 <xref:System.Text.EncoderFallbackException.CharUnknownHigh%2A?displayProperty=nameWithType> プロパティと <xref:System.Text.EncoderFallbackException.CharUnknownLow%2A?displayProperty=nameWithType> プロパティから取得できます。 不明な単一文字は、 <xref:System.Text.EncoderFallbackException.CharUnknown%2A?displayProperty=nameWithType> プロパティから取得できます。 また、 <xref:System.Text.EncoderFallbackException.Index%2A?displayProperty=nameWithType> プロパティにより、エンコードできない最初の文字が見つかった文字列内の位置が示されます。  
   
--   <xref:System.Text.DecoderFallbackException> オブジェクトに含まれている <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> プロパティにより、デコードできないバイト配列が返されます。 また、 <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> プロパティにより、不明なバイトの開始位置が示されます。  
+- <xref:System.Text.DecoderFallbackException> オブジェクトに含まれている <xref:System.Text.DecoderFallbackException.BytesUnknown%2A> プロパティにより、デコードできないバイト配列が返されます。 また、 <xref:System.Text.DecoderFallbackException.Index%2A?displayProperty=nameWithType> プロパティにより、不明なバイトの開始位置が示されます。  
   
  <xref:System.Text.EncoderFallbackException> オブジェクトと <xref:System.Text.DecoderFallbackException> オブジェクトでは、例外に関する診断情報は十分に入手できますが、エンコード バッファーやデコード バッファーにアクセスすることはできません。 したがって、エンコード メソッド内またはデコード メソッド内で無効なデータを置換したり修正したりすることはできません。  
   
@@ -205,13 +205,13 @@ ms.locfileid: "59346107"
 ## <a name="implementing-a-custom-fallback-strategy"></a>Implementing a Custom Fallback Strategy  
  .NET には、コード ページによって内部的に実装される最適マッピングに加えて、フォールバック ストラテジを実装するための次のクラスが含まれています。  
   
--   <xref:System.Text.EncoderReplacementFallback> および <xref:System.Text.EncoderReplacementFallbackBuffer> 。エンコード操作中に文字を置換します。  
+- <xref:System.Text.EncoderReplacementFallback> および <xref:System.Text.EncoderReplacementFallbackBuffer> 。エンコード操作中に文字を置換します。  
   
--   <xref:System.Text.DecoderReplacementFallback> および <xref:System.Text.DecoderReplacementFallbackBuffer> 。デコード操作中に文字を置換します。  
+- <xref:System.Text.DecoderReplacementFallback> および <xref:System.Text.DecoderReplacementFallbackBuffer> 。デコード操作中に文字を置換します。  
   
--   <xref:System.Text.EncoderExceptionFallback> および <xref:System.Text.EncoderExceptionFallbackBuffer> 。文字をエンコードできない場合に <xref:System.Text.EncoderFallbackException> をスローします。  
+- <xref:System.Text.EncoderExceptionFallback> および <xref:System.Text.EncoderExceptionFallbackBuffer> 。文字をエンコードできない場合に <xref:System.Text.EncoderFallbackException> をスローします。  
   
--   <xref:System.Text.DecoderExceptionFallback> および <xref:System.Text.DecoderExceptionFallbackBuffer> 。文字をデコードできない場合に <xref:System.Text.DecoderFallbackException> をスローします。  
+- <xref:System.Text.DecoderExceptionFallback> および <xref:System.Text.DecoderExceptionFallbackBuffer> 。文字をデコードできない場合に <xref:System.Text.DecoderFallbackException> をスローします。  
   
  さらに、次の手順に従って、最適フォールバック、置換フォールバック、または例外フォールバックを使用するカスタム ソリューションを実装できます。  
   
@@ -226,24 +226,24 @@ ms.locfileid: "59346107"
   
  エンコーダーまたはデコーダーのカスタム フォールバック ソリューションを作成するときには、次のメンバーを実装する必要があります。  
   
--   <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> プロパティ。最適、置換、例外の各フォールバックで単一の文字を置き換えるために返すことのできる文字の最大数を返します。 カスタム例外フォールバックの場合は 0 になります。  
+- <xref:System.Text.EncoderFallback.MaxCharCount%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Text.DecoderFallback.MaxCharCount%2A?displayProperty=nameWithType> プロパティ。最適、置換、例外の各フォールバックで単一の文字を置き換えるために返すことのできる文字の最大数を返します。 カスタム例外フォールバックの場合は 0 になります。  
   
--   <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> メソッド。 <xref:System.Text.EncoderFallbackBuffer> または <xref:System.Text.DecoderFallbackBuffer> のカスタム実装を返します。 このメソッドは、エンコーダーで正しくエンコードできない文字が初めて検出されたとき、またはデコーダーで正しくデコードできないバイトが初めて検出されたときに呼び出されます。  
+- <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> メソッド。 <xref:System.Text.EncoderFallbackBuffer> または <xref:System.Text.DecoderFallbackBuffer> のカスタム実装を返します。 このメソッドは、エンコーダーで正しくエンコードできない文字が初めて検出されたとき、またはデコーダーで正しくデコードできないバイトが初めて検出されたときに呼び出されます。  
   
 ### <a name="deriving-from-encoderfallbackbuffer-or-decoderfallbackbuffer"></a>EncoderFallbackBuffer または DecoderFallbackBuffer からの派生  
  カスタム フォールバック ソリューションを実装するには、エンコード操作の場合は <xref:System.Text.EncoderFallbackBuffer> 、デコード操作の場合は <xref:System.Text.DecoderFallbackBuffer> を継承するクラスを作成する必要もあります。 これらのクラスのインスタンスは、 <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A> クラスおよび <xref:System.Text.EncoderFallback> クラスの <xref:System.Text.DecoderFallback> メソッドによって返されます。 <xref:System.Text.EncoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> メソッドは、エンコーダーでエンコードできない文字が初めて検出されたときに呼び出され、 <xref:System.Text.DecoderFallback.CreateFallbackBuffer%2A?displayProperty=nameWithType> メソッドは、デコーダーでデコードできないバイトが検出されたときに呼び出されます。 <xref:System.Text.EncoderFallbackBuffer> クラスと <xref:System.Text.DecoderFallbackBuffer> クラスは、フォールバックの実装を提供します。 各インスタンスは、エンコードできない文字またはデコードできないバイト シーケンスを置き換えるフォールバック文字を含むバッファーを表します。  
   
  エンコーダーまたはデコーダーのカスタム フォールバック ソリューションを作成するときには、次のメンバーを実装する必要があります。  
   
--   <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッド。 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> は、エンコーダーによって呼び出され、エンコードできない文字に関する情報をフォールバック バッファーに提供します。 エンコードされる文字はサロゲート ペアである場合もあるため、このメソッドはオーバーロードされます。 最初のオーバーロードには、エンコードされる文字と、その文字列内のインデックスが渡されます。 2 番目のオーバーロードには、上位および下位のサロゲートと、その文字列内のインデックスが渡されます。 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッドは、デコーダーによって呼び出され、デコードできないバイトに関する情報をフォールバック バッファーに提供します。 このメソッドには、デコードできないバイト配列と、最初のバイトのインデックスが渡されます。 フォールバック メソッドは、フォールバック バッファーが最適な文字または置換文字を提供できる場合は `true` 、それ以外の場合は `false`を返します。 例外フォールバックの場合は例外をスローします。  
+- <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッド。 <xref:System.Text.EncoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> は、エンコーダーによって呼び出され、エンコードできない文字に関する情報をフォールバック バッファーに提供します。 エンコードされる文字はサロゲート ペアである場合もあるため、このメソッドはオーバーロードされます。 最初のオーバーロードには、エンコードされる文字と、その文字列内のインデックスが渡されます。 2 番目のオーバーロードには、上位および下位のサロゲートと、その文字列内のインデックスが渡されます。 <xref:System.Text.DecoderFallbackBuffer.Fallback%2A?displayProperty=nameWithType> メソッドは、デコーダーによって呼び出され、デコードできないバイトに関する情報をフォールバック バッファーに提供します。 このメソッドには、デコードできないバイト配列と、最初のバイトのインデックスが渡されます。 フォールバック メソッドは、フォールバック バッファーが最適な文字または置換文字を提供できる場合は `true` 、それ以外の場合は `false`を返します。 例外フォールバックの場合は例外をスローします。  
   
--   <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> メソッド。フォールバック バッファーから次の文字を取得するために、エンコーダーまたはデコーダーによって繰り返し呼び出されます。 すべてのフォールバック文字を返し終わったら、このメソッドは U+0000 を返す必要があります。  
+- <xref:System.Text.EncoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.DecoderFallbackBuffer.GetNextChar%2A?displayProperty=nameWithType> メソッド。フォールバック バッファーから次の文字を取得するために、エンコーダーまたはデコーダーによって繰り返し呼び出されます。 すべてのフォールバック文字を返し終わったら、このメソッドは U+0000 を返す必要があります。  
   
--   <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> プロパティ。フォールバック バッファー内の残りの文字数を返します。  
+- <xref:System.Text.EncoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> プロパティまたは <xref:System.Text.DecoderFallbackBuffer.Remaining%2A?displayProperty=nameWithType> プロパティ。フォールバック バッファー内の残りの文字数を返します。  
   
--   <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> メソッド。フォールバック バッファー内の現在の位置を前の文字に移動します。  
+- <xref:System.Text.EncoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.DecoderFallbackBuffer.MovePrevious%2A?displayProperty=nameWithType> メソッド。フォールバック バッファー内の現在の位置を前の文字に移動します。  
   
--   <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> メソッド。フォールバック バッファーを再初期化します。  
+- <xref:System.Text.EncoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Text.DecoderFallbackBuffer.Reset%2A?displayProperty=nameWithType> メソッド。フォールバック バッファーを再初期化します。  
   
  フォールバックの実装が最適フォールバックまたは置換フォールバックの場合は、 <xref:System.Text.EncoderFallbackBuffer> と <xref:System.Text.DecoderFallbackBuffer> の派生クラスで、2 つのプライベート インスタンス フィールド (バッファー内の正確な文字数と、次に返される文字のインデックス) も保持します。  
   
