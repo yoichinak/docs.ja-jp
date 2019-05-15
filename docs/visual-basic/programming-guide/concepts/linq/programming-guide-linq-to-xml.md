@@ -2,18 +2,18 @@
 title: プログラミング ガイド (LINQ to XML) (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: f1f942bf-3404-4354-b4c5-4fe35e37a02b
-ms.openlocfilehash: 608ed431009c033de39cc38748bcbf173cf47cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf8dbaf5991d1991267ad31125029298cffcfcd3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61785581"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592924"
 ---
 # <a name="programming-guide-linq-to-xml-visual-basic"></a>プログラミング ガイド (LINQ to XML) (Visual Basic)
 ここでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を使用したプログラミングに関する概念と方法の情報について説明します。  
   
 ## <a name="who-should-read-this-documentation"></a>このドキュメントの対象読者  
- このドキュメントは、Visual Basic との基本的な側面を既に理解している開発者を対象と、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。  
+ このドキュメントは、Visual Basic と .NET Framework のいくつかの基本的な側面を既に理解している開発者を対象とします。  
   
  このドキュメントの目的は、多数の開発者が [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] を簡単に使用できるようにすることです。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] によって、XML プログラミングが容易になります。 を使用するために上級開発者になる必要はありません。  
   

@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - configuration [WCF]
 ms.assetid: beac771e-f28e-4f84-9ff1-ad9251c726d3
-ms.openlocfilehash: 81727adbf985986a71cc9f9e2d42a1de0cb1fd76
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e8ac62809b1269ae810f026c003c7611b3ec548c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608535"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593334"
 ---
 # <a name="configuring-wcf-services"></a>WCF サービスの構成
 
@@ -22,7 +22,7 @@ ms.locfileid: "61608535"
  以降で[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)]WCF が付属して新しい既定の構成モデルを WCF 構成の要件を簡略化します。 特定のサービスの WCF 構成を指定しない場合、ランタイムでサービスの既定のエンドポイント、バインディング、および動作を自動的に構成します。  
   
  [構成ファイルを使用してサービスを構成する方法](../../../docs/framework/wcf/configuring-services-using-configuration-files.md)  
- Windows Communication Foundation (WCF) サービスが構成可能なを使用して、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]テクノロジの構成。 ほとんどの場合、XML 要素は、WCF サービスをホストするインターネット インフォメーション サービス (IIS) サイトの Web.config ファイルに追加されます。 この要素によって、コンピューターごとにエンドポイント アドレス (サービスと通信するために使用する実際のアドレス) などの詳細情報を変更できます。  
+ Windows Communication Foundation (WCF) サービスは、.NET Framework のテクノロジの構成を使用して設定できます。 ほとんどの場合、XML 要素は、WCF サービスをホストするインターネット インフォメーション サービス (IIS) サイトの Web.config ファイルに追加されます。 この要素によって、コンピューターごとにエンドポイント アドレス (サービスと通信するために使用する実際のアドレス) などの詳細情報を変更できます。  
   
  [バインディング](../../../docs/framework/wcf/bindings.md)  
  さらに、WCF には、クライアントとサービスの通信方法は、トランスポート、セキュリティ、およびエンコーディングが使用されるメッセージなどの最も基本的な機能をすばやく選択するためのバインディングの形式でのシステム指定のいくつかの一般的な構成が含まれています。  

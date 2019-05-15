@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: c9cb40cb318bd044cb9204ba2ed384b41b475d57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625772"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592774"
 ---
 # <a name="application-settings-architecture"></a>アプリケーション設定アーキテクチャ
 このトピックでは、アプリケーション設定アーキテクチャのしくみについて説明します。また、グループ化された設定や設定キーなど、アーキテクチャの高度な機能についても説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "64625772"
 ## <a name="settings-persistence"></a>設定の永続化  
  <xref:System.Configuration.ApplicationSettingsBase>クラス自体を永続化またはしていない設定を読み込めません。 このジョブが設定プロバイダーから派生したクラスには<xref:System.Configuration.SettingsProvider>します。 場合の派生クラス<xref:System.Configuration.ApplicationSettingsBase>を通じて設定プロバイダーを指定しない、 <xref:System.Configuration.SettingsProviderAttribute>、し、既定のプロバイダー <xref:System.Configuration.LocalFileSettingsProvider>、使用されます。  
   
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] と共にリリースされた構成システムでは、ローカル コンピューターの machine.config ファイルまたはアプリケーションと共に配置される `app.`exe.config ファイルを使用した静的なアプリケーション構成データの提供をサポートしています。 <xref:System.Configuration.LocalFileSettingsProvider>クラスは、次の方法でこのネイティブ サポートを拡張します。  
+ ローカル コンピューターの machine.config ファイルまたは内の静的なアプリケーション構成データを提供する .NET Framework と共にリリースされた構成システムのサポート、 `app.`exe.config ファイルに配置します。アプリケーション。 <xref:System.Configuration.LocalFileSettingsProvider>クラスは、次の方法でこのネイティブ サポートを拡張します。  
   
 - アプリケーション スコープの設定は、machine.config ファイルまたは `app.`exe.config ファイルに保存できます。 machine.config は常に読み取り専用です。`app`.exe.config は、セキュリティを考慮して、ほとんどのアプリケーションで読み取り専用に制限されています。  
   

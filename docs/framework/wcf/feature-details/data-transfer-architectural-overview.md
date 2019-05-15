@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 401803229c54a2b38af08c0418b9efd4c64d9d60
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627029"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592557"
 ---
 # <a name="data-transfer-architectural-overview"></a>データ転送のアーキテクチャの概要
 Windows Communication Foundation (WCF) は、メッセージング インフラストラクチャと考えることができます。 WCF は、メッセージを受信し、それらのメッセージを処理し、さらにアクションを実行するためにユーザー コードにディスパッチすることができます。また、ユーザー コードで指定されたデータからメッセージを作成し、送信先に配布することもできます。 ここでは、メッセージを処理するためのアーキテクチャと格納されるデータについて説明します。このトピックは、上級開発者を対象としています。 データを送受信する方法のより簡単なタスク指向の概要については、「 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。  
@@ -27,7 +27,7 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
   
  使用して WCF を使用することができます、<xref:System.ServiceModel.Channels.Message>クラスとチャネル スタックを直接します。 ただし、この作業は困難であり、時間もかかります。 さらに、<xref:System.ServiceModel.Channels.Message>オブジェクトにはメタデータのサポートを提供しないため、この方法で WCF を使用する場合は、厳密に型指定された WCF クライアントを生成することはできません。  
   
- そのため、WCF が構築し、受信に使用できる使いやすいプログラミング モデルを提供するサービス フレームワークが含まれます`Message`オブジェクト。 サービス フレームワークは、サービス コントラクトの概念によってサービスを [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型にマップし、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 属性でマークされた <xref:System.ServiceModel.OperationContractAttribute> メソッドであるユーザー操作にメッセージをディスパッチします (詳細については、「 [Designing Service Contracts](../../../../docs/framework/wcf/designing-service-contracts.md)」を参照してください)。 これらのメソッドは、パラメーターと戻り値を持つことができます。 サービス側では、サービス フレームワークが受信 <xref:System.ServiceModel.Channels.Message> インスタンスをパラメーターに変換し、戻り値を送信 <xref:System.ServiceModel.Channels.Message> インスタンスに変換します。 クライアント側では、この逆のことが行われます。 たとえば、次のような `FindAirfare` の操作について考えてみます。  
+ そのため、WCF が構築し、受信に使用できる使いやすいプログラミング モデルを提供するサービス フレームワークが含まれます`Message`オブジェクト。 サービス フレームワークはサービスをサービスのコントラクトの概念によって .NET Framework の型にマップしでマークされたメソッドが .NET Framework だけであるユーザーの操作にメッセージをディスパッチ、<xref:System.ServiceModel.OperationContractAttribute>属性 (詳細については、次を参照してください[。サービス コントラクトの設計](../../../../docs/framework/wcf/designing-service-contracts.md))。 これらのメソッドは、パラメーターと戻り値を持つことができます。 サービス側では、サービス フレームワークが受信 <xref:System.ServiceModel.Channels.Message> インスタンスをパラメーターに変換し、戻り値を送信 <xref:System.ServiceModel.Channels.Message> インスタンスに変換します。 クライアント側では、この逆のことが行われます。 たとえば、次のような `FindAirfare` の操作について考えてみます。  
   
  [!code-csharp[c_DataArchitecture#1](../../../../samples/snippets/csharp/VS_Snippets_CFX/c_dataarchitecture/cs/source.cs#1)]
  [!code-vb[c_DataArchitecture#1](../../../../samples/snippets/visualbasic/VS_Snippets_CFX/c_dataarchitecture/vb/source.vb#1)]  
@@ -94,7 +94,7 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
  詳細については、次を参照してください。 [Using the Message Class](../../../../docs/framework/wcf/feature-details/using-the-message-class.md)します。  
   
 ## <a name="message-properties"></a>メッセージ プロパティ  
- メッセージには、プロパティを含めることができます。 *"プロパティ"* とは、文字列名に関連付けられた任意の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトです。 プロパティには、 `Properties` の `Message`プロパティからアクセスします。  
+ メッセージには、プロパティを含めることができます。 A*プロパティ*文字列名に関連付けられている任意の .NET Framework オブジェクトです。 プロパティには、 `Properties` の `Message`プロパティからアクセスします。  
   
  通常、メッセージ本文とメッセージ ヘッダーは、それぞれ SOAP 本文および SOAP ヘッダーにマップされますが、メッセージ プロパティがメッセージと共に送信または受信されることは通常ありません。 メッセージ プロパティは、チャネル スタック内のさまざまなチャネル間、およびチャネル スタックとサービス モデルの間で、メッセージに関するデータを渡す通信機構として主に存在します。  
   
@@ -179,7 +179,7 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
  この方法を使用すると、XML ライターは <xref:System.Xml.IStreamProvider.GetStream> を呼び出し、ストリーミングされたデータを書き込む時期を選択できます。 たとえば、テキスト XML ライターやバイナリ XML ライターは、このメソッドをすぐに呼び出し、開始タグと終了タグの間にストリーミングされたコンテンツを書き込むことができます。 MTOM ライターは、メッセージの適切な部分を書き込む準備ができたときに、後で <xref:System.Xml.IStreamProvider.GetStream> を呼び出すことができます。  
   
 ## <a name="representing-data-in-the-service-framework"></a>サービス フレームワークでのデータの表現  
- このトピックの「基本アーキテクチャ」セクションで説明すると、サービス フレームワークは WCF には、特に、メッセージ データのわかりやすいプログラミング モデル間変換を担当し、実際にはの一部`Message`インスタンス。 通常、サービス フレームワークでは、メッセージ交換は [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 属性でマークされた <xref:System.ServiceModel.OperationContractAttribute> メソッドとして表されます。 このメソッドは複数のパラメーターを取得でき、戻り値または出力パラメーター (または両方) を返すことができます。 サービス側では、入力パラメーターは受信メッセージを表し、戻り値と出力パラメーターは送信メッセージを表します。 クライアント側では、この逆になります。 パラメーターと戻り値を使用してメッセージを記述するためのプログラミング モデルの詳細については、「 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。 ここでは、概要を簡単に説明します。  
+ このトピックの「基本アーキテクチャ」セクションで説明すると、サービス フレームワークは WCF には、特に、メッセージ データのわかりやすいプログラミング モデル間変換を担当し、実際にはの一部`Message`インスタンス。 メッセージ交換は、サービス フレームワークで表されますでマークされた .NET Framework のメソッドと通常、<xref:System.ServiceModel.OperationContractAttribute>属性。 このメソッドは複数のパラメーターを取得でき、戻り値または出力パラメーター (または両方) を返すことができます。 サービス側では、入力パラメーターは受信メッセージを表し、戻り値と出力パラメーターは送信メッセージを表します。 クライアント側では、この逆になります。 パラメーターと戻り値を使用してメッセージを記述するためのプログラミング モデルの詳細については、「 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。 ここでは、概要を簡単に説明します。  
   
 ## <a name="programming-models"></a>プログラミング モデル  
  WCF サービスのフレームワークには、メッセージを記述するための 5 つの異なるプログラミング モデルがサポートされています。  
@@ -218,7 +218,7 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
  アクション ="*"行は、実質的にメッセージのディスパッチをオフにし、すべてのメッセージが送信することにより、`IForwardingService`コントラクトようにするには、その方法、`ForwardMessage`操作。 (通常は、ディスパッチャーで調査するかを判断するためのものがどの操作のメッセージの"Action"ヘッダー。 アクション ="\*"は「すべての値、Action ヘッダーの」を意味します)。アクションの組み合わせ ="\*"ことができるすべての可能なメッセージを受信するために、パラメーターが「ユニバーサル コントラクト」と呼ばれるようにメッセージを使用するとします。 可能性のあるすべてのメッセージを送信できるようにするには、メッセージは、戻り値として使用し、設定`ReplyAction`に"\*"。 これにより、サービス フレームワークは独自の Action ヘッダーを追加できなくなるため、開発者が返す `Message` オブジェクトを使用して、このヘッダーを制御できます。  
   
 ### <a name="3-message-contracts"></a>3.メッセージ コントラクト  
- WCF と呼ばれるメッセージを記述するため、宣言型プログラミング モデルを提供する*メッセージ コントラクト*します。 このモデルの詳細については、「 [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)」を参照してください。 基本的に、単一の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型によってメッセージ全体が表されます。この型は、 <xref:System.ServiceModel.MessageBodyMemberAttribute> や <xref:System.ServiceModel.MessageHeaderAttribute> などの属性を使用して、メッセージ コントラクト クラスのどの部分をメッセージのどの部分にマップする必要があるかを示します。  
+ WCF と呼ばれるメッセージを記述するため、宣言型プログラミング モデルを提供する*メッセージ コントラクト*します。 このモデルの詳細については、「 [Using Message Contracts](../../../../docs/framework/wcf/feature-details/using-message-contracts.md)」を参照してください。 メッセージ全体がなどの属性を使用する 1 つの .NET Framework 型でどのように表される、基本的に、<xref:System.ServiceModel.MessageBodyMemberAttribute>と<xref:System.ServiceModel.MessageHeaderAttribute>メッセージのどの部分にマップされる、メッセージ コントラクト クラスのどの部分を記述します。  
   
  メッセージ コントラクトは、結果として生成される `Message` インスタンスに対してさまざまな制御を行うことができます (ただし、 `Message` クラスを直接使用した場合と同様に制御できるわけではありません)。 たとえば、多くの場合、メッセージ本文は情報の複数の部分で構成され、各部分は独自の XML 要素によって表されます。 これらの要素は、本文に直接出現することも (*ベア* モード)、XML 要素で囲んで *ラップ* することもできます。 メッセージ コントラクト プログラミング モデルを使用すると、ベアとラップのどちらを使用するかを決定し、ラッパー名と名前空間の名前を制御できます。  
   
@@ -264,7 +264,7 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
 |<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter>|<xref:System.ServiceModel.Dispatcher.IClientMessageFormatter.DeserializeReply%28System.ServiceModel.Channels.Message%2CSystem.Object%5B%5D%29>|受信 `Message` を戻り値または出力パラメーターに変換します。|  
   
 ## <a name="serialization"></a>シリアル化  
- メッセージ コントラクトまたはパラメーターを使用してメッセージの内容を記述する場合は、常にシリアル化を使用して [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型と XML Infoset 表現の間の変換を行う必要があります。 たとえば、シリアル化を WCF では、他の場所で使用<xref:System.ServiceModel.Channels.Message>がジェネリック<xref:System.ServiceModel.Channels.Message.GetBody%2A>オブジェクトに逆シリアル化されたメッセージの本文全体を読み込むために使用できるメソッド。  
+ メッセージ コントラクトまたはパラメーターを使用してメッセージの内容を記述する際に、.NET Framework 型と XML Infoset 表現の間で変換するシリアル化を使用する必要があります。 たとえば、シリアル化を WCF では、他の場所で使用<xref:System.ServiceModel.Channels.Message>がジェネリック<xref:System.ServiceModel.Channels.Message.GetBody%2A>オブジェクトに逆シリアル化されたメッセージの本文全体を読み込むために使用できるメソッド。  
   
  WCF は、パラメーターおよびメッセージ部分を逆シリアル化のシリアル化と「なし」の 2 つのシリアル化テクノロジをサポートしています。 <xref:System.Runtime.Serialization.DataContractSerializer> 、`XmlSerializer`します。 また、カスタム シリアライザーを作成することもできます。 ただし、WCF の他の部分 (ジェネリックなど`GetBody`メソッドや SOAP エラーのシリアル化) のみを使用する制限があります、<xref:System.Runtime.Serialization.XmlObjectSerializer>サブクラス (<xref:System.Runtime.Serialization.DataContractSerializer>と<xref:System.Runtime.Serialization.NetDataContractSerializer>、ではなく、 <xref:System.Xml.Serialization.XmlSerializer>)、ハード コードのみを使用することがありますか<xref:System.Runtime.Serialization.DataContractSerializer>します。  
   

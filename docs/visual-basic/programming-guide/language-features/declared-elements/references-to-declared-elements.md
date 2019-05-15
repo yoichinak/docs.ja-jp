@@ -6,12 +6,12 @@ helpviewer_keywords:
 - references [Visual Basic], declared elements
 - qualified names [Visual Basic]
 ms.assetid: d6301709-f4cc-4b7a-b8ba-80898f14ab46
-ms.openlocfilehash: 0fca02ab2dcb507c1129f18f31a25c7809fc9710
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 616599e15c0d3d4c2177622d6820269bcff3ea39
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917957"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592799"
 ---
 # <a name="references-to-declared-elements-visual-basic"></a>宣言された要素の参照 (Visual Basic)
 宣言された要素をコードが参照されているとき、Visual Basic コンパイラはその名前の適切な宣言に、参照内の名前と一致します。 参照することはそれらの要素を制御するには 1 つ以上の要素が同じ名前で宣言されている場合*条件を満たす*の名前。  
@@ -152,7 +152,7 @@ End Module
 ## <a name="references-to-projects"></a>プロジェクトへの参照  
  使用する[パブリック](../../../../visual-basic/language-reference/modifiers/public.md)別のプロジェクトで定義された要素は、まず、設定、*参照*にそのプロジェクトのアセンブリやタイプ ライブラリ。 参照を設定するには、次のようにクリックします。**参照の追加**上、**プロジェクト**メニュー、または使用して、 [/reference (Visual Basic)](../../../../visual-basic/reference/command-line-compiler/reference.md)コマンド ライン コンパイラ オプション。  
   
- XML オブジェクト モデルを使用するなど、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]します。 参照を設定した場合、<xref:System.Xml>名前空間宣言し、そのクラスのいずれかのように、使う<xref:System.Xml.XmlDocument>します。 次の例では<xref:System.Xml.XmlDocument>します。  
+ たとえば、.NET Framework の XML オブジェクト モデルを使用することができます。 参照を設定した場合、<xref:System.Xml>名前空間宣言し、そのクラスのいずれかのように、使う<xref:System.Xml.XmlDocument>します。 次の例では<xref:System.Xml.XmlDocument>します。  
   
 ```vb  
 ' Assume this project has a reference to System.Xml  

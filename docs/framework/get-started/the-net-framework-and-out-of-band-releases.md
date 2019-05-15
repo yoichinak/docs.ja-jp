@@ -4,12 +4,12 @@ ms.date: 10/10/2018
 ms.assetid: 721f10fa-3189-4124-a00d-56ddabd889b3
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6bf92e118d2ef02c0dc3a550c084e2a0a8e0e3d7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3aaf64c2f0738d2db607a2476890b033ff9d06a2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59330445"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063046"
 ---
 # <a name="the-net-framework-and-out-of-band-releases"></a>.NET Framework および特別なリリース
 
@@ -52,8 +52,6 @@ ms.locfileid: "59330445"
  通常、OOB パッケージには、1 つ以上のプレリリース バージョンと 1 つの安定したバージョンがあります。 プレリリースに含まれるライセンスでは通常、再配布は許可されませんが、パッケージを試用して、フィードバックを提供することができます。 フィードバックはパッケージに対する更新プログラムに組み込まれます。 最終リリースは NuGet を使って安定したパッケージとして配布され、アプリと共に NuGet パッケージを再配布できるライセンスが含まれます。 安定したパッケージは Microsoft によってサポートされています。 Microsoft では、IntelliSense のサポートや、ブログの投稿、フォーラムでの回答などの別の種類のドキュメントを、すべてのパッケージについて提供します。 また、すべてのパッケージではありませんが、一部のパッケージについてはソース コードも利用できる場合があります。 新しいパッケージや更新パッケージに関するお知らせについては、「[.NET Framework ブログ](https://devblogs.microsoft.com/dotnet/)」を受信登録できます。
 
  リリース前のパッケージと安定版パッケージの両方を検索するには、NuGet パッケージ マネージャーで **[リリース前のパッケージを含める]** を選択してください。
-
- 安定版パッケージのリリースについて通知を受ける場合は、[.NET Framework フィード](https://nuget.org/api/v2/curated-feeds/dotnetframework/Packages/)を受信登録してください。
 
 ## <a name="see-also"></a>関連項目
 

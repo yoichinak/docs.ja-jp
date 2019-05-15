@@ -5,12 +5,12 @@ helpviewer_keywords:
 - DataGridView control [Windows Forms], about DataGridView control
 - data grids [Windows Forms], about data grids
 ms.assetid: 094498c3-a126-4a3f-83fe-f69e96c7717b
-ms.openlocfilehash: ca8268137f2a154c782388d0f13cdd02504cbb64
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f8898f76971b6088fa8ca831961ea7f12e1ab4e6
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61909275"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65588842"
 ---
 # <a name="datagridview-control-technology-summary-windows-forms"></a>DataGridView コントロール テクノロジの概要 (Windows フォーム)
 ここでは、`DataGridView` コントロールおよびその使用をサポートしているクラスの概要について説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "61909275"
  `BindingSource`  
   
 ## <a name="background"></a>背景  
- ユーザー インターフェイス (UI) デザイナー頻繁が必要なユーザーに表形式のデータを表示します。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]テーブルまたはグリッドにデータを表示するいくつかの方法を提供します。 `DataGridView`コントロールは、Windows フォーム アプリケーションには、このテクノロジの最新の進化を表します。  
+ ユーザー インターフェイス (UI) デザイナー頻繁が必要なユーザーに表形式のデータを表示します。 .NET Framework では、テーブルまたはグリッドにデータを表示するいくつかの方法を提供します。 `DataGridView`コントロールは、Windows フォーム アプリケーションには、このテクノロジの最新の進化を表します。  
   
  `DataGridView`コントロールがデータ ストアからのデータの行を表示できます。 多くの種類のデータ ストアがサポートされています。 1 次元の配列などの単純な型指定されていないデータを保持できるデータ ストアまたは型指定されたデータを保持できるよう、<xref:System.Data.DataSet>します。 詳細については、「[方法 :バインド データを Windows フォーム DataGridView コントロール](how-to-bind-data-to-the-windows-forms-datagridview-control.md)します。  
   

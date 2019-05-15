@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: ba943a54fdfc71dc1eb2ee2ce9548dfb86070712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64657059"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583513"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 ここでは、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] を実装するときに発生する可能性のある一般的な問題の対処法について説明します。  
@@ -168,7 +168,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="aptca"></a>APTCA  
  Q. System.Data.Linq は、部分的に信頼されているコードが使用できるようにマークされていますか?  
   
- A:  はい。System.Data.Linq.dll アセンブリは、[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] 属性でマークされている <xref:System.Security.AllowPartiallyTrustedCallersAttribute> アセンブリの 1 つです。 このマークがないと、[!INCLUDE[dnprdnshort](../../../../../../includes/dnprdnshort-md.md)] のアセンブリは完全に信頼されたコードによってのみ使用されます。  
+ A:  はい、System.Data.Linq.dll アセンブリは .NET Framework アセンブリでマークされた、<xref:System.Security.AllowPartiallyTrustedCallersAttribute>属性。 このをマークすることがなく完全に信頼されたコードによるのみ、.NET Framework アセンブリが使用を意図しています。  
   
  主なシナリオでは[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]部分的に許可するには、呼び出し元が有効にするには信頼されているため、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]アセンブリに、Web アプリケーションからアクセスできる場所、*信頼*構成が Medium です。  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - Visual Basic code, operators
 - arithmetic operators [Visual Basic], about arithmetic operators
 ms.assetid: 325dac7a-ea4f-41d5-8b48-f6e904211569
-ms.openlocfilehash: 9f1d77ac27def556d94fac12dbde2f36d5b139de
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1854e35e32a31dbf531e6705a7968434dd02e44
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649757"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593247"
 ---
 # <a name="arithmetic-operators-in-visual-basic"></a>Visual Basic における算術演算子
 算術演算子を使用して、多くのリテラル、変数、その他の式、関数とプロパティの呼び出し、および定数によって表される数値の計算に関連する一般的な算術演算を実行します。 算術演算子にも分類は、ビット シフト演算子のオペランドのビットごとのレベルで動作し、ビット パターンを左または右にシフトです。  
@@ -51,7 +51,7 @@ ms.locfileid: "64649757"
  [!code-vb[VbVbalrOperators#63](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrOperators/VB/Class1.vb#63)]  
   
 ### <a name="attempted-division-by-zero"></a>0 による除算  
- 0 による除算では、関連するデータ型によって異なる結果があります。 整数の区分で (`SByte`、 `Byte`、 `Short`、 `UShort`、 `Integer`、 `UInteger`、 `Long`、 `ULong`)、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]スロー、<xref:System.DivideByZeroException>例外。 除算操作で、`Decimal`または`Single`データ型、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]もスローされます、<xref:System.DivideByZeroException>例外。  
+ 0 による除算では、関連するデータ型によって異なる結果があります。 整数の区分で (`SByte`、 `Byte`、 `Short`、 `UShort`、 `Integer`、 `UInteger`、 `Long`、 `ULong`)、.NET Framework がスローされます、<xref:System.DivideByZeroException>例外。 除算操作で、`Decimal`または`Single`データ型の場合は、.NET Framework もスロー、<xref:System.DivideByZeroException>例外。  
   
  関連する浮動小数点の区分で、`Double`データ型の場合は、例外がスローされないと、結果は、クラスのメンバーを表す<xref:System.Double.NaN>、 <xref:System.Double.PositiveInfinity>、または<xref:System.Double.NegativeInfinity>被除数に応じて、します。 次の表に、除算の結果、`Double`値を 0 でします。  
   

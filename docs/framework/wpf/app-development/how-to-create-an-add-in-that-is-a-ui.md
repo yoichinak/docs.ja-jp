@@ -9,12 +9,12 @@ helpviewer_keywords:
 - implementing UI add-ins [WPF]
 - pipeline segments [WPF], creating add-ins
 ms.assetid: 86375525-282b-4039-8352-8680051a10ea
-ms.openlocfilehash: e12769eca2d3c963e2d7a19e50c67814bcff3152
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0464d87aef3d4e88d9340af2ac1db93c13ba26e2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625372"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592659"
 ---
 # <a name="how-to-create-an-add-in-that-is-a-ui"></a>方法: UI であるアドインを作成する
 この例では、WPF のスタンドアロン アプリケーションでホストされている Windows Presentation Foundation (WPF) であるアドインを作成する方法を示します。  
@@ -81,7 +81,7 @@ ms.locfileid: "64625372"
   
 <a name="HostApp"></a>   
 ## <a name="implementing-the-host-application"></a>ホスト アプリケーションの実装  
- ホスト側アダプターとホスト ビューの作成、ホスト アプリケーションを使用できます、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]アドイン モデルをパイプラインを開き、アドインのホスト ビューを取得します。 これらの手順を次のコードに示します。  
+ ホスト側アダプターとホスト ビューの作成、ホスト アプリケーションは、パイプラインを開き、アドインのホスト ビューを取得する .NET Framework アドイン モデルを使用できます。 これらの手順を次のコードに示します。  
 
  ホスト アプリケーションでは、.NET Framework アドイン モデルの一般的なコードを使用して、アドイン、ホスト アプリケーションに暗黙的に、ホスト ビューを返しますアクティブにします。 ホスト アプリケーションは、その後、ホスト ビューを表示します (これは、 <xref:System.Windows.Controls.UserControl>) から、<xref:System.Windows.Controls.Grid>します。  
   

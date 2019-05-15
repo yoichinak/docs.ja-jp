@@ -4,15 +4,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - XML comments [Visual Basic], parsing [Visual Basic]
 ms.assetid: 78a15cd0-7708-4e79-85d1-c154b7a14a8c
-ms.openlocfilehash: efd9711f93478b1ecc2ded7b57fa45f38286eeb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab05db770f312a362e26f17df684f6f4f49c0eb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651210"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586740"
 ---
 # <a name="processing-the-xml-file-visual-basic"></a>XML ファイルの処理 (Visual Basic)
-コンパイラは、ドキュメントを生成するためにタグ付けされたコードのコンストラクトごとに、ID 文字列を生成します。 (コードをタグ付けする方法については、次を参照してください[XML コメント タグ](../../../visual-basic/language-reference/xmldoc/index.md)。)。ID 文字列によって、コンストラクトは一意に識別されます。 XML ファイルを処理するプログラムは、ID 文字列を使用して、対応するを識別するために[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]メタデータ/リフレクション項目。  
+コンパイラは、ドキュメントを生成するためにタグ付けされたコードのコンストラクトごとに、ID 文字列を生成します。 (コードをタグ付けする方法については、次を参照してください[XML コメント タグ](../../../visual-basic/language-reference/xmldoc/index.md)。)。ID 文字列によって、コンストラクトは一意に識別されます。 XML ファイルを処理するプログラムは、対応する .NET Framework メタデータ/リフレクション項目を識別するために、ID 文字列を使用できます。  
   
  XML ファイルは、コードの階層表現ではありません。各要素に対して生成された ID を持つ単純なリストになります。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64651210"
   
 - 2 番目の部分、 `String` 、名前空間のルートにある項目の完全修飾の名前を指定します。 項目、その外側の型および名前空間の名前は、ピリオドで区切られます。 シャープ記号で置き換えられますが、項目自体の名前にピリオドが含まれている場合 (#)。 項目の名前には番号記号がないことが前提です。 たとえば、完全修飾名の`String`コンス トラクターになる`System.String.#ctor`します。  
   
-- プロパティおよびメソッドについては、メソッドに引数がある場合は、引数のリストをかっこで囲み、メソッドに続けて指定します。 引数がない場合は、かっこはありません。 引数はコンマで区切られます。 エンコード方法に直接依存各引数のエンコーディングを[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]署名します。  
+- プロパティおよびメソッドについては、メソッドに引数がある場合は、引数のリストをかっこで囲み、メソッドに続けて指定します。 引数がない場合は、かっこはありません。 引数はコンマで区切られます。 各引数のエンコーディングに依存して直接 .NET Framework のシグネチャでのエンコード方法。  
   
 ## <a name="example"></a>例  
  次のコードは、クラスの ID の文字列し、そのメンバーが生成されます。  

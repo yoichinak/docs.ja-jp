@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37c2ad92af938c1816c275ce217e48652b0628d6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 30d9517c404dc76cdc0f8206599cacdb430a1ae9
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59141259"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613988"
 ---
 # <a name="in-process-side-by-side-execution"></a>インプロセスの side-by-side 実行
 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスで複数のバージョンの共通言語ランタイム (CLR) を実行できます。 既定では、マネージド COM コンポーネントは、プロセスに読み込まれている .NET Framework のバージョンに関係なく、コンポーネントがビルドされた .NET Framework のバージョンで実行されます。  
@@ -22,19 +22,19 @@ ms.locfileid: "59141259"
   
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] が備える side-by-side ホスティングの新しいアプローチでは、次のことが保証されます。  
   
--   .NET Framework の新しいバージョンをインストールしても、既存のアプリケーションに影響はありません。  
+- .NET Framework の新しいバージョンをインストールしても、既存のアプリケーションに影響はありません。  
   
--   アプリケーションは、それがビルドされたバージョンの .NET Framework に対して実行されます。 明示的に指示しない限り、新しいバージョンの .NET Framework は使われません。 ただし、新しいバージョンの .NET Framework を使うようにアプリケーションを移行する方が簡単です。  
+- アプリケーションは、それがビルドされたバージョンの .NET Framework に対して実行されます。 明示的に指示しない限り、新しいバージョンの .NET Framework は使われません。 ただし、新しいバージョンの .NET Framework を使うようにアプリケーションを移行する方が簡単です。  
   
 ## <a name="effects-on-users-and-developers"></a>ユーザーと開発者への影響  
   
--   **エンドユーザーとシステム管理者**。 これらのユーザーについては、単独で、またはアプリケーションと共に、ランタイムの新しいバージョンをインストールしても、コンピューターに影響がないことが、これまで以上に確実になっています。 既存のアプリケーションは引き続きこれまでと同じように動作します。  
+- **エンドユーザーとシステム管理者**。 これらのユーザーについては、単独で、またはアプリケーションと共に、ランタイムの新しいバージョンをインストールしても、コンピューターに影響がないことが、これまで以上に確実になっています。 既存のアプリケーションは引き続きこれまでと同じように動作します。  
   
--   **アプリケーション開発者**。 Side-by-side ホスティングは、アプリケーション開発者に対する影響はほとんどありません。 既定では、アプリケーションはそれがビルドされた .NET Framework のバージョンで常に実行されます。これは変更されていません。 ただし、開発者はこの動作をオーバーライドし、新しいバージョンの .NET Framework で実行するようアプリケーションに指示できます ([シナリオ 2](#scenarios) をご覧ください)。  
+- **アプリケーション開発者**。 Side-by-side ホスティングは、アプリケーション開発者に対する影響はほとんどありません。 既定では、アプリケーションはそれがビルドされた .NET Framework のバージョンで常に実行されます。これは変更されていません。 ただし、開発者はこの動作をオーバーライドし、新しいバージョンの .NET Framework で実行するようアプリケーションに指示できます ([シナリオ 2](#scenarios) をご覧ください)。  
   
--   **ライブラリ開発者とコンシューマー**。 ライブラリ開発者が直面する互換性の問題は、side-by-side ホスティングでは解決されません。 アプリケーションによって (直接参照または <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> の呼び出しにより) 直接読み込まれるライブラリは、それが読み込まれる <xref:System.AppDomain> のランタイムを引き続き使います。 サポートする .NET Framework のすべてのバージョンについて、ライブラリをテストする必要があります。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ランタイムを使ってコンパイルされているアプリケーションに、それより前のランタイムを使ってビルドされたライブラリが含まれる場合は、そのライブラリも [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ランタイムを使います。 一方、ランタイムを使ってビルドされたアプリケーションに、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] を使ってビルドされたライブラリが含まれる場合は、アプリケーションも [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] を使うように強制する必要があります ([シナリオ 3](#scenarios) をご覧ください)。  
+- **ライブラリ開発者とコンシューマー**。 ライブラリ開発者が直面する互換性の問題は、side-by-side ホスティングでは解決されません。 アプリケーションによって (直接参照または <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> の呼び出しにより) 直接読み込まれるライブラリは、それが読み込まれる <xref:System.AppDomain> のランタイムを引き続き使います。 サポートする .NET Framework のすべてのバージョンについて、ライブラリをテストする必要があります。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ランタイムを使ってコンパイルされているアプリケーションに、それより前のランタイムを使ってビルドされたライブラリが含まれる場合は、そのライブラリも [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] ランタイムを使います。 一方、ランタイムを使ってビルドされたアプリケーションに、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] を使ってビルドされたライブラリが含まれる場合は、アプリケーションも [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] を使うように強制する必要があります ([シナリオ 3](#scenarios) をご覧ください)。  
   
--   **マネージド COM コンポーネントの開発者**。 以前は、マネージド COM コンポーネントはコンピューターにインストールされている最新バージョンのランタイムを使って自動的に実行しました。 現在は、ビルドされたバージョンのランタイムに対して COM コンポーネントを実行できるようになりました。  
+- **マネージド COM コンポーネントの開発者**。 以前は、マネージド COM コンポーネントはコンピューターにインストールされている最新バージョンのランタイムを使って自動的に実行しました。 現在は、ビルドされたバージョンのランタイムに対して COM コンポーネントを実行できるようになりました。  
   
      次の表で示すように、.NET Framework バージョン 1.1 でビルドされたコンポーネントは、バージョン 4 のコンポーネントとであれば side-by-side で実行できますが、バージョン 2.0、3.0、3.5 のコンポーネントとは、これらのバージョンでは side-by-side ホスティングを使用できないために side-by-side では実行できません。  
   
@@ -50,13 +50,13 @@ ms.locfileid: "59141259"
 <a name="scenarios"></a>   
 ## <a name="common-side-by-side-hosting-scenarios"></a>side-by-side ホスティングの一般的なシナリオ  
   
--   **シナリオ 1 :** 以前のバージョンの .NET Framework でビルドされた COM コンポーネントを使うネイティブ アプリケーション。  
+- **シナリオ 1 :** 以前のバージョンの .NET Framework でビルドされた COM コンポーネントを使うネイティブ アプリケーション。  
   
      インストールされている .NET Framework のバージョン: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] および COM コンポーネントによって使われている他のすべての .NET Framework のバージョンの場合。  
   
      対処方法: このシナリオの場合は、何も行いません。 COM コンポーネントは、登録された .NET Framework のバージョンで実行されます。  
   
--   **シナリオ 2**: [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] で実行することが好ましいが、バージョン 2.0 が存在しない場合は [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] で実行する、[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] でビルドされたマネージド アプリケーション。  
+- **シナリオ 2**: [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] で実行することが好ましいが、バージョン 2.0 が存在しない場合は [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] で実行する、[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] でビルドされたマネージド アプリケーション。  
   
      インストールされている .NET Framework のバージョン: 以前のバージョンの .NET Framework および [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "59141259"
     </configuration>  
     ```  
   
--   **シナリオ 3**: 以前のバージョンの .NET Framework でビルドされた COM コンポーネントを使うネイティブ アプリケーションを、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] で実行したい場合。  
+- **シナリオ 3**: 以前のバージョンの .NET Framework でビルドされた COM コンポーネントを使うネイティブ アプリケーションを、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] で実行したい場合。  
   
      インストールされている .NET Framework のバージョン: [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]。  
   

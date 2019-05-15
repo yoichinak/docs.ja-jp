@@ -17,12 +17,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 76c7b9fa9ef103fc5fc62830932cc724ba50baca
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 41303bf548502fe319cbcfb8a152179863902817
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333373"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64623575"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンの実装
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
@@ -35,26 +35,26 @@ ms.locfileid: "59333373"
   
  次の一覧は、このトピックで説明するイベント ベースの非同期パターンの機能を示しています。  
   
--   イベントベースの非同期パターンを実装するチャンス  
+- イベントベースの非同期パターンを実装するチャンス  
   
--   非同期メソッドの名前付け  
+- 非同期メソッドの名前付け  
   
--   キャンセル処理の任意のサポート  
+- キャンセル処理の任意のサポート  
   
--   IsBusy プロパティの任意のサポート  
+- IsBusy プロパティの任意のサポート  
   
--   進行状況レポートの任意のサポート  
+- 進行状況レポートの任意のサポート  
   
--   増分の結果を返すことの任意のサポート  
+- 増分の結果を返すことの任意のサポート  
   
--   メソッドでの Out パラメーターと Ref パラメーターの処理  
+- メソッドでの Out パラメーターと Ref パラメーターの処理  
   
 ## <a name="opportunities-for-implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンを実装するチャンス  
  以下に該当する場合は、イベントベースの非同期パターンの実装を検討します。  
   
--   クラスのクライアントには、非同期操作に使用できる <xref:System.Threading.WaitHandle> と <xref:System.IAsyncResult> オブジェクトは必要ありません。つまり、ポーリング、<xref:System.Threading.WaitHandle.WaitAll%2A> または <xref:System.Threading.WaitHandle.WaitAny%2A> は、クライアントによってビルドされる必要があるということです。  
+- クラスのクライアントには、非同期操作に使用できる <xref:System.Threading.WaitHandle> と <xref:System.IAsyncResult> オブジェクトは必要ありません。つまり、ポーリング、<xref:System.Threading.WaitHandle.WaitAll%2A> または <xref:System.Threading.WaitHandle.WaitAny%2A> は、クライアントによってビルドされる必要があるということです。  
   
--   クライアントでの非同期操作を、使い慣れたイベント/デリゲート モデルを使用して管理したい。  
+- クライアントでの非同期操作を、使い慣れたイベント/デリゲート モデルを使用して管理したい。  
   
  どの操作も非同期を実装するための候補になりますが、長い待機時間が予想される操作を考慮してください。 特に適切なのは、クライアントがメソッドを呼び出し、完了時に通知を受け取ること以外の介入を必要としない操作です。 継続的に実行され、進捗状況、増分結果、または状態の変更をクライアントに定期的に通知する操作も適しています。  
   
@@ -65,11 +65,11 @@ ms.locfileid: "59333373"
   
  以下を実行する _MethodName_**Async** メソッドを定義します。  
   
--   `void` を返します。  
+- `void` を返します。  
   
--   *MethodName* メソッドと同じパラメーターを受け取ります。  
+- *MethodName* メソッドと同じパラメーターを受け取ります。  
   
--   複数の呼び出しを受け入れます。  
+- 複数の呼び出しを受け入れます。  
   
  必要に応じて、_MethodName_**Async** と同一の _MethodName_**Async** オーバーロードを定義しますが、`userState` という追加のオブジェクト値パラメーターを使用して定義します。 これは、メソッドの複数の同時呼び出しを管理するために実行します。この場合、メソッドの呼び出しを区別するために `userState` 値がすべてのイベント ハンドラーに返されます。 単純に後で取得するためにユーザーの状態を格納する場所として実行することもできます。  
   
@@ -108,9 +108,9 @@ ms.locfileid: "59333373"
     }  
     ```  
   
-    -   _MethodName_**CompletedEventArgs** クラスで、フィールドではなくメンバーを読み取り専用プロパティとして公開していることを確認します。これは、フィールドはデータ バインドを妨げるためです。  
+    - _MethodName_**CompletedEventArgs** クラスで、フィールドではなくメンバーを読み取り専用プロパティとして公開していることを確認します。これは、フィールドはデータ バインドを妨げるためです。  
   
-    -   結果を生成しないメソッドに <xref:System.ComponentModel.AsyncCompletedEventArgs> の派生クラスを定義しないでください。 単純に <xref:System.ComponentModel.AsyncCompletedEventArgs> のインスタンス自体を使用します。  
+    - 結果を生成しないメソッドに <xref:System.ComponentModel.AsyncCompletedEventArgs> の派生クラスを定義しないでください。 単純に <xref:System.ComponentModel.AsyncCompletedEventArgs> のインスタンス自体を使用します。  
   
         > [!NOTE]
         >  実行可能かつ適切な場合、デリゲートと <xref:System.ComponentModel.AsyncCompletedEventArgs> 型を再利用することはまったく問題ありません。 この場合、特定のデリゲートと <xref:System.ComponentModel.AsyncCompletedEventArgs> が 1 つのメソッドに関連付けられることがないため、メソッド名のような名前の一貫性はなくなります。  
@@ -118,9 +118,9 @@ ms.locfileid: "59333373"
 ## <a name="optionally-support-cancellation"></a>キャンセル処理の任意のサポート  
  クラスで非同期操作のキャンセルをサポートする場合は、以下に示すようにキャンセルをクライアントに公開する必要があります。 キャンセルのサポートを定義する前に、以下の 2 点について判断する必要があることに注意してください。  
   
--   今後の予想される追加機能を含め、クラスには、キャンセルをサポートする非同期操作が 1 つだけあるかどうか。  
+- 今後の予想される追加機能を含め、クラスには、キャンセルをサポートする非同期操作が 1 つだけあるかどうか。  
   
--   キャンセルをサポートする非同期操作が、複数の保留中の操作をサポートできるかどうか。 これは、_MethodName_**Async** メソッドが `userState` パラメーターを受け取り、いずれかの呼び出しが終了するまで待機する前に、複数の呼び出しを許可できるかどうかを意味します。  
+- キャンセルをサポートする非同期操作が、複数の保留中の操作をサポートできるかどうか。 これは、_MethodName_**Async** メソッドが `userState` パラメーターを受け取り、いずれかの呼び出しが終了するまで待機する前に、複数の呼び出しを許可できるかどうかを意味します。  
   
  これら 2 つの質問に対する回答を次の表に当てはめて、キャンセル メソッドで使用するシグネチャを決定します。  
   
@@ -156,13 +156,13 @@ ms.locfileid: "59333373"
 ## <a name="optionally-provide-support-for-progress-reporting"></a>進行状況レポートの任意のサポート  
  非同期操作の操作中に進行状況を報告することをお勧めします。 イベント ベースの非同期パターンには、これを行うためのガイドラインがあります。  
   
--   必要に応じて、非同期操作によって発生し、適切なスレッドで呼び出されるイベントを定義します。 <xref:System.ComponentModel.ProgressChangedEventArgs> オブジェクトは、0 ～ 100 の範囲であることが期待されている整数値の進行状況インジケーターを伝達します。  
+- 必要に応じて、非同期操作によって発生し、適切なスレッドで呼び出されるイベントを定義します。 <xref:System.ComponentModel.ProgressChangedEventArgs> オブジェクトは、0 ～ 100 の範囲であることが期待されている整数値の進行状況インジケーターを伝達します。  
   
--   このイベントには、次のように名前を付けます。  
+- このイベントには、次のように名前を付けます。  
   
-    -   `ProgressChanged`: クラスに複数の非同期操作がある (または将来のバージョンで複数の非同期操作を含めることが予想される) 場合。  
+    - `ProgressChanged`: クラスに複数の非同期操作がある (または将来のバージョンで複数の非同期操作を含めることが予想される) 場合。  
   
-    -   _MethodName_**ProgressChanged** クラスに非同期操作が 1 つだけある場合。  
+    - _MethodName_**ProgressChanged** クラスに非同期操作が 1 つだけある場合。  
   
      この名前の付け方は、「キャンセルの任意のサポート」セクションで説明した、キャンセル メソッドに対する方法と対応しています。  
   
@@ -180,9 +180,9 @@ ms.locfileid: "59333373"
 ### <a name="single-operation-class"></a>単一操作クラス  
  クラスが 1 つの非同期操作のみをサポートし、その操作が増分結果を返すことができる場合は、次のようにします。  
   
--   <xref:System.ComponentModel.ProgressChangedEventArgs> 型を増分結果データを伝達するように拡張し、この拡張されたデータを使用する _MethodName_**ProgressChanged** イベントを定義します。  
+- <xref:System.ComponentModel.ProgressChangedEventArgs> 型を増分結果データを伝達するように拡張し、この拡張されたデータを使用する _MethodName_**ProgressChanged** イベントを定義します。  
   
--   報告する増分結果があるときに、この _MethodName_**ProgressChanged** イベントを発生させます。  
+- 報告する増分結果があるときに、この _MethodName_**ProgressChanged** イベントを発生させます。  
   
  このソリューションは、_MethodName_**ProgressChanged** イベントと同じように、同じイベントの発生で "すべての操作" に対して増分結果を返しても何の問題もないため、特に単一非同期操作のクラスに適用されます。  
   
@@ -194,9 +194,9 @@ ms.locfileid: "59333373"
 ### <a name="multiple-operation-class-with-heterogeneous-incremental-results"></a>異なる型の増分結果を持つ複数操作クラス  
  クラスが複数の非同期メソッドをサポートし、それぞれが異なる型のデータを返す場合は、以下を行います。  
   
--   増分結果の報告と進行状況の報告を分離します。  
+- 増分結果の報告と進行状況の報告を分離します。  
   
--   各非同期メソッドの増分結果データを処理する個別の _MethodName_**ProgressChanged** イベントを、適切な <xref:System.EventArgs> で定義します。  
+- 各非同期メソッドの増分結果データを処理する個別の _MethodName_**ProgressChanged** イベントを、適切な <xref:System.EventArgs> で定義します。  
   
  「[イベントベースの非同期パターンを実装するための推奨される手順](../../../docs/standard/asynchronous-programming-patterns/best-practices-for-implementing-the-event-based-asynchronous-pattern.md)」に説明されているように、そのイベント ハンドラーを適切なスレッドで呼び出します。  
   
@@ -205,9 +205,9 @@ ms.locfileid: "59333373"
   
  非同期メソッド *MethodName* の場合:  
   
--   *MethodName* に対する `out` パラメーターは、_MethodName_**Async** の一部にしないでください。 代わりに、*MethodName* での同等のパラメーターと同じ名前の _MethodName_**CompletedEventArgs** の一部にする必要があります (より適切な名前がない限り)。  
+- *MethodName* に対する `out` パラメーターは、_MethodName_**Async** の一部にしないでください。 代わりに、*MethodName* での同等のパラメーターと同じ名前の _MethodName_**CompletedEventArgs** の一部にする必要があります (より適切な名前がない限り)。  
   
--   *MethodName* に対する `ref` パラメーターは、_MethodName_**Async** の一部として出現し、*MethodName* での同等のパラメーターと同じ名前の _MethodName_**CompletedEventArgs** の一部として出現する必要があります (より適切な名前がない限り)。  
+- *MethodName* に対する `ref` パラメーターは、_MethodName_**Async** の一部として出現し、*MethodName* での同等のパラメーターと同じ名前の _MethodName_**CompletedEventArgs** の一部として出現する必要があります (より適切な名前がない限り)。  
   
  次に例を示します。  
   

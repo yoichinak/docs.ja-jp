@@ -9,22 +9,22 @@ helpviewer_keywords:
 - WCF Data Services, querying
 - WCF Data Services, accessing data
 ms.assetid: 823e9444-27aa-4f1f-be8e-0486d67f54c0
-ms.openlocfilehash: ce019e97e54781976736dd5bd6e6d7e134322f65
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c2eb6d8f8bb7886e4615438e463aeea3c3825662
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61916865"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582633"
 ---
 # <a name="querying-the-data-service-wcf-data-services"></a>データ サービスに対するクエリ (WCF Data Services)
 
-[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリを使用すると、言語統合クエリ (LINQ) を含め、使い慣れた [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] プログラミング パターンを使用してデータ サービスに対してクエリを実行できます。 このクライアント ライブラリは、クライアント上で <xref:System.Data.Services.Client.DataServiceQuery%601> クラスのインスタンスとして定義されたクエリを HTTP GET 要求メッセージに変換します。 ライブラリは、応答メッセージを受信し、クライアント データ サービス クラスのインスタンスに変換します。 これらのクラスは、<xref:System.Data.Services.Client.DataServiceContext> が属する <xref:System.Data.Services.Client.DataServiceQuery%601> によって追跡されます。
+[!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] クライアント ライブラリを使用すると、言語統合クエリ (LINQ) を含め、使い慣れた .NET Framework プログラミング パターンを使用してデータ サービスに対してクエリを実行できます。 このクライアント ライブラリは、クライアント上で <xref:System.Data.Services.Client.DataServiceQuery%601> クラスのインスタンスとして定義されたクエリを HTTP GET 要求メッセージに変換します。 ライブラリは、応答メッセージを受信し、クライアント データ サービス クラスのインスタンスに変換します。 これらのクラスは、<xref:System.Data.Services.Client.DataServiceContext> が属する <xref:System.Data.Services.Client.DataServiceQuery%601> によって追跡されます。
 
 ## <a name="data-service-queries"></a>データ サービス クエリ
 
 <xref:System.Data.Services.Client.DataServiceQuery%601> ジェネリック クラスは、0 個以上のエンティティ型インスタンスのコレクションを返すクエリを表します。 データ サービス クエリは、常に既存のデータ サービス コンテキストに属します。 このコンテキストにより、クエリの作成と実行に必要なサービス URI とメタデータ情報が維持されます。
 
-使用すると、**サービス参照の追加**データ サービスを追加するためのダイアログ、 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]-から継承するエンティティ コンテナー クラス ベースのクライアント アプリケーションが作成された、<xref:System.Data.Services.Client.DataServiceContext>クラス。 このクラスには、型指定された <xref:System.Data.Services.Client.DataServiceQuery%601> インスタンスを返すプロパティが含まれます。 データ サービスが公開するエンティティ セットごとに 1 つのプロパティがあります。 これらのプロパティを使用すると、型指定された <xref:System.Data.Services.Client.DataServiceQuery%601> のインスタンスを簡単に作成できます。
+使用すると、**サービス参照の追加**から継承するエンティティ コンテナー クラスの .NET Framework ベースのクライアント アプリケーションにデータ サービスを追加するためのダイアログが作成された、<xref:System.Data.Services.Client.DataServiceContext>クラス。 このクラスには、型指定された <xref:System.Data.Services.Client.DataServiceQuery%601> インスタンスを返すプロパティが含まれます。 データ サービスが公開するエンティティ セットごとに 1 つのプロパティがあります。 これらのプロパティを使用すると、型指定された <xref:System.Data.Services.Client.DataServiceQuery%601> のインスタンスを簡単に作成できます。
 
 クエリは次のシナリオで実行されます。
 

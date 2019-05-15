@@ -8,19 +8,19 @@ helpviewer_keywords:
 - dynamic properties
 - user preferences [Windows Forms], tracking
 ms.assetid: 0dd8bca5-a6bf-4ac4-8eec-5725d08b38dc
-ms.openlocfilehash: b603e81a342652a6639f54a78fb998cda5fdc35a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49c7ceb431e9ab59b47e3b8b912e2881aeeef6c2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972420"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583550"
 ---
 # <a name="application-settings-overview"></a>アプリケーション設定の概要
 このトピックでは、アプリケーションとユーザーのために設定のデータを作成して格納する方法について説明します。  
   
  Windows フォームのアプリケーション設定の機能により、カスタム アプリケーションと、クライアント コンピューター上のユーザー設定の作成、保存、および保守が簡単になります。 Windows フォーム アプリケーションの設定ではデータベースの接続文字列など、アプリケーションのデータだけでなく、ユーザー アプリケーションの設定などのユーザー固有のデータを格納することができます。 Visual Studio またはカスタムのマネージド コードを使用して、新しい設定の作成、ディスクからの読み取りまたは書き込み、フォームのプロパティへのバインド、および読み込みと保存の前の設定データの検証を実行することができます。  
   
- アプリケーション設定は、開発者がカスタム コードをほとんど使用しないでアプリケーションの状態を保存でき、以前のバージョンの [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]の動的プロパティに代わるものです。 アプリケーション設定には、読み取り専用で、遅延バインディングであり、複数のカスタム プログラミングを必要とする動的プロパティに対する多くの機能強化が含まれます。 動的プロパティ クラスは [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]で保持されていますが、アプリケーション設定クラスを少しラップするシェル クラスです。  
+ アプリケーション設定では、開発者はほとんどのカスタム コードを使用してそのアプリケーション内で状態を保存してはの動的プロパティの .NET Framework の以前のバージョンに代わるものです。 アプリケーション設定には、読み取り専用で、遅延バインディングであり、複数のカスタム プログラミングを必要とする動的プロパティに対する多くの機能強化が含まれます。 動的プロパティ クラスは [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]で保持されていますが、アプリケーション設定クラスを少しラップするシェル クラスです。  
   
 ## <a name="what-are-application-settings"></a>アプリケーション設定とは何でしょうか?  
  Windows フォーム アプリケーションでは、アプリケーションの実行のために欠かせない特定のデータが必要とされるものの、そのデータをアプリケーションのコードに直接含めるのは望ましくないということがよくあります。 アプリケーションが Web サービスまたはデータベース サーバーを使用する場合、この情報を別のファイルに保存することで、将来再コンパイルせずに変更することができます。 同様に、アプリケーションは、現在のユーザーに固有の格納データを必要とすることがあります。 たとえば、ほとんどのアプリケーションでは、アプリケーションの外観と動作をカスタマイズするユーザー設定があります。  
@@ -34,7 +34,7 @@ ms.locfileid: "61972420"
  カスタム コントロールでは、 <xref:System.Configuration.IPersistComponentSettings> メソッドを公開する <xref:System.Configuration.IPersistComponentSettings.SaveSettings%2A> インターフェイスを実装することで、独自の設定を保存できます。 Windows フォーム <xref:System.Windows.Forms.ToolStrip> コントロールは、このインターフェイスを実装して、アプリケーション セッション間でのツールバーとツールバー項目の位置を保存します。 カスタム コントロールとアプリケーション設定の詳細については、「 [Application Settings for Custom Controls](application-settings-for-custom-controls.md)」を参照してください。  
   
 ## <a name="limitations-of-application-settings"></a>アプリケーションの設定の制限事項  
- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)]をホストするアンマネージ アプリケーションで、アプリケーション設定を使用することはできません。 Visual Studio アドイン、C++ for Microsoft Office、Internet Explorer のコントロール ホスト、Microsoft Outlook のアドインやプロジェクトなどの環境では、設定は機能しません。  
+ .NET Framework をホストするアンマネージ アプリケーションでのアプリケーション設定を使用できません。 Visual Studio アドイン、C++ for Microsoft Office、Internet Explorer のコントロール ホスト、Microsoft Outlook のアドインやプロジェクトなどの環境では、設定は機能しません。  
   
  現在、Windows フォームの一部のプロパティをバインドできません。 最も注目に値する例は、 <xref:System.Windows.Forms.Form.ClientSize%2A> プロパティで、このプロパティへのバインドにより、実行時に予期しない動作が発生します。 これらの設定をプログラムで保存して読み込むことで、通常はこれらの問題を回避できます。  
   

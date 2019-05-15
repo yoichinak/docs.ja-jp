@@ -9,17 +9,17 @@ helpviewer_keywords:
 - XsdDataContractExporter class
 - XsdDataContractImporter class
 ms.assetid: 0da32b50-ccd9-463a-844c-7fe803d3bf44
-ms.openlocfilehash: 43b9ca115f3eeae7a28d8ed8a0642ad6e5439bd8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a14ee9e5916133be3979650055cf3e57899a4cca
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603705"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591801"
 ---
 # <a name="schema-import-and-export"></a>スキーマのインポートとエクスポート
-Windows Communication Foundation (WCF) には、新しいシリアル化エンジンが含まれています、<xref:System.Runtime.Serialization.DataContractSerializer>します。 `DataContractSerializer` は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトと XML を双方向で変換します。 シリアライザー自体だけでなく WCF には、関連付けられているスキーマのインポートとスキーマ エクスポート機構が含まれています。 *スキーマ*は、シリアライザーが生成する、またはデシリアライザーがアクセスできる、XML の構造の正式かつ正確であり、コンピューターが判読できる説明です。 WCF では、スキーマ表現として、これは広く、多数のサードパーティ プラットフォームと相互運用可能な World Wide Web Consortium (W3C) XML スキーマ定義言語 (XSD) を使用します。  
+Windows Communication Foundation (WCF) には、新しいシリアル化エンジンが含まれています、<xref:System.Runtime.Serialization.DataContractSerializer>します。 `DataContractSerializer`双方向) の「.NET Framework のオブジェクトと XML に変換します。 シリアライザー自体だけでなく WCF には、関連付けられているスキーマのインポートとスキーマ エクスポート機構が含まれています。 *スキーマ*は、シリアライザーが生成する、またはデシリアライザーがアクセスできる、XML の構造の正式かつ正確であり、コンピューターが判読できる説明です。 WCF では、スキーマ表現として、これは広く、多数のサードパーティ プラットフォームと相互運用可能な World Wide Web Consortium (W3C) XML スキーマ定義言語 (XSD) を使用します。  
   
- スキーマ インポート コンポーネント <xref:System.Runtime.Serialization.XsdDataContractImporter> は、XSD スキーマ ドキュメントを受け取って、シリアル化された形式が特定のスキーマに対応するように [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] クラス (通常、データ コントラクト クラス) を生成します。  
+ スキーマ インポート コンポーネント<xref:System.Runtime.Serialization.XsdDataContractImporter>XSD スキーマ ドキュメントを受け取り、生成、シリアル化されたフォームが指定されたスキーマに対応できるように、.NET Framework のクラス (通常のデータ コントラクト クラス)。  
   
  たとえば、次のスキーマ フラグメントがあるとします。  
   
@@ -53,7 +53,7 @@ Windows Communication Foundation (WCF) には、新しいシリアル化エン�
   
  詳細については、次を参照してください。 [Data Contract Schema Reference](../../../../docs/framework/wcf/feature-details/data-contract-schema-reference.md)します。 スキーマがデータ コントラクト ルールに準拠していない場合は、別のシリアル化エンジンを使用します。 たとえば、<xref:System.Xml.Serialization.XmlSerializer> は、独自のスキーマ インポート機構を使用します。 また、サポートされるスキーマの範囲を拡張する特別なインポート モードもあります。 詳細については、生成に関するセクションを参照してください。<xref:System.Xml.Serialization.IXmlSerializable>型[クラスを生成するスキーマをインポート](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)します。  
   
- `XsdDataContractExporter` は、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] によってシリアル化できるすべての `DataContractSerializer` 型をサポートします。 詳細については、次を参照してください。[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)します。 通常、`XsdDataContractExporter` を使用して作成されたスキーマは、`XsdDataContractImporter` を使用してカスタマイズしない限り、<xref:System.Xml.Serialization.XmlSchemaProviderAttribute> で使用できる有効なデータです。  
+ `XsdDataContractExporter`でシリアル化できる .NET Framework の型をサポートしている、`DataContractSerializer`します。 詳細については、次を参照してください。[型は、データ コントラクト シリアライザーでサポートされている](../../../../docs/framework/wcf/feature-details/types-supported-by-the-data-contract-serializer.md)します。 通常、`XsdDataContractExporter` を使用して作成されたスキーマは、`XsdDataContractImporter` を使用してカスタマイズしない限り、<xref:System.Xml.Serialization.XmlSchemaProviderAttribute> で使用できる有効なデータです。  
   
  使用しての詳細については、<xref:System.Runtime.Serialization.XsdDataContractImporter>を参照してください[クラスを生成するスキーマをインポート](../../../../docs/framework/wcf/feature-details/importing-schema-to-generate-classes.md)します。  
   

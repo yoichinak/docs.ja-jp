@@ -10,23 +10,23 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 5928478518b0bc1eb498381567d52d5ddba4d8b7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5a0c4b0d672e3fd9cfe1528e16070cf1dcbabd69
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59326061"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64597654"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ によるデータ変換 (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] で行うことができるのは、データの取得だけではありません。 データ変換のための強力なツールとしても使用できます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを使用することにより、ソース シーケンスを入力として使用し、さまざまな方法で加工して新しい出力シーケンスを作成できます。 要素自体を変更せずに、並べ替えやグループ化してシーケンス自体を変更できます。 しかし、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] のクエリの最も強力な機能は、新しい型を作成する機能です。 この操作は [select](../../../../csharp/language-reference/keywords/select-clause.md) 句内で行います。 たとえば、次のタスクを実行できます。  
   
--   複数の入力シーケンスを結合して、新しい型の単一の出力シーケンスを作成する。  
+- 複数の入力シーケンスを結合して、新しい型の単一の出力シーケンスを作成する。  
   
--   ソース シーケンス内の各要素の単一のプロパティまたは複数のプロパティを構成要素とする出力シーケンスを作成する。  
+- ソース シーケンス内の各要素の単一のプロパティまたは複数のプロパティを構成要素とする出力シーケンスを作成する。  
   
--   ソース データに対して実行した操作の結果を構成要素とする出力シーケンスを作成する。  
+- ソース データに対して実行した操作の結果を構成要素とする出力シーケンスを作成する。  
   
--   別の形式で出力シーケンスを作成する。 たとえば、SQL の行またはテキスト ファイルのデータを XML に変換できます。  
+- 別の形式で出力シーケンスを作成する。 たとえば、SQL の行またはテキスト ファイルのデータを XML に変換できます。  
   
  これらはほんの一例です。 これらの変換を、同じクエリ内でさまざまな方法で組み合わせて使用することもできます。 また、あるクエリの出力シーケンスを別のクエリの入力シーケンスとして使用することもできます。  
   

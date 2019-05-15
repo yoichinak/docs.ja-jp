@@ -19,12 +19,12 @@ helpviewer_keywords:
 - data type conversion [Visual Basic], exceptions during conversion
 - conversions [Visual Basic], widening
 ms.assetid: 058c3152-6c28-4268-af44-2209e774f0bd
-ms.openlocfilehash: 98702f2fb8f912b9503f3ccdad74e61ef097f617
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e2dbbd63be07a19c6e05c7ec8f94bdcd8f50c902
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600891"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586304"
 ---
 # <a name="widening-and-narrowing-conversions-visual-basic"></a>拡大変換と縮小変換 (Visual Basic)
 型変換で重要な考慮事項は、変換の結果が変換先のデータ型の範囲内かどうか。  
@@ -93,7 +93,7 @@ ms.locfileid: "64600891"
   
 - <xref:System.OverflowException> -(整数型の場合のみ)、指定した型の変換後の値が大きすぎる場合  
   
- クラスまたは構造体が定義されている場合、 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)そのクラスまたは構造体、または変換演算子として機能するを`CType`適切と見なされるすべての例外をスローすることができます。 さらを`CType`Visual Basic の関数を呼び出すことがありますまたは[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]メソッドで、さらに、さまざまな例外をスローする可能性があります。  
+ クラスまたは構造体が定義されている場合、 [CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)そのクラスまたは構造体、または変換演算子として機能するを`CType`適切と見なされるすべての例外をスローすることができます。 さらを`CType`Visual Basic の関数またはさらに、さまざまな例外をスローする可能性があります .NET Framework のメソッドを呼び出すことができます。  
   
 ## <a name="changes-during-reference-type-conversions"></a>参照型の変換中の変更  
  変換、*参照型*ポインターだけが、値をコピーします。 値そのものがコピーも、何らかの方法で変更します。 変更できることだけでは、ポインターを保持する変数のデータ型です。 次の例では、データ型は、派生クラスから、その基底クラスに変換されますが、両方の変数をポイントするようになりましたオブジェクトは変更されません。  

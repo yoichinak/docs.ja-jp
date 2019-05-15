@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Svcutil.exe
 - clients [WCF], consuming services
 ms.assetid: 1abf3d9f-b420-46f1-b628-df238751f308
-ms.openlocfilehash: 02b1b0f6215f7d26974a8e1e58fbefbb5d159cf7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29b030708f2174b55386b13931f1088d15f4eb4f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669687"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65582704"
 ---
 # <a name="servicemodel-metadata-utility-tool-svcutilexe"></a>ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)
 
@@ -107,7 +107,7 @@ BasicHttpContextBinding エンドポイントとサービスの*Svcutil.exe*と�
 |/serializer:Auto|シリアライザーが自動的に選択します。 これは、データ コントラクト シリアライザーを使用しようとしが失敗した場合に、XmlSerializer を使用します。<br /><br /> 短縮形: `/ser`|
 |/serializer:DataContractSerializer|シリアル化と逆シリアル化にデータ コントラクト シリアライザーを使用するデータ型を生成します。<br /><br /> 短縮形: `/ser:DataContractSerializer`|
 |/serializer:XmlSerializer|シリアル化と逆シリアル化に <xref:System.Xml.Serialization.XmlSerializer> を使用するデータ型を生成します。<br /><br /> 短縮形: `/ser:XmlSerializer`|
-|/targetClientVersion|アプリケーションが対象としている [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のバージョンを指定します。 有効値は `Version30` または `Version35` です。 既定値は `Version30` です。<br /><br /> 短縮形: `/tcv`<br /><br /> `Version30`:使用して、`/tcv:Version30`を使用するクライアントのコードを生成している場合[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]します。<br /><br /> `Version35`:使用して、`/tcv:Version35`を使用するクライアントのコードを生成している場合[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]します。 `/tcv:Version35` スイッチを指定して `/async` を使用している場合は、イベントベースおよびコールバック/デリゲートベースの非同期メソッドが生成されます。 また、LINQ 対応のデータセットおよび <xref:System.DateTimeOffset> のサポートが有効になっています。|
+|/targetClientVersion|アプリケーションが対象とする .NET Framework のバージョンを指定します。 有効値は `Version30` または `Version35` です。 既定値は `Version30` です。<br /><br /> 短縮形: `/tcv`<br /><br /> `Version30`:使用して、`/tcv:Version30`を使用するクライアントのコードを生成している場合[!INCLUDE[vstecwinfx](../../../includes/vstecwinfx-md.md)]します。<br /><br /> `Version35`:使用して、`/tcv:Version35`を使用するクライアントのコードを生成している場合[!INCLUDE[netfx35_short](../../../includes/netfx35-short-md.md)]します。 `/tcv:Version35` スイッチを指定して `/async` を使用している場合は、イベントベースおよびコールバック/デリゲートベースの非同期メソッドが生成されます。 また、LINQ 対応のデータセットおよび <xref:System.DateTimeOffset> のサポートが有効になっています。|
 |/wrapped|ラップされたパラメーターを含んでいるドキュメント リテラル スタイルのドキュメントに特別な大文字と小文字の規則が使用されるかどうかを制御します。 使用して、**ラップ/** スイッチと、[サービス モデル メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)通常大文字小文字の区別を指定するためのツール。|
 
 > [!NOTE]

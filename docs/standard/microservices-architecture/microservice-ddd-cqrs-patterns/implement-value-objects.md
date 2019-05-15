@@ -1,15 +1,13 @@
 ---
 title: 値オブジェクトの実装
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 新しい Entity Framework 機能を使用し、値オブジェクトを実装する方法の詳細とオプション。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 64ffd600468124439986b0d1949dc048ef245c78
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611381"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063065"
 ---
 # <a name="implement-value-objects"></a>値オブジェクトを実装する
 
@@ -324,7 +322,7 @@ public class Address
 - **複合型と値オブジェクト**。 EF Core GitHub リポジトリのディスカッション ([問題] タブ) \
   <https://github.com/aspnet/EntityFramework/issues/246>
 
-- **ValueObject.cs.** eShopOnContainers の基底値オブジェクト クラス。**  \
+- **ValueObject.cs.** eShopOnContainers の基底値オブジェクト クラス。 \
   <https://github.com/dotnet-architecture/eShopOnContainers/blob/dev/src/Services/Ordering/Ordering.Domain/SeedWork/ValueObject.cs>
 
 - **Address クラス。** eShopOnContainers の値オブジェクト クラスのサンプル。 \

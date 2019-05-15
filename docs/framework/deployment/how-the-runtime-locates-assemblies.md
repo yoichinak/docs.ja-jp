@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 772ac6f4-64d2-4cfb-92fd-58096dcd6c34
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 250e1764084ba3f7750867f2eea89e87cc7239eb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b967e6441ae3f3d43e5a6276cfcf79e3c44f74cf
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59342346"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64613976"
 ---
 # <a name="how-the-runtime-locates-assemblies"></a>ランタイムがアセンブリを検索する方法
 .NET Framework アプリケーションを正しく配置するには、アプリケーションを構成するアセンブリを共通言語ランタイムがどのように検索し、バインドするかを理解している必要があります。 既定では、ランタイムはアプリケーションを構成するアセンブリの正しいバージョンをバインドしようとします。 この既定の動作は、構成ファイルの設定によってオーバーライドできます。  
@@ -51,11 +51,11 @@ ms.locfileid: "59342346"
   
 4. 次の手順を使用することによって、[アセンブリのプローブ](#step4) を実行します。  
   
-    1.  構成と発行者ポリシーが元の参照に影響しない場合およびバインド要求が <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> メソッドを使用することによって作成されている場合、ランタイムは位置ヒントをチェックします。  
+    1. 構成と発行者ポリシーが元の参照に影響しない場合およびバインド要求が <xref:System.Reflection.Assembly.LoadFrom%2A?displayProperty=nameWithType> メソッドを使用することによって作成されている場合、ランタイムは位置ヒントをチェックします。  
   
-    2.  構成ファイル内でコードベースが見つかった場合、ランタイムはその場所だけをチェックします。 このプローブが失敗した場合、ランタイムはバインド要求が失敗したと判断し、それ以上のプローブは実行しません。  
+    2. 構成ファイル内でコードベースが見つかった場合、ランタイムはその場所だけをチェックします。 このプローブが失敗した場合、ランタイムはバインド要求が失敗したと判断し、それ以上のプローブは実行しません。  
   
-    3.  「 [手順 4: コードベースまたはプローブによるアセンブリの検索](#step4)」で説明するヒューリスティックを使用してアセンブリをプローブします。 プローブしてもアセンブリが見つからなかった場合、ランタイムは Windows Installer に対してアセンブリを提供するように要求します。 これは、オンデマンド インストール機能として実行されます。  
+    3. 「 [手順 4: コードベースまたはプローブによるアセンブリの検索](#step4)」で説明するヒューリスティックを使用してアセンブリをプローブします。 プローブしてもアセンブリが見つからなかった場合、ランタイムは Windows Installer に対してアセンブリを提供するように要求します。 これは、オンデマンド インストール機能として実行されます。  
   
         > [!NOTE]
         >  厳密な名前を持たないアセンブリについては、ランタイムはバージョン チェックをしません。また、厳密な名前を持たないアセンブリについては、グローバル アセンブリ キャッシュ内のチェックも実行しません。  
@@ -64,11 +64,11 @@ ms.locfileid: "59342346"
 ## <a name="step-1-examining-the-configuration-files"></a>手順 1: 構成ファイルのチェック  
  アセンブリ バインディング動作は、次の 3 つの XML ファイルに基づいて、さまざまなレベルで設定できます。  
   
--   アプリケーション構成ファイル  
+- アプリケーション構成ファイル  
   
--   発行者ポリシー ファイル  
+- 発行者ポリシー ファイル  
   
--   マシン構成ファイル  
+- マシン構成ファイル  
   
  これらのファイルには、特定のアセンブリについて、バインディング リダイレクト、コードの場所、バインディング モードなどの情報が同じ構文で記述されています。 バインディング プロセスをリダイレクトする各構成ファイルは [\<assemblyBinding> 要素](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)を含めることができます。 [\<assemblyBinding> 要素](../../../docs/framework/configure-apps/file-schema/runtime/assemblybinding-element-for-runtime.md)の子要素には [\<dependentAssembly> 要素](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)が含まれます。 [\<dependentAssembly> 要素](../../../docs/framework/configure-apps/file-schema/runtime/dependentassembly-element.md)の子は、[\<assemblyIdentity> 要素](/visualstudio/deployment/assemblyidentity-element-clickonce-deployment)、[\<bindingRedirect> 要素](../../../docs/framework/configure-apps/file-schema/runtime/bindingredirect-element.md)と、[\<codeBase> 要素](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md)が含まれます。  
   
@@ -172,13 +172,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 ### <a name="locating-the-assembly-through-probing"></a>プローブによるアセンブリの検索  
  アプリケーション構成ファイルに [\<codeBase>](../../../docs/framework/configure-apps/file-schema/runtime/codebase-element.md) 要素がない場合、ランタイムは 4 個の条件を使用してアセンブリをプローブします。  
   
--   アプリケーション ベース (アプリケーションが実行されるルート位置)。  
+- アプリケーション ベース (アプリケーションが実行されるルート位置)。  
   
--   カルチャ (参照先アセンブリのカルチャ属性)。  
+- カルチャ (参照先アセンブリのカルチャ属性)。  
   
--   名前 (参照先アセンブリの名前)。  
+- 名前 (参照先アセンブリの名前)。  
   
--   [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素の `privatePath` 属性 (ルート位置の下にあるサブディレクトリのユーザー定義の一覧)。 この場所は、アプリケーション ドメインの <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> プロパティを使用して、アプリケーション構成ファイルとマネージド コード内に指定できます。 マネージド コード内に指定した場合は、マネージド コード `privatePath` が先にプローブされ、その後でアプリケーション構成ファイルに指定したパスがプローブされます。  
+- [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素の `privatePath` 属性 (ルート位置の下にあるサブディレクトリのユーザー定義の一覧)。 この場所は、アプリケーション ドメインの <xref:System.AppDomainSetup.PrivateBinPath?displayProperty=nameWithType> プロパティを使用して、アプリケーション構成ファイルとマネージド コード内に指定できます。 マネージド コード内に指定した場合は、マネージド コード `privatePath` が先にプローブされ、その後でアプリケーション構成ファイルに指定したパスがプローブされます。  
   
 #### <a name="probing-the-application-base-and-culture-directories"></a>アプリケーション ベース ディレクトリとカルチャ ディレクトリのプローブ  
  ランタイムは、常に、アプリケーションのベース (URL またはコンピューター上のアプリケーションのルート ディレクトリのいずれか) からプローブを開始します。 アプリケーション ベースで参照先アセンブリが見つからず、カルチャ情報が提供されていない場合、ランタイムはそのアセンブリ名を持つすべてのサブディレクトリ内を検索します。 プローブされるディレクトリは、次のとおりです。  
@@ -213,13 +213,13 @@ Al.exe /link:asm6.exe.config /out:policy.3.0.asm6.dll /keyfile: compatkey.dat /v
 #### <a name="probing-examples"></a>プローブの例  
  次の情報が指定されています。  
   
--   参照先アセンブリの名前: myAssembly  
+- 参照先アセンブリの名前: myAssembly  
   
--   アプリケーション ルート ディレクトリ: `http://www.code.microsoft.com`  
+- アプリケーション ルート ディレクトリ: `http://www.code.microsoft.com`  
   
--   構成ファイルの [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素による指定: bin  
+- 構成ファイルの [\<probing>](../../../docs/framework/configure-apps/file-schema/runtime/probing-element.md) 要素による指定: bin  
   
--   カルチャ: de  
+- カルチャ: de  
   
  ランタイムは、次の URL をプローブします。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - KnownTypeAttribute [WCF]
 - KnownTypes [WCF]
 ms.assetid: 1a0baea1-27b7-470d-9136-5bbad86c4337
-ms.openlocfilehash: 01257847956f22c895b00c6055ec1cdd1e89eaf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dc297bd35d7bfdb25fc50135b8e684e1b9452cb2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627085"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592583"
 ---
 # <a name="data-contract-known-types"></a>既知のデータ コントラクト型
 <xref:System.Runtime.Serialization.KnownTypeAttribute> クラスを使用すると、逆シリアル化において考慮する必要のある型を事前に指定できます。 実施例については、「 [Known Types](../../../../docs/framework/wcf/samples/known-types.md) 」の例を参照してください。  
@@ -27,7 +27,7 @@ ms.locfileid: "64627085"
   
 - 送信される情報の宣言型が <xref:System.Object>である場合。 すべての型が <xref:System.Object>から継承され、どの型が実際に送信されるかを事前に知ることができないため、受信エンドポイントでは送信されるデータのデータ コントラクトを事前に確認することができません。 これは、最初の項目の特殊なケースです。すべてのデータ コントラクトは、既定では、に対して生成される空のデータ コントラクトから派生<xref:System.Object>します。  
   
-- [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 型を含む一部の型に、前述した 3 つのカテゴリの 1 つに分類されるメンバーが含まれる場合。 たとえば、 <xref:System.Collections.Hashtable> は <xref:System.Object> を使用して、ハッシュ テーブルに実際のオブジェクトを保存します。 これらの型をシリアル化する場合、受信側ではこれらのメンバーのデータ コントラクトを事前に確認することができません。  
+- 一部の種類では、.NET Framework の型を含めるには、上記の 3 つのカテゴリのいずれかであるメンバーがあります。 たとえば、 <xref:System.Collections.Hashtable> は <xref:System.Object> を使用して、ハッシュ テーブルに実際のオブジェクトを保存します。 これらの型をシリアル化する場合、受信側ではこれらのメンバーのデータ コントラクトを事前に確認することができません。  
   
 ## <a name="the-knowntypeattribute-class"></a>KnownTypeAttribute クラス  
  データが受信エンドポイントに到着すると、WCF ランタイムは、共通言語ランタイム (CLR) 型のインスタンスにデータを逆シリアル化しようとします。 逆シリアル化するためにインスタンス化される型は、まず受信メッセージを調べてメッセージの内容が従うデータ コントラクトを特定することで選択されます。 次に逆シリアル化エンジンは、メッセージの内容と互換性のあるデータ コントラクトを実装する CLR 型を探します。 逆シリアル化エンジンによってこの処理中に逆シリアル化の候補の型として許可される一連の型は、逆シリアル化の "既知の型" のセットと呼ばれます。  
