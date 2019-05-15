@@ -2,12 +2,12 @@
 title: 弱い型指定の JSON のシリアル化のサンプル
 ms.date: 03/30/2017
 ms.assetid: 0b30e501-4ef5-474d-9fad-a9d559cf9c52
-ms.openlocfilehash: b0e9617ad5d616e8921fbf142085f2758f3e0cd4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a9be679b26e395e8fed0938567184a2e5d4a8f07
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62006357"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589220"
 ---
 # <a name="weakly-typed-json-serialization-sample"></a>弱い型指定の JSON のシリアル化のサンプル
 特定のワイヤ形式にユーザー定義型をシリアル化するときや、ユーザー定義型にワイヤ形式を逆シリアル化するときは、そのユーザー定義型がサービスとクライアントの両方で使用可能である必要があります。 通常、これを実現するために、 <xref:System.Runtime.Serialization.DataContractAttribute> 属性がこのユーザー定義型に適用され、 <xref:System.Runtime.Serialization.DataMemberAttribute> 属性がそのメンバに適用されます。 このメカニズムも適用されます、JavaScript Object Notation (JSON) オブジェクトを使用する場合、トピックの説明に従って[方法。および JSON データを逆シリアル化](../../../../docs/framework/wcf/feature-details/how-to-serialize-and-deserialize-json-data.md)します。  
@@ -58,7 +58,7 @@ ms.locfileid: "62006357"
   
  この手順は、特にクライアントが複数の型の JSON オブジェクトを処理する必要がある場合に、複雑になる可能性があります。  
   
- このサンプルで示す `JsonObject` 型では、逆シリアル化された JSON オブジェクトの弱い型指定の表現を使用します。 `JsonObject` は、JSON オブジェクトと [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] ディクショナリ間の自然な割り当て、および JSON 配列と [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] 配列間の割り当てに依存しています。 `JsonObject` 型のコードを次に示します。  
+ このサンプルで示す `JsonObject` 型では、逆シリアル化された JSON オブジェクトの弱い型指定の表現を使用します。 `JsonObject` JSON オブジェクトと .NET Framework のディクショナリ間の自然な割り当てと JSON 配列と .NET Framework 配列間のマッピングに依存します。 `JsonObject` 型のコードを次に示します。  
   
 ```  
 // Instantiation of JsonObject json omitted  
