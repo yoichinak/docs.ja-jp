@@ -10,12 +10,12 @@ helpviewer_keywords:
 - unboxing [C#]
 - boxing [C#]
 ms.assetid: 8da9bbf4-bce9-4b08-b2e5-f64c11c56514
-ms.openlocfilehash: da4aabbd0529ee239dacd2dff7c7825d41110b44
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5db3d759daec273a29dccfeff9879d0edcc9a269
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58835168"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64595017"
 ---
 # <a name="boxing-and-unboxing-c-programming-guide"></a>ボックス化とボックス化解除 (C# プログラミング ガイド)
 ボックス化とは、[値型](../../../csharp/language-reference/keywords/value-types.md)から `object` 型、またはその値型によって実装されている任意のインターフェイス型へ変換するプロセスのことです。 CLR により値型がボックス化されるとき、値は System.Object 内部にラップされ、マネージド ヒープに格納されます。 ボックス化解除すると、値型がオブジェクトから抽出されます。 ボックス化は暗黙的に行われ、ボックス化解除すると明示的になります。 ボックス化とボックス化解除の概念は、任意の型の値をオブジェクトとして扱うという C# の型システムの統一されたビューに基づいています。  
@@ -63,9 +63,9 @@ ms.locfileid: "58835168"
 ## <a name="unboxing"></a>ボックス化解除  
  ボックス化解除とは、`object` 型から[値型](../../../csharp/language-reference/keywords/value-types.md)へ、またはインターフェイス型からそのインターフェイスを実装している値型への明示的な変換のことです。 ボックス化解除では、次の処理が行われます。  
   
--   オブジェクト インスタンスが、指定された値型のボックス化された値であることを確認します。  
+- オブジェクト インスタンスが、指定された値型のボックス化された値であることを確認します。  
   
--   インスタンスの値を値型の変数にコピーします。  
+- インスタンスの値を値型の変数にコピーします。  
   
  次のステートメントに、ボックス化およびボックス化解除の両方を示します。  
   
@@ -108,9 +108,9 @@ int j = (int) o;
 ## <a name="related-sections"></a>関連項目  
  詳細情報  
   
--   [参照型](../../../csharp/language-reference/keywords/reference-types.md)  
+- [参照型](../../../csharp/language-reference/keywords/reference-types.md)  
   
--   [値型](../../../csharp/language-reference/keywords/value-types.md)  
+- [値型](../../../csharp/language-reference/keywords/value-types.md)  
   
 ## <a name="see-also"></a>関連項目
 

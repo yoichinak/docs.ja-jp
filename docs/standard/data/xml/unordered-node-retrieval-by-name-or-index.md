@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 2038a90b-92af-4a0a-baaa-08e688d95194
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: da1c9f25052bb2354b435cd28b7ff55d4a754ed1
-ms.sourcegitcommit: 69229651598b427c550223d3c58aba82e47b3f82
+ms.openlocfilehash: a7701f887410aa263483e52a5dd65a09d1444aa6
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2018
-ms.locfileid: "48584001"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64589871"
 ---
 # <a name="unordered-node-retrieval-by-name-or-index"></a>名前またはインデックスによる順序付けられていないノードの取得
 W3C (World Wide Web Consortium) 仕様で NamedNodeMap として定義されている **XmlNamedNodeMap** は、名前またはインデックスでノードを参照する機能を持っており、順序付けられていないノード セットを処理する必要があります。 **XmlNamedNodeMap** にアクセスできるのは、メソッドまたはプロパティから **XmlNamedNodeMap** が返されたときだけです。 **XmlNamedNodeMap** を返すメソッドやプロパティには、次の 3 つがあります。  
   
--   XmlElement.Attributes  
+- XmlElement.Attributes  
   
--   XmlDocumentType.Entities  
+- XmlDocumentType.Entities  
   
--   XmlDocumentType.Notations  
+- XmlDocumentType.Notations  
   
  たとえば、**XmlDocumentType.Entities** プロパティは、ドキュメント型宣言で宣言された **XmlEntity** ノードのコレクションを取得します。 このコレクションは **XmlNamedNodeMap** として返され、**Count** プロパティを使用してコレクションを反復処理し、エンティティ情報を表示できます。 **XmlNamedNodeMap** の反復処理の例については、「<xref:System.Xml.XmlDocumentType.Entities%2A>」を参照してください。  
   
