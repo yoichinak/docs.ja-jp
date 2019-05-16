@@ -2,12 +2,12 @@
 title: Entity Framework の概要
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: c8c870c1990da9b86515dc933716cd628f63eb0a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d63e60c90e71593821c38830bc11d767e582619a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583839"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634269"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework の概要
 

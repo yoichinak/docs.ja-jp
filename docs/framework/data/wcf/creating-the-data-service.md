@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 34d1d971-5e18-4c22-9bf6-d3612e27ea59
-ms.openlocfilehash: d23df38d479cb8f29f3e49225e96552ccdb84645
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e04f64338eaa87755510a84e7c84773c7fede807
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641136"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634668"
 ---
 # <a name="create-the-data-service"></a>データ サービスを作成する
 

@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 8685784375b47812244b4d0fa46475472dd05942
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: fb5c0ee39ee080e3367bf76aef0ce5adeef2baea
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700562"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65669502"
 ---
 OpenType

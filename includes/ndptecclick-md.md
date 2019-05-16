@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 0b5c67541bd4883427ae8b7c3029adde6ae7fbc1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: MT
+ms.openlocfilehash: c2f888cf44a6e470227e0248783afaab39d53244
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61768528"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645767"
 ---
 ClickOnce

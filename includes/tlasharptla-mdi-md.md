@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 2dda309135b27a0d3b74c564ff5f14672414fdf6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: 12fca24716b11bb5bb325aab4aa9de5973287965
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62090869"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671998"
 ---
 マルチドキュメント インターフェイス (MDI)

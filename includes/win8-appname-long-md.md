@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 347d12132b4e08867627594e736406b457a70337
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: da36bc79c76d87c9319debef436c259292d3d0cf
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61752596"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670505"
 ---
 Windows 8.x ストア

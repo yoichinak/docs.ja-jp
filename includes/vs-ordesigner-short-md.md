@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 0f806ddeb1f06d1bb84b78f96f4a18acaff7f094
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
-ms.translationtype: HT
+ms.openlocfilehash: a43d37bd8a22f1cd8b32a0f67c2d135931063a4d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804947"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65672741"
 ---
 O/R デザイナー

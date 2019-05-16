@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: ea5429f17278a0e8875583a8718241794f742169
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9aab188946d9b6a2580f0a07c1e892aa222cf0c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700219"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632360"
 ---
 1.0 以降で使用可能

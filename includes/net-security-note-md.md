@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: f01d0a24202ecda7e23cbe925bb6dc8962cb7574
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 023b7d8c5aa9d435d3493935b4439ae4262c85bb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61750726"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671151"
 ---
 > [!CAUTION]
 >  コード アクセス セキュリティと部分的に信頼できるコード  

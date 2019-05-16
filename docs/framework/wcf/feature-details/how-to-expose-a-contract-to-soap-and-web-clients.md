@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: bb765a48-12f2-430d-a54d-6f0c20f2a23a
-ms.openlocfilehash: d82c5e3fc33528eadc3c404cca59a3dcf905e0e2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 303367c85e311ac5c07c11b849b5586354980a3c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000923"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636150"
 ---
 # <a name="how-to-expose-a-contract-to-soap-and-web-clients"></a>方法: コントラクトを SOAP クライアントおよび Web クライアントに公開する
 

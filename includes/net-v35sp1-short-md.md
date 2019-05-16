@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 198a0b0c32f957e2aa35ef1bd2758a96c3c73541
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6d584217e663d8a8b7ac616c2580e63f5d2cdad
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669278"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636321"
 ---
 .NET Framework 3.5 SP1

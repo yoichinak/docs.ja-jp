@@ -6,12 +6,12 @@ helpviewer_keywords:
 - getting started, WCF Data Services
 - WCF Data Services, getting started
 ms.assetid: df0bbcee-f66f-4a88-abb4-4e73c8b9c908
-ms.openlocfilehash: 3c0763f21940831f401194356dc25b0d99c8d6f2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0d774db264a02d8d6c752f55344ec1ab6645c0bb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765636"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633637"
 ---
 # <a name="expose-your-data-as-a-service-wcf-data-services"></a>サービス (WCF Data Services) として、データを公開します。
 

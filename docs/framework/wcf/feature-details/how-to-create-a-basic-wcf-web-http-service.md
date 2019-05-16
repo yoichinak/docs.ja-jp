@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 877662d3-d372-4e08-b417-51f66a0095cd
-ms.openlocfilehash: 1b76d21cb4f416aae76e7597ad16cfd45e5b7cad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2d05e0c3bb24c44bf78dc41074b8759270cf49b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779198"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636514"
 ---
 # <a name="how-to-create-a-basic-wcf-web-http-service"></a>方法: 基本的な WCF Web HTTP サービスを作成する
 

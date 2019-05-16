@@ -2,12 +2,12 @@
 title: モジュール
 description: F# のモジュールの値、型、および F# のプログラム内の関数値などの F# コードでのグループ化の方法について説明します。
 ms.date: 04/24/2017
-ms.openlocfilehash: 9e5bef4ffe3301a69bbe32483625652d988f8a35
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 07ea1eb9ed06988a780fd3c5acccbc8383a4dc55
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61666319"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641778"
 ---
 # <a name="modules"></a>モジュール
 

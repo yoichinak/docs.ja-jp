@@ -13,12 +13,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: ec00b0afa1597c3ae6488c12fe5a0667dad70e2d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 03b702b0ffe258eb8cad0a1ece5314b363f9a0d0
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675222"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634612"
 ---
 # <a name="sqlstreamcharsisnull-property"></a>SqlStreamChars.IsNull プロパティ
 

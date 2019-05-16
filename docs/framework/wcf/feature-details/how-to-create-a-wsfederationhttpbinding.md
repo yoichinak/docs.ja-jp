@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: e54897d7-aa6c-46ec-a278-b2430c8c2e10
-ms.openlocfilehash: 16b93126157ff129d5e0b815bc951873e7fa760d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a6564683a856c8d1eb47b1569f156e0b6d5cc67
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778353"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636416"
 ---
 # <a name="how-to-create-a-wsfederationhttpbinding"></a>方法: WSFederationHttpBinding を作成する
 

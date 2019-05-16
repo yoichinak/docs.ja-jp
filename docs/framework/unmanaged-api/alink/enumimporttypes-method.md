@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1d0aefea7345bc3bf37bdb8d13cb2cda19cfe527
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0cd154ac90418dd0f6f476151686ff670c01c98c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789956"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632232"
 ---
 # <a name="enumimporttypes-method"></a>EnumImportTypes メソッド
 

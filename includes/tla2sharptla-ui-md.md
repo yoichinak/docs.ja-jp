@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 9d57875196c613785a1eee010c55223a0f1aa821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e12def2e346b4f1458c1ea99fc00b9d68d09e73e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61699500"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65671648"
 ---
 UI

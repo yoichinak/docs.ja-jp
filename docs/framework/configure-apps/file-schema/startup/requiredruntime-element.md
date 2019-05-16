@@ -9,20 +9,18 @@ helpviewer_keywords:
 - <requiredRuntime> element
 - container tags, <requiredRuntime> element
 ms.assetid: 9fa1639e-beb8-43be-b7a4-12f7b229c34b
-ms.openlocfilehash: 5e528a8b81fa3d9abc4f345d18f01e33f483a4a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f5a9f99133c153401694372abaeea10a02e492e5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673843"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634193"
 ---
 # <a name="requiredruntime-element"></a>\<requiredRuntime > 要素
 
 バージョン 1.0 の共通言語ランタイムのみがアプリケーションでサポートされることを指定します。 この要素は非推奨し、使用できなくする必要があります。 [ `supportedRuntime` ](supportedruntime-element.md)要素を代わりに使用する必要があります。
 
-\<configuration>
-\<startup>
-\<requiredRuntime>
+\<configuration> \<startup> \<requiredRuntime>
 
 ## <a name="syntax"></a>構文
 
@@ -45,7 +43,7 @@ safemode="true|false"/>
 
 ## <a name="safemode-attribute"></a>セーフ モード属性
 
-|[値]|説明|
+|値|説明|
 |-----------|-----------------|
 |`false`|ランタイム スタートアップ コードは、レジストリを検索します。 これが既定値です。|
 |`true`|ランタイム スタートアップ コードは、レジストリでは検索しません。|

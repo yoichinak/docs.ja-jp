@@ -1,9 +1,9 @@
 ---
-ms.openlocfilehash: 2315bc46bc81f9637d7a8482f0f08970632ae575
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f13ba3a6cbeaecb4f2dc9d5e84ab86274ca57499
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61701677"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633623"
 ---
 LINQ to SQL

@@ -13,12 +13,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 499522a11cac744c14ac32cf3bfe485a46b19d93
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e2d8788f610d80c30baf51bff0131f0834d59fcd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675313"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634583"
 ---
 # <a name="smiorderpropertyitem-property"></a>SmiOrderProperty.Item プロパティ
 

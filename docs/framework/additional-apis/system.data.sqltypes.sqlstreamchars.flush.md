@@ -12,12 +12,12 @@ api_location:
 - System.Data.dll
 api_type:
 - Assembly
-ms.openlocfilehash: 8cd24a5ca420552f283da61ecd4edcad02965403
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 411bd0036de904dd485d9fb54fa5fd45e3b55dbb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705858"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634331"
 ---
 # <a name="sqlstreamcharsflush-method"></a>SqlStreamChars.Flush メソッド
 
