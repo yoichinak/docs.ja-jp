@@ -1,0 +1,2382 @@
+- name: ようこそ
+  href: welcome.md
+- name: .NET のガイド
+  href: standard/index.md
+  items:
+    - name: .NET の使用を開始する
+      href: standard/get-started.md
+    - name: .NET のツアー
+      href: standard/tour.md
+    - name: .NET アーキテクチャ コンポーネント
+      href: standard/components.md
+    - name: .NET Standard
+      href: standard/net-standard.md
+      items:
+        - name: .NET Standard の新機能
+          href: standard/whats-new/whats-new-in-dotnet-standard.md
+    - name: ターゲット フレームワーク
+      href: standard/frameworks.md
+    - name: .NET 用語集
+      href: standard/glossary.md
+    - name: アーキテクチャ ガイダンス
+      href: standard/guidance-architecture.md
+      items:
+        - name: ASP.NET Core および Microsoft Azure で最新の Web アプリケーションを設計する
+          href: standard/modern-web-apps-azure-architecture/
+        - name: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化する
+          href: standard/modernize-with-azure-and-containers/
+        - name: Microsoft プラットフォームとツールでコンテナー化された Docker アプリケーションのライフサイクル
+          href: standard/containerized-lifecycle-architecture/
+        - name: '.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ'
+          href: standard/microservices-architecture/
+        - name: 'サーバーレス アプリ: アーキテクチャ、パターン、および Azure の実装'
+          href: standard/serverless-architecture/
+    - name: オープン ソース ライブラリのガイダンス
+      href: standard/library-guidance/
+    - name: サーバー アプリ用 .NET Core と .NET Framework の選択
+      href: standard/choosing-core-framework-server.md
+    - name: '"マネージド コード" とは'
+      href: standard/managed-code.md
+      items:
+        - name: Automatic Memory Management
+          href: standard/automatic-memory-management.md
+    - name: 共通言語ランタイム (CLR)
+      href: standard/clr.md
+    - name: 言語の独立性
+      href: standard/language-independence.md
+      items:
+        - name: 言語への非依存性、および言語非依存コンポーネント
+          href: standard/language-independence-and-language-independent-components.md
+    - name: フレームワーク ライブラリ
+      href: standard/framework-libraries.md
+      items:
+        - name: クラス ライブラリの概要
+          href: standard/class-library-overview.md
+        - name: 基本データ型
+          href: standard/base-types/
+    - name: .NET クラス ライブラリ
+      href: standard/class-libraries.md
+    - name: アナライザー
+      href: standard/analyzers/index.md
+      items:
+        - name: API アナライザー
+          href: standard/analyzers/api-analyzer.md
+        - name: 移植性アナライザー
+          href: standard/analyzers/portability-analyzer.md
+        - name: フレームワーク アナライザー
+          href: standard/analyzers/framework-analyzer.md
+    - name: 例外の処理とスロー
+      href: standard/exceptions/
+    - name: .NET のアセンブリ
+      href: standard/assembly/index.md
+      items:
+        - name: .NET アセンブリ ファイルの形式
+          href: standard/assembly/file-format.md
+        - name: '方法: .NET Core でアセンブリのアンローダビリティを使用およびデバッグする'
+          href: standard/assembly/unloadability-howto.md
+    - name: ガベージ コレクション
+      href: standard/garbage-collection/
+    - name: ジェネリック型
+      href: standard/generics.md
+    - name: デリゲートとラムダ
+      href: standard/delegates-lambdas.md
+    - name: LINQ
+      href: standard/using-linq.md
+    - name: 共通型システムと共通言語仕様
+      href: standard/common-type-system.md
+    - name: 並列処理、コンカレンシー、および非同期
+      href: standard/parallel-processing-and-concurrency.md
+      items:
+        - name: 非同期プログラミング
+          href: standard/async.md
+          items:
+            - name: 非同期プログラミングの詳細
+              href: standard/async-in-depth.md
+            - name: 非同期プログラミングのパターン
+              href: standard/asynchronous-programming-patterns/
+        - name: 並列プログラミング
+          href: standard/parallel-programming/
+        - name: スレッド
+          href: standard/threading/
+    - name: メモリおよびスパンに関連する型
+      href: standard/memory-and-spans/index.md
+      items:
+        - name: Memory<T> と Span<T> の使用ガイドライン
+          href: standard/memory-and-spans/memory-t-usage-guidelines.md
+    - name: ネイティブ相互運用性
+      href: standard/native-interop/index.md
+      items:
+        - name: P/Invoke
+          href: standard/native-interop/pinvoke.md
+        - name: 型のマーシャリング
+          href: standard/native-interop/type-marshaling.md
+        - name: 構造体のマーシャリングのカスタマイズ
+          href: standard/native-interop/customize-struct-marshaling.md
+        - name: パラメーターのマーシャリングのカスタマイズ
+          href: standard/native-interop/customize-parameter-marshaling.md
+        - name: 相互運用のガイダンス
+          href: standard/native-interop/best-practices.md
+        - name: 文字セットとマーシャリング
+          href: standard/native-interop/charset.md
+    - name: コレクションとデータ構造体
+      href: standard/collections/
+    - name: .NET における数値
+      href: standard/numerics.md
+    - name: 日付、時刻、およびタイム ゾーン
+      href: standard/datetime/
+    - name: イベント
+      href: standard/events/
+    - name: マネージド実行プロセス
+      href: standard/managed-execution-process.md
+    - name: メタデータと自己言及的なコンポーネント
+      href: standard/metadata-and-self-describing-components.md
+    - name: コンソール アプリケーションの構築
+      href: standard/building-console-apps.md
+    - name: アプリケーションの基本事項
+      href: standard/application-essentials.md
+    - name: ファイルおよびストリーム入出力
+      href: standard/io/index.md
+    - name: グローバライズとローカライズ
+      href: standard/globalization-localization/
+    - name: 属性
+      href: standard/attributes/
+    - name: フレームワーク デザインのガイドライン
+      href: standard/design-guidelines/
+    - name: XML ドキュメントと XML データ
+      href: standard/data/xml/
+    - name: セキュリティ
+      href: standard/security/
+    - name: シリアル化
+      href: standard/serialization/
+    - name: 複数のプラットフォームの開発
+      href: standard/cross-platform/
+- name: .NET Core のガイド
+  href: core/index.md
+  items:
+    - name: .NET Core について
+      href: core/about.md
+    - name: 作業開始
+      href: core/get-started.md
+      items:
+        - name: 'C# および Visual Studio Code の使用を開始する'
+          href: core/tutorials/with-visual-studio-code.md
+        - name: 'Visual Studio 2017 で .NET Core を使用して C# Hello World アプリを構築する'
+          href: core/tutorials/with-visual-studio.md
+        - name: Visual Studio 2017 で .NET Core を使用して Visual Basic Hello World アプリを構築する
+          href: core/tutorials/vb-with-visual-studio.md
+        - name: プラグインがある .NET Core アプリケーションを作成する
+          href: core/tutorials/creating-app-with-plugin-support.md
+        - name: 'Visual Studio 2017 を使用して C# または Visual Basic .NET Core の Hello World アプリケーションをデバッグする'
+          href: core/tutorials/debugging-with-visual-studio.md
+        - name: Visual Studio 2017 での Hello World アプリケーションの発行
+          href: core/tutorials/publishing-with-visual-studio.md
+        - name: 'Visual Studio 2017 で C# と .NET Core を使用して .NET Standard ライブラリを構築する'
+          href: core/tutorials/library-with-visual-studio.md
+        - name: Visual Studio 2017 で Visual Basic と .NET Core を使用して .NET Standard ライブラリを構築する
+          href: core/tutorials/vb-library-with-visual-studio.md
+        - name: Visual Studio 2017 での .NET Core を使用した .NET Standard ライブラリのテスト
+          href: core/tutorials/testing-library-with-visual-studio.md
+        - name: Visual Studio 2017 での .NET Standard ライブラリの使用
+          href: core/tutorials/consuming-library-with-visual-studio.md
+    - name: Windows の前提条件
+      href: core/windows-prerequisites.md
+    - name: macOS の前提条件
+      href: core/macos-prerequisites.md
+    - name: Linux の前提条件
+      href: core/linux-prerequisites.md
+    - name: .NET Core の新機能
+      href: core/whats-new/index.md
+      items:
+        - name: .NET Core 3.0 の新機能
+          href: core/whats-new/dotnet-core-3-0.md
+        - name: .NET Core 2.2 の新機能
+          href: core/whats-new/dotnet-core-2-2.md
+        - name: .NET Core 2.1 の新機能
+          href: core/whats-new/dotnet-core-2-1.md
+        - name: .NET Core 2.0 の新機能
+          href: core/whats-new/dotnet-core-2-0.md
+    - name: チュートリアル
+      href: core/tutorials/index.md
+      items:
+        - name: macOS での .NET Core の概要
+          href: core/tutorials/using-on-macos.md
+        - name: Visual Studio for Mac を使用した macOS での .NET Core の概要
+          href: core/tutorials/using-on-mac-vs.md
+        - name: Visual Studio for Mac を使用した macOS での完全な .NET Core ソリューションの構築
+          href: core/tutorials/using-on-mac-vs-full-solution.md
+        - name: CLI ツールを使用する .NET Core に関する概要
+          href: core/tutorials/using-with-xplat-cli.md
+        - name: .NET Core コマンド ラインを使用したプロジェクトの整理およびテスト
+          href: core/tutorials/testing-with-cli.md
+        - name: クロス プラットフォーム ツールによるライブラリの開発
+          href: core/tutorials/libraries.md
+        - name: ASP.NET Core アプリケーションの開発
+          href: core/tutorials/aspnet-core.md
+        - name: ネイティブ コードからの .NET Core のホスト
+          href: core/tutorials/netcore-hosting.md
+        - name: dotnet new のカスタム テンプレートを作成する
+          href: core/tutorials/create-custom-template.md
+    - name: パッケージ、メタパッケージ、フレームワーク
+      href: core/packages.md
+    - name: CLI の変更概要
+      href: core/tools/cli-msbuild-architecture.md
+      items:
+        - name: 依存関係管理
+          href: core/tools/dependencies.md
+        - name: csproj 形式に追加されたもの
+          href: core/tools/csproj.md
+    - name: 移行
+      items:
+        - name: .NET Core 2.0 から 2.1 へ
+          href: core/migration/20-21.md
+        - name: project.json からの移行
+          href: core/migration/index.md
+        - name: project.json と csproj 間のマッピング
+          href: core/tools/project-json-to-csproj.md
+        - name: DNX からの移行
+          href: core/migration/from-dnx.md
+    - name: アプリケーションの展開
+      href: core/deploying/index.md
+      items:
+        - name: CLI ツールを使用したアプリの展開
+          href: core/deploying/deploy-with-cli.md
+        - name: Visual Studio を使用したアプリの展開
+          href: core/deploying/deploy-with-vs.md
+        - name: クロス プラットフォーム ツールによる NuGet パッケージの作成
+          href: core/deploying/creating-nuget-packages.md
+        - name: 自己完結型展開ランタイムのロール フォワード
+          href: core/deploying/runtime-patch-selection.md
+        - name: ランタイム パッケージ ストア
+          href: core/deploying/runtime-store.md
+    - name: Docker
+      items:
+        - name: .NET および Docker の概要
+          href: core/docker/intro-net-docker.md
+        - name: NET Core アプリのコンテナー化
+          href: core/docker/build-container.md
+        - name: Visual Studio のコンテナー ツール
+          href: /visualstudio/containers/overview
+    - name: 単体テスト
+      href: core/testing/index.md
+      items:
+        - name: 単体テストのベスト プラクティス
+          href: core/testing/unit-testing-best-practices.md
+        - name: 'xUnit を使用した C# の単体テスト'
+          href: core/testing/unit-testing-with-dotnet-test.md
+        - name: 'NUnit を使用した C# の単体テスト'
+          href: core/testing/unit-testing-with-nunit.md
+        - name: 'MSTest を使用した C# の単体テスト'
+          href: core/testing/unit-testing-with-mstest.md
+        - name: 'xUnit を使用した F# の単体テスト'
+          href: core/testing/unit-testing-fsharp-with-dotnet-test.md
+        - name: 'NUnit を使用した F# の単体テスト'
+          href: core/testing/unit-testing-fsharp-with-nunit.md
+        - name: 'MSTest を使用した F# の単体テスト'
+          href: core/testing/unit-testing-fsharp-with-mstest.md
+        - name: xUnit を使用した VB の単体テスト
+          href: core/testing/unit-testing-visual-basic-with-dotnet-test.md
+        - name: NUnit を使用した VB の単体テスト
+          href: core/testing/unit-testing-visual-basic-with-nunit.md
+        - name: MSTest を使用した VB の単体テスト
+          href: core/testing/unit-testing-visual-basic-with-mstest.md
+        - name: 選択的単体テストの実行
+          href: core/testing/selective-unit-tests.md
+        - name: 発行された出力の単体テスト
+          href: core/testing/unit-testing-published-output.md
+        - name: Visual Studio を使用した .NET Core プロジェクトの Live Unit Testing
+          href: /visualstudio/test/live-unit-testing-start
+    - name: バージョン管理
+      href: core/versions/index.md
+      items:
+        - name: .NET Core のバージョンの選択
+          href: core/versions/selection.md
+        - name: 期限切れのランタイムと SDK の削除
+          href: core/versions/remove-runtime-sdk-versions.md
+    - name: ランタイム識別子のカタログ
+      href: core/rid-catalog.md
+    - name: .NET Core SDK 概要
+      href: core/sdk.md
+    - name: .NET Core CLI ツール
+      href: core/tools/index.md
+      items:
+        - name: テレメトリ
+          href: core/tools/telemetry.md
+        - name: グローバル ツール
+          href: core/tools/global-tools.md
+          items:
+            - name: グローバル ツールを作成する
+              href: core/tools/global-tools-how-to-create.md
+        - name: 機能拡張モデル
+          href: core/tools/extensibility.md
+        - name: 継続的インテグレーション
+          href: core/tools/using-ci-with-cli.md
+        - name: カスタム テンプレート
+          href: core/tools/custom-templates.md
+        - name: タブ補完を有効にする
+          href: core/tools/enable-tab-autocomplete.md
+        - name: dotnet
+          href: core/tools/dotnet.md
+        - name: dotnet build
+          href: core/tools/dotnet-build.md
+        - name: dotnet build-server
+          href: core/tools/dotnet-build-server.md
+        - name: dotnet clean
+          href: core/tools/dotnet-clean.md
+        - name: dotnet help
+          href: core/tools/dotnet-help.md
+        - name: dotnet の移行
+          href: core/tools/dotnet-migrate.md
+        - name: dotnet msbuild
+          href: core/tools/dotnet-msbuild.md
+        - name: dotnet new
+          href: core/tools/dotnet-new.md
+        - name: dotnet nuget
+          items:
+            - name: dotnet nuget delete
+              href: core/tools/dotnet-nuget-delete.md
+            - name: dotnet nuget locals
+              href: core/tools/dotnet-nuget-locals.md
+            - name: dotnet nuget push
+              href: core/tools/dotnet-nuget-push.md
+        - name: dotnet pack
+          href: core/tools/dotnet-pack.md
+        - name: dotnet publish
+          href: core/tools/dotnet-publish.md
+        - name: dotnet restore
+          href: core/tools/dotnet-restore.md
+        - name: dotnet run
+          href: core/tools/dotnet-run.md
+        - name: dotnet sln
+          href: core/tools/dotnet-sln.md
+        - name: dotnet store
+          href: core/tools/dotnet-store.md
+        - name: dotnet test
+          href: core/tools/dotnet-test.md
+        - name: dotnet tool
+          items:
+            - name: dotnet tool install
+              href: core/tools/dotnet-tool-install.md
+            - name: dotnet tool list
+              href: core/tools/dotnet-tool-list.md
+            - name: dotnet tool uninstall
+              href: core/tools/dotnet-tool-uninstall.md
+            - name: dotnet tool update
+              href: core/tools/dotnet-tool-update.md
+        - name: dotnet vstest
+          href: core/tools/dotnet-vstest.md
+        - name: dotnet-install スクリプト
+          href: core/tools/dotnet-install-script.md
+        - name: プロジェクトの変更コマンド
+          items:
+            - name: 関連項目
+              items:
+                - name: dotnet add reference
+                  href: core/tools/dotnet-add-reference.md
+                - name: dotnet list reference
+                  href: core/tools/dotnet-list-reference.md
+                - name: dotnet remove reference
+                  href: core/tools/dotnet-remove-reference.md
+            - name: パッケージ
+              items:
+                - name: dotnet add package
+                  href: core/tools/dotnet-add-package.md
+                - name: dotnet list package
+                  href: core/tools/dotnet-list-package.md
+                - name: dotnet remove package
+                  href: core/tools/dotnet-remove-package.md
+        - name: global.json
+          href: core/tools/global-json.md
+    - name: .NET Core の追加ツール
+      href: core/additional-tools/index.md
+      items:
+        - name: WCF Web サービス リファレンス プロバイダー
+          href: core/additional-tools/wcf-web-service-reference-guide.md
+        - name: dotnet-svcutil
+          href: core/additional-tools/dotnet-svcutil-guide.md
+        - name: dotnet-svcutil.xmlserializer
+          href: core/additional-tools/dotnet-svcutil.xmlserializer-guide.md
+        - name: XML シリアライザー ジェネレーター
+          href: core/additional-tools/xml-serializer-generator.md
+    - name: .NET Framework からの移植
+      href: core/porting/index.md
+      items:
+        - name: .NET Core で使用できない .NET Framework テクノロジ
+          href: core/porting/net-framework-tech-unavailable.md
+        - name: サードパーティの依存関係の分析
+          href: core/porting/third-party-deps.md
+        - name: ライブラリの移植
+          href: core/porting/libraries.md
+        - name: .NET Core のプロジェクトの整理
+          href: core/porting/project-structure.md
+        - name: .NET Core への移植で役立つツール
+          href: core/porting/tools.md
+        - name: Windows 互換機能パックの使用
+          href: core/porting/windows-compat-pack.md
+        - name: Windows フォーム プロジェクトを移植する
+          href: core/porting/winforms.md
+        - name: WPF プロジェクトを移植する
+          href: core/porting/wpf.md
+    - name: ソースから .NET Core をビルドする
+      href: core/build/index.md
+      items:
+        - name: .NET Core の配布パッケージ
+          href: core/build/distribution-packaging.md
+    - name: VS 2015/project.json ドキュメント
+      href: project-json.md
+- name: .NET Framework ガイド
+  href: framework/index.md
+  items:
+    - name: 新機能
+      href: framework/whats-new/
+    - name: 開始するには
+      href: framework/get-started/
+    - name: インストール ガイド
+      href: framework/install/
+    - name: 移行ガイド
+      href: framework/migration-guide/
+    - name: 開発ガイド
+      href: framework/development-guide.md
+      items:
+        - name: アプリケーション ドメインとアセンブリ
+          href: framework/app-domains/
+        - name: デスクトップ アプリケーションのリソース
+          href: framework/resources/
+        - name: ユーザー補助
+          href: framework/ui-automation/
+        - name: データとモデリング
+          href: framework/data/
+        - name: クライアント アプリケーション
+          href: framework/develop-client-apps.md
+          items:
+            - name: Windows Presentation Foundation
+              href: framework/wpf/
+            - name: Windows フォーム
+              href: framework/winforms/
+        - name: WCF を使用したサービス指向アプリケーション
+          href: framework/wcf/
+        - name: Windows Workflow Foundation
+          href: framework/windows-workflow-foundation/
+        - name: Windows サービス アプリケーション
+          href: framework/windows-services/
+        - name: 64 ビット アプリケーション
+          href: framework/64-bit-apps.md
+        - name: ASP.NET を使用した Web アプリケーション
+          href: framework/develop-web-apps-with-aspnet.md
+        - name: .NET Framework のネットワーク プログラミング
+          href: framework/network-programming/
+        - name: アプリの構成
+          href: framework/configure-apps/
+        - name: .NET ネイティブによるアプリのコンパイル
+          href: framework/net-native/
+        - name: Windows Identity Foundation
+          href: framework/security/
+        - name: デバッグ、トレース、およびプロファイリング
+          href: framework/debug-trace-profile/
+        - name: 配置
+          href: framework/deployment/
+        - name: パフォーマンス
+          href: framework/performance/
+        - name: 動的プログラミング
+          href: framework/reflection-and-codedom/
+        - name: MEF (Managed Extensibility Framework)
+          href: framework/mef/
+        - name: アンマネージ コードとの相互運用
+          href: framework/interop/
+        - name: アンマネージ API リファレンス
+          href: framework/unmanaged-api/
+        - name: XAML サービス
+          href: framework/xaml-services/
+    - name: ツール
+      href: framework/tools/
+    - name: 追加のクラス ライブラリおよび API
+      href: framework/additional-apis/
+- name: 'C# のガイド'
+  href: csharp/index.md
+  items:
+    - name: 開始するには
+      href: csharp/getting-started/
+    - name: チュートリアル
+      href: csharp/tutorials/index.md
+      items:
+        - name: 'C# の概要'
+          href: csharp/tutorials/intro-to-csharp/index.md
+          items:
+            - name: Hello world
+              href: csharp/tutorials/intro-to-csharp/hello-world.yml
+            - name: 'C# の数値'
+              href: csharp/tutorials/intro-to-csharp/numbers-in-csharp.yml
+            - name: 分岐とループ
+              href: csharp/tutorials/intro-to-csharp/branches-and-loops.yml
+            - name: リスト コレクション
+              href: csharp/tutorials/intro-to-csharp/list-collection.yml
+            - name: ローカル環境で作業する
+              href: csharp/tutorials/intro-to-csharp/local-environment.md
+              items:
+                - name: 'C# の数値'
+                  href: csharp/tutorials/intro-to-csharp/numbers-in-csharp-local.md
+                - name: 分岐とループ
+                  href: csharp/tutorials/intro-to-csharp/branches-and-loops-local.md
+                - name: リスト コレクション
+                  href: csharp/tutorials/intro-to-csharp/arrays-and-collections.md
+                - name: クラスの概要
+                  href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
+        - name: 'C# 6 を詳しく学習する'
+          href: csharp/tutorials/exploration/csharp-6.yml
+        - name: 'C# 7.0 を詳しく学習する'
+          href: csharp/tutorials/exploration/csharp-7.yml
+        - name: 文字列補間を詳しく学習する - 対話形式
+          href: csharp/tutorials/exploration/interpolated-strings.yml
+        - name: 文字列補間を詳しく学習する - 自分の環境内で
+          href: csharp/tutorials/exploration/interpolated-strings-local.md
+        - name: 文字列補間の高度なシナリオ
+          href: csharp/tutorials/string-interpolation.md
+        - name: 既定のインターフェイス メンバーでインターフェイスを安全に更新する
+          href: csharp/tutorials/default-interface-members-versions.md
+        - name: インデックスと範囲を調べる
+          href: csharp/tutorials/ranges-indexes.md
+        - name: Null 許容参照型を操作する
+          href: csharp/tutorials/nullable-reference-types.md
+        - name: アプリを Null 許容参照型にアップグレードする
+          href: csharp/tutorials/upgrade-to-nullable-references.md
+        - name: 非同期ストリームの生成と使用
+          href: csharp/tutorials/generate-consume-asynchronous-stream.md
+        - name: パターン マッチングを使用してデータ機能を拡張する
+          href: csharp/tutorials/pattern-matching.md
+        - name: コンソール アプリケーション
+          href: csharp/tutorials/console-teleprompter.md
+        - name: REST クライアント
+          href: csharp/tutorials/console-webapiclient.md
+        - name: 'C# と .NET での継承'
+          href: csharp/tutorials/inheritance.md
+        - name: LINQ の使用
+          href: csharp/tutorials/working-with-linq.md
+        - name: 属性の使用
+          href: csharp/tutorials/attributes.md
+    - name: 'C# のツアー'
+      href: csharp/tour-of-csharp/
+    - name: 'C# の新機能'
+      items:
+        - name: 'C# 8.0 - Preview 5'
+          href: csharp/whats-new/csharp-8.md
+        - name: 'C# 7.3'
+          href: csharp/whats-new/csharp-7-3.md
+        - name: 'C# 7.2'
+          href: csharp/whats-new/csharp-7-2.md
+        - name: 'C# 7.1'
+          href: csharp/whats-new/csharp-7-1.md
+        - name: 'C# 7.0'
+          href: csharp/whats-new/csharp-7.md
+        - name: 'C# 6'
+          href: csharp/whats-new/csharp-6.md
+        - name: 'C# バージョン履歴'
+          href: csharp/whats-new/csharp-version-history.md
+        - name: 言語とフレームワークの関係
+          href: csharp/whats-new/relationships-between-language-and-library.md
+        - name: バージョンと更新に関する考慮事項
+          href: csharp/whats-new/version-update-considerations.md
+    - name: 'C# の概念'
+      items:
+        - name: 'C# の型システム'
+          href: csharp/programming-guide/types/index.md
+        - name: 名前空間
+          href: csharp/programming-guide/namespaces/index.md
+        - name: 基本型
+          href: csharp/basic-types.md
+        - name: クラス
+          href: csharp/programming-guide/classes-and-structs/classes.md
+        - name: null 許容参照型
+          href: csharp/nullable-references.md
+        - name: 構造体
+          href: csharp/structs.md
+        - name: タプル
+          href: csharp/tuples.md
+        - name: タプルとその他の型の分解
+          href: csharp/deconstruct.md
+        - name: インターフェイス
+          href: csharp/programming-guide/interfaces/index.md
+        - name: メソッド
+          href: csharp/methods.md
+        - name: ラムダ式
+          href: csharp/programming-guide/statements-expressions-operators/lambda-expressions.md
+        - name: プロパティ
+          href: csharp/properties.md
+        - name: インデクサー
+          href: csharp/indexers.md
+        - name: 破棄
+          href: csharp/discards.md
+        - name: ジェネリック
+          href: csharp/programming-guide/generics/index.md
+        - name: Iterators
+          href: csharp/iterators.md
+        - name: デリゲートとイベント
+          href: csharp/delegates-events.md
+          items:
+            - name: デリゲートの概要
+              href: csharp/delegates-overview.md
+            - name: System.Delegate とデリゲートのキーワード
+              href: csharp/delegate-class.md
+            - name: 厳密に型指定されたデリゲート
+              href: csharp/delegates-strongly-typed.md
+            - name: デリゲートの一般的なパターン
+              href: csharp/delegates-patterns.md
+            - name: イベントの概要
+              href: csharp/events-overview.md
+            - name: 標準的な .NET イベント パターン
+              href: csharp/event-pattern.md
+            - name: 更新された .NET イベント パターン
+              href: csharp/modern-events.md
+            - name: デリゲートとイベントの識別
+              href: csharp/distinguish-delegates-events.md
+        - name: 統合言語クエリ (LINQ)
+          href: csharp/linq/
+        - name: 非同期プログラミング
+          href: csharp/async.md
+        - name: パターン マッチ
+          href: csharp/pattern-matching.md
+        - name: 安全で効率的なコードを記述する
+          href: csharp/write-safe-efficient-code.md
+        - name: 式ツリー
+          href: csharp/expression-trees.md
+          items:
+            - name: 式ツリーの説明
+              href: csharp/expression-trees-explained.md
+            - name: 式ツリーをサポートするフレームワークの型
+              href: csharp/expression-classes.md
+            - name: 式の実行
+              href: csharp/expression-trees-execution.md
+            - name: 式の解釈
+              href: csharp/expression-trees-interpreting.md
+            - name: 式の構築
+              href: csharp/expression-trees-building.md
+            - name: 式の変換
+              href: csharp/expression-trees-translating.md
+            - name: まとめ
+              href: csharp/expression-trees-summary.md
+        - name: ネイティブ相互運用性
+          href: csharp/programming-guide/interop/index.md
+        - name: コードのドキュメントの作成
+          href: csharp/codedoc.md
+        - name: バージョン管理
+          href: csharp/versioning.md
+    - name: 'C# に関するトピック'
+      href: csharp/how-to/index.md
+      items:
+        - name: '`String.Split` を使用して文字列を解析する'
+          href: csharp/how-to/parse-strings-using-split.md
+        - name: 文字列を連結する
+          href: csharp/how-to/concatenate-multiple-strings.md
+        - name: 文字列を DateTime に変換する
+          href: standard/base-types/parsing-datetime.md
+        - name: 検索文字列
+          href: csharp/how-to/search-strings.md
+        - name: 文字列の内容を変更する
+          href: csharp/how-to/modify-string-contents.md
+        - name: 文字列を比較する
+          href: csharp/how-to/compare-strings.md
+        - name: パターン マッチング、is 演算子、as 演算子を使用して安全にキャストする
+          href: csharp/how-to/safely-cast-using-pattern-matching-is-and-as-operators.md
+    - name: .NET Compiler Platform SDK (Roslyn API)
+      href: csharp/roslyn-sdk/
+    - name: 'C# プログラミング ガイド'
+      href: csharp/programming-guide/
+    - name: 言語リファレンス
+      href: csharp/language-reference/
+    - name: チュートリアル
+      href: csharp/walkthroughs.md
+- name: 'F# のガイド'
+  href: fsharp/index.md
+  items:
+    - name: 開始するには
+      href: fsharp/get-started/index.md
+      items:
+        - name: 'F# をインストールする'
+          href: fsharp/get-started/install-fsharp.md
+        - name: 'Visual Studio での F# の概要'
+          href: fsharp/get-started/get-started-visual-studio.md
+        - name: 'Visual Studio for Mac での F# の概要'
+          href: fsharp/get-started/get-started-with-visual-studio-for-mac.md
+        - name: 'Visual Studio Code および Ionide での F# の概要'
+          href: fsharp/get-started/get-started-vscode.md
+        - name: '.NET Core CLI での F# の概要'
+          href: fsharp/get-started/get-started-command-line.md
+    - name: 'F# とは'
+      href: fsharp/what-is-fsharp.md
+    - name: 'F# のツアー'
+      href: fsharp/tour.md
+    - name: チュートリアル
+      items:
+        - name: 関数型プログラミングの概要
+          href: fsharp/introduction-to-functional-programming/index.md
+          items:
+            - name: ファーストクラス関数
+              href: fsharp/introduction-to-functional-programming/first-class-functions.md
+        - name: 非同期と同時実行プログラミング
+          items:
+            - name: 非同期プログラミング
+              href: fsharp/tutorials/asynchronous-and-concurrent-programming/async.md
+        - name: 型プロバイダー
+          href: fsharp/tutorials/type-providers/index.md
+          items:
+            - name: 型プロバイダーを作成する
+              href: fsharp/tutorials/type-providers/creating-a-type-provider.md
+            - name: 型プロバイダーのセキュリティ
+              href: fsharp/tutorials/type-providers/type-provider-security.md
+            - name: 型プロバイダーのトラブルシューティング
+              href: fsharp/tutorials/type-providers/troubleshooting-type-providers.md
+        - name: 'F# Interactive'
+          href: fsharp/tutorials/fsharp-interactive/index.md
+    - name: 'F# 言語リファレンス'
+      href: fsharp/language-reference/index.md
+      items:
+        - name: キーワード リファレンス
+          href: fsharp/language-reference/keyword-reference.md
+        - name: シンボルと演算子のリファレンス
+          href: fsharp/language-reference/symbol-and-operator-reference/index.md
+          items:
+            - name: 算術演算子
+              href: fsharp/language-reference/symbol-and-operator-reference/arithmetic-operators.md
+            - name: ブール演算子
+              href: fsharp/language-reference/symbol-and-operator-reference/boolean-operators.md
+            - name: ビット処理演算子
+              href: fsharp/language-reference/symbol-and-operator-reference/bitwise-operators.md
+            - name: Null 許容の演算子
+              href: fsharp/language-reference/symbol-and-operator-reference/nullable-operators.md
+        - name: 関数
+          href: fsharp/language-reference/functions/index.md
+          items:
+            - name: let 束縛
+              href: fsharp/language-reference/functions/let-bindings.md
+            - name: do 束縛
+              href: fsharp/language-reference/functions/do-bindings.md
+            - name: 'ラムダ式: fun キーワード'
+              href: fsharp/language-reference/functions/lambda-expressions-the-fun-keyword.md
+            - name: '再帰関数: rec キーワード'
+              href: fsharp/language-reference/functions/recursive-functions-the-rec-keyword.md
+            - name: エントリ ポイント
+              href: fsharp/language-reference/functions/entry-point.md
+            - name: 外部関数
+              href: fsharp/language-reference/functions/external-functions.md
+            - name: インライン関数
+              href: fsharp/language-reference/functions/inline-functions.md
+        - name: 値
+          href: fsharp/language-reference/values/index.md
+          items:
+            - name: null 値
+              href: fsharp/language-reference/values/null-values.md
+        - name: リテラル
+          href: fsharp/language-reference/literals.md
+        - name: 'F# の型'
+          href: fsharp/language-reference/fsharp-types.md
+        - name: 型推論
+          href: fsharp/language-reference/type-inference.md
+        - name: 基本型
+          href: fsharp/language-reference/basic-types.md
+        - name: Unit 型
+          href: fsharp/language-reference/unit-type.md
+        - name: 文字列
+          href: fsharp/language-reference/strings.md
+        - name: タプル
+          href: fsharp/language-reference/tuples.md
+        - name: 'F# コレクション型'
+          href: fsharp/language-reference/fsharp-collection-types.md
+        - name: 表示内容
+          href: fsharp/language-reference/lists.md
+        - name: 配列
+          href: fsharp/language-reference/arrays.md
+        - name: シーケンス
+          href: fsharp/language-reference/sequences.md
+        - name: スライス
+          href: fsharp/language-reference/slices.md
+        - name: オプション
+          href: fsharp/language-reference/options.md
+        - name: 値のオプション
+          href: fsharp/language-reference/value-options.md
+        - name: 結果
+          href: fsharp/language-reference/results.md
+        - name: ジェネリック
+          href: fsharp/language-reference/generics/index.md
+          items:
+            - name: 自動ジェネリック化
+              href: fsharp/language-reference/generics/automatic-generalization.md
+            - name: 制約
+              href: fsharp/language-reference/generics/constraints.md
+            - name: 静的に解決される型パラメーター
+              href: fsharp/language-reference/generics/statically-resolved-type-parameters.md
+        - name: レコード
+          href: fsharp/language-reference/records.md
+        - name: 判別共用体
+          href: fsharp/language-reference/discriminated-unions.md
+        - name: 列挙
+          href: fsharp/language-reference/enumerations.md
+        - name: 型略称
+          href: fsharp/language-reference/type-abbreviations.md
+        - name: クラス
+          href: fsharp/language-reference/classes.md
+        - name: 構造体
+          href: fsharp/language-reference/structures.md
+        - name: 継承
+          href: fsharp/language-reference/inheritance.md
+        - name: インターフェイス
+          href: fsharp/language-reference/interfaces.md
+        - name: 抽象クラス
+          href: fsharp/language-reference/abstract-classes.md
+        - name: メンバー
+          href: fsharp/language-reference/members/index.md
+          items:
+            - name: クラス内の let 束縛
+              href: fsharp/language-reference/members/let-bindings-in-classes.md
+            - name: クラス内の do 束縛
+              href: fsharp/language-reference/members/do-bindings-in-classes.md
+            - name: プロパティ
+              href: fsharp/language-reference/members/properties.md
+            - name: インデックス付きプロパティ
+              href: fsharp/language-reference/members/indexed-properties.md
+            - name: メソッド
+              href: fsharp/language-reference/members/methods.md
+            - name: コンストラクター
+              href: fsharp/language-reference/members/constructors.md
+            - name: イベント
+              href: fsharp/language-reference/members/events.md
+            - name: '明示的なフィールド: `val` キーワード'
+              href: fsharp/language-reference/members/explicit-fields-the-val-keyword.md
+        - name: 型拡張
+          href: fsharp/language-reference/type-extensions.md
+        - name: パラメーターと引数
+          href: fsharp/language-reference/parameters-and-arguments.md
+        - name: 演算子のオーバーロード
+          href: fsharp/language-reference/operator-overloading.md
+        - name: フレキシブル型
+          href: fsharp/language-reference/flexible-types.md
+        - name: デリゲート
+          href: fsharp/language-reference/delegates.md
+        - name: オブジェクト式
+          href: fsharp/language-reference/object-expressions.md
+        - name: レコード式のコピーと更新
+          href: fsharp/language-reference/copy-and-update-record-expressions.md
+        - name: キャストと変換
+          href: fsharp/language-reference/casting-and-conversions.md
+        - name: アクセス制御
+          href: fsharp/language-reference/access-control.md
+        - name: '条件式: if...then...else'
+          href: fsharp/language-reference/conditional-expressions-if-then-else.md
+        - name: match 式
+          href: fsharp/language-reference/match-expressions.md
+        - name: パターン マッチ
+          href: fsharp/language-reference/pattern-matching.md
+        - name: アクティブ パターン
+          href: fsharp/language-reference/active-patterns.md
+        - name: 'ループ: for...to 式'
+          href: fsharp/language-reference/loops-for-to-expression.md
+        - name: 'ループ: for...in 式'
+          href: fsharp/language-reference/loops-for-in-expression.md
+        - name: 'ループ: while...do 式'
+          href: fsharp/language-reference/loops-while-do-expression.md
+        - name: アサーション
+          href: fsharp/language-reference/assertions.md
+        - name: 例外処理
+          href: fsharp/language-reference/exception-handling/index.md
+          items:
+            - name: 例外の種類
+              href: fsharp/language-reference/exception-handling/exception-types.md
+            - name: try...with 式
+              href: fsharp/language-reference/exception-handling/the-try-with-expression.md
+            - name: try...finally 式
+              href: fsharp/language-reference/exception-handling/the-try-finally-expression.md
+            - name: raise 関数
+              href: fsharp/language-reference/exception-handling/the-raise-function.md
+            - name: failwith 関数
+              href: fsharp/language-reference/exception-handling/the-failwith-function.md
+            - name: invalidArg 関数
+              href: fsharp/language-reference/exception-handling/the-invalidArg-function.md
+        - name: 属性
+          href: fsharp/language-reference/attributes.md
+        - name: 'リソースの管理: use キーワード'
+          href: fsharp/language-reference/resource-management-the-use-keyword.md
+        - name: 名前空間
+          href: fsharp/language-reference/namespaces.md
+        - name: モジュール
+          href: fsharp/language-reference/modules.md
+        - name: 'インポート宣言: open キーワード'
+          href: fsharp/language-reference/import-declarations-the-open-keyword.md
+        - name: シグネチャ ファイル
+          href: fsharp/language-reference/signature-files.md
+        - name: 測定単位
+          href: fsharp/language-reference/units-of-measure.md
+        - name: XML に関するドキュメント
+          href: fsharp/language-reference/xml-documentation.md
+        - name: 遅延式
+          href: fsharp/language-reference/lazy-expressions.md
+        - name: コンピュテーション式
+          href: fsharp/language-reference/computation-expressions.md
+        - name: 非同期ワークフロー
+          href: fsharp/language-reference/asynchronous-workflows.md
+        - name: クエリ式
+          href: fsharp/language-reference/query-expressions.md
+        - name: コード クォート
+          href: fsharp/language-reference/code-quotations.md
+        - name: fixed キーワード
+          href: fsharp/language-reference/fixed.md
+        - name: Byrefs
+          href: fsharp/language-reference/byrefs.md
+        - name: 参照セル
+          href: fsharp/language-reference/reference-cells.md
+        - name: コンパイラ ディレクティブ
+          href: fsharp/language-reference/compiler-directives.md
+        - name: コンパイラ オプション
+          href: fsharp/language-reference/compiler-options.md
+        - name: 'F# Interactive オプション'
+          href: fsharp/language-reference/fsharp-interactive-options.md
+        - name: ソース行、ファイル、およびパスの識別子
+          href: fsharp/language-reference/source-line-file-path-identifiers.md
+        - name: 呼び出し元情報
+          href: fsharp/language-reference/caller-information.md
+        - name: 冗語構文
+          href: fsharp/language-reference/verbose-syntax.md
+    - name: 'F# スタイル ガイド'
+      href: fsharp/style-guide/index.md
+      items:
+        - name: 'F# コードのフォーマットに関するガイドライン'
+          href: fsharp/style-guide/formatting.md
+        - name: 'F# のコーディング規則'
+          href: fsharp/style-guide/conventions.md
+        - name: 'F# コンポーネント デザインのガイドライン'
+          href: fsharp/style-guide/component-design-guidelines.md
+    - name: 'Azure での F# の使用'
+      href: fsharp/using-fsharp-on-azure/index.md
+      items:
+        - name: 'F# を使用した Azure Blob Storage の概要'
+          href: fsharp/using-fsharp-on-azure/blob-storage.md
+        - name: 'F# を使用した Azure File Storage の概要'
+          href: fsharp/using-fsharp-on-azure/file-storage.md
+        - name: 'F# を使用した Azure Queue Storage の概要'
+          href: fsharp/using-fsharp-on-azure/queue-storage.md
+        - name: 'F# を使用した Azure Table Storage の概要'
+          href: fsharp/using-fsharp-on-azure/table-storage.md
+        - name: 'F# の Azure の依存関係のためのパッケージ管理'
+          href: fsharp/using-fsharp-on-azure/package-management.md
+- name: Visual Basic のガイド
+  href: visual-basic/index.md
+  items:
+    - name: Visual Basic の新機能
+      href: visual-basic/getting-started/whats-new.md
+    - name: 開始するには
+      href: visual-basic/getting-started/index.md
+      items:
+        - name: Visual Studio における Visual Basic の互換性に影響する変更点
+          href: visual-basic/getting-started/breaking-changes-in-visual-studio.md
+        - name: Visual Basic プログラマのための追加リソース
+          href: visual-basic/getting-started/additional-resources.md
+    - name: アプリケーションの開発
+      href: visual-basic/developing-apps/index.md
+      items:
+        - name: Visual Basic でのプログラミング
+          href: visual-basic/developing-apps/programming/index.md
+          items:
+            - name: コンピューター リソースへのアクセス
+              href: visual-basic/developing-apps/programming/computer-resources/index.md
+            - name: アプリケーションからの情報のログ記録
+              href: visual-basic/developing-apps/programming/log-info/index.md
+            - name: ユーザー データへのアクセス
+              href: visual-basic/developing-apps/programming/accessing-user-data.md
+            - name: アプリケーション フォームへのアクセス
+              href: visual-basic/developing-apps/programming/accessing-application-forms.md
+            - name: アプリケーションの Web サービスへのアクセス
+              href: visual-basic/developing-apps/programming/accessing-application-web-services.md
+              items:
+                - name: '方法: Web サービスを非同期で呼び出す'
+                  href: visual-basic/developing-apps/programming/how-to-call-a-web-service-asynchronously.md
+            - name: Accessing Application Settings
+              href: visual-basic/developing-apps/programming/app-settings/index.md
+            - name: ドライブ、ディレクトリ、およびファイルの処理
+              href: visual-basic/developing-apps/programming/drives-directories-files/processing.md
+        - name: My による開発
+          href: visual-basic/developing-apps/development-with-my/index.md
+          items:
+            - name: My.Application、My.Computer、および My.User でのタスクの実行
+              href: visual-basic/developing-apps/development-with-my/performing-tasks-with-my-application-my-computer-and-my-user.md
+            - name: My.Forms と My.WebServices が提供する既定のオブジェクト インスタンス
+              href: visual-basic/developing-apps/development-with-my/default-object-instances-provided-by-my-forms-and-my-webservices.md
+            - name: My.Resources と My.Settings による Rapid Application Development
+              href: visual-basic/developing-apps/development-with-my/rapid-application-development-with-my-resources-and-my-settings.md
+            - name: Visual Basic アプリケーション モデルの概要
+              href: visual-basic/developing-apps/development-with-my/overview-of-the-visual-basic-application-model.md
+            - name: プロジェクトの種類に応じた My の機能
+              href: visual-basic/developing-apps/development-with-my/how-my-depends-on-project-type.md
+        - name: データへのアクセス
+          href: visual-basic/developing-apps/accessing-data.md
+        - name: コンポーネントの作成および使用
+          href: visual-basic/developing-apps/creating-and-using-components.md
+        - name: Windows フォーム アプリケーションの基礎
+          href: visual-basic/developing-apps/windows-forms/index.md
+        - name: Visual Basic でのプロジェクトのカスタマイズと My の拡張
+          href: visual-basic/developing-apps/customizing-extending-my/index.md
+          items:
+            - name: My 名前空間の拡張
+              href: visual-basic/developing-apps/customizing-extending-my/extending-the-my-namespace.md
+            - name: カスタム My 拡張のパッケージ化と配置
+              href: visual-basic/developing-apps/customizing-extending-my/packaging-and-deploying-custom-my-extensions.md
+            - name: Visual Basic アプリケーション モデルの拡張
+              href: visual-basic/developing-apps/customizing-extending-my/extending-the-visual-basic-application-model.md
+            - name: My で利用可能なオブジェクトのカスタマイズ
+              href: visual-basic/developing-apps/customizing-extending-my/customizing-which-objects-are-available-in-my.md
+    - name: プログラミングの概念
+      href: visual-basic/programming-guide/concepts/index.md
+      items:
+        - name: Async および Await を使用した非同期プログラミング
+          href: visual-basic/programming-guide/concepts/async/index.md
+        - name: 属性
+          href: visual-basic/programming-guide/concepts/attributes/index.md
+        - name: 呼び出し元情報
+          href: visual-basic/programming-guide/concepts/caller-information.md
+        - name: コレクション
+          href: visual-basic/programming-guide/concepts/collections.md
+        - name: 共変性と反変性
+          href: visual-basic/programming-guide/concepts/covariance-contravariance/index.md
+        - name: 式ツリー
+          href: visual-basic/programming-guide/concepts/expression-trees/index.md
+        - name: Iterators
+          href: visual-basic/programming-guide/concepts/iterators.md
+        - name: '統合言語クエリ (LINQ: Language-Integrated Query)'
+          href: visual-basic/programming-guide/concepts/linq/index.md
+        - name: オブジェクト指向プログラミング
+          href: visual-basic/programming-guide/concepts/object-oriented-programming.md
+        - name: リフレクション
+          href: visual-basic/programming-guide/concepts/reflection.md
+        - name: シリアル化
+          href: visual-basic/programming-guide/concepts/serialization/index.md
+    - name: プログラム構造とコード規則
+      href: visual-basic/programming-guide/program-structure/program-structure-and-code-conventions.md
+      items:
+        - name: プログラムの構造
+          href: visual-basic/programming-guide/program-structure/structure-of-a-visual-basic-program.md
+        - name: メインのプロシージャ
+          href: visual-basic/programming-guide/program-structure/main-procedure.md
+        - name: 参照と Imports ステートメント
+          href: visual-basic/programming-guide/program-structure/references-and-the-imports-statement.md
+        - name: 名前空間
+          href: visual-basic/programming-guide/program-structure/namespaces.md
+        - name: 命名規則
+          href: visual-basic/programming-guide/program-structure/naming-conventions.md
+        - name: コーディング規則
+          href: visual-basic/programming-guide/program-structure/coding-conventions.md
+        - name: 条件付きコンパイル
+          href: visual-basic/programming-guide/program-structure/conditional-compilation.md
+        - name: '方法: コード内でステートメントを分割および連結する'
+          href: visual-basic/programming-guide/program-structure/how-to-break-and-combine-statements-in-code.md
+        - name: '方法: コードのセクションを折りたたんで非表示にする'
+          href: visual-basic/programming-guide/program-structure/how-to-collapse-and-hide-sections-of-code.md
+        - name: '方法: ステートメントへのラベル付け'
+          href: visual-basic/programming-guide/program-structure/how-to-label-statements.md
+        - name: コード内の特殊文字
+          href: visual-basic/programming-guide/program-structure/special-characters-in-code.md
+        - name: コード内のコメント
+          href: visual-basic/programming-guide/program-structure/comments-in-code.md
+        - name: コード内の要素名としてのキーワード
+          href: visual-basic/programming-guide/program-structure/keywords-as-element-names-in-code.md
+        - name: Me、My、MyBase、および MyClass
+          href: visual-basic/programming-guide/program-structure/me-my-mybase-and-myclass.md
+        - name: 制限事項
+          href: visual-basic/programming-guide/program-structure/limitations.md
+    - name: 言語機能
+      href: visual-basic/programming-guide/language-features/index.md
+      items:
+        - name: 配列
+          href: visual-basic/programming-guide/language-features/arrays/index.md
+        - name: コレクション初期化子
+          href: visual-basic/programming-guide/language-features/collection-initializers/index.md
+        - name: 定数と列挙体
+          href: visual-basic/programming-guide/language-features/constants-enums/index.md
+        - name: 制御フロー
+          href: visual-basic/programming-guide/language-features/control-flow/index.md
+        - name: データの種類
+          href: visual-basic/programming-guide/language-features/data-types/index.md
+          items:
+            - name: 型文字
+              href: visual-basic/programming-guide/language-features/data-types/type-characters.md
+            - name: 基本データ型
+              href: visual-basic/programming-guide/language-features/data-types/elementary-data-types.md
+              items:
+                - name: 数値データ型
+                  href: visual-basic/programming-guide/language-features/data-types/numeric-data-types.md
+                - name: 文字データ型
+                  href: visual-basic/programming-guide/language-features/data-types/character-data-types.md
+                - name: その他のデータ型
+                  href: visual-basic/programming-guide/language-features/data-types/miscellaneous-data-types.md
+            - name: 複合データ型
+              href: visual-basic/programming-guide/language-features/data-types/composite-data-types.md
+              items:
+                - name: '方法: 変数内で複数の値を保持する'
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-hold-more-than-one-value-in-a-variable.md
+            - name: ジェネリック型
+              href: visual-basic/programming-guide/language-features/data-types/generic-types.md
+              items:
+                - name: '方法: 複数のデータ型に同一の機能を提供できるクラスを定義する'
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-define-a-class-that-can-provide-identical-functionality.md
+                - name: '方法: ジェネリック クラスを使用する'
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-use-a-generic-class.md
+            - name: ジェネリック プロシージャ
+              href: visual-basic/programming-guide/language-features/data-types/generic-procedures.md
+            - name: null 許容値型
+              href: visual-basic/programming-guide/language-features/data-types/nullable-value-types.md
+            - name: 値型と参照型
+              href: visual-basic/programming-guide/language-features/data-types/value-types-and-reference-types.md
+            - name: 型変換
+              href: visual-basic/programming-guide/language-features/data-types/type-conversions.md
+              items:
+                - name: Widening and Narrowing Conversions
+                  href: visual-basic/programming-guide/language-features/data-types/widening-and-narrowing-conversions.md
+                - name: 暗黙の型変換と明示的な型変換
+                  href: visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions.md
+                - name: 文字列とその他の型との変換
+                  href: visual-basic/programming-guide/language-features/data-types/conversions-between-strings-and-other-types.md
+                - name: '方法: オブジェクトを別の型に変換する'
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-convert-an-object-to-another-type.md
+                - name: 配列変換
+                  href: visual-basic/programming-guide/language-features/data-types/array-conversions.md
+            - name: 構造体
+              href: visual-basic/programming-guide/language-features/data-types/structures.md
+              items:
+                - name: '方法: 構造体を宣言する'
+                  href: visual-basic/programming-guide/language-features/data-types/how-to-declare-a-structure.md
+                - name: 構造体変数
+                  href: visual-basic/programming-guide/language-features/data-types/structure-variables.md
+                - name: 構造体とその他のプログラミング要素
+                  href: visual-basic/programming-guide/language-features/data-types/structures-and-other-programming-elements.md
+                - name: 構造体とクラス
+                  href: visual-basic/programming-guide/language-features/data-types/structures-and-classes.md
+            - name: タプル
+              href: visual-basic/programming-guide/language-features/data-types/tuples.md
+            - name: データ型の有効な使用方法
+              href: visual-basic/programming-guide/language-features/data-types/efficient-use-of-data-types.md
+            - name: データ型のトラブルシューティング
+              href: visual-basic/programming-guide/language-features/data-types/troubleshooting-data-types.md
+        - name: 宣言された要素
+          href: visual-basic/programming-guide/language-features/declared-elements/index.md
+        - name: デリゲート
+          href: visual-basic/programming-guide/language-features/delegates/index.md
+        - name: 事前バインディングと遅延バインディング
+          href: visual-basic/programming-guide/language-features/early-late-binding/index.md
+        - name: エラーの種類
+          href: visual-basic/programming-guide/language-features/error-types.md
+        - name: イベント
+          href: visual-basic/programming-guide/language-features/events/index.md
+        - name: インターフェイス
+          href: visual-basic/programming-guide/language-features/interfaces/index.md
+          items:
+            - name: 'チュートリアル: インターフェイスの作成と実装'
+              href: visual-basic/programming-guide/language-features/interfaces/walkthrough-creating-and-implementing-interfaces.md
+        - name: LINQ
+          href: visual-basic/programming-guide/language-features/linq/index.md
+        - name: クラスとオブジェクト
+          href: visual-basic/programming-guide/language-features/objects-and-classes/index.md
+        - name: 演算子および式
+          href: visual-basic/programming-guide/language-features/operators-and-expressions/index.md
+        - name: 手順
+          href: visual-basic/programming-guide/language-features/procedures/index.md
+        - name: ステートメント
+          href: visual-basic/programming-guide/language-features/statements.md
+        - name: 文字列
+          href: visual-basic/programming-guide/language-features/strings/index.md
+        - name: 変数
+          href: visual-basic/programming-guide/language-features/variables/index.md
+        - name: XML
+          href: visual-basic/programming-guide/language-features/xml/index.md
+    - name: COM 相互運用
+      href: visual-basic/programming-guide/com-interop/index.md
+      items:
+        - name: COM 相互運用の概要
+          href: visual-basic/programming-guide/com-interop/introduction-to-com-interop.md
+        - name: '方法: COM オブジェクトを参照する'
+          href: visual-basic/programming-guide/com-interop/how-to-reference-com-objects.md
+        - name: '方法: ActiveX コントロールを操作する'
+          href: visual-basic/programming-guide/com-interop/how-to-work-with-activex-controls.md
+        - name: 'チュートリアル: Windows API の呼び出し'
+          href: visual-basic/programming-guide/com-interop/walkthrough-calling-windows-apis.md
+        - name: '方法: Windows API を呼び出す'
+          href: visual-basic/programming-guide/com-interop/how-to-call-windows-apis.md
+        - name: '方法: 符号なしの型を使用する Windows の機能を呼び出す'
+          href: visual-basic/programming-guide/com-interop/how-to-call-a-windows-function-that-takes-unsigned-types.md
+        - name: 'チュートリアル: COM オブジェクトの作成'
+          href: visual-basic/programming-guide/com-interop/walkthrough-creating-com-objects.md
+        - name: 相互運用性のトラブルシューティング
+          href: visual-basic/programming-guide/com-interop/troubleshooting-interoperability.md
+        - name: .NET Framework アプリケーションにおける COM 相互運用性
+          href: visual-basic/programming-guide/com-interop/com-interoperability-in-net-framework-applications.md
+        - name: 'チュートリアル: COM オブジェクトによる継承の実装'
+          href: visual-basic/programming-guide/com-interop/walkthrough-implementing-inheritance-with-com-objects.md
+    - name: 言語リファレンス
+      href: visual-basic/language-reference/index.md
+      items:
+        - name: 言語バージョンの構成
+          href: visual-basic/language-reference/configure-language-version.md
+        - name: 表記規則とコード規則
+          href: visual-basic/language-reference/typographic-and-code-conventions.md
+        - name: Visual Basic ランタイム ライブラリのメンバー
+          href: visual-basic/language-reference/runtime-library-members.md
+        - name: キーワード
+          href: visual-basic/language-reference/keywords/index.md
+          items:
+            - name: 配列の概要
+              href: visual-basic/language-reference/keywords/arrays-summary.md
+            - name: Collection オブジェクトの概要
+              href: visual-basic/language-reference/keywords/collection-object-summary.md
+            - name: 制御フローの概要
+              href: visual-basic/language-reference/keywords/control-flow-summary.md
+            - name: 変換の概要
+              href: visual-basic/language-reference/keywords/conversion-summary.md
+            - name: Data Types Summary
+              href: visual-basic/language-reference/keywords/data-types-summary.md
+            - name: 日付と時刻の概要
+              href: visual-basic/language-reference/keywords/dates-and-times-summary.md
+            - name: 宣言と定数の概要
+              href: visual-basic/language-reference/keywords/declarations-and-constants-summary.md
+            - name: ディレクトリとファイルの概要
+              href: visual-basic/language-reference/keywords/directories-and-files-summary.md
+            - name: エラーの概要
+              href: visual-basic/language-reference/keywords/errors-summary.md
+            - name: 財務処理の概要
+              href: visual-basic/language-reference/keywords/financial-summary.md
+            - name: 情報と対話の概要
+              href: visual-basic/language-reference/keywords/information-and-interaction-summary.md
+            - name: 入出力の概要
+              href: visual-basic/language-reference/keywords/input-and-output-summary.md
+            - name: 数値演算の概要
+              href: visual-basic/language-reference/keywords/math-summary.md
+              items:
+                - name: 数値演算関数の導出
+                  href: visual-basic/language-reference/keywords/derived-math-functions.md
+            - name: My の参照
+              href: visual-basic/language-reference/keywords/my-reference.md
+            - name: 演算子の概要
+              href: visual-basic/language-reference/keywords/operators-summary.md
+            - name: レジストリの概要
+              href: visual-basic/language-reference/keywords/registry-summary.md
+            - name: 文字列操作の概要
+              href: visual-basic/language-reference/keywords/string-manipulation-summary.md
+        - name: 属性
+          href: visual-basic/language-reference/attributes.md
+        - name: 定数と列挙体
+          href: visual-basic/language-reference/constants-and-enumerations.md
+        - name: データ型の概要
+          href: visual-basic/language-reference/data-types/index.md
+          items:
+            - name: Boolean データ型
+              href: visual-basic/language-reference/data-types/boolean-data-type.md
+            - name: Byte データ型
+              href: visual-basic/language-reference/data-types/byte-data-type.md
+            - name: Char データ型
+              href: visual-basic/language-reference/data-types/char-data-type.md
+            - name: Date データ型
+              href: visual-basic/language-reference/data-types/date-data-type.md
+            - name: Decimal データ型
+              href: visual-basic/language-reference/data-types/decimal-data-type.md
+            - name: Double データ型
+              href: visual-basic/language-reference/data-types/double-data-type.md
+            - name: Integer データ型
+              href: visual-basic/language-reference/data-types/integer-data-type.md
+            - name: Long データ型
+              href: visual-basic/language-reference/data-types/long-data-type.md
+            - name: Object Data Type
+              href: visual-basic/language-reference/data-types/object-data-type.md
+            - name: SByte データ型
+              href: visual-basic/language-reference/data-types/sbyte-data-type.md
+            - name: Short データ型
+              href: visual-basic/language-reference/data-types/short-data-type.md
+            - name: Single データ型
+              href: visual-basic/language-reference/data-types/single-data-type.md
+            - name: 文字列型 (String)
+              href: visual-basic/language-reference/data-types/string-data-type.md
+            - name: UInteger データ型
+              href: visual-basic/language-reference/data-types/uinteger-data-type.md
+            - name: ULong データ型
+              href: visual-basic/language-reference/data-types/ulong-data-type.md
+            - name: ユーザー定義型
+              href: visual-basic/language-reference/data-types/user-defined-data-type.md
+            - name: UShort データ型
+              href: visual-basic/language-reference/data-types/ushort-data-type.md
+        - name: ディレクティブ
+          href: visual-basic/language-reference/directives/index.md
+          items:
+            - name: '#Const ディレクティブ'
+              href: visual-basic/language-reference/directives/const-directive.md
+            - name: '#ExternalSource ディレクティブ'
+              href: visual-basic/language-reference/directives/externalsource-directive.md
+            - name: '#If...Then...#Else ディレクティブ'
+              href: visual-basic/language-reference/directives/if-then-else-directives.md
+            - name: '#Region ディレクティブ'
+              href: visual-basic/language-reference/directives/region-directive.md
+        - name: 関数
+          href: visual-basic/language-reference/functions/index.md
+          items:
+            - name: 変換関数
+              href: visual-basic/language-reference/functions/conversion-functions.md
+            - name: 数値演算関数
+              href: visual-basic/language-reference/functions/math-functions.md
+            - name: 文字列関数
+              href: visual-basic/language-reference/functions/string-functions.md
+            - name: CString
+              href: visual-basic/language-reference/functions/type-conversion-functions.md
+              items:
+                - name: CStr 関数の戻り値
+                  href: visual-basic/language-reference/functions/return-values-for-the-cstr-function.md
+            - name: CType Function
+              href: visual-basic/language-reference/functions/ctype-function.md
+        - name: 修飾子
+          href: visual-basic/language-reference/modifiers/index.md
+          items:
+            - name: Ansi
+              href: visual-basic/language-reference/modifiers/ansi.md
+            - name: Assembly
+              href: visual-basic/language-reference/modifiers/assembly.md
+            - name: Async
+              href: visual-basic/language-reference/modifiers/async.md
+            - name: 自動
+              href: visual-basic/language-reference/modifiers/auto.md
+            - name: ByRef
+              href: visual-basic/language-reference/modifiers/byref.md
+            - name: ByVal
+              href: visual-basic/language-reference/modifiers/byval.md
+            - name: 既定値
+              href: visual-basic/language-reference/modifiers/default.md
+            - name: Friend
+              href: visual-basic/language-reference/modifiers/friend.md
+            - name: In (ジェネリック修飾子)
+              href: visual-basic/language-reference/modifiers/in-generic-modifier.md
+            - name: Iterator
+              href: visual-basic/language-reference/modifiers/iterator.md
+            - name: キー
+              href: visual-basic/language-reference/modifiers/key.md
+            - name: Module
+              href: visual-basic/language-reference/modifiers/module-keyword.md
+            - name: MustInherit
+              href: visual-basic/language-reference/modifiers/mustinherit.md
+            - name: New
+              href: visual-basic/language-reference/modifiers/mustoverride.md
+            - name: Narrowing
+              href: visual-basic/language-reference/modifiers/narrowing.md
+            - name: NotInheritable
+              href: visual-basic/language-reference/modifiers/notinheritable.md
+            - name: NotOverridable
+              href: visual-basic/language-reference/modifiers/notoverridable.md
+            - name: Optional
+              href: visual-basic/language-reference/modifiers/optional.md
+            - name: Out (ジェネリック修飾子)
+              href: visual-basic/language-reference/modifiers/out-generic-modifier.md
+            - name: Overloads
+              href: visual-basic/language-reference/modifiers/overloads.md
+            - name: Overridable
+              href: visual-basic/language-reference/modifiers/overridable.md
+            - name: オーバーライド
+              href: visual-basic/language-reference/modifiers/overrides.md
+            - name: ParamArray
+              href: visual-basic/language-reference/modifiers/paramarray.md
+            - name: Partial
+              href: visual-basic/language-reference/modifiers/partial.md
+            - name: Private
+              href: visual-basic/language-reference/modifiers/private.md
+            - name: Private Protected
+              href: visual-basic/language-reference/modifiers/private-protected.md
+            - name: プロテクト
+              href: visual-basic/language-reference/modifiers/protected.md
+            - name: Protected Friend
+              href: visual-basic/language-reference/modifiers/protected-friend.md
+            - name: Public
+              href: visual-basic/language-reference/modifiers/public.md
+            - name: ReadOnly
+              href: visual-basic/language-reference/modifiers/readonly.md
+            - name: Overloads
+              href: visual-basic/language-reference/modifiers/shadows.md
+            - name: Shared
+              href: visual-basic/language-reference/modifiers/shared.md
+            - name: スタティック
+              href: visual-basic/language-reference/modifiers/static.md
+            - name: Unicode
+              href: visual-basic/language-reference/modifiers/unicode.md
+            - name: Widening
+              href: visual-basic/language-reference/modifiers/widening.md
+            - name: ReadOnly
+              href: visual-basic/language-reference/modifiers/withevents.md
+            - name: WriteOnly
+              href: visual-basic/language-reference/modifiers/writeonly.md
+        - name: モジュール
+          href: visual-basic/language-reference/modules.md
+        - name: Nothing
+          href: visual-basic/language-reference/nothing.md
+        - name: オブジェクト
+          href: visual-basic/language-reference/objects/index.md
+          items:
+            - name: My.Application オブジェクト
+              href: visual-basic/language-reference/objects/my-application-object.md
+              items:
+                - name: My.Application.Info オブジェクト
+                  href: visual-basic/language-reference/objects/my-application-info-object.md
+                - name: My.Application.Log オブジェクト
+                  href: visual-basic/language-reference/objects/my-application-log-object.md
+            - name: My.Computer オブジェクト
+              href: visual-basic/language-reference/objects/my-computer-object.md
+              items:
+                - name: My.Computer.Audio オブジェクト
+                  href: visual-basic/language-reference/objects/my-computer-audio-object.md
+                - name: My.Computer.Clipboard オブジェクト
+                  href: visual-basic/language-reference/objects/my-computer-clipboard-object.md
+                - name: My.Computer.Clock オブジェクト
+                  href: visual-basic/language-reference/objects/my-computer-clock-object.md
+                - name: My.Computer.FileSystem オブジェクト
+                  href: visual-basic/language-reference/objects/my-computer-filesystem-object.md
+                  items:
+                    - name: My.Computer.FileSystem.SpecialDirectories オブジェクト
+                      href: visual-basic/language-reference/objects/my-computer-filesystem-specialdirectories-object.md
+                - name: My.Computer.Info オブジェクト
+                  href: visual-basic/language-reference/objects/my-computer-info-object.md
+                - name: My.Computer.Keyboard オブジェクト
+                  href: visual-basic/language-reference/objects/my-computer-keyboard-object.md
+                - name: My.Computer.Mouse オブジェクト
+                  href: visual-basic/language-reference/objects/my-computer-mouse-object.md
+                - name: My.Computer.Network オブジェクト
+                  href: visual-basic/language-reference/objects/my-computer-network-object.md
+                - name: My.Computer.Ports オブジェクト
+                  href: visual-basic/language-reference/objects/my-computer-ports-object.md
+                - name: My.Computer.Registry オブジェクト
+                  href: visual-basic/language-reference/objects/my-computer-registry-object.md
+            - name: My.Forms オブジェクト
+              href: visual-basic/language-reference/objects/my-forms-object.md
+            - name: My.Log オブジェクト
+              href: visual-basic/language-reference/objects/my-log-object.md
+            - name: My.Request オブジェクト
+              href: visual-basic/language-reference/objects/my-request-object.md
+            - name: My.Response オブジェクト
+              href: visual-basic/language-reference/objects/my-response-object.md
+            - name: My.Resources オブジェクト
+              href: visual-basic/language-reference/objects/my-resources-object.md
+            - name: My.Settings オブジェクト
+              href: visual-basic/language-reference/objects/my-settings-object.md
+            - name: My.User オブジェクト
+              href: visual-basic/language-reference/objects/my-user-object.md
+            - name: My.WebServices オブジェクト
+              href: visual-basic/language-reference/objects/my-webservices-object.md
+            - name: TextFieldParser Object
+              href: visual-basic/language-reference/objects/textfieldparser-object.md
+        - name: 演算子
+          href: visual-basic/language-reference/operators/index.md
+          items:
+            - name: 演算子の優先順位
+              href: visual-basic/language-reference/operators/operator-precedence.md
+            - name: 演算子の結果のデータ型
+              href: visual-basic/language-reference/operators/data-types-of-operator-results.md
+            - name: 機能別の演算子一覧
+              href: visual-basic/language-reference/operators/operators-listed-by-functionality.md
+              items:
+                - name: 算術演算子
+                  href: visual-basic/language-reference/operators/arithmetic-operators.md
+                - name: 代入演算子
+                  href: visual-basic/language-reference/operators/assignment-operators.md
+                - name: ビット シフト演算子
+                  href: visual-basic/language-reference/operators/bit-shift-operators.md
+                - name: 比較演算子
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: 連結演算子
+                  href: visual-basic/language-reference/operators/concatenation-operators.md
+                - name: 論理ビット処理演算子
+                  href: visual-basic/language-reference/operators/logical-bitwise-operators.md
+                - name: その他の演算子
+                  href: visual-basic/language-reference/operators/miscellaneous-operators.md
+            - name: Visual Basic の演算子の一覧
+              items:
+                - name: '& 演算子'
+                  href: visual-basic/language-reference/operators/concatenation-operator.md
+                - name: '&= 演算子'
+                  href: visual-basic/language-reference/operators/and-assignment-operator.md
+                - name: '* 演算子'
+                  href: visual-basic/language-reference/operators/multiplication-operator.md
+                - name: '*= 演算子'
+                  href: visual-basic/language-reference/operators/multiplication-assignment-operator.md
+                - name: + 演算子
+                  href: visual-basic/language-reference/operators/addition-operator.md
+                - name: += 演算子
+                  href: visual-basic/language-reference/operators/addition-assignment-operator.md
+                - name: = 演算子
+                  href: visual-basic/language-reference/operators/assignment-operator.md
+                - name: '- 演算子'
+                  href: visual-basic/language-reference/operators/subtraction-operator.md
+                - name: '-= 演算子'
+                  href: visual-basic/language-reference/operators/subtraction-assignment-operator.md
+                - name: < 演算子
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: <= 演算子
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: '> 演算子'
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: '>= 演算子'
+                  href: visual-basic/language-reference/operators/comparison-operators.md
+                - name: << 演算子
+                  href: visual-basic/language-reference/operators/left-shift-operator.md
+                - name: <<= 演算子
+                  href: visual-basic/language-reference/operators/left-shift-assignment-operator.md
+                - name: '>> 演算子'
+                  href: visual-basic/language-reference/operators/right-shift-operator.md
+                - name: '>>= 演算子'
+                  href: visual-basic/language-reference/operators/right-shift-assignment-operator.md
+                - name: / 演算子
+                  href: visual-basic/language-reference/operators/floating-point-division-operator.md
+                - name: /= 演算子
+                  href: visual-basic/language-reference/operators/floating-point-division-assignment-operator.md
+                - name: \ 演算子
+                  href: visual-basic/language-reference/operators/integer-division-operator.md
+                - name: \= 演算子
+                  href: visual-basic/language-reference/operators/integer-division-assignment-operator.md
+                - name: ^ 演算子
+                  href: visual-basic/language-reference/operators/exponentiation-operator.md
+                - name: ^= 演算子
+                  href: visual-basic/language-reference/operators/exponentiation-assignment-operator.md
+                - name: '?() 演算子'
+                  href: visual-basic/language-reference/operators/null-conditional-operators.md
+                - name: '?. 演算子'
+                  href: visual-basic/language-reference/operators/null-conditional-operators.md
+                - name: AddressOf 演算子
+                  href: visual-basic/language-reference/operators/addressof-operator.md
+                - name: And 演算子
+                  href: visual-basic/language-reference/operators/and-operator.md
+                - name: AndAlso 演算子
+                  href: visual-basic/language-reference/operators/andalso-operator.md
+                - name: Await 演算子
+                  href: visual-basic/language-reference/operators/await-operator.md
+                - name: DirectCast 演算子
+                  href: visual-basic/language-reference/operators/directcast-operator.md
+                - name: Function 式
+                  href: visual-basic/language-reference/operators/function-expression.md
+                - name: GetType Operator
+                  href: visual-basic/language-reference/operators/gettype-operator.md
+                - name: GetXmlNamespace 演算子
+                  href: visual-basic/language-reference/operators/getxmlnamespace-operator.md
+                - name: If 演算子
+                  href: visual-basic/language-reference/operators/if-operator.md
+                - name: Is 演算子
+                  href: visual-basic/language-reference/operators/is-operator.md
+                - name: IsFalse 演算子
+                  href: visual-basic/language-reference/operators/isfalse-operator.md
+                - name: IsNot 演算子
+                  href: visual-basic/language-reference/operators/isnot-operator.md
+                - name: IsTrue 演算子
+                  href: visual-basic/language-reference/operators/istrue-operator.md
+                - name: Like 演算子
+                  href: visual-basic/language-reference/operators/like-operator.md
+                - name: Mod 演算子
+                  href: visual-basic/language-reference/operators/mod-operator.md
+                - name: new 演算子
+                  href: visual-basic/language-reference/operators/new-operator.md
+                - name: Not 演算子
+                  href: visual-basic/language-reference/operators/not-operator.md
+                - name: Or 演算子
+                  href: visual-basic/language-reference/operators/or-operator.md
+                - name: OrElse 演算子
+                  href: visual-basic/language-reference/operators/orelse-operator.md
+                - name: Sub 式
+                  href: visual-basic/language-reference/operators/sub-expression.md
+                - name: TryCast 演算子
+                  href: visual-basic/language-reference/operators/trycast-operator.md
+                - name: TypeOf 演算子
+                  href: visual-basic/language-reference/operators/typeof-operator.md
+                - name: Xor 演算子
+                  href: visual-basic/language-reference/operators/xor-operator.md
+        - name: プロパティ
+          href: visual-basic/language-reference/properties.md
+        - name: クエリ
+          href: visual-basic/language-reference/queries/index.md
+          items:
+            - name: Aggregate Clause
+              href: visual-basic/language-reference/queries/aggregate-clause.md
+            - name: Distinct 句
+              href: visual-basic/language-reference/queries/distinct-clause.md
+            - name: Equals 句
+              href: visual-basic/language-reference/queries/equals-clause.md
+            - name: From 句
+              href: visual-basic/language-reference/queries/from-clause.md
+            - name: Group By 句
+              href: visual-basic/language-reference/queries/group-by-clause.md
+            - name: Group Join 句
+              href: visual-basic/language-reference/queries/group-join-clause.md
+            - name: Join 句
+              href: visual-basic/language-reference/queries/join-clause.md
+            - name: Let 句
+              href: visual-basic/language-reference/queries/let-clause.md
+            - name: Order By 句
+              href: visual-basic/language-reference/queries/order-by-clause.md
+            - name: Select 句
+              href: visual-basic/language-reference/queries/select-clause.md
+            - name: Skip 句
+              href: visual-basic/language-reference/queries/skip-clause.md
+            - name: Skip While 句
+              href: visual-basic/language-reference/queries/skip-while-clause.md
+            - name: Take 句
+              href: visual-basic/language-reference/queries/take-clause.md
+            - name: Take While 句
+              href: visual-basic/language-reference/queries/take-while-clause.md
+            - name: Where 句
+              href: visual-basic/language-reference/queries/where-clause.md
+        - name: ステートメント
+          href: visual-basic/language-reference/statements/index.md
+          items:
+            - name: ステートメント A ～ E
+              href: visual-basic/language-reference/statements/a-e-statements.md
+              items:
+                - name: AddHandler ステートメント
+                  href: visual-basic/language-reference/statements/addhandler-statement.md
+                - name: Call ステートメント
+                  href: visual-basic/language-reference/statements/call-statement.md
+                - name: Class ステートメント
+                  href: visual-basic/language-reference/statements/class-statement.md
+                - name: Const ステートメント
+                  href: visual-basic/language-reference/statements/const-statement.md
+                - name: Continue ステートメント
+                  href: visual-basic/language-reference/statements/continue-statement.md
+                - name: Declare Statement
+                  href: visual-basic/language-reference/statements/declare-statement.md
+                - name: Delegate ステートメント
+                  href: visual-basic/language-reference/statements/delegate-statement.md
+                - name: Dim ステートメント
+                  href: visual-basic/language-reference/statements/dim-statement.md
+                - name: Do...Loop ステートメント
+                  href: visual-basic/language-reference/statements/do-loop-statement.md
+                - name: Else ステートメント
+                  href: visual-basic/language-reference/statements/else-statement.md
+                - name: End ステートメント
+                  href: visual-basic/language-reference/statements/end-statement.md
+                - name: End <keyword> ステートメント
+                  href: visual-basic/language-reference/statements/end-keyword-statement.md
+                - name: Enum ステートメント
+                  href: visual-basic/language-reference/statements/enum-statement.md
+                - name: Erase ステートメント
+                  href: visual-basic/language-reference/statements/erase-statement.md
+                - name: Error ステートメント
+                  href: visual-basic/language-reference/statements/error-statement.md
+                - name: Event ステートメント
+                  href: visual-basic/language-reference/statements/event-statement.md
+                - name: Exit ステートメント
+                  href: visual-basic/language-reference/statements/exit-statement.md
+            - name: ステートメント F ～ P
+              href: visual-basic/language-reference/statements/f-p-statements.md
+              items:
+                - name: For Each...Next ステートメント
+                  href: visual-basic/language-reference/statements/for-each-next-statement.md
+                - name: For...Next ステートメント
+                  href: visual-basic/language-reference/statements/for-next-statement.md
+                - name: Function ステートメント
+                  href: visual-basic/language-reference/statements/function-statement.md
+                - name: Get ステートメント
+                  href: visual-basic/language-reference/statements/get-statement.md
+                - name: GoTo ステートメント
+                  href: visual-basic/language-reference/statements/goto-statement.md
+                - name: If...Then...Else ステートメント
+                  href: visual-basic/language-reference/statements/if-then-else-statement.md
+                - name: Implements ステートメント
+                  href: visual-basic/language-reference/statements/implements-statement.md
+                - name: Imports ステートメント (.NET 名前空間および型)
+                  href: visual-basic/language-reference/statements/imports-statement-net-namespace-and-type.md
+                - name: Imports ステートメント (XML 名前空間)
+                  href: visual-basic/language-reference/statements/imports-statement-xml-namespace.md
+                - name: Inherits Statement
+                  href: visual-basic/language-reference/statements/inherits-statement.md
+                - name: Interface ステートメント
+                  href: visual-basic/language-reference/statements/interface-statement.md
+                - name: Mid ステートメント
+                  href: visual-basic/language-reference/statements/mid-statement.md
+                - name: Module ステートメント
+                  href: visual-basic/language-reference/statements/module-statement.md
+                - name: Namespace ステートメント
+                  href: visual-basic/language-reference/statements/namespace-statement.md
+                - name: On Error ステートメント
+                  href: visual-basic/language-reference/statements/on-error-statement.md
+                - name: Operator Statement
+                  href: visual-basic/language-reference/statements/operator-statement.md
+                - name: Option <keyword> ステートメント
+                  href: visual-basic/language-reference/statements/option-keyword-statement.md
+                - name: Option Compare ステートメント
+                  href: visual-basic/language-reference/statements/option-compare-statement.md
+                - name: Option Explicit ステートメント
+                  href: visual-basic/language-reference/statements/option-explicit-statement.md
+                - name: Option Infer ステートメント
+                  href: visual-basic/language-reference/statements/option-infer-statement.md
+                - name: Option Strict Statement
+                  href: visual-basic/language-reference/statements/option-strict-statement.md
+                - name: Property Statement
+                  href: visual-basic/language-reference/statements/property-statement.md
+            - name: ステートメント Q ～ Z
+              href: visual-basic/language-reference/statements/q-z-statements.md
+              items:
+                - name: RaiseEvent ステートメント
+                  href: visual-basic/language-reference/statements/raiseevent-statement.md
+                - name: ReDim ステートメント
+                  href: visual-basic/language-reference/statements/redim-statement.md
+                - name: REM ステートメント
+                  href: visual-basic/language-reference/statements/rem-statement.md
+                - name: RemoveHandler ステートメント
+                  href: visual-basic/language-reference/statements/removehandler-statement.md
+                - name: Resume ステートメント
+                  href: visual-basic/language-reference/statements/resume-statement.md
+                - name: Return ステートメント
+                  href: visual-basic/language-reference/statements/return-statement.md
+                - name: Select...Case ステートメント
+                  href: visual-basic/language-reference/statements/select-case-statement.md
+                - name: Set ステートメント
+                  href: visual-basic/language-reference/statements/set-statement.md
+                - name: Stop ステートメント
+                  href: visual-basic/language-reference/statements/stop-statement.md
+                - name: Structure ステートメント
+                  href: visual-basic/language-reference/statements/structure-statement.md
+                - name: Sub ステートメント
+                  href: visual-basic/language-reference/statements/sub-statement.md
+                - name: SyncLock ステートメント
+                  href: visual-basic/language-reference/statements/synclock-statement.md
+                - name: Then ステートメント
+                  href: visual-basic/language-reference/statements/then-statement.md
+                - name: Throw ステートメント
+                  href: visual-basic/language-reference/statements/throw-statement.md
+                - name: Try...Catch...Finally ステートメント
+                  href: visual-basic/language-reference/statements/try-catch-finally-statement.md
+                - name: Using ステートメント
+                  href: visual-basic/language-reference/statements/using-statement.md
+                - name: While...End While ステートメント
+                  href: visual-basic/language-reference/statements/while-end-while-statement.md
+                - name: With...End With ステートメント
+                  href: visual-basic/language-reference/statements/with-end-with-statement.md
+                - name: Yield ステートメント
+                  href: visual-basic/language-reference/statements/yield-statement.md
+            - name: 句
+              href: visual-basic/language-reference/statements/clauses.md
+              items:
+                - name: Alias 句
+                  href: visual-basic/language-reference/statements/alias-clause.md
+                - name: As 句
+                  href: visual-basic/language-reference/statements/as-clause.md
+                - name: Handles 句
+                  href: visual-basic/language-reference/statements/handles-clause.md
+                - name: Implements 句
+                  href: visual-basic/language-reference/statements/implements-clause.md
+                - name: In 句
+                  href: visual-basic/language-reference/statements/in-clause.md
+                - name: Into 句
+                  href: visual-basic/language-reference/statements/into-clause.md
+                - name: Of 句
+                  href: visual-basic/language-reference/statements/of-clause.md
+            - name: 宣言コンテキストと既定のアクセス レベル
+              href: visual-basic/language-reference/statements/declaration-contexts-and-default-access-levels.md
+            - name: 属性リスト
+              href: visual-basic/language-reference/statements/attribute-list.md
+            - name: パラメーター リスト
+              href: visual-basic/language-reference/statements/parameter-list.md
+            - name: Type List
+              href: visual-basic/language-reference/statements/type-list.md
+        - name: XML のコメント用タグ
+          href: visual-basic/language-reference/xmldoc/index.md
+          items:
+            - name: <c>
+              href: visual-basic/language-reference/xmldoc/c.md
+            - name: <code>
+              href: visual-basic/language-reference/xmldoc/code.md
+            - name: <example>
+              href: visual-basic/language-reference/xmldoc/example.md
+            - name: <exception>
+              href: visual-basic/language-reference/xmldoc/exception.md
+            - name: <include>
+              href: visual-basic/language-reference/xmldoc/include.md
+            - name: <list>
+              href: visual-basic/language-reference/xmldoc/list.md
+            - name: <para>
+              href: visual-basic/language-reference/xmldoc/para.md
+            - name: <param>
+              href: visual-basic/language-reference/xmldoc/param.md
+            - name: <paramref>
+              href: visual-basic/language-reference/xmldoc/paramref.md
+            - name: <permission>
+              href: visual-basic/language-reference/xmldoc/permission.md
+            - name: <remarks>
+              href: visual-basic/language-reference/xmldoc/remarks.md
+            - name: <returns>
+              href: visual-basic/language-reference/xmldoc/returns.md
+            - name: <see>
+              href: visual-basic/language-reference/xmldoc/see.md
+            - name: <seealso>
+              href: visual-basic/language-reference/xmldoc/seealso.md
+            - name: <summary>
+              href: visual-basic/language-reference/xmldoc/summary.md
+            - name: <typeparam>
+              href: visual-basic/language-reference/xmldoc/typeparam.md
+            - name: <value>
+              href: visual-basic/language-reference/xmldoc/value.md
+        - name: XML 軸プロパティ
+          href: visual-basic/language-reference/xml-axis/index.md
+          items:
+            - name: XML Attribute Axis Property
+              href: visual-basic/language-reference/xml-axis/xml-attribute-axis-property.md
+            - name: XML Child Axis Property
+              href: visual-basic/language-reference/xml-axis/xml-child-axis-property.md
+            - name: XML Descendant Axis Property
+              href: visual-basic/language-reference/xml-axis/xml-descendant-axis-property.md
+            - name: 拡張インデクサー プロパティ
+              href: visual-basic/language-reference/xml-axis/extension-indexer-property.md
+            - name: XML Value プロパティ
+              href: visual-basic/language-reference/xml-axis/xml-value-property.md
+        - name: XML リテラル
+          href: visual-basic/language-reference/xml-literals/index.md
+          items:
+            - name: XML 要素リテラル
+              href: visual-basic/language-reference/xml-literals/xml-element-literal.md
+            - name: XML ドキュメント リテラル
+              href: visual-basic/language-reference/xml-literals/xml-document-literal.md
+            - name: XML CDATA リテラル
+              href: visual-basic/language-reference/xml-literals/xml-cdata-literal.md
+            - name: XML コメント リテラル
+              href: visual-basic/language-reference/xml-literals/xml-comment-literal.md
+            - name: XML 処理命令リテラル
+              href: visual-basic/language-reference/xml-literals/xml-processing-instruction-literal.md
+        - name: エラー メッセージ
+          href: visual-basic/language-reference/error-messages/index.md
+          items:
+            - name: "\t'#Else' の前には、対応する '#If' または '#ElseIf' が必要です。"
+              href: visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
+            - name: '''#Region'' および ''#End Region'' ステートメントは、メソッド本体や複数行ラムダの内部では有効ではありません。'
+              href: visual-basic/language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md
+            - name: GUID '<attribute>' の形式が正しくないため、'<number>' を適用できません。
+              href: visual-basic/language-reference/error-messages/attribute-cannot-be-applied-because-the-format-of-the-guid-is-not-correct.md
+            - name: '''<classname>'' は継承元のインターフェイス ''<interfacename>'' が CLS に準拠していないため、CLS に準拠していません。'
+              href: visual-basic/language-reference/error-messages/classname-is-not-cls-compliant-because-the-interface-is-not-cls-compliant.md
+            - name: '''<elementname>'' は古い形式です (Visual Basic 警告)'
+              href: visual-basic/language-reference/error-messages/elementname-is-obsolete-visual-basic-warning.md
+            - name: '''<eventname>'' はイベントであるため、直接呼び出すことはできません。'
+              href: visual-basic/language-reference/error-messages/eventname-is-an-event-and-cannot-be-called-directly.md
+            - name: '''<expression>'' を型制約として使用することはできません。'
+              href: visual-basic/language-reference/error-messages/expression-cannot-be-used-as-a-type-constraint.md
+            - name: '''<functionname>'' は宣言されていません (スマート デバイスおよび Visual Basic コンパイラ エラー)'
+              href: visual-basic/language-reference/error-messages/functionname-is-not-declared-smart-device-visual-basic-compiler-error.md
+            - name: <interfacename>.<membername>' は、基本クラス '<baseclassname>' によって既に実装されています。 <type> の再実装と見なされます。
+              href: visual-basic/language-reference/error-messages/interfacename-membername-is-already-implemented-by-the-base-class.md
+            - name: '''<keyword>'' は、インスタンス メソッド内でのみ有効です。'
+              href: visual-basic/language-reference/error-messages/keyword-is-valid-only-within-an-instance-method.md
+            - name: '''<membername>'' は、型 ''<typename>'' を <containertype> ''<containertypename>'' 経由でプロジェクトの外側に公開できません。'
+              href: visual-basic/language-reference/error-messages/membername-cannot-expose-type-typename-outside-the-project.md
+            - name: '''<membername>'' は、継承インターフェイス ''<interfacename1>'' および ''<interfacename2>'' 間ではあいまいです。'
+              href: visual-basic/language-reference/error-messages/membername-is-ambiguous-across-the-inherited-interfaces.md
+            - name: <message> このエラーは、ファイル参照と '<assemblyname>' へのプロジェクト参照との混合によって生じた可能性があります。
+              href: visual-basic/language-reference/error-messages/message-this-error-could-also-be-due-to-mixing-a-file-reference.md
+            - name: メソッド '<methodname>' には、同じシグネチャを持つ複数の定義が含まれています。
+              href: visual-basic/language-reference/error-messages/methodname-has-multiple-definitions-with-identical-signatures.md
+            - name: '''<name>'' は、名前空間 ''<namespacename>'' では不適切です。'
+              href: visual-basic/language-reference/error-messages/name-is-ambiguous-in-the-namespace-namespacename.md
+            - name: '''<name1>'' 名前空間または型からインポートされた ''<name2>'' があいまいです。'
+              href: visual-basic/language-reference/error-messages/name1-is-ambiguous-imported-from-the-namespaces-or-types-name2.md
+            - name: <proceduresignature1> は、配列パラメーター型の配列または配列パラメーター型のランクのみが異なる <proceduresignature2> をオーバーロードするため、CLS に準拠していません。
+              href: visual-basic/language-reference/error-messages/proceduresignature1-not-cls-compliant-because-it-overloads-proceduresignature2.md
+            - name: <type1>'<typename>' は、インターフェイス '<interfacename>' に対して '<membername>' を実装しなければなりません。
+              href: visual-basic/language-reference/error-messages/type1-must-implement-membername-for-interface.md
+            - name: <type1>'<typename>' は、インターフェイス '<interfacename>' に対して '<methodname>' を実装しなければなりません。
+              href: visual-basic/language-reference/error-messages/type1-typename-must-implement-methodname-for-interface-interfacename.md
+            - name: ベース <typename> のアクセスをアセンブリの外側に展開しているため、'<type>' は <basetypename> '<type>' から継承できません。
+              href: visual-basic/language-reference/error-messages/typename-cannot-inherit-from-type-basetypename.md
+            - name: '''<typename>'' はデリゲート型です。'
+              href: visual-basic/language-reference/error-messages/typename-is-a-delegate-type.md
+            - name: '''<typename>'' は型であるため、式として使用することはできません。'
+              href: visual-basic/language-reference/error-messages/typename-is-a-type-and-cannot-be-used-as-an-expression.md
+            - name: 二重引用符は、EscapeQuote が True に設定されている区切り符号で分けられたフィールドには有効なコメント トークンではありません。
+              href: visual-basic/language-reference/error-messages/a-double-quote-is-not-a-valid-comment-token-for-delimited-fields.md
+            - name: プロパティまたはメソッドの呼び出しには、引数または戻り値としてプライベート オブジェクトへの参照を含めることはできません。
+              href: visual-basic/language-reference/error-messages/a-property-or-method-call-cannot-include-a-reference-to-a-private-object.md
+            - name: アセンブリ '<assembly1>' からの間接参照により、埋め込まれた相互運用機能アセンブリ '<assembly2>' の参照が作成されました。
+              href: visual-basic/language-reference/error-messages/a-reference-was-created-to-embedded-interop-assembly-assembly1.md
+            - name: スタートアップ フォームが指定されていません。
+              href: visual-basic/language-reference/error-messages/a-startup-form-has-not-been-specified.md
+            - name: インスタンスを経由する共有メンバーへのアクセスです。正規の式は評価されません。
+              href: visual-basic/language-reference/error-messages/access-of-shared-member-through-an-instance-qualifying-expression.md
+            - name: '''AddressOf'' オペランドはメソッドの名前でなければなりません。かっこは不要です。'
+              href: visual-basic/language-reference/error-messages/addressof-operand-must-be-the-name-of-a-method-without-parentheses.md
+            - name: 単一インスタンスのスタートアップに必要なオペレーティング システムのリソースが取得できないため、予期しないエラーが発生しました。
+              href: visual-basic/language-reference/error-messages/an-unexpected-error-has-occurred.md
+            - name: 匿名型メンバーの名前は、引数なしの簡易名または修飾名からのみ推論できます
+              href: visual-basic/language-reference/error-messages/anonymous-type-member-name-can-be-inferred-only-from-a-simple-or-qualified-name.md
+            - name: 引数は省略できません。
+              href: visual-basic/language-reference/error-messages/argument-not-optional.md
+            - name: 配列の上下限を、型指定子に記述できません。
+              href: visual-basic/language-reference/error-messages/array-bounds-cannot-appear-in-type-specifiers.md
+            - name: ループ コントロール変数として宣言された配列を初期サイズで宣言することはできません
+              href: visual-basic/language-reference/error-messages/array-declared-as-for-loop-control-variable-cannot-be-declared.md
+            - name: 配列インデックス式が見つかりません。
+              href: visual-basic/language-reference/error-messages/array-subscript-expression-missing.md
+            - name: 構造体メンバーとして宣言された配列を初期サイズで宣言することはできません。
+              href: visual-basic/language-reference/error-messages/arrays-declared-as-structure-members-cannot-be-declared-with-an-initial-size.md
+            - name: '''As Any'' は、''Declare'' ステートメントではサポートされていません。'
+              href: visual-basic/language-reference/error-messages/as-any-is-not-supported-in-declare-statements.md
+            - name: 属性 '<attributename>' を複数回適用することはできません。
+              href: visual-basic/language-reference/error-messages/attribute-attributename-cannot-be-applied-multiple-times.md
+            - name: オートメーション エラーです。
+              href: visual-basic/language-reference/error-messages/automation-error.md
+            - name: 不適切なチェックサム値です。16 進数ではないか、または奇数の 16 進数です。
+              href: visual-basic/language-reference/error-messages/bad-checksum-value-non-hex-digits-or-odd-number-of-hex-digits.md
+            - name: DLL を正しく呼び出せません。
+              href: visual-basic/language-reference/error-messages/bad-dll-calling-convention.md
+            - name: ファイル モードが正しくありません。
+              href: visual-basic/language-reference/error-messages/bad-file-mode.md
+            - name: ファイル名または番号が正しくありません。
+              href: visual-basic/language-reference/error-messages/bad-file-name-or-number.md
+            - name: レコード長が正しくありません。
+              href: visual-basic/language-reference/error-messages/bad-record-length.md
+            - name: この呼び出しは待機されなかったため、現在のメソッドの実行は呼び出しの完了を待たずに続行されます。
+              href: visual-basic/language-reference/error-messages/because-this-call-is-not-awaited-the-current-method-continues-to-run.md
+            - name: 型のプロパティは別のプロパティを初期化するために使用されるため、匿名型を式のツリーに変換することはできません。
+              href: visual-basic/language-reference/error-messages/cannot-convert-anonymous-type-to-expression-tree.md
+            - name: ActiveX コンポーネントを作成できません。
+              href: visual-basic/language-reference/error-messages/cannot-create-activex-component.md
+            - name: '''<name>'' は、''System.MarshalByRefObject'' を基本クラスとして持つクラス ''<name>'' の値付きフィールド ''<classname>'' のメンバーであるため、参照できません。'
+              href: visual-basic/language-reference/error-messages/cannot-refer-to-name-because-it-is-member-of-value-typed-field-name-of-class.md
+            - name: クラスの明示的なインスタンスを指定しないで、共有メソッドまたは共有メンバー初期化子内からクラスのインスタンス メンバーへ参照することはできません。
+              href: visual-basic/language-reference/error-messages/cannot-refer-to-an-instance-member-of-a-class.md
+            - name: 必要な一時ファイルを作成できません。
+              href: visual-basic/language-reference/error-messages/can-t-create-necessary-temporary-file.md
+            - name: '''<filename>'' を書き込むために開くことができません。'
+              href: visual-basic/language-reference/error-messages/can-t-open-filename-for-writing.md
+            - name: クラス '<classname>' が見つかりません。
+              href: visual-basic/language-reference/error-messages/class-classname-cannot-be-found.md
+            - name: クラスがオートメーションをサポートしていないか、必要なインターフェイスをサポートしていません。
+              href: visual-basic/language-reference/error-messages/class-does-not-support-automation-or-does-not-support-expected-interface.md
+            - name: '''Class'' ステートメントの終わりには、対応する ''End Class'' を指定しなければなりません。'
+              href: visual-basic/language-reference/error-messages/class-statement-must-end-with-a-matching-end-class.md
+            - name: クリップボードの形式が有効ではありません。
+              href: visual-basic/language-reference/error-messages/clipboard-format-is-not-valid.md
+            - name: 定数式は、型 '<typename>' では表現できません。
+              href: visual-basic/language-reference/error-messages/constant-expression-not-representable-in-type-typename.md
+            - name: 定数は、class、structure、または array 型ではなく、組み込み型または列挙型でなければなりません。
+              href: visual-basic/language-reference/error-messages/constants-must-be-of-an-intrinsic-or-enumerated-type.md
+            - name: コンストラクター '<name>' はそれ自体を呼び出すことはできません。
+              href: visual-basic/language-reference/error-messages/constructor-name-cannot-call-itself.md
+            - name: '''ByRef'' パラメーター ''<parametername>'' の値を一致する引数へ戻してコピーすると、型 ''<typename1>'' から型 ''<typename2>'' に下位変換します'
+              href: visual-basic/language-reference/error-messages/copying-the-value-of-byref-parameter-back-to-the-matching-argument-narrows.md
+            - name: '''Custom'' 修飾子は、明示的なデリゲート型なしで宣言されたイベントでは無効です。'
+              href: visual-basic/language-reference/error-messages/custom-modifier-is-not-valid-on-events-declared-without-explicit-delegate-types.md
+            - name: 型パラメーターのデータ型を、これらの引数から推論することはできません
+              href: visual-basic/language-reference/error-messages/data-type-s-of-the-type-parameter-s-cannot-be-inferred-from-these-arguments.md
+            - name: 宣言が必要です。
+              href: visual-basic/language-reference/error-messages/declaration-expected.md
+            - name: 既定プロパティ '<propertyname1>' は、'<propertyname2>' の既定プロパティ '<classname>' と競合しているため、'Shadows' と宣言できません。
+              href: visual-basic/language-reference/error-messages/default-property-propertyname1-conflicts-with-default-property-propertyname2.md
+            - name: Default プロパティ アクセスは、インターフェイス '<defaultpropertyname>' の継承インターフェイス メンバー '<interfacename1>' とインターフェイス '<defaultpropertyname>' の '<interfacename2>' との間で不適切です。
+              href: visual-basic/language-reference/error-messages/default-property-access-is-ambiguous.md
+            - name: Delegate クラス '<classname>' には Invoke メソッドが含まれていないため、この型の式をメソッド呼び出しのターゲットに設定することはできません。
+              href: visual-basic/language-reference/error-messages/delegate-class-classname-has-no-invoke-method.md
+            - name: 派生クラスで基本クラスのイベントを発生させることはできません。
+              href: visual-basic/language-reference/error-messages/derived-classes-cannot-raise-base-class-events.md
+            - name: デバイス I/O エラーです。
+              href: visual-basic/language-reference/error-messages/device-i-o-error.md
+            - name: '''Dir'' 関数は、''Pathname'' 引数で最初に呼び出されなければなりません。'
+              href: visual-basic/language-reference/error-messages/dir-function-must-first-be-called-with-a-pathname-argument.md
+            - name: ステートメントの終わりを指定してください。
+              href: visual-basic/language-reference/error-messages/end-of-statement-expected.md
+            - name: 'アセンブリ マニフェストを作成中にエラーが発生しました : <error message>'
+              href: visual-basic/language-reference/error-messages/error-creating-assembly-manifest-error-message.md
+            - name: 'Win32 リソースの作成中にエラーが発生しました : <error message>'
+              href: visual-basic/language-reference/error-messages/error-creating-win32-resources-error-message.md
+            - name: DLL 読み込み時のエラーです。
+              href: visual-basic/language-reference/error-messages/error-in-loading-dll.md
+            - name: '一時 Win32 リソース ファイル ''<filename>'' を保存中にエラーが発生しました : <error message>'
+              href: visual-basic/language-reference/error-messages/error-saving-temporary-win32-resource-file-filename-error-message.md
+            - name: プロジェクトで、XML スキーマのコンパイル中にエラーが発生しました
+              href: visual-basic/language-reference/error-messages/errors-occurred-while-compiling-the-xml-schemas-in-the-project.md
+            - name: 式またはステートメントの評価がタイムアウトしました。
+              href: visual-basic/language-reference/error-messages/evaluation-of-expression-or-statement-timed-out.md
+            - name: デリゲート型 '<eventname1>' および '<eventname2>' が一致しないため、イベント '<interface>' はインターフェイス '<delegate1>' 上のイベント '<delegate2>' を実装できません。
+              href: visual-basic/language-reference/error-messages/event-eventname1-cannot-implement-event-eventname2-on-interface.md
+            - name: イベントを、戻り値の型を持つデリゲート型で宣言することはできません。
+              href: visual-basic/language-reference/error-messages/events-cannot-be-declared-with-a-delegate-type-that-has-a-return-type.md
+            - name: 共有 WithEvents 変数のイベントを、非共有メソッドで処理できません。
+              href: visual-basic/language-reference/error-messages/events-of-shared-withevents-variables-cannot-be-handled-by-non-shared-methods.md
+            - name: 式は値を生成しません。
+              href: visual-basic/language-reference/error-messages/expression-does-not-produce-a-value.md
+            - name: 式は制限がある型 '<typename>' を含んでいるため、'Object' または 'ValueType' から継承されたメンバーにアクセスするのに使用できません。
+              href: visual-basic/language-reference/error-messages/expression-has-the-type-typename-which-is-a-restricted-type.md
+            - name: Expression は値であるため、代入式のターゲットにすることはできません。
+              href: visual-basic/language-reference/error-messages/expression-is-a-value-and-therefore-cannot-be-the-target-of-an-assignment.md
+            - name: 型 <type> の式はクエリ不可能です
+              href: visual-basic/language-reference/error-messages/expression-of-type-type-is-not-queryable.md
+            - name: 式は、含んでいるプロパティ '<propertyname>' を再帰的に呼び出します。
+              href: visual-basic/language-reference/error-messages/expression-recursively-calls-the-containing-property-propertyname.md
+            - name: 式が複雑すぎます。
+              href: visual-basic/language-reference/error-messages/expression-too-complex.md
+            - name: '''Extension'' 属性は ''Module''、''Sub''、または ''Function'' の各宣言にのみ適用できます'
+              href: visual-basic/language-reference/error-messages/extension-attribute-can-be-applied-only-to-module-sub-or-function-declarations.md
+            - name: ファイルは既に開かれています。
+              href: visual-basic/language-reference/error-messages/file-already-open.md
+            - name: バイト配列に読み取るにはファイルが大きすぎます。
+              href: visual-basic/language-reference/error-messages/file-is-too-large-to-read-into-a-byte-array.md
+            - name: オートメーションの操作中にファイル名またはクラス名を見つけられませんでした。
+              href: visual-basic/language-reference/error-messages/file-name-or-class-name-not-found-during-automation-operation.md
+            - name: ファイルが見つかりません。(Visual Basic ランタイム エラー)
+              href: visual-basic/language-reference/error-messages/file-not-found-visual-basic-run-time-error.md
+            - name: バイナリ 'If' 式の最初のオペランドは Null 許容または参照型である必要があります
+              href: visual-basic/language-reference/error-messages/first-operand-in-a-binary-if-expression-must-be-nullable-or-a-reference-type.md
+            - name: この 'Sub New' の最初のステートメントは、'MyBase.New' または 'MyClass.New' への呼び出しでなければなりません (パラメーターのないアクセス可能なコンストラクターがありません)。
+              href: visual-basic/language-reference/error-messages/first-statement-of-this-sub-new-must-be-a-call-to-mybase-new-or-myclass-new.md
+            - name: '''<constructorname>'' の基本クラス ''<baseclassname>'' にある ''<derivedclassname>'' が古い形式に設定されているため、この ''Sub New'' の最初のステートメントは、明示的な ''MyBase.New'' または ''MyClass.New'' への呼び出しでなければなりません: ''<errormessage>'''
+              href: visual-basic/language-reference/error-messages/first-statement-of-sub-new-must-be-explicit-call-to-mybase-new-or-myclass-new.md
+            - name: 型が、'System.Collections.Generic.IEnumerable(Of T)' の複数のインスタンス生成を実装するため、型 '<typename>' の 'For Each' は不適切です。
+              href: visual-basic/language-reference/error-messages/for-each-on-type-typename-is-ambiguous.md
+            - name: フレンド アセンブリ参照 <reference> は無効です
+              href: visual-basic/language-reference/error-messages/friend-assembly-reference-reference-is-invalid.md
+            - name: 関数 '<procedurename>' すべてのコード パス上では値を返しません。
+              href: visual-basic/language-reference/error-messages/function-procedurename-doesn-t-return-a-value-on-all-code-paths.md
+            - name: 前の関数の評価がタイムアウトしたため、関数の評価は無効になりました。
+              href: visual-basic/language-reference/error-messages/function-evaluation-is-disabled.md
+            - name: 省略可能なパラメーター型として使用されるジェネリック パラメーターは、クラスの制約がある型でなければなりません。
+              href: visual-basic/language-reference/error-messages/generic-parameters-used-as-optional-parameter-types-must-be-class-constrained.md
+            - name: プロパティ '<propertyname>' の 'Get' アクセサーにアクセスできません。
+              href: visual-basic/language-reference/error-messages/get-accessor-of-property-propertyname-is-not-accessible.md
+            - name: Handles 句には、含んでいる型またはその基本型の 1 つで定義した WithEvents 変数が必要です。
+              href: visual-basic/language-reference/error-messages/handles-clause-requires-a-withevents-variable-defined.md
+            - name: 識別子が必要です。
+              href: visual-basic/language-reference/error-messages/identifier-expected.md
+            - name: 識別子が長すぎます。
+              href: visual-basic/language-reference/error-messages/identifier-is-too-long.md
+            - name: 初期化子が必要です
+              href: visual-basic/language-reference/error-messages/initializer-expected.md
+            - name: ファイルにこれ以上データがありません。
+              href: visual-basic/language-reference/error-messages/input-past-end-of-file.md
+            - name: <location> で内部エラーが発生しました。
+              href: visual-basic/language-reference/error-messages/internal-error-happened-at-location.md
+            - name: '''ByRef'' パラメーター ''<typename1>'' の値を、一致する引数に戻してコピーする際の、''<typename2>'' から ''<parametername>'' への暗黙的な変換です。'
+              href: visual-basic/language-reference/error-messages/implicit-conversion-from-typename1-to-typename2-in-copying.md
+            - name: '''Is'' には参照型を持つオペランドが必要ですが、このオペランドの値型は ''<typename>'' です。'
+              href: visual-basic/language-reference/error-messages/is-requires-operands-that-have-reference-types.md
+            - name: '''typename'' は Null 許容型であるため、''typename'' 型の ''IsNot'' オペランドは ''Nothing'' とのみ比較できます'
+              href: visual-basic/language-reference/error-messages/isnot-operand-of-type-can-only-be-compared-to-nothing.md
+            - name: 数字を指定するラベルの後には、コロンが必要です。
+              href: visual-basic/language-reference/error-messages/labels-that-are-numbers-must-be-followed-by-colons.md
+            - name: ラムダ式はこのイベント ハンドラーから削除されません
+              href: visual-basic/language-reference/error-messages/lambda-expression-will-not-be-removed-from-this-event-handler.md
+            - name: ラムダ式は、'Select Case' ステートメントの最初の式では有効ではありません
+              href: visual-basic/language-reference/error-messages/lambda-expressions-are-not-valid-in-the-first-expression-of-select-case.md
+            - name: 遅延バインドの解決です。ランタイム エラーが発生する可能性があります。
+              href: visual-basic/language-reference/error-messages/late-bound-resolution;-runtime-errors-could-occur.md
+            - name: アクセスするインスタンスがインターフェイス型であるため、遅延バインドされたオーバーロードの解決は '<procedurename>' に適用されません。
+              href: visual-basic/language-reference/error-messages/latebound-overload-resolution-cannot-be-applied.md
+            - name: 先頭の '.' または '!' は、'With' ステートメント内でのみ使用できます。
+              href: visual-basic/language-reference/error-messages/leading-period-or-exclamation-point-can-only-appear-inside-a-with-statement.md
+            - name: 行が長すぎます。
+              href: visual-basic/language-reference/error-messages/line-is-too-long.md
+            - name: '''Line'' ステートメントはサポートされていません (Visual Basic コンパイラ エラー)'
+              href: visual-basic/language-reference/error-messages/line-statements-are-no-longer-supported-visual-basic-compiler-error.md
+            - name: メソッドに、デリゲートと互換性のあるシグネチャがありません。
+              href: visual-basic/language-reference/error-messages/method-does-not-have-a-signature-compatible-with-the-delegate.md
+            - name: '''System.Nullable(Of T)'' のメソッドを ''AddressOf'' 演算子のオペランドとして使用することはできません。'
+              href: visual-basic/language-reference/error-messages/methods-of-system-nullable-of-t-cannot-be-used-as-operands-of-the-addressof.md
+            - name: '''Module'' ステートメントは、ファイルまたは名前空間レベルでのみ発生します。'
+              href: visual-basic/language-reference/error-messages/module-statements-can-occur-only-at-file-or-namespace-level.md
+            - name: 名前 <membername> は CLS に準拠していません。
+              href: visual-basic/language-reference/error-messages/name-membername-is-not-cls-compliant.md
+            - name: 名前 '<name>' は宣言されていません。
+              href: visual-basic/language-reference/error-messages/name-name-is-not-declared.md
+            - name: ルート名前空間 <namespacename> にある名前 <fullnamespacename> は CLS に準拠していません。
+              href: visual-basic/language-reference/error-messages/name-namespacename-in-the-root-namespace-fullnamespacename-is-not-cls-compliant.md
+            - name: インポート '<qualifiedelementname>' で指定された名前空間または型が、パブリック メンバーを含んでいないか、または見つかりません。
+              href: visual-basic/language-reference/error-messages/namespace-or-type-specified-in-the-imports-qualifiedelementname.md
+            - name: プロジェクト レベルのインポート '<qualifiedelementname>' で指定された名前空間または型が、パブリック メンバーを含んでいないか、または見つかりません。
+              href: visual-basic/language-reference/error-messages/namespace-or-type-specified-in-the-project-level-imports-qualifiedelementname.md
+            - name: プロパティ配列のインデックスが必要です。
+              href: visual-basic/language-reference/error-messages/need-property-array-index.md
+            - name: 入れ子になった関数に、デリゲート '<delegatename>' と互換性のあるシグネチャがありません。
+              href: visual-basic/language-reference/error-messages/nested-function-does-not-have-a-signature-that-is-compatible-with-delegate.md
+            - name: 正しいシグネチャを持つ、アクセス可能な 'Main' メソッドは、'<name>' に見つかりませんでした。
+              href: visual-basic/language-reference/error-messages/no-accessible-main-method-with-an-appropriate-signature-was-found-in-name.md
+            - name: CLS に準拠していない <membername> は、CLS に準拠しているインターフェイスに使用できません。
+              href: visual-basic/language-reference/error-messages/non-cls-compliant-membername-is-not-allowed-in-a-cls-compliant-interface.md
+            - name: Null 許容型の推論はこのコンテキストではサポートされていません
+              href: visual-basic/language-reference/error-messages/nullable-type-inference-is-not-supported-in-this-context.md
+            - name: インデックス番号がインデックス付き配列の次元を超えています。
+              href: visual-basic/language-reference/error-messages/number-of-indices-exceeds-the-number-of-dimensions-of-the-indexed-array.md
+            - name: オブジェクトまたはクラスがこのイベント セットをサポートしていません。
+              href: visual-basic/language-reference/error-messages/object-or-class-does-not-support-the-set-of-events.md
+            - name: オブジェクトが必要です。
+              href: visual-basic/language-reference/error-messages/object-required.md
+            - name: オブジェクト変数または With ブロック変数が設定されていません。
+              href: visual-basic/language-reference/error-messages/object-variable-or-with-block-variable-not-set.md
+            - name: '演算子宣言は次のいずれかでなければなりません: +、-、*、\、/、^、&、Like、Mod、And、Or、Xor、Not、<<、>>、=、<>、<、<=、>、>=、CType、IsTrue、または IsFalse'
+              href: visual-basic/language-reference/error-messages/operator-declaration-must-be-one-of.md
+            - name: '''Optional'' が必要です。'
+              href: visual-basic/language-reference/error-messages/optional-expected.md
+            - name: 省略可能な引数には、既定値を指定する必要があります。
+              href: visual-basic/language-reference/error-messages/optional-parameters-must-specify-a-default-value.md
+            - name: 序数が有効ではありません。
+              href: visual-basic/language-reference/error-messages/ordinal-is-not-valid.md
+            - name: メモリが不足しています。(Visual Basic コンパイラ エラー)
+              href: visual-basic/language-reference/error-messages/out-of-memory-visual-basic-compiler-error.md
+            - name: スタック領域が不足しています。
+              href: visual-basic/language-reference/error-messages/out-of-stack-space.md
+            - name: 文字列スペースが不足しています。
+              href: visual-basic/language-reference/error-messages/out-of-string-space.md
+            - name: オーバーフローしました。(Visual Basic エラー)
+              href: visual-basic/language-reference/error-messages/overflow-visual-basic-error.md
+            - name: オーバーフローしました。(Visual Basic ランタイム エラー)
+              href: visual-basic/language-reference/error-messages/overflow-visual-basic-run-time-error.md
+            - name: パスが見つかりません。
+              href: visual-basic/language-reference/error-messages/path-not-found.md
+            - name: パス/ファイル アクセス エラー
+              href: visual-basic/language-reference/error-messages/path-file-access-error.md
+            - name: アクセス許可は拒否されました
+              href: visual-basic/language-reference/error-messages/permission-denied.md
+            - name: プロシージャ呼び出しまたは引数が有効ではありません。
+              href: visual-basic/language-reference/error-messages/procedure-call-or-argument-is-not-valid.md
+            - name: プロパティ '<propertyname>' は、すべてのコードのパスでは値を返しません。
+              href: visual-basic/language-reference/error-messages/property-propertyname-doesn-t-return-a-value-on-all-code-paths.md
+            - name: プロパティの配列インデックスが有効ではありません。
+              href: visual-basic/language-reference/error-messages/property-array-index-is-not-valid.md
+            - name: Property Let プロシージャが定義されておらず、Property Get プロシージャからオブジェクトが返されませんでした。
+              href: visual-basic/language-reference/error-messages/property-let-procedure-not-defined-and-property-get-procedure-did-not-return.md
+            - name: プロパティが見つかりません。
+              href: visual-basic/language-reference/error-messages/property-not-found.md
+            - name: プロパティまたはメソッドが見つかりません。
+              href: visual-basic/language-reference/error-messages/property-or-method-not-found.md
+            - name: 範囲変数 <variable> により、それを囲むブロック内の変数、以前に定義された範囲変数、またはクエリ式内で暗黙的に宣言された変数が非表示になります
+              href: visual-basic/language-reference/error-messages/range-variable-variable-hides-a-variable-in-an-enclosing-block.md
+            - name: 範囲変数の名前は、引数なしの簡易名または修飾名からのみ推論できます
+              href: visual-basic/language-reference/error-messages/range-variable-name-can-be-inferred.md
+            - name: 参照には型 '<assemblyidentity>' を含むアセンブリ '<typename>' が必要ですが、プロジェクト '<projectname1>' と '<projectname2>' があいまいであるため、適切な参照が見つかりませんでした。
+              href: visual-basic/language-reference/error-messages/reference-required-to-assembly-containing-type-but-suitable-reference-not-found.md
+            - name: 基本クラス '<assemblyname>' を含むアセンブリ '<classname>' への参照が必要です。参照をプロジェクトに追加してください。
+              href: visual-basic/language-reference/error-messages/reference-required-to-assembly-assemblyname-containing-the-base-class-classname.md
+            - name: 要求された操作は利用できません (BC35000)。
+              href: visual-basic/language-reference/error-messages/bc35000.md
+            - name: エラーが発生していないときに Resume を実行することはできません。
+              href: visual-basic/language-reference/error-messages/resume-without-error.md
+            - name: 関数 '<procedurename>' の戻り値の型は CLS に準拠していません。
+              href: visual-basic/language-reference/error-messages/return-type-of-function-procedurename-is-not-cls-compliant.md
+            - name: プロパティ '<propertyname>' の 'Set' アクセサーにアクセスできません。
+              href: visual-basic/language-reference/error-messages/set-accessor-of-property-propertyname-is-not-accessible.md
+            - name: 一部のサブキーが削除できません
+              href: visual-basic/language-reference/error-messages/some-subkeys-cannot-be-deleted.md
+            - name: If ステートメント行の外側でステートメント ブロックを終了することはできません。
+              href: visual-basic/language-reference/error-messages/statement-cannot-end-a-block-outside-of-a-line-if-statement.md
+            - name: 名前空間のステートメントが無効です。
+              href: visual-basic/language-reference/error-messages/statement-is-not-valid-in-a-namespace.md
+            - name: メソッドや複数行のラムダの内部では有効でないステートメントです。
+              href: visual-basic/language-reference/error-messages/statement-is-not-valid-inside-a-method-multiline-lambda.md
+            - name: 文字列定数の終わりには、二重引用符を指定しなければなりません。
+              href: visual-basic/language-reference/error-messages/string-constants-must-end-with-a-double-quote.md
+            - name: 構造体 '<structurename>' は少なくとも 1 つのインスタンス メンバー変数、または 'Custom' に設定されていない少なくとも 1 つのインスタンス イベント宣言を含まなければなりません。
+              href: visual-basic/language-reference/error-messages/structure-structurename-must-contain.md
+            - name: '''Sub Main'' が、''<name>'' に見つかりませんでした。'
+              href: visual-basic/language-reference/error-messages/sub-main-was-not-found-in-name.md
+            - name: Sub または Function が定義されていません。
+              href: visual-basic/language-reference/error-messages/sub-or-function-not-defined.md
+            - name: インデックスが有効範囲にありません。
+              href: visual-basic/language-reference/error-messages/subscript-out-of-range.md
+            - name: 最大バッファーサイズを超えたため、TextFieldParser は読み取り操作を完了できません。
+              href: visual-basic/language-reference/error-messages/textfieldparser-is-unable-to-complete-read-operation.md
+            - name: 変数 '<variablename>' の型は、外側のスコープ内のフィールドにバインドされているため、推論できません。
+              href: visual-basic/language-reference/error-messages/the-type-for-variable-variablename-will-not-be-inferred.md
+            - name: この配列は固定か、または一時的にロックされています。
+              href: visual-basic/language-reference/error-messages/this-array-is-fixed-or-temporarily-locked.md
+            - name: このキーは既にこのコレクションの要素に割り当てられています。
+              href: visual-basic/language-reference/error-messages/this-key-is-already-associated-with-an-element-of-this-collection.md
+            - name: ファイルが多すぎます。
+              href: visual-basic/language-reference/error-messages/too-many-files.md
+            - name: 型 '<typename>' にはコンストラクターがありません。
+              href: visual-basic/language-reference/error-messages/type-typename-has-no-constructors.md
+            - name: 型 <typename> は CLS に準拠していません。
+              href: visual-basic/language-reference/error-messages/type-typename-is-not-cls-compliant.md
+            - name: 型 '<typename>' が定義されていません。
+              href: visual-basic/language-reference/error-messages/type-typename-is-not-defined.md
+            - name: 型引数をデリゲートから推論できませんでした
+              href: visual-basic/language-reference/error-messages/type-arguments-could-not-be-inferred-from-the-delegate.md
+            - name: 型が一致しません。
+              href: visual-basic/language-reference/error-messages/type-mismatch.md
+            - name: ループの境界とステップの句が同じ型に変換されないため、'<variablename>' の型を推論できません
+              href: visual-basic/language-reference/error-messages/type-of-variablename-cannot-be-inferred.md
+            - name: メンバー '<membername>' の型は CLS に準拠していません。
+              href: visual-basic/language-reference/error-messages/type-of-member-membername-is-not-cls-compliant.md
+            - name: 省略可能なパラメーター <parametername> に対する省略可能な値の型は、CLS に準拠していません
+              href: visual-basic/language-reference/error-messages/type-of-optional-value-for-optional-parameter-is-not-cls-compliant.md
+            - name: パラメーター '<parametername>' の型は CLS に準拠していません。
+              href: visual-basic/language-reference/error-messages/type-of-parameter-parametername-is-not-cls-compliant.md
+            - name: 型パラメーターは修飾子として使用できません。
+              href: visual-basic/language-reference/error-messages/type-parameters-cannot-be-used-as-qualifiers.md
+            - name: 'キー ファイル ''<filename>'' から厳密な名前のアセンブリを作成できません : <error>'
+              href: visual-basic/language-reference/error-messages/unable-to-create-strong-named-assembly-from-key-file-filename-error.md
+            - name: 'リソース ファイル ''<filename>'' を埋め込めません : <error message>'
+              href: visual-basic/language-reference/error-messages/unable-to-embed-resource-file-filename-error-message.md
+            - name: 'アセンブリを作成できません : <error message>'
+              href: visual-basic/language-reference/error-messages/unable-to-emit-assembly-error-message.md
+            - name: 必要なファイル '<filename>' が見つかりません。
+              href: visual-basic/language-reference/error-messages/unable-to-find-required-file-filename.md
+            - name: 内部システム エラーにより、シリアル ポート名を取得できません。
+              href: visual-basic/language-reference/error-messages/unable-to-get-serial-port-names-because-of-an-internal-system-error.md
+            - name: 'リソース ファイル ''<filename>'' にリンクできません : <error message>'
+              href: visual-basic/language-reference/error-messages/unable-to-link-to-resource-file-filename-error-message.md
+            - name: クラス '<classname>' の情報を読み込めません。
+              href: visual-basic/language-reference/error-messages/unable-to-load-information-for-class-classname.md
+            - name: 出力をメモリに書き込めません。
+              href: visual-basic/language-reference/error-messages/unable-to-write-output-to-memory.md
+            - name: 一時パスが使用できないため、一時ファイルを書き込めません。
+              href: visual-basic/language-reference/error-messages/unable-to-write-temporary-file-because-temporary-path-is-not-available.md
+            - name: '出力ファイル ''<filename>'' に書き込めません : <error>'
+              href: visual-basic/language-reference/error-messages/unable-to-write-to-output-file-filename-error.md
+            - name: enum の基になる型 '<typename>' は CLS に準拠していません。
+              href: visual-basic/language-reference/error-messages/underlying-type-typename-of-enum-is-not-cls-compliant.md
+            - name: ラムダ式内で繰り返し変数を使用すると、予期しない結果が発生する可能性があります。
+              href: visual-basic/language-reference/error-messages/using-the-iteration-variable-in-a-lambda-expression-may-have-unexpected-results.md
+            - name: 型 '<typename1>' の値を '<typename2>' に変換できません。
+              href: visual-basic/language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2.md
+            - name: 型 '<typename1>' の値を '<typename2>' に変換することはできません。(複数ファイル参照)
+              href: visual-basic/language-reference/error-messages/value-of-type-typename1-cannot-be-converted-to-typename2-multiple.md
+            - name: 型 'type1' の値を 'type2' に変換できません
+              href: visual-basic/language-reference/error-messages/value-of-type-type1-cannot-be-converted-to-type2.md
+            - name: 変数 '<variablename>' は、囲まれたブロック内の変数を非表示にします。
+              href: visual-basic/language-reference/error-messages/variable-variablename-hides-a-variable-in-an-enclosing-block.md
+            - name: 変数 '<variablename>' は、値が割り当てられる前に参照によって使用されています。
+              href: visual-basic/language-reference/error-messages/variable-variablename-is-used-before-it-has-been-assigned-a-value.md
+            - name: Visual Basic でサポートされていないオートメーションが変数で使用されています。
+              href: visual-basic/language-reference/error-messages/variable-uses-an-automation-type-not-supported.md
+            - name: XML 軸のプロパティは遅延バインディングをサポートしていません
+              href: visual-basic/language-reference/error-messages/xml-axis-properties-do-not-support-late-binding.md
+            - name: XML コメントの例外には 'cref' 属性を指定しなければなりません
+              href: visual-basic/language-reference/error-messages/xml-comment-exception-must-have-a-cref-attribute.md
+            - name: XML エンティティの参照はサポートされていません
+              href: visual-basic/language-reference/error-messages/xml-entity-references-are-not-supported.md
+            - name: XML リテラルおよび XML プロパティは、ASP.NET 内の埋め込みコードではサポートされません
+              href: visual-basic/language-reference/error-messages/xml-literals-and-xml-properties-are-not-supported-in-embedded-code-in-aspnet.md
+            - name: XML 名前空間 URI '<uri>' は 'xmlns' にのみバインドできます。
+              href: visual-basic/language-reference/error-messages/xml-namespace-uri-uri-can-be-bound-only-to-xmlns.md
+    - name: 関連項目
+      href: visual-basic/reference/index.md
+      items:
+        - name: コマンド ライン コンパイラ
+          href: visual-basic/reference/command-line-compiler/index.md
+          items:
+            - name: コマンド ラインからのビルド
+              href: visual-basic/reference/command-line-compiler/building-from-the-command-line.md
+              items:
+                - name: '方法: コマンド ライン コンパイラを起動する'
+                  href: visual-basic/reference/command-line-compiler/how-to-invoke-the-command-line-compiler.md
+                - name: コンパイル コマンド ラインのサンプル
+                  href: visual-basic/reference/command-line-compiler/sample-compilation-command-lines.md
+            - name: アルファベット順のコンパイラ オプション
+              href: visual-basic/reference/command-line-compiler/compiler-options-listed-alphabetically.md
+              items:
+                - name: '@ (応答ファイルの指定)'
+                  href: visual-basic/reference/command-line-compiler/specify-response-file.md
+                - name: '-addmodule'
+                  href: visual-basic/reference/command-line-compiler/addmodule.md
+                - name: '-baseaddress'
+                  href: visual-basic/reference/command-line-compiler/baseaddress.md
+                - name: '-bugreport'
+                  href: visual-basic/reference/command-line-compiler/bugreport.md
+                - name: '-codepage'
+                  href: visual-basic/reference/command-line-compiler/codepage.md
+                - name: '-debug'
+                  href: visual-basic/reference/command-line-compiler/debug.md
+                - name: '-define'
+                  href: visual-basic/reference/command-line-compiler/define.md
+                - name: '-delaysign'
+                  href: visual-basic/reference/command-line-compiler/delaysign.md
+                - name: '-deterministic'
+                  href: visual-basic/reference/command-line-compiler/deterministic.md
+                - name: '-doc'
+                  href: visual-basic/reference/command-line-compiler/doc.md
+                - name: '-errorreport'
+                  href: visual-basic/reference/command-line-compiler/errorreport.md
+                - name: '-filealign'
+                  href: visual-basic/reference/command-line-compiler/filealign.md
+                - name: '-help, /?'
+                  href: visual-basic/reference/command-line-compiler/help.md
+                - name: '-highentropyva'
+                  href: visual-basic/reference/command-line-compiler/highentropyva.md
+                - name: '-imports'
+                  href: visual-basic/reference/command-line-compiler/imports.md
+                - name: '-keycontainer'
+                  href: visual-basic/reference/command-line-compiler/keycontainer.md
+                - name: '-keyfile'
+                  href: visual-basic/reference/command-line-compiler/keyfile.md
+                - name: '-langversion'
+                  href: visual-basic/reference/command-line-compiler/langversion.md
+                - name: '-libpath'
+                  href: visual-basic/reference/command-line-compiler/libpath.md
+                - name: '-link'
+                  href: visual-basic/reference/command-line-compiler/link.md
+                - name: '-linkresource'
+                  href: visual-basic/reference/command-line-compiler/linkresource.md
+                - name: '-main'
+                  href: visual-basic/reference/command-line-compiler/main.md
+                - name: '-moduleassemblyname'
+                  href: visual-basic/reference/command-line-compiler/moduleassemblyname.md
+                - name: '-netcf'
+                  href: visual-basic/reference/command-line-compiler/netcf.md
+                - name: '-noconfig'
+                  href: visual-basic/reference/command-line-compiler/noconfig.md
+                - name: '-nologo'
+                  href: visual-basic/reference/command-line-compiler/nologo.md
+                - name: '-nostdlib'
+                  href: visual-basic/reference/command-line-compiler/nostdlib.md
+                - name: '-nowarn'
+                  href: visual-basic/reference/command-line-compiler/nowarn.md
+                - name: '-nowin32manifest'
+                  href: visual-basic/reference/command-line-compiler/nowin32manifest.md
+                - name: '-optimize'
+                  href: visual-basic/reference/command-line-compiler/optimize.md
+                - name: '-optioncompare'
+                  href: visual-basic/reference/command-line-compiler/optioncompare.md
+                - name: '-optionexplicit'
+                  href: visual-basic/reference/command-line-compiler/optionexplicit.md
+                - name: '-optioninfer'
+                  href: visual-basic/reference/command-line-compiler/optioninfer.md
+                - name: '-optionstrict'
+                  href: visual-basic/reference/command-line-compiler/optionstrict.md
+                - name: '-out'
+                  href: visual-basic/reference/command-line-compiler/out.md
+                - name: '-platform'
+                  href: visual-basic/reference/command-line-compiler/platform.md
+                - name: '-quiet'
+                  href: visual-basic/reference/command-line-compiler/quiet.md
+                - name: '-recurse'
+                  href: visual-basic/reference/command-line-compiler/recurse.md
+                - name: '-reference'
+                  href: visual-basic/reference/command-line-compiler/reference.md
+                - name: '-refonly'
+                  href: visual-basic/reference/command-line-compiler/refonly-compiler-option.md
+                - name: '-refout'
+                  href: visual-basic/reference/command-line-compiler/refout-compiler-option.md
+                - name: '-removeintchecks'
+                  href: visual-basic/reference/command-line-compiler/removeintchecks.md
+                - name: '-resource'
+                  href: visual-basic/reference/command-line-compiler/resource.md
+                - name: '-rootnamespace'
+                  href: visual-basic/reference/command-line-compiler/rootnamespace.md
+                - name: '-sdkpath'
+                  href: visual-basic/reference/command-line-compiler/sdkpath.md
+                - name: '-target'
+                  href: visual-basic/reference/command-line-compiler/target.md
+                - name: '-subsystemversion'
+                  href: visual-basic/reference/command-line-compiler/subsystemversion.md
+                - name: '-utf8output'
+                  href: visual-basic/reference/command-line-compiler/utf8output.md
+                - name: '-vbruntime'
+                  href: visual-basic/reference/command-line-compiler/vbruntime.md
+                - name: '-verbose'
+                  href: visual-basic/reference/command-line-compiler/verbose.md
+                - name: '-warnaserror'
+                  href: visual-basic/reference/command-line-compiler/warnaserror.md
+                - name: '-win32icon'
+                  href: visual-basic/reference/command-line-compiler/win32icon.md
+                - name: '-win32manifest'
+                  href: visual-basic/reference/command-line-compiler/win32manifest.md
+                - name: '-win32resource'
+                  href: visual-basic/reference/command-line-compiler/win32resource.md
+            - name: カテゴリ別のコンパイラ オプション
+              href: visual-basic/reference/command-line-compiler/compiler-options-listed-by-category.md
+        - name: .NET Framework リファレンス情報
+          href: visual-basic/reference/net-framework-reference-information.md
+        - name: 言語仕様
+          href: visual-basic/reference/language-specification/
+    - name: サンプル アプリケーション
+      href: visual-basic/sample-applications.md
+    - name: チュートリアル
+      href: visual-basic/walkthroughs.md
+- name: ML.NET ガイド
+  href: machine-learning/index.yml
+- name: .NET for Apache Spark ガイド
+  href: spark/index.yml
+- name: サンプルおよびチュートリアル
+  href: samples-and-tutorials/index.md

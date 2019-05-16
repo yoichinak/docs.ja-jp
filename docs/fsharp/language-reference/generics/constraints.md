@@ -2,12 +2,12 @@
 title: 制約
 description: についてF#ジェネリック型または関数の型引数の要件を指定するジェネリック型パラメーターに適用される制約。
 ms.date: 05/16/2016
-ms.openlocfilehash: b253ce50707512a0d46c41bba2dde34adcc24d0e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1bf5c6fc4df6c8f2f7f969bd13030172c6b8aab9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61937515"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645282"
 ---
 # <a name="constraints"></a>制約
 
