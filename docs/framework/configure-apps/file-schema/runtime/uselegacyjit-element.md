@@ -95,6 +95,6 @@ ms.locfileid: "61673889"
   
 ## <a name="see-also"></a>関連項目
 
-- [\<ランタイム > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
+- [\<runtime> 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)
 - [\<configuration> 要素](../../../../../docs/framework/configure-apps/file-schema/configuration-element.md)
 - [軽減策:新しい 64 ビット JIT コンパイラ](../../../../../docs/framework/migration-guide/mitigation-new-64-bit-jit-compiler.md)
