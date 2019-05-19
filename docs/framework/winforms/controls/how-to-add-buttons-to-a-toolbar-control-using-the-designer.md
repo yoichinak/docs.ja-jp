@@ -8,16 +8,17 @@ helpviewer_keywords:
 - examples [Windows Forms], toolbars
 - ToolBar control [Windows Forms], adding drop-down menus
 ms.assetid: d9ce3040-3e21-4e2d-80ae-b430982b2db8
-ms.openlocfilehash: 509aa0b03dbbb370384fb83e0d8e5471fc2cb819
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 495200b2617a1c0c299998ad5fb5276398236cca
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011100"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880902"
 ---
 # <a name="how-to-add-buttons-to-a-toolbar-control-using-the-designer"></a>方法: デザイナーを使って ToolBar コントロールにボタンを追加する
 > [!NOTE]
->  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
+>  
+  <xref:System.Windows.Forms.ToolStrip> コントロールは、<xref:System.Windows.Forms.ToolBar> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.ToolBar> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。  
   
  不可欠な部分、<xref:System.Windows.Forms.ToolBar>コントロールは、ボタンを追加します。 メニュー コマンドに簡単にアクセスを提供するこれらを使用できますか、または、メニュー構造では使用できないユーザーにコマンドを公開するアプリケーションのユーザー インターフェイスの別の領域に配置することができます。  
   
@@ -30,7 +31,7 @@ ms.locfileid: "62011100"
   
 1. <xref:System.Windows.Forms.ToolBar> コントロールを選択します。  
   
-2. **プロパティ**ウィンドウで、をクリックして、<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティを選択し、クリックして、**省略記号**(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、**ツールバー ・ ボタン コレクション エディター**します。  
+2.  **プロパティ**ウィンドウで、をクリックして、<xref:System.Windows.Forms.ToolBar.Buttons%2A>プロパティを選択し、クリックして、**省略記号**(![Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…).](./media/visual-studio-ellipsis-button.png))ボタンをクリックする、**ツールバー ・ ボタン コレクション エディター**します。  
   
 3. 使用して、**追加**と**削除**ボタンの追加し、削除 ボタンから、<xref:System.Windows.Forms.ToolBar>コントロール。  
   

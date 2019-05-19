@@ -2,18 +2,18 @@
 title: 中間層クライアント アプリケーション
 ms.date: 03/30/2017
 ms.assetid: f9714a64-d0ae-4a98-bca0-5d370fdbd631
-ms.openlocfilehash: c7934f6d0d34992db229244373b5a170180f51e6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1b1ba177c365bb6913679ed2a217e66d7a0d522b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649444"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877469"
 ---
 # <a name="middle-tier-client-applications"></a>中間層クライアント アプリケーション
 このトピックでは、Windows Communication Foundation (WCF) を使用する中間層クライアント アプリケーションに固有のさまざまな問題について説明します。  
   
 ## <a name="increasing-middle-tier-client-performance"></a>中間層クライアントのパフォーマンス向上  
- 使用して Web サービスなど、以前の通信テクノロジと比較して[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]、WCF クライアントのインスタンスの作成を WCF の豊富な機能セットが複雑にすることができます。 たとえば、<xref:System.ServiceModel.ChannelFactory%601> オブジェクトを開いている場合、サービスとの間にセキュリティで保護されたセッションを確立できますが、そのぶんクライアント インスタンスの起動時間が長くなります。 通常、ような追加機能は影響しませんクライアント アプリケーションが大幅に WCF クライアントがいくつかの呼び出しを行うし、後を閉じます。  
+ ASP.NET を使用して Web サービスなど、以前の通信テクノロジと比較して WCF クライアントのインスタンスの作成は WCF の豊富な機能セットによりより複雑なできます。 たとえば、<xref:System.ServiceModel.ChannelFactory%601> オブジェクトを開いている場合、サービスとの間にセキュリティで保護されたセッションを確立できますが、そのぶんクライアント インスタンスの起動時間が長くなります。 通常、ような追加機能は影響しませんクライアント アプリケーションが大幅に WCF クライアントがいくつかの呼び出しを行うし、後を閉じます。  
   
  中間層クライアント アプリケーションは、ただし、多くの WCF クライアント オブジェクトをすばやく作成でき、その結果、初期化要件が増加が発生します。 サービスを呼び出すときに中間層アプリケーションのパフォーマンスを向上させる方法は主に 2 つあります。  
   

@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b555544e-7abb-4814-859b-ab9cdd7d8716
-ms.openlocfilehash: 9b59f9a1895b06cbc102afdceccb373a22ddafc1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 09fcf3f1a7e58a4bd8c2c6b0d25c24f32ea5ec5e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583497"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880593"
 ---
 # <a name="systemtransactions-integration-with-sql-server"></a>SQL Server と System.Transactions の統合
-.NET Framework version 2.0 に導入された新しいトランザクション フレームワークが経由でアクセスできる、<xref:System.Transactions>名前空間。 このフレームワークには、.NET framework では、完全に統合されている方法でトランザクションが公開されます。 など[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]します。  
+.NET Framework version 2.0 に導入された新しいトランザクション フレームワークが経由でアクセスできる、<xref:System.Transactions>名前空間。 このフレームワークには、ADO.NET を含む、.NET Framework に完全に統合されている方法でトランザクションが公開されます。  
   
- プログラミング上の強化に加えて、 <xref:System.Transactions> と [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の連係により、トランザクション処理が最適化されます。 昇格可能なトランザクションとは、必要に応じて完全な分散トランザクションに自動的に昇格する、軽量の (ローカル) トランザクションです。  
+ プログラミングに関する機能強化に加えて<xref:System.Transactions>と ADO.NET は、トランザクションを使用する場合は、最適化を調整する共同作業できます。 昇格可能なトランザクションとは、必要に応じて完全な分散トランザクションに自動的に昇格する、軽量の (ローカル) トランザクションです。  
   
- 以降で[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]2.0、 <xref:System.Data.SqlClient> SQL Server を使用する場合は、昇格可能なトランザクションをサポートしています。 昇格可能なトランザクションは、必要な場合以外、分散トランザクションのオーバーヘッドの増加を引き起こすことはありません。 昇格可能なトランザクションは、自動、開発者による介入は必要ありません。  
+ ADO.NET 2.0 以降で<xref:System.Data.SqlClient>SQL Server を使用する場合は、昇格可能なトランザクションをサポートしています。 昇格可能なトランザクションは、必要な場合以外、分散トランザクションのオーバーヘッドの増加を引き起こすことはありません。 昇格可能なトランザクションは、自動、開発者による介入は必要ありません。  
   
  昇格可能なトランザクションは、.NET Framework Data Provider for SQL Server に使用する場合にのみ使用できます (`SqlClient`) と SQL Server。  
   

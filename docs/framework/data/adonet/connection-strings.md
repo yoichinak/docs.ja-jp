@@ -2,12 +2,12 @@
 title: ADO.NET での接続文字列
 ms.date: 10/10/2018
 ms.assetid: 745c5f95-2f02-4674-b378-6d51a7ec2490
-ms.openlocfilehash: 1197335f3ba2a09b6e7303d31bc32383d1fd3436
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3b7cb0ab061da8364a9fecc3868ba9aaf7501577
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032757"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881162"
 ---
 # <a name="connection-strings-in-adonet"></a>ADO.NET での接続文字列
 
@@ -17,24 +17,32 @@ ms.locfileid: "62032757"
 
 接続文字列は、パラメーターのキー/値ペアのセミコロンで区切られた一覧を示します。
 
-    keyword1=value; keyword2=value;
+```
+keyword1=value; keyword2=value;
+```
 
 キーワードは区別されません。 値、ただし、可能性があります、データ ソースによって、大文字小文字が区別されます。 キーワードと値の両方を含めることができます[空白文字](https://en.wikipedia.org/wiki/Whitespace_character#Unicode)します。 先頭および末尾の空白文字がキーワードで無視され、引用符の値。
 
-値には、セミコロンが含まれている場合[Unicode コントロール文字](https://en.wikipedia.org/wiki/Unicode_control_characters)、先頭または末尾の空白文字、単一引用符または二重引用符で囲む必要がありますか。 例えば:
+値には、セミコロンが含まれている場合[Unicode コントロール文字](https://en.wikipedia.org/wiki/Unicode_control_characters)、先頭または末尾の空白文字、単一引用符または二重引用符で囲む必要がありますか。 例:
 
-    Keyword=" whitespace  ";
-    Keyword='special;character';
+```
+Keyword=" whitespace  ";
+Keyword='special;character';
+```
 
 それを囲む文字を囲む値内で発生しません。 そのため、単一引用符を含む値を囲む二重引用符でのみ、またはその逆ことができます。
 
-    Keyword='double"quotation;mark';
-    Keyword="single'quotation;mark";
+```
+Keyword='double"quotation;mark';
+Keyword="single'quotation;mark";
+```
 
 、等号と同様に、引用符は不要、エスケープため、次の接続文字列が無効です。
 
-    Keyword=no "escaping" 'required';
-    Keyword=a=b=c
+```
+Keyword=no "escaping" 'required';
+Keyword=a=b=c
+```
 
 後者の例の値は、各値は、[次へ] のセミコロンまたは文字列の末尾まで読み取ることが、ため`a=b=c`、最後のセミコロンは省略可能です。
 

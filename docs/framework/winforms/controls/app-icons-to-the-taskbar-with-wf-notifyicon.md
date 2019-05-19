@@ -13,12 +13,12 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 52c18b959361079aac6b95dc5d4584bf464a306a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d7fb1dfbdfb7cf9be33fc8c9711b4fbdc3efc2d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61640316"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880548"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加する
 Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネントは、タスク バーの状態通知領域に 1 つのアイコンを表示します。 を、ステータス領域に複数のアイコンを表示するには、複数がする必要があります<xref:System.Windows.Forms.NotifyIcon>フォーム上のコンポーネント。 コントロールに表示されるアイコンを設定するには、使用、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 コードを記述することも、<xref:System.Windows.Forms.NotifyIcon.DoubleClick>ユーザー アイコンをダブルクリックしたときの動作のためのイベント ハンドラー。 たとえば、アイコンで表される、バック グラウンド プロセスを構成するユーザーの表示 ダイアログ ボックスを行うことができます。  
@@ -28,7 +28,7 @@ Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネント�
   
 ### <a name="to-set-the-icon"></a>アイコンを設定するには  
   
-1. 値を割り当てる、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 値型でなければなりません`System.Drawing.Icon`.ico ファイルから読み込むことができるとします。 コードで、または、省略記号ボタンをクリックして、アイコン ファイルを指定できます (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横に、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ、 **プロパティ**ウィンドウとでファイルを選択し、**オープン**表示されるダイアログ ボックス。  
+1.  値を割り当てる、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 値型でなければなりません`System.Drawing.Icon`.ico ファイルから読み込むことができるとします。 コードで、または、省略記号ボタンをクリックして、アイコン ファイルを指定できます (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) 横に、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ、**プロパティ**ウィンドウとでファイルを選択し、**オープン**表示されるダイアログ ボックス。  
   
 2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> プロパティを `true` に設定します。  
   

@@ -2,12 +2,12 @@
 title: SQL Server での認証
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 33a4a9e7e9d6d8c5324c0e108ec3705582efc866
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649571"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877460"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server での認証
 SQL Server は、Windows 認証モードと混合モードの 2 つの認証モードをサポートしています。  
@@ -43,7 +43,7 @@ SQL Server は、Windows 認証モードと混合モードの 2 つの認証モ�
   
 - ユーザーが別の信頼されていないドメインから接続する。  
   
-- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] などのインターネット アプリケーション。  
+- ASP.NET などのインターネット アプリケーション。  
   
 > [!NOTE]
 >  Windows 認証を指定しても、SQL Server ログインは無効になりません。 ALTER LOGIN DISABLE を使用して、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]高い権限を持つ SQL Server ログインを無効にするステートメント。  

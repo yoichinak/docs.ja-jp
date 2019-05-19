@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 537d8a2c-d40b-4000-83eb-bc1fcc93f707
-ms.openlocfilehash: 5d35e2775c6c6912d2a36c550202b309ebdeaa32
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 638e8177060c489a7469f80adde68cb9ba266365
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583827"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879967"
 ---
 # <a name="configuring-parameters-and-parameter-data-types"></a>パラメーターおよびパラメーターのデータ型の構成
 
@@ -96,7 +96,7 @@ ms.locfileid: "65583827"
 
 ## <a name="using-parameters-with-a-sqlcommand-and-a-stored-procedure"></a>SqlCommand およびストアド プロシージャでパラメーターの使用
 
-ストアド プロシージャは、データドリブンのアプリケーションに多くの利点を提供します。 ストアド プロシージャを使用すると、データベースの操作を単一のコマンドにカプセル化し、最大のパフォーマンスが得られるように最適化し、さらに追加のセキュリティ機能を使用して、セキュリティを強化することができます。 ストアド プロシージャは、ストアド プロシージャ名の後にパラメーター引数を記述して SQL ステートメントとして渡すことで呼び出すことができますが、<xref:System.Data.Common.DbCommand.Parameters%2A> の [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] オブジェクトの <xref:System.Data.Common.DbCommand> コレクションを使用すると、ストアド プロシージャ パラメーターをより明示的に定義でき、出力パラメーターや戻り値にもアクセスできます。
+ストアド プロシージャは、データドリブンのアプリケーションに多くの利点を提供します。 ストアド プロシージャを使用すると、データベースの操作を単一のコマンドにカプセル化し、最大のパフォーマンスが得られるように最適化し、さらに追加のセキュリティ機能を使用して、セキュリティを強化することができます。 ストアド プロシージャは、ストアド プロシージャ名の後にパラメーター引数として、SQL ステートメントを使用して渡すことによって呼び出すことができますが、<xref:System.Data.Common.DbCommand.Parameters%2A>コレクション、ADO.NET の<xref:System.Data.Common.DbCommand>オブジェクトでは、ストアド プロシージャをより明示的に定義できます。パラメーターと戻り値を出力パラメーターにアクセスするとします。
 
 > [!NOTE]
 > パラメーター化ステートメントは、 `sp_executesql,` を使ってサーバー上で実行されるため、クエリ プランの再利用が可能になります。 `sp_executesql` バッチ内のローカル カーソルまたはローカル変数は、 `sp_executesql`を呼び出すバッチでは認識されません。 データベース コンテキストの変更は、 `sp_executesql` ステートメント終了時まで有効です。 詳細については、次を参照してください。 [sp_executesql (TRANSACT-SQL)](/sql/relational-databases/system-stored-procedures/sp-executesql-transact-sql)します。

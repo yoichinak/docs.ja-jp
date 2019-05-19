@@ -7,15 +7,15 @@ dev_langs:
 helpviewer_keywords:
 - sessions [WCF]
 ms.assetid: 864ba12f-3331-4359-a359-6d6d387f1035
-ms.openlocfilehash: fc0bfec95e625c1433636fbe5e0fdb6cc1112b14
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0c19aa7200cfc938a1de7b788a58ba18f76634d9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645157"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881474"
 ---
 # <a name="using-sessions"></a>セッションの使用
-Windows Communication Foundation (WCF) アプリケーションで、*セッション*会話にメッセージのグループを関連付けます。 WCF のセッションとは異なる場合、セッション オブジェクトで使用できる[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーション、サポートされる動作、およびさまざまな方法で制御されます。 このトピックでは、WCF でセッションを有効にする機能を説明します。 アプリケーションとその使用方法。  
+Windows Communication Foundation (WCF) アプリケーションで、*セッション*会話にメッセージのグループを関連付けます。 WCF のセッションは、ASP.NET アプリケーションで使用可能なセッション オブジェクトと異なるは、サポートされる動作は、およびさまざまな方法で制御されます。 このトピックでは、WCF でセッションを有効にする機能を説明します。 アプリケーションとその使用方法。  
   
 ## <a name="sessions-in-windows-communication-foundation-applications"></a>Windows Communication Foundation アプリケーションのセッション  
  サービス コントラクトでセッションが必要であると指定されている場合、すべての呼び出し (つまり、呼び出しをサポートする基本的なメッセージ交換) を同じメッセージ交換の一部にする必要があります。 セッションが許可されるが必須ではないコントラクトの場合、クライアントは、接続した後にセッションを確立できます。また、セッションを確立しないままにしておくこともできます。 セッションが終了したのに、同じチャネルでメッセージが送信されると、例外がスローされます。  
@@ -30,13 +30,13 @@ Windows Communication Foundation (WCF) アプリケーションで、*セッシ�
   
 - WCF のセッションに関連付けられた一般的なデータ ストアはありません。  
   
- 慣れている場合、<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>クラス[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]アプリケーションと機能を提供、可能性があります、その種のセッションと WCF のセッションの間の次の相違点に注意してください。  
+ 慣れている場合、 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> ASP.NET アプリケーション内のクラスと機能を提供、可能性があります、その種のセッションと WCF のセッションの間の次の相違点に注意してください。  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、常にサーバーによって開始される。  
+- ASP.NET セッションが常にサーバーによって開始されます。  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、暗黙的に順序付けされない。  
+- ASP.NET のセッションでは、暗黙的に順序付けされません。  
   
-- [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] セッションは、要求全体について一般的なデータ ストレージ機構を提供する。  
+- ASP.NET のセッションでは、要求間で、一般的なデータ ストレージ機構を提供します。  
   
  このトピックでは、次の項目について説明します。  
   

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - certificates [WCF], creating temporary certificates
 - temporary certificates [WCF]
 ms.assetid: bc5f6637-5513-4d27-99bb-51aad7741e4a
-ms.openlocfilehash: d45f18b0b8fe4e0cc9667091e166c80691faa2d4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4223ee8c8790ad4d0ae2275b347c4f974eeb4158
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61773296"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877966"
 ---
 # <a name="how-to-create-temporary-certificates-for-use-during-development"></a>方法: 開発中に使用する一時的な証明書を作成する
 
@@ -28,16 +28,16 @@ ms.locfileid: "61773296"
 次のコマンドは、"ルート Ca"、現在のユーザー個人用ストアでのサブジェクト名を持つ、自己署名証明書を作成します。
 
 ```powershell
-PS $rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("1.3.6.1.4.1.311.21.10={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2")
+$rootCert = New-SelfSignedCertificate -CertStoreLocation cert:\CurrentUser\My -DnsName "RootCA" -TextExtension @("2.5.29.37={text}1.3.6.1.5.5.7.3.1,1.3.6.1.5.5.7.3.2") -KeyUsage CertSign,DigitalSignature
 ```
 
 後の手順で必要な場所にインポートできるように、証明書を PFX ファイルにエクスポートする必要があります。 秘密キーで証明書をエクスポートするときに、保護するためにパスワードが必要です。 パスワードを保存、`SecureString`を使用して、 [Export-pfxcertificate](/powershell/module/pkiclient/export-pfxcertificate)コマンドレットを証明書を PFX ファイルに関連付けられている秘密キーと共にエクスポートします。 パブリック証明書だけを使用して CRT ファイルに保存、[証明書のエクスポート](/powershell/module/pkiclient/export-certificate)コマンドレット。
 
 ```powershell
-PS [System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
-PS [String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
-PS Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
-PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
+[System.Security.SecureString]$rootcertPassword = ConvertTo-SecureString -String "password" -Force -AsPlainText
+[String]$rootCertPath = Join-Path -Path 'cert:\CurrentUser\My\' -ChildPath "$($rootcert.Thumbprint)"
+Export-PfxCertificate -Cert $rootCertPath -FilePath 'RootCA.pfx' -Password $rootcertPassword
+Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 ```
 
 ## <a name="to-create-a-new-certificate-signed-by-a-root-authority-certificate"></a>ルート証明書によって署名された新しい証明書を作成するには
@@ -45,15 +45,15 @@ PS Export-Certificate -Cert $rootCertPath -FilePath 'RootCA.crt'
 次のコマンドは、署名された証明書を作成、 `RootCA` "SignedByRootCA"発行元の秘密キーを使用してのサブジェクト名を使用します。
 
 ```powershell
-PS $testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
+$testCert = New-SelfSignedCertificate -CertStoreLocation Cert:\LocalMachine\My -DnsName "SignedByRootCA" -KeyExportPolicy Exportable -KeyLength 2048 -KeyUsage DigitalSignature,KeyEncipherment -Signer $rootCert
 ```
 
 同様に、署名証明書は、秘密キーを使用して、PFX ファイルと CRT ファイルに公開キーのみに保存します。
 
 ```powershell
-PS [String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
-PS Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
-PS Export-Certificate -Cert $testCertPath -FilePath testcert.crt
+[String]$testCertPath = Join-Path -Path 'cert:\LocalMachine\My\' -ChildPath "$($testCert.Thumbprint)"
+Export-PfxCertificate -Cert $testCertPath -FilePath testcert.pfx -Password $rootcertPassword
+Export-Certificate -Cert $testCertPath -FilePath testcert.crt
 ```
 
 ## <a name="installing-a-certificate-in-the-trusted-root-certification-authorities-store"></a>信頼されたルート証明機関の証明書ストアに証明書をインストールする

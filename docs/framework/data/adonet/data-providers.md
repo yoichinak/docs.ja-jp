@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 03a9fc62-2d24-491a-9fe6-d6bdb6dcb131
-ms.openlocfilehash: 9fead8a5d54fba7232831bba349f27b7eed4657b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d343f7be3e26575ee9a1e9ccae9f17314db10ac5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583791"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882112"
 ---
 # <a name="net-framework-data-providers"></a>.NET Framework データ プロバイダー
 .NET Framework データ プロバイダーは、データベースへの接続、コマンドの実行と結果の取得に使用されます。 その結果は、直接処理されるか、必要に応じてユーザーに公開されるように <xref:System.Data.DataSet> に格納されるか、取得したデータセットを複数のソースからのデータと組み合わせるか、または、層間でリモート処理されます。 .NET framework データ プロバイダーは、データ ソースとコード間の最小限の層を作成するには、機能を損なうことがなくパフォーマンスの向上、軽量です。  
@@ -74,7 +74,7 @@ using System.Data.SqlClient;
 ## <a name="net-framework-data-provider-for-ole-db"></a>.NET Framework Data Provider for OLE DB  
  .NET Framework Data Provider for OLE DB (OleDb) では、COM 相互運用機能を介してネイティブ OLE DB を使用して、データ アクセスを有効にします。 .NET Framework Data Provider for OLE DB では、ローカルおよび分散トランザクションをサポートします。 分散トランザクションの場合、.NET Framework Data Provider for OLE DB、既定では自動的にトランザクションに参加し、Windows コンポーネント サービスからトランザクションの詳細を取得します。 詳細については、次を参照してください。[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)します。  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]とのテストが完了しているプロバイダーを次の表に示します。  
+ 次の表では、ADO.NET を使用したテスト済みのプロバイダーを示します。  
   
 |ドライバー|プロバイダー|  
 |------------|--------------|  
@@ -83,11 +83,11 @@ using System.Data.SqlClient;
 |Microsoft.Jet.OLEDB.4.0|OLE DB Provider for Microsoft Jet|  
   
 > [!NOTE]
->  [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーションなどのマルチスレッド アプリケーションのデータ ソースとして Access (Jet) データベースを使用することはお勧めできません。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーションのデータ ソースとして Jet を使用する必要がある場合、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーションから Access データベースへの接続で問題が発生することがあるので注意してください。  
+>  ASP.NET アプリケーションなどのマルチ スレッド アプリケーションのデータ ソースとして Access (Jet) データベースを使用することは推奨されません。 ASP.NET アプリケーションのデータ ソースとして Jet を使用する必要がある場合、は、Access データベースに接続する ASP.NET アプリケーションに接続の問題が発生する可能性が認識してください。  
   
  .NET Framework Data Provider for OLE DB は、OLE DB バージョン 2.5 のインターフェイスをサポートしていません。 OLE DB プロバイダーを OLE DB 2.5 インターフェイスのサポートを必要とするが正しく機能しないと、.NET Framework Data Provider for OLE DB。 これには Microsoft OLE DB Provider for Exchange および Microsoft OLE DB Provider for Internet Publishing が含まれます。  
   
- .NET Framework Data Provider for OLE DB は、OLE DB provider for ODBC (MSDASQL) では機能しません。 ODBC データ ソースを使用してをアクセスする[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]、for ODBC、.NET Framework Data Provider を使用します。  
+ .NET Framework Data Provider for OLE DB は、OLE DB provider for ODBC (MSDASQL) では機能しません。 ADO.NET を使用して ODBC データ ソースにアクセスするには、odbc、.NET Framework Data Provider を使用します。  
   
  OLE DB クラス用の .NET framework データ プロバイダーにある、<xref:System.Data.OleDb>名前空間。 名前空間 `System.Data.OleDb` をユーザーのアプリケーションにインクルードする方法を次のコード サンプルで示します。  
   
@@ -102,7 +102,7 @@ using System.Data.OleDb;
 ## <a name="net-framework-data-provider-for-odbc"></a>.NET Framework Data Provider for ODBC  
  .NET Framework Data Provider for ODBC (Odbc) では、ネイティブ ODBC ドライバー マネージャー (DM) を使用して、データ アクセスを有効にします。 ODBC データ プロバイダーはローカル トランザクションと分散トランザクションのどちらもサポートします。 分散トランザクションの場合、既定で、ODBC データ プロバイダーは自動的にトランザクションに参加し、トランザクションの詳細を Windows コンポーネント サービスから取得します。 詳細については、次を参照してください。[トランザクションと同時実行](../../../../docs/framework/data/adonet/transactions-and-concurrency.md)します。  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]とのテストが完了している ODBC ドライバーを次の表に示します。  
+ 次の表では、ADO.NET を使用したテストの ODBC ドライバーを示します。  
   
 |ドライバー|  
 |------------|  

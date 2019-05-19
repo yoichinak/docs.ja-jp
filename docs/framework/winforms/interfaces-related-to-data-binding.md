@@ -12,16 +12,16 @@ helpviewer_keywords:
 - data binding [Windows Forms], interfaces
 - IDataErrorInfo interface [Windows Forms], Windows Forms data binding
 ms.assetid: 14e49a2e-3e46-47ca-b491-70d546333277
-ms.openlocfilehash: 1609fbd8cbb24d6f2c10fbc3a235f01a451eb0fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 591b76ca6b5cd3a9180487c79293d5fc3b7991af
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754079"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882342"
 ---
 # <a name="interfaces-related-to-data-binding"></a>データ連結に関連するインターフェイス
 
-[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] では、アプリケーションのバインドのニーズや使用するデータに合わせてさまざまなデータ構造を作成できます。 Windows フォームでデータを提供または使用するための独自のクラスを作成することもできます。 これらのオブジェクトは、基本的なデータ バインディングから、デザイン時サポートの提供、エラー チェック、変更通知、データ自体に加えられた変更の構造化されたロールバックのサポートに至るまで、さまざまなレベルの機能を提供することができ、複雑さに対応できます。
+Ado.net では、アプリケーションを使用するデータのバインドのニーズに合わせてさまざまなデータ構造を作成できます。 Windows フォームでデータを提供または使用するための独自のクラスを作成することもできます。 これらのオブジェクトは、基本的なデータ バインディングから、デザイン時サポートの提供、エラー チェック、変更通知、データ自体に加えられた変更の構造化されたロールバックのサポートに至るまで、さまざまなレベルの機能を提供することができ、複雑さに対応できます。
 
 ## <a name="consumers-of-data-binding-interfaces"></a>データ バインディング インターフェイスのコンシューマー
 
@@ -82,7 +82,7 @@ ms.locfileid: "64754079"
 
 - <xref:System.Collections.IEnumerable> インターフェイス
 
-  実装するクラス、<xref:System.Collections.IEnumerable>によってインターフェイスが使用される通常[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]します。 このインターフェイスのサポートを Windows フォームはのみ、<xref:System.Windows.Forms.BindingSource>コンポーネント。
+  実装するクラス、<xref:System.Collections.IEnumerable>インターフェイスは通常、ASP.NET によって処理されます。 このインターフェイスのサポートを Windows フォームはのみ、<xref:System.Windows.Forms.BindingSource>コンポーネント。
 
   > [!NOTE]
   > <xref:System.Windows.Forms.BindingSource>コンポーネントがすべてコピー<xref:System.Collections.IEnumerable>バインディングのための独立したリストにアイテムをします。

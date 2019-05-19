@@ -2,17 +2,17 @@
 title: 企業の購買プロセス
 ms.date: 03/30/2017
 ms.assetid: a5e57336-4290-41ea-936d-435593d97055
-ms.openlocfilehash: eaf77fc8b1697d0e337d8c4823ca2184cb9c545c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 83290245dd203d4bb63c96e94ca6bdafee4ecffb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665938"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876164"
 ---
 # <a name="corporate-purchase-process"></a>企業の購買プロセス
 このサンプルは、Request for Proposals (RFP: 提案依頼書) に基づくごく基本的な購買プロセスを作成する方法を示しています。この購買プロセスでは最良の提案が自動的に選択されます。 このサンプルでは、<xref:System.Activities.Statements.Parallel>、<xref:System.Activities.Statements.ParallelForEach%601>、および <xref:System.Activities.Statements.ForEach%601> と、プロセスを表すワークフローを作成するカスタム アクティビティが組み合わされています。
 
- このサンプルには、異なる参加者として (元の要求者や特定のベンダーとして) プロセスとやり取りできる [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] クライアント アプリケーションが含まれています。
+ このサンプルには、異なる参加者として (元の要求者や特定のベンダー) としてプロセスと対話できるようにする ASP.NET クライアント アプリケーションが含まれています。
 
 ## <a name="requirements"></a>必要条件
 
@@ -36,7 +36,7 @@ ms.locfileid: "64665938"
 
 - 追跡。
 
-- さまざまなクライアントでの [!INCLUDE[wf1](../../../../includes/wf1-md.md)] のホスティング ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web アプリケーションおよび WinForms アプリケーション)。
+- ホストしている[!INCLUDE[wf1](../../../../includes/wf1-md.md)]別のクライアント (ASP.NET Web アプリケーションおよび WinForms アプリケーション) にします。
 
 > [!IMPORTANT]
 >  サンプルは、既にコンピューターにインストールされている場合があります。 続行する前に、次の (既定の) ディレクトリを確認してください。  
@@ -82,7 +82,7 @@ ms.locfileid: "64665938"
 |-------------|-----------------|  
 |共通|プロセス内で使用されるエンティティ オブジェクト (Request for Proposal、Vendor、および Vendor Proposal)。|  
 |WfDefinition|購買プロセス ワークフローのインスタンスの作成および使用のためにクライアント アプリケーションによって使用されるプロセス ([!INCLUDE[wf1](../../../../includes/wf1-md.md)] プログラムとしてのプロセス) とホスト (`PurchaseProcessHost`) の定義。|  
-|WebClient|購買プロセスのインスタンスを作成したりそれに参加したりできる [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] クライアント アプリケーション。 独自に作成したホストを使用してワークフロー エンジンとやり取りします。|  
+|WebClient|ASP.NET クライアント アプリケーションの購入プロセスのインスタンスを作成して参加することができます。 独自に作成したホストを使用してワークフロー エンジンとやり取りします。|  
 |WinFormsClient|購買プロセスのインスタンスを作成したりそれに参加したりできる Windows フォーム クライアント アプリケーション。 独自に作成したホストを使用してワークフロー エンジンとやり取りします。|  
   
 ### <a name="wfdefinition"></a>WfDefinition  

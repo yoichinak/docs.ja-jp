@@ -2,12 +2,12 @@
 title: Entity Framework の用語
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: 9272740bef21dbe8b28bd6e58354a342fb799002
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583528"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877480"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework の用語
 このトピックで頻繁に参照用語の定義[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]ドキュメント。 追加情報を確認できる関連トピックへのリンクも示しています。  
@@ -30,7 +30,7 @@ ms.locfileid: "65583528"
 |.edmx ファイル|概念モデル (CSDL)、ストレージ モデル (SSDL)、および概念モデルとストレージ モデルの間のマッピング (MSL) を含む XML ファイル。 .edmx ファイルは、[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] ツールによって作成されます。 詳細については、次を参照してください。 [.edmx ファイルの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))します。|  
 |end|アソシエーションに参加しているエンティティ。<br /><br /> 詳細については、次を参照してください。 [End 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl)と[アソシエーション end](../../../../../docs/framework/data/adonet/association-end.md)します。|  
 |entity|データ型を定義する際に基づくアプリケーションのドメインにおける概念。<br /><br /> 詳細については、次を参照してください。 [EntityType 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl)と[エンティティ型](../../../../../docs/framework/data/adonet/entity-type.md)します。|  
-|EntityClient|[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]、`EntityConnection`、`EntityCommand` などのクラスを含むストレージの影響を受けない `EntityDataReader` データ プロバイダー。 連携[!INCLUDE[esql](../../../../../includes/esql-md.md)]が特定の記憶域に接続して[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]、データ プロバイダーなど`SqlClient`します。<br /><br /> 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。|  
+|EntityClient|ストレージに依存しない ADO.NET データ プロバイダーなどのクラスを含む`EntityConnection`、 `EntityCommand`、および`EntityDataReader`します。 連携[!INCLUDE[esql](../../../../../includes/esql-md.md)]など、ストレージ固有の ADO.NET データ プロバイダーに接続して`SqlClient`します。<br /><br /> 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。|  
 |エンティティ コンテナー|指定された名前空間に実装されるエンティティ セットとアソシエーション セットを指定します。<br /><br /> 詳細については、次を参照してください。 [EntityContainer 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitycontainer-element-csdl)と[エンティティ コンテナー](../../../../../docs/framework/data/adonet/entity-container.md)します。|  
 |Entity Data Model (EDM)|格納される形式に関係なく、エンティティおよびリレーションシップとしてデータ構造を記述する一連の概念。<br /><br /> 詳細については、次を参照してください。 [Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)します。|  
 |Entity Framework|開発者がデータ ソースの論理スキーマにマップされた概念モデルを使用できるようにすることで、データ指向のソフトウェア アプリケーションの開発をサポートするテクノロジ セット。<br /><br /> 詳細については、次を参照してください。 [Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)します。|  

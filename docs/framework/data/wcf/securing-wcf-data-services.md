@@ -8,12 +8,12 @@ helpviewer_keywords:
 - securing application [WCF Data Services]
 - WCF Data Services, security
 ms.assetid: 99fc2baa-a040-4549-bc4d-f683d60298af
-ms.openlocfilehash: cf99979e2ea3a47247a5df4b6e0ececab6abe8ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4db6d7e13bfc4a0e2705c210820db511a60e09de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645524"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877353"
 ---
 # <a name="securing-wcf-data-services"></a>WCF Data Services のセキュリティ保護
 このトピックでは、開発、配置、および Open Data Protocol (OData) をサポートするそのアクセス サービスを使用した WCF Data Services とアプリケーションの実行に固有のセキュリティに関する考慮事項について説明します。 また、セキュリティで保護された .NET Framework アプリケーションを作成するための推奨事項に従ってください。  
@@ -55,7 +55,7 @@ context.Credentials = _
  クレーム ベースのトークンやクッキーなど、<xref:System.Net.NetworkCredential> オブジェクトでは指定できないログイン資格情報がデータ サービスで要求されている場合は、手動で HTTP 要求のヘッダー (通常は `Authorization` と `Cookie`) を設定する必要があります。 この種の認証シナリオの詳細については、ブログの投稿を参照してください。 [ OData と認証: 第 3 部 – クライアント側フック](https://devblogs.microsoft.com/odata/odata-and-authentication-part-3-clientside-hooks/)します。 要求メッセージの HTTP ヘッダーを設定する方法の例は、次を参照してください。[方法。クライアント要求のヘッダーを設定](../../../../docs/framework/data/wcf/how-to-set-headers-in-the-client-request-wcf-data-services.md)します。  
   
 ## <a name="impersonation"></a>偽装  
- データ サービスは通常、データ サービスをホストしているワーカー プロセスの資格情報を使用して、要求されたリソース (サーバー上のファイル、データベースなど) にアクセスします。 偽装を使用しているときは、要求を出しているユーザーの Window ID (ユーザー アカウント) で [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーションを実行できます。 偽装は、IIS を使用してユーザーを認証するアプリケーションで使用されるのが一般的です。この場合、要求されたリソースへのアクセスにそのプリンシパルの資格情報が使用されます。 詳細については、次を参照してください。 [ASP.NET 偽装](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))します。  
+ データ サービスは通常、データ サービスをホストしているワーカー プロセスの資格情報を使用して、要求されたリソース (サーバー上のファイル、データベースなど) にアクセスします。 権限借用を使用する場合は、ASP.NET アプリケーションが、要求を行ったユーザーの Windows id (ユーザー アカウント) で実行できます。 偽装は、IIS を使用してユーザーを認証するアプリケーションで使用されるのが一般的です。この場合、要求されたリソースへのアクセスにそのプリンシパルの資格情報が使用されます。 詳細については、次を参照してください。 [ASP.NET 偽装](https://docs.microsoft.com/previous-versions/aspnet/xh507fc5(v=vs.100))します。  
   
 ## <a name="configuring-data-service-authorization"></a>データ サービスの承認の構成  
  承認とは、事前に行われた認証に基づいて識別されるプリンシパルまたはプロセスにアプリケーション リソースへのアクセスを許可することです。 一般に、データ サービスのユーザーには、クライアント アプリケーションで必要とされている操作を実行するのに十分な権限のみを与えるようにします。  

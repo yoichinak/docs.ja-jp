@@ -8,12 +8,12 @@ helpviewer_keywords:
 - rows [Windows Forms], alternating
 - data [Windows Forms], displaying
 ms.assetid: 02373442-bf94-4470-9f8a-e44c4a9d5b88
-ms.openlocfilehash: fb338a3616bc20542ec940db5977c4ffdab9654c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e5714663a0873cb275d2909028a7d791be76fcf
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62012426"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882227"
 ---
 # <a name="how-to-set-alternating-row-styles-for-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールに交互の行のスタイルを設定する
 表形式のデータは多くの場合、別の背景色の交互の行のある帳簿のような形式で表示されます。 この形式を使用すると、多数の列がある幅の広いテーブルで、ユーザーが各行にあるセルを簡単に識別できるようになります。  
@@ -29,7 +29,7 @@ ms.locfileid: "62012426"
   
 1. 選択、<xref:System.Windows.Forms.DataGridView>デザイナーでコントロールできます。  
   
-2. **プロパティ**ウィンドウで、省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横に、<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>プロパティ。  
+2.  **プロパティ**ウィンドウで、省略記号ボタンをクリックします (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) 横に、<xref:System.Windows.Forms.DataGridView.AlternatingRowsDefaultCellStyle%2A>プロパティ。  
   
 3. **CellStyle ビルダー**ダイアログ ボックスで、プロパティを設定してスタイルを定義して、**プレビュー**ウィンドウで選択内容を確認します。 以降、2 つ目では、コントロールに表示されるその他のすべての行では、指定したスタイルが使用されます。  
   

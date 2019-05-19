@@ -15,12 +15,12 @@ helpviewer_keywords:
 - DataSet class [Windows Forms], binding and Windows Forms
 - data [Windows Forms], data providers
 ms.assetid: 3d2c43f6-462b-4d35-9c86-13e9afe012e1
-ms.openlocfilehash: 0252259d92f08a0f871167fc7930818bab542cc5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6782261953fb5df94498deefb261407a2f0ba33a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626783"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882396"
 ---
 # <a name="data-sources-supported-by-windows-forms"></a>Windows フォームがサポートするデータ ソース
 これまでは、データ バインディングは、データベースに格納されたデータを活用するためにアプリケーション内で使用されています。 Windows フォーム データ バインドでは、特定の最小要件を満たしている限り、配列やコレクションなど、他の構造のデータだけでなく、データベースからデータにアクセスすることができます。  
@@ -44,12 +44,12 @@ ms.locfileid: "64626783"
  <xref:System.Collections.IEnumerable>  
  Windows フォーム コントロールのみをサポートするデータ ソースにバインドできる、<xref:System.Collections.IEnumerable>インターフェイスを通じてバインドされている場合、<xref:System.Windows.Forms.BindingSource>コンポーネント。  
   
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] データ オブジェクト  
- [!INCLUDE[vstecado](../../../includes/vstecado-md.md)] データ構造にバインドするための適切な数を提供します。 その面の知識と複雑さでそれぞれ異なります。  
+ ADO.NET データ オブジェクト  
+ ADO.NET には、さまざまなデータ構造のバインドに適してが用意されています。 その面の知識と複雑さでそれぞれ異なります。  
   
 - <xref:System.Data.DataColumn>。 A<xref:System.Data.DataColumn>の不可欠な要素には、<xref:System.Data.DataTable>列の数がテーブルを構成することで、します。 各<xref:System.Data.DataColumn>が、<xref:System.Data.DataColumn.DataType%2A>列が (たとえば、車を説明した表に、自動車の作成) を保持するデータの種類を決定するプロパティ。 コントロールを単純なバインドことができます (など、<xref:System.Windows.Forms.TextBox>コントロールの<xref:System.Windows.Forms.Control.Text%2A>プロパティ) のデータ テーブル内の列にします。  
   
-- <xref:System.Data.DataTable>。 A<xref:System.Data.DataTable>行と列を含む、テーブルの表現が、[!INCLUDE[vstecado](../../../includes/vstecado-md.md)]します。 データ テーブルに 2 つのコレクションが含まれています: <xref:System.Data.DataColumn>、(最終的にそのテーブルに入力できるデータの種類を決定) する特定のテーブル内のデータの列を表すと<xref:System.Data.DataRow>、特定のテーブル内のデータの行を表します。 複雑にバインドするコントロールをデータ テーブルに含まれる情報を (バインドなど、<xref:System.Windows.Forms.DataGridView>データ テーブル コントロール)。 バインドすると、ただし、<xref:System.Data.DataTable>テーブルの既定のビューに本当にバインドします。  
+- <xref:System.Data.DataTable>。 A<xref:System.Data.DataTable>行と ADO.NET での列を含む、テーブルの表現です。 データ テーブルに 2 つのコレクションが含まれています: <xref:System.Data.DataColumn>、(最終的にそのテーブルに入力できるデータの種類を決定) する特定のテーブル内のデータの列を表すと<xref:System.Data.DataRow>、特定のテーブル内のデータの行を表します。 複雑にバインドするコントロールをデータ テーブルに含まれる情報を (バインドなど、<xref:System.Windows.Forms.DataGridView>データ テーブル コントロール)。 バインドすると、ただし、<xref:System.Data.DataTable>テーブルの既定のビューに本当にバインドします。  
   
 - <xref:System.Data.DataView>。 A<xref:System.Data.DataView>はフィルター処理や並べ替えが 1 つのデータ テーブルのカスタマイズされたビューです。 データ ビューは、「スナップショット」複雑なバインド コントロールで使用されるデータです。 できます単純バインドまたはデータ ビューでは、データへの複雑なバインドがクリーンで更新のデータ ソースではなく、データの固定「画像」にバインドすることに注意してください。  
   

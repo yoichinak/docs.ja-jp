@@ -2,12 +2,12 @@
 title: サポートされているデプロイ シナリオ - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: f1a95e5448d2cc8f1ac472c3b1735f58460e2be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639148"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881057"
 ---
 # <a name="supported-deployment-scenarios"></a>サポートされる展開シナリオ
 
@@ -27,7 +27,7 @@ WCF には、次の標準の名前付き権限セットのいずれかで実行�
 
 ## <a name="partial-trust-on-the-server"></a>サーバーでの部分信頼
 
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web アプリケーション ホスティング サービスのプロバイダー事業者の多くは、それぞれのサーバーで動作するアプリケーションが [!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] の中程度の信頼アクセス許可セットを使用して実行されることを義務付けています。 使用する WCF サービスがこれらの環境で実行できる、 <xref:System.ServiceModel.BasicHttpBinding>、 <xref:System.ServiceModel.WebHttpBinding>、または<xref:System.ServiceModel.WSHttpBinding>トランスポート レベルのセキュリティ。
+サービスをホストする ASP.NET Web アプリケーションの多くの商用プロバイダーは必須で、サーバーで実行されているアプリケーションが実行される、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]中程度の信頼アクセス許可のセット。 使用する WCF サービスがこれらの環境で実行できる、 <xref:System.ServiceModel.BasicHttpBinding>、 <xref:System.ServiceModel.WebHttpBinding>、または<xref:System.ServiceModel.WSHttpBinding>トランスポート レベルのセキュリティ。
 
 中程度の信頼ホスティング環境で実行されている WCF サービスは、クライアントの要求に応答の他のサーバーにメッセージを送信して中間層サービスとしても動作できます。 ホスティング環境が適切な <xref:System.Net.WebPermission> をアプリケーションに与えて、目的のサーバーに送信要求を行うようにする場合は、サーバーでの中間層のシナリオがサポートされます。
 

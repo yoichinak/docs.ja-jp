@@ -6,12 +6,12 @@ helpviewer_keywords:
 - rows [Windows Forms], new records
 - DataGridView control [Windows Forms], data entry
 ms.assetid: 6110f1ea-9794-442c-a98a-f104a1feeaf4
-ms.openlocfilehash: ace4b1c32ac30c54b56e2adbbbbf6af0450a4740
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b28a8a8fc2d75f80a14447008c850de63e4e04b3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651535"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882430"
 ---
 # <a name="using-the-row-for-new-records-in-the-windows-forms-datagridview-control"></a>Windows フォーム DataGridView コントロールにおける新規レコード行の使用
 使用すると、<xref:System.Windows.Forms.DataGridView>アプリケーションでデータを編集するには、多くの場合することをデータ ストアに新しいデータ行を追加する機能をユーザーに提供します。 <xref:System.Windows.Forms.DataGridView>コントロールは、最後の行として常に表示されている、新しいレコードの行を指定してこの機能をサポートしています。 これは、行のヘッダーにアスタリスク (*) 記号でマークされます。 次のセクションでは、新しいレコードの行でプログラムが有効にした場合の考慮事項について説明します。  
@@ -47,7 +47,7 @@ ms.locfileid: "64651535"
 ## <a name="sorting"></a>並べ替え  
  バインドされていないモードでは、新しいレコードがの末尾に追加する常に、<xref:System.Windows.Forms.DataGridView>場合でも、ユーザーには、内容が並べ替えられて、<xref:System.Windows.Forms.DataGridView>します。 ユーザーは、正しい位置に行を並べ替えるために再度並べ替えを適用する必要があります。この動作は、に似ていますが、<xref:System.Windows.Forms.ListView>コントロール。  
   
- データ バインドされた仮想のモードでは、並べ替えが適用されるときに、カーソル動作はデータ モデルの実装に依存することができます。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]行が正しい位置にすぐに並べ替えられます。  
+ データ バインドされた仮想のモードでは、並べ替えが適用されるときに、カーソル動作はデータ モデルの実装に依存することができます。 Ado.net の場合は、正しい位置に行がすぐに並べ替えられます。  
   
 ## <a name="other-notes-on-the-row-for-new-records"></a>新しいレコードの行でその他の注意事項  
  設定することはできません、<xref:System.Windows.Forms.DataGridViewRow.Visible%2A>プロパティには、この行の`false`します。 <xref:System.InvalidOperationException>が、これを試行した場合に発生します。  

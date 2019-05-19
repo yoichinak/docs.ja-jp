@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービス ホスティングのベスト プラクティス
 ms.date: 03/30/2017
 ms.assetid: 0834768e-9665-46bf-86eb-d4b09ab91af5
-ms.openlocfilehash: a4312a9affc1103f613f3f8ffd9a14696f9d4bcc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 85b8efadca03de71fd98b0f0d1bf5aeb47fe76be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61972615"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878605"
 ---
 # <a name="internet-information-services-hosting-best-practices"></a>インターネット インフォメーション サービス ホスティングのベスト プラクティス
 このトピックでは、Windows Communication Foundation (WCF) サービスをホストするためのベスト プラクティスについて説明します。  
@@ -40,7 +40,7 @@ ms.locfileid: "61972615"
  Microsoft 管理コンソール (MMC) スナップインを使用して、IIS Web サイト バインディングを構成できます。  
   
 ## <a name="application-pools-running-in-different-user-contexts-overwrite-assemblies-from-other-accounts-in-the-temporary-folder"></a>異なるユーザー コンテキストで実行されるアプリケーション プールが、一時フォルダー内の他のアカウントのアセンブリを上書きする  
- 異なるユーザー コンテキストで実行されているアプリケーション プールが、一時的な [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ファイル フォルダー内の他のアカウントのアセンブリを上書きできないようにするには、アプリケーションごとに個別の ID と一時フォルダーを使用します。 たとえば、/Application1 と /Application2 という 2 つの仮想アプリケーションがある場合は、2 つの異なる ID を使用して、A と B の 2 つのアプリケーション プールを作成できます。 アプリケーション プール A は、一方のユーザー ID (user1) の下で、アプリケーション プール B は、もう一方のユーザー ID (user2) の下で実行でき、/Application1 が A を、/Application2 が B を使用するように構成します。  
+ 異なるユーザー コンテキストで実行されているアプリケーション プールが、temporary ASP.NET files フォルダー内の他のアカウントからのアセンブリを上書きできないことを確認するには、さまざまなアプリケーションのさまざまな id と一時フォルダーを使用します。 たとえば、/Application1 と /Application2 という 2 つの仮想アプリケーションがある場合は、2 つの異なる ID を使用して、A と B の 2 つのアプリケーション プールを作成できます。 アプリケーション プール A は、一方のユーザー ID (user1) の下で、アプリケーション プール B は、もう一方のユーザー ID (user2) の下で実行でき、/Application1 が A を、/Application2 が B を使用するように構成します。  
   
  Web.config を使用して、一時フォルダーを構成できます\< system.web/compilation/@tempFolder>。 、/Application1 の"c:\tempForUser1"であることができ、アプリケーション 2 の"c:\tempForUser2"であることができます。 これらのフォルダーに対応する書き込みアクセス許可を 2 つの ID に与えます。  
   

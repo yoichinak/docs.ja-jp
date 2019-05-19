@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: c9215d1072060c4272c7d61056d51297dd997197
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645754"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875883"
 ---
 # <a name="windows-forms-overview"></a>Windows フォームの概要
 
@@ -66,7 +66,7 @@ ms.locfileid: "65645754"
 |説明|ヘルプ トピック|
 |-----------------|----------------|
 |<xref:System.Windows.Forms.BindingSource> コンポーネントを使用する|[方法: デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインドします。](./controls/bind-wf-controls-with-the-bindingsource.md)|
-|[!INCLUDE[vstecado](../../../includes/vstecado-md.md)] データ ソースを操作する|[方法: 並べ替えとフィルター処理で ADO.NET データを Windows フォーム BindingSource コンポーネント](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|ADO.NET データ ソースの操作|[方法: 並べ替えとフィルター処理で ADO.NET データを Windows フォーム BindingSource コンポーネント](./controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |[データ ソース] ウィンドウを使用する|[Visual Studio でのデータへの Windows フォーム コントロールのバインド](/visualstudio/data-tools/bind-windows-forms-controls-to-data-in-visual-studio)|
 |アプリケーション設定を使用する|[方法: アプリケーション設定を作成します。](./advanced/how-to-create-application-settings.md)|
 

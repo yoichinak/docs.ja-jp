@@ -2,12 +2,12 @@
 title: ステート マシン ワークフロー
 ms.date: 03/30/2017
 ms.assetid: 344caacd-bf3b-4716-bd5a-eca74fc5a61d
-ms.openlocfilehash: d7f6f2686399d8eabbbc70de11697f3aca61fc8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3c6f4f815f16ec4878b9aa70bd3a69c862d7800
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665327"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876120"
 ---
 # <a name="state-machine-workflows"></a>ステート マシン ワークフロー
 ステート マシンは、プログラムの開発に関する、よく知られたパラダイムの 1 つです。 <xref:System.Activities.Statements.StateMachine> アクティビティを、<xref:System.Activities.Statements.State>、<xref:System.Activities.Statements.Transition> および他のアクティビティと共に使用することで、ステート マシン ワークフロー プログラムをビルドできます。 このトピックでは、ステート マシン ワークフローの概要について説明します。  
@@ -23,14 +23,14 @@ ms.locfileid: "64665327"
   
  ステート マシン ワークフローを作成するときは、<xref:System.Activities.Statements.StateMachine> アクティビティに状態が追加され、状態間のフローのコントロールには遷移が使用されます。 次のスクリーン ショットから、[チュートリアル入門](getting-started-tutorial.md)手順[方法。ステート マシン ワークフロー作成](how-to-create-a-state-machine-workflow.md)、3 つの状態と遷移の 3 つのステート マシン ワークフローを示しています。 **ターゲットの初期化**初期状態であり、ワークフローの最初の状態を表します。 これから伸びる線によって示されますが、**開始**ノード。 ワークフローの最終的な状態の名前は**FinalState**ワークフローが完了した時点を表しているとします。  
   
- ![完成したステート マシン ワークフロー](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")  
+ ![完成したステート マシン ワークフローを示す図。](./media/state-machine-workflows/complete-state-machine-workflow.jpg)  
   
  ステート マシン ワークフローには、初期状態が 1 つのみ、および最終状態が少なくとも 1 つ必要です。 最終状態以外の各状態には、遷移が少なくとも 1 つ必要です。 以降のセクションでは、状態および遷移の作成と構成について説明します。  
   
 ## <a name="creating-and-configuring-states"></a>状態の作成および構成  
  <xref:System.Activities.Statements.State> はステート マシンの状態を表します。 追加する、 <xref:System.Activities.Statements.State> 、ワークフローにドラッグ、**状態**からアクティビティ デザイナー、**ステート マシン**のセクション、**ツールボックス**にドロップ、 <xref:System.Activities.Statements.StateMachine>上のアクティビティ、[!INCLUDE[wfd1](../../../includes/wfd1-md.md)]画面。  
   
- ![WF4 ステート マシン アクティビティ](./media/netframework4platformupdate1statemachineactivities.jpg "NETFramework4PlatformUpdate1StateMachineActivities")  
+ ![ツールボックスの [ステート マシン] セクションのスクリーン ショット。](./media/state-machine-workflows/state-machine-section-toolbox.jpg)  
   
  状態と状態を構成する、**初期状態**で状態を右クリックし、選択**初期状態として設定**。 さらに、現在の初期状態がない場合は、初期状態として指定できますから行をドラッグして、**開始**目的の状態にワークフローの最上部にあるノード。 ときに、<xref:System.Activities.Statements.StateMachine>アクティビティがワークフロー デザイナーにドロップされる、という名前の初期状態を事前に構成されて**State1**します。 ステート マシン ワークフローには初期状態が 1 つのみ必要です。  
   

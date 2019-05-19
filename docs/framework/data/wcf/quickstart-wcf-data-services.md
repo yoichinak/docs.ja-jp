@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, quick-start example
 - WCF Data Services, Entity Data Model (EDM) service
 ms.assetid: 7b18ca1e-d4d6-4c7a-afb9-ce3cebb98a8d
-ms.openlocfilehash: f20ffcf356aa0493b1e2356746d9ad7b27d9a1aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49d11556d3703331b4cdf5bf83a69f6b15bca8ed
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876201"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881992"
 ---
 # <a name="quickstart-wcf-data-services"></a>クイック スタート (WCF Data Services)
 
@@ -34,7 +34,7 @@ ms.locfileid: "61876201"
 
  [データ サービスを作成します。](../../../../docs/framework/data/wcf/creating-the-data-service.md)
 
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーションの定義、データ モデルの定義、データ サービスの作成、およびリソースへのアクセスの有効化を行います。
+ ASP.NET アプリケーションの定義、データ モデルの定義、データ サービスの作成、およびリソースへのアクセスの有効化を行います。
 
  [Web ブラウザーからサービスへのアクセスします。](../../../../docs/framework/data/wcf/accessing-the-service-from-a-web-browser-wcf-data-services-quickstart.md)
 

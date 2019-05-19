@@ -6,12 +6,12 @@ helpviewer_keywords:
 - TableLayoutPanel control [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d474885e-12cc-4ab7-b997-2a23a643049b
-ms.openlocfilehash: 9f72d6d560f82d7d80036f07ec865d78a4ab9955
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d36c51a3346d7d2c2aa4b7b526d590770463826e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606400"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882442"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-tablelayoutpanel"></a>チュートリアル: TableLayoutPanel を使用した Windows フォーム上のコントロールの配置
 アプリケーションによっては、フォームのサイズを変更したり、コンテンツのサイズが変化したりしたときに、それに応じて自動的にレイアウトを調整するフォームが必要です。 動的なレイアウトが必要であり、かつコードで <xref:System.Windows.Forms.Control.Layout> イベントを明示的に処理しない場合は、レイアウト パネルの使用をご検討ください。  
@@ -95,7 +95,7 @@ ms.locfileid: "64606400"
   
 1. 選択、<xref:System.Windows.Forms.TableLayoutPanel>を制御、 **Windows フォーム デザイナー**します。  
   
-2. **プロパティ**開いているウィンドウ、 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 、省略記号ボタンをクリックしてコレクション (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタン次に、**列**エントリ。  
+2.  **プロパティ**開いているウィンドウ、 <xref:System.Windows.Forms.TableLayoutPanel.ColumnStyles%2A> 、省略記号ボタンをクリックしてコレクション (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) ボタンの横に、 **列**エントリ。  
   
 3. 最初の列を選択しの値を変更、<xref:System.Windows.Forms.TableLayoutStyle.SizeType%2A>プロパティを<xref:System.Windows.Forms.SizeType.AutoSize>します。 クリックして**OK**して変更を受け入れます。 最初の列の幅が合わせてに減少することに注意してください、<xref:System.Windows.Forms.Button>コントロール。 また、列の幅がサイズ変更可能でないことに注意してください。  
   

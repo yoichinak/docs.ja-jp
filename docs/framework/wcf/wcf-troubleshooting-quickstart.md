@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF [WCF], troubleshooting
 - Windows Communication Foundation [WCF], troubleshooting
 ms.assetid: a9ea7a53-f31a-46eb-806e-898e465a4992
-ms.openlocfilehash: 6d631d51cc4f40b5be91b6579039a8b8dffa3dee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53e164bfdc27d99073cc893f98f332366091a753
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613200"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881296"
 ---
 # <a name="wcf-troubleshooting-quickstart"></a>WCF トラブルシューティング クイックスタート
 このトピックでは、WCF クライアントと WCF サービスの開発時に生じるさまざまな既知の問題の一覧を示します。 発生している問題がこの一覧にない場合は、サービスに対してトレースを構成することをお勧めします。 これにより、トレース ファイル ビューアーで表示し、サービス内で発生することがある例外に関する詳細情報を取得できるトレース ファイルが生成されます。 トレースの構成の詳細についてを参照してください。[トレースの構成](../../../docs/framework/wcf/diagnostics/tracing/configuring-tracing.md)します。 トレース ファイル ビューアーの詳細についてを参照してください。[サービス トレース ビューアー ツール (SvcTraceViewer.exe)](../../../docs/framework/wcf/service-trace-viewer-tool-svctraceviewer-exe.md)します。  
@@ -194,7 +194,7 @@ public class MyServiceHost : ServiceHost
   
 <a name="BKMK_q10"></a>   
 ## <a name="what-is-the-base-address-how-does-it-relate-to-an-endpoint-address"></a>ベース アドレスについて教えてください。 エンドポイント アドレスとどのように関連していますか。  
- ベース アドレスとは、 <xref:System.ServiceModel.ServiceHost> クラスのルート アドレスです。 既定では、 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> クラスをサービス構成に追加する場合、ホストが発行するすべてのエンドポイントの Web サービス記述言語 (WSDL) は、HTTP ベース アドレスから取得され、それにメタデータ動作に提供される相対アドレスと "?wsdl" が追加されます。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] と IIS では、ベース アドレスは仮想ディレクトリに相当します。  
+ ベース アドレスとは、 <xref:System.ServiceModel.ServiceHost> クラスのルート アドレスです。 既定では、 <xref:System.ServiceModel.Description.ServiceMetadataBehavior> クラスをサービス構成に追加する場合、ホストが発行するすべてのエンドポイントの Web サービス記述言語 (WSDL) は、HTTP ベース アドレスから取得され、それにメタデータ動作に提供される相対アドレスと "?wsdl" が追加されます。 ASP.NET と IIS に精通する場合は、ベース アドレスは仮想ディレクトリと同じです。  
   
 ## <a name="sharing-a-port-between-a-service-endpoint-and-a-mex-endpoint-using-the-nettcpbinding"></a>NetTcpBinding を使用したサービス エンドポイントと MEX エンドポイント間でのポートの共有  
  サービスのベース アドレスとして net.tcp://MyServer:8080/MyService を指定して次のエンドポイントを追加します。  

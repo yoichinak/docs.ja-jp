@@ -2,12 +2,12 @@
 title: 雇用プロセス
 ms.date: 03/30/2017
 ms.assetid: d5fcacbb-c884-4b37-a5d6-02b1b8eec7b4
-ms.openlocfilehash: 87e49613214a6a608bd8e22dc9470250c90e220a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 685798ceab5e14169af6bdf16ce30a0f6548dc8c
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622478"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881900"
 ---
 # <a name="hiring-process"></a>雇用プロセス
 このサンプルでは、メッセージング アクティビティ、およびワークフロー サービスとしてホストされる 2 つのワークフローを使用して、ビジネス プロセスを実装する方法を示します。 この 2 つのワークフローは、Contoso, Inc という架空の会社の IT インフラストラクチャの一部です。  
@@ -126,7 +126,7 @@ ms.locfileid: "64622478"
 |永続的なタイマー|`ResumeRequestService` は、永続的なタイマーを使用して、求人の期間を定義します (タイムアウトになると、求人は終了します)。|ResumeRequestService|  
 |トランザクション|<xref:System.Activities.Statements.TransactionScope> は、複数のアクティビティの実行時にデータの一貫性を保つために使用されます (新しい履歴書の受信時)。|ResumeRequestService|  
 |トランザクション|カスタムの永続参加要素 (`HiringRequestPersistenceParticipant`) とカスタムの追跡参加要素 (`HistoryFileTrackingParticipant`) では、同じトランザクションを使用します。|HiringRequestService|  
-|[!INCLUDE[wf1](../../../../includes/wf1-md.md)] アプリケーションでの [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の使用|ワークフローは 2 つの [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーションからアクセスされます。|InternalClient / CareersWebSite|  
+|使用して[!INCLUDE[wf1](../../../../includes/wf1-md.md)]ASP.NET アプリケーションでします。|ワークフローは、2 つの ASP.NET アプリケーションからアクセスされます。|InternalClient / CareersWebSite|  
   
 ## <a name="data-storage"></a>データ ストレージ  
  データは、`ContosoHR` という名前の SQL Server データベースに保存されます (このデータベースを作成するためのスクリプトは `DbSetup` フォルダーにあります)。 ワークフロー インスタンスは `InstanceStore` という名前の SQL Server データベースに保存されます (インスタンス ストアを作成するためのスクリプトは [!INCLUDE[netfx_current_short](../../../../includes/netfx-current-short-md.md)] の配布に含まれています)。  

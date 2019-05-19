@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: d0ca890e384fc1f282cfbb62562090ee858bd33f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592774"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876219"
 ---
 # <a name="application-settings-architecture"></a>アプリケーション設定アーキテクチャ
 このトピックでは、アプリケーション設定アーキテクチャのしくみについて説明します。また、グループ化された設定や設定キーなど、アーキテクチャの高度な機能についても説明します。  
@@ -22,7 +22,7 @@ ms.locfileid: "65592774"
  アプリケーションでカスタム コンポーネントがホストされているときに、そのコンポーネントの独自の設定を永続化できるようにするインターフェイスが提供されます。 設定キーを使用することで、各コンポーネントはそのコンポーネントの複数のインスタンスの設定を区別できます。  
   
 ## <a name="defining-settings"></a>設定の定義  
- アプリケーション設定アーキテクチャは、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 内と Windows フォーム内で使用されます。アーキテクチャには、この両方の環境で共有される多数の基本クラスが含まれます。 最も重要なの<xref:System.Configuration.SettingsBase>のコレクションを介して設定にアクセスと低レベルのメソッドの読み込みと保存の設定を提供します。 各環境から派生した独自のクラスを実装する<xref:System.Configuration.SettingsBase>その環境の追加の設定機能を提供します。 派生したクラスで Windows フォーム ベースのアプリケーションでは、すべてのアプリケーション設定を定義する必要があります、<xref:System.Configuration.ApplicationSettingsBase>クラスは、基底クラスに次の機能を追加します。  
+ アプリケーション設定アーキテクチャは ASP.NET および Windows フォームでは、内部で使用され、多数両方の環境間で共有される基本クラスにはが含まれています。 最も重要なの<xref:System.Configuration.SettingsBase>のコレクションを介して設定にアクセスと低レベルのメソッドの読み込みと保存の設定を提供します。 各環境から派生した独自のクラスを実装する<xref:System.Configuration.SettingsBase>その環境の追加の設定機能を提供します。 派生したクラスで Windows フォーム ベースのアプリケーションでは、すべてのアプリケーション設定を定義する必要があります、<xref:System.Configuration.ApplicationSettingsBase>クラスは、基底クラスに次の機能を追加します。  
   
 - 上位レベルの読み込み操作と保存操作  
   

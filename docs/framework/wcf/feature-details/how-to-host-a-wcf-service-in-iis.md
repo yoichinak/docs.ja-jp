@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: b044b1c9-c1e5-4c9f-84d8-0f02f4537f8b
-ms.openlocfilehash: f106ce1bca67f8b88df0835496eea0b3297ac946
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9ff82d58f08d8c040984b37422a7048b9d4361d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000832"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878635"
 ---
 # <a name="how-to-host-a-wcf-service-in-iis"></a>方法: IIS で WCF サービスをホストする
 このトピックでは、インターネット インフォメーション サービス (IIS) でホストされている Windows Communication Foundation (WCF) サービスを作成するために必要な基本的な手順について説明します。 このトピックは、IIS に関する知識があり、IIS 管理ツールを使用して IIS アプリケーションを作成および管理する方法を理解していることを前提としています。 IIS の詳細については、次を参照してください。[インターネット インフォメーション サービス](https://go.microsoft.com/fwlink/?LinkId=132449)します。 IIS 環境での実行がプロセスのリサイクルなどの IIS 機能を最大限に活用する WCF サービスはアイドル シャット ダウン、処理状況の監視、およびメッセージ ベースのアクティブ化します。 このホスト オプションでは、IIS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 IIS ホストは、HTTP トランスポートでのみ使用できます。  
   
- 方法の詳細についての WCF と[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]操作は、「 [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)します。 セキュリティの構成の詳細については、次を参照してください。[セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)します。  
+ WCF と ASP.NET の対話方法の詳細については、次を参照してください。 [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)します。 セキュリティの構成の詳細については、次を参照してください。[セキュリティ](../../../../docs/framework/wcf/feature-details/security.md)します。  
   
  この例のソースのコピーを次を参照してください。 [IIS は、インラインのコードを使用してホスト](../../../../docs/framework/wcf/samples/iis-hosting-using-inline-code.md)します。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "62000832"
   
 1. コンピューターに IIS がインストールされ、実行されていることを確認します。 インストールと IIS の構成の詳細については、次を参照してください[のインストールと IIS 7.0 の構成。](https://go.microsoft.com/fwlink/?LinkID=132128)  
   
-2. アプリケーション ファイル用に "IISHostedCalcService" という新しいフォルダーを作成し、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] がそのフォルダーの内容にアクセスできることを確認します。次に、IIS 管理ツールを使用して、このアプリケーション ディレクトリに物理的に配置する新しい IIS アプリケーションを作成します。 アプリケーション ディレクトリのエイリアスを作成する場合は、"IISHostedCalc" を使用します。  
+2. "Iishostedcalcservice"アプリケーション ファイル用に新しいフォルダーを作成、ASP.NET には、フォルダーの内容にアクセスすることを確認および、IIS 管理ツールを使用して、このアプリケーション ディレクトリに物理的にある新しい IIS アプリケーションを作成します。 アプリケーション ディレクトリのエイリアスを作成する場合は、"IISHostedCalc" を使用します。  
   
 3. "service.svc" という新しいファイルをアプリケーション ディレクトリに作成します。 次を追加してこのファイルを編集@ServiceHost要素。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - data formats
 - data [Windows Forms], setting formats
 ms.assetid: fc6da49f-8942-41da-b49f-b2afc38cc656
-ms.openlocfilehash: 8939a182032cfac1beac6c1e5cb3c9de9792114c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7babc0918f5e8a7b4561d99bcfcfc9d7bdf9fb69
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011373"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878787"
 ---
 # <a name="how-to-set-default-cell-styles-and-data-formats-for-the-windows-forms-datagridview-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム DataGridView コントロールの既定のセル スタイルとデータ形式を設定する
 <xref:System.Windows.Forms.DataGridView>コントロールを使用する既定のセル スタイルを指定し、コントロール全体の特定の列、行および列のヘッダーおおよび台帳効果を作成する行を交互のデータ形式します。 既定のスタイルのコントロール全体の設定は、既定の列と交互の行のスタイル設定によって上書きされます。 さらに、個々 の行とセルのコードに設定するスタイルは、既定のスタイルをオーバーライドします。  
@@ -30,7 +30,7 @@ ms.locfileid: "62011373"
   
 1. 選択、<xref:System.Windows.Forms.DataGridView>デザイナーでコントロールできます。  
   
-2. **プロパティ**ウィンドウで、省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横に、 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>、 <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>、または<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>プロパティ。 **[CellStyle ビルダー** ] ダイアログ ボックスが表示されます。  
+2.  **プロパティ**ウィンドウで、省略記号ボタンをクリックします (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) 横に、 <xref:System.Windows.Forms.DataGridView.DefaultCellStyle%2A>、 <xref:System.Windows.Forms.DataGridView.ColumnHeadersDefaultCellStyle%2A>、または<xref:System.Windows.Forms.DataGridView.RowHeadersDefaultCellStyle%2A>プロパティ。 **[CellStyle ビルダー** ] ダイアログ ボックスが表示されます。  
   
 3. 使用して、プロパティを設定してスタイルを定義、**プレビュー**ウィンドウで選択内容を確認します。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "62011373"
   
 2. 列を選択、**選択した列**一覧。  
   
-3. **列プロパティ**グリッドで、省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横に、<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>プロパティ。 **[CellStyle ビルダー** ] ダイアログ ボックスが表示されます。  
+3.  **列プロパティ**グリッドで、省略記号ボタンをクリックします (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) 横に、<xref:System.Windows.Forms.DataGridViewColumn.DefaultCellStyle%2A>プロパティ。 **[CellStyle ビルダー** ] ダイアログ ボックスが表示されます。  
   
 4. 使用して、プロパティを設定してスタイルを定義、**プレビュー**ウィンドウで選択内容を確認します。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "62011373"
   
 1. 表示する前の手順のいずれかを使用して、 **[CellStyle ビルダー** ] ダイアログ ボックスに関連する既定のセル スタイル プロパティ。  
   
-2. **[CellStyle ビルダー** ] ダイアログ ボックスで、省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横に、 <xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>プロパティ。 **書式指定文字列** ダイアログ ボックスが表示されます。  
+2.  **[CellStyle ビルダー** ] ダイアログ ボックスで、省略記号ボタンをクリックします (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) 横に、<xref:System.Windows.Forms.DataGridViewCellStyle.Format%2A>プロパティ。 **書式指定文字列** ダイアログ ボックスが表示されます。  
   
 3. 形式の種類を選択し、表示する小数点以下桁数の数) などの型の詳細の変更を使用して、**サンプル**ボックス選択内容を確認します。  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF Data Services, configuring
 - WCF Data Services, Windows Communication Foundation
 ms.assetid: b48f42ce-22ce-4f8d-8f0d-f7ddac9125ee
-ms.openlocfilehash: 4886103f7f0246eaacd12c3f12d50a055e650959
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: c240a76ea54d57456ff13fee7a48981354f669de
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582672"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881271"
 ---
 # <a name="hosting-the-data-service-wcf-data-services"></a>データ サービスのホスティング (WCF Data Services)
 WCF Data Services を使用すると、データとして公開するサービスを作成することができます、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]フィードします。 このデータ サービスは、<xref:System.Data.Services.DataService%601> から継承されたクラスとして定義されます。 このクラスは、要求メッセージの処理で、データ ソースに対して更新プログラムを実行し、OData に必要なの応答メッセージの生成に必要な機能を提供します。 ただし、データ サービスにバインドし、ネットワーク ソケットの受信 HTTP 要求をリッスンできません。 この機能要件のため、データ サービスはホスティング コンポーネントに依存します。
@@ -28,9 +28,9 @@ WCF Data Services を使用すると、データとして公開するサービ�
 
 - データ サービスに代わって応答を送信する。
 
- データ サービスのホスティングを簡素化するには、WCF Data Services は、Windows Communication Foundation (WCF) を統合する設計されています。 データ サービスでデータ サービス ホストとして機能する既定の WCF 実装を提供する、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーション。 そのため、次のいずれかの方法でデータ サービスをホストできます。
+ データ サービスのホスティングを簡素化するには、WCF Data Services は、Windows Communication Foundation (WCF) を統合する設計されています。 データ サービスでは、ASP.NET アプリケーションでデータ サービス ホストとして機能する既定の WCF 実装を提供します。 そのため、次のいずれかの方法でデータ サービスをホストできます。
 
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーション
+- ASP.NET アプリケーション。
 
 - 自己ホスト型 WCF サービスをサポートするマネージ アプリケーション
 
@@ -55,12 +55,12 @@ WCF Data Services を使用すると、データとして公開するサービ�
  [!code-csharp[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/csharp/VS_Snippets_Misc/astoria_quickstart_service/cs/northwind.svc.cs#servicedefinition)]
  [!code-vb[Astoria Quickstart Service#ServiceDefinition](../../../../samples/snippets/visualbasic/VS_Snippets_Misc/astoria_quickstart_service/vb/northwind.svc.vb#servicedefinition)]
 
- データ サービスは WCF サービスと同様に動作するため、データ サービスは [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] と統合され、WCF Web プログラミング モデルに従います。 詳細については、次を参照してください。 [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)と[WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)します。
+ WCF サービスと同様に、データ サービスが動作するので、データ サービスと ASP.NET の統合し、WCF Web プログラミング モデルに従います。 詳細については、次を参照してください。 [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)と[WCF Web HTTP プログラミング モデル](../../../../docs/framework/wcf/feature-details/wcf-web-http-programming-model.md)します。
 
 ## <a name="self-hosted-wcf-services"></a>自己ホスト型 WCF サービス
  WCF 実装が組み込まれて、ために、WCF Data Services は WCF サービスとしてデータ サービスを自己ホストをサポートします。 サービスは、コンソール アプリケーションなど、任意の .NET Framework アプリケーションで自己ホスト型にすることはできます。 <xref:System.Data.Services.DataServiceHost> を継承する <xref:System.ServiceModel.Web.WebServiceHost> クラスを使用して、特定のアドレスでデータ サービスをインスタンス化します。
 
- 自己ホストを使用するとサービスの配置とトラブルシューティングが容易になるので、開発時やテスト時に役立ちます。 ただし、この種類のホスティングでは、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] またはインターネット インフォメーション サービス (IIS) に備わっている高度なホスト機能や管理機能を使用できません。 詳細については、次を参照してください。[マネージ アプリケーションでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)します。
+ 自己ホストを使用するとサービスの配置とトラブルシューティングが容易になるので、開発時やテスト時に役立ちます。 ただし、この種類のホスティングは、高度なホストと ASP.NET によって、またはインターネット インフォメーション サービス (IIS) によって提供される管理機能は提供されません。 詳細については、次を参照してください。[マネージ アプリケーションでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-a-managed-application.md)します。
 
 ## <a name="defining-a-custom-data-service-host"></a>カスタム データ サービス ホストの定義
  WCF ホストの実装の制限が厳格すぎる場合、データ サービスのカスタム ホストを定義することもできます。 <xref:System.Data.Services.IDataServiceHost> インターフェイスを実装する任意のクラスをデータ サービスのネットワーク ホストとして使用できます。 カスタム ホストは、<xref:System.Data.Services.IDataServiceHost> インターフェイスを実装し、データ サービス ホストの次の基本的な役割を果たすことができるようにする必要があります。

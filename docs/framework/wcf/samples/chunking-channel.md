@@ -2,12 +2,12 @@
 title: チャネルのチャンキング
 ms.date: 03/30/2017
 ms.assetid: e4d53379-b37c-4b19-8726-9cc914d5d39f
-ms.openlocfilehash: 4640135ec693233017bf38548a9b1684d941ff50
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1714b58d290b3dd85e105c60399dabe6c107b50b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626008"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878557"
 ---
 # <a name="chunking-channel"></a>チャネルのチャンキング
 Windows Communication Foundation (WCF) を使用してサイズの大きいメッセージを送信するときに、それらのメッセージをバッファーに使用されるメモリの量を制限することが望ましいは多くの場合。 解決策の 1 つとして、メッセージ本文のストリーミングが考えられます (データの大部分が本文にある場合)。 ただし、一部のプロトコルではメッセージ全体のバッファが必要です。 たとえば、信頼できるメッセージとセキュリティの 2 つがこの例として挙げられます。 そこで別の解決策として、サイズの大きいメッセージをチャンクと呼ばれるサイズの小さいメッセージに分割し、そうしたチャンクを 1 つずつ送信し、受信側でサイズの大きいメッセージに再構成するという方法が考えられます。 アプリケーション自体でこうしたチャンキングおよびチャンキング解除を行うことができるほか、カスタム チャネルを使用して行うこともできます。 チャネルのチャンキングのサンプルでは、カスタム プロトコル チャネルまたはカスタム階層チャネルを使用して、サイズの大きい任意のメッセージのチャンキングおよびチャンキング解除を行う方法を示します。  
@@ -309,7 +309,7 @@ interface ITestService
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. 次のコマンドを使用して、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 をインストールします。  
+1. 次のコマンドを使用して ASP.NET 4.0 をインストールします。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

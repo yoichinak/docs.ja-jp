@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c321cbf9-8c05-4cce-b5a5-4bf7b230ee03
-ms.openlocfilehash: 8a1267f020f512e366e59eb5d0c6383d97186412
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b9345de7961689e15e60c6bf2d1916c8c8d56ba3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664886"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876780"
 ---
 # <a name="message-security-anonymous"></a>メッセージ セキュリティ匿名
 メッセージ セキュリティ匿名サンプルは、Windows Communication Foundation (WCF) アプリケーションを実装するクライアント認証なしでメッセージ レベルのセキュリティを使用するが、サーバーの X.509 を使用して、サーバー認証を必要とする方法を示します証明書。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 このサンプルがに基づいて、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)サンプル。 このサンプルは、クライアント コンソール プログラム (.exe) と、インターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリ (.dll) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。
@@ -174,7 +174,7 @@ Press <ENTER> to terminate client.
 
 - 証明書の秘密キーに関する権限の付与。
 
-     Setup.bat バッチ ファイルの次の行は、LocalMachine ストアに保存されたサーバー証明書を [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ワーカー プロセス アカウントでアクセスできるようにします。
+     Setup.bat バッチ ファイルで次の行では、ASP.NET ワーカー プロセス アカウントにアクセスできる、LocalMachine ストアに格納されているサーバーの証明書を作成します。
 
     ```bat
     echo ************

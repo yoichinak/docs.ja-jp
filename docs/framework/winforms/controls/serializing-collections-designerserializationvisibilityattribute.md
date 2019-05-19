@@ -11,12 +11,12 @@ helpviewer_keywords:
 - collections [Windows Forms], serializing
 - collections [Windows Forms], standard types
 ms.assetid: 020c9df4-fdc5-4dae-815a-963ecae5668c
-ms.openlocfilehash: c8321f98b25026e32e7c69f7029f2c589d0567f7
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 1f1412f03f912c0142b08d5ad8581e421252cfb3
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211597"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882354"
 ---
 # <a name="walkthrough-serializing-collections-of-standard-types-with-the-designerserializationvisibilityattribute"></a>チュートリアル: DesignerSerializationVisibilityAttribute を使用した、標準データ型のコレクションのシリアル化
 
@@ -66,7 +66,7 @@ ms.locfileid: "65211597"
 
 8. キーを押して**F5**プロジェクトをビルドしでコントロールを実行する、 **UserControl Test Container**します。
 
-9. 検索、`Strings`プロパティ、<xref:System.Windows.Forms.PropertyGrid>の**UserControl Test Container**します。 をクリックして、`Strings`プロパティ、省略記号をクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、 **の文字列コレクションエディター**.
+9. 検索、`Strings`プロパティ、<xref:System.Windows.Forms.PropertyGrid>の**UserControl Test Container**します。 をクリックして、`Strings`プロパティ、省略記号をクリックして (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) ボタンをクリックする、**文字列コレクション エディター**します。
 
 10. 内のいくつかの文字列を入力、**文字列コレクション エディター**します。 キーを押して区切ります、 **Enter**各文字列の末尾にあるキー。 クリックして**OK**文字列の入力が完了したら。
 
@@ -85,7 +85,7 @@ ms.locfileid: "65211597"
 
 3. 場所、`SerializationDemoControl`フォームにします。
 
-4. 検索、`Strings`プロパティ、**プロパティ**ウィンドウ。 をクリックして、`Strings`プロパティ、省略記号をクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックする、 **の文字列コレクションエディター**.
+4. 検索、`Strings`プロパティ、**プロパティ**ウィンドウ。 をクリックして、`Strings`プロパティ、省略記号をクリックして (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) ボタンをクリックする、**文字列コレクション エディター**します。
 
 5. 内のいくつかの文字列を入力、**文字列コレクション エディター**します。 各文字列の最後に ENTER キーを押すで区切ります。 クリックして**OK**文字列の入力が完了したら。
 

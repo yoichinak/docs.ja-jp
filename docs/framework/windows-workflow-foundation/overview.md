@@ -2,12 +2,12 @@
 title: Windows Workflow の概要
 ms.date: 03/30/2017
 ms.assetid: fc44adbe-1412-49ae-81af-0298be44aae6
-ms.openlocfilehash: bb714e5e5e4c1fe009ffa775efb456ebcc65c218
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 285ab75f7f67bbb9ffa18367eff126c04227f193
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592558"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876148"
 ---
 # <a name="windows-workflow-overview"></a>Windows Workflow の概要
 ワークフローは、一連の要素の単位と呼ばれる*アクティビティ*実際のプロセスを記述するモデルとして保存されています。 ワークフローでは、短期間だけ行われる業務や長期間にわたって行われる業務の各部分の実行順序と、それらの間の依存関係を表すことができます。 このような業務はモデルの最初から最後まで通して行われます。アクティビティには、人間によって実行されるものと、システム機能によって実行されるものがあります。  
@@ -23,7 +23,7 @@ ms.locfileid: "64592558"
   
  これらの各クラスは、アクティビティの実行に関与する <xref:System.Activities.ActivityInstance> として表されるコアのアクティビティ ランタイムをラップします。 実行するアプリケーション ドメイン内では、同時に複数の <xref:System.Activities.ActivityInstance> オブジェクトを使用できます。  
   
- 前述のホストと対話する 3 つのオブジェクトは、それぞれワークフロー プログラムと呼ばれるアクティビティのツリーから作成されます。 これらの型またはラップするカスタム ホストを使用して<xref:System.Activities.ActivityInstance>、ワークフロー コンソール アプリケーションを含む任意の Windows プロセス内で実行できるフォーム ベースのアプリケーション、Windows サービス、 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web サイト、および Windows Communication Foundation (WCF) サービス。  
+ 前述のホストと対話する 3 つのオブジェクトは、それぞれワークフロー プログラムと呼ばれるアクティビティのツリーから作成されます。 これらの型またはラップするカスタム ホストを使用して<xref:System.Activities.ActivityInstance>、コンソール アプリケーション、フォーム ベースのアプリケーション、Windows サービス、ASP.NET Web サイト、および Windows Communication Foundation (WCF) を含む任意の Windows プロセス内でワークフローを実行することができますサービス。  
   
  ![ホスト プロセス内のワークフロー コンポーネント](./media/44c79d1d-178b-4487-87ed-3e33015a3842.gif "44c79d1d-178b-4487-87ed-3e33015a3842")  
 ホスト プロセス内のワークフローのコンポーネント  

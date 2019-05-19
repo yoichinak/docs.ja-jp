@@ -10,16 +10,17 @@ helpviewer_keywords:
 - DataGrid control [Windows Forms], data binding
 - cells [Windows Forms], changing DataGrid cell values
 ms.assetid: 0c7a6d00-30de-416e-8223-0a81ddb4c1f8
-ms.openlocfilehash: 60ba1e9304320346d505f3f73e1ba93ff6edab63
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3217680a2bab43124b75529bead97ffcfbb06aea
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961656"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882134"
 ---
 # <a name="how-to-change-displayed-data-at-run-time-in-the-windows-forms-datagrid-control"></a>方法: Windows フォーム DataGrid コントロールに表示されるデータを実行時に変更する
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  
+  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
  Windows フォームを作成した後<xref:System.Windows.Forms.DataGrid>デザイン時機能を使用することも考えの要素を動的に変更する、<xref:System.Data.DataSet>実行時にグリッドのオブジェクト。 これは、テーブルのいずれかの個別の値の変更を含めることができますかにバインドされているデータ ソースを変更する、<xref:System.Windows.Forms.DataGrid>コントロール。 個々 の値への変更が完了したら、<xref:System.Data.DataSet>オブジェクトは、<xref:System.Windows.Forms.DataGrid>コントロール。  
   
@@ -64,13 +65,13 @@ ms.locfileid: "61961656"
        gcnew System::EventHandler(this, &Form1::button1_Click);  
     ```  
   
-     実行時に使用することができます、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>にバインドするメソッド、<xref:System.Windows.Forms.DataGrid>別のデータ ソースを制御します。 たとえば、いくつかする必要があります[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]データ コントロールでは、それぞれ別のデータベースに接続します。  
+     実行時に使用することができます、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>にバインドするメソッド、<xref:System.Windows.Forms.DataGrid>別のデータ ソースを制御します。 たとえば、いくつかの ADO.NET データ コントロールをそれぞれ別のデータベースに接続できます。  
   
 ### <a name="to-change-the-datasource-programmatically"></a>データ ソースをプログラムで変更するには  
   
 1. 設定、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドをデータ ソースにバインドするテーブルの名前。  
   
-     次の例は、日付を使用してソースを変更する方法を示します、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドを[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]Pubs データベースの Authors テーブルに接続されているデータ コントロール (adoPubsAuthors)。  
+     次の例は、日付を使用してソースを変更する方法を示します、<xref:System.Windows.Forms.DataGrid.SetDataBinding%2A>メソッドを Pubs データベースの Authors テーブルに接続されている、ADO.NET データ コントロール (adoPubsAuthors)。  
   
     ```vb  
     Private Sub ResetSource()  

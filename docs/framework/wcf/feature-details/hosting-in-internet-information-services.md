@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: 4d522fb377fd117800ef4d7d754d513a3d919a35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656045"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877503"
 ---
 # <a name="hosting-in-internet-information-services"></a>インターネット インフォメーション サービスでのホスティング
-Windows Communication Foundation (WCF) サービスをホストするための 1 つは、インターネット インフォメーション サービス (IIS) アプリケーション内でです。 このホスティング モデルは、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] や ASP.NET Web サービス (ASMX) が使用するモデルと似ています。  
+Windows Communication Foundation (WCF) サービスをホストするための 1 つは、インターネット インフォメーション サービス (IIS) アプリケーション内でです。 このホスティング モデルは、ASP.NET と ASP.NET Web サービス (ASMX) Web サービスによって使用されるモデルに似ています。  
   
 ## <a name="versions-of-iis"></a>IIS バージョン  
  WCF は、次のオペレーティング システムで次のバージョンの IIS でホストできます。  
@@ -28,11 +28,11 @@ Windows Communication Foundation (WCF) サービスをホストするための 1
 ## <a name="benefits-of-iis-hosting"></a>IIS ホスティングの利点  
  IIS で WCF サービスをホストすると、いくつかの利点があります。  
   
-- IIS でホストされる WCF サービスを展開し、IIS のアプリケーションの他の任意の型と同様に管理を含む[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーションや ASMX します。  
+- IIS でホストされる WCF サービスが展開されているし、IIS のアプリケーション、ASP.NET アプリケーションや ASMX などの他の任意の型と同様に管理します。  
   
 - IIS はプロセスのアクティブ化、状態管理、リサイクル機能を提供し、ホストされるアプリケーションの信頼性を向上します。  
   
-- ような[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]でホストされる WCF サービス[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]活用できるため、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]改良されたサーバー密度とスケーラビリティのための共通のワーカー プロセスで複数のアプリケーションが存在する共有のホスティング モデル。  
+- ASP.NET のように ASP.NET でホストされる WCF サービスを利用できます ASP.NET の共有ホスティング モデルの改良されたサーバー密度とスケーラビリティのための共通のワーカー プロセスで複数のアプリケーションが存在します。  
   
 - IIS でホストされる WCF サービスと同様の動的なコンパイル モデルを使用して、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]の展開には、サービスがホストされている、開発が簡単になります。  
   
@@ -43,7 +43,7 @@ Windows Communication Foundation (WCF) サービスをホストするための 1
   
 - ある IIS、ASP.NET、WCF、および WCF HTTP アクティブ化コンポーネントが正しくインストールされ、登録されていることを確認します。  
   
-- 新しい IIS アプリケーションを作成するか、既存の [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アプリケーションを再利用します。  
+- 新しい IIS アプリケーションを作成または既存の ASP.NET アプリケーションを再利用します。  
   
 - WCF サービスの .svc ファイルを作成します。  
   
@@ -54,7 +54,7 @@ Windows Communication Foundation (WCF) サービスをホストするための 1
  これらの各タスクの詳細については、次を参照してください。[インターネット WCF サービスの展開](../../../../docs/framework/wcf/feature-details/deploying-an-internet-information-services-hosted-wcf-service.md)します。  
   
 ## <a name="wcf-services-and-aspnet"></a>WCF サービスと ASP.NET  
- WCF サービスは、いずれかのサイドでホストされている[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]または[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互換モードのサービスがによって提供される機能の活用をかかることができます、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web アプリケーション プラットフォームです。 これらの機能の詳細については、次を参照してください。 [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)します。  
+ WCF サービスは、いずれかのサイド ASP.NET を使用した、またはサービスが、ASP.NET Web アプリケーション プラットフォームで提供される機能の活用を実行できる ASP.NET 互換モードでホストされています。 これらの機能の詳細については、次を参照してください。 [WCF サービスと ASP.NET](../../../../docs/framework/wcf/feature-details/wcf-services-and-aspnet.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

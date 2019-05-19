@@ -2,15 +2,15 @@
 title: LINQ to ADO.NET (ポータル ページ)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 63e9c1795f8a4ee50977af6ec32b945a6e5c79be
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7713d134650305c4e2d930a43c8b443b86448786
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663695"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882532"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (ポータル ページ)
-[!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] では、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] プログラミング モデルを使用して [!INCLUDE[vstecado](~/includes/vstecado-md.md)] 内の列挙可能なオブジェクトに対してクエリを実行できます。  
+[!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] 使用して ADO.NET での列挙可能なオブジェクトに対してクエリを実行することができます、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]プログラミング モデル。  
   
 > [!NOTE]
 >  [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] のドキュメントは、.NET Framework SDK の ADO.NET のセクションにあります:「[LINQ と ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)」。
@@ -18,7 +18,7 @@ ms.locfileid: "61663695"
  ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] には、[!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、および [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] の 3 つのテクノロジがあります。 [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] は、<xref:System.Data.DataSet> に対する高度で最適化されたクエリの実行を可能にします。一方、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] は、SQL Server データベース スキーマに対して直接クエリを実行できるようにします。また、[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] は、[!INCLUDE[adonet_edm](~/includes/adonet-edm-md.md)] をクエリできるようにします。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- <xref:System.Data.DataSet> は、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] で最も幅広く使用されているコンポーネントの 1 つであり、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] の基礎である非接続型プログラミングの重要な要素です。 こうした突出した特長がある反面、<xref:System.Data.DataSet> のクエリ機能には制限もあります。  
+ <xref:System.Data.DataSet> ADO.NET がビルドされた非接続型プログラミング モデルの重要な要素で、ADO.NET では、最も広く使用されているコンポーネントの 1 つです。 こうした突出した特長がある反面、<xref:System.Data.DataSet> のクエリ機能には制限もあります。  
   
  [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] では、他の多くのデータ ソースで使用できるのと同じクエリ機能を使用することで、豊富なクエリ機能を <xref:System.Data.DataSet> に組み込むことができます。  
   

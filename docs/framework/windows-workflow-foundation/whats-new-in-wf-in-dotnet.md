@@ -2,12 +2,12 @@
 title: .NET 4.5 での Windows Workflow Foundation の新機能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: a76ec56cf6ac5260f00031bc815b32b1e10804a4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61671419"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876642"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 での Windows Workflow Foundation の新機能
 
@@ -118,7 +118,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 変数デザイナーと引数デザイナーのコンテキスト メニューを次のスクリーンショットに示しています。
 
-![変数と引数デザイナーのコンテキスト メニュー](./media/designercontextmenu.png "DesignerContextMenu")
+![変数/引数デザイナーのコンテキスト メニュー](./media/whats-new-in-wf-in-dotnet/designer-context-menu.png)
 
 ### <a name="BKMK_AutoSurround"></a> シーケンスによる自動囲い
 
@@ -126,11 +126,11 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 次のスクリーンショットは、`WriteLine` の `Body` 内の `NoPersistScope` アクティビティを示しています。
 
-![自動&#45;格納場所を囲む](./media/autosurround1.png "AutoSurround1")
+![NoPersistScope アクティビティの本体で WriteLine アクティビティ。](./media/whats-new-in-wf-in-dotnet/auto-surround-write-line-activity.png)
 
 次のスクリーンショットは、2 つ目の `WriteLine` を 1 つ目の下にドロップしたときに `Body` 内に自動的に作成された `Sequence` アクティビティを示しています。
 
-![自動的に作成された sequence アクティビティ](./media/autosurround2.png "AutoSurround2")
+![NoPersistScope の本文に、自動的に作成されたシーケンス。](./media/whats-new-in-wf-in-dotnet/auto-surround-sequence-activity.png)
 
 ### <a name="BKMK_PanMode"></a> パン モード
 
@@ -138,7 +138,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 次のスクリーンショットは、ワークフロー デザイナーの右下隅にあるパン ボタンを示しています。
 
-![ワークフロー デザイナーでのパン ボタン](./media/panbutton.png "PanButton")
+![ワークフロー デザイナーで強調表示されている [パン] ボタン。](./media/whats-new-in-wf-in-dotnet/pan-button-workflow-designer.png)
 
 マウスの中央ボタンまたは Space キーを使用して、ワークフロー デザイナーをパンすることもできます。
 
@@ -154,7 +154,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 完成したワークフローの次のスクリーン ショット、[チュートリアル入門](getting-started-tutorial.md)シーケンシャル ワークフローでのアウトライン ビューを示しています。
 
-![ワークフロー デザイナーでビューをアウトライン](./media/outlineviewinworkflowdesigner.jpg "OutlineViewinWorkflowDesigner")
+![Visual Studio でのシーケンシャル ワークフローでのアウトライン ビューのスクリーン ショット。](./media/whats-new-in-wf-in-dotnet/outline-view-in-workflow-designer.jpg)
 
 ### <a name="BKMK_CSharpExpressions"></a> C# の式
 
@@ -174,17 +174,17 @@ C# の式の詳細については、次を参照してください。 [C# 式](c
 
 次のスクリーンショットは、アクティビティがツールボックスからドラッグされるときに表示されるアタッチ ポイントを示します。
 
-![自動接続ポイントを示すフローチャートの開始ノード](./media/autoconnect1.png "Autoconnect1")
+![フローチャートの開始ノードが表示された自動接続ポイント](./media/whats-new-in-wf-in-dotnet/auto-connect-points-start-node.png)
 
 アクティビティは、フローチャート ノードと状態の間の接続にドラッグすることで、その他 2 つのノード間にノードを自動挿入することもできます。 次のスクリーンショットは、アクティビティをツールボックスからドラッグ アンド ドロップできる、強調表示された接続線を示しています。
 
-![自動&#45;アクティビティをドロップするためのハンドルを挿入](./media/autoinsert.png "自動")
+![アクティビティをドロップするための自動挿入ハンドル](./media/whats-new-in-wf-in-dotnet/auto-insert-connecting-line.png)
 
 ### <a name="BKMK_Annotations"></a> デザイナー注釈
 
 より大規模なワークフローの開発を容易にするため、デザイン プロセスを追跡できるよう注釈の追加がサポートされるようになりました。 注釈は、アクティビティ、状態、フローチャート ノード、変数、および引数に追加できます。 次のスクリーンショットは、デザイナーに注釈を追加するためのコンテキスト メニューを示しています。
 
-![注釈コンテキスト メニュー](./media/annotationdialog.png "annotationdialog")
+![注釈を追加するためのメニューを示すスクリーン ショット。](./media/whats-new-in-wf-in-dotnet/designer-annotations-context-menu.png)
 
 ### <a name="debugging-states"></a>デバッグ状態
 
@@ -232,7 +232,7 @@ C# の式の詳細については、次を参照してください。 [C# 式](c
 
 次のスクリーン ショットから完成したステート マシン ワークフローを示しています、[チュートリアル入門](getting-started-tutorial.md)手順[方法。ステート マシン ワークフロー作成](how-to-create-a-state-machine-workflow.md)です。
 
-![完成したステート マシン ワークフロー](./media/wfstatemachinegettingstartedtutorialcomplete.JPG "WFStateMachineGettingStartedTutorialComplete")
+![完成したステート マシン ワークフローを示す図。](./media/whats-new-in-wf-in-dotnet/complete-state-machine-workflow.jpg)
 
 ステート マシン ワークフローを作成する方法の詳細については、次を参照してください。[ステート マシン ワークフロー](state-machine-workflows.md)します。
 

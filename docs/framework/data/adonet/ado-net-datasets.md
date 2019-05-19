@@ -2,15 +2,15 @@
 title: ADO.NET データセット
 ms.date: 03/30/2017
 ms.assetid: 82b641bb-6001-4512-bf1a-2830acdd92ab
-ms.openlocfilehash: 50e8e8f5e4b3ee2f5a41cb9dad11b5e701135d9e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 29aba76731c4170c8af3c913a06e78e89ce3a08d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607586"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877222"
 ---
 # <a name="adonet-datasets"></a>ADO.NET データセット
-<xref:System.Data.DataSet> オブジェクトは、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] で非接続型分散データ シナリオをサポートするうえで中心的な役割を果たします。 **データセット**データ ソースに関係なく一貫したリレーショナル プログラミング モデルを提供するデータのメモリ常駐型の表現です。 複数の異なるデータ ソースや XML データと組み合わせて使用でき、アプリケーションにとってローカルなデータの管理にも使用できます。 **データセット**関連テーブル、制約、およびテーブル間のリレーションシップを含む、データの完全なセットを表します。 次の図は、**データセット**オブジェクト モデルです。  
+<xref:System.Data.DataSet>オブジェクトは、切断されているサポートの中心となる分散データ シナリオ ADO.NET をします。 **データセット**データ ソースに関係なく一貫したリレーショナル プログラミング モデルを提供するデータのメモリ常駐型の表現です。 複数の異なるデータ ソースや XML データと組み合わせて使用でき、アプリケーションにとってローカルなデータの管理にも使用できます。 **データセット**関連テーブル、制約、およびテーブル間のリレーションシップを含む、データの完全なセットを表します。 次の図は、**データセット**オブジェクト モデルです。  
   
  ![ADO.Net グラフィック](../../../../docs/framework/data/adonet/media/ado-1-bpuedev11.png "ado_1_bpuedev11")  
 DataSet オブジェクト モデル  
@@ -20,7 +20,7 @@ DataSet オブジェクト モデル
  **データセット**も永続化および XML としてその内容とそのスキーマを XML スキーマ定義言語 (XSD) スキーマとしてを再読み込みできます。 詳しくは、「[DataSet での XML の使用](../../../../docs/framework/data/adonet/dataset-datatable-dataview/using-xml-in-a-dataset.md)」を参照してください。  
   
 ## <a name="the-datatablecollection"></a>DataTableCollection  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] **データセット**によって表現される 0 個以上のテーブルのコレクションを含む<xref:System.Data.DataTable>オブジェクト。 <xref:System.Data.DataTableCollection>すべてが含まれています、 **DataTable**内のオブジェクトを**データセット**します。  
+ ADO.NET**データセット**によって表現される 0 個以上のテーブルのコレクションを含む<xref:System.Data.DataTable>オブジェクト。 <xref:System.Data.DataTableCollection>すべてが含まれています、 **DataTable**内のオブジェクトを**データセット**します。  
   
  A **DataTable**で定義されている、<xref:System.Data>名前空間、メモリ常駐データの 1 つのテーブルを表します。 このテーブルには、共にテーブルのスキーマを定義する <xref:System.Data.DataColumnCollection> で表現される列と <xref:System.Data.ConstraintCollection> で表現される制約のコレクションが含まれます。 A **DataTable**もによって表される行のコレクションを含む、<xref:System.Data.DataRowCollection>テーブルにデータを格納します。 <xref:System.Data.DataRow> には、行に格納された値の変更を識別できるように、行の現在の状態と共に、行の現在のバージョンと元のバージョンの両方が保持されます。  
   

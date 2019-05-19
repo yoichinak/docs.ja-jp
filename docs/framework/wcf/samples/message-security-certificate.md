@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: 909333b3-35ec-48f0-baff-9a50161896f6
-ms.openlocfilehash: be9913c5109f86bf54e69beb58c53c4ddc3fd28e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c439773449cdb3be4326707a0b408d08afd2c50f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664871"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876699"
 ---
 # <a name="message-security-certificate"></a>メッセージ セキュリティ証明書
 このサンプルでは、クライアントの認証で X.509 v3 証明書による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、サーバーの X.509 v3 証明書を使用するサーバー認証が必要です。 このサンプルでは、クライアント/サーバー間のすべてのアプリケーション メッセージが署名されて暗号化される、既定の設定を使用します。 このサンプルがに基づいて、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)クライアント コンソール プログラムとインターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリで構成されます。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  
@@ -252,7 +252,7 @@ Press <ENTER> to terminate client.
   
 - 証明書の秘密キーに関する権限の付与。  
   
-     Setup.bat ファイルの次の行は、LocalMachine ストアに保存されたサーバー証明書を [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ワーカー プロセス アカウントでアクセスできるようにします。  
+     Setup.bat ファイルは、次の行では、ASP.NET ワーカー プロセス アカウントにアクセスできる、LocalMachine ストアに格納されているサーバーの証明書を作成します。  
   
     ```bat
     echo ************  

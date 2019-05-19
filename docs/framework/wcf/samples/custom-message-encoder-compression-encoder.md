@@ -2,12 +2,12 @@
 title: カスタム メッセージ エンコーダー:Expression Encoder
 ms.date: 03/30/2017
 ms.assetid: 57450b6c-89fe-4b8a-8376-3d794857bfd7
-ms.openlocfilehash: d5ec330fb4aa0a136c4a0e4c8d249d7ebb9d0692
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6ada1cdeee02eb747f9f85abc9c99602d5f26b72
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650201"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878454"
 ---
 # <a name="custom-message-encoder-compression-encoder"></a>カスタム メッセージ エンコーダー:Expression Encoder
 このサンプルでは、Windows Communication Foundation (WCF) プラットフォームを使用してカスタム エンコーダーを実装する方法を示します。  
@@ -334,7 +334,7 @@ Press <ENTER> to terminate client.
   
 #### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. 次のコマンドを使用して、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 4.0 をインストールします。  
+1. 次のコマンドを使用して ASP.NET 4.0 をインストールします。  
   
     ```  
     %windir%\Microsoft.NET\Framework\v4.0.XXXXX\aspnet_regiis.exe /i /enable  

@@ -12,19 +12,18 @@ helpviewer_keywords:
 - groups
 - groups [Windows Forms], in Windows Forms controls
 ms.assetid: 610416a1-8da4-436c-af19-5f19e654769b
-ms.openlocfilehash: f616436671da449e4f7b47c0a5d0c1b576584a1a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bbca1d76f747f53103095c916605ce7335207f51
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61941397"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882380"
 ---
 # <a name="how-to-group-items-in-a-windows-forms-listview-control"></a>方法: Windows フォーム ListView コントロールの項目をグループ化する
 グループ化機能で、<xref:System.Windows.Forms.ListView>コントロール、グループ内のアイテムの関連する設定を表示できます。 これらのグループは、画面に含まれるグループのタイトルは水平方向のグループ ヘッダーで区切られます。 使用することができます<xref:System.Windows.Forms.ListView>グループ日付、または他の論理グループで、アルファベット順に項目をグループ化して簡単に大きい一覧を移動します。 次の図には、いくつかのグループ化された項目が表示されます。  
   
- ![ListView グループ](./media/listviewgroups.gif "ListViewGroups")  
-ListView の項目をグループ化  
-  
+ ![偶数と奇数の ListView グループのスクリーン ショット。](./media/how-to-group-items-in-a-windows-forms-listview-control-using-the-designer/odd-even-list-view-groups.gif)  
+   
  グループ化を有効にするには、最初にデザイナーで、またはプログラムでは、1 つまたは複数のグループを作成する必要があります。 グループが定義された後に割り当てることができます<xref:System.Windows.Forms.ListView>項目をグループにします。 移動することも項目 1 つのグループから別にプログラムを使用します。  
   
 > [!NOTE]

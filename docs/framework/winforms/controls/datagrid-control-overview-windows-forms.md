@@ -20,12 +20,12 @@ helpviewer_keywords:
 - parent table navigation in DataGrid
 - child tables [Windows Forms], dataGrid control
 ms.assetid: 85604bce-bc03-49d9-9030-dda8896c44b1
-ms.openlocfilehash: 7c9442635bb193c13ca30fd1e271631a43b33e55
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: e1e9ce761baa77ea06b3d66aa5b296a186f054b4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589016"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878861"
 ---
 # <a name="datagrid-control-overview-windows-forms"></a>DataGrid コントロールの概要 (Windows フォーム)
 > [!NOTE]
@@ -53,7 +53,7 @@ ms.locfileid: "65589016"
   
  バインドされたデータセット内のデータが任意のメカニズムにより更新された場合に、 <xref:System.Windows.Forms.DataGrid> コントロールが変更を反映します。 データ グリッド、表のスタイルおよび列のスタイルがある場合、`ReadOnly`プロパティに設定`false`、を介して、データセット内のデータを更新することができます、<xref:System.Windows.Forms.DataGrid>コントロール。  
   
- <xref:System.Windows.Forms.DataGrid> には、一度に 1 つのテーブルのみを表示できます。 テーブル間で親子のリレーションシップが定義される場合、ユーザーが関連するテーブルの間で移動して、<xref:System.Windows.Forms.DataGrid> コントロールで表示されるテーブルを選択できます。 バインディングについては、<xref:System.Windows.Forms.DataGrid>への制御、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]デザイン時または実行時に、データ ソースを参照してください[方法。データ ソースに Windows フォーム DataGrid コントロールをバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。  
+ <xref:System.Windows.Forms.DataGrid> には、一度に 1 つのテーブルのみを表示できます。 テーブル間で親子のリレーションシップが定義される場合、ユーザーが関連するテーブルの間で移動して、<xref:System.Windows.Forms.DataGrid> コントロールで表示されるテーブルを選択できます。 バインディングについては、 <xref:System.Windows.Forms.DataGrid> ADO.NET データ ソースへのデザイン時または実行時のいずれかを制御しを参照してください[方法。データ ソースに Windows フォーム DataGrid コントロールをバインド](how-to-bind-the-windows-forms-datagrid-control-to-a-data-source.md)します。  
   
  <xref:System.Windows.Forms.DataGrid> の有効なデータ ソースには、次が含まれます。  
   

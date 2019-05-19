@@ -2,12 +2,12 @@
 title: ADO.NET のアーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 2e91077287c051d871eb61f83ec77b7baf90b2d8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584575"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877244"
 ---
 # <a name="adonet-architecture"></a>ADO.NET のアーキテクチャ
 従来のデータ処理は、主に接続をベースとした 2 層モデルに基づいていました。 近年、データ処理では多層アーキテクチャの採用が増えてきており、アプリケーションのスケーラビリティを高める非接続型アプローチが主流になりつつあります。  
@@ -52,9 +52,9 @@ ADO.NET のアーキテクチャ
  [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] は、Web またはイントラネットにデータ サービスを展開するために使用されます。 データは、エンティティ データ モデルの仕様に従ってエンティティおよびリレーションシップとして構成されます。 このモデルで展開されるデータは、標準 HTTP プロトコルによってアドレス指定可能です。 詳細については、「[WCF Data Services 4.5](../../../../docs/framework/data/wcf/index.md)」を参照してください。  
   
 ## <a name="xml-and-adonet"></a>XML と ADO.NET  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] では XML の機能を活用して、データに対する非接続型アクセス機能を実現します。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] デザインされた手の形で - と密接に連携、.NET Framework の XML クラス両方は、1 つのアーキテクチャのコンポーネントです。  
+ ADO.NET では、データに対する非接続型アクセスを提供する XML の機能を活用します。 ADO.NET がデザインされた手の形で - と密接に連携、.NET Framework の XML クラス両方は、1 つのアーキテクチャのコンポーネントです。  
   
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] .NET Framework の XML クラスに集約されていると、`DataSet`オブジェクト。 `DataSet` に、XML ソース (ファイルまたは XML ストリーム) に含まれるデータを入力できます。 `DataSet` は、XML スキーマ定義言語 (XSD) スキーマを含む、W3C (World Wide Web Consortium) 準拠の XML として作成できます。これには `DataSet` 内のデータのソースは関係ありません。 `DataSet` のネイティブのシリアル化形式は XML であることから、層間でデータを移動するための媒体として優れており、XML Web サービスとの間でデータとスキーマ コンテキストをリモート処理する場合には `DataSet` が最適な選択となります。 詳細については、「[XML ドキュメントと XML データ](../../../../docs/standard/data/xml/index.md)」を参照してください。  
+ ADO.NET および .NET Framework の XML クラスに集約されて、`DataSet`オブジェクト。 `DataSet` に、XML ソース (ファイルまたは XML ストリーム) に含まれるデータを入力できます。 `DataSet` は、XML スキーマ定義言語 (XSD) スキーマを含む、W3C (World Wide Web Consortium) 準拠の XML として作成できます。これには `DataSet` 内のデータのソースは関係ありません。 `DataSet` のネイティブのシリアル化形式は XML であることから、層間でデータを移動するための媒体として優れており、XML Web サービスとの間でデータとスキーマ コンテキストをリモート処理する場合には `DataSet` が最適な選択となります。 詳細については、「[XML ドキュメントと XML データ](../../../../docs/standard/data/xml/index.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

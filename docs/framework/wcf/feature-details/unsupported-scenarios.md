@@ -2,12 +2,12 @@
 title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: 48ed292b3bb22ae4966680805a74b40b249d8a32
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637749"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878741"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
 さまざまな理由は、Windows Communication Foundation (WCF) は一部の特定のセキュリティ シナリオをサポートしていません。 たとえば、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition は SSPI または Kerberos 認証プロトコルを実装していないため WCF サポートしていないプラットフォームで Windows 認証を使用したサービスを実行します。 ユーザー名/パスワードや HTTP/HTTPS 統合認証などの他の認証メカニズムは、Windows XP Home Edition で WCF を実行している場合にサポートされます。  
@@ -36,7 +36,7 @@ ms.locfileid: "64637749"
 >  上記の要件は限定的です。 たとえば、<xref:System.ServiceModel.Channels.SecurityBindingElement.CreateKerberosBindingElement%2A> は Windows ID を生成するバインド要素を作成しますが、SCT を確立しません。 したがって、`Required` で [!INCLUDE[wxp](../../../../includes/wxp-md.md)] オプションと共に使用できます。  
   
 ### <a name="possible-aspnet-conflict"></a>考えられる ASP.NET との競合  
- WCF と[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]両方を有効にしたり、偽装を無効にします。 ときに[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]WCF アプリケーションをホスト、WCF との間の競合が存在し、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]構成設定。 競合が発生した場合、WCF 設定が優先しない限り、<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>プロパティに設定されて<xref:System.ServiceModel.ImpersonationOption.NotAllowed>、その場合、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]権限借用の設定が優先されます。  
+ WCF と ASP.NET できます両方を有効にするまたは偽装を無効にします。 ASP.NET では、WCF アプリケーションをホスト、ときに、WCF と ASP.NET の構成設定の間の競合を引き起こすことがあります。 競合が発生した場合、WCF 設定が優先しない限り、<xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A>プロパティに設定されて<xref:System.ServiceModel.ImpersonationOption.NotAllowed>、場合、ASP.NET 偽装設定が優先されます。  
   
 ### <a name="assembly-loads-may-fail-under-impersonation"></a>偽装を有効にすると、アセンブリの読み込みに失敗する場合がある  
  偽装されたコンテキストにアセンブリを読み込むためのアクセス権がない場合、共通言語ランタイム (CLR: Common Language Runtime) が AppDomain のアセンブリを初めて読み込もうとしたときに、その <xref:System.AppDomain> はエラーをキャッシュします。 この場合、偽装を元に戻した後、元に戻されたコンテキストにアセンブリを読み込むためのアクセス権があったとしても、それ以降のアセンブリの読み込みは失敗します。 これは、ユーザー コンテキストの変更後に、CLR が読み込みを再試行しないためです。 このエラーから回復するには、アプリケーション ドメインを再起動する必要があります。  
@@ -75,13 +75,13 @@ ms.locfileid: "64637749"
 ## <a name="message-security-fails-if-using-aspnet-impersonation-and-aspnet-compatibility-is-required"></a>ASP.NET の偽装と ASP.NET 互換を使用する必要がある場合にメッセージ セキュリティが失敗する  
  WCF では、クライアント認証を防止するため、次の設定の組み合わせはサポートされません。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] の偽装を有効にしている。 これを行うには、Web.config ファイルで <`identity`> 要素の `impersonate` 属性を `true` に設定します。  
+- ASP.NET の偽装が有効になっているとします。 これを行うには、Web.config ファイルで <`identity`> 要素の `impersonate` 属性を `true` に設定します。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換性モードが有効になって、`aspNetCompatibilityEnabled`の属性、 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)に`true`します。  
+- ASP.NET 互換モードが有効になって、`aspNetCompatibilityEnabled`の属性、 [ \<serviceHostingEnvironment >](../../../../docs/framework/configure-apps/file-schema/wcf/servicehostingenvironment.md)に`true`します。  
   
 - メッセージ モード セキュリティを使用している。  
   
- これを回避するには、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] 互換モードを無効にします。 または、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]互換モードが必要ですが、無効にする、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]権限借用機能し、WCF が提供する偽装の代わりに使用します。 詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
+ 回避は、ASP.NET 互換モードをオフにします。 または、ASP.NET 互換モードが必要な場合は、ASP.NET の偽装機能を無効にして、WCF が提供する偽装の代わりに使用します。 詳細については、次を参照してください。[委任と偽装](../../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
   
 ## <a name="ipv6-literal-address-failure"></a>IPv6 リテラル アドレス エラー  
  クライアントとサービスが同じコンピューター上に存在し、サービスに対して IPv6 リテラル アドレスが使用されている場合は、セキュリティ要求が失敗します。  

@@ -2,12 +2,12 @@
 title: セッション、インスタンス化、およびコンカレンシー
 ms.date: 03/30/2017
 ms.assetid: 50797a3b-7678-44ed-8138-49ac1602f35b
-ms.openlocfilehash: 52c9ed5d672ea05fec3333c9fece8b693143d6f3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 74b9971fa9267ef6156b27261c61d3e998d01883
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586110"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877328"
 ---
 # <a name="sessions-instancing-and-concurrency"></a>セッション、インスタンス化、およびコンカレンシー
 *"セッション"* とは、2 つのエンドポイント間で送信されるすべてのメッセージを相互に関連付けたものです。 *"インスタンス化"* とは、ユーザー定義のサービス オブジェクトとこれらのオブジェクトに関連する <xref:System.ServiceModel.InstanceContext> オブジェクトの有効期間を制御することです。 また、*コンカレンシー*は、<xref:System.ServiceModel.InstanceContext> で同時に実行されるスレッドの数の制御を表す用語です。  
@@ -27,13 +27,13 @@ ms.locfileid: "64586110"
   
 - WCF のセッションに関連付けられた一般的なデータ ストアはありません。  
   
- 慣れている場合、<xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType>クラス[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]アプリケーションと機能を提供、可能性があります、その種のセッションと WCF のセッションの間の次の相違点に注意してください。  
+ 慣れている場合、 <xref:System.Web.SessionState.HttpSessionState?displayProperty=nameWithType> ASP.NET アプリケーション内のクラスと機能を提供、可能性があります、その種のセッションと WCF のセッションの間の次の相違点に注意してください。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、常にサーバーによって開始される。  
+- ASP.NET セッションが常にサーバーによって開始されます。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、暗黙的に順序付けされない。  
+- ASP.NET のセッションでは、暗黙的に順序付けされません。  
   
-- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] セッションは、要求全体について一般的なデータ ストレージ機構を提供する。  
+- ASP.NET のセッションでは、要求間で、一般的なデータ ストレージ機構を提供します。  
   
  クライアント アプリケーションとサービス アプリケーションでは、異なる方法でセッションと対話します。 クライアント アプリケーションはセッションを開始し、セッション内で送信されてきたメッセージの受信と処理を行います。 サービス アプリケーションでは、動作を追加するための機能拡張ポイントとしてセッションを使用できます。 これは <xref:System.ServiceModel.InstanceContext> を直接操作する、またはカスタムのインスタンス コンテキスト プロバイダーを実装することで可能になります。  
   

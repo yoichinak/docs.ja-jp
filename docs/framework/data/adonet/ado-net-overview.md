@@ -2,12 +2,12 @@
 title: ADO.NET の概要
 ms.date: 03/30/2017
 ms.assetid: ee3bc1d8-11db-4be4-89eb-c708cf04117d
-ms.openlocfilehash: 7ec3b5f4dd08a39f96ed28e6666fd4b00bced903
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a47a2734e68b4c00aab077191d5257386cd6602
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607363"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877207"
 ---
 # <a name="adonet-overview"></a>ADO.NET の概要
 ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や ODBC 経由で公開されるデータ ソースに対する一貫性を持ったアクセス機能を実現します。 データを共有する消費者向けアプリケーションで ADO.NET を使用することで、そのようなデータ ソースへの接続や、データ ソースに格納されているデータの取得、操作、更新を実行できます。  
@@ -46,7 +46,7 @@ ADO.NET は、SQL Server や XML などのデータ ソースや、OLE DB や OD
   
 ## <a name="related-sections"></a>関連項目  
  [ADO.NET の新機能](../../../../docs/framework/data/adonet/whats-new.md)  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の新機能について説明します。  
+ ADO.NET の新機能について説明します。  
   
  [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
  ADO.NET を使用する場合の安全なコーディング方法について説明します。  

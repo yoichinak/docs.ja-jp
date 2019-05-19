@@ -2,12 +2,12 @@
 title: C# の式
 ms.date: 03/30/2017
 ms.assetid: 29110be7-f4e3-407e-8dbe-78102eb21115
-ms.openlocfilehash: 23c5ee0e0d1408f19e87615008ee95266176d27b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c50f6a2a8dfb69b914fb4fa84c028f9d65c00cfa
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650953"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882098"
 ---
 # <a name="c-expressions"></a>C# の式
 以降で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、c# 式には、Windows Workflow Foundation (WF) ではサポートされています。 Visual Studio 2012 を対象に作成された新しい c# ワークフロー プロジェクト[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]c# 式を使用、および Visual Basic ワークフロー プロジェクトが Visual Basic 式を使用します。 Visual Basic 式を使用する既存の [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] ワークフロー プロジェクトは、プロジェクトの言語に関係なく [!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)] に移行することができ、サポートされています。 ここでは、[!INCLUDE[wf1](../../../includes/wf1-md.md)] での C# 式の概要について説明します。
@@ -31,7 +31,7 @@ ms.locfileid: "64650953"
 ### <a name="WFDesigner"></a> ワークフロー デザイナーで c# 式の使用
  以降で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、c# 式には、Windows Workflow Foundation (WF) ではサポートされています。 Visual Studio 2012 を対象に作成された c# ワークフロー プロジェクト[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]の c# 式を使用して、Visual Basic ワークフロー プロジェクトは Visual Basic 式を使用します。 必要な c# の式を指定するというラベルの付いたボックスに入力**c# 式を入力します**します。 このラベルは、プロパティ ウィンドウ (デザイナーでアクティビティを選択した場合) またはワークフロー デザイナーのアクティビティに表示されます。 次の例では、2 つの `WriteLine` アクティビティが `Sequence` の中で `NoPersistScope` 内に含まれています。
 
- ![自動的に作成された sequence アクティビティ](./media/autosurround2.png "AutoSurround2")
+ ![自動的に作成されたシーケンス アクティビティを示すスクリーン ショット。](./media/csharp-expressions/auto-surround-sequence-activity.png)
 
 > [!NOTE]
 >  C# 式は、Visual Studio でのみサポートされ、再ホストされたワークフロー デザイナーではサポートされていません。 再ホストされたデザイナーでサポートされている新しい WF45 の機能の詳細については、次を参照してください。[再ホストされたワークフロー デザイナーでの新しい Workflow Foundation 4.5 機能のサポート](wf-features-in-the-rehosted-workflow-designer.md)します。

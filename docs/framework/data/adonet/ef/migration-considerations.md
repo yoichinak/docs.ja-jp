@@ -2,15 +2,15 @@
 title: 移行に関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: c85b6fe8-cc32-4642-8f0a-dc0e5a695936
-ms.openlocfilehash: f65c558b0cbc02bdff8e78189a38d06a7502434f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4e3410c62ba2fb9b8cc3dd0c6aa80707e03793fd
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583565"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880063"
 ---
 # <a name="migration-considerations-entity-framework"></a>移行に関する注意事項 (Entity Framework)
-[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] Entity Framework には、既存のアプリケーションにとっていくつかの利点があります。 特に重要な利点の 1 つが、概念モデルを使用して、アプリケーションで使用するデータ構造をデータ ソースのスキーマから分離できることです。 これにより、ストレージ モデルやデータ ソース自体の将来の変更が容易になり、その変更を補うための変更をアプリケーションに加える必要がなくなります。 使用する利点の詳細については、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を参照してください[Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)と[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)します。  
+ADO.NET Entity Framework では、既存のアプリケーションにいくつかの利点を提供します。 特に重要な利点の 1 つが、概念モデルを使用して、アプリケーションで使用するデータ構造をデータ ソースのスキーマから分離できることです。 これにより、ストレージ モデルやデータ ソース自体の将来の変更が容易になり、その変更を補うための変更をアプリケーションに加える必要がなくなります。 使用する利点の詳細については、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]を参照してください[Entity Framework の概要](../../../../../docs/framework/data/adonet/ef/overview.md)と[Entity Data Model](../../../../../docs/framework/data/adonet/entity-data-model.md)します。  
   
  利点を活用するために、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]、既存のアプリケーションを移行することができます、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]します。 移行作業の一部はすべてのアプリケーションに共通です。 これらの一般的なタスクには、.NET Framework version 3.5 Service Pack 1 (SP1) 以降を使用するアプリケーションのアップグレードが含まれて定義モデルとマッピング、および Entity Framework を構成します。 そのほか、アプリケーションを [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] に移行する際には、 移行するアプリケーションの種類やアプリケーションの特定の機能に依存する注意点もあります。 このトピックでは、既存のアプリケーションをアップグレードする際に最適な方法を選択するために役立つ情報を紹介します。  
   
@@ -23,7 +23,7 @@ ms.locfileid: "65583565"
   
 - 大規模なアプリケーションや複雑なアプリケーションの場合、アプリケーション全体を一度に Entity Framework に移行する必要はありません。 ただし、Entity Framework を使用しない部分がアプリケーションにある場合、それらの部分については、データ ソースが変更された場合に変更が必要になります。  
   
-- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] データ プロバイダーを使用してデータ ソースにアクセスするため、Entity Framework が使用するデータ プロバイダー接続をアプリケーションの他の部分と共有できます  (たとえば、Entity Framework は SqlClient プロバイダーを使用して SQL Server データベースにアクセスします)。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。  
+- アプリケーションの他の部分と Entity Framework で使用されるデータ プロバイダーの接続を共有できる、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ADO.NET データ プロバイダーを使用して、データ ソースにアクセスします。 (たとえば、Entity Framework は SqlClient プロバイダーを使用して SQL Server データベースにアクセスします)。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。  
   
 ## <a name="common-migration-tasks"></a>共通の移行タスク  
  既存アプリケーションの [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] への移行パスは、アプリケーションの種類と既存のデータ アクセス計画の両方に依存します。 ただし、以下のタスクは、既存のアプリケーションを [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] に移行する際に常に実行する必要があります。  
@@ -56,7 +56,7 @@ ms.locfileid: "65583565"
  .NET Framework 4 以降で、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] "plain old"をサポートしています。 CLR オブジェクト (POCO) 永続化非依存オブジェクトとも呼ばれます。 ほとんどの場合、既存のオブジェクトを少し変更すれば [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] で使用できます。 詳細については、次を参照してください。 [POCO エンティティの操作](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dd456853(v=vs.100))します。 アプリケーションを移行することも、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]と Entity Framework ツールによって生成されるデータ クラスを使用します。 詳細については、「[方法 :エンティティ データ モデル ウィザードを使用して](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738677(v=vs.100))します。  
   
 ## <a name="considerations-for-applications-that-use-adonet-providers"></a>ADO.NET プロバイダーを使用するアプリケーションの注意点  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] SqlClient などのプロバイダーでは、表形式のデータを返すデータ ソースのクエリを有効にします。 データを読み込むことも、[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]データセット。 以下は、既存の [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] プロバイダーを使用するアプリケーションをアップグレードする場合の注意点です。  
+ SqlClient などの ADO.NET プロバイダーでは、表形式のデータを返すデータ ソースのクエリを有効にします。 データは、ADO.NET DataSet に読み込むこともできます。 次の一覧には、既存の ADO.NET プロバイダーを使用するアプリケーションのアップグレードに関する考慮事項について説明します。  
   
 - データ リーダーを使用して表形式のデータを表示している場合  
 
@@ -69,7 +69,7 @@ ms.locfileid: "65583565"
   場合、 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] 、機能は提供されません、アプリケーションに必要なデータセットのことができますも活用する LINQ クエリのメリットを使用して[!INCLUDE[linq_dataset](../../../../../includes/linq-dataset-md.md)]します。 詳細については、「[LINQ to DataSet](../../../../../docs/framework/data/adonet/linq-to-dataset.md)」を参照してください。  
   
 ## <a name="considerations-for-applications-that-bind-data-to-controls"></a>データをコントロールにバインドするアプリケーションの注意点  
- .NET Framework では、DataSet やなどのデータ ソース内でデータをカプセル化できます。[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]データのソース管理、およびそれらのデータ コントロールをユーザー インターフェイス要素をバインドします。 以下は、コントロールを Entity Framework データにバインドする場合の注意点です。  
+ .NET Framework では、データセットや ASP.NET データ ソース コントロールなどのデータ ソース内のデータをカプセル化し、ユーザー インターフェイス要素をそれらのデータ コントロールにバインドすることができます。 以下は、コントロールを Entity Framework データにバインドする場合の注意点です。  
   
 - コントロールへのデータ バインディング  
 
@@ -79,9 +79,9 @@ ms.locfileid: "65583565"
   
   詳細については、次を参照してください。[コントロールへのオブジェクトのバインド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb738469(v=vs.100))します。  
   
-- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] データ ソース コントロール  
+- ASP.NET データ ソース コントロール。  
 
-  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]でのデータ バインディングを容易にデータ ソース コントロールが含まれています[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)]Web アプリケーション。 詳細については、次を参照してください。 [EntityDataSource Web サーバー コントロールの概要](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100))します。  
+  [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] ASP.NET Web アプリケーションでのデータ バインディングを容易にデータ ソース コントロールが含まれています。 詳細については、次を参照してください。 [EntityDataSource Web サーバー コントロールの概要](https://docs.microsoft.com/previous-versions/aspnet/cc488502(v=vs.100))します。  
   
 ## <a name="other-considerations"></a>その他の注意事項  
  以下は、特定の種類のアプリケーションを Entity Framework に移行する場合の注意点です。  
@@ -100,7 +100,7 @@ ms.locfileid: "65583565"
   
 - 状態を保持するアプリケーション  
 
-  [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] Web アプリケーションは、Web ページまたはユーザー セッションの状態を維持頻繁にする必要があります。 内のオブジェクト、<xref:System.Data.Objects.ObjectContext>インスタンスまたはサーバーで、セッション状態、クライアントのビュー ステートに格納し、後で取得して新しいオブジェクト コンテキストに再アタッチします。 詳細については、次を参照してください。[のアタッチとデタッチ オブジェクト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))します。  
+  ASP.NET Web アプリケーションは、Web ページまたはユーザー セッションの状態を維持頻繁にする必要があります。 内のオブジェクト、<xref:System.Data.Objects.ObjectContext>インスタンスまたはサーバーで、セッション状態、クライアントのビュー ステートに格納し、後で取得して新しいオブジェクト コンテキストに再アタッチします。 詳細については、次を参照してください。[のアタッチとデタッチ オブジェクト](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896271(v=vs.100))します。  
   
 ## <a name="see-also"></a>関連項目
 

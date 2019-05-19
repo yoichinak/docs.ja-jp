@@ -2,16 +2,16 @@
 title: ADO.NET の新機能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: b54f7ab6505f86d0447654f21b197644d68254c0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 90ac3ffe9bae892bf20ad874e5634a3a045f776d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583438"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877430"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET の新機能
 
-[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] では、次の機能が追加されています。
+次の機能は ADO.NET での新機能、[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。
 
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider
 

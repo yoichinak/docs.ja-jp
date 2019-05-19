@@ -5,12 +5,12 @@ helpviewer_keywords:
 - authorization [WCF]
 - security [WCF], authorization
 ms.assetid: 8ea0b552-af65-45b0-a157-c6c111b8ce5e
-ms.openlocfilehash: 26aa445f3136fcb16e2eb9cdce6b245476297dfd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c605b310f19a05f994296d8f4268b91b408fb18
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61650577"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881205"
 ---
 # <a name="authorization-in-wcf"></a>WCF での承認
 承認は、サービスやファイルなどのリソースへのアクセスと権限を制御するプロセスです。 このセクションのトピックでは、Windows Communication Foundation (WCF) でさまざまな方法でこの基本的なタスクを実行する方法を説明します。  
@@ -23,10 +23,10 @@ ms.locfileid: "61650577"
  <xref:System.Security.Permissions.PrincipalPermissionAttribute> を使用してサービスへのアクセスを制限するプロセスを示します。  
   
  [方法: サービスで ASP.NET ロール プロバイダーを使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-role-provider-with-a-service.md)  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] のロール プロバイダー機能を使用できるようにサービスを構成する手順について説明します。  
+ ASP.NET のロール プロバイダー機能を使用するように有効にするサービスの構成について説明します。  
   
  [方法: サービスと ASP.NET の承認マネージャー ロール プロバイダーを使用します。](../../../../docs/framework/wcf/feature-details/how-to-use-the-aspnet-authorization-manager-role-provider-with-a-service.md)  
- [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] は、承認マネージャーを使って Web サイトの承認を管理できます。 WCF を活用できる同様に、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]/Authorization マネージャー クライアントの承認の組み合わせ。  
+ ASP.NET では、承認マネージャーを使用して、Web サイトの承認を管理します。 同様に、WCF は ASP.NET/Authorization マネージャーは、クライアントの承認の組み合わせを活用できます。  
   
  [ID モデルを使用したクレームと承認の管理](../../../../docs/framework/wcf/feature-details/managing-claims-and-authorization-with-the-identity-model.md)  
  ID モデル インフラストラクチャをクレーム ベースの承認に使用する際の基本について説明します。  

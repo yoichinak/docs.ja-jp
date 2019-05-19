@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 4a41eac3d5b51936ebbae8d9e3dcf623da676bce
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 05ba633415f782d5edea7028c1b82b8031428576
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583513"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878253"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 ここでは、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] を実装するときに発生する可能性のある一般的な問題の対処法について説明します。  
@@ -185,7 +185,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
   
  A:  <xref:System.Data.Linq.DataContext> のインスタンスは再使用しないようにしてください。 <xref:System.Data.Linq.DataContext> はそれぞれ、特定の 1 つの編集/クエリ セッション用の状態 (ID キャッシュを含む) を保持します。 データベースの現在の状態に基づく新しいインスタンスを得るには、新しい <xref:System.Data.Linq.DataContext> を使用してください。  
   
- それでも、基になる [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] 接続プールは使用できます。 詳しくは、「[SQL Server の接続プール (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)」をご覧ください。  
+ 基になる ADO.NET 接続プールを使用することができます。 詳しくは、「[SQL Server の接続プール (ADO.NET)](../../../../../../docs/framework/data/adonet/sql-server-connection-pooling.md)」をご覧ください。  
   
 ## <a name="second-datacontext-is-not-updated"></a>2 番目の DataContext が更新されない  
  Q. データベース内の値を格納するために、<xref:System.Data.Linq.DataContext> の 1 つのインスタンスを使用しました。 しかし、同じデータベースに対する 2 番目の <xref:System.Data.Linq.DataContext> では、更新された値が反映されません。 2 番目の <xref:System.Data.Linq.DataContext> インスタンスは、キャッシュされた値を返すようです。  

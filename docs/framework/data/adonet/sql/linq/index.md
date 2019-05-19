@@ -2,12 +2,12 @@
 title: LINQ to SQL
 ms.date: 03/30/2017
 ms.assetid: 73d13345-eece-471a-af40-4cc7a2f11655
-ms.openlocfilehash: ef95a7cebb527b01c15d124227664823fcbbaa23
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4a44bd3f55cf6c21bb785ff70bca80e2c003cd18
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582778"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878260"
 ---
 # <a name="linq-to-sql"></a>LINQ to SQL
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] .NET Framework version 3.5 オブジェクトとしてのリレーショナル データを管理するためのランタイム インフラストラクチャを提供するコンポーネントです。  
@@ -47,8 +47,7 @@ ms.locfileid: "65582778"
  説明[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]Visual Basic ユーザー向けのテクノロジです。  
   
  [LINQ と ADO.NET](../../../../../../docs/framework/data/adonet/linq-and-ado-net.md)  
- 
-  [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] ポータルにリンクします。  
+ ADO.NET ポータルへのリンク。  
   
  [LINQ to SQL チュートリアル](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/bb386295(v=vs.90))  
  
@@ -58,5 +57,4 @@ ms.locfileid: "65582778"
  ドキュメントで使用されるサンプル データベースをダウンロードする方法について説明します。  
   
  [LinqDataSource Web サーバー コントロールの概要](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- 
-  <xref:System.Web.UI.WebControls.LinqDataSource> コントロールが [!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)] データソース コントロールのアーキテクチャを通じて[!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] を Web 開発者に公開する方法について説明します。
+ について説明しますが、どのように<xref:System.Web.UI.WebControls.LinqDataSource>公開を制御[!INCLUDE[vbteclinqext](../../../../../../includes/vbteclinqext-md.md)]ASP.NET データ ソース コントロールのアーキテクチャを通じて Web 開発者にします。

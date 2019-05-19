@@ -5,20 +5,20 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49ac6da0-f2e1-46fa-963e-1b6dcb63fef7
-ms.openlocfilehash: 49f28acc5001d63e7a1f6a5bfe8cb3415311e379
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4f2f9fa1cb1be421be57ae0671573150871ebd1d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582755"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880469"
 ---
 # <a name="adonet-and-linq-to-sql"></a>ADO.NET および LINQ to SQL
-[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 一部である、[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]テクノロジのファミリです。 [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] プロバイダー モデルから提供されるサービスに基づいて動作します。 したがって組み合わせることができます[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]コードを既存[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]アプリケーションさせ、現在[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]の解決策を[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]します。 次の図は、この関係を高いレベルから見たものです。  
+[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] ADO.NET のファミリのテクノロジの一部です。 ADO.NET プロバイダー モデルによって提供されるサービスに基づいています。 そのため組み合わせることができます[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]コードでは、既存の ADO.NET アプリケーションと、現在の ADO.NET ソリューションに移行する[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]します。 次の図は、この関係を高いレベルから見たものです。  
   
  ![LINQ to SQL および ADO.NET](../../../../../../docs/framework/data/adonet/sql/linq/media/dlinq-3.png "DLinq_3")  
   
 ## <a name="connections"></a>接続  
- 既存を指定する[!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)]接続を作成するとき、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>します。 に対するすべての操作、 <xref:System.Data.Linq.DataContext> (クエリ) を含むこの接続を使用します。 場合は、接続がまだ開いて[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]はこれで終了するときに、そのままです。  
+ 既存の ADO.NET 接続を指定するには、作成するときに、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] <xref:System.Data.Linq.DataContext>します。 に対するすべての操作、 <xref:System.Data.Linq.DataContext> (クエリ) を含むこの接続を使用します。 場合は、接続がまだ開いて[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]はこれで終了するときに、そのままです。  
   
  [!code-csharp[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqCommunicatingWithDatabase/cs/Program.cs#4)]
  [!code-vb[DLinqCommunicatingWithDatabase#4](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqCommunicatingWithDatabase/vb/Module1.vb#4)]  

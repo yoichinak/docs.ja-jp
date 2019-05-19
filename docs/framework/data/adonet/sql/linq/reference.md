@@ -2,12 +2,12 @@
 title: 参照
 ms.date: 03/30/2017
 ms.assetid: 312c3935-a947-4220-a837-0039d9fc458b
-ms.openlocfilehash: 467bc9f482fa24e679814de3be0fdb7d9363320c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a874cb659bc8701d7f894617d4e1db25f949fbcd
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61877137"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881312"
 ---
 # <a name="reference"></a>参照
 このセクションには、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用する開発者向けのリファレンス情報が用意されています。  
@@ -45,4 +45,4 @@ ms.locfileid: "61877137"
  用のポータルを提供します。[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]トピック。  
   
  [LinqDataSource Web サーバー コントロールの概要](https://docs.microsoft.com/previous-versions/aspnet/bb547113(v=vs.100))  
- <xref:System.Web.UI.WebControls.LinqDataSource> コントロールが [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] データソース コントロールのアーキテクチャを通じて[!INCLUDE[vstecasp](../../../../../../includes/vstecasp-md.md)] を Web 開発者に公開する方法について説明します。
+ について説明しますが、どのように<xref:System.Web.UI.WebControls.LinqDataSource>公開を制御[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)]ASP.NET データ ソース コントロールのアーキテクチャを通じて Web 開発者にします。

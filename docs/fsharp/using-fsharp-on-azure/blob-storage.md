@@ -3,12 +3,12 @@ title: F# を使用した Azure Blob Storage の概要
 description: Azure Blob storage を使用してクラウドでは、非構造化データを格納します。
 author: sylvanc
 ms.date: 09/20/2016
-ms.openlocfilehash: 62178edf22ad48d0388f34488b68d135068d50a2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d020c2cd9a11db1cd4b7a60113e1be03655f763
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61982515"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880044"
 ---
 # <a name="get-started-with-azure-blob-storage-using-f"></a>F を使用した Azure Blob storage を概要します。\#
 
@@ -196,8 +196,8 @@ Blob を削除するには、まず blob の参照を取得を呼び出して、
 
 Azure storage 内のすべての blob は、コンテナー内に存在する必要があります。 コンテナーは、blob 名の一部を形成します。 たとえば、`mydata`これらサンプル blob Uri 内のコンテナーの名前を指定します。
 
-    https://storagesample.blob.core.windows.net/mydata/blob1.txt
-    https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
+- https://storagesample.blob.core.windows.net/mydata/blob1.txt
+- https://storagesample.blob.core.windows.net/mydata/photos/myphoto.jpg
 
 コンテナー名は、次の名前付け規則に準拠している、有効な DNS 名である必要があります。
 

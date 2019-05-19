@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - XmlSerializer [WCF], using
 ms.assetid: c680602d-39d3-44f1-bf22-8e6654ad5069
-ms.openlocfilehash: b618d0c153501885fe8c42a04d0723eaa5bcd9af
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3a0c8bd90c2a8f4ffc2e7a6d8831f306637915e6
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586244"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877377"
 ---
 # <a name="using-the-xmlserializer-class"></a>XmlSerializer クラスの使用
 Windows Communication Foundation (WCF) は、2 つの別のシリアル化テクノロジを使用して、クライアントとサービス、シリアル化と呼ばれるプロセス間で送信される XML に、アプリケーションでデータを有効にできます。  
@@ -35,14 +35,14 @@ Windows Communication Foundation (WCF) は、2 つの別のシリアル化テク
  <xref:System.Runtime.Serialization.DataContractSerializer>コントラクト型のデータと共に使用される、新しい WCF サービスを作成することをお勧めします。 詳細については、次を参照してください。 [Using Data Contracts](../../../../docs/framework/wcf/feature-details/using-data-contracts.md)します。  
   
 ## <a name="when-to-use-the-xmlserializer-class"></a>XmlSerializer クラスを使用する場合  
- WCF がサポートすることも、<xref:System.Xml.Serialization.XmlSerializer>クラス。 <xref:System.Xml.Serialization.XmlSerializer>クラスは WCF に固有ではありません。 これは、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web サービスが使用するのと同じシリアル化エンジンです。 <xref:System.Xml.Serialization.XmlSerializer> クラスでは、<xref:System.Runtime.Serialization.DataContractSerializer> クラスよりもサポートされる型の範囲がずっと狭くなりますが、結果の XML に対する制御の柔軟性に優れています。また、XML スキーマ定義言語 (XSD) 標準のサポート範囲が広く、 シリアル化可能な型で宣言型属性が要求されません。 詳細については、.NET Framework ドキュメントの XML シリアル化のトピックを参照してください。 <xref:System.Xml.Serialization.XmlSerializer> クラスは、データ コントラクト型をサポートしません。  
+ WCF がサポートすることも、<xref:System.Xml.Serialization.XmlSerializer>クラス。 <xref:System.Xml.Serialization.XmlSerializer>クラスは WCF に固有ではありません。 これは、ASP.NET Web サービスを使用する同じシリアル化エンジンです。 <xref:System.Xml.Serialization.XmlSerializer> クラスでは、<xref:System.Runtime.Serialization.DataContractSerializer> クラスよりもサポートされる型の範囲がずっと狭くなりますが、結果の XML に対する制御の柔軟性に優れています。また、XML スキーマ定義言語 (XSD) 標準のサポート範囲が広く、 シリアル化可能な型で宣言型属性が要求されません。 詳細については、.NET Framework ドキュメントの XML シリアル化のトピックを参照してください。 <xref:System.Xml.Serialization.XmlSerializer> クラスは、データ コントラクト型をサポートしません。  
   
  Svcutil.exe を使用する場合、または**サービス参照の追加**Visual Studio でのサード パーティのサービスでは、クライアント コードを生成またはサード パーティ製のスキーマでは、適切なシリアライザーにアクセスする機能が自動的に選択します。 スキーマに <xref:System.Runtime.Serialization.DataContractSerializer> との互換性がない場合は、<xref:System.Xml.Serialization.XmlSerializer> が選択されます。  
   
 ## <a name="manually-switching-to-the-xmlserializer"></a>XmlSerializer への手動切り替え  
  <xref:System.Xml.Serialization.XmlSerializer> に手動で切り替える必要が生じる場合もあります。 たとえば、次のような場合です。  
   
-- アプリケーションへの移行と[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]を既存の再利用することがありますを WCF Web サービス、 <xref:System.Xml.Serialization.XmlSerializer>-新しいデータを作成する代わりに、互換性のある型のコントラクト型。  
+- アプリケーションを ASP.NET Web サービスから WCF に移行する場合は、既存の再利用たい<xref:System.Xml.Serialization.XmlSerializer>-新しいデータを作成する代わりに、互換性のある型のコントラクト型。  
   
 - メッセージに表示する XML に対する正確な制御が必要で、Web サービス記述言語 (WSDL) ドキュメントが利用できない場合。たとえば、DataContractSerializer と互換性がなく、標準化および公開されている特定のスキーマに従う必要のある型を使用して、サービスを作成する場合。  
   

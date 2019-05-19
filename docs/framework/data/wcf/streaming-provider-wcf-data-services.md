@@ -10,12 +10,12 @@ helpviewer_keywords:
 - streaming data provider [WCF Data Services]
 - WCF Data Services, streams
 ms.assetid: f0978fe4-5f9f-42aa-a5c2-df395d7c9495
-ms.openlocfilehash: 19571f3102039176ed4d8fab46a7f8229cbfecbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: eff4ee3cb8502645d3b6d9a8986c9c410fe73f1a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61875538"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877586"
 ---
 # <a name="streaming-provider-wcf-data-services"></a>ストリーミング プロバイダー (WCF Data Services)
 
@@ -88,7 +88,7 @@ ms.locfileid: "61875538"
 
 ## <a name="enabling-large-binary-streams-in-the-hosting-environment"></a>ホスト環境での大きなバイナリ ストリームの有効化
 
-[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web アプリケーションのデータ サービスを作成する場合、Windows Communication Foundation (WCF) を使用して HTTP プロトコルが実装されます。 既定では、WCF では HTTP メッセージのサイズは 65K バイトのみに制限されます。 また、データ サービスに対する大きなバイナリ データのストリーミングを可能にするには、大きなバイナリ ファイルを有効にして、転送にストリームを使用するように Web アプリケーションを構成する必要もあります。 そのためには、アプリケーションの Web.config ファイルの `<configuration />` 要素に次の内容を追加します。
+ASP.NET Web アプリケーションでデータ サービスを作成するときに、Windows Communication Foundation (WCF) は、HTTP プロトコルを実装に使用されます。 既定では、WCF では HTTP メッセージのサイズは 65K バイトのみに制限されます。 また、データ サービスに対する大きなバイナリ データのストリーミングを可能にするには、大きなバイナリ ファイルを有効にして、転送にストリームを使用するように Web アプリケーションを構成する必要もあります。 そのためには、アプリケーションの Web.config ファイルの `<configuration />` 要素に次の内容を追加します。
 
 > [!NOTE]
 > 使用する必要があります、<xref:System.ServiceModel.TransferMode.Streamed?displayProperty=nameWithType>転送モードを要求と応答のメッセージでバイナリ データがストリーミングし、WCF によってバッファリングされないことを確認します。
@@ -125,7 +125,7 @@ ms.locfileid: "61875538"
 
 - <xref:System.Data.Services.Providers.IDataServiceStreamProvider.DeleteStream%2A> メソッド、<xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetReadStream%2A> メソッド、または <xref:System.Data.Services.Providers.IDataServiceStreamProvider.GetWriteStream%2A> メソッドを実装する場合は、メソッドのパラメーターとして指定される eTag 値および Content-Type 値を使用する必要があります。 <xref:System.Data.Services.Providers.IDataServiceStreamProvider> プロバイダーの実装には、eTag ヘッダーまたは Content-Type ヘッダーを設定しないでください。
 
-- 既定では、クライアントはチャンクされた HTTP Transfer-Encoding を使用して、大きなバイナリ ストリームを送信します。 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]開発サーバーはこの種類のエンコーディングをサポートしていません、この Web サーバーを使用して、大きなバイナリ ストリームを受け取る必要があるストリーミング データ サービスをホストすることはできません。 詳細については[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]開発サーバーを参照してください[ASP.NET Web プロジェクト用の Visual Studio で Web サーバー](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))します。
+- 既定では、クライアントはチャンクされた HTTP Transfer-Encoding を使用して、大きなバイナリ ストリームを送信します。 ASP.NET 開発サーバーがこの種類のエンコーディングをサポートしていないために、大きなバイナリ ストリームを受け取る必要があるストリーミング データ サービスをホストするのにこの Web サーバーを使用することはできません。 ASP.NET 開発サーバーの詳細については、次を参照してください。 [ASP.NET Web プロジェクト用の Visual Studio で Web サーバー](https://docs.microsoft.com/previous-versions/aspnet/58wxa9w5(v=vs.120))します。
 
 <a name="versioning"></a>
 

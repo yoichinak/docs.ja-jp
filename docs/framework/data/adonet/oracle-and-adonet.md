@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 8ee8e389-53cf-45cf-80bd-1df63ef34f2e
-ms.openlocfilehash: a8668ee115a3babbdf1ef549a418187d2c5e26b8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 012a5b55d052f5f06da5c152da79f4676b2bff4e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583409"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877947"
 ---
 # <a name="oracle-and-adonet"></a>Oracle および ADO.NET
 > [!NOTE]
@@ -63,7 +63,7 @@ csc /r:System.Data.OracleClient.dll
   
 ## <a name="related-sections"></a>関連項目  
  [ADO.NET アプリケーションのセキュリティ保護](../../../../docs/framework/data/adonet/securing-ado-net-applications.md)  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] を使用する場合の安全なコーディング方法について説明します。  
+ ADO.NET を使用する場合の安全なコーディング方法について説明します。  
   
  [DataSet、DataTable、および DataView](../../../../docs/framework/data/adonet/dataset-datatable-dataview/index.md)  
  `DataSets`、型指定された `DataSets`、`DataTables`、および `DataViews` の作成方法と使用方法について説明します。  
@@ -75,7 +75,7 @@ csc /r:System.Data.OracleClient.dll
  SQL Server 固有の機能の使用方法について説明します。  
   
  [DbProviderFactories](../../../../docs/framework/data/adonet/dbproviderfactories.md)  
- [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] でプロバイダーに依存しないコードを記述するための汎用的なクラスについて説明します。  
+ ADO.NET でプロバイダーに依存しないコードを記述するための Generic クラスについて説明します。  
   
 ## <a name="see-also"></a>関連項目
 

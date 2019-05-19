@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - serialization [WCF], supported types
 ms.assetid: 7381b200-437a-4506-9556-d77bf1bc3f34
-ms.openlocfilehash: 1b98b6b3da08ba7a0a37e0c26f58dd4d3ef115b1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2fc33d3cfcbcb00e69728b73edf4a03f0dbab77e
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592203"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878620"
 ---
 # <a name="types-supported-by-the-data-contract-serializer"></a>データ コントラクト シリアライザーでサポートされる型
 Windows Communication Foundation (WCF) を使用して、<xref:System.Runtime.Serialization.DataContractSerializer>データを XML に変換して、XML をデータに変換する既定のシリアル化エンジンとして。 <xref:System.Runtime.Serialization.DataContractSerializer> は、 *データ コントラクト* 型をシリアル化するように設計されています。 ただし、暗黙のデータ コントラクトを持つと考えられるその他の型も多数サポートされています。 以下は、シリアル化可能なすべての型です。  
@@ -31,7 +31,7 @@ Windows Communication Foundation (WCF) を使用して、<xref:System.Runtime.Se
   
 - <xref:System.SerializableAttribute> 属性でマークされた型。 .NET Framework の基本クラス ライブラリに含まれる多くの種類は、このカテゴリに分類されます。 <xref:System.Runtime.Serialization.DataContractSerializer> は、.NET Framework リモート処理、 <xref:System.Runtime.Serialization.Formatters.Binary.BinaryFormatter>、および <xref:System.Runtime.Serialization.Formatters.Soap.SoapFormatter>で使用されていたこのシリアル化プログラミング モデルを完全にサポートします。これは、 <xref:System.Runtime.Serialization.ISerializable> インターフェイスのサポートを含みます。  
   
-- 未処理の XML を表す型、または [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] のリレーショナル データを表す型。 <xref:System.Xml.XmlElement> 型および <xref:System.Xml.XmlNode> 型の配列は、XML を直接表す方法としてサポートされています。 また、 <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装する型 (関連する <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性、および <xref:System.Xml.Linq.XDocument> 型と <xref:System.Xml.Linq.XElement> 型を含む) もサポートされています。 部分信頼環境では、 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)]<xref:System.Data.DataTable> 型と <xref:System.Data.DataSet> 型 (およびその型指定された派生クラス) はすべて <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装するので、このカテゴリに属します。 詳細については、次を参照してください。 [XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)します。  
+- 生の XML または ADO.NET のリレーショナル データを表す型を表す型。 <xref:System.Xml.XmlElement> 型および <xref:System.Xml.XmlNode> 型の配列は、XML を直接表す方法としてサポートされています。 また、 <xref:System.Xml.Serialization.IXmlSerializable> インターフェイスを実装する型 (関連する <xref:System.Xml.Serialization.XmlSchemaProviderAttribute> 属性、および <xref:System.Xml.Linq.XDocument> 型と <xref:System.Xml.Linq.XElement> 型を含む) もサポートされています。 ADO.NET<xref:System.Data.DataTable>型と<xref:System.Data.DataSet>型 (およびその型指定された派生クラス) を実装、<xref:System.Xml.Serialization.IXmlSerializable>インターフェイス、およびので、このカテゴリに属します。 詳細については、次を参照してください。 [XML および ADO.NET データ コントラクトの種類](../../../../docs/framework/wcf/feature-details/xml-and-ado-net-types-in-data-contracts.md)します。  
   
 ## <a name="limitations-of-using-certain-types-in-partial-trust-mode"></a>部分信頼モードにおける特定の型の使用制限  
  部分信頼モードのシナリオで型を使用する場合、型によっては次の制限があります。  
@@ -63,7 +63,7 @@ Windows Communication Foundation (WCF) を使用して、<xref:System.Runtime.Se
   
 - 構造体とクラスの両方がサポートされています。  
   
-- <xref:System.Runtime.Serialization.DataContractSerializer> は、 <xref:System.Xml.Serialization.XmlSerializer> と [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web サービスで使用されるプログラミング モデルをサポートしていません。 特に、 <xref:System.Xml.Serialization.XmlElementAttribute> や <xref:System.Xml.Serialization.XmlAttributeAttribute>のような属性をサポートしていません。 このプログラミング モデルのサポートを有効にするには、使用する WCF を切り替え、<xref:System.Xml.Serialization.XmlSerializer>の代わりに、<xref:System.Runtime.Serialization.DataContractSerializer>します。  
+- <xref:System.Runtime.Serialization.DataContractSerializer>によって使用されるプログラミング モデルをサポートしていません、<xref:System.Xml.Serialization.XmlSerializer>と ASP.NET Web サービス。 特に、 <xref:System.Xml.Serialization.XmlElementAttribute> や <xref:System.Xml.Serialization.XmlAttributeAttribute>のような属性をサポートしていません。 このプログラミング モデルのサポートを有効にするには、使用する WCF を切り替え、<xref:System.Xml.Serialization.XmlSerializer>の代わりに、<xref:System.Runtime.Serialization.DataContractSerializer>します。  
   
 - <xref:System.DBNull> 型は、特殊な方法で処理されます。 これは、シングルトン型です。デシリアライザーは、逆シリアル化後にシングルトン制約に従い、シングルトン インスタンスへのすべての `DBNull` 参照を指します。 `DBNull` はシリアル化可能な型であるため、 <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A> アクセス許可が必要です。  
   

@@ -2,12 +2,12 @@
 title: Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 ms.date: 03/30/2017
 ms.assetid: a5848ffd-3eb5-432d-812e-bd948ccb6bca
-ms.openlocfilehash: a34c2ee7cb98c6120e23114674712de0ba5b8162
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f55f994d1fd2d8af8ba15aa159d1bab84cc72d15
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664814"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876722"
 ---
 # <a name="one-time-setup-procedure-for-the-windows-communication-foundation-samples"></a>Windows Communication Foundation サンプルの 1 回限りのセットアップの手順
 Windows Communication Foundation (WCF) サンプルのほとんどがインターネット インフォメーション サービス (IIS) でホストされているし、共通の仮想ディレクトリから実行します。 この 1 回限りのセットアップ手順は、ディスクにフォルダーを作成しますという名前の iis 仮想ディレクトリも追加**ServiceModelSamples**します。
@@ -19,7 +19,7 @@ Windows Communication Foundation (WCF) サンプルのほとんどがインタ�
   
 ### <a name="one-time-setup-procedure-for-wcf-samples"></a>WCF サンプルの 1 回限りのセットアップの手順  
   
-1. [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] がセットアップされていることを確認します。 設定する方法の詳細についての[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]を参照してください[インターネット インフォメーション サービスのホスティング手順](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)します。  
+1. ASP.NET が設定されていることを確認します。 ASP.NET を設定する方法の詳細については、次を参照してください。[インターネット インフォメーション サービスのホスティング手順](../../../../docs/framework/wcf/samples/internet-information-service-hosting-instructions.md)します。  
   
 2. [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)] がインストールされていることを確認します。 次のディレクトリに、v4.0 (またはそれ以降) を検索: **\Windows\Microsoft.NET\Framework**  
   

@@ -15,12 +15,12 @@ helpviewer_keywords:
 - walkthroughs [Windows Forms], debugging
 - design-time debugging
 ms.assetid: 1fd83ccd-3798-42fc-85a3-6cba99467387
-ms.openlocfilehash: a8f228d334785cd880b06dbeda8f96550471599a
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 39adcbd6d915f8b086df7e425efbe08ae8680a45
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211544"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882463"
 ---
 # <a name="walkthrough-debugging-custom-windows-forms-controls-at-design-time"></a>チュートリアル: カスタム Windows フォーム コントロールのデザイン時のデバッグ
 
@@ -124,7 +124,7 @@ Visual Studio で、"DebuggingExample"と呼ばれる Windows アプリケーシ
 
 2. **DebugControlLibrary**プロパティ シート、**デバッグ**タブ。
 
-     **開始動作**セクションで、**外部プログラムの開始**します。 されますので、省略記号をクリックして、Visual Studio の別のインスタンスをデバッグ (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton"))、Visual Studio IDE を参照するボタンをクリックします。 実行可能ファイルの名前は**devenv.exe**、され、パスは %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe で既定の場所にインストールした場合。
+     **開始動作**セクションで、**外部プログラムの開始**します。 できますので、省略記号をクリックして、Visual Studio の別のインスタンスをデバッグ (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png))、Visual Studio IDE を参照するボタンをクリックします。 実行可能ファイルの名前は**devenv.exe**、され、パスは %programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe で既定の場所にインストールした場合。
 
 3. **[OK]** をクリックしてダイアログ ボックスを閉じます。
 

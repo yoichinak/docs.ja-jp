@@ -2,12 +2,12 @@
 title: 背景情報
 ms.date: 03/30/2017
 ms.assetid: 724888f2-d3f1-4bea-b9a1-a0adb8a00f3b
-ms.openlocfilehash: dfa1d06b9df7da86fe529c69d7fb01fcc58ccc87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c64b720f893c907b0570e886f0a4d81bb19d09a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592436"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878708"
 ---
 # <a name="background-information"></a>背景情報
 このセクションのトピックでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の使用に関する基本事項の範囲を超えた概念と手順について説明します。  
@@ -22,7 +22,7 @@ ms.locfileid: "64592436"
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ADO.NET および LINQ to SQL](../../../../../../docs/framework/data/adonet/sql/linq/ado-net-and-linq-to-sql.md)  
- [!INCLUDE[vstecado](../../../../../../includes/vstecado-md.md)] と [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の関係について説明します。  
+ ADO.NET の関係について説明しますと[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]します。  
   
  [LINQ to SQL のソース コードの分析](../../../../../../docs/framework/data/adonet/sql/linq/analyzing-linq-to-sql-source-code.md)  
  Northwind サンプル データベースからソース コードを生成および表示することによって、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の対応付けを分析する方法について説明します。  

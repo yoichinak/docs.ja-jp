@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - WS Security
 ms.assetid: c63cfc87-6b20-4949-93b3-bcd4b732b0a2
-ms.openlocfilehash: 89c3fc49ed70c1b56edc70199be2a0030ae55d07
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 48d2bddb11873524c8a74748c787e61eec5eb870
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664838"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876696"
 ---
 # <a name="message-security-user-name"></a>メッセージ セキュリティ ユーザー名
 このサンプルでは、クライアントのユーザー名認証による WS-Security を使用するアプリケーションを実装する方法を示します。このアプリケーションでは、サーバーの X.509v3 証明書を使用するサーバー認証が必要です。 クライアント/サーバー間のすべてのアプリケーション メッセージは署名され、暗号化されます。 既定では、クライアントによって提供されるユーザー名とパスワードが、有効な Windows アカウントへのログオンに使用されます。 このサンプルがに基づいて、 [WSHttpBinding](../../../../docs/framework/wcf/samples/wshttpbinding.md)します。 このサンプルは、クライアント コンソール プログラム (Client.exe) と、インターネット インフォメーション サービス (IIS) によってホストされるサービス ライブラリ (Service.dll) で構成されています。 サービスは、要求/応答通信パターンを定義するコントラクトを実装します。  
@@ -173,7 +173,7 @@ Press <ENTER> to terminate client.
   
 - 証明書の秘密キーに関する権限の付与  
   
-     Setup.bat バッチ ファイルの次の行は、LocalMachine ストアに保存されたサーバー証明書を [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] ワーカー プロセス アカウントでアクセスできるようにします。  
+     Setup.bat バッチ ファイルで次の行では、ASP.NET ワーカー プロセス アカウントにアクセスできる、LocalMachine ストアに格納されているサーバーの証明書を作成します。  
   
     ```bat
     echo ************  

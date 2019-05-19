@@ -10,12 +10,12 @@ helpviewer_keywords:
 - print jobs [WPF], troubleshooting
 - print jobs [WPF], diagnosing problems
 ms.assetid: b081a170-84c6-48f9-a487-5766a8d58a82
-ms.openlocfilehash: ceffef8e911bb3e49e0d6526328523667a462b61
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: c9da2e1daff23ef9ba39d8b5d53cb3be67f35a27
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912459"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878205"
 ---
 # <a name="how-to-diagnose-problematic-print-job"></a>方法: 問題のある印刷ジョブを診断する
 印刷ジョブで印刷を実行できない、印刷速度が遅い、などのユーザーからの苦情に、ネットワーク管理者が対処することはよくあります。 豊富な一連の印刷ジョブのプロパティで公開されている、 [!INCLUDE[TLA#tla_api#plural](../../../../includes/tlasharptla-apisharpplural-md.md)] Microsoft .NET Framework の印刷ジョブの迅速なリモート診断を実行する手段を提供します。  
@@ -59,7 +59,7 @@ ms.locfileid: "64912459"
  [!code-csharp[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/csharp/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/CSharp/Program.cs#identifyanddiagnoseproblematicjob)]
  [!code-vb[DiagnoseProblematicPrintJob#IdentifyAndDiagnoseProblematicJob](~/samples/snippets/visualbasic/VS_Snippets_Wpf/DiagnoseProblematicPrintJob/visualbasic/program.vb#identifyanddiagnoseproblematicjob)]  
   
- フラグを使用して印刷ジョブの状態を確認する、<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>プロパティに設定されているかどうかを参照してください。 各関連フラグを確認します。 1 ビットがビット フラグ セットで設定されているかどうかを確認するには、通常、フラグ セットを 1 つのオペランドとし、フラグ自体をもう 1 つのオペランドとして、論理 AND 演算を行います。 フラグ自体には 1 ビットのみが設定されているため、論理 AND の結果は、その同じビットが上限となります。 それが該当するかどうかを確認するには、論理 AND の結果とフラグ自体を比較します。 詳細については、次を参照してください。 <xref:System.Printing.PrintJobStatus>、 [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/and-operator.md)、および<xref:System.FlagsAttribute>します。  
+ フラグを使用して印刷ジョブの状態を確認する、<xref:System.Printing.PrintSystemJobInfo.JobStatus%2A>プロパティに設定されているかどうかを参照してください。 各関連フラグを確認します。 1 ビットがビット フラグ セットで設定されているかどうかを確認するには、通常、フラグ セットを 1 つのオペランドとし、フラグ自体をもう 1 つのオペランドとして、論理 AND 演算を行います。 フラグ自体には 1 ビットのみが設定されているため、論理 AND の結果は、その同じビットが上限となります。 それが該当するかどうかを確認するには、論理 AND の結果とフラグ自体を比較します。 詳細については、次を参照してください。 <xref:System.Printing.PrintJobStatus>、 [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)、および<xref:System.FlagsAttribute>します。  
   
  次のコードでは、ビットが設定されている属性ごとにこの報告をコンソール画面に表示し、場合によっては応答方法を示します  (ジョブまたはキューが一時停止されている場合に呼び出される **HandlePausedJob** メソッドについては、後で説明します)。  
   
@@ -87,6 +87,6 @@ ms.locfileid: "64912459"
 - <xref:System.Printing.PrintSystemJobInfo>
 - <xref:System.FlagsAttribute>
 - <xref:System.Printing.PrintQueue>
-- [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/and-operator.md)
+- [& 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/bitwise-and-shift-operators.md#logical-and-operator-)
 - [WPF のドキュメント](documents-in-wpf.md)
 - [印刷の概要](printing-overview.md)

@@ -2,12 +2,12 @@
 title: Entity Framework の概要
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: d63e60c90e71593821c38830bc11d767e582619a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634269"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880026"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework の概要
 
@@ -49,7 +49,7 @@ ms.locfileid: "65634269"
 
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 概念モデル内のエンティティを直接操作しをサポートする SQL のストレージの影響を受けない[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念です。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] オブジェクト クエリと EntityClient プロバイダーを使用して実行されるクエリの両方で使用されます。 詳細については、次を参照してください。 [Entity SQL の概要](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)します。
 
-[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] には、EntityClient データ プロバイダーが含まれています。 このプロバイダーは接続を管理し、エンティティ クエリをデータ ソース固有のクエリに変換し、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] がエンティティ データをオブジェクトに具体化するために使用するデータ リーダーを返します。 標準のように、EntityClient プロバイダー オブジェクトの具体化が不要で、使用もできる[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]データ プロバイダーにより、アプリケーションを実行する[!INCLUDE[esql](../../../../../includes/esql-md.md)]クエリを実行し、返される読み取り専用データ リーダーを使用します。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。
+[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] には、EntityClient データ プロバイダーが含まれています。 このプロバイダーは接続を管理し、エンティティ クエリをデータ ソース固有のクエリに変換し、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] がエンティティ データをオブジェクトに具体化するために使用するデータ リーダーを返します。 オブジェクトの具体化が不要であれば、アプリケーションで [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリを実行して返された読み取り専用のデータ リーダーを使用できるようにすることで、EntityClient プロバイダーを標準の ADO.NET データ プロバイダーと同様に使用することもできます。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。
 
 次の図は、データにアクセスするための [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アーキテクチャを示しています。
 
@@ -59,7 +59,7 @@ ms.locfileid: "65634269"
 
 ## <a name="data-providers"></a>データ プロバイダー
 
-`EntityClient` プロバイダーは、概念エンティティおよびリレーションシップに従ってデータにアクセスし、[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] プロバイダー モデルを拡張します。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] を使用するクエリを実行します。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] は、`EntityClient` がデータベースと通信する基盤となるクエリ言語を提供します。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。
+`EntityClient`プロバイダーは、概念エンティティおよびリレーションシップの観点からデータにアクセスして、ADO.NET プロバイダー モデルを拡張します。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] を使用するクエリを実行します。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] は、`EntityClient` がデータベースと通信する基盤となるクエリ言語を提供します。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。
 
 更新された [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] の SqlClient Data Provider は、正規コマンド ツリーをサポートしています。 詳細については、次を参照してください。 [Entity Framework 用 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)します。
 

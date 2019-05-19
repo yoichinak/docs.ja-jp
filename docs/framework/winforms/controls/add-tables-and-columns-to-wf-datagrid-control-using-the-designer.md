@@ -6,17 +6,18 @@ helpviewer_keywords:
 - tables [Windows Forms], adding to DataGrid control
 - DataGrid control [Windows Forms], adding tables and columns
 ms.assetid: 4a6d1b34-b696-476b-bf8a-57c6230aa9e1
-ms.openlocfilehash: 5e530b475745a3df7482b9ea4276f004d13ec055
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b248e9b250ce18f05a2bf57b80af8fbcebb4f811
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61642452"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880601"
 ---
 # <a name="how-to-add-tables-and-columns-to-the-windows-forms-datagrid-control-using-the-designer"></a>方法: デザイナーを使って Windows フォーム DataGrid コントロールにテーブルと列を追加する
 
 > [!NOTE]
->  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
+>  
+  <xref:System.Windows.Forms.DataGridView> コントロールは、<xref:System.Windows.Forms.DataGrid> コントロールに代わると共に追加の機能を提供します。ただし、<xref:System.Windows.Forms.DataGrid> コントロールは、下位互換性を保つ目的および将来使用する目的で保持されます。 詳細については、「[Windows フォームの DataGridView コントロールと DataGrid コントロールの違いについて](differences-between-the-windows-forms-datagridview-and-datagrid-controls.md)」を参照してください。  
   
  データを表示するには、Windows フォームで<xref:System.Windows.Forms.DataGrid>テーブルと列を作成してコントロール<xref:System.Windows.Forms.DataGridTableStyle>オブジェクトと追加すること、<xref:System.Windows.Forms.GridTableStylesCollection>オブジェクトを通じてアクセスされる、<xref:System.Windows.Forms.DataGrid>コントロールの<xref:System.Windows.Forms.DataGrid.TableStyles%2A>プロパティ。 各テーブルのスタイルがで指定されたは、どのようなデータ テーブルの内容を表示、<xref:System.Windows.Forms.DataGridTableStyle.MappingName%2A>のプロパティ、<xref:System.Windows.Forms.DataGridTableStyle>します。 既定では、指定された列スタイルなしのテーブルのスタイルはそのデータ テーブル内のすべての列に表示されます。 追加することで表示するテーブルから列を制限する<xref:System.Windows.Forms.DataGridColumnStyle>オブジェクトを<xref:System.Windows.Forms.GridColumnStylesCollection>、経由でアクセスする、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>の各プロパティ<xref:System.Windows.Forms.DataGridTableStyle>します。  
   
@@ -29,7 +30,7 @@ ms.locfileid: "61642452"
   
 1. テーブルにデータを表示するにはまず、<xref:System.Windows.Forms.DataGrid>データセットへのコントロール。 詳細については、「[方法 :デザイナーを使用してデータ ソースに Windows フォーム DataGrid コントロールをバインド](bind-wf-datagrid-control-to-a-data-source-using-the-designer.md)します。  
   
-2. 選択、<xref:System.Windows.Forms.DataGrid>コントロールの<xref:System.Windows.Forms.DataGrid.TableStyles%2A>[プロパティ] ウィンドウで、省略記号ボタンをクリックし、(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横にこのプロパティを表示、 **DataGridTableStyle コレクション エディター**します。  
+2.  選択、<xref:System.Windows.Forms.DataGrid>コントロールの<xref:System.Windows.Forms.DataGrid.TableStyles%2A>[プロパティ] ウィンドウで、省略記号ボタンをクリックし、(![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) を表示するプロパティの横に、**DataGridTableStyle コレクション エディター**します。  
   
 3. コレクション エディターで **追加**テーブル スタイルを挿入します。  
   
@@ -43,7 +44,7 @@ ms.locfileid: "61642452"
   
 ### <a name="to-add-a-column-to-the-datagrid-control-in-the-designer"></a>デザイナーの DataGrid コントロールに列を追加するには  
   
-1. **メンバー**のボックス、 **DataGridTableStyle コレクション エディター**、適切なテーブルのスタイルを選択します。 **プロパティ**のコレクション エディターでは、選択ボックス、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>コレクション、省略記号ボタンをクリックし、(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) を表示するプロパティの横にある、 **DataGridColumnStyle コレクション エディター**します。  
+1.  **メンバー**のボックス、 **DataGridTableStyle コレクション エディター**、適切なテーブルのスタイルを選択します。 **プロパティ**のコレクション エディターでは、選択ボックス、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>コレクション、省略記号ボタンをクリックし、(![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) 横にこのプロパティを表示、 **DataGridColumnStyle コレクション エディター**します。  
   
 2. コレクション エディターで **追加**列スタイルの挿入または下向きの矢印をクリックして**追加**列の型を指定します。  
   

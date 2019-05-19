@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: f424e4ef62f42da9065aa6ff846e8bd2c7a42a4e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d8c7d65f593f2ba5c21625835a0be7a77a44afb5
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64625809"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881113"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。  
@@ -29,7 +29,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 ## <a name="certificate-stores"></a>証明書ストア  
  証明書はストアに格納されています。 2 つの主要なストアがあり、さらにサブストアに分かれています。 コンピューターの管理者は、MMC スナップイン ツールを使用して、両方の主要なストアを表示できます。 管理者以外のユーザーは、現在のユーザー ストアだけを表示できます。  
   
-- **ローカル コンピューター ストア**:  このストアには、コンピューター プロセス ([!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] など) がアクセスする証明書が格納されます。 クライアントに対してサーバーを認証するための証明書は、ここに格納します。  
+- **ローカル コンピューター ストア**:  これには、ASP.NET などのコンピューターのプロセスによってアクセスする証明書が含まれています。 クライアントに対してサーバーを認証するための証明書は、ここに格納します。  
   
 - **現在のユーザー ストア**:  コンピューターの現在のユーザーの証明書は、通常、対話型アプリケーションによってここに配置されます。 クライアント アプリケーションを作成する場合、サービスに対してユーザーを認証するための証明書は、通常、ここに配置します。  
   
@@ -52,7 +52,7 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
 - サービスまたはクライアントがユーザー アカウントで実行されるアプリケーションである場合は、**現在のユーザー** ストアを使用します。  
   
 ### <a name="accessing-stores"></a>ストアへのアクセス  
- ストアは、コンピューター上の一種のフォルダーであり、アクセス制御リスト (ACL: Access Control List) によって保護されています。 インターネット インフォメーション サービス (IIS: Internet Information Services) によってホストされたサービスを作成すると、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] アカウントで [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] プロセスが実行されます。 このアカウントは、サービスが使用する証明書を格納するストアにアクセス可能である必要があります。 各主要ストアは既定のアクセス リストで保護されていますが、これらのリストは変更できます。 ストアにアクセスする別のロールを作成した場合、そのロールにアクセス許可を付与する必要があります。 WinHttpCertConfig.exe ツールを使用してアクセス リストを変更する方法については、次を参照してください。[方法。開発中に使用するための一時的な証明書を作成](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)です。 IIS でクライアント証明書を使用する方法の詳細については、「[ASP.NET Web アプリケーションで認証用のクライアント証明書を使用して Web サービスを呼び出す方法 ](https://go.microsoft.com/fwlink/?LinkId=88914)」を参照してください。  
+ ストアは、コンピューター上の一種のフォルダーであり、アクセス制御リスト (ACL: Access Control List) によって保護されています。 インターネット インフォメーション サービス (IIS) によってホストされるサービスを作成するときに、ASP.NET プロセスは、ASP.NET アカウントで実行されます。 このアカウントは、サービスが使用する証明書を格納するストアにアクセス可能である必要があります。 各主要ストアは既定のアクセス リストで保護されていますが、これらのリストは変更できます。 ストアにアクセスする別のロールを作成した場合、そのロールにアクセス許可を付与する必要があります。 WinHttpCertConfig.exe ツールを使用してアクセス リストを変更する方法については、次を参照してください。[方法。開発中に使用するための一時的な証明書を作成](../../../../docs/framework/wcf/feature-details/how-to-create-temporary-certificates-for-use-during-development.md)です。 IIS でクライアント証明書を使用する方法の詳細については、「[ASP.NET Web アプリケーションで認証用のクライアント証明書を使用して Web サービスを呼び出す方法 ](https://go.microsoft.com/fwlink/?LinkId=88914)」を参照してください。  
   
 ## <a name="chain-trust-and-certificate-authorities"></a>信頼チェーンと証明機関  
  証明書は、各証明書がその発行元の CA にリンクされる階層構造で作成されます。 このリンクは CA の証明書へのリンクになります。 CA の証明書の元の CA の証明書を発行した CA へのリンク。 ルート CA の証明書に到達するまでこのプロセスが繰り返されます。 ルート CA の証明書は本質的に信頼されています。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - colors [Windows Forms], creating linear gradients
 - gradients
 ms.assetid: 6c88e1cc-1217-4399-ac12-cb37592b9f01
-ms.openlocfilehash: 953a1944073a8cb5b19ef072e2a523baec3a5605
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e55d27b454579268658192ae56daa52e0b28bb83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650002"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876080"
 ---
 # <a name="how-to-create-a-linear-gradient"></a>方法: 線形グラデーションを作成する
 GDI + 水平、垂直方向、および対角線方向の線形グラデーションを提供します。 既定では、線形グラデーションの色を均一に変更します。 ただし、色が一様でない方法で変更されるように、線形グラデーションをカスタマイズできます。  
@@ -31,9 +31,9 @@ GDI + 水平、垂直方向、および対角線方向の線形グラデーシ�
   
  次の図は、線、楕円、四角形を示します。 色のグラデーション繰り返される自体の水平方向座標が 200 を超えるとに注意してください。  
   
- ![線形グラデーション](./media/cslineargradient1.png "cslineargradient1")  
+ ![線、楕円、四角形の色グラデーションで塗りつぶすこと。](./media/how-to-create-a-linear-gradient/gradient-line-ellipse-rectangle.png)  
   
-### <a name="to-use-horizontal-linear-gradients"></a>水平方向の線形グラデーションを使用するには  
+## <a name="to-use-horizontal-linear-gradients"></a>水平方向の線形グラデーションを使用するには  
   
 - 3 番目と 4 番目の引数として、それぞれ不透明な赤と不透明青を渡します。  
   
@@ -56,9 +56,9 @@ GDI + 水平、垂直方向、および対角線方向の線形グラデーシ�
   
  次の図は、結果として得られる楕円と四角形を示します。  
   
- ![線形グラデーション](./media/cslineargradient2.png "cslineargradient2")  
+ ![楕円と四角形を水平方向の色のグラデーションで塗りつぶすこと。](./media/how-to-create-a-linear-gradient/gradient-ellipse-rectangle.png)  
 
-### <a name="to-customize-linear-gradients"></a>線形グラデーションをカスタマイズするには  
+## <a name="to-customize-linear-gradients"></a>線形グラデーションをカスタマイズするには  
   
 - 3 番目と 4 番目の引数として、それぞれ不透明な黒と不透明な赤を渡します。  
   
@@ -71,9 +71,9 @@ GDI + 水平、垂直方向、および対角線方向の線形グラデーシ�
   
  次の図は、線、楕円を示します。 楕円内色徐々 にに沿って移動すると行のメモが並列に渡される行には (0, 0) と (200, 100)。  
   
- ![線形グラデーション](./media/cslineargradient3.png "cslineargradient3")  
+ ![線、および楕円対角線のグラデーションで塗りつぶすこと。](./media/how-to-create-a-linear-gradient/gradient-line-ellipse.png)  
   
-### <a name="to-create-diagonal-linear-gradients"></a>対角線方向の線形グラデーションを作成するには  
+## <a name="to-create-diagonal-linear-gradients"></a>対角線方向の線形グラデーションを作成するには  
   
 - 3 番目と 4 番目の引数として、それぞれ不透明青と不透明な緑を渡します。  
   

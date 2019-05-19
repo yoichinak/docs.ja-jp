@@ -9,12 +9,12 @@ helpviewer_keywords:
 - examples [Windows Forms], controls
 - setting images [Windows Forms], Windows Forms controls
 ms.assetid: ae80d07a-e469-4251-90ca-df71f5852454
-ms.openlocfilehash: 89d9517a92155f569a15c5272bcecc1c8f427f1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b914509656d3ce67d62dcd23cebdcc3b74278d72
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62013154"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882001"
 ---
 # <a name="how-to-set-the-image-displayed-by-a-windows-forms-control-using-the-designer"></a>方法: デザイナーを使用して Windows フォーム コントロールによって表示されるイメージを設定する
 いくつかの Windows フォーム コントロールは、イメージを表示できます。 イメージ、アイコンをボタン上のフロッピー ディスク アイコンなど、コントロールの目的を明確にする、**保存**コマンド。 コントロールの外観を与えるための背景画像の代わりに、アイコンもあります。  
@@ -26,7 +26,7 @@ ms.locfileid: "62013154"
   
 1. **プロパティ**ウィンドウで、**イメージ**または**BackgroundImage**コントロールのプロパティ をクリックし、省略記号ボタン (  
   
-     ![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")  
+     ![Visual Studio の [プロパティ] ウィンドウで省略記号ボタン ([...])。](./media/visual-studio-ellipsis-button.png))  
   
      ) を表示する、**リソースの選択** ダイアログ ボックス。  
   

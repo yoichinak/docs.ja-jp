@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF security
 - WCF, security
 ms.assetid: f0ecc6f7-f4b5-42a4-9cb1-b02e28e26620
-ms.openlocfilehash: 65d4f2858c2be4c2a6872f96ef3739bb16253d74
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c4ac823b5419d845437ef8e89f5123adafda0c5a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949865"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881354"
 ---
 # <a name="securing-services"></a>サービスのセキュリティ保護
 Windows Communication Foundation (WCF) サービスのセキュリティは、2 つの主要要件で構成されます。 転送セキュリティと承認します。 (3 番目の要件は、「セキュリティのイベントの監査[監査](../../../docs/framework/wcf/feature-details/auditing-security-events.md))。簡単に説明すると、転送セキュリティは、認証 (サーバーとクライアント両方の ID の検証)、機密性 (メッセージの暗号化)、および整合性 (改ざんを検出するためのデジタル署名) で構成されます。 承認は、たとえば、特権のあるユーザーだけがファイルを読み取ることができるなど、リソースへのアクセスを制御することです。 WCF の機能を使用して、2 つの主な要件を簡単に実装します。  
@@ -50,7 +50,7 @@ Windows Communication Foundation (WCF) サービスのセキュリティは、2 
  インターネット上のセキュリティは、イントラネット上のセキュリティと同じ要件で構成されます。 サービスは、信頼性を証明するために資格情報を提示する必要があり、クライアントは、サービスに対して ID を証明する必要があります。 クライアントの ID が証明されると、サービスは、クライアントによるリソースへのアクセスを制御できます。 ただし、インターネットではさまざまな種類が混在しているので、提示される資格情報は、Windows ドメインで使用される資格情報とは異なります。 Kerberos コントローラーが資格情報のチケットを使用して、ドメインでユーザーの認証を処理するのに対し、インターネットでは、サービスとクライアントは、資格情報を提示するための複数の異なる方法のいずれかに依存します。 このトピックの目的は、インターネットでアクセス可能な WCF サービスを作成することができる一般的なアプローチを提示するただしです。  
   
 ### <a name="using-iis-and-aspnet"></a>IIS と ASP.NET の使用  
- インターネット セキュリティの要件、およびその問題を解決するための機構は、新しいものではありません。 IIS はこの問題に対応する多くのセキュリティ機能があり、インターネット用の Microsoft の Web サーバーさらに、 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] WCF サービスを使用できるセキュリティ機能が含まれています。 これらのセキュリティ機能を利用するには、IIS で、WCF サービスをホストします。  
+ インターネット セキュリティの要件、およびその問題を解決するための機構は、新しいものではありません。 IIS はこの問題に対応する多くのセキュリティ機能があり、インターネット用の Microsoft の Web サーバーさらに、ASP.NET には、WCF サービスを使用できるセキュリティ機能が含まれています。 これらのセキュリティ機能を利用するには、IIS で、WCF サービスをホストします。  
   
 #### <a name="using-aspnet-membership-and-role-providers"></a>ASP.NET メンバーシップとロール プロバイダーの使用  
  ASP.NET には、メンバーシップとロール プロバイダーが用意されています。 プロバイダーは、呼び出し元を認証するためのユーザー名とパスワードの組み合わせのデータベースであり、これによって、各呼び出し元のアクセス特権を指定することもできます。 Wcf では、既存のメンバーシップとロール プロバイダーの構成を簡単に使用できます。 この機能を示すサンプル アプリケーションについては、「 [Membership and Role Provider](../../../docs/framework/wcf/samples/membership-and-role-provider.md) 」のサンプルを参照してください。  

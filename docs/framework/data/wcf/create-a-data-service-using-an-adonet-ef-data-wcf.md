@@ -5,16 +5,16 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: e9b2c1077cf3323a7d5b69bee6dff7e6f9611818
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634107"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878085"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>方法: ADO.NET Entity Framework データ ソース (WCF Data Services) を使用してデータ サービスを作成します。
 
-WCF Data Services では、データ サービスとしてのエンティティ データを公開します。 データ ソースがリレーショナル データベースの場合、このエンティティ データは [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)][!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)] によって提供されます。 このトピックでは、作成する方法を示します、 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-ベースのデータ モデルは、既存のデータベースに基づいており、このデータ モデルを使用して、新しいデータ サービスを作成する Visual Studio Web アプリケーション。
+WCF Data Services では、データ サービスとしてのエンティティ データを公開します。 このエンティティ データが ADO.NET によって提供される[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]データ ソースがリレーショナル データベースの場合。 このトピックでは、作成する方法を示します、 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]-ベースのデータ モデルは、既存のデータベースに基づいており、このデータ モデルを使用して、新しいデータ サービスを作成する Visual Studio Web アプリケーション。
 
 [!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]も生成できるコマンド ライン ツールを提供する[!INCLUDE[adonet_ef](../../../../includes/adonet-ef-md.md)]Visual Studio プロジェクトの外側でモデル。 詳細については、「[方法 :EdmGen.exe を使用して、モデルとマッピング ファイルを生成する](../../../../docs/framework/data/adonet/ef/how-to-use-edmgen-exe-to-generate-the-model-and-mapping-files.md)します。
 
@@ -53,7 +53,7 @@ WCF Data Services では、データ サービスとしてのエンティティ 
 
 2. **モデル ブラウザー**は、モデルを右クリックし、**プロパティ**、エンティティ コンテナーの名前をメモします。
 
-3. **ソリューション エクスプ ローラー**の名前を右クリックし、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)]プロジェクトをクリックして**追加** > **新しい項目の**します。
+3. **ソリューション エクスプ ローラー**、ASP.NET プロジェクトの名前を右クリックし、クリックして**追加** > **新しい項目の**します。
 
 4. **新しい項目の追加**ダイアログ ボックスで、 **WCF Data Service**テンプレート、 **Web**カテゴリ。
 

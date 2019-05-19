@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5c5450ea-6af1-4b75-a267-613d0ac54707
-ms.openlocfilehash: 7fb3398ec325cd8b483ef7a222c8dd392a4e72b7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d1635d0eccf0886577eafe2ab11126093defac2b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64656002"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875992"
 ---
 # <a name="specifying-service-run-time-behavior"></a>サービスのランタイム動作の指定
 サービス コントラクトを設計して ([Designing Service Contracts](../../../docs/framework/wcf/designing-service-contracts.md))、実装 ([Implementing Service Contracts](../../../docs/framework/wcf/implementing-service-contracts.md)) が終わると、サービス ランタイムの実行動作を構成できます。 ここでは、システム指定のサービスと操作の動作について説明し、新しい動作を作成するための詳細情報の参照先を示します。 一部の動作は属性として適用されますが、多くの動作はアプリケーション構成ファイルまたはプログラムを使用して適用されます。 サービス アプリケーションの構成の詳細については、次を参照してください。[サービスを構成する](../../../docs/framework/wcf/configuring-services.md)します。  
@@ -77,7 +77,7 @@ ms.locfileid: "64656002"
 ### <a name="service-behaviors"></a>サービスの動作  
  次の動作は、サービスに影響します。  
   
-- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 そのサービスを実行できるかどうかを示すために WCF サービスに適用される[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]互換モード。  
+- <xref:System.ServiceModel.Activation.AspNetCompatibilityRequirementsAttribute>。 そのサービスを ASP.NET 互換モードで実行できるかどうかを示すために WCF サービスに適用されます。  
   
 - <xref:System.ServiceModel.Description.ServiceAuthorizationBehavior>。 サービスがクライアントのクレームを承認する方法を制御します。  
   

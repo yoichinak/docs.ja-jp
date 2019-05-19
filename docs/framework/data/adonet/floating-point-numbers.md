@@ -2,15 +2,15 @@
 title: 浮動小数点数
 ms.date: 03/30/2017
 ms.assetid: 73c218c6-1c44-4402-a167-4f6262629a91
-ms.openlocfilehash: 209e53e41495603f4ad559a74bdc87033f6a92a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d1c033d7999fa403aaf18fccb765da178cba169a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583673"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882040"
 ---
 # <a name="floating-point-numbers"></a>浮動小数点数
-このトピックでは、開発者が [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] で浮動小数点数を扱う際によく遭遇する問題について説明します。 これらはコンピューターによる浮動小数点数の格納方法に起因する問題であり、<xref:System.Data.SqlClient> や <xref:System.Data.OracleClient> など、特定のプロバイダーに固有の問題ではありません。  
+このトピックでは、ADO.NET の浮動小数点数を扱う際に、開発者がよく直面する問題の一部について説明します。 これらはコンピューターによる浮動小数点数の格納方法に起因する問題であり、<xref:System.Data.SqlClient> や <xref:System.Data.OracleClient> など、特定のプロバイダーに固有の問題ではありません。  
   
  通常、浮動小数点数には正確なバイナリ表現がありません。 その代わり、数値の近似値がコンピューターによって格納されます。 浮動小数点数を表現するために使用されるバイナリ桁数はそのときどきで異なります。 浮動小数点数をある表現から別の表現に変換した場合、その数値の最下位の桁がわずかに変わってしまう場合があります。 一般に、変換が発生するのは型をキャストしたときです。 この差異は、変換を 1 つのデータベース内で行うか、データベースの値を表す型間で行うか、型と型の間で行うかに関係なく生じます。 このような差が生じてしまう関係上、論理的には等しくなるはずの数値でも、最下位の桁の値が異なる場合があります。 数値の有効桁数が、本来の桁数よりも大きくなったり小さくなったりすることもあります。 また、数値を文字列として表した場合に、期待した値が得られない場合もあります。  
   

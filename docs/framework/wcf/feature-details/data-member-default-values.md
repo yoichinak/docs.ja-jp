@@ -8,12 +8,12 @@ helpviewer_keywords:
 - data members [WCF], default values
 - data members [WCF]
 ms.assetid: 53a3b505-4b27-444b-b079-0eb84a97cfd8
-ms.openlocfilehash: fb9ad627df640e56b5250a2fdd15f5ac0d52df79
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: af8fff9d034f8dea4ce9f24a2bda042b5b9708a9
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592591"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881267"
 ---
 # <a name="data-member-default-values"></a>データ メンバーの既定値
 .NET framework では、型がの概念をある*既定値*します。 たとえば、参照型の既定値は `null` で、整数型の既定値は 0 です。 しかし、データ メンバーが既定値に設定されている場合は、シリアル化されたデータからそのデータ メンバーを省略することが望ましいことがあります。 それは、メンバーが既定値に設定されているために実際の値をシリアル化する必要がなく、パフォーマンスの点で有利だからです。  
@@ -54,7 +54,7 @@ ms.locfileid: "65592591"
   
 - 使用される実際の既定値は、スキーマには存在しません。 指定されていない要素が適切に解釈されるかどうかは、受信エンドポイントに依存します。  
   
- スキーマのインポート、<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>プロパティが自動的に設定`false`たびに説明したように WCF 固有の注釈が検出されます。 また、このプロパティは、一般に `false` Web サービスを使用したときに発生する特定の相互運用シナリオをサポートするために、`nillable` プロパティが `false` に設定されている参照型に対しても、[!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] に設定されます。  
+ スキーマのインポート、<xref:System.Runtime.Serialization.DataMemberAttribute.EmitDefaultValue%2A>プロパティが自動的に設定`false`たびに説明したように WCF 固有の注釈が検出されます。 設定されている`false`が参照型の場合、`nillable`プロパティに設定`false`ASP.NET Web サービスを使用する場合によく発生する特定の相互運用シナリオをサポートします。  
   
 ## <a name="see-also"></a>関連項目
 

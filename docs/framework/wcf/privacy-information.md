@@ -6,12 +6,12 @@ helpviewer_keywords:
 - WCF, privacy information
 - privacy information [WCF]
 ms.assetid: c9553724-f3e7-45cb-9ea5-450a22d309d9
-ms.openlocfilehash: aaa12ca65257be2f06c84f8ff3be926ea92b0dbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6da9e2a91fe8156c0631aa77594e3ed47d32cb8b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651071"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882186"
 ---
 # <a name="windows-communication-foundation-privacy-information"></a>Windows Communication Foundation のプライバシー情報
 マイクロソフトは、エンド ユーザーのプライバシー保護に力を入れています。 Windows Communication Foundation (WCF)、バージョン 3.0 を使用してアプリケーションをビルドすると、アプリケーションに、エンドユーザーのプライバシーに関する影響を与える可能性があります。 たとえば、アプリケーションが明示的にユーザーの連絡先情報を収集することがあります。つまり、アプリケーションがインターネットを経由して Web サイトに情報を要求したり、情報を送信したりすることがあります。 マイクロソフトの技術をアプリケーションに組み込んでいる場合、その技術にプライバシーに影響を与える可能性がある独自の動作が存在することがあります。 WCF 送信しませんすべての情報を Microsoft、アプリケーションからまたはエンドユーザーが選択する場合を除き。  
@@ -29,7 +29,7 @@ ms.locfileid: "64651071"
  WCF メッセージング層はローカル コンピューターに個人情報を書き込みません。 ただし、サービスの開発者が個人情報を公開するサービスを作成した場合は、ネットワーク レベルで個人情報を公開することがあります。このような例として、エンドポイント名に個人名を使用している場合や、エンドポイントの Web サービス記述言語に個人情報を追加しても、https を使用して WSDL にアクセスすることをクライアントに要求しない場合などがあります。 また、開発者が実行されている場合、 [ServiceModel メタデータ ユーティリティ ツール (Svcutil.exe)](../../../docs/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe.md)個人情報、ツールの出力を公開するエンドポイントに対してツールは、その情報を含めたり、出力ファイルに書き込まれます、ローカルのハード ディスク。  
   
 ## <a name="hosting"></a>ホスト  
- WCF でのホスティング機能は、オンデマンドで開始するか、複数のアプリケーション間のポート共有を有効にするアプリケーションを使用できます。 インターネット インフォメーション サービス (IIS) のような WCF アプリケーションをホストすることができます[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]します。  
+ WCF でのホスティング機能は、オンデマンドで開始するか、複数のアプリケーション間のポート共有を有効にするアプリケーションを使用できます。 WCF アプリケーションは、インターネット インフォメーション サービス (IIS)、ASP.NET のようなホストできます。  
   
  ホストでは、特定の情報をネットワークに公開せず、コンピューター上にデータを格納しません。  
   
@@ -47,7 +47,7 @@ ms.locfileid: "64651071"
 |データ|記憶域|  
 |----------|-------------|  
 |ユーザー名、X.509 証明書、Kerberos トークンなどのプレゼンテーション資格情報、および資格情報への参照|Windows 証明書ストアなど、標準の Windows 資格情報管理機構|  
-|ユーザー名とパスワードなど、ユーザーのメンバーシップ情報|[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] メンバーシップ プロバイダー|  
+|ユーザー名とパスワードなど、ユーザーのメンバーシップ情報|ASP.NET メンバーシップ プロバイダー。|  
 |クライアントに対するサービスの認証に使用されるサービスの ID 情報|サービスのエンドポイント アドレス|  
 |呼び出し元情報|監査ログ|  
   

@@ -2,18 +2,18 @@
 title: Entity Framework 用の EntityClient プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 8c5db787-78e6-4a34-8dc1-188bca0aca5e
-ms.openlocfilehash: 268608c82070e60007bc09f97a775918e0d950f3
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 17f18753cc64bce5901c9f57181a8c08733f0cfc
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583695"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878802"
 ---
 # <a name="entityclient-provider-for-the-entity-framework"></a>Entity Framework 用の EntityClient プロバイダー
 EntityClient プロバイダーは、概念モデルで記述されているデータにアクセスするために Entity Framework アプリケーションで使用するデータ プロバイダーです。 概念モデルについては、次を参照してください。[モデリング ファイルとマッピング](../../../../../docs/framework/data/adonet/ef/modeling-and-mapping.md)します。 EntityClient は、他の .NET Framework データ プロバイダーを使用してデータ ソースにアクセスします。 たとえば、EntityClient は、SQL Server データベースにアクセスするときは .NET Framework Data Provider for SQL Server (SqlClient) を使用します。 SqlClient プロバイダーについては、次を参照してください。 [Entity Framework 用 SqlClient](../../../../../docs/framework/data/adonet/ef/sqlclient-for-the-entity-framework.md)します。 EntityClient プロバイダーは <xref:System.Data.EntityClient> 名前空間で実装されます。  
   
 ## <a name="managing-connections"></a>接続の管理  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]ストレージ固有の上にビルド[!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)]提供することで、データ プロバイダー、<xref:System.Data.EntityClient.EntityConnection>基になるデータ プロバイダーおよびリレーショナル データベースにします。 構築する、<xref:System.Data.EntityClient.EntityConnection>オブジェクトを必要なモデルとマッピング、およびストレージ固有のデータ プロバイダー名と接続文字列を含むメタデータのセットを参照することがあります。 後に、<xref:System.Data.EntityClient.EntityConnection>はインプレースで概念モデルから生成されたクラスを使用してエンティティにアクセスできます。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]提供することで、ストレージ固有の ADO.NET データ プロバイダーに基づいて構築、<xref:System.Data.EntityClient.EntityConnection>基になるデータ プロバイダーおよびリレーショナル データベースにします。 構築する、<xref:System.Data.EntityClient.EntityConnection>オブジェクトを必要なモデルとマッピング、およびストレージ固有のデータ プロバイダー名と接続文字列を含むメタデータのセットを参照することがあります。 後に、<xref:System.Data.EntityClient.EntityConnection>はインプレースで概念モデルから生成されたクラスを使用してエンティティにアクセスできます。  
   
  app.config ファイルの接続文字列を指定できます。  
   

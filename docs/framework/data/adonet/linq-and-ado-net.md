@@ -2,12 +2,12 @@
 title: LINQ と ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: 79d6c52656e545c07260f3a97b089c238a74db3c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 312eb4b1c0512ca1244daec5bcda3ed864c3646d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583495"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878328"
 ---
 # <a name="linq-and-adonet"></a>LINQ と ADO.NET
 今日では、多くのビジネス開発者が 2 つ (以上) のプログラミング言語を使用する必要があります。 高級言語 (Visual c# または Visual Basic) などのビジネス ロジックやプレゼンテーション層とデータベースと対話するクエリ言語 (など[!INCLUDE[tsql](../../../../includes/tsql-md.md)])。 開発者は実質的に複数の言語に精通していることが要求され、開発環境における言語の不整合が生じる原因にもなっています。 たとえば、データ アクセス API を使用してデータベースを照会するアプリケーションでは、クエリは文字列リテラルとして引用符で囲んで指定する必要があります。 コンパイラはこのクエリ文字列を認識できないため、エラー (無効な構文、参照されている列または行が実際に存在するかどうかなど) のチェック機構が働きません。 クエリ パラメーターの型チェックや `IntelliSense` のサポートもありません。  
@@ -27,7 +27,7 @@ ms.locfileid: "65583495"
  以降のセクションで、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]、および [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] について詳しく説明します。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- <xref:System.Data.DataSet> は、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の基礎である非接続型プログラミング モデルの重要な要素であり幅広く使用されています。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] により、開発者は、他の多くのデータ ソースで利用できる共通のクエリ作成メカニズムを使用しながら、より高度なクエリ機能を <xref:System.Data.DataSet> に組み込むことができます。 詳細については、「[LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)」を参照してください。  
+ <xref:System.Data.DataSet> ADO.NET は、上に構築し、広く使用されている非接続型プログラミング モデルの重要な要素です。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] により、開発者は、他の多くのデータ ソースで利用できる共通のクエリ作成メカニズムを使用しながら、より高度なクエリ機能を <xref:System.Data.DataSet> に組み込むことができます。 詳細については、「[LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)」を参照してください。  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
  [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] は、概念モデルへのマッピングを必要としない開発者にとって有用なツールです。 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] では、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] プログラミング モデルを既存のデータベース スキーマ上で直接利用できるようになります。 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] データを表す .NET Framework クラスを生成することができます。 こうして生成されたクラスは、概念データ モデルではなく、直接データベースのテーブル、ビュー、ストアド プロシージャ、およびユーザー定義関数にマッピングされます。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - ImageList component [Windows Forms], removing images
 - images [Windows Forms], adding to ImageList component
 ms.assetid: 5699b244-e37c-4d20-bc35-7441e55c1e3a
-ms.openlocfilehash: 732267b431c5058fa7039f0fb132e6161c37d4a6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: 346d7107c9c17c5df06fa0e47f7a35355344f590
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303129"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880734"
 ---
 # <a name="how-to-add-or-remove-imagelist-images-with-the-designer"></a>方法: デザイナーを使って ImageList イメージを追加または削除する
 イメージを追加することができます、<xref:System.Windows.Forms.ImageList>コンポーネントのいくつかの方法です。 関連付けられているスマート タグを使用してイメージを非常に簡単に追加することができます、 <xref:System.Windows.Forms.ImageList>、やの他のいくつかのプロパティを設定する場合、 <xref:System.Windows.Forms.ImageList>、[プロパティ] ウィンドウを使用したイメージを追加する方が便利見つけることがあります。 コードを使用してイメージを追加することもできます。 コードを使用したイメージを追加する方法の詳細については、次を参照してください。[方法。追加または削除のイメージで、Windows フォームの ImageList コンポーネント](how-to-add-or-remove-images-with-the-windows-forms-imagelist-component.md)します。 値を設定する通常、<xref:System.Windows.Forms.ImageList>コンポーネントにイメージの前に、コントロールに関連付けられているが、これは必要ありません。  
@@ -23,7 +23,7 @@ ms.locfileid: "59303129"
   
 1. 選択、<xref:System.Windows.Forms.ImageList>コンポーネントをフォームに追加します。  
   
-2. [プロパティ] ウィンドウで、省略記号ボタンをクリックします。 (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) 横に、<xref:System.Windows.Forms.ImageList.Images%2A>プロパティ。  
+2.  [プロパティ] ウィンドウで、省略記号ボタンをクリックします。 (![。 Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) 横に、<xref:System.Windows.Forms.ImageList.Images%2A>プロパティ。  
   
 3. **イメージ コレクション エディター**、 をクリックして**追加**または**削除**を追加または一覧からイメージを削除します。  
   

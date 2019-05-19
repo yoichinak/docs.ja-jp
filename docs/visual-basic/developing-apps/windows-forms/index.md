@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: cc40d7e10243f63040d7e4ad457aac0f9122b6ad
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 6ab898c93086e477bf4384b4d6c725fbdc8fe761
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65590785"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879147"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows フォーム アプリケーションの基礎 (Visual Basic)
 Visual Basic の重要な部分は、ユーザーのコンピューターでローカルに実行する Windows フォーム アプリケーションを作成する機能です。 Visual Studio を使用して、Windows フォームを使用すると、アプリケーションとユーザー インターフェイスを作成することができます。 クラスを Windows フォーム アプリケーションが構築された、<xref:System.Windows.Forms>名前空間。  
@@ -67,7 +67,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
 |目的|解決方法|  
 |--------|---------|  
 |使用して、<xref:System.Windows.Forms.BindingSource>コンポーネント|[方法: デザイナーを使用して、BindingSource コンポーネントを使用した Windows フォーム コントロールをバインドします。](../../../framework/winforms/controls/bind-wf-controls-with-the-bindingsource.md)|  
-|使用[!INCLUDE[vstecado](~/includes/vstecado-md.md)]データ ソース|[方法: 並べ替えとフィルター処理で ADO.NET データを Windows フォーム BindingSource コンポーネント](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
+|ADO.NET データ ソースを操作します。|[方法: 並べ替えとフィルター処理で ADO.NET データを Windows フォーム BindingSource コンポーネント](../../../framework/winforms/controls/sort-and-filter-ado-net-data-with-wf-bindingsource-component.md)|
 |データ ソース ウィンドウを使用します。|[チュートリアル: Windows フォームでデータの表示](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>クライアント コンピューターにアプリケーションを配置する  

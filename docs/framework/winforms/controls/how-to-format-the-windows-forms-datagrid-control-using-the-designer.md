@@ -9,12 +9,12 @@ helpviewer_keywords:
 - tables [Windows Forms], formatting in DataGrid control
 - formatting [Windows Forms]
 ms.assetid: 533b9814-6124-49dc-9fda-085f1502609f
-ms.openlocfilehash: fddb59fc32feabf708e209ac4a5e78a14585fa66
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0c11937f1a0300c4a376657d423ef348a844f700
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65637547"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880649"
 ---
 # <a name="how-to-format-the-windows-forms-datagrid-control-using-the-designer"></a>方法: デザイナーを使って Windows フォーム DataGrid コントロールの書式を設定する
 
@@ -79,7 +79,7 @@ ms.locfileid: "65637547"
 
 1. 選択、<xref:System.Windows.Forms.DataGrid>フォーム上のコントロール。
 
-2. **プロパティ**ウィンドウで、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>プロパティをクリックして、**省略記号**(![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")) ボタンをクリックします。
+2.  **プロパティ**ウィンドウで、<xref:System.Windows.Forms.DataGrid.TableStyles%2A>プロパティをクリックして、**省略記号**(![Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…).](./media/visual-studio-ellipsis-button.png))ボタンをクリックします。
 
 3. **DataGridTableStyle コレクション エディター**ダイアログ ボックスで、をクリックして**追加**テーブル スタイルをコレクションに追加します。
 
@@ -89,7 +89,7 @@ ms.locfileid: "65637547"
 
      マッピングの名前は、どのテーブルで使用するテーブル スタイルを指定に使用されます。
 
-5. **DataGridTableStyle コレクション エディター**を選択、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティの省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton")).
+5.  **DataGridTableStyle コレクション エディター**を選択、<xref:System.Windows.Forms.DataGridTableStyle.GridColumnStyles%2A>プロパティ、省略記号ボタンをクリックします (![Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…).](./media/visual-studio-ellipsis-button.png))。
 
 6. **DataGridColumnStyle コレクション エディター**  ダイアログ ボックスで、列のスタイルを作成したテーブルのスタイルを追加します。
 

@@ -2,12 +2,12 @@
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 5a985cfcd4834efd7bbab04d30c86787dfb90955
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583486"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879931"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
 このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 また、セキュリティで保護された .NET Framework アプリケーションを作成するための推奨事項に従ってください。 詳細については、次を参照してください。[セキュリティの概要](../../../../../docs/framework/data/adonet/security-overview.md)します。  
@@ -141,22 +141,23 @@ ms.locfileid: "65583486"
  try/catch ブロック内の <xref:System.Data.Objects.ObjectContext> のメソッドとプロパティにアクセスします。 例外をキャッチすると、未処理の例外によって <xref:System.Data.Objects.ObjectStateManager> のエントリまたはモデル情報 (テーブル名など) がアプリケーションのユーザーに公開されることはありません。  
   
 ## <a name="security-considerations-for-aspnet-applications"></a>ASP.NET アプリケーションのセキュリティに関する注意点  
- [!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] アプリケーションでパスを操作する際には次の点に注意する必要があります。  
+
+ASP.NET アプリケーションでパスを使用する場合は、次を検討してください。  
   
 #### <a name="verify-whether-your-host-performs-path-checks"></a>ホストでパスがチェックされるかどうかを確認する  
- `|DataDirectory|` という (パイプ記号で囲まれた) 置換文字列を使用すると、解決されたパスがサポートされているかどうかが [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] によって確認されます。 たとえば、`DataDirectory` の後に ".." を使用することはできません。 Web アプリケーション ルート演算子 (`~`) の解決では、[!INCLUDE[vstecasp](../../../../../includes/vstecasp-md.md)] をホストするプロセスによってこれと同じチェックが行われます。 IIS ではこのチェックが行われますが、IIS 以外のホストでは、解決されたパスがサポートされているかどうかが確認されない可能性があります。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションを配置するホストの動作を把握しておく必要があります。  
+ ときに、 `|DataDirectory|` (パイプ記号で囲まれた) 置換文字列を使用すると、ADO.NET は、解決されたパスがサポートされていることを確認します。 たとえば、`DataDirectory` の後に ".." を使用することはできません。 Web アプリケーション ルート演算子を解決するのと同じチェック (`~`) ASP.NET をホストするプロセスによって実行されます。 IIS ではこのチェックが行われますが、IIS 以外のホストでは、解決されたパスがサポートされているかどうかが確認されない可能性があります。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションを配置するホストの動作を把握しておく必要があります。  
   
 #### <a name="do-not-make-assumptions-about-resolved-path-names"></a>解決されるパス名を想定しない  
  ルート演算子 (`~`) と `DataDirectory` 置換文字列が解決される値は、アプリケーションの実行中に変化しない状態で維持される必要がありますが、ホストでそれらの値の変更が [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] によって制限されるわけではありません。  
   
 #### <a name="verify-the-path-length-before-deployment"></a>配置の前にパスの長さを確認する  
- [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションを配置する前に、ルート演算子 (~) と `DataDirectory` 置換文字列の値がオペレーティング システムのパスの長さの制限を超えないことを確認する必要があります。 [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] データ プロバイダーでは、パスの長さが有効な制限内であるかどうかの確認が行われません。  
+ [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションを配置する前に、ルート演算子 (~) と `DataDirectory` 置換文字列の値がオペレーティング システムのパスの長さの制限を超えないことを確認する必要があります。 ADO.NET データ プロバイダーでは、パスの長さが有効な制限内にことは保証されません。  
   
 ## <a name="security-considerations-for-adonet-metadata"></a>ADO.NET メタデータのセキュリティに関する注意点  
  モデル ファイルとマッピング ファイルの生成と操作を行う際は、セキュリティに関して次の点に注意する必要があります。  
   
 #### <a name="do-not-expose-sensitive-information-through-logging"></a>機密情報がログによって公開されないようにする。  
- [!INCLUDE[vstecado](../../../../../includes/vstecado-md.md)] メタデータ サービス コンポーネントでは個人情報はログに記録されません。 アクセス制限のために返すことのできない結果があった場合は、データベース管理システムやファイル システムで例外を生成する代わりに 0 個の結果を返す必要があります。例外には機密情報が含まれる可能性があります。  
+ADO.NET メタデータ サービス コンポーネントは、プライベートな情報を記録しません。 アクセス制限のために返すことのできない結果があった場合は、データベース管理システムやファイル システムで例外を生成する代わりに 0 個の結果を返す必要があります。例外には機密情報が含まれる可能性があります。  
   
 #### <a name="do-not-accept-metadataworkspace-objects-from-untrusted-sources"></a>信頼されていないソースから MetadataWorkspace オブジェクトを受け取らない  
  信頼されていないソースから <xref:System.Data.Metadata.Edm.MetadataWorkspace> クラスのインスタンスをアプリケーションで受け取らないようにしてください。 代わりに、それらのソースから明示的にワークスペースを作成および設定する必要があります。  
