@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: cc78b8ffffc4f40629f213921fab6145751a7c57
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77b68af5802f79060e30b2817661de4cb5e46942
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61672108"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879015"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -133,4 +133,3 @@ LINQ では、LINQ クエリ式パターンをサポートするすべてのデ�
 通常、C# のプログラムにはコマンド ライン引数が含まれます。 次の記事では、そのようなコマンド ライン引数にアクセスして処理する方法について説明します。
 
 - [`for` を使用してすべてのコマンド ライン引数を取得する](../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)。
-- [`foreach` を使用してすべてのコマンド ライン引数を取得する](../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)。

@@ -1,5 +1,6 @@
 - name: 作業の開始
-  href: index.md
   items:
+    - name: このガイドの使用方法
+      href: index.md
     - name: 'C# 言語と .NET Framework の概要'
       href: introduction-to-the-csharp-language-and-the-net-framework.md
