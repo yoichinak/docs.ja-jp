@@ -2,12 +2,12 @@
 title: dotnet msbuild コマンド
 description: dotnet msbuild コマンドは、MSBuild コマンド ラインへのアクセスを提供します。
 ms.date: 12/03/2018
-ms.openlocfilehash: f025b5b92e57c7b804b9bdd59c8b4a4a806796da
-ms.sourcegitcommit: e6ad58812807937b03f5c581a219dcd7d1726b1d
+ms.openlocfilehash: 983fae6f4ecf875da0b155a668009984b5df50de
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53169080"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632028"
 ---
 # <a name="dotnet-msbuild"></a>dotnet msbuild
 

@@ -2,12 +2,12 @@
 title: dotnet pack コマンド
 description: dotnet pack コマンドでは、.NET Core プロジェクトの NuGet パッケージを作成します。
 ms.date: 12/04/2018
-ms.openlocfilehash: 8faa99bf35d9802b16f951082b20644d45a939c7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5d48e5957e8095cc9ef4eaca2e1e1746c25a2a88
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672127"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876042"
 ---
 # <a name="dotnet-pack"></a>dotnet pack
 
@@ -46,6 +46,14 @@ dotnet pack [-h|--help]
 既定では、`dotnet pack` は最初にプロジェクトをビルドします。 この動作を避けたい場合は、`--no-build` オプションを渡します。 このオプションは、コードが既にビルドされていることがわかっている場合の継続的インテグレーション (CI) ビルド シナリオで役立つことがよくあります。
 
 パッキング プロセスのために `dotnet pack` コマンドに MSBuild のプロパティを使用できます。 詳細については、「[NuGet メタデータ プロパティ](csproj.md#nuget-metadata-properties)」と「[MSBuild コマンド ライン リファレンス](/visualstudio/msbuild/msbuild-command-line-reference)」を参照してください。 「[例](#examples)」のセクションでは、MSBuild の -p スイッチを使用する方法について、2 つの異なるシナリオで説明します。
+
+Web プロジェクトは既定でパッケージ化可能ではありません。 既定の動作をオーバーライドするには、*.csproj* ファイルに次のプロパティを追加します。
+
+```xml
+<PropertyGroup>
+   <IsPackable>true</IsPackable>
+</PropertyGroup>
+```
 
 [!INCLUDE[dotnet restore note + options](~/includes/dotnet-restore-note-options.md)]
 
@@ -110,15 +118,6 @@ dotnet pack [-h|--help]
 * **`-v|--verbosity <LEVEL>`**
 
   コマンドの詳細レベルを設定します。 指定できる値は、`q[uiet]`、`m[inimal]`、`n[ormal]`、`d[etailed]`、および `diag[nostic]` です。
-
-> [!NOTE]
-> Web プロジェクトは既定でパッケージ化可能ではありません。 既定の動作をオーバーライドするには、*.csproj* ファイルに次のプロパティを追加します。
->
-> ```xml
-> <PropertyGroup>
->    <IsPackable>true</IsPackable>
-> </PropertyGroup>
-> ```
 
 # <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 

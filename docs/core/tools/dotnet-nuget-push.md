@@ -3,12 +3,12 @@ title: dotnet nuget push コマンド
 description: dotnet nuget push コマンドでは、パッケージをサーバーにプッシュして発行します。
 author: karann-msft
 ms.date: 12/04/2018
-ms.openlocfilehash: 9f38fb29ef5b802a5b7091dd1e9659c653cf04d0
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 7382cb93da3d7ed68f5731b3996c735c3f1461e4
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59610770"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631709"
 ---
 # <a name="dotnet-nuget-push"></a>dotnet nuget push
 

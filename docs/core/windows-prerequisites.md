@@ -3,12 +3,12 @@ title: Windows における .NET Core の前提条件
 description: Windows コンピューターで .NET Core アプリケーションを開発および実行する場合に必要な依存関係について説明します。
 ms.custom: updateeachvsrelease
 ms.date: 04/08/2019
-ms.openlocfilehash: 2941721dfa4b87d4113e4f4b529845e47f3dc1b9
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: 8eb2913b0fa1fe037a460633064d6f179b64a248
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59313711"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634089"
 ---
 # <a name="prerequisites-for-net-core-on-windows"></a>Windows における .NET Core の前提条件
 
@@ -57,7 +57,7 @@ ms.locfileid: "59313711"
 > [!NOTE]
 > **Windows 8.1 以前のバージョン、または Windows Server 2012 R2 以前のバージョンの場合:**
 >
-> Windows のインストールが最新であり、Windows Update から修正プログラム [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) をインストールしていることを確認してください。 この更新プログラムがインストールされていない場合は、.NET Core アプリケーションを起動するときに、次のようなエラーが表示されます。 `The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
+> Windows のインストールが最新であり、Windows Update から修正プログラム [KB2999226](https://support.microsoft.com/en-us/help/2999226/update-for-universal-c-runtime-in-windows) をインストールしていることを確認してください。 この更新プログラムがインストールされていない場合は、.NET Core アプリケーションを起動するときに、次のようなエラーが表示されます。`The program can't start because api-ms-win-crt-runtime-1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.`
 >
 > **Windows 7 または Windows Server 2008 R2 の場合:**
 >
@@ -73,7 +73,7 @@ ms.locfileid: "59313711"
 
 Visual Studio 2017 での変更の詳細については、[リリース ノート](/visualstudio/releasenotes/vs2017-relnotes)を参照してください。
 
-# [<a name="net-core-2x"></a>.NET Core 2.x](#tab/netcore2x)
+# <a name="net-core-2xtabnetcore2x"></a>[.NET Core 2.x](#tab/netcore2x)
 
 Visual Studio 2017 で .NET Core 2.2 SDK を使用して .NET Core アプリを開発するには:
 
@@ -101,7 +101,7 @@ Visual Studio が .NET Core 2.2 SDK で構成されている場合は、次の�
 * .NET Core 1.x および 2.x プロジェクトを .NET Core 2.2 に再ターゲットし、ビルドし、実行する。
 * .NET Core 2.2 の新しいプロジェクトを作成する。
 
-# [<a name="net-core-1x"></a>.NET Core 1.x](#tab/netcore1x)
+# <a name="net-core-1xtabnetcore1x"></a>[.NET Core 1.x](#tab/netcore1x)
 
 Visual Studio で .NET Core 1.x アプリを開発するには、(**[その他のツールセット]** セクションで) **[.NET Core クロスプラットフォームの開発]** ワークロードを選択して、[Visual Studio 2017 をダウンロードしてインストール](/visualstudio/install/install-visual-studio)します。
 

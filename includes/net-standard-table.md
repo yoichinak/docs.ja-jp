@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 3f3f60f9752b9bd36d76387102c202d88b39c3ca
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.translationtype: HT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65670867"
+---
 | .NET Standard              | [1.0]  | [1.1]  | [1.2] | [1.3] | [1.4] | [1.5]              | [1.6]              | [2.0]               |
 |----------------------------|--------|--------|-------|-------|-------|--------------------|--------------------|---------------------|
 | .NET Core                  | 1    | 1    | 1   | 1   | 1   | 1                | 1                | 2.0                 |
@@ -16,7 +24,7 @@
 - 列は .NET Standard バージョンです。 各見出しセルは、そのバージョンの .NET Standard に追加された API に関するドキュメントのリンクになっています。
 - 行は、各 .NET 実装です。
 - 各セルのバージョン番号は、その .NET Standard バージョンをターゲットにするために必要な*最小*バージョンの実装です。
-- 対話型のテーブルについては、「[.NET Standard バージョン](https://immo.landwerth.net/netstandard-versions/#)」を参照してください。
+- 対話型のテーブルについては、「[.NET Standard バージョン](https://dotnet.microsoft.com/platform/dotnet-standard#versions)」を参照してください。
 
 [1.0]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.0.md
 [1.1]: https://github.com/dotnet/standard/blob/master/docs/versions/netstandard1.1.md

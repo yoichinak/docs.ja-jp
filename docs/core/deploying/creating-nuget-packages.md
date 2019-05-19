@@ -5,12 +5,12 @@ author: cartermp
 ms.date: 06/20/2016
 ms.technology: dotnet-cli
 ms.custom: seodec18
-ms.openlocfilehash: 1add3470799b75ebb92c67eed3509523e510ab6c
-ms.sourcegitcommit: 79066169e93d9d65203028b21983574ad9dcf6b4
+ms.openlocfilehash: b86b2706968bf302a8421bcc8e12c32a97102e9e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57211794"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632104"
 ---
 # <a name="how-to-create-a-nuget-package-with-net-core-command-line-interface-cli-tools"></a>.NET Core コマンド ライン インターフェイス (CLI) ツールを使用して NuGet パッケージを作成する方法
 
