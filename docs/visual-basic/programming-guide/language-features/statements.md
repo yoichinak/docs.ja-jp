@@ -196,7 +196,7 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 
    [!code-vb[VbVbalrLineContinuation#14](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#14)]
 
-   詳細については、次を参照してください[としています.。ステートメントで終了して](../../../visual-basic/language-reference/statements/with-end-with-statement.md)または[オブジェクト初期化子。名前付きの匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)します。
+   詳細については、次を参照してください[としています... ステートメントで終了して](../../../visual-basic/language-reference/statements/with-end-with-statement.md)または[オブジェクト初期化子。名前付きの匿名型](./objects-and-classes/object-initializers-named-and-anonymous-types.md)します。
 
 - XML 軸プロパティ修飾子の後 (`.`または`.@`または`...`)。 ただし、行連結文字を含める必要があります (`_`) を使用するときにメンバー修飾子を指定すると、`With`キーワード。 例えば:
 
