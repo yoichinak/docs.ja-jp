@@ -9,6 +9,12 @@
   items:
     - name: 作業開始
       href: tutorials/get-started.md
+    - name: Azure HDInsight にデプロイする
+      href: tutorials/hdinsight-deployment.md
+    - name: AWS EMR の Spark のデプロイする
+      href: tutorials/amazon-emr-spark-deployment.md
+    - name: Databricks のデプロイする
+      href: tutorials/databricks-deployment.md
 - name: 関連項目
   items:
     - name: API リファレンス

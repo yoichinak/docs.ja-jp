@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: fbbc0a5accf021df0675192deb040476bc97968d
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452373"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65876947"
 ---
 # <a name="c-operators"></a>C# 演算子
 
@@ -69,7 +69,7 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 [stackalloc](../keywords/stackalloc.md) – スタックにメモリ ブロックを割り当てます。
 
-[->](dereference-operator.md) – メンバー アクセスと組み合わせてポインターを逆参照します。
+[->](pointer-related-operators.md#pointer-member-access-operator--) – メンバー アクセスと組み合わせてポインターを間接参照します。
 
 ## <a name="unary-operators"></a>単項演算子
 
@@ -91,9 +91,9 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 [await](../keywords/await.md) – `Task` を待機します。
 
-[&x](and-operator.md) – アドレス。
+[&x](pointer-related-operators.md#address-of-operator-) – 変数のアドレス。
 
-[*x](multiplication-operator.md) – 逆参照。
+[* x](pointer-related-operators.md#pointer-indirection-operator-) – ポインターの間接参照、または逆参照。
 
 [true 演算子](../keywords/true-false-operators.md) - オペランドが確実に true であることを示す[ブール](../keywords/bool.md)値 `true` を返します。
 

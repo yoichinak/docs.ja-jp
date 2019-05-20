@@ -496,11 +496,13 @@
     - name: 開始するには
       href: csharp/getting-started/
     - name: チュートリアル
-      href: csharp/tutorials/index.md
       items:
-        - name: 'C# の概要'
-          href: csharp/tutorials/intro-to-csharp/index.md
+        - name: 概要
+          href: csharp/tutorials/index.md
+        - name: 'C# によるプログラミングの入門'
           items:
+            - name: 最初のレッスンを選択する
+              href: csharp/tutorials/intro-to-csharp/index.md
             - name: Hello world
               href: csharp/tutorials/intro-to-csharp/hello-world.yml
             - name: 'C# の数値'
@@ -510,8 +512,9 @@
             - name: リスト コレクション
               href: csharp/tutorials/intro-to-csharp/list-collection.yml
             - name: ローカル環境で作業する
-              href: csharp/tutorials/intro-to-csharp/local-environment.md
               items:
+                - name: 環境をセットアップする
+                  href: csharp/tutorials/intro-to-csharp/local-environment.md
                 - name: 'C# の数値'
                   href: csharp/tutorials/intro-to-csharp/numbers-in-csharp-local.md
                 - name: 分岐とループ
@@ -609,7 +612,6 @@
         - name: Iterators
           href: csharp/iterators.md
         - name: デリゲートとイベント
-          href: csharp/delegates-events.md
           items:
             - name: デリゲートの概要
               href: csharp/delegates-overview.md
@@ -636,8 +638,9 @@
         - name: 安全で効率的なコードを記述する
           href: csharp/write-safe-efficient-code.md
         - name: 式ツリー
-          href: csharp/expression-trees.md
           items:
+            - name: 式ツリーの概要
+              href: csharp/expression-trees.md
             - name: 式ツリーの説明
               href: csharp/expression-trees-explained.md
             - name: 式ツリーをサポートするフレームワークの型
@@ -659,8 +662,9 @@
         - name: バージョン管理
           href: csharp/versioning.md
     - name: 'C# に関するトピック'
-      href: csharp/how-to/index.md
       items:
+        - name: トピックのインデックス
+          href: csharp/how-to/index.md
         - name: '`String.Split` を使用して文字列を解析する'
           href: csharp/how-to/parse-strings-using-split.md
         - name: 文字列を連結する

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ddd8b0e7965ca734865e83373af2f7ee45d62c05
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633441"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589527"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>方法: 文字列が有効な電子メール形式であるかどうかを検証する
 正規表現を使用して文字列の形式が有効な電子メール形式であるかどうかを検証する例を次に示します。  
@@ -72,36 +72,12 @@ ms.locfileid: "64633441"
 ## <a name="compiling-the-code"></a>コードのコンパイル  
  `IsValidEmail` メソッドと `DomainMapper` メソッドは、正規表現ユーティリティ メソッドのライブラリに含めることができるほか、アプリケーション クラス内のプライベートな静的メソッドやインスタンス メソッドとして含めることもできます。  
   
- これらを正規表現ライブラリに含めるには、Visual Studio のクラス ライブラリ プロジェクトにコードをコピーして貼り付けるか、コードをテキスト ファイルにコピーして貼り付けて、次のようなコマンドでコマンド ラインからコンパイルします (ソース コード ファイルの名前を RegexUtilities.cs または RegexUtilities.vb と仮定しています)。  
-  
-```csharp  
-csc /t:library RegexUtilities.cs  
-```  
-  
-```vb  
-vbc /t:library RegexUtilities.vb  
-```  
-  
  また、 <xref:System.Text.RegularExpressions.Regex.CompileToAssembly%2A?displayProperty=nameWithType> メソッドを使用して、この正規表現を正規表現ライブラリに追加できます。  
   
  正規表現ライブラリ内で使用した場合は、次のようなコードを使用して呼び出すことができます。  
   
  [!code-csharp[RegularExpressions.Examples.Email#8](../../../samples/snippets/csharp/VS_Snippets_CLR/RegularExpressions.Examples.Email/cs/example4.cs#8)]
  [!code-vb[RegularExpressions.Examples.Email#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/RegularExpressions.Examples.Email/vb/example4.vb#8)]  
-  
- 電子メール検証の正規表現を含む RegexUtilities.dll という名前のクラス ライブラリを作成してあると仮定した場合、この例は次の方法のいずれかでコンパイルできます。  
-  
-- Visual Studio では、コンソール アプリケーションを作成して、RegexUtilities.dll への参照をプロジェクトに追加します。  
-  
-- コマンド ラインからは、ソース コードをテキスト ファイルにコピーして貼り付け、次のようなコマンドでコンパイルします (ソース コード ファイルの名前を Example.cs または Example.vb と仮定しています)。  
-  
-    ```csharp  
-    csc Example.cs /r:RegexUtilities.dll  
-    ```  
-  
-    ```vb  
-    vbc Example.vb /r:RegexUtilities.dll  
-    ```  
   
 ## <a name="see-also"></a>関連項目
 

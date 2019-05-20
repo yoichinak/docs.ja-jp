@@ -9,15 +9,15 @@
   items:
     - name: 概要
       href: tutorials/index.md
-    - name: センチメント分析 (二項分類)
+    - name: センチメントの分析 (二項分類)
       href: tutorials/sentiment-analysis.md
-    - name: 問題の分類 (多クラス分類)
+    - name: サポートの問題の分類 (多クラス分類)
       href: tutorials/github-issue-classification.md
-    - name: 料金の予測 (回帰)
+    - name: 価格の予測 (回帰)
       href: tutorials/taxi-fare.md
-    - name: あやめの花 (クラスタリング)
+    - name: あやめ花の分類 (K-means クラスタ リング)
       href: tutorials/iris-clustering.md
-    - name: 映画のレコメンデーション (推奨)
+    - name: 映画レコメンダー (マトリックス因子分解)
       href: tutorials/movie-recommmendation.md
     - name: 画像の分類 (転移学習)
       href: tutorials/image-classification.md

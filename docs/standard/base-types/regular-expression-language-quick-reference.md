@@ -17,10 +17,10 @@ ms.assetid: 930653a6-95d2-4697-9d5a-52d11bb6fd4c
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: 053df7eeba10938f1d1d749e856f64d179d471d4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 05/15/2019
 ms.locfileid: "64664674"
 ---
 # <a name="regular-expression-language---quick-reference"></a>正規表現言語 - クイック リファレンス
@@ -158,7 +158,7 @@ ms.locfileid: "64664674"
 |`${` *name* `}`|名前付きグループの *name*と一致した部分文字列に置換されます。|`\b(?<word1>\w+)(\s)(?<word2>\w+)\b`|`${word2} ${word1}`|`"one two"`|`"two one"`|  
 |`$$`|"$" リテラルに置換されます。|`\b(\d+)\s?USD`|`$$$1`|`"103 USD"`|`"$103"`|  
 |`$&`|一致したパターン全体と同じパターンに置換されます。|`\$?\d*\.?\d+`|`**$&**`|`"$1.30"`|`"**$1.30**"`|  
-|``$` ``|一致の前にある入力文字列のすべてのテキストに置換されます。|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
+|``$` ``|一致した場所より前にある入力文字列のすべてに置換されます。|`B+`|``$` ``|`"AABBCC"`|`"AAAACC"`|  
 |`$'`|一致した場所より後にある入力文字列のすべてに置換されます。|`B+`|`$'`|`"AABBCC"`|`"AACCCC"`|  
 |`$+`|キャプチャされた最後のグループに置換されます。|`B+(C+)`|`$+`|`"AABBCCDD"`|`"AACCDD"`|  
 |`$_`|入力文字列全体に置換されます。|`B+`|`$_`|`"AABBCC"`|`"AAAABBCCCC"`|  
