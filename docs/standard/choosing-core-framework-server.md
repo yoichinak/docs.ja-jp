@@ -4,12 +4,12 @@ description: .NET でのサーバー アプリのビルド時に考慮する必�
 author: cartermp
 ms.author: mairaw
 ms.date: 06/19/2018
-ms.openlocfilehash: 03d008230d263853e322bb582706e2dbd3a11eec
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 3034f77fe8ee136011a523f6882ffa09ed2758d6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57678801"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65641157"
 ---
 # <a name="choosing-between-net-core-and-net-framework-for-server-apps"></a>サーバー アプリ用 .NET Core と .NET Framework の選択
 
@@ -108,6 +108,6 @@ Microsoft やサードパーティ製のプラットフォームの中には、.
 - [ターゲット フレームワーク](frameworks.md)
 - [.NET Core のガイド](../core/index.md)
 - [.NET Framework から .NET Core への移植](../core/porting/index.md)
-- [Docker 上の .NET Framework のガイド](../framework/docker/index.md)
+- [.NET および Docker の概要](../core/docker/intro-net-docker.md)
 - [.NET コンポーネントの概要](components.md)
 - [.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ](microservices-architecture/index.md)

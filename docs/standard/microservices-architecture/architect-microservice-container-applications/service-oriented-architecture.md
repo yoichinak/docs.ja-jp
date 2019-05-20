@@ -1,15 +1,13 @@
 ---
 title: サービス指向アーキテクチャ
 description: マイクロサービスとサービス指向アーキテクチャ (SOA) の基本的な違いについて説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: d19053d8296dbe75ac1e0ce037d6a713d9f5687c
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 84786539fbac0e8b38a81a2580232474774cd355
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148614"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640066"
 ---
 # <a name="service-oriented-architecture"></a>サービス指向アーキテクチャ
 

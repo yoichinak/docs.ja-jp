@@ -2,12 +2,12 @@
 title: '方法: 式ツリーを実行する (C#)'
 ms.date: 07/20/2015
 ms.assetid: b8c40db5-2464-4bb9-9001-8c2bc7f006c5
-ms.openlocfilehash: 034a391a21e685a6ceb8342bb1738ff34381cebb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: acf841194ef0990d2eb00481454c89088f4616c8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598041"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586133"
 ---
 # <a name="how-to-execute-expression-trees-c"></a>方法: 式ツリーを実行する (C#)
 このトピックでは、式ツリーを実行する方法について説明します。 式ツリーを実行すると値が返される場合がありますが、メソッドの呼び出しなどの処理が実行されるだけの場合もあります。  
@@ -43,8 +43,6 @@ Console.WriteLine(result);
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
-  
-- System.Core.dll がまだ参照されていない場合は、System.Core.dll へのプロジェクト参照を追加します。  
   
 - System.Linq.Expressions 名前空間をインクルードします。  
   

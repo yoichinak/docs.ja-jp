@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 9ac1b522-77ab-4cdc-852a-20fcdc9ae498
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8ffb0686de5039573355e48446a4085fc44d2c75
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: ddd075de6152d7f040d69682dde0361843971922
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57356898"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631827"
 ---
 # <a name="sosdll-sos-debugging-extension"></a>SOS.dll (SOS デバッガー拡張)
 

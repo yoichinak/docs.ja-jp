@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - yield keyword [C#]
 ms.assetid: 1089194f-9e53-46a2-8642-53ccbe9d414d
-ms.openlocfilehash: cfeef1d84a443163f4bbeda863682335d9cd1fcd
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 60ee4b8c5ac3a572fd352140c968a8ec8f3a084a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222625"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632999"
 ---
 # <a name="yield-c-reference"></a>yield (C# リファレンス)
 
@@ -26,7 +26,7 @@ yield return <expression>;
 yield break;
 ```
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 各要素を 1 つずつ返すには、`yield return` ステートメントを使用します。
 

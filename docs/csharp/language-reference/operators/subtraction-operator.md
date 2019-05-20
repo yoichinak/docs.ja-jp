@@ -8,18 +8,18 @@ helpviewer_keywords:
 - '- operator [C#]'
 - subtraction operator (-) [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 8cf6e8871a88e2b37b9531ecbd616289523473c7
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: 920981addd5c779c9ad1c666ef45e1de5cd23408
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333760"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633003"
 ---
 # <a name="--operator-c-reference"></a>- 演算子 (C# リファレンス)
 
 `-` 演算子には、単項演算子としての働きと 2 項演算子としての働きとがあります。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 すべての数値型には、単項 `-` 演算子が事前定義されています。 数値型に対する単項 `-` 演算の結果は、オペランドの反転の数値となります。
 

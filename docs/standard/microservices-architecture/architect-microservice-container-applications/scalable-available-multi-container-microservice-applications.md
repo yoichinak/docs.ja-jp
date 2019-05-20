@@ -1,15 +1,13 @@
 ---
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: Kubernetes アプリケーション ライフサイクルを開発しながら、高いスケーラビリティおよび可用性と Azure Dev Spaces の可能性のためにマイクロサービスと複数のコンテナー アプリケーションを調整するオプションについて説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: 1452f25f96a5e277d8cfcd53f03e90675e9f9372
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 3b7383f6153b787ce8bfad87e3902c34afba0fb2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613266"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644889"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 

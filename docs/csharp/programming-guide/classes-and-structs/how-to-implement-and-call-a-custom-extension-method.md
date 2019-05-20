@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - extension methods [C#], implementing and calling
 ms.assetid: 7dab2a56-cf8e-4a47-a444-fe610a02772a
-ms.openlocfilehash: 2d3f6ec66a13638f0106537ad8b21bff801a53b3
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2fe07f8e4311417980caccc9c286b4f94c7ea994
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303337"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585960"
 ---
 # <a name="how-to-implement-and-call-a-custom-extension-method-c-programming-guide"></a>方法: カスタム拡張メソッドを実装して呼び出す (C# プログラミング ガイド)
 このトピックでは、あらゆる .NET 型を対象に独自の拡張メソッドを実装する方法について説明します。 クライアント コードで拡張メソッドを使用するには、拡張メソッドが格納されている DLL への参照を追加し、拡張メソッドが定義されている名前空間を指定する [using](../../../csharp/language-reference/keywords/using-directive.md) ディレクティブを追加します。  
@@ -35,9 +35,6 @@ ms.locfileid: "59303337"
  次の例では、`CustomExtensions.StringExtension` クラスの `WordCount` という名前の拡張メソッドを実装します。 このメソッドは、最初のメソッド パラメーターとして指定された <xref:System.String> クラスを操作します。 `CustomExtensions` 名前空間は、アプリケーション名前空間にインポートされ、メソッドは `Main` メソッド内で呼び出されます。  
   
  [!code-csharp[csProgGuideExtensionMethods#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideExtensionMethods/cs/extensionmethods.cs#1)]  
-  
-## <a name="compiling-the-code"></a>コードのコンパイル  
- このコードを実行するには、Visual Studio で作成した Visual C# コンソール アプリケーション プロジェクトに、そのコードをコピーして貼り付けます。 既定では、このプロジェクトは、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] のバージョン 3.5 を対象としており、System.Core.dll への参照と System.Linq の `using` ディレクティブが含まれます。 これらの要件のうち 1 つまたは複数を満たしていないプロジェクトの場合は、手動で追加することができます。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  拡張メソッドには、固有のセキュリティ上の脆弱性はありません。 名前の衝突の解決では、型自体で定義されているインスタンス メソッドまたは静的メソッドが常に優先されるため、型の既存のメソッドを偽装するために拡張メソッドが使用されることはありません。 拡張メソッドは、拡張されたクラスのプライベート データにはアクセスできません。  

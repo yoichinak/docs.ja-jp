@@ -10,12 +10,12 @@ helpviewer_keywords:
 - DocumentDesigner class [Windows Forms]
 - walkthroughs [Windows Forms], controls
 ms.assetid: 6f487c59-cb38-4afa-ad2e-95edacb1d626
-ms.openlocfilehash: 9f290629e50d7d791119298059277ba73d8e73eb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 4d741beffa5649d1d1593ba3dbb7a1918b669b80
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211211"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882310"
 ---
 # <a name="walkthrough-creating-a-windows-forms-control-that-takes-advantage-of-visual-studio-design-time-features"></a>チュートリアル: Visual Studio のデザイン時機能を活用した Windows フォーム コントロールの作成
 
@@ -59,7 +59,7 @@ ms.locfileid: "65211211"
 
 完了したら、カスタム コントロールは、次のようになります。
 
-![可能な MarqueeControl 配置](./media/demomarqueecontrol.gif "により")
+![テキストと開始、停止ボタンを示す範囲を表示するアプリです。](./media/creating-a-wf-control-design-time-features/demo-marquee-control.gif)
 
 完全なコード一覧は、次を参照してください。[方法。デザイン時機能を活用した Windows フォーム コントロールを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/307hck25(v=vs.120))です。
 
@@ -178,7 +178,7 @@ using MarqueeControlLibrary;
 
 2. "にプロパティ ページ ダイアログ ボックスで選択、**デバッグ**ページ。
 
-3. **開始動作**セクションで、**外部プログラムの開始**します。 されますので、省略記号をクリックして、Visual Studio の別のインスタンスをデバッグ (![VisualStudioEllipsesButton スクリーン ショット](../media/vbellipsesbutton.png "vbEllipsesButton"))、Visual Studio IDE を参照するボタンをクリックします。 実行可能ファイルの名前は、devenv.exe と既定の場所にインストールされている場合は、%programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe がそのパスです。
+3. **開始動作**セクションで、**外部プログラムの開始**します。 できますので、省略記号をクリックして、Visual Studio の別のインスタンスをデバッグ (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png))、Visual Studio IDE を参照するボタンをクリックします。 実行可能ファイルの名前は、devenv.exe と既定の場所にインストールされている場合は、%programfiles%\Microsoft Visual Studio 9.0\Common7\IDE\devenv.exe がそのパスです。
 
 4. ダイアログ ボックスを閉じるには、[ok] をクリックします。
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 13509e73-db77-4645-8165-aad8dfaedff6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e00ec239fbe5d5963edd3a7656961556792c6324
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 862fc7012c2c5c84a163d6716dfeb4b97f00cbcd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593555"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634175"
 ---
 # <a name="multifile-assemblies"></a>マルチファイル アセンブリ
 

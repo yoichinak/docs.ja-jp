@@ -9,12 +9,12 @@ helpviewer_keywords:
 - namespace keyword [C#]
 - scope [C#]
 ms.assetid: 0a788423-9110-42e0-97d9-bda41ca4870f
-ms.openlocfilehash: 4859c361b3321c1144204f63896152694f6ac5c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: f938e49267faad8aebbf4c22fc921f305d160123
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59148760"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633437"
 ---
 # <a name="namespace-c-reference"></a>namespace (C# リファレンス)
 

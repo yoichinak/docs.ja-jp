@@ -7,12 +7,12 @@ helpviewer_keywords:
 - /** */ delimiters for C# documentation tags
 - /// delimiter for C# documentation
 ms.assetid: 9b2bdd18-4f5c-4c0b-988e-fb992e0d233e
-ms.openlocfilehash: 9874b71462fb66828f6baeef4f46ad93899d4cc8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d08dd0c68a11ddf73c19a1e09bc8c59937708553
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607985"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634764"
 ---
 # <a name="delimiters-for-documentation-tags-c-programming-guide"></a>ドキュメント タグの区切り記号 (C# プログラミング ガイド)
 XML ドキュメント コメントでは区切り記号を使用し、ドキュメント コメントの開始位置と終了位置をコンパイラに示す必要があります。 XML ドキュメント タグでは、次の種類の区切り記号を使用できます。  
@@ -81,6 +81,6 @@ XML ドキュメント コメントでは区切り記号を使用し、ドキュ
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/index.md)
 - [/doc (C# コンパイラ オプション)](../../../csharp/language-reference/compiler-options/doc-compiler-option.md)
-- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/index.md)

@@ -3,12 +3,12 @@ title: private protected - C# リファレンス
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: b0b89580b6ff88aafb56d206dd4ee0848507a40b
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 35b7c6c4e271b7772968ad63926fe1e66b10a6fa
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53240568"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633342"
 ---
 # <a name="private-protected-c-reference"></a>private protected (C# リファレンス)
 

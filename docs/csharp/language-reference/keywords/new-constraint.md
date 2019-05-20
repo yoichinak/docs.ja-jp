@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: de0798319d91032143cb806d6d39338c4f51ac8f
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 32fcb13e1f217707d53300c532169b1a1759fa7e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237845"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633406"
 ---
 # <a name="new-constraint-c-reference"></a>new 制約 (C# リファレンス)
 

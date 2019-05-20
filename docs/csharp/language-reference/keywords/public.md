@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - public keyword [C#]
 ms.assetid: 0ae45d16-a551-4b74-9845-57208de1328e
-ms.openlocfilehash: 15b86920736f1220553b462d103841ac98d88b7c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: a68cbf3af2568cd3c197eaece9e2d5a25cdb4a6a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239304"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633710"
 ---
 # <a name="public-c-reference"></a>public (C# リファレンス)
 

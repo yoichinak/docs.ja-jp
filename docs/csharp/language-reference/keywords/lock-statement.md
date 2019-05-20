@@ -9,12 +9,12 @@ f1_keywords:
 helpviewer_keywords:
 - lock keyword [C#]
 ms.assetid: 656da1a4-707e-4ef6-9c6e-6d13b646af42
-ms.openlocfilehash: 63fadd3c37c7533211e7bd0ac07952ca99fd6a79
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 6bf53cba73c4d7331b2a1c68bf7187c13281d844
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53244266"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633447"
 ---
 # <a name="lock-statement-c-reference"></a>lock ステートメント (C# リファレンス)
 

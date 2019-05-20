@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - volatile keyword [C#]
 ms.assetid: 78089bc7-7b38-4cfd-9e49-87ac036af009
-ms.openlocfilehash: e523f7b25e28b41030edd4dc86a1fa144e961950
-ms.sourcegitcommit: 01ea420eaa4bf76d5fc47673294c8881379b3369
+ms.openlocfilehash: 7200432780cb5a65bc5420b41c5dbd2e27a2c01f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55758301"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633105"
 ---
 # <a name="volatile-c-reference"></a>volatile (C# リファレンス)
 

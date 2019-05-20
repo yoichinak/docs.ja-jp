@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], reference tables
 - C# language, data types
 ms.assetid: 1d2b6a9b-31fd-4fa6-a7b2-bfd9c806ac8a
-ms.openlocfilehash: ef924c6dd092947f0ec05c770a2cfbe12f48000a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 0dc45852ab1f5d533acba4dad47a04008ef0242a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239412"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634029"
 ---
 # <a name="reference-tables-for-types-c-reference"></a>型のリファレンス表 (C# リファレンス)
 

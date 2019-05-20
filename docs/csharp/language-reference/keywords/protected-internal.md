@@ -3,12 +3,12 @@ title: protected internal - C# リファレンス
 ms.custom: seodec18
 ms.date: 11/15/2017
 author: sputier
-ms.openlocfilehash: 090baae7fe0e49289059e060d5dcba7b037ae47a
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 2a06165714095a65c23826543c309a82c43c2f9a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613305"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633322"
 ---
 # <a name="protected-internal-c-reference"></a>protected internal (C# リファレンス)
 

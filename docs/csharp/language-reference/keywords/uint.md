@@ -7,12 +7,12 @@ f1_keywords:
 - uint_CSharpKeyword
 helpviewer_keywords:
 - uint keyword [C#]
-ms.openlocfilehash: e22468eea63ce082f2e9842e6ec307aba1888964
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 9a60460f67f9b6cf0b57d40ebf2789536e870d75
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241601"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633143"
 ---
 # <a name="uint-c-reference"></a>uint (C# リファレンス)
 

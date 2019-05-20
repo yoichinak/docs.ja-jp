@@ -4,16 +4,16 @@ description: ML.NET でサポートされている機能エンジニアリング
 author: natke
 ms.author: nakersha
 ms.date: 04/02/2019
-ms.openlocfilehash: d3261f88a8e52c71f8ddf4d3d5c90b2e2b22b620
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7ea06e19b4651017079a6ae57136f033e0ce981c
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636554"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65558013"
 ---
 # <a name="data-transformations"></a>データ変換
 
-データ変換は、モデルのトレーニング用データを準備するために使用されます。 このガイドの変換は、[IEstimator](xref:Microsoft.ML.IEstimator`1) インターフェイスを実装するクラスを返します。 データ変換はまとめて連結することができます。 各変換は、リンクされた参照ドキュメントで指定されている特定の種類および形式のデータを想定し、生成します。
+データ変換は、モデルのトレーニング用データを準備するために使用されます。 このガイドの変換は、[IEstimator](xref:Microsoft.ML.IEstimator%601) インターフェイスを実装するクラスを返します。 データ変換はまとめて連結することができます。 各変換は、リンクされた参照ドキュメントで指定されている特定の種類および形式のデータを想定し、生成します。
 
 一部のデータ変換には、そのパラメーターを計算するためにトレーニング データが必要です。 たとえば、<xref:Microsoft.ML.NormalizationCatalog.NormalizeMeanVariance%2A> トランスフォーマーは、`Fit()` の操作中にトレーニング データの平均と分散を計算し、`Transform()` 操作でそのパラメーターを使用します。 
 

@@ -1,15 +1,13 @@
 ---
 title: Web API を使用したマイクロサービス アプリケーション レイヤーの実装
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | Web API アプリケーション レイヤーの依存関係挿入、メディエーター パターン、その実装詳細について。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 376b4eca99ed60a54831aa37099108692d8bac6d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c8447cfcd3155a873d61ee9287f58774392c279d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612161"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640803"
 ---
 # <a name="implement-the-microservice-application-layer-using-the-web-api"></a>Web API を使用してマイクロサービス アプリケーション レイヤーを実装する
 

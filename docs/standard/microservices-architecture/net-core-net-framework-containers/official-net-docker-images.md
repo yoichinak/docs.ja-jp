@@ -1,15 +1,13 @@
 ---
 title: 公式の .NET Docker イメージ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 公式の .NET Docker イメージ
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: 8babdfa91eeb903faac06af8b15e3f09aad98f2e
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: b184e8f3606da8448a06a1cad90688958ecbce3a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58920754"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644342"
 ---
 # <a name="official-net-docker-images"></a>公式の .NET Docker イメージ
 

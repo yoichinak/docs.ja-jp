@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 076ee62d-a964-449e-a447-c31b33518b81
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bc4b4df6829f5b86dff400c5cd7cbd3d86f5507
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a4640e776cc76ef56227858f6a4aa04e77ecbbdc
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591531"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586006"
 ---
 # <a name="how-to-hook-up-a-delegate-using-reflection"></a>方法: リフレクションを使用してデリゲートをフックする
 リフレクションを使用して、アセンブリを読み込んで実行する場合、C# の `+=` 演算子や Visual Basic の [AddHandler ステートメント](~/docs/visual-basic/language-reference/statements/addhandler-statement.md)のような言語機能を使用してイベントをフックすることはできません。 次の手順では、必要なすべての型をリフレクションによって取得することで、既存のメソッドをイベントにフックする方法と、リフレクション出力を使用して動的メソッドを作成し、それをイベントにフックする方法を示します。  
@@ -104,14 +104,6 @@ ms.locfileid: "64591531"
  [!code-cpp[HookUpDelegate#1](../../../samples/snippets/cpp/VS_Snippets_CLR/HookUpDelegate/cpp/source.cpp#1)]
  [!code-csharp[HookUpDelegate#1](../../../samples/snippets/csharp/VS_Snippets_CLR/HookUpDelegate/cs/source.cs#1)]
  [!code-vb[HookUpDelegate#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HookUpDelegate/vb/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>コードのコンパイル  
-  
-- このコードには、コンパイルに必要な C# の `using` ステートメント (Visual Basic では `Imports`) が含まれています。  
-  
-- コマンド ラインからコンパイルするために、追加のアセンブリ参照は必要ありません。 この例はコンソール アプリケーションであるため、Visual Studio では、System.Windows.Forms.dll への参照を追加する必要があります。  
-  
-- コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
 ## <a name="see-also"></a>関連項目
 

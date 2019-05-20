@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: f769a271-8aff-4bea-bfab-6160217ce23d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e873f23e0178efefe37f371c379caa3d15bde4cf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c624866a23eb32f57953847e8a229f6fa5e7b4bb
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64649503"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632965"
 ---
 # <a name="dynamic-language-runtime-overview"></a>動的言語ランタイムの概要
 

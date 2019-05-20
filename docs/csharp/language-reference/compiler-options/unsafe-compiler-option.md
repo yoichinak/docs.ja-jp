@@ -7,15 +7,16 @@ helpviewer_keywords:
 - -unsafe compiler option [C#]
 - unsafe compiler option [C#]
 - /unsafe compiler option [C#]
-ms.openlocfilehash: 4cfd7c82bc2cbf816164b235642c0647eeb7e5b6
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 146299fda103567b111c66400c17edf36addd843
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337332"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877988"
 ---
 # <a name="-unsafe-c-compiler-options"></a>-unsafe (C# コンパイラ オプション)
-**-unsafe** コンパイラ オプションは、[unsafe](../../../csharp/language-reference/keywords/unsafe.md) キーワードを使用するコードをコンパイルできるようにします。  
+
+**-unsafe** コンパイラ オプションは、[unsafe](../keywords/unsafe.md) キーワードを使用するコードをコンパイルできるようにします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -23,8 +24,9 @@ ms.locfileid: "59337332"
 -unsafe  
 ```  
   
-## <a name="remarks"></a>解説  
- アンセーフ コードの詳細については、「[アンセーフ コードとポインター](../../../csharp/programming-guide/unsafe-code-pointers/index.md)」を参照してください。  
+## <a name="remarks"></a>解説
+
+アンセーフ コードの詳細については、「[アンセーフ コードとポインター](../../programming-guide/unsafe-code-pointers/index.md)」を参照してください。  
   
 ### <a name="to-set-this-compiler-option-in-the-visual-studio-development-environment"></a>Visual Studio 開発環境でこのコンパイラ オプションを設定するには  
   
@@ -46,8 +48,9 @@ ms.locfileid: "59337332"
 
  このコンパイラ オプションをプログラムで設定する方法については、「<xref:VSLangProj80.CSharpProjectConfigurationProperties3.AllowUnsafeBlocks%2A>」を参照してください。  
   
-## <a name="example"></a>例  
- unsafe モードで `in.cs` をコンパイルする場合は、次のコードを使用します。  
+## <a name="example"></a>例
+
+unsafe モードで `in.cs` をコンパイルする場合は、次のコードを使用します。  
   
 ```console  
 csc -unsafe in.cs  
@@ -55,5 +58,5 @@ csc -unsafe in.cs
   
 ## <a name="see-also"></a>関連項目
 
-- [C# コンパイラ オプション](../../../csharp/language-reference/compiler-options/index.md)
+- [C# コンパイラ オプション](index.md)
 - [プロジェクトおよびソリューションのプロパティの管理](/visualstudio/ide/managing-project-and-solution-properties)

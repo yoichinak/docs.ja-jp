@@ -1,15 +1,13 @@
 ---
 title: Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 description: '.NET マイクロサービス: コンテナー化された .NET アプリケーションのアーキテクチャ | Entity Framework Core を使用してインフラストラクチャの永続レイヤーを実装する方法の詳細。'
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: a84c5057b7a35c837f2c597cd3e60cd293a70009
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: c6b0a022dfecb24c479a0fd3c84dbde719a390a8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611654"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639522"
 ---
 # <a name="implement-the-infrastructure-persistence-layer-with-entity-framework-core"></a>Entity Framework Core でインフラストラクチャの永続レイヤーを実装する
 

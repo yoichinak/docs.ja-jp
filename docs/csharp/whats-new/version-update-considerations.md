@@ -2,12 +2,12 @@
 title: C# 開発者向けのバージョンと更新に関する考慮事項
 description: 新しい言語機能をライブラリに導入すると、それを使用するコードに影響が出る可能性があります。
 ms.date: 09/19/2018
-ms.openlocfilehash: 56685422e2c73dcca25acbdccb3a77a8de9df775
-ms.sourcegitcommit: fb78d8abbdb87144a3872cf154930157090dd933
+ms.openlocfilehash: 3ffe2f6fd64a391fddf28233dccb022c95851884
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2018
-ms.locfileid: "47199932"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634487"
 ---
 # <a name="version-and-update-considerations-for-c-developers"></a>C# 開発者向けのバージョンと更新に関する考慮事項
 

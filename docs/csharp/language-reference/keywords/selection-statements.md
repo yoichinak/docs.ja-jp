@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - statements [C#], selection
 ms.assetid: cf21cfa2-34fb-48b0-9cbc-8bb4537a9a05
-ms.openlocfilehash: 7e5a8aa83fb099e4945ce2406aaea9d11a84d040
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 454eabd76965448afe5d44987e63f7d56e1d1361
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53241182"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633800"
 ---
 # <a name="selection-statements-c-reference"></a>選択ステートメント (C# リファレンス)
 

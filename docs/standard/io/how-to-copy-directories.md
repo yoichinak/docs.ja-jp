@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5a969765-e5f8-4b4e-977e-90e2b0a1fe3c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 57e2b61fb8fef37234dc10885752f92e5f9b1330
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2a7fa901d887701e0fa41a0887b363adec07dba2
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54671071"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644694"
 ---
 # <a name="how-to-copy-directories"></a>方法: ディレクトリをコピーする
 このトピックでは、I/O クラスを使用して、別の場所にディレクトリの内容を同期的にコピーする方法について説明します。 

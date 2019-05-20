@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], value types
 - types [C#], suffixes
 ms.assetid: 67d8f631-b6e3-4d83-9910-5ec497f8c5f3
-ms.openlocfilehash: 2475f63099e47beedc610b8815a8e39e1f7be77e
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 7a2b61e7b699319bc57ff3fddcb712ef8e3c30fd
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53611218"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632846"
 ---
 # <a name="value-types-table-c-reference"></a>値型の一覧表 (C# リファレンス)
 
@@ -36,7 +36,7 @@ C# の値の型を次の表に示します。
 |[ulong](ulong.md)|符号なし、数値、[整数](integral-types-table.md)|UL、Ul、uL、ul、LU、Lu、lU、または lu|
 |[ushort](ushort.md)|符号なし、数値、[整数](integral-types-table.md)||
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 型のサフィックスを使用して数値リテラルの型を指定します。 次に例を示します。
 

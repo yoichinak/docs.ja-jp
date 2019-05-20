@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - partial methods [C#]
 ms.assetid: 43f40242-17e0-4452-8573-090503ad3137
-ms.openlocfilehash: 742d6ca744ac723179718f1400e600411712dd40
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 14bcd3329b6ca8e46f6c180c97174a561108d143
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53238287"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633353"
 ---
 # <a name="partial-method-c-reference"></a>partial (メソッド) (C# リファレンス)
 

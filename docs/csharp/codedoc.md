@@ -3,12 +3,12 @@ title: XML コメントによるコードの文書化
 description: XML ドキュメント コメントを含むコードを文書化し、コンパイル時に XML ドキュメント ファイルを生成する方法を説明します。
 ms.date: 02/14/2017
 ms.assetid: 8e75e317-4a55-45f2-a866-e76124171838
-ms.openlocfilehash: 956598d7c8193f70e094fcb578c041b8972b9b0c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 17a6beabf7e8a917c461dae4d92f1cfbb0d9de71
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063127"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633734"
 ---
 # <a name="documenting-your-code-with-xml-comments"></a>XML コメントによるコードの文書化
 
@@ -222,5 +222,5 @@ Sandcastle などのツールを使用すると、[`<event>`](https://ewsoftware
 
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント コメント (C# プログラミング ガイド)](programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML ドキュメント コメント (C# プログラミング ガイド)](programming-guide/xmldoc/index.md)
 - [ドキュメント コメント用の推奨タグ (C# プログラミング ガイド)](programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

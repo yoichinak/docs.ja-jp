@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - data transfer [WCF], architectural overview
 ms.assetid: 343c2ca2-af53-4936-a28c-c186b3524ee9
-ms.openlocfilehash: 6b6e77dea17d71b74c2c06534fd3a941e3e867a8
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 83fd5ab1cfe7f48999dd2765405f58543eeb743a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592557"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882215"
 ---
 # <a name="data-transfer-architectural-overview"></a>データ転送のアーキテクチャの概要
 Windows Communication Foundation (WCF) は、メッセージング インフラストラクチャと考えることができます。 WCF は、メッセージを受信し、それらのメッセージを処理し、さらにアクションを実行するためにユーザー コードにディスパッチすることができます。また、ユーザー コードで指定されたデータからメッセージを作成し、送信先に配布することもできます。 ここでは、メッセージを処理するためのアーキテクチャと格納されるデータについて説明します。このトピックは、上級開発者を対象としています。 データを送受信する方法のより簡単なタスク指向の概要については、「 [Specifying Data Transfer in Service Contracts](../../../../docs/framework/wcf/feature-details/specifying-data-transfer-in-service-contracts.md)」を参照してください。  
@@ -268,7 +268,7 @@ Windows Communication Foundation (WCF) は、メッセージング インフラ�
   
  WCF は、パラメーターおよびメッセージ部分を逆シリアル化のシリアル化と「なし」の 2 つのシリアル化テクノロジをサポートしています。 <xref:System.Runtime.Serialization.DataContractSerializer> 、`XmlSerializer`します。 また、カスタム シリアライザーを作成することもできます。 ただし、WCF の他の部分 (ジェネリックなど`GetBody`メソッドや SOAP エラーのシリアル化) のみを使用する制限があります、<xref:System.Runtime.Serialization.XmlObjectSerializer>サブクラス (<xref:System.Runtime.Serialization.DataContractSerializer>と<xref:System.Runtime.Serialization.NetDataContractSerializer>、ではなく、 <xref:System.Xml.Serialization.XmlSerializer>)、ハード コードのみを使用することがありますか<xref:System.Runtime.Serialization.DataContractSerializer>します。  
   
- `XmlSerializer` は、 [!INCLUDE[vstecasp](../../../../includes/vstecasp-md.md)] Web サービスで使用されるシリアル化エンジンです。 `DataContractSerializer` は、新しいデータ コントラクト プログラミング モデルを認識する新しいシリアル化エンジンです。 `DataContractSerializer` が既定で選択されています。 `XmlSerializer` を使用する場合は、 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 属性を使用して操作ごとに選択できます。  
+ `XmlSerializer`は ASP.NET Web サービスで使用されるシリアル化エンジンです。 `DataContractSerializer` は、新しいデータ コントラクト プログラミング モデルを認識する新しいシリアル化エンジンです。 `DataContractSerializer` が既定で選択されています。 `XmlSerializer` を使用する場合は、 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior.DataContractFormatAttribute%2A> 属性を使用して操作ごとに選択できます。  
   
  <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> と <xref:System.ServiceModel.Description.XmlSerializerOperationBehavior> は、それぞれ `DataContractSerializer` および `XmlSerializer`のメッセージ フォーマッタをプラグインする役割を担う操作の動作です。 <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> の動作は、 <xref:System.Runtime.Serialization.XmlObjectSerializer>など、 <xref:System.Runtime.Serialization.NetDataContractSerializer> から派生した任意のシリアライザーで実際に操作できます (詳細については、「スタンドアロンのシリアル化の使用」を参照してください)。 この動作では、 `CreateSerializer` 仮想メソッド オーバーロードのいずれかを呼び出して、シリアライザーを取得します。 別のシリアライザーをプラグインするには、新しい <xref:System.ServiceModel.Description.DataContractSerializerOperationBehavior> サブクラスを作成し、 `CreateSerializer` の両方のオーバーロードをオーバーライドします。  
   

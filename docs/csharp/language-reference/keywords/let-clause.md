@@ -9,12 +9,12 @@ helpviewer_keywords:
 - let keyword [C#]
 - let clause [C#]
 ms.assetid: 13c9c1a4-ce57-48ef-8e1b-4c2a59b99fb4
-ms.openlocfilehash: 941ad41d75e14420699022a07bd6a3b10d83c896
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: e9e10957e7ebe93a6dea9bbb6233ca7733f68e20
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53243401"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633462"
 ---
 # <a name="let-clause-c-reference"></a>let 句 (C# リファレンス)
 

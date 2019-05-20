@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: dd1ff672-1052-42cf-8666-4924fb6cd1a1
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2c71592537a31527bda6db08da8c36e798270d5a
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: b4f2a8fc10d2aad6b2d43bf128697e86aa73c411
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/28/2018
-ms.locfileid: "50190854"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644680"
 ---
 # <a name="enumeration-format-strings"></a>列挙型書式指定文字列
 

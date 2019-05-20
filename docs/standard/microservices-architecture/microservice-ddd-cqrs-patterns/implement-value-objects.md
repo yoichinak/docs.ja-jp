@@ -2,12 +2,12 @@
 title: 値オブジェクトの実装
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 新しい Entity Framework 機能を使用し、値オブジェクトを実装する方法の詳細とオプション。
 ms.date: 10/08/2018
-ms.openlocfilehash: bd165ac2511476a5041e7d09126647546c632ba6
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063065"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644287"
 ---
 # <a name="implement-value-objects"></a>値オブジェクトを実装する
 

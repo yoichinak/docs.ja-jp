@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: b5382965-0053-47cf-b92f-862860275a01
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 19cccc5bcec82b04a337aa0d3913fede0a435ae8
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: c18b7b34a14e5f854ee72a0462a1969fb6501190
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492258"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632188"
 ---
 # <a name="alexe-assembly-linker"></a>Al.exe (アセンブリ リンカー)
 

@@ -2,20 +2,20 @@
 title: ADO.NET での side-by-side 実行
 ms.date: 03/30/2017
 ms.assetid: 9f9ba96d-9f89-4f65-bb2f-6860879f4393
-ms.openlocfilehash: 377af3c72b0a9a8eb26c8713d98f114803f08356
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: d20d8e81d76284509d6fe733e4f283a9ab39cb00
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583620"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877091"
 ---
 # <a name="side-by-side-execution-in-adonet"></a>ADO.NET での side-by-side 実行
 .NET Framework でのサイド バイ サイドで実行、アプリケーションのコンパイル対象のバージョンを排他的に使用して、インストールされている .NET Framework の複数のバージョンをあるコンピューター上でアプリケーションを実行する機能があります。 サイド バイ サイドで実行を構成する方法の詳細については、次を参照してください。[サイド バイ サイド実行](../../../../docs/framework/deployment/side-by-side-execution.md)します。  
   
- .NET Framework の 1 つのバージョンを使用してコンパイルされたアプリケーションは、.NET Framework の別のバージョンで実行できます。 ただし、バージョンの .NET Framework のインストールされている各バージョンのアプリケーションをコンパイルして、別々 に実行することお勧めします。 いずれの場合でも、[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] の各リリース間の変更によって生じるアプリケーションの上位互換性または下位互換性の問題に注意する必要があります。  
+ .NET Framework の 1 つのバージョンを使用してコンパイルされたアプリケーションは、.NET Framework の別のバージョンで実行できます。 ただし、バージョンの .NET Framework のインストールされている各バージョンのアプリケーションをコンパイルして、別々 に実行することお勧めします。 どちらのシナリオでは、ADO.NET の上位互換性またはアプリケーションの旧バージョンとの互換性に影響を与えるリリース間の変更注意する必要があります。  
   
 ## <a name="forward-compatibility-and-backward-compatibility"></a>上位互換性と下位互換性  
- 上位互換性は、アプリケーションは、.NET Framework の以前のバージョンでコンパイルすることができますが、.NET Framework の以降のバージョンで正常に実行も意味します。 [!INCLUDE[vstecado](../../../../includes/vstecado-md.md)] .NET Framework version 1.1 用に記述されたコードでは、以降のバージョンとの上位互換性です。  
+ 上位互換性は、アプリケーションは、.NET Framework の以前のバージョンでコンパイルすることができますが、.NET Framework の以降のバージョンで正常に実行も意味します。 .NET Framework version 1.1 用に記述された ADO.NET コードでは、以降のバージョンとの上位互換性です。  
   
  旧バージョンとの互換性は、アプリケーションは、.NET Framework の新しいバージョンがコンパイルされるが、機能を失うことがなく、.NET Framework の以前のバージョンで引き続き実行を意味します。 もちろん、この操作が、.NET Framework の新しいバージョンで導入された機能の場合です。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "65583620"
   
  ただし、以降、.NET Framework version 2.0 では、.NET Framework データ プロバイダーをすべて使用できますで部分的に信頼されたゾーン。 さらに、新しいセキュリティ機能は、.NET Framework version 1.1 での .NET Framework データ プロバイダーに追加されました。 この機能により、特定のセキュリティ ゾーンで使用できる接続文字列を制限することができます。 特定のセキュリティ ゾーンに対して空白のパスワードの使用を禁止することもできます。 詳細については、「 [Code Access Security and ADO.NET](../../../../docs/framework/data/adonet/code-access-security.md)」を参照してください。  
   
- .NET Framework の各インストールには、個別の Security.config ファイルがあるために、セキュリティ設定と互換性の問題はありません。 ただし、アプリケーションがの追加のセキュリティ機能に依存するかどうかは[!INCLUDE[vstecado](../../../../includes/vstecado-md.md)].NET Framework version 1.1 以降に含まれていることはできません、version 1.0 システムに配布します。  
+ .NET Framework の各インストールには、個別の Security.config ファイルがあるために、セキュリティ設定と互換性の問題はありません。 ただし、アプリケーションは、ADO.NET .NET Framework version 1.1 に含まれるおよびそれ以降の追加のセキュリティ機能に依存する場合、version 1.0 システムに配布することはできません。  
   
 ## <a name="sqlcommand-execution"></a>SqlCommand の実行  
  方法は、.NET Framework version 1.1 以降を<xref:System.Data.SqlClient.SqlCommand.ExecuteReader%2A>コマンドを実行、データ ソースが変更されました。  

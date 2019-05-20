@@ -1,15 +1,13 @@
 ---
 title: docker-compose.yml で複数のコンテナー アプリケーションを定義する
 description: docker-compose.yml を使用して複数コンテナーのアプリケーション用にマイクロサービスの構成を指定する方法。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: f40559ef7c41febb5e17d583ef2d0eb64addc0a8
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 6f526a951f50bad673a44cfd6c53664a13211a32
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613188"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639334"
 ---
 # <a name="defining-your-multi-container-application-with-docker-composeyml"></a>docker-compose.yml で複数のコンテナー アプリケーションを定義する
 

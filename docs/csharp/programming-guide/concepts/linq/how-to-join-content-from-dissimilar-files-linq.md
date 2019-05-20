@@ -2,12 +2,12 @@
 title: '方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)'
 ms.date: 06/27/2018
 ms.assetid: aa2d12a6-70a9-492f-a6db-b2b850d46811
-ms.openlocfilehash: ca340e82e33d9b3ec212f69cb73efafb3c6abc0c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: dd7287abce7fca803dd87d23f1f58151cf4ec2f5
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59328817"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585764"
 ---
 # <a name="how-to-join-content-from-dissimilar-files-linq-c"></a>方法: 異種ファイルのコンテンツを結合する (LINQ) (C#)
 
@@ -124,14 +124,6 @@ Tucker, 94, 92, 91, 91
  */  
 ```
 
-## <a name="compiling-the-code"></a>コードのコンパイル
-
-次のいずれかのオプションを対象とするプロジェクトを作成してコンパイルします。
-
-- System.Core.dll の参照を含む .NET Framework バージョン 3.5。
-- .NET Framework バージョン 4.0 以降
-- .NET Core バージョン 1.0 以降。
-  
 ## <a name="see-also"></a>関連項目
 
 - [LINQ と文字列 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-and-strings.md)

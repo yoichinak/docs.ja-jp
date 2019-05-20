@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a63ebf55-7269-416b-b4f5-286f6c03bf0e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b06e367d119a93e872325a85cd951cc5087068be
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 14fbcbbd2e4042fa4f25b3c8993cf47fefd95052
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58819633"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644991"
 ---
 # <a name="custom-timespan-format-strings"></a>カスタム TimeSpan 書式指定文字列
 

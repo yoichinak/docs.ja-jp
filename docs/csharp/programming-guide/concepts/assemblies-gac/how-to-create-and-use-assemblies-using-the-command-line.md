@@ -2,12 +2,12 @@
 title: '方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 408ddce3-89e3-4e12-8353-34a49beeb72b
-ms.openlocfilehash: 76243034b4291142efa5ac78c21f65333e1378e2
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 12d23816b740816bd357c3c2ac57583f31bf3cb3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599868"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586029"
 ---
 # <a name="how-to-create-and-use-assemblies-using-the-command-line-c"></a>方法: コマンド ラインを使用してアセンブリを作成および使用する (C#)
 アセンブリとは、ダイナミック リンク ライブラリ (DLL) のことで、実行時にプログラムにリンクされます。 DLL のビルド例および使用例として、次に示すシナリオを考えてみます。  
@@ -102,25 +102,6 @@ UtilityMethods.MultiplyClass.Multiply(num1, num2);
  プログラムを実行するには、次のように、EXE ファイルの名前と 2 つの数値を順に入力します。  
   
  `TestCode 1234 5678`  
-  
-## <a name="compiling-the-code"></a>コードのコンパイル  
- `MathLibrary.DLL` ファイルをビルドするには、次のコマンド ラインを使用して、`Add` ファイルと `Mult` ファイルをコンパイルします。  
-  
-```csharp  
-csc /target:library /out:MathLibrary.DLL Add.cs Mult.cs  
-```  
-  
- [/target:library](../../../../csharp/language-reference/compiler-options/target-library-compiler-option.md) コンパイラ オプションを指定すると、コンパイラは EXE ファイルではなく DLL ファイルを出力します。 [/out](../../../../csharp/language-reference/compiler-options/out-compiler-option.md) コンパイラ オプションは、ファイル名の前で使用して DLL のファイル名を指定します。 このオプションを指定しないと、コンパイラは最初のファイル (`Add.cs`) を DLL の名前として使用します。  
-  
- 実行可能ファイル `TestCode.exe` をビルドするには、次のコマンド ラインを使用します。  
-  
-```csharp  
-csc /out:TestCode.exe /reference:MathLibrary.DLL TestCode.cs  
-```  
-  
- **/out** コンパイラ オプションは、EXE ファイルを出力するようにコンパイラに指示し、出力ファイルの名前 (`TestCode.exe`) を指定します。 このコンパイラ オプションは省略できます。 [/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md) コンパイラ オプションは、このプログラムが使用する DLL ファイルを指定します。 詳細については、「[/reference](../../../../csharp/language-reference/compiler-options/reference-compiler-option.md)」を参照してください。  
-  
- コマンド ラインからのビルドの詳細については、「[csc.exe を使用したコマンド ラインからのビルド](../../../../csharp/language-reference/compiler-options/command-line-building-with-csc-exe.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

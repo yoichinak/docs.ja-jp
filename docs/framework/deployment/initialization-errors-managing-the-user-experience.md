@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 680a7382-957f-4f6e-b178-4e866004a07e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8e5a3cb79187d6434585560e9c128e03fe8003b7
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 2abbe121879e5f47fbce9a82d2afbf52cbef4ba9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679373"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636627"
 ---
 # <a name="net-framework-initialization-errors-managing-the-user-experience"></a>.NET Framework の初期化エラー:ユーザー エクスペリエンスの管理
 

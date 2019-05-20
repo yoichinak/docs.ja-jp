@@ -9,12 +9,12 @@ helpviewer_keywords:
 - cast operator [C#]
 - () operator [C#]
 ms.assetid: 846e1f94-8a8c-42fc-a42c-fbd38e70d8cc
-ms.openlocfilehash: 3a0af33739c9cb4d090842219eba4ece9700ef89
-ms.sourcegitcommit: 542aa405b295955eb055765f33723cb8b588d0d0
+ms.openlocfilehash: 412d3ac5296eaf7d67f4a5e84b7a42f6fa5bb8a5
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54362783"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633845"
 ---
 # <a name="-operator-c-reference"></a>() 演算子 (C# リファレンス)
 

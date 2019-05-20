@@ -9,18 +9,18 @@ helpviewer_keywords:
 - ?? operator [C#]
 - conditional-AND operator (&&) [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: b96fe4790aac7ff5ff5394cbaaeaddc1e334e96c
-ms.sourcegitcommit: 5c36aaa8299a2437c155700c810585aff19edbec
+ms.openlocfilehash: e1e981f9ec6a87f6e7de1900008520cde8e46095
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54333214"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633943"
 ---
-# <a name="-operator-c-reference"></a>?? operator (C# リファレンス)
+# <a name="-operator-c-reference"></a>?? 演算子 (C# リファレンス)
 
 `??` 演算子は、null 合体演算子と呼ばれます。  左側のオペランドが null 値でない場合には左側のオペランドを返し、null 値である場合には右側のオペランドを返します。
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 null 許容型は、型のドメインの値を表すことができ、値は未定義でもかまいません (その場合、値は null になります)。 `??` 演算子の構文を使用して、左側のオペランドが null 許容型でその値が null である場合に、適切な値 (右側のオペランド) を返すことができます。 `??` 演算子を使用せずに、null 非許容値型に対して null 許容値型を割り当てると、コンパイル時にエラーが発生します。 null 許容値型が定義されていない場合にキャストを使用すると、`InvalidOperationException` 例外がスローされます。
 

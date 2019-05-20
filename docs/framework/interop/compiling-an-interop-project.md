@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db6630a6c1e68a776641db7ec7960f47fd260552
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bf0244060d3c5dfa39c220fc2d699a5f2f1fef9e
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603282"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636193"
 ---
 # <a name="compiling-an-interop-project"></a>相互運用プロジェクトのコンパイル
 

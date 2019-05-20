@@ -8,12 +8,12 @@ helpviewer_keywords:
 - where keyword [C#]
 - where clause [C#]
 ms.assetid: 7f9bf952-7744-4f91-b676-cddb55d107c3
-ms.openlocfilehash: 470fcfde7a5e68887fa3a6e99cb8881073ffeba5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: fc259f0e0a83d2f55bf2d50fa336c9201b8b5bef
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59341388"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633225"
 ---
 # <a name="where-clause-c-reference"></a>where 句 (C# リファレンス)
 

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - wav files
 - .wav files
 ms.assetid: f7f62f53-e026-4c40-b221-3a26adb0c2c5
-ms.openlocfilehash: 29c36bd0494879b66674cf3a3c404fdaf3908f59
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2d7f50952a485c09e74462f3ad731d710b8f9198
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323812"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584260"
 ---
 # <a name="how-to-use-platform-invoke-to-play-a-wave-file-c-programming-guide"></a>方法: プラットフォーム呼び出しを使用して Wave ファイルを再生する (C# プログラミング ガイド)
 以下の C# コードの例では、プラットフォーム呼び出しサービスを使用して、Windows オペレーティング システム上の .wav サウンド ファイルを再生する方法を示します。  
@@ -29,8 +29,6 @@ ms.locfileid: "59323812"
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
   
-### <a name="to-compile-the-code"></a>コードをコンパイルするには、次のようにします。  
-  
 1. Visual Studio で新しい C# Windows アプリケーション プロジェクトを作成し、**WinSound** という名前にします。  
   
 2. 上記のコードをコピーし、`Form1.cs` ファイルに貼り付けて内容を上書きします。  
@@ -40,9 +38,6 @@ ms.locfileid: "59323812"
      [!code-csharp[csProgGuideInterop#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInterop/CS/WinSound.cs#4)]  
   
 4. コードをコンパイルして実行します。  
-  
-## <a name="net-framework-security"></a>.NET Framework セキュリティ  
- 詳細については、「[.NET でのセキュリティ](../../../standard/security/index.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -1,15 +1,13 @@
 ---
 title: 列挙型ではなく列挙型クラスを使用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | enum のいくつかの制限を解決する方法として、代わりに Enumeration クラスを使用する方法を説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: d2d4b191ed4cb8f2f8b9b0a34fe99e65d4596a72
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 02d5fcef580f71b6f8c4af6d88095e24b0bd3462
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613565"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644477"
 ---
 # <a name="use-enumeration-classes-instead-of-enum-types"></a>enum 型の代わりに Enumeration クラスを使用する
 

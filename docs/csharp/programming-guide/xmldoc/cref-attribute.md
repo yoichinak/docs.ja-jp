@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - cref [C#]
 ms.assetid: 66a6b0e5-b961-4504-a461-3a4cf481fc8b
-ms.openlocfilehash: 9352718371226279f0a468913040e48cbeed984d
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 332fd7499a9948bb9ab418a3ab8b6c40ad0bcb85
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971365"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634815"
 ---
 # <a name="cref-attribute-c-programming-guide"></a>cref 属性 (C# プログラミング ガイド)
 XML ドキュメント タグの `cref` 属性は "コード参照" を意味します。 タグの内部テキストが、型、メソッド、プロパティなど、コード要素であることを指定します。 [DocFX](https://dotnet.github.io/docfx/) や [Sandcastle](https://github.com/EWSoftware/SHFB) のようなドキュメント ツールでは `cref` 属性が使用されて、型やメンバーが文書化されるページのハイパーリンクが自動的に生成されます。  
@@ -121,5 +121,5 @@ XML ドキュメント タグの `cref` 属性は "コード参照" を意味し
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/xml-documentation-comments.md)
+- [XML ドキュメント コメント](../../../csharp/programming-guide/xmldoc/index.md)
 - [ドキュメント コメントとして推奨されるタグ](../../../csharp/programming-guide/xmldoc/recommended-tags-for-documentation-comments.md)

@@ -1,15 +1,13 @@
 ---
 title: マイクロサービス指向アプリケーションの設計
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 十分な情報を得たうえでの決定を行うことができるように、マイクロサービス指向アプリケーションの利点と欠点を理解する。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 160eba2c7249793592caf13622b01c597d7feec7
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: dfb1619bab68814bd14224e5b50a75d99525a802
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613864"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639514"
 ---
 # <a name="designing-a-microservice-oriented-application"></a>マイクロサービス指向アプリケーションの設計
 

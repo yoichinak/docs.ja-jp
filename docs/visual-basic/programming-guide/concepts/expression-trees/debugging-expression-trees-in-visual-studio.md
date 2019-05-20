@@ -2,26 +2,43 @@
 title: Visual Studio (Visual Basic) で式ツリーのデバッグ
 ms.date: 07/20/2015
 ms.assetid: 492cc28f-b7a2-4c47-b582-b3c437b8a5d5
-ms.openlocfilehash: fb5905c3c1124dd64371216bddda0a17235abdce
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7fc97d898c5956b5a569036e6e0fe1174714576d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787193"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879822"
 ---
 # <a name="debugging-expression-trees-in-visual-studio-visual-basic"></a>Visual Studio (Visual Basic) で式ツリーのデバッグ
+アプリケーションをデバッグするときに、式ツリーの構造および内容を分析できます。 式ツリーの構造体の簡単な概要を取得するには、使用することができます、`DebugView`プロパティを説明する特殊な構文を使用して式ツリーを表す[下](#debugview-syntax)します。 (なお`DebugView`デバッグ モードでのみ使用できます)。  
 
-アプリケーションをデバッグするときに、式ツリーの構造および内容を分析できます。 式ツリーの構造を簡単に確認する場合は、`DebugView` プロパティを使用できます。このプロパティは、デバッグ モードでのみ使用できます。 デバッグの詳細については、「[Visual Studio でのデバッグ](/visualstudio/debugger/debugging-in-visual-studio)」を参照してください。
+![Visual Studio デバッガー内で式ツリーの DebugView](media/debugging-expression-trees-in-visual-studio/debugview_vb.png)
 
-式ツリーの内容をわかりやすく表すために、`DebugView` プロパティでは Visual Studio ビジュアライザーを使用します。 詳細については、「[Create Custom Visualizers](/visualstudio/debugger/create-custom-visualizers-of-data)」 (カスタム ビジュアライザーを作成する) を参照してください。
+`DebugView`文字列で、使用することができます、[組み込みテキスト ビジュアライザー](https://docs.microsoft.com/visualstudio/debugger/view-strings-visualizer#open-a-string-visualizer)複数の行を選択して表示する**テキスト ビジュアライザー**隣にある虫眼鏡アイコンから、 `DebugView`ラベル。
 
-### <a name="to-open-a-visualizer-for-an-expression-tree"></a>式ツリーのビジュアライザーを開くには
+ !['DebugView' の結果に適用されるテキスト ビジュアライザー](media/debugging-expression-trees-in-visual-studio/string_visualizer_vb.png)
 
-1. **[データヒント]**、**[ウォッチ]** ウィンドウ、**[自動変数]** ウィンドウ、または **[ローカル]** ウィンドウで、式ツリーの `DebugView` プロパティの横に表示されている虫眼鏡のアイコンをクリックします。
+インストールして使用する代わりに、[カスタム ビジュアライザー](https://docs.microsoft.com/visualstudio/debugger/create-custom-visualizers-of-data)式ツリー。
 
-    ビジュアライザーの一覧が表示されます。
+* [読み取り可能な式](https://github.com/agileobjects/ReadableExpressions)([MIT ライセンス](https://github.com/agileobjects/ReadableExpressions/blob/master/LICENSE.md)で使用可能な[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=vs-publisher-1232914.ReadableExpressionsVisualizers))、として式ツリーを表示します。C#コード。
 
-2. 使用するビジュアライザーをクリックします。
+  ![読み取り可能な式のビジュアライザー](media/debugging-expression-trees-in-visual-studio/readable_expressions_visualizer.png)
+
+* [式ツリーのビジュアライザー](https://github.com/zspitz/ExpressionToString#visual-studio-debugger-visualizer-for-expression-trees) ([MIT ライセンス](https://github.com/zspitz/ExpressionToString/blob/master/LICENSE)) を式ツリー、そのプロパティ、および関連するオブジェクトのグラフィカル ビューを提供し、Visual Basic コードを使用して式ツリーを表示することができます。
+
+  ![ExpressionToString ビジュアライザー](media/debugging-expression-trees-in-visual-studio/expression_to_string_visualizer_vb.png)
+
+### <a name="to-open-a-visualizer-for-an-expression-tree"></a>式ツリーのビジュアライザーを開くには  
+  
+1. 式ツリーの横に表示される、虫眼鏡アイコンをクリックします**データヒント**、**ウォッチ**ウィンドウで、 **[自動変数]** ウィンドウで、または **[ローカル]。** ウィンドウ。  
+  
+     使用可能なビジュアライザーの一覧が表示されます。 
+
+      ![Visual Studio からビジュアライザーを開く](media/debugging-expression-trees-in-visual-studio/expression_tree_visualizers_vb.png)
+
+2. 使用するビジュアライザーをクリックします。  
+
+## <a name="debugview-syntax"></a>`DebugView` 構文 
 
 それぞれの式の型は、以下のセクションで説明するように、ビジュアライザーに表示されます。
 

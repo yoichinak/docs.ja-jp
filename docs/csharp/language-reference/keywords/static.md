@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - static keyword [C#]
 ms.assetid: 5509e215-2183-4da3-bab4-6b7e607a4fdf
-ms.openlocfilehash: 90b043fa13f1737db81518151daaeceabf930c5c
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: b288e57d9241e294a0fa18edafe72eec675327a7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239156"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633185"
 ---
 # <a name="static-c-reference"></a>static (C# リファレンス)
 

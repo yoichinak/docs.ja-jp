@@ -1,15 +1,13 @@
 ---
 title: サーキット ブレーカー パターンの実装
 description: サーキット ブレーカー パターンを HTTP 再試行の補助システムとして実装する方法について説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/16/2018
-ms.openlocfilehash: 25a8b52749c3a8448a80155b233edb938e9bdd64
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: f40a8eec50a4293e4dfb4df647ce3f69f6dc361b
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58464191"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639831"
 ---
 # <a name="implement-the-circuit-breaker-pattern"></a>サーキット ブレーカー パターンを実装する
 

@@ -1,15 +1,13 @@
 ---
 title: コンテナーとして実行するデータベース サーバーの使用
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 開発のためだけにコンテナーとして実行するデータベース サーバーを使用していますか。 理由を理解します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: c993f962d84ca3fc859ab704489300192536ee74
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5fd92a28a09cab041225c4c817a10f5ecfedc038
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59611277"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639742"
 ---
 # <a name="using-a-database-server-running-as-a-container"></a>コンテナーとして実行するデータベース サーバーの使用
 

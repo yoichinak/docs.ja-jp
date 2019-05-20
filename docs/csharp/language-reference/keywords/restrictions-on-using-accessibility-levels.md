@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - access modifiers [C#], accessibility level restrictions
 ms.assetid: 987e2f22-46bf-4fea-80ee-270b9cd01045
-ms.openlocfilehash: ef1c0a93da2a53f1e199627fb7f83894d01e714a
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 3a5915d23fea02a031cedd9063018fffbdc34180
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239330"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633776"
 ---
 # <a name="restrictions-on-using-accessibility-levels-c-reference"></a>アクセシビリティ レベルの使用に関する制限事項 (C# リファレンス)
 
@@ -23,7 +23,7 @@ public class MyClass: BaseClass {...} // Error
 
 宣言されたアクセシビリティ レベルの制限を次の表にまとめます。
 
-|コンテキスト|コメント|
+|コンテキスト|解説|
 |-------------|-------------|
 |[クラス](../../programming-guide/classes-and-structs/classes.md)|クラスの型の直接基底クラスは、少なくとも、クラスの型自体と同程度にアクセス可能である必要があります。|
 |[インターフェイス](../../programming-guide/interfaces/index.md)|インターフェイスの型の明示的な基本インターフェイスは、少なくとも、インターフェイスの型自体と同程度にアクセス可能である必要があります。|

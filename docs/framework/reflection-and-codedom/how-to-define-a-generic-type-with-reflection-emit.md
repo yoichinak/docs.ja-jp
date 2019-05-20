@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 07d5f01a-7b5b-40ea-9b15-f21561098fe4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 30036df99559c67a3b11a5c651053dc644267bbb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8527f5f4a52c02744b02fea7ffaf833c223fa3f1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592459"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586211"
 ---
 # <a name="how-to-define-a-generic-type-with-reflection-emit"></a>方法: リフレクション出力を使用してジェネリック型を定義する
 このトピックでは、2 種類のパラメーターを持つ単純なジェネリック型を作成する方法、クラス制約、インターフェイス制約、特殊な制約をパラメーターに適用する方法、パラメーターの型や戻り値の型としてクラスの型パラメーターを使用するメンバーを作成する方法を紹介します。  
@@ -126,14 +126,6 @@ ms.locfileid: "64592459"
  [!code-cpp[EmitGenericType#1](../../../samples/snippets/cpp/VS_Snippets_CLR/EmitGenericType/CPP/source.cpp#1)]
  [!code-csharp[EmitGenericType#1](../../../samples/snippets/csharp/VS_Snippets_CLR/EmitGenericType/CS/source.cs#1)]
  [!code-vb[EmitGenericType#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/EmitGenericType/VB/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>コードのコンパイル  
-  
-- このコードには、コンパイルに必要な C# の `using` ステートメント (Visual Basic では `Imports`) が含まれています。  
-  
-- 追加のアセンブリ参照は不要です。  
-  
-- コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4b2fcf8a-429d-43ce-8334-e026040be8bb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a394aea0e5f8081f2be3b91422e29a251cef918e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55b859f109cc224ebf1a8fd62a1d3d3440cf906c
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626259"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65636099"
 ---
 # <a name="how-to-register-primary-interop-assemblies"></a>方法: プライマリ相互運用機能アセンブリを登録する
 

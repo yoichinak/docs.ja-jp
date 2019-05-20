@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6063221-43a5-4d3e-814c-288a4ec69aec
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a73b2d8948c9a046fd77c02f1bcc87f5738105d9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a409a93e5d84e96bbab13f2f6268d7f7ce6464ed
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59304000"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634242"
 ---
 # <a name="how-to-build-a-single-file-assembly"></a>方法: シングルファイル アセンブリをビルドする
 

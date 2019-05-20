@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - true keyword [C#]
 ms.assetid: 7d0adcdb-02e9-478c-8c84-2e671d4acef3
-ms.openlocfilehash: 823d245b00cc2fb57872af9871d83ad6a2c25b72
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: afd3ffb1e9be2c4596a9c09eea3b5f84f2c97236
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53242582"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634046"
 ---
 # <a name="true-c-reference"></a>true (C# リファレンス)
 

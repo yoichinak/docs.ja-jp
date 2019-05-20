@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 93892fa4-90b3-4ec4-b147-4bec9880de2b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: daebcf210dfa484c49f52635bb5c3c8f74c8a88a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2bf8610a1e2ad11d12acd55c69fbb98d078f7cc9
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591726"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586148"
 ---
 # <a name="how-to-define-a-generic-method-with-reflection-emit"></a>方法: リフレクション出力を使用してジェネリック メソッドを定義する
 最初の手順では、2 つの型パラメーターを持つ単純なジェネリック メソッドを作成する方法と、クラスの制約、インターフェイスの制約、および特殊な制約を型パラメーターに適用する方法を示します。  
@@ -161,14 +161,6 @@ ms.locfileid: "64591726"
   
  [!code-csharp[GenericMethodHowTo#1](../../../samples/snippets/csharp/VS_Snippets_CLR/GenericMethodHowTo/CS/source.cs#1)]
  [!code-vb[GenericMethodHowTo#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/GenericMethodHowTo/VB/source.vb#1)]  
-  
-## <a name="compiling-the-code"></a>コードのコンパイル  
-  
-- このコードには、コンパイルに必要な C# の `using` ステートメント (Visual Basic では `Imports`) が含まれています。  
-  
-- 追加のアセンブリ参照は不要です。  
-  
-- コマンド ラインで csc.exe、vbc.exe、または cl.exe を使用して、コードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 54832ee9-dca8-4c8b-913c-c0b9d265e9a4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 993c7f590f30b44f45e4833b4364b40ad9748b58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3a8b6c37df398b7273bfcf082def572d4d0e7d87
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607766"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634527"
 ---
 # <a name="creating-assemblies"></a>アセンブリの作成
 

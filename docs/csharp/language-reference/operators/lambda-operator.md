@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 0cded9d23d67e6afc8b01d6711e42759b4b51fab
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 6e6ace55e7557e940970675c99ec4db87c124f1d
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55275861"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633884"
 ---
 # <a name="-operator-c-reference"></a>=> 演算子 (C# リファレンス)
 

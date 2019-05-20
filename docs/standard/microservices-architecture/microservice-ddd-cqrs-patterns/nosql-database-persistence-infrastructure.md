@@ -1,15 +1,13 @@
 ---
 title: 永続インフラストラクチャとして NoSQL データベースを使用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス | 永続性実装のオプションとして、NoSql データベースを使用することについて (特に Azure Cosmos DB)。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: 851068b511106157a759a0600c404b4d1154e5ee
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 023904319651ec91000ff036850c773f66d1a267
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613631"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644465"
 ---
 # <a name="use-nosql-databases-as-a-persistence-infrastructure"></a>永続インフラストラクチャとして NoSQL データベースを使用する
 

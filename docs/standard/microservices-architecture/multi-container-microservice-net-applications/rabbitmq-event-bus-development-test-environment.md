@@ -1,15 +1,13 @@
 ---
 title: 開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 開発環境またはテスト環境の統合イベント向けに RabbitMQ でイベント バスのメッセージングを実装します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/02/2018
-ms.openlocfilehash: 2bcd3491c58884653cd6c119753696019151bfed
-ms.sourcegitcommit: 07c4368273b446555cb2c85397ea266b39d5fe50
+ms.openlocfilehash: af02208bb9e680403a04377ccb740a8b15be29bc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56584370"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644435"
 ---
 # <a name="implementing-an-event-bus-with-rabbitmq-for-the-development-or-test-environment"></a>開発環境またはテスト環境の RabbitMQ でイベント バスを実装する
 
