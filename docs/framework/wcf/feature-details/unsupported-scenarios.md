@@ -2,12 +2,12 @@
 title: サポートされていないシナリオ
 ms.date: 03/30/2017
 ms.assetid: 72027d0f-146d-40c5-9d72-e94392c8bb40
-ms.openlocfilehash: d6e5b7292f999b3fbecc911c3fef671ea0c675f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 884349739730510c356e1efc1f866d146f6ed946
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878741"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959957"
 ---
 # <a name="unsupported-scenarios"></a>サポートされていないシナリオ
 さまざまな理由は、Windows Communication Foundation (WCF) は一部の特定のセキュリティ シナリオをサポートしていません。 たとえば、 [!INCLUDE[wxp](../../../../includes/wxp-md.md)] Home Edition は SSPI または Kerberos 認証プロトコルを実装していないため WCF サポートしていないプラットフォームで Windows 認証を使用したサービスを実行します。 ユーザー名/パスワードや HTTP/HTTPS 統合認証などの他の認証メカニズムは、Windows XP Home Edition で WCF を実行している場合にサポートされます。  
@@ -50,7 +50,7 @@ ms.locfileid: "65878741"
 ## <a name="cryptography"></a>暗号  
   
 ### <a name="sha-256-supported-only-for-symmetric-key-usages"></a>対称キーを使用する場合にのみサポートされる SHA-256  
- WCF には、さまざまな暗号化と、システム指定のバインディングでアルゴリズム スイートを使用して指定できる署名ダイジェスト作成アルゴリズムがサポートしています。 セキュリティを強化は、WCF は、署名ダイジェスト ハッシュを作成するため、セキュア ハッシュ アルゴリズム (SHA) 2 アルゴリズムでは、具体的にはの SHA 256 をサポートします。 このリリースは、Kerberos キーなどの対称キーを使用する場合、およびメッセージに署名するために X.509 証明書を使用しない場合に限り SHA-256 をサポートします。 WCF ではサポートしていません (X.509 証明書で使用する) RSA 署名で rsa-sha256 を現在のサポートがないのための SHA 256 ハッシュを使用して、[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)]します。  
+ WCF には、さまざまな暗号化と、システム指定のバインディングでアルゴリズム スイートを使用して指定できる署名ダイジェスト作成アルゴリズムがサポートしています。 セキュリティを強化は、WCF は、署名ダイジェスト ハッシュを作成するため、セキュア ハッシュ アルゴリズム (SHA) 2 アルゴリズムでは、具体的にはの SHA 256 をサポートします。 このリリースは、Kerberos キーなどの対称キーを使用する場合、およびメッセージに署名するために X.509 証明書を使用しない場合に限り SHA-256 をサポートします。 WCF ではサポートしていません (X.509 証明書で使用する) RSA 署名 rsa-sha256、WinFX で現在のサポートがないのための sha-256 ハッシュを使用します。  
   
 ### <a name="fips-compliant-sha-256-hashes-not-supported"></a>サポートされていない FIPS 準拠の SHA-256 ハッシュ  
  WCF は sha-256 FIPS 準拠のハッシュをサポートしていないため、システムが FIPS 準拠アルゴリズムの使用が必要な場合の WCF でサポートされていないことを SHA 256 を使用するアルゴリズム スイート。  

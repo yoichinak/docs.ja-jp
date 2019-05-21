@@ -2,15 +2,15 @@
 title: 信頼できるメッセージング プロトコル バージョン 1.0
 ms.date: 03/30/2017
 ms.assetid: a5509a5c-de24-4bc2-9a48-19138055dcce
-ms.openlocfilehash: 857bbbf9ffa1311c38cfc007e0cdc6bde06d6284
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: db4761efb34e7436ae54819b8e5056c732bd2fab
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617578"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959947"
 ---
 # <a name="reliable-messaging-protocol-version-10"></a>信頼できるメッセージング プロトコル バージョン 1.0
-このトピックでは、Windows Communication Foundation (WCF) の実装の詳細を説明 Ws-reliable メッセージングの 2005 年 2 月 (バージョン 1.0) プロトコルが HTTP トランスポートを使用して相互運用のために必要です。 WCF では、制約と明確にでは、このトピックで説明されている Ws-reliablemessaging 仕様に従います。 WS-ReliableMessaging バージョン 1.0 プロトコルは、[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] 以降に実装されています。  
+このトピックでは、Windows Communication Foundation (WCF) の実装の詳細を説明 Ws-reliable メッセージングの 2005 年 2 月 (バージョン 1.0) プロトコルが HTTP トランスポートを使用して相互運用のために必要です。 WCF では、制約と明確にでは、このトピックで説明されている Ws-reliablemessaging 仕様に従います。 以降、WinFX では、WS-ReliableMessaging バージョン 1.0 プロトコルを実装することに注意してください。  
   
  Ws-reliablemessaging 2005 年 2 月での WCF でプロトコルが実装されている、<xref:System.ServiceModel.Channels.ReliableSessionBindingElement>します。  
   

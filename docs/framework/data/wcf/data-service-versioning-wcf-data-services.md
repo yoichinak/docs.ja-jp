@@ -6,12 +6,12 @@ helpviewer_keywords:
 - versioning [WCF Data Services]
 - WCF Data Services, versioning
 ms.assetid: e3e899cc-7f25-4f67-958f-063f01f79766
-ms.openlocfilehash: fd3be8a60048b10bbd94ac5b3bfadaee954943ef
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 9a58f375821109c0ec5f2230ae330dc6a2caa102
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583586"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959493"
 ---
 # <a name="data-service-versioning-wcf-data-services"></a>データ サービスのバージョン管理 (WCF Data Services)
 [!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]クライアントは、Uri を使用してデータ モデルに基づくリソースとしてデータをアクセスできるように、データ サービスを作成することができます。 OData では、サービス操作の定義もサポートしています。 ビジネス ニーズの変化、情報テクノロジの要件、その他の問題への対処などのさまざまな理由により、サービスの初期導入後と、場合によっては有効期間中に数回、これらのデータ サービスを変更することが必要になる場合があります。 既存のデータ サービスに変更を加える場合は、新しいバージョンのデータ サービスを定義する必要性や、既存のクライアント アプリケーションへの影響を最小限に抑える最善の方法を検討する必要があります。 ここでは、新しいバージョンのデータ サービスをいつどのように作成するかに関するガイダンスを示します。 また、WCF Data Services がクライアントと、OData プロトコルの異なるバージョンをサポートするデータ サービスの間の交換を処理する方法についても説明します。
@@ -60,12 +60,12 @@ ms.locfileid: "65583586"
 
  アプリケーションでは、データ サービスにアクセスする、WCF Data Services クライアント ライブラリを使用するときに、ライブラリはこれらのヘッダーを自動的に OData と、アプリケーションで使用されている機能のバージョンに応じて、適切な値に設定します。 既定では、WCF Data Services は、要求された操作をサポートする最も低いプロトコル バーションを使用します。
 
- 次の表に、.NET Framework のバージョンと[!INCLUDE[silverlight](../../../../includes/silverlight-md.md)]OData プロトコルの特定のバージョンの WCF Data Services のサポートが含まれる。
+ 次の表 OData プロトコルの特定のバージョンの WCF Data Services を含むバージョンの .NET Framework と Silverlight をサポートします。
 
 |OData プロトコルのバージョン|サポートが用意されているバージョン|
 |-----------------------------------------------------------------------------------|----------------------------|
-|バージョン 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] バージョン 3|
-|バージョン 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-更新プログラムを[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]SP1。 ダウンロードしてから、更新プログラムをインストールすることができます、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=158125)します。<br />-   [!INCLUDE[silverlight](../../../../includes/silverlight-md.md)] バージョン 4|
+|バージョン 1|-   [!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)] Service Pack 1 (SP1)<br />Silverlight バージョン 3|
+|バージョン 2|-   [!INCLUDE[netfx40_long](../../../../includes/netfx40-long-md.md)]<br />-更新プログラムを[!INCLUDE[netfx35_long](../../../../includes/netfx35-long-md.md)]SP1。 ダウンロードしてから、更新プログラムをインストールすることができます、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=158125)します。<br />Silverlight version 4|
 |バージョン 3|-ダウンロードしてから OData バージョン 3 をサポートするプレリリース バージョンをインストール、 [Microsoft ダウンロード センター](https://go.microsoft.com/fwlink/?LinkId=203885)します。|
 
 ### <a name="metadata-versions"></a>メタデータのバージョン

@@ -13,64 +13,65 @@ helpviewer_keywords:
 - NotifyIcon component
 - taskbar [Windows Forms], adding icons
 ms.assetid: d28c0fe6-aaf2-4df7-ad74-928d861a8510
-ms.openlocfilehash: 2d7fb1dfbdfb7cf9be33fc8c9711b4fbdc3efc2d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 05b6f300afea4671c1a847b116b378514ecb8b56
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880548"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959502"
 ---
 # <a name="how-to-add-application-icons-to-the-taskbar-with-the-windows-forms-notifyicon-component"></a>方法: Windows フォームの NotifyIcon コンポーネントによってタスクバーにアプリケーション アイコンを追加する
-Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネントは、タスク バーの状態通知領域に 1 つのアイコンを表示します。 を、ステータス領域に複数のアイコンを表示するには、複数がする必要があります<xref:System.Windows.Forms.NotifyIcon>フォーム上のコンポーネント。 コントロールに表示されるアイコンを設定するには、使用、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 コードを記述することも、<xref:System.Windows.Forms.NotifyIcon.DoubleClick>ユーザー アイコンをダブルクリックしたときの動作のためのイベント ハンドラー。 たとえば、アイコンで表される、バック グラウンド プロセスを構成するユーザーの表示 ダイアログ ボックスを行うことができます。  
-  
+
+Windows フォーム<xref:System.Windows.Forms.NotifyIcon>コンポーネントは、タスク バーの状態通知領域に 1 つのアイコンを表示します。 を、ステータス領域に複数のアイコンを表示するには、複数がする必要があります<xref:System.Windows.Forms.NotifyIcon>フォーム上のコンポーネント。 コントロールに表示されるアイコンを設定するには、使用、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 コードを記述することも、<xref:System.Windows.Forms.NotifyIcon.DoubleClick>ユーザー アイコンをダブルクリックしたときの動作のためのイベント ハンドラー。 たとえば、アイコンで表される、バック グラウンド プロセスを構成するユーザーの表示 ダイアログ ボックスを行うことができます。
+
 > [!NOTE]
->  <xref:System.Windows.Forms.NotifyIcon>コンポーネントは、通知の目的でのみ、アクションまたはイベントが発生したアラートのユーザーに使用または何らかのステータスの変更が発生しました。 によるアプリケーションの標準的な操作のメニューのツールバー、およびその他のユーザー インターフェイス要素を使用する必要があります。  
-  
-### <a name="to-set-the-icon"></a>アイコンを設定するには  
-  
-1.  値を割り当てる、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 値型でなければなりません`System.Drawing.Icon`.ico ファイルから読み込むことができるとします。 コードで、または、省略記号ボタンをクリックして、アイコン ファイルを指定できます (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) 横に、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ、**プロパティ**ウィンドウとでファイルを選択し、**オープン**表示されるダイアログ ボックス。  
-  
-2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> プロパティを `true` に設定します。  
-  
-3. 設定、<xref:System.Windows.Forms.NotifyIcon.Text%2A>プロパティを適切なツールヒント文字列。  
-  
-     アイコンの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。 この場所を選択すると、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行もできます。 次の例では、使用して、フォームが必要です、<xref:System.Windows.Forms.NotifyIcon>コントロールが既に追加されています。 という名前のアイコン ファイルも必要があります。`Icon.ico`します。  
-  
-    ```vb  
-    ' You should replace the bold icon in the sample below  
-    ' with an icon of your own choosing.  
-    NotifyIcon1.Icon = New _   
-       System.Drawing.Icon(System.Environment.GetFolderPath _  
-       (System.Environment.SpecialFolder.Personal) _  
-       & "\Icon.ico")  
-    NotifyIcon1.Visible = True  
-    NotifyIcon1.Text = "Antivirus program"  
-    ```  
-  
-    ```csharp  
-    // You should replace the bold icon in the sample below  
-    // with an icon of your own choosing.  
-    // Note the escape character used (@) when specifying the path.  
-    notifyIcon1.Icon =   
-       new System.Drawing.Icon (System.Environment.GetFolderPath  
-       (System.Environment.SpecialFolder.Personal)  
-       + @"\Icon.ico");  
-    notifyIcon1.Visible = true;  
-    notifyIcon1.Text = "Antivirus program";  
-    ```  
-  
-    ```cpp  
-    // You should replace the bold icon in the sample below  
-    // with an icon of your own choosing.  
-    notifyIcon1->Icon = gcnew   
-       System::Drawing::Icon(String::Concat  
-       (System::Environment::GetFolderPath  
-       (System::Environment::SpecialFolder::Personal),  
-       "\\Icon.ico"));  
-    notifyIcon1->Visible = true;  
-    notifyIcon1->Text = "Antivirus program";  
-    ```  
-  
+> <xref:System.Windows.Forms.NotifyIcon>コンポーネントは、通知の目的でのみ、アクションまたはイベントが発生したアラートのユーザーに使用または何らかのステータスの変更が発生しました。 によるアプリケーションの標準的な操作のメニューのツールバー、およびその他のユーザー インターフェイス要素を使用する必要があります。
+
+### <a name="to-set-the-icon"></a>アイコンを設定するには
+
+1. 値を割り当てる、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ。 値型でなければなりません`System.Drawing.Icon`.ico ファイルから読み込むことができるとします。 コードで、または、省略記号ボタンをクリックして、アイコン ファイルを指定できます (![. Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…)](./media/visual-studio-ellipsis-button.png)) 横に、<xref:System.Windows.Forms.NotifyIcon.Icon%2A>プロパティ、**プロパティ**ウィンドウとでファイルを選択し、**オープン**表示されるダイアログ ボックス。
+
+2. <xref:System.Windows.Forms.NotifyIcon.Visible%2A> プロパティを `true` に設定します。
+
+3. 設定、<xref:System.Windows.Forms.NotifyIcon.Text%2A>プロパティを適切なツールヒント文字列。
+
+     アイコンの場所は次のコード例で、パスが設定、 **My Documents**フォルダー。 この場所は、Windows オペレーティング システムを実行しているほとんどのコンピューターにはでこのフォルダーが含まれていると想定できるために使用されます。 この場所を選択すると、ユーザーは最小限のシステム アクセスのレベルでアプリケーションを安全に実行もできます。 次の例では、使用して、フォームが必要です、<xref:System.Windows.Forms.NotifyIcon>コントロールが既に追加されています。 という名前のアイコン ファイルも必要があります。`Icon.ico`します。
+
+    ```vb
+    ' You should replace the bold icon in the sample below
+    ' with an icon of your own choosing.
+    NotifyIcon1.Icon = New _
+       System.Drawing.Icon(System.Environment.GetFolderPath _
+       (System.Environment.SpecialFolder.Personal) _
+       & "\Icon.ico")
+    NotifyIcon1.Visible = True
+    NotifyIcon1.Text = "Antivirus program"
+    ```
+
+    ```csharp
+    // You should replace the bold icon in the sample below
+    // with an icon of your own choosing.
+    // Note the escape character used (@) when specifying the path.
+    notifyIcon1.Icon =
+       new System.Drawing.Icon (System.Environment.GetFolderPath
+       (System.Environment.SpecialFolder.Personal)
+       + @"\Icon.ico");
+    notifyIcon1.Visible = true;
+    notifyIcon1.Text = "Antivirus program";
+    ```
+
+    ```cpp
+    // You should replace the bold icon in the sample below
+    // with an icon of your own choosing.
+    notifyIcon1->Icon = gcnew
+       System::Drawing::Icon(String::Concat
+       (System::Environment::GetFolderPath
+       (System::Environment::SpecialFolder::Personal),
+       "\\Icon.ico"));
+    notifyIcon1->Visible = true;
+    notifyIcon1->Text = "Antivirus program";
+    ```
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.NotifyIcon>

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: f40afe25bbc3238ec773ee1ee19673d4d5a3ef1d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603941"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960041"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP ポート共有
 Windows Communication Foundation (WCF) は、高パフォーマンス通信用の新しい TCP ベースのネットワーク プロトコル (net.tcp://) を提供します。 WCF には、新しいシステム コンポーネントでは、Net.TCP ポート共有サービスを複数のユーザー プロセスで共有できる net.tcp ポートをも導入されています。  
@@ -38,7 +38,7 @@ Windows Communication Foundation (WCF) は、高パフォーマンス通信用�
  Net.tcp:// ポート共有を使用する WCF サービスが、WCF TCP トランスポート インフラストラクチャは直接開きません TCP ソケット アプリケーション プロセスで。 その代わりにトランスポート インフラストラクチャは、サービスのベース アドレス URI (Uniform Resource Identifier) を Net.TCP ポート共有サービスに登録し、ポート共有サービスがトランスポート インフラストラクチャの代わりにメッセージをリッスンするまで待機します。  アプリケーション サービス宛てのメッセージが到着すると、そのメッセージはポート共有サービスによりディスパッチされます。  
   
 ## <a name="installing-port-sharing"></a>ポート共有のインストール  
- Net.TCP ポート共有サービスは、[!INCLUDE[vstecwinfx](../../../../includes/vstecwinfx-md.md)] をサポートするすべてのオペレーティング システムで利用できますが、サービスは既定では有効にされていません。 セキュリティ予防措置として、管理者は Net.TCP ポート共有サービスを初めて使用する前に手動で有効にする必要があります。 Net.TCP ポート共有サービスでは、ポート共有サービスが所有するネットワーク ソケットのいくつかの特性を操作するための構成オプションが公開されます。 詳細については、「[方法 :Net.TCP ポート共有サービスを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)します。  
+ Net.TCP ポート共有サービスは、WinFX をサポートするすべてのオペレーティング システムで使用できますが、既定では、サービスが有効になっていません。 セキュリティ予防措置として、管理者は Net.TCP ポート共有サービスを初めて使用する前に手動で有効にする必要があります。 Net.TCP ポート共有サービスでは、ポート共有サービスが所有するネットワーク ソケットのいくつかの特性を操作するための構成オプションが公開されます。 詳細については、「[方法 :Net.TCP ポート共有サービスを有効にする](../../../../docs/framework/wcf/feature-details/how-to-enable-the-net-tcp-port-sharing-service.md)します。  
   
 ## <a name="using-nettcp-port-sharing-in-an-application"></a>アプリケーションでの Net.tcp ポート共有の使用  
  WCF アプリケーションで net.tcp:// ポート共有を使用する最も簡単な方法を使用してサービスを公開する、<xref:System.ServiceModel.NetTcpBinding>を使用して Net.TCP ポート共有サービスを有効にし、<xref:System.ServiceModel.NetTcpBinding.PortSharingEnabled%2A>プロパティ。  

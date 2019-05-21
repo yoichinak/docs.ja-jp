@@ -8,16 +8,16 @@ helpviewer_keywords:
 - HelpProvider component [Windows Forms]
 - forms [Windows Forms], providing Help
 ms.assetid: 7c4e5cec-2bd2-4f0b-8d75-c2b88929bd61
-ms.openlocfilehash: 19bf6a8de3f9ddd5babd149747df87c54b456aeb
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 2f9c0a9791db28cebd055ca446fdff16b9e276a4
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211364"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959607"
 ---
 # <a name="how-to-provide-help-in-a-windows-application"></a>方法: Windows アプリケーションにヘルプを提供する
 
-使用することができます、<xref:System.Windows.Forms.HelpProvider>ヘルプ ファイル内のヘルプ トピックを特定の Windows フォーム コントロールにアタッチするコンポーネント。 ヘルプ ファイルの形式には、HTML または HTMLHelp 1.x 以上を指定できます。
+行うことができますの使用、<xref:System.Windows.Forms.HelpProvider>ヘルプ ファイル内のヘルプ トピックを特定の Windows フォーム コントロールにアタッチするコンポーネント。 ヘルプ ファイルの形式には、HTML または HTMLHelp 1.x 以上を指定できます。
 
 ## <a name="provide-help"></a>ヘルプを提供します。
 
