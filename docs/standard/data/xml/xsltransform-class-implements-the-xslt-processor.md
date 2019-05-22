@@ -8,21 +8,21 @@ dev_langs:
 ms.assetid: 88373fe2-4a6b-44f9-8a62-8a3e348e3a46
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05812d7bdda33f6fa06a6aae7129d1dc73144e37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aadb478b507cdd5d2828a2d224fbca1dc32b21b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751906"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586448"
 ---
 # <a name="xsltransform-class-implements-the-xslt-processor"></a>XslTransform クラスによる XSLT プロセッサの実装
 
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> では、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。
 
-<xref:System.Xml.Xsl.XslTransform> クラスは、『XSL Transformations (XSLT) Version 1.0』勧告を実装する XSLT プロセッサです。 <xref:System.Xml.Xsl.XslTransform.Load%2A> メソッドはスタイル シートを検索して読み込み、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドは渡されたソース ドキュメントを変換します。 <xref:System.Xml.XPath.IXPathNavigable> インターフェイスを実装している任意のストアを <xref:System.Xml.Xsl.XslTransform> のソース ドキュメントとして使用できます。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] では、現在、<xref:System.Xml.XPath.IXPathNavigable> インターフェイスを <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDataDocument>、および <xref:System.Xml.XPath.XPathDocument> に実装しているので、これらすべてを変換用の入力ソース ドキュメントとして使用できます。
+<xref:System.Xml.Xsl.XslTransform> クラスは、『XSL Transformations (XSLT) Version 1.0』勧告を実装する XSLT プロセッサです。 <xref:System.Xml.Xsl.XslTransform.Load%2A> メソッドはスタイル シートを検索して読み込み、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドは渡されたソース ドキュメントを変換します。 <xref:System.Xml.XPath.IXPathNavigable> インターフェイスを実装している任意のストアを <xref:System.Xml.Xsl.XslTransform> のソース ドキュメントとして使用できます。 .NET Framework では、現在、<xref:System.Xml.XPath.IXPathNavigable> インターフェイスを <xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDataDocument>、および <xref:System.Xml.XPath.XPathDocument> に実装しているので、これらすべてを変換用の入力ソース ドキュメントとして使用できます。
 
-<xref:System.Xml.Xsl.XslTransform> の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] オブジェクトは、次の名前空間で定義されている XSLT 1.0 仕様のみをサポートしています。
+.NET Framework の <xref:System.Xml.Xsl.XslTransform> オブジェクトは、次の名前空間で定義されている XSLT 1.0 仕様のみをサポートしています。
 
 ```xml
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -213,7 +213,7 @@ print_root.xsl
 
 ## <a name="migration-of-xslt-from-net-framework-version-10-to-net-framework-version-11"></a>.NET Framework Version 1.0 から .NET Framework Version 1.1 への XSLT の移行
 
-廃止された [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] バージョン 1.0 の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] メソッドと新しい <xref:System.Xml.Xsl.XslTransform.Load%2A> バージョン 1.1 の  メソッドを次の表に示します。 新しいメソッドでは、証拠を指定することで、スタイル シートのアクセス許可を制限できます。
+廃止された .NET Framework バージョン 1.0 と新しい .NET Framework バージョン 1.1 の <xref:System.Xml.Xsl.XslTransform.Load%2A> メソッドを次の表に示します。 新しいメソッドでは、証拠を指定することで、スタイル シートのアクセス許可を制限できます。
 
 |廃止された .NET Framework バージョン 1.0 の Load メソッド|新しい .NET Framework バージョン 1.1 の Load メソッド|
 |------------------------------------------------------|---------------------------------------------------------|
@@ -235,7 +235,7 @@ print_root.xsl
 |Void Transform(IXPathNavigable input, XsltArgumentList args, Stream output)|Void Transform(IXPathNavigable input, XsltArgumentList args, Stream output, XmlResolver resolver)|
 |Void Transform(String input, String output);|Void Transform(String input, String output, XmlResolver resolver);|
 
-<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> バージョン 1.1 では、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] プロパティが廃止されています。 代わりに、<xref:System.Xml.XmlResolver> オブジェクトを受け取る新しい <xref:System.Xml.Xsl.XslTransform.Transform%2A> オーバーロードを使用します。
+.NET Framework バージョン 1.1 では、<xref:System.Xml.Xsl.XslTransform.XmlResolver%2A?displayProperty=nameWithType> プロパティが廃止されています。 代わりに、<xref:System.Xml.XmlResolver> オブジェクトを受け取る新しい <xref:System.Xml.Xsl.XslTransform.Transform%2A> オーバーロードを使用します。
 
 ## <a name="see-also"></a>関連項目
 

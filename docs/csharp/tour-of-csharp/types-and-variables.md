@@ -3,12 +3,12 @@ title: C# の型と変数 - C# 言語のツアー
 description: C# における型の定義と変数の宣言について説明します
 ms.date: 08/10/2016
 ms.assetid: f8a8051e-0049-43f1-b594-9c84cc7b1224
-ms.openlocfilehash: ae44dd273a2460e5718adc7324fae324e3de5bba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5623b4a1e85508ea7206df2c73b7aaffcbc3fbb1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59672369"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881976"
 ---
 # <a name="types-and-variables"></a>型と変数
 
@@ -23,8 +23,8 @@ C# の値型はさらに、*単純型*、*列挙型*、*構造体型*、およ�
     * 符号付きの整数: `sbyte`、`short`、`int`、`long`
     * 符号なしの整数: `byte`、`ushort`、`uint`、`ulong`
     * Unicode 文字: `char`
-    * IEEE 浮動小数点: `float`、`double`
-    * 高精度の 10 進数: `decimal`
+    * IEEE バイナリ浮動小数点数: `float`、`double`
+    * 高精度 10 進浮動小数点数: `decimal`
     * ブール値: `bool`
   - [列挙型][EnumTypes]
     * `enum E {...}` 形式のユーザー定義型
@@ -55,33 +55,11 @@ C# の値型はさらに、*単純型*、*列挙型*、*構造体型*、およ�
 [DelegateTypes]: ../language-reference/keywords/delegate.md
 [ArrayTypes]: ../programming-guide/arrays/index.md
 
-8 つの整数型は、符号付きまたは符号なしの形式で、8 ビット、16 ビット、32 ビットおよび 64 ビットの値をサポートします。
-
-2 つの浮動小数点型 `float` と `double` は、それぞれ、32 ビット単精度と 64 ビット倍精度の IEC-60559 形式を使用して表されます。
-
-`decimal` 型は 128 ビットのデータ型で、財務や通貨の計算に適しています。
+数値型について詳しくは、「[整数型の一覧表](../language-reference/keywords/integral-types-table.md)」および「[浮動小数点型の一覧表](../language-reference/keywords/floating-point-types-table.md)」をご覧ください。
 
 C# の `bool` 型はブール値を表すのに使用します。値は `true` か `false` のどちらかです。
 
 C# における文字および文字列の処理では、Unicode エンコーディングを使用します。 `char` 型は UTF-16 コード単位を表し、`string` 型は一連の UTF-16 コード単位を表します。
-
-C# の数値型をまとめると次の通りです。
-
-* 符号付きの整数
-  - `sbyte`:8 ビット、範囲は -128 ～ 127
-  - `short`:16 ビット、範囲は -32,768 ～ 32,767
-  - `int`  :32 ビット、範囲は -2,147,483,648 ～ 2,147,483,647
-  - `long` は、次のとおりです。64 ビット、範囲は -9,223,372,036,854,775,808 ～ 9,223,372,036,854,775,807
-* 符号なしの整数
-  - `byte`   :8 ビット、範囲は 0 ～ 255
-  - `ushort` は、次のとおりです。16 ビット、範囲は 0 ～ 65,535
-  - `uint`   :32 ビット、範囲は 0 ～ 4,294,967,295
-  - `ulong`  :64 ビット、範囲は 0 ～ 18,446,744,073,709,551,615
-* 浮動小数点数
-  - `float`  :32 ビット、範囲は 1.5 × 10<sup>-45</sup> ～ 3.4 × 10<sup>38</sup>、有効桁数は 7
-  - `double` は、次のとおりです。64 ビット、範囲は 5.0 × 10<sup>-324</sup> ～ 1.7 × 10<sup>308</sup>、有効桁数は 15
-* Decimal (10 進数型)
-  - `decimal` は、次のとおりです。128 ビット、範囲は少なくとも -7.9 × 10<sup>-28</sup> ～ 7.9 × 10<sup>28</sup>、有効桁数は少なくとも 28
 
 C# プログラムでは*型宣言*を使用して新しい型を作成します。 型宣言は、新しい型の名前とメンバーを指定します。 C# の型カテゴリのうち 5 つはユーザー定義が可能です。クラス型、構造体型、インターフェイス型、列挙型、そしてデリゲート型です。
 

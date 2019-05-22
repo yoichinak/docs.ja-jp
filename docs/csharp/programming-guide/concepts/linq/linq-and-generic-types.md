@@ -6,15 +6,15 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: cd0fae0c7d99491f21e5e1fb265e4aabafaa63c4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2b599906082cabceeb8d97ec737b6fa39fed6825
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59332692"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584403"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ とジェネリック型 (C#)
-[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリは、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] Version 2.0 で導入されたジェネリック型に基づいています。 クエリを記述するために、ジェネリックについて詳しく知っておく必要ありません。 ただし、次の 2 つの基本的な概念を理解しておくと役立ちます。  
+[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリは、.NET Framework のバージョン 2.0 で導入されたジェネリック型に基づいています。 クエリを記述するために、ジェネリックについて詳しく知っておく必要ありません。 ただし、次の 2 つの基本的な概念を理解しておくと役立ちます。  
   
 1. <xref:System.Collections.Generic.List%601> などのジェネリック コレクション クラスのインスタンスを作成するときに、リストに保持されるオブジェクトの型で "T" を置き換えます。 たとえば、文字列のリストは `List<string>` で表され、`Customer`オブジェクトのリストは `List<Customer>` で表されます。 ジェネリック リストは厳密に型指定されるため、要素を <xref:System.Object> として格納するコレクションと比べて多くの利点があります。 `Customer`を `List<string>` に追加しようとすると、コンパイル時にエラーが発生します。 実行時に型キャストを実行する必要がないため、ジェネリック コレクションを使用するのは簡単です。  
   

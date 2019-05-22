@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 476b03dc-2b12-49a7-b067-41caeaa2f533
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e6e97591508c2aa90306ed22556f12f257cc4b03
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6007bc6085366e46e60696e412507026726f098a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647715"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593455"
 ---
 # <a name="managed-execution-process"></a>マネージド実行プロセス
 <a name="introduction"></a> マネージド実行プロセスで実行される主な手順を次に示します。詳細については、後で説明します。  
@@ -56,7 +56,7 @@ ms.locfileid: "64647715"
   
 <a name="compiling_msil_to_native_code"></a>   
 ## <a name="compiling-msil-to-native-code"></a>MSIL からネイティブ コードにコンパイルします  
- Microsoft Intermediate Language (MSIL) は、実行する前に、共通言語ランタイムに対して、対象コンピューターのアーキテクチャ用のネイティブ コードにコンパイルしておく必要があります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] には、この変換を実行する 2 つの方法が用意されています。  
+ Microsoft Intermediate Language (MSIL) は、実行する前に、共通言語ランタイムに対して、対象コンピューターのアーキテクチャ用のネイティブ コードにコンパイルしておく必要があります。 .NET Framework には、この変換を実行する 2 つの方法が用意されています。  
   
 - .NET Framework の Just-In-Time (JIT) コンパイラ  
   

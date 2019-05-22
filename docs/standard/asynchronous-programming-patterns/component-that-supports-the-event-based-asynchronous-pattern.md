@@ -18,17 +18,17 @@ helpviewer_keywords:
 - threading [Windows Forms], asynchronous features
 - AsyncCompletedEventArgs class
 ms.assetid: 61f676b5-936f-40f6-83ce-f22805ec9c2f
-ms.openlocfilehash: bc19ee687b26025d3da4d66888902395b863f046
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6c35398d54b91c9aa595ffdcde56004e59b7693
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628922"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882502"
 ---
 # <a name="how-to-implement-a-component-that-supports-the-event-based-asynchronous-pattern"></a>方法: イベントベースの非同期パターンをサポートするコンポーネントを実装する
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
   
- このチュートリアルでは、イベント ベースの非同期パターンを実装するコンポーネントの作成方法を示します。 これは、<xref:System.ComponentModel?displayProperty=nameWithType> 名前空間のヘルパー クラスを使用して実装します。これにより、コンポーネントは任意のアプリケーション モデルで正常に動作します ([!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、コンソール アプリケーション、Windows フォーム アプリケーションなど)。 また、このコンポーネントは、<xref:System.Windows.Forms.PropertyGrid> コントロールや独自のカスタム デザイナーで設計可能です。  
+ このチュートリアルでは、イベント ベースの非同期パターンを実装するコンポーネントの作成方法を示します。 これは、<xref:System.ComponentModel?displayProperty=nameWithType> 名前空間のヘルパー クラスを使用して実装します。これにより、コンポーネントは任意のアプリケーション モデルで正常に動作します (ASP.NET、コンソール アプリケーション、Windows フォーム アプリケーションなど)。 また、このコンポーネントは、<xref:System.Windows.Forms.PropertyGrid> コントロールや独自のカスタム デザイナーで設計可能です。  
   
  このチュートリアルを完了すると、素数を非同期に計算するアプリケーションが作成されます。 アプリケーションには、メイン ユーザー インターフェイス (UI) スレッドと各素数の計算用のスレッドがあります。 大きな数が素数かどうかを調べるにはかなりの時間がかかることがありますが、この遅延によってメイン UI スレッドが中断されることはなく、計算中もフォームは応答性を維持します。 いくつでも好きなだけ計算を同時に実行し、保留中の計算を選択的に取り消すことができます。  
   

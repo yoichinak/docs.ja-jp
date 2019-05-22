@@ -11,12 +11,12 @@ helpviewer_keywords:
 - -link compiler option [C#]
 - link compiler option [C#]
 ms.assetid: 00da70c6-9ea1-43c2-86f2-aa7f26c03475
-ms.openlocfilehash: 5c5f3337d1c1ff2d58d3876ed0d4ede11d22b6bb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 049d1ce7a27a812b58fb09802e1ce520e96ed925
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593069"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586019"
 ---
 # <a name="-link-c-compiler-options"></a>-link (C# コンパイラ オプション)
 指定したアセンブリ内の COM 型情報を、現在のコンパイル対象のプロジェクトで使用できるようにします。  
@@ -51,7 +51,7 @@ ms.locfileid: "64593069"
   
 - アセンブリ B の戻り値の型またはパラメーターの型を使用するフィールド、プロパティ、イベント、またはメソッドが呼び出される。  
   
- [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) コンパイラ オプションと同様、`-link`コンパイラ オプションでは、使用頻度の高い [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] アセンブリを参照する Csc.rsp 応答ファイルを使用します。 コンパイラで Csc.rsp ファイルを使用しない場合は、[-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) コンパイラ オプションを使用してください。  
+ [-reference](../../../csharp/language-reference/compiler-options/reference-compiler-option.md) コンパイラ オプションと同様、`-link` コンパイラ オプションでは、使用頻度の高い .NET Framework アセンブリを参照する Csc.rsp 応答ファイルを使用します。 コンパイラで Csc.rsp ファイルを使用しない場合は、[-noconfig](../../../csharp/language-reference/compiler-options/noconfig-compiler-option.md) コンパイラ オプションを使用してください。  
   
  `-link` の省略形は `-l` です。  
   

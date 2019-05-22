@@ -6,12 +6,12 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: 665fdd3d19008e7725983ea621a64514238639ce
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: de44f0c416de798fb42fba93e30ec6aa6ed0208d
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64599958"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585991"
 ---
 # <a name="objects-c-programming-guide"></a>オブジェクト (C# プログラミング ガイド)
 クラスまたは構造体の定義は、型の動作を指定する設計図に似ています。 オブジェクトは基本的に、設計図に従って割り当てられて構成されたメモリのブロックです。 プログラムでは、同じクラスのオブジェクトを多数作成できます。 オブジェクトはインスタンスとも呼ばれ、名前付きの変数または配列やコレクションに格納できます。 クライアント コードとは、これらの変数を使ってメソッドを呼び出し、オブジェクトのパブリック プロパティにアクセスするコードです。 C# などのオブジェクト指向言語では、一般的なプログラムは動的に対話する複数のオブジェクトで構成されています。  
@@ -30,7 +30,7 @@ ms.locfileid: "64599958"
   
  [!code-csharp[csProgGuideStatements#31](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#31)]  
   
- `p1` と `p2` のメモリはどちらも、スレッドのスタックに割り当てられます。 そのメモリは、それが宣言されている型またはメソッドと共に解放されます。 これは、割り当て時に構造体がコピーされる理由の 1 です。 これに対し、クラスのインスタンスに割り当てられたメモリは、そのオブジェクトに対するすべての参照がスコープ外になると、共通言語ランタイムによって自動的に解放 (ガベージ コレクション) されます。 C++ のようにクラスのオブジェクトを確定的に破棄することはできません。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] でのガベージ コレクションについて詳しくは、「[ガベージ コレクション](../../../standard/garbage-collection/index.md)」をご覧ください。  
+ `p1` と `p2` のメモリはどちらも、スレッドのスタックに割り当てられます。 そのメモリは、それが宣言されている型またはメソッドと共に解放されます。 これは、割り当て時に構造体がコピーされる理由の 1 です。 これに対し、クラスのインスタンスに割り当てられたメモリは、そのオブジェクトに対するすべての参照がスコープ外になると、共通言語ランタイムによって自動的に解放 (ガベージ コレクション) されます。 C++ のようにクラスのオブジェクトを確定的に破棄することはできません。 .NET Framework のガベージ コレクションについて詳しくは、「[ガベージ コレクション](../../../standard/garbage-collection/index.md)」をご覧ください。  
   
 > [!NOTE]
 >  マネージド ヒープ上のメモリの割り当てと解放は、共通言語ランタイムにおいて高度に最適化されています。 ほとんどの場合、ヒープへのクラス インスタンスの割り当てと、スタックへの構造体インスタンスの割り当てに、パフォーマンス コストの点で大きな違いはありません。  

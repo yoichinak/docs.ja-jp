@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9b7e8a4d92661b974fba7c88989891b30e54e94d
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4a236b3b4b5c4cde66bad2b460637bb533b764be
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59218453"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881619"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5 のインストール中のシステム再起動の削減
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] インストーラーは[再起動マネージャー](https://go.microsoft.com/fwlink/?LinkId=231425)を使用して、インストール中のシステムの再起動をできる限り回避します。 アプリケーションのセットアップ プログラムで .NET Framework をインストールする場合は、再起動マネージャーとやり取りしてこの機能を利用できます。 詳細については、「[方法 :.NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)」を参照してください。  
@@ -26,8 +26,7 @@ ms.locfileid: "59218453"
   
  実行中のアプリケーションが終了してもシステムの再起動が必要な状況を再起動マネージャーが検出した場合、メッセージは表示されません。  
   
- ![[アプリケーションの終了] ダイアログ](../../../docs/framework/deployment/media/closeapplicationdialog.png "CloseApplicationDialog")  
-使用中の .NET Framework アプリケーションを終了するためのプロンプト  
+ ![現在実行中のプログラムが一覧表示されるアプリケーション終了ダイアログ。](./media/reducing-system-restarts/close-application-dialog.png)  
   
 ## <a name="using-a-chained-installer"></a>チェーンされたインストーラーの使用  
  アプリケーションと共に .NET Framework を再配布し、ただし独自のセットアップ プログラムと UI を使用する場合は、.NET Framework のセットアップ プロセスをセットアップ プロセスにインクルード (チェーン) できます。 チェーンされたインストールについて詳しくは、「[配置ガイド (開発者向け)](../../../docs/framework/deployment/deployment-guide-for-developers.md)」をご覧ください。 チェーンされたインストールでのシステムの再起動を減らすために、.NET Framework インストーラーは、終了するアプリケーションの一覧をセットアップ プログラムに提示します。 セットアップ プログラムは、メッセージ ボックスなどのユーザー インターフェイスを経由してこの情報をユーザーに提供し、ユーザーの応答を取得して、応答を .NET Framework インストーラーに渡す必要があります。 チェーンされたインストーラーの例については、「[方法:.NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)」を参照してください。  

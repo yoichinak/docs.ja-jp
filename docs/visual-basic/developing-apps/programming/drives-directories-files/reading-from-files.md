@@ -8,12 +8,12 @@ helpviewer_keywords:
 - files [Visual Basic], reading
 - reading files [Visual Basic]
 ms.assetid: ad831a1b-7d01-4f07-a47b-799f3037df19
-ms.openlocfilehash: cfb22fea6d2be4c1cf78efbc63b2e2342bcac49c
-ms.sourcegitcommit: 60645077dc4b62178403145f8ef691b13ffec28e
+ms.openlocfilehash: f81ee980d861ac0eb41df9c41b3966512589af12
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2018
-ms.locfileid: "37959496"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593377"
 ---
 # <a name="reading-from-files-in-visual-basic"></a>Visual Basic でのファイルの読み取り
 このセクションでは、ファイルからの読み取りに関連するタスクを実行する方法について説明します。  
@@ -37,7 +37,7 @@ ms.locfileid: "37959496"
  [方法: StreamReader を使用してファイルからテキストを読み取る](../../../../visual-basic/developing-apps/programming/drives-directories-files/how-to-read-text-from-files-with-a-streamreader.md)  
  <xref:System.IO.StreamReader> を使用してファイルを読み取る方法について説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:Microsoft.VisualBasic.FileIO.FileSystem>  
  `My.Computer.FileSystem` オブジェクトとそのメンバーについて説明します。  
   
@@ -63,5 +63,5 @@ ms.locfileid: "37959496"
  [チュートリアル: Visual Basic によるファイルとディレクトリの操作](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-and-directories.md)  
  ファイルとディレクトリで `My` 機能を使用する方法について説明します。  
   
- [チュートリアル : .NET Framework のメソッドによるファイル操作](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- ファイルとディレクトリで [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] メソッドを使用する方法について説明します。
+ [チュートリアル: .NET Framework のメソッドによるファイル操作](../../../../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
+ ファイルとディレクトリで .NET Framework メソッドを使用する方法について説明します。

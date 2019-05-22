@@ -10,12 +10,12 @@ helpviewer_keywords:
 - data sources [LINQ in C#], data transformations
 - data transformations [LINQ in C#]
 ms.assetid: 674eae9e-bc72-4a88-aed3-802b45b25811
-ms.openlocfilehash: 5a0c4b0d672e3fd9cfe1528e16070cf1dcbabd69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 41542b663930ba92d47e62151e913429b690054d
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597654"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879122"
 ---
 # <a name="data-transformations-with-linq-c"></a>LINQ によるデータ変換 (C#)
 [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] で行うことができるのは、データの取得だけではありません。 データ変換のための強力なツールとしても使用できます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを使用することにより、ソース シーケンスを入力として使用し、さまざまな方法で加工して新しい出力シーケンスを作成できます。 要素自体を変更せずに、並べ替えやグループ化してシーケンス自体を変更できます。 しかし、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] のクエリの最も強力な機能は、新しい型を作成する機能です。 この操作は [select](../../../../csharp/language-reference/keywords/select-clause.md) 句内で行います。 たとえば、次のタスクを実行できます。  
@@ -61,7 +61,7 @@ ms.locfileid: "64597654"
  詳細については、「[オブジェクト初期化子とコレクション初期化子](../../../../csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)」および「[匿名型](../../../../csharp/programming-guide/classes-and-structs/anonymous-types.md)」を参照してください。  
   
 ## <a name="transforming-in-memory-objects-into-xml"></a>インメモリ オブジェクトを XML に変換する  
- [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを使用すると、インメモリ データ構造、SQL データベース、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] データセット、XML ストリーム、または XML ドキュメントの間でデータ変換を簡単に行うことができます。 インメモリ データ構造のオブジェクトを XML 要素に変換する例を次に示します。  
+ [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを使用すると、インメモリ データ構造、SQL データベース、ADO.NET データセット、XML ストリーム、または XML ドキュメントの間でデータ変換を簡単に行うことができます。 インメモリ データ構造のオブジェクトを XML 要素に変換する例を次に示します。  
   
  [!code-csharp[CsLINQGettingStarted#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#9)]  
   

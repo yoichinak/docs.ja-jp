@@ -17,17 +17,17 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 43402d19-8d30-426d-8785-1a4478233bfa
-ms.openlocfilehash: 41303bf548502fe319cbcfb8a152179863902817
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55ae6467ca6e7f688bcb7b3fc797050a33074963
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623575"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882522"
 ---
 # <a name="implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンの実装
 顕著な遅延が発生する可能性がある操作を伴うクラスを作成する場合は、[イベント ベースの非同期パターン](../../../docs/standard/asynchronous-programming-patterns/event-based-asynchronous-pattern-overview.md)を実装することによって、非同期機能を与えることを検討します。  
   
- イベント ベースの非同期パターンは、非同期機能を持つクラスをパッケージ化するための標準的な方法を提供します。 <xref:System.ComponentModel.AsyncOperationManager> などのヘルパー クラスで実装しても、クラスは、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)]、コンソール アプリケーション、Windows フォーム アプリケーションを含むすべてのアプリケーション モデルで正常に動作します。  
+ イベント ベースの非同期パターンは、非同期機能を持つクラスをパッケージ化するための標準的な方法を提供します。 <xref:System.ComponentModel.AsyncOperationManager> などのヘルパー クラスで実装しても、クラスは、ASP.NET、コンソール アプリケーション、Windows フォーム アプリケーションを含むすべてのアプリケーション モデルで正常に動作します。  
   
  イベント ベースの非同期パターンを実装する例については、「[方法:イベントベースの非同期パターンをサポートするコンポーネントを実装する](../../../docs/standard/asynchronous-programming-patterns/component-that-supports-the-event-based-asynchronous-pattern.md)」を参照してください。  
   

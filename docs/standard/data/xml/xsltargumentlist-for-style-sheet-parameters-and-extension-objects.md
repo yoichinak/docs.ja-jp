@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: de2f0dce-6b98-4908-bba7-ed150cc50355
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3afbffcbbaa5e8398a9ab10c762e60305cfc164b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 11cf0b694d75836ad903edeafc79a55ec4612b45
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615232"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586466"
 ---
 # <a name="xsltargumentlist-for-style-sheet-parameters-and-extension-objects"></a>スタイル シート パラメーターと拡張オブジェクト用の XsltArgumentList
 <xref:System.Xml.Xsl.XsltArgumentList> クラスには、XSLT (Extensible Stylesheet Language for Transformations) パラメーターと XSLT 拡張オブジェクトが含まれています。 これらのパラメーターと拡張オブジェクトは、<xref:System.Xml.Xsl.XslTransform.Transform%2A> メソッドに渡すことで、スタイル シートから呼び出せるようになります。  
@@ -36,7 +36,7 @@ ms.locfileid: "64615232"
 ## <a name="xslt-style-sheet-parameters"></a>XSLT スタイル シートのパラメーター  
  XSLT パラメーターを <xref:System.Xml.Xsl.XsltArgumentList> に追加するには、<xref:System.Xml.Xsl.XsltArgumentList.AddParam%2A> メソッドを使用します。 パラメーターが追加された時点で、修飾名と名前空間 URI (Uniform Resource Identifier) がそのパラメーター オブジェクトに関連付けられます。  
   
- パラメーター オブジェクトは、W3C (World Wide Web Consortium) 型に対応している必要があります。 対応する W3C 型、それと同等の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] のクラス (型)、および W3C 型が XPath (XML Path Language) 型または XSLT 型のどちらかを次の表に示します。  
+ パラメーター オブジェクトは、W3C (World Wide Web Consortium) 型に対応している必要があります。 対応する W3C 型、それと同等の .NET Framework のクラス (型)、および W3C 型が XPath (XML Path Language) 型または XSLT 型のどちらであるかを次の表に示します。  
   
 |W3C 型|対応する .NET Framework クラス (型)|XPath 型または XSLT 型|  
 |--------------|----------------------------------------------|-----------------------------|  

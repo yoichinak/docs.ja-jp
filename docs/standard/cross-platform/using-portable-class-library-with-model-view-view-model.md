@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a477b9d204be0bc9a4c438bccb1379ecc7abf53
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3aa18d4498bcdcc3737311473b4736545b184395
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664322"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003783"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-View-View Model を利用した汎用性のあるクラス ライブラリの使用
 .NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)モデル-ビュー-ビュー モデル (MVVM) パターンを実装して、複数のプラットフォームでアセンブリを共有します。
@@ -25,7 +25,7 @@ ms.locfileid: "64664322"
 
  MVVM では、基になるビジネス ロジックからユーザー インターフェイスを分離するアプリケーション パターンです。 モデルとビュー モデル クラスを実装することができます、 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] Visual Studio 2012 のプロジェクトし、さまざまなプラットフォーム用にカスタマイズされたビューを作成します。 このアプローチでは、データを記述できます。 モデルとビジネス ロジックを 1 回だけ、.NET Framework、Silverlight、Windows Phone のコードを使用および[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリは、次の図に示すようにします。
 
- ![MVVM のダイアグラムを含むポータブル](../../../docs/standard/cross-platform/media/portablemvvmdiagram.png "PortableMVVMdiagram")
+ ![プラットフォーム間で共有アセンブリの MVVM を使用したポータブル クラス ライブラリを示します。](./media/using-portable-class-library-with-model-view-view-model/mvvm-share-assemblies-across-platforms.png)
 
  このトピックでは、MVVM パターンに関する一般的な情報は提供されません。 使用する方法についての情報を提供するだけ[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]MVVM を実装します。 MVVM の詳細については、次を参照してください。、 [MVVM クイック スタートで、wpf、Prism ライブラリ 5.0 が使用して](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))します。
 

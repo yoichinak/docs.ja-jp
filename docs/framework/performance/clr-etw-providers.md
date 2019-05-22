@@ -7,19 +7,19 @@ helpviewer_keywords:
 ms.assetid: 0beafad4-b2c8-47f4-b342-83411d57a51f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 639ebe1552fd3950bd77acd7b5730b0d3bdb150f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 34d134d0d7ba1d131ded8d8a6eee818b84c86508
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61787999"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003743"
 ---
 # <a name="clr-etw-providers"></a>CLR ETW プロバイダー
 共通言語ランタイム (CLR: Common Language Runtime) には、ランタイム プロバイダーとランダウン プロバイダーという 2 つのプロバイダーがあります。  
   
  ランタイム プロバイダーは、有効になっているキーワードに応じてイベントを発生させます (キーワードとはイベントのカテゴリです)。 たとえば、ローダー イベントを収集するには `LoaderKeyword` キーワードを有効にします。  
   
- Windows イベント トレーシング (ETW: Event Tracing for Windows) のログは、.etl 拡張子を持つファイルに記録されます。このファイルは、必要に応じてコンマ区切り値 (.csv) ファイルで後処理できます。 .etl ファイルを .csv ファイルに変換する方法の詳細については、「[.NET Framework のログ記録の制御](../../../docs/framework/performance/controlling-logging.md)」を参照してください。  
+ Event Tracing for Windows (ETW) イベントは、後で後で処理できるコンマ区切り値 (.csv) ファイル、必要に応じて、.etl 拡張子を持つファイルに記録されます。 .etl ファイルを .csv ファイルに変換する方法の詳細については、「[.NET Framework のログ記録の制御](../../../docs/framework/performance/controlling-logging.md)」を参照してください。  
   
 ## <a name="the-runtime-provider"></a>ランタイム プロバイダー  
  ランタイム プロバイダーは、メインの CLR ETW プロバイダーです。  

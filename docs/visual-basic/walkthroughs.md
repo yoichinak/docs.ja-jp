@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Visual Basic code, walkthroughs
 - walkthroughs [Visual Basic]
 ms.assetid: e4e1f849-e1ce-4cf7-8483-d9b4c4887a8e
-ms.openlocfilehash: 928df9baa770185fd5d012e760ca96f3f878cf88
-ms.sourcegitcommit: facefcacd7ae2e5645e463bc841df213c505ffd4
+ms.openlocfilehash: 47c79b8d716be6c247be3ec66c9ef00fbc021973
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55739463"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586271"
 ---
 # <a name="visual-basic-language-walkthroughs"></a>Visual Basic 言語のチュートリアル
 チュートリアルでは、製品や特定の機能領域について学習を開始するのに適した一般的なシナリオについて詳細な手順を示します。  
@@ -72,7 +72,7 @@ ms.locfileid: "55739463"
  Visual Basic の関数を使用して、ファイル情報を確認する方法、ファイル内で文字列を検索する方法、およびファイルへの書き込みを行う方法について説明します。  
   
  [NET Framework のメソッドによるファイル操作](../visual-basic/developing-apps/programming/drives-directories-files/walkthrough-manipulating-files-by-using-net-framework-methods.md)  
- [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] のメソッドを使用して、ファイル情報を確認する方法、ファイル内で文字列を検索する方法、およびファイルへの書き込みを行う方法について説明します。  
+ .NET Framework のメソッドを使用して、ファイル情報を確認する方法、ファイル内で文字列を検索する方法、およびファイルへの書き込みを行う方法について説明します。  
   
  [オブジェクトの永続化 (Visual Basic)](../visual-basic/programming-guide/concepts/serialization/walkthrough-persisting-an-object-in-visual-studio.md)  
  簡単なオブジェクトを作成し、そのデータをファイルに永続化する方法について説明します。  

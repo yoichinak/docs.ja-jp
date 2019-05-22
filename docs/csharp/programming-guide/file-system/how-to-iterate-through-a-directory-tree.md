@@ -6,18 +6,18 @@ helpviewer_keywords:
 - iterating through folders [C#]
 - file iteration [C#]
 ms.assetid: c4be4a75-6b1b-46a7-9d38-bab353091ed7
-ms.openlocfilehash: 29f52728f0bfa9e78253fc2b39583e89f53198d6
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 070b409a7d1cc755451414d24ca2fa6002638dc0
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56976331"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585774"
 ---
 # <a name="how-to-iterate-through-a-directory-tree-c-programming-guide"></a>方法: ディレクトリ ツリーを反復処理する (C# プログラミング ガイド)
 "ディレクトリ ツリーを反復処理する" とは、指定したルート フォルダー以下の入れ子になっている各サブディレクトリ内の各ファイルにアクセスすることです。 必ずしもファイルを 1 つ 1 つ開く必要はありません。 ファイルまたはサブディレクトリの名前だけを `string` として取得することも、その他の情報を <xref:System.IO.FileInfo?displayProperty=nameWithType> または <xref:System.IO.DirectoryInfo?displayProperty=nameWithType> オブジェクトの形式で取得することもできます。  
   
 > [!NOTE]
->  Windows では、"ディレクトリ" と "フォルダー" という用語は同義です。 多くのドキュメントおよびユーザー インターフェイスのテキストでは、"フォルダー" という用語が使用されていますが、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] クラス ライブラリでは、"ディレクトリ" という用語が使用されています。  
+>  Windows では、"ディレクトリ" と "フォルダー" という用語は同義です。 多くのドキュメントおよびユーザー インターフェイスのテキストでは、"フォルダー" という用語が使用されていますが、.NET Framework クラス ライブラリでは、"ディレクトリ" という用語が使用されています。  
   
  最も容易なケース、つまり、指定したルート以下のすべてのディレクトリのアクセス許可があることが確実にわかっている場合は、`System.IO.SearchOption.AllDirectories` フラグを使用できます。 このフラグは、指定したパターンと一致する、入れ子にされたすべてのサブディレクトリを返します。 このフラグを使用する方法を次の例に示します。  
   

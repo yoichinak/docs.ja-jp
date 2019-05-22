@@ -12,12 +12,12 @@ helpviewer_keywords:
 - AsyncOperation class
 - AsyncCompletedEventArgs class
 ms.assetid: 4acd2094-4f46-4eff-9190-92d0d9ff47db
-ms.openlocfilehash: aea2715211ad03b763aae9cadc32e97d0e06d09e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 26e1fd4231964be5448229a6b3c7d90c0ba64499
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64628846"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882511"
 ---
 # <a name="best-practices-for-implementing-the-event-based-asynchronous-pattern"></a>イベントベースの非同期パターンを実装するための推奨される手順
 イベントベースの非同期パターンは、使い慣れたイベントおよびデリゲートのセマンティクスと共に、クラス内の非同期動作を公開する効果的な方法を提供します。 イベント ベースの非同期パターンを実装するには、いくつかの固有の動作要件に従う必要があります。 以降のセクションでは、イベントベースの非同期パターンに従うクラスを実装する際に検討すべき要件とガイドラインについて説明します。  
@@ -118,7 +118,7 @@ private void Form1_MethodNameCompleted(object sender, MethodNameCompletedEventAr
 - 非同期操作で発生した例外をすべてキャッチし、その例外の <xref:System.ComponentModel.AsyncCompletedEventArgs.Error%2A?displayProperty=nameWithType> プロパティの値を設定します。  
   
 ### <a name="threading-and-contexts"></a>スレッド処理およびコンテキスト  
- クラスを正しく操作するには、特定のアプリケーション モデル ([!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] および Windows Forms アプリケーションを含む) の適切なスレッドまたはコンテキストで、クライアントのイベント ハンドラーが呼び出されることが重要です。 非同期クラスがどのアプリケーション モデルでも正しく動作するように、<xref:System.ComponentModel.AsyncOperation> と <xref:System.ComponentModel.AsyncOperationManager> という 2 つの重要なヘルパー クラスが用意されています。  
+ クラスを正しく操作するには、特定のアプリケーション モデル (ASP.NET および Windows フォーム アプリケーションを含む) の適切なスレッドまたはコンテキストで、クライアントのイベント ハンドラーが呼び出されることが重要です。 非同期クラスがどのアプリケーション モデルでも正しく動作するように、<xref:System.ComponentModel.AsyncOperation> と <xref:System.ComponentModel.AsyncOperationManager> という 2 つの重要なヘルパー クラスが用意されています。  
   
  <xref:System.ComponentModel.AsyncOperationManager> にはメソッド <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> が含まれています。このメソッドは <xref:System.ComponentModel.AsyncOperation> を返します。 <em>MethodName</em>**Async** メソッドは <xref:System.ComponentModel.AsyncOperationManager.CreateOperation%2A> を呼び出し、クラスは返される <xref:System.ComponentModel.AsyncOperation> を使用して非同期タスクの有効期間を追跡します。  
   

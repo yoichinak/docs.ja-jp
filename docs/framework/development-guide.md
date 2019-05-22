@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 894895331c2444a8e52a09e3de9d5a47daa87e5d
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56092957"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65583544"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework の開発ガイド
 ここでは、.NET Framework アプリの作成、構成、デバッグ、保護、および配置を行う方法について説明します。 また、動的プログラミング、相互運用性、拡張性、メモリ管理、スレッド処理などの技術領域に関する情報も提供します。  
@@ -65,9 +65,9 @@ ms.locfileid: "56092957"
  [パフォーマンス](../../docs/framework/performance/index.md)  
  キャッシュ、遅延初期化、信頼性、および ETW イベントについて説明します。  
  
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  [.NET Framework クラス ライブラリ](/dotnet/api/?view=netframework-4.7)  
- [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] の名前空間に含まれる各クラスの構文、コード例、および使用情報を示します。  
+ .NET Framework の名前空間に含まれる各クラスの構文、コード例、および使用情報を示します。  
   
 ## <a name="related-sections"></a>関連項目  
  [はじめに](../../docs/framework/get-started/index.md)  

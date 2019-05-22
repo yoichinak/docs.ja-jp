@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], value types
 - C# language, value types
 ms.assetid: 471eb994-2958-49d5-a6be-19b4313f80a3
-ms.openlocfilehash: 77aed78e7822e06b3b1e6c48b07790d93e09559c
-ms.sourcegitcommit: fa38fe76abdc8972e37138fcb4dfdb3502ac5394
+ms.openlocfilehash: 390b2226cc2f345d2f42659bd092e36a4bd0c4fc
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53612726"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65632923"
 ---
 # <a name="value-types-c-reference"></a>値型 (C# リファレンス)
 
@@ -34,7 +34,7 @@ ms.locfileid: "53612726"
 
 値型の変数は既定で `null` にすることはできません。 ただし、対応する [null 許容型](../../../csharp/programming-guide/nullable-types/index.md)の変数を `null` にすることはできます。
 
-各値型には、その型の既定値を初期化する暗黙の既定のコンストラクターがあります。 値型の既定値の詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。
+各値型には、その型の既定値を初期化する暗黙のパラメーターなしのコンストラクターがあります。 値型の既定値の詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。
 
 ## <a name="simple-types"></a>単純型
 
@@ -67,7 +67,7 @@ int myInt;
 初期化してからでないとこれを使用することはできません。 次のステートメントを使用して初期化できます。
 
 ```csharp
-myInt = new int();  // Invoke default constructor for int type.
+myInt = new int();  // Invoke parameterless constructor for int type.
 ```
 
 このステートメントは、次のステートメントと同じです。
@@ -88,12 +88,12 @@ int myInt = new int();
 int myInt = 0;
 ```
 
-[new](new.md) 演算子を使用すると、特定の型の既定のコンストラクターを呼び出し、既定値を変数に代入します。 前の例では、既定のコンス トラクターが値 `0` を `myInt` に代入しました。 既定のコンストラクターの呼び出しにより値を代入する詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。
+[new](new.md) 演算子を使用すると、特定の型のパラメーターなしのコンストラクターを呼び出し、既定値を変数に代入します。 前の例では、パラメーターなしのコンス トラクターで値 `0` を `myInt` に代入していました。 既定のコンストラクターの呼び出しにより値を代入する詳細については、「[既定値の一覧表](default-values-table.md)」を参照してください。
 
-ユーザー定義型では、[new](new.md) を使用して既定のコンストラクターを呼び出します。 たとえば、次のステートメントは、`Point` 構造体の既定のコンストラクターを呼び出します。
+ユーザー定義型では、[new](new.md) を使用してパラメーターなしのコンストラクターを呼び出します。 たとえば、次のステートメントは、`Point` 構造体のパラメーターなしのコンストラクターを呼び出します。
 
 ```csharp
-Point p = new Point(); // Invoke default constructor for the struct.
+Point p = new Point(); // Invoke parameterless constructor for the struct.
 ```
 
 この呼び出しの後、構造体は明示的に代入されると見なされます。つまり、すべてのメンバーがその既定値に初期化されます。

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: 1c9bef76-5634-46cf-b91c-9b9eb72091d7
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8012d2898e9722d1cfb93f5c9dcacce291fe6e78
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 55bdf4cf589bd912dbfc85777542150696aaa436
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633897"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589778"
 ---
 # <a name="how-to-extract-the-day-of-the-week-from-a-specific-date"></a>方法: 特定の日付から曜日を抽出する
 .NET Framework では、特定の日付が週の何日目であるかを容易に判別でき、また特定の日付のローカライズされた曜日名を表示できます。 特定の日付に対応する曜日を示す列挙値は、<xref:System.DateTime.DayOfWeek%2A> または <xref:System.DateTimeOffset.DayOfWeek%2A> プロパティから取得できます。 対照的に、曜日名の取得は、書式指定メソッド （日付と時刻の値の `ToString` メソッドや <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドなど） を呼び出して実行できる書式指定操作です。 このトピックでは、このような書式指定操作を実行する方法について説明します。  
@@ -85,7 +85,7 @@ ms.locfileid: "64633897"
  [!code-csharp[Formatting.Howto.WeekdayName#6](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/cs/example6.cs#6)]
  [!code-vb[Formatting.Howto.WeekdayName#6](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.HowTo.WeekdayName/vb/example6.vb#6)]  
   
- それぞれの言語には、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] の機能と重複する機能または補足する機能が存在していることがあります。 たとえば Visual Basic には次の 2 つの関数があります。  
+ それぞれの言語には、.NET Framework の機能と重複する機能または補足する機能が存在していることがあります。 たとえば Visual Basic には次の 2 つの関数があります。  
   
 - `Weekday`: 特定の日付の曜日を示す番号を返します。 この関数では週の初日の序数値が 1 ですが、<xref:System.DateTime.DayOfWeek%2A?displayProperty=nameWithType> プロパティでは週の初日の序数値はゼロです。  
   

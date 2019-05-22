@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: de621b26334bbc9679ba7e48a9d5a0cbaec67eab
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b666c915506872930b16c1c5890de24e9cbe4f7a
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427319"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880578"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>ブール論理演算子 (C# リファレンス)
 
@@ -47,7 +47,7 @@ ms.locfileid: "59427319"
 - 二項 [`&` (論理 AND)](#logical-and-operator-)、[`|` (論理 OR)](#logical-or-operator-)、および [`^` (論理排他的 OR)](#logical-exclusive-or-operator-) 演算子。 これらの演算子は常に両方のオペランドを評価します。
 - 二項 [`&&` (条件付き論理 AND)](#conditional-logical-and-operator-) および [`||` (条件付き論理 OR)](#conditional-logical-or-operator-) 演算子。 これらの演算子は、必要な場合にのみ 2 番目のオペランドを評価します。
 
-[整数](../keywords/integral-types-table.md)型のオペランドの場合、`&`、`|`、および `^` 演算子はビットごとの論理演算を実行します。
+[整数](../keywords/integral-types-table.md)型のオペランドの場合、`&`、`|`、および `^` 演算子はビットごとの論理演算を実行します。 詳しくは、「[ビットごとの演算子とシフト演算子](bitwise-and-shift-operators.md)」をご覧ください。
 
 ## <a name="logical-negation-operator-"></a>論理否定演算子 !
 
@@ -67,7 +67,7 @@ ms.locfileid: "59427319"
 
 [条件付き論理 AND 演算子](#conditional-logical-and-operator-) `&&` もそのオペランドの論理 AND を計算しますが、最初のオペランドが `false` と評価された場合、2 番目のオペランドは評価されません。
 
-整数型のオペランドの場合、`&` 演算子は、そのオペランドの[ビットごとの論理 AND](and-operator.md#integer-logical-bitwise-and-operator) を計算します。 単項 `&` 演算子は[アドレス演算子](and-operator.md#unary-address-of-operator)です。
+整数型のオペランドの場合、`&` 演算子は、そのオペランドの[ビットごとの論理 AND](bitwise-and-shift-operators.md#logical-and-operator-) を計算します。 単項 `&` 演算子は[アドレス演算子](pointer-related-operators.md#address-of-operator-)です。
 
 ## <a name="logical-exclusive-or-operator-"></a>論理排他的 OR 演算子: ^
 
@@ -75,7 +75,7 @@ ms.locfileid: "59427319"
 
 [!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
 
-整数型のオペランドの場合、`^` 演算子は、そのオペランドの[ビットごとの論理排他的 OR](xor-operator.md) を計算します。
+整数型のオペランドの場合、`^` 演算子は、そのオペランドの[ビットごとの論理排他的 OR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) を計算します。
 
 ## <a name="logical-or-operator-"></a>論理 OR 演算子 |
 
@@ -89,7 +89,7 @@ ms.locfileid: "59427319"
 
 [条件付き論理 OR 演算子](#conditional-logical-or-operator-) `||` もそのオペランドの論理 OR を計算しますが、最初のオペランドが `true` と評価された場合、2 番目のオペランドは評価されません。
 
-整数型のオペランドの場合、`|` 演算子は、そのオペランドの[ビットごとの論理 OR](or-operator.md) を計算します。
+整数型のオペランドの場合、`|` 演算子は、そのオペランドの[ビットごとの論理 OR](bitwise-and-shift-operators.md#logical-or-operator-) を計算します。
 
 ## <a name="conditional-logical-and-operator-ampamp"></a>条件付き論理 AND 演算子 &amp;&amp;
 
@@ -187,9 +187,11 @@ x = x op y
 - [論理否定演算子](~/_csharplang/spec/expressions.md#logical-negation-operator)
 - [論理演算子](~/_csharplang/spec/expressions.md#logical-operators)
 - [条件論理演算子](~/_csharplang/spec/expressions.md#conditional-logical-operators)
+- [複合代入](~/_csharplang/spec/expressions.md#compound-assignment)
 
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
 - [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
+- [ビットごとの演算子とシフト演算子](bitwise-and-shift-operators.md)

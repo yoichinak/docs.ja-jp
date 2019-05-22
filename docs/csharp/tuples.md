@@ -3,12 +3,12 @@ title: タプル型 - C# ガイド
 description: C# の名前のないタプルと名前付きタプルについて
 ms.date: 05/15/2018
 ms.assetid: ee8bf7c3-aa3e-4c9e-a5c6-e05cc6138baa
-ms.openlocfilehash: d9d3424e1e59e7b33a098537738a0a1f6af27d74
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 4000228507bf7925083147ddd49dd10914ef2449
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56971409"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882061"
 ---
 # <a name="c-tuple-types"></a>C# のタプル型
 

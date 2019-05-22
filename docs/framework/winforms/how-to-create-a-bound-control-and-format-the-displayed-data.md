@@ -6,12 +6,12 @@ helpviewer_keywords:
 - bound controls [Windows Forms], creating
 - bound controls [Windows Forms], formatting data
 ms.assetid: d5a56228-899d-41d9-8af8-87b3f4ec2f94
-ms.openlocfilehash: f7f1ed2fbca4ab8892cb6c439ae8841fa8828bf0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22ffdfcc1068dd546c8c07a481c9e21fb1faab80
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62008968"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003723"
 ---
 # <a name="how-to-create-a-bound-control-and-format-the-displayed-data"></a>方法: バインド コントロールを作成して表示データの書式を設定する
 Windows フォーム データ バインディングでは、データ バインド コントロールを使用して表示データの書式を設定することができます、**フォーマットと詳細バインド** ダイアログ ボックス。  
@@ -27,7 +27,7 @@ Windows フォーム データ バインディングでは、データ バイン
   
 2. フォームでコントロールを選択し、[プロパティ] ウィンドウを開きます。  
   
-3. 展開、 **(DataBindings)** プロパティ、し、 **(詳細)** ボックスで、省略記号ボタンをクリックします (![VisualStudioEllipsesButton スクリーン ショット](./media/vbellipsesbutton.png "vbEllipsesButton")) を表示する、**フォーマットと詳細バインド**ダイアログ ボックスで、そのコントロールのプロパティの完全な一覧があります。  
+3.  展開、 **(DataBindings)** プロパティ、し、 **(詳細)** ボックスで、省略記号ボタンをクリックします (![Visual Studio の [プロパティ] ウィンドウで、省略記号ボタン (…).](./media/how-to-create-a-bound-control-and-format-the-displayed-data/visual-studio-ellipsis-button.png))表示する、**フォーマットと詳細バインド**ダイアログ ボックスで、そのコントロールのプロパティの完全な一覧があります。  
   
 4. クリックして、バインド プロパティを選択、**バインド**矢印。  
   

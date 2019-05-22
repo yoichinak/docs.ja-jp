@@ -8,12 +8,12 @@ dev_langs:
 ms.assetid: 23a763ea-8348-4244-9f8c-a4280b870b47
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cf5b621be7532239b67bfe970302f27eca3ea2a
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 22cf168c660349bda16c59aec4824e3283430807
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835136"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877939"
 ---
 # <a name="how-to-convert-between-net-framework-and-windows-runtime-streams-windows-only"></a>方法: .NET Framework ストリームと Windows ランタイム ストリームの間で変換を行う (Windows のみ)
 
@@ -51,7 +51,7 @@ Windows ランタイム ランダム アクセス ストリームから .NET Fra
   
 - <xref:System.IO.WindowsRuntimeStreamExtensions.AsOutputStream%2A?displayProperty=nameWithType> は、UWP アプリ用 .NET のマネージド ストリームを Windows ランタイムの出力ストリームに変換します。
   
-- [AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) では、UWP アプリ用 .NET のマネージド ストリームが、Windows ランタイムで読み取りまたは書き込みに使用できるランダム アクセス ストリームに変換されます。
+- <xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A?displayProperty=nameWithType> では、UWP アプリ用 .NET のマネージド ストリームが、Windows ランタイムで読み取りまたは書き込みに使用できるランダム アクセス ストリームに変換されます。
 
 .NET Framework ストリームを Windows ランタイム ストリームに変換する場合、変換されたストリームの機能は元のストリームによって異なります。 たとえば、元のストリームが読み取りと書き込みの両方をサポートしており、<xref:System.IO.WindowsRuntimeStreamExtensions.AsInputStream%2A?displayProperty=nameWithType> を呼び出してそのストリームを変換した場合、返される型は `IRandomAccessStream` になります。 `IRandomAccessStream` では `IInputStream` と `IOutputStream` が実装されており、読み取りと書き込みがサポートされます。
 
@@ -59,7 +59,7 @@ Windows ランタイム ランダム アクセス ストリームから .NET Fra
 
 ## <a name="example-convert-net-framework-to-windows-runtime-random-access-stream"></a>例:.NET Framework を Windows ランタイム ランダム アクセス ストリームに変換する
 
-次の例で示すように、.NET Framework ストリームから Windows ランタイム ランダム アクセス ストリームに変換するには、[AsRandomAccessStream](../../../docs/standard/cross-platform/windowsruntimestreamextensions-asrandomaccessstream-method.md) メソッドを使用します。
+次の例で示すように、.NET Framework ストリームから Windows ランタイム ランダム アクセス ストリームに変換するには、<xref:System.IO.WindowsRuntimeStreamExtensions.AsRandomAccessStream%2A> メソッドを使用します。
 
 > [!IMPORTANT]
 > 使用している .NET Framework ストリームがシークをサポートすること、またはそれを実行するストリームにコピーすることを確認します。 この確認には、 <xref:System.IO.Stream.CanSeek%2A?displayProperty=nameWithType> プロパティを使用できます。

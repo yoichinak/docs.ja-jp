@@ -1,15 +1,13 @@
 ---
 title: マイクロサービスに簡略化された CQRS と DDD パターンを適用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | CQRS と DDD のパターンの全体的な関係を理解する。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ef3260143c91c2500becd7c8c1a6cd0b81dbf3d2
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: a5df8ce495b308df63af47ef1ec2ed26be2b5e37
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53148068"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65875901"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>マイクロサービスに簡略化された CQRS と DDD のパターンを適用する
 
@@ -21,7 +19,7 @@ CQRS は、データを読み取りと書き込みのモデルを分離するア
 
 CQS は単純な概念です。つまり、同じオブジェクト内のメソッドはクエリまたはコマンドである、という概念です。 各メソッドは、状態を返すか、状態を変更しますが、両方を行うことはありません。 1 つのリポジトリ パターン オブジェクトでも、CQS に準拠する可能性があります。 CQS は CQRS の基本原則と考えることができます。
 
-[コマンド クエリ責務分離 (CQRS: Command and Query Responsibility Segregation)](https://martinfowler.com/bliki/CQRS.html) は Greg Young によって導入され、Udi Dahan などによって強く推進されました。 CQRS は CQS の原則に基づいていますが、より詳細です。 コマンドとイベントに加え、必要に応じて非同期メッセージに基づくパターンと考えることができます。 CQRS は多くの場合、書き込み (更新) 用ではなく読み取り (クエリ) 用に異なる物理データベースを持つなど、より高度なシナリオに関連しています。 さらに進化した CQRS システムでは、更新プログラム データベースに[イベント ソーシング (ES)](http://codebetter.com/gregyoung/2010/02/20/why-use-event-sourcing/) を実装することができるため、現在の状態のデータを格納するのではなく、ドメイン モデルにのみイベントを格納します。 ただし、このガイドではこのアプローチを使用していません。ここでは、クエリとコマンドを分離するだけの最も単純な CQRS アプローチを使用しています。
+[コマンド クエリ責務分離 (CQRS: Command and Query Responsibility Segregation)](https://martinfowler.com/bliki/CQRS.html) は Greg Young によって導入され、Udi Dahan などによって強く推進されました。 CQRS は CQS の原則に基づいていますが、より詳細です。 コマンドとイベントに加え、必要に応じて非同期メッセージに基づくパターンと考えることができます。 CQRS は多くの場合、書き込み (更新) 用ではなく読み取り (クエリ) 用に異なる物理データベースを持つなど、より高度なシナリオに関連しています。 さらに進化した CQRS システムでは、更新プログラム データベースに[イベント ソーシング (ES)](https://martinfowler.com/eaaDev/EventSourcing.html) を実装することができるため、現在の状態のデータを格納するのではなく、ドメイン モデルにのみイベントを格納します。 ただし、このガイドではこのアプローチを使用していません。ここでは、クエリとコマンドを分離するだけの最も単純な CQRS アプローチを使用しています。
 
 CQRS の分離の側面は、あるレイヤーにクエリ操作を、別のレイヤーにコマンドをそれぞれグループ化することによって実現されます。 各レイヤーには独自のデータ モデルがあります (モデルと言っている点に注意してください。必ずしも異なるデータベースではありません)。各レイヤーは独自のパターンとテクノロジの組み合わせを使用して構築されています。 さらに重要な点は、このガイドで使用されている例 (注文マイクロサービス) のように、2 つのレイヤーが同じ階層またはマイクロサービス内に存在する可能性がある、ということです。 また、別のマイクロサービスまたはプロセス上に実装できるので、互いに影響を与えることなく個別に最適化およびスケールアウトすることができます。
 
@@ -34,6 +32,11 @@ CQRS は、他のコンテキストでは 1 つのオブジェクトの場合で
 **図 7-2**。 簡略化された CQRS および DDD ベースのマイクロサービス
 
 アプリケーション レイヤーは、Web API の可能性があります。 ここで重要な設計の側面は、マイクロサービスが、CQRS パターンに従って、クエリと ViewModel (特にクライアント アプリケーション用に作成されたデータ モデル) を、コマンド、ドメイン モデル、トランザクションから分離していることです。 このアプローチによって、トランザクションと更新にのみ意味のある DDD パターンに由来する制限と制約から、クエリを独立させることができます。詳細については、以降のセクションで説明します。
+
+## <a name="additional-resources"></a>その他の技術情報
+
+ - **Greg Young。「Versioning in an Event Sourced System」** (オンライン電子書籍で無料提供) \
+   <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]
 >[前へ](index.md)

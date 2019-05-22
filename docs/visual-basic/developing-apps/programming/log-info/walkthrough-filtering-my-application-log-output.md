@@ -6,12 +6,12 @@ helpviewer_keywords:
 - My.Application.Log object, filtering output
 - application event logs, output filtering
 ms.assetid: 2c0a457a-38a4-49e1-934d-a51320b7b4ca
-ms.openlocfilehash: e32f36a0490a198078f8357f3603c91cc50cb3b8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 00e9eeb3227ceef54f899129847bfb74a370c51c
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647094"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591287"
 ---
 # <a name="walkthrough-filtering-myapplicationlog-output-visual-basic"></a>チュートリアル: My.Application.Log の出力のフィルター処理 (Visual Basic)
 このチュートリアルでは、`My.Application.Log` オブジェクトの既定のログ フィルター処理を変更して、`Log` オブジェクトからリスナーに渡される情報や、リスナーによって記述される情報を制御する方法について説明します。 構成情報はアプリケーションの構成ファイルに保存されるため、ロギングの動作はアプリケーションをビルドした後でも変更できます。  
@@ -135,7 +135,7 @@ ms.locfileid: "64647094"
 9. `value` 属性の値を "Information" に戻します。  
   
     > [!NOTE]
-    >  `DefaultSwitch` スイッチの設定では、`My.Application.Log` のみが制御されます。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] の <xref:System.Diagnostics.Trace?displayProperty=nameWithType> クラスと <xref:System.Diagnostics.Debug?displayProperty=nameWithType> クラスの動作が変えられることはありません。  
+    >  `DefaultSwitch` スイッチの設定では、`My.Application.Log` のみが制御されます。 .NET Framework の <xref:System.Diagnostics.Trace?displayProperty=nameWithType> クラスと <xref:System.Diagnostics.Debug?displayProperty=nameWithType> クラスの動作が変えられることはありません。  
   
 ## <a name="individual-filtering-for-myapplicationlog-listeners"></a>My.Application.Log リスナーの個別のフィルター処理  
  前の例では、すべての `My.Application.Log` 出力のフィルター処理を変更する方法について説明しました。 この例では、個別のログ リスナーをフィルター処理する方法について説明します。 既定では、アプリケーションには、アプリケーションのデバッグ出力とログ ファイルに情報を書き込む 2 つのリスナーがあります。  

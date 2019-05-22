@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: a281bfbf-6596-45ed-a2d6-3782d535ada2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 37c9140db390c55c9cab4e8a3203287d2dd12725
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3898caa90c695ae681c2d9b20abbba57a2a9f61
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634235"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65590474"
 ---
 # <a name="how-to-define-and-use-custom-numeric-format-providers"></a>方法: カスタム数値書式プロバイダーを定義して使用する
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、数値の文字列形式を広範囲に制御できます。 数値の書式をカスタマイズするため、次の機能をサポートしています。  
+.NET Framework では、数値の文字列形式を広範囲に制御できます。 数値の書式をカスタマイズするため、次の機能をサポートしています。  
   
 - 標準の数値書式指定文字列: 数値をその文字列形式に変換するための定義済みの書式セットを提供します。 これらは、`format` パラメーターを持つ <xref:System.Decimal.ToString%28System.String%29?displayProperty=nameWithType> などの数値書式指定メソッドと共に使用できます。 詳細については、「[標準の数値書式指定文字列](../../../docs/standard/base-types/standard-numeric-format-strings.md)」を参照してください。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "64634235"
   
 - カスタムの <xref:System.Globalization.CultureInfo> オブジェクトまたは <xref:System.Globalization.NumberFormatInfo> オブジェクト: 記号を定義し、数値の文字列形式を表示するために使用されるパターンの書式を設定します。 これらは、`provider` パラメーターを持つ <xref:System.Int32.ToString%2A> などの数値書式指定メソッドと共に使用できます。 通常、`provider` パラメーターは、カルチャに固有の書式を指定するために使用されます。  
   
- 一部の例には (アプリケーションで書式設定されたアカウント番号や ID 番号、郵便番号を表示する必要がある場合など)、これら 3 つの方法は適していません。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、<xref:System.Globalization.CultureInfo> または <xref:System.Globalization.NumberFormatInfo> オブジェクトでもない書式設定オブジェクトを定義して、数値を書式設定する方法を決定することもできます。 このトピックでは、このようなオブジェクトを実装するため、詳細な手順を説明し、電話番号の書式を設定する例について説明します。  
+ 一部の例には (アプリケーションで書式設定されたアカウント番号や ID 番号、郵便番号を表示する必要がある場合など)、これら 3 つの方法は適していません。 .NET Framework では、<xref:System.Globalization.CultureInfo> オブジェクトでも <xref:System.Globalization.NumberFormatInfo> オブジェクトでもない書式設定オブジェクトを定義して、数値を書式設定する方法を決定することもできます。 このトピックでは、このようなオブジェクトを実装するため、詳細な手順を説明し、電話番号の書式を設定する例について説明します。  
   
 ### <a name="to-define-a-custom-format-provider"></a>カスタム書式プロバイダーを定義するには  
   
@@ -87,9 +87,6 @@ ms.locfileid: "64634235"
  [!code-vb[System.ICustomFormatter.Format#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.ICustomFormatter.Format/vb/Format.vb#1)]  
   
  この例の場合、<xref:System.ICustomFormatter.Format%2A?displayProperty=nameWithType> を実装するメソッドは、<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> メソッドのコールバック メソッドを果たす目的があります。 そのため、`formatProvider` パラメーターを調べ、現在の `TelephoneFormatter` オブジェクトへの参照が含まれるかどうかを判断します。 ただし、メソッドはコードから直接呼び出すこともできます。 その場合は、`formatProvider` パラメーターを使用して、カルチャに固有の書式情報を提供する <xref:System.Globalization.CultureInfo> オブジェクトまたは <xref:System.Globalization.NumberFormatInfo> オブジェクトを提供することができます。  
-  
-## <a name="compiling-the-code"></a>コードのコンパイル  
- コマンド ラインで csc.exe または vb.exe を使用してコードをコンパイルします。 Visual Studio でコードをコンパイルするには、コンソール アプリケーション プロジェクト テンプレートの中にコードを配置します。  
   
 ## <a name="see-also"></a>関連項目
 

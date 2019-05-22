@@ -5,12 +5,12 @@ helpviewer_keywords:
 - serial ports
 - My.Computer.Ports object [Visual Basic], tasks
 ms.assetid: b04a2f76-992a-4585-ab41-8bbbdbd554a1
-ms.openlocfilehash: e3ca5193db9dbcb4674680884a6372e6383c0852
-ms.sourcegitcommit: 14355b4b2fe5bcf874cac96d0a9e6376b567e4c7
+ms.openlocfilehash: 7788e08c1257ff900b08ef6b8d26d3fe42ad9116
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55289030"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65589334"
 ---
 # <a name="accessing-the-computers-ports-visual-basic"></a>コンピューターのポートへのアクセス (Visual Basic)
 `My.Computer.Ports` オブジェクトは、コンピューターのシリアル ポートにアクセスするためのプロパティとメソッドを提供します。  
@@ -29,9 +29,9 @@ ms.locfileid: "55289030"
  コンピューターのシリアル ポートから文字列を受信する方法について説明します。  
   
  [.NET Framework でのポート操作](../../../../visual-basic/developing-apps/programming/computer-resources/port-operations-in-the-net-framework.md)  
- ポート操作の実行時に [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] を使用する方法について説明します。  
+ ポート操作の実行時に .NET Framework を使用する方法について説明します。  
   
-## <a name="reference"></a>参照  
+## <a name="reference"></a>関連項目  
  <xref:Microsoft.VisualBasic.Devices.Ports>  
  `My.Computer.Ports` オブジェクトとそのメンバーについて説明します。  
   

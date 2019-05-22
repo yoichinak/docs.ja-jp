@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 54a6a1cda604cb9cdeecd9587af81dbdb810965c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592447"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585907"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>チュートリアル: 部分信頼シナリオにおけるコード出力
 リフレクション出力は、完全信頼または部分信頼において同じ API セットを使用しますが、部分的に信頼されるコードでは実行する機能によって特定のアクセス許可が必要になります。 リフレクション出力には、匿名でホストされる動的メソッドという機能があります。この機能は、透過的セキュリティ アセンブリによって部分信頼で使用されます。  
@@ -77,12 +77,12 @@ ms.locfileid: "64592447"
      [!code-csharp[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#5)]
      [!code-vb[HowToEmitCodeInPartialTrust#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#5)]  
   
-     <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> メソッド オーバーロードの最後のパラメーターを使用すると、アプリケーション ドメインの許可セットではなく、完全な信頼が付与されたアセンブリのセットを指定できます。 これらのアセンブリはグローバル アセンブリ キャッシュに存在するため、アプリケーションが使用する [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アセンブリを指定する必要はありません。 グローバル アセンブリ キャッシュにあるアセンブリは、常に完全に信頼されます。 このパラメーターを使用して、グローバル アセンブリ キャッシュには存在しない厳密名のアセンブリを指定できます。  
+     <xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> メソッド オーバーロードの最後のパラメーターを使用すると、アプリケーション ドメインの許可セットではなく、完全な信頼が付与されたアセンブリのセットを指定できます。 .NET Framework アセンブリはグローバル アセンブリ キャッシュにあるため、アプリケーションで使用するそれらのアセンブリを指定する必要はありません。 グローバル アセンブリ キャッシュにあるアセンブリは、常に完全に信頼されます。 このパラメーターを使用して、グローバル アセンブリ キャッシュには存在しない厳密名のアセンブリを指定できます。  
   
 ### <a name="adding-restrictedmemberaccess-to-sandboxed-domains"></a>サンドボックス化されたドメインに RestrictedMemberAccess を追加する  
  ホスト アプリケーションは、匿名でホストされる動的メソッドが、コードを出力するアセンブリの信頼レベルと同等以下の信頼レベルが設定されたアセンブリ内のプライベート データにアクセスすることを許可できます。 この制限付き機能を有効にして Just-In-Time (JIT) 参照範囲チェックをスキップするため、ホスト アプリケーションは、許可セットに対し、<xref:System.Security.Permissions.ReflectionPermission> (RMA) フラグを設定した <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> オブジェクトを追加します。  
   
- たとえば、ホストはインターネット アプリケーションに対し、RMA を設定した Internet アクセス許可を付与し、インターネット アプリケーションが独自のアセンブリ内にあるプライベート データにアクセスするコードを出力できるようにすることが可能です。 このアクセスは、信頼レベルが同等以下であるアセンブリに限定されるため、インターネット アプリケーションは、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アセンブリのような完全に信頼されたアセンブリのメンバーにはアクセスできません。  
+ たとえば、ホストはインターネット アプリケーションに対し、RMA を設定した Internet アクセス許可を付与し、インターネット アプリケーションが独自のアセンブリ内にあるプライベート データにアクセスするコードを出力できるようにすることが可能です。 このアクセスは、信頼レベルが同等以下であるアセンブリに限定されるため、インターネット アプリケーションは、.NET Framework アセンブリのような完全に信頼されたアセンブリのメンバーにはアクセスできません。  
   
 > [!NOTE]
 >  特権の昇格を回避するため、匿名でホストされる動的メソッドの作成時にはアセンブリ出力の履歴情報が含まれます。 メソッドの呼び出し時に履歴情報がチェックされるため、 完全に信頼されたコードから呼び出された、匿名でホストされる動的メソッドは、依然として出力アセンブリの信頼レベルに制限されます。  
@@ -169,7 +169,7 @@ ms.locfileid: "64592447"
      [!code-csharp[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/csharp/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/cs/source.cs#16)]
      [!code-vb[HowToEmitCodeInPartialTrust#16](../../../samples/snippets/visualbasic/VS_Snippets_CLR/HowToEmitCodeInPartialTrust/vb/source.vb#16)]  
   
-     ここでの制限は、匿名でホストされる動的メソッドがアクセスできるプライベート データは、出力アセンブリの信頼レベルと同等以下の信頼レベルが設定されたアセンブリ内にあるプライベート データに限定されることを意味します。 たとえば、動的メソッドをインターネット信頼で実行している場合、同様にインターネット信頼で実行している他のアセンブリ内にあるプライベート データにはアクセスできますが、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アセンブリのプライベート データにはアクセスできません。 [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アセンブリは、グローバル アセンブリ キャッシュにインストールされているもので、常に完全に信頼されます。  
+     ここでの制限は、匿名でホストされる動的メソッドがアクセスできるプライベート データは、出力アセンブリの信頼レベルと同等以下の信頼レベルが設定されたアセンブリ内にあるプライベート データに限定されることを意味します。 たとえば、動的メソッドをインターネット信頼で実行している場合、同様にインターネット信頼で実行している他のアセンブリ内にあるプライベート データにはアクセスできますが、.NET Framework アセンブリのプライベート データにはアクセスできません。 .NET Framework アセンブリは、グローバル アセンブリ キャッシュにインストールされているもので、常に完全に信頼されます。  
   
      匿名でホストされる動的メソッドは、ホスト アプリケーションが <xref:System.Security.Permissions.ReflectionPermission> フラグが設定された <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> を付与している場合のみ、JIT 参照範囲チェックをスキップして制限付き機能を使用できます。 このアクセス許可は、メソッドの呼び出し時に要求されます。  
   

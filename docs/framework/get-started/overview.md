@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 29848c96-fc36-462d-8072-ba223a40b697
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b4aad615df6db5a29b9af21b585ea2b0dfbdedf4
-ms.sourcegitcommit: d2ccb199ae6bc5787b4762e9ea6d3f6fe88677af
+ms.openlocfilehash: f50a469327a06eabdb6a80821203f2222dcd2921
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56093685"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878026"
 ---
 # <a name="overview-of-the-net-framework"></a>.NET Framework の概要
 
@@ -45,7 +45,7 @@ ms.locfileid: "56093685"
 
 共通言語ランタイムおよびクラス ライブラリの、アプリケーションおよびシステム全体に対する関係を次の図に示します。 この図には、比較的大規模なアーキテクチャの内部でマネージ コードが動作する方法も示されています。
 
-![大規模アーキテクチャのマネージ コードの](../../../docs/framework/get-started/media/circle.gif "円グラフ") コンテキスト内の .NET Framework
+![比較的大規模なアーキテクチャの内部でマネージド コードが動作する方法を示すスクリーンショット。](./media/overview/language-runtime-class-library-relationship.gif)
 
 .NET Framework の主要な機能を以降のセクションでより詳細に説明します。
 

@@ -2,12 +2,12 @@
 title: '方法: 文字列コレクションを結合および比較する (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 25926e5b-fde2-4dc1-86a0-16ead7aa13d2
-ms.openlocfilehash: 5f8d734738606ada2db6db7f3c8e6c08ca57a543
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cdddf0aaac4264ae70c89590ef61e7b1bbf4cb9b
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59323747"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585952"
 ---
 # <a name="how-to-combine-and-compare-string-collections-linq-c"></a>方法: 文字列コレクションを結合および比較する (LINQ) (C#)
 この例では、複数行のテキストが含まれるファイルをマージし、結果を並び替える方法を示します。 具体的には、複数のテキスト行からなる 2 つの集合の単純な連結、和集合、積集合を求める方法を示します。  
@@ -169,7 +169,7 @@ class MergeStrings
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。  
+ System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目
 

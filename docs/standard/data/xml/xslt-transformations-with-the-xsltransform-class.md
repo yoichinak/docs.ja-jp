@@ -8,25 +8,25 @@ dev_langs:
 ms.assetid: 500335af-f9b5-413b-968a-e6d9a824478c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: db10dda3cbb328cd143afa48e300588ccc7667a6
-ms.sourcegitcommit: 7156c0b9e4ce4ce5ecf48ce3d925403b638b680c
+ms.openlocfilehash: 3b765cc42f7e060ad11d0e8dcd9991a841cda8b3
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58463073"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586479"
 ---
 # <a name="xslt-transformations-with-the-xsltransform-class"></a>XslTransform クラスを使用した XSLT 変換
 
 > [!NOTE]
 > <xref:System.Xml.Xsl.XslTransform> では、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](migrating-from-the-xsltransform-class.md)」をご覧ください。
 
-XSLT の目的は、たとえば、XML を Web サイトで使われる HTML に変換したり、XML ドキュメントをアプリケーションが必要とするフィールドのみが含まれたドキュメントに変換するなど、ソース XML ドキュメントの内容を形式や構造の異なる別のドキュメントに変換することです。 この変換処理の仕様は、W3C (World Wide Web Consortium) [勧告 XSLT バージョン 1.0](https://www.w3.org/TR/1999/REC-xslt-19991116) で規定されています。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] では、<xref:System.Xml.Xsl.XslTransform> 名前空間にある <xref:System.Xml.Xsl> クラスが、この仕様の機能を実装する XSLT プロセッサです。 W3C 勧告『XSLT Version 1.0』から実装された機能の他に、「[XslTransform からの出力](outputs-from-an-xsltransform.md)」に記載されている機能がいくつかあります。 [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の変換アーキテクチャを次の図に示します。
+XSLT の目的は、たとえば、XML を Web サイトで使われる HTML に変換したり、XML ドキュメントをアプリケーションが必要とするフィールドのみが含まれたドキュメントに変換するなど、ソース XML ドキュメントの内容を形式や構造の異なる別のドキュメントに変換することです。 この変換処理の仕様は、W3C (World Wide Web Consortium) [勧告 XSLT バージョン 1.0](https://www.w3.org/TR/1999/REC-xslt-19991116) で規定されています。 .NET Framework では、<xref:System.Xml.Xsl> 名前空間にある <xref:System.Xml.Xsl.XslTransform> クラスが、この仕様の機能を実装する XSLT プロセッサです。 W3C 勧告『XSLT Version 1.0』から実装された機能の他に、「[XslTransform からの出力](outputs-from-an-xsltransform.md)」に記載されている機能がいくつかあります。 .NET Framework の変換アーキテクチャを次の図に示します。
 
 ## <a name="overview"></a>概要
 
 ![XSLT 変換アーキテクチャを示す図。](./media/xslt-transformations-with-the-xsltransform-class/xslt-transformation-architecture.gif) 
 
-XSLT 勧告では、XPath (XML Path Language) を使って XML ドキュメントの一部を選択します。XPath とは、ドキュメント ツリーのノード間を移動するのに使われるクエリ言語です。 図に示すように、XPath の [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の実装は、<xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDataDocument>、<xref:System.Xml.XPath.XPathDocument> など、複数のクラスに格納されている XML の一部を選択するのに使用されます。 <xref:System.Xml.XPath.XPathDocument> は最適化された XSLT データ ストアであり、これを <xref:System.Xml.Xsl.XslTransform> と共に使用することで、パフォーマンスの高い XSLT 変換を実行できます。
+XSLT 勧告では、XPath (XML Path Language) を使って XML ドキュメントの一部を選択します。XPath とは、ドキュメント ツリーのノード間を移動するのに使われるクエリ言語です。 図に示すように、XPath の .NET Framework の実装は、<xref:System.Xml.XmlDocument>、<xref:System.Xml.XmlDataDocument>、<xref:System.Xml.XPath.XPathDocument> など、複数のクラスに格納されている XML の一部を選択するのに使用されます。 <xref:System.Xml.XPath.XPathDocument> は最適化された XSLT データ ストアであり、これを <xref:System.Xml.Xsl.XslTransform> と共に使用することで、パフォーマンスの高い XSLT 変換を実行できます。
 
 <xref:System.Xml.Xsl.XslTransform> と XPath を使用するときによく使われるクラスと、それぞれの機能を次の表に示します。
 

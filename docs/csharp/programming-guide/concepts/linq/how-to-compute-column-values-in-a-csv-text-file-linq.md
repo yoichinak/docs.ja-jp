@@ -2,12 +2,12 @@
 title: '方法: CSV テキスト ファイルの列値を計算する (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 4747f37a-a198-4df2-8efe-5b0731e0ea27
-ms.openlocfilehash: 0a1b42bf941fa65f053be4931ddfbbbdf1223a48
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 07fb81b474bd967d73dc9ff6a08e0c67e6ec0122
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309369"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585780"
 ---
 # <a name="how-to-compute-column-values-in-a-csv-text-file-linq-c"></a>方法: CSV テキスト ファイルの列値を計算する (LINQ) (C#)
 この例では、合計、平均、最小、最大などの集計計算を .csv ファイルの列に対して実行する方法について説明します。 ここで説明する例の原則は、他の種類の構造化テキストにも適用できます。  
@@ -159,7 +159,7 @@ class SumColumns
  このクエリでは、<xref:System.String.Split%2A> メソッドを使用してテキストの各行が配列に変換されます。 各配列要素が列を表します。 最終的に、各列のテキストが数値表記に変換されます。 ファイルがタブ区切りファイルの場合、`Split` メソッドの引数を `\t` に変更します。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。  
+ System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目
 

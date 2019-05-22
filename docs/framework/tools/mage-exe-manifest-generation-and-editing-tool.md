@@ -5,16 +5,16 @@ helpviewer_keywords:
 - Manifest Generation and Editing tool
 - Mage.exe
 ms.assetid: 77dfe576-2962-407e-af13-82255df725a1
-ms.openlocfilehash: 9ea293a3c96f193285f45f8d70ac038e785f548a
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2109c764d0143a843f75fc0c14cc0d09550efd85
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57477663"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877576"
 ---
 # <a name="mageexe-manifest-generation-and-editing-tool"></a>Mage.exe (マニフェストの生成および編集ツール)
 
-マニフェスト生成および編集ツール (*Mage.exe*) は、アプリケーション マニフェストおよび配置マニフェストの作成と編集をサポートするコマンド ライン ツールです。 コマンド ライン ツールであるため、*Mage.exe* は、バッチ スクリプトから実行することも、[!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] アプリケーションなど他の Windows ベースのアプリケーションから実行することもできます。
+マニフェスト生成および編集ツール (*Mage.exe*) は、アプリケーション マニフェストおよび配置マニフェストの作成と編集をサポートするコマンド ライン ツールです。 *Mage.exe* はコマンド ライン ツールであるため、バッチ スクリプトから実行したり、ASP.NET アプリケーションなどの他の Windows ベースのアプリケーションから実行したりできます。
 
 *Mage.exe* の代わりに、グラフィカルなアプリケーションである *MageUI.exe* を使用することもできます。 詳細については、「 [MageUI.exe (Manifest Generation and Editing Tool, Graphical Client)](../../../docs/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client.md)」を参照してください。
 

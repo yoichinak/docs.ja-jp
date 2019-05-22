@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c4a4ba28116965db1d4dfdef3cdfb0496aad123
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 81995d8003a9bb78f6a97ca7eadca94a2136c8a7
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557924"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960017"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 
@@ -1399,7 +1399,7 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
 ## <a name="whats-new-in-net-2015"></a>.NET 2015 の新機能
 
-.NET 2015 では、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] と .NET Core が導入されています。 一部の新機能はその両方に適用され、その他の機能は [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] または [!INCLUDE[net_core](../../../includes/net-core-md.md)] に固有です。
+.NET 2015 では、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] と .NET Core が導入されています。 一部の新機能はその両方に適用され、その他の機能は [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] または .NET Core に固有です。
 
 - **ASP.NET Core**
 
@@ -1747,11 +1747,11 @@ NGen PDB を使用すれば、IL PDB に依存することなく、NGen で IL �
 
 - **コード ページのエンコーディングのサポート**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] は、本来 Unicode エンコードをサポートし、既定ではコード ページ エンコーディングに関するサポートは限定的です。 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> メソッドを使用してコード ページ エンコードを登録することで、.NET Framework では利用できるものの [!INCLUDE[net_core](../../../includes/net-core-md.md)] ではサポートされていないコード ページ エンコードのサポートを追加できます。 詳細については、「<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>」を参照してください。
+     .NET Core は、本来 Unicode エンコードをサポートし、既定ではコード ページ エンコーディングに関するサポートは限定的です。 <xref:System.Text.Encoding.RegisterProvider%2A?displayProperty=nameWithType> メソッドを使用してコード ページ エンコードを登録することで、.NET Framework では利用できるものの .NET Core ではサポートされていないコード ページ エンコードのサポートを追加できます。 詳細については、「<xref:System.Text.CodePagesEncodingProvider?displayProperty=nameWithType>」を参照してください。
 
 - **.NET ネイティブ**
 
-     [!INCLUDE[net_core](../../../includes/net-core-md.md)] をターゲットとし、c# または Visual Basic で作成されている Windows 10 用の Windows アプリは、IL ではなくネイティブ コードにアプリをコンパイルする新しい技術を活用できます。 これで、起動時間と実行時間がより速いアプリを生成できます。 詳しくは、「[.NET ネイティブによるアプリのコンパイル](../net-native/index.md)」をご覧ください。 JIT コンパイルと NGEN による結果の違い、およびコードにおけるその影響の概要については、「[.NET ネイティブとコンパイル](../net-native/net-native-and-compilation.md)」をご覧ください。
+     .NET Core をターゲットとし、C# または Visual Basic で作成されている Windows 10 用の Windows アプリは、IL ではなくネイティブ コードにアプリをコンパイルする新しい技術を活用できます。 これで、起動時間と実行時間がより速いアプリを生成できます。 詳しくは、「[.NET ネイティブによるアプリのコンパイル](../net-native/index.md)」をご覧ください。 JIT コンパイルと NGEN による結果の違い、およびコードにおけるその影響の概要については、「[.NET ネイティブとコンパイル](../net-native/net-native-and-compilation.md)」をご覧ください。
 
      ご利用のアプリは、Visual Studio 2015 以降でコンパイルするときに、既定でネイティブ コードにコンパイルされます。 詳しくは、「[.NET ネイティブの概要](../net-native/getting-started-with-net-native.md)」をご覧ください。
 

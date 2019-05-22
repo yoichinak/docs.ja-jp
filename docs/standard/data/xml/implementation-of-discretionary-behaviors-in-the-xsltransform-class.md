@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: d2758ea1-03f6-47bd-88d2-0fb7ccdb2fab
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1602479d4986109ffe89a87250297ee5687930ce
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: fcc294f09172eb2029f92d2c05821837aa10c35f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54609578"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591499"
 ---
 # <a name="implementation-of-discretionary-behaviors-in-the-xsltransform-class"></a>XslTransform クラスの随意動作の実装
 
@@ -19,7 +19,7 @@ ms.locfileid: "54609578"
 
 随意動作とは、[W3C (World Wide Web Consortium) 勧告『XSL Transformations (XSLT) Version 1.0』](https://www.w3.org/TR/1999/REC-xslt-19991116)で列挙されている動作で、ある状況に対処する手段として、実装プロバイダーが複数のオプションから 1 つ選択するものです。 たとえば、W3C Recommendation は、セクション 7.3「Creating Processing Instructions」で、`xsl:processing-instruction` の内容をインスタンス化したときに、テキスト ノード以外のノードが作成されるのはエラーであるとしています。 いくつかの問題に関しては、プロセッサがエラー状態から回復するときにどのような対処をするべきかを、W3C が規定しています。 セクション 7.3 に記述されている問題に関しては、W3C では、作成されたノードとその内容を無視することで、このエラーから回復できるとしています。
 
-W3C で許可されている随意動作について、[!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] の <xref:System.Xml.Xsl.XslTransform> クラスに実装されている随意動作と、その問題について記述している W3C 勧告『XSLT 1.0』のセクションを次の表に示します。
+W3C で許可されている随意動作について、.NET Framework の <xref:System.Xml.Xsl.XslTransform> クラスに実装されている随意動作と、その問題について記述している W3C 勧告『XSLT 1.0』のセクションを次の表に示します。
 
 |問題|動作|セクション|
 |-------------|--------------|-------------|

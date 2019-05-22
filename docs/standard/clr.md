@@ -1,7 +1,6 @@
 ---
-title: 共通言語ランタイム (CLR)
-ms.custom: updateeachrelease
-ms.date: 04/16/2018
+title: 共通言語ランタイム (CLR) の概要 - .NET Framework
+ms.date: 04/02/2019
 ms.technology: dotnet-standard
 helpviewer_keywords:
 - compiling source code, runtime functionality
@@ -18,12 +17,13 @@ helpviewer_keywords:
 ms.assetid: 059a624e-f7db-4134-ba9f-08b676050482
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 740c804dae32a79dd06f951751bd0980fb34ca07
-ms.sourcegitcommit: c6f69b0cf149f6b54483a6d5c2ece222913f43ce
+ms.custom: updateeachrelease
+ms.openlocfilehash: a1e1fd2b7843299fdd8fbd62dbfba6c62a7be50f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55904109"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645002"
 ---
 # <a name="common-language-runtime-clr-overview"></a>共通言語ランタイム (CLR) の概要
 
@@ -64,7 +64,7 @@ ms.locfileid: "55904109"
 
 ## <a name="clr-versions"></a>CLR のバージョン
 
-.NET Framework のバージョン番号はそれに含まれている CLR のバージョン番号には必ずしも対応しません。 2 つのバージョン番号がどのように対応しているかを次の表に示します。
+.NET Framework のバージョン番号はそれに含まれている CLR のバージョン番号には必ずしも対応しません。 2 つのバージョン番号がどのように対応しているのかを次の表に示します。
 
 |.NET Framework のバージョン|含まれている CLR のバージョン|
 |----------------------------|--------------------------|
@@ -77,6 +77,7 @@ ms.locfileid: "55904109"
 |4.5 (4.5.1 および 4.5.2 を含む)|4|
 |4.6 (4.6.1 と 4.6.2 を含む)|4|
 |4.7 (4.7.1 と 4.7.2 を含む)|4|
+|4.8|4|
 
 ## <a name="related-topics"></a>関連トピック
 

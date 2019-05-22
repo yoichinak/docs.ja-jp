@@ -8,12 +8,12 @@ metadata:
   ms.date: 12/11/2018
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: c44d16e543f85852cee39106688fd3870dff7c4d
-  ms.sourcegitcommit: c3cf1ace8a1d403aeae76d8976d01995893d2536
+  ms.openlocfilehash: b43400a0fdae338744c521cf7ddb2bfce79fc43c
+  ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 02/07/2019
-  ms.locfileid: "55807052"
+  ms.lasthandoff: 05/19/2019
+  ms.locfileid: "65881034"
 items:
 - durationInMinutes: 1
   content: >
@@ -69,5 +69,5 @@ items:
   content: "`nameof` 演算子は、任意の変数、型、型のメンバーを返します。 対話型ウィンドウで次のコードを実行して、その動作を確認します。\n\n```csharp\nusing System;\n\npublic class Program\n{\n    public static void Main()\n    {\n        Console.WriteLine(nameof(System.String));\n        int j = 5;\n        Console.WriteLine(nameof(j));\n        List<string> names = new List<string>();\n        Console.WriteLine(nameof(names));\n    }\n}\n```\n\n出力は、変数または型の名前と一致します。 完全修飾型名 (`System.String` など) を指定した場合でも、`nameof` 演算子は非修飾名を返します。 この機能は、パラメーターまたはプロパティの名前を文字列に変換する必要がある場合に最も役立ちます。 例としては、<xref:System.ArgumentNullException> または <xref:System.ArgumentException> をスローするための引数の名前のキャプチャや、<xref:System.ComponentModel.INotifyPropertyChanged> の実装時に変更されたプロパティの名前のキャプチャがあります。 \n"
 - title: 新しいオブジェクトの初期化の構文
   durationInMinutes: 2
-  content: "新しいオブジェクトの初期化では、ディクショナリやその他の型の初期化を容易にするメソッドを作成することができます。 ディクショナリから始めましょう。 対話型ウィンドウで次のコードを実行します。\n\n```csharp\nvar messages = new Dictionary<int, string>\n{\n    [404] = \"Page not Found\",\n    [302] = \"Page moved, but left a forwarding address.\",\n    [500] = \"The web server can't come out to play today.\"\n};\n\nConsole.WriteLine(messages[302]);\n```\n\nこの構文は、<xref:System.Collections.IEnumerable> を実装し、パブリックにアクセスできる `Add` メソッドを持つ任意のクラスに拡張できます。  対話型ウィンドウで次のサンプルを実行してみましょう。 これにより、`IEnumerable<Point3D>` を実装し、3 つの引数を受け取るポイントを追加するメソッドを持つ `Path` クラスが作成されます。 また、式形式のメンバーや文字列補間など、このチュートリアルで既に示した他の手法を結合します。 \n\n`Main` メソッドでは、ポイントの座標を指定してパスを初期化します。 これらのポイントは、`Add` メソッドを通じてコレクションに追加されます。\n\n`Add` メソッドも拡張メソッドとして使用できます。 上記のサンプルを次のように更新することができます。 サンドボックスの制限により、対話型エクスペリエンスではこのサンプルはコンパイルされません。 お使いのコンピューターで試すことができます。\n\n```csharp\npublic class Path : IEnumerable<Point3D>\n{\n    private List<Point3D> points = new List<Point3D>();\n    public IEnumerator<Point3D> GetEnumerator() => points.GetEnumerator();\n    IEnumerator IEnumerable.GetEnumerator() => points.GetEnumerator();\n\n    public void Add(Point3D pt) => points.Add(pt);\n}\n\npublic static class Extensions\n{\n    public static void Add(this Path path, double x, double y, double z) => path.Add(new Point3D(x, y, z));\n}\n```\n"
+  content: "オブジェクト初期化子の構文で、プロパティとフィールドだけでなく \"*インデクサー*\" の初期化がサポートされるようになりました。 この追加により、ディクショナリや他の型の初期化が容易になります。 ディクショナリから始めましょう。 対話型ウィンドウで次のコードを実行します。\n\n```csharp\nvar messages = new Dictionary<int, string>\n{\n    [404] = \"Page not Found\",\n    [302] = \"Page moved, but left a forwarding address.\",\n    [500] = \"The web server can't come out to play today.\"\n};\n\nConsole.WriteLine(messages[302]);\n```\n\nインデクサー内の値を設定するこの構文は、インデクサーに対するアクセス可能な set アクセサーを持つすべての型で使用できます。\n\n2 つ目の変更により、シーケンスを表す型に対して初期化子の構文を簡単に有効にできるようになります。 コレクション初期化子は、<xref:System.Collections.IEnumerable> が実装されていて、パブリックにアクセスできる `Add` メソッドがある、任意のクラスで使用できます。 その `Add` メソッドは、拡張メソッドでもかまわなくなりました。 \n\n次の例では、この構文の 1 つのシナリオを示します。 これにより、`IEnumerable<Point3D>` を実装し、3 つの引数を受け取るポイントを追加するメソッドを持つ `Path` クラスが作成されます。 `Extensions` クラスでは、その 3 つのコンポーネントから新しいポイントを追加する追加の `Add` メソッドが作成されます。 現在は、環境での制限のため、このサンプルは対話形式では実行されません。\n\n```csharp\npublic class Path : IEnumerable<Point3D>\n{\n    private List<Point3D> points = new List<Point3D>();\n    public IEnumerator<Point3D> GetEnumerator() => points.GetEnumerator();\n    IEnumerator IEnumerable.GetEnumerator() => points.GetEnumerator();\n\n    public void Add(Point3D pt) => points.Add(pt);\n}\n\npublic static class Extensions\n{\n    public static void Add(this Path path, double x, double y, double z) => path.Add(new Point3D(x, y, z));\n}\n```\n"
 - content: C# 6 の新機能の詳しい学習が完了しました。 次は、ご自分のアプリケーションで試してみましょう。

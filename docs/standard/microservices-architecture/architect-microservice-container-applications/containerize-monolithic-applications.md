@@ -1,15 +1,13 @@
 ---
 title: モノリシック アプリケーションのコンテナー化
 description: モノリシック アプリケーションのコンテナー化は、マイクロサービス アーキテクチャからすべての利点を得ることはありませんが、すぐに提供できる重要な展開の利点があります。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: d1de4c4beb8c60aa543e5c71243d93b83fe52072
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53130901"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65640814"
 ---
 # <a name="containerizing-monolithic-applications"></a>モノリシック アプリケーションのコンテナー化
 
@@ -35,7 +33,7 @@ ms.locfileid: "53130901"
 
 ![ホストでは、各アプリが別のコンテナー上にある、複数のモノリシック アプリを実行できます。](./media/image2.png)
 
-**図 4-2** モノリシックなアプローチ: 複数のアプリケーションを実行するホスト (各アプリケーションはコンテナーとして実行される)
+**図 4-2** モノリシックなアプローチ:複数のアプリケーションを実行するホスト (各アプリケーションはコンテナーとして実行される)
 
 Microsoft Azure のモノリシック アプリケーションは、各インスタンスに専用の VM を使用して展開できます。 また、[Azure 仮想マシン スケール セット](https://azure.microsoft.com/documentation/services/virtual-machine-scale-sets/)を使用して、簡単に VM のスケーリングを行うことができます。 [Azure App Service](https://azure.microsoft.com/services/app-service/) でモノリシック アプリケーションを実行して、インスタンスを簡単にスケーリングすることもできます。VM の管理は不要です。 Azure App Services 2016 以降では、Docker コンテナーの単一インスタンスも実行できるため、展開が簡単になります。
 

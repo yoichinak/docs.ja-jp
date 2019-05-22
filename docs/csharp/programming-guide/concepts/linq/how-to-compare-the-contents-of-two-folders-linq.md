@@ -2,12 +2,12 @@
 title: '方法: 2 つのフォルダーの内容を比較する (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c7c4870e-c500-4de3-afa4-2c8e07f510e6
-ms.openlocfilehash: aec333fd3a54927f39569173db4e30999f632513
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5d944025d8d442bb80c492d1898487dff88c5bc1
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597109"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585917"
 ---
 # <a name="how-to-compare-the-contents-of-two-folders-linq-c"></a>方法: 2 つのフォルダーの内容を比較する (LINQ) (C#)
 この例では、2 つのファイル リストを比較する 3 つの方法を示します。  
@@ -126,7 +126,7 @@ namespace QueryCompareTwoDirs
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- .NET Framework Version 3.5 以降を対象とするプロジェクトを作成します。System.Core.dll を参照設定し、System.Linq 名前空間と System.IO 名前空間を `using` ディレクティブで指定します。  
+ System.Linq 名前空間と System.IO 名前空間に `using` ディレクティブを使用して、C# コンソール アプリケーション プロジェクトを作成します。  
   
 ## <a name="see-also"></a>関連項目
 

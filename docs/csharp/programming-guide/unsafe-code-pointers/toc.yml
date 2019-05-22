@@ -9,23 +9,5 @@
           href: pointer-types.md
         - name: ポインター変換
           href: pointer-conversions.md
-        - name: ポインター式
-          items:
-            - name: '方法: ポインター変数の値を取得する'
-              href: how-to-obtain-the-value-of-a-pointer-variable.md
-            - name: '方法: 変数のアドレスを取得する'
-              href: how-to-obtain-the-address-of-a-variable.md
-            - name: '方法: ポインターを使用してメンバーにアクセスする'
-              href: how-to-access-a-member-with-a-pointer.md
-            - name: '方法: ポインターを使用して配列要素にアクセスする'
-              href: how-to-access-an-array-element-with-a-pointer.md
-            - name: ポインターの操作
-              items:
-                - name: '方法: ポインターのインクリメントとデクリメント'
-                  href: how-to-increment-and-decrement-pointers.md
-                - name: ポインターに対する算術演算
-                  href: arithmetic-operations-on-pointers.md
-                - name: ポインター比較
-                  href: pointer-comparison.md
         - name: '方法: ポインターを使用してバイトの配列をコピーする'
           href: how-to-use-pointers-to-copy-an-array-of-bytes.md

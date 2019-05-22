@@ -1,15 +1,13 @@
 ---
 title: Azure Service Fabric の使用
 description: 単にコンテナーを調整する用途で使用する以外に、どの Azure Service Fabric アプリケーション モデルを使用できるかを説明します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 09/20/2018
-ms.openlocfilehash: b29be05f5ab353ddfae0d23211efaf57979d0604
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 3c629b473a429b64243b5756c96fef6585c939b7
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53126966"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65644527"
 ---
 # <a name="using-azure-service-fabric"></a>Azure Service Fabric の使用
 
@@ -27,7 +25,7 @@ Service Fabric は、サービスの構築方法に依存しないので、任�
 
 図 4-27 に示すように、Service Fabric 内でマイクロサービスを単純なプロセスまたは Docker コンテナーとして作成して実行することができます。 同じ Service Fabric クラスターには、コンテナーベースのマイクロサービスとプロセッサーベースのマイクロサービスを混在させることもできます。
 
-![各ノードがマイクロサービスごとに 1 つのプロセスを実行するプロセスとしてのマイクロサービス、各ノードがマイクロサービスごとに 1 つのコンテナーを使用して、いくつかのコンテナーで Docker を実行するコンテナーとしてのマイクロサービスの Azure Service Fabric クラスターの比較。](./media/image30.png)
+![Azure Service Fabric クラスター (各ノードがマイクロサービスごとに 1 つのプロセスを実行するプロセスとしてのマイクロサービス、各ノードがマイクロサービスごとに 1 つのコンテナーを使用して、複数のコンテナーで Docker を実行するコンテナーとしてのマイクロサービス) の比較。](./media/image30.png)
 
 **図 4-27** Azure Service Fabric 内のプロセッサーまたはコンテナーとしてマイクロサービスを展開する
 

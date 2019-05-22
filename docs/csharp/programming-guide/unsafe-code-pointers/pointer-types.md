@@ -5,12 +5,12 @@ ms.date: 04/20/2018
 helpviewer_keywords:
 - unsafe code [C#], pointers
 - pointers [C#]
-ms.openlocfilehash: 028497bbeae26ded126ba4d7ce459a6a85e0bcb5
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7f04cfbac72008332a429c4e0ad8bd3f4e60cc83
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54724045"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880326"
 ---
 # <a name="pointer-types-c-programming-guide"></a>ポインター型 (C# プログラミング ガイド)
 
@@ -75,28 +75,26 @@ int* myVariable;
 
 |演算子/ステートメント|使用|
 |-------------------------|---------|
-|*|ポインターの間接参照を実行します。|
-|->|ポインター経由で構造体のメンバーにアクセスします。|
-|[]|ポインターにインデックスを付けます。|
+|`*`|ポインターの間接参照を実行します。|
+|`->`|ポインター経由で構造体のメンバーにアクセスします。|
+|`[]`|ポインターにインデックスを付けます。|
 |`&`|変数のアドレスを取得します。|
-|++ および --|ポインターをインクリメントおよびデクリメントします。|
-|+ および -|ポインター演算を実行します。|
-|==、!=、\<、>、\<=、>=|ポインターを比較します。|
-|`stackalloc`|スタックにメモリを割り当てます。|
-|`fixed` ステートメント|変数を一時的に固定して、そのアドレスを取得できるようにします。|
+|`++` および `--`|ポインターをインクリメントおよびデクリメントします。|
+|`+` および `-`|ポインター演算を実行します。|
+|`==`、`!=`、`<`、`>`、`<=`、`>=`|ポインターを比較します。|
+|[`stackalloc` 演算子](../../language-reference/keywords/stackalloc.md)|スタックにメモリを割り当てます。|
+|[`fixed` ステートメント](../../language-reference/keywords/fixed-statement.md)|変数を一時的に固定して、そのアドレスを取得できるようにします。|
+
+ポインター関連の演算子について詳しくは、「[ポインターに関連する演算子](../../language-reference/operators/pointer-related-operators.md)」をご覧ください。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳しくは、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の「[ポインター型](~/_csharplang/spec/unsafe-code.md#pointer-types)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../index.md)
 - [アンセーフ コードとポインター](index.md)
 - [ポインター変換](pointer-conversions.md)
-- [ポインター式](pointer-expressions.md)
 - [型](../../language-reference/keywords/types.md)
 - [unsafe](../../language-reference/keywords/unsafe.md)
-- [fixed ステートメント](../../language-reference/keywords/fixed-statement.md)
-- [stackalloc](../../language-reference/keywords/stackalloc.md)
-- [ボックス化とボックス化解除](../types/boxing-and-unboxing.md)

@@ -2,12 +2,12 @@
 title: C# 7.1 の新機能
 description: C# 7.1 の新機能の概要。
 ms.date: 04/09/2019
-ms.openlocfilehash: c79c8576f9cbbd921ebf30bd84ee5a817d6dc6e7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480964"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65881543"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 の新機能
 
@@ -26,7 +26,7 @@ C# 7.1 では、[言語バージョン選択](../language-reference/configure-la
 * [ジェネリック型パラメーターのパターン マッチ](#pattern-matching-on-generic-type-parameters)
   - 型がジェネリック型パラメーターである変数にパターン マッチ式を使用できます。
 
-最後に、コンパイラには、[参照アセンブリ生成](#reference-assembly-generation)を制御する 2 つのオプション、`/refout` と `/refonly` があります。
+最後に、コンパイラには、[参照アセンブリ生成](#reference-assembly-generation)を制御する 2 つのオプション、`-refout` と `-refonly` があります。
 
 ポイント リリースで最新の機能を使用するには、[コンパイラ言語バージョンを構成](../language-reference/configure-language-version.md)し、バージョンを選択する必要があります。
 
@@ -109,5 +109,5 @@ C#7.1 以降では、`is` 型パターンと `switch` 型パターンのパタ�
 
 ## <a name="reference-assembly-generation"></a>参照アセンブリ生成
 
-*参照専用アセンブリ*を生成する新しい 2 つのコンパイラ オプション [/refout](../language-reference/compiler-options/refout-compiler-option.md) と [/refonly](../language-reference/compiler-options/refonly-compiler-option.md) があります。
+"*参照専用アセンブリ*" を生成する新しい 2 つのコンパイラ オプション [-refout](../language-reference/compiler-options/refout-compiler-option.md) と [-refonly](../language-reference/compiler-options/refonly-compiler-option.md) があります。
 リンク先の記事には、オプションと参照アセンブリに関する詳細があります。

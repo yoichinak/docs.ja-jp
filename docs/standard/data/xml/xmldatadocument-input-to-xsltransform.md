@@ -5,18 +5,18 @@ ms.technology: dotnet-standard
 ms.assetid: a0b536b6-cdb3-4a44-86c2-3b2ebc7bd4c9
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a917c0f64a8e61df1521d361ed0c8821fee295b6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 811c513e6c8c613801c0ca60c11a9e5577672183
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54508607"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65592767"
 ---
 # <a name="xmldatadocument-input-to-xsltransform"></a>XslTransform への XmlDataDocument の入力
 > [!NOTE]
 >  <xref:System.Xml.Xsl.XslTransform> では、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
   
- Microsoft [!INCLUDE[dnprdnshort](../../../../includes/dnprdnshort-md.md)] は、XML ドキュメント内のデータにアクセスするための XML ドキュメント オブジェクト モデル (DOM) を実装しているほか、XML ドキュメント内で読み込み、書き込み、移動を行うためのさまざまなクラスも実装しています。 <xref:System.Xml> 名前空間にある <xref:System.Xml.XmlDataDocument> は、<xref:System.Data.DataSet> 内のデータへのリレーショナル アクセス機能およびリレーショナル データとの同期機能を備えています。 <xref:System.Data.DataSet> のリレーショナル表現を介して構造化 XML を表示すると同時に操作したり、<xref:System.Xml.XmlDataDocument> の DOM 表現を介して半構造化 XML を操作したりすることができます。 したがって、<xref:System.Xml.XmlDataDocument> は、XML 環境とリレーショナル環境の境界を越えて機能します。  
+ Microsoft .NET Framework は、XML ドキュメント内のデータにアクセスするための XML ドキュメント オブジェクト モデル (DOM) を実装しているほか、XML ドキュメント内で読み込み、書き込み、移動を行うためのさまざまなクラスも実装しています。 <xref:System.Xml> 名前空間にある <xref:System.Xml.XmlDataDocument> は、<xref:System.Data.DataSet> 内のデータへのリレーショナル アクセス機能およびリレーショナル データとの同期機能を備えています。 <xref:System.Data.DataSet> のリレーショナル表現を介して構造化 XML を表示すると同時に操作したり、<xref:System.Xml.XmlDataDocument> の DOM 表現を介して半構造化 XML を操作したりすることができます。 したがって、<xref:System.Xml.XmlDataDocument> は、XML 環境とリレーショナル環境の境界を越えて機能します。  
   
  データがリレーショナル構造に格納されている場合、そのデータを XSLT 変換への入力として使用するには、そのリレーショナル データを <xref:System.Data.DataSet> に読み込み、<xref:System.Xml.XmlDataDocument> に関連付けます。 <xref:System.Xml.XPath.XPathNavigator> への入力である <xref:System.Xml.Xsl.XslTransform> は、<xref:System.Xml.XmlDataDocument> インターフェイスを介して <xref:System.Xml.XPath.IXPathNavigable> に実装されます。 リレーショナル データを受け取り、それを <xref:System.Data.DataSet> に読み込み、<xref:System.Xml.XmlDataDocument> 内の同期機能を利用することで、そのリレーショナル データに対する XSLT 変換を実行できます。  
   

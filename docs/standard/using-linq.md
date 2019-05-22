@@ -6,12 +6,12 @@ ms.author: wiwagn
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: c00939e1-59e3-4e61-8fe9-08ad6b3f1295
-ms.openlocfilehash: 52b92048fa845725ce46740e36b96ed55af67c30
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 941bfa624bfcc05457714b2f342054bbebfdf908
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644742"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557902"
 ---
 # <a name="linq-language-integrated-query"></a>LINQ (統合言語クエリ)
 

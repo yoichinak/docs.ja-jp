@@ -9,12 +9,12 @@ helpviewer_keywords:
 - application event logs, output location
 - applications [Visual Basic], output location
 ms.assetid: 5b70143a-7741-45f2-ae1d-03324a3a4189
-ms.openlocfilehash: 5115973e3d8e558199f9569baeea9e272c0528b0
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 895c49fb1fde56a1c9bf8b3a0ecf9de4f29f9972
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57674109"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65591217"
 ---
 # <a name="walkthrough-determining-where-myapplicationlog-writes-information-visual-basic"></a>チュートリアル: My.Application.Log による情報の書き込み先の確認 (Visual Basic)
 
@@ -35,7 +35,7 @@ ms.locfileid: "57674109"
 
     これらのセクションがない場合には、 `My.Application.Log` のログ リスナーは、コンピューターの構成ファイルで設定されている可能性があります。 以下の手順は、コンピューターの構成ファイルの定義を確認する方法の説明です。
 
-    1. コンピューターの machine.config ファイルを見つけます。 通常は、 *SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* ディレクトリにあります。 `SystemRoot` はオペレーティング システム ディレクトリ、 `frameworkVersion` は [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)]のバージョンです。
+    1. コンピューターの machine.config ファイルを見つけます。 通常は、*SystemRoot\Microsoft.NET\Framework\frameworkVersion\CONFIG* ディレクトリにあります。`SystemRoot` はオペレーティング システム ディレクトリであり、`frameworkVersion` は .NET Framework のバージョンです。
 
         machine.config の設定は、アプリケーションの構成ファイルでオーバーライドできます。
 

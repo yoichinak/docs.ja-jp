@@ -15,12 +15,12 @@ dev_langs:
 - vb
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6bb41ad3743e19ae3f6ded48dd491542926010d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4c50cdf93d8cfcefeffd35290d26dfa432a241e1
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633894"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882489"
 ---
 # <a name="how-to-display-localized-date-and-time-information-to-web-users"></a>方法: ローカライズされた日付/時刻情報を Web ユーザーに表示する
 Web ページは世界中で表示されるため、ユーザーとの通信時の日時値の解析処理は、(通常は Web サーバーのローカル カルチャの形式である) 既定の形式には依存しないようにする必要があります。 代わりに、ユーザーが入力する日時文字列を処理する Web フォームで、ユーザーの優先カルチャで文字列が解析されるようにする必要があります。 同様に、日時データは、ユーザーのカルチャに準拠する形式でユーザーに表示されるようにする必要があります。 このトピックでは、その方法について説明します。  
@@ -98,7 +98,7 @@ Web ページは世界中で表示されるため、ユーザーとの通信時�
  ユーザーの日時の文字列表現を <xref:System.DateTime> 値に変換するには、コードで <xref:System.DateTime.Parse%2A> または <xref:System.DateTime.TryParse%2A> メソッドのいずれかを呼び出すことができます。 1 回の解析操作には、Parse メソッドへの呼び出しが複数回必要な場合もあります。 その結果、解析処理が失敗した場合、`false` が返されるので、<xref:System.DateTime.TryParse%2A> メソッドの方が優れています。 対照的に、1 つの Web アプリケーションで <xref:System.DateTime.Parse%2A> メソッドで何度もスローされる例外を処理することは、非常に不経済です。  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- コードをコンパイルするには、コードビハインドなしに [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web ページを作成します。 次いで、すべての既存のコードが置換されるよう、例を Web ページにコピーします。 [!INCLUDE[vstecasp](../../../includes/vstecasp-md.md)] Web ページには、次のコントロールが含まれている必要があります。  
+ コードをコンパイルするには、コードビハインドなしに ASP.NET Web ページを作成します。 次いで、すべての既存のコードが置換されるよう、例を Web ページにコピーします。 ASP.NET Web ページには、次のコントロールが含まれている必要があります。  
   
 - <xref:System.Web.UI.WebControls.Label> コントロール。これはコードで参照されません。 その <xref:System.Web.UI.WebControls.TextBox.Text%2A> プロパティを "Enter a Number:\(数字を入力:\)" に設定します。  
   

@@ -1,5 +1,5 @@
 ---
-title: '方法 : グローバル アセンブリ キャッシュの内容を表示する'
+title: '方法: グローバル アセンブリ キャッシュの内容を表示する'
 ms.date: 03/30/2017
 helpviewer_keywords:
 - assemblies [.NET Framework], global assembly cache
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c5f786a0-969b-4f14-9f02-e77c3384d9af
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0375c835dea8984db34d3d1e24b2876fb9af8337
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 8c7d197ea7178abf991247e5ecca02c2b8e94713
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50181447"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65634372"
 ---
 # <a name="how-to-view-the-contents-of-the-global-assembly-cache"></a>方法: グローバル アセンブリ キャッシュの内容を表示する
 

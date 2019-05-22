@@ -39,12 +39,12 @@ helpviewer_keywords:
 ms.assetid: 7e4c5921-955d-4b06-8709-101873acf157
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5214ee83ab3009c3d2bb1360f46b39831c37c2ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b890ac02d54a9092bf2ad24e31367ef1d487c01f
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664625"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593500"
 ---
 # <a name="net-class-library-overview"></a>.NET クラス ライブラリの概要
 
@@ -70,7 +70,7 @@ ms.locfileid: "64664625"
 
  .NET の型では、階層構造を伴うドット構文の名前付けスキームが使用されます。 この方法では、関連する型が名前空間にグループ化されるため、検索と参照を簡単に行うことができます。 フルネームのうち右端のドットまでの最初の部分は、名前空間の名前です。 名前の最後の部分は型名です。 たとえば、`System.Collections.Generic.List<T>` は `System.Collections.Generic` 名前空間に属する `List<T>` 型を表します。 <xref:System.Collections.Generic> の型は、ジェネリック コレクションの操作で使用できます。  
   
- この名前付け方法によって、[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] を拡張するライブラリ開発者は、型の階層構造のグループを簡単に作成し、一貫性のあるわかりやすい名前を付けることができます。 また、型の完全名 (つまり名前空間と型名) によって型を明確に特定できるため、型名の競合を防ぐことができます。 ライブラリ開発者は、次の規則に従って名前空間の名前を付けてください。  
+ この名前付け方法によって、.NET Framework を拡張するライブラリ開発者は、型の階層構造のグループを簡単に作成し、一貫性のあるわかりやすい名前を付けることができます。 また、型の完全名 (つまり名前空間と型名) によって型を明確に特定できるため、型名の競合を防ぐことができます。 ライブラリ開発者は、次の規則に従って名前空間の名前を付けてください。  
   
  *CompanyName*.*TechnologyName*  
   

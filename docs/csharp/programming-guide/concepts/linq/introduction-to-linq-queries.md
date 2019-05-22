@@ -7,15 +7,15 @@ helpviewer_keywords:
 - LINQ, deferred execution
 - queries [LINQ], about LINQ queries
 ms.assetid: 37895c02-268c-41d5-be39-f7d936fa88a8
-ms.openlocfilehash: 4432270c8a1a9ad499f833bf8201ed3155bd7ce2
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 4276a1a7308e07b2dfb9cacb5670e97f6e2ca732
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59333705"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65879198"
 ---
 # <a name="introduction-to-linq-queries-c"></a>LINQ クエリの概要 (C#)
-"*クエリ*" は、データ ソースからデータを取得する式です。 クエリは通常、専用のクエリ言語で表されます。 これまでに、リレーショナル データベース用の SQL や XML 用の XQuery など、データ ソースの種類に合わせてさまざまな言語が開発されてきました。 このため、開発者は、サポートする必要のあるデータ ソースの種類やデータ形式ごとに、新しいクエリ言語を習得する必要がありました。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] は、さまざまな種類のデータ ソースやデータ形式のデータを操作するための一貫したモデルを提供することにより、この負担を軽減します。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリでは、操作の対象は常にオブジェクトになります。 共通の基本的なコーディング パターンを使用することで、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーを利用できる XML ドキュメント、SQL データベース、[!INCLUDE[vstecado](~/includes/vstecado-md.md)] データセット、.NET コレクション、その他の任意の形式のデータを照会したり変換したりできます。  
+"*クエリ*" は、データ ソースからデータを取得する式です。 クエリは通常、専用のクエリ言語で表されます。 これまでに、リレーショナル データベース用の SQL や XML 用の XQuery など、データ ソースの種類に合わせてさまざまな言語が開発されてきました。 このため、開発者は、サポートする必要のあるデータ ソースの種類やデータ形式ごとに、新しいクエリ言語を習得する必要がありました。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] は、さまざまな種類のデータ ソースやデータ形式のデータを操作するための一貫したモデルを提供することにより、この負担を軽減します。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリでは、操作の対象は常にオブジェクトになります。 共通の基本的なコーディング パターンを使用することで、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] プロバイダーを利用できる XML ドキュメント、SQL データベース、ADO.NET データセット、.NET コレクション、その他の任意の形式のデータを照会したり変換したりできます。  
   
 ## <a name="three-parts-of-a-query-operation"></a>クエリ操作の 3 つの手順  
  すべての [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリ操作は、次の 3 つの手順で構成されます。  

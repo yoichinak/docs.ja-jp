@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 94fcf524-9045-4993-bfb2-e2d8bad44219
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc88106a54a00b4b12e5043da7961791a98102c0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 79cfc607e20d921c7ae942cb9755eee4264336eb
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59344365"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877059"
 ---
 # <a name="developer-command-prompt-for-visual-studio"></a>Visual Studio 用開発者コマンド プロンプト
 
@@ -38,7 +38,7 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 ### <a name="in-windows-81"></a>Windows 8.1 の場合
 
-1. キーボードの Windows ロゴ キー ![Windows ロゴ](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") を押すなどして、**[スタート]** 画面に移動します。
+1. キーボードの Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) を押すなどして、**[スタート]** 画面に 移動します。
 
 2. **[スタート]** 画面で、**Ctrl**+**Tab** キーを押して **[アプリ]** の一覧を開き、`V`.と入力します。 インストールされているすべての Visual Studio コマンド プロンプトが含まれた一覧が表示されます。
 
@@ -46,9 +46,9 @@ Visual Studio のバージョンと、インストールした追加の SDK に�
 
 ### <a name="in-windows-8"></a>Windows 8 の場合
 
-1. キーボードの Windows ロゴ キー ![Windows ロゴ](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") を押すなどして、**[スタート]** 画面に移動します。
+1. キーボードの Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png) を押すなどして、**[スタート]** 画面に 移動します。
 
-2. **[スタート]** 画面で、Windows ロゴ キー ![Windows ロゴ](../get-started/media/windowskeyboardlogo.png "Windowskeyboardlogo") `+ Z` を押します。
+2. **[スタート]** 画面で、Windows ロゴ キー ![キーボードの Windows ロゴ キー](./media/developer-command-prompt-for-vs/windows-logo-key-graphic.png)  `+ Z` を押します。
 
 3. 画面下部にある**アプリ ビュー** アイコンを選択し、「`V`」と入力します。 インストールされているすべての Visual Studio コマンド プロンプトが含まれた一覧が表示されます。
 

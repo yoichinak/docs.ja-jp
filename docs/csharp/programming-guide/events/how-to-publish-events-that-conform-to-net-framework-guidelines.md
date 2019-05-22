@@ -5,15 +5,15 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - events [C#], implementation guidelines
 ms.assetid: 9310ae16-8627-44a2-b08c-05e5976202b1
-ms.openlocfilehash: f67789159cee64e928ae88cede9f4dbf33df1b40
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 010077cd95a9cf6bd7d4c22a54abc02b167755e8
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608695"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65584313"
 ---
 # <a name="how-to-publish-events-that-conform-to-net-framework-guidelines-c-programming-guide"></a>方法: .NET Framework ガイドラインに準拠したイベントを発行する (C# プログラミング ガイド)
-ここでは、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] の標準のパターンに従うイベントをクラスおよび構造体に追加する方法について説明します。 [!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] クラス ライブラリ内のすべてのイベントは、次のように定義されている <xref:System.EventHandler> デリゲートに基づいています。  
+ここでは、.NET Framework の標準のパターンに従うイベントをクラスおよび構造体に追加する方法について説明します。 .NET Framework クラス ライブラリ内のすべてのイベントは、次のように定義されている <xref:System.EventHandler> デリゲートに基づいています。  
   
 ```csharp  
 public delegate void EventHandler(object sender, EventArgs e);  
@@ -22,7 +22,7 @@ public delegate void EventHandler(object sender, EventArgs e);
 > [!NOTE]
 >  [!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)] には、このデリゲートのジェネリック バージョンである <xref:System.EventHandler%601> が導入されています。 次の例は、両方のバージョンの使用方法を示しています。  
   
- ユーザー定義のクラス内のイベントは、値を返すデリゲートを含む、あらゆる有効なデリゲートに基づいて発行できますが、一般的には、次の例のように <xref:System.EventHandler> を使用して、[!INCLUDE[dnprdnshort](~/includes/dnprdnshort-md.md)] のパターンに基づいて発行することをお勧めします。  
+ ユーザー定義のクラス内のイベントは、値を返すデリゲートを含む、あらゆる有効なデリゲートに基づいて発行できますが、一般的には、次の例のように <xref:System.EventHandler> を使用して、.NET Framework のパターンに基づいて発行することをお勧めします。  
   
 ### <a name="to-publish-events-based-on-the-eventhandler-pattern"></a>EventHandler パターンに基づいてイベントを発行するには  
   

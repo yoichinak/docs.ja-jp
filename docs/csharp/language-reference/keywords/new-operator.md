@@ -5,12 +5,12 @@ ms.date: 03/15/2018
 helpviewer_keywords:
 - new operator keyword [C#]
 ms.assetid: a212b697-a79b-4105-9923-1f7b108036e8
-ms.openlocfilehash: e528771d7afeec705f35fa3093a3e4f534b3a1e4
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: ce3d39c42dc35ca3038fc38edd9327e9b96fb20f
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53239853"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65633419"
 ---
 # <a name="new-operator-c-reference"></a>new 演算子 (C# リファレンス)
 
@@ -27,7 +27,7 @@ var query = from cust in customers
             select new { Name = cust.Name, Address = cust.PrimaryAddress };
 ```
 
-`new` 演算子は値型の既定コンストラクターの呼び出しにも使用します。 次に例を示します。
+`new` 演算子は値型のパラメーターなしのコンストラクターの呼び出しにも使用します。 次に例を示します。
 
 ```csharp
 int i = new int();
@@ -41,7 +41,7 @@ int i = 0;
 
 既定値の一覧については、「[既定値の一覧表](default-values-table.md)」を参照してください。
 
-すべての値型には暗黙的に既定のパブリック コンストラクターがあるため、[構造体](struct.md) に対して既定のコンストラクターを宣言するとエラーになります。 パラメーター付きのコンストラクターを構造体型で宣言し、その初期値を設定することは可能ですが、これが必要になるのは、既定値以外の値が必要な場合のみです。
+すべての値型には暗黙的にパラメーターなしのパブリック コンストラクターがあるため、[構造体](struct.md) に対して既定のコンストラクターを宣言するとエラーになります。 パラメーター付きのコンストラクターを構造体型で宣言し、その初期値を設定することは可能ですが、これが必要になるのは、既定値以外の値が必要な場合のみです。
 
 構造体などの値型オブジェクトと、クラスなどの参照型オブジェクトは両方とも自動的に破棄されますが、値型オブジェクトは含まれているコンテキストが破棄されたときに破棄され、参照型オブジェクトはそれに対する最後の参照が削除された後、ガベージ コレクターによって随時破棄されます。 ファイル ハンドルなどのリソース、またはネットワーク接続を含む型の場合、格納されているリソースができるだけ早く解放されるように、決定的なクリーンアップを使用することをお勧めします。 詳細については、「[using ステートメント](using-statement.md)」を参照してください。
 

@@ -13,15 +13,15 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7609c88b088b9386201f5ac5725d16f4c5f11071
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591382"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65586127"
 ---
 # <a name="security-issues-in-reflection-emit"></a>リフレクション出力のセキュリティ関連事項
-[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] には、Microsoft Intermediate Language (MSIL) を出力する方法が 3 種類ありますが、それぞれに固有のセキュリティ問題があります。  
+.NET Framework には、Microsoft Intermediate Language (MSIL) を出力する方法が 3 種類ありますが、それぞれに固有のセキュリティ問題があります。  
   
 - [動的アセンブリ](#Dynamic_Assemblies)  
   
@@ -32,7 +32,7 @@ ms.locfileid: "64591382"
  動的コードの生成方法に関係なく、生成済みコードを実行するには、生成済みコードで使用される型やメソッドに必要なすべてのアクセス許可が必要です。  
   
 > [!NOTE]
->  コードでのリフレクションとコードの出力に必要なアクセス許可は、[!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] のリリースによって異なります。 このトピックの「[バージョン情報](#Version_Information)」をご覧ください。  
+>  コードでのリフレクションとコードの出力に必要なアクセス許可は、.NET Framework のリリースによって異なります。 このトピックの「[バージョン情報](#Version_Information)」をご覧ください。  
   
 <a name="Dynamic_Assemblies"></a>   
 ## <a name="dynamic-assemblies"></a>動的アセンブリ  
@@ -141,17 +141,17 @@ ms.locfileid: "64591382"
 ## <a name="version-information"></a>バージョン情報  
  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降では、コンピューター全体のセキュリティ ポリシーが削除され、透過的セキュリティが既定の適用機構になりました。 「[セキュリティの変更](../../../docs/framework/security/security-changes.md)」をご覧ください。  
   
- [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 以降では、動的アセンブリと動的メソッドを出力するときに、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグを指定する必要がなくなりました。 このフラグは、それ以前のすべてのバージョンの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では必要となります。  
+ [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 以降では、動的アセンブリと動的メソッドを出力するときに、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグを指定する必要がなくなりました。 このフラグは、それ以前のすべてのバージョンの .NET Framework では必要となります。  
   
 > [!NOTE]
->  `FullTrust` および `LocalIntranet` の名前付きアクセス許可セットでは、既定で <xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグが指定されますが、`Internet` アクセス許可セットでは指定されません。 そのため、以前のバージョンの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> に対して <xref:System.Security.PermissionSet.Assert%2A> を実行する場合にのみ、インターネット アクセス許可でライブラリを使用できます。 このようなライブラリでは、コーディング エラーがあるとセキュリティ ホールが発生するおそれがあるため、セキュリティを慎重にレビューする必要があります。 コードの生成は本質的に特権を必要とする操作ではないため、[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] はセキュリティ確認要求を発行せずに部分信頼シナリオでコードを出力できます。 これは、生成されたコードには、コードを出力したアセンブリと同等以下のアクセス許可しかないことを意味します。 これにより、コードを出力するライブラリは透過的セキュリティになるため、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> を要求する必要がなくなります。そのため、安全なライブラリを簡単に作成できるようになります。  
+>  `FullTrust` および `LocalIntranet` の名前付きアクセス許可セットでは、既定で <xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグが指定されますが、`Internet` アクセス許可セットでは指定されません。 そのため、以前のバージョンの .NET Framework では、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> に対して <xref:System.Security.PermissionSet.Assert%2A> を実行する場合にのみ、インターネット アクセス許可でライブラリを使用できます。 このようなライブラリでは、コーディング エラーがあるとセキュリティ ホールが発生するおそれがあるため、セキュリティを慎重にレビューする必要があります。 コードの生成は本質的に特権を必要とする操作ではないため、[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] はセキュリティ確認要求を発行せずに部分信頼シナリオでコードを出力できます。 これは、生成されたコードには、コードを出力したアセンブリと同等以下のアクセス許可しかないことを意味します。 これにより、コードを出力するライブラリは透過的セキュリティになるため、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> を要求する必要がなくなります。そのため、安全なライブラリを簡単に作成できるようになります。  
   
- さらに、[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] では部分的に信頼される動的メソッドの非パブリックの型およびメンバーにアクセスできるように、<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグが導入されています。 以前のバージョンの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、動的メソッドで非パブリックの型およびメンバーにアクセスするには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグが必要でした。これは、部分信頼のコードには付与されないアクセス許可です。  
+ さらに、[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] では部分的に信頼される動的メソッドの非パブリックの型およびメンバーにアクセスできるように、<xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグが導入されています。 以前のバージョンの .NET Framework では、動的メソッドで非パブリックの型およびメンバーにアクセスするには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグが必要でした。これは、部分信頼のコードには付与されないアクセス許可です。  
   
  最終的に、[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] では、匿名でホストされるメソッドが導入されました。  
   
 ### <a name="obtaining-information-on-types-and-members"></a>型およびメンバーの情報の取得  
- [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 以降から、非パブリックな型とメンバーに関する情報を取得する際にアクセス許可は不要になりました。 動的メソッドを出力するために必要な情報を取得するには、リフレクションを使用します。 たとえば、<xref:System.Reflection.MethodInfo> オブジェクトを使用してメソッド呼び出しを出力します。 以前のバージョンの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。 詳しくは、「[リフレクションに関するセキュリティ上の考慮事項](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)」をご覧ください。  
+ [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 以降から、非パブリックな型とメンバーに関する情報を取得する際にアクセス許可は不要になりました。 動的メソッドを出力するために必要な情報を取得するには、リフレクションを使用します。 たとえば、<xref:System.Reflection.MethodInfo> オブジェクトを使用してメソッド呼び出しを出力します。 以前のバージョンの .NET Framework では、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。 詳しくは、「[リフレクションに関するセキュリティ上の考慮事項](../../../docs/framework/reflection-and-codedom/security-considerations-for-reflection.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 

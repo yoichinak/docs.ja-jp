@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34f0002554320f99d961d03e9eebd8d0f774f1f6
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64591513"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65585983"
 ---
 # <a name="security-considerations-for-reflection"></a>リフレクションに関するセキュリティ上の考慮事項
 リフレクションを使用すると、型とメンバーに関する情報を取得し、メンバーにアクセスできます (つまり、メソッドやコンストラクターの呼び出し、プロパティ値の取得と設定、イベント ハンドラーの追加と削除などを実行できます)。 リフレクションを使用した型とメンバーに関する情報の取得には、制限がありません。 すべてのコードで、次のタスクを実行するためにリフレクションを使用できます。  
@@ -88,7 +88,7 @@ ms.locfileid: "64591513"
   
 - アセンブリ B の許可セットには、アセンブリ A に付与されていないアクセス許可が含まれていないため、アセンブリ A でリフレクションを使用してアセンブリ B のプライベート メンバーにアクセスできます。  
   
-- アセンブリ A では、リフレクションを使用して mscorlib.dll などの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] アセンブリのプライベート メンバーにアクセスすることはできません。これは、mscorlib.dll が完全に信頼されており、アセンブリ A に付与されていないアクセス許可を持つためです。実行時にコード アクセス セキュリティによりスタックを走査すると、<xref:System.MemberAccessException> がスローされます。  
+- アセンブリ A では、リフレクションを使用して mscorlib.dll などの .NET Framework アセンブリのプライベート メンバーにアクセスすることはできません。これは、mscorlib.dll が完全に信頼されており、アセンブリ A に付与されていないアクセス許可を持つためです。実行時にコード アクセス セキュリティによりスタックが走査されると、<xref:System.MemberAccessException> がスローされます。  
   
 ## <a name="serialization"></a>シリアル化  
  シリアル化の目的で、<xref:System.Security.Permissions.SecurityPermission> に <xref:System.Security.Permissions.SecurityPermissionAttribute.SerializationFormatter%2A?displayProperty=nameWithType> フラグを指定することで、アクセシビリティに関係なく、シリアル化が可能な型のメンバーを取得および設定できるようになります。 このアクセス許可があると、コードで、インスタンスのプライベート状態を探索したり、変更したりできます。 型に対して適切なアクセス許可が与えられていると同時に、メタデータ内でシリアル化可能として[マークされている](../../../docs/standard/attributes/applying-attributes.md)必要があります。  
@@ -100,7 +100,7 @@ ms.locfileid: "64591513"
   
 - [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、透過的なコードからリフレクションを使用してセキュリティ クリティカルなメンバーにアクセスすることはできません。  
   
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグは、[!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] で導入されました。 以前のバージョンの [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] では、コードから非パブリック メンバーにアクセスするためにリフレクションを使用するには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグを指定する必要がありました。 このアクセス許可は、部分的に信頼されるコードには絶対に付与しないでください。  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグは、[!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] で導入されました。 以前のバージョンの .NET Framework では、コードから非パブリック メンバーにアクセスするためにリフレクションを使用するには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグを指定する必要がありました。 このアクセス許可は、部分的に信頼されるコードには絶対に付与しないでください。  
   
 - [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 以降、リフレクションを使用して非パブリックな型とメンバーに関する情報を取得する場合、アクセス許可が不要になりました。 以前のバージョンでは、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。  
   
