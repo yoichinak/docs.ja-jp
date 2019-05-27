@@ -81,60 +81,60 @@ Freezable オブジェクトの <xref:System.Windows.Freezable.Freeze%2A> メソ
 [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
 [!code-vb[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]
 
- 上記のコード例では、変更可能なコピーがのフリーズされたオブジェクトを使用して行われた、 <xref:System.Windows.Freezable.Clone%2A> メソッド。 次のセクションでは、複製の詳細について説明します。  
-  
- **注**ため、フリーズされた freezable アニメーション化できません、アニメーション システムが自動的の変更可能な複製を作成フリーズされた<xref:System.Windows.Freezable>オブジェクトを使用してアニメーション化しようとすると、 <xref:System.Windows.Media.Animation.Storyboard>。 オーバーヘッドを複製することがパフォーマンスをなくすため、オブジェクトをアニメーション化する場合にマスクされていないままにします。 ストーリー ボードを使用したアニメーション化の詳細については、次を参照してください。、[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md)します。  
-  
+上記のコード例では、<xref:System.Windows.Freezable.Clone%2A> メソッドを使用して、フリーズされたオブジェクトの変更可能なコピーが作成されます。次のセクションでは、複製の詳細について説明します。
+
+**注** フリーズされた Freezable オブジェクトはアニメーションできないため、フリーズされた <xref:System.Windows.Freezable> オブジェクトを <xref:System.Windows.Media.Animation.Storyboard> でアニメーションしようとすると、アニメーション システムはオブジェクトの変更可能な複製を自動的に作成します。複製によるパフォーマンスのオーバーヘッドをなくすため、オブジェクトをアニメーションする場合には、それを非フリーズ状態のままにしておきます。ストーリーボードを使用したアニメーションの詳細については、[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md) を参照してください。
+
 ### <a name="freezing-from-markup"></a>マークアップからのフリーズ  
- 固定するには、<xref:System.Windows.Freezable>オブジェクトを使用する、マークアップで宣言された、`PresentationOptions:Freeze`属性。 次の例では、<xref:System.Windows.Media.SolidColorBrush>はページ リソースとして宣言されており、固定されています。 ボタンの背景を設定するのには使用されます。  
-  
- [!code-xaml[FreezableSample#FreezeFromMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
-  
- 使用する、`Freeze`属性、プレゼンテーション オプションの名前空間にマップする必要があります:`http://schemas.microsoft.com/winfx/2006/xaml/presentation/options`します。 `PresentationOptions` この名前空間をマッピングするための推奨されるプレフィックスを示します。  
-  
+マークアップで宣言された <xref:System.Windows.Freezable> オブジェクトをフリーズするには、 `PresentationOptions:Freeze` 属性を使用します。次の例では、<xref:System.Windows.Media.SolidColorBrush> はページ リソースとして宣言され、フリーズされ、ボタンの背景として設定されています。
+
+[!code-xaml[FreezableSample#FreezeFromMarkupWholePage](~/samples/snippets/csharp/VS_Snippets_Wpf/FreezableSample/CS/FreezeFromMarkupExample.xaml#freezefrommarkupwholepage)]  
+
+`Freeze` 属性を使用するには、Presentation Options 名前空間（ `http://schemas.microsoft.com/winfx/2006/xaml/presentation/options` ）にマッピングする必要があります。この名前空間をマッピングするために、 `PresentationOptions` というプレフィックスを使用することを推奨します。
+
 ```  
 xmlns:PresentationOptions="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options"   
 ```  
-  
- すべての XAML リーダーは、この属性を認識しているためには、使用することをお勧め、 [mc: Ignorable 属性](mc-ignorable-attribute.md)をマークする、`Presentation:Freeze`属性を無視できます。  
-  
+
+この属性を認識しない XAML リーダーもあるため、 [mc: Ignorable 属性](mc-ignorable-attribute.md) を使用して、 `Presentation:Freeze` 属性を無視できるよう設定しておくことをお勧めします。
+
 ```  
 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"  
 mc:Ignorable="PresentationOptions"  
 ```  
   
- 詳細については、次を参照してください。、 [mc: Ignorable 属性](mc-ignorable-attribute.md)ページ。  
+詳細については、 [mc: Ignorable 属性](mc-ignorable-attribute.md) を参照してください。
   
-### <a name="unfreezing-a-freezable"></a>「固定解除する」フリーズ可能オブジェクト  
- 1 回凍結、<xref:System.Windows.Freezable>しない変更またはマスクされていない。 ただし、を使用して、フリーズされた複製を作成することができます、<xref:System.Windows.Freezable.Clone%2A>または<xref:System.Windows.Freezable.CloneCurrentValue%2A>メソッド。  
+### <a name="unfreezing-a-freezable"></a>Freezable オブジェクトを「フリーズ解除する」
+一度フリーズされた <xref:System.Windows.Freezable> オブジェクトを変更したりフリーズ解除したりすることはできません。とはいえ、 <xref:System.Windows.Freezable.Clone%2A> または <xref:System.Windows.Freezable.CloneCurrentValue%2A> メソッドを使用して非フリーズ状態の複製を作成することはできます。
   
- 次の例では、ブラシを使用して、ボタンの背景を設定し、そのブラシが固定されてします。 使用して、ブラシの固定のコピーが行われた、<xref:System.Windows.Freezable.Clone%2A>メソッド。 クローンを変更し、ボタンの背景を黄色から赤に変更するために使用します。  
+次の例では、ブラシを使用してボタンの背景を設定し、その後ブラシは固定されます。そのブラシの非フリーズ状態の複製を、<xref:System.Windows.Freezable.Clone%2A>メソッドを使用して作成します。そのクローンを変更し、ボタンの背景を黄色から赤に変更するために使用します。
   
  [!code-csharp[freezablesample_procedural#CloneExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#cloneexample)]
  [!code-vb[freezablesample_procedural#CloneExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#cloneexample)]  
   
 > [!NOTE]
->  新しいコピーされませんアニメーションに使用する複製方法に関係なく<xref:System.Windows.Freezable>します。  
+>  どのメソッドを使用して複製しても、新しい <xref:System.Windows.Freezable> オブジェクトにアニメーションはコピーされません。
   
-<xref:System.Windows.Freezable.Clone%2A>と<xref:System.Windows.Freezable.CloneCurrentValue%2A>メソッドは、フリーズ可能オブジェクトの詳細コピーを生成します。 フリーズ可能オブジェクトが含まれている他の freezable オブジェクトのフリーズされた場合も複製、変更可能です。 たとえば、フリーズされた複製する<xref:System.Windows.Media.PathGeometry>を変更できるようにの数値が含まれているセグメントもコピーし、は変更可能です。  
+<xref:System.Windows.Freezable.Clone%2A> と <xref:System.Windows.Freezable.CloneCurrentValue%2A> メソッドは、Freezable オブジェクトのディープ コピーを作成します。そのオブジェクトがフリーズされた他の Freezable オブジェクトを含んでいる場合、それらのオブジェクトも複製され変更可能にされます。たとえば、フリーズされた <xref:System.Windows.Media.PathGeometry> を複製する場合、含まれている図やセグメントも複製され変更可能になります。
   
 <a name="createyourownfreezableclass"></a>   
-## <a name="creating-your-own-freezable-class"></a>Freezable クラスの作成  
- 派生したクラス<xref:System.Windows.Freezable>次の機能を取得します。  
+## <a name="creating-your-own-freezable-class"></a>Freezable クラスの作成
+<xref:System.Windows.Freezable> から派生したクラスには次の機能が付与されます。
   
-- 特殊な状態。 読み取り専用 (固定)、書き込み可能な状態です。  
+- 特殊な状態：読み取り専用 (フリーズ)状態と書き込み可能な状態。
   
-- スレッド セーフ。 フリーズされた<xref:System.Windows.Freezable>スレッド間で共有することができます。  
+- スレッド セーフ：フリーズされた <xref:System.Windows.Freezable> オブジェクトはスレッド間で共有することができます。
   
-- 変更の詳細についての通知:その他とは異なり<xref:System.Windows.DependencyObject>、フリーズ可能オブジェクトは変更通知サブ プロパティの値を変更するときにします。  
+- 詳細な変更通知：その他の <xref:System.Windows.DependencyObject> とは異なり、 Freezable オブジェクトはサブ プロパティの値が変更されたときに通知します。
   
-- 簡単に複製: Freezable クラスは既にディープ クローンを生成するいくつかのメソッドを実装します。  
+- 簡単に複製：Freezable クラスは既にディープ クローンを作成する複数のメソッドを実装します。
   
- A<xref:System.Windows.Freezable>の種類は、<xref:System.Windows.DependencyObject>をそのため、依存関係プロパティ システムを使用します。 クラスのプロパティは、依存関係プロパティにする必要はありませんが、ために書き込むがあるコードの量を減らすは依存関係プロパティを使用して、<xref:System.Windows.Freezable>クラスは依存関係プロパティを考慮して設計されました。 依存関係プロパティ システムの詳細については、次を参照してください。、[依存関係プロパティの概要](dependency-properties-overview.md)します。  
+<xref:System.Windows.Freezable> は <xref:System.Windows.DependencyObject> の一種であり、依存関係プロパティ システムを使用します。クラスのプロパティを依存関係プロパティにする必要はありませんが、<xref:System.Windows.Freezable> クラスは依存関係プロパティを考慮して設計さているので、依存関係プロパティを使用すればコード量を減らすことができます。依存関係プロパティ システムの詳細については、 [依存関係プロパティの概要](dependency-properties-overview.md) を参照してください。
   
- すべて<xref:System.Windows.Freezable>サブクラスをオーバーライドする必要があります、<xref:System.Windows.Freezable.CreateInstanceCore%2A>メソッド。 クラスは、そのすべてのデータの依存関係プロパティを使用している場合は、完了します。  
+<xref:System.Windows.Freezable> から派生するクラスは、 <xref:System.Windows.Freezable.CreateInstanceCore%2A>メソッドをオーバーライドする必要があります。すべてのデータに依存関係プロパティを使用している場合は、それでおしまいです。
   
- クラスに依存関係のないプロパティのデータ メンバーが含まれている場合は、次のメソッドもオーバーライドする必要があります。  
+依存関係プロパティ以外のデータ メンバーが含まれている場合は、次のメソッドもオーバーライドする必要があります。
   
 - <xref:System.Windows.Freezable.CloneCore%2A>  
   
@@ -146,20 +146,20 @@ mc:Ignorable="PresentationOptions"
   
 - <xref:System.Windows.Freezable.FreezeCore%2A>  
   
- 次のルールにアクセスして、依存関係プロパティではないデータ メンバーへの書き込みにも注意してください。  
+依存関係プロパティ以外のデータ メンバーの読み書きでは、次のルールを守ってください。
   
-- いずれかの先頭に[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]呼び出し、依存関係のないプロパティのデータ メンバーを読み取る、<xref:System.Windows.Freezable.ReadPreamble%2A>メソッド。  
+- 依存関係プロパティ以外のデータ メンバーを読み取る [!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)] の最初に、 <xref:System.Windows.Freezable.ReadPreamble%2A> メソッドを呼び出す。
   
-- 依存関係のないプロパティのデータ メンバーを書き込む任意の API の先頭には、呼び出し、<xref:System.Windows.Freezable.WritePreamble%2A>メソッド。 (呼び出したら<xref:System.Windows.Freezable.WritePreamble%2A>で、[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]への呼び出しを追加する必要はありません<xref:System.Windows.Freezable.ReadPreamble%2A>も非依存関係プロパティのデータ メンバーを読み取るかどうかです)。  
+- 依存関係プロパティ以外のデータ メンバーを書き込む [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] の最初に、 <xref:System.Windows.Freezable.WritePreamble%2A> メソッドを呼び出す。 (<xref:System.Windows.Freezable.WritePreamble%2A> を呼び出した後は、同じ [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 内で依存関係プロパティ以外のデータ メンバーを読み取るとしても、<xref:System.Windows.Freezable.ReadPreamble%2A> を呼び出す必要はありません。)
   
-- 呼び出す、<xref:System.Windows.Freezable.WritePostscript%2A>依存関係のないプロパティのデータ メンバーへの書き込みメソッドを終了する前にメソッド。  
+- 依存関係プロパティ以外のデータ メンバーの書き込みを含むメソッドを終了する前に、 <xref:System.Windows.Freezable.WritePostscript%2A> メソッドを呼び出す。
   
- クラスにある非依存関係プロパティのデータ メンバーが含まれて かどうか<xref:System.Windows.DependencyObject>オブジェクトも呼び出す必要があります、<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A>メソッドは、メンバーを設定している場合でも、その値のいずれかを変更するたびに`null`します。  
+クラスに、<xref:System.Windows.DependencyObject> オブジェクトではあっても依存関係プロパティではないデータ メンバーが含まれている場合、その値のいずれかを変更するたびに、それを `null` 設定する場合であっても、<xref:System.Windows.Freezable.OnFreezablePropertyChanged%2A> メソッドを呼び出す必要があります。
   
 > [!NOTE]
->  各を開始することが非常に重要<xref:System.Windows.Freezable>基本実装への呼び出しでオーバーライドするメソッド。  
+>  <xref:System.Windows.Freezable> オブジェクトのメソッドをオーバーライドする時に、基底クラスの実装を呼び出すことは非常に重要です。
   
- カスタムの例については<xref:System.Windows.Freezable>クラスを参照してください、[カスタム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=159981)します。  
+カスタム <xref:System.Windows.Freezable> クラスの例については、 [カスタム アニメーションのサンプル](https://go.microsoft.com/fwlink/?LinkID=159981) を参照してください。
   
 ## <a name="see-also"></a>関連項目
 
