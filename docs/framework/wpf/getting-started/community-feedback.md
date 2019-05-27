@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 468b060a-d54b-4900-a74a-9faccb554045
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f77058ac0cb87d0316395bce1dfb11401a2ce806
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6f62fbe13b42202a2eaca212236ee5fd9aa4df05
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61921785"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053149"
 ---
 # <a name="wpf-community-feedback"></a>WPF コミュニティのフィードバック
 
@@ -24,7 +24,7 @@ Microsoft では、さまざまな学習、説明、および Windows Presentati
 
 ## <a name="forums"></a>フォーラム
 
-[WPF フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=wpf)は説明および問題を解決するための主要なコミュニティ リソースです。 フォーラムでは、次のような総合的なサポート機能が提供され、ディスカッションと問題解決が促進されます。
+[WPF フォーラム](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=wpf)は説明および問題を解決するための主要なコミュニティ リソースです。 フォーラムでは、次のような総合的なサポート機能が提供され、ディスカッションと問題解決が促進されます。
 
 - 検索
 - ディスカッションの追跡

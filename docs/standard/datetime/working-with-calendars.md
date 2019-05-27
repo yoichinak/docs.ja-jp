@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a0113ef84c2b3e42f6d14d25747f7fdbb836a212
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ed276d8026201af94a0259c4258d5c50fa67c0f3
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62026485"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053241"
 ---
 # <a name="working-with-calendars"></a>カレンダーの使用
 
@@ -141,7 +141,7 @@ ms.locfileid: "62026485"
 >  Reiwa の時代 (年号) で新しい時代 (年号)、<xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>2019 年 5 月 1 日です。 この変更は、これらのカレンダーを使用するすべてのアプリケーションに影響します。 詳細については、次の記事を参照してください。
 > - [.NET での日本語のカレンダーで新しい時代 (年号) の処理](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)、どのドキュメントをサポートするために .NET に追加された機能、複数の時代 (年号) のカレンダーおよび複数の時代 (年号) の予定表を処理するときに使用するベスト プラクティスについて説明します。
 > - [日本語の時代 (年号) 変更するアプリケーションを準備](/windows/uwp/design/globalizing/japanese-era-change)、時代 (年号) の変更に対する準備状況を確認する Windows 上のアプリケーションのテストに関する情報を提供します。
-> - [.NET Framework の更新プログラムの新しい日本語の時代 (年号) の概要](https://support.microsoft.com/en-us/help/4477957/new-japanese-era-updates-for-net-framework)、日本語のカレンダーの新時代に関連する個々 の Windows バージョンの .NET Framework の更新プログラムの一覧を表示するノートの複数の時代 (年号) のサポート、.NET Framework の新しい機能とが含まれていますアプリケーションのテストで検索することです。
+> - [.NET Framework の更新プログラムの新しい日本語の時代 (年号) の概要](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework)、日本語のカレンダーの新時代に関連する個々 の Windows バージョンの .NET Framework の更新プログラムの一覧を表示するノートの複数の時代 (年号) のサポート、.NET Framework の新しい機能とが含まれていますアプリケーションのテストで検索することです。
 
 ほとんどのカレンダーの時代 (年号) では、非常に長い期間を表します。 グレゴリオ暦でなど、現在の時代 (年号) にまたがる複数の 2 つ millennia。 <xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>、複数の時代 (年号) をサポートする予定表、2 つ、これは、ケースではありません。 時代 (年号) は、皇帝の量を設定の期間に対応します。 サポートの時代 (年号) を複数にするため、特に現在の時代 (年号) の数の上限が、不明の場合は、特別な課題をもたらします。 
 

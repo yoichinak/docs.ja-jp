@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 8241523f-d8e1-4fb6-bf6a-b29bfe07b38a
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ca8cf76745190bd9819dde522c34e57952cd1ca
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c6f1a2d23d5f33ba7e4f0d51f795e75d7cf785e
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906322"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052449"
 ---
 # <a name="runtime-directives-rdxml-configuration-file-reference"></a>ランタイム ディレクティブ (rd.xml) 構成ファイル リファレンス
 
@@ -405,7 +405,7 @@ ms.locfileid: "61906322"
 
 #### <a name="the-effect-of-xmlserializer-datacontractserializer-and-datacontractjsonserializer-policies"></a>XmlSerializer、DataContractSerializer、および DataContractJsonSerializer のポリシーの影響
 
-リフレクション ベースのシリアライザーを対象とした `Serialize` ポリシーとは異なり、<xref:System.Xml.Serialization.XmlSerializer>、<xref:System.Runtime.Serialization.DataContractSerializer>、および <xref:System.Runtime.Serialization.Json.DataContractJsonSerializer> ポリシーは、[!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンで認識されている一連のシリアライザーを有効にするために使用されます。 これらのシリアライザーはリフレクションを使用して実装されるのではなく、実行時にシリアル化可能な型のセットが、リフレクション可能な型と同様の方法で決定されます。
+異なり、`Serialize`リフレクション ベースのシリアライザーを対象には、ポリシー、 <xref:System.Xml.Serialization.XmlSerializer>、 <xref:System.Runtime.Serialization.DataContractSerializer>、および<xref:System.Runtime.Serialization.Json.DataContractJsonSerializer>一連の .NET ネイティブ ツール チェーンで認識されているシリアライザーを有効にするポリシーが使用されます。 これらのシリアライザーはリフレクションを使用して実装されるのではなく、実行時にシリアル化可能な型のセットが、リフレクション可能な型と同様の方法で決定されます。
 
 これらのポリシーのいずれかを型に適用すると、対応するシリアライザーで型をシリアル化できるようになります。 また、シリアル化が必要であることをシリアル化エンジンが静的に決定できる、すべての型もシリアル化されます。
 

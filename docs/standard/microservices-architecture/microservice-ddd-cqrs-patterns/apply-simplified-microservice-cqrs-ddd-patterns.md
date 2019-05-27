@@ -2,12 +2,12 @@
 title: マイクロサービスに簡略化された CQRS と DDD パターンを適用する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | CQRS と DDD のパターンの全体的な関係を理解する。
 ms.date: 10/08/2018
-ms.openlocfilehash: a5df8ce495b308df63af47ef1ec2ed26be2b5e37
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 36bffce37176aed6c7d9daea7f2995952b58e895
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875901"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959373"
 ---
 # <a name="apply-simplified-cqrs-and-ddd-patterns-in-a-microservice"></a>マイクロサービスに簡略化された CQRS と DDD のパターンを適用する
 
@@ -35,7 +35,7 @@ CQRS は、他のコンテキストでは 1 つのオブジェクトの場合で
 
 ## <a name="additional-resources"></a>その他の技術情報
 
- - **Greg Young。「Versioning in an Event Sourced System」** (オンライン電子書籍で無料提供) \
+- **Greg Young。「Versioning in an Event Sourced System」** (オンライン電子書籍で無料提供) \
    <https://leanpub.com/esversioning/read>
 
 >[!div class="step-by-step"]

@@ -2,12 +2,12 @@
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: 実際の運用アプリケーションでは、デプロイし、正常性、ワークロードおよびすべてのコンテナーのライフ サイクルを処理するオーケストレーターで管理する必要があります。
 ms.date: 02/15/2019
-ms.openlocfilehash: 6cb41e632db7c7c6b9412bf54d2efeb44deee80f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bde9a2815d0496608b3172582481c169cab37f04
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644724"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195645"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -70,7 +70,7 @@ Azure Kubernetes Service によって、一般的な Docker クラスタリン�
 
 ## <a name="get-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) を開始します。
 
-AKS を使用するには、Azure ポータルまたは CLI を使用して AKS クラスターをデプロイします。 Azure Container Service クラスターの詳細については、[Azure Kubernetes Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)に関するページを参照してください。
+AKS を使用するには、Azure ポータルまたは CLI を使用して AKS クラスターをデプロイします。 Kubernetes クラスターを Azure に展開する方法の詳細については、次を参照してください。 [Azure Kubernetes Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)します。
 
 AKS の一部として既定でインストールされるソフトウェアはいずれも無料です。 既定のすべてのオプションはオープン ソース ソフトウェアと共に実装されます。 AKS は Azure 内の複数の仮想マシンで使用できます。 選択したコンピューティング インスタンスと、ストレージやネットワーキングなどの利用された他の基になるインフラストラクチャ リソースにのみ課金されます。 AKS 自体に従量課金はありません。
 
@@ -137,7 +137,7 @@ Service Fabric は、サービスの構築方法に依存しないので、任�
 
 図 4-10 に示すようには、作成し、単純なプロセスまたは Docker コンテナーとして、Service Fabric でマイクロ サービスを実行できます。 同じ Service Fabric クラスターには、コンテナーベースのマイクロサービスとプロセッサーベースのマイクロサービスを混在させることもできます。
 
-![Fabric クラスターの Azure サービスの比較。各ノードが各マイクロ サービスは 1 つのプロセスを実行するプロセスとしてのマイクロ サービスマイクロ サービスの各ノードがいくつかのコンテナーで Docker を実行するコンテナーとしてマイクロ サービスごとに 1 つのコンテナー。](./media/azure-service-fabric-cluster-types.png)
+![Azure Service Fabric クラスター (各ノードがマイクロサービスごとに 1 つのプロセスを実行するプロセスとしてのマイクロサービス、各ノードがマイクロサービスごとに 1 つのコンテナーを使用して、複数のコンテナーで Docker を実行するコンテナーとしてのマイクロサービス) の比較。](./media/azure-service-fabric-cluster-types.png)
 
 **図 4-10** Azure Service Fabric 内のプロセッサーまたはコンテナーとしてマイクロサービスを展開する
 

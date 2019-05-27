@@ -4,23 +4,23 @@ ms.date: 03/30/2017
 ms.assetid: 408f25c4-6d60-475c-92b1-7b52b777c6db
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2961a4c02d8ffe17055307094f56a03680d1a59a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 079718c96a4818285c0b469da9f23213a6915c19
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61866978"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052517"
 ---
 # <a name="missingmetadataexception-class-net-native"></a>MissingMetadataException クラス (.NET ネイティブ)
 
-**Windows 10 の Windows アプリ用 .NET ([!INCLUDE[net_native](../../../includes/net-native-md.md)]のみ)**
+**Windows 10、.NET ネイティブのみの Windows アプリ用 .NET**
 
 この例外は、存在しないメタデータを取得するためにリフレクションが使用された場合にスローされます。
 
 **名前空間:** System.Reflection
 
 > [!IMPORTANT]
-> `MissingMetadataException` クラスは [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンによる内部使用のみを目的としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。
+> `MissingMetadataException`クラスが、.NET ネイティブ ツール チェーンによって内部使用のみを対象としています。 サード パーティのコードで使用することを目的としていません。また、アプリケーション コードで、例外を処理する必要はありません。 代わりに、[ランタイム ディレクティブ ファイル](../../../docs/framework/net-native/runtime-directives-rd-xml-configuration-file-reference.md)にエントリを追加することにより、例外を除去します。 詳細については、「解説」を参照してください。
 
 ## <a name="syntax"></a>構文
 
@@ -34,8 +34,8 @@ ms.locfileid: "61866978"
 
 |コンストラクター|説明|
 |-----------------|-----------------|
-|`public MissingMetadataException()`|エラーを説明するシステム提供のメッセージを使用して、`MissingMetadataException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンによる内部使用専用です。|
-|`public MissingMetadataException(String message)`|指定したエラー メッセージを使用して、`MissingMetadataException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンストラクターは [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンによる内部使用専用です。|
+|`public MissingMetadataException()`|エラーを説明するシステム提供のメッセージを使用して、`MissingMetadataException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンス トラクターは、.NET ネイティブ ツール チェーンでのみによって内部的に使用します。|
+|`public MissingMetadataException(String message)`|指定したエラー メッセージを使用して、`MissingMetadataException` クラスの新しいインスタンスを初期化します。<br /><br /> このコンス トラクターは、.NET ネイティブ ツール チェーンでのみによって内部的に使用します。|
 
 ## <a name="properties"></a>プロパティ
 

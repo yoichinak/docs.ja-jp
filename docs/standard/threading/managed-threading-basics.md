@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: b2944911-0e8f-427d-a8bb-077550618935
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b352c35a327ed4736a1f41816d3f15c1a0f559f5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7241dfb7e31ed2f83bf7af0ecc6bf0d97363b999
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644821"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960359"
 ---
 # <a name="managed-threading-basics"></a>マネージド スレッド処理の基本
 
@@ -45,9 +45,6 @@ ms.locfileid: "64644821"
   
  [スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット](../../../docs/standard/threading/thread-local-storage-thread-relative-static-fields-and-data-slots.md)  
  スレッド相対ストレージ メカニズムについて説明します。  
-  
- [マネージド スレッドのキャンセル](../../../docs/standard/threading/cancellation-in-managed-threads.md)  
- 取り消しトークンを使用して、非同期または長時間実行されている同期操作の取り消し方法について説明します。  
   
 ## <a name="reference"></a>関連項目
 

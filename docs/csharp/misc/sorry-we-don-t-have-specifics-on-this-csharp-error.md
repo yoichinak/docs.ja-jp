@@ -882,23 +882,23 @@ f1_keywords:
 helpviewer_keywords:
 - errors [C#], additional information
 ms.assetid: 48320e4a-6e17-45a6-9966-88c6ec89bd2f
-ms.openlocfilehash: 5b6cf68ea2e08c63abd5c093d9ffc6ed24131cd9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 168e72e3f9f09c1f13e9d34cc1048f1dfacc2592
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61684057"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052756"
 ---
 # <a name="sorry-we-dont-have-specifics-on-this-c-error"></a>申し訳ありませんが、この C# エラーに関する詳細情報はありません。
 申し訳ありませんが、このエラーに関する特定の情報はありません。 Web でエラー番号とメッセージ テキストを検索して情報を探すことができます。 または、次のフォーラムのいずれかを使用して他の開発者に質問することができます。  
   
- [Visual C# 言語](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharplanguage)  
+ [Visual C# 言語](https://social.msdn.microsoft.com/Forums/home?forum=csharplanguage)  
  Visual C# 言語の構文とコンパイラに関する質問や一般的な議論のためのフォーラムを提供します。  
   
- [Visual C# IDE](https://social.msdn.microsoft.com/Forums/en-US/home?forum=csharpide)  
+ [Visual C# IDE](https://social.msdn.microsoft.com/Forums/home?forum=csharpide)  
  Visual Studio 環境で作業する方法に関する質問のためのフォーラムを提供します。  
   
- [Visual C# 全般](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=csharpgeneral)  
+ [Visual C# 全般](https://social.msdn.microsoft.com/Forums/vstudio/home?forum=csharpgeneral)  
  Visual C# を使用したその他のフォーラムで取り上げていない質問や一般的な議論のためのフォーラムを提供します。  
   
  [スタック オーバーフロー](https://stackoverflow.com/questions/tagged/c%23)  

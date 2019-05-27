@@ -4,12 +4,12 @@ ms.date: 04/08/2019
 helpviewer_keywords:
 - configuring HTTP [WCF]
 ms.assetid: b0c29a86-bc0c-41b3-bc1e-4eb5bb5714d4
-ms.openlocfilehash: 86705a4f8daa327c442ac6c53c9b44c5b5c5c2ad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4bfdbbc19bb9ed72bc50ebeeac114241ccd47c25
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857364"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053410"
 ---
 # <a name="configuring-http-and-https"></a>HTTP および HTTPS の構成
 
@@ -57,7 +57,7 @@ netsh http add iplisten ipaddress=0.0.0.0:8000
 
 <xref:System.ServiceModel.WSDualHttpBinding> を使用すると、クライアント接続では、名前空間予約と Windows ファイアウォールに対応できる既定値が使用されます。 双方向接続のクライアント ベース アドレスをカスタマイズする場合、クライアント上で HTTP 設定を行い、新しいアドレスに一致させる必要があります。
 
-HTTP Server API は、HttpCfg からは使用できない高度な構成設定の一部です。 この設定は、レジストリで管理され、HTTP Server API を使用するシステムで実行中のすべてのアプリケーションに適用されます。 これらの設定については、次を参照してください。 [IIS 用の Http.sys レジストリ設定](https://support.microsoft.com/en-us/help/820129/http-sys-registry-settings-for-windows)します。 ほとんどのユーザーは、これらの設定を変更する必要はありません。
+HTTP Server API は、HttpCfg からは使用できない高度な構成設定の一部です。 この設定は、レジストリで管理され、HTTP Server API を使用するシステムで実行中のすべてのアプリケーションに適用されます。 これらの設定については、次を参照してください。 [IIS 用の Http.sys レジストリ設定](https://support.microsoft.com/help/820129/http-sys-registry-settings-for-windows)します。 ほとんどのユーザーは、これらの設定を変更する必要はありません。
 
 ## <a name="see-also"></a>関連項目
 

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 977dc094-fe19-4955-98ec-d2294d04a4ba
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: df526c93c195275751c393299b0e0d80337eee44
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 48331c1b62fa536b905f1288ebb1632f8da15615
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54688897"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053588"
 ---
 # <a name="comparing-strings-in-net"></a>.NET で文字列を比較する
 .NET は、文字列の値を比較するためのメソッドをいくつか提供します。 これらの値の比較メソッドとその説明を次の表に示します。  
@@ -154,5 +154,5 @@ ms.locfileid: "54688897"
 
 - [基本的な文字列操作](../../../docs/standard/base-types/basic-string-operations.md)
 - [カルチャを認識しない文字列操作の実行](../../../docs/standard/globalization-localization/performing-culture-insensitive-string-operations.md)
-- [並べ替え重みテーブル (Windows 上の .NET 用)](https://www.microsoft.com/en-us/download/details.aspx?id=10921)
+- [並べ替え重みテーブル (Windows 上の .NET 用)](https://www.microsoft.com/download/details.aspx?id=10921)
 - [デフォルト Unicode 照合基本テーブル (Linux と macOS 上の .NET Core 用)](https://www.unicode.org/Public/UCA/latest/allkeys.txt)

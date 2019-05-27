@@ -2,12 +2,12 @@
 title: Visual Studio Code での F# の概要します。
 description: Visual Studio Code および ionide の概要のプラグインのスイートで F# を使用する方法について説明します。
 ms.date: 12/23/2018
-ms.openlocfilehash: 7c2ecab14b3351d441249e7fc7cb3188a4ee7eba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d9d5ed4008f657f956ee7a5611a2f5fdd8e5b44a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949553"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051875"
 ---
 # <a name="get-started-with-f-in-visual-studio-code"></a>Visual Studio Code での F# の概要します。
 
@@ -16,7 +16,7 @@ ms.locfileid: "61949553"
 作業を開始できることを確認します。 [F# および ionide の概要プラグインが正しくインストールされている](install-fsharp.md#install-f-with-visual-studio-code)します。
 
 > [!NOTE]
-> Ionide の概要では、.NET Framework を生成します。F#プロジェクト、dotnet core ではなく、クロス プラットフォームの互換性の問題があることができます。 実行している場合**Linux**または**OSX**、開始する簡単な方法は使用する、[コマンド ライン ツール](https://docs.microsoft.com/en-us/dotnet/fsharp/get-started/get-started-command-line)します。
+> Ionide の概要では、.NET Framework を生成します。F#プロジェクト、dotnet core ではなく、クロス プラットフォームの互換性の問題があることができます。 実行している場合**Linux**または**OSX**、開始する簡単な方法は使用する、[コマンド ライン ツール](get-started-command-line.md)します。
 
 ## <a name="creating-your-first-project-with-ionide"></a>Ionide の概要と、最初のプロジェクトを作成します。
 

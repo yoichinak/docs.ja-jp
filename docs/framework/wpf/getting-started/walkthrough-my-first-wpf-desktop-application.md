@@ -11,12 +11,12 @@ ms.assetid: b96bed40-8946-4285-8fe4-88045ab854ed
 author: mairaw
 ms.author: mairaw
 ms.custom: vs-dotnet
-ms.openlocfilehash: 9d0abd18b2242ab21e8a915caac1ff9e3216acd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c3440ddf6cdae6b24bcf1059ab2c76d8fb957263
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64617274"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003864"
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>チュートリアル: 初めての WPF デスクトップ アプリケーション
 
@@ -45,9 +45,9 @@ ms.locfileid: "64617274"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- Visual Studio 2017 またはそれ以降
+- Visual Studio 2017 またはそれ以降 (この記事では、Visual Studio 2019 を使用)
 
-   最新バージョンの Visual Studio のインストールの詳細については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。 この記事では、Visual Studio 2019 を使用します。
+   最新バージョンの Visual Studio のインストールの詳細については、次を参照してください。 [Visual Studio のインストール](/visualstudio/install/install-visual-studio)します。
 
 ## <a name="create-the-application-project"></a>アプリケーション プロジェクトを作成します。
 
@@ -55,23 +55,21 @@ ms.locfileid: "64617274"
 
 1. Visual Basic または Visual C# のという名前で新しい WPF アプリケーション プロジェクトを作成する **`ExpenseIt`** :
 
-   1. Visual Studio を開き、選択**ファイル** > **新規** > **プロジェクト**します。
+   1. Visual Studio を開き、選択**新しいプロジェクトを作成**下、**開始**メニュー。
 
       **新しいプロジェクトを作成**ダイアログ ボックスが開きます。
 
-      ![新しいプロジェクト ダイアログを作成します。](./media/gettingstartedfigure0a.png)
-
    2. **言語**ドロップダウンで、いずれかを選択**C#** または**Visual Basic**します。
-
+      
    3. 選択、 **WPF アプリ (.NET Framework)** テンプレートと、選択**次**します。 
+     
+      ![新しいプロジェクト ダイアログを作成します。](./media/walkthrough-my-first-wpf-desktop-application/create-new-project-dialog.png)
     
-   4. 選択**新しいプロジェクトを作成**です。
+      **新しいプロジェクトを構成する**ダイアログ ボックスが開きます。
 
-      **新しいプロジェクトを構成**ダイアログ ボックスが開きます。
+   4. プロジェクト名を入力**`ExpenseIt`** 選び**作成**です。
 
-      ![新しいプロジェクト ダイアログを構成します。](./media/gettingstartedfigure0c.png)
-
-   5. プロジェクト名を入力**`ExpenseIt`** 選び**作成**です。
+      ![新しいプロジェクト ダイアログを構成します。](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
       Visual Studio は、プロジェクトを作成し、という名前の既定アプリケーション ウィンドウのデザイナーが開きます**MainWindow.xaml**します。
 
@@ -224,7 +222,7 @@ ms.locfileid: "64617274"
 
     次の図は、使用してアプリケーションを<xref:System.Windows.Navigation.NavigationWindow>ボタン。
 
-    ![ExpenseIt のサンプルのスクリーンショット](./media/gettingstartedfigure1.png)
+    ![アプリケーションを構築および実行します。](./media/walkthrough-my-first-wpf-desktop-application/build-run-application.png)
 
 2. Visual Studio に戻るにアプリケーションを閉じます。
 
@@ -290,9 +288,7 @@ ms.locfileid: "64617274"
 
     次の図は、作成したコントロールを示しています。
 
-    ![ExpenseIt のサンプルのスクリーンショット](./media/gettingstartedfigure2.png)
-
-3. Visual Studio に戻るにアプリケーションを閉じます。
+![ExpenseIt のサンプルのスクリーン ショットの名の一覧を表示します。](./media/walkthrough-my-first-wpf-desktop-application/add-application-controls.png)
 
 ## <a name="add-an-image-and-a-title"></a>イメージとタイトルを追加します。
 
@@ -326,7 +322,7 @@ ms.locfileid: "64617274"
 
 次の図は、追加したものの結果を示しています。
 
-![ExpenseIt のサンプルのスクリーンショット](./media/gettingstartedfigure3.png)
+![新しいイメージの背景とページ タイトルを示す ExpenseIt のサンプルのスクリーン ショット](./media/walkthrough-my-first-wpf-desktop-application/add-application-image-title.png)
 
 ## <a name="add-code-to-handle-events"></a>イベントを処理するコードを追加します。
 
@@ -361,7 +357,7 @@ ms.locfileid: "64617274"
 
 次の図は、UI 要素に追加*ExpenseReportPage.xaml*します。
 
-![ExpenseIt のサンプルのスクリーンショット](./media/gettingstartedfigure4.png)
+![作成した、ExpenseReportPage の UI を示す ExpenseIt のサンプル スクリーン ショット。](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 ## <a name="style-controls"></a>スタイルのコントロール
 
@@ -405,7 +401,7 @@ ms.locfileid: "64617274"
 
 6. アプリケーションをビルドして実行します。 ウィンドウの外観は、前と同じです。
 
-    ![ExpenseIt のサンプルのスクリーンショット](./media/gettingstartedfigure4.png)
+    ![ExpenseIt のサンプルは最後のセクションと同様に、同じ外観のスクリーン ショット。](./media/walkthrough-my-first-wpf-desktop-application/create-application-ui.png)
 
 7. Visual Studio に戻るにアプリケーションを閉じます。
 
@@ -473,7 +469,7 @@ ms.locfileid: "64617274"
 
 次の図の両方のページ、`ExpenseIt`アプリケーションをコントロール、レイアウト、スタイル、データ バインディング、およびデータ テンプレートを適用します。
 
-![ExpenseIt のサンプルのスクリーンショット](./media/gettingstartedfigure5.png)
+![名前の一覧と、経費報告書を示すアプリの両方のページ。](./media/walkthrough-my-first-wpf-desktop-application/application-data-templates.png)
 
 > [!NOTE]
 > このサンプルでは、WPF の特定の機能について説明し、セキュリティ、ローカリゼーション、およびアクセシビリティなどのすべてのベスト プラクティスに従っていません。 WPF と .NET アプリ開発のベスト プラクティスの包括的な対応は、次のトピックを参照してください。

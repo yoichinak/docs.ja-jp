@@ -5,12 +5,12 @@ ms.custom: updateeachrelease
 author: rlander
 ms.author: mairaw
 ms.date: 04/18/2019
-ms.openlocfilehash: a92286d23b5adee268b4635fbbdec0f5c052e1db
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b246c75896d00ad2c91ded106682e8cdd817d9d1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636445"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052682"
 ---
 # <a name="install-the-net-framework-on-windows-xp-and-windows-server-2003"></a>Windows XP と Windows Server 2003 に .NET Framework をインストールする
 
@@ -21,7 +21,7 @@ ms.locfileid: "65636445"
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) が最新バージョンです。 Windows XP と Windows Server 2003 ではサポートされていません。 [Windows 10 May 2019 Update](https://support.microsoft.com/en-us/help/4028685/windows-10-get-the-update) に付属しています。
+これらの手順は、必要な .NET Framework バージョンをインストールする場合に役立ちます。 [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) が最新バージョンです。 Windows XP と Windows Server 2003 ではサポートされていません。 [Windows 10 May 2019 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update) に付属しています。
 
 ## <a name="net-framework-403"></a>.NET Framework 4.0.3
 

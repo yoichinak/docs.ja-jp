@@ -2,12 +2,12 @@
 title: コンテナー化アプリ用の Microsoft プラットフォームとツールの概要
 description: Docker アプリケーションのライフ サイクルをサポートするために Microsoft の内容を把握するを取得します。
 ms.date: 02/15/2019
-ms.openlocfilehash: 9e7e821370b98fbda9af0ea69c13eaeab2f35acf
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 6907528a5d7ff354a312e7575531b9c608cb479f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644899"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195598"
 ---
 # <a name="introduction-to-the-microsoft-platform-andtools-for-containerized-apps"></a>Microsoft プラットフォームとコンテナー化アプリ用ツールの概要
 
@@ -27,8 +27,8 @@ ms.locfileid: "65644899"
 
 | ホスト | マイクロソフト テクノロジ | サード パーティ — Azure 接続可能 |
 | ---------------------------| ----------------------------------------------------| --------------------------------------------------------------------------------|
-| Docker アプリのプラットフォーム   | • Microsoft Visual Studio および Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Container Service<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • 任意のコード エディター (Sublime など)<br /> • 任意の言語 (Node.js、Java、Go など)<br /> • 任意のオーケストレーターとスケジューラ<br /> • 任意の Docker レジストリ<br /> |
-| Docker アプリ用の DevOps     | • Azure DevOps サービス<br /> • Microsoft Team Foundation Server<br /> • Azure Container Service<br /> • Azure Service Fabric<br /> | • GitHub、Git、Subversion など<br /> • Jenkins、Chef、Puppet、Velocity、CircleCI、TravisCI など<br /> • On-premises Docker Datacenter、Docker Swarm、Mesos DC/OS、Kubernetes など<br /> |
+| Docker アプリのプラットフォーム   | • Microsoft Visual Studio および Visual Studio Code<br /> • .NET<br /> • Microsoft Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> • Azure Container Registry<br /> | • 任意のコード エディター (Sublime など)<br /> • 任意の言語 (Node.js、Java、Go など)<br /> • 任意のオーケストレーターとスケジューラ<br /> • 任意の Docker レジストリ<br /> |
+| Docker アプリ用の DevOps     | • Azure DevOps サービス<br /> • Microsoft Team Foundation Server<br /> • Azure Kubernetes Service (AKS)<br /> • Azure Service Fabric<br /> | • GitHub、Git、Subversion など<br /> • Jenkins、Chef、Puppet、Velocity、CircleCI、TravisCI など<br /> • On-premises Docker Datacenter、Docker Swarm、Mesos DC/OS、Kubernetes など<br /> |
 | 管理と監視  | • Azure Monitor | • Marathon、Chronos など<br />|
 
 Microsoft プラットフォームとコンテナー化された Docker アプリ用ツールは表 3-1 に示すように、定義されている次のコンポーネントから成ります。
@@ -37,7 +37,7 @@ Microsoft プラットフォームとコンテナー化された Docker アプ�
 
 - **Docker アプリ用の DevOps** Docker アプリケーションを作成する開発者が使用できる[Azure DevOps サービス](https://azure.microsoft.com/services/devops/)または包括的な自動アプリケーションのライフ サイクルを構築するための Jenkins のようなその他のサード パーティ製品管理 (ALM)。
 
-  コンテナーに重点を置いた Azure DevOps サービスを使用する開発者を作成できます (Azure DevOps サービス-Git、GitHub、リモート Git リポジトリ、または Subversion) 任意の場所から継続的インテグレーション (CI) 制御、高速で反復的なプロセスでソース コードをカバーする DevOps、内部単体テスト、container 間/サービスの統合テスト、継続的デリバリー (CD)、およびリリース管理 (RM)。 開発者は、開発からステージング環境と実稼働環境の Azure コンテナー サービスへの Docker アプリケーションのリリースを自動化することもできます。
+  コンテナーに重点を置いた Azure DevOps サービスを使用する開発者を作成できます (Azure DevOps サービス-Git、GitHub、リモート Git リポジトリ、または Subversion) 任意の場所から継続的インテグレーション (CI) 制御、高速で反復的なプロセスでソース コードをカバーする DevOps、内部単体テスト、container 間/サービスの統合テスト、継続的デリバリー (CD)、およびリリース管理 (RM)。 開発者が Docker アプリケーションのリリースに Azure Kubernetes Service (AKS)、開発ステージングおよび運用環境からを自動化することもできます。
 
 - **管理と監視**IT 管理および実稼働アプリケーションと統合されたエクスペリエンスの両方のパースペクティブを統合するいくつかの方法でサービスを監視できます。
 

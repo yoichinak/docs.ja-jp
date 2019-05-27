@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 619ecf1c-1ca5-4d66-8934-62fe7aad78c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3e7a8e6509cea5f9035e3b8544aa37aa99681822
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c1ee70c2701492acd331e5faed849ff0b2e8b559
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650311"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052386"
 ---
 # <a name="serialization-and-metadata"></a>シリアル化とメタデータ
 アプリでオブジェクトをシリアル化および逆シリアル化する場合、ランタイム ディレクティブ (.rd.xml) ファイルにエントリを追加して、必要なメタデータが実行時に確実に存在するようにする必要があることがあります。 シリアライザーには次の 2 つのカテゴリがあり、それぞれランタイム ディレクティブ ファイルで異なる処理が必要です。  
@@ -39,10 +39,10 @@ ms.locfileid: "64650311"
   
  [!code-csharp[ProjectN#5](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#5)]  
   
- [!INCLUDE[net_native](../../../includes/net-native-md.md)] コンパイラは、このコードを自動的に処理します。  
+ .NET ネイティブ コンパイラでは、このコードは自動的に処理します。  
   
 ### <a name="typeof-used-outside-the-constructor"></a>コンストラクターの外部で使用される typeof  
- 次のコードのように、これらのシリアル化クラスのコンストラクターを呼び出し、コンストラクターの <xref:System.Type> パラメーターに提供する式の外部で C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) キーワードを使用した場合、[!INCLUDE[net_native](../../../includes/net-native-md.md)] コンパイラは型を解決できません。  
+ これらのシリアル化クラスのコンス トラクターの呼び出しを使用したかどうか、 C# [typeof](~/docs/csharp/language-reference/keywords/typeof.md) 、コンス トラクターに提供する式の外部キーワード<xref:System.Type>パラメーターは、次のコードのように、.NET ネイティブ コンパイラことはできません型を解決するには。  
   
  [!code-csharp[ProjectN#6](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#6)]  
   
@@ -52,7 +52,7 @@ ms.locfileid: "64650311"
 <Type Name="DataSet" Browse="Required Public" />  
 ```  
   
- 同様に、次のコードのように <xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType> などのコンストラクターを呼び出し、シリアル化する追加の <xref:System.Type> オブジェクトの配列を指定した場合も、[!INCLUDE[net_native](../../../includes/net-native-md.md)] コンパイラはこれらの型を解決できません。  
+ 同様に、コンス トラクターを呼び出すことがある場合<xref:System.Xml.Serialization.XmlSerializer.%23ctor%28System.Type%2CSystem.Type%5B%5D%29?displayProperty=nameWithType>その他の配列を指定<xref:System.Type>オブジェクトをシリアル化、ように、.NET ネイティブ コンパイラでは、次のコードでは、これらの型を解決することはできません。  
   
  [!code-csharp[ProjectN#7](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn/cs/serialize1.cs#7)]  
   

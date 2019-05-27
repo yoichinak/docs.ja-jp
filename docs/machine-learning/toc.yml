@@ -14,7 +14,7 @@
     - name: サポートの問題の分類 (多クラス分類)
       href: tutorials/github-issue-classification.md
     - name: 価格の予測 (回帰)
-      href: tutorials/taxi-fare.md
+      href: tutorials/predict-prices.md
     - name: あやめ花の分類 (K-means クラスタ リング)
       href: tutorials/iris-clustering.md
     - name: 映画レコメンダー (マトリックス因子分解)

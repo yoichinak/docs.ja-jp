@@ -9,12 +9,12 @@ helpviewer_keywords:
 - multicast event delegates
 - Windows Forms controls, events
 ms.assetid: 814a6a43-a312-4791-88d8-f75f9a4f8c4c
-ms.openlocfilehash: 3adc2891579cafff9c8aeb3e918ae74c6f3ad8a5
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fddb51bfe998c360ca418374b119ec12f25b0fad
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591018"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052291"
 ---
 # <a name="events-overview-windows-forms"></a>イベントの概要 (Windows フォーム)
 イベントとは、プログラマが応答できる、つまり、コードを使って "処理" できるアクションのことです。 イベントは、マウスのクリックやキーを押すなどのユーザー アクション、プログラム コードまたはシステムによって生成されます。
@@ -29,7 +29,7 @@ ms.locfileid: "65591018"
  させて、イベントを処理する方法については、次を参照してください。[イベント](../../standard/events/index.md)します。
 
 ## <a name="delegates-and-their-role"></a>デリゲートとその役割
- デリゲートは、イベント処理機構を作成する .NET Framework 内でよく使用されるクラスです。 デリゲートは、[!INCLUDE[vcprvc](../../../includes/vcprvc-md.md)] やその他のオブジェクト指向言語で一般的に使用される関数ポインターに似ています。 ただし、関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 また、関数ポインターには特定の関数への参照だけが含まれていますが、デリゲートはオブジェクトへの参照、およびそのオブジェクト内の 1 つ以上のメソッドへの参照で構成されています。
+ デリゲートは、イベント処理機構を作成する .NET Framework 内でよく使用されるクラスです。 デリゲートはビジュアルで通常使用される、関数ポインターに似てC++やその他のオブジェクト指向言語です。 ただし、関数ポインターとは異なり、デリゲートはオブジェクト指向で、タイプ セーフで、安全です。 また、関数ポインターには特定の関数への参照だけが含まれていますが、デリゲートはオブジェクトへの参照、およびそのオブジェクト内の 1 つ以上のメソッドへの参照で構成されています。
 
  このイベント モデルを使用して*デリゲート*それらを処理するために使用されるメソッドにイベントをバインドします。 デリゲートを使用すると、ハンドラーのメソッドを指定することにより、イベント通知のための他のクラスを登録できます。 イベントが発生すると、デリゲートは関連付けられたメソッドを呼び出します。 デリゲートを定義する方法の詳細については、次を参照してください。[イベント](../../standard/events/index.md)します。
 

@@ -18,7 +18,7 @@
       displayName: '>, <, >=, <=, greater, less'
     - name: メンバー アクセス演算子
       href: member-access-operators.md
-      displayName: '., [], ?., ?[], (), indexer, null-conditional, invocation'
+      displayName: '., [], ?., ?[], (), indexer, null-conditional, Elvis, invocation'
     - name: ポインターに関連する演算子
       href: pointer-related-operators.md
       displayName: '&, *, ->, [], +, -, ++, --, ==, !=, <, >, <=, >=, dereference, address-of, indirection'

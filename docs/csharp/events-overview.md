@@ -3,12 +3,12 @@ title: イベントの概要
 description: この概要では、.NET Core のイベントと、イベントの言語上の設計目標について説明します。
 ms.date: 06/20/2016
 ms.assetid: 9b8d2a00-1584-4a5b-8994-5003d54d8e0c
-ms.openlocfilehash: 9f14954dd2e8aeacf3c5ae70a9e891ad11a6f0d7
-ms.sourcegitcommit: 5bbfe34a9a14e4ccb22367e57b57585c208cf757
+ms.openlocfilehash: e2944100d648d90e7aa5ea5798a351b8fd382cf7
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2018
-ms.locfileid: "45747096"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051934"
 ---
 # <a name="introduction-to-events"></a>イベントの概要
 
@@ -65,7 +65,8 @@ Progress?.Invoke(this, new FileListArgs(file));
 ```csharp
 EventHandler<FileListArgs> onProgress = (sender, eventArgs) => 
     Console.WriteLine(eventArgs.FoundFile);
-lister.Progress += onProgress;
+
+fileLister.Progress += onProgress;
 ```
 
 上の画像のように、一般的にハンドラー メソッドはプレフィックス 'On' の後にイベント名を続けたものになります。
@@ -73,7 +74,7 @@ lister.Progress += onProgress;
 `-=` 演算子を利用して受信登録を解除します。
 
 ```csharp
-lister.Progress -= onProgress;
+fileLister.Progress -= onProgress;
 ```
 
 イベント ハンドラーを表す式にローカル変数が宣言されたことに注目してください。 これで受信登録解除によりハンドラーが削除されます。

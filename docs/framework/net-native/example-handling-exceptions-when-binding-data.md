@@ -1,21 +1,21 @@
-﻿---
+---
 title: 例:データ バインド時の例外の処理
 ms.date: 03/30/2017
 ms.assetid: bd63ed96-9853-46dc-ade5-7bd1b0f39110
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 25b2117de40bbe7ba36fab028526116fc01ae09b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 137459acc275629bb4608218772ae969e3fcf99a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868531"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052688"
 ---
 # <a name="example-handling-exceptions-when-binding-data"></a>例:データ バインド時の例外の処理
 > [!NOTE]
 >  このトピックでは、プレリリース ソフトウェアである .NET Native Developer Preview について述べています。 プレビュー版は、[Microsoft Connect Web サイト](https://go.microsoft.com/fwlink/?LinkId=394611)からダウンロードできます (登録が必要です)。  
   
- 次の例は、[!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンでコンパイルされたアプリがデータをバインドしようとしたときにスローされる [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) 例外の解決方法を示しています。 例外情報は次のとおりです。  
+ 次の例では、解決する方法を示しています、 [MissingMetadataException](../../../docs/framework/net-native/missingmetadataexception-class-net-native.md) .NET ネイティブ ツール チェーンでコンパイルされたアプリがデータ バインドを試みるとスローされる例外です。 例外情報は次のとおりです。  
   
 ```  
 This operation cannot be carried out as metadata for the following type was removed for performance reasons:   

@@ -1,15 +1,15 @@
 ---
-title: F#コーディング規則
+title: F# のコーディング規則
 description: 書き込み時に、一般的なガイドラインと表現方法を説明しますF#コード。
 ms.date: 05/14/2018
-ms.openlocfilehash: 1ef016184180eb8d233295e8985903e07693ad26
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902136"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052792"
 ---
-# <a name="f-coding-conventions"></a>F#コーディング規則
+# <a name="f-coding-conventions"></a>F# のコーディング規則
 
 大規模な F# を使用した経験から、次の規則が確立されますコードベースです。 [優れた F# コードの 5 つの原則](index.md#five-principles-of-good-f-code)各推奨事項の基盤となっています。 関連している、 [F# コンポーネント デザインのガイドライン](component-design-guidelines.md)が、F# コード、ライブラリなどだけでなく、コンポーネントに適用できます。
 
@@ -611,7 +611,7 @@ Visual Studio Code の API と対話するときに、クラスの必要はあ�
 
 ## <a name="type-abbreviations"></a>型略称
 
-[省略形を入力](../language-reference/type-abbreviations.md)関数シグネチャ、またはより複雑な型などの別の型にラベルを割り当てるに便利です。 たとえば、次のエイリアスがそのと計算の定義に必要なものにラベルを割り当てます[CNTK](https://www.microsoft.com/en-us/cognitive-toolkit/)、ディープ ラーニング ライブラリ。
+[省略形を入力](../language-reference/type-abbreviations.md)関数シグネチャ、またはより複雑な型などの別の型にラベルを割り当てるに便利です。 たとえば、次のエイリアスがそのと計算の定義に必要なものにラベルを割り当てます[CNTK](https://docs.microsoft.com/cognitive-toolkit/)、ディープ ラーニング ライブラリ。
 
 ```fsharp
 open CNTK

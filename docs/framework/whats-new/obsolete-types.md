@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: e636d024-0fac-45eb-b721-25a8c0ceca8f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 304c2ed354c2b3bfe6333550810dde6c779f2e21
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e106709c7410b289e7aab2b5cf924466f2eeb501
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663440"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959929"
 ---
 # <a name="obsolete-types-in-the-net-framework"></a>.NET Framework で互換性のために残されている型
 <a name="introduction"></a> この記事の表に、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] で互換性のために残されている型をアセンブリ別に示します。 各アセンブリで互換性のために残されている型と推奨される代替型の一覧を表示するには、以下のリンクを使用してください。 これらの型は廃止されているため、そのメンバーもすべて廃止されます。 .NET Framework クラス ライブラリで互換性のために残されているその他のメンバーの一覧については、[互換性のために残されているメンバー](obsolete-members.md)に関する記事をご覧ください。
@@ -512,8 +512,8 @@ ms.locfileid: "64663440"
 
 |型|メッセージ|
 |----------|-------------|
-|<xref:System.Activities.Statements.Interop>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br />Workflow Foundation 3.0 の型の使用は非推奨とされました。 代わりに、<xref:System.Activities>.\* の Workflow 4.0 の型を使用してください。|
-|<xref:System.Activities.Tracking.InteropTrackingRecord>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br />Workflow Foundation 3.0 の型の使用は非推奨とされました。 代わりに、<xref:System.Activities>.\* の Workflow 4.0 の型を使用してください。|
+|<xref:System.Activities.Statements.Interop?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br />Workflow Foundation 3.0 の型の使用は非推奨とされました。 代わりに、<xref:System.Activities>.\* の Workflow 4.0 の型を使用してください。|
+|<xref:System.Activities.Tracking.InteropTrackingRecord?displayProperty=nameWithType>|最初に .NET Framework 4.5 で非推奨とされました。<br /><br />Workflow Foundation 3.0 の型の使用は非推奨とされました。 代わりに、<xref:System.Activities>.\* の Workflow 4.0 の型を使用してください。|
 |<xref:System.Workflow.Runtime> 名前空間のすべての型|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
 |<xref:System.Workflow.Runtime.Configuration> 名前空間のすべての型|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|
 |<xref:System.Workflow.Runtime.DebugEngine> を除く<xref:System.Workflow.Runtime.DebugEngine.DebugEngineCallback> 名前空間のすべての型|最初に .NET Framework 4.5 で非推奨とされました。<br /><br /> System.Workflow.\* 型の使用は非推奨とされます。 代わりに、<xref:System.Activities>.\* の新しい型を使用してください。|

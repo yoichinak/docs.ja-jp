@@ -2,12 +2,12 @@
 title: リレーショナル データベースを azure に移行します。
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |リレーショナル データベースを azure に移行します。
 ms.date: 04/28/2018
-ms.openlocfilehash: 1c09172f0948551edfe059be6f43d7a02278203d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3d4f03e61144bb6a442a50916d7fd024d38ec611
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638889"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051930"
 ---
 # <a name="migrate-your-relational-databases-to-azure"></a>リレーショナル データベースを azure に移行します。
 
@@ -81,7 +81,7 @@ Azure SQL Database には次の利点があります。
 
 移行オプションの 1 つは、元のリレーショナル データベース管理システム (RDBMS) では、Oracle、IBM DB2、MySQL、PostgreSQL、または SQL Server を含む Azure VM で実行されているようなサーバーを移動します。 最小限の変更、またはまったく変更せずにクラウドへの移行を最速をまったく必要とする既存のアプリケーションがある場合は、クラウドで IaaS への直接の移行が公正なオプションにあります。 すべてのクラウドの利点を活用するために最善の方法ができない可能性がありますが、最も高速な初期パスである可能性があります。
 
-現時点では、Microsoft Azure がサポートする最大[331 の別のデータベース サーバー](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/category/databases?page=1&subcategories=databases-all) IaaS Vm としてデプロイします。 SQL Server、Oracle、MySQL、PostgreSQL、および IBM DB2 の場合のような一般的な RDBMS および MongoDB、Cassandra、DataStax、MariaDB、Cloudera などの他の多くの NoSQL データベースが含まれます。
+現時点では、Microsoft Azure がサポートする最大[331 の別のデータベース サーバー](https://azuremarketplace.microsoft.com/marketplace/apps/category/databases?page=1&subcategories=databases-all) IaaS Vm としてデプロイします。 SQL Server、Oracle、MySQL、PostgreSQL、および IBM DB2 の場合のような一般的な RDBMS および MongoDB、Cassandra、DataStax、MariaDB、Cloudera などの他の多くの NoSQL データベースが含まれます。
 
 > [!NOTE]
 > 移動するは、RDBMS に Azure VM (IaaS のため)、データをクラウドに移行する最も簡単な方法があります、このアプローチには、(データベース管理者および IT プロフェッショナル) は、IT チームにかなりの投資が必要があります。 企業のチームは、設定および高可用性、ディザスター リカバリー、および SQL Server の修正プログラムを管理することができる必要があります。 このコンテキストでは、完全な管理者権限を持つ、カスタマイズされた環境も必要です。

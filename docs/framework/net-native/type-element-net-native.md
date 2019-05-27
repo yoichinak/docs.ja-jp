@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1e88d368-a886-4f1e-8eb6-6127979a9fce
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a92e6627ba937b10b183a833a005792f0a51f921
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2d5541cc34f8967916e4896fd5f9be82edcb332f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033125"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051995"
 ---
 # <a name="type-element-net-native"></a>\<型 > 要素 (.NET ネイティブ)
 クラスや構造体などの特定の型に実行時ポリシーを適用します。  
@@ -51,13 +51,13 @@ ms.locfileid: "62033125"
   
 ## <a name="name-attribute"></a>Name 属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*type_name*|型名。 この `<Type>` 要素が [\<Namespace>](../../../docs/framework/net-native/namespace-element-net-native.md) 要素または別の `<Type>` 要素のいずれかの子である場合、*type_name* には名前空間なしで型の名前を含めることができます。 それ以外の場合は、*type_name* には完全修飾型名を含める必要があります。|  
   
 ## <a name="all-other-attributes"></a>その他すべての属性  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |*policy_setting*|このポリシーの種類に適用する設定です。 指定できる値は、`All`、`Auto`、`Excluded`、`Public`、`PublicAndInternal`、`Required Public`、`Required PublicAndInternal`、および `Required All` です。 詳細については、「[ランタイム ディレクティブのポリシー設定](../../../docs/framework/net-native/runtime-directive-policy-settings.md)」を参照してください。|  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62033125"
   
  [!code-csharp[ProjectN_Reflection#3](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/browsegenerictype1.cs#3)]  
   
- <xref:System.Collections.Generic.List%601> クラスのメタデータは [!INCLUDE[net_native](../../../includes/net-native-md.md)] ツール チェーンにより自動的に含められないため、例では実行時に要求されたメンバー情報を表示できません。 必要なメタデータを提供するには、次の `<Type>` 要素をランタイム ディレクティブ ファイルに追加します。 親要素 [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) を指定しているため、`<Type>` 要素で完全修飾型名を指定する必要はないことに注意してください。  
+ のメタデータ、<xref:System.Collections.Generic.List%601>クラスは、.NET ネイティブ ツール チェーンによって自動的に含められないと、実行時に指定されたメンバー情報を表示する例は失敗します。 必要なメタデータを提供するには、次の `<Type>` 要素をランタイム ディレクティブ ファイルに追加します。 親要素 [<Namespace\>](../../../docs/framework/net-native/namespace-element-net-native.md) を指定しているため、`<Type>` 要素で完全修飾型名を指定する必要はないことに注意してください。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
@@ -120,7 +120,7 @@ ms.locfileid: "62033125"
   
  [!code-csharp[ProjectN_Reflection#1](../../../samples/snippets/csharp/VS_Snippets_CLR/projectn_reflection/cs/propertyinfo1.cs#1)]  
   
- <xref:System.String> オブジェクトのメタデータは使用できないため、<xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> ツール チェーンでコンパイルした場合、実行時に <xref:System.NullReferenceException> メソッドを呼び出すと [!INCLUDE[net_native](../../../includes/net-native-md.md)] 例外がスローされます。 例外を排除し、必要なメタデータを提供するには、次の `<Type>` 要素をランタイム ディレクティブ ファイルに追加します。  
+ のメタデータ、<xref:System.String>オブジェクトを使用できないへの呼び出し、<xref:System.Reflection.PropertyInfo.GetValue%28System.Object%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>メソッドがスローされます、<xref:System.NullReferenceException>実行時例外、.NET ネイティブ ツール チェーンでコンパイルされたときの時間します。 例外を排除し、必要なメタデータを提供するには、次の `<Type>` 要素をランタイム ディレクティブ ファイルに追加します。  
   
 ```xml  
 <Directives xmlns="http://schemas.microsoft.com/netfx/2013/01/metadata">  
