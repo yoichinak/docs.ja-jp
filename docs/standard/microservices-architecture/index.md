@@ -2,12 +2,12 @@
 title: .NET マイクロサービス。 コンテナー化された .NET アプリケーションのアーキテクチャ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスはモジュール式で独自に展開可能なサービスです。 Docker コンテナー (Linux と Windows 向け) は、サービスとその依存関係を 1 つの単位にバンドル化する (その後、分離された環境で実行される) ことで、展開とテストを簡略化します。
 ms.date: 01/07/2019
-ms.openlocfilehash: bbd72b02ae446bbd0df31889679023d3b5040db8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a348a9c122ef7f0293a1385aa05dc98f61deab7e
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644406"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195971"
 ---
 # <a name="net-microservices-architecture-for-containerized-net-applications"></a>.NET マイクロサービス:コンテナー化された .NET アプリケーションのアーキテクチャ
 
@@ -31,7 +31,7 @@ ms.locfileid: "65644406"
 
 ## <a name="introduction"></a>はじめに
 
-企業は、コンテナーを使用して、コストの節減、展開の問題の解決、および DevOps と製造作業の向上を実現しつつあります。 Microsoft では、Azure Container Service や Azure Service Fabric などの製品を作成したり、Docker、Mesosphere、Kubernetes などの業界リーダーと提携することで、Windows および Linux 用のコンテナーの新技術をリリースしています。 これらの製品は、企業が使用しているプラットフォームやツールに関係なく、クラウドの速度とスケールでアプリケーションを構築および展開することに役立つコンテナー ソリューションを提供します。
+企業は、コンテナーを使用して、コストの節減、展開の問題の解決、および DevOps と製造作業の向上を実現しつつあります。 Microsoft では、Azure Kubernetes Service や Azure Service Fabric などの製品を作成したり、Docker、Mesosphere、Kubernetes などの業界リーダーと提携することで、Windows および Linux 用のコンテナーの新技術をリリースしています。 これらの製品は、企業が使用しているプラットフォームやツールに関係なく、クラウドの速度とスケールでアプリケーションを構築および展開することに役立つコンテナー ソリューションを提供します。
 
 Docker は、コンテナー業界では事実上の標準になりつつあり、Windows と Linux のエコシステムで最も重要なベンダーでサポートされています  (Microsoft は Docker をサポートする主要なクラウド ベンダーの 1 つです)。将来、Docker は、クラウドまたはオンプレミスのあらゆるデータセンターで広く使用されるようになるでしょう。
 
@@ -47,7 +47,7 @@ Docker は、コンテナー業界では事実上の標準になりつつあり�
 
 ## <a name="version"></a>Version
 
-このガイドは、**.NET Core 2.2** バージョンに加え、.NET Core 2.2 と同時期に起こっているテクノロジーの "波" (つまり  Azure とサードパーティのテクノロジー) に関連する多数の最新情報も扱うように改訂されています。 本書がバージョン **2.2** に更新されているのはそれが理由です。 
+このガイドは、 **.NET Core 2.2** バージョンに加え、.NET Core 2.2 と同時期に起こっているテクノロジーの "波" (つまり  Azure とサードパーティのテクノロジー) に関連する多数の最新情報も扱うように改訂されています。 本書がバージョン **2.2** に更新されているのはそれが理由です。 
 
 ## <a name="what-this-guide-does-not-cover"></a>このガイドに含まれないもの
 

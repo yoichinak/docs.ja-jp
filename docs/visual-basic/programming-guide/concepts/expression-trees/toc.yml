@@ -9,3 +9,5 @@
       href: how-to-use-expression-trees-to-build-dynamic-queries.md
     - name: 式ツリーのデバッグ
       href: debugging-expression-trees-in-visual-studio.md
+    - name: DebugView の構文
+      href: debugview-syntax.md
