@@ -14,12 +14,12 @@ ms.assetid: bf6d9823-4c2d-48af-b280-919c5af66ae9
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 735fedc5869ab82d49ef4d9068c67302bf825e2e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ac4de843b3a134b840fc37e3c1d8327fe0010d79
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634678"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65960322"
 ---
 # <a name="character-encoding-in-net"></a>.NET での文字エンコード
 文字は、さまざまな方法で表現できる抽象エンティティです。 文字エンコーディングとは、サポートされている文字セットの各文字を、その文字を表す値と組み合わせる体系です。 たとえばモールス符号は、ローマ字の各文字を、電信線での送信に適したドットとダッシュのパターンと組み合わせる文字エンコーディングです。 コンピューターの文字エンコーディングは、サポートされている文字セットの各文字を、その文字を表す数値と組み合わせます。 文字エンコーディングには、次の 2 つの異なるコンポーネントがあります。  
@@ -78,8 +78,8 @@ ms.locfileid: "64634678"
   
  これらのエンコーディングを使用することにより、Unicode 文字だけでなく、レガシ アプリケーションで最もよく使用されているエンコーディングにも対応できます。 また、 <xref:System.Text.Encoding> から派生するクラスを定義し、そのメンバーをオーバーライドして、カスタム エンコーディングを作成することもできます。  
   
-### <a name="platform-notes-includenetcoreincludesnet-core-mdmd"></a>プラットフォームに関する注意事項: [!INCLUDE[net_core](../../../includes/net-core-md.md)]  
- 既定で、 [!INCLUDE[net_core](../../../includes/net-core-md.md)] では、コード ページ 28591 以外のコード ページ エンコーディングや Unicode エンコーディング (UTF-8 や UTF-16 など) を使用できません。 ただし、使うアプリに、.NET を対象とする標準の Windows アプリに含まれているコード ページ エンコーディングを追加できます。 詳細については、「 <xref:System.Text.CodePagesEncodingProvider> 」のトピックを参照してください。  
+### <a name="platform-notes-net-core"></a>プラットフォームに関する注意事項: .NET Core  
+ 既定で、.NET Core では、コード ページ 28591 以外のコード ページ エンコーディングや Unicode エンコーディング (UTF-8 や UTF-16 など) を使用できません。 ただし、使うアプリに、.NET を対象とする標準の Windows アプリに含まれているコード ページ エンコーディングを追加できます。 詳細については、「 <xref:System.Text.CodePagesEncodingProvider> 」のトピックを参照してください。  
   
 <a name="Selecting"></a>   
 ## <a name="selecting-an-encoding-class"></a>エンコーディング クラスの選択  

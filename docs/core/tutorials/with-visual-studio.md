@@ -5,12 +5,12 @@ author: BillWagner
 ms.author: wiwagn
 ms.date: 09/13/2017
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: df91d9da1f743e17072ad6106d0c4e06d751c2ea
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: b92c3b293b37921e1a8b557a7842027ecce8851c
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612814"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959253"
 ---
 # <a name="build-a-c-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 で .NET Core を使用して C# Hello World アプリケーションを構築する
 
@@ -61,7 +61,7 @@ ms.locfileid: "59612814"
 
    [!code-csharp[GettingStarted#1](../../../samples/snippets/csharp/getting_started/with_visual_studio/helloworld.cs#1)]
 
-   このコードでは、既存の <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>、<xref:System.Console.Write%2A?displayProperty=nameWithType>、および <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> ステートメントを置き換えます。
+   このコードにより、`Main` メソッドのコンテンツが置換されます。
 
    ![Main メソッドが更新された Visual Studio プログラムの C シャープ ファイル](./media/with-visual-studio/visual-csharp-code-window.png)
 

@@ -2,12 +2,12 @@
 title: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 description: Kubernetes アプリケーション ライフサイクルを開発しながら、高いスケーラビリティおよび可用性と Azure Dev Spaces の可能性のためにマイクロサービスと複数のコンテナー アプリケーションを調整するオプションについて説明します。
 ms.date: 09/20/2018
-ms.openlocfilehash: 3b7383f6153b787ce8bfad87e3902c34afba0fb2
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 27155736c6b5308d4794b17e5f5bd0b93109b5c1
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644889"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196034"
 ---
 # <a name="orchestrating-microservices-and-multi-container-applications-for-high-scalability-and-availability"></a>高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
 
@@ -101,7 +101,7 @@ Azure Kubernetes Service によって、一般的な Docker クラスタリン�
 
 ## <a name="getting-started-with-azure-kubernetes-service-aks"></a>Azure Kubernetes Service (AKS) の使用の開始 
 
-AKS の使用を開始するには、Azure portal から、または CLI を使用して AKS クラスターをデプロイします。 Azure Container Service クラスターの詳細については、[Azure Kubernetes Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)に関するページを参照してください。
+AKS の使用を開始するには、Azure portal から、または CLI を使用して AKS クラスターをデプロイします。 Azure の Kubernetes クラスター デプロイの詳細については、[Azure Kubernetes Service (AKS) クラスターのデプロイ](https://docs.microsoft.com/azure/aks/kubernetes-walkthrough-portal)に関するページを参照してください。
 
 AKS の一部として既定でインストールされるソフトウェアはいずれも無料です。 既定のすべてのオプションはオープン ソース ソフトウェアと共に実装されます。 AKS は Azure 内の複数の仮想マシンで使用できます。 選択したコンピューティング インスタンスと、ストレージやネットワーキングなどの利用された他の基になるインフラストラクチャ リソースにのみ課金されます。 AKS 自体に従量課金はありません。
 

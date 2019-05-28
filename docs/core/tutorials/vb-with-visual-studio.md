@@ -7,12 +7,12 @@ ms.date: 08/07/2017
 dev_langs:
 - vb
 ms.custom: vs-dotnet, seodec18
-ms.openlocfilehash: faa801d8ded90b1a0f68eac1824e60ee6ba468a4
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 32e2acedb0f837703fb716c45887672494f8d40f
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612681"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959268"
 ---
 # <a name="build-a-visual-basic-hello-world-application-with-the-net-core-sdk-in-visual-studio-2017"></a>Visual Studio 2017 で .NET Core を使用して Visual Basic Hello World アプリケーションを構築する
 
@@ -28,7 +28,7 @@ ms.locfileid: "59612681"
 
 まず、シンプルな "Hello World" コンソール アプリケーションを作成してみましょう。 この場合は、以下の手順に従ってください。
 
-1. Visual Studio 2017 を起動します。 **[ファイル]** > **[新規作成]** > **[プロジェクト]** をメニュー バーから選択します。 [*新しいプロジェクト*\*] ダイアログで、**[Visual Basic]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに "HelloWorld" と入力します。 **[OK]** ボタンを選択します。
+1. Visual Studio 2017 を起動します。 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** をメニュー バーから選択します。 [*新しいプロジェクト*\*] ダイアログで、 **[Visual Basic]** ノードを選択し、 **[.NET Core]** ノードを選択します。 次に、 **[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに "HelloWorld" と入力します。 **[OK]** ボタンを選択します。
 
    ![コンソール アプリが選択された状態の [新しいプロジェクト] ダイアログ](./media/vb-with-visual-studio/visual-studio-new-project.png)
 
@@ -47,7 +47,7 @@ ms.locfileid: "59612681"
 
    このコードは、任意のキーを押すようにユーザーにメッセージを表示し、キーが押されるまでプログラムを一時停止します。
 
-1. メニュー バーで **[ビルド]** > **[ソリューションのビルド]** の順に選択します。 これにより、プログラムが IL (中間言語) にコンパイルされ、それが JIT (just-in-time) コンパイラによってバイナリ コードに変換されます。
+1. メニュー バーで **[ビルド]**  >  **[ソリューションのビルド]** の順に選択します。 これにより、プログラムが IL (中間言語) にコンパイルされ、それが JIT (just-in-time) コンパイラによってバイナリ コードに変換されます。
 
 1. ツールバー上の緑色の矢印の付いた **HelloWorld** ボタンを選択して、プログラムを実行します。
 
@@ -63,15 +63,15 @@ ms.locfileid: "59612681"
 
    [!code-vb[GettingStarted#1](../../../samples/snippets/core/tutorials/vb-with-visual-studio/helloworld.vb#1)]
 
-   このコードでは、既存の <xref:System.Console.WriteLine%2A?displayProperty=nameWithType>、<xref:System.Console.Write%2A?displayProperty=nameWithType>、および <xref:System.Console.ReadKey%2A?displayProperty=nameWithType> ステートメントを置き換えます。
+   このコードにより、`Main` メソッドのコンテンツが置換されます。
 
    ![Main メソッドが更新された Visual Studio プログラム ファイル](./media/vb-with-visual-studio/visual-basic-code-window.png)
 
    このコードは、"What is your name?" と コンソール ウィンドウに表示して、ユーザーが文字列を入力して Enter キーを押すまで待機します。 これは文字列を `name` という変数に格納します。 さらに現在の現地時刻を含む <xref:System.DateTime.Now?displayProperty=nameWithType> プロパティの値を取得して、それを `currentDate` という変数に代入します。 最後に[挿入文字列](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md)を使用して、これらの値をコンソール ウィンドウに表示します。
 
-1. **[ビルド]** > **[ソリューションのビルド]** と選択して、プログラムをコンパイルします。
+1. **[ビルド]**  >  **[ソリューションのビルド]** と選択して、プログラムをコンパイルします。
 
-1. Visual Studio で、ツールバーの緑色の矢印を選択するか、F5 を押すか、メニューで **[デバッグ]** > **[デバッグの開始]** メニュー アイテムを選択して、プログラムをデバッグ モードで実行します。 プロンプトに対し、名前を入力し、Enter キーを押します。
+1. Visual Studio で、ツールバーの緑色の矢印を選択するか、F5 を押すか、メニューで **[デバッグ]**  >  **[デバッグの開始]** メニュー アイテムを選択して、プログラムをデバッグ モードで実行します。 プロンプトに対し、名前を入力し、Enter キーを押します。
 
    ![プログラムの出力が変更されたコンソール ウィンドウ](./media/with-visual-studio/hello-world-update.png)
 

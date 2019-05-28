@@ -3,60 +3,56 @@ title: Windows 10 への .NET Framework のインストール
 description: Windows 10 または Windows Server 2016 に .NET Framework をインストールする方法について説明します。
 author: rlander
 ms.author: mairaw
-ms.date: 04/10/2018
+ms.date: 04/18/2019
 ms.custom: updateeachrelease
-ms.openlocfilehash: db5c6a45db299d716b2fdd115086e0dbc5952a59
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 69c647e57dead3b4f61bb45202c6b039099f0499
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204302"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052170"
 ---
 # <a name="install-the-net-framework-on-windows-10-and-windows-server-2016-and-later"></a>Windows 10 と Windows Server 2016 以降に .NET Framework をインストールする
 
-.NET Framework は、Windows でさまざまなアプリケーションを実行するために必要です。 この記事の指示は、必要なバージョンの .NET Framework をインストールする際に役立ちます。 最新版は [.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) です。
+.NET Framework は、Windows でさまざまなアプリケーションを実行するために必要です。 この記事の指示は、必要なバージョンの .NET Framework をインストールする際に役立ちます。 最新版は [.NET Framework 4.8](https://github.com/Microsoft/dotnet/tree/master/releases/net48) です。
 
 このページをご覧になっている理由は、アプリケーションを実行しようとして次のようなダイアログがコンピューターに表示されたからではないでしょうか。
 
 ![このアプリケーションを開始できませんでした。](./media/this-application-could-not-be-started.png)
 
-## <a name="net-framework-472"></a>.NET Framework 4.7.2
+## <a name="net-framework-48"></a>.NET Framework 4.8
 
-.NET Framework 4.7.2 は次の Windows に付属しています。
+.NET Framework 4.8 は次の Windows に付属しています。
 
-* [Windows 10 October 2018 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
-
-* [Windows 10 April 2018 Update](https://www.microsoft.com/software-download/windows10)
-
-* Windows Server 2019
-
-* Windows Server、バージョン 1809
-
-* Windows Server、バージョン 1803
+* [Windows 10 May 2019 Update](https://support.microsoft.com/help/4028685/windows-10-get-the-update)
 
 > [!div class="button"]
-> [.NET Framework 4.7.2 のダウンロード](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472)
+> [.NET Framework 4.8 のダウンロード](https://dotnet.microsoft.com/download/dotnet-framework/net48)
 
-[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) は、.NET Framework 4.0 から 4.7.1 用に構築されたアプリケーションを実行するために使用できます。
+[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) は、.NET Framework 4.0 から 4.7.2 用に構築されたアプリケーションを実行するために使用できます。
 
-[.NET Framework 4.7.2](https://dotnet.microsoft.com/download/dotnet-framework-runtime/net472) は次の Windows にインストールできます。
+[.NET Framework 4.8](https://dotnet.microsoft.com/download/dotnet-framework/net48) は次の Windows にインストールできます。
 
+* Windows 10 October 2018 Update (バージョン 1809)
+* Windows 10 April 2018 Update (バージョン 1803)
 * Windows 10 Fall Creators Update (バージョン 1709)
 * Windows 10 Creators Update (バージョン 1703)
 * Windows 10 Anniversary Update (バージョン 1607)
-* Windows Server、バージョン 1709
+* Windows Server 2019
+* Windows Server、バージョン 1809
+* Windows Server、バージョン 1803
 * Windows Server 2016
 
-.NET Framework 4.7.2 はサポートされていません。
+.NET Framework 4.8 はサポートされていません。
 
 * Windows 10 1507
 * Windows 10 1511
 
-Windows 10 1507 または 1511 を使用しているとき、.NET Framework 4.7.2 をインストールする場合、それらより新しい Windows 10 バージョンに先にアップグレードする必要があります。
+Windows 10 1507 または 1511 を使用しているとき、.NET Framework 4.8 をインストールする場合、それらより新しい Windows 10 バージョンに先にアップグレードする必要があります。
 
 ## <a name="net-framework-462"></a>.NET Framework 4.6.2
 
-[.NET Framework 4.6.2](https://www.microsoft.com/en-us/download/details.aspx?id=53345) は Windows 10 1507 と 1511 でサポートされている最も新しい .NET Framework バージョンです。
+[.NET Framework 4.6.2](https://www.microsoft.com/download/details.aspx?id=53345) は Windows 10 1507 と 1511 でサポートされている最も新しい .NET Framework バージョンです。
 
 .NET Framework 4.6.2 は、.NET Framework 4.0 から 4.6.2 用に構築されたアプリケーションをサポートします。
 
@@ -74,7 +70,7 @@ Windows 10 1507 または 1511 を使用しているとき、.NET Framework 4.7.
 
 - 以降のバージョンが既にインストールされている場合、前のバージョンの .NET Framework をコンピューターにインストールすることはできません。
 
-- .NET Framework 4.x バージョンは、4.0 からそのバージョンまでの .NET Framework 用に構築されたアプリケーションを実行するために使用できます。 たとえば、.NET Framework 4.7 は、.NET Framework 4.0 から 4.7 用に構築されたアプリケーションを実行するために使用できます。 最新版 (.NET Framework 4.7.2) は、4.0 以降のすべての .NET Framework バージョンで構築されたアプリケーションの実行に使用できます。
+- .NET Framework 4.x バージョンは、4.0 からそのバージョンまでの .NET Framework 用に構築されたアプリケーションを実行するために使用できます。 たとえば、.NET Framework 4.7 は、.NET Framework 4.0 から 4.7 用に構築されたアプリケーションを実行するために使用できます。 最新版 (.NET Framework 4.8) は、4.0 以降のすべての .NET Framework バージョンで構築されたアプリケーションの実行に使用できます。
 
 ダウンロード可能な .NET Framework バージョンの一覧は、[.NET ダウンロード](https://www.microsoft.com/net/download?utm_source=ms-docs&utm_medium=referral) ページでご覧ください。
 

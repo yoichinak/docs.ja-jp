@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: 26e3d285-24c3-435c-a797-9fe5affb8525
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: cc7a0991ae308f1c61026e946021d22da9a4bc3b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 032958c24e03025fc3fc3eee2aae40bdd4491e7b
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583544"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052733"
 ---
 # <a name="net-framework-development-guide"></a>.NET Framework の開発ガイド
 ここでは、.NET Framework アプリの作成、構成、デバッグ、保護、および配置を行う方法について説明します。 また、動的プログラミング、相互運用性、拡張性、メモリ管理、スレッド処理などの技術領域に関する情報も提供します。  
@@ -48,7 +48,7 @@ ms.locfileid: "65583544"
  構成ファイルを使用して、.NET Framework アプリを再コンパイルすることなく設定を変更する方法を説明します。  
   
  [.NET ネイティブによるアプリのコンパイル](../../docs/framework/net-native/index.md)  
- [!INCLUDE[net_native](../../includes/net-native-md.md)] プリコンパイル テクノロジを使用して、Windows ストア アプリをビルドおよび配置する方法について説明します。 [!INCLUDE[net_native](../../includes/net-native-md.md)] は、マネージド コード (C#) で記述され、.NET Framework を対象とするアプリをネイティブ コードにコンパイルします。  
+ .NET Native プリコンパイル テクノロジを使用して、Windows ストア アプリをビルドおよび配置する方法について説明します。 .NET Native は、マネージド コード (C#) で記述され、.NET Framework を対象とするアプリをネイティブ コードにコンパイルします。  
   
  [セキュリティ](../../docs/standard/security/index.md)  
  .NET Framework において安全なアプリの開発を促進するクラスおよびサービスに関する情報を示します。  

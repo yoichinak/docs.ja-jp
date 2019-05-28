@@ -7,12 +7,12 @@ f1_keywords:
 - fixed
 helpviewer_keywords:
 - fixed keyword [C#]
-ms.openlocfilehash: a852f36c05075365ced8ec39457b15601ca3c3fb
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2c49c8517e15534121b0f8dbc04902b46a92ef20
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877085"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959369"
 ---
 # <a name="fixed-statement-c-reference"></a>fixed ステートメント (C# リファレンス)
 
@@ -63,13 +63,11 @@ fixed (byte* ps = srcarray, pd = dstarray)
 }
 ```
 
-スタックにメモリを割り当てることができ、スタックはガベージ コレクションの対象にならないので、固定する必要はありません。 詳しくは、「[stackalloc](stackalloc.md)」をご覧ください。
-
-[!code-csharp[Initializing multiple pointers](../../../../samples/snippets/csharp/keywords/FixedKeywordExamples.cs#4)]
+スタックにメモリを割り当てることができ、スタックはガベージ コレクションの対象にならないので、固定する必要はありません。 それを行うには、[`stackalloc` 演算子](stackalloc.md)を使用します。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
- [!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
+詳細については、「[C# 言語仕様](~/_csharplang/spec/introduction.md)」の [fixed ステートメント](~/_csharplang/spec/unsafe-code.md#the-fixed-statement)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

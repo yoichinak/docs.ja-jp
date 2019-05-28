@@ -3,12 +3,12 @@ title: .NET Core について
 description: .NET Core について説明します。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: 87514b476124196c835e4b22154f9bbaca7482a5
-ms.sourcegitcommit: 558d78d2a68acd4c95ef23231c8b4e4c7bac3902
+ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
+ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/09/2019
-ms.locfileid: "59296408"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66003754"
 ---
 # <a name="about-net-core"></a>.NET Core について
 
@@ -17,9 +17,9 @@ ms.locfileid: "59296408"
 - **クロスプラットフォーム:** Windows、macOS、Linux の[オペレーティング システム](https://github.com/dotnet/core/blob/master/os-lifecycle-policy.md)で実行されます。
 - **アーキテクチャ全体で一貫性がある:** x64、x86、ARM を含めた複数のアーキテクチャ上でコードが同じ動作で実行されます。
 - **コマンドライン ツール:** ローカル開発と継続的インテグレーションのシナリオで使用できる、使いやすいコマンドライン ツールが含まれます。
-- **柔軟な展開:** アプリに含めることも、ユーザー全体またはコンピューター全体に side-by-side (横並び) にインストールすることもできます。 [Docker コンテナー](docker/index.md)で使用できます。
+- **柔軟な展開:** アプリに含めることも、横並びにインストールすること (ユーザー全体またはシステム全体のインストール) もできます。 [Docker コンテナー](docker/index.md)で使用できます。
 - **互換性:** .NET Core は、[.NET Standard](../standard/net-standard.md) 経由で .NET Framework、Xamarin、Mono と互換性があります。
-- **オープン ソース:**.NET Core プラットフォームはオープン ソースであり、MIT および Apache 2 ライセンスを使用します。 .NET Core は [.NET Foundation](https://dotnetfoundation.org/) プロジェクトです。
+- **オープン ソース:** .NET Core プラットフォームはオープン ソースであり、MIT および Apache 2 ライセンスを使用します。 .NET Core は [.NET Foundation](https://dotnetfoundation.org/) プロジェクトです。
 - **Microsoft によるサポート:** .NET Core は、[.NET Core サポート](https://www.microsoft.com/net/core/support/)ごとに Microsoft によってサポートされます。
 
 ## <a name="languages"></a>言語
@@ -61,7 +61,7 @@ ms.locfileid: "59296408"
 - [ASP.NET Core ランタイム](https://www.microsoft.com/net/download/dotnet-core/2.1) - ASP.NET Core ランタイムおよび .NET Core のランタイムおよびフレームワーク ライブラリが含まれています。
 - [.NET core SDK](https://www.microsoft.com/net/download/dotnet-core/2.1) -- .NET CLI ツール、ASP.NET Core ランタイム、.NET Core ランタイムおよびフレームワークが含まれています。
 
-### <a name="open-source"></a>オープン ソース
+### <a name="open-source"></a>ソースを開く
 
 [.NET Core](https://github.com/dotnet/core) はオープン ソース ([MIT ライセンス](https://github.com/dotnet/core/blob/master/LICENSE.TXT)) であり、2014 年に Microsoft によって [.NET Foundation](https://dotnetfoundation.org) に提供されたものです。 現在では、最もアクティブな .NET Foundation プロジェクトの 1 つとなっています。 個人、学術、商用などの目的で、個人および企業が自由に採用できます。 複数の企業が、アプリ、ツール、新しいプラットフォーム、およびホスティング サービスの一部として .NET Core を使用しています。 これらの企業の一部は、GitHub の .NET Core に多大な貢献をしており、[.NET Foundation テクニカル ステアリング グループ](https://dotnetfoundation.org/blog/tsg-welcome)の一員として製品の方向性に関するガイダンスを提供しています。
 
@@ -73,7 +73,7 @@ ms.locfileid: "59296408"
 
 ユーザーから、複数のオペレーティング システムをサポートするには .NET Core をどのように実装すべきかという質問をよく受けます。 多いのは、個別の実装を行うのか、または[条件付きコンパイル](https://en.wikipedia.org/wiki/Conditional_compilation)を使用するのかという質問です。 どちらも正しいですが、条件付きコンパイルが特に好まれる傾向にあります。
 
-次の図に示すように、 [CoreFX](https://github.com/dotnet/corefx) の大部分は、すべてのプラットフォーム間で共有されているプラットフォームに依存しないコードです。 プラットフォームに依存しないコードは、すべてのプラットフォームで使用される 1 つのポータブル アセンブリとして実装できます。
+次の図に示すように、[CoreFX](https://github.com/dotnet/corefx) の大部分は、すべてのプラットフォーム間で共有されているプラットフォームに依存しないコードです。 プラットフォームに依存しないコードは、すべてのプラットフォームで使用される 1 つのポータブル アセンブリとして実装できます。
 
 ![CoreFX:プラットフォームごとのコードの行](../images/corefx-platforms-loc.png)
 
@@ -102,6 +102,8 @@ Windows 実装と Unix 実装はほぼ同じサイズです。 CoreFX は、[Mic
 - **オープン ソース** -- .NET Core はオープン ソースであり、[.NET Framework の読み取り専用のサブセット](https://github.com/microsoft/referencesource)はオープン ソースです。
 
 .NET Core はユニークな製品で、.NET Framework およびその他の .NET 実装とは大きな違いがありますが、ソースまたはバイナリの共有技術を使用してこれらの実装の間でコードを簡単に共有できます。
+
+.NET Core は横並びのインストールに対応しており、そのランタイムは .NET Framework から完全に独立しているため、.NET Framework がインストールされているコンピューターに何の問題もなくインストールできます。
 
 ### <a name="comparison-with-mono"></a>Mono との比較
 

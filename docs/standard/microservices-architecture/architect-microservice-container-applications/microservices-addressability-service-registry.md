@@ -2,12 +2,12 @@
 title: マイクロサービスのアドレス指定能力およびサービス レジストリ
 description: マイクロサービス アーキテクチャ内のコンテナー イメージ レジストリの役割を理解します。
 ms.date: 09/20/2018
-ms.openlocfilehash: 5b601f19b60a8e989977e7135138add7644bd7b6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 756be4d7102d2d8ef36ffbf172b70b08872c028c
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639971"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66196017"
 ---
 # <a name="microservices-addressability-and-the-service-registry"></a>マイクロサービスのアドレス指定能力およびサービス レジストリ
 
@@ -15,7 +15,7 @@ ms.locfileid: "65639971"
 
 [サービス レジストリ パターン](https://microservices.io/patterns/service-registry.html)は、サービス検出の重要な部分です。 レジストリは、サービス インスタンスのネットワークの場所を含むデータベースです。 サービス レジストリは、可用性が高く、最新の状態である必要があります。 クライアントは、サービス レジストリから取得したネットワークの場所をキャッシュすることが可能です。 ただし、その情報は最終的には期限切れになり、クライアントはサービス インスタンスを検出できなくなります。 したがって、サービス レジストリは、レプリケーション プロトコルを使用して整合性を維持するサーバーのクラスターで構成されます。
 
-一部のマイクロサービスの展開環境 (クラスターと呼ばれ、後のセクションで説明します) には、サービス検出が組み込まれています。 たとえば、Kubernetes (AKS) 環境での Azure Container Service では、サービス インスタンスの登録と登録解除を処理できます。 また、これはサーバー側の検出ルーターの役割を果たす各クラスター ホスト上でプロキシも実行します。 別の例として Azure Service Fabric が挙げられます。これもまた、すぐに使用できる Naming Service を介してサービス レジストリを提供します。
+一部のマイクロサービスの展開環境 (クラスターと呼ばれ、後のセクションで説明します) には、サービス検出が組み込まれています。 たとえば、Azure Kubernetes Service (AKS) 環境での Azure Container Service では、サービス インスタンスの登録と登録解除を処理できます。 また、これはサーバー側の検出ルーターの役割を果たす各クラスター ホスト上でプロキシも実行します。 別の例として Azure Service Fabric が挙げられます。これもまた、すぐに使用できる Naming Service を介してサービス レジストリを提供します。
 
 サービス レジストリと API ゲートウェイ パターンとの間には特定のオーバーラップがあり、この問題の解決にも役立っています。 たとえば、[Service Fabric のリバース プロキシ](https://docs.microsoft.com/azure/service-fabric/service-fabric-reverseproxy)は、Service Fabric の Naming Service に基づく API ゲートウェイの実装の種類であり、内部サービスへのアドレス解決を解決するのに役に立ちます。
 

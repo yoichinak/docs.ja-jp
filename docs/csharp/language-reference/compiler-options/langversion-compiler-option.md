@@ -8,12 +8,12 @@ helpviewer_keywords:
 - -langversion compiler option [C#]
 - langversion compiler option [C#]
 ms.assetid: 3fb00b05-a0ff-4782-b313-13a4c0f62d94
-ms.openlocfilehash: af30095c18a333d5ac3089fe3bf201c32739d9cf
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: 030af5df222772b1e5a4d6f6946e59f4f2d1e1a9
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846351"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195797"
 ---
 # <a name="-langversion-c-compiler-options"></a>-langversion (C# コンパイラ オプション)
 
@@ -68,7 +68,7 @@ ms.locfileid: "57846351"
 
 ### <a name="c-language-specification"></a>C# 言語仕様
 
-|バージョン|リンク|説明|
+|Version|Link|説明|
 |-------|----|-----------|
 |C# 7.0 以降||現在使用できません|
 |C# 6.0|[リンク](../language-specification/index.md)|C# 言語仕様バージョン 6 - 非公式ドラフト: .NET Foundation|
@@ -80,7 +80,8 @@ ms.locfileid: "57846351"
 
 ### <a name="minimum-compiler-version-needed-to-support-all-language-features"></a>すべての言語機能をサポートするために必要な最小コンパイラ バージョン
 
-[↩](#TCS80)<a name="FCS80">CS80</a>:Microsoft Visual Studio/Build Tools 2019、バージョン 16、または .NET Core 3.0 SDK [↩](#TCS73)<a name="FCS73">CS73</a>:Microsoft Visual Studio/Build Tools 2017、バージョン 15.7  
+[↩](#TCS80)<a name="FCS80">CS80</a>:Microsoft Visual Studio/Build Tools 2019、バージョン 16、または .NET Core 3.0 SDK  
+[↩](#TCS73)<a name="FCS73">CS73</a>:Microsoft Visual Studio/Build Tools 2017、バージョン 15.7  
 [↩](#TCS72)<a name="FCS72">CS72</a>:Microsoft Visual Studio/Build Tools 2017、バージョン 15.5  
 [↩](#TCS71)<a name="FCS71">CS71</a>:Microsoft Visual Studio/Build Tools 2017、バージョン 15.3  
 [↩](#TCS7)<a name="FCS7">CS7</a>:Microsoft Visual Studio/Build Tools 2017  

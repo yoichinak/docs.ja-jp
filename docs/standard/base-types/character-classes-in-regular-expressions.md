@@ -15,15 +15,16 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 54d190bfa3f13ccfc78dd2501018442afb281d37
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e577f376b347442f6693a7a5478757ce3b698752
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634701"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053009"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
-<a name="Top"></a> 文字クラスは、いずれかが入力文字列に含まれると一致と見なされる文字のセットを定義します。 .NET の正規表現言語では、次の文字クラスがサポートされます。  
+
+文字クラスは、いずれかが入力文字列に含まれると一致と見なされる文字のセットを定義します。 .NET の正規表現言語では、次の文字クラスがサポートされます。  
   
 - 文字グループの肯定。 入力文字列内の文字が指定した文字のセットのいずれかと一致する必要があります。 詳細については、「[文字グループの肯定](#PositiveGroup)」を参照してください。  
   
@@ -107,15 +108,13 @@ ms.locfileid: "64634701"
 |`\w*`|0 個以上の単語に使用される文字に一致します。|  
 |`\b`|ワード境界に一致します。|  
   
- [ページのトップへ](#Top)  
-  
 <a name="NegativeGroup"></a>   
 ## <a name="negative-character-group-"></a>文字グループの否定: [^]  
  文字グループの否定では、入力文字列に含まれなければ一致と見なされる文字の一覧を指定します。 この文字の一覧は、個別に指定されることも範囲として指定されることも、その両方であることもあります。  
   
  個別の文字の一覧を指定する構文は次のとおりです。  
   
- [*^character_group*]  
+ [ *^character_group*]  
   
  ここで、*character_group* は、入力文字列に含まれない場合に一致と見なされる個別の文字の一覧です。 *character_group* は、リテラル文字、[エスケープ文字](../../../docs/standard/base-types/character-escapes-in-regular-expressions.md)、または文字クラスを 1 つ以上組み合わせて構成されます。  
   
@@ -154,8 +153,6 @@ ms.locfileid: "64634701"
 |`\w+`|1 つ以上の単語文字に一致します。|  
 |`\b`|ワード境界で終了します。|  
   
- [ページのトップへ](#Top)  
-  
 <a name="AnyCharacter"></a>   
 ## <a name="any-character-"></a>任意の文字: .  
  ピリオド文字 (.) は、`\n` (改行文字、\u000A) を除く任意の文字と一致しますが、次の 2 つの制限があります。  
@@ -177,8 +174,6 @@ ms.locfileid: "64634701"
   
 > [!NOTE]
 >  `.` 言語要素は任意の文字と一致するので、正規表現パターンが任意の文字と複数回一致する場合に最短一致の量指定子と共によく使用されます。 詳細については、「 [量指定子](../../../docs/standard/base-types/quantifiers-in-regular-expressions.md)」を参照してください。  
-  
- [ページのトップへ](#Top)  
   
 <a name="CategoryOrBlock"></a>   
 ## <a name="unicode-category-or-unicode-block-p"></a>Unicode カテゴリまたは Unicode ブロック: \p{}  
@@ -209,8 +204,6 @@ ms.locfileid: "64634701"
 |`(\s)?`|0 個または 1 個の空白文字と一致します。|  
 |`(\p{IsBasicLatin}+(\s)?)+`|1 つ以上の基本的なラテン文字の後に 0 個または 1 個の空白文字が 1 回以上続くパターンに一致します。|  
   
- [ページのトップへ](#Top)  
-  
 <a name="NegativeCategoryOrBlock"></a>   
 ## <a name="negative-unicode-category-or-unicode-block-p"></a>Unicode カテゴリまたは Unicode ブロックの否定: \P{}  
  Unicode 規格では、各文字に一般カテゴリが割り当てられています。 たとえば、特定の文字は、英大文字 (`Lu` カテゴリで表されます)、10 進数 (`Nd` カテゴリ)、数学記号 (`Sm` カテゴリ)、または段落区切り記号 (`Zl` カテゴリ) に分類できます。 また、Unicode 規格の特定の文字セットは、特定の範囲またはブロックの連続したコード ポイントに対応します。 たとえば、基本的なラテン語文字セットは \u0000 ～ \u007F で、アラビア語文字セットは \u0600 ～ \u06FF です。  
@@ -227,8 +220,6 @@ ms.locfileid: "64634701"
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#7](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/notcategory1.vb#7)]  
   
  正規表現パターン `(\P{Sc})+` は、通貨記号以外の 1 つ以上の文字と一致し、実質的に結果文字列から通貨記号を削除します。  
-  
- [ページのトップへ](#Top)  
   
 <a name="WordCharacter"></a>   
 ## <a name="word-character-w"></a>単語に使用される文字: \w  
@@ -259,8 +250,6 @@ ms.locfileid: "64634701"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/wordchar1.cs#8)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/wordchar1.vb#8)]  
-  
- [ページのトップへ](#Top)  
   
 <a name="NonWordCharacter"></a>   
 ## <a name="non-word-character-w"></a>単語に使用されない文字: \W  
@@ -301,11 +290,9 @@ ms.locfileid: "64634701"
   
  2 番目のキャプチャ グループの <xref:System.Text.RegularExpressions.Group> オブジェクトには、キャプチャされた単語に使用されない文字が 1 つだけ含まれるので、この例では、<xref:System.Text.RegularExpressions.CaptureCollection> プロパティによって返される <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> オブジェクトから、キャプチャされたすべての単語に使用されない文字を取得します。  
   
- [ページのトップへ](#Top)  
-  
 <a name="WhitespaceCharacter"></a>   
-## <a name="white-space-character-s"></a>空白文字: \s  
- `\s` は、空白文字と一致します。 次の表に示すエスケープ シーケンスおよび Unicode カテゴリと同じ結果をもたらします。  
+## <a name="whitespace-character-s"></a>空白文字: \s  
+ `\s` は任意の空白文字と一致します。 次の表に示すエスケープ シーケンスおよび Unicode カテゴリと同じ結果をもたらします。  
   
 |カテゴリ|説明|  
 |--------------|-----------------|  
@@ -332,10 +319,8 @@ ms.locfileid: "64634701"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/whitespace1.cs#10)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/whitespace1.vb#10)]  
   
- [ページのトップへ](#Top)  
-  
 <a name="NonWhitespaceCharacter"></a>   
-## <a name="non-white-space-character-s"></a>空白以外の文字: \S  
+## <a name="non-whitespace-character-s"></a>空白以外の文字: \S  
  `\S` は、空白文字以外の任意の文字と一致します。 `[^\f\n\r\t\v\x85\p{Z}]` 正規表現パターン、または空白文字と一致する `\s` に相当する正規表現パターンの逆と同じ結果をもたらします。 詳細については、「[空白文字: \s](#WhitespaceCharacter)」を参照してください。  
   
  ECMAScript 準拠の動作が指定された場合、`\S` は `[^ \f\n\r\t\v]` と同じになります。 ECMAScript 正規表現の詳細については、「[正規表現のオプション](../../../docs/standard/base-types/regular-expression-options.md)」の「ECMAScript 一致の動作」のセクションを参照してください。  
@@ -350,8 +335,6 @@ ms.locfileid: "64634701"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nonwhitespace1.cs#11)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#11](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nonwhitespace1.vb#11)]  
-  
- [ページのトップへ](#Top)  
   
 <a name="DigitCharacter"></a>   
 ## <a name="decimal-digit-character-d"></a>10 進数字: \d  
@@ -375,8 +358,6 @@ ms.locfileid: "64634701"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/digit1.cs#12)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#12](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/digit1.vb#12)]  
   
- [ページのトップへ](#Top)  
-  
 <a name="NonDigitCharacter"></a>   
 ## <a name="non-digit-character-d"></a>数字以外の文字: \D  
  `\D` は、数字以外の文字と一致します。 `\P{Nd}` 正規表現パターンと同じ結果をもたらします。  
@@ -395,8 +376,6 @@ ms.locfileid: "64634701"
   
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/nondigit1.cs#13)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#13](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/nondigit1.vb#13)]  
-  
- [ページのトップへ](#Top)  
   
 <a name="SupportedUnicodeGeneralCategories"></a>   
 ## <a name="supported-unicode-general-categories"></a>サポートされている Unicode 一般カテゴリ  
@@ -447,11 +426,10 @@ ms.locfileid: "64634701"
  [!code-csharp[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.regex.language.characterclasses/cs/getunicodecategory1.cs#14)]
  [!code-vb[Conceptual.RegEx.Language.CharacterClasses#14](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.regex.language.characterclasses/vb/getunicodecategory1.vb#14)]  
   
- [ページのトップへ](#Top)  
-  
 <a name="SupportedNamedBlocks"></a>   
-## <a name="supported-named-blocks"></a>サポートされている名前付きブロック  
- .NET には、次の表に示す名前付きブロックが用意されています。 サポートされている一連の名前付きブロックは、Unicode 4.0 および Perl 5.6 に基づいています。  
+## <a name="supported-named-blocks"></a>サポートされている名前付きブロック
+
+.NET には、次の表に示す名前付きブロックが用意されています。 サポートされている一連の名前付きブロックは、Unicode 4.0 および Perl 5.6 に基づいています。 名前付きブロックを使用する正規表現については、「[Unicode カテゴリまたは Unicode ブロック: \\p{}](#unicode-category-or-unicode-block-p)」を参照してください。  
   
 |コード ポイント範囲|ブロック名|  
 |----------------------|----------------|  
@@ -560,8 +538,6 @@ ms.locfileid: "64634701"
 |FE70 ～ FEFF|`IsArabicPresentationForms-B`|  
 |FF00 ～ FFEF|`IsHalfwidthandFullwidthForms`|  
 |FFF0 ～ FFFF|`IsSpecials`|  
-  
- [ページのトップへ](#Top)  
   
 <a name="CharacterClassSubtraction"></a>   
 ## <a name="character-class-subtraction-basegroup---excludedgroup"></a>文字クラスの減算: [base_group - [excluded_group]]  

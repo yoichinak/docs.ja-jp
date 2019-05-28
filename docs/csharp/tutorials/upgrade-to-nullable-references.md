@@ -3,12 +3,12 @@ title: null 許容参照型を使用して設計する
 description: この高度なチュートリアルでは、null 許容参照型の概要について説明します。 参照値で null がいつ許容されるかに関する設計意図を表すことで、コンパイラで null が許容されるようにします。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: fac83d8f61b725a4a2163c9cd42911fe60d12263
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 289b864aaa0380a31e93ef223fb5b5780e35892a
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427293"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195845"
 ---
 # <a name="tutorial-migrate-existing-code-with-nullable-reference-types"></a>チュートリアル: null 許容参照型で既存のコードを移行する
 
@@ -49,8 +49,11 @@ C# 8 には **null 許容参照型**が導入されています。これは、nu
 次に、null 許容注釈コンテキストを有効にして、警告がいくつ生成されるかを確認します。 ソリューションの両方の csproj ファイルで、`LangVersion` 要素のすぐ下に次の要素を追加します。
 
 ```xml
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
+
+> [!IMPORTANT]
+> `Nullable` 要素は以前、`NullableContextOptions` という名称でした。 Visual Studio 2019、16.2-p1 で名前が変わりました。 .NET Core SDK 3.0.100-preview5-011568 にはこの変更が行われていません。 .NET Core CLI をご利用の場合、次のプレビューが利用可能になるまで `NullableContextOptions` を使用する必要があります。
 
 テスト ビルドを行い、警告の一覧に注目します。 この小さいアプリケーションでは 5 つのコンパイラ警告が生成されるので、null 許容注釈コンテキストを有効にしたまま、プロジェクト全体の警告の修正を始めます。
 
@@ -58,7 +61,7 @@ C# 8 には **null 許容参照型**が導入されています。これは、nu
 
 ## <a name="warnings-help-discover-original-design-intent"></a>元の設計意図の発見に役立つ警告
 
-複数の警告が生成されているクラスが 2 つあります。 `NewsStoryViewModel` クラスから始めます。 作業を行っているコードのセクションに警告の範囲を制限できるように、両方の csproj ファイルから `NullableContextOptions` 要素を削除します。 *NewsStoryViewModel.cs* ファイルを開き、次のディレクティブを追加して `NewsStoryViewModel` に対して null 許容注釈コンテキストを有効にし、そのクラス定義の後で元に戻します。
+複数の警告が生成されているクラスが 2 つあります。 `NewsStoryViewModel` クラスから始めます。 作業を行っているコードのセクションに警告の範囲を制限できるように、両方の csproj ファイルから `Nullable` 要素を削除します。 *NewsStoryViewModel.cs* ファイルを開き、次のディレクティブを追加して `NewsStoryViewModel` に対して null 許容注釈コンテキストを有効にし、そのクラス定義の後で元に戻します。
 
 ```csharp
 #nullable enable

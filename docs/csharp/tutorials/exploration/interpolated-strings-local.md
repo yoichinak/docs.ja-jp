@@ -4,12 +4,12 @@ description: このチュートリアルでは、C# で文字列補間機能を�
 author: rpetrusha
 ms.author: ronpet
 ms.date: 10/23/2018
-ms.openlocfilehash: 97773659ea7dd00c291aa6a96401cac531adfdc8
-ms.sourcegitcommit: a3db1a9eafca89f95ccf361bc1833b47fbb2bb30
+ms.openlocfilehash: c1e6fed2293b7447384a657e720fb847f2fa041f
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/04/2019
-ms.locfileid: "58921374"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195894"
 ---
 # <a name="use-string-interpolation-to-construct-formatted-strings"></a>文字列補間を使用し、書式設定された文字列を作成する
 
@@ -34,19 +34,19 @@ var name = "<name>";
 Console.WriteLine($"Hello, {name}. It's a pleasure to meet you!");
 ```
 
-コンソール ウィンドウで「`dotnet run`」と入力し、このコードを試します。 プログラムを実行すると、あいさつ文に自分の名前を含む単一の文字列が表示されます。 <xref:System.Console.WriteLine%2A> メソッド呼び出しに含まれる文字列は、*挿入文字列*です。 これは、埋め込みコードを含む文字列から (*結果文字列*という) 単一の文字列を構築できる一種のテンプレートです。 挿入文字列は、文字列に値を挿入したり、文字列を (結合) 連結したりする場合に特に便利です。
+コンソール ウィンドウで「`dotnet run`」と入力し、このコードを試します。 プログラムを実行すると、あいさつ文に自分の名前を含む単一の文字列が表示されます。 <xref:System.Console.WriteLine%2A> メソッド呼び出しに含まれる文字列は、*挿入文字列式*です。 これは、埋め込みコードを含む文字列から (*結果文字列*という) 単一の文字列を構築できる一種のテンプレートです。 挿入文字列は、文字列に値を挿入したり、文字列を (結合) 連結したりする場合に特に便利です。
 
 この簡単な例には、すべての挿入文字列に含める必要がある次の 2 つの要素が含まれています。
 
 - 始まりの引用符文字の前の `$` で始まる文字列リテラル。 `$` シンボルと引用符文字の間にスペースを挿入することはできません  (スペースが含まれている場合の動作を確認したい場合は、`$` 文字の後にスペースを挿入し、ファイルを保存してから、コンソール ウィンドウで「`dotnet run`」と入力してプログラムを再実行します。 C# コンパイラには、"エラー CS1056:予期しない文字 '$' です" というエラー メッセージが表示されます。
 
-- 1 つ以上の*挿入式*。 挿入式は、始めかっこと終わりかっこ (`{` と `}`) で示されます。 かっこ内に (`null` を含む) 値を返す C# 式を配置できます。
+- 1 つ以上の*補間式*。 補間式は、始めかっこと終わりかっこ (`{` と `}`) で示されます。 かっこ内に (`null` を含む) 値を返す C# 式を配置できます。
 
 その他のいくつかのデータ型を持つ文字列補間の例をさらにいくつか試してみましょう。
 
 ## <a name="include-different-data-types"></a>さまざまなデータ型を含める
 
-前のセクションでは、文字列補間を使用して、1 つの文字列内に別の文字列を挿入しましたが、 挿入式の結果を任意のデータ型にすることもできます。 挿入文字列にさまざまなデータ型の値を含めてみましょう。
+前のセクションでは、文字列補間を使用して、1 つの文字列内に別の文字列を挿入しましたが、 補間式の結果を任意のデータ型にすることもできます。 挿入文字列にさまざまなデータ型の値を含めてみましょう。
 
 次の例では、最初に、`Name` [プロパティ](../../properties.md)と `ToString` [メソッド](../../methods.md)を持つ[クラス](../../programming-guide/classes-and-structs/classes.md) データ型 `Vegetable` を定義します。このメソッドは、<xref:System.Object.ToString?displayProperty=nameWithType> メソッドの動作を[オーバーライド](../../language-reference/keywords/override.md)します。 [`public` アクセス修飾子](../../language-reference/keywords/public.md)により、そのメソッドは、すべてのクライアント コードで `Vegetable` インスタンスの文字列表現を取得するために使用できるようになります。 この例の `Vegetable.ToString` メソッドでは、`Vegetable` [コンストラクター](../../programming-guide/classes-and-structs/constructors.md)で初期化される `Name` プロパティの値を返します。
 
@@ -89,15 +89,15 @@ public class Program
 }
 ```
 
-挿入文字列の挿入式 `item` は、結果の文字列のテキスト "eggplant" に解決されることに注意してください。 これは、式の結果の型が文字列でない場合に、結果が次の方法で文字列に解決されるためです。
+補間文字列の挿入式 `item` は、結果の文字列のテキスト "eggplant" に解決されることに注意してください。 これは、式の結果の型が文字列でない場合に、結果が次の方法で文字列に解決されるためです。
 
-- 挿入式が `null` の場合、空の文字列 (""、または <xref:System.String.Empty?displayProperty=nameWithType>) が使用されます。
+- 補間式が `null` の場合、空の文字列 (""、または <xref:System.String.Empty?displayProperty=nameWithType>) が使用されます。
 
-- 挿入式が `null` でない場合、通常、結果の型の `ToString` メソッドが呼び出されます。 `Vegetable.ToString` メソッドの実装を更新して、これをテストすることができます。 すべての型にこのメソッドの実装が含まれるため、`ToString` メソッドを実装する必要なない場合があります。 これをテストするには、例の `Vegetable.ToString` メソッドの定義をコメント アウトします (この操作を行うには、コメント シンボル `//` を前に配置します)。 出力では、"eggplant" という文字列が完全修飾型名 (この例では "Vegetable") に置き換えられます。これは、<xref:System.Object.ToString?displayProperty=nameWithType> メソッドの既定の動作です。 列挙値の `ToString` メソッドの既定の動作は、値の文字列表現を返すことです。
+- 補間式が `null` でない場合、通常、結果の型の `ToString` メソッドが呼び出されます。 `Vegetable.ToString` メソッドの実装を更新して、これをテストすることができます。 すべての型にこのメソッドの実装が含まれるため、`ToString` メソッドを実装する必要なない場合があります。 これをテストするには、例の `Vegetable.ToString` メソッドの定義をコメント アウトします (この操作を行うには、コメント シンボル `//` を前に配置します)。 出力では、"eggplant" という文字列が完全修飾型名 (この例では "Vegetable") に置き換えられます。これは、<xref:System.Object.ToString?displayProperty=nameWithType> メソッドの既定の動作です。 列挙値の `ToString` メソッドの既定の動作は、値の文字列表現を返すことです。
 
 この例の出力では、日付の精度が高すぎ ("eggplant" の価格は毎秒変更されることはありません)、価格の値は通貨の単位を示していません。 次のセクションでは、式の結果における文字列表現の書式を制御することで、こうした問題を修正する方法について説明します。
 
-## <a name="control-the-formatting-of-interpolated-expressions"></a>挿入式の書式設定を制御する
+## <a name="control-the-formatting-of-interpolation-expressions"></a>補間式の書式設定を制御する
 
 前のセクションでは、適切に書式設定されていない 2 つの文字列が結果文字列に挿入されました。 1 つは、日付のみが適切な日時の値でした。 もう 1 つは、通貨単位を示さない価格でした。 両方の問題には簡単に対処することができます。 文字列補間では、特定の型の書式設定を制御する*書式指定文字列*を指定することができます。 前の例の `Console.WriteLine` 呼び出しを変更し、次の行に示すように、日付と価格の式の書式指定文字列を含めます。
 
@@ -105,7 +105,7 @@ public class Program
 Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}.");
 ```
 
-コロン (":") と書式指定文字列を持つ挿入式に従って、書式指定文字列を指定します。 "d" は、短い日付形式を表す[標準の日時書式設定文字列](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)です。 "C2" は、小数点以下が 2 桁の通貨値として数値を表す[標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)です。
+コロン (":") と書式指定文字列を持つ補間式に従って、書式指定文字列を指定します。 "d" は、短い日付形式を表す[標準の日時書式設定文字列](../../../standard/base-types/standard-date-and-time-format-strings.md#the-short-date-d-format-specifier)です。 "C2" は、小数点以下が 2 桁の通貨値として数値を表す[標準の数値書式指定文字列](../../../standard/base-types/standard-numeric-format-strings.md#the-currency-c-format-specifier)です。
 
 .NET ライブラリの多くの型で、定義済みの書式指定文字列セットがサポートされています。 これらには、数値型と日時型がすべて含まれます。 書式指定文字列をサポートする型の完全なリストについては、「[.Net 型の書式設定](../../../standard/base-types/formatting-types.md)」記事の「[.NET クラス ライブラリの型および書式指定文字列](../../../standard/base-types/formatting-types.md#stringRef)」を参照してください。
 
@@ -113,9 +113,9 @@ Console.WriteLine($"On {date:d}, the price of {item} was {price:C2} per {unit}."
 
 書式設定を制御するだけでなく、結果の文字列に含まれる書式指定された文字列のフィールドの幅と配置を制御することもできます。 次のセクションでは、この方法を説明します。
 
-## <a name="control-the-field-width-and-alignment-of-interpolated-expressions"></a>挿入式のフィールドの幅と配置を制御する
+## <a name="control-the-field-width-and-alignment-of-interpolation-expressions"></a>補間式のフィールドの幅と配置を制御する
 
-通常、挿入式の結果が文字列に書式設定される場合、文字列は先頭スペースおよび末尾スペースなしで結果文字列に含まれます。 通常、データのセットを操作する場合、フィールドの幅とテキストの配置を制御できることで、読みやすい出力を生成できます。 そのためには、テキスト エディターのすべてのコードを次のコードに置き換えてから、「`dotnet run`」と入力してプログラムを実行します。
+通常、補間式の結果が文字列に書式設定される場合、文字列は先頭スペースおよび末尾スペースなしで結果文字列に含まれます。 通常、データのセットを操作する場合、フィールドの幅とテキストの配置を制御できることで、読みやすい出力を生成できます。 そのためには、テキスト エディターのすべてのコードを次のコードに置き換えてから、「`dotnet run`」と入力してプログラムを実行します。
 
 ```csharp
 using System;
@@ -141,7 +141,7 @@ public class Example
 }
 ```
 
-作成者の名前は左揃えになり、書き込まれたタイトルは右揃えになります。 挿入式の後にコンマ (",") を追加し、*最小*のフィールド幅を指定して、配置を指定します。 指定された値が正数の場合、フィールドは右揃えになります。 負数の場合、フィールドは左揃えになります。
+作成者の名前は左揃えになり、書き込まれたタイトルは右揃えになります。 補間式の後にコンマ (",") を追加し、*最小*のフィールド幅を指定して、配置を指定します。 指定された値が正数の場合、フィールドは右揃えになります。 負数の場合、フィールドは左揃えになります。
 
 `{"Author",-25}` と `{title.Key,-25}` のコードから負号を削除してみて、次のコードのように、例を再実行します。
 
@@ -153,7 +153,7 @@ foreach (var title in titles)
 
 この場合、作成者情報は右揃えになります。
 
-単一の挿入式にアラインメント指定子と書式指定文字列を組み合わせることができます。 この操作を行うには、最初に配置を指定して、その後にコロンと書式指定文字列を続けます。 `Main` メソッド内のすべてのコードを次のコードに置き換えると、フィールド幅が定義された 3 つの書式指定された文字列が表示されます。 次に、`dotnet run` コマンドを入力してプログラムを実行します。
+単一の補間式にアラインメント指定子と書式指定文字列を組み合わせることができます。 この操作を行うには、最初に配置を指定して、その後にコロンと書式指定文字列を続けます。 `Main` メソッド内のすべてのコードを次のコードに置き換えると、フィールド幅が定義された 3 つの書式指定された文字列が表示されます。 次に、`dotnet run` コマンドを入力してプログラムを実行します。
 
 ```csharp
 Console.WriteLine($"[{DateTime.Now,-20:d}] Hour [{DateTime.Now,-10:HH}] [{1063.342,15:N2}] feet");

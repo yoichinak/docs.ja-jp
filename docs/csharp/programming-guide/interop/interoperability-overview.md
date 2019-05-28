@@ -9,12 +9,12 @@ helpviewer_keywords:
 - interoperability, about interoperability
 - platform invoke
 ms.assetid: c025b2e0-2357-4c27-8461-118f0090aeff
-ms.openlocfilehash: cfe3b413506aa1383bbdaa9a89ffe42e3724a4a8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 589bb205b10a5b7b0c4480393b8937e0df36022f
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59337553"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66052393"
 ---
 # <a name="interoperability-overview-c-programming-guide"></a>相互運用性の概要 (C# プログラミング ガイド)
 C# マネージド コードとアンマネージド コード間で相互運用を可能にする方法について説明します。  
@@ -28,7 +28,7 @@ C# マネージド コードとアンマネージド コード間で相互運用
 >  [共通言語ランタイム](../../../standard/clr.md) (CLR) が、システム リソースへのアクセスを管理します。 CLR の外部のアンマネージ コードを呼び出すと、このセキュリティ メカニズムがバイパスされるため、セキュリティ リスクが生じます。 たとえば、アンマネージ コードがアンマネージ コード内のリソースを直接呼び出した場合、CLR のセキュリティ機構がバイパスされます。 詳細については、「[.NET でのセキュリティ](../../../standard/security/index.md)」を参照してください。  
   
 ## <a name="c-interop"></a>C++ Interop  
- It Just Works (IJW) とも呼ばれる C++ interop を使用してネイティブ C++ クラスをラップすると、このクラスを C# またはその他の .NET Framework 言語で作成されたコードで使用できるようになります。 これを行うには、C++ コードを記述して、ネイティブ DLL または COM コンポーネントをラップします。 他の .NET Framework 言語とは異なり、[!INCLUDE[vcprvc](~/includes/vcprvc-md.md)] には相互運用性サポートが備えられています。これにより、マネージド コードとアンマネージド コードは同じアプリケーション内、また同じファイルでも共存できるようになります。 C++ コードは、マネージド アセンブリを生成する **/clr** コンパイラ スイッチを使用して構築できます。 最後に、C# プロジェクトのアセンブリへの参照を追加し、他のマネージド クラスを使用するときと同じように、ラップされたオブジェクトを使用します。  
+ It Just Works (IJW) とも呼ばれる C++ interop を使用してネイティブ C++ クラスをラップすると、このクラスを C# またはその他の .NET Framework 言語で作成されたコードで使用できるようになります。 これを行うには、C++ コードを記述して、ネイティブ DLL または COM コンポーネントをラップします。 他の .NET Framework 言語とは異なり、Visual C++ には相互運用性サポートが備えられています。これにより、マネージド コードとアンマネージド コードは同じアプリケーション内、また同じファイルでも共存できるようになります。 C++ コードは、マネージド アセンブリを生成する **/clr** コンパイラ スイッチを使用して構築できます。 最後に、C# プロジェクトのアセンブリへの参照を追加し、他のマネージド クラスを使用するときと同じように、ラップされたオブジェクトを使用します。  
   
 ## <a name="exposing-com-components-to-c"></a>C\# への COM コンポーネントの公開
  C# プロジェクトから COM コンポーネントを使用することができます。 一般的な手順は次のとおりです。  

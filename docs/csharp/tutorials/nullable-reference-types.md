@@ -3,12 +3,12 @@ title: null 許容参照型を使用して設計する
 description: この高度なチュートリアルでは、null 許容参照型の概要について説明します。 参照値で null がいつ許容されるかに関する設計意図を表すことで、コンパイラで null が許容されるようにします。
 ms.date: 02/19/2019
 ms.custom: mvc
-ms.openlocfilehash: 97b41574b328c9f6bed60d4bf2943c7a726261d5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cd73a73554514c2b7c70c78ba24038ee8d543266
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59296148"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195832"
 ---
 # <a name="tutorial-express-your-design-intent-more-clearly-with-nullable-and-non-nullable-reference-types"></a>チュートリアル: null 許容参照型と null 非許容参照型を使用して設計意図をもっと明確に示す
 
@@ -36,15 +36,18 @@ C# 8 には **null 許容参照型**が導入されています。これは、nu
 
 ## <a name="create-the-application-and-enable-nullable-reference-types"></a>アプリケーションを作成し、null 許容参照型を有効にする
 
-新しいコンソール アプリケーションを作成します。Visual Studio を使用するか、コマンド ラインで `dotnet new console` を使用します。 アプリケーションに `NullableIntroduction` という名前を付けます。 アプリケーションを作成したら、C# 8 ベータ機能を有効にする必要があります。 `csproj` ファイルを開き、`LangVersion` 要素を `PropertyGroup` 要素に追加します。 C# 8 プロジェクトであっても、**null 許容参照型**機能を選択する必要があります。 これは、機能をオンにすると、既存の参照変数宣言が **null 非許容参照型**になるためです。 その決定は既存のコードで適切な null チェックが行われていない場合に問題を発見するのに役立ちますが、元の設計意図が正確に反映されない可能性があります。 `NullableContextOptions` 要素を `enable` に設定することによって、機能を有効にします。
+新しいコンソール アプリケーションを作成します。Visual Studio を使用するか、コマンド ラインで `dotnet new console` を使用します。 アプリケーションに `NullableIntroduction` という名前を付けます。 アプリケーションを作成したら、C# 8 ベータ機能を有効にする必要があります。 `csproj` ファイルを開き、`LangVersion` 要素を `PropertyGroup` 要素に追加します。 C# 8 プロジェクトであっても、**null 許容参照型**機能を選択する必要があります。 これは、機能をオンにすると、既存の参照変数宣言が **null 非許容参照型**になるためです。 その決定は既存のコードで適切な null チェックが行われていない場合に問題を発見するのに役立ちますが、元の設計意図が正確に反映されない可能性があります。 `Nullable` 要素を `enable` に設定することによって、機能を有効にします。
 
 ```xml
 <LangVersion>8.0</LangVersion>
-<NullableContextOptions>enable</NullableContextOptions>
+<Nullable>enable</Nullable>
 ```
 
+> [!IMPORTANT]
+> `Nullable` 要素は以前、`NullableContextOptions` という名称でした。 Visual Studio 2019、16.2-p1 で名前が変わりました。 .NET Core SDK 3.0.100-preview5-011568 にはこの変更が行われていません。 .NET Core CLI をご利用の場合、次のプレビューが利用可能になるまで `NullableContextOptions` を使用する必要があります。
+
 > [!NOTE]
-> C# 8 が (プレビュー モードではなく) リリースされると、`NullableContextOptions` 要素は新しいプロジェクト テンプレートによって追加されるようになります。 それまでは、手動で追加する必要があります。
+> C# 8 が (プレビュー モードではなく) リリースされると、`Nullable` 要素は新しいプロジェクト テンプレートによって追加されるようになります。 それまでは、手動で追加する必要があります。
 
 ### <a name="design-the-types-for-the-application"></a>アプリケーション用の型を設計する
 
