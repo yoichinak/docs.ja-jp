@@ -43,7 +43,7 @@ ms.locfileid: "61647425"
 * [clean](dotnet-clean.md)
 * [sln](dotnet-sln.md)
 * [help](dotnet-help.md)
-* [ストア](dotnet-store.md)
+* [store](dotnet-store.md)
 
 **プロジェクトの変更コマンド**
 
