@@ -11,15 +11,15 @@ helpviewer_keywords:
 ms.assetid: 6fa7d044-ae12-4c54-b8ee-50915607a565
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eb2b082393656e84cedb293c3f3857e6680ed2ab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 45e28ebb9319447f2e1ae98f1de883f90840720f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664339"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378292"
 ---
 # <a name="net-framework-support-for-windows-store-apps-and-windows-runtime"></a>Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は [!INCLUDE[wrt](../../../includes/wrt-md.md)]のさまざまなソフトウェア開発シナリオをサポートします。 これらのシナリオは次の 3 つのカテゴリに分類されます。
+.NET Framework 4.5 ソフトウェア開発シナ リオを多数のサポート、[!INCLUDE[wrt](../../../includes/wrt-md.md)]します。 これらのシナリオは次の 3 つのカテゴリに分類されます。
 
 - 開発[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]」の説明に従って、XAML コントロールを使用したアプリ[ロードマップの Windows ストア アプリを c# または Visual Basic を使用して](https://docs.microsoft.com/previous-versions/windows/apps/br229583(v=win.10))、[方法操作方法 (XAML)](https://docs.microsoft.com/previous-versions/windows/apps/br229566(v=win.10))、および[.NET Windows ストア アプリの概要](https://docs.microsoft.com/previous-versions/windows/apps/br230302(v=vs.140)).
 
@@ -127,7 +127,7 @@ ms.locfileid: "64664339"
 - コンポーネントの型は [!INCLUDE[wrt](../../../includes/wrt-md.md)]の型から派生できます。 コントロールが内のプリミティブ コントロール型から派生できます、<xref:Windows.UI.Xaml.Controls.Primitives>名前空間または終了コントロールなどの詳細はから<xref:Windows.UI.Xaml.Controls.Button>します。
 
     > [!IMPORTANT]
-    >  [!INCLUDE[win8](../../../includes/win8-md.md)] および [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、[!INCLUDE[wrt](../../../includes/wrt-md.md)] マネージド コンポーネントのすべてのパブリック型をシールする必要があります。 別の [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント内の型はそこから派生できません。 コンポーネントでポリモーフィックな動作を提供するには、インターフェイスを作成し、そのインターフェイスをポリモーフィックな型に実装します。
+    >  以降で[!INCLUDE[win8](../../../includes/win8-md.md)]および .NET Framework 4.5 で、すべてのパブリック型をマネージ[!INCLUDE[wrt](../../../includes/wrt-md.md)]コンポーネントをシールする必要があります。 別の [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント内の型はそこから派生できません。 コンポーネントでポリモーフィックな動作を提供するには、インターフェイスを作成し、そのインターフェイスをポリモーフィックな型に実装します。
 
 - コンポーネント内のパブリック型で指定されるすべてのパラメーターと戻り値の型は、[!INCLUDE[wrt](../../../includes/wrt-md.md)]の型 (コンポーネントで定義する [!INCLUDE[wrt](../../../includes/wrt-md.md)]の型を含む) である必要があります。
 

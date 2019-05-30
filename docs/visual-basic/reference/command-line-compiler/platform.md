@@ -6,12 +6,12 @@ helpviewer_keywords:
 - /platform compiler option [Visual Basic]
 - -platform compiler option [Visual Basic]
 ms.assetid: f9bc61e6-e854-4ae1-87b9-d6244de23fd1
-ms.openlocfilehash: 5c01136564d64d5b2f1f56d311a6b7eadf1742f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: eb5513c6d8e4085e1b3f69de1d36a007fa27271e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64633079"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380313"
 ---
 # <a name="-platform-visual-basic"></a>プラットフォーム (Visual Basic)
 出力ファイルをどのプラットフォーム用の共通言語ランタイム (CLR) で実行するかを指定します。  
@@ -31,7 +31,7 @@ ms.locfileid: "64633079"
 |`Itanium`|Itanium プロセッサ搭載のコンピューター上の 64 ビット CLR で実行されるように、アセンブリをコンパイルします。|  
 |`arm`|ARM (アドバンスト RISC マシン) プロセッサ搭載のコンピューター上で実行されるように、アセンブリをコンパイルします。|  
 |`anycpu`|任意のプラットフォーム上で実行されるように、アセンブリをコンパイルします。 アプリケーションは、Windows の 32 ビット バージョンでは 32 ビット アプリケーションとして、Windows の 64 ビット バージョンでは 64 ビット アプリケーションとして実行されます。 このフラグが既定値です。|  
-|`anycpu32bitpreferred`|任意のプラットフォーム上で実行されるように、アセンブリをコンパイルします。 アプリケーションは、Windows の 32 ビット バージョンおよび 64 ビット バージョンの両方で、 32 ビット アプリケーションとして実行されます。 このフラグは、実行可能ファイル (.EXE) に対してのみ有効であり、[!INCLUDE[net_v45](~/includes/net-v45-md.md)] を要求します。|  
+|`anycpu32bitpreferred`|任意のプラットフォーム上で実行されるように、アセンブリをコンパイルします。 アプリケーションは、Windows の 32 ビット バージョンおよび 64 ビット バージョンの両方で、 32 ビット アプリケーションとして実行されます。 このフラグは、実行可能ファイルに対してのみ有効です (します。EXE) と .NET Framework 4.5 が必要です。|  
   
 ## <a name="remarks"></a>Remarks  
  出力ファイルの対象となるプロセッサの種類を指定するには、`-platform` オプションを使用します。  

@@ -6,12 +6,12 @@ helpviewer_keywords:
 - -subsystemversion compiler option [Visual Basic]
 - subsystemversion compiler option [Visual Basic]
 ms.assetid: 08be22b2-f447-4cd3-8203-120b1b920b54
-ms.openlocfilehash: 0eca7918e5e4b8702858f972003faef1274e56e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e42501a002d808f31dc3d599dc030e96c573a22f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796238"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380319"
 ---
 # <a name="-subsystemversion-visual-basic"></a>-subsystemversion (Visual Basic)
 
@@ -60,7 +60,7 @@ ms.locfileid: "61796238"
 
   - [-platform:arm](../../../visual-basic/reference/command-line-compiler/platform.md)
 
-- MSBuild を使用しており、[!INCLUDE[net_v45](~/includes/net-v45-md.md)] が対象で、さらにこの一覧で前に指定したコンパイラ オプションを設定していない場合、既定値は 6.00 です。
+- 既定値は 6.00 は MSBuild を使用している場合は、.NET Framework 4.5 をターゲットにする前に指定したコンパイラ オプションのいずれかを設定していません。
 
 - 上記の条件がどれも当てはまらない場合、既定値は 4.00 です。
 

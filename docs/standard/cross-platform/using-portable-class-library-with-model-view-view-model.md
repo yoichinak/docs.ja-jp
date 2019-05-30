@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 41a0b9f8-15a2-431a-bc35-e310b2953b03
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 3aa18d4498bcdcc3737311473b4736545b184395
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: 1a8c2b6ca9701f5eec4a8f43eaae531a0cfc18c1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003783"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377719"
 ---
 # <a name="using-portable-class-library-with-model-view-view-model"></a>Model-View-View Model を利用した汎用性のあるクラス ライブラリの使用
 .NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)モデル-ビュー-ビュー モデル (MVVM) パターンを実装して、複数のプラットフォームでアセンブリを共有します。
@@ -30,7 +30,7 @@ ms.locfileid: "66003783"
  このトピックでは、MVVM パターンに関する一般的な情報は提供されません。 使用する方法についての情報を提供するだけ[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]MVVM を実装します。 MVVM の詳細については、次を参照してください。、 [MVVM クイック スタートで、wpf、Prism ライブラリ 5.0 が使用して](https://docs.microsoft.com/previous-versions/msp-n-p/gg430857(v=pandp.40))します。
 
 ## <a name="classes-that-support-mvvm"></a>MVVM をサポートするクラス
- 対象とする場合、 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、 [!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、Silverlight、または Windows Phone 7.5 for、[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]プロジェクトでは、次のクラスは MVVM パターンを実装するために使用できます。
+ .NET Framework 4.5 を対象とする場合[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)]、Silverlight、または Windows Phone 7.5 for、[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]プロジェクトでは、次のクラスは MVVM パターンを実装するために使用できます。
 
 - <xref:System.Collections.ObjectModel.ObservableCollection%601?displayProperty=nameWithType> クラス
 
@@ -87,7 +87,7 @@ ms.locfileid: "66003783"
  [!code-vb[PortableClassLibraryMVVM#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR/portableclasslibrarymvvm/vb/customerviewmodel.vb#5)]  
   
 ### <a name="view"></a>表示  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]アプリ、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリ、Silverlight ベースのアプリまたは Windows Phone 7.5 アプリの場合は、モデルとビュー モデル プロジェクトを含むアセンブリを参照することができます。  対話するビューを作成するには、ビュー モデルを使用します。 取得し、ビュー モデルからデータを更新する Windows Presentation Foundation (WPF) アプリを簡略化されたは、次の例です。 Windows Phone、Silverlight で同様のビューを作成または[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリ。  
+ .NET Framework 4.5 アプリから[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリ、Silverlight ベースのアプリまたは Windows Phone 7.5 アプリの場合は、モデルとビュー モデル プロジェクトを含むアセンブリを参照することができます。  対話するビューを作成するには、ビュー モデルを使用します。 取得し、ビュー モデルからデータを更新する Windows Presentation Foundation (WPF) アプリを簡略化されたは、次の例です。 Windows Phone、Silverlight で同様のビューを作成または[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)]アプリ。  
   
  [!code-xaml[PortableClassLibraryMVVM#6](../../../samples/snippets/csharp/VS_Snippets_CLR/portableclasslibrarymvvm/cs/mainwindow.xaml#6)]  
   
