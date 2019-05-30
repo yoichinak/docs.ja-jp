@@ -2,16 +2,16 @@
 title: SqlClient ストリーミング サポート
 ms.date: 03/30/2017
 ms.assetid: c449365b-470b-4edb-9d61-8353149f5531
-ms.openlocfilehash: 6fda1dd2d46bbe5ad6b23cab0cd817365c6104eb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83a657d1156774ec5ea342d47dca0434fd9d506c
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698448"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379990"
 ---
 # <a name="sqlclient-streaming-support"></a>SqlClient ストリーミング サポート
 
-SQL Server とアプリケーション間のストリーミング サポート (で新しい[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]) (ドキュメント、画像、およびメディア ファイル)、サーバー上の非構造化データをサポートしています。 SQL Server データベースは、バイナリ ラージ オブジェクト (Blob) を格納できますが、多くのメモリを使用して BLOB を取得することができます。
+SQL Server とアプリケーション (.NET Framework 4.5 の新機能) 間のストリーミング サポートでは、サーバー (ドキュメント、画像、およびメディア ファイル) の非構造化データをサポートしています。 SQL Server データベースは、バイナリ ラージ オブジェクト (Blob) を格納できますが、多くのメモリを使用して BLOB を取得することができます。
 
 ストリーミングと SQL Server の間のサポートを簡略化アプリケーションの作成、そのデータをストリームに完全にデータをより少ないメモリのオーバーフロー例外結果として、メモリに読み込む必要はありません。
 
@@ -101,9 +101,9 @@ GO
 
 - 大きなファイルを非同期に取得できるようにして、ユーザー インターフェイス スレッドのブロックを回避する。
 
-- SQL Server から大きなテキスト ファイルを転送[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。
+- .NET Framework 4.5 での SQL Server から大きなテキスト ファイルを転送します。
 
-- SQL Server から大きな XML ファイルを転送[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。
+- .NET Framework 4.5 での SQL Server から大きな XML ファイルを転送します。
 
 - SQL Server からデータを取得します。
 
@@ -323,9 +323,9 @@ GO
 
 このサンプルでは、次の処理の実行方法を示します。
 
-- SQL Server に大きな BLOB を転送する[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。
+- .NET Framework 4.5 での SQL Server に大きな BLOB を転送しています。
 
-- SQL Server に大きなテキスト ファイルを転送する[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。
+- .NET Framework 4.5 での SQL Server に大きなテキスト ファイルを転送しています。
 
 - 新しい非同期機能を使用して大きな BLOB を転送する。
 

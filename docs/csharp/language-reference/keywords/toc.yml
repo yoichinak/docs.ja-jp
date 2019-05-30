@@ -230,20 +230,6 @@
           href: sizeof.md
         - name: typeof
           href: typeof.md
-        - name: 'true'
-          href: true.md
-          items:
-            - name: true 演算子
-              href: true-false-operators.md
-            - name: true リテラル
-              href: true-literal.md
-        - name: 'False'
-          href: false.md
-          items:
-            - name: false 演算子
-              href: true-false-operators.md
-            - name: false リテラル
-              href: false-literal.md
         - name: stackalloc
           href: stackalloc.md
         - name: nameof
@@ -269,6 +255,10 @@
       items:
         - name: 'null'
           href: null.md
+        - name: 'true'
+          href: true-literal.md
+        - name: 'False'
+          href: false-literal.md
         - name: default
           href: default.md
     - name: コンテキスト キーワード

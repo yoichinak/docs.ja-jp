@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 42bef9ab728af251b043e29af4cee9e5cb3f405d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: a11f19a9b5ebdf491b79c250da7fc5ac3d980b64
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636542"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377867"
 ---
 # <a name="qualifiersetput-function"></a>QualifierSet_Put 関数
 
@@ -72,7 +72,7 @@ HRESULT QualifierSet_Put (
 
 |定数  |値  |説明  |
 |---------|---------|---------|
-| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 指定する無効なが試行されました、**キー**修飾子プロパティのキーにすることはできません。 キーが指定された om c; オブジェクトのクラス定義し、インスタンスごとに変更することはできません。 |
+| `WBEM_E_CANNOT_BE_KEY` | 0x8004101f | 指定する無効なが試行されました、**キー**修飾子プロパティのキーにすることはできません。 キーは、オブジェクトのクラス定義で指定され、インスタンスごとに変更することはできません。 |
 | `WBEM_E_INVALID_PARAMETER` | 0x80041008 | パラメーターが無効です。 |
 | `WBEM_E_INVALID_QUALIFIER_TYPE` | 0x80041029 | `pVal`パラメーターが有効な修飾子型ではありません。 |
 | `WBEM_E_OVERRIDE_NOT_ALLOWED` | 0x8004101a | 呼び出すことはできません、`QualifierSet_Put`メソッド修飾子を所有するオブジェクトが許可されていないためにオーバーライドします。 |
@@ -84,7 +84,7 @@ HRESULT QualifierSet_Put (
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
 
 **ヘッダー:** WMINet_Utils.idl
 

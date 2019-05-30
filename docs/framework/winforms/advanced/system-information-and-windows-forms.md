@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user names [Windows Forms], retrieving
 - system information [Windows Forms]
 ms.assetid: 30cf43a3-8cb2-4ff3-862b-6c34576616a8
-ms.openlocfilehash: eeb469dbf4553634aa50d0a9ea17e9b2464defb4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2edc2e867259f8884467c3d5b0ae3d22ba391a77
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934694"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380116"
 ---
 # <a name="system-information-and-windows-forms"></a>システム情報と Windows フォーム
 コードで決定するために、アプリケーションが実行されているコンピューターに関する情報を収集するために必要な場合があります。 たとえば、のみ、特定のネットワークのドメインに接続しているときに適用される関数がある可能性があります。ここでドメインを確認して、ドメインが存在しない場合、関数を無効にする方法する必要があります。  
@@ -34,8 +34,8 @@ MessageBox.Show("Good morning " & User & ". You are connected to " _
 string User = SystemInformation.UserName;  
 string Domain = SystemInformation.UserDomainName;  
   
-MessageBox.Show("Good morning " + User + ". You are connected to " _  
-+ Domain)  
+MessageBox.Show("Good morning " + User + ". You are connected to "
++ Domain);
 ```  
   
  すべてのメンバー、<xref:System.Windows.Forms.SystemInformation>クラスは読み取り専用はユーザーの設定を変更することはできません。 コンピューターに接続されているモニターの数からすべての情報を返すクラスの 100 を超えるメンバーが (<xref:System.Windows.Forms.SystemInformation.MonitorCount%2A>) に Windows エクスプ ローラーのアイコンの間隔 (<xref:System.Windows.Forms.SystemInformation.IconHorizontalSpacing%2A>と<xref:System.Windows.Forms.SystemInformation.IconVerticalSpacing%2A>)。  

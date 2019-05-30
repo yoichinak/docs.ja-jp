@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b625b2962c829e7c0692a61d8f5561818f7ebf1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b59fe76bd6d8d5887ac825e844e89e85677e2d7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000520"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380344"
 ---
 # <a name="icorprofilerinfo4getiltonativemapping2-method"></a>ICorProfilerInfo4::GetILToNativeMapping2 メソッド
 Microsoft Intermediate Language (MSIL) オフセットから、指定した関数の JIT 再コンパイル バージョンに含まれるコードのネイティブ オフセットへのマップを取得します。  
@@ -44,7 +44,7 @@ HRESULT GetILToNativeMapping(
  [in] コードを含む関数の ID。  
   
  `pReJitId`  
- [in] JIT 再コンパイルされた関数のID。 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] ではこの ID はゼロでなければなりません。  
+ [in] JIT 再コンパイルされた関数のID。 Id は、.NET Framework 4.5 では 0 にする必要があります。  
   
  `cMap`  
  [in] `map` 配列の最大サイズ。  
@@ -59,7 +59,7 @@ HRESULT GetILToNativeMapping(
  `GetILToNativeMapping2` ような[icorprofilerinfo::getiltonativemapping](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-getiltonativemapping-method.md)メソッド、プロファイラーが後で再コンパイルされた関数の ID を指定することができますが、解放します。  
   
 > [!NOTE]
->  [Icorprofilerfunctioncontrol::setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md)でメソッドが実装されていません、 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]JIT 再コンパイルされている関数とは異なる IL からネイティブへのマッピングを含めることはできませんので、もともと関数をコンパイルします。 このため `GetILToNativeMapping2` は、[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] でゼロ以外の JIT 再コンパイル済み ID を使用して呼び出すことはできません。  
+>  [Icorprofilerfunctioncontrol::setilinstrumentedcodemap](../../../../docs/framework/unmanaged-api/profiling/icorprofilerfunctioncontrol-setilinstrumentedcodemap-method.md) JIT 再コンパイルされている関数とは異なる IL からネイティブへのマッピングを使用できないために、メソッドは、.NET Framework 4.5 で実装されていません、もともと関数をコンパイルします。 そのため、 `GetILToNativeMapping2` .NET Framework 4.5 では 0 以外の場合の JIT 再コンパイル ID を持つということはできません。  
   
  `GetILToNativeMapping2` メソッドは、`COR_DEBUG_IL_TO_NATIVE_MAP` 構造体の配列を返します。 ネイティブ命令の特定の範囲がコード (たとえば、プロローグ) の特殊なリージョンに対応することを伝える、配列内のエントリを持つことができます、`ilOffset`フィールドの値に設定、 [CorDebugIlToNativeMappingTypes](../../../../docs/framework/unmanaged-api/debugging/cordebugiltonativemappingtypes-enumeration.md)列挙体です。  
   
@@ -68,7 +68,7 @@ HRESULT GetILToNativeMapping(
  別の方法として、最初に `GetILToNativeMapping2` を長さゼロの `map` バッファーで呼び出して、適切なバッファーのサイズを取得します。 その後、バッファーのサイズを `pcMap` で返された値に設定し、`GetILToNativeMapping2` を再度呼び出します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

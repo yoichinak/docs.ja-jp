@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Span elements [WPF]
 - bidirectional features [WPF]
 ms.assetid: fd850e25-7dba-408c-b521-8873e51dc968
-ms.openlocfilehash: 16cf232ccbdcca496aaa18fc2cfac280072ca24f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3a991a841182438dca4ef0a4067d333180f4f60
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655487"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380177"
 ---
 # <a name="bidirectional-features-in-wpf-overview"></a>WPF の双方向機能の概要
 その他の開発プラットフォームとは異なり[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]双方向コンテンツの迅速な開発をサポートする多くの機能、たとえば、データを同じドキュメント内まま混合の左から右、および右にします。 同時に、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]双方向機能のアラビア語やヘブライ語を話すユーザーなどを必要とするユーザー用の優れたエクスペリエンスを作成します。  
@@ -208,7 +208,7 @@ ms.locfileid: "64655487"
   
  まず、設定して、アプリケーション コンポーネントの`NumberSubstitution.CultureSource="Text"`します。 設定がから提供されないことを確認は、この設定を使用して、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]のテキスト要素など、既定値として"User"が含まれない<xref:System.Windows.Controls.TextBlock>します。  
   
-例えば:  
+例:  
 
 ```xaml  
 <TextBlock

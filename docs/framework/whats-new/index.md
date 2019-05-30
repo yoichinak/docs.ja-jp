@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 1d971dd7-10fc-4692-8dac-30ca308fc0fa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 898771c3de8b54c08decd91f1a631a6205292912
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: d064e2377e39f673d47ce497ebd6c96e9f3c1cd0
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053628"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251070"
 ---
 # <a name="whats-new-in-the-net-framework"></a>.NET Framework の新機能
 
@@ -782,7 +782,7 @@ Windows Ink Services Platform (WISP) の代わりに [WM_POINTER メッセージ
 
 ## <a name="whats-new-in-net-framework-462"></a>.NET Framework 4.6.2 の新機能
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] には、次の領域における新機能が含まれています。
+.NET Framework 4.6.2 には、次の領域における新機能が含まれています。
 
 - [ASP.NET](#ASPNET462)
 
@@ -810,11 +810,11 @@ Windows Ink Services Platform (WISP) の代わりに [WM_POINTER メッセージ
 
 ### <a name="aspnet"></a>ASP.NET
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] では、ASP.NET の機能が次のように強化されています。
+.NET Framework 4.6.2 では、ASP.NET の機能が次のように強化されています。
 
 **データ注釈検証コントロールのローカライズされたエラー メッセージのサポート強化**
 
-データ注釈検証コントロールを使用して、1 つ以上の属性をクラス プロパティに追加して検証を行うことができます。 属性の <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 要素は、検証が失敗した場合にエラー メッセージのテキストを定義します。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 以降では、ASP.NET でエラー メッセージを簡単にローカライズできます。 エラー メッセージは次のような場合にローカライズされます。
+データ注釈検証コントロールを使用して、1 つ以上の属性をクラス プロパティに追加して検証を行うことができます。 属性の <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> 要素は、検証が失敗した場合にエラー メッセージのテキストを定義します。 .NET Framework 4.6.2 以降では、ASP.NET でエラー メッセージを簡単にローカライズできます。 エラー メッセージは次のような場合にローカライズされます。
 
 1. <xref:System.ComponentModel.DataAnnotations.ValidationAttribute.ErrorMessage%2A?displayProperty=nameWithType> が検証属性で指定されている。
 
@@ -873,7 +873,7 @@ End Interface
 
  **出力キャッシュ プロバイダーの非同期サポート**
 
- [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] 以降では、タスクを返すメソッドを出力キャッシュ プロバイダーで使用して、非同期のスケーラビリティのメリットを得ることができます。  これらのメソッドを実装するプロバイダーは、Web サーバー上のスレッド ブロックを減らし、ASP.NET サービスのスケーラビリティを向上させます。
+ .NET Framework 4.6.2 以降では、タスクを返すメソッドを出力キャッシュ プロバイダーで使って、非同期のスケーラビリティのメリットを得ることができます。  これらのメソッドを実装するプロバイダーは、Web サーバー上のスレッド ブロックを減らし、ASP.NET サービスのスケーラビリティを向上させます。
 
  非同期出力キャッシュ プロバイダーをサポートするために、次の API が追加されました。
 
@@ -897,7 +897,7 @@ End Interface
 
 ### <a name="character-categories"></a>文字カテゴリ
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] の文字は [Unicode Standard バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいて分類されます。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] と [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] では、文字は Unicode 6.3 文字のカテゴリに基づいて分類されました。
+.NET Framework 4.6.2 の文字は [Unicode Standard バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいて分類されます。 .NET Framework 4.6 と .NET Framework 4.6.1 では、文字は Unicode 6.3 文字のカテゴリに基づいて分類されました。
 
 Unicode 8.0 のサポートは、<xref:System.Globalization.CharUnicodeInfo> クラスによる文字列の分類およびそれに依存する型とメソッドに限定されます。 これらには、<xref:System.Globalization.StringInfo> クラス、オーバーロードされた <xref:System.Char.GetUnicodeCategory%2A?displayProperty=nameWithType> メソッド、および .NET Framework の正規表現エンジンによって認識される[文字クラス](../../standard/base-types/character-classes-in-regular-expressions.md)が含まれます。  文字や文字列の比較と並べ替えは、この変更の影響を受けることなく、引き続き基となるオペレーティング システムに依存します (Windows 7 システムの場合は、.NET Framework で提供される文字データに依存)。
 
@@ -909,11 +909,11 @@ Unicode 6.0 から Unicode 7.0 への文字カテゴリの変更については�
 
 **FIPS 186-3 DSA を含む X509 証明書のサポート**
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] には、FIPS 186-2 の 1024 ビットという制限を超えるキーを持つ、DSA (Digital Signature Algorithm) X509 証明書のサポートが追加されています。
+.NET Framework 4.6.2 には、FIPS 186-2 の 1024 ビットという制限を超えるキーを持つ、DSA (Digital Signature Algorithm) X509 証明書のサポートが追加されています。
 
-より大きな FIPS 186-3 のキー サイズのサポートに加えて、[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] では、SHA-2 ファミリのハッシュ アルゴリズム (SHA256、SHA384、SHA512) によるシグネチャ計算も可能です。 FIPS 186-3 のサポートは新しい <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> クラスで提供されます。
+より大きな FIPS 186-3 のキー サイズのサポートに加えて、.NET Framework 4.6.2 では、SHA-2 ファミリのハッシュ アルゴリズム (SHA256、SHA384、SHA512) によるシグネチャ計算も可能です。 FIPS 186-3 のサポートは新しい <xref:System.Security.Cryptography.DSACng?displayProperty=nameWithType> クラスで提供されます。
 
-.NET Framework 4.6 の <xref:System.Security.Cryptography.RSA> クラスと .NET Framework 4.6.1 の <xref:System.Security.Cryptography.ECDsa> クラスの最近の変更に合わせて、[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] の <xref:System.Security.Cryptography.DSA> 抽象基本クラスにメソッドが追加されました。呼び出し元はこの機能をキャストせずに使用することができます。 データに署名する場合は、以下の例のように、<xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> 拡張メソッドを呼び出すことができます。
+.NET Framework 4.6 の <xref:System.Security.Cryptography.RSA> クラスと .NET Framework 4.6.1 の <xref:System.Security.Cryptography.ECDsa> クラスの最近の変更に合わせて、.NET Framework 4.6.2 の <xref:System.Security.Cryptography.DSA> 抽象基本クラスには追加のメソッドがあり、これによって呼び出し元はこの機能をキャストせずに使用することができます。 データに署名する場合は、以下の例のように、<xref:System.Security.Cryptography.X509Certificates.DSACertificateExtensions.GetDSAPrivateKey%2A?displayProperty=nameWithType> 拡張メソッドを呼び出すことができます。
 
 ```csharp
 public static byte[] SignDataDsaSha384(byte[] data, X509Certificate2 cert)
@@ -957,7 +957,7 @@ End Function
 
 .NET Framework 3.5 では、3 種類の KDF (キー派生関数) ルーチンによる Elliptic Curve Diffie-Hellman キー承諾のサポートが追加されました。 ルーチンへの入力、およびルーチン自体は <xref:System.Security.Cryptography.ECDiffieHellmanCng> オブジェクトのプロパティで構成されました。 しかし、すべてのルーチンですべての入力プロパティが読み取られるわけではないため、これまで開発者がよく混乱することがありました。
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] ではこれに対処するために、次の 3 つのメソッドが <xref:System.Security.Cryptography.ECDiffieHellman> 基本クラスに追加され、これらの KDF ルーチンとその入力がよりわかりやくなりました。
+.NET Framework 4.6.2 ではこれに対処するために、次の 3 つのメソッドが <xref:System.Security.Cryptography.ECDiffieHellman> 基底クラスに追加され、これらの KDF ルーチンとその入力がよりわかりやくなりました。
 
 |ECDiffieHellman メソッド|説明|
 |----------------------------|-----------------|
@@ -967,7 +967,7 @@ End Function
 
 **永続化されたキーによる対称暗号化のサポート**
 
-Windows の暗号化ライブラリ (CNG) では、永続化された対称キーの格納とハードウェアに格納された対称キーの使用のサポートが追加され、[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] で開発者はこの機能を利用できるようになりました。  キー名とキー プロバイダーの概念が実装に固有であるため、この機能を使用するには、推奨されるファクトリ手法 (`Aes.Create` の呼び出しなど) ではなく、具象実装型のコンストラクターを利用する必要があります。
+Windows の暗号化ライブラリ (CNG) では、永続化された対称キーの格納とハードウェアに格納された対称キーの使用のサポートが追加され、.NET Framework 4.6.2 で開発者はこの機能を利用できるようになりました。  キー名とキー プロバイダーの概念が実装に固有であるため、この機能を使用するには、推奨されるファクトリ手法 (`Aes.Create` の呼び出しなど) ではなく、具象実装型のコンストラクターを利用する必要があります。
 
 永続化されたキーによる対称暗号化は、AES (<xref:System.Security.Cryptography.AesCng>) と 3DES (<xref:System.Security.Cryptography.TripleDESCng>) アルゴリズムでサポートされます。 次に例を示します。
 
@@ -1010,7 +1010,7 @@ End Function
 
 **SHA-2 ハッシュの SignedXml サポート**
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] では <xref:System.Security.Cryptography.Xml.SignedXml> クラスに対するサポートが追加され、RSA-SHA256、RSA-SHA384、RSA-SHA512 の各 PKCS#1 署名メソッド、および SHA256、SHA384、SHA512 の各参照ダイジェスト アルゴリズムが使用できるようになりました。
+.NET Framework 4.6.2 では <xref:System.Security.Cryptography.Xml.SignedXml> クラスに対するサポートが追加され、RSA-SHA256、RSA-SHA384、RSA-SHA512 の各 PKCS#1 署名メソッド、および SHA256、SHA384、SHA512 の各参照ダイジェスト アルゴリズムが使うことができるようになりました。
 
 以下のように、URI 定数はすべて <xref:System.Security.Cryptography.Xml.SignedXml> で示されます。
 
@@ -1029,7 +1029,7 @@ End Function
 
 ### <a name="sqlclient"></a>SqlClient
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] では、.NET Framework SQL Server 用データ プロバイダー (<xref:System.Data.SqlClient?displayProperty=nameWithType>) に次の新機能が含まれています。
+.NET Framework 4.6.2 では、.NET Framework Data Provider for SQL Server (<xref:System.Data.SqlClient?displayProperty=nameWithType>) に次の新機能が含まれています。
 
 **Azure SQL Database への接続プールとタイムアウト**
 
@@ -1071,13 +1071,13 @@ SQLClient では、Always Encrypted の以下の 2 つの機能が強化され�
 
 ### <a name="windows-communication-foundation"></a>Windows Communication Foundation
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] では、Windows Communication Foundation の次の領域の機能が強化されています。
+.NET Framework 4.6.2 では、Windows Communication Foundation の次の領域の機能が強化されています。
 
 **CNG を使用して格納される証明書の WCF トランスポート セキュリティ サポート**
 
-WCF トランスポート セキュリティでは、Windows 暗号化ライブラリ (CNG) を使用して格納される証明書がサポートされます。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] では、このサポートは、指数の長さが 32 ビット以下の公開キーを持つ証明書を使用する場合に限定されます。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] を対象とするアプリケーションでは、この機能は既定で有効になります。
+WCF トランスポート セキュリティでは、Windows 暗号化ライブラリ (CNG) を使用して格納される証明書がサポートされます。 .NET Framework 4.6.2 では、このサポートは、指数の長さが 32 ビット以下の公開キーを持つ証明書を使う場合に限定されます。 .NET Framework 4.6.2 を対象とするアプリケーションでは、この機能は既定で有効になります。
 
-[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] 以前を対象とするアプリケーションが [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] で実行されている場合、app.config または web.config ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに次の行を追加することで、この機能を有効にできます。
+.NET Framework 4.6.1 以前を対象とするアプリケーションが .NET Framework 4.6.2 で実行されている場合、app.config または web.config ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに次の行を追加することで、この機能を有効にできます。
 
 ```xml
 <AppContextSwitchOverrides
@@ -1146,7 +1146,7 @@ WCF には、クライアント アプリケーションで設定できる新し
 
 ### <a name="windows-presentation-foundation-wpf"></a>Windows Presentation Foundation (WPF)
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] では、Windows Presentation Foundation の次の領域の機能が強化されています。
+.NET Framework 4.6.2 では、Windows Presentation Foundation の次の領域の機能が強化されています。
 
 **グループの並べ替え**
 
@@ -1180,11 +1180,11 @@ WCF には、クライアント アプリケーションで設定できる新し
 
 **モニターごとの DPI**
 
-WPF アプリ用の高 DPI とハイブリッド DPI 環境の最近の急激な増加に対応するために、[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] の WPF でモニターごとに対応できるようになりました。 ご使用の WPF アプリでモニターごとの DPI 対応を有効にする方法の詳細については、GitHub の[サンプルと開発者向けガイド](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI)に関するページを参照してください。
+WPF アプリ用の高 DPI とハイブリッド DPI 環境の最近の急激な増加に対応するために、.NET Framework 4.6.2 の WPF でモニターごとに対応できるようになりました。 ご使用の WPF アプリでモニターごとの DPI 対応を有効にする方法の詳細については、GitHub の[サンプルと開発者向けガイド](https://github.com/Microsoft/WPF-Samples/tree/master/PerMonitorDPI)に関するページを参照してください。
 
 .NET Framework の以前のバージョンでは、WPF アプリはシステム DPI 対応です。 つまり、アプリケーションの UI は、アプリがレンダリングされるモニターの DPI に基づき、必要に応じて OS でスケーリングされます。 ,
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] で実行されるアプリの場合、次のように、アプリケーションの構成ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに構成ステートメントを追加して、WPF アプリでモニターごとの DPI 変更を無効にすることができます。
+.NET Framework 4.6.2 で実行されるアプリの場合、次のように、アプリケーションの構成ファイルの [\<runtime>](../configure-apps/file-schema/runtime/runtime-element.md) セクションに構成ステートメントを追加して、WPF アプリでモニターごとの DPI 変更を無効にすることができます。
 
 ```xml
 <runtime>
@@ -1196,13 +1196,13 @@ WPF アプリ用の高 DPI とハイブリッド DPI 環境の最近の急激な
 
 ### <a name="windows-workflow-foundation-wf"></a>Windows Workflow Foundation (WF)
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] では、Windows Workflow Foundation の次領域の機能が強化されています。
+.NET Framework 4.6.2 では、Windows Workflow Foundation の次領域の機能が強化されています。
 
 **再ホストされた WF デザイナーにおける C# 式と IntelliSense のサポート**
 
 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、WF によって、Visual Studio デザイナーとコード ワークフローの両方で C# 式がサポートされます。 再ホストされたワークフロー デザイナーは WF の主な機能です。これにより、ワークフロー デザイナーを Visual Studio の外部のアプリケーション (WPF など) で使用できるようになります。  Windows Workflow Foundation は、再ホストされたワークフロー デザイナーで C# 式と IntelliSense をサポートできるようにします。 詳細については、[Windows Workflow Foundation のブログ](https://go.microsoft.com/fwlink/?LinkID=809042&clcid=0x409)を参照してください。
 
-`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] より前のバージョンの .NET Framework で、お客様が Visual Studio からワークフロー プロジェクトを再ビルドした場合、WF Designer IntelliSense は破損してしまいます。 プロジェクトのビルドに成功しても、デザイナーでワークフローの種類が見つからず、**[エラー一覧]** ウィンドウにワークフローの種類が欠落していることを示す IntelliSense からの警告が表示されます。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] はこの問題に対処し、IntelliSense を使用できるようにします。
+`Availability of IntelliSense when a customer rebuilds a workflow project from Visual Studio` .NET Framework 4.6.2 より前のバージョンの .NET Framework で、お客様が Visual Studio からワークフロー プロジェクトをリビルドした場合、WF Designer IntelliSense は破損してしまいます。 プロジェクトのビルドに成功しても、デザイナーでワークフローの種類が見つからず、 **[エラー一覧]** ウィンドウにワークフローの種類が欠落していることを示す IntelliSense からの警告が表示されます。 .NET Framework 4.6.2 はこの問題に対処し、IntelliSense を使うことができるようにします。
 
 **ワークフロー追跡を有効にしたワークフロー V1 アプリケーションを FIPS モードで実行**
 
@@ -1216,7 +1216,7 @@ FIPS コンプライアンス モードが有効なコンピューターで、�
 
 **Visual Studio ワークフロー デザイナーで動的更新を使用する場合のワークフローの改善**
 
-ワークフロー デザイナー、フローチャート アクティビティ デザイナー、およびその他のワークフロー アクティビティ デザイナーで、<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> メソッドを呼び出した後に保存されたワークフローが正常に読み込まれ、表示されるようになりました。 [!INCLUDE[net_v462](../../../includes/net-v462-md.md)] より前のバージョンの .NET Framework では、<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> を呼び出した後に保存されたワークフローの XAML ファイルを Visual Studio で読み込むと、以下の問題が発生する場合がありました。
+ワークフロー デザイナー、フローチャート アクティビティ デザイナー、およびその他のワークフロー アクティビティ デザイナーで、<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> メソッドを呼び出した後に保存されたワークフローが正常に読み込まれ、表示されるようになりました。 .NET Framework 4.6.2 より前のバージョンの .NET Framework では、<xref:System.Activities.DynamicUpdate.DynamicUpdateServices.PrepareForUpdate%2A?displayProperty=nameWithType> を呼び出した後に保存されたワークフローの XAML ファイルを Visual Studio で読み込むと、以下の問題が発生する場合がありました。
 
 - ワークフロー デザイナーで XAML ファイルが正しく読み込めない (行の末尾に <xref:System.Activities.Presentation.ViewState.ViewStateData.Id%2A?displayProperty=nameWithType> がある場合)。
 
@@ -1240,7 +1240,7 @@ Windows では、WPF および Windows フォーム アプリを含む、既存�
 
 ### <a name="debugging-improvements"></a>デバッグの機能強化
 
-[!INCLUDE[net_v462](../../../includes/net-v462-md.md)] で *アンマネージ デバッグ API* が強化され、<xref:System.NullReferenceException> がスローされたときに、ソース コードの単一行でどの変数が `null` になっているかを判別できるように、さらに分析されるようになりました。   このシナリオをサポートするために、次の API がアンマネージ デバッグ API に追加されました。
+.NET Framework 4.6.2 で *アンマネージ デバッグ API* が強化され、<xref:System.NullReferenceException> がスローされたときに、ソース コードの単一行でどの変数が `null` になっているかを判別できるように、さらに分析されるようになりました。   このシナリオをサポートするために、次の API がアンマネージ デバッグ API に追加されました。
 
 - [ICorDebugCode4](../unmanaged-api/debugging/icordebugcode4-interface.md)、[ICorDebugVariableHome](../unmanaged-api/debugging/icordebugvariablehome-interface.md)、および [ICorDebugVariableHomeEnum](../unmanaged-api/debugging/icordebugvariablehomeenum-interface.md) インターフェイス。これらは管理対象変数の元のホームを公開します。 これにより、デバッガーは、<xref:System.NullReferenceException> の発生時になんらかのコード フロー分析を行い、さかのぼって、`null` だった元の場所に対応する管理対象変数を判別できます。
 
@@ -1250,7 +1250,7 @@ Windows では、WPF および Windows フォーム アプリを含む、既存�
 
 ## <a name="whats-new-in-net-framework-461"></a>.NET Framework 4.6.1 の新機能
 
-[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] には、次の領域における新機能が含まれています。
+.NET Framework 4.6.1 には、次の領域における新機能が含まれています。
 
 - [暗号](#Crypto)
 
@@ -1264,7 +1264,7 @@ Windows では、WPF および Windows フォーム アプリを含む、既存�
 
 - [NGen](#NGEN461)
 
-[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] の詳細については、次のトピックを参照してください。
+.NET Framework 4.6.1 の詳細については、次のトピックを参照してください。
 
 - [.NET Framework 4.6.1 の変更の一覧](https://go.microsoft.com/fwlink/?LinkId=622964)
 
@@ -1276,11 +1276,11 @@ Windows では、WPF および Windows フォーム アプリを含む、既存�
 
 ### <a name="cryptography-support-for-x509-certificates-containing-ecdsa"></a>暗号: ECDSA を含む X509 証明書のサポート
 
-.NET Framework 4.6 では、X509 証明書の RSACng サポートが追加されました。 [!INCLUDE[net_v461](../../../includes/net-v461-md.md)] では、ECDSA (Elliptic Curve Digital Signature Algorithm: 楕円曲線デジタル署名アルゴリズム) X509 証明書のサポートが追加されました。
+.NET Framework 4.6 では、X509 証明書の RSACng サポートが追加されました。 .NET Framework 4.6.1 では、ECDSA (Elliptic Curve Digital Signature Algorithm: 楕円曲線デジタル署名アルゴリズム) X509 証明書のサポートが追加されました。
 
 ECDSA は、RSA よりも安全な暗号化アルゴリズムで、パフォーマンスも向上するため、トランスポート層セキュリティ (TLS) のパフォーマンスとスケーラビリティが問題になる場合に最適な選択肢です。 .NET Framework の実装では、既存の Windows 機能の呼び出しがラップされます。
 
-次のサンプル コードでは、[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] での新しい ECDSA X509 証明書のサポートを使用してバイト ストリームの署名が簡単に生成できることを示しています。
+次のサンプル コードでは、.NET Framework 4.6.1 での新しい ECDSA X509 証明書のサポートを使ってバイト ストリームの署名が簡単に生成できることを示しています。
 
 [!code-csharp[whatsnew.461.crypto#1](~/samples/snippets/csharp/VS_Snippets_CLR/whatsnew.461.crypto/cs/Code46.cs#1)]
 [!code-vb[whatsnew.461.crypto#1](~/samples/snippets/visualbasic/VS_Snippets_CLR/whatsnew.461.crypto/vb/Code461.vb#1)]
@@ -1314,7 +1314,7 @@ Windows Presentation Foundation には、さまざまな改善と変更が含ま
 
 **パフォーマンスの向上**
 
-[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] で、タッチ イベントの開始の遅延が修正されました。 また、<xref:System.Windows.Controls.RichTextBox> コントロールの入力が高速入力時のレンダーのスレッドを停止させなくなりました。
+.NET Framework 4.6.1 で、タッチ イベントの開始の遅延が修正されました。 また、<xref:System.Windows.Controls.RichTextBox> コントロールの入力が高速入力時のレンダーのスレッドを停止させなくなりました。
 
 **スペル チェック機能の改善**
 
@@ -1332,7 +1332,7 @@ WPF での言語サポートの詳細については、[.NET Framework 4.6.1 機
 
 **ユーザーごとのユーザー辞書の追加サポート**
 
-[!INCLUDE[net_v461](../../../includes/net-v461-md.md)] では、WPF で、グローバルに登録されているユーザー辞書が認識されます。 この機能は、ユーザー辞書をコントロールごとに登録する機能に加えて使用できます。
+.NET Framework 4.6.1 では、WPF で、グローバルに登録されているユーザー辞書が認識されます。 この機能は、ユーザー辞書をコントロールごとに登録する機能に加えて使用できます。
 
 以前のバージョンの WPF では、ユーザー辞書で除外された単語とオートコレクト リストが認識されませんでした。 `%AppData%\Microsoft\Spelling\<language tag>` ディレクトリに配置できるファイルの使用によって、これらが Windows 8.1 と Windows 10 でサポートされます。  これらのファイルには、次の規則が適用されます。
 
@@ -1948,7 +1948,7 @@ ASP.NET 4.5.1 の新機能については、「[ASP.NET and Web Tools for Visual
 
 - 複数のスコープ。
 
-- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリを作成するときに使用できる MEF のサブセット。 このサブセットは、[ダウンロード可能パッケージ](https://go.microsoft.com/fwlink/?LinkId=256238)として NuGet ギャラリーから入手できます。 パッケージをインストールするには、Visual Studio でプロジェクトを開き、**[プロジェクト]** メニューの **[NuGet パッケージの管理]** をクリックし、`Microsoft.Composition` パッケージをオンラインで検索します。
+- [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリを作成するときに使用できる MEF のサブセット。 このサブセットは、[ダウンロード可能パッケージ](https://go.microsoft.com/fwlink/?LinkId=256238)として NuGet ギャラリーから入手できます。 パッケージをインストールするには、Visual Studio でプロジェクトを開き、 **[プロジェクト]** メニューの **[NuGet パッケージの管理]** をクリックし、`Microsoft.Composition` パッケージをオンラインで検索します。
 
 詳しくは、「[Managed Extensibility Framework (MEF)](../mef/index.md)」を参照してください。
 
@@ -2088,7 +2088,7 @@ ASP.NET 4.5 および 4.5.1 では、Web フォーム モデルのバインデ�
 
     - スクロール バーを使用せずに変更されるワークフローの表示部分を変更できるようにするパン サポート。
 
-    - ツリー スタイルのアウトライン ビューでワークフローのコンポーネントを表示し、**[ドキュメント アウトライン]** ビューでコンポーネントを選択できるようにする新しい **[ドキュメント アウトライン]** ビュー。
+    - ツリー スタイルのアウトライン ビューでワークフローのコンポーネントを表示し、 **[ドキュメント アウトライン]** ビューでコンポーネントを選択できるようにする新しい **[ドキュメント アウトライン]** ビュー。
 
     - アクティビティに注釈を追加できる機能。
 

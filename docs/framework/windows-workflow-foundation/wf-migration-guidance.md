@@ -2,14 +2,14 @@
 title: Windows Workflow Foundation (WF) への移行のガイドライン
 ms.date: 06/19/2017
 ms.assetid: 1da7f5ff-5a67-44ba-b165-f3e5de008e4a
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 049a51fb7b92ef1601b435a49ae4678f052ac509
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f3d821c9be364e4293eb83c34ec18724834f008
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669460"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301491"
 ---
 # <a name="windows-workflow-foundation-wf-migration-guidance"></a>Windows Workflow Foundation (WF) への移行のガイドライン
 

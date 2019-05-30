@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: 2303031f-4c1d-4df4-bca1-e9bd96ca40dc
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 731e52958b89886c2bc069c4c181c0cc3928d487
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8636050b2618d1b2c2da0c08c756b0ed221c7f6f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674728"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300769"
 ---
 # <a name="custom-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>NameValueSectionHandler および DictionarySectionHandler のカスタム要素
 
 使用して、カスタム構成セクションの設定を定義、<xref:System.Configuration.NameValueSectionHandler>と<xref:System.Configuration.DictionarySectionHandler>クラス。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
-&nbsp;&nbsp;**\<sectionName>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)\
+&nbsp;&nbsp; **\<sectionName>**
 
 ## <a name="attributes"></a>属性
 
@@ -30,15 +30,15 @@ ms.locfileid: "61674728"
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
 
 ## <a name="child-elements"></a>子要素
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<追加 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md)の<xref:System.Configuration.NameValueSectionHandler>と <xref:System.Configuration.DictionarySectionHandler>  | カスタム アプリケーションの設定を追加します。 |
-| [**\<削除 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md)の<xref:System.Configuration.NameValueSectionHandler>と <xref:System.Configuration.DictionarySectionHandler> | 以前に定義された設定を削除します。 |
-| [**\<クリア >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md)の<xref:System.Configuration.NameValueSectionHandler>と <xref:System.Configuration.DictionarySectionHandler> | セクション内のすべての以前に定義された設定をクリアします。 |
+| [ **\<追加 >** ](~/docs/framework/configure-apps/file-schema/add-element-for-custom-2.md)の<xref:System.Configuration.NameValueSectionHandler>と <xref:System.Configuration.DictionarySectionHandler>  | カスタム アプリケーションの設定を追加します。 |
+| [ **\<削除 >** ](~/docs/framework/configure-apps/file-schema/remove-element-for-custom-2.md)の<xref:System.Configuration.NameValueSectionHandler>と <xref:System.Configuration.DictionarySectionHandler> | 以前に定義された設定を削除します。 |
+| [ **\<クリア >** ](~/docs/framework/configure-apps/file-schema/clear-element-for-custom-2.md)の<xref:System.Configuration.NameValueSectionHandler>と <xref:System.Configuration.DictionarySectionHandler> | セクション内のすべての以前に定義された設定をクリアします。 |
 
 ## <a name="remarks"></a>Remarks
 
@@ -55,7 +55,7 @@ ms.locfileid: "61674728"
 
 次の例を使用するセクションを宣言する方法を示しています、<xref:System.Configuration.DictionarySectionHandler>と<xref:System.Configuration.NameValueSectionHandler>クラス。
 
-最初のカスタム要素は **\<dictionarySample >**、によって読み取られた設定を含む、<xref:System.Configuration.DictionarySectionHandler>クラス、`System.dll`アセンブリ。 2 番目のカスタム要素は **\<mySection >**、によって読み取られた設定を含む、<xref:System.Configuration.NameValueSectionHandler>クラス、`System.dll`アセンブリ。
+最初のカスタム要素は **\<dictionarySample >** 、によって読み取られた設定を含む、<xref:System.Configuration.DictionarySectionHandler>クラス、`System.dll`アセンブリ。 2 番目のカスタム要素は **\<mySection >** 、によって読み取られた設定を含む、<xref:System.Configuration.NameValueSectionHandler>クラス、`System.dll`アセンブリ。
 
 ```xml
 <configuration>

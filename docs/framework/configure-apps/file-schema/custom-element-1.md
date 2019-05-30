@@ -6,21 +6,21 @@ f1_keywords:
 helpviewer_keywords:
 - custom element
 ms.assetid: e62056c6-b351-40eb-afc0-cc13fc44e45e
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: bfc2a916e37ac27d45746eb268912b3752f4d80f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad98617cd4e88d1650f67136536b7dd5994233a4
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705299"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301150"
 ---
 # <a name="custom-element-for-singletagsectionhandler"></a>SingleTagSectionHandler のカスタム要素
 
 定義されているカスタム構成セクションの設定を定義、\<セクション > 要素と、使用して、<xref:System.Configuration.SingleTagSectionHandler>クラス。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;*\<sectionName>*
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp; *\<sectionName>*
 
 ## <a name="syntax"></a>構文
 
@@ -36,7 +36,7 @@ ms.locfileid: "61705299"
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
+| [ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md) | 共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。 |
 
 ## <a name="child-elements"></a>子要素
 

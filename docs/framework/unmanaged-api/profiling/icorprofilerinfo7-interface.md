@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: cf37c462-73c5-412a-a7f8-bb26ca746313
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6d8586031c5bcb0303a64b67ee601fe41b81ee3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a734bfdef89d4f8f9459f49a3ce2cee83faef9f6
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61786244"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250986"
 ---
 # <a name="icorprofilerinfo7-interface"></a>ICorProfilerInfo7 インターフェイス
-[[!INCLUDE[net_v461](../../../../includes/net-v461-md.md)] 以降のバージョンでサポート]  
+[.NET Framework 4.6.1 以降のバージョンでのみでサポート]  
   
  サブクラス[ICorProfilerInfo6](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo6-interface.md)新しくを適用するメソッドをモジュールにメタデータを定義して、メモリ内のシンボルのストリームへのアクセスを提供するを提供します。  
   

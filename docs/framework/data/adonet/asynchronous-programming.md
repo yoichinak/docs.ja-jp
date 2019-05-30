@@ -2,20 +2,20 @@
 title: 非同期プログラミング
 ms.date: 10/18/2018
 ms.assetid: 85da7447-7125-426e-aa5f-438a290d1f77
-ms.openlocfilehash: c41a231959536f4bd558fcd3e94d0d58c2375021
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 2698ffabb1f4d7c25f8d889c549c27b668647d62
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584497"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380068"
 ---
 # <a name="asynchronous-programming"></a>非同期プログラミング
 
-このトピックでの非同期プログラミング、.NET Framework Data Provider for SQL Server (SqlClient) で導入された非同期のプログラミング機能をサポートする拡張機能などのサポート[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。
+このトピックでの非同期プログラミング、.NET Framework Data Provider for SQL Server (SqlClient) .NET Framework 4.5 で導入された非同期のプログラミング機能をサポートする拡張機能などのサポートについて説明します。
 
 ## <a name="legacy-asynchronous-programming"></a>従来の非同期プログラミング
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] より前のバージョンでは、SqlClient による非同期プログラミングは、次のメソッドと `Asynchronous Processing=true` 接続プロパティを使用して行われていました。
+.NET Framework 4.5 では、前に、SqlClient による非同期プログラミングが次のメソッドで行われた、`Asynchronous Processing=true`接続プロパティ。
 
 1. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteNonQuery%2A?displayProperty=nameWithType>
 
@@ -23,16 +23,16 @@ ms.locfileid: "65584497"
 
 3. <xref:System.Data.SqlClient.SqlCommand.BeginExecuteXmlReader%2A?displayProperty=nameWithType>
 
-この機能は [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] の SqlClient に残っています。
+この機能は、.NET Framework 4.5 での SqlClient に残っています。
 
 > [!TIP]
-> 以降では、 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]、これらのレガシ メソッドが不要になった`Asynchronous Processing=true`接続文字列にします。
+> 以降、.NET Framework 4.5 では、これらのレガシ メソッドが不要になった`Asynchronous Processing=true`接続文字列にします。
 
-## <a name="asynchronous-programming-features-added-in-includenetv45includesnet-v45-mdmd"></a>[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] で追加された非同期プログラミング機能
+## <a name="asynchronous-programming-features-added-in-net-framework-45"></a>.NET Framework 4.5 で追加された非同期のプログラミング機能
 
 新しい非同期プログラミング機能を使用すると、コードを簡単に非同期にすることができます。
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] で導入された非同期プログラミング機能の詳細については、次の Web サイトを参照してください。
+.NET Framework 4.5 で導入された非同期のプログラミング機能の詳細についてを参照してください。
 
 - [C# の非同期プログラミング](../../../csharp/async.md)
 
@@ -53,7 +53,7 @@ ms.locfileid: "65584497"
 
 `async` メソッドを呼び出すと、追加のスレッドは割り当てられません。 既存の I/O 完了スレッドが最後に簡単に使用される可能性があります。
 
-非同期プログラミングをサポートするために [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] に追加されたメソッドは次のとおりです。
+非同期プログラミングをサポートするために .NET Framework 4.5 では、次のメソッドが追加されました。
 
 - <xref:System.Data.Common.DbConnection.OpenAsync%2A?displayProperty=nameWithType>
 

@@ -10,14 +10,14 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 6f0b8902-f31c-4ab9-a8c9-de43228995ec
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ed1fce1d16f9ddbe3a3ede91fecb1a3ca6b3d407
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c50f673e77ef384ccf33803e14d60c322b6c0365
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675456"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300976"
 ---
 # <a name="connection-class"></a>Connection クラス
 
@@ -38,6 +38,6 @@ internal class Connection : PooledStream
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:**(System.dll) のシステム
+**アセンブリ:** (System.dll) のシステム
 
 **.NET framework のバージョン:** 2.0 以降で使用可能です。

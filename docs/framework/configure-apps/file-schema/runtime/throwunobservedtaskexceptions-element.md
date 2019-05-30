@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: cea7e588-8b8d-48d2-9ad5-8feaf3642c18
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 416a00eb6966a9c5f83427182d9a12c4bbb20810
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b47c4d07fc0ee0cdaf53fe3c8199fb37dcb6c1b1
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592646"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377888"
 ---
 # <a name="throwunobservedtaskexceptions-element"></a>\<ThrowUnobservedTaskExceptions > 要素
 タスクがハンドルされない例外によって実行中のプロセスを終了するかどうかを指定します。  
@@ -63,9 +63,9 @@ ms.locfileid: "64592646"
   
  [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]により、既定では場合、<xref:System.Threading.Tasks.Task>を持つ、無視された例外は、ガベージ コレクション、ファイナライザーが例外をスローし、プロセスを終了します。 プロセスの終了は、ガベージ コレクションとファイナライズのタイミングによって決まります。  
   
- タスク ベースの非同期コードを記述する開発者向けに容易にできるように、[!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]監視されていない例外の場合は、この既定動作が変わります。 無視された例外の原因となる、<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>イベントを発生させるには、既定では、プロセスを終了しません。 代わりに、イベント ハンドラーが例外を監視するかどうかに関係なく、イベントが発生した後、例外は無視されます。  
+ タスクに基づいて非同期コードを記述する開発者向けに容易にできるように、.NET Framework 4.5 は、監視されていない例外のこの既定の動作を変更します。 無視された例外の原因となる、<xref:System.Threading.Tasks.TaskScheduler.UnobservedTaskException>イベントを発生させるには、既定では、プロセスを終了しません。 代わりに、イベント ハンドラーが例外を監視するかどうかに関係なく、イベントが発生した後、例外は無視されます。  
   
- [!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)]、使用することができます、 [ \<ThrowUnobservedTaskExceptions > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)を有効にするアプリケーション構成ファイルで、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]動作が例外をスローします。  
+ .NET Framework 4.5 で使用することができます、 [ \<ThrowUnobservedTaskExceptions > 要素](../../../../../docs/framework/configure-apps/file-schema/runtime/throwunobservedtaskexceptions-element.md)を有効にするアプリケーション構成ファイルで、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]の例外がスローされる動作です。  
   
  次の方法のいずれかで例外の動作を指定することもできます。  
   

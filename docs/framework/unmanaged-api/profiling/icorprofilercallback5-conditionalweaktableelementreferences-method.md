@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8fd904ba03fd5c652b1e5e5c7f763dab2b80e517
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 08b35dd1744dbbb64d202718b61a9db5684d3bc3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636657"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380363"
 ---
 # <a name="icorprofilercallback5conditionalweaktableelementreferences-method"></a>ICorProfilerCallback5::ConditionalWeakTableElementReferences メソッド
 
@@ -82,11 +82,11 @@ HRESULT Callback5Impl::ConditionalWeakTableElementReferences(
 
 ## <a name="remarks"></a>Remarks
 
-プロファイラーは、[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]またはそれ以降のバージョンの実装、 [ICorProfilerCallback5](icorprofilercallback5-interface.md)インターフェイスとレコードで指定された依存関係、`ConditionalWeakTableElementReferences`メソッド。 `ICorProfilerCallback5` によって表されるライブ オブジェクト間の依存関係の完全なセットを提供します。`ConditionalWeakTable`エントリ。 これらの依存関係と、メンバーのフィールドで指定された参照、 [icorprofilercallback::objectreferences](icorprofilercallback-objectreferences-method.md)メソッドは、マネージ プロファイラーがライブ オブジェクトの完全なオブジェクト グラフを生成するを有効にします。
+プロファイラーは、.NET Framework 4.5 またはそれ以降のバージョンの実装、 [ICorProfilerCallback5](icorprofilercallback5-interface.md)インターフェイスとレコードで指定された依存関係、`ConditionalWeakTableElementReferences`メソッド。 `ICorProfilerCallback5` によって表されるライブ オブジェクト間の依存関係の完全なセットを提供します。`ConditionalWeakTable`エントリ。 これらの依存関係と、メンバーのフィールドで指定された参照、 [icorprofilercallback::objectreferences](icorprofilercallback-objectreferences-method.md)メソッドは、マネージ プロファイラーがライブ オブジェクトの完全なオブジェクト グラフを生成するを有効にします。
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
 
 **ヘッダー:** CorProf.idl、CorProf.h
 

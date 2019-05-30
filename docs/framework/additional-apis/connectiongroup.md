@@ -10,14 +10,14 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 25c08217-fdeb-44b9-9cd6-1b4955d6e602
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 8fddc2cd537963ad2aa1e0858476e7b9b9c6c032
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1064c15fc6fc1416f9c2b3a7aac51ef30d78ca7a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61706144"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300914"
 ---
 # <a name="connectiongroup-class"></a>ConnectionGroup クラス
 
@@ -38,6 +38,6 @@ internal class ConnectionGroup
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:**(System.dll) のシステム
+**アセンブリ:** (System.dll) のシステム
 
 **.NET framework のバージョン:** 2.0 以降で使用可能です。

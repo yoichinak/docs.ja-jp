@@ -7,22 +7,22 @@ helpviewer_keywords:
 - remove Element
 - <remove> Element
 ms.assetid: ae4d82e0-e8fe-468c-81ab-46d63c4d66a8
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: 9ceffd3194c7df41f12ac6cd6b589602965b4920
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 7c0173879c692588cc2e15f0b14a5687bb0404fb
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674312"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300672"
 ---
 # <a name="remove-element-for-configsections"></a>\<削除 > 要素の\<configSections >
 
 定義済みのセクション、またはセクション グループを削除します。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<configSections>**](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<remove>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<configSections>** ](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<remove>**
 
 ## <a name="syntax"></a>構文
 
@@ -40,7 +40,7 @@ ms.locfileid: "61674312"
 
 |     | 説明 |
 | --- | ----------- |
-| [**\<configSections >** 要素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
+| [ **\<configSections >** 要素](~/docs/framework/configure-apps/file-schema/configsections-element-for-configuration.md) | 構成セクションと名前空間宣言が含まれています。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -54,7 +54,7 @@ ms.locfileid: "61674312"
 
 次の例は、使用する方法を示します、 **\<削除 >** マシン構成ファイルで定義したセクションを削除するアプリケーション構成ファイル内の要素。
 
-マシン構成ファイルのコードは、次のセクションを宣言します **\<sampleSection >**:
+マシン構成ファイルのコードは、次のセクションを宣言します **\<sampleSection >** :
 
 ```xml
 <!-- Machine.config file -->

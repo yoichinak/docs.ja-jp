@@ -2,12 +2,12 @@
 title: 高可用性障害復旧のための SqlClient サポート
 ms.date: 03/30/2017
 ms.assetid: 61e0b396-09d7-4e13-9711-7dcbcbd103a0
-ms.openlocfilehash: a2cc63cb0b9118da6eb3c381e853165f800fe61f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
-ms.translationtype: MT
+ms.openlocfilehash: 9b928be56ac09ec707a45829c862e606b68b717c
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645919"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251164"
 ---
 # <a name="sqlclient-support-for-high-availability-disaster-recovery"></a>高可用性障害復旧のための SqlClient サポート
 このトピックでは、高可用性、ディザスター リカバリーのための SqlClient サポート ([!INCLUDE[net_v45](../../../../../includes/net-v45-md.md)] に追加) である AlwaysOn 可用性グループについて説明します。  AlwaysOn 可用性グループ機能は、SQL Server 2012 に追加されました。 AlwaysOn 可用性グループの詳細については、SQL Server オンライン ブックを参照してください。  
@@ -32,7 +32,7 @@ ms.locfileid: "64645919"
 2. <xref:System.Data.SqlClient.SqlConnectionStringBuilder.MultiSubnetFailover%2A>  
 
 > [!NOTE]
->  設定`MultiSubnetFailover`に`true`が必要でない[!INCLUDE[net_v461](../../../../../includes/net-v461-md.md)]以降のバージョン。
+>  設定`MultiSubnetFailover`に`true`は .NET Framework 4.6.1 以降では必要ありません。
   
 ## <a name="connecting-with-multisubnetfailover"></a>MultiSubnetFailover を使用した接続  
  常に指定`MultiSubnetFailover=True`SQL Server 2012 可用性グループ リスナーまたは SQL Server 2012 フェールオーバー クラスター インスタンスに接続するとき。 `MultiSubnetFailover` 単一サブネットおよびマルチ サブネットの AlwaysOn トポロジにおけるフェールオーバー時間を大幅に短縮され、SQL Server 2012 フェールオーバー クラスター インスタンスからすべての可用性グループをやは、高速フェールオーバーを有効にします。 複数のサブネットのフェールオーバーでは、クライアントは並列接続を試みます。 サブネットのフェールオーバー中に、積極的に TCP 接続を再試行します。  

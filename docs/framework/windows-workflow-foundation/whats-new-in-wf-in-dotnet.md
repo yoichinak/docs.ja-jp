@@ -2,19 +2,19 @@
 title: .NET 4.5 での Windows Workflow Foundation の新機能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: 6be2e3bd64fd93fab8af792bb92c3c0238a7ecde
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876642"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380136"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 での Windows Workflow Foundation の新機能
 
-Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]新しいアクティビティ、デザイナー機能、ワークフロー開発モデルなど、多くの新機能が導入されています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された新しいワークフロー機能の多くは、ホストを変更したワークフロー デザイナーでサポートされています (ただし、すべての機能がサポートされているわけではありません)。 サポートされている新しい機能の詳細については、次を参照してください。[再ホストされたワークフロー デザイナーでの新しい Workflow Foundation 4.5 機能のサポート](wf-features-in-the-rehosted-workflow-designer.md)します。 最新バージョンを使用する .NET 3.0 および .NET 3.5 ワークフロー アプリケーションの移行の詳細については、次を参照してください。[移行ガイダンス](migration-guidance.md)します。 ここでは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された新しいワークフロー機能の概要について説明します。
+Windows Workflow Foundation (WF) .NET Framework 4.5 では、新しいアクティビティ、デザイナー機能、ワークフロー開発モデルなど、多くの新機能について説明します。 すべてではなく、多くの場合、再ホストされたワークフロー デザイナーで新しいワークフローの .NET Framework 4.5 で導入された機能がサポートされています。 サポートされている新しい機能の詳細については、次を参照してください。[再ホストされたワークフロー デザイナーでの新しい Workflow Foundation 4.5 機能のサポート](wf-features-in-the-rehosted-workflow-designer.md)します。 最新バージョンを使用する .NET 3.0 および .NET 3.5 ワークフロー アプリケーションの移行の詳細については、次を参照してください。[移行ガイダンス](migration-guidance.md)します。 このトピックでは、.NET Framework 4.5 で導入された新しいワークフロー機能の概要を示します。
 
 > [!WARNING]
-> 導入された新しい Windows Workflow Foundation 機能[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]framework の以前のバージョンを対象とするプロジェクトでは使用できません。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] を対象とするプロジェクトの対象を以前のバージョンのフレームワークに変更すると、いくつかの問題が発生する場合があります。
+> 以前のバージョンの framework を対象とするプロジェクトの .NET Framework 4.5 で導入された新しい Windows Workflow Foundation の機能が利用できません。 ターゲット .NET Framework 4.5 がある、framework の以前のバージョンに再ターゲット プロジェクト、いくつかの問題が発生することができます。
 >
 > - C# の式は、メッセージに、デザイナーで置き換えられます**値は、XAML で設定された**します。
 > - 次のエラーを含む、多くのビルド エラーが発生します。
@@ -23,7 +23,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 ## <a name="BKMK_Versioning"></a> ワークフローのバージョン管理
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、新しい <xref:System.Activities.WorkflowIdentity> クラスに基づいて、いくつかの新しいバージョン管理機能が導入されました。 <xref:System.Activities.WorkflowIdentity> には、ワークフロー アプリケーションの作成者向けに、永続化されたワークフロー インスタンスをその定義でマップするメカニズムが備わっています。
+.NET framework 4.5 に導入されたいくつかの新しいバージョン管理機能に基づいて、新しい<xref:System.Activities.WorkflowIdentity>クラス。 <xref:System.Activities.WorkflowIdentity> には、ワークフロー アプリケーションの作成者向けに、永続化されたワークフロー インスタンスをその定義でマップするメカニズムが備わっています。
 
 - <xref:System.Activities.WorkflowApplication> ホスティングを使用する開発者は、<xref:System.Activities.WorkflowIdentity> を使用して、ワークフローの複数のバージョンを同時にホストできます。 永続化されたワークフロー インスタンスは新しい <xref:System.Activities.WorkflowApplicationInstance> クラスを使用して読み込むことができ、ホストは <xref:System.Activities.WorkflowApplicationInstance.DefinitionIdentity%2A> を使用して、<xref:System.Activities.WorkflowApplication> のインスタンス化時に適切なバージョンのワークフロー定義を提供できます。 詳細については、次を参照してください。[を使用して WorkflowIdentity と Versioning](using-workflowidentity-and-versioning.md)と[方法。ワークフロー サイド バイ サイドの複数のバージョンをホスト](how-to-host-multiple-versions-of-a-workflow-side-by-side.md)します。
 
@@ -31,7 +31,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 - 永続化されたワークフロー インスタンスの定義を更新するためのメカニズムを提供する動的更新が導入されました。 詳細については、次を参照してください。[動的更新](dynamic-update.md)と[方法。実行中のワークフロー インスタンスの定義を更新](how-to-update-the-definition-of-a-running-workflow-instance.md)します。
 
-- SqlWorkflowInstanceStoreSchemaUpgrade.sql データベース スクリプトは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] データベース スクリプトを使用して作成された永続性データベースを更新するために用意されています。 このスクリプトは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] で導入された新しいバージョン管理機能をサポートするように [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 永続性データベースを更新します。 データベースで永続化されたワークフロー インスタンスは、既定のバージョン番号が付与されるため、side-by-side 実行および動的更新に参加できるようになります。 詳細については、次を参照してください。[をアップグレードする .NET Framework 4 永続性データベース ワークフローのバージョン管理をサポートする](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)します。
+- SqlWorkflowInstanceStoreSchemaUpgrade.sql データベース スクリプトは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] データベース スクリプトを使用して作成された永続性データベースを更新するために用意されています。 このスクリプトは更新[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)].NET Framework 4.5 で導入された新しいバージョン管理機能をサポートする永続性データベース。 データベースで永続化されたワークフロー インスタンスは、既定のバージョン番号が付与されるため、side-by-side 実行および動的更新に参加できるようになります。 詳細については、次を参照してください。[をアップグレードする .NET Framework 4 永続性データベース ワークフローのバージョン管理をサポートする](using-workflowidentity-and-versioning.md#UpdatingWF4PersistenceDatabases)します。
 
 ## <a name="BKMK_NewActivities"></a> アクティビティ
 
@@ -43,7 +43,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="BKMK_NewFlowchartCapabilities"></a> フローチャートの新機能
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 用に更新されたフローチャートには、次の新機能があります。
+フローチャートは、.NET Framework 4.5 が更新され、次の新機能します。
 
 - `DisplayName` アクティビティまたは <xref:System.Activities.Statements.FlowSwitch%601> アクティビティの <xref:System.Activities.Statements.FlowDecision> プロパティは編集できます。 これにより、アクティビティ デザイナーではアクティビティの目的に関する詳細な情報を表示できます。
 
@@ -51,7 +51,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 ## <a name="support-for-partial-trust"></a>部分信頼のサポート
 
-[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] のワークフローでは、完全に信頼されたアプリケーション ドメインが必要でした。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、ワークフローを部分信頼環境で動作させることができます。 部分信頼環境では、サード パーティのコンポーネントは、ホストのリソースに対するフル アクセスを許可しなくても使用できます。 部分信頼でのワークフローの実行に関する問題は次のとおりです。
+[!INCLUDE[netfx40_long](../../../includes/netfx40-long-md.md)] のワークフローでは、完全に信頼されたアプリケーション ドメインが必要でした。 .NET Framework 4.5 では、ワークフローは、部分信頼環境で動作できます。 部分信頼環境では、サード パーティのコンポーネントは、ホストのリソースに対するフル アクセスを許可しなくても使用できます。 部分信頼でのワークフローの実行に関する問題は次のとおりです。
 
 1. 部分信頼環境では、<xref:System.Activities.Statements.Interop> アクティビティに含まれるレガシ コンポーネント (規則など) を使用することはできません。
 
@@ -114,7 +114,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="BKMK_VariableDeleteContextMenu"></a> 変数と引数デザイナーのコンテキスト メニュー項目を削除します。
 
-[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、変数および引数を削除できるのは、デザイナーでキーボードを使用した場合のみでした。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、コンテキスト メニューを使用して変数および引数を削除できます。
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、変数および引数を削除できるのは、デザイナーでキーボードを使用した場合のみでした。 .NET Framework 4.5 以降では、変数と引数削除できますコンテキスト メニューを使用しています。
 
 変数デザイナーと引数デザイナーのコンテキスト メニューを次のスクリーンショットに示しています。
 
@@ -122,7 +122,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="BKMK_AutoSurround"></a> シーケンスによる自動囲い
 
-ワークフローまたは特定のコンテナー アクティビティ (<xref:System.Activities.Statements.NoPersistScope> など) には Body アクティビティを 1 つしか含めることができないため、2 つ目のアクティビティを追加するには、開発者が最初のアクティビティを削除し、<xref:System.Activities.Statements.Sequence> アクティビティを追加してから、シーケンス アクティビティに両方のアクティビティを追加する必要がありました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降では、デザイナー画面に 2 つ目のアクティビティを追加すると、`Sequence` アクティビティが自動的に作成され、両方のアクティビティがラップされます。
+ワークフローまたは特定のコンテナー アクティビティ (<xref:System.Activities.Statements.NoPersistScope> など) には Body アクティビティを 1 つしか含めることができないため、2 つ目のアクティビティを追加するには、開発者が最初のアクティビティを削除し、<xref:System.Activities.Statements.Sequence> アクティビティを追加してから、シーケンス アクティビティに両方のアクティビティを追加する必要がありました。 .NET Framework 4.5 以降で、2 番目のアクティビティをデザイナー画面に追加するときに、`Sequence`両方のアクティビティをラップする活動が自動的に作成されます。
 
 次のスクリーンショットは、`WriteLine` の `Body` 内の `NoPersistScope` アクティビティを示しています。
 
@@ -158,7 +158,7 @@ Windows Workflow Foundation (WF) で[!INCLUDE[net_v45](../../../includes/net-v45
 
 ### <a name="BKMK_CSharpExpressions"></a> C# の式
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] より前のバージョンでは、ワークフロー内のすべての式を Visual Basic のみで記述できました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、Visual Basic の式は Visual Basic で作成されたプロジェクトでのみ使用されます。 Visual C# プロジェクトでは、式に C# が使用されるようになりました。 文法強調表示や Intellisense などの機能を備えた、フル機能の C# 式エディターが用意されています。 以前のバージョンで作成された、Visual Basic の式を使用する C# ワークフロー プロジェクトは引き続き動作します。
+.NET Framework 4.5 では、前にワークフローで式のすべてを Visual Basic で記述のみでした。 .NET Framework 4.5 で Visual Basic の式は Visual Basic を使用して作成されたプロジェクトに対してのみ使用します。 Visual C# プロジェクトでは、式に C# が使用されるようになりました。 文法強調表示や Intellisense などの機能を備えた、フル機能の C# 式エディターが用意されています。 以前のバージョンで作成された、Visual Basic の式を使用する C# ワークフロー プロジェクトは引き続き動作します。
 
 C# の式はデザイン時に検証されます。 C# 式のエラーは赤い波下線でマークされます。
 
@@ -166,11 +166,11 @@ C# の式の詳細については、次を参照してください。 [C# 式](c
 
 ### <a name="BKMK_Visibility"></a> シェル バーおよびヘッダーの可視性の詳細に制御項目
 
-再ホストされたデザイナーでは、標準 UI コントロールの中に、特定のワークフローにとって意味がないものもあれば、無効になっているものもあります。 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、このカスタマイズがデザイナーの下部のシェル バーのみでサポートされています。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、デザイナーの上部にあるシェルのヘッダー項目の表示は、適切な <xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A> 値で <xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility> を設定することにより調整できます。
+再ホストされたデザイナーでは、標準 UI コントロールの中に、特定のワークフローにとって意味がないものもあれば、無効になっているものもあります。 [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、このカスタマイズがデザイナーの下部のシェル バーのみでサポートされています。 .NET Framework 4.5 でのデザイナーの上部にあるシェルのヘッダー項目の可視性を設定して調整できます<xref:System.Activities.Presentation.View.DesignerView.WorkflowShellHeaderItemsVisibility%2A>と適切な<xref:System.Activities.Presentation.View.ShellHeaderItemsVisibility>値。
 
 ### <a name="BKMK_AutoConnect"></a> 自動接続とフローチャートおよびステート マシン ワークフロー内での自動挿入
 
-[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、フローチャート ワークフロー内のノード間の接続は手動で追加する必要がありました。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、フローチャート ノードとステート マシン ノードに自動接続ポイントがあり、これらのポイントは、アクティビティをツールボックスからデザイナー画面上にドラッグすると表示されます。 アクティビティをこれらのポイントのうち 1 つにドロップすると、アクティビティが必要な接続と共に自動的に追加されます。
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、フローチャート ワークフロー内のノード間の接続は手動で追加する必要がありました。 フローチャートおよびステート マシンのノードがある .NET Framework 4.5 で自動接続アクティビティがツールボックスからデザイナー画面にドラッグされるときに表示されるポイント。 アクティビティをこれらのポイントのうち 1 つにドロップすると、アクティビティが必要な接続と共に自動的に追加されます。
 
 次のスクリーンショットは、アクティビティがツールボックスからドラッグされるときに表示されるアタッチ ポイントを示します。
 
@@ -196,7 +196,7 @@ C# の式の詳細については、次を参照してください。 [C# 式](c
 
 ### <a name="BKMK_BuildTimeValidation"></a> ビルド時の検証
 
-[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、ワークフローの検証エラーが、ワークフロー プロジェクトのビルド中のビルド エラーとして数えられていませんでした。 つまり、ワークフローの検証エラーが発生した場合でも、ワークフロー プロジェクトのビルドは成功している可能性があります。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、ワークフローの検証エラーが発生するとビルドは失敗します。
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、ワークフローの検証エラーが、ワークフロー プロジェクトのビルド中のビルド エラーとして数えられていませんでした。 つまり、ワークフローの検証エラーが発生した場合でも、ワークフロー プロジェクトのビルドは成功している可能性があります。 .NET Framework 4.5 では、ワークフローの検証エラーが発生する、ビルドが失敗します。
 
 ### <a name="BKMK_DesignTimeValidation"></a> デザイン時バック グラウンド検証
 
@@ -204,15 +204,15 @@ C# の式の詳細については、次を参照してください。 [C# 式](c
 
 ### <a name="BKMK_ViewState"></a> XAML ファイル内の別の場所にあるビューステートします。
 
-[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、ワークフローのビューステート情報は、多くの異なる場所にある XAML ファイルに保存されていました。 これは、XAML を直接読み取ったり、ビューステート情報を削除するコードを記述したりする開発者にとっては不便です。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、XAML ファイル内のビュー状態情報は、XAML ファイルで、個別の要素としてシリアル化します。 開発者は簡単を探し、アクティビティのビューステート情報を編集ビュー ステートを完全に削除します。
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、ワークフローのビューステート情報は、多くの異なる場所にある XAML ファイルに保存されていました。 これは、XAML を直接読み取ったり、ビューステート情報を削除するコードを記述したりする開発者にとっては不便です。 .NET Framework 4.5 では、XAML ファイル内のビュー状態情報は XAML ファイル内の個別の要素としてシリアル化されます。 開発者は簡単を探し、アクティビティのビューステート情報を編集ビュー ステートを完全に削除します。
 
 ### <a name="BKMK_ExpressionExtensibility"></a> 式の拡張性
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、開発者が、ワークフロー デザイナーにプラグインできる、独自の式および式作成操作を作成できるようになります。
+.NET Framework 4.5 では、開発者が独自の式と式の作成のワークフロー デザイナーにプラグインできるエクスペリエンスを作成する方法を紹介します。
 
 ### <a name="BKMK_BackwardCompatRehostedDesigner"></a> 再ホストされたデザイナーでの Workflow 4.5 機能のオプトイン
 
-下位互換性を維持するために、再ホストされたデザイナーでは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] に含まれる新機能の一部が既定で有効になっていません。 これは、再ホストされたデザイナーを使用する既存のアプリケーションが、最新バージョンに更新することで壊れないようにするためです。 再ホストされたデザイナーで新機能を有効にするには、<xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> を ".NET Framework 4.5" に設定するか、<xref:System.Activities.Presentation.DesignerConfigurationService> の各メンバーを設定して各機能を有効にします。
+旧バージョンとの互換性を維持するには、.NET Framework 4.5 に含まれる一部の新機能は既定では、再ホストされたデザイナーで有効にされません。 これは、再ホストされたデザイナーを使用する既存のアプリケーションが、最新バージョンに更新することで壊れないようにするためです。 再ホストされたデザイナーで新機能を有効にするには、<xref:System.Activities.Presentation.DesignerConfigurationService.TargetFrameworkName%2A> を ".NET Framework 4.5" に設定するか、<xref:System.Activities.Presentation.DesignerConfigurationService> の各メンバーを設定して各機能を有効にします。
 
 ## <a name="BKMK_NewWFModels"></a> 新しいワークフロー開発モデル
 
@@ -220,7 +220,7 @@ C# の式の詳細については、次を参照してください。 [C# 式](c
 
 ### <a name="BKMK_StateMachine"></a> ステート マシン ワークフロー
 
-ステート マシン ワークフローは、.NET Framework 4 バージョン 4.0.1 の一部として導入された、 [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)します。 この更新プログラムには、開発者がステート マシンのワークフローを作成できるようにする、いくつかの新しいクラスとアクティビティが含まれていました。 これらのクラスおよびアクティビティは [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 用に更新されました。 更新プログラムには次のものが含まれています。
+ステート マシン ワークフローは、.NET Framework 4 バージョン 4.0.1 の一部として導入された、 [Microsoft .NET Framework 4 Platform Update 1](https://go.microsoft.com/fwlink/?LinkID=215092)します。 この更新プログラムには、開発者がステート マシンのワークフローを作成できるようにする、いくつかの新しいクラスとアクティビティが含まれていました。 .NET Framework 4.5、これらのクラスとアクティビティが更新されました。 更新プログラムには次のものが含まれています。
 
 1. 状態にブレークポイントを設定する機能。
 

@@ -2,15 +2,15 @@
 title: '方法: 既存のサービス コントラクトを使用するワークフロー サービスを作成する'
 ms.date: 03/30/2017
 ms.assetid: 11d11b59-acc4-48bf-8e4b-e97b516aa0a9
-ms.openlocfilehash: c2ca9c349718c3939d74d052ff0ed448879cd045
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 82c9ccc21600ae0b9ff8c514a51ec9b97f8f1d37
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945575"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378130"
 ---
 # <a name="how-to-create-a-workflow-service-that-consumes-an-existing-service-contract"></a>方法: 既存のサービス コントラクトを使用するワークフロー サービスを作成する
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、コントラクト優先ワークフローの開発という形で、Web サービスとワークフローの統合が向上しています。 コントラクト優先ワークフローの開発ツールでは、コードのコントラクトを先に設計できます。 その後、ツールボックス内に、コントラクト内の操作用のアクティビティ テンプレートが自動的に生成されます。  
+.NET framework 4.5 機能では、コントラクト優先ワークフローの開発の形式で web サービスとワークフロー間の統合が改善されました。 コントラクト優先ワークフローの開発ツールでは、コードのコントラクトを先に設計できます。 その後、ツールボックス内に、コントラクト内の操作用のアクティビティ テンプレートが自動的に生成されます。  
   
 > [!NOTE]
 >  このトピックでは、コントラクト優先ワークフロー サービスを作成する手順について説明します。 コントラクト優先ワークフロー サービスの開発の詳細については、次を参照してください。[コントラクト優先ワークフロー サービスの開発](contract-first-workflow-service-development.md)します。  

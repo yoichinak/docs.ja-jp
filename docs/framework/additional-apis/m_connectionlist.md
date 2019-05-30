@@ -10,14 +10,14 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: 186083cf-8dff-4600-a2ab-6fed4b4de6af
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: c9162e123c1167e3aa1be26ddd37279c088acc89
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d06968c844dc9187b973af156a29ded9ba7cde66
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675300"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301404"
 ---
 # <a name="connectiongroupmconnectionlist-field"></a>ConnectionGroup.m\_ConnectionList フィールド
 
@@ -38,6 +38,6 @@ private ArrayList m_ConnectionList
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:**(System.dll) のシステム
+**アセンブリ:** (System.dll) のシステム
 
 **.NET framework のバージョン:** 2.0 以降で使用可能です。

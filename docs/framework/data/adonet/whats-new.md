@@ -2,20 +2,20 @@
 title: ADO.NET の新機能
 ms.date: 03/30/2017
 ms.assetid: 3bb65d38-cce2-46f5-b979-e5c505e95e10
-ms.openlocfilehash: 90ac3ffe9bae892bf20ad874e5634a3a045f776d
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 77a7aa5721a83bf7bc8d3e3cbf57a77c56267062
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877430"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379986"
 ---
 # <a name="whats-new-in-adonet"></a>ADO.NET の新機能
 
-次の機能は ADO.NET での新機能、[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]します。
+次の機能は、.NET Framework 4.5 での ADO.NET の新機能です。
 
 ## <a name="sqlclient-data-provider"></a>SqlClient Data Provider
 
-次の機能は、.NET Framework Data Provider for SQL Server での新機能[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]:
+次の機能は、.NET Framework Data Provider for .NET Framework 4.5 での SQL Server の新機能です。
 
 - ConnectRetryCount と ConnectRetryInterval の接続文字列キーワード (<xref:System.Data.SqlClient.SqlConnection.ConnectionString%2A>) を使用すると、アイドル状態の接続の復元機能を制御できます。
 
@@ -51,7 +51,7 @@ ms.locfileid: "65877430"
 
 ## <a name="adonet-entity-framework"></a>ADO.NET Entity Framework
 
-[!INCLUDE[net_v45](../../../../includes/net-v45-md.md)] は、Entity Framework 5.0 を操作するときに、新しいシナリオを有効にする API を追加します。 および Entity Framework 5.0 に追加された機能強化に関する詳細については、次のトピックを参照してください。[新機能については](https://go.microsoft.com/fwlink/?LinkID=251106)と[Entity Framework リリースおよびバージョン管理](https://go.microsoft.com/fwlink/?LinkId=234899)します。
+.NET Framework 4.5 では、Entity Framework 5.0 を使用する場合は、新しいシナリオを有効にする Api を追加します。 および Entity Framework 5.0 に追加された機能強化に関する詳細については、次のトピックを参照してください。[新機能については](https://go.microsoft.com/fwlink/?LinkID=251106)と[Entity Framework リリースおよびバージョン管理](https://go.microsoft.com/fwlink/?LinkId=234899)します。
 
 ## <a name="see-also"></a>関連項目
 

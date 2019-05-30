@@ -7,22 +7,22 @@ helpviewer_keywords:
 - clear Element
 - <clear> Element
 ms.assetid: ff2294ec-fb82-4b0c-933e-ae185433fc7b
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ad3ac93b2a7f92cd33787620fc0caa2b632aa072
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e5ab12150c5200dc346e950541443d5286f739c8
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61705364"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301247"
 ---
 # <a name="clear-element-for-namevaluesectionhandler-and-dictionarysectionhandler"></a>\<クリア > NameValueSectionHandler および DictionarySectionHandler の要素
 
 セクション内のすべての以前に定義された設定をクリアします。
 
-[**\<configuration>**](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
-&nbsp;&nbsp;[**\<sectionName>**](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
-&nbsp;&nbsp;&nbsp;&nbsp;**\<clear>**
+[ **\<configuration>** ](~/docs/framework/configure-apps/file-schema/configuration-element.md)   
+&nbsp;&nbsp;[ **\<sectionName>** ](~/docs/framework/configure-apps/file-schema/custom-element-2.md)   
+&nbsp;&nbsp;&nbsp;&nbsp; **\<clear>**
 
 ## <a name="syntax"></a>構文
 
@@ -38,7 +38,7 @@ ms.locfileid: "61705364"
 
 |     | 説明 |
 | --- | ------------|
-| [**\<sectionName >** 要素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 使用して、カスタム構成セクションの設定を定義、<xref:System.Configuration.NameValueSectionHandler>と<xref:System.Configuration.DictionarySectionHandler>クラス。 |
+| [ **\<sectionName >** 要素](~/docs/framework/configure-apps/file-schema/custom-element-2.md) | 使用して、カスタム構成セクションの設定を定義、<xref:System.Configuration.NameValueSectionHandler>と<xref:System.Configuration.DictionarySectionHandler>クラス。 |
 
 ## <a name="child-elements"></a>子要素
 
@@ -52,7 +52,7 @@ ms.locfileid: "61705364"
 
 この例は、マシン構成ファイルと、アプリケーション構成ファイルを定義しを使用する方法を示しています、 **\<オフ >** セクションで以前に定義を解除する、アプリケーション構成ファイル内の要素、マシン構成ファイル。
 
-マシン構成ファイルのコードは、次のセクションを宣言します **\<mySection >**:
+マシン構成ファイルのコードは、次のセクションを宣言します **\<mySection >** :
 
 ```xml
 <!-- Machine.config file -->

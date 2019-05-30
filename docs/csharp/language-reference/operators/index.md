@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 07ef96862c04b8245d8365c3d3b419d227e824c4
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876947"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300322"
 ---
 # <a name="c-operators"></a>C# 演算子
 
@@ -95,9 +95,9 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 [* x](pointer-related-operators.md#pointer-indirection-operator-) – ポインターの間接参照、または逆参照。
 
-[true 演算子](../keywords/true-false-operators.md) - オペランドが確実に true であることを示す[ブール](../keywords/bool.md)値 `true` を返します。
+[true 演算子](true-false-operators.md) - オペランドが確実に true であることを示す[ブール](../keywords/bool.md)値 `true` を返します。
 
-[false 演算子](../keywords/true-false-operators.md) - オペランドが確実に false であることを示す[ブール](../keywords/bool.md)値 `true` を返します。
+[false 演算子](true-false-operators.md) - オペランドが確実に false であることを示す[ブール](../keywords/bool.md)値 `true` を返します。
 
 ## <a name="multiplicative-operators"></a>乗算演算子
 
@@ -197,9 +197,9 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 [x = y](assignment-operator.md) – 代入。
 
-[x += y](addition-assignment-operator.md) – インクリメント。 `y` の値を `x` の値に加算した結果を `x` に格納し、新しい値を返します。 `x` が `event` を指定した場合、`y` は、C# によってイベント ハンドラーとして追加される適切な関数である必要があります。
+[x += y](arithmetic-operators.md#compound-assignment) – インクリメント。 `y` の値を `x` の値に加算した結果を `x` に格納し、新しい値を返します。 `x` が[イベント](../keywords/event.md)を指定した場合、`y` は、C# によってイベント ハンドラーとして追加される適切なメソッドである必要があります。
 
-[x -= y](subtraction-assignment-operator.md) – デクリメント。 `y` の値を `x` の値から減算した結果を `x` に格納し、新しい値を返します。 `x` で `event` を指定する場合、`y` は C# によってイベント ハンドラーとして削除される適切な関数である必要があります。
+[x -= y](arithmetic-operators.md#compound-assignment) – デクリメント。 `y` の値を `x` の値から減算した結果を `x` に格納し、新しい値を返します。 `x` で[イベント](../keywords/event.md)を指定する場合、`y` は C# によってイベント ハンドラーとして削除される適切なメソッドである必要があります。
 
 [x *= y](arithmetic-operators.md#compound-assignment) – 乗算代入。 `y` の値を `x` の値に乗算した結果を `x` に格納し、新しい値を返します。
 

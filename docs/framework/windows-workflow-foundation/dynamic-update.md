@@ -2,16 +2,16 @@
 title: 動的な更新
 ms.date: 03/30/2017
 ms.assetid: 8b6ef19b-9691-4b4b-824c-3c651a9db96e
-ms.openlocfilehash: e28a34e500034eec6cf250d94cf7631ca85a7d40
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2553e6a29f498a9b53752d6c191df21a391dee34
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61945809"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378277"
 ---
 # <a name="dynamic-update"></a>動的な更新
 
-動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 これには、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 このトピックでは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された動的更新機能の概要について説明します。
+動的更新は、ワークフロー アプリケーションの開発者が永続化されたワークフロー インスタンスのワークフロー定義を更新するためのメカニズムを提供します。 これには、バグ修正の実装、新しい要件の実装、または予期しない変更への対応があります。 このトピックでは、.NET Framework 4.5 で導入された、動的な更新機能の概要を示します。
 
 ## <a name="dynamic-update"></a>動的な更新
 

@@ -4,15 +4,15 @@ ms.date: 03/30/2017
 ms.assetid: 7ab1a70f-ec11-46ff-8869-cd8ca679cc51
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 349e0cf93a981a2c598d02f67978e524a6763728
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a6db1bc7e87750a36415439707777fed99e358ea
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948578"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300529"
 ---
 # <a name="icordebugprocess8-interface"></a>ICorDebugProcess8 インターフェイス
-[[!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] 以降のバージョンでサポート]  
+[.NET Framework 4.6 以降のバージョンでサポートされます]  
   
  有効または無効の特定の種類に ICorDebugProcess インターフェイスを論理的に拡張[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)例外コールバック。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "61948578"
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

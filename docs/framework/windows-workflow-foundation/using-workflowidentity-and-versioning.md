@@ -2,12 +2,12 @@
 title: WorkflowIdentity と Versioning の使用
 ms.date: 03/30/2017
 ms.assetid: b8451735-8046-478f-912b-40870a6c0c3a
-ms.openlocfilehash: 77f5663665d56209cbb1ebc5999d44d411189f04
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: acf2b2c9502487c8bc8960f2a5625db94c31945f
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64603294"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380129"
 ---
 # <a name="using-workflowidentity-and-versioning"></a>WorkflowIdentity と Versioning の使用
 <xref:System.Activities.WorkflowIdentity> を使用すると、ワークフロー アプリケーションの開発者は、名前と <xref:System.Version> をワークフロー定義に関連付け、永続化されたワークフロー インスタンスにこの情報を関連付けることができます。 この ID 情報は、ワークフロー アプリケーションの開発者がワークフロー定義の複数のバージョンの side-by-side 実行などのシナリオを有効にするために使用できます。また、動的更新などの他の機能の基礎となります。 このトピックでは、<xref:System.Activities.WorkflowIdentity> ホスティングでの <xref:System.Activities.WorkflowApplication> の使用の概要について説明します。 ワークフロー サービスでのワークフロー定義のサイド バイ サイドでの実行については、次を参照してください。 [WorkflowServiceHost でサイド バイ サイドのバージョン管理](../wcf/feature-details/side-by-side-versioning-in-workflowservicehost.md)します。 動的更新については、次を参照してください。[動的更新](dynamic-update.md)します。  
@@ -139,9 +139,9 @@ wfApp.Load(instance);
 ```  
   
 ## <a name="UpdatingWF4PersistenceDatabases"></a> ワークフローのバージョン管理をサポートするために .NET Framework 4 永続性データベースのアップグレード  
- SqlWorkflowInstanceStoreSchemaUpgrade.sql データベース スクリプトは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] データベース スクリプトを使用して作成された永続性データベースを更新するために用意されています。 このスクリプトは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] で導入された新しいバージョン管理機能をサポートするようにデータベースを更新します。 データベースで永続化されたすべてのワークフロー インスタンスは、既定のバージョン番号が付与されるため、side-by-side 実行および動的更新に参加できるようになります。  
+ SqlWorkflowInstanceStoreSchemaUpgrade.sql データベース スクリプトは、[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] データベース スクリプトを使用して作成された永続性データベースを更新するために用意されています。 このスクリプトでは、.NET Framework 4.5 で導入された新しいバージョン管理機能をサポートするためにデータベースを更新します。 データベースで永続化されたすべてのワークフロー インスタンスは、既定のバージョン番号が付与されるため、side-by-side 実行および動的更新に参加できるようになります。  
   
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] ワークフロー アプリケーションが、提供されたスクリプトを使用してアップグレードされていない永続性データベースで新しいバージョン管理機能を使用する永続化操作を実行すると、<xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException> がスローされ、次のようなメッセージが表示されます。  
+ .NET Framework 4.5 のワークフロー アプリケーションに提供されたスクリプトでないアップグレードされた永続性データベースで新しいバージョン管理機能を使用する永続化操作しようとすると、<xref:System.Runtime.DurableInstancing.InstancePersistenceCommandException>のようなメッセージがスローされ、次のメッセージ。  
   
  **SqlWorkflowInstanceStore が '4.0.0.0' のデータベースのバージョンです。このバージョンのデータベースに対して InstancePersistenceCommand 'System.Activities.DurableInstancing.CreateWorkflowOwnerWithIdentityCommand' を実行することはできません。データベースを '4.5.0.0' にアップグレードしてください。**  
 ### <a name="ToUpgrade"></a> データベース スキーマをアップグレードするには  

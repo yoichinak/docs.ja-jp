@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 300d2263c076c9028340863e2f7a3fa27a36ef9d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e4bf3605331e6900fd890e49bb3f71f4ca4409c7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993729"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377592"
 ---
 # <a name="icordebugvalue3-interface"></a>ICorDebugValue3 インターフェイス
 2 GB を超える配列のサポートを提供する"ICorDebugValue"と"ICorDebugValue2"インターフェイスを拡張します。  
@@ -33,10 +33,10 @@ ms.locfileid: "61993729"
 |[GetSize64 メソッド](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)|これのバイト単位のサイズを取得します。`ICorDebugValue3`オブジェクト。|  
   
 ## <a name="remarks"></a>Remarks  
- [Icordebugvalue::getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)メソッドが 0 から 2,147, 483,647 バイトの範囲のオブジェクトのサイズを返します。 [!INCLUDE[net_v45](../../../../includes/net-v45-md.md)]配列のサイズが 2 GB を超えることができます。 `ICorDebugValue3`インターフェイスでは、これらの配列のサイズを決定することができます。  
+ [Icordebugvalue::getsize](../../../../docs/framework/unmanaged-api/debugging/icordebugvalue3-getsize64-method.md)メソッドが 0 から 2,147, 483,647 バイトの範囲のオブジェクトのサイズを返します。 .NET Framework 4.5 では、配列のサイズは 2 GB を超えることができます。 `ICorDebugValue3`インターフェイスでは、これらの配列のサイズを決定することができます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -13,12 +13,12 @@ helpviewer_keywords:
 - managing control states [WPF], VisualStateManager
 - VisualStateManager [WPF], best practice
 ms.assetid: 9e356d3d-a3d0-4b01-a25f-2d43e4d53fe5
-ms.openlocfilehash: 279f7932d38885331b69616afa719ad782d7244b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 3630b9e2f50830faf50599388e4fbb7ec1630b73
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64659903"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300734"
 ---
 # <a name="creating-a-control-that-has-a-customizable-appearance"></a>外観をカスタマイズできるコントロールの作成
 <a name="introduction"></a>
@@ -78,7 +78,7 @@ ms.locfileid: "64659903"
   
  [!code-xaml[VSMCustomControl#VisualStructure](~/samples/snippets/csharp/VS_Snippets_Wpf/vsmcustomcontrol/csharp/window1.xaml#visualstructure)]  
   
- 視覚的な動作、`NumericUpDown`コントロールが負の場合、値が赤いフォントであります。  変更した場合、<xref:System.Windows.Controls.TextBlock.Foreground%2A>の<xref:System.Windows.Controls.TextBlock>ときにコードで、`Value`は負の値、`NumericUpDown`赤い負の値を常に表示されます。 内のコントロールの視覚的な動作を指定する、<xref:System.Windows.Controls.ControlTemplate>を追加して<xref:System.Windows.VisualState>オブジェクトを<xref:System.Windows.Controls.ControlTemplate>します。  次の例は、<xref:System.Windows.VisualState>オブジェクトに対する、`Positive`と`Negative`状態。  `Positive` `Negative` (コントロールが常に 2 つのいずれか) は相互に排他的なので、この例では、<xref:System.Windows.VisualState>オブジェクト、1 つに<xref:System.Windows.VisualStateGroup>します。  コントロールに入るときに、 `Negative` 、状態、<xref:System.Windows.Controls.TextBlock.Foreground%2A>の<xref:System.Windows.Controls.TextBlock>赤色に変わります。  コントロールが存在すると、 `Positive` 、状態、<xref:System.Windows.Controls.TextBlock.Foreground%2A>が戻された元の値。  定義する<xref:System.Windows.VisualState>内のオブジェクトを<xref:System.Windows.Controls.ControlTemplate>で詳しく説明は[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)します。  
+ 視覚的な動作、`NumericUpDown`コントロールが負の場合、値が赤いフォントであります。  変更した場合、<xref:System.Windows.Controls.TextBlock.Foreground%2A>の<xref:System.Windows.Controls.TextBlock>ときにコードで、`Value`は負の値、`NumericUpDown`赤い負の値を常に表示されます。 内のコントロールの視覚的な動作を指定する、<xref:System.Windows.Controls.ControlTemplate>を追加して<xref:System.Windows.VisualState>オブジェクトを<xref:System.Windows.Controls.ControlTemplate>します。  次の例は、<xref:System.Windows.VisualState>オブジェクトに対する、`Positive`と`Negative`状態。  `Positive` `Negative` (コントロールが常に 2 つのいずれか) は相互に排他的なので、この例では、<xref:System.Windows.VisualState>オブジェクト、1 つに<xref:System.Windows.VisualStateGroup>します。  コントロールに入るときに、 `Negative` 、状態、<xref:System.Windows.Controls.TextBlock.Foreground%2A>の<xref:System.Windows.Controls.TextBlock>赤色に変わります。  コントロールが存在すると、 `Positive` 、状態、<xref:System.Windows.Controls.TextBlock.Foreground%2A>を元の値を返します。  定義する<xref:System.Windows.VisualState>内のオブジェクトを<xref:System.Windows.Controls.ControlTemplate>で詳しく説明は[ControlTemplate の作成による既存のコントロールの外観のカスタマイズ](customizing-the-appearance-of-an-existing-control.md)します。  
   
 > [!NOTE]
 >  設定してください、<xref:System.Windows.VisualStateManager.VisualStateGroups%2A?displayProperty=nameWithType>添付プロパティをルート<xref:System.Windows.FrameworkElement>の<xref:System.Windows.Controls.ControlTemplate>します。  

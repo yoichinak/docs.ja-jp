@@ -10,14 +10,14 @@ api_location:
 api_type:
 - Assembly
 ms.assetid: eab9b789-beb4-4c28-b2d8-78debc7ba129
-author: guardrex
+author: rpetrusha
 ms.author: mairaw
-ms.openlocfilehash: ef746d4a2e6782fa295b7c27f32ce5dc117350a7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db56bce0832d3439309d58f85e455f63f339816e
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61675495"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301023"
 ---
 # <a name="httpwebrequesthttpresponse-field"></a>HttpWebRequest します。\_HttpResponse フィールド
 
@@ -38,6 +38,6 @@ internal HttpWebResponse _HttpResponse
 
 **名前空間:** <xref:System.Net>
 
-**アセンブリ:**(System.dll) のシステム
+**アセンブリ:** (System.dll) のシステム
 
 **.NET framework のバージョン:** 2.0 以降で使用可能です。

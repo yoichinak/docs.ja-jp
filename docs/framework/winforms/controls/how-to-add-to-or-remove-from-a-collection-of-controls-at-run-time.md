@@ -12,12 +12,12 @@ helpviewer_keywords:
 - run time [Windows Forms], adding controls
 - controls [Windows Forms], removing using collections
 ms.assetid: 771bf895-3d5f-469b-a324-3528f343657e
-ms.openlocfilehash: 85c1d398c1aabbb73d5ae34186775e2c63666cfb
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
-ms.translationtype: HT
+ms.openlocfilehash: a868632d6868e6a82c4fa135444279b8ef4dc7af
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59309447"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301410"
 ---
 # <a name="how-to-add-to-or-remove-from-a-collection-of-controls-at-run-time"></a>方法: コントロールのコレクションに対して実行時にコントロールを追加または削除する
 アプリケーション開発の一般的なタスクをするコントロールを追加し、フォーム上のコンテナー コントロールからコントロールを削除する (など、<xref:System.Windows.Forms.Panel>または<xref:System.Windows.Forms.GroupBox>コントロール、またはフォーム自体)。 デザイン時に、コントロールをパネルやグループ ボックスに直接ドラッグすることができます。 実行時には、これらのコントロールは `Controls` コレクションを保持し、それらにどのコントロールが置かれているかを追跡します。  
@@ -66,7 +66,7 @@ ms.locfileid: "59309447"
   
 ### <a name="to-remove-controls-from-a-collection-programmatically"></a>プログラムを使用してコレクションからコントロールを削除するには  
   
-1. イベントからイベント ハンドラーを削除します。 Visual Basic で使用して、 [RemoveHandler ステートメント](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)キーワード; ビジュアルでC#を使用して、 [-= 演算子 (C#リファレンス)](~/docs/csharp/language-reference/operators/subtraction-assignment-operator.md)します。  
+1. イベントからイベント ハンドラーを削除します。 Visual Basic で使用して、 [RemoveHandler ステートメント](~/docs/visual-basic/language-reference/statements/removehandler-statement.md)キーワード、C#を使用して、 [-= 演算子](~/docs/csharp/language-reference/operators/subtraction-operator.md)します。  
   
 2. `Remove` メソッドを使用して、パネルの `Controls` コレクションから目的のコントロールを削除します。  
   

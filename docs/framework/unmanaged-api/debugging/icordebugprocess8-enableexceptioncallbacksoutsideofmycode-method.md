@@ -6,15 +6,15 @@ dev_langs:
 ms.assetid: b3af44ec-7d41-425b-aed9-0c4379e5cbe9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f390bced01428f2d94b4cebcc26e1d773bda2191
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 52a58f75ca7abd1bd1f871bcf4637bfd7eb7bdcd
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613792"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300536"
 ---
 # <a name="icordebugprocess8enableexceptioncallbacksoutsideofmycode-method"></a>ICorDebugProcess8::EnableExceptionCallbacksOutsideOfMyCode メソッド
-[[!INCLUDE[net_v46](../../../../includes/net-v46-md.md)] 以降のバージョンでサポート]  
+[.NET Framework 4.6 以降のバージョンでサポートされます]  
   
  有効またはの特定の種類を無効に[ICorDebugManagedCallback2](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback2-interface.md)例外コールバック。  
   
@@ -40,7 +40,7 @@ HRESULT EnableExceptionCallbacksOutsideOfMyCode(
  `enableExceptionsOutsideOfJMC` の既定値は `true` です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

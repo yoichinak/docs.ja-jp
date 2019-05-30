@@ -2,15 +2,15 @@
 title: XML からのデータ型クラスの生成
 ms.date: 03/30/2017
 ms.assetid: e4e5e4e8-527f-44d1-92fa-8904a08784ea
-ms.openlocfilehash: c1b5dfda8aa5370dbc202ab90c75ab5677970467
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b99bb40105398dbd91b910c4a19828d069c3d9e7
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929572"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66380223"
 ---
 # <a name="generating-data-type-classes-from-xml"></a>XML からのデータ型クラスの生成
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] には、XML からデータ型クラスを生成するための新しい機能があります。 このトピックでは、.NET ブログ RSS フィードのデータ型を自動的に生成する方法について説明します。  
+.NET framework 4.5 には、XML からのデータ型クラスを生成する新しい機能が含まれています。 このトピックでは、.NET ブログ RSS フィードのデータ型を自動的に生成する方法について説明します。  
   
 ### <a name="obtaining-the-xml-from-the-net-blog-rss-feed"></a>フィードから .NET ブログの RSS XML を取得します。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "61929572"
   
 ### <a name="creating-the-data-types"></a>データ型の作成  
   
-1. プロキシが使用されるコード ファイルを開きます。 このファイルは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] プロジェクトの一部である必要があります。  
+1. プロキシが使用されるコード ファイルを開きます。 このファイルは、.NET Framework 4.5 プロジェクトの一部である必要があります。  
   
 2. 既存のクラスの外部にあるファイルの場所にカーソルを置きます。  
   
