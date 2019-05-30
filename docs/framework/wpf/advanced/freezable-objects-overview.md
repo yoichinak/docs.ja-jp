@@ -34,7 +34,7 @@ ms.locfileid: "64619637"
 [!code-csharp[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#frozenexamplepart1)]
 [!code-vb[freezablesample_procedural#FrozenExamplePart1](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#frozenexamplepart1)]  
 
-ボタンが描画されるとき、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グラフィックス サブシステムは、ボタンの外観を作成するために、ピクセルのグループを描画するのには指定した情報を使用します。単色ブラシを使用してボタンを描画する方法について説明しますが、単色ブラシが実際に描画するのではありません。グラフィックス システムは、ボタンやブラシに対応する高速で低レベルのオブジェクトを生成し、それが実際に画面に表示されます。
+ボタンが描画されるとき、 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] グラフィックス サブシステムは、ボタンの外観を作成するために、ピクセルのグループを描画するのに指定した情報を使用します。単色ブラシを使用してボタンを描画する方法について説明しますが、単色ブラシが実際に描画するのではありません。グラフィックス システムは、ボタンやブラシに対応する高速で低レベルのオブジェクトを生成し、それが実際に画面に表示されます。
 
 ブラシを変更する場合は、これらの低レベルのオブジェクトを再び生成する必要があります。 Freezable クラスは、ブラシに対応する低レベル オブジェクトを検索して変更時に更新する機能を付与します。この機能が有効のとき、ブラシは「非フリーズ状態」であると言われます。
 
@@ -53,7 +53,7 @@ Freezable オブジェクトを変更する必要がなくなったときにそ�
 
 <a name="frozenfreezables"></a>
 ## <a name="using-freezables"></a>Freezable オブジェクトの使用
-非フリーズの Freezable オブジェクトは他の型のオブジェクトと同様に使用できます。次の例では、 <xref:System.Windows.Media.SolidColorBrush> を使ってボタンの背景を描画した後に、その色を黄色から赤に変更します。グラフィックス システムは、次の画面更新時に、ボタンの色を黄色から赤に自動的に更新します。
+非フリーズの Freezable オブジェクトは他の型のオブジェクトと同様に使用できます。次の例では、 <xref:System.Windows.Media.SolidColorBrush> を使用してボタンの背景を描画した後に、その色を黄色から赤に変更します。グラフィックス システムは、次の画面更新時に、ボタンの色を黄色から赤に自動的に更新します。
 
 [!code-csharp[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#unfrozenexampleshort)]
 [!code-vb[freezablesample_procedural#UnFrozenExampleShort](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#unfrozenexampleshort)]  
@@ -61,7 +61,7 @@ Freezable オブジェクトを変更する必要がなくなったときにそ�
 ### <a name="freezing-a-freezable"></a>Freezable オブジェクトをフリーズする
 <xref:System.Windows.Freezable> オブジェクトを変更不可の状態にするには、その <xref:System.Windows.Freezable.Freeze%2A> メソッドを呼び出す必要があります。Freezable オブジェクトを格納しているオブジェクトをフリーズすると、それらのオブジェクトも同様にフリーズされます。例えば、 <xref:System.Windows.Media.PathGeometry> をフリーズすると、それに含まれる図やセグメントも同時にフリーズされます。
 
-Freezable オブジェクトは次のいずれかに該当す売る場合、フリーズ**できません**。
+Freezable オブジェクトは次のいずれかに該当する場合、フリーズ**できません**。
 
 - アニメーション化されたまたは、データ バインドされたプロパティを持つ。
 
@@ -81,7 +81,7 @@ Freezable オブジェクトの <xref:System.Windows.Freezable.Freeze%2A> メソ
 [!code-csharp[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/csharp/VS_Snippets_Wpf/freezablesample_procedural/CSharp/freezablesample.cs#checkisfrozenexample)]
 [!code-vb[freezablesample_procedural#CheckIsFrozenExample](~/samples/snippets/visualbasic/VS_Snippets_Wpf/freezablesample_procedural/visualbasic/freezablesample.vb#checkisfrozenexample)]
 
-上記のコード例では、<xref:System.Windows.Freezable.Clone%2A> メソッドを使用して、フリーズされたオブジェクトの変更可能なコピーが作成されます。次のセクションでは、複製の詳細について説明します。
+上記のコード例では、<xref:System.Windows.Freezable.Clone%2A>メソッドを使用してフリーズされたオブジェクトの変更可能なコピーを作成しました。次のセクションでは、複製の作成について説明します。
 
 **注** フリーズされた Freezable オブジェクトはアニメーションできないため、フリーズされた <xref:System.Windows.Freezable> オブジェクトを <xref:System.Windows.Media.Animation.Storyboard> でアニメーションしようとすると、アニメーション システムはオブジェクトの変更可能な複製を自動的に作成します。複製によるパフォーマンスのオーバーヘッドをなくすため、オブジェクトをアニメーションする場合には、それを非フリーズ状態のままにしておきます。ストーリーボードを使用したアニメーションの詳細については、[ストーリー ボードの概要](../graphics-multimedia/storyboards-overview.md) を参照してください。
 
@@ -106,7 +106,7 @@ mc:Ignorable="PresentationOptions"
 詳細については、 [mc: Ignorable 属性](mc-ignorable-attribute.md) を参照してください。
   
 ### <a name="unfreezing-a-freezable"></a>Freezable オブジェクトを「フリーズ解除する」
-一度フリーズされた <xref:System.Windows.Freezable> オブジェクトを変更したりフリーズ解除したりすることはできません。とはいえ、 <xref:System.Windows.Freezable.Clone%2A> または <xref:System.Windows.Freezable.CloneCurrentValue%2A> メソッドを使用して非フリーズ状態の複製を作成することはできます。
+一度フリーズされると、<xref:System.Windows.Freezable>は変更されたり解凍されたりすることはありません。ただし、<xref:System.Windows.Freezable.Clone%2A>メソッドまたは<xref:System.Windows.Freezable.CloneCurrentValue%2A>メソッドを使用して、フリーズされていない複製を作成できます。
   
 次の例では、ブラシを使用してボタンの背景を設定し、その後ブラシは固定されます。そのブラシの非フリーズ状態の複製を、<xref:System.Windows.Freezable.Clone%2A>メソッドを使用して作成します。そのクローンを変更し、ボタンの背景を黄色から赤に変更するために使用します。
   
@@ -116,7 +116,7 @@ mc:Ignorable="PresentationOptions"
 > [!NOTE]
 >  どのメソッドを使用して複製しても、新しい <xref:System.Windows.Freezable> オブジェクトにアニメーションはコピーされません。
   
-<xref:System.Windows.Freezable.Clone%2A> と <xref:System.Windows.Freezable.CloneCurrentValue%2A> メソッドは、Freezable オブジェクトのディープ コピーを作成します。そのオブジェクトがフリーズされた他の Freezable オブジェクトを含んでいる場合、それらのオブジェクトも複製され変更可能にされます。たとえば、フリーズされた <xref:System.Windows.Media.PathGeometry> を複製する場合、含まれている図やセグメントも複製され変更可能になります。
+<xref:System.Windows.Freezable.Clone%2A>と<xref:System.Windows.Freezable.CloneCurrentValue%2A>メソッドは、フリーズ可能オブジェクトの詳細コピーを作成します。フリーズ可能オブジェクトに他のフリーズされたフリーズ可能オブジェクトが含まれている場合は、それらも複製されて変更可能になります。たとえば、フリーズされた<xref:System.Windows.Media.PathGeometry>を修正して修正可能にすると、それに含まれる図形とセグメントもコピーされて修正可能になります。
   
 <a name="createyourownfreezableclass"></a>   
 ## <a name="creating-your-own-freezable-class"></a>Freezable クラスの作成
@@ -124,7 +124,7 @@ mc:Ignorable="PresentationOptions"
   
 - 特殊な状態：読み取り専用 (フリーズ)状態と書き込み可能な状態。
   
-- スレッド セーフ：フリーズされた <xref:System.Windows.Freezable> オブジェクトはスレッド間で共有することができます。
+- スレッドの安全性。 フリーズされた<xref:System.Windows.Freezable>は、スレッド間で共有することができます。 
   
 - 詳細な変更通知：その他の <xref:System.Windows.DependencyObject> とは異なり、 Freezable オブジェクトはサブ プロパティの値が変更されたときに通知します。
   
