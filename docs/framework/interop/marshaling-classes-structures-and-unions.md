@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 027832a2-9b43-4fd9-9b45-7f4196261a4e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0d08056780fe3042983ea021e5a4cd82a14d252a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 2411b69dac6ef8945336a4c4e014cbf6687f702a
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59113725"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469727"
 ---
 # <a name="marshaling-classes-structures-and-unions"></a>クラス、構造体、および共用体のマーシャリング
 クラスと構造体は、.NET Framework では類似しています。 どちらもフィールド、プロパティ、およびイベントを持つことができます。 静的メソッドと非静的メソッドを持つこともできます。 1 つの重要な違いは、構造体は値型でクラスは参照型であることです。  
@@ -50,19 +50,19 @@ ms.locfileid: "59113725"
   
  Structs のサンプルで使用するアンマネージ関数とその元の関数宣言を次に示します。  
   
--   PinvokeLib.dll からエクスポートされる **TestStructInStruct**。  
+- PinvokeLib.dll からエクスポートされる **TestStructInStruct**。  
   
     ```  
     int TestStructInStruct(MYPERSON2* pPerson2);  
     ```  
   
--   PinvokeLib.dll からエクスポートされる **TestStructInStruct3**。  
+- PinvokeLib.dll からエクスポートされる **TestStructInStruct3**。  
   
     ```  
     void TestStructInStruct3(MYPERSON3 person3);  
     ```  
   
--   PinvokeLib.dll からエクスポートされる **TestArrayInStruct**。  
+- PinvokeLib.dll からエクスポートされる **TestArrayInStruct**。  
   
     ```  
     void TestArrayInStruct( MYARRAYSTRUCT* pStruct );  
@@ -98,23 +98,23 @@ typedef struct _MYARRAYSTRUCT
   
  マネージド `MyPerson`、`MyPerson2`、`MyPerson3`、および `MyArrayStruct` 構造体には、以下の特性があります。  
   
--   `MyPerson` には文字列メンバーだけが含まれます。 [CharSet](specifying-a-character-set.md) フィールドは、アンマネージ関数に渡されるとき、文字列を ANSI 形式に設定します。  
+- `MyPerson` には文字列メンバーだけが含まれます。 [CharSet](specifying-a-character-set.md) フィールドは、アンマネージ関数に渡されるとき、文字列を ANSI 形式に設定します。  
   
--   `MyPerson2` には、`MyPerson` 構造体への **IntPtr** が含まれます。 コードが **unsafe** とマークされている場合を除いて、.NET Framework アプリケーションではポインターを使用しないため、**IntPtr** 型は元のポインターをアンマネージ構造体に置き換えます。  
+- `MyPerson2` には、`MyPerson` 構造体への **IntPtr** が含まれます。 コードが **unsafe** とマークされている場合を除いて、.NET Framework アプリケーションではポインターを使用しないため、**IntPtr** 型は元のポインターをアンマネージ構造体に置き換えます。  
   
--   `MyPerson3` には `MyPerson` が埋め込み構造体として含まれます。 別の構造体に埋め込まれた構造体は、埋め込み構造体の要素をメインの構造体に直接配置することでフラット化することができます。またはこのサンプルのように、埋め込み構造体のままにすることもできます。  
+- `MyPerson3` には `MyPerson` が埋め込み構造体として含まれます。 別の構造体に埋め込まれた構造体は、埋め込み構造体の要素をメインの構造体に直接配置することでフラット化することができます。またはこのサンプルのように、埋め込み構造体のままにすることもできます。  
   
--   `MyArrayStruct` には整数の配列が含まれます。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を **ByValArray** に設定します。これは配列内の要素の数を示すために使用されます。  
+- `MyArrayStruct` には整数の配列が含まれます。 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 属性は <xref:System.Runtime.InteropServices.UnmanagedType> 列挙値を **ByValArray** に設定します。これは配列内の要素の数を示すために使用されます。  
   
  このサンプル内のすべての構造体で、各メンバーが出現する順番でメモリ内に順次配列されることを保証するために、<xref:System.Runtime.InteropServices.StructLayoutAttribute> 属性が適用されています。  
   
  `LibWrap` クラスには、`App` クラスによって呼び出される `TestStructInStruct`、`TestStructInStruct3`、および `TestArrayInStruct` メソッドのマネージド プロトタイプが含まれます。 各プロトタイプは、1 つのパラメーターを以下のように宣言します。  
   
--   `TestStructInStruct` は型 `MyPerson2` への参照をそのパラメーターとして宣言します。  
+- `TestStructInStruct` は型 `MyPerson2` への参照をそのパラメーターとして宣言します。  
   
--   `TestStructInStruct3` は型 `MyPerson3` をそのパラメーターとして宣言し、パラメーターを値によって渡します。  
+- `TestStructInStruct3` は型 `MyPerson3` をそのパラメーターとして宣言し、パラメーターを値によって渡します。  
   
--   `TestArrayInStruct` は型 `MyArrayStruct` への参照をそのパラメーターとして宣言します。  
+- `TestArrayInStruct` は型 `MyArrayStruct` への参照をそのパラメーターとして宣言します。  
   
  メソッドへの引数としての構造体は、パラメーターに **ref** (Visual Basic では **ByRef**) キーワードが含まれない限り、値によって渡されます。 たとえば、`TestStructInStruct` メソッドは型 `MyPerson2` のオブジェクトへの参照 (アドレスの値) をアンマネージ コードに渡します。 `MyPerson2` が指定する構造体を操作するために、サンプルは指定したサイズのバッファーを作成し、<xref:System.Runtime.InteropServices.Marshal.AllocCoTaskMem%2A?displayProperty=nameWithType> と <xref:System.Runtime.InteropServices.Marshal.SizeOf%2A?displayProperty=nameWithType> のメソッドを結合することでそのアドレスを返します。 次に、サンプルはマネージド構造体の内容をアンマネージド バッファーにコピーします。 最後に、サンプルは <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A?displayProperty=nameWithType> メソッドを使用してアンマネージド バッファーからマネージド オブジェクトにデータをマーシャリングし、<xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A?displayProperty=nameWithType> メソッドを使用してメモリのアンマネージド ブロックを解放します。  
   
@@ -133,7 +133,7 @@ typedef struct _MYARRAYSTRUCT
   
  FindFile のサンプルで使用するアンマネージ関数とその元の関数宣言を次に示します。  
   
--   Kernel32.dll からエクスポートされる **FindFirstFile**。  
+- Kernel32.dll からエクスポートされる **FindFirstFile**。  
   
     ```  
     HANDLE FindFirstFile(LPCTSTR lpFileName, LPWIN32_FIND_DATA lpFindFileData);  
@@ -176,7 +176,7 @@ typedef struct _WIN32_FIND_DATA
   
  Unions のサンプルで使用するアンマネージ関数とその元の関数宣言を次に示します。  
   
--   PinvokeLib.dll からエクスポートされる **TestUnion**。  
+- PinvokeLib.dll からエクスポートされる **TestUnion**。  
   
     ```  
     void TestUnion(MYUNION u, int type);  
@@ -219,7 +219,7 @@ union MYUNION2
   
  SysTime のサンプルで使用するアンマネージ関数とその元の関数宣言を次に示します。  
   
--   Kernel32.dll からエクスポートされる **GetSystemTime**。  
+- Kernel32.dll からエクスポートされる **GetSystemTime**。  
   
     ```  
     VOID GetSystemTime(LPSYSTEMTIME lpSystemTime);  
@@ -266,17 +266,17 @@ typedef struct _MYSTRSTRUCT2
   
  `MyStruct` クラスには ANSI 文字の文字列オブジェクトが含まれています。 <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> フィールドは ANSI 形式を指定します。 `MyUnsafeStruct` は、文字列の代わりに <xref:System.IntPtr> 型を含む構造体です。  
   
- `LibWrap` クラスには、オーバーロードされた `TestOutArrayOfStructs` プロトタイプ メソッドが含まれます。 メソッドでポインターをパラメーターとして宣言している場合、クラスには `unsafe` キーワードでマークを付ける必要があります。 [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] はアンセーフ コードを使用できないので、オーバー ロードされたメソッド、unsafe 修飾子、そして `MyUnsafeStruct` 構造は必要ありません。  
+ `LibWrap` クラスには、オーバーロードされた `TestOutArrayOfStructs` プロトタイプ メソッドが含まれます。 メソッドでポインターをパラメーターとして宣言している場合、クラスには `unsafe` キーワードでマークを付ける必要があります。 Visual Basic ではアンセーフ コードを使用できないので、オーバーロードされたメソッド、unsafe 修飾子、および `MyUnsafeStruct` 構造体は不要です。  
   
  `App` クラスは、配列を渡すために必要なすべてのタスクを実行する、`UsingMarshaling` メソッドを実装します。 配列には、データが呼び出し先から呼び出し元に渡されることを示すため、`out` (Visual Basic では `ByRef`) キーワードでマークが付けられます。 実装は、以下の <xref:System.Runtime.InteropServices.Marshal> クラス メソッドを使用します。  
   
--   <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> は、アンマネージド バッファーからマネージド オブジェクトにデータをマーシャリングします。  
+- <xref:System.Runtime.InteropServices.Marshal.PtrToStructure%2A> は、アンマネージド バッファーからマネージド オブジェクトにデータをマーシャリングします。  
   
--   <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> は、構造体で文字列用に予約されていたメモリを解放します。  
+- <xref:System.Runtime.InteropServices.Marshal.DestroyStructure%2A> は、構造体で文字列用に予約されていたメモリを解放します。  
   
--   <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> は、配列用に予約されていたメモリを解放します。  
+- <xref:System.Runtime.InteropServices.Marshal.FreeCoTaskMem%2A> は、配列用に予約されていたメモリを解放します。  
   
- 前述のとおり、C# ではアンセーフ コードが許可されますが [!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] では許可されません。 C# サンプルで、`UsingUnsafePointer` は、<xref:System.Runtime.InteropServices.Marshal> クラスの代わりにポインターを使用して `MyUnsafeStruct` 構造体を含む配列を戻す、代替のメソッドの実装です。  
+ 前述のとおり、C# にはアンセーフ コードを使用できますが、Visual Basic には使用できません。 C# サンプルで、`UsingUnsafePointer` は、<xref:System.Runtime.InteropServices.Marshal> クラスの代わりにポインターを使用して `MyUnsafeStruct` 構造体を含む配列を戻す、代替のメソッドの実装です。  
   
 ### <a name="declaring-prototypes"></a>プロトタイプの宣言  
  [!code-cpp[Conceptual.Interop.Marshaling#20](../../../samples/snippets/cpp/VS_Snippets_CLR/conceptual.interop.marshaling/cpp/outarrayofstructs.cpp#20)]

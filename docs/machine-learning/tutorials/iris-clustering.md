@@ -1,24 +1,19 @@
 ---
-title: クラスタリング ラーナーを使用して アヤメの花をクラスター化する - ML.NET
+title: クラスタリング モデルを使用してあやめの花を分類する
 description: クラスタリングのシナリオで ML.NET を使用する方法について説明します
 author: pkulikov
 ms.author: johalex
-ms.date: 04/08/2019
+ms.date: 05/02/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 86eba0c7a3eaeed008d41ff950bf2fd7e0e5fb57
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 7070189e289e8e18ba0d122d2411a9064182e2b1
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481341"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063569"
 ---
-# <a name="tutorial-cluster-iris-flowers-using-a-clustering-learner-with-mlnet"></a>チュートリアル: ML.NET でクラスタリング ラーナーを使用してアヤメの花をクラスター化する
-
-> [!NOTE]
-> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳しくは、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページをご覧ください。
-
-このチュートリアルと関連サンプルでは、現時点では **ML.NET 1.0 RC (リリース候補) (バージョン `1.0.0-preview`)** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
+# <a name="tutorial-categorize-iris-flowers-using-a-clustering-model-with-mlnet"></a>チュートリアル: ML.NET でクラスタリング モデルを使用してあやめの花を分類する
 
 このチュートリアルでは、ML.NET を使って[あやめのデータ セット](https://en.wikipedia.org/wiki/Iris_flower_data_set)の[クラスタリング モデル](../resources/tasks.md#clustering)を作成する方法を示します。
 
@@ -46,21 +41,21 @@ ms.locfileid: "59481341"
 
 ## <a name="create-a-console-application"></a>コンソール アプリケーションを作成する
 
-1. Visual Studio 2017 を開きます。 **[ファイル]** > **[新規作成]** > **[プロジェクト]** をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「IrisFlowerClustering」と入力し、**[OK]** ボタンを選びます。
+1. Visual Studio を開きます。 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、 **[Visual C#]** ノードを選択し、 **[.NET Core]** ノードを選択します。 次に、 **[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「IrisFlowerClustering」と入力し、 **[OK]** ボタンを選びます。
 
 1. プロジェクトに *Data* という名前のディレクトリを作成して、データ セットとモデルのファイルを保存します。
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しいフォルダー]** を選択します。 「Data」と入力して Enter キーを押します。
+    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しいフォルダー]** を選択します。 「Data」と入力して Enter キーを押します。
 
 1. **Microsoft.ML** NuGet パッケージをインストールします。
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、**[参照]** タブを選択して「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、**[インストール]** を選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
+    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。 **[参照]** タブを選択し、「**Microsoft.ML**」を検索します。一覧から **v1.0.0** パッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
 
 ## <a name="prepare-the-data"></a>データを準備する
 
 1. [iris.data](https://github.com/dotnet/machinelearning/blob/master/test/data/iris.data) データ セットをダウンロードし、前の手順で作成した *Data* フォルダーに保存します。 あやめのデータ セットについて詳しくは、Wikipedia の「[Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set)」(あやめのデータ セット) のページと、データ セットのソースである「[Iris Data Set](https://archive.ics.uci.edu/ml/datasets/Iris)」(あやめのデータ セット) のページをご覧ください。
 
-1. **ソリューション エクスプローラー**で、*iris.data* ファイルを右クリックして、**[プロパティ]** を選択します。 **[詳細設定]** で、**[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
+1. **ソリューション エクスプローラー**で、*iris.data* ファイルを右クリックして、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 
 *Iris.data* ファイルには、次の値を表す 5 つの列が含まれます。
 
@@ -76,8 +71,8 @@ ms.locfileid: "59481341"
 
 入力データと予測のためのクラスを作成します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。
-1. **[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを「*IrisData.cs*」に変更します。 次に、**[追加]** を選択します。
+1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*IrisData.cs*」に変更します。 次に、 **[追加]** を選択します。
 1. 以下の `using` ディレクティブを新しいファイルに追加します。
 
    [!code-csharp[Add necessary usings](~/samples/machine-learning/tutorials/IrisFlowerClustering/IrisData.cs#Usings)]
@@ -164,8 +159,8 @@ ms.locfileid: "59481341"
 
 テスト データのインスタンスを格納するための `TestIrisData` クラスを作成します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。
-1. **[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを「*TestIrisData.cs*」に変更します。 次に、**[追加]** を選択します。
+1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*TestIrisData.cs*」に変更します。 次に、 **[追加]** を選択します。
 1. 次の例に示すように、静的になるようにクラスを変更します。
 
    [!code-csharp[Make class static](~/samples/machine-learning/tutorials/IrisFlowerClustering/TestIrisData.cs#Static)]
@@ -185,7 +180,7 @@ Cluster: 2
 Distances: 11.69127 0.02159119 25.59896
 ```
 
-おめでとうございます!  これで、アヤメのクラスタリングの機械学習モデルを作成し、それを使用して予測を行うことができました。 このチュートリアルのソース コードは、[dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/IrisFlowerClustering) GitHub リポジトリで確認できます。
+おめでとうございます! これで、アヤメのクラスタリングの機械学習モデルを作成し、それを使用して予測を行うことができました。 このチュートリアルのソース コードは、[dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/IrisFlowerClustering) GitHub リポジトリで確認できます。
 
 ## <a name="next-steps"></a>次の手順
 

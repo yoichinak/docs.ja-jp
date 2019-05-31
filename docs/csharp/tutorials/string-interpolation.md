@@ -3,12 +3,12 @@ title: C# における文字列補間
 description: C# の文字列補間を使用した結果文字列に書式設定された式の結果を含める方法について説明します。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 5a66ba9215579a459b543a24ece338ffbbfd9aea
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920715"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063228"
 ---
 # <a name="string-interpolation-in-c"></a>C\# における文字列補間
 
@@ -30,9 +30,7 @@ ms.locfileid: "58920715"
 {<interpolatedExpression>}
 ```
 
-コンパイル時には通常、挿入文字列が <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドの呼び出しに変換されます。 これにより、[文字列の複合書式設定](../../standard/base-types/composite-formatting.md)のすべての機能が、挿入文字列でも使用できるようになります。
-
-分析後の動作が連結と等しくなるようであれば、コンパイラでは、<xref:System.String.Concat%2A?displayProperty=nameWithType> の代用として <xref:System.String.Format%2A?displayProperty=nameWithType> を使用することがあります。
+挿入文字列では、[文字列の複合書式設定](../../standard/base-types/composite-formatting.md)機能に含まれるすべての機能がサポートされます。 そのため、<xref:System.String.Format%2A?displayProperty=nameWithType> メソッドを使用するよりも読みやすい代替手法になります。
 
 ## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>挿入文字列の書式設定文字列を指定する方法
 

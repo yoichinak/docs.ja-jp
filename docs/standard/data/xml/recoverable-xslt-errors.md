@@ -5,12 +5,12 @@ ms.technology: dotnet-standard
 ms.assetid: 484929b0-fefb-4629-87ee-ebdde70ff1f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 215fb807aa27b8a544351d26fd0c9500c76b6ead
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 32a4875b42c0282ffdb90e3fc825b38af935affb
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2018
-ms.locfileid: "50202986"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64590057"
 ---
 # <a name="recoverable-xslt-errors"></a>XSLT エラーの解決
 W3C 勧告『XSL Transformations (XSLT) Version 1.0』には、対処方法を実装者が決定できる事項があります。 このような事項は、随意動作と見なされています。 たとえば、XSLT 1.0 Recommendation は、セクション 7.3「Creating Processing Instructions」で、`xsl:processing-instruction` の内容をインスタンス化したときに、テキスト ノード以外のノードが作成されるのはエラーであるとしています。 いくつかの問題に関しては、プロセッサがエラー状態から回復するときにどのような対処をするべきかを、XSLT 1.0 Recommendation が規定しています。 セクション 7.3 に記述されている問題に関しては、W3C では、作成されたノードとその内容を無視することで、このエラーから回復できるとしています。  
@@ -18,11 +18,11 @@ W3C 勧告『XSL Transformations (XSLT) Version 1.0』には、対処方法を�
 ## <a name="discretionary-behaviors"></a>随意動作  
  XSLT 1.0 Recommendation で許可されている随意動作と <xref:System.Xml.Xsl.XslCompiledTransform> クラスによるこれらの動作の処理方法を次の表に示します。  
   
--   復元は、<xref:System.Xml.Xsl.XslCompiledTransform> クラスがこのエラーから回復することを示しています。 <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> イベントを使用すると、XSLT プロセッサのすべてのイベントを通知できます。  
+- 復元は、<xref:System.Xml.Xsl.XslCompiledTransform> クラスがこのエラーから回復することを示しています。 <xref:System.Xml.Xsl.XsltArgumentList.XsltMessageEncountered?displayProperty=nameWithType> イベントを使用すると、XSLT プロセッサのすべてのイベントを通知できます。  
   
--   エラーは、この状態に対する例外が発生したことを示します。  
+- エラーは、この状態に対する例外が発生したことを示します。  
   
--   詳細については、[W3C の XSL Transformations (XSLT) Version 1.0 勧告](https://www.w3.org/TR/xslt)に関するページと [W3C の「XSL Transformations (XSLT) Version 1.0 Specification Errata」(XSL Transformations (XSLT) Version 1.0 仕様の正誤表)](https://www.w3.org/1999/11/REC-xslt-19991116-errata/) を参照してください。  
+- 詳細については、[W3C の XSL Transformations (XSLT) Version 1.0 勧告](https://www.w3.org/TR/xslt)に関するページと [W3C の「XSL Transformations (XSLT) Version 1.0 Specification Errata」(XSL Transformations (XSLT) Version 1.0 仕様の正誤表)](https://www.w3.org/1999/11/REC-xslt-19991116-errata/) を参照してください。  
   
 |XSLT の状態|セクション|XslCompiledTransform の動作|  
 |--------------------|-------------|-----------------------------------|  

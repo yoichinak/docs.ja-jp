@@ -3,12 +3,12 @@ title: .NET Core を使用した REST クライアントの作成
 description: このチュートリアルでは、.NET Core と C# 言語のさまざまな機能を説明します。
 ms.date: 03/06/2017
 ms.assetid: 51033ce2-7a53-4cdd-966d-9da15c8204d2
-ms.openlocfilehash: 332e47d9a02f48c53bbad272477768fa4c0367f2
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: f6e3371a72810b30f804169be4025360aa10c477
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612068"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063884"
 ---
 # <a name="rest-client"></a>REST クライアント
 
@@ -36,11 +36,10 @@ GitHub 上の REST サービスに対して HTTP 要求を発行するアプリ�
 
 ## <a name="create-the-application"></a>アプリケーションを作成する
 
-最初に新しいアプリケーションを作成します。 コマンド プロンプトを開き、アプリケーション用の新しいディレクトリを作成します。 それを、現在のディレクトリとしてください。 コマンド プロンプトで `dotnet new console` のコマンドを入力します。 これで、基本的な "Hello World" アプリケーションのスターター ファイルが作成されます。
+最初に新しいアプリケーションを作成します。 コマンド プロンプトを開き、アプリケーション用の新しいディレクトリを作成します。 それを、現在のディレクトリとしてください。 コマンド プロンプトで `dotnet new console` のコマンドを入力します。 これで、基本的な "Hello World" アプリケーションのスターター ファイルが作成されます。 これは新しいプロジェクトで依存関係が存在しないため、1 回目の実行では、.NET Core フレームワークがダウンロードされ、開発証明書がインストールされ、NuGet パッケージ マネージャーが実行されて、不足している依存関係が復元されます。
 
-変更を加える前に、このシンプルな Hello World アプリケーションを実行する手順を見ていきましょう。 アプリケーション作成後、コマンド プロンプトで「`dotnet restore`」 ([注記を参照](#dotnet-restore-note)) と入力します。 このコマンドにより、NuGet パッケージの復元処理が実行されます。 NuGet は .NET パッケージ マネージャーです。 このコマンドにより、プロジェクトの依存関係のうち欠落しているものがすべてダウンロードされます。 これは新しいプロジェクトなので、依存関係は何もなく、最初の実行で .NET Core フレームワークがダウンロードされます。 この最初の手順の後は、新しい依存パッケージを追加するときに `dotnet restore` ([注記を参照](#dotnet-restore-note)) を実行するか、依存関係のいずれかのバージョンを更新する必要があるだけです。
-
-パッケージを復元したら、`dotnet build` を実行します。 これにより、ビルド エンジンが実行され、アプリケーションが作成されます。 最後に、`dotnet run` を実行してアプリケーションを実行します。
+変更を開始する前に、コマンド プロンプトに「`dotnet run`」(「[注](#dotnet-restore-note)」を参照してください) と入力してアプリケーションを実行します。 環境に依存関係がない場合、`dotnet run` では自動的に `dotnet restore` が実行されます。 アプリケーションのリビルドが必要な場合にも `dotnet build` が実行されます。
+初期設定の後は、プロジェクトにとって意味がある場合にのみ `dotnet restore` または `dotnet build` を実行する必要があります。
 
 ## <a name="adding-new-dependencies"></a>新しい依存関係を追加する
 
@@ -62,7 +61,7 @@ GitHub 上の REST サービスに対して HTTP 要求を発行するアプリ�
 
 ほとんどのコード エディターでは、これらのライブラリの複数のバージョンの入力候補が表示されます。 通常は、追加するパッケージの最新バージョンを使用します。 ただし、すべてのパッケージのバージョンが一致しており、.NET Core アプリケーション フレームワークのバージョンとも一致していることを確認してください。
 
-これらの変更を加えた後で、`dotnet restore` ([注記を参照](#dotnet-restore-note)) をもう一度実行して、システムにパッケージがインストールされるようにします。
+これらの変更を行った後で、`dotnet restore` を実行して (「[注](#dotnet-restore-note)」を参照してください) システムにパッケージがインストールされるようにします。
 
 ## <a name="making-web-requests"></a>Web 要求を作成する
 
@@ -140,7 +139,7 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 ```
 
-この最初のバージョンでは、.NET Foundation にあるすべてのリポジトリのリストを読み取る Web 要求を作成します  (.NET Foundation の gitHub ID は "dotnet" です)。 最初の数行では、この要求の <xref:System.Net.Http.HttpClient> を設定します。 最初は、GitHub の JSON 応答を受け入れるように構成されます。
+この最初のバージョンでは、.NET Foundation にあるすべてのリポジトリのリストを読み取る Web 要求を作成します (.NET Foundation の gitHub ID は "dotnet" です)。 最初の数行では、この要求の <xref:System.Net.Http.HttpClient> を設定します。 最初は、GitHub の JSON 応答を受け入れるように構成されます。
 この形式は単なる JSON です。 次の行では、このオブジェクトからのすべての要求にユーザー エージェント ヘッダーを追加します。 これらの 2 つのヘッダーは、GitHub サーバー コードによってチェックされ、GitHub から情報を取得するために必要です。
 
 <xref:System.Net.Http.HttpClient> を構成したら、Web 要求を作成して応答を取得します。 この最初のバージョンでは、<xref:System.Net.Http.HttpClient.GetStringAsync(System.String)?displayProperty=nameWithType> 簡易メソッドを使います。 この簡易メソッドは、Web 要求を作成するタスクを開始し、要求が返されると応答ストリームを読み取って、ストリームからコンテンツを抽出します。 応答の本文は <xref:System.String> として返されます。 この文字列は、タスクが完了すると使用できます。
@@ -370,7 +369,7 @@ public DateTime LastPush
 }
 ```
 
-上記の新しいコンストラクトについて詳しく見てみましょう。 `IgnoreDataMember` 属性は、JSON オブジェクトとの間でこの型の読み取りまたは書き込みを行わないようにシリアライザーに指示します。 このプロパティには `get` アクセサーだけが含まれています。 `set` アクセサーがない。 C# では、この方法で "*読み取り専用*" プロパティを定義します  (C# では "*書き込み専用*" プロパティを作成できますが、その値は制限されています)。<xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> メソッドは、指定された日付形式を使用して文字列を解析し、<xref:System.DateTime> オブジェクトを作成します。次に、`CultureInfo` オブジェクトを使用して `DateTime` にメタデータを追加します。 解析操作が失敗した場合、プロパティのアクセサーは例外をスローします。
+上記の新しいコンストラクトについて詳しく見てみましょう。 `IgnoreDataMember` 属性は、JSON オブジェクトとの間でこの型の読み取りまたは書き込みを行わないようにシリアライザーに指示します。 このプロパティには `get` アクセサーだけが含まれています。 `set` アクセサーがない。 C# では、この方法で "*読み取り専用*" プロパティを定義します (C# では "*書き込み専用*" プロパティを作成できますが、その値は制限されています)。<xref:System.DateTime.ParseExact(System.String,System.String,System.IFormatProvider)> メソッドは、指定された日付形式を使用して文字列を解析し、<xref:System.DateTime> オブジェクトを作成します。次に、`CultureInfo` オブジェクトを使用して `DateTime` にメタデータを追加します。 解析操作が失敗した場合、プロパティのアクセサーは例外をスローします。
 
 <xref:System.Globalization.CultureInfo.InvariantCulture> を使用するには、`repo.cs` 内の `using` ステートメントに <xref:System.Globalization> 名前空間を追加する必要があります。
 

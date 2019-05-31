@@ -3,12 +3,12 @@ title: 標準的な .NET イベント パターン
 description: .NET イベント パターンに関する情報を提供するほか、標準的なイベント ソースを作成し、標準的なイベントをコードでサブスクライブおよび処理する方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: 8a3133d6-4ef2-46f9-9c8d-a8ea8898e4c9
-ms.openlocfilehash: 11755b4754b15070869adf12d5be409af99035d4
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: cd1ead318529d1afc5b27ff8710cebcaae9b7bc3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57201249"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062971"
 ---
 # <a name="standard-net-event-patterns"></a>標準的な .NET イベント パターン
 
@@ -55,7 +55,7 @@ void OnEventRaised(object sender, EventArgs args);
 
 [!code-csharp[DeclareEvent](../../samples/csharp/events/Program.cs#DeclareEvent "Declare the file found event")]
 
-これはパブリック フィールドを宣言しているように見えるため、不適切なオブジェクト指向プラクティスと考えられるかもしれません。 プロパティ、またはメソッドでデータ アクセスを保護したくなるところです。 これは一見すると不適切なプラクティスのように見えますが、コンパイラによって生成されたコードがラッパーを作成するため、イベント オブジェクトは安全な方法によってのみアクセスされます。 フィールドのように使用するイベントで使用できる唯一の操作は、ハンドラーの追加です。
+これはパブリック フィールドを宣言しているように見えるため、不適切なオブジェクト指向プラクティスと考えられるかもしれません。 プロパティ、またはメソッドでデータ アクセスを保護したくなるところです。 これは一見すると不適切なプラクティスのように見えるかもしれませんが、安全な方法でしかイベント オブジェクトにアクセスできないように、コンパイラによって生成されたコードでは、ラッパーを作成します。 フィールドのように使用するイベントで使用できる唯一の操作は、ハンドラーの追加です。
 
 [!code-csharp[DeclareEventHandler](../../samples/csharp/events/Program.cs#DeclareEventHandler "Declare the file found event handler")]
 

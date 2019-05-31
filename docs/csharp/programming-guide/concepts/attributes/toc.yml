@@ -3,9 +3,8 @@
   items:
     - name: カスタム属性の作成
       href: creating-custom-attributes.md
-      items:
-        - name: AttributeUsage
-          href: attributeusage.md
+    - name: AttributeUsage
+      href: attributeusage.md
     - name: リフレクションを使用した属性へのアクセス
       href: accessing-attributes-by-using-reflection.md
     - name: '方法: 属性を使用して C/C++ の共用体を作成する'

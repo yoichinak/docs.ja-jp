@@ -6,12 +6,12 @@ helpviewer_keywords:
 - using Memory&lt;T&gt; and Span&lt;T&gt;
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e942b3f6f6572c05d42a0267f98e6c876a113616
-ms.sourcegitcommit: 8258515adc6c37ab6278e5a3d102d593246f8672
+ms.openlocfilehash: 728f360d2e8f93ebdf2b17fec39477b95ed11357
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58504341"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063280"
 ---
 # <a name="memoryt-and-spant-usage-guidelines"></a>Memory\<T> と Span\<T> の使用ガイドライン
 
@@ -86,7 +86,7 @@ class Program
 
 - `Main` メソッドは <xref:System.Buffers.IMemoryOwner%601> インスタンスへの参照を保持しているため、`Main` メソッドはバッファーの所有者です。
 
-- `WriteInt32ToBuffer` および `DisplayBufferToConsole` メソッドは、パブリック API として xref:System.Memory%601> を受け入れます。 そのため、これらはバッファーの消費者です。 また、消費できるのは一度に 1 つのみです。
+- `WriteInt32ToBuffer` および `DisplayBufferToConsole` メソッドは、<xref:System.Memory%601> をパブリック API として受け入れます。 そのため、これらはバッファーの消費者です。 また、消費できるのは一度に 1 つのみです。
 
 `WriteInt32ToBuffer` メソッドはバッファーに値を書き込むことが意図されていますが、`DisplayBufferToConsole` メソッドではそうではありません。 これを反映するために、型 <xref:System.ReadOnlyMemory%601> の引数を受け入れておくことができます。 <xref:System.ReadOnlyMemory%601> の詳細については、「[規則 2:バッファーを読み取り専用にする場合は ReadOnlySpan\<T> または ReadOnlyMemory\<T> を使用する](#rule-2)」を参照してください。
 
@@ -110,13 +110,13 @@ class Program
 
 - あるコンポーネントがバッファーに対して動作し、それ同時に他のコンポーネントがそのバッファーに対して動作する可能性があり、そのようなプロセスでは、バッファー内のデータが破損します。
 
-- スタックに割り当てられる <xref:System.Span%601> の性質により、パフォーマンスは最適化され、<xref:System.Span%601> はメモリ ブロックの操作するに適した型になりますが、<xref:System.Span%601> にはいくつかの大きな制限もあります。 <xref:System.Span%601> を使用するタイミングと、<xref:System.Memory%601> を使用するタイミングを把握することが重要です。
+- スタックに割り当てられる <xref:System.Span%601> の性質によってパフォーマンスが最適化され、<xref:System.Span%601> はメモリ ブロック上での操作に適した型になりますが、<xref:System.Span%601> にはいくつかの大きな制限もあります。 <xref:System.Span%601> を使用するタイミングと、<xref:System.Memory%601> を使用するタイミングを把握することが重要です。
 
 以下は、<xref:System.Memory%601> とその関連する型を正しく使用するためのレコメンデーションです。 特に明記しない限り、<xref:System.Memory%601> と <xref:System.Span%601> に適用されるガイダンスは <xref:System.ReadOnlyMemory%601> と <xref:System.ReadOnlySpan%601> にも適用されます。
 
 **規則 1:同期 API の場合、可能であればパラメーターとして Memory\<T> ではなく Span\<T> を使用する。**
 
-<xref:System.Span%601> は <xref:System.Memory%601> よりも汎用性が高く、さまざまな連続するメモリ バッファーを表すことができます。 <xref:System.Span%601> は <xref:System.Memory%601>> よりもパフォーマンスが優れています。 最後に、<xref:System.Memory%601.Span?displayProperty=nameWithType> プロパティを使用して <xref:System.Memory%601> インスタンスを <xref:System.Span%601> に変換することはできますが、Span\<T> から Memory\<T> に変換することはできません。 そのため、呼び出し元が <xref:System.Memory%601> インスタンスを持っていた場合、いずれにしても <xref:System.Span%601> パラメーターを使用してメソッドを呼び出すことができます。
+<xref:System.Span%601> は <xref:System.Memory%601> よりも汎用性が高く、さまざまな連続するメモリ バッファーを表すことができます。 <xref:System.Span%601> は <xref:System.Memory%601>> よりもパフォーマンスに優れています。 最後に、<xref:System.Memory%601.Span?displayProperty=nameWithType> プロパティを使用して <xref:System.Memory%601> インスタンスを <xref:System.Span%601> に変換することはできますが、Span\<T> から Memory\<T> に変換することはできません。 そのため、呼び出し元が <xref:System.Memory%601> インスタンスを持っていた場合、いずれにしても <xref:System.Span%601> パラメーターを使用してメソッドを呼び出すことができます。
 
 型 <xref:System.Memory%601> ではなく型 <xref:System.Span%601> のパラメーターを使用すると、適切な消費メソッドの実装を記述する場合にも役立ちます。 メソッドのリース時間を過ぎてバッファーにアクセスを試行しないように、コンパイル時のチェックが自動的に実行されます (詳細については後述します)。
 
@@ -246,7 +246,7 @@ class Person
 
 **規則 9:同期的 p/invoke メソッドをラップしている場合、API は Span\<T> をパラメーターとして受け入れる必要がある。**
 
-規則 1 に従うと、<xref:System.Span%601> は一般に同期的 API に使用するために適した型です。 次の例のように、[`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) キーワードを介して <xref:System.Span%601>\<T> インスタンスを固定できます。
+規則 1 に従うと、<xref:System.Span%601> は一般に同期的 API に使用するために適した型です。 次の例のように、[`fixed`](~/docs/csharp/language-reference/keywords/fixed-statement.md) キーワードを介して <xref:System.Span%601> インスタンスを固定できます。
 
 ```csharp
 using System.Runtime.InteropServices;

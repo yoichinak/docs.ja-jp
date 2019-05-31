@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: a6d98abd446bfa1a5c214da31bc877ecb337e8f8
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 94c266c3e44f87d8c8503bcf15789723116460df
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59301127"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753814"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術演算子 (C# リファレンス)
 
@@ -163,23 +163,6 @@ ms.locfileid: "59301127"
 
 デリゲートの削除には、`-` 演算子を使用することもできます。 詳細については、「[`-` 演算子](subtraction-operator.md)」の記事を参照してください。
 
-## <a name="operator-precedence-and-associativity"></a>演算子の優先順位と結合規則
-
-次の算術演算子の一覧は、優先度が高い順に並べられています。
-
-- 後置インクリメント `x++` 演算子と後置デクリメント `x--` 演算子
-- 前置インクリメント `++x` 演算子と前置デクリメント `--x` 演算子および単項演算子 `+` と `-`
-- 乗算演算子 `*`、`/`、`%`
-- 加法演算子 `+` と `-`
-
-2 項算術演算子は左結合です。 つまり、優先度が同じ演算子は、左から右に評価されます。
-
-演算子の優先順位と結合規則によって定められた評価の順序を変更するには、かっこ `()` を使用します。
-
-[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
-
-優先度順に並べられた C# 演算子の完全な一覧については、「[C# 演算子](index.md)」を参照してください。
-
 ## <a name="compound-assignment"></a>複合代入。
 
 2 項演算子 `op` の場合、フォームの複合代入式
@@ -200,7 +183,28 @@ x = x op y
 
 [!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignment)]
 
+[数値の上位変換](~/_csharplang/spec/expressions.md#numeric-promotions)のため、`op` 演算の結果は、`x` の型 `T` に暗黙的に変換できない可能性があります。 そのような場合、`op` が定義済みの演算子であり、演算の結果が `x` の型 `T` に明示的に変換できる場合、`x op= y` の形式の複合代入式は、`x` が 1 回だけ評価される点を除き、`x = (T)(x op y)` と等価です。 次の例は、その動作を示します。
+
+[!code-csharp-interactive[compound assignment with cast](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#CompoundAssignmentWithCast)]
+
 [イベント](../keywords/event.md)のサブスクリプションとサブスクリプションの解除には、`+=` 演算子と `-=` 演算子も使用できます。 詳細については、「[方法: イベント サブスクリプションとサブスクリプションの解除](../../programming-guide/events/how-to-subscribe-to-and-unsubscribe-from-events.md)」を参照してください。
+
+## <a name="operator-precedence-and-associativity"></a>演算子の優先順位と結合規則
+
+次の算術演算子の一覧は、優先度が高い順に並べられています。
+
+- 後置インクリメント演算子 `x++` と後置デクリメント演算子 `x--`
+- 前置インクリメント演算子 `++x` とデクリメント演算子 `--x`および単項演算子 `+` と `-`
+- 乗算演算子 `*`、`/`、`%`
+- 加法 `+` および `-` 演算子
+
+2 項算術演算子は左結合です。 つまり、優先度が同じ演算子は、左から右に評価されます。
+
+演算子の優先順位と結合規則によって定められた評価の順序を変更するには、かっこ `()` を使用します。
+
+[!code-csharp-interactive[precedence and associativity](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#PrecedenceAndAssociativity)]
+
+優先度順に並べられた C# 演算子の完全な一覧については、「[C# 演算子](index.md)」を参照してください。
 
 ## <a name="arithmetic-overflow-and-division-by-zero"></a>算術オーバーフローと 0 による除算
 
@@ -256,6 +260,7 @@ x = x op y
 - [減算演算子](~/_csharplang/spec/expressions.md#subtraction-operator)
 - [複合代入](~/_csharplang/spec/expressions.md#compound-assignment)
 - [checked 演算子と unchecked 演算子](~/_csharplang/spec/expressions.md#the-checked-and-unchecked-operators)
+- [数値の上位変換](~/_csharplang/spec/expressions.md#numeric-promotions)
 
 ## <a name="see-also"></a>関連項目
 

@@ -1,0 +1,41 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: ML.NET のドキュメント
+metadata:
+  document_id: na
+  title: ML.NET のドキュメント - チュートリアル、API リファレンス
+  meta.description: 'Learn how to use ML.NET, an open-source and cross-platform machine learning framework you can use to build custom machine learning solutions and integrate them into .NET applications. Incorporate AI into your apps using the .NET skills you already have and without leaving .NET.'
+  ms.topic: landing-page
+  ms.date: 04/18/2019
+  ms.author: cgronlun
+  author: cjgronlund
+abstract:
+  description: カスタムの機械学習ソリューションを構築し、.NET アプリケーションに統合するためのオープン ソースのクロスプラットフォーム機械学習フレームワークである ML.NET の使用方法について説明します。 チュートリアル、コード例、API リファレンスなどのドキュメントでその方法を説明します。
+sections:
+  - title: 開始するには
+    items:
+      - type: paragraph
+        text: ML.NET を使用して機械学習アプリケーションを構築する方法については、「<a href="/dotnet/machine-learning/how-does-mldotnet-work">What is ML.NET and how does it work? (ML.NET の概要とそのしくみ)</a>」を参照してください。 また、<b>Microsoft.ML</b> nuget パッケージをアプリケーションに追加することから始めることもできます。
+  - title: ステップ バイ ステップのチュートリアル
+    items:
+      - type: paragraph
+        text: ML.NET を使用して一般的なソリューションを作成する方法について説明します。
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/machine-learning/tutorials/sentiment-analysis">二項分類を使用してセンチメントを分析する</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">多クラス分類を使用して GitHub の問題を分類する</a></li>
+          - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">回帰を使用してニューヨークのタクシー料金を予測する</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">クラスタリングを使用して花を特徴別に分類する</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommmendation">行列の因数分解を使用して映画レコメンダーを作成する</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/image-classification">TensorFlow を使用してカスタム画像分類子を構築する</a>
+  - title: 参照とリソース
+    items:
+      - type: paragraph
+        text: ML.NET API には、リリース コンポーネントとプレビュー コンポーネントという 2 セットのパッケージがあります。 リリース API には、データ処理、二項分類、多クラス分類、回帰、異常の検出とランキング、モデルの保存と読み込みのためのアルゴリズムなどが含まれています。 プレビュー API には、ONNX と TensorFlow のモデル処理、推奨タスクのアルゴリズム、および時系列データを処理するためのコンポーネントが含まれています。
+      - type: list
+        style: unordered
+        items:
+          - html: <a href="/dotnet/api/?view=ml-dotnet">ML.NET API</a>
+          - html: <a href="/dotnet/api/?view=ml-dotnet-preview">ML.NET プレビュー API</a>
+          - html: '<a href="https://github.com/dotnet/machinelearning-samples/blob/master/README.md">ML.NET のサンプル:C# と F#</a>'

@@ -4,12 +4,12 @@ description: このチュートリアルでは、Docker を使って .NET Core �
 ms.date: 04/10/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: fcbac0e0d17d2481d42e715a7f2790586e31d085
-ms.sourcegitcommit: 8080271c246b57f4fb68c28369634bff46843424
+ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/13/2019
-ms.locfileid: "59553837"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66051814"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>チュートリアル: NET Core アプリのコンテナー化
 
@@ -410,5 +410,6 @@ docker rmi mcr.microsoft.com/dotnet/core/runtime:2.2
 ## <a name="next-steps"></a>次の手順
 
 * [ASP.NET Core マイクロサービスのチュートリアルを試します。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
-* [コンテナーをサポートする Azure サービスを確認します。](https://azure.microsoft.com/en-us/overview/containers/)
+* [コンテナーをサポートする Azure サービスを確認します。](https://azure.microsoft.com/overview/containers/)
 * [Dockerfile のコマンドについて読みます。](https://docs.docker.com/engine/reference/builder/)
+* [Visual Studio 向けのコンテナー ツールを調べます](/visualstudio/containers/overview)

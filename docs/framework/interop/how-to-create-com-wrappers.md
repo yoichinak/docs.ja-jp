@@ -7,20 +7,20 @@ helpviewer_keywords:
 ms.assetid: bdf89bea-1623-45ee-a57b-cf7c90395efa
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c26c84ece1231a4e118144c163fa3e9c7619301
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b0e34785fce3cd88bfe4fe4b075ba34b8d22bff4
+ms.sourcegitcommit: 56ac30a336668124cb7d95d8ace16bd985875147
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59324131"
+ms.lasthandoff: 05/09/2019
+ms.locfileid: "65469650"
 ---
 # <a name="how-to-create-com-wrappers"></a>方法: COM ラッパーを作成する
 
 Visual Studio 2005 の機能または .NET Framework のツールである Tlbimp.exe と Regasm.exe を使用して、COM (コンポーネント オブジェクト モデル) ラッパーを作成することができます。 どちらの方法でも以下の 2 種類の COM ラッパーが作成されます。
 
--   タイプ ライブラリからの[ランタイム呼び出し可能ラッパー](../../../docs/framework/interop/runtime-callable-wrapper.md)。マネージド コードで COM オブジェクトを実行します。
+- タイプ ライブラリからの[ランタイム呼び出し可能ラッパー](../../../docs/framework/interop/runtime-callable-wrapper.md)。マネージド コードで COM オブジェクトを実行します。
 
--   必要なレジストリ設定を含む [COM 呼び出し可能ラッパー](../../../docs/framework/interop/com-callable-wrapper.md)。ネイティブ アプリケーションでマネージド オブジェクトを実行します。
+- 必要なレジストリ設定を含む [COM 呼び出し可能ラッパー](../../../docs/framework/interop/com-callable-wrapper.md)。ネイティブ アプリケーションでマネージド オブジェクトを実行します。
 
 Visual Studio 2005 では、プロジェクトに参照として COM ラッパーを追加できます。
 
@@ -34,18 +34,18 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
 
 3. **[プロジェクト]** メニューの **[参照の追加]** をクリックします。
 
-4. [参照の追加] ダイアログ ボックスで、**[COM]** タブをクリックし、使用するコンポーネントを選択して **[OK]** をクリックします。
+4. [参照の追加] ダイアログ ボックスで、 **[COM]** タブをクリックし、使用するコンポーネントを選択して **[OK]** をクリックします。
 
      **ソリューション エクスプローラー**で、COM コンポーネントがプロジェクトの [参照設定] フォルダーに追加されていることを確認します。
 
-これで、COM オブジェクトにアクセスするためのコードを作成できます。 まず、`Imports` ステートメント ([!INCLUDE[vbprvblong](../../../includes/vbprvblong-md.md)] の場合) または `Using` ステートメント ([!INCLUDE[csprcslong](../../../includes/csprcslong-md.md)] の場合) などのオブジェクトを宣言します。
+これで、COM オブジェクトにアクセスするためのコードを作成できます。 まず、Visual Basic の場合は `Imports` ステートメント、C# の場合は `Using` ステートメントなど、オブジェクトの宣言から始めます。
 
 > [!NOTE]
 > Microsoft Office コンポーネントをプログラミングする場合は、最初に Microsoft ダウンロード センターから [Microsoft Office プライマリ相互運用機能アセンブリ](https://go.microsoft.com/fwlink/?LinkId=50479) (PIA) をインストールします。 手順 4 で、必要な Office 製品で使用可能な最新バージョンのオブジェクト ライブラリ (**Microsoft Word 11.0 Object Library** など) を選択します。  
   
 ### <a name="to-create-a-runtime-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用してランタイム呼び出し可能ラッパーを作成するには  
   
--   [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) ツールを実行します。  
+- [Tlbimp.exe (タイプ ライブラリ インポーター)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) ツールを実行します。  
   
  このツールは、元のタイプ ライブラリで定義された型のランタイム メタデータを含むアセンブリを作成します。  
   
@@ -63,7 +63,7 @@ Visual Studio 2005 では、プロジェクトに参照として COM ラッパ�
   
 4. **[COM の相互運用機能に登録]** チェック ボックスをオンにします。  
   
- プロジェクトをビルドすると、アセンブリが COM 相互運用機能に対して自動的に登録されます。 Visual Studio 2005 でネイティブ アプリケーションをビルドする場合は、**[プロジェクト]** メニューの **[参照の追加]** をクリックすることで、アセンブリを使用できます。  
+ プロジェクトをビルドすると、アセンブリが COM 相互運用機能に対して自動的に登録されます。 Visual Studio 2005 でネイティブ アプリケーションをビルドする場合は、 **[プロジェクト]** メニューの **[参照の追加]** をクリックすることで、アセンブリを使用できます。  
   
 ### <a name="to-create-a-com-callable-wrapper-using-net-framework-tools"></a>.NET Framework ツールを使用して COM 呼び出し可能ラッパーを作成するには  
   

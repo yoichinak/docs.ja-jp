@@ -4,12 +4,12 @@ description: .NET でネイティブ コンポーネントとやり取りする�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: 6702d469abf317b3b1f545ce79b980e8581ab5f1
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 09b25ed10958142f8eead6761f18bccbe2645448
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59196659"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063078"
 ---
 # <a name="native-interoperability-best-practices"></a>ネイティブ相互運用性のベスト プラクティス
 
@@ -33,7 +33,7 @@ ms.locfileid: "59196659"
 |---------|---------|----------------|---------|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>   | `true` |  既定値のままにします  | これが明示的に false に設定されている場合、失敗した HRESULT の戻り値は例外になります (そして結果として定義内の戻り値は null になります)。|
 | <xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError> | `false`  | API によって異なります  | API が GetLastError を使用し、Marshal.GetLastWin32Error を使用して値を取得する場合は、true に設定します。 API がエラーがあるという条件を設定している場合は、誤って上書きされないように他の呼び出しを行う前にエラーを取得します。|
-| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` (`CharSet.Ansi` の動作にフォールバックします)  | 定義内に文字列または文字が存在する場合は、明示的に `CharSet.Unicode` または `CharSet.Ansi` を使用します。 | 文字列のマーシャリング動作と `false` のときの `ExactSpelling` の動作を指定します。 Unix では `CharSet.Ansi` は実際には UTF8 である点に注意してください。 "_ほとんど_" の場合、Windows では Unicode が使用され、Unix では UTF8 が使用されます。 詳細については、[文字セットのドキュメント](./charset.md)を参照してください。 |
+| <xref:System.Runtime.InteropServices.DllImportAttribute.CharSet> | `CharSet.None` (`CharSet.Ansi` の動作にフォールバックします)  | 定義内に文字列または文字が存在する場合は、明示的に `CharSet.Unicode` または `CharSet.Ansi` を使用します。 | これは、文字列のマーシャリング動作と `false` の場合の `ExactSpelling` の動作を指定します。 Unix では `CharSet.Ansi` は実際には UTF8 である点に注意してください。 "_ほとんど_" の場合、Windows では Unicode が使用され、Unix では UTF8 が使用されます。 詳細については、[文字セットのドキュメント](./charset.md)を参照してください。 |
 | <xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling> | `false` | `true`             | ランタイムで `CharSet` 設定の値に応じてサフィックスが "A" または "W" (`CharSet.Ansi` の場合は "A"、`CharSet.Unicode` の場合は "W") の代替の関数名が検索されないときに、これを true に設定し、わずかなパフォーマンス上のメリットを得ます。 |
 
 ## <a name="string-parameters"></a>文字列パラメーター
@@ -49,19 +49,19 @@ CharSet が Unicode の場合または引数が `[MarshalAs(UnmanagedType.LPWSTR
 1. 目的の容量の SB を作成します (管理容量を割り当てます) **{1}**
 2. 呼び出し
    1. ネイティブ バッファーを割り当てます **{2}**  
-   2. `[In]` "_(`StringBuilder` パラメーターの既定値)_" の場合、内容をコピーします  
-   3. `[Out]` **{3}** "_(`StringBuilder` の既定値でもあります)_" の場合、ネイティブ バッファーを新しく割り当てられたマネージド配列にコピーします。  
+   2. `[In]` " _(`StringBuilder` パラメーターの既定値)_ " の場合、内容をコピーします  
+   3. `[Out]` **{3}** " _(`StringBuilder` の既定値でもあります)_ " の場合、ネイティブ バッファーを新しく割り当てられたマネージド配列にコピーします。  
 3. `ToString()` でさらに別のマネージド配列を割り当てます **{4}**
 
 これは、ネイティブ コードから文字列を取得する *{4}* の割り当てです。 これを制限するために最適な方法は、`StringBuilder` を別の呼び出しで再利用することですが、それでも *1* つの割り当てが節約されるだけです。 `ArrayPool` から文字バッファーを使用してキャッシュする方がはるかにお勧めです。以降の呼び出しでは `ToString()` の割り当てのみで済むようになります。
 
 `StringBuilder` に関するもう 1 つの問題は、戻り値のバッファーが常に最初の null までコピーされることです。 渡された文字列が null で終了していない場合、または null 終端文字列が 2 つある場合、よくても P/Invoke は不正確になります。
 
-`StringBuilder` を "*使用する*" 場合、最後の問題は、相互運用のために常に考慮される非表示の null が容量に "**含まれない**" ことです。ます。 ほとんどの API はバッファー サイズに null が "*含まれる*" ことを想定しているため、これを誤りと考えられることがよくあります。 その結果、無駄な、または不要な割り当てが行われる可能性があります。 さらに、この問題により、ランタイムでコピーを最小化する `StringBuilder` のマーシャリングを最適化できなくなります。
+`StringBuilder` を "*使用する*" 場合、最後の問題は、相互運用のために常に考慮される非表示の null が容量に "**含まれない**" ことです。ます。 ほとんどの API はバッファー サイズに null が "*含まれる*" ことを想定しているため、これを誤りと考えられることがよくあります。 その結果、無駄な、または不要な割り当てが行われる可能性があります。 さらに、この問題によって、ランタイムでコピーを最小化する `StringBuilder` のマーシャリングを最適化できなくなります。
 
 **✔️ 推奨**: `ArrayPool` から `char[]` を使用するようにします。
 
-文字列のマーシャリングの詳細については、「[文字列に対する既定のマーシャリング](../../framework/interop/default-marshaling-for-strings.md)」と「[Customizing string marshalling (文字列のマーシャリングのカスタマイズ)](customize-parameter-marshalling.md#customizing-string-parameters)」を参照してください。
+文字列のマーシャリングの詳細については、「[文字列に対する既定のマーシャリング](../../framework/interop/default-marshaling-for-strings.md)」と「[Customizing string marshalling (文字列のマーシャリングのカスタマイズ)](customize-parameter-marshaling.md#customizing-string-parameters)」を参照してください。
 
 > __Windows 固有__  
 > `[Out]` 文字列の場合、CLR は文字列を解放するために既定で `CoTaskMemFree` を使用します。また、`UnmanagedType.BSTR` とマークされている文字列の場合は `SysStringFree` を使用します。  
@@ -73,7 +73,7 @@ CharSet が Unicode の場合または引数が `[MarshalAs(UnmanagedType.LPWSTR
 
 ## <a name="boolean-parameters-and-fields"></a>ブール型のパラメーターとフィールド
 
-ブール値は混乱しやすいものです。 既定では、.NET の `bool` は Windows の `BOOL` にマーシャリングされます。これは 4 バイトの値です。 一方、C および C++ の `_Bool` 型と `bool` 型は "*シングル*" バイトです。 これは、戻り値の半分が破棄されると、結果のみが変わる "*可能性*" があるので、バグの追跡が困難になる可能性があります。 .NET の `bool` 値を C または C++ の `bool` 型にマーシャリングする方法の詳細については、[ブール値フィールドのマーシャリングのカスタマイズ](customize-struct-marshalling.md#customizing-boolean-field-marshalling)に関するドキュメントを参照してください。
+ブール値は混乱しやすいものです。 既定では、.NET の `bool` は Windows の `BOOL` にマーシャリングされます。その場合、4 バイト値になります。 一方、C および C++ の `_Bool` 型と `bool` 型は "*シングル*" バイトです。 これは、戻り値の半分が破棄されると、結果のみが変わる "*可能性*" があるので、バグの追跡が困難になる可能性があります。 .NET の `bool` 値を C または C++ の `bool` 型にマーシャリングする方法の詳細については、[ブール値フィールドのマーシャリングのカスタマイズ](customize-struct-marshaling.md#customizing-boolean-field-marshaling)に関するドキュメントを参照してください。
 
 ## <a name="guids"></a>GUID
 
@@ -87,7 +87,7 @@ GUID はシグネチャに直接使用できます。 多くの Windows API は�
 
 ## <a name="blittable-types"></a>blittable 型
 
-blittable 型は、マネージド コードとネイティブ コードで同じビット レベルの表現を持つ型です。 そのため、ネイティブ コードとの間でマーシャリングするために別の形式に変換する必要はなく、パフォーマンスが向上するため、推奨されます。
+blittable 型は、マネージド コードとネイティブ コードで同じビット レベルの表現を持つ型です。 そのため、ネイティブ コードとの間でマーシャリングするために別の形式に変換する必要はなく、これによってパフォーマンスが向上することから、推奨されます。
 
 **blittable 型:**
 
@@ -126,7 +126,7 @@ public struct UnicodeCharStruct
 詳細については次を参照してください:
 
 - [Blittable 型と非 Blittable 型](../../framework/interop/blittable-and-non-blittable-types.md)  
-- [型のマーシャリング](type-marshalling.md)
+- [型のマーシャリング](type-marshaling.md)
 
 ## <a name="keeping-managed-objects-alive"></a>マネージド オブジェクトのキープ アライブ
 
@@ -210,7 +210,7 @@ C `void*` である Windows `PVOID` は `IntPtr` または `UIntPtr` のいず�
 
 マネージド構造体はスタックに対して作成され、メソッドから返されるまで削除されません。 定義上、これらは "固定" されます (GC によって移動されません)。 ネイティブ コードが、現在のメソッドの終わりを越えてポインターを使用しない場合は、アンセーフ コード ブロックで単にアドレスを取得することもできます。
 
-blittable 型の構造体は、マーシャリング層から直接使用されるため、はるかに高パフォーマンスです。 できれば構造体を blittable 型にしてください (たとえば、`bool` を避けます)。 詳細については、「[Blittable Types (blittable 型)](#blittable-types)」セクションを参照してください。
+blittable 型の構造体は、単純にマーシャリング層から直接使用できるため、はるかに高パフォーマンスです。 できれば構造体を blittable 型にしてください (たとえば、`bool` を避けます)。 詳細については、「[Blittable Types (blittable 型)](#blittable-types)」セクションを参照してください。
 
 構造体が blittable 型の "*場合*"、パフォーマンスを向上するために `Marshal.SizeOf<MyStruct>()` ではなく `sizeof()` を使用してください。 前述のように、固定された `GCHandle` を作成しようとすることで、型が blittable であることを確認できます。 型が文字列ではない場合、または blittable と見なされる場合、`GCHandle.Alloc` は `ArgumentException` をスローします。
 
@@ -245,4 +245,4 @@ internal unsafe struct SYSTEM_PROCESS_INFORMATION
 }
 ```
 
-ただし、固定バッファーに関する問題がいくつかあります。 blittable ではない型の固定バッファーは正しくマーシャリングされないので、インプレース配列は複数の個々のフィールドに展開する必要があります。 さらに、3.0 より前の .NET Framework および .NET Core では、固定バッファー フィールドを含む構造体が blittable 型ではない構造体内に入れ子にされている場合、固定バッファー フィールドはネイティブ コードに正しくマーシャリングされません。
+ただし、固定バッファーに関する問題がいくつかあります。 blittable ではない型の固定バッファーは正しくマーシャリングされないので、インプレース配列は複数の個々のフィールドに展開する必要があります。 さらに、3.0 より前の .NET Framework および .NET Core では、固定バッファー フィールドを含む構造体が blittable 型ではない構造体内に入れ子になっている場合、固定バッファー フィールドはネイティブ コードに正しくマーシャリングされません。

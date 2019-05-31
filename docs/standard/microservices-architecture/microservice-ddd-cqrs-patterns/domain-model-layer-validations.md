@@ -1,15 +1,13 @@
 ---
 title: ドメイン モデル レイヤーでの検証の設計
 description: コンテナー化された .NET アプリケーション用の .NET マイクロサービス アーキテクチャ | ドメイン モデル検証の主要な概念を理解する。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 10/08/2018
-ms.openlocfilehash: ae1252f4544f184a5f63ef02ba898da9b4373e17
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 1d3196d2130df33969ed231bccfe0fc6f0af2ad8
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612707"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65639586"
 ---
 # <a name="design-validations-in-the-domain-model-layer"></a>ドメイン モデル レイヤーでの検証を設計する
 

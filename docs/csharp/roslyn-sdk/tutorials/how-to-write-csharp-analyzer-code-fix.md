@@ -3,12 +3,12 @@ title: 'チュートリアル: 最初のアナライザーとコード修正を�
 description: このチュートリアルでは、.NET Compiler SDK (Roslyn API) を使用してアナライザーとコード修正を作成する手順を詳しく説明します。
 ms.date: 08/01/2018
 ms.custom: mvc
-ms.openlocfilehash: 7e3d1ac3a1ef692a1b7f1980fd00f95b04a8d047
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 1a4280741650b41174f93c4403008ee3522adbe6
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59427501"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452709"
 ---
 # <a name="tutorial-write-your-first-analyzer-and-code-fix"></a>チュートリアル: 最初のアナライザーとコード修正を作成する
 
@@ -50,8 +50,8 @@ Console.WriteLine(x);
 
 変数を定数にすることができるかどうかを判断するために、構文解析、初期化子式の定数分析、および変数に書き込まれないというデータフロー分析が必要です。 .NET Compiler Platform には、この分析を簡単に実行できる API が用意されています。 最初の手順は、新しい C# の**コード修正を含むアナライザー** プロジェクトを作成することです。
 
-* Visual Studio で、**[ファイル] > [新規] > [プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
-* **[Visual C#] > [Extensibility]** で、**[Analyzer with code fix (.NET Standard)]\(コード修正付きアナライザー (.NET Standard)\)** を選択します。
+* Visual Studio で、 **[ファイル] > [新規] > [プロジェクト]** の順に選択して、[新しいプロジェクト] ダイアログを表示します。
+* **[Visual C#] > [Extensibility]** で、 **[Analyzer with code fix (.NET Standard)]\(コード修正付きアナライザー (.NET Standard)\)** を選択します。
 * プロジェクトに「**MakeConst**」という名前を付けて、[OK] をクリックします。
 
 コード修正テンプレート付きアナライザー テンプレートを使用すると、アナライザーとコード修正を含むプロジェクト、単体テスト プロジェクト、VSIX プロジェクトという 3 つのプロジェクトが作成されます。 既定のスタートアップ プロジェクトは VSIX プロジェクトです。 **F5** キーを押して、VSIX プロジェクトを開始します。 これにより、新しいアナライザーが読み込まれた Visual Studio の 2 つ目のインスタンスが開始されます。
@@ -92,7 +92,7 @@ Console.WriteLine(x);
 * `AnalyzerMessageFormat` を "定数に変更できる" に変更します。
 * `AnalyzerDescription` を "定数にする" に変更します。
 
-また、**[アクセス修飾子]** ドロップダウンを `public` に変更します。 こうすることで、単体テストでこれらの定数を簡単に使用できるようになります。 完了すると、次の図のようにリソース エディターが表示されます。
+また、 **[アクセス修飾子]** ドロップダウンを `public` に変更します。 こうすることで、単体テストでこれらの定数を簡単に使用できるようになります。 完了すると、次の図のようにリソース エディターが表示されます。
 
 ![文字列リソースを更新する](media/how-to-write-csharp-analyzer-code-fix/update-string-resources.png)
 
@@ -195,7 +195,7 @@ Console.WriteLine(x);
 
 次に `MakeUppercaseAsync` メソッドを削除します これで適用されなくなります。
 
-すべてのコード修正は <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider> から派生しています。 これらはすべて <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> をオーバーライドし、使用できるコード修正を報告します。 `RegisterCodeFixesAsync` で、診断に合わせて、次のように検索している先祖ノードの種類を <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> に変更します。
+すべてのコード修正プロバイダーは <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider> から派生します。 これらはすべて <xref:Microsoft.CodeAnalysis.CodeFixes.CodeFixProvider.RegisterCodeFixesAsync(Microsoft.CodeAnalysis.CodeFixes.CodeFixContext)?displayProperty=nameWithType> をオーバーライドし、使用できるコード修正を報告します。 `RegisterCodeFixesAsync` で、診断に合わせて、次のように検索している先祖ノードの種類を <xref:Microsoft.CodeAnalysis.CSharp.Syntax.LocalDeclarationStatementSyntax> に変更します。
 
 [!code-csharp[Find local declaration node](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst/MakeConstCodeFixProvider.cs#FindDeclarationNode  "Find the local declaration node that raised the diagnostic")]
 
@@ -309,7 +309,7 @@ public void WhenDiagnosticIsRaisedFixUpdatesCode(
 
 [!code-csharp[string constants for fix test](~/samples/csharp/roslyn-sdk/Tutorials/MakeConst/MakeConst.Test/MakeConstUnitTests.cs#FirstFixTest "string constants for fix test")]
 
-これらの 2 つのテストを実行して、合格することを確認します。 Visual Studio で、**[テスト]** > **[Windows]** > **[テスト エクスプローラー]** の順に選択して、**テスト エクスプローラー**を開きます。  **[すべて実行]** リンクをクリックします。
+これらの 2 つのテストを実行して、合格することを確認します。 Visual Studio で、 **[テスト]**  >  **[Windows]**  >  **[テスト エクスプローラー]** の順に選択して、**テスト エクスプローラー**を開きます。  **[すべて実行]** リンクをクリックします。
 
 ## <a name="create-tests-for-valid-declarations"></a>有効な宣言のテストを作成する
 
@@ -519,7 +519,7 @@ int k = i + j;
 
 これらの変更の後は、最初の 2 つの変数にのみ赤い波線が表示されます。 `i` と `j` の両方に `const` を追加すると、`const` になる可能性があるので、`k` で新しい警告を受け取ります。
 
-おめでとうございます!  ここでは最初の .NET Compiler Platform 拡張機能を作成しました。これは、その場でコード分析を実行し、問題を検出してそれを修正する簡単な修正案を提供する拡張機能です。 この過程で、.NET Compiler Platform SDK (Roslyn API) に含まれる多くのコード API を学びました。 サンプル GitHub リポジトリの[完成したサンプル](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)に対して作業を検査することができます。 また、[完成したプロジェクトの zip ファイル](https://github.com/dotnet/samples/blob/master/csharp/roslyn-sdk/Tutorials/MakeConst.zip)をダウンロードすることもできます。
+おめでとうございます! ここでは最初の .NET Compiler Platform 拡張機能を作成しました。これは、その場でコード分析を実行し、問題を検出してそれを修正する簡単な修正案を提供する拡張機能です。 この過程で、.NET Compiler Platform SDK (Roslyn API) に含まれる多くのコード API を学びました。 サンプル GitHub リポジトリの[完成したサンプル](https://github.com/dotnet/samples/tree/master/csharp/roslyn-sdk/Tutorials/MakeConst)に対して作業を検査することができます。 また、[完成したプロジェクトの zip ファイル](https://github.com/dotnet/samples/blob/master/csharp/roslyn-sdk/Tutorials/MakeConst.zip)をダウンロードすることもできます。
 
 ## <a name="other-resources"></a>その他のリソース
 

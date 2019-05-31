@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: 510a8dd2721e9c709444c065a8df25b0e5526c08
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56965554"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452677"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>名前空間の使用 (C# プログラミング ガイド)
 C# プログラム内では名前空間が 2 つの方法でよく使用されます。 最初の方法では、.NET Framework クラスで名前空間を使用して、その多くのクラスを整理します。 2 つ目の方法では、独自の名前空間を宣言します。これは、より大きなプログラミング プロジェクトでクラス名とメソッド名のスコープを制御するのに役立ちます。  
@@ -39,7 +39,7 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
  [!code-csharp[csProgGuideNamespaces#7](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces2.cs#7)]  
   
 ## <a name="using-namespaces-to-control-scope"></a>名前空間を使用するスコープの制御  
- `namespace` キーワードを使用して、スコープを宣言します。 プロジェクト内でスコープを作成すると、コードの編成が容易になり、グローバルに一意の型を作成できます。 次の例では、入れ子関係にある 2 つの名前空間で `SampleClass` というクラスを定義します。 [。演算子](../../../csharp/language-reference/operators/member-access-operator.md)を使用して、呼び出されるメソッドを区別します。  
+ `namespace` キーワードを使用して、スコープを宣言します。 プロジェクト内でスコープを作成すると、コードの編成が容易になり、グローバルに一意の型を作成できます。 次の例では、入れ子関係にある 2 つの名前空間で `SampleClass` というクラスを定義します。 [メンバー アクセス `.` 演算子](../../language-reference/operators/member-access-operators.md#member-access-operator-)は、呼び出されるメソッドを区別するために使用されます。  
   
  [!code-csharp[csProgGuideNamespaces#8](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideNamespaces/CS/Namespaces.cs#8)]  
   
@@ -52,13 +52,13 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
   
  上のコード セグメントの各要素の意味は次のとおりです。  
   
--   名前空間 `N1` はグローバル名前空間のメンバーです。 その完全修飾名は `N1` です。  
+- 名前空間 `N1` はグローバル名前空間のメンバーです。 その完全修飾名は `N1` です。  
   
--   名前空間 `N2` は `N1` のメンバーです。 その完全修飾名は `N1.N2` です。  
+- 名前空間 `N2` は `N1` のメンバーです。 その完全修飾名は `N1.N2` です。  
   
--   クラス `C1` は `N1` のメンバーです。 その完全修飾名は `N1.C1` です。  
+- クラス `C1` は `N1` のメンバーです。 その完全修飾名は `N1.C1` です。  
   
--   クラス名 `C2` は、このコードでは 2 回使用されています。 ただし、完全修飾名は異なります。 `C2` の最初のインスタンスは `C1` 内で宣言されているため、その完全修飾名は `N1.C1.C2` となります。 `C2` の 2 つ目のインスタンスは名前空間 `N2` 内で宣言されているため、その完全修飾名は `N1.N2.C2` となります。  
+- クラス名 `C2` は、このコードでは 2 回使用されています。 ただし、完全修飾名は異なります。 `C2` の最初のインスタンスは `C1` 内で宣言されているため、その完全修飾名は `N1.C1.C2` となります。 `C2` の 2 つ目のインスタンスは名前空間 `N2` 内で宣言されているため、その完全修飾名は `N1.N2.C2` となります。  
   
  上のコード セグメントを使用して、次のように新しいクラス メンバー `C3` を名前空間 `N1.N2` に追加することができます。  
   
@@ -93,6 +93,6 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [名前空間](../../../csharp/programming-guide/namespaces/index.md)
 - [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [.演算子](../../../csharp/language-reference/operators/member-access-operator.md)
+- [.演算子](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [::演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

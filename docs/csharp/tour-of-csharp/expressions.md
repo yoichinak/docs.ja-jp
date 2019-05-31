@@ -1,14 +1,14 @@
 ---
 title: C# の式 - C# 言語のツアー
 description: 式、オペランド、および演算子は、C# 言語の構成要素です
-ms.date: 11/06/2016
+ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: 4ffe947a4cb8c36a5925a4b3846486e44a9d8ec4
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480756"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753647"
 ---
 # <a name="expressions"></a>式
 
@@ -23,73 +23,11 @@ ms.locfileid: "59480756"
 
 優先順位と結合性は、かっこを使用して制御することができます。 たとえば、`x + y * z` は最初に `y` と `z` を掛け、そして結果を `x` に足しますが、`(x + y) * z` では最初に `x` と `y` を足してから `z` を掛けます。
 
-ほとんどの演算子は*オーバーロード*できます。 演算子をオーバーロードすると、ユーザー定義演算子の実装を、1 つまたは両方のオペランドがユーザー定義のクラスまたは構造体型である演算子に指定することができます。
+ほとんどの演算子は[*オーバーロード*](../language-reference/keywords/operator.md)できます。 演算子をオーバーロードすると、ユーザー定義演算子の実装を、1 つまたは両方のオペランドがユーザー定義のクラスまたは構造体型である演算子に指定することができます。
 
-以下は C# の演算子をまとめたもので、演算子のカテゴリを優先順位の高い順に記載してあります。 同じカテゴリの演算子は、同じ優先順位を持ちます。 各カテゴリには、そのカテゴリの式の一覧を、その式型の説明と共に示しています。
+C# では、[算術](../language-reference/operators/arithmetic-operators.md)、[論理](../language-reference/operators/boolean-logical-operators.md)、[ビットごとやシフト](../language-reference/operators/bitwise-and-shift-operators.md)の演算に加えて、[等値](../language-reference/operators/equality-operators.md)や[順序](../language-reference/operators/comparison-operators.md)の比較を実行するための多数の演算子を提供しています。
 
-* 1 次式
-  - `x.m`:メンバー アクセス。
-  - `x(...)`:メソッドおよびデリゲートの呼び出し。
-  - `x[...]`:配列アクセスおよびインデクサー アクセス。
-  - `x++`:後置インクリメント。
-  - `x--`:後置デクリメント。
-  - `new T(...)`:オブジェクトおよびデリゲートの作成。
-  - `new T(...){...}`:初期化子を使用したオブジェクトの作成
-  - `new {...}`:匿名オブジェクト初期化子
-  - `new T[...]`:配列の作成
-  - `typeof(T)`:`T` の <xref:System.Type> オブジェクトの取得
-  - `checked(x)`:checked コンテキストで式を評価します。
-  - `unchecked(x)`:unchecked コンテキストで式を評価します。
-  - `default(T)`:`T` 型の既定値の取得
-  - `delegate {...}`:匿名関数 (匿名メソッド)。
-* 単項
-  - `+x`:Identity
-  - `-x`:否定。
-  - `!x`:論理否定。
-  - `~x`:ビットごとの否定。
-  - `++x`:前置インクリメント。
-  - `--x`:前置デクリメント。
-  - `(T)x`:`x` を明示的に `T` 型に変換
-  - `await x`:`x` が完了するのを非同期的に待つ
-* 乗法
-  - `x * y`:乗算
-  - `x / y`:除算記号
-  - `x % y`:剰余。
-* 加法
-  - `x + y`:加算、文字列の連結、デリゲートの組み合わせ。
-  - `x – y`:減算、デリゲートの削除。
-* シフト
-  - `x << y`:左シフト。
-  - `x >> y`:右シフト。
-* 関係式と型検査
-  - `x < y`:より小さい
-  - `x > y`:次の値より大きい
-  - `x <= y`:以下
-  - `x >= y`:以上
-  - `x is T`:`x` が `T` であれば `true` を、そうでなければ `false` を返す
-  - `x as T`:`T` として型指定された `x` か、`x` が `T` でない場合は `null` を返す
-* 等価比較
-  - `x == y`:等しい
-  - `x != y`:等しくない
-* 論理 AND
-  - `x & y`:整数のビットごとの AND、ブール型の論理 AND
-* 論理 XOR
-  - `x ^ y`:整数のビットごとの XOR、ブール型の論理 XOR。
-* 論理 OR
-  - `x | y`:整数のビットごとの OR、ブール型の論理 OR。
-* 条件 AND
-  - `x && y`:`x` が `false` でない場合にのみ `y` を評価する
-* 条件 OR
-  - `x || y`:`x` が `true` でない場合にのみ `y` を評価する
-* Null 合体演算子
-  - `x ?? y`:`x` が null の場合は `y` に評価、そうでない場合は `x` に評価する
-* 条件
-  - `x ? y : z`:`x` が `true` の場合は `y` を、`x` が `false` の場合は `z` を評価する
-* 代入または匿名関数
-  - `x = y`:代入
-  - `x op= y`:複合代入。サポートされる演算子は次のとおりです:
-    - `*=`   `/=`   `%=`   `+=`   `-=`   `<<=`   `>>=`   `&=`  `^=`  `|=`
-  - `(T x) => y`:匿名関数 (ラムダ式)
+優先度順に並べられた C# 演算子の完全な一覧については、「[C# 演算子](../language-reference/operators/index.md)」を参照してください。
 
 > [!div class="step-by-step"]
 > [前へ](types-and-variables.md)

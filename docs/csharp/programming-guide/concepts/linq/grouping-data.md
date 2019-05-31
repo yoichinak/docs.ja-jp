@@ -2,19 +2,19 @@
 title: データのグループ化 (C#)
 ms.date: 07/20/2015
 ms.assetid: e414e9e4-343a-4e6e-858f-4a30c5e64492
-ms.openlocfilehash: 079f346435e2f21b7c46b528d68f917f5532db66
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a85babc43f673711fe1bdfa5cec1836a5073c785
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54583221"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753922"
 ---
 # <a name="grouping-data-c"></a>データのグループ化 (C#)
 グループ化とは、各グループの要素が共通の属性を持つようにデータをグループに分ける操作を指します。  
   
  次の図は、文字のシーケンスをグループ化した結果を示しています。 各グループのキーは文字です。  
   
- ![LINQ グループ化操作](../../../../csharp/programming-guide/concepts/linq/media/linq_group.png "LINQ_Group")  
+ ![LINQ グループ化操作を示す図。](./media/grouping-data/linq-group-operation.png)  
   
  次のセクションでは、データ要素をグループ化する標準クエリ演算子メソッドの一覧を示します。  
   

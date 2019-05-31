@@ -3,12 +3,12 @@ title: 更新された .NET Core イベント パターン
 description: .NET Core イベント パターンによって旧バージョンとの互換性を提供する柔軟性を実現する方法と、非同期サブスクライバーによる安全なイベント処理を実装する方法について説明します。
 ms.date: 06/20/2016
 ms.assetid: 9aa627c3-3222-4094-9ca8-7e88e1071e06
-ms.openlocfilehash: 3cab80a0f4fcd3343fdeff265135f1503c036514
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: 158295215932f54c75afdf1e96d48453434129fe
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188483"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751785"
 ---
 # <a name="the-updated-net-core-event-pattern"></a>更新された .NET Core イベント パターン
 
@@ -23,9 +23,23 @@ ms.locfileid: "50188483"
 
 さらに 1 つ変更するのであれば、`SearchDirectoryArgs` を構造体に変更することもできます。
 
-[!code-csharp[SearchDir](../../samples/csharp/events/Program.cs#DeclareSearchEvent "Define search directory event")]
+```csharp
+internal struct SearchDirectoryArgs
+{
+    internal string CurrentSearchDirectory { get; }
+    internal int TotalDirs { get; }
+    internal int CompletedDirs { get; }
 
-追加の変更は、すべてのフィールドを初期化するコンストラクターに入る前に既定のコンストラクターを呼び出すことです。 その追加がなければ、C# のルールは、割り当てられる前にプロパティがアクセスされていると報告するでしょう。
+    internal SearchDirectoryArgs(string dir, int totalDirs, int completedDirs) : this()
+    {
+        CurrentSearchDirectory = dir;
+        TotalDirs = totalDirs;
+        CompletedDirs = completedDirs;
+    }
+}
+```
+
+追加の変更は、すべてのフィールドを初期化するコンストラクターに入る前にパラメータ―なしのコンストラクターを呼び出すことです。 その追加がなければ、C# のルールは、割り当てられる前にプロパティがアクセスされていると報告するでしょう。
 
 `FileFoundArgs` はクラス (参照型) から構造体 (値型) に変更しないでください。 キャンセルを処理するプロトコルで、イベント引数が参照で渡されることが要求されるためです。 同じ変更をした場合、ファイル検索クラスは、イベント サブスクライバーが行った変更を観察できなくなる可能性があります。 サブスクライバーごとに構造体の新しいコピーが使用され、そのコピーは、ファイル検索オブジェクトで確認されるものとは別のコピーになるでしょう。
 

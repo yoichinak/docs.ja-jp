@@ -4,12 +4,12 @@ description: ソース リンクを使用して .NET ライブラリのデバッ
 author: jamesnk
 ms.author: mairaw
 ms.date: 01/15/2019
-ms.openlocfilehash: 10596f589af7abee6ff7833ef25c606294337196
-ms.sourcegitcommit: e39d93d358974b9ed4541cedf4e25c0101015c3c
+ms.openlocfilehash: 9d3e2b0b3aedbab150072bf6eebff4acb5f8a0b7
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/29/2019
-ms.locfileid: "55204757"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65211672"
 ---
 # <a name="source-link"></a>ソース リンク
 
@@ -37,7 +37,7 @@ ms.locfileid: "55204757"
 
 **✔️ 検討** シンボル ファイルを発行する (`*.pdb`)。
 
-> デバッグのエクスペリエンスを最善にするには、ライブラリでシンボル ファイルを発行してソース リンクを使用する必要があります。 シンボル ファイルとシンボル パッケージの詳細については、「[シンボル パッケージ](./nuget.md#symbol-packages)」を参照してください。
+> デバッグのエクスペリエンスを最善にするには、ライブラリ上でシンボル ファイルを発行してソース リンクを使用する必要があります。 シンボル ファイルとシンボル パッケージの詳細については、「[シンボル パッケージ](./nuget.md#symbol-packages)」を参照してください。
 
 >[!div class="step-by-step"]
 >[前へ](dependencies.md)

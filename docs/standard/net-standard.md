@@ -6,12 +6,12 @@ ms.author: mairaw
 ms.date: 02/25/2019
 ms.technology: dotnet-standard
 ms.assetid: c044882c-af15-45f2-96d1-534557a5ee9b
-ms.openlocfilehash: 3d3d52c9b29e743f676951ec8261ada39078fb27
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 16aa1cd43db0b10c4617b4fa92783c75a4ba5303
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59335018"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755206"
 ---
 # <a name="net-standard"></a>.NET Standard
 
@@ -27,9 +27,9 @@ ms.locfileid: "59335018"
 
 ## <a name="net-implementation-support"></a>.NET 実装のサポート
 
-次の表は、.NET Standard の各バージョンをサポートするプラットフォームの最小バージョンを一覧表示します。
+次の表は、.NET Standard の各バージョンをサポートするプラットフォームの**最小**バージョンを一覧表示します。 つまり、一覧に示されたプラットフォームの以降のバージョンでは、対応する .NET Standard バージョンもサポートされます。 たとえば、.NET Core 2.2 では、.NET Standard 2.0 以前がサポートされます。
 
-[!INCLUDE [net-standard-table](~/includes/net-standard-table.md)]
+[!INCLUDE [net-standard-table](../../includes/net-standard-table.md)]
 
 対象にすることができる最高バージョンの .NET Standard を確認するには、次の手順を実行します。
 

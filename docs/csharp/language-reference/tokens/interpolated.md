@@ -2,7 +2,7 @@
 title: $ - 文字列補間 - C# リファレンス
 ms.custom: seodec18
 description: 文字列補間では、従来の複合文字列の書式設定よりも読み取りやすく、便利な構文を書式指定文字列の出力に提供します。
-ms.date: 03/26/2018
+ms.date: 04/29/2019
 f1_keywords:
 - $_CSharpKeyword
 - $
@@ -13,12 +13,12 @@ helpviewer_keywords:
 - interpolated string [C#]
 author: pkulikov
 ms.author: ronpet
-ms.openlocfilehash: 64728182fe0b758f8da668d19761305e2001f1a5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 716f6ee2c9eb09abcbd4ada16954315ed4a56c02
+ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58920897"
+ms.lasthandoff: 05/07/2019
+ms.locfileid: "65210423"
 ---
 # <a name="---string-interpolation-c-reference"></a>$ - 文字列補間 (C# リファレンス)
 
@@ -26,7 +26,7 @@ ms.locfileid: "58920897"
 
 文字列補間では、[複合文字列の書式設定](../../../standard/base-types/composite-formatting.md)機能よりも読み取りやすく便利な構文を使用して書式指定された文字列を作成できます。 次の例では、両方の機能を使用して、同じ出力を生成します。
 
-[!code-csharp-interactive[compare with composite formatting](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
+[!code-csharp-interactive[compare with composite formatting](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#1)]
 
 ## <a name="structure-of-an-interpolated-string"></a>挿入文字列の構造
 
@@ -48,7 +48,7 @@ ms.locfileid: "58920897"
 
 次の例では、前述したオプションの書式設定コンポーネントを使用します。
 
-[!code-csharp-interactive[specify alignment and format string](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
+[!code-csharp-interactive[specify alignment and format string](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#2)]
 
 ## <a name="special-characters"></a>特殊文字
 
@@ -58,7 +58,7 @@ ms.locfileid: "58920897"
 
 次の例では、かっこを結果文字列に含める方法、および挿入式で条件演算子を使用する方法を示します。
 
-[!code-csharp-interactive[example with ternary conditional operator](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
+[!code-csharp-interactive[example with ternary conditional operator](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#3)]
 
 逐語的挿入文字列は、`@` 文字が続く `$` 文字で始まります。 逐語的文字列の詳細については、[string](../keywords/string.md) と [逐語的識別子](verbatim.md)に関するトピックを参照してください。
 
@@ -83,11 +83,21 @@ ms.locfileid: "58920897"
 
 次の例では、カルチャ固有の結果の文字列を作成するために、<xref:System.FormattableString> への暗黙の変換を使用します。
 
-[!code-csharp-interactive[create culture-specific result strings](../../../../samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
+[!code-csharp-interactive[create culture-specific result strings](~/samples/snippets/csharp/language-reference/tokens/string-interpolation.cs#4)]
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-文字列補間を初めてお使いの場合は、[C# の文字列補完](../../tutorials/exploration/interpolated-strings.yml)に関する対話形式チュートリアルを参照してください。 あるいは、ご自分のコンピューターで [C# における文字列補間](../../tutorials/string-interpolation.md)チュートリアルを試すことができます。
+文字列補間を初めてお使いの場合は、[C# の文字列補完](../../tutorials/exploration/interpolated-strings.yml)に関する対話形式チュートリアルを参照してください。 また、補完された文字列を使用して書式設定された文字列を生成する方法を示したもう 1 つのチュートリアル「[C# における文字列補完](../../tutorials/string-interpolation.md)」も確認してください。
+
+## <a name="compilation-of-interpolated-strings"></a>補完文字列のコンパイル
+
+補完文字列が `string` 型の場合、通常は <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドの呼び出しに変換されます。 分析後の動作が連結と等しくなるようであれば、コンパイラでは、<xref:System.String.Format%2A?displayProperty=nameWithType> を <xref:System.String.Concat%2A?displayProperty=nameWithType> に置換する場合があります。
+
+補間文字列の型が <xref:System.IFormattable> または <xref:System.FormattableString> の場合、コンパイラは <xref:System.Runtime.CompilerServices.FormattableStringFactory.Create%2A?displayProperty=nameWithType> メソッドの呼び出しを生成します。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+詳しくは、[C# 言語仕様](~/_csharplang/spec/introduction.md)に関するページの[補完文字列](~/_csharplang/spec/expressions.md#interpolated-strings)のセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

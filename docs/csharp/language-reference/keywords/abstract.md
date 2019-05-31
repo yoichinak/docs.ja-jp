@@ -8,15 +8,15 @@ f1_keywords:
 helpviewer_keywords:
 - abstract keyword [C#]
 ms.assetid: b0797770-c1f3-4b4d-9441-b9122602a6bb
-ms.openlocfilehash: a85cf00a8dd1b406c7e5185fd332a507a3ca7c83
-ms.sourcegitcommit: 41c0637e894fbcd0713d46d6ef1866f08dc321a2
+ms.openlocfilehash: 5476e99cbd1a5af2acf91ed6bf854fded3425e72
+ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57203523"
+ms.lasthandoff: 05/08/2019
+ms.locfileid: "65452454"
 ---
 # <a name="abstract-c-reference"></a>abstract (C# リファレンス)
-`abstract` 修飾子は、その修飾対象の実装が不足しているか、不完全であることを示します。 クラスやメソッド、プロパティ、インデクサー、イベントと組み合わせて abstract 修飾子を使用することができます。 クラスの宣言では、他のクラスの基底クラスとしての使用のみを意図したクラスであることを示すために `abstract` 修飾子を使います。 abstract としてマークされた (つまり抽象クラスに含まれている) メンバーは、その抽象クラスから派生したクラスで実装する必要があります。  
+`abstract` 修飾子は、その修飾対象の実装が不足しているか、不完全であることを示します。 クラスやメソッド、プロパティ、インデクサー、イベントと組み合わせて abstract 修飾子を使用することができます。 クラス宣言に `abstract` 修飾子を使用して、クラスは他のクラスの基底クラスとしてのみ使用することを意図し、それ自体ではインスタンス化されないことを示します。 abstract としてマークされたメンバーは、その抽象クラスから派生したクラスで実装する必要があります。
   
 ## <a name="example"></a>例  
  この例で、`Area` の機能は、`ShapesClass` から派生している `Square` クラスで実装する必要があります。  
@@ -25,23 +25,23 @@ ms.locfileid: "57203523"
   
  抽象クラスには次の特徴があります。  
   
--   抽象クラスはインスタンス化できません。  
+- 抽象クラスはインスタンス化できません。  
   
--   抽象クラスには抽象メソッドとアクセサーを記述することができます。  
+- 抽象クラスには抽象メソッドとアクセサーを記述することができます。  
   
--   [sealed](../../../csharp/language-reference/keywords/sealed.md) 修飾子を使って抽象クラスを修飾することはできません。2 つの修飾子が逆の意味を持つためです。 `sealed` 修飾子を指定したクラスは継承が禁止されるのに対し、`abstract` 修飾子を指定したクラスは継承による使用が強制されます。  
+- [sealed](../../../csharp/language-reference/keywords/sealed.md) 修飾子を使って抽象クラスを修飾することはできません。2 つの修飾子が逆の意味を持つためです。 `sealed` 修飾子を指定したクラスは継承が禁止されるのに対し、`abstract` 修飾子を指定したクラスは継承による使用が強制されます。  
   
--   抽象クラスから派生した具象クラスには、継承されたすべての抽象メソッドとアクセサーの実際の機能を実装する必要があります。  
+- 抽象クラスから派生した具象クラスには、継承されたすべての抽象メソッドとアクセサーの実際の機能を実装する必要があります。  
   
  メソッドまたはプロパティに機能が実装されていないことを示すには、そのメソッドまたはプロパティの宣言で `abstract` 修飾子を使います。  
   
  抽象メソッドには次の特徴があります。  
   
--   抽象メソッドは、仮想メソッドの性質を暗に含んでいます。  
+- 抽象メソッドは、仮想メソッドの性質を暗に含んでいます。  
   
--   抽象メソッドの宣言は、抽象クラスでしか認められません。  
+- 抽象メソッドの宣言は、抽象クラスでしか認められません。  
   
--   抽象メソッドの宣言には実際の機能が実装されないため、メソッドの本体はありません。つまり、メソッドの宣言は、末尾のセミコロンがあるだけで、シグネチャの後ろに中かっこ ({ }) は存在しません。 次に例を示します。  
+- 抽象メソッドの宣言には実際の機能が実装されないため、メソッドの本体はありません。つまり、メソッドの宣言は、末尾のセミコロンがあるだけで、シグネチャの後ろに中かっこ ({ }) は存在しません。 次に例を示します。  
   
     ```csharp  
     public abstract void MyMethod();  
@@ -49,13 +49,13 @@ ms.locfileid: "57203523"
   
      実際の機能は、メソッド (具象クラスのメンバー) に [override](../../../csharp/language-reference/keywords/override.md) を指定して実装します。  
   
--   抽象メソッドの宣言に [static](../../../csharp/language-reference/keywords/static.md) 修飾子や [virtual](../../../csharp/language-reference/keywords/virtual.md) 修飾子を使うのは誤りです。  
+- 抽象メソッドの宣言に [static](../../../csharp/language-reference/keywords/static.md) 修飾子や [virtual](../../../csharp/language-reference/keywords/virtual.md) 修飾子を使うのは誤りです。  
   
  抽象プロパティは、宣言と呼び出しの構文の違いを除けば、抽象メソッドと似た働きを持ちます。  
   
--   `abstract` 修飾子を静的プロパティに対して使うのは誤りです。  
+- `abstract` 修飾子を静的プロパティに対して使うのは誤りです。  
   
--   継承する抽象プロパティは、派生クラス内で [override](../../../csharp/language-reference/keywords/override.md) 修飾子を使ったプロパティ宣言を記述することでオーバーライドすることができます。  
+- 継承する抽象プロパティは、派生クラス内で [override](../../../csharp/language-reference/keywords/override.md) 修飾子を使ったプロパティ宣言を記述することでオーバーライドすることができます。  
   
  抽象クラスの詳細については、「[抽象クラスとシール クラス、およびクラス メンバー](../../../csharp/programming-guide/classes-and-structs/abstract-and-sealed-classes-and-class-members.md)」を参照してください。  
   

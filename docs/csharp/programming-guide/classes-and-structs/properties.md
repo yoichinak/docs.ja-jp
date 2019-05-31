@@ -8,12 +8,12 @@ helpviewer_keywords:
 - properties [C#]
 - C# language, properties
 ms.assetid: e295a8a2-b357-4ee7-a12e-385a44146fa8
-ms.openlocfilehash: 473109100c14f26d0e31b9f57513997044c5b2f6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: c7374b77526a31c2c508516d5a3cb7cc3e29339a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54676823"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64583065"
 ---
 # <a name="properties-c-programming-guide"></a>プロパティ (C# プログラミング ガイド)
 
@@ -54,21 +54,21 @@ ms.locfileid: "54676823"
 
 ロジックを追加しなくても、プロパティの `get` アクセサーと `set` アクセサーはバッキング フィールドに値を割り当てたりバッキング フィールドから取得したりすることができます。 この自動実装プロパティを使用すると、C# コンパイラによってバッキング フィールドが透過的に提供されるため、コードを簡略化できます。 
 
-プロパティが `get` アクセサーと `set` アクセサーの両方を備えている場合は、両方を自動実装する必要があります。 自動実装プロパティを定義するには、実装を省略して `get` キーワードと `set` キーワードを使用します。 次の例は前の例と似ていますが、`Name` と `Price` が自動実装プロパティである点が異なります。 この例では、パラメーター化されたコンストラクターも削除されているため、`SaleItem` オブジェクトが既定のコンストラクターの呼び出しと[オブジェクト初期化子](object-and-collection-initializers.md)を使用して初期化されています。
+プロパティが `get` アクセサーと `set` アクセサーの両方を備えている場合は、両方を自動実装する必要があります。 自動実装プロパティを定義するには、実装を省略して `get` キーワードと `set` キーワードを使用します。 次の例は前の例と似ていますが、`Name` と `Price` が自動実装プロパティである点が異なります。 この例では、パラメーター化されたコンストラクターも削除されているため、`SaleItem` オブジェクトがパラメーターなしのコンストラクターの呼び出しと[オブジェクト初期化子](object-and-collection-initializers.md)を使用して初期化されています。
 
   [!code-csharp[Properties#4](../../../../samples/snippets/csharp/programming-guide/classes-and-structs/properties-4.cs)]  
 
 ## <a name="related-sections"></a>関連項目  
   
--   [プロパティの使用](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
+- [プロパティの使用](../../../csharp/programming-guide/classes-and-structs/using-properties.md)  
   
--   [インターフェイスのプロパティ](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
+- [インターフェイスのプロパティ](../../../csharp/programming-guide/classes-and-structs/interface-properties.md)  
   
--   [プロパティとインデクサーの比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
+- [プロパティとインデクサーの比較](../../../csharp/programming-guide/indexers/comparison-between-properties-and-indexers.md)  
   
--   [アクセサーのアクセシビリティの制限](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
+- [アクセサーのアクセシビリティの制限](../../../csharp/programming-guide/classes-and-structs/restricting-accessor-accessibility.md)  
   
--   [自動実装プロパティ](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
+- [自動実装プロパティ](../../../csharp/programming-guide/classes-and-structs/auto-implemented-properties.md)  
   
 ## <a name="c-language-specification"></a>C# 言語仕様  
 

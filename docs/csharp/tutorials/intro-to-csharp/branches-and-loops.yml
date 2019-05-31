@@ -11,12 +11,12 @@ metadata:
   interactive: csharp
   nextTutorialHref: list-collection.yml
   nextTutorialTitle: リスト コレクション
-  ms.openlocfilehash: 62cc52e22406c6c19dad6cc800078e0d8f34f0d6
-  ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+  ms.openlocfilehash: aa6e91af175d1d3a3dcad7086c3a8205d45f438a
+  ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/18/2019
-  ms.locfileid: "59427527"
+  ms.lasthandoff: 05/06/2019
+  ms.locfileid: "65063856"
 items:
 - durationInMinutes: 1
   content: >
@@ -216,9 +216,9 @@ items:
     > [!NOTE]
 
     > このオンライン コーディング体験はプレビュー モードです。 問題が生じた場合は、[dotnet/try リポジトリ](https://github.com/dotnet/try/issues)でその問題をお知らせください。
-- title: 'おめでとうございます! '
+- title: おめでとうございます!
   content: >-
-    これで "分岐とループ" に関する対話式チュートリアルは終了です。 下の**挿入文字列**のリンクをクリックして次の対話式チュートリアルを開始することができます。また、[.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 "学習の継続" の手順では、これらのチュートリアルに戻ります。
+    これで "分岐とループ" に関する対話式チュートリアルは終了です。 下の**リスト コレクション**のリンクをクリックして、次の対話式チュートリアルを開始することができます。また、[.NET サイト](https://www.microsoft.com/net/learn/dotnet/hello-world-tutorial)にアクセスして .NET Core SDK をダウンロードし、ご利用のコンピューター上でプロジェクトを作成し、コーディングを続けることもできます。 "学習の継続" の手順では、これらのチュートリアルに戻ります。
 
 
     次のトピックでこれらの概念の詳細を学習できます。

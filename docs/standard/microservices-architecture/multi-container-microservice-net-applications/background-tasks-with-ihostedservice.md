@@ -1,15 +1,13 @@
 ---
 title: IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | マイクロサービスの .NET Core でバックグラウンド タスクを実装する IHostedService と BackgroundService を使用する新しいオプションについて理解します。
-author: CESARDELATORRE
-ms.author: wiwagn
 ms.date: 01/07/2019
-ms.openlocfilehash: b262f5352f62e74ec184e2e00e8cff3aeecc2f64
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 9203404c0b623570c2b089087b7ce5d676bba376
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613799"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65062981"
 ---
 # <a name="implement-background-tasks-in-microservices-with-ihostedservice-and-the-backgroundservice-class"></a>IHostedService と BackgroundService クラスを使ってマイクロサービスのバックグラウンド タスクを実装する
 
@@ -96,7 +94,7 @@ namespace Microsoft.Extensions.Hosting
 
 ご想像のとおり、以前に示したように、IHostedService の複数の実装を作成し、`ConfigureService()` メソッドでそれらを DI コンテナーに登録することができます。 これらすべてのホステッド サービスが、アプリケーション/マイクロサービスと共に開始および停止されます。
 
-開発者は、`StopAsync()` メソッドがホストによってトリガーされるときに、停止アクションまたはサービスを処理します。
+開発者は、`StopAsync()` メソッドがホストによってトリガーされるときに、サービスの停止アクションを処理する必要があります。
 
 ## <a name="implementing-ihostedservice-with-a-custom-hosted-service-class-deriving-from-the-backgroundservice-base-class"></a>BackgroundService 基底クラスから派生したカスタムのホステッド サービス クラスを使用して IHostedService を実装する
 

@@ -4,12 +4,12 @@ description: .NET Framework プロジェクトの WCF svcutil ツールと同様
 author: mlacouture
 ms.date: 02/22/2019
 ms.custom: seodec18
-ms.openlocfilehash: b5dfb84f19c3748daa303c828cbe881f1582eb76
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5e361ce85bec696fe5d76c4f43a444c543a9012d
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612820"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063292"
 ---
 # <a name="wcf-dotnet-svcutil-tool-for-net-core"></a>.NET Core 用 WCF dotnet-svcutil ツール
 
@@ -53,55 +53,56 @@ Windows、macOS、または Linux のコマンド ウィンドウから次の手
 
 1. 次の例に示すように、_HelloSvcutil_ という名前のディレクトリをプロジェクト用に作成し、現在のディレクトリに指定します。
 
-```console
-mkdir HelloSvcutil
-cd HelloSvcutil
-```
+    ```console
+    mkdir HelloSvcutil
+    cd HelloSvcutil
+    ```
 
 2. 次に示すように、[`dotnet new`](../tools/dotnet-new.md) コマンドを使用して、このディレクトリに新しい C# Web プロジェクトを作成します。
 
-```console
-dotnet new web
-```
+    ```console
+    dotnet new web
+    ```
 
-3. CLI ツールとして [`dotnet-svcutil` NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)をインストールします。
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
+3. CLI ツールとして [`dotnet-svcutil`NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)をインストールします。 <!-- markdownlint-disable MD023 -->
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
-dotnet tool install --global dotnet-svcutil
-```
+    ```console
+    dotnet tool install --global dotnet-svcutil
+    ```
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
-`HelloSvcutil.csproj` プロジェクト ファイルをエディターで開いて `Project` 要素を編集し、次のコードを使用して [`dotnet-svcutil` NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)を CLI ツールの参照として追加します。
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    `HelloSvcutil.csproj` プロジェクト ファイルをエディターで開いて `Project` 要素を編集し、次のコードを使用して [`dotnet-svcutil` NuGet パッケージ](https://nuget.org/packages/dotnet-svcutil)を CLI ツールの参照として追加します。
 
-```xml
-<ItemGroup>
-  <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
-</ItemGroup>
-```
+    ```xml
+    <ItemGroup>
+      <DotNetCliToolReference Include="dotnet-svcutil" Version="1.0.*" />
+    </ItemGroup>
+    ```
 
-その後、次に示すように、[`dotnet restore`](../tools/dotnet-restore.md) コマンドを使用して _dotnet-svcutil_ パッケージを復元します。
+    その後、次に示すように、[`dotnet restore`](../tools/dotnet-restore.md) コマンドを使用して _dotnet-svcutil_ パッケージを復元します。
 
-```console
-dotnet restore
-```
+    ```console
+    dotnet restore
+    ```
 
----
+    ---
 
 4. 次に示すように、_dotnet-svcutil_ コマンドを実行して、Web サービス参照ファイルを生成します。
-# <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-```console
-dotnet-svcutil http://contoso.com/SayHello.svc
-```
+    # <a name="dotnet-svcutil-2xtabdotnetsvcutil2x"></a>[dotnet-svcutil 2.x](#tab/dotnetsvcutil2x)
 
-# <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
+    ```console
+    dotnet-svcutil http://contoso.com/SayHello.svc
+    ```
 
-```console
-dotnet svcutil http://contoso.com/SayHello.svc
-```
+    # <a name="dotnet-svcutil-1xtabdotnetsvcutil1x"></a>[dotnet-svcutil 1.x](#tab/dotnetsvcutil1x)
 
----
+    ```console
+    dotnet svcutil http://contoso.com/SayHello.svc
+    ```
+
+    ---
 
 生成されたファイルは、_HelloSvcutil/ServiceReference/Reference.cs_ として保存されます。 また、_dotnet-svcutil_ ツールでは、プロキシ コードで必要な適切な WCF パッケージが、パッケージ参照としてプロジェクトに追加されます。
 
@@ -109,43 +110,43 @@ dotnet svcutil http://contoso.com/SayHello.svc
 
 1. 次に示すように、[`dotnet restore`](../tools/dotnet-restore.md) コマンドを使用して WCF パッケージを復元します。
 
-```console
-dotnet restore
-```
+    ```console
+    dotnet restore
+    ```
 
 2. 使用するクライアント クラスと操作の名前を検索します。 `Reference.cs` には `System.ServiceModel.ClientBase` を継承するクラスが含まれており、そのメソッドを使用してサービスで操作を呼び出すことができます。 この例では、_SayHello_ サービスの _Hello_ 操作を呼び出します。 `ServiceReference.SayHelloClient` はクライアント クラスの名前であり、操作の呼び出しに使用できる `HelloAsync` という名前のメソッドが含まれます。
 
 3. エディターで `Startup.cs` ファイルを開き、先頭にサービス参照名前空間に対する using ステートメントを追加します。
 
-```csharp
-using ServiceReference;
-```
+    ```csharp
+    using ServiceReference;
+    ```
 
- 4. Web サービスを呼び出すように、`Configure` メソッドを編集します。 これを行うには、`ClientBase` を継承するクラスのインスタンスを作成し、クライアント オブジェクトでメソッドを呼び出します。
+4. Web サービスを呼び出すように、`Configure` メソッドを編集します。 これを行うには、`ClientBase` を継承するクラスのインスタンスを作成し、クライアント オブジェクトでメソッドを呼び出します。
 
-```csharp
-public void Configure(IApplicationBuilder app, IHostingEnvironment env)
-{
-    if (env.IsDevelopment())
+    ```csharp
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
-        app.UseDeveloperExceptionPage();
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+
+        app.Run(async (context) =>
+        {
+            var client = new SayHelloClient();
+            var response = await client.HelloAsync();
+            await context.Response.WriteAsync(response);
+        });
     }
 
-    app.Run(async (context) =>
-    {
-        var client = new SayHelloClient();
-        var response = await client.HelloAsync();
-        await context.Response.WriteAsync(response);
-    });
-}
-
-```
+    ```
 
 5. 次に示すように、[`dotnet run`](../tools/dotnet-run.md) コマンドを使用してアプリケーションを実行します。
 
-```console
-dotnet run
-```
+    ```console
+    dotnet run
+    ```
 
 6. Web ブラウザーでコンソールに表示されている URL に移動します (たとえば、`http://localhost:5000`)。
 

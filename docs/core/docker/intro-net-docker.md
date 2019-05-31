@@ -3,12 +3,12 @@ title: Docker の概要
 description: この記事では、.NET Core アプリケーションのコンテキストでの Docker の基本と概要について説明します。
 ms.date: 03/20/2019
 ms.custom: mvc, seodec18
-ms.openlocfilehash: acf1307c241d9462278bc0fce5cf59fdde0750a3
-ms.sourcegitcommit: 859b2ba0c74a1a5a4ad0d59a3c3af23450995981
+ms.openlocfilehash: d0bce09d7acdcf474fbb8849c8fc82dae4a69598
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/11/2019
-ms.locfileid: "59480730"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753302"
 ---
 # <a name="introduction-to-net-and-docker"></a>.NET および Docker の概要
 
@@ -72,5 +72,7 @@ Windows Server コンテナーを使用して、.NET アプリケーションを
 
 ## <a name="next-steps"></a>次の手順
 
-* [.NET Core アプリケーションをコンテナー化する方法を学習します。](build-docker-netcore-container.md)
-* [Learn の ASP.NET Core マイクロサービスのチュートリアルを試します。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+* [.NET Core アプリケーションをコンテナー化する方法について説明します。](build-docker-netcore-container.md)
+* [ASP.NET Core アプリケーションをコンテナー化する方法を学習します。](/aspnet/core/host-and-deploy/docker/building-net-docker-images)
+* [Learn の ASP.NET Core マイクロサービスのチュートリアルをお試しください。](https://dotnet.microsoft.com/learn/web/aspnet-microservice-tutorial/intro)
+* [Visual Studio でのコンテナー ツールについて学習します](/visualstudio/containers/overview)

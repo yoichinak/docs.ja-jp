@@ -1,6 +1,7 @@
 - name: 共変性と反変性
-  href: index.md
   items:
+    - name: 概要
+      href: index.md
     - name: ジェネリック インターフェイスの分散
       href: variance-in-generic-interfaces.md
       items:

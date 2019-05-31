@@ -1,14 +1,14 @@
 ---
-title: ML.NET でモデルの説明可能性のために一般化加法モデルと形状関数を使う
+title: モデルの説明可能性のために一般化加法モデルと形状関数を使用する
 description: ML.NET でモデルの説明可能性のために一般化加法モデルと形状関数を使う
 ms.date: 03/05/2019
 ms.custom: mvc,how-to
-ms.openlocfilehash: f7b8b9a3daabb16f59c901911a1f6950ce864fff
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: ef56f737a2ad0cba616e32229ac3a395146fb6d2
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57675590"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64662131"
 ---
 # <a name="use-generalized-additive-models-and-shape-functions-for-model-explainability-in-mlnet"></a>ML.NET でモデルの説明可能性のために一般化加法モデルと形状関数を使う
 

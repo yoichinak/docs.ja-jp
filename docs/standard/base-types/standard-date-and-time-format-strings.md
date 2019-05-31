@@ -16,19 +16,19 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 874501ac6dc4ea0ea1c0c97cdd2b802dfdb6bbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54532193"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64664639"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準の日時書式指定文字列
 標準の日時書式指定文字列は、単一の書式指定子を使用して日付と時刻の値のテキスト表現を定義します。 空白を含む複数の文字で構成される日時書式指定文字列は、カスタム日時書式指定文字列として解釈されます。詳細については、「[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)」をご覧ください。 標準またはカスタムの書式指定文字列には、次の 2 とおりの使用方法があります。  
   
--   書式設定操作によって生成される文字列を定義する。  
+- 書式設定操作によって生成される文字列を定義する。  
   
--   解析操作によって <xref:System.DateTime> 値または <xref:System.DateTimeOffset> 値に変換できる日付と時刻の値のテキスト表現を定義する。  
+- 解析操作によって <xref:System.DateTime> 値または <xref:System.DateTimeOffset> 値に変換できる日付と時刻の値のテキスト表現を定義する。  
 
 > [!TIP]
 >  [書式指定ユーティリティ](https://code.msdn.microsoft.com/NET-Framework-4-Formatting-9c4dae8d)をダウンロードできます。このアプリケーションを使用すると、書式指定文字列を数値または日付と時刻の値に適用して、結果の文字列を表示できます。  
@@ -63,17 +63,17 @@ ms.locfileid: "54532193"
   
  書式設定操作の標準書式指定文字列が特定のカルチャのカスタム書式指定文字列に対応付けられている場合は、使用するカスタム書式指定文字列に該当するカルチャを次のいずれかの方法で定義できます。  
   
--   既定の (現在の) カルチャを使用できます。 次の例では、現在のカルチャの短い日付形式を使って日付を表示します。 この場合、現在のカルチャは en-US です。  
+- 既定の (現在の) カルチャを使用できます。 次の例では、現在のカルチャの短い日付形式を使って日付を表示します。 この場合、現在のカルチャは en-US です。  
   
      [!code-csharp-interactive[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#1)]
      [!code-vb[System.DateTime.Conceptual.Formatting#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#1)]  
   
--   使用する書式のカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトを、<xref:System.IFormatProvider> パラメーターを持つメソッドに渡すことができます。 次の例では、pt-BR カルチャの短い日付形式を使って日付を表示します。  
+- 使用する書式のカルチャを表す <xref:System.Globalization.CultureInfo> オブジェクトを、<xref:System.IFormatProvider> パラメーターを持つメソッドに渡すことができます。 次の例では、pt-BR カルチャの短い日付形式を使って日付を表示します。  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#2)]
      [!code-vb[System.DateTime.Conceptual.Formatting#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#2)]  
   
--   書式情報を提供する <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを、<xref:System.IFormatProvider> パラメーターを持つメソッドに渡すことができます。 次の例では、hr-HR カルチャの <xref:System.Globalization.DateTimeFormatInfo> オブジェクトに基づく短い日付形式で日付を表示します。  
+- 書式情報を提供する <xref:System.Globalization.DateTimeFormatInfo> オブジェクトを、<xref:System.IFormatProvider> パラメーターを持つメソッドに渡すことができます。 次の例では、hr-HR カルチャの <xref:System.Globalization.DateTimeFormatInfo> オブジェクトに基づく短い日付形式で日付を表示します。  
   
      [!code-csharp[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/cs/StandardFormats1.cs#3)]
      [!code-vb[System.DateTime.Conceptual.Formatting#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.DateTime.Conceptual.Formatting/vb/StandardFormats1.vb#3)]  
@@ -249,17 +249,17 @@ ms.locfileid: "54532193"
   
  "O" または "o" 標準書式指定子 (および "yyyy'-'MM'-'dd'T'HH':'mm':'ss'.'fffffffK" カスタム書式指定文字列) は、<xref:System.DateTime.Kind%2A> 値の <xref:System.DateTime> プロパティを保持するため、ISO 8601 の 3 種類のタイム ゾーン情報表記形式を利用します。  
   
--   <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 日時値のタイム ゾーン コンポーネントは、UTC からのオフセットです (例:+01:00、-07:00)。 <xref:System.DateTimeOffset> のすべての値もこの形式で表記されます。  
+- <xref:System.DateTimeKind.Local?displayProperty=nameWithType> 日時値のタイム ゾーン コンポーネントは、UTC からのオフセットです (例:+01:00、-07:00)。 <xref:System.DateTimeOffset> のすべての値もこの形式で表記されます。  
   
--   <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 日時値のタイム ゾーン コンポーネントは、"Z" (ゼロ オフセットを示す) を使用して UTC を表記します。  
+- <xref:System.DateTimeKind.Utc?displayProperty=nameWithType> 日時値のタイム ゾーン コンポーネントは、"Z" (ゼロ オフセットを示す) を使用して UTC を表記します。  
   
--   <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 日時値にはタイム ゾーン情報はありません。  
+- <xref:System.DateTimeKind.Unspecified?displayProperty=nameWithType> 日時値にはタイム ゾーン情報はありません。  
   
  "O" または "o" 標準書式指定子は国際基準に準拠しているため、この指定子を使用する書式設定操作または解析操作では常に、インバリアント カルチャとグレゴリオ暦が使用されます。  
   
  `Parse` と `TryParse` の `ParseExact`、`TryParseExact`、<xref:System.DateTime>、および <xref:System.DateTimeOffset> メソッドに渡される文字列が、これらの書式で表記される場合には、書式指定子 "O" または "o" を使用して解析できます。 <xref:System.DateTime> オブジェクトの場合、呼び出す解析オーバーロードの `styles` パラメーターに値 <xref:System.Globalization.DateTimeStyles.RoundtripKind?displayProperty=nameWithType> が指定されている必要があります。 "O" または "o" 書式指定子に対応するカスタム書式文字列を使用して解析メソッドを呼び出した結果は、"O" または "o" を使用した場合の結果と同じではないことに注意してください。 これは、カスタム書式文字列を使用する解析メソッドでは、タイム ゾーン コンポーネントがない日時値または "Z" を使用して UTC を示している日時値の文字列形式を解析できないためです。  
   
- 次の例では、米国太平洋標準時タイム ゾーンのシステム上で "o" 書式指定子を使用して、一連の <xref:System.DateTime> 値および <xref:System.DateTimeOffset> 値を表示します。  
+ 次の例では、米国のシステム上で "o" 書式指定子を使用して、一連の <xref:System.DateTime> 値および <xref:System.DateTimeOffset> 値を表示しています。表示します。  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
@@ -285,7 +285,7 @@ ms.locfileid: "54532193"
   
  RFC 1123 標準では、時刻は世界協定時刻 (UTC: Coordinated Universal Time) で表されますが、書式設定操作では、書式設定される <xref:System.DateTime> オブジェクトの値は変更されません。 そのため、書式設定操作を行う前に <xref:System.DateTime> メソッドを呼び出して、<xref:System.DateTime.ToUniversalTime%2A?displayProperty=nameWithType> 値を UTC に変換する必要があります。 一方、<xref:System.DateTimeOffset> 値では、この変換が自動的に行われます。書式設定操作の前に <xref:System.DateTimeOffset.ToUniversalTime%2A?displayProperty=nameWithType> メソッドを呼び出す必要はありません。  
   
- 次の例では、米国太平洋標準時タイム ゾーンのシステム上で "r" 書式指定子を使用して、<xref:System.DateTime> 値および <xref:System.DateTimeOffset> 値を表示します。  
+ 次の例では、米国のシステム上で "r" 書式指定子を使用して、<xref:System.DateTime> 値および <xref:System.DateTimeOffset> 値を表示しています。表示します。  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#9](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#9)]
  [!code-vb[Formatting.DateAndTime.Standard#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#9)]  
@@ -300,7 +300,7 @@ ms.locfileid: "54532193"
   
  この標準書式指定子を使用した場合、書式設定操作または解析操作で常にインバリアント カルチャが使用されます。  
   
- 次の例では、米国太平洋標準時タイム ゾーンのシステム上で "s" 書式指定子を使用して、<xref:System.DateTime> 値および <xref:System.DateTimeOffset> 値を表示します。  
+ 次の例では、米国のシステム上で "s" 書式指定子を使用して、<xref:System.DateTime> 値および <xref:System.DateTimeOffset> 値を表示しています。表示します。  
   
  [!code-csharp-interactive[Formatting.DateAndTime.Standard#10](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/Standard1.cs#10)]
  [!code-vb[Formatting.DateAndTime.Standard#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/Standard1.vb#10)]  
@@ -362,7 +362,7 @@ ms.locfileid: "54532193"
   
 <a name="UniversalFull"></a>   
 ## <a name="the-universal-full-u-format-specifier"></a>世界共通の完全な日付と時刻 ("U") 書式指定子  
- "U" 標準書式指定子は、特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 このパターンは、"F" パターンと同じです。 ただし、<xref:System.DateTime> 値は、書式設定される前に、自動的に UTC に変換されます。   
+ "U" 標準書式指定子は、特定のカルチャの <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A?displayProperty=nameWithType> プロパティで定義されるカスタム日時書式指定文字列を表します。 このパターンは、"F" パターンと同じです。 ただし、<xref:System.DateTime> 値は、書式設定される前に、自動的に UTC に変換されます。  
   
  返される文字列の書式を制御できる <xref:System.Globalization.DateTimeFormatInfo> オブジェクト プロパティの一覧を次の表に示します。 一部のカルチャの <xref:System.Globalization.DateTimeFormatInfo.FullDateTimePattern%2A> プロパティによって返されるカスタム書式指定子では、一部のプロパティが使用されない場合があります。  
   

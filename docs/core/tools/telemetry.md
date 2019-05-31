@@ -4,12 +4,12 @@ description: 利用情報を収集して分析する .NET Core SDK の製品利�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 3a757daab372b8be8bfe2ee27d910e21fa4e3337
-ms.sourcegitcommit: 160a88c8087b0e63606e6e35f9bd57fa5f69c168
+ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57718039"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64751679"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 製品利用統計情報
 
@@ -89,12 +89,12 @@ ms.locfileid: "57718039"
 
 ### <a name="datasets"></a>データセット
 
-[2016 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)  
-[2016 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)  
-[2017 - Q1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)  
-[2017 - Q2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)  
-[2017 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)  
-[2017 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)  
+- [2016 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q3.tsv)
+- [2016 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2016-q4.tsv)
+- [2017 - Q1](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q1.tsv)
+- [2017 - Q2](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q2.tsv)
+- [2017 - Q3](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q3.tsv)
+- [2017 - Q4](https://dotnetcli.blob.core.windows.net/usagedata/dotnet-cli-usage-2017-q4.tsv)
 
 追加のデータセットは、標準の URL 形式を使用してポストされます。 `<YEAR>` を年で置き換え、`<QUARTER>` を四半期に置き換えます (`1`、`2`、`3`、 または `4` を使用)。 ファイルはタブ区切り値 (*TSV*) 形式です。
 
@@ -102,11 +102,9 @@ ms.locfileid: "57718039"
 
 ## <a name="license"></a>ライセンス
 
-Microsoft による .NET Core の配信は、[MICROSOFT .NET LIBRARY EULA](https://aka.ms/dotnet-core-eula) でライセンス供与されます。 このライセンスには、製品利用統計情報を有効にするために、次のように "DATA" セクションが含まれています。
+Microsoft による .NET Core の配信は、[マイクロソフト ソフトウェア ライセンス条項:Mirosoft .NET ライブラリ](https://aka.ms/dotnet-core-eula)を利用して、ライセンス供与されます。 データの収集と処理について詳しくは、タイトルに「データ」と付くセクションをご覧ください。
 
 [.NET NuGet パッケージ](https://www.nuget.org/profiles/dotnetframework)は同じライセンスを使用しますが、製品利用統計情報を有効にしません (「[スコープ](#scope)」を参照)。
-
-> 2. データ。 このソフトウェアはユーザーとユーザーによるソフトウェアの使用状況に関するデータを収集し、Microsoft に送信する場合があります。 Microsoft は製品とサービスの向上のために情報を利用することがあります。 データの収集と使用状況に関する詳細はヘルプ文書やプライバシーに関する声明 (<http://go.microsoft.com/fwlink/?LinkId=528096>) で確認できます。 ソフトウェアはこのような慣行に同意した上での利用になります。
 
 ## <a name="disclosure"></a>開示
 

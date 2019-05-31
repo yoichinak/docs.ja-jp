@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: b95699430a05ef9d81c705b05d04b4ab06e7abc7
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59307653"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64755961"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ クエリ操作での型の関係 (C#)
 クエリを効果的に記述するには、クエリ操作全体における変数の型の相互関係を理解する必要があります。 これらの関係を理解しておくと、このドキュメント内の [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] のサンプルやコード例を理解しやすくなります。 また、`var` を使用して変数を暗黙的に型指定した場合に、背後でどのような処理が行われるかを理解することもできます。  
@@ -29,7 +29,7 @@ ms.locfileid: "59307653"
 ## <a name="queries-that-do-not-transform-the-source-data"></a>ソース データを変換しないクエリ  
  次の図は、データの変換を行わない [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] to Objects クエリ操作を示しています。 ソースには文字列のシーケンスが含まれているので、クエリ出力も文字列のシーケンスです。  
   
- ![LINQ クエリ内のデータ型の関係](../../../../csharp/programming-guide/concepts/linq/media/linq_flow1.png "LINQ_flow1")  
+ ![LINQ クエリ内のデータ型の関係を示す図。](./media/type-relationships-in-linq-query-operations/linq-query-data-type-relation.png)  
   
 1. データ ソースの型引数によって、範囲変数の型が決まります。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "59307653"
 ## <a name="queries-that-transform-the-source-data"></a>ソース データを変換するクエリ  
  次の図は、単純なデータ変換を行う [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] クエリ操作を示しています。 このクエリは、`Customer` オブジェクトのシーケンスを入力として受け取り、`Name` プロパティのみを結果に選択します。 `Name` は文字列なので、クエリは出力として文字列のシーケンスを作成します。  
   
- ![データ型を変換するクエリ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow2.png "LINQ_flow2")  
+ ![データ型を変換するクエリを示す図。](./media/type-relationships-in-linq-query-operations/linq-query-transform-data-type.png)  
   
 1. データ ソースの型引数によって、範囲変数の型が決まります。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "59307653"
   
  次の図は、もう少し複雑な変換を示しています。 `select` ステートメントは、元の `Customer` オブジェクトのメンバーを 2 つだけ取り込む匿名型を返します。  
   
- ![データ型を変換するクエリ](../../../../csharp/programming-guide/concepts/linq/media/linq_flow3.png "LINQ_flow3")  
+ ![データ型を変換するより複雑なクエリを示す図。](./media/type-relationships-in-linq-query-operations/linq-complex-query-transform-data-type.png)  
   
 1. データ ソースの型引数は、常にクエリの範囲変数の型です。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "59307653"
 ## <a name="letting-the-compiler-infer-type-information"></a>コンパイラによる型情報の推論  
  クエリ操作における変数の関係を理解することは大切ですが、この処理をコンパイラで自動的に行う方法もあります。 [var](../../../../csharp/language-reference/keywords/var.md) キーワードは、クエリ操作の任意のローカル変数に使用できます。 次の図は、前に説明した例 2 と類似しています。 ここでは、コンパイラがクエリ操作の各変数について、厳密な型を指定します。  
   
- ![暗黙的な型指定の型フロー](../../../../csharp/programming-guide/concepts/linq/media/linq_flow4.png "LINQ_flow4")  
+ ![暗黙的な入力による型フローを示す図。](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  `var` の詳細については、「[暗黙的に型指定されたローカル変数](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。  
   

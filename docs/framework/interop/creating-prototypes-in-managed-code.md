@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ecdcf25d-cae3-4f07-a2b6-8397ac6dc42d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e642f6507016dd1d62b4889f8a8dbcf0470a2202
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5652c04dc506e802741ba803af8e50837d0d795c
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59168169"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65064084"
 ---
 # <a name="creating-prototypes-in-managed-code"></a>マネージド コードでのプロトタイプの作成
 このトピックは、アンマネージド 関数にアクセスする方法について説明し、マネージド コードでメソッドの定義の注釈を設定するいくつかの属性フィールドを紹介しています。 プラットフォーム呼び出しで使用する .NET ベースの宣言を作成する方法を示す例については、「[プラットフォーム呼び出しによるデータのマーシャリング](marshaling-data-with-platform-invoke.md)」を参照してください。  
@@ -38,10 +38,8 @@ ms.locfileid: "59168169"
  アンマネージド 関数に対するマネージド定義は、次の例で確認できるように、言語に依存します。 完全なコード例については、「[プラットフォーム呼び出しの例](platform-invoke-examples.md)」を参照してください。  
   
 ```vb
-Imports System
-
-Friend Class WindowsAPI
-    Friend Shared Declare Auto Function MessageBox Lib "user32.dll" (
+Friend Class NativeMethods
+    Friend Declare Auto Function MessageBox Lib "user32.dll" (
         ByVal hWnd As IntPtr,
         ByVal lpText As String,
         ByVal lpCaption As String,
@@ -49,13 +47,12 @@ Friend Class WindowsAPI
 End Class
 ```
   
- <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping>、<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention>、<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling>、<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig>、<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError>、または <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar> の各フィールドを [!INCLUDE[vbprvbext](../../../includes/vbprvbext-md.md)] 宣言に適用するには、`Declare` ステートメントの代わりに <xref:System.Runtime.InteropServices.DllImportAttribute> 属性を使用する必要があります。  
+ <xref:System.Runtime.InteropServices.DllImportAttribute.BestFitMapping?displayProperty=nameWithtype>、<xref:System.Runtime.InteropServices.DllImportAttribute.CallingConvention?displayProperty=nameWithtype>、<xref:System.Runtime.InteropServices.DllImportAttribute.ExactSpelling?displayProperty=nameWithtype>、<xref:System.Runtime.InteropServices.DllImportAttribute.PreserveSig?displayProperty=nameWithtype>、<xref:System.Runtime.InteropServices.DllImportAttribute.SetLastError?displayProperty=nameWithtype>、または <xref:System.Runtime.InteropServices.DllImportAttribute.ThrowOnUnmappableChar?displayProperty=nameWithtype> の各フィールドを Visual Basic の宣言に適用するには、`Declare` ステートメントではなく <xref:System.Runtime.InteropServices.DllImportAttribute> 属性を使用する必要があります。  
   
 ```vb
-Imports System
 Imports System.Runtime.InteropServices
 
-Friend Class WindowsAPI
+Friend Class NativeMethods
     <DllImport("user32.dll", CharSet:=CharSet.Auto)>
     Friend Shared Function MessageBox(
         ByVal hWnd As IntPtr,
@@ -70,7 +67,7 @@ End Class
 using System;
 using System.Runtime.InteropServices;
 
-internal static class WindowsAPI
+internal static class NativeMethods
 {
     [DllImport("user32.dll")]
     internal static extern int MessageBox(
@@ -113,7 +110,7 @@ extern "C" int MessageBox(
   
  次のコード例では、<xref:System.Security.Permissions.SecurityAction>`Assert`、`Deny`、および `PermitOnly` 修飾子は無視されます。  
   
-```  
+```csharp  
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
 [RegistryPermission(SecurityAction.Assert, Unrestricted = true)]  
     private static extern bool CallRegistryPermissionAssert();  
@@ -129,7 +126,7 @@ extern "C" int MessageBox(
   
  ただし、次の例の `Demand` 修飾子は受け入れられます。  
   
-```  
+```csharp
 [DllImport("MyClass.dll", EntryPoint = "CallRegistryPermission")]  
 [RegistryPermission(SecurityAction.Demand, Unrestricted = true)]  
     private static extern bool CallRegistryPermissionDeny();  

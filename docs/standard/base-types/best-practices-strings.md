@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: f5ed250df1c8d4d96dee5a0561f952193078ddda
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 0f7c390d2ad7233475786e795fef0290af545145
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53150980"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64634745"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET の文字列を使用するためのベスト プラクティス
 <a name="top"></a> .NET には、ローカライズされたアプリケーションやグローバル化されたアプリケーションを開発するための広範なサポートが用意されており、文字列の並べ替えや表示などの一般的な操作を実行するときに、現在のカルチャの規則や特定のカルチャの規則を簡単に適用できるようになっています。 しかし、文字列の並べ替えや比較の操作は、必ずしもカルチャに依存するとは限りません。 たとえば、アプリケーションが内部で使用する文字列は、通常、すべてのカルチャで同じように処理される必要があります。 XML タグ、HTML タグ、ユーザー名、ファイル パス、システム オブジェクトの名前などのカルチャに依存しない文字列データがカルチャに依存するかのように解釈されると、アプリケーション コードで軽度のバグが発生したり、パフォーマンスが低下したり、場合によってはセキュリティの問題を引き起こしたりする可能性があります。  
@@ -35,51 +35,51 @@ ms.locfileid: "53150980"
   
  このトピックは、次のセクションで構成されています。  
   
--   [文字列の使用に関する推奨事項](#recommendations_for_string_usage)  
+- [文字列の使用に関する推奨事項](#recommendations_for_string_usage)  
   
--   [文字列比較の明示的な指定](#specifying_string_comparisons_explicitly)  
+- [文字列比較の明示的な指定](#specifying_string_comparisons_explicitly)  
   
--   [文字列比較の詳細](#the_details_of_string_comparison)  
+- [文字列比較の詳細](#the_details_of_string_comparison)  
   
--   [メソッド呼び出しに使用する StringComparison メンバーの選択](#choosing_a_stringcomparison_member_for_your_method_call)  
+- [メソッド呼び出しに使用する StringComparison メンバーの選択](#choosing_a_stringcomparison_member_for_your_method_call)  
   
--   [.NET の一般的な文字列比較メソッド](#common_string_comparison_methods_in_the_net_framework)  
+- [.NET の一般的な文字列比較メソッド](#common_string_comparison_methods_in_the_net_framework)  
   
--   [間接的に文字列比較を実行するメソッド](#methods_that_perform_string_comparison_indirectly)  
+- [間接的に文字列比較を実行するメソッド](#methods_that_perform_string_comparison_indirectly)  
   
--   [書式設定されたデータを表示および保持する](#Formatted)  
+- [書式設定されたデータを表示および保持する](#Formatted)  
   
 <a name="recommendations_for_string_usage"></a>   
 ## <a name="recommendations-for-string-usage"></a>文字列の使用に関する推奨事項  
  .NET による開発で文字列を使用するときには以下の簡単な推奨事項に従ってください。  
   
--   文字列操作に対して文字列比較の規則を明示的に指定するオーバーロードを使用します。 そのためには、通常、<xref:System.StringComparison> 型のパラメーターを持つメソッド オーバーロードを呼び出します。  
+- 文字列操作に対して文字列比較の規則を明示的に指定するオーバーロードを使用します。 そのためには、通常、<xref:System.StringComparison> 型のパラメーターを持つメソッド オーバーロードを呼び出します。  
   
--   カルチャに依存しない文字列照合の安全な既定の方法として、<xref:System.StringComparison.Ordinal?displayProperty=nameWithType> または <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> を使用して比較を行います。  
+- カルチャに依存しない文字列照合の安全な既定の方法として、<xref:System.StringComparison.Ordinal?displayProperty=nameWithType> または <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> を使用して比較を行います。  
   
--   パフォーマンスを向上させるには、<xref:System.StringComparison.Ordinal?displayProperty=nameWithType> または <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> による比較を使用します。  
+- パフォーマンスを向上させるには、<xref:System.StringComparison.Ordinal?displayProperty=nameWithType> または <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> による比較を使用します。  
   
--   ユーザーに出力を表示する場合は、<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> に基づく文字列操作を使用します。  
+- ユーザーに出力を表示する場合は、<xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType> に基づく文字列操作を使用します。  
   
--   比較が言語的な意味を持たない場合 (記号としての比較など) は、<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> に基づく文字列操作ではなく、非言語的な <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 値または <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 値を使用します。  
+- 比較が言語的な意味を持たない場合 (記号としての比較など) は、<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> に基づく文字列操作ではなく、非言語的な <xref:System.StringComparison.Ordinal?displayProperty=nameWithType> 値または <xref:System.StringComparison.OrdinalIgnoreCase?displayProperty=nameWithType> 値を使用します。  
   
--   比較のために文字列を正規化する場合は <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> メソッドではなく、<xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> メソッドを使用します。  
+- 比較のために文字列を正規化する場合は <xref:System.String.ToLowerInvariant%2A?displayProperty=nameWithType> メソッドではなく、<xref:System.String.ToUpperInvariant%2A?displayProperty=nameWithType> メソッドを使用します。  
   
--   2 つの文字列が等価かどうかをテストするには、<xref:System.String.Equals%2A?displayProperty=nameWithType> メソッドのオーバーロードを使用します。  
+- 2 つの文字列が等価かどうかをテストするには、<xref:System.String.Equals%2A?displayProperty=nameWithType> メソッドのオーバーロードを使用します。  
   
--   <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドと <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドは、文字列を並べ替える場合に使用し、文字列の等価性を確認する場合には使用しません。  
+- <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドと <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドは、文字列を並べ替える場合に使用し、文字列の等価性を確認する場合には使用しません。  
   
--   数値、日付など、文字列以外のデータをユーザー インターフェイスに表示するには、カルチャに依存する書式設定を使用します。 文字列以外のデータを文字列形式で保持するには、インバリアント カルチャを使用する書式設定を使用します。  
+- 数値、日付など、文字列以外のデータをユーザー インターフェイスに表示するには、カルチャに依存する書式設定を使用します。 文字列以外のデータを文字列形式で保持するには、インバリアント カルチャを使用する書式設定を使用します。  
   
  文字列を使用する際に避ける必要があることを次に示します。  
   
--   文字列操作に対して文字列比較の規則を明示的または暗黙的に指定しないオーバーロードは使用しないでください。  
+- 文字列操作に対して文字列比較の規則を明示的または暗黙的に指定しないオーバーロードは使用しないでください。  
   
--   ほとんどの場合、<xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> に基づく文字列操作は使用しないでください。 数少ない例外の 1 つは、言語的な意味を持つがカルチャには依存しないデータを永続化する場合です。  
+- ほとんどの場合、<xref:System.StringComparison.InvariantCulture?displayProperty=nameWithType> に基づく文字列操作は使用しないでください。 数少ない例外の 1 つは、言語的な意味を持つがカルチャには依存しないデータを永続化する場合です。  
   
--   2 つの文字列が等価かどうかを確認する場合に、<xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドまたは <xref:System.String.CompareTo%2A> メソッドのオーバーロードで戻り値が 0 かどうかをテストする方法は使用しないでください。  
+- 2 つの文字列が等価かどうかを確認する場合に、<xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドまたは <xref:System.String.CompareTo%2A> メソッドのオーバーロードで戻り値が 0 かどうかをテストする方法は使用しないでください。  
   
--   数値データや日時データを文字列形式で保持する場合は、カルチャに依存する書式設定を使用しないでください。  
+- 数値データや日時データを文字列形式で保持する場合は、カルチャに依存する書式設定を使用しないでください。  
   
  [ページのトップへ](#top)  
   
@@ -98,17 +98,17 @@ ms.locfileid: "53150980"
   
  たとえば、文字または文字列に一致する <xref:System.String> オブジェクト内の部分文字列のインデックスを返す <xref:System.String.IndexOf%2A> メソッドには、次の 9 つのオーバーロードがあります。  
   
--   <xref:System.String.IndexOf%28System.Char%29>、 <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%29>、および <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%2CSystem.Int32%29>。文字列内の文字の序数に基づく (大文字と小文字を区別し、カルチャに依存しない) 検索を既定で実行します。  
+- <xref:System.String.IndexOf%28System.Char%29>、 <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%29>、および <xref:System.String.IndexOf%28System.Char%2CSystem.Int32%2CSystem.Int32%29>。文字列内の文字の序数に基づく (大文字と小文字を区別し、カルチャに依存しない) 検索を既定で実行します。  
   
--   <xref:System.String.IndexOf%28System.String%29>、 <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29>、および <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%29>。文字列内の部分文字列の、大文字と小文字を区別し、カルチャに依存した検索を既定で実行します。  
+- <xref:System.String.IndexOf%28System.String%29>、 <xref:System.String.IndexOf%28System.String%2CSystem.Int32%29>、および <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%29>。文字列内の部分文字列の、大文字と小文字を区別し、カルチャに依存した検索を既定で実行します。  
   
--   <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29>、 <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.StringComparison%29>、および <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.StringComparison%29>。比較の形式を指定できる <xref:System.StringComparison> 型のパラメーターが含まれています。  
+- <xref:System.String.IndexOf%28System.String%2CSystem.StringComparison%29>、 <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.StringComparison%29>、および <xref:System.String.IndexOf%28System.String%2CSystem.Int32%2CSystem.Int32%2CSystem.StringComparison%29>。比較の形式を指定できる <xref:System.StringComparison> 型のパラメーターが含まれています。  
   
  次のような理由から、既定値を使用しないオーバーロードを選択することをお勧めします。  
   
--   既定のパラメーターを持つオーバーロードには、序数に基づく比較を実行するもの (文字列インスタンスで <xref:System.Char> を検索するもの) と、カルチャに依存するもの (文字列インスタンスで文字列を検索するもの) があります。 どのメソッドがどの既定値を使用するのかを覚えておくのは容易ではなく、使用するオーバーロードを間違えやすくなります。  
+- 既定のパラメーターを持つオーバーロードには、序数に基づく比較を実行するもの (文字列インスタンスで <xref:System.Char> を検索するもの) と、カルチャに依存するもの (文字列インスタンスで文字列を検索するもの) があります。 どのメソッドがどの既定値を使用するのかを覚えておくのは容易ではなく、使用するオーバーロードを間違えやすくなります。  
   
--   メソッド呼び出しで既定値に依存するコードは、意図が不明確になります。 既定値に依存する次の例では、2 つの文字列の序数に基づく比較と言語に基づく比較のどちらを開発者が意図しているのかや、`protocol` と "http" の大文字と小文字が違っていた場合に等価性テストで `false` を返すかどうかがわかりにくくなっています。  
+- メソッド呼び出しで既定値に依存するコードは、意図が不明確になります。 既定値に依存する次の例では、2 つの文字列の序数に基づく比較と言語に基づく比較のどちらを開発者が意図しているのかや、`protocol` と "http" の大文字と小文字が違っていた場合に等価性テストで `false` を返すかどうかがわかりにくくなっています。  
   
      [!code-csharp[Conceptual.Strings.BestPractices#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/explicitargs1.cs#1)]
      [!code-vb[Conceptual.Strings.BestPractices#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/explicitargs1.vb#1)]  
@@ -122,7 +122,7 @@ ms.locfileid: "53150980"
   
 <a name="the_details_of_string_comparison"></a>   
 ## <a name="the-details-of-string-comparison"></a>文字列比較の詳細  
- 文字列比較は、多くの文字列関連操作 (特に並べ替えおよび等価性テスト) の中核です。 文字列は、決まった順序で並べられています。たとえば、文字列の並べ替え済みリストで "my" が "string" の前にある場合は、比較で "my" が "string" 以下になる必要があります。 また、比較は等価性を暗黙的に定義します。 比較演算では、等価と見なされた文字列に対して 0 が返されます。 これは、どちらの文字列ももう一方の文字列より小さくないという意味に解釈するとわかりやすくなります。 文字列に関係する、意味のある操作のほとんどには、他の文字列との比較か、正しく定義された並べ替え操作の実行のいずれかまたは両方の処理が含まれています。  
+ 文字列比較は、多くの文字列関連操作 (特に並べ替えおよび等価性テスト) の中核です。 文字列は、決まった順序で並べられています。たとえば、文字列の並べ替え済みリスト上で "my" が "string" の前にある場合、比較では必ず "my" が "string" 以下になります。 また、比較は等価性を暗黙的に定義します。 比較演算では、等価と見なされた文字列に対して 0 が返されます。 これは、どちらの文字列ももう一方の文字列より小さくないという意味に解釈するとわかりやすくなります。 文字列に関係する、意味のある操作のほとんどには、他の文字列との比較か、正しく定義された並べ替え操作の実行のいずれかまたは両方の処理が含まれています。  
 
 > [!NOTE]
 > Windows オペレーティング システムの並べ替え操作と比較操作で使用される文字の重みに関する情報を含む一連のテキスト ファイルである[並べ替え重みテーブル](https://www.microsoft.com/en-us/download/details.aspx?id=10921) と、Linux と macOS 用の並べ替え重みテーブルの最新バージョンである [デフォルト Unicode 照合基本テーブル](https://www.unicode.org/Public/UCA/latest/allkeys.txt)をダウンロードできます。 Linux と macOS での並べ替え重みのテーブルの特定のバージョンは、システムにインストールされている [International Components for Unicode](http://site.icu-project.org/) ライブラリのバージョンによって異なります。 実装される ICU のバージョンと Unicode のバージョンに関する情報は、[ICU のダウンロード](http://site.icu-project.org/download)に関する記事を参照してください。
@@ -144,17 +144,17 @@ ms.locfileid: "53150980"
   
  現在のカルチャのセマンティクスを使用する比較は、次のメソッドで既定で使用されます。  
   
--   <xref:System.StringComparison> パラメーターを含まない <xref:System.String.Compare%2A?displayProperty=nameWithType> のオーバーロード。  
+- <xref:System.StringComparison> パラメーターを含まない <xref:System.String.Compare%2A?displayProperty=nameWithType> のオーバーロード。  
   
--   <xref:System.String.CompareTo%2A?displayProperty=nameWithType> のオーバーロード。  
+- <xref:System.String.CompareTo%2A?displayProperty=nameWithType> のオーバーロード。  
   
--   既定の <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> メソッドと、`null`<xref:System.Globalization.CultureInfo> パラメーターを持つ <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッド。  
+- 既定の <xref:System.String.StartsWith%28System.String%29?displayProperty=nameWithType> メソッドと、`null`<xref:System.Globalization.CultureInfo> パラメーターを持つ <xref:System.String.StartsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッド。  
   
--   既定の <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> メソッドと、`null`<xref:System.Globalization.CultureInfo> パラメーターを持つ <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッド。  
+- 既定の <xref:System.String.EndsWith%28System.String%29?displayProperty=nameWithType> メソッドと、`null`<xref:System.Globalization.CultureInfo> パラメーターを持つ <xref:System.String.EndsWith%28System.String%2CSystem.Boolean%2CSystem.Globalization.CultureInfo%29?displayProperty=nameWithType> メソッド。  
   
--   検索パラメーターとして <xref:System.String> を受け取る、<xref:System.StringComparison> パラメーターを持たない <xref:System.String.IndexOf%2A?displayProperty=nameWithType> のオーバーロード。  
+- 検索パラメーターとして <xref:System.String> を受け取る、<xref:System.StringComparison> パラメーターを持たない <xref:System.String.IndexOf%2A?displayProperty=nameWithType> のオーバーロード。  
   
--   検索パラメーターとして <xref:System.String> を受け取る、<xref:System.StringComparison> パラメーターを持たない <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> のオーバーロード。  
+- 検索パラメーターとして <xref:System.String> を受け取る、<xref:System.StringComparison> パラメーターを持たない <xref:System.String.LastIndexOf%2A?displayProperty=nameWithType> のオーバーロード。  
   
  どのような場合でも、 <xref:System.StringComparison> パラメーターを持つオーバーロードを呼び出して、メソッド呼び出しの意図を明確にすることをお勧めします。  
   
@@ -307,17 +307,17 @@ ms.locfileid: "53150980"
 ## <a name="methods-that-perform-string-comparison-indirectly"></a>間接的に文字列比較を実行するメソッド  
  文字列比較を中心的な操作とする非文字列メソッドの中には、 <xref:System.StringComparer> 型を使用するものがあります。 <xref:System.StringComparer> クラスには、<xref:System.StringComparer> のインスタンスを返す静的プロパティが 6 つ含まれています。これらのインスタンスの <xref:System.StringComparer.Compare%2A?displayProperty=nameWithType> メソッドは、次の種類の文字列比較を実行します。  
   
--   現在のカルチャを使用する、カルチャに依存した文字列比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> プロパティによって返されます。  
+- 現在のカルチャを使用する、カルチャに依存した文字列比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.CurrentCulture%2A?displayProperty=nameWithType> プロパティによって返されます。  
   
--   現在のカルチャを使用する、大文字と小文字を区別しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。  
+- 現在のカルチャを使用する、大文字と小文字を区別しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.CurrentCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。  
   
--   インバリアント カルチャの単語ベースの比較規則を使用する、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> プロパティによって返されます。  
+- インバリアント カルチャの単語ベースの比較規則を使用する、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.InvariantCulture%2A?displayProperty=nameWithType> プロパティによって返されます。  
   
--   インバリアント カルチャの単語ベースの比較規則を使用する、大文字と小文字を区別しない、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。  
+- インバリアント カルチャの単語ベースの比較規則を使用する、大文字と小文字を区別しない、カルチャに依存しない比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.InvariantCultureIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。  
   
--   序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> プロパティによって返されます。  
+- 序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.Ordinal%2A?displayProperty=nameWithType> プロパティによって返されます。  
   
--   大文字と小文字を区別しない、序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。  
+- 大文字と小文字を区別しない、序数に基づく比較。 この <xref:System.StringComparer> オブジェクトは、<xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> プロパティによって返されます。  
   
 ### <a name="arraysort-and-arraybinarysearch"></a>Array.Sort と Array.BinarySearch  
  既定の解釈: <xref:System.StringComparison.CurrentCulture?displayProperty=nameWithType>  
@@ -337,7 +337,7 @@ ms.locfileid: "53150980"
  [!code-csharp[Conceptual.Strings.BestPractices#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.strings.bestpractices/cs/indirect1.cs#9)]
  [!code-vb[Conceptual.Strings.BestPractices#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.strings.bestpractices/vb/indirect1.vb#9)]  
   
-### <a name="collections-example-hashtable-constructor"></a>コレクションの例: Hashtable のコンストラクター  
+### <a name="collections-example-hashtable-constructor"></a>コレクションの例:Hashtable のコンストラクター  
  文字列の比較方法の影響を受ける操作の 2 例目は文字列のハッシュです。  
   
  次の例では、<xref:System.StringComparer.OrdinalIgnoreCase%2A?displayProperty=nameWithType> プロパティから返される <xref:System.StringComparer> オブジェクトを渡して <xref:System.Collections.Hashtable> オブジェクトをインスタンス化しています。 <xref:System.StringComparer> から派生するクラス <xref:System.StringComparer> は <xref:System.Collections.IEqualityComparer> インターフェイスを実装するため、その <xref:System.Collections.IEqualityComparer.GetHashCode%2A> メソッドを使用して、ハッシュ テーブルの文字列のハッシュ コードを計算しています。  
@@ -353,11 +353,11 @@ ms.locfileid: "53150980"
   
  文字列以外のデータは、バイナリ データまたは書式付きデータとして保持できます。 書式付きデータとして保存するには、`provider` パラメーターを含む書式指定メソッドのオーバーロードを呼び出し、そのパラメーターを <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> プロパティに渡す必要があります。 インバリアント カルチャは、カルチャとコンピューターに依存しない書式付きデータに一貫した書式を提供します。 これに対し、インバリアント カルチャ以外のカルチャを使用して書式設定するデータの保持には、さまざまな制限があります。  
   
--   カルチャが異なるシステムでデータを取得したり、現在のシステムのユーザーが現在のカルチャを変更してデータを取得しようとしたりすると、そのデータは使用できない可能性があります。  
+- カルチャが異なるシステムでデータを取得したり、現在のシステムのユーザーが現在のカルチャを変更してデータを取得しようとしたりすると、そのデータは使用できない可能性があります。  
   
--   特定のコンピューターのカルチャのプロパティは、その標準の値とは異なる場合があります。 常に、ユーザーはカルチャに依存した表示設定をカスタマイズする可能性があります。 このため、ユーザーがカルチャの設定をカスタマイズすると、システムに保存されている書式付きデータを読み取ることができなくなる場合があります。 コンピューター間の書式付きデータの移植性がさらに制限される可能性があります。  
+- 特定のコンピューターのカルチャのプロパティは、その標準の値とは異なる場合があります。 常に、ユーザーはカルチャに依存した表示設定をカスタマイズする可能性があります。 このため、ユーザーがカルチャの設定をカスタマイズすると、システムに保存されている書式付きデータを読み取ることができなくなる場合があります。 コンピューター間の書式付きデータの移植性がさらに制限される可能性があります。  
   
--   数値や日時の書式設定を制御する国際的、地域的、または国内の標準は時間と共に変化するため、これらの変化は Windows オペレーティング システムの更新プログラムに組み込まれています。 書式設定の規則が変わると、以前の規則に従って書式設定されたデータを読み取ることができなくなる場合があります。  
+- 数値や日時の書式設定を制御する国際的、地域的、または国内の標準は時間と共に変化するため、これらの変化は Windows オペレーティング システムの更新プログラムに組み込まれています。 書式設定の規則が変わると、以前の規則に従って書式設定されたデータを読み取ることができなくなる場合があります。  
   
  次に、カルチャに依存する書式設定を使用してデータを保持すると移植性が制限される例を示します。 この例では、日時の値の配列をファイルに保存します。 これらは、英語 (米国) のカルチャの規則を使用して書式設定されています。 現在のスレッド カルチャがフランス語 (スイス) に変更されると、アプリケーションは現在のカルチャの書式設定規則を使用して保存された値を読み取ることを試みます。 2 つのデータ項目の読み取りを試みると、<xref:System.FormatException> 例外がスローされます。日付の配列には、<xref:System.DateTime.MinValue> に等しい 2 つの間違った要素が含まれることになります。  
   

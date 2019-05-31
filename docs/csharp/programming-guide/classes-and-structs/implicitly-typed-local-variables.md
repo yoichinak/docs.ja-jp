@@ -6,12 +6,12 @@ helpviewer_keywords:
 - implicitly-typed local variables [C#]
 - var [C#]
 ms.assetid: b9218fb2-ef5d-4814-8a8e-2bc29b0bbc9b
-ms.openlocfilehash: 9c6f7ae5d7a579abead2a62f8fdc7c63e5c53328
-ms.sourcegitcommit: a36cfc9dbbfc04bd88971f96e8a3f8e283c15d42
+ms.openlocfilehash: 72114233044fbf0e9910048343806eb542ed7ea5
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54222704"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063747"
 ---
 # <a name="implicitly-typed-local-variables-c-programming-guide"></a>暗黙的に型指定されるローカル変数 (C# プログラミング ガイド)
 
@@ -55,7 +55,7 @@ ms.locfileid: "54222704"
 
 [!code-csharp[csProgGuideLINQ#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideLINQ/CS/csRef30LangFeatures_2.cs#44)]
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 暗黙的に型指定される変数の宣言には、次の制限が適用されます。
 
@@ -68,6 +68,20 @@ ms.locfileid: "54222704"
 - 暗黙的に型指定された複数の変数を同じステートメント内で初期化することはできません。
 
 - `var` という名前の型がスコープ内にある場合、`var` キーワードはその型名に解決され、暗黙的に型指定されたローカル変数の宣言の一部とは見なされません。
+
+`var` キーワードによる暗黙の型指定は、ローカル メソッド スコープの変数にのみ適用できます。 暗黙の型指定はクラス フィールドには使用できません。C# コンパイラでコードを処理するときに論理的パラドックスにぶつかるためです。コンパイラはフィールドの型を認識する必要がありますが、代入式が分析されるまで型を判断できません。そして、型を認識していなければ、式を評価できません。 次のコードがあるとします。
+
+```csharp
+private var bookTitles;
+```
+
+`bookTitles` は、型が `var` のクラス フィールドです。 このフィールドには評価する式がないため、コンパイラでは `bookTitles` の型を推定できません。 さらに、(ローカル変数の場合と同様に) フィールドに式を追加するだけでは不十分です。
+
+```csharp
+private var bookTitles = new List<string>();
+```
+
+コードのコンパイル中にコンパイラでフィールドが検出されると、それに関連付けられている式を処理する前に各フィールドの型が記録されます。 コンパイラでの `bookTitles` の解析時に同じパラドックスにぶつかります。フィールドの型を認識する必要がありますが、通常、コンパイラは式を解析して `var` の型を判断します。これには、事前に型を認識している必要があります。
 
 `var` は、クエリ式と使用する場合に便利なこともあります。クエリ変数の構築された型を厳密に判別することが難しい場合です。 このような状況は、グループ化と並べ替えの処理で発生することがあります。
 

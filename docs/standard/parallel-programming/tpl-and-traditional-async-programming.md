@@ -10,31 +10,31 @@ helpviewer_keywords:
 ms.assetid: e7b31170-a156-433f-9f26-b1fc7cd1776f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8024fe6673b39a611c55eb55742bcfd981300e7e
-ms.sourcegitcommit: ad99773e5e45068ce03b99518008397e1299e0d1
+ms.openlocfilehash: 57f274d55ba5723ce8e0b51a7a39e98e95855e28
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2018
-ms.locfileid: "46702947"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64653923"
 ---
 # <a name="tpl-and-traditional-net-framework-asynchronous-programming"></a>TPL と従来の .NET Framework 非同期プログラミング
 .NET Framework の I/O バインドの非同期操作および計算主体の非同期操作には、次の 2 つの標準パターンがあります。  
   
--   非同期操作が Begin/End メソッドのペアによって表される非同期プログラミング モデル (APM)。<xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>、<xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType> など。  
+- 非同期操作が Begin/End メソッドのペアによって表される非同期プログラミング モデル (APM)。<xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType>、<xref:System.IO.Stream.EndRead%2A?displayProperty=nameWithType> など。  
   
--   イベントベースの非同期パターン (EAP)。たとえば <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> や <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType> など、*OperationName*Async および *OperationName*Completed という名前のメソッドとイベントのペアによって非同期操作が表されています。 (EAP は、.NET Framework Version 2.0 で導入されました)。  
+- イベントベースの非同期パターン (EAP)。たとえば <xref:System.Net.WebClient.DownloadStringAsync%2A?displayProperty=nameWithType> や <xref:System.Net.WebClient.DownloadStringCompleted?displayProperty=nameWithType> など、*OperationName*Async および *OperationName*Completed という名前のメソッドとイベントのペアによって非同期操作が表されています。 (EAP は、.NET Framework Version 2.0 で導入されました)。  
   
  タスク並列ライブラリ (TPL) は、これらの非同期パターンと共にさまざまな方法で使用されます。 ライブラリ使用時に、APM 操作と EAP 操作をタスクとして公開するか、または APM パターンを公開し、タスク オブジェクトを使用して内部的に実装することができます。 どちらの場合でも、タスク オブジェクトを使用することでコードを簡易化し、次のような便利な機能を活用できます。  
   
--   タスクの継続の形で、タスク開始後に随時コールバックを登録する。  
+- タスクの継続の形で、タスク開始後に随時コールバックを登録する。  
   
--   `Begin_` および <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> メソッド、または <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> メソッドまたは <xref:System.Threading.Tasks.Task.WaitAll%2A> メソッドを使用し、<xref:System.Threading.Tasks.Task.WaitAny%2A> メソッドに対する応答として実行される複数の操作を調整する。  
+- `Begin_` および <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAll%2A> メソッド、または <xref:System.Threading.Tasks.TaskFactory.ContinueWhenAny%2A> メソッドまたは <xref:System.Threading.Tasks.Task.WaitAll%2A> メソッドを使用し、<xref:System.Threading.Tasks.Task.WaitAny%2A> メソッドに対する応答として実行される複数の操作を調整する。  
   
--   非同期 I/O バインド操作と計算主体の操作を、同じタスク オブジェクトにカプセル化する。  
+- 非同期 I/O バインド操作と計算主体の操作を、同じタスク オブジェクトにカプセル化する。  
   
--   タスク オブジェクトの状態を監視する。  
+- タスク オブジェクトの状態を監視する。  
   
--   <xref:System.Threading.Tasks.TaskCompletionSource%601> を使用し、タスク オブジェクトへの操作の状態をマーシャリングする。  
+- <xref:System.Threading.Tasks.TaskCompletionSource%601> を使用し、タスク オブジェクトへの操作の状態をマーシャリングする。  
   
 ## <a name="wrapping-apm-operations-in-a-task"></a>APM 操作のタスクへのラッピング  
  <xref:System.Threading.Tasks.TaskFactory?displayProperty=nameWithType> クラスと <xref:System.Threading.Tasks.TaskFactory%601?displayProperty=nameWithType> クラスには、1 つの <xref:System.Threading.Tasks.Task> インスタンスまたは <xref:System.Threading.Tasks.Task%601> インスタンスに APM の Begin/End メソッドのペアをカプセル化できる <xref:System.Threading.Tasks.TaskFactory.FromAsync%2A?displayProperty=nameWithType> メソッドと <xref:System.Threading.Tasks.TaskFactory%601.FromAsync%2A?displayProperty=nameWithType> メソッドの複数のオーバーロードが用意されています。 さまざまなオーバーロードが、0 ～ 3 個の入力パラメーターを持つ Begin/End メソッドのペアに対応します。  
@@ -50,16 +50,16 @@ ms.locfileid: "46702947"
   
  1 つ目のパラメーターは <xref:System.Func%606> デリゲートで、<xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> メソッドの署名と一致します。 2 つ目のパラメーターは、<xref:System.Func%602> を受け取り、<xref:System.IAsyncResult> を返す `TResult` デリゲートです。 <xref:System.IO.FileStream.EndRead%2A> は整数を返すので、コンパイラは `TResult` の型を <xref:System.Int32> と推論し、タスクの型を <xref:System.Threading.Tasks.Task> と推論します。 最後の 4 つのパラメーターは、<xref:System.IO.FileStream.BeginRead%2A?displayProperty=nameWithType> メソッドのパラメーターと同じです。  
   
--   ファイル データを格納するバッファー。  
+- ファイル データを格納するバッファー。  
   
--   データ書き込みの開始位置を示すバッファー内のオフセット。  
+- データ書き込みの開始位置を示すバッファー内のオフセット。  
   
--   ファイルから読み取る最大データ量。  
+- ファイルから読み取る最大データ量。  
   
--   コールバックに渡されるユーザー定義の状態データを格納する、オプションのオブジェクト。  
+- コールバックに渡されるユーザー定義の状態データを格納する、オプションのオブジェクト。  
   
 ### <a name="using-continuewith-for-the-callback-functionality"></a>コールバック関数での ContinueWith の使用  
- バイト数だけでなく、ファイルのデータにアクセスする必要がある場合は、<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドだけでは不十分です。 代わりに、<xref:System.Threading.Tasks.Task> プロパティにファイル データが含まれている `Result` を使用します。 これを実行するには、元のタスクに継続を追加します。 継続は、通常、<xref:System.AsyncCallback> デリゲートによって実行される作業を実行します。 継続元が完了したとき、およびデータ バッファーが満杯になったときに呼び出されます  (<xref:System.IO.FileStream> オブジェクトは、返される前に終了している必要があります)。  
+ バイト数だけでなく、ファイルのデータにアクセスする必要がある場合は、<xref:System.Threading.Tasks.TaskFactory.FromAsync%2A> メソッドだけでは不十分です。 代わりに、<xref:System.Threading.Tasks.Task> プロパティにファイル データが含まれている `Result` を使用します。 これを実行するには、元のタスクに継続を追加します。 継続は、通常、<xref:System.AsyncCallback> デリゲートによって実行される作業を実行します。 継続元が完了したとき、およびデータ バッファーが満杯になったときに呼び出されます。 (<xref:System.IO.FileStream> オブジェクトは、返される前に終了している必要があります)。  
   
  <xref:System.Threading.Tasks.Task> クラスの BeginRead/EndRead ペアをカプセル化する <xref:System.IO.FileStream> を返す方法を、次の例に示します。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "46702947"
  [!code-csharp[FromAsync#10](../../../samples/snippets/csharp/VS_Snippets_Misc/fromasync/cs/snippet10.cs#10)]
  [!code-vb[FromAsync#10](../../../samples/snippets/visualbasic/VS_Snippets_Misc/fromasync/vb/snippet10.vb#10)]  
   
- 追加の例外処理を含み、クライアント コードからメソッドを呼び出す方法を示す、より包括的な例については、「[方法: タスクに EAP パターンをラップする](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)」を参照してください。  
+ 追加の例外処理や、クライアント コードからメソッドを呼び出す方法などを示したより包括的な例については、「[方法:タスクに EAP パターンをラップする](../../../docs/standard/parallel-programming/how-to-wrap-eap-patterns-in-a-task.md)」を参照してください。  
   
  <xref:System.Threading.Tasks.TaskCompletionSource%601> によって作成されたタスクは、その TaskCompletionSource によって開始されるので、ユーザー コードがそのタスクで Start メソッドを呼び出さないようにする必要があります。  
   

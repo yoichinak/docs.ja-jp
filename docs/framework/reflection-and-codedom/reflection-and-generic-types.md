@@ -17,42 +17,42 @@ helpviewer_keywords:
 ms.assetid: f7180fc5-dd41-42d4-8a8e-1b34288e06de
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a45ef91eba38223270a04cff2f00c30decb019f1
-ms.sourcegitcommit: 3d5d33f384eeba41b2dff79d096f47ccc8d8f03d
+ms.openlocfilehash: d0536acbcc71ae7792ec668ac352e95e604bd979
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/04/2018
-ms.locfileid: "33399705"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64591366"
 ---
 # <a name="reflection-and-generic-types"></a>リフレクションとジェネリック型
 <a name="top"></a> リフレクションの観点から言えば、ジェネリック型は、それがジェネリック型定義である場合は型パラメーター セットが、構築された型である場合は型引数セットが関連付けられているという点で通常の型と異なります。 ジェネリック メソッドと通常のメソッドの違いも、それと同様です。  
   
  リフレクションでジェネリック型とジェネリック メソッドが処理されるしくみを理解するうえで、次の 2 つの点が重要となります。  
   
--   ジェネリック型の定義とジェネリック メソッドの定義の型パラメーターは、 <xref:System.Type> クラスのインスタンスによって表されます。  
+- ジェネリック型の定義とジェネリック メソッドの定義の型パラメーターは、 <xref:System.Type> クラスのインスタンスによって表されます。  
   
     > [!NOTE]
     >  <xref:System.Type> オブジェクトがジェネリック型パラメーターを表す場合、 <xref:System.Type> の多数のプロパティとメソッドの動作が異なります。 これらの相違点については、該当するプロパティおよびメソッドに関するトピックに記載されています。 たとえば、 <xref:System.Type.IsAutoClass%2A> や <xref:System.Type.DeclaringType%2A>を参照してください。 さらに、一部のメンバーは <xref:System.Type> オブジェクトがジェネリック型パラメーターを表す場合にのみ有効です。 例については、「 <xref:System.Type.GetGenericTypeDefinition%2A>」を参照してください。  
   
--   <xref:System.Type> のインスタンスがジェネリック型を表す場合、そのインスタンスには、型パラメーター (ジェネリック型の定義の場合) または型引数 (構築された型の場合) を表す型の配列が含まれます。 ジェネリック メソッドを表す <xref:System.Reflection.MethodInfo> クラスのインスタンスの場合も同様です。  
+- <xref:System.Type> のインスタンスがジェネリック型を表す場合、そのインスタンスには、型パラメーター (ジェネリック型の定義の場合) または型引数 (構築された型の場合) を表す型の配列が含まれます。 ジェネリック メソッドを表す <xref:System.Reflection.MethodInfo> クラスのインスタンスの場合も同様です。  
   
  リフレクションが提供する <xref:System.Type> および <xref:System.Reflection.MethodInfo> のメソッドを使用すると、型パラメーターの配列にアクセスしたり、<xref:System.Type> のインスタンスが型パラメーターと実際の型のどちらを表しているかを確認したりできます。  
   
- ここで説明するメソッドを示すコード例については、「[方法 : リフレクションを使用してジェネリック型をチェックおよびインスタンス化する](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)」をご覧ください。  
+ ここで説明したメソッドを示すコード例については、「[方法:リフレクションを使用してジェネリック型をチェックおよびインスタンス化する](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)」に記載された追加情報を参照してください。  
   
  以下の説明は、型パラメーターと型引数の違いや、オープン構築型とクローズ構築型の違いなど、ジェネリックの用語を十分に理解していることを前提としています。 詳細については、「[ジェネリック](../../../docs/standard/generics/index.md)」を参照してください。  
   
  この概要は、次のセクションで構成されています。  
   
--   [ジェネリック型またはジェネリック メソッドであるかどうかの確認](#is_this_a_generic_type_or_method)  
+- [ジェネリック型またはジェネリック メソッドであるかどうかの確認](#is_this_a_generic_type_or_method)  
   
--   [クローズ ジェネリック型の生成](#generating_closed_generic_types)  
+- [クローズ ジェネリック型の生成](#generating_closed_generic_types)  
   
--   [型引数と型パラメーターの確認](#examining_type_arguments)  
+- [型引数と型パラメーターの確認](#examining_type_arguments)  
   
--   [インバリアント](#invariants)  
+- [インバリアント](#invariants)  
   
--   [関連トピック](#related_topics)  
+- [関連トピック](#related_topics)  
   
 <a name="is_this_a_generic_type_or_method"></a>   
 ## <a name="is-this-a-generic-type-or-method"></a>ジェネリック型またはジェネリック メソッドであるかどうかの確認  
@@ -115,9 +115,9 @@ generic<typename V, typename W> ref class D : B<int, V> {};
 ### <a name="source-of-a-generic-parameter"></a>ジェネリック パラメーターのソース  
  ジェネリック型パラメーターのソースとしては、開発者が今調べている型、外側の型、またはジェネリック メソッドが考えられます。 ジェネリック型パラメーターのソースを特定するには、次の手順を実行します。  
   
--   まず、 <xref:System.Type.DeclaringMethod%2A> プロパティを使用して、型パラメーターのソースがジェネリック メソッドかどうかを判定します。 このプロパティの値が null 参照 (Visual Basic では`Nothing` ) ではない場合、ソースはジェネリック メソッドです。  
+- まず、 <xref:System.Type.DeclaringMethod%2A> プロパティを使用して、型パラメーターのソースがジェネリック メソッドかどうかを判定します。 このプロパティの値が null 参照 (Visual Basic では`Nothing` ) ではない場合、ソースはジェネリック メソッドです。  
   
--   ソースがジェネリック メソッドでない場合は、 <xref:System.Type.DeclaringType%2A> プロパティを使用して、ジェネリック型パラメーターが属しているジェネリック型を判定します。  
+- ソースがジェネリック メソッドでない場合は、 <xref:System.Type.DeclaringType%2A> プロパティを使用して、ジェネリック型パラメーターが属しているジェネリック型を判定します。  
   
  型パラメーターがジェネリック メソッドに属している場合、 <xref:System.Type.DeclaringType%2A> プロパティはそのジェネリック メソッドを宣言した型を返しますが、これは無関係です。  
   
@@ -149,7 +149,7 @@ generic<typename V, typename W> ref class D : B<int, V> {};
   
 |Title|説明|  
 |-----------|-----------------|  
-|[方法 : リフレクションを使用してジェネリック型をチェックおよびインスタンス化する](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)|<xref:System.Type> と <xref:System.Reflection.MethodInfo> のプロパティとメソッドを使用してジェネリック型について調べる方法を説明します。|  
+|[方法: リフレクションを使用してジェネリック型をチェックおよびインスタンス化する](../../../docs/framework/reflection-and-codedom/how-to-examine-and-instantiate-generic-types-with-reflection.md)」を参照してください。|<xref:System.Type> と <xref:System.Reflection.MethodInfo> のプロパティとメソッドを使用してジェネリック型について調べる方法を説明します。|  
 |[ジェネリック](../../../docs/standard/generics/index.md)|ジェネリックの機能と .NET Framework におけるサポートについて説明します。|  
 |[方法: リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|リフレクション出力を使用して動的アセンブリにジェネリック型を生成する方法について説明します。|  
 |[型情報の表示](../../../docs/framework/reflection-and-codedom/viewing-type-information.md)|<xref:System.Type> クラスについて説明します。また、<xref:System.Type> をさまざまなリフレクション クラスと共に使用して、コンストラクター、メソッド、フィールド、プロパティ、およびイベントについての情報を取得する方法を示すコード例を提供します。|

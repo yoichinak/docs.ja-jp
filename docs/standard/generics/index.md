@@ -28,12 +28,12 @@ helpviewer_keywords:
 ms.assetid: 2994d786-c5c7-4666-ab23-4c83129fe39c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8170dd2e2941be3a73f7a4fd8c37d4fb2ef96235
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4e13689e0c8324781b86ae7b9568cb441a31ec70
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592238"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423956"
 ---
 # <a name="generics-in-net"></a>.NET のジェネリック
 
@@ -81,7 +81,7 @@ ms.locfileid: "65592238"
   
 - 一般的な用語である *ジェネリック型* には、構築型とジェネリック型定義の両方が含まれます。  
   
-- ジェネリック型パラメーターの*共変性*と*反変性*を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、*"分散"* と総称されます。 詳細については、「[共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)」を参照してください。  
+- ジェネリック型パラメーターの*共変性*と*反変性*を使用すると、型引数がターゲットの構築型よりも強い派生型 (共変性) または弱い派生型 (反変性) である構築ジェネリック型を使用できます。 共変性と反変性は、 *"分散"* と総称されます。 詳細については、「[共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)」を参照してください。  
   
 - *制約* は、ジェネリック型パラメーターに適用される制限です。 たとえば、型パラメーターを、 <xref:System.Collections.Generic.IComparer%601?displayProperty=nameWithType> ジェネリック インターフェイスを実装する型に制限して、型のインスタンスを並べ替えることができるようにできます。 また、型パラメーターを、特定の基本クラスや既定のコンストラクターを持つ型、または参照型や値型に制約できます。 ジェネリック型のユーザーは、制約を満たさない型引数に置き換えることはできません。  
   
@@ -148,7 +148,7 @@ ms.locfileid: "65592238"
   
  共通言語ランタイムでは、Microsoft Intermediate Language (MSIL) のジェネリック型をサポートするために、新しいオペコードとプレフィックスを提供しています ( <xref:System.Reflection.Emit.OpCodes.Stelem>、 <xref:System.Reflection.Emit.OpCodes.Ldelem>、 <xref:System.Reflection.Emit.OpCodes.Unbox_Any>、 <xref:System.Reflection.Emit.OpCodes.Constrained>、 <xref:System.Reflection.Emit.OpCodes.Readonly>など)。  
   
- Visual C++、C#、および Visual Basic のすべてで、ジェネリックの定義と使用が完全にサポートされています。 言語サポートの詳細については、「[Visual Basic におけるジェネリック型](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)」、「[ジェネリックの概要](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)」、および「[Overview of Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)」 (Visual C++ のジェネリックの概要) を参照してください。  
+ Visual C++、C#、および Visual Basic のすべてで、ジェネリックの定義と使用が完全にサポートされています。 言語サポートの詳細については、「[Visual Basic におけるジェネリック型](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)」、「[ジェネリックの概要](~/docs/csharp/programming-guide/generics/index.md)」、および「[Overview of Generics in Visual C++](/cpp/windows/overview-of-generics-in-visual-cpp)」 (Visual C++ のジェネリックの概要) を参照してください。  
   
  [ページのトップへ](#top)  
   
@@ -171,7 +171,7 @@ ms.locfileid: "65592238"
 |[ジェネリック コレクションを使用する状況](../../../docs/standard/collections/when-to-use-generic-collections.md)|ジェネリック コレクション型を使用するケースを決定するための一般的な規則について説明します。|  
 |[方法: リフレクション出力を使用してジェネリック型を定義する](../../../docs/framework/reflection-and-codedom/how-to-define-a-generic-type-with-reflection-emit.md)|ジェネリック型とジェネリック メソッドを含む動的アセンブリの生成方法について説明します。|  
 |[Generic Types in Visual Basic](~/docs/visual-basic/programming-guide/language-features/data-types/generic-types.md)|ジェネリック型の使用方法や定義方法に関するトピックなど、Visual Basic ユーザー向けにジェネリック機能について説明します。|  
-|[ジェネリックの概要](~/docs/csharp/programming-guide/generics/introduction-to-generics.md)|C# ユーザー向けにジェネリック型の定義方法や使用方法の概要について説明します。|  
+|[ジェネリックの概要](~/docs/csharp/programming-guide/generics/index.md)|C# ユーザー向けにジェネリック型の定義方法や使用方法の概要について説明します。|  
 |[Visual C++ のジェネリックの概要](/cpp/windows/overview-of-generics-in-visual-cpp)|ジェネリックとテンプレートの違いなど、C++ ユーザー向けにジェネリック機能について説明します。|  
   
 <a name="reference"></a>   

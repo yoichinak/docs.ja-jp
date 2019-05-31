@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 033cf871-ae24-433d-8939-7a3793e547bf
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eac5f9f6c8b47a6f14898eac2505ecc890015010
-ms.sourcegitcommit: c93fd5139f9efcf6db514e3474301738a6d1d649
+ms.openlocfilehash: f9cad5b24af86afdb1f3894dc124362fed732e93
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/27/2018
-ms.locfileid: "50188121"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64628880"
 ---
 # <a name="consuming-the-task-based-asynchronous-pattern"></a>タスク ベースの非同期パターンの利用
 
@@ -101,13 +101,13 @@ var cts = new CancellationTokenSource();
 
  この取り消し方法には、いくつか利点があります。
 
--   同じキャンセル トークンを、任意の数の同期操作および非同期操作に渡すことができます。
+- 同じキャンセル トークンを、任意の数の同期操作および非同期操作に渡すことができます。
 
--   同じ取り消し要求を、任意の数のリスナーに渡すことができます。
+- 同じ取り消し要求を、任意の数のリスナーに渡すことができます。
 
--   取り消しが要求されるかどうか、およびそれがいつ実行されるかは、非同期 API の開発者が完全に制御します。
+- 取り消しが要求されるかどうか、およびそれがいつ実行されるかは、非同期 API の開発者が完全に制御します。
 
--   API を使用するコードにより、取り消し要求が反映される非同期呼び出しが選択され、決定されます。
+- API を使用するコードにより、取り消し要求が反映される非同期呼び出しが選択され、決定されます。
 
 ## <a name="monitoring-progress"></a>進行状況の監視
  一部の非同期メソッドは、非同期メソッドに渡される進行状況インターフェイスを通じて進行状況を公開します。  たとえば、テキスト文字列を非同期的にダウンロードし、その過程で完了したダウンロードの割合を含む進行状況の更新を発生させる関数があるとします。  このようなメソッドは、Windows Presentation Foundation (WPF) アプリケーションでは次のように使用できます。
@@ -247,13 +247,13 @@ catch(Exception exc)
 ### <a name="taskwhenany"></a>Task.WhenAny
  <xref:System.Threading.Tasks.Task.WhenAny%2A> メソッドを使用して、完了するタスクとして表される複数の非同期操作の 1 つのみを非同期に待機できます。  このメソッドは、次の 4 つの主なユース ケースで役立ちます。
 
--   冗長性:  1 つの操作を複数回実行し、最初に完了したものを選択する (たとえば、1 つの結果を生成する複数の株価情報 Web サービスに問い合わせて、最も速く完了したものを選択する)。
+- 冗長性:1 つの操作を複数回実行し、最初に完了したものを選択する (たとえば、1 つの結果を生成する複数の株価情報 Web サービスに問い合わせて、最も速く完了したものを選択する)。
 
--   インターリーブ: 複数の操作を起動してそのすべてが完了するのを待機するが、それらの操作を完了時に処理する。
+- インターリーブ:複数の操作を起動してそのすべてが完了するまで待機するが、処理は各完了時点で行う。
 
--   調整:  他の操作が完了したら追加の操作を開始できるようにする。  これは、インターリーブのシナリオを拡張したものです。
+- 調整:他が完了した時点で、追加の操作を開始できる。  これは、インターリーブのシナリオを拡張したものです。
 
--   初期のエスケープ: たとえば、タスク t1 が表す操作を別のタスク t2 と共に <xref:System.Threading.Tasks.Task.WhenAny%2A> タスクでグループにまとめ、<xref:System.Threading.Tasks.Task.WhenAny%2A> タスクで待機できます。 タスク t2 は、タイムアウトか取り消し、または <xref:System.Threading.Tasks.Task.WhenAny%2A> タスクを t1 の前に完了するようなその他のシグナルを表す場合があります。
+- 初期のエスケープ:たとえば、タスク t1 が表す操作を別のタスク t2 と共に <xref:System.Threading.Tasks.Task.WhenAny%2A> タスクでグループにまとめ、<xref:System.Threading.Tasks.Task.WhenAny%2A> タスク上で待機できます。 タスク t2 は、タイムアウトか取り消し、または <xref:System.Threading.Tasks.Task.WhenAny%2A> タスクを t1 の前に完了するようなその他のシグナルを表す場合があります。
 
 #### <a name="redundancy"></a>冗長性
  株式を購入するかどうかを決定するとします。  信頼できるいくつかの株式推薦 Web サービスがありますが、日常的な負荷によっては、時に応じて各サービスがかなり遅くなることがあります。  <xref:System.Threading.Tasks.Task.WhenAny%2A> メソッドを使用すると、いずれかの操作が完了したときに通知を受け取ることができます。
@@ -290,7 +290,7 @@ while(recommendations.Count > 0)
 }
 ```
 
- さらに、最初のタスクが正常に完了しても、以降のタスクが失敗する可能性があります。  この時点で、例外を処理する方法はいくつかあります。起動したすべてのタスクが完了するまで待機できます。その場合は、<xref:System.Threading.Tasks.Task.WhenAll%2A> メソッドを使用するか、すべての例外が重要であり、ログに記録する必要があると指定できます。  そのためには、継続を使用してタスクが非同期に完了した時点で通知を受け取ることができます。
+ さらに、最初のタスクが正常に完了しても、以降のタスクが失敗する可能性があります。  この時点で、例外を処理する方法はいくつかあります。起動したすべてのタスクが完了するまで待機できます。その場合は、<xref:System.Threading.Tasks.Task.WhenAll%2A> メソッドを使用するか、あるいは、すべての例外が重要であり、ログに記録する必要があると指定してもかまいません。  そのためには、継続を使用してタスクが非同期に完了した時点で通知を受け取ることができます。
 
 ```csharp
 foreach(Task recommendation in recommendations)
@@ -833,7 +833,7 @@ private static void Produce(int data)
 ```
 
 > [!NOTE]
-> <xref:System.Threading.Tasks.Dataflow> 名前空間は [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] にあります。**NuGet** を利用してください。 <xref:System.Threading.Tasks.Dataflow> 名前空間が含まれるアセンブリをインストールするには、Visual Studio でプロジェクトを開き、**[プロジェクト] メニューの [NuGet パッケージの管理]** を選択し、Microsoft.Tpl.Dataflow パッケージをオンライン検索します。
+> <xref:System.Threading.Tasks.Dataflow> 名前空間は [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] にあります。**NuGet** を利用してください。 <xref:System.Threading.Tasks.Dataflow> 名前空間が含まれるアセンブリをインストールするには、Visual Studio でプロジェクトを開き、 **[プロジェクト] メニューの [NuGet パッケージの管理]** を選択し、Microsoft.Tpl.Dataflow パッケージをオンライン検索します。
 
 ## <a name="see-also"></a>関連項目
 

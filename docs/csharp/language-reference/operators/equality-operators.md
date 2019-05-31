@@ -1,23 +1,26 @@
 ---
 title: 等値演算子 - C# リファレンス
+description: C# の等値比較演算子について学習します。
 ms.date: 03/28/2019
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
 - '!=_CSharpKeyword'
 helpviewer_keywords:
+- comparison operators [C#]
+- relational operators [C#]
 - equality operator [C#]
 - equals operator [C#]
 - == operator [C#]
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 297285ccb9aba7eae1d70a7d28a62241646a023c
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: b4d3f3c0c6195fef22a33c47ad0b8c498f512f6a
+ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59334160"
+ms.lasthandoff: 04/28/2019
+ms.locfileid: "64753490"
 ---
 # <a name="equality-operators-c-reference"></a>等値演算子 (C# リファレンス)
 
@@ -34,7 +37,7 @@ ms.locfileid: "59334160"
 [!code-csharp-interactive[value types equality](~/samples/snippets/csharp/language-reference/operators/EqualityAndNonEqualityExamples.cs#ValueTypesEquality)]
 
 > [!NOTE]
-> 等価演算子、関係演算子 `==`、`>`、`<`、`>=`、`<=` で、いずれかのオペランドが数字 (<xref:System.Double.NaN?displayProperty=nameWithType> または <xref:System.Single.NaN?displayProperty=nameWithType>) ではない場合、演算の結果は `false` になります。 つまり、`NaN` の値は、`NaN` を含む他のどの `double` (または `float`) の値を上回ることも、下回ることも、等しいこともありません。 詳細およびサンプルについては、<xref:System.Double.NaN?displayProperty=nameWithType> または <xref:System.Single.NaN?displayProperty=nameWithType> の参照記事をご覧ください。
+> `==`、[`<`、`>`、`<=`、および `>=`](comparison-operators.md) 演算子の場合、いずれかのオペランドが数値 (<xref:System.Double.NaN?displayProperty=nameWithType> または <xref:System.Single.NaN?displayProperty=nameWithType>) でない場合、演算結果は `false` になります。 つまり、`NaN` の値は、`NaN` を含む他のどの `double` (または `float`) の値を上回ることも、下回ることも、等しいこともありません。 詳細およびサンプルについては、<xref:System.Double.NaN?displayProperty=nameWithType> または <xref:System.Single.NaN?displayProperty=nameWithType> の参照記事をご覧ください。
 
 同じ[列挙](../keywords/enum.md)型の 2 つのオペランドは、基になる整数型の対応する値が等しい場合は等しくなります。
 
@@ -83,3 +86,4 @@ C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../../tuples.
 - <xref:System.Object.Equals%2A?displayProperty=nameWithType>
 - <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType>
 - [等価比較](../../programming-guide/statements-expressions-operators/equality-comparisons.md)
+- [比較演算子](comparison-operators.md)

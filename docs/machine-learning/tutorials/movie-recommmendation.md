@@ -1,21 +1,21 @@
 ---
-title: 映画のレコメンデーション シナリオで ML.NET を使用する
-description: ユーザーに映画をお勧めするレコメンデーション シナリオでの ML.NET の使用方法を説明します。
+title: 'チュートリアル: 映画レコメンダーをビルドする'
+description: このチュートリアルでは、.NET Core コンソール アプリケーションにおいて ML.NET によって映画レコメンダーを構築する方法を示します。 手順では C# と Visual Studio 2019 を使用します。
 author: briacht
 ms.author: johalex
-ms.date: 03/08/2019
+ms.date: 05/06/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: bdc49f42e520f11ef63de873f0d30d11ba4b2366
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 5d459d8b28298250f3b815e33ff4d85ac54f79c2
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612278"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063367"
 ---
 # <a name="tutorial-create-a-movie-recommender-with-mlnet"></a>チュートリアル: ML.NET を使用して映画の推奨システムを作成する
 
-このサンプル チュートリアルでは、Visual Studio 2017 で ML.NET を使用して、C# を使用する .NET Core コンソール アプリケーションから映画の推奨システムを構築する方法を示します。
+このチュートリアルでは、.NET Core コンソール アプリケーションにおいて ML.NET によって映画レコメンダーを構築する方法を示します。 手順では C# と Visual Studio 2019 を使用します。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]
@@ -24,11 +24,6 @@ ms.locfileid: "59612278"
 > * モデルを構築してトレーニングする
 > * モデルを評価する
 > * モデルを展開して使用する
-
-> [!NOTE]
-> このトピックは現在プレビュー中の ML.NET について述べており、内容が変更される場合があります。 詳細については、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページを参照してください。
-
-このチュートリアルと関連サンプルでは、現時点では **ML.NET バージョン 0.11** が使用されています。 詳細については、リリース ノート ([GitHub リポジトリの dotnet/machinelearning ](https://github.com/dotnet/machinelearning/tree/master/docs/release-notes)) を参照してください。
 
 このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/MovieRecommendation) リポジトリで確認できます。
 
@@ -53,7 +48,7 @@ ms.locfileid: "59612278"
 
 ### <a name="create-a-project"></a>プロジェクトを作成する
 
-1. Visual Studio 2017 を開きます。 **[ファイル]** > **[新規作成]** > **[プロジェクト]** をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、**[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「MovieRecommender」と入力し、**[OK]** ボタンを選びます。
+1. Visual Studio 2017 を開きます。 [**ファイル**] > [**新規作成**] > [**プロジェクト**] をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、[**コンソール アプリ (.NET Core)**] プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「MovieRecommender」と入力し、**[OK]** ボタンを選びます。
 
 2. プロジェクトに *Data* という名前のディレクトリを作成して、データ セットを保存します。
 
@@ -61,10 +56,7 @@ ms.locfileid: "59612278"
 
 3. **Microsoft.ML** と **Microsoft.ML.Recommender** NuGet パッケージをインストールします。
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、**[参照]** タブを選択して「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、**[インストール]** を選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.Recommender** に対してこれらの手順を繰り返します。
-
-    > [!NOTE]
-    > このチュートリアルでは、**Microsoft.ML v0.11.0** と **Microsoft.ML.Recommender v0.11.0** を使用します。
+    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。**[参照]** タブを選択し、「**Microsoft.ML**」を検索します。一覧から **1.0.0** パッケージを選択し、**[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。 **Microsoft.ML.Recommender v0.12.0** に対してこれらの手順を繰り返します。
 
 4. *Program.cs* の先頭に次の `using` ステートメントを追加します。
 
@@ -175,7 +167,7 @@ ML.NET 内のデータは、[IDataView クラス](xref:Microsoft.ML.IDataView)�
 
 ## <a name="build-and-train-your-model"></a>モデルを構築してトレーニングする
 
-ML.NET には、次の 3 つの主要な概念があります。[データ](../basic-concepts-model-training-in-mldotnet.md#data)、[トランスフォーマー](../basic-concepts-model-training-in-mldotnet.md#transformer)、および[エスティメーター](../basic-concepts-model-training-in-mldotnet.md#estimator)です。
+ML.NET には、次の 3 つの主要な概念があります。[データ](../resources/glossary.md#data)、[トランスフォーマー](../resources/glossary.md#transformer)、および[エスティメーター](../resources/glossary.md#estimator)です。
 
 機械学習のトレーニング アルゴリズムには、特定の形式のデータが必要です。 `Transformers` は表形式のデータを互換性のある形式に変換 (トランスフォーム) するために使用されます。
 

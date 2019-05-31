@@ -5,12 +5,12 @@ ms.date: 08/02/2017
 helpviewer_keywords:
 - Main method [C#], return values
 ms.assetid: c2f5a1d8-1676-4bea-bc7e-44a97e72d5bc
-ms.openlocfilehash: f515268af13ef95b8b6d9a79f71c49d5d4a98d05
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: ea6f93e52ade91e61bdfcbc35aeb56de9101e80f
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59149839"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65878926"
 ---
 # <a name="main-return-values-c-programming-guide"></a>Main() の戻り値 (C# プログラミング ガイド)
 
@@ -22,7 +22,7 @@ ms.locfileid: "59149839"
 
  [!code-csharp[csProgGuideMain#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideMain/CS/Class3.cs#13)]
 
-`Main` からの戻り値を使用しない場合は、`void` を返すと少し簡単なコードにすることができます。 ただし、整数値を返すことによって、プログラムが状態の情報を、実行可能ファイルを呼び出す他のプログラムまたはスクリプトに伝達することができます。 `Main` からの戻り値は、プロセスの終了コードとして扱われます。 次の例では、`Main` からの戻り値にアクセスする方法を示します。
+`Main` からの戻り値を使用しない場合は、`void` を返すと少し簡単なコードにすることができます。 ただし、整数値を返すことによって、プログラムが状態の情報を、実行可能ファイルを呼び出す他のプログラムまたはスクリプトに伝達することができます。 `Main` からの戻り値は、プロセスの終了コードとして扱われます。 `void` が `Main` から返された場合、終了コードは暗黙的に `0` になります。 次の例では、`Main` からの戻り値にアクセスする方法を示します。
 
 ## <a name="example"></a>例
 
@@ -99,4 +99,3 @@ private static async Task<int> AsyncConsoleWork()
 - [C# リファレンス](../index.md)
 - [Main() とコマンドライン引数](index.md)
 - [方法: コマンド ライン引数を表示する](../../programming-guide/main-and-command-args/how-to-display-command-line-arguments.md)
-- [方法: foreach を使用してコマンド ライン引数にアクセスする](../../programming-guide/main-and-command-args/how-to-access-command-line-arguments-using-foreach.md)

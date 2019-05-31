@@ -3,12 +3,12 @@ title: LINQ の使用
 description: このチュートリアルでは、LINQ を使用してシーケンスを生成し、LINQ クエリで使用するためのメソッドを作成し、先行評価と遅延評価を区別する方法を説明します。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: cfb4f53f47cc316ad6f1ee2772af27af5aee4d00
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 702770650533b0549e414a1de87acf17d77af4e3
+ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58815587"
+ms.lasthandoff: 05/06/2019
+ms.locfileid: "65063218"
 ---
 # <a name="working-with-linq"></a>LINQ の使用
 
@@ -340,9 +340,9 @@ LINQ の他に、マジシャンがカードのトリックで使用するテク
 
 LINQ の詳細については、以下を参照してください。
 - [統合言語クエリ (LINQ)](../programming-guide/concepts/linq/index.md)
-    - [LINQ の概要](../programming-guide/concepts/linq/introduction-to-linq.md)
-    - [C# の LINQ の概要](../programming-guide/concepts/linq/getting-started-with-linq.md)
-        - [LINQ クエリの基本操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
-        - [LINQ によるデータ変換 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
-        - [LINQ でのクエリ構文とメソッド構文 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
-        - [LINQ をサポートする C# の機能](../programming-guide/concepts/linq/features-that-support-linq.md)
+  - [LINQ の概要](../programming-guide/concepts/linq/introduction-to-linq.md)
+  - [C# の LINQ の概要](../programming-guide/concepts/linq/getting-started-with-linq.md)
+    - [LINQ クエリの基本操作 (C#)](../programming-guide/concepts/linq/basic-linq-query-operations.md)
+    - [LINQ によるデータ変換 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
+    - [LINQ でのクエリ構文とメソッド構文 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
+    - [LINQ をサポートする C# の機能](../programming-guide/concepts/linq/features-that-support-linq.md)
