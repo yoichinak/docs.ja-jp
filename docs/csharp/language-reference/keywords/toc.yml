@@ -2,11 +2,11 @@
   href: index.md
   items:
     - name: 型
-      href: types.md
       items:
         - name: 値型
-          href: value-types.md
           items:
+            - name: 値型の機能
+              href: value-types.md
             - name: bool
               href: bool.md
             - name: byte
@@ -38,8 +38,9 @@
             - name: ushort
               href: ushort.md
         - name: 参照型
-          href: reference-types.md
           items:
+            - name: 参照型の機能
+              href: reference-types.md
             - name: class
               href: class.md
             - name: delegate
@@ -57,7 +58,6 @@
         - name: var
           href: var.md
         - name: 型のリファレンス表
-          href: reference-tables-for-types.md
           items:
             - name: 組み込み型の一覧表
               href: built-in-types-table.md
@@ -76,11 +76,11 @@
             - name: 数値結果テーブルの書式設定
               href: formatting-numeric-results-table.md
     - name: 修飾子
-      href: modifiers.md
       items:
         - name: アクセス修飾子
-          href: access-modifiers.md
           items:
+            - name: クイック リファレンス
+              href: access-modifiers.md
             - name: アクセシビリティ レベル
               href: accessibility-levels.md
             - name: アクセシビリティ ドメイン
@@ -128,17 +128,16 @@
         - name: volatile
           href: volatile.md
     - name: ステートメントのキーワード
-      href: statement-keywords.md
       items:
+        - name: ステートメントのカテゴリ
+          href: statement-keywords.md
         - name: 選択ステートメント
-          href: selection-statements.md
           items:
             - name: if-else
               href: if-else.md
             - name: switch
               href: switch.md
         - name: 繰り返しステートメント
-          href: iteration-statements.md
           items:
             - name: do
               href: do.md
@@ -149,7 +148,6 @@
             - name: while
               href: while.md
         - name: ジャンプ ステートメント
-          href: jump-statements.md
           items:
             - name: break
               href: break.md
@@ -160,7 +158,6 @@
             - name: return
               href: return.md
         - name: 例外処理ステートメント
-          href: exception-handling-statements.md
           items:
             - name: throw
               href: throw.md
@@ -171,8 +168,9 @@
             - name: try-catch-finally
               href: try-catch-finally.md
         - name: checked と unchecked
-          href: checked-and-unchecked.md
           items:
+            - name: 概要
+              href: checked-and-unchecked.md
             - name: checked
               href: checked.md
             - name: unchecked
@@ -182,8 +180,9 @@
         - name: lock ステートメント
           href: lock-statement.md
     - name: メソッド パラメーター
-      href: method-parameters.md
       items:
+        - name: パラメーターを渡す
+          href: method-parameters.md
         - name: params
           href: params.md
         - name: in (パラメーター修飾子)
@@ -193,13 +192,13 @@
         - name: out (パラメーター修飾子)
           href: out-parameter-modifier.md
     - name: 名前空間キーワード
-      href: namespace-keywords.md
       items:
         - name: namespace
           href: namespace.md
         - name: using
-          href: using.md
           items:
+            - name: 使用するためのコンテキスト
+              href: using.md
             - name: using ディレクティブ
               href: using-directive.md
             - name: using static ディレクティブ
@@ -209,7 +208,6 @@
         - name: extern エイリアス
           href: extern-alias.md
     - name: 演算子のキーワード
-      href: operator-keywords.md
       items:
         - name: as
           href: as.md
@@ -218,8 +216,9 @@
         - name: is
           href: is.md
         - name: new
-          href: new.md
           items:
+            - name: new 演算子、修飾子、および制約
+              href: new.md
             - name: new 演算子
               href: new-operator.md
             - name: new 修飾子
@@ -235,7 +234,6 @@
         - name: nameof
           href: nameof.md
     - name: 変換キーワード
-      href: conversion-keywords.md
       items:
         - name: explicit
           href: explicit.md
@@ -244,14 +242,12 @@
         - name: operator
           href: operator.md
     - name: アクセス キーワード
-      href: access-keywords.md
       items:
         - name: base
           href: base.md
         - name: this
           href: this.md
     - name: リテラル キーワード
-      href: literal-keywords.md
       items:
         - name: 'null'
           href: null.md
@@ -262,8 +258,9 @@
         - name: default
           href: default.md
     - name: コンテキスト キーワード
-      href: contextual-keywords.md
       items:
+        - name: クイック リファレンス
+          href: contextual-keywords.md
         - name: add
           href: add.md
         - name: get
@@ -287,8 +284,9 @@
         - name: yield
           href: yield.md
     - name: クエリ キーワード
-      href: query-keywords.md
       items:
+        - name: クイック リファレンス
+          href: query-keywords.md
         - name: from 句
           href: from-clause.md
         - name: where 句

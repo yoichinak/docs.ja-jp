@@ -1,6 +1,8 @@
 - name: .NET Compiler Platform SDK (Roslyn API)
   href: index.md
   items:
+    - name: 概要
+      href: index.md
     - name: コンパイラ API モデルを理解する
       href: compiler-api-model.md
     - name: 構文の使用

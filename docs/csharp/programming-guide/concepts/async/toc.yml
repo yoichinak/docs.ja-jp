@@ -13,9 +13,10 @@
       href: async-return-types.md
     - name: 非同期プログラムにおける制御フロー
       href: control-flow-in-async-programs.md
-    - name: 非同期アプリケーションの微調整
-      href: fine-tuning-your-async-application.md
+    - name: タスクと処理の完了タスクのキャンセル
       items:
+        - name: 概要
+          href: fine-tuning-your-async-application.md
         - name: 非同期タスクまたはタスクの一覧のキャンセル
           href: cancel-an-async-task-or-a-list-of-tasks.md
         - name: 指定した時間の経過後の非同期タスクのキャンセル

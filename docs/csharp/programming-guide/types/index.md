@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 23aae1a41a19689bd5ad4e29f19c8cff704e742c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61709686"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423404"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
@@ -64,7 +64,7 @@ C# は、厳密に型指定された言語です。 すべての変数および�
 
 ## <a name="built-in-types"></a>組み込みの型
 
-C# には、整数、浮動小数点値、ブール式、テキスト文字、10 進数値などのデータを表現するための標準的な組み込みの数値型が用意されています。 また、組み込みの `string` 型や `object` 型もあります。 これらの型は、すべての C# プログラムで使用できます。 組み込み型の詳細については、「[型のリファレンス表](../../../csharp/language-reference/keywords/reference-tables-for-types.md)」を参照してください。
+C# には、整数、浮動小数点値、ブール式、テキスト文字、10 進数値などのデータを表現するための標準的な組み込みの数値型が用意されています。 また、組み込みの `string` 型や `object` 型もあります。 これらの型は、すべての C# プログラムで使用できます。 組み込み型の詳細については、「[組み込み型のリファレンス表](../../../csharp/language-reference/keywords/built-in-types-table.md)」を参照してください。
 
 ## <a name="custom-types"></a>カスタム型
 

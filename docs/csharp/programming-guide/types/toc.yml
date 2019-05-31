@@ -1,6 +1,7 @@
 - name: 型
-  href: index.md
   items:
+    - name: 型の使用と定義
+      href: index.md
     - name: キャストと型変換
       href: casting-and-type-conversions.md
     - name: ボックス化とボックス化解除
