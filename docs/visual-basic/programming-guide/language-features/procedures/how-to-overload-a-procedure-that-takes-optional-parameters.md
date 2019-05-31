@@ -10,12 +10,12 @@ helpviewer_keywords:
 - procedures [Visual Basic], overloading
 - procedures [Visual Basic], multiple versions
 ms.assetid: 825f9d56-4cde-43fd-993a-b9171717e2eb
-ms.openlocfilehash: 58c52a7d73efbd96d772dd85d6bf2c9084fb1241
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4374a229392d51b67c99210da91ae05dd3342e96
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61863650"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424055"
 ---
 # <a name="how-to-overload-a-procedure-that-takes-optional-parameters-visual-basic"></a>方法: 省略可能なパラメーター (Visual Basic) を受け取るプロシージャをオーバー ロードします。
 プロシージャが 1 つまたは複数場合[(省略可能)](../../../../visual-basic/language-reference/modifiers/optional.md)パラメーターの暗黙のオーバー ロードのいずれかに一致するオーバー ロードされたバージョンを定義することはできません。 詳細については、"暗黙的なオーバー ロードの省略可能なパラメーター"を参照してください[プロシージャのオーバー ロードに関する考慮事項](./considerations-in-overloading-procedures.md)します。  
@@ -51,7 +51,7 @@ ms.locfileid: "61863650"
   
 #### <a name="to-overload-a-procedure-that-takes-more-than-one-optional-parameter"></a>1 つ以上の省略可能なパラメーターを受け取るプロシージャをオーバー ロードするには  
   
-1. プロシージャのロジックを指定できる省略可能な引数の組み合わせを決定します。 受け入れられない組み合わせは、別の 1 つの省略可能なパラメーターが依存している場合に発生する可能性です。 たとえば、1 つのパラメーターが配偶者の名前を受け入れ、配偶者の年齢を受け取る場合は、年齢が名前を省略すると、引数の組み合わせは許されません。  
+1. プロシージャのロジックを指定できる省略可能な引数の組み合わせを決定します。 受け入れられない組み合わせは、別の 1 つの省略可能なパラメーターが依存している場合に発生する可能性です。 たとえば、1 つのパラメーターが人の名前を受け入れ、人物の年齢を受け取る場合は、年齢が名前を省略すると、引数の組み合わせは許されません。  
   
 2. 省略可能な引数の許容可能な組み合わせごとに、書き込み、`Sub`または`Function`宣言ステートメントを対応するパラメーター リストを定義します。 使用しないでください、`Optional`キーワード。  
   

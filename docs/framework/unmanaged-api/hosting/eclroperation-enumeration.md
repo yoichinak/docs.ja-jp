@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7d5f24d7415ff7ecceba6b0a5fbd3098d70dcd0f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c9bbff8bb1f095502f27b649639434010453ffe1
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796023"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423851"
 ---
 # <a name="eclroperation-enumeration"></a>EClrOperation 列挙型
 ホストがポリシーのアクションを適用できる操作のセットについて説明します。  
@@ -55,14 +55,14 @@ typedef enum {
 ## <a name="remarks"></a>Remarks  
  共通言語ランタイム (CLR) の信頼性インフラストラクチャは、中止とリソース内のコードとコードの非クリティカル領域で発生した重要な領域の割り当てエラーを区別します。 この区別は、ホスト コードに障害が発生した場所に応じて異なるポリシーを設定できるように設計されています。  
   
- A*コードのクリティカル領域*は CLR がそのタスクを中止またはをリソースは、現在のタスクのみに影響を与えるは、要求を完了できない状態を保証できない領域。 たとえば、タスクは、ロックが保持するいると、メモリの割り当て要求時にエラーを示す HRESULT を受け取るはの安定性を確保するには、そのタスクを中止するだけでは不十分、<xref:System.AppDomain>ため、<xref:System.AppDomain>他を含めることができますタスクが同じロックを待っています。 現在を破棄する可能性がありますタスクがタスクの他の応答を停止する (またはハング) する無限にします。 このような場合は、全体をアンロードする機能、ホストする必要があります。<xref:System.AppDomain>リスクの潜在的なが不安定になるのではなく。  
+ A*コードのクリティカル領域*は CLR がそのタスクを中止またはをリソースは、現在のタスクのみに影響を与えるは、要求を完了できない状態を保証できない領域。 たとえば、タスクは、ロックが保持するいると、メモリの割り当て要求時にエラーを示す HRESULT を受け取るはの安定性を確保するには、そのタスクを中止するだけでは不十分、<xref:System.AppDomain>ため、<xref:System.AppDomain>他を含めることができますタスクが同じロックを待っています。 現在を破棄するには、タスクにその他のタスク応答を停止することがあります。 このような場合は、全体をアンロードする機能、ホストする必要があります。<xref:System.AppDomain>リスクの潜在的なが不安定になるのではなく。  
   
  A*コードの領域が重大でない*CLR が中断または障害の影響が、エラーが発生しているタスクだけことを保証できるリージョンは、その一方で、します。  
   
  CLR は、グレースフルと非グレースフル (ルード) 中止間も区別します。 一般に、正常または適切な中止は、ルード中止はこのような保証をいたしません中にタスクを中止する前に、例外処理ルーチンとファイナライザーを実行するよう努力します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

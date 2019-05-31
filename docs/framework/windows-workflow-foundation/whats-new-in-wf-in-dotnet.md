@@ -2,12 +2,12 @@
 title: .NET 4.5 での Windows Workflow Foundation の新機能
 ms.date: 03/30/2017
 ms.assetid: 195c43a8-e0a8-43d9-aead-d65a9e6751ec
-ms.openlocfilehash: fb9604061fd6ccd7909a2d5b26675a1b637f2b4d
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9bf836abaa568b3df2080500d8d2357e604dff60
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380136"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423986"
 ---
 # <a name="whats-new-in-windows-workflow-foundation-in-net-45"></a>.NET 4.5 での Windows Workflow Foundation の新機能
 
@@ -200,7 +200,7 @@ C# の式の詳細については、次を参照してください。 [C# 式](c
 
 ### <a name="BKMK_DesignTimeValidation"></a> デザイン時バック グラウンド検証
 
-[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、ワークフローがフォアグラウンド プロセスとして検証されていました。これにより、複雑な検証プロセスや時間のかかる検証プロセスでは UI が応答を停止する可能性がありました。 現在、ワークフローの検証はバックグラウンド スレッドで実行されるため、UI がブロックされることはありません。
+[!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]、複雑なまたは時間のかかる検証プロセス中に UI がブロック可能性のある、フォア グラウンドのプロセスとしてのワークフローが検証されていました。 現在、ワークフローの検証はバックグラウンド スレッドで実行されるため、UI がブロックされることはありません。
 
 ### <a name="BKMK_ViewState"></a> XAML ファイル内の別の場所にあるビューステートします。
 

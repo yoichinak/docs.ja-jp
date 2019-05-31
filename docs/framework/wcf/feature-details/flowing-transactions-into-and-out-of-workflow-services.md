@@ -2,18 +2,18 @@
 title: ワークフロー サービスへのトランザクションのフロー
 ms.date: 03/30/2017
 ms.assetid: 03ced70e-b540-4dd9-86c8-87f7bd61f609
-ms.openlocfilehash: 7c47810ae168d39d7ebcd96952a75d6a3ba4d263
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a837e446ec65caa6d481d3a5f141f87fe509910
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592820"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421903"
 ---
 # <a name="flowing-transactions-into-and-out-of-workflow-services"></a>ワークフロー サービスへのトランザクションのフロー
 ワークフロー サービスとワークフロー クライアントはトランザクションに参加できます。  サービス操作をアンビエント トランザクションの一部にするには、<xref:System.ServiceModel.Activities.Receive> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティの中に配置します。 <xref:System.ServiceModel.Activities.Send> 内の <xref:System.ServiceModel.Activities.SendReply> または <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティによる呼び出しが行われると、アンビエント トランザクション内でも呼び出しが行われます。 ワークフロー クライアント アプリケーションでは、<xref:System.Activities.Statements.TransactionScope> アクティビティを使用してアンビエント トランザクションを作成し、そのアンビエント トランザクションを使用してサービス操作を呼び出すことができます。 ここでは、トランザクションに参加するワークフロー サービスとワークフロー クライアントを作成する手順について説明します。  
   
 > [!WARNING]
->  ワークフロー サービス インスタンスがトランザクション内に読み込まれて、ワークフローに <xref:System.Activities.Statements.Persist> アクティビティが含まれている場合、ワークフロー インスタンスはトランザクションがタイムアウトするまでハングします。  
+>  かどうか、トランザクション内で、ワークフロー サービス インスタンスが読み込まれ、ワークフローが含まれています、<xref:System.Activities.Statements.Persist>アクティビティ、ワークフロー インスタンスは、トランザクションがタイムアウトするまでにブロックされます。  
   
 > [!IMPORTANT]
 >  <xref:System.ServiceModel.Activities.TransactedReceiveScope> を使用する場合は、ワークフロー内のすべての受信を <xref:System.ServiceModel.Activities.TransactedReceiveScope> アクティビティに配置することをお勧めします。  
@@ -99,7 +99,7 @@ ms.locfileid: "64592820"
   
 6. ドラッグ アンド ドロップ、<xref:System.ServiceModel.Activities.Receive>内のアクティビティ、**要求**のセクション、<xref:System.ServiceModel.Activities.TransactedReceiveScope>アクティビティ。 次のプロパティを設定します。  
   
-    |プロパティ|[値]|  
+    |プロパティ|値|  
     |--------------|-----------|  
     |CanCreateInstance|True (チェック ボックスをオンにする)|  
     |OperationName|StartSample|  
@@ -115,7 +115,7 @@ ms.locfileid: "64592820"
   
 8. <xref:System.Activities.Statements.Sequence> アクティビティを <xref:System.ServiceModel.Activities.TransactedReceiveScope> の Body セクションにドラッグ アンド ドロップします。 <xref:System.Activities.Statements.Sequence> アクティビティに 2 つの <xref:System.Activities.Statements.WriteLine> アクティビティをドラッグ アンド ドロップし、<xref:System.Activities.Statements.WriteLine.Text%2A> プロパティを次の表のとおりに設定します。  
   
-    |アクティビティ|[値]|  
+    |アクティビティ|値|  
     |--------------|-----------|  
     |1 つ目の WriteLine|"Service:完了した受信"|  
     |2 つ目の WriteLine|"Service:受信した ="+ requestMessage|  
@@ -130,10 +130,10 @@ ms.locfileid: "64592820"
   
 10. <xref:System.Activities.Statements.Assign> アクティビティを `PrintTransactionInfo` アクティビティの後にドラッグ アンド ドロップし、次の表のとおりにプロパティを設定します。  
   
-    |プロパティ|[値]|  
+    |プロパティ|値|  
     |--------------|-----------|  
     |目的|replyMessage|  
-    |[値]|"Service:応答を送信します。"|  
+    |値|"Service:応答を送信します。"|  
   
 11. ドラッグ アンド ドロップ、<xref:System.Activities.Statements.WriteLine>後に、<xref:System.Activities.Statements.Assign>アクティビティとその<xref:System.Activities.Statements.WriteLine.Text%2A>プロパティを"サービス。応答を開始します。"  
   
@@ -179,7 +179,7 @@ ms.locfileid: "64592820"
   
 8. <xref:System.ServiceModel.Activities.Send> アクティビティを <xref:System.Activities.Statements.Assign> アクティビティの後にドラッグ アンド ドロップし、次のプロパティを設定します。  
   
-    |プロパティ|[値]|  
+    |プロパティ|値|  
     |--------------|-----------|  
     |EndpointConfigurationName|workflowServiceEndpoint|  
     |OperationName|StartSample|  

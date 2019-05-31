@@ -2,12 +2,12 @@
 title: 再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 ms.date: 03/30/2017
 ms.assetid: 1a4a4038-d8e6-41dd-99ea-93bd76286772
-ms.openlocfilehash: 8459311239d46557405245c10b6fb5e887a4691c
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 70e4a8580a8b383bdd4e5e5299bcc5210f3210dc
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66380156"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423969"
 ---
 # <a name="support-for-new-workflow-foundation-45-features-in-the-rehosted-workflow-designer"></a>再ホストされたワークフロー デザイナーにおける Workflow Foundation 4.5 の新機能のサポート
 .NET Framework 4.5 では Windows Workflow Foundation (WF) には、ワークフロー デザイナー エクスペリエンスのいくつかの機能強化を含め、多くの新機能が導入されました。 このトピックでは、このような新機能のうち、再ホストされたデザイナーでサポートされている機能と現時点ではサポートされていない機能について詳しく説明します。
@@ -27,8 +27,7 @@ ms.locfileid: "66380156"
 ## <a name="new-designer-capabilities"></a>デザイナーの新機能
 
 ### <a name="designer-search"></a>デザイナーでの検索
- [クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)再ホストされたデザイナーでは、.NET Framework 4.5 で導入された機能はサポートされていません。 
-  `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、次を参照してください。[デザイナーでの検索](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)します。
+ [クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)再ホストされたデザイナーでは、.NET Framework 4.5 で導入された機能はサポートされていません。   `Toolbox` による検索は、再ホストされたデザイナーでもサポートされています。 これらの機能の詳細については、次を参照してください。[デザイナーでの検索](whats-new-in-wf-in-dotnet.md#BKMK_DesignerSearch)します。
 
 > [!WARNING]
 >  [クイック検索](whats-new-in-wf-in-dotnet.md#BKMK_QuickFind)と[ファイル内の検索](whats-new-in-wf-in-dotnet.md#BKMK_FindInFiles)再ホストされたデザイナーでサポートされていません。
@@ -107,7 +106,7 @@ ms.locfileid: "66380156"
 >  ビルド時の検証は、再ホストされたデザイナーではサポートされていません。  
   
 ### <a name="design-time-background-validation"></a>デザイン時バックグラウンド検証  
- [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)] では、ワークフローがフォアグラウンド プロセスとして検証されていました。これにより、複雑な検証プロセスや時間のかかる検証プロセスでは UI が応答を停止する可能性がありました。 現在、ワークフローの検証はバックグラウンド スレッドで実行されるため、UI がブロックされることはありません。  
+ [!INCLUDE[netfx40_short](../../../includes/netfx40-short-md.md)]、複雑なまたは時間のかかる検証プロセス中に UI がブロック可能性のある、フォア グラウンドのプロセスとしてのワークフローが検証されていました。 現在、ワークフローの検証はバックグラウンド スレッドで実行されるため、UI がブロックされることはありません。  
   
  デザイン時バックグラウンド検証は、再ホストされたデザイナーでサポートされています。  
   

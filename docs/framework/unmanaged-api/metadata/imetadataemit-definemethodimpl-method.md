@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 05b2530bde2f4532e94610a683e7bbc2f59540aa
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 184ae0aee6947aa686e80541ab3ba36e0f4e1647
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044045"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424010"
 ---
 # <a name="imetadataemitdefinemethodimpl-method"></a>IMetaDataEmit::DefineMethodImpl メソッド
 インターフェイスから継承されたメソッドの実装の定義を作成し、そのメソッドの実装定義にトークンを返します。  
@@ -42,13 +42,13 @@ HRESULT DefineMethodImpl (
  [in]`mdTypedef`実装するクラスのトークン。  
   
  `tkBody`  
- [in]`mdMethodDef`または`mdMethodRef`コード本体のトークン。  
+ [in]`mdMethodDef`または`mdMemberRef`コード本体のトークン。  
   
  `tkDecl`  
- [in]`mdMethodDef`または`mdMethodRef`に実装されているインターフェイス メソッドのトークン。  
+ [in]`mdMethodDef`または`mdMemberRef`に実装されているインターフェイス メソッドのトークン。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

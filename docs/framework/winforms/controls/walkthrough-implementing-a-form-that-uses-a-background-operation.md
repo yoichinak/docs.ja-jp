@@ -15,16 +15,16 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 4691b796-9200-471a-89c3-ba4c7cc78c03
-ms.openlocfilehash: 1988ebd8c5f46346babe212962b617d30d765385
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 60421d6ba634bd7b4107f1c9998fbbe158417c83
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211530"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423838"
 ---
 # <a name="walkthrough-implementing-a-form-that-uses-a-background-operation"></a>チュートリアル: バックグラウンド操作を使用するフォームの実装
 
-場合は、完了に長い時間がかかる操作があると応答を停止する、ユーザー インターフェイス (UI) を設定したくない、または「ハング」しを使用できます、<xref:System.ComponentModel.BackgroundWorker>クラスを別のスレッドで操作を実行します。
+完了するには長い時間がかかる操作がない場合、したくない、ユーザー インターフェイス (UI) 応答を停止するかブロックするを使用することができます、<xref:System.ComponentModel.BackgroundWorker>クラスを別のスレッドで操作を実行します。
 
 このチュートリアルで使用する方法、 <xref:System.ComponentModel.BackgroundWorker> ""バック グラウンドで時間のかかる計算を実行するクラス、ユーザー インターフェイスの応答性の高いままです。  このチュートリアルを完了すると、フィボナッチ数を非同期に計算するアプリケーションが作成されます。 大きなフィボナッチ数の計算にはかなりの時間がかかることがありますが、この遅延によってメイン UI スレッドが中断されることはなく、計算中もフォームは応答性を維持します。
 
@@ -44,7 +44,7 @@ ms.locfileid: "65211530"
 
 1. Visual Studio で、という名前の Windows ベースのアプリケーション プロジェクトを作成`BackgroundWorkerExample`(**ファイル** > **新規** > **プロジェクト** >  **Visual C#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォームアプリケーション**)。
 
-2. **ソリューション エクスプローラー**で、**[Form1]** を右クリックし、ショートカット メニューの **[名前の変更]** をクリックします。 ファイル名を `FibonacciCalculator` に変更します。 コード要素 "`Form1`" へのすべての参照の名前を変更するかどうかをたずねられたら、**[はい]** をクリックします。
+2. **ソリューション エクスプローラー**で、 **[Form1]** を右クリックし、ショートカット メニューの **[名前の変更]** をクリックします。 ファイル名を `FibonacciCalculator` に変更します。 コード要素 "`Form1`" へのすべての参照の名前を変更するかどうかをたずねられたら、 **[はい]** をクリックします。
 
 3. ドラッグ、<xref:System.Windows.Forms.NumericUpDown>コントロールから、**ツールボックス**フォーム上にします。 設定、<xref:System.Windows.Forms.NumericUpDown.Minimum%2A>プロパティを`1`と<xref:System.Windows.Forms.NumericUpDown.Maximum%2A>プロパティを`91`します。
 
@@ -103,8 +103,7 @@ ms.locfileid: "65211530"
 
 ### <a name="implement-progress-reporting"></a>進行状況レポートを実装します。
 
-1. **[プロパティ]** ウィンドウで `backgroundWorker1` を選択します。 
-  <xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A> と <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> プロパティを `true` に設定します。
+1. **[プロパティ]** ウィンドウで `backgroundWorker1` を選択します。   <xref:System.ComponentModel.BackgroundWorker.WorkerReportsProgress%2A> と <xref:System.ComponentModel.BackgroundWorker.WorkerSupportsCancellation%2A> プロパティを `true` に設定します。
 
 2. `FibonacciCalculator` フォームで 2 つの変数を宣言します。 これらの変数を使用して進行状況を追跡します。
 
@@ -112,8 +111,7 @@ ms.locfileid: "65211530"
      [!code-csharp[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#14)]
      [!code-vb[System.ComponentModel.BackgroundWorker#14](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/VB/fibonacciform.vb#14)]
 
-3. 
-  <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> イベントのイベント ハンドラーを追加します。 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベント ハンドラー、update、<xref:System.Windows.Forms.ProgressBar>で、<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>のプロパティ、<xref:System.ComponentModel.ProgressChangedEventArgs>パラメーター。
+3.   <xref:System.ComponentModel.BackgroundWorker.ProgressChanged> イベントのイベント ハンドラーを追加します。 <xref:System.ComponentModel.BackgroundWorker.ProgressChanged>イベント ハンドラー、update、<xref:System.Windows.Forms.ProgressBar>で、<xref:System.ComponentModel.ProgressChangedEventArgs.ProgressPercentage%2A>のプロパティ、<xref:System.ComponentModel.ProgressChangedEventArgs>パラメーター。
 
      [!code-cpp[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/cpp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CPP/fibonacciform.cpp#7)]
      [!code-csharp[System.ComponentModel.BackgroundWorker#7](~/samples/snippets/csharp/VS_Snippets_Winforms/System.ComponentModel.BackgroundWorker/CS/fibonacciform.cs#7)]

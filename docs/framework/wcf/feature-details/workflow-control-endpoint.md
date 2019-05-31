@@ -2,18 +2,18 @@
 title: ワークフロー コントロール エンドポイント
 ms.date: 03/30/2017
 ms.assetid: 1b883334-1590-4fbb-b0d6-65197efe0700
-ms.openlocfilehash: 40fec2902598daed178e070b02c1067c308507c9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 781a7cefaeeb8cd9cd21298471c59de2e7815244
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61929715"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66424023"
 ---
 # <a name="workflow-control-endpoint"></a>ワークフロー コントロール エンドポイント
 ワークフロー コントロール エンドポイントは、開発者が管理操作を呼び出して、<xref:System.ServiceModel.Activities.WorkflowServiceHost> を使用してホストされているワークフロー インスタンスをリモート制御できるようにします。 この機能を使用すると、一時停止、再開、終了などの管理操作をプログラムで実行することができます。  
   
 > [!WARNING]
->  トランザクション内でワークフロー コントロール エンドポイントを使用していて、コントロールされているワークフローに <xref:System.Activities.Statements.Persist> アクティビティが含まれている場合、ワークフロー インスタンスはトランザクションがタイムアウトするまでハングします。  
+>  トランザクションおよび制御されている、ワークフロー内でワークフロー コントロール エンドポイントを使用して含まれている場合、<xref:System.Activities.Statements.Persist>アクティビティ、ワークフロー インスタンスは、トランザクションがタイムアウトするまでにブロックされます。  
   
 ## <a name="workflow-instance-management"></a>ワークフロー インスタンスの管理  
  [!INCLUDE[netfx_current_long](../../../../includes/netfx-current-long-md.md)] は、<xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> と呼ばれる新しいコントラクトを定義します。 このコントラクトは、<xref:System.ServiceModel.Activities.WorkflowServiceHost> でホストされるワークフロー インスタンスをリモート制御する一連の管理操作を定義します。 <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> は、<xref:System.ServiceModel.Activities.IWorkflowInstanceManagement> コントラクトの実装を提供する標準のエンドポイントです。 <xref:System.ServiceModel.Activities.WorkflowControlClient> は、管理操作を <xref:System.ServiceModel.Activities.WorkflowControlEndpoint> に送信するために使用するクラスです。  

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - threading [Windows Forms], background operations
 - background operations
 ms.assetid: 64e9b3ab-7443-4a77-ab17-b8b8c0cb3f62
-ms.openlocfilehash: da1d87464ef30fb549a2c201170e81c45cbdf6fc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2ef09fdc755480205b9929037277162349afa135
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587738"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423808"
 ---
 # <a name="backgroundworker-component-overview"></a>BackgroundWorker コンポーネントの概要
 一般的な操作には、実行時間が長くかかるものが数多くあります。 次に例を示します。  
@@ -39,7 +39,7 @@ ms.locfileid: "64587738"
   
 - ローカル ディスク アクセス (前提としてメモリ アクセスに比べて低速です)  
   
- 以上のような操作の実行時には、ユーザー インターフェイスがハングアップすることがあります。 応答性に優れた UI を必要としながらも、このような操作との関連で長時間の遅延に直面する場合は、<xref:System.ComponentModel.BackgroundWorker> コンポーネントが便利なソリューションになります。  
+ 上記のような操作には、ユーザー インターフェイスが実行されているときにブロックする可能性があります。 応答性に優れた UI を必要としながらも、このような操作との関連で長時間の遅延に直面する場合は、<xref:System.ComponentModel.BackgroundWorker> コンポーネントが便利なソリューションになります。  
   
  <xref:System.ComponentModel.BackgroundWorker> コンポーネントを使用すると、時間のかかる操作を、アプリケーションのメイン UI スレッドとは別のスレッドで非同期的に ("バックグラウンドで") 実行できます。 <xref:System.ComponentModel.BackgroundWorker> を使用するには、バックグラウンドで実行する、時間のかかるワーカー メソッドをこのコンポーネントに通知して、<xref:System.ComponentModel.BackgroundWorker.RunWorkerAsync%2A> メソッドを呼び出すだけです。 呼び出し元スレッドが正常に動作し続けると共に、ワーカー メソッドも非同期的に動作します。 このメソッドが終了すると、<xref:System.ComponentModel.BackgroundWorker> は、<xref:System.ComponentModel.BackgroundWorker.RunWorkerCompleted> イベントを起動して、呼び出し元スレッドに警告します。このイベントには、オプションで操作の結果を含めることもできます。  
   

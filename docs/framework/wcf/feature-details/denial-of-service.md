@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: 426429eefd038008340a956ab3fa3cba21906c84
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627025"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423891"
 ---
 # <a name="denial-of-service"></a>サービス拒否
 サービス拒否は、メッセージを処理できなくしたり、メッセージ処理を大幅に遅延させたりするなど、システムに過大な負荷が生じた場合に発生します。  
@@ -19,7 +19,7 @@ ms.locfileid: "64627025"
   
  回避事項を次に示します。  
   
-- <xref:System.Xml.NameTable> からの派生クラスを作成し、最大サイズのクォータを指定します  (<xref:System.Xml.NameTable> の使用を回避したり、サイズが上限に達したときに <xref:System.Xml.NameTable> を切り替えたりすることはできません)。  
+- <xref:System.Xml.NameTable> からの派生クラスを作成し、最大サイズのクォータを指定します (<xref:System.Xml.NameTable> の使用を回避したり、サイズが上限に達したときに <xref:System.Xml.NameTable> を切り替えたりすることはできません)。  
   
 - 可能であれば、前述のプロパティを使用せずに、<xref:System.Xml.XmlReader.MoveToAttribute%2A> メソッドと <xref:System.Xml.XmlReader.IsStartElement%2A> メソッドを使用します。これらのメソッドでは、文字列が返されないため、<xref:System.Xml.NameTable> コレクションがあふれてしまう問題を回避できます。  
   
@@ -46,8 +46,8 @@ ms.locfileid: "64627025"
   
  これを防ぐには、<xref:System.ServiceModel.Description.ServiceSecurityAuditBehavior.SuppressAuditFailure%2A> プロパティを `true` に設定し、イベント ビューアーのプロパティを使用して監査動作を制御します。 イベント ビューアーを使用して、イベント ログを表示および管理の詳細については、次を参照してください。[イベント ビューアー](https://go.microsoft.com/fwlink/?LinkId=186123)します。 詳細については、次を参照してください。[監査](../../../../docs/framework/wcf/feature-details/auditing-security-events.md)します。  
   
-## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-hangs"></a>IAuthorizationPolicy の無効な実装によりサービスが停止する可能性がある  
- 欠陥のある <xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A> インターフェイスの実装で <xref:System.IdentityModel.Policy.IAuthorizationPolicy> メソッドを呼び出すと、サービスが停止する可能性があります。  
+## <a name="invalid-implementations-of-iauthorizationpolicy-can-cause-service-to-become-unresponsive"></a>サービスが応答しなくなる可能性が IAuthorizationPolicy の無効な実装  
+ 呼び出す、<xref:System.IdentityModel.Policy.IAuthorizationPolicy.Evaluate%2A>の欠陥のある実装のメソッド、<xref:System.IdentityModel.Policy.IAuthorizationPolicy>インターフェイスは、サービスが応答しなくなる可能性で入力する必要があります。  
   
  軽減策:信頼されたコードだけを使用します。 つまり、ユーザーが記述しテストしたコード、または信頼されたプロバイダーが提供するコードのみを使用します。 十分な検討を行わずに、<xref:System.IdentityModel.Policy.IAuthorizationPolicy> の信頼されない拡張をユーザーのコードに接続することを許可しないでください。 これは、サービスの実装で使用されるすべての拡張に当てはまります。 WCF 機能拡張ポイントを使用してアプリケーション コードと接続されている外部コードの違いを行いません。  
   
