@@ -4,12 +4,12 @@ description: TensorFlow 転移学習シナリオで ML.NET カスタム画像分
 ms.date: 05/06/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: f7fddc2d6c60a719090af36b7fe91919bfbd115c
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
+ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063622"
+ms.lasthandoff: 05/14/2019
+ms.locfileid: "65593422"
 ---
 # <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>チュートリアル: TensorFlow を使用して ML.NET カスタム画像分類器を構築する
 

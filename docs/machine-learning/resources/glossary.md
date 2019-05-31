@@ -2,20 +2,17 @@
 title: 機械学習の用語集
 description: ML.NET でカスタム モデルをビルドする際に役立つ機械学習の重要な用語の用語集。
 ms.custom: seodec18
-ms.date: 03/05/2019
-ms.openlocfilehash: a3f94f2dedbe620c4d5c2bed2af99471572a91e5
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.date: 05/09/2019
+ms.openlocfilehash: 7d098dc9d3dc6cb7bb08b5689b50afff01ba1d7f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063676"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557978"
 ---
 # <a name="machine-learning-glossary-of-important-terms"></a>機械学習の重要な用語の用語集
 
 ML.NET でカスタム モデルをビルドする際に役立つ機械学習の重要な用語を次に示します。
-
-> [!NOTE]
-> このドキュメントでは ML.NET が参照されていますが、これは現在プレビュー段階にあります。 内容は変更される場合があります。 詳しくは、[ML.NET の概要](https://www.microsoft.com/net/learn/apps/machine-learning-and-ai/ml-dotnet)に関するページをご覧ください。
 
 ## <a name="accuracy"></a>正確度
 
@@ -56,7 +53,7 @@ ML.NET では、カタログは、共通の目的でグループ化された拡�
 
 ## <a name="estimator"></a>エスティメーター
 
-<xref:Microsoft.ML.IEstimator`1> インターフェイスを実装する ML.NET のクラス。
+<xref:Microsoft.ML.IEstimator%601> インターフェイスを実装する ML.NET のクラス。
 
 エスティメーターは、変換 (データ準備変換と機械学習モデル トレーニング変換の両方) の仕様です。 エスティメーターを連結して、変換のパイプラインにすることができます。 エスティメーターまたはエスティメーターのパイプラインのパラメーターは、<xref:Microsoft.ML.IEstimator`1.Fit*> が呼び出されたときに学習されます。 <xref:Microsoft.ML.IEstimator`1.Fit*> の結果は[トランスフォーマー](#transformer)です。
 

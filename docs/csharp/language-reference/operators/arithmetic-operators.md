@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 94c266c3e44f87d8c8503bcf15789723116460df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25f716084c489c834e9242800f4c7e341c41aa58
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753814"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65880660"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術演算子 (C# リファレンス)
 
@@ -93,7 +93,7 @@ ms.locfileid: "64753814"
 
 [!code-csharp-interactive[multiplication operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Multiplication)]
 
-単項 `*` 演算子は、[ポインター間接参照演算子](multiplication-operator.md#pointer-indirection-operator)です。
+単項 `*` 演算子は、[ポインター間接参照演算子](pointer-related-operators.md#pointer-indirection-operator-)です。
 
 ## <a name="division-operator-"></a>除算演算子 /
 

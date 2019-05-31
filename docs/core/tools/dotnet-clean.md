@@ -2,12 +2,12 @@
 title: dotnet clean コマンド
 description: dotnet clean コマンドは現在のディレクトリを消去します。
 ms.date: 04/14/2019
-ms.openlocfilehash: 3e735c02c9be9b6f51a8cdf048c18eff34f838cb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754124"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65631820"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 

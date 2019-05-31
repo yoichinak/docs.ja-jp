@@ -5,12 +5,12 @@ ms.date: 04/29/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc
-ms.openlocfilehash: 6a2899b81fa165dc1bed759079c1ae8506b983e8
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 8bb47102ede8e135090b1381eb815dccd512e03d
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065555"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557799"
 ---
 # <a name="improve-mlnet-model-accuracy"></a>ML.NET モデルの正確度を改善する
 

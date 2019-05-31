@@ -5,12 +5,12 @@ ms.date: 05/02/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc,how-to
-ms.openlocfilehash: 2f444508990a902a1c61b72b1be2263d8d93ba70
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 51ef4b55b1518381881e57d83fd43f8ec7f786c6
+ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065645"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65645059"
 ---
 # <a name="explain-model-predictions-using-permutation-feature-importance"></a>Permutation Feature Importance を使用してモデル予測を説明する
 
