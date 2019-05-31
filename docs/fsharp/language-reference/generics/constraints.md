@@ -2,12 +2,12 @@
 title: 制約
 description: についてF#ジェネリック型または関数の型引数の要件を指定するジェネリック型パラメーターに適用される制約。
 ms.date: 05/16/2016
-ms.openlocfilehash: 1bf5c6fc4df6c8f2f7f969bd13030172c6b8aab9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: bb6625636f0465dd608ae2e8a8986d043b62b6e4
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645282"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378195"
 ---
 # <a name="constraints"></a>制約
 
@@ -58,10 +58,6 @@ class end
 
 // Null constraint
 type Class3<'T when 'T : null> =
-class end
-
-// Member constraint with static member
-type Class4<'T when 'T : (static member staticMethod1 : unit -> 'T) > =
 class end
 
 // Member constraint with instance member
