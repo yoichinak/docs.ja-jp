@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 2f1648e5-997b-435e-a4f9-d236c574c66c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ad61b3824b8155cf3f68f61865891c023b4cf32
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1815da141beb3dd1022fe1a74f872aa70b4ded43
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674013"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456347"
 ---
 # <a name="shadowcopyverifybytimestamp-element"></a>\<shadowCopyVerifyByTimestamp> 要素
 シャドウ コピーが [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] で導入された既定の起動の動作を使用するか、.NET Framework の以前のバージョンの起動の動作に戻すかどうかを指定します。  
@@ -40,7 +40,7 @@ ms.locfileid: "61674013"
   
 |値|説明|  
 |-----------|-----------------|  
-|true|起動時に、前回シャドウ コピーのディレクトリにコピーされたとき以降に更新されたアセンブリだけをコピーします。 これは、既定値は、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]します。|  
+|true|起動時に、前回シャドウ コピーのディレクトリにコピーされたとき以降に更新されたアセンブリだけをコピーします。 これは、.NET Framework 4 の既定値です。|  
 |False|起動時にすべてのファイルにコピーされましたが、.NET Framework の以前のバージョンの起動の動作に戻ります。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -54,10 +54,10 @@ ms.locfileid: "61674013"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 以降では、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]アセンブリのシャドウ コピーの場合は、そのタイムスタンプが前回、シャドウ コピーのディレクトリにコピーされたとき以降に変更されたことを示します。 」の説明に従って、シャドウ コピーを使用する多くのアプリケーションの起動時間が短縮これ[アセンブリのシャドウ コピー](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)します。 この動作の変更率が高いと、アセンブリの更新の頻度を持つアプリケーションの利点可能性があります。 その場合は、この要素を使用して、以前のバージョンの .NET Framework の動作を復元することができます。  
+ 以降、.NET Framework 4 では、アセンブリは、シャドウ コピーのタイムスタンプが前回、シャドウ コピーのディレクトリにコピーされたとき以降に変更されたことを示す場合にのみです。 」の説明に従って、シャドウ コピーを使用する多くのアプリケーションの起動時間が短縮これ[アセンブリのシャドウ コピー](../../../../../docs/framework/app-domains/shadow-copy-assemblies.md)します。 この動作の変更率が高いと、アセンブリの更新の頻度を持つアプリケーションの利点可能性があります。 その場合は、この要素を使用して、以前のバージョンの .NET Framework の動作を復元することができます。  
   
 ## <a name="example"></a>例  
- 次の例でシャドウ コピーの既定のスタートアップ動作を無効にする方法を示しています、 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]、.NET Framework の以前のバージョンの起動の動作に戻ります。  
+ 次の例では、シャドウ コピー、.NET Framework 4 での既定のスタートアップ動作を無効にし、.NET Framework の以前のバージョンの起動の動作に戻す方法を示します。  
   
 ```xml  
 <configuration>  

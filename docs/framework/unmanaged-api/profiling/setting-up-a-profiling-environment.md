@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: af68041cd016b457c449c283601bd5a0d4258c8e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dfad184e30ec94c8add265db2ef8131d0d34396f
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666053"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457228"
 ---
 # <a name="setting-up-a-profiling-environment"></a>プロファイル環境の設定
 > [!NOTE]
@@ -37,10 +37,10 @@ ms.locfileid: "64666053"
  CLR アプリケーションのプロファイリングを行うには、COR_ENABLE_PROFILING 環境変数および COR_PROFILER 環境変数を設定してから、アプリケーションを実行する必要があります。 また、プロファイラー DLL が登録済みであることも確認してください。  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] 以降では、プロファイラーを登録する必要はありません。  
+>  以降、.NET Framework 4 では、プロファイラーはありませんを登録します。  
   
 > [!NOTE]
->  .NET Framework バージョン 2.0、3.0、および 3.5 のプロファイラーを使用する、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]以降のバージョンで、COMPLUS_ProfAPI_ProfilerCompatibilitySetting 環境変数を設定する必要があります。  
+>  .NET Framework 4 およびそれ以降のバージョンの .NET Framework バージョン 2.0、3.0、および 3.5 のプロファイラーを使用するには、COMPLUS_ProfAPI_ProfilerCompatibilitySetting 環境変数を設定する必要があります。  
   
 ## <a name="environment-variable-scope"></a>環境変数名のスコープ  
  COR_ENABLE_PROFILING 環境変数と COR_PROFILER 環境変数をどのように設定するかによって、これらの変数が影響を及ぼすスコープが決定します。 これらの変数は、次のいずれかの方法で設定できます。  

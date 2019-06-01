@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 08a13a57-dc49-488d-b937-31e3051fda97
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8bb5d93c91de857ebbee63009cad73fba7e1d284
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3ea65c06871d9762fa6daac229a568594b4c4479
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61758250"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457477"
 ---
 # <a name="profiling-global-static-functions"></a>グローバル静的関数のプロファイル
 このセクションでは、プロファイル API で使用されるアンマネージ API 関数について説明します。  
@@ -35,13 +35,13 @@ ms.locfileid: "61758250"
  使用される代替 ID に、関数の指定した id 再割り当てされることをプロファイラーに通知、 [FunctionEnter2](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)、 [FunctionLeave2](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)、および[FunctionTailcall2](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)その関数のコールバック。 プロファイラーがその関数のコールバックを受信するかどうかを指定するができます。  
   
  [FunctionEnter2 関数](../../../../docs/framework/unmanaged-api/profiling/functionenter2-function.md)  
- コントロールは、関数に渡されると、フレームと関数の引数はスタックに関する情報を提供をプロファイラーに通知します。 非推奨、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。  
+ コントロールは、関数に渡されると、フレームと関数の引数はスタックに関する情報を提供をプロファイラーに通知します。 .NET Framework 4 では、非推奨とされます。  
   
  [FunctionLeave2 関数](../../../../docs/framework/unmanaged-api/profiling/functionleave2-function.md)  
- プロファイラーに通知関数が呼び出し元に戻るには、し、スタック フレームと関数の戻り値に関する情報を提供します。 非推奨、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。  
+ プロファイラーに通知関数が呼び出し元に戻るには、し、スタック フレームと関数の戻り値に関する情報を提供します。 .NET Framework 4 では、非推奨とされます。  
   
  [FunctionTailcall2 関数](../../../../docs/framework/unmanaged-api/profiling/functiontailcall2-function.md)  
- 現在実行中の関数が別の関数の末尾呼び出しを実行しようし、スタック フレームに関する情報を提供しますをプロファイラーに通知します。 非推奨、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。  
+ 現在実行中の関数が別の関数の末尾呼び出しを実行しようし、スタック フレームに関する情報を提供しますをプロファイラーに通知します。 .NET Framework 4 では、非推奨とされます。  
   
  [StackSnapshotCallback 関数](../../../../docs/framework/unmanaged-api/profiling/stacksnapshotcallback-function.md)  
  によって開始されるスタック ウォーク中にスタックの各マネージ フレームとフレームの非管理対象の各実行に関する情報を使用してプロファイラーを提供、 [icorprofilerinfo 2::dostacksnapshot](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo2-dostacksnapshot-method.md)メソッド。  

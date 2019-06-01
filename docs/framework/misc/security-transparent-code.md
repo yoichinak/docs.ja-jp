@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 5cb528bbb4f85cd4502b4e2efabbcf592ac6bd0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868746"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456502"
 ---
 # <a name="security-transparent-code"></a>透過的セキュリティ コード
 
@@ -59,14 +59,14 @@ ms.locfileid: "61868746"
 
 レベルは次のとおりです。
 
-- レベル 2 (<xref:System.Security.SecurityRuleSet.Level2>) – [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] の透過性規則。
+- レベル 2 (<xref:System.Security.SecurityRuleSet.Level2>) – .NET Framework 4 の透過性規則。
 
 - レベル 1 (<xref:System.Security.SecurityRuleSet.Level1>) – .NET Framework 2.0 の透過性規則。
 
 2 つの透過度の主な相違点は、レベル 1 はアセンブリの外部からの呼び出しに透過性規則を適用せず、互換性を確保するためにのみ使用されるという点です。
 
 > [!IMPORTANT]
-> レベル 1 の透過性は、互換性を確保するためにのみ指定してください。つまり、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を使用するか透過性モデルを使用しない .NET Framework 3.5 以前で開発されたコードに対してのみレベル 1 を指定してください。 たとえば、部分的に信頼された呼び出し元からの呼び出しを許可する .NET Framework 2.0 アセンブリ (APTCA) にはレベル 1 の透過性を使用します。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 用に開発されたコードには、常にレベル 2 の透過性を使用します。
+> レベル 1 の透過性は、互換性を確保するためにのみ指定してください。つまり、<xref:System.Security.AllowPartiallyTrustedCallersAttribute> 属性を使用するか透過性モデルを使用しない .NET Framework 3.5 以前で開発されたコードに対してのみレベル 1 を指定してください。 たとえば、部分的に信頼された呼び出し元からの呼び出しを許可する .NET Framework 2.0 アセンブリ (APTCA) にはレベル 1 の透過性を使用します。 .NET Framework 4 用に開発されたコード、レベル 2 の透過性を常に使用します。
 
 ### <a name="level-2-transparency"></a>レベル 2 の透過性
 
@@ -114,7 +114,7 @@ ms.locfileid: "61868746"
 
 ## <a name="transparency-enforcement"></a>透過性の適用
 
-透過性規則は、透過性が計算されるまで適用されません。 このとき、透過性規則に違反すると、<xref:System.InvalidOperationException> がスローされます。 透過性が計算されるタイミングは、複数の要因によって左右されるので予測できません。 できる限り遅く計算されます。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] では、アセンブリ レベルの透過性の計算は、.NET Framework 2.0 よりも早く実行されます。 保証されるのは、必要になるまでに透過性の計算が行われるということだけです。 これは、メソッドがコンパイルされてメソッドのエラーが検出される時点が JIT コンパイラで変更される方法に似ています。 透過性の計算は、コードに透過性エラーがない場合は目に見えません。
+透過性規則は、透過性が計算されるまで適用されません。 このとき、透過性規則に違反すると、<xref:System.InvalidOperationException> がスローされます。 透過性が計算されるタイミングは、複数の要因によって左右されるので予測できません。 できる限り遅く計算されます。 .NET Framework 4 のアセンブリ レベルの透過性の計算は、.NET Framework 2.0 よりも早くに発生します。 保証されるのは、必要になるまでに透過性の計算が行われるということだけです。 これは、メソッドがコンパイルされてメソッドのエラーが検出される時点が JIT コンパイラで変更される方法に似ています。 透過性の計算は、コードに透過性エラーがない場合は目に見えません。
 
 ## <a name="see-also"></a>関連項目
 

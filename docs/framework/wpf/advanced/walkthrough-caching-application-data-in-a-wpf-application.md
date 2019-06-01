@@ -9,12 +9,12 @@ helpviewer_keywords:
 - caching [.NET Framework]
 - caching [WPF]
 ms.assetid: dac2c9ce-042b-4d23-91eb-28f584415cef
-ms.openlocfilehash: d8f37431279cc22b8e9c131f860b5de82f35af2e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4ee973eb5a81a6428ee5a5fcfc00e28425ff2a44
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591206"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457515"
 ---
 # <a name="walkthrough-caching-application-data-in-a-wpf-application"></a>チュートリアル: WPF アプリケーション内のアプリケーション データのキャッシュ
 キャッシュを使用すると、メモリにデータを格納して高速にアクセスできます。 アプリケーションからそのデータに再アクセスするときに、元のソースからではなく、キャッシュからデータを取得できます。 そのため、パフォーマンスとスケーラビリティが向上します。 また、データ ソースが一時的に使用できない場合でも、キャッシュのデータを使用できます。
@@ -22,7 +22,7 @@ ms.locfileid: "65591206"
  .NET Framework は、.NET Framework アプリケーションでキャッシュを使用するためのクラスを提供します。 これらのクラスにある、<xref:System.Runtime.Caching>名前空間。
 
 > [!NOTE]
->  <xref:System.Runtime.Caching>名前空間はの新機能、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。 この名前空間は、キャッシュは、すべての .NET Framework アプリケーションで使用します。 以前のバージョンの .NET Framework では、キャッシュでのみ使用できますが、<xref:System.Web>名前空間と、このため ASP.NET クラスへの依存関係が必要です。
+>  <xref:System.Runtime.Caching>名前空間は、.NET Framework 4 の新機能です。 この名前空間は、キャッシュは、すべての .NET Framework アプリケーションで使用します。 以前のバージョンの .NET Framework では、キャッシュでのみ使用できますが、<xref:System.Web>名前空間と、このため ASP.NET クラスへの依存関係が必要です。
 
  このチュートリアルは、キャッシュの一部として .NET Framework で提供される機能を使用する方法を示します、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 チュートリアルでは、テキスト ファイルの内容をキャッシュします。
 
@@ -30,7 +30,7 @@ ms.locfileid: "65591206"
 
 - WPF アプリケーション プロジェクトを作成します。
 
-- 参照を追加、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。
+- .NET Framework 4 への参照を追加します。
 
 - キャッシュを初期化しています。
 
@@ -62,12 +62,12 @@ ms.locfileid: "65591206"
 
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。
 
-3. **インストールされたテンプレート**、使用するプログラミング言語を選択します (**Visual Basic**または**Visual c#**)。
+3. **インストールされたテンプレート**、使用するプログラミング言語を選択します (**Visual Basic**または**Visual c#** )。
 
 4. **新しいプロジェクト**ダイアログ ボックスで、 **WPF アプリケーション**します。
 
     > [!NOTE]
-    >  表示されない場合、 **WPF アプリケーション**テンプレート、WPF をサポートする .NET Framework のバージョンをターゲットにするかどうかを確認します。 **新しいプロジェクト**ダイアログ ボックスで、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]一覧から。
+    >  表示されない場合、 **WPF アプリケーション**テンプレート、WPF をサポートする .NET Framework のバージョンをターゲットにするかどうかを確認します。 **新しいプロジェクト**ダイアログ ボックスで、一覧から .NET Framework 4 を選択します。
 
 5. **名前**テキスト ボックスに、プロジェクトの名前を入力します。 たとえば、入力**WPFCaching**します。
 
@@ -78,7 +78,7 @@ ms.locfileid: "65591206"
      WPF デザイナーで開きます**デザイン**を表示し、MainWindow.xaml ファイルを表示します。 Visual Studio によって作成、 **My Project**フォルダーや、Application.xaml ファイル MainWindow.xaml ファイル。
 
 ## <a name="targeting-the-net-framework-and-adding-a-reference-to-the-caching-assemblies"></a>.NET Framework を対象として、キャッシュのアセンブリへの参照を追加します。
- 既定では、WPF アプリケーションのターゲットによって、[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]します。 使用する、 <xref:System.Runtime.Caching> WPF アプリケーションで名前空間は、アプリケーションを対象にする、 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)] (いない、 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 名前空間への参照を含める必要があります。
+ 既定では、WPF アプリケーションのターゲットによって、[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]します。 使用する、 <xref:System.Runtime.Caching> WPF アプリケーションでは、アプリケーションの名前空間は、.NET Framework 4 をターゲットする必要があります (いない、 [!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)]) 名前空間への参照を含める必要があります。
 
  したがって、次の手順が、.NET Framework のターゲットを変更しへの参照を追加するは、<xref:System.Runtime.Caching>名前空間。
 
@@ -97,7 +97,7 @@ ms.locfileid: "65591206"
 
      **コンパイラの詳細設定** ダイアログ ボックスが表示されます。
 
-4. **ターゲット フレームワーク (すべての構成)** 一覧で、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。 (選択しないでください[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])。
+4. **ターゲット フレームワーク (すべての構成)** 一覧で、.NET Framework 4 を選択します。 (選択しないでください[!INCLUDE[net_client_v40_long](../../../../includes/net-client-v40-long-md.md)])。
 
 5. **[OK]** をクリックします。
 
@@ -121,7 +121,7 @@ ms.locfileid: "65591206"
 
 2. **[アプリケーション]** タブをクリックします。
 
-3. **ターゲット フレームワーク**一覧で、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。 (選択しないでください **.NET Framework 4 Client Profile**)。
+3. **ターゲット フレームワーク**一覧で、.NET Framework 4 を選択します。 (選択しないでください **.NET Framework 4 Client Profile**)。
 
 4. 次の手順では、キャッシュのアセンブリへの参照を追加します。
 

@@ -19,12 +19,12 @@ helpviewer_keywords:
 - Extensible Application Markup Language (see XAML)
 - attribute syntax [XAML]
 ms.assetid: a80db4cd-dd0f-479f-a45f-3740017c22e4
-ms.openlocfilehash: 403bd881f6e6349a91fc952a80441b0cec0c08fd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f03d9481a2af3edebe83df5b1b725b7290d30d00
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662249"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457542"
 ---
 # <a name="xaml-overview-wpf"></a>XAML の概要 (WPF)
 このトピックでは、XAML 言語の機能について説明し、記述する XAML を使用する方法を示して[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)]アプリケーション。 このトピックでは XAML を具体的には説明によって実装される[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。 XAML 自体よりも大きく、言語の概念は、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]します。  
@@ -135,7 +135,7 @@ ms.locfileid: "64662249"
   
 - **省略された StackPanel.Children プロパティ要素:** <xref:System.Windows.Controls.StackPanel>から派生した<xref:System.Windows.Controls.Panel>します。 <xref:System.Windows.Controls.Panel> 定義<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>としてその XAML コンテンツのプロパティ。  
   
-- **省略された UIElementCollection object 要素:**<xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>プロパティには、型<xref:System.Windows.Controls.UIElementCollection>、実装する<xref:System.Collections.IList>します。 コレクションの処理などの XAML のルールに基づいて、コレクションの要素タグを省略できます<xref:System.Collections.IList>します。 (この場合、<xref:System.Windows.Controls.UIElementCollection>実際にインスタンス化できないため、既定のコンス トラクターは公開されませんしているため、<xref:System.Windows.Controls.UIElementCollection>オブジェクトの要素をコメント アウトされた表示)。  
+- **省略された UIElementCollection object 要素:** <xref:System.Windows.Controls.Panel.Children%2A?displayProperty=nameWithType>プロパティには、型<xref:System.Windows.Controls.UIElementCollection>、実装する<xref:System.Collections.IList>します。 コレクションの処理などの XAML のルールに基づいて、コレクションの要素タグを省略できます<xref:System.Collections.IList>します。 (この場合、<xref:System.Windows.Controls.UIElementCollection>実際にインスタンス化できないため、既定のコンス トラクターは公開されませんしているため、<xref:System.Windows.Controls.UIElementCollection>オブジェクトの要素をコメント アウトされた表示)。  
   
 ```xaml  
 <StackPanel>  
@@ -307,7 +307,7 @@ ms.locfileid: "64662249"
 ## <a name="xaml-security"></a>XAML セキュリティ  
  XAML は、オブジェクトのインスタンス化と実行を直接表すマークアップ言語です。 そのため、対応する生成 (ネットワーク アクセス、ファイル システムの IO など) のシステム リソースと対話するのと同じ機能のある要素の XAML で作成したコードは。  
   
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] サポート、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]セキュリティ フレームワーク[!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]します。 つまり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]インターネット ゾーンで実行されているコンテンツが実行のアクセス許可を削減します。 "Loose XAML"(コンパイルされない XAML ページ XAML ビューアーでの読み込み時に解釈) と[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]このインターネット ゾーンでは、通常実行して、同じアクセス許可セットを使用します。  ただしに完全に信頼されたアプリケーションに読み込まれた XAML では、ホスト アプリケーションのようにシステム リソースに同じアクセス権があります。 詳細については、次を参照してください。 [WPF 部分信頼セキュリティ](../wpf-partial-trust-security.md)します。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] .NET Framework 4 のセキュリティ フレームワークをサポートしている[!INCLUDE[TLA#tla_cas](../../../../includes/tlasharptla-cas-md.md)]します。 つまり、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]インターネット ゾーンで実行されているコンテンツが実行のアクセス許可を削減します。 "Loose XAML"(コンパイルされない XAML ページ XAML ビューアーでの読み込み時に解釈) と[!INCLUDE[TLA#tla_xbap](../../../../includes/tlasharptla-xbap-md.md)]このインターネット ゾーンでは、通常実行して、同じアクセス許可セットを使用します。  ただしに完全に信頼されたアプリケーションに読み込まれた XAML では、ホスト アプリケーションのようにシステム リソースに同じアクセス権があります。 詳細については、次を参照してください。 [WPF 部分信頼セキュリティ](../wpf-partial-trust-security.md)します。  
   
 <a name="loading_xaml_from_code"></a>   
 ## <a name="loading-xaml-from-code"></a>コードから XAML の読み込み  

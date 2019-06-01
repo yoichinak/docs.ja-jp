@@ -9,12 +9,12 @@ helpviewer_keywords:
 - ', '
 - flow documents [WPF]
 ms.assetid: ef236a50-d44f-43c8-ba7c-82b0c733c0b7
-ms.openlocfilehash: 082f5bf9f8cdd8e5f44aa74e7b34e03637b5c579
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 4b74ab89837592de2de6cfa43d9efb1ed0f63d69
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663367"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457445"
 ---
 # <a name="flow-document-overview"></a>フロー ドキュメントの概要
 フロー ドキュメントは、表示と読みやすさを最適化するように設計されたドキュメントです。 フロー ドキュメントは、1 つの定義済みのレイアウトに設定するのではなく、ウィンドウのサイズ、デバイスの解像度、省略可能なユーザー設定など、ランタイム変数に基づいてコンテンツを動的に調整したりリフローしたりします。 また、フロー ドキュメントは、改ページ位置の自動修正や列などの高度なドキュメント機能を提供します。 ここでは、フロー ドキュメントの概要およびフロー ドキュメントの作成方法について説明します。  
@@ -152,7 +152,7 @@ ms.locfileid: "64663367"
   
  [!code-xaml[FlowOvwSnippets_snip#RunExample1](~/samples/snippets/csharp/VS_Snippets_Wpf/FlowOvwSnippets_snip/CS/RunSnippetsExample.xaml#runexample1)]  
   
- **注:** 以降では、 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]、<xref:System.Windows.Documents.Run.Text%2A>のプロパティ、<xref:System.Windows.Documents.Run>オブジェクトが依存関係プロパティ。 バインドすることができます、<xref:System.Windows.Documents.Run.Text%2A>プロパティをデータ ソースなど、<xref:System.Windows.Controls.TextBlock>します。 <xref:System.Windows.Documents.Run.Text%2A>プロパティは、一方向のバインドを完全にサポートします。 <xref:System.Windows.Documents.Run.Text%2A>以外のプロパティが双方向のバインドにもサポートしています<xref:System.Windows.Controls.RichTextBox>します。 例については、「<xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>」を参照してください。  
+ **注:** 以降、.NET Framework 4 では、<xref:System.Windows.Documents.Run.Text%2A>のプロパティ、<xref:System.Windows.Documents.Run>オブジェクトが依存関係プロパティ。 バインドすることができます、<xref:System.Windows.Documents.Run.Text%2A>プロパティをデータ ソースなど、<xref:System.Windows.Controls.TextBlock>します。 <xref:System.Windows.Documents.Run.Text%2A>プロパティは、一方向のバインドを完全にサポートします。 <xref:System.Windows.Documents.Run.Text%2A>以外のプロパティが双方向のバインドにもサポートしています<xref:System.Windows.Controls.RichTextBox>します。 例については、「<xref:System.Windows.Documents.Run.Text%2A?displayProperty=nameWithType>」を参照してください。  
   
  **Span**  
   

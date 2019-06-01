@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c8508b4ba7d6ac6e25fdcc70fb8162b8908e8fa
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592857"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456661"
 ---
 # <a name="code-access-security"></a>コード アクセス セキュリティ
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -67,7 +67,7 @@ ms.locfileid: "64592857"
 |タイトル|説明|  
 |-----------|-----------------|  
 |[コード アクセス セキュリティの基礎](../../../docs/framework/misc/code-access-security-basics.md)|コード アクセス セキュリティとその最も一般的な使用方法について説明します。|  
-|[透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] のセキュリティ透過モデルについて説明します。|  
+|[透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)|.NET Framework 4 におけるセキュリティ透過性モデルをについて説明します。|  
 |[部分信頼コードからのライブラリの使用](../../../docs/framework/misc/using-libraries-from-partially-trusted-code.md)|ライブラリを有効にしてアンマネージ コードと共に使用できるようにする方法と、アンマネージ コードからライブラリを使用する方法について説明します。|  
 |[セキュリティの基本概念](../../../docs/standard/security/key-security-concepts.md)|.NET Framework セキュリティ システムで使用されるさまざまな重要用語と概念について、概要を示します。|  
 |[ロール ベースのセキュリティ](../../../docs/standard/security/role-based-security.md)|ロールに基づいて、セキュリティを組み込む方法について説明します。|  

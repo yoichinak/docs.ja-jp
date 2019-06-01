@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9c3970823557d1d1b24405fd4b390b81006533a9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868902"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456572"
 ---
 # <a name="security-transparent-code-level-2"></a>透過的セキュリティ コード、レベル 2
 
@@ -58,7 +58,7 @@ ms.locfileid: "61868902"
 
 ## <a name="usage-examples-and-behaviors"></a>使用例と動作
 
-[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] の規則 (レベル 2 の透過性) を指定するには、アセンブリに対して次の注釈を使用します。
+.NET Framework 4 の規則 (レベル 2 の透過性) を指定するには、アセンブリの次の注釈を使用します。
 
 ```csharp
 [assembly: SecurityRules(SecurityRuleSet.Level2)]
@@ -70,7 +70,7 @@ ms.locfileid: "61868902"
 [assembly: SecurityRules(SecurityRuleSet.Level1)]
 ```
 
-アセンブリに注釈を付けない場合は、既定で、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] の規則が使用されます。 ただし、推奨されるベスト プラクティスは、使用する、<xref:System.Security.SecurityRulesAttribute>によっては、既定の属性の代わりにします。
+アセンブリ、注釈を付けない場合、.NET Framework 4 の規則が既定で使用されます。 ただし、推奨されるベスト プラクティスは、使用する、<xref:System.Security.SecurityRulesAttribute>によっては、既定の属性の代わりにします。
 
 ### <a name="assembly-wide-annotation"></a>アセンブリ全体の注釈
 

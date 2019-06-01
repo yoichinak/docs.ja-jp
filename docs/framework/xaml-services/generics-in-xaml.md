@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - generics [XAML Services]
 ms.assetid: 835bfed7-585c-4216-ae67-b674edab8b92
-ms.openlocfilehash: 9263edf18872f510f5f2f4e3e9cb793e45c5d0b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ca0c1b466f5a89730c72f32321394ccfc6d9c7a2
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61954103"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457360"
 ---
 # <a name="generics-in-xaml"></a>XAML のジェネリック
 System.Xaml に実装されている .NET Framework XAML サービスでは、CLR のジェネリック型を使用するためのサポートを提供します。 このサポートには、引数の型としてジェネリックの制約を指定して、適切なを呼び出すことによって、制約を適用するが含まれます。`Add`メソッドのジェネリック コレクションの場合。 このトピックを使用して、XAML のジェネリック型の参照の側面について説明します。  
@@ -38,7 +38,7 @@ System.Xaml に実装されている .NET Framework XAML サービスでは、CL
   
  ジェネリックの使用をサポートするために可能な回避策を含める、ジェネリック型を返すことができるカスタム マークアップ拡張機能を定義するか、ラップを提供するクラスのジェネリック型から派生しますが、平坦化して、独自のクラス定義内でジェネリック制約を定義します。  
   
- WPF とを対象とする[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]、と共に XAML 2009 の機能を使用する`x:TypeArguments`、loose XAML (XAML マークアップ コンパイルされていない) に対してのみです。 WPF 向けにマークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 のキーワードと機能をサポートしていません。  
+ WPF と .NET Framework 4 を対象とすることができます、と共に XAML 2009 の機能を使用して`x:TypeArguments`、loose XAML (XAML マークアップ コンパイルされていない) に対してのみです。 WPF 向けにマークアップ コンパイルされた XAML、および XAML の BAML 形式は、現在、XAML 2009 のキーワードと機能をサポートしていません。  
   
  カスタムの Windows Workflow Foundation ワークフロー [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] XAML のジェネリックの使用法をサポートしていません。  
   

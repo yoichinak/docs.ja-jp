@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f91fc5f7-de5a-4f23-b6ac-f450e63c662e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7af34cf4bd3a2367eaf320990dbbc24f4e7a8bbf
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 088ca6dd8973a626b1f028c638e60bf995af1e65
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64660139"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457316"
 ---
 # <a name="enabling-jit-attach-debugging"></a>JIT アタッチ デバッグの有効化
 JIT アタッチ デバッグとは、エラーが発生したとき、または特定のメソッドまたは関数によってトリガーすることで、プロセスにデバッガーをアタッチすることを表すために使用される語句です。  
@@ -33,7 +33,7 @@ JIT アタッチ デバッグとは、エラーが発生したとき、または
   
 - [DebugBreak](https://go.microsoft.com/fwlink/?LinkId=182106) 関数 (Win32)。  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] より前のバージョンでは、.NET Framework がネイティブ デバッガーとマネージド デバッガーの動作を制御するために別々のレジストリ キーを提供していました。 以降では、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]コントロールが 1 つのレジストリ キーの下に統合されます。Hkey_local_machine \software\microsoft\windows \current Version\AeDebug します。 このキーに設定できる値により、デバッガーを呼び出すかどうか、呼び出す場合は、ユーザーの操作を必要とするダイアログ ボックスによって呼び出すかどうかが決まります。 このレジストリ キーの設定方法の詳細については、次を参照してください。[自動デバッグ構成](https://go.microsoft.com/fwlink/?LinkId=181767)します。  
+ [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] より前のバージョンでは、.NET Framework がネイティブ デバッガーとマネージド デバッガーの動作を制御するために別々のレジストリ キーを提供していました。 以降、.NET Framework 4 では、コントロールが 1 つのレジストリ キーの下で統合します。Hkey_local_machine \software\microsoft\windows \current Version\AeDebug します。 このキーに設定できる値により、デバッガーを呼び出すかどうか、呼び出す場合は、ユーザーの操作を必要とするダイアログ ボックスによって呼び出すかどうかが決まります。 このレジストリ キーの設定方法の詳細については、次を参照してください。[自動デバッグ構成](https://go.microsoft.com/fwlink/?LinkId=181767)します。  
   
 ## <a name="see-also"></a>関連項目
 

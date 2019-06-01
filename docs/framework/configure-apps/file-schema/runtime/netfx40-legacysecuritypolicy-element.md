@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 07132b9c-4a72-4710-99d7-e702405e02d4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 20a0ca8560fcd5d7f9d171df3e3b4c3f42e78641
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 848c56773c0ff2986f0bec3e82a08a3d0dd35434
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674182"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456470"
 ---
 # <a name="netfx40legacysecuritypolicy-element"></a>\<NetFx40_LegacySecurityPolicy > 要素
 ランタイムがレガシ コード アクセス セキュリティ (CAS) ポリシーを使用するかどうかを指定します。  
@@ -57,7 +57,7 @@ ms.locfileid: "61674182"
 ## <a name="remarks"></a>Remarks  
  .NET Framework version 3.5 以前のバージョンで、CAS ポリシーは常に影響します。 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、CAS ポリシーを有効にする必要があります。  
   
- CAS ポリシーは、バージョン固有です。 .NET Framework の以前のバージョンに存在するカスタムの CAS ポリシーを再度指定する必要があります、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]します。  
+ CAS ポリシーは、バージョン固有です。 .NET Framework の以前のバージョンに存在するカスタムの CAS ポリシーは、.NET Framework 4 で再度指定する必要があります。  
   
  適用する、`<NetFx40_LegacySecurityPolicy>`要素を[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]アセンブリには影響しません[セキュリティ透過的なコード](../../../../../docs/framework/misc/security-transparent-code.md); 透過性規則が適用されます。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "61674182"
 >  適用、`<NetFx40_LegacySecurityPolicy>`要素により、大幅なパフォーマンスの低下によって作成されたネイティブ イメージ アセンブリ、[ネイティブ イメージ ジェネレーター (Ngen.exe)](../../../../../docs/framework/tools/ngen-exe-native-image-generator.md)でインストールされていない、[グローバル アセンブリ キャッシュ](../../../../../docs/framework/app-domains/gac.md). パフォーマンスの低下は、ランタイム属性が適用されるときに、ネイティブ イメージとして、アセンブリを読み込むことができないによる、として、just-in-time でアセンブリが読み込まれる結果的にします。  
   
 > [!NOTE]
->  ターゲット .NET Framework のバージョンよりも前に指定するかどうか、 [!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)] Visual Studio プロジェクトのプロジェクト設定、CAS ポリシーが有効にする、そのバージョンの指定した任意のカスタムの CAS ポリシーを含むです。 New を使用できなくが、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]型とメンバー。 使用して、.NET Framework の以前のバージョンを指定することも、 [ \<supportedRuntime > 要素](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)でスタートアップ設定スキーマで、[アプリケーション構成ファイル](../../../../../docs/framework/configure-apps/index.md)します。  
+>  Visual Studio プロジェクトのプロジェクトの設定で .NET Framework 4 より前であるターゲット .NET Framework のバージョンを指定する場合の CA ポリシーが有効に、そのバージョンの指定した任意のカスタムの CAS ポリシーを含みます。 ただし、.NET Framework 4 の新しい型とメンバーを使用することはできません。 使用して、.NET Framework の以前のバージョンを指定することも、 [ \<supportedRuntime > 要素](../../../../../docs/framework/configure-apps/file-schema/startup/supportedruntime-element.md)でスタートアップ設定スキーマで、[アプリケーション構成ファイル](../../../../../docs/framework/configure-apps/index.md)します。  
   
 > [!NOTE]
 >  構成ファイルの構文は、大文字小文字を区別します。 構文と例のセクションで指定された構文を使用する必要があります。  

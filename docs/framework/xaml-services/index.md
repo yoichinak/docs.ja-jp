@@ -6,15 +6,15 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: 9c75f6add000b2055bcbf13a7fcdf635bd707947
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663235"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457400"
 ---
 # <a name="xaml-services"></a>XAML サービス
-このトピックでは、サービスの .NET Framework XAML と呼ばれるテクノロジ一連の機能について説明します。 サービスと記述された Api の大半がで導入された、System.Xaml アセンブリには、アセンブリ内にある、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] .NET core アセンブリのセット。 サービスには、リーダーとライターは、スキーマのクラスおよびスキーマのサポート、ファクトリ クラス、XAML 言語の組み込みサポート、およびその他の XAML 言語機能の属性を設定します。  
+このトピックでは、サービスの .NET Framework XAML と呼ばれるテクノロジ一連の機能について説明します。 サービスと記述された Api の大半は、.NET core アセンブリの一連の .NET Framework 4 で導入されたアセンブリである、System.Xaml アセンブリに配置されます。 サービスには、リーダーとライターは、スキーマのクラスおよびスキーマのサポート、ファクトリ クラス、XAML 言語の組み込みサポート、およびその他の XAML 言語機能の属性を設定します。  
   
 ## <a name="about-this-documentation"></a>このドキュメントについて  
  .NET Framework XAML サービスの概念に関するドキュメントでは、XAML 言語とその可能性がありますに適用する方法、特定のフレームワークなどの経験があると想定[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Workflow Foundation、または特定のテクノロジの機能領域で、たとえば、ビルドのカスタマイズ機能<xref:Microsoft.Build.Framework.XamlTypes>します。 このドキュメントは、マークアップ言語、XAML 構文の用語、またはその他の入門資料として XAML の基本を説明しません。 代わりに、このドキュメントは、具体的には、System.Xaml アセンブリ ライブラリで有効になっている .NET Framework XAML サービスの使用に焦点を当てています。 これらの Api のほとんどは、XAML 言語の統合と拡張のシナリオです。 次のいずれかがあります。  

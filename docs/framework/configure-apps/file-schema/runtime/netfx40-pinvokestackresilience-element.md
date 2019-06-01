@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 725bd715f6e70dff08929e58d588a3d8561d5011
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61674065"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456387"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 要素
 ランタイムが実行時の不適切なプラットフォーム呼び出し宣言を自動的に修正するかどうかを指定します。これにより、マネージド コードとアンマネージド コード間の遷移が遅くなります。  
@@ -56,7 +56,7 @@ ms.locfileid: "61674065"
 ## <a name="remarks"></a>Remarks  
  この要素では、高速な相互運用マーシャ リングの実行時の回復性に対して不適切なプラットフォーム呼び出し宣言を犠牲にすることができます。  
   
- 以降では、[!INCLUDE[net_v40_short](../../../../../includes/net-v40-short-md.md)]アーキテクチャをマーシャ リングの効率化された相互運用機能がマネージ コードからアンマネージ コードに遷移の大幅なパフォーマンス向上を提供します。 .NET Framework の以前のバージョンでは、マーシャ リング検出レイヤーの不適切なプラットフォームが 32 ビット プラットフォーム上で宣言を起動し、スタックを自動的に固定します。 新しいマーシャ リング アーキテクチャは、この手順を排除します。 その結果、遷移は非常に高速が不適切なプラットフォーム呼び出し宣言プログラム エラーが発生することができます。  
+ 以降、.NET Framework 4 では、合理化された相互運用マーシャ リング アーキテクチャは、マネージ コードからアンマネージ コードに遷移の大幅なパフォーマンス向上を提供します。 .NET Framework の以前のバージョンでは、マーシャ リング検出レイヤーの不適切なプラットフォームが 32 ビット プラットフォーム上で宣言を起動し、スタックを自動的に固定します。 新しいマーシャ リング アーキテクチャは、この手順を排除します。 その結果、遷移は非常に高速が不適切なプラットフォーム呼び出し宣言プログラム エラーが発生することができます。  
   
  開発中に正しくない宣言を検出するためにを Visual Studio のデバッグ エクスペリエンスが改善されました。 [PInvokeStackImbalance](../../../../../docs/framework/debug-trace-profile/pinvokestackimbalance-mda.md)マネージ デバッグ アシスタント (MDA) は、アタッチされたデバッガーでアプリケーションを実行しているときに、宣言を呼び出すの不適切なプラットフォームに通知します。  
   

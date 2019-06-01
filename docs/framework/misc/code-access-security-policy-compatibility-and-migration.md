@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6d9281e52de43391a92262f85084715ccabd5515
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868915"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456639"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>コード アクセス セキュリティ ポリシーの互換性と移行
 
@@ -22,7 +22,7 @@ ms.locfileid: "61868915"
 
 以下のいずれかの方法で警告やエラーを回避できます。
 
-- [移行](#migration)を[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]廃止された呼び出しに置換します。
+- [移行](#migration)廃止された呼び出し、.NET Framework 4 の置換します。
 
    \- または -
 
@@ -114,7 +114,7 @@ ms.locfileid: "61868915"
 
 ### <a name="determining-an-assemblys-trust-level"></a>アセンブリの信頼レベルの判別
 
-CAS ポリシーは多くの場合、アセンブリ、アプリケーション ドメインのアクセス許可セット、または信頼レベルを判断するために使用されます。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] では、セキュリティ ポリシーを解決する必要のない次の便利なプロパティが公開されています。
+CAS ポリシーは多くの場合、アセンブリ、アプリケーション ドメインのアクセス許可セット、または信頼レベルを判断するために使用されます。 .NET Framework 4 では、セキュリティ ポリシーを解決する必要のない次の便利なプロパティを公開します。
 
 - <xref:System.Reflection.Assembly.PermissionSet%2A?displayProperty=nameWithType>
 
@@ -126,15 +126,15 @@ CAS ポリシーは多くの場合、アセンブリ、アプリケーション 
 
 ### <a name="application-domain-sandboxing"></a>アプリケーション ドメインのサンドボックス化
 
-通常 <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> メソッドは、アプリケーション ドメイン内のアセンブリをサンド ボックス化するために使用します。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]で公開されるメンバーを使用する必要はありませんが<xref:System.Security.Policy.PolicyLevel>この目的のためです。 詳細については、「[方法 :Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 (方法: サンドボックスで部分信頼コードを実行する) を参照してください。
+通常 <xref:System.AppDomain.SetAppDomainPolicy%2A?displayProperty=nameWithType> メソッドは、アプリケーション ドメイン内のアセンブリをサンド ボックス化するために使用します。 .NET Framework 4 で公開されるメンバーを使用する必要はありませんが<xref:System.Security.Policy.PolicyLevel>この目的のためです。 詳細については、「[方法 :Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 (方法: サンドボックスで部分信頼コードを実行する) を参照してください。
 
 ### <a name="determining-a-safe-or-reasonable-permission-set-for-partially-trusted-code"></a>部分的に信頼できるコードに対する安全なまたは適切なアクセス許可セットの決定
 
-多くの場合ホストでは、ホストされているコードをサンドボックス化するための適切なアクセス許可を判別する必要があります。 前に、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]、CAS ポリシーでこれを行う方法を提供する、<xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>メソッド。 代わりに、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]提供、<xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>安全な標準的な権限が指定された証拠のセットを返すメソッド。
+多くの場合ホストでは、ホストされているコードをサンドボックス化するための適切なアクセス許可を判別する必要があります。 CAS ポリシーがこれを行う方法を提供する、.NET Framework 4 の前に、<xref:System.Security.SecurityManager.ResolvePolicy%2A?displayProperty=nameWithType>メソッド。 代わりに、.NET Framework 4 の提供、<xref:System.Security.SecurityManager.GetStandardSandbox%2A?displayProperty=nameWithType>安全な標準的な権限が指定された証拠のセットを返すメソッド。
 
 ### <a name="non-sandboxing-scenarios-overloads-for-assembly-loads"></a>サンド ボックス化以外のシナリオ:アセンブリ読み込みのオーバー ロード
 
-アセンブリ読み込みオーバーロードを使用する目的は、アセンブリのサンドボックス化の代わりに、アセンブリ読み込みオーバーロードでないと使用できないパラメーターを指定することです。 以降では、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]を必要としないアセンブリ読み込みオーバー ロードを<xref:System.Security.Policy.Evidence?displayProperty=nameWithType>オブジェクトをパラメーターとして<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>、このシナリオを実現します。
+アセンブリ読み込みオーバーロードを使用する目的は、アセンブリのサンドボックス化の代わりに、アセンブリ読み込みオーバーロードでないと使用できないパラメーターを指定することです。 以降、.NET Framework 4 では、アセンブリの読み込みを必要としないオーバー ロードを<xref:System.Security.Policy.Evidence?displayProperty=nameWithType>オブジェクトをパラメーターとして<xref:System.AppDomain.ExecuteAssembly%28System.String%2CSystem.String%5B%5D%2CSystem.Byte%5B%5D%2CSystem.Configuration.Assemblies.AssemblyHashAlgorithm%29?displayProperty=nameWithType>、このシナリオを実現します。
 
 アセンブリをサンドボックス化する場合には、<xref:System.AppDomain.CreateDomain%28System.String%2CSystem.Security.Policy.Evidence%2CSystem.AppDomainSetup%2CSystem.Security.PermissionSet%2CSystem.Security.Policy.StrongName%5B%5D%29?displayProperty=nameWithType> オーバー ロードを使用します。
 

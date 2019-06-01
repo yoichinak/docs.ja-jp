@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50234122aa4ba73b56d1a40cca2db9c9c7a30f50
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7308f37ee96b4efe83aeb198586f7364fdcf9ccc
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616261"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457154"
 ---
 # <a name="cordebuginterfaceversion-enumeration"></a>CorDebugInterfaceVersion 列挙型
 インターフェイス、つまり .NET Framework のバージョン、またはインターフェイスが導入された .NET Framework のバージョンを指定します。  
@@ -235,10 +235,10 @@ typedef enum CorDebugInterfaceVersion {
   
 - .NET Framework バージョン 3.0 および 3.5 は既存の .NET Framework 2.0 インターフェイスを使用しており、新しいインターフェイスは導入していません。  
   
-- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]インターフェイス バージョンの混在が導入されています。 たとえば、`ICorDebugThread3` および `ICorDebugThread4` は、`ICorDebugThread` インターフェイスの 3 番目および 4 番目のバージョンとして示されます。 [!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]の最初のバージョンが導入されても、`ICorDebugStackWalk`インターフェイスとの 2 番目のバージョン、`ICorDebugNativeFrame`インターフェイス (`ICorDebugNativeFrame2`)。  
+- [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]インターフェイス バージョンの混在が導入されています。 たとえば、`ICorDebugThread3` および `ICorDebugThread4` は、`ICorDebugThread` インターフェイスの 3 番目および 4 番目のバージョンとして示されます。 .NET Framework 4 は、の最初のバージョンも導入されています。、`ICorDebugStackWalk`インターフェイスとの 2 番目のバージョン、`ICorDebugNativeFrame`インターフェイス (`ICorDebugNativeFrame2`)。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

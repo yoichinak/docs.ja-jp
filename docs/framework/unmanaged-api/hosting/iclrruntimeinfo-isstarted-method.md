@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1297c84acadf0a53b418b06afe806237d374ee25
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b09c509c3e0ba941a34f60ff522117ff30d83caf
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993162"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457381"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted メソッド
 ランタイムが開始されているかどうかを示します (つまり、かどうか、 [iclrruntimehost::start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)が呼び出され、成功しました)。  
@@ -49,10 +49,10 @@ HRESULT IsStarted(
 |E_NOTIMPL|共通言語ランタイム (CLR) バージョンは CLR のバージョンよりも前、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]します。|  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドでは機能しません CLR のバージョンで CLR のバージョンよりも前、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。  
+ このメソッドは使えません CLR のバージョンと .NET Framework 4 で CLR のバージョンよりも前。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

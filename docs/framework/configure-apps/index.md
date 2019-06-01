@@ -24,12 +24,12 @@ helpviewer_keywords:
 - configuration files [.NET Framework], machine
 - configuration files [.NET Framework], format
 ms.assetid: 86bd26d3-737e-4484-9782-19b17f34cd1f
-ms.openlocfilehash: 972efa150d560e74f0e7daadf18688ac12b9fbf3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a8f5c6f6aba9ec4ad627fcd4d3b3caaff810ee72
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583640"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456203"
 ---
 # <a name="configuring-apps-by-using-configuration-files"></a>構成ファイルを使用してアプリを構成する方法
 .NET Framework を使用すると、開発者および管理者は、構成ファイルを使用することにより、アプリケーションの実行方法を制御し、アプリケーションの実行に柔軟性を持たせることができます。 構成ファイルは XML ファイルで、必要に応じて変更できます。 管理者は、アプリケーションからアクセスできるプロテクト リソース、アプリケーションが使用するアセンブリのバージョン、およびリモート アプリケーションやオブジェクトの配置場所を制御できます。 開発者は、構成ファイル内に設定を格納できます。これにより、設定変更のたびにアプリケーションを再コンパイルする必要がなくなります。 このセクションでは、設定できる内容と、アプリケーションを設定することが有益である理由を説明します。  
@@ -54,7 +54,7 @@ ms.locfileid: "64583640"
 ## <a name="machine-configuration-files"></a>マシン構成ファイル  
  マシン構成ファイル Machine.config には、コンピューター全体に適用する設定を含めます。 このファイルは、%*runtime install path*%\Config ディレクトリに含まれています。 Machine.config には、マシン全体のアセンブリ バインディング、組み込みの[リモート処理チャネル](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/dkfd3wha(v=vs.100))、および ASP.NET に関する構成設定が含まれます。  
   
- 構成システムは、まずマシン構成ファイル内で、[**\<appSettings>** 要素](~/docs/framework/configure-apps/file-schema/appsettings/index.md)と、開発者が定義したその他の構成セクションを調べます。 次に、アプリケーション構成ファイルを調べます。 マシン構成ファイルを管理しやすくするには、これらの設定をアプリケーション構成ファイルに配置するのが最適です。 しかし、それらの設定をマシン構成ファイル内に配置した方が、システムの保守が簡単になります。 たとえば、クライアント アプリケーションとサーバー アプリケーションの両方で使用されるサードパーティ コンポーネントがある場合、そのコンポーネントの設定を 1 か所に設まとめた方が簡単です。 この場合、同じ設定を 2 つのファイルに配置する必要がなくなるという点から、設定を格納するのに適した場所はマシン構成ファイルになります。  
+ 構成システムは、まずマシン構成ファイル内で、[ **\<appSettings>** 要素](~/docs/framework/configure-apps/file-schema/appsettings/index.md)と、開発者が定義したその他の構成セクションを調べます。 次に、アプリケーション構成ファイルを調べます。 マシン構成ファイルを管理しやすくするには、これらの設定をアプリケーション構成ファイルに配置するのが最適です。 しかし、それらの設定をマシン構成ファイル内に配置した方が、システムの保守が簡単になります。 たとえば、クライアント アプリケーションとサーバー アプリケーションの両方で使用されるサードパーティ コンポーネントがある場合、そのコンポーネントの設定を 1 か所に設まとめた方が簡単です。 この場合、同じ設定を 2 つのファイルに配置する必要がなくなるという点から、設定を格納するのに適した場所はマシン構成ファイルになります。  
   
 > [!NOTE]
 >  XCOPY を使用してアプリケーションを配置しても、マシン構成ファイル内の設定はコピーされません。  
@@ -90,7 +90,7 @@ ms.locfileid: "64583640"
  セキュリティ構成ファイルには、コード グループ階層構造に関する情報と、ポリシー レベルに関連付けたアクセス許可セットを含めます。 セキュリティ ポリシーを変更するときは、ポリシーの変更によってセキュリティ構成ファイルが破損しないように、[コード アクセス セキュリティ ポリシー ツール (Caspol.exe)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md) を使用することを強くお勧めします。  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降では、セキュリティ構成ファイルはセキュリティ ポリシーが変更された場合にのみ存在します。  
+>  以降、.NET Framework 4 では、セキュリティの構成ファイルは、セキュリティ ポリシーが変更された場合にのみ存在します。  
   
  セキュリティ構成ファイルは次の場所にあります。  
   

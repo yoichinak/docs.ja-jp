@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: 703b8381-43db-4a4d-9faa-cca39302d922
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 03839a2c6e52f9d2dcdd2e0941ff4fdbeb8a3a17
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80404e65263aa4ad245a8c8213630a4736bd7b11
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789663"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456875"
 ---
 # <a name="clr-hosting-interfaces"></a>CLR ホスト インターフェイス
 アンマネージ インターフェイスについて説明をアプリケーションに共通言語ランタイム (CLR) を統合するホストを使用できます。 情報は、.NET Framework version 2.0 およびそれ以降のバージョンに関係します。 これらのインターフェイスは、ホストのランタイム バージョン 1.0 および 1.1 では、いたよりもさらに多くの制御を有効にして、CLR とホストの実行モデルのより緊密に統合を提供します。  
@@ -191,4 +191,4 @@ ms.locfileid: "61789663"
  .NET Framework version 1.0 および 1.1 で提供されるホスティング インターフェイスについて説明するトピックが含まれています。  
   
  [.NET Framework 4 および 4.5 で追加された CLR ホスト インターフェイス](../../../../docs/framework/unmanaged-api/hosting/clr-hosting-interfaces-added-in-the-net-framework-4-and-4-5.md)  
- 提供されるホスティング インターフェイスについて説明するトピックが含まれています、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]します。
+ .NET Framework 4 で提供されるホスティング インターフェイスについて説明するトピックが含まれています。
