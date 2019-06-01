@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: a2ca532d-91f7-426a-9303-417c2ee1247c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: c35e796333aa3a93b7a66416fe0d93b7b1f3837f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 81110736651db9fe00b116c3abbbdaa8d3670bee
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61920303"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456100"
 ---
 # <a name="net-framework-tools"></a>.NET Framework ツール
 .NET Framework ツールを使用すると、.NET Framework に対応したアプリケーションやコンポーネントを簡単に作成、配置、および管理できます。  
@@ -63,10 +63,10 @@ ms.locfileid: "61920303"
  中間言語 (IL) コードを含む移植可能な実行可能 (PE) ファイルを受け取り、IL アセンブラー (Ilasm.exe) への入力として使用できるテキスト ファイルを作成します。  
   
  [Installutil.exe (インストーラー ツール)](../../../docs/framework/tools/installutil-exe-installer-tool.md)  
- 指定したアセンブリのインストーラー コンポーネントを実行することによって、サーバー リソースのインストールとアンインストールを実行できます  (<xref:System.Configuration.Install> 名前空間のクラスと連携して動作します)。指定したアセンブリのインストーラー コンポーネントを実行することによって、サーバー リソースのインストールとアンインストールを実行できます  (<xref:System.Configuration.Install> 名前空間のクラスと連携して動作します)。  
+ 指定したアセンブリのインストーラー コンポーネントを実行することによって、サーバー リソースのインストールとアンインストールを実行できます (<xref:System.Configuration.Install> 名前空間のクラスと連携して動作します)。 
   
  [Lc.exe (ライセンス コンパイラ)](../../../docs/framework/tools/lc-exe-license-compiler.md)  
- ライセンス情報を含むテキスト ファイルを読み込んで、.licenses ファイルを生成します。この .licenses ファイルは、共通言語ランタイムの実行可能ファイルにリソースとして埋め込むことができます。 ライセンス情報を含むテキスト ファイルを読み込んで、.licenses ファイルを生成します。この .licenses ファイルは、共通言語ランタイムの実行可能ファイルにリソースとして埋め込むことができます。  
+ ライセンス情報を含むテキスト ファイルを読み込んで、.licenses ファイルを生成します。この .licenses ファイルは、共通言語ランタイムの実行可能ファイルにリソースとして埋め込むことができます。 
   
  [Mage.exe (マニフェストの生成および編集ツール)](../../../docs/framework/tools/mage-exe-manifest-generation-and-editing-tool.md)  
  アプリケーション マニフェストと配置マニフェストの作成、編集、および署名を行います。 Mage.exe はコマンド ライン ツールであるため、バッチ スクリプトから実行したり、ASP.NET アプリケーションなどの他の Windows ベースのアプリケーションから実行したりできます。  
