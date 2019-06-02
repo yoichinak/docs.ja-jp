@@ -1,15 +1,15 @@
 ---
 title: dotnet new のカスタム テンプレートを作成する
 description: この楽しいチュートリアルで、dotnet new のカスタム テンプレートを作成する方法を学びましょう。
-author: guardrex
+author: mairaw
 ms.date: 08/12/2017
 ms.custom: seodec18
-ms.openlocfilehash: 3b45a24c8a249eeb99fb1a4b14918483b978980b
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: e47da048584ec31c275ff9c122d157f34556268a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57676448"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299956"
 ---
 # <a name="create-a-custom-template-for-dotnet-new"></a>dotnet new のカスタム テンプレートを作成する
 
@@ -35,7 +35,7 @@ ms.locfileid: "57676448"
 
 ## <a name="create-a-template-from-a-project"></a>プロジェクトからテンプレートを作成する
 
-コンパイルして実行できることが確認されている既存のプロジェクトを利用するか、ハード ドライブのフォルダーで新しいコンソール アプリ プロジェクトを作成します。 このチュートリアルでは、ユーザーのプロファイルの *Documents\Templates* に保存されている *GarciaSoftware.ConsoleTemplate.CSharp* をプロジェクト フォルダーとして想定しています。 チュートリアルのプロジェクト テンプレート名は、*\<会社名>.\<テンプレートの種類>.\<プログラミング言語>* という形式になりますが、プロジェクトとテンプレートには自由に名前を付けることができます。
+コンパイルして実行できることが確認されている既存のプロジェクトを利用するか、ハード ドライブのフォルダーで新しいコンソール アプリ プロジェクトを作成します。 このチュートリアルでは、ユーザーのプロファイルの *Documents\Templates* に保存されている *GarciaSoftware.ConsoleTemplate.CSharp* をプロジェクト フォルダーとして想定しています。 チュートリアルのプロジェクト テンプレート名は、 *\<会社名>.\<テンプレートの種類>.\<プログラミング言語>* という形式になりますが、プロジェクトとテンプレートには自由に名前を付けることができます。
 
 1. *.template.config* という名前のプロジェクトのルートにフォルダーを追加します。
 1. *.template.config* フォルダー内で、テンプレートを構成する *template.json* ファイルを作成します。 *template.json* ファイルの詳細情報とメンバー定義については、「[dotnet new のカスタム テンプレート](../tools/custom-templates.md#templatejson)」トピックと JSON Schema Store の [*template.json*](http://json.schemastore.org/template) スキーマを参照してください。
@@ -66,7 +66,7 @@ ms.locfileid: "57676448"
 
    ![NuGet パッケージのレイアウトを示すディレクトリ構造](./media/create-custom-template/nuget-directory-layout.png)
 
-1. *nuspec* ファイルの **\<packageTypes>** 要素の中に、**\<packageType>** 要素を追加し、`name` 属性の値を `Template` にします。 *content* フォルダーと *nuspec* ファイルの両方を同じディレクトリに入れます。 下の表は、NuGet パッケージとしてテンプレートを生成するために必要な *nuspec* ファイルの最小要素をまとめたものです。
+1. *nuspec* ファイルの **\<packageTypes>** 要素の中に、 **\<packageType>** 要素を追加し、`name` 属性の値を `Template` にします。 *content* フォルダーと *nuspec* ファイルの両方を同じディレクトリに入れます。 下の表は、NuGet パッケージとしてテンプレートを生成するために必要な *nuspec* ファイルの最小要素をまとめたものです。
 
    | 要素            | 型   | 説明 |
    | ------------------ | ------ | ----------- |
@@ -204,7 +204,7 @@ dotnet new -u C:\Users\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate
 ```
 
 > [!NOTE]
-> テンプレートをお使いのローカル ファイル システムからアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、*./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
+> テンプレートをお使いのローカル ファイル システムからアンインストールするには、完全修飾パスを使用する必要があります。 たとえば、*C:\Users\\\<USER>\Documents\Templates\GarciaSoftware.ConsoleTemplate.CSharp* は有効ですが、 *./GarciaSoftware.ConsoleTemplate.CSharp* が含まれるフォルダーから、そのパスを指定することはできません。
 > また、テンプレートのパスの最後にある終端ディレクトリのスラッシュは含めないでください。
 
 ## <a name="see-also"></a>関連項目

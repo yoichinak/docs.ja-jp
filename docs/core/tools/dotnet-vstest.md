@@ -1,14 +1,14 @@
 ---
 title: dotnet vstest コマンド
 description: dotnet vstest コマンドは、プロジェクトとそのすべての依存関係をビルドします。
-author: guardrex
+author: mairaw
 ms.date: 05/30/2018
-ms.openlocfilehash: dcf17a59fea1f58757f39721c5dd5947ed30df0f
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 45fda3b34d2649bc6f20cf3f35c65277a9a53cec
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613461"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300029"
 ---
 # <a name="dotnet-vstest"></a>dotnet vstest
 

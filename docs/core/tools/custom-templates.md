@@ -1,14 +1,14 @@
 ---
 title: dotnet new のカスタム テンプレート
 description: あらゆる種類の .NET プロジェクトまたはファイルのカスタム テンプレートについて説明します。
-author: guardrex
+author: mairaw
 ms.date: 08/11/2017
-ms.openlocfilehash: e37fb692640c25d7a91904b0802f97ebfab75851
-ms.sourcegitcommit: 58fc0e6564a37fa1b9b1b140a637e864c4cf696e
+ms.openlocfilehash: 6ce53cab308ed404974e4d736e735bc82ac04fe6
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/08/2019
-ms.locfileid: "57679061"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66299923"
 ---
 # <a name="custom-templates-for-dotnet-new"></a>dotnet new のカスタム テンプレート
 
@@ -78,7 +78,7 @@ dotnet new -l
 
 現在のところ、カスタム テンプレートを Windows でパッケージ化するとき、[dotnet pack](dotnet-pack.md) ではなく、[nuget.exe](https://dist.nuget.org/win-x86-commandline/latest/nuget.exe) が利用されます。 プラットフォームに依存しないパッケージ化の場合、[NuGetizer 3000](https://github.com/NuGet/Home/wiki/NuGetizer-3000) の利用を検討してください。
 
-プロジェクト フォルダーの中身はその *.template.config/template.json* ファイルと共に *content* という名前のフォルダーに置かれます。 *content* フォルダーの隣に [*nuspec*](/nuget/create-packages/creating-a-package) ファイルを追加します。このファイルは XML マニフェスト ファイルであり、パッケージの中身が記述され、NuGet パッケージの作成プロセスを実行します。 *nuspec* ファイルの **\<packageTypes>** 要素の中に、**\<packageType>** 要素を追加し、`name` 属性の値を `Template` にします。 *content* フォルダーと *nuspec* ファイルの両方を同じディレクトリに入れます。 下の表は、NuGet パッケージとしてテンプレートを生成するために必要な *nuspec* ファイルの最小要素をまとめたものです。
+プロジェクト フォルダーの中身はその *.template.config/template.json* ファイルと共に *content* という名前のフォルダーに置かれます。 *content* フォルダーの隣に [*nuspec*](/nuget/create-packages/creating-a-package) ファイルを追加します。このファイルは XML マニフェスト ファイルであり、パッケージの中身が記述され、NuGet パッケージの作成プロセスを実行します。 *nuspec* ファイルの **\<packageTypes>** 要素の中に、 **\<packageType>** 要素を追加し、`name` 属性の値を `Template` にします。 *content* フォルダーと *nuspec* ファイルの両方を同じディレクトリに入れます。 下の表は、NuGet パッケージとしてテンプレートを生成するために必要な *nuspec* ファイルの最小要素をまとめたものです。
 
 | 要素            | 型   | 説明 |
 | ------------------ | ------ | ----------- |
