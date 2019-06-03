@@ -4,12 +4,12 @@ description: 利用情報を収集して分析する .NET Core SDK の製品利�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 82410863c81faa95edfb120c95ec6bc186ed1328
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751679"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377504"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 製品利用統計情報
 
@@ -79,7 +79,7 @@ ms.locfileid: "64751679"
 
 &#8224; *Occurrences* 列には、その行のメトリックに対するコマンドの使用回数の、その日の合計数が表示されます。
 
-&#8225; 通常、*Geography* 列には、国の名前が表示されます。 場合によっては、調査担当者が南極や不正な場所データを使用して .NET Core を使用していることが原因で、この列に南極大陸が表示されることがあります。
+&#8225; 通常、*Geography* 列には、国/地域の名前が表示されます。 場合によっては、調査担当者が南極や不正な場所データを使用して .NET Core を使用していることが原因で、この列に南極大陸が表示されることがあります。
 
 ### <a name="example"></a>例
 

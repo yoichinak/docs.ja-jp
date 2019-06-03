@@ -3,13 +3,13 @@ title: .NET Core で使用できない .NET Framework テクノロジ
 description: .NET Core で使用できない .NET Framework テクノロジの詳細情報
 author: cartermp
 ms.author: mairaw
-ms.date: 12/07/2018
-ms.openlocfilehash: be55cd1d1c67b0542c8474d1b2e47f6752f658a2
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.date: 04/30/2019
+ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58185806"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456088"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core で使用できない .NET Framework テクノロジ
 
@@ -42,6 +42,10 @@ API またはテクノロジが現在実装されていないからといって�
 CAS と同様に、セキュリティ透過性はサンドボックス コードをセキュリティ クリティカルなコードから宣言的に分離しますが、[現在はセキュリティ境界としてはサポートされていません](~/docs/framework/misc/security-transparent-code.md)。 この機能は、Silverlight で頻繁に使用されます。 
 
 仮想化、コンテナー、ユーザー アカウントなど、オペレーティング システムが提供するセキュリティ境界を使用して、最低限の特権セットでプロセスを実行します。
+
+## <a name="systementerpriseservices"></a>System.EnterpriseServices
+
+System.EnterpiseServices (COM+) は、.NET Core でサポートされていません。
 
 >[!div class="step-by-step"]
 >[次へ](third-party-deps.md)

@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6c61b4ec-c6df-4651-80f1-4854f8b14dde
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e40f52a6b6b8ea7a77f4e38a291621dab486cc72
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6fa91b6f2866ba2dee6963d7258fe193ce058f61
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648494"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457173"
 ---
 # <a name="managed-extensibility-framework-mef"></a>MEF (Managed Extensibility Framework)
 
@@ -54,7 +54,7 @@ Managed Extensibility Framework (MEF) は、軽量で拡張可能なアプリケ
 
 <a name="where_is_mef_available"></a>
 ## <a name="where-is-mef-available"></a>MEF を使用できる環境
- MEF は、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] の不可欠な構成要素であり、.NET Framework が使用されている環境であればどのような環境でも使用できます。 MEF は、Windows フォームや WPF などのテクノロジを使用するクライアント アプリケーション、または ASP.NET を使用するサーバー アプリケーションで使用できます。
+ MEF は、.NET Framework 4 の不可欠な構成要素であり、.NET Framework が使用されている環境であればどのような環境でも使用できます。 MEF は、Windows フォームや WPF などのテクノロジを使用するクライアント アプリケーション、または ASP.NET を使用するサーバー アプリケーションで使用できます。
 
 <a name="mef_and_maf"></a>
 ## <a name="mef-and-maf"></a>MEF と MAF
@@ -83,7 +83,7 @@ MEF が実行できる処理を理解する最も簡単な方法は、単純な 
 
 ## <a name="composition-container-and-catalogs"></a>合成コンテナーとカタログ
 
-MEF 合成モデルのコアは、すべての使用可能なパートが含まれ、合成を実行する "*合成コンテナー*" です  合成はインポートとエクスポートの組み合わせです。 最も一般的な種類の合成コンテナーは <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> であり、これは SimpleCalculator で使用します。
+MEF 合成モデルのコアは、すべての使用可能なパートが含まれ、合成を実行する "*合成コンテナー*" です 合成はインポートとエクスポートの組み合わせです。 最も一般的な種類の合成コンテナーは <xref:System.ComponentModel.Composition.Hosting.CompositionContainer> であり、これは SimpleCalculator で使用します。
 
 Visual Basic を使用している場合は、Module1.vb に `Program` という名前のパブリック クラスを追加します。
 
@@ -305,7 +305,7 @@ class Add: IOperation
 
  <xref:System.ComponentModel.Composition.ExportAttribute> 属性は、以前と同じように機能します。 <xref:System.ComponentModel.Composition.ExportMetadataAttribute> 属性は、そのエクスポートに対し、名前と値のペアの形式でメタデータをアタッチします。 `Add` クラスは `IOperation` を実装していますが、`IOperationData` を実装するクラスは明示的に定義されていません。 代わりに、提供されるメタデータの名前に基づくプロパティを使用して、MEF によってクラスが暗黙的に作成されます。 (MEF でメタデータにアクセスする方法にはいくつかありますが、これはその 1 つです)。
 
- MEF での合成は "*再帰的*" です。 先ほど、`Program` オブジェクトを明示的に合成しました。これは `ICalculator` をインポートし、その型は `MySimpleCalculator` であることが判明しました。 この `MySimpleCalculator` は `IOperation` オブジェクトのコレクションをインポートし、このインポートは `MySimpleCalculator` が作成されるときに `Program` のインポートと同時に満たされます。 `Add` クラスがさらに別のインポートを宣言している場合は、そのインポートも満たされる必要があり、宣言されているインポートごとにそれが繰り返されます。 満たされないインポートが残ると、合成エラーが発生します  (省略可能なインポートを宣言する、またはそれらに既定値を割り当てることはできます)。
+ MEF での合成は "*再帰的*" です。 先ほど、`Program` オブジェクトを明示的に合成しました。これは `ICalculator` をインポートし、その型は `MySimpleCalculator` であることが判明しました。 この `MySimpleCalculator` は `IOperation` オブジェクトのコレクションをインポートし、このインポートは `MySimpleCalculator` が作成されるときに `Program` のインポートと同時に満たされます。 `Add` クラスがさらに別のインポートを宣言している場合は、そのインポートも満たされる必要があり、宣言されているインポートごとにそれが繰り返されます。 満たされないインポートが残ると、合成エラーが発生します (省略可能なインポートを宣言する、またはそれらに既定値を割り当てることはできます)。
 
 <a name="calculator_logic"></a>
 ## <a name="calculator-logic"></a>電卓のロジック
@@ -427,7 +427,7 @@ class Subtract : IOperation
 
  SimpleCalculator プロジェクトに `Extensions` という名前の新しいディレクトリを追加します。 これは、アプリケーション レベルではなく、プロジェクト レベルで追加してください。 次に、`ExtendedOperations` という名前の新しいクラス ライブラリ プロジェクトをソリューションに追加します。 新しいプロジェクトをコンパイルし、個別のアセンブリを作成します。
 
- ExtendedOperations プロジェクトのプロジェクト プロパティ デザイナーを開き、**[コンパイル]** タブまたは **[ビルド]** タブをクリックします。SimpleCalculator プロジェクト ディレクトリの Extensions ディレクトリ (..\SimpleCalculator\Extensions\\) を指すように、**[ビルド出力パス]** または **[出力パス]** を変更します。
+ ExtendedOperations プロジェクトのプロジェクト プロパティ デザイナーを開き、 **[コンパイル]** タブまたは **[ビルド]** タブをクリックします。SimpleCalculator プロジェクト ディレクトリの Extensions ディレクトリ (..\SimpleCalculator\Extensions\\) を指すように、 **[ビルド出力パス]** または **[出力パス]** を変更します。
 
  Module1.vb または Program.cs で、`Program` コンストラクターに次の行を追加します。
 
