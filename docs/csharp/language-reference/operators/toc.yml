@@ -1,5 +1,4 @@
 - name: 'C# 演算子'
-  href: index.md
   items:
     - name: 算術演算子
       href: arithmetic-operators.md
