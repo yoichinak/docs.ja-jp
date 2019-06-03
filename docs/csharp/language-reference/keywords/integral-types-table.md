@@ -9,12 +9,12 @@ helpviewer_keywords:
 - types [C#], integral types
 - ranges of integral types [C#]
 ms.assetid: 62e86126-46ff-40b0-9028-e61d7558268c
-ms.openlocfilehash: 7f8e4a9dabb3e24293ae7fcc724e8787dd6d4cf5
-ms.sourcegitcommit: 49af435bfdd41faf26d38c20c5b0cc07e87bea60
+ms.openlocfilehash: b4a3a46ba98c0c621b747284ce39e03d68a5b62d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53396787"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421738"
 ---
 # <a name="integral-types-table-c-reference"></a>整数型の一覧表 (C# リファレンス)
 
@@ -32,7 +32,7 @@ ms.locfileid: "53396787"
 |[long](long.md)|-9,223,372,036,854,775,808 から 9,223,372,036,854,775,807|符号付き 64 ビット整数|  
 |[ulong](ulong.md)|0 ～ 18,446,744,073,709,551,615|符号なし 64 ビット整数|  
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
   
 整数リテラルで表される値が <xref:System.UInt64.MaxValue?displayProperty=nameWithType> を超えると、コンパイル エラー [CS1021](../../misc/cs1021.md) が発生します。
 
@@ -43,7 +43,6 @@ ms.locfileid: "53396787"
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [型のリファレンス表](reference-tables-for-types.md)
 - [浮動小数点型の一覧表](floating-point-types-table.md)
 - [既定値の一覧表](default-values-table.md)
 - [数値結果テーブルの書式設定](formatting-numeric-results-table.md)

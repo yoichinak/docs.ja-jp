@@ -11,12 +11,12 @@ helpviewer_keywords:
 - catch keyword [C#]
 - try-catch statement [C#]
 ms.assetid: cb5503c7-bfa1-4610-8fc2-ddcd2e84c438
-ms.openlocfilehash: df4ccde0a9a377b06b8efc64cc78936a983c66cc
-ms.sourcegitcommit: b351b0781a035616c90c68ccae6dd60aae66a953
+ms.openlocfilehash: 28bf939cb7da760400486c52bb07649826628c1c
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/26/2019
-ms.locfileid: "55083926"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422586"
 ---
 # <a name="try-catch-c-reference"></a>try-catch (C# リファレンス)
 
@@ -185,7 +185,6 @@ catch の詳細については、「[try-catch-finally](try-catch-finally.md)」
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [try、throw、catch ステートメント (C++)](/cpp/cpp/try-throw-and-catch-statements-cpp)
-- [例外処理ステートメント](exception-handling-statements.md)
 - [throw](throw.md)
 - [try-finally](try-finally.md)
 - [方法: 例外を明示的にスローする](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

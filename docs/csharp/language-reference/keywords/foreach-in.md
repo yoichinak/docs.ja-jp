@@ -9,12 +9,12 @@ helpviewer_keywords:
 - foreach statement [C#]
 - in keyword [C#]
 ms.assetid: 5a9c5ddc-5fd3-457a-9bb6-9abffcd874ec
-ms.openlocfilehash: 7a1508db23f60cac487e0171c3db7756bc228fd2
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3fbaacb96be2714aaff49679836e5d2d4a3783da
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880538"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422473"
 ---
 # <a name="foreach-in-c-reference"></a>foreach、in (C# リファレンス)
 
@@ -54,6 +54,5 @@ C# 7.3 以降、列挙子の `Current` プロパティが、[参照戻り値](re
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [繰り返しステートメント](iteration-statements.md)
 - [配列での foreach の使用](../../programming-guide/arrays/using-foreach-with-arrays.md)
 - [for ステートメント](for.md)

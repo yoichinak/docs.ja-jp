@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - while keyword [C#]
 ms.assetid: 72a0765c-6852-4aca-b327-4a11cb7f5c59
-ms.openlocfilehash: 2cf58e2edc5685032c2b9e590bc456e3a4e4d79b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 486936ae29552891c6a58913b6d5cf9a0d725a69
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633074"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422485"
 ---
 # <a name="while-c-reference"></a>while (C# リファレンス)
 
@@ -40,5 +40,4 @@ ms.locfileid: "65633074"
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [繰り返しステートメント](iteration-statements.md)
 - [do ステートメント](do.md)

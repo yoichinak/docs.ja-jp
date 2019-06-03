@@ -9,12 +9,12 @@ helpviewer_keywords:
 - type conversion [C#], as keyword
 - as keyword [C#]
 ms.assetid: a9be126b-cbf4-4990-a70d-d0e1983cad0e
-ms.openlocfilehash: b87e75bd4866a191e84465e44d53850e6e2e9723
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 84e599340877ce52dc6242ea259c69672915c546
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59169924"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422018"
 ---
 # <a name="as-c-reference"></a>as (C# リファレンス)
 `as` 演算子を使用して、互換性のある参照型または [null 許容型](../../../csharp/programming-guide/nullable-types/index.md)間で特定の型変換を実行できます。 次のコードは一例を示しています。  
@@ -53,4 +53,3 @@ expression is type ? (type)expression : (type)null
 - [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
 - [is](../../../csharp/language-reference/keywords/is.md)
 - [?:演算子](../../../csharp/language-reference/operators/conditional-operator.md)
-- [演算子のキーワード](../../../csharp/language-reference/keywords/operator-keywords.md)

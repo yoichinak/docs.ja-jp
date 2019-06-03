@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - generics [C#], methods
 ms.assetid: 673eeea2-4b48-4faa-9c4e-2e89449221b9
-ms.openlocfilehash: 8d64f14f635a50afd8356dedfe16f8897fc77f98
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 083fc6ff3dd15252fb6cf2beb27b5be0a6e489f5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56978060"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423449"
 ---
 # <a name="generic-methods-c-programming-guide"></a>ジェネリック メソッド (C# プログラミング ガイド)
 ジェネリック メソッドは、次のように型パラメーターで宣言されるメソッドです。  
@@ -50,5 +50,5 @@ ms.locfileid: "56978060"
 
 - <xref:System.Collections.Generic>
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)
 - [メソッド](../../../csharp/programming-guide/classes-and-structs/methods.md)

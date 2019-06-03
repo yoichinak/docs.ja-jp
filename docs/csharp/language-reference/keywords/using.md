@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - using keyword [C#]
 ms.assetid: 124e1a63-2a4b-4132-b269-3b6d8d3ef72d
-ms.openlocfilehash: efde313c0a1dabee45de4fd7d580a3aff5139928
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 02dac1bfe3420abd474867dcc18f70aadc7aeff4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633818"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422136"
 ---
 # <a name="using-c-reference"></a>using (C# リファレンス)
 
@@ -28,6 +28,5 @@ ms.locfileid: "65633818"
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [名前空間キーワード](namespace-keywords.md)
 - [名前空間](../../programming-guide/namespaces/index.md)
 - [extern](extern.md)

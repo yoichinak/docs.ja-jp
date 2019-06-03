@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fully qualified names [C#]
 - namespaces [C#], how to use
 ms.assetid: 1fe8bf39-addc-438a-bd9e-86410e32381d
-ms.openlocfilehash: c5bede7475fdbee3f3524984a9be97b95b44817d
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: bb491ef93f0f2da89f0101d10e2cf3d158962850
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452677"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423310"
 ---
 # <a name="using-namespaces-c-programming-guide"></a>名前空間の使用 (C# プログラミング ガイド)
 C# プログラム内では名前空間が 2 つの方法でよく使用されます。 最初の方法では、.NET Framework クラスで名前空間を使用して、その多くのクラスを整理します。 2 つ目の方法では、独自の名前空間を宣言します。これは、より大きなプログラミング プロジェクトでクラス名とメソッド名のスコープを制御するのに役立ちます。  
@@ -92,7 +92,6 @@ C# プログラム内では名前空間が 2 つの方法でよく使用され�
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [名前空間](../../../csharp/programming-guide/namespaces/index.md)
-- [名前空間キーワード](../../../csharp/language-reference/keywords/namespace-keywords.md)
-- [.演算子](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
+- [。演算子](../../../csharp/language-reference/operators/member-access-operators.md#member-access-operator-)
 - [::演算子](../../../csharp/language-reference/operators/namespace-alias-qualifer.md)
 - [extern](../../../csharp/language-reference/keywords/extern.md)

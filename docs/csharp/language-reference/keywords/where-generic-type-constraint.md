@@ -7,12 +7,12 @@ f1_keywords:
 - whereconstraint_CSharpKeyword
 helpviewer_keywords:
 - where (generic type constraint) [C#]
-ms.openlocfilehash: a71412a01045a445811898939624fd7cd7ab1cf1
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3982c97bc56b42237700343b2572d1bba930bbbd
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633119"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422778"
 ---
 # <a name="where-generic-type-constraint-c-reference"></a>where (ジェネリック型制約) (C# リファレンス)
 
@@ -67,6 +67,6 @@ ms.locfileid: "65633119"
 
 - [C# リファレンス](../../../csharp/language-reference/index.md)
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)
 - [new 制約](../../../csharp/language-reference/keywords/new-constraint.md)
 - [型パラメーターの制約](../../../csharp/programming-guide/generics/constraints-on-type-parameters.md)

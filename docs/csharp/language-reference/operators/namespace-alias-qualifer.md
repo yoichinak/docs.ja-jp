@@ -9,12 +9,12 @@ helpviewer_keywords:
 - 'namespaces [C#], :: operator'
 - namespace alias qualifier operator (::) [C#]
 ms.assetid: 698b5a73-85cf-4e0e-9e8e-6496887f8527
-ms.openlocfilehash: 5bd43bb60736bbcaf8034cc2b369c34f977319ac
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0b456ed3ce9965ef389d8ce40167afa4ac33da18
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633921"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422527"
 ---
 # <a name="-operator-c-reference"></a>:: 演算子 (C# リファレンス)
 
@@ -48,6 +48,5 @@ var numbers = new Col::List<int> { 1, 2, 3 };
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
-- [名前空間キーワード](../keywords/namespace-keywords.md)
 - [演算子 .](member-access-operators.md#member-access-operator-)
 - [extern エイリアス](../keywords/extern-alias.md)

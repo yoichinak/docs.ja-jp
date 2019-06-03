@@ -5,12 +5,12 @@ ms.date: 07/20/2015
 helpviewer_keywords:
 - new constraint keyword [C#]
 ms.assetid: 58850b64-cb97-4136-be50-1f3bc7fc1da9
-ms.openlocfilehash: 32fcb13e1f217707d53300c532169b1a1759fa7e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 2aa68bec13322e332bfe3841bc99403f72301183
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633406"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66421801"
 ---
 # <a name="new-constraint-c-reference"></a>new 制約 (C# リファレンス)
 
@@ -40,5 +40,4 @@ ms.locfileid: "65633406"
 - [C# リファレンス](../../language-reference/index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [演算子のキーワード](operator-keywords.md)
 - [ジェネリック](../../programming-guide/generics/index.md)

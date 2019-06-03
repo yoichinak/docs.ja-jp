@@ -11,12 +11,12 @@ helpviewer_keywords:
 - else keyword [C#]
 - if keyword [C#]
 ms.assetid: d9a1d562-8cf5-4bd4-9ba7-8ad970cd25b2
-ms.openlocfilehash: ef25b3fb5657d833bbccf5bace71e049623476c9
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 18b41446eb13f4b91db86d79316a5299b0f3020a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59294420"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300477"
 ---
 # <a name="if-else-c-reference"></a>if-else (C# リファレンス)
 

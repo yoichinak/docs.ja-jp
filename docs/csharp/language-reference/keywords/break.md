@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - break keyword [C#]
 ms.assetid: be2571ed-efb0-4965-b122-81e5b09db0b9
-ms.openlocfilehash: 18be5171329dd43c419e977a1799e2e72c32404d
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 15b193d9f294c01826b6b60587678ad76248e976
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727574"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422064"
 ---
 # <a name="break-c-reference"></a>break (C# リファレンス)
 
@@ -54,5 +54,3 @@ Sorry, invalid selection.
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [C# のキーワード](../../../csharp/language-reference/keywords/index.md)
 - [switch](../../../csharp/language-reference/keywords/switch.md)
-- [ジャンプ ステートメント](../../../csharp/language-reference/keywords/jump-statements.md)
-- [繰り返しステートメント](../../../csharp/language-reference/keywords/iteration-statements.md)

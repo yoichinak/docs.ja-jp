@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: fae0cedfe8bf675dceb9cb9d5835d923cae8b4ab
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: bd8c52cd798496a4df3086411dfe3be6241fbff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53235629"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422346"
 ---
 # <a name="built-in-types-table-c-reference"></a>組み込み型の一覧表 (C# リファレンス)
 
@@ -36,7 +36,7 @@ ms.locfileid: "53235629"
 |[ushort](ushort.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
 |[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
   
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 表内の、`object` と `string` を除くすべての型が、単純型と呼ばれます。  
   
@@ -66,7 +66,6 @@ Console.WriteLine(doubleType.FullName);
 - [C# リファレンス](../../../csharp/language-reference/index.md)
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [型のリファレンス表](reference-tables-for-types.md)
 - [値型](value-types.md)
 - [参照型](reference-types.md)
 - [既定値の一覧表](default-values-table.md)

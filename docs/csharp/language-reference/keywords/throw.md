@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5ac4feef-4b1a-4c61-aeb4-61d549e5dd42
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d6911ff96ca847f554e9b615aba6ab83a212efee
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: c4536a5caa789712227bfd637d65cfc4c22adf80
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58125994"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422695"
 ---
 # <a name="throw-c-reference"></a>throw (C# リファレンス)
 
@@ -75,5 +75,4 @@ C# 7.0 以降、`throw` は、式およびステートメントとして使用�
 - [try-catch](try-catch.md)
 - [C++ の try、catch、および throw ステートメント](try-catch.md)
 - [C# のキーワード](index.md)
-- [例外処理ステートメント](exception-handling-statements.md)
 - [方法: 例外を明示的にスローする](../../../standard/exceptions/how-to-explicitly-throw-exceptions.md)

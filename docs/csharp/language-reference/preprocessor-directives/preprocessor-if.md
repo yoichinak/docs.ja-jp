@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - '#if directive [C#]'
 ms.assetid: 48cabbff-ca82-491f-a56a-eeccd528c7c2
-ms.openlocfilehash: 027c99df806197637675837b7556b176dc115aba
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 12ef0926665103e739ed4a8ee83ff895b439fffc
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59318976"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300075"
 ---
 # <a name="if-c-reference"></a>#if (C# リファレンス)
 
@@ -24,7 +24,7 @@ C# コンパイラでは、`#if` ディレクティブ、次いで [#endif](prep
 #endif
 ```
 
-[==](../operators/equality-operators.md#equality-operator-) (等しい) および [!=](../operators/equality-operators.md#inequality-operator-) (等しくない) の各演算子は、[true](../keywords/true.md) か [false](../keywords/false.md) のどちらであるかのテストにのみ使用できます。 true は、シンボルが定義されていることを意味します。 ステートメント `#if DEBUG` と `#if (DEBUG == true)` の意味は同じです。 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (かつ)、[&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (または)、および [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (not) の各演算子を使用すると、複数のシンボルが定義されているかどうかを評価できます。 シンボルと演算子は、かっこを使用してグループ化できます。
+[==](../operators/equality-operators.md#equality-operator-) (等しい) および [!=](../operators/equality-operators.md#inequality-operator-) (等しくない) の各演算子は、[true](../keywords/true-literal.md) か [false](../keywords/false-literal.md) のどちらであるかのテストにのみ使用できます。 true は、シンボルが定義されていることを意味します。 ステートメント `#if DEBUG` と `#if (DEBUG == true)` の意味は同じです。 [&&](../operators/boolean-logical-operators.md#conditional-logical-and-operator-) (かつ)、[&#124;&#124;](../operators/boolean-logical-operators.md#conditional-logical-or-operator-) (または)、および [!](../operators/boolean-logical-operators.md#logical-negation-operator-) (not) の各演算子を使用すると、複数のシンボルが定義されているかどうかを評価できます。 シンボルと演算子は、かっこを使用してグループ化できます。
 
 ## <a name="remarks"></a>解説
 

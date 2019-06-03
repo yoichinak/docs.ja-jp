@@ -10,12 +10,12 @@ f1_keywords:
 helpviewer_keywords:
 - event keyword [C#]
 ms.assetid: 7858fd85-153b-4259-85d0-6aa13c35f174
-ms.openlocfilehash: fcfaa05d4efec43a49e3f485b74cadadbabd9236
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 9575d6e998ff709b06f1da21abd17a3629c17029
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557937"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251037"
 ---
 # <a name="event-c-reference"></a>event (C# リファレンス)
 `event` キーワードを使用し、パブリッシャー クラス内にイベントを宣言します。  
