@@ -6,17 +6,17 @@ helpviewer_keywords:
 - C# language, generic interfaces
 - generics [C#], interfaces
 ms.assetid: a8fa49a1-6e78-4a09-87e5-84a0b9f5ffbe
-ms.openlocfilehash: 09b8200d19b6f94cab423dbe4001fbeda83aa06f
-ms.sourcegitcommit: 40364ded04fa6cdcb2b6beca7f68412e2e12f633
+ms.openlocfilehash: 7fc79874c8e1ff24c38d288d3f6708e2851419e3
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "56974238"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423471"
 ---
 # <a name="generic-interfaces-c-programming-guide"></a>ジェネリック インターフェイス (C# プログラミング ガイド)
 ジェネリック コレクション クラスのインターフェイスか、コレクション内の項目を表すジェネリック クラスのインターフェイスを定義すると、多くの場合、便利です。 ジェネリック クラスの優先設定の意図は、値型に対するボックス化とボックス化解除を回避する目的で、<xref:System.IComparable> ではなく <xref:System.IComparable%601> など、ジェネリック インターフェイスを利用することにあります。 .NET Framework クラス ライブラリにより、<xref:System.Collections.Generic> 名前空間のコレクション クラスと共に利用するためのジェネリック インターフェイスがいくつか定義されます。  
   
- インターフェイスが型パラメーターの制約として指定される場合、インターフェイスを実装する型のみを利用できます。 `GenericList<T>` クラスから派生する `SortedList<T>` クラスを示したのが次のコード サンプルです。 詳細については、「[ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)」を参照してください。 `SortedList<T>` により制約 `where T : IComparable<T>` が追加されます。 これにより、`SortedList<T>` の `BubbleSort` メソッドは、一覧要素でジェネリック <xref:System.IComparable%601.CompareTo%2A> メソッドを利用できます。 この例では、一覧要素は単純なクラスである `Person` です。これは `IComparable<Person>` を実装します。  
+ インターフェイスが型パラメーターの制約として指定される場合、インターフェイスを実装する型のみを利用できます。 `GenericList<T>` クラスから派生する `SortedList<T>` クラスを示したのが次のコード サンプルです。 詳細については、「[ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)」を参照してください。 `SortedList<T>` により制約 `where T : IComparable<T>` が追加されます。 これにより、`SortedList<T>` の `BubbleSort` メソッドは、一覧要素でジェネリック <xref:System.IComparable%601.CompareTo%2A> メソッドを利用できます。 この例では、一覧要素は単純なクラスである `Person` です。これは `IComparable<Person>` を実装します。  
   
  [!code-csharp[csProgGuideGenerics#29](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideGenerics/CS/Generics2.cs#29)]  
   
@@ -47,6 +47,6 @@ ms.locfileid: "56974238"
 ## <a name="see-also"></a>関連項目
 
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
-- [ジェネリックの概要](../../../csharp/programming-guide/generics/introduction-to-generics.md)
+- [ジェネリックの概要](../../../csharp/programming-guide/generics/index.md)
 - [interface](../../../csharp/language-reference/keywords/interface.md)
 - [ジェネリック](~/docs/standard/generics/index.md)

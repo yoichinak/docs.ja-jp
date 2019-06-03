@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: c9efbefc2bce9e21f328680795e72b62bfcd5cbd
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59804445"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379647"
 ---
 ### <a name="enumerableemptytresult-always-returns-cached-instance"></a>Enumerable.Empty\<TResult> は、常にキャッシュされたインスタンスを返します
 

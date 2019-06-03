@@ -3,19 +3,19 @@ title: C# の歴史 - C# ガイド
 description: この言語の最初のバージョンがどのようなものであったか、そしてそれ以降どのように進化してきたかについて説明します。
 author: erikdietrich
 ms.date: 09/20/2017
-ms.openlocfilehash: 727f0064ac1de46eb670a366af38cf561e1a1533
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 351e4de01a7c3c50cb815a99f0bde546848a9e51
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59303363"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423241"
 ---
 # <a name="the-history-of-c"></a>C\# の歴史
 
 この記事では、C# 言語の各メジャー リリースの履歴について説明します。 C# チームは、引き続き新機能を刷新および追加していきます。 今後のリリースに向けて検討される機能を含め、言語機能ステータスについての詳細は GitHub の [dotnet/roslyn リポジトリ](https://github.com/dotnet/roslyn/blob/master/docs/Language%20Feature%20Status.md)で見つけられます。
 
 > [!IMPORTANT]
-> C# 言語の一部の機能は、C# の仕様で定義されている "*標準ライブラリ*" の型とメソッドに依存しています。 .NET プラットフォームでは、さまざまなパッケージでそれらの型とメソッドが提供されています。 一例として、例外処理があります。 すべての `throw` ステートメントまたは式は、スローされたオブジェクトが <xref:System.Exception> から派生していることを確認するために、チェックされます。 同様に、すべての `catch` は、キャッチされた型が <xref:System.Exception> から派生していることを確認するために、チェックされます。 バージョンごとに新しい要件が追加されている場合があります。 古い環境で言語の最新機能を使用するには、特定のライブラリをインストールする必要がある場合があります。 これらの依存関係については、特定のバージョンごとに用意されたページに記載されています。 この依存関係の経緯と詳細については、[言語とライブラリ間の関係](relationships-between-language-and-library.md)に関する記事をご覧ください。 
+> C# 言語の一部の機能は、C# の仕様で定義されている "*標準ライブラリ*" の型とメソッドに依存しています。 .NET プラットフォームでは、さまざまなパッケージでそれらの型とメソッドが提供されています。 一例として、例外処理があります。 すべての `throw` ステートメントまたは式は、スローされたオブジェクトが <xref:System.Exception> から派生していることを確認するために、チェックされます。 同様に、すべての `catch` は、キャッチされた型が <xref:System.Exception> から派生していることを確認するために、チェックされます。 バージョンごとに新しい要件が追加されている場合があります。 古い環境で言語の最新機能を使用するには、特定のライブラリをインストールする必要がある場合があります。 これらの依存関係については、特定のバージョンごとに用意されたページに記載されています。 この依存関係の経緯と詳細については、[言語とライブラリ間の関係](relationships-between-language-and-library.md)に関する記事をご覧ください。
 
 C# のビルド ツールでは、言語の最新のメジャー リリースが言語の既定のバージョンと見なされます。 メジャー リリースの間には、このセクションの他の記事で詳しく説明するポイント リリースが存在することがあります。 ポイント リリースで最新の機能を使用するには、[コンパイラ言語バージョンを構成](../language-reference/configure-language-version.md)し、バージョンを選択する必要があります。 C# 7.0 以降、3 つのポイント リリースがありました。
 
@@ -45,7 +45,6 @@ C# 1.0 の主な機能:
 - [式](../programming-guide/statements-expressions-operators/expressions.md)
 - [ステートメント](../programming-guide/statements-expressions-operators/statements.md)
 - [属性](../programming-guide/concepts/attributes/index.md)
-- [リテラル](../language-reference/keywords/literal-keywords.md)
 
 ## <a name="c-version-12"></a>C# バージョン 1.2
 

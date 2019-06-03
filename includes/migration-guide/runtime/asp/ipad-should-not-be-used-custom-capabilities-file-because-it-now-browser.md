@@ -1,10 +1,10 @@
 ---
 ms.openlocfilehash: 84f570cbbd97be79426e117d4c97ec182a397fd4
-ms.sourcegitcommit: 5b6d778ebb269ee6684fb57ad69a8c28b06235b9
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59235538"
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "66379560"
 ---
 ### <a name="ipad-should-not-be-used-in-custom-capabilities-file-because-it-is-now-a-browser-capability"></a>iPad はブラウザー機能になったため、カスタム機能ファイルでは使用できない
 
