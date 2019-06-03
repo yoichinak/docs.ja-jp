@@ -1,19 +1,19 @@
 ---
-title: クラスタリング モデルを使用してあやめの花を分類する
+title: 'チュートリアル: あやめ花の分類 - K-means クラスタリング'
 description: クラスタリングのシナリオで ML.NET を使用する方法について説明します
 author: pkulikov
 ms.author: johalex
-ms.date: 05/02/2019
+ms.date: 05/16/2019
 ms.topic: tutorial
-ms.custom: mvc, seodec18
-ms.openlocfilehash: 7070189e289e8e18ba0d122d2411a9064182e2b1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, seodec18, title-hack-0516
+ms.openlocfilehash: 208e97419faee097db8e187081f2910b71ca2e35
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063569"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65882283"
 ---
-# <a name="tutorial-categorize-iris-flowers-using-a-clustering-model-with-mlnet"></a>チュートリアル: ML.NET でクラスタリング モデルを使用してあやめの花を分類する
+# <a name="tutorial-categorize-iris-flowers-using-k-means-clustering-with-mlnet"></a>チュートリアル: ML.NET でクラスタリングを使用してあやめの花を分類する
 
 このチュートリアルでは、ML.NET を使って[あやめのデータ セット](https://en.wikipedia.org/wiki/Iris_flower_data_set)の[クラスタリング モデル](../resources/tasks.md#clustering)を作成する方法を示します。
 

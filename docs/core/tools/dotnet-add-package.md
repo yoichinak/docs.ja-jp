@@ -2,12 +2,12 @@
 title: dotnet add package コマンド
 description: "'dotnet add package' コマンドは、NuGet パッケージ参照をプロジェクトに追加する便利なオプションを提供します。"
 ms.date: 04/24/2019
-ms.openlocfilehash: 79059e062368fc9c4b6b8cb31740fdf13ea2b9ca
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 82f178026b46eb0237243b8ae49d17fbcc1af6ec
+ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751402"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65959241"
 ---
 # <a name="dotnet-add-package"></a>dotnet add package
 
@@ -90,7 +90,7 @@ info : PackageReference for package 'Newtonsoft.Json' version '12.0.1' added to 
 
 * **`-v|--version <VERSION>`**
 
-  パッケージのバージョン。
+  パッケージのバージョン。 [NuGet パッケージのバージョン管理](https://docs.microsoft.com/nuget/reference/package-versioning)に関するページを参照してください。
 
 ## <a name="examples"></a>使用例
 

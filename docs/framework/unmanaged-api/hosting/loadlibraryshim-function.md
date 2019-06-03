@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 32aee404891bfad1aed2abc9ad84e43bcd002df5
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 310aec9b180b37b7e5f34c4594fd61747ef02d39
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765324"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457048"
 ---
 # <a name="loadlibraryshim-function"></a>LoadLibraryShim 関数
 指定したバージョンの .NET Framework 再頒布可能パッケージに含まれている DLL を読み込みます。  
@@ -45,7 +45,7 @@ HRESULT LoadLibraryShim (
  [in].NET Framework ライブラリから読み込まれる DLL の名前を表す、0 で終わる文字列。  
   
  `szVersion`  
- [in]読み込まれる DLL のバージョンを表す、0 で終わる文字列。 場合`szVersion`読み込みはバージョン 4 未満である指定された DLL の最新バージョンを選択したバージョンは null です。 場合は、バージョン 4 以上のすべてのバージョンは無視されます`szVersion`が null の場合と、version 4 より前のバージョンがインストールされていない場合、DLL の読み込みに失敗します。 インストールを確認します。 これは、[!INCLUDE[net_v40_short](../../../../includes/net-v40-short-md.md)]の既存のアプリケーションやコンポーネントには影響しません。 エントリを参照してください。[インプロセス SxS と移行のクイック スタート](https://go.microsoft.com/fwlink/?LinkId=200329)CLR チームのブログにします。  
+ [in]読み込まれる DLL のバージョンを表す、0 で終わる文字列。 場合`szVersion`読み込みはバージョン 4 未満である指定された DLL の最新バージョンを選択したバージョンは null です。 場合は、バージョン 4 以上のすべてのバージョンは無視されます`szVersion`が null の場合と、version 4 より前のバージョンがインストールされていない場合、DLL の読み込みに失敗します。 これは、ため、.NET Framework 4 のインストールは、既存のアプリケーションまたはコンポーネントには影響しません。 エントリを参照してください。[インプロセス SxS と移行のクイック スタート](https://go.microsoft.com/fwlink/?LinkId=200329)CLR チームのブログにします。  
   
  `pvReserved`  
  将来使用するために予約されています。  
@@ -68,7 +68,7 @@ HRESULT LoadLibraryShim (
 >  以降、.NET Framework version 2.0 と、読み込まれる CLR Fusion.dll を読み込むとします。 Fusion.dll で関数が、ラッパーが、この実装は、ランタイムによって提供されるためです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

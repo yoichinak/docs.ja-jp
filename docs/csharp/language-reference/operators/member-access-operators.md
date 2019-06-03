@@ -17,6 +17,7 @@ helpviewer_keywords:
 - indexer operator [C#]
 - '[] operator [C#]'
 - null-conditional operators [C#]
+- Elvis operator [C#]
 - ?. operator [C#]
 - ?[] operator [C#]
 - invocation operator [C#]
@@ -24,14 +25,14 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: 921d69e3deb7e5bb5115eb723727462839af9b6b
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: eec70f5446eec11fa4e241b86eed4ed8d6146f85
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452894"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195777"
 ---
-# <a name="member-access-operators"></a>メンバー アクセス演算子
+# <a name="member-access-operators-c-reference"></a>メンバー アクセス演算子 (C# リファレンス)
 
 型のメンバーにアクセスするときは、次の演算子を使用できます。
 
@@ -88,7 +89,7 @@ ms.locfileid: "65452894"
 
 ### <a name="other-usages-of-"></a>[] の他の使用方法
 
-ポインター要素へのアクセスの詳細については、「[ポインターを使用して配列要素にアクセスする方法](../../programming-guide/unsafe-code-pointers/how-to-access-an-array-element-with-a-pointer.md)」を参照してください。
+ポインター要素へのアクセスの詳細については、[ポインターに関連する演算子](pointer-related-operators.md)に関する記事の「[ポインター要素アクセス演算子 []](pointer-related-operators.md#pointer-element-access-operator-)」セクションを参照してください。
 
 角かっこは、[属性](../../programming-guide/concepts/attributes/index.md)を指定するためにも使用されます。
 
@@ -99,7 +100,7 @@ void TraceMethod() {}
 
 ## <a name="null-conditional-operators--and-"></a>Null 条件演算子 ?. および ?[]
 
-C# 6 以降で使用できる Null 条件付き演算子は、そのオペランドが null 以外と評価された場合にのみ、オペランドにメンバー アクセス操作 (`?.`) または要素アクセス操作 (`?[]`) を適用します。 オペランドが `null` と評価された場合、演算子を適用した結果は `null` です。
+C# 6 以降で使用できる Null 条件付き演算子は、そのオペランドが null 以外と評価された場合にのみ、オペランドにメンバー アクセス操作 (`?.`) または要素アクセス操作 (`?[]`) を適用します。 オペランドが `null` と評価された場合、演算子を適用した結果は `null` です。 Null 条件メンバー アクセス演算子 `?.` は Elvis 演算子とも呼ばれます。
 
 Null 条件演算子はショートサーキットです。 つまり、条件付きのメンバーまたは要素アクセス操作のチェーン内にある 1 つの操作から `null` が返された場合、残りのチェーンは実行されません。 次の例では、`A` が `null` と評価されると `B` は評価されず、`A` または `B` が `null` と評価されると `C` は評価されません。
 

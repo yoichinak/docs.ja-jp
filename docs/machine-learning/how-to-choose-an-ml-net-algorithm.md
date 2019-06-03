@@ -4,12 +4,12 @@ description: 機械学習モデルに適した ML.NET アルゴリズムの選�
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: 3fd515a1d150ea51214b55f882726c4ba76bd6d1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065635"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557779"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET アルゴリズムの選び方
 
@@ -81,8 +81,8 @@ Boosted decision trees (ブースト デシジョン ツリー) は小さなツ�
 
 |アルゴリズム|プロパティ|トレーナー|
 |---------|----------|--------|
-|One versus all (1 対すべて)|この多クラス分類子では、クラスごとに 1 つの二項分類子がトレーニングされます。これにより、そのクラスは他のすべてのクラスと区別されます。 分類するクラスの数によってスケールが制限されます|[OneVersusAllTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
-|Pairwise coupling (ペアワイズ結合)|この多クラス分類子では、クラスの各ペアに対して二項分類アルゴリズムがトレーニングされます。 2 つのクラスの各組み合わせをトレーニングする必要があるので、クラスの数によってスケールが制限されます。|[PairwiseCouplingTrainer<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
+|One versus all (1 対すべて)|この多クラス分類子では、クラスごとに 1 つの二項分類子がトレーニングされます。これにより、そのクラスは他のすべてのクラスと区別されます。 分類するクラスの数によってスケールが制限されます|[OneVersusAllTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.OneVersusAllTrainer) |
+|Pairwise coupling (ペアワイズ結合)|この多クラス分類子では、クラスの各ペアに対して二項分類アルゴリズムがトレーニングされます。 2 つのクラスの各組み合わせをトレーニングする必要があるので、クラスの数によってスケールが制限されます。|[PairwiseCouplingTrainer\<BinaryClassificationTrainer>](xref:Microsoft.ML.Trainers.PairwiseCouplingTrainer)|
 
 ## <a name="k-means"></a>K-Means
 
@@ -107,4 +107,3 @@ Boosted decision trees (ブースト デシジョン ツリー) は小さなツ�
 |プロパティ|トレーナー|
 |----------|--------|
 |他のトレーナーのパフォーマンスを基準にするには、この二項分類トレーナーを使用します。 他のトレーナーのメトリックは以前のトレーナーよりも効果の点で優れています。 |<xref:Microsoft.ML.Trainers.PriorTrainer>|
-

@@ -1,17 +1,17 @@
 ---
-title: GitHub の問題の分類 - 多クラス分類
+title: 'チュートリアル: サポートの問題の分類 - 多クラス分類'
 description: GitHub の問題を分類し、それを特定の領域に割り当てるための多クラス分類シナリオで、ML.NET を使用する方法について説明します。
-ms.date: 05/02/2019
+ms.date: 05/16/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: a4122d0cdfe6531275fabf94743882a82f2a13c1
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, title-hack-0516
+ms.openlocfilehash: da4f82c1b2c4ebdc8ccc8f307722c2719909cf56
+ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063530"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66195587"
 ---
-# <a name="tutorial-use-mlnet-in-a-multiclass-classification-scenario-to-classify-github-issues"></a>チュートリアル: ML.NET を、GitHub の問題を分類する多クラス分類シナリオで使用する
+# <a name="tutorial-categorize-support-issues-using-multiclass-classification-with-ml-net"></a>チュートリアル: ML .NET での多クラス分類を使用したサポートの問題の分類
 
 このサンプル チュートリアルでは ML.NET を使用して GitHub の問題の分類子を作成し、Visual Studio で C# を使用する .NET Core コンソール アプリケーションから GitHub の問題に対する区分ラベルを分類して予測するモデルをトレーニングする方法を示します。
 
@@ -37,25 +37,25 @@ ms.locfileid: "65063530"
 
 ### <a name="create-a-project"></a>プロジェクトを作成する
 
-1. Visual Studio 2017 を開きます。 [**ファイル**] > [**新規作成**] > [**プロジェクト**] をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、**[Visual C#]** ノードを選択し、**[.NET Core]** ノードを選択します。 次に、[**コンソール アプリ (.NET Core)**] プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「GitHubIssueClassification」と入力し、**[OK]** を選択します。
+1. Visual Studio 2017 を開きます。 **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]** をメニュー バーから選択します。 **[新しいプロジェクト]** ダイアログで、 **[Visual C#]** ノードを選択し、 **[.NET Core]** ノードを選択します。 次に、 **[コンソール アプリ (.NET Core)]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「GitHubIssueClassification」と入力し、 **[OK]** を選択します。
 
 2. プロジェクトに *Data* という名前のディレクトリを作成して、データ セット ファイルを保存します。
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しいフォルダー]** を選択します。 「Data」と入力して Enter キーを押します。
+    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しいフォルダー]** を選択します。 「Data」と入力して Enter キーを押します。
 
 3. プロジェクトに *Models* という名前のディレクトリを作成して、モデルを保存します。
 
-    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しいフォルダー]** を選択します。 「Models」と入力し、Enter キーを押します。
+    **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しいフォルダー]** を選択します。 「Models」と入力し、Enter キーを押します。
 
 4. **Microsoft.ML NuGet パッケージ**をインストールします。
 
-    ソリューション エクスプローラーで、プロジェクトを右クリックし、**[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。[参照] タブを選択し、「**Microsoft.ML**」を検索します。一覧から **v 1.0.0** パッケージを選択し、**[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、**[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
+    ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として [nuget.org] を選択します。[参照] タブを選択し、「**Microsoft.ML**」を検索します。一覧から **v 1.0.0** パッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
 
 ### <a name="prepare-your-data"></a>データを準備する
 
 1. [issues_train.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_train.tsv) データ セットと [issues_test.tsv](https://raw.githubusercontent.com/dotnet/samples/master/machine-learning/tutorials/GitHubIssueClassification/Data/issues_test.tsv) データ セットをダウンロードして、それらを作成済みの *Data* フォルダーに保存します。 1 番目のデータ セットでは機械学習モデルをトレーニングし、2 番目のデータ セットはモデルの精度を評価するために使用します。
 
-2. ソリューション エクスプローラーで、各 \*.tsv ファイルを右クリックし、**[プロパティ]** を選択します。 **[詳細設定]** で、**[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
+2. ソリューション エクスプローラーで、各 \*.tsv ファイルを右クリックし、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
 
 ### <a name="create-classes-and-define-paths"></a>クラスを作成してパスを定義する
 
@@ -78,9 +78,9 @@ ms.locfileid: "65063530"
 
 入力データと予測のために、いくつかのクラスを作成します。 プロジェクトに新しいクラスを追加します。
 
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、**[追加]** > **[新しい項目]** を選択します。
+1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
 
-1. **[新しい項目の追加]** ダイアログ ボックスで、**[クラス]** を選択し、**[名前]** フィールドを「*GitHubIssueData.cs*」に変更します。 次に、**[追加]** を選択します。
+1. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを「*GitHubIssueData.cs*」に変更します。 次に、 **[追加]** を選択します。
 
     コード エディターで *GitHubIssueData.cs* ファイルが開きます。 *GitHubIssueData.cs* の先頭に次の `using` ステートメントを追加します。
 
@@ -242,7 +242,7 @@ GitHub の問題を追加して、`Predict` メソッドでトレーニングさ
 これでモデルの作成とトレーニングが完了したので、品質保証と検証のために、別のデータ セットを使用してモデルを評価します。 `Evaluate` メソッドでは、`BuildAndTrainModel` で作成されたモデルが渡されて評価されます。 `BuildAndTrainModel` の直後に、次のコードに示すように `Evaluate` メソッドを作成します。
 
 ```csharp
-public static void Evaluate()
+public static void Evaluate(DataViewSchema trainingDataViewSchema)
 {
 
 }
@@ -342,7 +342,7 @@ GitHub の問題を追加して、`Predict` メソッドでトレーニングさ
 =============== Single Prediction - Result: area-System.Data ===============
 ```
 
-おめでとうございます!  これで、GitHub の問題用の区分ラベルを分類および予測するための機械学習モデルをビルドできました。 このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) リポジトリで確認できます。
+おめでとうございます! これで、GitHub の問題用の区分ラベルを分類および予測するための機械学習モデルをビルドできました。 このチュートリアルのソース コードは [dotnet/samples](https://github.com/dotnet/samples/tree/master/machine-learning/tutorials/GitHubIssueClassification) リポジトリで確認できます。
 
 ## <a name="next-steps"></a>次の手順
 

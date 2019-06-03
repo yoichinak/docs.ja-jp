@@ -6,12 +6,12 @@ ms.author: cesardl
 ms.date: 04/24/2019
 ms.custom: mvc
 ms.topic: tutorial
-ms.openlocfilehash: d7c4c774667e87fee2f71046aa0f91bfad7c6f3e
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 029685be9d44ad947d4291912d7da1d8ce73d52a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065945"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053645"
 ---
 # <a name="auto-generate-a-binary-classifier-using-the-cli"></a>CLI を使用して二項分類子を自動生成する
 
@@ -142,12 +142,12 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
     ![CLI によって生成された VS ソリューション](./media/mlnet-cli/generated-csharp-solution-detailed.png)
 
-    - シリアル化された ML モデルとデータ クラスを含む生成された**クラス ライブラリ**は、エンドユーザー アプリケーションで直接使用できます。さらに、そのクラス ライブラリを直接参照する (または必要に応じてコードを移動する) こともできます。
+    - シリアル化された ML モデル (.zip ファイル) とデータ クラス (データ モデル) を含む、生成された**クラス ライブラリ**は、エンドユーザー アプリケーションで直接使用できます。さらに、そのクラス ライブラリを直接参照する (または必要に応じてコードを移動する) こともできます。
     - 生成された**コンソール アプリ**には、確認する必要がある実行コードが含まれているので、通常、単純なコード (わずか数行) を予測を行うエンドユーザー アプリケーションに移動することで、"スコア付けコード" (予測する ML モデルを実行するコード) を再利用します。 
 
-1. クラス ライブラリ プロジェクト内の **Observation.cs** および **Prediction.cs** クラス ファイルを開きます。 これらのクラスは、データの保持に使用される "データ クラス" つまり POCO クラスであることがわかります。 これは "定型コード" ですが、データセットに数十列から数百列がある場合に生成すると便利です。 
-    - `SampleObservation` クラスはデータセットからデータを読み取るときに使用されます。 
-    - `SamplePrediction` クラスまたはタイミング
+1. クラス ライブラリ プロジェクト内の **ModelInput.cs** および **ModelOutput.cs** クラス ファイルを開きます。 これらのクラスは、データの保持に使用される "データ クラス" つまり POCO クラスであることがわかります。 これは "定型コード" ですが、データセットに数十列から数百列がある場合に生成すると便利です。 
+    - `ModelInput` クラスはデータセットからデータを読み取るときに使用されます。 
+    - `ModelOutput` クラスは、予測結果 (予測データ) を取得するために使用します。
 
 1. Program.cs ファイルを開き、コードを調べます。 わずか数行で、モデルを実行し、サンプル予測を行うことができます。
 
@@ -160,13 +160,13 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
         //ModelBuilder.CreateModel();
 
         ITransformer mlModel = mlContext.Model.Load(MODEL_FILEPATH, out DataViewSchema inputSchema);
-        var predEngine = mlContext.Model.CreatePredictionEngine<SampleObservation, SamplePrediction>(mlModel);
+        var predEngine = mlContext.Model.CreatePredictionEngine<ModelInput, ModelOutput>(mlModel);
 
         // Create sample data to do a single prediction with it 
-        SampleObservation sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
+        ModelInput sampleData = CreateSingleDataSample(mlContext, DATA_FILEPATH);
 
         // Try a single prediction
-        SamplePrediction predictionResult = predEngine.Predict(sampleData);
+        ModelOutput predictionResult = predEngine.Predict(sampleData);
 
         Console.WriteLine($"Single Prediction --> Actual value: {sampleData.Label} | Predicted value: {predictionResult.Prediction}");
     }
@@ -178,14 +178,14 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
 - 3 行目のコードでは、シリアル化されたモデルの .ZIP ファイルからそのモデルを読むために、そのモデルの .ZIP ファイルのパスを指定して `mlContext.Model.Load()` API を使用します。
 
-- 4 行目のコードでは、`mlContext.Model.CreatePredictionEngine<TObservation, TPrediction>()` API を使用して `PredictionEngine` オブジェクトを作成します。 1 つのデータ サンプル (この場合は、センチメントを予測するための 1 つのテキスト) をターゲットにして予測する場合は、常に `PredictionEngine` オブジェクトが必要です。
+- 4 行目のコードでは、`mlContext.Model.CreatePredictionEngine<TSrc,TDst>(ITransformer mlModel)` API を使用して `PredictionEngine` オブジェクトを作成します。 1 つのデータ サンプル (この場合は、センチメントを予測するための 1 つのテキスト) をターゲットにして予測する場合は、常に `PredictionEngine` オブジェクトが必要です。
 
 - コードの 5 行目では、関数 `CreateSingleDataSample()` を呼び出して、予測に使用するその *1 つのサンプル データ*を作成します。 CLI ツールでは、使用するサンプル データの種類が認識されないので、この関数内ではデータセットの最初の行が読み込まれます。 ただし、この場合は、その関数を実装してこの簡単なコードを更新することで、現在の `CreateSingleDataSample()` 関数の実装ではなく独自の "ハードコーディングされた" データを作成することもできます。
 
     ```csharp
-    private static SampleObservation CreateSingleDataSample()
+    private static ModelInput CreateSingleDataSample()
     {
-        SampleObservation sampleForPrediction = new SampleObservation() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
+        ModelInput sampleForPrediction = new ModelInput() { Col0 = "The ML.NET CLI is great for getting started. Very cool!", Label = true };
         return sampleForPrediction;
     }
     ```
@@ -219,7 +219,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
 同様の "ML モデル スコア付けコード" を使用して、エンドユーザー アプリケーションでモデルを実行し、予測することができます。 
 
-たとえば、そのコードを **WPP** や **WinForms** などの任意の Windows デスクトップ アプリケーションに直接移動して、コンソール アプリと同じ方法でモデルを実行できます。
+たとえば、そのコードを **WPF** や **WinForms** などの任意の Windows デスクトップ アプリケーションに直接移動して、コンソール アプリで実行したときと同じ方法でモデルを実行できます。
 
 ただし、ML モデルを実行するこれらのコード行を実装する方法は、最適化して (つまり、モデルの .zip ファイルをキャッシュし、読み込みが 1 回になるようにして)、要求ごとに作成するのではなくシングルトン オブジェクトを持つようにします。次のセクションで説明するように、Web アプリケーションや分散サービスなど、アプリケーションをスケーラブルにする必要がある場合は特にそうです。
 
@@ -242,7 +242,7 @@ ML.NET CLI は任意のコマンドプロンプト (Windows、Mac、または Li
 
 さらに重要な点は、この特定のシナリオ (感情分析モデル) の場合、その生成済みトレーニング コードを次のチュートリアルで説明されているコードと比較することもできることです。
 
-- 比較:[チュートリアル: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する](https://docs.microsoft.com/en-us/dotnet/machine-learning/tutorials/sentiment-analysis)
+- 比較:[チュートリアル: センチメント分析のバイナリ分類のシナリオで ML.NET を使用する](sentiment-analysis.md)
 
 チュートリアルで選択したアルゴリズムとパイプラインの構成を CLI ツールによって生成されたコードと比較するのは興味深いことです。 より良いモデルのために反復処理と検索に使う時間に応じて、選択されるアルゴリズムと、その特定のハイパーパラメーターとパイプラインの構成は変わることがあります。
 

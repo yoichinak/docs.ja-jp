@@ -3,16 +3,16 @@ title: C# で既定のインターフェイス メンバーを使用してイン
 description: この高度なチュートリアルでは、既存のインターフェイスを実装するすべてのクラスと構造体を損なうことなく、そのインターフェイスの定義に新しい機能を安全に追加する方法について説明します。
 ms.date: 05/06/2019
 ms.custom: mvc
-ms.openlocfilehash: ded3704428282b8f9f0542e938137585a07802b4
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 2daa40ead5902454c6d45390233e1491fe6d369b
+ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452914"
+ms.lasthandoff: 05/19/2019
+ms.locfileid: "65877918"
 ---
-# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-8"></a>チュートリアル: C# 8 で既定のインターフェイス メンバーを使用してインターフェイスを更新する
+# <a name="tutorial-update-interfaces-with-default-interface-members-in-c-80"></a>チュートリアル: C# 8.0 で既定のインターフェイス メンバーを使用してインターフェイスを更新する
 
-.NET Core 3.0 上の C# 8 以降では、インターフェイスのメンバーを宣言するときに実装を定義できます。 最も一般的なシナリオは、数え切れないほどのクライアントから既にリリースされ、使用されているインターフェイスにメンバーを安全に追加することです。
+.NET Core 3.0 上の C# 8.0 以降では、インターフェイスのメンバーを宣言するときに実装を定義できます。 最も一般的なシナリオは、数え切れないほどのクライアントから既にリリースされ、使用されているインターフェイスにメンバーを安全に追加することです。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 
@@ -23,7 +23,7 @@ ms.locfileid: "65452914"
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 プレビュー コンパイラも実行されるようにします。 C# 8 プレビュー コンパイラは、[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) または最新の [.NET Core 3.0 プレビュー SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 以降で利用できます。 既定のインターフェイス メンバーは、.NET Core 3.0 Preview 4 以降で使用できます。
+お使いのコンピューターを、.NET Core が実行されるように設定する必要があります。C# 8.0 プレビュー コンパイラも実行されるようにします。 C# 8.0 プレビュー コンパイラは、[Visual Studio 2019](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2019) または最新の [.NET Core 3.0 プレビュー SDK](https://dotnet.microsoft.com/download/dotnet-core/3.0) 以降で利用できます。 既定のインターフェイス メンバーは、.NET Core 3.0 Preview 4 以降で使用できます。
 
 ## <a name="scenario-overview"></a>シナリオの概要
 

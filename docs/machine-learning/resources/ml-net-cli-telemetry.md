@@ -4,12 +4,12 @@ description: 分析のために使用状況の情報を収集する ML.NET CLI �
 ms.topic: conceptual
 ms.date: 05/05/2019
 ms.custom: ''
-ms.openlocfilehash: 49ebd6c9e1b77c85d891b8c9fb8cbd5c66b478a9
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 94c66267dfeec4b70ba4dd1fc47518eb0e01509a
+ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065545"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66053572"
 ---
 # <a name="telemetry-collection-by-the-mlnet-cli"></a>ML.NET CLI によるテレメトリ収集
 
@@ -43,14 +43,16 @@ ML.NET CLI のテレメトリ機能は既定で有効です。
 この機能は次のデータを収集します。
 
 - 呼び出されたコマンド (`auto-train` など)
+- 使用されたコマンド ライン パラメーターの名前 (つまり "dataset-name、label-column-name、ml-task、output-path、max-exploration-time、verbosity")
 - ハッシュされた MAC アドレス: マシンの暗号化された (SHA256) 匿名で一意の ID
 - 呼び出しのタイムスタンプ
-- 地理的位置を特定するためにのみ使用される 3 オクテットの IP アドレス
+- 地理的位置を特定するためにのみ使用される 3 オクテットの IP アドレス (完全な IP アドレスではない)
 - 使用されているすべての引数/パラメーターの名前。 文字列などのお客様の値ではありません
+- ハッシュされたデータセット ファイル名
+- データセット ファイルサイズ バケット
 - オペレーティング システムとバージョン
-- --ml-task パラメーターの値:カテゴリ値 (`regression`、`binary-classification`、`multiclass-classification` など)
-- [丸め対数](https://en.wikipedia.org/wiki/Rounding#Rounding_to_a_specified_power)のデータ セット ファイル サイズ (最も近い 2 の累乗)
-- コマンドの `ExitCode`
+- タスク パラメーターの値:カテゴリ値 (`regression`、`binary-classification`、`multiclass-classification` など)
+- ML.NET CLI バージョン (つまり 0.3.27703.4)
 
 データは [Azure Application Insights](https://azure.microsoft.com/services/application-insights/) テクノロジを使用して Microsoft サーバーに安全に送信され、制限されたアクセスの下で保持され、厳格なセキュリティ コントロールの下で安全な [Azure Storage](https://azure.microsoft.com/services/storage/) システムから使用されます。
 
@@ -73,5 +75,5 @@ Microsoft による ML.NET CLI の配布には、[マイクロソフト ソフ�
 ## <a name="see-also"></a>関連項目
 - [ML.NET CLI リファレンス](../reference/ml-net-cli-reference.md)
 - [マイクロソフト ソフトウェア ライセンス条項:Microsoft .NET ライブラリ](https://aka.ms/dotnet-core-eula)
-- [Microsoft におけるプライバシー](https://www.microsoft.com/en-us/trustcenter/privacy/)
-- [Microsoft のプライバシーに関する声明](https://privacy.microsoft.com/en-us/privacystatement)
+- [Microsoft におけるプライバシー](https://www.microsoft.com/trustcenter/privacy/)
+- [Microsoft のプライバシーに関する声明](https://privacy.microsoft.com/privacystatement)

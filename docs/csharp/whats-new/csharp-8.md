@@ -1,18 +1,20 @@
 ---
 title: C# 8.0 の新機能 - C# ガイド
-description: C# 8.0 で使用できる新しい機能の概要を説明します。 この記事は、プレビュー 2 での最新のものです。
+description: C# 8.0 で使用できる新しい機能の概要を説明します。 この記事は、プレビュー 5 での最新のものです。
 ms.date: 02/12/2019
-ms.openlocfilehash: 16723894d87526972b692a098a57ef3726b252dd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: dd4aca99a19134ed3ffff859c9c9554d4d480816
+ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64754374"
+ms.lasthandoff: 05/13/2019
+ms.locfileid: "65557147"
 ---
 # <a name="whats-new-in-c-80"></a>C# 8.0 の新機能
 
-C# 言語では、プレビュー 2 で既に試すことができる多くの機能強化が行われています。 プレビュー 2 で追加された新機能は次のとおりです。
+C# 言語では、既に試すことができる多くの機能強化が行われています。 
 
+- [読み取り専用メンバー](#readonly-members)
+- [既定のインターフェイス メンバー](#default-interface-members)
 - [パターン マッチングの拡張機能](#more-patterns-in-more-places):
   * [switch 式](#switch-expressions)
   * [プロパティのパターン](#property-patterns)
@@ -21,17 +23,67 @@ C# 言語では、プレビュー 2 で既に試すことができる多くの�
 - [using 宣言](#using-declarations)
 - [静的ローカル関数](#static-local-functions)
 - [破棄可能な ref 構造体](#disposable-ref-structs)
-
-以下の言語機能は、C# 8.0 プレビュー 1 で初めて導入されたものです。
-
 - [Null 許容参照型](#nullable-reference-types)
 - [非同期ストリーム](#asynchronous-streams)
 - [インデックスと範囲](#indices-and-ranges)
 
 > [!NOTE]
-> この記事の最後の更新は、C# 8.0 プレビュー 2 に関するものです。
+> この記事の最後の更新は、C# 8.0 プレビュー 5 に関するものです。
 
 この記事の以降では、これらの機能について簡単に説明します。 詳細な記事がある場合は、それらのチュートリアルと概要へのリンクが提供されています。
+
+## <a name="readonly-members"></a>読み取り専用メンバー
+
+構造体の任意のメンバーに `readonly` 修飾子を適用できます。 これは、メンバーによって状態が変更されないことを示します。 `readonly` 修飾子を `struct` 宣言に適用するよりも詳細になります。  次の変更可能な構造体を検討します。
+
+```csharp
+public struct Point
+{
+    public double X { get; set; }
+    public double Y { get; set; }
+    public double Distance => Math.Sqrt(X * X + Y * Y);
+
+    public override string ToString() =>
+        $"({X}, {Y}) is {Distance} from the origin";
+}
+```
+
+ほとんどの構造体と同様に、`ToString()` メソッドでは、状態を変更しません。 それを示すには、`ToString()` の宣言に修飾子 `readonly` を追加します。
+
+```csharp
+public readonly override string ToString() =>
+    $"({X}, {Y}) is {Distance} from the origin";
+```
+
+上記の変更により、`ToString` が `readonly` とマークされていない `Distance` プロパティにアクセスするため、コンパイラの警告が生成されます。
+
+```console
+warning CS8656: Call to non-readonly member 'Point.Distance.get' from a 'readonly' member results in an implicit copy of 'this'
+```
+
+コンパイラからは、防御用のコピーを作成する必要があるときに警告されます。  `Distance` プロパティでは状態を変更しないため、宣言に `readonly` 修飾子を追加することで、この警告を修正できます。
+
+```csharp
+public readonly double Distance => Math.Sqrt(X * X + Y * Y);
+```
+
+`readonly` 修飾子は読み取り専用プロパティに必要であることに注意してください。 コンパイラでは、`get` アクセサーが状態を変更しないことを想定していないため、`readonly` を明示的に宣言する必要があります。 コンパイラによって、`readonly` メンバーによって状態が変更されないというルールが適用されます。 次のメソッドは、`readonly` 修飾子を削除しない限りコンパイルされません。
+
+```csharp
+public readonly void Translate(int xOffset, int yOffset)
+{
+    X += xOffset;
+    Y += yOffset;
+}
+```
+
+この機能により、設計の意図を指定し、コンパイラによってそれが適用され、その意図に基づいて最適化が行われるようにすることができます。
+
+## <a name="default-interface-members"></a>既定のインターフェイス メンバー
+
+ここでインターフェイスにメンバーを追加し、それらのメンバーの実装を提供できます。 この言語機能を使用することで、API 作成者は、インターフェイスの既存の実装とのソースやバイナリの互換性を損なうことなく、新しいバージョンのそのインターフェイスにメソッドを追加できます。 既存の実装では既定の実装が*継承*されます。 さらに、この機能により、同様の機能をサポートする Android や Swift を対象とする API を、C# と連携させることができます。 既定のインターフェイス メンバーでは、"traits" 言語機能のようなシナリオも可能になります。
+
+多くのシナリオと言語要素が、既定のインターフェイス メンバーによって影響されます。 最初のチュートリアルでは、[既定の実装でのインターフェイスの更新](../tutorials/default-interface-members-versions.md)について取り上げています。 その他のチュートリアルとリファレンスの更新は、一般公開に間に合うように提供されます。
 
 ## <a name="more-patterns-in-more-places"></a>より多くの場所でより多くのパターン
 
@@ -129,7 +181,7 @@ public static decimal ComputeSalesTax(Address location, decimal salePrice) =>
 
 ### <a name="tuple-patterns"></a>タプル パターン
 
-いくつかのアルゴリズムは複数の入力に依存しています。 **タプル パターン**を使うと、[タプル](../tuples.md)として表現された複数の値に基づいて切り替えを行うことができます。  "*rock、paper、scissors (じゃんけん)*" ゲーム用の switch 式を示すコードを以下に示します。
+いくつかのアルゴリズムは複数の入力に依存しています。 **タプル パターン**を使うと、[タプル](../tuples.md)として表現された複数の値に基づいて切り替えを行うことができます。  "*rock、paper、scissors (じゃんけん)* " ゲーム用の switch 式を示すコードを以下に示します。
 
 ```csharp
 public static string RockPaperScissors(string first, string second)
@@ -321,9 +373,15 @@ await foreach (var number in GenerateSequence())
 
 範囲とインデックスでは、配列、<xref:System.Span%601>、または <xref:System.ReadOnlySpan%601> 内の部分範囲を指定するための簡潔な構文が提供されます。
 
-インデックスの前に `^` 文字を使用すると、**末尾から**インデックスを指定できます。 末尾からのインデックス設定は、`0..^0` によって範囲全体を指定するという規則から始まります。 配列全体を列挙するには、"*最初の要素*" から開始し、"*最後の要素を過ぎる*" まで続けます。 列挙子に対する `MoveNext` メソッドの動作を考えてみてください。列挙子から末尾の要素が渡されると、メソッドから false が返されます。 インデックス `^0` は、"末尾" の `array[array.Length]`、つまり末尾の要素の後のインデックスを意味します。 `array[2]` が "先頭から 2 番目" の要素を意味することには慣れているでしょう。 今後、`array[^2]` は "末尾から 2 番目" の要素を意味するようになります。 
+この言語のサポートでは、2 つの新しい型と 2 つの新しい演算子を使用しています。
+- <xref:System.Index?displayProperty=nameWithType> はシーケンスとしてインデックスを表します。
+- `^` 演算子。シーケンスの末尾から相対的なインデックスを指定します。
+- <xref:System.Range?displayProperty=nameWithType> はシーケンスのサブ範囲を表します。
+- 範囲演算子 (`..`)。範囲の先頭と末尾をオペランドとして指定します。
 
-**範囲**は、**範囲演算子** `..` を使用して指定できます。 たとえば、`0..^0` は配列の範囲全体を指定します。0 は先頭からですが、末尾の 0 は含まれません。 どちらのオペランドでも、"先頭から" または "末尾から" を使用できます。 さらに、どちらのオペランドも省略できます。 先頭インデックスの既定値は `0`、末尾インデックスの既定値は `^0` です。
+インデックスのルールから始めましょう。 配列 `sequence` を考えます。 `0` インデックスは `sequence[0]` と同じです。 `^0` インデックスは `sequence[sequence.Length]` と同じです。 `sequence[sequence.Length]` と同様に、`sequence[^0]` は例外をスローすることに注意してください。 任意の数値 `n` の場合、インデックス `^n` は `sequence.Length - n` と同じです。
+
+範囲は、範囲の*先頭*と*末尾*を指定します。 範囲は排他的です。つまり、*末尾*は範囲に含まれません。 範囲 `[0..^0]` は、`[0..sequence.Length]` が範囲全体を表すのと同じように、範囲全体を表します。 
 
 いくつか例を見てみましょう。 先頭および末尾からのインデックスの注釈が付けられた、次のような配列について考えます。
 
@@ -342,8 +400,6 @@ var words = new string[]
     "dog"       // 8                   ^1
 };              // 9 (or words.Length) ^0
 ```
-
-各要素のインデックスによって "先頭から" と "末尾から" の概念が強調されており、その範囲では範囲の末尾が除外されています。 配列全体の "先頭" は最初の要素です。 配列全体の "末尾" は、最後の要素の "*後*" です。
 
 最後の単語は、`^1` というインデックスで取得することができます。
 
