@@ -2,12 +2,12 @@
 title: Docker ベースのアプリケーションの開発プロセス
 description: Docker ベースのアプリケーションの開発のオプションに関する大まかな概要を確認します。 マルチ プラットフォームのサポート (Windows、Mac、Linux) のため、Windows 用 Visual Studio、Visual Studio for Mac、または Visual Studio Code のうち好みのものを使います。
 ms.date: 09/27/2018
-ms.openlocfilehash: a871fcbfcf079c745759cb17960fa4eaa6ec6eec
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 8807bc57365e70a0cbf265dc7bce28c93de16098
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640082"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300644"
 ---
 # <a name="development-process-for-docker-based-applications"></a>Docker ベースのアプリケーションの開発プロセス
 
@@ -25,7 +25,7 @@ ms.locfileid: "65640082"
 
 **Visual Studio Code と Docker CLI**。 任意の開発言語をサポートする軽量なクロスプラット フォーム エディターを選択すると、Microsoft Visual Studio Code (VS Code) と Docker CLI を使用することができます。 これは、Mac、Linux、および Windows のクロスプラット フォーム開発アプローチです。 さらに、Visual Studio Code は、Dockerfiles の IntelliSense などの Docker の拡張機能や、エディターから Docker コマンドを実行するショートカット タスクをサポートします。
 
-[Docker Community Edition (CE)](https://www.docker.com/community-edition) ツールをインストールすることで、1 つの Docker CLI を使用して Windows と Linux の両方のアプリを構築することができます。
+[Docker Desktop Community Edition (CE)](https://hub.docker.com/search/?type=edition&offering=community) をインストールすることで、1 つの Docker CLI を使用して Windows と Linux の両方のアプリを構築することができます。
 
 ### <a name="additional-resources"></a>その他の技術情報
 
@@ -35,8 +35,11 @@ ms.locfileid: "65640082"
 - **Visual Studio Code**。 公式サイト。 \
   <https://code.visualstudio.com/download>
 
-- **Mac および Windows の Docker Community Edition (CE)** \
-  [https://www.docker.com/community-editions](https://www.docker.com/community-edition)
+- **Docker Desktop for Windows Community Edition (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-windows](https://hub.docker.com/editions/community/docker-ce-desktop-windows)
+  
+- **Docker Desktop for Mac Community Edition (CE)**  \
+  [https://hub.docker.com/editions/community/docker-ce-desktop-mac](https://hub.docker.com/editions/community/docker-ce-desktop-mac)
 
 ## <a name="net-languages-and-frameworks-for-docker-containers"></a>.NET 言語および Docker コンテナーのフレームワーク
 

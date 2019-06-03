@@ -29,15 +29,16 @@
     - name: + および += 演算子
       href: addition-operator.md
       displayName: 'string concatenation, delegate combination, event subscription'
-    - name: '- operator'
+    - name: '- および -= 演算子'
       href: subtraction-operator.md
+      displayName: 'delegate removal, event unsubscription'
     - name: = 演算子
       href: assignment-operator.md
     - name: '?: 演算子'
       href: conditional-operator.md
-    - name: '-= 演算子'
-      href: subtraction-assignment-operator.md
     - name: '?? operator'
       href: null-coalescing-operator.md
     - name: => 演算子
       href: lambda-operator.md
+    - name: true および false 演算子
+      href: true-false-operators.md
