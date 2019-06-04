@@ -9,12 +9,12 @@ helpviewer_keywords:
 - runtime element
 - container tags, <runtime> element
 ms.assetid: 1eb2fae3-de4b-45b6-852f-517c39b751bd
-ms.openlocfilehash: 3ac5fdeaebfd67d6ad4f68166fda588b9e58ca98
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: aca5a161e0b2b913951a689620f8975f5c70f19f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704584"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489391"
 ---
 # <a name="runtime-element"></a>\<runtime> 要素
 アプリケーションを構成する共通言語ランタイムで使用される情報を提供します。  
@@ -68,7 +68,7 @@ ms.locfileid: "61704584"
 |[<NetFx45_CultureAwareComparerGetHashCode_LongStrings>](../../../../../docs/framework/configure-apps/file-schema/runtime/netfx45-cultureawarecomparergethashcode-longstrings-element.md)|ランタイムが <xref:System.StringComparer.GetHashCode%2A?displayProperty=nameWithType> メソッドで固定量のメモリを使用してハッシュ コードを計算するかどうかを指定します。|  
 |[\<PreferComInsteadOfRemoting >](../../../../../docs/framework/configure-apps/file-schema/runtime/prefercominsteadofmanagedremoting-element.md)|ランタイムが、アプリケーション ドメインの境界間のリモート処理ではなく COM 相互運用を使用することを指定します。|  
 |[\<relativeBindForResources>](../../../../../docs/framework/configure-apps/file-schema/runtime/relativebindforresources-element.md)|サテライト アセンブリのプローブを最適化します。|  
-|[\<shadowCopyVerifyByTimeStamp>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|シャドウ コピーが [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)] で導入された既定の起動の動作を使用するか、.NET Framework の以前のバージョンの起動の動作に戻すかどうかを指定します。|  
+|[\<shadowCopyVerifyByTimeStamp>](../../../../../docs/framework/configure-apps/file-schema/runtime/shadowcopyverifybytimestamp-element.md)|シャドウ コピー、.NET Framework 4 で導入された既定のスタートアップ動作を使用しているかどうかを指定します。 または、.NET Framework の以前のバージョンの起動の動作に戻ります。|  
 |[\<supportPortability>](../../../../../docs/framework/configure-apps/file-schema/runtime/supportportability-element.md)|.NET Framework の 2 つの異なる実装にある同じアセンブリを 1 つのアプリケーションから参照できるように、既定の動作を無効にすることができます。既定の動作では、アプリケーションの移植性を高めるために、このようなアセンブリは同等のものとして扱われます。|  
 |[\<system.runtime.caching>](../../../../../docs/framework/configure-apps/file-schema/runtime/system-runtime-caching-element-cache-settings.md)|既定のメモリ内オブジェクト キャッシュの構成情報を提供します。|  
 |[<Thread_UseAllCpuGroups>](../../../../../docs/framework/configure-apps/file-schema/runtime/thread-useallcpugroups-element.md)|ランタイムによって、すべての CPU グループにマネージド スレッドを分散するかどうかを指定します。|  
@@ -85,9 +85,9 @@ ms.locfileid: "61704584"
 |`configuration`|共通言語ランタイムおよび .NET Framework アプリケーションで使用されるすべての構成ファイルのルート要素です。|  
   
 ## <a name="remarks"></a>Remarks  
- 内の子要素、 [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)構成ファイルのセクションは、アプリケーションを実行する方法を構成する共通言語ランタイムによって使用されます。 たとえば、 [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)要素は、ガベージ コレクターがワークステーションのガベージ コレクションまたはサーバーのガベージ コレクションを使用するかどうかを決定、 [ \<UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)要素は、共通言語ランタイムがアプリケーションごと、またはアプリケーションごとのドメインごとに文字列のハッシュ コードを計算するかどうかを決定し、`AppContextSwitchOverrides`要素により、ライブラリ ユーザー有効または無効にするライブラリによって提供される変更された機能です。  
+ 内の子要素、 [\<ランタイム >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)構成ファイルのセクションは、アプリケーションを実行する方法を構成する共通言語ランタイムによって使用されます。 たとえば、 [ \<gcServer >](../../../../../docs/framework/configure-apps/file-schema/runtime/gcserver-element.md)要素は、ガベージ コレクターがワークステーションのガベージ コレクションまたはサーバーのガベージ コレクションを使用するかどうかを決定、 [ \<UseRandomizedStringHashAlgorithm >](../../../../../docs/framework/configure-apps/file-schema/runtime/userandomizedstringhashalgorithm-element.md)要素は、共通言語ランタイムがアプリケーションごと、またはアプリケーションごとのドメインごとに文字列のハッシュ コードを計算するかどうかを決定し、`AppContextSwitchOverrides`要素により、ライブラリ ユーザー有効または無効にするライブラリによって提供される変更された機能です。  
   
- 内の要素、 [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)セクションは、アプリケーションの起動時に、共通言語ランタイムによって自動的に読み取られます。 その名前を指定することによって、既定以外のアプリケーション ドメインの構成ファイルを定義することも、<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>プロパティの設定は、アプリケーション ドメインが読み込まれるときに自動的に読み込まれます。 まれには場合、これまでが必要で設定を直接読み取る必要がある、 [\<runtime>](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)アプリケーションの構成ファイルでセクション。  
+ 内の要素、 [\<ランタイム >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)セクションは、アプリケーションの起動時に、共通言語ランタイムによって自動的に読み取られます。 その名前を指定することによって、既定以外のアプリケーション ドメインの構成ファイルを定義することも、<xref:System.AppDomainSetup.ConfigurationFile%2A?displayProperty=nameWithType>プロパティの設定は、アプリケーション ドメインが読み込まれるときに自動的に読み込まれます。 まれには場合、これまでが必要で設定を直接読み取る必要がある、 [\<ランタイム >](../../../../../docs/framework/configure-apps/file-schema/runtime/runtime-element.md)アプリケーションの構成ファイルでセクション。  
   
 ## <a name="see-also"></a>関連項目
 

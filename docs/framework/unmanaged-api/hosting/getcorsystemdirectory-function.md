@@ -17,17 +17,17 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 567e6533a9a9ac718f8b5acac769295c104f7f3c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a412bd8410750ec826762e45d70d59c514c61542
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61628100"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490387"
 ---
 # <a name="getcorsystemdirectory-function"></a>GetCORSystemDirectory 関数
 プロセスに読み込まれる共通言語ランタイム (CLR) のインストール ディレクトリを返します。 インストール ディレクトリは、完全修飾"c:\windows\microsoft.net\framework\v1.0.3705"など。  
   
- この関数が非推奨とされます。 それは置き換えられて、 [iclrruntimeinfo::getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md)メソッドで提供される、 [!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]。  
+ この関数が非推奨とされます。 それは置き換えられて、 [iclrruntimeinfo::getruntimedirectory](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-getruntimedirectory-method.md) .NET Framework 4 で提供されるメソッド。  
   
 ## <a name="syntax"></a>構文  
   
@@ -55,7 +55,7 @@ HRESULT GetCORSystemDirectory (
 >  CLR の version 4 を実行しているプロセスでは、この関数は使用しないでください。 CLR の以前のバージョンは、コンピューターにインストールされて、この関数はそのバージョンのインストール ディレクトリを返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

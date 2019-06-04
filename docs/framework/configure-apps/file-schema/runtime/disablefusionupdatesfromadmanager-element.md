@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 58d2866c-37bd-4ffa-abaf-ff35926a2939
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 27c8c1cac68aca1c40826ff549d62d9636d9b0c6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c96d5aea150c0dbb55889e9fc26417e7803a155
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61704909"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487665"
 ---
 # <a name="disablefusionupdatesfromadmanager-element"></a>\<disableFusionUpdatesFromADManager > 要素
 アプリケーション ドメインの構成設定をランタイム ホストがオーバーライドする既定の動作を無効化するかどうかを指定します。  
@@ -40,7 +40,7 @@ ms.locfileid: "61704909"
   
 |値|説明|  
 |-----------|-----------------|  
-|0|Fusion の設定をオーバーライドする機能を無効にしないでください。 これは、以降では、既定の動作、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]します。|  
+|0|Fusion の設定をオーバーライドする機能を無効にしないでください。 これは、.NET Framework 4 以降では、既定の動作です。|  
 |1|Fusion の設定をオーバーライドする機能を無効にします。 これは、.NET Framework の以前のバージョンの動作に戻ります。|  
   
 ### <a name="child-elements"></a>子要素  
@@ -54,7 +54,7 @@ ms.locfileid: "61704909"
 |`runtime`|アセンブリのバインディングとガベージ コレクションに関する情報が含まれています。|  
   
 ## <a name="remarks"></a>Remarks  
- 以降では、 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、既定の動作を許可するのには、<xref:System.AppDomainManager>を使用して構成設定をオーバーライドするオブジェクト、<xref:System.AppDomainSetup.ConfigurationFile%2A>プロパティまたは<xref:System.AppDomainSetup.SetConfigurationBytes%2A>のメソッド、<xref:System.AppDomainSetup>実装に渡されるオブジェクト<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>メソッドのサブクラスは、<xref:System.AppDomainManager>します。 既定のアプリケーション ドメインを変更する設定は、アプリケーション構成ファイルによって指定された設定をオーバーライドします。 他のアプリケーション ドメインに渡された構成設定が上書き、<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>または<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>メソッド。  
+ 以降、.NET Framework 4 では、既定の動作を許可するのには、<xref:System.AppDomainManager>を使用して構成設定をオーバーライドするオブジェクト、<xref:System.AppDomainSetup.ConfigurationFile%2A>プロパティまたは<xref:System.AppDomainSetup.SetConfigurationBytes%2A>のメソッド、<xref:System.AppDomainSetup>実装に渡されるオブジェクト<xref:System.AppDomainManager.InitializeNewDomain%2A?displayProperty=nameWithType>メソッドのサブクラスは、<xref:System.AppDomainManager>します。 既定のアプリケーション ドメインを変更する設定は、アプリケーション構成ファイルによって指定された設定をオーバーライドします。 他のアプリケーション ドメインに渡された構成設定が上書き、<xref:System.AppDomainManager.CreateDomain%2A?displayProperty=nameWithType>または<xref:System.AppDomain.CreateDomain%2A?displayProperty=nameWithType>メソッド。  
   
  新しい構成情報を渡すか、null を渡す (`Nothing` Visual basic) で渡された構成情報を排除します。  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 859af632-c80d-4736-8d6f-1e01b09ce127
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: aa256fe95013494488ff52258186763fab7a85c9
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: b16f169ca61485cf3031076d32178a9407aa54ff
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456661"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488004"
 ---
 # <a name="code-access-security"></a>コード アクセス セキュリティ
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -34,7 +34,7 @@ ms.locfileid: "66456661"
  コンピューター システムを悪意のあるコードから簡単に保護できるようにしたり、発生元の不明なコードを安全に実行できるようにしたり、信頼されているコードを故意または過失によって露呈したセキュリティの脆弱性から保護できるようにしたりするために、.NET Framework はコード アクセス セキュリティというセキュリティ機構を提供しています。 コード アクセス セキュリティにより、コードの発生元や、そのコードの身元を示すその他の基準に基づいて、コードをさまざまなレベルで信頼できます。 また、コードに対してさまざまな信頼レベルを強制的に適用することにより、実行するために完全に信頼されていなければならないコードの数は少なくなります。 コード アクセス セキュリティを使用することで、作成したコードが悪意のあるコードやバグのあるコードによって誤用される可能性も低くなります。 コードによって実行できる一連の操作を指定できるため、開発者の責任を軽減できます。 コード アクセス セキュリティは、コードにセキュリティの脆弱性があった場合に、それによって被る可能性のある損害を最小限に抑えるためにも役立ちます。  
   
 > [!NOTE]
->  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] で、コード アクセス セキュリティ システムに大幅な変更が加えられています。 最も注目に値する変更されて[セキュリティ透過性](../../../docs/framework/misc/security-transparent-code.md)、コード アクセス セキュリティに影響するその他の重要な変更もありますが、します。 これらの変更については、次を参照してください。[セキュリティ変更](../../../docs/framework/security/security-changes.md)します。  
+>  .NET Framework 4 におけるコード アクセス セキュリティに大幅な変更が加えします。 最も注目に値する変更されて[セキュリティ透過性](../../../docs/framework/misc/security-transparent-code.md)、コード アクセス セキュリティに影響するその他の重要な変更もありますが、します。 これらの変更については、次を参照してください。[セキュリティ変更](../../../docs/framework/security/security-changes.md)します。  
   
  コード アクセス セキュリティは、主にライブラリ コードと部分的に信頼されたアプリケーションに影響します。 ライブラリ開発者は、部分的に信頼されたアプリケーションによる認証されていないアクセスからコードを保護する必要があります。 部分的に信頼されたアプリケーションは、インターネットなどの外部リソースから読み込まれるアプリケーションです。 デスクトップまたはローカル イントラネットにインストールされているアプリケーションは、完全に信頼されたアプリケーションとして実行されます。 コード アクセス セキュリティによっては、としてマークされている場合を除き、完全に信頼されたアプリケーションは影響ありません[透過的セキュリティ](../../../docs/framework/misc/security-transparent-code.md)、完全に信頼されているためです。 完全に信頼されたアプリケーションの唯一の制限事項は、<xref:System.Security.SecurityTransparentAttribute> 属性でマークされているアプリケーションは <xref:System.Security.SecurityCriticalAttribute> 属性でマークされているコードを呼び出すことができない点です。 部分的に信頼されたアプリケーションは、コード アクセス セキュリティを適用できるように、サンドボックス (Internet Explorer など) で実行する必要があります。 場合、インターネットからアプリケーションをダウンロードして、デスクトップから実行しようとしています。 表示される、<xref:System.NotSupportedException>メッセージ。"、試行されましたが、.NET Framework の以前のバージョンでサンド ボックス化するアセンブリを原因となるネットワークの場所からアセンブリを読み込むには。 このリリースの .NET Framework では CAS ポリシーが既定で有効ではないため、この読み込みは危険な場合があります。" というメッセージが表示されます。 アプリケーションが信頼できる場合は、有効を使用して完全な信頼として実行するように、 [ \<loadFromRemoteSources > 要素](../../../docs/framework/configure-apps/file-schema/runtime/loadfromremotesources-element.md)します。 サンド ボックスで、アプリケーションを実行する方法の詳細については、次を参照してください。[方法。Run Partially Trusted Code in a Sandbox](../../../docs/framework/misc/how-to-run-partially-trusted-code-in-a-sandbox.md)」 (方法: サンドボックスで部分信頼コードを実行する) を参照してください。  
   

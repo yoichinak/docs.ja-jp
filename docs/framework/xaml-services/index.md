@@ -6,12 +6,12 @@ helpviewer_keywords:
 - XAML Services in WPF [XAML Services]
 - System.Xaml [XAML Services], conceptual documentation
 ms.assetid: 0e11f386-808c-4eae-9ba6-029ad7ba2211
-ms.openlocfilehash: c99e44c7d373d050113687753d4f18eca27e0de5
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 61b141642fa3745c3abcf8d0234f70373fa5485e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457400"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66491110"
 ---
 # <a name="xaml-services"></a>XAML サービス
 このトピックでは、サービスの .NET Framework XAML と呼ばれるテクノロジ一連の機能について説明します。 サービスと記述された Api の大半は、.NET core アセンブリの一連の .NET Framework 4 で導入されたアセンブリである、System.Xaml アセンブリに配置されます。 サービスには、リーダーとライターは、スキーマのクラスおよびスキーマのサポート、ファクトリ クラス、XAML 言語の組み込みサポート、およびその他の XAML 言語機能の属性を設定します。  
@@ -38,7 +38,7 @@ ms.locfileid: "66457400"
 ## <a name="net-framework-xaml-services-and-systemxaml-in-the-net-architecture"></a>.NET framework XAML サービスと .NET アーキテクチャでは System.Xaml  
  Microsoft .NET Framework の以前のバージョン、XAML 言語機能が実装される、Microsoft .NET Framework 上に構築されたフレームワークのためのサポート ([!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]、Windows Workflow Foundation と Windows Communication Foundation (WCF))、そのため、その動作と API を使用する特定のフレームワークに応じて使用していたが変化します。 これは、中には、XAML パーサーと、オブジェクト グラフの作成メカニズム、XAML 言語の組み込み、シリアル化のサポート、およびなど。  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、.NET Framework XAML サービスと System.Xaml アセンブリの XAML 言語機能をサポートするために必要なものの多くを定義します。 これには、XAML リーダーと XAML ライターの基本クラスが含まれます。 フレームワーク固有の XAML 実装のいずれかでなかった、.NET Framework XAML サービスに追加された最も重要な機能は、XAML の型システム表現です。 型システム表現は、特定の機能のフレームワークに依存することがなく XAML の機能を中心にオブジェクト指向の方法で XAML を表示します。  
+ .NET Framework 4、.NET Framework XAML サービスおよび System.Xaml アセンブリでは、XAML 言語機能をサポートするために必要なものの多くを定義します。 これには、XAML リーダーと XAML ライターの基本クラスが含まれます。 フレームワーク固有の XAML 実装のいずれかでなかった、.NET Framework XAML サービスに追加された最も重要な機能は、XAML の型システム表現です。 型システム表現は、特定の機能のフレームワークに依存することがなく XAML の機能を中心にオブジェクト指向の方法で XAML を表示します。  
   
  XAML 型システムは、マークアップ形式または XAML の生成元の実行時の詳細によっては制限されません。任意の特定のバッキング型システムによってに制限されます。 XAML 型システムには、型、メンバー、XAML スキーマ コンテキスト、XML レベルの概念、およびその他の XAML 言語の概念または XAML の組み込みのオブジェクト表現が含まれています。 使用して、または XAML 型システムの拡張により、XAML リーダーと XAML ライターのようなクラスから派生し、フレームワーク、テクノロジ、または使用するアプリケーションを有効になっている特定の機能に XAML 表現の機能を拡張すること、またはXAML を生成します。 XAML スキーマ コンテキストの概念により、XAML オブジェクト ライター実装、テクノロジのバッキング型システム、コンテキストと XAML ノード内のアセンブリ情報を通じて伝達との組み合わせから実用的なオブジェクト グラフの書き込み操作ソース。 XAML スキーマの概念の詳細についてはします。 参照してください[既定の XAML スキーマ コンテキストと WPF XAML スキーマ コンテキスト](default-xaml-schema-context-and-wpf-xaml-schema-context.md)します。  
   

@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4eaa6535-d9fe-41a1-91d8-b437cfc16921
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8d5a5658fcb6bbba72938a16a9e5c82fd779e2e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c41becaa149b933d46a01f6ada0ea4b29b68fe8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61868772"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66488023"
 ---
 # <a name="code-access-security-basics"></a>コード アクセス セキュリティの基礎
 
@@ -32,7 +32,7 @@ ms.locfileid: "61868772"
 
 - **クラス ライブラリをセキュリティで保護された**:安全なクラス ライブラリでは、セキュリティ要求を使用して、ライブラリの呼び出し元のライブラリが公開するリソースにアクセスするのにためのアクセス許可でいることを確認します。 たとえば、安全なクラス ライブラリにファイルを作成するメソッドがある場合、このメソッドにアクセスする呼び出し元には、ファイルを作成するためのアクセス許可が必要です。 .NET Framework は、安全なクラス ライブラリで構成されています。 作成するコードで使用するすべてのライブラリについて、アクセスするために必要なアクセス許可を確認する必要があります。 詳細については、次を参照してください。、[安全なクラス ライブラリを使用して](#secure_library)このトピックで後述します。
 
-- **透過的なコード**:以降では、 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、に加えて、特定のアクセス許可を識別する必要がありますも決定するかどうか、セキュリティ透過的なコードを実行する必要があります。 セキュリティ透過コードは、セキュリティが重要な型またはメンバーを呼び出すことができません。 この規則は、完全に信頼されているアプリケーションと、部分的に信頼されたアプリケーションの両方に対して適用されます。 詳細については、次を参照してください。[セキュリティ透過的なコード](../../../docs/framework/misc/security-transparent-code.md)します。
+- **透過的なコード**:特定のアクセス許可を識別するだけでなく、.NET Framework 4 以降と、セキュリティ透過的なコードを実行する必要があるかどうかをも判断する必要があります。 セキュリティ透過コードは、セキュリティが重要な型またはメンバーを呼び出すことができません。 この規則は、完全に信頼されているアプリケーションと、部分的に信頼されたアプリケーションの両方に対して適用されます。 詳細については、次を参照してください。[セキュリティ透過的なコード](../../../docs/framework/misc/security-transparent-code.md)します。
 
 <a name="typesafe_code"></a>
 
@@ -55,7 +55,7 @@ JIT (Just-in-time) コンパイルでは、検証プロセスが実行され、�
 宣言セキュリティ構文を使用して[属性](../../../docs/standard/attributes/index.md)にセキュリティ情報を配置する、[メタデータ](../../../docs/standard/metadata-and-self-describing-components.md)コードの。 属性は、アセンブリ、クラス、またはメンバーの各レベルに適用でき、使用する要求、確認要求、オーバーライドの種類を示します。 要求は、共通言語ランタイムに対応するアプリケーションが、そのアプリケーションに必要なアクセス許可または必要ではないアクセス許可をランタイムのセキュリティ システムに通知するために使用します。 確認要求およびオーバーライドは、呼び出し元からリソースを保護できるようにしたり、既定のセキュリティ動作をオーバーライドしたりするために、ライブラリで使用されます。
 
 > [!NOTE]
-> [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]では、.NET Framework のセキュリティ モデルと用語に重要な変更が加えられています。 これらの変更の詳細については、次を参照してください。[セキュリティ変更](../../../docs/framework/security/security-changes.md)します。
+> .NET Framework 4 で、.NET Framework のセキュリティ モデルと用語に重要な変更があった。 これらの変更の詳細については、次を参照してください。[セキュリティ変更](../../../docs/framework/security/security-changes.md)します。
 
 宣言セキュリティ呼び出しを行う前に、アクセス許可オブジェクトの状態データを、必要な特定形式のアクセス許可を表すように初期化する必要があります。 組み込みの各アクセス許可は、開発者が実行するセキュリティ操作の種類を示す <xref:System.Security.Permissions.SecurityAction> 列挙として渡される属性を持っています。 しかし、アクセス許可は、それぞれに固有のパラメーターも受け入れます。
 

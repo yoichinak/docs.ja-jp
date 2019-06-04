@@ -2,12 +2,12 @@
 title: SQL Server での認証
 ms.date: 05/22/2018
 ms.assetid: 646ddbf5-dd4e-4285-8e4a-f565f666c5cc
-ms.openlocfilehash: 94de49fe89f2b7f4aabaade624e960202f9973bf
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 5809a75dbadffbd2528f6882aa586aecd3232408
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877460"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490098"
 ---
 # <a name="authentication-in-sql-server"></a>SQL Server での認証
 SQL Server は、Windows 認証モードと混合モードの 2 つの認証モードをサポートしています。  
@@ -46,7 +46,7 @@ SQL Server は、Windows 認証モードと混合モードの 2 つの認証モ�
 - ASP.NET などのインターネット アプリケーション。  
   
 > [!NOTE]
->  Windows 認証を指定しても、SQL Server ログインは無効になりません。 ALTER LOGIN DISABLE を使用して、[!INCLUDE[tsql](../../../../../includes/tsql-md.md)]高い権限を持つ SQL Server ログインを無効にするステートメント。  
+>  Windows 認証を指定しても、SQL Server ログインは無効になりません。 高い権限を持つ SQL Server ログインを無効にするには、Transact-SQL ステートメント ALTER LOGIN DISABLE を使用します。  
   
 ## <a name="login-types"></a>ログインの種類  
  SQL Server には、次の 3 つの種類のログインがサポートされています。  

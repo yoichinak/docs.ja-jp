@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: a9e519fb8b2ca021d66adb23659d83efc571afae
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760429"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489901"
 ---
 # <a name="null-comparisons"></a>NULL 比較
 データ ソースの `null` 値は不明な値を表します。 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリでは、NULL 値をチェックして、必ず NULL でない有効なデータを持つ行に特定の計算または比較を行うようにすることができます。 ただし、CLR の NULL セマンティクスは、データ ソースの NULL セマンティクスとは異なる場合があります。 ほとんどのデータベースでは、3 値論理を使用して NULL 比較を処理します。 これは、null 値に対する比較に評価されない`true`または`false`、評価結果が`unknown`します。 これは、多くの場合は ANSI NULL の実装ですが、そうでない場合もあります。  
   
- SQL Server の既定では、NULL = NULL の比較は NULL 値を返します。 次の例では、`ShipDate` が NULL である行が結果セットから除外され、[!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] ステートメントは 0 行を返します。  
+ SQL Server の既定では、NULL = NULL の比較は NULL 値を返します。 次の例では、行、`ShipDate`は null は、結果セットから除外して、TRANSACT-SQL ステートメントでは、0 行を返します。  
   
 ```  
 -- Find order details and orders with no ship date.  

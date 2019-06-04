@@ -6,12 +6,12 @@ helpviewer_keywords:
 ms.assetid: ce13088e-3095-4f0e-9f6b-fad30bbd3d41
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1e14fa2d739a6fdabda7b64e7e765e51da19701a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f6f6744451bf3436e58a3ff9efcdb16ceee08c9d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64616448"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489745"
 ---
 # <a name="controlling-net-framework-logging"></a>.NET Framework のログ記録の制御
 Windows イベント トレーシング (ETW: Event Tracing for Windows) を使用して共通言語ランタイム (CLR: Common Language Runtime) イベントを記録できます。 トレースの作成および表示には次のツールを使用します。  
@@ -28,7 +28,7 @@ Provider                                 GUID
 .NET Common Language Runtime    {E13C0D23-CCBC-4E12-931B-D9CC2EEE27E4}.  
 ```  
   
- 一覧に CLR プロバイダーが含まれていない場合は、Windows Vista 以降のオペレーティング システムで Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) コマンド ライン ツールを使用してインストールできます。 管理者としてコマンド プロンプト ウィンドウを開き、 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] のフォルダー (%WINDIR%\Microsoft.NET\Framework[64]\v4.\<.NET version>\) に移動します。 このフォルダーに、CLR-ETW.man ファイルが含まれています。 コマンド プロンプトで次のコマンドを入力して CLR プロバイダーをインストールします。  
+ 一覧に CLR プロバイダーが含まれていない場合は、Windows Vista 以降のオペレーティング システムで Windows [Wevtutil](/windows-server/administration/windows-commands/wevtutil) コマンド ライン ツールを使用してインストールできます。 管理者としてコマンド プロンプト ウィンドウを開き、 .NET Framework 4 フォルダーにプロンプトのディレクトリを変更 (%windir%\microsoft.net\framework[64]\v4。\<します。NET バージョン > \)。 このフォルダーに、CLR-ETW.man ファイルが含まれています。 コマンド プロンプトで次のコマンドを入力して CLR プロバイダーをインストールします。  
   
  `wevtutil im CLR-ETW.man`  
   
@@ -98,7 +98,7 @@ Provider                                 GUID
   
      `xperf clrevents.etl`  
   
-     Xperf ETL ファイル ビューアーが開きます。 このビューアーでは、CLR イベントは、**[一般的なイベント]** ビューに表示されます。 種類別に分類されたイベントのデータ グリッドを表示するには、このビューで時間帯を選択し、マウスを右クリックして **[概要]** を選択します。  
+     Xperf ETL ファイル ビューアーが開きます。 このビューアーでは、CLR イベントは、 **[一般的なイベント]** ビューに表示されます。 種類別に分類されたイベントのデータ グリッドを表示するには、このビューで時間帯を選択し、マウスを右クリックして **[概要]** を選択します。  
   
 #### <a name="to-convert-the-etl-file-to-a-comma-separated-value-file"></a>.etl ファイルをコンマ区切り値ファイルに変換するには  
   

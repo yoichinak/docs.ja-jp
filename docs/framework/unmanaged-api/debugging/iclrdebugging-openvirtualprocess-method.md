@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a313ea62455067fb36b94d942b0ce21589677e3b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d530f37c979a1ecddf2cb3895234aab2f7556b88
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61698162"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489631"
 ---
 # <a name="iclrdebuggingopenvirtualprocess-method"></a>ICLRDebugging::OpenVirtualProcess メソッド
 ICorDebugProcess インターフェイスに対応するプロセスに読み込まれている共通言語ランタイム (CLR) モジュールを取得します。  
@@ -74,11 +74,11 @@ HRESULT OpenVirtualProcess(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_POINTER|`pDataTarget` は `null`です。|  
+|E_POINTER|`pDataTarget` は `null` です。|  
 |CORDBG_E_LIBRARY_PROVIDER_ERROR|[ICLRDebuggingLibraryProvider](../../../../docs/framework/unmanaged-api/debugging/iclrdebugginglibraryprovider-interface.md)コールバックがエラーを返しますまたは、有効なハンドルは実現されません。|  
 |CORDBG_E_MISSING_DATA_TARGET_INTERFACE|`pDataTarget` このバージョンのランタイムの必要なデータ ターゲットのインターフェイスを実装しません。|  
 |CORDBG_E_NOT_CLR|指定されたモジュールが CLR モジュールではありません。 メモリが破損している、モジュールが使用できないか、CLR のバージョンが shim バージョンより新しいために、CLR モジュールを検出できない場合にも、この HRESULT が返されます。|  
-|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|このランタイム バージョンは、このデバッグ モデルをサポートしていません。 現在、デバッグのモデルは前に、のバージョンの CLR によってサポートされていません、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]します。 `pwszVersion`出力パラメーターが設定されて、適切な値にこのエラーが発生後します。|  
+|CORDBG_E_UNSUPPORTED_DEBUGGING_MODEL|このランタイム バージョンは、このデバッグ モデルをサポートしていません。 現時点では、デバッグのモデルは、.NET Framework 4 より前に、の CLR のバージョンではサポートされていません。 `pwszVersion`出力パラメーターが設定されて、適切な値にこのエラーが発生後します。|  
 |CORDBG_E_UNSUPPORTED_FORWARD_COMPAT|CLR のバージョンでは、このデバッガーでサポートされるバージョンを超えています。 `pwszVersion`出力パラメーターが設定されて、適切な値にこのエラーが発生後します。|  
 |E_NO_INTERFACE|`riidProcess`インターフェイスは利用できません。|  
 |CORDBG_E_UNSUPPORTED_VERSION_STRUCT|`CLR_DEBUGGING_VERSION`構造体には、認識されている値はありません。`wStructVersion`します。 この時点でのみ使用できる値は 0 です。|  
@@ -88,7 +88,7 @@ HRESULT OpenVirtualProcess(
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

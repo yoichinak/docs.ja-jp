@@ -2,12 +2,12 @@
 title: FILESTREAM データ
 ms.date: 03/30/2017
 ms.assetid: bd8b845c-0f09-4295-b466-97ef106eefa8
-ms.openlocfilehash: f8521a9de3037ae759b0b0ea5bcbe84830f8629e
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 4edd03a38f8f5df6cb4fb9c2446f966dfe601564
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582707"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490065"
 ---
 # <a name="filestream-data"></a>FILESTREAM データ
 
@@ -16,7 +16,7 @@ FILESTREAM ストレージ属性は、varbinary(max) 列に格納されるバイ
 > [!NOTE]
 > SqlClient を使用して FILESTREAM データを操作するには、.NET Framework 3.5 SP1 以降をインストールする必要があります。
 
-varbinary(max) 列に FILESTREAM 属性を指定すると、SQL Server ではデータはデータベース ファイルではなくローカルの NTFS ファイル システムに保存されます。 データは個別に保存されますが、データベースに保存されている varbinary(max) データの操作のためにサポートされているのと同じ [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] ステートメントを使用できます。
+varbinary(max) 列に FILESTREAM 属性を指定すると、SQL Server ではデータはデータベース ファイルではなくローカルの NTFS ファイル システムに保存されます。 データは個別に保存されますが、データベースに保存されている varbinary(max) データの操作をサポートする同じ Transact-SQL ステートメントを使用できます。
 
 ## <a name="sqlclient-support-for-filestream"></a>FILESTREAM の SqlClient サポート
 
@@ -24,7 +24,7 @@ SQL server、.NET Framework Data Provider <xref:System.Data.SqlClient>、読み�
 
 ### <a name="creating-the-sql-server-table"></a>SQL Server テーブルの作成
 
-次の [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] ステートメントでは、従業員の名前の付いたテーブルを作成し、データ行を挿入します。 FILESTREAM ストレージを有効にすると、このテーブルを次のようなコード例と共に使用できます。 SQL Server オンライン ブックのリソースへのリンクは、このトピックの最後にあります。
+次の Transact-SQL ステートメントによって、従業員の名前の付いたテーブルが作成され、データ行が挿入されます。 FILESTREAM ストレージを有効にすると、このテーブルを次のようなコード例と共に使用できます。 SQL Server オンライン ブックのリソースへのリンクは、このトピックの最後にあります。
 
 ```sql
 CREATE TABLE employees

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 39fb1588-72a4-4479-af74-0605233b68bd
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 60fcdd902c6acf919e68806ff65e3b8142533280
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: f7a1cf34f63b1ba0dfced8ff23c252f3363723c6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456387"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489408"
 ---
 # <a name="netfx40pinvokestackresilience-element"></a>\<NetFx40_PInvokeStackResilience > 要素
 ランタイムが実行時の不適切なプラットフォーム呼び出し宣言を自動的に修正するかどうかを指定します。これにより、マネージド コードとアンマネージド コード間の遷移が遅くなります。  
@@ -40,7 +40,7 @@ ms.locfileid: "66456387"
   
 |値|説明|  
 |-----------|-----------------|  
-|`0`|ランタイムは、高速な相互運用がで導入されたアーキテクチャをマーシャ リングを使用して、 [!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]、これが検出されないと修正プログラムが正しくないプラットフォーム呼び出しの宣言。 既定値です。|  
+|`0`|ランタイムが高速な相互運用が検出されない、.NET Framework 4 で導入されたアーキテクチャをマーシャ リングを使用し、修正プログラムの不適切なプラットフォーム呼び出し宣言します。 既定値です。|  
 |`1`|不適切なプラットフォームを検出してランタイムは低速遷移は呼び出しの宣言です。|  
   
 ### <a name="child-elements"></a>子要素  

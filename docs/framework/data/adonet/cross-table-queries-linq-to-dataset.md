@@ -5,17 +5,17 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 6819a16f-8656-41af-a54d-dfec0cb66366
-ms.openlocfilehash: e22df1148fab9148c1ca46f27e8603f55f71b34b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e974f643fd1515b701d2e81048725b88055b57dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607775"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489557"
 ---
 # <a name="cross-table-queries-linq-to-dataset"></a>複数テーブルにまたがるクエリ (LINQ to DataSet)
 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] では、1 つのテーブルを対象とするクエリに加え、複数テーブルにまたがるクエリを実行できます。 これを使用する*結合*します。 結合とは、あるデータ ソース内のオブジェクトを、他方のデータ ソース内で共通の属性 (たとえば製品や連絡先 ID) を持つオブジェクトと関連付けることです。 オブジェクト指向プログラミングでは、それぞれのオブジェクトは別のオブジェクトを参照するメンバーを持つため、オブジェクト間のリレーションシップのナビゲーションは比較的簡単です。 ただし、外部データベース テーブル内でのリレーションシップのナビゲーションは単純ではありません。 データベース テーブルは、組み込みのリレーションシップを持ちません。 このようなケースでは、結合操作を使用して、互いのソースの要素を対応付けることができます。 たとえば、製品情報と売上情報が 2 つのテーブルに格納されている場合、結合操作を使用して、同じ販売注文の売上情報と製品を対応付けることができます。  
   
- [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Framework には 2 つの結合演算子は、<xref:System.Linq.Enumerable.Join%2A>と<xref:System.Linq.Enumerable.GroupJoin%2A>します。 これらの演算子実行*等結合*: 結合の 2 つのデータに一致するは、ソースが、キーが等しい場合のみです。 (これに対し、[!INCLUDE[tsql](../../../../includes/tsql-md.md)] では、`equals` 以外に `less than` 演算子などの結合演算子がサポートされます)。  
+ [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] Framework には 2 つの結合演算子は、<xref:System.Linq.Enumerable.Join%2A>と<xref:System.Linq.Enumerable.GroupJoin%2A>します。 これらの演算子実行*等結合*: 結合の 2 つのデータに一致するは、ソースが、キーが等しい場合のみです。 (これに対し、演算子の結合 TRANSACT-SQL サポート以外の`equals`など、`less than`演算子です)。  
   
  リレーショナル データベース用語では、<xref:System.Linq.Enumerable.Join%2A> は内部結合を実行します。 内部結合とは、対応するデータセット内で一致するオブジェクトがあるオブジェクトのみが返される結合です。  
   

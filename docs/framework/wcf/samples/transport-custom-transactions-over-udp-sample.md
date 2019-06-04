@@ -2,12 +2,12 @@
 title: トランスポート:サンプルの UDP 経由のカスタム トランザクション
 ms.date: 03/30/2017
 ms.assetid: 6cebf975-41bd-443e-9540-fd2463c3eb23
-ms.openlocfilehash: ff53890da73d81165da6b0e845360424ec869a87
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a7b0c4e9ea73fa952710f2b415082b56062dad0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64637122"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483106"
 ---
 # <a name="transport-custom-transactions-over-udp-sample"></a>トランスポート:サンプルの UDP 経由のカスタム トランザクション
 このサンプルがに基づいて、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md) 、Windows Communication Foundation (WCF) サンプル[トランスポート拡張](../../../../docs/framework/wcf/samples/transport-extensibility.md)します。 ここでは、カスタム トランザクション フローをサポートするように UDP トランスポートのサンプルを拡張し、<xref:System.ServiceModel.Channels.TransactionMessageProperty> プロパティの使用方法について説明します。  
@@ -178,7 +178,7 @@ if (transaction != null)
   
 1. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-2. 現在のサンプルと同様に実行する必要があります、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。 実行するには、UdpTestService.exe を使用してサービスを開始します。 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] を実行している場合は、サービスをシステム特権で開始する必要があります。 これを行うで UdpTestService.exe を右クリックし[!INCLUDE[fileExplorer](../../../../includes/fileexplorer-md.md)]クリック**管理者として実行**します。  
+2. 現在のサンプルと同様に実行する必要があります、[トランスポート。UDP](../../../../docs/framework/wcf/samples/transport-udp.md)サンプル。 実行するには、UdpTestService.exe を使用してサービスを開始します。 [!INCLUDE[windowsver](../../../../includes/windowsver-md.md)] を実行している場合は、サービスをシステム特権で開始する必要があります。 これを行うには、ファイル エクスプ ローラーで UdpTestService.exe を右クリックし をクリックして**管理者として実行**します。  
   
 3. これによって次の文字列が出力されます。  
   

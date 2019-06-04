@@ -2,12 +2,12 @@
 title: ADO.NET のデータ追跡
 ms.date: 03/30/2017
 ms.assetid: a6a752a5-d2a9-4335-a382-b58690ccb79f
-ms.openlocfilehash: df49fc7a5f7c437132a4dc24ed7f18492d9e7647
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 120a9e2a817401ba04e0dce8052caecb83115e0e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583779"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489525"
 ---
 # <a name="data-tracing-in-adonet"></a>ADO.NET のデータ追跡
 
@@ -41,7 +41,7 @@ SQL Server、Oracle、OLE DB と ODBC だけでなく、ADO.NET の .NET デー�
 
 ADO.NET は、スレッド固有のアクティビティ ID も送信します。 Track_causality オプション オプションが有効で、セッションを起動している場合、拡張イベント セッションでアクティビティ ID がキャプチャされます。 アクティブな接続のパフォーマンスの問題については、クライアントのデータ アクセスのトレース (`ActivityID` フィールド) からアクティビティ ID を取得した後、その拡張イベントの出力のアクティビティ ID を検索できます。 拡張イベントのアクティビティ ID は 16 バイトの GUID (クライアント接続 ID の GUID と同じではありません) であり、4 バイトのシーケンス番号が追加されています。 シーケンス番号は、スレッド内で要求の順序を表し、スレッドのバッチと RPC ステートメントの相対的順序を示します。 `ActivityID` は、現在、データ アクセスのトレースが有効な場合、データ アクセスのトレースの構成のワードの 18 番目のビットが有効にされると、オプションとして SQL のバッチ ステートメントと RPC の要求に送信されるようになっています。
 
-次は、リング バッファーに格納され、RPC とバッチ操作でクライアントから送信されるアクティビティ ID を記録する拡張イベントのセッションを開始するために [!INCLUDE[tsql](../../../../includes/tsql-md.md)] を使用するサンプルです。
+リング バッファーに格納され、RPC とバッチ操作上のクライアントから送信されたアクティビティ ID を記録する拡張イベント セッションを開始する TRANSACT-SQL を使用するサンプルを次に示します。
 
 ```sql
 create event session MySession on server

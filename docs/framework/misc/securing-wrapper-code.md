@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 1df6c516-5bba-48bd-b450-1070e04b7389
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d4adfa5d592514c9a91c93095e7199f4b425b712
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: abbc817142ab6906a04b4dc053693f87109922dc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596637"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487894"
 ---
 # <a name="securing-wrapper-code"></a>ラッパー コードの保護
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]  
@@ -76,7 +76,7 @@ ms.locfileid: "64596637"
 - [LinkDemand](../../../docs/framework/misc/link-demands.md)ジャストイン タイム (JIT) コンパイル時に行われ、直前の呼び出し元のみを確認します。 このセキュリティ チェックでは、呼び出し元の呼び出し元はチェックされません。 このチェックに合格すると、呼び出し元が何度も呼び出す場合であってもさらにセキュリティ オーバーヘッドが生じることはありません。 ただし、おびき寄せによる攻撃からの保護機能はありません。 **LinkDemand**テストに合格して、コードを参照するすべてのコードを呼び出す権限のあるコードを使用して悪意のあるコードを許可することでセキュリティを中断できます可能性があります。 そのため、使用しないでください**LinkDemand**しない限り、すべての可能な弱点を完全に回避できます。  
   
     > [!NOTE]
-    >  [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、リンク確認要求に置換された、<xref:System.Security.SecurityCriticalAttribute>属性<xref:System.Security.SecurityRuleSet.Level2>アセンブリ。 <xref:System.Security.SecurityCriticalAttribute>は完全信頼のリンク確認要求と同じですが、継承ルールにも影響します。 この変更の詳細については、次を参照してください。[透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)します。  
+    >  リンク確認要求は、.NET Framework 4 でによって置き換えられている、<xref:System.Security.SecurityCriticalAttribute>属性<xref:System.Security.SecurityRuleSet.Level2>アセンブリ。 <xref:System.Security.SecurityCriticalAttribute>は完全信頼のリンク確認要求と同じですが、継承ルールにも影響します。 この変更の詳細については、次を参照してください。[透過的セキュリティ コード、レベル 2](../../../docs/framework/misc/security-transparent-code-level-2.md)します。  
   
  使用する場合に必要な特別な措置**LinkDemand**個別にプログラミングする必要があります。 を実施に役立てセキュリティ システムのことができます。 どのようなミスもセキュリティを脆弱化します。 作成したコードを使用する、承認されたすべてのコード側で、次の措置を行うことによって追加セキュリティを実装する責任があります。  
   

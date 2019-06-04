@@ -9,12 +9,12 @@ helpviewer_keywords:
 ms.assetid: 4d05610a-0da6-4f08-acea-d54c9d6143c0
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a3da3e48f898797849a5304c4884b648f47a26dd
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 36c3f139564b39555370cd5d41133f39c6b271bb
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456572"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487832"
 ---
 # <a name="security-transparent-code-level-2"></a>透過的セキュリティ コード、レベル 2
 
@@ -22,7 +22,7 @@ ms.locfileid: "66456572"
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-レベル 2 の透過性は、[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] で導入されました。 このモデルには、透過的なコード、セキュリティ セーフ クリティカル コード、およびセキュリティ クリティカル コードの 3 つの基本思想があります。
+レベル 2 の透過性は、.NET Framework 4 で導入されました。 このモデルには、透過的なコード、セキュリティ セーフ クリティカル コード、およびセキュリティ クリティカル コードの 3 つの基本思想があります。
 
 - 透過的なコード (完全に信頼されて実行されているコードを含む) は、他の透過的なコードまたはセキュリティ セーフ クリティカル コードのみを呼び出すことができます。 また、ドメインの部分信頼アクセス許可セット (存在する場合) で許可されるアクションのみを実行できます。 透過的なコードでは、次のアクションは実行できません。
 

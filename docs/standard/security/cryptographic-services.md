@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f070419fb8cdca178369bee12545dd1a0d89ea47
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592738"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490951"
 ---
 # <a name="cryptographic-services"></a>暗号化サービス
 
@@ -39,7 +39,7 @@ ms.locfileid: "65592738"
 
 .NET Framework では、 <xref:System.Security.Cryptography?displayProperty=nameWithType> 名前空間のクラスが暗号化のさまざまな詳細事項を自動的に管理します。 アンマネージド Microsoft Cryptography API (CryptoAPI) 用のラッパーもあれば、純粋なマネージド実装もあります。 これらのクラスを使用するにあたって、暗号の専門家になる必要はありません。 いずれかの暗号化アルゴリズム クラスのインスタンスを新しく作成すると、使いやすいようにキーが自動生成されます。また、既定のプロパティは可能な限り安全に保たれます。
 
-ここでは、ClickOnce マニフェスト、Suite B、 [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]で提供される CNG (Cryptography Next Generation) サポートなど、.NET Framework でサポートされる暗号化の機能および方法の概要について説明します。
+この概要では、ClickOnce マニフェスト、Suite B、および .NET Framework 3.5 で導入された Cryptography Next Generation (CNG) のサポートを含む、.NET Framework でサポートされる、暗号化方法の概要を提供します。
 
 この概要は、次のセクションで構成されています。
 
@@ -114,7 +114,7 @@ Alice と Bob は、安全でないチャネル経由で通信を希望する 2 
 
 .NET Framework は、秘密キーの暗号化アルゴリズムを実装する次のクラスを提供します。
 
-- <xref:System.Security.Cryptography.AesManaged> ( [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)]で導入)。
+- <xref:System.Security.Cryptography.AesManaged> (.NET Framework 3.5 で導入されました)。
 
 - <xref:System.Security.Cryptography.DESCryptoServiceProvider>。
 

@@ -2,12 +2,12 @@
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 47dbf800852e149f541c512e90a8bafef2077672
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879931"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489837"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
 このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 また、セキュリティで保護された .NET Framework アプリケーションを作成するための推奨事項に従ってください。 詳細については、次を参照してください。[セキュリティの概要](../../../../../docs/framework/data/adonet/security-overview.md)します。  
@@ -92,7 +92,7 @@ ms.locfileid: "65879931"
  概念モデルのクエリを実行する際は、セキュリティに関して次の点に注意する必要があります。 これらの注意点は、EntityClient を使用する [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリと、LINQ、[!INCLUDE[esql](../../../../../includes/esql-md.md)]、およびクエリ ビルダー メソッドを使用するオブジェクト クエリに当てはまります。  
   
 #### <a name="prevent-sql-injection-attacks"></a>SQL インジェクション攻撃を防止する  
- アプリケーションによっては (ユーザーや他の外部エージェントからの) 外部入力を受け取り、その入力内容に応じた処理を実行する場合があります。 直接、間接を問わず、ユーザーまたは外部エージェントから受け取った入力には、対象言語の構文を巧みに利用して不正なアクションを実行する内容が含まれている可能性があります。 対象言語が [!INCLUDE[tsql](../../../../../includes/tsql-md.md)] などの構造化照会言語 (SQL) である場合、この操作は SQL インジェクション攻撃と呼ばれます。 悪質なユーザーによって、クエリに直接コマンドを挿入してデータベースのテーブルを削除されたり、サービス拒否の状態を引き起こされたり、本来実行されるべき操作を改変されたりする可能性があります。  
+ アプリケーションによっては (ユーザーや他の外部エージェントからの) 外部入力を受け取り、その入力内容に応じた処理を実行する場合があります。 直接、間接を問わず、ユーザーまたは外部エージェントから受け取った入力には、対象言語の構文を巧みに利用して不正なアクションを実行する内容が含まれている可能性があります。 対象言語が、Structured Query Language (SQL)、TRANSACT-SQL などの場合、この操作は、SQL インジェクション攻撃と呼ばれます。 悪質なユーザーによって、クエリに直接コマンドを挿入してデータベースのテーブルを削除されたり、サービス拒否の状態を引き起こされたり、本来実行されるべき操作を改変されたりする可能性があります。  
   
 - [!INCLUDE[esql](../../../../../includes/esql-md.md)] インジェクション攻撃:  
   

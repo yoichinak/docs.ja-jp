@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 4f3dd841-82f7-4659-aab0-6d2db2166c65
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 60f2856bea79f36beb3c467158114fa78d99e09a
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 44003cbd0f13d2665c5b753454689c10546325b7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456502"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487848"
 ---
 # <a name="security-transparent-code"></a>透過的セキュリティ コード
 
@@ -23,7 +23,7 @@ ms.locfileid: "66456502"
 セキュリティは、サンドボックス化、アクセス許可、および適用の 3 つの相互作用を伴います。 サンドボックス化とは、完全に信頼されるコードとして扱われるコードとサンドボックスの許可セットのアクセス許可に制限されるコードが存在する分離ドメインを作成することを示します。 サンドボックスの許可セット内で実行されるアプリケーション コードは、透過的と見なされます。つまり、セキュリティに影響する可能性がある操作は実行できません。 サンドボックスの許可セットは、証拠 (<xref:System.Security.Policy.Evidence> クラス) によって決定されます。 証拠は、どのアクセス許可がサンドボックスで必要か、およびどの種類のサンドボックスを作成できるかを指定します。 適用とは、透過的なコードを許可セット内でのみ実行できるようにすることを示します。
 
 > [!IMPORTANT]
-> 以前のバージョンの .NET Framework では、セキュリティ ポリシーが主要な要素でした。 以降では、 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]、セキュリティ ポリシーは廃止されています。 セキュリティ ポリシーの削除は、透過的セキュリティとは別の変更点です。 この変更の影響については、次を参照してください。[コード アクセス セキュリティ ポリシーの互換性と移行](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)します。
+> 以前のバージョンの .NET Framework では、セキュリティ ポリシーが主要な要素でした。 以降、.NET Framework 4 では、セキュリティ ポリシーは、廃止されています。 セキュリティ ポリシーの削除は、透過的セキュリティとは別の変更点です。 この変更の影響については、次を参照してください。[コード アクセス セキュリティ ポリシーの互換性と移行](../../../docs/framework/misc/code-access-security-policy-compatibility-and-migration.md)します。
 
 ここでは、透過性モデルについて詳しく説明します。 このチュートリアルは、次のセクションで構成されています。
 
@@ -70,7 +70,7 @@ ms.locfileid: "66456502"
 
 ### <a name="level-2-transparency"></a>レベル 2 の透過性
 
-レベル 2 の透過性は、[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] で導入されました。 このモデルには、透過的なコード、セキュリティ セーフ クリティカル コード、およびセキュリティ クリティカル コードの 3 つの基本思想があります。
+レベル 2 の透過性は、.NET Framework 4 で導入されました。 このモデルには、透過的なコード、セキュリティ セーフ クリティカル コード、およびセキュリティ クリティカル コードの 3 つの基本思想があります。
 
 - 透過的なコードは、付与されているアクセス許可に関係なく (完全信頼を含む)、他の透過的なコードまたはセキュリティ セーフ クリティカル コードのみを呼び出すことができます。 コードが部分的に信頼されている場合は、ドメインのアクセス許可セットで許可されるアクションのみを実行できます。 透過的なコードでは、次のアクションは実行できません。
 

@@ -2,12 +2,12 @@
 title: CASE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: 26a47873-e87d-4ba2-9e2c-3787c21efe89
-ms.openlocfilehash: e44f48d040fc77bf702759be0c53a618cd84f9fc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3fc916d201ec79c753e06ccfcd6514761f826eb7
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607194"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489500"
 ---
 # <a name="case-entity-sql"></a>CASE (Entity SQL)
 一連の `Boolean` 式を評価して結果を決定します。  
@@ -41,7 +41,7 @@ END
  `result_expression` およびオプションの `else_result_expression`の一連の型の中から、最も優先順位の高い型を返します。  
   
 ## <a name="remarks"></a>Remarks  
- [!INCLUDE[esql](../../../../../../includes/esql-md.md)] の case 式は、 [!INCLUDE[tsql](../../../../../../includes/tsql-md.md)] の case 式と似ています。 case 式を使用すると、適切な結果が得られる式を、一連の条件判定によって決めることができます。 この形式の case 式では、1 つまたは複数の `Boolean` 式によって、最終的に使用される式が決定されます。  
+ [!INCLUDE[esql](../../../../../../includes/esql-md.md)] Case 式が TRANSACT-SQL の case 式に似ています。 case 式を使用すると、適切な結果が得られる式を、一連の条件判定によって決めることができます。 この形式の case 式では、1 つまたは複数の `Boolean` 式によって、最終的に使用される式が決定されます。  
   
  CASE 関数は、各 WHEN 句の `Boolean_expression` を指定された順序で評価し、 `result_expression` として評価された最初の `Boolean_expression` の `true`を返します。 残りの式は評価されません。 `Boolean_expression` の評価がいずれも `true`でなかった場合、データベース エンジンは、ELSE 句が指定されていれば `else_result_expression` を、ELSE 句が指定されていない場合は NULL 値を返します。  
   

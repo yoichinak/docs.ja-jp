@@ -7,18 +7,18 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 796c3b03612138238cb336361ab49514d80b4d7b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456639"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487975"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>コード アクセス セキュリティ ポリシーの互換性と移行
 
 [!INCLUDE[net_security_note](../../../includes/net-security-note-md.md)]
 
-[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] では、コード アクセス セキュリティ (CAS) のポリシー部分は廃止されました。 その結果、発生するコンパイルの警告とランタイム例外、廃止されたポリシーの種類とメンバーを呼び出す場合[明示的に](#explicit_use)または[暗黙的に](#implicit_use)(を通じて他の型とメンバーを使用して)。
+コード アクセス セキュリティ (CAS) のポリシー部分廃止された .NET Framework 4 でします。 その結果、発生するコンパイルの警告とランタイム例外、廃止されたポリシーの種類とメンバーを呼び出す場合[明示的に](#explicit_use)または[暗黙的に](#implicit_use)(を通じて他の型とメンバーを使用して)。
 
 以下のいずれかの方法で警告やエラーを回避できます。
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef6f2662-323b-4534-aa82-6d1afb7b9309
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b09c509c3e0ba941a34f60ff522117ff30d83caf
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 432de909e1b8166f6d8923889382d9408fb6c62d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457381"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490262"
 ---
 # <a name="iclrruntimeinfoisstarted-method"></a>ICLRRuntimeInfo::IsStarted メソッド
 ランタイムが開始されているかどうかを示します (つまり、かどうか、 [iclrruntimehost::start メソッド](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-start-method.md)が呼び出され、成功しました)。  
@@ -46,7 +46,7 @@ HRESULT IsStarted(
 |HRESULT|説明|  
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_NOTIMPL|共通言語ランタイム (CLR) バージョンは CLR のバージョンよりも前、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]します。|  
+|E_NOTIMPL|共通言語ランタイム (CLR) バージョンは、.NET Framework 4 で CLR のバージョンより前です。|  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドは使えません CLR のバージョンと .NET Framework 4 で CLR のバージョンよりも前。  

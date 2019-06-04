@@ -2,12 +2,12 @@
 title: Web サービス ジェネリック シリアル化の技術サンプル
 ms.date: 03/30/2017
 ms.assetid: cdc15ea4-f678-4729-8ebe-188ae720bef7
-ms.openlocfilehash: 6549dc1c3d428a5fb74fe0212549ef3f3f6510d1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b4aa9c21fa2bafce16e93a5d2479b17946dba41b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62018048"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490758"
 ---
 # <a name="web-services-generics-serialization-technology-sample"></a>Web サービス ジェネリック シリアル化の技術サンプル
 [サンプルのダウンロード](https://download.microsoft.com/download/4/7/B/47B2164C-E780-4B10-8DE4-2CB5B886E0A6/Technologies/Serialization/Xml%20Serialization/GenericsSerialization.zip.exe)  
@@ -16,7 +16,7 @@ ms.locfileid: "62018048"
   
 ### <a name="to-build-the-sample-using-visual-studio"></a>Visual Studio を使用してサンプルをビルドするには  
   
-1. Visual Studio を起動し、**[ファイル]** メニューの **[新しい Web サイト]** をクリックします。  
+1. Visual Studio を起動し、 **[ファイル]** メニューの **[新しい Web サイト]** をクリックします。  
   
 2. **[新しい Web サイト]** ダイアログ ボックスの左ペインで、目的のプログラミング言語を選択し、右ペインの **[ASP.NET Web サービス]** をクリックします。  
   
@@ -32,9 +32,9 @@ ms.locfileid: "62018048"
 > [!NOTE]
 >  サンプルをビルドするには、次の手順が必要です。  
   
-1. [!INCLUDE[fileExplorer](../../../includes/fileexplorer-md.md)]を開き、\CS サブディレクトリに移動します。  
+1. ファイル エクスプ ローラーを開き、\CS サブディレクトリに移動します。  
   
-2. GenericsService サブディレクトリのアイコンを右クリックし、**[共有とセキュリティ]** をクリックします。  
+2. GenericsService サブディレクトリのアイコンを右クリックし、 **[共有とセキュリティ]** をクリックします。  
   
 3. **[Web 共有]** タブの **[このフォルダーを共有する]** をオンにします。  
   
@@ -43,13 +43,13 @@ ms.locfileid: "62018048"
   
 ### <a name="to-build-the-sample-using-internet-information-services"></a>インターネット インフォメーション サービス (IIS: Internet Information Services) を使用してサンプルをビルドするには  
   
-1. **[インターネット インフォメーション サービス]** 管理スナップインを開き、**[Web サイト]** を展開します。  
+1. **[インターネット インフォメーション サービス]** 管理スナップインを開き、 **[Web サイト]** を展開します。  
   
-2. **[既定の Web サイト]** を左クリックして **[新規作成]**、**[仮想ディレクトリ]** の順にクリックし、**仮想ディレクトリの作成ウィザード**を作成します。  
+2. **[既定の Web サイト]** を左クリックして **[新規作成]** 、 **[仮想ディレクトリ]** の順にクリックし、**仮想ディレクトリの作成ウィザード**を作成します。  
   
-3. **[次へ]** をクリックし、仮想ディレクトリのパブリック別名を入力し、**[次へ]** をクリックします。  
+3. **[次へ]** をクリックし、仮想ディレクトリのパブリック別名を入力し、 **[次へ]** をクリックします。  
   
-4. サンプルを保存したディレクトリへのパス (通常は \CS\GenericsService サブディレクトリ) を入力し、**[次へ]** をクリックします。 **[次へ]** をクリックして、ウィザードを終了します。  
+4. サンプルを保存したディレクトリへのパス (通常は \CS\GenericsService サブディレクトリ) を入力し、 **[次へ]** をクリックします。 **[次へ]** をクリックして、ウィザードを終了します。  
   
 > [!IMPORTANT]
 >  **[別名]** ペインに表示される仮想ディレクトリ名をメモします。このディレクトリ名は、サンプルを実行するために必要になります。  

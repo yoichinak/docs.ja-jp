@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 19dacae05766566521f563d0d24980c01dfb7a0b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb19f950122f7b0db66830e9ed5dff44ccd370c2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796150"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490437"
 ---
 # <a name="eclrfailure-enumeration"></a>EClrFailure 列挙型
 ホストがポリシーのアクションを設定できるエラーのセットについて説明します。  
@@ -49,14 +49,14 @@ typedef enum {
 |`FAIL_FatalRuntime`|共通言語ランタイム (CLR) は、プロセスでマネージ コードを実行することはありません。 今後は、ホスティング関数を呼び出すには、HOST_E_CLRNOTAVAILABLE の HRESULT 値が返されます。|  
 |`FAIL_OrphanedLock`|スレッドがから戻ったときにロックを解放できませんでしたが、<xref:System.AppDomain>オブジェクト。 ホストは、スレッドを中止するには、このエラーを設定できません。|  
 |`FAIL_StackOverflow`|スタック オーバーフローが発生しました。|  
-|`FAIL_AccessViolation`|読み取りまたは書き込み保護されているメモリを試行されました。 サポートされていません、[!INCLUDE[net_v40_long](../../../../includes/net-v40-long-md.md)]します。|  
+|`FAIL_AccessViolation`|読み取りまたは書き込み保護されているメモリを試行されました。 .NET Framework 4 ではサポートされていません。|  
 |`FAIL_CodeContract`|コード コントラクトのエラーが発生しました。 参照してください[コード コントラクト](../../../../docs/framework/debug-trace-profile/code-contracts.md)します。|  
   
 ## <a name="remarks"></a>Remarks  
  参照してください、 [iclrpolicymanager::setactiononfailure](../../../../docs/framework/unmanaged-api/hosting/iclrpolicymanager-setactiononfailure-method.md)メソッドの一覧については[EPolicyAction](../../../../docs/framework/unmanaged-api/hosting/epolicyaction-enumeration.md)値が、ホストを使用してエラー状態のポリシーのアクションを指定できます。 コードの重要および重大でないリージョンの詳細については、次を参照してください。 [EClrOperation](../../../../docs/framework/unmanaged-api/hosting/eclroperation-enumeration.md)します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
