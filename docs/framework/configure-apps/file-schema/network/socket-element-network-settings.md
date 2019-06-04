@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/28/2019
 ms.locfileid: "64607508"
 ---
-# <a name="socket-element-network-settings"></a>\<ソケット > 要素 (ネットワーク設定)
+# <a name="socket-element-network-settings"></a>\<socket> 要素 (ネットワーク設定)
 ソケット操作が完了ポートを使用するかどうかを指定します。  
   
  \<configuration>  
