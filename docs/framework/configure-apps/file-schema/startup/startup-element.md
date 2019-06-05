@@ -9,12 +9,12 @@ helpviewer_keywords:
 - <startup> element
 - startup element
 ms.assetid: 536acfd8-f827-452f-838a-e14fa3b87621
-ms.openlocfilehash: 5b15c504a01a0ab8e17b8ad8811d9ed183609322
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
-ms.translationtype: HT
+ms.openlocfilehash: e40ca31ddc40cccbeb3b8dda1d148ddec5032d7c
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456267"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489553"
 ---
 # <a name="startup-element"></a>\<startup> 要素
 
@@ -37,7 +37,7 @@ ms.locfileid: "66456267"
 
 |属性|説明|
 |---------------|-----------------|
-|`useLegacyV2RuntimeActivationPolicy`|省略可能な属性です。<br /><br /> 有効にするかどうかを指定します、[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]ランタイムのアクティブ化ポリシーを使用するか、[!INCLUDE[net_v40_long](../../../../../includes/net-v40-long-md.md)]アクティブ化ポリシー。|
+|`useLegacyV2RuntimeActivationPolicy`|省略可能な属性です。<br /><br /> 有効にするかどうかを指定します、[!INCLUDE[dnprdnext](../../../../../includes/dnprdnext-md.md)]ランタイムのアクティブ化ポリシーまたは .NET Framework 4 のアクティブ化ポリシーを使用します。|
 
 ## <a name="uselegacyv2runtimeactivationpolicy-attribute"></a>useLegacyV2RuntimeActivationPolicy 属性
 
