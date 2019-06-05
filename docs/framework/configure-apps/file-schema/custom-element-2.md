@@ -42,7 +42,7 @@ ms.locfileid: "66300769"
 
 ## <a name="remarks"></a>Remarks
 
-  **\<SectionName>** 要素がによって定義されるカスタム要素、  **\<セクション>** にタグを付ける、  **\<configSections>** 要素。
+ **\<SectionName>** 要素がによって定義されるカスタム要素、  **\<セクション>** にタグを付ける、  **\<configSections>** 要素。
 
 次の表は、各構成セクション ハンドラー オブジェクト ConfigurationSettings.GetConfig メソッドの型を返します。
 

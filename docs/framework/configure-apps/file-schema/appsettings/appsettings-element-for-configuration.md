@@ -53,7 +53,7 @@ ms.locfileid: "66300816"
 
 ## <a name="remarks"></a>Remarks
 
- **\<AppSettings >** 要素は、データベース接続文字列、ファイル パス、XML Web サービスの Url の他のカスタム構成情報などのカスタム アプリケーションの構成情報を格納します。アプリケーション。 指定されたキーと値のペア、  **\<appSettings >** 要素は、コードを使用して、<xref:System.Configuration.ConfigurationSettings>クラス。
+**\<AppSettings >** 要素は、データベース接続文字列、ファイル パス、XML Web サービスの Url の他のカスタム構成情報などのカスタム アプリケーションの構成情報を格納します。アプリケーション。 指定されたキーと値のペア、  **\<appSettings >** 要素は、コードを使用して、<xref:System.Configuration.ConfigurationSettings>クラス。
 
 使用することができます、**ファイル**属性、  **\<appSettings >** の要素、 *Web.config*とアプリケーション構成ファイル。 この属性は、追加の設定を提供またはで指定された設定をオーバーライドする構成ファイルを指定、  **\<appSettings >** 要素。 **ファイル**属性をソース制御チーム開発などのシナリオで、ユーザーがアプリケーション構成ファイルで指定されたプロジェクトの設定をオーバーライドできます。
 
