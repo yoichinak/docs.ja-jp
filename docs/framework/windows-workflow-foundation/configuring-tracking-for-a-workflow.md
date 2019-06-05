@@ -2,12 +2,12 @@
 title: ワークフローの追跡の構成
 ms.date: 03/30/2017
 ms.assetid: 905adcc9-30a0-4918-acd6-563f86db988a
-ms.openlocfilehash: c3e73c3801a41a9401ac2e636fda6362487a05af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d8d3293fd2b271c0e1a00a1fca30d5ecd166df12
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62052769"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690571"
 ---
 # <a name="configuring-tracking-for-a-workflow"></a>ワークフローの追跡の構成
 
@@ -199,7 +199,7 @@ WF 4 には、追跡レコードを ETW (Event Tracing for Windows) セッショ
     </system.serviceModel>
     ```
 
-2. %Windir%\Microsoft.NET\Framework のマニフェスト ファイルをコピー\\< 最新バージョンの[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 一時的な場所に名前を変更します。Microsoft.Windows.ApplicationServer.Applications_Provider1.man
+2. %Windir%\Microsoft.NET\Framework のマニフェスト ファイルをコピー\\\<最新バージョンの[!INCLUDE[netfx_current_short](../../../includes/netfx-current-short-md.md)]> \Microsoft.Windows.ApplicationServer.Applications.man 一時的な場所に名前を変更します。Microsoft.Windows.ApplicationServer.Applications_Provider1.man
 
 3. マニフェスト ファイルの GUID を新しい GUID に変更します。
 

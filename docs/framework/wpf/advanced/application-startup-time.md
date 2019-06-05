@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 72207861850875f08786401aacf7b911b2a5b1f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777131"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689329"
 ---
 # <a name="application-startup-time"></a>アプリケーションの起動時間
 WPF アプリケーションの起動に必要な時間には、かなりばらつきがあります。 このトピックでは、Windows Presentation Foundation (WPF) アプリケーションの認識される起動時間と実際の起動時間を短縮する方法について説明します。  
@@ -81,7 +81,7 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
   
  CA 証明書をクライアント コンピューターにインストールするか、可能な場合は Authenticode の使用を避けることを検討してください。 アプリケーションが発行者の証拠を必要としないことがわかっている場合は、署名を検証する手間をかける必要はありません。  
   
- [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)] 以降、Authenticode 検証のバイパスを可能にする構成オプションが用意されています。 これを行うには、次の設定を app.exe.config ファイルに追加します。  
+ Authenticode の検証をバイパスすることを許可する構成オプションは .NET Framework 3.5 以降です。 これを行うには、次の設定を app.exe.config ファイルに追加します。  
   
 ```xml  
 <configuration>  

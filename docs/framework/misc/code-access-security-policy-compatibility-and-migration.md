@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 19cb4d39-e38a-4262-b507-458915303115
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 163ed8d00e8f0f886481dbaca956bb633a625871
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 15e693f716d02e6f7ef8b666ddf51a8bd352f642
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66487975"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690285"
 ---
 # <a name="code-access-security-policy-compatibility-and-migration"></a>コード アクセス セキュリティ ポリシーの互換性と移行
 
@@ -26,7 +26,7 @@ ms.locfileid: "66487975"
 
    \- または -
 
-- 使用して、 [< NetFx40_LegacySecurityPolicy > 構成要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)従来の CAS ポリシーの動作を有効にします。
+- 使用して、 [ \<NetFx40_LegacySecurityPolicy > 構成要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)従来の CAS ポリシーの動作を有効にします。
 
 このトピックは、次のセクションで構成されています。
 
@@ -142,7 +142,7 @@ CAS ポリシーは多くの場合、アセンブリ、アプリケーション 
 
 ## <a name="compatibility-using-the-cas-policy-legacy-option"></a>互換性:CAS ポリシーのレガシー オプションを使用します。
 
-[< NetFx40_LegacySecurityPolicy > 構成要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)プロセスまたはライブラリが、従来の CAS ポリシーを使用するように指定することができます。 この要素を有効にすると、ポリシーと証拠のオーバーロードは、framework の以前のバージョンの場合と同様に動作します。
+[ \<NetFx40_LegacySecurityPolicy > 構成要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)プロセスまたはライブラリが、従来の CAS ポリシーを使用するように指定することができます。 この要素を有効にすると、ポリシーと証拠のオーバーロードは、framework の以前のバージョンの場合と同様に動作します。
 
 > [!NOTE]
 > CAS ポリシーの動作は特定のランタイム バージョンに固有なので、そのランタイム バージョンの CAS ポリシーを変更しても、別のバージョンの CAS ポリシーには影響しません。

@@ -2,12 +2,12 @@
 title: アクティブ パターン
 description: アクティブ パターンを使用して、F# プログラミング言語で入力データを分割する名前付きのパーティションを定義する方法について説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 0f1f57de425836738201d2d8f84ab67a0df142ee
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 25ab255574390d3761fe788aeb413c8ee04fda2a
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61772751"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690414"
 ---
 # <a name="active-patterns"></a>アクティブ パターン
 
@@ -16,10 +16,16 @@ ms.locfileid: "61772751"
 ## <a name="syntax"></a>構文
 
 ```fsharp
-// Complete active pattern definition.
-let (|identifer1|identifier2|...|) [ arguments ] = expression
+// Active pattern of one choice.
+let (|identifier|) [arguments] valueToMatch= expression
+
+// Active Pattern with multiple choices.
+// Uses a FSharp.Core.Choice<_,...,_> based on the number of case names. In F#, the limitation n <= 7 applies.
+let (|identifer1|identifier2|...|) valueToMatch = expression
+
 // Partial active pattern definition.
-let (|identifier|_|) [ arguments ] = expression
+// Uses a FSharp.Core.option<_> to represent if the type is satisfied at the call site.
+let (|identifier|_|) [arguments ] valueToMatch = expression
 ```
 
 ## <a name="remarks"></a>Remarks

@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: f96284bc-7b73-44b5-ac59-fac613ad09f8
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa05fe1e170a0285df73d179ef39db6301059ac8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 1f773b6f7d0b8b4e0b8647b7086d8782d1afbb93
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490951"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690530"
 ---
 # <a name="cryptographic-services"></a>暗号化サービス
 
@@ -266,7 +266,7 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 ## <a name="clickonce-manifests"></a>ClickOnce マニフェスト
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]では、次の暗号化クラスを使用して、 [ClickOnce テクノロジ](/visualstudio/deployment/clickonce-security-and-deployment)を使用して配置されたアプリケーションのマニフェストの署名に関する情報を取得および検証できます。
+.NET Framework 3.5 では、次の暗号化クラスを使用すると、取得しを使用してデプロイされたアプリケーションのマニフェストの署名に関する情報を確認[ClickOnce テクノロジ](/visualstudio/deployment/clickonce-security-and-deployment):
 
 - <xref:System.Security.Cryptography.ManifestSignatureInformation> クラスは、 <xref:System.Security.Cryptography.ManifestSignatureInformation.VerifySignature%2A> メソッド オーバーロードの使用時に、マニフェストの署名に関する情報を取得します。
 
@@ -290,7 +290,7 @@ Alice のメッセージはプレーンテキストで送信されるため、�
 
 ## <a name="suite-b-support"></a>Suite B のサポート
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] は、米国国家安全保障局 (NSA: National Security Agency) によって公開された暗号化アルゴリズム Suite B セットをサポートしています。 Suite B の詳細については、「 [NSA の Suite B 暗号化に関するファクト シート](https://www.nsa.gov/what-we-do/information-assurance/)」を参照してください。
+.NET Framework 3.5 には、国家安全保障局 (NSA) によって公開された暗号化アルゴリズム、スイート B セットがサポートしています。 Suite B の詳細については、「 [NSA の Suite B 暗号化に関するファクト シート](https://www.nsa.gov/what-we-do/information-assurance/)」を参照してください。
 
 次のアルゴリズムが含まれています。
 
@@ -314,7 +314,7 @@ CNG のクラスには、ネイティブ CNG 関数を扱うマネージド ラ�
 
 <xref:System.Security.Cryptography.CngKey> クラスは、キーを開く、作成する、削除する、エクスポートするなど、さまざまな補足的な操作に使用されます。 また、ネイティブ関数を直接呼び出すときに使用する、基になるキー ハンドルへのアクセスも提供します。
 
-[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] には、次のような CNG に関連したクラスも含まれています。
+.NET Framework 3.5 には、さまざまなサポートなど、次の CNG クラスも含まれます。
 
 - <xref:System.Security.Cryptography.CngProvider> は、キー ストレージ プロバイダーを管理します。
 

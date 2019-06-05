@@ -6,19 +6,19 @@ helpviewer_keywords:
 - XAML [XAML Services], System.Xaml and WPF
 - System.Xaml [XAML Services], types migrated from WPF
 ms.assetid: d79dabf5-a2ec-4e8d-a37a-67c4ba8a2b91
-ms.openlocfilehash: 03f7e17983e56cc2d2136b38b3402ce689f719ee
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e39c4ca5e4a6563a94fbf6f386283053a197f5ce
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66491075"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690675"
 ---
 # <a name="types-migrated-from-wpf-to-systemxaml"></a>WPF から System.Xaml に移行した型
 .NET Framework 3.5 と[!INCLUDE[net_v30_long](../../../includes/net-v30-long-md.md)]の両方を[!INCLUDE[TLA#tla_winclient](../../../includes/tlasharptla-winclient-md.md)]Windows Workflow Foundation には、XAML 言語の実装が含まれているとします。 WPF XAML 実装に拡張性を与えていたパブリック型の多くは、WindowsBase、PresentationCore、および PresentationFramework アセンブリに存在していました。 同様に、Windows Workflow Foundation の XAML 機能拡張を提供するパブリック型は System.Workflow.ComponentModel アセンブリに存在します。 .NET Framework 4 での XAML 関連の型の一部が System.Xaml アセンブリに移行します。 XAML 言語サービスの一般的な .NET Framework の実装により、多くの XAML 機能拡張シナリオ固有のフレームワークの XAML 実装によって定義されていたが、全体的な .NET Framework 4 の XAML 言語のサポートの一部であるようになりました。 このトピックでは、移行された型を紹介し、移行に伴う問題について説明します。  
   
 <a name="assemblies_and_namespaces"></a>   
 ## <a name="assemblies-and-namespaces"></a>アセンブリと名前空間  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] および [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]では、WPF が XAML をサポートするために実装していた型は、一般に <xref:System.Windows.Markup> 名前空間にありました。 これらの型の多くは WindowsBase アセンブリにありました。  
+ .NET Framework 3.5 と[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]、WPF が XAML をサポートするために実装する型が一般に、<xref:System.Windows.Markup>名前空間。 これらの型の多くは WindowsBase アセンブリにありました。  
   
  .NET Framework 4 では、新しい<xref:System.Xaml>名前空間と、新しい System.Xaml アセンブリ。 当初は WPF XAML 向けとして実装されていた型の多くが、今では XAML の任意の実装用の機能拡張ポイントまたはサービスとして提供されています。 より一般的なシナリオでも使用できるようにするため、型は元の WPF アセンブリから System.Xaml アセンブリに型転送されました。 これにより XAML 機能拡張シナリオを使用して、他のフレームワーク (WPF や Windows Workflow Foundation) のアセンブリを含める必要はありません。  
   
@@ -37,11 +37,11 @@ ms.locfileid: "66491075"
   
 <a name="markupextension"></a>   
 ## <a name="markupextension"></a>MarkupExtension  
- [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] および [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]では、WPF の <xref:System.Windows.Markup.MarkupExtension> クラスは WindowsBase アセンブリにありました。 Windows Workflow foundation での並列クラス<xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>、System.Workflow.ComponentModel アセンブリにありました。 .NET Framework 4 で、<xref:System.Windows.Markup.MarkupExtension>クラスは System.Xaml アセンブリに移行されます。 .NET Framework 4 で<xref:System.Windows.Markup.MarkupExtension>の特定のフレームワーク上に構築されるだけでなく、.NET Framework XAML サービスを使用する任意の XAML 機能拡張シナリオ向けです。 特定のフレームワーク、またはフレームワーク内のユーザー コードも、可能な限り、XAML 機能拡張の <xref:System.Windows.Markup.MarkupExtension> クラス上に構築する必要があります。  
+ .NET Framework 3.5 と[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]、 <xref:System.Windows.Markup.MarkupExtension> WPF は WindowsBase アセンブリのクラスします。 Windows Workflow foundation での並列クラス<xref:System.Workflow.ComponentModel.Serialization.MarkupExtension>、System.Workflow.ComponentModel アセンブリにありました。 .NET Framework 4 で、<xref:System.Windows.Markup.MarkupExtension>クラスは System.Xaml アセンブリに移行されます。 .NET Framework 4 で<xref:System.Windows.Markup.MarkupExtension>の特定のフレームワーク上に構築されるだけでなく、.NET Framework XAML サービスを使用する任意の XAML 機能拡張シナリオ向けです。 特定のフレームワーク、またはフレームワーク内のユーザー コードも、可能な限り、XAML 機能拡張の <xref:System.Windows.Markup.MarkupExtension> クラス上に構築する必要があります。  
   
 <a name="markupextension_supporting_service_classes"></a>   
 ## <a name="markupextension-supporting-service-classes"></a>MarkupExtension をサポートするサービス クラス  
- WPF 向けの[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] と [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)] では、 <xref:System.Windows.Markup.MarkupExtension> implementers と <xref:System.ComponentModel.TypeConverter> の実装が提供されていました。 これらのサービスを次に示します。  
+ .NET framework 3.5 と[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]WPF を使用可能になったいくつかのサービスを提供する<xref:System.Windows.Markup.MarkupExtension>実装と<xref:System.ComponentModel.TypeConverter>XAML の型/プロパティの使用をサポートするために実装します。 これらのサービスを次に示します。  
   
 - <xref:System.Windows.Markup.IProvideValueTarget>  
   
@@ -50,7 +50,7 @@ ms.locfileid: "66491075"
 - <xref:System.Windows.Markup.IXamlTypeResolver>  
   
 > [!NOTE]
->  マークアップ拡張機能に関連するもう 1 つの [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] のサービスとして、 <xref:System.Windows.Markup.IReceiveMarkupExtension> インターフェイスがあります。 <xref:System.Windows.Markup.IReceiveMarkupExtension> 移行されなかったし、マークされて`[Obsolete]`の .NET Framework 4。 以前に <xref:System.Windows.Markup.IReceiveMarkupExtension> を使用していたシナリオは、代わりに <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> 属性付きコールバックを使用する必要があります。 <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> も `[Obsolete]`とマーク付けされています。  
+>  マークアップ拡張機能に関連する .NET Framework 3.5 から他のサービスが、<xref:System.Windows.Markup.IReceiveMarkupExtension>インターフェイス。 <xref:System.Windows.Markup.IReceiveMarkupExtension> 移行されなかったし、マークされて`[Obsolete]`の .NET Framework 4。 以前に <xref:System.Windows.Markup.IReceiveMarkupExtension> を使用していたシナリオは、代わりに <xref:System.Windows.Markup.XamlSetMarkupExtensionAttribute> 属性付きコールバックを使用する必要があります。 <xref:System.Windows.Markup.AcceptedMarkupExtensionExpressionTypeAttribute> も `[Obsolete]`とマーク付けされています。  
   
 <a name="xaml_language_features"></a>   
 ## <a name="xaml-language-features"></a>XAML 言語機能  
@@ -69,11 +69,11 @@ ms.locfileid: "66491075"
   
 <a name="valueserializer_and_supporting_classes"></a>   
 ## <a name="valueserializer-and-supporting-classes"></a>ValueSerializer とサポートするクラス  
- <xref:System.Windows.Markup.ValueSerializer> クラスは、特に、シリアル化のために出力に複数のモードまたはノードが必要となる XAML シリアル化のケースで、文字列への型変換をサポートしています。 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] および [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]では、WPF の <xref:System.Windows.Markup.ValueSerializer> は WindowsBase アセンブリにありました。 .NET Framework 4 で、<xref:System.Windows.Markup.ValueSerializer>クラスは System.Xaml と WPF 上に構築するためだけでなく、XAML 機能拡張シナリオを対象としています。 <xref:System.Windows.Markup.IValueSerializerContext> (サポート サービス) および <xref:System.Windows.Markup.DateTimeValueSerializer> (固有のサブクラス) も System.Xaml に移行されました。  
+ <xref:System.Windows.Markup.ValueSerializer> クラスは、特に、シリアル化のために出力に複数のモードまたはノードが必要となる XAML シリアル化のケースで、文字列への型変換をサポートしています。 .NET Framework 3.5 と[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]、<xref:System.Windows.Markup.ValueSerializer>の WPF は WindowsBase アセンブリ。 .NET Framework 4 で、<xref:System.Windows.Markup.ValueSerializer>クラスは System.Xaml と WPF 上に構築するためだけでなく、XAML 機能拡張シナリオを対象としています。 <xref:System.Windows.Markup.IValueSerializerContext> (サポート サービス) および <xref:System.Windows.Markup.DateTimeValueSerializer> (固有のサブクラス) も System.Xaml に移行されました。  
   
 <a name="xamlrelated_attributes"></a>   
 ## <a name="xaml-related-attributes"></a>XAML 関連の属性  
- WPF XAML には、XAML の動作について何かを示すために CLR 型に適用される属性がいくつか含まれています。 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] および [!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]で WPF アセンブリ内に存在していた属性の一覧を次に示します。 これらの属性は、.NET Framework 4 では System.Xaml に移行されます。  
+ WPF XAML には、XAML の動作について何かを示すために CLR 型に適用される属性がいくつか含まれています。 .NET Framework 3.5 での WPF アセンブリに存在していた属性の一覧を次に、[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]します。 これらの属性は、.NET Framework 4 では System.Xaml に移行されます。  
   
 - <xref:System.Windows.Markup.AmbientAttribute>  
   
@@ -107,9 +107,9 @@ ms.locfileid: "66491075"
   
 <a name="miscellaneous_classes"></a>   
 ## <a name="miscellaneous-classes"></a>その他のクラス  
- <xref:System.Windows.Markup.IComponentConnector>では windowsbase にありましたインターフェイスが存在していた、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]と[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]、.NET Framework 4 では System.Xaml に存在しますが、します。 <xref:System.Windows.Markup.IComponentConnector> は、主にツーリングのサポートと XAML マークアップ コンパイラーを目的としています。  
+ <xref:System.Windows.Markup.IComponentConnector>インターフェイスは、WindowsBase、.NET Framework 3.5 に存在していたと[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]、.NET Framework 4 では System.Xaml に存在しますが、します。 <xref:System.Windows.Markup.IComponentConnector> は、主にツーリングのサポートと XAML マークアップ コンパイラーを目的としています。  
   
- <xref:System.Windows.Markup.INameScope>では windowsbase にありましたインターフェイスが存在していた、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]と[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]、.NET Framework 4 では System.Xaml に存在しますが、します。 <xref:System.Windows.Markup.INameScope> は、XAML 名前空間に対する基本的な操作を定義します。  
+ <xref:System.Windows.Markup.INameScope>インターフェイスは、WindowsBase、.NET Framework 3.5 に存在していたと[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]、.NET Framework 4 では System.Xaml に存在しますが、します。 <xref:System.Windows.Markup.INameScope> は、XAML 名前空間に対する基本的な操作を定義します。  
   
 <a name="xamlrelated_classes_with_shared_names_that_exist_in_wpf_and_systemxaml"></a>   
 ## <a name="xaml-related-classes-with-shared-names-that-exist-in-wpf-and-systemxaml"></a>WPF と System.Xaml に存在する共通の名前を持つ XAML 関連クラス  

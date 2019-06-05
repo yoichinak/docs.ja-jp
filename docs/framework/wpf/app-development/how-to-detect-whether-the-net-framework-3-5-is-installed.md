@@ -7,21 +7,21 @@ helpviewer_keywords:
 - detecting whether.NET Framework 3.5 is installed [WPF]
 - determining whether.NET Framework 3.5 is installed [WPF]
 ms.assetid: 8556a9d2-1eb8-48ef-919c-5baf22a2a9a2
-ms.openlocfilehash: 7c373d9fd5934be98735cd814dafb35ed81fddfe
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 69dfa0eb8d9ad9b780d258a874d255484f270cfe
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592636"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690438"
 ---
 # <a name="how-to-detect-whether-the-net-framework-35-is-installed"></a>方法: .NET Framework 3.5 がインストールされているかどうかを確認する
-管理者が対象とするシステム上の Windows Presentation Foundation (WPF) アプリケーションを展開する前に、 [!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]、ことを確認する必要があります最初、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]ランタイムが存在します。 このトピックで記述されたスクリプトは、管理者は、判断に使用できる HTML または JavaScript でかどうか、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]は、システムに存在します。  
+管理者では、.NET Framework 3.5 を対象とするシステムで Windows Presentation Foundation (WPF) アプリケーションを展開できる前にまず、.NET Framework 3.5 ランタイムが存在することを確認する必要があります。 このトピックでは、HTML または JavaScript で記述されたスクリプトを提供します。 管理者は、.NET Framework 3.5 がシステム上に存在するかどうかを使用できます。  
   
 > [!NOTE]
 >  配置、および、.NET Framework の検出が参照してインストールする方法についての詳細、[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)します。  
   
 ## <a name="example"></a>例  
- ときに、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]がインストールされている場合、MSI を追加します".NET CLR"とバージョン番号 UserAgent 文字列。 次の例では、単純な HTML ページに埋め込まれたスクリプトを示します。 スクリプトを決定する UserAgent 文字列を検索するかどうか、[!INCLUDE[net_v35_short](../../../../includes/net-v35-short-md.md)]がインストールされているし、検索の結果にステータス メッセージが表示されます。  
+ .NET Framework 3.5 がインストールされている場合、MSI は、".NET CLR"とバージョン番号を UserAgent 文字列に追加します。 次の例では、単純な HTML ページに埋め込まれたスクリプトを示します。 スクリプトでは、.NET Framework 3.5 がインストールされているし、検索の結果のステータス メッセージが表示されるかどうかを判断する UserAgent 文字列を検索します。  
   
 > [!NOTE]
 >  このスクリプトは、Internet Explorer 用に設計されています。 その他のブラウザーは、UserAgent 文字列の .NET CLR の情報を含まない場合があります。  
