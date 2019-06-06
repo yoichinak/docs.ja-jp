@@ -10,12 +10,12 @@ helpviewer_keywords:
 - XAML [XAML Services], x:Class attribute
 - x:Class attribute [XAML Services]
 ms.assetid: bc4a3d8e-76e2-423e-a5d1-159a023e82ec
-ms.openlocfilehash: ee94d7bf52f3fb2ea534cdb2f44d0be2cc8699eb
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 7245b14ff2f765c1cfe96a2d49aec34eff7e8a17
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689416"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722572"
 ---
 # <a name="xclass-directive"></a>x:Class ディレクティブ
 マークアップと分離コードの間の部分クラスを結合する XAML マークアップのコンパイルを構成します。 内の別のコード ファイルでコードの部分クラスが定義されている、[!INCLUDE[TLA#tla_cls](../../../includes/tlasharptla-cls-md.md)]言語は、通常、マークアップの部分クラスは、XAML のコンパイル時にコードを生成して作成します。  
@@ -52,7 +52,7 @@ ms.locfileid: "66689416"
  アーキテクチャの意味のあるレベルで`x:Class`.NET Framework XAML サービスでは未定義です。 これは、.NET Framework XAML サービスでプログラミング モデルでは、どの XAML マークアップとコードのバックアップの接続が指定されていないためにです。 その他の使用、`x:Class`ディレクティブは、プログラミング モデルまたはアプリケーションのモデルを使用して、XAML マークアップと CLR ベースの分離コードを接続する方法を定義する特定のフレームワークによって実装される場合があります。 各フレームワークには、独自のビルド操作をいくつかの動作またはビルド環境に含める必要がある特定のコンポーネントを有効にすることができます。 フレームワーク内でビルド アクションは分離コードに使用される特定の CLR 言語によっても異なります。  
   
 ## <a name="xclass-in-the-wpf-programming-model"></a>WPF のプログラミング モデルでは、X:class  
- WPF アプリケーションと、WPF アプリケーション モデルで`x:Class`XAML ファイルのルートであるし、コンパイルされる任意の要素の属性として宣言することができます (と WPF アプリケーション プロジェクトでは、XAML が含まれている`Page`ビルド アクション)、または、「c4 > <xref:System.Windows.Application> コンパイルされた WPF アプリケーションのアプリケーション定義のルート。 宣言する`x:Class`ページのルートまたはアプリケーションのルート以外の要素またはコンパイルされない WPF XAML ファイルでは、コンパイル時エラーが発生、[!INCLUDE[net_v30_short](../../../includes/net-v30-short-md.md)]と .NET Framework 3.5 の WPF XAML コンパイラ。 他の側面について`x:Class`WPF での処理を参照してください[分離コードと wpf XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)します。  
+ WPF アプリケーションと、WPF アプリケーション モデルで`x:Class`XAML ファイルのルートであるし、コンパイルされる任意の要素の属性として宣言することができます (と WPF アプリケーション プロジェクトでは、XAML が含まれている`Page`ビルド アクション)、または、「c4 > <xref:System.Windows.Application> コンパイルされた WPF アプリケーションのアプリケーション定義のルート。 宣言`x:Class`ページのルートまたはアプリケーションのルート以外の要素またはコンパイルされない WPF XAML ファイルでは、.NET Framework 3.0 および .NET Framework 3.5 の WPF XAML コンパイラでコンパイル時エラーが発生します。 他の側面について`x:Class`WPF での処理を参照してください[分離コードと wpf XAML](../wpf/advanced/code-behind-and-xaml-in-wpf.md)します。  
   
 ## <a name="xclass-for-windows-workflow-foundation"></a>Windows Workflow Foundation の X:class  
  Windows Workflow foundation で`x:Class`全体を XAML で構成されるカスタム アクティビティのクラスの名前または分離コードを含むアクティビティ デザイナーの XAML ページの部分クラスの名前します。  
