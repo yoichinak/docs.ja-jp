@@ -2,12 +2,12 @@
 title: Polly で指数バックオフを含む HTTP 呼び出しの再試行を実装する
 description: HTTP エラーを Polly と HttpClientFactory で処理する方法について説明します
 ms.date: 01/07/2019
-ms.openlocfilehash: 9ffb0d918dc2efdc41d6c2db2e2141d14061b687
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: aa500b5525eff9f0bbf91bf98de8945f7c84704f
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053112"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301472"
 ---
 # <a name="implement-http-call-retries-with-exponential-backoff-with-httpclientfactory-and-polly-policies"></a>HttpClientFactory ポリシーと Polly ポリシーで指数バックオフを含む HTTP 呼び出しの再試行を実装する
 
@@ -69,16 +69,16 @@ Policy
 
 ## <a name="additional-resources"></a>その他の技術情報
 
-- **再試行パターン**\
+- **再試行パターン**  
   [https://docs.microsoft.com/azure/architecture/patterns/retry](/azure/architecture/patterns/retry)
 
-- **Polly と HttpClientFactory**\
+- **Polly と HttpClientFactory**  
   <https://github.com/App-vNext/Polly/wiki/Polly-and-HttpClientFactory>
 
-- **Polly (.NET の復元および一時的な障害処理ライブラリ)** \
+- **Polly (.NET の復元および一時的な障害処理ライブラリ)**  
   <https://github.com/App-vNext/Polly>
 
-- **Marc Brooker.ジッタ:ランダム性を使って状況を改善する**\
+- **Marc Brooker.ジッタ:ランダム性を使って状況を改善する**  
   <https://brooker.co.za/blog/2015/03/21/backoff.html>
 
 >[!div class="step-by-step"]

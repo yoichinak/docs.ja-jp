@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fa4b8fdd56ed8a1304b6ee436ce3391c52ae7b9d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622736"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456855"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>ジェネリックの共変性と反変性
 <a name="top"></a> 共変性と反変性は、元の指定よりも強い派生型 (具体性が高い) と弱い派生型 (具体性が低い) を使用する能力を示す用語です。 ジェネリック型パラメーターは、ジェネリック型の代入と使用の柔軟性を向上させるために、共変性と反変性をサポートしています。 型システムにおいて、共変性、反変性、および不変性は、次のように定義されます。 各例では、基底クラスが `Base` という名前であり、派生クラスが `Derived`という名前であるとします。  
@@ -81,7 +81,7 @@ ms.locfileid: "64622736"
   
 <a name="InterfaceCovariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-covariant-type-parameters"></a>共変の型パラメーターを持つジェネリック インターフェイス  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]以降には、共変の型パラメーターを持つジェネリック インターフェイスがいくつかあります ( <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.Generic.IEnumerator%601>、 <xref:System.Linq.IQueryable%601>、 <xref:System.Linq.IGrouping%602>など)。 これらのインターフェイスのすべての型パラメーターは共変のみであるため、型パラメーターはメンバーの戻り値の型だけに使用されます。  
+ .NET Framework 4 以降には、共変の型パラメーターを持つジェネリック インターフェイスがいくつかあります (<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.Generic.IEnumerator%601>、<xref:System.Linq.IQueryable%601>、<xref:System.Linq.IGrouping%602> など)。 これらのインターフェイスのすべての型パラメーターは共変のみであるため、型パラメーターはメンバーの戻り値の型だけに使用されます。  
   
  共変の型パラメーターの例を以下に示します。 ここでは 2 つの型が定義されています。 `Base` には、 `PrintBases` (Visual Basic では `IEnumerable<Base>` ) を受け取って要素を出力する`IEnumerable(Of Base)` という静的メソッドがあります。 `Derived` は `Base`を継承します。 この例は、空の `List<Derived>` (Visual Basic では`List(Of Derived)` ) を作成し、その型を `PrintBases` に渡して、キャストすることなく、 `IEnumerable<Base>` 型の変数に代入できることを示しています。 <xref:System.Collections.Generic.List%601> は、共変の型パラメーターを 1 つ持つ <xref:System.Collections.Generic.IEnumerable%601>を実装します。 `IEnumerable<Derived>` のインスタンスを `IEnumerable<Base>`の代わりに使用できるのは、この共変の型パラメーターがあるためです。  
   
@@ -92,7 +92,7 @@ ms.locfileid: "64622736"
   
 <a name="InterfaceContravariantTypeParameters"></a>   
 ## <a name="generic-interfaces-with-contravariant-generic-type-parameters"></a>反変のジェネリック型パラメーターを持つジェネリック インターフェイス  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]以降には、反変の型パラメーターを持つジェネリック インターフェイスがいくつかあります ( <xref:System.Collections.Generic.IComparer%601>、 <xref:System.IComparable%601>、 <xref:System.Collections.Generic.IEqualityComparer%601>など)。 これらのインターフェイスの型パラメーターは反変のみであるため、これらの型パラメーターは、インターフェイスのメンバーのパラメーター型としてのみ使用されます。  
+ .NET Framework 4 以降には、反変の型パラメーターを持つジェネリック インターフェイスがいくつかあります (<xref:System.Collections.Generic.IComparer%601>、<xref:System.IComparable%601>、<xref:System.Collections.Generic.IEqualityComparer%601> など)。 これらのインターフェイスの型パラメーターは反変のみであるため、これらの型パラメーターは、インターフェイスのメンバーのパラメーター型としてのみ使用されます。  
   
  反変の型パラメーターの例を以下に示します。 この例では、`MustInherit` プロパティを使用して抽象 (Visual Basic では `Shape` ) `Area` クラスを定義しています。 また、 `ShapeAreaComparer` (Visual Basic では `IComparer<Shape>` ) を実装する`IComparer(Of Shape)` クラスを定義しています。 <xref:System.Collections.Generic.IComparer%601.Compare%2A?displayProperty=nameWithType> メソッドの実装は `Area` プロパティの値に基づくため、 `ShapeAreaComparer` を使用して、領域で `Shape` オブジェクトを並べ替えることができます。  
   
@@ -107,12 +107,12 @@ ms.locfileid: "64622736"
   
 <a name="DelegateVariantTypeParameters"></a>   
 ## <a name="generic-delegates-with-variant-type-parameters"></a>バリアント型パラメーターを持つ汎用デリゲート  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]では、 `Func` などの <xref:System.Func%602>汎用デリゲートに、共変の戻り値の型と反変のパラメーターの型があります。 `Action` などの <xref:System.Action%602>汎用デリゲートには、反変のパラメーターの型があります。 したがって、より強い派生型のパラメーターと、より弱い派生型の戻り値 ( `Func` 汎用デリゲートの場合) を持つ変数に、デリゲートを代入できます。  
+ .NET Framework 4 には、<xref:System.Func%602> などの `Func` 汎用デリゲートに、共変の戻り値の型と反変のパラメーターの型があります。 `Action` などの <xref:System.Action%602>汎用デリゲートには、反変のパラメーターの型があります。 したがって、より強い派生型のパラメーターと、より弱い派生型の戻り値 ( `Func` 汎用デリゲートの場合) を持つ変数に、デリゲートを代入できます。  
   
 > [!NOTE]
 >  `Func` 汎用デリゲートの最後のジェネリック型パラメーターは、デリゲート シグネチャの戻り値の型を指定します。 他のジェネリック型パラメーターは反変 (`out` キーワード) ですが、この最後のジェネリック型パラメーターは共変 (`in` キーワード) です。  
   
- 次に例を示します。 コードの最初の部分では、 `Base`という名前のクラスと、 `Derived` を継承する `Base`という名前のクラスを定義しています。その他に、 `static` という名前の`Shared` (Visual Basic では `MyMethod`) メソッドを持つクラスも定義されています。 このメソッドは、`Base` のインスタンスを受け取り、`Derived` のインスタンスを返します  (引数が `Derived` のインスタンスの場合は、それが `MyMethod` によって返されます。引数が `Base` のインスタンスの場合は、`MyMethod` によって `Derived` の新しいインスタンスが返されます)。`Main()` では、`Func<Base, Derived>` を表す `Func(Of Base, Derived)` (Visual Basic では `MyMethod`) のインスタンスを作成して、変数 `f1` に格納しています。  
+ 次に例を示します。 コードの最初の部分では、 `Base`という名前のクラスと、 `Derived` を継承する `Base`という名前のクラスを定義しています。その他に、 `static` という名前の`Shared` (Visual Basic では `MyMethod`) メソッドを持つクラスも定義されています。 このメソッドは、`Base` のインスタンスを受け取り、`Derived` のインスタンスを返します (引数が `Derived` のインスタンスの場合は、それが `MyMethod` によって返されます。引数が `Base` のインスタンスの場合は、`MyMethod` によって `Derived` の新しいインスタンスが返されます)。`Main()` では、`Func<Base, Derived>` を表す `Func(Of Base, Derived)` (Visual Basic では `MyMethod`) のインスタンスを作成して、変数 `f1` に格納しています。  
   
  [!code-csharp[CoContravarianceDelegates#2](../../../samples/snippets/csharp/VS_Snippets_CLR/cocontravariancedelegates/cs/example.cs#2)]
  [!code-vb[CoContravarianceDelegates#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/cocontravariancedelegates/vb/example.vb#2)]  
@@ -146,12 +146,12 @@ ms.locfileid: "64622736"
   
 <a name="DefiningVariantTypeParameters"></a>   
 ## <a name="defining-variant-generic-interfaces-and-delegates"></a>バリアント ジェネリック インターフェイスとバリアント汎用デリゲートの定義  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]以降では、Visual Basic と C# の両方で、インターフェイスやデリゲートのジェネリック型パラメーターを共変または反変としてマークするためのキーワードがサポートされています。  
+ .NET Framework 4 以降では、Visual Basic と C# の両方で、インターフェイスやデリゲートのジェネリック型パラメーターを共変または反変としてマークするためのキーワードが提供されています。  
   
 > [!NOTE]
->  ジェネリック型パラメーターの分散注釈は .NET Framework Version 2.0 以降の共通言語ランタイムでサポートされていますが、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] の前までは、クラスを [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) でコンパイルするか、動的アセンブリに出力することにより、Microsoft Intermediate Language (MSIL) を使用してこれらの注釈を含むジェネリック クラスを定義する必要がありました。  
+>  ジェネリック型パラメーターの分散注釈は .NET Framework Version 2.0 以降の共通言語ランタイムでサポートされていますが、 .NET Framework 4 より前で、これらの注釈を含むジェネリック クラスを定義するには、クラスを [Ilasm.exe (IL Assembler)](../../../docs/framework/tools/ilasm-exe-il-assembler.md) を使ってコンパイル、またはそれを動的アセンブリに出力することで、Microsoft Intermediate Language (MSIL) を使用する方法しかありませんでした。  
   
- 共変の型パラメーターをマークするには、`out` キーワード (Visual Basic では `Out` キーワード、[MSIL アセンブラー](../../../docs/framework/tools/ilasm-exe-il-assembler.md)では `+`) を使用します。 共変の型パラメーターは、インターフェイスに属するメソッドの戻り値として使用したり、デリゲートの戻り値の型として使用したりできます。 インターフェイス メソッドのジェネリック型制約として使用することはできません。  
+ 共変の型パラメーターをマークするには、 `out` キーワード (Visual Basic では`Out` キーワード、 `+` MSIL アセンブラー [では](../../../docs/framework/tools/ilasm-exe-il-assembler.md)) を使用します。 共変の型パラメーターは、インターフェイスに属するメソッドの戻り値として使用したり、デリゲートの戻り値の型として使用したりできます。 インターフェイス メソッドのジェネリック型制約として使用することはできません。  
   
 > [!NOTE]
 >  インターフェイスのメソッドに汎用デリゲート型のパラメーターがある場合は、インターフェイス型の共変の型パラメーターを使用してデリゲート型の反変の型パラメーターを指定できます。  
@@ -168,7 +168,7 @@ ms.locfileid: "64622736"
   
 <a name="VariantList"></a>   
 ## <a name="list-of-variant-generic-interface-and-delegate-types"></a>バリアント ジェネリック インターフェイス型とバリアント汎用デリゲート型の一覧  
- 共変または反変、あるいはその両方の型パラメーターを持つ [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]のインターフェイス型とデリゲート型を以下に示します。  
+ .NET Framework 4 では、次のインターフェイス型およびデリゲート型に、共変または反変、またはその両方の型パラメーターが含まれます。  
   
 |型|共変の型パラメーター|反変の型パラメーター|  
 |----------|-------------------------------|-----------------------------------|  

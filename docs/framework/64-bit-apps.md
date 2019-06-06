@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: fd4026bc-2c3d-4b27-86dc-ec5e96018181
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8bad0abdba4c14659fdfa9b8064ebb8203100b33
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e10682dbf5615f9d1ef345cf2c7eeeafa87ec28
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607885"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377984"
 ---
 # <a name="64-bit-applications"></a>64 ビット アプリケーション
 アプリケーションをコンパイルするときに、Windows 64 ビット オペレーティング システム上で、ネイティブ アプリケーションとして実行するか、WOW64 (Windows 64 ビット上の Windows 32 ビット) の制御下で実行するかを指定できます。 WOW64 は互換環境であり、32 ビット アプリケーションを 64 ビット オペレーティング システム上で実行できるようにします。 WOW64 は、Windows オペレーティング システムのすべての 64 ビット バージョンに含まれています。  
@@ -21,12 +21,12 @@ ms.locfileid: "64607885"
 ## <a name="running-32-bit-vs-64-bit-applications-on-windows"></a>Windows における 32 ビット アプリケーションと 64 ビット アプリケーションの実行の比較  
  .NET Framework 1.0 および 1.1 リリースでビルドされたアプリケーションはすべて、64 ビットのオペレーティング システム上の 32 ビット アプリケーションとして扱われます。そして常に、WOW64 と 32 ビットの共通言語ランタイム (CLR: Common Language Runtime) のもとで実行します。 [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)] 以降のバージョンでビルドされた 32 ビット アプリケーションも、64 ビット システムでは WOW64 のもとで実行します。  
   
- Visual Studio は、x86 コンピューターには 32 ビット版の CLR をインストールし、64 ビットの Windows コンピューターには、32 ビット版の CLR と適切な 64 ビット版の CLR の両方をインストールします  (Visual Studio は 32 ビット アプリケーションであるため、64 ビット システムにインストールすると WOW64 の制御下で実行されます)。  
+ Visual Studio は、x86 コンピューターには 32 ビット版の CLR をインストールし、64 ビットの Windows コンピューターには、32 ビット版の CLR と適切な 64 ビット版の CLR の両方をインストールします (Visual Studio は 32 ビット アプリケーションであるため、64 ビット システムにインストールすると WOW64 の制御下で実行されます)。  
   
 > [!NOTE]
 >  x86 エミュレーションと、Itanium プロセッサ ファミリ向け WOW64 サブシステムの設計のために、アプリケーションの実行は単一のプロセッサ上に制限されます。 これらの要因により、Itanium ベースのシステム上で実行する 32 ビット .NET Framework アプリケーションのパフォーマンスとスケーラビリティは低下します。 パフォーマンスおよびスケーラビリティを向上させるために、Itanium ベースのシステム用のネイティブ 64 ビット サポートを含む [!INCLUDE[net_v40_long](../../includes/net-v40-long-md.md)] を使用することをお勧めします。  
   
- 既定では、64 ビット Windows オペレーティング システムで 64 ビット マネージド アプリケーションを実行するときに、最大 2 GB のオブジェクトを作成できます。 ただし、[!INCLUDE[net_v45](../../includes/net-v45-md.md)] ではこの制限を上げることができます。  詳細については、「[\<gcAllowVeryLargeObjects> 要素](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)」を参照してください。  
+ 既定では、64 ビット Windows オペレーティング システムで 64 ビット マネージド アプリケーションを実行するときに、最大 2 GB のオブジェクトを作成できます。 ただし、.NET Framework 4.5 ではこの制限を上げることができます。  詳細については、「[\<gcAllowVeryLargeObjects> 要素](../../docs/framework/configure-apps/file-schema/runtime/gcallowverylargeobjects-element.md)」を参照してください。  
   
  多くのアセンブリは 32 ビットの CLR と 64 ビットの CLR で同じように実行します。 しかし、次の条件が当てはまる場合、一部のプログラムでは動作が CLR によって異なります。  
   

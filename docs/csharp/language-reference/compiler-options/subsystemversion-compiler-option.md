@@ -2,12 +2,12 @@
 title: -subsystemversion (C# コンパイラ オプション)
 ms.date: 07/20/2015
 ms.assetid: a99fce81-9d92-4813-9874-bee777041445
-ms.openlocfilehash: af753b25750c6ef98b4df12eec03c355501a278e
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: cf1fb74f5d13817448bec2bcdc37510ff82f024d
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481159"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377905"
 ---
 # <a name="-subsystemversion-c-compiler-options"></a>-subsystemversion (C# コンパイラ オプション)
 
@@ -56,7 +56,7 @@ ms.locfileid: "59481159"
 
   - [-platform:arm](../../../csharp/language-reference/compiler-options/platform-compiler-option.md)
 
-- MSBuild を使用しており、[!INCLUDE[net_v45](~/includes/net-v45-md.md)] が対象で、さらにこの一覧で前に指定したコンパイラ オプションを設定していない場合、既定値は 6.00 です。
+- MSBuild を使用しており、.NET Framework 4.5 が対象で、さらにこの一覧で前に指定したコンパイラ オプションを設定していない場合、既定値は 6.00 です。
 
 - 上記の条件がどれも当てはまらない場合、既定値は 4.00 です。
 

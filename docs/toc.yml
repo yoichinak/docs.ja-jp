@@ -185,7 +185,6 @@
     - name: Linux の前提条件
       href: core/linux-prerequisites.md
     - name: .NET Core の新機能
-      href: core/whats-new/index.md
       items:
         - name: .NET Core 3.0 の新機能
           href: core/whats-new/dotnet-core-3-0.md
@@ -1836,7 +1835,7 @@
         - name: エラー メッセージ
           href: visual-basic/language-reference/error-messages/index.md
           items:
-            - name: "\t'#Else' の前には、対応する '#If' または '#ElseIf' が必要です。"
+            - name: '''#Else'' の前には、対応する ''#If'' または ''#ElseIf'' が必要です。'
               href: visual-basic/language-reference/error-messages/elseif-must-be-preceded-by-a-matching-if-or-elseif.md
             - name: '''#Region'' および ''#End Region'' ステートメントは、メソッド本体や複数行ラムダの内部では有効ではありません。'
               href: visual-basic/language-reference/error-messages/region-and-end-region-are-not-valid-within-method-bodies-multiline-lambdas.md

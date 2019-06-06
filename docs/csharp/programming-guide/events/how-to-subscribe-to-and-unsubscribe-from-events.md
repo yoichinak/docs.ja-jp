@@ -7,19 +7,19 @@ helpviewer_keywords:
 - Code Editor, event handlers
 - events [C#], creating using the IDE
 ms.assetid: 6319f39f-282c-4173-8a62-6c4657cf51cd
-ms.openlocfilehash: 56c236e2e061b473f0b188b24d3ebdd98e013aa8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 365ea55a112a4a04964a8271f2f7e5591a3b0d5d
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595992"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66301038"
 ---
 # <a name="how-to-subscribe-to-and-unsubscribe-from-events-c-programming-guide"></a>方法: イベント サブスクリプションとサブスクリプションの解除 (C# プログラミング ガイド)
 別のクラスによってパブリッシュされるイベントが発生したときに呼び出されるカスタム コードを作成するときは、そのイベントをサブスクライブします。 たとえば、ユーザーがボタンをクリックしたらアプリケーションで何かを行うには、ボタンの `click` イベントをサブスクライブします。  
   
 ### <a name="to-subscribe-to-events-by-using-the-visual-studio-ide"></a>Visual Studio IDE を使ってイベントをサブスクライブするには  
   
-1. **デザイン** ビューに **[プロパティ]** ウィンドウが表示されない場合は、イベント ハンドラーを作成するフォームまたはコントロールを右クリックして、**[プロパティ]** を選びます。  
+1. **デザイン** ビューに **[プロパティ]** ウィンドウが表示されない場合は、イベント ハンドラーを作成するフォームまたはコントロールを右クリックして、 **[プロパティ]** を選びます。  
   
 2. **[プロパティ]** ウィンドウの **[イベント]** ボタンをクリックします。  
   
@@ -104,5 +104,5 @@ ms.locfileid: "64595992"
 - [イベント](../../../csharp/programming-guide/events/index.md)
 - [event](../../../csharp/language-reference/keywords/event.md)
 - [方法: .NET Framework ガイドラインに準拠したイベントを発行する](../../../csharp/programming-guide/events/how-to-publish-events-that-conform-to-net-framework-guidelines.md)
-- [-= 演算子 (C# リファレンス)](../../language-reference/operators/subtraction-assignment-operator.md)
-- [+= 演算子](../../../csharp/language-reference/operators/addition-assignment-operator.md)
+- [- および -= 演算子](../../language-reference/operators/subtraction-operator.md)
+- [+ および += 演算子](../../language-reference/operators/addition-operator.md)

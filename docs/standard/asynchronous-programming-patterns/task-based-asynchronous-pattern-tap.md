@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8cef1fcf-6f9f-417c-b21f-3fd8bac75007
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 96499d2a3d74deb7208fa49f9fc0927109d93a69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 052f6a61fb1b03b060e22bbff2d8124ac3a1c0c0
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623793"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377652"
 ---
 # <a name="task-based-asynchronous-pattern-tap"></a>タスク ベースの非同期パターン (TAP)
 タスク ベースの非同期パターン (TAP) は、任意の非同期操作を表すために使用される <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> 名前空間の <xref:System.Threading.Tasks.Task%601?displayProperty=nameWithType> 型および <xref:System.Threading.Tasks?displayProperty=nameWithType> 型に基づいています。 TAP は、新規開発に推奨の非同期デザイン パターンです。  
@@ -95,7 +95,7 @@ TAP では、非同期操作の開始と終了を表すために単一のメソ�
  TAP の実装が `progress` パラメーターを受け取るオーバーロードを用意している場合、`null` の引数を許可し、進行状況を報告しないことを許可する必要があります。 TAP の実装は、<xref:System.Progress%601> オブジェクトに進行状況を同期的に報告して、非同期メソッドが速やかに進行状況を提供し、進行状況のコンシューマーが、最適な情報の処理方法と処理場所を判断できるようにします。 たとえば、進行状況のインスタンスはコールバックをマーシャリングし、キャプチャされた同期コンテキストでイベントを発生するように選択することができます。  
   
 ## <a name="iprogresst-implementations"></a>IProgress\<T> の実装  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は、単一の <xref:System.IProgress%601> implementation: <xref:System.Progress%601> 実装を提供します。 <xref:System.Progress%601> クラスは次のように宣言されます。  
+ .NET Framework 4.5 では、単一の <xref:System.IProgress%601> implementation: <xref:System.Progress%601> が実施されます。 <xref:System.Progress%601> クラスは次のように宣言されます。  
   
 ```csharp  
 public class Progress<T> : IProgress<T>  

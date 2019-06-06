@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: d2ce0683-343d-403e-bb8d-209186f7a19d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5803ef1d174c3e3a5e8e18b130e6b7a0c65eac81
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a00828eba91e4fea41e8b6a6da8953fc399387e3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59216347"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378508"
 ---
 # <a name="winmdexpexe-windows-runtime-metadata-export-tool"></a>Winmdexp.exe (Windows ランタイム メタデータのエクスポート ツール)
-[!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、[!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータを含むファイルに変換します。 .NET Framework アセンブリと [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ ファイルは同じ物理形式を使用しますが、メタデータ テーブルの内容に違いがあります。つまり、.NET Framework アセンブリは、自動的に [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントにするプロセスは、*エクスポート*と呼ばれます。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] と [!INCLUDE[net_v451](../../../includes/net-v451-md.md)] では、生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
+[!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ エクスポート ツール (Winmdexp.exe) は、.NET Framework モジュールを、[!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータを含むファイルに変換します。 .NET Framework アセンブリと [!INCLUDE[wrt](../../../includes/wrt-md.md)] メタデータ ファイルは同じ物理形式を使用しますが、メタデータ テーブルの内容に違いがあります。つまり、.NET Framework アセンブリは、自動的に [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントとして使用できるわけではありません。 .NET Framework モジュールを [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントにするプロセスは、*エクスポート*と呼ばれます。 .NET Framework 4.5 と .NET Framework 4.5.1 では、結果として生成される Windows メタデータ (.winmd) ファイルにメタデータと実装の両方が含まれます。  
   
  Visual Studio 2013 または Visual Studio 2012 で、C# および Visual Basic の **Windows ストア**にある **[!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネント** テンプレートを使用する場合、コンパイラのターゲットは .winmdobj ファイルであり、後続のビルド ステップで Winmdexp.exe が呼び出され、.winmdobj ファイルが .winmd ファイルにエクスポートされます。 [!INCLUDE[wrt](../../../includes/wrt-md.md)] コンポーネントをビルドする場合は、この方法をお勧めします。 Visual Studio による制御より細かくビルド プロセスを制御する場合は、Winmdexp.exe ファイルを直接使用します。  
   
@@ -34,7 +34,7 @@ winmdexp [options] winmdmodule
 |引数またはオプション|説明|  
 |------------------------|-----------------|  
 |`winmdmodule`|エクスポートするモジュール (.winmdobj) を指定します。 指定できるのは 1 つのモジュールのみです。 このモジュールを作成するには、`/target` ターゲットと共に `winmdobj` コンパイラ オプションを使用します。 「[/target:winmdobj (C# コンパイラ オプション)](~/docs/csharp/language-reference/compiler-options/target-winmdobj-compiler-option.md)」または「[/target (Visual Basic)](~/docs/visual-basic/reference/command-line-compiler/target.md)」を参照してください。|  
-|`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe が生成する出力 XML ドキュメント ファイルを指定します。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、出力ファイルは基本的に入力 XML ドキュメント ファイルと同じです。|  
+|`/docfile:` `docfile`<br /><br /> `/d:` `docfile`|Winmdexp.exe が生成する出力 XML ドキュメント ファイルを指定します。 .NET Framework 4.5 では、出力ファイルは基本的に入力 XML ドキュメント ファイルと同じです。|  
 |`/moduledoc:` `docfile`<br /><br /> `/md:` `docfile`|コンパイラが `winmdmodule` と共に生成した XML ドキュメント ファイルの名前を指定します。|  
 |`/modulepdb:` `symbolfile`<br /><br /> `/mp:` `symbolfile`|`winmdmodule` のシンボルを含むプログラム データベース (PDB) ファイルの名前を指定します。|  
 |`/nowarn:` `warning`|指定した警告番号が使用されなくなります。 *warning* の場合は、エラー コードの数字部分だけを先行ゼロなしで指定してください。|  

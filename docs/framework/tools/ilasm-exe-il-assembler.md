@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ca3a4f0-4400-47ce-8936-8e219961c76f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5b73a98542dfc6fa68e79655bc5538cf005e4636
-ms.sourcegitcommit: 5137208fa414d9ca3c58cdfd2155ac81bc89e917
+ms.openlocfilehash: 2fa95755142b5ea3999cca127c868bc878da516e
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57492584"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378582"
 ---
 # <a name="ilasmexe-il-assembler"></a>Ilasm.exe (IL アセンブラー)
 
@@ -38,7 +38,7 @@ ilasm [options] filename [[options]filename...]
 
 | 引数 | 説明 |
 | -------- | ----------- |
-|`filename`|.il ソース ファイルの名前。 このファイルは、メタデータ宣言ディレクティブとシンボリック IL 命令で構成されます。 複数のソース ファイル引数を指定すると、*Ilasm.exe* で 1 つの PE ファイルを作成できます。 **注:**.il ソース ファイルのコードの最後の行に、後続の空白または行末文字のいずれかがあることを確認してください。|
+|`filename`|.il ソース ファイルの名前。 このファイルは、メタデータ宣言ディレクティブとシンボリック IL 命令で構成されます。 複数のソース ファイル引数を指定すると、*Ilasm.exe* で 1 つの PE ファイルを作成できます。 **注:** .il ソース ファイルのコードの最後の行に、後続の空白または行末文字のいずれかがあることを確認してください。|
 
 | オプション | 説明 |
 | ------ | ----------- |
@@ -58,14 +58,14 @@ ilasm [options] filename [[options]filename...]
 |**/include:** `includePath`|`#include`によってインクルードされるファイルの検索パスを設定します。|
 |**/itanium**|ターゲット プロセッサとして Intel Itanium を指定します。<br /><br /> イメージのビット数を指定しない場合、既定は **/pe64**です。|
 |**/key:** `keyFile`|`filename` に含まれる秘密キーを使って、厳密な署名を持つ `keyFile` をコンパイルします。|
-|**/key:** @`keySource`|`filename` で生成された秘密キーを使って、厳密な署名を持つ `keySource` をコンパイルします。|
+|**/key:**  @`keySource`|`filename` で生成された秘密キーを使って、厳密な署名を持つ `keySource` をコンパイルします。|
 |**/listing**|標準出力にリスティング ファイルを生成します。 このオプションを省略すると、リスティング ファイルは生成されません。<br /><br /> このパラメーターは、.NET Framework 2.0 以降ではサポートされません。|
 |**/mdv:** `versionString`|メタデータのバージョン文字列を設定します。|
 |**/msv:** `major`.`minor`|メタデータのストリーム バージョンを設定します。ここで、 `major` と `minor` は整数です。|
 |**/noautoinherit**|基底クラスが指定されていない場合、 <xref:System.Object> からの既定の継承を無効にします。|
 |**/nocorstub**|CORExeMain スタブの生成を抑止します。|
 |**/nologo**|Microsoft 著作権情報を表示しません。|
-|**/output:** `file.ext`|出力ファイルの名前と拡張子を指定します。 既定では、出力ファイルの名前は最初のソース ファイルの名前と同じです。 既定の拡張子は *.exe* です。 **/dll** オプションを指定した場合の既定の拡張子は *.dll* です。 **注:** **/output** :myfile.dll と指定しても **/dll** オプションは設定されません。 **/dll**を指定しないと、*myfile.dll* という名前の実行可能ファイルになります。|
+|**/output:** `file.ext`|出力ファイルの名前と拡張子を指定します。 既定では、出力ファイルの名前は最初のソース ファイルの名前と同じです。 既定の拡張子は *.exe* です。 **/dll** オプションを指定した場合の既定の拡張子は *.dll* です。 **注:**  **/output** :myfile.dll と指定しても **/dll** オプションは設定されません。 **/dll**を指定しないと、*myfile.dll* という名前の実行可能ファイルになります。|
 |**/optimize**|長いインストラクションを短く最適化します。 たとえば `br` を `br.s`にします。|
 |**/pe64**|64 ビットのイメージ (PE32+) を作成します。<br /><br /> ターゲット プロセッサを指定しない場合、既定は `/itanium`です。|
 |**/pdb**|デバッグ情報の追跡を有効にせずに PDB ファイルを作成します。|
@@ -79,7 +79,7 @@ ilasm [options] filename [[options]filename...]
 |**/?**|このツールのコマンド構文とオプションを表示します。|
 
 > [!NOTE]
-> *Ilasm.exe* に関するすべてのオプションでは大文字と小文字が区別されず、先頭の 3 文字で認識されます。 たとえば、**/lis** は **/listing** と等価であり、**/res:** myresfile.res は **/resource:** myresfile.res と等価です。引数を伴うオプションの場合は、オプションと引数の間に区切り記号としてコロン (:) または等号 (=) を挿入できます。 たとえば、**/output**:*file.ext* は **/output**=*file.ext* と等価です。
+> *Ilasm.exe* に関するすべてのオプションでは大文字と小文字が区別されず、先頭の 3 文字で認識されます。 たとえば、 **/lis** は **/listing** と等価であり、 **/res:** myresfile.res は **/resource:** myresfile.res と等価です。引数を伴うオプションの場合は、オプションと引数の間に区切り記号としてコロン (:) または等号 (=) を挿入できます。 たとえば、 **/output**:*file.ext* は **/output**=*file.ext* と等価です。
 
 ## <a name="remarks"></a>解説
 
@@ -108,7 +108,7 @@ IL の文法の詳細については、 [!INCLUDE[winsdklong](../../../includes/
 
 ## <a name="version-information"></a>バージョン情報
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]以降では、次のようなコードを使用してインターフェイス実装にカスタム属性を追加できます。
+.NET Framework 4.5 以降では、次に類似するコードを使用することで、インターフェイス実装にカスタム属性を追加できます。
 
 ```
 .class interface public abstract auto ansi IMyInterface
@@ -128,7 +128,7 @@ IL の文法の詳細については、 [!INCLUDE[winsdklong](../../../includes/
       …
 ```
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]以降では、次のコードに示すように、未処理のバイナリ表現を使用して、任意のマーシャリング BLOB (バイナリ ラージ オブジェクト) を指定できます。
+.NET Framework 4.5 以降では、次のコードに示すように、未処理のバイナリ表現を使用することで、任意のマーシャリング BLOB (バイナリ ラージ オブジェクト) を指定できます。
 
 ```
 .method public hidebysig abstract virtual

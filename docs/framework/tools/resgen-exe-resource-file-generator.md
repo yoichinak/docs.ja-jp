@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8ef159de-b660-4bec-9213-c3fbc4d1c6f4
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bb2aabfd083a71d8d083d08e9bc7e2a7ad065e7f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b908cadc02e0d1739d8b36b6904bb47c5ea090
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623287"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378463"
 ---
 # <a name="resgenexe-resource-file-generator"></a>Resgen.exe (リソース ファイル ジェネレーター)
 リソース ファイル ジェネレーター (Resgen.exe) は、テキスト (.txt または .restext) ファイルおよび XML ベースのリソース形式 (.resx) ファイルを共通言語ランタイムのバイナリ (.resources) ファイルに変換します。この .resources ファイルは、ランタイム バイナリ実行可能ファイルまたはサテライト アセンブリに埋め込むことができます。 「[リソース ファイルの作成](../../../docs/framework/resources/creating-resource-files-for-desktop-apps.md)」をご覧ください。  
@@ -73,7 +73,7 @@ resgen filename.extension [outputDirectory]
   
 |パラメーターまたはスイッチ|説明|  
 |-------------------------|-----------------|  
-|`/define:` *symbol1*[, *symbol2*,...]|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降、テキスト ベース (.txt または .restext) リソース ファイル内の条件付きコンパイルがサポートされています。 *symbol* が `#ifdef` コンストラクト内の入力テキスト ファイルに含まれるシンボルに対応している場合は、関連の文字列リソースが .resources ファイルに含まれます。 `#if !` スイッチによって定義されていないシンボルと共に `/define` ステートメントが入力テキスト ファイルに含まれている場合、関連の文字列リソースがリソース ファイルに含まれます。<br /><br /> テキスト ファイル以外で使用される場合、`/define` は無視されます。 シンボルでは、大文字と小文字が区別されます。<br /><br /> このオプションについて詳しくは、このトピックの「[リソースの条件付きコンパイル](#Conditional)」をご覧ください。|  
+|`/define:` *symbol1*[, *symbol2*,...]|.NET Framework 4.5 以降、テキスト ベース (.txt または .restext) リソース ファイル内の条件付きコンパイルがサポートされています。 *symbol* が `#ifdef` コンストラクト内の入力テキスト ファイルに含まれるシンボルに対応している場合は、関連の文字列リソースが .resources ファイルに含まれます。 `#if !` スイッチによって定義されていないシンボルと共に `/define` ステートメントが入力テキスト ファイルに含まれている場合、関連の文字列リソースがリソース ファイルに含まれます。<br /><br /> テキスト ファイル以外で使用される場合、`/define` は無視されます。 シンボルでは、大文字と小文字が区別されます。<br /><br /> このオプションについて詳しくは、このトピックの「[リソースの条件付きコンパイル](#Conditional)」をご覧ください。|  
 |`useSourcePath`|入力ファイルの現在のディレクトリを使用して相対ファイル パスを解決することを指定します。|  
 |`/compile`|複数の .resx ファイルまたはテキスト ファイルを指定して、一括した操作で複数の .resources ファイルに変換できるようにします。 このオプションを指定しない場合、指定できる入力ファイル引数は 1 つだけです。 出力ファイルには、*filename*.resources という名前が付けられます。<br /><br /> このオプションは、`/str:` オプションと一緒に使用することはできません。<br /><br /> このオプションについて詳しくは、このトピックの「[複数のファイルのコンパイルまたは変換](#Multiple)」をご覧ください。|  
 |`/r:` `assembly`|指定されたアセンブリからメタデータを参照します。 これは、.resx ファイルを変換するときに使用され、Resgen.exe がオブジェクト リソースをシリアル化または非シリアル化できるようにします。 C# および Visual Basic コンパイラの `/reference:` や `/r:` オプションに似ています。|  
@@ -244,9 +244,9 @@ resgen MyApp.exe Win8Resources
   
 <a name="Conditional"></a>   
 ### <a name="conditionally-compiling-resources"></a>リソースの条件付きコンパイル  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 以降、Resgen.exe は、テキスト (.txt および .restext) ファイル内の文字列リソースの条件付きコンパイルをサポートしています。 これによって、複数のビルド構成で 1 つのテキスト ベースのリソース ファイルを使用できます。  
+ .NET Framework 4.5 以降、Resgen.exe では、テキスト (.txt および .restext) ファイル内の文字列リソースの条件付きコンパイルがサポートされています。 これによって、複数のビルド構成で 1 つのテキスト ベースのリソース ファイルを使用できます。  
   
- .txt または .restext ファイルで、シンボルが定義されている場合は、`#ifdef` … `#endif`  コンストラクトを使って、バイナリ .resources ファイルにリソースを含めます。また、シンボルが定義されていない場合は、`#if !` ... `#endif` コンストラクトを使ってリソースを含めます。 コンパイル時に、シンボルのコンマ区切りリストが続く `/define:` オプションを使用して、シンボルを定義します。 比較では、大文字と小文字が区別されます。つまり、`/define` によって定義されたシンボルとコンパイルされるテキスト ファイルのシンボルの大文字と小文字が一致する必要があります。  
+ .txt または .restext ファイルで、シンボルが定義されている場合は、`#ifdef` … `#endif` コンストラクトを使って、バイナリ .resources ファイルにリソースを含めます。また、シンボルが定義されていない場合は、`#if !` ... `#endif` コンストラクトを使ってリソースを含めます。 コンパイル時に、シンボルのコンマ区切りリストが続く `/define:` オプションを使用して、シンボルを定義します。 比較では、大文字と小文字が区別されます。つまり、`/define` によって定義されたシンボルとコンパイルされるテキスト ファイルのシンボルの大文字と小文字が一致する必要があります。  
   
  たとえば、UIResources.rext という名前の次のファイルには、`AppTitle`、`PRODUCTION`、または `CONSULT` のどの名前のシンボルが定義されているかに応じて 3 つの値からいずれか 1 つの値を取得できる `RETAIL` という名前の文字列リソースが含まれます。  
   

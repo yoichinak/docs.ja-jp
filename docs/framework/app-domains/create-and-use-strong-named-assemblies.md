@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 479307a0bdee162103f798e5f852cd20f259811e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607682"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66377880"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>厳密な名前付きアセンブリの作成と使用
 
@@ -71,7 +71,7 @@ ms.locfileid: "64607682"
 |-----------|-----------------|
 |[方法: 公開キーと秘密キーのキー ペアを作成する](../../../docs/framework/app-domains/how-to-create-a-public-private-key-pair.md)|署名とアセンブリの暗号化キー ペアを作成する方法について説明します。|
 |[方法: 厳密な名前でアセンブリに署名する](../../../docs/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name.md)|厳密な名前のアセンブリを作成する方法について説明します。|
-|[拡張された厳密な名前付け](../../../docs/framework/app-domains/enhanced-strong-naming.md)|[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] での厳密な名前の拡張について説明します。|
+|[拡張された厳密な名前付け](../../../docs/framework/app-domains/enhanced-strong-naming.md)|.NET Framework 4.5 での厳密な名前の拡張について説明します。|
 |[方法: 厳密な名前のアセンブリを参照する](../../../docs/framework/app-domains/how-to-reference-a-strong-named-assembly.md)|コンパイル時または実行時に厳密な名前のアセンブリでタイプまたはリソースを参照する方法について説明します。|
 |[方法: 厳密な名前のバイパス機能を無効にする](../../../docs/framework/app-domains/how-to-disable-the-strong-name-bypass-feature.md)|厳密な名前の署名の検証をバイパスする機能を無効にする方法について説明します。 すべてのまたは特定のアプリケーションに対して、この機能を無効にすることができます。|
 |[アセンブリの作成](../../../docs/framework/app-domains/create-assemblies.md)|単一ファイル アセンブリおよびマルチファイル アセンブリの概要を示します。|

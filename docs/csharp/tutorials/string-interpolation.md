@@ -3,12 +3,12 @@ title: C# における文字列補間
 description: C# の文字列補間を使用した結果文字列に書式設定された式の結果を含める方法について説明します。
 author: pkulikov
 ms.date: 05/09/2018
-ms.openlocfilehash: 068a30bdcb96140787a38e9ae52f9c62d8a57c96
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2990298821fddc8a69430a4cf4bb5e3dd9df314d
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063228"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66251024"
 ---
 # <a name="string-interpolation-in-c"></a>C\# における文字列補間
 
@@ -27,17 +27,17 @@ ms.locfileid: "65063228"
 例に示すように、式を中かっこで囲むことで挿入文字列に含めることができます。
 
 ```
-{<interpolatedExpression>}
+{<interpolationExpression>}
 ```
 
 挿入文字列では、[文字列の複合書式設定](../../standard/base-types/composite-formatting.md)機能に含まれるすべての機能がサポートされます。 そのため、<xref:System.String.Format%2A?displayProperty=nameWithType> メソッドを使用するよりも読みやすい代替手法になります。
 
-## <a name="how-to-specify-a-format-string-for-an-interpolated-expression"></a>挿入文字列の書式設定文字列を指定する方法
+## <a name="how-to-specify-a-format-string-for-an-interpolation-expression"></a>補間式の書式設定文字列を指定する方法
 
-コロン (":") と書式設定文字列を持つ挿入式に従って、式の結果の型でサポートされる書式設定文字列を指定します。
+コロン (":") と書式設定文字列を持つ補間式に従って、式の結果の型でサポートされる書式設定文字列を指定します。
 
 ```
-{<interpolatedExpression>:<formatString>}
+{<interpolationExpression>:<formatString>}
 ```
 
 次の例は、日時や数値による結果を生成する式の標準とカスタムの書式設定文字列を指定する方法を示しています。
@@ -46,12 +46,12 @@ ms.locfileid: "65063228"
 
 詳細については、「[複合書式設定](../../standard/base-types/composite-formatting.md)」トピックの「[Format String コンポーネント](../../standard/base-types/composite-formatting.md#format-string-component)」のセクションを参照してください。 このセクションでは、.NET の基本データ型でサポートされる標準とカスタムの書式設定文字列について説明するトピックへのリンクを提供しています。
 
-## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolated-expression"></a>書式設定された挿入式のフィールドの幅と配置を制御する方法
+## <a name="how-to-control-the-field-width-and-alignment-of-the-formatted-interpolation-expression"></a>書式設定された補間式のフィールドの幅と配置を制御する方法
 
-コンマ (",") と定数式を持つ挿入式に従って、書式設定された式の結果の最小フィールド幅と配置を指定します。
+コンマ (",") と定数式を持つ補間式に従って、書式設定された式の結果の最小フィールド幅と配置を指定します。
 
 ```
-{<interpolatedExpression>,<alignment>}
+{<interpolationExpression>,<alignment>}
 ```
 
 *alignment* の値が正の値である場合、書式設定された式の結果は右揃えになります。負の値である場合は、左揃えになります。
@@ -59,7 +59,7 @@ ms.locfileid: "65063228"
 配置と書式設定文字列の両方を指定する必要がある場合は、alignment コンポーネントから開始します。
 
 ```
-{<interpolatedExpression>,<alignment>:<formatString>}
+{<interpolationExpression>,<alignment>:<formatString>}
 ```
 
 次の例は、配置を指定する方法を示し、テキスト フィールドを区切るためにパイプ文字 ("|") を使用しています。
@@ -82,9 +82,9 @@ ms.locfileid: "65063228"
 
 [!code-csharp-interactive[escape sequence example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#4)]
 
-## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolated-expression"></a>挿入式で三項条件演算子 `?:` を使用する方法
+## <a name="how-to-use-a-ternary-conditional-operator--in-an-interpolation-expression"></a>補間式で三項条件演算子 `?:` を使用する方法
 
-コロン (":") が挿入式の項目で特別な意味を持つときに、式で[条件演算子](../language-reference/operators/conditional-operator.md)を使用するには、次の例が示すようにその式をかっこで囲みます。
+コロン (":") が補間式の項目で特別な意味を持つときに、式で[条件演算子](../language-reference/operators/conditional-operator.md)を使用するには、次の例が示すようにその式をかっこで囲みます。
 
 [!code-csharp-interactive[conditional operator example](~/samples/snippets/csharp/tutorials/string-interpolation/Program.cs#5)]
 

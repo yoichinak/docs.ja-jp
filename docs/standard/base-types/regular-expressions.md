@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 521b3f6d-f869-42e1-93e5-158c54a6895d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 201dbc759b619f65599e09c78c14b96d17395952
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cb70b0ef4c6e619418f8464b543795a59c2ddff5
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64620708"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423783"
 ---
 # <a name="net-regular-expressions"></a>.NET の正規表現
 正規表現を使用すると、強力、柔軟、そして効率的な方法でテキストを処理できます。 正規表現の広範なパターン一致表記法を使用することで、大量のテキストをすばやく解析して特定の文字パターンを検索したり、決められたパターン (メール アドレスなど) と照らしてテキストを検証したりできるほか、テキストの部分文字列を抽出、編集、置換、または削除したり、抽出した文字列をコレクションに追加してレポートを生成したりすることもできます。 文字列処理や大量のテキストを解析する多くのアプリケーションにとって、正規表現は欠くことのできないツールです。  
@@ -97,7 +97,7 @@ ms.locfileid: "64620708"
   
 |||  
 |-|-|  
-|`\$`|入力文字列に含まれる単一のドル記号 ($) を検索します。 この正規表現パターン文字列に使用されている円記号は、ドル記号を正規表現のアンカーではなく、文字として扱うことを意味します。 ドル記号 ($) を単独で指定した場合、正規表現エンジンは、比較の開始位置を文字列の終端に設定します。現在のカルチャの通貨記号が正規表現記号として解釈されるのを防ぐため、例では、<xref:System.Text.RegularExpressions.Regex.Escape%2A> メソッドを呼び出して文字をエスケープしています。|  
+|`\$`|入力文字列に含まれる単一のドル記号 (`$`) を検索します。 この正規表現パターン文字列に使用されている円記号は、ドル記号を正規表現のアンカーではなく、文字として扱うことを意味します。 (`$` 記号のみの場合、正規表現エンジンが文字列の最後で一致の開始を試みる必要があることを示します。)現在のカルチャの通貨記号が正規表現記号として解釈されるのを防ぐため、例では、<xref:System.Text.RegularExpressions.Regex.Escape%2A?displayProperty=nameWithType> メソッドを呼び出して文字をエスケープしています。|  
 |`\s*`|空白文字の 0 回以上の繰り返しを検索します。|  
 |`[-+]?`|正の符号または負の符号の 0 回または 1 回の繰り返しを検索します。|  
 |`([0-9]{0,3}(,[0-9]{3})*(\.[0-9]+)?)`|外側の丸かっこで囲まれている表現は、キャプチャ グループまたは部分式として定義されます。 一致が見つかった場合、その一致した文字列の、この部分に関する情報が、<xref:System.Text.RegularExpressions.Group> プロパティから返された <xref:System.Text.RegularExpressions.GroupCollection> オブジェクトの 2 つ目の <xref:System.Text.RegularExpressions.Match.Groups%2A?displayProperty=nameWithType> オブジェクトから取得できます (コレクションの 1 つ目の要素は、一致した文字列全体を表します)。|  

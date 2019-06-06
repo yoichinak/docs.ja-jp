@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c683ce454e4db36367cb097371427d27dc4c555
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c43e17edf5795874d8b92db659f07e8f6ec3c30a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636344"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457238"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1 からの移行
 
@@ -32,7 +32,7 @@ ms.locfileid: "65636344"
     </configuration>
     ```
 
-- .NET Framework 4 以降のバージョンをターゲットとするコンパイラでアプリケーションを再コンパイルできます。 最初に Visual Studio 2003 を使用してソリューションを開発およびコンパイルした場合は、ソリューションを Visual Studio 2010 で (そしておそらく以降のバージョンでも) で開くことができます。また、**[Project Compatibility]\(プロジェクト互換性\)** ダイアログ ボックスを使用して、ソリューションおよびプロジェクト ファイルを Visual Studio 2003 で使用される形式から Microsoft Build Engine (MSBuild) 形式に変換することができます。
+- .NET Framework 4 以降のバージョンをターゲットとするコンパイラでアプリケーションを再コンパイルできます。 最初に Visual Studio 2003 を使用してソリューションを開発およびコンパイルした場合は、ソリューションを Visual Studio 2010 で (そしておそらく以降のバージョンでも) で開くことができます。また、 **[Project Compatibility]\(プロジェクト互換性\)** ダイアログ ボックスを使用して、ソリューションおよびプロジェクト ファイルを Visual Studio 2003 で使用される形式から Microsoft Build Engine (MSBuild) 形式に変換することができます。
 
 再コンパイルまたは再ターゲットのいずれを選択するかに関係なく、アプリケーションが .NET Framework の新しいバージョンで導入された変更の影響を受けるかどうかを確認する必要があります。 変更には次の 2 種類があります。
 
@@ -62,10 +62,10 @@ ms.locfileid: "65636344"
 
 - 「[.NET Framework 3.5 SP1 の変更点](https://go.microsoft.com/fwlink/?LinkID=186989) 」に記載されている、 [!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] から [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)]の変更点。
 
-- 「[.NET Framework 4 への移行に関する問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)」に記載されている、[!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] から [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] の変更点。
+- 「[.NET Framework 4 への移行に関する問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)」に記載されている、[!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] から .NET Framework 4 の変更点。
 
 ## <a name="obsolete-types-and-members"></a>旧式の型およびメンバー
 
 非推奨の型およびメンバーの影響は、アプリケーションを再ターゲットする場合と再コンパイルする場合とでは若干異なります。 旧式の型およびメンバーを使用しても、その型およびメンバーをアセンブリから物理的に削除しない限り、再ターゲットしたアプリケーションには影響しません。 旧式の型およびメンバーを使用してアプリケーションを再コンパイルすると、通常はコンパイラ エラーではなく、コンパイラの警告が発生します。 ただし、場合によってはコンパイラ エラーが発生し、旧式の型またはメンバーを使用したコードをコンパイルできないことがあります。 その場合は、旧式の型またはメンバーを呼び出すソース コードを変更してからアプリケーションを再コンパイルする必要があります。 旧式の型およびメンバーの詳細については、「[.NET Framework クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)」を参照してください。
 
-[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] のリリース以後に非推奨になった型およびメンバーの影響を評価するには、「[.NET Framework クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)」を参照してください。 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]、および [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] について、旧式の型およびメンバーの一覧を確認してください。
+[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] のリリース以後に非推奨になった型およびメンバーの影響を評価するには、「[.NET Framework クラス ライブラリの互換性のために残されている機能](../../../docs/framework/whats-new/whats-obsolete.md)」を参照してください。 [!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)]、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)]、および .NET Framework 4 について、旧式の型およびメンバーの一覧を確認してください。

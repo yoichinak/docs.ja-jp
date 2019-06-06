@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 67c5a20d-1be1-4ea7-8a9a-92b0b08658d2
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ccea0aace05016f8e485de92d61f23622d7db797
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c6b7b120a5a21301ff82aa8ebd1cfc169f7884e4
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615156"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457436"
 ---
 # <a name="fundamentals-of-garbage-collection"></a>ガベージ コレクションの基礎
 <a name="top"></a> 共通言語ランタイム (CLR) では、自動メモリ マネージャーとしてガベージ コレクターを使用できます。 次のような利点があります。  
@@ -149,7 +149,7 @@ ms.locfileid: "64615156"
   
      ジェネレーション 2 のコレクションでは複数のセグメントを占有できるため、ジェネレーション 2 に昇格されたオブジェクトはより古いセグメントに移動できます。 ジェネレーション 1 とジェネレーション 2 の残存オブジェクトは、どちらもジェネレーション 2 に昇格されるため、別のセグメントに移動できます。  
   
-     通常、大きなオブジェクト ヒープは圧縮されません。これは、大きなオブジェクトをコピーするとパフォーマンスが低下するためです。 ただし [!INCLUDE[net_v451](../../../includes/net-v451-md.md)]以降では、 <xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> プロパティを使用して、大きなオブジェクト ヒープを必要に応じて圧縮できます。  
+     通常、大きなオブジェクト ヒープは圧縮されません。これは、大きなオブジェクトをコピーするとパフォーマンスが低下するためです。 ただし .NET Framework 4.5.1 以降では、<xref:System.Runtime.GCSettings.LargeObjectHeapCompactionMode%2A?displayProperty=nameWithType> プロパティを使用して、大きなオブジェクト ヒープを必要に応じて圧縮できます。  
   
  ガベージ コレクターは、次の情報に基づいてオブジェクトが有効かどうかを判断します。  
   
@@ -253,7 +253,7 @@ ms.locfileid: "64615156"
  バックグラウンド ガベージ コレクションでは、ジェネレーション 2 のコレクションの実行中に、必要に応じて短期ジェネレーション (0 および 1) のコレクションが行われます。 バックグラウンド ガベージ コレクションの設定はありません。同時実行ガベージ コレクションを有効にすると自動的に有効になります。 バックグラウンド ガベージ コレクションは同時実行ガベージ コレクションに代わるものです。 同時実行ガベージ コレクションと同様に、バックグラウンド ガベージ コレクションは専用のスレッドで実行され、ジェネレーション 2 のコレクションにのみ適用されます。  
   
 > [!NOTE]
->  バックグラウンド ガベージ コレクションは、 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降のバージョンでのみ使用できます。 [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)]では、ワークステーションのガベージ コレクションのみがサポートされます。 .NET Framework 4.5 以降では、バックグラウンド ガベージ コレクションは、ワークステーションとサーバーのガベージ コレクションの両方で使用できます。  
+>  バックグラウンド ガベージ コレクションは、.NET Framework 4 以降のバージョンでのみ使用できます。 .NET Framework 4 では、ワークステーション ガベージ コレクションのみでサポートされます。 .NET Framework 4.5 以降では、バックグラウンド ガベージ コレクションは、ワークステーションとサーバーのガベージ コレクションの両方で使用できます。  
   
  バックグラウンド ガベージ コレクションの実行中に行われる短期ジェネレーションに対するコレクションのことを、フォアグラウンド ガベージ コレクションと呼びます。 フォアグラウンド ガベージ コレクションが発生すると、マネージド スレッドはすべて中断されます。  
   

@@ -8,21 +8,21 @@ helpviewer_keywords:
 ms.assetid: 7aa8cb72-dee9-4716-ac54-b17b9ae8218f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a236b3b4b5c4cde66bad2b460637bb533b764be
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a491b0efd38ed7ff37c8c704b6646dddede5efb3
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881619"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379919"
 ---
 # <a name="reducing-system-restarts-during-net-framework-45-installations"></a>.NET Framework 4.5 のインストール中のシステム再起動の削減
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] インストーラーは[再起動マネージャー](https://go.microsoft.com/fwlink/?LinkId=231425)を使用して、インストール中のシステムの再起動をできる限り回避します。 アプリケーションのセットアップ プログラムで .NET Framework をインストールする場合は、再起動マネージャーとやり取りしてこの機能を利用できます。 詳細については、「[方法 :.NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)」を参照してください。  
+.NET Framework 4.5 インストーラーは[再起動マネージャー](https://go.microsoft.com/fwlink/?LinkId=231425)を使用して、インストール中のシステムの再起動を可能な限り回避します。 アプリケーションのセットアップ プログラムで .NET Framework をインストールする場合は、再起動マネージャーとやり取りしてこの機能を利用できます。 詳細については、「[方法 :.NET Framework 4.5 インストーラーの進行状況を表示する](../../../docs/framework/deployment/how-to-get-progress-from-the-dotnet-installer.md)」を参照してください。  
   
 ## <a name="reasons-for-a-restart"></a>再起動の理由  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] のインストールにおいて、.NET Framework 4 アプリケーションがインストール中に使用されている場合は、システムの再起動が必要になります。 これは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] が .NET Framework 4 のファイルを置き換え、インストール中にこれらのファイルが使用可能になっている必要があるためです。 多くの場合、再起動は使用中の .NET Framework 4 アプリケーションをプリエンティブに検出し、終了することで回避できます。 ただし、一部のシステム アプリケーションは終了しないでください。 このような場合、再起動は回避できません。  
+ .NET Framework 4.5 のインストールでは、.NET Framework 4 アプリケーションがインストール中に使用されている場合は、システムの再起動が必要になります。 これは、.NET Framework 4.5 によって .NET Framework 4 のファイルが置き換えられ、インストール中にこれらのファイルが使用可能になっていることが必要とされるためです。 多くの場合、再起動は使用中の .NET Framework 4 アプリケーションをプリエンティブに検出し、終了することで回避できます。 ただし、一部のシステム アプリケーションは終了しないでください。 このような場合、再起動は回避できません。  
   
 ## <a name="end-user-experience"></a>エンド ユーザー エクスペリエンス  
- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] の完全インストールを行っているエンド ユーザーには、使用中の .NET Framework 4 アプリケーションをインストーラーが検出した場合にシステムの再起動を回避する機会が与えられます。 メッセージには、実行中の .NET Framework 4 アプリケーションがすべて一覧表示され、インストール前にこれらのアプリケーションを終了するオプションが表示されます。 ユーザーが終了を確認すると、これらのアプリケーションはインストーラーによってシャットダウンされ、システムの再起動が回避されます。 一定時間内にユーザーがメッセージに応答しなかった場合、インストールはアプリケーションを終了せずに続行します。  
+ .NET Framework 4.5 の完全インストールを行っているエンド ユーザーには、使用中の .NET Framework 4 アプリケーションをインストーラーが検出した場合にシステムの再起動を回避する機会が与えられます。 メッセージには、実行中の .NET Framework 4 アプリケーションがすべて一覧表示され、インストール前にこれらのアプリケーションを終了するオプションが表示されます。 ユーザーが終了を確認すると、これらのアプリケーションはインストーラーによってシャットダウンされ、システムの再起動が回避されます。 一定時間内にユーザーがメッセージに応答しなかった場合、インストールはアプリケーションを終了せずに続行します。  
   
  実行中のアプリケーションが終了してもシステムの再起動が必要な状況を再起動マネージャーが検出した場合、メッセージは表示されません。  
   

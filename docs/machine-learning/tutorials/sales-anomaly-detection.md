@@ -1,15 +1,15 @@
 ---
 title: 売上の異常検出シナリオに ML.NET を使用する
 description: 製品売上の異常検出シナリオに ML.NET を使用してデータの異常スパイクと変化点について分析し、適切な措置を講じる方法について説明します。
-ms.date: 05/06/2019
+ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: 39e812facccfa75d1643704f8960a387a70c94bc
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641146"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423948"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>チュートリアル: 製品売上の異常検出に ML.NET を使用する 
 
@@ -173,7 +173,7 @@ static void DetectSpike(MLContext mlContext, int docSize, IDataView productSales
 
 [!code-csharp[AddSpikeTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddSpikeTrainer)]
 
-`DetectSpike()` メソッドの次のコード行として以下を追加して、モデルを `productSales` データに適合させ、トレーニング済みモデルを返します。
+`DetectSpike()` メソッドの次のコード行として以下を追加して、モデルを `productSales` データに適合させます。
 
 [!code-csharp[TrainModel1](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel1)]
 
@@ -283,7 +283,7 @@ static void DetectChangepoint(MLContext mlContext, int docSize, IDataView produc
 
 [!code-csharp[AddChangepointTrainer](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#AddChangepointTrainer)]
 
-以前と同様に、`DetectChangePoint()` メソッドの次のコード行として以下を追加して、モデルを `productSales` データに適合させ、トレーニング済みモデルを返します。
+前述の方法と同様に、`DetectChangePoint()` メソッドの次のコード行として以下を追加して、モデルを `productSales` データに適合させます。
 
 [!code-csharp[TrainModel2](~/samples/machine-learning/tutorials/ProductSalesAnomalyDetection/Program.cs#TrainModel2)]
 

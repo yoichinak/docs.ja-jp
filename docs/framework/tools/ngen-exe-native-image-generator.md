@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e425394df0d04ffbb4cde41c83a9efe3c5b4abe0
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 011bb2d7a1a700ba4daf86d96d825373e353f57e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481263"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457422"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (ネイティブ イメージ ジェネレーター)
 
@@ -77,7 +77,7 @@ ngen /? | /help
 |アクション|説明|
 |------------|-----------------|
 |`install` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`] [`/queue`[`:`{`1`&#124;`2`&#124;`3`}]]|アセンブリおよびそれに依存する項目のネイティブ イメージを生成してネイティブ イメージ キャッシュにインストールします。<br /><br /> `/queue` を指定すると、アクションはネイティブ イメージ サービスのキューに置かれます。 既定の優先順位は 3 です。 「[優先順位](#PriorityTable)」の表を参照してください。|
-|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|アセンブリのネイティブ イメージとその依存関係をネイティブ イメージ キャッシュから削除します。<br /><br /> 単一のイメージとその依存関係をアンインストールするには、そのイメージをインストールしたときと同じコマンド ライン引数を使用します。 **注:**[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、アクション `uninstall` * はサポートされなくなりました。|
+|`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|アセンブリのネイティブ イメージとその依存関係をネイティブ イメージ キャッシュから削除します。<br /><br /> 単一のイメージとその依存関係をアンインストールするには、そのイメージをインストールしたときと同じコマンド ライン引数を使用します。 **注:** [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、アクション `uninstall` * はサポートされなくなりました。|
 |`update` [`/queue`]|無効になったネイティブ イメージを更新します。<br /><br /> `/queue` を指定すると、更新はネイティブ イメージ サービスのキューに置かれます。 更新は常に優先順位 3 でスケジュールされるため、コンピューターがアイドル状態のときに実行されます。|
 |`display` [`assemblyName` &#124; `assemblyPath`]|アセンブリのネイティブ イメージとその依存関係の状態を表示します。<br /><br /> 引数を指定しなければ、ネイティブ イメージ キャッシュのすべての内容が表示されます。|
 |`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - または -<br /><br /> `eqi` [1&#124;2&#124;3]|キューに置かれているコンパイル ジョブを実行します。<br /><br /> 優先順位を指定すると、優先順位が高いかまたは同じコンパイル ジョブが実行されます。 優先順位を指定しなければ、キューに置かれているすべてのコンパイル ジョブが実行されます。|
@@ -89,7 +89,7 @@ ngen /? | /help
 
 |引数|説明|
 |--------------|-----------------|
-|`assemblyName`|アセンブリの完全な表示名。 たとえば、`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` のようにします。 **注:**`myAssembly` アクションおよび `display` アクションに対しては、`uninstall` などのように部分的なアセンブリ名を指定できます。 <br /><br /> Ngen.exe の各コマンド ラインに指定できるアセンブリは 1 つだけです。|
+|`assemblyName`|アセンブリの完全な表示名。 たとえば、`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` のようにします。 **注:** `myAssembly` アクションおよび `display` アクションに対しては、`uninstall` などのように部分的なアセンブリ名を指定できます。 <br /><br /> Ngen.exe の各コマンド ラインに指定できるアセンブリは 1 つだけです。|
 |`assemblyPath`|アセンブリの明示的なパスを返します。 フル パスまたは相対パスを指定できます。<br /><br /> パスを指定せずにファイル名を指定する場合、アセンブリは現在のディレクトリに存在する必要があります。<br /><br /> Ngen.exe の各コマンド ラインに指定できるアセンブリは 1 つだけです。|
 
 <a name="PriorityTable"></a>
@@ -139,7 +139,7 @@ Ngen.exe を実行するには、管理特権が必要です。
 > [!CAUTION]
 > 完全に信頼されていないアセンブリで Ngen.exe を実行しないでください。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、Ngen.exe によるアセンブリのコンパイルが完全信頼で行われるようになり、コード アクセス セキュリティ (CAS) ポリシーが評価されなくなりました。
 
-[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降では、Ngen.exe で生成されたネイティブ イメージを、部分信頼で実行されているアプリケーションに読み込むことができなくなりました。 代わりに、Just-In-Time (JIT) コンパイラが呼び出されます。
+.NET Framework 4 以降では、Ngen.exe で生成されたネイティブ イメージを、部分信頼で実行されているアプリケーションに読み込むことができなくなりました。 代わりに、Just-In-Time (JIT) コンパイラが呼び出されます。
 
 Ngen.exe は、`install` アクションへの `assemblyname` 引数で指定されたアセンブリおよびそのすべての依存項目のネイティブ イメージを生成します。 依存関係は、アセンブリ マニフェストを参照して決定されます。 依存関係を別個にインストールする必要があるのは、アプリケーションがリフレクションを使用して依存関係を読み込む場合だけです。たとえば <xref:System.Reflection.Assembly.Load%2A?displayProperty=nameWithType> メソッドを呼び出して依存関係を読み込む場合などです。
 
@@ -401,7 +401,7 @@ Ngen.exe は、ネイティブ イメージを生成するときに上記の情�
 
 ### <a name="assembly-binding-log-viewer"></a>アセンブリ バインディング ログ ビューアー
 
-アプリケーションでネイティブ イメージが使用されているかどうかを確認するには、[Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用できます。 バインディング ログ ビューアーのウィンドウの **[ログのカテゴリ]** ボックスで、**[ネイティブ イメージ]** をクリックします。 Fuslogvw.exe は、ネイティブ イメージが拒否された理由に関する情報を提供します。
+アプリケーションでネイティブ イメージが使用されているかどうかを確認するには、[Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用できます。 バインディング ログ ビューアーのウィンドウの **[ログのカテゴリ]** ボックスで、 **[ネイティブ イメージ]** をクリックします。 Fuslogvw.exe は、ネイティブ イメージが拒否された理由に関する情報を提供します。
 
 <a name="MDA"></a>
 

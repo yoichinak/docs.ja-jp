@@ -2,12 +2,12 @@
 title: 値オブジェクトの実装
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 新しい Entity Framework 機能を使用し、値オブジェクトを実装する方法の詳細とオプション。
 ms.date: 10/08/2018
-ms.openlocfilehash: 850d571ffb92f2d200e24430a9611fb13b64e635
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b2f7b0f36fea25c25edd47731d9387810bd2b44d
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65644287"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66423739"
 ---
 # <a name="implement-value-objects"></a>値オブジェクトを実装する
 
@@ -21,7 +21,7 @@ ms.locfileid: "65644287"
 
 **図 7-13**。 Order 集計内の Address 値オブジェクト
 
-図 7-13 に示すように、通常、エンティティは複数の属性で構成されます。 たとえば、`Order` エンティティは、ID があるエンティティとしてモデル化し、内部的に OrderId、OrderDate、OrderItems などの一連の属性で構成することができます。ただし、住所は、単に国、市区町村、番地などで構成された複合値であり、このドメイン内に ID はないため、値をモデル化し、値オブジェクトとして扱う必要があります。
+図 7-13 に示すように、通常、エンティティは複数の属性で構成されます。 たとえば、`Order` エンティティは、ID があるエンティティとしてモデル化し、内部的に OrderId、OrderDate、OrderItems などの一連の属性で構成することができます。ただし、住所は、単に国/地域、市区町村、番地などで構成された複合値であり、このドメイン内での ID は含まれないため、値をモデル化し、値オブジェクトとして扱う必要があります。
 
 ## <a name="important-characteristics-of-value-objects"></a>値オブジェクトの重要な特性
 

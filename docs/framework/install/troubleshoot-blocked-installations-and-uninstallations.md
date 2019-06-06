@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c3fdfbc1-ed99-4202-a2b0-8c4f1646385d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e12deefd4b20d2868ab86fdb4c81f6be3a63aa6d
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 0dff2bf22b701ee57818d04e01dbf643e04acb27
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052657"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379904"
 ---
 # <a name="troubleshoot-blocked-net-framework-installations-and-uninstallations"></a>.NET Framework のインストールおよびアンインストールのブロックのトラブルシューティング
 
@@ -34,11 +34,11 @@ Windows 8 以降では、.NET Framework はオペレーティング システム
 |このコンピューターには .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x* (ENU) 以降のバージョンが既にインストールされています。|アクションは必要ありません。<br /><br /> システムにインストールされている .NET Framework のバージョンを確認する方法については、「[方法:インストールされている .NET Framework バージョンを確認する](../../../docs/framework/migration-guide/how-to-determine-which-versions-are-installed.md)」を参照してください。|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 (*言語*) には、.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 が必要です。 ダウンロード センターから .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 をインストールしてセットアップを再実行してください。|言語パックをインストールする前に、指定された .NET Framework リリースの英語バージョンをインストールする必要があります。 詳細については、インストール ガイドの「[言語パックのインストール](../../../docs/framework/install/guide-for-developers.md#to-install-language-packs)」を参照してください。|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 をインストールできません。 このプログラムと互換性がないアプリケーションがコンピューター上に存在します。<br /><br /> - または -<br /><br /> このプログラムと互換性がないアプリケーションがコンピューター上に存在します。|このメッセージは、通常 .NET Framework のプレビューまたは RC バージョンがインストールされているために表示されます。 プレビューまたは RC バージョンをアンインストールし、セットアップを再実行します。|  
-|このパッケージを使用して .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 をアンインストールすることはできません。 コンピューターから .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 をアンインストールするには、**コントロール パネル**で **[プログラムと機能]**、**[インストールされた更新プログラムを表示]** を選び、[Microsoft Windows (KB2828152) の更新プログラム] を選んで **[アンインストール]** を選択します。|インストールしているパッケージによって、.NET Framework のプレビューまたは RC リリースはアンインストールされません。<br /><br /> コントロール パネルからプレビューまたは RC リリースをアンインストールします。|  
+|このパッケージを使用して .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 をアンインストールすることはできません。 コンピューターから .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 をアンインストールするには、**コントロール パネル**で **[プログラムと機能]** 、 **[インストールされた更新プログラムを表示]** を選び、[Microsoft Windows (KB2828152) の更新プログラム] を選んで **[アンインストール]** を選択します。|インストールしているパッケージによって、.NET Framework のプレビューまたは RC リリースはアンインストールされません。<br /><br /> コントロール パネルからプレビューまたは RC リリースをアンインストールします。|  
 |.NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 をアンインストールできません。 このプログラムに依存するアプリケーションがコンピューター上に存在します。|一般に、コンピューターから .NET Framework のバージョンをアンインストールしないでください。使用するアプリケーションが .NET Framework の特定のバージョンに依存している可能性があるからです。 詳しくは、*概要*ガイドの「[ユーザーにとっての .NET Framework](../../../docs/framework/get-started/index.md#ForUsers)」をご覧ください。|  
 |再頒布可能な .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 は、このオペレーティング システムには適用されません。 Microsoft ダウンロード センターからご使用のオペレーティング システムに対応した .NET Framework 4.5 *.x*/4.6 *.x*/4.7 *.x*/4.8 をダウンロードしてください。|サポートされていないプラットフォームに .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2、4.8 をインストールしようとしている可能性があります。または、サポートされているすべてのオペレーティング システム用のコンポーネントが含まれていないインストール パッケージを選択しました。 オフライン インストーラー ([4.5.1 用](https://go.microsoft.com/fwlink/p/?LinkId=309493)、[4.5.2 用](https://go.microsoft.com/fwlink/p/?LinkId=397706)、[4.6 用](https://go.microsoft.com/fwlink/p/?LinkId=528233)、[4.6.1 用](https://go.microsoft.com/fwlink/p/?LinkId=671744)、[4.6.2 用](https://go.microsoft.com/fwlink/p/?LinkId=780604)、[4.7 用](https://go.microsoft.com/fwlink/p/?LinkId=825306)、[4.7.1 用](https://go.microsoft.com/fwlink/p/?LinkId=852090)、[4.7.2 用](https://go.microsoft.com/fwlink/p/?LinkId=863265)、[4.8 用](https://go.microsoft.com/fwlink/?linkid=2088631)) を使用してインストールを再実行します。 サポートされているオペレーティング システムの詳細については、[インストール ガイド](../../../docs/framework/install/guide-for-developers.md)に関するページおよび[システム要件](../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。|  
 |この製品をインストールする前に、KB\<*番号*> に対応する更新プログラムがインストールされている必要があります。|.NET Framework のインストールでは、.NET Framework をインストールする前に KB の更新プログラムをインストールする必要があります。 更新プログラムをインストールしてから、.NET Framework のインストールをもう一度開始します。<br /><br /> たとえば、Windows 8.1、Windows RT 8.1、Windows Server 2012 R2 に .NET Framework の最新バージョンをインストールするには、[KB2919355](https://support.microsoft.com/kb/2919355) に対応する更新プログラムをインストールする必要があります。|  
-|現在、コンピューターでは Windows Server 2008 オペレーティング システムの Server Core インストールが実行されています。 .NET Framework 4.5.*x* には、新しいリリースのオペレーティング システムが必要です。 Windows Server 2008 R2 SP1 以上をインストールし、.NET Framework 4.5.*x* セットアップを再実行してください。|[!INCLUDE[net_v451](../../../includes/net-v451-md.md)] および 4.5.2 は、Windows Server 2008 R2 SP1 以降の Server Core ロールでサポートされています。 [システム要件](../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。|  
+|現在、コンピューターでは Windows Server 2008 オペレーティング システムの Server Core インストールが実行されています。 .NET Framework 4.5.*x* には、新しいリリースのオペレーティング システムが必要です。 Windows Server 2008 R2 SP1 以上をインストールし、.NET Framework 4.5.*x* セットアップを再実行してください。|.NET Framework 4.5.1 と 4.5.2 は、Windows Server 2008 R2 SP1 以降の Server Core ロールでサポートされています。 [システム要件](../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。|  
 |特権が不十分なため、このコンピューターのすべてのユーザーが使用できるようにセットアップを完了できません。 管理者としてログオンし、**セットアップ**を再度実行してください。|.NET Framework をインストールするには、そのコンピューターの管理者である必要があります。|  
 |前のインストールを完了するためにコンピューターの再起動が必要であるため、セットアップを続行できません。 コンピューターを再起動し、セットアップを再度実行してください。|インストールを完了するために、再起動が必要な場合があります。 手順に従って、コンピューターを再起動し、セットアップを再実行します。<br /><br /> まれに、Windows で不足している更新プログラムが多数検出され、次の順番の更新プログラムをインストールするための再起動を行っている場合、システムを複数回再起動するように求められることがあります。|  
 |.NET Framework Setup cannot be run in Program Compatibility Mode. (プログラム互換性モードで .NET Framework セットアップを実行できません。)|この記事で後述する「[プログラムの互換性問題](#compat)」セクションを参照してください。|  
@@ -61,9 +61,9 @@ Windows 8 以降では、.NET Framework はオペレーティング システム
 
 プログラム互換性モードで .NET Framework インストーラーを実行できません。 このブロッキング問題を解決するには、レジストリ エディターを使用し、システム全体での互換性モードの設定が無効になるようにする必要があります。
 
-1. **[スタート]** ボタンをクリックし、**[ファイル名を指定して実行]** を選択します。
+1. **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** を選択します。
 
-1. **[ファイル名を指定して実行]** ダイアログ ボックスで、「regedit」と入力し、**[OK]** をクリックします。
+1. **[ファイル名を指定して実行]** ダイアログ ボックスで、「regedit」と入力し、 **[OK]** をクリックします。
 
 1. レジストリ エディターで、次のサブキーを参照します。
 
@@ -71,7 +71,7 @@ Windows 8 以降では、.NET Framework はオペレーティング システム
 
    - HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Layers
 
-1. [名前] 列で、インストールしているバージョンに応じて [!INCLUDE[net_v45](../../../includes/net-v45-md.md)]4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、または 4.7.2 のダウンロード名を検索し、これらのエントリを削除します。 ダウンロード名については、「[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)」の記事を参照してください。
+1. [名前] 列で、インストールしているバージョンに応じて .NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、または 4.7.2 のダウンロード名を検索し、これらのエントリを削除します。 ダウンロード名については、「[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)」の記事を参照してください。
 
 1. バージョン 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、または 4.7.2 の .NET Framework インストーラーを再実行します。
 

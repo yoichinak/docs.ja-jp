@@ -1,7 +1,7 @@
 ---
 title: .NET の文字列を使用するためのベスト プラクティス
 description: .NET アプリケーションで文字列を効果的に使用する方法について説明します。
-ms.date: 09/13/2018
+ms.date: 05/01/2019
 ms.technology: dotnet-standard
 dev_langs:
 - csharp
@@ -21,12 +21,12 @@ ms.assetid: b9f0bf53-e2de-4116-8ce9-d4f91a1df4f7
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 82fdcae2887cf5a3428a0c874b43d9770f35afcf
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 68bcc9321d5a97620d0e8d24befbd24f4f350f94
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052994"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250814"
 ---
 # <a name="best-practices-for-using-strings-in-net"></a>.NET の文字列を使用するためのベスト プラクティス
 <a name="top"></a> .NET には、ローカライズされたアプリケーションやグローバル化されたアプリケーションを開発するための広範なサポートが用意されており、文字列の並べ替えや表示などの一般的な操作を実行するときに、現在のカルチャの規則や特定のカルチャの規則を簡単に適用できるようになっています。 しかし、文字列の並べ替えや比較の操作は、必ずしもカルチャに依存するとは限りません。 たとえば、アプリケーションが内部で使用する文字列は、通常、すべてのカルチャで同じように処理される必要があります。 XML タグ、HTML タグ、ユーザー名、ファイル パス、システム オブジェクトの名前などのカルチャに依存しない文字列データがカルチャに依存するかのように解釈されると、アプリケーション コードで軽度のバグが発生したり、パフォーマンスが低下したり、場合によってはセキュリティの問題を引き起こしたりする可能性があります。  
@@ -69,7 +69,7 @@ ms.locfileid: "66052994"
   
 - <xref:System.String.Compare%2A?displayProperty=nameWithType> メソッドと <xref:System.String.CompareTo%2A?displayProperty=nameWithType> メソッドは、文字列を並べ替える場合に使用し、文字列の等価性を確認する場合には使用しません。  
   
-- 数値、日付など、文字列以外のデータをユーザー インターフェイスに表示するには、カルチャに依存する書式設定を使用します。 文字列以外のデータを文字列形式で保持するには、インバリアント カルチャを使用する書式設定を使用します。  
+- 数値、日付など、文字列以外のデータをユーザー インターフェイスに表示するには、カルチャに依存する書式設定を使用します。 文字列以外のデータを文字列形式で保持するには、[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)を使用する書式設定を使用します。  
   
  文字列を使用する際に避ける必要があることを次に示します。  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66052994"
 > [!NOTE]
 > Windows オペレーティング システムの並べ替え操作と比較操作で使用される文字の重みに関する情報を含む一連のテキスト ファイルである[並べ替え重みテーブル](https://www.microsoft.com/download/details.aspx?id=10921) と、Linux と macOS 用の並べ替え重みテーブルの最新バージョンである [デフォルト Unicode 照合基本テーブル](https://www.unicode.org/Public/UCA/latest/allkeys.txt)をダウンロードできます。 Linux と macOS での並べ替え重みのテーブルの特定のバージョンは、システムにインストールされている [International Components for Unicode](http://site.icu-project.org/) ライブラリのバージョンによって異なります。 実装される ICU のバージョンと Unicode のバージョンに関する情報は、[ICU のダウンロード](http://site.icu-project.org/download)に関する記事を参照してください。
 
- しかし、2 つの文字列の等価性や並べ替え順序を評価する場合、正しい結果は 1 つではありません。結果は、文字列の比較に使用される基準に依存するためです。 特に、序数に基づく文字列比較や、現在のカルチャまたはインバリアント カルチャ (英語をベースとする、ロケールに依存しないカルチャ) の大文字と小文字の規則や並べ替えの規則に基づく文字列比較では、さまざまな結果が返される可能性があります。  
+ しかし、2 つの文字列の等価性や並べ替え順序を評価する場合、正しい結果は 1 つではありません。結果は、文字列の比較に使用される基準に依存するためです。 特に、序数に基づく文字列比較や、現在のカルチャまたは[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture) (英語をベースとする、ロケールに依存しないカルチャ) の大文字と小文字の規則や並べ替えの規則に基づく文字列比較では、さまざまな結果が返される可能性があります。  
 
 さらに、文字列比較を、異なるバージョンの .NET を使用したり、異なるオペレーティング システムまたはバージョンが異なるオペレーティング システム上の .NET で実行したりすると、異なる結果が返る可能性があります。 詳細については、「[Strings and The Unicode Standard](xref:System.String#Unicode)」(文字列と Unicode 標準) を参照してください。 
 
@@ -348,10 +348,36 @@ ms.locfileid: "66052994"
  [ページのトップへ](#top)  
   
 <a name="Formatted"></a>   
-## <a name="displaying-and-persisting-formatted-data"></a>書式設定されたデータを表示および保持する  
- 数値、日時など、文字列以外のデータをユーザーに表示するには、ユーザーのカルチャ設定を使用して書式設定します。 既定では、数値型と日時型の <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドと `ToString` メソッドは、書式設定の操作に現在のスレッド カルチャを使用します。 書式指定メソッドで現在のカルチャを使用することを明示的に指定するには、`provider` パラメーターを含む書式指定メソッド (<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType>、<xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> など) のオーバーロードを呼び出し、そのパラメーターを <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティに渡すことができます。  
-  
- 文字列以外のデータは、バイナリ データまたは書式付きデータとして保持できます。 書式付きデータとして保存するには、`provider` パラメーターを含む書式指定メソッドのオーバーロードを呼び出し、そのパラメーターを <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> プロパティに渡す必要があります。 インバリアント カルチャは、カルチャとコンピューターに依存しない書式付きデータに一貫した書式を提供します。 これに対し、インバリアント カルチャ以外のカルチャを使用して書式設定するデータの保持には、さまざまな制限があります。  
+## <a name="displaying-and-persisting-formatted-data"></a>書式設定されたデータを表示および保持する
+
+数値、日時など、文字列以外のデータをユーザーに表示するには、ユーザーのカルチャ設定を使用して書式設定します。 既定では、以下のすべてで、書式設定操作での現在のスレッド カルチャが使用されます。
+
+- [C#](../../csharp/language-reference/tokens/interpolated.md) と [Visual Basic](../../visual-basic/programming-guide/language-features/strings/interpolated-strings.md) のコンパイラでサポートされている挿入文字列。
+
+- [C#](../../csharp/language-reference/operators/addition-operator.md#string-concatenation) または [Visual Basic](../../visual-basic/programming-guide/language-features/operators-and-expressions/concatenation-operators.md ) の連結演算子を使用または <xref:System.String.Concat%2A?displayProperty=nameWithType> メソッドを直接呼び出す文字列連結操作。
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType> メソッド。
+
+- 数値型と日時型の `ToString` メソッド。
+
+指定されたカルチャまたは[インバリアント カルチャ](xref:System.Globalization.CultureInfo.InvariantCulture)の規則を使用することで文字列を書式設定することを明示的に指定するには、次を行うことができます。
+
+- <xref:System.String.Format%2A?displayProperty=nameWithType> メソッドと `ToString` メソッドを使用している場合、`provider` パラメーター (<xref:System.String.Format%28System.IFormatProvider%2CSystem.String%2CSystem.Object%5B%5D%29?displayProperty=nameWithType> または <xref:System.DateTime.ToString%28System.IFormatProvider%29?displayProperty=nameWithType> など) を持つオーバー ロードを呼び出し、それに <xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティ、目的のカルチャを表す <xref:System.Globalization.CultureInfo> インスタンス、または <xref:System.Globalization.CultureInfo.InvariantCulture?displayProperty=nameWithType> プロパティを渡します。  
+
+- 文字列連結の場合、コンパイラに暗黙の変換の実行を許可しないでください。 代わりに、`provider` パラメーターを持つ `ToString` オーバーロードを呼び出すことで、明示的な変換を実行します。 たとえば、次の C# コードでは、<xref:System.Double> 値を文字列に変換するときに、コンパイラでは現在のカルチャが暗黙的に使用されます。
+
+  [!code-csharp[Implicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#1)]
+
+  代わりに、次の C# コードのように、<xref:System.Double.ToString(System.IFormatProvider)?displayProperty=nameWithType> メソッドを呼び出して、変換に使用する書式指定規則を持つカルチャを明示的に指定することができます。
+
+  [!code-csharp[Explicit String Conversion](~/samples/snippets/standard/base-types/string-practices/cs/tostring.cs#2)]
+
+- 文字列補間の場合、挿入文字列を <xref:System.String> インスタンスに割り当てるのではなく、<xref:System.FormattableString> に割り当てます。 その後、その <xref:System.FormattableString.ToString?displayProperty=nameWithType> メソッドを呼び出して、現在のカルチャの規則を反映する結果の文字列を生成することも、<xref:System.FormattableString.ToString(System.IFormatProvider)?displayProperty=nameWithType> メソッドを呼び出して、指定したカルチャの規則を反映する結果の文字列を生成することもできます。 また、書式設定可能な文字列を静的 <xref:System.FormattableString.Invariant%2A?displayProperty=nameWithType> メソッドに渡して、インバリアント カルチャの規則を反映する結果の文字列を生成することもできます。 このアプローチの例を次に示します。 (この例の出力には en-US の現在のカルチャが反映されます)。
+
+  [!code-csharp[String interpolation](~/samples/snippets/standard/base-types/string-practices/cs/formattable.cs)]
+  [!code-vb[String interpolation](~/samples/snippets/standard/base-types/string-practices/vb/formattable.vb)]
+
+文字列以外のデータは、バイナリ データまたは書式付きデータとして保持できます。 書式付きデータとして保存するには、`provider` パラメーターを含む書式指定メソッドのオーバーロードを呼び出し、そのパラメーターを <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> プロパティに渡す必要があります。 インバリアント カルチャは、カルチャとコンピューターに依存しない書式付きデータに一貫した書式を提供します。 これに対し、インバリアント カルチャ以外のカルチャを使用して書式設定するデータの保持には、さまざまな制限があります。  
   
 - カルチャが異なるシステムでデータを取得したり、現在のシステムのユーザーが現在のカルチャを変更してデータを取得しようとしたりすると、そのデータは使用できない可能性があります。  
   
@@ -366,7 +392,7 @@ ms.locfileid: "66052994"
   
  しかし、<xref:System.Globalization.CultureInfo.CurrentCulture%2A?displayProperty=nameWithType> プロパティを <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=nameWithType> に置き換えて <xref:System.DateTime.ToString%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 呼び出しと <xref:System.DateTime.Parse%28System.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> 呼び出しを行うと、保持されている日時データは正常に復元されます。次にその出力を示します。  
   
-```  
+```console  
 06.05.1758 21:26  
 05.05.1818 07:19  
 22.04.1870 23:54  

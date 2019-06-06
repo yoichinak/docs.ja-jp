@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5ef6b73d683d43b2a33628db13fa592c7f02199a
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585983"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457294"
 ---
 # <a name="security-considerations-for-reflection"></a>リフレクションに関するセキュリティ上の考慮事項
 リフレクションを使用すると、型とメンバーに関する情報を取得し、メンバーにアクセスできます (つまり、メソッドやコンストラクターの呼び出し、プロパティ値の取得と設定、イベント ハンドラーの追加と削除などを実行できます)。 リフレクションを使用した型とメンバーに関する情報の取得には、制限がありません。 すべてのコードで、次のタスクを実行するためにリフレクションを使用できます。  
@@ -58,10 +58,10 @@ ms.locfileid: "65585983"
   
  コマンド ラインから実行されるアプリケーション コードは完全信頼で実行されます。 この場合、透過的とマークされていない限り、リフレクションを使用してセキュリティ クリティカルなメンバーにアクセスできます。 同じコードが部分信頼で実行される場合 (サンドボックス化されたアプリケーション ドメイン内など)、セキュリティ クリティカル コードにアクセスできるかどうかは、アセンブリの信頼レベルによって決まります。アセンブリが厳密な名前を持ち、グローバル アセンブリ キャッシュにインストールされている場合は、信頼されたアセンブリとして、セキュリティ クリティカルなメンバーを呼び出すことができます。 信頼されない場合は、透過的とマークされていなくても透過的として扱われ、セキュリティ クリティカルなメンバーにはアクセスできません。  
   
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] のセキュリティ モデルについて詳しくは、「[セキュリティの変更](../../../docs/framework/security/security-changes.md)」をご覧ください。  
+ .NET Framework 4 のセキュリティ モデルの詳細については、「[.NET Framework におけるセキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。  
   
 ## <a name="reflection-and-transparency"></a>リフレクションと透過  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降では、型またはメンバーの透過度は、アセンブリの信頼レベルやアプリケーション ドメインの信頼レベルなど、複数の要素に基づいて共通言語ランタイムによって決定されます。 リフレクションには、型の透過度を確認できる <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Type.IsSecuritySafeCritical%2A>、<xref:System.Type.IsSecurityTransparent%2A> の各プロパティが用意されています。 これらのプロパティの有効な組み合わせを、次の表に示します。  
+ .NET Framework 4 以降では、型またはメンバーの透過度は、アセンブリの信頼レベルやアプリケーション ドメインの信頼レベルなど、複数の要素に基づいて共通言語ランタイムによって決定されます。 リフレクションには、型の透過度を確認できる <xref:System.Type.IsSecurityCritical%2A>、<xref:System.Type.IsSecuritySafeCritical%2A>、<xref:System.Type.IsSecurityTransparent%2A> の各プロパティが用意されています。 これらのプロパティの有効な組み合わせを、次の表に示します。  
   
 |セキュリティ レベル|IsSecurityCritical|IsSecuritySafeCritical|IsSecurityTransparent|  
 |--------------------|------------------------|----------------------------|---------------------------|  

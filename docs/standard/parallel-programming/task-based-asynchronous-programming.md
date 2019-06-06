@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 458b5e69-5210-45e5-bc44-3888f86abd6f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0ecc1090f2697eb0243a081cde70338c0e6fffec
-ms.sourcegitcommit: 3630c2515809e6f4b7dbb697a3354efec105a5cd
+ms.openlocfilehash: ad13a5771adbfbd389feeccd3e8c833c4c2f778a
+ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/25/2019
-ms.locfileid: "58409927"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66300636"
 ---
 # <a name="task-based-asynchronous-programming"></a>タスク ベースの非同期プログラミング
 
@@ -113,21 +113,21 @@ ms.locfileid: "58409927"
 
 ## <a name="tasks-threads-and-culture"></a>タスク、スレッド、およびカルチャ
 
-各スレッドにはカルチャと UI カルチャが関連付けられています。それぞれのカルチャは <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> プロパティにより定義されています。 スレッドのカルチャは、書式設定、解析、並べ替え、文字列比較などの操作で使用されます。 スレッドの UI カルチャはリソースの検索で使用されます。 通常、<xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> プロパティと <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> プロパティを使用してアプリケーション ドメイン内のすべてのスレッドの既定のカルチャを指定していない限り、スレッドの既定のカルチャと既定の UI カルチャはシステム カルチャによって定義されます。 スレッドのカルチャを明示的に設定して新しいスレッドを開始すると、新しいスレッドは呼び出し元スレッドのカルチャを継承せず、既定のシステム カルチャがそのカルチャとして使用されます。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 以前のバージョンの .NET Framework を対象とするアプリのタスク ベース プログラミング モデルは、この方針に準拠します。
+各スレッドにはカルチャと UI カルチャが関連付けられています。それぞれのカルチャは <xref:System.Threading.Thread.CurrentCulture%2A?displayProperty=nameWithType> と <xref:System.Threading.Thread.CurrentUICulture%2A?displayProperty=nameWithType> プロパティにより定義されています。 スレッドのカルチャは、書式設定、解析、並べ替え、文字列比較などの操作で使用されます。 スレッドの UI カルチャはリソースの検索で使用されます。 通常、<xref:System.Globalization.CultureInfo.DefaultThreadCurrentCulture%2A?displayProperty=nameWithType> プロパティと <xref:System.Globalization.CultureInfo.DefaultThreadCurrentUICulture%2A?displayProperty=nameWithType> プロパティを使用してアプリケーション ドメイン内のすべてのスレッドの既定のカルチャを指定していない限り、スレッドの既定のカルチャと既定の UI カルチャはシステム カルチャによって定義されます。 スレッドのカルチャを明示的に設定して新しいスレッドを開始すると、新しいスレッドは呼び出し元スレッドのカルチャを継承せず、既定のシステム カルチャがそのカルチャとして使用されます。 .NET Framework 4.6 より前のバージョンの .NET Framework を対象とするアプリのタスク ベース プログラミング モデルは、この方針に準拠します。
 
 > [!IMPORTANT]
-> 呼び出し元スレッドのカルチャは、タスクのコンテキストの一部として、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] *で実行される*アプリではなく、[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] を*対象とした*アプリに適用されます。 Visual Studio 内部でプロジェクトを作成する場合、**[新しいプロジェクト]** ダイアログ ボックスの上部にあるドロップダウン リストから特定バージョンの .NET Framework を選択すると、そのバージョンを対象にできます。また、Visual Studio 外部では <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を使用できます。 [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 以前のバージョンの .NET Framework を対象とするアプリ、または特定のバージョンの .NET Framework を対象としないアプリでは、引き続きタスクのカルチャは、タスクが実行されているスレッドのカルチャによって決まります。
+> 呼び出し元スレッドのカルチャは、タスクのコンテキストの一部として、.NET Framework 4.6 で*実行される*アプリではなく、.NET Framework 4.6 を*対象*としたアプリに適用されます。 Visual Studio 内部でプロジェクトを作成する場合、 **[新しいプロジェクト]** ダイアログ ボックスの上部にあるドロップダウン リストから特定バージョンの .NET Framework を選択すると、そのバージョンを対象にできます。また、Visual Studio 外部では <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を使用できます。 .NET Framework 4.6 より前のバージョンの .NET Framework を対象とするアプリ、または特定のバージョンの .NET Framework を対象としないアプリでは、タスクのカルチャは継続的に、それが実行されているスレッドのカルチャによって決まります。
 
-[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 以降を対象とするアプリでは、タスクがスレッド プールのスレッドで非同期に実行されている場合でも、呼び出し元スレッドのカルチャが各タスクに継承されます。
+.NET Framework 4.6 以降を対象とするアプリでは、タスクがスレッド プールのスレッドで非同期に実行されている場合でも、呼び出し元スレッドのカルチャが各タスクに継承されます。
 
-簡単な例を次に示します。 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を使用して [!INCLUDE[net_v46](../../../includes/net-v46-md.md)] を対象とし、アプリの現在のカルチャをフランス語 (フランス)、またはフランス語 (フランス) が現在のカルチャである場合は英語 (米国) に変更します。 次に、変更後のカルチャの通貨値として書式設定された数値を返す `formatDelegate` という名前のデリゲートを呼び出します。 デリゲートは、同期タスクまたは非同期タスクのいずれの場合でも、予期される結果を返すことに注意してください。これは、非同期タスクは呼び出し元スレッドのカルチャを継承するためです。
+簡単な例を次に示します。 <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を使用して .NET Framework 4.6 を対象とし、アプリの現在のカルチャをフランス語 (フランス)、またはフランス語 (フランス) が現在のカルチャである場合は英語 (米国) に変更します。 次に、変更後のカルチャの通貨値として書式設定された数値を返す `formatDelegate` という名前のデリゲートを呼び出します。 デリゲートは、同期タスクまたは非同期タスクのいずれの場合でも、予期される結果を返すことに注意してください。これは、非同期タスクは呼び出し元スレッドのカルチャを継承するためです。
 
 [!code-csharp[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/csharp/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/cs/asyncculture1.cs#5)]
 [!code-vb[System.Globalization.CultureInfo.Class.Async#5](../../../samples/snippets/visualbasic/VS_Snippets_CLR_System/system.globalization.cultureinfo.class.async/vb/asyncculture1.vb#5)]
 
 Visual Studio を使用している場合、プロジェクトを **[新しいプロジェクト]** ダイアログで作成する際に、<xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を省略して、代わりに .NET Framework 4.6 を対象として選択できます。
 
-[!INCLUDE[net_v46](../../../includes/net-v46-md.md)] 以前のバージョンの .NET Framework を対象とするアプリの動作が出力に反映されるようにするため、ソース コードから <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を削除します。 出力には、呼び出し元スレッドのカルチャではなく、既定のシステム カルチャの書式指定規則が反映されます。
+.NET Framework 4.6 より前のバージョンの .NET Framework を対象とするアプリの動作が出力に反映されるようにするため、ソース コードから <xref:System.Runtime.Versioning.TargetFrameworkAttribute> 属性を削除します。 出力には、呼び出し元スレッドのカルチャではなく、既定のシステム カルチャの書式指定規則が反映されます。
 
 非同期タスクとカルチャの詳細については、「<xref:System.Globalization.CultureInfo>」トピックの「カルチャおよび非同期タスク ベースの操作」を参照してください。
 

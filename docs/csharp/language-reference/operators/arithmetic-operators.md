@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 25f716084c489c834e9242800f4c7e341c41aa58
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 84976d37514db851fd19c882b2c4c9cb003fc4bf
+ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880660"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66250804"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術演算子 (C# リファレンス)
 
@@ -153,7 +153,7 @@ ms.locfileid: "65880660"
 
 [!code-csharp-interactive[addition operator](~/samples/snippets/csharp/language-reference/operators/ArithmeticOperators.cs#Addition)]
 
-文字列連結とデリゲートの組み合わせにも、`+` 演算子が使用できます。 詳細については、「[`+` 演算子](addition-operator.md)」の記事を参照してください。
+文字列連結とデリゲートの組み合わせにも、`+` 演算子が使用できます。 詳細については、「[`+` および `+=` 演算子](addition-operator.md)」の記事を参照してください。
 
 ## <a name="subtraction-operator--"></a>減算演算子 -
 

@@ -3,12 +3,12 @@ title: 基本型 - C# ガイド
 description: すべての C# プログラムの中核となる型 (数値、文字列、オブジェクト) について説明します
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: dc91452bb261b7c799cf3b69cab5b33175148b8a
-ms.sourcegitcommit: 2eceb05f1a5bb261291a1f6a91c5153727ac1c19
+ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2018
-ms.locfileid: "43508047"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422100"
 ---
 # <a name="types-variables-and-values"></a>型、変数、および値
 
@@ -47,13 +47,13 @@ C# は、厳密に型指定された言語です。 すべての変数および�
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-変数を宣言すると、新しい型を使用してその変数を再度宣言することはできず、宣言された型と互換性のない値をその変数に代入することはできません。 たとえば、[int](language-reference/keywords/int.md) を宣言してから、それに [true](language-reference/keywords/true.md) のブール値を代入することはできません。 ただし、たとえば新しい変数に代入するときや、メソッドの引数として渡すときに、値を他の型に変換することは可能です。 データの損失を伴わない "*型変換*" は、コンパイラによって自動的に実行されます。 データの損失を伴う可能性のある変換には、ソース コードに *cast* を記述する必要があります。
+変数を宣言すると、新しい型を使用してその変数を再度宣言することはできず、宣言された型と互換性のない値をその変数に代入することはできません。 たとえば、[int](language-reference/keywords/int.md) を宣言してから、それに [true](language-reference/keywords/true-literal.md) のブール値を代入することはできません。 ただし、たとえば新しい変数に代入するときや、メソッドの引数として渡すときに、値を他の型に変換することは可能です。 データの損失を伴わない "*型変換*" は、コンパイラによって自動的に実行されます。 データの損失を伴う可能性のある変換には、ソース コードに *cast* を記述する必要があります。
 
 詳細については、「[キャストと型変換](programming-guide/types/casting-and-type-conversions.md)」を参照してください。
 
 ## <a name="built-in-types"></a>組み込み型
 
-C# には、整数、浮動小数点値、ブール式、テキスト文字、10 進数値などのデータを表現するための標準的な組み込みの数値型が用意されています。 また、組み込みの **string** 型と **object** 型もあります。 これらの型は、すべての C# プログラムで使用できます。 組み込み型の詳細については、「[型のリファレンス表](language-reference/keywords/reference-tables-for-types.md)」を参照してください。  
+C# には、整数、浮動小数点値、ブール式、テキスト文字、10 進数値などのデータを表現するための標準的な組み込みの数値型が用意されています。 また、組み込みの **string** 型と **object** 型もあります。 これらの型は、すべての C# プログラムで使用できます。 組み込み型の詳細については、[組み込み型のリファレンス表](language-reference/keywords/built-in-types-table.md)に関する記事を参照してください。  
   
 ## <a name="custom-types"></a>カスタム型
 

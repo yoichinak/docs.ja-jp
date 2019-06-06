@@ -6,18 +6,18 @@ ms.date: 08/23/2018
 helpviewer_keywords:
 - constructors [C#], return values
 - keywords [C#], new
-- default constructor [C#]
+- parameterless constructor [C#]
 - defaults [C#]
 - value types [C#], initializing
 - variables [C#], value types
-- constructors [C#], default constructor
-- types [C#], default constructor return values
-ms.openlocfilehash: 19e9e4f94ab573f2313c185a08192d89103b98fd
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+- constructors [C#], parameterless constructor
+- types [C#], parameterless constructor return values
+ms.openlocfilehash: 4fc9a35f69540e047a97c21788015ca8e54068a0
+ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53237039"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66422034"
 ---
 # <a name="default-values-table-c-reference"></a>既定値の一覧表 (C# リファレンス)
 
@@ -41,7 +41,7 @@ ms.locfileid: "53237039"
 |[ulong](ulong.md)|0|
 |[ushort](ushort.md)|0|
 
-## <a name="remarks"></a>コメント
+## <a name="remarks"></a>解説
 
 C# で初期化されていない変数を使用することはできません。 変数はその型の既定値に初期化することができます。 また、型の既定値を使用して、メソッドの[省略可能な引数](../../programming-guide/classes-and-structs/named-and-optional-arguments.md#optional-arguments)の既定値を指定することもできます。
 
@@ -57,7 +57,7 @@ C# 7.1 以降、[`default` リテラル](../../programming-guide/statements-expr
 int a = default;
 ```
 
-また、次の例に示すように、既定のコンストラクターまたは暗黙的な既定のコンストラクターを使用して、値型の既定値を生成することもできます。 コンストラクターの詳細については、[コンストラクター](../../programming-guide/classes-and-structs/constructors.md)に関する記事を参照してください。
+また、次の例に示すように、パラメーターなしのコンストラクターまたは暗黙的なパラメーターなしのコンストラクターを使用して、値型の既定値を生成することもできます。 コンストラクターの詳細については、[コンストラクター](../../programming-guide/classes-and-structs/constructors.md)に関する記事を参照してください。
 
 ```csharp
 int a = new int();
@@ -70,7 +70,6 @@ int a = new int();
 - [C# リファレンス](../index.md)
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
-- [型のリファレンス表](reference-tables-for-types.md)
 - [値型](value-types.md)
 - [値型の一覧表](value-types-table.md)
 - [組み込み型の一覧表](built-in-types-table.md)

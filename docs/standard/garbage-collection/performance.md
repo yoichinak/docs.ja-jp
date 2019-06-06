@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: da29bd6bc53b59f1f20e2272a8293b49e230bff0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622879"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66456797"
 ---
 # <a name="garbage-collection-and-performance"></a>ガベージ コレクションとパフォーマンス
 <a name="top"></a> ここでは、ガベージ コレクションおよびメモリ使用に関連する問題について説明します。 マネージド ヒープに関する問題について取り上げ、ガベージ コレクションによるアプリケーションに対する影響を最小限に抑える方法を説明します。 問題を調査するために使用できる手順のリンクを問題ごとに示してあります。  
@@ -61,7 +61,7 @@ ms.locfileid: "64622879"
  プロファイラーでは包括的な情報を提供できますが、 複雑なプロファイラーを使用すると、アプリケーションの動作が変更される可能性があります。  
   
 ### <a name="application-domain-resource-monitoring"></a>アプリケーション ドメインのリソース監視  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降では、アプリケーション ドメインのリソース監視 (ARM) を使用して、ホストでアプリケーション ドメインによる CPU とメモリの使用状況を監視できます。 詳細については、「[アプリケーション ドメインのリソース監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)」を参照してください。  
+ .NET Framework 4 以降では、アプリケーション ドメインのリソース監視 (ARM) によって、ホストで CPU とメモリのアプリケーション ドメインによる使用状況を監視できるようになります。 詳細については、「[アプリケーション ドメインのリソース監視](../../../docs/standard/garbage-collection/app-domain-resource-monitoring.md)」を参照してください。  
   
  [ページのトップへ](#top)  
   
@@ -346,7 +346,7 @@ ms.locfileid: "64622879"
   
 1. Windows タスク マネージャーを起動します。  
   
-2. **[パフォーマンス]** タブで、コミットの値を確認します  (Windows 7 では **[システム]** の **[コミット (KB)]**)。  
+2. **[パフォーマンス]** タブで、コミットの値を確認します (Windows 7 では **[システム]** の **[コミット (KB)]** )。  
   
      **[合計]** が **[制限値]** に近い場合は、物理メモリが不足しています。  
   
@@ -661,7 +661,7 @@ ms.locfileid: "64622879"
   
      マネージド スレッドの再開に 21 マイクロ秒かかっています (`GCRestartEEEnd` – `GCRestartEEBegin`)。  
   
-     次の例は、バックグラウンド ガベージ コレクションの出力を示しています。この出力には、process、thread、および event field が含まれています  (すべてのデータが示されているわけではありません)。  
+     次の例は、バックグラウンド ガベージ コレクションの出力を示しています。この出力には、process、thread、および event field が含まれています (すべてのデータが示されているわけではありません)。  
   
     ```  
     timestamp(us)    event name            process    thread    event field  

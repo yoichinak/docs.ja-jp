@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0f8bf8fa-b993-478f-87ab-1a1a7976d298
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b6adbe4e5c82d5f886fcffd5ab272a337c377395
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 5ca4a087b60e6cb857ec78273dad099e5e5da07a
+ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586127"
+ms.lasthandoff: 06/01/2019
+ms.locfileid: "66457307"
 ---
 # <a name="security-issues-in-reflection-emit"></a>リフレクション出力のセキュリティ関連事項
 .NET Framework には、Microsoft Intermediate Language (MSIL) を出力する方法が 3 種類ありますが、それぞれに固有のセキュリティ問題があります。  
@@ -78,7 +78,7 @@ ms.locfileid: "65586127"
   
  他の出力済みコードと同じように、動的メソッドを実行するには、動的メソッドで使用されるメソッドで必要なアクセス許可がすべて必要になります。  
   
- 匿名でホストされる動的メソッドをホストするシステム アセンブリでは、<xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType> 透過性モデルを使用します。これは、[!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] より前の .NET Framework で使用されていた透過性モデルです。  
+ 匿名でホストされる動的メソッドをホストするシステム アセンブリでは、<xref:System.Security.SecurityRuleSet.Level1?displayProperty=nameWithType> 透過性モデルが使用されます。これは、.NET Framework 4 より前の .NET Framework で使用されていた透過性モデルです。  
   
  詳細については、<xref:System.Reflection.Emit.DynamicMethod> クラスを参照してください。  
   
@@ -139,7 +139,7 @@ ms.locfileid: "65586127"
   
 <a name="Version_Information"></a>   
 ## <a name="version-information"></a>バージョン情報  
- [!INCLUDE[net_v40_short](../../../includes/net-v40-short-md.md)] 以降では、コンピューター全体のセキュリティ ポリシーが削除され、透過的セキュリティが既定の適用機構になりました。 「[セキュリティの変更](../../../docs/framework/security/security-changes.md)」をご覧ください。  
+ .NET Framework 4 以降では、コンピューター全体のセキュリティ ポリシーが削除され、セキュリティ透過性が既定の適用機構になりました。 「[セキュリティの変更](../../../docs/framework/security/security-changes.md)」をご覧ください。  
   
  [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 以降では、動的アセンブリと動的メソッドを出力するときに、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグを指定する必要がなくなりました。 このフラグは、それ以前のすべてのバージョンの .NET Framework では必要となります。  
   
