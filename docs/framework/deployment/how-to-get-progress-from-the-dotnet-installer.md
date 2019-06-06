@@ -9,20 +9,20 @@ helpviewer_keywords:
 ms.assetid: 0a1a3ba3-7e46-4df2-afd3-f3a8237e1c4f
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: bdb74259d7b034511722b1d2992b4ec16adb551e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 991053a2728ec7b8c5d9157dbf6307e0974479c6
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64750427"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66379930"
 ---
 # <a name="how-to-get-progress-from-the-net-framework-45-installer"></a>方法: .NET Framework 4.5 インストーラーの進行状況を表示する
 
-[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は再頒布可能なランタイムです。 このバージョンの .NET Framework 用アプリを開発する場合は、アプリのセットアップに必要なパーツとして、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを含める (チェーンする) ことができます。 セットアップ手順をカスタマイズまたは統一するために、アプリケーションのセットアップの進行状況を表示する一方で、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップをサイレントで起動し、その進行状況を追跡できます。 サイレントな追跡を可能にするために、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップ (監視対象) ではメモリ マップ I/O (MMIO) セグメントを使用してプロトコルを定義し、セットアップ (ウォッチャーつまりチェーン元) と通信します。 このプロトコルは、チェーン元が進行状況情報や詳細な結果を取得してメッセージに応答し、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを取り消す方法を定義します。
+.NET Framework 4.5 は再頒布可能なランタイムです。 このバージョンの .NET Framework 用アプリを開発する場合は、アプリのセットアップに必要なパーツとして、.NET Framework 4.5 セットアップを含める (チェーンする) ことができます。 セットアップ手順をカスタマイズまたは統一するために、アプリのセットアップの進行状況を表示しながら、.NET Framework 4.5 セットアップをサイレントで起動し、その進行状況を追跡できます。 サイレントな追跡を可能にするために、.NET Framework 4.5 セットアップ (監視対象) ではメモリ マップ I/O (MMIO) セグメントを使用することでプロトコルを定義し、セットアップ (ウォッチャーまたはチェーン元) と通信します。 このプロトコルは、チェーン元による進行状況情報の取得、詳細な結果の取得、メッセージへの応答、.NET Framework 4.5 セットアップの取り消しを行う方法を定義します。
 
-- **呼び出し**。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを呼び出して、MMIO セクションから進行状況情報を受け取るには、セットアップ プログラムで以下の処理を行う必要があります。
+- **呼び出し**。 .NET Framework 4.5 セットアップを呼び出して、MMIO セクションから進行状況情報を受け取るには、セットアップ プログラムで以下の処理を行う必要があります。
 
-    1. [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 再頒布可能プログラムを呼び出します。
+    1. .NET Framework 4.5 再頒布可能プログラムを呼び出します。
 
         ```
         dotNetFx45_Full_x86_x64.exe /q /norestart /pipe section-name
@@ -36,9 +36,9 @@ ms.locfileid: "64750427"
 
         これらの名前は、実際のセットアップ プログラムの固有な名前に置き換えてください。
 
-    2. MMIO セクションから読み取ります。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] では、ダウンロード操作とインストール操作は同時に行われます。 .NET Framework の 1 つのパーツがインストールしている間に、別のパーツがダウンロードします。 その結果、進行状況は、0 から 255 まで増加する 2 つの値 (`m_downloadSoFar` および `m_installSoFar`) として MMIO セクションに送り返されます (書き込まれます)。 255 が書き込まれて、.NET Framework が終了すると、インストールは完了します。
+    2. MMIO セクションから読み取ります。 .NET Framework 4.5 では、ダウンロード操作とインストール操作は同時に行われます。 .NET Framework の 1 つのパーツがインストールしている間に、別のパーツがダウンロードします。 その結果、進行状況は、0 から 255 まで増加する 2 つの値 (`m_downloadSoFar` および `m_installSoFar`) として MMIO セクションに送り返されます (書き込まれます)。 255 が書き込まれて、.NET Framework が終了すると、インストールは完了します。
 
-- **終了コード**。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 再頒布可能プログラムを呼び出すためのコマンドからの以下の終了コードは、セットアップが成功または失敗したことを示します。
+- **終了コード**。 .NET Framework 4.5 再頒布可能プログラムを呼び出すためのコマンドからの以下の終了コードは、セットアップが成功または失敗したことを示します。
 
   - 0: セットアップは、正常に完了しました。
 
@@ -52,7 +52,7 @@ ms.locfileid: "64750427"
 
 ## <a name="chainer-sample"></a>チェーン元のサンプル
 
-チェーン元のサンプルがサイレントで起動し、進行状況を表示しながら [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] セットアップを追跡します。 このサンプルは、.NET Framework 4 用のチェーン元サンプルに似ています。 ただし、.NET Framework 4 アプリケーションを閉じるためのメッセージ ボックスを処理することで、システムの再起動を避けることができます。 このメッセージ ボックスの詳細については、「[.NET Framework 4.5 のインストール中のシステム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)」を参照してください。 このサンプルは .NET Framework 4 インストーラーで使用できます。そのシナリオではメッセージは送信されません。
+チェーン元のサンプルが、進行状況を表示しながらサイレントで起動し、.NET Framework 4.5 セットアップを追跡します。 このサンプルは、.NET Framework 4 用のチェーン元サンプルに似ています。 ただし、.NET Framework 4 アプリケーションを閉じるためのメッセージ ボックスを処理することで、システムの再起動を避けることができます。 このメッセージ ボックスの詳細については、「[.NET Framework 4.5 のインストール中のシステム再起動の削減](../../../docs/framework/deployment/reducing-system-restarts.md)」を参照してください。 このサンプルは .NET Framework 4 インストーラーで使用できます。そのシナリオではメッセージは送信されません。
 
 > [!WARNING]
 > 例の実行は、管理者として行う必要があります。
@@ -63,7 +63,7 @@ MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元の�
 
 #### <a name="mmiochainerh"></a>MMIOChainer.h
 
-- MMIOChainer.h ファイル ([完全なコード](https://go.microsoft.com/fwlink/?LinkId=231369)を参照) には、データ構造体の定義と、チェーン元クラスが派生する基底クラスが含まれます。 [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] は MMIO データ構造体を拡張し、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] インストーラーが必要とするデータを処理できるようにします。 MMIO 構造体への変更には下位互換性があるため、.NET Framework 4 チェーン元は、再コンパイルを必要とせずに .NET Framework 4.5 のセットアップで機能します。 ただし、このシナリオはシステムの再起動を削減するための機能をサポートしていません。
+- MMIOChainer.h ファイル ([完全なコード](https://go.microsoft.com/fwlink/?LinkId=231369)を参照) には、データ構造体の定義と、チェーン元クラスが派生する基底クラスが含まれます。 .NET Framework 4.5 によって、MMIO データ構造体が拡張され、.NET Framework 4.5 インストーラーが必要とするデータが処理されます。 MMIO 構造体への変更には下位互換性があるため、.NET Framework 4 チェーン元は、再コンパイルを必要とせずに .NET Framework 4.5 のセットアップで機能します。 ただし、このシナリオはシステムの再起動を削減するための機能をサポートしていません。
 
     バージョン フィールドは、構造体およびメッセージ形式へのリビジョンを識別するための手段を提供します。 .NET Framework セットアップでは、`VirtualQuery` 関数を呼び出してファイル マップのサイズを判断することで、チェーン元インターフェイスのバージョンを判別します。 サイズがバージョン フィールドに対応できる十分な大きさである場合、.NET Framework セットアップでは指定された値を使用します。 .NET Framework 4 の場合のように、バージョン フィールドを含めるにはファイル マップが小さすぎる場合、セットアップ プロセスではバージョン 0 (4) を使用します。 .NET Framework セットアップが送信しようとするメッセージのバージョンをチェーン元がサポートしていない場合、.NET Framework セットアップでは応答を無視します。
 
@@ -96,7 +96,7 @@ MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元の�
         };
     ```
 
-- `MmioDataStructure` データ構造体を直接使用するのではなく、チェーン元を実装するための `MmioChainer` クラスを使用します。 `MmioChainer` クラスから派生させて、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)] 再頒布可能プログラムをチェインします。
+- `MmioDataStructure` データ構造体を直接使用するのではなく、チェーン元を実装するための `MmioChainer` クラスを使用します。 `MmioChainer` クラスから派生させて、.NET Framework 4.5 再頒布可能プログラムをチェーンします。
 
 #### <a name="iprogressobserverh"></a>IProgressObserver.h
 
@@ -151,7 +151,7 @@ MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元の�
     }
     ```
 
-- インストールを起動する前に、チェーン元では [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] を呼び出して、`IsNetFx4Present` が既にインストールされているかどうかを確認します。
+- インストールを始める前に、チェーン元では `IsNetFx4Present` を呼び出して、.NET Framework 4.5 が既にインストールされているかどうかの確認が行われます。
 
     ```cpp
     ///  Checks for presence of the .NET Framework 4.
@@ -307,7 +307,7 @@ MSDN サンプル ギャラリーから [.NET Framework 4.5 チェーン元の�
     ```
 
     > [!IMPORTANT]
-    > [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] の再頒布可能プログラムは、通常、多数の進行状況メッセージと、(チェーン元側で) 完了を示す 1 つのメッセージを書き込みます。 また、非同期に読み取りを行って、`Abort` レコードを探します。 `Abort` レコードを受け取った場合は、インストールを取り消し、インストールが中止され、セットアップ操作がロールバックされた後に、データとして E_ABORT を含む終了レコードを書き込みます。
+    > .NET Framework 4.5 の再頒布可能プログラムによって、通常、多数の進行状況メッセージと、(チェーン元側で) 完了を示す 1 つのメッセージが書き込まれます。 また、非同期に読み取りを行って、`Abort` レコードを探します。 `Abort` レコードを受け取った場合は、インストールを取り消し、インストールが中止され、セットアップ操作がロールバックされた後に、データとして E_ABORT を含む終了レコードを書き込みます。
 
 標準的なサーバーは、ランダムな MMIO ファイル名を作成し、ファイル (前のコード例の `Server::CreateSection` で示されているファイル) を作成した後、`CreateProcess` メソッドを使用して `-pipe someFileSectionName` オプションでパイプ名を渡すことによって、再頒布可能プログラムを起動します。 サーバーは、アプリケーションの UI 固有のコードを使用して `OnProgress`、`Send`、および `Finished` の各メソッドを実装する必要があります。
 

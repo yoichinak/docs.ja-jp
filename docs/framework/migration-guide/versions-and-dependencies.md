@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: f75a72de-e2f2-4a7a-9574-3f278684ea90
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c3d45ed4f9bfb2c59bf2c01b373e919255c17e41
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ad78c37dda00e0b52ec8e84b8c996ee3dca09a5
+ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64592871"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66378668"
 ---
 # <a name="net-framework-versions-and-dependencies"></a>.NET Framework のバージョンおよび依存関係
 .NET Framework の各バージョンには、共通言語ランタイム (CLR)、基底クラス ライブラリ、およびその他のマネージド ライブラリが含まれています。 このトピックでは、.NET Framework の各バージョンの主要な機能について説明し、基になっている CLR のバージョンおよび関連する開発環境に関する情報と、Windows オペレーティング システムでインストールされる .NET Framework のバージョンを示します。  
@@ -56,13 +56,13 @@ ms.locfileid: "64592871"
 ## <a name="targeting-and-running-net-framework-apps-for-version-45-and-later"></a>.NET Framework 4.5 以降のバージョンをターゲットにして実行する  
  .NET Framework 4.5 はお使いのコンピューター上の .NET Framework 4 を置き換えるインプレース更新であり、同様に .NET Framework 4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2、4.8 は .NET Framework 4.5 のインプレース更新です。つまり、同じランタイム バージョンを使用しますが、アセンブリのバージョンが更新され、新しい型とメンバーが含まれます。 これらの更新プログラムのいずれかをインストールした後、.NET Framework 4、.NET Framework 4.5、NET Framework 4.6、または .NET Framework 4.7 アプリは、再コンパイルを必要とせずに実行を継続します。 ただし、逆はできません。 .NET Framework の新しいバージョンをターゲットとするアプリを .NET Framework の以前のバージョンで実行することは推奨されていません。 たとえば、.NET Framework 4.6 をターゲットとするアプリを .NET Framework 4.5 上で実行することは推奨されていません。 次のガイドラインが適用されます。  
   
-- Visual Studio で、1 つの プロジェクトに対するターゲット フレームワークとして .NET Framework 4.5 を選択して (これにより <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> プロパティが設定されます)、そのプロジェクトを .NET Framework 4.5 アセンブリまたは実行可能ファイルとしてコンパイルできます。 このアセンブリまたは実行可能ファイルは、[!INCLUDE[net_v45](../../../includes/net-v45-md.md)]、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2、または 4.8 がインストールされている任意のコンピューター上で使用できます。  
+- Visual Studio で、1 つの プロジェクトに対するターゲット フレームワークとして .NET Framework 4.5 を選択して (これにより <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> プロパティが設定されます)、そのプロジェクトを .NET Framework 4.5 アセンブリまたは実行可能ファイルとしてコンパイルできます。 その後、このアセンブリまたは実行可能ファイルは、.NET Framework 4.5、4.5.1、4.5.2、4.6、4.6.1、4.6.2、4.7、4.7.1、4.7.2、または 4.8 がインストールされている任意のコンピューター上で使用できます。  
   
 - Visual Studio で、1 つの プロジェクトに対するターゲット フレームワークとして .NET Framework 4.5.1 を選択して (これにより <xref:Microsoft.Build.Tasks.GetReferenceAssemblyPaths.TargetFrameworkMoniker%2A?displayProperty=nameWithType> プロパティが設定されます)、そのプロジェクトを .NET Framework 4.5.1 アセンブリまたは実行可能ファイルとしてコンパイルできます。 このアセンブリまたは実行可能ファイルは必ず、.NET Framework 4.5.1 以降のバージョンの .NET Framework がインストールされているコンピューター上のみで実行されます。 .NET Framework 4.5.1 を対象とする実行可能ファイルは、.NET Framework 4.5 など、以前のバージョンの .NET Framework のみがインストールされたコンピューター上では実行がブロックされ、ユーザーに .NET Framework 4.5.1 のインストールを求めるメッセージが表示されます。 また、.NET Framework 4.5.1 アセンブリは、.NET Framework 4.5 など、以前のバージョンの .NET Framework を対象とするアプリからは呼び出さないでください。  
   
      .NET framework 4.5.1 および .NET Framework 4.5 は、ここでは例として使用されているだけです。 この原則は、実行されているシステムにインストールされているものより新しい .NET Framework のバージョンをターゲットにするアプリに適用されます。  
   
- .NET Framework での変更によって、アプリケーション コードの変更が必要になる場合があります。.NET Framework 4.5 以降のバージョンを使って既存のアプリを実行する前に、[アプリケーションの互換性](application-compatibility.md)に関するページを確認してください。 現行バージョンのインストールについては、「[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)」を参照してください。 .NET Framework のサポートの詳細については、Microsoft サポート オンラインの [Microsoft .NET Framework のサポート ライフサイクル ポリシー](https://go.microsoft.com/fwlink/?LinkId=196607)に関するページを参照してください。  
+ .NET Framework での変更によって、アプリケーション コードの変更が必要になる場合があります。 .NET Framework 4.5 以降のバージョンを使って既存のアプリを実行する前に、[アプリケーションの互換性](application-compatibility.md)に関するページを確認してください。 現行バージョンのインストールについては、「[開発者向けの .NET Framework のインストール](../../../docs/framework/install/guide-for-developers.md)」を参照してください。 .NET Framework のサポートの詳細については、Microsoft サポート オンラインの [Microsoft .NET Framework のサポート ライフサイクル ポリシー](https://go.microsoft.com/fwlink/?LinkId=196607)に関するページを参照してください。  
   
 ## <a name="targeting-and-running-apps-for-older-versions"></a>以前のバージョンのアプリの対象化と実行  
 
@@ -74,9 +74,9 @@ ms.locfileid: "64592871"
   
 - .NET Framework を初めて使用する場合は、[概要](../../../docs/framework/get-started/overview.md)に関するページを参照して、主な概念と機能の概要を確認してください。  
   
-- [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] とポイント リリースでの新機能と機能強化については、「[.NET Framework の新機能](../../../docs/framework/whats-new/index.md)」を参照してください。  
+- .NET Framework 4.5 とそのポイント リリースでの新機能と機能強化については、「[.NET Framework の新機能](../../../docs/framework/whats-new/index.md)」を参照してください。  
   
-- .NET Framework 4 から [!INCLUDE[net_v45](../../../includes/net-v45-md.md)] およびそのポイント リリースへのアプリの移行の詳細については、[移行ガイド](index.md)に関するページを参照してください。  
+- .NET Framework 4 から .NET Framework 4.5 およびそのポイント リリースへのアプリの移行の詳細については、[移行ガイド](index.md)に関するページを参照してください。  
   
 - コンピューターにどのバージョンまたは更新プログラムがインストールされているかを判別する方法については、「[方法:インストールされている .NET Framework バージョンを確認する](how-to-determine-which-versions-are-installed.md)」と「[方法:インストールされている .NET Framework の更新プログラムを確認する](how-to-determine-which-net-framework-updates-are-installed.md)」を参照してください。  
   
