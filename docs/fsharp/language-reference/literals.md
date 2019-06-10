@@ -1,13 +1,13 @@
 ---
 title: リテラル
 description: リテラルの型について説明します、F#プログラミング言語。
-ms.date: 02/08/2019
-ms.openlocfilehash: 032bc82d222cd34e7ac62e42ee4394c97d975b2e
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.date: 06/08/2019
+ms.openlocfilehash: 93329cd868ff7a2daaffa1b87ba838bbbc98015c
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490975"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816233"
 ---
 # <a name="literals"></a>リテラル
 
@@ -44,13 +44,16 @@ F# のリテラル型を次の表に示します。 16 進表記で桁を表す�
 |byte[]|ASCII 文字列|B|`"text"B`|
 |String または byte[]|逐語的文字列|@ プリフィックス|`@"\\server\share"` (Unicode)<br /><br />`@"\\server\share"B` (ASCII)|
 
-## <a name="remarks"></a>Remarks
+## <a name="named-literals"></a>名前付きリテラル
 
-Unicode 文字列に明示的なエンコードを使用して指定することができますを含めることができます`\u`の後に 16 ビットの 16 進コードまたは utf-32 エンコーディングを使用して指定できる`\U`後に、Unicode を表す 32 ビットの 16 進コードサロゲート ペア。
+定数であることを意図した値でマークできる、[リテラル](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285)属性。 この属性には、値が定数としてコンパイルされる効果があります。
 
-F# 3.1 を使用できます、`+`サインインすると、文字列リテラルを結合します。 ビットごとのこともできます。 または (`|||`) 列挙型フラグを結合する演算子。 たとえば、F# 3.1 では次のようなコードが有効です。
+パターン マッチ式では、小文字で始まる識別子は、リテラルとしてではなく常にバインドされる変数として扱われます。そのため、一般的に、リテラルを定義する場合は先頭大文字を使用する必要があります。
 
 ```fsharp
+[<Literal>]
+let SomeJson = """{"numbers":[1,2,3,4,5]}"""
+
 [<Literal>]
 let Literal1 = "a" + "b"
 
@@ -64,13 +67,11 @@ let Literal2 = 1 ||| 64
 let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 ```
 
-その他のビットごとの演算子は使用できません。
+## <a name="remarks"></a>Remarks
 
-## <a name="named-literals"></a>名前付きリテラル
+Unicode 文字列に明示的なエンコードを使用して指定することができますを含めることができます`\u`の後に 16 ビットの 16 進コードまたは utf-32 エンコーディングを使用して指定できる`\U`後に、Unicode を表す 32 ビットの 16 進コードサロゲート ペア。
 
-定数であることを意図した値でマークできる、[リテラル](https://msdn.microsoft.com/library/465f36ce-d146-41c0-b425-679c509cd285)属性。 この属性には、値が定数としてコンパイルされる効果があります。
-
-パターン マッチ式では、小文字で始まる識別子は、リテラルとしてではなく常にバインドされる変数として扱われます。そのため、一般的に、リテラルを定義する場合は先頭大文字を使用する必要があります。
+以外の他のビットごとの演算子の使用`|||`は許可されていません。
 
 ## <a name="integers-in-other-bases"></a>他の底の整数
 
@@ -83,7 +84,7 @@ let numbers = (0x9F, 0o77, 0b1010)
 
 ## <a name="underscores-in-numeric-literals"></a>数値リテラルでのアンダー スコア
 
-以降でF#4.1、アンダー スコア文字は、桁を区切ることができます (`_`)。
+アンダー スコア文字は、桁を区切ることができます (`_`)。
 
 ```fsharp
 let value = 0xDEAD_BEEF

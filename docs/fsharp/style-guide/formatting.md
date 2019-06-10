@@ -1,15 +1,15 @@
 ---
-title: F#コードの書式設定に関するガイドライン
+title: F# コードのフォーマットに関するガイドライン
 description: 書式設定するためのガイドラインについて説明しますF#コード。
 ms.date: 02/08/2019
-ms.openlocfilehash: ce07bd800984ec082a522bc62cb487f786fa0510
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063609"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816183"
 ---
-# <a name="f-code-formatting-guidelines"></a>F#コードの書式設定に関するガイドライン
+# <a name="f-code-formatting-guidelines"></a>F# コードのフォーマットに関するガイドライン
 
 この記事では、F# コードが実行されるように、コードを書式設定する方法に関するガイドラインを提供します。
 
@@ -836,14 +836,14 @@ type MyRecord =
 
 ## <a name="formatting-literals"></a>書式設定リテラル
 
-[F#リテラル](../language-reference/literals.md)を使用して、`Literal`属性が独自の行に属性を配置し、camelCase 名前付けを使用する必要があります。
+[F#リテラル](../language-reference/literals.md)を使用して、`Literal`属性の属性を独自の行に配置し、PascalCase 名前付けを使用する必要があります。
 
 ```fsharp
 [<Literal>]
-let path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
+let Path = __SOURCE_DIRECTORY__ + "/" + __SOURCE_FILE__
 
 [<Literal>]
-let myUrl = "www.mywebsitethatiamworkingwith.com"
+let MyUrl = "www.mywebsitethatiamworkingwith.com"
 ```
 
 属性値と同じ行を配置しないでください。
