@@ -2,12 +2,12 @@
 title: イベントへのサブスクライブ
 description: コンテナー化された .NET アプリケーションの .NET マイクロサービス アーキテクチャ | 統合イベントの発行とサブスクライブについて。
 ms.date: 10/02/2018
-ms.openlocfilehash: ff165f6bba7940b99ef9712049191e356b893897
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: c0eaacce51b186191431bf827bb84d3a2d2b7b1f
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639714"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722673"
 ---
 # <a name="subscribing-to-events"></a>イベントへのサブスクライブ
 
@@ -32,7 +32,7 @@ eventBus.Subscribe<OrderStartedIntegrationEvent,
 
 ## <a name="publishing-events-through-the-event-bus"></a>イベント バスを介したイベントの発行
 
-最後に、メッセージ送信元 (送信元マイクロサービス) が、次の例のようなコードで統合イベントを発行します  (これは原子性を考慮していない単純化された例です)。イベントを複数のマイクロサービスにわたって伝達する必要がある場合は、同様のコードを、通常は送信元マイクロサービスからデータまたはトランザクションがコミットされた直後に実装します。
+最後に、メッセージ送信元 (送信元マイクロサービス) が、次の例のようなコードで統合イベントを発行します (これは原子性を考慮していない単純化された例です)。イベントを複数のマイクロサービスにわたって伝達する必要がある場合は、同様のコードを、通常は送信元マイクロサービスからデータまたはトランザクションがコミットされた直後に実装します。
 
 まず、次のコードに示すように、(RabbitMQ またはサービス バスに基づく) イベント バス実装オブジェクトをコントローラー コンストラクターで挿入します。
 
@@ -310,7 +310,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="deduplicating-message-events-at-the-eventhandler-level"></a>EventHandler レベルでのメッセージ イベントの重複除去
 
-イベントが受信者によって 1 回だけ処理されたことを確認する 1 つの方法は、イベント ハンドラーでメッセージ イベントを処理する際に特定のロジックを実装することです。 たとえば、それは eShopOnContainers アプリケーションで使用されるアプローチで、UserCheckoutAcceptedIntegrationEvent 統合イベントを受け取るときに [UserCheckoutAcceptedIntegrationEventHandler クラスのソース コード](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)で確認できます  (この場合、コマンド ハンドラーに送信する前に、識別子として eventMsg.RequestId を使用し、IdentifiedCommand で CreateOrderCommand をラップします。)。
+イベントが受信者によって 1 回だけ処理されたことを確認する 1 つの方法は、イベント ハンドラーでメッセージ イベントを処理する際に特定のロジックを実装することです。 たとえば、それは eShopOnContainers アプリケーションで使用されるアプローチで、UserCheckoutAcceptedIntegrationEvent 統合イベントを受け取るときに [UserCheckoutAcceptedIntegrationEventHandler クラスのソース コード](https://github.com/dotnet-architecture/eShopOnContainers/blob/master/src/Services/Ordering/Ordering.API/Application/IntegrationEvents/EventHandling/UserCheckoutAcceptedIntegrationEventHandler.cs)で確認できます (この場合、コマンド ハンドラーに送信する前に、識別子として eventMsg.RequestId を使用し、IdentifiedCommand で CreateOrderCommand をラップします。)。
 
 ### <a name="deduplicating-messages-when-using-rabbitmq"></a>RabbitMQ を使用するときのメッセージの重複除去
 
@@ -322,7 +322,7 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 ### <a name="additional-resources"></a>その他の技術情報
 
-- **NServiceBus を使用するフォークされた eShopOnContainers (Particular Software)** \
+- **NServiceBus を使用するフォークされた eShopOnContainers (Particular Software)**  \
     <https://go.particular.net/eShopOnContainers>
 
 - **イベント駆動型メッセージング** \
@@ -378,12 +378,6 @@ namespace Microsoft.eShopOnContainers.Services.Basket.API.IntegrationEvents.Even
 
 - **信頼性ガイド** (RabbitMQ ドキュメント) \
     [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html#consumer)
-
-- **Azure Service Bus。ブローカー メッセージング: 重複データ検出** \
-    <https://code.msdn.microsoft.com/Brokered-Messaging-c0acea25>
-
-- **信頼性ガイド** (RabbitMQ ドキュメント) \
-    [https://www.rabbitmq.com/reliability.html\#consumer](https://www.rabbitmq.com/reliability.html%23consumer)
 
 > [!div class="step-by-step"]
 > [前へ](rabbitmq-event-bus-development-test-environment.md)

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - lambda operator [C#]
 - => operator [C#]
 - lambda expressions [C#], => operator
-ms.openlocfilehash: 6e6ace55e7557e940970675c99ec4db87c124f1d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4c075cedb3cf479f53409f3b0acf4463fc3d7a03
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65633884"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758214"
 ---
 # <a name="-operator-c-reference"></a>=> 演算子 (C# リファレンス)
 
@@ -25,15 +25,15 @@ ms.locfileid: "65633884"
 
 次の例は、メソッド構文で [LINQ](../../programming-guide/concepts/linq/index.md) 機能を使用して、ラムダ式の使用法を示しています。
 
-[!code-csharp-interactive[infer types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#InferredTypes)]
+[!code-csharp-interactive[infer types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#InferredTypes)]
 
 ラムダ式の入力変数は、コンパイル時に厳密に型指定されます。 前の例のように、コンパイラが入力変数の型を推論できる場合は、省型宣言を略できます。 入力変数の型を指定する必要がある場合は、次の例に示すように、変数ごとに指定する必要があります。
 
-[!code-csharp-interactive[specify types of input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#ExplicitTypes)]
+[!code-csharp-interactive[specify types of input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#ExplicitTypes)]
 
 次の例は、入力変数を含まないラムダ式を定義する方法を示しています。
 
-[!code-csharp-interactive[without input variables](~/samples/snippets/csharp/language-reference/operators/LambdaOperatorExamples.cs#WithoutInput)]
+[!code-csharp-interactive[without input variables](~/samples/csharp/language-reference/operators/LambdaOperator.cs#WithoutInput)]
 
 詳細については、「[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。
 

@@ -8,25 +8,25 @@ ms.topic: reference
 helpviewer_keywords:
 - expression trees
 - debugview
-ms.openlocfilehash: de82a738430cdd37c4905a5ae7da5faeb46f00a4
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: bc3fc579ed8031d818241f41ac728ef7e5be0b99
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66196368"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690113"
 ---
 # <a name="debugview-syntax"></a>`DebugView` の構文
 
 `DebugView` プロパティ (デバッグ時にのみ利用可能) により、式ツリーが文字列でレンダリングされます。 構文の大部分はかなりわかりやすいです。特別なケースについて以降のセクションで説明します。
 
-各例の後ろに `DebugView` を含むブロック コメントが続きます。 
+各例の後ろに `DebugView` を含むブロック コメントが続きます。
 
-## <a name="parameterexpression"></a>ParameterExpression 
+## <a name="parameterexpression"></a>ParameterExpression
 
 <xref:System.Linq.Expressions.ParameterExpression?displayProperty=nameWithType> 変数名は、先頭に記号 `$` を付けて表示されます。
-  
+
 パラメーターに名前がない場合、`$var1` や `$var2` など、自動的に生成された名前が割り当てられます。
-  
+
 ### <a name="examples"></a>使用例
 
 ```csharp
@@ -41,31 +41,31 @@ ParameterExpression numParam =  Expression.Parameter(typeof(int));
 */
 ```
 
-## <a name="constantexpression"></a>ConstantExpression  
+## <a name="constantexpression"></a>ConstantExpression
 
-整数値、文字列、および `null` を表す <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> オブジェクトの場合、定数の値が表示されます。  
-  
-C# リテラルとしての標準のサフィックスを持つ数値型の場合、サフィックスが値に追加されます。 さまざまな数値型に関連するサフィックスを次の表に示します。  
+整数値、文字列、および `null` を表す <xref:System.Linq.Expressions.ConstantExpression?displayProperty=nameWithType> オブジェクトの場合、定数の値が表示されます。
 
-| 型 | キーワード | サフィックス |  
-|--|--|--|  
-| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/keywords/uint.md) | U |  
-| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/keywords/long.md) | L |  
-| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/keywords/ulong.md) | UL |  
-| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/keywords/double.md) | D |  
-| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/keywords/float.md) | F |  
-| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/keywords/decimal.md) | M |  
-  
-### <a name="examples"></a>使用例  
+C# リテラルとしての標準のサフィックスを持つ数値型の場合、サフィックスが値に追加されます。 さまざまな数値型に関連するサフィックスを次の表に示します。
+
+| 型 | キーワード | サフィックス |
+|--|--|--|
+| <xref:System.UInt32?displayProperty=nameWithType> | [uint](../../../language-reference/keywords/uint.md) | U |
+| <xref:System.Int64?displayProperty=nameWithType> | [long](../../../language-reference/keywords/long.md) | L |
+| <xref:System.UInt64?displayProperty=nameWithType> | [ulong](../../../language-reference/keywords/ulong.md) | UL |
+| <xref:System.Double?displayProperty=nameWithType> | [double](../../../language-reference/keywords/double.md) | D |
+| <xref:System.Single?displayProperty=nameWithType> | [float](../../../language-reference/keywords/float.md) | F |
+| <xref:System.Decimal?displayProperty=nameWithType> | [decimal](../../../language-reference/keywords/decimal.md) | M |
+
+### <a name="examples"></a>使用例
 
 ```csharp
-int num = 10; 
+int num = 10;
 ConstantExpression expr = Expression.Constant(num);
 /*
     10
 */
 
-double num = 10; 
+double num = 10;
 ConstantExpression expr = Expression.Constant(num);
 /*
     10D
@@ -73,10 +73,10 @@ ConstantExpression expr = Expression.Constant(num);
 ```
 
 ## <a name="blockexpression"></a>BlockExpression
- 
-<xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> オブジェクトの型がブロック内の最後の式の型と異なる場合、その型が山かっこ (`<` と `>`) 内に表示されます。 それ以外の場合、<xref:System.Linq.Expressions.BlockExpression> オブジェクトの型は表示されません。  
-  
-### <a name="examples"></a>使用例  
+
+<xref:System.Linq.Expressions.BlockExpression?displayProperty=nameWithType> オブジェクトの型がブロック内の最後の式の型と異なる場合、その型が山かっこ (`<` と `>`) 内に表示されます。 それ以外の場合、<xref:System.Linq.Expressions.BlockExpression> オブジェクトの型は表示されません。
+
+### <a name="examples"></a>使用例
 
 ```csharp
 BlockExpression block = Expression.Block(Expression.Constant("test"));
@@ -97,9 +97,9 @@ BlockExpression block =  Expression.Block(typeof(Object), Expression.Constant("t
 ## <a name="lambdaexpression"></a>LambdaExpression
 
 <xref:System.Linq.Expressions.LambdaExpression?displayProperty=nameWithType> オブジェクトは、デリゲート型と共に表示されます。
-  
+
 ラムダ式に名前がない場合、`#Lambda1` や `#Lambda2` など、自動的に生成された名前が割り当てられます。
-  
+
 ### <a name="examples"></a>使用例
 
 ```csharp
@@ -117,15 +117,15 @@ LambdaExpression lambda =  Expression.Lambda<Func<int>>(Expression.Constant(1), 
     }
 */
 ```
-  
+
 ## <a name="labelexpression"></a>LabelExpression
 
 <xref:System.Linq.Expressions.LabelExpression?displayProperty=nameWithType> オブジェクトの既定値を指定した場合、その値が <xref:System.Linq.Expressions.LabelTarget?displayProperty=nameWithType> オブジェクトの前に表示されます。
-  
+
 `.Label` トークンは、ラベルの開始を示します。 `.LabelTarget` トークンは、ジャンプ先のターゲットを示します。
-  
+
 ラベルに名前がない場合、`#Label1` や `#Label2` など、自動的に生成された名前が割り当てられます。
-  
+
 ### <a name="examples"></a>使用例
 
 ```csharp
@@ -156,12 +156,12 @@ BlockExpression block = Expression.Block(
     }
 */
 ```
-  
-## <a name="checked-operators"></a>checked 演算子  
 
-checked 演算子は、演算子の前に `#` 記号が付く形式で表示されます。 たとえば、checked 加算演算子は `#+` と表示されます。  
-  
-### <a name="examples"></a>使用例  
+## <a name="checked-operators"></a>checked 演算子
+
+checked 演算子は、演算子の前に `#` 記号が付く形式で表示されます。 たとえば、checked 加算演算子は `#+` と表示されます。
+
+### <a name="examples"></a>使用例
 
 ```csharp
 Expression expr = Expression.AddChecked( Expression.Constant(1), Expression.Constant(2));

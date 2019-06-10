@@ -2,12 +2,12 @@
 title: サンプル XML ファイル:名前空間内の数値データ 3
 ms.date: 07/20/2015
 ms.assetid: 51750cab-3c66-4511-90fb-b9d211308d31
-ms.openlocfilehash: d00ad41c6703945b80dd49ff5f375a3896b43bed
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 02788b73a7af9922b5a50237f2d2e401cba8abe2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702133"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483706"
 ---
 # <a name="sample-xml-file-numerical-data-in-a-namespace"></a>サンプル XML ファイル:名前空間内の数値データ
 次の XML ファイルは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] ドキュメントのさまざまな例で使用されます。 このファイルには、集計、平均、およびグループ化用の数値データが含まれています。 XML は名前空間に含まれています。  
@@ -54,7 +54,3 @@ ms.locfileid: "54702133"
   </Data>  
 </Root>  
 ```  
-  
-## <a name="see-also"></a>関連項目
-
-- [サンプル XML ドキュメント (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-documents-linq-to-xml.md)

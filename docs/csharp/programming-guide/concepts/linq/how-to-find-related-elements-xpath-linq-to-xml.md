@@ -2,12 +2,12 @@
 title: '方法: 関連要素を検索する (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 41b386ee-562d-4841-bd6b-e44a7eb69f26
-ms.openlocfilehash: 0463be7cabca088a1a5a200b9e8648914f16e7f5
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: a4260012899527662638a037fa4616a7a0d6f875
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57843340"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486746"
 ---
 # <a name="how-to-find-related-elements-xpath-linq-to-xml-c"></a>方法: 関連要素を検索する (XPath-LINQ to XML) (C#)
 このトピックでは、別の要素の値によって参照される属性に基づいて要素を取得する方法について説明します。  
@@ -83,7 +83,4 @@ Results are identical
   </FullAddress>  
 </Customer>  
 ```  
-  
-## <a name="see-also"></a>関連項目
-
-- [XPath ユーザー向けの LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)
+ 

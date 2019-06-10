@@ -2,12 +2,12 @@
 title: '方法: XPath を使用して LINQ to XML にクエリを実行する (C#)'
 ms.date: 07/20/2015
 ms.assetid: ee5af263-4ab1-45e5-b792-33a3221b426d
-ms.openlocfilehash: a3e9cb29b9ba027cfc70eeb0cd163b24834dff83
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 639d9ba8af9ae663bc245028cf4bf57f318d397d
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54564108"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485180"
 ---
 # <a name="how-to-query-linq-to-xml-using-xpath-c"></a>方法: XPath を使用して LINQ to XML にクエリを実行する (C#)
 このトピックでは、XPath を使用して XML ツリーに対してクエリを実行できる拡張メソッドについて説明します。 これらの拡張メソッドの使用に関する詳細については、<xref:System.Xml.XPath.Extensions?displayProperty=nameWithType> を参照してください。  
@@ -39,6 +39,3 @@ foreach (XElement el in list)
 <Child2>6</Child2>  
 ```  
   
-## <a name="see-also"></a>関連項目
-
-- [高度なクエリ手法 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

@@ -2,12 +2,12 @@
 title: '方法: 属性をフィルター処理する (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 208d6256-1bd7-4237-b2c9-909f26dfd0e2
-ms.openlocfilehash: 3b9f3d18bbfe773d782239d67e8f43bdf4ac52d6
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 927dd781a16aa745b88de3c446682590bd601597
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603795"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485751"
 ---
 # <a name="how-to-filter-on-an-attribute-xpath-linq-to-xml-c"></a>方法: 属性をフィルター処理する (XPath-LINQ to XML) (C#)
 このトピックでは、指定した名前を持ち、かつ指定した値の属性を持つ子孫要素を取得する方法について説明します。  
@@ -19,7 +19,7 @@ ms.locfileid: "54603795"
 ## <a name="example"></a>例  
  この例では、`Address` という名前を持ち、かつ "Shipping" という値の `Type` 属性を持つ子孫要素をすべて検索します。  
   
- この例では、XML ドキュメント、[サンプル XML ファイル: 複数の購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md) を使用します。  
+ この例では、XML ドキュメント、「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 XDocument po = XDocument.Load("PurchaseOrders.xml");  
@@ -71,7 +71,3 @@ Results are identical
   <Country>USA</Country>  
 </Address>  
 ```  
-  
-## <a name="see-also"></a>関連項目
-
-- [XPath ユーザー向けの LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

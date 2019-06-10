@@ -2,12 +2,12 @@
 title: XName オブジェクトの事前アトミック化 (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: e84fbbe7-f072-4771-bfbb-059d18e1ad15
-ms.openlocfilehash: 0ea45dbf0492491efac3560b7f1f04d36a787193
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: f67a4da56a2bbcde538f0559ec6ee70a0037de2f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54660542"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484063"
 ---
 # <a name="pre-atomization-of-xname-objects-linq-to-xml-c"></a>XName オブジェクトの事前アトミック化 (LINQ to XML) (C#)
 LINQ to XML でパフォーマンスを向上させる方法の 1 つは、<xref:System.Xml.Linq.XName> オブジェクトの事前アトミック化です。 事前アトミック化とは、<xref:System.Xml.Linq.XName> クラスと <xref:System.Xml.Linq.XElement> クラスのコンストラクターを使用して XML ツリーを作成する前に、文字列を <xref:System.Xml.Linq.XAttribute> オブジェクトに割り当てる操作です。 次に、(文字列から <xref:System.Xml.Linq.XName> への暗黙的な変換を使用する) コンストラクターに文字列を渡す代わりに、初期化された <xref:System.Xml.Linq.XName> オブジェクトを渡します。  
@@ -119,5 +119,4 @@ Console.WriteLine("Time to construct:{0}", t2 - t1);
   
 ## <a name="see-also"></a>関連項目
 
-- [パフォーマンス (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/performance-linq-to-xml.md)
 - [アトミック化された XName および XNamespace オブジェクト (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/atomized-xname-and-xnamespace-objects-linq-to-xml.md)

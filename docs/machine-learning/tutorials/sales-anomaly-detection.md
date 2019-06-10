@@ -4,12 +4,12 @@ description: 製品売上の異常検出シナリオに ML.NET を使用して�
 ms.date: 05/29/2019
 ms.topic: tutorial
 ms.custom: mvc
-ms.openlocfilehash: d31765aa4ff2a0be9c4f140f33de1f5678fc7612
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423948"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758803"
 ---
 # <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>チュートリアル: 製品売上の異常検出に ML.NET を使用する 
 
@@ -373,4 +373,4 @@ Alert   Score   P-Value Martingale value
 
 Machine Learning サンプルの GitHub リポジトリを確認し、Power Consumption Anomaly Detection サンプルを調べてください。
 > [!div class="nextstepaction"]
-> [dotnet/machinelearning-samples GitHub リポジトリ](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/TimeSeries_PowerAnomalyDetection)
+> [dotnet/machinelearning-samples GitHub リポジトリ](https://github.com/dotnet/machinelearning-samples/tree/master/samples/csharp/getting-started/AnomalyDetection_PowerMeterReadings)

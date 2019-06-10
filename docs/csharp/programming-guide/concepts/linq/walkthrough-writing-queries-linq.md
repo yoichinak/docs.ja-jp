@@ -7,12 +7,12 @@ helpviewer_keywords:
 - queries [LINQ in C#], writing
 - writing LINQ queries
 ms.assetid: 2962a610-419a-4276-9ec8-4b7f2af0c081
-ms.openlocfilehash: 345acd17a6357f71f5c047475a4494a1fa793a58
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 083c1e4b6ab8c25956ffcf2288ac32d940f23bc2
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595787"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483224"
 ---
 # <a name="walkthrough-writing-queries-in-c-linq"></a>チュートリアル: C# でのクエリの作成 (LINQ)
 このチュートリアルでは、LINQ クエリ式の記述に使用される C# 言語機能について説明します。  
@@ -26,13 +26,13 @@ ms.locfileid: "64595787"
   
 1. Visual Studio を起動します。  
   
-2. メニュー バーで、 **[ファイル]**、 **[新規作成]**、 **[プロジェクト]** の順にクリックします。  
+2. メニュー バーで、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。  
   
      **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3. **[インストール済み]**、**[テンプレート]**、**[Visual C#]** の順に展開し、**[コンソール アプリケーション]** を選択します。  
+3. **[インストール済み]** 、 **[テンプレート]** 、 **[Visual C#]** の順に展開し、 **[コンソール アプリケーション]** を選択します。  
   
-4. **[名前]** テキスト ボックスで、別の名前を入力するか、既定の名前をそのまま使用し、**[OK]** ボタンを選択します。  
+4. **[名前]** テキスト ボックスで、別の名前を入力するか、既定の名前をそのまま使用し、 **[OK]** ボタンを選択します。  
   
      **ソリューション エクスプローラー**に新しいプロジェクトが表示されます。  
   
@@ -79,7 +79,7 @@ ms.locfileid: "64595787"
   
     - この変数の型は `Student` で、クエリ変数の型は互換性があります (`IEnumerable<Student>`)。  
   
-2. このコードを追加したら、アプリケーションをビルドして実行し、**[コンソール]** ウィンドウで結果を表示します。  
+2. このコードを追加したら、アプリケーションをビルドして実行し、 **[コンソール]** ウィンドウで結果を表示します。  
   
  [!code-csharp[CsLINQGettingStarted#13](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#13)]  
   
@@ -127,7 +127,7 @@ ms.locfileid: "64595787"
   
      [!code-csharp[CsLINQGettingStarted#15](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsLINQGettingStarted/CS/Class1.cs#15)]  
   
-3. アプリケーションを実行し、**[コンソール]** ウィンドウで結果を表示します。  
+3. アプリケーションを実行し、 **[コンソール]** ウィンドウで結果を表示します。  
   
      詳しくは、「[group 句](../../../../csharp/language-reference/keywords/group-clause.md)」をご覧ください。  
   
@@ -178,12 +178,11 @@ ms.locfileid: "64595787"
   
  [LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)  
   
- [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml.md)  
+ [LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)  
   
  [LINQ to Objects (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-objects.md)  
   
 ## <a name="see-also"></a>関連項目
 
 - [統合言語クエリ (LINQ) (C#)](../../../../csharp/programming-guide/concepts/linq/index.md)
-- [C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [LINQ クエリ式](../../../../csharp/programming-guide/linq-query-expressions/index.md)

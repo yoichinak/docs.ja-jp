@@ -2,12 +2,12 @@
 title: XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
 ms.date: 07/20/2015
 ms.assetid: 0d253586-2b97-459f-b1a7-f30f38f3ed9f
-ms.openlocfilehash: cf8e1f1aab576fa7cccab83fb2194ae2a4e33288
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c179f2e57abf0e2028ec58428e75c8df786b4214
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595269"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483276"
 ---
 # <a name="valid-content-of-xelement-and-xdocument-objects"></a>XElement オブジェクトと XDocument オブジェクトの有効なコンテンツ
 ここでは、コンストラクターやメソッドに渡すことができる有効な引数について説明します。これらのコンストラクターやメソッドは、コンテンツを要素やドキュメントに追加するためのものです。  
@@ -90,4 +90,4 @@ ms.locfileid: "64595269"
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)
+- [XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

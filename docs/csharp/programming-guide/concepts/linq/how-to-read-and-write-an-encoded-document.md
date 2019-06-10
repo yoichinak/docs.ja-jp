@@ -2,12 +2,12 @@
 title: '方法: エンコードされたドキュメントを読み書きする (C#)'
 ms.date: 07/20/2015
 ms.assetid: 84f64e71-39a6-42c6-ad68-f052bb158a03
-ms.openlocfilehash: fdf3e05c705ca9caea32306616c79ade0aeb9be3
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6340443fddbedb4e27e1d1f8ab3e7c006a039f25
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54615456"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485143"
 ---
 # <a name="how-to-read-and-write-an-encoded-document-c"></a>方法: エンコードされたドキュメントを読み書きする (C#)
 エンコードされた XML ドキュメントを作成するには、<xref:System.Xml.Linq.XDeclaration> を XML ツリーに追加し、エンコーディングを目的のコード ページ名に設定します。  
@@ -79,4 +79,3 @@ Encoding of loaded document is:utf-16
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Xml.Linq.XDeclaration.Encoding%2A?displayProperty=nameWithType>
-- [高度な LINQ to XML プログラミング (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-linq-to-xml-programming.md)

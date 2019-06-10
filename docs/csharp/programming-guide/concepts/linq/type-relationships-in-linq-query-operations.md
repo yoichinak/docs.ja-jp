@@ -12,12 +12,12 @@ helpviewer_keywords:
 - data transformations [LINQ in C#]
 - LINQ [C#], type relationships
 ms.assetid: 99118938-d47c-4d7e-bb22-2657a9f95268
-ms.openlocfilehash: 3b8ae80ff17ea2cf12c3d78c092dd3233ac0751d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b58219a8a4d45ce01f80fd367ed56b13a773e4bc
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64755961"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483399"
 ---
 # <a name="type-relationships-in-linq-query-operations-c"></a>LINQ クエリ操作での型の関係 (C#)
 クエリを効果的に記述するには、クエリ操作全体における変数の型の相互関係を理解する必要があります。 これらの関係を理解しておくと、このドキュメント内の [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] のサンプルやコード例を理解しやすくなります。 また、`var` を使用して変数を暗黙的に型指定した場合に、背後でどのような処理が行われるかを理解することもできます。  
@@ -64,7 +64,3 @@ ms.locfileid: "64755961"
  ![暗黙的な入力による型フローを示す図。](./media/type-relationships-in-linq-query-operations/linq-type-flow-implicit-typing.png)  
   
  `var` の詳細については、「[暗黙的に型指定されたローカル変数](../../../../csharp/programming-guide/classes-and-structs/implicitly-typed-local-variables.md)」を参照してください。  
-  
-## <a name="see-also"></a>関連項目
-
-- [C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)

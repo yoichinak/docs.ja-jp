@@ -2,12 +2,12 @@
 title: '方法: LINQ to XML 軸メソッドを記述する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 50aef06b-1d22-4718-a18a-21237e26d7c1
-ms.openlocfilehash: 7e00ba6ba2880ab4f26f59a0b8543ac9f58dfbb0
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6e777e615d21dd43317f0813461a3f1d8a506c90
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54529750"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484663"
 ---
 # <a name="how-to-write-a-linq-to-xml-axis-method-c"></a>方法: LINQ to XML 軸メソッドを記述する (C#)
 XML ツリーからコレクションを取得する独自の軸メソッドを記述できます。 これを行うための最適な方法の 1 つは、要素または属性のコレクションを返す拡張メソッドを記述することです。 アプリケーションの要件に基づいて、要素または属性の特定のサブセットを返す拡張メソッドを記述できます。  
@@ -15,7 +15,7 @@ XML ツリーからコレクションを取得する独自の軸メソッドを�
 ## <a name="example"></a>例  
  次の例では、2 つの拡張メソッドを使用します。 最初の拡張メソッドである `GetXPath` は、<xref:System.Xml.Linq.XObject> を処理して、評価時にノードまたは属性を返す XPath 式を返します。 2 番目の拡張メソッドである `Find` は、<xref:System.Xml.Linq.XElement> を処理して、 指定されたテキストを含む <xref:System.Xml.Linq.XAttribute> オブジェクトと <xref:System.Xml.Linq.XElement> オブジェクトのコレクションを返します。  
   
- この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル: 複数の購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
+ この例では、次の XML ドキュメントを使用します: 「[サンプル XML ファイル:複数の購買発注書 (LINQ to XML)](../../../../csharp/programming-guide/concepts/linq/sample-xml-file-multiple-purchase-orders-linq-to-xml.md)。  
   
 ```csharp  
 public static class MyExtensions  
@@ -291,6 +291,3 @@ class Program
 1999-10-22  
 ```  
   
-## <a name="see-also"></a>関連項目
-
-- [高度なクエリ手法 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/advanced-query-techniques-linq-to-xml.md)

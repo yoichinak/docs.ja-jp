@@ -2,12 +2,12 @@
 title: '方法: 直前の兄弟を検索する (XPath-LINQ to XML) (C#)'
 ms.date: 07/20/2015
 ms.assetid: 74c06201-0b1b-4b5e-b3ac-0092980614e6
-ms.openlocfilehash: 00b74edd67df65522f9f95e7f48c66a9e17a937c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 7d1d49f262b13f769ab1d28de8b75d214d8abe64
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54708481"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486714"
 ---
 # <a name="how-to-find-the-immediate-preceding-sibling-xpath-linq-to-xml-c"></a>方法: 直前の兄弟を検索する (XPath-LINQ to XML) (C#)
 ノードの直前の兄弟を検索することが必要になる場合があります。 [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] とは対照的に、XPath では先行する兄弟軸の位置述語にはセマンティクス上の違いがあります。この  と XPath の相違点は、注目すべき特徴といえます。  
@@ -51,7 +51,3 @@ Console.WriteLine(el1);
 Results are identical  
 <Child3 />  
 ```  
-  
-## <a name="see-also"></a>関連項目
-
-- [XPath ユーザー向けの LINQ to XML (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-for-xpath-users.md)

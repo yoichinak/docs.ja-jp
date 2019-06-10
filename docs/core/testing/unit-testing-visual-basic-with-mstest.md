@@ -7,12 +7,12 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: b6036b10e87560a45880f41f30fabc7a348241d0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: a717e8b3da4743da96c3f6e52488fa1e8395e35d
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56747480"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66689267"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet テストと MStest を使用した .NET Core ライブラリでの単体テスト Visual Basic
 
@@ -108,7 +108,7 @@ Namespace PrimeService.Tests
         Sub ReturnFalseGivenValueOf1()
             Dim result As Boolean = _primeService.IsPrime(1)
 
-            Assert.False(result, "1 should not be prime")
+            Assert.IsFalse(result, "1 should not be prime")
         End Sub
 
     End Class

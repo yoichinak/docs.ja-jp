@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 3ac3479de0bd3c95256741a8b3075f2e5786b65c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d94552d9a1acfdd63b9694810e724c4347e615e7
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300100"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758281"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>ブール論理演算子 (C# リファレンス)
 
@@ -53,7 +53,7 @@ ms.locfileid: "66300100"
 
 `!` 演算子は、そのオペランドの論理否定を計算します。 つまり、オペランドが `false` と評価された場合は `true`、オペランドが `true` と評価された場合は `false` が生成されます。
 
-[!code-csharp-interactive[logical negation](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Negation)]
+[!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
 ## <a name="logical-and-operator-amp"></a>論理 AND 演算子 &amp;
 
@@ -63,7 +63,7 @@ ms.locfileid: "66300100"
 
 次の例では、`&` 演算子の 2 番目のオペランドはメソッド呼び出しで、最初のオペランドの値に関係なく実行されます。
 
-[!code-csharp-interactive[logical AND](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#And)]
+[!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
 
 [条件付き論理 AND 演算子](#conditional-logical-and-operator-) `&&` もそのオペランドの論理 AND を計算しますが、最初のオペランドが `false` と評価された場合、2 番目のオペランドは評価されません。
 
@@ -73,7 +73,7 @@ ms.locfileid: "66300100"
 
 `^` 演算子は、そのオペランドの論理排他的 OR (論理 XOR とも呼ばれます) を計算します。 `x` が `true` に評価され、`y` が `false` に評価された場合、または `x` が `false` に評価され、`y` が `true` に評価された場合、`x ^ y` の結果は `true` です。 それ以外の場合、結果は `false` です。 つまり、`bool` オペランドの場合、`^` 演算子は[非等値演算子](equality-operators.md#inequality-operator-) `!=` と同じ結果を計算します。
 
-[!code-csharp-interactive[logical exclusive OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Xor)]
+[!code-csharp-interactive[logical exclusive OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Xor)]
 
 整数型のオペランドの場合、`^` 演算子は、そのオペランドの[ビットごとの論理排他的 OR](bitwise-and-shift-operators.md#logical-exclusive-or-operator-) を計算します。
 
@@ -85,7 +85,7 @@ ms.locfileid: "66300100"
 
 次の例では、`|` 演算子の 2 番目のオペランドはメソッド呼び出しで、最初のオペランドの値に関係なく実行されます。
 
-[!code-csharp-interactive[logical OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Or)]
+[!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
 
 [条件付き論理 OR 演算子](#conditional-logical-or-operator-) `||` もそのオペランドの論理 OR を計算しますが、最初のオペランドが `true` と評価された場合、2 番目のオペランドは評価されません。
 
@@ -97,7 +97,7 @@ ms.locfileid: "66300100"
 
 次の例では、最初のオペランドが `false` と評価されると、`&&` 演算子の 2 番目のオペランドはメソッド呼び出しで実行されません。
 
-[!code-csharp-interactive[conditional logical AND](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#ConditionalAnd)]
+[!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
 
 [論理 AND 演算子](#logical-and-operator-) `&` もそのオペランドの論理 AND を計算しますが、常に両方のオペランドを評価します。
 
@@ -107,7 +107,7 @@ ms.locfileid: "66300100"
 
 次の例では、最初のオペランドが `true` と評価されると、`||` 演算子の 2 番目のオペランドはメソッド呼び出しで実行されません。
 
-[!code-csharp-interactive[conditional logical OR](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#ConditionalOr)]
+[!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
 
 [論理 OR 演算子](#logical-or-operator-) `|` もそのオペランドの論理 OR を計算しますが、常に両方のオペランドを評価します。
 
@@ -131,7 +131,7 @@ ms.locfileid: "66300100"
 
 次の例に示すように、`!` 演算子と `^` 演算子を `bool?` オペランドと共に使用することもできます。
 
-[!code-csharp-interactive[lifted negation and xor](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#WithNullableBoolean)]
+[!code-csharp-interactive[lifted negation and xor](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#WithNullableBoolean)]
 
 条件付き論理演算子 `&&` と `||` は `bool?` オペランドをサポートしません。
 
@@ -153,7 +153,7 @@ x = x op y
 
 次の例に示すように、`&`、`|`、および `^` 演算子は複合代入をサポートします。
 
-[!code-csharp-interactive[compound assignment](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#CompoundAssignment)]
+[!code-csharp-interactive[compound assignment](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#CompoundAssignment)]
 
 条件付き論理演算子 `&&` と `||` は複合代入をサポートしません。
 
@@ -170,7 +170,7 @@ x = x op y
 
 演算子の優先順位によって定められた評価の順序を変更するには、かっこ `()` を使用します。
 
-[!code-csharp-interactive[operator precedence](~/samples/snippets/csharp/language-reference/operators/LogicalOperators.cs#Precedence)]
+[!code-csharp-interactive[operator precedence](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Precedence)]
 
 優先度順に並べられた C# 演算子の完全な一覧については、「[C# 演算子](index.md)」を参照してください。
 

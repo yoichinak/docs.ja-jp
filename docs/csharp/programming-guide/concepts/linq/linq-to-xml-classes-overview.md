@@ -2,12 +2,12 @@
 title: LINQ to XML クラスの概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: bf666100-5392-4968-97f4-f6b9d3287d7b
-ms.openlocfilehash: f93e3a791bfd56095df12ebf070f72540a8b21dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6e7e25a0faa659dc362cf1184951c9e5fa49ca18
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597056"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484450"
 ---
 # <a name="linq-to-xml-classes-overview-c"></a>LINQ to XML クラスの概要 (C#)
 このトピックでは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] 名前空間内の <xref:System.Xml.Linq> クラスの一覧を示し、各クラスについて簡単に説明します。  
@@ -88,4 +88,4 @@ ms.locfileid: "64597056"
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

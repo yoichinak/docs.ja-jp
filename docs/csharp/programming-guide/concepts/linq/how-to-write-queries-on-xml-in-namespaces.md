@@ -2,12 +2,12 @@
 title: '方法: 名前空間内の XML に対するクエリを記述する (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7c54df81-15e4-4091-8c81-a87637029130
-ms.openlocfilehash: e6b966e90d1f7fc86efaa422ecd8afb030d97163
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: d33ecc22d8eb6ea4a08b56fbed6b6b437a5e3216
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54722099"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484635"
 ---
 # <a name="how-to-write-queries-on-xml-in-namespaces-c"></a>方法: 名前空間内の XML に対するクエリを記述する (C#)
 名前空間内の XML に対するクエリを記述するには、正しい名前空間を持つ <xref:System.Xml.Linq.XName> オブジェクトを使用する必要があります。  
@@ -78,4 +78,4 @@ foreach (XElement el in c1)
   
 ## <a name="see-also"></a>関連項目
 
-- [XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)
+- [XML 名前空間の使用 (C#)](../../../../csharp/programming-guide/concepts/linq/namespaces-overview-linq-to-xml.md)

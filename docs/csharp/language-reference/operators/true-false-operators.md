@@ -6,12 +6,12 @@ helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: 003ca79343de14aa3a3b1d95d84d0637c873652c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: b1acf9a16dd977ec49a7f1dc3bea4ee41792e9be
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66302063"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758131"
 ---
 # <a name="true-and-false-operators-c-reference"></a>true および false 演算子 (C# リファレンス)
 
@@ -26,7 +26,7 @@ ms.locfileid: "66302063"
 
 次の例では、`true` と `false` 演算子の両方を定義する型を示します。 さらに、論理 AND 演算子 `&` をオーバーロードして、演算子 `&&` もその型のオペランドで評価できるようにします。
 
-[!code-csharp-interactive[true and false operators example](~/samples/snippets/csharp/keywords/TrueFalseOperatorsExample.cs)]
+[!code-csharp[true and false operators example](~/samples/csharp/language-reference/operators/TrueFalseOperators.cs)]
 
 `&&` 演算子のショートサーキット動作に注意してください。 `GetFuelLaunchStatus` メソッドから `LaunchStatus.Red` が返されると、`&&` 演算子の 2 番目のオペランドは評価されません。 これは、`LaunchStatus.Red` が確実に false であるためです。 したがって、論理 AND の結果は 2 番目のオペランドの値に依存しません。 この例の出力は次のとおりです。
 

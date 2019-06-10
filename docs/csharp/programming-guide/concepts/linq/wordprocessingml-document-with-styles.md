@@ -2,12 +2,12 @@
 title: スタイルを含む WordprocessingML ドキュメント3
 ms.date: 07/20/2015
 ms.assetid: 40e35de6-ac93-4bba-88ab-a018cbe93873
-ms.openlocfilehash: 1dc7f30bfdef66c31b5c262fd6d1a2c3f4365634
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4f465294ad299e83156ca458f28717c3abae741f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54603925"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483142"
 ---
 # <a name="wordprocessingml-document-with-styles"></a>スタイルを含む WordprocessingML ドキュメント
 複雑な WordprocessingML ドキュメントには、スタイルを使用して書式設定された段落が含まれています。  
@@ -136,7 +136,4 @@ ms.locfileid: "54603925"
   </w:body>  
 </w:document>  
 ```  
-  
-## <a name="see-also"></a>関連項目
-
-- [Office Open XML WordprocessingML ドキュメントの詳細 (C#)](../../../../csharp/programming-guide/concepts/linq/details-of-office-open-xml-wordprocessingml-documents.md)
+ 

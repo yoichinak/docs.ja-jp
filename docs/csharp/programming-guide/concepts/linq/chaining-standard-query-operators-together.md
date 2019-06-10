@@ -2,15 +2,15 @@
 title: 標準クエリ演算子の連結 (C#)
 ms.date: 07/20/2015
 ms.assetid: 66f2b0a9-2c23-4735-988e-bbc9dfb55c7b
-ms.openlocfilehash: 71b364d76860b5daa21ea176947d9cfe9d49b308
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: e09b918ab6c33c8e3ccae6f99826dd86f4a2d1e6
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54582884"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487615"
 ---
 # <a name="chaining-standard-query-operators-together-c"></a>標準クエリ演算子の連結 (C#)
-これは、「[チュートリアル:クエリの連結 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)」の最後のトピックです。  
+これは、「[チュートリアル:クエリの連結 (C#)](../../../../csharp/programming-guide/concepts/linq/deferred-execution-and-lazy-evaluation-in-linq-to-xml.md)」の最後のトピックです。  
   
  標準クエリ演算子も連結することができます。 たとえば、<xref:System.Linq.Enumerable.Where%2A?displayProperty=nameWithType> 演算子を挿入することができます。また、この演算子はレイジー方式でも機能します。 この演算子によって中間結果が具体化されることはありません。  
   
@@ -86,6 +86,3 @@ AppendString: source >GHI<
 Main: str >GHI!!!<  
 ```  
   
-## <a name="see-also"></a>関連項目
-
-- [チュートリアル: クエリの連結 (C#)](../../../../csharp/programming-guide/concepts/linq/tutorial-chaining-queries-together.md)

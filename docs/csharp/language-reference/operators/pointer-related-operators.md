@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 012e4fe9b8ee49f3b6b7240ac4ccb21dba70a8a9
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65882780"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758103"
 ---
 # <a name="pointer-related-operators-c-reference"></a>ポインターに関連する演算子 (C# リファレンス)
 
@@ -46,11 +46,11 @@ ms.locfileid: "65882780"
 
 単項の `&` 演算子からは、そのオペランドのアドレスが返されます。
 
-[!code-csharp[address of local](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
+[!code-csharp[address of local](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOf)]
 
 `&` 演算子のオペランドは、固定変数である必要があります。 "*固定*" 変数とは、[ガベージ コレクター](../../../standard/garbage-collection/index.md)の操作によって影響を受けない記憶域の場所に存在する変数です。 前の例では、ローカル変数 `number` はスタックに存在するので固定変数です。 ガベージ コレクターによって影響を受ける可能性がある (たとえば再配置) 記憶域の場所にある変数は、"*移動可能*" 変数と呼ばれます。 オブジェクト フィールドや配列の要素は、移動可能変数の例です。 [fixed](../keywords/fixed-statement.md) ステートメントで移動可能変数を "固定" または "ピン留め" した場合は、移動可能変数のアドレスを取得できます。 取得したアドレスは、`fixed` ステートメント ブロックの期間だけ有効です。 `fixed` ステートメントと `&` 演算子を使う方法の例を次に示します。
 
-[!code-csharp[address of fixed](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
+[!code-csharp[address of fixed](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddressOfFixed)]
 
 定数または値のアドレスを取得できません。
 
@@ -62,7 +62,7 @@ ms.locfileid: "65882780"
 
 単項ポインター間接参照演算子 `*` では、オペランドが指し示す変数が取得されます。 逆参照演算子とも呼ばれます。 `*` 演算子のオペランドは、ポインター型である必要があります。
 
-[!code-csharp[pointer indirection](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#PointerIndirection)]
+[!code-csharp[pointer indirection](~/samples/csharp/language-reference/operators/PointerOperators.cs#PointerIndirection)]
 
 `void*` 型の式に `*` 演算子を適用することはできません。
 
@@ -84,7 +84,7 @@ x->y
 
 `->` 演算子の使用例を次に示します。
 
-[!code-csharp[pointer member access](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#MemberAccess)]
+[!code-csharp[pointer member access](~/samples/csharp/language-reference/operators/PointerOperators.cs#MemberAccess)]
 
 `void*` 型の式に `->` 演算子を適用することはできません。
 
@@ -94,7 +94,7 @@ x->y
 
 次の例では、ポインターと `[]` 演算子による配列要素へのアクセス方法を示します。
 
-[!code-csharp[pointer element access](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
+[!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
 この例では、[`stackalloc` 演算子](../keywords/stackalloc.md)を使って、スタックにメモリ ブロックを割り当てています。
 
@@ -128,7 +128,7 @@ x->y
 
 次の例では、ポインターでの `+` 演算子の使用方法を示します。
 
-[!code-csharp[pointer addition](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#AddNumber)]
+[!code-csharp[pointer addition](~/samples/csharp/language-reference/operators/PointerOperators.cs#AddNumber)]
 
 ### <a name="pointer-subtraction"></a>ポインターの減算
 
@@ -136,7 +136,7 @@ x->y
 
 ポインターの減算の例を次に示します。
 
-[!code-csharp[pointer subtraction](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#SubtractPointers)]
+[!code-csharp[pointer subtraction](~/samples/csharp/language-reference/operators/PointerOperators.cs#SubtractPointers)]
 
 ### <a name="pointer-increment-and-decrement"></a>ポインターのインクリメントとデクリメント
 
@@ -146,7 +146,7 @@ x->y
 
 次の例では、後置と前置両方のインクリメント演算子の動作を示します。
 
-[!code-csharp[pointer increment](~/samples/snippets/csharp/language-reference/operators/PointerOperators.cs#Increment)]
+[!code-csharp[pointer increment](~/samples/csharp/language-reference/operators/PointerOperators.cs#Increment)]
 
 ## <a name="pointer-comparison-operators"></a>ポインター比較演算子
 

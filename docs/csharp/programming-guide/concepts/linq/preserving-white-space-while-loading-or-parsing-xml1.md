@@ -2,12 +2,12 @@
 title: XML の読み込み時または解析時の空白の維持1
 ms.date: 07/20/2015
 ms.assetid: f3ff58c4-55aa-4fcd-b933-e3a2ee6e706c
-ms.openlocfilehash: 68b52f1d69c57b4292f02fea932e392de4a3ffc8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 802cd9089d0ab52e9c05546ddad04af8100e82a0
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64596799"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484086"
 ---
 # <a name="preserving-white-space-while-loading-or-parsing-xml"></a>XML の読み込み時または解析時の空白の維持
 このトピックでは、空白に対する [!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の動作を制御する方法について説明します。  
@@ -37,6 +37,3 @@ ms.locfileid: "64596799"
   
  <xref:System.Xml.XmlWriter> を使用して、XML ツリーを作成することができます。 <xref:System.Xml.XmlWriter> に書き込まれたノードが、ツリーに挿入されます。 ただし、このメソッドを使用して XML ツリーを構築すると、ノードが空白かどうかにかかわらず、また空白に意味があるかどうかにかかわらず、すべてのノードが維持されます。  
   
-## <a name="see-also"></a>関連項目
-
-- [XML の解析 (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)

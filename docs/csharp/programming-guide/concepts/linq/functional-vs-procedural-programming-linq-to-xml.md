@@ -2,12 +2,12 @@
 title: 関数型プログラミングと手続き型プログラミング (LINQ to XML) (C#)
 ms.date: 07/20/2015
 ms.assetid: fc64e39c-a487-4882-9169-da4de97917d9
-ms.openlocfilehash: 4c538011ce38708978f8b0f4866af3b3b4195a19
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1f713e54cefed5b1fcf8c29cd88aa7587a737327
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64597144"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66486950"
 ---
 # <a name="functional-vs-procedural-programming-linq-to-xml-c"></a>関数型プログラミングと手続き型プログラミング (LINQ to XML) (C#)
 XML アプリケーションには、次のようにさまざまな種類があります。  
@@ -38,8 +38,8 @@ XML アプリケーションには、次のようにさまざまな種類があ�
   
  2 つの方法の違いについては、「[メモリ内の XML ツリーの変更と関数型構築の比較 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)」をご覧ください。  
   
- 関数型変換の記述に関するチュートリアルについては、「[XML の純粋関数型変換 (C#)](../../../../csharp/programming-guide/concepts/linq/pure-functional-transformations-of-xml.md)」をご覧ください。  
+ 関数型変換の記述に関するチュートリアルについては、「[XML の純粋関数型変換 (C#)](../../../../csharp/programming-guide/concepts/linq/introduction-to-pure-functional-transformations.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)

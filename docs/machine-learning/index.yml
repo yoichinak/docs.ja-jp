@@ -27,7 +27,7 @@ sections:
           - html: <a href="/dotnet/machine-learning/tutorials/github-issue-classification">多クラス分類を使用して GitHub の問題を分類する</a></li>
           - html: <a href="/dotnet/machine-learning/tutorials/taxi-fare">回帰を使用してニューヨークのタクシー料金を予測する</a>
           - html: <a href="/dotnet/machine-learning/tutorials/iris-clustering">クラスタリングを使用して花を特徴別に分類する</a>
-          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommmendation">行列の因数分解を使用して映画レコメンダーを作成する</a>
+          - html: <a href="/dotnet/machine-learning/tutorials/movie-recommendation">行列の因数分解を使用して映画レコメンダーを作成する</a>
           - html: <a href="/dotnet/machine-learning/tutorials/image-classification">TensorFlow を使用してカスタム画像分類子を構築する</a>
   - title: 参照とリソース
     items:

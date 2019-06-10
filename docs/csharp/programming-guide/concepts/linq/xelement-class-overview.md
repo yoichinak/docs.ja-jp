@@ -2,25 +2,24 @@
 title: XElement クラスの概要 (C#)
 ms.date: 07/20/2015
 ms.assetid: 2b9f0cd8-a1d1-4037-accf-0f38a410fa11
-ms.openlocfilehash: cddb36ac6401c20478a1254fe3d63afe5bd13099
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 815b7b6523afe7106fcdcbe242d667c5ad6aa56e
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595762"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487009"
 ---
 # <a name="xelement-class-overview-c"></a>XElement クラスの概要 (C#)
 <xref:System.Xml.Linq.XElement> クラスは、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の基礎クラスの 1 つです。 これは XML 要素を表します。 このクラスを使用すると、要素の作成、要素のコンテンツの変更、子要素の追加、変更、削除、要素への属性の追加、および要素のコンテンツのテキスト形式へのシリアル化を行うことができます。 <xref:System.Xml?displayProperty=nameWithType>、<xref:System.Xml.XmlReader>、<xref:System.Xml.XmlWriter> などの、<xref:System.Xml.Xsl.XslCompiledTransform> の他のクラスと相互運用することもできます。  
   
-## <a name="xelement-functionality"></a>XElement の機能  
- このトピックでは、<xref:System.Xml.Linq.XElement> クラスによって提供される機能について説明します。  
+このトピックでは、<xref:System.Xml.Linq.XElement> クラスによって提供される機能について説明します。  
   
-### <a name="constructing-xml-trees"></a>XML ツリーの構築  
+## <a name="constructing-xml-trees"></a>XML ツリーの構築  
  次のようなさまざまな方法で XML ツリーを構築できます。  
   
-- コードで XML ツリーを構築できます。 詳しくは、「[XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees.md)」をご覧ください。  
+- コードで XML ツリーを構築できます。 詳しくは、「[XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)」をご覧ください。  
   
-- <xref:System.IO.TextReader>、テキスト ファイル、Web アドレス (URL) など、さまざまなソースから XML を解析できます。 詳しくは、「[XML の解析 (C#)](../../../../csharp/programming-guide/concepts/linq/parsing-xml.md)」をご覧ください。  
+- <xref:System.IO.TextReader>、テキスト ファイル、Web アドレス (URL) など、さまざまなソースから XML を解析できます。 詳しくは、「[XML の解析 (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-parse-a-string.md)」をご覧ください。  
   
 - <xref:System.Xml.XmlReader> を使用してツリーを設定できます。 詳細については、「<xref:System.Xml.Linq.XNode.ReadFrom%2A>」を参照してください。  
   
@@ -76,26 +75,26 @@ Console.WriteLine(xmlTree);
 </Root>  
 ```  
   
-### <a name="serializing-xml-trees"></a>XML ツリーのシリアル化  
+## <a name="serializing-xml-trees"></a>XML ツリーのシリアル化  
  XML ツリーは、<xref:System.IO.File>、<xref:System.IO.TextWriter>、または <xref:System.Xml.XmlWriter> にシリアル化できます。  
   
- 詳しくは、「[XML ツリーのシリアル化 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)」をご覧ください。  
+ 詳しくは、「[XML ツリーのシリアル化 (C#)](../../../../csharp/programming-guide/concepts/linq/preserving-white-space-while-serializing.md)」をご覧ください。  
   
-### <a name="retrieving-xml-data-via-axis-methods"></a>軸メソッドによる XML データの取得  
+## <a name="retrieving-xml-data-via-axis-methods"></a>軸メソッドによる XML データの取得  
  軸メソッドを使用すると、属性、子要素、子孫要素、および祖先要素を取得できます。 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリは、軸メソッドに対して機能し、XML ツリーを操作して処理するための、柔軟で強力な複数の機能を備えています。  
   
- 詳しくは、「[LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes.md)」をご覧ください。  
+ 詳しくは、「[LINQ to XML 軸 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-axes-overview.md)」をご覧ください。  
   
-### <a name="querying-xml-trees"></a>XML ツリーのクエリ  
+## <a name="querying-xml-trees"></a>XML ツリーのクエリ  
  XML ツリーからデータを抽出する [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリを記述できます。  
   
- 詳しくは、「[XML ツリーのクエリ (C#)](../../../../csharp/programming-guide/concepts/linq/querying-xml-trees.md)」をご覧ください。  
+ 詳しくは、「[XML ツリーのクエリ (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-find-an-element-with-a-specific-attribute.md)」をご覧ください。  
   
-### <a name="modifying-xml-trees"></a>XML ツリーの変更  
+## <a name="modifying-xml-trees"></a>XML ツリーの変更  
  要素を変更するには、そのコンテンツや属性を変更するなど、さまざまな方法があります。 要素を親から削除することもできます。  
   
- 詳しくは、「[XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/modifying-xml-trees-linq-to-xml.md)」をご覧ください。  
+ 詳しくは、「[XML ツリーの変更 (LINQ to XML) (C#)](../../../../csharp/programming-guide/concepts/linq/in-memory-xml-tree-modification-vs-functional-construction-linq-to-xml.md)」をご覧ください。  
   
 ## <a name="see-also"></a>関連項目
 
-- [LINQ to XML プログラミングの概要 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-programming-overview.md)
+- [LINQ to XML プログラミングの概要 (C#)](serializing-to-files-textwriters-and-xmlwriters.md)

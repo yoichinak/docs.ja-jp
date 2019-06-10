@@ -2,14 +2,17 @@
 title: '方法: リフレクションを使用してアセンブリのメタデータをクエリする (LINQ) (C#)'
 ms.date: 07/20/2015
 ms.assetid: c4cdce49-b1c8-4420-b12a-9ff7e6671368
-ms.openlocfilehash: 1e8aa8652470240d63ac950d43e5b41e8b3ef1ca
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 52b961c5a016754964285221e252965ff89efd26
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584419"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66485230"
 ---
 # <a name="how-to-query-an-assemblys-metadata-with-reflection-linq-c"></a>方法: リフレクションを使用してアセンブリのメタデータをクエリする (LINQ) (C#)
+
+.NET Framework クラス ライブラリのリフレクション API を使用すると、.NET アセンブリ内のメタデータを調べ、そのアセンブリ内にある型、型メンバー、パラメーターなどのコレクションを作成できます。 これらのコレクションは、ジェネリック `IEnumerable` インターフェイスをサポートするため、LINQ を使用して照会できます。  
+  
 次の例では、LINQ でリフレクションを使用して、指定した検索条件に一致するメソッドについてのメタデータを取得する方法を示します。 この例のクエリでは、配列などの列挙可能な型を返すすべてのメソッドの名前をアセンブリ内で検索します。  
   
 ## <a name="example"></a>例  

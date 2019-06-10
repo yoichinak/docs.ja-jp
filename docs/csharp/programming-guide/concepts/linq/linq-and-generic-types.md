@@ -6,12 +6,12 @@ helpviewer_keywords:
 - generic types [LINQ]
 - generics [LINQ]
 ms.assetid: 660e3799-25ca-462c-8c4a-8bce04fbb031
-ms.openlocfilehash: 2b599906082cabceeb8d97ec737b6fa39fed6825
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 891acd56939a2cff8eb377512a8a516f8a189034
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65584403"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66487432"
 ---
 # <a name="linq-and-generic-types-c"></a>LINQ とジェネリック型 (C#)
 [!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] クエリは、.NET Framework のバージョン 2.0 で導入されたジェネリック型に基づいています。 クエリを記述するために、ジェネリックについて詳しく知っておく必要ありません。 ただし、次の 2 つの基本的な概念を理解しておくと役立ちます。  
@@ -38,5 +38,4 @@ ms.locfileid: "65584403"
   
 ## <a name="see-also"></a>関連項目
 
-- [C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
 - [ジェネリック](../../../../csharp/programming-guide/generics/index.md)

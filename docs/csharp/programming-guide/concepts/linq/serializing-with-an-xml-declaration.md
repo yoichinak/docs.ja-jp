@@ -2,12 +2,12 @@
 title: XML 宣言付きのシリアル化 (C#)
 ms.date: 07/20/2015
 ms.assetid: c237fa4a-a042-40fd-886f-17b54c66bb75
-ms.openlocfilehash: 4f5dd9a7e392acff30814db4a483b297494b68b1
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 4533d69f2b0bee68b4adee6e18fe28dde18078ae
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54702406"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66483482"
 ---
 # <a name="serializing-with-an-xml-declaration-c"></a>XML 宣言付きのシリアル化 (C#)
 このトピックでは、シリアル化を実行する際に XML 宣言を生成するかどうかを制御する方法について説明します。  
@@ -63,4 +63,4 @@ Console.WriteLine(sb.ToString());
   
 ## <a name="see-also"></a>関連項目
 
-- [XML ツリーのシリアル化 (C#)](../../../../csharp/programming-guide/concepts/linq/serializing-xml-trees.md)
+- [XML ツリーのシリアル化 (C#)](serializing-to-files-textwriters-and-xmlwriters.md)
