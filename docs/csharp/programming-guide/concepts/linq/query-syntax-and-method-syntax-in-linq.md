@@ -5,12 +5,12 @@ helpviewer_keywords:
 - LINQ [C#], query syntax vs. method syntax
 - queries [LINQ in C#], syntax comparisons
 ms.assetid: eedd6dd9-fec2-428c-9581-5b8783810ded
-ms.openlocfilehash: 1d6bd14a88f22bfa961ee28f0014b1f89ccb28b5
-ms.sourcegitcommit: 15ab532fd5e1f8073a4b678922d93b68b521bfa0
+ms.openlocfilehash: e3fced818a257cb0bde166b0dd98c59c3b41e8ac
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58654043"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66484104"
 ---
 # <a name="query-syntax-and-method-syntax-in-linq-c"></a>LINQ でのクエリ構文とメソッド構文 (C#)
 統合言語クエリ ([!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)]) の入門的なドキュメントでは、ほとんどのクエリが、LINQ の宣言型クエリ構文を使用して記述されています。 ただし、クエリ構文は、コードのコンパイル時に、.NET 共通言語ランタイム (CLR) 用のメソッド呼び出しに変換する必要があります。 これらのメソッド呼び出しが、標準クエリ演算子 (`Where`、`Select`、`GroupBy`、`Join`、`Max`、`Average` など) を呼び出します。 これらは、クエリ構文ではなくメソッド構文を使用して直接呼び出すことができます。  
@@ -41,7 +41,3 @@ ms.locfileid: "58654043"
   
 ## <a name="composability-of-queries"></a>クエリの構成可能性  
  上記の例で、`OrderBy` メソッドは `Where` への呼び出しでドット演算子を使用して起動されています。 `Where` は、フィルター処理されたシーケンスを生成し、その後 `Orderby` は、そのシーケンスをソートして操作しています。 クエリが `IEnumerable` を返すので、開発者は、メソッド呼び出しをつないでいきながら、メソッド構文でそれらを編成します。 これが、クエリ構文を使ってクエリを記述する際に、コンパイラがバック グラウンドで行っていることなのです。 また、クエリ変数にはクエリの結果が格納されないので、開発者はそれが実行された後でも、それを随時変更したり、新しいクエリのベースとして使用することができます。  
-  
-## <a name="see-also"></a>関連項目
-
-- [C# の LINQ の概要](../../../../csharp/programming-guide/concepts/linq/getting-started-with-linq.md)
