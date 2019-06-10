@@ -6,15 +6,15 @@ helpviewer_keywords:
 - Custom Places [Windows Forms], Known Folder GUIDs
 - Windows Vista Known Folder GUIDs [Windows Forms], Custom Places
 ms.assetid: d8d8b544-8b4d-4da5-ba3a-b05e93244778
-ms.openlocfilehash: 0f06ca2251ae1bf9bd5e199562eff116614e7117
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 09c51341a2b81c21804bcca3b244bbebdb7342b6
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973841"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758779"
 ---
 # <a name="known-folder-guids-for-file-dialog-custom-places"></a>ファイル ダイアログ ボックスのカスタム プレイス用既知のフォルダー GUID
-使用する、<xref:System.Guid>を指定する、[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]既知のフォルダーにフォルダーを追加すると、<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>コレクション。 既知のフォルダー Guid 小文字は区別されず、内の KnownFolders.h ファイルで定義されて、[!INCLUDE[winSDK](../../../../includes/winsdk-md.md)]します。  
+使用する、<xref:System.Guid>を指定する、[!INCLUDE[wiprlhext](../../../../includes/wiprlhext-md.md)]既知のフォルダーにフォルダーを追加すると、<xref:System.Windows.Forms.FileDialog.CustomPlaces%2A>コレクション。 既知のフォルダー Guid では、小文字は区別されませんされ、Windows SDK 内の KnownFolders.h ファイルで定義されます。  
   
 > [!NOTE]
 >  場合によっては、既知のフォルダーに追加、<xref:System.Windows.Forms.FileDialogCustomPlacesCollection>に表示されないため、**お気に入りリンク**領域。 たとえば、指定した既知のフォルダーが、アプリケーションを実行しているコンピューターに存在しない場合は、既知のフォルダーは表示されません。  
@@ -169,7 +169,7 @@ ms.locfileid: "61973841"
  Programs  
  A77F5D77-2E2B-44C3-A6A2-ABA601054A51  
   
- Public  
+ パブリック  
  DFDF76A2-C82A-4D63-906A-5644AC457385  
   
  PublicDesktop  

@@ -2,12 +2,12 @@
 title: クラウドに最適化されたアプリケーションでの Microsoft テクノロジ
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |クラウドに最適化されたアプリケーションでの Microsoft テクノロジ
 ms.date: 04/28/2018
-ms.openlocfilehash: ebdbc7bb3a5f51f8408b69a5e13f03f424eae242
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 915aa99d2331c5b9c46eabef3335fb809baa9370
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639028"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758633"
 ---
 # <a name="microsoft-technologies-in-cloud-optimized-applications"></a>クラウドに最適化されたアプリケーションでの Microsoft テクノロジ
 
@@ -17,7 +17,7 @@ ms.locfileid: "65639028"
 
 - **ランタイム**:このレイヤーは、アプリケーションを実行する環境を提供します。 このレイヤーは、通常に基づく、コンテナーを使用している場合[Docker エンジン](https://docs.docker.com/engine/)、Linux ホストで、または Windows ホストで実行中です。 ([Windows コンテナー](https://docs.microsoft.com/virtualization/windowscontainers/about/) Windows Server 2016 以降ではサポートされています。 Windows コンテナーは Windows で実行される既存の .NET Framework アプリケーションに最適です。)
 
-- **クラウド管理**:管理されたクラウド オプションを選択すると、費用と複雑さを管理して、基になるインフラストラクチャ、Vm、OS パッチをサポートしているネットワーク構成を回避できます。 IaaS を使用して移行する場合がこれらのタスクのすべてのおよび関連するコストにあります。 管理されたクラウド オプションでは、アプリケーションとサービスを開発のみを管理します。 クラウド サービス プロバイダーを使用して、他はすべて通常管理します。 Azure で管理されたクラウド サービスの例として、 [Azure SQL Database](https://azure.microsoft.com/services/sql-database)、 [Azure Redis Cache](https://azure.microsoft.com/services/cache/)、 [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)、 [Azure Storage](https://azure.microsoft.com/services/storage/)、[Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)、 [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/)、 [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)などのコンピューティング サービスを管理および[VM のスケール設定](https://azure.microsoft.com/services/virtual-machine-scale-sets/)、 [Azure Service Fabric](https://azure.microsoft.com/services/service-fabric/)、 [Azure App Service](https://azure.microsoft.com/services/app-service/)、および[Azure Kubernetes サービス](https://azure.microsoft.com/services/container-service/)します。
+- **クラウド管理**:管理されたクラウド オプションを選択すると、費用と複雑さを管理して、基になるインフラストラクチャ、Vm、OS パッチをサポートしているネットワーク構成を回避できます。 IaaS を使用して移行する場合がこれらのタスクのすべてのおよび関連するコストにあります。 管理されたクラウド オプションでは、アプリケーションとサービスを開発のみを管理します。 クラウド サービス プロバイダーを使用して、他はすべて通常管理します。 Azure で管理されたクラウド サービスの例として、 [Azure SQL Database](https://azure.microsoft.com/services/sql-database)、 [Azure Redis Cache](https://azure.microsoft.com/services/cache/)、 [Azure Cosmos DB](https://azure.microsoft.com/services/cosmos-db/)、 [Azure Storage](https://azure.microsoft.com/services/storage/)、[Azure Database for MySQL](https://azure.microsoft.com/services/mysql/)、 [Azure Database for PostgreSQL](https://azure.microsoft.com/services/postgresql/)、 [Azure Active Directory](https://azure.microsoft.com/services/active-directory/)などのコンピューティング サービスを管理および[VM のスケール設定](https://azure.microsoft.com/services/virtual-machine-scale-sets/)、 [Azure App Service](https://azure.microsoft.com/services/app-service/)、および[Azure Kubernetes サービス](https://azure.microsoft.com/services/container-service/)します。
 
 - **アプリケーションの開発**:コンテナーで実行されるアプリケーションをビルドするときに、多くの言語から選択することができます。 このガイドの重点[.NET](https://www.microsoft.com/net)が、Node.js、Python、Spring/Java と同様に、他の言語を使用して、コンテナー ベースのアプリを開発したり、移動できます。
 
@@ -27,7 +27,7 @@ ms.locfileid: "65639028"
 
 - **アプリケーションのライフ サイクル**:[Azure DevOps サービス](https://azure.microsoft.com/services/devops/)、Jenkins などの他のツールはビルド オートメーション サーバーにする際に役立つ実装 CI/CD パイプライン、リリース管理を含むとします。
 
-この章では、および関連のチュートリアルの次のセクションでは、ランタイム レイヤー (Windows コンテナー) の詳細について重点的に説明します。 ガイダンスでは、Windows Server 2016 (およびそれ以降のバージョン) で Windows コンテナーの Vm と Azure Container Instances を展開する方法について説明します。 Azure App Service などのより高度な PaaS プラットフォームと Azure Service Fabric と Azure Kubernetes サービスなどのオーケストレーターについても説明します。
+この章では、および関連のチュートリアルの次のセクションでは、ランタイム レイヤー (Windows コンテナー) の詳細について重点的に説明します。 ガイダンスでは、Windows Server 2016 (およびそれ以降のバージョン) で Windows コンテナーの Vm と Azure Container Instances を展開する方法について説明します。 Azure App Service などのより高度な PaaS プラットフォームと Azure Kubernetes サービスなどのオーケストレーターについても説明します。
 
 ## <a name="monolithic-applications-can-be-cloud-optimized"></a>モノリシック アプリケーション*できます*クラウド最適化します。
 

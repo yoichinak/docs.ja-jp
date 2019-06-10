@@ -2,12 +2,12 @@
 title: Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング
 ms.date: 04/29/2018
-ms.openlocfilehash: 9bfa0688d07bd04964a1b28f688f125b5bcd2299
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 3b6ae1ced9c4e01f5ab400e2575947a396064ebd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638921"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758595"
 ---
 # <a name="when-to-deploy-windows-containers-to-azure-container-instances-aci"></a>Azure Container Instances (ACI) に Windows コンテナーを展開するタイミング
 
@@ -36,4 +36,4 @@ Azure Container Instances (ACI) の主な利点は次のとおりです。
 
 > [!div class="step-by-step"]
 > [前へ](when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md)
-> [次へ](when-to-deploy-windows-containers-to-service-fabric.md)
+> [次へ](when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md)

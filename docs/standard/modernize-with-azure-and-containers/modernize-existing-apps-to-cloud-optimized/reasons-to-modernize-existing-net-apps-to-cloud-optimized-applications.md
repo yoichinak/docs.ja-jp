@@ -2,12 +2,12 @@
 title: クラウドに最適化されたアプリケーションへの既存の .NET アプリを最新化する理由
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |クラウドに最適化されたアプリケーションへの既存の .NET アプリを最新化する理由
 ms.date: 04/28/2018
-ms.openlocfilehash: e09d8066e883aaef55408336e3817158e2c14be6
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 5aa9828f65f76138461c18711fe03bdbe6a70ffd
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65639056"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758745"
 ---
 # <a name="reasons-to-modernize-existing-net-apps-to-cloud-optimized-applications"></a>クラウドに最適化されたアプリケーションへの既存の .NET アプリを最新化する理由
 
@@ -27,7 +27,7 @@ ms.locfileid: "65639056"
 
 キーが*アジリティ*します。 任意の展開の運用を最小限に減らす場合を除き、機敏性を出荷することはできませんの問題と開発/テスト環境の問題。 コンテナー (具体的には、Docker、業界標準として) と管理対象サービスは、この目的のために設計されました。
 
-機敏性を実現するにはするには、CI/CD パイプラインにリリースする、クラウドでスケーラブルなプラットフォームに基づく自動化された DevOps プロセスにも必要です。 (Azure App Service、Azure Service Fabric Azure Kubernetes サービスなど) の拡張性と回復性の高いクラウド プラットフォームにデプロイする CI/CD プラットフォーム (Azure DevOps サービスや Jenkins) などとは、クラウドの機敏性を実現するための主要なテクノロジです。
+機敏性を実現するにはするには、CI/CD パイプラインにリリースする、クラウドでスケーラブルなプラットフォームに基づく自動化された DevOps プロセスにも必要です。 (Azure App Service や Azure Kubernetes Service) などの拡張性と回復性の高いクラウド プラットフォームにデプロイする CI/CD プラットフォーム (Azure DevOps サービスや Jenkins) などとは、クラウドの機敏性を実現するための主要なテクノロジです。
 
 次の一覧には、メインの基本思想またはクラウドに最適化されたアプリケーションに関するプラクティスについて説明します。 プログレッシブまたは増分アプローチでは、これらの原則の一部のみまたはすべてを採用することに注意してください。
 

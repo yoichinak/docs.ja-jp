@@ -2,12 +2,12 @@
 title: チュートリアルと技術的な概要
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |チュートリアルと技術的な概要します。
 ms.date: 04/28/2018
-ms.openlocfilehash: f5c1ca2b78d27b275845ada72d252450761f5091
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 0b0dbae999e31150a55368d669f718eea0925d51
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65638967"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758786"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>チュートリアルと技術的な概要
 
@@ -30,8 +30,6 @@ ms.locfileid: "65638967"
 - **Azure Vm への Windows コンテナー ベース アプリをデプロイします。**
 
 - **Windows コンテナー ベースのアプリを Azure Container Service で Kubernetes にデプロイします。**
-
-- **Azure Service Fabric への Windows コンテナー ベースのアプリをデプロイします。**
 
 ## <a name="walkthrough-1-tour-of-eshop-legacy-apps"></a>チュートリアル 1:EShop レガシ アプリケーションのツアー
 
@@ -119,7 +117,7 @@ MVC、Web フォーム、または WCF では、運用、開発、およびテ�
 
 その他の利点は、開発者が Windows のコンテナーによって提供される一貫した環境でアプリケーションを実行できることです。 特定のバージョンでのみ表示される問題は、ステージング環境または運用環境で表示することではなく、すぐに発見できます。 開発チームのメンバーで使用される開発環境での相違点は問題のコンテナーでアプリケーションの実行時に小さいです。
 
-コンテナー化されたアプリケーションでは、flatter スケール アウト曲線もあります。 コンテナー化されたアプリには、VM または物理マシンのマシンあたりの定期的なアプリケーション展開と比較する複数のアプリケーションとサービス インスタンスが (コンテナーに基づく) が有効にします。 これにより、高密度、および必要な少なくリソース、Kubernetes や Service Fabric などのオーケストレーターを使用する場合に特にです。
+コンテナー化されたアプリケーションでは、flatter スケール アウト曲線もあります。 コンテナー化されたアプリには、VM または物理マシンのマシンあたりの定期的なアプリケーション展開と比較する複数のアプリケーションとサービス インスタンスが (コンテナーに基づく) が有効にします。 これにより、高密度、および必要な少なくリソース、Kubernetes などのオーケストレーターを使用する場合に特にです。
 
 コンテナリゼーションは、理想的な状況では、アプリケーション コードに変更を加える必要ありません (C\#)。 ほとんどのシナリオでは、Docker の展開のメタデータ ファイル (Dockerfile と Docker Compose ファイル) だけ必要です。
 
@@ -210,7 +208,7 @@ Azure Container Instances では、簡単に作成し、仮想マシンをプロ
 
 ### <a name="considerations"></a>注意事項
 
-いずれかの完全な .NET Framework と Windows コンテナーのデプロイ]、[ASP.NET または SQL Server Azure Container Instances (ACI) には、Docker イメージがあるためです (Windows コンテナーでの Windows Server 2016) などの通常の Docker ホストにデプロイする場合と非常に高速ではありません(Docker レジストリからプルされた) たびにダウンロードし、これは、独自の docker ホスト (永続的にオンラインを維持するよりもよりもコストは、SQL コンテナー イメージ (15.1 GB) と ASP.NET のコンテナー イメージ (13.9 GB) のサイズが非常に大きい場合、Azure で Windows コンテナーの VM で Windows Server 2016) することで、全体のオーケストレーターは、その一方で、運用環境のデプロイ用の優れた選択肢である Kubernetes (AKS/ACS) を Azure または Azure Service Fabric でのようにします。
+いずれかの完全な .NET Framework と Windows コンテナーのデプロイ]、[ASP.NET または SQL Server Azure Container Instances (ACI) には、Docker イメージがあるためです (Windows コンテナーでの Windows Server 2016) などの通常の Docker ホストにデプロイする場合と非常に高速ではありません(Docker レジストリからプルされた) たびにダウンロードし、これは、独自の docker ホスト (永続的にオンラインを維持するよりもよりもコストは、SQL コンテナー イメージ (15.1 GB) と ASP.NET のコンテナー イメージ (13.9 GB) のサイズが非常に大きい場合、Azure で Windows コンテナーの VM で Windows Server 2016) することで、全体のオーケストレーター Kubernetes Azure (AKS) では、その一方で、運用環境のデプロイに最適のようにします。
 
 メインの結論としては、Azure Container Instances を使用して開発/テスト シナリオの場合と CI/CD パイプラインの非常に魅力的なオプション。
 
@@ -279,80 +277,6 @@ Kubernetes で開発者を他のユーザーの間で、次の機能を容易に
 ## <a name="next-steps"></a>次の手順
 
 このコンテンツの詳細については、GitHub wiki 詳細します。 <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
-
-## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-service-fabric"></a>チュートリアル 6:Azure Service Fabric への Windows コンテナー ベースのアプリをデプロイします。
-
-### <a name="technical-walkthrough-availability"></a>テクニカル チュートリアルの可用性
-
-完全な技術チュートリアル、eShopModernizing GitHub リポジトリ wiki で提供されています。
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
-
-### <a name="overview"></a>概要
-
-Windows コンテナーをすばやくに基づいてアプリケーションでは、IaaS Vm から離れて移動、さらに、プラットフォームを使用する必要があります。 これを簡単に高いスケーラビリティを実現するために必要なよりスケーラビリティ、自動し、大幅に向上のデプロイとバージョン管理を自動化します。 Azure Service Fabric は、Azure のクラウドで使用できますが、オンプレミスでも実行できますが、オーケストレーターを使用して、または別のパブリック クラウドであっても、これらの目標を実現できます。
-
-### <a name="goals"></a>目的
-
-このチュートリアルの目的では、Azure で Service Fabric クラスターに Windows コンテナー ベースのアプリケーションをデプロイする方法について説明します。 最初からの Service Fabric にデプロイすると、2 段階のプロセスです。
-
-1. Azure (または、別の環境) は、Service Fabric クラスターをデプロイします。
-
-2. Service Fabric クラスターに、アプリケーションと関連リソースをデプロイします。
-
-### <a name="scenarios"></a>シナリオ
-
-#### <a name="scenario-a-deploy-directly-to-a-service-fabric-cluster-from-a-dev-environment"></a>シナリオ a:開発環境から Service Fabric クラスターに直接デプロイします。
-
-![開発環境から Service Fabric クラスターに直接デプロイします。](./media/image5-9.png)
-
-> **図 5-9** 開発環境から Service Fabric クラスターに直接デプロイします。
-
-### <a name="scenario-b-deploy-to-a-service-fabric-cluster-from-cicd-pipelines-in-azure-devops-services"></a>シナリオ b:Azure DevOps Services で CI/CD パイプラインから Service Fabric クラスターにデプロイします。
-
-![Azure DevOps Services で CI/CD パイプラインから Service Fabric クラスターにデプロイします。](./media/image5-10.png)
-
-**図 5-10** Azure DevOps Services で CI/CD パイプラインから Service Fabric クラスターにデプロイします。
-
-## <a name="benefits"></a>利点
-
-Service fabric クラスターへのデプロイの利点は、Kubernetes を使用する利点と似ています。 1 つの違いは、Service Fabric には、さらに成熟した運用環境と比較する Kubernetes バージョン 1.9 で Windows コンテナーのベータ フェーズでは、Kubernetes と Windows アプリケーション (2017 年 12 月)。 Kubernetes は、Linux のさらに成熟した環境です。
-
-Azure Service Fabric を使用する主な利点は、(既存のノードでは内部スケーラビリティ) を使用して数に基づいてするコンテナー インスタンスの数に基づいて、アプリケーションをスケールすることができます、実稼働可能な環境を取得します。ノードまたはクラスター (クラスターのグローバルなスケーラビリティ) 内の Vm。
-
-Azure Service Fabric では、移植性をコンテナーと、アプリケーションの構成の両方を提供します。 Azure では、クラスター化または独自のデータ センターに、オンプレミス インストールに Service Fabric ことができます。 このようなでも別のクラウドでこの Service Fabric クラスターをインストールすることができます[Amazon AWS](https://blogs.msdn.microsoft.com/azureservicefabric/2017/05/18/tutorial-how-to-create-a-service-fabric-standalone-cluster-with-aws-ec2-instances/)します。
-
-Service Fabric を使用開発者を他のユーザーの間で、次の機能を容易にするコンテナーを中心としたインフラストラクチャの計画に考えた物理および仮想マシンに進むことができます。
-
-- 複数のコンテナーに基づくアプリケーション。
-
-- Container instances と水平方向の自動スケールをレプリケートします。
-
-- 名前付けと (たとえば、内部 DNS) を検出します。
-
-- 負荷を分散します。
-
-- ローリング更新。
-
-- シークレットを配布します。
-
-- アプリケーションの正常性を確認します。
-
-次の機能では、(他のオーケストレーターとの比較)、Service Fabric で排他的です。
-
-- ステートフル サービスの機能は、Reliable Services アプリケーションのモデルを使用します。
-
-- アクター パターン、Reliable Actors アプリケーション モデルを使用します。
-
-- Windows または Linux のコンテナーに加え、ベア ボーン プロセスを展開します。
-
-- 高度なローリング アップデートと正常性チェック
-
-### <a name="next-steps"></a>次の手順
-
-このコンテンツの詳細については、GitHub wiki 詳細します。
-
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-How-to-deploy-your-Windows-Containers-based-apps-into-Azure-Service-Fabric-(Including-CI-CD)>
 
 > [!div class="step-by-step"]
 > [前へ](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

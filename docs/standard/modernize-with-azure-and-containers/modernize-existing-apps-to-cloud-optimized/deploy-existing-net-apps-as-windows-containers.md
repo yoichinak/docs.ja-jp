@@ -2,12 +2,12 @@
 title: Windows コンテナーとして既存の .NET アプリを展開する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |Windows コンテナーとして既存の .NET アプリをデプロイします。
 ms.date: 04/29/2018
-ms.openlocfilehash: 77d10867573765a7e86a9827825e1313de7a3035
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: ba9af3fc3a5bf285830bb873fa6a5da8390dc6b4
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643750"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758834"
 ---
 # <a name="deploy-existing-net-apps-as-windows-containers"></a>Windows コンテナーとして既存の .NET アプリを展開する
 
@@ -153,7 +153,6 @@ Azure では、次の製品のインフラストラクチャと見なされる�
 
 - **Azure App Service**
 - **Azure Kubernetes Service (AKS と ACS)**
-- **Azure Service Fabric** 
 - **Azure Batch** 
 
 次に、Azure Container Registry には、すべて、以前の製品から登録して、カスタム コンテナー イメージを展開するときに使用できる Azure でホストされている高スケーラブルなコンテナー レジストリです。

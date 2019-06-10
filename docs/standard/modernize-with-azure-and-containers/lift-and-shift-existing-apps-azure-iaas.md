@@ -2,12 +2,12 @@
 title: リフト アンド既存の .NET アプリを Azure IaaS (クラウド インフラストラクチャの準備完了) にシフト
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを最新化します。
 ms.date: 04/28/2018
-ms.openlocfilehash: 24e413ad82742067b2fee6cd3a7a99e6f0f87b0a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: cda316ad01a58f26661395c804547de04e20d052
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65643707"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758867"
 ---
 # <a name="lift-and-shift-existing-net-apps-to-azure-iaas-cloud-infrastructure-ready"></a>リフト アンド既存の .NET アプリを Azure IaaS (クラウド インフラストラクチャの準備完了) にシフト
 
@@ -39,7 +39,7 @@ ms.locfileid: "65643707"
 
 既存のアプリケーションをクラウドに移行するだけが目的の場合は、まず、Azure App Service で実行する大幅な変更を必要とせず、既存のアプリケーションを特定します。 これらのアプリが行う最有力候補にする必要がありますクラウドに最適化されました。 
 
-アプリをまだことはできませんを移動 Windows コンテナーと PaaS など、App Service または Azure Service Fabric、などのオーケストレーターされた単純なプレーンな Vm (IaaS) に移行します。 
+アプリをまだことはできませんを移動 Windows コンテナーと PaaS など、App Service または Azure Kubernetes サービスでは、などのオーケストレーターされた単純なプレーンな Vm (IaaS) に移行します。 
 
 ただし、正しく構成、セキュリティ保護、および Vm の保守が必要であるさらに多くの時間と IT の専門知識と比較して、Azure で PaaS サービスの使用に注意してください。 Azure Virtual Machines を検討している場合の修正、更新、および VM 環境を管理するための継続的なメンテナンス労力を考慮することを確認します。 Azure Virtual Machines は、IaaS です。
 
