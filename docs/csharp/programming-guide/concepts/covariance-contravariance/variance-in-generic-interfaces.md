@@ -1,13 +1,13 @@
 ---
 title: ジェネリック インターフェイスの分散 (C#)
-ms.date: 04/10/2019
+ms.date: 06/06/2019
 ms.assetid: 4828a8f9-48c0-4128-9749-7fcd6bf19a06
-ms.openlocfilehash: 5874a39a57f85695bedc3d1ffa61adf19fcdbe37
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: a2d0bcc049d62978930b4e5cdef7920349e3b894
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59480782"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815965"
 ---
 # <a name="variance-in-generic-interfaces-c"></a>ジェネリック インターフェイスの分散 (C#)
 
@@ -31,9 +31,9 @@ ms.locfileid: "59480782"
 
 .NET Framework 4.5 以降では、次のインターフェイスがバリアントです。
 
-- <xref:System.Collections.Generic.IReadOnlyList%601> (T は反変です)
+- <xref:System.Collections.Generic.IReadOnlyList%601> (T は共変です)
 
-- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T は反変です)
+- <xref:System.Collections.Generic.IReadOnlyCollection%601> (T は共変です)
 
 共変性により、メソッドの戻り値の型の派生を、インターフェイスのジェネリック型パラメーターで定義されている型よりも強くすることができます。 ここでは、共変性機能について説明するために、`IEnumerable<Object>` および `IEnumerable<String>` というジェネリック インターフェイスについて考えます。 `IEnumerable<String>` インターフェイスは、`IEnumerable<Object>` インターフェイスを継承しません。 ただし、`String` 型は `Object` 型を継承します。場合によっては、これらのインターフェイスのオブジェクトを、相互に割り当てる必要が生じることもあるでしょう。 これを次のコード例に示します。
 
