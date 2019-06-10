@@ -60,8 +60,6 @@
           href: architect-microservice-container-applications/resilient-high-availability-microservices.md
         - name: 高いスケーラビリティと可用性のためにマイクロサービスと複数のコンテナー アプリケーションを調整する
           href: architect-microservice-container-applications/scalable-available-multi-container-microservice-applications.md
-        - name: Azure Service Fabric の使用
-          href: architect-microservice-container-applications/using-azure-service-fabric.md
     - name: Docker ベースのアプリケーションの開発プロセス
       href: docker-application-development-process/index.md
       items:

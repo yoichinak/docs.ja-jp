@@ -361,8 +361,10 @@
           href: operators/assignment-operator.md
         - name: '?: 演算子'
           href: operators/conditional-operator.md
+          displayName: 'conditional, ternary'
         - name: '?? operator'
           href: operators/null-coalescing-operator.md
+          displayName: null-coalescing
         - name: => 演算子
           href: operators/lambda-operator.md
         - name: true および false 演算子
