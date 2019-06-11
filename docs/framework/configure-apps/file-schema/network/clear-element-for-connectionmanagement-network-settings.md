@@ -17,7 +17,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 04/23/2019
 ms.locfileid: "61705246"
 ---
-# <a name="clear-element-for-connectionmanagement-network-settings"></a>\connectionManagement の <clear> 要素 (ネットワーク設定)
+# <a name="clear-element-for-connectionmanagement-network-settings"></a>connectionManagement の \<clear> 要素 (ネットワーク設定)
 接続の管理の一覧をクリアします。  
   
  \<configuration>  
