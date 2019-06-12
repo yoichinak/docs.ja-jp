@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application management [WPF]
 ms.assetid: 32b1c054-5aca-423b-b4b5-ed8dc4dc637d
-ms.openlocfilehash: c4629b18a207f1146f97327088fabf5f85a31892
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c36de23a6a49e684330fc0f47fc46bd86c55e767
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623305"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834077"
 ---
 # <a name="application-management-overview"></a>アプリケーション管理の概要
 すべてのアプリケーションは、アプリケーションの実装と管理に適用される機能を共有することがよくあります。 このトピックでは、機能の概要、<xref:System.Windows.Application>クラスを作成すると、アプリケーションを管理します。  
@@ -127,7 +127,7 @@ ms.locfileid: "64623305"
 
 <a name="Splash_Screen"></a>   
 ### <a name="splash-screen"></a>スプラッシュ スクリーン  
- 以降では、 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]、スタートアップ ウィンドウで、使用するイメージを指定するまたは*スプラッシュ スクリーン*します。 <xref:System.Windows.SplashScreen>クラスでは、簡単に、アプリケーションの読み込み中に、スタートアップ ウィンドウを表示します。 <xref:System.Windows.SplashScreen>ウィンドウが作成され、表示する前に<xref:System.Windows.Application.Run%2A>が呼び出されます。 詳細については、次を参照してください。[アプリケーションの起動時間](../advanced/application-startup-time.md)と[スプラッシュ スクリーンを WPF アプリケーションに追加](how-to-add-a-splash-screen-to-a-wpf-application.md)します。  
+ 以降、.NET Framework 3.5 SP1 では、スタートアップ ウィンドウで、使用するイメージを指定できますまたは*スプラッシュ スクリーン*します。 <xref:System.Windows.SplashScreen>クラスでは、簡単に、アプリケーションの読み込み中に、スタートアップ ウィンドウを表示します。 <xref:System.Windows.SplashScreen>ウィンドウが作成され、表示する前に<xref:System.Windows.Application.Run%2A>が呼び出されます。 詳細については、次を参照してください。[アプリケーションの起動時間](../advanced/application-startup-time.md)と[スプラッシュ スクリーンを WPF アプリケーションに追加](how-to-add-a-splash-screen-to-a-wpf-application.md)します。  
   
 <a name="Starting_an_Application"></a>   
 ### <a name="starting-an-application"></a>アプリケーションの起動  

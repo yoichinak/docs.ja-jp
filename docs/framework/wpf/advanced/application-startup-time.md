@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: b3dcd46f1158814b836c7491cf1ed3ac468122ad
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689329"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832697"
 ---
 # <a name="application-startup-time"></a>アプリケーションの起動時間
 WPF アプリケーションの起動に必要な時間には、かなりばらつきがあります。 このトピックでは、Windows Presentation Foundation (WPF) アプリケーションの認識される起動時間と実際の起動時間を短縮する方法について説明します。  
@@ -24,7 +24,7 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
  ウォーム スタートは、主要な共通言語ランタイム (CLR) コンポーネント用のページのほとんどが、既にメモリに読み込まれているときに発生し、貴重なディスク アクセス タイムを節約できます。 このため、マネージド アプリケーションを再度実行すると、初回よりも短い時間で起動します。  
   
 ## <a name="implement-a-splash-screen"></a>スプラッシュ スクリーンの実装  
- アプリケーションを起動してから最初の UI が表示されるまでに、どうしても多大な時間がかかる場合は、"*スプラッシュ スクリーン*" を使用して、認識される起動時間を最適化します。 この方法により、ユーザーがアプリケーションを起動すると、すぐにイメージが表示されます。 アプリケーションが最初の UI を表示する準備が整うと、スプラッシュ スクリーンはフェード アウトします。 以降では、 [!INCLUDE[net_v35SP1_short](../../../../includes/net-v35sp1-short-md.md)]、使用することができます、<xref:System.Windows.SplashScreen>スプラッシュ スクリーンを実装するクラス。 詳細については、[WPF アプリケーションへのスプラッシュ スクリーンの追加](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)に関するページをご覧ください。  
+ アプリケーションを起動してから最初の UI が表示されるまでに、どうしても多大な時間がかかる場合は、"*スプラッシュ スクリーン*" を使用して、認識される起動時間を最適化します。 この方法により、ユーザーがアプリケーションを起動すると、すぐにイメージが表示されます。 アプリケーションが最初の UI を表示する準備が整うと、スプラッシュ スクリーンはフェード アウトします。 以降、.NET Framework 3.5 SP1 を使えば、<xref:System.Windows.SplashScreen>スプラッシュ スクリーンを実装するクラス。 詳細については、[WPF アプリケーションへのスプラッシュ スクリーンの追加](../app-development/how-to-add-a-splash-screen-to-a-wpf-application.md)に関するページをご覧ください。  
   
  ネイティブな Win32 グラフィックスを使用して、独自のスプラッシュ スクリーンを実装することもできます。 表示する前に、実装、<xref:System.Windows.Application.Run%2A>メソッドが呼び出されます。  
   

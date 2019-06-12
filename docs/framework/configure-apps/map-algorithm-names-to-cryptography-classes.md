@@ -7,15 +7,15 @@ helpviewer_keywords:
 - cryptographic algorithms
 - names [.NET Framework], algorithm mapping
 ms.assetid: 01327c69-c5e1-4ef6-b73f-0a58351f0492
-ms.openlocfilehash: 9e4154923b2bb0abfe48e7a530497c3d5bf28d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c76f80273d37f838ca52efd3b8f8c028b76a4d30
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583731"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832681"
 ---
 # <a name="mapping-algorithm-names-to-cryptography-classes"></a>暗号化クラスへのアルゴリズム名の割り当て
-開発者を使用して暗号化オブジェクトを作成する 4 つの方法がある、 [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]:  
+4 つの方法が、開発者は、Windows ソフトウェア開発キット (SDK) を使用して暗号化オブジェクトを作成できます。  
   
 - 使用してオブジェクトを作成、**新しい**演算子。  
   
@@ -25,7 +25,7 @@ ms.locfileid: "64583731"
   
 - 呼び出して、暗号化アルゴリズム (対称ブロック暗号) などのクラスを実装するオブジェクトを作成、**作成**アルゴリズムの種類の抽象クラスのメソッド (など<xref:System.Security.Cryptography.SymmetricAlgorithm>)。  
   
- たとえば、開発者が、一連のバイトの SHA1 ハッシュを計算するとします。 <xref:System.Security.Cryptography>名前空間には、SHA1 アルゴリズム、1 つの単なるマネージされた実装および CryptoAPI をラップする 1 つの 2 つの実装が含まれています。 開発者は特定の SHA1 実装をインスタンス化を選択できます (など、 <xref:System.Security.Cryptography.SHA1Managed>) 呼び出すことによって、**新しい**演算子。 ただし、クラスは、SHA1 ハッシュ アルゴリズムを実装している限り、共通言語ランタイムがロードするクラス、問題にしない場合、開発者オブジェクトを作成できますを呼び出して、<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>メソッド。 このメソッドを呼び出す**System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")**、SHA1 ハッシュ アルゴリズムの実装を返す必要があります。  
+ たとえば、開発者が、一連のバイトの SHA1 ハッシュを計算するとします。 <xref:System.Security.Cryptography>名前空間には、SHA1 アルゴリズム、1 つの単なるマネージされた実装および CryptoAPI をラップする 1 つの 2 つの実装が含まれています。 開発者は特定の SHA1 実装をインスタンス化を選択できます (など、 <xref:System.Security.Cryptography.SHA1Managed>) 呼び出すことによって、**新しい**演算子。 ただし、クラスは、SHA1 ハッシュ アルゴリズムを実装している限り、共通言語ランタイムがロードするクラス、問題にしない場合、開発者オブジェクトを作成できますを呼び出して、<xref:System.Security.Cryptography.SHA1.Create%2A?displayProperty=nameWithType>メソッド。 このメソッドを呼び出す**System.Security.Cryptography.CryptoConfig.CreateFromName("System.Security.Cryptography.SHA1")** 、SHA1 ハッシュ アルゴリズムの実装を返す必要があります。  
   
  開発者が呼び出すことができますも**System.Security.Cryptography.CryptoConfig.CreateFromName("SHA1")** のため、暗号化構成には既定では、.NET Framework に付属しているアルゴリズムの短い名前が含まれています。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "64583731"
 ## <a name="mapping-algorithm-names-in-configuration-files"></a>構成ファイル内のアルゴリズム名のマッピング  
  既定では、ランタイムが返されます、 <xref:System.Security.Cryptography.SHA1CryptoServiceProvider> 4 つのシナリオをすべてのオブジェクト。 ただし、コンピューターの管理者は、最後の 2 つのシナリオで、メソッドが返すオブジェクトの種類を変更できます。 これを行うには、マシン構成ファイル (Machine.config) で使用するクラスにアルゴリズムの表示名をマップする必要があります。  
   
- 次の例は、ランタイムを構成する方法を示しますように**System.Security.Cryptography.SHA1.Create**、 **System.Security.CryptoConfig.CreateFromName("SHA1")**、および**System.Security.Cryptography.HashAlgorithm.Create**を返す、`MySHA1HashClass`オブジェクト。  
+ 次の例は、ランタイムを構成する方法を示しますように**System.Security.Cryptography.SHA1.Create**、 **System.Security.CryptoConfig.CreateFromName("SHA1")** 、および**System.Security.Cryptography.HashAlgorithm.Create**を返す、`MySHA1HashClass`オブジェクト。  
   
 ```xml  
 <configuration>  

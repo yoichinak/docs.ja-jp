@@ -9,15 +9,15 @@ helpviewer_keywords:
 - .NET Framework application configuration, cryptography
 - default cryptography
 ms.assetid: eee3ccb8-2c0d-4f35-b38d-6892a46c14e5
-ms.openlocfilehash: b5c1178519601d7dcb7c5b3014f413b6436746fb
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 23bf831a4374add55258f5fb41c17a5d4a8f14c3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816159"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832814"
 ---
 # <a name="configuring-cryptography-classes"></a>暗号化クラスの設定
-[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]コンピューターの管理者は、既定の暗号アルゴリズムと、.NET Framework と適切に記述されたアプリケーションを使用するアルゴリズムの実装を構成します。  などを暗号アルゴリズムの独自の実装を持つ企業では、Windows SDK の実装ではなく既定の出荷に実装するを確認することができます。 暗号化を使用するマネージ アプリケーションは、特定の実装にバインドするように常に選択できますが、crypto の構成システムを使用して暗号化オブジェクトを作成することをお勧めします。  
+Windows ソフトウェア開発キット (SDK) には、既定の暗号アルゴリズムと、.NET Framework と適切に記述されたアプリケーションを使用するアルゴリズムの実装を構成するコンピューターの管理者が使用できます。  などを暗号アルゴリズムの独自の実装を持つ企業では、Windows SDK の実装ではなく既定の出荷に実装するを確認することができます。 暗号化を使用するマネージ アプリケーションは、特定の実装にバインドするように常に選択できますが、crypto の構成システムを使用して暗号化オブジェクトを作成することをお勧めします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [暗号化クラスへのアルゴリズム名の割り当て](../../../docs/framework/configure-apps/map-algorithm-names-to-cryptography-classes.md)  

@@ -40,12 +40,12 @@ helpviewer_keywords:
 ms.assetid: cf624c1f-c160-46a1-bb2b-213587688da7
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 10ed899f1eda3b7fcaa95391b9af6dddb5c94560
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9b46404ee791855301611c1d883f26514b9b9d2f
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949228"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833802"
 ---
 # <a name="reliability-best-practices"></a>信頼性に関するベスト プラクティス
 
@@ -265,7 +265,7 @@ COM シングルスレッド アパートメント (STA) を使用するコー�
 
 ### <a name="avoid-unmanaged-memory-if-possible"></a>可能な限りアンマネージ メモリを避ける
 
-オペレーティング システム ハンドルと同じように、アンマネージ メモリはリークする可能性があります。  可能であれば、[stackalloc](~/docs/csharp/language-reference/keywords/stackalloc.md) を使ってスタック上のメモリを使うか、[fixed ステートメント](~/docs/csharp/language-reference/keywords/fixed-statement.md) や byte[] を使う <xref:System.Runtime.InteropServices.GCHandle> などの固定されたマネージド オブジェクトを使うようにします。  最終的には <xref:System.GC> がこれらをクリーンアップします。  ただし、アンマネージ メモリを割り当てる必要がある場合は、<xref:System.Runtime.InteropServices.SafeHandle> から派生するクラスを使ってメモリの割り当てをラップすることを考えます。
+オペレーティング システム ハンドルと同じように、アンマネージ メモリはリークする可能性があります。 可能であれば、[stackalloc](~/docs/csharp/language-reference/operators/stackalloc.md) を使ってスタック上のメモリを使うか、[fixed ステートメント](~/docs/csharp/language-reference/keywords/fixed-statement.md) や byte[] を使う <xref:System.Runtime.InteropServices.GCHandle> などの固定されたマネージド オブジェクトを使うようにします。 最終的には <xref:System.GC> がこれらをクリーンアップします。 ただし、アンマネージ メモリを割り当てる必要がある場合は、<xref:System.Runtime.InteropServices.SafeHandle> から派生するクラスを使ってメモリの割り当てをラップすることを考えます。
 
 <xref:System.Runtime.InteropServices.SafeHandle> が適切ではないケースが少なくとも 1 つあることに注意してください。  メモリの割り当てや解放を行う COM メソッド呼び出しでは、1 つの DLL が `CoTaskMemAlloc` を使ってメモリを割り当てた後、別の DLL が `CoTaskMemFree` でそのメモリを解放するのが一般的です。  これらの場所で <xref:System.Runtime.InteropServices.SafeHandle> を使うのは、他の DLL がメモリの有効期間を制御できるようにする代わりに、アンマネージ メモリの有効期間を <xref:System.Runtime.InteropServices.SafeHandle> の有効期間に結び付けようとするため不適切です。
 

@@ -236,8 +236,6 @@
               href: keywords/sizeof.md
             - name: typeof
               href: keywords/typeof.md
-            - name: stackalloc
-              href: keywords/stackalloc.md
             - name: nameof
               href: keywords/nameof.md
         - name: 変換キーワード
@@ -367,6 +365,8 @@
           displayName: null-coalescing
         - name: => 演算子
           href: operators/lambda-operator.md
+        - name: stackalloc
+          href: operators/stackalloc.md
         - name: true および false 演算子
           href: operators/true-false-operators.md
     - name: 'C# 特殊文字'

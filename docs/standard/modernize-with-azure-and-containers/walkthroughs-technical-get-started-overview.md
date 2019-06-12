@@ -2,12 +2,12 @@
 title: チュートリアルと技術的な概要
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |チュートリアルと技術的な概要します。
 ms.date: 04/28/2018
-ms.openlocfilehash: 0b0dbae999e31150a55368d669f718eea0925d51
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 1ae6f3c1e739184356b97fa96e74bab402bf1d2a
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758786"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832971"
 ---
 # <a name="walkthroughs-and-technical-get-started-overview"></a>チュートリアルと技術的な概要
 
@@ -132,7 +132,7 @@ MVC、Web フォーム、または WCF では、運用、開発、およびテ�
 
 ### <a name="technical-walkthrough-availability"></a>テクニカル チュートリアルの可用性
 
-完全な技術チュートリアル、eShopModernizing GitHub リポジトリ wiki で提供されています。 <https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
+完全な技術チュートリアル、eShopModernizing GitHub リポジトリ wiki で提供されています。 <https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ### <a name="overview"></a>概要
 
@@ -178,7 +178,7 @@ Windows コンテナーは、Azure にデプロイするときに、オンプレ
 
 このコンテンツの詳細については、GitHub wiki 詳細します。
 
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/03.-How-to-deploy-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/06.-Deploying-your-Windows-Containers-based-app-into-Azure-VMs-(Including-CI-CD)>
 
 ## <a name="walkthrough-4-deploy-your-windows-containers-based-apps-to-azure-container-instances-aci"></a>チュートリアル 4:Azure Container Instances (ACI) への Windows コンテナー ベースのアプリをデプロイします。
 
@@ -216,7 +216,7 @@ Azure Container Instances では、簡単に作成し、仮想マシンをプロ
 
 このコンテンツの詳細については、GitHub wiki 詳細します。
 
-[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)TBD)
+[https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances)](https://github.com/dotnet-architecture/eShopModernizing/wiki/05.-Deploying-the-Apps-to-ACI-(Azure-Container-Instances))
 
 ## <a name="walkthrough-5-deploy-your-windows-containers-based-apps-to-kubernetes-in-azure-container-service"></a>チュートリアル 5:Windows コンテナー ベースのアプリを Azure Container Service で Kubernetes にデプロイします。
 
@@ -224,7 +224,7 @@ Azure Container Instances では、簡単に作成し、仮想マシンをプロ
 
 完全な技術チュートリアル、eShopModernizing GitHub リポジトリ wiki で提供されています。
 
-<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
 
 ### <a name="overview"></a>概要
 
@@ -276,7 +276,35 @@ Kubernetes で開発者を他のユーザーの間で、次の機能を容易に
 
 ## <a name="next-steps"></a>次の手順
 
-このコンテンツの詳細については、GitHub wiki 詳細します。 <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-C-CD)>
+このコンテンツの詳細については、GitHub wiki 詳細します。 <https://github.com/dotnet-architecture/eShopModernizing/wiki/04.-How-to-deploy-your-Windows-Containers-based-apps-into-Kubernetes-in-Azure-Container-Service-(Including-CI-CD)>
+
+## <a name="walkthrough-6-deploy-your-windows-containers-based-apps-to-azure-app-service-for-containers"></a>チュートリアル 6:コンテナー用の Azure App Service への Windows コンテナー ベースのアプリをデプロイします。
+
+### <a name="technical-walkthrough-availability"></a>テクニカル チュートリアルの可用性
+
+完全な技術チュートリアル、eShopModernizing GitHub リポジトリ wiki で提供されています。
+
+<https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
+
+### <a name="overview"></a>概要
+
+Windows コンテナーを使用して単純なコンテナー化されたアプリケーションは、コンテナーの Azure App Service に簡単にデプロイできます。 これは、ほとんどの Windows コンテナー ベースのアプリケーションの推奨されるアプローチです。
+
+### <a name="goals"></a>目的
+
+このチュートリアルの目的では、(Docker Hub または Azure Container Registry) のレジストリからコンテナーを Azure App Service に Windows コンテナー ベース アプリケーションを展開する方法について説明します。
+
+### <a name="scenario"></a>シナリオ
+
+![Windows コンテナー ベースのアプリのコンテナーの Azure App Service をデプロイします。](./media/image5-11.png)
+
+### <a name="benefits"></a>利点
+
+Azure App Service の PaaS の特典と組み合わせて使用するコンテナーのメリットを提供するコンテナー用の Azure App Service に展開します。 App service では、垂直方向および水平方向に簡単にスケールできるし、変化する需要に合わせて自動スケールするように構成できます。 ダウンタイムなしで更新プログラムを実行できるし、レジストリから継続的なデプロイの構成は簡単にも構成します。
+
+## <a name="next-steps"></a>次の手順
+
+このコンテンツの詳細については、GitHub wiki 詳細します。 <https://github.com/dotnet-architecture/eShopModernizing/wiki/Deploy-Windows-Container-to-Azure-App-Service>
 
 > [!div class="step-by-step"]
 > [前へ](lift-and-shift-existing-apps-devops/migrate-to-hybrid-cloud-scenarios.md)

@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: ccd68284-f3a8-47b8-bc3f-92e5fe3a1640
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b0c56018c61e5566043fb2b9ba8bbee042093f12
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 7214fa0342d0946044861c4e375c7797ad6a06b1
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758153"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833760"
 ---
 # <a name="runtime-profiling"></a>ランタイム プロファイリング
 プロファイリングは、任意の開発シナリオまたは配置シナリオでパフォーマンス データを収集する方法の 1 つです。 このセクションは、アプリケーションのパフォーマンスに関する情報の収集を必要とする開発者およびシステム管理者を対象にしています。  
   
 ## <a name="tracking-performance-using-the-performance-monitor-perfmonexe"></a>パフォーマンス モニター (Perfmon.exe) を使用したパフォーマンスの追跡  
- パフォーマンス モニターは、.NET Framework アプリケーションにプロファイルを使用する最も簡単なツールです。 パフォーマンス モニターは、共通言語ランタイムおよび [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]と共にインストールされる .NET Framework パフォーマンス カウンター内のデータをグラフィカルに表示します。 これらのカウンターを使用することにより、メモリ管理から Just-In-Time (JIT) コンパイラのパフォーマンスまで、あらゆる情報を監視できます。 .NET パフォーマンス カウンターは、アプリケーションが使用するリソースに関する情報を提供します。この情報は、アプリケーションのパフォーマンスを判断するための間接的な指標となります。 これらのカウンターは、アプリケーション内部の動作状況を把握するために使用します。  
+ パフォーマンス モニターは、.NET Framework アプリケーションにプロファイルを使用する最も簡単なツールです。 パフォーマンス モニターは、共通言語ランタイムと Windows ソフトウェア開発キット (SDK) にインストールされている .NET Framework のパフォーマンス カウンター内のデータをグラフィカルに表示します。 これらのカウンターを使用することにより、メモリ管理から Just-In-Time (JIT) コンパイラのパフォーマンスまで、あらゆる情報を監視できます。 .NET パフォーマンス カウンターは、アプリケーションが使用するリソースに関する情報を提供します。この情報は、アプリケーションのパフォーマンスを判断するための間接的な指標となります。 これらのカウンターは、アプリケーション内部の動作状況を把握するために使用します。  
   
 #### <a name="to-run-perfmonexe-on-windows-vista-and-later-versions"></a>perfmon.exe を Windows Vista 以降のバージョンで実行するには  
   

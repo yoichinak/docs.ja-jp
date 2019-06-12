@@ -2,12 +2,12 @@
 title: F# コードのフォーマットに関するガイドライン
 description: 書式設定するためのガイドラインについて説明しますF#コード。
 ms.date: 02/08/2019
-ms.openlocfilehash: bfec950395312eac7e837abf8694a4381d5ca82f
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8be5337d3f593c7e5a2f32cb7231cb7f759fb509
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816183"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833905"
 ---
 # <a name="f-code-formatting-guidelines"></a>F# コードのフォーマットに関するガイドライン
 
@@ -290,12 +290,13 @@ x ^^^ y // Bitwise xor, also for working with “flags” enumeration
 
 ### <a name="use-prefix-syntax-for-generics-foot-in-preference-to-postfix-syntax-t-foo"></a>ジェネリックのプレフィックスの構文を使用して (`Foo<T>`) 方が優先的後置構文 (`T Foo`)
 
-F#ジェネリック型の名前付けの両方、後置 ML スタイルを継承 (たとえば、 `int list`) .NET スタイルのプレフィックスと (たとえば、 `list<int>`)。 次の 4 つの特定の型を除く、.NET スタイルを優先するには。
+F#ジェネリック型の名前付けの両方、後置 ML スタイルを継承 (たとえば、 `int list`) .NET スタイルのプレフィックスと (たとえば、 `list<int>`)。 5 つの特定の型を除く、.NET スタイルを優先するには。
 
 1. F#後置形式を使用して、リスト、:`int list`なく`list<int>`します。
 2. F#オプションを使用して、後置形式:`int option`なく`option<int>`します。
-3. F#構文の名前を使用して、配列、`int[]`なく`int array`または`array<int>`します。
-4. 参照セルを使用して`int ref`なく`ref<int>`または`Ref<int>`します。
+3. F#値のオプションを使用して、後置形式:`int voption`なく`voption<int>`します。
+4. F#構文の名前を使用して、配列、`int[]`なく`int array`または`array<int>`します。
+5. 参照セルを使用して`int ref`なく`ref<int>`または`Ref<int>`します。
 
 他のすべての種類では、前置形式を使用します。
 

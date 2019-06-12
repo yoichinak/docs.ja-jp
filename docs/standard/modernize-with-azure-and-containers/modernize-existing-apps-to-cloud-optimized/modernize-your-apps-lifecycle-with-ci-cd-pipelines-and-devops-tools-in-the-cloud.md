@@ -2,12 +2,12 @@
 title: クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |CI/CD パイプラインや DevOps ツール、クラウドでアプリのライフ サイクルを最新化します。
 ms.date: 04/30/2018
-ms.openlocfilehash: cc991bba5df3a9cd972d9a172c1a8f1035ce8c58
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: fb4bfab4a891e9c8a73867f18cb8249775f9b7b9
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758641"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833958"
 ---
 # <a name="modernize-your-apps-lifecycle-with-cicd-pipelines-and-devops-tools-in-the-cloud"></a>クラウドの CI/CD パイプラインや DevOps ツールでアプリのライフ サイクルを最新化する
 
@@ -17,7 +17,7 @@ ms.locfileid: "66758641"
 
 Azure DevOps サービスには、継続的インテグレーションとさまざまな公式の Azure DevOps サービス展開作業を環境に複数コンテナー アプリケーションの展開がサポートされています。
 
-- [スタンドアロンの Docker ホスト VM にデプロイ](https://docs.microsoft.com/azure/devops/build-release/apps/cd/deploy-docker-windowsvm)(Linux または Windows Server 2016 以降)
+- [Azure Web app for Containers にデプロイします。](https://docs.microsoft.com/azure/devops/pipelines/apps/cd/deploy-docker-webapp?view=azure-devops)
 
 - [Azure Container Service と Kubernetes にデプロイします。](https://docs.microsoft.com/azure/devops/build-release/apps/cd/azure/deploy-container-kubernetes)
 

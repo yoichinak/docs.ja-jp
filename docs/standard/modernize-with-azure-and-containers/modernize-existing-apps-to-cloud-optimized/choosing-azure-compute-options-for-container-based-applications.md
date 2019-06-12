@@ -2,12 +2,12 @@
 title: コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 ms.date: 05/04/2018
-ms.openlocfilehash: d91cd279402dc24beb5f766c06cb85ac8d74f482
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 64ae542e006bf7a5d7a0be08fe1cff9770552a77
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758811"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833851"
 ---
 # <a name="choosing-azure-compute-platforms-for-container-based-applications"></a>コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択
 
@@ -17,8 +17,7 @@ ms.locfileid: "66758811"
 
 - **1 つのモノリシック アプリ:** Azure App Service を選択します。
 - **N 層アプリ:** 1 つまたはいくつかのバックエンド サービスがある場合は、Azure Kubernetes Service (AKS) または App Service などのオーケストレーターを選択します。
-- **Linux のマイクロ サービス:** AKS と Kubernetes を選択します。
-- **Windows のマイクロ サービス:** コンテナーの Azure Web アプリを選択します。
+- **マイクロ サービス:** AKS または Azure Web アプリ コンテナーを選択します。
 - **サーバーレス関数 (&) のイベント ハンドラー:** Azure Functions を選択します。
 - **大規模なバッチの場合:** Azure Batch を選択します。
 

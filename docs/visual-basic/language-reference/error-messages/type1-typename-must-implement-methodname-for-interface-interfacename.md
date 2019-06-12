@@ -1,5 +1,5 @@
 ---
-title: <type1>'<typename>"実装する必要があります"<methodname>'interface' の<interfacename>'
+title: <type1>'<typename>'実装する必要があります'<methodname>'interface' の<interfacename>'
 ms.date: 07/20/2015
 f1_keywords:
 - vbc30149

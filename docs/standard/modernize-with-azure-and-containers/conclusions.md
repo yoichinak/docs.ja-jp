@@ -2,12 +2,12 @@
 title: まとめ
 description: Azure クラウドおよび Windows コンテナーで既存の .NET アプリケーションを近代化 |結論
 ms.date: 10/26/2017
-ms.openlocfilehash: c5d4a3d504e7d62f74cf74e7b3f53f44f4b9b152
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: c7c4042b224577238ae74bd786d4803e487998e7
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758875"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833946"
 ---
 # <a name="conclusions"></a>まとめ
 
@@ -15,7 +15,7 @@ ms.locfileid: "66758875"
 
 - Docker コンテナーは、サーバー ベースのアプリケーションまたはサービスの配置の標準的な単位になっています。
 
-- 運用環境で拡張性の高い Windows コンテナー ベースのアプリケーションをホストする (Kubernetes) などのオーケストレーターを使用する必要があります。
+- 運用環境で拡張性の高いコンテナー ベースのアプリケーションをホストする (Kubernetes) などのオーケストレーターを使用する必要があります。
 
 - コンテナーをホストする azure Vm は、クラウドで小規模な開発/テスト環境を作成する高速で簡単な方法です。
 

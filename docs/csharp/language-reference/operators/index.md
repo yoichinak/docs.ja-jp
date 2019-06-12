@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c1f891314a2490d6dbf22977ea5a5f69533b330d
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300322"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833267"
 ---
 # <a name="c-operators"></a>C# 演算子
 
@@ -67,7 +67,7 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 [sizeof](../keywords/sizeof.md) – 型オペランドのサイズをバイト単位で返します。
 
-[stackalloc](../keywords/stackalloc.md) – スタックにメモリ ブロックを割り当てます。
+[stackalloc](stackalloc.md) – スタックにメモリ ブロックを割り当てます。
 
 [->](pointer-related-operators.md#pointer-member-access-operator--) – メンバー アクセスと組み合わせてポインターを間接参照します。
 
