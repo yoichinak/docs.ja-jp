@@ -17,15 +17,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed1d7ad95b7c8474121994d0f54557c1c36cb531
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 95c84f7f40db0096b26ec448f8f229cdbfe3afb1
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61917377"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025905"
 ---
 # <a name="icordebugappdomain3getcachedwinrttypesforiids-method"></a>ICorDebugAppDomain3::GetCachedWinRTTypesForIIDs メソッド
-キャッシュされた列挙子を取得[!INCLUDE[wrt](../../../../includes/wrt-md.md)]アプリケーション ドメイン内の型、インターフェイスの id に基づいています。  
+インターフェイスの識別子に基づいて、アプリケーション ドメインで、キャッシュ済みの Windows ランタイム型の列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,16 +42,16 @@ HRESULT GetCachedWinRTTypesForIIDs (
  [in]必要な種類の数。  
   
  `iidsToResolve`  
- [in]マネージ表現に対応するインターフェイスの識別子を含む配列へのポインター、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]を取得する型。  
+ [in]取得する Windows ランタイム型のマネージ表現に対応するインターフェイスの識別子を含む配列へのポインター。  
   
  `ppTypesEnum`  
- [out]キャッシュの列挙を許可する"ICorDebugTypeEnum"インターフェイス オブジェクトのアドレスへのポインターの表現の管理、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]インターフェイス識別子に基づいて、型が取得`iidsToResolve`します。  
+ [out]インターフェイス識別子に基づいて、Windows ランタイム型のキャッシュされたマネージ表現の列挙を許可する"ICorDebugTypeEnum"インターフェイス オブジェクトのアドレスへのポインターが取得`iidsToResolve`します。  
   
 ## <a name="remarks"></a>Remarks  
  "ICorDebugTypeEnum"コレクション内の対応するエントリの種類には、メソッドは、特定のインターフェイスの識別子の情報を取得する失敗した場合、`ELEMENT_TYPE_END`のデータの取得に問題に起因するエラーまたは`ELEMENT_TYPE_VOID`不明なインターフェイス識別子。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]  
+ **プラットフォーム:** Windows ランタイム  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

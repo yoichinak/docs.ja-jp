@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6c3e9e58a8cfe5f18aba2e8db56f84d089cc49df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62055018"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025578"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>複数のプラットフォームを対象とするライブラリのアプリケーション リソース
 .NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)プロジェクトの種類が、クラス ライブラリのリソースを複数のプラットフォームからアクセスできることを確認します。 このプロジェクトの種類では、Visual Studio 2012 で使用できる、.NET Framework クラス ライブラリの移植可能なサブセットを対象とします。 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] を使用すると、デスクトップ アプリケーション、Silverlight アプリケーション、Windows Phone アプリケーション、および [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからライブラリにアクセスできます。
@@ -47,9 +47,9 @@ ms.locfileid: "62055018"
 ## <a name="the-includenetportableincludesnet-portable-mdmd-and-windows-store-apps"></a>[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]と Windows ストア アプリ
  [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] プロジェクトでは、リソースを .resx ファイルに格納します。これらのファイルはその後 .resources ファイルにコンパイルされ、コンパイル時にメイン アセンブリまたはサテライト アセンブリに埋め込まれます。 一方、[!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションではリソースを .resw ファイルに格納する必要があります。このファイルはその後、単一のパッケージ リソース インデックス (PRI) ファイルにコンパイルされます。 ただし、ファイル形式に互換性がないにもかかわらず、[!INCLUDE[net_portable](../../../includes/net-portable-md.md)] は [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションで機能します。
 
- クラス ライブラリを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションで使用するには、Windows ストア アプリケーション プロジェクトでその参照を追加します。 Visual Studio ではアセンブリのリソースを .resw ファイルに透過的に抽出し、それを使用して PRI ファイルを生成して、そこから [!INCLUDE[wrt](../../../includes/wrt-md.md)] がリソースを抽出できるようにします。 実行時に [!INCLUDE[wrt](../../../includes/wrt-md.md)] は [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] 内のコードを実行しますが、汎用性のあるクラス ライブラリのリソースは PRI ファイルから取得します。
+ クラス ライブラリを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションで使用するには、Windows ストア アプリケーション プロジェクトでその参照を追加します。 Visual Studio は透過的に .resw ファイルに、アセンブリからリソースを抽出し、Windows ランタイムがリソースを抽出 PRI ファイルの生成に使用します。 Windows ランタイムでコードが実行、実行時に、[!INCLUDE[net_portable](../../../includes/net-portable-md.md)]がポータブル クラス ライブラリのリソースは PRI ファイルから取得します。
 
- ローカライズされたリソースが [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] プロジェクトに含まれている場合は、デスクトップ アプリケーション内のライブラリの場合と同様に、ハブ アンド スポーク モデルを使用してこれらを配置します。 メイン リソース ファイルおよびローカライズされたリソース ファイルを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションで使用するには、参照をメイン アセンブリに追加します。 コンパイル時に、Visual Studio はメイン リソース ファイルとローカライズされているリソース ファイルからリソースを個別の .resw ファイルに抽出します。 次に、実行時に [!INCLUDE[wrt](../../../includes/wrt-md.md)] によってアクセスされる単一の PRI ファイルに .resw ファイルをコンパイルします。
+ ローカライズされたリソースが [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] プロジェクトに含まれている場合は、デスクトップ アプリケーション内のライブラリの場合と同様に、ハブ アンド スポーク モデルを使用してこれらを配置します。 メイン リソース ファイルおよびローカライズされたリソース ファイルを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションで使用するには、参照をメイン アセンブリに追加します。 コンパイル時に、Visual Studio はメイン リソース ファイルとローカライズされているリソース ファイルからリソースを個別の .resw ファイルに抽出します。 実行時に、Windows ランタイムにアクセスする単一の PRI ファイルに .resw ファイルをコンパイルします。
 
 <a name="NonLoc"></a>
 ## <a name="example-non-localized-includenetportableincludesnet-portable-mdmd"></a>例:ローカライズされていません。 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)]

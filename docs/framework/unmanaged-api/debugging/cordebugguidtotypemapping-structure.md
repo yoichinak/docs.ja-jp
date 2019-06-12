@@ -18,15 +18,15 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dc7093edaf12e801a1e1adc52b0be823ff92b91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38e1b19d6340f559e6f8b7e0f7bc042a10df16c3
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61651799"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025990"
 ---
 # <a name="cordebugguidtotypemapping-structure"></a>CorDebugGuidToTypeMapping 構造体
-マップを[!INCLUDE[wrt](../../../../includes/wrt-md.md)]を対応する ICorDebugType オブジェクトの GUID。  
+Windows ランタイムの GUID を対応する ICorDebugType オブジェクトにマップします。  
   
 ## <a name="syntax"></a>構文  
   
@@ -41,11 +41,11 @@ typedef struct CorDebugGuidToTypeMapping {
   
 |メンバー|説明|  
 |------------|-----------------|  
-|`iid`|キャッシュされた GUID[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型。|  
+|`iid`|キャッシュされている Windows ランタイム型の GUID です。|  
 |`pType`|キャッシュされている型に関する情報を提供する ICorDebugType オブジェクトへのポインター。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:** [!INCLUDE[wrt](../../../../includes/wrt-md.md)]します。  
+ **プラットフォーム:** Windows ランタイム。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

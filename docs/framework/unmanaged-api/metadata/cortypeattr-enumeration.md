@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 43e7c973ee22350f26b4f86bcc8b4c4c727291ef
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f65c2f74ec5efda027d90b3ffda9a5da5c239122
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045189"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025718"
 ---
 # <a name="cortypeattr-enumeration"></a>CorTypeAttr 列挙型
 メタデータ型を示す値が格納されます。  
@@ -100,7 +100,7 @@ typedef enum CorTypeAttr {
 |`tdSpecialName`|特殊なクラス名を指定します。 その名前で記述する方法。|  
 |`tdImport`|型がインポートされることを指定します。|  
 |`tdSerializable`|型がシリアル化可能なことを指定します。|  
-|`tdWindowsRuntime`|この型を指定します、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]型。|  
+|`tdWindowsRuntime`|この型が、Windows ランタイム型であることを指定します。|  
 |`tdStringFormatMask`|文字列のエンコードおよび書式設定方法に関する情報を取得します。|  
 |`tdAnsiClass`|この型に、LPTSTR ANSI として解釈するを指定します。|  
 |`tdUnicodeClass`|この型が Unicode として LPTSTR を解釈するを指定します。|  
@@ -114,7 +114,7 @@ typedef enum CorTypeAttr {
 |`tdHasSecurity`|型が関連付けられているセキュリティを指定します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   

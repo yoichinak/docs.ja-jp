@@ -22,12 +22,12 @@ helpviewer_keywords:
 - Exit statement [Visual Basic], For Each...Next statements
 - iteration
 ms.assetid: ebce3120-95c3-42b1-b70b-fa7da40c75e2
-ms.openlocfilehash: ecde6ca8d3a95e356c5b1389ba95c4ad72b68d45
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5c2332b7371ec4ac7b5cfc0681466536d49bb7be
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64623905"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026075"
 ---
 # <a name="for-eachnext-statement-visual-basic"></a>For Each...Next ステートメント (Visual Basic)
 ステートメントのグループをコレクション内の各要素に対して繰り返されます。  
@@ -49,7 +49,7 @@ Next [ element ]
 |用語|定義|  
 |---|---|  
 |`element`|必要な`For Each`ステートメント。 省略可能で、`Next`ステートメント。 変数。 コレクションの要素を反復処理するために使用します。|  
-|`datatype`|場合に、必ず`element`既に宣言されていません。 データ型`element`します。|  
+|`datatype`|省略可能な場合[ `Option Infer` ](option-infer-statement.md) (既定)、または`element`は既に宣言されている。 場合に必要な`Option Infer`がオフと`element`既に宣言されていません。 `element`のデータ型。|  
 |`group`|必須。 コレクション型またはオブジェクト型を含む変数を指定します。 コレクションを参照、`statements`られます。|  
 |`statements`|省略可能です。 1 つまたは複数のステートメント間`For Each`と`Next`内の各項目で実行される`group`します。|  
 |`Continue For`|省略可能です。 先頭に制御を転送、`For Each`ループします。|  
@@ -113,8 +113,8 @@ Next [ element ]
  ときに、 `For Each`.`Next` ステートメントが実行されて、Visual Basic では、コレクション、ループの開始前に、1 つだけの時間を評価します。 ステートメント ブロックが変更された場合`element`または`group`、これらの変更は、ループの反復処理に影響はありません。  
   
  ときに、コレクション内のすべての要素連続的に割り当てられている`element`、`For Each`停止をループし、次のステートメントのパスを制御、`Next`ステートメント。  
-  
- 場合`element`宣言されていない、このループの外側に宣言する必要がありますで、`For Each`ステートメント。 型を宣言する`element`を使用して明示的に、`As`ステートメント、またはするを型の推定の型を割り当てるを利用できます。 どちらの場合のスコープで`element`ループの本体します。 ただし、宣言することはできません`element`外側と、ループ内での両方。  
+ 
+場合[Option Infer](option-infer-statement.md)は Visual Basic コンパイラ (既定の設定)、上のデータ型を推論できる`element`します。 オフの場合と`element`宣言されていない、ループの外側に宣言する必要がありますで、`For Each`ステートメント。 データ型を宣言する`element`を明示的に、使用、`As`句。 外側の要素のデータ型が定義されていない場合、 `For Each`.`Next`コンス トラクター、そのスコープがループの本体。 宣言することはできません注`element`外側と、ループ内での両方。
   
  必要に応じて指定することができます`element`で、`Next`ステートメント。 入れ子にしていない場合は特に、プログラムの読みやすさが向上しますこの`For Each`ループします。 対応する表示されるものと同じ変数を指定する必要があります`For Each`ステートメント。  
   
@@ -124,7 +124,7 @@ Next [ element ]
   
  特定の順序でコレクションを走査することで、コードが依存している場合、 `For Each`.`Next`ループが最適な選択肢はありませんが、コレクション、列挙子オブジェクトの特性がわかっている場合を除き公開します。 走査の順序がによっての Visual Basic では、によって決定されていない、<xref:System.Collections.IEnumerator.MoveNext%2A>列挙子オブジェクトのメソッド。 コレクションの要素が、最初に返される予測できないことのため、 `element`、特定の要素の後に返される次であるか。 など、さまざまなループ構造を使用して、信頼性の高い結果を実現することがあります`For`.`Next`または`Do`.`Loop`.  
   
- データ型`element`の要素のデータを入力するようにある必要があります`group`に変換できます。  
+ランタイム内の要素を変換できる必要があります`group`に`element`します。 [`Option Strict`] ステートメントは、拡大と縮小の両方が許可されているかどうかを制御します。 (`Option Strict`はオフで、既定値)、または拡大変換だけを許可するかどうか (`Option Strict`上)。 詳細については、次を参照してください。[縮小変換](#narrowing-conversions)します。
   
  データ型`group`コレクションまたは列挙可能なである配列を参照する参照型である必要があります。 つまり通常`group`を実装するオブジェクトを指す、<xref:System.Collections.IEnumerable>のインターフェイス、`System.Collections`名前空間または<xref:System.Collections.Generic.IEnumerable%601>のインターフェイス、`System.Collections.Generic`名前空間。 `System.Collections.IEnumerable` 定義、<xref:System.Collections.IEnumerable.GetEnumerator%2A>メソッドで、コレクションの列挙子オブジェクトを返します。 列挙子オブジェクトを実装して、`System.Collections.IEnumerator`のインターフェイス、`System.Collections`名前空間を公開し、<xref:System.Collections.IEnumerator.Current%2A>プロパティおよび<xref:System.Collections.IEnumerator.Reset%2A>と<xref:System.Collections.IEnumerator.MoveNext%2A>メソッド。 Visual Basic では、これらを使用して、コレクションをスキャンします。  
   

@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 36e6313ae7b4c67a20bee6d2a76a4ed1da84acbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e1da347fd85e1b3856615faf49c60b607cc7f0da
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749814"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025841"
 ---
 # <a name="icordebugcomobjectvaluegetcachedinterfacetypes-method"></a>ICorDebugComObjectValue::GetCachedInterfaceTypes メソッド
 現在のオブジェクトにキャストまたはとして使用されていることには、列挙子インターフェイス型を提供します。  
@@ -35,7 +35,7 @@ HRESULT GetCachedInterfaceTypes(
   
 ## <a name="parameters"></a>パラメーター  
  `bIInspectableOnly`  
- [in]メソッドがのみ返すかどうかを示す値[!INCLUDE[wrt](../../../../includes/wrt-md.md)]インターフェイス (`IInspectable`インターフェイス) またはランタイム呼び出し可能ラッパー (RCW) によってキャッシュされたすべての COM インターフェイスです。  
+ [in]メソッドが唯一の Windows ランタイム インターフェイスを返すかどうかを示す値 (`IInspectable`インターフェイス) またはランタイム呼び出し可能ラッパー (RCW) によってキャッシュされたすべての COM インターフェイスです。  
   
  `ppInterfacesEnum`  
  [out]キャッシュされたインターフェイス型を表す ICorDebugType オブジェクトへのアクセスを提供する ICorDebugTypeEnum 列挙子のアドレスへのポインターがに従ってフィルター処理された`bIInspectableOnly`します。  
@@ -43,7 +43,7 @@ HRESULT GetCachedInterfaceTypes(
 ## <a name="remarks"></a>Remarks  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

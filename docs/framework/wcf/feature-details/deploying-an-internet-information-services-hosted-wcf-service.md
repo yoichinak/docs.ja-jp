@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービスでホストされる WCF サービスの配置
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 99ed9ce5304717073057f6712a2b96d910d43bea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61858321"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025732"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>インターネット インフォメーション サービスでホストされる WCF サービスの配置
 
@@ -27,7 +27,7 @@ IIS でホストされる WCF サービスの作成の詳細なチュートリ�
 
 ## <a name="ensure-that-iis-aspnet-and-wcf-are-correctly-installed-and-registered"></a>IIS、ASP.NET、および WCF が正しくインストールおよび登録されていることの確認
 
-IIS でホストされる WCF services が正しく機能するには、WCF、IIS、および ASP.NET をインストールする必要があります。 (.NET Framework の一部) として WCF、ASP.NET、および IIS をインストールする手順は、オペレーティング システムによって異なります。 WCF と .NET Framework のインストールの詳細については、次を参照してください。[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)します。 Windows 10 で IIS をインストールするには、開く**プログラムと機能**で**コントロール パネルの **選び**オンまたはオフにする Windows 機能**。 **Windows 機能**を選択します**インターネット インフォメーション サービス**選び、 **OK**します。
+IIS でホストされる WCF services が正しく機能するには、WCF、IIS、および ASP.NET をインストールする必要があります。 (.NET Framework の一部) として WCF、ASP.NET、および IIS をインストールする手順は、オペレーティング システムによって異なります。 WCF と .NET Framework のインストールの詳細については、次を参照してください。[開発者向けの .NET Framework のインストール](../../install/guide-for-developers.md)します。 Windows 10 で IIS をインストールするには、開く**プログラムと機能**で**コントロール パネルの** 選び**オンまたはオフにする Windows 機能**。 **Windows 機能**を選択します**インターネット インフォメーション サービス**選び、 **OK**します。
 
 ![強調表示されている IIS と Windows の機能](media/windows-features-iis.png)
 
@@ -41,7 +41,7 @@ IIS でホストされる WCF services が正しく機能するには、WCF、II
 
 ## <a name="create-a-new-iis-application-or-reuse-an-existing-aspnet-application"></a>新しい IIS アプリケーションの作成、または既存の ASP.NET アプリケーションの再利用
 
-IIS でホストされる WCF サービスは、IIS アプリケーションの内部にする必要があります。 排他的に WCF サービスをホストする新しい IIS アプリケーションを作成することができます。 または、既にホストしている既存のアプリケーションに、WCF サービスをデプロイできる[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]コンテンツ (.aspx ページや ASP.NET Web サービス (ASMX))。 これらのオプションの詳細についてを参照してください、「ホスティング WCF - サイド ASP.NET を使用した」と「ASP.NET 互換モードでは WCF サービスをホスティング」セクション[WCF サービスと ASP.NET](wcf-services-and-aspnet.md)します。
+IIS でホストされる WCF サービスは、IIS アプリケーションの内部にする必要があります。 排他的に WCF サービスをホストする新しい IIS アプリケーションを作成することができます。 また、ASP.NET 2.0 のコンテンツ (.aspx ページや ASP.NET Web サービス (ASMX)) を既にホストしている既存のアプリケーションに、WCF サービスをデプロイできます。 これらのオプションの詳細についてを参照してください、「ホスティング WCF - サイド ASP.NET を使用した」と「ASP.NET 互換モードでは WCF サービスをホスティング」セクション[WCF サービスと ASP.NET](wcf-services-and-aspnet.md)します。
 
 [!INCLUDE[iis601](../../../../includes/iis601-md.md)] とそれ以降のバージョンでは、隔離されているオブジェクト指向プログラミング アプリケーションは定期的に再起動されることに注意してください。 既定値は 1740 分です。 サポートされている最大値は 71,582 分です。 この再起動は、無効にできます。 このプロパティの詳細については、次を参照してください。、 [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)します。
 
@@ -65,7 +65,7 @@ new ServiceHost( typeof( MyNamespace.MyServiceImplementationTypeName ) );
 
 ## <a name="deploy-the-service-implementation-to-the-iis-application"></a>IIS アプリケーションへのサービス実装の展開
 
-IIS でホストされる WCF サービスと同様の動的なコンパイル モデルを使用して、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]します。 、ASP.NET と同様に、次のように、さまざまな場所にいくつかの方法で、IIS でホストされる WCF サービスの実装コードをデプロイできます。
+IIS でホストされる WCF サービスは、ASP.NET 2.0 として同じの動的なコンパイル モデルを使用します。 、ASP.NET と同様に、次のように、さまざまな場所にいくつかの方法で、IIS でホストされる WCF サービスの実装コードをデプロイできます。
 
 - グローバル アセンブリ キャッシュ (GAC: Global Assembly Cache) またはアプリケーションの \bin ディレクトリに配置される、プリコンパイルされた .dll ファイルとして展開します。 プリコンパイルされたバイナリは、新しいバージョンのクラス ライブラリが展開されるまで更新されません。
 
@@ -73,7 +73,7 @@ IIS でホストされる WCF サービスと同様の動的なコンパイル �
 
 - コンパイルされていないコードは、.svc ファイルで直接配置します。 実装コードでは、後は、サービスの .svc ファイルに配置されているインラインことができます、 \@ServiceHost ディレクティブ。 インライン コードを変更すると、次の要求を受け取ったときにアプリケーションがリサイクルされ、再コンパイルされます。
 
-詳細については、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]コンパイル モデルを参照してください[ASP.NET コンパイルの概要](https://go.microsoft.com/fwlink/?LinkId=94773)します。
+ASP.NET 2.0 のコンパイル モデルの詳細については、次を参照してください。 [ASP.NET コンパイルの概要](https://go.microsoft.com/fwlink/?LinkId=94773)します。
 
 ## <a name="configure-the-wcf-service"></a>WCF サービスの構成
 

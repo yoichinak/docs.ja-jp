@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: eca4b66a3f7c1a96bb06827dde477f34cb904ba3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43bfec471fbcfc481e178f6610e0318e9538ee34
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906244"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025773"
 ---
 # <a name="corassemblyflags-enumeration"></a>CorAssemblyFlags 列挙型
 アセンブリ コンパイルに適用されるメタデータを記述する値が格納されます。  
@@ -76,10 +76,10 @@ typedef enum CorAssemblyFlags {
 |`afRetargetable`|実行時に、別の発行者からのアセンブリにアセンブリを再ターゲットできることを示します。|  
 |`afContentType_Mask`|コンテンツの種類を示すマスク。|  
 |`afContentType_Default`|既定のコンテンツ タイプを示します。|  
-|`afContentType_WindowsRuntime`|示す、[!INCLUDE[wrt](../../../../includes/wrt-md.md)]コンテンツの種類。|  
+|`afContentType_WindowsRuntime`|Windows ランタイムのコンテンツの種類を示します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorHdr.h  
   

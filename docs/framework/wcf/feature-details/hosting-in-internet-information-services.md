@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: d881a75e95bc3c3eef1df651b380210ff51ea3ce
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 8563662a4408d0425e92b960301311ce5d423f9d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877503"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025753"
 ---
 # <a name="hosting-in-internet-information-services"></a>インターネット インフォメーション サービスでのホスティング
 Windows Communication Foundation (WCF) サービスをホストするための 1 つは、インターネット インフォメーション サービス (IIS) アプリケーション内でです。 このホスティング モデルは、ASP.NET と ASP.NET Web サービス (ASMX) Web サービスによって使用されるモデルに似ています。  
@@ -34,7 +34,7 @@ Windows Communication Foundation (WCF) サービスをホストするための 1
   
 - ASP.NET のように ASP.NET でホストされる WCF サービスを利用できます ASP.NET の共有ホスティング モデルの改良されたサーバー密度とスケーラビリティのための共通のワーカー プロセスで複数のアプリケーションが存在します。  
   
-- IIS でホストされる WCF サービスと同様の動的なコンパイル モデルを使用して、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]の展開には、サービスがホストされている、開発が簡単になります。  
+- IIS でホストされる WCF サービスは、ASP.NET 2.0 は、ホステッド サービスの開発と展開を簡略化として同じの動的なコンパイル モデルを使用します。  
   
  注意してくださいは IIS で WCF サービスをホストする場合は、その IIS 5.1 と[!INCLUDE[iis601](../../../../includes/iis601-md.md)]は HTTP 通信のみに制限されています。 ホスト環境の選択の詳細については、次を参照してください。[ホスティング サービス](../../../../docs/framework/wcf/hosting-services.md)します。  
   

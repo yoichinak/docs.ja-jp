@@ -2,16 +2,16 @@
 title: サポートされているデプロイ シナリオ - WCF
 ms.date: 03/30/2017
 ms.assetid: 3399f208-3504-4c70-a22e-a7c02a8b94a6
-ms.openlocfilehash: 986459e14206f073686474f5d65845ce682e1270
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7b508f53365c1b4b90e2883ddb9d5f2a71c7e814
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881057"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025624"
 ---
 # <a name="supported-deployment-scenarios"></a>サポートされる展開シナリオ
 
-部分的に信頼されたアプリケーションで使用するためにサポートされる Windows Communication Foundation (WCF) 機能のサブセットは、WCF を使用するが、一部のシナリオの要件を満たすために設計されています。 WCF がインターネット規模の要件を満たしているサード パーティ製のアプリケーションを実行しているホスティング プロバイダーの共有、サーバー上で、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]中程度の信頼アクセス許可がセキュリティ上の理由を設定します。 クライアントでは、WCF の部分信頼サポートはなどの展開テクノロジの要件を満たすために設計[ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)または[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]の XAML ブラウザー アプリケーションのテクノロジは、シームレスかつ安全に許可します。信頼されていないサイトからのデスクトップ アプリケーションの展開。
+部分的に信頼されたアプリケーションで使用するためにサポートされる Windows Communication Foundation (WCF) 機能のサブセットは、WCF を使用するが、一部のシナリオの要件を満たすために設計されています。 サーバーでは、WCF は、インターネット規模のセキュリティ上の理由から、ASP.NET 2.0 の中程度の信頼アクセス許可でサード パーティ製のアプリケーションを実行する共有ホスティング プロバイダーの設定の要件を満たしています。 クライアントでは、WCF の部分信頼サポートはなどの展開テクノロジの要件を満たすために設計[ClickOnce 配置](/visualstudio/deployment/clickonce-security-and-deployment)または[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]の XAML ブラウザー アプリケーションのテクノロジは、シームレスかつ安全に許可します。信頼されていないサイトからのデスクトップ アプリケーションの展開。
 
 ## <a name="minimum-permission-requirements"></a>最小権限の要件
 
@@ -27,7 +27,7 @@ WCF には、次の標準の名前付き権限セットのいずれかで実行�
 
 ## <a name="partial-trust-on-the-server"></a>サーバーでの部分信頼
 
-サービスをホストする ASP.NET Web アプリケーションの多くの商用プロバイダーは必須で、サーバーで実行されているアプリケーションが実行される、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)]中程度の信頼アクセス許可のセット。 使用する WCF サービスがこれらの環境で実行できる、 <xref:System.ServiceModel.BasicHttpBinding>、 <xref:System.ServiceModel.WebHttpBinding>、または<xref:System.ServiceModel.WSHttpBinding>トランスポート レベルのセキュリティ。
+サービスをホストする ASP.NET Web アプリケーションの多くの商用プロバイダーは、それぞれのサーバーで実行されているアプリケーションが ASP.NET 2.0 の中程度の信頼のアクセス許可セットで実行される要求します。 使用する WCF サービスがこれらの環境で実行できる、 <xref:System.ServiceModel.BasicHttpBinding>、 <xref:System.ServiceModel.WebHttpBinding>、または<xref:System.ServiceModel.WSHttpBinding>トランスポート レベルのセキュリティ。
 
 中程度の信頼ホスティング環境で実行されている WCF サービスは、クライアントの要求に応答の他のサーバーにメッセージを送信して中間層サービスとしても動作できます。 ホスティング環境が適切な <xref:System.Net.WebPermission> をアプリケーションに与えて、目的のサーバーに送信要求を行うようにする場合は、サーバーでの中間層のシナリオがサポートされます。
 

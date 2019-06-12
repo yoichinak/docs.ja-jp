@@ -2,17 +2,17 @@
 title: ASP.NET Web サービスとの相互運用
 ms.date: 03/30/2017
 ms.assetid: 622422f8-6651-442f-b8be-e654a4aabcac
-ms.openlocfilehash: c1b027eda315a76778e772235dc5f66e03c9d83e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: f2f1a8fd2bf34ff61784f2dcb88c0669585da573
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875547"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026025"
 ---
 # <a name="interoperability-with-aspnet-web-services"></a>ASP.NET Web サービスとの相互運用
 両方のテクノロジを使用して実装されているサービスが、WS に準拠していることを確認して、ASP.NET Web サービスと Windows Communication Foundation (WCF) Web サービスの間の相互運用性を実現できます-Basic Profile 1.1 仕様。 WS に準拠する ASP.NET Web サービスの基本プロファイル 1.1 は WCF のシステム指定のバインディングを使用して WCF クライアントと相互運用可能<xref:System.ServiceModel.BasicHttpBinding>します。  
   
- 次のサンプル コードに示すように、[!INCLUDE[vstecasplong](../../../../includes/vstecasplong-md.md)] 属性と <xref:System.Web.Services.WebService> 属性をインターフェイス (クラスではありません) に追加し、そのインターフェイスを実装するクラスを作成するという、<xref:System.Web.Services.WebMethodAttribute> のオプションを使用します。  
+ ASP.NET 2.0 を追加するオプションを使用して、<xref:System.Web.Services.WebService>と<xref:System.Web.Services.WebMethodAttribute>属性クラスの場合、次のサンプル コードに示すように、インターフェイスを実装するクラスを記述してではなくインターフェイスです。  
   
 ```  
 [WebService]  
