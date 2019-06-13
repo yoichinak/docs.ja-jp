@@ -2,12 +2,12 @@
 title: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 description: API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との相違点およびそれぞれの用途について説明します。
 ms.date: 01/07/2019
-ms.openlocfilehash: 433ad8bc8204a9a57b8b494040a9de6c533bcca8
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4b169d5a9542b10726a36b65328bc6a3dc3839ef
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65641408"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690362"
 ---
 # <a name="the-api-gateway-pattern-versus-the-direct-client-to-microservice-communication"></a>API ゲートウェイ パターンと、クライアントからマイクロサービスへの直接通信との比較
 
@@ -19,7 +19,7 @@ ms.locfileid: "65641408"
 
 ![クライアントからマイクロサービスへの直接通信アーキテクチャを示す図。各アプリは個々のマイクロサービスと直接通信しています。](./media/image12.png)
 
-**図 4-12**.  クライアントからマイクロサービスへの直接通信アーキテクチャの使用
+**図 4-12**. クライアントからマイクロサービスへの直接通信アーキテクチャの使用
 
 この方法では、各マイクロサービスにパブリック エンドポイントがあり、マイクロサービスごとに異なる TCP ポートがある場合があります。 特定のサービスの URL の例として、Azure での URL を以下に示します。
 
@@ -71,7 +71,7 @@ ms.locfileid: "65641408"
 
 ![カスタム サービスとして実装された API ゲートウェイの図。この場合、アプリは、要求を個々のマイクロサービスに転送するように構成された 1 つのエンドポイント (API ゲートウェイ) に接続されます。](./media/image13.png)
 
-**図 4-13**.  カスタム サービスとして実装された API ゲートウェイの使用
+**図 4-13**. カスタム サービスとして実装された API ゲートウェイの使用
 
 この例では、API ゲートウェイは、コンテナーとして実行されるカスタム ASP.NET Core WebHost サービスとして実装されます。
 
@@ -130,7 +130,7 @@ API ゲートウェイ製品の実装によっては、さらに幅広い横断�
 
 ![Azure API Management では、ログ記録、セキュリティ、使用状況測定など、API ゲートウェイおよび管理の両方のニーズが解決されます。](./media/image14.png)
 
-**図 4-14**.  API ゲートウェイでの Azure API Management の使用
+**図 4-14**. API ゲートウェイでの Azure API Management の使用
 
 この場合、Azure API Management などの製品を使用する際に単一の API ゲートウェイを使用することはそれほど危険ではありません。この種の API ゲートウェイは "細かい" ためです。つまり、モノシリック コンポーネントに進化する可能性のあるカスタム C# コードを実装することはありません。 
 
@@ -146,7 +146,7 @@ Azure API Management では、キー、トークン、および IP フィルタ�
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) は、より簡単な方法としてお勧めする簡易な API ゲートウェイです。 Ocelot は、システムへの統合されたエントリ ポイントを必要とするマイクロサービス アーキテクチャ向けに特別に設計された、オープンソースの .NET Core ベースの API ゲートウェイです。 これは軽量、高速、スケーラブルで、ルーティングや認証をはじめとするさまざまな機能を提供します。
 
-[参照アプリケーション eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 用に Ocelot を選択する主な理由は、Ocelot が、マイクロサービス/コンテナー (Docker ホスト、Kubernetes、Service Fabric など) をデプロイするのと同じアプリケーション デプロイ環境にデプロイできる簡易な .NET Core API ゲートウェイであるためです。また、.NET Core をベースとしているのでクロスプラットフォームであり、Linux でも Windows でもデプロイできます。
+オセロットを選択する主な理由、 [eShopOnContainers 参照アプリケーション](https://github.com/dotnet-architecture/eShopOnContainers)オセロットが展開している同じアプリケーションの展開環境にデプロイできる .NET Core 軽量な API ゲートウェイのためにはマイクロ サービス/コンテナー (Docker ホスト、Kubernetes など)。また、.NET Core をベースとしているのでクロスプラットフォームであり、Linux でも Windows でもデプロイできます。
 
 コンテナー内で実行されるカスタム API ゲートウェイを示した前の図は、コンテナーとマイクロサービス ベースのアプリケーションで Ocelot を実行する方法も正確に示しています。
 
@@ -185,7 +185,7 @@ Azure API Management では、キー、トークン、および IP フィルタ�
 - **Udi Dahan。サービス指向のコンポジション** \
   <http://udidahan.com/2014/07/30/service-oriented-composition-with-video/>
 
-- **Clemens Vasters。GOTO 2016 でのメッセージングとマイクロサービス (ビデオ)** \
+- **Clemens Vasters。GOTO 2016 でのメッセージングとマイクロサービス (ビデオ)**  \
   <https://www.youtube.com/watch?v=rXi5CLjIQ9k>
 
 - **Nutshell の API ゲートウェイ** (ASP.net Core API ゲートウェイのチュートリアル シリーズ) \

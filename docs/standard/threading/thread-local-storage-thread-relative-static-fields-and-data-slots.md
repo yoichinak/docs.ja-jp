@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: c633a4dc-a790-4ed1-96b5-f72bd968b284
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 681a9e71dcfb139c364d750383f13cdabbf33366
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7beb22c68450d7ae4aeb6d0bcae45fafdfe78191
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64644893"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490915"
 ---
 # <a name="thread-local-storage-thread-relative-static-fields-and-data-slots"></a>スレッド ローカル ストレージ:スレッド相対静的フィールドとデータ スロット
 1 つのスレッドとアプリケーション ドメインに固有のデータを格納するには、マネージド スレッド ローカル ストレージ (TLS: Thread Local Storage) を使用します。 .NET Framework は、マネージド TLS の使用に関して、スレッド相対静的フィールドとデータ スロットという 2 つの機構を備えています。  
@@ -26,7 +26,7 @@ ms.locfileid: "64644893"
   
  アンマネージ C++ では、`TlsAlloc` を使用してスロットを動的に割り当て、`__declspec(thread)` を使用して、変数をスレッド相対ストレージに割り当てることを宣言します。 スレッド相対静的フィールドおよびデータ スロットには、この動作のマネージド バージョンが用意されています。  
   
- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] では、<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> クラスを使用して、最初に利用されるときに遅れて初期化されるスレッドローカル オブジェクトを作成できます。 詳細については、「[限定的な初期化](../../../docs/framework/performance/lazy-initialization.md)」を参照してください。  
+ .NET Framework 4 で使用することができます、<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>オブジェクトが最初に利用されるときに遅れて初期化されるスレッド ローカル オブジェクトを作成するクラス。 詳細については、「[限定的な初期化](../../../docs/framework/performance/lazy-initialization.md)」を参照してください。  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>マネージド TLS でのデータの一意性  
  スレッド相対静的フィールドとデータ スロットのどちらを使用しても、マネージド TLS でのデータはスレッドとアプリケーション ドメインの組み合わせに対して一意になります。  
@@ -55,7 +55,7 @@ ms.locfileid: "64644893"
   
  名前付きスロットと名前のないスロットはいずれも、<xref:System.Threading.Thread.SetData%2A?displayProperty=nameWithType> メソッドと <xref:System.Threading.Thread.GetData%2A?displayProperty=nameWithType> メソッドを使用して、スロット内のデータの設定や取得を行います。 これらは静的メソッドであり、現在実行中であるスレッドのデータを操作する役割を果たします。  
   
- 名前付きスロットは、必要なときに <xref:System.Threading.Thread.GetNamedDataSlot%2A> メソッドにスロットの名前を渡してスロットを取得できるという利点があります (名前のないスロットの場合は、スロットへの参照を維持する必要があります)。 ただし、他のコンポーネントがそのスレッド相対ストレージに対して同じ名前を使用しており、1 つのスレッドが、ご使用のコンポーネントとその他のコンポーネントの両方からコードを実行する場合、この 2 つのコンポーネントが互いのデータを破損する可能性があります  (このシナリオでは、2 つのコンポーネントが同じアプリケーション ドメイン内で実行されており、同じデータを共有するようには設計されていないことを前提としています)。  
+ 名前付きスロットは、必要なときに <xref:System.Threading.Thread.GetNamedDataSlot%2A> メソッドにスロットの名前を渡してスロットを取得できるという利点があります (名前のないスロットの場合は、スロットへの参照を維持する必要があります)。 ただし、他のコンポーネントがそのスレッド相対ストレージに対して同じ名前を使用しており、1 つのスレッドが、ご使用のコンポーネントとその他のコンポーネントの両方からコードを実行する場合、この 2 つのコンポーネントが互いのデータを破損する可能性があります (このシナリオでは、2 つのコンポーネントが同じアプリケーション ドメイン内で実行されており、同じデータを共有するようには設計されていないことを前提としています)。  
   
 ## <a name="see-also"></a>関連項目
 

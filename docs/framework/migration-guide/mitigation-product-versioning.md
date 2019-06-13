@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 ms.assetid: 1c4de9d7-9aba-427a-8f38-0ab9bfb8f85e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f8811fd916afcb39c466b8c9a60f7c7ed2a62ea8
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: d76615b5bd4d140917b84a52f7d1c251ca32302f
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66301432"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489991"
 ---
 # <a name="mitigation-product-versioning"></a>軽減策:製品のバージョン管理
 .NET Framework 4.6 以降のバージョンでは、製品のバージョン管理が .NET Framework の以前のリリース (.NET Framework 4、4.5、4.5.1、4.5.2) から変更されました。  
@@ -23,7 +23,7 @@ ms.locfileid: "66301432"
   
 - マネージド アセンブリの <xref:System.Reflection.AssemblyFileVersionAttribute> 属性と <xref:System.Reflection.AssemblyInformationalVersionAttribute> 属性の <xref:System.Version> 値は、.NET Framework 4.6 とそのポイント リリースの場合は `4.6.X.0` という形式、.NET Framework 4.7 の場合は `4.7.X.0` という形式になります。  
   
-- .NET Framework 4.6、4.6.1、4.6.2、4.7 では、<xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティによって固定のバージョン文字列 `4.0.30319.42000` が返されます。 .NET Framework 4、4.5、4.5.1、および 4.5.2 では、`4.0.30319.xxxxx` の形式でバージョン文字列が返されます (例: "4.0.30319.18010")。 アプリケーションのコードで <xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティに新しい依存関係を設定することは推奨していないことに注意してください。  
+- .NET Framework 4.6 以降、<xref:System.Environment.Version%2A?displayProperty=nameWithType>プロパティは、固定のバージョン文字列を返します`4.0.30319.42000`します。 .NET framework 4、4.5、4.5.1、および 4.5.2 では、形式でのバージョン文字列が返されます`4.0.30319.xxxxx`場所`xxxxx`42000 (例:「4.0.30319.18010」) より小さいです。 アプリケーションのコードで <xref:System.Environment.Version%2A?displayProperty=nameWithType> プロパティに新しい依存関係を設定することは推奨していないことに注意してください。
   
 ### <a name="handling-the-product-versioning-changes"></a>製品のバージョン管理の変更に対する処置  
  一般に、.NET Framework のランタイムのバージョンやインストール ディレクトリを検出する際、アプリケーションは推奨される技法に従う必要があります。  

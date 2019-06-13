@@ -1,5 +1,5 @@
 ---
-title: C# 演算子
+title: C#演算子 -C#リファレンス
 ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: c6b83779a630c6d797968d79635793e229751f93
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833267"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025137"
 ---
-# <a name="c-operators"></a>C# 演算子
+# <a name="c-operators-c-reference"></a>C#演算子 (C#リファレンス)
 
 C# は組み込み型でサポートされている定義済みの演算子を多数提供します。 たとえば、[算術演算子](arithmetic-operators.md)は組み込み数値型のオペランドの算術演算を実行し、[ブール論理演算子](boolean-logical-operators.md)は [bool](../keywords/bool.md) オペランドの論理演算を実行します。
 
@@ -222,7 +222,5 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
-- [C#](../../index.md)
+- [演算子](../../programming-guide/statements-expressions-operators/operators.md)
 - [オーバーロード可能な演算子](../../programming-guide/statements-expressions-operators/overloadable-operators.md)
-- [C# のキーワード](../keywords/index.md)

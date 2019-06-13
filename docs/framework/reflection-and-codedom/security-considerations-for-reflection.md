@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 42d9dc2a-8fcc-4ff3-b002-4ff260ef3dc5
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 116df78eb20d6e6c6355d07099ae5d3de9320f30
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 6446cc3ee102fa57f5bf60c1353f7b9d5522be69
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457294"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816125"
 ---
 # <a name="security-considerations-for-reflection"></a>リフレクションに関するセキュリティ上の考慮事項
 リフレクションを使用すると、型とメンバーに関する情報を取得し、メンバーにアクセスできます (つまり、メソッドやコンストラクターの呼び出し、プロパティ値の取得と設定、イベント ハンドラーの追加と削除などを実行できます)。 リフレクションを使用した型とメンバーに関する情報の取得には、制限がありません。 すべてのコードで、次のタスクを実行するためにリフレクションを使用できます。  
@@ -26,7 +26,7 @@ ms.locfileid: "66457294"
   
 - アセンブリとモジュールを列挙し、確認する。  
   
- これに対して、リフレクションを使用したメンバーへのアクセスには、制限があります。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降、リフレクションを使用してセキュリティ クリティカルなメンバーにアクセスできるのは、信頼されているコードだけになりました。 さらに、コンパイル済みコードに直接アクセスできない非パブリック メンバーに、リフレクションを使用してアクセスできるのも信頼されたコードだけです。 最後に、セーフ クリティカルなメンバーにアクセスするリフレクションを使用するコードには、コンパイル済みコードと同様、セーフ クリティカル メンバーが要求するすべてのアクセス許可が必要です。  
+ これに対して、リフレクションを使用したメンバーへのアクセスには、制限があります。 以降、.NET Framework 4 では、信頼されたコードだけはセキュリティ クリティカルなメンバーにアクセスするのにリフレクションを使用できます。 さらに、コンパイル済みコードに直接アクセスできない非パブリック メンバーに、リフレクションを使用してアクセスできるのも信頼されたコードだけです。 最後に、セーフ クリティカルなメンバーにアクセスするリフレクションを使用するコードには、コンパイル済みコードと同様、セーフ クリティカル メンバーが要求するすべてのアクセス許可が必要です。  
   
  必要なアクセス許可がある場合、コードはリフレクションを使用して次の種類のアクセスを実行できます。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66457294"
   
  たとえば、サンドボックス化されたアプリケーション ドメインで実行されるコードは、アプリケーション ドメインから追加のアクセス許可が付与されていない限り、この一覧に示したアクセスに限定されます。  
   
- [!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] 以降では、通常はアクセスできないメンバーにアクセスしようとすると、対象オブジェクトと <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグが設定された <xref:System.Security.Permissions.ReflectionPermission> の許可セットに対する要求が生成されます。 完全な信頼で実行されているコード (コマンド ラインから起動されるアプリケーションのコードなど) には、必要とされるこれらのアクセス許可が常にあります。 (ただし、後で説明するように、セキュリティ クリティカルなメンバーにアクセスする場合は制限があります)。  
+ 対象オブジェクトとの許可セットの要求が生成されます以降、.NET Framework 2.0 Service Pack 1 では、通常はアクセスできないメンバーにアクセスしようとしています。<xref:System.Security.Permissions.ReflectionPermission>で、<xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>フラグ。 完全な信頼で実行されているコード (コマンド ラインから起動されるアプリケーションのコードなど) には、必要とされるこれらのアクセス許可が常にあります。 (ただし、後で説明するように、セキュリティ クリティカルなメンバーにアクセスする場合は制限があります)。  
   
  必要に応じて、サンドボックス化されたアプリケーション ドメインから、<xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグが設定された <xref:System.Security.Permissions.ReflectionPermission> を付与できます。これについては、後半の「[通常はアクセスできないメンバーへのアクセス](#accessingNormallyInaccessible)」で説明します。  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>セキュリティ クリティカルなメンバーへのアクセス  
- メンバーは、<xref:System.Security.SecurityCriticalAttribute> が指定されている場合、<xref:System.Security.SecurityCriticalAttribute> が指定されている型に属する場合、またはセキュリティ クリティカルなアセンブリ内にある場合は、セキュリティ クリティカルです。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、セキュリティ クリティカルなメンバーにアクセスする場合の規則は次のとおりです。  
+ メンバーは、<xref:System.Security.SecurityCriticalAttribute> が指定されている場合、<xref:System.Security.SecurityCriticalAttribute> が指定されている型に属する場合、またはセキュリティ クリティカルなアセンブリ内にある場合は、セキュリティ クリティカルです。 以降、.NET Framework 4 では、セキュリティ クリティカルなメンバーにアクセスするための規則としては、  
   
 - 透過的なコードでは、コードが完全に信頼されている場合でも、リフレクションを使用してセキュリティ クリティカルなメンバーにアクセスすることはできません。 <xref:System.MethodAccessException>、<xref:System.FieldAccessException>、または <xref:System.TypeAccessException> がスローされます。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "66457294"
   
 ## <a name="version-information"></a>バージョン情報  
   
-- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、透過的なコードからリフレクションを使用してセキュリティ クリティカルなメンバーにアクセスすることはできません。  
+- 以降、.NET Framework 4 では、透過的なコードはセキュリティ クリティカルなメンバーにアクセスするのにリフレクションを使用できません。  
   
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグは、[!INCLUDE[net_v20SP1_long](../../../includes/net-v20sp1-long-md.md)] で導入されました。 以前のバージョンの .NET Framework では、コードから非パブリック メンバーにアクセスするためにリフレクションを使用するには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグを指定する必要がありました。 このアクセス許可は、部分的に信頼されるコードには絶対に付与しないでください。  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>フラグは、.NET Framework 2.0 Service Pack 1 で導入されました。 以前のバージョンの .NET Framework では、コードから非パブリック メンバーにアクセスするためにリフレクションを使用するには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグを指定する必要がありました。 このアクセス許可は、部分的に信頼されるコードには絶対に付与しないでください。  
   
 - [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 以降、リフレクションを使用して非パブリックな型とメンバーに関する情報を取得する場合、アクセス許可が不要になりました。 以前のバージョンでは、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。  
   

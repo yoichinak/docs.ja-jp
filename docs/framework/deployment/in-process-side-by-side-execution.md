@@ -7,15 +7,15 @@ helpviewer_keywords:
 ms.assetid: 18019342-a810-4986-8ec2-b933a17c2267
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: adf2e3e3d10f4f32952dbca270be4ca0924d0b73
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 89dfe697f49e8144d15586cc9c1075f69d1f3a07
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66457263"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816046"
 ---
 # <a name="in-process-side-by-side-execution"></a>インプロセスの side-by-side 実行
-[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、インプロセスの side-by-side ホスティングを使用して、1 つのプロセスで複数のバージョンの共通言語ランタイム (CLR) を実行できます。 既定では、マネージド COM コンポーネントは、プロセスに読み込まれている .NET Framework のバージョンに関係なく、コンポーネントがビルドされた .NET Framework のバージョンで実行されます。  
+以降、.NET Framework 4 では、インプロセス-サイド共通言語ランタイム (CLR) の複数のバージョンを 1 つのプロセスで実行するホストを使用することができます。 既定では、マネージド COM コンポーネントは、プロセスに読み込まれている .NET Framework のバージョンに関係なく、コンポーネントがビルドされた .NET Framework のバージョンで実行されます。  
   
 ## <a name="background"></a>背景  
  .NET Framework ではマネージド コード アプリケーションに対して常に side-by-side ホスティングが提供されてきましたが、.NET Framework 4 より前は、マネージド COM コンポーネントに対してこの機能は提供されていませんでした。 以前は、プロセスに読み込まれたマネージド COM コンポーネントは、既に読み込まれているランタイムのバージョン、またはインストールされている .NET Framework の最新バージョンで実行されました。 このバージョンが COM コンポーネントと互換性がない場合、コンポーネントは実行できませんでした。  
@@ -56,7 +56,7 @@ ms.locfileid: "66457263"
   
      対処方法: このシナリオの場合は、何も行いません。 COM コンポーネントは、登録された .NET Framework のバージョンで実行されます。  
   
-- **シナリオ 2**: [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)] で実行することが好ましいが、バージョン 2.0 が存在しない場合は .NET Framework 4 で実行する、[!INCLUDE[net_v20SP1_short](../../../includes/net-v20sp1-short-md.md)] でビルドされたマネージド アプリケーション。  
+- **シナリオ 2**: マネージ アプリケーションを実行する場合は、.NET Framework 2.0 SP1 で構築された、 [!INCLUDE[dnprdnext](../../../includes/dnprdnext-md.md)]、バージョン 2.0 が存在しない場合は、.NET Framework 4 で実行してもよいが、します。  
   
      インストールされている .NET Framework のバージョン: 以前のバージョンの .NET Framework および .NET Framework 4。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66457263"
 ## <a name="example"></a>例  
  次の例では、コンポーネントがコンパイルされた .NET Framework のバージョンを使うことでマネージド COM コンポーネントを実行しているアンマネージド COM ホストを示します。  
   
- 次の例を実行するには、[!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] を使って次のマネージド COM コンポーネントをコンパイルして登録します。 コンポーネントを登録するには、 **[プロジェクト]** メニューの **[プロパティ]** をクリックし、 **[ビルド]** タブをクリックして、 **[COM の相互運用機能に登録]** チェック ボックスをオンにします。  
+ 次の例を実行するには、コンパイルし、.NET Framework 3.5 を使用して次のマネージ COM コンポーネントを登録します。 コンポーネントを登録するには、 **[プロジェクト]** メニューの **[プロパティ]** をクリックし、 **[ビルド]** タブをクリックして、 **[COM の相互運用機能に登録]** チェック ボックスをオンにします。  
   
 ```csharp
 using System;  

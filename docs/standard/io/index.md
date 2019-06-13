@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4a33a9-66b7-4cd7-a285-4ad3e4276cd2
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a8d95a347237b15dfa55586bb15fe605bd5c7a94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3b3dcc3b96e12f89508f4d2708c5ab083516dba
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61947122"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025502"
 ---
 # <a name="file-and-stream-io"></a>ファイルおよびストリーム入出力
 
@@ -147,7 +147,7 @@ ms.locfileid: "61947122"
 
 次に、I/O 操作を [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリで使用する場合に注意する必要がある重要な違いを示します。
 
-- <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> など、特にファイル操作に関連する型は、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] に含まれていません。 代わりに、[!INCLUDE[wrt](../../../includes/wrt-md.md)] の名前空間 <xref:Windows.Storage?displayProperty=nameWithType> の型 (<xref:Windows.Storage.StorageFile> や <xref:Windows.Storage.StorageFolder> など) を使用します。
+- <xref:System.IO.File>、<xref:System.IO.FileInfo>、<xref:System.IO.Directory>、<xref:System.IO.DirectoryInfo> など、特にファイル操作に関連する型は、[!INCLUDE[net_win8_profile](../../../includes/net-win8-profile-md.md)] に含まれていません。 代わりに、型を使用、 <xref:Windows.Storage?displayProperty=nameWithType> 、Windows ランタイムの名前空間など<xref:Windows.Storage.StorageFile>と<xref:Windows.Storage.StorageFolder>します。
 
 - 分離ストレージは使用できません。代わりに、[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))を使用します。
 

@@ -2,12 +2,12 @@
 title: モノリシック アプリケーションのコンテナー化
 description: モノリシック アプリケーションのコンテナー化は、マイクロサービス アーキテクチャからすべての利点を得ることはありませんが、すぐに提供できる重要な展開の利点があります。
 ms.date: 09/20/2018
-ms.openlocfilehash: 061afe86e0d38f058becde2b3afdb45b4428517a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9e457fba56c8fdf946618fca10285f4c0a343af4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65640814"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690548"
 ---
 # <a name="containerizing-monolithic-applications"></a>モノリシック アプリケーションのコンテナー化
 
@@ -63,9 +63,9 @@ Azure に展開されたコンテナーを検証する場合でも、アプリ�
 
 **図 4-4** Visual Studio から Azure App Service に単一のコンテナー アプリケーションを発行する
 
-Docker を使用せずに、Azure App Service でサポートされていない他の機能、フレームワーク、または依存関係が必要な場合には、Azure チームが App Service の依存関係を更新するまで待つ必要がありました。 また、Azure Service Fabric、Azure Cloud Services、さらには VM などの他のサービスに切り替えて、詳細な管理を行い、アプリケーションに必要なコンポーネントやフレームワークをインストールする必要がありました。
+Docker を使用せずに、Azure App Service でサポートされていない他の機能、フレームワーク、または依存関係が必要な場合には、Azure チームが App Service の依存関係を更新するまで待つ必要がありました。 または、Azure Cloud Services や、さらにコントロールがあり、アプリケーションの必要なコンポーネントやフレームワークをインストールする可能性があります、Vm などの他のサービスに切り替える必要があります。
 
-Visual Studio 2017 ではコンテナーがサポートされているので、図 4-4 に示すように、アプリケーション環境に必要なものをすべて含めることができます。 コンテナー内で実行しているため、アプリケーションに依存関係を追加する場合、その依存関係を自分の Dockerfile または Docker イメージに含めることができます。
+コンテナー サポート Visual Studio 2017 以降では、図 4-4 に示すように、アプリケーションの環境内で何でもを含むことのできるできます。 コンテナー内で実行しているため、アプリケーションに依存関係を追加する場合、その依存関係を自分の Dockerfile または Docker イメージに含めることができます。
 
 また、図 4-4 に示すように、発行フローはコンテナー レジストリを介してイメージをプッシュします。 これは、Azure Container Registry (Azure 内の展開に近く、Azure Active Directory グループとアカウントによってセキュリティで保護されているレジストリ)、または Docker Hub やオンプレミス レジストリのような他の Docker レジストリにすることができます。
 

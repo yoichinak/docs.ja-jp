@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: d04be3b5-27b9-4f5b-8469-a44149fabf78
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 942ba933126da291e072270318a5657953ddcdb8
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: a658a9f706a53697b341463b443c5145a727b4b9
+ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59613253"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66758254"
 ---
 # <a name="com-callable-wrapper"></a>COM 呼び出し可能ラッパー
 
@@ -186,7 +186,7 @@ public class LoanApp
 
 ### <a name="ensure-that-all-com-event-notifications-are-late-bound"></a>すべての COM イベント通知が遅延バインドされていることを確認します。
 
-既定では、COM の型情報はマネージド アセンブリに直接埋め込まれているため、プライマリ相互運用アセンブリ (PIA) の必要はありません。 ただし、埋め込まれた型情報の制限の 1 つとして、早期にバインドされた vtable 呼び出しによる COM イベント通知の配信はサポートされず、遅延バインドされた `IDispatch::Invoke` 呼び出しのみがサポートされるということがあります。
+既定では、COM の型情報はマネージド アセンブリに直接埋め込まれているため、プライマリ相互運用アセンブリ (PIA) の必要はありません。 埋め込み型情報の制限事項の 1 つは、事前バインディングされた vtable の呼び出しでは、COM イベント通知の配信をサポートしていませんが、遅延バインディングのみをサポート、ただし、`IDispatch::Invoke`呼び出し。
 
 アプリケーションから COM イベント インターフェイス メソッドに対して早期にバインドされた呼び出しが必要な場合は、Visual Studio の **[相互運用型の埋め込み]** プロパティを `true` に設定するか、プロジェクト ファイルに次の要素を含めることができます。
 

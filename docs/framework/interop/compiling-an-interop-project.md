@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 6fcf6588-5e25-41af-b4ae-780974f2c3df
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bf0244060d3c5dfa39c220fc2d699a5f2f1fef9e
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 4369ce9c9ce82ecdbf11d76f3b043778b8374d8b
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636193"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489762"
 ---
 # <a name="compiling-an-interop-project"></a>相互運用プロジェクトのコンパイル
 
@@ -24,7 +24,7 @@ ms.locfileid: "65636193"
 
  相互運用機能アセンブリを参照する方法には、次の 2 つがあります。
 
-- 埋め込まれた相互運用機能型:[!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] および Visual Studio 2010 以降では、相互運用機能アセンブリから実行可能ファイルに型情報を埋め込むようにコンパイラに指示できます。 この手法を使用することをお勧めします。
+- 埋め込まれた相互運用機能型:以降、.NET Framework 4 と Visual Studio 2010 では、実行可能ファイルに相互運用機能アセンブリから型情報を埋め込むには、コンパイラに指示できます。 この手法を使用することをお勧めします。
 
 - 相互運用機能アセンブリの配置:相互運用機能アセンブリへの標準の参照を作成できます。 この場合、アプリケーションで相互運用機能アセンブリを展開する必要があります。
 
@@ -37,7 +37,7 @@ ms.locfileid: "65636193"
 > [!NOTE]
 > Visual C++ アプリケーションは型情報を埋め込むことはできませんが、型情報を埋め込むことができるアプリケーションまたはアドインと相互運用できます。
 
- 配置時にプライマリ相互運用機能アセンブリを含むアプリケーションをコンパイルするには、**/reference** コンパイラ スイッチを使用して、相互運用機能アセンブリの名前を指定します。
+ 配置時にプライマリ相互運用機能アセンブリを含むアプリケーションをコンパイルするには、 **/reference** コンパイラ スイッチを使用して、相互運用機能アセンブリの名前を指定します。
 
 ## <a name="see-also"></a>関連項目
 

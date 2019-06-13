@@ -4,12 +4,12 @@ description: 機械学習モデルに適した ML.NET アルゴリズムの選�
 author: natke
 ms.topic: overview
 ms.date: 04/20/1029
-ms.openlocfilehash: d1c637437a7b285f2b66b597d616fcf39248697f
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 89c3c612d79f02d58a16070feadb645b081dd3e3
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557779"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722633"
 ---
 # <a name="how-to-choose-an-mlnet-algorithm"></a>ML.NET アルゴリズムの選び方
 
@@ -21,7 +21,7 @@ ms.locfileid: "65557779"
 
 アルゴリズムは、**モデル**を生成するために実行される数学です。 アルゴリズムが異なると、特性が異なるモデルが生成されます。 
 
-ML.NET では、同じアルゴリズムを異なるタスクに適用できます。 たとえば、Stochastic Descent Coordinated Ascent (確率的勾配座標上昇法) は、二項分類、多クラス分類、回帰に使用できます。 違いは、タスクに合わせてアルゴリズムの出力が解釈される方法にあります。 
+ML.NET では、同じアルゴリズムを異なるタスクに適用できます。 たとえば、二項分類、多クラス分類と回帰の確率的デュアル連携のとれたアセントを使用できます。 違いは、タスクに合わせてアルゴリズムの出力が解釈される方法にあります。 
 
 ML.NET には、各アルゴリズムとタスクの組み合わせに対して、トレーニング アルゴリズムを実行し、解釈するコンポーネントが用意されています。 これらのコンポーネントはトレーナーと呼ばれます。 たとえば、<xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> には、**回帰**タスクに適用される **StochasticDualCoordinatedAscent** アルゴリズムが使用されます。
 
@@ -42,7 +42,7 @@ ML.NET には、各アルゴリズムとタスクの組み合わせに対して�
 |アルゴリズム|プロパティ|トレーナー|
 |---------|----------|--------|
 |Averaged perceptron (平均化パーセプトロン)|テキスト分類に最適です|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|Stochastic descent coordinated ascent (確率的勾配座標上昇法)|既定のパフォーマンスが適切な場合は、調整が不要です|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|確率的デュアル連携のとれたアセント|既定のパフォーマンスが適切な場合は、調整が不要です|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
 |L-BFGS|特徴数が多い場合に使用します。 ロジスティック回帰トレーニング統計が生成されますが、AveragedPerceptronTrainer ほどスケールしません|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |Symbolic stochastic gradient descent (シンボリック確率的勾配降下法)|最も高速で最も正確な線形二項分類トレーナー。 プロセッサの数に合わせてスケールします|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 

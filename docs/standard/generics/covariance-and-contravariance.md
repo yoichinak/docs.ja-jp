@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2678dc63-c7f9-4590-9ddc-0a4df684d42e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 44e5f52ce2bfe03247ab25bb48607ae313523ff0
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: a7e4493fca5b73cfd0bdc59ceab9de097de799aa
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456855"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490746"
 ---
 # <a name="covariance-and-contravariance-in-generics"></a>ジェネリックの共変性と反変性
 <a name="top"></a> 共変性と反変性は、元の指定よりも強い派生型 (具体性が高い) と弱い派生型 (具体性が低い) を使用する能力を示す用語です。 ジェネリック型パラメーターは、ジェネリック型の代入と使用の柔軟性を向上させるために、共変性と反変性をサポートしています。 型システムにおいて、共変性、反変性、および不変性は、次のように定義されます。 各例では、基底クラスが `Base` という名前であり、派生クラスが `Derived`という名前であるとします。  
@@ -59,7 +59,7 @@ ms.locfileid: "66456855"
   
  共変性と反変性は、"*分散*" と総称されます。 共変または反変としてマークされていないジェネリック型パラメーターは、 *不変*と呼ばれます。 共通言語ランタイムにおける分散について、簡潔な概要を示します。  
   
-- [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)]のバリアント型パラメーターは、ジェネリック インターフェイス型と汎用デリゲート型に制限されています。  
+- .NET Framework 4 では、バリアント型パラメーターは、ジェネリック インターフェイスと汎用デリゲート型に制限されます。  
   
 - ジェネリック インターフェイス型や汎用デリゲート型では、共変と反変の両方の型パラメーターを使用できます。  
   

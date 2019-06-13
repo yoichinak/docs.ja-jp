@@ -16,18 +16,18 @@ helpviewer_keywords:
 ms.assetid: c45be261-2a9d-4c4e-9bd6-27f0931b7d25
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f461490529f626cfc442d817840b9c2e64df4c19
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 7238edb35e7fd69c0161adbc3b80b122575bbf75
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585907"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690313"
 ---
 # <a name="walkthrough-emitting-code-in-partial-trust-scenarios"></a>チュートリアル: 部分信頼シナリオにおけるコード出力
 リフレクション出力は、完全信頼または部分信頼において同じ API セットを使用しますが、部分的に信頼されるコードでは実行する機能によって特定のアクセス許可が必要になります。 リフレクション出力には、匿名でホストされる動的メソッドという機能があります。この機能は、透過的セキュリティ アセンブリによって部分信頼で使用されます。  
   
 > [!NOTE]
->  [!INCLUDE[net_v35_long](../../../includes/net-v35-long-md.md)] 以前では、コード出力を行うには <xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType> フラグを指定する必要がありました。 このアクセス許可は、既定で `FullTrust` および `Intranet` の名前付きアクセス許可セットには含まれますが、`Internet` アクセス許可セットには含まれません。 したがって、ライブラリを部分信頼で使用するには、<xref:System.Security.SecurityCriticalAttribute> 属性を設定し、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> に対して <xref:System.Security.PermissionSet.Assert%2A> メソッドを実行する必要がありました。 このようなライブラリでは、コーディング エラーがあるとセキュリティ ホールが発生するおそれがあるため、セキュリティを慎重にレビューする必要があります。 コードの生成は本質的に特権を必要とする操作ではないため、[!INCLUDE[net_v35_short](../../../includes/net-v35-short-md.md)] はセキュリティ確認要求を発行せずに部分信頼シナリオでコードを出力できます。 これは、生成されたコードには、コードを出力したアセンブリと同等以下のアクセス許可しかないことを意味します。 これにより、コードを出力するライブラリは透過的セキュリティになるため、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> を要求する必要がなくなります。つまり、安全なライブラリを記述するためにセキュリティを入念に確認する必要がなくなります。  
+>  .NET Framework 3.5 を必要なコードを生成する前に<xref:System.Security.Permissions.ReflectionPermission>で、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit?displayProperty=nameWithType>フラグ。 このアクセス許可は、既定で `FullTrust` および `Intranet` の名前付きアクセス許可セットには含まれますが、`Internet` アクセス許可セットには含まれません。 したがって、ライブラリを部分信頼で使用するには、<xref:System.Security.SecurityCriticalAttribute> 属性を設定し、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> に対して <xref:System.Security.PermissionSet.Assert%2A> メソッドを実行する必要がありました。 このようなライブラリでは、コーディング エラーがあるとセキュリティ ホールが発生するおそれがあるため、セキュリティを慎重にレビューする必要があります。 .NET Framework 3.5 ではコードの生成は本質的に特権が必要ではないため、セキュリティ確認要求を発行することがなく部分信頼シナリオで生成されるコード。 これは、生成されたコードには、コードを出力したアセンブリと同等以下のアクセス許可しかないことを意味します。 これにより、コードを出力するライブラリは透過的セキュリティになるため、<xref:System.Security.Permissions.ReflectionPermissionFlag.ReflectionEmit> を要求する必要がなくなります。つまり、安全なライブラリを記述するためにセキュリティを入念に確認する必要がなくなります。  
   
  このチュートリアルでは、次の作業について説明します。  
   

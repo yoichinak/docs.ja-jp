@@ -17,8 +17,8 @@
       href: tutorials/predict-prices.md
     - name: あやめ花の分類 (K-means クラスタ リング)
       href: tutorials/iris-clustering.md
-    - name: 映画レコメンダー (マトリックス因子分解)
-      href: tutorials/movie-recommmendation.md
+    - name: 映画 (行列因子分解) をお勧めします。
+      href: tutorials/movie-recommendation.md
     - name: 画像の分類 (転移学習)
       href: tutorials/image-classification.md
     - name: 製品売上分析 (異常検出)

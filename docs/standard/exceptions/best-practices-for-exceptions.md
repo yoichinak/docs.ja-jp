@@ -9,12 +9,12 @@ dev_langs:
 helpviewer_keywords:
 - exceptions, best practices
 ms.assetid: f06da765-235b-427a-bfb6-47cd219af539
-ms.openlocfilehash: cb1ef5f52b9ee0407cbd7a0634e8a7c58906d635
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
+ms.openlocfilehash: 752a7e5233d8b1d88b49be450972fc964f82d2c4
+ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66195573"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66690660"
 ---
 # <a name="best-practices-for-exceptions"></a>例外の推奨事項
 
@@ -56,7 +56,7 @@ ms.locfileid: "66195573"
 
 例外が返されるのを回避するもう 1 つの方法は、非常に一般的なエラーの場合に、例外をスローする代わりに null (または既定値) を返すことです。 非常に一般的なエラーは、通常の制御の流れと見なすことができます。 このような場合は、null (または既定値) を返すことによって、アプリケーションのパフォーマンスへの影響を最小限に抑えることができます。
 
-値の型の場合、Null 許容<T>または既定値をエラー インジケーターとして使用するかどうかを特定のアプリに関して検討します。 `Nullable<Guid>` を使用すると、`default` は `Guid.Empty` ではなく `null` になります。 `Nullable<T>` を追加すると、値があるときとないときがはっきりすることがあります。 `Nullable<T>` を追加すると、不要な確認事項が増え、潜在的なエラーの原因にしかならないこともあります。 
+値の型を使用するかどうか`Nullable<T>`または既定のエラー インジケーターは、特定のアプリの考慮すべきことです。 `Nullable<Guid>` を使用すると、`default` は `Guid.Empty` ではなく `null` になります。 `Nullable<T>` を追加すると、値があるときとないときがはっきりすることがあります。 `Nullable<T>` を追加すると、不要な確認事項が増え、潜在的なエラーの原因にしかならないこともあります。 
 
 ## <a name="throw-exceptions-instead-of-returning-an-error-code"></a>エラー コードを返す代わりに、例外をスローする
 

@@ -3,12 +3,12 @@ title: ML.NET CLI ツールの auto-train コマンド
 description: ML.NET CLI ツールの auto-train コマンドの概要、サンプル、およびリファレンス。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 28eb56eb018e3d1cc76f300ee78c298af77c9b91
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: ce5994f392c492e80676b9e65ce54fe010cf03ab
+ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557938"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66722602"
 ---
 # <a name="the-auto-train-command-in-mlnet-cli"></a>ML.NET CLI の "auto-train" コマンド
 
@@ -228,7 +228,7 @@ ms.locfileid: "65557938"
 
 `--max-exploration-time | -x` (文字列)
 
-既定では、最大探索時間は 10 秒です。
+既定では、最大の探索時に 30 分です。
 
 この引数では、プロセスで複数のトレーナーと構成を探索できる最長時間 (秒単位) を設定します。 指定した時間が 1 回の反復処理に対して短すぎる (たとえば 2 秒) 場合、構成された時間を超えることがあります。 この場合、実際の時間は、1 回の反復処理で 1 つのモデル構成を作成するために必要な時間です。
 

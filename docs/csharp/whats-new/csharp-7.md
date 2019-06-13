@@ -3,12 +3,12 @@ title: C# 7.0 の新機能 - C# ガイド
 description: C# 言語のバージョン 7.0 での新機能の概要を説明します。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 942a126ae026897d608c9fb077fc5f10ff73c110
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753063"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66815974"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 の新機能
 
@@ -222,7 +222,7 @@ C# 6 では、メンバー関数の[式形式のメンバー](csharp-6.md#expres
 
 ## <a name="throw-expressions"></a>throw 式
 
-C# では、`throw` は常にステートメントでした。 `throw` は式ではなくステートメントであるため、使用できない C# コンストラクトがありました。 これには、条件式、null 結合式、および一部のラムダ式が含まれます。 式形式のメンバーが追加されたことにより、さらに多くの場所で `throw` 式が役に立つようになりました。 C# 7.0 では、このようなコンストラクトを記述できるように、"*throw 式*" が導入されています。
+C# では、`throw` は常にステートメントでした。 `throw` は式ではなくステートメントであるため、使用できない C# コンストラクトがありました。 これには、条件式、null 結合式、および一部のラムダ式が含まれます。 式形式のメンバーが追加されたことにより、さらに多くの場所で `throw` 式が役に立つようになりました。 これらのコンストラクトのいずれかを記述するようにC#7.0 [ *throw 式*](../language-reference/keywords/throw.md#the-throw-expression)します。
 
 この導入により、式ベースのコードをたくさん記述することが簡単になります。 エラー チェックのためにステートメントを追加する必要はありません。
 

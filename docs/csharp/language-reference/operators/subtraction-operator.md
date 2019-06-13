@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 9f43a863de69122e251204668af2ea989fcc993c
-ms.sourcegitcommit: 621a5f6df00152006160987395b93b5b55f7ffcd
+ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
+ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66300089"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66816070"
 ---
 # <a name="--and---operators-c-reference"></a>- および -= 演算子 (C# リファレンス)
 
@@ -31,12 +31,22 @@ ms.locfileid: "66300089"
 同じ[デリゲート](../keywords/delegate.md)型のオペランドに対しては、`-` 演算子は、次のように計算されるデリゲート インスタンスを返します。
 
 - 両方のオペランドが null ではなく、2 番目のオペランドの呼び出しリストが最初のオペランドの呼び出しリストの適切な連続するサブリストの場合は、演算の結果は 2 番目のオペランドのエントリを最初のオペランドの呼び出しリストから削除することによって取得される新しい呼び出しリストとなります。 2 番目のオペランドのリストが、最初のオペランドのリストで複数の連続するサブリストと一致する場合、右端の一致するサブリストのみが削除されます。 削除によりリストが空になる場合、結果は `null` になります。
-- 2 番目のオペランドの呼び出しリストが最初のオペランドの呼び出しリストの適切な連続するサブリストでない場合は、演算結果は最初のオペランドになります。
+
+  [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+
+- 2 番目のオペランドの呼び出しリストが最初のオペランドの呼び出しリストの適切な連続するサブリストでない場合は、演算結果は最初のオペランドになります。 などのマルチキャスト デリゲートの一部でないデリゲートの削除は何も行いません、変更されていないマルチキャスト デリゲートになります。
+
+  [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
+
+  前の例をデリゲートの中にデリゲート インスタンスの削除は比較も示します。 たとえば、同一の評価から生成されるデリゲート[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)が等しくないです。 デリゲートの等価性の詳細については、次を参照してください。、[デリゲート等値演算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)のセクション、 [ C#言語仕様](../language-specification/index.md)します。
+
 - 最初のオペランドが `null` の場合は、演算結果は `null` になります。 2 番目のオペランドが `null` の場合は、演算結果は最初のオペランドになります。
 
-次の例は、`-` 演算によるデリゲートの削除方法を示しています。
+  [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-[!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
+デリゲートを結合するを使用して、 [ `+`演算子](addition-operator.md#delegate-combination)します。
+
+デリゲート型の詳細については、[デリゲート](../../programming-guide/delegates/index.md)に関するページを参照してください。
 
 ## <a name="subtraction-assignment-operator--"></a>減算代入演算子 -=
 
@@ -62,11 +72,11 @@ x = x - y
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-ユーザー定義型は `-` 演算子を[オーバーロード](../keywords/operator.md)できます。 2 項 `-` 演算子をオーバーロードすると、`-=` 演算子も暗黙的にオーバーロードされます。 ユーザー定義型では、`-=` 演算子の明示的なオーバーロードはできません。
+ユーザー定義型は `-` 演算子を[オーバーロード](../keywords/operator.md)できます。 2 項 `-` 演算子をオーバーロードすると、`-=` 演算子も暗黙的にオーバーロードされます。 ユーザー定義型では、`-=` 演算子を明示的にオーバーロードできません。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、[C# 言語仕様](../language-specification/index.md)の[単項マイナス演算子](~/_csharplang/spec/expressions.md#unary-minus-operator)と[減算演算子](~/_csharplang/spec/expressions.md#subtraction-operator)に関するセクションを参照してください。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の[単項マイナス演算子](~/_csharplang/spec/expressions.md#unary-minus-operator)と[減算演算子](~/_csharplang/spec/expressions.md#subtraction-operator)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 

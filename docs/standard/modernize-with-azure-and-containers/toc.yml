@@ -5,7 +5,7 @@
       href: lift-and-shift-existing-apps-azure-iaas.md
     - name: リレーショナル データベースの Azure への移行
       href: migrate-your-relational-databases-to-azure.md
-    - name: クラウドに最適化された最新の既存 .NET アプリ
+    - name: クラウドに最適化された既存の .NET アプリを最新化します。
       href: ./modernize-existing-apps-to-cloud-optimized/index.md
       items:
         - name: 既存の .NET アプリをクラウドに最適化されたアプリに現代化する理由
@@ -24,8 +24,6 @@
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-vms-iaas-cloud.md
         - name: Azure コンテナー インスタンス (ACI) に Windows コンテナーを展開するタイミング
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-instances-ACI.md
-        - name: Service Fabric に Windows コンテナーを展開するタイミング
-          href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-service-fabric.md
         - name: Azure Container Service (ACS-Kubernetes) に Windows コンテナーを展開するタイミング
           href: ./modernize-existing-apps-to-cloud-optimized/when-to-deploy-windows-containers-to-azure-container-service-kubernetes.md
         - name: コンテナー ベース アプリケーション用の Azure コンピューティング プラットフォームの選択

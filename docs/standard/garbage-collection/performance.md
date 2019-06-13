@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: c203467b-e95c-4ccf-b30b-953eb3463134
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 996ea7802473817594420a108470f7604170482e
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 23c1bf7412f18674e87896949e0b57ff8bd60d14
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456797"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66489588"
 ---
 # <a name="garbage-collection-and-performance"></a>ガベージ コレクションとパフォーマンス
 <a name="top"></a> ここでは、ガベージ コレクションおよびメモリ使用に関連する問題について説明します。 マネージド ヒープに関する問題について取り上げ、ガベージ コレクションによるアプリケーションに対する影響を最小限に抑える方法を説明します。 問題を調査するために使用できる手順のリンクを問題ごとに示してあります。  
@@ -44,7 +44,7 @@ ms.locfileid: "66456797"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>ガベージ コレクション ETW イベント  
- Windows イベント トレーシング (ETW) は、.NET Framework のプロファイリングとデバッグのサポートを補足するトレース システムです。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] 以降では、[ガベージ コレクション ETW イベント](../../../docs/framework/performance/garbage-collection-etw-events.md)により、統計的な観点からマネージド ヒープを分析するための有益な情報が得られるようになりました。 たとえば、ガベージ コレクションの発生前に発生する `GCStart_V1` イベントでは、次の情報が提供されます。  
+ Windows イベント トレーシング (ETW) は、.NET Framework のプロファイリングとデバッグのサポートを補足するトレース システムです。 .NET Framework 4 以降で[ガベージ コレクション ETW イベント](../../../docs/framework/performance/garbage-collection-etw-events.md)統計的な観点からマネージ ヒープを分析するための有用な情報をキャプチャします。 たとえば、ガベージ コレクションの発生前に発生する `GCStart_V1` イベントでは、次の情報が提供されます。  
   
 - 収集されるオブジェクトのジェネレーション  
   
