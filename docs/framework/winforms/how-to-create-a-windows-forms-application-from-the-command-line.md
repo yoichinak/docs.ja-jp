@@ -35,16 +35,14 @@ ms.locfileid: "65588977"
      [!code-csharp[System.Windows.Forms.BasicForm#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.BasicForm#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#3)]  
   
-3. 
-  `Form1` の既定のコンストラクターを作成します。  
+3. `Form1` の既定のコンストラクターを作成します。  
   
      後続の手順で、コンストラクターにさらにコードを追加します。  
   
      [!code-csharp[System.Windows.Forms.BasicForm#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/CS/Form1.cs#4)]
      [!code-vb[System.Windows.Forms.BasicForm#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.BasicForm/VB/Form1.vb#4)]  
   
-4. 
-  `Main` メソッドをクラスに追加します。  
+4. `Main` メソッドをクラスに追加します。  
   
     1. 適用、 <xref:System.STAThreadAttribute> c# `Main` Windows フォーム アプリケーションを指定するメソッドは、シングル スレッド アパートメント。 (属性は必要ありません Visual basic で Windows フォーム アプリケーション開発された Visual Basic の使用をシングル スレッド アパートメント モデルを既定であるためです。)  
   
@@ -96,8 +94,7 @@ ms.locfileid: "65588977"
      [!code-csharp[System.Windows.Forms.FormWithButton#3](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/CS/Form1.cs#3)]
      [!code-vb[System.Windows.Forms.FormWithButton#3](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.FormWithButton/VB/Form1.vb#3)]  
   
-6. 
-  <xref:System.Windows.Forms.Control.Click> イベントを作成したメソッドに関連付けます。  
+6. <xref:System.Windows.Forms.Control.Click> イベントを作成したメソッドに関連付けます。  
   
      次のコード例は、イベントをメソッドに関連付ける方法を示します。  
   
