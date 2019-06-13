@@ -26,8 +26,7 @@ ms.locfileid: "64593441"
   
 ### <a name="to-change-the-gridline-color-programmatically"></a>プログラムで枠線の色を変更するには  
   
-- 
-  <xref:System.Windows.Forms.DataGridView.GridColor%2A> プロパティを設定します。  
+- <xref:System.Windows.Forms.DataGridView.GridColor%2A> プロパティを設定します。  
   
      [!code-csharp[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/CS/datagridviewmisc.cs#031)]
      [!code-vb[System.Windows.Forms.DataGridViewMisc#031](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.DataGridViewMisc/VB/datagridviewmisc.vb#031)]  
