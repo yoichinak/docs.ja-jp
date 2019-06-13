@@ -15,12 +15,12 @@ ms.assetid: 0f8bffab-ee0d-4e0e-9a96-2b4a252bb7e4
 author: rpetrusha
 ms.author: ronpet
 ms.custom: seodec18
-ms.openlocfilehash: 556181d32f0539b4a9e24cb1a898b4ccc3788f4e
-ms.sourcegitcommit: 26f4a7697c32978f6a328c89dc4ea87034065989
+ms.openlocfilehash: 0b70545c2252d6e8b82d6f4d57522ac4bb2481d8
+ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/28/2019
-ms.locfileid: "66250884"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66490877"
 ---
 # <a name="character-classes-in-regular-expressions"></a>正規表現での文字クラス
 
@@ -51,7 +51,7 @@ ms.locfileid: "66250884"
  .NET は、文字クラスの減算式をサポートしています。これにより、ある文字クラスから別の文字クラスを除外した結果を文字のセットとして定義できます。 詳細については、「[文字クラス減算](#CharacterClassSubtraction)」を参照してください。  
   
 > [!NOTE]
->  カテゴリ別の文字に一致する文字クラス (単語文字に一致する [\w](#WordCharacter)、Unicode カテゴリに一致する [\p{}](#CategoryOrBlock) など) は、<xref:System.Globalization.CharUnicodeInfo> クラスを使用して文字カテゴリに関する情報を提供します。  .NET Framework 4.6.2 以降の文字カテゴリは、[Unicode 標準バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいています。 [!INCLUDE[net_v40_long](../../../includes/net-v40-long-md.md)] から .NET Framework 4.6.1 では、[Unicode 標準バージョン 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/) に基づいています。  
+>  カテゴリ別の文字に一致する文字クラス (単語文字に一致する [\w](#WordCharacter)、Unicode カテゴリに一致する [\p{}](#CategoryOrBlock) など) は、<xref:System.Globalization.CharUnicodeInfo> クラスを使用して文字カテゴリに関する情報を提供します。  .NET Framework 4.6.2 以降の文字カテゴリは、[Unicode 標準バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいています。 .NET Framework 4.6.1 から .NET Framework 4 に基づいている[Unicode 標準、バージョン 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/)します。  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>文字グループの肯定: [ ]  
