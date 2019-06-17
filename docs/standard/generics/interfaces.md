@@ -24,7 +24,7 @@ ms.locfileid: "66487045"
  ジェネリック インターフェイスは、順序付け比較や等価比較、およびジェネリック コレクション型で共有される機能のために、非ジェネリック インターフェイスに対応するタイプ セーフな機能を提供します。  
   
 > [!NOTE]
->  .NET Framework 4 で、いくつかのジェネリック インターフェイスのパラメーターが共変でマークされている型または反変より柔軟に割り当てると、これらのインターフェイスを実装する型を使用して開始しています。 「 [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)を参照してください。  
+>  .NET Framework 4 以降では、いくつかのジェネリック インターフェイスの型パラメーターが共変または反変としてマークされ、それらのインターフェイスを実装する型をより柔軟に割り当てたり使用したりできます。 「 [共変性と反変性](../../../docs/standard/generics/covariance-and-contravariance.md)を参照してください。  
   
 ### <a name="equality-and-ordering-comparisons"></a>等価比較と順序付け比較  
  <xref:System> 名前空間で、<xref:System.IComparable%601?displayProperty=nameWithType> と <xref:System.IEquatable%601?displayProperty=nameWithType> ジェネリック インターフェイスは、対応する非ジェネリック インターフェイスと同じように、順序付け比較と等価比較の方法をそれぞれ定義します。 型は、そのような比較の実施能力を提供するために、これらのインターフェイスを実装します。  

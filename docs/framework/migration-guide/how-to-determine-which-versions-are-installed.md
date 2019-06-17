@@ -33,7 +33,7 @@ ms.locfileid: "66490010"
 >
 > .NET Framework のバージョンと CLR のバージョンの間には違いがあります。
 > - .NET Framework は、.NET Framework のクラス ライブラリを構成するアセンブリのセットに基づいてバージョン管理されています。 たとえば、.NET Framework のバージョンには、4.5、4.6.1、および 4.7.2 が含まれます。
->- CLR は、.NET Framework アプリケーションが実行されているランタイムに基づいてバージョン管理されています。 1 つの CLR バージョンは、通常複数の NET Framework バージョンをサポートしています。 たとえば、CLR バージョン 4.0.30319 です。*xxxxx* 4 ~ 4.5.2、.NET Framework のバージョンをサポートしている場所*xxxxx* 42000 未満は、CLR バージョン 4.0.30319.42000 は、.NET Framework のバージョンの .NET Framework 4.6 以降をサポートしています。
+>- CLR は、.NET Framework アプリケーションが実行されているランタイムに基づいてバージョン管理されています。 1 つの CLR バージョンは、通常複数の NET Framework バージョンをサポートしています。 たとえば、CLR バージョン 4.0.30319.*xxxxx* (ここでの *xxxxx* は 42000 より小さい) は .NET Framework バージョン 4 から 4.5.2 をサポートしており、CLR バージョン 4.0.30319.42000 では .NET Framework 4.6 以降をサポートします。
 >
 > バージョンの詳細については、「[.NET Framework のバージョンおよび依存関係](versions-and-dependencies.md)」を参照してください。
 
@@ -90,7 +90,7 @@ ms.locfileid: "66490010"
 |.NET Framework 4.7|Windows 10 Creators Update:460798<br />他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):460805|
 |.NET Framework 4.7.1|Windows 10 Fall Creators Update および Windows Server バージョン 1709:461308<br/>他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む):461310|
 |.NET Framework 4.7.2|Windows 10 April 2018 Update および Windows Server バージョン 1803:461808<br/>Windows 10 April 2018 Update および Windows Server バージョン 1803 以外のすべての Windows オペレーティング システム:461814|
-|.NET Framework 4.8|Windows 10 の月 2019 update:528040<br/>ほかのすべて (他の Windows 10 オペレーティング システムを含む) の Windows オペレーティング システム。528049|
+|.NET Framework 4.8|Windows 10 May 2019 Update: 528040<br/>他のすべての Windows オペレーティング システム (他の Windows 10 オペレーティング システムを含む): 528049|
 
 これらの値は次のように使用できます。
 
@@ -204,7 +204,7 @@ ms.locfileid: "66490010"
 
     返された `System.Version` オブジェクトは、現在コードを実行しているランタイムのバージョンを示しています。 コンピューターにインストールされている可能性のある、アセンブリのバージョンやランタイムのその他のバージョンは返されません。
 
-    .NET Framework バージョン 4、4.5、4.5.1、および 4.5.2 を返された文字列の形式に関する<xref:System.Version>オブジェクト 4.0.30319 形式になっています *。xxxxx*ここで、 *xxxxx* 42000 未満です。 .NET Framework 4.6 以降のバージョンの場合は、4.0.30319.42000 という形式です。
+    .NET Framework バージョン 4、4.5、4.5.1、4.5.2 の場合は、返される <xref:System.Version> オブジェクトの文字列表現は 4.0.30319.*xxxxx* という形式です。ここでの *xxxxx* は 42000 より小さいです。 .NET Framework 4.6 以降のバージョンの場合は、4.0.30319.42000 という形式です。
 
 2. `Version` オブジェクトを取得したら、次のように照会します。
 

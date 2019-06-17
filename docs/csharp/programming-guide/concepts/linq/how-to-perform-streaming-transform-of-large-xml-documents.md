@@ -14,7 +14,7 @@ ms.locfileid: "66486642"
   
  ストリーミングの手法は、ソース ドキュメントを 1 回だけ処理する必要がある場合に適しており、ドキュメントの順序で要素を処理できます。 <xref:System.Linq.Enumerable.OrderBy%2A> などの一部の標準クエリ演算子では、ソースが反復処理され、すべてのデータが収集され並べ替えられて、最終的にはシーケンス内の最初の項目が生成されます。 最初の項目を生成する前にソースを具体化するクエリ演算子を使用すると、アプリケーションのメモリ使用量を低く維持することができないので注意してください。  
   
- 説明した手法を使用する場合でも[方法。ヘッダー情報にアクセスして XML フラグメントをストリーム出力する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)」の手法を使用しても、変換されたドキュメントが含まれた XML ツリーをアセンブルしようとすると、メモリが過剰に使用されます。  
+ 「[方法: ヘッダー情報にアクセスして XML フラグメントをストリーム出力する (C#)](../../../../csharp/programming-guide/concepts/linq/how-to-stream-xml-fragments-with-access-to-header-information.md)」の手法を使用しても、変換されたドキュメントが含まれた XML ツリーをアセンブルしようとすると、メモリが過剰に使用されます。  
   
  主な方法は 2 つあります。 1 つは、<xref:System.Xml.Linq.XStreamingElement> の遅延処理の特性を使用する方法です。 もう 1 つは、<xref:System.Xml.XmlWriter> を作成し、[!INCLUDE[sqltecxlinq](~/includes/sqltecxlinq-md.md)] の機能を使用して <xref:System.Xml.XmlWriter> に要素を書き込む方法です。 このトピックでは、両方の方法について説明します。  
   

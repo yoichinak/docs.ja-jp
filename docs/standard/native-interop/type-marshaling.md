@@ -4,12 +4,12 @@ description: .NET が型をネイティブ表現にマーシャリングする�
 author: jkoritzinsky
 ms.author: jekoritz
 ms.date: 01/18/2019
-ms.openlocfilehash: cb18a7607a3d99907401543b4d37995a956a3920
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2cb8898b52b4b4afba1184a886e16c9f7f68f03a
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65065965"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041788"
 ---
 # <a name="type-marshaling"></a>型のマーシャリング
 
@@ -79,6 +79,20 @@ static extern int MethodA([MarshalAs(UnmanagedType.LPStr)] string parameter);
 | `System.Runtime.InteropServices.HandleRef` | `void*` |
 
 これらの既定値が目的と合わない場合は、パラメーターのマーシャリング方法をカスタマイズできます。 [パラメーターのマーシャリング](customize-parameter-marshaling.md)の記事では、さまざまなパラメーターの型をマーシャリングする方法のカスタマイズ手順について説明しています。
+
+## <a name="default-marshaling-in-com-scenarios"></a>COM シナリオでの既定のマーシャリング
+
+.NET で COM オブジェクトのメソッドを呼び出している場合、.NET ランタイムによって共通の COM セマンティクスを満たすように、既定のマーシャリング ルールが変更されます。 次の表では、COM シナリオで .NET ランタイムによって使用される規則が一覧にされます。
+
+| .NET 型 | ネイティブ型 (COM メソッドの呼び出し) |
+|-----------|--------------------------------|
+| `bool`    | `VARIANT_BOOL`                 |
+| `StringBuilder` | `LPWSTR`                 |
+| `string`  | `BSTR`                         |
+| デリゲート型 | .NET Framework では `_Delegate*`。 .NET Core では許可されていません。 |
+| `System.Drawing.Color` | `OLECOLOR`        |
+| .NET 配列 | `SAFEARRAY`                   |
+| `string[]` | `BSTR` の `SAFEARRAY`        |
 
 ## <a name="marshaling-classes-and-structs"></a>クラスと構造体のマーシャリング
 

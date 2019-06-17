@@ -21,7 +21,7 @@ ms.locfileid: "66722633"
 
 アルゴリズムは、**モデル**を生成するために実行される数学です。 アルゴリズムが異なると、特性が異なるモデルが生成されます。 
 
-ML.NET では、同じアルゴリズムを異なるタスクに適用できます。 たとえば、二項分類、多クラス分類と回帰の確率的デュアル連携のとれたアセントを使用できます。 違いは、タスクに合わせてアルゴリズムの出力が解釈される方法にあります。 
+ML.NET では、同じアルゴリズムを異なるタスクに適用できます。 たとえば、確率的双対座標上昇法は、二項分類、多クラス分類、回帰に使用できます。 違いは、タスクに合わせてアルゴリズムの出力が解釈される方法にあります。 
 
 ML.NET には、各アルゴリズムとタスクの組み合わせに対して、トレーニング アルゴリズムを実行し、解釈するコンポーネントが用意されています。 これらのコンポーネントはトレーナーと呼ばれます。 たとえば、<xref:Microsoft.ML.Trainers.SdcaRegressionTrainer> には、**回帰**タスクに適用される **StochasticDualCoordinatedAscent** アルゴリズムが使用されます。
 
@@ -42,7 +42,7 @@ ML.NET には、各アルゴリズムとタスクの組み合わせに対して�
 |アルゴリズム|プロパティ|トレーナー|
 |---------|----------|--------|
 |Averaged perceptron (平均化パーセプトロン)|テキスト分類に最適です|<xref:Microsoft.ML.Trainers.AveragedPerceptronTrainer>|
-|確率的デュアル連携のとれたアセント|既定のパフォーマンスが適切な場合は、調整が不要です|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
+|確率的双対座標上昇法|既定のパフォーマンスが適切な場合は、調整が不要です|<xref:Microsoft.ML.Trainers.SdcaLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedBinaryTrainer> <xref:Microsoft.ML.Trainers.SdcaMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaNonCalibratedMulticlassTrainer> <xref:Microsoft.ML.Trainers.SdcaRegressionTrainer>|
 |L-BFGS|特徴数が多い場合に使用します。 ロジスティック回帰トレーニング統計が生成されますが、AveragedPerceptronTrainer ほどスケールしません|<xref:Microsoft.ML.Trainers.LbfgsLogisticRegressionBinaryTrainer> <xref:Microsoft.ML.Trainers.LbfgsMaximumEntropyMulticlassTrainer> <xref:Microsoft.ML.Trainers.LbfgsPoissonRegressionTrainer>|
 |Symbolic stochastic gradient descent (シンボリック確率的勾配降下法)|最も高速で最も正確な線形二項分類トレーナー。 プロセッサの数に合わせてスケールします|<xref:Microsoft.ML.Trainers.SymbolicSgdLogisticRegressionBinaryTrainer>|
 

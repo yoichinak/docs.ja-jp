@@ -21,7 +21,7 @@ ms.locfileid: "66490970"
 
 ## <a name="what-is-a-parallel-query"></a>並列クエリとは
 
-統合言語クエリ (LINQ) は、.NET Framework 3.5 で導入されました。 これはタイプ セーフな方法で任意の <xref:System.Collections.IEnumerable?displayProperty=nameWithType> または <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> のデータ ソースを照会する、統一されたモデルです。 LINQ to Objects とは、<xref:System.Collections.Generic.List%601> や配列などのメモリ内コレクションに対して実行される LINQ クエリの名前です。 この記事では、LINQ の基礎を理解していることを前提としています。 詳細については、「[統合言語クエリ (LINQ) - C#](../../csharp/programming-guide/concepts/linq/index.md)」または「[統合言語クエリ (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)」を参照してください。
+統合言語クエリ (LINQ) は .NET Framework 3.5 で導入されました。 これはタイプ セーフな方法で任意の <xref:System.Collections.IEnumerable?displayProperty=nameWithType> または <xref:System.Collections.Generic.IEnumerable%601?displayProperty=nameWithType> のデータ ソースを照会する、統一されたモデルです。 LINQ to Objects とは、<xref:System.Collections.Generic.List%601> や配列などのメモリ内コレクションに対して実行される LINQ クエリの名前です。 この記事では、LINQ の基礎を理解していることを前提としています。 詳細については、「[統合言語クエリ (LINQ) - C#](../../csharp/programming-guide/concepts/linq/index.md)」または「[統合言語クエリ (LINQ) - Visual Basic](../../visual-basic/programming-guide/concepts/linq/index.md)」を参照してください。
 
 Parallel LINQ (PLINQ) は、LINQ パターンの並列実装です。 PLINQ クエリは、あらゆる意味において、並列ではない LINQ to Objects クエリに似ています。 PLINQ クエリは、[!INCLUDE[vbteclinq](../../../includes/vbteclinq-md.md)] の順次クエリと同様、メモリ内の <xref:System.Collections.IEnumerable> または <xref:System.Collections.Generic.IEnumerable%601> データ ソースで実行され、遅延実行が存在するので、クエリが列挙されるまでは実行されません。 主な相違点は、PLINQ は、システムのすべてのプロセッサを十分に活用しようとする点です。 そのために、データ ソースをセグメントにパーティション分割し、複数のプロセッサで個々のワーカー スレッドの各セグメントに対してクエリを並行実行します。 多くの場合、並行実行によって、クエリは非常に高速に処理されます。
 

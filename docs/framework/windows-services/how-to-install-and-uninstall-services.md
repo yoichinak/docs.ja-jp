@@ -47,7 +47,7 @@ Windows サービス プロジェクトを、F5 キーを押して Visual Studio
     installutil <yourproject>.exe
     ```
 
-     Visual Studio 用開発者コマンド プロンプトを使用している場合、*InstallUtil.exe* はシステム パス上にあるはずです。 ない場合は、パスに追加するか、完全修飾パスを使用して起動します。 .NET framework でこのツールがインストールされている *%windir%\microsoft.net\framework[64]\\< framework_version\>* します。
+     Visual Studio 用開発者コマンド プロンプトを使用している場合、*InstallUtil.exe* はシステム パス上にあるはずです。 ない場合は、パスに追加するか、完全修飾パスを使用して起動します。 このツールは、.NET Framework と共に *%WINDIR%\Microsoft.NET\Framework[64]\\<フレームワーク_バージョン\>* フォルダーにインストールされます。
 
      次に例を示します。
      - 32 ビット バージョンの .NET Framework 4 または 4.5 以降では、Windows のインストール ディレクトリが *C:\Windows* の場合、既定のパスは *C:\Windows\Microsoft.NET\Framework\v4.0.30319\InstallUtil.exe* です。

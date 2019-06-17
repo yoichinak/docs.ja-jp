@@ -364,7 +364,7 @@ Windows では、フラット C API、COM、および WinRT の形式で、質�
 
 <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 型は HTTP/2 プロトコルをサポートしています。 サポートは現在無効ですが、<xref:System.Net.Http.HttpClient> を使用する前に `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` を呼び出すことで有効にすることができます。 アプリを実行する前に `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` 環境変数を `true` に設定することで HTTP/2 のサポートを有効にすることもできます。
 
-Http/2 が有効になっている場合は、HTTP プロトコルのバージョンは TLS/ALPN 経由でネゴシエートして http/2 はそれを使用するサーバーが選択した場合にのみ使用します。
+HTTP/2 が有効な場合、HTTP プロトコルのバージョンは TLS/ALPN を介してネゴシエートされ、HTTP/2 はサーバーがそれを使用することを選択した場合にのみ使用されます。
 
 ## <a name="tls-13--openssl-111-on-linux"></a>Linux 上の TLS 1.3 と OpenSSL 1.1.1
 

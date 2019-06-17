@@ -24,7 +24,7 @@ ms.locfileid: "66486343"
  このセクションの残りのトピックには、マネージド スレッド処理と Windows オペレーティング システムとの相互作用など、高度なトピックが含まれます。  
   
 > [!NOTE]
->  .NET Framework 4 では、タスク並列ライブラリおよび PLINQ では、マルチ スレッド プログラムでのタスクとデータの並列処理の Api を提供します。 詳細については、[並列プログラミング](../../../docs/standard/parallel-programming/index.md)に関するページをご覧ください。  
+>  .NET Framework 4 では、タスク並列ライブラリと PLINQ によって、マルチスレッド プログラムでのタスクとデータの並列処理のための API が提供されます。 詳細については、[並列プログラミング](../../../docs/standard/parallel-programming/index.md)に関するページをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容
 

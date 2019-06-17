@@ -52,7 +52,7 @@ ms.locfileid: "66486975"
 > [!NOTE]
 >  ハンドラーは、アセンブリを読み込み元コンテキストまたは読み込みコンテキストに読み込むか、コンテキストなしで読み込む必要があります。ハンドラーが <xref:System.Reflection.Assembly.ReflectionOnlyLoad%2A?displayProperty=nameWithType> メソッドまたは <xref:System.Reflection.Assembly.ReflectionOnlyLoadFrom%2A?displayProperty=nameWithType> メソッドを使ってリフレクションのみのコンテキストにアセンブリを読み込むと、<xref:System.AppDomain.AssemblyResolve> イベントを生成した読み込みの試みは失敗します。  
   
- 適切なアセンブリを返すのはイベント ハンドラーの役目です。 ハンドラーは、<xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> プロパティの値を <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> コンストラクターに渡すことによって、要求されたアセンブリの表示名を解析できます。 以降、.NET Framework 4 では、ハンドラーが使用できる、<xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType>プロパティを現在の要求が別のアセンブリの依存関係であるかどうかを確認します。 この情報は、依存関係を満たすアセンブリを特定するのに役立ちます。  
+ 適切なアセンブリを返すのはイベント ハンドラーの役目です。 ハンドラーは、<xref:System.ResolveEventArgs.Name%2A?displayProperty=nameWithType> プロパティの値を <xref:System.Reflection.AssemblyName.%23ctor%28System.String%29> コンストラクターに渡すことによって、要求されたアセンブリの表示名を解析できます。 .NET Framework 4 以降では、ハンドラーは <xref:System.ResolveEventArgs.RequestingAssembly%2A?displayProperty=nameWithType> プロパティを使って、現在の要求が別のアセンブリの依存関係であるかどうかを確認できます。 この情報は、依存関係を満たすアセンブリを特定するのに役立ちます。  
   
  イベント ハンドラーは、要求されたバージョンとは異なるバージョンのアセンブリを返すことができます。  
   

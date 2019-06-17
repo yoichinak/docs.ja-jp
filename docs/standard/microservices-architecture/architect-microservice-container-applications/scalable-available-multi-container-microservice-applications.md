@@ -27,7 +27,7 @@ ms.locfileid: "66815843"
 
 アーキテクチャと開発の観点から、マイクロサービス ベースのアプリケーションで構成される大規模なエンタープライズを構築する場合、高度なシナリオをサポートする次のプラットフォームと製品を理解することが重要です。
 
-**クラスターとオーケストレーター。** 大規模なマイクロサービス ベースのアプリケーションの場合のように、多くの Docker ホストでアプリケーションをスケールアウトする必要がある場合は、基になるプラットフォームの複雑さを抽象化することで、これらすべてのホストを単一のクラスターとして管理できるようにすることが重要です。 それは、コンテナー クラスターとオーケストレーターによって実現されるものです。 Kubernetes、オーケストレーターの例は、Azure Kubernetes Service を介して Azure では使用。
+**クラスターとオーケストレーター。** 大規模なマイクロサービス ベースのアプリケーションの場合のように、多くの Docker ホストでアプリケーションをスケールアウトする必要がある場合は、基になるプラットフォームの複雑さを抽象化することで、これらすべてのホストを単一のクラスターとして管理できるようにすることが重要です。 それは、コンテナー クラスターとオーケストレーターによって実現されるものです。 Kubernetes はオーケストレーターの例であり、Azure Kubernetes Service を介して Azure で利用可能です。
 
 **スケジューラ。** *スケジューリング* は、管理者がクラスターのコンテナーを起動して、UI も提供できるようにすることを意味します。 クラスター スケジューラにはいくつかの役割があります。たとえば、クラスターのリソースを効率的に使用すること、ユーザーによって指定される制約を設定すること、ノードまたはホスト全体でのコンテナーの負荷分散を効率的に行うこと、高可用性を提供すると同時にエラーに対して堅牢であることなどです。
 
@@ -53,7 +53,7 @@ ms.locfileid: "66815843"
 
 ## <a name="using-container-based-orchestrators-in-microsoft-azure"></a>Microsoft Azure でのコンテナー ベースのオーケストレーターの使用
 
-いくつかのクラウド ベンダーでは Docker コンテナーのサポートに加え、Docker クラスターおよびオーケストレーション サポート (Microsoft Azure、Amazon EC2 Container Service、Google Container Engine を含む) が提供されます。 Microsoft Azure は、Docker クラスターおよびオーケストレーション サポートを介して Azure Kubernetes Service (AKS) を提供します。
+いくつかのクラウド ベンダーでは Docker コンテナーのサポートに加え、Docker クラスターおよびオーケストレーション サポート (Microsoft Azure、Amazon EC2 Container Service、Google Container Engine を含む) が提供されます。 Microsoft Azure では、Azure Kubernetes Service (AKS) を介して Docker クラスターとオーケストレーターのサポートが提供されます。
 
 ## <a name="using-azure-kubernetes-service"></a>Azure Kubernetes Service の使用
 

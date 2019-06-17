@@ -1,5 +1,5 @@
 ---
-title: + + = 演算子、およびC#リファレンス
+title: + および += 演算子 - C# リファレンス
 ms.custom: seodec18
 ms.date: 05/24/2019
 f1_keywords:
@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67025321"
 ---
-# <a name="-and--operators-c-reference"></a>+、+ = 演算子 (C#リファレンス)
+# <a name="-and--operators-c-reference"></a>+ および += 演算子 (C# リファレンス)
 
 `+` 演算子は、組み込み数値型、[文字列](../keywords/delegate.md)型、および[デリゲート](../keywords/string.md)型でサポートされています。
 
@@ -43,7 +43,7 @@ C# 6 以降、[文字列補間](../tokens/interpolated.md)という文字列を�
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 
-デリゲートの削除を実行するのには、使用、 [ `-`演算子](subtraction-operator.md#delegate-removal)します。
+デリゲートの削除を実行するには、[`-` 演算子](subtraction-operator.md#delegate-removal)を使用します。
 
 デリゲート型の詳細については、[デリゲート](../../programming-guide/delegates/index.md)に関するページを参照してください。
 

@@ -34,17 +34,17 @@ ms.locfileid: "66816070"
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- 2 番目のオペランドの呼び出しリストが最初のオペランドの呼び出しリストの適切な連続するサブリストでない場合は、演算結果は最初のオペランドになります。 などのマルチキャスト デリゲートの一部でないデリゲートの削除は何も行いません、変更されていないマルチキャスト デリゲートになります。
+- 2 番目のオペランドの呼び出しリストが最初のオペランドの呼び出しリストの適切な連続するサブリストでない場合は、演算結果は最初のオペランドになります。 たとえば、マルチキャストのデリゲートの一部ではないデリゲートを削除しても何も行われず、マルチキャストのデリゲートは変更されません。
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
-  前の例をデリゲートの中にデリゲート インスタンスの削除は比較も示します。 たとえば、同一の評価から生成されるデリゲート[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)が等しくないです。 デリゲートの等価性の詳細については、次を参照してください。、[デリゲート等値演算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)のセクション、 [ C#言語仕様](../language-specification/index.md)します。
+  前の例では、デリゲート中に削除デリゲートのインスタンスが比較されることも示しています。 たとえば、同一の[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)の評価から生成されるデリゲートが等しくない、などです。 デリゲートの等値の詳細については、[C# 言語仕様](../language-specification/index.md)の[デリゲートの等値演算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)に関するセクションを参照してください。
 
 - 最初のオペランドが `null` の場合は、演算結果は `null` になります。 2 番目のオペランドが `null` の場合は、演算結果は最初のオペランドになります。
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 
-デリゲートを結合するを使用して、 [ `+`演算子](addition-operator.md#delegate-combination)します。
+デリゲートを組み合わせるには、[`+` 演算子](addition-operator.md#delegate-combination)を使用します。
 
 デリゲート型の詳細については、[デリゲート](../../programming-guide/delegates/index.md)に関するページを参照してください。
 

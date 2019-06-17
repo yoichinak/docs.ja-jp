@@ -26,7 +26,7 @@ ms.locfileid: "66490915"
   
  アンマネージ C++ では、`TlsAlloc` を使用してスロットを動的に割り当て、`__declspec(thread)` を使用して、変数をスレッド相対ストレージに割り当てることを宣言します。 スレッド相対静的フィールドおよびデータ スロットには、この動作のマネージド バージョンが用意されています。  
   
- .NET Framework 4 で使用することができます、<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType>オブジェクトが最初に利用されるときに遅れて初期化されるスレッド ローカル オブジェクトを作成するクラス。 詳細については、「[限定的な初期化](../../../docs/framework/performance/lazy-initialization.md)」を参照してください。  
+ .NET Framework 4 では、<xref:System.Threading.ThreadLocal%601?displayProperty=nameWithType> クラスを使用して、最初に利用されるときに遅れて初期化されるスレッド ローカル オブジェクトを作成できます。 詳細については、「[限定的な初期化](../../../docs/framework/performance/lazy-initialization.md)」を参照してください。  
   
 ## <a name="uniqueness-of-data-in-managed-tls"></a>マネージド TLS でのデータの一意性  
  スレッド相対静的フィールドとデータ スロットのどちらを使用しても、マネージド TLS でのデータはスレッドとアプリケーション ドメインの組み合わせに対して一意になります。  

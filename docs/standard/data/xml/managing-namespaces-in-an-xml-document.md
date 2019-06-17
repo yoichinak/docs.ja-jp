@@ -63,7 +63,7 @@ XML 名前空間は、XML ドキュメントの要素名と属性名をカスタ
  名前空間マネージャーでは名前空間の検証は一切実行されません。このマネージャーでは、プレフィックスと名前空間が既に確認され、[W3C 名前空間](https://www.w3.org/TR/REC-xml-names/)仕様に準拠していることが前提となっています。  
   
 > [!NOTE]
-> LINQ TO XML で[ C# ](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)と[Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md)使わない<xref:System.Xml.XmlNamespaceManager>名前空間を管理します。 LINQ to XML を使用している場合の名前空間の管理については、LINQ のドキュメントにある「[XML 名前空間の使用 (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)」および [XML 名前空間の使用 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) に関するページを参照してください。  
+> [C#](../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md) および [Visual Basic](../../../visual-basic/programming-guide/concepts/linq/linq-to-xml.md) の LINQ to XML では、名前空間を管理するために <xref:System.Xml.XmlNamespaceManager> を使用しません。 LINQ to XML を使用している場合の名前空間の管理については、LINQ のドキュメントにある「[XML 名前空間の使用 (C#)](../../../csharp/programming-guide/concepts/linq/working-with-xml-namespaces.md)」および [XML 名前空間の使用 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/working-with-xml-namespaces.md) に関するページを参照してください。  
   
  <xref:System.Xml.XmlNamespaceManager> クラスを使用して実行できる管理タスクと検索タスクをいくつか次に示します。 使用例を含む詳細については、各メソッドまたはプロパティのリファレンス ページへのリンクをクリックしてください。  
   

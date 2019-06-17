@@ -44,7 +44,7 @@ ms.locfileid: "66489588"
   
 <a name="etw"></a>   
 ### <a name="garbage-collection-etw-events"></a>ガベージ コレクション ETW イベント  
- Windows イベント トレーシング (ETW) は、.NET Framework のプロファイリングとデバッグのサポートを補足するトレース システムです。 .NET Framework 4 以降で[ガベージ コレクション ETW イベント](../../../docs/framework/performance/garbage-collection-etw-events.md)統計的な観点からマネージ ヒープを分析するための有用な情報をキャプチャします。 たとえば、ガベージ コレクションの発生前に発生する `GCStart_V1` イベントでは、次の情報が提供されます。  
+ Windows イベント トレーシング (ETW) は、.NET Framework のプロファイリングとデバッグのサポートを補足するトレース システムです。 .NET Framework 4 以降では、[ガベージ コレクション ETW イベント](../../../docs/framework/performance/garbage-collection-etw-events.md)により、統計的な観点からマネージド ヒープを分析するために役立つ情報が得られるようになりました。 たとえば、ガベージ コレクションの発生前に発生する `GCStart_V1` イベントでは、次の情報が提供されます。  
   
 - 収集されるオブジェクトのジェネレーション  
   
@@ -323,7 +323,7 @@ ms.locfileid: "66489588"
   
      この例では、最も大きな空き領域のサイズは約 24000 KB (16 進形式では 3A980) です。 これは、ガベージ コレクターのセグメントに必要なサイズよりはるかに小さいサイズです。  
   
-     - または -  
+     \- または -  
   
 - **vmstat** コマンドを使用します。  
   

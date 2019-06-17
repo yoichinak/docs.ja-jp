@@ -95,5 +95,5 @@ ref 条件演算子の使用例を次に示します。
 - [C# 演算子](index.md)
 - [if-else ステートメント](../keywords/if-else.md)
 - [?. および ?[] 演算子](member-access-operators.md#null-conditional-operators--and-)
-- [??演算子](null-coalescing-operator.md)
+- [?? 演算子](null-coalescing-operator.md)
 - [ref キーワード](../keywords/ref.md)

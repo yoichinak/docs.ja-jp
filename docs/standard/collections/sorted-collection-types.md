@@ -46,7 +46,7 @@ ms.locfileid: "66491020"
 > [!NOTE]
 >  独自のキーを含む値 (従業員 ID 番号を含む従業員レコードなど) では、<xref:System.Collections.ObjectModel.KeyedCollection%602> ジェネリック クラスから派生することによってリストの特性と辞書の特性を合わせ持つキー付きのコレクションを作成できます。  
   
- .NET Framework 4 以降で、<xref:System.Collections.Generic.SortedSet%601>クラスは、挿入、削除、および検索後に並べ替えられた順序でデータを保持する自己平衡ツリーを提供します。 このクラスと <xref:System.Collections.Generic.HashSet%601> クラスは、<xref:System.Collections.Generic.ISet%601> インターフェイスを実装します。  
+ .NET Framework 4 以降、<xref:System.Collections.Generic.SortedSet%601> クラスでは、挿入、削除、検索の後に並べ替えられた順序でデータを保持する自己平衡ツリーを提供します。 このクラスと <xref:System.Collections.Generic.HashSet%601> クラスは、<xref:System.Collections.Generic.ISet%601> インターフェイスを実装します。  
   
 ## <a name="see-also"></a>関連項目
 

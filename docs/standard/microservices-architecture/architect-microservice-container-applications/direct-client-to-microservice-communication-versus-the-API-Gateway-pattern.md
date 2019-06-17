@@ -146,7 +146,7 @@ Azure API Management では、キー、トークン、および IP フィルタ�
 
 [Ocelot](https://github.com/ThreeMammals/Ocelot) は、より簡単な方法としてお勧めする簡易な API ゲートウェイです。 Ocelot は、システムへの統合されたエントリ ポイントを必要とするマイクロサービス アーキテクチャ向けに特別に設計された、オープンソースの .NET Core ベースの API ゲートウェイです。 これは軽量、高速、スケーラブルで、ルーティングや認証をはじめとするさまざまな機能を提供します。
 
-オセロットを選択する主な理由、 [eShopOnContainers 参照アプリケーション](https://github.com/dotnet-architecture/eShopOnContainers)オセロットが展開している同じアプリケーションの展開環境にデプロイできる .NET Core 軽量な API ゲートウェイのためにはマイクロ サービス/コンテナー (Docker ホスト、Kubernetes など)。また、.NET Core をベースとしているのでクロスプラットフォームであり、Linux でも Windows でもデプロイできます。
+[参照アプリケーション eShopOnContainers](https://github.com/dotnet-architecture/eShopOnContainers) 用に Ocelot を選択する主な理由は、Ocelot が、マイクロサービス/コンテナー (Docker ホスト、Kubernetes など) をデプロイするのと同じアプリケーション デプロイ環境にデプロイできる簡易な .NET Core API ゲートウェイであるためです。また、.NET Core をベースとしているのでクロスプラットフォームであり、Linux でも Windows でもデプロイできます。
 
 コンテナー内で実行されるカスタム API ゲートウェイを示した前の図は、コンテナーとマイクロサービス ベースのアプリケーションで Ocelot を実行する方法も正確に示しています。
 

@@ -18,7 +18,7 @@ ms.lasthandoff: 06/04/2019
 ms.locfileid: "66490791"
 ---
 # <a name="cancellation-in-managed-threads"></a>マネージド スレッドのキャンセル
-以降、.NET Framework 4 では、.NET Framework は、非同期または長時間同期操作の連携したキャンセル処理の統一されたモデルを使用します。 このモデルは、キャンセル トークンと呼ばれる軽量のオブジェクトに基づいています。 新しいスレッドまたは新しいタスクの作成などによって 1 つ以上のキャンセル可能な操作を呼び出すオブジェクトは、各操作にトークンを渡します。 次いで、個々の操作は他の操作にトークンのコピーを渡すことができます。 その後、トークンを作成したオブジェクトは、操作が実行している処理を停止するように、そのトークンを使用してその操作に要求できます。 キャンセル要求は、要求側のオブジェクトからのみ発行できます。各リスナーは要求を確認し、適切な時に定期的にその要求に応答する必要があります。  
+.NET Framework 4 以降、.NET Framework では、非同期操作または長時間にわたる同期操作に対する連携によるキャンセルのために、統一されたモデルが使用されます。 このモデルは、キャンセル トークンと呼ばれる軽量のオブジェクトに基づいています。 新しいスレッドまたは新しいタスクの作成などによって 1 つ以上のキャンセル可能な操作を呼び出すオブジェクトは、各操作にトークンを渡します。 次いで、個々の操作は他の操作にトークンのコピーを渡すことができます。 その後、トークンを作成したオブジェクトは、操作が実行している処理を停止するように、そのトークンを使用してその操作に要求できます。 キャンセル要求は、要求側のオブジェクトからのみ発行できます。各リスナーは要求を確認し、適切な時に定期的にその要求に応答する必要があります。  
   
  連携によるキャンセル処理モデルを実装するための一般的なパターンは次のとおりです。  
   
@@ -122,7 +122,7 @@ ms.locfileid: "66490791"
  [!code-csharp[Cancellation#5](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex9.cs#5)]
  [!code-vb[Cancellation#5](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex9.vb#5)]  
   
- .NET Framework 4 を対象とする新しいコードで<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType>と<xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType>で新しいキャンセル フレームワークは両方をサポート、`Wait`メソッド。 メソッドに <xref:System.Threading.CancellationToken> を渡すことができ、キャンセルが要求されると、イベントが起動して <xref:System.OperationCanceledException> がスローされます。  
+ .NET Framework 4 を対象とする新しいコードでは、<xref:System.Threading.ManualResetEventSlim?displayProperty=nameWithType> と <xref:System.Threading.SemaphoreSlim?displayProperty=nameWithType> はどちらも、`Wait` メソッドで新しいキャンセル フレームワークをサポートしています。 メソッドに <xref:System.Threading.CancellationToken> を渡すことができ、キャンセルが要求されると、イベントが起動して <xref:System.OperationCanceledException> がスローされます。  
   
  [!code-csharp[Cancellation#6](../../../samples/snippets/csharp/VS_Snippets_Misc/cancellation/cs/cancellationex10.cs#6)]
  [!code-vb[Cancellation#6](../../../samples/snippets/visualbasic/VS_Snippets_Misc/cancellation/vb/cancellationex10.vb#6)]  

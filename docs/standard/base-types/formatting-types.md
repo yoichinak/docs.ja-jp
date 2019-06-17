@@ -27,12 +27,12 @@ helpviewer_keywords:
 ms.assetid: 0d1364da-5b30-4d42-8e6b-03378343343f
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ac253e5ff294360fff89e9746ca3038b4e1ee75c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f3273b8babe44a48d6952620e4331cba4f22b6e9
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64751103"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026033"
 ---
 # <a name="formatting-types-in-net"></a>.NET での型の書式設定
 
@@ -123,7 +123,7 @@ ms.locfileid: "64751103"
 [!code-vb[Conceptual.Formatting.Overview#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.formatting.overview/vb/default1.vb#1)]
 
 > [!WARNING]
-> [!INCLUDE[win81](../../../includes/win81-md.md)] 以降、[!INCLUDE[wrt](../../../includes/wrt-md.md)] には、既定の書式指定をサポートする単一のメソッド [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A) を備えた <xref:Windows.Foundation.IStringable> インターフェイスが含まれています。 ただし、マネージド型では `IStringable` インターフェイスを実装しないことをお勧めします。 詳細については、 [!INCLUDE[wrt](../../../includes/wrt-md.md)] リファレンス ページの「The `IStringable` and the <xref:System.Object.ToString%2A?displayProperty=nameWithType> Interface (Windows ランタイムと IStringable インターフェイス)」を参照してください。
+> [!INCLUDE[win81](../../../includes/win81-md.md)] 以降、Windows ランタイムには、既定の書式指定をサポートする単一のメソッド [IStringable.ToString](xref:Windows.Foundation.IStringable.ToString%2A) を備えた <xref:Windows.Foundation.IStringable> インターフェイスが含まれています。 ただし、マネージド型では `IStringable` インターフェイスを実装しないことをお勧めします。 詳細については、<xref:System.Object.ToString%2A?displayProperty=nameWithType> リファレンス ページの「Windows ランタイムと `IStringable` インターフェイス」セクションを参照してください。
 
 インターフェイス以外の型はすべて <xref:System.Object>から派生するため、この機能はカスタムのクラスまたは構造体に自動的に提供されます。 ただし、既定の `ToString` メソッドで提供される機能には制限があります。型を識別しますが、型のインスタンスに関する情報を指定すると、エラーになります。 それ自体に関する情報を提供するオブジェクトの文字列形式を提供するには、 `ToString` メソッドをオーバーライドする必要があります。
 

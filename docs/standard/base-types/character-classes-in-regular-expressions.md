@@ -51,7 +51,7 @@ ms.locfileid: "66490877"
  .NET は、文字クラスの減算式をサポートしています。これにより、ある文字クラスから別の文字クラスを除外した結果を文字のセットとして定義できます。 詳細については、「[文字クラス減算](#CharacterClassSubtraction)」を参照してください。  
   
 > [!NOTE]
->  カテゴリ別の文字に一致する文字クラス (単語文字に一致する [\w](#WordCharacter)、Unicode カテゴリに一致する [\p{}](#CategoryOrBlock) など) は、<xref:System.Globalization.CharUnicodeInfo> クラスを使用して文字カテゴリに関する情報を提供します。  .NET Framework 4.6.2 以降の文字カテゴリは、[Unicode 標準バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいています。 .NET Framework 4.6.1 から .NET Framework 4 に基づいている[Unicode 標準、バージョン 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/)します。  
+>  カテゴリ別の文字に一致する文字クラス (単語文字に一致する [\w](#WordCharacter)、Unicode カテゴリに一致する [\p{}](#CategoryOrBlock) など) は、<xref:System.Globalization.CharUnicodeInfo> クラスを使用して文字カテゴリに関する情報を提供します。  .NET Framework 4.6.2 以降の文字カテゴリは、[Unicode 標準バージョン 8.0.0](https://www.unicode.org/versions/Unicode8.0.0/) に基づいています。 .NET Framework 4 から .NET Framework 4.6.1 では、[Unicode Standard バージョン 6.3.0](https://www.unicode.org/versions/Unicode6.3.0/) に基づいています。  
   
 <a name="PositiveGroup"></a>   
 ## <a name="positive-character-group--"></a>文字グループの肯定: [ ]  
@@ -452,7 +452,7 @@ ms.locfileid: "66490877"
 |0250 ～ 02AF|`IsIPAExtensions`|  
 |02B0 ～ 02FF|`IsSpacingModifierLetters`|  
 |0300 ～ 036F|`IsCombiningDiacriticalMarks`|  
-|0370 ～ 03FF|`IsGreek`<br /><br /> - または -<br /><br /> `IsGreekandCoptic`|  
+|0370 ～ 03FF|`IsGreek`<br /><br /> \- または -<br /><br /> `IsGreekandCoptic`|  
 |0400 ～ 04FF|`IsCyrillic`|  
 |0500 ～ 052F|`IsCyrillicSupplement`|  
 |0530 ～ 058F|`IsArmenian`|  
@@ -496,7 +496,7 @@ ms.locfileid: "66490877"
 |2000 ～ 206F|`IsGeneralPunctuation`|  
 |2070 ～ 209F|`IsSuperscriptsandSubscripts`|  
 |20A0 ～ 20CF|`IsCurrencySymbols`|  
-|20D0 ～ 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> - または -<br /><br /> `IsCombiningMarksforSymbols`|  
+|20D0 ～ 20FF|`IsCombiningDiacriticalMarksforSymbols`<br /><br /> \- または -<br /><br /> `IsCombiningMarksforSymbols`|  
 |2100 ～ 214F|`IsLetterlikeSymbols`|  
 |2150 ～ 218F|`IsNumberForms`|  
 |2190 ～ 21FF|`IsArrows`|  

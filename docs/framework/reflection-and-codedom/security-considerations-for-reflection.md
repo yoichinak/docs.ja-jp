@@ -26,7 +26,7 @@ ms.locfileid: "66816125"
   
 - アセンブリとモジュールを列挙し、確認する。  
   
- これに対して、リフレクションを使用したメンバーへのアクセスには、制限があります。 以降、.NET Framework 4 では、信頼されたコードだけはセキュリティ クリティカルなメンバーにアクセスするのにリフレクションを使用できます。 さらに、コンパイル済みコードに直接アクセスできない非パブリック メンバーに、リフレクションを使用してアクセスできるのも信頼されたコードだけです。 最後に、セーフ クリティカルなメンバーにアクセスするリフレクションを使用するコードには、コンパイル済みコードと同様、セーフ クリティカル メンバーが要求するすべてのアクセス許可が必要です。  
+ これに対して、リフレクションを使用したメンバーへのアクセスには、制限があります。 .NET Framework 4 以降、リフレクションを使用してセキュリティ クリティカルなメンバーにアクセスできるのは、信頼されているコードだけです。 さらに、コンパイル済みコードに直接アクセスできない非パブリック メンバーに、リフレクションを使用してアクセスできるのも信頼されたコードだけです。 最後に、セーフ クリティカルなメンバーにアクセスするリフレクションを使用するコードには、コンパイル済みコードと同様、セーフ クリティカル メンバーが要求するすべてのアクセス許可が必要です。  
   
  必要なアクセス許可がある場合、コードはリフレクションを使用して次の種類のアクセスを実行できます。  
   
@@ -42,13 +42,13 @@ ms.locfileid: "66816125"
   
  たとえば、サンドボックス化されたアプリケーション ドメインで実行されるコードは、アプリケーション ドメインから追加のアクセス許可が付与されていない限り、この一覧に示したアクセスに限定されます。  
   
- 対象オブジェクトとの許可セットの要求が生成されます以降、.NET Framework 2.0 Service Pack 1 では、通常はアクセスできないメンバーにアクセスしようとしています。<xref:System.Security.Permissions.ReflectionPermission>で、<xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType>フラグ。 完全な信頼で実行されているコード (コマンド ラインから起動されるアプリケーションのコードなど) には、必要とされるこれらのアクセス許可が常にあります。 (ただし、後で説明するように、セキュリティ クリティカルなメンバーにアクセスする場合は制限があります)。  
+ .NET Framework 2.0 Service Pack 1 以降では、通常はアクセスできないメンバーにアクセスしようとすると、対象オブジェクトと <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグが設定された <xref:System.Security.Permissions.ReflectionPermission> の許可セットに対する要求が生成されます。 完全な信頼で実行されているコード (コマンド ラインから起動されるアプリケーションのコードなど) には、必要とされるこれらのアクセス許可が常にあります。 (ただし、後で説明するように、セキュリティ クリティカルなメンバーにアクセスする場合は制限があります)。  
   
  必要に応じて、サンドボックス化されたアプリケーション ドメインから、<xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグが設定された <xref:System.Security.Permissions.ReflectionPermission> を付与できます。これについては、後半の「[通常はアクセスできないメンバーへのアクセス](#accessingNormallyInaccessible)」で説明します。  
   
 <a name="accessingSecurityCritical"></a>   
 ## <a name="accessing-security-critical-members"></a>セキュリティ クリティカルなメンバーへのアクセス  
- メンバーは、<xref:System.Security.SecurityCriticalAttribute> が指定されている場合、<xref:System.Security.SecurityCriticalAttribute> が指定されている型に属する場合、またはセキュリティ クリティカルなアセンブリ内にある場合は、セキュリティ クリティカルです。 以降、.NET Framework 4 では、セキュリティ クリティカルなメンバーにアクセスするための規則としては、  
+ メンバーは、<xref:System.Security.SecurityCriticalAttribute> が指定されている場合、<xref:System.Security.SecurityCriticalAttribute> が指定されている型に属する場合、またはセキュリティ クリティカルなアセンブリ内にある場合は、セキュリティ クリティカルです。 .NET Framework 4 以降では、セキュリティ クリティカルなメンバーにアクセスする場合の規則は次のとおりです。  
   
 - 透過的なコードでは、コードが完全に信頼されている場合でも、リフレクションを使用してセキュリティ クリティカルなメンバーにアクセスすることはできません。 <xref:System.MethodAccessException>、<xref:System.FieldAccessException>、または <xref:System.TypeAccessException> がスローされます。  
   
@@ -98,9 +98,9 @@ ms.locfileid: "66816125"
   
 ## <a name="version-information"></a>バージョン情報  
   
-- 以降、.NET Framework 4 では、透過的なコードはセキュリティ クリティカルなメンバーにアクセスするのにリフレクションを使用できません。  
+- .NET Framework 4 以降では、透過的なコードからリフレクションを使用してセキュリティ クリティカルなメンバーにアクセスすることはできません。  
   
-- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType>フラグは、.NET Framework 2.0 Service Pack 1 で導入されました。 以前のバージョンの .NET Framework では、コードから非パブリック メンバーにアクセスするためにリフレクションを使用するには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグを指定する必要がありました。 このアクセス許可は、部分的に信頼されるコードには絶対に付与しないでください。  
+- <xref:System.Security.Permissions.ReflectionPermissionFlag.RestrictedMemberAccess?displayProperty=nameWithType> フラグは、.NET Framework 2.0 Service Pack 1 で導入されています。 以前のバージョンの .NET Framework では、コードから非パブリック メンバーにアクセスするためにリフレクションを使用するには <xref:System.Security.Permissions.ReflectionPermissionFlag.MemberAccess?displayProperty=nameWithType> フラグを指定する必要がありました。 このアクセス許可は、部分的に信頼されるコードには絶対に付与しないでください。  
   
 - [!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] 以降、リフレクションを使用して非パブリックな型とメンバーに関する情報を取得する場合、アクセス許可が不要になりました。 以前のバージョンでは、<xref:System.Security.Permissions.ReflectionPermission> に <xref:System.Security.Permissions.ReflectionPermissionFlag.TypeInformation?displayProperty=nameWithType> フラグを指定する必要があります。  
   

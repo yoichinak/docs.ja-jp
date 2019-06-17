@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 49d520d7-92d7-44ee-bb24-8b615db1d41b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bbe7a2c4e920021c925a13ae8873124bfdb6fd67
-ms.sourcegitcommit: acd8ed14fe94e9d4e3a7fb685fe83d05e941073c
+ms.openlocfilehash: 79ec24d16b43bd8e1312b3425e618adf163edd24
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56441945"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66834024"
 ---
 # <a name="localization"></a>ローカリゼーション
 
@@ -31,7 +31,7 @@ ms.locfileid: "56441945"
 
 アプリケーションのローカライズ バージョンごとに、ターゲット カルチャの言語に翻訳されたユーザー インターフェイス ブロックを含む新しいサテライト アセンブリを追加します。 すべてのカルチャのコード ブロックを同じにしてください。 ユーザー インターフェイス ブロックのローカライズされたバージョンとコード ブロックを組み合わせることで、アプリケーションのローカライズ バージョンが作られます。
 
-[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] には Windows フォーム リソース エディター (Winres.exe) があります。このエディターでは、ターゲット カルチャに合わせて Windows フォームを簡単にローカライズできます。 このツールの使用方法については、「[Winres.exe (Windows フォーム リソース エディター)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)」を参照してください。
+Windows ソフトウェア開発キット (SDK) には Windows フォーム リソース エディター (Winres.exe) があります。このエディターでは、ターゲット カルチャに合わせて Windows フォームを簡単にローカライズできます。 このツールの使用方法については、「[Winres.exe (Windows フォーム リソース エディター)](../../../docs/framework/tools/winres-exe-windows-forms-resource-editor.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 

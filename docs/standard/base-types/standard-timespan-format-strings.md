@@ -64,7 +64,7 @@ ms.locfileid: "66491100"
 |*ss*|"0" ～ "59" の範囲の秒数。|  
 |*fffffff*|省略可能な秒の小数部。  "0000001" (1 ティック、つまり 1,000 万分の 1 秒) ～ "9999999" (1,000 万分の 9,999,999 秒、つまり 1 秒より 1 ティック少ない) までの範囲の値が可能です。|  
   
- "g" および "G" 書式指定子とは異なり、"c" 書式指定子はカルチャに依存しません。 文字列表現を生成しますが、<xref:System.TimeSpan>不変し、.NET Framework 4 より前に、の .NET Framework の以前のバージョンをすべてに共通の値。 "c" は、既定の <xref:System.TimeSpan> 書式文字列です。<xref:System.TimeSpan.ToString?displayProperty=nameWithType> メソッドは、"c" 書式指定文字列を使用して時間間隔値の書式を設定します。  
+ "g" および "G" 書式指定子とは異なり、"c" 書式指定子はカルチャに依存しません。 不変で、かつ .NET Framework 4 より前のすべての .NET Framework バージョンに共通する <xref:System.TimeSpan> 値の文字列表現が生成されます。 "c" は、既定の <xref:System.TimeSpan> 書式文字列です。<xref:System.TimeSpan.ToString?displayProperty=nameWithType> メソッドは、"c" 書式指定文字列を使用して時間間隔値の書式を設定します。  
   
 > [!NOTE]
 >  <xref:System.TimeSpan> では、動作が "c" 標準書式指定文字列と同じである "t" と "T" の標準書式指定文字列もサポートされます。  

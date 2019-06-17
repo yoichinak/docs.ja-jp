@@ -64,7 +64,7 @@ await someTask.ConfigureAwait(continueOnCapturedContext:false);
 ```
 
 ## <a name="canceling-an-asynchronous-operation"></a>非同期操作の取り消し
- 以降、.NET Framework 4 では、キャンセルをサポートする TAP メソッドを提供、キャンセル トークンを受け取るオーバー ロードを少なくとも 1 つ (<xref:System.Threading.CancellationToken>オブジェクト)。
+ .NET Framework 4 以降では、取り消しをサポートする TAP メソッドによって、取り消しトークン (<xref:System.Threading.CancellationToken> オブジェクト) を受け取るオーバーロードが少なくとも 1 つ提供されます。
 
  キャンセル トークンは、キャンセル トークンのソース (<xref:System.Threading.CancellationTokenSource> オブジェクト) によって作成されます。  ソースの <xref:System.Threading.CancellationTokenSource.Token%2A> プロパティがキャンセル トークンを返します。ソースの <xref:System.Threading.CancellationTokenSource.Cancel%2A> メソッドが呼び出されたとき、このトークンに信号が送られます。  たとえば、単一の Web ページをダウンロードする際に操作を取り消せるようにする場合は、<xref:System.Threading.CancellationTokenSource> オブジェクトを作成し、TAP メソッドにそのオブジェクトのトークンを渡し、操作を取り消す準備ができたらソースの <xref:System.Threading.CancellationTokenSource.Cancel%2A> メソッドを呼び出します。
 

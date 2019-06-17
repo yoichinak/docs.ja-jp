@@ -20,18 +20,18 @@ helpviewer_keywords:
 ms.assetid: aff939d7-9e49-46f2-a8cd-938d3020e94e
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 37d25ed142c31ae1e36385448b75a3a850aafa65
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6f6453b8ef2ef2a1b5e86ae461a626808cff7455
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57352998"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025513"
 ---
 # <a name="isolated-storage"></a>分離ストレージ
 <a name="top"></a>[!INCLUDE[desktop_appname](../../../includes/desktop-appname-md.md)] アプリでは、分離ストレージは、コードと保存データを関連付ける標準化された方法を定義することにより、分離性と安全性を提供するデータ ストレージ機構です。 標準化には、ほかにも利点があります。 管理者は分離ストレージの操作用にデザインされたツールを使用して、ファイルのストレージ領域の構成、セキュリティ ポリシーの設定、および不要なデータの削除を行うことができます。 分離ストレージを使用すると、ファイル システムの安全な場所を指定するための固有のパスを指定する必要がなくなり、分離ストレージのアクセス権限を持たない他のアプリケーションからデータを保護できます。 アプリケーションのストレージ領域の場所を示すハードコーディングされた情報は不要になります。
 
 > [!IMPORTANT]
-> 分離ストレージは [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでは使用できません。 代わりに、 `Windows.Storage` API に含まれる [!INCLUDE[wrt](../../../includes/wrt-md.md)] 名前空間内のアプリケーション データ クラスを使用して、ローカル データとローカル ファイルを格納します。 詳細については、Windows デベロッパー センターの[アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10))に関する説明を参照してください。
+> 分離ストレージは [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリでは使用できません。 代わりに、Windows ランタイム API に含まれる `Windows.Storage` 名前空間内のアプリケーション データ クラスを使用して、ローカル データとローカル ファイルを格納します。 詳細については、Windows デベロッパー センターの [アプリケーション データ](https://docs.microsoft.com/previous-versions/windows/apps/hh464917(v=win.10)) に関する説明を参照してください。
 
 このトピックは、次のセクションで構成されています。
 
@@ -164,7 +164,7 @@ ms.locfileid: "57352998"
 
 ## <a name="related-topics"></a>関連トピック
 
-|タイトル|説明|
+|Title|説明|
 |-----------|-----------------|
 |[分離のタイプ](../../../docs/standard/io/types-of-isolation.md)|さまざまなタイプの分離を説明します。|
 |[方法: 分離ストレージでストアを取得する](../../../docs/standard/io/how-to-obtain-stores-for-isolated-storage.md)|<xref:System.IO.IsolatedStorage.IsolatedStorageFile> クラスを使用して、ユーザーおよびアセンブリ別に分離されたストアを取得する例を示します。|

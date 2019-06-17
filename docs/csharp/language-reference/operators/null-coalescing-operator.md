@@ -17,9 +17,9 @@ ms.locfileid: "66816011"
 ---
 # <a name="-operator-c-reference"></a>?? 演算子 (C# リファレンス)
 
-Null 合体演算子`??`でない場合は、左側のオペランドの値を返します`null`。 そうしないと、右側のオペランドを評価し、その結果を返します。 `??`左側のオペランドが null 以外に評価された場合、演算子は、右辺のオペランドを評価しません。
+null 合体演算子 `??` では、それが `null` ではない場合、その左側のオペランドの値が返されます。それ以外の場合は、右側のオペランドが評価され、その結果が返されます。 `??` 演算子では、左側のオペランドが null 値以外に評価された場合は、その右側のオペランドは評価されません。
 
-Null 合体演算子は右から左、形式の式は、
+null 合体演算子は右結合です。つまり、次のフォームの式は
 
 ```csharp
 a ?? b ?? c
@@ -31,31 +31,31 @@ a ?? b ?? c
 a ?? (b ?? c)
 ```
 
-`??`演算子は、次のシナリオで役に立ちます。
+`??` 演算子は、次のシナリオで役立つことがあります。
 
-- 含む式で、 [null 条件演算子?. およびですか?](member-access-operators.md#null-conditional-operators--and-)、null 合体演算子を使用するには代替場合に、null 条件操作を使用して式の結果を評価する式を指定する`null`:
+- [null 条件演算子 ?. および ?[]](member-access-operators.md#null-conditional-operators--and-) を含む式は、null 条件演算の式の結果が `null` の場合に評価する代替の式を指定するために、null 合体演算子を使用することができます。
 
   [!code-csharp-interactive[with null-conditional](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullConditional)]
 
-- 操作が[null 許容値型](../../programming-guide/nullable-types/index.md)場合に、null 許容型の値を提供する値を指定する null 合体演算子を使用して、基になる値型の値を指定する必要があると`null`:
+- [null 値許容型](../../programming-guide/nullable-types/index.md)を使用して、基になる値の型の値を提供する必要がある場合、null 合体演算子を使用して、null 値許容型が `null` の場合に提供する値を指定します。
 
   [!code-csharp-interactive[with nullable types](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithNullableTypes)]
 
-  使用して、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType>メソッド場合、null 許容型の値は、ときに使用される値`null`基になる値型の既定値である必要があります。
+  null 値許容型が `null` の場合に使用される値を、基になる値型の既定値にする場合は、<xref:System.Nullable%601.GetValueOrDefault?displayProperty=nameWithType> メソッドを使用します。
 
-- 以降でC#使用することができます、7.0、 [ `throw`式](../keywords/throw.md#the-throw-expression)引数チェック コードを簡潔にするため null 合体演算子の右側のオペランドとして。
+- C# 7.0 以降、null 合体演算子の右側のオペランドとして [`throw` 式](../keywords/throw.md#the-throw-expression)を使用し、引数のチェック コードをより簡潔にすることができます。
 
   [!code-csharp[with throw expression](~/samples/csharp/language-reference/operators/NullCoalescingOperator.cs#WithThrowExpression)]
 
-  上記の例では、使用する方法も示しています[に式形式メンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)プロパティを定義します。
+  上記の例は、[式のようなメンバー](../../programming-guide/statements-expressions-operators/expression-bodied-members.md)を使用してプロパティを定義する方法も示しています。
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-Null 合体演算子はオーバー ロードすることはできません。
+null 合体演算子はオーバーロードできません。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 
-詳細については、次を参照してください。 [null 合体演算子](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)のセクション、 [ C#言語仕様](~/_csharplang/spec/introduction.md)します。
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の [null 合体演算子](~/_csharplang/spec/expressions.md#the-null-coalescing-operator)に関するセクションを参照してください。
 
 ## <a name="see-also"></a>関連項目
 
