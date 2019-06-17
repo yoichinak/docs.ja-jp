@@ -24,7 +24,7 @@ ms.locfileid: "66491029"
   
  主要なコレクションの型として、ジェネリック コレクションと非ジェネリック コレクションの 2 つがあります。 ジェネリック コレクションは .NET Framework 2.0 で追加されたもので、コンパイル時にタイプ セーフなコレクションを提供します。 このため、通常、ジェネリック コレクションの方がパフォーマンスが高くなります。 ジェネリック コレクションは構築時に型パラメーターを受け取りますが、項目をコレクションに追加またはコレクションから削除するときに <xref:System.Object> 型との間でキャストする必要はありません。  また、ほとんどのジェネリック コレクションが [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] アプリでサポートされています。 非ジェネリック コレクションは、項目を <xref:System.Object> として格納し、キャストが必要であり、ほとんどが [!INCLUDE[win8_appstore_long](../../../includes/win8-appstore-long-md.md)] アプリの開発でサポートされていません。 ただし、以前のコードに非ジェネリック コレクションが含まれている場合があります。  
   
- .NET Framework 4 内のコレクションで始まる、<xref:System.Collections.Concurrent>名前空間は、複数のスレッドからコレクション項目にアクセスするための効率的なスレッド セーフ操作を提供します。 System.Collections.Immutable 名前空間の変更できないコレクション クラス ([NuGet パッケージ](https://www.nuget.org/packages/System.Collections.Immutable)) は、操作が元のコレクションのコピーで実行され、元のコレクションは変更不可能なため、本質的にスレッドセーフです。  
+ .NET Framework 4 より、<xref:System.Collections.Concurrent> 名前空間のコレクションによって、複数のスレッドからコレクション項目にアクセスするための効率的なスレッド セーフ操作が可能になります。 System.Collections.Immutable 名前空間の変更できないコレクション クラス ([NuGet パッケージ](https://www.nuget.org/packages/System.Collections.Immutable)) は、操作が元のコレクションのコピーで実行され、元のコレクションは変更不可能なため、本質的にスレッドセーフです。  
 
 <a name="BKMK_Commoncollectionfeatures"></a>   
 ## <a name="common-collection-features"></a>一般的なコレクションの機能  

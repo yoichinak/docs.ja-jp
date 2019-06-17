@@ -1,5 +1,5 @@
 ---
-title: C#演算子 -C#リファレンス
+title: C# 演算子 - C# リファレンス
 ms.date: 04/30/2019
 f1_keywords:
 - cs.operators
@@ -25,7 +25,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/12/2019
 ms.locfileid: "67025137"
 ---
-# <a name="c-operators-c-reference"></a>C#演算子 (C#リファレンス)
+# <a name="c-operators-c-reference"></a>C# 演算子 (C# リファレンス)
 
 C# は組み込み型でサポートされている定義済みの演算子を多数提供します。 たとえば、[算術演算子](arithmetic-operators.md)は組み込み数値型のオペランドの算術演算を実行し、[ブール論理演算子](boolean-logical-operators.md)は [bool](../keywords/bool.md) オペランドの論理演算を実行します。
 

@@ -19,7 +19,7 @@ ms.locfileid: "66490845"
 アプリケーションを開発する場合、対象のコンピューターがプロセッサがシングルまたはマルチのいずれの場合でも、アプリケーションにユーザーとの迅速な対話を提供する必要があります。これはアプリケーションがほかの処理の実行中であっても同じことです。 アプリケーションによるユーザーへの迅速な応答を維持すると同時に、ユーザー イベントの合間やその処理中にプロセッサを使用する最も強力な方法は、複数の実行スレッドを使用することです。 ここでは、スレッド処理の基本概念について、マネージド スレッド処理の概念と使用方法を中心に説明します。  
   
 > [!NOTE]
->  以降、.NET Framework 4 では、マルチ スレッド プログラミングが大幅に簡略化、<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType>と<xref:System.Threading.Tasks.Task?displayProperty=nameWithType>クラス、 [Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、新しい同時実行コレクション クラス、<xref:System.Collections.Concurrent?displayProperty=nameWithType>名前空間、およびスレッドではなく、タスクの概念に基づく新しいプログラミング モデル。 詳細については、[並列プログラミング](../../../docs/standard/parallel-programming/index.md)に関するページをご覧ください。  
+>  .NET Framework 4 以降では、<xref:System.Threading.Tasks.Parallel?displayProperty=nameWithType> クラスおよび <xref:System.Threading.Tasks.Task?displayProperty=nameWithType> クラス、[Parallel LINQ (PLINQ)](../../../docs/standard/parallel-programming/parallel-linq-plinq.md)、<xref:System.Collections.Concurrent?displayProperty=nameWithType> 名前空間の新しい同時実行コレクション クラス、スレッドではなくタスクの概念を基にした新しいプログラミング モデルにより、マルチスレッド プログラミングが大幅に簡略化されています。 詳細については、[並列プログラミング](../../../docs/standard/parallel-programming/index.md)に関するページをご覧ください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [マネージド スレッド処理の基本](../../../docs/standard/threading/managed-threading-basics.md)  

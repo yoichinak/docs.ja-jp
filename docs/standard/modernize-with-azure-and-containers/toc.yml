@@ -5,7 +5,7 @@
       href: lift-and-shift-existing-apps-azure-iaas.md
     - name: リレーショナル データベースの Azure への移行
       href: migrate-your-relational-databases-to-azure.md
-    - name: クラウドに最適化された既存の .NET アプリを最新化します。
+    - name: 既存の .NET アプリをクラウドに最適化して最新化する
       href: ./modernize-existing-apps-to-cloud-optimized/index.md
       items:
         - name: 既存の .NET アプリをクラウドに最適化されたアプリに現代化する理由

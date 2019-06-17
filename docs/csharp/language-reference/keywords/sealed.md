@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - sealed keyword [C#]
 ms.assetid: 8e4ed5d3-10be-47db-9488-0da2008e6f3f
-ms.openlocfilehash: d86f3ea7b9ee2a7c511119d9b7c3e52f44bd5e6a
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7b9551fe892b0335fb445ab9edce4facca0badbe
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65634070"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833347"
 ---
 # <a name="sealed-c-reference"></a>sealed (C# リファレンス)
 
@@ -56,10 +56,6 @@ sealed class B : A {}
 
 `'MyDerivedC': cannot derive from sealed type 'SealedClass'`
 
-## <a name="c-language-specification"></a>C# 言語仕様
-
-[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
-
 ## <a name="remarks"></a>解説
 
 クラス、メソッド、またはプロパティをシールするかどうかを判断するには、通常、次の 2 つの点を検討する必要があります。
@@ -67,6 +63,10 @@ sealed class B : A {}
 - クラスをカスタマイズすることで、派生クラスにもたらされる可能性があるメリット。
 
 - 派生クラスがクラスを変更することで、そのクラスが正常に、または期待どおりに機能しなくなる可能性。
+
+## <a name="c-language-specification"></a>C# 言語仕様
+
+[!INCLUDE[CSharplangspec](~/includes/csharplangspec-md.md)]
 
 ## <a name="see-also"></a>関連項目
 

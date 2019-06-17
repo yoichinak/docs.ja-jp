@@ -2,12 +2,12 @@
 title: C# 7.3 の新機能
 description: C# 7.3 の新機能の概要
 ms.date: 05/16/2018
-ms.openlocfilehash: f97bda11d1da3f6deb4597c8d7742fd47e9cf15f
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58028672"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832709"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 の新機能
 
@@ -112,7 +112,7 @@ int* pArr2 = stackalloc int[] {1, 2, 3};
 Span<int> arr = stackalloc [] {1, 2, 3};
 ```
 
-詳しくは、言語リファレンスの [`stackalloc` ステートメント](../language-reference/keywords/stackalloc.md)に関する記事を参照してください。
+詳細については、「[`stackalloc` 演算子](../language-reference/operators/stackalloc.md)」の記事を参照してください。
 
 ### <a name="more-types-support-the-fixed-statement"></a>`fixed` ステートメントをサポートする型の増加
 

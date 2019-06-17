@@ -2,12 +2,12 @@
 title: 文字列関数
 ms.date: 03/30/2017
 ms.assetid: 338f0c26-8aee-43eb-bd1a-ec0849a376b9
-ms.openlocfilehash: 6da257cad90232426c71221dfd9d418265479bbe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3eb70151628e32f6ad0a87be8ff0cd071ae89235
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61879121"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041611"
 ---
 # <a name="string-functions"></a>文字列関数
 .NET Framework Data Provider for SQL Server (SqlClient) には、入力された `String` に対して操作を実行し、その結果を `String` または数値として返す `String` 関数が用意されています。 これらの関数は、SqlClient の SqlServer 名前空間に存在します。 Entity Framework は、プロバイダーの名前空間プロパティを使用することにより、型や関数など、特定のコンストラクターに対してこのプロバイダーによってどのプレフィックスが使用されているかを特定できます。  
@@ -27,7 +27,7 @@ ms.locfileid: "61879121"
 |`NCHAR(expression)`|Unicode 標準の定義に従って、指定された整数コードの Unicode の `String` を返します。<br /><br /> **引数**<br /><br /> `expression`:`Int32`。<br /><br /> **戻り値**<br /><br /> Unicode の `String`。<br /><br /> **例**<br /><br /> `SqlServer.NCHAR(65)`|  
 |`PATINDEX('%pattern%', expression)`|指定された `String` 式の中で、特定のパターンが最初に現れる先頭位置を返します。<br /><br /> **引数**<br /><br /> `'%pattern%'`:ASCII または Unicode の `String` 型。 ワイルドカード文字も使用できます。ただし、パターンの前後に % 文字が必要です (先頭の文字または末尾の文字を検索する場合は除く)。<br /><br /> `expression`:指定パターンの検索対象となる ASCII または Unicode の `String`。<br /><br /> **戻り値**<br /><br /> `Int32`。<br /><br /> **例**<br /><br /> `SqlServer.PATINDEX('abc', 'ab')`|  
 |`QUOTENAME('char_string' [, 'quote_char'])`|Unicode の `String` に区切り記号を追加して返すことで、入力文字列から区切り記号で囲まれた有効な SQL Server 2005 識別子を作成します。<br /><br /> **引数**<br /><br /> `char_string`:Unicode の `String`。<br /><br /> `quote_char`:区切り記号として使用する 1 つの文字を指定します。 単一引用符 (')、左または右の角かっこ ([ ])、二重引用符 (") のいずれかを指定できます。 `quote_char` を指定しない場合は、角かっこが使用されます。<br /><br /> **戻り値**<br /><br /> Unicode の `String`。<br /><br /> **例**<br /><br /> `SqlServer.QUOTENAME('abc[]def')`|  
-|`REPLACE(expression1, expression2, expression3)`|文字式を指定された回数繰り返します。<br /><br /> **引数**<br /><br /> `expression1`:検索する文字列式です。 string_expression1 は、Unicode または ASCII の String 型で指定できます。<br /><br /> `expression2`部分文字列を検索するには。 string_expression2 は、Unicode または ASCII の String 型で指定できます。<br /><br /> `expression3`: 置換文字列。 string_expression3 は、Unicode または ASCII の String 型で指定できます。<br /><br /> **例**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
+|`REPLACE(expression1, expression2, expression3)`|文字式を別の文字式に置き換えます。<br /><br /> **引数**<br /><br /> `expression1`:検索する文字列式です。 `expression1` Unicode または ASCII の String 型であることができます。<br /><br /> `expression2`部分文字列を検索するには。 `expression2` Unicode または ASCII の String 型であることができます。<br /><br /> `expression3`: 置換文字列。 `expression3` Unicode または ASCII の String 型であることができます。<br /><br /> **例**<br /><br /> `SqlServer.REPLACE('aabbcc', 'bc', 'zz')`|  
 |`REPLICATE(char_expression, int_expression)`|文字式を指定された回数繰り返します。<br /><br /> **引数**<br /><br /> `char_expression`:Unicode または ASCII の `String` 型。<br /><br /> `int_expression`: `Int64` (SQL Server 2000 ではサポートされません) または `Int32`。<br /><br /> **戻り値**<br /><br /> Unicode または ASCII の `String` 型。<br /><br /> **例**<br /><br /> `SqlServer.REPLICATE('aa',2)`|  
 |`REVERSE(expression)`|入力文字列の文字位置を逆転した Unicode または ASCII の String を返します。<br /><br /> **引数**<br /><br /> `expression`:Unicode または ASCII の `String` 型。<br /><br /> **戻り値**<br /><br /> Unicode または ASCII の `String` 型。<br /><br /> **例**<br /><br /> `SqlServer.REVERSE('abcd')`|  
 |`RIGHT(char_expression, count)`|文字列の右端から指定された数の文字を返します。<br /><br /> **引数**<br /><br /> `char_expression`Unicode または ASCII の String 型。 CAST 関数を使用して、明示的に character_expression を変換します。<br /><br /> `count`:`Int64` (SQL Server 2000 では返されません) または`Int32`character_expression の文字数が返されますを指定する型。<br /><br /> **戻り値**<br /><br /> ASCII の `String` 型。<br /><br /> **例**<br /><br /> `SqlServer.RIGHT('SQL Server', 6)`|  

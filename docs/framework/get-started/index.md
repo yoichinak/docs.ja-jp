@@ -53,7 +53,7 @@ Windows オペレーティング システムを使用している場合は、.N
 
 - 使用するアプリが特定のバージョンの .NET Framework に依存している場合、そのバージョンが削除されるとアプリの互換性に影響する可能性があります。
 
-- .NET Framework のバージョンの中には、前のバージョンのインプレース更新であるものがあります。 たとえば、.NET Framework 3.5 はバージョン 2.0 のインプレース更新と .NET Framework の 4.8 はバージョン 4.7.2 4 のインプレース更新。 詳細については、「[.NET Framework のバージョンおよび依存関係](../migration-guide/versions-and-dependencies.md)」を参照してください。
+- .NET Framework のバージョンの中には、前のバージョンのインプレース更新であるものがあります。 たとえば、.NET Framework 3.5 はバージョン 2.0 のインプレース更新で、.NET Framework 4.8 はバージョン 4 から 4.7.2 のインプレース更新です。 詳細については、「[.NET Framework のバージョンおよび依存関係](../migration-guide/versions-and-dependencies.md)」を参照してください。
 
 Windows 8 よりも前の Windows バージョンで .NET Framework を削除する場合は、必ずコントロール パネルの **[プログラムと機能]** を使用してアンインストールしてください。 .NET Framework のバージョンを手動で削除しないでください。 Windows 8 以降では、.NET Framework はオペレーティング システム コンポーネントとなっているため、個別にアンインストールすることはできません。
 

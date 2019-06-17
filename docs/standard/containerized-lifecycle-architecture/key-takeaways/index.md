@@ -3,25 +3,25 @@ title: 重要な習得事項
 description: このガイドの重要な習得事項を確認します。
 ms.date: 02/15/2019
 ms.openlocfilehash: d28739a87e5c7c7e6c9304c36e1ec2a73cf0d0db
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644702"
 ---
 # <a name="key-takeaways"></a>重要な習得事項
 
-- コンテナー ベースのソリューションは、コンテナーは、DevOps および運用操作が大幅に向上、運用環境での依存関係の障害によって発生した展開の問題を解決できないために、コスト削減の重要な利点を提供します。
+- コンテナーは実稼働環境での依存関係の不具合のために発生するデプロイの問題の解決策であり、DevOps および運用操作を大幅に向上させるため、コンテナー ベースのソリューションからはコスト節約という重要な利点が与えられます。
 
-- Docker は、コンテナー業界での事実上の標準になっていますし、マイクロソフトを含む、Linux と Windows エコシステムで最も重要なベンダーでサポートされています。 将来、Docker は、クラウドまたはオンプレミスのあらゆるデータセンターで広く使用されるようになります。
+- Docker は、コンテナー業界では事実上の標準になりつつあり、Microsoft を含む Windows と Linux のエコシステムで最も重要なベンダーでサポートされています。 将来、Docker は、クラウドまたはオンプレミスのあらゆるデータセンターで広く使用されるようになります。
 
 - Docker コンテナーは、サーバー ベースのアプリケーションまたはサービスの配置の標準的な単位になっています。
 
-- Azure Kubernetes Service (AKS) と Azure Service Fabric で提供されるもののように docker オーケストレーターとは、基本的かつ複雑でスケーラビリティの大幅なニーズを持つマイクロ サービス ベースまたはマルチ コンテナー アプリケーションに不可欠な機能です。
+- Azure Kubernetes Service (AKS) で提供されるような Docker Orchestrator と Azure Service Fabric は、非常に複雑でスケーラビリティのニーズがあるマイクロサービス ベースまたはマルチコンテナー アプリケーションの基礎であり、不可欠なものになっています。
 
-- 継続的インテグレーション/継続的デプロイをサポートし、運用環境の Docker 環境に接続するエンド ツー エンド DevOps 環境では、機敏性を提供でき、最終的には、アプリケーションの市場投入時間を短縮することができます。
+- 実稼働環境の Docker 環境に接続する継続的インテグレーション/継続的デプロイをサポートするエンドツーエンドの DevOps 環境は、機敏性を提供し、最終的にアプリケーションの市場投入までの時間を短縮できます。
 
-- Azure DevOps サービスは、CI/CD パイプラインから Docker 環境にデプロイすることで、DevOps 環境を大幅に簡略化します。 このステートメントは、単純な Docker 環境も高度なマイクロ サービスと Azure ベースのコンテナー オーケストレーターに適用されます。
+- Azure DevOps Services では、CI/CD パイプラインから Docker 環境にデプロイすることで、DevOps 環境が大幅に簡素化されます。 このことは単純な Docker 環境のみならず、Azure を基礎とする高度なマイクロサービスやコンテナー オーケストレーターにも当てはまります。
 
 >[!div class="step-by-step"]
 >[前へ](../run-manage-monitor-docker-environments/monitor-containerized-application-services.md)

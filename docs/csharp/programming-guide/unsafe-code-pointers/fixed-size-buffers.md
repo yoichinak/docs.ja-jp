@@ -6,12 +6,12 @@ helpviewer_keywords:
 - fixed size buffers [C#]
 - unsafe buffers [C#]
 - unsafe code [C#], fixed size buffers
-ms.openlocfilehash: 7c83b4819975f63c6fc19e5c4783603f37d2a885
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 5bfd9f3f559e4780b910a2e5a3430b08a2183ee3
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54700612"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833497"
 ---
 # <a name="fixed-size-buffers-c-programming-guide"></a>固定サイズ バッファー (C# プログラミング ガイド)
 
@@ -40,7 +40,7 @@ private fixed char name[30];
 一般的な固定サイズの配列としては、他にも [bool](../../language-reference/keywords/bool.md) 配列があります。 `bool` 配列内の要素のサイズは常に 1 バイトです。 `bool` 配列は、ビット配列やバッファーの作成には適していません。
 
 > [!NOTE]
-> C# コンパイラおよび共通言語ランタイム (CLR) は、[stackalloc](../../language-reference/keywords/stackalloc.md) を使って作成されたメモリを除き、バッファー オーバーランのセキュリティ チェックを実行しません。 その他のアンセーフ コードと同様、十分な注意が必要です。
+> C# コンパイラおよび共通言語ランタイム (CLR) は、[stackalloc](../../language-reference/operators/stackalloc.md) を使って作成されたメモリを除き、バッファー オーバーランのセキュリティ チェックを実行しません。 その他のアンセーフ コードと同様、十分な注意が必要です。
 
 アンセーフ バッファーは、次の点で通常の配列とは異なります。
 

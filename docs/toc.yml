@@ -425,7 +425,7 @@
 - name: .NET Framework ガイド
   href: framework/index.md
   items:
-    - name: 新機能
+    - name: 新着記事
       href: framework/whats-new/
     - name: 開始するには
       href: framework/get-started/
@@ -807,6 +807,10 @@
               href: fsharp/language-reference/generics/statically-resolved-type-parameters.md
         - name: レコード
           href: fsharp/language-reference/records.md
+        - name: 匿名のレコード
+          href: fsharp/language-reference/anonymous-records.md
+        - name: レコード式のコピーと更新
+          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: 判別共用体
           href: fsharp/language-reference/discriminated-unions.md
         - name: 列挙
@@ -854,8 +858,6 @@
           href: fsharp/language-reference/delegates.md
         - name: オブジェクト式
           href: fsharp/language-reference/object-expressions.md
-        - name: レコード式のコピーと更新
-          href: fsharp/language-reference/copy-and-update-record-expressions.md
         - name: キャストと変換
           href: fsharp/language-reference/casting-and-conversions.md
         - name: アクセス制御

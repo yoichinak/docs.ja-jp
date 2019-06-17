@@ -23,7 +23,7 @@ ms.locfileid: "66490664"
 ## <a name="in-this-section"></a>このセクションの内容  
   
 > [!NOTE]
->  これらすべての関数は、.NET Framework 4 以降では推奨されていませんが。 推奨されている代わりの関数については、[ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) インターフェイスを参照してください。  
+>  .NET Framework 4 以降、これらの関数すべてが非推奨となりました。 推奨されている代わりの関数については、[ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md) インターフェイスを参照してください。  
   
  [GetHashFromAssemblyFile 関数](../../../../docs/framework/unmanaged-api/strong-naming/gethashfromassemblyfile-function.md)  
  指定したハッシュ アルゴリズムを使用して、指定したアセンブリ ファイルのハッシュ値が取得されます。 .NET Framework 4 以降では非推奨とされます。  

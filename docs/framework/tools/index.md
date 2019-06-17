@@ -36,7 +36,7 @@ ms.locfileid: "66489653"
  ActiveX コントロール用の COM タイプ ライブラリに属する型定義を Windows フォーム コントロールに変換します。  
   
  [Caspol.exe (コード アクセス セキュリティ ポリシー ツール)](../../../docs/framework/tools/caspol-exe-code-access-security-policy-tool.md)  
- コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを表示および構成できます。 .NET Framework 4 以降では、このツールには影響しませんコード アクセス セキュリティ (CAS) ポリシーしない限り、 [ \<legacyCasPolicy > 要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)に設定されている`true`します。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。  
+ コンピューター ポリシー レベル、ユーザー ポリシー レベル、およびエンタープライズ ポリシー レベルのセキュリティ ポリシーを表示および構成できます。 .NET Framework 4 以降では、[\<legacyCasPolicy> 要素](../../../docs/framework/configure-apps/file-schema/runtime/netfx40-legacysecuritypolicy-element.md)が `true` に設定されていない限り、このツールがコード アクセス セキュリティ (CAS) ポリシーに影響を与えることはありません。 詳細については、「[セキュリティの変更点](../../../docs/framework/security/security-changes.md)」を参照してください。  
   
  [Cert2spc.exe (ソフトウェア発行元証明書テスト ツール)](../../../docs/framework/tools/cert2spc-exe-software-publisher-certificate-test-tool.md)  
  1 つ以上の X.509 証明書からソフトウェア発行元証明書 (SPC: Software Publisher's Certificate) を作成します。 このツールはテスト専用です。  

@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Mid statement [Visual Basic]
 - strings [Visual Basic], replacing
 ms.assetid: 2b82d7a8-9646-4cb0-bec5-80abc98297bf
-ms.openlocfilehash: df83fd527612af1a6a4b8131ffa2643ef0d1d7dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ff3b908e2805f4d51463a82d90f2305efc9f1608
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61784239"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041581"
 ---
 # <a name="mid-statement"></a>Mid ステートメント
 指定した文字数を置き換える、`String`別の文字列から文字を含む変数。  
@@ -38,7 +38,7 @@ Mid( _
  必須。 `Integer` 式。 内の位置の文字`Target`テキストの置換を開始します。 `Start` 1 から始まるインデックスを使用します。  
   
  `Length`  
- 任意。 `Integer` 式。 置換する文字の数。 省略した場合、すべての`String`使用されます。  
+ 省略可能です。 `Integer` 式。 置換する文字の数。 省略した場合、すべての`String`使用されます。  
   
  `StringExpression`  
  必須。 `String` 式の一部を置換する`Target`します。  
@@ -63,11 +63,11 @@ Mid( _
  [!code-vb[VbVbalrStrings#5](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStrings/VB/Class1.vb#5)]  
   
 ## <a name="requirements"></a>必要条件  
- **名前空間:**[Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
+ **名前空間:** [Microsoft.VisualBasic](../../../visual-basic/language-reference/runtime-library-members.md)  
   
  **モジュール:** `Strings`  
   
- **アセンブリ:** [!INCLUDE[vbprvbruntime](~/includes/vbprvbruntime-md.md)]  
+ **アセンブリ:** Visual Basic ランタイム ライブラリ (Microsoft.VisualBasic.dll)  
   
 ## <a name="see-also"></a>関連項目
 

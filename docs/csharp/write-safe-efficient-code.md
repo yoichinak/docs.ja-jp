@@ -3,12 +3,12 @@ title: 安全で効率的な C# コードを記述する
 description: C# 言語に対する最新の機能強化により、以前はアンセーフ コードに関連付けられていたようなパフォーマンスの検証可能なセーフ コードを記述することができます。
 ms.date: 10/23/2018
 ms.custom: mvc
-ms.openlocfilehash: 259ce0b9405dfd74adf51a9cc046ffe3f08d242f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 73ad7a84d2ad47f0e0242825d250247ffb39928e
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753889"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832944"
 ---
 # <a name="write-safe-and-efficient-c-code"></a>安全で効率的な C# コードを記述する
 
@@ -189,7 +189,7 @@ GitHub の[サンプル リポジトリ](https://github.com/dotnet/samples/tree/
 
 関連するもう 1 つの言語機能は、単一のスタック フレームに拘束される必要のある値型を宣言する機能です。 この制限により、コンパイラでいくつかの最適化を行うことができます。 この機能の第一の動機は <xref:System.Span%601> と関連構造でした。 <xref:System.Span%601> 型を利用する新規および更新された .NET API を使用することにより、これらの機能強化によるパフォーマンスの向上を実現できます。
 
-[`stackalloc`](language-reference/keywords/stackalloc.md) で作成したメモリを使用するとき、あるいは相互運用 API からメモリを使用するとき、同様の要件が求められる場合があります。 そのようなニーズには独自の `ref struct` 型を定義できます。
+[`stackalloc`](language-reference/operators/stackalloc.md) で作成したメモリを使用するとき、あるいは相互運用 API からメモリを使用するとき、同様の要件が求められる場合があります。 そのようなニーズには独自の `ref struct` 型を定義できます。
 
 ## <a name="readonly-ref-struct-type"></a>`readonly ref struct` 型
 

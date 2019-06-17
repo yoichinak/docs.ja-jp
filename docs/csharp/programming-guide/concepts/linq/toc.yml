@@ -62,7 +62,7 @@
           href: linq-to-objects.md
         - name: LINQ と文字列
           href: linq-and-strings.md
-        - name: 作業方法に関する記事
+        - name: 方法に関する記事
           items:
             - name: '方法: 文字列での単語の出現回数をカウントする (LINQ)'
               href: how-to-count-occurrences-of-a-word-in-a-string-linq.md
