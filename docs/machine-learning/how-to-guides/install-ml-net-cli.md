@@ -3,12 +3,12 @@ title: ML.NET コマンドライン インターフェイス (CLI) ツールを�
 description: ML.NET コマンドライン インターフェイス (CLI) ツールの概要とインストール。
 ms.date: 04/16/2019
 ms.custom: ''
-ms.openlocfilehash: 9560aa846a1aefabadbd7d4faf8bd306ba72e0de
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 4888acd10570318ef53dc4b1a5a4ff5d8dc0c99b
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557859"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832931"
 ---
 # <a name="how-to-install-the-mlnet-command-line-interface-cli-tool"></a>ML.NET コマンドライン インターフェイス (CLI) ツールをインストールする方法
 
@@ -34,7 +34,7 @@ ML.NET CLI のインストール方法は他の .NET グローバル ツール�
 次の例は、既定の NuGet フィードの場所に ML.NET CLI をインストールする方法を示しています。
 
 ```console
-> dotnet tool install -g mlnet
+dotnet tool install -g mlnet
 ```
 
 ツールをインストールできない場合 (つまり、既定の NuGet フィードで利用できない場合) は、エラー メッセージが表示されます。 予定していたフィードがチェックされていることを確認します。
@@ -49,7 +49,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 インストールが成功したことを確認するには、次のコマンドを入力します。
 
 ```console
-> mlnet
+mlnet
 ```
 
 "auto-train" コマンドなど、mlnet ツールに利用できるコマンドのヘルプを参照することをお勧めします。
@@ -59,13 +59,13 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 ツールのプレリリース バージョンまたは特定のバージョンをインストールしようとしている場合は、次の形式を使用して、[フレームワーク](../../standard/frameworks.md)を指定できます。
 
 ```console
-> dotnet tool install -g mlnet --framework <FRAMEWORK>
+dotnet tool install -g mlnet --framework <FRAMEWORK>
 ```
 
 次のコマンドを入力して、パッケージが正しくインストールされているかどうかを確認することもできます。
 
 ```console
-> dotnet tool list -g
+dotnet tool list -g
 ```
 
 ## <a name="uninstall-the-cli-package"></a>CLI パッケージをアンインストールする
@@ -73,7 +73,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 ローカル コンピューターからパッケージをアンインストールするには、次のコマンドを入力します。
 
 ```console
-> dotnet tool uninstall mlnet -g
+dotnet tool uninstall mlnet -g
 ```
 
 ## <a name="update-the-cli-package"></a>CLI パッケージを更新する
@@ -81,7 +81,7 @@ Tool 'mlnet' (version 'X.X.X') was successfully installed.
 ローカル コンピューターからパッケージを更新するには、次のコマンドを入力します。
 
 ```console
-> dotnet tool update -g mlnet
+dotnet tool update -g mlnet
 ```
 
 ## <a name="set-up-cli-suggestions-tab-based-auto-completion"></a>CLI の候補を設定する (タブベースのオートコンプリート)
@@ -101,7 +101,7 @@ ML.NET CLI は `System.CommandLine` に基づいているので、タブ補完�
 1. 次のコマンドを実行して、`dotnet-suggest` グローバル ツールをインストールします。
 
     ```console
-    > dotnet tool install dotnet-suggest -g
+    dotnet tool install dotnet-suggest -g
     ```
 
 2. 適切な shim スクリプトをシェル プロファイルに追加します。 必要に応じてシェル プロファイル ファイルを作成します。 shim スクリプトによって、シェルからの完了要求が `dotnet-suggest` ツールに転送され、適切な `System.CommandLine` ベースのアプリに委任されます。
@@ -111,7 +111,7 @@ ML.NET CLI は `System.CommandLine` に基づいているので、タブ補完�
     * PowerShell の場合は、[dotnet-recommend-shim.ps1](https://github.com/dotnet/System.CommandLine/blob/master/src/System.CommandLine.Suggest/dotnet-suggest-shim.ps1) の内容を PowerShell プロファイルに追加します。 コンソールで次のコマンドを実行して、PowerShell プロファイルへの予想されるパスを見つけることができます。
 
     ```console
-    > echo $profile
+    echo $profile
     ``` 
 
 (他のシェルについては、[検索する](https://github.com/dotnet/System.CommandLine/issues?q=is%3Aissue+is%3Aopen+label%3A%22shell+suggestion%22)か、[問題](https://github.com/dotnet/System.CommandLine/issues)を開いてください。)

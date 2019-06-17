@@ -6,12 +6,12 @@ ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
 author: natke
-ms.openlocfilehash: 054fa0e1d9d8cc0d7c32efd4a9e8c81b91cb1335
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 7f92049e19688df1fe2b834214950c9109cb0799
+ms.sourcegitcommit: c4dfe37032c64a1fba2cc3d5947550d79f95e3b5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960431"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67041541"
 ---
 # <a name="what-is-mlnet-and-how-does-it-work"></a>ML.NET の概要とそのしくみ
 
@@ -32,8 +32,6 @@ ML.NET を使用して作成できる予測の種類の例を次に示します�
 
  ```csharp
     using System;
-    using System.IO;
-    using Microsoft.Data.DataView;
     using Microsoft.ML;
     using Microsoft.ML.Data;
     
