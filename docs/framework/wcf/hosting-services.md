@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: 4641c1c63a4f3c13cefb573dacf4e88b5d63077e
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 2d926fb3f630d2a1af00242f94ddcb3c2dc284df
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881184"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170055"
 ---
 # <a name="hosting-services"></a>ホスティング サービス
 アクティブにするには、サービスを作成してそのコンテキストと有効期間を制御するランタイム環境内で、サービスをホストする必要があります。 マネージ コードをサポートする任意の Windows プロセスで実行するのには、Windows Communication Foundation (WCF) サービスが設計されています。  
@@ -23,7 +23,7 @@ ms.locfileid: "65881184"
 #### <a name="self-hosting-in-a-managed-application"></a>マネージド アプリケーションにおける自己ホスト  
  任意のマネージ アプリケーションでは、WCF サービスをホストすることができます。 これは、展開に必要なインフラストラクチャが最小限になるため、最も柔軟なオプションです。 マネージド アプリケーション コード内にサービスのコードを埋め込み、続いて <xref:System.ServiceModel.ServiceHost> のインスタンスを作成して開き、サービスを有効にします。 詳細については、「[方法 :マネージ アプリケーションで WCF サービスをホスト](../../../docs/framework/wcf/how-to-host-a-wcf-service-in-a-managed-application.md)します。  
   
- このオプションは、2 つの一般的なシナリオを有効にします。コンソール アプリケーションと Windows Presentation Foundation (WPF) または Windows フォーム (WinForms) に基づいてなどのリッチ クライアント アプリケーション内で実行される WCF サービス。 コンソール アプリケーション内部の WCF サービス ホストは、アプリケーションの開発フェーズ中に一般的に便利です。 コンソール アプリケーションにより、アプリケーション内部で起こっている状況を見極めるための情報のデバッグやトレースが容易になり、新しい場所にアプリケーションをコピーして移動することも簡単に行うことができます。 このホスト オプションを使用すると、 [!INCLUDE[avalon2](../../../includes/avalon2-md.md)] や WinForms アプリケーションなど、外部と通信を行うリッチ クライアント アプリケーションの作成も容易になります。 使用するピア ツー ピア コラボレーション クライアントなど[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]ユーザー インターフェイスにもその他のクライアントに接続して、情報を共有できるようにする WCF サービスをホストします。  
+ このオプションは、2 つの一般的なシナリオを有効にします。コンソール アプリケーションと Windows Presentation Foundation (WPF) または Windows フォーム (WinForms) に基づいてなどのリッチ クライアント アプリケーション内で実行される WCF サービス。 コンソール アプリケーション内部の WCF サービス ホストは、アプリケーションの開発フェーズ中に一般的に便利です。 コンソール アプリケーションにより、アプリケーション内部で起こっている状況を見極めるための情報のデバッグやトレースが容易になり、新しい場所にアプリケーションをコピーして移動することも簡単に行うことができます。 このホスト オプションでは、外部と通信するために、WPF と WinForms アプリケーションなどのリッチ クライアント アプリケーションを簡単にします。 たとえば、WPF を使用して、ユーザー インターフェイスともその他のクライアントに接続して、情報を共有できるようにする WCF サービスをホストするピア ツー ピア コラボレーション クライアントです。  
   
 #### <a name="managed-windows-services"></a>マネージド Windows サービス  
  このホスト オプションがいるため、サービスのプロセス有効期間はサービス コントロール マネージャー (SCM) によって制御されます (旧 NT サービス) をマネージ Windows サービスとして、WCF サービスをホストするアプリケーション ドメイン (AppDomain) に登録することで構成されていますWindows サービスです。 自己ホスト オプションと同様、この種類のホスト環境では、ホスト コードをアプリケーションの一部として記述する必要があります。 サービスはから継承することによって、両方の Windows サービスとは、WCF サービスとしてを実装は、<xref:System.ServiceProcess.ServiceBase>クラスだけでなく、wcf サービス コントラクト インターフェイス。 次に <xref:System.ServiceModel.ServiceHost> を作成し、オーバーライドされた <xref:System.ServiceProcess.ServiceBase.OnStart%28System.String%5B%5D%29> メソッドで開き、オーバーライドされた <xref:System.ServiceProcess.ServiceBase.OnStop> メソッドで閉じます。 また、 <xref:System.Configuration.Install.Installer> から継承されるインストーラー クラスも実装し、プログラムが Installutil.exe ツールによって Windows サービスとしてインストールされるようにする必要があります。 詳細については、「[方法 :マネージ Windows サービスでの WCF サービスをホスト](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-a-managed-windows-service.md)します。 マネージ Windows サービスのホスト オプションで有効になっているシナリオがないメッセージがアクティブ化の安全な環境で IIS の外部でホストされている実行時間の長い WCF サービスのです。 サービスの有効期限は代わりにオペレーティング システムによって制御されます。 このホスト オプションは Windows のすべてのバージョンで使用できます。  
@@ -43,7 +43,7 @@ ms.locfileid: "65881184"
   
 |ホスト環境|一般的なシナリオ|主な利点と制限|  
 |-------------------------|----------------------|----------------------------------|  
-|マネージド アプリケーション ("自己ホスト")|コンソール アプリケーションを開発時に使用します。<br />豊富な WinForm と[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]サービスにアクセスするクライアント アプリケーション。|柔軟です。<br />展開が容易です。<br />-サービスのエンタープライズ ソリューションです。|  
+|マネージド アプリケーション ("自己ホスト")|コンソール アプリケーションを開発時に使用します。<br />豊富な WinForm と WPF クライアント アプリケーションがサービスにアクセスします。|柔軟です。<br />展開が容易です。<br />-サービスのエンタープライズ ソリューションです。|  
 |Windows サービス (従来 NT サービスと呼ばれていたもの)|-IIS の外部でホストされている実行時間の長い WCF サービス。|サービス プロセスの有効期間がないメッセージがアクティブ化、オペレーティング システムによって制御されます。<br />-Windows のすべてのバージョンでサポートされています。<br />-セキュリティで保護された環境。|  
 |IIS 5.1、 [!INCLUDE[iis601](../../../includes/iis601-md.md)]|-実行されている WCF サービス サイド バイ サイドで ASP.NET コンテンツの HTTP プロトコルを使用して、インターネット上。|-プロセスのリサイクルします。<br />-アイドル シャット ダウンします。<br />-正常性の監視を処理します。<br />-メッセージ ベースのアクティブ化します。<br />-HTTP のみ。|  
 |Windows プロセス アクティブ化サービス (WAS)|-さまざまなトランスポート プロトコルを使用してインターネットに IIS をインストールしなくても、WCF サービスを実行します。|IIS は必要ありません。<br />-プロセスのリサイクルします。<br />-アイドル シャット ダウンします。<br />-正常性の監視を処理します。<br />-メッセージ ベースのアクティブ化します。<br />-HTTP、TCP、名前付きパイプ、および MSMQ で動作します。|  

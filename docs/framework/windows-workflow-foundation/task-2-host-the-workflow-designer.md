@@ -2,17 +2,17 @@
 title: タスク 2:ワークフロー デザイナーのホスティング
 ms.date: 03/30/2017
 ms.assetid: 0a29b138-270d-4846-b78e-2b875e34e501
-ms.openlocfilehash: cce90c6b7f5edfaf960415f0a5d0787f8eee526b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 553a02732e08fa148ffdee250df0305deb8e63b7
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665285"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169994"
 ---
 # <a name="task-2-host-the-workflow-designer"></a>タスク 2:ワークフロー デザイナーのホスティング
 このトピックでは、のインスタンスをホストするための手順を説明します、 [!INCLUDE[wfd1](../../../includes/wfd1-md.md)] Windows Presentation Foundation (WPF) アプリケーションでします。  
   
- プロシージャを構成、**グリッド**、デザイナーを格納しているコントロールのインスタンスをプログラムで作成する、 <xref:System.Activities.Presentation.WorkflowDesigner> 、既定値を格納している<xref:System.Activities.Statements.Sequence>アクティビティを提供する、デザイナーのメタデータを登録しますすべての組み込みのアクティビティ、およびホストのデザイナー サポート、[!INCLUDE[wfd2](../../../includes/wfd2-md.md)]で、[!INCLUDE[avalon2](../../../includes/avalon2-md.md)]アプリケーション。  
+ プロシージャを構成、**グリッド**、デザイナーを格納しているコントロールのインスタンスをプログラムで作成する、 <xref:System.Activities.Presentation.WorkflowDesigner> 、既定値を格納している<xref:System.Activities.Statements.Sequence>アクティビティを提供する、デザイナーのメタデータを登録しますすべての組み込みのアクティビティ、およびホストのデザイナー サポート、 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)] WPF アプリケーションでします。  
   
 ### <a name="to-host-the-workflow-designer"></a>ワークフロー デザイナーをホストするには  
   
@@ -22,7 +22,7 @@ ms.locfileid: "64665285"
   
 3. 選択して、グリッド名を設定、**グリッド**デザイナー内のパネル (内のボックスをクリックして、 **MainWindow**) と設定、**名前**の上部にあるプロパティ、 **プロパティ**ウィンドウを「grid1」.  
   
-4. **プロパティ**ウィンドウで、省略記号をクリックします (**.**) 横に、`ColumnDefinitions`プロパティを開き、**コレクション エディター**  ダイアログ ボックス。  
+4. **プロパティ**ウィンドウで、省略記号をクリックします ( **.** ) 横に、`ColumnDefinitions`プロパティを開き、**コレクション エディター**  ダイアログ ボックス。  
   
 5. **コレクション エディター**ダイアログ ボックスで、をクリックして、**追加**ボタンを 3 回、レイアウトに 3 つの列を挿入します。 最初の列には、**ツールボックス**、2 番目の列をホストする、 [!INCLUDE[wfd2](../../../includes/wfd2-md.md)]、プロパティ インスペクターの 3 番目の列が使用されます。  
   

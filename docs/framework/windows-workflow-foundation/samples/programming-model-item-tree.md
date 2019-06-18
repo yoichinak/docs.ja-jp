@@ -2,12 +2,12 @@
 title: モデル アイテム ツリーのプログラミング
 ms.date: 03/30/2017
 ms.assetid: 0229efde-19ac-4bdc-a187-c6227a7bd1a5
-ms.openlocfilehash: 1aaa1aa9922a7f57138782effe9492ec84198c8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 59c1f0c3722d6e68a9f629504f5012377dbacc5f
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004979"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170068"
 ---
 # <a name="programming-model-item-tree"></a>モデル アイテム ツリーのプログラミング
 このサンプルでは、移動、<xref:System.Activities.Presentation.Model.ModelItem>宣言型データ バインディング、Windows Presentation Foundation (WPF) のツリー ビューを使用してツリーします。
@@ -33,7 +33,7 @@ justAdded.Properties["DisplayName"].SetValue("new name");
 
 2. 選択すると、ソリューションをビルド**ソリューションのビルド**から、**ビルド**メニュー。
 
-3. F5 キーを押してアプリケーションを実行します。 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] フォームが表示されます。
+3. F5 キーを押してアプリケーションを実行します。 WPF フォームが表示されます。
 
 4. をクリックして、 **Load WF**を読み込む ボタン、<xref:System.Activities.Presentation.Model.ModelItem>ツリー ビューにバインドします。
 

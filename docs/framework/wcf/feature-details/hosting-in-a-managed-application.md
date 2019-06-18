@@ -2,12 +2,12 @@
 title: マネージド アプリケーションのホスト
 ms.date: 03/30/2017
 ms.assetid: af70132d-e9e1-4f32-b20f-f0014629758a
-ms.openlocfilehash: c1f4d91994ba44407ff5c93dbd34aa0bdef9332b
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1895f6622f7c528979badd741f5994970bbd1a8c
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65591739"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169801"
 ---
 # <a name="hosting-in-a-managed-application"></a>マネージド アプリケーションのホスト
 任意の .NET Framework アプリケーションでは、Windows Communication Foundation (WCF) サービスをホストすることができます。 自己ホスト型サービスは、展開を要するインフラストラクチャが最も少ないので、最も柔軟なホスト オプションです。 しかしも、最も堅牢なホスティング オプションのマネージ アプリケーションでは、高度なホストとインターネット インフォメーション サービス (IIS) や Windows サービスなどの WCF では、ホストの他のオプションの管理機能が提供されないためです。  
@@ -22,7 +22,7 @@ ms.locfileid: "65591739"
  自己ホストできるようにするための一般的なシナリオは、コンソール アプリケーション内で実行されている WCF サービスです。 コンソール アプリケーション内部の WCF サービス ホストは、サービスの開発フェーズ中に一般的に便利です。 コンソール アプリケーションにより、アプリケーション内部で起こっている状況を見極めるための情報のデバッグやトレースが容易になり、新しい場所にアプリケーションをコピーして移動することも簡単に行うことができます。  
   
 ## <a name="rich-client-applications"></a>リッチ クライアント アプリケーション  
- 自己ホストできるようにするその他の一般的なシナリオは、Windows Presentation Foundation (WPF) または Windows フォーム (WinForms) に基づくものなどのリッチ クライアント アプリケーションです。 このホスト オプションを使用すると、 [!INCLUDE[avalon2](../../../../includes/avalon2-md.md)] や WinForms アプリケーションなど、外部と通信を行うリッチ クライアント アプリケーションの作成も容易になります。 使用するピア ツー ピア コラボレーション クライアントなど[!INCLUDE[avalon2](../../../../includes/avalon2-md.md)]ユーザー インターフェイスにもその他のクライアントに接続して、情報を共有できるようにする WCF サービスをホストします。  
+ 自己ホストできるようにするその他の一般的なシナリオは、Windows Presentation Foundation (WPF) または Windows フォーム (WinForms) に基づくものなどのリッチ クライアント アプリケーションです。 このホスト オプションでは、外部と通信するために、WPF と WinForms アプリケーションなどのリッチ クライアント アプリケーションを簡単にします。 たとえば、WPF を使用して、ユーザー インターフェイスともその他のクライアントに接続して、情報を共有できるようにする WCF サービスをホストするピア ツー ピア コラボレーション クライアントです。  
   
 ## <a name="see-also"></a>関連項目
 

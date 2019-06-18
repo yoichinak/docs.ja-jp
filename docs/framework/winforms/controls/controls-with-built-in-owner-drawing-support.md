@@ -8,12 +8,12 @@ helpviewer_keywords:
 - custom drawing
 - owner drawing
 ms.assetid: 3823d01e-9610-43e6-864d-99f9b7c2b351
-ms.openlocfilehash: df3a61dae9ad926f56da4e9d15e0e8b8c6f1c8a3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c053c14bb06d1bb28c7b7e6652ccc6e41af9c4e5
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648250"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170605"
 ---
 # <a name="controls-with-built-in-owner-drawing-support"></a>組み込みのオーナー描画サポートを備えたコントロール
 Windows フォームのオーナー描画 (カスタム描画とも呼ばれます) は、特定のコントロールの外観を変更するための手法です。  
@@ -46,7 +46,7 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
 - <xref:System.Windows.Forms.TabControl>  
   
- 次のコントロールは、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] でのみオーナー描画をサポートします。  
+ 次のコントロールは、.NET Framework 2.0 でのみオーナー描画をサポートします。  
   
 - <xref:System.Windows.Forms.ToolTip>  
   
@@ -54,7 +54,7 @@ Windows フォームのオーナー描画 (カスタム描画とも呼ばれま�
   
 - <xref:System.Windows.Forms.TreeView>  
   
- 次のコントロールはオーナー描画をサポートし、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] での新機能です。  
+ 次のコントロールは、オーナー描画をサポートし、.NET Framework 2.0 で新たにします。  
   
 - <xref:System.Windows.Forms.DataGridView>  
   

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Clipboard [Windows Forms], copying data to
 - data [Windows Forms], copying to Clipboard
 ms.assetid: 25152454-0e78-40a9-8a9e-a2a5a274e517
-ms.openlocfilehash: 03d3a0c6026761fcdbc45472f2bbb7ac593f4394
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d035dd6611909c9a6b67662d17f80057dc33386
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004472"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169948"
 ---
 # <a name="how-to-add-data-to-the-clipboard"></a>方法: クリップボードにデータを追加する
 <xref:System.Windows.Forms.Clipboard>クラスは、Windows オペレーティング システムのクリップボード機能との対話に使用できるメソッドを提供します。 多くのアプリケーションは、クリップボードをデータの一時的なリポジトリとして使用されます。 たとえば、ワード プロセッサでは、切り取りと貼り付けの操作中に、クリップボードを使用します。 クリップボードも別に 1 つのアプリケーションからデータを転送するために役立ちます。  
@@ -24,7 +24,7 @@ ms.locfileid: "62004472"
   
  1 つまたは複数の形式でクリップボードにデータを追加するには、使用、<xref:System.Windows.Forms.Clipboard.SetDataObject%2A>メソッド。 この方法では、任意のオブジェクトを渡すことができますが、複数の形式でデータを追加する必要があります最初に、データを追加する別のオブジェクトが複数の形式を扱うために設計されています。 データを追加する、通常、<xref:System.Windows.Forms.DataObject>を実装する任意の型を使用することができますが、<xref:System.Windows.Forms.IDataObject>インターフェイス。  
   
- [!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]クリップボードの基本的な作業を容易に設計された新しいメソッドを使用して、クリップボードに直接データを追加することができます。 テキストなどの 1 つの一般的な形式でデータを操作する場合は、これらのメソッドを使用します。  
+ .NET Framework 2.0 では、クリップボードの基本的な作業を容易に設計された新しいメソッドを使用して、クリップボードに直接データを追加できます。 テキストなどの 1 つの一般的な形式でデータを操作する場合は、これらのメソッドを使用します。  
   
 > [!NOTE]
 >  すべての Windows ベースのアプリケーションでは、クリップボードを共有します。 そのため、別のアプリケーションに切り替えた場合に、内容は変更される可能性が。  
@@ -35,14 +35,14 @@ ms.locfileid: "62004472"
   
 ### <a name="to-add-data-to-the-clipboard-in-a-single-common-format"></a>1 つの一般的な形式でクリップボードにデータを追加するには  
   
-1. 使用して、 <xref:System.Windows.Forms.Clipboard.SetAudio%2A>、 <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>、 <xref:System.Windows.Forms.Clipboard.SetImage%2A>、または<xref:System.Windows.Forms.Clipboard.SetText%2A>メソッド。 これらのメソッドはでのみ使用可能な[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]します。  
+1. 使用して、 <xref:System.Windows.Forms.Clipboard.SetAudio%2A>、 <xref:System.Windows.Forms.Clipboard.SetFileDropList%2A>、 <xref:System.Windows.Forms.Clipboard.SetImage%2A>、または<xref:System.Windows.Forms.Clipboard.SetText%2A>メソッド。 これらのメソッドは、.NET Framework 2.0 でのみ使用できます。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#2](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#2)]
      [!code-vb[System.Windows.Forms.Clipboard#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#2)]  
   
 ### <a name="to-add-data-to-the-clipboard-in-a-custom-format"></a>カスタム形式でクリップボードにデータを追加するには  
   
-1. 使用して、<xref:System.Windows.Forms.Clipboard.SetData%2A>メソッドをカスタム形式名を使用します。 このメソッドでのみ使用[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)]します。  
+1. 使用して、<xref:System.Windows.Forms.Clipboard.SetData%2A>メソッドをカスタム形式名を使用します。 このメソッドは、.NET Framework 2.0 でのみ使用できます。  
   
      定義済みの形式名を使用することも、<xref:System.Windows.Forms.Clipboard.SetData%2A>メソッド。 詳細については、「 <xref:System.Windows.Forms.DataFormats> 」を参照してください。  
   
