@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: f6af6116-f5b0-4bda-a276-fffdba70893d
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 89d71b3dfa71438b72fe622a491141364db25f52
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: ea95789ea1623985a6a53fcf923b70d7df2ad460
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490657"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170434"
 ---
 # <a name="clr-hosting-interfaces-added-in-the-net-framework-4-and-45"></a>.NET Framework 4 および 4.5 で追加された CLR ホスト インターフェイス
 アンマネージ インターフェイスについて説明をアプリケーションに .NET Framework 4、.NET Framework 4.5、およびそれ以降のバージョンでホストを共通言語ランタイム (CLR) 統合を使用できます。 これらのインターフェイスは、ホストを構成し、ランタイムをプロセスに読み込むのためのメソッドを提供します。  
@@ -22,7 +22,7 @@ ms.locfileid: "66490657"
   
 - 有効期間管理を使用して、(`AddRef`と`Release`)、(暗黙のコンテキスト) をカプセル化し、 `QueryInterface` COM から  
   
-- ある型を使用しないで COM など`BSTR`、 `SAFEARRAY`、または`VARIANT`します。  
+- COM 型をなど、使用しない`BSTR`、 `SAFEARRAY`、または`VARIANT`します。  
   
 - アパートメント モデル、集計、またはレジストリのアクティブ化を使用するがない、 [CoCreateInstance 関数](https://go.microsoft.com/fwlink/?LinkId=142894)します。  
   
