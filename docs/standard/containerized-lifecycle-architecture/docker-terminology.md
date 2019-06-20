@@ -1,27 +1,27 @@
 ---
 title: Docker に関する用語
-description: Docker を使用する場合は、毎日が使用したいくつかの基本的な用語について説明します。
+description: Docker の使用時に日常的に使われる基本的な用語の一部について説明します。
 ms.date: 02/15/2019
 ms.openlocfilehash: c352bf7235e8a3dc2d52bbbfe4390863fff9991f
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65644747"
 ---
 # <a name="docker-terminology"></a>Docker に関する用語
 
-このセクションでは、Docker を深く掘り下げて検討する前に、理解しておく必要がある用語と定義を一覧表示します。 その他の定義を参照してください、広範な[用語集](https://docs.docker.com/glossary/)Docker によって提供されます。
+このセクションでは、Docker を深く掘り下げて検討する前に、理解しておく必要がある用語と定義を一覧表示します。 その他の定義については、Docker によって提供されている広範囲にわたる[用語集](https://docs.docker.com/glossary/)を参照してください。
 
 **コンテナー イメージ**:コンテナーを作成するために必要なすべての依存関係と情報を含むパッケージです。 イメージには、すべての依存関係 (フレームワークなど) に加えて、コンテナー ランタイムによって使用される展開および実行の構成が含まれています。 通常、イメージはコンテナーのファイルシステムを形成するために相互に積み重ねられたレイヤーである複数の基本イメージから派生します。 イメージは一旦作成されると変更できません。
 
-**Dockerfile**:Docker イメージを構築する方法の手順を含むテキスト ファイル。 バッチ スクリプトのようには、最初の行は、基本イメージで開始し、必要なプログラム、ファイルのコピーをインストールする手順を示すおよびまでこれを作業環境を取得する必要があります。
+**Dockerfile**:Docker イメージをビルドする方法の手順が含まれるテキスト ファイルです。 これはバッチ スクリプトに似ています。1 行目にはまずベース イメージがあり、必要なプログラムのインストール、ファイルのコピーなどの指示が目的の作業環境になるまで続きます。
 
-**ビルド:** Dockerfile によって提供される情報とコンテキストに加えて、イメージがビルドされるフォルダー内の追加のファイルに基づいてコンテナー イメージをビルドするアクションです。 Docker を使用したイメージをビルドする **`docker build`** コマンド。
+**ビルド:** Dockerfile によって提供される情報とコンテキストに加えて、イメージがビルドされるフォルダー内の追加のファイルに基づいてコンテナー イメージをビルドするアクションです。 Docker の **`docker build`** コマンドを使用してイメージをビルドできます。
 
 **コンテナー**:Docker イメージのインスタンスです。 コンテナーは、単一のアプリケーション、プロセス、またはサービスの実行を表します。 Docker イメージのコンテンツ、実行環境、および標準的な命令セットで構成されます。 サービスを拡大縮小する場合は、同じイメージからコンテナーの複数のインスタンスを作成します。 または、バッチ ジョブで同じイメージから複数のコンテナーを作成し、各インスタンスにそれぞれ異なるパラメーターを渡します。
 
-**ボリューム**:コンテナーが使用できる書き込み可能なファイル システムを提供します。 イメージは読み取り専用ですが、ほとんどのプログラムはファイルシステムに書き込む必要があるため、プログラムから書き込み可能なファイルシステムにアクセスできるように、ボリュームでは書き込み可能なレイヤーをコンテナー イメージの上に追加します。 プログラムは、階層型ファイル システムにアクセスするには、通常どおり、ファイル システムがわかりません。 ボリュームはホスト システムに存在し、Docker によって管理されます。
+**ボリューム**:コンテナーが使用できる書き込み可能なファイル システムを提供します。 イメージは読み取り専用ですが、ほとんどのプログラムはファイルシステムに書き込む必要があるため、プログラムから書き込み可能なファイルシステムにアクセスできるように、ボリュームでは書き込み可能なレイヤーをコンテナー イメージの上に追加します。 プログラムは、階層化されたファイルシステムにアクセスしていることを認識しません。通常どおりの単なるファイルシステムです。 ボリュームはホスト システムに存在し、Docker によって管理されます。
 
 **タグ**:各種イメージまたは同じイメージの各種バージョン (バージョン番号または対象となる環境に応じて異なる) を識別できるように、イメージに適用できるマークまたはラベルです。
 
@@ -31,23 +31,23 @@ ms.locfileid: "65644747"
 
 **レジストリ**:リポジトリへのアクセス権を提供するサービスです。 ほとんどのパブリック イメージの既定のレジストリは [Docker Hub](https://hub.docker.com/) です (Docker によって組織として所有されている)。 レジストリには、通常、複数のチームからのリポジトリが含まれています。 企業は、多くの場合、自社で作成したイメージを格納および管理するためのプライベート レジストリを持っています。 Azure Container Registry は別の例となります。
 
-**マルチアーキテクチャ イメージ**:マルチ アーキテクチャは、Docker が実行されている、たとえば、Dockerfile は、基本イメージを要求したときにプラットフォームに応じて、適切なイメージの選択を簡略化する機能は、 **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** レジストリから実際に取得 **`2.2-nanoserver-1709`**、 **`2.2-nanoserver-1803`**、 **`2.2-nanoserver-1809`** または **`2.2-stretch`**、オペレーティング システムと Docker が実行されているバージョンによって異なります。
+**マルチアーキテクチャ イメージ**:マルチアーキテクチャの場合に、Docker が実行されているプラットフォームに従って、適切なイメージの選択を簡略化する機能です。たとえば、Dockerfile がレジストリからベース イメージ **`FROM mcr.microsoft.com/dotnet/core/sdk:2.2`** を要求すると、実際には、Docker で実行されているオペレーティング システムとバージョンに応じて、 **`2.2-nanoserver-1709`** 、 **`2.2-nanoserver-1803`** 、 **`2.2-nanoserver-1809`** 、または **`2.2-stretch`** が取得されます。
 
 **Docker Hub**:イメージをアップロードし、それらを操作するパブリック レジストリです。 Docker Hub は、Docker イメージ ホスティング、パブリックまたはプライベート レジストリ、ビルド トリガーおよび Web フック、さらに GitHub および Bitbucket との統合を提供します。
 
-**Azure コンテナー レジストリ**:Azure 内で Docker イメージとそのコンポーネントを操作するためのパブリック リソースです。 これにより、レジストリにできるように、アクセスに対する制御を用意されており、Azure のデプロイの近くにある、Azure Active Directory グループとアクセス許可を使用します。
+**Azure コンテナー レジストリ**:Azure 内で Docker イメージとそのコンポーネントを操作するためのパブリック リソースです。 これは、Azure で利用しているデプロイに近く、アクセスに対する制御権を付与するレジストリです。これにより、Azure Active Directory のグループとアクセス許可が使用できるようになります。
 
-**Docker Trusted Registry (DTR)**:組織のデータ センターやネットワーク内で有効になるようにオンプレミスにインストール可能な Docker レジストリ サービス (Docker からの) です。 エンタープライズ内で管理する必要があるプライベート イメージにおいて便利です。 Docker Trusted Registry は Docker Datacenter 製品の一部として含められています。 詳細については、[Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/) に関するページを参照してください。
+**Docker Trusted Registry (DTR)** :組織のデータ センターやネットワーク内で有効になるようにオンプレミスにインストール可能な Docker レジストリ サービス (Docker からの) です。 企業内で管理する必要があるプライベート イメージにおいて便利です。 Docker Trusted Registry は Docker Datacenter 製品の一部として含められています。 詳細については、[Docker Trusted Registry (DTR)](https://docs.docker.com/docker-trusted-registry/overview/) に関するページを参照してください。
 
-**Docker Community Edition (CE)**:コンテナーをローカルにビルド、実行、テストのための Windows および macOS 用の開発ツールです。 Docker for Windows CE は、Linux コンテナーと Windows コンテナーの両方に開発環境を提供します。 Windows 上の Linux Docker ホストは、[Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 仮想マシンをベースにしています。 Windows コンテナーのホストは、Windows に直接基づいています。 Docker CE for Mac は、Apple Hypervisor フレームワークと [xhyve ハイパーバイザー](https://github.com/mist64/xhyve) (Mac OS X 上で Linux Docker ホスト仮想マシンを提供する) に基づいています。Docker CE for Windows と Docker CE for Mac は、Oracle VirtualBox に基づく Docker Toolbox に取って代わります。
+**Docker Community Edition (CE)** :コンテナーをローカルにビルド、実行、テストのための Windows および macOS 用の開発ツールです。 Docker for Windows CE は、Linux コンテナーと Windows コンテナーの両方に開発環境を提供します。 Windows 上の Linux Docker ホストは、[Hyper-V](https://www.microsoft.com/cloud-platform/server-virtualization) 仮想マシンをベースにしています。 Windows コンテナーのホストは、Windows に直接基づいています。 Docker CE for Mac は、Apple Hypervisor フレームワークと [xhyve ハイパーバイザー](https://github.com/mist64/xhyve) (Mac OS X 上で Linux Docker ホスト仮想マシンを提供する) に基づいています。Docker CE for Windows と Docker CE for Mac は、Oracle VirtualBox に基づく Docker Toolbox に取って代わります。
 
-**Docker Enterprise Edition (EE)**:Linux および Windows 開発用の Docker ツールのエンタープライズ規模のバージョンです。
+**Docker Enterprise Edition (EE)** :Linux および Windows 開発用の Docker ツールのエンタープライズ規模のバージョンです。
 
-**Compose**:複数コンテナーのアプリケーションを定義および実行するためのメタデータを持つコマンドライン ツールと YAML ファイル形式です。 複数のイメージに基づく単一のアプリケーションを定義するには、環境に応じて値をオーバーライドできる 1 つまたは複数の .yml ファイルを使用します。 定義を作成したら、1 つのコマンドを使用して全体の複数コンテナー アプリケーションを展開することができます (docker-compose を)、Docker ホストでイメージごとにコンテナーを作成します。
+**Compose**:複数コンテナーのアプリケーションを定義および実行するためのメタデータを持つコマンドライン ツールと YAML ファイル形式です。 複数のイメージに基づく単一のアプリケーションを定義するには、環境に応じて値をオーバーライドできる 1 つまたは複数の .yml ファイルを使用します。 定義を作成したら、Docker ホスト上でイメージごとにコンテナーを作成する単一コマンド (docker-compose up) を使用して複数コンテナーのアプリケーション全体を展開することができます。
 
 **クラスター**:クラスター内の複数のホストに分散されたサービスの複数のインスタンスに対応できるように、単一の仮想 Docker ホストであるかのように公開された Docker ホストのコレクションです。 Docker クラスターは、Kubernetes、Azure Service Fabric、Docker Swarm、Mesosphere DC/OS を使用して作成できます。
 
-**Orchestrator**:クラスターと Docker ホストの管理を簡略化するツールです。 オーケストレーターは、イメージ、コンテナー、およびコマンド ライン インターフェイス (CLI) を使用してホストを管理することを有効にするか、グラフィカル UI。 コンテナー ネットワーク、構成、負荷分散、サービス検出、高可用性、Docker ホストの構成などを管理することができます。 オーケストレーターは、ノードのコレクション全体にわたりワークロードの実行、配布、スケーリング、修復を担当します。 通常、オーケストレーター製品は、市場の他のオファリングの中でも、Kubernetes や Azure Service Fabric などのクラスター インフラストラクチャを提供する同じ製品です。
+**Orchestrator**:クラスターと Docker ホストの管理を簡略化するツールです。 Orchestrator を使用すると、そのイメージ、コンテナー、およびホストをコマンドライン インターフェイス (CLI) またはグラフィカル UI を介して管理することができます。 コンテナー ネットワーク、構成、負荷分散、サービス検出、高可用性、Docker ホストの構成などを管理することができます。 オーケストレーターは、ノードのコレクション全体にわたりワークロードの実行、配布、スケーリング、修復を担当します。 通常、オーケストレーター製品は、市場の他のオファリングの中でも、Kubernetes や Azure Service Fabric などのクラスター インフラストラクチャを提供する同じ製品です。
 
 >[!div class="step-by-step"]
 >[前へ](what-is-docker.md)

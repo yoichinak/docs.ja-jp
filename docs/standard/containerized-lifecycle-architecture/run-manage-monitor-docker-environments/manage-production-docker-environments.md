@@ -1,44 +1,44 @@
 ---
 title: Docker の実稼働環境を管理する
-description: コンテナー ベースの実稼働環境を管理する重要な点を把握するを取得します。
+description: コンテナーベースの実稼働環境を管理する際に重要な点について説明します。
 ms.date: 02/15/2019
 ms.openlocfilehash: 7d10f670745f8bac1084b8c33c5acde67bac6229
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "65641070"
 ---
 # <a name="manage-production-docker-environments"></a>Docker の実稼働環境を管理する
 
-クラスターの管理とオーケストレーションは、ホストのグループを制御するためのプロセスです。 追加して、クラスターでは、ホストとコンテナーの現在の状態に関する情報を取得し、開始およびプロセスの停止からホストを削除する必要があります。 クラスターの管理とオーケストレーションは、スケジューラは、クラスター内の各ホストへのアクセスをサービスのスケジュールを設定するにがある必要なためにのスケジューリングに密接に関連付けします。 このため、両方の目的で、同じツールがよく使用されます。
+クラスターの管理とオーケストレーションは、ホストのグループを制御するプロセスです。 これには、クラスターのホストの追加と削除、ホストとコンテナーの現在の状態に関する情報の取得、プロセスの開始と停止が含まれます。 サービスをスケジュールするには、スケジューラからクラスター内の各ホストにアクセスできる必要があるため、クラスターの管理とオーケストレーションはスケジューリングと密接に関係しています。 このため、両方の目的に同じツールがよく使用されます。
 
 ## <a name="container-service-and-management-tools"></a>コンテナー サービスと管理ツール
 
-Container Service では、人気のオープン ソース コンテナーのクラスタ リングやオーケストレーション ソリューションの迅速なデプロイを提供します。 Docker イメージを使用して、アプリケーション コンテナーが完全に移植可能であることを確認します。 DC OS/(Mesosphere と Apache Mesos 利用) をデプロイするコンテナー サービスを使用して、Docker Swarm クラスターを Azure Resource Manager テンプレートまたは数千にこれらのアプリケーションをスケーリングできることを確認する Azure portal を使用: 数万も — のコンテナー。
+コンテナー サービスでは、人気のオープン ソースのコンテナー クラスタリングやオーケストレーション ソリューションを短期間でデプロイできます。 アプリケーション コンテナーの完全な移植を確保するため Docker イメージが使用されます。 コンテナー サービスを使用すると、Azure Resource Manager テンプレートまたは Azure portal で DC/OS (Mesosphere および Apache Mesos を搭載) と Docker Swarm クラスターをデプロイし、これらのアプリケーションを数千から数万のコンテナーに確実にスケーリングできるようになります。
 
-Azure 仮想マシン スケール セットを使用してこれらのクラスターを展開して、クラスターを Azure のネットワークおよび記憶域サービスの利用します。 コンテナー サービスにアクセスするには、Azure サブスクリプションを必要があります。 Container service では、オーケストレーション レイヤーなど、アプリケーションの移植性を維持しながら Azure のエンタープライズ級の機能を活用がかかります。
+これらのクラスターは Azure 仮想マシン スケール セットでデプロイされ、Azure ネットワーキングとストレージ サービスが活用されます。 コンテナー サービスにアクセスするには、Azure サブスクリプションが必要です。 コンテナー サービスでは、オーケストレーション レイヤーなどでアプリケーションの移植性を維持しながら、Azure のエンタープライズ レベルの機能を活用できます。
 
-表 6-1 は、オーケストレーター、スケジューラ、クラスタ リングのプラットフォームに関連する、一般的な管理ツールを一覧表示します。
+表 6-1 は、オーケストレーター、スケジューラ、クラスタリング プラットフォームに関連する一般的な管理ツールの一覧です。
 
-**表 6-1**します。 Docker の管理ツール
+**表 6-1**. Docker 管理ツール
 
 | 管理ツール | 説明 | 関連するオーケストレーター |
 |------------------|-------------|-----------------------|
-| [Azure Monitor for Containers](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | 専用の azure の Kubernetes 管理ツール | Azure Kubernetes サービス (AKS) |
-| [Kubernetes Web UI (ダッシュ ボード)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes の管理ツールでは監視したり、ローカルの Kubernetes クラスターの管理 | Azure Kubernetes Service (AKS)<br/>ローカルの Kubernetes |
-| [Service Fabric 用に azure ポータル](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure、オンプレミス、ローカルの開発、およびその他のクラウドでの Service Fabric クラスターを管理するためのオンラインやデスクトップのバージョン | Azure Service Fabric |
-| [コンテナー (Azure Monitor) の監視](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 一般的なコンテナー管理 y がソリューションを監視します。 使って Kubernetes クラスターを管理できます[コンテナー用の Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview)します。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS、および他のユーザー。 |
+| [コンテナー用 Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) | Azure 専用 Kubernetes 管理ツール | Azure Kubernetes Services (AKS) |
+| [Kubernetes Web UI (ダッシュボード)](https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/) | Kubernetes 管理ツールでは、ローカル Kubernetes クラスターを監視および管理できます | Azure Kubernetes Service (AKS)<br/>ローカルの Kubernetes |
+| [Azure portal for Service Fabric](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)<br/>[Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) | Azure、オンプレミス、ローカル開発、およびその他のクラウド上で Service Fabric クラスターを管理するためのオンラインおよびデスクトップ バージョン | Azure Service Fabric |
+| [コンテナー監視 (Azure Monitor)](https://docs.microsoft.com/azure/azure-monitor/insights/containers) | 一般的なコンテナー管理および監視ソリューション。 [コンテナー用 Azure Monitor](https://docs.microsoft.com/azure/monitoring/monitoring-container-insights-overview) を使用して Kubernetes クラスターを管理できます。 | Azure Service Fabric<br/>Azure Kubernetes Service (AKS)<br/>Mesosphere DC/OS など。 |
 
 ## <a name="azure-service-fabric"></a>Azure Service Fabric
 
-クラスターのデプロイと管理に関する別の選択肢では、Azure Service Fabric です。 [Service Fabric](https://azure.microsoft.com/services/service-fabric/)開発者と同様にコンテナーのオーケストレーションを含む Microsoft のマイクロ サービス プラットフォームは非常にスケーラブルなマイクロ サービス アプリケーションを構築するモデルをプログラミングします。 Service Fabric では、Linux と Windows コンテナーで Docker をサポートしているし、Windows および Linux サーバーで実行できます。
+クラスターのデプロイと管理には、Azure Service Fabric という選択肢もあります。 [Service Fabric](https://azure.microsoft.com/services/service-fabric/) は、コンテナー オーケストレーションだけでなく、非常にスケーラブルなマイクロサービス アプリケーションを構築できる開発者プログラミング モデルを含む Microsoft マイクロサービス プラットフォームです。 Service Fabric では、Linux および Windows コンテナーで Docker がサポートされており、Windows および Linux サーバーで実行できます。
 
 Service Fabric 管理ツールを次に示します。
 
-- [Service Fabric 用に azure ポータル](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal)クラスター関連の操作 (作成/更新/削除)、クラスターまたはインフラストラクチャ (Vm、ロード バランサー、ネットワークなど) の構成
+- [Service Fabric 用 Azure portal](https://docs.microsoft.com/azure/service-fabric/service-fabric-cluster-creation-via-portal) では、クラスター関連の操作 (作成/更新/削除) を行い、クラスターのインフラストラクチャ (VM、ロード バランサー、ネットワークなど) を構成します
 
-- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster)は特殊な web UI と洞察やノード/vm の観点から、アプリケーションとサービスの観点から、Service Fabric クラスターで特定の操作を提供するデスクトップのマルチプラット フォーム ツールです。
+- [Azure Service Fabric Explorer](https://docs.microsoft.com/azure/service-fabric/service-fabric-visualizing-your-cluster) は、ノード/VM の観点とアプリケーションとサービスの観点から Service Fabric クラスターに関する分析情報と特定の操作を提供する特殊な Web UI およびデスクトップ マルチプラットフォーム ツールです。
 
 >[!div class="step-by-step"]
 >[前へ](run-microservices-based-applications-in-production.md)

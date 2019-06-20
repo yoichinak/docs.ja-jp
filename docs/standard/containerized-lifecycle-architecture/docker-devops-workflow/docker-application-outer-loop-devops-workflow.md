@@ -1,212 +1,212 @@
 ---
 title: Docker アプリケーションの外側のループ DevOps ワークフローの手順
-description: DevOps ワークフローの「外側のループ」手順を説明します
+description: DevOps の "外部ループ" ワークフローの手順について学習する
 ms.date: 02/15/2019
 ms.openlocfilehash: e7a82d2e5a5d503e5efbe9ac8242b163baab1286
-ms.sourcegitcommit: 96543603ae29bc05cecccb8667974d058af63b4a
-ms.translationtype: MT
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/24/2019
+ms.lasthandoff: 06/13/2019
 ms.locfileid: "66195616"
 ---
 # <a name="steps-in-the-outer-loop-devops-workflow-for-a-docker-application"></a>Docker アプリケーションの外側のループ DevOps ワークフローの手順
 
-図 5-1 は、DevOps の外側のループのワークフローを構成する手順の説明、エンド ツー エンドの図を表示します。
+図 5-1 は、DevOps の外部ループ ワークフローを構成するエンド ツー エンド手順を表したものです。
 
-![この図では、DevOps の「外側のループ」を示します。 にコードをリポジトリにプッシュすると、CI のパイプラインが開始し、アプリケーションがデプロイされる、CD パイプラインを開始します。 デプロイされたアプリケーションから収集されたメトリックが「内部ループ」が発生する、開発ワークロードに送られる開発チームがユーザーとビジネスのニーズに対応する実際のデータ。](./media/image1.png)
+![この図は、DevOps の "外部ループ" を示しています。 コードがリポジトリにプッシュされると、CI パイプラインが開始されてから、CD パイプラインが開始され、そこでアプリケーションがデプロイされます。 デプロイされたアプリケーションから収集されたメトリックは開発ワークロードにフィードバックされ、そこで "内部ループ" が発生します。したがって、開発チームは実際のデータを得てユーザーおよびビジネスのニーズに応えることができます。](./media/image1.png)
 
-**図 5-1**します。 Microsoft ツールと Docker アプリケーション DevOps 外側のループのワークフロー
+**図 5-1**. Microsoft ツールを使用する Docker アプリケーションの DevOps 外部ループ ワークフロー
 
-次に、それぞれの手順を詳しく見ていきましょう。
+それでは、以下の手順をそれぞれ詳しく見ていきましょう。
 
-## <a name="step-1-inner-loop-development-workflow"></a>手順 1: 内部ループ開発ワークフロー
+## <a name="step-1-inner-loop-development-workflow"></a>手順 1: 内部ループの開発ワークフロー
 
-この手順は、第 4 章で詳しく説明を要約すると、ここでは、外側のループ開始位置となる、開発者が CI パイプラインのアクションの開始 (Git) のようなソース コントロール管理システムにコードをプッシュする時点。
+この手順は第 4 章で詳しく説明されていますが、要約するため、ここでは外部ループが開始され、その時点で開発者は CI パイプライン アクションを開始するソース コントロール管理システム (Git など) にコードをプッシュします。
 
-## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>手順 2: ソース コード管理の統合と Azure DevOps サービスと Git による管理
+## <a name="step-2-source-code-control-integration-and-management-with-azure-devops-services-and-git"></a>手順 2: Azure DevOps Services と Git を使用するソース コード コントロールの統合と管理
 
-この手順では、チームのさまざまな開発者から、すべてのコードの統合されたバージョンを収集するバージョン管理システムに用意する必要があります。
+この手順では、チーム内のさまざまな開発者からの統合されたバージョンのコードをすべて収集するために、バージョン管理システムが必要になります。
 
-アプリケーションを Docker イメージを送信する必要がありますいないを強調するために重要な場合でも、ソース コード管理 (SCC) とソース コード管理には、習慣にほとんどの開発者、DevOps ライフで Docker アプリケーションを作成するときのサイクルと思われる場合があります、直接、グローバル Docker レジストリに (Azure Container Registry や Docker Hub) など、開発者のマシンから。 反対に、グローバル ビルドまたはソース コード リポジトリ (Git) などに基づく CI パイプラインで、統合されることは、ソース コードのみにリリースされ、運用環境に展開する Docker イメージを作成する必要があります。
+ほとんどの開発者がソース コード コントロール (SCC) とソース コード管理に慣れているように見えても、DevOps ライフ サイクルで Docker アプリケーションを作成するときに、開発者のコンピューターからグローバルな Docker Registry (Azure Container Registry や Docker Hub など) に直接、Docker イメージをアプリケーションとともに送信してはいけないことを強調することが重要です。 一方、リリースして運用環境にデプロイする Docker イメージは、ソース コード リポジトリ (Git など) に基づいてグローバル ビルドまたは CI パイプラインで統合される、ソース コードでのみ作成する必要があります。
 
-独自のマシン内でテストするときに、それらにより、開発者によって生成される、ローカルのイメージを使用だけください。 その理由は DevOps パイプラインを SCC コードからアクティブ化することが重要です。
+開発者によって生成される、ローカル イメージは、独自のコンピューター内でテストするときにのみ、使用される必要があります。 これが、SCC コードから DevOps パイプラインをアクティブ化することが重要である理由です。
 
-Azure DevOps サービスと Team Foundation Server は、Git と Team Foundation バージョン管理をサポートします。 それらの間を選択し、エンド ツー エンドの Microsoft エクスペリエンスを使用できます。 ただし、管理することもできます (GitHub、Git リポジトリをオンプレミス、または Subversion) ような外部リポジトリでは、コードとそれに接続し、DevOps の CI パイプラインの開始点としてコードを取得できます。
+Azure DevOps Services および Team Foundation Server では、Git と Team Foundation バージョン管理がサポートされます。 いずれかを選択し、それをエンド ツー エンドの Microsoft エクスペリエンスで使用することができます。 しかし、外部リポジトリ (GitHub、オンプレミスの Git リポジトリ、Subversion など) でコードを管理することもでき、引き続き、それに接続し、DevOps CI パイプラインの開始点としてコードを取得することができます。
 
-## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>手順 3: ビルド、CI、統合、および Azure DevOps を使用してテスト サービスと Docker
+## <a name="step-3-build-ci-integrate-and-test-with-azure-devops-services-and-docker"></a>手順 3: Azure DevOps Services と Docker を使用するビルド、CI、統合、およびテスト
 
-CI が最新のソフトウェアのテストおよび配信のための標準として登場しました。 Docker ソリューションでは、開発および運用チーム間での問題を明確に分離を維持します。 Docker イメージの不変性により、どのような開発、CI、テストおよび運用環境で実行が間に反復可能なデプロイ。 Docker エンジン開発者向けのノート パソコンに展開し、テスト インフラストラクチャは、環境間で、コンテナーを移植性。
+CI は、最新のソフトウェアのテストおよび配布のための標準として登場しました。 Docker ソリューションでは、開発および運用チーム間の懸念事項を明確に分離させておくことができます。 Docker イメージの不変性により、CI を介して開発し、テストし、運用環境で実行する対象の間で反復可能なデプロイが保証されます。 開発者のノート PC とテスト インフラストラクチャ全体にデプロイされた Docker エンジンにより、環境間でのコンテナーの移植が可能になります。
 
-この時点で、送信された正しいコードにバージョン管理システムがある必要があります、*サービスを構築*コードを選択し、グローバル ビルドとテストを実行します。
+ここで、正しいコードが送信され、バージョン管理システムの準備ができた後、コードを選択してグローバル ビルドとテストを実行するための "*ビルドサービス*" が必要になります。
 
-(CI、ビルド、テスト) この手順の内部ワークフローとは、ビルド サーバー (Azure DevOps サービス)、Docker エンジンと Docker レジストリをコード リポジトリ (Git など) から成る CI パイプラインを作成する方法。
+この手順 (CI、ビルド、テスト) の内部ワークフローは、コード リポジトリ (Git など)、ビルド サーバー (Azure DevOps Services)、Docker エンジン、および Docker レジストリで構成される CI パイプラインの構築に関するものです。
 
-できますサービスを使用する Azure DevOps の基盤として、アプリケーションを構築および、CI のパイプラインを設定するため、組み込みの「アイテム」を公開するため"アーティファクト リポジトリに、"については、次の手順で説明します。
+アプリケーションのビルドと CI パイプラインの設定のため、およびビルドされた "成果物" の "成果物リポジトリ" へのプッシュのための基盤として、Azure DevOps Services を使用できます。これについては、次の手順で説明します。
 
-Docker を使用して、展開は、「最終的な成果物」ときに展開するのには、アプリケーションやサービスを使用した Docker イメージ内に埋め込まれます。 これらのイメージのプッシュまたは発行を*Docker レジストリ*(Azure Container Registry で使用できるはまたはの公式の基本イメージの一般的な使用の Docker Hub レジストリなどのパブリック 1 などのプライベート リポジトリ)。
+デプロイで Docker を使用する場合、デプロイされる "最終的な成果物" は、その中に埋め込まれているアプリケーションまたはサービスを含む Docker イメージです。 これらのイメージは、*Docker レジストリ* (Azure Container Registry で使用できるものなどのプライベート リポジトリ、または公式の基本イメージで一般的に使用される、Docker Hub Registry などのパブリックのもの) にプッシュまたは公開されます。
 
-基本的な概念を次に示します。CI パイプラインは、Git などのソース コード管理リポジトリにコミットしてから開始されます。 図 5-2 に示すように、コミットは、Docker コンテナー内のビルド ジョブを実行し、そのジョブが正常に完了すると、Docker レジストリに Docker イメージをプッシュする DevOps サービスを Azure になります。
+基本的な概念を以下に示します。CI パイプラインは、Git などの SCC へのコミットによって開始されます。 図 5-2 に示すように、コミットにより、Azure DevOps Services では Docker コンテナー内でビルド ジョブが実行され、そのジョブが正常に完了すると、Docker イメージが Docker レジストリにプッシュされるようになります。
 
-![外側のループの最初の部分を実行、コードから、手順 1 ~ 3 では、デバッグ、および検証し、ビルドとテストの CI 手順まで、コード リポジトリ](./media/image2.png)
+![外部ループの最初の部分は手順 1 から 3、つまり、コード、実行、デバッグ、検証、その後のコード リポジトリ、ビルドとテスト CI 手順までが関連します](./media/image2.png)
 
-**図 5-2** CI で必要な手順
+**図 5-2** CI に関連する手順
 
-Docker と Azure DevOps サービスの基本的な CI ワークフロー手順を次に示します。
+Docker と Azure DevOps Services を使用する基本的な CI ワークフロー手順を以下に示します。
 
-1. 開発者は、ソース コード管理リポジトリ (Git または Azure DevOps Services、GitHub など) にコミットをプッシュします。
+1. 開発者は、SCC リポジトリ (Git/Azure DevOps Services、GitHub など) にコミットをプッシュします。
 
-2. Azure DevOps Services または Git を使用している場合は、CI ビルドは、Azure DevOps サービスのチェック ボックスを選択するだけであることを意味します。 (GitHub) などの外部の SCC を使用している場合、`webhook`更新プログラムの DevOps サービスを Azure に通知または Git と GitHub にプッシュされます。
+2. Azure DevOps Services または Git を使用する場合、CI は組み込まれています。つまり、Azure DevOps Services でチェック ボックスをオンにするのと同じくらいシンプルです。 外部 SCC (GitHub など) を使用する場合は、`webhook` によって、Azure DevOps Services に更新プログラムが通知されるか、Git/GitHub にプッシュされます。
 
-3. Azure DevOps サービスは、イメージだけでなく、アプリケーションとテストのコードを記述する Dockerfile を含む、SCC リポジトリをプルします。
+3. Azure DevOps Services では、アプリケーションとテスト コードだけでなく、イメージを記述する Dockerfile を含む、SCC リポジトリがプルされます。
 
-4. Azure DevOps サービスは、Docker イメージをビルドおよびビルド番号のラベルします。
+4. Azure DevOps Services によって Docker イメージがビルドされ、ビルド番号でラベルが付けられます。
 
-5. Azure DevOps サービスは、プロビジョニング済みの Docker ホスト内の Docker コンテナーをインスタンス化し、適切なテストを実行します。
+5. Azure DevOps Services では、プロビジョニング済みの Docker ホスト内で Docker コンテナーがインスタンス化され、適切なテストが実行されます。
 
-6. 「試みられたビルド」がわかるように、イメージが最初にわかりやすい名前を付け、テストが成功した場合は、(のように"/1.0.0"またはその他の任意のラベル)、(Docker Hub、Azure Container Registry、DTR など)、Docker レジストリにプッシュし、
+6. テストに成功した場合、イメージはまず、わかりやすい名前にラベルが書き換えられるため、それが "blessed ビルド" ("/1.0.0" やその他のラベルなど) であることがわかります。その後、Docker レジストリ (Docker Hub、Azure Container Registry、DTR など) までプッシュされます。
 
-### <a name="implementing-the-ci-pipeline-with-azure-devops-services-and-the-docker-extension-for-azure-devops-services"></a>Azure DevOps サービス用の Azure DevOps サービスと Docker 拡張機能を使用して、CI パイプラインの実装
+### <a name="implementing-the-ci-pipeline-with-azure-devops-services-and-the-docker-extension-for-azure-devops-services"></a>Azure DevOps Services および Azure DevOps Services 用の Docker 拡張機能を使用する CI パイプラインの実装
 
-Visual Studio の Azure DevOps サービスには、ビルド (&)、CI/CD パイプラインを Docker イメージを作成、認証済みの Docker レジストリに Docker イメージをプッシュ、または実行する Docker イメージ、によって提供されるその他の操作を実行に使用できるリリース テンプレートが含まれています。Docker CLI。 また、ビルド、プッシュ、およびマルチ コンテナー Docker アプリケーションを実行または図 5-3 に示すように Docker Compose CLI によって提供されるその他の操作を実行に使用できる Docker Compose のタスクを追加します。
+Visual Studio の Azure DevOps Services にはビルドとリリース テンプレートが含まれており、これらを CI/CD パイプラインで使用でき、Docker イメージをビルドしたり、認証済みの Docker レジストリに Docker イメージをプッシュしたり、Docker CLI によって提供される他の操作を実行したりすることができます。 また、Docker Compose タスクが追加されます。これを使用して、図 5-3 に示すように、複数コンテナーの Docker アプリケーションをビルド、プッシュ、実行したり、Docker Compose CLI によって提供される他の操作を実行したりすることができます。
 
-![Azure DevOps での Docker の CI パイプラインのブラウザー ビュー](./media/image3.png)
+![Azure DevOps での Docker CI パイプラインのブラウザー ビュー](./media/image3.png)
 
-**図 5-3** ビルド & リリース テンプレートと関連するタスクを含む Azure DevOps サービスで Docker CI パイプラインです。
+**図 5-3** ビルドとリリース テンプレートおよび関連するタスクを含む、Azure DevOps Service の Docker CI パイプライン。
 
-これらのテンプレートとタスクを使用するにはビルド/テストおよびデプロイする CI/CD アーティファクトを作成する Azure Service Fabric、Azure Kubernetes サービス、および類似のサービスです。
+これらのテンプレートとタスクを使用して、Azure Service Fabric、Azure Kubernetes Service、および同様のオファリングでビルド/テストおよびデプロイのための CI/CD 成果物を構築することができます。
 
-これらの Visual Studio Team Services タスクとビルドを Linux Docker ホスト/VM Azure でプロビジョニングし、(Azure Container Registry、Docker Hub、プライベート Docker DTR、またはその他の任意の Docker レジストリ)、優先の Docker レジストリの Docker の CI パイプラインをアセンブルできます、非常に一貫した方法です。
+これらの Visual Studio Team Services タスク、Azure でプロビジョニングされたビルド Linux-Docker ホスト/VM、および任意の Docker レジストリ (Azure Container Registry、Docker Hub、プライベート Docker DTR、またはその他の Docker レジストリ) では、非常に一貫した方法で Docker CI パイプラインをアセンブルすることができます。
 
 ***要件:***
 
-- Azure DevOps サービス、またはオンプレミス インストールの場合、Team Foundation Server 2015 Update 3 またはそれ以降。
+- Azure DevOps Services。オンプレミス インストールの場合は、Team Foundation Server 2015 Update 3 以降。
 
-- Docker バイナリを含む Azure DevOps サービス エージェント。
+- Docker バイナリを含む Azure DevOps Services エージェント。
 
-  これらのエージェントのいずれかを作成する簡単な方法では、Docker を使用して、Azure DevOps サービス エージェントの Docker イメージに基づくコンテナーを実行します。
+  これらのエージェントのいずれかを作成する簡単な方法は、Docker を使用し、Azure DevOps Services エージェントの Docker イメージに基づいてコンテナーを実行することです。
 
-> [!情報] をクリックし、Azure DevOps サービスの Docker CI のアセンブリについての詳細はパイプラインし、チュートリアルの表示を読み取り、これらのサイトを参照してください。
+> [!情報] Azure DevOps Services Docker CI パイプラインのアセンブルの詳細を確認し、チュートリアルを表示する場合は、これらのサイトにアクセスしてください。
 >
-> - Docker コンテナーとして、Visual Studio Team Services (今すぐ Azure DevOps サービス) エージェントを実行します \。
+> - Docker コンテナーとしての Visual Studio Team Services (現在の Azure DevOps Services) エージェントの実行: \
 >   <https://hub.docker.com/_/microsoft-azure-pipelines-vsts-agent>
 >
-> - Azure DevOps サービスを使用した .NET Core Linux Docker イメージを構築します \。
+> - Azure DevOps Services を使用する .NET Core Linux Docker イメージのビルド: \
 >   <https://blogs.msdn.microsoft.com/stevelasker/2016/06/13/building-net-core-linux-docker-images-with-visual-studio-team-services/>
 >
-> - Docker サポートし、マシンを構築する Linux ベースの Visual Studio チーム サービスの構築: \
+> - Docker サポートを利用する Linux ベースの Visual Studio Team Service ビルド コンピューターのビルド: \
 >   <http://donovanbrown.com/post/2016/06/03/Building-a-Linux-Based-Visual-Studio-Team-Service-Build-Machine-with-Docker-Support>
 
-### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>統合、テスト、およびマルチ コンテナー Docker アプリケーションの検証
+### <a name="integrate-test-and-validate-multi-container-docker-applications"></a>複数コンテナーの Docker アプリケーションを統合、テスト、および確認する
 
-通常、1 つのコンテナーではなく、複数のコンテナーの Docker アプリケーションのほとんどがで構成されます。 良い例は、マイクロ サービスごとに 1 つのコンテナーが、マイクロ サービス指向アプリケーションです。 ただし、マイクロ サービス アプローチのパターンに厳密に従うと、なくては Docker アプリケーションは、複数のコンテナーまたはサービスの構成は可能性の高い。
+通常、ほとんどの Docker アプリケーションは、単一のコンテナーではなく、複数のコンテナーで構成されます。 その良い例が、マイクロサービスごとに 1 つのコンテナーを使用する、マイクロサービス指向のアプリケーションです。 しかし、マイクロサービスのアプローチ パターンに厳密に従わなくても、Docker アプリケーションが複数のコンテナーまたはサービスで構成される可能性があります。
 
-そのため、CI パイプラインでアプリケーション コンテナーをビルドした後も必要があります、展開、統合、およびすべての統合の Docker ホスト内で、またはさらには、コンテナーがテスト クラスターには、そのコンテナー全体のアプリケーションをテストするには分散されます。
+そのため、CI パイプラインでアプリケーション コンテナーをビルドした後、統合 Docker ホスト内、さらにはコンテナーが分散されるテスト クラスター内に、そのすべてのコンテナーを含めまとめてアプリケーションをデプロイ、統合、およびテストする必要もあります。
 
-1 つのホストを使用している場合は、docker などの Docker コマンドを使用することができます-ビルドしてデプロイをテストし、1 つの VM で Docker 環境を検証関連のコンテナーを作成します。 しかし、DC/OS、Kubernetes、Docker Swarm などをオーケストレーター クラスタを使用している場合、別のメカニズムや、選択したクラスター/スケジューラによって、orchestrator、コンテナーをデプロイする必要があります。
+単一のホストを使用する場合は、docker-compose などの Docker コマンドを使用して、関連するコンテナーをビルドおよびデプロイし、単一の VM で Docker 環境をテストおよび確認することができます。 しかし、DC/OS、Kubernetes、Docker Swarm などのオーケストレーター クラスターを操作する場合は、選択したクラスター/スケジューラに応じて、異なるメカニズムまたはオーケストレーターを介してコンテナーをデプロイする必要があります。
 
-次に、Docker コンテナーに対して実行できるテストの種類をいくつか示します。
+Docker コンテナーに対して実行できるいくつかの種類のテストを以下に示します。
 
-- Docker コンテナー用の単体テスト
+- Docker コンテナーの単体テスト
 
-- 相互に関連するアプリケーションやマイクロ サービスのグループのテスト
+- 相互に関連するアプリケーションまたはマイクロサービスのグループ テスト
 
-- 運用環境と「カナリア」のリリースでのテストします。
+- 運用および "カナリア" リリースでのテスト
 
-重要な点は、統合と機能テストを実行するときに、コンテナーの外部からそれらのテストを実行する必要があります。 テストは含まれているまたはコンテナーが必要がありますが、運用環境にデプロイするものとまったく同じように静的なイメージに基づいているため、デプロイするコンテナーで実行できません。
+重要な点は、統合および機能テストを実行するときに、コンテナーの外部からそれらのテストを実行する必要があることです。 デプロイするコンテナーではテストは含まれず、実行されません。これは、コンテナーが、運用環境にデプロイするのとまったく同じである必要がある静的イメージに基づくためです。
 
-実用的なオプションでは、いくつかのクラスター (クラスター、クラスターのステージング、および運用環境のクラスターのテスト) を含むなどのシナリオより高度なテスト時に、さまざまなクラスターでテストできますのでをレジストリにイメージを発行することです。
+いくつかのクラスター (テスト クラスター、ステージング クラスター、運用クラスター) を含む、より高度なシナリオをテストする場合の実用的なオプションは、イメージをレジストリに公開することです。これにより、さまざまなクラスターでテストすることができます。
 
-### <a name="push-the-custom-application-docker-image-into-your-global-docker-registry"></a>グローバルな Docker レジストリをカスタム アプリケーションの Docker イメージをプッシュします。
+### <a name="push-the-custom-application-docker-image-into-your-global-docker-registry"></a>グローバルな Docker レジストリにカスタム アプリケーションの Docker イメージをプッシュする
 
-Docker イメージをテストおよび検証した後にタグ付けし、Docker レジストリに公開します。 Docker レジストリは重要な部分を Docker アプリケーションのライフ サイクルの QA および実稼動環境にデプロイするのには、カスタム テスト (「試みられたイメージ」とも呼ばれます) を格納する中央の場所です。
+Docker イメージがテストされ、確認された後、それらにタグを付け、Docker レジストリに公開する必要があります。 Docker レジストリは Docker アプリケーション ライフ サイクルにおける重要な部分です。これは、QA および運用環境にデプロイされる ("blessed イメージ" ともいう) カスタム テストを格納する中央の場所であるためです。
 
-方法、ソース コード管理リポジトリ (Git など) に格納されているアプリケーション コードは、「普遍の情報源」と同様に、Docker レジストリは、「ソース実のところの」、QA 環境または運用環境にデプロイするには、バイナリのアプリケーションやビットです。
+SCC リポジトリ (Git など) に格納されているアプリケーション コードが "信頼できるソース" であるのと同様、Docker リポジトリは QA または運用環境にデプロイされるバイナリ アプリケーションあるいはビットの "信頼できるソース" です。
 
-通常、Azure コンテナー レジストリまたは Docker Trusted Registry のように、オンプレミスのレジストリまたは (制限付きのアクセス権を持つパブリック クラウドのレジストリで、カスタム イメージのプライベート リポジトリをプライベート リポジトリのいずれかがする可能性があります。Docker Hub)、この最後の場合、コードがオープン ソースの場合でも、ベンダーのセキュリティを信頼する必要があります。 どちらの方法を使用するメソッドはのようなに基づいて、`docker push`コマンド、図 5-4 に示すようにします。
+通常、Azure Container Registry 内のプライベート リポジトリまたは Docker Trusted Registry などのオンプレミス レジストリ、あるいは (Docker Hub などの) アクセスが制限されたパブリック クラウド レジストリでは、カスタム イメージ用のプライベート リポジトリが必要な場合があります。ただし、最後のケースでは、コードがオープンソースでない場合、ベンダーのセキュリティを信頼する必要があります。 いずれの場合も、使用する方法は似ており、図 5-4 に示すように、`docker push` コマンドに基づきます。
 
-![統合を構築して (CI) のテスト手順 3 では、プライベートまたはパブリック レジストリに結果の docker イメージを発行する可能性があります。](./media/image4.png)
+![ビルド、統合およびテスト (CI) に関する手順 3 では、結果の Docker イメージをプライベートまたはパブリック レジストリに公開する場合があります。](./media/image4.png)
 
-**図 5-4** カスタム イメージを Docker レジストリに発行
+**図 5-4** カスタム イメージの Docker レジストリへの公開
 
-Azure Container Registry、Amazon Web Services Container Registry、Google Container Registry、Quay レジストリなどのクラウド ベンダーからの Docker レジストリの複数のサービス提供しています。
+Azure Container Registry、Amazon Web Services Container Registry、Google Container Registry、Quay レジストリなど、クラウド ベンダーからの Docker レジストリには複数のオファリングがあります。
 
-Docker タスクを使用して、定義したサービスのイメージのセットをプッシュすることができます、`docker-compose.yml`ファイル (Azure Container Registry) などの認証済みの Docker レジストリに、複数のタグと図 5-5 に示すようにします。
+図 5-5 に示すように、Docker タスクを使用することで、`docker-compose.yml` ファイルで定義されている、複数のタグの付いた一連のサービス イメージを、認証済みの Docker レジストリ (Azure Container Registry など) にプッシュすることができます。
 
-![Azure DevOps からレジストリにイメージを発行する手順のブラウザー ビュー。](./media/image5.png)
+![Azure DevOps からレジストリにイメージを公開する手順のブラウザー ビュー。](./media/image5.png)
 
-**図 5-5** Azure DevOps サービスを使用して Docker レジストリにカスタム イメージを発行する
+**図 5-5** Azure DevOps Services を使用する Docker レジストリへのカスタム イメージの公開
 
-> [!情報] Azure Container Registry の詳細については、次を参照してください。<https://aka.ms/azurecontainerregistry>します。
+> [!情報] Azure Container Registry の詳細については、<https://aka.ms/azurecontainerregistry> を参照してください。
 
-## <a name="step-4-cd-deploy"></a>手順 4: CD、展開
+## <a name="step-4-cd-deploy"></a>手順 4: CD、デプロイ
 
-Docker イメージの不変性により、反復可能な展開に何が開発、CI、テストし、運用環境で実行します。 所持している複数の環境に展開したり、Docker レジストリ (プライベートまたはパブリック) で公開されているアプリケーションの Docker イメージを作成したら、(運用、QA、ステージングなど) Azure DevOps サービスを使用して、CD パイプラインからパイプラインのタスクまたは Azure DevOps サービス リリース管理されます。
+Docker イメージの不変性により、CI を介して開発し、テストし、運用環境で実行する対象で反復可能なデプロイが保証されます。 Docker レジストリ (プライベートまたはパブリック) でアプリケーションの Docker イメージを公開した後、Azure DevOps Services パイプライン タスクまたは Azure DevOps Services Release Management を使って、CD パイプラインから使用する可能性のあるいくつかの環境 (運用、QA、ステージングなど) にデプロイすることができます。
 
-ただし、この時点でそれに依存展開する Docker アプリケーションの種類。 簡単なアプリケーション (構成と展開の観点から)、モノリシックのように、いくつかのコンテナーやサービスを構成するアプリケーションと展開をいくつかのサーバーまたは Vm を展開するとは異なるような複雑なアプリケーションを展開します。ハイパー スケール機能を備えたマイクロ サービス指向アプリケーションです。 これら 2 つのシナリオは、次のセクションについて説明します。
+しかし、この時点では、これはデプロイする Docker アプリケーションの種類によって異なります。 いくつかのコンテナーまたはサービスを構成し、いくつかのサーバーまたは VM にデプロイされたモノシリック アプリケーションなど、(構成およびデプロイの観点から) シンプルなアプリケーションをデプロイすることは、ハイパースケール機能を備えたマイクロサービス指向のアプリケーションのようなより複雑なアプリケーションをデプロイすることとは異なります。 これら 2 つのシナリオについては、次のセクションで説明します。
 
-### <a name="deploying-composed-docker-applications-to-multiple-docker-environments"></a>複数の Docker 環境への Docker アプリケーションの展開で構成されています
+### <a name="deploying-composed-docker-applications-to-multiple-docker-environments"></a>複数の Docker 環境への構成された Docker アプリケーションのデプロイ
 
-最初に、複雑なシナリオを見てみましょう。 単純で Docker ホスト (Vm またはサーバー) 環境を 1 つまたは複数の環境に展開する (品質保証、ステージング、および運用)。 このシナリオで内部的には、CD パイプラインできますを使用して docker-図 5-6 に示すようにコンテナーやサービス、その関連する一連の Docker アプリケーションを展開する (Azure DevOps サービス展開タスク) から作成します。
+最初に、単一の環境または複数の環境 (QA、ステージング、運用) でシンプルな Docker ホスト (VM またはサーバー) にデプロイする、あまり複雑ではないシナリオを見ていきましょう。 このシナリオでは、図 5-6 に示すように、内部的に CD パイプラインで (Azure DevOps Services デプロイ タスクから) docker-compose を使用して、Docker アプリケーションをそれに関連する一連のコンテナーまたはサービスと共にデプロイすることができます。
 
-![CD のデプロイ手順 (4) q などのさまざまな環境に発行することができます (&)、ステージングと運用します。](./media/image6.png)
+![CD のデプロイ手順 (4) では、q&a、ステージングおよび運用など、さまざまな環境に公開できます。](./media/image6.png)
 
-**図 5-6**します。 単純な Docker ホスト環境のレジストリにアプリケーション コンテナーのデプロイ
+**図 5-6**. シンプルな Docker ホスト環境レジストリへのアプリケーション コンテナーのデプロイ
 
-図 5-7 は、タスクの追加 ダイアログ ボックスの Docker Compose をクリックして、Azure DevOps サービスを使用して、QA/テスト環境にビルド、CI を接続する方法を示しています。 ただし、ステージング環境または運用環境を展開する場合は、通常使用する Release Management の機能が複数の環境を処理 (などの QA、ステージング、および運用)。 Azure DevOps サービスを使用して単一の Docker ホストにデプロイする場合は"Docker Compose"タスク (を呼び出すことは、`docker-compose up`内部的にはコマンド)。 Azure Kubernetes Service (AKS) をデプロイする場合は、以下のセクションで説明したように、Docker のデプロイ タスクを使用します。
+図 5-7 では、[タスクの追加] ダイアログ ボックスで [Docker Compose] をクリックし、Azure DevOps Services を介して QA/テスト環境にビルド CI を接続する方法に焦点を当てています。 しかし、ステージングまたは運用環境にデプロイする場合は、通常、複数の環境 (QA、ステージング、および運用) を処理する Release Management 機能を使用します。 単一 Docker のホストにデプロイする場合は、Azure DevOps Services の "Docker Compose" タスク (内部での `docker-compose up` コマンドに関連する) が使用されます。 Azure Kubernetes Service (AKS) にデプロイする場合は、以降のセクションで説明されているように、Docker デプロイ タスクが使用されます。
 
-![ブラウザー ビューの Docker Compose のタスクを追加します。](./media/image7.png)
+![Docker Compose タスクを追加するブラウザー ビュー。](./media/image7.png)
 
-**図 5-7** Azure DevOps サービス パイプラインで Docker Compose のタスクを追加します。
+**図 5-7** Azure DevOps Services パイプラインでの Docker Compose タスクの追加
 
-Azure DevOps サービスで、リリースを作成するときに、一連の入力の成果物がかかります。 これらの成果物が意図されていない変更可能なリリースの有効期間のすべての環境で。 コンテナーを導入するときに、入力の成果物を展開する、レジストリ内のイメージを識別します。 これらのイメージの識別方法に応じてする保証はありません、最も明白なケースが参照すると、リリースの全期間にわたって同じまま`myimage:latest`から、`docker-compose`ファイル。
+Azure DevOps Services でリリースを作成するときに、一連の入力成果物が取得されます。 これらの成果物は、すべての環境全体で、リリースの有効期間に対して不変であることが想定されます。 コンテナーを導入するときに、入力成果物によってデプロイするレジストリ内のイメージが識別されます。 これらのイメージの識別方法によっては、リリース期間を通して同じままであることが保証されません。これが最も明白に現れるのが、`docker-compose` ファイルから `myimage:latest` を参照する場合です。
 
-Azure DevOps サービス テンプレートが表示ダイジェストとなる特定のレジストリのイメージが含まれているビルド成果物を生成する機能と同じイメージのバイナリを一意に識別することが保証されます。 これらは実際に、リリースへの入力として使用します。
+Azure DevOps Services テンプレートでは、同じイメージ バイナリを一意に識別することが保証される特定のレジストリ イメージ ダイジェストを含む、ビルド成果物を生成することができます。 これらは、リリースへの入力として使用する必要があるものです。
 
-### <a name="managing-releases-to-docker-environments-by-using-azure-devops-services-release-management"></a>Azure DevOps Services Release Management を使用して Docker 環境にリリースを管理します。
+### <a name="managing-releases-to-docker-environments-by-using-azure-devops-services-release-management"></a>Azure DevOps Services Release Management を使用する Docker 環境に対するリリースの管理
 
-Azure DevOps サービス テンプレートを新しいイメージをビルド、Docker レジストリに発行して、Linux または Windows のホストで実行してのコマンドを使用します`docker-compose`Azure DevOps などのアプリケーションが全体として複数のコンテナーをデプロイするには。図 5-8 に示すように複数の環境用リリース管理機能をサービスします。
+図 5-8 に示すように、Azure DevOps Services テンプレートを使用することで、新しいイメージをビルドし、それを Docker レジストリに公開し、Linux または Windows ホストで実行し、`docker-compose` などのコマンドを使って、複数の環境を対象とした Azure DevOps Services Release Management 機能を通じて、アプリケーション全体として複数のコンテナーをデプロイすることができます。
 
-![Azure DevOps, Docker の構成のブラウザー ビューでは、リリースを作成します。](./media/image8.png)
+![Docker Compose リリースを構成する、Azure DevOps のブラウザー ビュー。](./media/image8.png)
 
-**図 5-8**. Azure DevOps サービス Release Management から Azure DevOps サービスの Docker Compose のタスクを構成します。
+**図 5-8**. Azure DevOps Services Release Management からの Azure DevOps Services Docker Compose タスクの構成
 
-ただし、図 5-6 に示すように、図 5-8 の実装のシナリオは、単純なものにしてください (単一の Docker ホストと Vm への展開は、および 1 つのコンテナーまたはイメージごとのインスタンス) と、おそらく、開発またはテスト sce に対してのみ使用する必要がありますnarios します。 高可用性 (HA) と管理が容易なスケーラビリティが複数のノード、サーバー、Vm、および「インテリジェントなフェールオーバー」の間で負荷分散をするほとんどのエンタープライズ運用環境シナリオで、サーバーまたはノードが失敗した場合、そのサービスとコンテナー別のホスト サーバーまたは VM に移動されます。 その場合は、クラスターのコンテナー、オーケストレーター、およびスケジューラなどのより高度なテクノロジ必要があります。 したがって、これらのクラスターにデプロイする方法は、高度なシナリオを処理することで、[次へ] のセクションで説明します。
+しかし、図 5-6 に示され、図 5-8 で実装されるシナリオはシンプルなものであり (単一 Docker のホストと VM にデプロイされ、コンテナーまたはインスタンスがイメージごとに 1 つとなる)、開発またはテスト シナリオでのみ使用する必要がある場合があることに注意してださい。 ほとんどのエンタープライズ運用シナリオでは、複数のノード、サーバー、および VM 間で負荷を分散し、さらに "インテリジェントなフェールオーバー" により、高可用性 (HA) および管理しやすいスケーラビリティを実現する必要があります。そのため、サーバーまたはノードで障害が発生した場合、そのサービスとコンテナーは別のホスト サーバーまたは VM に移動されます。 その場合、コンテナー クラスター、オーケストレーター、スケジューラなどのより高度なテクノロジが必要になります。 したがって、これらのクラスターにデプロイする方法は、高度なシナリオを処理することです。これについては、次のセクションで説明します。
 
-### <a name="deploying-docker-applications-to-docker-clusters"></a>Docker クラスターへの Docker アプリケーションの展開
+### <a name="deploying-docker-applications-to-docker-clusters"></a>Docker クラスターへの Docker アプリケーションのデプロイ
 
-分散アプリケーションの性質も分散されるコンピューティング リソースが必要です。 運用規模の機能には、高いスケーラビリティとプールされたリソースに基づく、高可用性を提供する機能をクラスタ リングにする必要があります。
+分散アプリケーションの性質上、コンピューティング リソースが必要であり、これらも分散されます。 運用スケールの機能を備えるには、プールされたリソースに基づいて高いスケーラビリティと高可用性を提供するクラスタリング機能が必要です。
 
-コンテナーを CLI ツールまたは web UI からこれらのクラスターに手動でデプロイできますが、その種のスポット展開のテストに手動の作業を予約する必要があります。 またはスケール アウトや監視などの管理のため。
+CLI ツールまたは Web UI からこれらのクラスターに手動でコンテナーをデプロイすることはできますが、スケールアウトや監視などのデプロイ テストまたは管理の目的を特定するために、この種の手動による作業を予約する必要があります。
 
-CD の観点と Azure DevOps サービスから具体的には、タスクを実行できます特別に作成された展開から、Azure DevOps サービス リリース管理環境をコンテナーに分散クラスターにコンテナー化されたアプリケーションを展開します。図 5-9 に示すようには、サービスです。
+図 5-9 に示すように、CD の観点から、また、Azure DevOps Services では特に、Container Service で分散クラスターにコンテナー化されたアプリケーションをデプロイする Azure DevOps Services Release Management 環境から特別に作成されたデプロイ タスクを実行できます。
 
-![CD のデプロイ手順 (4) はオーケストレーターを使ってクラスターにも発行できます。](./media/image9.png)
+![CD デプロイ手順 (4) では、オーケストレーターを介してクラスターに公開することもできます。](./media/image9.png)
 
-**図 5-9** 分散アプリケーションをコンテナー サービスを展開します。
+**図 5-9** Container Service への分散アプリケーションのデプロイ
 
-最初を特定のクラスターやオーケストレーターに展開する場合は従来使用して特定の展開スクリプトと各オーケストレーター (Kubernetes およびさまざまな展開メカニズムがある Service Fabric) メカニズムではなく、単純です使いやすい`docker-compose`に基づいてツール、`docker-compose.yml`定義ファイル。 ただし、図 5-10 に示すように、Azure DevOps サービスの Docker デプロイ タスクに協力してくれたするようになりましたデプロイこともできますサポートされているオーケストレーターを使い慣れたを使用するだけで`docker-compose.yml`ツールが「変換」を実行するためのファイル (、から`docker-compose.yml`をオーケストレーターで必要な形式のファイル)。
+最初は、特定のクラスターまたはオーケストレーターにデプロイするときに、通常、`docker-compose.yml` 定義ファイルに基づくよりシンプルで使いやすい `docker-compose` ツールではなく、オーケストレーターごとに特定のデプロイ スクリプトとメカニズムを使用します (つまり、Kubernetes と Service Fabric ではデプロイ メカニズムが異なる)。 しかし、図 5-10 に示すように、Azure DevOps Services Docker Deploy タスクのおかげで、現在、使い慣れた `docker-compose.yml` ファイルのみを使用して、サポートされているオーケストレーターにデプロイすることもできます。これは、ツールでユーザーに代わって、(`docker-compose.yml` ファイルから、オーケストレーターで必要な形式への) "変換" が行われるためです。
 
-![タスク カタログ内の Kubernetes タスクへの配置を示す、Azure DevOps のブラウザー ビュー。](./media/add-deploy-to-kubernetes-task.png)
+![Kubernetes タスクへのデプロイを示す、Azure DevOps でのタスク カタログのブラウザー ビュー。](./media/add-deploy-to-kubernetes-task.png)
 
-**図 5-10** 環境に Kubernetes タスクへの展開の追加
+**図 5-10** Kubernetes へのデプロイ タスクの環境への追加
 
-図 5-11 では、Kubernetes 構成の使用可能なセクションでは、タスクへのデプロイを編集する方法について説明します。 これは、すぐに使用できるカスタム Docker イメージとして、クラスター内のコンテナー デプロイを取得するタスク。
+図 5-11 では、構成で使用可能なセクションを使用して Kubernetes へのデプロイ タスクをどのように編集できるかを示します。 これは、クラスター内のコンテナーとしてデプロイされる、すぐに使用できるカスタム Docker イメージを取得するタスクです。
 
-![Azure DevOps, のブラウザー ビューは、タスクの定義を Kubernetes にデプロイします。](./media/edit-deploy-to-kubernetes-task.png)
+![Kubernetes へのデプロイ タスク定義を示す、Azure DevOps のブラウザー ビュー。](./media/edit-deploy-to-kubernetes-task.png)
 
-**図 5-11** Docker デプロイ タスクの定義を展開する ACS DC/OS
+**図 5-11** ACS DC/OS にデプロイする、Docker デプロイ タスクの定義
 
-> [!詳細情報] に関する Azure DevOps サービスと Docker の CD パイプラインを次を参照してください。 <https://azure.microsoft.com/services/devops/pipelines>
+> [!情報] Azure DevOps Services と Docker を使用する CD パイプラインの詳細については、<https://azure.microsoft.com/services/devops/pipelines> を参照してください
 
-## <a name="step-5-run-and-manage"></a>手順 5: 実行し、管理
+## <a name="step-5-run-and-manage"></a>手順 5: 実行と管理
 
-エンタープライズ運用レベルは、し、それ自体のと操作の種類のための主要なサブジェクトと、ユーザーがこの領域の大きなスコープとそのレベル (IT 運用) にとって、全体の次の章に充てるを実行していると、アプリケーションを管理するため、これを説明します。
+エンタープライズ運用レベルでのアプリケーションの実行と管理はそれ自体が主題であるため、また、そのレベル (IT 操作) で作業するユーザーと操作の種類およびこの領域の大きなスコープに起因し、次の章全体がこれについての説明となります。
 
-## <a name="step-6-monitor-and-diagnose"></a>手順 6: 監視し、診断
+## <a name="step-6-monitor-and-diagnose"></a>手順 6: 監視と診断
 
-このトピックでは、次についても説明、タスクの一部として章実稼働システムでその IT を実行しますただしが、アプリケーションが頻繁に改善するために、開発チームにこの手順で得られた知見をフィードする必要がありますを強調表示に重要です。 そのポイントの表示からもの一部では、DevOps タスクと操作によって実行が一般的ですが IT です。
+このトピックについては、運用システムで IT 担当者によって行われるタスクの一部として次の章でも説明されています。しかし、この手順で得られた洞察を開発チームにフィードバックし、アプリケーションが常に改善されるようにする必要があることを強調することが重要です。 その観点から、これは DevOps の一部でもありますが、タスクと操作は一般的に IT 担当者によって実行されます。
 
-監視と診断は、DevOps の領域内の 100% の場合にのみは、監視のプロセスとまたはベータ版のテスト環境に対して、開発チームによって実行された分析です。 これは、ロード テストを実行するか、ベータ版またはベータ テスト担当者が新しいバージョンを試みている、QA 環境を監視します。
+監視と診断が DevOps の領域内で 100% である場合にのみ、テストまたはベータ環境に対して、開発チームによって監視プロセスと分析が行われます。 これは、ロード テストを実行することで、あるいはベータ テスターが新しいバージョンを試す、ベータまたは QA 環境を監視することで行われます。
 
 >[!div class="step-by-step"]
 >[前へ](index.md)
