@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: e67febba-bacf-4e1f-a143-c141e063f90e
-ms.openlocfilehash: 846d033c62d0168bab4661b9ab2b71a2139e2fcb
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d8b3eef0afd780b4a6568e8c067296d2243087
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649817"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268191"
 ---
 # <a name="visual-basic-compiler-options-listed-alphabetically"></a>Visual Basic コンパイラ オプションのアルファベット順の一覧
 Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合開発環境 (IDE) からプログラムをコンパイルする代替手段として提供されます。 次にアルファベット順に並べ替える Visual Basic のコマンド ライン コンパイラ オプションの一覧を示します。  
@@ -45,7 +45,7 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
 |[-main](../../../visual-basic/reference/command-line-compiler/main.md)|含むクラスを指定します、`Sub Main`起動時に使用するプロシージャ。|  
 |[-moduleassemblyname](../../../visual-basic/reference/command-line-compiler/moduleassemblyname.md)|モジュールが一部となるアセンブリの名前を指定します。|  
 |`-modulename:<string>`|ソース モジュールの名前を指定します。|  
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](~/includes/compact-md.md)] が対象になるようにコンパイラを設定します。|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|.NET Compact Framework を対象とするコンパイラを設定します。|  
 |[-noconfig](../../../visual-basic/reference/command-line-compiler/noconfig.md)|Vbc.rsp でコンパイルしないでください。|  
 |[-nologo](../../../visual-basic/reference/command-line-compiler/nologo.md)|コンパイラの著作権情報が表示されないようにします。|  
 |[-nostdlib](../../../visual-basic/reference/command-line-compiler/nostdlib.md)|コンパイラが標準ライブラリを参照しないようにします。|  

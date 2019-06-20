@@ -4,12 +4,12 @@ ms.date: 04/12/2018
 helpviewer_keywords:
 - Visual Basic compiler, options
 ms.assetid: fbe36f7a-7cfa-4f77-a8d4-2be5958568e3
-ms.openlocfilehash: 333bfb539fc375fd8f2dd170a187002fcf81ea2b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b945edca8bd739e6f122ed8b3e950508ecc28510
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61649758"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268164"
 ---
 # <a name="visual-basic-compiler-options-listed-by-category"></a>Visual Basic コンパイラ オプションがカテゴリ別一覧
 Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合開発環境 (IDE) 内からプログラムをコンパイルする代替手段として提供されます。 次は、機能カテゴリ別に並べ替えて Visual Basic のコマンド ライン コンパイラ オプションの一覧です。  
@@ -39,7 +39,7 @@ Visual Basic のコマンド ライン コンパイラは、Visual Studio 統合
 |---|---|  
 |[-doc](../../../visual-basic/reference/command-line-compiler/doc.md)|ドキュメント コメントを XML ファイルに出力します。|  
 |[-deterministic](../../../visual-basic/reference/command-line-compiler/deterministic.md)|入力が同一である場合、バイナリ コンテンツがコンパイル全体で同一のアセンブリをコンパイラに出力させます。|
-|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|[!INCLUDE[Compact](~/includes/compact-md.md)] が対象になるようにコンパイラを設定します。|  
+|[-netcf](../../../visual-basic/reference/command-line-compiler/netcf.md)|.NET Compact Framework を対象とするコンパイラを設定します。|  
 |[-out](../../../visual-basic/reference/command-line-compiler/out.md)|出力ファイルを指定します。|  
 |[/refonly](refonly-compiler-option.md)|参照アセンブリだけを出力します。|
 |[/refout](refout-compiler-option.md)|参照アセンブリの出力パスを指定します。|

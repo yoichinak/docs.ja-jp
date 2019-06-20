@@ -12,12 +12,12 @@ helpviewer_keywords:
 - True keyword [Visual Basic]
 - Boolean values [Visual Basic], True keyword
 ms.assetid: 4858e630-4813-4216-a55e-f4d0feb884e4
-ms.openlocfilehash: 03497136ec53d89ac944fdd90301a4c590be326a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b1e4add39cee6c733a6f4b95aa1668975f2f2d6d
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622538"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268254"
 ---
 # <a name="boolean-data-type-visual-basic"></a>Boolean データ型 (Visual Basic)
 値を保持できるのみ`True`または`False`します。 キーワード`True`と`False`の 2 つの状態に対応して`Boolean`変数。  
@@ -45,7 +45,7 @@ ms.locfileid: "64622538"
 ## <a name="example"></a>例  
  次の例では、`runningVB`は、`Boolean`変数で、単純なはい/いいえの設定を格納します。  
   
-```  
+```vb  
 Dim runningVB As Boolean  
 ' Check to see if program is running on Visual Basic engine.  
 If scriptEngine = "VB" Then  
