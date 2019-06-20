@@ -9,16 +9,16 @@ helpviewer_keywords:
 - netcf compiler option [Visual Basic]
 - /netcf compiler option [Visual Basic]
 ms.assetid: db7cfa59-c315-401c-a59b-0daf355343d6
-ms.openlocfilehash: b64c55b73a9c835ded0d7c81ff36329b8d6a8bc9
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 028fa148d0e5622648a5fdfff1789c3d0bfde057
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586548"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268288"
 ---
 # <a name="-netcf"></a>-netcf
 
-[!INCLUDE[Compact](~/includes/compact-md.md)] が対象になるようにコンパイラを設定します。
+.NET Compact Framework を対象とするコンパイラを設定します。
 
 ## <a name="syntax"></a>構文
 
@@ -28,7 +28,7 @@ ms.locfileid: "65586548"
 
 ## <a name="remarks"></a>Remarks
 
-`-netcf`オプションは、ターゲットに Visual Basic コンパイラ、[!INCLUDE[Compact](~/includes/compact-md.md)]完全な .NET Framework ではなく。 完全な .NET Framework でのみ存在する言語機能は無効です。
+`-netcf`オプションは、完全な .NET Framework ではなく、.NET Compact Framework を対象とする Visual Basic コンパイラ。 完全な .NET Framework でのみ存在する言語機能は無効です。
 
 `-netcf`オプションがと共に使用するように設計[-sdkpath](../../../visual-basic/reference/command-line-compiler/sdkpath.md)します。 無効になっている言語機能`-netcf`同じ言語機能を対象となるファイルに存在しない`-sdkpath`します。
 
@@ -85,7 +85,7 @@ ms.locfileid: "65586548"
 
 ## <a name="example"></a>例
 
-次のコードのコンパイル`Myfile.vb`で、[!INCLUDE[Compact](~/includes/compact-md.md)]の既定のインストール ディレクトリにある mscorlib.dll および Microsoft.VisualBasic.dll のバージョンを使用して、 [!INCLUDE[Compact](~/includes/compact-md.md)] C ドライブにします。 通常の最新バージョンを使用すると、[!INCLUDE[Compact](~/includes/compact-md.md)]します。
+次のコードのコンパイル`Myfile.vb`C ドライブ上の .NET Compact Framework の既定のインストール ディレクトリで見つかった mscorlib.dll および Microsoft.VisualBasic.dll のバージョンを使用して、.NET Compact Framework を使用します。 通常、.NET Compact Framework の最新バージョンを使用するとします。
 
 ```console
 vbc -netcf -sdkpath:"c:\Program Files\Microsoft Visual Studio .NET 2003\CompactFrameworkSDK\v1.0.5000\Windows CE " myfile.vb

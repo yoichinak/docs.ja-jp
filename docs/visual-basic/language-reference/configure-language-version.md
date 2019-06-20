@@ -2,12 +2,12 @@
 title: Visual Basic の言語バージョンを選択します。
 description: 特定のコンパイラ バージョンを使用して、構文検証を実行するコンパイラを構成します。
 ms.date: 05/24/2018
-ms.openlocfilehash: 3b6d8055dbf64f2a5c38f46b6d66794fc48a1cea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4768d59a37d168b2883396f1dea4d0c1a0ff4ca7
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797034"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268269"
 ---
 # <a name="select-the-visual-basic-language-version"></a>Visual Basic の言語バージョンを選択します。
 
@@ -33,7 +33,7 @@ Visual Basic コンパイラは、最新のメジャー バージョンがリリ
 
 値`latest`Visual Basic 言語の最新のマイナー バージョンを使用します。 次の値を指定できます。
 
-|[値]|説明|
+|値|説明|
 |------------|-------------|
 |default|コンパイラは、最新のメジャー バージョンからサポートできるすべての有効な言語構文を受け入れます。|
 |9|コンパイラは、Visual Basic 9.0 に含まれている構文のみを受け入れます。|
@@ -41,9 +41,10 @@ Visual Basic コンパイラは、最新のメジャー バージョンがリリ
 |11|コンパイラは、Visual Basic 11.0 に含まれている構文のみを受け入れます。|
 |12|コンパイラは、Visual Basic 12.0 に含まれている構文のみを受け入れます。|
 |14|コンパイラは、Visual Basic 14.0 に含まれている構文のみを受け入れます。|
-|16|コンパイラは、Visual Basic 15.0 に含まれている構文のみを受け入れます。|
+|15|コンパイラは、Visual Basic 15.0 に含まれている構文のみを受け入れます。|
 |15.3|コンパイラは、Visual Basic 15.3 の新機能に含まれている構文のみを受け入れます。|
 |15.5|コンパイラは、Visual Basic 15.5 に含まれている構文のみを受け入れます。|
+|15.8|コンパイラは、Visual Basic 15.8 に含まれている構文のみを受け入れます。|
 |latest|コンパイラは、サポートできるすべての有効な言語の構文を受け入れます。|
 
 特殊文字列の `default` と `latest` はそれぞれ、ビルド コンピューターにインストールされている最新のメジャー言語バージョンとマイナー言語バージョンに解決されます。

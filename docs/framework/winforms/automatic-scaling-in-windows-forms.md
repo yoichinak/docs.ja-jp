@@ -5,12 +5,12 @@ helpviewer_keywords:
 - scalability [Windows Forms], automatic in Windows Forms
 - Windows Forms, automatic scaling
 ms.assetid: 68fad25b-afbc-44bd-8e1b-966fc43507a4
-ms.openlocfilehash: cacda830a2501dcd127248955848d207d80bbe2c
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: f8afece073076b9ae94faaba8477f2a13e11b295
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636967"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268088"
 ---
 # <a name="automatic-scaling-in-windows-forms"></a>Windows フォームにおける自動スケーリング
 
@@ -48,7 +48,7 @@ ms.locfileid: "65636967"
 
 - などの .NET Framework version 2.0 で導入された新しいレイアウト マネージャーと互換性がない<xref:System.Windows.Forms.FlowLayoutPanel>と<xref:System.Windows.Forms.TableLayoutPanel>します。
 
-- [!INCLUDE[compact](../../../includes/compact-md.md)] への互換性に必要なディスプレイの解像度に直接基づくスケーリングをサポートしていませんでした。
+- .NET Compact Framework の互換性のために必要なディスプレイの解像度に直接基づくスケーリングはサポートしませんでした。
 
 旧バージョンとの互換性を維持するために .NET Framework version 2.0 では、このメカニズムが維持され、次に説明するより堅牢なスケーリング メカニズムによって置き換えられました。 その結果、<xref:System.Windows.Forms.Form.AutoScale%2A>、<xref:System.Windows.Forms.Form.ApplyAutoScaling%2A>、<xref:System.Windows.Forms.Form.AutoScaleBaseSize%2A>、および特定の <xref:System.Windows.Forms.Control.Scale%2A> のオーバーロードは廃止マークが付けられています。
 
@@ -63,7 +63,7 @@ ms.locfileid: "65636967"
 
 - <xref:System.Windows.Forms.Control> クラスにも、スケーリングに参加して同じフォームでのスケーリングの混在をサポートできる新しいメンバーがいくつかあります。 具体的には、<xref:System.Windows.Forms.Control.Scale%2A>、<xref:System.Windows.Forms.Control.ScaleChildren%2A>、および <xref:System.Windows.Forms.Control.GetScaledBounds%2A> メンバーが、スケーリングをサポートします。
 
-- 画面の解像度に基づくスケーリングのサポートが追加され、<xref:System.Windows.Forms.AutoScaleMode> の列挙型により定義されるように、システム フォントのサポートを補完します。 このモードは、アプリケーションの移行を容易にする [!INCLUDE[compact](../../../includes/compact-md.md)] によりサポートされる、自動スケーリングと互換性があります。
+- 画面の解像度に基づくスケーリングのサポートが追加され、<xref:System.Windows.Forms.AutoScaleMode> の列挙型により定義されるように、システム フォントのサポートを補完します。 このモードは、自動スケーリングが容易にアプリケーションの移行を有効にすると、.NET Compact Framework でサポートされているとの互換性です。
 
 - <xref:System.Windows.Forms.FlowLayoutPanel> や <xref:System.Windows.Forms.TableLayoutPanel> などのレイアウト マネージャーの互換性が、自動スケーリングの実装に追加されています。
 

@@ -7,12 +7,12 @@ f1_keywords:
 helpviewer_keywords:
 - WithEvents keyword [Visual Basic]
 ms.assetid: 19d461f5-d72f-4de9-8c1d-0a6650316990
-ms.openlocfilehash: 41d38dcb3f44ccda19253adcd39401b0ac8dfb02
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e8a8fb571fa65228f3a0acec1f902d21eb9bfe04
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64647664"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268310"
 ---
 # <a name="withevents-visual-basic"></a>WithEvents (Visual Basic)
 1 つまたは複数の宣言されたメンバー変数がイベントを発生させるクラスのインスタンスを参照しているを指定します。  
@@ -31,6 +31,12 @@ ms.locfileid: "64647664"
 - **要素の型。** 宣言する必要があります`WithEvents`の変数を受け付けることができるため、オブジェクト変数クラスのインスタンス。 ただし、としてを宣言できません`Object`します。 イベントを発生させる特定のクラスとして宣言する必要があります。  
   
  `WithEvents`修飾子は、このコンテキストで使用できます。[Dim ステートメント](../../../visual-basic/language-reference/statements/dim-statement.md)  
+ 
+## <a name="example"></a>例
+
+```VB
+Dim WithEvents app As Application
+```
   
 ## <a name="see-also"></a>関連項目
 

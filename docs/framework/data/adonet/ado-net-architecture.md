@@ -2,18 +2,18 @@
 title: ADO.NET のアーキテクチャ
 ms.date: 03/30/2017
 ms.assetid: fcd45b99-ae8f-45ab-8b97-d887beda734e
-ms.openlocfilehash: 13f65d0a2daf3b477a9b29c4de84fb359c946201
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 282f18cc7d379dffc410a0c62dc3b3e66e0a44f6
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877244"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267973"
 ---
 # <a name="adonet-architecture"></a>ADO.NET のアーキテクチャ
 従来のデータ処理は、主に接続をベースとした 2 層モデルに基づいていました。 近年、データ処理では多層アーキテクチャの採用が増えてきており、アプリケーションのスケーラビリティを高める非接続型アプローチが主流になりつつあります。  
   
 ## <a name="adonet-components"></a>ADO.NET のコンポーネント  
- 2 つの主要なコンポーネント[!INCLUDE[ado_orcas_long](../../../../includes/ado-orcas-long-md.md)]へのアクセスとデータの操作は、.NET Framework データ プロバイダーと<xref:System.Data.DataSet>します。  
+ ADO.NET にアクセスしてデータを操作するための 2 つの主要なコンポーネントは、.NET Framework データ プロバイダーと<xref:System.Data.DataSet>します。  
   
 ### <a name="net-framework-data-providers"></a>.NET Framework データ プロバイダー  
  .NET Framework データ プロバイダーは、データの操作と、データに対する高速かつ前方参照専用、読み込み専用のアクセスを実行することを明確な目標としてデザインされたコンポーネントです。 `Connection` オブジェクトはデータ ソースへの接続を実現します。 `Command` オブジェクトによりデータベース コマンドにアクセスし、データの取得、データの修正、ストアド プロシージャの実行、およびパラメーター情報の送信または取得を実行できます。 `DataReader` は、データ ソースからのパフォーマンスの高いデータ ストリームを実現します。 最後に、`DataAdapter` は `DataSet` オブジェクトとデータ ソース間のブリッジとして機能します。 `DataAdapter` では `Command` オブジェクトを使用してデータ ソースに対して SQL コマンドを実行して、`DataSet` にデータを読み込むと同時に、`DataSet` のデータに加えられた変更をデータ ソースと調整します。 詳細については、次を参照してください。 [.NET Framework データ プロバイダー](../../../../docs/framework/data/adonet/data-providers.md)と[ADO.NET での変更データの取得および](../../../../docs/framework/data/adonet/retrieving-and-modifying-data.md)します。  
