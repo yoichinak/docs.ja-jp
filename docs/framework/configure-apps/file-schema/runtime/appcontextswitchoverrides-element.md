@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79a8d378f69ced0bc22926b066e76dc515b06559
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65210439"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307091"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 要素
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
@@ -68,7 +68,7 @@ ms.locfileid: "65210439"
 |`Switch.MS.Internal.`<br/>`UseSha1AsDefaultHashAlgorithmForDigitalSignatures`|PackageDigitalSignatureManager によってパッケージのパーツに署名するために使用される既定のアルゴリズムが SHA1 または SHA256 がかどうかを制御します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
 |`Switch.System.Activities.`<br/>`UseMD5CryptoServiceProviderForWFDebugger`|設定すると`false`FIPS が有効にすると、Visual Studio を使用した XAML ベースのワークフロー プロジェクトをデバッグできます。 これがない、 <xref:System.NullReferenceException> System.Activities アセンブリ内のメソッドの呼び出しでがスローされます。|.NET Framework 4.7|
 |`Switch.System.Activities.`<br/>`UseMD5ForWFDebugger`|デバッガーでのワークフロー インスタンスのチェックサムが MD5 または SHA1 を使用するかどうかを制御します。 | .NET Framework 4.7|
-|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|ワークフロー チェックサムのハッシュ .NET Framework 4.7 では既定値として導入された SHA1 アルゴリズムを使用しているかどうかを制御する (`true`)、またはかどうかを使用して、.NET Framework 4.8 で既定値として導入された既定の SHA256 アルゴリズム (`false`)。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.8|
+|`Switch.System.Activities.`<br/>`UseSHA1HashForDebuggerSymbols`|ワークフロー チェックサムのハッシュ .NET Framework 4.7 では既定値として導入された SHA1 アルゴリズムを使用しているかどうかを制御する (`true`)、または .NET Framework 4.8 で既定値として導入された既定の SHA256 アルゴリズムを使用しているかどうか (`false`)。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.8|
 |`Switch.System.Diagnostics.`<br/>`IgnorePortablePDBsInStackTraces`|ソース ファイルと行情報を含めることができますポータブル Pdb の使用時にスタック トレースを取得するかどうかを制御します。 `false` ソース ファイルと行情報を含めるそれ以外の場合、`true`します。|.NET Framework 4.7.2|
 |`Switch.System.Drawing.`<br/>`DontSupportPngFramesInIcons`|コントロールかどうか、<xref:System.Drawing.Icon.ToBitmap%2A?displayProperty=nameWithType>メソッドが例外をスロー時に、<xref:System.Drawing.Icon>オブジェクトに PNG フレーム。 詳細については、「[軽減策:Icon オブジェクトの PNG フレーム](../../../migration-guide/mitigation-png-frames-in-icon-objects.md)します。|.NET Framework 4.6|
 |`Switch.System.Drawing.Text.`<br/>`DoNotRemoveGdiFontsResourcesFromFontCollection`|決定かどうか<xref:System.Drawing.Text.PrivateFontCollection?displayProperty=nameWithType>オブジェクトが適切に破棄して、コレクションに追加されたときに、<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile(System.String)?displayProperty=nameWithType>メソッド。 `true` 従来の動作を維持するには`false`プライベート フォントのすべてのオブジェクトを破棄します。 |.NET Framework 4.7.2|
@@ -134,7 +134,7 @@ ms.locfileid: "65210439"
 |`Switch.UseLegacyAccessibilityFeatures`|コントロールのアクセシビリティ機能と .NET Framework 4.7.1 以降で利用可能かどうかが有効または無効にします。 | .NET Framework 4.7.1 |
 |`Switch.UseLegacyAccessibilityFeatures.2`|ユーザー補助機能を .NET Framework 4.7.2 で使用できるかどうかが有効になっているコントロール (`false`) か無効 (`true`)。 場合`true`、`Switch.UseLegacyAccessibilityFeatures`必要もあります`true`.NET Framework 4.7.1 のアクセシビリティ機能を有効にします。|.NET Framework 4.7.2|
 |`Switch.UseLegacyAccessibilityFeatures.3`|ユーザー補助機能が .NET Framework 4.8 で導入されたかどうかが有効になっているコントロール (`false`) か無効 (`true`)。 場合`true`、`Switch.UseLegacyAccessibilityFeatures`と`Switch.UseLegacyAccessibilityFeatures.2`必要もあります`true`します。|.NET Framework 4.8|
-|`Switch.UseLegacyToolTipDisplay`|コントロールのツールヒントが displaed ユーザーであるかどうかマウス カーソルを置く、WPF コントロールの上 (`true`)、またはキーボード フォーカスとキーボード ショートカット キーを使用して両方のどちらを表示するかどうか (`false`既定の動作)。 .NET Framework 4.8 で実行されているが、以前のバージョンの .NET Framework を対象とは、アプリケーション、キーボード フォーカスの両方を有効にすると、ショートカット キーのサポートである必要があります`Switch.UseLegacyAccessibilityFeatures`、 `Switch.UseLegacyAccessibilityFeatures.2`、および`Switch.UseLegacyAccessibilityFeatures.3`に設定するすべて`false`します。|.NET Framework 4.8|
+|`Switch.UseLegacyToolTipDisplay`|コントロール ユーザーが、ツールヒントが表示されるかどうかを置いたマウス カーソルの WPF コントロール (`true`)、またはキーボード フォーカスとキーボード ショートカット キーを使用して両方のどちらを表示するかどうか (`false`既定の動作)。 .NET Framework 4.8 で実行されているが、以前のバージョンの .NET Framework を対象とは、アプリケーション、キーボード フォーカスの両方を有効にすると、ショートカット キーのサポートである必要があります`Switch.UseLegacyAccessibilityFeatures`、 `Switch.UseLegacyAccessibilityFeatures.2`、および`Switch.UseLegacyAccessibilityFeatures.3`に設定するすべて`false`します。|.NET Framework 4.8|
 |`System.Xml.`<br /><br /> `IgnoreEmptyKeySequences`|XSD スキーマ検証で複合キーに空のキー シーケンスを無視するかどうかを制御します。 詳細については、「[軽減策:XML スキーマ検証](../../../migration-guide/mitigation-xml-schema-validation.md)です。|.NET Framework 4.6|  
   
 > [!NOTE]
@@ -181,5 +181,5 @@ ms.locfileid: "65210439"
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.AppContext?displayProperty=nameWithType>
-- [\<ランタイム > 要素](runtime-element.md)
+- [\<runtime> 要素](runtime-element.md)
 - [\<configuration> 要素](../configuration-element.md)

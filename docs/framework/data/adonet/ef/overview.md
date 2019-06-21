@@ -2,12 +2,12 @@
 title: Entity Framework の概要
 ms.date: 09/17/2018
 ms.assetid: a2166b3d-d8ba-4a0a-8552-6ba1e3eaaee0
-ms.openlocfilehash: c79055adc2be12a5806fe5e8ff129b6ecd3d76f5
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: e6c96326991c6f883ad670393bb5c2691f8ad29e
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65880026"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307342"
 ---
 # <a name="entity-framework-overview"></a>Entity Framework の概要
 
@@ -39,7 +39,7 @@ ms.locfileid: "65880026"
 ## <a name="map-objects-to-data"></a>データへのマップ オブジェクト
  オブジェクト指向プログラミングには、データ ストレージ システムと対話するという難題があります。 クラスの編成はリレーショナル データベース テーブルの編成に似ている場合がありますが、完全に一致するわけではありません。 正規化された複数のテーブルと単一のクラスが対応する場合も多く、クラス間のリレーションシップとテーブル間のリレーションシップとで表現方法が異なる場合もあります。 たとえば、販売注文の顧客を表すために、`Order` クラスは `Customer` クラスのインスタンスへの参照が含まれているプロパティを使用する一方で、データベースの `Order` テーブル行には `Customer` テーブルの主キー値に対応する値がある外部キー列 (または列セット) が含まれている場合があります。 `Customer` クラスには `Orders` クラスのインスタンスのコレクションが含まれている `Order` という名前のプロパティがありますが、データベースの `Customer` テーブルに同等の列がない場合などです。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は、この方法でリレーションシップを表すか、データベースで表されるリレーションシップに似せるかの柔軟性を開発者に与えます。
 
- 既存のソリューションでは、"インピーダンスのミスマッチ" とよく呼ばれるこの差異を、オブジェクト指向のクラスやプロパティをリレーショナル テーブルやリレーショナル列にマップするだけで埋めようとしてきました。 この従来のアプローチではなく、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]リレーショナル テーブル、列、および論理モデルに外部キー制約を概念モデルのエンティティとリレーションシップにマップします。 これにより、さらに柔軟にオブジェクトを定義して論理モデルを最適化することが可能になります。 [!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] ツールでは、概念モデルに基づく拡張可能なデータ クラスが生成されます。 このクラスは、開発者が追加するメンバーで拡張できる部分クラスです。 既定では、特定の概念モデルに対して生成されるクラスは、エンティティをオブジェクトとして具体化したり変更を追跡したり保存したりするサービスを提供する基本クラスから派生します。 開発者はこのようなクラスを使用して、エンティティとリレーションシップを、アソシエーションによって関連付けられたオブジェクトとして操作できます。 また、開発者は、概念モデルに生成されるクラスをカスタマイズすることもできます。 詳細については、次を参照してください。[オブジェクトの操作](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)します。
+ 既存のソリューションでは、"インピーダンスのミスマッチ" とよく呼ばれるこの差異を、オブジェクト指向のクラスやプロパティをリレーショナル テーブルやリレーショナル列にマップするだけで埋めようとしてきました。 この従来のアプローチではなく、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]リレーショナル テーブル、列、および論理モデルに外部キー制約を概念モデルのエンティティとリレーションシップにマップします。 これにより、さらに柔軟にオブジェクトを定義して論理モデルを最適化することが可能になります。 Entity Data Model ツールでは、概念モデルに基づく拡張可能なデータ クラスを生成します。 このクラスは、開発者が追加するメンバーで拡張できる部分クラスです。 既定では、特定の概念モデルに対して生成されるクラスは、エンティティをオブジェクトとして具体化したり変更を追跡したり保存したりするサービスを提供する基本クラスから派生します。 開発者はこのようなクラスを使用して、エンティティとリレーションシップを、アソシエーションによって関連付けられたオブジェクトとして操作できます。 また、開発者は、概念モデルに生成されるクラスをカスタマイズすることもできます。 詳細については、次を参照してください。[オブジェクトの操作](../../../../../docs/framework/data/adonet/ef/working-with-objects.md)します。
 
 ## <a name="access-and-change-entity-data"></a>エンティティ データにアクセスして変更
 
@@ -47,7 +47,7 @@ ms.locfileid: "65880026"
 
 - [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]。 概念モデルで定義されているエンティティ型を照会するためには、統合言語クエリ (LINQ) のサポートを提供します。 詳細については、次を参照してください。 [LINQ to Entities](../../../../../docs/framework/data/adonet/ef/language-reference/linq-to-entities.md)します。
 
-- [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 概念モデル内のエンティティを直接操作しをサポートする SQL のストレージの影響を受けない[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)]概念です。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] オブジェクト クエリと EntityClient プロバイダーを使用して実行されるクエリの両方で使用されます。 詳細については、次を参照してください。 [Entity SQL の概要](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)します。
+- [!INCLUDE[esql](../../../../../includes/esql-md.md)]。 概念モデルのエンティティを直接操作し、Entity Data Model の概念をサポートする SQL のストレージに依存しない言語。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] オブジェクト クエリと EntityClient プロバイダーを使用して実行されるクエリの両方で使用されます。 詳細については、次を参照してください。 [Entity SQL の概要](../../../../../docs/framework/data/adonet/ef/language-reference/entity-sql-overview.md)します。
 
 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] には、EntityClient データ プロバイダーが含まれています。 このプロバイダーは接続を管理し、エンティティ クエリをデータ ソース固有のクエリに変換し、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] がエンティティ データをオブジェクトに具体化するために使用するデータ リーダーを返します。 オブジェクトの具体化が不要であれば、アプリケーションで [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリを実行して返された読み取り専用のデータ リーダーを使用できるようにすることで、EntityClient プロバイダーを標準の ADO.NET データ プロバイダーと同様に使用することもできます。 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。
 
@@ -55,7 +55,7 @@ ms.locfileid: "65880026"
 
 ![Entity Framework のアーキテクチャ図](../../../../../docs/framework/data/adonet/ef/media/wd-efarchdiagram.gif "wd_EFArchDiagram")
 
-[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] ツールは、概念モデルのエンティティ コンテナーを表す `System.Data.Objects.ObjectContext` または `System.Data.Entity.DbContext` から派生したクラスを生成できます。 このオブジェクト コンテキストは、変更の追跡や ID、同時実行、およびリレーションシップの管理などの機能を提供します。 また、このクラスは、データ ソースに挿入、更新、および削除を書き込む `SaveChanges` メソッドも公開します。 このような変更は、クエリと同様に、システムによって自動的に生成されるコマンドで行うことも、特定のストアド プロシージャを使用するように指定することもできます。
+Entity Data Model ツールから派生したクラスを生成できます`System.Data.Objects.ObjectContext`または`System.Data.Entity.DbContext`概念モデルのエンティティ コンテナーを表します。 このオブジェクト コンテキストは、変更の追跡や ID、同時実行、およびリレーションシップの管理などの機能を提供します。 また、このクラスは、データ ソースに挿入、更新、および削除を書き込む `SaveChanges` メソッドも公開します。 このような変更は、クエリと同様に、システムによって自動的に生成されるコマンドで行うことも、特定のストアド プロシージャを使用するように指定することもできます。
 
 ## <a name="data-providers"></a>データ プロバイダー
 

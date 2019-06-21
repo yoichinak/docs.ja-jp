@@ -2,12 +2,12 @@
 title: シンボルと演算子のリファレンス
 description: シンボルと F# のプログラミング言語で使用される演算子について説明します。
 ms.date: 02/11/2019
-ms.openlocfilehash: 0ea8337a9055c8df639fe6abdb6c79445d189d64
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 14ea7a66f7e9a79d24b62a4aa0564eecb891ee1a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490806"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306184"
 ---
 # <a name="symbol-and-operator-reference"></a>シンボルと演算子のリファレンス
 
@@ -47,7 +47,7 @@ ms.locfileid: "66490806"
 |`+?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、左辺と右辺を加算します。<br /></li></ul>|
 |`,`|[タプル](../tuples.md)|<ul><li>タプルの要素または型パラメーターを区切ります。<br /></li></ul>|
 |`-`|[算術演算子](arithmetic-operators.md)|<ul><li>二項演算子として使用されている場合は、左辺から右辺を減算します。<br /></li><li>単項演算子として使用されている場合は、否定演算を実行します。<br /></li></ul>|
-|`-`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、左辺から右辺を減算します。<br /></li></ul>|
+|`-?`|[Null 許容の演算子](nullable-operators.md)|<ul><li>右辺が null 許容型である場合は、左辺から右辺を減算します。<br /></li></ul>|
 |`->`|[関数](../functions/index.md)<br /><br />[match 式](../match-expressions.md)|<ul><li>関数の型では、引数と戻り値を区切ります。<br /></li><li>(シーケンス式の) 式を生成します。`yield` キーワードと等価です。<br /></li><li>match 式で使用されます。<br /></li></ul>|
 |`.`|[メンバー](../members/index.md)<br /><br />[プリミティブ型](../primitive-types.md)|<ul><li>メンバーにアクセスし、完全修飾名の個々の名前を区切ります。<br /></li><li>浮動小数点数の小数点を示します。<br /></li></ul>|
 |`..`|[ループ:`for...in` 式](../loops-for-in-expression.md)|<ul><li>範囲を指定します。<br /></li></ul>|

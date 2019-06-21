@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 49d1706a-1e0c-4c85-9704-75c908372eb9
-ms.openlocfilehash: e9e5e09bdde82c7b818fd47275bdbfeda5850682
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f45019ccc54056371954965e105e309fd41d9ffd
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645753"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306216"
 ---
 # <a name="implementing-an-implicit-transaction-using-transaction-scope"></a>トランザクション スコープを使用した暗黙的なトランザクションの実装
 <xref:System.Transactions.TransactionScope> クラスを使用すると、コード ブロックがトランザクションに参加しているものとして簡単にマークすることができ、トランザクション自体と対話する必要がありません。 トランザクション スコープは、アンビエント トランザクションを自動的に選択して管理することができます。 トランザクション アプリケーションを開発する際は、使いやすさと効率の点から、<xref:System.Transactions.TransactionScope> クラスを使用することをお勧めします。  
@@ -124,7 +124,9 @@ using(TransactionScope scope1 = new TransactionScope())
  このコード例では、アンビエント トランザクションがない状態で、新しいスコープ `scope1` を <xref:System.Transactions.TransactionScopeOption.Required> で作成しています。 スコープ `scope1` は、新しいトランザクション (トランザクション A) を作成し、トランザクション A をアンビエント トランザクションにするため、ルート スコープになります。 `Scope1` それぞれ異なる 3 つのオブジェクトを作成し、<xref:System.Transactions.TransactionScopeOption>値。 たとえば、`scope2` は <xref:System.Transactions.TransactionScopeOption.Required> で作成されますが、アンビエント トランザクションがあるため、`scope1` によって作成された最初のトランザクションに参加します。 `scope3` は新しいトランザクションのルート スコープです。`scope4` にはアンビエント トランザクションがありません。  
   
  <xref:System.Transactions.TransactionScopeOption> の既定値でかつ最もよく使用される値は <xref:System.Transactions.TransactionScopeOption.Required> ですが、その他の各値にはそれぞれ固有の用途があります。  
-  
+
+### <a name="non-transactional-code-inside-a-transaction-scope"></a>トランザクション スコープ内で非トランザクション コード
+
  <xref:System.Transactions.TransactionScopeOption.Suppress> コード セクションで実行される操作を保持する場合、操作が失敗した場合、アンビエント トランザクションを中止しないようにすると便利です。 たとえば、ログの記録や監査操作を実行する場合や、アンビエント トランザクションがコミットしても中止してもサブスクライバーにイベントを公開する場合などです。 次の例で示すように、この値を使用すれば、トランザクション スコープ内に非トランザクション コード セクションを置くことができます。  
   
 ```csharp  

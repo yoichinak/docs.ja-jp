@@ -2,12 +2,12 @@
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: fe272bada02e6628b6275d2a5282f0def23074c8
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489837"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307298"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
 このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 また、セキュリティで保護された .NET Framework アプリケーションを作成するための推奨事項に従ってください。 詳細については、次を参照してください。[セキュリティの概要](../../../../../docs/framework/data/adonet/security-overview.md)します。  
@@ -86,7 +86,7 @@ ms.locfileid: "66489837"
  app.config ではプロバイダーの不変名を変更できます。クライアント アプリケーションは、強力な名前を使用して標準のプロバイダー ファクトリ モデルを通じて基になるプロバイダーにアクセスする責任を負う必要があります。  
   
 #### <a name="restrict-permissions-to-the-model-and-mapping-files"></a>モデル ファイルとマッピング ファイルへのアクセス許可を制限する  
- 管理者は、モデル ファイルとマッピング ファイル (.edmx、.csdl、.ssdl、および .msl) への書き込みアクセスを、モデルやマッピングを変更するユーザーのみに制限する必要があります。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]実行時にのみこれらのファイルへの読み取りアクセスが必要です。 そのほか、[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] ツールによって生成されるオブジェクト レイヤーとプリコンパイル ビューのソース コード ファイルへのアクセスを制限する必要もあります。  
+ 管理者は、モデル ファイルとマッピング ファイル (.edmx、.csdl、.ssdl、および .msl) への書き込みアクセスを、モデルやマッピングを変更するユーザーのみに制限する必要があります。 [!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]実行時にのみこれらのファイルへの読み取りアクセスが必要です。 管理者は、オブジェクト レイヤーを Entity Data Model ツールによって生成されたコンパイル済みのビューのソース コード ファイルへのアクセスを制限もする必要があります。  
   
 ## <a name="security-considerations-for-queries"></a>クエリのセキュリティに関する注意点  
  概念モデルのクエリを実行する際は、セキュリティに関して次の点に注意する必要があります。 これらの注意点は、EntityClient を使用する [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリと、LINQ、[!INCLUDE[esql](../../../../../includes/esql-md.md)]、およびクエリ ビルダー メソッドを使用するオブジェクト クエリに当てはまります。  

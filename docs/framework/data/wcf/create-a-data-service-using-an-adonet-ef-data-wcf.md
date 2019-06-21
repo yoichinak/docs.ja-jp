@@ -5,12 +5,12 @@ helpviewer_keywords:
 - WCF Data Services, providers
 - WCF Data Services, Entity Framework
 ms.assetid: 6d11fec8-0108-42f5-8719-2a7866d04428
-ms.openlocfilehash: 78286cde925a4583a3610ce100d23e16adcefe49
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7dd93e5aa44effcf9fc41598e41f6f612a209c86
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65878085"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307147"
 ---
 # <a name="how-to-create-a-data-service-using-an-adonet-entity-framework-data-source-wcf-data-services"></a>方法: ADO.NET Entity Framework データ ソース (WCF Data Services) を使用してデータ サービスを作成します。
 
@@ -26,7 +26,7 @@ WCF Data Services では、データ サービスとしてのエンティティ 
 
 3. モデル名を入力し、クリックして**追加**します。
 
-     [!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)] ウィザードの最初のページが表示されます。
+     Entity Data Model ウィザードの先頭ページが表示されます。
 
 4. **モデルのコンテンツの選択**ダイアログ ボックスで、**データベースから生成**します。 その後、 **[次へ]** をクリックします。
 

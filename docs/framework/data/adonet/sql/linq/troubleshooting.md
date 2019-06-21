@@ -2,12 +2,12 @@
 title: トラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: ebcfec475d20492f5ce1f971163544d9faa52223
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64613763"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307204"
 ---
 # <a name="troubleshooting"></a>トラブルシューティング
 ここでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションで発生する可能性のある問題をいくつか示し、そうした問題を回避または影響を軽減するための提案を示します。  
@@ -42,7 +42,7 @@ ms.locfileid: "64613763"
 ## <a name="expression-not-queryable"></a>クエリ可能でない式  
  なら、"式 [式] はクエリ不可能です。アセンブリ参照が存在しますか?" エラーは、次のことを確認します。  
   
-- アプリケーションが [!INCLUDE[compact_v35_short](../../../../../../includes/compact-v35-short-md.md)] を対象としている。  
+- アプリケーションが .NET Compact Framework 3.5 を対象とします。  
   
 - `System.Core.dll` および `System.Data.Linq.dll` への参照が存在する。  
   

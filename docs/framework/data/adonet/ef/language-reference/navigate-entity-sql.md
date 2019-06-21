@@ -2,12 +2,12 @@
 title: NAVIGATE (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: f107f29d-005f-4e39-a898-17f163abb1d0
-ms.openlocfilehash: 993c07b824d30c89773c5cfea90c7c194c6b3869
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6ce88cecf210d8b3cf541fe7e870e19a59e344ec
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760416"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307336"
 ---
 # <a name="navigate-entity-sql"></a>NAVIGATE (Entity SQL)
 
@@ -35,7 +35,7 @@ navigate(instance-expression, [relationship-type], [to-end [, from-end] ])
 
 ## <a name="remarks"></a>Remarks
 
-リレーションシップは、 [!INCLUDE[adonet_edm](../../../../../../includes/adonet-edm-md.md)] (EDM) における最上位の構造です。 リレーションシップは、複数のエンティティ型の間で確立され、ユーザーはエンティティ間のリレーションシップをナビゲートできます。 `from` と `to` は、リレーションシップ内の名前解決があいまいでない場合の条件付きのオプションです。
+関係は、Entity Data Model (EDM) 内の最上位の構造です。 リレーションシップは、複数のエンティティ型の間で確立され、ユーザーはエンティティ間のリレーションシップをナビゲートできます。 `from` と `to` は、リレーションシップ内の名前解決があいまいでない場合の条件付きのオプションです。
 
 NAVIGATE は、O および C 空間で有効です。
 
@@ -43,7 +43,7 @@ NAVIGATE は、O および C 空間で有効です。
 
 navigate(`instance-expression`, `relationship-type`, [ `to-end` [, `from-end` ] ] )
 
-例えば:
+例:
 
 ```sql
 Select o.Id, navigate(o, OrderCustomer, Customer, Order)

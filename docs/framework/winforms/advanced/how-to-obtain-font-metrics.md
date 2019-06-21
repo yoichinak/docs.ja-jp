@@ -8,12 +8,12 @@ helpviewer_keywords:
 - fonts [Windows Forms], obtaining metrics
 - font metrics [Windows Forms], obtaining
 ms.assetid: ff7c0616-67f7-4fa2-84ee-b8d642f2b09b
-ms.openlocfilehash: 75177b609f14d335aa57aba77d647827f50a8692
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 7d7ad92199bb8a8f01290066f8ae023a14c2f9ce
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881866"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307423"
 ---
 # <a name="how-to-obtain-font-metrics"></a>方法: フォント メトリックを取得する
 <xref:System.Drawing.FontFamily>クラスは、特定のファミリとスタイルの組み合わせに対してさまざまなメトリックを取得する次のメソッドを提供します。  
@@ -26,7 +26,7 @@ ms.locfileid: "65881866"
   
 - <xref:System.Drawing.FontFamily.GetLineSpacing%2A>(FontStyle)  
   
- これらのメソッドによって返される数値は、サイズと、特定の単位から独立しているためフォント デザイン単位では<xref:System.Drawing.Font>オブジェクト。  
+ これらのメソッドによって返される値は、サイズと、特定の単位から独立しているためフォント デザイン単位では<xref:System.Drawing.Font>オブジェクト。  
   
  次の図は、さまざまなメトリックを示しています。
   

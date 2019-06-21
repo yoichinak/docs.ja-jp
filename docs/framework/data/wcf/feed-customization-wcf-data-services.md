@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Atom Publishing Protocol [WCF Data Services]
 - WCF Data Services, customizing feeds
 ms.assetid: 0d1a39bc-6462-4683-bd7d-e74e0fd28a85
-ms.openlocfilehash: f35c1387d54fdc02cb421af477671a5a75939c57
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 36f0d50994593d1d575a836dfbd04e8c63a21204
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626394"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306274"
 ---
 # <a name="feed-customization-wcf-data-services"></a>フィードのカスタマイズ (WCF Data Services)
 [!INCLUDE[ssAstoria](../../../../includes/ssastoria-md.md)] 使用して、[!INCLUDE[ssODataFull](../../../../includes/ssodatafull-md.md)]データ フィードとして公開します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] データ フィードに対して JavaScript Object Notation (JSON) と Atom の両方の形式をサポートします。 Atom フィードを使用するときに[!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)]エンティティとリレーションシップは、HTTP メッセージの本文に含めることができる XML 形式などのデータをシリアル化の標準的な方法を提供します。 [!INCLUDE[ssODataShort](../../../../includes/ssodatashort-md.md)] エンティティに含まれるデータと Atom 要素の既定のエンティティとプロパティのマッピングを定義します。 詳細については、次を参照してください[OData:。Atom 形式](https://go.microsoft.com/fwlink/?LinkID=185794)します。  
@@ -42,7 +42,7 @@ ms.locfileid: "64626394"
  詳細については、「[方法 :Entity Framework プロバイダーでフィードをカスタマイズ](../../../../docs/framework/data/wcf/how-to-customize-feeds-with-ef-provider-wcf-data-services.md)します。  
   
 > [!NOTE]
->  データ モデルへの拡張はエンティティ デザイナーでサポートされていないので、データ モデルを含む XML ファイルを手動で変更する必要があります。 によって生成される .edmx ファイルの詳細のについては、[!INCLUDE[adonet_edm](../../../../includes/adonet-edm-md.md)]ツールを参照してください[.edmx ファイルの概要 (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))します。  
+>  データ モデルへの拡張はエンティティ デザイナーでサポートされていないので、データ モデルを含む XML ファイルを手動で変更する必要があります。 Entity Data Model ツールによって生成される .edmx ファイルの詳細については、次を参照してください。 [.edmx ファイルの概要 (Entity Framework)](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))します。  
   
 ### <a name="custom-feed-attributes"></a>カスタム フィード属性  
  次の表に、データ モデルを定義する概念スキーマ定義言語 (CSDL) に追加できるフィードをカスタマイズする XML 属性を示します。 これらの属性は、<xref:System.Data.Services.Common.EntityPropertyMappingAttribute> のプロパティと同等です。  

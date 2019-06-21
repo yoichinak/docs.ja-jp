@@ -2,12 +2,12 @@
 title: Entity Framework の用語
 ms.date: 03/30/2017
 ms.assetid: fa2a1bd1-6118-487b-8673-eebc66b92945
-ms.openlocfilehash: f78545102823b19cc65b100f2b270ae71c1bd077
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 53a6888d0b32cfeb73e7254dc0778274fe6cd0eb
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65877480"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306340"
 ---
 # <a name="entity-framework-terminology"></a>Entity Framework の用語
 このトピックで頻繁に参照用語の定義[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)]ドキュメント。 追加情報を確認できる関連トピックへのリンクも示しています。  
@@ -27,7 +27,7 @@ ms.locfileid: "65877480"
 |コンカレンシー|複数のユーザーが共有データに同時にアクセスや変更を行うことができるようにする処理。 既定では、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] は、オプティミスティック同時実行制御モデルを実装しています。|  
 |方向|一部のアソシエーションの非対称の性質を表します。 方向は、スキーマの `FromRole` 要素または `ToRole` 要素の `NavigationProperty` 属性と `ReferentialConstraint` 属性で指定されます。<br /><br /> 詳細については、次を参照してください。 [NavigationProperty 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#navigationproperty-element-csdl)と[ナビゲーション プロパティ](../../../../../docs/framework/data/adonet/navigation-property.md)します。|  
 |一括読み込み|関連オブジェクトの特定のセットを、クエリで明示的に要求されたオブジェクトと共に読み込むプロセス。|  
-|.edmx ファイル|概念モデル (CSDL)、ストレージ モデル (SSDL)、および概念モデルとストレージ モデルの間のマッピング (MSL) を含む XML ファイル。 .edmx ファイルは、[!INCLUDE[adonet_edm](../../../../../includes/adonet-edm-md.md)] ツールによって作成されます。 詳細については、次を参照してください。 [.edmx ファイルの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))します。|  
+|.edmx ファイル|概念モデル (CSDL)、ストレージ モデル (SSDL)、および概念モデルとストレージ モデルの間のマッピング (MSL) を含む XML ファイル。 .Edmx ファイルは、Entity Data Model ツールによって作成されます。 詳細については、次を参照してください。 [.edmx ファイルの概要](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/cc982042(v=vs.100))します。|  
 |end|アソシエーションに参加しているエンティティ。<br /><br /> 詳細については、次を参照してください。 [End 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#end-element-csdl)と[アソシエーション end](../../../../../docs/framework/data/adonet/association-end.md)します。|  
 |entity|データ型を定義する際に基づくアプリケーションのドメインにおける概念。<br /><br /> 詳細については、次を参照してください。 [EntityType 要素 (CSDL)](/ef/ef6/modeling/designer/advanced/edmx/csdl-spec#entitytype-element-csdl)と[エンティティ型](../../../../../docs/framework/data/adonet/entity-type.md)します。|  
 |EntityClient|ストレージに依存しない ADO.NET データ プロバイダーなどのクラスを含む`EntityConnection`、 `EntityCommand`、および`EntityDataReader`します。 連携[!INCLUDE[esql](../../../../../includes/esql-md.md)]など、ストレージ固有の ADO.NET データ プロバイダーに接続して`SqlClient`します。<br /><br /> 詳細については、次を参照してください。 [Entity Framework 用の EntityClient プロバイダー](../../../../../docs/framework/data/adonet/ef/entityclient-provider-for-the-entity-framework.md)します。|  
