@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 19126eb8bb78643ca1b91a0ddf537033d19cc698
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 1aff57186f08a651aaf5e8dfaa988b5fb296768d
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66833232"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306598"
 ---
 # <a name="c-keywords"></a>C# のキーワード
 
@@ -24,7 +24,7 @@ ms.locfileid: "66833232"
   
 |||||  
 |---|---|---|---|  
-|[abstract](abstract.md)|[as](as.md)|[base](base.md)|[bool](bool.md)|  
+|[abstract](abstract.md)|[as](../operators/type-testing-and-conversion-operators.md#as-operator)|[base](base.md)|[bool](bool.md)|  
 |[break](break.md)|[byte](byte.md)|[case](switch.md)|[catch](try-catch.md)|  
 |[char](char.md)|[checked](checked.md)|[class](class.md)|[const](const.md)|  
 |[continue](continue.md)|[decimal](decimal.md)|[default](default.md)|[delegate](delegate.md)|  
@@ -40,7 +40,7 @@ ms.locfileid: "66833232"
 |[return](return.md)|[sbyte](sbyte.md)|[sealed](sealed.md)|[short](short.md)||
 [sizeof](sizeof.md)|[stackalloc](../operators/stackalloc.md)|[static](static.md)|[string](string.md)|
 |[struct](struct.md)|[switch](switch.md)|[this](this.md)|[throw](throw.md)|
-|[true](true-literal.md)|[try](try-catch.md)|[typeof](typeof.md)|[uint](uint.md)|
+|[true](true-literal.md)|[try](try-catch.md)|[typeof](../operators/type-testing-and-conversion-operators.md#typeof-operator)|[uint](uint.md)|
 |[ulong](ulong.md)|[unchecked](unchecked.md)|[unsafe](unsafe.md)|[ushort](ushort.md)|
 |[using](using.md)|[using static](using-static.md)|[virtual](virtual.md)|[void](void.md)|
 |[volatile](volatile.md)|[while](while.md)|
