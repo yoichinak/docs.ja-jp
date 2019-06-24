@@ -2,12 +2,12 @@
 title: LINQ to XML の概要 (C#)
 ms.date: 10/30/2018
 ms.assetid: 716b94d3-0091-4de1-8e05-41bc069fa9dd
-ms.openlocfilehash: a9435027a7487af96227fdc7a0eae6f511d82b23
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 6a7d681b52bbc6ce515e2202f3f448ce4ba79ced
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66484348"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267952"
 ---
 # <a name="linq-to-xml-overview-c"></a>LINQ to XML の概要 (C#)
 
@@ -116,7 +116,7 @@ new XElement("Contacts",
 );
 ```
 
-詳しくは、「[XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/linq-to-xml-overview.md)」をご覧ください。
+詳しくは、「[XML ツリーの作成 (C#)](../../../../csharp/programming-guide/concepts/linq/creating-xml-trees-linq-to-xml-2.md)」をご覧ください。
 
 ## <a name="see-also"></a>関連項目
 

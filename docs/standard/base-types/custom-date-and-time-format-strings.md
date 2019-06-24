@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 98b374e3-0cc2-4c78-ab44-efb671d71984
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 90e9dbbd43751412c25dd5ca4dae2d503139db69
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b4d7cd61a771f1c9658b5bc98ec85259da1c77f9
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634545"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67268233"
 ---
 # <a name="custom-date-and-time-format-strings"></a>カスタム日時書式指定文字列
 
@@ -41,7 +41,7 @@ ms.locfileid: "64634545"
 
 解析操作では、<xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType>、<xref:System.DateTime.TryParseExact%2A?displayProperty=nameWithType>、<xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType>、および <xref:System.DateTimeOffset.TryParseExact%2A?displayProperty=nameWithType> の各メソッドで、カスタム日時書式指定文字列を使用できます。 これらのメソッドでは、解析操作が成功するための特定のパターンに入力文字列が完全に一致している必要があります。 日付に日、月、2 桁の年が含まれているかどうかを解析する <xref:System.DateTimeOffset.ParseExact%28System.String%2CSystem.String%2CSystem.IFormatProvider%29?displayProperty=nameWithType> メソッドを呼び出す例を次に示します。
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
+[!code-csharp[Formatting.DateAndTime.Custom#18](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/custandparsing1.cs#18)]
 [!code-vb[Formatting.DateAndTime.Custom#18](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/custandparsing1.vb#18)]
 
 次の表に、カスタム日時書式指定子の説明および書式指定子ごとの書式設定後の文字列を示します。 既定では、結果の文字列は、en-US カルチャの書式指定規則を反映します。 特定の書式指定子でローカライズされた文字列が書式設定後に生成される場合、例には書式設定後の文字列が適用されるカルチャも示されます。 カスタム日時書式指定文字列の使用方法については、「[メモ](#notes)」セクションを参照してください。
@@ -509,7 +509,7 @@ AM と PM を区別する必要のある言語の場合、必ず "tt" 指定子�
 
 次の例では、カスタム書式指定文字列の中に "yy" カスタム書式指定子が含まれます。
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
+[!code-csharp[Formatting.DateAndTime.Custom#13](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/Custom1.cs#13)]
 [!code-vb[Formatting.DateAndTime.Custom#13](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/Custom1.vb#13)]
 
 [表のトップへ](#table)
@@ -638,7 +638,7 @@ AM と PM を区別する必要のある言語の場合、必ず "tt" 指定子�
 
 次の例には、書式指定文字列でローカル タイム ゾーンを表すため、リテラル文字 "PST" (太平洋標準時) と "PDT" (太平洋夏時間)が含まれています。 文字列は結果の文字列に含まれ、ローカル タイム ゾーン文字列を含む文字列も正常に解析することに注意してください。
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
+[!code-csharp[Formatting.DateAndTime.Custom#20](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx1.cs#20)]
 [!code-vb[Formatting.DateAndTime.Custom#20](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx1.vb#20)]
 
 文字が結果の文字列に含まれるように、または入力文字列で正常に解析されるように、文字が予約文字としてではなく、リテラル文字として解釈されることを示すには、次の 2 つの方法があります。
@@ -647,12 +647,12 @@ AM と PM を区別する必要のある言語の場合、必ず "tt" 指定子�
 
 次の例には、書式指定文字列でローカル タイム ゾーンを表すため、リテラル文字 "pst"(太平洋標準時間) が含まれています。 "s" と "t" はどちらもカスタム書式指定文字列であるため、どちらの文字も文字リテラルとして解釈されるにはエスケープする必要があります。
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
+[!code-csharp[Formatting.DateAndTime.Custom#21](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx2.cs#21)]
 [!code-vb[Formatting.DateAndTime.Custom#21](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx2.vb#21)]
 
 - リテラル文字列全体を引用符またはアポストロフィで囲みます。 次の例は、前の例と似ていますが、区切られた文字列全体が文字リテラルとして解釈されることを示すため、"pst" が引用符で囲まれている点が異なります。
 
-[!code-csharp-interactive[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
+[!code-csharp[Formatting.DateAndTime.Custom#22](~/samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Custom/cs/LiteralsEx3.cs#22)]
 [!code-vb[Formatting.DateAndTime.Custom#22](~/samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Custom/vb/LiteralsEx3.vb#22)]
 
 ## <a name="notes"></a>メモ

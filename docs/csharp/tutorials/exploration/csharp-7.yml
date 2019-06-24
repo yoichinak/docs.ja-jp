@@ -8,12 +8,12 @@ metadata:
   ms.date: 03/20/2019
   displayType: two-column
   interactive: csharp
-  ms.openlocfilehash: 1b1de22769c86f75684f41635287a73558d1d15a
-  ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+  ms.openlocfilehash: 7cec35e0749ea0b38162244171459f311d27cb25
+  ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
   ms.translationtype: HT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 04/28/2019
-  ms.locfileid: "64750382"
+  ms.lasthandoff: 06/18/2019
+  ms.locfileid: "67170224"
 items:
 - durationInMinutes: 1
   content: >
@@ -147,7 +147,7 @@ items:
     返された参照を変更するには、`ref` 修飾子をローカル変数の宣言と `Find` の呼び出しの前に追加し、戻り値が参照の場合に変数が参照になるようにする必要があります。 ブラウザーでテスト コードを次のように変更します。
 
 
-    [!code-csharp[EverythingByValue](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByValue "test code for return object by reference")]
+    [!code-csharp[TestByRef](~/samples/snippets/csharp/new-in-7/MatrixSearch.cs#TestByRef "test code for return object by reference")]
 
 
     上記の例の 2 番目の `WriteLine` ステートメントは、値 `24` を出力します。これは、マトリックスのストレージが変更されたことを示しています。 ローカル変数は `ref` 修飾子で宣言されており、`ref` 戻り値を受け取ります。 `ref` 変数は宣言時に初期化する必要があります。宣言と初期化を分けることはできません。

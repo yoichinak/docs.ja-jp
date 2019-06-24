@@ -6,28 +6,26 @@ helpviewer_keywords:
 - cast operators [C#], as and is operators
 - as operator [C#]
 - is operator [C#]
-ms.openlocfilehash: 4e0eb53a44a6348d0f5154a0a08222da90985864
-ms.sourcegitcommit: ccd8c36b0d74d99291d41aceb14cf98d74dc9d2b
+ms.openlocfilehash: 2e81628930afaca62a8614df8ca0f458238c23d6
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/10/2018
-ms.locfileid: "53149316"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306360"
 ---
-# <a name="how-to-safely-cast-by-using-pattern-matching-is-and-as-operators"></a>方法: パターン マッチング、is 演算子、as 演算子を使用して安全にキャストする
+# <a name="how-to-safely-cast-by-using-pattern-matching-and-the-is-and-as-operators"></a>方法: パターン マッチング、is 演算子、as 演算子を使用して安全にキャストする
 
-オブジェクトはポリモーフィックであるため、基本クラス型の変数で派生[型](../programming-guide/types/index.md)を保持できます。 派生型のインスタンス メンバーにアクセスするには、値を[キャスト](../programming-guide/types/casting-and-type-conversions.md)して派生型に戻す必要があります。 ただし、キャストでは、<xref:System.InvalidCastException> がスローされるリスクが生まれます。 C# には、[パターン マッチング](../pattern-matching.md) ステートメントがあります。これは成功する場合のみという条件でキャストを実行します。 C# には、値が特定の型であることをテストする [is](../language-reference/keywords/is.md) 演算子と [as](../language-reference/keywords/as.md) 演算子もあります。
-
-[!INCLUDE[interactive-note](~/includes/csharp-interactive-note.md)]
+オブジェクトはポリモーフィックであるため、基本クラス型の変数で派生[型](../programming-guide/types/index.md)を保持できます。 派生型のインスタンス メンバーにアクセスするには、値を[キャスト](../programming-guide/types/casting-and-type-conversions.md)して派生型に戻す必要があります。 ただし、キャストでは、<xref:System.InvalidCastException> がスローされるリスクが生まれます。 C# には、[パターン マッチング](../pattern-matching.md) ステートメントがあります。これは成功する場合のみという条件でキャストを実行します。 C# には、値が特定の型であることをテストする [is](../language-reference/operators/type-testing-and-conversion-operators.md#is-operator) 演算子と [as](../language-reference/operators/type-testing-and-conversion-operators.md#as-operator) 演算子もあります。
 
 次のコードは、パターン マッチング `is` ステートメントを示しています。 メソッド引数をテストし、それが可能な派生型セットの 1 つであるかどうかを判断するメソッドが含まれています。
 
-[!code-csharp-interactive[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
+[!code-csharp[Pattern matching is statement](../../../samples/snippets/csharp/how-to/safelycast/patternmatching/Program.cs#PatternMatchingIs)]
 
 上記のサンプルでは、パターン マッチング構文のいくつかの機能が示されています。 `if (a is Mammal m)` ステートメントと `if (o is Mammal m)` ステートメントにより、初期化が割り当てられたテストが結合されます。 この割り当ては、テストに成功した場合にのみ行われます。 変数 `m` は、それが割り当てられている埋め込み `if` ステートメントでのみ範囲に入ります。 後で同じメソッドで `m` にアクセスすることはできません。 対話型ウィンドウで試してください。
 
 次のサンプル コードに示されているように、[null 許容型](../programming-guide/nullable-types/index.md)に値があるかどうかをテストする目的で同じ構文を使用することもできます。
 
-[!code-csharp-interactive[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
+[!code-csharp[Pattern matching with nullable types](../../../samples/snippets/csharp/how-to/safelycast/nullablepatternmatching/Program.cs#PatternMatchingNullable)]
 
 上記のサンプルでは、変換で使用するパターン マッチング構文の他の機能が示されています。 `null` 値を具体的に探すことで null パターンの変数をテストできます。 変数のランタイム値が `null` のとき、`is` ステートメントで型を確認すると必ず `false` が返されます。 パターン マッチング `is` ステートメントでは、`int?` や `Nullable<int>` など、null 許容値型が許可されませんが、他の値の型についてはテストできます。
 
@@ -35,7 +33,7 @@ ms.locfileid: "53149316"
 
 変数が指定の型かどうかをテストしても、それを新しい変数に割り当てない場合、参照型と null 許容型に対して `is` 演算子と `as` 演算子を使用できます。 次のコードでは、パターン マッチングが導入される前に C# 言語に含まれていた `is` ステートメントと `as` ステートメントを使用し、変数が指定の型かどうかをテストする方法が示されています。
 
-[!code-csharp-interactive[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
+[!code-csharp[testing variable types with the is and as statements](../../../samples/snippets/csharp/how-to/safelycast/asandis/Program.cs#IsAndAs)]
 
 ご覧のとおり、このコードとパターン マッチング コードを比較することで、テストと割り当てが 1 回のステートメントで組み合わされ、パターン マッチング構文がより強固になります。 可能な限り、パターン マッチングを使用してください。
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bb79761a-ca08-44ee-b142-b06b3e2fc22b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 6939efa608f4887dfdb00abe8292bec841929440
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ddf4b84d44abb353cb9a5e025291690fb14b9461
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664639"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267918"
 ---
 # <a name="standard-date-and-time-format-strings"></a>標準の日時書式指定文字列
 標準の日時書式指定文字列は、単一の書式指定子を使用して日付と時刻の値のテキスト表現を定義します。 空白を含む複数の文字で構成される日時書式指定文字列は、カスタム日時書式指定文字列として解釈されます。詳細については、「[カスタム日時書式指定文字列](../../../docs/standard/base-types/custom-date-and-time-format-strings.md)」をご覧ください。 標準またはカスタムの書式指定文字列には、次の 2 とおりの使用方法があります。  
@@ -92,7 +92,7 @@ ms.locfileid: "64664639"
   
  標準書式指定文字列は、解析操作の <xref:System.DateTime.ParseExact%2A?displayProperty=nameWithType> メソッドまたは <xref:System.DateTimeOffset.ParseExact%2A?displayProperty=nameWithType> メソッドで使用することもできます。これらのメソッドでは、解析操作が成功するための特定のパターンに入力文字列が完全に一致している必要があります。 標準書式指定文字列の多くは複数のカスタム書式指定文字列に対応付けられるため、日付と時刻の値はさまざまな書式で表されることがありますが、解析操作は成功します。 <xref:System.Globalization.DateTimeFormatInfo.GetAllDateTimePatterns%28System.Char%29?displayProperty=nameWithType> メソッドを呼び出すことにより、標準書式指定文字列に対応する 1 つまたは複数のカスタム書式指定文字列を確認できます。 次の例では、"d" (短い日付形式のパターン) 標準書式指定文字列に対応付けられているカスタム書式指定文字列を表示します。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
+ [!code-csharp[Formatting.DateAndTime.Standard#17](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/stdandparsing1.cs#17)]
  [!code-vb[Formatting.DateAndTime.Standard#17](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/stdandparsing1.vb#17)]  
   
  以降では、<xref:System.DateTime> 値および <xref:System.DateTimeOffset> 値の標準書式指定子について説明します。  
@@ -261,7 +261,7 @@ ms.locfileid: "64664639"
   
  次の例では、米国のシステム上で "o" 書式指定子を使用して、一連の <xref:System.DateTime> 値および <xref:System.DateTimeOffset> 値を表示しています。表示します。  
   
- [!code-csharp-interactive[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
+ [!code-csharp[Formatting.DateAndTime.Standard#8](../../../samples/snippets/csharp/VS_Snippets_CLR/Formatting.DateAndTime.Standard/cs/o1.cs#8)]
  [!code-vb[Formatting.DateAndTime.Standard#8](../../../samples/snippets/visualbasic/VS_Snippets_CLR/Formatting.DateAndTime.Standard/vb/o1.vb#8)]  
   
  次の例では、"o" 書式指定子を使用して書式設定された文字列を作成し、日付および時刻の `Parse` メソッドを呼び出して元の日時値を復元します。  

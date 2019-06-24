@@ -456,9 +456,9 @@ public class MyAuthorizationPolicy : IAuthorizationPolicy
     > [!NOTE]
     > Setup.bat バッチ ファイルは、Visual Studio の開発者コマンド プロンプトから実行する設計されています。 Visual Studio で必要な実行可能ファイルを含むディレクトリを指して、PATH 環境変数設定の開発者コマンド プロンプトで、 *Setup.bat*スクリプト。
 
-1. Service.exe を起動*service \bin*します。
+1. Service.exe を起動 *service \bin* します。
 
-1. Client.exe を起動します*\client\bin*します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
+1. Client.exe を起動します *\client\bin* します。 クライアント アクティビティがクライアントのコンソール アプリケーションに表示されます。
 
 クライアントとサービスが通信できるようにされていない場合[WCF サンプルのトラブルシューティングのヒント](https://docs.microsoft.com/previous-versions/dotnet/netframework-3.5/ms751511(v=vs.90))します。
 

@@ -3,12 +3,12 @@ title: '方法: 文字列の内容を変更する - C# ガイド'
 ms.date: 02/26/2018
 helpviewer_keywords:
 - strings [C#], modifying
-ms.openlocfilehash: 48be71f35634222dd9898199f004ea1190b62f35
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 2cc1166d98a6cc07e0827a138cecb09c0530b899
+ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54664022"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67267762"
 ---
 # <a name="how-to-modify-string-contents-in-c"></a>方法: C\# で文字列の内容を変更する
 
@@ -67,7 +67,7 @@ ms.locfileid: "54664022"
 **アンセーフ** コードを使用すると、文字列の作成後に "インプレース" で変更することができます。 アンセーフ コードでは、コード内の特定の種類のバグが最小化されるように設計された .NET の多くの機能がバイパスされます。 文字列クラスは**不変**型として設計されているため、文字列を変更するにはアンセーフ コードを使用する必要があります。 一度作成されると、その値は変わりません。 アンセーフ コードでは、標準の `string` メソッドを使用せずに `string` で使用されたメモリにアクセスして変更できるため、このプロパティが回避されます。
 次の例は、アンセーフ コードを使用して文字列をインプレース変更するような、まれな状況のために提供されています。 この例では、`fixed` キーワードの使用方法を示します。 `fixed` キーワードにより、コードがアンセーフ ポインターを使用してメモリにアクセスしている間、ガベージ コレクター (GC) でメモリ内の文字列オブジェクトが移動しなくなります。 また、文字列に対してアンセーフ操作を実行すると発生する可能性のある副作用を示します。この副作用の原因は、C# コンパイラが文字列を内部に格納する (保持する) 方法にあります。 通常、この方法は、特に必要な場合以外は使用しないでください。 [unsafe](../language-reference/keywords/unsafe.md) と [fixed](../language-reference/keywords/fixed-statement.md) についての詳細を各記事でご確認ください。 <xref:System.String.Intern%2A> の API 参照には文字列インターンの情報も含まれています。
 
-[!code-csharp-interactive[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
+[!code-csharp[unsafe ways to create a new string](../../../samples/snippets/csharp/how-to/strings/ModifyStrings.cs#7)]
 
 [GitHub リポジトリ](https://github.com/dotnet/samples/tree/master/snippets/csharp/how-to/strings)のコードを見て、これらのサンプルを試すことができます。 または、サンプルを [zip ファイルとして](https://github.com/dotnet/samples/raw/master/snippets/csharp/how-to/strings.zip)ダウンロードすることができます。
 
