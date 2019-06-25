@@ -1,7 +1,0 @@
-- name: 'C# の特殊文字'
-  href: index.md
-  items:
-    - name: $ -- 文字列補間
-      href: interpolated.md
-    - name: '@ -- 逐語的識別子'
-      href: verbatim.md
