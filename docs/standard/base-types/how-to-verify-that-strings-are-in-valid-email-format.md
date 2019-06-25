@@ -21,10 +21,10 @@ ms.assetid: 7536af08-4e86-4953-98a1-a8298623df92
 author: rpetrusha
 ms.author: ronpet
 ms.openlocfilehash: f6381747bc998f73b374442fcb15e025ca15795d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/24/2019
 ms.locfileid: "65589527"
 ---
 # <a name="how-to-verify-that-strings-are-in-valid-email-format"></a>方法: 文字列が有効な電子メール形式であるかどうかを検証する
