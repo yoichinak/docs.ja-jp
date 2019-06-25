@@ -10,12 +10,12 @@ helpviewer_keywords:
 - user controls [Windows Forms], painting
 - visual styles [Windows Forms], rendering Windows Forms controls
 ms.assetid: a5b178ba-610e-46c4-a6c0-509c0886a744
-ms.openlocfilehash: 4dbccfc881e777309394aed9711a93b8a25315be
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 558600c9256f205598288f9e20d38cb94608c920
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592607"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348482"
 ---
 # <a name="rendering-controls-with-visual-styles"></a>visual スタイルが使用されているコントロールのレンダリング
 .NET Framework は、インターフェイス (UI) 要素をサポートするオペレーティング システムで visual スタイルを使用して、コントロールのレンダリングとその他の Windows ユーザーのサポートを提供します。 このトピックでは、オペレーティング システムの現在の visual スタイルを使用して、複数のコントロールのレンダリングやその他の UI 要素の .NET Framework でのサポートのレベルについて説明します。  
@@ -23,7 +23,7 @@ ms.locfileid: "65592607"
 ## <a name="rendering-classes-for-common-controls"></a>一般的なコントロールのクラスをレンダリングする  
  コントロールのレンダリングとは、コントロールのユーザー インターフェイスを描画することを意味します。 <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間は、いくつかの一般的な Windows フォーム コントロールをレンダリングするための <xref:System.Windows.Forms.ControlPaint> クラスを提供します。 ただし、このクラスは従来の Windows スタイルでコントロールを描画するため、視覚スタイルが有効になったアプリケーションでカスタム コントロールを描画する際の一貫した UI エクスペリエンスの維持が困難になる可能性があります。  
   
- [!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)] に含まれる <xref:System.Windows.Forms?displayProperty=nameWithType> 名前空間のクラスは、視覚スタイルを使用して一般的なコントロールのパーツと状態をレンダリングします。 これらの各クラスに含まれる `static` メソッドにより、オペレーティング システムの現在の視覚スタイルを使用して、特定の状態のコントロールまたはコントロールのパーツを描画します。  
+ .NET Framework 2.0 にはクラスが含まれています、<xref:System.Windows.Forms?displayProperty=nameWithType>名前空間の部分と visual スタイルを使用して一般的なコントロールの状態をレンダリングします。 これらの各クラスに含まれる `static` メソッドにより、オペレーティング システムの現在の視覚スタイルを使用して、特定の状態のコントロールまたはコントロールのパーツを描画します。  
   
  これらのクラスの一部は、視覚スタイルが使用可能かどうかに関係なく関連するコントロールを描画するように設計されています。 視覚スタイルが有効になっている場合、クラス メンバーは視覚スタイルを使用して関連するコントロールを描画します。視覚スタイルが無効になっている場合、クラス メンバーは、従来の Windows スタイルでコントロールを描画します。 次のようなクラスがこれに含まれます。  
   

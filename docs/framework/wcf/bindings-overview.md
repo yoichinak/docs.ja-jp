@@ -4,26 +4,26 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - bindings [WCF], overview
 ms.assetid: cfb5842f-e0f9-4c56-a015-f2b33f258232
-ms.openlocfilehash: e78616acc56e75dd06445f7a569ab94e65e20cc0
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 8449fe048cc9149e8e8cf02f27f131c0d90d6984
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65592232"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348193"
 ---
 # <a name="windows-communication-foundation-bindings-overview"></a>Windows Communication Foundation のバインディングの概要
 バインドは、Windows Communication Foundation (WCF) サービスのエンドポイントに接続するために必要な通信の詳細の指定に使用されるオブジェクトです。 WCF サービスでは、各エンドポイントでは、バインドを正しく指定する必要があります。 このトピックでは、通信の詳細、バインドを定義するバインドを WCF では、どのようなバインドが含まれているエンドポイントのバインディングを指定する方法の要素の種類について説明します。  
   
 ## <a name="what-a-binding-defines"></a>バインディングの定義内容  
- バインディングの情報は非常に基本的にも複雑にもなりえます。 最も基本的なバインディングはトランスポート プロトコル (HTTP など) のみを指定したもので、これはエンドポイントへの接続に必ず使用します。 一般的に、バインディングに含まれるエンドポイントへの接続方法を示す情報は、次のカテゴリのいずれかに当てはまります。  
+ バインディングの情報は非常に基本的にも複雑にもなりえます。 最も基本的なバインディングはトランスポート プロトコル (HTTP など) のみを指定したもので、これはエンドポイントへの接続に必ず使用します。 一般的には、エンドポイントに接続する方法について、バインディングに含まれる情報は、次のカテゴリのいずれかに分類されます。  
   
- プロトコル  
+ **プロトコル**  
  使用されているセキュリティ機構 (信頼性の高いメッセージング機能またはトランザクション コンテキストのフロー設定のいずれか) を決定します。  
   
- エンコーディング  
+ **エンコード**  
  メッセージ エンコーディング (テキストまたはバイナリなど) を決定します。  
   
- Transport  
+ **トランスポート**  
  使用する基本のトランスポート プロトコル (TCP や HTTP など) を決定します。  
   
 ## <a name="the-elements-of-a-binding"></a>バインディングの要素  

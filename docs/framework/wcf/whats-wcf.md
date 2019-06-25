@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 6e51b93d53e1ad65b2f19f81de8833e83bfb18c1
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 13108e86d76b0d806eddf71b2f7e50337ca0afba
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582765"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348306"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation とは
 Windows Communication Foundation (WCF) は、サービス指向アプリケーションを構築するためのフレームワークです。 WCF を使用して、できるデータを送信する非同期メッセージとして 1 つのサービス エンドポイントから別です。 サービス エンドポイントには、IIS でホストされている、継続的に使用可能なサービスの一部を使用したり、アプリケーションでホストされているサービスを使用できます。 エンドポイントには、サービス エンドポイントからデータを要求するサービスのクライアントを使用できます。 メッセージは XML として送信された 1 文字または 1 語の簡単なものでも、バイナリ データのストリームのような複雑なものでも構いません。 サンプル シナリオをいくつか挙げます。
@@ -92,7 +92,7 @@ WCF とペアにする最初のテクノロジは、Windows Workflow Foundation 
 
 Microsoft Silverlight は開発者がストリーミング ビデオなどメディアを多用する Web サイトを作成できる、相互運用が可能で充実した Web アプリケーションを作成するためのプラットフォームです。 以降のバージョン 2 では、Silverlight は silverlight の WCF エンドポイントを接続する通信技術として WCF を組み込まいます。
 
-[!INCLUDE[dublin](../../../includes/dublin-md.md)]アプリケーション サーバーがデプロイおよび WCF 通信を使用してアプリケーションを管理するために組み込まれています。 [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] WCF 対応アプリケーション向けに設計の豊富なツールと構成オプションが含まれています。
+アプリケーション サーバーの Windows Server AppFabric のホスティング機能は具体的には、展開、および WCF の通信を使用してアプリケーションを管理するために設計されています。 [!INCLUDE[dublin2](../../../includes/dublin2-md.md)] WCF 対応アプリケーション向けに設計の豊富なツールと構成オプションが含まれています。
 
 ## <a name="see-also"></a>関連項目
 

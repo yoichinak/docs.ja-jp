@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: 6ab898c93086e477bf4384b4d6c725fbdc8fe761
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879147"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347982"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows フォーム アプリケーションの基礎 (Visual Basic)
 Visual Basic の重要な部分は、ユーザーのコンピューターでローカルに実行する Windows フォーム アプリケーションを作成する機能です。 Visual Studio を使用して、Windows フォームを使用すると、アプリケーションとユーザー インターフェイスを作成することができます。 クラスを Windows フォーム アプリケーションが構築された、<xref:System.Windows.Forms>名前空間。  
@@ -54,7 +54,7 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
 ## <a name="displaying-and-manipulating-data"></a>データの表示と操作  
  多くのアプリケーションは、データベース、XML ファイル、XML Web サービス、またはその他のデータ ソースからデータを表示する必要があります。 Windows フォームは、柔軟なコントロールと呼ばれる、<xref:System.Windows.Forms.DataGridView>のすべてのデータが独自のセルを占有するので、従来の行と列の形式で表形式のデータを表示するためのコントロール。 使用して<xref:System.Windows.Forms.DataGridView>個々 のセルの外観をカスタマイズ、任意の行と列のロックおよびその他の機能の 1 つのセル内で複雑なコントロールを表示することができます。  
   
- ネットワーク経由のデータ ソースへの接続は、Windows フォームのスマート クライアントを使用すればシンプルなタスクです。 <xref:System.Windows.Forms.BindingSource>コンポーネント、Visual Studio 2005 での Windows フォームを新規と[!INCLUDE[dnprdnlong](~/includes/dnprdnlong-md.md)]データ ソースへの接続を表し、前後のレコードに移動し、レコードの編集、保存、コントロールにデータ バインディングのメソッドを公開します変更を元に戻します。 <xref:System.Windows.Forms.BindingNavigator> コントロールは、ユーザーがレコード間を移動する <xref:System.Windows.Forms.BindingSource> コンポーネントに対して、シンプルなインターフェイスを提供します。  
+ ネットワーク経由のデータ ソースへの接続は、Windows フォームのスマート クライアントを使用すればシンプルなタスクです。 <xref:System.Windows.Forms.BindingSource>で Visual Studio 2005 および .NET Framework 2.0 では、Windows フォームで新規のコンポーネントが、データ ソースへの接続を表し、レコードの編集の前または次のレコードに移動して、コントロールにデータをバインドするためのメソッドを公開します、変更を元のソースに保存します。 <xref:System.Windows.Forms.BindingNavigator> コントロールは、ユーザーがレコード間を移動する <xref:System.Windows.Forms.BindingSource> コンポーネントに対して、シンプルなインターフェイスを提供します。  
   
 ### <a name="data-bound-controls"></a>データ バインド コントロール  
  プロジェクトのデータベース、Web サービス、およびオブジェクトなどのデータ ソースを表示するデータ ソース ウィンドウを使用して簡単にデータ バインド コントロールを作成することができます。 このウィンドウからプロジェクトのフォームに項目をドラッグして、データ バインド コントロールを作成できます。 また、[データ ソース] ウィンドウから既存のコントロールにオブジェクトをドラッグして、データに既存のコントロールをバインドすることもできます。  

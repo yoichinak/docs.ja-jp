@@ -12,12 +12,12 @@ helpviewer_keywords:
 - 2-D graphics [WPF]
 - images [WPF], optimizing performance
 ms.assetid: e335601e-28c8-4d64-ba27-778fffd55f72
-ms.openlocfilehash: 1869a5c274b3308e718ca550e8e43ff6a72d4b5d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 25803bd772832cd22e855f530d10a3f3639c180c
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64611852"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348442"
 ---
 # <a name="optimizing-performance-2d-graphics-and-imaging"></a>パフォーマンスの最適化:2D グラフィックスとイメージング
 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] には、アプリケーションの要件に合わせて最適化できる広範な 2D グラフィックス機能とイメージング機能が用意されています。 このトピックでは、この領域でのパフォーマンスの最適化に関する情報を提供します。  
@@ -52,7 +52,7 @@ ms.locfileid: "64611852"
   
 <a name="StreamGeometry_Objects"></a>   
 ## <a name="streamgeometry-objects"></a>StreamGeometry オブジェクト  
- <xref:System.Windows.Media.StreamGeometry>オブジェクトは、軽量な代替<xref:System.Windows.Media.PathGeometry>幾何学的図形を作成するためです。 使用して、<xref:System.Windows.Media.StreamGeometry>複雑なジオメトリを記述する必要がある場合。 <xref:System.Windows.Media.StreamGeometry> 多くを処理するために最適化された<xref:System.Windows.Media.PathGeometry>オブジェクトし、多くの個々 の使用と比べてパフォーマンスが向上します<xref:System.Windows.Media.PathGeometry>オブジェクト。  
+ <xref:System.Windows.Media.StreamGeometry>オブジェクトは、軽量版を<xref:System.Windows.Media.PathGeometry>幾何学的図形を作成するためです。 使用して、<xref:System.Windows.Media.StreamGeometry>複雑なジオメトリを記述する必要がある場合。 <xref:System.Windows.Media.StreamGeometry> 多くを処理するために最適化された<xref:System.Windows.Media.PathGeometry>オブジェクトし、多くの個々 の使用と比べてパフォーマンスが向上します<xref:System.Windows.Media.PathGeometry>オブジェクト。  
   
  次の例では、属性構文を使用して、三角形を作成する<xref:System.Windows.Media.StreamGeometry>で[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。  
   

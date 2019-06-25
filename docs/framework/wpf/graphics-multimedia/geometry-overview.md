@@ -8,12 +8,12 @@ helpviewer_keywords:
 - geometry classes [WPF]
 - graphics [WPF], geometry classes
 ms.assetid: 9fba8934-98b7-4af6-82f6-f4ef887f963a
-ms.openlocfilehash: 3c26b08dd7ec70a1763fce89b34376350b985fb5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5545e89f744c3874840a773556e0670abc0a46a9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615386"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348065"
 ---
 # <a name="geometry-overview"></a>ジオメトリの概要
 この概要は、使用する方法を説明します、 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] <xref:System.Windows.Media.Geometry>クラス図形を記述します。 このトピックでは、間の相違点も対照的です。<xref:System.Windows.Media.Geometry>オブジェクトと<xref:System.Windows.Shapes.Shape>要素。  

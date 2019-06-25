@@ -2,12 +2,12 @@
 title: インスタンスのアクティブ化処理
 ms.date: 03/30/2017
 ms.assetid: 134c3f70-5d4e-46d0-9d49-469a6643edd8
-ms.openlocfilehash: 088722ba19a1f38e8a341e34a8344963021f1113
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5e0d5a91a0f0ccc02d13ef96c3470da1942cc520
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64584923"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348245"
 ---
 # <a name="instance-activation"></a>インスタンスのアクティブ化処理
 SQL Workflow Instance Store が実行する内部タスクは、定期的にアクティブになり、実行可能またはアクティブ化可能なワークフロー インスタンスを永続性データベースで検出します。 このタスクは、実行可能なワークフロー インスタンスを検出すると、このインスタンスをアクティブ化することができるワークフロー ホストに通知します。 Instance Store がアクティブ化可能なワークフロー インスタンスを検出した場合、ワークフロー ホストをアクティブ化する汎用ホストに Instance Store が通知を行い、ワークフロー ホストがワークフロー インスタンスを実行します。 このトピックの以降のセクションでは、インスタンスのアクティブ化処理を詳細に説明します。  
@@ -35,7 +35,7 @@ SQL Workflow Instance Store が実行する内部タスクは、定期的にア�
 ## <a name="generic-hosts"></a>汎用ホスト  
  汎用ホストは、メタデータ プロパティの値を持つホスト**WorkflowServiceType**汎用ホストに設定されて**WorkflowServiceType.Any**を任意のワークフロー型を処理できることを示します。 汎用ホストがという XName パラメーター **ActivationType**します。  
   
- 現在、SQL Workflow Instance Store には、汎用ホストに設定、ActivationType パラメーターの値をサポートしています。 **WAS**します。 ActivationType が WAS に設定されていない場合、SQL Workflow Instance Store は <xref:System.Runtime.DurableInstancing.InstancePersistenceException> をスローします。 付属するワークフロー管理サービス、[!INCLUDE[dublin](../../../includes/dublin-md.md)]に設定されたアクティブ化型を持つ汎用ホスト**WAS**します。  
+ 現在、SQL Workflow Instance Store には、汎用ホストに設定、ActivationType パラメーターの値をサポートしています。 **WAS**します。 ActivationType が WAS に設定されていない場合、SQL Workflow Instance Store は <xref:System.Runtime.DurableInstancing.InstancePersistenceException> をスローします。 Windows Server AppFabric のホスティング機能に付属するワークフロー管理サービスをアクティブ化の種類の設定を持つ汎用ホストは、 **WAS**します。  
   
  WAS アクティブ化の場合、汎用ホストは、新しいホストをアクティブ化できるエンドポイント アドレスを派生する一連のアクティブ化パラメーターを要求します。 WAS アクティブ化のアクティブ化パラメーターは、サイトの名前、サイトを基準としたアプリケーションの相対パス、アプリケーションを基準としたサービスの相対パスです。 SQL Workflow Instance Store は、<xref:System.Activities.DurableInstancing.SaveWorkflowCommand> の実行中にこれらのアクティブ化パラメーターを格納します。  
   

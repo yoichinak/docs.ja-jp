@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 4a669b4eefeeb91c0835dc41a1c8736aacf0e14f
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65586652"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348466"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows フォームのセキュリティの概要
 
@@ -52,7 +52,7 @@ ms.locfileid: "65586652"
 
 オプションのアクセス許可を要求するときに、アプリケーションに付与されていないアクセス許可が必要なアクションを実行する場合に生成されるセキュリティ例外を処理する必要があります。 <xref:System.Security.SecurityException> を適切に処理することで、アプリケーションを続行できます。 アプリケーションは例外を使用して、ユーザーに対して機能を無効にする必要があるかどうかを判断できます。 たとえば、必要なファイル アクセス許可が付与されていない場合、アプリケーションは **[保存]** メニュー オプションを無効にすることができます。
 
-場合によっては、すべての適切なアクセス許可をアサートしたかどうかを確認することが難しい場合があります。 たとえば、表面的には影響のないように見えるメソッドの呼び出しが、実行中のある時点でファイル システムにアクセスすることがあります。 必要なアクセス許可をすべて使用してアプリケーションを配置しない場合は、デスクトップでデバッグしている間は問題なくテストでき、配置のときに失敗する可能性があります。 両方の[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK と Visual Studio 2005 は、アプリケーションに必要なアクセス許可を計算するためのツールを含む: MT.exe のコマンド ライン ツールと Visual Studio でのアクセス許可の検出機能は、それぞれします。
+場合によっては、すべての適切なアクセス許可をアサートしたかどうかを確認することが難しい場合があります。 たとえば、表面的には影響のないように見えるメソッドの呼び出しが、実行中のある時点でファイル システムにアクセスすることがあります。 必要なアクセス許可をすべて使用してアプリケーションを配置しない場合は、デスクトップでデバッグしている間は問題なくテストでき、配置のときに失敗する可能性があります。 アプリケーションに必要なアクセス許可を計算するためのツールを含む、.NET Framework 2.0 SDK と Visual Studio 2005: MT.exe のコマンド ライン ツールと Visual Studio でのアクセス許可の検出機能は、それぞれします。
 
 次のトピックでは、Windows フォームの追加のセキュリティ機能について説明します。
 
@@ -77,7 +77,7 @@ ms.locfileid: "65586652"
 
 どのテクノロジを選択するかは、配置環境に応じて異なります。 詳細については、「[ClickOnce 配置ストラテジの選択](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)」を参照してください。
 
-既定では、 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] 、Visual Studio を使用してデプロイされたアプリケーションまたは[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK ツール (Mage.exe および MageUI.exe) が完全信頼を持つクライアント コンピューターで実行するように構成されます。 部分信頼を使用して、またはいくつか追加のアクセス許可のみを使用して、アプリケーションを配置している場合、この既定を変更する必要があります。 Visual Studio でこれを行う、または[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)]SDK ツールの MageUI.exe の配置を構成するときにします。 MageUI.exe を使用する方法の詳細については、チュートリアルを参照してください。コマンドラインから ClickOnce アプリケーションを展開します。  参照してください[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))または[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)します。
+既定では、 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Visual Studio または .NET Framework SDK のツール (Mage.exe および MageUI.exe) を使用してデプロイされたアプリケーションは完全信頼を持つクライアント コンピューターで実行するように構成します。 部分信頼を使用して、またはいくつか追加のアクセス許可のみを使用して、アプリケーションを配置している場合、この既定を変更する必要があります。 配置を構成するときに、Visual Studio または .NET Framework SDK ツールの MageUI.exe のいずれかでこれを実行できます。 MageUI.exe を使用する方法の詳細については、チュートリアルを参照してください。コマンドラインから ClickOnce アプリケーションを展開します。  参照してください[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))または[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)します。
 
 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] とアクセス許可の昇格のセキュリティ面の詳細については、「[ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)」を参照してください。 信頼されたアプリケーションの配置の詳細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」を参照してください。
 

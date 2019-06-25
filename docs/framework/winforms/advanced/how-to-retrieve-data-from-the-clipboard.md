@@ -8,12 +8,12 @@ helpviewer_keywords:
 - pasting Clipboard data
 - Clipboard [Windows Forms], retrieving data
 ms.assetid: 99612537-2c8a-449f-aab5-2b3b28d656e7
-ms.openlocfilehash: e29e71974abda3e6e57d22d9faef28e386ebeefd
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 868afc36f08571d16285d0df52f6d1cad8c9c7a6
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169896"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348212"
 ---
 # <a name="how-to-retrieve-data-from-the-clipboard"></a>方法: クリップボードからデータを取得する
 <xref:System.Windows.Forms.Clipboard>クラスは、Windows オペレーティング システムのクリップボード機能との対話に使用できるメソッドを提供します。 多くのアプリケーションは、クリップボードをデータの一時的なリポジトリとして使用されます。 たとえば、ワード プロセッサでは、切り取りと貼り付けの操作中に、クリップボードを使用します。 クリップボードも別に 1 つのアプリケーションから情報を転送するために役立ちます。  
@@ -22,7 +22,7 @@ ms.locfileid: "67169896"
   
  特定の形式でデータがクリップボードに含まれるかどうかを判断するのいずれかの操作を使用して、 `Contains`*形式*メソッドまたは<xref:System.Windows.Forms.Clipboard.GetData%2A>メソッド。 クリップボードからデータを取得するには、いずれかを使用、 `Get`*形式*メソッドまたは<xref:System.Windows.Forms.Clipboard.GetData%2A>メソッド。 これらのメソッドは、.NET Framework 2.0 の新機能です。  
   
- バージョンを使用して、クリップボードからデータにアクセスするよりも前[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]を使用して、<xref:System.Windows.Forms.Clipboard.GetDataObject%2A>メソッドの返されたメソッドを呼び出すと<xref:System.Windows.Forms.IDataObject>します。 たとえば、呼び出す特定の形式が返されるオブジェクトで使用できるかどうかを確認するのには<xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>メソッド。  
+ .NET Framework 2.0 より前のバージョンを使用して、クリップボードからデータにアクセスするには、使用、<xref:System.Windows.Forms.Clipboard.GetDataObject%2A?displayProperty=nameWithType>メソッドと、返されたメソッドを呼び出す<xref:System.Windows.Forms.IDataObject>します。 たとえば、呼び出す特定の形式が返されるオブジェクトで使用できるかどうかを確認するのには<xref:System.Windows.Forms.IDataObject.GetDataPresent%2A>メソッド。  
   
 > [!NOTE]
 >  すべての Windows ベースのアプリケーションでは、システムのクリップボードを共有します。 そのため、別のアプリケーションに切り替えた場合に、内容は変更される可能性が。  
@@ -49,7 +49,7 @@ ms.locfileid: "67169896"
   
 ### <a name="to-retrieve-data-from-the-clipboard-in-multiple-formats"></a>複数の形式でクリップボードからデータを取得するには  
   
-1. <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> メソッドを使用します。 このメソッドを使用して、バージョンでクリップボードからデータを取得する必要がありますよりも前[!INCLUDE[dnprdnlong](../../../../includes/dnprdnlong-md.md)]します。  
+1. <xref:System.Windows.Forms.Clipboard.GetDataObject%2A> メソッドを使用します。 このメソッドを使用して、.NET Framework 2.0 より前のバージョンでクリップボードからデータを取得する必要があります。  
   
      [!code-csharp[System.Windows.Forms.Clipboard#4](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/CS/form1.cs#4)]
      [!code-vb[System.Windows.Forms.Clipboard#4](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Windows.Forms.Clipboard/vb/form1.vb#4)]  

@@ -4,16 +4,16 @@ ms.date: 04/23/2017
 helpviewer_keywords:
 - tuples [Visual Basic]
 ms.assetid: 3e66cd1b-3432-4e1d-8c37-5ebacae8f53f
-ms.openlocfilehash: 146e9c2360cea153d2f487769d5b983516861e8d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 16934232e1e202f1b100680a5101332aa622f2cc
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663298"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348500"
 ---
 # <a name="tuples-visual-basic"></a>タプル (Visual Basic)
 
-Visual Basic 2017 以降、Visual Basic 言語ではタプルのための組み込みサポートが提供され、タプルの作成や、タプルの要素へのアクセスが簡略化されます。 タプルとは、値の特定の数とシーケンスを持つ軽量のデータ構造です。 タプルをインスタンス化する場合は、数とそれぞれの値 (または要素) のデータ型を定義します。 たとえば、2 タプル (またはペア) には、2 つの要素があります。 最初の要素は `Boolean` 値で、2 つ目の要素は `String`となる場合があります。 タプルを使用すると 1 つのオブジェクトに複数の値を格納するのが簡単になるため、メソッドから複数の値を返すための気軽な方法としてよく使用されます。
+Visual Basic 2017 以降、Visual Basic 言語ではタプルのための組み込みサポートが提供され、タプルの作成や、タプルの要素へのアクセスが簡略化されます。 タプルは、特定の数と値のシーケンスを持つ簡単なデータ構造です。 タプルをインスタンス化する場合は、数とそれぞれの値 (または要素) のデータ型を定義します。 たとえば、2 タプル (またはペア) には、2 つの要素があります。 最初の要素は `Boolean` 値で、2 つ目の要素は `String`となる場合があります。 タプルを使用すると 1 つのオブジェクトに複数の値を格納するのが簡単になるため、メソッドから複数の値を返すための気軽な方法としてよく使用されます。
 
 > [!IMPORTANT]
 > タプルのサポートが必要です、<xref:System.ValueTuple>型。 .NET Framework 4.7 がインストールされていない場合は、NuGet パッケージを追加する必要があります`System.ValueTuple`、これは、NuGet ギャラリーで使用できます。 このパッケージは、せず可能性がありますエラーが発生したコンパイル"定義済みの型 'ValueTuple(Of,,,)' は定義されている、またはインポートされていません"に似ています

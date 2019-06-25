@@ -9,12 +9,12 @@ helpviewer_keywords:
 - controls [WPF], layout system
 - layout system [WPF]
 ms.assetid: 3eecdced-3623-403a-a077-7595453a9221
-ms.openlocfilehash: d20e296b17f9117320cd67d8475ff3ae40a158c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 93556d8345b09dcd196354e618f4d20f5db68998
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598772"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67348527"
 ---
 # <a name="layout"></a>レイアウト
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] レイアウト システムについて説明します。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] でユーザー インターフェイスを作成するには、レイアウトの計算が発生するタイミングと方法を理解することが非常に重要です。  
@@ -146,7 +146,7 @@ ms.locfileid: "64598772"
   
 <a name="LayoutSystem_whatsnext"></a>   
 ## <a name="whats-next"></a>次の内容  
- 要素の測定方法と配置方法を理解することが、レイアウトを理解する最初のステップです。 詳細については、使用可能な<xref:System.Windows.Controls.Panel>、要素を参照してください[パネルの概要](../controls/panels-overview.md)します。 レイアウトに影響を与えるさまざまな配置プロパティをより理解するには、「[配置、余白、パディングの概要](alignment-margins-and-padding-overview.md)」を参照してください。 カスタムの例については<xref:System.Windows.Controls.Panel>要素を参照してください[カスタム放射状パネルのサンプル](https://go.microsoft.com/fwlink/?LinkID=159982)します。 軽量のアプリケーションにまとめて配置する準備ができたらを参照してください。[チュートリアル。初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
+ 要素の測定方法と配置方法を理解することが、レイアウトを理解する最初のステップです。 詳細については、使用可能な<xref:System.Windows.Controls.Panel>、要素を参照してください[パネルの概要](../controls/panels-overview.md)します。 レイアウトに影響を与えるさまざまな配置プロパティをより理解するには、「[配置、余白、パディングの概要](alignment-margins-and-padding-overview.md)」を参照してください。 カスタムの例については<xref:System.Windows.Controls.Panel>要素を参照してください[カスタム放射状パネルのサンプル](https://go.microsoft.com/fwlink/?LinkID=159982)します。 軽量なアプリケーションにまとめて配置する準備ができたらを参照してください。[チュートリアル。初めての WPF デスクトップ アプリケーション](../getting-started/walkthrough-my-first-wpf-desktop-application.md)します。  
   
 ## <a name="see-also"></a>関連項目
 
