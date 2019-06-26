@@ -67,7 +67,7 @@ ms.locfileid: "66003864"
     
       **新しいプロジェクトを構成する**ダイアログ ボックスが開きます。
 
-   4. プロジェクト名を入力**`ExpenseIt`** 選び**作成**です。
+   4. プロジェクト名を入力 **`ExpenseIt`** 選び **作成** です。
 
       ![新しいプロジェクト ダイアログを構成します。](./media/walkthrough-my-first-wpf-desktop-application/configure-new-project-dialog.png)
 
@@ -131,7 +131,7 @@ ms.locfileid: "66003864"
 
 このセクションでは、アプリケーションに 2 つのページと 1 つのイメージを追加します。
 
-1. プロジェクトに新しいページを追加し、名前*`ExpenseItHome.xaml`*:
+1. プロジェクトに新しいページを追加し、名前 *`ExpenseItHome.xaml`* :
 
    1. **ソリューション エクスプ ローラー**を右クリックし、 **`ExpenseIt`** プロジェクト ノード**追加** > **ページ**します。
 
@@ -198,7 +198,7 @@ ms.locfileid: "66003864"
 
     Visual Studio が自動的に作成、新しいファイルを作成するときにその*コード ビハインド*ファイル。 これらの分離コード ファイルでは、ユーザー入力に対応するためのロジックを処理します。
 
-    コードは、次のようになります**`ExpenseItHome`**:
+    コードは、次のようになります **`ExpenseItHome`** :
 
     [!code-csharp[ExpenseIt#2_5](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt2/ExpenseItHome.xaml.cs#2_5)]
 
@@ -244,7 +244,7 @@ ms.locfileid: "66003864"
 
 このセクションで作成する単一列テーブル 10 ピクセルの余白を 3 行の列と行の定義を追加することによって、<xref:System.Windows.Controls.Grid>で *`ExpenseItHome.xaml`* します。
 
-1. *`ExpenseItHome.xaml`*、設定、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティを<xref:System.Windows.Controls.Grid>「10,0,10,10」は、左、上、右、下の余白に対応する要素。
+1. *`ExpenseItHome.xaml`* 、設定、<xref:System.Windows.FrameworkElement.Margin%2A>プロパティを<xref:System.Windows.Controls.Grid>「10,0,10,10」は、左、上、右、下の余白に対応する要素。
 
    ```xaml
    <Grid Margin="10,0,10,10">
@@ -277,7 +277,7 @@ ms.locfileid: "66003864"
 
 行の各コントロールを配置、<xref:System.Windows.Controls.Grid>を設定して、<xref:System.Windows.Controls.Grid.Row%2A?displayProperty=nameWithType>添付プロパティ。 添付プロパティの詳細については、次を参照してください。[添付プロパティの概要](../advanced/attached-properties-overview.md)します。
 
-1.  *`ExpenseItHome.xaml`* を次 XAML どこかの間の追加、<xref:System.Windows.Controls.Grid>タグ。
+1. *`ExpenseItHome.xaml`* を次 XAML どこかの間の追加、<xref:System.Windows.Controls.Grid>タグ。
 
    [!code-xaml[ExpenseIt#10](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt4/ExpenseItHome.xaml#10)]
 
@@ -294,7 +294,7 @@ ms.locfileid: "66003864"
 
 このセクションでは、イメージとページ タイトル、ホーム ページの UI を更新します。
 
-1. *`ExpenseItHome.xaml`*、もう 1 つの列を追加、<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>230 ピクセルの。
+1. *`ExpenseItHome.xaml`* 、もう 1 つの列を追加、<xref:System.Windows.Controls.Grid.ColumnDefinitions%2A>固定<xref:System.Windows.Controls.ColumnDefinition.Width%2A>230 ピクセルの。
 
     [!code-xaml[ExpenseIt#11](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt9/ExpenseItHome.xaml?highlight=52-55)]
 
@@ -326,7 +326,7 @@ ms.locfileid: "66003864"
 
 ## <a name="add-code-to-handle-events"></a>イベントを処理するコードを追加します。
 
-1. *`ExpenseItHome.xaml`*、追加、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラーを<xref:System.Windows.Controls.Button>要素。 詳細については、「[方法 :単純なイベント ハンドラーを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))です。
+1. *`ExpenseItHome.xaml`* 、追加、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>イベント ハンドラーを<xref:System.Windows.Controls.Button>要素。 詳細については、「[方法 :単純なイベント ハンドラーを作成](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/bb675300(v=vs.100))です。
 
     [!code-xaml[ExpenseIt#15](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt6/ExpenseItHome.xaml#15)]
 
@@ -385,7 +385,7 @@ ms.locfileid: "66003864"
 
     スタイルは、リソースとの子に注目してください、<xref:System.Windows.Application.Resources%2A?displayProperty=nameWithType>プロパティ要素。 ここでは、スタイルはアプリケーション内のすべての要素に適用されます。 .NET アプリでリソースの使用の例は、次を参照してください。[アプリケーション リソースを使用](../advanced/how-to-use-application-resources.md)します。
 
-3. *`ExpenseItHome.xaml`*、間にあるすべての置換、<xref:System.Windows.Controls.Grid>で次の XAML 要素。
+3. *`ExpenseItHome.xaml`* 、間にあるすべての置換、<xref:System.Windows.Controls.Grid>で次の XAML 要素。
 
     [!code-xaml[ExpenseIt#19](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt7/ExpenseItHome.xaml#19)]
 
@@ -409,7 +409,7 @@ ms.locfileid: "66003864"
 
 このセクションでは、さまざまなコントロールにバインドされている XML データを作成します。
 
-1. *`ExpenseItHome.xaml`*、開始後<xref:System.Windows.Controls.Grid>要素を作成する次の XAML を追加、<xref:System.Windows.Data.XmlDataProvider>各人のデータを格納しています。
+1. *`ExpenseItHome.xaml`* 、開始後<xref:System.Windows.Controls.Grid>要素を作成する次の XAML を追加、<xref:System.Windows.Data.XmlDataProvider>各人のデータを格納しています。
 
     [!code-xaml[ExpenseIt#23](~/samples/snippets/csharp/VS_Snippets_Wpf/ExpenseIt/CSharp/ExpenseIt8/ExpenseItHome.xaml?range=13,16-40,49)]
 
