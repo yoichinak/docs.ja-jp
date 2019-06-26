@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 72c76f0b-7255-4576-9261-3587f949669c
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 2c95c77d0b2e2b68750891431822e2637e5e88f9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: ba4546397adcfcf6142b41482f574cf86607a6b9
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025578"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402115"
 ---
 # <a name="app-resources-for-libraries-that-target-multiple-platforms"></a>複数のプラットフォームを対象とするライブラリのアプリケーション リソース
 .NET Framework を使用して[ポータブル クラス ライブラリ](../../../docs/standard/cross-platform/cross-platform-development-with-the-portable-class-library.md)プロジェクトの種類が、クラス ライブラリのリソースを複数のプラットフォームからアクセスできることを確認します。 このプロジェクトの種類では、Visual Studio 2012 で使用できる、.NET Framework クラス ライブラリの移植可能なサブセットを対象とします。 [!INCLUDE[net_portable](../../../includes/net-portable-md.md)] を使用すると、デスクトップ アプリケーション、Silverlight アプリケーション、Windows Phone アプリケーション、および [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからライブラリにアクセスできます。
@@ -63,7 +63,7 @@ ms.locfileid: "67025578"
 |HiredLength|12|
 |ID|ID|
 |ID.Length|12|
-|名前|名前|
+|Name|Name|
 |NameLength|25|
 |Title|従業員データベース|
 
@@ -72,12 +72,12 @@ ms.locfileid: "67025578"
  [!code-csharp[Conceptual.Resources.Portable#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/uilibrary.cs#1)]
  [!code-vb[Conceptual.Resources.Portable#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/uilibrary.vb#1)]
 
- 次のコードは、`UILibrary` クラスとそのリソースをコンソールモード アプリケーションからアクセスする方法を示します。 コンソール アプリケーションのプロジェクトに追加するには UILIbrary.dll への参照が必要です。
+ 次のコードは、`UILibrary` クラスとそのリソースをコンソールモード アプリケーションからアクセスする方法を示します。 コンソール アプリのプロジェクトに追加するのには UILibrary.dll への参照が必要です。
 
  [!code-csharp[Conceptual.Resources.Portable#2](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program.cs#2)]
  [!code-vb[Conceptual.Resources.Portable#2](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module1.vb#2)]
 
- 次のコードは、`UILibrary` クラスとそのリソースを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからアクセスする方法を示します。 Windows ストア アプリケーション プロジェクトに追加するには UILIbrary.dll への参照が必要です。
+ 次のコードは、`UILibrary` クラスとそのリソースを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからアクセスする方法を示します。 Windows ストア アプリのプロジェクトに追加するのには UILibrary.dll への参照が必要です。
 
  [!code-csharp[Conceptual.Resources.PortableMetro#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetro/cs/blankpage.xaml.cs#1)]
 
@@ -91,15 +91,15 @@ ms.locfileid: "67025578"
 |Hired|Date embauché|
 |HiredLength|16|
 |ID|ID|
-|名前|Nom|
+|Name|Nom|
 |Title|Base de données des employés|
 
- 次のコードは、`UILibrary` クラスとそのリソースをコンソールモード アプリケーションからアクセスする方法を示します。 コンソール アプリケーションのプロジェクトに追加するには UILIbrary.dll への参照が必要です。
+ 次のコードは、`UILibrary` クラスとそのリソースをコンソールモード アプリケーションからアクセスする方法を示します。 コンソール アプリのプロジェクトに追加するのには UILibrary.dll への参照が必要です。
 
  [!code-csharp[Conceptual.Resources.Portable#3](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portable/cs/program2.cs#3)]
  [!code-vb[Conceptual.Resources.Portable#3](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portable/vb/module2.vb#3)]
 
- 次のコードは、`UILibrary` クラスとそのリソースを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからアクセスする方法を示します。 Windows ストア アプリケーション プロジェクトに追加するには UILIbrary.dll への参照が必要です。 静的な `ApplicationLanguages.PrimaryLanguageOverride` プロパティを使用してアプリケーションの優先言語をフランス語に設定します。
+ 次のコードは、`UILibrary` クラスとそのリソースを [!INCLUDE[win8_appname_long](../../../includes/win8-appname-long-md.md)] アプリケーションからアクセスする方法を示します。 Windows ストア アプリのプロジェクトに追加するのには UILibrary.dll への参照が必要です。 静的な `ApplicationLanguages.PrimaryLanguageOverride` プロパティを使用してアプリケーションの優先言語をフランス語に設定します。
 
  [!code-csharp[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.resources.portablemetroloc/cs/blankpage.xaml.cs#1)]
  [!code-vb[Conceptual.Resources.PortableMetroLoc#1](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.resources.portablemetroloc/vb/blankpage.xaml.vb#1)]  

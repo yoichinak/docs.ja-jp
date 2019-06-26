@@ -2,12 +2,12 @@
 title: コード クォート
 description: 言語機能を生成し、プログラムで F# コード式を処理することができますが、F# コード クォートについて説明します。
 ms.date: 05/16/2016
-ms.openlocfilehash: 5523d54a271ad1c53c6de85f37f261e0ecf6cced
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 30fd5b575fa59d78c3e70c1a94cd921a6a655ace
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490794"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402129"
 ---
 # <a name="code-quotations"></a>コード クォート
 
@@ -39,7 +39,7 @@ A*式を引用符で囲まれた*F# 式では、プログラムの一部とし�
 
 [!code-fsharp[Main](../../../samples/snippets/fsharp/lang-ref-3/snippet502.fs)]
 
-するF#引用符で囲んでが使用する必要があります、 [ F#引用符エバリュエーター](https://github.com/fsprojects/FSharp.Quotations.Evaluator)します。 評価して、実行のサポートを提供F#式オブジェクト。
+評価するF#引用符で囲んでが使用する必要があります、 [ F#引用符エバリュエーター](https://github.com/fsprojects/FSharp.Quotations.Evaluator)します。 評価して、実行のサポートを提供F#式オブジェクト。
 
 ## <a name="expr-type"></a>Expr 型
 

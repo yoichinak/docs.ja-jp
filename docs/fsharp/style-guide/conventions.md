@@ -2,12 +2,12 @@
 title: F# のコーディング規則
 description: 書き込み時に、一般的なガイドラインと表現方法を説明しますF#コード。
 ms.date: 05/14/2018
-ms.openlocfilehash: 4b292d0a844a4d9efc79aa865b054b4af2cb68c4
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: c8df654cbb94fff1ef7ffb909655439398f30bf5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66052792"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402365"
 ---
 # <a name="f-coding-conventions"></a>F# のコーディング規則
 
@@ -378,7 +378,7 @@ type Transactor(ctx, currentBalance) =
         ...
 ```
 
-単体テスト`Transactions.doTransaction`で`ImplementationLogic.Tests.fspoj`は簡単です。
+単体テスト`Transactions.doTransaction`で`ImplementationLogic.Tests.fsproj`は簡単です。
 
 ```fsharp
 namespace TransactionsTestingUtil

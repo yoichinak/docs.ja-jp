@@ -2,15 +2,15 @@
 title: キューに置かれたアプリケーションの Web ホスト
 ms.date: 03/30/2017
 ms.assetid: c7a539fa-e442-4c08-a7f1-17b7f5a03e88
-ms.openlocfilehash: c44a6b5059f5294646d95b4281dcf7845b369929
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: c8584f78b6b31bc95e088b424122a9cf77a17f27
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59126023"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402282"
 ---
 # <a name="web-hosting-a-queued-application"></a>キューに置かれたアプリケーションの Web ホスト
-Windows プロセス アクティブ化サービス (WAS) では、ライセンス認証と Windows Communication Foundation (WCF) サービスをホストするアプリケーションを含むワーカー プロセスの有効期間を管理します。 WAS プロセス モデルは HTTP の依存関係を取り除くことにより、HTTP サーバーの [!INCLUDE[iis601](../../../../includes/iis601-md.md)] プロセス モデルを一般化します。 これにより、HTTP と net.msmq や msmq.formatname、メッセージ ベースのアクティブ化をサポートし、特定のコンピューター上のアプリケーションの数が多いをホストする機能を提供するホスト環境でなどの非 HTTP プロトコルの両方を使用する WCF サービスです。  
+Windows プロセス アクティブ化サービス (WAS) では、ライセンス認証と Windows Communication Foundation (WCF) サービスをホストするアプリケーションを含むワーカー プロセスの有効期間を管理します。 WAS プロセス モデルでは、HTTP に対する依存関係を削除することで、HTTP サーバーの IIS 6.0 プロセス モデルを一般化します。 これにより、HTTP と net.msmq や msmq.formatname、メッセージ ベースのアクティブ化をサポートし、特定のコンピューター上のアプリケーションの数が多いをホストする機能を提供するホスト環境でなどの非 HTTP プロトコルの両方を使用する WCF サービスです。  
   
  WAS にはメッセージ キュー (MSMQ) アクティブ化サービスが含まれており、アプリケーションで使用されるキューのいずれかに 1 つ以上のメッセージが置かれると、キュー アプリケーションがアクティブ化されます。 MSMQ アクティブ化サービスは、既定で自動的に開始される NT サービスです。  
   

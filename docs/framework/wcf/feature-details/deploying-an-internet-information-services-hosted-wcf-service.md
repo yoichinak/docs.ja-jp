@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービスでホストされる WCF サービスの配置
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: a41615ab096f3aa4f1ee94defd775248d0df4d2e
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025732"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402293"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>インターネット インフォメーション サービスでホストされる WCF サービスの配置
 
@@ -43,7 +43,7 @@ IIS でホストされる WCF services が正しく機能するには、WCF、II
 
 IIS でホストされる WCF サービスは、IIS アプリケーションの内部にする必要があります。 排他的に WCF サービスをホストする新しい IIS アプリケーションを作成することができます。 また、ASP.NET 2.0 のコンテンツ (.aspx ページや ASP.NET Web サービス (ASMX)) を既にホストしている既存のアプリケーションに、WCF サービスをデプロイできます。 これらのオプションの詳細についてを参照してください、「ホスティング WCF - サイド ASP.NET を使用した」と「ASP.NET 互換モードでは WCF サービスをホスティング」セクション[WCF サービスと ASP.NET](wcf-services-and-aspnet.md)します。
 
-[!INCLUDE[iis601](../../../../includes/iis601-md.md)] とそれ以降のバージョンでは、隔離されているオブジェクト指向プログラミング アプリケーションは定期的に再起動されることに注意してください。 既定値は 1740 分です。 サポートされている最大値は 71,582 分です。 この再起動は、無効にできます。 このプロパティの詳細については、次を参照してください。、 [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)します。
+IIS 6.0 およびそれ以降のバージョン定期的に再起動すること分離オブジェクト指向プログラミング アプリケーションに注意してください。 既定値は 1740 分です。 サポートされている最大値は 71,582 分です。 この再起動は、無効にできます。 このプロパティの詳細については、次を参照してください。、 [PeriodicRestartTime](https://go.microsoft.com/fwlink/?LinkId=109968)します。
 
 ## <a name="create-an-svc-file-for-the-wcf-service"></a>WCF サービス用の .svc ファイルの作成
 
@@ -103,7 +103,7 @@ IIS でホストされるサービスのエンドポイントには、常に相�
 
 ### <a name="available-transports"></a>利用可能なトランスポート
 
-IIS 5.1 でホストされる WCF サービスと[!INCLUDE[iis601](../../../../includes/iis601-md.md)]HTTP ベースの通信を使用してに制限されます。 これらの IIS プラットフォームでホストされるサービスで、非 HTTP バインドを使用するように構成すると、サービスをアクティブ化するときにエラーが発生します。 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]でサポートされるトランスポートには、既存の MSMQ アプリケーションとの後方互換性を実現する HTTP、Net.TCP、Net.Pipe、Net.MSMQ、msmq.formatname があります。
+WCF サービスでホストされている IIS 5.1 および IIS 6.0 は、HTTP ベースの通信を使用してに制限されます。 これらの IIS プラットフォームでホストされるサービスで、非 HTTP バインドを使用するように構成すると、サービスをアクティブ化するときにエラーが発生します。 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]でサポートされるトランスポートには、既存の MSMQ アプリケーションとの後方互換性を実現する HTTP、Net.TCP、Net.Pipe、Net.MSMQ、msmq.formatname があります。
 
 ### <a name="http-transport-security"></a>HTTP トランスポート セキュリティ
 
