@@ -1,8 +1,14 @@
 ---
-title: 'F# のガイド'
-description: 'このガイドでは、F# では、.NET 上で実行される関数型プログラミング言語のさまざまな学習教材の情報の概要を示します。'
+title: F# ガイド
+description: このガイドでは、F# では、.NET 上で実行される関数型プログラミング言語のさまざまな学習教材の情報の概要を示します。
 author: cartermp
 ms.date: 08/03/2018
+ms.openlocfilehash: 7bba949a7567173f5f3918a6ed32aabad26fb362
+ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.translationtype: MT
+ms.contentlocale: ja-JP
+ms.lasthandoff: 04/23/2019
+ms.locfileid: "61772802"
 ---
 # <a name="f-guide"></a>F# ガイド
 
@@ -10,7 +16,9 @@ F# ガイドでは、F# 言語を習得するためのリソースを数多く�
 
 ## <a name="learning-f"></a>F\#をはじめる
 
+
 [「F# とは？」](what-is-fsharp.md)では、F# がどういった言語かについて短いコードサンプルとともに紹介します。この記事は F# 入門者にオススメです。
+
 
 [「F# ツアー」](tour.md)では、多数のコードサンプルとともに主要な F# 言語機能の概要を紹介します。 この記事は F# のコア機能に興味があるエンジニアにオススメです。
 
@@ -28,11 +36,14 @@ F# ガイドでは、F# 言語を習得するためのリソースを数多く�
 
 ## <a name="references"></a>リファレンス
 
+
 [「F# 公式リファレンス」](language-reference/index.md)は、すべてのF# 言語の機能に関する包括的な公式リファレンスです。各記事では、構文について説明し、コード サンプルも示しています。 目次の内容でフィルターバーを使用すると、特定の記事を検索できます。
+
 
 [「F# コアライブラリ リファレンス」](https://msdn.microsoft.com/visualfsharpdocs/conceptual/fsharp-core-library-reference)は、F# コアライブラリの API リファレンスです。
 
 ## <a name="additional-guides"></a>その他のガイド
+
 
 [「F# for Fun and Profit」](https://swlaschin.gitbooks.io/fsharpforfunandprofit/content/)は、F# を学ぶための包括的で非常に詳細な F# 関連書籍です。その内容と著者は、F# コミュニティから敬愛されています。主にオブジェクト指向プログラミングに関する予備知識を持つエンジニア向けの内容となっています。
 
@@ -44,13 +55,16 @@ F# ガイドでは、F# 言語を習得するためのリソースを数多く�
 
 [「F# でプログラミング入門」](https://www.youtube.com/watch?v=Teak30_pXHk&list=PLEoMzSkcN8oNiJ67Hd7oRGgD1d4YBxYGC)は、メインエディタとして Visual Studio Code を使用している、優れた動画シリーズです。この動画シリーズでは、テキストベースの RPG ゲーム をゼロから構築していきます。主に Visual Studio Code (や軽量 IDE) を好む、F# 入門者を対象としています。
 
+
 [「F# 開発者向け Visual Studio 2017 新機能」](https://www.linkedin.com/learning/what-s-new-in-visual-studio-2017-for-f-sharp-for-developers)は、Visual Studio 2017 で追加された F# の新機能について紹介している動画です。 主に F# を始めたばかりの Visual Studio 開発者を対象としています。
 
 ## <a name="other-useful-resources"></a>その他の便利なリソース
 
 [「F# Snippets Website」](http://www.fssnip.net)には、F# で実装したい処理に関して、非常に簡単なものから極めて高度なものまで、あらゆる実装方法を示す大規模なコードスニペット群が紹介されています。
 
+
 [「F# Software Foundation Slack」](https://fsharp.org/guides/slack/)は、初心者にとっても、エキスパートにとっても最適の場所です。なぜなら、とても活発に活動をしており、世界最高峰の F# プログラマたちとチャットを交わすことが可能だからです。この Slack に参加することを強くお勧めします。
+
 
 ## <a name="the-f-software-foundation"></a>F# ソフトウェアの基礎
 

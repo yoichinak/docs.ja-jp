@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Visual C#, keywords
 - '@ keyword'
 ms.assetid: e929b0f2-4b92-4d37-8060-23d323b098ad
-ms.openlocfilehash: 1aff57186f08a651aaf5e8dfaa988b5fb296768d
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: b2b4b20038024e9fc0bbdfee39b840f68375ab74
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306598"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401499"
 ---
 # <a name="c-keywords"></a>C# のキーワード
 
@@ -34,7 +34,7 @@ ms.locfileid: "67306598"
 |[foreach](foreach-in.md)|[goto](goto.md)|[if](if-else.md)|[implicit](implicit.md)|  
 |[in](in.md)|[int](int.md)|[interface](interface.md)|[internal](internal.md)|
 |[is](is.md)|[lock](lock-statement.md)|[long](long.md)|[namespace](namespace.md)|
-|[new](new.md)|[null](null.md)|[object](object.md)|[operator](operator.md)|
+|[new](../operators/new-operator.md)|[null](null.md)|[object](object.md)|[operator](operator.md)|
 |[out](out.md)|[override](override.md)|[params](params.md)|[private](private.md)|
 |[protected](protected.md)|[public](public.md)|[readonly](readonly.md)|[ref](ref.md)|
 |[return](return.md)|[sbyte](sbyte.md)|[sealed](sealed.md)|[short](short.md)||

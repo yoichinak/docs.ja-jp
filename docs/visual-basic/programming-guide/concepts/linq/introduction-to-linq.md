@@ -2,12 +2,12 @@
 title: LINQ (Visual Basic) の概要
 ms.date: 07/20/2015
 ms.assetid: c6339c12-9b2d-433e-961c-0d2b7f0091c2
-ms.openlocfilehash: 95c1d99604ba9f87e34b5bb423d42bf97c0cd29e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7c42cf73dce91bfb4da1b886613635532460f0e6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64648797"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402407"
 ---
 # <a name="introduction-to-linq-visual-basic"></a>LINQ (Visual Basic) の概要
 統合言語クエリ (LINQ) は、.NET Framework Version 3.5 で導入された、オブジェクトとデータの溝を埋める画期的な手法です。  
@@ -20,7 +20,7 @@ ms.locfileid: "64648797"
   
  次の Visual Studio の図は、SQL Server データベースに対して部分的に完了した LINQ クエリを示しています。このクエリは C# および Visual Basic の両方で記述されており、完全な型チェックと IntelliSense に対応しています。  
   
- ![その shwos Intellisense で LINQ クエリを図します。](./media/introduction-to-linq/linq-query-intellisense.png)  
+ ![Intellisense を使用する LINQ クエリを示す図。](./media/introduction-to-linq/linq-query-intellisense.png)  
   
 ## <a name="next-steps"></a>次の手順  
  LINQ の詳細については、[Getting Started] セクションで基本的な概念を理解することによって開始[Visual Basic における LINQ の概要](../../../../visual-basic/programming-guide/concepts/linq/getting-started-with-linq.md)、その後は、LINQ テクノロジのドキュメント関心があります。  

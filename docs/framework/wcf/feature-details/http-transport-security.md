@@ -2,12 +2,12 @@
 title: HTTP トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: ab099302df93ce7d01c2730df88240265411bc8d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64587668"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402303"
 ---
 # <a name="http-transport-security"></a>HTTP トランスポート セキュリティ
 トランスポートとして HTTP を使用すると、SSL (Secure Sockets Layer) によりセキュリティが提供されます。 SSL はクライアントに対してサービスの認証を行い、機密性 (暗号化) をチャネルに提供する技術としてインターネットで広く使用されています。 このトピックでは、SSL のしくみし、Windows Communication Foundation (WCF) でその実装方法について説明します。  
@@ -43,9 +43,9 @@ ms.locfileid: "64587668"
  使用するための証明書を構成する[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS 7.0 Beta:Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595)します。  
   
 #### <a name="iis-60"></a>IIS 6.0  
- 設定する[!INCLUDE[iis601](../../../../includes/iis601-md.md)](SSL を使用) をセキュリティで保護されたホストとして、次を参照してください。 [Configuring Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601)します。  
+ (SSL を使用して)、セキュリティで保護されたホストとして、IIS 6.0 を設定するを参照してください。 [Configuring Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601)します。  
   
- 使用するための証明書を構成する[!INCLUDE[iis601](../../../../includes/iis601-md.md)]を参照してください[Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602)します。  
+ IIS 6.0 で使用する証明書を構成するのを参照してください。 [Certificates_IIS_SP1_Ops](https://go.microsoft.com/fwlink/?LinkId=88602)します。  
   
 ### <a name="using-httpcfg-for-ssl"></a>SSL での HttpCfg の使用  
  自己ホスト型 WCF アプリケーションを作成する場合に使用可能な HttpCfg.exe ツールをダウンロード、 [Windows XP Service Pack 2 サポート ツール サイト](https://go.microsoft.com/fwlink/?LinkId=29002)します。  

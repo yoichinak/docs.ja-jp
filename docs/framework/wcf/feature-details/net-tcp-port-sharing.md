@@ -5,12 +5,12 @@ helpviewer_keywords:
 - port activation [WCF]
 - port sharing [WCF]
 ms.assetid: f13692ee-a179-4439-ae72-50db9534eded
-ms.openlocfilehash: 8eb0a2a5b8b6edad17477e1fd65f72b540a8a674
-ms.sourcegitcommit: ffd7dd79468a81bbb0d6449f6d65513e050c04c4
+ms.openlocfilehash: 4d7f28c692c7eb3527a851c6456473afc20a9aeb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65960041"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402463"
 ---
 # <a name="nettcp-port-sharing"></a>Net.TCP ポート共有
 Windows Communication Foundation (WCF) は、高パフォーマンス通信用の新しい TCP ベースのネットワーク プロトコル (net.tcp://) を提供します。 WCF には、新しいシステム コンポーネントでは、Net.TCP ポート共有サービスを複数のユーザー プロセスで共有できる net.tcp ポートをも導入されています。  
@@ -22,7 +22,7 @@ Windows Communication Foundation (WCF) は、高パフォーマンス通信用�
   
  多くの異なる HTTP アプリケーションのトラフィックを 1 つの TCP ポートに多重化する HTTP.SYS モデルが、Windows プラットフォームで標準になってきました。 このモデルを使用すると、ファイアウォール管理者は共通の制御点を使用できるようになり、また、アプリケーション開発者はネットワークを利用できる新しいアプリケーションを構築する際に、展開コストを最小限にできます。  
   
- インターネット インフォメーション サービス (IIS) には、HTTP アプリケーション間でポートを共有する機能が以前からあります。 しかし、このインフラストラクチャが完全に一般化されたのは、[!INCLUDE[iis601](../../../../includes/iis601-md.md)] での HTTP.SYS (カーネル モードの HTTP プロトコル リスナー) の導入以降のことでした。 実際には、HTTP.SYS が、任意のユーザー プロセスで HTTP トラフィック専用の TCP ポートを共有することを許可します。 この機能により、多数の HTTP アプリケーションが同一の物理コンピューター上にそれぞれ別の独立したプロセスとして共存しながら、TCP ポート 80 でのトラフィックの送受信に必要なネットワーク インフラストラクチャを共有することができます。 Net.TCP ポート共有サービスは、net.tcp アプリケーションで同じ種類のポート共有を可能にします。  
+ インターネット インフォメーション サービス (IIS) には、HTTP アプリケーション間でポートを共有する機能が以前からあります。 ただし、HTTP の導入に伴いのみでした。IIS 6.0 ではこのインフラストラクチャが完全に一般化する SYS (カーネル モードの HTTP プロトコル リスナー) にします。 実際には、HTTP.SYS が、任意のユーザー プロセスで HTTP トラフィック専用の TCP ポートを共有することを許可します。 この機能により、多数の HTTP アプリケーションが同一の物理コンピューター上にそれぞれ別の独立したプロセスとして共存しながら、TCP ポート 80 でのトラフィックの送受信に必要なネットワーク インフラストラクチャを共有することができます。 Net.TCP ポート共有サービスは、net.tcp アプリケーションで同じ種類のポート共有を可能にします。  
   
 ## <a name="port-sharing-architecture"></a>ポート共有アーキテクチャ  
  WCF でポート共有アーキテクチャには、次の 3 つの主要なコンポーネントがあります。  

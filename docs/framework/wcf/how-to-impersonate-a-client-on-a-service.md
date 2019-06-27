@@ -9,18 +9,18 @@ helpviewer_keywords:
 - impersonation
 - WCF, security
 ms.assetid: 431db851-a75b-4009-9fe2-247243d810d3
-ms.openlocfilehash: 1e6e0597f40f32df17d435cb959b246b3b7872fa
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 3dd40efe27687b048984c4592db0d3787d061eeb
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881100"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402318"
 ---
 # <a name="how-to-impersonate-a-client-on-a-service"></a>方法: サービスでクライアントに偽装する
 Windows Communication Foundation (WCF) サービスでクライアントを偽装してにより、サービスは、クライアントに代わってアクションを実行します。 コンピューター上のディレクトリやファイルへのアクセス、または SQL Server データベースへのアクセスなど、アクセス制御リスト (ACL) のチェックを受けるアクションでは、ACL のチェックがクライアントのユーザー アカウントに対して行われます。 ここでは、Windows ドメインのクライアントで、クライアント偽装レベルを設定できるようにするために必要な基本的な手順について説明します。 このパターンの実施例については、「 [Impersonating the Client](../../../docs/framework/wcf/samples/impersonating-the-client.md)」を参照してください。 クライアントの権限借用の詳細については、次を参照してください。[委任と偽装](../../../docs/framework/wcf/feature-details/delegation-and-impersonation-with-wcf.md)します。  
   
 > [!NOTE]
->  クライアントとサービスが同じコンピューター上で実行されており、クライアントがシステム アカウント ( `Local System` や `Network Service`など) で実行されているときに、ステートレスなセキュリティ コンテキスト トークンを使用してセキュリティで保護されたセッションを確立した場合、クライアントを偽装することはできません。 通常、WinForms アプリケーションやコンソール アプリケーションは、現在ログインしているアカウントで実行されるため、既定でそのアカウントを偽装できます。 ただし、クライアントは、ASP.NET ページと、そのページがでホストされている[!INCLUDE[iis601](../../../includes/iis601-md.md)]または IIS 7.0 では、その後、クライアントの実行では、`Network Service`アカウントで実行します。 セキュリティで保護されたセッションをサポートするシステム提供のすべてのバインディングは、ステートフルなセキュリティ コンテキスト トークンを既定で使用します。 ただし、クライアントが、ASP.NET ページであり、ステートフルなセキュリティ コンテキスト トークンをセキュリティで保護されたセッションを使用する場合、クライアントを偽装できません。 セキュリティで保護されたセッションでステートフルなセキュリティ コンテキスト トークンの使用に関する詳細については、次を参照してください。[方法。セキュリティ コンテキストを作成、セキュリティで保護されたセッションのトークン](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)します。  
+>  クライアントとサービスが同じコンピューター上で実行されており、クライアントがシステム アカウント ( `Local System` や `Network Service`など) で実行されているときに、ステートレスなセキュリティ コンテキスト トークンを使用してセキュリティで保護されたセッションを確立した場合、クライアントを偽装することはできません。 通常、WinForms アプリケーションやコンソール アプリケーションは、現在ログインしているアカウントで実行されるため、既定でそのアカウントを偽装できます。 ただし、ときに、ASP.NET ページは、クライアントはそのページが IIS 6.0 または IIS 7.0 でホストされているし、クライアントで実行、`Network Service`アカウントで実行します。 セキュリティで保護されたセッションをサポートするシステム提供のすべてのバインディングは、ステートフルなセキュリティ コンテキスト トークンを既定で使用します。 ただし、クライアントが、ASP.NET ページであり、ステートフルなセキュリティ コンテキスト トークンをセキュリティで保護されたセッションを使用する場合、クライアントを偽装できません。 セキュリティで保護されたセッションでステートフルなセキュリティ コンテキスト トークンの使用に関する詳細については、次を参照してください。[方法。セキュリティ コンテキストを作成、セキュリティで保護されたセッションのトークン](../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)します。  
   
 ### <a name="to-enable-impersonation-of-a-client-from-a-cached-windows-token-on-a-service"></a>サービスにキャッシュされた Windows トークンでクライアントの偽装を有効にするには  
   
