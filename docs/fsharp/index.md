@@ -50,7 +50,7 @@ F# ガイドでは、F# 言語を習得するためのリソースを数多く�
 
 [「F# Snippets Website」](http://www.fssnip.net)には、F# で実装したい処理に関して、非常に簡単なものから極めて高度なものまで、あらゆる実装方法を示す大規模なコードスニペット群が紹介されています。
 
-[「F# Software Foundation Slack」](https://fsharp.org/guides/slack/)は、初心者にとっても、エキスパートにとっても最適の場所です。なぜなら、とても活発に活動をしており、世界最高峰の F# プログラマたちとチャットを交わすことが可能だからです。この Slack に参加することを強くオススメします。
+[「F# Software Foundation Slack」](https://fsharp.org/guides/slack/)は、初心者にとっても、エキスパートにとっても最適の場所です。なぜなら、とても活発に活動をしており、世界最高峰の F# プログラマたちとチャットを交わすことが可能だからです。この Slack に参加することを強くお勧めします。
 
 ## <a name="the-f-software-foundation"></a>F# ソフトウェアの基礎
 
