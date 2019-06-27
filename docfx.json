@@ -115,7 +115,8 @@
       "featureFlags": [
         "enable_uhf_ppe"
       ],
-      "show_latex": true
+      "show_latex": true,
+      "disable_contribution_on_translation_quality": ["MT"]
     },
     "fileMetadata": {
       "feedback_system": {
@@ -261,42 +262,6 @@
       "ms.custom": {
         "docs/fsharp/tutorials/**/**.md": "seodec18",
         "docs/fsharp/language-reference/**/**.md": "seodec18"
-      },
-      "open_to_public_contributors": {
-	        "docs/csharp/misc/**.md": false,
-		"docs/framework/additional-apis/**.md": false,
-		"docs/framework/configure-apps/**.md": false,
-		"docs/framework/data/**.md": false,
-		"docs/framework/debug-trace-profile/**.md": false,
-		"docs/framework/misc/**.md": false,
-		"docs/framework/net-native/**.md": false,
-		"docs/framework/performance/**.md": false,
-		"docs/framework/security/**.md": false,
-		"docs/framework/ui-automation/**.md": false,
-		"docs/framework/unmanaged-api/**.md": false,
-		"docs/framework/wcf/**.md": false,
-		"docs/framework/windows-workflow-foundation/**.md": false,
-		"docs/framework/winforms/**.md": false,
-		"docs/framework/wpf/**.md": false,
-		"docs/framework/xaml-services/**.md": false,
-		"docs/fsharp/**.md": false,
-		"docs/standard/containerized-lifecycle-architecture/**.md": false,
-		"docs/standard/cross-platform/**.md": false,
-		"docs/standard/datetime/**.md": false,
-		"docs/standard/design-guidelines/**.md": false,
-		"docs/standard/modernize-with-azure-and-containers/**.md": false,
-		"docs/standard/security/**.md": false,
-		"docs/standard/serialization/**.md": false,
-		"docs/standard/serverless-architecture/**.md": false,
-		"docs/visual-basic/developing-apps/customizing-extending-my/**.md": false,
-		"docs/visual-basic/developing-apps/development-with-my/**.md": false,
-		"docs/visual-basic/developing-apps/windows-forms/**.md": false,
-		"docs/visual-basic/language-reference/**.md": false,
-		"docs/visual-basic/misc/**.md": false,
-		"docs/visual-basic/programming-guide/**.md": false,
-		"docs/visual-basic/reference/**.md": false,
-		"_csharplang/spec/**.md": false,
-	        "_vblang/spec/**.md": false
       }
     },
     "dest": "_site",
