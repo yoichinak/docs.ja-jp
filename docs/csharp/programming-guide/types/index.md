@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: c971a2d5d7caeb030cf504c44be8c8123decc3fc
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423404"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398093"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
@@ -120,13 +120,13 @@ char c = 'Z';
 
 [!code-csharp[csProgGuideTypes#44](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#44)]
 
-定数 `System.IO.FileMode.Create` は、2 という値を持ちます。 しかし、人間がソース コードを読む場合は名前があるとわかりやすいため、このような場合は、リテラルの数値の定数を使用するよりも、列挙体を使用する方がよいと言えます。 詳細については、「<xref:System.IO.FileMode?displayProperty=nameWithType>」を参照してください。
+定数 `System.IO.FileMode.Create` は、2 という値を持ちます。 しかし、人間がソース コードを読む場合は名前があるとわかりやすいため、このような場合は、リテラルの数値の定数を使用するよりも、列挙体を使用する方がよいと言えます。 詳細については、<xref:System.IO.FileMode?displayProperty=nameWithType> を参照してください。
 
 すべての列挙体は、<xref:System.Enum?displayProperty=nameWithType> の派生型である <xref:System.ValueType?displayProperty=nameWithType> から派生します。 構造体に適用されるすべての規則が、列挙体にも適用されます。 詳細については、「[ 列挙型](../../../csharp/programming-guide/enumeration-types.md)」を参照してください。
 
 ### <a name="reference-types"></a>参照型
 
-[class](../../../csharp/language-reference/keywords/class.md)、[delegate](../../../csharp/language-reference/keywords/delegate.md)、配列、または [interface](../../../csharp/language-reference/keywords/interface.md) として定義された型は、"*参照型*" です。 参照型の変数を宣言した場合、実行時には、[new](../../../csharp/language-reference/keywords/new.md) 演算子によってオブジェクトが明示的に作成されるまで、この変数には [null](../../../csharp/language-reference/keywords/null.md) が格納されます。または、次の例に示すように `new` を使用して、別の場所で作成されたオブジェクトを割り当てることもできます。
+[class](../../../csharp/language-reference/keywords/class.md)、[delegate](../../../csharp/language-reference/keywords/delegate.md)、配列、または [interface](../../../csharp/language-reference/keywords/interface.md) として定義された型は、"*参照型*" です。 参照型の変数を宣言した場合、実行時には、[new](../../../csharp/language-reference/operators/new-operator.md) 演算子によってオブジェクトが明示的に作成されるまで、この変数には [null](../../../csharp/language-reference/keywords/null.md) が格納されます。または、次の例に示すように `new` を使用して、別の場所で作成されたオブジェクトを割り当てることもできます。
 
 ```csharp
 MyClass mc = new MyClass();

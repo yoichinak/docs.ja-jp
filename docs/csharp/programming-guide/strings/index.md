@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, strings
 - strings [C#]
 ms.assetid: 21580405-cb25-4541-89d5-037846a38b07
-ms.openlocfilehash: 57781dd5a988435778587636cc458256b966446c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e193d6a51c3d4f1d81e3b74b1474d0e7cdcfca53
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61678505"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398125"
 ---
 # <a name="strings-c-programming-guide"></a>文字列 (C# プログラミング ガイド)
 文字列は、値がテキストの <xref:System.String> 型のオブジェクトです。 内部では、テキストは <xref:System.Char> オブジェクトの順次読み取り専用コレクションとして格納されます。 C# の文字列の末尾には null 終端文字はありません。したがって、C# の文字列には任意の数の null 文字 ('\0') を埋め込むことができます。 文字列の <xref:System.String.Length%2A> プロパティは、Unicode 文字の数ではなく、文字列に含まれている `Char` オブジェクトの数を表します。 文字列内の個別の Unicode コード ポイントにアクセスするには、<xref:System.Globalization.StringInfo> オブジェクトを使用します。  
@@ -24,7 +24,7 @@ ms.locfileid: "61678505"
   
  [!code-csharp[csProgGuideStrings#1](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStrings/CS/Strings.cs#1)]  
   
- 文字列を文字の配列で初期化する場合を除き、文字列オブジェクトの作成に [new](../../../csharp/language-reference/keywords/new-operator.md) 演算子を使用しないでください。  
+ 文字列を文字の配列で初期化する場合を除き、文字列オブジェクトの作成に [new](../../../csharp/language-reference/operators/new-operator.md) 演算子を使用しないでください。  
   
  文字列の長さが 0 の新しい <xref:System.String> オブジェクトを作成するには、<xref:System.String.Empty> 定数値で文字列を初期化します。 長さ 0 の文字列のリテラル文字列表現は "" です。 [null](../../../csharp/language-reference/keywords/null.md) の代わりに <xref:System.String.Empty> 値を使用して文字列を初期化すると、<xref:System.NullReferenceException> が発生する可能性を減らすことができます。 静的な <xref:System.String.IsNullOrEmpty%28System.String%29> メソッドを使用すると、アクセスを試行する前に文字列の値を検証できます。  
   
