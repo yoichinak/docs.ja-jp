@@ -34,7 +34,7 @@ Visual Basic のループ構造を使用して、1 つまたは複数の行の�
  `For`しています.`Next`構築は、指定された回数だけループを実行します。 呼ばれる、ループ コントロール変数を使用して、*カウンター*繰り返しを追跡します。 開始日と終了このカウンターの値を指定して、必要に応じて量で増加している 1 つの繰り返しから、次を指定することができます。 詳細については、[For Each ... Nextステートメント](../../../../visual-basic/language-reference/statements/for-next-statement.md)を参照してください。  
   
 ## <a name="for-each-loops"></a>For Each ループ  
- `For Each`.`Next`構築は、コレクション内の各要素に対して 1 回のステートメントのセットを実行します。 ループ コントロール変数を指定するが、開始または終了値を決定する必要はありません。 詳細については、次を参照してください[ごとにしています...次のステートメントの](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
+ `For Each`.`Next`構築は、コレクション内の各要素に対して 1 回のステートメントのセットを実行します。 ループ コントロール変数を指定するが、開始または終了値を決定する必要はありません。 詳細については、次を参照してください[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

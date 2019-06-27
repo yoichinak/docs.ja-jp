@@ -158,7 +158,7 @@ Next [ counter ]
  `start`、 `end`、および`step`式が評価される任意のデータ型の型を拡張する`counter`します。 ユーザー定義型を使用する場合`counter`、定義する必要がありますが、`CType`変換演算子の型に変換する`start`、 `end`、または`step`の型に`counter`。  
   
 ## <a name="example"></a>例  
- 次の例では、ジェネリック リストからすべての要素を削除します。 代わりに、[ごとにしています.次のステートメントの](../../../visual-basic/language-reference/statements/for-each-next-statement.md)、例を示します、 `For`.`Next`降順に反復処理するステートメント。 例では、ため、この手法を使用して、`removeAt`メソッドが低いインデックス値が削除された要素の後に要素をによりします。  
+ 次の例では、ジェネリック リストからすべての要素を削除します。 代わりに、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)、例を示します、 `For`.`Next`降順に反復処理するステートメント。 例では、ため、この手法を使用して、`removeAt`メソッドが低いインデックス値が削除された要素の後に要素をによりします。  
   
  [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   

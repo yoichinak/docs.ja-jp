@@ -130,7 +130,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="iterating-through-an-array"></a>配列を反復処理します。
 
-最大最小のインデックスとは、最上位から、配列内の各要素にアクセスする配列を反復処理するときに、最下位にします。 通常、いずれかを使用して、[をしています.次のステートメントの](../../../language-reference/statements/for-next-statement.md)または[ごとにしています.次のステートメントの](../../../language-reference/statements/for-each-next-statement.md)配列の要素を反復処理します。 呼び出すことができますが、配列の上限がわからないときに、<xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>インデックスの最大値を取得します。 最小のインデックス値がほぼ常に 0 を呼び出すことができます、<xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType>インデックスの最小値を取得します。
+最大最小のインデックスとは、最上位から、配列内の各要素にアクセスする配列を反復処理するときに、最下位にします。 通常、いずれかを使用して、[をしています.次のステートメントの](../../../language-reference/statements/for-next-statement.md)または[For Each...Next ステートメント](../../../language-reference/statements/for-each-next-statement.md)配列の要素を反復処理します。 呼び出すことができますが、配列の上限がわからないときに、<xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>インデックスの最大値を取得します。 最小のインデックス値がほぼ常に 0 を呼び出すことができます、<xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType>インデックスの最小値を取得します。
 
 次の例を使用して、1 次元配列を反復処理、 [ `For...Next` ](../../../language-reference/statements/for-next-statement.md)ステートメント。
 
@@ -140,7 +140,7 @@ Dim sales()() As Double = New Double(11)() {}
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
-次の例では、[ごとにしています.次のステートメントの](../../../language-reference/statements/for-each-next-statement.md)1 次元配列と、2 次元配列を反復処理します。
+次の例では、[For Each...Next ステートメント](../../../language-reference/statements/for-each-next-statement.md)1 次元配列と、2 次元配列を反復処理します。
 
 [!code-vb[iterate-for-each-next](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate-for-each-next.vb)]
 

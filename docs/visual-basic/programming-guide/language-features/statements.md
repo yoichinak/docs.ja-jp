@@ -220,7 +220,7 @@ Visual Basic でのステートメントは、完全な命令です。 これは
 
    [!code-vb[VbVbalrLineContinuation#12](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/vbvbalrlinecontinuation/vb/module1.vb#12)]
 
-   詳細については、次を参照してください[ごとにしています...次のステートメントの](../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。
+   詳細については、次を参照してください[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。
 
 - 後に、`From`コレクション初期化子内のキーワード。 例えば:
 

@@ -238,7 +238,7 @@ A [Sub ステートメント](sub-statement.md)でもマークされることが
 
 *反復子*関数は、リストや配列など、コレクションに対するカスタム イテレーションを実行します。 反復子関数を使用して、 [Yield](yield-statement.md)ステートメントを一度に 1 つの各要素を返します。 ときに、 [Yield](yield-statement.md)ステートメントに達すると、コード内の現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。
 
-使用して、クライアント コードから反復子を呼び出す、[ごとにしています.[次へ]](for-each-next-statement.md)ステートメント。
+使用して、クライアント コードから反復子を呼び出す、[For Each...Next](for-each-next-statement.md)ステートメント。
 
 反復子関数の戻り値の型は、 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>、または<xref:System.Collections.Generic.IEnumerator%601>します。
 

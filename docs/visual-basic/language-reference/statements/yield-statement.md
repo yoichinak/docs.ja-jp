@@ -33,7 +33,7 @@ Yield expression
 ## <a name="remarks"></a>Remarks  
  `Yield`ステートメントは、一度にコレクションの 1 つの要素を返します。 `Yield`ステートメントを反復子関数に含めるまたは`Get`アクセサーをコレクションに対するカスタム イテレーションを実行します。  
   
- 使用して、反復子関数を使用する、[ごとにしています.次のステートメントの](../../../visual-basic/language-reference/statements/for-each-next-statement.md)または LINQ クエリ。 各反復処理、`For Each`ループが反復子関数を呼び出します。 ときに、 `Yield` 、反復子関数のステートメントに達する`expression`返されるとコードの現在位置が保持されます。 次回、Iterator 関数が呼び出されると、この位置から実行が再開されます。  
+ 使用して、反復子関数を使用する、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)または LINQ クエリ。 各反復処理、`For Each`ループが反復子関数を呼び出します。 ときに、 `Yield` 、反復子関数のステートメントに達する`expression`返されるとコードの現在位置が保持されます。 次回、Iterator 関数が呼び出されると、この位置から実行が再開されます。  
   
  型からの暗黙的な変換が存在する必要があります`expression`で、`Yield`ステートメントを反復子の戻り値の型。  
   
@@ -80,7 +80,7 @@ Next
  `For Each` ループの以降の各反復処理では、反復子本体の実行が中断した場所から続行し、`Yield` ステートメントに到達したときに再度停止します。 `For Each`ループが完了するときに、反復子関数の末尾または`Return`または`Exit Function`ステートメントに達する。  
   
 ## <a name="example"></a>例  
- 次の例は、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 各反復処理、[各](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント本体で`Main`への呼び出しを作成、 `Power` iterator 関数。 Iterator 関数を呼び出すごとに、`Yield` ステートメントの次の実行に進みます。これは、`For…Next` ループの次の反復処理で行われます。  
+ 次の例は、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 各反復処理、[For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント本体で`Main`への呼び出しを作成、 `Power` iterator 関数。 Iterator 関数を呼び出すごとに、`Yield` ステートメントの次の実行に進みます。これは、`For…Next` ループの次の反復処理で行われます。  
   
  Iterator メソッドの戻り値の型は<xref:System.Collections.Generic.IEnumerable%601>、反復子インターフェイス型。 Iterator メソッドが呼び出されると、数値の累乗を含む列挙可能なオブジェクトが返されます。  
   
