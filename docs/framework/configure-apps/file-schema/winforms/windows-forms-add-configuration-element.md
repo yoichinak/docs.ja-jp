@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 3e3e04de-99d1-4658-b716-44cb669d9589
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eca84aa3a3d7bffaac31cc36ed14e5d5bb5a37cc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 75a66ee7ca1d7c99de6e2cc9a1d502ea58dbf9f7
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775844"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422823"
 ---
 # <a name="windows-forms-add-configuration-element"></a>Windows フォームの構成要素を追加します。
 
@@ -43,7 +43,7 @@ ms.locfileid: "61775844"
 | ---------- | ------ | ----------- |
 | "AnchorLayout.DisableSinglePassControlScaling" | "true"&#124;"false" | 単一のパスで固定されたコントロールをスケーリングするかどうかを示します。 スケーリング、1 つを無効にするには"true"を渡すそれ以外の場合、false です。 「1 つは、スケーリングを渡す」を参照してください、[解説](#remarks)詳細についてはします。 |
 | "DpiAwareness" | "PerMonitorV2"&#124;"false" | アプリケーションが DPI 対応かどうかを示します。 Dpi 対応; をサポートするには、"PerMonitorV2"にキーを設定します。それ以外の場合、"false"に設定します。 DPI 対応は、オプトイン機能です。Windows フォームの高 DPI のサポートを利用するには、"PerMonitorV2"には、その値を設定する必要があります。 参照してください、[解説](#remarks)詳細についてはします。 |
-| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 示すかどうか、<xref:System.Windows.Forms.CheckedListBox>コントロールは、.NET Framework 4.7 で導入されたスケーリングとレイアウトの機能強化を活用します。 caling とレイアウトの改善をオプトアウトするには"true"それ以外の場合、"false"です。 |
+| "CheckedListBox.DisableHighDpiImprovements" | "true"&#124;"false" | 示すかどうか、<xref:System.Windows.Forms.CheckedListBox>コントロールは、.NET Framework 4.7 で導入されたスケーリングとレイアウトの機能強化を活用します。 スケーリングとレイアウトの改善をオプトアウトするには"true"それ以外の場合、"false"です。 |
 | "DataGridView.DisableHighDpiImprovements" | "true"&#124;"false" | 示すかどうか、 <xref:System.Windows.Forms.DataGridView> .NET Framework 4.7 で導入された機能強化が拡大縮小とレイアウトを制御します。 DPI 対応; をオプトアウトするには"true""false"それ以外の場合。 |
 | "DisableDpiChangedMessageHandling" | "true"&#124;"false" | DPI スケール変更に関連するメッセージの受信をオプトアウトするには"true""false"それ以外の場合。 参照してください、[解説](#remarks)詳細についてはします。 |
 | "EnableWindowsFormsHighDpiAutoResizing" | "true"&#124;"false" | Windows フォーム アプリケーションの DPI スケールが変更されたのため自動的にサイズを変更するかどうかを示します。 自動サイズ変更を有効にするのには"true"それ以外の場合、false です。 |

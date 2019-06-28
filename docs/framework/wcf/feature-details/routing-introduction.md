@@ -2,12 +2,12 @@
 title: ルーティングの概要
 ms.date: 03/30/2017
 ms.assetid: bf6ceb38-6622-433b-9ee7-f79bc93497a1
-ms.openlocfilehash: 41545d0340ae222e427d1e6d428ed1e3f7b4fa76
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 478c9aa6563cab4ba7769c56d7084c8716c43c58
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64912489"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425364"
 ---
 # <a name="routing-introduction"></a>ルーティングの概要
 ルーティング サービスは、メッセージの内容を基にメッセージをルーティングできる、プラグ可能な汎用の SOAP 中継局を提供します。 ルーティング サービスを使用すると、サービスの集計、サービスのバージョン管理、優先度ルーティング、マルチキャスト ルーティングなどのシナリオを実装できる複雑なルーティング ロジックを作成できます。 また、ルーティング サービスは、バックアップ エンドポイントのリストを設定できるエラー処理機能も提供します。バックアップ エンドポイントは、プライマリ送信先エンドポイントへの送信時に障害が発生した場合に、メッセージの送信先になります。  
@@ -250,7 +250,7 @@ rc.SoapProcessingEnabled = false;
 ### <a name="dynamic-configuration"></a>動的構成  
  追加のクライアント エンドポイントを追加する場合、またはメッセージのルーティングに使用されるフィルターを変更する必要がある場合は、ルーティング サービスを介してメッセージを現在受信しているエンドポイントへのサービスを中断しないように、実行時に動的に構成を更新できる手段を用意する必要があります。 ホスト アプリケーションの構成ファイルまたはコードを変更するだけでは、不十分な場合があります。どちらの方法にもアプリケーションのリサイクルが必要で、現在転送中のメッセージが失われたり、サービスの再起動の処理中にダウンタイムが発生したりする可能性があるためです。  
   
- のみを変更することができます、 **RoutingConfiguration**プログラムを使用します。 新しく作成することにより実行時に構成を変更できますのみ構成ファイルを使用して、サービスを最初に構成できますが、 **RoutingConfigution**へのパラメーターとして渡すことと、<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>メソッドによって公開されている、<xref:System.ServiceModel.Routing.RoutingExtension>サービスの拡張機能。 現在転送中のすべてのメッセージが呼び出しの後に受信したメッセージの中に、前の構成を使用してルーティングされるようにする続行**ApplyConfiguration**新しい構成を使用します。 次の例では、ルーティング サービスのインスタンスを作成し、次に、構成を変更しています。  
+ のみを変更することができます、 **RoutingConfiguration**プログラムを使用します。 新しく作成することにより実行時に構成を変更できますのみ構成ファイルを使用して、サービスを最初に構成できますが、 **RoutingConfiguration**へのパラメーターとして渡すことと、<xref:System.ServiceModel.Routing.RoutingExtension.ApplyConfiguration%2A>メソッドによって公開されている、<xref:System.ServiceModel.Routing.RoutingExtension>サービスの拡張機能。 現在転送中のすべてのメッセージが呼び出しの後に受信したメッセージの中に、前の構成を使用してルーティングされるようにする続行**ApplyConfiguration**新しい構成を使用します。 次の例では、ルーティング サービスのインスタンスを作成し、次に、構成を変更しています。  
   
 ```csharp  
 RoutingConfiguration routingConfig = new RoutingConfiguration();  

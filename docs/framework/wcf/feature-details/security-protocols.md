@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - security [WCF], protocols
 ms.assetid: 57ffcbea-807c-4e43-a41c-44b3db8ed2af
-ms.openlocfilehash: 9993a7ecb61d9a45d88162fdef488e79b155540c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6212fd911bd5b255347459a1b5a7b2f46e31963e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586850"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425084"
 ---
 # <a name="security-protocols"></a>セキュリティ プロトコル
 Web サービス セキュリティ プロトコルには、既存のエンタープライズ メッセージング セキュリティのあらゆる要件に対応する Web サービス セキュリティ機構が用意されています。 このセクションは、Windows Communication Foundation (WCF) の詳細を説明します (で実装された、 <xref:System.ServiceModel.Channels.SecurityBindingElement>) の次の Web サービス セキュリティ プロトコル。  
@@ -131,7 +131,7 @@ Web サービス セキュリティ プロトコルには、既存のエンタ�
  WCF では、SAML v1.1 トークンの WSS SAML Token profile 1.0 および 1.1 をサポートしています。 SAML トークンの形式のその他のバージョンも実装できます。  
   
 ### <a name="15-security-context-token"></a>1.5 セキュリティ コンテキスト トークン  
- WCF は、セキュリティ コンテキスト トークン (SCT) Ws-securecoversation に導入されたをサポートします。 SCT は、SecureConversation と、後述する TLS および SSPI の各バイナリ ネゴシエーション プロトコルで確立されたセキュリティ コンテキストを表すために使用されます。  
+ WCF は、セキュリティ コンテキスト トークン (SCT)、Ws-secureconversation で導入されたをサポートします。 SCT は、SecureConversation と、後述する TLS および SSPI の各バイナリ ネゴシエーション プロトコルで確立されたセキュリティ コンテキストを表すために使用されます。  
   
 ## <a name="2-common-message-security-parameters"></a>2.一般的なメッセージ セキュリティ パラメーター  
   

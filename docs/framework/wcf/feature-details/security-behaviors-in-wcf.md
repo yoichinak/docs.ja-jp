@@ -2,12 +2,12 @@
 title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: dd59bc97c2f4e2516528a6cbdf40b4c44f4b41eb
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 53d8fedb5f562dfbc4aec566f8d0c442b255e1c9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650230"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424675"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 Windows Communication Foundation (WCF) での動作は、サービス レベルまたはエンドポイント レベルでの実行時の動作を変更します。 (一般に、表示動作の詳細については[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md))。*セキュリティ動作*および監査ログの資格情報、認証、承認、制御できるようにします。 動作は、プログラムまたは構成を通じて使用できます。 ここでは、セキュリティ機能に関連する以下の動作の構成について説明します。  
@@ -25,7 +25,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
 ## <a name="setting-credentials-with-behaviors"></a>動作を使用した資格情報の設定  
  使用して、 [ \<serviceCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/servicecredentials.md)と[ \<clientCredentials >](../../../../docs/framework/configure-apps/file-schema/wcf/clientcredentials.md)サービスまたはクライアントの資格情報の値を設定します。 基になるバインド構成によって、資格情報を設定する必要があるかどうかが決まります。 たとえば、セキュリティ モードが `None` に設定されている場合、クライアントとサービスは相互に認証を行わないため、どの種類の資格情報も必要ありません。  
   
- 一方、サービス バインディングでは、クライアント資格情報の種類が必要になることがあります。 その場合は、動作を使用して資格情報の値を設定することが必要になる場合があります  (資格情報の種類の詳細については、次を参照してください[資格情報の種類を選択する](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)。Windows 資格情報を使用して認証を行う場合などは、実際の資格情報の値が環境によって自動的に設定されるため、資格情報の別のセットを指定する場合を除き、資格情報の値を明示的に設定する必要がないこともあります。  
+ 一方、サービス バインディングでは、クライアント資格情報の種類が必要になることがあります。 その場合は、動作を使用して資格情報の値を設定することが必要になる場合があります (資格情報の種類の詳細については、次を参照してください[資格情報の種類を選択する](../../../../docs/framework/wcf/feature-details/selecting-a-credential-type.md)。)。Windows 資格情報を使用して認証を行う場合などは、実際の資格情報の値が環境によって自動的に設定されるため、資格情報の別のセットを指定する場合を除き、資格情報の値を明示的に設定する必要がないこともあります。  
   
  すべてのサービス資格情報の子要素として見つかった、 [ \<serviceBehaviors >](../../../../docs/framework/configure-apps/file-schema/wcf/servicebehaviors.md)します。 サービス資格情報として使用される証明書を次の例に示します。  
   
@@ -114,7 +114,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
  </endpointBehaviors>  
 ```  
   
-#### <a name="clientcertifictate-element"></a>\<clientCertifictate > 要素  
+#### <a name="clientcertificate-element"></a>\<clientCertificate > 要素  
  この要素で、クライアントの認証に使用する証明書を設定します。 詳細については、「[方法 :クライアント資格情報の値を指定](../../../../docs/framework/wcf/how-to-specify-client-credential-values.md)します。  
   
 #### <a name="httpdigest"></a>\<httpDigest>  

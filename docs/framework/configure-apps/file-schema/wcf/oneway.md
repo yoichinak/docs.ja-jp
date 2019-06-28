@@ -2,12 +2,12 @@
 title: <oneWay>
 ms.date: 03/30/2017
 ms.assetid: 00e67e0e-77c0-4695-9138-c0997b0e5f3c
-ms.openlocfilehash: bfda2b9d7b3aa5219a3e4c344347d3b10419a7bd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2458cdd4d593637c2025047d5dd510f0f89b2a0f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783488"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423087"
 ---
 # <a name="oneway"></a>\<oneWay>
 カスタム バインドのパケット ルーティングを有効にし、一方向メソッドを使用できるようにします。  
@@ -24,7 +24,7 @@ ms.locfileid: "61783488"
 <oneWay packetRoutable="Boolean">
   <channelPoolSettings idleTimeout="TimeSpan"
                        leaseTimeout="TimeSpan"
-                       maxOutboundConnectionsPerEndpopint="Integer" />
+                       maxOutboundConnectionsPerEndpoint="Integer" />
 </oneWay>
 ```  
   

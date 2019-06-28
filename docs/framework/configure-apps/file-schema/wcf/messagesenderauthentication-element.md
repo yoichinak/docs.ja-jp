@@ -2,12 +2,12 @@
 title: <messageSenderAuthentication> 要素
 ms.date: 03/30/2017
 ms.assetid: 8d979dfc-a6f9-42ec-96d5-7fbc13a48118
-ms.openlocfilehash: 410fffd541926b9a2e75c04d26a2a1e08a262939
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 804c280bcdb0fecc87f71121b7d95b5fd0268de9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61764089"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423122"
 ---
 # <a name="messagesenderauthentication-element"></a>\<messageSenderAuthentication > 要素
 ピアツーピア メッセージ送信者の認証オプションを指定します。  
@@ -38,10 +38,10 @@ ms.locfileid: "61764089"
   
 |属性|説明|  
 |---------------|-----------------|  
-|customCertificateValidatorType|カスタム型の検証に使用される型およびアセンブリです。 `certificateValidationMode` が `Custom` に設定されている場合は、この属性を設定する必要があります。|  
-|certifcateValidationMode|資格情報の検証に使用される 3 つのモードのいずれかを指定します。 `Custom` に設定されている場合、`customCertificateValidator` も指定する必要があります。|  
-|revocationMode|証明書失効リスト (CRL) のチェックに使用されるモードのいずれかです。|  
-|trustedStoreLocation|2 つのシステム格納場所 (`LocalMachine` または `CurrentUser`) のいずれかです。 この値は、サービス証明書がクライアントにネゴシエートされるときに使用されます。 に対して検証が実行、**信頼されたユーザー**指定したストアの場所に格納します。|  
+|`customCertificateValidatorType`|カスタム型の検証に使用される型およびアセンブリです。 `certificateValidationMode` が `Custom` に設定されている場合は、この属性を設定する必要があります。|  
+|`certificateValidationMode`|資格情報の検証に使用される 3 つのモードのいずれかを指定します。 `Custom` に設定されている場合、`customCertificateValidator` も指定する必要があります。|  
+|`revocationMode`|証明書失効リスト (CRL) のチェックに使用されるモードのいずれかです。|  
+|`trustedStoreLocation`|2 つのシステム格納場所 (`LocalMachine` または `CurrentUser`) のいずれかです。 この値は、サービス証明書がクライアントにネゴシエートされるときに使用されます。 に対して検証が実行、**信頼されたユーザー**指定したストアの場所に格納します。|  
   
 ## <a name="customcertificatevalidatortype-attribute"></a>customCertificateValidatorType 属性  
   

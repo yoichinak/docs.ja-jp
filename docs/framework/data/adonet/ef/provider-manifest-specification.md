@@ -2,12 +2,12 @@
 title: プロバイダー マニフェストの仕様
 ms.date: 03/30/2017
 ms.assetid: bb450b47-8951-4f99-9350-26f05a4d4e46
-ms.openlocfilehash: 0f3eaa73a26c3f8519e1c168ab2e2968ed4ab28d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9ae528105119241e05be5182db418312c4120112
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64641165"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422719"
 ---
 # <a name="provider-manifest-specification"></a>プロバイダー マニフェストの仕様
 ここでは、データ ストア プロバイダーでデータ ストアの型および関数がどのようにサポートされているかについて説明します。  
@@ -83,9 +83,9 @@ ms.locfileid: "64641165"
  プロバイダー マニフェストは、データ ストア接続またはプロバイダー マニフェスト トークンのいずれかを使用して、ストア メタデータ ローダー (StoreItemCollection) によって読み込まれます。  
   
 #### <a name="using-a-data-store-connection"></a>データ ストア接続を使用する  
- データ ストア接続が使用可能な場合は、DbProvderServices.GetProviderManifestToken を呼び出して GetProviderManifest メソッドに渡されるトークンを返すことで、DbProviderManifest を返します。 このメソッドは、プロバイダーによる GetDbProviderManifestToken の実装に委任されます。  
+ データ ストア接続が利用できる場合は、呼び出す<xref:System.Data.Common.DbProviderServices.GetProviderManifestToken%2A?displayProperty=nameWithType>に渡されるトークンを返す、<xref:System.Data.Common.DbProviderServices.GetProviderManifest%2A>を返すメソッド<xref:System.Data.Common.DbProviderManifest>します。 このメソッドからのプロバイダーの実装にデリゲート`GetDbProviderManifestToken`します。  
   
-```  
+```csharp
 public string GetProviderManifestToken(DbConnection connection);  
 public DbProviderManifest GetProviderManifest(string manifestToken);  
 ```  
@@ -250,15 +250,15 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名前|String|[はい]|N/A|プロバイダー固有のデータ型の名前|  
-|PrimitiveTypeKind|PrimitiveTypeKind|はい|N/A|EDM 型の名前|  
+|Name|String|はい|N/A|プロバイダー固有のデータ型の名前|  
+|PrimitiveTypeKind|PrimitiveTypeKind|[はい]|N/A|EDM 型の名前|  
   
 ###### <a name="function-node"></a>Function ノード  
  各 Function では、プロバイダーを介して使用できる 1 つの関数が定義されています。  
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名前|String|[はい]|N/A|関数の識別子/名前|  
+|Name|String|はい|N/A|関数の識別子/名前|  
 |ReturnType|String|いいえ|Void|関数の戻り値の EDM 型|  
 |Aggregate|ブール型|いいえ|False|関数が集計関数の場合は True|  
 |BuiltIn|ブール型|いいえ|True|関数がデータ ストアに組み込まれている場合は True|  
@@ -272,7 +272,7 @@ public DbProviderManifest GetProviderManifest(string manifestToken);
   
 |属性名|データの種類|必須|既定値|説明|  
 |--------------------|---------------|--------------|-------------------|-----------------|  
-|名前|String|[はい]|N/A|パラメーターの識別子/名前|  
+|Name|String|はい|N/A|パラメーターの識別子/名前|  
 |型|String|[はい]|N/A|パラメーターの EDM 型|  
 |モード|パラメーター<br /><br /> Direction|[はい]|N/A|パラメーターの方向<br /><br /> -で<br />-アウト<br />-inout|  
   

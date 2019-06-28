@@ -2,12 +2,12 @@
 title: '方法: WCF サービスと WSE 3.0 クライアントを相互運用するために構成する'
 ms.date: 03/30/2017
 ms.assetid: 0f38c4a0-49a6-437c-bdde-ad1d138d3c4a
-ms.openlocfilehash: 1c5a5e4e92eedb21e3405370e59344d3b861d1dc
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5034744059e7ed87d4f8b41c6ae89d1af1bf0f56
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64619174"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425399"
 ---
 # <a name="how-to-configure-wcf-services-to-interoperate-with-wse-30-clients"></a>方法: WCF サービスと WSE 3.0 クライアントを相互運用するために構成する
 Windows Communication Foundation (WCF) サービス ワイヤレベルの互換性が Web サービス拡張 3.0 Microsoft .NET (WSE) クライアントの Ws-addressing 仕様の 2004 年 8 月バージョンを使用する WCF サービスが構成されている場合。  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) サービス ワイヤレベルの互換�
   
     3. 認証モードと子を追加することで、WSE 3.0 と互換性があるメッセージをセキュリティで保護するために使用する Ws-security 仕様のバージョン指定[\<セキュリティ >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)を[ \<バインド >](../../../../docs/framework/misc/binding.md)します。  
   
-         認証モードを設定するには、設定、`authenicationMode`の属性、 [\<セキュリティ >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)します。 認証モードは、WSE 3.0 の設定不要のセキュリティ アサーションとほぼ同等です。 次の表では、WSE 3.0 の設定不要のセキュリティ アサーションに WCF での認証モードがマップされます。  
+         認証モードを設定するには、設定、`authenticationMode`の属性、 [\<セキュリティ >](../../../../docs/framework/configure-apps/file-schema/wcf/security-of-custombinding.md)します。 認証モードは、WSE 3.0 の設定不要のセキュリティ アサーションとほぼ同等です。 次の表では、WSE 3.0 の設定不要のセキュリティ アサーションに WCF での認証モードがマップされます。  
   
         |WCF 認証モード|WSE 3.0 の設定不要のセキュリティ アサーション|  
         |-----------------------------|----------------------------------------|  

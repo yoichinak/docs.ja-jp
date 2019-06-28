@@ -3,12 +3,12 @@ title: WIF を使用したクレーム ベースの承認
 ms.date: 03/30/2017
 ms.assetid: e24000a3-8fd8-4c0e-bdf0-39882cc0f6d8
 author: BrucePerlerMS
-ms.openlocfilehash: 0c99053610c8df9b6825c773a09cb1330d1e22f4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9d20f8fbce916a038fc8224492a4077e1978ed8c
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650449"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422366"
 ---
 # <a name="claims-based-authorization-using-wif"></a>WIF を使用したクレーム ベースの承認
 証明書利用者アプリケーションでは、承認によって、認証済み ID がアクセスできるリソースと、そのリソースで実行できる操作が決まります。 承認が不適切だったり弱かったりすると、それは情報漏えいとデータの改ざんにつながります。 ここでは、Windows Identity Foundation (WIF) とセキュリティ トークン サービス (STS)、たとえば Microsoft Azure のアクセス制御サービス (ACS) を使用して、クレーム対応 ASP.NET の Web アプリケーションとサービスの承認を実装する方法の概要を説明します。  
@@ -23,7 +23,7 @@ ms.locfileid: "64650449"
  RBAC による承認では、ユーザーのアクセス許可は、ユーザー ロールに基づいてアプリケーションによって管理および適用されます。 アクションの実行に必要なロールがユーザーにある場合、アクセスは許可され、それ以外の場合は拒否されます。  
   
 ### <a name="iprincipalisinrole-method"></a>IPrincipal.IsInRole メソッド  
- クレーム対応アプリケーションで RBAC アプローチを実装するには、クレーム対応ではないアプリケーションと同じように、**IPrinicpal** インターフェイスで **IsInRole()** メソッドを使用します。 **IsInRole()** メソッドを使用する方法は複数あります。  
+ クレーム対応アプリケーションで RBAC アプローチを実装するために使用して、 **IsInRole()** メソッドで、 **IPrincipal**インターフェイス、クレーム対応アプリケーションの場合と同様です。 **IsInRole()** メソッドを使用する方法は複数あります。  
   
 - **IPrincipal.IsInRole(“Administrator”)** で明示的に呼び出す。 この場合、結果はブール値になります。 これを条件付きステートメントで使用します。 これはコード内のすべての場所で任意に使用できます。  
   

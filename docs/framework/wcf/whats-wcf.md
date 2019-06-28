@@ -6,12 +6,12 @@ helpviewer_keywords:
 - technology overview [WCF]
 - WCF [WCF], technology overview
 ms.assetid: 40e1009d-ef15-450b-9848-62eabe5e5738
-ms.openlocfilehash: 37e12c499b19d196dd695e1e2970d750f4dc9b0e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: a7db79185d4445c68adda214d10be6d31f6ed9e0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402425"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425109"
 ---
 # <a name="what-is-windows-communication-foundation"></a>Windows Communication Foundation とは
 Windows Communication Foundation (WCF) は、サービス指向アプリケーションを構築するためのフレームワークです。 WCF を使用して、できるデータを送信する非同期メッセージとして 1 つのサービス エンドポイントから別です。 サービス エンドポイントには、IIS でホストされている、継続的に使用可能なサービスの一部を使用したり、アプリケーションでホストされているサービスを使用できます。 エンドポイントには、サービス エンドポイントからデータを要求するサービスのクライアントを使用できます。 メッセージは XML として送信された 1 文字または 1 語の簡単なものでも、バイナリ データのストリームのような複雑なものでも構いません。 サンプル シナリオをいくつか挙げます。
@@ -72,7 +72,7 @@ WCF には、次の機能セットが含まれています。 詳細について
 
 - **トランザクション**
 
-     WCF には、次の 3 つのトランザクション モデルのいずれかを使用したトランザクションもサポートしています。Ws-atomicttransactions、Api、<xref:System.Transactions>名前空間、および Microsoft 分散トランザクション コーディネーターです。 詳細については、トランザクションは WCF でのサポートを参照してください[トランザクション](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)です。
+     WCF には、次の 3 つのトランザクション モデルのいずれかを使用したトランザクションもサポートしています。WS AtomicTransactions、Api、<xref:System.Transactions>名前空間、および Microsoft 分散トランザクション コーディネーターです。 詳細については、トランザクションは WCF でのサポートを参照してください[トランザクション](../../../docs/framework/wcf/feature-details/transactions-in-wcf.md)です。
 
 - **AJAX および REST サポート**
 

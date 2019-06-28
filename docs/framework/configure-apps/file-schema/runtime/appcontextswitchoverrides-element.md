@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 4ce07f47-7ddb-4d91-b067-501bd8b88752
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 04f31748fd53fe3281102fcadcc1e56ea3cc1109
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 39060d503a006ab292818b58a6fa71f44dee68a0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307091"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423331"
 ---
 # <a name="appcontextswitchoverrides-element"></a>\<AppContextSwitchOverrides > 要素
 <xref:System.AppContext> クラスで使用される、新機能に対するオプトアウト メカニズムを指定するスイッチを 1 つまたは複数定義します。  
@@ -99,7 +99,7 @@ ms.locfileid: "67307091"
 |`Switch.System.Security.Cryptography.`<br/>`DoNotAddrOfCspParentWindowHandle`|コントロールかどうかの値、 [CspParameters.ParentWindowHandle](xref:System.Security.Cryptography.CspParameters.ParentWindowHandle)プロパティは、 [IntPtr](xref:System.IntPtr)こと表しますウィンドウのメモリ位置を処理するかどうか、ウィンドウ ハンドル (HWND)。 詳細については、「[軽減策:CspParameters.ParentWindowHandle で HWND を](../../../migration-guide/retargeting/4.6.2-4.7.md#cspparametersparentwindowhandle-now-expects-hwnd-value)します。 |.NET Framework 4.7|   
 |`Switch.System.Security.Cryptography.`<br/>`UseLegacyFipsThrow`|管理対象の暗号化の使用が FIPS モードがスローされますクラスかどうかを制御、 <xref:System.Security.Cryptography.CryptographicException> (`true`)、またはシステム ライブラリの実装に依存 (`false`)。|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Pkcs.`<br/>`UseInsecureHashAlgorithms`|SignedCMS のいくつかの操作の既定値は SHA1 または SHA256 であるかどうかを判断します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
-|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|コントロールかどうか、<xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithtype>メソッドは、オペレーティング システムでサポートされているすべての名前付き曲線を正しく処理 (`false`) または従来の動作に戻ります。|.NET Framework 4.8|
+|`Switch.System.Security.Cryptography.X509Certificates.`<br/>`ECDsaCertificateExtensions.UseLegacyPublicKeyReader`|コントロールかどうか、<xref:System.Security.Cryptography.X509Certificates.ECDsaCertificateExtensions.GetECDsaPublicKey%2A?displayProperty=nameWithType>メソッドは、オペレーティング システムでサポートされているすべての名前付き曲線を正しく処理 (`false`) または従来の動作に戻ります。|.NET Framework 4.8|
 |`Switch.System.Security.Cryptography.Xml.`<br/>`UseInsecureHashAlgorithms`|一部の SignedXML 操作の既定値が SHA1 または SHA256 かどうかを判断します。<br>SHA1 との競合問題のため、Microsoft では SHA256 を推奨しています。|.NET Framework 4.7.1|
 |`Switch.System.ServiceModel.`<br/>`AllowUnsignedToHeader`|決定かどうか、`TransportWithMessageCredential`セキュリティ モードで、符号なしのメッセージは、"to"ヘッダー。 これは、オプトイン スイッチです。 詳細については、次を参照してください。 [、.NET Framework 4.6.1 におけるランタイムの変更](../../../migration-guide/runtime/4.5.2-4.6.1.md#windows-communication-foundation-wcf)します。|.NET Framework 4.6.1| 
 |`Switch.System.ServiceModel.`<br/>`DisableAddressHeaderCollectionValidation`>|コントロールかどうか、<xref:System.ServiceModel.Channels.AddressHeaderCollection.%23ctor(System.Collections.Generic.IEnumerable{System.ServiceModel.Channels.AddressHeader})>コンス トラクターがスローされます、<xref:System.ArgumentException>場合は、要素の 1 つ`null`します。|.NET Framework 4.7.1| 
@@ -118,7 +118,7 @@ ms.locfileid: "67307091"
 |`Switch.System.Windows.Controls.Grid.`<br/>`StarDefinitionsCanExceedAvailableSpace` |Windows Presentation Foundation が以前のアルゴリズムを適用するかどうかを指定します (`true`) または新しいアルゴリズム (`false`) 内に領域を割り当てる\*-列。 詳細については、「[軽減策:グリッド コントロールの-column に領域の割り当て](../../../migration-guide/retargeting/4.6.2-4.7.md#wpf-grid-allocation-of-space-to-star-columns)します。 |.NET Framework 4.7 |
 |`Switch.System.Windows.Controls.TabControl.`<br/>`SelectionPropertiesCanLagBehindSelectionChangedEvent`|コントロールの選択範囲を発生させる前に、選択した値のプロパティの値を更新、セレクターまたはタブが常にして制御するかどうかは、イベントを変更します。|.NET Framework 4.7.1|
 |`Switch.System.Windows.Controls.Text.`<br/>`UseAdornerForTextboxSelectionRendering`|非装飾ベースの選択レンダリングが使用できるかどうか、<xref:System.Windows.Controls.TextBox>と<xref:System.Windows.Controls.PasswordBox>閉塞文字列を表示するコントロール (`false`)、装飾層のみのテキストをレンダリングするかどうか、または (`true`)。|.NET Framework 4.7.2|
-|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|カスタムの IList インデクサーの使用が正しくないかどうかを制御する (`false`)、または正しく (`true`) によって、<xref:System.Windows.Data.Binding?displayProperty=nameWithtype>クラス。|.NET Framework 4.8|
+|`Switch.System.Windows.Data.Binding.`<br/>`IListIndexerHidesCustomIndexer`|カスタムの IList インデクサーの使用が正しくないかどうかを制御する (`false`)、または正しく (`true`) によって、<xref:System.Windows.Data.Binding?displayProperty=nameWithType>クラス。|.NET Framework 4.8|
 |`Switch.System.Windows.DoNotScaleForDpiChanges`|システムごとの DPI 変更が発生するかどうかを決定します (値の`false`) またはモニターごとの単位 (値の`true`)。|.NET Framework 4.6.2|
 |`Switch.System.Windows.`<br/>`DoNotUsePresentationDpiCapabilityTier2OrGreater`|コントロールかどうかのコントロールのサイズ変更の機能強化、<xref:System.Windows.Interop.HwndHost?displayProperty=nameWithType>モニターごとの認識モードでの WPF の実行時は無効になります (`true`) または有効になっている (`false`)。|.NET Framework 4.8|
 |`Switch.System.Windows.Forms.`<br/>`DomainUpDown.UseLegacyScrolling`|開発者が特別に処理する必要があるかどうかを決定、<xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType>コントロールのテキストが存在する場合のアクション。 `true` 処理するために、<xref:System.Windows.Forms.DomainUpDown.UpButton>アクション。`false`の<xref:System.Windows.Forms.DomainUpDown.UpButton?displayProperty=nameWithType>と<xref:System.Windows.Forms.DomainUpDown.DownButton?displayProperty=nameWithType>を正しく同期するアクション。|.NET Framework 4.7.2|

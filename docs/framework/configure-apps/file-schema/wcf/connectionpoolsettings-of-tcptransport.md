@@ -2,12 +2,12 @@
 title: <connectionPoolSettings> の <tcpTransport>
 ms.date: 03/30/2017
 ms.assetid: 2fbc3aa7-fcc9-4193-99a3-85d31d60d3f7
-ms.openlocfilehash: 93363c5ff1753ff02956404da7697780078c9839
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c17184445aa5cec8a5121252934574add2b3db0
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61673239"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423155"
 ---
 # <a name="connectionpoolsettings-of-tcptransport"></a>\<connectionPoolSettings > の\<tcpTransport >
 TCP トランスポートの追加の接続プール設定を指定します。  
@@ -25,7 +25,7 @@ TCP トランスポートの追加の接続プール設定を指定します。
 <connectionPoolSettings groupName="String"
                         idleTimeout="TimeSpan"
                         leaseTimeout="TimeSpan"
-                        maxOutboundConnectionsPerEndpopint="Integer" />
+                        maxOutboundConnectionsPerEndpoint="Integer" />
 ```  
   
 ## <a name="attributes-and-elements"></a>属性および要素  

@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - managed HTML DOM [Windows Forms], changing styles on elements
 ms.assetid: 154e8d9f-3e2d-4e8b-a6f3-c85a070e9cc1
-ms.openlocfilehash: 804041991199dd2722e3a0f38800bafd8933bbab
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 728bc77db959e25fe31d2ff37288b2359dca852e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61608399"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424591"
 ---
 # <a name="how-to-change-styles-on-an-element-in-the-managed-html-document-object-model"></a>方法: マネージド HTML DOM (Document Object Model) の要素のスタイルを変更する
 
@@ -22,11 +22,11 @@ Html 形式でスタイルを使用すると、ドキュメントとその要素
 
 ここでは、`DIV`フォントを Arial およびすべてのテキストを太字に設定するスタイル文字列を含む。
 
-`<DIV style="font-face:arial;font-weight:bold;">`
-
-`Hello, world!`
-
-`</DIV>`
+```html
+<DIV style="font-face:arial;font-weight:bold;">
+Hello, world!
+</DIV>
+```
 
 操作を使用したスタイルの問題、<xref:System.Windows.Forms.HtmlElement.Style%2A>プロパティが煩雑に追加し、文字列から個別のスタイル設定を削除することが検証されます。 たとえば、上にカーソルを置くときに、以前のテキストに斜体をレンダリングするための複雑な手順はなります、 `DIV`、斜体オフから離したときに、カーソルを取得し、`DIV`します。 この方法でスタイルの数が多いを操作する必要がある場合は、時間を問題になります。
 
@@ -63,19 +63,20 @@ Html 形式でスタイルを使用すると、ドキュメントとその要素
 6. プロジェクトのコード ファイルに次のコードを追加します。
 
     > [!IMPORTANT]
-    >  いることを確認、`webBrowser1_DocumentCompleted`のリスナーとしてイベント ハンドラーが構成されている、<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>イベント。 Visual Studio でのダブルクリック、<xref:System.Windows.Forms.WebBrowser>制御は、テキスト エディターで、リスナーをプログラムで構成します。  
-  
+    > いることを確認、`webBrowser1_DocumentCompleted`のリスナーとしてイベント ハンドラーが構成されている、<xref:System.Windows.Forms.WebBrowser.DocumentCompleted>イベント。 Visual Studio でのダブルクリック、<xref:System.Windows.Forms.WebBrowser>制御は、テキスト エディターで、リスナーをプログラムで構成します。
+
      [!code-csharp[ManagedDOMStyles#2](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/Form1.cs#2)]
-     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]  
-  
-7. プロジェクトを実行します。 最初の上にカーソルを実行`DIV`コードの効果を確認します。  
-  
-## <a name="example"></a>例  
- 次のコード例の完全なコードを示しています、`StyleGenerator`クラスは、既存のスタイル値を解析するには、追加すると、変更、およびおよびサポートを削除するスタイル、要求された変更を新しいスタイルの値を返します。  
-  
- [!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
- [!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]  
-  
+     [!code-vb[ManagedDOMStyles#2](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/Form1.vb#2)]
+
+7. プロジェクトを実行します。 最初の上にカーソルを実行`DIV`コードの効果を確認します。
+
+## <a name="example"></a>例
+
+次のコード例の完全なコードを示しています、`StyleGenerator`クラスは、既存のスタイル値を解析するには、追加すると、変更、およびおよびサポートを削除するスタイル、要求された変更を新しいスタイルの値を返します。
+
+[!code-csharp[ManagedDOMStyles#1](~/samples/snippets/csharp/VS_Snippets_Winforms/ManagedDOMStyles/CS/StyleGenerator.cs#1)]
+[!code-vb[ManagedDOMStyles#1](~/samples/snippets/visualbasic/VS_Snippets_Winforms/ManagedDOMStyles/VB/StyleGenerator.vb#1)]
+
 ## <a name="see-also"></a>関連項目
 
 - <xref:System.Windows.Forms.HtmlElement>

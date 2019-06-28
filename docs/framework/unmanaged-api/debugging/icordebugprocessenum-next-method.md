@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c298107983f4835569cfee7503537537ad11a165
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e9f32b554de191ff84e7c319e2a00e3cd0610a9f
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61783001"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422198"
 ---
 # <a name="icordebugprocessenumnext-method"></a>ICorDebugProcessEnum::Next メソッド
 現在の位置から始まり、列挙体から ICorDebugProcess インスタンスの指定した数を取得します。  
@@ -42,14 +42,14 @@ HRESULT Next (
  `celt`  
  [in]数`ICorDebugProcess`インスタンスを取得します。  
   
- `processess`  
+ `processes`  
  [out]それぞれが指すポインターの配列、`ICorDebugProcess`プロセスを表すオブジェクト。  
   
  `pceltFetched`  
  [out]数へのポインター`ICorDebugProcess`インスタンスが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

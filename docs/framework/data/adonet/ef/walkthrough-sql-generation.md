@@ -2,12 +2,12 @@
 title: 'チュートリアル: SQL 生成'
 ms.date: 03/30/2017
 ms.assetid: 16c38aaa-9927-4f3c-ab0f-81636cce57a3
-ms.openlocfilehash: 380ab80a577fa103c33328047cd24cce6be5cb6e
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 5d8723c6a6d1ab12a2ba1f0f2f7cd5e09e82bfad
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66690349"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422772"
 ---
 # <a name="walkthrough-sql-generation"></a>チュートリアル: SQL 生成
 
@@ -128,7 +128,7 @@ Join1 の右辺の入力にアクセスする前に、"LEFT OUTER JOIN" が Sele
 
 ![図](../../../../../docs/framework/data/adonet/ef/media/cd2afa99-7256-4c63-aaa9-c2d13f18a3d8.gif "cd2afa99-7256-4c63-aaa9-c2d13f18a3d8")
 
-次に、"false" が IsParentAJoin スタックにプッシュされ、結合条件である Var(Extent1).CategoryID == Var(Extent2).CategoryID が処理されます。 Var(Extenent1) に解決される\<symbol_Extent1 > シンボル テーブルの検索後にします。 インスタンスが Var(Extent1) の処理結果として、単純なシンボルに解決します。CategoryID、と共に SqlBuilder \<symbol1 >."CategoryID"が返されます。 同様に比較の右辺が処理され、結合条件へのアクセス結果が SelectStatement1 の FROM 句に追加され、値 "false" が IsParentAJoin スタックからポップされます。
+次に、"false" が IsParentAJoin スタックにプッシュされ、結合条件である Var(Extent1).CategoryID == Var(Extent2).CategoryID が処理されます。 Var(Extent1) に解決される\<symbol_Extent1 > シンボル テーブルの検索後にします。 インスタンスが Var(Extent1) の処理結果として、単純なシンボルに解決します。CategoryID、と共に SqlBuilder \<symbol1 >."CategoryID"が返されます。 同様に比較の右辺が処理され、結合条件へのアクセス結果が SelectStatement1 の FROM 句に追加され、値 "false" が IsParentAJoin スタックからポップされます。
 
 これで Join1 の処理が完了し、スコープがシンボル テーブルからポップされます。
 
