@@ -11,34 +11,34 @@ ms.locfileid: "64642281"
 ---
 # <a name="iterators-visual-basic"></a>反復子 (Visual Basic)
 *反復子*を使用して、リストや配列などのコレクションをステップ実行することができます。  
+
+ 反復子メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 反復子メソッドは[Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを使用して、各要素を一度に 1 つずつ返します。 `Yield` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、反復子メソッドが呼び出されると、この位置から実行が再開されます。
+
+ [For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント、または LINQ クエリを使って、クライアント コードから反復子を使用します。
+
+ 次の例では、`For Each` ループの最初の繰り返しにより、最初の `Yield` ステートメントに達するまで `SomeNumbers` 反復子メソッドで実行が続行されます。 このイテレーションは 3 の値を返し、反復子メソッドの現在の場所が保持されます。 ループの次の繰り返しでは、反復子メソッドの実行が中断した場所から続行し、`Yield` ステートメントに達したときに再度停止します。 このイテレーションは 5 の値を返し、ここでも反復子メソッドの現在の場所が保持されます。 反復子メソッドの最後に達すると、ループが完了します。
+
+```vb
+Sub Main()
+    For Each number As Integer In SomeNumbers()
+        Console.Write(number & " ")
+    Next
+    ' Output: 3 5 8 
+    Console.ReadKey()
+End Sub
+
+Private Iterator Function SomeNumbers() As System.Collections.IEnumerable
+    Yield 3
+    Yield 5
+    Yield 8
+End Function
+```
   
- iterator メソッドまたは `get` アクセサーは、コレクションに対するカスタム イテレーションを実行します。 反復子メソッドを使用して、 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを一度に 1 つの各要素を返します。 `Yield` ステートメントに達すると、コードの現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。  
+ 反復子メソッドまたは `get` アクセサーの戻り値の型は、<xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator>、または <xref:System.Collections.Generic.IEnumerator%601> となります。
   
- 使用してクライアント コードから反復子を使用する、[For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント、または LINQ クエリを使用しています。  
+ `Exit Function`または`Return`ステートメントを使用することで、反復を終了することができます。
   
- 次の例では、`For Each` ループの最初の反復子により、最初の `Yield` ステートメントに達するまで `SomeNumbers` iterator メソッドで実行が続行されます。 このイテレーションは 3 の値を返し、iterator メソッドの現在の場所が保持されます。 ループの次のイテレーションでは、iterator メソッドの実行が中断した場所から続行し、`Yield` ステートメントに達したときに再度停止します。 このイテレーションは 5 の値を返し、ここでも iterator メソッドの現在の場所が保持されます。 iterator メソッドの最後に達すると、ループが完了します。  
-  
-```vb  
-Sub Main()  
-    For Each number As Integer In SomeNumbers()  
-        Console.Write(number & " ")  
-    Next  
-    ' Output: 3 5 8  
-    Console.ReadKey()  
-End Sub  
-  
-Private Iterator Function SomeNumbers() As System.Collections.IEnumerable  
-    Yield 3  
-    Yield 5  
-    Yield 8  
-End Function  
-```  
-  
- Iterator メソッドまたは `get` アクセサーの戻り値の型は、<xref:System.Collections.IEnumerable>、<xref:System.Collections.Generic.IEnumerable%601>、<xref:System.Collections.IEnumerator>、または <xref:System.Collections.Generic.IEnumerator%601> となります。  
-  
- 使用することができます、`Exit Function`または`Return`ステートメント、反復を終了します。  
-  
- Visual Basic の反復子関数または`get`アクセサー宣言に含まれる、[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)修飾子。  
+ Visual Basic の反復子メソッドまたは`get`アクセサー宣言には、[反復子](../../../visual-basic/language-reference/modifiers/iterator.md)修飾子が含まれます。  
   
  反復子は、Visual Studio 2012 の Visual Basic に導入されました。  
   

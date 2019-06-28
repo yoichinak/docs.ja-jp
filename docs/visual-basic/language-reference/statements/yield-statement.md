@@ -16,7 +16,7 @@ ms.lasthandoff: 04/28/2019
 ms.locfileid: "64615063"
 ---
 # <a name="yield-statement-visual-basic"></a>Yield ステートメント (Visual Basic)
-コレクションの次の要素の送信、`For Each...Next`ステートメント。  
+コレクションの次の要素を`For Each...Next`ステートメントに送信します。
   
 ## <a name="syntax"></a>構文  
   
@@ -26,22 +26,22 @@ Yield expression
   
 ## <a name="parameters"></a>パラメーター  
   
-|用語|定義|  
-|---|---|  
-|`expression`|必須。 反復子関数の型に暗黙的に変換される式または`Get`アクセサーを含む、`Yield`ステートメント。|  
+|用語|定義|
+|---|---|
+|`expression`|必須。 `Yield`ステートメントを含む反復子メソッドまたは`Get`アクセサーの型に、暗黙的に変換できる式。|
   
-## <a name="remarks"></a>Remarks  
- `Yield`ステートメントは、一度にコレクションの 1 つの要素を返します。 `Yield`ステートメントを反復子関数に含めるまたは`Get`アクセサーをコレクションに対するカスタム イテレーションを実行します。  
+## <a name="remarks"></a>Remarks
+ `Yield`ステートメントは、一度に 1 つのコレクションの要素を返します。 `Yield`ステートメントは、コレクションに対するカスタム イテレーションを実行する反復子メソッドまたは`Get`アクセサーに含まれます。  
   
- 使用して、反復子関数を使用する、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)または LINQ クエリ。 各反復処理、`For Each`ループが反復子関数を呼び出します。 ときに、 `Yield` 、反復子関数のステートメントに達する`expression`返されるとコードの現在位置が保持されます。 次回、Iterator 関数が呼び出されると、この位置から実行が再開されます。  
+ [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)または LINQ クエリを使用して、反復子メソッドを使用します。 `For Each`ループの繰り返しごとに反復子メソッドを呼び出します。 反復子メソッドが`Yield` ステートメントに達するときに、`expression`が返され、コードの現在位置が保持されます。 次回、反復子メソッドが呼び出されると、この位置から実行が再開されます。  
   
- 型からの暗黙的な変換が存在する必要があります`expression`で、`Yield`ステートメントを反復子の戻り値の型。  
+ `Yield`ステートメントの`expression`の型から、反復子の戻り値の型への、暗黙的な変換が存在する必要があります。  
   
- 使用することができます、`Exit Function`または`Return`ステートメント、反復を終了します。  
+ `Exit Function`または`Return`ステートメントを使用することで、反復を終了できます。
   
- "Yield"予約語ではないで使用されている場合にのみ、特別な意味を持つ、`Iterator`関数または`Get`アクセサー。  
+ "Yield"は予約語ではなく、`Iterator`関数または`Get`アクセサー内で使用されている場合にのみ、特別な意味を持ちます。
   
- 反復子関数の詳細については、`Get`アクセサーを参照してください[反復子](../../programming-guide/concepts/iterators.md)します。  
+ 反復子メソッドまたは`Get`アクセサーの詳細については、[反復子](../../programming-guide/concepts/iterators.md)を参照してください。  
   
 ## <a name="iterator-functions-and-get-accessors"></a>反復子関数と Get アクセサー  
  反復子関数の宣言または`Get`アクセサーは、次の要件を満たす必要があります。  
@@ -79,10 +79,10 @@ Next
   
  `For Each` ループの以降の各反復処理では、反復子本体の実行が中断した場所から続行し、`Yield` ステートメントに到達したときに再度停止します。 `For Each`ループが完了するときに、反復子関数の末尾または`Return`または`Exit Function`ステートメントに達する。  
   
-## <a name="example"></a>例  
- 次の例は、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 各反復処理、[For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント本体で`Main`への呼び出しを作成、 `Power` iterator 関数。 Iterator 関数を呼び出すごとに、`Yield` ステートメントの次の実行に進みます。これは、`For…Next` ループの次の反復処理で行われます。  
+## <a name="example"></a>例
+ 次の例は、[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ループ内に`Yield`ステートメントがあります。 `Main`の[For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント本体の繰り返しごとに、`Power` 反復子メソッドへの呼び出しを作成します。 反復子メソッドを呼び出すごとに、`Yield` ステートメントの次の実行に進みます。これは、`For...Next` ループの次の繰り返しで行われます。  
   
- Iterator メソッドの戻り値の型は<xref:System.Collections.Generic.IEnumerable%601>、反復子インターフェイス型。 Iterator メソッドが呼び出されると、数値の累乗を含む列挙可能なオブジェクトが返されます。  
+ 反復子メソッドの戻り値の型は、反復子インターフェイス型の<xref:System.Collections.Generic.IEnumerable%601>です。 反復子メソッドが呼び出されると、数値の累乗を含む列挙可能なオブジェクトが返されます。
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   

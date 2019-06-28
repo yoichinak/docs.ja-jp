@@ -234,13 +234,13 @@ A [Sub ステートメント](sub-statement.md)でもマークされることが
 
 詳細については`Async`関数を参照してください[Async および Await を使用した非同期プログラミング](../../../visual-basic/programming-guide/concepts/async/index.md)、[非同期プログラムにおける制御フロー](../../../visual-basic/programming-guide/concepts/async/control-flow-in-async-programs.md)、および[Async 戻り値の型](../../../visual-basic/programming-guide/concepts/async/async-return-types.md).
 
-## <a name="iterator-functions"></a>反復子関数
+## <a name="iterator-functions"></a>反復子メソッド
 
-*反復子*関数は、リストや配列など、コレクションに対するカスタム イテレーションを実行します。 反復子関数を使用して、 [Yield](yield-statement.md)ステートメントを一度に 1 つの各要素を返します。 ときに、 [Yield](yield-statement.md)ステートメントに達すると、コード内の現在の場所が記憶されます。 次回、iterator 関数が呼び出されると、この位置から実行が再開されます。
+*反復子*メソッドは、リストや配列など、コレクションに対するカスタム イテレーションを実行します。 反復子メソッドは[Yield](yield-statement.md)ステートメントを使用して、各要素を一度に 1 つ返します。 [Yield](yield-statement.md)ステートメントに達すると、コード内の現在の場所が記憶されます。 次回、反復子メソッドが呼び出されると、この位置から実行が再開されます。
 
-使用して、クライアント コードから反復子を呼び出す、[For Each...Next](for-each-next-statement.md)ステートメント。
+[For Each...Next](for-each-next-statement.md)ステートメントを使用して、クライアント コードから反復子を呼び出します。
 
-反復子関数の戻り値の型は、 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>、または<xref:System.Collections.Generic.IEnumerator%601>します。
+反復子メソッドの戻り値の型は、 <xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>、または<xref:System.Collections.Generic.IEnumerator%601>です。
 
 詳細については、「 [反復子](../../programming-guide/concepts/iterators.md)」を参照してください。
 
