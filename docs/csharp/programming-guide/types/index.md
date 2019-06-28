@@ -12,12 +12,12 @@ helpviewer_keywords:
 - C# language, types
 - strong typing [C#]
 ms.assetid: f782d7cc-035e-4500-b1b1-36a9881130ad
-ms.openlocfilehash: 796dbb012426cdaea7828afeea4fba15f57095c6
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 65a7fbb2ef8fd24e80b4ccf979a7f3fc7cf19934
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67398093"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423639"
 ---
 # <a name="types-c-programming-guide"></a>型 (C# プログラミング ガイド)
 
@@ -39,12 +39,12 @@ C# は、厳密に型指定された言語です。 すべての変数および�
 
 - 許可される演算の種類。
 
-コンパイラは型情報を使用して、コード内で実行されるすべての演算が "*タイプ セーフ*" であることを確認します。 たとえば、[int](../../../csharp/language-reference/keywords/int.md) 型の変数を宣言すると、その変数は加算演算と減算演算で使用できます。 同じ演算を [bool](../../../csharp/language-reference/keywords/bool.md) 型の変数に対して実行しようとすると、コンパイラで次の例のようなエラーが発生します。
+コンパイラは型情報を使用して、コード内で実行されるすべての演算が "*タイプ セーフ*" であることを確認します。 たとえば、[int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) 型の変数を宣言すると、その変数は加算演算と減算演算で使用できます。 同じ演算を [bool](../../../csharp/language-reference/keywords/bool.md) 型の変数に対して実行しようとすると、コンパイラで次の例のようなエラーが発生します。
 
 [!code-csharp[csProgGuideTypes#42](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#42)]
 
 > [!NOTE]
-> C や C++ と異なり、C# では、[bool](../../../csharp/language-reference/keywords/bool.md) を [int](../../../csharp/language-reference/keywords/int.md) に変換することはできません。
+> C や C++ と異なり、C# では、[bool](../../../csharp/language-reference/keywords/bool.md) を [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) に変換することはできません。
 
 コンパイラは、型情報を実行可能ファイル内にメタデータとして埋め込みます。 共通言語ランタイム (CLR: Common Language Runtime) は、実行時にこのメタデータを使用して、メモリの割り当て時および再要求時に、タイプ セーフであるかどうかを再度確認します。
 
@@ -54,11 +54,11 @@ C# は、厳密に型指定された言語です。 すべての変数および�
 
 [!code-csharp[csProgGuideTypes#36](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#36)]
 
-メソッドのパラメーターおよび戻り値の型は、メソッド シグネチャで指定します。 入力引数として [int](../../../csharp/language-reference/keywords/int.md) を使用する必要があり、戻り値として文字列を返すメソッドのシグネチャを次に示します。
+メソッドのパラメーターおよび戻り値の型は、メソッド シグネチャで指定します。 入力引数として [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) を使用する必要があり、戻り値として文字列を返すメソッドのシグネチャを次に示します。
 
 [!code-csharp[csProgGuideTypes#35](~/samples/snippets/csharp/VS_Snippets_VBCSharp/CsProgGuideTypes/CS/Class1.cs#35)]
 
-変数を宣言すると、新しい型を使用してその変数を再度宣言することはできず、宣言された型と互換性のない値をその変数に代入することはできません。 たとえば、[int](../../../csharp/language-reference/keywords/int.md) を宣言してから、それに [true](../../../csharp/language-reference/keywords/true-literal.md) のブール値を代入することはできません。 ただし、たとえば新しい変数に代入するときや、メソッドの引数として渡すときに、値を他の型に変換することは可能です。 データの損失を伴わない "*型変換*" は、コンパイラによって自動的に実行されます。 データの損失を伴う可能性のある変換には、ソース コードに *cast* を記述する必要があります。
+変数を宣言すると、新しい型を使用してその変数を再度宣言することはできず、宣言された型と互換性のない値をその変数に代入することはできません。 たとえば、[int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) を宣言してから、それに [true](../../../csharp/language-reference/keywords/true-literal.md) のブール値を代入することはできません。 ただし、たとえば新しい変数に代入するときや、メソッドの引数として渡すときに、値を他の型に変換することは可能です。 データの損失を伴わない "*型変換*" は、コンパイラによって自動的に実行されます。 データの損失を伴う可能性のある変換には、ソース コードに *cast* を記述する必要があります。
 
 詳細については、「[キャストと型変換](../../../csharp/programming-guide/types/casting-and-type-conversions.md)」を参照してください。
 
@@ -74,7 +74,7 @@ C# には、整数、浮動小数点値、ブール式、テキスト文字、10
 
 .NET で型システムを使用する場合は、次の 2 つの基本事項を理解しておく必要があります。
 
-- 継承の原則がサポートされています。 他の型から型を派生させることができます。派生元の型は "*基本型*" と呼ばれます。 派生した型は、基本型のメソッド、プロパティ、およびその他のメンバーを (若干の制限付きで) 継承します。 基本型もなんらかの他の型から派生できます。この場合、派生した型はその継承階層内の両方の基本型のメンバーを継承します。 <xref:System.Int32?displayProperty=nameWithType> (C# のキーワードは [int](../../../csharp/language-reference/keywords/int.md)) などの組み込み数値型を含むすべての型は、最終的に <xref:System.Object?displayProperty=nameWithType> (C# のキーワードは [object](../../../csharp/language-reference/keywords/object.md)) という単一の基本型から派生します。 この一元化された型階層は、[共通型システム](../../../standard/base-types/common-type-system.md) (CTS) と呼ばれます。 C# での継承の詳細については、「[継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)」を参照してください。
+- 継承の原則がサポートされています。 他の型から型を派生させることができます。派生元の型は "*基本型*" と呼ばれます。 派生した型は、基本型のメソッド、プロパティ、およびその他のメンバーを (若干の制限付きで) 継承します。 基本型もなんらかの他の型から派生できます。この場合、派生した型はその継承階層内の両方の基本型のメンバーを継承します。 <xref:System.Int32?displayProperty=nameWithType> (C# のキーワードは [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)) などの組み込み数値型を含むすべての型は、最終的に <xref:System.Object?displayProperty=nameWithType> (C# のキーワードは [object](../../../csharp/language-reference/keywords/object.md)) という単一の基本型から派生します。 この一元化された型階層は、[共通型システム](../../../standard/base-types/common-type-system.md) (CTS) と呼ばれます。 C# での継承の詳細については、「[継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)」を参照してください。
 
 - CTS の各型は、"*値型*" または "*参照型*" として定義されます。 これは、.NET クラス ライブラリのすべてのカスタムの型や、ユーザーが独自に定義した型にも当てはまります。 [struct](../../../csharp/language-reference/keywords/struct.md) キーワードを使用して定義した型は値型であり、すべての組み込み数値型は `structs` です。 [class](../../../csharp/language-reference/keywords/class.md) キーワードを使用して定義した型は、参照型です。 参照型と値型では、コンパイル時の規則や実行時の動作が異なります。
 
@@ -205,4 +205,4 @@ stringList.Add(4);
 - [C# リファレンス](../../../csharp/language-reference/index.md)
 - [C# プログラミング ガイド](../../../csharp/programming-guide/index.md)
 - [XML データ型の変換](../../../standard/data/xml/conversion-of-xml-data-types.md)
-- [整数型の一覧表](../../../csharp/language-reference/keywords/integral-types-table.md)
+- [整数型](../../language-reference/builtin-types/integral-numeric-types.md)
