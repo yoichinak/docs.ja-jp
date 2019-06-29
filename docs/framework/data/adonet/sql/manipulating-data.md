@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 51096a2e-8b38-4c4d-a523-799bfdb7ec69
-ms.openlocfilehash: fb71fe7abb5f70022e39808369779274eda2a7f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f964d85656c5336de189433e74aaacaaea2b094b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61923111"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422636"
 ---
 # <a name="manipulating-data"></a>データの操作
 複数のアクティブな結果セット (MARS : Multiple Active Result Set) の導入前は、開発者は複数の接続またはサーバー側のカーソルのいずれかを使用して特定のシナリオを解決しなければなりませんでした。 さらに、複数の接続、トランザクションの状況で使用されていたときにバインドされた接続 (で**sp_getbindtoken**と**sp_bindsession**) が必要でした。 以下のシナリオでは、複数の接続の代わりに MARS の有効な接続の使い方について説明します。  
@@ -85,7 +85,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=(local);Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks; MultipleActiveResultSets=True"  
   End Function  
@@ -156,7 +156,7 @@ static void Main()
   private static string GetConnectionString()  
   {  
     // To avoid storing the connection string in your code,  
-    // you can retrive it from a configuration file.  
+    // you can retrieve it from a configuration file.  
     return "Data Source=(local);Integrated Security=SSPI;" +   
       "Initial Catalog=AdventureWorks;MultipleActiveResultSets=True";  
   }  
@@ -276,7 +276,7 @@ Module Module1
   
   Function GetConnectionString() As String  
     ' To avoid storing the connection string in your code,  
-    ' you can retrive it from a configuration file.  
+    ' you can retrieve it from a configuration file.  
     Return "Data Source=(local);Integrated Security=SSPI;" & _  
       "Initial Catalog=AdventureWorks;MultipleActiveResultSets=True"  
   End Function  
@@ -394,7 +394,7 @@ static void Main()
 private static string GetConnectionString()  
 {  
   // To avoid storing the connection string in your code,  
-  // you can retrive it from a configuration file.  
+  // you can retrieve it from a configuration file.  
   return "Data Source=(local);Integrated Security=SSPI;" +   
     "Initial Catalog=AdventureWorks;" +   
     "MultipleActiveResultSets=True";  
