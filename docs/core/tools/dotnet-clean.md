@@ -1,13 +1,13 @@
 ---
 title: dotnet clean コマンド
 description: dotnet clean コマンドは現在のディレクトリを消去します。
-ms.date: 04/14/2019
-ms.openlocfilehash: fa19f1b041e4031082f928135395a5f06ce702e9
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 36630c046ff8f1ad8d513b4e64cfb74a8625776b
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631820"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67422020"
 ---
 # <a name="dotnet-clean"></a>dotnet clean
 
@@ -24,7 +24,8 @@ ms.locfileid: "65631820"
 ## <a name="synopsis"></a>構文
 
 ```
-dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] [-o|--output] [-r|--runtime] [-v|--verbosity]
+dotnet clean [<PROJECT>|<SOLUTION>] [-c|--configuration] [-f|--framework] [--interactive] 
+    [--nologo] [-o|--output] [-r|--runtime] [-v|--verbosity]
 dotnet clean [-h|--help]
 ```
 
@@ -55,6 +56,10 @@ dotnet clean [-h|--help]
 * **`--interactive`**
 
   コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 .NET Core 3.0 SDK 以降で使用できます。
+
+* **`--nologo`**
+
+  著作権情報を表示しません。 .NET Core 3.0 SDK 以降で使用できます。
 
 * **`-o|--output <OUTPUT_DIRECTORY>`**
 

@@ -8,12 +8,12 @@ dev_langs:
 - csharp
 - vb
 ms.custom: vs-dotnet, seodoc18
-ms.openlocfilehash: 352599d60a42a034b3d6647b1fe8f1cbf2f4572d
-ms.sourcegitcommit: 438919211260bb415fc8f96ca3eabc33cf2d681d
+ms.openlocfilehash: 32593465c1a161aa1293b7b233539fa930c7e1d8
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/16/2019
-ms.locfileid: "59612005"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402209"
 ---
 # <a name="test-a-net-standard-library-with-net-core-in-visual-studio-2017"></a>Visual Studio 2017 での .NET Core を使用した .NET Standard ライブラリのテスト
 
@@ -24,9 +24,9 @@ ms.locfileid: "59612005"
 単体テスト プロジェクトを作成するには、次の操作を行います。
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
-1. **ソリューション エクスプローラー**で **[ClassLibraryProjects]** ソリューション ノードのコンテキスト メニューを開き、**[追加]** > **[新しいプロジェクト]** の順に選択します。
+1. **ソリューション エクスプローラー**で **[ClassLibraryProjects]** ソリューション ノードのコンテキスト メニューを開き、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 
-1. **[新しいプロジェクトの追加]** ダイアログで、**[Visual C#]** ノードを選択します。 次に、**[.NET Core]** ノードを選び、**[MSTest テスト プロジェクト (.NET Core)]** プロジェクト テンプレートを選びます。 **[名前]** テキスト ボックスに、プロジェクト名として "StringLibraryTest" と入力します。 **[OK]** を選択し、単体テスト プロジェクトを作成します。
+1. **[新しいプロジェクトの追加]** ダイアログで、 **[Visual C#]** ノードを選択します。 次に、 **[.NET Core]** ノードを選び、 **[MSTest テスト プロジェクト (.NET Core)]** プロジェクト テンプレートを選びます。 **[名前]** テキスト ボックスに、プロジェクト名として "StringLibraryTest" と入力します。 **[OK]** を選択し、単体テスト プロジェクトを作成します。
 
    ![単体テスト プロジェクトが表示された [新しいプロジェクトの追加] ダイアログ - C#](./media/testing-library-with-visual-studio/create-new-test-project.png)
 
@@ -49,13 +49,13 @@ ms.locfileid: "59612005"
 
    ![StringLibraryTest の依存関係のコンテキスト メニュー - C#](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. **[参照マネージャー]** ダイアログで、**[プロジェクト]** ノードを展開し、**[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリへの参照を追加すると、コンパイラで **StringLibrary** メソッドを見つけることができるようになります。 **[OK]** ボタンを選択します。 これによってクラス ライブラリ プロジェクト `StringLibrary` への参照が追加されます。
+1. **[参照マネージャー]** ダイアログで、 **[プロジェクト]** ノードを展開し、 **[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリへの参照を追加すると、コンパイラで **StringLibrary** メソッドを見つけることができるようになります。 **[OK]** ボタンを選択します。 これによってクラス ライブラリ プロジェクト `StringLibrary` への参照が追加されます。
 
    ![Visual Studio のプロジェクト参照の追加ダイアログ](./media/testing-library-with-visual-studio/project-reference-manager.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
-1. **ソリューション エクスプローラー**で **[ClassLibraryProjects]** ソリューション ノードのコンテキスト メニューを開き、**[追加]** > **[新しいプロジェクト]** の順に選択します。
+1. **ソリューション エクスプローラー**で **[ClassLibraryProjects]** ソリューション ノードのコンテキスト メニューを開き、 **[追加]**  >  **[新しいプロジェクト]** の順に選択します。
 
-1. **[新しいプロジェクトの追加]** ダイアログで、**[Visual Basic]** ノードを選択します。 次に、**[.NET Core]** ノードを選び、**[MSTest テスト プロジェクト (.NET Core)]** プロジェクト テンプレートを選びます。 **[名前]** テキスト ボックスに、プロジェクト名として "StringLibraryTest" と入力します。 **[OK]** を選択し、単体テスト プロジェクトを作成します。
+1. **[新しいプロジェクトの追加]** ダイアログで、 **[Visual Basic]** ノードを選択します。 次に、 **[.NET Core]** ノードを選び、 **[MSTest テスト プロジェクト (.NET Core)]** プロジェクト テンプレートを選びます。 **[名前]** テキスト ボックスに、プロジェクト名として "StringLibraryTest" と入力します。 **[OK]** を選択し、単体テスト プロジェクトを作成します。
 
    ![単体テスト プロジェクトが表示された [新しいプロジェクトの追加] ダイアログ - Visual Basic](./media/testing-library-with-visual-studio/vb-create-new-test-project.png)
 
@@ -68,7 +68,7 @@ ms.locfileid: "59612005"
 
    単体テストのテンプレートで作成されたソース コードにより、次の処理が行われます。
 
-   * 単体テストに使用する型を含む [Microsoft.VisualStudio.TestTools.UnitTesting]<xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=namewithType> 名前空間がインポートされます。
+   * 単体テストで使用される型が含まれた <xref:Microsoft.VisualStudio.TestTools.UnitTesting?displayProperty=nameWithType> 名前空間がインポートされます。
 
    * <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute>) 属性が `UnitTest1` クラスに適用されます。 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute> 属性でタグ付けされたテスト クラス内の各テスト メソッドは、単体テスト実行時に自動実行されます。
 
@@ -78,7 +78,7 @@ ms.locfileid: "59612005"
 
    ![StringLibraryTest の依存関係のコンテキスト メニュー](./media/testing-library-with-visual-studio/add-reference-context-menu.png)
 
-1. **[参照マネージャー]** ダイアログで、**[プロジェクト]** ノードを展開し、**[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリへの参照を追加すると、コンパイラで **StringLibrary** メソッドを見つけることができるようになります。 **[OK]** ボタンを選択します。 これによってクラス ライブラリ プロジェクト `StringLibrary` への参照が追加されます。
+1. **[参照マネージャー]** ダイアログで、 **[プロジェクト]** ノードを展開し、 **[StringLibrary]** の横のボックスをオンにします。 `StringLibrary` アセンブリへの参照を追加すると、コンパイラで **StringLibrary** メソッドを見つけることができるようになります。 **[OK]** ボタンを選択します。 これによってクラス ライブラリ プロジェクト `StringLibrary` への参照が追加されます。
 
    ![Visual Studio のプロジェクト参照の追加ダイアログ - Visual Basic](./media/testing-library-with-visual-studio/project-reference-manager.png)
 ---
@@ -113,7 +113,7 @@ Assert メソッド | 関数
 
    `TestStartsWithUpper` メソッドでの大文字のテストには、ギリシャ語の大文字のアルファ (U+0391) とキリル文字の大文字 EM (U+041C) が含まれており、`TestDoesNotStartWithUpper` メソッドでの小文字のテストにはギリシャ語の小文字のアルファ (U+03B1) とキリル文字の小文字 Ghe (U+0433) が含まれています。
 
-1. メニュー バーで、**[ファイル]** > **[名前を付けて UnitTest1.cs を保存]** の順に選択します。 **[名前を付けてファイルを保存]** ダイアログで、**[保存]** ボタンの横にある矢印を選択して、**[エンコード付きで保存]** を選択します。
+1. メニュー バーで、 **[ファイル]**  >  **[名前を付けて UnitTest1.cs を保存]** の順に選択します。 **[名前を付けてファイルを保存]** ダイアログで、 **[保存]** ボタンの横にある矢印を選択して、 **[エンコード付きで保存]** を選択します。
 
    ![Visual Studio の [名前を付けてファイルを保存] ダイアログ - C#](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 # <a name="visual-basictabvb"></a>[Visual Basic](#tab/vb) 
@@ -123,20 +123,20 @@ Assert メソッド | 関数
 
    `TestStartsWithUpper` メソッドでの大文字のテストには、ギリシャ語の大文字のアルファ (U+0391) とキリル文字の大文字 EM (U+041C) が含まれており、`TestDoesNotStartWithUpper` メソッドでの小文字のテストにはギリシャ語の小文字のアルファ (U+03B1) とキリル文字の小文字 Ghe (U+0433) が含まれています。
 
-1. メニュー バーで、**[ファイル]** > **[名前を付けて UnitTest1.vb を保存]** の順に選択します。 **[名前を付けてファイルを保存]** ダイアログで、**[保存]** ボタンの横にある矢印を選択して、**[エンコード付きで保存]** を選択します。
+1. メニュー バーで、 **[ファイル]**  >  **[名前を付けて UnitTest1.vb を保存]** の順に選択します。 **[名前を付けてファイルを保存]** ダイアログで、 **[保存]** ボタンの横にある矢印を選択して、 **[エンコード付きで保存]** を選択します。
 
    ![Visual Studio の [名前を付けてファイルを保存] ダイアログ - Visual Basic](./media/testing-library-with-visual-studio/save-file-as-dialog.png)
 ---
 
 1. **[保存の確認]** ダイアログで **[はい]** ボタンを選択してファイルを保存します。
 
-1. **[保存オプションの詳細設定]** ダイアログの **[エンコード]** ドロップダウン リストから **[Unicode (UTF-8 シグネチャ付き) - コードページ 65001]** を選択し、**[OK]** の順に選択します。
+1. **[保存オプションの詳細設定]** ダイアログの **[エンコード]** ドロップダウン リストから **[Unicode (UTF-8 シグネチャ付き) - コードページ 65001]** を選択し、 **[OK]** の順に選択します。
 
    ![Visual Studio の [保存オプションの詳細設定] ダイアログ](./media/testing-library-with-visual-studio/advanced-save-options.png)
 
    UTF8 でエンコードされたファイルにソース コードを保存できなかった場合、ASCII ファイルとして保存される場合があります。 その場合は、ランタイムで ASCII 範囲外の UTF8 文字が正確にデコードされず、テスト結果が正確でなくなります。
 
-1. メニュー バーで **[テスト]** > **[実行]** > **[すべてのテスト]** を選択します。 **[テスト エクスプローラー]** ウィンドウが開き、テストが正常に実行されたことを示します。 3 つのテストが **[成功したテスト]** セクションに表示され、**[概要]** セクションにはテストの実行結果が表示されています。
+1. メニュー バーで **[テスト]**  >  **[実行]**  >  **[すべてのテスト]** を選択します。 **[テスト エクスプローラー]** ウィンドウが開き、テストが正常に実行されたことを示します。 3 つのテストが **[成功したテスト]** セクションに表示され、 **[概要]** セクションにはテストの実行結果が表示されています。
 
    ![[テスト エクスプローラー] ウィンドウと成功したテスト](./media/testing-library-with-visual-studio/test-explorer-window.png)
 
@@ -157,7 +157,7 @@ Assert メソッド | 関数
 
    ```
 
-1. **[テスト]** > **[実行]** > **[すべてのテスト]** をメニュー バーから選択してテストを実行します。 **[テスト エクスプローラー]** ウィンドウに、テストが 2 つ成功し、1 つ失敗したことが示されます。
+1. **[テスト]**  >  **[実行]**  >  **[すべてのテスト]** をメニュー バーから選択してテストを実行します。 **[テスト エクスプローラー]** ウィンドウに、テストが 2 つ成功し、1 つ失敗したことが示されます。
 
    ![[テスト エクスプローラー] ウィンドウと失敗したテスト](./media/testing-library-with-visual-studio/failed-test-window.png)
 
@@ -181,6 +181,6 @@ Assert メソッド | 関数
 
    ![StringLibrary のコンテキスト メニューとビルド コマンド](./media/testing-library-with-visual-studio/build-library-context-menu.png)
 
-1. **[テスト]** > **[実行]** > **[すべてのテスト]** をメニュー バーから選択して単体テストを実行します。 テストが成功します。
+1. **[テスト]**  >  **[実行]**  >  **[すべてのテスト]** をメニュー バーから選択して単体テストを実行します。 テストが成功します。
 
 これでライブラリのテストが完了したので、次の手順では呼び出し元が使用できるようにします。 1 つまたは複数のアプリケーションとバンドルするか、NuGet パッケージとして配布することができます。 詳細については、「[Consuming a .NET Standard Class Library ](./consuming-library-with-visual-studio.md)」 (.NET Standard クラス ライブラリを使用する) を参照してください。

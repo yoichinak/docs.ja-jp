@@ -1,13 +1,13 @@
 ---
 title: dotnet list package コマンド
 description: "\"dotnet list package\" コマンドでは、プロジェクトまたはソリューションのパッケージ参照を列挙する便利なオプションが提供されています。"
-ms.date: 04/09/2019
-ms.openlocfilehash: 88ef3302a955eadc4167384312e4eb721dd496fb
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/26/2019
+ms.openlocfilehash: 98cc456fff02364310cec98f0282700f7697f07e
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65631764"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421952"
 ---
 # <a name="dotnet-list-package"></a>dotnet list package
 
@@ -20,8 +20,8 @@ ms.locfileid: "65631764"
 ## <a name="synopsis"></a>構文
 
 ```
-dotnet list [<PROJECT | SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
-   [--include-prerelease] [--include-transitive] [--outdated] [--source]
+dotnet list [<PROJECT>|<SOLUTION>] package [--config] [--framework] [--highest-minor] [--highest-patch] 
+   [--include-prerelease] [--include-transitive] [--interactive] [--outdated] [--source]
 dotnet list package [-h|--help]
 ```
 
@@ -104,6 +104,10 @@ Project 'HelloPlugin' has the following package references
 * **`--include-transitive`**
 
   最上位のパッケージに加えて、推移的なパッケージを一覧表示します。 このオプションを指定すると、最上位のパッケージが依存しているパッケージの一覧が表示されます。
+
+* **`--interactive`**
+
+  コマンドを停止して、ユーザーの入力または操作のために待機させることができます。 たとえば、認証を完了する場合があります。 .NET Core 3.0 SDK 以降で使用できます。
 
 * **`--outdated`**
 

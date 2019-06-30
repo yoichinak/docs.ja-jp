@@ -3,12 +3,12 @@ title: .NET Core について
 description: .NET Core について説明します。
 author: richlander
 ms.date: 08/01/2018
-ms.openlocfilehash: fb6088bcadcdc9c28699446df035b899485c406d
-ms.sourcegitcommit: 11deacc8ec9f229ab8ee3cd537515d4c2826515f
+ms.openlocfilehash: d81c6ad15c12d7bb1e866aef3bd1e799d5b62cde
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66003754"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67421883"
 ---
 # <a name="about-net-core"></a>.NET Core について
 
@@ -30,7 +30,7 @@ ms.locfileid: "66003754"
 
 .NET Core は多くのシナリオに対応する API を公開しています。次のうちのいくつかを次に示します。
 
-- [bool](../csharp/language-reference/keywords/bool.md) や [int](../csharp/language-reference/keywords/int.md) などのプリミティブ型。
+- [bool](../csharp/language-reference/keywords/bool.md) や [int](../csharp/language-reference/builtin-types/integral-numeric-types.md) などのプリミティブ型。
 - <xref:System.Collections.Generic.List%601?displayProperty=nameWithType> や <xref:System.Collections.Generic.Dictionary%602?displayProperty=nameWithType> などのコレクション。
 - <xref:System.Net.Http.HttpClient?displayProperty=nameWithType> や <xref:System.IO.FileStream?displayProperty=nameWithType> などのユーティリティ型。
 - <xref:System.Data.DataSet?displayProperty=nameWithType> や [DbSet](https://www.nuget.org/packages/Microsoft.EntityFrameworkCore/) などのデータ型。

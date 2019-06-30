@@ -4,12 +4,12 @@ description: 利用情報を収集して分析する .NET Core SDK の製品利�
 author: richlander
 ms.date: 06/20/2018
 ms.custom: seodec18
-ms.openlocfilehash: 85cceab08fc6e4108a5b951c8b67c1ad5a28f6bb
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 40d9f3f698f513306e087753b4c33d09e8df0046
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377504"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397751"
 ---
 # <a name="net-core-sdk-telemetry"></a>.NET Core SDK 製品利用統計情報
 
@@ -102,7 +102,7 @@ ms.locfileid: "66377504"
 
 ## <a name="license"></a>ライセンス
 
-Microsoft による .NET Core の配信は、[マイクロソフト ソフトウェア ライセンス条項:Mirosoft .NET ライブラリ](https://aka.ms/dotnet-core-eula)を利用して、ライセンス供与されます。 データの収集と処理について詳しくは、タイトルに「データ」と付くセクションをご覧ください。
+Microsoft による .NET Core の配信は、[マイクロソフト ソフトウェア ライセンス条項:Microsoft .NET ライブラリ](https://aka.ms/dotnet-core-eula)に基づいてライセンスが付与されます。 データの収集と処理について詳しくは、タイトルに「データ」と付くセクションをご覧ください。
 
 [.NET NuGet パッケージ](https://www.nuget.org/profiles/dotnetframework)は同じライセンスを使用しますが、製品利用統計情報を有効にしません (「[スコープ](#scope)」を参照)。
 
