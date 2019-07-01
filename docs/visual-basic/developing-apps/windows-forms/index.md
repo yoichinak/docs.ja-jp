@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Windows applications
 - Windows Forms, Visual Basic
 ms.assetid: 0b919d30-7fd6-42db-85c8-543d15312441
-ms.openlocfilehash: d1f43a5b7a539c89a753d168fbf0e05ca4118f58
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: dd3385d6459199d56f74abfb1b8e0e218a2adf78
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67347982"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487798"
 ---
 # <a name="windows-forms-application-basics-visual-basic"></a>Windows フォーム アプリケーションの基礎 (Visual Basic)
 Visual Basic の重要な部分は、ユーザーのコンピューターでローカルに実行する Windows フォーム アプリケーションを作成する機能です。 Visual Studio を使用して、Windows フォームを使用すると、アプリケーションとユーザー インターフェイスを作成することができます。 クラスを Windows フォーム アプリケーションが構築された、<xref:System.Windows.Forms>名前空間。  
@@ -71,19 +71,19 @@ Visual Basic の重要な部分は、ユーザーのコンピューターでロ�
 |データ ソース ウィンドウを使用します。|[チュートリアル: Windows フォームでデータの表示](/visualstudio/data-tools/accessing-data-in-visual-studio)|  
   
 ## <a name="deploying-applications-to-client-computers"></a>クライアント コンピューターにアプリケーションを配置する  
- アプリケーションを作成するとする必要がありますに送信するユーザーをインストールして、自分のクライアント コンピューターで実行できます。 使用して、[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]テクノロジ、ほんの数回のクリックを使用して Visual Studio 内からアプリケーションを展開し、Web 上のアプリケーションを指す URL をユーザーに提供します。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] すべての要素と、アプリケーションでの依存関係を管理し、により、アプリケーションがクライアント コンピューターに正しくインストールされているようになります。  
+ アプリケーションを作成するとする必要がありますに送信するユーザーをインストールして、自分のクライアント コンピューターで実行できます。 ClickOnce テクノロジを使用して、ほんの数回のクリックを使用して Visual Studio 内からアプリケーションを展開し、Web 上のアプリケーションを指す URL をユーザーに提供できます。 ClickOnce では、すべての要素と、アプリケーションでの依存関係を管理し、により、クライアント コンピューターで、アプリケーションが正しくインストールされています。  
   
- [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] アプリケーションは、ユーザーがネットワークに接続されている場合にのみ実行するか、オンラインとオフラインの両方で実行するかを構成することができます。 アプリケーションがオフラインの操作をサポートする必要がありますを指定すると[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]、ユーザーのアプリケーションにリンクを追加します。**開始**] メニューの [せず、URL を使用して開くことができるようにします。  
+ ClickOnce アプリケーションは、ユーザーがネットワークに接続されている場合にのみ実行するか、オンラインの両方を実行する構成され、オフラインにできます。 ClickOnce が、ユーザーのアプリケーションへのリンクを追加アプリケーションがオフラインの操作をサポートする必要がありますを指定すると**開始**] メニューの [せず、URL を使用して開くことができるようにします。  
   
- アプリケーションを更新するときに、新しい配置マニフェストとアプリケーションの新しいコピーを Web サーバーに発行します。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] 検出が使用可能な更新プログラムがあることと、ユーザーのインストールをアップグレード古いアセンブリを更新するカスタム プログラミングは必要ありません。  
+ アプリケーションを更新するときに、新しい配置マニフェストとアプリケーションの新しいコピーを Web サーバーに発行します。 ClickOnce の検出が使用可能な更新プログラムがあることと、ユーザーのインストールをアップグレード古いアセンブリを更新するカスタム プログラミングは必要ありません。  
   
- [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)] の概要については、「[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。 これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
+ ClickOnce に完全な概要については、次を参照してください。 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)します。 これらの機能を使用する手順については、次のヘルプ トピックを参照してください。  
   
 |目的|解決方法|  
 |--------|---------|  
-|アプリケーションをデプロイします。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
-|更新プログラム、[!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]展開|[方法: ClickOnce アプリケーションの更新プログラムを管理する](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
-|セキュリティを管理します。 [!INCLUDE[ndptecclick](~/includes/ndptecclick-md.md)]|[方法: [ClickOnce セキュリティ設定を有効にする]](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
+|ClickOnce でアプリケーションを配置します。|[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|  
+|ClickOnce 配置を更新します。|[方法: ClickOnce アプリケーションの更新プログラムを管理する](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|  
+|ClickOnce によるセキュリティを管理します。|[方法: [ClickOnce セキュリティ設定を有効にする]](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|  
   
 ## <a name="other-controls-and-features"></a>その他のコントロールおよび機能  
  Windows フォームには、ダイアログ ボックスの作成、ヘルプやドキュメントの印刷や追加、アプリケーションの複数言語へのローカライズのサポートなど、一般的なタスクを高速で簡単に実装できる機能が他にも多数あります。 さらに、Windows フォームより安全なアプリケーションを顧客にリリースできるように、.NET Framework の堅牢なセキュリティ システムに依存します。  

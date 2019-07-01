@@ -2,18 +2,18 @@
 title: 永続性発行済みトークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 76fb27f5-8787-4b6a-bf4c-99b4be1d2e8b
-ms.openlocfilehash: b7f204fcb2c1b72a73e091ecf37c2921f7575516
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bfe8f8bb8c3775760bc69031e338a156d690ab25
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650079"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487601"
 ---
 # <a name="durable-issued-token-provider"></a>永続性発行済みトークン プロバイダー
 このサンプルでは、カスタム クライアントの発行済みトークン プロバイダーを実装する方法を示します。  
   
 ## <a name="discussion"></a>説明  
- Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報の入力に使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF に付属する[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。  
+ Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報の入力に使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、CardSpace トークン プロバイダーに同梱されています。 カスタム トークン プロバイダーは、次の場合に便利です。  
   
 - 組み込みのトークン プロバイダが連係動作できない資格情報ストアがある場合。  
   

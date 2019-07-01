@@ -2,15 +2,15 @@
 title: トークン プロバイダー
 ms.date: 03/30/2017
 ms.assetid: 947986cf-9946-4987-84e5-a14678d96edb
-ms.openlocfilehash: f4316e459666dd434da5ec77694d079d9ca5639f
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b3f56ed46507d68092268c3202cee6234fda7b42
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64622949"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487470"
 ---
 # <a name="token-provider"></a>トークン プロバイダー
-このサンプルでは、カスタム トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF にも付属、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]トークン プロバイダー。 カスタム トークン プロバイダーは、次の場合に便利です。
+このサンプルでは、カスタム トークン プロバイダーを実装する方法を示します。 Windows Communication Foundation (WCF) でのトークン プロバイダーは、セキュリティ インフラストラクチャに資格情報を提供するために使用されます。 一般的に、トークン プロバイダーは、ターゲットをチェックし、適切な証明書を発行して、セキュリティ インフラストラクチャがメッセージのセキュリティを保護できるようにします。 WCF は、既定の Credential Manager Token Provider で出荷されます。 WCF には、CardSpace トークン プロバイダーも含まれています。 カスタム トークン プロバイダーは、次の場合に便利です。
 
 - トークン プロバイダーが連携動作できない資格情報ストアがある場合。
 
@@ -115,7 +115,7 @@ ms.locfileid: "64622949"
 
      このタスクを実行するため、カスタム トークン プロバイダーは <xref:System.IdentityModel.Selectors.SecurityTokenProvider> クラスを派生し、<xref:System.IdentityModel.Selectors.SecurityTokenProvider.GetTokenCore%28System.TimeSpan%29> メソッドをオーバーライドします。 このメソッドは、新しい `UserNameSecurityToken` を作成して返します。
 
-    ```
+    ```csharp
     protected override SecurityToken GetTokenCore(TimeSpan timeout)
     {
         // obtain username and password from the user using console window
@@ -132,7 +132,7 @@ ms.locfileid: "64622949"
 
      <xref:System.IdentityModel.Selectors.SecurityTokenManager> は、特定の <xref:System.IdentityModel.Selectors.SecurityTokenProvider> (<xref:System.IdentityModel.Selectors.SecurityTokenRequirement> メソッドで渡されます) に対する `CreateSecurityTokenProvider` を作成するために使用されます。 セキュリティ トークン マネージャーは、トークン認証システムとトークン シリアライザーの作成にも使用されますが、このサンプルでは扱っていません。 このサンプルでは、カスタム セキュリティ トークン マネージャーは <xref:System.ServiceModel.ClientCredentialsSecurityTokenManager> クラスを継承し、渡されたトークンの要件でユーザー名プロバイダーが必要であることが示されている場合に、`CreateSecurityTokenProvider` メソッドをオーバーライドして、カスタムのユーザー名トークン プロバイダーを返します。
 
-    ```
+    ```csharp
     public class MyUserNameSecurityTokenManager : ClientCredentialsSecurityTokenManager
     {
         MyUserNameClientCredentials myUserNameClientCredentials;
@@ -163,7 +163,7 @@ ms.locfileid: "64622949"
 
      クライアント資格情報クラスは、クライアント プロキシ用に構成された資格情報を表すために使用され、トークン認証システム、トークン プロバイダー、およびトークン シリアライザーの取得に使用されるセキュリティ トークン マネージャーを作成します。
 
-    ```
+    ```csharp
     public class MyUserNameClientCredentials : ClientCredentials
     {
         public MyUserNameClientCredentials()
@@ -188,7 +188,7 @@ ms.locfileid: "64622949"
 
      クライアントがカスタム クライアント資格情報を使用するため、サンプルでは既定のクライアント資格情報を削除し、新しいクライアント資格情報クラスを提供しています。
 
-    ```
+    ```csharp
     static void Main()
     {
         // ...
@@ -204,7 +204,7 @@ ms.locfileid: "64622949"
 
  サービス側で呼び出し元の情報を表示するには、次のコード例に示すように <xref:System.ServiceModel.ServiceSecurityContext.PrimaryIdentity%2A> を使用します。 <xref:System.ServiceModel.ServiceSecurityContext.Current%2A> には、現在のユーザーに関する情報が保持されています。
 
-```
+```csharp
 static void DisplayIdentityInformation()
 {
     Console.WriteLine("\t\tSecurity context identity  :  {0}",

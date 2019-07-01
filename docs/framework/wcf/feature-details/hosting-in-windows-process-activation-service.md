@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], WAS
 ms.assetid: d2b9d226-15b7-41fc-8c9a-cb651ac20ecd
-ms.openlocfilehash: eeac535eac95b19889d0d8d74115bcddc3a15224
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: af40660d1af0a88710c4b53009474847cece6deb
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402349"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486636"
 ---
 # <a name="hosting-in-windows-process-activation-service"></a>Windows プロセス アクティブ化サービスでのホスティング
 Windows プロセス アクティブ化サービス (WAS) では、ライセンス認証と Windows Communication Foundation (WCF) サービスをホストするアプリケーションを含むワーカー プロセスの有効期間を管理します。 WAS プロセス モデルでは、HTTP に対する依存関係を削除することで、HTTP サーバーの IIS 6.0 プロセス モデルを一般化します。 これにより、HTTP とメッセージ ベースのライセンス認証をサポートし、多数の特定のコンピューター上のアプリケーションをホストする機能を提供するホスト環境での Net.TCP などの非 HTTP プロトコルの両方を使用する WCF サービスです。  
@@ -25,10 +25,7 @@ Windows プロセス アクティブ化サービス (WAS) では、ライセン�
 - 集中化されたアプリケーション設定と管理。  
   
 - 完全な IIS インストールの配置スペースを必要とせずに、アプリケーションで IIS プロセス モデルを利用可能。  
-  
- WAS 機能の詳細については、次を参照してください[IIS 7.0 Beta:。IIS 7.0 Web 管理](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)します。  
-  
- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)連携[!INCLUDE[iisver](../../../../includes/iisver-md.md)]NET4 WCF および WF サービス用に環境をホストしている豊富なアプリケーションを提供する Windows プロセス アクティブ化サービス (WAS)。 この利点には、プロセス ライフサイクル管理、プロセス リサイクル、共有ホスティング、迅速な障害保護、プロセスの孤立化、オンデマンド アクティブ化、状態監視などがあります。 詳細については、次を参照してください。 [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=196494)と[AppFabric ホスティングの概念](https://go.microsoft.com/fwlink/?LinkId=196495)します。  
+[Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) NET4 WCF および WF サービス用に環境をホストしている豊富なアプリケーションを提供するには、IIS 7.0 と Windows プロセス アクティブ化サービス (WAS) で動作します。 この利点には、プロセス ライフサイクル管理、プロセス リサイクル、共有ホスティング、迅速な障害保護、プロセスの孤立化、オンデマンド アクティブ化、状態監視などがあります。 詳細については、次を参照してください。 [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=196494)と[AppFabric ホスティングの概念](https://go.microsoft.com/fwlink/?LinkId=196495)します。  
   
 ## <a name="elements-of-the-was-addressing-model"></a>WAS アドレス指定モデルの要素  
  アプリケーションには、サーバーによって有効期間と実行環境が管理されているコード単位である URI (Uniform Resource Identifier) アドレスがあります。 1 つの WAS サーバー インスタンスを多数の異なるアプリケーションでホームとすることができます。 サーバーと呼ばれるグループにアプリケーションの整理*サイト*します。 サイト内でアプリケーションは階層で整理されます。この階層は URI の構造に反映されてアプリケーションの外部アドレスとして提供されます。  

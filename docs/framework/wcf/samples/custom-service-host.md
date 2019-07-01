@@ -2,12 +2,12 @@
 title: カスタム サービス ホスト
 ms.date: 03/30/2017
 ms.assetid: fe16ff50-7156-4499-9c32-13d8a79dc100
-ms.openlocfilehash: d2eebd502fa02d01ac86cf88f336b72829a6116f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9c2a1fc1b398a3a9efcd0c824ca041a790448dd3
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61990666"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487645"
 ---
 # <a name="custom-service-host"></a>カスタム サービス ホスト
 このサンプルでは、<xref:System.ServiceModel.ServiceHost> クラスから派生したカスタムのサービス ホストを使用して、サービスの実行時動作を変更する方法を示します。 この方法は、多数のサービスを共通方式で構成するという方法の代わりに使用でき、再利用可能です。 このサンプルでは、<xref:System.ServiceModel.Activation.ServiceHostFactory> クラスを使用して、カスタムの ServiceHost を、インターネット インフォメーション サービス (IIS) または Windows プロセス アクティブ化サービス (WAS) でホストされる環境で使用する方法も示します。  
@@ -168,11 +168,11 @@ public class SelfDescribingServiceHostFactory : ServiceHostFactory
   
 2. ソリューションをビルドする手順については、 [Windows Communication Foundation サンプルのビルド](../../../../docs/framework/wcf/samples/building-the-samples.md)します。  
   
-3. ソリューションがビルドされたら、Setup.bat を実行し、[!INCLUDE[iisver](../../../../includes/iisver-md.md)] で ServiceModelSamples アプリケーションを設定します。 ServiceModelSamples ディレクトリは、[!INCLUDE[iisver](../../../../includes/iisver-md.md)] アプリケーションとして表示されます。  
+3. ソリューションがビルドされたら、IIS 7.0 で ServiceModelSamples アプリケーションを設定する Setup.bat を実行します。 ServiceModelSamples ディレクトリは、IIS 7.0 のアプリケーションとして表示されます。  
   
 4. 1 つまたは複数コンピュータ構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。  
   
-5. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] アプリケーションを削除するには、Cleanup.bat を実行します。  
+5. IIS 7.0 のアプリケーションを削除するには、Cleanup.bat を実行します。  
   
 ## <a name="see-also"></a>関連項目
 

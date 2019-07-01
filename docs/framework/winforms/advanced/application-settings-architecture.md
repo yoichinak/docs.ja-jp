@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - application settings [Windows Forms], architecture
 ms.assetid: c8eb2ad0-fac6-4ea2-9140-675a4a44d562
-ms.openlocfilehash: a049bbe22d29f02acbc7889bb5d5010ec44f9d15
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 717abc8f54669a5ca814a61827a0865215204e1b
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65876219"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487353"
 ---
 # <a name="application-settings-architecture"></a>アプリケーション設定アーキテクチャ
 このトピックでは、アプリケーション設定アーキテクチャのしくみについて説明します。また、グループ化された設定や設定キーなど、アーキテクチャの高度な機能についても説明します。  
@@ -109,16 +109,16 @@ ms.locfileid: "65876219"
  使用することができます独自設定クラスを実装する場合、<xref:System.Configuration.SettingsSerializeAsAttribute>バイナリまたはカスタムのシリアル化を使用するかの設定をマークする、<xref:System.Configuration.SettingsSerializeAs>列挙体。 コードで設定クラスを作成する方法の詳細については、次を参照してください。[方法。アプリケーション設定を作成する](how-to-create-application-settings.md)します。  
   
 ### <a name="settings-file-locations"></a>設定ファイルの場所  
- `app`.exe.config ファイルと *user*.config ファイルの場所は、アプリケーションのインストール方法によって異なります。 ローカルのコンピューターにコピーする Windows フォーム ベースのアプリケーションの`app`. exe.config はアプリケーションのメイン実行可能ファイルのベース ディレクトリと同じディレクトリに存在し、*ユーザー*.config に存在、指定された場所、<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>プロパティ。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] を使用してインストールされたアプリケーションの場合、どちらのファイルも %InstallRoot%\Documents and Settings\\*username*\Local Settings の下の [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] データ ディレクトリに配置されます。  
+ `app`.exe.config ファイルと *user*.config ファイルの場所は、アプリケーションのインストール方法によって異なります。 ローカルのコンピューターにコピーする Windows フォーム ベースのアプリケーションの`app`. exe.config はアプリケーションのメイン実行可能ファイルのベース ディレクトリと同じディレクトリに存在し、*ユーザー*.config に存在、指定された場所、<xref:System.Windows.Forms.Application.LocalUserAppDataPath%2A?displayProperty=nameWithType>プロパティ。 ClickOnce を使用してインストールされているアプリケーション、これらのファイルの両方の %InstallRoot%\Documents 下にある ClickOnce データ ディレクトリと設定内に存在\\*username*\Local Settings。  
   
- ユーザーが移動プロファイルを有効にしている場合、これらのファイルの格納場所は若干異なります。移動プロファイルを使用すると、ユーザーはドメイン内の他のコンピューターを使用するときに Windows とアプリケーションの異なる設定を定義できます。 この場合、[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] アプリケーションと [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 以外のアプリケーションのどちらについても、`app`.exe.config ファイルと *user*.config ファイルが %InstallRoot%\Documents and Settings\\*username*\Application Data に格納されます。  
+ ユーザーが移動プロファイルを有効にしている場合、これらのファイルの格納場所は若干異なります。移動プロファイルを使用すると、ユーザーはドメイン内の他のコンピューターを使用するときに Windows とアプリケーションの異なる設定を定義できます。 ClickOnce アプリケーションと非 ClickOnce アプリケーションの両方にはその場合は、その`app`. exe.config と*ユーザー*.config ファイルが %InstallRoot%\Documents and Settings 格納\\*ユーザー名*\Application Data です。  
   
- アプリケーション設定機能と新しい配置テクノロジの連携の詳細については、「[ClickOnce とアプリケーション設定](/visualstudio/deployment/clickonce-and-application-settings)」を参照してください。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] データ ディレクトリの詳細については、「[ClickOnce アプリケーションにおけるローカル データおよびリモート データへのアクセス](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)」を参照してください。  
+ アプリケーション設定機能と新しい配置テクノロジの連携の詳細については、「[ClickOnce とアプリケーション設定](/visualstudio/deployment/clickonce-and-application-settings)」を参照してください。 ClickOnce データ ディレクトリの詳細については、次を参照してください。[ローカルへのアクセスとリモート データには、ClickOnce アプリケーション](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)します。  
   
 ## <a name="application-settings-and-security"></a>アプリケーション設定とセキュリティ  
  アプリケーション設定は部分信頼で機能するように設計されています。部分信頼は、インターネットまたはイントラネット上でホストされる Windows フォーム アプリケーションの既定の制限された環境です。 既定の設定プロバイダーでアプリケーション設定を使用する場合、部分信頼以外の特別なアクセス許可は不要です。  
   
- アプリケーション設定を [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] アプリケーション内で使用する場合、`user`.config ファイルは [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] データ ディレクトリに格納されます。 アプリケーションの `user`.config ファイルのサイズは、[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] で設定されたデータ ディレクトリ クォータを超えることはできません。 詳細については、「[ClickOnce とアプリケーション設定](/visualstudio/deployment/clickonce-and-application-settings)」を参照してください。  
+ アプリケーションの設定は、ClickOnce アプリケーションで使用すると、 `user`ClickOnce データ ディレクトリに .config ファイルが格納されます。 アプリケーションのサイズ`user`.config ファイルは、ClickOnce によって設定されたデータ ディレクトリ クォータを超えることはできません。 詳細については、「[ClickOnce とアプリケーション設定](/visualstudio/deployment/clickonce-and-application-settings)」を参照してください。  
   
 ## <a name="custom-settings-providers"></a>カスタム設定プロバイダー  
  アプリケーション設定アーキテクチャでは、アプリケーション設定間の疎結合から派生したラッパー クラス<xref:System.Configuration.ApplicationSettingsBase>、および関連付けられた設定プロバイダーまたはプロバイダーから派生<xref:System.Configuration.SettingsProvider>します。 この関連付けはでのみ定義されている、<xref:System.Configuration.SettingsProviderAttribute>ラッパー クラスまたはその個々 のプロパティに適用します。 プロバイダーが明示的に設定を指定すると、既定のプロバイダー場合<xref:System.Configuration.LocalFileSettingsProvider>、使用されます。 そのため、このアーキテクチャではカスタム設定プロバイダーの作成と使用がサポートされています。  

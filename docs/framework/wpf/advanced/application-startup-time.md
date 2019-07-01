@@ -8,12 +8,12 @@ helpviewer_keywords:
 - application startup [WPF]
 - performance [WPF], startup time
 ms.assetid: f0ec58d8-626f-4d8a-9873-c20f95e08b96
-ms.openlocfilehash: 321aad14d17d6ef6fe0b7c112f8f694dd1c767d6
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 8bdd70a6eaea8aff196e2156d88460a6d24b5d3f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832697"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487188"
 ---
 # <a name="application-startup-time"></a>アプリケーションの起動時間
 WPF アプリケーションの起動に必要な時間には、かなりばらつきがあります。 このトピックでは、Windows Presentation Foundation (WPF) アプリケーションの認識される起動時間と実際の起動時間を短縮する方法について説明します。  
@@ -65,7 +65,7 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
  NGen と JIT モジュールを併用すると、最悪の影響がもたらされる可能性があります。 mscorjit.dll を読み込む必要があるほか、JIT コンパイラは、アプリケーション コードを処理するとき、アセンブリのメタデータを読み込む際に NGen イメージ内の多数のページにアクセスする必要があるためです。  
   
 ### <a name="ngen-and-clickonce"></a>NGen と ClickOnce  
- アプリケーションの配置方法が、読み込み時間に影響することもあります。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] によるアプリケーションの配置では、NGen がサポートされていません。 アプリケーションで Ngen.exe を使用する場合は、Windows インストーラーなど、他の配置機構を使用する必要があります。  
+ アプリケーションの配置方法が、読み込み時間に影響することもあります。 ClickOnce アプリケーションの展開は、Ngen をサポートしていません。 アプリケーションで Ngen.exe を使用する場合は、Windows インストーラーなど、他の配置機構を使用する必要があります。  
   
  詳細については、「[Ngen.exe (ネイティブ イメージ ジェネレーター)](../../tools/ngen-exe-native-image-generator.md)」を参照してください。  
   
@@ -112,9 +112,9 @@ WPF アプリケーションの起動に必要な時間には、かなりばら�
  使用する場合、<xref:System.Xml.Serialization.XmlSerializer>クラス、事前にシリアル化アセンブリを生成する場合より優れたパフォーマンスを実現できます。  
   
 ## <a name="configure-clickonce-to-check-for-updates-after-startup"></a>起動後に更新プログラムをチェックする ClickOnce の構成  
- アプリケーションで [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] を使用する場合は、アプリケーションの起動後に配置サイトの更新プログラムをチェックするように [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] を構成することで、ネットワーク アクセスを回避します。  
+ アプリケーションでは、ClickOnce を使用する場合は、ClickOnce アプリケーションの起動後に、配置サイトの更新プログラムを確認するを構成することで起動時にネットワーク アクセスを回避します。  
   
- XAML ブラウザー アプリケーション (XBAP) モデルを使用する場合、[!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] は、XBAP が既に [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] キャッシュに存在する場合でも、配置サイトの更新プログラムのチェックが行われることに注意してください。 詳細については、「 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。  
+ XAML ブラウザー アプリケーション (XBAP) モデルを使用する場合は、XBAP は、ClickOnce キャッシュで既に場合でも、ClickOnce は、配置サイトの更新プログラムを確認します。 注意してください。 詳細については、「 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。  
   
 ## <a name="configure-the-presentationfontcache-service-to-start-automatically"></a>PresentationFontCache サービスの自動起動の構成  
  再起動後に最初に実行される WPF アプリケーションは PresentationFontCache サービスです。 このサービスは、システム フォントをキャッシュし、フォント アクセスを高速化して、パフォーマンス全体を向上させます。 このサービスの起動にはオーバーヘッドが伴うため、一部の制御された環境では、システムの再起動時にこのサービスを自動起動するように構成することを検討してください。  

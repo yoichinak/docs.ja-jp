@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 00959326-aa9d-44d0-af61-54933d4adc7f
-ms.openlocfilehash: 450d10c0356a8c22741275e2c1e1a842c1fd4627
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: cb41cfc8dbab5dc8285ee756de27a4ba83f6309a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402046"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487726"
 ---
 # <a name="transport-security-overview"></a>トランスポート セキュリティの概要
 トランスポート セキュリティ機構では、Windows Communication Foundation (WCF) は、バインドと使用されているトランスポートによって異なります。 たとえば、<xref:System.ServiceModel.WSHttpBinding> クラスを使用する場合、トランスポートは HTTP であり、トランスポートをセキュリティで保護するための主要機構は SSL (Secure Sockets Layer) over HTTP (一般に HTTPS と呼ばれます) です。 このトピックでは、WCF のシステム指定のバインディングで使用される主要なトランスポート セキュリティ機構について説明します。  
@@ -47,19 +47,19 @@ ms.locfileid: "67402046"
  以下のセクションでは、その他のクライアント資格情報の種類について説明します。  
   
 #### <a name="basic"></a>基本  
- これは、IIS の基本認証方法に対応しています。 このモードを使用する場合は、Windows ユーザー アカウントと、適切な NTFS ファイル システムのアクセス許可を使用して IIS サーバーを構成する必要があります。 IIS 6.0 の詳細については、次を参照してください。 [Enabling Basic Authentication and Configuring the Realm Name](https://go.microsoft.com/fwlink/?LinkId=88592)します。 詳細については[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS 7.0 Beta:基本認証を構成](https://go.microsoft.com/fwlink/?LinkId=88593)します。  
+ これは、IIS の基本認証方法に対応しています。 このモードを使用する場合は、Windows ユーザー アカウントと、適切な NTFS ファイル システムのアクセス許可を使用して IIS サーバーを構成する必要があります。 IIS 6.0 の詳細については、次を参照してください。 [Enabling Basic Authentication and Configuring the Realm Name](https://go.microsoft.com/fwlink/?LinkId=88592)します。 IIS 7.0 の詳細については、次を参照してください。[基本認証を構成する (IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772009(v=ws.10))します。  
   
 #### <a name="certificate"></a>証明書  
- IIS には、クライアントに証明書を使用してログオンすることを要求するオプションがあります。 この機能により、IIS はクライアント証明書を Windows アカウントにマップすることもできます。 IIS 6.0 の詳細については、次を参照してください。 [Enabling Client Certificates in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594)します。 詳細については[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS 7.0 Beta:Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595)します。  
+ IIS には、クライアントに証明書を使用してログオンすることを要求するオプションがあります。 この機能により、IIS はクライアント証明書を Windows アカウントにマップすることもできます。 IIS 6.0 の詳細については、次を参照してください。 [Enabling Client Certificates in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88594)します。 IIS 7.0 の詳細については、次を参照してください。 [Configuring Server Certificates in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))します。  
   
 #### <a name="digest"></a>Digest  
- ダイジェスト認証は基本認証と似ていますが、資格情報をクリア テキストではなくハッシュとして送信できるという利点があります。 IIS 6.0 の詳細については、次を参照してください。 [Digest Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443)します。 詳細については[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS 7.0 Beta:ダイジェスト認証を構成する](https://go.microsoft.com/fwlink/?LinkId=88596)します。  
+ ダイジェスト認証は基本認証と似ていますが、資格情報をクリア テキストではなくハッシュとして送信できるという利点があります。 IIS 6.0 の詳細については、次を参照してください。 [Digest Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkID=88443)します。 IIS 7.0 の詳細については、次を参照してください。[ダイジェスト認証を構成する」(IIS 7)](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc754104(v=ws.10))します。  
   
 #### <a name="windows"></a>Windows  
- これは、IIS の統合 Windows 認証に対応しています。 この値に設定する場合、サーバーは、Kerberos プロトコルを使用する Windows ドメインにドメイン コントローラーとして存在することにもなっています。 サーバーが Kerberos ベースのドメインに存在しない場合、または Kerberos システムに障害が発生した場合は、次のセクションで説明する NTLM (NT LAN Manager) 値を使用できます。 IIS 6.0 の詳細については、次を参照してください。 [Integrated Windows Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88597)します。 詳細については[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS 7.0 Beta:Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkId=88595)します。  
+ これは、IIS の統合 Windows 認証に対応しています。 この値に設定する場合、サーバーは、Kerberos プロトコルを使用する Windows ドメインにドメイン コントローラーとして存在することにもなっています。 サーバーが Kerberos ベースのドメインに存在しない場合、または Kerberos システムに障害が発生した場合は、次のセクションで説明する NTLM (NT LAN Manager) 値を使用できます。 IIS 6.0 の詳細については、次を参照してください。 [Integrated Windows Authentication in IIS 6.0](https://go.microsoft.com/fwlink/?LinkId=88597)します。 IIS 7.0 の詳細については、次を参照してください。 [Configuring Server Certificates in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))します。
   
 #### <a name="ntlm"></a>NTLM  
- この値を使用すると、Kerberos プロトコルが失敗した場合に、サーバーは、NTLM を使用して認証を実行できます。 IIS 6.0 で IIS を構成する方法の詳細については、次を参照してください。[強制的に NTLM 認証](https://go.microsoft.com/fwlink/?LinkId=88598)します。 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] では、Windows 認証に NTLM 認証が含まれます。 詳細については、次を参照してください[IIS 7.0 Beta:。Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595)します。  
+ この値を使用すると、Kerberos プロトコルが失敗した場合に、サーバーは、NTLM を使用して認証を実行できます。 IIS 6.0 で IIS を構成する方法の詳細については、次を参照してください。[強制的に NTLM 認証](https://go.microsoft.com/fwlink/?LinkId=88598)します。 IIS 7.0 では、Windows 認証には NTLM 認証が含まれます。 詳細については、次を参照してください。 [Configuring Server Certificates in IIS 7](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))します。
   
 ## <a name="wshttpbinding"></a>WsHttpBinding  
  <xref:System.ServiceModel.WSHttpBinding> クラスは、WS-* 仕様を実装するサービスと共に相互運用するようにデザインされています。 このバインディングのトランスポート セキュリティは、SSL (Secure Sockets Layer) over HTTP または HTTPS です。 SSL を使用する WCF アプリケーションを作成するのにには、アプリケーションをホストするのに IIS を使用します。 自己ホスト型アプリケーションを作成する場合は、HttpCfg.exe ツールを使用して、X.509 証明書をコンピューターの特定のポートにバインドします。 ポート番号は、エンドポイント アドレスとして、WCF アプリケーションの一部として指定されます。 トランスポート モードを使用する場合は、エンドポイント アドレスに HTTPS プロトコルを含める必要があります。そうしないと、実行時に例外が発生します。 詳細については、次を参照してください。 [HTTP トランスポート セキュリティ](../../../../docs/framework/wcf/feature-details/http-transport-security.md)します。  

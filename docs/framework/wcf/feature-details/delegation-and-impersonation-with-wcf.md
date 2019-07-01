@@ -8,12 +8,12 @@ helpviewer_keywords:
 - impersonation [WCF]
 - delegation [WCF]
 ms.assetid: 110e60f7-5b03-4b69-b667-31721b8e3152
-ms.openlocfilehash: b9dd02724b8c2a9e4f50ecd61d822d5f1a478eee
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 13e58339e55b2071e4c1979de6c4e130fe4c9e32
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402337"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486950"
 ---
 # <a name="delegation-and-impersonation-with-wcf"></a>WCF の委任と偽装
 *偽装* は、サービス ドメインのリソースへのクライアント アクセスを制限するためにサービスが使用する一般的な手法です。 サービス ドメインのリソースは、ローカル ファイルなどのコンピューター リソースの場合もあれば (偽装)、ファイル共有などの別のコンピューター上のリソースの場合もあります (委任)。 サンプル アプリケーションについては、「 [Impersonating the Client](../../../../docs/framework/wcf/samples/impersonating-the-client.md)」を参照してください。 権限借用の使用方法の例は、次を参照してください。[方法。サービスのクライアントを偽装](../../../../docs/framework/wcf/how-to-impersonate-a-client-on-a-service.md)します。  
@@ -57,7 +57,7 @@ ms.locfileid: "67402337"
  サービスがクライアントを偽装できるエクステントは、偽装を試みるときにサービス アカウントが保持している特権、使用する偽装の種類、およびクライアントが許可すると考えられる偽装のエクステントによって異なります。  
   
 > [!NOTE]
->  クライアントとサービスが同じコンピューター上で実行されており、クライアントがシステム アカウント ( `Local System` や `Network Service`など) で実行されているときに、ステートレスなセキュリティ コンテキスト トークンを使用してセキュリティで保護されたセッションを確立した場合は、クライアントを偽装できません。 通常、Windows フォームまたはコンソール アプリケーションは、現在ログインしているアカウントで実行されるため、既定でそのアカウントを偽装できます。 ただし、クライアントは、ASP.NET ページと、そのページが IIS 6.0 でホストされているまたは[!INCLUDE[iisver](../../../../includes/iisver-md.md)]、クライアントで実行し、`Network Service`アカウントで実行します。 セキュリティで保護されたセッションをサポートするシステム提供のすべてのバインディングは、ステートフルなセキュリティ コンテキスト トークン (SCT: Security Context Token) を既定で使用します。 ただし、クライアントが、ASP.NET ページであり、セキュリティで保護されたセッションでステートフルな Sct を使用する場合、クライアントを偽装できません。 詳細については、セキュリティで保護されたセッションでステートフルな Sct を使用して、次を参照してください。[方法。セキュリティ コンテキストを作成、セキュリティで保護されたセッションのトークン](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)します。  
+>  クライアントとサービスが同じコンピューター上で実行されており、クライアントがシステム アカウント ( `Local System` や `Network Service`など) で実行されているときに、ステートレスなセキュリティ コンテキスト トークンを使用してセキュリティで保護されたセッションを確立した場合は、クライアントを偽装できません。 通常、Windows フォームまたはコンソール アプリケーションは、現在ログインしているアカウントで実行されるため、既定でそのアカウントを偽装できます。 ただし、ときに、ASP.NET ページは、クライアントはそのページが IIS 6.0 または IIS 7.0 でホストされているし、クライアントで実行、`Network Service`アカウントで実行します。 セキュリティで保護されたセッションをサポートするシステム提供のすべてのバインディングは、ステートフルなセキュリティ コンテキスト トークン (SCT: Security Context Token) を既定で使用します。 ただし、クライアントが、ASP.NET ページであり、セキュリティで保護されたセッションでステートフルな Sct を使用する場合、クライアントを偽装できません。 詳細については、セキュリティで保護されたセッションでステートフルな Sct を使用して、次を参照してください。[方法。セキュリティ コンテキストを作成、セキュリティで保護されたセッションのトークン](../../../../docs/framework/wcf/feature-details/how-to-create-a-security-context-token-for-a-secure-session.md)します。  
   
 ## <a name="impersonation-in-a-service-method-declarative-model"></a>サービス メソッドでの偽装:宣言型モデル  
  ほとんどの偽装シナリオでは、呼び出し元のコンテキストでサービス メソッドを実行する必要があります。 WCF で偽装要件を指定するユーザーを許可することで行うは簡単にこれを偽装機能を提供する、<xref:System.ServiceModel.OperationBehaviorAttribute>属性。 たとえば、次のコードで、WCF インフラストラクチャ呼び出し元を偽装を実行する前に、`Hello`メソッド。 `Hello` メソッド内でネイティブ リソースへのアクセス試行が成功するのは、そのリソースのアクセス制御リスト (ACL) で呼び出し元のアクセス特権が許可されている場合だけです。 偽装を有効にするには、次の例に示すように、 <xref:System.ServiceModel.OperationBehaviorAttribute.Impersonation%2A> プロパティを <xref:System.ServiceModel.ImpersonationOption> 列挙値のいずれか ( <xref:System.ServiceModel.ImpersonationOption.Required?displayProperty=nameWithType> または <xref:System.ServiceModel.ImpersonationOption.Allowed?displayProperty=nameWithType>) に設定します。  

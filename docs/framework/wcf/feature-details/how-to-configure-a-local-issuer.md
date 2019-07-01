@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 15263371-514e-4ea6-90fb-14b4939154cd
-ms.openlocfilehash: 46dbb39a31a1ef256bef0f5b7e1bbc41ce1eca3e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 98d4c01bf2b84a6379eca5d0e1d5dbee68dc7cdd
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779302"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487137"
 ---
 # <a name="how-to-configure-a-local-issuer"></a>方法: ローカル発行者を設定する
 ここでは、発行済みトークンに対してローカル発行者を使用するようにクライアントを構成する方法を説明します。  
@@ -23,7 +23,7 @@ ms.locfileid: "61779302"
  Windows Communication Foundation (WCF) はローカル発行者を使用してフェデレーション バインディングの発行者アドレスが`http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`または`null`します。 そのような場合は、ローカルの発行者およびバインディングのアドレスと共に <xref:System.ServiceModel.Description.ClientCredentials> を構成し、その発行者との通信に使用する必要があります。  
   
 > [!NOTE]
->  場合、<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>のプロパティ、`ClientCredentials`クラスに設定されている`true`、ローカル発行者のアドレスが指定されていない、および発行者のアドレスを指定して、 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)またはその他のフェデレーション バインディングは`http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`、 `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous` 、または`null`、Windows では、[!INCLUDE[infocard](../../../../includes/infocard-md.md)]発行者を使用します。  
+>  場合、<xref:System.ServiceModel.Description.ClientCredentials.SupportInteractive%2A>のプロパティ、`ClientCredentials`クラスに設定されている`true`で指定された発行者のアドレス、ローカル発行者アドレスが指定されていない、 [ \<wsFederationHttpBinding >](../../../../docs/framework/configure-apps/file-schema/wcf/wsfederationhttpbinding.md)またはその他フェデレーション バインディングは`http://schemas.xmlsoap.org/ws/2005/05/identity/issuer/self`、 `http://schemas.microsoft.com/2005/12/ServiceModel/Addressing/Anonymous`、または`null`、Windows CardSpace の発行者が使用されます。  
   
 ### <a name="to-configure-the-local-issuer-in-code"></a>コードでローカル発行者を構成するには  
   
@@ -69,7 +69,7 @@ ms.locfileid: "61779302"
   
 4. 省略可能です。 設定、 [ \<identity >](../../../../docs/framework/configure-apps/file-schema/wcf/identity.md)要素の子として、<`localIssuer`> 要素と、ローカル発行者の id 情報を指定します。  
   
-5. 任意。 設定、 [\<ヘッダー >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)要素の子として、<`localIssuer`> 要素と、ローカル発行者を正しく対処するために必要な追加ヘッダーを指定します。  
+5. 省略可能です。 設定、 [\<ヘッダー >](../../../../docs/framework/configure-apps/file-schema/wcf/headers.md)要素の子として、<`localIssuer`> 要素と、ローカル発行者を正しく対処するために必要な追加ヘッダーを指定します。  
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
  特定のバインディングに対して発行者アドレスとバインディングが指定されている場合、ローカル発行者はこのバインディングを使用するエンドポイントには使用されません。 ローカル発行者を常に使用する必要があるクライアントには、このようなバインディングが使用されることがないこと、または発行者アドレスが `null` となるようにクライアントによってバインディングが変更されることが保証されている必要があります。  

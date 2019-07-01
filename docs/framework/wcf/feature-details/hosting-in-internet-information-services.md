@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF], IIS
 ms.assetid: ddae14e8-143c-442d-b660-2046809b2d43
-ms.openlocfilehash: f9acadcb594005d7c7eadffcddad3649a3aefc29
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 3940d8436ba5441d4e884879213a7a782214cb05
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402189"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486748"
 ---
 # <a name="hosting-in-internet-information-services"></a>インターネット インフォメーション サービスでのホスティング
 Windows Communication Foundation (WCF) サービスをホストするための 1 つは、インターネット インフォメーション サービス (IIS) アプリケーション内でです。 このホスティング モデルは、ASP.NET と ASP.NET Web サービス (ASMX) Web サービスによって使用されるモデルに似ています。  
@@ -23,7 +23,7 @@ Windows Communication Foundation (WCF) サービスをホストするための 1
   
 - [!INCLUDE[wv](../../../../includes/wv-md.md)] および [!INCLUDE[lserver](../../../../includes/lserver-md.md)] 上で IIS 7.0 を使用。 IIS 7.0 では、IIS 6.0 と同じ高度なプロセス モデルを提供しますが、HTTP 以外のプロトコル経由でアクティベーションとネットワーク通信を許可する Windows プロセス アクティブ化サービス (WAS) を使用します。 この環境では、WCF (HTTP、net.tcp、net.pipe、net.msmq など) でサポートされている任意のネットワーク プロトコル経由で通信する WCF サービスの開発に適しています。 WAS の詳細については、次を参照してください。 [Windows プロセス アクティブ化サービスでのホスティング](../../../../docs/framework/wcf/feature-details/hosting-in-windows-process-activation-service.md)します。  
   
-- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496)連携[!INCLUDE[iisver](../../../../includes/iisver-md.md)]NET4 WCF および WF サービス用に環境をホストしている豊富なアプリケーションを提供する Windows プロセス アクティブ化サービス (WAS)。 この利点には、プロセス ライフサイクル管理、プロセス リサイクル、共有ホスティング、迅速な障害保護、プロセスの孤立化、オンデマンド アクティブ化、状態監視などがあります。 詳細については、次を参照してください。 [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=196494)と[AppFabric ホスティングの概念](https://go.microsoft.com/fwlink/?LinkId=196495)します。  
+- [Windows Server AppFabric](https://go.microsoft.com/fwlink/?LinkId=196496) NET4 WCF および WF サービス用に環境をホストしている豊富なアプリケーションを提供するには、IIS 7.0 と Windows プロセス アクティブ化サービス (WAS) で動作します。 この利点には、プロセス ライフサイクル管理、プロセス リサイクル、共有ホスティング、迅速な障害保護、プロセスの孤立化、オンデマンド アクティブ化、状態監視などがあります。 詳細については、次を参照してください。 [AppFabric のホスティング機能](https://go.microsoft.com/fwlink/?LinkId=196494)と[AppFabric ホスティングの概念](https://go.microsoft.com/fwlink/?LinkId=196495)します。  
   
 ## <a name="benefits-of-iis-hosting"></a>IIS ホスティングの利点  
  IIS で WCF サービスをホストすると、いくつかの利点があります。  

@@ -5,12 +5,12 @@ helpviewer_keywords:
 - distributed application security [WCF]
 - security [WCF], transfer
 ms.assetid: 53928a10-e474-46d0-ab90-5f98f8d7b668
-ms.openlocfilehash: 70ed0fe9191c18e88198871319b3c3ee3c0b4ab4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4feb52cbefe7e3f8bab7f90568b231302b77372
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64626966"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486863"
 ---
 # <a name="distributed-application-security"></a>分散アプリケーションのセキュリティ
 Windows Communication Foundation (WCF) のセキュリティは、次の 3 つの主要な機能領域に分割されます。 転送セキュリティ、アクセス制御、および監査します。 転送セキュリティは、整合性、機密性、および認証を実現します。 転送セキュリティは、トランスポート セキュリティ、メッセージ セキュリティ、または `TransportWithMessageCredential` のいずれかによって提供されます。  
@@ -80,7 +80,7 @@ Windows Communication Foundation (WCF) のセキュリティは、次の 3 つ�
 |Windows|Windows 資格情報の認証済みコンテキストで SOAP メッセージ交換を実行できるようにします。 SSPI ネゴシエーション機構を使用して、認証サービスとして Kerberos プロトコルまたは NTLM を選択します。|  
 |[ユーザー名]|ユーザー名資格情報を使用したクライアントの認証をサービスで要求できるようにします。 WCF では、署名の生成やデータの暗号化など、ユーザー名と暗号化操作が許可しないことに注意してください。 そのため、WCF は、ユーザー名資格情報を使用する場合、トランスポート、セキュリティで保護を適用します。|  
 |証明書|証明書を使用したクライアントの認証を、サービスで要求することが可能になります。|  
-|[!INCLUDE[infocard](../../../../includes/infocard-md.md)]|[!INCLUDE[infocard](../../../../includes/infocard-md.md)] を使用したクライアントの認証をサービスで要求できるようにします。|  
+|CardSpace|サービスが要求を許可、CardSpace を使用してクライアントを認証します。|  
   
 ### <a name="programming-credentials"></a>資格情報のプログラミング  
  クライアント資格情報の種類ごとに、WCF プログラミング モデルを使用すると、資格情報の値を指定し、サービスの動作とチャネル動作を使用して資格情報の検証コントロールができます。  

@@ -2,12 +2,12 @@
 title: TCP アクティベーション
 ms.date: 03/30/2017
 ms.assetid: bf8c215c-0228-4f4f-85c2-e33794ec09a7
-ms.openlocfilehash: 065c4706d0a52414c4abed85044ce06ad3efe35c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e3bfbe9d7e7a6efafc8bf1e281e1f7a99c9c5fbe
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62007748"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487525"
 ---
 # <a name="tcp-activation"></a>TCP アクティベーション
 
@@ -141,7 +141,7 @@ Press <ENTER> to terminate client.
 
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには
 
-1. [!INCLUDE[iisver](../../../../includes/iisver-md.md)] がインストールされていることを確認します。 [!INCLUDE[iisver](../../../../includes/iisver-md.md)] は WAS のアクティブ化に必要です。
+1. IIS 7.0 がインストールされていることを確認します。 IIS 7.0 では、WAS アクティブ化に必要です。
 
 2. 実行済みであるかどうかを必ず、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。
 

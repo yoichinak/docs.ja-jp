@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - hosting services [WCF]
 ms.assetid: 192be927-6be2-4fda-98f0-e513c4881acc
-ms.openlocfilehash: db7ca2690fc7b76d3e843a4ed51ef356890ab9eb
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: b1a0a07876e9cc111e8c5eef56f208d7bf2cb49f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402405"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487708"
 ---
 # <a name="hosting-services"></a>ホスティング サービス
 アクティブにするには、サービスを作成してそのコンテキストと有効期間を制御するランタイム環境内で、サービスをホストする必要があります。 マネージ コードをサポートする任意の Windows プロセスで実行するのには、Windows Communication Foundation (WCF) サービスが設計されています。  
@@ -34,7 +34,7 @@ ms.locfileid: "67402405"
  IIS でホストされるサービスは HTTP トランスポートしか使用できません。 IIS 5.1 の実装では、 [!INCLUDE[wxp](../../../includes/wxp-md.md)]にいくつかの制限がありました。 WCF サービスの上の IIS 5.1 によって提供されるメッセージに基づくアクティベーション[!INCLUDE[wxp](../../../includes/wxp-md.md)]からの通信にポート 80 を使用して同じコンピューター上の他の自己ホスト型 WCF サービスをブロックします。 WCF サービスの IIS 6.0 でホストされている場合は、他のアプリケーションと同じ AppDomain/アプリケーション プール/ワーカー プロセスで実行できます[!INCLUDE[ws2003](../../../includes/ws2003-md.md)]します。 IIS 6.0 で IIS 5.1 とは異なり、同じマシンで実行されている他の自己ホスト型 WCF サービスとポート 80 を共有できます WCF および IIS 6.0 は、カーネル モードの HTTP スタック (HTTP.sys) を使用するためです。  
   
 #### <a name="windows-process-activation-service-was"></a>Windows プロセス アクティブ化サービス (WAS)  
- Windows プロセス アクティブ化サービス (WAS) とは、 [!INCLUDE[lserver](../../../includes/lserver-md.md)] でも使用できる [!INCLUDE[wv](../../../includes/wv-md.md)]用の新しいプロセス アクティブ化機構です。 使い慣れた IIS 6.0 プロセス モデル (アプリケーション プールとメッセージ ベースのプロセス アクティベーション) が保持され、アクティブ化から HTTP に対する依存関係を削除する機能 (迅速な障害保護、正常性監視、および再利用) などがこれをホストしています。アーキテクチャです。 [!INCLUDE[iisver](../../../includes/iisver-md.md)] では、WAS を使用して HTTP 経由でのメッセージ ベースのアクティベーションを実現しています。 その他の WCF コンポーネントは、WCF がサポートするその他のプロトコル経由で、TCP、MSMQ、名前付きパイプなど、メッセージ ベースのライセンス認証を提供する WAS にも接続します。 これにより、IIS のプロセスのリサイクル、迅速な障害保護、一般的な構成システムなど、これまで HTTP ベースのアプリケーションのみで利用可能だった IIS 機能を、通信プロトコルを使用するアプリケーションでも使用できるようになりました。  
+ Windows プロセス アクティブ化サービス (WAS) とは、 [!INCLUDE[lserver](../../../includes/lserver-md.md)] でも使用できる [!INCLUDE[wv](../../../includes/wv-md.md)]用の新しいプロセス アクティブ化機構です。 使い慣れた IIS 6.0 プロセス モデル (アプリケーション プールとメッセージ ベースのプロセス アクティベーション) が保持され、アクティブ化から HTTP に対する依存関係を削除する機能 (迅速な障害保護、正常性監視、および再利用) などがこれをホストしています。アーキテクチャです。 IIS 7.0 では、WAS を使用して、HTTP 経由でメッセージ ベースのアクティブ化を実現します。 その他の WCF コンポーネントは、WCF がサポートするその他のプロトコル経由で、TCP、MSMQ、名前付きパイプなど、メッセージ ベースのライセンス認証を提供する WAS にも接続します。 これにより、IIS のプロセスのリサイクル、迅速な障害保護、一般的な構成システムなど、これまで HTTP ベースのアプリケーションのみで利用可能だった IIS 機能を、通信プロトコルを使用するアプリケーションでも使用できるようになりました。  
   
  このホスト オプションでは、WAS が正しく構成されている必要がありますが、アプリケーションの一部としてホスト コードを書く必要はありません。 構成する方法の詳細についてをホストしていたは、次を参照してください。[方法。WAS で WCF サービスをホスト](../../../docs/framework/wcf/feature-details/how-to-host-a-wcf-service-in-was.md)します。  
   

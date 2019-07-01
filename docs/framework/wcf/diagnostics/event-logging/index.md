@@ -4,18 +4,18 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - event logging [WCF]
 ms.assetid: aac0530d-f44c-45a1-bada-e30e0677b41f
-ms.openlocfilehash: adff5bf2fad9f78fccbb606a5bd27f2f1dc32647
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c4f73480208fbf900bb8742eb6d7b2e2c0e6a4ff
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64638764"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486625"
 ---
 # <a name="event-logging-in-wcf"></a>WCF のイベント ログ
 Windows Communication Foundation (WCF) は、Windows イベント ログで内部イベントをトレースします。  
   
 ## <a name="viewing-event-logs"></a>イベント ログの表示  
- イベント ログは、既定で自動的に有効になります。無効にする方法はありません。 イベント ビューアーを使用して、WCF によって記録されたイベントを表示できます。 このツールを起動する をクリックして**開始**、 をクリックして**コントロール パネルの **、 をダブルクリックします**管理ツール**、し、ダブルクリック**イベント ビューアー**.  
+ イベント ログは、既定で自動的に有効になります。無効にする方法はありません。 イベント ビューアーを使用して、WCF によって記録されたイベントを表示できます。 このツールを起動する をクリックして**開始**、 をクリックして**コントロール パネルの** 、 をダブルクリックします**管理ツール**、し、ダブルクリック**イベント ビューアー**.  
   
 ### <a name="application-event-log"></a>アプリケーション イベント ログ  
  **アプリケーション イベント ログ**WCF によって生成されたイベントのほとんどが含まれています。 このエントリの多くは、アプリケーションに関して特定の機能を起動できなかったことを示しています。 その例は次のとおりです。  
@@ -24,7 +24,7 @@ Windows Communication Foundation (WCF) は、Windows イベント ログで内�
   
 - 共有リスナー:WCF TCP ポート共有サービスは、開始に失敗したときにイベントを記録します。  
   
-- [!INCLUDE[infocard](../../../../../includes/infocard-md.md)]:サービスの開始に失敗したときにイベントを記録します。  
+- CardSpace:サービスの開始に失敗したときにイベントを記録します。  
   
 - 起動エラーやクラッシュなど、重大なエラー イベント。  
   

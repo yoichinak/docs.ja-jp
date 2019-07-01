@@ -5,12 +5,12 @@ helpviewer_keywords:
 - smart clients
 - Windows Forms, about Windows Forms
 ms.assetid: 3a2b6284-c8d6-4e1c-8c69-0bed38f38cd4
-ms.openlocfilehash: 08e85828451ba6c66b13ff31e3d6c106871b8154
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 71bf50bdcf058e94981dc5df4731b5d32dcc2069
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875883"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487202"
 ---
 # <a name="windows-forms-overview"></a>Windows フォームの概要
 
@@ -72,21 +72,21 @@ ms.locfileid: "65875883"
 
 ### <a name="deploy-apps-to-client-computers"></a>クライアント コンピューターにアプリを展開します。
 
-アプリケーションを作成した後、ユーザーにアプリケーションを送信して、独自のクライアント コンピューターにインストールして実行できるようにする必要があります。 使用すると、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)]テクノロジ、ほんの数回のクリックを使用して Visual Studio 内からアプリケーションを展開し、Web 上のアプリケーションを指す URL をユーザーに提供します。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] は、アプリケーションのすべての要素と依存関係を管理し、クライアント コンピューターにアプリケーションが正しくインストールされていることを確認します。
+アプリケーションを作成した後、ユーザーにアプリケーションを送信して、独自のクライアント コンピューターにインストールして実行できるようにする必要があります。 ClickOnce テクノロジを使用する場合は、ほんの数回のクリックを使用して Visual Studio 内からアプリケーションを展開し、Web 上のアプリケーションを指す URL をユーザーに提供できます。 ClickOnce では、すべての要素と、アプリケーション内の依存関係を管理し、クライアント コンピューターのアプリケーションが正しくインストールされていることにより、します。
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] アプリケーションは、ユーザーがネットワークに接続されている場合にのみ実行するか、オンラインとオフラインの両方で実行するかを構成することができます。 アプリケーションがオフライン操作をサポートするよう指定すると、[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] はユーザーの **[スタート]** メニューにアプリケーションへのリンクを追加します。 ユーザーは、URL を使用せずにアプリケーションを開くことができます。
+ClickOnce アプリケーションは、ユーザーがネットワークに接続されている場合にのみ実行するか、オンラインの両方を実行する構成され、オフラインにできます。 ClickOnce が、ユーザーのアプリケーションへのリンクを追加アプリケーションがオフラインの操作をサポートする必要がありますを指定すると**開始**メニュー。 ユーザーは、URL を使用せずにアプリケーションを開くことができます。
 
-アプリケーションを更新するときに、新しい配置マニフェストとアプリケーションの新しいコピーを Web サーバーに発行します。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] は、使用可能な更新プログラムがあることを検出し、ユーザーのインストールをアップグレードします。古いアセンブリを更新するのに、カスタム プログラミングは必要ありません。
+アプリケーションを更新するときに、新しい配置マニフェストとアプリケーションの新しいコピーを Web サーバーに発行します。 ClickOnce が使用可能な更新プログラムと、ユーザーのインストールのアップグレードがあることを検出します。古いアセンブリを更新するカスタム プログラミングは必要ありません。
 
 #### <a name="deploy-clickonce-apps"></a>ClickOnce アプリを展開します。
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] の概要については、「[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)」を参照してください。 これらの機能を使用する方法の手順を追った説明については、次のヘルプ トピックを参照してください。
+ClickOnce に完全な概要については、次を参照してください。 [ClickOnce Security and Deployment](/visualstudio/deployment/clickonce-security-and-deployment)します。 これらの機能を使用する方法の手順を追った説明については、次のヘルプ トピックを参照してください。
 
 |説明|ヘルプ トピック|
 |-----------------|----------------|
-|[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] を使用してアプリケーションを配置する|[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
-|[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] の配置を更新する|[方法: ClickOnce アプリケーションの更新プログラムを管理する](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
-|[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] を使用してセキュリティを管理する|[方法: [ClickOnce セキュリティ設定を有効にする]](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
+|ClickOnce を使用してアプリケーションを展開します。|[方法: 発行ウィザードを使用して ClickOnce アプリケーションを発行する](/visualstudio/deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard)<br /><br /> [チュートリアル: ClickOnce アプリケーションを手動で配置する](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)|
+|ClickOnce 配置の更新|[方法: ClickOnce アプリケーションの更新プログラムを管理する](/visualstudio/deployment/how-to-manage-updates-for-a-clickonce-application)|
+|ClickOnce によるセキュリティを管理|[方法: [ClickOnce セキュリティ設定を有効にする]](/visualstudio/deployment/how-to-enable-clickonce-security-settings)|
 
 ### <a name="other-controls-and-features"></a>その他のコントロールと機能
 

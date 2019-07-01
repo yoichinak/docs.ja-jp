@@ -2,12 +2,12 @@
 title: Windows Communication Foundation のセキュリティ動作
 ms.date: 03/30/2017
 ms.assetid: 513232c0-39fd-4409-bda6-5ebd5e0ea7b0
-ms.openlocfilehash: 53d8fedb5f562dfbc4aec566f8d0c442b255e1c9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 378edb6ddd7a66249a0c7548a3d9465475f670a8
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67424675"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487760"
 ---
 # <a name="security-behaviors-in-wcf"></a>Windows Communication Foundation のセキュリティ動作
 Windows Communication Foundation (WCF) での動作は、サービス レベルまたはエンドポイント レベルでの実行時の動作を変更します。 (一般に、表示動作の詳細については[サービスの実行時の動作を指定する](../../../../docs/framework/wcf/specifying-service-run-time-behavior.md))。*セキュリティ動作*および監査ログの資格情報、認証、承認、制御できるようにします。 動作は、プログラムまたは構成を通じて使用できます。 ここでは、セキュリティ機能に関連する以下の動作の構成について説明します。  
@@ -87,7 +87,7 @@ Windows Communication Foundation (WCF) での動作は、サービス レベル�
  詳細については、この構成要素を使用して、次を参照してください。[方法。フェデレーション サービスで資格情報を構成](../../../../docs/framework/wcf/feature-details/how-to-configure-credentials-on-a-federation-service.md)します。  
   
 #### <a name="allowing-anonymous-cardspace-users"></a>匿名の CardSpace ユーザーの許可  
- `AllowUntrustedRsaIssuers` 要素の `<IssuedTokenAuthentication>` 属性を `true` に設定すると、任意の RSA キー ペアで署名された自己発行トークンを提示することがすべてのクライアントに明示的に許可されます。 発行者が*信頼されていない*キーに関連付けられている発行者のデータがあるないためです。 [!INCLUDE[infocard](../../../../includes/infocard-md.md)] ユーザーは、ID の自己提供クレームを含む自己発行カードを作成できます。 この機能を使用するときは十分に注意してください。 この機能を使用する場合は、RSA 公開キーを、ユーザー名と一緒にデータベースに格納する必要のある比較的安全なパスワードとして考えます。 サービスへのクライアント アクセスを許可する前に、クライアントから提示された RSA 公開キーを、提示されたユーザー名に対応する格納済みの公開キーと比較して検証します。 これは、ユーザーが各自のユーザー名を登録し、自己発行の RSA 公開キーに関連付けることができる登録プロセスが確立されていることが前提となります。  
+ `AllowUntrustedRsaIssuers` 要素の `<IssuedTokenAuthentication>` 属性を `true` に設定すると、任意の RSA キー ペアで署名された自己発行トークンを提示することがすべてのクライアントに明示的に許可されます。 発行者が*信頼されていない*キーに関連付けられている発行者のデータがあるないためです。 CardSpace ユーザーは、id の自己提供クレームを含む自己発行カードを作成できます。 この機能を使用するときは十分に注意してください。 この機能を使用する場合は、RSA 公開キーを、ユーザー名と一緒にデータベースに格納する必要のある比較的安全なパスワードとして考えます。 サービスへのクライアント アクセスを許可する前に、クライアントから提示された RSA 公開キーを、提示されたユーザー名に対応する格納済みの公開キーと比較して検証します。 これは、ユーザーが各自のユーザー名を登録し、自己発行の RSA 公開キーに関連付けることができる登録プロセスが確立されていることが前提となります。  
   
 ## <a name="client-credentials"></a>クライアント資格情報  
  クライアント資格情報は、相互認証が必要な場合にサービスに対するクライアントの認証に使用されます。 また、このセクションを使用して、クライアントがサービスの証明書によってサービスへのメッセージをセキュリティで保護する必要がある場合に使用するサービス証明書を指定することもできます。  

@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 56ece47e-98bf-4346-b92b-fda1fc3b4d9c
-ms.openlocfilehash: 19ffe7e3fb0de9b377279d9cd274f998a104c6b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8de673fae16da8189589e20b6d9a66b96e1823ba
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62047816"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487106"
 ---
 # <a name="how-to-create-a-federated-client"></a>方法: フェデレーション クライアントを作成する
 Windows Communication Foundation (WCF) でのクライアントの作成、*フェデレーション サービス*の 3 つの主な手順で構成されます。  
@@ -39,7 +39,7 @@ Windows Communication Foundation (WCF) でのクライアントの作成、*フ�
   
 4. 確認、追加[ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md) 、コメント内の要素を <`alternativeIssuedTokenParameters`> 要素。 Svcutil.exe ツールを使用してフェデレーション サービスの構成を生成するときに、フェデレーション サービスまたは任意の中間セキュリティ トークン サービスが、発行者アドレスを指定せずに、複数のエンドポイントを公開するセキュリティ トークン サービスのメタデータ アドレスを指定している場合、生成された構成ファイルは最初のエンドポイントを参照します。 追加のエンドポイントはコメント アウトとして、構成ファイルで <`alternativeIssuedTokenParameters`> 要素。  
   
-     1 つかどうかを判断します。 これらの <`issuedTokenParameters`> は 1 つの構成に既に存在することをお勧めします。 たとえば、セキュリティ トークン サービスに対する認証を行う際は、ユーザー名とパスワードの組み合わせよりも Windows [!INCLUDE[infocard](../../../../includes/infocard-md.md)] トークンを使用する方が、クライアントにとって望ましい場合があります。  
+     1 つかどうかを判断します。 これらの <`issuedTokenParameters`> は 1 つの構成に既に存在することをお勧めします。 たとえば、クライアントは、ユーザー名/パスワードの組み合わせではなく、Windows CardSpace のトークンを使用してセキュリティ トークン サービスに対する認証にもできます。  
   
     > [!NOTE]
     >  サービスと通信するまでに複数のセキュリティ トークン サービスをたどる必要がある場合は、中間セキュリティ トークン サービスがクライアントを不適切なセキュリティ トークン サービスにダイレクトする可能性があります。 そのため、いることを確認でセキュリティ トークン サービスのエンドポイント、 [ \<issuedTokenParameters >](../../../../docs/framework/configure-apps/file-schema/wcf/issuedtokenparameters.md)予期されるセキュリティ トークン サービスは、不明なセキュリティ トークン サービスではなく、します。  

@@ -2,12 +2,12 @@
 title: IdentityModel 例外
 ms.date: 03/30/2017
 ms.assetid: 4ef34497-8ff5-4621-b773-7731cc721231
-ms.openlocfilehash: ee0b5537a415e1ea53c653ae8e8485e94cc713fd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b8af2620b6179ce4cff59d7f9871377f06ffe5f
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61998518"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486669"
 ---
 # <a name="identitymodel-exceptions"></a>IdentityModel 例外
 ここでは、IdentityModel によって生成されるすべての例外を示します。  
@@ -100,11 +100,11 @@ ms.locfileid: "61998518"
 |SAMLAssertionMissingMajorVersionAttributeOnRead|読み取り中の SamlAssertion の MajorVersion が指定されていないか、長さが 0 です。|  
 |SamlAttributeClaimRightShouldBePossessProperty|この SamlAttribute コンストラクターでは、クレームの権限に System.IdentityModel.Claims.Rights.PossessProperty という値が割り当てられていることが要求されます。|  
 |AuthorizationPolicyEvaluated|指定された ID を持つポリシーが評価されます。|  
-|SAMLUnableToLoadCondtions|\<Saml:conditions > 要素を読み込めませんでした。|  
+|SAMLUnableToLoadCondtions<!-- the misspelling here is deliberate. -->|\<Saml:conditions > 要素を読み込めませんでした。|  
 |AESKeyLengthNotSupported|指定されたビット キーはサポートされていません。 128、192、および 256 ビット キーのみサポートされます。|  
 |UserNameCannotBeEmpty|ユーザー名を空にすることはできません。|  
 |AlgorithmAndPublicKeyMisMatch|指定されたアルゴリズムと公開キーが適合しません。|  
-|SAMLUnableToLoadCondtion|\<Saml:conditions > 要素を読み込めませんでした。|  
+|SAMLUnableToLoadCondtion<!-- the misspelling here is deliberate. -->|\<Saml:conditions > 要素を読み込めませんでした。|  
 |SamlAssertionMissingSigningCredentials|SigningCredentials が SamlAssertion に設定されていません。 SamlAssertions には署名が必要です。続行するには、有効な SigningCredentials を SamlAssertion に設定してください。|  
 |SspiPayloadNotEncrypted|バイナリ データは SSPI セキュリティ コンテキストを使用して暗号化されていませんでした。|  
 |SAMLAuthorizationDecisionShouldHaveOneActionOnRead|読み取り中の SamlAuthorizationDecisionStatement には SamlAction がありません。|  

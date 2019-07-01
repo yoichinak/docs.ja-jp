@@ -5,18 +5,18 @@ helpviewer_keywords:
 - applicationPool element
 - <applicationPool> element
 ms.assetid: 46d1baaa-e343-4639-b70d-2a43a9f62b2a
-ms.openlocfilehash: 629eb482768e4ed2b3d70ee3d27157b502eeb72b
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: d6c931ec904e9a7e58d5b747c74898208863b8e9
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832721"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486732"
 ---
 # <a name="applicationpool-element-web-settings"></a>\<applicationPool > 要素 (Web 設定)
-ASP.NET アプリケーションが統合モードで実行されている場合に、プロセス全体の動作を管理する、ASP.NET で使用される構成設定を指定します[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン。  
+IIS 7.0 またはそれ以降のバージョンで、ASP.NET アプリケーションが統合モードで実行されている場合に、プロセス全体の動作を管理する、ASP.NET で使用される構成設定を指定します。  
   
 > [!IMPORTANT]
->  ASP.NET アプリケーションがホストされている場合のみ機能をサポートこの要素と機能[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]以降のバージョン。  
+>  この要素と機能は、ASP.NET アプリケーションが IIS 7.0 またはそれ以降のバージョンでホストされている場合、唯一の作業をサポートします。  
   
  \<configuration>  
 \<system.web > 要素 (Web 設定)  
@@ -52,12 +52,12 @@ ASP.NET アプリケーションが統合モードで実行されている場合
 |[\<system.web >](../../../../../docs/framework/configure-apps/file-schema/web/system-web-element-web-settings.md)|ASP.NET がホスト アプリケーションと対話する方法についてを説明します。|  
   
 ## <a name="remarks"></a>Remarks  
- 実行するときに[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]統合モードで以降のバージョンがこの要素を組み合わせて、アプリケーションが IIS アプリケーション プールでホストされている場合に、ASP.NET がスレッドとキューの要求を管理する方法を設定できますか。 IIS 6 を実行するかを実行する[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]クラシック モードまたは ISAPI モードでは、これらの設定は無視されます。  
+ 統合モードで IIS 7.0 またはそれ以降のバージョンを実行するときにこの要素の組み合わせでは、アプリケーションが IIS アプリケーション プールでホストされている場合に、ASP.NET がスレッドとキューの要求を管理する方法を構成することができます。 IIS 6 を実行する、または IIS 7.0 を実行する ISAPI モードまたはクラシック モードでは、これらの設定は無視されます。  
   
  `applicationPool`設定、.NET Framework の特定のバージョンで実行されるすべてのアプリケーション プールに適用されます。 設定は、aspnet.config ファイルに格納されます。 このファイルのバージョン 2.0 と 4.0 の .NET Framework のバージョンがあります。 (バージョン 3.0 および .NET framework 3.5 に、バージョン 2.0 ではある aspnet.config ファイルが共有)。  
   
 > [!IMPORTANT]
->  実行する場合[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]で[!INCLUDE[win7](../../../../../includes/win7-md.md)]、すべてのアプリケーション プールの別の aspnet.config ファイルを構成することができます。 これにより、各アプリケーション プールのスレッドのパフォーマンスを調整できます。  
+>  IIS 7.0 で実行する場合[!INCLUDE[win7](../../../../../includes/win7-md.md)]、すべてのアプリケーション プールの別の aspnet.config ファイルを構成することができます。 これにより、各アプリケーション プールのスレッドのパフォーマンスを調整できます。  
   
  `maxConcurrentRequestsPerCPU`設定、「5000」の既定の設定、.NET Framework 4 で効果的に ASP.NET によって制御される要求の調整をオフに CPU あたり 5000 以上の要求が実際にはない限り、します。 既定の設定は、CPU あたりの同時実行を自動的に管理する CLR のスレッド プールに代わりに依存します。 アプリケーションの非同期要求処理では、広範に使用を構成する、またはネットワーク I/O でブロックされている多くの実行時間の長い要求は、.NET Framework 4 で向上の既定の制限を得られます。 設定`maxConcurrentRequestsPerCPU`ASP.NET 要求を処理するためのマネージ スレッドの使用を解除します。 0 にします。 アプリケーションを IIS アプリケーション プールで実行すると、IIS の I/O スレッドで常に要求とスレッドの IIS 設定によって同時実行を調整するためです。  
   
@@ -66,9 +66,9 @@ ASP.NET アプリケーションが統合モードで実行されている場合
 ## <a name="example"></a>例  
  次の例では、次の状況で aspnet.config ファイルに ASP.NET プロセス全体の動作を構成する方法を示します。  
   
-- アプリケーションがホストされている、[!INCLUDE[iisver](../../../../../includes/iisver-md.md)]アプリケーション プール。  
+- アプリケーションは、IIS 7.0 アプリケーション プールでホストされます。  
   
-- [!INCLUDE[iisver](../../../../../includes/iisver-md.md)] 統合モードで実行されています。  
+- IIS 7.0 は、統合モードで実行しています。  
   
 - アプリケーションは、.NET Framework 3.5 SP1 またはそれ以降のバージョンを使用します。  
   

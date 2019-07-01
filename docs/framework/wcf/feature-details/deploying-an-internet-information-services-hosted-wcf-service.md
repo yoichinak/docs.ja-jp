@@ -2,12 +2,12 @@
 title: インターネット インフォメーション サービスでホストされる WCF サービスの配置
 ms.date: 03/30/2017
 ms.assetid: 04ebd329-3fbd-44c3-b3ab-1de3517e27d7
-ms.openlocfilehash: 4c46a7ac0482e0f9c969505b87558d240bb1391e
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: fcfad4c6cd7ffb0bf1233bab842b57a10bcc7f87
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402293"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486925"
 ---
 # <a name="deploying-an-internet-information-services-hosted-wcf-service"></a>インターネット インフォメーション サービスでホストされる WCF サービスの配置
 
@@ -103,7 +103,7 @@ IIS でホストされるサービスのエンドポイントには、常に相�
 
 ### <a name="available-transports"></a>利用可能なトランスポート
 
-WCF サービスでホストされている IIS 5.1 および IIS 6.0 は、HTTP ベースの通信を使用してに制限されます。 これらの IIS プラットフォームでホストされるサービスで、非 HTTP バインドを使用するように構成すると、サービスをアクティブ化するときにエラーが発生します。 [!INCLUDE[iisver](../../../../includes/iisver-md.md)]でサポートされるトランスポートには、既存の MSMQ アプリケーションとの後方互換性を実現する HTTP、Net.TCP、Net.Pipe、Net.MSMQ、msmq.formatname があります。
+WCF サービスでホストされている IIS 5.1 および IIS 6.0 は、HTTP ベースの通信を使用してに制限されます。 これらの IIS プラットフォームでホストされるサービスで、非 HTTP バインドを使用するように構成すると、サービスをアクティブ化するときにエラーが発生します。 IIS 7.0 では、サポートされているトランスポートを含める HTTP、Net.TCP、Net.Pipe、Net.MSMQ、および msmq.formatname の旧バージョンと既存の MSMQ アプリケーションとの互換性。
 
 ### <a name="http-transport-security"></a>HTTP トランスポート セキュリティ
 

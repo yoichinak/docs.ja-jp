@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation [WCF]
 ms.assetid: 2f1e646f-8361-48d4-9d5d-1b961f31ede4
-ms.openlocfilehash: 376448502b7b9c7002213be5c3437849a3868166
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 295e4bd5eca58bc190b31fd96e79f97678e381a4
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67425036"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486786"
 ---
 # <a name="federation"></a>フェデレーション
 ここでは、フェデレーション セキュリティの概念について簡単に説明します。 フェデレーション セキュリティ アーキテクチャをデプロイするための Windows Communication Foundation (WCF) のサポートについても説明します。 フェデレーションを示すサンプル アプリケーションを参照してください。[フェデレーション サンプル](../../../../docs/framework/wcf/samples/federation-sample.md)します。  
@@ -224,7 +224,7 @@ operationRequirementType="FederationSample.MyServiceOperationRequirement, MyServ
   
  ![フェデレーション](../../../../docs/framework/wcf/feature-details/media/sts-b.gif "STS_B")  
   
- STS B と同様に、STS A もセキュリティ トークンを発行する Web サービスであり、そのための単一のエンドポイントを公開します。 ただし、STS A は別のバインディング (`wsHttpBinding`) を使用し、[!INCLUDE[infocard](../../../../includes/infocard-md.md)] クレームを含む有効な `emailAddress` を提示することをユーザーに要求します。 応答で、STS A は `userAuthenticated` クレームを含む SAML トークンを発行します。 これは、サービス構成で宣言によって指定されます。  
+ STS B と同様に、STS A もセキュリティ トークンを発行する Web サービスであり、そのための単一のエンドポイントを公開します。 ただし、異なるバインドを使用 (`wsHttpBinding`) ユーザーで有効な CardSpace を提供する必要があります、`emailAddress`要求。 応答で、STS A は `userAuthenticated` クレームを含む SAML トークンを発行します。 これは、サービス構成で宣言によって指定されます。  
   
 ```xml  
 <system.serviceModel>  

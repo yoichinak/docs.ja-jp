@@ -2,12 +2,12 @@
 title: MSMQ アクティベーション
 ms.date: 03/30/2017
 ms.assetid: e3834149-7b8c-4a54-806b-b4296720f31d
-ms.openlocfilehash: 925148c4bd084f843f125ab9e851a5404bbe4b89
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 43d6cde7a9342b57933cd3e7475bd4412da86d92
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664817"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487558"
 ---
 # <a name="msmq-activation"></a>MSMQ アクティベーション
 このサンプルでは、メッセージ キューから読み取ったアプリケーションを、Windows プロセス アクティブ化サービス (WAS) でホストする方法を示します。 このサンプルでは、`netMsmqBinding`に基づく、[双方向通信](../../../../docs/framework/wcf/samples/two-way-communication.md)サンプル。 この場合、サービスは Web ホスト アプリケーションの 1 つであり、クライアントは自己ホスト型です。クライアントはコンソールに出力して、送信された発注書のステータスを確認します。  
@@ -215,7 +215,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
 ### <a name="to-set-up-build-and-run-the-sample"></a>サンプルをセットアップ、ビルド、および実行するには  
   
-1. WAS のアクティブ化に必要な [!INCLUDE[iisver](../../../../includes/iisver-md.md)] がインストールされていることを確認します。  
+1. WAS のアクティブ化に必要な IIS 7.0 がインストールされていることを確認します。  
   
 2. 実行したことを確認、 [Windows Communication Foundation サンプルの 1 回限りのセットアップ手順](../../../../docs/framework/wcf/samples/one-time-setup-procedure-for-the-wcf-samples.md)します。 さらに、WCF 非 HTTP アクティブ化コンポーネントをインストールする必要があります。  
   
@@ -249,7 +249,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
      便宜上次の 2 つの手順が、サンプル ディレクトリにある AddMsmqSiteBinding.cmd というバッチ ファイルに実装されています。  
   
-    1. net.msmq アクティベーションをサポートするには、既定の Web サイトをあらかじめ net.msmq プロトコルにバインドしておく必要があります。 これは、[!INCLUDE[iisver](../../../../includes/iisver-md.md)] 管理ツール セットと共にインストールされる appcmd.exe を使用して行います。 権限のレベルが高い (管理者の) コマンド プロンプトで、次のコマンドを実行します。  
+    1. net.msmq アクティベーションをサポートするには、既定の Web サイトをあらかじめ net.msmq プロトコルにバインドしておく必要があります。 これは、IIS7.0 管理ツール セットと共にインストールされる appcmd.exe を使用して行います。 権限のレベルが高い (管理者の) コマンド プロンプトで、次のコマンドを実行します。  
   
         ```console  
         %windir%\system32\inetsrv\appcmd.exe set site "Default Web Site"   
@@ -332,7 +332,7 @@ Status of order 70cf9d63-3dfa-4e69-81c2-23aa4478ebed :Pending
   
     1. Inetmgr.exe を実行します。  
   
-    2. **アプリケーション プール**を右クリックし、 **AppPool** (通常**DefaultAppPool**) 選択**アプリケーション プールの既定値を設定しています.**.  
+    2. **アプリケーション プール**を右クリックし、 **AppPool** (通常**DefaultAppPool**) 選択**アプリケーション プールの既定値を設定しています.** .  
   
     3. 特定のユーザー アカウントを使用するように、[ID] プロパティを変更します。  
   

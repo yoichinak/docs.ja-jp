@@ -4,12 +4,12 @@ ms.date: 03/30/2017
 helpviewer_keywords:
 - denial of service [WCF]
 ms.assetid: dfb150f3-d598-4697-a5e6-6779e4f9b600
-ms.openlocfilehash: d6dea344d5af24ba2f5bb4aa4064a4f876408380
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 0946e123e10fbad7357c9be356287e5e87b271d2
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66423891"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486937"
 ---
 # <a name="denial-of-service"></a>サービス拒否
 サービス拒否は、メッセージを処理できなくしたり、メッセージ処理を大幅に遅延させたりするなど、システムに過大な負荷が生じた場合に発生します。  
@@ -67,7 +67,7 @@ ms.locfileid: "66423891"
  まれなケースとして X.509 証明書に複数の代替サブジェクト名が含まれる場合、その代替サブジェクト名を使用して承認を行うと、承認は失敗する場合があります。  
   
 ## <a name="protect-configuration-files-with-acls"></a>ACL を使用して構成ファイルを保護する  
- [!INCLUDE[infocard](../../../../includes/infocard-md.md)] で発行されたトークンについては、必須およびオプションのクレームをコードおよび構成ファイルに指定できます。 これにより、対応する要素が、セキュリティ トークン サービスに送信される `RequestSecurityToken` メッセージに送出されます。 攻撃者は、コードまたは構成を変更して必須またはオプションのクレームを削除でき、対象サービスへのアクセスが許可されていないトークンをセキュリティ トークン サービスに発行させることができます。  
+ 必須およびオプションのクレームは、CardSpace 発行済みトークンのコードと構成ファイルで指定できます。 これにより、対応する要素が、セキュリティ トークン サービスに送信される `RequestSecurityToken` メッセージに送出されます。 攻撃者は、コードまたは構成を変更して必須またはオプションのクレームを削除でき、対象サービスへのアクセスが許可されていないトークンをセキュリティ トークン サービスに発行させることができます。  
   
  : を軽減するには構成ファイルを変更するコンピューターへのアクセスが必要です。 アクセス制御リスト (ACL: Access Control List) を使用して構成ファイルをセキュリティで保護します。 WCF では、コードは、構成から読み込まれるには、このようなコードを許可することは前に、アプリケーション ディレクトリまたはグローバル アセンブリ キャッシュにする必要があります。 ディレクトリの ACL を使用してディレクトリをセキュリティで保護します。  
   

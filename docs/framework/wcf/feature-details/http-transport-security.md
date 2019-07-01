@@ -2,12 +2,12 @@
 title: HTTP トランスポート セキュリティ
 ms.date: 03/30/2017
 ms.assetid: d3439262-c58e-4d30-9f2b-a160170582bb
-ms.openlocfilehash: 386c24a9b51be56bf5a8195123e573cfced6392f
-ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
+ms.openlocfilehash: 456df42848c009dcf42022ac674a1d27e5b33972
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67402303"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487018"
 ---
 # <a name="http-transport-security"></a>HTTP トランスポート セキュリティ
 トランスポートとして HTTP を使用すると、SSL (Secure Sockets Layer) によりセキュリティが提供されます。 SSL はクライアントに対してサービスの認証を行い、機密性 (暗号化) をチャネルに提供する技術としてインターネットで広く使用されています。 このトピックでは、SSL のしくみし、Windows Communication Foundation (WCF) でその実装方法について説明します。  
@@ -38,9 +38,9 @@ ms.locfileid: "67402303"
 ### <a name="using-iis-for-transport-security"></a>トランスポート セキュリティのための IIS の使用  
   
 #### <a name="iis-70"></a>IIS 7.0  
- 設定する[!INCLUDE[iisver](../../../../includes/iisver-md.md)](SSL を使用) をセキュリティで保護されたホストとして、次を参照してください[IIS 7.0 Beta:。IIS 7.0 のレイヤーを構成、セキュリティで保護されたソケット](https://go.microsoft.com/fwlink/?LinkId=88600)します。  
+ (SSL を使用して)、セキュリティで保護されたホストとして、IIS 7.0 を設定するを参照してください。 [Secure Sockets Layer in IIS 7.0 構成](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771438(v=ws.10))します。  
   
- 使用するための証明書を構成する[!INCLUDE[iisver](../../../../includes/iisver-md.md)]を参照してください[IIS 7.0 Beta:Configuring Server Certificates in IIS 7.0](https://go.microsoft.com/fwlink/?LinkID=88595)します。  
+IIS 7.0 で使用する証明書を構成するのを参照してください。 [Configuring Server Certificates in IIS 7.0](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc732230(v=ws.10))します。  
   
 #### <a name="iis-60"></a>IIS 6.0  
  (SSL を使用して)、セキュリティで保護されたホストとして、IIS 6.0 を設定するを参照してください。 [Configuring Secure Sockets Layer](https://go.microsoft.com/fwlink/?LinkId=88601)します。  

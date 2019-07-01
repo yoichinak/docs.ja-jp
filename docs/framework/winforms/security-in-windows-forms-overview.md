@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: a2d0f5f740186d3dd7483408f88d612711f57575
-ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
+ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67348466"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487259"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows フォームのセキュリティの概要
 
@@ -21,7 +21,7 @@ ms.locfileid: "67348466"
 
 .NET Framework では、コード アクセス セキュリティのアクセス許可を区別することができますか、コードが持つ権限をユーザーが持つ権限と呼ばれるインフラストラクチャについて説明します。 既定では、インターネットとイントラネットからのコードは、部分信頼と呼ばれるものでのみ実行できます。 部分信頼では、アプリケーションに一連の制限が適用されます。特に、アプリケーションはローカルのハード ディスクへのアクセスが制限され、アンマネージ コードを実行することができません。 .NET Framework のコードはそのコードの id に基づいてアクセスを許可するリソースの制御: 送信元があるかどうを[厳密な名前付きアセンブリ](../app-domains/strong-named-assemblies.md)と証明書で署名されているかどうか、です。
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] テクノロジは、Windows フォーム アプリケーションの配置に使用しますが、部分信頼で実行するアプリケーションを、完全信頼や、昇格されたアクセス許可を持つ部分信頼で簡単に開発できるようにします。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] は、アクセス許可の昇格や、信頼されたアプリケーション配置などの機能を提供し、アプリケーションが完全信頼やアクセス許可の昇格をローカル ユーザーから実行可能な方法で要求できます。
+ClickOnce テクノロジを使用して Windows フォーム アプリケーションを展開する容易の管理者特権を持つ部分信頼で、完全な信頼または部分信頼でを実行しているアプリケーションを開発できます。 ClickOnce は、アプリケーションに要求できるように完全信頼または高度な権限、ローカルのユーザーから適切な方法でアクセス許可の昇格と信頼されたアプリケーションの展開などの機能を提供します。
 
 ## <a name="understanding-security-in-the-net-framework"></a>.NET Framework のセキュリティについて
 
@@ -34,7 +34,7 @@ ms.locfileid: "67348466"
 >
 > これらの各アクセス許可セットで付与される既定のアクセス許可の一覧については、「[既定のセキュリティ ポリシー](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/03kwzyfc(v=vs.100))」を参照してください。 アプリケーションが受け取るアクセス許可に応じて、正常に実行されるか、またはセキュリティ例外が生成されます。
 >
-> [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] を使用して、多数の Windows フォーム アプリケーションが配置されます。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] の配置の生成に使用されるツールには、これまでの説明とは異なるセキュリティの既定値があります。 詳細については、次の説明を参照してください。
+> Windows フォーム アプリケーションの多くは、ClickOnce を使用してデプロイされます。 ClickOnce 配置を生成するために使用するツールには、異なるセキュリティ既定の前に説明したものがあります。 詳細については、次の説明を参照してください。
 
 アプリケーションに付与される実際のアクセス許可は、セキュリティ ポリシーが変更される可能性があるため、既定値とは異なる可能性があります。つまり、アプリケーションが、あるコンピューターではアクセス許可を持ち、別のコンピューターでは持たない可能性があることを意味します。
 
@@ -64,9 +64,9 @@ ms.locfileid: "67348466"
 
 ### <a name="deploying-an-application-with-the-appropriate-permissions"></a>適切なアクセス許可を持つアプリケーションの配置
 
-クライアント コンピューターに Windows フォーム アプリケーションを配置する最も一般的な方法は、アプリケーションが実行する必要があるすべてのコンポーネントを記述する配置テクノロジの [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] を使用することです。 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] は、マニフェストと呼ばれる XML ファイルを使用して、アプリケーションを構成するアセンブリとファイル、およびアプリケーションに必要なアクセス許可を記述します。
+クライアント コンピューターに Windows フォーム アプリケーションを展開する最も一般的な方法は、ClickOnce では、すべてのアプリケーションの実行に必要なコンポーネントを記述する配置テクノロジです。 ClickOnce では、マニフェストと呼ばれる XML ファイルを使用して、アセンブリと、アプリケーションを構成するファイルを記述して、アプリケーションに必要なアクセス許可。
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] は、クライアント コンピューターでアクセス許可の昇格を要求するための 2 つのテクノロジを持っています。 どちらのテクノロジも、Authenticode 証明書の使用に依存します。 証明書は、アプリケーションが信頼できる発行元からのものであることをユーザーにある程度保証するのに役立ちます。
+ClickOnce では、クライアント コンピューターで管理者特権を要求するための 2 つのテクノロジがあります。 どちらのテクノロジも、Authenticode 証明書の使用に依存します。 証明書は、アプリケーションが信頼できる発行元からのものであることをユーザーにある程度保証するのに役立ちます。
 
 次の表では、それらのテクノロジについて説明します。
 
@@ -77,9 +77,9 @@ ms.locfileid: "67348466"
 
 どのテクノロジを選択するかは、配置環境に応じて異なります。 詳細については、「[ClickOnce 配置ストラテジの選択](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)」を参照してください。
 
-既定では、 [!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] Visual Studio または .NET Framework SDK のツール (Mage.exe および MageUI.exe) を使用してデプロイされたアプリケーションは完全信頼を持つクライアント コンピューターで実行するように構成します。 部分信頼を使用して、またはいくつか追加のアクセス許可のみを使用して、アプリケーションを配置している場合、この既定を変更する必要があります。 配置を構成するときに、Visual Studio または .NET Framework SDK ツールの MageUI.exe のいずれかでこれを実行できます。 MageUI.exe を使用する方法の詳細については、チュートリアルを参照してください。コマンドラインから ClickOnce アプリケーションを展開します。  参照してください[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))または[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)します。
+既定では、Visual Studio または .NET Framework SDK のツール (Mage.exe および MageUI.exe) を使用してデプロイされた ClickOnce アプリケーションは、完全信頼を持つクライアント コンピューターで実行する構成されます。 部分信頼を使用して、またはいくつか追加のアクセス許可のみを使用して、アプリケーションを配置している場合、この既定を変更する必要があります。 配置を構成するときに、Visual Studio または .NET Framework SDK ツールの MageUI.exe のいずれかでこれを実行できます。 MageUI.exe を使用する方法の詳細については、チュートリアルを参照してください。コマンドラインから ClickOnce アプリケーションを展開します。  参照してください[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))または[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)します。
 
-[!INCLUDE[ndptecclick](../../../includes/ndptecclick-md.md)] とアクセス許可の昇格のセキュリティ面の詳細については、「[ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)」を参照してください。 信頼されたアプリケーションの配置の詳細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」を参照してください。
+ClickOnce とアクセス許可の昇格のセキュリティ面の詳細については、次を参照してください。 [ClickOnce アプリケーションのセキュリティで保護する](/visualstudio/deployment/securing-clickonce-applications)します。 信頼されたアプリケーションの配置の詳細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」を参照してください。
 
 ### <a name="testing-the-application"></a>アプリケーションのテスト
 

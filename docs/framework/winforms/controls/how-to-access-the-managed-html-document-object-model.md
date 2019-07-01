@@ -8,12 +8,12 @@ helpviewer_keywords:
 - HTML DOM [Windows Forms], accessing
 - managed HTML DOM [Windows Forms], accessing
 ms.assetid: 40fa5cd5-1ed8-42f6-a93f-9ac01608bbeb
-ms.openlocfilehash: 0374e63191f5f81891a0c7c78c5e739ac5ec7984
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2a195dc6583d5a0a72bd08b66f8933f4002e879a
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624157"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487275"
 ---
 # <a name="how-to-access-the-managed-html-document-object-model"></a>方法: マネージド HTML DOM (Document Object Model) にアクセスする
 マネージド HTML ドキュメント オブジェクト モデル (DOM) には、次の 2 種類のアプリケーションからアクセスできます。  
@@ -43,7 +43,7 @@ ms.locfileid: "64624157"
   
 ## <a name="net-framework-security"></a>.NET Framework セキュリティ  
   
-1. アプリケーションまたは <xref:System.Windows.Forms.UserControl> がマネージド HTML DOM にアクセスするには、完全信頼が必要です。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] を使用して Windows フォーラム アプリケーションを配置するときは、"アクセス許可の昇格" または "信頼されたアプリケーションの配置" を使用して完全信頼を要求できます。詳細については、「[ClickOnce アプリケーションのセキュリティ](/visualstudio/deployment/securing-clickonce-applications)」を参照してください。  
+1. アプリケーションまたは <xref:System.Windows.Forms.UserControl> がマネージド HTML DOM にアクセスするには、完全信頼が必要です。 ClickOnce を使用して Windows フォーム アプリケーションを展開する場合は、アクセス許可の昇格または信頼されたアプリケーション配置; を使用して完全な信頼を要求することができます。参照してください[ClickOnce アプリケーションのセキュリティで保護する](/visualstudio/deployment/securing-clickonce-applications)詳細についてはします。  
   
 ## <a name="see-also"></a>関連項目
 

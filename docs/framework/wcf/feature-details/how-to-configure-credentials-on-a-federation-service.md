@@ -8,12 +8,12 @@ helpviewer_keywords:
 - WCF, federation
 - federation
 ms.assetid: 149ab165-0ef3-490a-83a9-4322a07bd98a
-ms.openlocfilehash: 4200918057a32d077dbc44f48057f8e886d87a44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 7b09578bf39a081b1bed83614cff755f234f8e45
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624507"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487097"
 ---
 # <a name="how-to-configure-credentials-on-a-federation-service"></a>方法: フェデレーション サービスで資格情報を設定する
 Windows Communication Foundation (WCF) では、フェデレーション サービスを作成する、次の主な手順で構成されます。  
@@ -28,7 +28,7 @@ Windows Communication Foundation (WCF) では、フェデレーション サー�
   
 1. <xref:System.ServiceModel.Description.ServiceCredentials.IssuedTokenAuthentication%2A> クラスの <xref:System.ServiceModel.Description.ServiceCredentials> プロパティを使用して、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential> インスタンスへの参照を返します。 このプロパティは、<xref:System.ServiceModel.ServiceHostBase.Credentials%2A> クラスの <xref:System.ServiceModel.ServiceHostBase> プロパティからアクセスされます。  
   
-2. <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A> カードのように自己発行されるトークンを認証する場合は、`true` プロパティを [!INCLUDE[infocard](../../../../includes/infocard-md.md)] に設定します。 既定値は `false` です。  
+2. 設定、<xref:System.ServiceModel.Security.IssuedTokenServiceCredential.AllowUntrustedRsaIssuers%2A>プロパティを`true`CardSpace カードなど自己発行のトークンが認証される場合。 既定値は `false` です。  
   
 3. <xref:System.ServiceModel.Security.IssuedTokenServiceCredential.KnownCertificates%2A> プロパティによって返されるコレクションに <xref:System.Security.Cryptography.X509Certificates.X509Certificate2> クラスのインスタンスを設定します。 各インスタンスは、サービスが認証を行うトークンの発行者を表します。  
   
@@ -47,7 +47,7 @@ Windows Communication Foundation (WCF) では、フェデレーション サー�
   
 1. 作成、`<issuedTokenAuthentication>`要素の子として、<`serviceCredentials`> 要素。  
   
-2. `allowUntrustedRsaIssuers` カードのように自己発行されるトークンを認証する場合は、`<issuedTokenAuthentication>` 要素の `true` 属性を [!INCLUDE[infocard](../../../../includes/infocard-md.md)] に設定します。  
+2. 設定、`allowUntrustedRsaIssuers`の属性、`<issuedTokenAuthentication>`要素`true`CardSpace カードなどの自己発行されたトークンを認証する場合。  
   
 3. `<knownCertificates>` 要素の子要素として `<issuedTokenAuthentication>` 要素を作成します。  
   

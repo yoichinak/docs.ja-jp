@@ -1,13 +1,13 @@
 ---
 title: 文字列
 description: について説明しますが、どのようにF#'string' 型では、変更不可のテキストを表す Unicode 文字のシーケンスとして。
-ms.date: 05/16/2016
-ms.openlocfilehash: c2fda4d936abab5bc3f4653613991a7f5471d81d
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.date: 06/28/2019
+ms.openlocfilehash: 8bd7a65a8d8e9e6a2d3930cd1fc9e800342d9a18
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65642078"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487768"
 ---
 # <a name="strings"></a>文字列
 
@@ -29,7 +29,7 @@ ms.locfileid: "65642078"
 |円記号|`\\`|
 |引用符|`\"`|
 |アポストロフィ|`\'`|
-|Unicode 文字|`\uXXXX` または`\UXXXX`(場所`X`16 進数の数字を示します)|
+|Unicode 文字|`\uXXXX` (Utf-16) または`\U00XXXXXX`(utf-32) (場所`X`16 進数の数字を示します)|
 
 前にある場合、@ 記号、リテラルには、逐語的文字列。 つまり、2 つの引用符文字が 1 つの引用符文字として解釈される点が異なりますエスケープ シーケンスが無視します。
 

@@ -9,12 +9,12 @@ helpviewer_keywords:
 - frames [Windows Forms], accessing
 - DOM [Windows Forms], accessing frames in managed HTML
 ms.assetid: cdeeaa22-0be4-4bbf-9a75-4ddc79199f8d
-ms.openlocfilehash: 9a02a912c170bfc4d997f1d8a0fe4f4d5bedb147
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 5a9864184e92c3c6bbcf6a613fd1092238181a93
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665808"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487298"
 ---
 # <a name="accessing-frames-in-the-managed-html-document-object-model"></a>マネージド HTML DOM (Document Object Model) へのアクセス
 一部の HTML ドキュメントが帯で構成される*フレーム*、または独自の HTML ドキュメントを保持できる windows。 フレームを使用すると、ページ内に 1 つ以上の静的な部分 (ナビゲーション バーなど) があり、その他のフレームでは内容が常に変化するような HTML ページを簡単に作成できます。  
@@ -23,7 +23,7 @@ ms.locfileid: "64665808"
   
 - `FRAMESET` タグと `FRAME` タグを使用して、固定ウィンドウを作成する。  
   
- - または -  
+ \- または -  
   
 - `IFRAME` タグを使用して、実行時に移動できるフローティング ウィンドウを作成する。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "64665808"
 ## <a name="frames-and-security"></a>フレームとセキュリティ  
  マネージ HTML DOM と呼ばれるセキュリティ対策を実装しているという事実によってフレームへのアクセスは複雑になります*クロス フレーム スクリプティング セキュリティ*します。 異なるドメインに属する複数の `FRAME` を持つ `FRAMESET` がドキュメントに含まれる場合、これらの `FRAME` は相互にやり取りできません。 つまり、`FRAME`内の情報を Web サイトからコンテンツを表示しますがアクセスできないことを`FRAME`など、サード パーティのサイトをホストする`http://www.adatum.com/`。 このセキュリティは、<xref:System.Windows.Forms.HtmlWindow> クラスのレベルで実装されます 別の Web サイトをホストする `FRAME` に関する一般情報 (URL など) は取得できますが、Web サイトの <xref:System.Windows.Forms.HtmlWindow.Document%2A> へのアクセスや、ホストしている `FRAME` または `IFRAME` のサイズや位置の変更はできません。  
   
- この規則は、<xref:System.Windows.Forms.HtmlWindow.Open%2A> メソッドおよび <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> メソッドを使用して開くウィンドウにも適用されます。 開いたウィンドウが <xref:System.Windows.Forms.WebBrowser> コントロール内でホストされているページとは異なるドメインにある場合、そのウィンドウを移動したり、内容をチェックしたりできません。 このような制限は、<xref:System.Windows.Forms.WebBrowser> コントロールを使用して、Windows フォーム ベースのアプリケーションの配置に使用した Web サイトとは異なる Web サイトを表示する場合にも適用されます。 [!INCLUDE[ndptecclick](../../../../includes/ndptecclick-md.md)] 配置テクノロジを使用して Web サイト A からアプリケーションをインストールし、<xref:System.Windows.Forms.WebBrowser> を使用して Web サイト B を表示した場合、Web サイト B のデータにはアクセスできません。  
+ この規則は、<xref:System.Windows.Forms.HtmlWindow.Open%2A> メソッドおよび <xref:System.Windows.Forms.HtmlWindow.OpenNew%2A> メソッドを使用して開くウィンドウにも適用されます。 開いたウィンドウが <xref:System.Windows.Forms.WebBrowser> コントロール内でホストされているページとは異なるドメインにある場合、そのウィンドウを移動したり、内容をチェックしたりできません。 このような制限は、<xref:System.Windows.Forms.WebBrowser> コントロールを使用して、Windows フォーム ベースのアプリケーションの配置に使用した Web サイトとは異なる Web サイトを表示する場合にも適用されます。 ClickOnce 配置テクノロジを使用して、Web サイト A からアプリケーションをインストールして、使用する場合、 <xref:System.Windows.Forms.WebBrowser> Web サイト B を表示することはできませんアクセス Web サイト B のデータをします。  
   
 ## <a name="see-also"></a>関連項目
 

@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Windows Communication Foundation, security
 - bindings [WCF]
 ms.assetid: 4de03dd3-968a-4e65-af43-516e903d7f95
-ms.openlocfilehash: 12296fbd503a7e9f1866f407964a5e223d1afadd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 58dcfacba302ef3b85a8bc7b24b17f2435115594
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650332"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67486655"
 ---
 # <a name="bindings-and-security"></a>バインディングとセキュリティ
 Windows Communication Foundation (WCF) に含まれるシステム指定のバインディングは、WCF アプリケーションをプログラムする簡単な方法を提供します。 1 つの例外を除き、すべてのバインディングにはセキュリティ スキームが含まれており、既定で有効になっています。 ここでは、セキュリティ ニーズに適した正しいバインディングの選択方法について説明します。  
@@ -210,7 +210,7 @@ Windows Communication Foundation (WCF) に含まれるシステム指定のバ�
 |NTLM|NTLM (NT LAN Manager) 認証です。|  
 |Windows|Windows 認証です。|  
 |証明書|証明書を使用して実行される認証です。|  
-|IssuedToken|セキュリティ トークン サービスまたは [!INCLUDE[infocard](../../../../includes/infocard-md.md)] によって発行されたトークンを使用したクライアントの認証を、サービスが要求できるようにします。 詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。|  
+|IssuedToken|により、サービスが要求や CardSpace セキュリティ トークン サービスによって発行トークンを使用してクライアントを認証します。 詳細については、次を参照してください。[フェデレーションと発行されたトークン](../../../../docs/framework/wcf/feature-details/federation-and-issued-tokens.md)します。|  
   
 ### <a name="message-client-credentials-in-bindings"></a>バインディングにおけるメッセージ クライアント資格情報  
  メッセージ セキュリティ モードでバインディングを使用するときに使用できるクライアント資格情報の種類を次の表に示します。  

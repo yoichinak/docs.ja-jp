@@ -5,12 +5,12 @@ helpviewer_keywords:
 - Web hosted service
 - IIS Hosting Using Inline Code Sample [Windows Communication Foundation]
 ms.assetid: 56fe3687-a34b-4661-8e30-b33770f413fa
-ms.openlocfilehash: 8e401d6ce73c036188d13f40c1293abd1f0de58c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a96e00adbe12365220a58d93edf9dc965825d07e
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61781473"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487590"
 ---
 # <a name="iis-hosting-using-inline-code"></a>インライン コードを使用した IIS ホスティング
 
@@ -92,7 +92,7 @@ Press <ENTER> to terminate client.
 
 2. ソリューションの C# 版または Visual Basic .NET 版をビルドするには、「 [Building the Windows Communication Foundation Samples](../../../../docs/framework/wcf/samples/building-the-samples.md)」の手順に従います。
 
-3. ソリューションがビルドされたら、setup.bat を実行し、[!INCLUDE[iisver](../../../../includes/iisver-md.md)] で ServiceModelSamples アプリケーションを設定します。 ServiceModelSamples ディレクトリは、[!INCLUDE[iisver](../../../../includes/iisver-md.md)] アプリケーションとして表示されます。
+3. ソリューションがビルドされたら、IIS 7.0 で ServiceModelSamples アプリケーションを設定する setup.bat を実行します。 ServiceModelSamples ディレクトリは、IIS 7.0 のアプリケーションとして表示されます。
 
 4. 1 つまたは複数コンピューター構成では、サンプルを実行する手順については、 [Windows Communication Foundation サンプルの実行](../../../../docs/framework/wcf/samples/running-the-samples.md)します。 このサービスを呼び出すことができるクライアント アプリケーションを作成する方法の例では、次を参照してください。[方法。クライアントを作成する](../../../../docs/framework/wcf/how-to-create-a-wcf-client.md)します。
 
