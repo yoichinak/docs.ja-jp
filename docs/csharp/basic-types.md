@@ -3,12 +3,12 @@ title: 基本型 - C# ガイド
 description: すべての C# プログラムの中核となる型 (数値、文字列、オブジェクト) について説明します
 ms.date: 10/10/2016
 ms.assetid: 95c686ba-ae4f-440e-8e94-0dbd6e04d11f
-ms.openlocfilehash: 3619e1dc9a82c7f120680c198c327252744444b4
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: c719177b6099104681f590b550014d9a67f3f3ba
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422100"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424459"
 ---
 # <a name="types-variables-and-values"></a>型、変数、および値
 
@@ -28,12 +28,12 @@ C# は、厳密に型指定された言語です。 すべての変数および�
   
 - 許可される演算の種類。  
   
-コンパイラは型情報を使用して、コード内で実行されるすべての演算が "*タイプ セーフ*" であることを確認します。 たとえば、[int](language-reference/keywords/int.md) 型の変数を宣言すると、その変数は加算演算と減算演算で使用できます。 同じ演算を [bool](language-reference/keywords/bool.md) 型の変数に対して実行しようとすると、コンパイラで次の例のようなエラーが発生します。  
+コンパイラは型情報を使用して、コード内で実行されるすべての演算が "*タイプ セーフ*" であることを確認します。 たとえば、[int](language-reference/builtin-types/integral-numeric-types.md) 型の変数を宣言すると、その変数は加算演算と減算演算で使用できます。 同じ演算を [bool](language-reference/keywords/bool.md) 型の変数に対して実行しようとすると、コンパイラで次の例のようなエラーが発生します。  
   
 [!code-csharp[Type Safety](../../samples/snippets/csharp/concepts/basic-types/type-safety.cs)]  
   
 > [!NOTE]  
-> C や C++ と異なり、C# では、[bool](language-reference/keywords/bool.md) を [int](language-reference/keywords/int.md) に変換することはできません。  
+> C や C++ と異なり、C# では、[bool](language-reference/keywords/bool.md) を [int](language-reference/builtin-types/integral-numeric-types.md) に変換することはできません。  
   
 コンパイラは、型情報を実行可能ファイル内にメタデータとして埋め込みます。 共通言語ランタイム (CLR: Common Language Runtime) は、実行時にこのメタデータを使用して、メモリの割り当て時および再要求時に、タイプ セーフであるかどうかを再度確認します。  
 
@@ -43,11 +43,11 @@ C# は、厳密に型指定された言語です。 すべての変数および�
   
 [!code-csharp[Variable Declaration](../../samples/snippets/csharp/concepts/basic-types/variable-declaration.cs)]  
   
-メソッドのパラメーターおよび戻り値の型は、メソッド シグネチャで指定します。 入力引数として [int](language-reference/keywords/int.md) を使用する必要があり、戻り値として文字列を返すメソッドのシグネチャを次に示します。  
+メソッドのパラメーターおよび戻り値の型は、メソッド シグネチャで指定します。 入力引数として [int](language-reference/builtin-types/integral-numeric-types.md) を使用する必要があり、戻り値として文字列を返すメソッドのシグネチャを次に示します。  
   
 [!code-csharp[Method Signature](../../samples/snippets/csharp/concepts/basic-types/method-signature.cs)]  
   
-変数を宣言すると、新しい型を使用してその変数を再度宣言することはできず、宣言された型と互換性のない値をその変数に代入することはできません。 たとえば、[int](language-reference/keywords/int.md) を宣言してから、それに [true](language-reference/keywords/true-literal.md) のブール値を代入することはできません。 ただし、たとえば新しい変数に代入するときや、メソッドの引数として渡すときに、値を他の型に変換することは可能です。 データの損失を伴わない "*型変換*" は、コンパイラによって自動的に実行されます。 データの損失を伴う可能性のある変換には、ソース コードに *cast* を記述する必要があります。
+変数を宣言すると、新しい型を使用してその変数を再度宣言することはできず、宣言された型と互換性のない値をその変数に代入することはできません。 たとえば、[int](language-reference/builtin-types/integral-numeric-types.md) を宣言してから、それに [true](language-reference/keywords/true-literal.md) のブール値を代入することはできません。 ただし、たとえば新しい変数に代入するときや、メソッドの引数として渡すときに、値を他の型に変換することは可能です。 データの損失を伴わない "*型変換*" は、コンパイラによって自動的に実行されます。 データの損失を伴う可能性のある変換には、ソース コードに *cast* を記述する必要があります。
 
 詳細については、「[キャストと型変換](programming-guide/types/casting-and-type-conversions.md)」を参照してください。
 

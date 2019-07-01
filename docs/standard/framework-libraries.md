@@ -6,12 +6,12 @@ ms.author: ronpet
 ms.date: 06/20/2016
 ms.technology: dotnet-standard
 ms.assetid: 7b77b6c1-8367-4602-bff3-91e4c05ac643
-ms.openlocfilehash: 3e4fed8ddde007eb9ce233eea942d6c052f0f2c4
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1e825efcb2a352c823391fb0dad3d566189da001
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64615173"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67425536"
 ---
 # <a name="framework-libraries"></a>フレームワーク ライブラリ
 
@@ -28,11 +28,11 @@ BCL は最も基本的な型およびユーティリティの機能を提供し�
 .NET には、すべてのプログラムで (さまざまな程度で) 使用されるプリミティブ型のセットが含まれています。 これらの型には、数値、文字列、バイト、および任意のオブジェクトなどのデータが含まれています。 C# 言語には、これらの型のキーワードが含まれています。 これらの型のサンプル セットを、一致する C# キーワードとともに以下に示します。
 
 * <xref:System.Object?displayProperty=nameWithType> ([object](../csharp/language-reference/keywords/object.md)): CLR 型システムの最も基本の基底クラス。 型階層のルートです。
-* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/keywords/short.md)): 16 ビットの符号付き整数型。 符号なしの <xref:System.UInt16> も存在します。
-* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/keywords/int.md)): 32 ビットの符号付き整数型。 符号なしの [UInt32](../csharp/language-reference/keywords/uint.md) も存在します。
+* <xref:System.Int16?displayProperty=nameWithType> ([short](../csharp/language-reference/builtin-types/integral-numeric-types.md)): 16 ビットの符号付き整数型。 符号なしの <xref:System.UInt16> も存在します。
+* <xref:System.Int32?displayProperty=nameWithType> ([int](../csharp/language-reference/builtin-types/integral-numeric-types.md)): 32 ビットの符号付き整数型。 符号なしの [UInt32](../csharp/language-reference/builtin-types/integral-numeric-types.md) も存在します。
 * <xref:System.Single?displayProperty=nameWithType> ([float](../csharp/language-reference/keywords/float.md)): 32 ビット浮動小数点型。
 * <xref:System.Decimal?displayProperty=nameWithType> ([decimal](../csharp/language-reference/keywords/decimal.md)): 128 ビットの 10 進数型。
-* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/keywords/byte.md)): メモリのバイトを表す符号なし 8 ビット整数。
+* <xref:System.Byte?displayProperty=nameWithType> ([byte](../csharp/language-reference/builtin-types/integral-numeric-types.md)): メモリのバイトを表す符号なし 8 ビット整数。
 * <xref:System.Boolean?displayProperty=nameWithType> ([bool](../csharp/language-reference/keywords/bool.md)): `true` または `false` を表すブール型。
 * <xref:System.Char?displayProperty=nameWithType> ([char](../csharp/language-reference/keywords/char.md)): Unicode 文字を表す 16 ビットの数値型。
 * <xref:System.String?displayProperty=nameWithType> ([string](../csharp/language-reference/keywords/string.md)): 一連の文字を表します。 `char[]` とは異なりますが、`string` で各 `char` にインデックスを付けることができます。

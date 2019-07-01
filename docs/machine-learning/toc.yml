@@ -80,6 +80,14 @@
   items:
     - name: 概要
       href: automl-overview.md
+    - name: モデル ビルダー
+      items:
+        - name: モデル ビルダーとは
+          href: automate-training-with-model-builder.md
+        - name: モデル ビルダーのインストール
+          href: how-to-guides/install-model-builder.md
+        - name: モデル ビルダーを使った価格の予測
+          href: tutorials/predict-prices-with-model-builder.md
     - name: ML.NET CLI
       items:
         - name: CLI をインストールする

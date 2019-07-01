@@ -7,12 +7,12 @@ helpviewer_keywords:
 - types [C#], built-in
 - built-in C# types
 ms.assetid: 54f901f2-bf2f-472c-ae8d-73e8ecfc57fe
-ms.openlocfilehash: d93176b850d84753106accef3bcaedab38f4ddc7
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 4a54059f288a432cbaf904626cabf4f7bcba7209
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306799"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424387"
 ---
 # <a name="built-in-types-table-c-reference"></a>組み込み型の一覧表 (C# リファレンス)
 
@@ -21,19 +21,19 @@ ms.locfileid: "67306799"
 |C# 型|.NET 型|  
 |--------------|-------------------------|  
 |[bool](bool.md)|<xref:System.Boolean?displayProperty=nameWithType>|  
-|[byte](byte.md)|<xref:System.Byte?displayProperty=nameWithType>|  
-|[sbyte](sbyte.md)|<xref:System.SByte?displayProperty=nameWithType>|  
+|[byte](../builtin-types/integral-numeric-types.md)|<xref:System.Byte?displayProperty=nameWithType>|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|<xref:System.SByte?displayProperty=nameWithType>|  
 |[char](char.md)|<xref:System.Char?displayProperty=nameWithType>|  
 |[decimal](decimal.md)|<xref:System.Decimal?displayProperty=nameWithType>|  
 |[double](double.md)|<xref:System.Double?displayProperty=nameWithType>|  
 |[float](float.md)|<xref:System.Single?displayProperty=nameWithType>|  
-|[int](int.md)|<xref:System.Int32?displayProperty=nameWithType>|  
-|[uint](uint.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
-|[long](long.md)|<xref:System.Int64?displayProperty=nameWithType>|  
-|[ulong](ulong.md)|<xref:System.UInt64?displayProperty=nameWithType>|  
+|[int](../builtin-types/integral-numeric-types.md)|<xref:System.Int32?displayProperty=nameWithType>|  
+|[uint](../builtin-types/integral-numeric-types.md)|<xref:System.UInt32?displayProperty=nameWithType>|  
+|[long](../builtin-types/integral-numeric-types.md)|<xref:System.Int64?displayProperty=nameWithType>|  
+|[ulong](../builtin-types/integral-numeric-types.md)|<xref:System.UInt64?displayProperty=nameWithType>|  
 |[object](object.md)|<xref:System.Object?displayProperty=nameWithType>|  
-|[short](short.md)|<xref:System.Int16?displayProperty=nameWithType>|  
-|[ushort](ushort.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
+|[short](../builtin-types/integral-numeric-types.md)|<xref:System.Int16?displayProperty=nameWithType>|  
+|[ushort](../builtin-types/integral-numeric-types.md)|<xref:System.UInt16?displayProperty=nameWithType>|  
 |[string](string.md)|<xref:System.String?displayProperty=nameWithType>|  
   
 ## <a name="remarks"></a>解説

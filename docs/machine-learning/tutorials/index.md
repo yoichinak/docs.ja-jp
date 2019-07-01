@@ -3,12 +3,12 @@ title: ML.NET のチュートリアル
 description: ML.NET のチュートリアルでは、カスタム AI ソリューションを構築し、これを .NET アプリケーションに統合する方法について説明しています。
 ms.custom: seodec18
 ms.date: 04/05/2019
-ms.openlocfilehash: 3f14f463dcdb74beb1605626216acd52dd3f6e9a
-ms.sourcegitcommit: 90f0bee0e8a416e45c78fa3ad4c91ef00e5228d5
+ms.openlocfilehash: 4530e62a0ac8991f6ece37a0ad9909a4c4d08fe7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66722336"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401657"
 ---
 # <a name="mlnet-tutorials"></a>ML.NET のチュートリアル 
 
@@ -19,7 +19,7 @@ ms.locfileid: "66722336"
 - [料金予測](taxi-fare.md): ML.NET を使用して**回帰**タスクを適用する方法を示します。
 - [アヤメのクラスタ リング](iris-clustering.md): ML.NET を使用して**クラスタ リング**を適用する方法を示します。
 - [推奨](movie-recommendation.md): 以前のユーザー評価に基づき映画の**推奨**を生成します
-- [画像分類](image-classification.md): 既存の Tensorflow モデルを再トレーニングし、ML.NET を使ってカスタム画像分類アプリを作成する方法を示します。
+- [画像分類](image-classification.md): 既存の TensorFlow モデルを再トレーニングし、ML.NET を使ってカスタム画像分類器を作成する方法を示します。
 
 ## <a name="next-steps"></a>次の手順
 

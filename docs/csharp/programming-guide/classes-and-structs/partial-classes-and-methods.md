@@ -7,12 +7,12 @@ helpviewer_keywords:
 - partial classes [C#]
 - C# language, partial classes and methods
 ms.assetid: 804cecb7-62db-4f97-a99f-60975bd59fa1
-ms.openlocfilehash: 0d54101badab297457e8d8ecf277898fc6908779
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 0a0cf7c3b6024f75196abed5fdb7d18a058c58db
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481056"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398383"
 ---
 # <a name="partial-classes-and-methods-c-programming-guide"></a>部分クラスと部分メソッド (C# プログラミング ガイド)
 
@@ -105,7 +105,7 @@ abstract と宣言された部分がある場合、型全体が抽象と見な�
 
   - 基本クラス
 
-  - [new](../../../csharp/language-reference/keywords/new.md) 修飾子 (入れ子にされた部分)
+  - [new](../../../csharp/language-reference/keywords/new-modifier.md) 修飾子 (入れ子にされた部分)
 
   - ジェネリック制約
 

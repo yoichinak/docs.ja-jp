@@ -5,12 +5,12 @@ ms.date: 05/03/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 2f8f8c035166612aabede8a512485bdf296c5655
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.openlocfilehash: 1628d0669d8a9e677ff39b5869d3802d89d96410
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557917"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397698"
 ---
 # <a name="re-train-a-model"></a>モデルを再トレーニングする
 
@@ -42,7 +42,7 @@ MLContext mlContext = new MLContext();
 // Define DataViewSchema of data prep pipeline and trained model
 DataViewSchema dataPrepPipelineSchema, modelSchema;
 
-// Load data prepration pipeline
+// Load data preparation pipeline
 ITransformer dataPrepPipeline = mlContext.Model.Load("data_preparation_pipeline.zip", out dataPrepPipelineSchema);
 
 // Load trained model

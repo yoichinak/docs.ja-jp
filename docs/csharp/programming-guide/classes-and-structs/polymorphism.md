@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, polymorphism
 - polymorphism [C#]
 ms.assetid: 086af969-29a5-4ce8-a993-0b7d53839dab
-ms.openlocfilehash: 9bce692c767169536d762a36ea2b9343655680c7
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a7cd450fbc2e0a5acd32675ab2c6b46dc2c92757
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583071"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398367"
 ---
 # <a name="polymorphism-c-programming-guide"></a>ポリモーフィズム (C# プログラミング ガイド)
 ポリモーフィズムは、カプセル化と継承に次ぐ、オブジェクト指向プログラミングの第 3 の柱と言われることがよくあります。 ポリモーフィズムは、ギリシャ語で "多形" を意味し、次の 2 つの側面を持っています。  
@@ -54,7 +54,7 @@ ms.locfileid: "64583071"
  仮想メソッドとプロパティを使用すると、派生クラスは、基底クラスのメソッドの実装を使用せずに基底クラスを拡張できます。 詳細については、「[Override キーワードと New キーワードによるバージョン管理](../../../csharp/programming-guide/classes-and-structs/versioning-with-the-override-and-new-keywords.md)」を参照してください。 1 つまたは一連のメソッドを定義し、その実装を派生クラスに任せるもう 1 つの方法として、インターフェイスがあります。 詳細については、「[インターフェイス](../../../csharp/programming-guide/interfaces/index.md)」を参照してください。  
   
 ### <a name="hiding-base-class-members-with-new-members"></a>新しいメンバーによる基底クラスのメンバーの隠ぺい  
- 派生メンバーに基底クラスのメンバーと同じ名前を付けながら、そのメンバーが仮想呼び出しに加わらないようにするには、[new](../../../csharp/language-reference/keywords/new.md) キーワードを使用します。 `new` キーワードは、置き換えられるクラス メンバーの戻り値の型の前に配置します。 次にコード例を示します。  
+ 派生メンバーに基底クラスのメンバーと同じ名前を付けながら、そのメンバーが仮想呼び出しに加わらないようにするには、[new](../../../csharp/language-reference/keywords/new-modifier.md) キーワードを使用します。 `new` キーワードは、置き換えられるクラス メンバーの戻り値の型の前に配置します。 次にコード例を示します。  
   
  [!code-csharp[csProgGuideInheritance#18](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideInheritance/CS/Inheritance.cs#18)]  
   

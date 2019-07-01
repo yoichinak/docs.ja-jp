@@ -12,12 +12,12 @@ helpviewer_keywords:
 - case statement [C#]
 - default keyword [C#]
 ms.assetid: 44bae8b8-8841-4d85-826b-8a94277daecb
-ms.openlocfilehash: 960394bd61f9e9163fe93c4324bf708d50ec3e08
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5257d1d677246cdd6d826cd71ed3ffe116d2a4a6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59481458"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424126"
 ---
 # <a name="switch-c-reference"></a>switch (C# リファレンス)
 
@@ -46,7 +46,7 @@ C# 6 以前では、match 式は、次の型の値を返す必要があります
 - [char](char.md)。
 - [string](string.md)。
 - [bool](bool.md)。
-- 整数値。[int](int.md)、[long](long.md) など。
+- 整数値。[int](../builtin-types/integral-numeric-types.md)、[long](../builtin-types/integral-numeric-types.md) など。
 - [enum](enum.md)値。
 
 C# 7.0 以降は、match 式は NULL 以外の式にできます。
@@ -121,7 +121,7 @@ C# 6 でサポートされるのは定数パターンのみで、定数値の繰
 ここで *constant* はテスト対象の値です。 *constant* には、次のいずれかの定数式を指定できます。
 
 - [bool](bool.md) リテラル。`true` または `false`。
-- 任意の整数定数。[int](int.md)、[long](long.md)、[byte](byte.md) など。
+- 任意の整数定数。[int](../builtin-types/integral-numeric-types.md)、[long](../builtin-types/integral-numeric-types.md)、[byte](../builtin-types/integral-numeric-types.md) など。
 - 宣言された `const` 変数の名前。
 - 列挙定数。
 - [char](char.md) リテラル。

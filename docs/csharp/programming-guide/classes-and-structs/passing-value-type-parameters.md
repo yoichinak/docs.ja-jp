@@ -6,12 +6,12 @@ helpviewer_keywords:
 - method parameters [C#], value types
 - parameters [C#], value
 ms.assetid: 193ab86f-5f9b-4359-ac29-7cdf8afad3a6
-ms.openlocfilehash: 0c9d8c33715b4baf11bfac05cd4881d1475f8844
-ms.sourcegitcommit: 16aefeb2d265e69c0d80967580365fabf0c5d39a
+ms.openlocfilehash: ba693948bce91fa80f0c6cd73f2d5fc537e5f900
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57846999"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423748"
 ---
 # <a name="passing-value-type-parameters-c-programming-guide"></a>値型パラメーターの引き渡し (C# プログラミング ガイド)
 データへの参照を含む[参照型](../../../csharp/language-reference/keywords/reference-types.md)変数とは対照的に、[値型](../../../csharp/language-reference/keywords/value-types.md)変数にはデータが直接含まれます。 値型変数を値渡しでメソッドに渡すと、変数のコピーがメソッドに渡されます。 メソッド内部で生じるパラメーターに対する変更の影響は、引数の変数に格納されている元のデータには及びません。 呼び出したメソッドで引数の値を変更する場合は、[ref](../../../csharp/language-reference/keywords/ref.md) キーワードまたは [out](../../../csharp/language-reference/keywords/out-parameter-modifier.md) キーワードを使用して、参照によって渡す必要があります。 また、[in](../../../csharp/language-reference/keywords/in-parameter-modifier.md) キーワードを使用し、参照で値パラメーターを渡してコピーを回避し、同時に値が変更されないようにすることができます。 わかりやすくするために、次の例では `ref` を使用しています。  
@@ -28,7 +28,7 @@ ms.locfileid: "57846999"
   
  [!code-csharp[csProgGuideParameters#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideParameters/CS/Parameters.cs#4)]  
   
- この例では、`n` の値が渡されるのではなく、`n` への参照が渡されています。 つまり、パラメーター `x` は [int](../../../csharp/language-reference/keywords/int.md) ではなく、`int` への参照 (この場合は `n` への参照) となります。 したがって、メソッド内で `x` が 2 乗された場合、`x` の参照先である `n` が実際に2乗されます。  
+ この例では、`n` の値が渡されるのではなく、`n` への参照が渡されています。 つまり、パラメーター `x` は [int](../../../csharp/language-reference/builtin-types/integral-numeric-types.md) ではなく、`int` への参照 (この場合は `n` への参照) となります。 したがって、メソッド内で `x` が 2 乗された場合、`x` の参照先である `n` が実際に2乗されます。  
   
 ## <a name="swapping-value-types"></a>値型のスワップ  
  引数の値を変更する一般的な例としてスワップ メソッドがあります。この方法では、2 つの変数をメソッドに渡してから、メソッドにより変数の中身を交換します。 スワップ メソッドへの引数の引き渡しは、参照渡しで行う必要があります。 このようにしないと、メソッド内でパラメーターのローカル コピーどうしが交換され、呼び出し元のメソッドでは変更が行われません。 次の例では、整数値が入れ替えられます。  

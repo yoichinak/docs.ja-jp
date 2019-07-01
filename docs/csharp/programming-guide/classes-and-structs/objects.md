@@ -6,23 +6,23 @@ helpviewer_keywords:
 - objects [C#], about objects
 - variables [C#]
 ms.assetid: af4a5230-fbf3-4eea-95e1-8b883c2f845c
-ms.openlocfilehash: de44f0c416de798fb42fba93e30ec6aa6ed0208d
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 1ba179c23d9b0e526cdc0dd436ca545377a0db81
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585991"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398421"
 ---
 # <a name="objects-c-programming-guide"></a>オブジェクト (C# プログラミング ガイド)
 クラスまたは構造体の定義は、型の動作を指定する設計図に似ています。 オブジェクトは基本的に、設計図に従って割り当てられて構成されたメモリのブロックです。 プログラムでは、同じクラスのオブジェクトを多数作成できます。 オブジェクトはインスタンスとも呼ばれ、名前付きの変数または配列やコレクションに格納できます。 クライアント コードとは、これらの変数を使ってメソッドを呼び出し、オブジェクトのパブリック プロパティにアクセスするコードです。 C# などのオブジェクト指向言語では、一般的なプログラムは動的に対話する複数のオブジェクトで構成されています。  
   
 > [!NOTE]
->  静的な型の動作方法は、ここで説明する動作方法とは異なります。 詳細については、「[静的クラスと静的クラス メンバー](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)」を参照してください。  
+> 静的な型の動作方法は、ここで説明する動作方法とは異なります。 詳細については、「[静的クラスと静的クラス メンバー](../../../csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members.md)」を参照してください。
   
 ## <a name="struct-instances-vs-class-instances"></a>構造体インスタンスとクラス インスタンス  
  クラスは参照型であるため、クラスのオブジェクトの変数は、マネージド ヒープ上のオブジェクトのアドレスへの参照を保持します。 同じ型の 2 番目のオブジェクトが最初のオブジェクトに割り当てられた場合、両方の変数がそのアドレスにあるオブジェクトを参照します。 この点については、後で詳しく説明します。  
   
- クラスのインスタンスは、[new 演算子](../../../csharp/language-reference/keywords/new-operator.md)を使って作成されます。 次の例では、`Person` が型で、`person1` と `person 2` がその型のインスタンスつまりオブジェクトです。  
+ クラスのインスタンスは、[new 演算子](../../../csharp/language-reference/operators/new-operator.md)を使って作成されます。 次の例では、`Person` が型で、`person1` と `person 2` がその型のインスタンスつまりオブジェクトです。  
   
  [!code-csharp[csProgGuideStatements#30](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csProgGuideStatements/CS/Statements.cs#30)]  
   
@@ -33,7 +33,7 @@ ms.locfileid: "65585991"
  `p1` と `p2` のメモリはどちらも、スレッドのスタックに割り当てられます。 そのメモリは、それが宣言されている型またはメソッドと共に解放されます。 これは、割り当て時に構造体がコピーされる理由の 1 です。 これに対し、クラスのインスタンスに割り当てられたメモリは、そのオブジェクトに対するすべての参照がスコープ外になると、共通言語ランタイムによって自動的に解放 (ガベージ コレクション) されます。 C++ のようにクラスのオブジェクトを確定的に破棄することはできません。 .NET Framework のガベージ コレクションについて詳しくは、「[ガベージ コレクション](../../../standard/garbage-collection/index.md)」をご覧ください。  
   
 > [!NOTE]
->  マネージド ヒープ上のメモリの割り当てと解放は、共通言語ランタイムにおいて高度に最適化されています。 ほとんどの場合、ヒープへのクラス インスタンスの割り当てと、スタックへの構造体インスタンスの割り当てに、パフォーマンス コストの点で大きな違いはありません。  
+> マネージド ヒープ上のメモリの割り当てと解放は、共通言語ランタイムにおいて高度に最適化されています。 ほとんどの場合、ヒープへのクラス インスタンスの割り当てと、スタックへの構造体インスタンスの割り当てに、パフォーマンス コストの点で大きな違いはありません。
   
 ## <a name="object-identity-vs-value-equality"></a>オブジェクト ID と値の等価性  
  2 つのオブジェクトが等しいかどうかを比較するときは、最初に、2 つの変数がメモリ内の同じオブジェクトを表しているかどうかを知りたいのか、それともオブジェクトの 1 つ以上のフィールドの値が等しいかどうかを知りたいのかを、区別する必要があります。 値を比較する場合は、オブジェクトが値型 (構造体) のインスタンスか、または参照型 (クラス、デリゲート、配列) のインスタンスかを、検討する必要があります。  
@@ -68,5 +68,5 @@ ms.locfileid: "65585991"
 - [継承](../../../csharp/programming-guide/classes-and-structs/inheritance.md)
 - [class](../../../csharp/language-reference/keywords/class.md)
 - [struct](../../../csharp/language-reference/keywords/struct.md)
-- [new 演算子](../../../csharp/language-reference/keywords/new-operator.md)
+- [new 演算子](../../../csharp/language-reference/operators/new-operator.md)
 - [共通型システム](../../../standard/base-types/common-type-system.md)

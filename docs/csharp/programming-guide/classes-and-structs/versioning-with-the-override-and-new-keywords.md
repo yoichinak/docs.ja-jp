@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# language, versioning
 - C# language, override and new
 ms.assetid: 88247d07-bd0d-49e9-a619-45ccbbfdf0c5
-ms.openlocfilehash: ec6040081d44a389bd42bb50cdd81ac0634abf91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6b5097df8ee559f11bc29c12570e938965e6a9a5
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583122"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398087"
 ---
 # <a name="versioning-with-the-override-and-new-keywords-c-programming-guide"></a>Override キーワードと New キーワードによるバージョン管理 (C# プログラミング ガイド)
 C# 言語は、異なるライブラリ内の[基底](../../../csharp/language-reference/keywords/base.md)クラスと派生クラス間でのバージョン管理を進化させると同時に、下位互換性も維持されるよう設計されています。 そのため、たとえば、派生クラスのメンバーと同じ名前を使用して基底[クラス](../../../csharp/language-reference/keywords/class.md)の新規メンバーが導入されても、C# では完全にサポートされ、予期しない動作は発生しません。 ただしこのことは、メソッドが派生メソッドをオーバーライドするためのものなのか、それとも同じ名前の派生メソッドを非表示にする新規メソッドなのかを、クラスで明示的に記述しなければならないということでもあります。  
@@ -20,7 +20,7 @@ C# 言語は、異なるライブラリ内の[基底](../../../csharp/language-r
   
 - 基底クラスのメソッドは、[virtual](../../../csharp/language-reference/keywords/virtual.md) で定義する必要があります。  
   
-- 派生クラスのメソッドの前に [new](../../../csharp/language-reference/keywords/new.md) または [override](../../../csharp/language-reference/keywords/override.md) キーワードがない場合、コンパイラは警告を発し、メソッドは `new` キーワードが存在する場合と同様に動作します。  
+- 派生クラスのメソッドの前に [new](../../../csharp/language-reference/keywords/new-modifier.md) または [override](../../../csharp/language-reference/keywords/override.md) キーワードがない場合、コンパイラは警告を発し、メソッドは `new` キーワードが存在する場合と同様に動作します。  
   
 - 派生クラスのメソッドの前に `new` キーワードがある場合、そのメソッドは基底クラスのメソッドに依存しないメソッドとして定義されます。  
   
