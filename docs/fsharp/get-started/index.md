@@ -24,5 +24,4 @@ F#の開発環境をあなたのローカルマシンにインストールして
 もし F# と .NET の開発環境をローカルマシンに構築したくない場合、ブラウザ上で F# を始めることもできます。
 
 - 「[Introduction to F# on Azure Notebooks](https://notebooks.azure.com/Microsoft/projects/2018-Intro-FSharp/html/Introduction%20to%20FSharp.ipynb)」は [Jupyter notebook](https://jupyter.org/) でホストされている、無料の Azure Notebooks サービスです。Microsoft アカウントでサインインするだけで、すぐにブラウザ上から学び始めることができます！
-  
 - 「[The Fable REPL](https://fable.io/repl/)」は F# コードを JavaScript に変換するために Fable を使用している、ブラウザ内 REPL です。F# の基本から本格的なゲームのコードまで、ブラウザ上で実際に実行できる多数のサンプルが紹介されているので、ぜひチェックしてみてください！
