@@ -5,22 +5,22 @@ helpviewer_keywords:
 - GDI+, using managed interface
 - graphics [Windows Forms], class structure
 ms.assetid: 010a1e46-656b-40a1-8d5d-87aa05ee1243
-ms.openlocfilehash: 9dfffe8ea3f76d89823dfe2ef6bd0e4f3accf8f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3b16249b6bae4a113661f5a3a47097046ba20f1
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61956482"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505271"
 ---
 # <a name="structure-of-the-graphics-interface"></a>グラフィックス インターフェイスの構造体
-マネージ クラスのインターフェイスに[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]60 個のクラス、50 の列挙型、および 8 の構造が含まれています。 <xref:System.Drawing.Graphics>クラスは、の中核に[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]機能です。 これは、直線、曲線、図形、イメージ、およびテキストを実際に描画するクラス。  
+GDI + マネージ クラスのインターフェイスには、60 個のクラス、50 の列挙型、および 8 の構造が含まれています。 <xref:System.Drawing.Graphics> GDI + の機能の中核にクラスは、直線、曲線、図形、イメージ、およびテキストを実際に描画するクラスです。  
   
 ## <a name="important-classes"></a>重要なクラス  
  多くのクラスの機能と組み合わせて、<xref:System.Drawing.Graphics>クラス。 たとえば、<xref:System.Drawing.Graphics.DrawLine%2A>メソッドは受信、<xref:System.Drawing.Pen>オブジェクトを描画する線の属性 (色、幅、実線/点線スタイル、およびなど) を保持します。 <xref:System.Drawing.Graphics.FillRectangle%2A>メソッドへのポインターを受け取ることができます、<xref:System.Drawing.Drawing2D.LinearGradientBrush>で動作するには、オブジェクト、<xref:System.Drawing.Graphics>徐々 に変化する色で四角形を入力するオブジェクト。 <xref:System.Drawing.Font> <xref:System.Drawing.StringFormat>オブジェクトに影響を与える方法、<xref:System.Drawing.Graphics>オブジェクト テキストを描画します。 A<xref:System.Drawing.Drawing2D.Matrix>オブジェクトを操作および格納のワールド変換を<xref:System.Drawing.Graphics>オブジェクトで、回転、拡大縮小、およびイメージを反転するために使用します。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] いくつかの構造を提供します (たとえば、 <xref:System.Drawing.Rectangle>、 <xref:System.Drawing.Point>、および<xref:System.Drawing.Size>) グラフィックス データを整理するためです。 また、特定のクラスには、主に、構造化されたデータ型が機能します。 たとえば、<xref:System.Drawing.Imaging.BitmapData>クラスのヘルパーは、<xref:System.Drawing.Bitmap>クラス、および<xref:System.Drawing.Drawing2D.PathData>クラスのヘルパーは、<xref:System.Drawing.Drawing2D.GraphicsPath>クラス。  
+ GDI + いくつかの構造を提供します (たとえば、 <xref:System.Drawing.Rectangle>、 <xref:System.Drawing.Point>、および<xref:System.Drawing.Size>) グラフィックス データを整理するためです。 また、特定のクラスには、主に、構造化されたデータ型が機能します。 たとえば、<xref:System.Drawing.Imaging.BitmapData>クラスのヘルパーは、<xref:System.Drawing.Bitmap>クラス、および<xref:System.Drawing.Drawing2D.PathData>クラスのヘルパーは、<xref:System.Drawing.Drawing2D.GraphicsPath>クラス。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 関連する定数のコレクションである、いくつかの列挙を定義します。 たとえば、<xref:System.Drawing.Drawing2D.LineJoin>列挙型には要素が含まれています<xref:System.Drawing.Drawing2D.LineJoin.Bevel>、 <xref:System.Drawing.Drawing2D.LineJoin.Miter>、および<xref:System.Drawing.Drawing2D.LineJoin.Round>、2 つの直線を接合に使用できるスタイルを指定しています。  
+ GDI + コレクションの関連する定数である、いくつかの列挙を定義します。 たとえば、<xref:System.Drawing.Drawing2D.LineJoin>列挙型には要素が含まれています<xref:System.Drawing.Drawing2D.LineJoin.Bevel>、 <xref:System.Drawing.Drawing2D.LineJoin.Miter>、および<xref:System.Drawing.Drawing2D.LineJoin.Round>、2 つの直線を接合に使用できるスタイルを指定しています。  
   
 ## <a name="see-also"></a>関連項目
 

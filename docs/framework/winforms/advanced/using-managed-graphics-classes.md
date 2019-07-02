@@ -6,19 +6,19 @@ helpviewer_keywords:
 - graphics [Windows Forms], using in Windows Forms
 - graphics [Windows Forms], managed classes
 ms.assetid: e6d1a42d-2100-46aa-97e6-a5ddc0baaae5
-ms.openlocfilehash: 86f6b3fff1937694f4b7890249e36d5e12b769dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1b6811e1412e1dc5b0731810f159bac633cd1eb2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766169"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505039"
 ---
 # <a name="using-managed-graphics-classes"></a>マネージド グラフィックス クラスの使用
-次のトピックを使用する方法について説明、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]マネージ クラスのフレームワークでの API。  
+次のトピックでは、マネージ クラスのフレームワークで GDI + API を使用する方法について説明します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [グラフィックス プログラミングについて](getting-started-with-graphics-programming.md)  
- 基本的なタスクを実行する方法について説明します[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]します。  
+ GDI + で基本的なタスクを実行する方法について説明します。  
   
  [ペンを使用した直線と図形の描画](using-a-pen-to-draw-lines-and-shapes.md)  
  ペンを作成して、さまざまな直線と図形を描画するためにこれを使用する方法を示します。  

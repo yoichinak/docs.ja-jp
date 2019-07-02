@@ -16,12 +16,12 @@ helpviewer_keywords:
 - transformations [Windows Forms], translation
 - affine transformations
 ms.assetid: 0659fe00-9e0c-41c4-9118-016f2404c905
-ms.openlocfilehash: c87be8eaf715e373da75dd8f91889b0e396dba0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ceaad7b4bb5a70a890d261e39bc608becb388c17
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61967526"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505635"
 ---
 # <a name="matrix-representation-of-transformations"></a>変換の行列表現
 M × n マトリックスは、一連の数値の m 行と n 個の列に配置します。 次の図は、いくつかの行列を示します。  
@@ -66,7 +66,7 @@ M × n マトリックスは、一連の数値の m 行と n 個の列に配置�
   
  ![Transformations](./media/aboutgdip05-art10.gif "AboutGdip05_art10")  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]でアフィン変換を格納することができます、<xref:System.Drawing.Drawing2D.Matrix>オブジェクト。 アフィン変換を表す行列の 3 番目の列は常にあるため (0, 0, 1) を構築するとき、最初の 2 つの列に 6 桁の数字のみを指定する、<xref:System.Drawing.Drawing2D.Matrix>オブジェクト。 ステートメント`Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)`上記の図に示すように、マトリックスを作成します。  
+ GDI + でのアフィン変換を格納することができます、<xref:System.Drawing.Drawing2D.Matrix>オブジェクト。 アフィン変換を表す行列の 3 番目の列は常にあるため (0, 0, 1) を構築するとき、最初の 2 つの列に 6 桁の数字のみを指定する、<xref:System.Drawing.Drawing2D.Matrix>オブジェクト。 ステートメント`Matrix myMatrix = new Matrix(0, 1, -1, 0, 3, 4)`上記の図に示すように、マトリックスを作成します。  
   
 ## <a name="composite-transformations"></a>複合変換  
  複合変換とは、変換後にもう 1 つのシーケンスです。 マトリックスと、次の一覧で変換を考慮してください。  

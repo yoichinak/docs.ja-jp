@@ -10,15 +10,15 @@ helpviewer_keywords:
 - data types [Visual Basic], value types
 - data types [Visual Basic], reference types
 ms.assetid: fc82ce15-5a40-4c5c-a1e1-a556830e7391
-ms.openlocfilehash: 541fe9f176a6210372b58753254692142f086992
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f25caec43b7118b7b64db1b14516b0c5ea80f4f6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65589824"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504882"
 ---
 # <a name="value-types-and-reference-types"></a>値型と参照型
-Visual basic でのデータ型は、分類に基づいて実装されます。 Visual Basic のデータ型は、特定の型の変数が独自のデータまたはデータへのポインターを格納するかどうかに基づいて分類できます。 独自のデータを格納する場合は、*値の型*別の場所はメモリ内のデータへのポインターを保持する場合、*参照型*。  
+Visual Basic における型の 2 種類があります。 参照型と値の型。 参照型の変数はデータ (オブジェクト) への参照を格納するのに対して、値型の変数はデータを直接格納します。 参照型の場合、2 つの変数が同じオブジェクトを参照できるため、ある変数に対する演算によって、他の変数が参照しているオブジェクトが影響を受ける可能性があります。 各変数が独自のデータのコピーを値型の場合とに影響を与えるもう 1 つの変数に対する操作のことはできません (の場合を除く、 [ByRef パラメーター修飾子](../../../language-reference/modifiers/byref.md))。
   
 ## <a name="value-types"></a>値型  
  データ型は、*値の型*独自のメモリ割り当て内のデータを保持している場合。 値の型を以下に示します。  
@@ -36,7 +36,7 @@ Visual basic でのデータ型は、分類に基づいて実装されます。 
  たとえば、予約済みキーワードを使用して値の型を宣言する`Decimal`します。 使用することも、`New`値型を初期化するキーワード。 これは、型パラメーターを受け取るコンス トラクターがある場合に特に便利です。 この例は、<xref:System.Decimal.%23ctor%28System.Int32%2CSystem.Int32%2CSystem.Int32%2CSystem.Boolean%2CSystem.Byte%29>コンス トラクターは、新しいビルド`Decimal`指定した部分からの値。  
   
 ## <a name="reference-types"></a>参照型  
- A*参照型*データを保持する別のメモリ位置へのポインターが含まれています。 参照型を以下に示します。  
+ A*参照型*データへの参照を格納します。 参照型を以下に示します。  
   
 - `String`  
   
@@ -46,7 +46,7 @@ Visual basic でのデータ型は、分類に基づいて実装されます。 
   
 - デリゲート  
   
- クラスは、*参照型*します。 参照型など、このため、`Object`と`String`は .NET Framework のクラスでサポートされています。 場合でも、そのメンバーが値型は、すべての配列が参照型であるに注意してください。  
+ クラスは、*参照型*します。 場合でも、そのメンバーが値型は、すべての配列が参照型であるに注意してください。  
   
  使用する必要がありますすべての参照型は、基になる .NET Framework クラスを表すため、 [New 演算子](../../../../visual-basic/language-reference/operators/new-operator.md)初期化するときに、キーワード。 次のステートメントでは、配列を初期化します。  
   
@@ -68,7 +68,7 @@ Dim totals() As Single = New Single(8) {}
 - 変数、定数、およびフィールド  
   
 ## <a name="working-with-the-object-data-type"></a>オブジェクトのデータ型の操作  
- 変数に参照型または値型のいずれかを割り当てることができます、`Object`データ型。 `Object`変数は常に、データそのものではない、データへのポインターを保持します。 ただし、値の型を割り当てた場合、`Object`変数、その場合と同様、独自のデータを保持します。 詳細については、次を参照してください。 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)します。  
+ 変数に参照型または値型のいずれかを割り当てることができます、`Object`データ型。 `Object`変数は常に、データ自体ではない、データへの参照を保持します。 ただし、値の型を割り当てた場合、`Object`変数、その場合と同様、独自のデータを保持します。 詳細については、次を参照してください。 [Object Data Type](../../../../visual-basic/language-reference/data-types/object-data-type.md)します。  
   
  かどうかを見つけることができます、`Object`に渡すことによって変数が参照型または値型として機能する、<xref:Microsoft.VisualBasic.Information.IsReference%2A>メソッドで、<xref:Microsoft.VisualBasic.Information>のクラス、<xref:Microsoft.VisualBasic?displayProperty=nameWithType>名前空間。 <xref:Microsoft.VisualBasic.Information.IsReference%2A?displayProperty=nameWithType> 返します`True`場合のコンテンツ、`Object`変数は参照型を表します。  
   

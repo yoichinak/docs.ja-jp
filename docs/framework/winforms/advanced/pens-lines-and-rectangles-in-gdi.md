@@ -17,15 +17,15 @@ helpviewer_keywords:
 - examples [Windows Forms], GDI+
 - lines [Windows Forms], dashed
 ms.assetid: 30b25aae-e3eb-4479-bdb8-187cf651fc84
-ms.openlocfilehash: 84752773c0b56d9684dc31620d463d4ddccf9dad
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06d2351ffa7d7f009d7b049f4689df7038b4d202
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641392"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505353"
 ---
 # <a name="pens-lines-and-rectangles-in-gdi"></a>GDI+ でのペン、直線、および四角形
-使用して線を描画するために[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]を作成する必要がある、<xref:System.Drawing.Graphics>オブジェクトと<xref:System.Drawing.Pen>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトが実際には、描画を実行するメソッドを提供し、<xref:System.Drawing.Pen>オブジェクトが線の色、幅、およびスタイルなどの属性を格納します。  
+GDI + を作成する必要がありますを使用して線を描画する、<xref:System.Drawing.Graphics>オブジェクトと<xref:System.Drawing.Pen>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトが実際には、描画を実行するメソッドを提供し、<xref:System.Drawing.Pen>オブジェクトが線の色、幅、およびスタイルなどの属性を格納します。  
   
 ## <a name="drawing-a-line"></a>直線を描画します。  
  線を描画するために呼び出す、<xref:System.Drawing.Graphics.DrawLine%2A>のメソッド、<xref:System.Drawing.Graphics>オブジェクト。 <xref:System.Drawing.Pen>オブジェクトが渡される引数の 1 つとして、<xref:System.Drawing.Graphics.DrawLine%2A>メソッド。 次の例は、点 (12, 6) (4, 2) のポイントから線を描画します。  
@@ -55,7 +55,7 @@ ms.locfileid: "61641392"
  ![Lines](./media/aboutgdip02-art04.gif "Aboutgdip02_art04")  
   
 ## <a name="drawing-a-rectangle"></a>四角形の描画  
- 四角形を描画[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]線を描画に似ています。 四角形を描画する必要があります、<xref:System.Drawing.Graphics>オブジェクトと<xref:System.Drawing.Pen>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトを提供、<xref:System.Drawing.Graphics.DrawRectangle%2A>メソッド、および<xref:System.Drawing.Pen>オブジェクトが線の幅と色などの属性を格納します。 <xref:System.Drawing.Pen>オブジェクトが渡される引数の 1 つとして、<xref:System.Drawing.Graphics.DrawRectangle%2A>メソッド。 次の例で、左上隅を四角形を描画します (100, 50)、80、幅と高さ 40。  
+ GDI + を使用して四角形を描画する直線の描画に似ています。 四角形を描画する必要があります、<xref:System.Drawing.Graphics>オブジェクトと<xref:System.Drawing.Pen>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトを提供、<xref:System.Drawing.Graphics.DrawRectangle%2A>メソッド、および<xref:System.Drawing.Pen>オブジェクトが線の幅と色などの属性を格納します。 <xref:System.Drawing.Pen>オブジェクトが渡される引数の 1 つとして、<xref:System.Drawing.Graphics.DrawRectangle%2A>メソッド。 次の例で、左上隅を四角形を描画します (100, 50)、80、幅と高さ 40。  
   
  [!code-csharp[LinesCurvesAndShapes#45](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#45)]
  [!code-vb[LinesCurvesAndShapes#45](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#45)]  

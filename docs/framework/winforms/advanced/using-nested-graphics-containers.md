@@ -9,15 +9,15 @@ helpviewer_keywords:
 - graphics [Windows Forms], clipping
 - graphics [Windows Forms], transformations in nested objects
 ms.assetid: a0d9f178-43a4-4323-bb5a-d3e3f77ae6c1
-ms.openlocfilehash: 6bbf7918ccff184e597204b35aa005ab17d8d8af
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4533fbba62c36714f55cd8bd55fde7a1c8f6c9e6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61766300"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505044"
 ---
 # <a name="using-nested-graphics-containers"></a>入れ子になっているグラフィックス コンテナーの使用
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 置換またはで状態の一部を強化を一時的に使用できるコンテナーを提供します、<xref:System.Drawing.Graphics>オブジェクト。 呼び出すことでコンテナーを作成する、<xref:System.Drawing.Graphics.BeginContainer%2A>のメソッドを<xref:System.Drawing.Graphics>オブジェクト。 呼び出すことができます<xref:System.Drawing.Graphics.BeginContainer%2A>繰り返しを入れ子になったコンテナーを形成します。 呼び出しごとに<xref:System.Drawing.Graphics.BeginContainer%2A>への呼び出しと組み合わせて使用する必要があります<xref:System.Drawing.Graphics.EndContainer%2A>します。  
+GDI + を一時的に置き換えるかで状態の一部の拡張に使用できるコンテナーを提供します、<xref:System.Drawing.Graphics>オブジェクト。 呼び出すことでコンテナーを作成する、<xref:System.Drawing.Graphics.BeginContainer%2A>のメソッドを<xref:System.Drawing.Graphics>オブジェクト。 呼び出すことができます<xref:System.Drawing.Graphics.BeginContainer%2A>繰り返しを入れ子になったコンテナーを形成します。 呼び出しごとに<xref:System.Drawing.Graphics.BeginContainer%2A>への呼び出しと組み合わせて使用する必要があります<xref:System.Drawing.Graphics.EndContainer%2A>します。  
   
 ## <a name="transformations-in-nested-containers"></a>入れ子になったコンテナー内の変換  
  次の例では、作成、<xref:System.Drawing.Graphics>オブジェクトおよびコンテナー内で<xref:System.Drawing.Graphics>オブジェクト。 ワールド変換、<xref:System.Drawing.Graphics>オブジェクトが x 方向に 100 の翻訳単位と y 軸方向に 80 単位。 コンテナーのワールド変換は、30 度回転します。 コードの呼び出しを行う`DrawRectangle(pen, -60, -30, 120, 60)`2 回クリックします。 最初の呼び出し<xref:System.Drawing.Graphics.DrawRectangle%2A>コンテナー内では、呼び出しの間には、呼び出し<xref:System.Drawing.Graphics.BeginContainer%2A>と<xref:System.Drawing.Graphics.EndContainer%2A>します。 2 番目の呼び出し<xref:System.Drawing.Graphics.DrawRectangle%2A>への呼び出し後は<xref:System.Drawing.Graphics.EndContainer%2A>します。  

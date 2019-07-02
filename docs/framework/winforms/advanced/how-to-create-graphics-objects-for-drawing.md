@@ -10,15 +10,15 @@ helpviewer_keywords:
 - images [Windows Forms], creating
 - GDI+, creating images
 ms.assetid: 162861f9-f050-445e-8abb-b2c43a918b8b
-ms.openlocfilehash: aa4c3e3cd21d702927b3784254184a9cd329f121
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ee57b0409d7bb7574c965ff098e7f86c8332536d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64643358"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505507"
 ---
 # <a name="how-to-create-graphics-objects-for-drawing"></a>方法: 描画する Graphics オブジェクトを作成する
-直線と図形を描画することができます、前に、テキストのレンダリングまたは表示し、操作を使用したイメージ[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、作成する必要がある、<xref:System.Drawing.Graphics>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトが表す、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]描画面、およびグラフィカル イメージを作成するために使用するオブジェクトです。  
+直線と図形の描画して、テキストのレンダリングや、表示するか、および GDI + を使用したイメージを操作することができます、前に作成する必要があります、<xref:System.Drawing.Graphics>オブジェクト。 <xref:System.Drawing.Graphics>オブジェクトは、GDI + 描画サーフェイスを表すし、グラフィカル イメージを作成するために使用するオブジェクトです。  
   
  グラフィックスを操作には、2 つの手順があります。  
   
@@ -33,11 +33,11 @@ ms.locfileid: "64643358"
   
 - 一部として、グラフィックス オブジェクトへの参照を受け取る、<xref:System.Windows.Forms.PaintEventArgs>で、<xref:System.Windows.Forms.Control.Paint>フォームまたはコントロールのイベント。 これは、グラフィックス オブジェクトへの参照を取得する方法、コントロールの描画コードを作成するときに、通常は。 同様に、取得することも、グラフィックス オブジェクトのプロパティとして、<xref:System.Drawing.Printing.PrintPageEventArgs>処理するときに、<xref:System.Drawing.Printing.PrintDocument.PrintPage>イベントを<xref:System.Drawing.Printing.PrintDocument>します。  
   
-     - または -  
+     \- または -  
   
 - 呼び出す、<xref:System.Windows.Forms.Control.CreateGraphics%2A>コントロールまたはフォームへの参照を取得する方法、<xref:System.Drawing.Graphics>コントロールまたはフォームの描画サーフェイスを表すオブジェクト。 フォームまたは既に存在しているコントロールを描画する場合は、このメソッドを使用します。  
   
-     - または -  
+     \- または -  
   
 - 作成、<xref:System.Drawing.Graphics>オブジェクトから継承する任意のオブジェクトから<xref:System.Drawing.Image>します。 この方法は、既存のイメージを変更するときに便利です。  
   

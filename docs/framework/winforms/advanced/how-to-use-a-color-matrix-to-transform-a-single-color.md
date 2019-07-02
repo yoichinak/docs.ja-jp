@@ -8,19 +8,19 @@ helpviewer_keywords:
 - image colors [Windows Forms], transforming
 - color matrices [Windows Forms], using
 ms.assetid: 44df4556-a433-49c0-ac0f-9a12063a5860
-ms.openlocfilehash: 9cff13cabb0cd496ee4e628664e4b92bd9e60808
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 2df74e022b842f7e5c9ff80f6aeddfce51af5eab
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063727"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505807"
 ---
 # <a name="how-to-use-a-color-matrix-to-transform-a-single-color"></a>方法: カラー行列を使用して単一色を変換する
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供、<xref:System.Drawing.Image>と<xref:System.Drawing.Bitmap>クラスを格納すると、画像を操作します。 <xref:System.Drawing.Image> <xref:System.Drawing.Bitmap>オブジェクトは、32 ビットの数値として各ピクセルの色を格納します。8 ビットは赤、緑、青、およびアルファの各します。 4 つのコンポーネントのそれぞれは、0 ~ 255 の輝度がない、255 は最大輝度を表す 0 から番号です。 アルファ コンポーネントには、色の透明度を指定します。0 は完全に透明、255 は完全に不透明です。  
+GDI + は、提供、<xref:System.Drawing.Image>と<xref:System.Drawing.Bitmap>クラスを格納すると、画像を操作します。 <xref:System.Drawing.Image> <xref:System.Drawing.Bitmap>オブジェクトは、32 ビットの数値として各ピクセルの色を格納します。8 ビットは赤、緑、青、およびアルファの各します。 4 つのコンポーネントのそれぞれは、0 ~ 255 の輝度がない、255 は最大輝度を表す 0 から番号です。 アルファ コンポーネントには、色の透明度を指定します。0 は完全に透明、255 は完全に不透明です。  
   
  カラー ベクターは、(赤、緑、青、アルファ) 形式の 4 タプルです。 たとえば、色のベクトル (0, 255、0, 255) は、不透明な色が赤と青、緑を最大輝度にあるを表します。  
   
- 色を表すための別の規則は、最大輝度を番号 1 を使用します。 その規則を使用して、前の段落で説明されている色は、ベクトル (0, 1、0, 1) によって示されます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 色変換を実行するときに、最大輝度として 1 の規則を使用します。  
+ 色を表すための別の規則は、最大輝度を番号 1 を使用します。 その規則を使用して、前の段落で説明されている色は、ベクトル (0, 1、0, 1) によって示されます。 GDI + 最大輝度としての 1 の規則を使用して色変換を実行するとき。  
   
  4 × 4 行列によって色ベクトルを乗算して、色のベクトルに線形変換 (回転、スケーリング、およびなど) を適用できます。 ただし、4 × 4 行列を使用して、(非線形) 変換を実行することはできません。 各色ベクター ダミー 5 番目の座標 (たとえば、番号 1) を追加する場合は、線形変換と翻訳の任意の組み合わせを適用する 5 × 5 マトリックスを使用できます。 変換後に線形変換から成る変換アフィン変換と呼びます。  
   
@@ -28,7 +28,7 @@ ms.locfileid: "65063727"
   
 1. 赤のコンポーネントでは倍精度浮動小数点  
   
-2. 0.2 を赤、緑、青のコンポーネントに追加します。  
+2. 0\.2 を赤、緑、青のコンポーネントに追加します。  
   
  次の行列の乗算を順番に、2 つの変換を実行します。  
   

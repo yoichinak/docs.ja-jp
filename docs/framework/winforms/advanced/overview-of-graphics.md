@@ -5,18 +5,18 @@ helpviewer_keywords:
 - graphics [Windows Forms], using managed interface
 - graphics [Windows Forms], about graphics
 ms.assetid: a602aef8-a8c8-4c36-9816-74e7bad96a68
-ms.openlocfilehash: 927fc327d9ad42cd3a99af207d04efbc520df8b5
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f0e2fd9dcf31e5fdce16b5a3b6fd21eab6eab66a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645700"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505324"
 ---
 # <a name="overview-of-graphics"></a>グラフィックスについて
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] Microsoft Windows オペレーティング システムのサブシステムを形成するアプリケーション プログラミング インターフェイス (API) です。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 情報を表示する画面およびプリンターを担当します。 その名前からわかるように、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] は [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] の後継であり、以前のバージョンの Windows に含まれているグラフィックス デバイス インターフェイスです。  
+GDI + は、Microsoft Windows オペレーティング システムのサブシステムを形成するアプリケーション プログラミング インターフェイス (API です)。 GDI + は画面およびプリンター情報を表示する責任を負います。 その名前からわかるように、GDI + は GDI、以前のバージョンの Windows に含まれているグラフィックス デバイス インターフェイスの後継です。  
   
 ## <a name="managed-class-interface"></a>マネージド クラスのインターフェイス  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] API はマネージ コードとして配置されているクラスのセットを通じて公開します。 このクラスのセットと呼ばれる、*マネージ クラスのインターフェイス*に[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]します。 次の名前空間は、マネージド クラスのインターフェイスを構成します。  
+ GDI + API は、マネージ コードとして配置されているクラスのセットを通じて公開されます。 この一連のクラスと呼ばれる、*マネージ クラスのインターフェイス*GDI + にします。 次の名前空間は、マネージド クラスのインターフェイスを構成します。  
   
 - <xref:System.Drawing>  
   
@@ -28,7 +28,7 @@ ms.locfileid: "64645700"
   
 - <xref:System.Drawing.Printing>  
   
- グラフィックス デバイス インターフェイスを備えたなど[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、画面またはプリンターの情報を表示するには、特定のディスプレイ デバイスの詳細について心配する必要はありません。 プログラマは [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] クラスによって提供されるさまざまなメソッドを呼び出します。 次に、これらのメソッドで、特定のデバイス ドライバーへの適切な呼び出しを実行します。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] は、グラフィックス ハードウェアからアプリケーションを分離します。 この分離により、プログラマはデバイスに依存しないアプリケーションを作成することをお勧めします。  
+ GDI + などのグラフィックス デバイス インターフェイスを持つ特定のディスプレイ デバイスの詳細について心配することがなく、画面またはプリンターの情報を表示できます。 プログラマでは、GDI + クラスによって提供されるメソッドを呼び出します。 次に、これらのメソッドで、特定のデバイス ドライバーへの適切な呼び出しを実行します。 GDI +、グラフィックス ハードウェアからアプリケーションを隔離します。 この分離により、プログラマはデバイスに依存しないアプリケーションを作成することをお勧めします。  
   
 ## <a name="see-also"></a>関連項目
 

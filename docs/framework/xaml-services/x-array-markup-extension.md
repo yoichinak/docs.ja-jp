@@ -8,19 +8,19 @@ helpviewer_keywords:
 - x:Array [XAML Services]
 - XAML [XAML Services], x:Array markup extension
 ms.assetid: c5358e14-d24c-44c7-b5eb-6062a4fd981c
-ms.openlocfilehash: 4f4e26eb3e5ccaf66b2173c7fc9952375c5f2a58
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8acb732841aa7aaaad3e8fdd2cf2962ff44dd60b
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62025406"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506061"
 ---
 # <a name="xarray-markup-extension"></a>x:Array のマークアップ拡張機能
 マークアップ拡張機能を XAML でのオブジェクトの配列には、一般的なサポートを提供します。 これに対応して、 `x:ArrayExtension` XAML [XAML MS] を入力します。  
   
 ## <a name="xaml-object-element-usage"></a>XAML オブジェクト要素の使用方法  
   
-```  
+```xaml
 <x:Array Type="typeName">  
   arrayContents  
 </x:Array>  
@@ -55,17 +55,14 @@ ms.locfileid: "62025406"
   
  たとえば、2 つの文字列の単純な配列では、次の`sys`プレフィックス (とも`x`)、配列のレベルで定義します。  
   
- [xaml]  
-  
- `<x:Array Type="sys:String" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"`  
-  
- `xmlns:sys="clr-namespace:System;assembly=mscorlib">`  
-  
- `<sys:String>Hello</sys:String>`  
-  
- `<sys:String>World</sys:String>`  
-  
- `</x:Array>`  
+```xaml
+<x:Array Type="sys:String"
+         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:sys="clr-namespace:System;assembly=mscorlib">
+    <sys:String>Hello</sys:String>
+    <sys:String>World</sys:String>
+</x:Array>
+```
   
  配列要素として使用されるカスタムの型のクラスはオブジェクト要素としての XAML でインスタンス化するための要件もサポートする必要があります。 詳細については、次を参照してください。 [XAML とカスタム クラスの WPF](../wpf/advanced/xaml-and-custom-classes-for-wpf.md)します。  
   

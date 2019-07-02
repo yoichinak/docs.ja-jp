@@ -20,12 +20,12 @@ helpviewer_keywords:
 - bitmaps [Windows Forms], file format
 - Exchangeable Image File
 ms.assetid: 6be085a2-2c13-47c8-b80a-c18b32777d8d
-ms.openlocfilehash: f41585ba8816e0b1894a9f01163191848ae391e3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e678195e96aea881777c44ab14bb2e56aef015bb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61663953"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505297"
 ---
 # <a name="types-of-bitmaps"></a>ビットマップの種類
 ビットマップは、ピクセルの四角形の配列の各ピクセルの色を指定するビットの配列です。 個々 のピクセル ビット数は、そのピクセルに割り当てることができる色の数を決定します。 たとえば、各ピクセルは 4 ビットで表される場合、し、特定のピクセル割り当てることができます 16 色のいずれか (2 ^4 = 16)。 次の表では、指定したビット数で表されるピクセルに割り当てることができる色の数のいくつかの例を示します。  
@@ -53,7 +53,7 @@ ms.locfileid: "61663953"
  ![ビットマップ サンプル](./media/aboutgdip03-art02.gif "AboutGdip03_Art02")  
   
 ## <a name="graphics-file-formats"></a>グラフィックス ファイルの形式  
- ディスク ファイルでビットマップを保存するための多くの標準形式があります。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] グラフィックス ファイルの次の段落で説明されている形式をサポートします。  
+ ディスク ファイルでビットマップを保存するための多くの標準形式があります。 グラフィックス ファイルの次の段落で説明されている形式を GDI + サポートします。  
   
 ### <a name="bmp"></a>BMP  
  Bmp ファイルは、Windows デバイスに依存しないと、アプリケーションに依存しないイメージを格納するために使用する標準的な形式です。 ビット/ピクセル (1、4、8、15、24、32、または 64) を指定された BMP ファイルの数は、ファイル ヘッダーで指定されます。 1 ピクセルあたり 24 ビットの BMP ファイルは共通です。 BMP ファイルは通常、圧縮されていないと、そのためは転送にも適したインターネットを経由。  

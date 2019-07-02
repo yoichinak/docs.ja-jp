@@ -2,17 +2,17 @@
 title: データ バインディングと LINQ to DataSet
 ms.date: 03/30/2017
 ms.assetid: 310bff4a-32dd-4f20-a271-6dbd82912631
-ms.openlocfilehash: b081a648023aa21eea3a20ec409600d3bcbe9878
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 125c9b7df0164092182506a7a71d4180b81d3ca6
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607402"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504115"
 ---
 # <a name="data-binding-and-linq-to-dataset"></a>データ バインディングと LINQ to DataSet
 *データ バインディング*はアプリケーションの UI とビジネス ロジックの間の接続を確立するプロセスです。 バインドが適切に設定され、データから適切な通知が提供される場合、データの値が変更されると、そのデータにバインドされている要素に変更が自動的に反映されます。 <xref:System.Data.DataSet> はメモリ内データ表現であり、含まれているデータ ソースとは関係なく、一貫性のあるリレーショナル プログラミング モデルを提供します。 ADO.NET 2.0 の <xref:System.Data.DataView> では、<xref:System.Data.DataTable> に格納されているデータの並べ替えとフィルター処理を行うことができます。 この機能は、データ バインディング アプリケーションで一般に使用されます。 <xref:System.Data.DataView> を使用すると、さまざまな並べ替え順序を使用してテーブルのデータを公開したり、行の状態やフィルター式に基づいてデータをフィルター処理したりできます。 詳細については、<xref:System.Data.DataView>オブジェクトを参照してください[Dataview](../../../../docs/framework/data/adonet/dataset-datatable-dataview/dataviews.md)します。  
   
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] により、開発者は複雑で強力なクエリを作成する、<xref:System.Data.DataSet>を使用して[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]します。 ただし、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリの列挙を返します<xref:System.Data.DataRow>バインディングのシナリオで簡単に使用されていないオブジェクト。 バインドを簡単にするには、作成することができます、<xref:System.Data.DataView>から、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 これは、<xref:System.Data.DataView>フィルター処理とクエリで指定した並べ替えを使用しますが、データ バインディングがやりやすくなります。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 機能を拡張、<xref:System.Data.DataView>により[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]式ベースのフィルター処理と並べ替え、はるかに複雑で強力なフィルター処理と並べ替え文字列ベースのフィルター処理と並べ替えよりも操作できます。  
+ LINQ to DataSet により、開発者は複雑で強力なクエリを作成する、<xref:System.Data.DataSet>を使用して[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]します。 ただし、LINQ to DataSet のクエリを返しますの列挙体<xref:System.Data.DataRow>バインディングのシナリオで簡単に使用されていないオブジェクト。 バインドを簡単にするには、作成することができます、 <xref:System.Data.DataView> LINQ to DataSet クエリから。 これは、<xref:System.Data.DataView>フィルター処理とクエリで指定した並べ替えを使用しますが、データ バインディングがやりやすくなります。 LINQ to DataSet の機能を拡張する、<xref:System.Data.DataView>により[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]式ベースのフィルター処理と並べ替え、はるかに複雑で強力なフィルター処理と並べ替え文字列ベースのフィルター処理と並べ替えよりも操作できます。  
   
  <xref:System.Data.DataView> はクエリ自体を表すもので、クエリに基づくビューではありません。 単純なデータ バインディング モデルを提供する場合、<xref:System.Data.DataView> は、<xref:System.Windows.Forms.DataGrid> や <xref:System.Windows.Forms.DataGridView> などの UI コントロールにバインドされます。 当該テーブルの既定のビューを提供する場合、<xref:System.Data.DataView> は、<xref:System.Data.DataTable> から作成することもできます。  
   

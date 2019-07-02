@@ -9,15 +9,15 @@ helpviewer_keywords:
 - antialiasing [Windows Forms], smoothing modes
 - GDI+, antialiasing
 ms.assetid: 810da1a4-c136-4abf-88df-68e49efdd8d4
-ms.openlocfilehash: cbc9033f18f1ab255862c8f8e2891aa9b68cf8d6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 871c5cb3cd9356f677633acb04fe82021a9787c5
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961102"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506136"
 ---
 # <a name="antialiasing-with-lines-and-curves"></a>直線と曲線のアンチエイリアシング
-使用すると[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]直線を描画する開始点と、直線の終了点を提供するが、行の個々 のピクセルについての情報を提供する必要はありません。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 特定のディスプレイ デバイスに、行を表示するにどのピクセルはオンにする、ディスプレイ ドライバー ソフトウェアと連携して動作します。  
+を使用する GDI + 線を描画するときに開始点と、直線の終了点を提供するが、行の個々 のピクセルについての情報を提供する必要はありません。 GDI + を特定のディスプレイ デバイスに、行を表示するにどのピクセルはオンにディスプレイ ドライバー ソフトウェアと連携して動作します。  
   
 ## <a name="aliasing"></a>エイリアス  
  点 (16, 10) に (4, 2) のポイントから移動する直接赤色の線を検討してください。 座標システムでは、左上隅の原点とメジャーの単位がピクセルであることを想定しています。 また、x 軸が下、右、y 軸を指しているとします。 次の図は、マルチカラーの背景色で描画される赤色の線の拡大表示を示します。  

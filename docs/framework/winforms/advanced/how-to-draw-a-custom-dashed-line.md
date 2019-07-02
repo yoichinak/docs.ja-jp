@@ -9,15 +9,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - lines [Windows Forms], dashed
 ms.assetid: cd0ed96a-cce4-47b9-b58a-3bae2e3d1bee
-ms.openlocfilehash: 8dc1ad41cf8067bea5b811ca126ad29f5a600f69
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d2184a8d7d7f24b8f631818608ab4bcdb89857c7
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62004368"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506039"
 ---
 # <a name="how-to-draw-a-custom-dashed-line"></a>方法: カスタム破線を描画する
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 記載されているいくつかの破線スタイルを提供します、<xref:System.Drawing.Drawing2D.DashStyle>列挙体。 これらの標準の破線スタイルがニーズに合わないしない場合は、カスタムの破線パターンを作成できます。  
+GDI + に記載されているいくつかの破線スタイルを提供する、<xref:System.Drawing.Drawing2D.DashStyle>列挙体。 これらの標準の破線スタイルがニーズに合わないしない場合は、カスタムの破線パターンを作成できます。  
   
 ## <a name="example"></a>例  
  カスタム破線を描画するために、配列にダッシュと空白の長さを格納し、配列の値として割り当てます、<xref:System.Drawing.Pen.DashPattern%2A>のプロパティを<xref:System.Drawing.Pen>オブジェクト。 次の例では、配列に基づくカスタム破線を描画する`{5, 2, 15, 4}`します。 取得する場合は 5 のペンの幅によって、配列の要素を乗算する`{25, 10, 75, 20}`します。 長さ 25 75 の間で交互に表示されるダッシュと長さが 10 と 20 の間で交互に、スペースです。  

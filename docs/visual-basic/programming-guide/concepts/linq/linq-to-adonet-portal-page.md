@@ -2,12 +2,12 @@
 title: LINQ to ADO.NET (ポータル ページ)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 04fb330b1a8eaea9c5c64f633322696236eb492e
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
-ms.translationtype: HT
+ms.openlocfilehash: 5783e45f666779e6cfecd611f1e2a34dae5e7df9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487812"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506000"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (ポータル ページ)
 LINQ to ADO.NET では、ADO.NET での列挙可能なオブジェクトを使用してクエリを実行することができます、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]プログラミング モデル。  
@@ -15,12 +15,12 @@ LINQ to ADO.NET では、ADO.NET での列挙可能なオブジェクトを使�
 > [!NOTE]
 >  LINQ to ADO.NET のドキュメントについては、.NET Framework SDK の ADO.NET のセクションにあります。[LINQ と ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。
   
- ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] には、[!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、および [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] の 3 つのテクノロジがあります。 [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] 提供に対するクエリの実行度で最適化された、 <xref:System.Data.DataSet>、 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server データベースのスキーマを直接クエリすることができますと[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]Entity Data Model のクエリを実行することができます。  
+ 次の 3 つの別個の ADO.NET[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]テクノロジ。LINQ to DataSet、 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、および[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]します。 LINQ to DataSet の提供に対するクエリの実行度で最適化された、 <xref:System.Data.DataSet>、 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server データベースのスキーマを直接クエリすることができますと[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]Entity Data Model のクエリを実行することができます。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> は、ADO.NET で最も幅広く使用されているコンポーネントの 1 つであり、ADO.NET の基礎である非接続型プログラミングの重要な要素です。 こうした突出した特長がある反面、<xref:System.Data.DataSet> のクエリ機能には制限もあります。  
   
- [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] では、他の多くのデータ ソースで使用できるのと同じクエリ機能を使用することで、豊富なクエリ機能を <xref:System.Data.DataSet> に組み込むことができます。  
+ LINQ to DataSet に豊富なクエリ機能を構築できます。<xref:System.Data.DataSet>他の多くのデータ ソースに使用される同じクエリ機能を使用します。  
   
  詳細については、「[LINQ to DataSet](../../../../framework/data/adonet/linq-to-dataset.md)」を参照してください。  
   

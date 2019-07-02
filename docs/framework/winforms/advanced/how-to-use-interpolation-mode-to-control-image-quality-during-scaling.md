@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], scaling
 - images [Windows Forms], controlling quality
 ms.assetid: fde9bccf-8aa5-4b0d-ba4b-788740627b02
-ms.openlocfilehash: 609851737f142cfcbfeace3b1c020f3ac27bfd7c
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: ab0ff93b3ee26467c0de448efd31b698167f95c2
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64636850"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505715"
 ---
 # <a name="how-to-use-interpolation-mode-to-control-image-quality-during-scaling"></a>方法: 補間モードを使用してスケーリング時の画質を制御する
-補間モードを<xref:System.Drawing.Graphics>オブジェクト方法に影響を与えます[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]スケール (拡大および縮小) イメージ。 <xref:System.Drawing.Drawing2D.InterpolationMode>列挙型は、次のリストに表示される一部のいくつかの補間モードを定義します。  
+補間モードを<xref:System.Drawing.Graphics>オブジェクトの方法で構成される GDI + 拡張 (拡大および縮小) イメージに影響を与えます。 <xref:System.Drawing.Drawing2D.InterpolationMode>列挙型は、次のリストに表示される一部のいくつかの補間モードを定義します。  
   
 - <xref:System.Drawing.Drawing2D.InterpolationMode.NearestNeighbor>  
   

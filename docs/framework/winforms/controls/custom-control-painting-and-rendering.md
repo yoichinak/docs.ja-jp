@@ -6,12 +6,12 @@ helpviewer_keywords:
 - custom controls [Windows Forms], painting
 - user controls [Windows Forms], painting
 ms.assetid: a09dbf76-0966-4cbf-a66a-2083ba98e068
-ms.openlocfilehash: ec9002ffa4a7e2c82f59d52344764a01afe4c568
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 14abac5678bfffa3cdb61307fd3cb54681c82a99
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011485"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506084"
 ---
 # <a name="custom-control-painting-and-rendering"></a>コントロールのカスタム描画およびレンダリング
 コントロールのカスタム描画では、.NET Framework で簡単、多くの複雑なタスクの 1 つです。 カスタム コントロールを作成するときは、コントロールの外観に関する多くのオプションがあります。 継承するコントロールを作成している場合、 `Control`、により、コントロールはそのグラフィカル表現を表示するためにコードを提供する必要があります。 継承することによって、ユーザー コントロールを作成するかどうかは、 `UserControl`、継承は、Windows フォーム コントロールのいずれかでは、標準のグラフィカル表示をオーバーライドしてグラフィックス コードを指定します。 カスタムの内在コントロールのレンダリングを提供するかどうか、`UserControl`を作成する、オプションが制限されますがも、さまざまなコントロールとアプリケーションのグラフィカル表現を許可します。  
@@ -47,7 +47,7 @@ ms.locfileid: "62011485"
   
 ## <a name="related-sections"></a>関連項目  
  [方法: 描画の Graphics オブジェクトを作成します。](../advanced/how-to-create-graphics-objects-for-drawing.md)  
- 紹介[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]詳細については、Visual Studio の観点と、リンクからのグラフィックス機能。  
+ Visual Studio の観点から GDI + のグラフィックス機能を紹介し、詳細情報へのリンクを提供します。  
   
  [さまざまなカスタム コントロール](varieties-of-custom-controls.md)  
  作成できるカスタム コントロールの種類について説明します。

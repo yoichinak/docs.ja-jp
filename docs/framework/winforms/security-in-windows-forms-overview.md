@@ -8,12 +8,12 @@ helpviewer_keywords:
 - security [Windows Forms], about security
 - access control [Windows Forms], Windows Forms
 ms.assetid: 4810dc9f-ea23-4ce1-8ea1-657f0ff1d820
-ms.openlocfilehash: 471ed75a922ab8a7df18f2e4a3ccd89ede171248
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 88301663a78bb7d6f31c23bb03409ca44a2e55a9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487259"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506169"
 ---
 # <a name="security-in-windows-forms-overview"></a>Windows フォームのセキュリティの概要
 
@@ -77,7 +77,7 @@ ClickOnce では、クライアント コンピューターで管理者特権を
 
 どのテクノロジを選択するかは、配置環境に応じて異なります。 詳細については、「[ClickOnce 配置ストラテジの選択](/visualstudio/deployment/choosing-a-clickonce-deployment-strategy)」を参照してください。
 
-既定では、Visual Studio または .NET Framework SDK のツール (Mage.exe および MageUI.exe) を使用してデプロイされた ClickOnce アプリケーションは、完全信頼を持つクライアント コンピューターで実行する構成されます。 部分信頼を使用して、またはいくつか追加のアクセス許可のみを使用して、アプリケーションを配置している場合、この既定を変更する必要があります。 配置を構成するときに、Visual Studio または .NET Framework SDK ツールの MageUI.exe のいずれかでこれを実行できます。 MageUI.exe を使用する方法の詳細については、チュートリアルを参照してください。コマンドラインから ClickOnce アプリケーションを展開します。  参照してください[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))または[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)します。
+既定では、Visual Studio または .NET Framework SDK のツール (Mage.exe および MageUI.exe) を使用してデプロイされた ClickOnce アプリケーションは、完全信頼を持つクライアント コンピューターで実行する構成されます。 部分信頼を使用して、またはいくつか追加のアクセス許可のみを使用して、アプリケーションを配置している場合、この既定を変更する必要があります。 配置を構成するときに、Visual Studio または .NET Framework SDK ツールの MageUI.exe のいずれかでこれを実行できます。 MageUI.exe を使用する方法の詳細については、次を参照してください。[チュートリアル。ClickOnce アプリケーションを手動で配置](/visualstudio/deployment/walkthrough-manually-deploying-a-clickonce-application)します。  参照してください[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2012/hafybdaa(v=vs.110))または[方法。ClickOnce アプリケーションのカスタム アクセス許可を設定](/visualstudio/deployment/how-to-set-custom-permissions-for-a-clickonce-application)します。
 
 ClickOnce とアクセス許可の昇格のセキュリティ面の詳細については、次を参照してください。 [ClickOnce アプリケーションのセキュリティで保護する](/visualstudio/deployment/securing-clickonce-applications)します。 信頼されたアプリケーションの配置の詳細については、「[信頼されたアプリケーションの配置の概要](/visualstudio/deployment/trusted-application-deployment-overview)」を参照してください。
 

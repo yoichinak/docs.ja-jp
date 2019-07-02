@@ -2,12 +2,12 @@
 title: Async および Await を使用した非同期プログラミング (Visual Basic)
 ms.date: 07/20/2015
 ms.assetid: bd7e462b-583b-4395-9c36-45aa9e61072c
-ms.openlocfilehash: 030ef4549bc820cab66d33fa81c205158c09fff9
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 0d8810da424b0759dcfba882efe462514a14145a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67026100"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505959"
 ---
 # <a name="asynchronous-programming-with-async-and-await-visual-basic"></a>Async および Await を使用した非同期プログラミング (Visual Basic)
 
@@ -39,7 +39,7 @@ Visual Studio 2012 では、.NET Framework 4.5 以降と Windows ランタイム
 
 ## <a name="BKMK_HowtoWriteanAsyncMethod"></a>非同期メソッドの作成の簡素化
 
-Visual Basic の [Async](../../../../visual-basic/language-reference/modifiers/async.md) キーワードと [Await](../../../../visual-basic/language-reference/modifiers/async.md) キーワードは、非同期プログラミングの中核です。 これら 2 つのキーワードを使用すると、同期メソッドの作成とほぼ同様の容易さで、.NET Framework または Windows ランタイムのリソースを使用して非同期メソッドを作成できます。 `Async` および `Await` を使用して定義する非同期メソッドは、async メソッドとして参照されます。
+Visual Basic の [Async](../../../../visual-basic/language-reference/modifiers/async.md) キーワードと [Await](../../../../visual-basic/language-reference/operators/await-operator.md) キーワードは、非同期プログラミングの中核です。 これら 2 つのキーワードを使用すると、同期メソッドの作成とほぼ同様の容易さで、.NET Framework または Windows ランタイムのリソースを使用して非同期メソッドを作成できます。 `Async` および `Await` を使用して定義する非同期メソッドは、async メソッドとして参照されます。
 
 async メソッドの例を次に示します。 コードのほとんどは、見たことのあるものと思います。 コメントは、非同期性を作成するために追加した機能を明示しています。
 

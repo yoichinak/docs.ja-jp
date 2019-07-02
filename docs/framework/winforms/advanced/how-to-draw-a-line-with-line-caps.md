@@ -10,15 +10,15 @@ helpviewer_keywords:
 - pens [Windows Forms], drawing lines
 - drawing lines [Windows Forms], line caps
 ms.assetid: eb68c3e1-c400-4886-8a04-76978a429cb6
-ms.openlocfilehash: 682474120cbeeeb4cb83b69188a5a125228279d3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 34abfc86e980a24ebb835cfd88d2522f8372c68d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631630"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506026"
 ---
 # <a name="how-to-draw-a-line-with-line-caps"></a>方法: ライン キャップを使用した直線を描画する
-ライン キャップと呼ばれるいくつかの図形のいずれかでは、先頭または末尾の行を描画できます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] round、正方形、ひし形、および矢印などのいくつかのライン キャップをサポートしています。  
+ライン キャップと呼ばれるいくつかの図形のいずれかでは、先頭または末尾の行を描画できます。 GDI + ラウンド、正方形、ひし形の矢印などのいくつかのライン キャップをサポートしています。  
   
 ## <a name="example"></a>例  
  ライン キャップ (start cap) の行、行 (end cap) の末尾または破線 (ダッシュ cap) のダッシュの開始を指定することができます。  

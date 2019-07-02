@@ -10,21 +10,21 @@ helpviewer_keywords:
 - custom controls [Windows Forms], graphics resources
 - custom controls [Windows Forms], invalidation and painting
 ms.assetid: aae8e1e6-4786-432b-a15e-f4c44760d302
-ms.openlocfilehash: 9641b6906bc2acaa525aed6df57f189d39317d35
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 76506e504fdaca83fee502111dbadab5cb41d9b9
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64614675"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506180"
 ---
 # <a name="rendering-a-windows-forms-control"></a>Windows フォーム コントロールのレンダリング
-レンダリングは、ユーザーの画面にビジュアル表現を作成するプロセスを指します。 Windows フォームを使用して[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)](新しい Windows グラフィックス ライブラリ) をレンダリングします。 アクセスを提供するマネージ クラス[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]では、<xref:System.Drawing?displayProperty=nameWithType>名前空間とその下位の名前空間。  
+レンダリングは、ユーザーの画面にビジュアル表現を作成するプロセスを指します。 Windows フォームでは、レンダリングの GDI (新しい Windows グラフィックス ライブラリ) を使用します。 GDI へのアクセスを提供するマネージ クラスは、<xref:System.Drawing?displayProperty=nameWithType>名前空間とその下位の名前空間。  
   
  コントロールのレンダリングで、次の要素が含まれます。  
   
 - 基本クラスによって提供される描画機能<xref:System.Windows.Forms.Control?displayProperty=nameWithType>します。  
   
-- 重要な要素、[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]グラフィックス ライブラリ。  
+- GDI グラフィックス ライブラリの重要な要素です。  
   
 - 描画領域のジオメトリ。  
   
@@ -61,7 +61,7 @@ public System.Drawing.Graphics Graphics {get;}
 }  
 ```  
   
- <xref:System.Drawing.Graphics> 説明」の説明に従って、描画機能をカプセル化するマネージ クラスは、[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]このトピックで後述します。 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>のインスタンスである、<xref:System.Drawing.Rectangle>構造体であり、コントロールの描画に使用できる使用可能な領域を定義します。 コントロールの開発者が計算できる、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>を使用して、 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> geometry このトピックの後半の説明」の説明に従って、コントロールのプロパティ。  
+ <xref:System.Drawing.Graphics> このトピックの「GDI の説明」の説明に従って、描画機能をカプセル化するマネージ クラスは、します。 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>のインスタンスである、<xref:System.Drawing.Rectangle>構造体であり、コントロールの描画に使用できる使用可能な領域を定義します。 コントロールの開発者が計算できる、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>を使用して、 <xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A> geometry このトピックの後半の説明」の説明に従って、コントロールのプロパティ。  
   
  コントロールは、オーバーライドすることでレンダリング ロジックを提供する必要があります、<xref:System.Windows.Forms.Control.OnPaint%2A>メソッドから継承した<xref:System.Windows.Forms.Control>します。 <xref:System.Windows.Forms.Control.OnPaint%2A> グラフィックス オブジェクトと経由描画する四角形へのアクセスを取得、<xref:System.Drawing.Design.PaintValueEventArgs.Graphics%2A>と<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>のプロパティ、<xref:System.Windows.Forms.PaintEventArgs>にインスタンスが渡されます。  
   
@@ -93,7 +93,7 @@ protected virtual void OnPaintBackground(PaintEventArgs pevent);
  中に<xref:System.Windows.Forms.Control.OnPaintBackground%2A>、イベントのような命名規則がありと同じ引数を受け取り、`OnPaint`メソッド、 <xref:System.Windows.Forms.Control.OnPaintBackground%2A> true イベント メソッドではありません。 ない`PaintBackground`イベントと<xref:System.Windows.Forms.Control.OnPaintBackground%2A>イベント デリゲートは呼び出されません。 オーバーライドする場合、<xref:System.Windows.Forms.Control.OnPaintBackground%2A>メソッドでは、派生クラスに呼び出す必要はありません、<xref:System.Windows.Forms.Control.OnPaintBackground%2A>基底クラスのメソッド。  
   
 ## <a name="gdi-basics"></a>GDI + の基本  
- <xref:System.Drawing.Graphics>クラスには、円、三角形、弧、および楕円などのさまざまな図形を描画するためのメソッドとテキストを表示するためのメソッドが用意されています。 <xref:System.Drawing?displayProperty=nameWithType>名前空間とそのサブ図形 (円、四角形、弧、および他のユーザー)、色、フォント、ブラシなどのグラフィックス要素をカプセル化するクラスが含まれています。 詳細については[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]を参照してください[マネージ グラフィックス クラスを使用して](../advanced/using-managed-graphics-classes.md)します。 Essentials[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]も記載されて、[方法。進行状況を示す Windows フォーム コントロールを作成する](how-to-create-a-windows-forms-control-that-shows-progress.md)します。  
+ <xref:System.Drawing.Graphics>クラスには、円、三角形、弧、および楕円などのさまざまな図形を描画するためのメソッドとテキストを表示するためのメソッドが用意されています。 <xref:System.Drawing?displayProperty=nameWithType>名前空間とそのサブ図形 (円、四角形、弧、および他のユーザー)、色、フォント、ブラシなどのグラフィックス要素をカプセル化するクラスが含まれています。 GDI の詳細については、次を参照してください。[マネージ グラフィックス クラスを使用して](../advanced/using-managed-graphics-classes.md)します。 GDI の要点が記載されても、[方法。進行状況を示す Windows フォーム コントロールを作成する](how-to-create-a-windows-forms-control-that-shows-progress.md)します。  
   
 ## <a name="geometry-of-the-drawing-region"></a>描画領域のジオメトリ  
  <xref:System.Windows.Forms.Control.ClientRectangle%2A>コントロールのプロパティは、ユーザーの画面で、コントロールで使用できる四角形の領域を指定します中に、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>プロパティの<xref:System.Windows.Forms.PaintEventArgs>が実際に描画される領域を指定します。 (で描画を行うことに注意してください、<xref:System.Windows.Forms.Control.Paint>を受け取るイベント メソッドを<xref:System.Windows.Forms.PaintEventArgs>インスタンスの引数として)。 コントロールは、コントロールの表示の変更の場合と小さいセクションと同様、使用可能な領域では、一部だけを描画する必要があります。 これらの状況では、コントロールの開発者が実際の四角形を描画しに渡さを計算する必要があります<xref:System.Windows.Forms.Control.Invalidate%2A>します。 オーバー ロードされたバージョンの<xref:System.Windows.Forms.Control.Invalidate%2A>を受け取る、<xref:System.Drawing.Rectangle>または<xref:System.Drawing.Region>を引数としてその引数を使用して生成する、<xref:System.Windows.Forms.PaintEventArgs.ClipRectangle%2A>プロパティの<xref:System.Windows.Forms.PaintEventArgs>します。  

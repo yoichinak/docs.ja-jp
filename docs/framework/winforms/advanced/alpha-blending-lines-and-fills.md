@@ -11,15 +11,15 @@ helpviewer_keywords:
 - alpha blending [Windows Forms], using with fills
 - shapes [Windows Forms], adding transparency
 ms.assetid: 5440f48c-3ac9-44c3-b170-c1c110bdbab8
-ms.openlocfilehash: 7a8286fb741effaf668b87e90da04f79d1490de2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66061341ee6539e2172c537a0b2a6ec9ff87565c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61960941"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506113"
 ---
 # <a name="alpha-blending-lines-and-fills"></a>アルファ ブレンドの直線と塗りつぶし
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]色はそれぞれ 8 ビットでアルファ、赤、緑、および青の 32 ビット値。 アルファ値を色の透明度を示します: 範囲を色が背景色とブレンドされます。 アルファ値の範囲は 0 ~ 255、0 が完全に透明色を表します、255 は、完全に不透明な色を表します。  
+GDI + では、色は、アルファ、赤、緑、および青の 8 ビットごとの 32 ビット値です。 アルファ値を色の透明度を示します: 範囲を色が背景色とブレンドされます。 アルファ値の範囲は 0 ~ 255、0 が完全に透明色を表します、255 は、完全に不透明な色を表します。  
   
  アルファ ブレンドは、ソースとバック グラウンドのカラー データのピクセルを描画します。 指定したソースの色の 3 つのコンポーネント (赤、緑、青) は、次の数式に従って背景色の対応する要素とブレンドされます。  
   

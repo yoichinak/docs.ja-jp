@@ -9,15 +9,15 @@ helpviewer_keywords:
 - images [Windows Forms], working with
 - examples [Windows Forms], metafiles
 ms.assetid: a626d701-bd99-4fd8-b92f-7b8f794e042b
-ms.openlocfilehash: 61d534f8299c920f656abe4280cc3ea5e609c0b2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8c778018a2d78fbec67a3bf41b5cbaa8e4bfb606
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62011919"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504860"
 ---
 # <a name="working-with-images-bitmaps-icons-and-metafiles"></a>イメージ、ビットマップ、アイコン、およびメタファイルの操作
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] は、ラスター イメージを操作するための `Bitmap` クラスと、ベクター イメージを操作するための `Metafile` クラスを提供します。 `Bitmap` クラスおよび `Metafile` クラスは、どちらも `Image` クラスから継承されます。  
+GDI + は、提供、`Bitmap`ラスター イメージを操作するためのクラスと`Metafile`ベクター イメージを操作するためのクラス。 `Bitmap` クラスおよび `Metafile` クラスは、どちらも `Image` クラスから継承されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: 既存のビットマップを画面に描画します。](how-to-draw-an-existing-bitmap-to-the-screen.md)  

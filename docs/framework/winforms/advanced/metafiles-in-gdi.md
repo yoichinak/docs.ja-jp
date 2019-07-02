@@ -9,18 +9,18 @@ helpviewer_keywords:
 - GDI+, metafiles
 - metafiles
 ms.assetid: 51da872c-c783-440f-8bf6-1e580a966c31
-ms.openlocfilehash: f46c24b699aa49db2bc4b8467ce96a125602acec
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: df54289722cf12bad840722c6eafdaa43279a5dc
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645741"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504593"
 ---
 # <a name="metafiles-in-gdi"></a>GDI+ でのメタファイル
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 提供、<xref:System.Drawing.Imaging.Metafile>クラスに記録し、メタファイルを表示できます。 ベクター イメージとも呼ばれる、メタファイルは、一連の描画コマンドと設定として格納されているイメージです。 コマンドおよび設定に記録する<xref:System.Drawing.Imaging.Metafile>オブジェクトをメモリに格納されているか、ファイルまたはストリームに保存します。  
+GDI + は、提供、<xref:System.Drawing.Imaging.Metafile>クラスに記録し、メタファイルを表示できます。 ベクター イメージとも呼ばれる、メタファイルは、一連の描画コマンドと設定として格納されているイメージです。 コマンドおよび設定に記録する<xref:System.Drawing.Imaging.Metafile>オブジェクトをメモリに格納されているか、ファイルまたはストリームに保存します。  
   
 ## <a name="metafile-formats"></a>メタファイル形式  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 次の形式で格納されているメタファイルを表示できます。  
+ GDI + は、次の形式で格納されているメタファイルを表示できます。  
   
 - Windows メタファイル (WMF)  
   
@@ -28,9 +28,9 @@ ms.locfileid: "64645741"
   
 - EMF +  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] WMF の形式ではなく、EMF、EMF + 形式には、メタファイルを記録できます。  
+ GDI + を記録できますメタファイル WMF 形式ではなく、EMF、EMF + 形式にします。  
   
- EMF + は、拡張機能により、EMF[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]レコードが格納されます。 EMF + 形式の 2 つのバリエーションがあります。EMF + のみと EMF + Dual します。 メタファイル EMF + だけしか[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]レコード。 このようなメタファイルで表示できる[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]がなく、[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]します。 EMF + Dual メタファイルを含む[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]と[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]レコード。 各[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]EMF + Dual レコード メタファイルとペアになって、代替[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]レコード。 このようなメタファイルで表示できる[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]または[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]します。  
+ EMF + GDI + レコードを格納することができる EMF の拡張機能です。 EMF + 形式の 2 つのバリエーションがあります。EMF + のみと EMF + Dual します。 メタファイル EMF + だけでは、GDI + レコードだけが含まれます。 GDI + では、GDI ではなく、このようなメタファイルを表示できます。 EMF + Dual メタファイルには、GDI + と GDI レコードが含まれます。 EMF + Dual メタファイルに各の GDI + レコードは、代替 GDI レコードと組み合わせて使用します。 このようなメタファイルは、GDI または GDI + によって表示できます。  
   
  次の例では、ファイルとして保存された以前メタファイルを表示します。 左上隅にあるとメタファイルが表示されます (100, 100)。  
   

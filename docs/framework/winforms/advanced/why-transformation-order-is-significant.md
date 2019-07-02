@@ -7,18 +7,18 @@ dev_langs:
 helpviewer_keywords:
 - transformations [Windows Forms], order significance
 ms.assetid: 37d5f9dc-a5cf-4475-aa5d-34d714e808a9
-ms.openlocfilehash: 4a65e588984241affea3083810b4901266480ea4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 08927ebaa460e19e558dce22f39c13c31f0e49d0
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61747460"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504906"
 ---
 # <a name="why-transformation-order-is-significant"></a>変換順序が重要となる理由
 1 つ<xref:System.Drawing.Drawing2D.Matrix>オブジェクトは、1 つの変換または変換のシーケンスを格納できます。 後者を複合変換と呼びます。 複合変換の行列は、個々 の変換行列を掛け合わせることによって取得されます。  
   
 ## <a name="composite-transform-examples"></a>複合変換の例  
- 複合変換の場合は、個々 の変換の順序が重要です。 たとえば、最初回転、拡大縮小、しする変換する場合、最初に平行移動、回転し、スケールよりも、異なる結果が取得します。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、複合変換は、左から右に構築されます。 S、R、および T は、スケール、回転、および平行移動行列をそれぞれが場合、製品 SRT (順序) で複合変換の行列を最初にスケーリングが回転し、変換します。 製品によって生成されたマトリックス SRT は、製品 TRS によって生成されたマトリックスと異なります。  
+ 複合変換の場合は、個々 の変換の順序が重要です。 たとえば、最初回転、拡大縮小、しする変換する場合、最初に平行移動、回転し、スケールよりも、異なる結果が取得します。 GDI + で複合変換が左から右に構築されます。 S、R、および T は、スケール、回転、および平行移動行列をそれぞれが場合、製品 SRT (順序) で複合変換の行列を最初にスケーリングが回転し、変換します。 製品によって生成されたマトリックス SRT は、製品 TRS によって生成されたマトリックスと異なります。  
   
  順序は重要な理由の 1 つは、座標系の原点を基準の回転とスケーリングのような変換が行われることです。 原点を中心とするオブジェクトをスケーリングすると、原点から離れているオブジェクトのスケールよりも異なる結果が生成されます。 同様に、原点を中心とするオブジェクトの回転には、配信元から離れているオブジェクトを回転するよりも異なる結果が生成されます。  
   

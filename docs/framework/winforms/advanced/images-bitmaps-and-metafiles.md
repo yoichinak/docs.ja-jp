@@ -7,12 +7,12 @@ helpviewer_keywords:
 - images [Windows Forms], about images
 - Windows Forms, images
 ms.assetid: 7152b45b-a55c-49bc-8c78-ae002a844f71
-ms.openlocfilehash: 2ce19642b37946db7a172e61004688059dba61db
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5f50d21f4793efb497eb5b030d96a7dc3ab54a04
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62003939"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505701"
 ---
 # <a name="images-bitmaps-and-metafiles"></a>イメージ、ビットマップ、およびメタファイル
 `Image` クラスはラスター イメージ (ビットマップ) およびベクター イメージ (メタファイル) を操作するためのメソッドを提供する抽象基本クラスです。 `Bitmap` クラスおよび <xref:System.Drawing.Imaging.Metafile> クラスは、どちらも `Image` クラスから継承されます。 `Bitmap` クラスは、ラスター イメージの読み込み、保存、および操作のための追加のメソッドを提供することで、`Image` クラスの機能を展開します。 <xref:System.Drawing.Imaging.Metafile> クラスは、ベクター イメージの記録および検証のための追加のメソッドを提供することで、`Image` クラスの機能を展開します。  
@@ -22,7 +22,7 @@ ms.locfileid: "62003939"
  さまざまなイメージ形式について説明します。  
   
  [GDI+ でのメタファイル](metafiles-in-gdi.md)  
- メタファイルの [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] のサポートについて説明します。  
+ GDI + メタファイルのサポートについて説明します。  
   
  [GDI+ でのイメージの描画、配置、およびクローン作成](drawing-positioning-and-cloning-images-in-gdi.md)  
  マネージド コードを使用して、ベクター イメージとラスター イメージを描画するためのメソッドについて説明します。  

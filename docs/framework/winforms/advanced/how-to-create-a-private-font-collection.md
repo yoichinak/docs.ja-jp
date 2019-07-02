@@ -8,12 +8,12 @@ helpviewer_keywords:
 - private font collections [Windows Forms], creating
 - fonts [Windows Forms], creating private collections
 ms.assetid: 6533d5e5-a8dc-4b76-9fc4-3bf75c8b9212
-ms.openlocfilehash: 1aa3030d9daea57bb9b8970baa78f8117a07bd1a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 0bb7293a5423004a13cf98b79bba0a6c411a7c97
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64624203"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505521"
 ---
 # <a name="how-to-create-a-private-font-collection"></a>方法: プライベート フォント コレクションを作成する
 <xref:System.Drawing.Text.PrivateFontCollection>クラスから継承、<xref:System.Drawing.Text.FontCollection>抽象基本クラス。 使用することができます、<xref:System.Drawing.Text.PrivateFontCollection>具体的には、アプリケーションのフォントのセットを保持するオブジェクト。 プライベート フォント コレクションには、インストールされているシステム フォントだけでなく、コンピューターにインストールされていないフォントを含めることができます。 プライベート フォント コレクションには、フォント ファイルを追加するには、呼び出し、<xref:System.Drawing.Text.PrivateFontCollection.AddFontFile%2A>のメソッドを<xref:System.Drawing.Text.PrivateFontCollection>オブジェクト。  
@@ -41,9 +41,9 @@ ms.locfileid: "64624203"
   
  ![さまざまなフォントでテキストを示すスクリーン ショット。](./media/how-to-create-a-private-font-collection/various-fonts-text-output.png)  
   
- 次のコード例では、プライベート フォント コレクションに追加された) Arial.tff は、Arial 標準スタイルのフォント ファイルです。 ただし、プログラムの出力が Arial フォント ファミリの標準以外の複数の使用可能なスタイルを表示することに注意してください。 だ[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]標準スタイルから太字、斜体、および太字斜体スタイルをシミュレートすることができます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 下線や標準のスタイルから取り消し線の生成もできます。  
+ 次のコード例では、プライベート フォント コレクションに追加された) Arial.tff は、Arial 標準スタイルのフォント ファイルです。 ただし、プログラムの出力が Arial フォント ファミリの標準以外の複数の使用可能なスタイルを表示することに注意してください。 GDI + は標準のスタイルから太字、斜体、および太字斜体スタイルでシミュレートできるためです。 GDI + も生成できる下線や標準のスタイルから取り消し線。  
   
- 同様に、[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]太字または斜体のスタイルのいずれかから太字斜体のスタイルをシミュレートすることができます。 プログラムの出力が TimesBd.tff (Times New Roman、太字) が唯一にもかかわらず太字斜体スタイルが回ファミリに使用できることを示しています、コレクション内の回ファイル。  
+ 同様に、GDI + をシミュレートできます、太字または斜体のスタイルのいずれかから太字斜体のスタイル。 プログラムの出力が TimesBd.tff (Times New Roman、太字) が唯一にもかかわらず太字斜体スタイルが回ファミリに使用できることを示しています、コレクション内の回ファイル。  
   
  [!code-csharp[System.Drawing.FontsAndText#51](~/samples/snippets/csharp/VS_Snippets_Winforms/System.Drawing.FontsAndText/CS/Class1.cs#51)]
  [!code-vb[System.Drawing.FontsAndText#51](~/samples/snippets/visualbasic/VS_Snippets_Winforms/System.Drawing.FontsAndText/VB/Class1.vb#51)]  

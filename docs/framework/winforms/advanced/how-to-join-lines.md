@@ -14,15 +14,15 @@ helpviewer_keywords:
 - lines [Windows Forms], joining
 - graphics [Windows Forms], joining lines
 ms.assetid: 9fc480c2-3c75-4fd1-8ab5-296a99e820e2
-ms.openlocfilehash: 445d7f12f57137c6b06a074eeaf0574eb027a723
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 362ce0c701d6e5f640fecd143a60cf471045629c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61723304"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505866"
 ---
 # <a name="how-to-join-lines"></a>方法: 直線を接合する
-直線の接合部は、2 つの行の端を満たすまたはオーバー ラップによって構成される一般的な領域です。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 次の 3 つの行の結合スタイルを提供します。 マイタ、傾斜、およびラウンドします。 直線の接合スタイルのプロパティである、<xref:System.Drawing.Pen>クラス。 直線の接合スタイルを指定すると、<xref:System.Drawing.Pen>オブジェクトのいずれかで接続されているすべての行を結合スタイルが適用されること<xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクトがそのペンを使用して描画します。  
+直線の接合部は、2 つの行の端を満たすまたはオーバー ラップによって構成される一般的な領域です。 GDI + 3 つの行の結合スタイルを提供しています: マイタ、傾斜、および丸めます。 直線の接合スタイルのプロパティである、<xref:System.Drawing.Pen>クラス。 直線の接合スタイルを指定すると、<xref:System.Drawing.Pen>オブジェクトのいずれかで接続されているすべての行を結合スタイルが適用されること<xref:System.Drawing.Drawing2D.GraphicsPath>オブジェクトがそのペンを使用して描画します。  
   
  次の図は、直線のベベル結合の結果を示します。  
   

@@ -9,15 +9,15 @@ helpviewer_keywords:
 - coordinate systems
 - graphics [Windows Forms], vector graphics
 ms.assetid: 0195df81-66be-452d-bb53-5a582ebfdc09
-ms.openlocfilehash: 9c854d8742e50a7136455da72a239623fb0c0d91
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 64bec47a186b08298a49c6f188795d1b51d234eb
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64639746"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505242"
 ---
 # <a name="vector-graphics-overview"></a>ベクター グラフィックスの概要
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 座標系には、線、四角形、およびその他の図形を描画します。 さまざまな座標系から選択できますが、既定の座標系では、左上隅の原点が、x 軸が右と下向きの y 軸を参照します。 既定の座標系内のメジャーの単位は、ピクセルです。  
+GDI +、座標系の線、四角形、およびその他の図形を描画します。 さまざまな座標系から選択できますが、既定の座標系では、左上隅の原点が、x 軸が右と下向きの y 軸を参照します。 既定の座標系内のメジャーの単位は、ピクセルです。  
   
 ## <a name="the-building-blocks-of-gdi"></a>GDI + の構成要素  
  ![ベクター グラフィックス](./media/aboutgdip02-art01.gif "AboutGdip02_Art01")  
@@ -26,11 +26,11 @@ ms.locfileid: "64639746"
   
  ![ベクター グラフィックス](./media/aboutgdip02-art02.gif "AboutGdip02_Art02")  
   
- 使用すると[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]線、四角形、または曲線を描画するには、描画される項目に関する特定のキー情報を提供します。 たとえば、2 つのポイントを提供することで、行を指定することができ、ポイントを高さ、幅を提供し、四角形を指定することができます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] ディスプレイ ドライバー ソフトウェアは、線、四角形、または曲線の表示にするピクセルをオンにするかを判断すると連携して動作します。 次の図は、点 (12, 8) (4, 2) のポイントから行を表示するのになっている (ピクセル) を示します。  
+ を使用する GDI + 線、四角形、または曲線を描画するときに、描画される項目に関する特定のキー情報を提供します。 たとえば、2 つのポイントを提供することで、行を指定することができ、ポイントを高さ、幅を提供し、四角形を指定することができます。 GDI + ディスプレイ ドライバー ソフトウェアは、線、四角形、または曲線の表示にするピクセルをオンにするかを判断すると連携して動作します。 次の図は、点 (12, 8) (4, 2) のポイントから行を表示するのになっている (ピクセル) を示します。  
   
  ![ベクター グラフィックス](./media/aboutgdip02-art03.gif "AboutGdip02_Art03")  
   
- 時間の経過と共に一部の基本的な構成要素が最も便利な 2 次元の画像を作成するために実績のあります。 これらのビルディング ブロックでサポートされている[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]は、次の一覧で指定します。  
+ 時間の経過と共に一部の基本的な構成要素が最も便利な 2 次元の画像を作成するために実績のあります。 GDI + ですべてサポートされていますが、これらのビルディング ブロックは、次の一覧で与えられます。  
   
 - 線  
   
@@ -47,7 +47,7 @@ ms.locfileid: "64639746"
 - ベジエ スプライン  
   
 ## <a name="methods-for-drawing-with-a-graphics-object"></a>グラフィックス オブジェクトを使用した描画メソッド  
- <xref:System.Drawing.Graphics>クラス[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]前の一覧に項目を描画するための次のメソッドを提供します: <xref:System.Drawing.Graphics.DrawLine%2A>、 <xref:System.Drawing.Graphics.DrawRectangle%2A>、 <xref:System.Drawing.Graphics.DrawEllipse%2A>、 <xref:System.Drawing.Graphics.DrawPolygon%2A>、 <xref:System.Drawing.Graphics.DrawArc%2A>、 <xref:System.Drawing.Graphics.DrawCurve%2A> (のカーディナル スプライン) と<xref:System.Drawing.Graphics.DrawBezier%2A>. これらの各メソッドはオーバー ロードされます。つまり、各メソッドは、さまざまなパラメーター リストをサポートします。 例では、1 つのバリエーション、<xref:System.Drawing.Graphics.DrawLine%2A>メソッドは受信、<xref:System.Drawing.Pen>オブジェクトと別のバリエーションの中に、4 つの整数、<xref:System.Drawing.Graphics.DrawLine%2A>メソッドは受信、<xref:System.Drawing.Pen>オブジェクトと 2 つ<xref:System.Drawing.Point>オブジェクト。  
+ <xref:System.Drawing.Graphics> GDI + でクラスには前の一覧に項目を描画するための次のメソッド: <xref:System.Drawing.Graphics.DrawLine%2A>、 <xref:System.Drawing.Graphics.DrawRectangle%2A>、 <xref:System.Drawing.Graphics.DrawEllipse%2A>、 <xref:System.Drawing.Graphics.DrawPolygon%2A>、 <xref:System.Drawing.Graphics.DrawArc%2A>、 <xref:System.Drawing.Graphics.DrawCurve%2A> (のカーディナル スプライン)、および<xref:System.Drawing.Graphics.DrawBezier%2A>. これらの各メソッドはオーバー ロードされます。つまり、各メソッドは、さまざまなパラメーター リストをサポートします。 例では、1 つのバリエーション、<xref:System.Drawing.Graphics.DrawLine%2A>メソッドは受信、<xref:System.Drawing.Pen>オブジェクトと別のバリエーションの中に、4 つの整数、<xref:System.Drawing.Graphics.DrawLine%2A>メソッドは受信、<xref:System.Drawing.Pen>オブジェクトと 2 つ<xref:System.Drawing.Point>オブジェクト。  
   
  線、四角形、およびベジエ スプラインを描画するためのメソッドがある 1 回の呼び出しで複数の項目を描画する複数形のコンパニオン メソッド: <xref:System.Drawing.Graphics.DrawLines%2A>、 <xref:System.Drawing.Graphics.DrawRectangles%2A>、および<xref:System.Drawing.Graphics.DrawBeziers%2A>します。 また、<xref:System.Drawing.Graphics.DrawCurve%2A>メソッドには、コンパニオン メソッド<xref:System.Drawing.Graphics.DrawClosedCurve%2A>終了、開始する曲線の終了点を接続することで曲線をポイントします。  
   

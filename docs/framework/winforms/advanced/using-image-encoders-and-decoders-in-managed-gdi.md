@@ -5,17 +5,17 @@ helpviewer_keywords:
 - image encoders [Windows Forms], using
 - image decoders [Windows Forms], using
 ms.assetid: 0e838ea1-4e7e-4334-b882-ab25df607b8b
-ms.openlocfilehash: e56bc20eb55d694d19b25d9e94e5c9d9e3952628
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8cd66f3ce3da462867da9e23c38b3f6d877c058c
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666444"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505094"
 ---
 # <a name="using-image-encoders-and-decoders-in-managed-gdi"></a>マネージド GDI+ でのイメージ エンコーダーおよびイメージ デコーダーの使用
-<xref:System.Drawing>名前空間には、<xref:System.Drawing.Image>と<xref:System.Drawing.Bitmap>クラスを格納すると、画像を操作します。 イメージ エンコーダーを使用して[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、メモリからディスク イメージを記述することができます。 イメージのデコーダーを使用して[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、ディスクからイメージをメモリに読み込むことができます。 エンコーダーでデータを変換する、<xref:System.Drawing.Image>または<xref:System.Drawing.Bitmap>オブジェクトが指定されたディスク ファイルの形式に変換します。 デコーダーがディスク ファイルで必要な形式にデータを変換、<xref:System.Drawing.Image>と<xref:System.Drawing.Bitmap>オブジェクト。  
+<xref:System.Drawing>名前空間には、<xref:System.Drawing.Image>と<xref:System.Drawing.Bitmap>クラスを格納すると、画像を操作します。 GDI + でのイメージ エンコーダーを使用して、メモリからイメージをディスクに記述できます。 GDI + でのイメージのデコーダーを使用してイメージをメモリにディスクから読み込むことができます。 エンコーダーでデータを変換する、<xref:System.Drawing.Image>または<xref:System.Drawing.Bitmap>オブジェクトが指定されたディスク ファイルの形式に変換します。 デコーダーがディスク ファイルで必要な形式にデータを変換、<xref:System.Drawing.Image>と<xref:System.Drawing.Bitmap>オブジェクト。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 組み込みのエンコーダーとデコーダー ファイルの種類をサポートするには。  
+ GDI + 組み込みエンコーダーとデコーダー ファイルの種類をサポートするには。  
   
 - BMP  
   
@@ -27,7 +27,7 @@ ms.locfileid: "64666444"
   
 - TIFF  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 次のファイルの種類をサポートする組み込みのデコーダーがあります。  
+ GDI + ファイルの種類をサポートする組み込みのデコーダーがあります。  
   
 - WMF  
   

@@ -13,15 +13,15 @@ helpviewer_keywords:
 - gradient brushes
 - brushes [Windows Forms], gradient
 ms.assetid: e863e2a7-0294-4130-99b6-f1ea3201e7cd
-ms.openlocfilehash: 683b5966f993ac3a69c8bf7c1233b6df3d65e19a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad3a4af2474ace61bbf35ea1357a2a6037af039a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779476"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506238"
 ---
 # <a name="brushes-and-filled-shapes-in-gdi"></a>GDI+ でのブラシと塗りつぶされた図形
-四角形や楕円など、閉じた形状は、概要を説明し、内部で構成されます。 アウトラインの描画に使用するペンとブラシを使用して、内部が塗りつぶされます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 閉じた図形の内側を塗りつぶすときのいくつかのブラシのクラスを提供します。 <xref:System.Drawing.SolidBrush>、 <xref:System.Drawing.Drawing2D.HatchBrush>、 <xref:System.Drawing.TextureBrush>、 <xref:System.Drawing.Drawing2D.LinearGradientBrush>、および<xref:System.Drawing.Drawing2D.PathGradientBrush>します。 継承するすべてのクラス、<xref:System.Drawing.Brush>クラス。 次の図は、ソリッド ブラシで塗りつぶした四角形に見えるハッチ ブラシで塗りつぶした楕円を示しています。  
+四角形や楕円など、閉じた形状は、概要を説明し、内部で構成されます。 アウトラインの描画に使用するペンとブラシを使用して、内部が塗りつぶされます。 GDI + の閉じた図形の内側を塗りつぶすときのいくつかのブラシのクラスを提供します。 <xref:System.Drawing.SolidBrush>、 <xref:System.Drawing.Drawing2D.HatchBrush>、 <xref:System.Drawing.TextureBrush>、 <xref:System.Drawing.Drawing2D.LinearGradientBrush>、および<xref:System.Drawing.Drawing2D.PathGradientBrush>します。 継承するすべてのクラス、<xref:System.Drawing.Brush>クラス。 次の図は、ソリッド ブラシで塗りつぶした四角形に見えるハッチ ブラシで塗りつぶした楕円を示しています。  
   
  ![塗りつぶされた図形](./media/aboutgdip02-art17.gif "Aboutgdip02_art17")  
   
@@ -40,7 +40,7 @@ ms.locfileid: "61779476"
  [!code-csharp[LinesCurvesAndShapes#122](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#122)]
  [!code-vb[LinesCurvesAndShapes#122](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#122)]  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 50 を超えるハッチ スタイルを提供します。次の図に示すように 3 つのスタイルが<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>、 <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>、および<xref:System.Drawing.Drawing2D.HatchStyle.Cross>します。  
+ GDI + は 50 を超えるハッチ スタイルを提供します。次の図に示すように 3 つのスタイルが<xref:System.Drawing.Drawing2D.HatchStyle.Horizontal>、 <xref:System.Drawing.Drawing2D.HatchStyle.ForwardDiagonal>、および<xref:System.Drawing.Drawing2D.HatchStyle.Cross>します。  
   
  ![塗りつぶされた図形](./media/aboutgdip02-art18.gif "Aboutgdip02_art18")  
   
@@ -59,7 +59,7 @@ ms.locfileid: "61779476"
  ![図形を塗り分け](./media/aboutgdip02-art20.gif "AboutGdip02_Art20")  
   
 ## <a name="gradient-brushes"></a>グラデーション ブラシ  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] グラデーション ブラシの 2 種類があります。 線形とパス。 線状グラデーション ブラシを使用して、縦、横、図形の間で移動すると、段階的にまたは斜めに変更を色で図形を塗りつぶすことができます。 次のコード例では、楕円の左端から右端に移動すると、青から緑に変更する水平方向のグラデーション ブラシで楕円を塗りつぶす方法を示します。  
+ GDI + 2 つの種類のグラデーション ブラシを提供します。 線形とパス。 線状グラデーション ブラシを使用して、縦、横、図形の間で移動すると、段階的にまたは斜めに変更を色で図形を塗りつぶすことができます。 次のコード例では、楕円の左端から右端に移動すると、青から緑に変更する水平方向のグラデーション ブラシで楕円を塗りつぶす方法を示します。  
   
  [!code-csharp[LinesCurvesAndShapes#124](~/samples/snippets/csharp/VS_Snippets_Winforms/LinesCurvesAndShapes/CS/Class1.cs#124)]
  [!code-vb[LinesCurvesAndShapes#124](~/samples/snippets/visualbasic/VS_Snippets_Winforms/LinesCurvesAndShapes/VB/Class1.vb#124)]  

@@ -5,24 +5,24 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 5632d74a-ff53-4ea7-9fe7-4a148eeb1c68
-ms.openlocfilehash: b41b95ba06f031dc45c0267432d0d6afb7f3a7d9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 1af8863dd22b5ebb3a2c87009b9c51d5ec25bb89
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64645686"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504846"
 ---
 # <a name="filtering-with-dataview-linq-to-dataset"></a>DataView によるフィルター処理 (LINQ to DataSet)
 特定の条件に基づいてデータをフィルター処理し、UI コントロールを介してそのデータをクライアントに提供する機能は、データ バインドの重要な特徴です。 <xref:System.Data.DataView> は、データにフィルターを適用し、特定のフィルター条件を満たすデータ行のサブセットを返す方法をいくつか提供します。 フィルター処理の機能だけでなく、文字列ベース<xref:System.Data.DataView>を使用する機能もあります。[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]フィルター条件の式。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] 式を使用する文字列ベースのフィルターよりも、はるかに複雑で強力なフィルター処理します。  
   
  <xref:System.Data.DataView> を使用してデータをフィルター処理する方法は 2 つあります。  
   
-- Where 句を含む <xref:System.Data.DataView> クエリから [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を作成します。  
+- 作成、 <xref:System.Data.DataView> where to DataSet クエリの LINQ の句。  
   
 - <xref:System.Data.DataView> の既存の文字列ベースのフィルター機能を使用します。  
   
 ## <a name="creating-dataview-from-a-query-with-filtering-information"></a>フィルター情報を含むクエリによる DataView の作成  
- <xref:System.Data.DataView> オブジェクトは [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] クエリから作成できます。 このクエリに `Where` 句が含まれている場合、<xref:System.Data.DataView> はクエリのフィルター情報を使用して作成されます。 `Where` 句内の式は、<xref:System.Data.DataView> に含めるデータ行の決定に使用され、これがフィルターの基礎となります。  
+ A<xref:System.Data.DataView>オブジェクトは、データセット クエリを LINQ から作成できます。 このクエリに `Where` 句が含まれている場合、<xref:System.Data.DataView> はクエリのフィルター情報を使用して作成されます。 `Where` 句内の式は、<xref:System.Data.DataView> に含めるデータ行の決定に使用され、これがフィルターの基礎となります。  
   
  式ベースのフィルターは、文字列ベースのフィルターよりもはるかに強力で複雑なフィルター機能を提供します。 文字列ベースのフィルターと式ベースのフィルターは、相互に排他的です。 <xref:System.Data.DataView.RowFilter%2A> をクエリから作成した後に文字列ベースの <xref:System.Data.DataView> を設定した場合、クエリから推論される式ベースのフィルターはクリアされます。  
   
@@ -59,14 +59,14 @@ ms.locfileid: "64645686"
  [!code-vb[DP DataView Samples#SoundEx](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#soundex)]  
   
 ## <a name="using-the-rowfilter-property"></a>RowFilter プロパティの使用  
- <xref:System.Data.DataView> の既存の文字列ベースのフィルター機能は [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] のコンテキストで動作します。 文字列ベースの詳細については<xref:System.Data.DataView.RowFilter%2A>フィルター処理を参照してください[並べ替えとフィルター データ](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)します。  
+ 既存の文字列に基づくフィルター処理の機能の<xref:System.Data.DataView>LINQ to DataSet のコンテキストで動作します。 文字列ベースの詳細については<xref:System.Data.DataView.RowFilter%2A>フィルター処理を参照してください[並べ替えとフィルター データ](../../../../docs/framework/data/adonet/dataset-datatable-dataview/sorting-and-filtering-data.md)します。  
   
  次の例では、Contact テーブルから <xref:System.Data.DataView> を作成し、<xref:System.Data.DataView.RowFilter%2A> プロパティを設定して、連絡先の姓が "Zhu" である行を返します。  
   
  [!code-csharp[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvrowfilter)]
  [!code-vb[DP DataView Samples#LDVRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvrowfilter)]  
   
- <xref:System.Data.DataView> を <xref:System.Data.DataTable> クエリまたは [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] クエリから作成した後、<xref:System.Data.DataView.RowFilter%2A> プロパティを使用して、列値に基づいた行のサブセットを指定できます。 文字列ベースのフィルターと式ベースのフィルターは、相互に排他的です。 設定、<xref:System.Data.DataView.RowFilter%2A>プロパティから推論されるフィルター式がクリアされます、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ、およびフィルター式をリセットすることはできません。  
+ 後に、<xref:System.Data.DataView>から作成された、<xref:System.Data.DataTable>または LINQ to DataSet のクエリで使用できます、<xref:System.Data.DataView.RowFilter%2A>列の値に基づいて行のサブセットを指定するプロパティ。 文字列ベースのフィルターと式ベースのフィルターは、相互に排他的です。 設定、<xref:System.Data.DataView.RowFilter%2A>プロパティは、データセット クエリを LINQ から推論されるフィルター式をオフにし、フィルター式をリセットすることはできません。  
   
  [!code-csharp[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#ldvfromquerywheresetrowfilter)]
  [!code-vb[DP DataView Samples#LDVFromQueryWhereSetRowFilter](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#ldvfromquerywheresetrowfilter)]  

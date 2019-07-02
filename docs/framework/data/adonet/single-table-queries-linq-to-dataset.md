@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 0b74bcf8-3f87-449f-bff7-6bcb0d69d212
-ms.openlocfilehash: 00b0773ba66ad8e0acfdccb37964030a9cacff52
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87a2f6853136b4b3e622968327bde01c9862bfdf
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61664169"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504635"
 ---
 # <a name="single-table-queries-linq-to-dataset"></a>単一テーブルのクエリ (LINQ to DataSet)
 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] 実装するデータ ソースに対してクエリが動作、<xref:System.Collections.Generic.IEnumerable%601>インターフェイスまたは<xref:System.Linq.IQueryable%601>インターフェイス。 <xref:System.Data.DataTable>クラスがいずれかのインターフェイスを実装していませんので、呼び出す必要があります、<xref:System.Data.DataTableExtensions.AsEnumerable%2A>メソッドを使用する場合、<xref:System.Data.DataTable>でソースとして、`From`の句、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)]クエリ。  
@@ -20,7 +20,7 @@ ms.locfileid: "61664169"
  [!code-csharp[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/CS/Program.cs#where1)]  
  [!code-vb[DP LINQ to DataSet Examples#Where1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#where1)] 
   
- ローカル変数のクエリを初期化すると、クエリ式のいずれかから 1 つまたは複数のクエリ演算子を適用することで標準クエリ演算子の 1 つ以上の情報ソースに基づいて機能するのかの大文字と小文字[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、に固有の演算子<xref:System.Data.DataSet>クラス。 前の例のクエリ式には、2 つの標準クエリ演算子、`Where` と `Select` が使用されています。  
+ クエリ式のことで、いずれかから 1 つまたは複数のクエリ演算子を適用することで標準クエリ演算子の 1 つ以上の情報ソースで動作、使用して、LINQ to DataSet、に固有の演算子の場合、ローカル変数のクエリが初期化される<xref:System.Data.DataSet>クラス。 前の例のクエリ式には、2 つの標準クエリ演算子、`Where` と `Select` が使用されています。  
   
  この場合、`Where` 句では、`OnlineOrderFlag` = `true` という条件に基づいてデータを抽出します。 `Select` 演算子は、その演算子に渡された引数をキャプチャする列挙可能なオブジェクトを割り当てて返します。 上の例では、`SalesOrderID`、`OrderDate`、`SalesOrderNumber` の 3 つのプロパティを使って匿名型を作成しています。 この 3 つのプロパティの値は、`SalesOrderID` テーブルの `OrderDate` 列、`SalesOrderNumber` 列、および `SalesOrderHeader` 列の値に設定されます。  
   

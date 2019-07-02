@@ -10,15 +10,15 @@ helpviewer_keywords:
 - drawing [Windows Forms], text
 - Windows Forms, drawing text with GDI
 ms.assetid: 2a19fe5d-2ace-451c-94db-01cb1118ef7b
-ms.openlocfilehash: 6078f2418219dad193d1a49a704334046c33b082
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 3d5b79e82185c044314ff8807b86835ef6a87c45
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582589"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505907"
 ---
 # <a name="how-to-draw-text-with-gdi"></a>方法: GDI を使用してテキストを描画する
-<xref:System.Windows.Forms.TextRenderer.DrawText%2A>メソッドで、<xref:System.Windows.Forms.TextRenderer>アクセスできるクラス、[!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)]フォームまたはコントロールにテキストを描画するための機能です。 [!INCLUDE[ndptecgdi](../../../../includes/ndptecgdi-md.md)] テキストのレンダリング パフォーマンスが向上しより正確なテキストがよりを測定すると通常は[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]します。  
+<xref:System.Windows.Forms.TextRenderer.DrawText%2A>メソッドで、<xref:System.Windows.Forms.TextRenderer>クラス、フォームまたはコントロールにテキストを描画するための GDI 機能にアクセスできます。 通常、GDI のテキストのレンダリングは、パフォーマンスが向上しより GDI + を測定するより正確なテキストを提供します。  
   
 > [!NOTE]
 >  <xref:System.Windows.Forms.TextRenderer.DrawText%2A>のメソッド、<xref:System.Windows.Forms.TextRenderer>クラスが印刷はサポートされていません。 印刷するときは常に使用して、<xref:System.Drawing.Graphics.DrawString%2A>のメソッド、<xref:System.Drawing.Graphics>クラス。  

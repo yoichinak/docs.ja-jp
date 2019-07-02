@@ -6,15 +6,15 @@ helpviewer_keywords:
 - shapes [Windows Forms], filling
 - brushes
 ms.assetid: bf8f7fff-5a90-41e8-9051-494449fb2844
-ms.openlocfilehash: 95112321794359dc282749b94fd9061305b42c23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb8112076bf0b835b558a9f88ae2ff59bdb8476d
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61926946"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505179"
 ---
 # <a name="using-a-brush-to-fill-shapes"></a>ブラシを使用した図形の塗りつぶし
-A [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] <xref:System.Drawing.Brush>オブジェクトは、閉じた形状の内部を塗りつぶすために使用します。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] いくつかの塗りつぶしのスタイルを定義します: 純色、ハッチ パターン、イメージのテクスチャ、および色のグラデーションします。  
+GDI +<xref:System.Drawing.Brush>オブジェクトは、閉じた形状の内部を塗りつぶすために使用します。 GDI + いくつかの塗りつぶしのスタイルを定義します: 純色、ハッチ パターン、イメージのテクスチャ、および色のグラデーションします。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: 純色で図形を塗りつぶす](how-to-fill-a-shape-with-a-solid-color.md)  

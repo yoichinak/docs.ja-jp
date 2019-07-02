@@ -8,15 +8,15 @@ helpviewer_keywords:
 - lines [Windows Forms], drawing
 - curves [Windows Forms], drawing
 ms.assetid: ace6e8d4-4e94-486b-9681-758a6667dc7f
-ms.openlocfilehash: 746d757510776b8d6894c456bb1860a5d68632c1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fef3361ca29ed3e118a54b3e81dd82e48b831bef
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61942975"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505653"
 ---
 # <a name="lines-curves-and-shapes"></a>直線、曲線、および図形
-ベクター グラフィックス部分[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、直線、曲線を描画して、描画し、図形の塗りつぶしに使用されます。  
+GDI + のベクター グラフィックスの部分は、直線、曲線、および描画し、図形の塗りつぶしに使用されます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [ベクター グラフィックスの概要](vector-graphics-overview.md)  

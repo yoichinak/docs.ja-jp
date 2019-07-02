@@ -15,15 +15,15 @@ helpviewer_keywords:
 - coordinate systems
 - transformations [Windows Forms], world
 ms.assetid: c61ff50a-eb1d-4e6c-83cd-f7e9764cfa9f
-ms.openlocfilehash: 765df4bcd3cef83e624ad8b11676696b95f7d035
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 24079f24bdae5fefd785a20dda9b29a190fb4068
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61792368"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505252"
 ---
 # <a name="types-of-coordinate-systems"></a>座標系の種類
-[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] 次の 3 つの座標空間を使用して: 世界、ページ、およびデバイス。 ワールド座標は特定のグラフィック ワールドをモデル化するために使用する座標は、.NET Framework のメソッドに渡す座標です。 ページ座標は、フォームやコントロールなどの描画サーフェイスで使用される座標系を参照してください。 デバイス座標は、画面や紙など、描画されている物理デバイスで使用される座標です。 呼び出しを行うとき`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`、ポイントに渡す、<xref:System.Drawing.Graphics.DrawLine%2A>メソッド:`(0, 0)`と`(160, 80)`: ワールド座標空間では。 前に[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]画面に、直線を描画することができます、座標変換のシーケンスを通過します。 ワールド変換と呼ばれる 1 つの変換は、ページ座標にワールド座標を変換し、ページの変換と呼ばれる別の変換は、ページ座標をデバイス座標に変換します。  
+GDI + で 3 つの座標空間を使用します。 世界、ページ、およびデバイス。 ワールド座標は特定のグラフィック ワールドをモデル化するために使用する座標は、.NET Framework のメソッドに渡す座標です。 ページ座標は、フォームやコントロールなどの描画サーフェイスで使用される座標系を参照してください。 デバイス座標は、画面や紙など、描画されている物理デバイスで使用される座標です。 呼び出しを行うとき`myGraphics.DrawLine(myPen, 0, 0, 160, 80)`、ポイントに渡す、<xref:System.Drawing.Graphics.DrawLine%2A>メソッド:`(0, 0)`と`(160, 80)`: ワールド座標空間では。 GDI +、画面上に線を描画できます、前に、座標変換のシーケンスを通過します。 ワールド変換と呼ばれる 1 つの変換は、ページ座標にワールド座標を変換し、ページの変換と呼ばれる別の変換は、ページ座標をデバイス座標に変換します。  
   
 ## <a name="transforms-and-coordinate-systems"></a>座標系と変換  
  左上隅ではなく、クライアント領域の本体でに原点がある座標系を使用するとします。 たとえば、クライアント領域の上部から 50 ピクセルとクライアント領域の左端から 100 ピクセルにする配信元にするとします。 次の図は、このような座標系を示します。  

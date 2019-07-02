@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Windows Forms, bi-directional support
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2811674ad8d870062e3a0c67dbd21e6550f6c48d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d69de3265fa0954f640c8a2f08ba85c106320f3e
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655668"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67506216"
 ---
 # <a name="bi-directional-support-for-windows-forms-applications"></a>Windows フォーム アプリケーションの双方向サポート
 Visual Studio を使用して、アラビア語やヘブライ語などの双方向 (右から左の) 言語をサポートする Windows ベースのアプリケーションを作成することができます。 これには、標準的なフォーム、ダイアログ ボックス、MDI フォームや、これらのフォームで操作できるすべてのコントロール、まり、<xref:System.Windows.Forms.Control> 名前空間のすべてのオブジェクトが含まれます。  
@@ -82,7 +82,7 @@ Visual Studio を使用して、アラビア語やヘブライ語などの双方
  Windows フォームは Unicode をサポートするので、双方向のアプリケーションを作成するときに、任意の文字セットを含めることができます。 ただし、すべての Windows フォーム コントロールですべてのプラットフォームの Unicode をサポートするわけではありません。 詳細については、「[エンコード方式および Windows フォームのグローバリゼーション](encoding-and-windows-forms-globalization.md)」を参照してください。  
   
 ## <a name="gdi"></a>GDI+  
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] を使用して、右から左への読み取り順序でテキストを描画できます。 <xref:System.Drawing.Graphics.DrawString%2A> メソッドは、テキストの描画に使用され、テキストの原点を反転させるために、<xref:System.Drawing.StringFormatFlags> 列挙の <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> のメンバーを設定できる `StringFormat` パラメーターをサポートします。  
+ GDI + を使用すると、右から左への読み取り順序でテキストを描画します。 <xref:System.Drawing.Graphics.DrawString%2A> メソッドは、テキストの描画に使用され、テキストの原点を反転させるために、<xref:System.Drawing.StringFormatFlags> 列挙の <xref:System.Drawing.StringFormatFlags.DirectionRightToLeft> のメンバーを設定できる `StringFormat` パラメーターをサポートします。  
   
 ## <a name="common-dialog-boxes"></a>コモン ダイアログ ボックス  
  Windows の制御下にある [ファイルを開く] ダイアログ ボックスなどのシステム ツールです。 これらは、オペレーティング システムから言語要素を継承します。 適切な言語設定のバージョンの Windows を使用している場合は、これらのダイアログ ボックスは双方向言語で正しく動作します。  
@@ -97,7 +97,7 @@ Visual Studio を使用して、アラビア語やヘブライ語などの双方
 ## <a name="mirroring"></a>ミラー化  
  *ミラーリング*とは、右から左にフローするように UI 要素のレイアウトを反転させることを指します。 たとえば、ミラーリングされた Windows フォームでは、最小化、最大化、および閉じるボタンはタイトル バーの右端ではなく左端に表示されます。  
   
- フォームまたはコントロールの <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティを `true` に設定すると、フォームの要素の読み取り順序が反転しますが、この設定は、右から左のレイアウトを反転しません。つまり、ミラーリングが発生しません。 たとえば、このプロパティを設定しても、フォームのタイトル バーにある **[最小化]**、**[最大化]**、**[閉じる]** の各ボタンがフォームの左側に移動することはありません。 同様に、<xref:System.Windows.Forms.TreeView> コントロールなどのいくつかコントロールは、アラビア語またはヘブライ語に適した表示に変更するには、ミラーリングが必要です。 <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> プロパティを設定することで、これらのコントロールをミラーリングできます。  
+ フォームまたはコントロールの <xref:System.Windows.Forms.Control.RightToLeft%2A> プロパティを `true` に設定すると、フォームの要素の読み取り順序が反転しますが、この設定は、右から左のレイアウトを反転しません。つまり、ミラーリングが発生しません。 たとえば、このプロパティを設定しても、フォームのタイトル バーにある **[最小化]** 、 **[最大化]** 、 **[閉じる]** の各ボタンがフォームの左側に移動することはありません。 同様に、<xref:System.Windows.Forms.TreeView> コントロールなどのいくつかコントロールは、アラビア語またはヘブライ語に適した表示に変更するには、ミラーリングが必要です。 <xref:System.Windows.Forms.Form.RightToLeftLayout%2A> プロパティを設定することで、これらのコントロールをミラーリングできます。  
   
  次のコントロールのミラーリングされたバージョンを作成できます。  
   

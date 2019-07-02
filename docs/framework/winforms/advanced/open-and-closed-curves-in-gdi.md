@@ -10,12 +10,12 @@ helpviewer_keywords:
 - curves [Windows Forms], drawing
 - curves
 ms.assetid: 08d2cc9a-dc9d-4eed-bcbb-2c8e2ca5d3ae
-ms.openlocfilehash: 33a8954296a7e63637ad5e210fb30fba1a3fdd53
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 06afdc4549f7c3c9b0636e5c7052dcca87a153f1
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641470"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505454"
 ---
 # <a name="open-and-closed-curves-in-gdi"></a>GDI+ での開いた曲線と閉じた曲線
 次の図は、2 つの曲線を示しています。 1 つが開いて、もう 1 つの閉じられました。  
@@ -23,7 +23,7 @@ ms.locfileid: "61641470"
  ![開いた曲線と閉じた曲線](./media/aboutgdip02-art24.gif "Aboutgdip02_art24")  
   
 ## <a name="managed-interface-for-curves"></a>曲線の管理インターフェイス  
- 閉じた曲線は、内部があるし、ブラシを使用して入力することができます。 <xref:System.Drawing.Graphics>クラス[!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]閉じた図形と曲線を塗りつぶすときの次のメソッドを提供します: <xref:System.Drawing.Graphics.FillRectangle%2A>、 <xref:System.Drawing.Graphics.FillEllipse%2A>、 <xref:System.Drawing.Graphics.FillPie%2A>、 <xref:System.Drawing.Graphics.FillPolygon%2A>、 <xref:System.Drawing.Graphics.FillClosedCurve%2A>、 <xref:System.Drawing.Graphics.FillPath%2A>、および<xref:System.Drawing.Graphics.FillRegion%2A>します。 これらのメソッドのいずれかを呼び出すたびに、特定のブラシの種類のいずれかを渡す必要があります (<xref:System.Drawing.SolidBrush>、 <xref:System.Drawing.Drawing2D.HatchBrush>、 <xref:System.Drawing.TextureBrush>、 <xref:System.Drawing.Drawing2D.LinearGradientBrush>、または<xref:System.Drawing.Drawing2D.PathGradientBrush>) を引数として。  
+ 閉じた曲線は、内部があるし、ブラシを使用して入力することができます。 <xref:System.Drawing.Graphics> GDI + でのクラスは、閉じた図形と曲線を塗りつぶすときの次のメソッドを提供します。: <xref:System.Drawing.Graphics.FillRectangle%2A>、 <xref:System.Drawing.Graphics.FillEllipse%2A>、 <xref:System.Drawing.Graphics.FillPie%2A>、 <xref:System.Drawing.Graphics.FillPolygon%2A>、 <xref:System.Drawing.Graphics.FillClosedCurve%2A>、 <xref:System.Drawing.Graphics.FillPath%2A>、および<xref:System.Drawing.Graphics.FillRegion%2A>します。 これらのメソッドのいずれかを呼び出すたびに、特定のブラシの種類のいずれかを渡す必要があります (<xref:System.Drawing.SolidBrush>、 <xref:System.Drawing.Drawing2D.HatchBrush>、 <xref:System.Drawing.TextureBrush>、 <xref:System.Drawing.Drawing2D.LinearGradientBrush>、または<xref:System.Drawing.Drawing2D.PathGradientBrush>) を引数として。  
   
  <xref:System.Drawing.Graphics.FillPie%2A>メソッドは、対応する、<xref:System.Drawing.Graphics.DrawArc%2A>メソッド。 同様、<xref:System.Drawing.Graphics.DrawArc%2A>メソッドは、楕円のアウトラインの一部を描画、<xref:System.Drawing.Graphics.FillPie%2A>メソッドは、楕円の内部の一部を入力します。 次の例では、円弧を描画し、楕円の内部の対応する部分を入力します。  
   

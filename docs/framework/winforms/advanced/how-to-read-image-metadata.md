@@ -8,17 +8,17 @@ helpviewer_keywords:
 - metadata [Windows Forms], property item
 - metadata [Windows Forms], reading image
 ms.assetid: 72ec0b31-0be7-444a-9575-1dbcb864e0be
-ms.openlocfilehash: 3266724503960b8b45cd134dfa5b007a58d578fa
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: 6c02f7e5744828fd8eddc88be8d7da28f3bc2a2a
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67169814"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67505779"
 ---
 # <a name="how-to-read-image-metadata"></a>方法: イメージ メタデータを読み取る
-一部のイメージ ファイルには、イメージの機能を読み取ることができるメタデータが含まれます。 たとえば、デジタル写真には、製造元とイメージをキャプチャするために使用するカメラのモデルを決定する読み取り可能なメタデータが含まれます。 [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)]、既存のメタデータを読み取ることができ、イメージ ファイルに新しいメタデータを記述することもできます。  
+一部のイメージ ファイルには、イメージの機能を読み取ることができるメタデータが含まれます。 たとえば、デジタル写真には、製造元とイメージをキャプチャするために使用するカメラのモデルを決定する読み取り可能なメタデータが含まれます。 GDI + を使用して既存のメタデータを読み取ることができ、イメージ ファイルに新しいメタデータを記述することもできます。  
   
- [!INCLUDE[ndptecgdiplus](../../../../includes/ndptecgdiplus-md.md)] メタデータ内の個々 の部分を格納、<xref:System.Drawing.Imaging.PropertyItem>オブジェクト。 読み取ることができます、<xref:System.Drawing.Image.PropertyItems%2A>のプロパティ、<xref:System.Drawing.Image>ファイルからすべてのメタデータを取得するオブジェクト。 <xref:System.Drawing.Image.PropertyItems%2A>プロパティの配列を返します<xref:System.Drawing.Imaging.PropertyItem>オブジェクト。  
+ GDI + でのメタデータの個々 の部分を格納する、<xref:System.Drawing.Imaging.PropertyItem>オブジェクト。 読み取ることができます、<xref:System.Drawing.Image.PropertyItems%2A>のプロパティ、<xref:System.Drawing.Image>ファイルからすべてのメタデータを取得するオブジェクト。 <xref:System.Drawing.Image.PropertyItems%2A>プロパティの配列を返します<xref:System.Drawing.Imaging.PropertyItem>オブジェクト。  
   
  A<xref:System.Drawing.Imaging.PropertyItem>オブジェクトが次の 4 つのプロパティ: `Id`、 `Value`、 `Len`、および`Type`します。  
   

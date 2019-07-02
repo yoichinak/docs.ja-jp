@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c1a78fa8-9f0c-40bc-a372-5575a48708fe
-ms.openlocfilehash: deb8f4396700086627aaef35ead7f15f38d9320c
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: f8fabd38ec49070bc588196b38ec64942feab93f
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65583869"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504718"
 ---
 # <a name="queries-in-linq-to-dataset"></a>LINQ to DataSet でのクエリ
 クエリは、データ ソースからデータを取得する式です。 一般に、クエリは専用のクエリ言語で表現されます。たとえば、リレーショナル データベースであれば SQL、XML であれば XQuery が使用されます。 そのため、開発者はクエリの対象となるデータ ソースやデータ形式ごとに新しいクエリ言語を習得する必要があります。 [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] は、データ ソースや形式の違いを意識せずにデータを扱うことのできる、より簡素化された一貫したモデルを提供します。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] クエリでは、常にプログラミング オブジェクトを操作することになります。  
   
  [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] のクエリ操作は、データ ソースを取得し、クエリを作成して、クエリを実行するという 3 つのアクションから成ります。  
   
- <xref:System.Collections.Generic.IEnumerable%601> を介したクエリは、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ジェネリック インターフェイスを実装するデータ ソースに対して行うことができます。 呼び出す<xref:System.Data.DataTableExtensions.AsEnumerable%2A>上、<xref:System.Data.DataTable>ジェネリックを実装するオブジェクトを返します<xref:System.Collections.Generic.IEnumerable%601>のデータ ソースとして機能するインターフェイスを[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。  
+ <xref:System.Collections.Generic.IEnumerable%601> を介したクエリは、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] ジェネリック インターフェイスを実装するデータ ソースに対して行うことができます。 呼び出す<xref:System.Data.DataTableExtensions.AsEnumerable%2A>上、<xref:System.Data.DataTable>ジェネリックを実装するオブジェクトを返します<xref:System.Collections.Generic.IEnumerable%601>、linq to DataSet クエリのデータ ソースとして機能するインターフェイス。  
   
  クエリでは、データ ソースから取得する情報を正確に指定できます。 また、並べ替え、グループ化、整形方法を指定して情報を取得することもできます。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] では、クエリが変数に格納されます。 一連の値を返すようにクエリを設計する場合、クエリ変数そのものが列挙可能な型であることが必要です。 このクエリ変数は、クエリの情報を保存するだけで、なんらかのアクションを実行したり、データを返したりすることはありません。 クエリを作成した後、データを取得するには、そのクエリを実行する必要があります。  
   
@@ -26,7 +26,7 @@ ms.locfileid: "65583869"
  遅延実行によって一連の値を返すクエリとは対照的に、シングルトン値を返すクエリは直ちに実行されます。 シングルトン クエリの例としては、<xref:System.Linq.Enumerable.Count%2A>、<xref:System.Linq.Enumerable.Max%2A>、<xref:System.Linq.Enumerable.Average%2A>、<xref:System.Linq.Enumerable.First%2A> があります。 これらのシングルトン クエリは、結果を計算するためにはクエリ結果が必要であるため、直ちに実行されます。 たとえば、クエリ結果の平均を求めるためには、クエリを実行して、平均関数に入力データを与える必要があります。 シングルトン値を生成しないクエリでも、<xref:System.Linq.Enumerable.ToList%2A> メソッドまたは <xref:System.Linq.Enumerable.ToArray%2A> メソッドを使用することによって、即時実行を強制できます。 即時実行を強制するこの手法は、クエリの結果をキャッシュする場合などに使用すると効果的です。
   
 ## <a name="queries"></a>クエリ  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 2 つの異なる構文を使ってクエリを作成できます。 クエリ式の構文とメソッド ベースのクエリ構文。  
+ LINQ to DataSet クエリは、2 つの異なる構文を使って作成できます。 クエリ式の構文とメソッド ベースのクエリ構文。  
   
 ### <a name="query-expression-syntax"></a>クエリ式の構文  
  クエリ式は宣言型のクエリ構文です。 開発者は SQL に似た構文形式を C# または Visual Basic で用いてクエリを作成できます。 クエリ式の構文を使用することにより、フィルター、並べ替え、グループ化など、データ ソースに対するきわめて複雑な処理を最小限のコードで実行できます。 詳細については、次を参照してください。 [LINQ クエリ式](../../../csharp/linq/index.md#query-expression-overview)と[基本的なクエリ操作 (Visual Basic)](../../../visual-basic/programming-guide/concepts/linq/basic-query-operations.md)します。
@@ -39,7 +39,7 @@ ms.locfileid: "65583869"
  [!code-vb[DP LINQ to DataSet Examples#SelectSimple1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP LINQ to DataSet Examples/VB/Module1.vb#selectsimple1)]  
   
 ### <a name="method-based-query-syntax"></a>メソッド ベースのクエリ構文  
- [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] クエリを作成するもう 1 つの方法として、メソッド ベースのクエリがあります。 メソッド ベースのクエリ構文は、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] の演算子メソッドを、ラムダ式をパラメーターとして直接順次呼び出すものです。 詳細については、「[ラムダ式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。  
+ データセット クエリに LINQ を考案するその他の方法は、メソッド ベースのクエリを使用してです。 メソッド ベースのクエリ構文は、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] の演算子メソッドを、ラムダ式をパラメーターとして直接順次呼び出すものです。 詳細については、「[ラムダ式](~/docs/csharp/programming-guide/statements-expressions-operators/lambda-expressions.md)」を参照してください。  
   
  次の例では、<xref:System.Linq.Enumerable.Select%2A> を使用して `Product` テーブルからすべての行を取得し、製品名を表示しています。  
   
