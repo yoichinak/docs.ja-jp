@@ -21,7 +21,7 @@ ms.locfileid: "64661282"
   
  関数またはとして、反復子を実装できる、`Get`プロパティ定義のアクセサー。 `Iterator`反復子関数の宣言に修飾子が表示されますまたは`Get`アクセサー。  
   
- 使用して、クライアント コードから反復子を呼び出す、[ごとにしています.次のステートメントの](../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
+ [For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)を使用して、クライアント コードから反復子を呼び出します。  
   
  反復子関数の戻り値の型または`Get`アクセサーを指定することができます<xref:System.Collections.IEnumerable>、 <xref:System.Collections.Generic.IEnumerable%601>、 <xref:System.Collections.IEnumerator>、または<xref:System.Collections.Generic.IEnumerator%601>します。  
   
