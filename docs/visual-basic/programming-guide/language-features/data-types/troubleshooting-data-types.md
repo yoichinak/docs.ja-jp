@@ -99,7 +99,7 @@ ms.locfileid: "65591099"
  型チェックを切り替えると ([Option Strict ステートメント](../../../../visual-basic/language-reference/statements/option-strict-statement.md)) は`On`コンパイラには、すべての暗黙的な縮小変換が許可されていません。 関連するものが含まれます`String`します。 コードの変換キーワードをなど、使用もできる`CStr`と[CType Function](../../../../visual-basic/language-reference/functions/ctype-function.md)変換を試行する .NET Framework を直接します。  
   
 > [!NOTE]
->  縮小変換エラーが抑制されて内の要素からの変換、`For Each…Next`ループ コントロール変数のコレクション。 詳細と例については、"Narrowing Conversions"セクションを参照してください[ごとにしています...次のステートメントの](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
+>  `For Each...Next`のコレクション内の要素からループ コントロール変数への変換では、縮小変換エラーが抑制されます。 詳細と例については、[For Each...Next ステートメント](../../../../visual-basic/language-reference/statements/for-each-next-statement.md)の"縮小変換"セクションを参照してください。
   
 ### <a name="narrowing-conversion-protection"></a>縮小変換の保護  
  縮小変換の欠点は、ことは、実行時に失敗したことができます。 たとえば場合、`String`変数のものを含む"True"または"False"に変換できない以外`Boolean`します。 区切り文字が含まれている、任意の数値型への変換は失敗します。 あるとわかっている場合を除き、`String`変数変換先の型を受け入れることができる値を常に保持する、変換しないでください。  

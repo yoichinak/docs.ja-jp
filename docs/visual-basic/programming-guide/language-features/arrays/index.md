@@ -130,17 +130,17 @@ Dim sales()() As Double = New Double(11)() {}
 
 ## <a name="iterating-through-an-array"></a>配列を反復処理します。
 
-最大最小のインデックスとは、最上位から、配列内の各要素にアクセスする配列を反復処理するときに、最下位にします。 通常、いずれかを使用して、[をしています.次のステートメントの](../../../language-reference/statements/for-next-statement.md)または[ごとにしています.次のステートメントの](../../../language-reference/statements/for-each-next-statement.md)配列の要素を反復処理します。 呼び出すことができますが、配列の上限がわからないときに、<xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>インデックスの最大値を取得します。 最小のインデックス値がほぼ常に 0 を呼び出すことができます、<xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType>インデックスの最小値を取得します。
+配列を反復処理する場合、最小のインデックスから最大のインデックスまで、または最大から最小まで、配列内の各要素にアクセスします。 通常、[For...Nextステートメント](../../../language-reference/statements/for-next-statement.md)または[For Each...Next ステートメント](../../../language-reference/statements/for-each-next-statement.md)のいずれかを使用して、配列の要素を反復処理します。 配列の上限がわからない場合、<xref:System.Array.GetUpperBound%2A?displayProperty=nameWithType>を呼び出すことでインデックスの最大値を取得できます。 最小のインデックス値は、ほとんどの場合 0 ですが、<xref:System.Array.GetLowerBound%2A?displayProperty=nameWithType>を呼び出すことでインデックスの最小値を取得できます。
 
-次の例を使用して、1 次元配列を反復処理、 [ `For...Next` ](../../../language-reference/statements/for-next-statement.md)ステートメント。
+次の例は、 [For...Next](../../../language-reference/statements/for-next-statement.md)ステートメントを使用して、1 次元配列を反復処理します。
 
 [!code-vb[iterate-one-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate1d.vb)]
 
-次の例を使用して、多次元配列を反復処理を[ `For...Next` ](../../../language-reference/statements/for-next-statement.md)ステートメント。 <xref:System.Array.GetUpperBound%2A> メソッドには、次元を指定するパラメーターがあります。 `GetUpperBound(0)` 最初の次元の最も大きいインデックスを返しますと`GetUpperBound(1)`2 番目の次元の最も大きいインデックスを返します。
+次の例は、[For...Next](../../../language-reference/statements/for-next-statement.md)ステートメントを使用して、多次元配列を反復処理します。 <xref:System.Array.GetUpperBound%2A> メソッドには、次元を指定するパラメーターがあります。 `GetUpperBound(0)` は 1 次元目の最も大きいインデックスを返し、`GetUpperBound(1)` は 2 次元目の最も大きいインデックスを返します。
 
 [!code-vb[iterate-two-dimensional-array](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate2d.vb)]
 
-次の例では、[ごとにしています.次のステートメントの](../../../language-reference/statements/for-each-next-statement.md)1 次元配列と、2 次元配列を反復処理します。
+次の例では、[For Each...Next ステートメント](../../../language-reference/statements/for-each-next-statement.md)を使用して、1 次元配列と、2 次元配列を反復処理します。
 
 [!code-vb[iterate-for-each-next](~/samples/snippets/visualbasic/programming-guide/language-features/arrays/iterate-for-each-next.vb)]
 

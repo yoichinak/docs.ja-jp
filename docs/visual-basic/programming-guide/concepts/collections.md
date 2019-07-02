@@ -28,9 +28,9 @@ ms.locfileid: "64754996"
 
 ## <a name="using-a-simple-collection"></a>単純なコレクションを使用する
 
-このセクションの例は、厳密に型指定されたオブジェクトの一覧を使用できる、ジェネリックの <xref:System.Collections.Generic.List%601> クラスを使用します。
+このセクションの例では、厳密に型指定されたオブジェクトの一覧を使用できる、ジェネリックの <xref:System.Collections.Generic.List%601> クラスを使用します。
 
-次の例は、文字列のリストを作成しを使用して、文字列を反復処理し、[ごとにしています.[次へ]](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント。
+次の例は、文字列のリストを作成し、[For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメントを使用して、文字列を反復処理します。
 
 ```vb
 ' Create a list of strings.
@@ -63,9 +63,9 @@ Next
 'Output: chinook coho pink sockeye
 ```
 
-使用することができます、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ステートメントの代わりに、`For Each`コレクションを反復処理するステートメント。 インデックス位置によってコレクションの要素にアクセスすることで、これを実現します。 要素のインデックスは、0 から開始し、要素の数から 1 少ない値で終了します。
+`For Each`ステートメントの代わりに、[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ステートメントをコレクションの反復処理に使用することができます。 インデックス位置によってコレクションの要素にアクセスすることで、これを実現します。 要素のインデックスは、0 から開始し、要素の数から 1 少ない値で終了します。
 
-次の例は、`For…Next` の代わりに `For Each` を使用して、コレクションの要素を反復処理します。
+次の例は、`For Each` の代わりに `For...Next` を使用して、コレクションの要素を反復処理します。
 
 ```vb
 Dim salmons As New List(Of String) From
@@ -95,7 +95,7 @@ Next
 'Output: chinook pink sockeye
 ```
 
-次の例では、ジェネリック リストからすべての要素を削除します。 代わりに、`For Each`ステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)降順に反復処理するステートメントを使用します。 これは、<xref:System.Collections.Generic.List%601.RemoveAt%2A> メソッドを実行すると、削除された要素の後にある各要素のインデックス値が小さくなるためです。
+次の例では、ジェネリック リストからすべての要素を削除します。 `For Each`ステートメントの代わりに、降順に反復処理する[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ステートメントを使用します。 これは、<xref:System.Collections.Generic.List%601.RemoveAt%2A> メソッドを実行すると、削除された要素の後にある要素のインデックス値が小さくなるためです。
 
 ```vb
 Dim numbers As New List(Of Integer) From
@@ -118,7 +118,7 @@ numbers.ForEach(
 ' Output: 0 2 4 6 8
 ```
 
-<xref:System.Collections.Generic.List%601> の要素の型は、独自のクラスでも定義できます。 次の例では、`Galaxy` が使用する <xref:System.Collections.Generic.List%601> クラスがコードに定義されます。
+<xref:System.Collections.Generic.List%601> の要素の型には、独自のクラスも定義できます。 次の例では、<xref:System.Collections.Generic.List%601> が使用する `Galaxy` クラスがコードに定義されています。
 
 ```vb
 Private Sub IterateThroughList()
@@ -540,11 +540,11 @@ End Class
 
 *反復子*は、コレクションに対するカスタム イテレーションを実行するために使用されます。 反復子は、メソッドまたは `get` アクセサーのいずれかです。 反復子を使用して、 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを一度に 1 つのコレクションの各要素を返します。
 
-使用して、反復子を呼び出す、[ごとにしています.[次へ]](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント。 `For Each` ループの各イテレーションは、反復子を呼び出します。 `Yield` ステートメントが反復子に到達すると、式が戻され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。
+[For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメントを使用して、反復子を呼び出します。 `For Each` ループの繰り返しごとに、反復子を呼び出します。 反復子が`Yield` ステートメントに到達すると、式が返され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。
 
-詳細については、次を参照してください。[反復子 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)します。
+詳細については、[反復子 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)を参照してください。
 
-次の例は、反復子メソッドを使用します。 反復子メソッドには、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 `ListEvenNumbers` メソッドでは、`For Each` ステートメント本文の各イテレーションが、反復子メソッドの呼び出しを作成し、これが次の `Yield` ステートメントに続行されます。
+次の例は、反復子メソッドを使用します。 反復子メソッドは、[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ループ内に`Yield`ステートメントを持ちます。 `ListEvenNumbers` メソッドでは、`For Each` ステートメント本体の繰り返しごとに、反復子メソッドの呼び出しを作成し、次の `Yield` ステートメントに進みます。
 
 ```vb
 Public Sub ListEvenNumbers()
