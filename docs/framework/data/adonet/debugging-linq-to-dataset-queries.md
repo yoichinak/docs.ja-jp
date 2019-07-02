@@ -2,30 +2,30 @@
 title: LINQ to DataSet クエリのデバッグ
 ms.date: 03/30/2017
 ms.assetid: f4c54015-8ce2-4c5c-8d18-7038144cc66d
-ms.openlocfilehash: 0e015cc6042a21bf6d35915c3e19bfeb9b0dbb2a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 38eda9f352c4a8d8590e5e57b48c694eadd0397b
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61607697"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67503987"
 ---
 # <a name="debugging-linq-to-dataset-queries"></a>LINQ to DataSet クエリのデバッグ
 
-Visual Studio のデバッグをサポートしている[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]コード。 ただし、デバッグのいくつか違いがある[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]コードと非-[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]マネージ コード。 ほとんどのデバッグ機能を使用[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメントをステップ実行、ブレークポイントの設定、デバッガー ウィンドウに表示される結果を表示するなど。 ただし、クエリの実行がデバッグ中に考慮すべきいくつかの副作用を遅延[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]コードし、はエディット コンティニュを使用するには、いくつか制限があります。 このトピックに固有のデバッグの側面を説明します。[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]と比較して非[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]マネージ コード。  
+Visual Studio では、データセット コードを LINQ のデバッグをサポートします。 ただし、データセット コードとマネージ データセット コードを LINQ 以外に LINQ のデバッグのいくつか違いがあります。 ほとんどのデバッグ機能は、データセットのステートメントを使用して、ステップ実行、ブレークポイントの設定、デバッガー ウィンドウに表示される結果を表示するなど、LINQ で動作します。 ただし、クエリの遅延実行がデータセット コードを LINQ のデバッグ中に考慮すべきいくつかの副作用とはエディット コンティニュを使用するには、いくつか制限があります。 このトピックでは、LINQ to DataSet と比較して管理されているデータセット コードを LINQ 以外に固有のデバッグの機能について説明します。  
   
 ## <a name="viewing-results"></a>結果の表示  
- 結果を表示することができます、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]データヒント、ウォッチ ウィンドウで、[クイック ウォッチ] ダイアログ ボックスを使用してステートメントです。 ソース ウィンドウで特定のクエリにポインターを置くと、データヒントが表示されます。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] の変数をコピーし、それを [ウォッチ] ウィンドウまたは [クイック ウォッチ] ダイアログ ボックスに貼り付けることができます。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] では、クエリが評価されるのは、実際にそのクエリが実行されたときです。作成または宣言した時点では評価されません。 これは呼び出されます*遅延実行*します。 したがって、それが評価されるまでは、クエリ変数に値は割り当てられません。 詳細については、次を参照してください。[で LINQ to DataSet クエリ](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)します。  
+ データヒント、ウォッチ ウィンドウで、[クイック ウォッチ] ダイアログ ボックスを使用して LINQ to DataSet のステートメントの結果を表示することができます。 ソース ウィンドウで特定のクエリにポインターを置くと、データヒントが表示されます。 データセットの変数に、LINQ をコピーして、[ウォッチ] ウィンドウまたは [クイック ウォッチ] ダイアログ ボックスに貼り付けます。 Linq to DataSet でが作成または宣言されている場合は、クエリが実行されたときにのみ、クエリは評価されません。 これは呼び出されます*遅延実行*します。 したがって、それが評価されるまでは、クエリ変数に値は割り当てられません。 詳細については、次を参照してください。[で LINQ to DataSet クエリ](../../../../docs/framework/data/adonet/queries-in-linq-to-dataset.md)します。  
   
- デバッガーは、クエリの結果を表示するために、そのクエリを評価する必要があります。 この暗黙的な評価は、表示するときに発生します。、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]デバッガーでのクエリの結果がいくつかの効果を検討してください。 クエリの評価には時間がかかります。 結果ノードを展開するときにも時間を要します。 クエリによっては繰り返し評価が実行され、パフォーマンスが著しく低下する場合があります。 さらに、データの値またはプログラムの状態が変わるという副作用が伴う場合もあります。 すべてのクエリに副作用があるわけではありません。 副作用を伴うことなく安全にクエリを評価できるかどうかを判断するには、クエリが実装されているコードを十分に理解する必要があります。 詳細については、次を参照してください。[副作用と式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120))します。  
+ デバッガーは、クエリの結果を表示するために、そのクエリを評価する必要があります。 この暗黙的な評価は、デバッガーで LINQ to DataSet クエリの結果を表示して、いくつかの効果を考慮する必要がありますが発生します。 クエリの評価には時間がかかります。 結果ノードを展開するときにも時間を要します。 クエリによっては繰り返し評価が実行され、パフォーマンスが著しく低下する場合があります。 さらに、データの値またはプログラムの状態が変わるという副作用が伴う場合もあります。 すべてのクエリに副作用があるわけではありません。 副作用を伴うことなく安全にクエリを評価できるかどうかを判断するには、クエリが実装されているコードを十分に理解する必要があります。 詳細については、次を参照してください。[副作用と式](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/a7a250bs(v=vs.120))します。  
   
 ## <a name="edit-and-continue"></a>エディット コンティニュ  
- エディット コンティニュに変更をサポートしません[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 追加、削除、または変更する場合、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメントではデバッグ セッション中に、ダイアログ ボックスが表示、変更がエディット コンティニュでサポートされていないを指示します。 このとき、変更を元に戻すか、デバッグ セッションを中止して編集済みのコードで新たなセッションを開始するかを選択できます。  
+ エディット コンティニュは、LINQ to DataSet クエリの変更をサポートしていません。 追加、削除、またはデバッグ セッション中にデータセットのステートメントに、LINQ を変更する場合、変更がエディット コンティニュでサポートされていないを示すダイアログ ボックスが表示されます。 このとき、変更を元に戻すか、デバッグ セッションを中止して編集済みのコードで新たなセッションを開始するかを選択できます。  
   
- さらに、編集し、続行が型やで使用されている変数の値の変更をサポートしていません、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメント。 この場合も、変更を元に戻すか、デバッグ セッションを中止して新たなセッションを開始するかを選択できます。  
+ さらに、編集し、続行が型や LINQ to DataSet のステートメントで使用される変数の値の変更をサポートしていません。 この場合も、変更を元に戻すか、デバッグ セッションを中止して新たなセッションを開始するかを選択できます。  
   
- Visual C# で Visual Studio で、使うことはできませんエディット コンティニュを含むメソッドのコードに対して、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。  
+ ビジュアルでC#Visual Studio で使うことはできませんエディット コンティニュを LINQ to DataSet のクエリを含むメソッドのコードに対してです。  
   
- Visual Studio で Visual Basic で使えるエディット コンティニュで[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]を含むメソッドであっても、コード、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 追加または前にコードを削除することができます、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]ステートメントでは、行番号が変わる場合でも、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ。 デバッグのエクスペリエンス、Visual Basic 以外[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]前と同じコードまま[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]が導入されました。 変更、追加、または削除することはできません、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]変更を適用するデバッグを停止する場合を除き、ただし、クエリします。  
+ Visual Studio で Visual basic では、LINQ to DataSet のクエリを含んだメソッドであっても、データセット コードを LINQ 以外でエディット コンティニュを使用できます。 追加したり、LINQ to DataSet クエリの行番号が変わる場合でも、LINQ to DataSet のステートメントの前にコードを削除することができます。 データセット コードを LINQ 以外のエクスペリエンスをデバッグ、Visual Basic では、LINQ to DataSet が導入される前に、と同じままです。 変更、追加、または変更を適用するデバッグを停止する場合を除き、ただし、LINQ to DataSet のクエリを削除することはできません。  
   
 ## <a name="see-also"></a>関連項目
 

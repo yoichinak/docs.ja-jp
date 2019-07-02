@@ -2,21 +2,21 @@
 title: LINQ と ADO.NET
 ms.date: 03/30/2017
 ms.assetid: bf0c8f93-3ff7-49f3-8aed-f2b7ac938dec
-ms.openlocfilehash: a23e152d4688e840f4665e9c8d77835acb683564
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 16b06549573bc79378539cf7f5ccdcb60c812e81
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307316"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504470"
 ---
 # <a name="linq-and-adonet"></a>LINQ と ADO.NET
 今日では、多くのビジネス開発者が 2 つ (以上) のプログラミング言語を使用する必要がありますビジネス ロジックやプレゼンテーション層は高級言語 (Visual などC#または Visual Basic)、および (TRANSACT-SQL) などのデータベースと対話するクエリ言語. 開発者は実質的に複数の言語に精通していることが要求され、開発環境における言語の不整合が生じる原因にもなっています。 たとえば、データ アクセス API を使用してデータベースを照会するアプリケーションでは、クエリは文字列リテラルとして引用符で囲んで指定する必要があります。 コンパイラはこのクエリ文字列を認識できないため、エラー (無効な構文、参照されている列または行が実際に存在するかどうかなど) のチェック機構が働きません。 クエリ パラメーターの型チェックや `IntelliSense` のサポートもありません。  
   
  [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] により、開発者はアプリケーション コード内でプログラミング言語とクエリ言語を使い分けることなく、セット ベースのクエリを作成できます。 インメモリのデータ構造、XML ドキュメント、SQL データベース、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] オブジェクトなど、列挙可能な各種データ ソース (つまり、<xref:System.Collections.IEnumerable> インターフェイスを実装するデータ ソース) に対する <xref:System.Data.DataSet> クエリを作成できます。 実装方法には違いがありますが、こうした列挙可能なデータ ソースはすべて同じ構文および言語構造を公開しています。 クエリはプログラミング言語のみで作成できるため、コンパイラによる認識も検証もできない文字列リテラルとしてクエリ言語を記述する必要はありません。 Visual Studio プログラマはコンパイル時の型や構文チェックを提供することで生産性を向上させることもできますクエリをプログラミング言語に統合し、`IntelliSense`します。 クエリのデバッグやエラーの修正に伴う手間は、これらの機能によって軽減されます。  
   
- SQL テーブルのデータをメモリ内のオブジェクトに転送することは、面倒であるだけでなく間違いの元にもなります。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] および [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] で実装された [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] プロバイダーは、ソース データを <xref:System.Collections.IEnumerable> ベースのオブジェクト コレクションに変換します。 プログラマからは、クエリの実行時も更新時も常にデータが <xref:System.Collections.IEnumerable> コレクションとして見えます。 これらのコレクションに対するクエリを記述する際には、`IntelliSense` の機能を完全に利用できます。  
+ SQL テーブルのデータをメモリ内のオブジェクトに転送することは、面倒であるだけでなく間違いの元にもなります。 [!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] LINQ to DataSet によって実装されるプロバイダーと[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]にソース データを変換<xref:System.Collections.IEnumerable>-ベースのオブジェクトのコレクション。 プログラマからは、クエリの実行時も更新時も常にデータが <xref:System.Collections.IEnumerable> コレクションとして見えます。 これらのコレクションに対するクエリを記述する際には、`IntelliSense` の機能を完全に利用できます。  
   
- ADO.NET [!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)] には、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]、および [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] の 3 つのテクノロジがあります。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 提供に対するクエリの実行度で最適化された、<xref:System.Data.DataSet>と[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]SQL Server データベースのスキーマを直接クエリすることができますと[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]Entity Data Model のクエリを実行することができます。  
+ 次の 3 つの別個の ADO.NET[!INCLUDE[vbteclinqext](../../../../includes/vbteclinqext-md.md)]テクノロジ。LINQ to DataSet、 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]、および[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]します。 LINQ to DataSet の提供に対するクエリの実行度で最適化された、<xref:System.Data.DataSet>と[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]SQL Server データベースのスキーマを直接クエリすることができますと[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]Entity Data Model のクエリを実行することができます。  
   
  次の図は、ADO.NET LINQ テクノロジが、高級プログラミング言語および LINQ 対応のデータ ソースとどのように関係しているかを簡単に表したものです。  
   
@@ -24,10 +24,10 @@ ms.locfileid: "67307316"
   
  LINQ の詳細については、次を参照してください。[言語統合クエリ (LINQ)](../../../csharp/programming-guide/concepts/linq/index.md)します。
   
- 以降のセクションで、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]、および [!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)] について詳しく説明します。  
+ 次のセクションでは、データセットに LINQ の詳細についてを提供する[!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)]、および[!INCLUDE[linq_entities](../../../../includes/linq-entities-md.md)]します。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
- <xref:System.Data.DataSet> ADO.NET は、上に構築し、広く使用されている非接続型プログラミング モデルの重要な要素です。 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] により、開発者は、他の多くのデータ ソースで利用できる共通のクエリ作成メカニズムを使用しながら、より高度なクエリ機能を <xref:System.Data.DataSet> に組み込むことができます。 詳細については、「[LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)」を参照してください。  
+ <xref:System.Data.DataSet> ADO.NET は、上に構築し、広く使用されている非接続型プログラミング モデルの重要な要素です。 豊富なクエリ機能を構築する開発者は LINQ to DataSet<xref:System.Data.DataSet>他の多くのデータ ソースに使用される同じクエリ定式化メカニズムを使用します。 詳細については、「[LINQ to DataSet](../../../../docs/framework/data/adonet/linq-to-dataset.md)」を参照してください。  
   
 ## <a name="linq-to-sql"></a>LINQ to SQL  
  [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] は、概念モデルへのマッピングを必要としない開発者にとって有用なツールです。 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] では、[!INCLUDE[vbteclinq](../../../../includes/vbteclinq-md.md)] プログラミング モデルを既存のデータベース スキーマ上で直接利用できるようになります。 [!INCLUDE[vbtecdlinq](../../../../includes/vbtecdlinq-md.md)] データを表す .NET Framework クラスを生成することができます。 こうして生成されたクラスは、概念データ モデルではなく、直接データベースのテーブル、ビュー、ストアド プロシージャ、およびユーザー定義関数にマッピングされます。  

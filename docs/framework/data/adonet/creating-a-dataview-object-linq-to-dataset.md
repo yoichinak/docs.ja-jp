@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 76057508-e12d-4779-a707-06a4c2568acf
-ms.openlocfilehash: 7baf358d9cdabe8cadf6b297a1d0d63d64282525
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: bd39b40864703b6bb24c2cc6590787562f3f4f98
+ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64583543"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67504155"
 ---
 # <a name="creating-a-dataview-object-linq-to-dataset"></a>DataView オブジェクトの作成 (LINQ to DataSet)
-<xref:System.Data.DataView> のコンテキストで [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を作成するには 2 つの方法があります。 <xref:System.Data.DataView> は、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] に対する <xref:System.Data.DataTable> クエリから作成したり、型指定されているまたは型指定されていない <xref:System.Data.DataTable> から作成したりできます。 どちらの場合も、作成、<xref:System.Data.DataView>のいずれかを使用して、<xref:System.Data.DataTableExtensions.AsDataView%2A>拡張メソッド。<xref:System.Data.DataView>に直接構築可能でない、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]コンテキスト。  
+作成する 2 つの方法がある、 <xref:System.Data.DataView> LINQ to DataSet のコンテキストでします。 作成することができます、<xref:System.Data.DataView>から LINQ to DataSet クエリ経由で、 <xref:System.Data.DataTable>、型指定されていないか、型指定された作成することもできます<xref:System.Data.DataTable>します。 どちらの場合も、作成、<xref:System.Data.DataView>のいずれかを使用して、<xref:System.Data.DataTableExtensions.AsDataView%2A>拡張メソッド。<xref:System.Data.DataView> LINQ to DataSet のコンテキストに直接構築可能ではありません。  
   
  <xref:System.Data.DataView> を作成した後に、Windows フォーム アプリケーションまたは ASP.NET アプリケーションの UI コントロールにバインドしたり、フィルターおよび並べ替えの設定を変更したりできます。  
   
@@ -22,7 +22,7 @@ ms.locfileid: "64583543"
  フィルター処理と並べ替えの詳細については<xref:System.Data.DataView>を参照してください[DataView によるフィルター処理](../../../../docs/framework/data/adonet/filtering-with-dataview-linq-to-dataset.md)と[DataView による並べ替え](../../../../docs/framework/data/adonet/sorting-with-dataview-linq-to-dataset.md)します。  
   
 ## <a name="creating-dataview-from-a-linq-to-dataset-query"></a>LINQ to DataSet クエリの結果からの DataView の作成  
- <xref:System.Data.DataView> オブジェクトは、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] オブジェクトの射影である <xref:System.Data.DataRow> クエリの結果から作成できます。 新しく作成される <xref:System.Data.DataView> は、その基となるクエリからのフィルター処理および並べ替え情報を継承します。  
+ A<xref:System.Data.DataView>データセット クエリ結果の射影である場所に、LINQ の結果からオブジェクトを作成できる<xref:System.Data.DataRow>オブジェクト。 新しく作成される <xref:System.Data.DataView> は、その基となるクエリからのフィルター処理および並べ替え情報を継承します。  
   
 > [!NOTE]
 >  ほとんどの場合、フィルターに使用する式は、副作用のない確定的な式である必要があります。 また、並べ替えおよびフィルター処理は任意の回数実行されるため、特定の実行回数に依存するロジックが式に含まれないようにしてください。  
@@ -45,18 +45,18 @@ ms.locfileid: "64583543"
   
 - <xref:System.Data.EnumerableRowCollectionExtensions.Where%2A>  
   
- 場合、<xref:System.Data.DataView>から作成された、[!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)]クエリ、<xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>メソッドは、クエリで呼び出す最後のメソッドである必要があります。 次の例は、作成にこれを<xref:System.Data.DataView>合計支払額別に並べ替えられたオンライン注文の。  
+ 場合、<xref:System.Data.DataView>データセット クエリを LINQ から作成されたが、<xref:System.Data.EnumerableRowCollectionExtensions.Select%2A>メソッドは、クエリで呼び出す最後のメソッドである必要があります。 次の例は、作成にこれを<xref:System.Data.DataView>合計支払額別に並べ替えられたオンライン注文の。  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquery1)]
  [!code-vb[DP DataView Samples#CreateLDVFromQuery1](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquery1)]  
   
- 文字列ベースを使用することも<xref:System.Data.DataView.RowFilter%2A>と<xref:System.Data.DataView.Sort%2A>フィルターおよび並べ替えのプロパティを<xref:System.Data.DataView>がクエリから作成された後です。 この操作を行うと、クエリから継承された並べ替えおよびフィルター情報がクリアされます。 次の例では、姓が "S" で始まる連絡先をフィルター処理する <xref:System.Data.DataView> クエリから [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] を作成します。 文字列ベースの <xref:System.Data.DataView.Sort%2A> プロパティは、姓を昇順に並べ替え、名を降順に並べ替えるように設定されています。  
+ 文字列ベースを使用することも<xref:System.Data.DataView.RowFilter%2A>と<xref:System.Data.DataView.Sort%2A>フィルターおよび並べ替えのプロパティを<xref:System.Data.DataView>がクエリから作成された後です。 この操作を行うと、クエリから継承された並べ替えおよびフィルター情報がクリアされます。 次の例では、作成、<xref:System.Data.DataView>で始まる姓でフィルター処理するデータセット クエリを LINQ からの '。 文字列ベースの <xref:System.Data.DataView.Sort%2A> プロパティは、姓を昇順に並べ替え、名を降順に並べ替えるように設定されています。  
   
  [!code-csharp[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/csharp/VS_Snippets_ADO.NET/DP DataView Samples/CS/Form1.cs#createldvfromquerystringsort)]
  [!code-vb[DP DataView Samples#CreateLDVFromQueryStringSort](../../../../samples/snippets/visualbasic/VS_Snippets_ADO.NET/DP DataView Samples/VB/Form1.vb#createldvfromquerystringsort)]  
   
 ## <a name="creating-a-dataview-from-a-datatable"></a>DataTable からの DataView の作成  
- 作成されるだけでなく、 [!INCLUDE[linq_dataset](../../../../includes/linq-dataset-md.md)] 、クエリ、<xref:System.Data.DataView>からオブジェクトを作成できる、<xref:System.Data.DataTable>を使用して、<xref:System.Data.DataTableExtensions.AsDataView%2A>メソッド。  
+ データセット クエリを LINQ から作成されるだけでなく、<xref:System.Data.DataView>からオブジェクトを作成できる、<xref:System.Data.DataTable>を使用して、<xref:System.Data.DataTableExtensions.AsDataView%2A>メソッド。  
   
  次の例では、<xref:System.Data.DataView> を SalesOrderDetail テーブルから作成した後、<xref:System.Windows.Forms.BindingSource> オブジェクトのデータ ソースとして設定します。 このオブジェクトは、<xref:System.Windows.Forms.DataGridView> コントロールのプロキシとして動作します。  
   
