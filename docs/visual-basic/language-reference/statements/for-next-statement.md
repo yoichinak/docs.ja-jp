@@ -102,7 +102,7 @@ Next [ counter ]
   
 - A `Try`.`Catch`...`Finally`ステートメントが例外をキャッチします。 使用する場合があります`Exit For`の最後に、`Finally`ブロックします。  
   
-- 何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は使用できます`Exit For`ループを抜けます。 詳細については、次を参照してください[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)です。  
+- 何度も長時間または無限でも実行できるループ、無限ループがあります。 このような条件を検出した場合は`Exit For`を使用してループをエスケープすることができます。 詳細については、[Do...Loop ステートメント](../../../visual-basic/language-reference/statements/do-loop-statement.md)を参照してください。  
   
 ## <a name="technical-implementation"></a>技術的な実装  
  ときに、 `For`.`Next`ループの開始、Visual Basic の評価`start`、 `end`、および`step`します。 Visual Basic では、この時間とし、割り当てにのみこれらの値を評価`start`に`counter`します。 ステートメントの前にブロックが実行、Visual Basic の比較`counter`に`end`します。 場合`counter`よりも大きいは既に、`end`値 (より小さい場合、または`step`が負の値)、`For`ループが終了と制御に続くステートメントに渡す、`Next`ステートメント。 それ以外の場合、ステートメント ブロックが実行されます。  
@@ -158,7 +158,7 @@ Next [ counter ]
  `start`、 `end`、および`step`式が評価される任意のデータ型の型を拡張する`counter`します。 ユーザー定義型を使用する場合`counter`、定義する必要がありますが、`CType`変換演算子の型に変換する`start`、 `end`、または`step`の型に`counter`。  
   
 ## <a name="example"></a>例  
- 次の例では、ジェネリック リストからすべての要素を削除します。 この例では、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)の代わりに、降順に反復処理する`For`...`Next`ステートメントを使用します。 例では、`removeAt`メソッドで削除された要素の後にある要素のインデックス値がより小さくなるため、この手法を使用します。
+ 次の例では、ジェネリック リストからすべての要素を削除します。 この例では、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)の代わりに、降順に反復処理する`For`...`Next`ステートメントを使用します。 例では、`removeAt`メソッドで削除された要素の後にある要素のインデックス値がより小さくなるため、この手法を使用します。  
   
  [!code-vb[VbVbalrStatements#114](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/class7.vb#114)]  
   

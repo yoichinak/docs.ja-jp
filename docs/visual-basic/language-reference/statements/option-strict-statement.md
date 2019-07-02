@@ -75,11 +75,11 @@ Option Strict { On | Off }
   
 - [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
- [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)を使用して文字列を連結するときに、文字列への変換はすべて拡大変換と見なされます。 そのため、`Option Strict`がオンの場合でも、暗黙的な縮小変換エラーは生成されません。
+ 使用して文字列を連結するときに、 [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)、すべての文字列への変換は拡大変換と見なされます。 場合でも、暗黙的な縮小変換エラーは、これらの変換が生成されないように`Option Strict`にします。  
   
  対応するパラメーターと異なるデータ型を持つ引数を持つメソッドを呼び出すときに、`Option Strict`がオンの場合は縮小変換がコンパイル時エラーになります。 拡大変換または明示的な変換を使用することで、コンパイル時エラーを回避できます。  
   
- `For Each...Next`のコレクション内の要素からループ コントロール変数への変換では、コンパイル時に暗黙的な縮小変換エラーが抑制されます。 これは`Option Strict`がオンの場合も発生します。 詳細については、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)の"縮小変換"セクションを参照してください。
+ 内の要素からの変換のコンパイル時に暗黙的な縮小変換エラーが抑制されます、`For Each…Next`ループ コントロール変数のコレクション。 これが発生した場合でも`Option Strict`にします。 詳細については、"Narrowing Conversions"セクションを参照してください[ごとにしています...次のステートメントの](../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
   
 ## <a name="late-binding-errors"></a>遅延バインド エラー  
  `Object` 型として宣言された変数のプロパティまたはメソッドにオブジェクトを代入する場合は、そのオブジェクトは遅延バインディングされます。 詳細については、次を参照してください。[事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)します。  
@@ -124,12 +124,12 @@ Option Strict { On | Off }
   
  **[Option Strict]** を **[オン]** に設定すると、これら 3 つの警告の構成設定のすべてが **[エラー]** に設定されます。 **[Option Strict]** を **[オフ]** に設定すると、3 つの設定すべてが **[なし]** に設定されます。  
   
- 各警告の構成設定を個別に **[なし]**、**[警告]**、または **[エラー]** に変更することができます。 3 つの警告の構成設定がすべて **[エラー]** に設定されている場合、`Option strict` ボックスに `On` が表示されます。 3 つすべてが **[なし]** に設定されている場合、このボックスには `Off` が表示されます。 これらの設定のその他の組み合わせに対しては、**(カスタム)** が表示されます。  
+ 各警告の構成設定を個別に **[なし]** 、 **[警告]** 、または **[エラー]** に変更することができます。 3 つの警告の構成設定がすべて **[エラー]** に設定されている場合、`Option strict` ボックスに `On` が表示されます。 3 つすべてが **[なし]** に設定されている場合、このボックスには `Off` が表示されます。 これらの設定のその他の組み合わせに対しては、 **(カスタム)** が表示されます。  
   
 ### <a name="to-set-the-option-strict-default-setting-for-new-projects"></a>新しいプロジェクトの Option Strict の既定の設定を設定するには  
  プロジェクトを作成するときに、 **Option Strict**の設定、**コンパイル**タブに設定されている、 **Option Strict**での設定、**オプション**ダイアログ ボックス。  
   
- 設定する`Option Strict`でこのダイアログ ボックスで、**ツール** メニューのをクリックして**オプション**します。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、**[VISUAL BASIC の既定値]** をクリックします。 初期の既定の設定で**VB の既定値**は`Off`します。  
+ 設定する`Option Strict`でこのダイアログ ボックスで、**ツール** メニューのをクリックして**オプション**します。 **[オプション]** ダイアログ ボックスの **[プロジェクトおよびソリューション]** を展開し、 **[VISUAL BASIC の既定値]** をクリックします。 初期の既定の設定で**VB の既定値**は`Off`します。  
   
 ### <a name="to-set-option-strict-on-the-command-line"></a>コマンドラインで Option Strict を設定するには  
  含める、 [/optionstrict](../../../visual-basic/reference/command-line-compiler/optionstrict.md)コンパイラ オプションで、 **vbc**コマンド。  

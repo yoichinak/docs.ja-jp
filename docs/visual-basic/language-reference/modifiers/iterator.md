@@ -16,7 +16,7 @@ ms.locfileid: "64661282"
 # <a name="iterator-visual-basic"></a>反復子 (Visual Basic)
 指定する関数または`Get`アクセサーが反復子です。  
   
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>Remarks  
  *反復子*コレクションに対するカスタム イテレーションを実行します。 反復子を使用して、 [Yield](../../../visual-basic/language-reference/statements/yield-statement.md)ステートメントを一度に 1 つ、コレクション内の各要素を返します。 ときに、`Yield`ステートメントに達すると、コードの現在の場所が保持されます。 次回、Iterator 関数が呼び出されると、この位置から実行が再開されます。  
   
  関数またはとして、反復子を実装できる、`Get`プロパティ定義のアクセサー。 `Iterator`反復子関数の宣言に修飾子が表示されますまたは`Get`アクセサー。  
@@ -38,8 +38,8 @@ ms.locfileid: "64661282"
   
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="example"></a> 例
- 次の例は、反復子メソッドを示します。反復子メソッドには、[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ループ内に`Yield`ステートメントがあります。 `Main`の[For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント本体の繰り返しごとに、`Power` 反復子メソッドへの呼び出しを作成します。 反復子メソッドを呼び出すごとに、`Yield` ステートメントの次の実行に進みます。これは、`For...Next` ループの次の繰り返しで行われます。  
+## <a name="example"></a>例  
+ 次の例は、反復子関数を示します。 Iterator 関数が、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 各反復処理、[各](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント本体で`Main`への呼び出しを作成、 `Power` iterator 関数。 Iterator 関数を呼び出すごとに、`Yield` ステートメントの次の実行に進みます。これは、`For…Next` ループの次の反復処理で行われます。  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
   

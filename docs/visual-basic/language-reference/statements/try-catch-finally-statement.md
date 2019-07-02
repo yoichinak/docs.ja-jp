@@ -139,7 +139,7 @@ A`Finally`ブロックは、例外がある場合でも実行する必要があ�
 
 反復子メソッドまたは`Get`アクセサーは、コレクションに対するカスタム イテレーションを実行します。 反復子は[Yield](yield-statement.md)ステートメントを使用して、コレクションの各要素を一度に 1 つずつ返します。 [For Each...Next ステートメント](for-each-next-statement.md)を使用して反復子メソッドを呼び出します。
 
-`Yield`は`Try`ブロック内に置くことができます。 `Yield`ステートメントを含む`Try`ブロックは、`Catch`ブロックを持つことができ、そして、`Finally`ブロックを持つことができます。 例については、[反復子](../../programming-guide/concepts/iterators.md)の`Try`ブロックを参照してください。
+`Yield`は`Try`ブロック内に置くことができます。 `Yield`ステートメントを含む`Try`ブロックは、`Catch`ブロックを持つことができ、そして、`Finally`ブロックを持つことができます。 例については、`Try`ブロックの[反復子](../../programming-guide/concepts/iterators.md)を参照してください。
 
 `Yield`ステートメントは、`Catch`ブロックまたは`Finally`ブロック内で使用できません。
 

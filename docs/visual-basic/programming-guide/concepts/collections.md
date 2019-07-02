@@ -65,7 +65,7 @@ Next
 
 `For Each`ステートメントの代わりに、[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ステートメントをコレクションの反復処理に使用することができます。 インデックス位置によってコレクションの要素にアクセスすることで、これを実現します。 要素のインデックスは、0 から開始し、要素の数から 1 少ない値で終了します。
 
-次の例は、`For Each` の代わりに `For...Next` を使用して、コレクションの要素を反復処理します。
+次の例は、`For…Next` の代わりに `For Each` を使用して、コレクションの要素を反復処理します。
 
 ```vb
 Dim salmons As New List(Of String) From
@@ -542,7 +542,7 @@ End Class
 
 [For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメントを使用して、反復子を呼び出します。 `For Each` ループの繰り返しごとに、反復子を呼び出します。 反復子が`Yield` ステートメントに到達すると、式が返され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。
 
-詳細については、[反復子 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)を参照してください。
+詳細については、次を参照してください。[反復子 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)します。
 
 次の例は、反復子メソッドを使用します。 反復子メソッドは、[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ループ内に`Yield`ステートメントを持ちます。 `ListEvenNumbers` メソッドでは、`For Each` ステートメント本体の繰り返しごとに、反復子メソッドの呼び出しを作成し、次の `Yield` ステートメントに進みます。
 
