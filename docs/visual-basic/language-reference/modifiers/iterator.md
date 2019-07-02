@@ -38,7 +38,7 @@ ms.locfileid: "64661282"
   
 - [Property ステートメント](../../../visual-basic/language-reference/statements/property-statement.md)  
   
-## <a name="example"></a>例
+## <a name="example"></a> 例
  次の例は、反復子メソッドを示します。反復子メソッドには、[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ループ内に`Yield`ステートメントがあります。 `Main`の[For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント本体の繰り返しごとに、`Power` 反復子メソッドへの呼び出しを作成します。 反復子メソッドを呼び出すごとに、`Yield` ステートメントの次の実行に進みます。これは、`For...Next` ループの次の繰り返しで行われます。  
   
  [!code-vb[VbVbalrStatements#98](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/VbVbalrStatements/VB/Class2.vb#98)]  
