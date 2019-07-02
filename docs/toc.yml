@@ -194,6 +194,12 @@
           href: core/whats-new/dotnet-core-2-1.md
         - name: .NET Core 2.0 の新機能
           href: core/whats-new/dotnet-core-2-0.md
+    - name: アプリケーションの互換性
+      items:
+        - name: 破壊的変更を評価する
+          href: core/compatibility/index.md
+        - name: 破壊的変更のカテゴリ
+          href: core/compatibility/categories.md
     - name: チュートリアル
       href: core/tutorials/index.md
       items:

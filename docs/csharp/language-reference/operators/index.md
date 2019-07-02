@@ -18,12 +18,12 @@ helpviewer_keywords:
 - keywords [C#], operators
 - arithmetic operators [C#]
 ms.assetid: 0301e31f-22ad-49af-ac3c-d5eae7f0ac43
-ms.openlocfilehash: 98f73ed958f8b43cd4fea700a478cf3337ea68db
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7d8ee9be8f399bca0aace61d344b19094c9518b0
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025137"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401465"
 ---
 # <a name="c-operators-c-reference"></a>C# 演算子 (C# リファレンス)
 
@@ -51,9 +51,9 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 [x--](arithmetic-operators.md#decrement-operator---) – 後置デクリメント。 x の値を返した後、1 小さくなった (通常は整数 1 が減算された) x の値で格納場所を更新します。
 
-[new](../keywords/new-operator.md) – 型のインスタンス化。
+[new](new-operator.md) – 型のインスタンス化。
 
-[typeof](../keywords/typeof.md) – オペランドを表す <xref:System.Type> オブジェクトを返します。
+[typeof](type-testing-and-conversion-operators.md#typeof-operator) – オペランドを表す <xref:System.Type> オブジェクトを返します。
 
 [checked](../keywords/checked.md) – 整数演算のオーバーフロー チェックを有効にします。
 
@@ -87,7 +87,7 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 [--x](arithmetic-operators.md#decrement-operator---) – 前置デクリメント。 1 小さくなった (通常は整数 1 が減算された) x の値で格納場所を更新した後に x の値を返します。
 
-[(T)x](invocation-operator.md) – 型キャスト。
+[(T)x](type-testing-and-conversion-operators.md#cast-operator-) – 型キャスト。
 
 [await](../keywords/await.md) – `Task` を待機します。
 
@@ -137,9 +137,9 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 [x >= y](comparison-operators.md#greater-than-or-equal-operator-) – 以上。
 
-[is](../keywords/is.md) – 型の互換性。 評価される左側のオペランドを右側のオペランドで指定された型 (静的な型) にキャストできる場合は、true を返します。
+[is](type-testing-and-conversion-operators.md#is-operator) – 型の互換性。 評価される左側のオペランドを右側のオペランドで指定された型にキャストできる場合は、`true` を返します。
 
-[as](../keywords/as.md) – 型変換。 左側のオペランドを右側のオペランドで指定された型 (静的な型) にキャストして返します。ただし、`(T)x` が例外をスローした場合、`as` は `null` を返します。
+[as](type-testing-and-conversion-operators.md#as-operator) – 型変換。 左側のオペランドを右側のオペランドで指定された型にキャストして返します。ただし、`(T)x` が例外をスローした場合、`as` は `null` を返します。
 
 ## <a name="equality-operators"></a>等値演算子
 
@@ -171,13 +171,13 @@ C# は組み込み型でサポートされている定義済みの演算子を�
 
 この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 論理 AND。 最初のオペランドが false に評価される場合、C# では 2 番目のオペランドが評価されません。
+[x && y](boolean-logical-operators.md#conditional-logical-and-operator-) – 論理 AND。 `x` が `false` に評価される場合、`y` は評価されません。
 
 ## <a name="conditional-or-operator"></a>条件 OR 演算子
 
 この演算子は、前のセクションより優先順位が低く、次のセクションより優先順位が高くなります。
 
-[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 論理 OR。 最初のオペランドが true に評価される場合、C# では 2 番目のオペランドが評価されません。
+[x &#124;&#124; y](boolean-logical-operators.md#conditional-logical-or-operator-) – 論理 OR。 `x` が `true` に評価される場合、`y` は評価されません。
 
 ## <a name="null-coalescing-operator"></a>Null 合体演算子
 

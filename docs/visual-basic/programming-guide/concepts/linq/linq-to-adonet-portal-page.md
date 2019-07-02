@@ -2,18 +2,18 @@
 title: LINQ to ADO.NET (ポータル ページ)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 21d6ddb4b793d2502b315888d79fb826741fed2e
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
-ms.translationtype: MT
+ms.openlocfilehash: 04fb330b1a8eaea9c5c64f633322696236eb492e
+ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307485"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67487812"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (ポータル ページ)
-[!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] では、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] プログラミング モデルを使用して ADO.NET 内の列挙可能なオブジェクトに対してクエリを実行できます。  
+LINQ to ADO.NET では、ADO.NET での列挙可能なオブジェクトを使用してクエリを実行することができます、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]プログラミング モデル。  
   
 > [!NOTE]
->  [!INCLUDE[linq_adonet](~/includes/linq-adonet-md.md)] のドキュメントは、.NET Framework SDK の ADO.NET のセクションにあります:「[LINQ と ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)」。
+>  LINQ to ADO.NET のドキュメントについては、.NET Framework SDK の ADO.NET のセクションにあります。[LINQ と ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。
   
  ADO.NET [!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)] には、[!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)]、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、および [!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] の 3 つのテクノロジがあります。 [!INCLUDE[linq_dataset](~/includes/linq-dataset-md.md)] 提供に対するクエリの実行度で最適化された、 <xref:System.Data.DataSet>、 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server データベースのスキーマを直接クエリすることができますと[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]Entity Data Model のクエリを実行することができます。  
   
