@@ -10,12 +10,12 @@ helpviewer_keywords:
 - named arguments [C#], Office programming
 - Office programming [C#]
 ms.assetid: 041b25c2-3512-4e0f-a4ea-ceb2999e4d5e
-ms.openlocfilehash: 382ecb17654377e8d37e1b3a572ed84442d76b1a
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 76bd9d9bce8e41605b96e979c2a39ea15e1d15ad
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59302999"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169939"
 ---
 # <a name="how-to-access-office-interop-objects-by-using-visual-c-features-c-programming-guide"></a>方法: Visual C# の機能を使用して Office 相互運用オブジェクトにアクセスする (C# プログラミング ガイド)
 Visual C# には、Office API オブジェクトへのアクセスを容易にする機能があります。 新機能は、名前付き引数と省略可能な引数、`dynamic` と呼ばれる新しい型、値パラメーターの場合と同様に COM メソッドの参照パラメーターに引数を渡す機能などです。  
@@ -34,9 +34,9 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
 2. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。 **[新しいプロジェクト]** ダイアログ ボックスが表示されます。  
   
-3. **[インストールされたテンプレート]** ペインで、**[Visual C#]** を展開し、**[Windows]** をクリックします。  
+3. **[インストールされたテンプレート]** ペインで、 **[Visual C#]** を展開し、 **[Windows]** をクリックします。  
   
-4. **[新しいプロジェクト]** ダイアログ ボックスの上部で、**.NET Framework 4** (またはそれ以降のバージョン) がターゲット フレームワークとして選択されていることを確認します。  
+4. **[新しいプロジェクト]** ダイアログ ボックスの上部で、 **.NET Framework 4** (またはそれ以降のバージョン) がターゲット フレームワークとして選択されていることを確認します。  
   
 5. **[テンプレート]** ペインの **[コンソール アプリケーション]** をクリックします。  
   
@@ -48,7 +48,7 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
 ## <a name="to-add-references"></a>参照を追加するには  
   
-1. **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、**[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。  
+1. **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、 **[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。  
   
 2. **[アセンブリ]** ページの **[コンポーネント名]** 一覧で **[Microsoft.Office.Interop.Word]** を選択し、Ctrl キーを押しながら **[Microsoft.Office.Interop.Excel]** を選択します。  アセンブリが表示されない場合は、それをインストールして表示させることが必要になる場合があります (「[方法: Office のプライマリ相互運用機能アセンブリをインストールする](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)」を参照)  
   
@@ -56,7 +56,7 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
 ## <a name="to-add-necessary-using-directives"></a>ディレクティブを使用して必要なものを追加するには  
   
-1. **ソリューション エクスプローラー**で、**Program.cs** ファイルを右クリックし、**[コードの表示]** をクリックします。  
+1. **ソリューション エクスプローラー**で、**Program.cs** ファイルを右クリックし、 **[コードの表示]** をクリックします。  
   
 2. 次の `using` ディレクティブをコード ファイルの先頭に追加します。  
   
@@ -76,7 +76,7 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
 1. 次のメソッドを `Program` クラスに追加して、Excel ワークシートを設定します。  
   
-     <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> メソッドには、特定のテンプレートを指定する省略可能なパラメーターがあります。 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] の新機能であるオプションのパラメーターでは、パラメーターの既定値を使用する場合は、そのパラメーターの引数を省略することができます。 次のコードで引数が渡されないため、`Add` は、既定のテンプレートを使用して、新しいブックを作成します。 以前のバージョンの C# では、同等のステートメントには、プレースホルダーの引数 `ExcelApp.Workbooks.Add(Type.Missing)` が必要です。  
+     <xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A> メソッドには、特定のテンプレートを指定する省略可能なパラメーターがあります。 C# 4 の新機能であるオプションのパラメーターでは、パラメーターの既定値を使用する場合は、そのパラメーターの引数を省略することができます。 次のコードで引数が渡されないため、`Add` は、既定のテンプレートを使用して、新しいブックを作成します。 以前のバージョンの C# では、同等のステートメントには、プレースホルダーの引数 `ExcelApp.Workbooks.Add(Type.Missing)` が必要です。  
   
      [!code-csharp[csProgGuideOfficeHowTo#4](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#4)]  
   
@@ -96,7 +96,7 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 以降のバージョンでは、アセンブリが [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションで参照される場合、または同等に、Excel の **[相互運用機能型の埋め込み]** プロパティが true に設定されている場合は、返される `Object` が `dynamic` に自動的に変換されます。 このプロパティの既定値は true です。  
+     C# 4 以降のバージョンでは、アセンブリが [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションで参照される場合、または同等に、Excel の **[相互運用機能型の埋め込み]** プロパティが true に設定されている場合は、返される `Object` が `dynamic` に自動的に変換されます。 このプロパティの既定値は true です。  
   
 ## <a name="to-run-the-project"></a>プロジェクトを実行するには  
   
@@ -110,13 +110,13 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
 ## <a name="to-add-a-word-document"></a>Word 文書を追加するには  
   
-1. [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] およびそれ以降のバージョンで Office プログラミングを強化するその他の方法を説明するために、次のコードでは、Word アプリケーションを開き、Excel ワークシートにリンクするアイコンを作成します。  
+1. C# 4 およびそれ以降のバージョンで Office プログラミングを強化するその他の方法を説明するために、次のコードでは、Word アプリケーションを開き、Excel ワークシートにリンクするアイコンを作成します。  
   
-     この手順の後半で提供されている `CreateIconInWordDoc` メソッドを `Program` クラスに貼り付けます。 <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> メソッドと <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A> メソッドの呼び出しに伴う複雑さが、`CreateIconInWordDoc` の名前付き引数と省略可能な引数によって軽減されます。 これらの呼び出しによって、[!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] で導入された、参照パラメーターを持つ COM メソッドの呼び出しを簡略化する 2 つの他の新しい機能が組み込まれます。 第一に、値パラメーターの場合と同様に参照パラメーターに引数を渡すことができます。 つまり、参照パラメーターごとに変数を作成することなく値を直接渡すことができます。 コンパイラは引数の値を保持する一時変数を生成し、呼び出しから戻るときに変数を破棄します。 第二に、引数リスト内の `ref` キーワードを省略できます。  
+     この手順の後半で提供されている `CreateIconInWordDoc` メソッドを `Program` クラスに貼り付けます。 <xref:Microsoft.Office.Interop.Word.Documents.Add%2A> メソッドと <xref:Microsoft.Office.Interop.Word.Selection.PasteSpecial%2A> メソッドの呼び出しに伴う複雑さが、`CreateIconInWordDoc` の名前付き引数と省略可能な引数によって軽減されます。 これらの呼び出しによって、C# 4 で導入された、参照パラメーターを持つ COM メソッドの呼び出しを簡略化する 2 つの他の新しい機能が組み込まれます。 第一に、値パラメーターの場合と同様に参照パラメーターに引数を渡すことができます。 つまり、参照パラメーターごとに変数を作成することなく値を直接渡すことができます。 コンパイラは引数の値を保持する一時変数を生成し、呼び出しから戻るときに変数を破棄します。 第二に、引数リスト内の `ref` キーワードを省略できます。  
   
-     `Add` メソッドには 4 つの参照パラメーターがあり、これらはすべてオプションです。 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] 以降のバージョンでは、既定値を使用する場合は、任意またはすべてのパラメーターの引数を省略できます。 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 以前のバージョンでは、各パラメーターの引数を提供する必要があり、パラメーターが参照パラメーターであるため、引数は変数である必要があります。  
+     `Add` メソッドには 4 つの参照パラメーターがあり、これらはすべてオプションです。 C# 4 以降のバージョンでは、既定値を使用する場合は、任意またはすべてのパラメーターの引数を省略できます。 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 以前のバージョンでは、各パラメーターの引数を提供する必要があり、パラメーターが参照パラメーターであるため、引数は変数である必要があります。  
   
-     `PasteSpecial` メソッドは、クリップボードの内容を挿入します。 このメソッドには 7 つの参照パラメーターがあり、これらはすべてオプションです。 次のコードでは、クリップボードの内容のソースへのリンクを作成する `Link` とリンクをアイコンとして表示する `DisplayAsIcon` の 2 つの参照パラメーターの引数を指定します。 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] では、これら 2 つに名前付き引数を使用して、その他を省略できます。 これらは参照パラメーターですが、`ref` キーワードを使用したり、引数として渡す変数を作成したりする必要はありません。 値は直接渡すことができます。 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 以前のバージョンでは、各参照パラメーターに変数引数を渡す必要があります。  
+     `PasteSpecial` メソッドは、クリップボードの内容を挿入します。 このメソッドには 7 つの参照パラメーターがあり、これらはすべてオプションです。 次のコードでは、クリップボードの内容のソースへのリンクを作成する `Link` とリンクをアイコンとして表示する `DisplayAsIcon` の 2 つの参照パラメーターの引数を指定します。 C# 4 では、これら 2 つに名前付き引数を使用して、その他を省略できます。 これらは参照パラメーターですが、`ref` キーワードを使用したり、引数として渡す変数を作成したりする必要はありません。 値は直接渡すことができます。 [!INCLUDE[csharp_orcas_long](~/includes/csharp-orcas-long-md.md)] 以前のバージョンでは、各参照パラメーターに変数引数を渡す必要があります。  
   
      [!code-csharp[csProgGuideOfficeHowTo#9](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#9)]  
   
@@ -142,11 +142,11 @@ Visual C# には、Office API オブジェクトへのアクセスを容易に�
   
      また、`dynamic` ではなく `Object` 型を使用して、COM メソッドに必要とされ、COM メソッドによって返される型を簡単に表現できるため、プログラミングがより簡単になります。 型が `dynamic` の変数は、明示的なキャストが不要になる実行時まで評価されません。 詳細については、「[dynamic 型の使用](../../../csharp/programming-guide/types/using-type-dynamic.md)」を参照してください。  
   
-     [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] の既定の動作では、PIA を使用せずに型情報を埋め込みます。 この既定のため、前の例のいくつかは、明示的なキャストが必要ないために簡素化されます。 たとえば、`worksheet` での `DisplayInExcel` の宣言は、`Excel._Worksheet workSheet = excelApp.ActiveSheet` ではなく `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet` と記述されます。 同じメソッドの `AutoFit` への呼び出しでも、既定値を使用せずに明示的なキャストが必要になります。これは、`ExcelApp.Columns[1]` が `Object` を返し、`AutoFit` が Excel のメソッドであるためです。 次のコードはキャストを示しています。  
+     C# 4 の既定の動作では、PIA を使用せずに型情報が埋め込まれます。 この既定のため、前の例のいくつかは、明示的なキャストが必要ないために簡素化されます。 たとえば、`worksheet` での `DisplayInExcel` の宣言は、`Excel._Worksheet workSheet = excelApp.ActiveSheet` ではなく `Excel._Worksheet workSheet = (Excel.Worksheet)excelApp.ActiveSheet` と記述されます。 同じメソッドの `AutoFit` への呼び出しでも、既定値を使用せずに明示的なキャストが必要になります。これは、`ExcelApp.Columns[1]` が `Object` を返し、`AutoFit` が Excel のメソッドであるためです。 次のコードはキャストを示しています。  
   
      [!code-csharp[csProgGuideOfficeHowTo#14](~/samples/snippets/csharp/VS_Snippets_VBCSharp/csprogguideofficehowto/cs/program.cs#14)]  
   
-2. 既定値を変更し、型情報を埋め込むのではなく PIA を使用するには、**ソリューション エクスプ ローラー**で **[参照設定]** ノードを展開し、**[Microsoft.Office.Interop.Excel]** または **[Microsoft.Office.Interop.Word]** を選択します。  
+2. 既定値を変更し、型情報を埋め込むのではなく PIA を使用するには、**ソリューション エクスプ ローラー**で **[参照設定]** ノードを展開し、 **[Microsoft.Office.Interop.Excel]** または **[Microsoft.Office.Interop.Word]** を選択します。  
   
 3. **[プロパティ]** ウィンドウが表示されない場合は、**F4** キーを押します。  
   

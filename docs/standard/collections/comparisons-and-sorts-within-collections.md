@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5e4d3b45-97f0-423c-a65f-c492ed40e73b
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e1a5fa5113afdfb94a0b035b83cb59946d0970c9
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2d9124c90d09e2fa94a0eaa2ff8cd4e4ab15206f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64664589"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135669"
 ---
 # <a name="comparisons-and-sorts-within-collections"></a>コレクション内での比較と並べ替え
 <xref:System.Collections> クラスは、削除する要素を検索するか、キーと値のペアの値を返すかに関係なく、コレクションの管理に関連するほぼすべての処理において比較を実行します。  
@@ -34,7 +34,7 @@ ms.locfileid: "64664589"
   
 - T 型で <xref:System.IEquatable%601>が実装されていない場合、 <xref:System.Object.Equals%2A?displayProperty=nameWithType> が使用されます。  
   
- また、ディクショナリ コレクションの一部のコンストラクター オーバーロードでは、 <xref:System.Collections.Generic.IEqualityComparer%601> 実装が受け取られ、これを使用してキーの等価性が比較されます。 例については、 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> コンストラクターに関する説明を参照してください。  
+ また、ディクショナリ コレクションのコンストラクターの一部のオーバーロードでは、<xref:System.Collections.Generic.IEqualityComparer%601> の実装が受け付けられて、キーが等しいかどうかを比較するために使用されます。 例については、 <xref:System.Collections.Generic.Dictionary%602.%23ctor%2A?displayProperty=nameWithType> コンストラクターに関する説明を参照してください。  
   
 <a name="BKMK_Determiningsortorder"></a>   
 ## <a name="determining-sort-order"></a>並べ替え順序の決定  

@@ -2,12 +2,12 @@
 title: '方法: XML ファイルにオブジェクト データを書き込む (C#)'
 ms.date: 07/20/2015
 ms.assetid: 7681eb98-703d-4005-a369-26a7bca0f894
-ms.openlocfilehash: a4fdb496e3b015b2e3b46c9705ba1c05c20423f0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 77d3a45f6213bc390e0b3da0d30cfbc55235b1d1
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64595526"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170234"
 ---
 # <a name="how-to-write-object-data-to-an-xml-file-c"></a>方法: XML ファイルにオブジェクト データを書き込む (C#)
 <xref:System.Xml.Serialization.XmlSerializer> クラスを使用して、クラスから XML ファイルにオブジェクトを書き込む例を次に示します。  
@@ -45,7 +45,7 @@ public class XMLWrite
 ```  
   
 ## <a name="compiling-the-code"></a>コードのコンパイル  
- クラスには、パラメーターのないパブリック コンストラクターが必要です。  
+ シリアル化されるクラスには、パラメーターのないパブリック コンストラクターが必要です。  
   
 ## <a name="robust-programming"></a>信頼性の高いプログラミング  
  次の条件を満たす場合は、例外が発生する可能性があります。  

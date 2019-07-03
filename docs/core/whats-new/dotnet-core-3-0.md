@@ -7,12 +7,12 @@ dev_langs:
 author: thraka
 ms.author: adegeo
 ms.date: 05/06/2019
-ms.openlocfilehash: f7dc95a9f0b652f1509720fb987cbdb88f64e78c
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 369c74d2d8e82f157de0eec4294a5ee50542292b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689253"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169786"
 ---
 # <a name="whats-new-in-net-core-30-preview-5"></a>.NET Core 3.0 (Preview 5) の新機能
 
@@ -20,10 +20,11 @@ ms.locfileid: "66689253"
 
 .NET Core 3.0 では C# 8.0 のサポートが追加されています。 最新リリースの Visual Studio 2019 Update 1 Preview または OmniSharp 拡張機能を含む VSCode を使用することを強くお勧めします。
 
-[.NET Core 3.0 Preview 5 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、Mac、Linux 上で使い始めましょう。
+[.NET Core 3.0 Preview 6 を今すぐダウンロード](https://aka.ms/netcore3download)して Windows、Mac、Linux 上で使い始めましょう。
 
 各プレビュー リリースの詳細については、次の発表を参照してください。
 
+- [.NET Core 3.0 Preview 6 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-6/)
 - [.NET Core 3.0 Preview 5 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-0-preview-5/)
 - [.NET Core 3.0 Preview 4 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-4/)
 - [.NET Core 3.0 Preview 3 の発表](https://devblogs.microsoft.com/dotnet/announcing-net-core-3-preview-3/)
@@ -112,6 +113,34 @@ dotnet publish -r win10-x64 /p:PublishSingleFile=true
 
 単一ファイルの発行の詳細については、[単一ファイル バンドラー設計のドキュメント](https://github.com/dotnet/designs/blob/master/accepted/single-file/design.md)を参照してください。
 
+## <a name="assembly-linking"></a>アセンブリのリンク
+
+.NET Core 3.0 SDK に付属するツールを使うと、IL を分析し、未使用のアセンブリをトリミングすることによって、アプリのサイズを減らすことができます。
+
+自己完結型アプリには、コードの実行に必要なものがすべて含まれるので、ホスト コンピューターに .NET をインストールする必要はありません。 ただし、多くの場合、アプリが機能するにはフレームワークの小さなサブセットのみが必要であり、使用されていない他のライブラリは削除できます。
+
+.NET Core には、[IL リンカー](https://github.com/mono/linker) ツールを使ってアプリの IL をスキャンする設定が含まれるようになっています。 このツールでは、必要なコードが検出された後、使われていないライブラリがトリミングされます。 このツールを使うと、一部のアプリの展開サイズを大幅に削減できます。
+
+このツールを有効にするには、プロジェクトで `<PublishTrimmed>` を設定し、自己完結型アプリを発行します。
+
+```xml
+<PropertyGroup>
+  <PublishTrimmed>true</PublishTrimmed>
+</PropertyGroup>
+```
+
+```console
+dotnet publish -r <rid> -c Release
+```
+
+たとえば、含まれている基本的な "hello world" という新しいコンソール プロジェクト テンプレートは、発行されるときに、サイズが約 70 MB になります。 `<PublishTrimmed>` を使うことにより、そのサイズが約 30 MB に減ります。
+
+考慮すべき重要なこととして、リフレクションまたは関連する動的機能を使っているアプリケーションまたはフレームワーク (ASP.NET Core と WPF を含む) では、トリミングすると壊れることがよくあります。 このような破損が発生するのは、リンカーはこの動的な動作を認識しておらず、リフレクションに必要なフレームワークの種類を判断できないためです。 IL リンカー ツールは、このシナリオを認識するように構成できます。
+
+何よりも、必ずトリミング後のアプリをテストしてください。
+
+IL リンカー ツールについて詳しくは、[ドキュメント](https://aka.ms/dotnet-illink)または [mono/linker]( https://github.com/mono/linker) リポジトリをご覧ください。
+
 ## <a name="tiered-compilation"></a>階層型コンパイル
 
 .NET Core 3.0 では、[階層型コンパイル](https://devblogs.microsoft.com/dotnet/tiered-compilation-preview-in-net-core-2-1/) (TC) が既定で有効になりました。 この機能により、ランタイムが状況に応じて Just-In-Time (JIT) コンパイラを使用してパフォーマンスを向上できるようになりました。
@@ -131,6 +160,38 @@ TC を完全に無効にするには、プロジェクト ファイルでこの�
 ```xml
 <TieredCompilation>false</TieredCompilation>
 ```
+
+## <a name="readytorun-images"></a>ReadyToRun イメージ
+
+アプリケーション アセンブリを ReadyToRun (R2R) 形式としてコンパイルすることで、.NET Core アプリケーションの起動時間を向上させることができます。 R2R とは、Ahead-Of-Time (AOT) コンパイルの一種です。
+
+R2R バイナリでは、アプリケーションの読み込み時に Just-In-Time (JIT) コンパイラで行う必要がある作業量を減らすことにより、起動時のパフォーマンスが向上します。 バイナリには、JIT で生成されるものと似たネイティブ コードが含まれます。
+
+R2R バイナリは、中間言語 (IL) コード (一部のシナリオでまだ必要です) と同じコードのネイティブ バージョンの両方が含まれるため、大きくなります。 R2R は、Linux x64 や Windows x64 などの特定のランタイム環境 (RID) をターゲットとする自己完結型アプリを発行するときにのみ使用できます。
+
+アプリを R2R としてコンパイルするには、`<PublishReadyToRun>` の設定を追加します。
+
+```xml
+<PropertyGroup>
+  <PublishReadyToRun>true</PublishReadyToRun>
+</PropertyGroup>
+```
+
+自己完結型アプリを発行します。 たとえば、次のコマンドでは、Windows の 64 ビット版向けの自己完結型アプリが作成されます。
+
+```console
+dotnet publish -c Release -r win-x64 --self-contained true
+```
+
+### <a name="cross-platformarchitecture-restrictions"></a>クロス プラットフォーム/アーキテクチャの制限
+
+現在、ReadyToRun コンパイラではクロスターゲットはサポートされていません。 特定のターゲットに対してコンパイルする必要があります。 たとえば、Windows x64 用の R2R イメージが必要な場合は、その環境で publish コマンドを実行する必要があります。
+
+クロスターゲットに対する例外:
+
+- Windows x64 を使って、Windows ARM32、ARM64、x86 のイメージをコンパイルできます。
+- Windows x86 を使って、Windows ARM32 のイメージをコンパイルできます。
+- Linux x64 を使って、Linux ARM32 と ARM64 のイメージをコンパイルできます。
 
 ## <a name="build-copies-dependencies"></a>ビルドによる依存関係のコピー
 
@@ -362,9 +423,19 @@ Windows では、フラット C API、COM、および WinRT の形式で、質�
 
 ## <a name="http2-support"></a>HTTP/2 のサポート
 
-<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 型は HTTP/2 プロトコルをサポートしています。 サポートは現在無効ですが、<xref:System.Net.Http.HttpClient> を使用する前に `AppContext.SetSwitch("System.Net.Http.SocketsHttpHandler.Http2Support", true);` を呼び出すことで有効にすることができます。 アプリを実行する前に `DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2SUPPORT` 環境変数を `true` に設定することで HTTP/2 のサポートを有効にすることもできます。
+<xref:System.Net.Http.HttpClient?displayProperty=nameWithType> 型は HTTP/2 プロトコルをサポートしています。 HTTP/2 が有効な場合、HTTP プロトコルのバージョンは TLS/ALPN を介してネゴシエートされ、HTTP/2 はサーバーがそれを使用することを選択した場合に使用されます。
 
-HTTP/2 が有効な場合、HTTP プロトコルのバージョンは TLS/ALPN を介してネゴシエートされ、HTTP/2 はサーバーがそれを使用することを選択した場合にのみ使用されます。
+既定のプロトコルは HTTP/1.1 のままですが、2 つの方法で HTTP/2 を有効にすることができます。 1 つ目として、HTTP/2 を使うように HTTP 要求メッセージを設定することができます。
+
+[!CODE-csharp[Http2Request](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Request)]
+
+2 つ目として、既定で HTTP/2 を使うように <xref:System.Net.Http.HttpClient> を変更することができます。
+
+[!CODE-csharp[Http2Client](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#Client)]
+
+多くの場合、アプリケーションを開発しているときは、暗号化されていない接続を使います。 ターゲット エンドポイントで HTTP/2 が使われることがわかっている場合は、HTTP/2 用の暗号化されていない接続を有効にできます。 有効にするには、`DOTNET_SYSTEM_NET_HTTP_SOCKETSHTTPHANDLER_HTTP2UNENCRYPTEDSUPPORT` 環境変数を `1` に設定するか、またはアプリのコンテキストで有効にします。
+
+[!CODE-csharp[Http2Context](~/samples/snippets/core/whats-new/whats-new-in-30/cs/http.cs#AppContext)]
 
 ## <a name="tls-13--openssl-111-on-linux"></a>Linux 上の TLS 1.3 と OpenSSL 1.1.1
 

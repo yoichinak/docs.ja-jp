@@ -1,19 +1,19 @@
 ---
-title: 売上の異常検出シナリオに ML.NET を使用する
-description: 製品売上の異常検出シナリオに ML.NET を使用してデータの異常スパイクと変化点について分析し、適切な措置を講じる方法について説明します。
-ms.date: 05/29/2019
+title: 'チュートリアル: 製品売上の異常を検出する'
+description: 製品売上データの異常検出アプリケーションを構築する方法について説明します。 このチュートリアルでは、Visual Studio 2019 の C# を使って .NET Core コンソール アプリケーションを作成します。
+ms.date: 06/11/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e092aea66ca9f439cf97c1ebee83097def0f520b
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 3e3e368ed3bcb35e7e2c8bdf08abe71afd4ae87c
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758803"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67306224"
 ---
-# <a name="tutorial-use-mlnet-for-product-sales-anomaly-detection"></a>チュートリアル: 製品売上の異常検出に ML.NET を使用する 
+# <a name="tutorial-detect-anomalies-in-product-sales-with-mlnet"></a>チュートリアル: ML.NET で製品売上の異常を検出する
 
-このサンプル チュートリアルでは、ML.NET を使用して製品売上データの異常を検出し、Visual Studio 2019 で C# を使用して .NET Core コンソール アプリケーションを介して適切な措置を講じる方法について説明します。 
+製品売上データの異常検出アプリケーションを構築する方法について説明します。 このチュートリアルでは、Visual Studio の C# を使って .NET Core コンソール アプリケーションを作成します。
 
 このチュートリアルでは、次の作業を行う方法について説明します。
 > [!div class="checklist"]

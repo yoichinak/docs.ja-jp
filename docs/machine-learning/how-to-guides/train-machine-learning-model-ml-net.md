@@ -5,12 +5,12 @@ ms.date: 06/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to, title-hack-0612
-ms.openlocfilehash: b7799d19f5ad51ce509cc6872d9053cad1158552
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: d93353a3503ba67bde5fb61dc88f45d26e2f4306
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025594"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307444"
 ---
 # <a name="train-and-evaluate-a-model"></a>モデルのトレーニングと評価
 
@@ -115,7 +115,7 @@ IEstimator<ITransformer> dataPrepEstimator =
 // Create data prep transformer
 ITransformer dataPrepTransformer = dataPrepEstimator.Fit(trainData);
 
-// Apply tranforms to training data
+// Apply transforms to training data
 IDataView transformedTrainingData = dataPrepTransformer.Transform(trainData);
 ```
 
@@ -136,7 +136,7 @@ var UserDefinedColumnSdcaEstimator = mlContext.Regression.Trainers.Sdca(labelCol
 データの前処理を完了したら、[`Fit`](xref:Microsoft.ML.Trainers.TrainerEstimatorBase`2.Fit*) メソッドを使用して、[`StochasticDualCoordinateAscent`](xref:Microsoft.ML.Trainers.SdcaRegressionTrainer) 回帰アルゴリズムで機械学習モデルをトレーニングします。
 
 ```csharp
-// Define StochasticDualCoodrinateAscent regression algorithm estimator
+// Define StochasticDualCoordinateAscent regression algorithm estimator
 var sdcaEstimator = mlContext.Regression.Trainers.Sdca();
 
 // Build machine learning model

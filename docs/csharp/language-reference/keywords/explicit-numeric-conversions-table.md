@@ -10,12 +10,12 @@ helpviewer_keywords:
 - types [C#], explicit numeric conversions
 - type conversion [C#], explicit numeric
 ms.assetid: f3bb9e76-6b92-4df7-bc36-f866c24e1dfd
-ms.openlocfilehash: 90691ae0d9de35831b7b3119493e4e9cd81720e6
-ms.sourcegitcommit: bdd930b5df20a45c29483d905526a2a3e4d17c5b
+ms.openlocfilehash: 24f7401538eb1eeb675e6c3de265688780d6b91a
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53236313"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424205"
 ---
 # <a name="explicit-numeric-conversions-table-c-reference"></a>明示的な数値変換の一覧表 (C# リファレンス)
 
@@ -23,14 +23,14 @@ ms.locfileid: "53236313"
 
 |From|終了|  
 |----------|--------|  
-|[sbyte](sbyte.md)|`byte`、`ushort`、`uint`、`ulong`、または `char`|  
-|[byte](byte.md)|`sbyte` または `char`|  
-|[short](short.md)|`sbyte`、`byte`、`ushort`、`uint`、`ulong`、または `char`|  
-|[ushort](ushort.md)|`sbyte`、`byte`、`short`、または `char`|  
-|[int](int.md)|`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong`、または `char`|  
-|[uint](uint.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、または `char`|  
-|[long](long.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong`、または `char`|  
-|[ulong](ulong.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、または `char`|  
+|[sbyte](../builtin-types/integral-numeric-types.md)|`byte`、`ushort`、`uint`、`ulong`、または `char`|  
+|[byte](../builtin-types/integral-numeric-types.md)|`sbyte` または `char`|  
+|[short](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`ushort`、`uint`、`ulong`、または `char`|  
+|[ushort](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、または `char`|  
+|[int](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`uint`、`ulong`、または `char`|  
+|[uint](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、または `char`|  
+|[long](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`ulong`、または `char`|  
+|[ulong](../builtin-types/integral-numeric-types.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、または `char`|  
 |[char](char.md)|`sbyte`、 `byte`、または `short`|  
 |[float](float.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、または `decimal`|  
 |[double](double.md)|`sbyte`、`byte`、`short`、`ushort`、`int`、`uint`、`long`、`ulong`、`char`、`float`、または `decimal`|  
@@ -67,10 +67,9 @@ ms.locfileid: "53236313"
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
 - [キャストと型変換](../../programming-guide/types/casting-and-type-conversions.md)
-- [() 演算子](../operators/invocation-operator.md)
-- [整数型の一覧表](integral-types-table.md)
+- [() 演算子](../operators/type-testing-and-conversion-operators.md#cast-operator-)
+- [整数型](../builtin-types/integral-numeric-types.md)
 - [浮動小数点型の一覧表](floating-point-types-table.md)
 - [組み込み型の一覧表](built-in-types-table.md)
 - [暗黙的な数値変換の一覧表](implicit-numeric-conversions-table.md)

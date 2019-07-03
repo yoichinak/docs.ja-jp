@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: e6654718f174c9d8b628b05d85d74952c222eb66
-ms.sourcegitcommit: 4c10802ad003374641a2c2373b8a92e3c88babc8
+ms.openlocfilehash: 39e454d67f60280c6a43e3b80d788d873345ab77
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65452733"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307389"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>ML.NET による自動機械学習
 

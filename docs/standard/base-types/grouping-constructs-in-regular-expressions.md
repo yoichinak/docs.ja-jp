@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fc18634-f590-4062-8d5c-f0b71abe405b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 16776e83c8bae6cc82329a8f709fd9d1d7cab145
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 63a3ee099d4256a4bc800f74615fca8eaec2a77f
+ms.sourcegitcommit: ced0cccf15adfd492f8196cb739f01dde52c9252
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64634339"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67135678"
 ---
 # <a name="grouping-constructs-in-regular-expressions"></a>正規表現でのグループ化構成体
 グループ化構成体は、正規表現の部分式を表し、入力文字列の部分文字列をキャプチャします。 グループ化構成体を使用して、以下を実行できます。  
@@ -187,7 +187,7 @@ ms.locfileid: "64634339"
   
  ここで、 *name1* は現在のグループ (省略可能) で、 *name2* は既に定義されていたグループで、 *subexpression* は有効な正規表現パターンです。 グループ定義の均等化では、 *name2* の定義を削除し、 *name2* と *name1* の間隔を *name1*に格納します。 *name2* グループが定義されていない場合、一致はバックトラックされます。 *name2* の最後の定義を削除すると、 *name2*の以前の定義がわかるため、この構成体によって、かっこや左右の角かっこなど入れ子になった構成体を追跡するカウンターとして *name2* グループのキャプチャのスタックを使用できます。  
   
- グループ定義の均等化では、 *name2* をスタックとして使用します。 入れ子になった各構成体の開始文字が、グループとその <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> コレクションに配置されます。 終了文字が一致すると、対応する開始文字がグループから削除され、 <xref:System.Text.RegularExpressions.Group.Captures%2A> コレクションが 1 つ減らされます。 入れ子になったすべての構成体の開始文字と終了文字が一致したら、 *name1* は空になります。  
+ グループ定義の均等化では、 *name2* をスタックとして使用します。 入れ子になった各構成体の開始文字が、グループとその <xref:System.Text.RegularExpressions.Group.Captures%2A?displayProperty=nameWithType> コレクションに配置されます。 終了文字が一致すると、対応する開始文字がグループから削除され、 <xref:System.Text.RegularExpressions.Group.Captures%2A> コレクションが 1 つ減らされます。 入れ子になったすべての構成体の開始文字と終了文字が一致したら、*name2* は空になります。  
   
 > [!NOTE]
 >  入れ子になった構成体の適切な開始文字と終了文字を使用するように次の例の正規表現を変更すると、その正規表現を使用して、複数の入れ子になったメソッド呼び出しを含む数式やプログラム コード行などのほとんどの入れ子になった構成体を処理できるようになります。  

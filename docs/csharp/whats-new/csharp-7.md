@@ -3,12 +3,12 @@ title: C# 7.0 の新機能 - C# ガイド
 description: C# 言語のバージョン 7.0 での新機能の概要を説明します。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: 9b4569f31211afc69efb1b853723fded9329ae41
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: c3fdee2bdb974640b56bfab3af4be57133ad2f7a
+ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66815974"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67307149"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 の新機能
 
@@ -95,7 +95,7 @@ C# には、設計の意図を説明するために使用される、クラス�
 * [is](../language-reference/keywords/is.md) および [switch](../language-reference/keywords/switch.md) ステートメントによるパターン マッチング操作。
 * 割り当ての値を破棄として明示的に識別する必要がある場合の、スタンドアロン識別子。
 
-次の例は、ある都市の 2 つの異なる年度のデータを含む 6 つのタプルを戻す `QueryCityDataForYears` メソッドを定義しています。 この例のメソッド呼び出しでは、メソッドによって戻された 2 つの人口の値のみが考慮されているため、タプルの残りの値はタプルの分解時に破棄として扱われます。
+次の例では、ある都市の 2 つの異なる年度のデータを含む 6 つのタプルを戻す `QueryCityDataForYears` メソッドを定義しています。 この例のメソッド呼び出しでは、メソッドによって戻された 2 つの人口の値のみが考慮されているため、タプルの残りの値はタプルの分解時に破棄として扱われます。
 
 [!code-csharp[Tuple-discard](~/samples/snippets/csharp/programming-guide/deconstructing-tuples/discard-tuple1.cs)]
 

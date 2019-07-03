@@ -9,12 +9,12 @@ helpviewer_keywords:
 - Office programming [C#]
 - Office programming [Visual Basic]
 ms.assetid: 519cff31-f80b-4f0e-a56b-26358d0f8c51
-ms.openlocfilehash: 594f97d47d87d846ba27fc192096005e94587dd1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 80f0b97d38b17740916ea5407b78f298aa42604b
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64608276"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67169853"
 ---
 # <a name="walkthrough-office-programming-c-and-visual-basic"></a>チュートリアル: Office のプログラミング (C# および Visual Basic)
 Visual Studio には、Microsoft Office のプログラミングを改善する C# および Visual Basic の新機能が導入されています。 便利な C# の機能には、名前付き引数、省略可能な引数、型 `dynamic` の戻り値があります。 COM プログラミングでは、`ref` キーワードを省略し、インデックス付きプロパティにアクセスできます。 Visual Basic の機能には、自動実装プロパティ、ラムダ式内のステートメント、コレクション初期化子などがあります。
@@ -37,13 +37,13 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
 2. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** をクリックします。  
   
-3. **[インストールされたテンプレート]** ペインで、**[Visual Basic]** または **[Visual C#]** を展開し、**[Office]** を展開して、Office 製品のバージョン年度をクリックします。  
+3. **[インストールされたテンプレート]** ペインで、 **[Visual Basic]** または **[Visual C#]** を展開し、 **[Office]** を展開して、Office 製品のバージョン年度をクリックします。  
   
-4. **[テンプレート]** ペインで、**[Excel]\< バージョン、[アドイン]** の順にクリックします。  
+4. **[テンプレート]** ペインで、 **[Excel]\< バージョン、[アドイン]** の順にクリックします。  
   
-5. **[テンプレート]** ペインの上部で、**[ターゲット フレームワーク]** ボックスに **[.NET Framework 4]** またはそれ以降のバージョンが表示されていることを確認します。  
+5. **[テンプレート]** ペインの上部で、 **[ターゲット フレームワーク]** ボックスに **[.NET Framework 4]** またはそれ以降のバージョンが表示されていることを確認します。  
   
-6. 必要に応じて、**[名前]** ボックスにプロジェクトの名前を入力します。  
+6. 必要に応じて、 **[名前]** ボックスにプロジェクトの名前を入力します。  
   
 7. **[OK]** をクリックします。  
   
@@ -51,7 +51,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
 ### <a name="to-add-references"></a>参照を追加するには  
   
-1. **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、**[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。  
+1. **ソリューション エクスプローラー**で、プロジェクトの名前を右クリックし、 **[参照の追加]** をクリックします。 **[参照の追加]** ダイアログ ボックスが表示されます。  
   
 2. **[アセンブリ]** タブの **[コンポーネント名]** 一覧で、**Microsoft.Office.Interop.Excel**、バージョン `<version>.0.0.0` (Office 製品番号のキーについては、[Microsoft バージョン](https://en.wikipedia.org/wiki/Microsoft_Office#Versions)に関するページを参照してください) を選択し、Ctrl キーを押しながら **Microsoft.Office.Interop.Word**、`version <version>.0.0.0` を選択します。 アセンブリが表示されない場合は、それをインストールして表示させることが必要になる場合があります (「[方法: Office のプライマリ相互運用機能アセンブリをインストールする](/visualstudio/vsto/how-to-install-office-primary-interop-assemblies)」を参照)。  
   
@@ -59,7 +59,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
 ### <a name="to-add-necessary-imports-statements-or-using-directives"></a>必要な Imports ステートメントまたはディレクティブの使用を追加するには  
   
-1. **ソリューション エクスプローラー**で、**[ThisAddIn.vb]** または **[ThisAddIn.cs]** ファイルを右クリックし、**[コードの表示]** をクリックします。  
+1. **ソリューション エクスプローラー**で、 **[ThisAddIn.vb]** または **[ThisAddIn.cs]** ファイルを右クリックし、 **[コードの表示]** をクリックします。  
   
 2. 次の `Imports` ステートメント (Visual Basic) または `using` ディレクティブ (C#) が含まれていない場合は、コード ファイルの先頭に追加します。  
   
@@ -69,7 +69,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
 ### <a name="to-create-a-list-of-bank-accounts"></a>銀行口座の一覧を作成するには  
   
-1. **ソリューション エクスプローラー**で、プロジェクト名を右クリックし、**[追加]** をクリックしてから **[クラス]** をクリックします。 Visual Basic を使用している場合は Account.vb、C# を使用している場合は Account.cs という名前をクラスに付けます。 **[追加]** をクリックします。  
+1. **ソリューション エクスプローラー**で、プロジェクト名を右クリックし、 **[追加]** をクリックしてから **[クラス]** をクリックします。 Visual Basic を使用している場合は Account.vb、C# を使用している場合は Account.cs という名前をクラスに付けます。 **[追加]** をクリックします。  
   
 2. `Account` クラスの定義を次のコードに置き換えます。 このクラス定義では、*自動実装プロパティ*が使用されます。 詳細については、「[自動実装プロパティ](../../../visual-basic/programming-guide/language-features/procedures/auto-implemented-properties.md)」を参照してください。  
   
@@ -93,7 +93,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
      C# の 2 つの新しい機能は、このメソッドで使用されます。 これら両方の機能は、Visual Basic で既に存在します。  
   
-    - [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) メソッドには、特定のテンプレートを指定する*省略可能なパラメーター*があります。 [!INCLUDE[csharp_dev10_long](~/includes/csharp-dev10-long-md.md)] の新機能であるオプションのパラメーターでは、パラメーターの既定値を使用する場合は、そのパラメーターの引数を省略することができます。 前の例では引数が渡されないため、`Add` は、既定のテンプレートを使用して、新しいブックを作成します。 以前のバージョンの C# では、同等のステートメントには、プレースホルダーの引数 `excelApp.Workbooks.Add(Type.Missing)` が必要です。  
+    - [Add](<xref:Microsoft.Office.Interop.Excel.Workbooks.Add%2A>) メソッドには、特定のテンプレートを指定する*省略可能なパラメーター*があります。 C# 4 の新機能であるオプションのパラメーターでは、パラメーターの既定値を使用する場合は、そのパラメーターの引数を省略することができます。 前の例では引数が渡されないため、`Add` は、既定のテンプレートを使用して、新しいブックを作成します。 以前のバージョンの C# では、同等のステートメントには、プレースホルダーの引数 `excelApp.Workbooks.Add(Type.Missing)` が必要です。  
   
          詳細については、「[名前付き引数と省略可能な引数](../../../csharp/programming-guide/classes-and-structs/named-and-optional-arguments.md)」を参照してください。  
   
@@ -115,7 +115,7 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
 
      [!code-vb[csOfficeWalkthrough#7](~/samples/snippets/visualbasic/VS_Snippets_VBCSharp/csofficewalkthrough/vb/thisaddin.vb#7)]  
   
-     これらの追加機能では、C# の別の機能である、[dynamic](../../../csharp/language-reference/keywords/dynamic.md) 型がある場合と同様に Office などの COM ホストから返される `Object` 値の処理を示します。 これは、**[相互運用機能型の埋め込み]** が既定値の `True` に設定されている場合、または同様に、アセンブリが [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションによって参照されている場合に発生します。 `dynamic` 型では既に Visual Basic で使用できる遅延バインディングが可能であり、Visual C# 2008 以前のバージョンの言語で必要な明示的なキャストを回避します。  
+     これらの追加機能では、C# の別の機能である、[dynamic](../../../csharp/language-reference/keywords/dynamic.md) 型がある場合と同様に Office などの COM ホストから返される `Object` 値の処理を示します。 これは、 **[相互運用機能型の埋め込み]** が既定値の `True` に設定されている場合、または同様に、アセンブリが [/link](../../../csharp/language-reference/compiler-options/link-compiler-option.md) コンパイラ オプションによって参照されている場合に発生します。 `dynamic` 型では既に Visual Basic で使用できる遅延バインディングが可能であり、Visual C# 2008 以前のバージョンの言語で必要な明示的なキャストを回避します。  
   
      たとえば、`excelApp.Columns[1]` は `Object` を返し、`AutoFit` は Excel の [Range](<xref:Microsoft.Office.Interop.Excel.Range>) メソッドであるとします。 `dynamic` がない場合、`excelApp.Columns[1]` のインスタンスとして、`Range` によって返されたオブジェクトをキャストしてから、`AutoFit` メソッドを呼び出す必要があります。  
   
@@ -149,17 +149,17 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
 ### <a name="to-clean-up-the-completed-project"></a>完成したプロジェクトをクリーンアップするには  
   
-1. Visual Studio で、**[ビルド]** メニューの **[ソリューションのクリーン]** をクリックします。 それ以外の場合は、コンピューターで Excel を起動するたびにアドインが実行されます。  
+1. Visual Studio で、 **[ビルド]** メニューの **[ソリューションのクリーン]** をクリックします。 それ以外の場合は、コンピューターで Excel を起動するたびにアドインが実行されます。  
   
 ### <a name="to-find-the-pia-reference"></a>PIA 参照を検索するには  
   
-1. もう一度アプリケーションを実行しますが、**[ソリューションのクリーン]** はクリックしません。  
+1. もう一度アプリケーションを実行しますが、 **[ソリューションのクリーン]** はクリックしません。  
   
 2. **[開始]** を選択します。 **Microsoft Visual Studio \<バージョン>** を見つけ、開発者コマンド プロンプトを開きます。  
   
 3. [Developer Command Prompt for Visual Studio]\(Visual Studio 用開発者コマンド プロンプト\) ウィンドウに「`ildasm`」と入力し、Enter キーを押します。 [IL DASM] ウィンドウが表示されます。  
   
-4. [IL DASM] ウィンドウの **[ファイル]** メニューで **[ファイル]** > **[開く]** をクリックします。 **[Visual Studio \<バージョン>]** をダブルクリックし、**[プロジェクト]** をダブルクリックします。 プロジェクトのフォルダーを開き、bin/Debug フォルダーで*プロジェクト名*.dll を見つけます。 *プロジェクト名*.dll をダブルクリックします。 新しいウィンドウに、他のモジュールおよびアセンブリへの参照に加えて、プロジェクトの属性が表示されます。 名前空間 `Microsoft.Office.Interop.Excel` と `Microsoft.Office.Interop.Word` はアセンブリに含まれています。 Visual Studio の既定では、コンパイラは、参照 PIA からアセンブリに必要な型をインポートします。  
+4. [IL DASM] ウィンドウの **[ファイル]** メニューで **[ファイル]**  >  **[開く]** をクリックします。 **[Visual Studio \<バージョン>]** をダブルクリックし、 **[プロジェクト]** をダブルクリックします。 プロジェクトのフォルダーを開き、bin/Debug フォルダーで*プロジェクト名*.dll を見つけます。 *プロジェクト名*.dll をダブルクリックします。 新しいウィンドウに、他のモジュールおよびアセンブリへの参照に加えて、プロジェクトの属性が表示されます。 名前空間 `Microsoft.Office.Interop.Excel` と `Microsoft.Office.Interop.Word` はアセンブリに含まれています。 Visual Studio の既定では、コンパイラは、参照 PIA からアセンブリに必要な型をインポートします。  
   
      詳細については、「[方法 :アセンブリの内容を表示する](../../../framework/app-domains/how-to-view-assembly-contents.md)」を参照してください。  
   
@@ -174,9 +174,9 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
 ### <a name="to-restore-the-pia-dependency"></a>PIA の依存関係を復元するには  
   
-1. **ソリューション エクスプローラー**で、**[すべてのファイルを表示]** ボタンをクリックします。 **[参照]** フォルダーを展開し、**[Microsoft.Office.Interop.Excel]** を選択します。 F4 キーを押して **[プロパティ]** ウィンドウを表示します。  
+1. **ソリューション エクスプローラー**で、 **[すべてのファイルを表示]** ボタンをクリックします。 **[参照]** フォルダーを展開し、 **[Microsoft.Office.Interop.Excel]** を選択します。 F4 キーを押して **[プロパティ]** ウィンドウを表示します。  
   
-2. **[プロパティ]** ウィンドウで、**[相互運用機能型の埋め込み]** プロパティを **[True]** から **[False]** に変更します。  
+2. **[プロパティ]** ウィンドウで、 **[相互運用機能型の埋め込み]** プロパティを **[True]** から **[False]** に変更します。  
   
 3. `Microsoft.Office.Interop.Word` について、この手順の手順 1 と 2 を繰り返します。  
   
@@ -186,9 +186,9 @@ Visual Studio には、Microsoft Office のプログラミングを改善する 
   
 6. アセンブリ ウィンドウを開くには、前の手順の手順 1 ～ 3 を繰り返します。 `Microsoft.Office.Interop.Word` と `Microsoft.Office.Interop.Excel` は、埋め込まれたアセンブリの一覧には表示されません。  
   
-7. **MANIFEST** アイコンをダブルクリックし、参照アセンブリのリストをスクロールします。 `Microsoft.Office.Interop.Word` と `Microsoft.Office.Interop.Excel` の両方が一覧に表示されています。 アプリケーションが Excel と Word の PIA を参照し、**[相互運用機能型の埋め込み]** プロパティを **[False]** に設定しているため、両方のアセンブリがエンド ユーザーのコンピューター上に存在する必要があります。  
+7. **MANIFEST** アイコンをダブルクリックし、参照アセンブリのリストをスクロールします。 `Microsoft.Office.Interop.Word` と `Microsoft.Office.Interop.Excel` の両方が一覧に表示されています。 アプリケーションが Excel と Word の PIA を参照し、 **[相互運用機能型の埋め込み]** プロパティを **[False]** に設定しているため、両方のアセンブリがエンド ユーザーのコンピューター上に存在する必要があります。  
   
-8. Visual Studio で、**[ビルド]** メニューの **[ソリューションのクリーン]** をクリックして、完成したプロジェクトをクリーンアップします。  
+8. Visual Studio で、 **[ビルド]** メニューの **[ソリューションのクリーン]** をクリックして、完成したプロジェクトをクリーンアップします。  
   
 ## <a name="see-also"></a>関連項目
 
