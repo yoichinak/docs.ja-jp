@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: acd71129-5ff0-4b4e-b266-c72cc0c53601
-ms.openlocfilehash: 303e46e79786ce7f062db4a1a3ffb6c321169af8
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: e84319c60534c3ecf154c3f58973bcc429a73842
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64631301"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539823"
 ---
 # <a name="known-issues-and-considerations-in-linq-to-entities"></a>LINQ to Entities の既知の問題および注意点
-ここでは、[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリの既知の問題について説明します。  
+このセクションでは、linq to Entities クエリの既知の問題に関する情報を提供します。  
   
 - [LINQ クエリをキャッシュできないこと](#LINQQueriesThatAreNotCached)  
   
@@ -42,7 +42,7 @@ ms.locfileid: "64631301"
   
 <a name="UnsignedIntsUnsupported"></a>   
 ## <a name="unsigned-integers-not-supported"></a>サポートされていない符号なし整数  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] によって符号なし整数がサポートされていないため、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] クエリでの符号なし整数型の指定はサポートされていません。 符号なし整数を指定する場合、<xref:System.ArgumentException>次の例に示すように、クエリ式の変換中に例外がスローされます。 この例では、ID 48000 を持つ注文に対してクエリを実行します。  
+ LINQ to Entities クエリで、符号なし整数型の指定はサポートされていませんので、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]は符号なし整数をサポートしていません。 符号なし整数を指定する場合、<xref:System.ArgumentException>次の例に示すように、クエリ式の変換中に例外がスローされます。 この例では、ID 48000 を持つ注文に対してクエリを実行します。  
   
  [!code-csharp[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DP L2E Conceptual Examples/CS/Program.cs#uintasqueryparam)]
  [!code-vb[DP L2E Conceptual Examples#UIntAsQueryParam](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#uintasqueryparam)]  

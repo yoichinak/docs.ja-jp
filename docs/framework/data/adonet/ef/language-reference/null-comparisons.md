@@ -5,15 +5,15 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: ef88af8c-8dfe-4556-8b56-81df960a900b
-ms.openlocfilehash: f3bbb55ec65df1af776779682d307a67034e34b3
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 5862506960ae1e763baebee5d990df83f92cc784
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489901"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539729"
 ---
 # <a name="null-comparisons"></a>NULL 比較
-データ ソースの `null` 値は不明な値を表します。 [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリでは、NULL 値をチェックして、必ず NULL でない有効なデータを持つ行に特定の計算または比較を行うようにすることができます。 ただし、CLR の NULL セマンティクスは、データ ソースの NULL セマンティクスとは異なる場合があります。 ほとんどのデータベースでは、3 値論理を使用して NULL 比較を処理します。 これは、null 値に対する比較に評価されない`true`または`false`、評価結果が`unknown`します。 これは、多くの場合は ANSI NULL の実装ですが、そうでない場合もあります。  
+データ ソースの `null` 値は不明な値を表します。 Linq to Entities クエリで特定の計算または比較が有効な場合、または null 以外の場合、データを格納している行でのみ実行できるように null 値を確認できます。 ただし、CLR の NULL セマンティクスは、データ ソースの NULL セマンティクスとは異なる場合があります。 ほとんどのデータベースでは、3 値論理を使用して NULL 比較を処理します。 これは、null 値に対する比較に評価されない`true`または`false`、評価結果が`unknown`します。 これは、多くの場合は ANSI NULL の実装ですが、そうでない場合もあります。  
   
  SQL Server の既定では、NULL = NULL の比較は NULL 値を返します。 次の例では、行、`ShipDate`は null は、結果セットから除外して、TRANSACT-SQL ステートメントでは、0 行を返します。  
   
@@ -44,7 +44,7 @@ WHERE h.ShipDate IS Null
  [!code-vb[DP L2E Conceptual Examples#CastResultsIsNull](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DP L2E Conceptual Examples/VB/Module1.vb#castresultsisnull)]  
   
 ## <a name="passing-null-collections-to-aggregate-functions"></a>集計関数に NULL コレクションを渡す  
- [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]をサポートするコレクションを渡すときに、`IQueryable`での集計関数、集計の操作がデータベースで実行されます。 クエリがメモリで実行して、データベースで実行されたクエリの結果の違いがある可能性があります。 メモリ内クエリを使用して、一致がない場合、クエリは 0 を返します。 データベースでは、これと同じクエリから `null` が返されます。 場合、`null`値が LINQ 集計関数に渡されると、例外がスローされます。 可能な限りそのまま使用する`null`値型と null 許容型にクエリ結果を受け取るその型のプロパティをキャストします。  
+ LINQ to Entities でサポートするコレクションを渡すときにで`IQueryable`での集計関数、集計の操作がデータベースで実行されます。 クエリがメモリで実行して、データベースで実行されたクエリの結果の違いがある可能性があります。 メモリ内クエリを使用して、一致がない場合、クエリは 0 を返します。 データベースでは、これと同じクエリから `null` が返されます。 場合、`null`値が LINQ 集計関数に渡されると、例外がスローされます。 可能な限りそのまま使用する`null`値型と null 許容型にクエリ結果を受け取るその型のプロパティをキャストします。  
   
 ## <a name="see-also"></a>関連項目
 

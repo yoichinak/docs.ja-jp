@@ -2,12 +2,12 @@
 title: LINQ to ADO.NET (ポータル ページ)
 ms.date: 07/20/2015
 ms.assetid: bbbd7c76-2981-4b91-b8d2-437547181f52
-ms.openlocfilehash: 5783e45f666779e6cfecd611f1e2a34dae5e7df9
-ms.sourcegitcommit: b1cfd260928d464d91e20121f9bdba7611c94d71
+ms.openlocfilehash: 850e154b40e69cc655ee1b59161351b0b2898033
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67506000"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539379"
 ---
 # <a name="linq-to-adonet-portal-page"></a>LINQ to ADO.NET (ポータル ページ)
 LINQ to ADO.NET では、ADO.NET での列挙可能なオブジェクトを使用してクエリを実行することができます、[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]プログラミング モデル。  
@@ -15,7 +15,7 @@ LINQ to ADO.NET では、ADO.NET での列挙可能なオブジェクトを使�
 > [!NOTE]
 >  LINQ to ADO.NET のドキュメントについては、.NET Framework SDK の ADO.NET のセクションにあります。[LINQ と ADO.NET](../../../../framework/data/adonet/linq-and-ado-net.md)。
   
- 次の 3 つの別個の ADO.NET[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]テクノロジ。LINQ to DataSet、 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、および[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]します。 LINQ to DataSet の提供に対するクエリの実行度で最適化された、 <xref:System.Data.DataSet>、 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)] SQL Server データベースのスキーマを直接クエリすることができますと[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)]Entity Data Model のクエリを実行することができます。  
+ 次の 3 つの別個の ADO.NET[!INCLUDE[vbteclinqext](~/includes/vbteclinqext-md.md)]テクノロジ。LINQ to DataSet、 [!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]、および LINQ to Entities。 LINQ to DataSet の提供に対するクエリの実行度で最適化された、 <xref:System.Data.DataSet>、[!INCLUDE[vbtecdlinq](~/includes/vbtecdlinq-md.md)]できるように Entity Data Model のクエリを直接 SQL Server データベースのスキーマ、および LINQ to Entities クエリを実行することができます。  
   
 ## <a name="linq-to-dataset"></a>LINQ to DataSet  
  <xref:System.Data.DataSet> は、ADO.NET で最も幅広く使用されているコンポーネントの 1 つであり、ADO.NET の基礎である非接続型プログラミングの重要な要素です。 こうした突出した特長がある反面、<xref:System.Data.DataSet> のクエリ機能には制限もあります。  
@@ -32,7 +32,7 @@ LINQ to ADO.NET では、ADO.NET での列挙可能なオブジェクトを使�
  詳細については、「[LINQ to SQL](../../../../framework/data/adonet/sql/linq/index.md)」を参照してください。  
   
 ## <a name="linq-to-entities"></a>LINQ to Entities  
- エンティティ データ モデルを通じて、リレーショナル データは、.NET 環境でのオブジェクトとして公開されます。 これにより、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] の利用に最適なオブジェクト レイヤーが実現されます。開発者は、ビジネス ロジックの構築に使用する言語で、データベースを照会するクエリを作成できます。 この機能は、[!INCLUDE[linq_entities](~/includes/linq-entities-md.md)] と呼ばれます。 LINQ の詳細については、「[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)」を参照してください。  
+ Entity Data Model では、リレーショナル データが .NET 環境にオブジェクトとして公開されます。 これにより、[!INCLUDE[vbteclinq](~/includes/vbteclinq-md.md)] の利用に最適なオブジェクト レイヤーが実現されます。開発者は、ビジネス ロジックの構築に使用する言語で、データベースを照会するクエリを作成できます。 この機能は、エンティティに、LINQ と呼ばれます。 LINQ の詳細については、「[LINQ to Entities](../../../../framework/data/adonet/ef/language-reference/linq-to-entities.md)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目
 

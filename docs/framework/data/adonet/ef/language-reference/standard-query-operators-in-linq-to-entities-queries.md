@@ -2,24 +2,24 @@
 title: LINQ to Entities クエリの標準クエリ演算子
 ms.date: 08/21/2018
 ms.assetid: 7fa55a9b-6219-473d-b1e5-2884a32dcdff
-ms.openlocfilehash: 5c666bad40d0e433ee5f8d2b1155e881d7042a85
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f2661f1b492ff8f2ed18c7b396326562050ca45b
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61797723"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539445"
 ---
 # <a name="standard-query-operators-in-linq-to-entities-queries"></a>LINQ to Entities クエリの標準クエリ演算子
 クエリでは、データ ソースから取得する情報を指定できます。 また、並べ替え、グループ化、整形方法を指定して情報を取得することもできます。 LINQ には、クエリで使用できる一連の標準クエリ メソッドが用意されています。 これらのメソッドのほとんどの操作のシーケンス。シーケンスを実装する型を持つオブジェクトをこのコンテキストで、<xref:System.Collections.Generic.IEnumerable%601>インターフェイスまたは<xref:System.Linq.IQueryable%601>インターフェイス。 標準クエリ演算子のクエリ機能には、フィルター処理、投影、集計、並べ替え、グループ化、ページングなどがあります。 よく使用される標準クエリ演算子の中には、クエリ式構文を使用することで呼び出しが可能になるように、専用のキーワード構文のあるものもあります。 クエリ式はメソッド ベースの方法とは異なり、読み取りやすくクエリを表現できます。 クエリ式の句は、コンパイル時にクエリ メソッドへの呼び出しに変換されます。 同等のクエリ式の句がある標準クエリ演算子の一覧は、次を参照してください。[標準クエリ演算子の概要](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2013/bb397896(v=vs.120))します。  
   
- 標準クエリ演算子のすべてが [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] クエリでサポートされるわけではありません。 詳細については、次を参照してください。[サポートされているとサポートされていない LINQ メソッド (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)します。 このトピックでは、[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] に固有の標準クエリ演算子について説明します。 既知の問題の詳細については[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]クエリを参照してください[既知の問題とエンティティを LINQ での考慮事項](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)します。  
+ すべての標準クエリ演算子は、エンティティのクエリを LINQ でサポートされます。 詳細については、次を参照してください。[サポートされているとサポートされていない LINQ メソッド (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/supported-and-unsupported-linq-methods-linq-to-entities.md)します。 このトピックでは、LINQ to Entities に固有の標準クエリ演算子について説明します。 Linq to Entities クエリの既知の問題に関する詳細については、次を参照してください。[既知の問題とエンティティを LINQ での考慮事項](../../../../../../docs/framework/data/adonet/ef/language-reference/known-issues-and-considerations-in-linq-to-entities.md)します。  
   
 ## <a name="projection-and-filtering-methods"></a>投影およびフィルター処理メソッド  
  *プロジェクション*目的のフォームに結果セットの要素の変換を参照します。 たとえば、結果セットの各オブジェクトから必要なプロパティのサブセットを投影したり、特定のプロパティを投影してそのプロパティで数学演算を実行したり、結果セットの全オブジェクトを投影したりすることが可能です。 投影メソッドは、`Select` と `SelectMany` です。  
   
  *フィルタ リング*結果を指定した条件に一致する要素のみを含むセットを制限する操作を参照します。 フィルター処理メソッドは、`Where` です。  
   
- 投影およびフィルター処理メソッドのオーバーロードの大部分は、位置引数を受け入れるオーバーロードを例外として、[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] でサポートされます。  
+ 投影およびフィルター処理方法の大部分のオーバー ロードは、位置引数を受け入れるものは例外の LINQ to Entities でサポートされます。  
   
 ## <a name="join-methods"></a>結合メソッド  
  結合は、互いにナビゲート可能なリレーションシップを持たないデータ ソースをターゲットとするクエリにおいて重要な操作です。 2 つのデータ ソースを結合する操作とは、あるデータ ソース内のオブジェクトを、他方のデータ ソース内で共通の属性またはプロパティを持つオブジェクトと関連付けることです。 結合メソッドは、`Join` と `GroupJoin` です。  
@@ -29,7 +29,7 @@ ms.locfileid: "61797723"
 ## <a name="set-methods"></a>セット メソッド  
  LINQ のセット操作は、同一または別のコレクション (またはセット) 内に同等の要素があるかどうかによって結果セットが変化するクエリ操作です。 セット メソッドは、`All`、`Any`、`Concat`、`Contains`、`DefaultIfEmpty`、`Distinct`、`EqualAll`、`Except`、`Intersect`、および `Union` です。  
   
- LINQ to Objects と比較すれば動作に多少の違いがありますが、セット メソッドの大部分のオーバーロードは [!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)] でサポートされます。 ただし、set を使用するメソッド、<xref:System.Collections.Generic.IEqualityComparer%601>は、comparer はデータ ソースに変換できないため、サポートされていません。  
+ Set メソッドの大部分のオーバー ロードは、LINQ to Objects と比較すれば動作には、いくつか違いがある場合、LINQ to Entities でサポートされます。 ただし、set を使用するメソッド、<xref:System.Collections.Generic.IEqualityComparer%601>は、comparer はデータ ソースに変換できないため、サポートされていません。  
   
 ## <a name="ordering-methods"></a>並べ替えメソッド  
  並べ替えとは、1 つまたは複数の属性に基づいて結果セットの要素を並べ替えることです。 複数の基準を指定すると、グループ内での結び付きが壊れることがあります。  

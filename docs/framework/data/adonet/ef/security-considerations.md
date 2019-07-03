@@ -2,12 +2,12 @@
 title: セキュリティに関する注意事項 (Entity Framework)
 ms.date: 03/30/2017
 ms.assetid: 84758642-9b72-4447-86f9-f831fef46962
-ms.openlocfilehash: 66f8a9217a007ed1faf975638dfa8148e2f1c5ba
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: cf42787d7cc67d80f43a08b5fa71161fee20f5c3
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307298"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539833"
 ---
 # <a name="security-considerations-entity-framework"></a>セキュリティに関する注意事項 (Entity Framework)
 このトピックでは、[!INCLUDE[adonet_ef](../../../../../includes/adonet-ef-md.md)] アプリケーションの開発、配置、および実行に特有のセキュリティの注意点について説明します。 また、セキュリティで保護された .NET Framework アプリケーションを作成するための推奨事項に従ってください。 詳細については、次を参照してください。[セキュリティの概要](../../../../../docs/framework/data/adonet/security-overview.md)します。  
@@ -100,9 +100,9 @@ ms.locfileid: "67307298"
   
      [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリでは、リテラルを渡すことのできる場所であればどこででもパラメーターを渡すことができます。 外部エージェントから受け取ったリテラルを直接クエリに挿入することは避け、パラメーター化クエリを使用するようにしてください。 使用を検討する必要がありますも[クエリ ビルダー メソッド](https://docs.microsoft.com/previous-versions/dotnet/netframework-4.0/bb896238(v=vs.100))Entity SQL を安全に作成します。  
   
-- [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] インジェクション攻撃:  
+- エンティティのインジェクション攻撃を LINQ:  
   
-     [!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] 内でクエリを構築することは可能ですが、オブジェクト モデルの API を介して構築します。 [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリとは異なり、[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)] クエリは、構築に文字列操作や文字列連結は使用されません。このため、通常の SQL インジェクション攻撃に十分な抵抗力を持っていると言えます。  
+     クエリの構成は、LINQ to Entities で可能ですが、オブジェクト モデル API によって実行されます。 異なり[!INCLUDE[esql](../../../../../includes/esql-md.md)]クエリ、LINQ to Entities クエリは、文字列操作や文字列連結を使用して、構成されていませんおよび従来の SQL インジェクション攻撃を受けやすくはありません。  
   
 #### <a name="prevent-very-large-result-sets"></a>非常に大きな結果セットを使用しないようにする  
  非常に大きな結果セットを使用すると、消費されるリソースが結果セットのサイズに比例して増加する操作を実行する場合にクライアント システムがシャットダウンする可能性があります。 次のような状況では、予想外に大きな結果セットが生成されることがあります。  
@@ -113,7 +113,7 @@ ms.locfileid: "67307298"
   
 - 入れ子になった [!INCLUDE[esql](../../../../../includes/esql-md.md)] クエリ。  
   
- ユーザー入力を受け取るときには、その入力によって結果セットがシステムで処理しきれないほど大きくならないことを確認する必要があります。 使用することも、<xref:System.Linq.Queryable.Take%2A>メソッド[!INCLUDE[linq_entities](../../../../../includes/linq-entities-md.md)]または[制限](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)演算子[!INCLUDE[esql](../../../../../includes/esql-md.md)]結果セットのサイズを制限します。  
+ ユーザー入力を受け取るときには、その入力によって結果セットがシステムで処理しきれないほど大きくならないことを確認する必要があります。 使用することも、 <xref:System.Linq.Queryable.Take%2A> LINQ to Entities でのメソッドまたは[制限](../../../../../docs/framework/data/adonet/ef/language-reference/limit-entity-sql.md)演算子[!INCLUDE[esql](../../../../../includes/esql-md.md)]結果セットのサイズを制限します。  
   
 #### <a name="avoid-returning-iqueryable-results-when-exposing-methods-to-potentially-untrusted-callers"></a>信頼できない可能性のある呼び出し元にメソッドを公開するときに IQueryable 結果を返さないようにする  
  次の理由で、信頼できない可能性のある呼び出し元に公開されたメソッドから <xref:System.Linq.IQueryable%601> 型を返さないようにします。  

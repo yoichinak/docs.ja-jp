@@ -2,15 +2,15 @@
 title: Entity SQL 言語リファレンス
 ms.date: 03/30/2017
 ms.assetid: bb07282c-161d-47e8-856d-b2374ba18181
-ms.openlocfilehash: 158240678eec7eb4699263c4febe9b6991196e11
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 32e70c67bb36df167f7a6fbc8f2a855d63ed815a
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61613645"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539482"
 ---
 # <a name="entity-sql-language-reference"></a>Entity SQL 言語リファレンス
-このセクションでは、[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]、[!INCLUDE[esql](../../../../../../includes/esql-md.md)]、および [!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)] で使用されるモデリング言語とマッピング言語について詳しく説明します。  
+このセクションでは、LINQ の詳細なドキュメントを提供のエンティティに[!INCLUDE[esql](../../../../../../includes/esql-md.md)]、モデリングとマッピングの言語で使用される、[!INCLUDE[adonet_ef](../../../../../../includes/adonet-ef-md.md)]します。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [CSDL、SSDL、および MSL 仕様](../../../../../../docs/framework/data/adonet/ef/language-reference/csdl-ssdl-and-msl-specifications.md)  

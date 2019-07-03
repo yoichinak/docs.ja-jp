@@ -2,12 +2,12 @@
 title: LINQ to Entities
 ms.date: 03/30/2017
 ms.assetid: 641f9b68-9046-47a1-abb0-1c8eaeda0e2d
-ms.openlocfilehash: 570d6a60e4f34e89e758b505353a083b959d9def
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 8a69d74966b99d78b4a7addaa4323d61d82ce8d5
+ms.sourcegitcommit: b5c59eaaf8bf48ef3ec259f228cb328d6d4c0ceb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64630732"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67539770"
 ---
 # <a name="linq-to-entities"></a>LINQ to Entities
 LINQ to Entities は、開発者が Visual Basic または Visual C# を使用して Entity Framework 概念モデルに対するクエリを作成するための統合言語クエリ (LINQ) のサポートを提供します。 Entity Framework に対するクエリで代表的なものが、コマンド ツリー クエリです。これはオブジェクト コンテキストに対して実行されます。 LINQ to Entities では、統合言語クエリ (LINQ) クエリをコマンド ツリー クエリに変換し、そのクエリを Entity Framework に対して実行します。返されたオブジェクトは、Entity Framework でも LINQ でも使用できます。 次に、LINQ to Entities クエリを作成して実行する手順を示します。  
@@ -47,7 +47,7 @@ LINQ to Entities は、開発者が Visual Basic または Visual C# を使用�
   
  CLR メソッドの呼び出しをデータ ソースの正規関数にマップする方法については、次を参照してください。 [CLR メソッドと正規関数マッピング](../../../../../../docs/framework/data/adonet/ef/language-reference/clr-method-to-canonical-function-mapping.md)します。  
   
- 内からカスタム関数と標準的な呼び出し、データベース、する方法については[!INCLUDE[linq_entities](../../../../../../includes/linq-entities-md.md)]クエリを参照してください[LINQ to Entities クエリ内の関数の呼び出し](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)します。  
+ 正規の呼び出し、データベース、およびエンティティのクエリを LINQ 内からのカスタム関数をする方法については、次を参照してください。 [LINQ to Entities クエリ内の関数の呼び出し](../../../../../../docs/framework/data/adonet/ef/language-reference/calling-functions-in-linq-to-entities-queries.md)します。  
   
 ## <a name="query-execution"></a>クエリの実行  
  ユーザーが LINQ クエリを作成すると、Entity Framework と互換性のある表現 (コマンド ツリーの形) に変換された後、データ ソースに対して実行されます。 クエリの実行時に、すべてのクエリ式 (またはクエリの構成要素) がクライアントまたはサーバー上で評価されます。 これには、結果の具体化やエンティティの投影で使用される式も含まれます。 詳細については、次を参照してください。[クエリの実行](../../../../../../docs/framework/data/adonet/ef/language-reference/query-execution.md)します。 クエリを 1 回コンパイルしてから、実行する複数回異なるパラメーターを使用してパフォーマンスを向上させる方法については、次を参照してください。[コンパイルされたクエリ (LINQ to Entities)](../../../../../../docs/framework/data/adonet/ef/language-reference/compiled-queries-linq-to-entities.md)します。  
