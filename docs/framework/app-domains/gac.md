@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: cf5eacd0-d3ec-4879-b6da-5fd5e4372202
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2ae9470020449719ccb9760fef992898674ba696
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 858d651523ac6196aa2dcad008ea53674eb01b04
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64593625"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832842"
 ---
 # <a name="global-assembly-cache"></a>グローバル アセンブリ キャッシュ
 共通言語ランタイムがインストールされている各コンピューターには、グローバル アセンブリ キャッシュと呼ばれる、コンピューター全体にわたって使用されるコード キャッシュがあります。 グローバル アセンブリ キャッシュは、そのコンピューター上の複数のアプリケーションで共有するように特別に指定されたアセンブリを格納します。  
@@ -31,7 +31,7 @@ ms.locfileid: "64593625"
   
 - グローバル アセンブリ キャッシュを扱えるように設計されたインストーラーを使用する。 これは、アセンブリをグローバル アセンブリ キャッシュにインストールするための推奨オプションです。  
   
-- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)]に用意されている[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) という開発者ツールを使用する。  
+- Windows Software Development Kit (SDK) に用意されている[グローバル アセンブリ キャッシュ ツール (Gacutil.exe)](../../../docs/framework/tools/gacutil-exe-gac-tool.md) という開発者ツールを使用する。  
   
     > [!NOTE]
     >  配置時に、Windows Installer を使用して、アセンブリをグローバル アセンブリ キャッシュにインストールします。 グローバル アセンブリ キャッシュ ツールの使用は、開発時のみに限定してください。グローバル アセンブリ キャッシュ ツールでは、Windows インストーラーを使用した場合に提供されるアセンブリ参照カウントやその他の機能が提供されません。  

@@ -29,12 +29,12 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: bf42a53a89676f457d3d2df8d193a83299c3e4cc
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758368"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025238"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>ビットごとの演算子とシフト演算子 (C# リファレンス)
 
@@ -124,7 +124,7 @@ ms.locfileid: "66758368"
 x op= y
 ```
 
-上記の式は、次の式と同じです。
+は次と同等
 
 ```csharp
 x = x op y
@@ -195,6 +195,5 @@ x = x op y
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
 - [ブール論理演算子](boolean-logical-operators.md)

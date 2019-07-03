@@ -1,16 +1,16 @@
 ---
 title: Azure Functions にモデルをデプロイする
 description: Azure Functions を使用して、インターネット経由で予測用の ML.NET 感情分析機械学習モデルを提供します
-ms.date: 05/03/2019
+ms.date: 06/11/2019
 author: luisquintanilla
 ms.author: luquinta
 ms.custom: mvc, how-to
-ms.openlocfilehash: 9e62d8826227aed07451387cc733d27094327f99
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 7df7a6f9fcc5a4702171e1aac4b6b67e0c343748
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65645104"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025982"
 ---
 # <a name="deploy-a-model-to-azure-functions"></a>Azure Functions にモデルをデプロイする
 
@@ -22,6 +22,7 @@ Azure Functions のサーバーレス環境を介して、HTTP 経由での予�
 ## <a name="prerequisites"></a>必須コンポーネント
 
 - [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" ワークロードおよび "Azure 開発" とともにインストールされていること。
+- Microsoft.NET.Sdk.Functions NuGet パッケージ バージョン 1.0.28 以降。
 - [Azure Functions ツール](/azure/azure-functions/functions-develop-vs#check-your-tools-version)
 - PowerShell
 - 事前トレーニング済みモデル [ML.NET Sentiment Analysis のチュートリアル](../tutorials/sentiment-analysis.md)を使用して独自のモデルを構築するか、この[事前トレーニング済みの感情分析の機械学習モデル](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードすること。
@@ -38,9 +39,17 @@ Azure Functions のサーバーレス環境を介して、HTTP 経由での予�
 
     ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 [パッケージ ソース] として "nuget.org" を選択し、[参照] タブを選択して「**Microsoft.ML**」を検索します。一覧からそのパッケージを選択し、 **[インストール]** を選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
 
+1. **Microsoft.Azure.Functions.Extensions NuGet パッケージ**をインストールします。
+
+    ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 パッケージ ソースとして "nuget.org" を選択します。[参照] タブを選択し、「**Microsoft.Azure.Functions.Extensions**」を検索します。一覧からそのパッケージを選択し、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
+
 1. **Microsoft.Extensions.ML NuGet パッケージ**をインストールします。
 
     ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 パッケージ ソースとして "nuget.org" を選択します。[参照] タブを選択し、「**Microsoft.Extensions.ML**」を検索します。一覧からそのパッケージを選択して、 **[インストール]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
+
+1. **Microsoft.NET.Sdk.Functions NuGet パッケージ**をバージョン 1.0.28 に更新します。
+
+    ソリューション エクスプローラーで、プロジェクトを右クリックし、 **[NuGet パッケージの管理]** を選択します。 パッケージ ソースとして "nuget.org" を選択します。[参照] タブを選択し、「**Microsoft.NET.Sdk.Functions**」を検索します。一覧からそのパッケージを選択し、[バージョン] ドロップダウンから [1.0.28] またはそれ以降を選択し、 **[更新]** ボタンを選択します。 **[変更のプレビュー]** ダイアログの **[OK]** を選択します。表示されているパッケージのライセンス条項に同意する場合は、 **[ライセンスの同意]** ダイアログの **[同意する]** を選択します。
 
 ## <a name="add-pre-trained-model-to-project"></a>事前トレーニング済みモデルをプロジェクトに追加する
 
@@ -173,29 +182,7 @@ Azure Functions のサーバーレス環境を介して、HTTP 経由での予�
 大まかに言えば、このコードは、オブジェクトとサービスがアプリケーションによって要求されたときに、初期化を手動ではなく自動的に実行します。
 
 > [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 パフォーマンスの向上とスレッドの安全性のために、`PredictionEnginePool` サービスを使用します。これにより、アプリケーションで使用される `PredictionEngine` オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 
-
-## <a name="register-startup-as-an-azure-functions-extension"></a>Azure Functions の拡張機能として Startup を登録する
-
-`Startup` をお使いのアプリケーションで使用するには、Azure Functions の拡張機能として登録する必要があります。 まだ存在しない場合は、*extensions.json* という新しいファイルをお使いのプロジェクト内に作成します。
-
-1. **ソリューション エクスプローラー**で、プロジェクトを右クリックし、 **[追加]**  >  **[新しい項目]** を選択します。
-1. **[新しい項目]** ダイアログで、 **[Visual C#]** ノード、 **[Web]** ノードの順に選択します。 次に、 **[Json ファイル]** オプションを選択します。 **[名前]** テキスト ボックスに「extensions.json」と入力し、 **[OK]** ボタンを選択します。
-
-    コード エディターに *extensions.json* ファイルが開きます。 次の内容を *extensions.json* に追加します。
-    
-    ```json
-    {
-      "extensions": [
-        {
-          "name": "Startup",
-          "typename": "SentimentAnalysisFunctionsApp.Startup, SentimentAnalysisFunctionsApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
-        }
-      ]
-    }
-    ```
-
-1. ソリューション エクスプローラーで、*extensions.json* ファイルを右クリックし、 **[プロパティ]** を選択します。 **[詳細設定]** で、 **[出力ディレクトリにコピー]** の値を **[新しい場合はコピーする]** に変更します。
+> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 パフォーマンスとスレッドの安全性を改善するために、`PredictionEnginePool` サービスを使用します。これにより、アプリケーションで使用される `PredictionEngine` オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 
 
 ## <a name="load-the-model-into-the-function"></a>関数にモデルを読み込む
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfebe19-7436-49f1-bd99-3c4019f0b676
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a91890435b1c2b5b955875f52de86249c2ee79df
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a3b516e43c07666f4b52e67f85cb567ab310f020
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64607819"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832914"
 ---
 # <a name="assemblies-in-the-common-language-runtime"></a>共通言語ランタイムのアセンブリ
 アセンブリは .NET Framework アプリケーションのビルド ブロックであり、配置、バージョン管理、再利用、アクティブ化のスコープの指定、およびセキュリティ アクセス許可の基本単位となります。 アセンブリは、相互に連携して 1 つの論理的な機能単位を形成するように構築された型やリソースの集合です。 共通言語ランタイムは、型の実装に関して必要な情報をアセンブリから取得します。 共通言語ランタイムにとって、型はアセンブリのコンテキストの外部には存在しません。  
@@ -42,7 +42,7 @@ ms.locfileid: "64607819"
   
  アセンブリには、静的アセンブリと動的アセンブリの 2 種類があります。 静的アセンブリには、.NET Framework の各型 (インターフェイスおよびクラス) と、アセンブリ用のリソース (ビットマップ、JPEG ファイル、リソース ファイルなど) を格納できます。 静的アセンブリは、ディスク上のポータブル実行可能 (PE) ファイルに保存されます。 .NET Framework を使用して動的アセンブリを作成することもできます。動的アセンブリはメモリから直接実行され、実行前にディスクに保存されることはありません。 動的アセンブリは、実行後にディスクに保存できます。  
   
- アセンブリを作成するには、いくつかの方法があります。 Visual Studio など、これまで .dll ファイルや .exe ファイルの作成に使用してきた開発ツールを使用できます。 他の開発環境で作成されたモジュールを使ってアセンブリを作成するには、[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] に付属している各種ツールを使用できます。 動的アセンブリの作成には、<xref:System.Reflection.Emit?displayProperty=nameWithType> などの共通言語ランタイム API も使用できます。  
+ アセンブリを作成するには、いくつかの方法があります。 Visual Studio など、これまで .dll ファイルや .exe ファイルの作成に使用してきた開発ツールを使用できます。 他の開発環境で作成されたモジュールを使ってアセンブリを作成するには、Windows Software Development Kit (SDK) に付属している各種ツールを使用できます。 動的アセンブリの作成には、<xref:System.Reflection.Emit?displayProperty=nameWithType> などの共通言語ランタイム API も使用できます。  
   
 ## <a name="related-topics"></a>関連トピック  
   

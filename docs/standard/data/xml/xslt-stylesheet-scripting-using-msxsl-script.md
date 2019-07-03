@@ -8,18 +8,18 @@ dev_langs:
 ms.assetid: 60e2541b-0cea-4b2e-a4fa-85f4c50f1bef
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 78dec0d4c3c6e7cab6e179be9dbe61cfd01dc7fc
-ms.sourcegitcommit: bd28ff1e312eaba9718c4f7ea272c2d4781a7cac
+ms.openlocfilehash: 617f1da8f9b5b26ddfb2910ac0c06a6898d8ab6e
+ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56835253"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67170934"
 ---
 # <a name="xslt-stylesheet-scripting-using-msxslscript"></a>\<msxsl:script> を使用した XSLT スタイルシートのスクリプト
 <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。  
   
 > [!NOTE]
->  <xref:System.Xml.Xsl.XslTransform> では、[!INCLUDE[dnprdnext](../../../../includes/dnprdnext-md.md)] クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
+>  .NET Framework 2.0 では <xref:System.Xml.Xsl.XslTransform> クラスが廃止されています。 <xref:System.Xml.Xsl.XslCompiledTransform> クラスを使用して XSLT (Extensible Stylesheet Language for Transformations) 変換を実行できます。 詳しくは、「[XslCompiledTransform クラスの使用](../../../../docs/standard/data/xml/using-the-xslcompiledtransform-class.md)」および「[XslTransform クラスからの移行](../../../../docs/standard/data/xml/migrating-from-the-xsltransform-class.md)」をご覧ください。  
   
  <xref:System.Xml.Xsl.XslTransform> クラスは、`script` 要素を使用した埋め込みスクリプトをサポートしています。 スタイル シートが読み込まれると、定義されているすべての関数がクラス定義でラップされることによって Microsoft Intermediate Language (MSIL) にコンパイルされるため、パフォーマンスが低下しません。  
   
@@ -31,8 +31,7 @@ ms.locfileid: "56835253"
   
  `msxsl` は、名前空間 `urn:schemas-microsoft-com:xslt` に関連付けられたプレフィックスです。  
   
- `language` 属性は必須ではありませんが、指定する場合は、値をC#、VB、JScript、JavaScript、VisualBasic、または CSharp のいずれかにする必要があります。 
-  language 属性を指定しない場合、既定の言語は JScript です。 `language-name` では大文字小文字が区別されないため、"JavaScript" と "javascript" は同じものと見なされます。  
+ `language` 属性は必須ではありませんが、指定する場合は、値をC#、VB、JScript、JavaScript、VisualBasic、または CSharp のいずれかにする必要があります。 language 属性を指定しない場合、既定の言語は JScript です。 `language-name` では大文字小文字が区別されないため、"JavaScript" と "javascript" は同じものと見なされます。  
   
  `implements-prefix` 属性は必須です。 この属性は、名前空間を宣言し、それをスクリプト ブロックに関連付けるために使用されます。 この属性の値は、名前空間を表すプレフィックスです。 この名前空間は、スタイル シート内の任意の場所で定義できます。  
   

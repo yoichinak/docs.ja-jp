@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: aae10f8b03a16e55f0b26981f17585c8790e00c1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816070"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024915"
 ---
 # <a name="--and---operators-c-reference"></a>- および -= 演算子 (C# リファレンス)
 
@@ -81,10 +81,8 @@ x = x - y
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
 - [デリゲート](../../programming-guide/delegates/index.md)
 - [イベント](../../programming-guide/events/index.md)
-- [checked と unchecked](../keywords/checked-and-unchecked.md)
 - [算術演算子](arithmetic-operators.md)
 - [+ および += 演算子](addition-operator.md)

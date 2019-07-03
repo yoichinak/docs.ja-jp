@@ -5,12 +5,12 @@ author: rpetrusha
 ms.author: ronpet
 ms.date: 05/21/2018
 ms.assetid: 577a8527-1081-4b36-9b9e-0685b6553c6e
-ms.openlocfilehash: 9e7434f2267baf82021dfb3875f2da39552e72ef
-ms.sourcegitcommit: 462dc41a13942e467984e48f4018d1f79ae67346
+ms.openlocfilehash: 0decc563fdcf068c0b9dc88a55b2bd6f4e3657cd
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/19/2019
-ms.locfileid: "58186079"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025098"
 ---
 # <a name="methods"></a>メソッド
 
@@ -144,9 +144,9 @@ C# の型は、*値型*と*参照型*のどちらかに区別されます。 組
 - 適切な型の引数をコンマで区切った一覧をメソッドに渡す。
 - パラメーター配列に引数を指定しない。
 
-次の例では、`DoStringOperation` という名前のメソッドを定義します。このメソッドは、その最初のパラメーターである `StringOperation` 列挙メンバーにより指定された文字列操作を実行します。 操作の実行対象である文字列はパラメーター配列により設定されます。 `Main` メソッドには、メソッド呼び出しの 3 つ全部の方法が入っています。 パラメーター配列に引数が指定されず、その値が `null` になるケースを処理するには、`params` キーワードでタグが付けられたメソッドを用意する必要があります。
+次の例は、パラメーター配列からすべての母音を返す `GetVowels` という名前のメソッドを定義します。 `Main` メソッドには、メソッド呼び出しの 3 つ全部の方法が入っています。 呼び出し元は、`params` 修飾子が含まれるパラメーターに引数を指定する必要はありません。 その場合、パラメーターは `null` になります。
 
-[!code-csharp[csSnippets.Methods#106](../../samples/snippets/csharp/concepts/methods/byref108.cs#108)]
+[!code-csharp[csSnippets.Methods#75](~/samples/snippets/csharp/concepts/methods/params75.cs#75)]
 
 <a name="optional"></a>
 
@@ -157,7 +157,7 @@ C# の型は、*値型*と*参照型*のどちらかに区別されます。 組
 パラメーターの既定値は、次の種類の式のいずれかで割り当てる必要があります。
 
 - リテラル文字列や数値など、定数。
-- `ValType` が値型となる、`new ValType` 形式の式。 型の実際のメンバーではない、値型の暗黙の既定コンストラクターが呼び出されることに注意してください。
+- `ValType` が値型となる、`new ValType` 形式の式。 値型の暗黙のパラメーターなしのコンストラクターが呼び出されることに注意してください。それは型の実際のメンバーではありません。
 - `ValType` が値型となる、`default(ValType)` 形式の式。
 
 メソッドに必須のパラメーターと省略可能なパラメーターの両方が含まれる場合、省略可能なパラメーターはパラメーター リストの終わりに定義されます (すべての必須パラメーターの後に)。

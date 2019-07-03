@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 6196cb52cb1b42b3354bc7f8836a171397d0af1e
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758103"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025105"
 ---
 # <a name="pointer-related-operators-c-reference"></a>ポインターに関連する演算子 (C# リファレンス)
 
@@ -76,7 +76,7 @@ ms.locfileid: "66758103"
 x->y
 ```
 
-上記の式は、次の式と同じです。
+は次と同等
 
 ```csharp
 (*x).y
@@ -96,7 +96,7 @@ x->y
 
 [!code-csharp[pointer element access](~/samples/csharp/language-reference/operators/PointerOperators.cs#ElementAccess)]
 
-この例では、[`stackalloc` 演算子](../keywords/stackalloc.md)を使って、スタックにメモリ ブロックを割り当てています。
+この例では、[`stackalloc` 演算子](stackalloc.md)を使って、スタックにメモリ ブロックを割り当てています。
 
 > [!NOTE]
 > ポインター要素アクセス演算子では、範囲外のエラーはチェックされません。
@@ -188,10 +188,9 @@ x->y
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
 - [ポインター型](../../programming-guide/unsafe-code-pointers/pointer-types.md)
-- [`unsafe` キーワード](../keywords/unsafe.md)
-- [`fixed` キーワード](../keywords/fixed-statement.md)
-- [`stackalloc` 演算子](../keywords/stackalloc.md)
-- [`sizeof` 演算子](../keywords/sizeof.md)
+- [unsafe キーワード](../keywords/unsafe.md)
+- [fixed キーワード](../keywords/fixed-statement.md)
+- [stackalloc 演算子](stackalloc.md)
+- [sizeof 演算子](../keywords/sizeof.md)

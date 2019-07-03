@@ -39,7 +39,7 @@ Yield expression
   
  `Exit Function`または`Return`ステートメントを使用することで、反復を終了できます。  
   
- "Yield"予約語ではないで使用されている場合にのみ、特別な意味を持つ、`Iterator`関数または`Get`アクセサー。  
+ "Yield"は予約語ではなく、`Iterator`関数または`Get`アクセサー内で使用されている場合にのみ、特別な意味を持ちます。  
   
  反復子メソッドまたは`Get`アクセサーの詳細については、[反復子](../../programming-guide/concepts/iterators.md)を参照してください。  
   
@@ -80,7 +80,7 @@ Next
  `For Each` ループの以降の各反復処理では、反復子本体の実行が中断した場所から続行し、`Yield` ステートメントに到達したときに再度停止します。 `For Each`ループが完了するときに、反復子関数の末尾または`Return`または`Exit Function`ステートメントに達する。  
   
 ## <a name="example"></a>例  
- 次の例は、`Yield`内にあるステートメント、[をしています.[次へ]](../../../visual-basic/language-reference/statements/for-next-statement.md)ループします。 各反復処理、[各](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント本体で`Main`への呼び出しを作成、 `Power` iterator 関数。 Iterator 関数を呼び出すごとに、`Yield` ステートメントの次の実行に進みます。これは、`For…Next` ループの次の反復処理で行われます。  
+ 次の例は、[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ループ内に`Yield`ステートメントがあります。 `Main`の[For Each](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメント本体の繰り返しごとに、`Power` 反復子メソッドへの呼び出しを作成します。 反復子メソッドを呼び出すごとに、`Yield` ステートメントの次の実行に進みます。これは、`For…Next` ループの次の繰り返しで行われます。  
   
  反復子メソッドの戻り値の型は、反復子インターフェイス型の<xref:System.Collections.Generic.IEnumerable%601>です。 反復子メソッドが呼び出されると、数値の累乗を含む列挙可能なオブジェクトが返されます。  
   

@@ -7,12 +7,12 @@ helpviewer_keywords:
 ms.assetid: 7ead0cb3-3b19-414a-8417-a1c1fa198d9e
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 441a65f9a72dd0fcffb062710df74bb529767cef
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: 9671dd87e3185e9d4b997e2ea75770f756605efb
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816063"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833519"
 ---
 # <a name="migrating-from-the-net-framework-11"></a>.NET Framework 1.1 からの移行
 
@@ -32,7 +32,7 @@ ms.locfileid: "66816063"
     </configuration>
     ```
 
-- .NET Framework 4 以降のバージョンをターゲットとするコンパイラでアプリケーションを再コンパイルできます。 最初に Visual Studio 2003 を使用してソリューションを開発およびコンパイルした場合は、ソリューションを Visual Studio 2010 で (そしておそらく以降のバージョンでも) で開くことができます。また、**[Project Compatibility]\(プロジェクト互換性\)** ダイアログ ボックスを使用して、ソリューションおよびプロジェクト ファイルを Visual Studio 2003 で使用される形式から Microsoft Build Engine (MSBuild) 形式に変換することができます。
+- .NET Framework 4 以降のバージョンをターゲットとするコンパイラでアプリケーションを再コンパイルできます。 最初に Visual Studio 2003 を使用してソリューションを開発およびコンパイルした場合は、ソリューションを Visual Studio 2010 で (そしておそらく以降のバージョンでも) で開くことができます。また、 **[Project Compatibility]\(プロジェクト互換性\)** ダイアログ ボックスを使用して、ソリューションおよびプロジェクト ファイルを Visual Studio 2003 で使用される形式から Microsoft Build Engine (MSBuild) 形式に変換することができます。
 
 再コンパイルまたは再ターゲットのいずれを選択するかに関係なく、アプリケーションが .NET Framework の新しいバージョンで導入された変更の影響を受けるかどうかを確認する必要があります。 変更には次の 2 種類があります。
 
@@ -60,9 +60,9 @@ ms.locfileid: "66816063"
 
 - 「[Breaking Changes in .NET Framework 2.0](https://go.microsoft.com/fwlink/?LinkId=125263)」 (.NET Framework 2.0 での破壊的変更) に記載されている .NET Framework 1.1 を対象とするアプリケーションに影響する可能性がある .NET Framework 2.0 SP1 の変更点。
 
-- [.NET Framework 3.5 SP1 の変更点](https://go.microsoft.com/fwlink/?LinkID=186989)に関するページに記載されている、.NET Framework 3.5 から [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] の変更点。
+- 「[.NET Framework 3.5 SP1 の変更点](https://go.microsoft.com/fwlink/?LinkID=186989)」に記載されている .NET Framework 3.5 と .NET Framework 3.5 SP1 間の変更点。
 
-- 「[.NET Framework 4 への移行に関する問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)」に記載されている、[!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] から .NET Framework 4 の変更点。
+- 「[.NET Framework 4 への移行に関する問題](../../../docs/framework/migration-guide/net-framework-4-migration-issues.md)」に記載されている .NET Framework 3.5 SP1 と .NET Framework 4 間の変更点。
 
 ## <a name="obsolete-types-and-members"></a>旧式の型およびメンバー
 

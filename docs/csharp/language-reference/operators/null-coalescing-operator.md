@@ -8,12 +8,12 @@ helpviewer_keywords:
 - null-coalescing operator [C#]
 - ?? operator [C#]
 ms.assetid: 088b1f0d-c1af-4fe1-b4b8-196fd5ea9132
-ms.openlocfilehash: 8ca97261b348b7813ab179abbc1f2c5f535966a1
-ms.sourcegitcommit: 5ae6affa0b171be3bb5f4729fb68ea4fe799f959
+ms.openlocfilehash: a19b5558da36ffb11dabd1b9bec419a3623a0f17
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66816011"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67024993"
 ---
 # <a name="-operator-c-reference"></a>?? 演算子 (C# リファレンス)
 
@@ -60,7 +60,6 @@ null 合体演算子はオーバーロードできません。
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
 - [?. および ?[] 演算子](member-access-operators.md#null-conditional-operators--and-)
 - [?:演算子 (C# リファレンス)](conditional-operator.md)

@@ -542,7 +542,7 @@ End Class
 
 [For Each...Next](../../../visual-basic/language-reference/statements/for-each-next-statement.md)ステートメントを使用して、反復子を呼び出します。 `For Each` ループの繰り返しごとに、反復子を呼び出します。 反復子が`Yield` ステートメントに到達すると、式が返され、コードの現在の位置が保持されます。 次回、反復子が呼び出されると、この位置から実行が再開されます。
 
-詳細については、次を参照してください。[反復子 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)します。
+詳細については、[反復子 (Visual Basic)](../../../visual-basic/programming-guide/concepts/iterators.md)を参照してください。
 
 次の例は、反復子メソッドを使用します。 反復子メソッドは、[For...Next](../../../visual-basic/language-reference/statements/for-next-statement.md)ループ内に`Yield`ステートメントを持ちます。 `ListEvenNumbers` メソッドでは、`For Each` ステートメント本体の繰り返しごとに、反復子メソッドの呼び出しを作成し、次の `Yield` ステートメントに進みます。
 

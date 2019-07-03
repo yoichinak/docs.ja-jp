@@ -8,17 +8,17 @@ helpviewer_keywords:
 ms.assetid: 5419011c-6e57-40f6-8c65-386db8f7a651
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3b1ae2734715c4204ac1887921505b5592e79e
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: 09ee63a1283744da407cde2a99802969c7f55127
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910770"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66833651"
 ---
 # <a name="how-to-generate-primary-interop-assemblies-using-tlbimpexe"></a>方法: Tlbimp.exe を使用してプライマリ相互運用機能アセンブリを生成する
 プライマリ相互運用機能アセンブリを生成するには、次の 2 つの方法があります。  
   
-- [!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] によって提供される[タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) を使用します。  
+- Windows Software Development Kit (SDK) によって提供される[タイプ ライブラリ インポーター (Tlbimp.exe)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) を使用します。  
   
      プライマリ相互運用機能アセンブリを生成する最も簡単な方法は、[Tlbimp.exe (タイプ ライブラリ インポーター)](../../../docs/framework/tools/tlbimp-exe-type-library-importer.md) を使用することです。 Tlbimp.exe は、次の保護機能を提供します。  
   

@@ -302,8 +302,9 @@
     - name: .NET Core SDK 概要
       href: core/sdk.md
     - name: .NET Core CLI ツール
-      href: core/tools/index.md
       items:
+        - name: .NET Core CLI の概要
+          href: core/tools/index.md
         - name: テレメトリ
           href: core/tools/telemetry.md
         - name: グローバル ツール
@@ -311,6 +312,8 @@
           items:
             - name: グローバル ツールを作成する
               href: core/tools/global-tools-how-to-create.md
+        - name: 昇格されたアクセス権
+          href: core/tools/elevated-access.md
         - name: 機能拡張モデル
           href: core/tools/extensibility.md
         - name: 継続的インテグレーション
@@ -530,8 +533,6 @@
                   href: csharp/tutorials/intro-to-csharp/introduction-to-classes.md
         - name: 'C# 6 を詳しく学習する'
           href: csharp/tutorials/exploration/csharp-6.yml
-        - name: 'C# 7.0 を詳しく学習する'
-          href: csharp/tutorials/exploration/csharp-7.yml
         - name: 文字列補間を詳しく学習する - 対話形式
           href: csharp/tutorials/exploration/interpolated-strings.yml
         - name: 文字列補間を詳しく学習する - 自分の環境内で

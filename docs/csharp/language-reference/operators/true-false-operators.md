@@ -1,19 +1,19 @@
 ---
-title: true および false 演算子 - C# リファレンス
+title: true 演算子と false 演算子 - C# リファレンス
 ms.custom: seodec18
 ms.date: 12/10/2018
 helpviewer_keywords:
 - false operator [C#]
 - true operator [C#]
 ms.assetid: 81a888fd-011e-4589-b242-6c261fea505e
-ms.openlocfilehash: b1acf9a16dd977ec49a7f1dc3bea4ee41792e9be
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: f4391e73b17c3700dc04240e1289b523c4bdc596
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758131"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025030"
 ---
-# <a name="true-and-false-operators-c-reference"></a>true および false 演算子 (C# リファレンス)
+# <a name="true-and-false-operators-c-reference"></a>true 演算子と false 演算子 (C# リファレンス)
 
 `true` 演算子は、オペランドが確実に true であることを示す[ブール](../keywords/bool.md)値 `true` を返します。 `false` 演算子は、オペランドが確実に false であることを示す `bool` 値 `true` を返します。 `true` および `false` 演算子が互いに補完することは保証されていません。 つまり、`true` と `false` 演算子の両方が同じオペランドに対して `bool` 値 `false` を返す場合があります。 ある型でこの 2 つの演算子の 1 つを定義する場合は、もう 1 つの演算子も定義する必要があります。
 
@@ -38,7 +38,6 @@ Wait!
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
-- [`true` リテラル](../keywords/true-literal.md)
-- [`false` リテラル](../keywords/false-literal.md)
+- [true リテラル](../keywords/true-literal.md)
+- [false リテラル](../keywords/false-literal.md)

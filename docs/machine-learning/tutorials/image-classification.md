@@ -1,21 +1,19 @@
 ---
-title: 'チュートリアル: TensorFlow を使用して ML.NET カスタム画像分類器を構築する'
-description: TensorFlow 転移学習シナリオで ML.NET カスタム画像分類器を構築して、トレーニング済みの TensorFlow モデルを再利用して画像を分類する方法について説明します。
-ms.date: 05/06/2019
+title: 'チュートリアル: TensorFlow 画像分類器を再トレーニングする - 転移学習'
+description: 転移学習と ML.NET を使用して画像分類 TensorFlow モデルを再トレーニングする方法について説明します。 元のモデルは、個々の画像を分類するようにトレーニングされました。 再トレーニング後、新しいモデルは、画像を広範なカテゴリに整理します。
+ms.date: 06/12/2019
 ms.topic: tutorial
-ms.custom: mvc
-ms.openlocfilehash: e248c5ae73281ed6cd492592ba4a51791db75aa2
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.custom: mvc, title-hack-0612
+ms.openlocfilehash: 2ad9e71f572cb694897fd12ecbb15da069afe338
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65593422"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67026084"
 ---
-# <a name="tutorial-build-an-mlnet-custom-image-classifier-with-tensorflow"></a>チュートリアル: TensorFlow を使用して ML.NET カスタム画像分類器を構築する
+# <a name="tutorial-retrain-a-tensorflow-image-classifier-with-transfer-learning-and-mlnet"></a>チュートリアル: 転移学習と ML.NET を使用して TensorFlow 画像分類子を再トレーニングする
 
-このサンプル チュートリアルでは、トレーニング済みの画像分類器 `TensorFlow` モデルを使用して、新しいカスタム モデルを構築して画像をいくつかのカテゴリに分類する方法について説明します。
-
-トレーニング済みのモデルを再利用して同様の問題を解決し、そのモデルのレイヤーの全部または一部を再トレーニングして問題を解決することもできます。 トレーニング済みのモデルの一部を再利用して新しいモデルを構築するこの手法は、[転移学習](https://en.wikipedia.org/wiki/Transfer_learning)と呼ばれます。
+転移学習と ML.NET を使用して画像分類 TensorFlow モデルを再トレーニングする方法について説明します。 元のモデルは、個々の画像を分類するようにトレーニングされました。 再トレーニング後の新しいモデルは、画像を広範なカテゴリに整理します。 
 
 [画像分類](https://en.wikipedia.org/wiki/Outline_of_object_recognition)モデルを最初からトレーニングするには、数百万のパラメーター、大量のラベル付きトレーニング データ、膨大な量の計算リソース (数百時間の GPU) を設定する必要があります。 最初からカスタム モデルをトレーニングするほど効果的ではありませんが、転移学習を使用すると、何千もの画像と何百万ものラベル付き画像を使用し、カスタマイズされたモデルを短時間 (GPU が搭載されていないマシンで 1 時間以内) で構築できます。
 
@@ -24,6 +22,10 @@ ms.locfileid: "65593422"
 > * 問題を把握する
 > * トレーニング済みのモデルを再利用して調整する
 > * 画像を分類する
+
+## <a name="what-is-transfer-learning"></a>転移学習とは何か
+
+トレーニング済みのモデルを再利用して同様の問題を解決し、そのモデルのレイヤーの全部または一部を再トレーニングして問題を解決することもできます。 トレーニング済みのモデルの一部を再利用して新しいモデルを構築するこの手法は、[転移学習](https://en.wikipedia.org/wiki/Transfer_learning)と呼ばれます。
 
 ## <a name="image-classification-sample-overview"></a>画像分類サンプルの概要
 
@@ -67,8 +69,8 @@ ms.locfileid: "65593422"
 >[!Note]
 > 上の画像は Wikimedia Commons に属し、次のように属性が付けられています。
 >
-> * "220px-Pepperoni_pizza.jpg" パブリック ドメイン、 https://commons.wikimedia.org/w/index.php?curid=79505、
-> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" By [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 自己撮影、CC BY-SA 2.0、 https://commons.wikimedia.org/w/index.php?curid=48166。
+> * "220px-Pepperoni_pizza.jpg" パブリック ドメイン、 https://commons.wikimedia.org/w/index.php?curid=79505 、
+> * "119px-Nalle_-_a_small_brown_teddy_bear.jpg" By [Jonik](https://commons.wikimedia.org/wiki/User:Jonik) - 自己撮影、CC BY-SA 2.0、 https://commons.wikimedia.org/w/index.php?curid=48166 。
 > * "193px-Broodrooster.jpg" By [M.Minderhoud](https://nl.wikipedia.org/wiki/Gebruiker:Michiel1972) - 自分の作品、CC BY-SA 3.0、 https://commons.wikimedia.org/w/index.php?curid=27403
 
 転移学習には、*すべてのレイヤーの再トレーニング*、*最後から 2 番目のレイヤー*など、いくつかの戦略があります。 このチュートリアルでは、"*最後から 2 番目のレイヤー戦略*" の使用方法について説明します。 "*最後から 2 番目のレイヤー戦略*" は、トレーニング済みのモデルを再利用して特定の問題を解決します。 次に、この戦略では、そのモデルの最後のレイヤーを再トレーニングして新しい問題を解決します。 トレーニング済みのモデルを新しいモデルの一部として再利用すると、時間とリソースを大幅に節約できます。

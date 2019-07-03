@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 44bf97aa-a9a4-4eba-9a0d-cfaa6fc53a66
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 0c806366e8f80e9fd770b45a5f1154d388ac49ab
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: fd1773b184b9ea39b83b91c139acb09658beae11
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489667"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832821"
 ---
 # <a name="ngenexe-native-image-generator"></a>Ngen.exe (ネイティブ イメージ ジェネレーター)
 
@@ -80,7 +80,7 @@ ngen /? | /help
 |`uninstall` [`assemblyName` &#124; `assemblyPath`] [`scenarios`] [`config`]|アセンブリのネイティブ イメージとその依存関係をネイティブ イメージ キャッシュから削除します。<br /><br /> 単一のイメージとその依存関係をアンインストールするには、そのイメージをインストールしたときと同じコマンド ライン引数を使用します。 **注:** .NET Framework 4 以降では、アクション `uninstall` * はサポートされなくなりました。|
 |`update` [`/queue`]|無効になったネイティブ イメージを更新します。<br /><br /> `/queue` を指定すると、更新はネイティブ イメージ サービスのキューに置かれます。 更新は常に優先順位 3 でスケジュールされるため、コンピューターがアイドル状態のときに実行されます。|
 |`display` [`assemblyName` &#124; `assemblyPath`]|アセンブリのネイティブ イメージとその依存関係の状態を表示します。<br /><br /> 引数を指定しなければ、ネイティブ イメージ キャッシュのすべての内容が表示されます。|
-|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> - または -<br /><br /> `eqi` [1&#124;2&#124;3]|キューに置かれているコンパイル ジョブを実行します。<br /><br /> 優先順位を指定すると、優先順位が高いかまたは同じコンパイル ジョブが実行されます。 優先順位を指定しなければ、キューに置かれているすべてのコンパイル ジョブが実行されます。|
+|`executeQueuedItems` [<code>1&#124;2&#124;3</code>]<br /><br /> または<br /><br /> `eqi` [1&#124;2&#124;3]|キューに置かれているコンパイル ジョブを実行します。<br /><br /> 優先順位を指定すると、優先順位が高いかまたは同じコンパイル ジョブが実行されます。 優先順位を指定しなければ、キューに置かれているすべてのコンパイル ジョブが実行されます。|
 |`queue` {`pause` &#124; `continue` &#124; `status`}|ネイティブ イメージ サービスを一時停止するか、停止しているサービスを再開するか、またはサービスの状態を照会します。|
 
 <a name="ArgumentTable"></a>
@@ -89,7 +89,7 @@ ngen /? | /help
 
 |引数|説明|
 |--------------|-----------------|
-|`assemblyName`|アセンブリの完全な表示名。 たとえば、`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` のようにします。 **注:**`myAssembly` アクションおよび `display` アクションに対しては、`uninstall` などのように部分的なアセンブリ名を指定できます。 <br /><br /> Ngen.exe の各コマンド ラインに指定できるアセンブリは 1 つだけです。|
+|`assemblyName`|アセンブリの完全な表示名。 たとえば、`"myAssembly, Version=2.0.0.0, Culture=neutral, PublicKeyToken=0038abc9deabfle5"` のようにします。 **注:** `myAssembly` アクションおよび `display` アクションに対しては、`uninstall` などのように部分的なアセンブリ名を指定できます。 <br /><br /> Ngen.exe の各コマンド ラインに指定できるアセンブリは 1 つだけです。|
 |`assemblyPath`|アセンブリの明示的なパスを返します。 フル パスまたは相対パスを指定できます。<br /><br /> パスを指定せずにファイル名を指定する場合、アセンブリは現在のディレクトリに存在する必要があります。<br /><br /> Ngen.exe の各コマンド ラインに指定できるアセンブリは 1 つだけです。|
 
 <a name="PriorityTable"></a>
@@ -233,7 +233,7 @@ Ngen.exe によってアセンブリをプリコンパイルすることによ�
 メイン アプリケーション アセンブリにハード バインディングされているすべてのイメージは同時に読み込む必要があるため、ハード バインディングは起動時間に影響します。
 
 > [!NOTE]
-> [!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)] より前のバージョンでは、厳密な名前付きの共有コンポーネントをグローバル アセンブリ キャッシュに配置する必要があります。これは、グローバル アセンブリ キャッシュ以外に配置されている厳密な名前付きのアセンブリに対してローダーが余分な検証を行うため、起動時間は短縮されず、実質的にネイティブ イメージを使用する意味がなくなります。 [!INCLUDE[net_v35SP1_short](../../../includes/net-v35sp1-short-md.md)] で導入された最適化により、この余分な検証は削除されました。
+> .NET Framework 3.5 Service Pack 1 より前のバージョンでは、厳密な名前付きの共有コンポーネントをグローバル アセンブリ キャッシュに配置する必要があります。これは、グローバル アセンブリ キャッシュ以外に配置されている厳密な名前付きのアセンブリに対してローダーが余分な検証を行うため、起動時間は短縮されず、実質的にネイティブ イメージを使用する意味がなくなります。 .NET Framework 3.5 SP1 で導入された最適化により、この余分な検証は削除されました。
 
 <a name="UsageSummary"></a>
 
@@ -401,7 +401,7 @@ Ngen.exe は、ネイティブ イメージを生成するときに上記の情�
 
 ### <a name="assembly-binding-log-viewer"></a>アセンブリ バインディング ログ ビューアー
 
-アプリケーションでネイティブ イメージが使用されているかどうかを確認するには、[Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用できます。 バインディング ログ ビューアーのウィンドウの **[ログのカテゴリ]** ボックスで、**[ネイティブ イメージ]** をクリックします。 Fuslogvw.exe は、ネイティブ イメージが拒否された理由に関する情報を提供します。
+アプリケーションでネイティブ イメージが使用されているかどうかを確認するには、[Fuslogvw.exe (アセンブリ バインディング ログ ビューアー)](../../../docs/framework/tools/fuslogvw-exe-assembly-binding-log-viewer.md) を使用できます。 バインディング ログ ビューアーのウィンドウの **[ログのカテゴリ]** ボックスで、 **[ネイティブ イメージ]** をクリックします。 Fuslogvw.exe は、ネイティブ イメージが拒否された理由に関する情報を提供します。
 
 <a name="MDA"></a>
 

@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ffbf6d9e-4a88-4a8a-9645-4ce0ee1ee5f9
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 629a59cd28e58e4b08805e3bb742d12e9cacbebd
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 9a3ba9b86a1611408f510098726ac49f543f8451
+ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66377880"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66832881"
 ---
 # <a name="create-and-use-strong-named-assemblies"></a>厳密な名前付きアセンブリの作成と使用
 
@@ -51,7 +51,7 @@ ms.locfileid: "66377880"
 
 ## <a name="bypass-signature-verification-of-trusted-assemblies"></a>信頼されたアセンブリの署名検証をバイパスする
 
-[!INCLUDE[net_v35SP1_long](../../../includes/net-v35sp1-long-md.md)] 以降、たとえば `MyComputer` ゾーンの既定のアプリケーション ドメインなど、完全に信頼されたアプリケーション ドメインにアセンブリが読み込まれるときに、厳密な名前の署名は検証されなくなりました。 これは厳密な名前のバイパス機能と呼ばれます。 完全に信頼された環境では、<xref:System.Security.Permissions.StrongNameIdentityPermission> に対する完全に信頼された署名済みアセンブリの要求は、その署名に関係なく、常に成功します。 このような場合、厳密な名前のバイパス機能は、完全に信頼されたアセンブリの厳密名署名検証という不要なオーバーヘッドを回避するので、アセンブリを高速で読み込むことができます。
+.NET Framework 3.5 Service Pack 1 以降、たとえば `MyComputer` ゾーンの既定のアプリケーション ドメインなど、完全に信頼されたアプリケーション ドメインにアセンブリが読み込まれるときに、厳密な名前の署名は検証されなくなりました。 これは厳密な名前のバイパス機能と呼ばれます。 完全に信頼された環境では、<xref:System.Security.Permissions.StrongNameIdentityPermission> に対する完全に信頼された署名済みアセンブリの要求は、その署名に関係なく、常に成功します。 このような場合、厳密な名前のバイパス機能は、完全に信頼されたアセンブリの厳密名署名検証という不要なオーバーヘッドを回避するので、アセンブリを高速で読み込むことができます。
 
 バイ パス機能は、厳密な名前で署名されていて、次の特性を持つアセンブリに適用されます。
 

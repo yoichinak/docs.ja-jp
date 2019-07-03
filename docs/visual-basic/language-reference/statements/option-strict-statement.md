@@ -75,11 +75,11 @@ Option Strict { On | Off }
   
 - [Char データ型](../../../visual-basic/language-reference/data-types/char-data-type.md)  
   
- 使用して文字列を連結するときに、 [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)、すべての文字列への変換は拡大変換と見なされます。 場合でも、暗黙的な縮小変換エラーは、これらの変換が生成されないように`Option Strict`にします。  
+ [& 演算子](../../../visual-basic/language-reference/operators/concatenation-operator.md)を使用して文字列を連結するときに、文字列への変換はすべて拡大変換と見なされます。 そのため、`Option Strict`がオンの場合でも、暗黙的な縮小変換エラーは生成されません。  
   
  対応するパラメーターと異なるデータ型を持つ引数を持つメソッドを呼び出すときに、`Option Strict`がオンの場合は縮小変換がコンパイル時エラーになります。 拡大変換または明示的な変換を使用することで、コンパイル時エラーを回避できます。  
   
- 内の要素からの変換のコンパイル時に暗黙的な縮小変換エラーが抑制されます、`For Each…Next`ループ コントロール変数のコレクション。 これが発生した場合でも`Option Strict`にします。 詳細については、"Narrowing Conversions"セクションを参照してください[ごとにしています...次のステートメントの](../../../visual-basic/language-reference/statements/for-each-next-statement.md)します。  
+ `For Each…Next`のコレクション内の要素からループ コントロール変数への変換では、コンパイル時に暗黙的な縮小変換エラーが抑制されます。 これは`Option Strict`がオンの場合も発生します。 詳細については、[For Each...Next ステートメント](../../../visual-basic/language-reference/statements/for-each-next-statement.md)の"縮小変換"セクションを参照してください。  
   
 ## <a name="late-binding-errors"></a>遅延バインド エラー  
  `Object` 型として宣言された変数のプロパティまたはメソッドにオブジェクトを代入する場合は、そのオブジェクトは遅延バインディングされます。 詳細については、次を参照してください。[事前バインディングと遅延バインディング](../../../visual-basic/programming-guide/language-features/early-late-binding/index.md)します。  

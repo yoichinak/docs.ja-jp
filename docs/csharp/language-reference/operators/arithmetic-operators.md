@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: 69b4f3fb52ce5da25081f3da7a8909151e1492f6
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: af3f7a9379aa8ac12ef8c12abc99a0ded9188eb8
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758409"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025310"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術演算子 (C# リファレンス)
 
@@ -171,7 +171,7 @@ ms.locfileid: "66758409"
 x op= y
 ```
 
-上記の式は、次の式と同じです。
+は次と同等
 
 ```csharp
 x = x op y
@@ -265,7 +265,6 @@ x = x op y
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
 - <xref:System.Math?displayProperty=nameWithType>
 - <xref:System.MathF?displayProperty=nameWithType>

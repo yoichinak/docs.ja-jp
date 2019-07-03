@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: db27f6b2-f1ec-499e-be3a-7eecf95ca42b
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: dfc55bcd97a6c1d68d4ce900b19ace7356d6ee92
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: 2239b73eb8418d469085ad72b8a28093146a1f6b
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378568"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025968"
 ---
 # <a name="ildasmexe-il-disassembler"></a>Ildasm.exe (IL 逆アセンブラー)
 
@@ -53,7 +53,7 @@ ildasm [options] [PEfilename] [options]
 |**/linenum**|元のソース行への参照を組み込みます。|
 |**/nobar**|逆アセンブルのプログレス インジケーター ポップアップ ウィンドウの表示を中止します。|
 |**/noca**|カスタム属性の出力を抑止します。|
-|**/project**|ネイティブ [!INCLUDE[wrt](../../../includes/wrt-md.md)] に表示される方法ではなく、マネージド コードに表示される方法でメタデータを示します。 `PEfilename` が Windows メタデータ ( *.winmd*) ファイルではない場合、このオプションは無効になります。 「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」を参照してください。|
+|**/project**|ネイティブ Windows ランタイムに表示される方法ではなく、マネージド コードに表示される方法でメタデータを示します。 `PEfilename` が Windows メタデータ ( *.winmd*) ファイルではない場合、このオプションは無効になります。 「[Windows ストア アプリおよび Windows ランタイムのための .NET Framework サポート](../../../docs/standard/cross-platform/support-for-windows-store-apps-and-windows-runtime.md)」を参照してください。|
 |**/pubonly**|パブリックな型とメンバーだけを逆アセンブルします。 **/visibility:PUB**と等価です。|
 |**/quoteallnames**|すべての名前を単一引用符で囲みます。|
 |**/raweh**|例外処理句を生の形式で表示します。|
@@ -100,7 +100,7 @@ ildasm [options] [PEfilename] [options]
 > [!NOTE]
 > 現時点では、埋め込みのネイティブ コード (たとえば Visual C++ で生成された PE ファイル) を含む PE ファイルについては、この手法を使用できません。  
 
-IL 逆アセンブラーで既定の GUI を使用すると、既存のどの PE ファイルのメタデータおよび逆アセンブルしたコードでも、階層ツリー ビューで表示できます。 GUI を使用するには、引数 *PEfilename* またはその他のオプションを指定せずに、コマンド行で「**ildasm**」と入力します。 **[ファイル]** メニューで、*Ildasm.exe* に読み込む PE ファイルまで移動できます。 選択した PE ファイルについて表示されたメタデータおよび逆アセンブルしたコードを保存するには、 **[ファイル]** メニューの **[ダンプ]** をクリックします。 階層ツリー ビューだけを保存するには、 **[ファイル]** メニューの **[ツリービューをダンプ]** をクリックします。 *Ildasm.exe* へのファイルの読み込みおよび出力の解釈の詳細については、[!INCLUDE[winsdklong](../../../includes/winsdklong-md.md)] に用意されている Samples フォルダー内の *Ildasm.exe* のチュートリアルを参照してください。
+IL 逆アセンブラーで既定の GUI を使用すると、既存のどの PE ファイルのメタデータおよび逆アセンブルしたコードでも、階層ツリー ビューで表示できます。 GUI を使用するには、引数 *PEfilename* またはその他のオプションを指定せずに、コマンド行で「**ildasm**」と入力します。 **[ファイル]** メニューで、*Ildasm.exe* に読み込む PE ファイルまで移動できます。 選択した PE ファイルについて表示されたメタデータおよび逆アセンブルしたコードを保存するには、 **[ファイル]** メニューの **[ダンプ]** をクリックします。 階層ツリー ビューだけを保存するには、 **[ファイル]** メニューの **[ツリービューをダンプ]** をクリックします。 *Ildasm.exe* へのファイルの読み込みおよび出力の解釈の詳細については、Windows Software Development Kit (SDK) に提供されている Samples フォルダー内の *Ildasm.exe* チュートリアルを参照してください。
 
 *Ildasm.exe* に対して、埋め込みリソースを含む引数 *PEfilename* を指定した場合は、複数の出力ファイルが生成されます。生成されるファイルは、IL コードを含む 1 つのテキスト ファイルと、埋め込みマネージド リソースごとにリソース名を使用してメタデータから生成した .resources ファイルです。 アンマネージ リソースが *PEfilename* の中に埋め込まれている場合は、IL 出力に対して **/output** オプションで指定されたファイル名を使用して、.res ファイルが生成されます。
 

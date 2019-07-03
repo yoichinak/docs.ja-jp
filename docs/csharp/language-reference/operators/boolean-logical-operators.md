@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: d94552d9a1acfdd63b9694810e724c4347e615e7
-ms.sourcegitcommit: 904b98d8d706f0e2d5ceaa00ce17ffbd92adfb88
+ms.openlocfilehash: 37fe329026c16043abb20f8a9f030d877469951d
+ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66758281"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67025231"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>ブール論理演算子 (C# リファレンス)
 
@@ -115,16 +115,16 @@ ms.locfileid: "66758281"
 
 `bool?` オペランドの場合、`&` 演算子と `|` 演算子は 3 値ロジックをサポートします。 次の表に、これらの演算子のセマンティクスが定義されています。  
   
-|x|Y|x&y|x&#124;y|  
+|x|y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|TRUE|False|false|true|  
+|TRUE|false|false|true|  
 |true|null|null|true|  
-|False|true|False|true|  
-|False|False|False|False|  
-|False|null|False|null|  
+|false|true|false|true|  
+|false|false|false|false|  
+|false|null|false|null|  
 |null|true|null|true|  
-|null|False|False|null|  
+|null|false|false|null|  
 |null|null|null|null|  
 
 これらの演算子の動作は、null 許容値型の一般的な演算子の動作とは異なります。 通常、値型のオペランドに定義されている演算子も、対応する null 値型のオペランドと共に使用できます。 このような演算子は、そのオペランドのいずれかが `null` の場合に `null` を生成します。 ただし、`&` および `|` 演算子は、オペランドの 1 つが `null` の場合でも、null 以外の値を生成する可能性があります。 null 許容値型の演算子の動作については、「[Null 許容型の使用](../../programming-guide/nullable-types/using-nullable-types.md)」記事の「[演算子](../../programming-guide/nullable-types/using-nullable-types.md#operators)」セクションを参照してください。
@@ -143,7 +143,7 @@ ms.locfileid: "66758281"
 x op= y
 ```
 
-上記の式は、次の式と同じです。
+は次と同等
 
 ```csharp
 x = x op y
@@ -192,6 +192,5 @@ x = x op y
 ## <a name="see-also"></a>関連項目
 
 - [C# リファレンス](../index.md)
-- [C# プログラミングガイド](../../programming-guide/index.md)
 - [C# 演算子](index.md)
 - [ビットごとの演算子とシフト演算子](bitwise-and-shift-operators.md)
