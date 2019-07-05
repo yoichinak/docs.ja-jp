@@ -1,22 +1,22 @@
 ---
-title: ML.NET 処理中に中間データ値を検査する
-description: ML.NET 機械学習パイプラインの処理中に実際の中間データ値を検査する方法について説明します。
-ms.date: 04/29/2019
+title: ML.NET 処理中に中間データを検査する
+description: ML.NET 機械学習パイプラインの読み込み中、処理中に中間データを検査する方法と、ML.NET のモデル トレーニング手順について説明します。
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to
-ms.openlocfilehash: 06c4a473841db62a10dfc24025f842df7ae2c583
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: d6ddeb523fb229eb0ebc9c2f22809312060e4266
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063517"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67402385"
 ---
-# <a name="inspect-intermediate-data-values-during-processing"></a>処理中に中間データ値を検査する
+# <a name="inspect-intermediate-data-during-processing"></a>処理中に中間データを検査する
 
-ML.NET での読み込み、処理、およびトレーニングの手順の中で、値を検査する方法について説明します。
+読み込み中、処理中に中間データを検査する方法と、ML.NET のモデル トレーニング手順について説明します。 中間データは機械学習パイプラインの各ステージの出力です。
 
-[`IDataView`](xref:Microsoft.ML.IDataView) に読み込まれる以下に示すようなデータは、ML.NET においてさまざまな方法で検査できます。
+[`IDataView`](xref:Microsoft.ML.IDataView) に読み込まれる以下に示すような中間データは、ML.NET においてさまざまな方法で検査できます。
  
 ```csharp
 HousingData[] housingData = new HousingData[]
@@ -62,9 +62,9 @@ HousingData[] housingData = new HousingData[]
 
 ## <a name="convert-idataview-to-ienumerable"></a>IDataView を IEnumerable に変換する
 
-[`IDataView`](xref:Microsoft.ML.IDataView) の値を検査する最も簡単な方法の 1 つは、[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換することです。 [`IDataView`](xref:Microsoft.ML.IDataView) を [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換するには、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) メソッドを使用します。 
+[`IDataView`](xref:Microsoft.ML.IDataView) を検査する最も簡単な方法の 1 つは、[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換することです。 [`IDataView`](xref:Microsoft.ML.IDataView) を [`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) に変換するには、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) メソッドを使用します。 
 
-パフォーマンスを最適化するには、`reuseRowObject` の値を `true` に設定します。 これにより、同一オブジェクトには現在の行のデータが遅れて設定され、データセット内の行ごとに新しいオブジェクトを作成する場合とは対照的に評価されます。
+パフォーマンスを最適化するには、`reuseRowObject` を `true` に設定します。 これにより、同一オブジェクトには現在の行のデータが遅れて設定され、データセット内の行ごとに新しいオブジェクトを作成する場合とは対照的に評価されます。
 
 ```csharp
 // Create an IEnumerable of HousingData objects from IDataView
@@ -78,6 +78,8 @@ foreach (HousingData row in housingDataEnumerable)
     Console.WriteLine(row.Size);
 }
 ```
+
+## <a name="accessing-specific-indices-with-ienumerable"></a>IEnumerable を使用して特定のインデックスにアクセスする
 
 データの一部や特定のインデックスにしかアクセスする必要がない場合は、データセット内の要求された各行に対して新しいオブジェクトが作成されるように、[`CreateEnumerable`](xref:Microsoft.ML.DataOperationsCatalog.CreateEnumerable*) を使用すると共に `reuseRowObject` パラメータ―の値を `false` に設定します。 その後、[`IEnumerable`](xref:System.Collections.Generic.IEnumerable%601) を配列またはリストに変換します。
 

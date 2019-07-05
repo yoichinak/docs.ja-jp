@@ -9,15 +9,16 @@ helpviewer_keywords:
 - C# language, static classes
 - static class members [C#]
 ms.assetid: 235614b5-1371-4dbd-9abd-b406a8b0298b
-ms.openlocfilehash: 98d697aa7f4fa839b41509244993ced195730fdb
-ms.sourcegitcommit: c7a7e1468bf0fa7f7065de951d60dfc8d5ba89f5
+ms.openlocfilehash: 11cbe6600a75b2db6174841790aa69efdf5da035
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65585926"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67398293"
 ---
 # <a name="static-classes-and-static-class-members-c-programming-guide"></a>静的クラスと静的クラス メンバー (C# プログラミング ガイド)
-[静的](../../../csharp/language-reference/keywords/static.md)クラスは基本的には非静的クラスと同じですが、静的クラスはインスタンス化できないという点が異なります。 つまり、[new](../../../csharp/language-reference/keywords/new.md) キーワードを使用して、そのクラス型の変数を作成することはできません。 インスタンス変数がないため、静的クラスのメンバーにアクセスするには、クラス名自体を使用します。 たとえば、`UtilityClass` という静的クラスがあり、`MethodA` というパブリック静的メソッドが定義されている場合、このメソッドを呼び出すには次の例のようにします。  
+
+[静的](../../../csharp/language-reference/keywords/static.md)クラスは基本的には非静的クラスと同じですが、静的クラスはインスタンス化できないという点が異なります。 つまり、[new](../../../csharp/language-reference/operators/new-operator.md) 演算子を使用して、そのクラス型の変数を作成することはできません。 インスタンス変数がないため、静的クラスのメンバーにアクセスするには、クラス名自体を使用します。 たとえば、`UtilityClass` という静的クラスがあり、`MethodA` というパブリック静的メソッドが定義されている場合、このメソッドを呼び出すには次の例のようにします。  
   
 ```csharp  
 UtilityClass.MethodA();  

@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - enum keyword [C#]
 ms.assetid: bbeb9a0f-e9b3-41ab-b0a6-c41b1a08974c
-ms.openlocfilehash: 768d8da320022a686f2ecfe5222880eccacee7dd
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: 6af1f7f23447f9f1379ac6d223e198a4a2ea5645
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54727639"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424238"
 ---
 # <a name="enum-c-reference"></a>enum (C# リファレンス)
 
@@ -35,13 +35,12 @@ enum Day {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 
 この列挙型では、要素の並びは `0` からではなく、 `1` から開始します ただし、列挙型には値が 0 となる定数を含めておくことをお勧めします。 詳細については、[列挙型](../../programming-guide/enumeration-types.md)を参照してください。
 
-すべての列挙型には基になる型があり、基になる型には [char](char.md) 以外の任意の整数型を指定できます。 列挙要素の基になる既定の型は [int](int.md)です。[byte](byte.md)など、他の整数型の列挙型を宣言するには、次の例に示すように、識別子に続けてコロンを使用し、その後に型を記述します。
+すべての列挙型には基になる型があり、基になる型には任意の[整数数値型](../builtin-types/integral-numeric-types.md)を指定できます。 [char](char.md)型は、列挙体の基になる型にできない型です。 列挙要素の基になる既定の型は [int](../builtin-types/integral-numeric-types.md)です。[byte](../builtin-types/integral-numeric-types.md)など、他の整数型の列挙型を宣言するには、次の例に示すように、識別子に続けてコロンを使用し、その後に型を記述します。
 
 ```csharp
 enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 ```
 
-列挙型で許容される型は、[byte](byte.md)、[sbyte](sbyte.md)、[short](short.md)、[ushort](ushort.md)、[int](int.md)、[uint](uint.md)、[long](long.md)、または [ulong](ulong.md) です。
 
 列挙型の変数には、基になる型の範囲内の任意の値を割り当てることができます。値は名前付き定数に限定されません。
 
@@ -50,7 +49,7 @@ enum Day : byte {Sat=1, Sun, Mon, Tue, Wed, Thu, Fri};
 > [!NOTE]
 > 列挙子の名前に空白を使用することはできません。
 
-基になる型は、列挙子ごとに割り当てるストレージの大きさを指定します。 ただし、 `enum` 型を整数型に変換するには、明示的なキャストが必要です。 たとえば、次のステートメントでは `enum` 型から [int](int.md) 型へのキャストを使用することで、列挙子 `Sun` を `int` 型の変数に代入します。
+基になる型は、列挙子ごとに割り当てるストレージの大きさを指定します。 ただし、 `enum` 型を整数型に変換するには、明示的なキャストが必要です。 たとえば、次のステートメントでは `enum` 型から [int](../builtin-types/integral-numeric-types.md) 型へのキャストを使用することで、列挙子 `Sun` を `int` 型の変数に代入します。
 
 ```csharp
 int x = (int)Day.Sun;
@@ -101,7 +100,7 @@ int x = (int)Day.Sun;
 - [C# リファレンス](../index.md)
 - [列挙型](../../programming-guide/enumeration-types.md)
 - [C# のキーワード](index.md)
-- [整数型の一覧表](integral-types-table.md)
+- [整数型](../../../csharp/language-reference/builtin-types/integral-numeric-types.md)
 - [組み込み型の一覧表](built-in-types-table.md)
 - [暗黙的な数値変換の一覧表](implicit-numeric-conversions-table.md)
 - [明示的な数値変換の一覧表](explicit-numeric-conversions-table.md)

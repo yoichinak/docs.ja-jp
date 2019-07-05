@@ -6,12 +6,12 @@ ms.date: 10/04/2018
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: 2c8a6b86dd66b13faa242f94cf11cb940986fbd0
-ms.sourcegitcommit: 8f95d3a37e591963ebbb9af6e90686fd5f3b8707
+ms.openlocfilehash: cf8a81241c93a6eeecf04052aba57750774aa050
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56746877"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397505"
 ---
 # <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-nunit"></a>dotnet テストと NUnit を使用した Visual Basic .NET Core ライブラリでの単体テスト
 
@@ -58,7 +58,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-*unit-testing-vb-using-stest* ディレクトリに戻ります。 次のコマンドを実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
+*unit-testing-vb-using-mstest* ディレクトリに戻ります。 次のコマンドを実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
 
 ```console
 dotnet sln add .\PrimeService\PrimeService.vbproj

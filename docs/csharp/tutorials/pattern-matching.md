@@ -3,12 +3,12 @@ title: パターン マッチング機能を使用してデータ型を拡張す
 description: この高度なチュートリアルでは、パターン マッチング手法を使用して、別々に作成されたデータとアルゴリズムを使用して機能を作成する方法を示します。
 ms.date: 03/13/2019
 ms.custom: mvc
-ms.openlocfilehash: 58e4a9175752c7845507f48a3684747092dc609a
-ms.sourcegitcommit: 4735bb7741555bcb870d7b42964d3774f4897a6e
+ms.openlocfilehash: c42a917deee763e7c3e4e24949ec5c896d55016f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/30/2019
-ms.locfileid: "66378077"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397835"
 ---
 # <a name="tutorial-using-pattern-matching-features-to-extend-data-types"></a>チュートリアル: パターン マッチング機能を使用してデータ型を拡張する
 
@@ -199,7 +199,12 @@ vehicle switch
 };
 ```
 
-料金徴収機関は、配送トラックの乗客数には関心がありません。 代わりに、トラックの重量クラスに基づいて請求します。 5,000 lbs を超えるトラックは、$5.00 余分に請求される。 3,000 lbs を下回る軽トラックは、$2.00 割引される。 これらのルールは、次のコードで実装されます。
+料金徴収機関は、配送トラックの乗客数には関心がありません。 代わりに、次のようにトラックの重量クラスに基づいて通行料金の金額を調整します。
+
+- 5,000 lbs を超えるトラックは、$5.00 余分に請求される。
+- 3,000 lbs を下回る軽トラックは、$2.00 割引される。
+
+これらのルールは、次のコードで実装されます。
 
 ```csharp
 vehicle switch

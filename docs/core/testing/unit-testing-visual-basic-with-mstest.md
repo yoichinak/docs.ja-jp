@@ -7,14 +7,14 @@ ms.date: 09/01/2017
 dev_langs:
 - vb
 ms.custom: seodec18
-ms.openlocfilehash: a717e8b3da4743da96c3f6e52488fa1e8395e35d
-ms.sourcegitcommit: d8ebe0ee198f5d38387a80ba50f395386779334f
+ms.openlocfilehash: 035daf2ec7fa487c171317fd67e7c39fea7fc951
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/05/2019
-ms.locfileid: "66689267"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397613"
 ---
-# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet テストと MStest を使用した .NET Core ライブラリでの単体テスト Visual Basic
+# <a name="unit-testing-visual-basic-net-core-libraries-using-dotnet-test-and-mstest"></a>dotnet テストと MSTest を使用した .NET Core ライブラリでの単体テスト Visual Basic
 
 このチュートリアルでは、単体テストの概念について学習するためにサンプル ソリューションを段階的に構築する対話型のエクスペリエンスを示します。 構築済みのソリューションを使用してチュートリアルに従う場合は、開始する前に[サンプル コードを参照またはダウンロード](https://github.com/dotnet/samples/tree/master/core/getting-started/unit-testing-vb-mstest/)してください。 ダウンロード方法については、「[サンプルおよびチュートリアル](../../samples-and-tutorials/index.md#viewing-and-downloading-samples)」を参照してください。
 
@@ -44,7 +44,7 @@ Namespace Prime.Services
 End Namespace
 ```
 
-*unit-testing-vb-using-stest* ディレクトリに戻ります。 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) を実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
+*unit-testing-vb-using-mstest* ディレクトリに戻ります。 [`dotnet sln add .\PrimeService\PrimeService.vbproj`](../tools/dotnet-sln.md) を実行して、クラス ライブラリ プロジェクトをソリューションに追加します。
 
 ## <a name="creating-the-test-project"></a>テスト プロジェクトの作成
 

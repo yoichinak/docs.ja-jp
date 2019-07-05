@@ -4,12 +4,12 @@ description: .NET Core で使用できない .NET Framework テクノロジの�
 author: cartermp
 ms.author: mairaw
 ms.date: 04/30/2019
-ms.openlocfilehash: 9485f331856fde3b6836709e8983c2babe094c5b
-ms.sourcegitcommit: 518e7634b86d3980ec7da5f8c308cc1054daedb7
+ms.openlocfilehash: 4a798e85adc056b09761bd17b5d9a143643e77ad
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/01/2019
-ms.locfileid: "66456088"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397622"
 ---
 # <a name="net-framework-technologies-unavailable-on-net-core"></a>.NET Core で使用できない .NET Framework テクノロジ
 
@@ -45,7 +45,7 @@ CAS と同様に、セキュリティ透過性はサンドボックス コード
 
 ## <a name="systementerpriseservices"></a>System.EnterpriseServices
 
-System.EnterpiseServices (COM+) は、.NET Core でサポートされていません。
+System.EnterpriseServices (COM+) は、.NET Core でサポートされていません。
 
 >[!div class="step-by-step"]
 >[次へ](third-party-deps.md)
