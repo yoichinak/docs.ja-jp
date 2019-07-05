@@ -19,16 +19,16 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 7d8a6b7f5bf83719f96009c301867056da755822
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 5b6668e20e4d69b7d6bdf3e6283574f1b974ef54
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025208"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423969"
 ---
 # <a name="comparison-operators-c-reference"></a>比較演算子 (C# リファレンス)
 
-[`<` (小なり)](#less-than-operator-)、[`>` (大なり)](#greater-than-operator-)、[`<=` (以下)](#less-than-or-equal-operator-)、および [`>=` (以上) ](#greater-than-or-equal-operator-) 比較演算子は、関係演算子とも呼ばれ、そのオペランドの比較に使用されます。 これらの演算子は、[整数](../keywords/integral-types-table.md)と[浮動小数点](../keywords/floating-point-types-table.md)のすべての数値型をサポートしています。
+[`<` (小なり)](#less-than-operator-)、[`>` (大なり)](#greater-than-operator-)、[`<=` (以下)](#less-than-or-equal-operator-)、および [`>=` (以上) ](#greater-than-or-equal-operator-) 比較演算子は、関係演算子とも呼ばれ、そのオペランドの比較に使用されます。 これらの演算子は、[整数](../builtin-types/integral-numeric-types.md)と[浮動小数点](../keywords/floating-point-types-table.md)のすべての数値型をサポートしています。
 
 > [!NOTE]
 > `==`、`<`、`>`、`<=`、および `>=` 演算子の場合、いずれかのオペランドが数値 (<xref:System.Double.NaN?displayProperty=nameWithType> または <xref:System.Single.NaN?displayProperty=nameWithType>) でない場合、演算結果は `false` になります。 つまり、`NaN` の値は、`NaN` を含む他のどの `double` (または `float`) の値を上回ることも、下回ることも、等しいこともありません。 詳細およびサンプルについては、<xref:System.Double.NaN?displayProperty=nameWithType> または <xref:System.Single.NaN?displayProperty=nameWithType> の参照記事をご覧ください。
@@ -39,25 +39,25 @@ ms.locfileid: "67025208"
 
 ## <a name="less-than-operator-"></a>小なり演算子 \<
 
-最初のオペランドが 2 番目のオペランドより小さい場合、`<` 演算子から `true` が返され、それ以外の場合は `false` が返されます。
+左側のオペランドが右側のオペランドより小さい場合、`<` 演算子から `true` が返され、それ以外の場合は `false` が返されます。
 
 [!code-csharp-interactive[less than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Less)]
 
 ## <a name="greater-than-operator-"></a>大なり演算子 >
 
-最初のオペランドが 2 番目のオペランドより大きい場合、`>` 演算子から `true` が返され、それ以外の場合は `false` が返されます。
+左側のオペランドが右側のオペランドより大きい場合、`>` 演算子から `true` が返され、それ以外の場合は `false` が返されます。
 
 [!code-csharp-interactive[greater than example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#Greater)]
 
 ## <a name="less-than-or-equal-operator-"></a>以下演算子 \<=
 
-最初のオペランドが 2 番目のオペランド以下の場合、`<=` 演算子から `true` が返され、それ以外の場合は `false` が返されます。
+左側のオペランドが右側のオペランド以下の場合、`<=` 演算子から `true` が返され、それ以外の場合は `false` が返されます。
 
 [!code-csharp-interactive[less than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#LessOrEqual)]
 
 ## <a name="greater-than-or-equal-operator-"></a>以上演算子 >=
 
-最初のオペランドが 2 番目のオペランド以上の場合、`>=` 演算子から `true` が返され、それ以外の場合は `false` が返されます。
+左側のオペランドが右側のオペランド以上の場合、`>=` 演算子から `true` が返され、それ以外の場合は `false` が返されます。
 
 [!code-csharp-interactive[greater than or equal example](~/samples/csharp/language-reference/operators/ComparisonOperators.cs#GreaterOrEqual)]
 

@@ -27,12 +27,12 @@ helpviewer_keywords:
 - + operator [C#]
 - subtraction operator [C#]
 - '- operator [C#]'
-ms.openlocfilehash: af3f7a9379aa8ac12ef8c12abc99a0ded9188eb8
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 155ce5ce4673008a61b4231a3aaee5a40ad9ead6
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025310"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423988"
 ---
 # <a name="arithmetic-operators-c-reference"></a>算術演算子 (C# リファレンス)
 
@@ -41,7 +41,7 @@ ms.locfileid: "67025310"
 - 単項演算子: [`++` (インクリメント)](#increment-operator-)、[`--` (デクリメント)](#decrement-operator---)、[`+` (プラス)](#unary-plus-and-minus-operators)、[`-` (マイナス)](#unary-plus-and-minus-operators)。
 - 2 項演算子: [`*` (乗算)](#multiplication-operator-)、[`/` (除算)](#division-operator-)、[`%` (剰余)](#remainder-operator-)、[`+` (加算)](#addition-operator-)、[`-` (減算)](#subtraction-operator--)。
 
-これらの演算子は、[整数](../keywords/integral-types-table.md)と[浮動小数点](../keywords/floating-point-types-table.md)のすべての数値型をサポートしています。
+これらの演算子は、[整数](../builtin-types/integral-numeric-types.md)と[浮動小数点](../keywords/floating-point-types-table.md)のすべての数値型をサポートしています。
 
 ## <a name="increment-operator-"></a>インクリメント演算子 ++
 
@@ -85,7 +85,7 @@ ms.locfileid: "67025310"
 
 [!code-csharp-interactive[unary plus and minus](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#UnaryPlusAndMinus)]
 
-単項 `-` 演算子は、[ulong](../keywords/ulong.md) 型をサポートしません。
+単項 `-` 演算子は、[ulong](../builtin-types/integral-numeric-types.md) 型をサポートしません。
 
 ## <a name="multiplication-operator-"></a>乗算演算子 *
 
@@ -97,7 +97,7 @@ ms.locfileid: "67025310"
 
 ## <a name="division-operator-"></a>除算演算子 /
 
-除算演算子 `/` は、1 つ目のオペランドを 2 つ目のオペランドで除算します。
+除算演算子 `/` は、左側のオペランドを右側のオペランドで除算します。
 
 ### <a name="integer-division"></a>整数の除算
 
@@ -119,11 +119,11 @@ ms.locfileid: "67025310"
 
 ## <a name="remainder-operator-"></a>剰余演算子 %
 
-剰余演算子 `%` は、最初のオペランドを 2 番目のオペランドで除算した後の剰余を計算します。
+剰余演算子 `%` は、左側のオペランドを右側のオペランドで除算した後の剰余を計算します。
 
 ### <a name="integer-remainder"></a>整数の剰余
   
-整数型のオペランドの場合、`a % b` の結果は `a - (a / b) * b` で生成される値になります。 0 以外の剰余の符号は、次の例で示されるように、最初のオペランドの符号と同じになります。
+整数型のオペランドの場合、`a % b` の結果は `a - (a / b) * b` で生成される値になります。 0 以外の剰余の符号は、次の例で示されるように、左側のオペランドの符号と同じになります。
 
 [!code-csharp-interactive[integer remainder](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#IntegerRemainder)]
 
@@ -157,7 +157,7 @@ ms.locfileid: "67025310"
 
 ## <a name="subtraction-operator--"></a>減算演算子 -
 
-減算演算子 `-` は、その最初のオペランドから 2 番目のオペランドを減算します。
+減算演算子 `-` は、その左側のオペランドから右側のオペランドを減算します。
 
 [!code-csharp-interactive[subtraction operator](~/samples/csharp/language-reference/operators/ArithmeticOperators.cs#Subtraction)]
 
@@ -171,7 +171,7 @@ ms.locfileid: "67025310"
 x op= y
 ```
 
-は次と同等
+上記の式は、次の式と同じです。
 
 ```csharp
 x = x op y

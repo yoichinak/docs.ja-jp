@@ -29,16 +29,16 @@ helpviewer_keywords:
 - ^ operator [C#]
 - bitwise logical OR operator [C#]
 - '| operator [C#]'
-ms.openlocfilehash: 4a495fb5ce353bcb4f7ccda975dfc74ba711db79
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 8068ec09f0c7d05d6d711e4e7a607b6183727b41
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025238"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67424011"
 ---
 # <a name="bitwise-and-shift-operators-c-reference"></a>ビットごとの演算子とシフト演算子 (C# リファレンス)
 
-以下の演算子では、[整数型](../keywords/integral-types-table.md)のオペランドに対してビットごとの演算またはシフト演算が実行されます。
+以下の演算子では、[整数型](../builtin-types/integral-numeric-types.md)のオペランドに対してビットごとの演算またはシフト演算が実行されます。
 
 - 単項 [`~` (ビットごとの補数)](#bitwise-complement-operator-) 演算子
 - 2 項 [`<<` (左シフト)](#left-shift-operator-) および [`>>` (右シフト)](#right-shift-operator-) シフト演算子
@@ -60,39 +60,39 @@ ms.locfileid: "67025238"
 
 ## <a name="left-shift-operator-"></a>左シフト演算子 \<\<
 
-`<<` 演算子では、最初のオペランドが 2 番目のオペランドで定義されたビット数だけ左にシフトされます。
+`<<` 演算子では、左側のオペランドが、右側のオペランドで定義されたビット数だけ左にシフトされます。
 
 次の例に示すように、左シフト演算子では、結果の型の範囲外にある上位ビットは破棄され、空の下位ビット位置は、ゼロに設定されます。
 
 [!code-csharp-interactive[left shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShift)]
 
-シフト演算子は `int`、`uint`、`long`、`ulong` 型に対してのみ定義されるので、演算の結果には常に少なくとも 32 ビットが含まれます。 1 番目のオペランドが別の整数型 (`sbyte`、`byte`、`short`、`ushort`、`char`) の場合、次の例で示すように、その値は `int` 型に変換されます。
+シフト演算子は `int`、`uint`、`long`、`ulong` 型に対してのみ定義されるので、演算の結果には常に少なくとも 32 ビットが含まれます。 左側のオペランドが別の整数型 (`sbyte`、`byte`、`short`、`ushort`、`char`) の場合、次の例で示すように、その値は `int` 型に変換されます。
 
 [!code-csharp-interactive[left shift with promotion](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LeftShiftPromoted)]
 
-`<<` 演算子の 2 番目のオペランドでのシフト数の定義方法については、「[シフト演算子のシフト数](#shift-count-of-the-shift-operators)」セクションをご覧ください。
+`<<` 演算子の右側のオペランドでのシフト数の定義方法については、「[シフト演算子のシフト数](#shift-count-of-the-shift-operators)」セクションをご覧ください。
 
 ## <a name="right-shift-operator-"></a>右シフト演算子 >>
 
-`>>` 演算子では、最初のオペランドが 2 番目のオペランドで定義されたビット数だけ右にシフトされます。
+`>>` 演算子では、左側のオペランドが、右側のオペランドで定義されたビット数だけ右にシフトされます。
 
 次の例で示すように、右シフト演算では、下位ビットが破棄されます。
 
 [!code-csharp-interactive[right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#RightShift)]
 
-空の上位ビット位置は、最初のオペランドの型に基づいて次のように設定されます。
+空の上位ビット位置は、左側のオペランドの型に基づいて次のように設定されます。
 
-- 最初のオペランドの型が [int](../keywords/int.md) または [long](../keywords/long.md) である場合、右シフト演算子では、*算術*シフトが実行されます: 最初のオペランドの最上位ビット (符号ビット) の値が空の上位ビット位置に反映されます。 つまり、最初のオペランドが負でない場合は空の上位ビット位置が 0 に設定され、負の場合は 1 に設定されます。
+- 左側のオペランドの型が [int](../builtin-types/integral-numeric-types.md) または [long](../builtin-types/integral-numeric-types.md) である場合、右シフト演算子では、"*算術*" シフトが実行されます: 左側のオペランドの最上位ビット (符号ビット) の値が空の上位ビット位置に反映されます。 つまり、左側のオペランドが負でない場合は空の上位ビット位置が 0 に設定され、負の場合は 1 に設定されます。
 
   [!code-csharp-interactive[arithmetic right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#ArithmeticRightShift)]
 
-- 最初のオペランドの型が [uint](../keywords/uint.md) または [ulong](../keywords/ulong.md) である場合、右シフト演算子では、*論理*シフトが実行されます: 空の上位ビット位置は常に 0 に設定されます。
+- 左側のオペランドの型が [uint](../builtin-types/integral-numeric-types.md) または [ulong](../builtin-types/integral-numeric-types.md) である場合、右シフト演算子では、"*論理*" シフトが実行されます: 空の上位ビット位置は常に 0 に設定されます。
 
   [!code-csharp-interactive[logical right shift](~/samples/csharp/language-reference/operators/BitwiseAndShiftOperators.cs#LogicalRightShift)]
 
-`>>` 演算子の 2 番目のオペランドでのシフト数の定義方法については、「[シフト演算子のシフト数](#shift-count-of-the-shift-operators)」セクションをご覧ください。
+`>>` 演算子の右側のオペランドでのシフト数の定義方法については、「[シフト演算子のシフト数](#shift-count-of-the-shift-operators)」セクションをご覧ください。
 
-## <a name="logical-and-operator-amp"></a>論理 AND 演算子 &amp;
+## <a name="logical-and-operator-"></a> 論理 AND 演算子 &amp;
 
 `&` 演算子では、そのオペランドのビットごとの論理 AND が計算されます。
 
@@ -124,7 +124,7 @@ ms.locfileid: "67025238"
 x op= y
 ```
 
-は次と同等
+上記の式は、次の式と同じです。
 
 ```csharp
 x = x op y
@@ -158,13 +158,13 @@ x = x op y
 
 ## <a name="shift-count-of-the-shift-operators"></a>シフト演算子のシフト数
 
-シフト演算子 `<<` および `>>` の場合、2 番目のオペランドの型は、[int](../keywords/int.md) であるか、または `int` への[事前に定義された暗黙的な数値変換](../keywords/implicit-numeric-conversions-table.md)を持つ型にする必要があります。
+シフト演算子 `<<` および `>>` の場合、右側のオペランドの型は、[int](../builtin-types/integral-numeric-types.md) であるか、または `int` への[事前に定義された暗黙的な数値変換](../keywords/implicit-numeric-conversions-table.md)を持つ型にする必要があります。
 
 `x << count` および `x >> count` の式では、実際のシフト数は次のように `x` の型によって異なります。
 
-- `x` の型が [int](../keywords/int.md) または [uint](../keywords/uint.md) である場合、シフト数は、2 番目のオペランドの下位 *5* ビットで定義されます。 つまり、シフト数は `count & 0x1F` (または `count & 0b_1_1111`) から計算されます。
+- `x` の型が [int](../builtin-types/integral-numeric-types.md) または [uint](../builtin-types/integral-numeric-types.md) である場合、シフト数は、右側のオペランドの下位 *5* ビットで定義されます。 つまり、シフト数は `count & 0x1F` (または `count & 0b_1_1111`) から計算されます。
 
-- `x` の型が [long](../keywords/long.md) または [ulong](../keywords/ulong.md) である場合、シフト数は、2 番目のオペランドの下位 *6* ビットで定義されます。 つまり、シフト数は `count & 0x3F` (または `count & 0b_11_1111`) から計算されます。
+- `x` の型が [long](../builtin-types/integral-numeric-types.md) または [ulong](../builtin-types/integral-numeric-types.md) である場合、シフト数は、右側のオペランドの下位 *6* ビットで定義されます。 つまり、シフト数は `count & 0x3F` (または `count & 0b_11_1111`) から計算されます。
 
 次の例は、その動作を示します。
 
@@ -180,7 +180,7 @@ x = x op y
 
 ユーザー定義型では、`~`、`<<`、`>>`、`&`、`|`、`^` の各演算子を[オーバーロード](../keywords/operator.md)できます。 2 項演算子をオーバーロードすると、対応する複合代入演算子も暗黙的にオーバーロードされます。 ユーザー定義型は、複合代入演算子を明示的にオーバーロードすることはできません。
 
-ユーザー定義型 `T` で `<<` または `>>` 演算子をオーバーロードする場合、1 番目のオペランドの型は `T` である必要があり、2 番目のオペランドの型は `int` である必要があります。
+ユーザー定義型 `T` で `<<` または `>>` 演算子をオーバーロードする場合、左側のオペランドの型は `T` である必要があり、右側のオペランドの型は `int` である必要があります。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

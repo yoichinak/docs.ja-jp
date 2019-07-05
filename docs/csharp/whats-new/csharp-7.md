@@ -3,12 +3,12 @@ title: C# 7.0 の新機能 - C# ガイド
 description: C# 言語のバージョン 7.0 での新機能の概要を説明します。
 ms.date: 02/20/2019
 ms.assetid: fd41596d-d0c2-4816-b94d-c4d00a5d0243
-ms.openlocfilehash: c3fdee2bdb974640b56bfab3af4be57133ad2f7a
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 58d43167341b69e7e9ac67024e9993cf51c26c0b
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307149"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347459"
 ---
 # <a name="whats-new-in-c-70"></a>C# 7.0 の新機能
 
@@ -34,7 +34,12 @@ C# 7.0 では、C# 言語に多くの新機能が追加されます。
 * [数値リテラルの構文の改善](#numeric-literal-syntax-improvements)
   - 新しいトークンにより、数値定数の読みやすさが向上します。
 
-この記事の残りでは、各機能の概要について説明します。 機能ごとに、その背後にある論拠のほか、 構文についても説明します。 これらの機能については、Microsoft の[対話型の探索](../tutorials/exploration/csharp-7.yml)で詳しく学習できます。
+この記事の残りでは、各機能の概要について説明します。 機能ごとに、その背後にある論拠のほか、 構文についても説明します。 `dotnet try` グローバル ツールを使って、これらの機能をご自身の環境で調べることができます。
+
+1. [dotnet try](https://github.com/dotnet/try/blob/master/README.md#setup) グローバル ツールをインストールします。
+1. [dotnet/try-samples](https://github.com/dotnet/try-samples) リポジトリを複製します。
+1. 現在のディレクトリを、*try-samples* リポジトリの *csharp7* サブディレクトリに設定します。
+1. `dotnet try` を実行します。
 
 ## <a name="out-variables"></a>`out` 変数
 

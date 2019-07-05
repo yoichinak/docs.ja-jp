@@ -32,12 +32,12 @@ helpviewer_keywords:
 - conditional OR operator [C#]
 - short-circuiting OR operator [C#]
 - '|| operator [C#]'
-ms.openlocfilehash: 37fe329026c16043abb20f8a9f030d877469951d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 60907eb1bbfeb1daa9d9a74733387c4771accb45
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025231"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423975"
 ---
 # <a name="boolean-logical-operators-c-reference"></a>ブール論理演算子 (C# リファレンス)
 
@@ -45,9 +45,9 @@ ms.locfileid: "67025231"
 
 - 単項 [`!` (論理否定)](#logical-negation-operator-) 演算子。
 - 二項 [`&` (論理 AND)](#logical-and-operator-)、[`|` (論理 OR)](#logical-or-operator-)、および [`^` (論理排他的 OR)](#logical-exclusive-or-operator-) 演算子。 これらの演算子は常に両方のオペランドを評価します。
-- 二項 [`&&` (条件付き論理 AND)](#conditional-logical-and-operator-) および [`||` (条件付き論理 OR)](#conditional-logical-or-operator-) 演算子。 これらの演算子は、必要な場合にのみ 2 番目のオペランドを評価します。
+- 二項 [`&&` (条件付き論理 AND)](#conditional-logical-and-operator-) および [`||` (条件付き論理 OR)](#conditional-logical-or-operator-) 演算子。 これらの演算子では、必要な場合にのみ右側のオペランドが評価されます。
 
-[整数](../keywords/integral-types-table.md)型のオペランドの場合、`&`、`|`、および `^` 演算子はビットごとの論理演算を実行します。 詳しくは、「[ビットごとの演算子とシフト演算子](bitwise-and-shift-operators.md)」をご覧ください。
+[整数](../builtin-types/integral-numeric-types.md)型のオペランドの場合、`&`、`|`、および `^` 演算子はビットごとの論理演算を実行します。 詳しくは、「[ビットごとの演算子とシフト演算子](bitwise-and-shift-operators.md)」をご覧ください。
 
 ## <a name="logical-negation-operator-"></a>論理否定演算子 !
 
@@ -55,17 +55,17 @@ ms.locfileid: "67025231"
 
 [!code-csharp-interactive[logical negation](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Negation)]
 
-## <a name="logical-and-operator-amp"></a>論理 AND 演算子 &amp;
+## <a name="logical-and-operator-"></a> 論理 AND 演算子 &amp;
 
 `&` 演算子がそのオペランドの論理 AND を計算します。 `x` と `y` の両方が `true` と評価されれば、`x & y` の結果は `true` です。 それ以外の場合、結果は `false` です。
 
-`&` 演算子は最初のオペランドが `false` と評価されても両方のオペランドを評価するため、結果は 2 番目のオペランドの値に関係なく、必ず `false` になります。
+`&` 演算子は、左側のオペランドが `false` と評価されても両方のオペランドを評価するため、結果は右側のオペランドの値に関係なく、必ず `false` になります。
 
-次の例では、`&` 演算子の 2 番目のオペランドはメソッド呼び出しで、最初のオペランドの値に関係なく実行されます。
+次の例では、`&` 演算子の右側のオペランドはメソッド呼び出しで、左側のオペランドの値に関係なく実行されます。
 
 [!code-csharp-interactive[logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#And)]
 
-[条件付き論理 AND 演算子](#conditional-logical-and-operator-) `&&` もそのオペランドの論理 AND を計算しますが、最初のオペランドが `false` と評価された場合、2 番目のオペランドは評価されません。
+[条件付き論理 AND 演算子](#conditional-logical-and-operator-) `&&` もそのオペランドの論理 AND を計算しますが、左側のオペランドが `false` と評価された場合、右側のオペランドは評価されません。
 
 整数型のオペランドの場合、`&` 演算子は、そのオペランドの[ビットごとの論理 AND](bitwise-and-shift-operators.md#logical-and-operator-) を計算します。 単項 `&` 演算子は[アドレス演算子](pointer-related-operators.md#address-of-operator-)です。
 
@@ -81,21 +81,21 @@ ms.locfileid: "67025231"
 
 `|` 演算子がそのオペランドの論理 OR を計算します。 `x` または `y` のどちらかが `true` と評価された場合、`x | y` の結果は `true` になります。 それ以外の場合、結果は `false` です。
 
-`|` 演算子は最初のオペランドが `true` と評価されても両方のオペランドを評価するため、結果は 2 番目のオペランドの値に関係なく、必ず `true` になります。
+`|` 演算子は、左側のオペランドが `true` と評価されても両方のオペランドを評価するため、結果は右側のオペランドの値に関係なく、必ず `true` になります。
 
-次の例では、`|` 演算子の 2 番目のオペランドはメソッド呼び出しで、最初のオペランドの値に関係なく実行されます。
+次の例では、`|` 演算子の右側のオペランドはメソッド呼び出しで、左側のオペランドの値に関係なく実行されます。
 
 [!code-csharp-interactive[logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#Or)]
 
-[条件付き論理 OR 演算子](#conditional-logical-or-operator-) `||` もそのオペランドの論理 OR を計算しますが、最初のオペランドが `true` と評価された場合、2 番目のオペランドは評価されません。
+[条件付き論理 OR 演算子](#conditional-logical-or-operator-) `||` もそのオペランドの論理 OR を計算しますが、左側のオペランドが `true` と評価された場合、右側のオペランドは評価されません。
 
 整数型のオペランドの場合、`|` 演算子は、そのオペランドの[ビットごとの論理 OR](bitwise-and-shift-operators.md#logical-or-operator-) を計算します。
 
-## <a name="conditional-logical-and-operator-ampamp"></a>条件付き論理 AND 演算子 &amp;&amp;
+## <a name="conditional-logical-and-operator-"></a> 条件付き論理 AND 演算子 &amp;&amp;
 
-条件論理 AND 演算子 `&&` は、"短絡" 論理 AND 演算子とも呼ばれ、そのオペランドの論理 AND を計算します。 `x` と `y` の両方が `true` と評価されれば、`x && y` の結果は `true` です。 それ以外の場合、結果は `false` です。 最初のオペランドが `false` と評価されると、2 番目のオペランドは評価されません。
+条件論理 AND 演算子 `&&` は、"短絡" 論理 AND 演算子とも呼ばれ、そのオペランドの論理 AND を計算します。 `x` と `y` の両方が `true` と評価されれば、`x && y` の結果は `true` です。 それ以外の場合、結果は `false` です。 `x` が `false` に評価される場合、`y` は評価されません。
 
-次の例では、最初のオペランドが `false` と評価されると、`&&` 演算子の 2 番目のオペランドはメソッド呼び出しで実行されません。
+次の例では、`&&` 演算子の右側のオペランドはメソッド呼び出しで、左側のオペランドが `false` と評価されると実行されません。
 
 [!code-csharp-interactive[conditional logical AND](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalAnd)]
 
@@ -103,9 +103,9 @@ ms.locfileid: "67025231"
 
 ## <a name="conditional-logical-or-operator-"></a>条件付き論理 OR 演算子 ||
 
-条件論理 OR 演算子 `||` は、"短絡" 論理 OR 演算子とも呼ばれ、そのオペランドの論理 OR を計算します。 `x` または `y` のどちらかが `true` と評価された場合、`x || y` の結果は `true` になります。 それ以外の場合、結果は `false` です。 最初のオペランドが `true` と評価されると、2 番目のオペランドは評価されません。
+条件論理 OR 演算子 `||` は、"短絡" 論理 OR 演算子とも呼ばれ、そのオペランドの論理 OR を計算します。 `x` または `y` のどちらかが `true` と評価された場合、`x || y` の結果は `true` になります。 それ以外の場合、結果は `false` です。 `x` が `true` に評価される場合、`y` は評価されません。
 
-次の例では、最初のオペランドが `true` と評価されると、`||` 演算子の 2 番目のオペランドはメソッド呼び出しで実行されません。
+次の例では、`||` 演算子の右側のオペランドはメソッド呼び出しで、左側のオペランドが `true` と評価されると実行されません。
 
 [!code-csharp-interactive[conditional logical OR](~/samples/csharp/language-reference/operators/BooleanLogicalOperators.cs#ConditionalOr)]
 
@@ -115,16 +115,16 @@ ms.locfileid: "67025231"
 
 `bool?` オペランドの場合、`&` 演算子と `|` 演算子は 3 値ロジックをサポートします。 次の表に、これらの演算子のセマンティクスが定義されています。  
   
-|x|y|x&y|x&#124;y|  
+|x|Y|x&y|x&#124;y|  
 |----|----|----|----|  
 |true|true|true|true|  
-|TRUE|false|false|true|  
+|TRUE|False|false|true|  
 |true|null|null|true|  
-|false|true|false|true|  
-|false|false|false|false|  
-|false|null|false|null|  
+|False|true|False|true|  
+|False|False|False|False|  
+|False|null|False|null|  
 |null|true|null|true|  
-|null|false|false|null|  
+|null|False|False|null|  
 |null|null|null|null|  
 
 これらの演算子の動作は、null 許容値型の一般的な演算子の動作とは異なります。 通常、値型のオペランドに定義されている演算子も、対応する null 値型のオペランドと共に使用できます。 このような演算子は、そのオペランドのいずれかが `null` の場合に `null` を生成します。 ただし、`&` および `|` 演算子は、オペランドの 1 つが `null` の場合でも、null 以外の値を生成する可能性があります。 null 許容値型の演算子の動作については、「[Null 許容型の使用](../../programming-guide/nullable-types/using-nullable-types.md)」記事の「[演算子](../../programming-guide/nullable-types/using-nullable-types.md#operators)」セクションを参照してください。
@@ -143,7 +143,7 @@ ms.locfileid: "67025231"
 x op= y
 ```
 
-は次と同等
+上記の式は、次の式と同じです。
 
 ```csharp
 x = x op y

@@ -1,18 +1,18 @@
 ---
-title: データの準備
+title: モデル構築用のデータを準備する
 description: ML.NET での変換を利用して、追加処理やモデルのビルドのためにデータを操作して準備する方法について説明します。
 author: luisquintanilla
 ms.author: luquinta
-ms.date: 05/03/2019
-ms.custom: mvc, how-to
-ms.openlocfilehash: abf43260a438c9b1febffc77cf39e7328e0377ee
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.date: 06/25/2019
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 4b7d5a09044e49f1b57b8276b893e0fc962a3be2
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67268237"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397720"
 ---
-# <a name="prepare-data"></a>データの準備
+# <a name="prepare-data-for-building-a-model"></a>モデル構築用のデータを準備する
 
 ML.NET を利用して、追加処理やモデルのビルドのためのデータを準備する方法について説明します。
 

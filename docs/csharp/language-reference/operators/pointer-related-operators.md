@@ -20,12 +20,12 @@ helpviewer_keywords:
 - pointer increment [C#]
 - pointer decrement [C#]
 - pointer comparison [C#]
-ms.openlocfilehash: 50243f148f37f5f33f0c69ddd896549e7aea9462
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 03d6ed19ef01be7712ff2fdde0c1be2a6673e64f
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025105"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401443"
 ---
 # <a name="pointer-related-operators-c-reference"></a>ポインターに関連する演算子 (C# リファレンス)
 
@@ -42,7 +42,7 @@ ms.locfileid: "67025105"
 > [!NOTE]
 > ポインターに関するすべての操作には、[unsafe](../keywords/unsafe.md) コンテキストが必要です。 unsafe ブロックを含むコードは、[`-unsafe`](../compiler-options/unsafe-compiler-option.md) コンパイラ オプションでコンパイルする必要があります。
 
-## <a name="address-of-operator-amp"></a>アドレス取得演算子 &amp;
+## <a name="address-of-operator-"></a> アドレス取得演算子 &amp;
 
 単項の `&` 演算子からは、そのオペランドのアドレスが返されます。
 
@@ -76,7 +76,7 @@ ms.locfileid: "67025105"
 x->y
 ```
 
-は次と同等
+上記の式は、次の式と同じです。
 
 ```csharp
 (*x).y

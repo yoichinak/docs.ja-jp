@@ -6,12 +6,12 @@ ms.date: 05/01/2019
 ms.topic: overview
 ms.custom: mvc
 ms.author: nakersha
-ms.openlocfilehash: 39e454d67f60280c6a43e3b80d788d873345ab77
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: e34694eedd06c0a3e3558c9137c6add9a7f802e4
+ms.sourcegitcommit: 52e588dc2ee74d484cd07ac60076be25cbf777ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307389"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67410516"
 ---
 # <a name="automated-machine-learning-with-mlnet"></a>ML.NET による自動機械学習
 
@@ -26,6 +26,6 @@ ms.locfileid: "67307389"
 現在、自動 ML は二項分類、多クラス分類、回帰の機械学習[タスク](resources/tasks.md)に限定されています。 他の機械学習タスクが今後のリリースでサポートされる予定です。
 
 自動 ML を使用する方法は 3 つあります。
+1. [ML.NET Model Builder](automate-training-with-model-builder.md) でグラフィカル ユーザー インターフェイスを使用する
 1. コマンド ライン上で [ML.NET CLI](automate-training-with-cli.md) を使用する
 1. アプリケーションを介して[自動 ML API](how-to-guides/how-to-use-the-automl-api.md) を使用する
-1. ML.NET Model Builder でグラフィカル ユーザー インターフェイスを使用する

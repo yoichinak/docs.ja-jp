@@ -2,12 +2,12 @@
 title: Async および Await を使用したタスク非同期プログラミング モデル (TAP) (C#)
 ms.date: 05/22/2017
 ms.assetid: 9bcf896a-5826-4189-8c1a-3e35fa08243a
-ms.openlocfilehash: 6e8f5c91bec158ae46b95597d90aaf3a6ab811d3
-ms.sourcegitcommit: a8d3504f0eae1a40bda2b06bd441ba01f1631ef0
+ms.openlocfilehash: dcb5148e7f91d07bc038e5304ab65f5f3c59b216
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/18/2019
-ms.locfileid: "67170318"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347685"
 ---
 # <a name="task-asynchronous-programming-model"></a>非同期プログラミング モデル
 

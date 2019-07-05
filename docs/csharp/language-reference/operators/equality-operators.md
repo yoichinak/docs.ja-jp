@@ -1,7 +1,7 @@
 ---
 title: 等値演算子 - C# リファレンス
-description: C# の等値比較演算子について学習します。
-ms.date: 03/28/2019
+description: C# の等値比較演算子と C# の型の等価性について学習します。
+ms.date: 06/26/2019
 author: pkulikov
 f1_keywords:
 - ==_CSharpKeyword
@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: f60d62d1823a8bd06b0417638719a81e95d7438b
-ms.sourcegitcommit: 4c41ec195caf03d98b7900007c3c8e24eba20d34
+ms.openlocfilehash: 72e790dc008857a48602c92c9236588c531b64f9
+ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67267700"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67423927"
 ---
 # <a name="equality-operators-c-reference"></a>等値演算子 (C# リファレンス)
 
@@ -60,6 +60,18 @@ C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../../tuples.
 [!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
 
 次の例は、ユーザー定義の参照型が既定で `==` 演算子をサポートしていることを示しています。 ただし、ユーザー定義の参照型は `==` 演算子をオーバーロードできます。 参照型が `==` 演算子をオーバーロードする場合、その型の 2 つの参照が同じオブジェクトを参照しているかどうかを調べるには <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> メソッドを使用します。
+
+## <a name="delegate-equality"></a>デリゲートの等価性
+
+同じランタイム型を持つ 2 つの[デリゲート](../../programming-guide/delegates/index.md) オペランドが等しくなるのは、それらの両方が `null` であるか、それらの呼び出しリストが同じ長さで、各位置に等しいエントリを含んでいる場合です。
+
+[!code-csharp-interactive[delegate equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#DelegateEquality)]
+
+詳細については、[C# 言語仕様](~/_csharplang/spec/introduction.md)の「[Delegate equality operators (デリゲートの等値演算子)](~/_csharplang/spec/expressions.md#delegate-equality-operators)」セクションをご覧ください。
+
+次の例に示すように、意味的に等しい[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)を評価して生成されるデリゲートは、等しくありません。
+
+[!code-csharp-interactive[from identical lambdas](~/samples/csharp/language-reference/operators/EqualityOperators.cs#IdenticalLambdas)]
 
 ## <a name="inequality-operator-"></a>非等値演算子 !=
 

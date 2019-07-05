@@ -13,12 +13,12 @@ helpviewer_keywords:
 - event unsubscription [C#]
 - -= operator [C#]
 ms.assetid: 4de7a4fa-c69d-48e6-aff1-3130af970b2d
-ms.openlocfilehash: 8e93b1d66a375f1f0af104e2a5dd6dfcbb39428d
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 7c9863134cb2a12072954bb283c7828abece3adb
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67024915"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347909"
 ---
 # <a name="--and---operators-c-reference"></a>- および -= 演算子 (C# リファレンス)
 
@@ -30,17 +30,17 @@ ms.locfileid: "67024915"
 
 同じ[デリゲート](../keywords/delegate.md)型のオペランドに対しては、`-` 演算子は、次のように計算されるデリゲート インスタンスを返します。
 
-- 両方のオペランドが null ではなく、2 番目のオペランドの呼び出しリストが最初のオペランドの呼び出しリストの適切な連続するサブリストの場合は、演算の結果は 2 番目のオペランドのエントリを最初のオペランドの呼び出しリストから削除することによって取得される新しい呼び出しリストとなります。 2 番目のオペランドのリストが、最初のオペランドのリストで複数の連続するサブリストと一致する場合、右端の一致するサブリストのみが削除されます。 削除によりリストが空になる場合、結果は `null` になります。
+- 両方のオペランドが null 値ではなく、右側のオペランドの呼び出しリストが左側のオペランドの呼び出しリストの適切な連続するサブリストの場合は、演算の結果は右側のオペランドのエントリを左側のオペランドの呼び出しリストから削除することによって取得される新しい呼び出しリストとなります。 右側のオペランドのリストが、左側のオペランドのリストで複数の連続するサブリストと一致する場合、右端の一致するサブリストのみが削除されます。 削除によりリストが空になる場合、結果は `null` になります。
 
   [!code-csharp-interactive[delegate removal](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemoval)]
 
-- 2 番目のオペランドの呼び出しリストが最初のオペランドの呼び出しリストの適切な連続するサブリストでない場合は、演算結果は最初のオペランドになります。 たとえば、マルチキャストのデリゲートの一部ではないデリゲートを削除しても何も行われず、マルチキャストのデリゲートは変更されません。
+- 右側のオペランドの呼び出しリストが左側のオペランドの呼び出しリストの適切な連続するサブリストでない場合は、演算結果は左側のオペランドになります。 たとえば、マルチキャストのデリゲートの一部ではないデリゲートを削除しても何も行われず、マルチキャストのデリゲートは変更されません。
 
   [!code-csharp-interactive[delegate removal with no effect](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalNoChange)]
 
   前の例では、デリゲート中に削除デリゲートのインスタンスが比較されることも示しています。 たとえば、同一の[ラムダ式](../../programming-guide/statements-expressions-operators/lambda-expressions.md)の評価から生成されるデリゲートが等しくない、などです。 デリゲートの等値の詳細については、[C# 言語仕様](../language-specification/index.md)の[デリゲートの等値演算子](~/_csharplang/spec/expressions.md#delegate-equality-operators)に関するセクションを参照してください。
 
-- 最初のオペランドが `null` の場合は、演算結果は `null` になります。 2 番目のオペランドが `null` の場合は、演算結果は最初のオペランドになります。
+- 左側のオペランドが `null` の場合は、演算結果は `null` になります。 右側のオペランドが `null` の場合は、演算結果は左側のオペランドになります。
 
   [!code-csharp-interactive[delegate removal and null](~/samples/csharp/language-reference/operators/SubtractionOperator.cs#DelegateRemovalAndNull)]
 

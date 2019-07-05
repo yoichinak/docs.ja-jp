@@ -1,20 +1,20 @@
 ---
 title: モデルのトレーニングと評価
-description: ML.NET を使用した機械学習モデルの構築方法、学習済みパラメーターの抽出方法、およびパフォーマンスの測定方法について説明します。 このサンプルでは回帰モデルがトレーニングされますが、この概念は他の主なアルゴリズムに適用できます。
-ms.date: 06/11/2019
+description: ML.NET を使用して、機械学習モデルの構築、メトリックの収集、およびパフォーマンスの測定を行う方法について説明します。 機械学習モデルによって、トレーニング データ内のパターンが識別され、新しいデータを使って予測が実行されます。
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc, how-to, title-hack-0612
-ms.openlocfilehash: d93353a3503ba67bde5fb61dc88f45d26e2f4306
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.custom: mvc, how-to, title-hack-0625
+ms.openlocfilehash: 61cdaf693c417d02da95d1d79ab30eb2d30a057b
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307444"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397642"
 ---
 # <a name="train-and-evaluate-a-model"></a>モデルのトレーニングと評価
 
-ML.NET を使用した機械学習モデルの構築方法、学習済みパラメーターの抽出方法、およびパフォーマンスの測定方法について説明します。 このサンプルでは回帰モデルがトレーニングされますが、この概念は他の主なアルゴリズムに適用できます。
+ML.NET を使用して、機械学習モデルの構築、メトリックの収集、およびパフォーマンスの測定を行う方法について説明します。 このサンプルでは回帰モデルがトレーニングされますが、この概念は他の主なアルゴリズムに適用できます。
 
 ## <a name="split-data-for-training-and-testing"></a>トレーニングとテストのためにデータを分割する
 

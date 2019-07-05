@@ -25,12 +25,12 @@ helpviewer_keywords:
 - method invocation [C#]
 - delegate invocation [C#]
 - () operator [C#]
-ms.openlocfilehash: b6bca26cc05a13e1384c4fc9642264f65b159ff7
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: 4f1d79497f255f52a87dce44f1b5b8709adfada7
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67306540"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67401480"
 ---
 # <a name="member-access-operators-c-reference"></a>メンバー アクセス演算子 (C# リファレンス)
 
@@ -141,7 +141,7 @@ if (handler != null)
 
 [!code-csharp-interactive[invocation with ()](~/samples/csharp/language-reference/operators/MemberAccessOperators.cs#Invocation)]
 
-かっこは、[`new`](../keywords/new-operator.md) 演算子を使用して[コンストラクター](../../programming-guide/classes-and-structs/constructors.md)を呼び出すときにも使用します。
+かっこは、[`new`](new-operator.md) 演算子を使用して[コンストラクター](../../programming-guide/classes-and-structs/constructors.md)を呼び出すときにも使用します。
 
 ### <a name="other-usages-of-"></a>() の他の使用方法
 
