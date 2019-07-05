@@ -66,7 +66,7 @@
   items:
     - name: 用語集
       href: resources/glossary.md
-    - name: '[タスク]'
+    - name: タスク
       href: resources/tasks.md
     - name: アルゴリズム
       href: how-to-choose-an-ml-net-algorithm.md
