@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8b71d0f29d770b2722b0dfaabc8b9667e524c99e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 004122e9bb52dfe2e51ca00cd5362b2b7a06f30e
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984608"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569572"
 ---
 # <a name="iclrmetahostgetruntime-method"></a>ICLRMetaHost::GetRuntime メソッド
 取得、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)共通言語ランタイム (CLR) の特定のバージョンに対応するインターフェイス。 このメソッドは、 [CorBindToRuntimeEx](../../../../docs/framework/unmanaged-api/hosting/corbindtoruntimeex-function.md)で使用される関数、 [STARTUP_LOADER_SAFEMODE](../../../../docs/framework/unmanaged-api/hosting/startup-flags-enumeration.md)フラグ。  
@@ -32,7 +32,7 @@ ms.locfileid: "61984608"
 ```  
 HRESULT GetRuntime (  
     [in] LPCWSTR pwzVersion,  
-    [in, REFIID riid,  
+    [in] REFIID riid,  
     [out,iid_is(riid), retval] LPVOID *ppRuntime  
 );  
 ```  
@@ -64,7 +64,7 @@ HRESULT GetRuntime (
  このメソッドとやり取り一貫して従来のインターフェイスなど、 [ICorRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/icorruntimehost-interface.md)インターフェイスおよび従来の関数など、非推奨`CorBindTo*`関数 (を参照してください[非推奨の CLR ホスト関数](../../../../docs/framework/unmanaged-api/hosting/deprecated-clr-hosting-functions.md) API をホストしている .NET Framework 2.0 で)。 レガシ API で読み込まれたランタイムは、新しい API に表示されると、新しい API が読み込まれているランタイムがレガシ API に表示されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

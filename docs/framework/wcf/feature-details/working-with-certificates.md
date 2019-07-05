@@ -7,12 +7,12 @@ dev_langs:
 helpviewer_keywords:
 - certificates [WCF]
 ms.assetid: 6ffb8682-8f07-4a45-afbb-8d2487e9dbc3
-ms.openlocfilehash: 2122213e69512b06d1328272740ac4ffdc36c1eb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 55d78ed9bf839d66b3487f91d71d7a07a2123c5f
+ms.sourcegitcommit: 4a3c95e91289d16c38979575a245a4f76b0da147
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66483038"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67569555"
 ---
 # <a name="working-with-certificates"></a>証明書の使用
 Windows Communication Foundation (WCF) のセキュリティをプログラミングする場合、一般に X.509 デジタル証明書を使用して、クライアントとサーバーの認証、暗号化、およびメッセージのデジタル署名を行います。 ここでは、X.509 デジタル証明書の機能および WCF でのそれらの機能の使用方法について簡単に説明します。また、これらの概念の詳細を説明するトピックや、WCF と証明書を使用した一般的なタスクの実行方法が記載されたトピックへのリンクも示します。  
@@ -85,8 +85,8 @@ Windows Communication Foundation (WCF) のセキュリティをプログラミ�
   
  カスタム認証システムを作成する場合、オーバーライドする最も重要なメソッドは <xref:System.IdentityModel.Selectors.X509CertificateValidator.Validate%2A> メソッドです。 カスタム認証の例については、「[X.509 証明書検証](../../../../docs/framework/wcf/samples/x-509-certificate-validator.md)」のサンプルを参照してください。 詳細については、「[カスタム資格情報と資格情報の検証](../../../../docs/framework/wcf/extending/custom-credential-and-credential-validation.md)」を参照してください。  
   
-## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>Powershell New-selfsignedcertificate コマンドレットを使用して、証明書チェーンを構築するには  
- Powershell New-selfsignedcertificate コマンドレットは、X.509 証明書と秘密キーと公開キーのペアを作成します。 秘密キーをディスクに保存し、新しい証明書の発行と署名に使用できるため、チェーンになった証明書の階層をシミュレートできます。 コマンドレットが支援手段としてのみ使用で向けサービスの開発や実際の展開用の証明書の作成に使用することはありません。 WCF サービスを開発する場合は、New-selfsignedcertificate コマンドレットとの信頼関係のチェーンの構築に次の手順を使用します。  
+## <a name="using-the-powershell-new-selfsignedcertificate-cmdlet-to-build-a-certificate-chain"></a>PowerShell New-selfsignedcertificate コマンドレットを使用して、証明書チェーンを構築するには  
+ PowerShell New-selfsignedcertificate コマンドレットは、X.509 証明書と秘密キーと公開キーのペアを作成します。 秘密キーをディスクに保存し、新しい証明書の発行と署名に使用できるため、チェーンになった証明書の階層をシミュレートできます。 コマンドレットが支援手段としてのみ使用で向けサービスの開発や実際の展開用の証明書の作成に使用することはありません。 WCF サービスを開発する場合は、New-selfsignedcertificate コマンドレットとの信頼関係のチェーンの構築に次の手順を使用します。  
   
 #### <a name="to-build-a-chain-of-trust-with-the-new-selfsignedcertificate-cmdlet"></a>New-selfsignedcertificate コマンドレットとの信頼関係のチェーンを構築するには  
   
