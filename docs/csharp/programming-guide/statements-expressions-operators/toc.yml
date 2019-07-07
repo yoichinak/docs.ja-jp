@@ -21,8 +21,6 @@
           href: how-to-use-lambda-expressions-outside-linq.md
         - name: 匿名メソッド
           href: anonymous-methods.md
-    - name: オーバーロード可能な演算子
-      href: overloadable-operators.md
     - name: 変換演算子
       items:
         - name: 変換の概要

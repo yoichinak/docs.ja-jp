@@ -2,12 +2,12 @@
 title: 方法に関する記事 (C# ガイド)
 description: 簡単なヒントと、焦点を絞った短いコード サンプルのコレクション
 ms.date: 12/20/2017
-ms.openlocfilehash: 77b68af5802f79060e30b2817661de4cb5e46942
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: 062ce64f4f369ae70074fd81f39b60de29e4d7d2
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65879015"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609262"
 ---
 # <a name="how-to-c"></a>方法 (C#)
 
@@ -21,7 +21,7 @@ C# の開発者には常識といえるヒントやコツがいくつかあり�
 - [メソッドに構造体を渡す場合とクラスを渡す場合の違いについて理解する](../programming-guide/classes-and-structs/how-to-know-the-difference-passing-a-struct-and-passing-a-class-to-a-method.md)。
 - [ラムダ式の使用方法](../programming-guide/statements-expressions-operators/how-to-use-lambda-expressions-outside-linq.md)。
 - [グローバル名前空間のエイリアスを使用して型名の競合を解決する](../programming-guide/namespaces/how-to-use-the-global-namespace-alias.md)。
-- [演算子のオーバーロードを使用する](../language-reference/keywords/operator.md)。
+- [演算子のオーバーロードを使用する](../language-reference/operators/operator-overloading.md)。
 - [カスタム拡張メソッドを実装して呼び出す](../programming-guide/classes-and-structs/how-to-implement-and-call-a-custom-extension-method.md)。
 - C# のプログラマでも[ VB の `My` 名前空間を使用できる場合がある](../programming-guide/namespaces/how-to-use-the-my-namespace.md)。
 - [拡張メソッドを使用して `enum` 型の新しいメソッドを作成する](../programming-guide/classes-and-structs/how-to-create-a-new-method-for-an-enumeration.md)。

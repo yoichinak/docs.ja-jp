@@ -225,8 +225,6 @@
               href: keywords/explicit.md
             - name: implicit
               href: keywords/implicit.md
-            - name: operator
-              href: keywords/operator.md
         - name: アクセス キーワード
           items:
             - name: base
@@ -354,6 +352,8 @@
           href: operators/stackalloc.md
         - name: true および false 演算子
           href: operators/true-false-operators.md
+        - name: 演算子のオーバーロード
+          href: operators/operator-overloading.md
     - name: 'C# 特殊文字'
       items:
         - name: 概要
