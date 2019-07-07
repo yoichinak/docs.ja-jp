@@ -5,12 +5,12 @@ helpviewer_keywords:
 - XAML [WPF], code-behind
 - code-behind files [WPF], XAML
 ms.assetid: 9df6d3c9-aed3-471c-af36-6859b19d999f
-ms.openlocfilehash: 01122991e99e41259c3b83a38eba002734d749ee
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 6a47f5a93cb161c9a87df25403cc86247619cd81
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64655526"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610529"
 ---
 # <a name="code-behind-and-xaml-in-wpf"></a>WPF における分離コードと XAML
 <a name="introduction"></a> 分離コード、マークアップ定義のオブジェクトによって結合されるコードの記述に使用される用語は、ときに、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]ページがマークアップ コンパイルします。 このトピックでは、分離コードの要件および内のコードの別のインライン コード メカニズムについて説明します。[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。  
@@ -56,7 +56,7 @@ ms.locfileid: "64655526"
   
 <a name="Inline_Code_Limitations"></a>   
 ## <a name="inline-code-limitations"></a>インライン コードの制限  
- 回避するインライン コードの使用を制限したりすることを検討してください。 アーキテクチャとコーディングの原理の観点からマークアップと分離コードの間の分離の維持は保持デザイナーと開発者の役割もはっきりと区別します。 技術的な詳細レベルでは、インライン コードを記述するコードできます書き込むには、厄介に常に記述するため、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]部分クラスが生成され、既定の XML 名前空間のマッピングのみを使用できます。 追加できないため、`using`ステートメントでは、完全修飾して多くの[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]呼び出しを行います。 既定値[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]マッピングを含める最もすべてではなく[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]名前空間に存在する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ; 型とその他の CLR 名前空間内に含まれるメンバーの呼び出しを完全に修飾する必要があります。 定義することもできない部分クラスを超えるもので、インライン コードと、メンバーまたは生成された部分クラス内で変数として参照するすべてのユーザー コードのエンティティが存在する必要があります。 その他の言語固有プログラミングの機能、マクロなどまたは`#ifdef`に対してグローバル変数、またはビルド変数を利用することもありません。 詳細については、次を参照してください。 [X:code 組み込み XAML 型](../../xaml-services/x-code-intrinsic-xaml-type.md)します。  
+ 回避するインライン コードの使用を制限したりすることを検討してください。 アーキテクチャとコーディングの原理の観点からマークアップと分離コードの間の分離の維持は保持デザイナーと開発者の役割もはっきりと区別します。 技術的な詳細レベルでは、インライン コードを記述するコードできます書き込むには、厄介に常に記述するため、[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]部分クラスが生成され、既定の XML 名前空間のマッピングのみを使用できます。 追加できないため、`using`ステートメント、する必要があります完全に修飾する多くの API 呼び出しを行います。 既定値[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]マッピングを含める最もすべてではなく[!INCLUDE[TLA2#tla_clr](../../../../includes/tla2sharptla-clr-md.md)]名前空間に存在する、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]アセンブリ; 型とその他の CLR 名前空間内に含まれるメンバーの呼び出しを完全に修飾する必要があります。 定義することもできない部分クラスを超えるもので、インライン コードと、メンバーまたは生成された部分クラス内で変数として参照するすべてのユーザー コードのエンティティが存在する必要があります。 その他の言語固有プログラミングの機能、マクロなどまたは`#ifdef`に対してグローバル変数、またはビルド変数を利用することもありません。 詳細については、次を参照してください。 [X:code 組み込み XAML 型](../../xaml-services/x-code-intrinsic-xaml-type.md)します。  
   
 ## <a name="see-also"></a>関連項目
 

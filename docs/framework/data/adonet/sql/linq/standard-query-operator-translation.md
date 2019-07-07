@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: 280557a5098c513111557f52d835b20d9a2eeb62
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61876885"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610553"
 ---
 # <a name="standard-query-operator-translation"></a>標準クエリ演算子の変換
 
@@ -198,7 +198,7 @@ C# のキャストは射影でのみサポートされます。 他の場所で�
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 のサポート
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] と比較した場合の [!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)] の以下の制限事項は、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] のサポートに影響します。
+次[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)](Microsoft SQL Server 2005 との比較) の制限に影響を与える[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]をサポートします。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 演算子および Outer Apply 演算子
 
@@ -208,7 +208,7 @@ C# のキャストは射影でのみサポートされます。 他の場所で�
 
 ### <a name="text--ntext"></a>text / ntext
 
-データ型`text`  /  `ntext`に対して特定のクエリ操作では使用できません`varchar(max)`  / `nvarchar(max)`でサポートされるうち[!INCLUDE[sqprsqext](../../../../../../includes/sqprsqext-md.md)]します。
+データ型`text`  /  `ntext`に対して特定のクエリ操作では使用できません`varchar(max)`  /  `nvarchar(max)`、Microsoft SQL Server 2005 でサポートされています。
 
 この制限事項には、対処方法はありません。 具体的には、`Distinct()` 列または `text` 列に割り当てられているメンバーを含む結果に対して、`ntext` を使用することはできません。
 

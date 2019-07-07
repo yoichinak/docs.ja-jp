@@ -21,21 +21,21 @@ helpviewer_keywords:
 - decoding image formats [WPF]
 - rotating images [WPF]
 ms.assetid: 72aad87a-e6f3-4937-94cd-a18b7766e990
-ms.openlocfilehash: 6cb389cd0458d1c9e7af94586c394764f01e4bab
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b84a2e4c3cf4126a6efa7edaf868080dbc48b859
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64665184"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610387"
 ---
 # <a name="imaging-overview"></a>イメージングの概要
 このトピックでは、[!INCLUDE[TLA#tla_wic](../../../../includes/tlasharptla-wic-md.md)] の概要を説明します。 開発者は、[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] を使用して、イメージの表示、変換、および形式設定を実行できます。  
 
 <a name="_wpfImaging"></a>   
 ## <a name="wpf-imaging-component"></a>WPF Imaging Component  
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] は、[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 内のイメージング機能を大幅に強化します。 ビットマップの表示や一般的なコントロールでのイメージの使用などのイメージング機能は、これまでは [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] または [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] ライブラリに頼っていました。 これらの [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] は、基本的なイメージング機能を提供しますが、コーデックの拡張機能や高品質なイメージのサポートなどの機能が不足しています。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] は、[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)] と [!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)] の弱点を克服するように設計されており、アプリケーション内でイメージの表示と使用を行うための新しい [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] セットを提供します。  
+ [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] は、[!INCLUDE[TLA#tla_win](../../../../includes/tlasharptla-win-md.md)] 内のイメージング機能を大幅に強化します。 ビットマップの表示や一般的なコントロールでのイメージの使用などのイメージング機能は、これまでは [!INCLUDE[TLA#tla_gdi](../../../../includes/tlasharptla-gdi-md.md)] または [!INCLUDE[TLA#tla_gdiplus](../../../../includes/tlasharptla-gdiplus-md.md)] ライブラリに頼っていました。 これらの API は、基本的なイメージング コーデック拡張機能のサポートや高品質なイメージのサポートなどの機能が、機能を提供します。 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] 場合の欠点を克服するために設計されていますが[!INCLUDE[TLA2#tla_gdi](../../../../includes/tla2sharptla-gdi-md.md)]と[!INCLUDE[TLA2#tla_gdiplus](../../../../includes/tla2sharptla-gdiplus-md.md)]を表示して、アプリケーション内でイメージを使用する API の新しいセットを提供します。  
   
- [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] にアクセスする方法は 2 つあります (マネージド コンポーネントとアンマネージド コンポーネント)。 アンマネージ コンポーネントは、次の機能を提供します。  
+ アクセスする 2 つの方法がある、 [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] API、マネージ コンポーネントとアンマネージ コンポーネント。 アンマネージ コンポーネントは、次の機能を提供します。  
   
 - 新規または独自のイメージ形式の機能拡張モデル。  
   
@@ -51,9 +51,9 @@ ms.locfileid: "64665184"
   
 - マネージド コンポーネントは、アンマネージド インフラストラクチャを利用して、[!INCLUDE[TLA#tla_ui](../../../../includes/tlasharptla-ui-md.md)]、アニメーション、グラフィックスなどの他の [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] 機能とイメージをシームレスに統合します。 マネージ コンポーネントの利点も活用、Windows Presentation Foundation (WPF) イメージング コーデック機能拡張モデルにより、新しいイメージ形式の自動認識[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]アプリケーション。  
   
- ほとんどのマネージ[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)][!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]内に存在、<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>名前空間など、いくつかの重要な型が<xref:System.Windows.Media.ImageBrush>と<xref:System.Windows.Media.ImageDrawing>内に存在、<xref:System.Windows.Media?displayProperty=nameWithType>名前空間と<xref:System.Windows.Controls.Image>に存在します。<xref:System.Windows.Controls?displayProperty=nameWithType>名前空間。  
+ 大部分のマネージ[!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)]に API が存在する、<xref:System.Windows.Media.Imaging?displayProperty=nameWithType>名前空間など、いくつかの重要な型も<xref:System.Windows.Media.ImageBrush>と<xref:System.Windows.Media.ImageDrawing>内に存在、<xref:System.Windows.Media?displayProperty=nameWithType>名前空間と<xref:System.Windows.Controls.Image>に存在する、 <xref:System.Windows.Controls?displayProperty=nameWithType>名前空間。  
   
- このトピックでは、マネージド コンポーネントに関する追加情報について説明します。 アンマネージ [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] の詳細については、[アンマネージ WPF Imaging Component](/windows/desktop/wic/-wic-lh) に関するドキュメントを参照してください。  
+ このトピックでは、マネージド コンポーネントに関する追加情報について説明します。 アンマネージ API 参照の詳細については、[アンマネージ WPF Imaging Component](/windows/desktop/wic/-wic-lh)ドキュメント。  
   
 <a name="_imageformats"></a>   
 ## <a name="wpf-image-formats"></a>WPF イメージ形式  
@@ -183,7 +183,7 @@ ms.locfileid: "64665184"
 ## <a name="codec-extensibility"></a>コーデックの機能拡張  
  [!INCLUDE[TLA2#tla_wic](../../../../includes/tla2sharptla-wic-md.md)] の核心的な機能は、新しいイメージ コーデック用の機能拡張モデルです。 これらのアンマネージ インターフェイスによって、コーデック開発者は、コーデックを [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] と統合して、新しいイメージ形式を [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)] アプリケーションで自動的に使用できるようにすることができます。  
   
- 機能拡張 [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] のサンプルについては、[Win32 サンプル コーデック](https://go.microsoft.com/fwlink/?LinkID=160052)に関するページを参照してください。 このサンプルは、カスタム イメージ形式用のデコーダーとエンコーダーの作成方法を示しています。  
+ 機能拡張 API のサンプルについては、次を参照してください。、 [Win32 サンプル コーデック](https://go.microsoft.com/fwlink/?LinkID=160052)します。 このサンプルは、カスタム イメージ形式用のデコーダーとエンコーダーの作成方法を示しています。  
   
 > [!NOTE]
 >  システムで認識するは、コーデックをデジタル署名する必要があります。  

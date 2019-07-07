@@ -7,12 +7,12 @@ helpviewer_keywords:
 - Win32 code [WPF], WPF interoperation
 - interoperability [WPF], Win32
 ms.assetid: 0ffbde0d-701d-45a3-a6fa-dd71f4d9772e
-ms.openlocfilehash: 997ea7bd1c18d3817457ad109cd611c989f50d8a
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cbae3011634fb6c6b68e477a10931a1ef13c3f55
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650735"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610364"
 ---
 # <a name="wpf-and-win32-interoperation"></a>WPF と Win32 の相互運用性
 このトピックでは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] および [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] コードを相互運用する方法の概要について説明します。 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードに多くの投資を行った場合は、そのコードの一部を再利用する方がより効率的である場合があります。  
@@ -29,7 +29,7 @@ ms.locfileid: "64650735"
   
 <a name="projects"></a>   
 ## <a name="wpf-interoperation-projects"></a>WPF 相互運用プロジェクト  
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] はマネージド コードですが、ほとんどの既存の [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] プログラムはアンマネージド [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] で記述されています。  純粋なアンマネージ プログラムから [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を呼び出すことはできません。 ただし、[!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)] コンパイラで `/clr` オプションを使用すると、マネージドとアンマネージドの [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 呼び出しをシームレスに混在させることができる、マネージドとアンマネージドの混在プログラムを作成することができます。  
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] はマネージド コードですが、ほとんどの既存の [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] プログラムはアンマネージド [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] で記述されています。  純粋なアンマネージ プログラムから [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)][!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] を呼び出すことはできません。 使用して、ただし、`/clr`オプションは、[!INCLUDE[TLA#tla_visualcpp](../../../../includes/tlasharptla-visualcpp-md.md)]コンパイラ、マネージとアンマネージの混在プログラム マネージとアンマネージ API の呼び出しをシームレスに混在する場所を作成できます。  
   
  プロジェクト レベルで、[!INCLUDE[TLA#tla_xaml](../../../../includes/tlasharptla-xaml-md.md)] ファイルを [!INCLUDE[TLA2#tla_cpp](../../../../includes/tla2sharptla-cpp-md.md)] プロジェクトにコンパイルできないという問題があります。  これを解決するために、プロジェクトを分割する手法がいくつかあります。  
   
@@ -116,7 +116,7 @@ ms.locfileid: "64650735"
  トピックのコードで使用した説明については、これらの各手順[チュートリアル。WPF での Win32 コントロールをホストしている](walkthrough-hosting-a-win32-control-in-wpf.md)します。  
   
 ### <a name="hwnds-inside-wpf"></a>WPF 内の HWND  
- <xref:System.Windows.Interop.HwndHost> は特殊なコントロールであると考えることができます  (技術的には、<xref:System.Windows.Interop.HwndHost>は、<xref:System.Windows.FrameworkElement>派生クラスではない、<xref:System.Windows.Controls.Control>派生クラスでは、相互運用のためのコントロールを考慮することができます)。<xref:System.Windows.Interop.HwndHost> 、基になる抽象化[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ホストされたコンテンツの性質の残りの部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ホストされているコンテンツをレンダリングし、入力を処理する必要がありますが、別のコントロールのようなオブジェクトと見なします。 <xref:System.Windows.Interop.HwndHost> 一般に、他のように動作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.FrameworkElement>出力 (描画とグラフィックス) いくつか重要な違いがあるし、どのような基になる Hwnd の制限事項に基づく入力 (マウスとキーボード) をサポートできます。  
+ <xref:System.Windows.Interop.HwndHost> は特殊なコントロールであると考えることができます (技術的には、<xref:System.Windows.Interop.HwndHost>は、<xref:System.Windows.FrameworkElement>派生クラスではない、<xref:System.Windows.Controls.Control>派生クラスでは、相互運用のためのコントロールを考慮することができます)。<xref:System.Windows.Interop.HwndHost> 、基になる抽象化[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ホストされたコンテンツの性質の残りの部分[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ホストされているコンテンツをレンダリングし、入力を処理する必要がありますが、別のコントロールのようなオブジェクトと見なします。 <xref:System.Windows.Interop.HwndHost> 一般に、他のように動作[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]<xref:System.Windows.FrameworkElement>出力 (描画とグラフィックス) いくつか重要な違いがあるし、どのような基になる Hwnd の制限事項に基づく入力 (マウスとキーボード) をサポートできます。  
   
 #### <a name="notable-differences-in-output-behavior"></a>出力動作の顕著な違い  
   

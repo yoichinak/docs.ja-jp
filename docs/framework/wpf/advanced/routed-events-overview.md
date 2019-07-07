@@ -15,12 +15,12 @@ helpviewer_keywords:
 - button set [WPF], grouped
 - bubbling [WPF]
 ms.assetid: 1a2189ae-13b4-45b0-b12c-8de2e49c29d2
-ms.openlocfilehash: 7712ed02d20d692842267464a645bfc93ca8fd73
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: 326900087f755b6c92d9ebb77dad36e5880fd2c0
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063894"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610443"
 ---
 # <a name="routed-events-overview"></a>ルーティング イベントの概要
 このトピックでは、[!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] でのルーティング イベントの概念について説明します。 ここでは、ルーティング イベントの用語を定義し、要素ツリーを通じたルーティング イベントのルーティング方法、ルーティング イベントの処理方法、カスタム ルーティング イベントの作成方法について説明します。
@@ -58,7 +58,7 @@ ms.locfileid: "65063894"
   
  **コントロールの複合とカプセル化します。** さまざまなコントロールに[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]リッチ コンテンツ モデルがあります。 たとえば、内の画像を配置することができます、<xref:System.Windows.Controls.Button>ボタンのビジュアル ツリーを効果的に拡張します。 ただし、追加したイメージにはボタンに応答すると、ヒット テストの動作が中断する必要がありますされません、<xref:System.Windows.Controls.Primitives.ButtonBase.Click>技術的には、イメージの一部であるピクセルで、ユーザーがクリックした場合でも、そのコンテンツの。  
   
- **単一のハンドラー アタッチ ポイント:**[!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]、複数の要素から発生することがあるイベントを処理する同じハンドラーを複数回アタッチする必要があります。 ルーティング イベントを使用すると、前の例に示したとおり、ハンドラーを一度だけアタッチし、必要に応じてハンドラーのロジックを使用してイベントの発生元を特定することができます。 たとえば、前に示した [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では次のようなハンドラーを使用します。  
+ **単一のハンドラー アタッチ ポイント:** [!INCLUDE[TLA#tla_winforms](../../../../includes/tlasharptla-winforms-md.md)]、複数の要素から発生することがあるイベントを処理する同じハンドラーを複数回アタッチする必要があります。 ルーティング イベントを使用すると、前の例に示したとおり、ハンドラーを一度だけアタッチし、必要に応じてハンドラーのロジックを使用してイベントの発生元を特定することができます。 たとえば、前に示した [!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)] では次のようなハンドラーを使用します。  
   
  [!code-csharp[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/csharp/VS_Snippets_Wpf/EventOvwSupport/CSharp/default.xaml.cs#groupbuttoncodebehind)]
  [!code-vb[EventOvwSupport#GroupButtonCodeBehind](~/samples/snippets/visualbasic/VS_Snippets_Wpf/EventOvwSupport/visualbasic/default.xaml.vb#groupbuttoncodebehind)]  
@@ -98,7 +98,7 @@ ms.locfileid: "65063894"
   
  ルーティング イベントが効果を発揮するのは、共通ハンドラーを共通ルートに定義する、独自のコントロールを複合化する、カスタム コントロール クラスを定義するなどの、特定のシナリオの場合です。  
   
- ルーティング イベント リスナーとルーティング イベント ソースは、階層内で共通イベントを共有する必要はありません。 すべて<xref:System.Windows.UIElement>または<xref:System.Windows.ContentElement>どのルーティング イベントのイベント リスナーを指定できます。 したがって、ワーキング [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] セットで使用可能なすべてのルーティング イベントを概念的 "インターフェイス" として使用できます。これにより、アプリケーション内の異なる要素間でイベント情報を交換できます。 ルーティング イベントのこの "インターフェイス" 概念は、特に入力イベントに当てはまります。  
+ ルーティング イベント リスナーとルーティング イベント ソースは、階層内で共通イベントを共有する必要はありません。 すべて<xref:System.Windows.UIElement>または<xref:System.Windows.ContentElement>どのルーティング イベントのイベント リスナーを指定できます。 そのため、全体を概念的「インターフェイス」、アプリケーション内の異なる要素がイベントの情報を交換するために設定する作業 API で使用できるルーティング イベントの完全なセットを使用することができます。 ルーティング イベントのこの "インターフェイス" 概念は、特に入力イベントに当てはまります。  
   
  また、ルーティング イベントは、要素ツリー間の通信にも使用できます。これは、イベントのイベント データが経路上の各要素に永続的に保持されるためです。 ある要素でイベント データの一部を変更した場合、この変更は経路上の次の要素で使用できます。  
   

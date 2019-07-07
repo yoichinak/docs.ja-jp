@@ -2,12 +2,12 @@
 title: リテラル
 description: リテラルの型について説明します、F#プログラミング言語。
 ms.date: 06/28/2019
-ms.openlocfilehash: 53647d8cbc2a59527a50e122bc1abc6055c1fce5
-ms.sourcegitcommit: 2d42b7ae4252cfe1232777f501ea9ac97df31b63
+ms.openlocfilehash: 0c9ced0b505817a161ca39c6c9f853f94cedf410
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67487779"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610156"
 ---
 # <a name="literals"></a>リテラル
 
@@ -69,7 +69,7 @@ let Literal3 = System.IO.FileAccess.Read ||| System.IO.FileAccess.Write
 
 ## <a name="remarks"></a>Remarks
 
-Unicode 文字列に明示的なエンコードを使用して指定することができますを含めることができます`\u`の後に 16 ビットの 16 進数コード (0000 - FFFF)、または utf-32 エンコーディングを使用して指定できる`\U`を表す 32 ビット 16 進コードを続けて任意の Unicode コード ポイント (00000000 - 00010FFFF)。
+Unicode 文字列に明示的なエンコードを使用して指定することができますを含めることができます`\u`の後に 16 ビットの 16 進数コード (0000 - FFFF)、または utf-32 エンコーディングを使用して指定できる`\U`を表す 32 ビット 16 進コードを続けて任意の Unicode コード ポイント (00000000 - 0010FFFF)。
 
 以外の他のビットごとの演算子の使用`|||`は許可されていません。
 

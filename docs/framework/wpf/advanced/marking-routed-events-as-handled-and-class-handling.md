@@ -17,12 +17,12 @@ helpviewer_keywords:
 - events [WPF], suppressing
 - bubbling events [WPF]
 ms.assetid: 5e745508-4861-4b48-b5f6-5fc7ce5289d2
-ms.openlocfilehash: 8cce3d1effa163c35cd219a6a52504b0f4d98c73
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: a1004ce10baf6293c4c93efc61b91b3b6361377f
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64598656"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610373"
 ---
 # <a name="marking-routed-events-as-handled-and-class-handling"></a>ルーティング イベントの処理済みとしてのマーキング、およびクラス処理
 ルーティング イベントのハンドラーでは、イベント データ内で、イベントを処理済みとしてマークできます。 イベントを処理すると、ルートが事実上短縮されます。 クラス処理は、ルーティング イベントでサポートされているプログラミング概念です。 クラス ハンドラーでは、特定のルーティング イベントをクラス レベルのハンドラーで処理することができます。このハンドラーは、そのクラスのどのインスタンスのどのインスタンス ハンドラーよりも先に呼び出されます。  
@@ -49,7 +49,7 @@ ms.locfileid: "64598656"
   
 <a name="Class_Handlers_and_Instance_Handlers"></a>   
 ## <a name="class-handlers-and-instance-handlers"></a>クラス ハンドラーとインスタンス ハンドラー  
- ルーティング イベントでは、クラス リスナーとインスタンス リスナーという 2 種類のイベント リスナーが考慮されます。 型の特定が呼び出されるために、クラス リスナーが存在して<xref:System.Windows.EventManager> [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)] 、<xref:System.Windows.EventManager.RegisterClassHandler%2A>、静的コンス トラクターでまたは要素の基本クラスからクラス ハンドラー仮想メソッドをオーバーライドします。 インスタンス リスナーが特定のクラス インスタンス/要素を 1 つまたは複数のハンドラーがアタッチされたルーティング イベントへの呼び出しによって<xref:System.Windows.UIElement.AddHandler%2A>します。 既存の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ルーティング イベントは、呼び出しを行う<xref:System.Windows.UIElement.AddHandler%2A>の一部として、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]イベント ラッパーの追加{}および削除{}も方法は、イベントの実装、単純な[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]アタッチのメカニズム属性構文を使用してイベント ハンドラーが有効になっているとします。 そのため、単純なであっても[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]使用量は、最終的に相当、<xref:System.Windows.UIElement.AddHandler%2A>呼び出します。  
+ ルーティング イベントでは、クラス リスナーとインスタンス リスナーという 2 種類のイベント リスナーが考慮されます。 型の特定が呼び出されるために、クラス リスナーが存在して<xref:System.Windows.EventManager>API、<xref:System.Windows.EventManager.RegisterClassHandler%2A>、静的コンス トラクターで要素の基本クラスからクラス ハンドラー仮想メソッドがオーバーライドされているか。 インスタンス リスナーが特定のクラス インスタンス/要素を 1 つまたは複数のハンドラーがアタッチされたルーティング イベントへの呼び出しによって<xref:System.Windows.UIElement.AddHandler%2A>します。 既存の[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]ルーティング イベントは、呼び出しを行う<xref:System.Windows.UIElement.AddHandler%2A>の一部として、[!INCLUDE[TLA#tla_clr](../../../../includes/tlasharptla-clr-md.md)]イベント ラッパーの追加{}および削除{}も方法は、イベントの実装、単純な[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]アタッチのメカニズム属性構文を使用してイベント ハンドラーが有効になっているとします。 そのため、単純なであっても[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]使用量は、最終的に相当、<xref:System.Windows.UIElement.AddHandler%2A>呼び出します。  
   
  登録されたハンドラー実装があるかどうか、ビジュアル ツリー内の各要素がチェックされます。 ハンドラーはルート全体で呼び出される可能性があり、呼び出される順序は、ルーティング イベントのルーティング戦略によってあらかじめ決まっています。 たとえば、バブル ルーティング イベントでは、ルーティング イベントを発生させた要素と同じ要素にアタッチされているハンドラーが最初に呼び出されます。 その後、ルーティング イベントは次の親要素に "浮上" します。アプリケーションのルート要素に到達するまで、これが繰り返されます。  
   

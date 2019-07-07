@@ -6,12 +6,12 @@ dev_langs:
 helpviewer_keywords:
 - hosting WPF content in Win32 window [WPF]
 ms.assetid: 38ce284a-4303-46dd-b699-c9365b22a7dc
-ms.openlocfilehash: 01ac0e2cafc704b64634f1fb36145387b49c34a0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9042548c52a7a82f75b4287323097655ffec48bf
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650782"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610422"
 ---
 # <a name="walkthrough-hosting-wpf-content-in-win32"></a>チュートリアル: Win32 での WPF コンテンツのホスト
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] は、アプリケーションの作成に適した環境を提供します。 ただし、[!INCLUDE[TLA#tla_win32](../../../../includes/tlasharptla-win32-md.md)] コードにかなりの投資がある場合は、元のコードを書き換えるより、アプリケーションに [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] の機能を追加するほうがより効果的であることがあります。 [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] ホストするための簡単なメカニズムを提供します。[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]でコンテンツを[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]ウィンドウ。  
@@ -22,7 +22,7 @@ ms.locfileid: "64650782"
 ## <a name="requirements"></a>必要条件  
  このチュートリアルは、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)] と [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] プログラミングの基礎知識があることを前提としています。 基本的な事柄[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]プログラミングを参照してください[Getting Started](../getting-started/index.md)します。 概要については[!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]プログラミングでは、参照すること、この主題に関する数多くの書籍の特に*プログラミング Windows* Charles Petzold 著。  
   
- このチュートリアルに付属するサンプルがで実装されているため[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]、このチュートリアルの使用に関する知識を前提としています[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]プログラムに、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)] [!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]マネージ コード プログラミングの理解。 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] の知識があることは、役立ちますが、必須ではありません。  
+ このチュートリアルに付属するサンプルがで実装されているため[!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)]、このチュートリアルの使用に関する知識を前提としています[!INCLUDE[TLA#tla_cpp](../../../../includes/tlasharptla-cpp-md.md)]プログラムに、 [!INCLUDE[TLA2#tla_win32](../../../../includes/tla2sharptla-win32-md.md)]API に加え、理解のマネージ コード プログラミングします。 [!INCLUDE[TLA#tla_cppcli](../../../../includes/tlasharptla-cppcli-md.md)] の知識があることは、役立ちますが、必須ではありません。  
   
 > [!NOTE]
 >  このチュートリアルには、関連するサンプルからのコード例が多数含まれています。 しかし、読みやすくするため、完全なサンプル コードは含まれていません。 完全なサンプル コードで、次を参照してください。 [Win32 ウィンドウのサンプルで WPF のコンテンツをホストしている](https://go.microsoft.com/fwlink/?LinkID=160004)します。  
@@ -114,7 +114,7 @@ ms.locfileid: "64650782"
 
 <a name="hosting_the_wpf_page"></a>
 ### <a name="hosting-the-wpf-content"></a>WPF コンテンツのホスティング
- [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツは、単純なアドレス入力アプリケーションです。 それは、ユーザー名やアドレスなどを取得する複数の <xref:System.Windows.Controls.TextBox> コントロールで構成されています。 2 つあります<xref:System.Windows.Controls.Button>コントロール、 **OK**と**キャンセル**します。 ユーザーがクリックすると **[ok]**、ボタンの<xref:System.Windows.Controls.Primitives.ButtonBase.Click>からデータを収集するイベント ハンドラー、<xref:System.Windows.Controls.TextBox>を制御に対応するプロパティは、代入、およびカスタム イベントを発生させます`OnButtonClicked`します。 ユーザーがクリックすると**キャンセル**、ハンドラーが発生させるだけです`OnButtonClicked`します。 `OnButtonClicked` のイベント引数オブジェクトには、どのボタンをクリックしたかを示すブール型フィールドが含まれています。
+ [!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]コンテンツは、単純なアドレス入力アプリケーションです。 それは、ユーザー名やアドレスなどを取得する複数の <xref:System.Windows.Controls.TextBox> コントロールで構成されています。 2 つあります<xref:System.Windows.Controls.Button>コントロール、 **OK**と**キャンセル**します。 ユーザーがクリックすると **[ok]** 、ボタンの<xref:System.Windows.Controls.Primitives.ButtonBase.Click>からデータを収集するイベント ハンドラー、<xref:System.Windows.Controls.TextBox>を制御に対応するプロパティは、代入、およびカスタム イベントを発生させます`OnButtonClicked`します。 ユーザーがクリックすると**キャンセル**、ハンドラーが発生させるだけです`OnButtonClicked`します。 `OnButtonClicked` のイベント引数オブジェクトには、どのボタンをクリックしたかを示すブール型フィールドが含まれています。
 
  ホストするコード、[!INCLUDE[TLA2#tla_winclient](../../../../includes/tla2sharptla-winclient-md.md)]のハンドラーでコンテンツが実装されている、 [WM_CREATE](/windows/desktop/winmsg/wm-create)ホスト ウィンドウに通知します。
 

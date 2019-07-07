@@ -10,12 +10,12 @@ helpviewer_keywords:
 - elements [WPF], initializing
 - initializing elements [WPF]
 ms.assetid: 7b8dfc9b-46ac-4ce8-b7bb-035734d688b7
-ms.openlocfilehash: 6f3c8611b83977431038573eb1c5c880acbefdc4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b0032492a9403660e91980f5e968b519a4306589
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62001469"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610495"
 ---
 # <a name="initialization-for-object-elements-not-in-an-object-tree"></a>オブジェクト ツリーに存在しないオブジェクト要素の初期化
 [!INCLUDE[TLA#tla_winclient](../../../../includes/tlasharptla-winclient-md.md)] の初期化処理では、プロセスに処理を委任することがあり、そのプロセスは、一般的にその要素が論理ツリーまたはビジュアル ツリーのいずれかに接続されていることを前提としています。 このトピックでは、どちらのツリーにも接続されていない要素を初期化するために必要となる場合がある手順について説明します。  
@@ -33,7 +33,7 @@ ms.locfileid: "62001469"
  要素のプロパティを設定する場合は、<xref:System.Windows.FrameworkElement>または<xref:System.Windows.FrameworkContentElement>派生クラスでのクラスのバージョンを呼び出すことができます<xref:System.Windows.FrameworkElement.BeginInit%2A>と<xref:System.Windows.FrameworkElement.EndInit%2A>へのキャストではなく<xref:System.ComponentModel.ISupportInitialize>します。  
   
 ### <a name="sample-code"></a>サンプル コード  
- 次の例はレンダリングを使用するコンソール アプリケーションのサンプル コード[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]と<xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType>loose[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]の適切な位置を示すためにファイル<xref:System.Windows.FrameworkElement.BeginInit%2A>と<xref:System.Windows.FrameworkElement.EndInit%2A>に関するその他の[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]呼び出しレンダリングに影響するプロパティを調整するとします。  
+ 次の例はレンダリングを使用するコンソール アプリケーションのサンプル コード[!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)]と<xref:System.Windows.Markup.XamlReader.Load%28System.IO.Stream%29?displayProperty=nameWithType>loose[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]の適切な位置を示すためにファイル<xref:System.Windows.FrameworkElement.BeginInit%2A>と<xref:System.Windows.FrameworkElement.EndInit%2A>を調整する他の API 呼び出しの周りレンダリングに影響するプロパティ。  
   
  この例では、main 関数のみを示します。 関数 `Rasterize` および `Save` (この例には示していません) は、イメージ処理および入出力を扱うユーティリティ関数です。  
   

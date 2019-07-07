@@ -5,12 +5,12 @@ helpviewer_keywords:
 - globalization [WPF], about globalization
 - localization [WPF], about localization
 ms.assetid: 56e5a5c8-6c96-4d19-b8e1-a5be1dc564af
-ms.openlocfilehash: ce54c3299d599e990fa02abd3cea1460d588e280
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28aeaae7292224dc8f56787efbde82712340af11
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64662252"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610401"
 ---
 # <a name="wpf-globalization-and-localization-overview"></a>WPF のグローバリゼーションおよびローカリゼーションの概要
 
@@ -90,7 +90,7 @@ ms.locfileid: "64662252"
 
 ローカライズ プロセスを開始した後、ローカライズされていない`MyDialog.resources.dll`ファイルをビルドします。 [!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]要素と、元のプロパティ[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]を使用して、キーと値のペアに XAML の BAML 形式から抽出された、 [!INCLUDE[TLA2#tla_api#plural](../../../../includes/tla2sharptla-apisharpplural-md.md)] <xref:System.Windows.Markup.Localizer>します。 ローカライザーは、キー/値ペアを使用して、アプリケーションをローカライズします。 新しいを生成することができます。 ローカライズが完了したら、新しい値から resource.dll します。
   
- キー/値ペアのキーは、`x:Uid`開発者が、元に配置されている値[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 これら`x:Uid`値が有効にする、[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]を追跡し、ローカライズ中に、開発者と、ローカライザー間に行われる変更をマージします。 たとえば、開発者が変更された場合、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ローカライザーは、ローカライズを開始した後の最小限の翻訳作業が失われたようにローカライズを既に完了した作業と開発の変更をマージできます。  
+ キー/値ペアのキーは、`x:Uid`開発者が、元に配置されている値[!INCLUDE[TLA2#tla_xaml](../../../../includes/tla2sharptla-xaml-md.md)]します。 これら`x:Uid`値を追跡およびローカライズ中に、開発者と、ローカライザー間に行われる変更をマージする API を有効にします。 たとえば、開発者が変更された場合、[!INCLUDE[TLA2#tla_ui](../../../../includes/tla2sharptla-ui-md.md)]ローカライザーは、ローカライズを開始した後の最小限の翻訳作業が失われたようにローカライズを既に完了した作業と開発の変更をマージできます。  
   
  次の図は、XAML の BAML 形式に基づいているローカリゼーションの一般的なワークフローを示します。 この図では、開発者は、英語でアプリケーションを記述を前提としています。 開発者は、作成し、WPF アプリケーションのグローバライズします。 プロジェクトの開発者のセットをファイル`<UICulture>en-US</UICulture>`ビルド時に、言語に中立的なメイン アセンブリはサテライトで生成されるようにします。 ローカライズ可能なすべてのリソースを含む resources.dll。 代わりに、WPF のローカリゼーション Api は、メイン アセンブリからの抽出をサポートするため、メイン アセンブリにソース言語に残すいずれかでした。 ビルド プロセスの後、XAML BAML にコンパイルされます。 カルチャ的にニュートラル MyDialog.exe.resources.dll 英語圏の顧客に送付されます。  
   
