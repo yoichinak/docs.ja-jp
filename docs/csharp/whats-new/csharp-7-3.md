@@ -2,12 +2,12 @@
 title: C# 7.3 の新機能
 description: C# 7.3 の新機能の概要
 ms.date: 05/16/2018
-ms.openlocfilehash: aca5c1b82253c02eccf24af1e5c45d0203d0b1b8
-ms.sourcegitcommit: 34593b4d0be779699d38a9949d6aec11561657ec
+ms.openlocfilehash: 768070ead2b180d5f4491ac87be6c248c39e9944
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66832709"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397779"
 ---
 # <a name="whats-new-in-c-73"></a>C# 7.3 の新機能
 
@@ -34,7 +34,12 @@ C# 7.3 リリースには 2 つの主要なテーマがあります。 1 つ目�
 - `-publicsign`: オープン ソース ソフトウェア (OSS) のアセンブリの署名を可能にします。
 - `-pathmap`: ソース ディレクトリのマッピングを提供します。
 
-この記事の残りの部分では、それぞれの機能強化の詳細とリンクを示します。
+この記事の残りの部分では、それぞれの機能強化の詳細とリンクを示します。 `dotnet try` グローバル ツールを使って、これらの機能をご自身の環境で調べることができます。
+
+1. [dotnet try](https://github.com/dotnet/try/blob/master/README.md#setup) グローバル ツールをインストールします。
+1. [dotnet/try-samples](https://github.com/dotnet/try-samples) リポジトリを複製します。
+1. 現在のディレクトリを、*try-samples* リポジトリの *csharp7* サブディレクトリに設定します。
+1. `dotnet try` を実行します。
 
 ## <a name="enabling-more-efficient-safe-code"></a>セーフ コードをより効率的にする
 

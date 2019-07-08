@@ -8,12 +8,12 @@ helpviewer_keywords:
 ms.assetid: de8b8759-fca7-4260-896b-5a4973157672
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5bbf579540ccb93101dba05c5b2577ae8f24ec09
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 30e013d39d403bef5fe060fd1c64dc435de5be06
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486523"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347389"
 ---
 # <a name="shadow-copying-assemblies"></a>アセンブリのシャドウ コピー
 シャドウ コピーにより、アプリケーション ドメインをアンロードしなくても、アプリケーション ドメインで使用されるアセンブリを更新できます。 これは、ASP.NET サイトなど、継続的に使用可能であることが必要なアプリケーションで特に役立ちます。  
@@ -34,7 +34,7 @@ ms.locfileid: "66486523"
   
 - 「[起動時のパフォーマンス](#StartupPerformance)」では、起動時のパフォーマンスを改善するために .NET Framework 4 でシャドウ コピーに加えられた変更、および以前のバージョンの動作に戻す方法について説明します。  
   
-- 「[廃止メソッド](#ObsoleteMethods)」では、[!INCLUDE[dnprdnlong](../../../includes/dnprdnlong-md.md)] でシャドウ コピーを制御するためにプロパティとメソッドに加えられた変更について説明します。  
+- 「[廃止メソッド](#ObsoleteMethods)」では、.NET Framework 2.0 でシャドウ コピーを制御するためにプロパティとメソッドに加えられた変更について説明します。  
   
 <a name="EnablingAndUsing"></a>   
 ## <a name="enabling-and-using-shadow-copying"></a>シャドウ コピーの有効化と使用  

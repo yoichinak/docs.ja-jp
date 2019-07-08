@@ -16,12 +16,12 @@ helpviewer_keywords:
 - data templates [WPF]
 - thread [WPF], affinity
 ms.assetid: 8579c10b-76ab-4c52-9691-195ce02333c8
-ms.openlocfilehash: f4a6e6c2a63e58c40e0cca9c67b12d1f65af0d2e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 697a3dff663b333ce97e05783df6b163692b5d9e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62053146"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610350"
 ---
 # <a name="wpf-architecture"></a>WPF アーキテクチャ
 このトピックでは、Windows Presentation Foundation (WPF) クラスの階層構造のガイド付きツアーを提供します。 [!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の主要なサブシステムの大半に対応し、それらがどのようにやり取りするかについて説明します。 また、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]の構造設計者によって行われた選択についての幾つかを詳細に説明します。  
@@ -62,7 +62,7 @@ ms.locfileid: "62053146"
   
 <a name="System_Windows_Media_Visual"></a>   
 ## <a name="systemwindowsmediavisual"></a>System.Windows.Media.Visual  
- 定義されているシステムでは、次の手順は画面に描画されるピクセルになっています。 <xref:System.Windows.Media.Visual>クラスがそれぞれ必要に応じて描画命令とこれらの手順 (クリッピング、変換など) をレンダリングする方法についてのメタデータを含む、ビジュアル オブジェクトのツリーを構築するために提供します。 <xref:System.Windows.Media.Visual> ほとんどの機能には、パブリックあるありませんので非常に軽量で柔軟なをするのには設計されています[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]公開し、保護されているコールバック関数に大きく依存します。  
+ 定義されているシステムでは、次の手順は画面に描画されるピクセルになっています。 <xref:System.Windows.Media.Visual>クラスがそれぞれ必要に応じて描画命令とこれらの手順 (クリッピング、変換など) をレンダリングする方法についてのメタデータを含む、ビジュアル オブジェクトのツリーを構築するために提供します。 <xref:System.Windows.Media.Visual> ようにする非常に軽量で柔軟なほとんどの機能のパブリック API に公開がない場合や保護されているコールバック関数に大きく依存して設計されています。  
   
  <xref:System.Windows.Media.Visual> エントリ ポイントは、実際に、[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]コンポジション システム。 <xref:System.Windows.Media.Visual> マネージこれらの 2 つサブシステム間の接続ポイントは、[!INCLUDE[TLA#tla_api](../../../../includes/tlasharptla-api-md.md)]まさに、します。  
   
@@ -112,7 +112,7 @@ ms.locfileid: "62053146"
   
  導入されたプライマリ ポリシー<xref:System.Windows.FrameworkElement>アプリケーション レイアウトの周りが。 <xref:System.Windows.FrameworkElement> 導入された基本的なレイアウトのコントラクトに基づいて<xref:System.Windows.UIElement>レイアウト プロパティのレイアウトのセマンティクスを駆動型の一貫性のあるセットがレイアウトの作成者が簡単です「スロット」の概念を追加します。 などのプロパティ<xref:System.Windows.FrameworkElement.HorizontalAlignment%2A>、 <xref:System.Windows.FrameworkElement.VerticalAlignment%2A>、 <xref:System.Windows.FrameworkElement.MinWidth%2A>、および<xref:System.Windows.FrameworkElement.Margin%2A>(をいくつかの名前を付ける) から派生したすべてのコンポーネントを提供<xref:System.Windows.FrameworkElement>レイアウト コンテナー内で一貫性のある動作。  
   
- <xref:System.Windows.FrameworkElement> 簡単に用意されています[!INCLUDE[TLA2#tla_api](../../../../includes/tla2sharptla-api-md.md)]の基本レイヤーについては、多くの機能への露出[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 たとえば、<xref:System.Windows.FrameworkElement>アニメーションに直接アクセスできる、<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>メソッド。 A<xref:System.Windows.Media.Animation.Storyboard>プロパティのセットに対して複数のアニメーションのスクリプトを作成する方法を提供します。  
+ <xref:System.Windows.FrameworkElement> 基本レイヤーで見つかったさまざまな機能に簡単に API の公開も提供[!INCLUDE[TLA2#tla_wpf](../../../../includes/tla2sharptla-wpf-md.md)]します。 たとえば、<xref:System.Windows.FrameworkElement>アニメーションに直接アクセスできる、<xref:System.Windows.FrameworkElement.BeginStoryboard%2A>メソッド。 A<xref:System.Windows.Media.Animation.Storyboard>プロパティのセットに対して複数のアニメーションのスクリプトを作成する方法を提供します。  
   
  2 つの最も重要なことを<xref:System.Windows.FrameworkElement>紹介はデータ バインドとスタイル。  
   

@@ -14,12 +14,12 @@ helpviewer_keywords:
 - event subscription [C#]
 - += operator [C#]
 ms.assetid: 93e56486-bb42-43c1-bd43-60af11e64e67
-ms.openlocfilehash: 14e62d53fca16212fae374b2627d1e96cbbca6ac
-ms.sourcegitcommit: 5bc85ad81d96b8dc2a90ce53bada475ee5662c44
+ms.openlocfilehash: 258adc45fc6874cca5829479eef1196ebea1e300
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67025321"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347973"
 ---
 # <a name="-and--operators-c-reference"></a>+ および += 演算子 (C# リファレンス)
 
@@ -39,7 +39,7 @@ C# 6 以降、[文字列補間](../tokens/interpolated.md)という文字列を�
 
 ## <a name="delegate-combination"></a>デリゲートの組み合わせ
 
-同じ[デリゲート](../keywords/delegate.md)型のオペランドの場合、`+` 呼び出されると最初のオペランドを呼び出してから 2 番目のオペランドを呼び出す新しいデリゲート インスタンスが演算子によって返されます。 いずれかのオペランドが `null` の場合、`+` 演算子によって別のオペランドの値が返されます (`null` でもある場合があります)。 次の例では、デリゲートが `+` 演算子と組み合わされるしくみを説明しています。
+同じ[デリゲート](../keywords/delegate.md)型のオペランドの場合、呼び出されると左側のオペランドを呼び出してから右側のオペランドを呼び出す新しいデリゲート インスタンスが `+` 演算子によって返されます。 いずれかのオペランドが `null` の場合、`+` 演算子によって別のオペランドの値が返されます (`null` でもある場合があります)。 次の例では、デリゲートが `+` 演算子と組み合わされるしくみを説明しています。
 
 [!code-csharp-interactive[delegate combination](~/samples/csharp/language-reference/operators/AdditionOperator.cs#AddDelegates)]
 

@@ -2,12 +2,12 @@
 title: C# 7.1 の新機能
 description: C# 7.1 の新機能の概要。
 ms.date: 04/09/2019
-ms.openlocfilehash: 4b7bd96e428f990b2db91a4cfd45da01dc133aac
-ms.sourcegitcommit: c4e9d05644c9cb89de5ce6002723de107ea2e2c4
+ms.openlocfilehash: a95111b6f217a2ca5c520c2d4d70efa0e23742f9
+ms.sourcegitcommit: 127343afce8422bfa944c8b0c4ecc8f79f653255
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65881543"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67347620"
 ---
 # <a name="whats-new-in-c-71"></a>C# 7.1 の新機能
 
@@ -29,6 +29,13 @@ C# 7.1 では、[言語バージョン選択](../language-reference/configure-la
 最後に、コンパイラには、[参照アセンブリ生成](#reference-assembly-generation)を制御する 2 つのオプション、`-refout` と `-refonly` があります。
 
 ポイント リリースで最新の機能を使用するには、[コンパイラ言語バージョンを構成](../language-reference/configure-language-version.md)し、バージョンを選択する必要があります。
+
+この記事の残りでは、各機能の概要について説明します。 機能ごとに、その背後にある論拠のほか、 構文についても説明します。 `dotnet try` グローバル ツールを使って、これらの機能をご自身の環境で調べることができます。
+
+1. [dotnet try](https://github.com/dotnet/try/blob/master/README.md#setup) グローバル ツールをインストールします。
+1. [dotnet/try-samples](https://github.com/dotnet/try-samples) リポジトリを複製します。
+1. 現在のディレクトリを、*try-samples* リポジトリの *csharp7* サブディレクトリに設定します。
+1. `dotnet try` を実行します。
 
 ## <a name="async-main"></a>async main
 

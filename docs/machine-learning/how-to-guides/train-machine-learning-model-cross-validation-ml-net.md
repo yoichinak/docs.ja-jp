@@ -1,20 +1,20 @@
 ---
-title: クロス検証を使用した機械学習モデルのトレーニングと評価
-description: クロス検証を使用して機械学習モデルをトレーニングおよび評価する方法について説明します
-ms.date: 05/03/2019
+title: クロス検証を使って機械学習モデルをトレーニングする
+description: ML.NET で、クロス検証を使用してより堅牢な機械学習モデルを構築する方法について説明します。 クロス検証は、データをいくつかのパーティションに分割し、それらのパーティション上で複数のアルゴリズムをトレーニングするトレーニングおよびモデル評価手法です。
+ms.date: 06/25/2019
 author: luisquintanilla
 ms.author: luquinta
-ms.custom: mvc,how-to
-ms.openlocfilehash: a06711ca83ea545adc7292cf6d8173f006fdb94d
-ms.sourcegitcommit: 682c64df0322c7bda016f8bfea8954e9b31f1990
+ms.custom: mvc,how-to,title-hack-0625
+ms.openlocfilehash: c68c2b61054f59f03b4743ec30a694e94086ebab
+ms.sourcegitcommit: bab17fd81bab7886449217356084bf4881d6e7c8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65557828"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67397657"
 ---
-# <a name="train-and-evaluate-a-machine-learning-model-using-cross-validation"></a>クロス検証を使用した機械学習モデルのトレーニングと評価
+# <a name="train-a-machine-learning-model-using-cross-validation"></a>クロス検証を使って機械学習モデルをトレーニングする
 
-ML.NET で、クロス検証を使用してより堅牢な機械学習モデルを構築する方法について説明します。 
+ML.NET で、クロス検証を使用してより堅牢な機械学習モデルをトレーニングする方法について説明します。 
 
 クロス検証は、データをいくつかのパーティションに分割し、それらのパーティション上で複数のアルゴリズムをトレーニングするトレーニングおよびモデル評価手法です。 この手法は、トレーニング プロセスのデータを提供することでモデルの堅牢性を改善します。 データに制約のある環境では、目に見えない観測のパフォーマンス向上に加え、小規模のデータセットでモデルをトレーニングする場合の効果的なツールになる可能性があります。
 
@@ -93,7 +93,7 @@ var cvResults = mlContext.Regression.CrossValidate(transformedData, sdcaEstimato
 
 `cvResults` に格納される結果は、[`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) オブジェクトのコレクションです。 このオブジェクトには、トレーニング済みモデルだけでなく、[`Model`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Model) プロパティと [`Metrics`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601.Metrics) プロパティの両方からそれぞれアクセスできるメトリックが含まれています。 このサンプルでは、`Model` プロパティは [`ITransformer`](xref:Microsoft.ML.ITransformer) 型であり、`Metrics` プロパティは [`RegressionMetrics`](xref:Microsoft.ML.Data.RegressionMetrics) 型です。 
 
-## <a name="extract-metrics"></a>メトリックを抽出する
+## <a name="evaluate-the-model"></a>モデルを評価する
 
 個々の [`CrossValidationResult`](xref:Microsoft.ML.TrainCatalogBase.CrossValidationResult%601) オブジェクトの `Metrics` プロパティを介してさまざまなトレーニング済みモデルのメトリックにアクセスできます。 この場合は、[R-2 乗メトリック](https://en.wikipedia.org/wiki/Coefficient_of_determination)にアクセスし、変数 `rSquared` に格納されます。 
 
@@ -103,11 +103,7 @@ IEnumerable<double> rSquared =
         .Select(fold => fold.Metrics.RSquared);
 ```
 
-`rSquared` 変数の内容を調べると、出力は 0 - 1 の範囲の 5 つの値になります (1 に近いほど適しています)。
-
-## <a name="select-the-best-performing-model"></a>最適なパフォーマンスのモデルを選択する
-
-R-2 乗などのメトリックを使用して、最適なパフォーマンスから最低のパフォーマンスのモデルを選択します。 次に、最上位のモデルを選択して予測を行うか、追加の操作を実行します。
+`rSquared` 変数の内容を調べると、出力は 0 - 1 の範囲の 5 つの値になります (1 に近いほど適しています)。 R-2 乗などのメトリックを使用して、最適なパフォーマンスから最低のパフォーマンスのモデルを選択します。 次に、最上位のモデルを選択して予測を行うか、追加の操作を実行します。
 
 ```csharp
 // Select all models
