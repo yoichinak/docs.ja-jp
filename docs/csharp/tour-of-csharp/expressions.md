@@ -3,12 +3,12 @@ title: C# の式 - C# 言語のツアー
 description: 式、オペランド、および演算子は、C# 言語の構成要素です
 ms.date: 04/25/2019
 ms.assetid: 20d5eb10-7381-47b9-ad90-f1cc895aa27e
-ms.openlocfilehash: ffe800304a9125e11e20d96a84919936f1fee2c1
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 2553730d495942730c53d3646f35e80759a4d168
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64753647"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609320"
 ---
 # <a name="expressions"></a>式
 
@@ -23,7 +23,7 @@ ms.locfileid: "64753647"
 
 優先順位と結合性は、かっこを使用して制御することができます。 たとえば、`x + y * z` は最初に `y` と `z` を掛け、そして結果を `x` に足しますが、`(x + y) * z` では最初に `x` と `y` を足してから `z` を掛けます。
 
-ほとんどの演算子は[*オーバーロード*](../language-reference/keywords/operator.md)できます。 演算子をオーバーロードすると、ユーザー定義演算子の実装を、1 つまたは両方のオペランドがユーザー定義のクラスまたは構造体型である演算子に指定することができます。
+ほとんどの演算子は[*オーバーロード*](../language-reference/operators/operator-overloading.md)できます。 演算子をオーバーロードすると、ユーザー定義演算子の実装を、1 つまたは両方のオペランドがユーザー定義のクラスまたは構造体型である演算子に指定することができます。
 
 C# では、[算術](../language-reference/operators/arithmetic-operators.md)、[論理](../language-reference/operators/boolean-logical-operators.md)、[ビットごとやシフト](../language-reference/operators/bitwise-and-shift-operators.md)の演算に加えて、[等値](../language-reference/operators/equality-operators.md)や[順序](../language-reference/operators/comparison-operators.md)の比較を実行するための多数の演算子を提供しています。
 
