@@ -23,17 +23,17 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 
 - [Visual Studio 2017 15.6 以降](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=inline+link&utm_content=download+vs2017)が ".NET Core クロスプラット フォーム開発" とともにインストールされていること。
 - PowerShell
-- 事前トレーニング済みモデル [ML.NET Sentiment Analysis のチュートリアル](../tutorials/sentiment-analysis.md)を使用して独自のモデルを構築するか、この[事前トレーニング済みの感情分析の機械学習モデル](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードすること
+- 事前トレーニング済みのモデル。[ML.NET Sentiment Analysis のチュートリアル](../tutorials/sentiment-analysis.md)を使用して独自のモデルを構築するか、こちらの[事前トレーニング済みの感情分析の機械学習モデル](https://github.com/dotnet/samples/blob/master/machine-learning/models/sentimentanalysis/sentiment_model.zip)をダウンロードすること。
 
 ## <a name="create-aspnet-core-web-api-project"></a>ASP.NET Core Web API プロジェクトを作成する
 
-1. Visual Studio 2017 を開きます。 メニュー バーから、 **[ファイル]、[新規]、[プロジェクト]** の順に選択します。 [新しいプロジェクト] ダイアログで、 **[Visual C#]** ノードを選択し、 **[Web]** ノードを選択します。 次に、 **[ASP.NET Core Web アプリケーション]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「SentimentAnalysisWebAPI」と入力し、 **[OK]** を選択します。
+1. Visual Studio 2017 を開きます。 メニューバーから、 **[ファイル] > [新規作成] > [プロジェクト]** の順に選択します。 [新しいプロジェクト] ダイアログで、 **[Visual C#]** ノードを選択し、 **[Web]** ノードを選択します。 次に、 **[ASP.NET Core Web アプリケーション]** プロジェクト テンプレートを選択します。 **[名前]** テキスト ボックスに「SentimentAnalysisWebAPI」と入力し、 **[OK]** を選択します。
 
 1. ASP.NET Core プロジェクトの複数の種類が表示されているウィンドウで、 **[API]** を選択し、 **[OK]** を選択します。
 
-1. 構築済みの機械学習モデルを保存するための *MLModels* という名前のディレクトリをプロジェクト内に作成します。
+1. 事前トレーニング済みの機械学習モデルを保存するための *MLModels* という名前のディレクトリをプロジェクト内に作成します。
 
-    ソリューション エクスプローラーで、プロジェクトを右クリックし、[追加]、[新しいフォルダー] の順に選択します。 「MLModels」と入力し、Enter キーを押します。
+    ソリューション エクスプローラーで、プロジェクトを右クリックし、[追加] > [新しいフォルダー] の順に選択します。 「MLModels」と入力し、Enter キーを押します。
 
 1. **Microsoft.ML NuGet パッケージ**をインストールします。
 
@@ -45,19 +45,19 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 
 ### <a name="add-model-to-aspnet-core-web-api-project"></a>モデルを ASP.NET Core Web API プロジェクトに追加する
 
-1. 構築済みのモデルを *MLModels* ディレクトリにコピーします。
-1. ソリューション エクスプローラーで、モデルの zip ファイルを右クリックし、[プロパティ] を選択します。 [詳細設定] で、[出力ディレクトリにコピー] の値を [新しい場合はコピーする] に変更します。
+1. 事前トレーニング済みのモデルを *MLModels* ディレクトリにコピーします。
+1. ソリューション エクスプローラーで、モデルの zip ファイルを右クリックし、[プロパティ] を選択します。 [プロパティ] で [出力ディレクトリにコピー] の値を [新しい場合はコピーする] に変更します。
 
-## <a name="create-data-models"></a>データ モデルを作成する
+## <a name="create-data-models"></a>データモデルを作成する
 
-入力データと予測のために、いくつかのクラスを作成する必要があります。 プロジェクトに新しいクラスを追加します。
+入力データと予測のために、いくつかのクラスを作成する必要があります。プロジェクトに新しいクラスを追加します。
 
-1. データ モデルを保存するための *DataModels* という名前のディレクトリをプロジェクト内に作成します。
+1. データモデルを保存するための *DataModels* という名前のディレクトリをプロジェクト内に作成します。
 
-    ソリューション エクスプローラーで、プロジェクトを右クリックし、[追加]、[新しいフォルダー] の順に選択します。 「DataModels」と入力し、**Enter** キーを押します。
+    ソリューションエクスプローラーで、プロジェクトを右クリックし、[追加] > [新しいフォルダー] の順に選択します。 「DataModels」と入力し、**Enter** キーを押します。
 
-2. ソリューション エクスプローラーで、*DataModels* ディレクトリを右クリックし、[追加]、[新しいアイテム] の順に選択します。
-3. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *SentimentData.cs* に変更します。 次に、 **[追加]** を選択します。 コード エディターで *SentimentData.cs* ファイルが開きます。 *SentimentData.cs* の先頭に次の using ステートメントを追加します。
+2. ソリューション エクスプローラーで、*DataModels* ディレクトリを右クリックし、[追加] > [新しいアイテム] の順に選択します。
+3. **[新しい項目の追加]** ダイアログボックスで **[クラス]** を選択し、 **[名前]** フィールドを *SentimentData.cs* に変更します。 次に **[追加]** を選択します。コードエディターで *SentimentData.cs* ファイルが開きます。 *SentimentData.cs* の先頭に次の using ステートメントを追加します。
 
     ```csharp
     using Microsoft.ML.Data;
@@ -77,7 +77,7 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
     }
     ```
 
-4. ソリューション エクスプローラーで、*DataModels* ディレクトリを右クリックし、 **[追加]、[新しいアイテム]** の順に選択します。
+4. ソリューションエクスプローラーで、*DataModels* ディレクトリを右クリックし、 **[追加] > [新しいアイテム]** の順に選択します。
 5. **[新しい項目の追加]** ダイアログ ボックスで、 **[クラス]** を選択し、 **[名前]** フィールドを *SentimentPrediction.cs* に変更します。 次に、[追加] を選択します。 コード エディターに *SentimentPrediction.cs* ファイルが開きます。 *SentimentPrediction.cs* の先頭に次の using ステートメントを追加します。
 
     ```csharp
@@ -89,7 +89,6 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
     ```csharp
     public class SentimentPrediction : SentimentData
     {
-
         [ColumnName("PredictedLabel")]
         public bool Prediction { get; set; }
 
@@ -99,11 +98,11 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
     }
     ```
 
-    `SentimentPrediction` は `SentimentData`を継承します。 これにより、モデルによって生成された出力と共に、`SentimentText` プロパティ内の元のデータをより簡単に確認できるようになります。 
+    `SentimentPrediction` は `SentimentData`を継承します。 これにより、モデルによって生成された出力データと一緒に `SentimentText` プロパティの元のデータを容易に確認できます。
 
-## <a name="register-predictionenginepool-for-use-in-the-application"></a>アプリケーション内で使用する PredictionEnginePool を登録する
+## <a name="register-predictionenginepool-for-use-in-the-application"></a>アプリケーションで使用する PredictionEnginePool を登録する
 
-1 つの予測を行うために、[`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) を使用します。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) をお使いのアプリケーションで使用するには、必要に応じて、作成する必要があります。 その場合、ベスト プラクティスとして、依存関係を挿入することを検討します。
+1つの予測を行うのに [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) を使用します。 [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) を自身のアプリケーションで使用するには、必要に応じて生成しなければなりません。その場合、ベストプラクティスとして、依存関係を挿入することを検討します。
 
 [ASP.NET Core での依存関係の挿入](https://docs.microsoft.com/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1)については、リンク先で提供されている詳しい情報を確認してください。
 
@@ -133,15 +132,15 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
 大まかに言えば、このコードは、オブジェクトとサービスがアプリケーションによって要求されたときに、初期化を手動ではなく自動的に実行します。
 
 > [!WARNING]
-> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。 パフォーマンスとスレッドの安全性を改善するために、`PredictionEnginePool` サービスを使用します。これにより、アプリケーションで使用される `PredictionEngine` オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 詳しくは、[ASP.NET Core での `PredictionEngine` オブジェクト プールの作成と使用](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)に関するブログ投稿で確認してください。  
+> [`PredictionEngine`](xref:Microsoft.ML.PredictionEngine%602) はスレッド セーフではありません。パフォーマンスとスレッドセーフを改善するために、`PredictionEnginePool` サービスを使用します。これにより、アプリケーションで使用される `PredictionEngine` オブジェクトの [`ObjectPool`](xref:Microsoft.Extensions.ObjectPool.ObjectPool%601) が作成されます。 詳しくは、[ASP.NET Core での `PredictionEngine` オブジェクトプールの作成と使用](https://devblogs.microsoft.com/cesardelatorre/how-to-optimize-and-run-ml-net-models-on-scalable-asp-net-core-webapis-or-web-apps/)のブログ投稿で確認してください。  
 
 ## <a name="create-predict-controller"></a>予測コントローラーを作成する
 
-受信 HTTP 要求を処理するために、コントローラーを作成します。
+HTTP 要求の受信の処理をするために、コントローラーを作成します。
 
-1. ソリューション エクスプローラーで、*Controllers* ディレクトリを右クリックし、 **[追加]、[コントローラー]** の順に選択します。
+1. ソリューション エクスプローラーで、*Controllers* ディレクトリを右クリックし、 **[追加] > [コントローラー]** の順に選択します。
 1. **[新しい項目の追加]** ダイアログ ボックスで、 **[空の API コントローラー]** を選択し、 **[追加]** を選択します。
-1. プロンプトで、 **[コントローラー名]** フィールドを*PredictController.cs* に変更します。 次に、[追加] を選択します。 コード エディターに *PredictController.cs* ファイルが開きます。 *PredictController.cs* の先頭に次の using ステートメントを追加します。
+1. プロンプトで、 **[コントローラー名]** フィールドを*PredictController.cs* に変更します。 次に、[追加] を選択します。コードエディターで *PredictController.cs* ファイルが開きます。*PredictController.cs* の先頭に次の using ステートメントを追加します。
 
     ```csharp
     using System;
@@ -179,14 +178,14 @@ ASP.NET Core Web API を使用して、事前トレーニング済みの ML.NET 
     }
     ```
 
-このコードでは、依存関係の挿入によって取得したコントローラーのコンストラクターに渡すことで、`PredictionEnginePool` を割り当てます。 次に、`Predict` コントローラーの `Post` メソッドでは、`PredictionEnginePool` を使用して予測を行い、成功した場合はその結果をユーザーに返します。
+このコードでは、`PredictionEnginePool` を依存関係の挿入によって取得してコントローラーのコンストラクターに渡すことで割り当ています。そして、`Predict` コントローラーの `Post` メソッドでは、`PredictionEnginePool` を使用して予測を行い、成功した場合はその結果をユーザーに返します。
 
 ## <a name="test-web-api-locally"></a>Web API をローカルでテストする
 
-すべてが設定されたので、アプリケーションをテストします。
+すべてが設定されたので、アプリケーションをテストしましょう。
 
 1. アプリケーションを実行します。
-1. PowerShell を開き、次のコードを入力します。PORT は、アプリケーションがリスニングしているポートです。
+1. PowerShell を開き、次のコードを入力します。PORT には、アプリケーションがリスニングしているポートを入力します。
 
     ```powershell
     Invoke-RestMethod "https://localhost:<PORT>/api/predict" -Method Post -Body (@{Text="This was a very bad steak"} | ConvertTo-Json) -ContentType "application/json"
