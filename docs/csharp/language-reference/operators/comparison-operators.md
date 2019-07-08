@@ -19,12 +19,12 @@ helpviewer_keywords:
 - <= operator [C#]
 - greater than or equal to operator [C#]
 - '>= operator [C#]'
-ms.openlocfilehash: 5b6668e20e4d69b7d6bdf3e6283574f1b974ef54
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: d354a1e899e6ea72ac1e65634e5cc1267d41fb07
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423969"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609897"
 ---
 # <a name="comparison-operators-c-reference"></a>比較演算子 (C# リファレンス)
 
@@ -63,7 +63,7 @@ ms.locfileid: "67423969"
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-ユーザー定義型は、`<`、`>`、`<=`、および `>=` 演算子を[オーバーロード](../keywords/operator.md)できます。
+ユーザー定義型は、`<`、`>`、`<=`、および `>=` 演算子を[オーバーロード](operator-overloading.md)できます。
 
 ある型で `<` または `>` 演算子のいずれかをオーバーロードする場合は、`<` と `>` の両方をオーバーロードする必要があります。 ある型で `<=` または `>=` 演算子のいずれかをオーバーロードする場合は、`<=` と `>=` の両方をオーバーロードする必要があります。
 
