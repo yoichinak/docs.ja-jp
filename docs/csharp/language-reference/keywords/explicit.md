@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - explicit keyword [C#]
 ms.assetid: cfb8f42a-e411-4db2-af9b-796b05644846
-ms.openlocfilehash: 4949b88a32dae2a727e623bb6e4db0a4f9d8418c
-ms.sourcegitcommit: 6b308cf6d627d78ee36dbbae8972a310ac7fd6c8
+ms.openlocfilehash: a260c6f1ccac6e09770f1cb8f43d5d872b4b2650
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54557995"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610101"
 ---
 # <a name="explicit-c-reference"></a>explicit (C# リファレンス)
 
@@ -55,6 +55,6 @@ ms.locfileid: "54557995"
 - [C# プログラミング ガイド](../../programming-guide/index.md)
 - [C# のキーワード](index.md)
 - [implicit](implicit.md)
-- [演算子 (C# リファレンス)](operator.md)
+- [演算子のオーバーロード](../operators/operator-overloading.md)
 - [方法: 構造体間にユーザー定義の変換を実装する](../../programming-guide/statements-expressions-operators/how-to-implement-user-defined-conversions-between-structs.md)
 - [Chained user-defined explicit conversions in C#](https://blogs.msdn.microsoft.com/ericlippert/2007/04/16/chained-user-defined-explicit-conversions-in-c/) (C# でのユーザー定義の明示的変換の連結)

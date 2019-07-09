@@ -15,12 +15,12 @@ helpviewer_keywords:
 - inequality operator [C#]
 - not equals operator [C#]
 - '!= operator [C#]'
-ms.openlocfilehash: 72e790dc008857a48602c92c9236588c531b64f9
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 3caacf8628e6ab07b731f0574ca3a0f7e973adcd
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67423927"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609883"
 ---
 # <a name="equality-operators-c-reference"></a>等値演算子 (C# リファレンス)
 
@@ -45,6 +45,14 @@ ms.locfileid: "67423927"
 
 C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../../tuples.md)によってサポートされています。 詳細については、「[C# のタプル型](../../tuples.md)」の記事の「[等値とタプル](../../tuples.md#equality-and-tuples)」のセクションを参照してください。
 
+### <a name="reference-types-equality"></a>参照型の等価性
+
+既定では、2 つの参照型オペランドは、同じオブジェクトを参照しているときに等しくなります。
+
+[!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
+
+次の例は、ユーザー定義の参照型が既定で `==` 演算子をサポートしていることを示しています。 ただし、参照型は `==` 演算子をオーバーロードできます。 参照型が `==` 演算子をオーバーロードする場合、その型の 2 つの参照が同じオブジェクトを参照しているかどうかを調べるには <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> メソッドを使用します。
+
 ### <a name="string-equality"></a>文字列の等価性
 
 2 つの [string](../keywords/string.md) オペランドは、その両方が `null` であるか、両方の文字列インスタンスの長さが同じで、それぞれの文字列の位置に同じ文字が含まれている場合に等しくなります。
@@ -53,15 +61,7 @@ C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../../tuples.
 
 序数の比較では大文字と小文字が区別されます。 文字列の比較に関する詳細については、「[C# で文字列を比較する方法](../../how-to/compare-strings.md)」を参照してください。
 
-### <a name="reference-types-equality"></a>参照型の等価性
-
-`string` 参照型オペランド以外の 2 つは、同じオブジェクトを参照しているときに等しくなります。
-
-[!code-csharp[reference type equality](~/samples/csharp/language-reference/operators/EqualityOperators.cs#ReferenceTypesEquality)]
-
-次の例は、ユーザー定義の参照型が既定で `==` 演算子をサポートしていることを示しています。 ただし、ユーザー定義の参照型は `==` 演算子をオーバーロードできます。 参照型が `==` 演算子をオーバーロードする場合、その型の 2 つの参照が同じオブジェクトを参照しているかどうかを調べるには <xref:System.Object.ReferenceEquals%2A?displayProperty=nameWithType> メソッドを使用します。
-
-## <a name="delegate-equality"></a>デリゲートの等価性
+### <a name="delegate-equality"></a>デリゲートの等価性
 
 同じランタイム型を持つ 2 つの[デリゲート](../../programming-guide/delegates/index.md) オペランドが等しくなるのは、それらの両方が `null` であるか、それらの呼び出しリストが同じ長さで、各位置に等しいエントリを含んでいる場合です。
 
@@ -83,7 +83,7 @@ C# 7.3 より、`==` および `!=` 演算子は C# の[タプル](../../tuples.
 
 ## <a name="operator-overloadability"></a>演算子のオーバーロード可/不可
 
-ユーザー定義型は `==` 演算子と `!=` 演算子を[オーバーロード](../keywords/operator.md)できます。 ある型でこの 2 つの演算子の 1 つをオーバーロードする場合は、もう 1 つの演算子もオーバーロードする必要があります。
+ユーザー定義型は `==` 演算子と `!=` 演算子を[オーバーロード](operator-overloading.md)できます。 ある型でこの 2 つの演算子の 1 つをオーバーロードする場合は、もう 1 つの演算子もオーバーロードする必要があります。
 
 ## <a name="c-language-specification"></a>C# 言語仕様
 

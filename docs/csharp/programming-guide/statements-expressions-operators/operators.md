@@ -7,12 +7,12 @@ helpviewer_keywords:
 - C# language, operators
 - operators [C#], about operators
 ms.assetid: 214e7b83-1a41-4f7c-9867-64e9c0bab39f
-ms.openlocfilehash: 60e7f7c25b525c6db856731bd16c1c0e60efe6d6
-ms.sourcegitcommit: 10986410e59ff29f2ec55c6759bde3eb4d1a00cb
+ms.openlocfilehash: 551d4cd8bf26a1c1caf3cbf611d9f338ae2581be
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66422926"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609503"
 ---
 # <a name="operators-c-programming-guide"></a>演算子 (C# プログラミング ガイド)
 
@@ -80,7 +80,7 @@ a = (b = c);
   
 ## <a name="operator-overloading"></a>演算子のオーバーロード
 
-カスタム クラスやカスタム構造体では、特定の演算子の動作を定義できます。 このプロセスは *演算子のオーバーロード*と呼ばれます。 詳細については、[オーバーロード可能な演算子](../../language-reference/keywords/operator.md)に関する記事と [operator](overloadable-operators.md) キーワードに関する記事を参照してください。
+カスタム クラスやカスタム構造体では、特定の演算子の動作を定義できます。 このプロセスは *演算子のオーバーロード*と呼ばれます。 詳細については、「[演算子のオーバーロード](../../language-reference/operators/operator-overloading.md)」を参照してください。
   
 ## <a name="see-also"></a>関連項目
 

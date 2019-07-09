@@ -3,12 +3,12 @@ title: LINQ の使用
 description: このチュートリアルでは、LINQ を使用してシーケンスを生成し、LINQ クエリで使用するためのメソッドを作成し、先行評価と遅延評価を区別する方法を説明します。
 ms.date: 10/29/2018
 ms.assetid: 0db12548-82cb-4903-ac88-13103d70aa77
-ms.openlocfilehash: e51fb166ccba793f9f2aa9d11a109280bf8eea93
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: e37c013add02f651875db7b908ae2b49711d996d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66486987"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609308"
 ---
 # <a name="working-with-linq"></a>LINQ の使用
 
@@ -268,6 +268,14 @@ shuffle = shuffle.Skip(26).InterleaveSequenceWith(shuffle.Take(26));
 
 [!CODE-csharp[LogQuery](../../../samples/csharp/getting-started/console-linq/extensions.cs?name=snippet3)]
 
+`File` の下に、存在しないことを意味する赤い波線が表示されます。 コンパイラがどのような `File` かを把握できないため、これはコンパイルされません。 この問題を解決するには、`Extensions.cs` の最初の行の下に次のコード行を追加してください。
+
+```csharp
+using System.IO;
+```
+
+これでイシューが解決し、赤のエラーは表示されなくなるはずです。
+
 次に、各クエリの定義をログ メッセージでインストルメントします。
 
 ```csharp
@@ -345,4 +353,3 @@ LINQ の詳細については、以下を参照してください。
   - [LINQ によるデータ変換 (C#)](../programming-guide/concepts/linq/data-transformations-with-linq.md)
   - [LINQ でのクエリ構文とメソッド構文 (C#)](../programming-guide/concepts/linq/query-syntax-and-method-syntax-in-linq.md)
   - [LINQ をサポートする C# の機能](../programming-guide/concepts/linq/features-that-support-linq.md)
-    

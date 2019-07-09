@@ -1,15 +1,15 @@
 ---
 title: Docker を使用してアプリをコンテナー化するチュートリアル
 description: このチュートリアルでは、Docker を使って .NET Core アプリケーションをコンテナー化する方法を学習します。
-ms.date: 04/10/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.custom: mvc, seodec18
-ms.openlocfilehash: 2ea9e9bc2614e62fe6ec0d59e39d42c2e32a80a1
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 16edb129be679179450c485ced2586cea9ed9763
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66051814"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609299"
 ---
 # <a name="tutorial-containerize-a-net-core-app"></a>チュートリアル: NET Core アプリのコンテナー化
 
@@ -29,16 +29,16 @@ ms.locfileid: "66051814"
 
 次の前提条件をインストールします。
 
-- [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
+* [.NET Core 2.2 SDK](https://dotnet.microsoft.com/download)\
 .NET Core をインストールしてある場合、どの SDK を使っているか確認するには、`dotnet --info` コマンドを使います。
 
-- [Docker Community Edition](https://www.docker.com/products/docker-desktop)
+* [Docker Community Edition](https://www.docker.com/products/docker-desktop)
 
-- *Dockerfile* と .NET Core サンプル アプリ用の一時作業ディレクトリ。
+* *Dockerfile* と .NET Core サンプル アプリ用の一時作業フォルダー。 このチュートリアルでは、作業フォルダーに `docker-working` の名前が使用されます。
 
 ### <a name="use-sdk-version-22"></a>SDK バージョン 2.2 を使用する
 
-3.0 のようなさらに新しい SDK を使用している場合は、アプリが 2.2 SDK を使用するよう強制されることを確認します。 作業ディレクトリに `global.json` という名前のファイルを作成し、次の json コードを貼り付けます。
+3\.0 のようなさらに新しい SDK を使用している場合は、アプリが 2.2 SDK を使用するよう強制されることを確認します。 作業フォルダーに `global.json` という名前のファイルを作成し、次の json コードを貼り付けます。
 
 ```json
 {
@@ -48,17 +48,34 @@ ms.locfileid: "66051814"
 }
 ```
 
-このファイルを保存します。 このファイルが存在すると、このディレクトリおよびその下位から呼び出されるすべての `dotnet` コマンドに対し、.NET Core では強制的にバージョン 2.2 が使用されます。
+このファイルを保存します。 このファイルが存在すると、このフォルダーおよびその下位から呼び出されるすべての `dotnet` コマンドに対し、.NET Core では強制的にバージョン 2.2 が使用されます。
 
 ## <a name="create-net-core-app"></a>.NET Core アプリを作成する
 
-Docker コンテナーで実行される .NET Core アプリが必要です。 端末を開き、作業ディレクトリを作成して、そこに移動します。 作業ディレクトリで次のコマンドを実行し、app という名前のサブディレクトリに新しいプロジェクトを作成します。
+Docker コンテナーで実行される .NET Core アプリが必要です。 ターミナルを開き、作業フォルダーがまだない場合は作成して、移動します。 作業フォルダーで次のコマンドを実行し、app という名前のサブディレクトリに新しいプロジェクトを作成します。
 
 ```console
 dotnet new console -o app -n myapp
 ```
 
-そのコマンドでは、*app* という名前の新しいディレクトリが作成され、"Hello World" アプリが生成されます。 このアプリをテストして、何が行われるかを確認できます。 *app* ディレクトリに移り、`dotnet run` コマンドを実行します。 次のような出力が表示されます。
+フォルダー ツリーは次のように表示されます。
+
+```console
+docker-working
+│   global.json
+│
+└───app
+    │   myapp.csproj
+    │   Program.cs
+    │
+    └───obj
+            myapp.csproj.nuget.cache
+            myapp.csproj.nuget.g.props
+            myapp.csproj.nuget.g.targets
+            project.assets.json
+```
+
+`dotnet new` コマンドでは、*app* という名前の新しいフォルダーが作成され、"Hello World" アプリが生成されます。 *app* フォルダーに移動し、コマンド `dotnet run` を実行します。 次のような出力が表示されます。
 
 ```console
 > dotnet run
@@ -120,25 +137,25 @@ Counter: 4
 コマンド ラインでアプリに数値を渡すと、アプリはその値までカウント アップしただけで終了します。 `dotnet run -- 5` で 5 までカウントしてみてください。
 
 > [!NOTE]
-> `--` より後のすべてのパラメーターが、アプリケーションに渡されます。
+> `--` より後のパラメーターは `dotnet run` コマンドに渡されず、代わりにアプリケーションに渡されます。
 
 ## <a name="publish-net-core-app"></a>.NET Core アプリを発行する
 
-.NET Core アプリを Docker イメージに追加する前に、アプリを発行します。 コンテナーでは、開始時に、発行されたバージョンのアプリが実行されます。
+.NET Core アプリを Docker イメージに追加する前に、アプリを発行します。 コンテナーの開始時に、発行されたバージョンのアプリが実行されることを確認する必要があります。
 
-作業ディレクトリから、サンプルのソース コードがある **app** ディレクトリに移動し、次のコマンドを実行します。
+作業フォルダーから、サンプルのソース コードがある **app** フォルダーに移動し、次のコマンドを実行します。
 
 ```console
 dotnet publish -c Release
 ```
 
-このコマンドでは、アプリの出力フォルダー内の **publish** フォルダーにアプリがコンパイルされます。 作業ディレクトリから **publish** フォルダーへのパスは `.\app\bin\Release\netcoreapp2.2\publish\` です
+このコマンドでは、**publish** フォルダーにアプリがコンパイルされます。 作業フォルダーから **publish** フォルダーへのパスは `.\app\bin\Release\netcoreapp2.2\publish\` です
 
-publish フォルダーのディレクトリ一覧を表示し、**myapp.dll** が作成されたことを確認します。 **app** から、次のいずれかのコマンドを実行します。
+publish フォルダーのディレクトリ一覧を表示し、**myapp.dll** が作成されたことを確認します。 **app** フォルダーから、次のいずれかのコマンドを実行します。
 
 ```console
 > dir bin\Release\netcoreapp2.2\publish
- Directory of C:\path-to-working-dir\app\bin\Release\netcoreapp2.2\publish
+ Directory of C:\docker-working\app\bin\Release\netcoreapp2.2\publish
 
 04/05/2019  11:00 AM    <DIR>          .
 04/05/2019  11:00 AM    <DIR>          ..
@@ -149,23 +166,46 @@ publish フォルダーのディレクトリ一覧を表示し、**myapp.dll** �
 ```
 
 ```bash
-me@DESKTOP:/path-to-working-dir/app$ ls bin/Release/netcoreapp2.2/publish
+me@DESKTOP:/docker-working/app$ ls bin/Release/netcoreapp2.2/publish
 myapp.deps.json  myapp.dll  myapp.pdb  myapp.runtimeconfig.json
 ```
 
-端末で作業ディレクトリまで上に移動します。
-
 ## <a name="create-the-dockerfile"></a>Dockerfile を作成する
 
-*Dockerfile* ファイルは、コンテナー イメージを作成するために `docker build` コマンドによって使用されます。 このファイルは *Dockerfile* という名前のプレーンテキスト ファイルで、拡張子はありません。 *Dockerfile* という名前のファイルを作業ディレクトリに作成し、テキスト エディターで開きます。 ファイルの最初の行として、次のコマンドを追加します。
+*Dockerfile* ファイルは、コンテナー イメージを作成するために `docker build` コマンドによって使用されます。 このファイルは *Dockerfile* という名前のプレーンテキスト ファイルで、拡張子はありません。
+
+ターミナルで、開始時に作成した作業フォルダーまでディレクトリを移動します。 *Dockerfile* という名前のファイルを作業フォルダーに作成し、テキスト エディターで開きます。 ファイルの最初の行として、次のコマンドを追加します。
 
 ```dockerfile
-FROM mcr.microsoft.com/dotnet/core/runtime:2.2
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2
 ```
 
 `FROM` コマンドは、**mcr.microsoft.com/dotnet/core/runtime** リポジトリから **2.2** というタグの付いたイメージをプルするよう Docker に指示します。 SDK のターゲットのランタイムと一致する .NET Core ランタイムをプルすることを確認します。 たとえば、前のセクションで作成したアプリ は .NET Core 2.2 SDK を使用しており、.NET Core 2.2 をターゲットにするアプリを作成しました。 したがって、*Dockerfile* で参照されている基本イメージは、**2.2** でタグ付けされます。
 
-ファイルを保存します。 端末から `docker build -t myimage .` を実行すると、Docker で *Dockerfile* 内の各行が処理されます。 `docker build` コマンドの `.` は、現在のディレクトリで *Dockerfile* を検索するよう Docker に指示します。 このコマンドでは、イメージがビルドされて、そのイメージを指す **myimage** という名前のローカル リポジトリが作成されます。 このコマンドが終了したら、`docker images` を実行し、インストールされているイメージの一覧を表示します。
+*Dockerfile* ファイルを保存します。 作業フォルダーのディレクトリ構造は次のようになります。 一部のより深いレベルのファイルとフォルダーは、スペース削減のためこの記事では省略されています。
+
+```console
+docker-working
+│   Dockerfile
+│   global.json
+│
+└───app
+    │   myapp.csproj
+    │   Program.cs
+    │
+    ├───bin
+    │   └───Release
+    │       └───netcoreapp2.2
+    │           └───publish
+    │                   myapp.deps.json
+    │                   myapp.dll
+    │                   myapp.pdb
+    │                   myapp.runtimeconfig.json
+    │
+    └───obj
+```
+
+端末から `docker build -t myimage -f Dockerfile .` を実行すると、Docker で *Dockerfile* 内の各行が処理されます。 `docker build` コマンドの `.` は、現在のフォルダーで *Dockerfile* を検索するよう Docker に指示します。 このコマンドでは、イメージがビルドされて、そのイメージを指す **myimage** という名前のローカル リポジトリが作成されます。 このコマンドが終了したら、`docker images` を実行し、インストールされているイメージの一覧を表示します。
 
 ```console
 > docker images
@@ -186,10 +226,10 @@ ENTRYPOINT ["dotnet", "app/myapp.dll"]
 
 次のコマンド `ENTRYPOINT` は、実行可能ファイルとして実行するためにコンテナーを構成するよう Docker に指示します。 コンテナーの起動時に、`ENTRYPOINT` コマンドが実行されます。 このコマンドが終了すると、コンテナーは自動的に停止します。
 
-ファイルを保存します。 端末から `docker build -t myimage .` を実行し、そのコマンドが終了したら `docker images` を実行します。
+端末から `docker build -t myimage -f Dockerfile .` を実行し、そのコマンドが終了したら `docker images` を実行します。
 
 ```console
-> docker build -t myimage .
+> docker build -t myimage -f Dockerfile .
 Sending build context to Docker daemon  819.7kB
 Step 1/3 : FROM mcr.microsoft.com/dotnet/core/runtime:2.2
  ---> d51bb4452469

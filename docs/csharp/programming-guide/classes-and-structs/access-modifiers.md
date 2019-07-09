@@ -6,12 +6,12 @@ helpviewer_keywords:
 - C# Language, access modifiers
 - access modifiers [C#], about
 ms.assetid: 6e81ee82-224f-4a12-9baf-a0dca2656c5b
-ms.openlocfilehash: d328f8e73824a4773c6e10f506f3021d3c88d085
-ms.sourcegitcommit: 0c48191d6d641ce88d7510e319cf38c0e35697d0
+ms.openlocfilehash: 6622612e927b800e1a4769c99df0e2fa7d99a33d
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57378053"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67609651"
 ---
 # <a name="access-modifiers-c-programming-guide"></a>アクセス修飾子 (C# プログラミング ガイド)
 すべての型とそのメンバーには、アクセシビリティ レベルがあります。同じアセンブリ (または他のアセンブリ) にある他のコードからそれらの型やそのメンバーを利用できるかどうかは、アクセシビリティ レベルによって制御されます。 型またはメンバーにはその宣言時に、以下のアクセス修飾子を使ってアクセシビリティを指定できます。  
@@ -53,7 +53,7 @@ ms.locfileid: "57378053"
   
  フィールド、プロパティ、イベントのいずれかに該当するメンバーの型には、メンバー自体と同じかそれ以上のアクセシビリティが必要です。 同様に、メソッド、インデクサー、デリゲートのいずれかに該当するメンバーの戻り値の型とパラメーターの型には、メンバー自体と同じかそれ以上のアクセシビリティが必要です。 たとえば、クラス `C` を返すメソッド `M` を public にするためには、`C` も public である必要があります。 同様に、`A` が private として宣言されている場合、`A` 型のプロパティを protected にすることはできません。  
   
- ユーザー定義の演算子は、必ず public として宣言する必要があります。 詳細については、「[operator (C# Reference) (operator (C# リファレンス))](../../../csharp/language-reference/keywords/operator.md)」を参照してください。  
+ ユーザー定義の演算子は、必ず public かつ静的として宣言する必要があります。 詳細については、「[演算子のオーバーロード](../../../csharp/language-reference/operators/operator-overloading.md)」を参照してください。  
   
  アクセシビリティ修飾子をファイナライザーに割り当てることはできません。  
   

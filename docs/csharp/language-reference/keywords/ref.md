@@ -8,12 +8,12 @@ f1_keywords:
 helpviewer_keywords:
 - parameters [C#], ref
 - ref keyword [C#]
-ms.openlocfilehash: 1faebe2ce1a59798621888e3a518900234720be5
-ms.sourcegitcommit: 0be8a279af6d8a43e03141e349d3efd5d35f8767
+ms.openlocfilehash: 5b45a24e719a03d052c88b5afd64bbe13eb0793e
+ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59116257"
+ms.lasthandoff: 07/07/2019
+ms.locfileid: "67610067"
 ---
 # <a name="ref-c-reference"></a>ref (C# リファレンス)
 
@@ -138,7 +138,7 @@ ref readonly ローカルは、その署名に `ref readonly` があり、`retur
 
 - `ref struct` はボックス化できません。 `object` 型、`dynamic` 型、またはあらゆるインターフェイス型の変数には、`ref struct` 型を割り当てることができません。
 - `ref struct` 型では、インターフェイスを実装できません。
-- クラスまたは通常構造体のメンバーとして `ref struct` を宣言することはできません。
+- クラスまたは通常構造体のフィールド メンバーとして `ref struct` を宣言することはできません。 これには、コンパイラで生成されたバッキング フィールドを作成する、自動実装プロパティの宣言が含まれます。 
 - 非同期メソッドでは、`ref struct` 型のローカル変数を宣言できません。 <xref:System.Threading.Tasks.Task>、<xref:System.Threading.Tasks.Task%601>、`Task` のような型を返す同期メソッドで宣言できます。
 - 反復子で `ref struct` ローカル変数を宣言することはできません。
 - ラムダ式またはローカル関数で `ref struct` 変数をキャプチャすることはできません。
