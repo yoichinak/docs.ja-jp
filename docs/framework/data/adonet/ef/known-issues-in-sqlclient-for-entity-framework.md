@@ -2,12 +2,12 @@
 title: Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
 ms.date: 03/30/2017
 ms.assetid: 48fe4912-4d0f-46b6-be96-3a42c54780f6
-ms.openlocfilehash: 5c500a61a00914df7b106b7e89485921123e56ec
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 8cadb234ffc0f00049edd0c09475031eeec275df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489541"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662270"
 ---
 # <a name="known-issues-in-sqlclient-for-entity-framework"></a>Entity Framework 用の .NET Framework Data Provider for SQL Server (SqlClient) の既知の問題
 ここでは、.NET Framework Data Provider for SQL Server (SqlClient) に関連する既知の問題について説明します。  
@@ -21,7 +21,7 @@ ms.locfileid: "66489541"
  `RIGHT(nvarchar(max)`, 0`)` または `RIGHT(varchar(max)`, 0`)` に、最初の引数として `null` 以外の値を、2 番目の引数として 0 を渡すと、`empty` 文字列の代わりに `NULL` 値が返されます。  
   
 ## <a name="cross-and-outer-apply-operators"></a>CROSS APPLY 演算子および OUTER APPLY 演算子  
- CROSS APPLY 演算子および OUTER APPLY 演算子は [!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)] で導入されました。 場合によっては、クエリ パイプラインにより、CROSS APPLY 演算子または OUTER APPLY 演算子を含む Transact-SQL ステートメントが生成されることがあります。 ため、SQL Server のバージョンを含む、一部のバックエンド プロバイダーよりも前[!INCLUDE[ssVersion2005](../../../../../includes/ssversion2005-md.md)]、これらの演算子をサポートして、このようなクエリは、これらのバックエンド プロバイダーで実行することはできません。  
+ クロスおよび OUTER APPLY 演算子は、SQL Server 2005 で導入されました。 場合によっては、クエリ パイプラインにより、CROSS APPLY 演算子または OUTER APPLY 演算子を含む Transact-SQL ステートメントが生成されることがあります。 SQL Server 2005 より前のバージョンの SQL Server を含む、一部のバックエンド プロバイダーはこれらの演算子がサポートされないために、これらのバックエンド プロバイダーでこのようなクエリを実行できません。  
   
  CROSS APPLY 演算子または OUTER APPLY 演算子を含むクエリの生成につながる可能性がある一般的なシナリオを次に示します。  
   
@@ -36,7 +36,7 @@ ms.locfileid: "66489541"
 - REF コンストラクターを引数に取る DEREF コンストラクターを含むクエリ。  
   
 ## <a name="skip-operator"></a>SKIP 演算子  
- 使用する場合[!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]、非キー列で ORDER BY と共に SKIP を使用すると、誤った結果が返される可能性があります。 キー以外の列に重複するデータが存在する場合、指定された数を超える行はスキップされます。 これは、 [!INCLUDE[ssVersion2000](../../../../../includes/ssversion2000-md.md)]用に SKIP が変換される方法によるものです。 たとえば、次のクエリでは、5 つを超える行場合はスキップされます`E.NonKeyColumn`重複した値。  
+ SQL Server 2000 を使用している場合は、非キー列で ORDER BY と共に SKIP を使用と正しくない結果を返す可能性があります。 キー以外の列に重複するデータが存在する場合、指定された数を超える行はスキップされます。 これは SQL Server 2000 の SKIP が変換される方法です。 たとえば、次のクエリでは、5 つを超える行場合はスキップされます`E.NonKeyColumn`重複した値。  
   
 ```  
 SELECT [E] FROM Container.EntitySet AS [E] ORDER BY [E].[NonKeyColumn] DESC SKIP 5L  

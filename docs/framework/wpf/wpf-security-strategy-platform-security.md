@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: 6372f9cb4c332eb77cd70a9b0786eff005216516
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64642883"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663566"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF のセキュリティ方針 - プラットフォーム セキュリティ
 オペレーティング システムが含まれている、基になるプラットフォームのセキュリティ機能も活用のさまざまなセキュリティ サービスを提供しますが、Windows Presentation Foundation (WPF)、 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]、および[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]します。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
@@ -132,7 +132,7 @@ ms.locfileid: "64642883"
   
 - **LocalIntranet**。 起動するアプリケーションの**ローカル イントラネット**ゾーン。 分離ストレージ、UI の無制限のアクセス、制約のないファイル ダイアログ、制限付きのリフレクション、環境変数へのアクセス制限など、クライアント コンピューターのリソースへの中程度のアクセスを提供するアクセス許可のサブセットが付与されます。 レジストリのような重要なリソースに対するアクセス許可は提供されません。  
   
-- **インターネット**。 起動するアプリケーションの**インターネット**または**信頼済みサイト**ゾーン。 分離ストレージ、ファイルを開くのみ、および制限付きの UI など、クライアント コンピューターに制限付きのアクセス権を付与するため、アクセス許可のサブセットを付与します。 基本的に、このアクセス許可セットでは、アプリケーションはクライアント コンピューターから分離されます。  
+- **インターネット**。 起動するアプリケーションの**インターネット**または**信頼済みサイト**ゾーン。 分離ストレージ、ファイルを開くのみ、および制限付きの UI など、クライアント コンピューターに制限付きのアクセス権を付与するため、アクセス許可のサブセットを付与します。 基本的には、このアクセス許可は、クライアント コンピューターから分離されるアプリケーションを設定します。  
   
  アプリケーションからのものとして識別されたアプリケーション、**信頼されていないサイト**ゾーンでのアクセス許可を与えない[!INCLUDE[TLA2#tla_cas](../../../includes/tla2sharptla-cas-md.md)]まったくです。 その結果、定義済みのアクセス許可セットは存在しません。  
   
@@ -149,7 +149,7 @@ ms.locfileid: "64642883"
   
  この [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] を実行するために、基になる [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] コードは、呼び出し元の [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] で使用できるより多くの機能を実行する必要があります。それらは次のとおりです。  
   
-- 表示するためのウィンドウ ハンドル (hWnd) の作成  
+- 表示のウィンドウ ハンドル (HWND) を作成します。  
   
 - メッセージのディスパッチ  
   
@@ -157,7 +157,7 @@ ms.locfileid: "64642883"
   
  セキュリティの観点から、セキュリティで保護されたアプリケーションからこれらの操作のいずれかに直接アクセスを許可すると、致命的な状態になります。  
   
- 幸い、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、セキュリティで保護されたアプリケーションの代わりに、これらの操作が昇格した特権で実行できるようにすることで、この状況に対応します。 すべての [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] の操作に対して [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] のアプリケーション ドメインにおける制限付きのインターネット ゾーンのセキュリティのアクセス許可がチェックされます。[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] には、(その他のシステム ライブラリと同様に、) 可能性があるすべてのアクセス許可を含むアクセス許可が付与されます。  
+ 幸い、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、セキュリティで保護されたアプリケーションの代わりに、これらの操作が昇格した特権で実行できるようにすることで、この状況に対応します。 すべての中に[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]のアプリケーション ドメインの制限付きのインターネット ゾーンのセキュリティのアクセス許可の操作がチェックされ、 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]、 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (その他のシステム ライブラリと同様に) を含むすべての可能なアクセス許可セットが付与されますアクセス許可。
   
  そのためには、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] が昇格した特権を受け取る一方、それらの特権がホスト アプリケーション ドメインのインターネット ゾーンのアクセス許可セットによって制御されないようにする必要があります。  
   
@@ -174,7 +174,7 @@ ms.locfileid: "64642883"
 ### <a name="clickonce-deployment"></a>ClickOnce 配置  
  [!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] .NET Framework に含まれているし、統合する包括的な配置テクノロジ[!INCLUDE[TLA#tla_visualstu](../../../includes/tlasharptla-visualstu-md.md)](を参照してください[ClickOnce のセキュリティと配置](/visualstudio/deployment/clickonce-security-and-deployment)の詳細情報)。 スタンドアロンの [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションは、[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] を使用して配置できます。一方、ブラウザーでホストされるアプリケーションは [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] で配置する必要があります。  
   
- [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] を使用して配置されたアプリケーションには、[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] の上に追加のセキュリティ層が設けられます。基本的に、[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] の配置済みのアプリケーションは、必要なアクセス許可を要求します。 これらのアプリケーションが、アプリケーションの配置元ゾーンのアクセス許可セット数を超えていない場合、これらのアプリケーションには必要なアクセス許可のみが付与されます。 アクセス許可セット数を必要な数のみに減らすことで、起動ゾーンのアクセス許可セットが提供するアクセス許可数を下回る場合でも、アプリケーションがアクセスできるリソースの数が最小限まで削減されます。 その結果、アプリケーションが乗っ取られた場合、クライアント コンピューターの損傷の可能性が低減します。  
+ [!INCLUDE[TLA2#tla_clickonce](../../../includes/tla2sharptla-clickonce-md.md)] を使用して配置されたアプリケーションには、[!INCLUDE[TLA#tla_cas](../../../includes/tlasharptla-cas-md.md)] の上に追加のセキュリティ層が設けられます。基本的に、[!INCLUDE[TLA#tla_clickonce](../../../includes/tlasharptla-clickonce-md.md)] の配置済みのアプリケーションは、必要なアクセス許可を要求します。 これらのアプリケーションが、アプリケーションの配置元ゾーンのアクセス許可セット数を超えていない場合、これらのアプリケーションには必要なアクセス許可のみが付与されます。 必要なものだけにアクセス許可のセットを減らすことでは、起動ゾーンのアクセス許可によって提供されるよりも小さい場合でもの数を設定リソース アプリケーションが最小限に縮小されますへのアクセスを持つこと。 その結果、アプリケーションが乗っ取られた場合、クライアント コンピューターの損傷の可能性が低減します。  
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>セキュリティ クリティカルな方法  
@@ -208,7 +208,6 @@ ms.locfileid: "64642883"
   
 ## <a name="see-also"></a>関連項目
 
-- [Windows XP sp2 環境内における Microsoft Internet Explorer 6 のセキュリティをについてください。](https://www.microsoft.com/downloads/details.aspx?FamilyId=E550F940-37A0-4541-B5E2-704AB386C3ED&displaylang=en)
 - [コード アクセス セキュリティ](../misc/code-access-security.md)
 - [セキュリティ](security-wpf.md)
 - [WPF 部分信頼セキュリティ](wpf-partial-trust-security.md)

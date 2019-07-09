@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0c1534e5-979b-4c8a-a588-1c24301aefb3
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: ed276d8026201af94a0259c4258d5c50fa67c0f3
-ms.sourcegitcommit: 7e129d879ddb42a8b4334eee35727afe3d437952
+ms.openlocfilehash: 989c1dec8056502e94e4b9652af89d66a2795dd5
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66053241"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661153"
 ---
 # <a name="working-with-calendars"></a>カレンダーの使用
 
@@ -138,12 +138,12 @@ ms.locfileid: "66053241"
 暦では通常、日付が時代 (年号) に分けられます。 ただし、 <xref:System.Globalization.Calendar> .NET のクラスは、予定表とのほとんどによって定義されたすべての時代をサポートしていません、<xref:System.Globalization.Calendar>クラスは時代は 1 つのみをサポートします。 複数の時代 (年号) をサポートしているのは、<xref:System.Globalization.JapaneseCalendar> クラスと <xref:System.Globalization.JapaneseLunisolarCalendar> クラスだけです。
 
 > [!IMPORTANT]
->  Reiwa の時代 (年号) で新しい時代 (年号)、<xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>2019 年 5 月 1 日です。 この変更は、これらのカレンダーを使用するすべてのアプリケーションに影響します。 詳細については、次の記事を参照してください。
+> Reiwa の時代 (年号) で新しい時代 (年号)、<xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>2019 年 5 月 1 日です。 この変更は、これらのカレンダーを使用するすべてのアプリケーションに影響します。 詳細については、次の記事を参照してください。
 > - [.NET での日本語のカレンダーで新しい時代 (年号) の処理](https://devblogs.microsoft.com/dotnet/handling-a-new-era-in-the-japanese-calendar-in-net/)、どのドキュメントをサポートするために .NET に追加された機能、複数の時代 (年号) のカレンダーおよび複数の時代 (年号) の予定表を処理するときに使用するベスト プラクティスについて説明します。
 > - [日本語の時代 (年号) 変更するアプリケーションを準備](/windows/uwp/design/globalizing/japanese-era-change)、時代 (年号) の変更に対する準備状況を確認する Windows 上のアプリケーションのテストに関する情報を提供します。
 > - [.NET Framework の更新プログラムの新しい日本語の時代 (年号) の概要](https://support.microsoft.com/help/4477957/new-japanese-era-updates-for-net-framework)、日本語のカレンダーの新時代に関連する個々 の Windows バージョンの .NET Framework の更新プログラムの一覧を表示するノートの複数の時代 (年号) のサポート、.NET Framework の新しい機能とが含まれていますアプリケーションのテストで検索することです。
 
-ほとんどのカレンダーの時代 (年号) では、非常に長い期間を表します。 グレゴリオ暦でなど、現在の時代 (年号) にまたがる複数の 2 つ millennia。 <xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>、複数の時代 (年号) をサポートする予定表、2 つ、これは、ケースではありません。 時代 (年号) は、皇帝の量を設定の期間に対応します。 サポートの時代 (年号) を複数にするため、特に現在の時代 (年号) の数の上限が、不明の場合は、特別な課題をもたらします。 
+ほとんどのカレンダーの時代 (年号) では、非常に長い期間を表します。 グレゴリオ暦でなど、現在の時代 (年号) にまたがる複数の 2 つ millennia。 <xref:System.Globalization.JapaneseCalendar>と<xref:System.Globalization.JapaneseLunisolarCalendar>、複数の時代 (年号) をサポートする予定表、2 つ、これは、ケースではありません。 時代 (年号) は、皇帝の量を設定の期間に対応します。 サポートの時代 (年号) を複数にするため、特に現在の時代 (年号) の数の上限が、不明の場合は、特別な課題をもたらします。
 
 ### <a name="eras-and-era-names"></a>時代 (年号) と時代 (年号) の名前
 
@@ -181,21 +181,21 @@ ms.locfileid: "66053241"
 
 - 既定値を使用して日付と時刻の値をインスタンス化<xref:System.Globalization.GregorianCalendar>クラス。 次の例のように、日付の文字列表現の日本語のカレンダーまたは日本の太陰太陽暦を使用できます。
 
-   [!code-csharp[Insantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/cs/program.cs)]
-   [!code-vb[Instantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/vb/program.vb)]
+  [!code-csharp[Insantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/cs/program.cs)]
+  [!code-vb[Instantiating a Gregorian date](~/samples/snippets/standard/datetime/calendars/gregorian/vb/program.vb)]
 
 - 日付と時刻、時代 (年号) を明示的に指定するメソッドを呼び出します。 これには、次のメソッドが含まれます。
 
-   - <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)>のメソッド、<xref:System.Globalization.JapaneseCalendar>または<xref:System.Globalization.JapaneseLunisolarCalendar>クラス。
+  - <xref:System.Globalization.Calendar.ToDateTime(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)>のメソッド、<xref:System.Globalization.JapaneseCalendar>または<xref:System.Globalization.JapaneseLunisolarCalendar>クラス。
 
-   - A<xref:System.DateTime>または<xref:System.DateTimeOffset>など、メソッドの解析<xref:System.DateTime.Parse%2A>、 <xref:System.DateTime.TryParse%2A>、 <xref:System.DateTime.ParseExact%2A>、または<xref:System.DateTime.TryParseExact%2A>、解析する文字列を含むと、必要に応じて、<xref:System.Globalization.DateTimeStyles>場合は、現在のカルチャが日本語、日本の引数 ("JA-JP") そのカルチャの暦は、<xref:System.Globalization.JapaneseCalendar>します。 解析対象の文字列には、時代 (年号) を含める必要があります。
+  - A<xref:System.DateTime>または<xref:System.DateTimeOffset>など、メソッドの解析<xref:System.DateTime.Parse%2A>、 <xref:System.DateTime.TryParse%2A>、 <xref:System.DateTime.ParseExact%2A>、または<xref:System.DateTime.TryParseExact%2A>、解析する文字列を含むと、必要に応じて、<xref:System.Globalization.DateTimeStyles>場合は、現在のカルチャが日本語、日本の引数 ("JA-JP") そのカルチャの暦は、<xref:System.Globalization.JapaneseCalendar>します。 解析対象の文字列には、時代 (年号) を含める必要があります。
 
-   - A<xref:System.DateTime>または<xref:System.DateTimeOffset>解析メソッドが含まれる、`provider`型のパラメーター<xref:System.IFormatProvider>します。 `provider` いずれかである必要があります、<xref:System.Globalization.CultureInfo>日本語-日本 ("JA-JP") のカルチャの現在の暦を表すオブジェクトを<xref:System.Globalization.JapaneseCalendar>または<xref:System.Globalization.DateTimeFormatInfo>オブジェクト<xref:System.Globalization.DateTimeFormatInfo.Calendar>プロパティは<xref:System.Globalization.JapaneseCalendar>します。 解析対象の文字列には、時代 (年号) を含める必要があります。
+  - A<xref:System.DateTime>または<xref:System.DateTimeOffset>解析メソッドが含まれる、`provider`型のパラメーター<xref:System.IFormatProvider>します。 `provider` いずれかである必要があります、<xref:System.Globalization.CultureInfo>日本語-日本 ("JA-JP") のカルチャの現在の暦を表すオブジェクトを<xref:System.Globalization.JapaneseCalendar>または<xref:System.Globalization.DateTimeFormatInfo>オブジェクト<xref:System.Globalization.DateTimeFormatInfo.Calendar>プロパティは<xref:System.Globalization.JapaneseCalendar>します。 解析対象の文字列には、時代 (年号) を含める必要があります。
 
-   次の例では、これらのメソッドの 3 つを使用して、1868 年 9 月 8 日に開始され、1912 年 7 月 29 日に終了しましたが、明治で日時をインスタンス化します。 
+  次の例では、これらのメソッドの 3 つを使用して、1868 年 9 月 8 日に開始され、1912 年 7 月 29 日に終了しましたが、明治で日時をインスタンス化します。
 
-   [!code-csharp[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/cs/program.cs)]
-   [!code-vb[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/vb/program.vb)]
+  [!code-csharp[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/cs/program.cs)]
+  [!code-vb[A date in a specified era](~/samples/snippets/standard/datetime/calendars/specify-era/vb/program.vb)]
 
 > [!TIP]
 > 複数の時代をサポートするカレンダーの使用時に*常に*グレゴリオ暦の日付を使用して、日付をインスタンス化するか、日付と時刻をカレンダーに基づくをインスタンス化するときに時代 (年号) を指定します。
@@ -212,40 +212,40 @@ ms.locfileid: "66053241"
 
 次の例は、1926 年 12 月 25 日に開始され、1989 年 1 月 7 日に終了しましたが、昭和時代 65th 年の日付をインスタンス化しようとします。 この日付に対応する、1990 年 1 月 9 日で表示する時代 (年号) の範囲外である、<xref:System.Globalization.JapaneseCalendar>します。 例の出力に示すように、例では、によって表示される日付は 1990 年 1 月 9日平成の時代 (年号) の 2 つ目の年です。
 
-   [!code-csharp[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/cs/program.cs)]
-   [!code-vb[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/vb/program.vb)]
+  [!code-csharp[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/cs/program.cs)]
+  [!code-vb[Relaxed range checks](~/samples/snippets/standard/datetime/calendars/relaxed-range/vb/program.vb)]
 
 厳密でない範囲の確認が望ましくない場合は、さまざまな方法は、アプリケーションが実行されている .NET のバージョンによっては、厳密な範囲の確認を戻すことができます。
 
 - **.NET core:** 次を追加することができます、 *. netcore.runtime.json*構成ファイル。
 
-   ```json
-   "runtimeOptions": {
-      "configProperties": {
-         "Switch.System.Globalization.EnforceJapaneseEraYearRanges": true
-      } 
-   }
-   ```
+  ```json
+  "runtimeOptions": {
+    "configProperties": {
+        "Switch.System.Globalization.EnforceJapaneseEraYearRanges": true
+    }
+  }
+  ```
 
 - **.NET framework 4.6 以降:** 次の AppContext スイッチを設定することができます。
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <configuration>
-     <runtime>
-       <AppContextSwitchOverrides value="Switch.System.Globalization.EnforceJapaneseEraYearRanges=true" />
-     </runtime>
-   </configuration>
-   ```
+  ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <configuration>
+    <runtime>
+      <AppContextSwitchOverrides value="Switch.System.Globalization.EnforceJapaneseEraYearRanges=true" />
+    </runtime>
+  </configuration>
+  ```
 
 - **.NET framework 4.5.2 以前のバージョン。** 次のレジストリ値を設定することができます。
 
-   |  |  |
-   |--|--|
-   |キー | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |名前 | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
-   |型 | REG_SZ |
-   |[値] | 1 |
+  |  |  |
+  |--|--|
+  |キー | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
+  |名前 | Switch.System.Globalization.EnforceJapaneseEraYearRanges |
+  |型 | REG_SZ |
+  |[値] | 1 |
 
 厳密な範囲チェックを有効に、前の例がスローされます、<xref:System.ArgumentOutOfRangeException>し、次の出力を表示します。
 
@@ -272,7 +272,7 @@ Parameter name: year
 [!code-csharp[Conceptual.Calendars#9](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings2.cs#9)]
 [!code-vb[Conceptual.Calendars#9](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings2.vb#9)]
 
-日付の文字列形式を現在の暦以外の暦で表す場合は、<xref:System.Globalization.Calendar> クラスの <xref:System.Globalization.Calendar.GetEra%2A?displayProperty=nameWithType> メソッドを <xref:System.Globalization.Calendar.GetYear%2A?displayProperty=nameWithType>、<xref:System.Globalization.Calendar.GetMonth%2A?displayProperty=nameWithType>、および <xref:System.Globalization.Calendar.GetDayOfMonth%2A?displayProperty=nameWithType> の各メソッドと一緒に使用して、日付とそれが属する時代 (年号) を明確に示すことができます。 <xref:System.Globalization.JapaneseLunisolarCalendar> クラスを使用した具体的な例を次に示します。 ただし、時代 (年号) を表す整数ではなく、名前または省略形を結果の文字列に含めるには、<xref:System.Globalization.DateTimeFormatInfo> オブジェクトをインスタンス化し、その現在の暦を <xref:System.Globalization.JapaneseCalendar> にする必要があります  (<xref:System.Globalization.JapaneseLunisolarCalendar> 暦をカルチャの現在の暦にすることはできませんが、この場合は 2 つの暦で同じ時代 (年号) が共有されます)。
+日付の文字列形式を現在の暦以外の暦で表す場合は、<xref:System.Globalization.Calendar> クラスの <xref:System.Globalization.Calendar.GetEra%2A?displayProperty=nameWithType> メソッドを <xref:System.Globalization.Calendar.GetYear%2A?displayProperty=nameWithType>、<xref:System.Globalization.Calendar.GetMonth%2A?displayProperty=nameWithType>、および <xref:System.Globalization.Calendar.GetDayOfMonth%2A?displayProperty=nameWithType> の各メソッドと一緒に使用して、日付とそれが属する時代 (年号) を明確に示すことができます。 <xref:System.Globalization.JapaneseLunisolarCalendar> クラスを使用した具体的な例を次に示します。 ただし、時代 (年号) を表す整数ではなく、名前または省略形を結果の文字列に含めるには、<xref:System.Globalization.DateTimeFormatInfo> オブジェクトをインスタンス化し、その現在の暦を <xref:System.Globalization.JapaneseCalendar> にする必要があります (<xref:System.Globalization.JapaneseLunisolarCalendar> 暦をカルチャの現在の暦にすることはできませんが、この場合は 2 つの暦で同じ時代 (年号) が共有されます)。
 
 [!code-csharp[Conceptual.Calendars#10](../../../samples/snippets/csharp/VS_Snippets_CLR/conceptual.calendars/cs/formatstrings3.cs#10)]
 [!code-vb[Conceptual.Calendars#10](../../../samples/snippets/visualbasic/VS_Snippets_CLR/conceptual.calendars/vb/formatstrings3.vb#10)]
@@ -287,40 +287,40 @@ Parameter name: year
 
 次の例がで平成時代 (年号) の最初の年の日付を表示するなど、<xref:System.Globalization.JapaneseCalendar>します。
 
-   [!code-csharp[gannen](~/samples/snippets/standard/datetime/calendars/gannen/cs/program.cs)]
-   [!code-vb[gannen](~/samples/snippets/standard/datetime/calendars/gannen/vb/gannen-fmt.vb)]
+  [!code-csharp[gannen](~/samples/snippets/standard/datetime/calendars/gannen/cs/program.cs)]
+  [!code-vb[gannen](~/samples/snippets/standard/datetime/calendars/gannen/vb/gannen-fmt.vb)]
 
 この動作が書式設定操作で望ましくない場合は、.NET のバージョンに応じて、次の手順を実行して、「元年」ではなく「1」として時代 (年号) の最初の年を表す常に、以前の動作を復元できます。
 
 - **.NET core:** 次を追加することができます、 *. netcore.runtime.json*構成ファイル。
 
-   ```json
-   "runtimeOptions": {
-      "configProperties": {
-         "Switch.System.Globalization.FormatJapaneseFirstYearAsANumber": true
-      } 
-   }
-   ```
+  ```json
+  "runtimeOptions": {
+    "configProperties": {
+        "Switch.System.Globalization.FormatJapaneseFirstYearAsANumber": true
+    }
+  }
+  ```
 
 - **.NET framework 4.6 以降:** 次の AppContext スイッチを設定することができます。
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <configuration>
-     <runtime>
-       <AppContextSwitchOverrides value="Switch.System.Globalization.FormatJapaneseFirstYearAsANumber=true" />
-     </runtime>
-   </configuration>
-   ```
+  ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <configuration>
+    <runtime>
+      <AppContextSwitchOverrides value="Switch.System.Globalization.FormatJapaneseFirstYearAsANumber=true" />
+    </runtime>
+  </configuration>
+  ```
 
 - **.NET framework 4.5.2 以前のバージョン。** 次のレジストリ値を設定することができます。
 
-   |  |  |
-   |--|--|
-   |キー | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |名前 | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
-   |型 | REG_SZ |
-   |[値] | 1 |
+  |  |  |
+  |--|--|
+  |キー | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
+  |名前 | Switch.System.Globalization.FormatJapaneseFirstYearAsANumber |
+  |型 | REG_SZ |
+  |[値] | 1 |
 
 書式設定操作が無効になっているで元年サポートにより、前の例には、次の出力が表示されます。
 
@@ -332,33 +332,33 @@ Japanese calendar date: 平成1年8月18日 (Gregorian: Friday, August 18, 1989)
 
 - **.NET core:** 次を追加することができます、 *. netcore.runtime.json*構成ファイル。
 
-   ```json
-   "runtimeOptions": {
-      "configProperties": {
-         "Switch.System.Globalization.EnforceLegacyJapaneseDateParsing": true
-      } 
-   }
-   ```
+  ```json
+  "runtimeOptions": {
+    "configProperties": {
+        "Switch.System.Globalization.EnforceLegacyJapaneseDateParsing": true
+    }
+  }
+  ```
 
 - **.NET framework 4.6 以降:** 次の AppContext スイッチを設定することができます。
 
-   ```xml
-   <?xml version="1.0" encoding="utf-8"?>
-   <configuration>
-     <runtime>
-       <AppContextSwitchOverrides value="Switch.System.Globalization.EnforceLegacyJapaneseDateParsing=true" />
-     </runtime>
-   </configuration>
-   ```
+  ```xml
+  <?xml version="1.0" encoding="utf-8"?>
+  <configuration>
+    <runtime>
+      <AppContextSwitchOverrides value="Switch.System.Globalization.EnforceLegacyJapaneseDateParsing=true" />
+    </runtime>
+  </configuration>
+  ```
 
 - **.NET framework 4.5.2 以前のバージョン。** 次のレジストリ値を設定することができます。
 
-   |  |  |
-   |--|--|  
-   |キー | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
-   |名前 | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
-   |型 | REG_SZ |
-   |[値] | 1 | 
+  |  |  |
+  |--|--|
+  |キー | HKEY_LOCAL_MACHINE\Software\Microsoft.NETFramework\AppContext |
+  |名前 | Switch.System.Globalization.EnforceLegacyJapaneseDateParsing |
+  |型 | REG_SZ |
+  |[値] | 1 |
 
 ## <a name="see-also"></a>関連項目
 

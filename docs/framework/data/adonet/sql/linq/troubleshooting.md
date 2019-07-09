@@ -2,12 +2,12 @@
 title: トラブルシューティング
 ms.date: 03/30/2017
 ms.assetid: 8cd4401c-b12c-4116-a421-f3dcffa65670
-ms.openlocfilehash: 8b34336871d599b72e548e2db90487c17377ba66
-ms.sourcegitcommit: a970268118ea61ce14207e0916e17243546a491f
+ms.openlocfilehash: c09871abcdfb9243b5170386ffe79012c9c3f71d
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67307204"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661860"
 ---
 # <a name="troubleshooting"></a>トラブルシューティング
 ここでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] アプリケーションで発生する可能性のある問題をいくつか示し、そうした問題を回避または影響を軽減するための提案を示します。  
@@ -57,7 +57,7 @@ ms.locfileid: "67307204"
 ## <a name="skip-and-take-exceptions-in-sql-server-2000"></a>SQL Server 2000 の Skip 例外と Take 例外  
  SQL Server 2000 データベースに対して <xref:System.Data.Linq.Mapping.ColumnAttribute.IsPrimaryKey%2A> または <xref:System.Linq.Queryable.Take%2A> を使用する際には、ID メンバー (<xref:System.Linq.Queryable.Skip%2A>) を使用する必要があります。 クエリは、(結合ではなく) 1 つのテーブルに対して実行されるか、<xref:System.Linq.Queryable.Distinct%2A>、<xref:System.Linq.Queryable.Except%2A>、<xref:System.Linq.Queryable.Intersect%2A>、または <xref:System.Linq.Queryable.Union%2A> 操作である必要があります。さらに、クエリに <xref:System.Linq.Queryable.Concat%2A> 操作を含めることはできません。 詳細については、「SQL Server 2000 のサポート」セクションを参照してください。[標準クエリ演算子の変換](../../../../../../docs/framework/data/adonet/sql/linq/standard-query-operator-translation.md)します。  
   
- この要件は [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)] には適用されません。  
+ この要件は、SQL Server 2005 には適用されません。  
   
 ## <a name="groupby-invalidoperationexception"></a>GroupBy InvalidOperationException  
  この例外は、たとえば <xref:System.Linq.Enumerable.GroupBy%2A> のように、`boolean` 式でグループ分けする `group x by (Phone==@phone)` クエリ内の列値が null である場合にスローされます。 式が `boolean` であるため、キーは `boolean` `nullable` ではなく、`boolean` と推論されます。 変換された比較で null が生成される場合、`nullable` `boolean` を `boolean` に割り当てようとして、例外がスローされます。  

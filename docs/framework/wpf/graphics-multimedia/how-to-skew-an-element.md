@@ -6,15 +6,15 @@ helpviewer_keywords:
 - graphics [WPF], skewing elements
 - classes [WPF], SkewTransform
 ms.assetid: 56b65f2f-dc6e-4238-923f-ca44ec53c52f
-ms.openlocfilehash: 47f671f493e7b379c36f9bf4b50ec9d185d10b8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cf770a284238826852e788e27f3b3f329ed0269f
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61804063"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67664083"
 ---
 # <a name="how-to-skew-an-element"></a>方法: 要素を傾斜させる
-この例は、使用する方法を示します、<xref:System.Windows.Media.SkewTransform>要素を傾斜します。 傾斜 (スキューと呼ばれることもあります) は、一様でない方法で座標空間を拡大する変換です。 一般的な用途の 1 つ、<xref:System.Windows.Media.SkewTransform>をシミュレートするため、[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]で深さ[!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)]オブジェクト。  
+この例は、使用する方法を示します、<xref:System.Windows.Media.SkewTransform>要素を傾斜します。 傾斜 (スキューと呼ばれることもあります) は、一様でない方法で座標空間を拡大する変換です。 一般的な用途の 1 つ、 <xref:System.Windows.Media.SkewTransform> 2 D オブジェクトでの 3-D の深さをシミュレートするためです。  
   
  使用して、<xref:System.Windows.Media.SkewTransform.CenterX%2A>と<xref:System.Windows.Media.SkewTransform.CenterY%2A>のポイントの中心を指定するプロパティ、<xref:System.Windows.Media.SkewTransform>します。  
   

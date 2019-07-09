@@ -10,12 +10,12 @@ helpviewer_keywords:
 - Security Development Lifecycle (SDL), critical code management
 - threat modeling [WPF]
 ms.assetid: 0fc04394-4e47-49ca-b0cf-8cd1161d95b9
-ms.openlocfilehash: 9123d59709b483c72ab49652bda1e547430fa33d
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c28fc87a71a1262ed5b3a6a04f615efc58e685ab
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64663248"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663348"
 ---
 # <a name="wpf-security-strategy---security-engineering"></a>WPF のセキュリティ方針 - セキュリティ エンジニアリング
 信頼できるコンピューティングは、セキュリティで保護されたコードの実稼働環境を確保するための Microsoft イニシアチブです。 信頼できるコンピューティング イニシアチブの重要な要素は、[!INCLUDE[TLA#tla_sdl](../../../includes/tlasharptla-sdl-md.md)] です。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] は、セキュリティで保護されたコードの配信を容易にする標準のエンジニアリング プロセスと組み合わせて使用するエンジニアリングの方法です。 [!INCLUDE[TLA2#tla_sdl](../../../includes/tla2sharptla-sdl-md.md)] は、ベスト プラクティスと形式化、測定可能性、追加の構造を組み合わせた 10 のフェーズで構成しています。それらは次のとおりです。  
@@ -71,13 +71,13 @@ ms.locfileid: "64663248"
   
 - **Prefix/prefast**:バッファー オーバーラン、書式文字列の問題、エラー チェックなどのアンマネージ コードでは、セキュリティの脆弱性および一般的なセキュリティ問題を検索します。  
   
-- **Banned APIs**:ソースのセキュリティ問題の原因としてなどのよく知られている関数の偶発的な使用を識別するためにコードを検索`strcpy`します。 そのような関数が識別されると、よりセキュリティの高い代替手段に置き換えられます。  
+- **Banned APIs**:ソースのセキュリティ問題の原因としてなどのよく知られている関数の偶発的な使用を識別するためにコードを検索`strcpy`します。 識別されると、これらの関数は、安全な代替手段に置き換えられます。  
   
 <a name="techniques"></a>   
 ### <a name="testing-techniques"></a>テスト手法  
  [!INCLUDE[TLA2#tla_winclient](../../../includes/tla2sharptla-winclient-md.md)] では、さまざまなテスト手法を使用します。それらは次のとおりです。  
   
-- **ホワイト ボックス テスト**:テスト担当者が、ソース コードを表示および悪用テストを作成し、  
+- **ホワイト ボックス テスト**:テスト担当者は、ソース コードを表示して、脆弱性攻撃のテストをビルドします。
   
 - **ブラック ボックス テスト**:テスト担当者は、API と機能を調査してセキュリティの悪用を検索しようし、製品を攻撃ましょう。  
   

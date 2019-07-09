@@ -2,12 +2,12 @@
 title: FROM (Entity SQL)
 ms.date: 03/30/2017
 ms.assetid: ff3e3048-0d5d-4502-ae5c-9187fcbd0514
-ms.openlocfilehash: 36e3059869ed048bd7c5294c4f5f5407288610b2
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 69a6af868ace384a63d08d705c395b58a173ca8e
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489940"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662164"
 ---
 # <a name="from-entity-sql"></a>FROM (Entity SQL)
 使用されるコレクションを指定します[選択](../../../../../../docs/framework/data/adonet/ef/language-reference/select-entity-sql.md)ステートメント。  
@@ -96,7 +96,7 @@ LOB.Customers
 >  異なり、Transact SQL で必要はありませんで明示的なネスト解除の手順について[!INCLUDE[esql](../../../../../../includes/esql-md.md)]します。  
   
 > [!NOTE]
->  `CROSS` 演算子および `OUTER APPLY` 演算子は [!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)] で導入されました。 場合によっては、クエリ パイプラインにより、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含む Transact-SQL が生成されることがあります。 ため、SQL Server のバージョンを含む、一部のバックエンド プロバイダーよりも前[!INCLUDE[ssVersion2005](../../../../../../includes/ssversion2005-md.md)]、これらの演算子をサポートして、このようなクエリは、これらのバックエンド プロバイダーで実行することはできません。  
+>  `CROSS` `OUTER APPLY`演算子は、SQL Server 2005 で導入されました。 場合によっては、クエリ パイプラインにより、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含む Transact-SQL が生成されることがあります。 SQL Server 2005 より前のバージョンの SQL Server を含む、一部のバックエンド プロバイダーはこれらの演算子がサポートされないために、これらのバックエンド プロバイダーでこのようなクエリを実行できません。  
 >   
 >  `CROSS APPLY` 演算子または `OUTER APPLY` 演算子を含むクエリの生成につながる可能性がある一般的なシナリオとしては、ページングを使用した相関サブクエリ、相関サブクエリ全体またはナビゲーションによって生成されたコレクション全体を対象とした AnyElement、要素セレクターを受け取るグループ化メソッドを使用した LINQ クエリ、`CROSS APPLY` 演算子または `OUTER APPLY` 演算子が明示的に指定されたクエリ、`DEREF` コンストラクターを引数に取る `REF` コンストラクターを含むクエリなどがあります。  
   

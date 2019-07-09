@@ -2,12 +2,12 @@
 title: 開発者の視点から見た ASP.NET Web サービスと WCF との比較
 ms.date: 03/30/2017
 ms.assetid: f362d00e-ce82-484f-9d4f-27e579d5c320
-ms.openlocfilehash: e5d249514ecad7507235bb8bd354c80bdc17c5dc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8b0e26f0b76ee56d06c426cd3c11b169a74b1896
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61857589"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67663370"
 ---
 # <a name="comparing-aspnet-web-services-to-wcf-based-on-development"></a>開発者の視点から見た ASP.NET Web サービスと WCF との比較
 
@@ -151,22 +151,22 @@ public class LineItem
 
 - <xref:System.Xml.Serialization.XmlSerializer> や <xref:System.Xml.Serialization> 名前空間の属性は、XML スキーマで定義された有効な型であればどれにでも .NET Framework 型をマップできるようにするためのものです。これらを使うと、XML での型の表現方法を細かく制御できます。 これに対し、<xref:System.Runtime.Serialization.DataContractSerializer>、<xref:System.Runtime.Serialization.DataContractAttribute>、および <xref:System.Runtime.Serialization.DataMemberAttribute> の場合、XML での型の表現方法にはほとんど自由度がありません。 指定できるのは、名前空間と、型やフィールド、プロパティを XML で表す名前、フィールドやプロパティの XML における並び順だけです。
 
-    ```csharp
-    [DataContract(
-    Namespace="urn:Contoso:2006:January:29",
-    Name="LineItem")]
-    public class LineItem
-    {
-         [DataMember(Name="ItemNumber",IsRequired=true,Order=0)]
-         public string itemNumber;
-         [DataMember(Name="Quantity",IsRequired=false,Order = 1)]
-         public decimal quantity;
-         [DataMember(Name="Price",IsRequired=false,Order = 2)]
-         public decimal unitPrice;
-    }
-    ```
+  ```csharp
+  [DataContract(
+  Namespace="urn:Contoso:2006:January:29",
+  Name="LineItem")]
+  public class LineItem
+  {
+        [DataMember(Name="ItemNumber",IsRequired=true,Order=0)]
+        public string itemNumber;
+        [DataMember(Name="Quantity",IsRequired=false,Order = 1)]
+        public decimal quantity;
+        [DataMember(Name="Price",IsRequired=false,Order = 2)]
+        public decimal unitPrice;
+  }
+  ```
 
-    上記以外の事項は、<xref:System.Runtime.Serialization.DataContractSerializer> に固定で組み込まれています。
+  上記以外の事項は、<xref:System.Runtime.Serialization.DataContractSerializer> に固定で組み込まれています。
 
 - <xref:System.Runtime.Serialization.DataContractSerializer> の場合、型の XML での表現方法に自由度が小さく、したがってシリアル化のプロセスがあらかじめ大部分予測できるので、最適化が容易です。 <xref:System.Runtime.Serialization.DataContractSerializer> を使えば、性能が約 10% 向上するという現実的な利点があります。
 
@@ -180,9 +180,9 @@ public class LineItem
 
 - <xref:System.Runtime.Serialization.DataContractSerializer> にはバージョン管理の機能がいくつか組み込まれています。
 
-    - <xref:System.Runtime.Serialization.DataMemberAttribute> には <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティがあります。旧バージョンにはなかったメンバーを追加した場合に、そのプロパティを false とすれば、当該データ コントラクトの新バージョンを扱うアプリケーションが、旧バージョンのデータも扱えるようになります。
+  - <xref:System.Runtime.Serialization.DataMemberAttribute> には <xref:System.Runtime.Serialization.DataMemberAttribute.IsRequired%2A> プロパティがあります。旧バージョンにはなかったメンバーを追加した場合に、そのプロパティを false とすれば、当該データ コントラクトの新バージョンを扱うアプリケーションが、旧バージョンのデータも扱えるようになります。
 
-    - データ コントラクトに <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装すると、<xref:System.Runtime.Serialization.DataContractSerializer> は、新バージョンのデータ コントラクトで定義されたメンバーを、旧バージョンのコントラクトを扱うアプリケーション経由で受け渡しできるようになります。
+  - データ コントラクトに <xref:System.Runtime.Serialization.IExtensibleDataObject> インターフェイスを実装すると、<xref:System.Runtime.Serialization.DataContractSerializer> は、新バージョンのデータ コントラクトで定義されたメンバーを、旧バージョンのコントラクトを扱うアプリケーション経由で受け渡しできるようになります。
 
 以上のようにさまざまな違いがありますが、<xref:System.Xml.Serialization.XmlSerializer> で既定の設定を使用して型をシリアル化したものは、XML の名前空間を明示的に定義してあれば、<xref:System.Runtime.Serialization.DataContractSerializer> で型をシリアル化したものと意味的に同等です。 シリアライザーの両方で使用するための属性を持ち、次のクラスは、意味的に同一の XML に変換されます、<xref:System.Xml.Serialization.XmlSerializer>および、 <xref:System.Runtime.Serialization.DataContractAttribute>:
 
@@ -346,9 +346,9 @@ IIS 5.1/6.0 または WAS 上でサービスをホストする手順を以下に
 
 4. 構成ファイルを仮想ディレクトリに、Web.config という名前でコピーします。
 
- するとアプリケーションには、アプリケーション ルートに置いたサービス ファイルの URL でアクセスできるようになります。
+するとアプリケーションには、アプリケーション ルートに置いたサービス ファイルの URL でアクセスできるようになります。
 
- .NET アプリケーション内で WCF サービスをホストするサービス型、アプリケーションによって参照されるクラス ライブラリ アセンブリをコンパイルし、サービスを使用して、ホストにアプリケーションをプログラミング、<xref:System.ServiceModel.ServiceHost>クラス。 サービスを管理する基本的なプログラムの例を以下に示します。
+.NET アプリケーション内で WCF サービスをホストするサービス型、アプリケーションによって参照されるクラス ライブラリ アセンブリをコンパイルし、サービスを使用して、ホストにアプリケーションをプログラミング、<xref:System.ServiceModel.ServiceHost>クラス。 サービスを管理する基本的なプログラムの例を以下に示します。
 
 ```csharp
 string httpBaseAddress = "http://www.contoso.com:8000/";

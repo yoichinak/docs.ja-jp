@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: a60c30fa-1e68-45fe-b984-f6abb9ede40e
-ms.openlocfilehash: ab93a5bae3c83bcce8fa46800ef759d8a2a7f858
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 1bba36579fce4fe78289ccb986073280b531420a
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610553"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661876"
 ---
 # <a name="standard-query-operator-translation"></a>標準クエリ演算子の変換
 
@@ -198,13 +198,13 @@ C# のキャストは射影でのみサポートされます。 他の場所で�
 
 ## <a name="sql-server-2000-support"></a>SQL Server 2000 のサポート
 
-次[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)](Microsoft SQL Server 2005 との比較) の制限に影響を与える[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]をサポートします。
+次の SQL Server 2000 の制限事項 (Microsoft SQL Server 2005 との比較) に影響を与える[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]をサポートします。
 
 ### <a name="cross-apply-and-outer-apply-operators"></a>Cross Apply 演算子および Outer Apply 演算子
 
-これらの演算子は [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] では使用できません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、一連の書き換えを行って、これらの演算子を適切な結合に置換します。
+これらの演算子では、SQL Server 2000 で使用できません。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、一連の書き換えを行って、これらの演算子を適切な結合に置換します。
 
-`Cross Apply` および `Outer Apply` は、リレーションシップ ナビゲーションに対してのみ生成されます。 どのようなクエリのセットに対してこのような書き換えが可能かは、正しく定義されていません。 このため、[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] でサポートされている最小限のクエリのセットは、リレーションシップ ナビゲーションを含まないクエリのセットです。
+`Cross Apply` および `Outer Apply` は、リレーションシップ ナビゲーションに対してのみ生成されます。 どのようなクエリのセットに対してこのような書き換えが可能かは、正しく定義されていません。 このため、SQL Server 2000 のサポートされているクエリの最小限のセットはリレーションシップのナビゲーションを含まないセット。
 
 ### <a name="text--ntext"></a>text / ntext
 
@@ -214,11 +214,11 @@ C# のキャストは射影でのみサポートされます。 他の場所で�
 
 ### <a name="behavior-triggered-by-nested-queries"></a>入れ子になったクエリによってトリガーされる動作
 
-[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] (SP4 まで) は、バインダーは、入れ子になったクエリによってトリガーされる特異な動作が。 この特異動作をトリガーする SQL クエリのセットは、正しく定義されていません。 このためのセットを定義することはできません[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server の例外を引き起こす可能性のあるクエリ。
+(SP4 まで)、SQL Server 2000 のバインダーでは、入れ子になったクエリによってトリガーされる特異な動作があります。 この特異動作をトリガーする SQL クエリのセットは、正しく定義されていません。 このためのセットを定義することはできません[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server の例外を引き起こす可能性のあるクエリ。
 
 ### <a name="skip-and-take-operators"></a>Skip 演算子および Take 演算子
 
-<xref:System.Linq.Enumerable.Take%2A> と <xref:System.Linq.Enumerable.Skip%2A> には、[!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] に対するクエリで使用する場合に特定の制限があります。 詳細については、「Skip 例外と Take 例外を SQL Server 2000」エントリを参照してください。[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)します。
+<xref:System.Linq.Enumerable.Take%2A> と <xref:System.Linq.Enumerable.Skip%2A> を SQL Server 2000 に対するクエリで使用する場合は、いくつかの制限があります。 詳細については、「Skip 例外と Take 例外を SQL Server 2000」エントリを参照してください。[トラブルシューティング](../../../../../../docs/framework/data/adonet/sql/linq/troubleshooting.md)します。
 
 ## <a name="object-materialization"></a>オブジェクトの具体化
 

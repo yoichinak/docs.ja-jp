@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Transforms [WPF], about Transforms
 - FrameworkElement objects [WPF], scaling
 ms.assetid: 8f153d5e-ed61-4aa5-a7cd-286f0c427a13
-ms.openlocfilehash: 7f5fad56d00e9a7e33843222a81593a90bf7e733
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 28d990bc2ea043fa1770054877148f1f09acefd0
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64651903"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67662630"
 ---
 # <a name="transforms-overview"></a>変換の概要
-このトピックでは、使用する方法を説明します、 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform>クラスには、回転、拡大縮小、移動 (平行移動)、および傾斜させる<xref:System.Windows.FrameworkElement>オブジェクト。  
+このトピックでは、2 D を使用する方法を説明します<xref:System.Windows.Media.Transform>クラスには、回転、拡大縮小、移動 (平行移動)、および傾斜させる<xref:System.Windows.FrameworkElement>オブジェクト。  
 
 <a name="whatIsATransformSection"></a>   
 ## <a name="what-is-a-transform"></a>変換とは  
@@ -45,7 +45,7 @@ ms.locfileid: "64651903"
   
 <a name="transformClassesSection"></a>   
 ## <a name="transform-classes"></a>変換クラス  
- Windows Presentation Foundation (WPF) は、次を提供します。 [!INCLUDE[TLA#tla_2d](../../../../includes/tlasharptla-2d-md.md)] <xref:System.Windows.Media.Transform>一般的な変換操作用のクラス。  
+ Windows Presentation Foundation (WPF) は、次の 2 次元<xref:System.Windows.Media.Transform>一般的な変換操作用のクラス。  
   
 |クラス|説明|例|図|  
 |-----------|-----------------|-------------|------------------|  
@@ -61,7 +61,7 @@ ms.locfileid: "64651903"
 |<xref:System.Windows.Media.TransformGroup>|複数のグループ<xref:System.Windows.Media.TransformGroup>オブジェクト、1 つに<xref:System.Windows.Media.Transform>し変換プロパティに適用することができます。|[オブジェクトに複数の変換を適用する](how-to-apply-multiple-transforms-to-an-object.md)|  
 |<xref:System.Windows.Media.MatrixTransform>|その他は提供されないカスタム変換を作成します。<xref:System.Windows.Media.Transform>クラス。 使用すると、<xref:System.Windows.Media.MatrixTransform>マトリックスを直接操作することです。|[MatrixTransform を使用してカスタム変換を作成する](how-to-use-a-matrixtransform-to-create-custom-transforms.md)|  
   
- Windows Presentation Foundation (WPF) も用意されています。[!INCLUDE[TLA#tla_3d](../../../../includes/tlasharptla-3d-md.md)]変換します。 詳細については、<xref:System.Windows.Media.Media3D.Transform3D> クラスを参照してください。  
+ Windows Presentation Foundation (WPF) には、3-D 変換も提供します。 詳細については、<xref:System.Windows.Media.Media3D.Transform3D> クラスを参照してください。  
   
 <a name="transformationproperties"></a>   
 ## <a name="common-transformation-properties"></a>一般的な変換プロパティ  

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81a31acd-e0f1-4bca-9a12-fa1ad5752374
-ms.openlocfilehash: bedb6df564e4301ec8009992ec0ec5c51de729e0
-ms.sourcegitcommit: e08b319358a8025cc6aa38737854f7bdb87183d6
+ms.openlocfilehash: e0f2c6300f8dccb8cc316527af9c75f6a40ff2df
+ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64910824"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67661897"
 ---
 # <a name="return-or-skip-elements-in-a-sequence"></a>シーケンスの要素の取得またはスキップ
 <xref:System.Linq.Queryable.Take%2A> 演算子を使用すると、シーケンス内の指定された数の要素を返し、残りをスキップできます。  
@@ -49,9 +49,9 @@ ms.locfileid: "64910824"
  SQL での順序付けの制限により、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、<xref:System.Linq.Queryable.Take%2A> 演算子または <xref:System.Linq.Queryable.Skip%2A> 演算子の引数の順序を、演算子の結果に移動することを試みます。  
   
 > [!NOTE]
->  [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] と [!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)] で変換は異なります。 複雑さに関係なくクエリを指定して <xref:System.Linq.Queryable.Skip%2A> を使用する予定の場合は、[!INCLUDE[sqprsqlong](../../../../../../includes/sqprsqlong-md.md)] を使用してください。  
+>  変換は、SQL Server 2000 と SQL Server 2005 で異なります。 使用して行う場合<xref:System.Linq.Queryable.Skip%2A>複雑なクエリで SQL Server 2005 を使用します。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に対して次の [!INCLUDE[ss2k](../../../../../../includes/ss2k-md.md)] クエリを検討します。  
+ 次を考慮[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]SQL Server 2000 のクエリ。  
   
  [!code-csharp[DLinqQueryExamples#19](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqQueryExamples/cs/Program.cs#19)]
  [!code-vb[DLinqQueryExamples#19](../../../../../../samples/snippets/visualbasic/VS_Snippets_Data/DLinqQueryExamples/vb/Module1.vb#19)]  
