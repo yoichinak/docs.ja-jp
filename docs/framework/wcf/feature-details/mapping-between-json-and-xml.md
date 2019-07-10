@@ -2,12 +2,12 @@
 title: JSON と XML 間のマッピング
 ms.date: 03/30/2017
 ms.assetid: 22ee1f52-c708-4024-bbf0-572e0dae64af
-ms.openlocfilehash: ef5eaac8fc75149ac518ce322808a84bbab5506b
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: 9049e622803396126890d4c88b9fee2a100f17c5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636434"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67747739"
 ---
 # <a name="mapping-between-json-and-xml"></a>JSON と XML 間のマッピング
 <xref:System.Runtime.Serialization.Json.JsonReaderWriterFactory> によって作成されるリーダーとライターには、JSON (JavaScript Object Notation) コンテンツでの XML API が備わっています。 JSON は、JavaScript のオブジェクト リテラルのサブセットを使用してデータをエンコードします。 リーダーとライターはこのファクトリによって生成された、ときにも使用 JSON コンテンツの送信または受信を使用する Windows Communication Foundation (WCF) アプリケーション、<xref:System.ServiceModel.Channels.WebMessageEncodingBindingElement>または<xref:System.ServiceModel.WebHttpBinding>します。
@@ -48,7 +48,7 @@ WCF では、JSON を使用する場合、通常のシナリオは、<xref:Syste
 
 ```xml
 <?xml version="1.0"?>
-<root type="number">42</root>`
+<root type="number">42</root>
 ```
 
 また、次の要素があるとします。
@@ -138,11 +138,11 @@ Root JSON Element および内部要素では、JSON Type Attribute により JS
 |[normalized 値] の JSON Type Attribute としての AII|対応する EII の許可された [children]|JSON へのマッピング|
 |---------------------------------------------------------|---------------------------------------------------|---------------------|
 |`string` (または JSON 型 AII なし)<br /><br /> `string` および JSON 型 AII なしは同じです。`string` を既定値にします。<br /><br /> その結果、`<root> string1</root>` が JSON `string` "string1" にマップされます。|0 または複数の Cii|JSON `string` (JSON RFC section 2.5)。 `char` はそれぞれ、CII の [character code] に対応する文字です。 CII が存在しない場合は、空の JSON `string` にマップされます。<br /><br /> 例:次の要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="string">42</root>`<br /><br /> JSON フラグメントは "42" です。<br /><br /> XML から JSON へのマッピングでは、エスケープする必要がある文字はエスケープ文字にマップされ、その他はすべて、エスケープされない文字にマップされます。 「/」文字が特別な – はエスケープすることはありませんが (として書き出さ"\\/")。<br /><br /> 例:次の要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="string">the "da/ta"</root>`<br /><br /> JSON フラグメントは"、 \\"da\\/ta\\""です。<br /><br /> JSON から XML へのマッピングでは、エスケープ文字およびエスケープされない文字が、対応する [character code] に正しくマップされます。<br /><br /> 例:JSON フラグメント"\u0041BC"は、次の XML 要素にマップされます。<br /><br /> `<root type="string">ABC</root>`<br /><br /> 文字列は、XML にマップされない空白文字 (JSON rfc section 2 の ' ws') で囲むことができます。<br /><br /> 例:JSON フラグメント"ABC"、(最初の二重引用符の前にスペースがありますが)、次の XML 要素にマップされます。<br /><br /> `<root type="string">ABC</root>`<br /><br /> XML 内の任意の空白は、JSON の空白部分にマップされます。<br /><br /> 例:次の XML 要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="string">  A BC      </root>`<br /><br /> JSON フラグメントは " A BC " です。|
-|`number`|1 個以上の CII|JSON `number` (JSON RFC section 2.4) が空白で囲まれた可能性があります。 数/空白文字の組み合わせ内の各文字は、cii の [character code] に対応する文字です。<br /><br /> 例:次の要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="number">    42</root>`<br /><br /> JSON フラグメントは    42 です <br /><br /> (空白が保持されます)。|
+|`number`|1 個以上の CII|JSON `number` (JSON RFC section 2.4) が空白で囲まれた可能性があります。 数/空白文字の組み合わせ内の各文字は、cii の [character code] に対応する文字です。<br /><br /> 例:次の要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="number">    42</root>`<br /><br /> JSON フラグメントは    42 です<br /><br /> (空白が保持されます)。|
 |`boolean`|4 または 5 の Cii (に対応する`true`または`false`)、追加の空白の Cii で囲まれている可能性があります。|文字列 "true" に対応する CII シーケンスは、リテラルの `true` にマップされ、文字列 "false" に対応する CII シーケンスは、リテラルの `false` にマップされます。 周囲の空白は保持されます。<br /><br /> 例:次の要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="boolean"> false</root>`<br /><br /> JSON フラグメントは `false` です。|
 |`null`|いずれも許可されません。|リテラルの `null`。 Json XML へのマッピングから、 `null` XML にマップされない空白文字 (section 2 の ' ws') で囲むことがあります。<br /><br /> 例:次の要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="null"/>`<br /><br /> または<br /><br /> `<root type="null"></root>`<br /><br /> :<br /><br /> いずれの場合も、JSON フラグメントは `Null` です。|
-|`object`|0 個以上の EII|JSON RFC section 2.2 にあるように、`begin-object` (左中かっこ) の直後に、後述するように各 EII のメンバー レコードが続きます。 EII が複数個存在する場合、メンバー レコードの間に値区切り記号 (コンマ) が配置されます。 最後尾には、end-object (右中かっこ) が置かれます。<br /><br /> 例:次の要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> JSON フラグメントは `{"type1":"aaa","type2":"bbb"}` です。<br /><br /> XML から JSON へのマッピングに Data Contract Type Attribute が存在する場合は、最初に追加のメンバー レコードが挿入されます。 その名前がデータ コントラクト型の属性の [local name] ("\_\_型")、その値はの [normalized value] 属性とします。 逆に、JSON と XML のマッピングを最初のメンバー レコードの名前がデータ コントラクト型の属性の [local name] の場合に (つまり、"\_\_型")、対応する Data Contract Type Attribute がマップされた XML に存在するが、対応する EII は存在しません。 また、このような特定のマッピングが適用されるには、このメンバー レコードが最初に JSON オブジェクトに存在している必要があります。 これは、メンバー レコードの順序が重要ではない通常の JSON 処理とは異なっています。<br /><br /> 例:<br /><br /> 次の JSON フラグメントは XML にマップされます。<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> XML は次のコードです。<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> いることを確認、 \_\_型 aii なしはあるが、あるありません\_ \_EII を入力します。<br /><br /> ただし、次の例に示すように、JSON での順序が逆になる場合があります。<br /><br /> {"name":"John","\_\_type":"Person"}<br /><br /> このとき、対応する XML は次のとおりです。<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> つまり、 \_AII ではない、EII に対応して特別な意味を通常どおりが種類 (_t) 停止します。<br /><br /> JSON 値にマップされるときの、AII の [normalized value] に対するエスケープ/エスケープ解除ルールは、このテーブルの "string" 行で指定された JSON 文字列に対するルールと同じです。<br /><br /> 例:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> これを前の例に適用すると、次の JSON にマップされます。<br /><br /> `{"__type":"\\abc"}`<br /><br /> Xml JSON へのマッピングから、最初の EII の [ローカル名] することはできません"\_\_型"です。<br /><br /> 空白文字 (`ws`) オブジェクトの JSON へのマッピングを XML に生成されませんし、json と XML のマッピングは無視されます。<br /><br /> 例:次の JSON フラグメントは XML 要素にマップされます。<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> XML 要素を、次のコードで示します。<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
-|array|0 個以上の EII|JSON RFC section 2.3 にあるように、begin-array (左角かっこ) の直後に、後述する各 EII の配列レコードが続きます。 EII が複数個存在する場合、配列レコードの間に値区切り記号 (コンマ) が配置されます。 最後尾には、end-array が置かれます。<br /><br /> 例:次の XML 要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> JSON フラグメントは ["aaa","bbb"] です。<br /><br /> 空白文字 (`ws`) 配列の JSON へのマッピングを XML に生成されませんし、json と XML のマッピングは無視されます。<br /><br /> 例:JSON フラグメントです。<br /><br />`["aaa", "bbb"]`<br /><br /> マップされる XML 要素は、次のとおりです。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
+|`object`|0 個以上の EII|JSON RFC section 2.2 にあるように、`begin-object` (左中かっこ) の直後に、後述するように各 EII のメンバー レコードが続きます。 EII が複数個存在する場合、メンバー レコードの間に値区切り記号 (コンマ) が配置されます。 最後尾には、end-object (右中かっこ) が置かれます。<br /><br /> 例:次の要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="object">`<br /><br /> `<type1 type="string">aaa\</type1>`<br /><br /> `<type2 type="string">bbb\</type2>`<br /><br /> `</root >`<br /><br /> JSON フラグメントは `{"type1":"aaa","type2":"bbb"}` です。<br /><br /> XML から JSON へのマッピングに Data Contract Type Attribute が存在する場合は、最初に追加のメンバー レコードが挿入されます。 その名前がデータ コントラクト型の属性の [local name] ("\_\_型")、その値はの [normalized value] 属性とします。 逆に、JSON と XML のマッピングを最初のメンバー レコードの名前がデータ コントラクト型の属性の [local name] の場合に (つまり、"\_\_型")、対応する Data Contract Type Attribute がマップされた XML に存在するが、対応する EII は存在しません。 また、このような特定のマッピングが適用されるには、このメンバー レコードが最初に JSON オブジェクトに存在している必要があります。 これは、メンバー レコードの順序が重要ではない通常の JSON 処理とは異なっています。<br /><br /> 例:<br /><br /> 次の JSON フラグメントは XML にマップされます。<br /><br /> `{"__type":"Person","name":"John"}`<br /><br /> XML は次のコードです。<br /><br /> `<root type="object" __type="Person">   <name type="string">John</name> </root>`<br /><br /> いることを確認、 \_\_型 aii なしはあるが、あるありません\_ \_EII を入力します。<br /><br /> ただし、次の例に示すように、JSON での順序が逆になる場合があります。<br /><br /> `{"name":"John","\_\_type":"Person"}`<br /><br /> このとき、対応する XML は次のとおりです。<br /><br /> `<root type="object">   <name type="string">John</name>   <__type type="string">Person</__type> </root>`<br /><br /> つまり、 \_AII ではない、EII に対応して特別な意味を通常どおりが種類 (_t) 停止します。<br /><br /> JSON 値にマップされるときの、AII の [normalized value] に対するエスケープ/エスケープ解除ルールは、このテーブルの "string" 行で指定された JSON 文字列に対するルールと同じです。<br /><br /> 例:<br /><br /> `<root type="object" __type="\abc" />`<br /><br /> これを前の例に適用すると、次の JSON にマップされます。<br /><br /> `{"__type":"\\abc"}`<br /><br /> Xml JSON へのマッピングから、最初の EII の [ローカル名] することはできません"\_\_型"です。<br /><br /> 空白文字 (`ws`) オブジェクトの JSON へのマッピングを XML に生成されませんし、json と XML のマッピングは無視されます。<br /><br /> 例:次の JSON フラグメントは XML 要素にマップされます。<br /><br /> `{ "ccc" : "aaa", "ddd" :"bbb"}`<br /><br /> XML 要素を、次のコードで示します。<br /><br /> `<root type="object">    <ccc type="string">aaa</ccc>    <ddd type="string">bbb</bar> </root >`|
+|array|0 個以上の EII|JSON RFC section 2.3 にあるように、begin-array (左角かっこ) の直後に、後述する各 EII の配列レコードが続きます。 EII が複数個存在する場合、配列レコードの間に値区切り記号 (コンマ) が配置されます。 最後尾には、end-array が置かれます。<br /><br /> 例:次の XML 要素は、JSON フラグメントにマップされます。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`<br /><br /> JSON フラグメントは、します。 `["aaa","bbb"]`<br /><br /> 空白文字 (`ws`) 配列の JSON へのマッピングを XML に生成されませんし、json と XML のマッピングは無視されます。<br /><br /> 例:JSON フラグメントです。<br /><br />`["aaa", "bbb"]`<br /><br /> マップされる XML 要素は、次のとおりです。<br /><br /> `<root type="array"/>    <item type="string">aaa</item>    <item type="string">bbb</item> </root >`|
 
 メンバー レコードの動作は次のとおりです。
 
@@ -150,15 +150,17 @@ Root JSON Element および内部要素では、JSON Type Attribute により JS
 
 例:次の要素は、JSON フラグメントにマップされます。
 
-`<root type="object"/>`
-
-`<myLocalName type="string">aaa</myLocalName>`
-
-`</root >`
+```xml
+<root type="object"/>
+<myLocalName type="string">aaa</myLocalName>
+</root >
+```
 
 次の JSON フラグメントが示されます。
 
-`{"myLocalName":"aaa"}`
+```json
+{"myLocalName":"aaa"}
+```
 
 - XML から JSON へのマッピングでは、JSON でエスケープする必要がある文字はエスケープされ、それ以外はエスケープされません。 "/" 文字は、エスケープする必要のない文字ですが、エスケープされます (JSON から XML へのマッピングではエスケープする必要はありません)。 これは、JSON の `DateTime` データに対する ASP.NET AJAX 形式をサポートするために必要な処理です。
 
@@ -181,7 +183,9 @@ Root JSON Element および内部要素では、JSON Type Attribute により JS
 
 マップされる JSON フラグメントは次のとおりです。
 
-`{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}`
+```json
+{"myLocalName1":"myValue1","myLocalName2":2,"myLocalName3":{"myNestedName1":true,"myNestedName2":null}}
+```
 
 > [!NOTE]
 > 上記のマッピングには、XML エンコーディングの手順がありません。 そのため、WCF は、キー名のすべての文字が XML 要素名に有効な文字を JSON ドキュメントのみをサポートします。 たとえば、JSON ドキュメント {"<":"a"} はサポートされていません < XML 要素の有効な名前がありません。
@@ -208,7 +212,9 @@ Array Record の動作は次のとおりです。
 
 JSON フラグメントは次のとおりです。
 
-`["myValue1",2,[true,null]]`
+```json
+["myValue1",2,[true,null]]
+```
 
 ## <a name="see-also"></a>関連項目
 

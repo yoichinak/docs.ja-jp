@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f531b96211a1dd6072d62937b9f93fc17f105d4d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bcfa0c01dc36a68711c42a7e8318cea023b1772f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777983"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752430"
 ---
 # <a name="isymunmanagedwriter3commit-method"></a>ISymUnmanagedWriter3::Commit メソッド
 ストリームにこれまでに書き込まれた変更をコミットします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Commit();  
 ```  
   

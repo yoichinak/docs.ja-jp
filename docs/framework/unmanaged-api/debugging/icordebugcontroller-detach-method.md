@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 85a9bde77f7c393756ec1d3e7d30b96392aa6a94
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f687e48413cb227ad715720e24bd645065309553
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749632"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748843"
 ---
 # <a name="icordebugcontrollerdetach-method"></a>ICorDebugController::Detach メソッド
 プロセスまたはアプリケーション ドメインからデバッガーをデタッチします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Detach ();  
 ```  
   
@@ -39,7 +39,7 @@ HRESULT Detach ();
  .NET framework version 2.0 では、アンマネージ デバッグが有効になっている場合は、このメソッドはオペレーティング システムの制限により失敗します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
