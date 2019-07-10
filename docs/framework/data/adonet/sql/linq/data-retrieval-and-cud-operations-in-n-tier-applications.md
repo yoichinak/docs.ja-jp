@@ -5,19 +5,19 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: c3133d53-83ed-4a4d-af8b-82edcf3831db
-ms.openlocfilehash: 8ce30d60b05e600e4f6906221d4c360c7ad8c396
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 570b3d382157d4be832f57265ad3a064fcd3df9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586674"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743460"
 ---
 # <a name="data-retrieval-and-cud-operations-in-n-tier-applications-linq-to-sql"></a>N 層アプリケーションでのデータ取得および CUD 操作 (LINQ to SQL)
 Customers または Orders のようなエンティティ オブジェクトをネットワークを介してクライアントにシリアル化すると、これらのエンティティはデータ コンテキストからデタッチされます。 変更内容、および他のオブジェクトとの関連付けはデータ コンテキストによって追跡されなくなります。 クライアントがデータを読み取るだけの場合は、これは問題にはなりません。 また、クライアントが新しい行をデータベースに追加できるようにすることも、ある程度簡単です。 しかし、アプリケーションでクライアントによるデータの更新または削除を可能にする必要がある場合には、<xref:System.Data.Linq.DataContext.SubmitChanges%2A?displayProperty=nameWithType> を呼び出す前に、新しいデータ コンテキストにエンティティをアタッチする必要があります。 さらに、元の値によるオプティミスティック コンカレンシーチェックを使用する場合には、何らかの方法で、元のエンティティと変更後のエンティティをデータベースに渡す必要もあります。 エンティティがデタッチされた後に新しいデータ コンテキストにエンティティを入れるために、`Attach` メソッドが用意されています。  
   
  代わりにプロキシ オブジェクトをシリアル化する場合でも、 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 、エンティティがあるデータ アクセス層 (DAL) 上のエンティティを作成し、新しいにアタッチする<xref:System.Data.Linq.DataContext?displayProperty=nameWithType>データベースにデータを送信するために、します。  
   
- [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] エンティティをシリアル化する方法の詳細についてはまったく関与しません。 使用する方法についての詳細、 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] SQLMetal ツールは、Windows Communication Foundation (WCF) を使用してシリアル化するクラスを生成して[方法。エンティティをシリアル化できるように](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)します。  
+ [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] エンティティをシリアル化する方法の詳細についてはまったく関与しません。 オブジェクト リレーショナル デザイナーと SQLMetal ツールを使用して、Windows Communication Foundation (WCF) を使用してシリアル化可能なクラスを生成する方法の詳細については、次を参照してください。[方法。エンティティをシリアル化できるように](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)します。  
   
 > [!NOTE]
 >  `Attach` メソッドは、新しいエンティティまたは逆シリアル化されたエンティティに対してのみ呼び出してください。 エンティティを元のデータ コンテキストからデタッチする唯一の方法は、シリアル化です。 デタッチされていないエンティティを新しいデータ コンテキストにアタッチしようとした場合、元のデータ コンテキストの遅延ローダーがそのエンティティにまだ存在するならば、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は例外をスローします。 2 つの異なるデータ コンテキストの遅延ローダーを持つエンティティに対して、挿入、更新、および削除操作を実行すると、予想外の結果が生じる可能性があります。 遅延ローダーの詳細については、次を参照してください。[遅延読み込みと即時読み込み](../../../../../../docs/framework/data/adonet/sql/linq/deferred-versus-immediate-loading.md)します。  

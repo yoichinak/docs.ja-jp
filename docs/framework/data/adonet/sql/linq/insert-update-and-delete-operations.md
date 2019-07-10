@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 26a43a4f-83c9-4732-806d-bb23aad0ff6b
-ms.openlocfilehash: 6a25ea5fe80da1fed16f44fd3243ebea4d64069f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fa3690ae74869f5dc0fbaa8d824d4aebca8ce724
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61902890"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743055"
 ---
 # <a name="insert-update-and-delete-operations"></a>挿入、更新、および削除の各操作
 オブジェクト モデルに対してオブジェクトの追加、変更、および削除を行うには、`Insert` で `Update`、`Delete`、および [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の各操作を実行します。 既定では、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] によって SQL に対する操作が変換され、変更内容がデータベースに送信されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "61902890"
 > [!NOTE]
 >  独自に作成したロジック (通常はストアド プロシージャ) を使用して、この動作をオーバーライドできます。 詳細については、次を参照してください。[開発者でオーバーライドする既定の動作の責任](../../../../../../docs/framework/data/adonet/sql/linq/responsibilities-of-the-developer-in-overriding-default-behavior.md)します。  
 >   
->  Visual Studio を使用して開発者が使用できる、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]この目的のストアド プロシージャを開発します。  
+>  Visual Studio を使用している開発者は、オブジェクト リレーショナル デザイナーを使用して、この目的のストアド プロシージャを開発します。  
   
 ## <a name="see-also"></a>関連項目
 

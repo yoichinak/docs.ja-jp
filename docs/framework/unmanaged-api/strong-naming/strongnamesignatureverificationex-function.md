@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 049b7b11473a05d74dc311ca6ee79947039b0dd1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 80df33e9064d9843873c67272bac7a34dbe734cc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61794421"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751610"
 ---
 # <a name="strongnamesignatureverificationex-function"></a>StrongNameSignatureVerificationEx 関数
 指定したパスにあるアセンブリ マニフェストに厳密な名前の署名が含まれるかどうかを示す値が取得されます。  
@@ -31,7 +31,7 @@ ms.locfileid: "61794421"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEAN StrongNameSignatureVerificationEx (  
     [in]  LPCWSTR   wszFilePath,  
     [in]  BOOLEAN   fForceVerification,  
@@ -56,7 +56,7 @@ BOOLEAN StrongNameSignatureVerificationEx (
  `StrongNameSignatureVerificationEx` ような機能を提供します、 [StrongNameSignatureVerification](../../../../docs/framework/unmanaged-api/strong-naming/strongnamesignatureverification-function.md)関数。 2 番目の入力パラメーターと出力パラメーター、`StrongNameSignatureVerificationEx`型`BOOLEAN`の代わりに`DWORD`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** StrongName.h  
   

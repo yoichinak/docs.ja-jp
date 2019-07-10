@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: eb5db23db752cc82b04d97cb2bc81a3155d465be
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c58c14dbc11272a40de01140db72ac3605bfbc67
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64627174"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757261"
 ---
 # <a name="iclrpolicymanagersettimeoutandaction-method"></a>ICLRPolicyManager::SetTimeoutAndAction メソッド
 指定された操作のタイムアウト値を設定し、共通言語ランタイム (CLR) が、操作が発生したときに実行する必要がありますポリシーのアクションを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetTimeoutAndAction (  
     [in] EClrOperation operation,  
     [in] DWORD dwMilliseconds,  
@@ -74,7 +74,7 @@ HRESULT SetTimeoutAndAction (
 >  すべてのポリシーのアクション値は、CLR 操作ではタイムアウトの動作として指定できます。 有効な値の 2 つのメソッドは、トピックの「解説」セクションを参照してください。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

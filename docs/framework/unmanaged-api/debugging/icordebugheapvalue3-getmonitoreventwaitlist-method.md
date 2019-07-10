@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: db331d75244d59aacf2207a6b83a3f337a64b989
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: db34d56fd4d074551ca4823681bc5d94e76df758
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700963"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756620"
 ---
 # <a name="icordebugheapvalue3getmonitoreventwaitlist-method"></a>ICorDebugHeapValue3::GetMonitorEventWaitList メソッド
 モニター ロックに関連付けられているイベントをキューに置かれたスレッドの順序付きリストを提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetMonitorEventWaitList (  
     [out] ICorDebugThreadEnum **ppThreadEnum  
 );  
@@ -61,7 +61,7 @@ HRESULT GetMonitorEventWaitList (
  モニタのスレッドが待機している場合に、これを特定できないように、エラーが発生した場合、メソッドは失敗を示す HRESULT を返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b3eb8bf59ee2a91c62a6ff74b1903d92607a9ffe
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 629a4850d47940633c8c69a7e464cfae315b3c56
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995152"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761249"
 ---
 # <a name="icordebugmanagedcallbackunloadclass-method"></a>ICorDebugManagedCallback::UnloadClass メソッド
 クラスがアンロードされることをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT UnloadClass (  
     [in] ICorDebugAppDomain  *pAppDomain,  
     [in] ICorDebugClass      *c  
@@ -47,7 +47,7 @@ HRESULT UnloadClass (
  クラスは、この呼び出しの後は参照できません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

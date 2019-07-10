@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: a5606a556dd7aeafe6d7a6408d236f2bee8dc773
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 20fd186c32857fe547c47d06874f635a5628b178
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992213"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750770"
 ---
 # <a name="icorprofilercallbackruntimesuspendstarted-method"></a>ICorProfilerCallback::RuntimeSuspendStarted メソッド
 ランタイムのすべてのスレッドを中断しようとして、ランタイムがプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT RuntimeSuspendStarted(  
     [in] COR_PRF_SUSPEND_REASON suspendReason);  
 ```  
@@ -42,7 +42,7 @@ HRESULT RuntimeSuspendStarted(
  アンマネージ コードに含まれるすべてのランタイム スレッドがランタイムを再入力するまで実行を続行できます。 その時点で、中断されます、ランタイムが再開されるまでです。 これは、ランタイムに入る新しいスレッドにも適用されます。 ランタイムのすべてのスレッドは、割り込み可能なコードにある既にまたは割り込み可能なコードに到達するときに中断するように求められる場合はすぐにいずれかの中断です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

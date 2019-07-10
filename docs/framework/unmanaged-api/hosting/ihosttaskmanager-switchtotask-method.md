@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: a50c9f7fc5921d3e5c21dd3566de81ac2249f3dd
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9074201cb56ad9e6c4ddadc8468d2ceadbafcb75
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796605"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749316"
 ---
 # <a name="ihosttaskmanagerswitchtotask-method"></a>IHostTaskManager::SwitchToTask メソッド
 現在のタスクを切り離すことをホストに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SwitchToTask (  
     [in] DWORD option  
 );  
@@ -57,7 +57,7 @@ HRESULT SwitchToTask (
 >  `SwitchToTask` ホストが切り替えるタスクで指定されていません。切り替える必要がありますが、タスクのみを指定します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

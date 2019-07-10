@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 28c0aa37bdcae2a09a4d53f920efd3ffe7117bd3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a437ff11114ea8d577b2fc3b81cd981cebb8c8d6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992460"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751066"
 ---
 # <a name="imetadataemitsetmethodimplflags-method"></a>IMetaDataEmit::SetMethodImplFlags メソッド
 設定または指定したトークンによって参照されている継承されたメソッドの実装のメタデータ シグネチャを更新します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetMethodImplFlags (   
     [in]  mdMethodDef   md,   
     [in]  DWORD         dwImplFlags   
@@ -44,7 +44,7 @@ HRESULT SetMethodImplFlags (
  [in]値の組み合わせ、 [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)メソッドの実装の機能を指定する列挙体。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

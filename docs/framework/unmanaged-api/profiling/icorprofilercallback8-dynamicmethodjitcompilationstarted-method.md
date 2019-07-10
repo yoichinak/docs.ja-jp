@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c4b8bffeb71497a7dd8e2ed25b833f9216d8017e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5a60f074ce0081df07a61d0b832d542c8873776f
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049740"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757982"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationstarted-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationStarted メソッド
 [.NET Framework 4.7 以降のバージョンでサポートされます]  
@@ -24,7 +24,7 @@ ms.locfileid: "62049740"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DynamicMethodJITCompilationStarted(  
      [in]  FunctionID  functionId,   
      [in]  BOOL        fIsSafeToBlock,   
@@ -56,7 +56,7 @@ IL ヘッダーのバイト数。
 `pILHeader`ポインターは、コールバック中にのみ有効です。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

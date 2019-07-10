@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: aed6ccd938761385aafd21802829bd741847b4ba
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1e045c475b57f863071eb81194868b7db3c5a3c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61988206"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67755799"
 ---
 # <a name="icordebugmanagedcallbackexitappdomain-method"></a>ICorDebugManagedCallback::ExitAppDomain メソッド
 アプリケーション ドメインが終了していることをデバッガーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ExitAppDomain (  
     [in] ICorDebugProcess   *pProcess,  
     [in] ICorDebugAppDomain *pAppDomain  
@@ -44,7 +44,7 @@ HRESULT ExitAppDomain (
  [in]終了するアプリケーション ドメインを表す ICorDebugAppDomain オブジェクトへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -16,12 +16,12 @@ topic_type:
 - Reference
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d28497c637a40d7e2659b18868124ea898397f92
-ms.sourcegitcommit: 8699383914c24a0df033393f55db3369db728a7b
+ms.openlocfilehash: b7f24606e3b021b0df5bdbaab795e4f672f724fa
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/15/2019
-ms.locfileid: "65636909"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67761715"
 ---
 # <a name="blessiwbemservicesobject-function"></a>BlessIWbemServicesObject 関数
 ユーザーの資格情報が、指定されたアクセスを許可するかどうかを示す[IWbemServices](/windows/desktop/api/wbemcli/nn-wbemcli-iwbemservices)オブジェクト。 
@@ -30,7 +30,7 @@ ms.locfileid: "65636909"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 HRESULT BlessIWbemServicesObject (
    [in] IUnknown* pIUnknown,
    [in] BSTR strUser, 
@@ -75,7 +75,7 @@ HRESULT BlessIWbemServicesObject (
 
 ## <a name="requirements"></a>必要条件
 
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。
 
  **ヘッダー:** WMINet_Utils.idl
 

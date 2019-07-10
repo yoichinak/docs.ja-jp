@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 1c30115a23f7f73662c9b3f4f4a09d45478ad687
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3062e636921ea959716a500dae689fbe07915006
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61995476"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67760002"
 ---
 # <a name="icordebuginternalframe2getframeaddress-method"></a>ICorDebugInternalFrame2::GetFrameAddress メソッド
 内部フレームのスタック アドレスを返します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);  
 ```  
   
@@ -44,13 +44,13 @@ HRESULT GetFrameAddress([out] CORDB_ADDRESS *pAddress);
 |-------------|-----------------|  
 |S_OK|内部フレームのアドレスが正常に返されました。|  
 |E_FAIL|内部フレームのアドレスは返されませんでした。|  
-|E_INVALIDARG|`pAddress` は `null`です。|  
+|E_INVALIDARG|`pAddress` は `null` です。|  
   
 ## <a name="remarks"></a>Remarks  
  戻り値`pAddress`スタック上の他のフレームの基準とした内部フレームの場所を特定するために使用できます。 IA 64 ベースのコンピューター上でも内部フレームはのみ、スタック上に存在して、バッキング ストアへの対応するポインターはありません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

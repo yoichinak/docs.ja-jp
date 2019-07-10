@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 492a60d3c8d18bec4e99ae778686fec6e8724248
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 90c845d87cc9c8bf229dd604ec2077ec28d31dcd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700242"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770788"
 ---
 # <a name="icorruntimehostunloaddomain-method"></a>ICorRuntimeHost::UnloadDomain メソッド
 現在のプロセスから指定したアプリケーション ドメインをアンロードします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT UnloadDomain (  
     [in] IUnknown* pAppDomain  
 );  
@@ -49,7 +49,7 @@ HRESULT UnloadDomain (
 |HOST_E_CLRNOTAVAILABLE|プロセスに CLR が読み込まれていないか、CLR は状態をマネージ コードを実行または呼び出しを正常に処理ができません。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

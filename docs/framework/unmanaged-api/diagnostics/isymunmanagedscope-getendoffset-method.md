@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: e28a351b6d47d14f171b9e760b2fa2c6755e3f8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4b99825a210a7a0f1253a01485a61bdbfeacf160
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61986188"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751289"
 ---
 # <a name="isymunmanagedscopegetendoffset-method"></a>ISymUnmanagedScope::GetEndOffset メソッド
 このスコープの終了オフセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetEndOffset(  
     [out, retval] ULONG32* pRetVal);  
 ```  

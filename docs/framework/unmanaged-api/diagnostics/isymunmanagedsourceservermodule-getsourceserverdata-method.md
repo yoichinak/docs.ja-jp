@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ea8052152b08732906c707648f361bba4d83a276
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22321dc8f8c4b8d9c2ae50b061a2ba105f92ebb7
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761560"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746086"
 ---
 # <a name="isymunmanagedsourceservermodulegetsourceserverdata-method"></a>ISymUnmanagedSourceServerModule::GetSourceServerData メソッド
 モジュールのソース サーバーのデータを返します。 使用して、呼び出し元がリソースを解放する必要があります`CoTaskMemFree`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSourceServerData(  
     [out] ULONG* pDataByteCount,   
     [out, size_is (, *pDataByteCount)] BYTE** ppData);  

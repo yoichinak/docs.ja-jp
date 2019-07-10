@@ -2,19 +2,19 @@
 title: 属性ベースの対応付け
 ms.date: 03/30/2017
 ms.assetid: 6dd89999-f415-4d61-b8c8-237d23d7924e
-ms.openlocfilehash: d7d7c14ca12e40af643d164069cf7b0f3165fa20
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a524e37640959c20c9883aa68e978a89428e43a4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032969"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743623"
 ---
 # <a name="attribute-based-mapping"></a>属性ベースの対応付け
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] マップを SQL Server データベース、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]いずれかの属性の適用、または外部マッピング ファイルを使用してオブジェクト モデルです。 このトピックでは、属性ベースの方法について説明します。  
   
  大部分の基本フォームでは、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、データベースと <xref:System.Data.Linq.DataContext>、テーブルとクラス、列およびリレーションシップとそのクラスのプロパティを、それぞれ対応付けています。 属性を使用して、オブジェクト モデル内の継承階層を対応付けることもできます。 詳細については、「[方法 :Visual Basic でオブジェクト モデルを生成またはC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)します。  
   
- 通常 Visual Studio を使用している開発者を使用して属性ベースの対応付けを実行、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]します。 また、SQLMetal コマンド ライン ツールを使用したり、自分で属性をハンド コードしたりすることもできます。 詳細については、「[方法 :Visual Basic でオブジェクト モデルを生成またはC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)します。  
+ 通常 Visual Studio を使用している開発者は、オブジェクト リレーショナル デザイナーを使用して属性ベースの対応付けを実行します。 また、SQLMetal コマンド ライン ツールを使用したり、自分で属性をハンド コードしたりすることもできます。 詳細については、「[方法 :Visual Basic でオブジェクト モデルを生成またはC#](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)します。  
   
 > [!NOTE]
 >  外部 XML ファイルを使用して対応付けることもできます。 詳細については、次を参照してください。[外部マッピング](../../../../../../docs/framework/data/adonet/sql/linq/external-mapping.md)します。  

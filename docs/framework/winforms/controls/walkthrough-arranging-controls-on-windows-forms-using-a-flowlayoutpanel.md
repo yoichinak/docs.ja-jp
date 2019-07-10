@@ -7,12 +7,12 @@ helpviewer_keywords:
 - controls [Windows Forms], arranging with FlowLayoutPanel
 - layout [Windows Forms], walkthroughs
 ms.assetid: a1744323-0316-49c2-992e-ebfc0a976b85
-ms.openlocfilehash: 8cfcdf8595733434cc56c621428c31238dd166dc
-ms.sourcegitcommit: 0d0a6e96737dfe24d3257b7c94f25d9500f383ea
+ms.openlocfilehash: c9ee615a610c383c97b5d4f0de195cfc7422d3ec
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65211167"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771662"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-a-flowlayoutpanel"></a>チュートリアル: FlowLayoutPanel を使用した Windows フォーム上のコントロールの配置
 
@@ -55,7 +55,7 @@ ms.locfileid: "65211167"
 
  <xref:System.Windows.Forms.FlowLayoutPanel> コントロールでは、親フォームの寸法の変更に応じて、子コントロールのサイズやフローを変更できます。
 
-#### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>FlowLayoutPanel を使用してコントロールを水平方向または垂直方向に配置するには
+### <a name="to-arrange-controls-horizontally-and-vertically-using-a-flowlayoutpanel"></a>FlowLayoutPanel を使用してコントロールを水平方向または垂直方向に配置するには
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。
 
@@ -76,7 +76,7 @@ ms.locfileid: "65211167"
 ## <a name="changing-flow-direction"></a>フロー方向の変更
  <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> プロパティを使用すると、コントロールの配置方向を変更できます。 子コントロールは左から右、右から左、上から下、または下から上に配置できます。
 
-#### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>FlowLayoutPanel のフロー方向を変更するには
+### <a name="to-change-the-flow-direction-in-a-flowlayoutpanel"></a>FlowLayoutPanel のフロー方向を変更するには
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> コントロールの <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> プロパティの値を <xref:System.Windows.Forms.FlowDirection.TopDown>に変更します。 コントロールの高さに応じて、子コントロールが 1 つ以上の列に再配置されることにご注意ください。
 
@@ -85,7 +85,7 @@ ms.locfileid: "65211167"
 ## <a name="inserting-flow-breaks"></a>フロー中断の挿入
  <xref:System.Windows.Forms.FlowLayoutPanel> コントロールでは、その子コントロールに FlowBreak プロパティを指定できます。 FlowBreak プロパティの値を `true` に設定することで、 <xref:System.Windows.Forms.FlowLayoutPanel> コントロールを現在のフロー方向のコントロールにレイアウトすること、および次の行または列にラップすることを停止します。
 
-#### <a name="to-insert-flow-breaks"></a>フロー中断を挿入するには
+### <a name="to-insert-flow-breaks"></a>フロー中断を挿入するには
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> コントロールの <xref:System.Windows.Forms.FlowLayoutPanel.FlowDirection%2A> プロパティの値を <xref:System.Windows.Forms.FlowDirection.TopDown>に変更します。
 
@@ -96,7 +96,7 @@ ms.locfileid: "65211167"
 ## <a name="positioning-controls-using-docking-and-anchoring"></a>ドッキングと固定を使用したコントロールの配置
  子コントロールのドッキング動作と固定動作は、他のコンテナー コントロールの動作と異なります。 ドッキングも固定も、フロー方向で最も大きいコントロールを基準として機能します。
 
-#### <a name="to-position-controls-using-docking-and-anchoring"></a>ドッキングと固定を使用してコントロールを配置するには
+### <a name="to-position-controls-using-docking-and-anchoring"></a>ドッキングと固定を使用してコントロールを配置するには
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> コントロールがすべて 1 列に配置されるまで、 <xref:System.Windows.Forms.Button> のサイズを拡大します。
 
@@ -115,7 +115,7 @@ ms.locfileid: "65211167"
 
  <xref:System.Windows.Forms.Control.Margin%2A> プロパティでは、コントロール間の間隔を制御できます。
 
-#### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Padding プロパティと Margin プロパティを使用してコントロールを配置するには
+### <a name="to-arrange-controls-using-the-padding-and-margin-properties"></a>Padding プロパティと Margin プロパティを使用してコントロールを配置するには
 
 1. <xref:System.Windows.Forms.FlowLayoutPanel> コントロールの <xref:System.Windows.Forms.Control.Dock%2A> プロパティの値を <xref:System.Windows.Forms.DockStyle.Fill>に変更します。 フォームの大きさが十分にある場合、 <xref:System.Windows.Forms.Button> コントロールは <xref:System.Windows.Forms.FlowLayoutPanel> コントロールの最初の列に移動します。
 
@@ -126,7 +126,7 @@ ms.locfileid: "65211167"
 ## <a name="inserting-controls-by-double-clicking-them-in-the-toolbox"></a>ツールボックスでのダブルクリックによるコントロールの挿入
  <xref:System.Windows.Forms.FlowLayoutPanel> ツールボックス **でコントロールをダブルクリックすると、** コントロールに内容を挿入できます。
 
-#### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>ツールボックスでダブルクリックしてコントロールを挿入するには
+### <a name="to-insert-controls-by-double-clicking-in-the-toolbox"></a>ツールボックスでダブルクリックしてコントロールを挿入するには
 
 1. <xref:System.Windows.Forms.Button> ツールボックス **の**コントロール アイコンをダブルクリックします。 新しい <xref:System.Windows.Forms.Button> コントロールが <xref:System.Windows.Forms.FlowLayoutPanel> コントロールに表示されることにご注意ください。
 
@@ -135,7 +135,7 @@ ms.locfileid: "65211167"
 ## <a name="inserting-a-control-by-drawing-its-outline"></a>アウトラインの描画によるコントロールの挿入
  セルにアウトラインを描画すると、コントロールを <xref:System.Windows.Forms.FlowLayoutPanel> コントロールに挿入し、サイズを指定できます。
 
-#### <a name="to-insert-a-control-by-drawing-its-outline"></a>アウトラインを描画してコントロールを挿入するには
+### <a name="to-insert-a-control-by-drawing-its-outline"></a>アウトラインを描画してコントロールを挿入するには
 
 1. **ツールボックス**で <xref:System.Windows.Forms.Button> コントロール アイコンをクリックします。 フォームにドラッグしないでください。
 
@@ -148,7 +148,7 @@ ms.locfileid: "65211167"
 ## <a name="inserting-controls-using-the-insertion-bar"></a>挿入バーを使用したコントロールの挿入
  <xref:System.Windows.Forms.FlowLayoutPanel> コントロールの特定の位置にコントロールを挿入できます。 <xref:System.Windows.Forms.FlowLayoutPanel> コントロールのクライアント領域にコントロールをドラッグすると、コントロールの挿入位置を示す挿入バーが表示されます。
 
-#### <a name="to-insert-a-control-using-the-caret"></a>キャレットを使用してコントロールを挿入するには
+### <a name="to-insert-a-control-using-the-caret"></a>キャレットを使用してコントロールを挿入するには
 
 1. <xref:System.Windows.Forms.Button> ツールボックス **から** コントロールを <xref:System.Windows.Forms.FlowLayoutPanel> コントロールにドラッグし、2 つの <xref:System.Windows.Forms.Button> コントロールの間の領域をポイントします。 挿入バーが描画されますか、位置を示す、<xref:System.Windows.Forms.Button>にドロップしたときに配置されますが、<xref:System.Windows.Forms.FlowLayoutPanel>コントロール。 新しい <xref:System.Windows.Forms.Button> コントロールを <xref:System.Windows.Forms.FlowLayoutPanel> コントロールにドロップする前に、マウス ポインターを移動して、挿入バーがどのように移動するかを確認します。
 
@@ -157,7 +157,7 @@ ms.locfileid: "65211167"
 ## <a name="reassigning-existing-controls-to-a-different-parent"></a>別の親コントロールへの既存コントロールの再割り当て
  フォームに存在するコントロールを新しい <xref:System.Windows.Forms.FlowLayoutPanel> コントロールに割り当てることができます。
 
-#### <a name="to-reparent-existing-controls"></a>既存のコントロールの親を変更するには
+### <a name="to-reparent-existing-controls"></a>既存のコントロールの親を変更するには
 
 1. <xref:System.Windows.Forms.Button> ツールボックス **から 3 つの** コントロールをフォームにドラッグします。 これらを互いに近づけて配置しますが、整列はさせません。
 

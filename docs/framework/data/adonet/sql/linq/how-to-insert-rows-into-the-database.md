@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 44d99680-69c7-4879-a732-f6771b334211
-ms.openlocfilehash: cb2319d51e0518114a04eea2fc7ab6b5a836b7ff
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: cb62522a951afd3a7159114d3b6575f1d83278bc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61903072"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743318"
 ---
 # <a name="how-to-insert-rows-into-the-database"></a>方法: 行をデータベースに挿入する
 関連付けられているオブジェクトを追加することで、データベースに行を挿入する[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]<xref:System.Data.Linq.Table%601>コレクションとし、データベースへの変更を送信します。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 適切な SQL に変更を変換`INSERT`コマンド。  
@@ -18,7 +18,7 @@ ms.locfileid: "61903072"
 > [!NOTE]
 >  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] の `Insert`、`Update`、および `Delete` の既定のデータベース操作メソッドはオーバーライドできます。 詳細については、次を参照してください。[のカスタマイズを挿入、更新、および削除を行う](../../../../../../docs/framework/data/adonet/sql/linq/customizing-insert-update-and-delete-operations.md)します。  
 >   
->  Visual Studio を使用して開発者が使用できる、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]同じ目的のストアド プロシージャを開発します。  
+>  Visual Studio を使用している開発者は、オブジェクト リレーショナル デザイナーを使用して、同じ目的のストアド プロシージャを開発します。  
   
  以下の手順では、有効な <xref:System.Data.Linq.DataContext> で Northwind データベースに接続されるものと想定しています。 詳細については、「[方法 :データベースに接続する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-connect-to-a-database.md)します。  
   

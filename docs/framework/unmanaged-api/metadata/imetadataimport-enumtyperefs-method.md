@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: de0fe4a51fbb49e80377b6b434bf3b72ddb90f02
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f6af4c1d6eb9c305358573b06da164e2344ff46e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753531"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774620"
 ---
 # <a name="imetadataimportenumtyperefs-method"></a>IMetaDataImport::EnumTypeRefs メソッド
 現在のメタデータ スコープに定義されている TypeRef トークンを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumTypeRefs (  
    [in, out] HCORENUM    *phEnum,   
    [out] mdTypeRef       rTypeRefs[],  
@@ -62,7 +62,7 @@ HRESULT EnumTypeRefs (
  TypeRef トークンは、型への参照を表します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

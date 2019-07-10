@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: f0707351d28ef75083b7bfb6ded38bc2a8460131
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3a305835651867a533e17f1c5c3b85b16975c3b1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61597584"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745385"
 ---
 # <a name="icorprofilercallbackclassunloadstarted-method"></a>ICorProfilerCallback::ClassUnloadStarted メソッド
 クラスがアンロードされることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ClassUnloadStarted(  
     [in] ClassID classId);  
 ```  
@@ -42,7 +42,7 @@ HRESULT ClassUnloadStarted(
  値`classId`は後の情報の要求は無効です、`ClassUnloadStarted`メソッドを返します。-これは、プロファイラーの最後のチャンスをこのクラスについての情報を取得します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

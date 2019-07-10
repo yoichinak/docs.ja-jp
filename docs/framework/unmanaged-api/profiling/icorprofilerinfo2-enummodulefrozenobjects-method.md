@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74517e034af6a1e4dfb8e4b28c2fec55a3d8de8b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3e044a9dedf96025981c1a77471c6abedfc26420
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041159"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67762374"
 ---
 # <a name="icorprofilerinfo2enummodulefrozenobjects-method"></a>ICorProfilerInfo2::EnumModuleFrozenObjects メソッド
 指定したモジュールに固定されたオブジェクトに対して反復処理する列挙子を取得します。このメソッドは廃止されています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumModuleFrozenObjects(  
     [in] ModuleID moduleID,  
     [out] ICorProfilerObjectEnum** ppEnum);  
@@ -43,7 +43,7 @@ HRESULT EnumModuleFrozenObjects(
  [out]アドレスへのポインター、 [ICorProfilerObjectEnum](../../../../docs/framework/unmanaged-api/profiling/icorprofilerobjectenum-interface.md)インターフェイスでは、固定されたオブジェクトを列挙します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   
