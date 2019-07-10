@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 34d9e1a3747ecf3dffc925d7883599b773dd51f1
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 76f064d1683615ef8f665cf1facaa31d61b294a5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61638971"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67759598"
 ---
 # <a name="iclrpolicymanagersetactiononfailure-method"></a>ICLRPolicyManager::SetActionOnFailure メソッド
 共通言語ランタイム (CLR) が指定したエラーが発生したときに実行する必要がありますポリシーのアクションを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetActionOnFailure (  
     [in] EClrFailure   failure,  
     [in] EPolicyAction action  
@@ -63,16 +63,16 @@ HRESULT SetActionOnFailure (
 |`eNoAction`|x|x||||N/A||  
 |eThrowException|x|x||||N/A||  
 |`eAbortThread`|x|x||||N/A|x|  
-|`eRudeAbortThread`|x|x||||N/A|x|  
-|`eUnloadAppDomain`|x|x||x||N/A|x|  
-|`eRudeUnloadAppDomain`|x|x||x|x|N/A|x|  
-|`eExitProcess`|x|x||x|x|N/A|x|  
-|eFastExitProcess|x|x||x|x|N/A||  
-|`eRudeExitProcess`|x|x|x|x|x|N/A||  
-|`eDisableRuntime`|x|x|x|x|x|N/A||  
+|`eRudeAbortThread`|X|x||||N/A|x|  
+|`eUnloadAppDomain`|X|X||x||N/A|x|  
+|`eRudeUnloadAppDomain`|X|X||X|x|N/A|x|  
+|`eExitProcess`|X|X||X|x|N/A|x|  
+|eFastExitProcess|x|X||X|x|N/A||  
+|`eRudeExitProcess`|x|X|X|X|x|N/A||  
+|`eDisableRuntime`|x|X|X|X|x|N/A||  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

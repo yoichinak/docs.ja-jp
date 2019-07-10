@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: adc270be51988cba78c6e522b16b480baef725c4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9a33f71ef2e0b19a33255f3745ac4d5a84cdf4ad
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61943514"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749740"
 ---
 # <a name="ihosttaskmanagercallneedshosthook-method"></a>IHostTaskManager::CallNeedsHostHook メソッド
 共通言語ランタイム (CLR) が指定された非管理対象の関数呼び出しをインラインにできるかどうかを指定するホストを有効にします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CallNeedsHostHook (  
     [in]  SIZE_T target,   
     [out] BOOL   *pbCallNeedsHostHook  
@@ -60,7 +60,7 @@ HRESULT CallNeedsHostHook (
  通常、ホストは要求フックを浮動小数点の状態を調整する必要がありますが、または呼び出しが、ホストがランタイムのメモリまたは取得されたロックの要求を追跡できない状態を入力することの通知を受信するとします。 ホストは、呼び出しをフックする必要がある場合、ランタイムを呼び出しを使用してとマネージ コードの間の遷移のホストに通知[EnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-enterruntime-method.md)、 [LeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-leaveruntime-method.md)、 [ReverseEnterRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseenterruntime-method.md)、および[ReverseLeaveRuntime](../../../../docs/framework/unmanaged-api/hosting/ihosttaskmanager-reverseleaveruntime-method.md)します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

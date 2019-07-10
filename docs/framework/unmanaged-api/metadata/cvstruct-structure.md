@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4a5f06b3f79fed5dac5a6f07650e4fabd0aa5867
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b3e35cea4601c8e51eb3021dc9f598ddb881afe0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905633"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750723"
 ---
 # <a name="cvstruct-structure"></a>CVStruct 構造体
 モジュールまたは複合イメージをインストールするときに使用する情報が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct {  
     short Major;  
     short Minor;  
@@ -44,10 +44,10 @@ typedef struct {
 |Major|ビルド番号のメジャー バージョンです。|  
 |マイナー|ビルド番号のマイナー バージョンです。|  
 |Sub|サブ ビルド番号です。|  
-|ビルド|ビルド番号です。|  
+|Build|ビルド番号です。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

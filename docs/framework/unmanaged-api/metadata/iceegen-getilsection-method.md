@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1cff5b7fadf4345b7a1d09911dc7061adc925e7a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8bddb782e13b4e7400c7e4a8128dc333efc8141d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992616"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67746184"
 ---
 # <a name="iceegengetilsection-method"></a>ICeeGen::GetIlSection メソッド
 指定したハンドルによって参照される基本の中間言語コードのセクションを取得します。  
@@ -31,7 +31,7 @@ ms.locfileid: "61992616"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetIlSection (  
     [in] HCEESECTION  *section  
 );  
@@ -42,7 +42,7 @@ HRESULT GetIlSection (
  [in]取得するセクションへのハンドル。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

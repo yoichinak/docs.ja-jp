@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0cf1bfa03fd14d6324af60781003a8072a267a7e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3d8189365a73e85c0b9f5efb2aa03074385a3fb8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62045059"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67750745"
 ---
 # <a name="couninitiee-enumeration"></a>COUNINITIEE 列挙型
 使用される定数を指定します[CoUninitializeEE](../../../../docs/framework/unmanaged-api/hosting/couninitializeee-function.md)共通言語ランタイムを初期化するときにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum tagCOUNINITEE  
 {  
     COUNINITEE_DEFAULT  = 0x0,   
@@ -44,7 +44,7 @@ typedef enum tagCOUNINITEE
 |`COUNINITEE_DLL`|アセンブリをアンロードするための初期化解除モードを示します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 252ed666-0679-4eea-b71b-2f14117ef443
-ms.openlocfilehash: 68d4215129cf4481beb2d8561c1569b3049a287e
-ms.sourcegitcommit: eaa6d5cd0f4e7189dbe0bd756e9f53508b01989e
+ms.openlocfilehash: 07801ee7bfbb32540880cdc8599e5b69797b09f9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/07/2019
-ms.locfileid: "67610584"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743542"
 ---
 # <a name="frequently-asked-questions"></a>よく寄せられる質問
 ここでは、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] を実装するときに発生する可能性のある一般的な問題の対処法について説明します。  
@@ -53,7 +53,7 @@ ms.locfileid: "67610584"
  A: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] には、生成された SQL コードを調べるためのツールがいくつか用意されています。 このうち、最も重要なものは <xref:System.Data.Linq.DataContext.Log%2A> です。 詳細については、次を参照してください。[デバッグ サポート](../../../../../../docs/framework/data/adonet/sql/linq/debugging-support.md)します。  
   
 ## <a name="unexpected-stored-procedure-results"></a>予期しないストアド プロシージャ結果  
- Q. 戻り値が `MAX()` によって計算されるストアド プロシージャがあります。 このストアド プロシージャを [!INCLUDE[vs_ordesigner_short](../../../../../../includes/vs-ordesigner-short-md.md)] サーフェイスにドラッグすると、戻り値が正しくありません。  
+ Q. 戻り値が `MAX()` によって計算されるストアド プロシージャがあります。 ストアド プロシージャを O/R デザイナー画面にドラッグしたときに、戻り値が正しくありません。  
   
  A: [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] には、ストアド プロシージャを介して、データベースによって生成される値を返す方法が 2 つあります。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "67610584"
 ## <a name="multiple-dbml-files"></a>複数の DBML ファイル  
  Q. いくつかのテーブルを共有する複数の DBML ファイルが存在する場合は、コンパイラ エラーが発生します。  
   
- A: 設定、**コンテキスト Namespace**と**Entity Namespace**プロパティから、 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] DBML ファイルごとに個別の値にします。 この手法により、名前および名前空間の競合を防ぐことができます。  
+ A: 設定、**コンテキスト Namespace**と**Entity Namespace** DBML ファイルごとに個別の値に、オブジェクト リレーショナル デザイナーからのプロパティ。 この手法により、名前および名前空間の競合を防ぐことができます。  
   
 ## <a name="avoiding-explicit-setting-of-database-generated-values-on-insert-or-update"></a>挿入または更新で、データベース生成値を明示的に設定しなくても良いようにする  
  Q. あるデータベース テーブルに `DateCreated` という列があり、その既定値は SQL `Getdate()` です。 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] を使用して新しいレコードを挿入しようとすると、値が `NULL` に設定されます。 データベースの既定値が設定されるようにするには、どうしたらいいですか。  
@@ -134,10 +134,10 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 ## <a name="errors-using-sql-compact-35"></a>SQL Compact 3.5 の使用に関するエラー  
  Q. SQL Server Compact 3.5 データベースからテーブルをドラッグしたときにエラーが発生します。  
   
- A: [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] SQL Server Compact 3.5 をサポートされませんが、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ランタイムでいます。 この場合、独自のエンティティ クラスを作成して適切な属性を追加する必要があります。  
+ A: オブジェクト リレーショナル デザイナーが SQL Server Compact 3.5 をサポートしていませんが、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]ランタイムでいます。 この場合、独自のエンティティ クラスを作成して適切な属性を追加する必要があります。  
   
 ## <a name="errors-in-inheritance-relationships"></a>継承関係でのエラー  
- Q. [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]でツールボックスの継承図形を使って、2 つのエンティティを接続すると、エラーが発生します。  
+ Q. 2 つのエンティティを接続するオブジェクト リレーショナル デザイナーでツールボックスの継承図形を使用したが、エラーが発生します。  
   
  A: 関係を作成するだけでは不十分です。 識別子の列、基本クラスの識別子の値、派生クラスの識別子の値などの情報を提供する必要があります。  
   
@@ -163,7 +163,7 @@ dlo.LoadWith<Order>(o => o.OrderDetails);
 3. 既定の <xref:System.Data.Linq.Mapping.UpdateCheck> 値 (<xref:System.Data.Linq.Mapping.UpdateCheck.Never>) がアプリケーションにとって適切な値かどうかをレビューします。  
   
     > [!CAUTION]
-    >  使用する場合、 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Visual Studio で、変更を上書きする可能性があります。  
+    >  Visual Studio で、オブジェクト リレーショナル デザイナーを使用する場合、変更内容が上書き可能性があります。  
   
 ## <a name="aptca"></a>APTCA  
  Q. System.Data.Linq は、部分的に信頼されているコードが使用できるようにマークされていますか?  

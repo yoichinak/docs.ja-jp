@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 70d78942d4db2fea2cc1ccbcc5ddb20d743e9fdf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ce015713ca7ed26c97348aa39f8170a85c8aa93c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044922"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745922"
 ---
 # <a name="iceegengetstring-method"></a>ICeeGen::GetString メソッド
 指定された相対仮想アドレスに格納されている文字列を取得します。  
@@ -31,7 +31,7 @@ ms.locfileid: "62044922"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetString (  
     [in]  ULONG      RVA,   
     [out] LPWSTR     *lpString  
@@ -46,7 +46,7 @@ HRESULT GetString (
  [out]返される文字列。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

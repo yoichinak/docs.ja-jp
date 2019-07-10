@@ -18,24 +18,24 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 213ca658e7a84f03b15f97cf07aa1ed7cb39205b
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2e59ec88ea001640ba0dc3e923fa62a064a2d007
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61765337"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67752484"
 ---
 # <a name="shutdowndbgtransportmanager-function"></a>ShutdownDbgTransportManager 関数
 リモート ターゲット コンピューターへの接続のためにトランスポート マネージャーをシャットダウンします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void InitDbgTransportManager ();  
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
   

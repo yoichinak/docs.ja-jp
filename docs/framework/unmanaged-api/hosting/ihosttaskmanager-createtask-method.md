@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2eddb11ab56bae5243ea7d00614090bbfe774f71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0a154aeafed9bc4de63dea3fe7fc32e2daee7b96
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789449"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67749711"
 ---
 # <a name="ihosttaskmanagercreatetask-method"></a>IHostTaskManager::CreateTask メソッド
 ホストが新しいタスクを作成することを要求します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateTask (  
     [in]  DWORD stacksize,   
     [in]  LPTHREAD_START_ROUTINE pStartAddress,  
@@ -67,7 +67,7 @@ HRESULT CreateTask (
  CLR 呼び出し`CreateTask`ホストが新しいタスクを作成することを要求します。 ホストへのインターフェイス ポインターを返します、`IHostTask`インスタンス。 呼び出しによって起動された明示的になるまで、返されたタスクがする必要があります中断`IHostTask::Start`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   
