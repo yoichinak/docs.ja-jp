@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5006e171e2d5bbdd0d9d4a484299b1860c079b3f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66ce6ce322a0fb58f64d65501a33f58ad92bcd2e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789559"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764557"
 ---
 # <a name="ihostsyncmanagersetclrsyncmanager-method"></a>IHostSyncManager::SetCLRSyncManager メソッド
 セット、 [ICLRSyncManager](../../../../docs/framework/unmanaged-api/hosting/iclrsyncmanager-interface.md)インスタンスに現在関連付ける[IHostSyncManager](../../../../docs/framework/unmanaged-api/hosting/ihostsyncmanager-interface.md)インスタンス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetCLRSyncManager (  
     [in] ICLRSyncManager *pManager  
 );  
@@ -54,7 +54,7 @@ HRESULT SetCLRSyncManager (
  ホストと CLR の間の通信を容易にホスト インターフェイスは、通常のペアになっています。 ペアの 1 つのメンバーは、ホストによって実装され、その他のメンバーは、CLR によって実装されます。 ホスト側の実装として、`IHostSyncManager`インターフェイスに対応する、 `ICLRSyncManager` CLR によって実装されるインターフェイス。 CLR 呼び出し`SetCLRSyncManager`を指定する、`ICLRSyncManager`に関連付ける、現在のホスト インスタンス`IHostSyncManager`インスタンス。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

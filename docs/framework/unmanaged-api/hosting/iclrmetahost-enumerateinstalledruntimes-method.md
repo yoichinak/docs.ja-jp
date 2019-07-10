@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 09931dce7afdb7944cf9912b5146e44fda131935
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2b116a1f422daa20a2b51f0a5fc12d6065c2a01e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61993279"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779816"
 ---
 # <a name="iclrmetahostenumerateinstalledruntimes-method"></a>ICLRMetaHost::EnumerateInstalledRuntimes メソッド
 含む、有効な列挙体を返します[ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)コンピューターにインストールされている共通言語ランタイム (CLR) の各バージョン用のインターフェイス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateInstalledRuntimes (  
     [out, retval] IEnumUnknown **ppEnumerator);  
 ```  
@@ -47,7 +47,7 @@ HRESULT EnumerateInstalledRuntimes (
 |E_POINTER|`ppEnumerator` が null です。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

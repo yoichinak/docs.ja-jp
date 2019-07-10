@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d0845165e3200d7a5e14715cbe116ea5255aa021
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d70797d810d6dd2fe97c1f0f3b9c45a18fb2afba
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948773"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767553"
 ---
 # <a name="icordebugprocess5enumerategcreferences-method"></a>ICorDebugProcess5::EnumerateGCReferences メソッド
 プロセスでガベージ コレクトされるすべてのオブジェクトの列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateGCReferences(  
     [in] Bool enumerateWeakReferences,   
     [out] ICorDebugGCReferenceEnum **ppEnum  
@@ -47,7 +47,7 @@ HRESULT EnumerateGCReferences(
  このメソッドは、プロセス内の任意のマネージ オブジェクトのルートの完全なチェーンを決定する方法を提供し、オブジェクトがまだ有効な状態の理由を特定するために使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

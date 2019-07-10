@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e2dc1064656f3493db78d858cf1e86db0cb83d6c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 3c1b90390689e709ee131935bd6417fa6b273eb2
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782864"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769984"
 ---
 # <a name="icordebugregisterset2getregisters-method"></a>ICorDebugRegisterSet2::GetRegisters メソッド
 各レジスタの値を取得します (コードが現在実行されているプラットフォーム) の特定のビット マスクによって指定されています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetRegisters (  
     [in] ULONG32 maskCount,  
     [in, size_is(maskCount)] BYTE mask[],  
@@ -61,7 +61,7 @@ HRESULT GetRegisters (
  同様に、x86 などのプラットフォームでは、64 を超えるレジスタを持たない場合、`GetRegisters`メソッドは実際には、バイト、変換、`mask`のバイト配列、`ULONG64`号餧ェヒェマル、 [ICorDebugRegisterSet:。GetRegisters](../../../../docs/framework/unmanaged-api/debugging/icordebugregisterset-getregisters-method.md)メソッド、`ULONG64`マスク。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 490af9ca67b538e0093115a6b371b65d9788772f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0e1a2358590b95b39b6495b74078f079c5b34876
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61641366"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765678"
 ---
 # <a name="iclrruntimehostunloadappdomain-method"></a>ICLRRuntimeHost::UnloadAppDomain メソッド
 マネージ アンロード<xref:System.AppDomain>指定した数値識別子に対応します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT UnloadAppDomain(  
     [in] DWORD dwAppDomainId  
     [in] BOOL  fWaitUntilDone  
@@ -58,7 +58,7 @@ HRESULT UnloadAppDomain(
  呼び出すことによって、現在のスレッドを実行しているアプリケーション ドメインの数値識別子を取得する[GetCurrentAppDomainId](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-getcurrentappdomainid-method.md)します。 この識別子に対応する、<xref:System.AppDomain.Id%2A>マネージ プロパティ<xref:System.AppDomain>型。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

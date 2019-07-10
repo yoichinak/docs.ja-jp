@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 48055103b49b4c61bb7561f2d4aa6c8daae07ae2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba35cd678d88389854ca2e866020ea3a9364c923
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62044214"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777667"
 ---
 # <a name="imetadataemitdefineevent-method"></a>IMetaDataEmit::DefineEvent メソッド
 指定したメタデータ シグネチャを持つイベントの定義を作成し、そのイベント定義トークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineEvent (   
     [in]  mdTypeDef    td,   
     [in]  LPCWSTR      szEvent,   
@@ -72,7 +72,7 @@ HRESULT DefineEvent (
  [out]イベントに割り当てられているメタデータ トークンです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

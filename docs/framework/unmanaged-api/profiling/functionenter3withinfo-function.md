@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 1ec24952b91f5d959c1ac0bb50e2bbe4b94002b3
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: cf16563e6d5fef3a743e802166173004a857dd0e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586805"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745835"
 ---
 # <a name="functionenter3withinfo-function"></a>FunctionEnter3WithInfo 関数
 コントロールが、関数に渡されることをプロファイラーに通知しに渡すことができるハンドルを提供します、 [icorprofilerinfo 3::getfunctionenter3info メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctionenter3info-method.md)スタック フレームと関数の引数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void __stdcall FunctionEnter3WithInfo(  
                [in] FunctionIDOrClientID functionIDOrClientID,  
                [in] COR_PRF_ELT_INFO eltInfo);  
@@ -57,7 +57,7 @@ void __stdcall FunctionEnter3WithInfo(
  `FunctionEnter3WithInfo`関数がマネージ コードを呼び出していない、または何らかの方法でマネージ メモリの割り当てが発生する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   

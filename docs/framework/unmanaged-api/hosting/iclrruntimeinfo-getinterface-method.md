@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2f229e421cc69f2ff45110233c4c6c36d7a1fc4c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4244ef04d6789b7c17ccc8330cb0c26a6c9f3866
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771762"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67765550"
 ---
 # <a name="iclrruntimeinfogetinterface-method"></a>ICLRRuntimeInfo::GetInterface メソッド
 現在のプロセスに CLR をロードし、ランタイム、インターフェイス ポインターをなど返します[ICLRRuntimeHost](../../../../docs/framework/unmanaged-api/hosting/iclrruntimehost-interface.md)、 [ICLRStrongName](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-interface.md)、および[IMetaDataDispenserEx](../../../../docs/framework/unmanaged-api/metadata/imetadatadispenser-interface.md)します。  
@@ -31,7 +31,7 @@ ms.locfileid: "61771762"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetInterface(  
 [in]  REFCLSID rclsid,  
 [in]  REFIID   riid,  
@@ -75,7 +75,7 @@ HRESULT GetInterface(
 |CLSID_CLRStrongName|IID_ICLRStrongName|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

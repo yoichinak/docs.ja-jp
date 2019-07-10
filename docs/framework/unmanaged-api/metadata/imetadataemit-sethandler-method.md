@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ac0e5db4a87b49d631bad4411f03fae8c1199aea
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d50198cc6156d5bec8b8302a4624b0b7411a9c2d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62050026"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67751092"
 ---
 # <a name="imetadataemitsethandler-method"></a>IMetaDataEmit::SetHandler メソッド
 指定したによって参照されるメソッドを設定`IUnknown`トークンを再マップの通知コールバックとしてのポインター。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetHandler (   
     [in]  IUnknown    *pUnk  
 );  
@@ -45,7 +45,7 @@ HRESULT SetHandler (
  を介して、コールバック メソッドが提供されていない場合`SetHandler`、最適化は実行されませんで保存さまざまなインポートを除くスコープがマージされたを使用して`IMapToken`でスコープごとにマージします。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

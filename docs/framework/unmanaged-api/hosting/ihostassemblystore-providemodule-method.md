@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e07e2c3f2c6000f5a081b13316c269f322b1ef8a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9290fd70b17b5a6456d85cb4b037ebbc62e028f8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599349"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763979"
 ---
 # <a name="ihostassemblystoreprovidemodule-method"></a>IHostAssemblyStore::ProvideModule メソッド
 アセンブリまたは、リンクされた (ただし、埋め込まれたされません) 内のモジュールのリソース ファイルを解決します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ProvideModule (  
     [in]  ModuleBindInfo *pBindInfo,  
     [out] DWORD          *pdwModuleId,  
@@ -68,7 +68,7 @@ HRESULT ProvideModule (
  Id 値が返される`pdwModuleId`ホストによって指定されます。 識別子は、プロセスの有効期間内で一意である必要があります。 CLR では、関連付けられているストリームの一意識別子としてこの値を使用します。 値に対して各値をチェック`pAssemblyId`への呼び出しによって返される[ProvideAssembly](../../../../docs/framework/unmanaged-api/hosting/ihostassemblystore-provideassembly-method.md)の値に対して、`pdwModuleId`するその他の呼び出しによって返される`ProvideModule`します。 別のホストが同じ識別子の値を返す場合`IStream`CLR は、そのストリームの内容が既にマップされているかどうかを確認します。 そうである場合、CLR は、新しいものをマップする代わりに、イメージの既存のコピーを読み込みます。 そのため、識別子も重複してはなりませんから返されたアセンブリ識別子を持つ`ProvideAssembly`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

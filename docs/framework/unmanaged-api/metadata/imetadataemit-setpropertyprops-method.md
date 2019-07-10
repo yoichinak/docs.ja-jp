@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: fdee8491b22675fb8dd8fa89e77ebf8541185173
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9e78c4d7319a931ca7090d6f99651bc9660e4af8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62043746"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782050"
 ---
 # <a name="imetadataemitsetpropertyprops-method"></a>IMetaDataEmit::SetPropertyProps メソッド
 前回の呼び出しによって定義されるプロパティのメタデータに格納されている機能の設定[DefineProperty メソッド](../../../../docs/framework/unmanaged-api/metadata/imetadataemit-defineproperty-method.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetPropertyProps (   
     [in]  mdProperty      pr,   
     [in]  DWORD           dwPropFlags,   
@@ -68,7 +68,7 @@ HRESULT SetPropertyProps (
  [in]プロパティに関連付けられているその他のメソッドの配列。 この配列を`mdTokenNil`トークンです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

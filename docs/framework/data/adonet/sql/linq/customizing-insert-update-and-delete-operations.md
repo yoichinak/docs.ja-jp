@@ -2,18 +2,18 @@
 title: 挿入、更新、および削除の各操作のカスタマイズ
 ms.date: 03/30/2017
 ms.assetid: 07eef055-8f6c-414d-850e-d323ff946cd0
-ms.openlocfilehash: b4578a030300872bf4e0bab30b8daf12544be0cf
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 114447fd45806e567b4fde8e9e74138c096bff07
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032774"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743573"
 ---
 # <a name="customizing-insert-update-and-delete-operations"></a>挿入、更新、および削除の各操作のカスタマイズ
 既定で、[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、挿入、読み取り、更新、および削除の各操作を実装する動的な SQL を生成します。 ただし、実際の使用では、業務ニーズに合わせてアプリケーションをカスタマイズすることが多くなります。  
   
 > [!NOTE]
->  Visual Studio を使用している場合を使用できます、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]挿入をカスタマイズするには、更新、およびアクションを削除します。  
+>  [挿入] をカスタマイズするオブジェクト リレーショナル デザイナーを使用するには Visual Studio を使用している場合、更新、および削除操作です。  
   
  ここでは、挿入、読み取り、更新、および削除の各操作をアプリケーションでカスタマイズするために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] に用意されている手段について説明します。  
   

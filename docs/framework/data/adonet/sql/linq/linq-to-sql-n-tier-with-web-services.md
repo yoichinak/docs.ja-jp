@@ -2,18 +2,18 @@
 title: Web サービスを使用した LINQ to SQL N 層
 ms.date: 03/30/2017
 ms.assetid: 9cb10eb8-957f-4beb-a271-5f682016fed2
-ms.openlocfilehash: 7b13a0cd77925423a12c093b1b5ac9b63ad7e019
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4fafaa60dd75def98b486e18faa5bd3ecd1d6315
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62033536"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743051"
 ---
 # <a name="linq-to-sql-n-tier-with-web-services"></a>Web サービスを使用した LINQ to SQL N 層
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] 特に、中間層 Web サービスなどの疎結合のデータ アクセス層 (DAL) で使用される設計されています。 プレゼンテーション層が ASP.NET Web ページである場合、中間層の <xref:System.Web.UI.WebControls.LinqDataSource> とユーザー インターフェイスとのデータ転送を管理するために [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] Web サーバー コントロールを使用します。 プレゼンテーション層が ASP.NET ページでない場合には、中間層とプレゼンテーション層の両方で、データのシリアル化と逆シリアル化を管理するための追加の操作を行う必要があります。  
   
 ## <a name="setting-up-linq-to-sql-on-the-middle-tier"></a>中間層での LINQ to SQL のセットアップ  
- Web サービスまたは n 層アプリケーションでは、中間層にデータ コンテキストおよびエンティティのクラスが含まれます。 これらのクラスは手動で作成できます。または、他の箇所で説明されているように、SQLMetal.exe または[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]を使用して作成することもできます。 オプションとして、デザイン時にエンティティ クラスをシリアル化可能にすることができます。 詳細については、「[方法 :エンティティをシリアル化できるように](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)します。 別のオプションとして、シリアル化対象のデータをカプセル化するクラスから成る別のセットを作成して、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] クエリ内でデータを返すときにシリアル化可能な型に射影することもできます。  
+ Web サービスまたは n 層アプリケーションでは、中間層にデータ コンテキストおよびエンティティのクラスが含まれます。 手動、またはドキュメントで説明するように、SQLMetal.exe またはオブジェクト リレーショナル デザイナーを使用して、これらのクラスを作成できます。 オプションとして、デザイン時にエンティティ クラスをシリアル化可能にすることができます。 詳細については、「[方法 :エンティティをシリアル化できるように](../../../../../../docs/framework/data/adonet/sql/linq/how-to-make-entities-serializable.md)します。 別のオプションとして、シリアル化対象のデータをカプセル化するクラスから成る別のセットを作成して、[!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] クエリ内でデータを返すときにシリアル化可能な型に射影することもできます。  
   
  その後、データの取得、挿入、更新のためにクライアントが呼び出すメソッドを持つインターフェイスを定義します。 これらのインターフェイス メソッドは [!INCLUDE[vbteclinq](../../../../../../includes/vbteclinq-md.md)] クエリをラップします。 任意のシリアル化技法を使って、リモート メソッド呼び出しとデータのシリアル化を扱うことができます。 唯一の要件として、たとえば標準の Northwind オブジェクト モデルにおける Customers と Orders のように、循環型または双方向のリレーションシップがオブジェクト モデルに存在する場合は、それをサポートするシリアライザーを使用する必要があります。 Windows Communication Foundation (WCF) の <xref:System.Runtime.Serialization.DataContractSerializer> は双方向リレーションシップをサポートしますが、WCF 以外の Web サービスで使用される XmlSerializer はこれをサポートしません。 XmlSerializer の使用を選択する場合には、オブジェクト モデルに循環型リレーションシップが存在しないことを確認する必要があります。  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3055ac73f15329015f532f42c1f922eab38828cb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 4015ecec38466650488a653641f5af93c4680f22
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490306"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779591"
 ---
 # <a name="getversionfromprocess-function"></a>GetVersionFromProcess 関数
 指定されたプロセスのハンドルに関連付けられている共通言語ランタイム (CLR) のバージョン番号を取得します。  
@@ -31,7 +31,7 @@ ms.locfileid: "66490306"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetVersionFromProcess (  
     [in]  HANDLE  hProcess,   
     [out] LPWSTR  pVersion,   
@@ -59,7 +59,7 @@ HRESULT GetVersionFromProcess (
 |リターン コード|説明|  
 |-----------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
-|E_INVALIDARG|`pVersion` null と`cchBuffer`が null でないまたはその逆です。<br /><br /> - または -<br /><br /> `hProcess` プロセスに有効なハンドルではありません。<br /><br /> - または -<br /><br /> CLR は読み込まれません。|  
+|E_INVALIDARG|`pVersion` null と`cchBuffer`が null でないまたはその逆です。<br /><br /> \- または -<br /><br /> `hProcess` プロセスに有効なハンドルではありません。<br /><br /> \- または -<br /><br /> CLR は読み込まれません。|  
 |ERROR_INSUFFICIENT_BUFFER|`cchBuffer` null か、バージョン文字列の長さよりも小さい。|  
 |E_NOTIMPL|このメソッドは、Microsoft Windows 95、Microsoft Windows 98、または Microsoft Windows Millennium Edition オペレーティング システムでご利用いただけません。|  
   

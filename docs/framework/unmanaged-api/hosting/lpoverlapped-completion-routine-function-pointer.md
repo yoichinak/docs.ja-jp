@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 59565b28991f6d61ff2c6c77540eace92461aa89
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: dcf63000de549b42d92ba157a7e550ac605bbfcd
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490169"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768381"
 ---
 # <a name="lpoverlappedcompletionroutine-function-pointer"></a>LPOVERLAPPED_COMPLETION_ROUTINE 関数ポインター
 デバイスに対する重複 I/O (非同期 I/O) が完了したときに、ホストに通知する関数を指します。  
@@ -30,7 +30,7 @@ ms.locfileid: "66490169"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef VOID (*LPOVERLAPPED_COMPLETION_ROUTINE) (  
     [in] DWORD  dwErrorCode,  
     [in] DWORD  dwNumberOfBytesTransfered,  

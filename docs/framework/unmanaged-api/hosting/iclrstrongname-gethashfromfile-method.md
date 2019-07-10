@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f410e38d846969bbd23ff5b0a6751a5202088254
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87cdf61cfcd0aee661edf9e7d0c053c858f9d854
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771528"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748184"
 ---
 # <a name="iclrstrongnamegethashfromfile-method"></a>ICLRStrongName::GetHashFromFile メソッド
 指定したファイルの内容に対してハッシュが生成されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetHashFromFile (  
     [in]  LPCSTR   szFilePath,  
     [in, out] unsigned int   *piHashAlg,   
@@ -62,7 +62,7 @@ HRESULT GetHashFromFile (
  このメソッドは同じ、 [iclrstrongname::gethashfromfilew](../../../../docs/framework/unmanaged-api/hosting/iclrstrongname-gethashfromfilew-method.md)メソッド、名前を指定する点を除いては Unicode ではなく ANSI です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

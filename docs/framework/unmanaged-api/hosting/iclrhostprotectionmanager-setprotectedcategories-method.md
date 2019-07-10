@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 63b6e85b6abe20e9e1f0b00648a06a31735e63c7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f6dc1254261197583f2369587a61b5e179d760b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61944639"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779643"
 ---
 # <a name="iclrhostprotectionmanagersetprotectedcategories-method"></a>ICLRHostProtectionManager::SetProtectedCategories メソッド
 部分的に信頼されたコードで実行されているを禁止するマネージ型とメンバーのカテゴリを指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetProtectedCategories (  
     [in] EApiCategories  categories  
 );  
@@ -54,7 +54,7 @@ HRESULT SetProtectedCategories (
  各`EApiCategories`値はマネージ型とメンバーの一覧を示します。 `EApiCategories`列挙と`SetProtectedCategories`メソッドは直接関係をマネージ<xref:System.Security.Permissions.HostProtectionAttribute>を記載したカテゴリに対応する機能を公開するマネージ型とメンバーをマークするために使用するクラスを`EApiCategories`します。 詳細については、次を参照してください。<xref:System.Security.Permissions.HostProtectionAttribute>と<xref:System.Security.Permissions.HostProtectionResource>に直接対応する列挙体`EApiCategories`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b1ea34c187de99d23b05b5e1a30c53bc54a6c0c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: debb704900d852df1d66c7bac65ab385e0d72ec5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61782799"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769945"
 ---
 # <a name="icordebugregistersetsetthreadcontext-method"></a>ICorDebugRegisterSet::SetThreadContext メソッド
 `SetThreadContext` .NET Framework version 2.0 では実装されていません。 このメソッドを呼び出さないでください。  
@@ -32,7 +32,7 @@ ms.locfileid: "61782799"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetThreadContext (  
     [in] ULONG32 contextSize,  
     [in, length_is(contextSize),  
@@ -41,7 +41,7 @@ HRESULT SetThreadContext (
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

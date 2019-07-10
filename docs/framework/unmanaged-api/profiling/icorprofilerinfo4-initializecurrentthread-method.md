@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 9fd0900e61c57d105439d83430284dc8634d2a1e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: abcbfaf803e930baaaf798986a585a7da5f9134d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62000507"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780796"
 ---
 # <a name="icorprofilerinfo4initializecurrentthread-method"></a>ICorProfilerInfo4::InitializeCurrentThread メソッド
 後続のプロファイラー API は、デッドロックを回避するため、同じスレッドで呼び出しの前に、現在のスレッドを初期化します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT InitializeCurrentThread ();  
 ```  
   
@@ -40,7 +40,7 @@ HRESULT InitializeCurrentThread ();
 >  `InitializeCurrentThread` ロック、およびデッドロックが発生するタスクを完了するには、事前に初期化します。 呼び出す`InitializeCurrentThread`中断されたスレッドがない場合にのみです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

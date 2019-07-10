@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9503c12da9e98fbd43f3904aad25c5d10655cec2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 550d25e995bdfe010fb1aa664a7c9882a775f4d5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61994644"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757163"
 ---
 # <a name="icordebugnativeframe2ischild-method"></a>ICorDebugNativeFrame2::IsChild メソッド
 現在のフレームが子フレームであるかどうかを判断します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsChild([out] BOOL * pIsChild);  
 ```  
   
@@ -52,7 +52,7 @@ HRESULT IsChild([out] BOOL * pIsChild);
  `IsChild`メソッドを返します。`true`フレーム オブジェクトを、メソッドを呼び出すことが別のフレームの子である場合。 大文字と小文字の場合を使用して、 [IsMatchingParentFrame](../../../../docs/framework/unmanaged-api/debugging/icordebugnativeframe2-ismatchingparentframe-method.md)フレームを親となっているかどうかを確認する方法。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3ef9a5896c2ecc54b7fd48670f751d193ac74554
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 43935829d11a925d4a3389149f5c316df15f06bb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992720"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764589"
 ---
 # <a name="ihostsyncmanagercreatesemaphore-method"></a>IHostSyncManager::CreateSemaphore メソッド
 作成、 [IHostSemaphore](../../../../docs/framework/unmanaged-api/hosting/ihostsemaphore-interface.md)待機イベントのセマフォとして使用する共通言語ランタイム (CLR) オブジェクト。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateSemaphore (  
     [in]  DWORD dwInitial,  
     [in]  DWORD dwMax,  
@@ -63,7 +63,7 @@ HRESULT CreateSemaphore (
  `CreateSemaphore` 同じ名前を持つ Win32 関数をミラー化します。 `dwInitial`と`dwMax`パラメーターとして、Win32 セマフォのカウントのと同じセマンティクスを使用して`lInitialCount`と`lMaximumCount`パラメーター、それぞれします。 `dwInitial` 0 の間である必要がありますと`dwMax`までの値。 `dwMax` 0 より大きくなければなりません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

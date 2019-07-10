@@ -5,12 +5,12 @@ dev_langs:
 - csharp
 - vb
 ms.assetid: 81dd0c37-e2a4-4694-83b0-f2e49e693810
-ms.openlocfilehash: beb76f18a55d6e197c1c6bcfc91e3a8ef0f8119b
-ms.sourcegitcommit: ca2ca60e6f5ea327f164be7ce26d9599e0f85fe4
+ms.openlocfilehash: de3fc8b23bd132179fc7fb67d29010552138e3ab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65063111"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742832"
 ---
 # <a name="the-linq-to-sql-object-model"></a>LINQ to SQL オブジェクト モデル
 [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]開発者のプログラミング言語で表されるオブジェクト モデルはリレーショナル データベースのデータ モデルにマップされます。 データ操作はオブジェクト モデルに従って行われます。  
@@ -72,7 +72,7 @@ ms.locfileid: "65063111"
  [!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)] は、<xref:System.Data.Linq.Mapping.FunctionAttribute> 属性と <xref:System.Data.Linq.Mapping.ParameterAttribute> 属性を使用して、ストアド プロシージャおよび関数をメソッドに対応付けます。 ストアド プロシージャを表すメソッドは、<xref:System.Data.Linq.Mapping.FunctionAttribute.IsComposable%2A> プロパティによって、ユーザー定義関数を表すメソッドと区別されます。 このプロパティが `false` (既定値) に設定されている場合、メソッドはストアド プロシージャを表します。 `true` に設定されている場合、メソッドはデータベース関数を表します。  
   
 > [!NOTE]
->  Visual Studio を使用している場合を使用できます、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]ストアド プロシージャおよびユーザー定義関数にマップされるメソッドを作成します。  
+>  Visual Studio を使用している場合は、ストアド プロシージャおよびユーザー定義関数にマップされるメソッドを作成するオブジェクト リレーショナル デザイナーを使用できます。  
   
 ### <a name="example"></a>例  
  [!code-csharp[DLinqObjectModel#4](../../../../../../samples/snippets/csharp/VS_Snippets_Data/DLinqObjectModel/cs/northwind.cs#4)]

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3fe1f93c621fd567471b9a49e4aa75cb90e6e0e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 65ac05a524297029ca50970bdd231c6a9112e35c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61771645"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67748385"
 ---
 # <a name="iclrruntimeinfoloadlibrary-method"></a>ICLRRuntimeInfo::LoadLibrary メソッド
 によって表される共通言語ランタイム (CLR) から .NET Framework ライブラリを読み込み、 [ICLRRuntimeInfo](../../../../docs/framework/unmanaged-api/hosting/iclrruntimeinfo-interface.md)インターフェイス。  
@@ -31,7 +31,7 @@ ms.locfileid: "61771645"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT LoadLibrary(  
      [in]  LPCWSTR pwzDllName,  
      [out, retval] HMODULE *phndModule);  
@@ -57,7 +57,7 @@ HRESULT LoadLibrary(
  このメソッドは、.NET Framework 再頒布可能パッケージに含まれている Dll のみを読み込みます。 ユーザーが生成したアセンブリを読み込むことことはできません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

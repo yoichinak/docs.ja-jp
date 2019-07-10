@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1e69d9cbf39049e82803d2f7bc795cc9fd0b368
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a416a51f5121f29d373fcfdfa6b0597d9b10ded5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61796007"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779380"
 ---
 # <a name="ecustomdumpflavor-enumeration"></a>ECustomDumpFlavor 列挙型
 エラーを報告するときにカスタム ヒープのサブセットに含める項目のダンプを示す値が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     DUMP_FLAVOR_Mini            = 1,  
     DUMP_FLAVOR_NonHeapCLRState = 2  
@@ -46,7 +46,7 @@ typedef enum {
  型のパラメーター`ECustomDumpFlavor`に渡される、 [iclrerrorreportingmanager::begincustomdump](../../../../docs/framework/unmanaged-api/hosting/iclrerrorreportingmanager-begincustomdump-method.md)メソッド。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

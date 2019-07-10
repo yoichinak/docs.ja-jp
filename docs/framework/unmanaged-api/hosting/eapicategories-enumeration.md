@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3debd3f13d78841188dd8c900f51c0110e1d4c67
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 41513d9b6f98743bfad95e4d9606cfb4927369e6
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906374"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769793"
 ---
 # <a name="eapicategories-enumeration"></a>EApiCategories 列挙型
 ホストが部分的に信頼されたコードでの実行をブロックできる機能のカテゴリについて説明します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     eNoCategory               = 0,  
     eSynchronization          = 0x1,  
@@ -66,7 +66,7 @@ typedef enum {
  `EApiCategories`列挙と`SetProtectedCategories`メソッドは直接関係をマネージ<xref:System.Security.Permissions.HostProtectionAttribute?displayProperty=nameWithType>クラス。 マネージ クラスを併用、<xref:System.Security.Permissions.HostProtectionResource?displayProperty=nameWithType>列挙型、値が対応に直接、`EApiCategories`を記載したカテゴリに対応する機能を公開するマネージ型とメンバーをマークする、値`EApiCategories`。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

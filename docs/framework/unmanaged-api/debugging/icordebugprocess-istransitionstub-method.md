@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18084cb69d2c620fc892cc05e5a561e8fda3bc1c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1ec29aa748c437199434fa1394e1a00c82154447
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61775521"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766876"
 ---
 # <a name="icordebugprocessistransitionstub-method"></a>ICorDebugProcess::IsTransitionStub メソッド
 マネージ コードへの遷移を発生させるスタブ内にアドレスがあるかどうかを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsTransitionStub(  
     [in]  CORDB_ADDRESS address,  
     [out] BOOL *pbTransitionStub);  
@@ -48,7 +48,7 @@ HRESULT IsTransitionStub(
  こともできます identity 遷移スタブ ポータブル実行可能 (PE) ファイルに情報を参照しています。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

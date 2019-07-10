@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 50b682a7b3a4aadf7559120745265ef266cf2870
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e94034fcdcd8d86f34c61af30a7729a80c913fac
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948747"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767338"
 ---
 # <a name="icordebugprocess5getgcheapinformation-method"></a>ICorDebugProcess5::GetGCHeapInformation メソッド
 現在の列挙可能かどうかなど、ガベージ コレクション ヒープに関する一般的な情報を提供します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetGCHeapInformation(  
     [out] COR_HEAPINFO *pHeapInfo  
 );  
@@ -43,7 +43,7 @@ HRESULT GetGCHeapInformation(
  `ICorDebugProcess5::GetGCHeapInformation`ヒープを列挙する前にメソッドを呼び出す必要がありますまたは構造体のガベージ コレクションには、プロセスのことを確認するための個々 のヒープ領域は、現在有効です。 コレクションが進行中は、ガベージ コレクション ヒープを処理することはできません。 それ以外の場合、列挙体は、無効なガベージ コレクションの構造をキャプチャする場合があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: f90bf2b7472af3f9125edbd29f6924ddec9c1530
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2242395a02254268c9492e534309c690a343ffbe
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61973135"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767266"
 ---
 # <a name="ihostmanualeventwait-method"></a>IHostManualEvent::Wait メソッド
 現在[IHostManualEvent](../../../../docs/framework/unmanaged-api/hosting/ihostmanualevent-interface.md) 、所有者になるまで待機するインスタンスまたは一定の時間が経過するとします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Wait (  
     [in] DWORD dwMilliseconds,  
     [in] DWORD option  
@@ -56,7 +56,7 @@ HRESULT Wait (
 |HOST_E_DEADLOCK|ホストが、待機中にデッドロックを検出し、現在`IHostManualEvent`デッドロックの対象としてインスタンス。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

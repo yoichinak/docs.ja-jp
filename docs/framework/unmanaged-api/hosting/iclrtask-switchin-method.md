@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f36a963417aba082667bb9fb609e0d1dcad7b09
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ccc08ae210dd02bc71a1d83bc81525a7308c20e1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763457"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770390"
 ---
 # <a name="iclrtaskswitchin-method"></a>ICLRTask::SwitchIn メソッド
 共通言語ランタイム (CLR) に通知するタスクを現在[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インスタンスを表しますが、可能な状態でします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SwitchIn (  
     [in] HANDLE threadHandle  
 );  
@@ -58,7 +58,7 @@ HRESULT SwitchIn (
 >  呼び出し`SwitchIn`を以前の呼び出しがない`SwitchOut`HOST_E_INVALIDOPERATION の HRESULT 値で失敗します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

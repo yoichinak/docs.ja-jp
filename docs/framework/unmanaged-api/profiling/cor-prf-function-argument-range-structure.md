@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: dffefedf14d5f219736e429be191021b2de7ddd2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c0c0679dac84089577a2698ed8b0b5497a1a81e8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61599326"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753906"
 ---
 # <a name="corprffunctionargumentrange-structure"></a>COR_PRF_FUNCTION_ARGUMENT_RANGE 構造体
 メモリに左から右方向へ連続で格納される関数の引数のブロックを表します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {  
     UINT_PTR startAddress;  
     ULONG length;  
@@ -43,7 +43,7 @@ typedef struct _COR_PRF_FUNCTION_ARGUMENT_RANGE {
 |`length`|連続するブロックの長さ。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   

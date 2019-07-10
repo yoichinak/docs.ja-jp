@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 28d1655bdc3746dab87acef2e2aac6758883e74a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 8f262c416a6998ed182d0c42d7f00ea7dcb3f898
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61971666"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768683"
 ---
 # <a name="iclrruntimehostgetcurrentappdomainid-method"></a>ICLRRuntimeHost::GetCurrentAppDomainId メソッド
 数値識別子を取得、<xref:System.AppDomain>が現在実行されています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCurrentAppDomainId(  
     [out] DWORD* pdwAppDomainId  
 );  
@@ -54,7 +54,7 @@ HRESULT GetCurrentAppDomainId(
  `pdwAppDomainId`パラメーターがの値に設定されている、<xref:System.AppDomain.Id%2A>のプロパティ、<xref:System.AppDomain>現在のスレッドを実行します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

@@ -2,21 +2,21 @@
 title: オブジェクト モデルの作成
 ms.date: 03/30/2017
 ms.assetid: 27afce86-9b1d-45fb-8e0b-636bf671a236
-ms.openlocfilehash: 7724d6e75b350e5c57f090d42ef1f49c4d3593b8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 0f1a0d035f2b11f33a9899ededd876155d45de3c
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62032444"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67743578"
 ---
 # <a name="creating-the-object-model"></a>オブジェクト モデルの作成
 既存のデータベースからオブジェクト モデルを作成し、このオブジェクト モデルを既定の状態で使用できます。 オブジェクト モデルの多くの側面と動作をカスタマイズできます。  
   
- Visual Studio を使用している場合を使用できます、[!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)]オブジェクト モデルを作成します。  
+ Visual Studio を使用している場合は、オブジェクト モデルを作成するオブジェクト リレーショナル デザイナーを使用できます。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
  [方法: Visual Basic または C# でオブジェクト モデルを生成する](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-in-visual-basic-or-csharp.md)  
- SQLMetal コマンド ライン ツールの使い方について説明します。 リンクを提供、 [!INCLUDE[vs_ordesigner_long](../../../../../../includes/vs-ordesigner-long-md.md)] Visual Studio のユーザー  
+ SQLMetal コマンド ライン ツールの使い方について説明します。 Visual Studio のユーザー リンクをオブジェクト リレーショナル デザイナーも提供します。  
   
  [方法: 外部ファイルとしてのオブジェクト モデルを生成します。](../../../../../../docs/framework/data/adonet/sql/linq/how-to-generate-the-object-model-as-an-external-file.md)  
  属性ベースの対応付けを使用する代わりに外部マッピング ファイルを生成する方法について説明します。  

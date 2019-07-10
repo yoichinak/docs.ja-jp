@@ -4,19 +4,19 @@ ms.date: 03/30/2017
 ms.assetid: 49a2451f-d250-4e73-aa96-9ff49d9f11c6
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 52fd0e9dac1d255197909d153099d9c6f2bd8ff7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d6d1f2bd903124773eaa20581f013bb41cf9cf99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61953297"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771492"
 ---
 # <a name="icordebugsymbolprovidergetcoderange-method"></a>ICorDebugSymbolProvider::GetCodeRange メソッド
 メソッド内の指定の相対仮想アドレス (RVA: relative virtual address) で、メソッド開始アドレスとサイズを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCodeRange(  
    [in] ULONG32 codeRva,   
    [out] ULONG32* pCodeStartAddress,   
@@ -40,7 +40,7 @@ HRESULT GetCodeRange(
 >  このメソッドは .NET ネイティブでのみ使用できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

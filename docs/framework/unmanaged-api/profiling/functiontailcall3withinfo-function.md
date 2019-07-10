@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8f1c64615dae205161583c7a79575204932cd17b
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9cd301ac9d82dd49fc9680d2724714f267ed88ae
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586864"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763289"
 ---
 # <a name="functiontailcall3withinfo-function"></a>FunctionTailcall3WithInfo 関数
 現在実行中の関数が別の関数の末尾呼び出しを実行しようとしているプロファイラーに通知しに渡すことができるハンドルを提供します、 [icorprofilerinfo 3::getfunctiontailcall3info メソッド](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo3-getfunctiontailcall3info-method.md)を取得しますスタック フレーム。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void __stdcall FunctionTailcall3WithInfo(  
                [in] FunctionIDOrClientID functionIDOrClientID,  
                [in] COR_PRF_ELT_INFO eltInfo);  
@@ -57,7 +57,7 @@ void __stdcall FunctionTailcall3WithInfo(
  また、FunctionTailcall3WithInfo 関数がマネージ コードを呼び出していない、または任意の方法でマネージ メモリの割り当てが発生する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   

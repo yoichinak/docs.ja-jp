@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9300f67e75d40f041a4fba52f6742741ec9f91de
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 768d16a05bbe139c3fe02677526bc28809a93be0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61700203"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779714"
 ---
 # <a name="iclrgcmanagergetstats-method"></a>ICLRGCManager::GetStats メソッド
 共通言語ランタイムのガベージ コレクション システムに関する現在の統計情報のセットを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetStats (  
     [in, out] COR_GC_STATS *pStats  
 );  
@@ -57,14 +57,14 @@ HRESULT GetStats (
   
  使用状況の例は次のとおりです。  
   
-```  
+```cpp  
 COR_GC_STATS GCStats;  
 GCStats.Flags = COR_GC_COUNTS | COR_GC_MEMORYUSAGE;  
 pCLRGCManager->GetStats(&GCStats);  
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

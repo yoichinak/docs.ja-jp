@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 882242da493c49a2e6aa09888e9503dcf2933589
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1218ee76a3b7a2f501f87adf1e0bc8133d5329b5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61906140"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781350"
 ---
 # <a name="ceesectionreloctype-enumeration"></a>CeeSectionRelocType 列挙型
 種類に影響する値を提供`reloc`への呼び出しで出力される命令[iceegen::addsectionreloc](../../../../docs/framework/unmanaged-api/metadata/iceegen-addsectionreloc-method.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum  {  
     srRelocAbsolute,  
     srRelocHighLow          = 3,  
@@ -71,7 +71,7 @@ typedef enum  {
 |`srRelocPtr`|メモリの事前修正内容のセクションではなく、ポインターを示す値のオフセット。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

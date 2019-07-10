@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: b9ffd9ab9ddb95945744ecf210d0ae1d9d9812ec
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb26a96c46b01a2981afba0ac6b405c0b50f6d9a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61779813"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781422"
 ---
 # <a name="imetadatatablesgetnumtables-method"></a>IMetaDataTables::GetNumTables メソッド
 現在のスコープ内のテーブルの数を取得`IMetaDataTables`インスタンス。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetNumTables (  
     [out]  ULONG   *pcTables  
 );  
@@ -40,7 +40,7 @@ HRESULT GetNumTables (
  [out]現在のインスタンスのスコープ内のテーブルの数へのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

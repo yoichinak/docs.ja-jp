@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 88f86385ba4f4186d14994a2028ee11c42127546
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87e318c4f2367e8c66910978f4a9c89f36c95632
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927258"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766509"
 ---
 # <a name="igchostgetthreadstats-method"></a>IGCHost::GetThreadStats メソッド
 ガベージ コレクションのスレッドごとの統計情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetThreadStats (  
     [in] DWORD *pFiberCookie,  
     [in, out] COR_GC_THREAD_STATS *pStats  
@@ -44,7 +44,7 @@ HRESULT GetThreadStats (
  [入力、出力]ポインターを[COR_GC_THREAD_STATS](../../../../docs/framework/unmanaged-api/hosting/cor-gc-thread-stats-structure.md)の指定したスレッドのガベージ コレクションの統計情報を含む構造体。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** GCHost.idl、GCHost.h  
   

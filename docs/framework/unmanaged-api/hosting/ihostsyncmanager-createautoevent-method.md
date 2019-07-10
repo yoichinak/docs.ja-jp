@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: b9c91a982a5f3d28b43a301f961601485639bb91
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ad704ff1e38d59df9e26d34b6dc62c40522aa728
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61696653"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753459"
 ---
 # <a name="ihostsyncmanagercreateautoevent-method"></a>IHostSyncManager::CreateAutoEvent メソッド
 自動リセット イベント オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateAutoEvent (  
     [out] IHostAutoEvent **ppEvent  
 );  
@@ -55,7 +55,7 @@ HRESULT CreateAutoEvent (
  `CreateAutoEvent` 非シグナル待機中のスレッドが解放された後に状態が変更は自動的に自動イベント オブジェクトを作成します。 このメソッドは、Win32 をミラー化`CreateEvent`の値を持つ関数`false`の指定、`bManualReset`パラメーター  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 79ef272e0c8afa0cd1942416c3a5eb9b825c2e6f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 5741ba1b4564a703ff57b45c728bb9efac0bb35a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992629"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782005"
 ---
 # <a name="iceegencomputepointer-method"></a>ICeeGen::ComputePointer メソッド
 指定したコードのセクションのバッファーを決定します。  
@@ -31,7 +31,7 @@ ms.locfileid: "61992629"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ComputePointer (  
     [in]  HCEESECTION  section,  
     [in]  ULONG        RVA,   
@@ -50,7 +50,7 @@ HRESULT ComputePointer (
  [out]返されたバッファーへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

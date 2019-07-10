@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 3571e2698b980b12b89a5b689efb868a34a3ef71
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: f9dc3f87ce727076d561923fe35495bbfe4419e3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789611"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67768130"
 ---
 # <a name="clrcreateinstance-function"></a>CLRCreateInstance 関数
 次の 3 つのインターフェイスの 1 つを提供します。[ICLRMetaHost](../../../../docs/framework/unmanaged-api/hosting/iclrmetahost-interface.md)、 [ICLRMetaHostPolicy](../../../../docs/framework/unmanaged-api/hosting/iclrmetahostpolicy-interface.md)、または[ICLRDebugging](../../../../docs/framework/unmanaged-api/debugging/iclrdebugging-interface.md)します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CLRCreateInstance(  
     [in]  REFCLSID  clsid,  
     [in]  REFIID     riid,  
@@ -66,7 +66,7 @@ HRESULT CLRCreateInstance(
   
  次のコードは、使用する方法を示しています。`CLRCreateInstance`に 3 つすべてのインターフェイスを取得します。  
   
-```  
+```cpp  
 #include <metahost.h>  
 #pragma comment(lib, "mscoree.lib")  
   
@@ -83,7 +83,7 @@ hr = CLRCreateInstance (CLSID_CLRDebugging, IID_ICLRDebugging,
 ```  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

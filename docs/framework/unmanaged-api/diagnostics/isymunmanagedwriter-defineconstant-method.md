@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7f470dbe4ef2ef0d5f2204ccbdd5fb64730f9a2c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a04bf93a2b2809198673d15f29714f52c9435b68
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930105"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67767843"
 ---
 # <a name="isymunmanagedwriterdefineconstant-method"></a>ISymUnmanagedWriter::DefineConstant メソッド
 定数値の名前を定義します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DefineConstant(  
     [in] const WCHAR *name,  
     [in] VARIANT value,  

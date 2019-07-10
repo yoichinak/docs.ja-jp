@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 02e051d311e447475bea724b0bd7420ee8b590f6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d3c0f20cc93b02e048c9d1952188af3d21d37221
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61749099"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766120"
 ---
 # <a name="icordebugprocessenumerateappdomains-method"></a>ICorDebugProcess::EnumerateAppDomains メソッド
 このプロセスですべてのアプリケーション ドメインを列挙します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+``` cpp 
 HRESULT EnumerateAppDomains(  
     [out] ICorDebugAppDomainEnum **ppAppDomains);  
 ```  
@@ -42,7 +42,7 @@ HRESULT EnumerateAppDomains(
  このメソッドは、前に使用することができます、 [icordebugmanagedcallback::createprocess](../../../../docs/framework/unmanaged-api/debugging/icordebugmanagedcallback-createprocess-method.md)コールバック。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

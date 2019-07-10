@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: e51ff24698a2839972f9a36eac6c18d4f6709ebd
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: b6187da564a62b8c30abdc6a150f0df45d565615
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64600153"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67763870"
 ---
 # <a name="ihostcontrolgethostmanager-method"></a>IHostControl::GetHostManager メソッド
 指定したホストのインターフェイスの実装にインターフェイス ポインターを取得します。`IID`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetHostManager (  
     [in] REFIID riid,  
     [out, iid_is(riid)] void** ppObject  
@@ -82,7 +82,7 @@ HRESULT GetHostManager (
  CLR は呼び出しません`Release`シャット ダウンした場合でも、ホスト マネージャー。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

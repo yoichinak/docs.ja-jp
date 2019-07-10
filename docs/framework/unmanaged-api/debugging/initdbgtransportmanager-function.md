@@ -18,19 +18,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 74cb2c7d1f79d23e1331cc7192ba2d6acfd9835c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 948e97064d12dc5b2044faf35aa374e5ba5f2592
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761651"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67764782"
 ---
 # <a name="initdbgtransportmanager-function"></a>InitDbgTransportManager 関数
 プロセスおよびランタイムの列挙のためにリモート ターゲットに接続するよう、トランスポート マネージャーを初期化します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT InitDbgTransportManager ();  
 ```  
   
@@ -45,7 +45,7 @@ HRESULT InitDbgTransportManager ();
  その他のエラーが発生しました。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CoreClrRemoteDebuggingInterfaces.h  
   

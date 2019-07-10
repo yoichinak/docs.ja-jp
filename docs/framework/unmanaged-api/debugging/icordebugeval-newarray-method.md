@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d1abe307e3b9fa607912f98e456a11176eb17c56
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 9597d05e46c2d41ab1f24a073c028561e944fb59
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61934759"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67753032"
 ---
 # <a name="icordebugevalnewarray-method"></a>ICorDebugEval::NewArray メソッド
 指定した要素型とディメンションの新しい配列を割り当てます。  
@@ -31,7 +31,7 @@ ms.locfileid: "61934759"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT NewArray (  
     [in] CorElementType     elementType,  
     [in] ICorDebugClass     *pElementClass,  
@@ -61,7 +61,7 @@ HRESULT NewArray (
  配列が常に現在のスレッドが実行されているアプリケーション ドメインで作成されます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -2,12 +2,12 @@
 title: 'チュートリアル: リレーションシップを介したクエリの実行 (C#)'
 ms.date: 03/30/2017
 ms.assetid: 552abeb1-18f2-4e93-a9c6-ef7b2db30c32
-ms.openlocfilehash: d9233bc7501544fff04c1c9eae215bd981fa4bd0
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: f36f618cfcb82847f6763641ee64565dcdedd919
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64618026"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742650"
 ---
 # <a name="walkthrough-querying-across-relationships-c"></a>チュートリアル: リレーションシップを介したクエリの実行 (C#)
 このチュートリアルの使用を示します[!INCLUDE[vbtecdlinq](../../../../../../includes/vbtecdlinq-md.md)]*アソシエーション*をデータベース内の外部キー リレーションシップを表します。  
@@ -31,7 +31,7 @@ ms.locfileid: "64618026"
 ## <a name="mapping-relationships-across-tables"></a>テーブル間のリレーションシップを指定する  
  `Customer` クラス定義の後に、次のコードから成る `Order` エンティティ クラス定義を作成します。これは、`Order.Customer` が外部キーとして `Customer.CustomerID` に関係することを示しています。  
   
-#### <a name="to-add-the-order-entity-class"></a>Order エンティティ クラスを追加するには  
+### <a name="to-add-the-order-entity-class"></a>Order エンティティ クラスを追加するには  
   
 - `Customer` クラスの後に次のコードを入力または貼り付けます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "64618026"
 ## <a name="annotating-the-customer-class"></a>Customer クラスに注釈を付ける  
  ここでは、`Customer` クラスに注釈を付けて、`Order` クラスとのリレーションシップを指定します。 いずれかの方向のリレーションシップが定義されていればリンクを作成できるため、この注釈の追加は必ずしも必要ではありません。 しかし、この注釈を追加することで、どちらの方向でも簡単にオブジェクトを移動できます。  
   
-#### <a name="to-annotate-the-customer-class"></a>Customer クラスに注釈を付けるには  
+### <a name="to-annotate-the-customer-class"></a>Customer クラスに注釈を付けるには  
   
 - `Customer` クラスに次のコードを入力または貼り付けます。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "64618026"
 ## <a name="creating-and-running-a-query-across-the-customer-order-relationship"></a>Customer-Order リレーションシップ間のクエリを作成および実行する  
  `Order` オブジェクトから `Customer` オブジェクトに、またはその逆の順序で、直接アクセスできます。 明示的な不要*結合*顧客と注文します。  
   
-#### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer オブジェクトを使用して Order オブジェクトにアクセスするには  
+### <a name="to-access-order-objects-by-using-customer-objects"></a>Customer オブジェクトを使用して Order オブジェクトにアクセスするには  
   
 1. `Main` メソッドに次のコードを入力または貼り付けることによって、メソッドを変更します。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "64618026"
   
  次の手順では、データベース内の Customers テーブルに対応する厳密に型指定されたテーブルとして、`Customers` を作成します。  
   
-#### <a name="to-strongly-type-the-datacontext-object"></a>DataContext オブジェクトを厳密に型指定するには  
+### <a name="to-strongly-type-the-datacontext-object"></a>DataContext オブジェクトを厳密に型指定するには  
   
 1. `Customer` クラス宣言の上に次のコードを追加します。  
   

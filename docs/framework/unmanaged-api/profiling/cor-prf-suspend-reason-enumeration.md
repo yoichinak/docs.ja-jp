@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 21533b5173bcd91d0c944fbde4eafc9817de8315
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: e084bc957eca9474078ed5ca3aef0276361dbe1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61598988"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745527"
 ---
 # <a name="corprfsuspendreason-enumeration"></a>COR_PRF_SUSPEND_REASON 列挙型
 ランタイムが中断された理由を示します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     COR_PRF_SUSPEND_OTHER                   = 0x00,  
     COR_PRF_SUSPEND_FOR_GC                  = 0x01,  
@@ -57,7 +57,7 @@ typedef enum {
  アンマネージ コードに含まれるすべてのランタイム スレッドは、この時点で、中断されます、ランタイムが再開されるまで、実行時の再入力するまで実行を続行が許可されます。 これは、ランタイムに入る新しいスレッドにも適用されます。 ランタイム内のすべてのスレッドは可能なコード内にある場合はすぐに中断または、割り込み可能なコードに到達したときに中断します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4611b8c186e0293dae73cee4f9d845bb44c167c8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: c037f2509aaa0a5e4c3f7a844614742b6f21bec3
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61904710"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769136"
 ---
 # <a name="icorprofilercallbackmovedreferences-method"></a>ICorProfilerCallback::MovedReferences メソッド
 圧縮ガベージ コレクションを実行した後の、ヒープ内のオブジェクトの新しいレイアウトを報告するために呼び出されます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT MovedReferences(  
     [in]  ULONG  cMovedObjectIDRanges,  
     [in, size_is(cMovedObjectIDRanges)] ObjectID oldObjectIDRangeStart[] ,  
@@ -80,7 +80,7 @@ HRESULT MovedReferences(
  ガーベッジ コレクションでオブジェクトが古い場所から新しい場所へ移動中の可能性があるため、コールバックの間は `MovedReferences` によって渡される `ObjectID` 値はすべて無効です。 このため、`MovedReferences` 呼び出しの間、プロファイラーはオブジェクトを検査するべきではありません。 A [icorprofilercallback 2::garbagecollectionfinished](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback2-garbagecollectionfinished-method.md)コールバックは、の新しい場所に移動されたすべてのオブジェクトを検査を実行できることを示します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

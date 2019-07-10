@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 4c6a9473a698e4635c8b5cc9fb58963334dfd65e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 22af95ef4bd1fca0a8253faa6ce0e1c7a862054d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61992278"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782661"
 ---
 # <a name="imetadatainfogetfilemapping-method"></a>IMetaDataInfo::GetFileMapping メソッド
 マップのファイルとマッピングの種類のメモリ領域を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetFileMapping (  
     [out] const void           **ppvData,   
     [out] ULONGLONG            *pcbData,   
@@ -65,7 +65,7 @@ HRESULT GetFileMapping (
  3 つのパラメーターのいずれかの NULL を渡すことはサポートされていません。 メソッドを返します`E_INVALIDARG`出力のいずれもがいっぱいになるとします。 マッピングの種類や領域のサイズを無視すると、プログラムが異常終了があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

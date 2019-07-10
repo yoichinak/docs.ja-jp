@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8022428c7f803f96e2fa150588edf95542bf19b3
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4d5149c7e3430c5e7c59a47c4ab5dc98d878de39
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985219"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67766669"
 ---
 # <a name="iclrappdomainresourcemonitorgetcurrentcputime-method"></a>ICLRAppDomainResourceMonitor::GetCurrentCpuTime メソッド
 アプリケーション ドメインが作成されたために、現在のアプリケーション ドメインで実行中にすべてのスレッドによって使用されているプロセッサの合計時間を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,  
                           [out] ULONGLONG* pMilliseconds);  
 ```  
@@ -47,13 +47,13 @@ HRESULT GetCurrentCpuTime([in]  DWORD dwAppDomainId,
 |-------------|-----------------|  
 |S_OK|メソッドは正常に完了しました。|  
 |COR_E_APPDOMAINUNLOADED|アプリケーション ドメインがアンロードされたか、存在しません。|  
-|E_FAIL|アプリケーション ドメインのリソース監視が有効になっていません。<br /><br /> - または -<br /><br /> その他のすべてのエラー。|  
+|E_FAIL|アプリケーション ドメインのリソース監視が有効になっていません。<br /><br /> \- または -<br /><br /> その他のすべてのエラー。|  
   
 ## <a name="remarks"></a>Remarks  
  このメソッドはアンマネージと同等のマネージ<xref:System.AppDomain.MonitoringTotalProcessorTime%2A?displayProperty=nameWithType>プロパティ。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MetaHost.h  
   

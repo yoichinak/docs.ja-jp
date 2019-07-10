@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: d05475f06a206dcb88d198c713767618453d742e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 24c9077863ada4d1208f29755a70d2cf8abc1208
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64586910"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67782699"
 ---
 # <a name="functionenter3-function"></a>FunctionEnter3 関数
 コントロールが関数に渡されることをプロファイラーに通知します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);  
 ```  
   
@@ -48,7 +48,7 @@ void __stdcall FunctionEnter3(FunctionOrRemappedID functionOrRemappedID);
 - 終了時に、その呼び出し元によってプッシュされたすべてのパラメーターをポップしてスタックを復元する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl  
   
