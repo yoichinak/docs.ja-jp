@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 96c013cd3e45e4ede0cbc9f42bf511a2eb3fc12d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d305aa59c1b9e9e1225b30f12e36fc689d584db1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777566"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778887"
 ---
 # <a name="imetadataimportgetrva-method"></a>IMetaDataImport::GetRVA メソッド
 相対仮想アドレス (RVA) と、メソッド、または指定したトークンによって表されるフィールドの実装フラグを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetRVA (  
    [in]  mdToken     tk,   
    [out] ULONG       *pulCodeRVA,   
@@ -48,7 +48,7 @@ HRESULT GetRVA (
  [out]メソッドの実装フラグへのポインター。 この値はビットマスクから、 [CorMethodImpl](../../../../docs/framework/unmanaged-api/metadata/cormethodimpl-enumeration.md)列挙体。 値`pdwImplFlags`は有効な場合にのみ`tk`MethodDef トークンです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

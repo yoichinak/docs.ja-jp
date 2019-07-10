@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 58c9d4c66af0bb9f4e66d17b18ac78ef8271bc31
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 2baefa45deb8c13e8c1e627724fbe271b210a9ce
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609608"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740886"
 ---
 # <a name="codechunkinfo-structure"></a>CodeChunkInfo 構造体
 
@@ -29,7 +29,7 @@ ms.locfileid: "61609608"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _CodeChunkInfo {  
     CORDB_ADDRESS startAddr;  
     ULONG32       length;  
@@ -47,7 +47,7 @@ typedef struct _CodeChunkInfo {
  コードの 1 つのチャンクは、関数などのコード オブジェクトの一部は、ネイティブ コードの領域です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl  
   

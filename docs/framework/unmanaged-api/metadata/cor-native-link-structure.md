@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7024140ed9b870b5db38dba7e9b13321dd37386a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ae518e5a736a78a261dc3821d53d93afee95a271
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62046164"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67779993"
 ---
 # <a name="cornativelink-structure"></a>COR_NATIVE_LINK 構造体
 ネイティブ コードのリンクに使用される情報が含まれます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct   
 {  
     BYTE        m_linkType;  
@@ -46,7 +46,7 @@ typedef struct
 |`m_entryPoint`|エントリ ポイントを表す MemberRef メタデータ トークン。 形式は`lib:entrypoint`します。|  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

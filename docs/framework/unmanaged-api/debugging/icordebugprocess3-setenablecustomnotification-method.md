@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: c98084b179d27e97ecb3bb34525967d41f8ad1cb
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 58e50a0c02f15590e5bbbcadaabeaa7e3886b74b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66489616"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736819"
 ---
 # <a name="icordebugprocess3setenablecustomnotification-method"></a>ICorDebugProcess3::SetEnableCustomNotification メソッド
 有効にし、指定した型のカスタムのデバッガー通知を無効にします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetEnableCustomNotification(ICorDebugClass * pClass,  
                                     BOOL fEnable);  
 ```  

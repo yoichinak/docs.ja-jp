@@ -8,12 +8,12 @@ helpviewer_keywords:
 - Storyboards [WPF], animations
 - animations [WPF], overview
 ms.assetid: bd9ce563-725d-4385-87c9-d7ee38cf79ea
-ms.openlocfilehash: 63353f670528cd52f3e2927426ae715432422504
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5c776942bced836437fdcb8aaf30faef48e3aaff
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663869"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780152"
 ---
 # <a name="animation-overview"></a>アニメーションの概要
 
@@ -101,7 +101,7 @@ ms.locfileid: "67663869"
     [!code-csharp[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Class1.cs#rectangleopacityfadeexamplecode_3)]
     [!code-vb[animation_ovws2#RectangleOpacityFadeExampleCode_3](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws2/VisualBasic/Class1.vb#rectangleopacityfadeexamplecode_3)]
 
-3. 前のコードではからを遷移するアニメーションを示しました`1.0`に`0.0`、これにより、完全に非表示に完全に不透明からフェードする target 要素。 一度消えた後、ビューに再びフェードイン要素を設定、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>プロパティをアニメーションの`true`。 アニメーションを無限に繰り返しますするためには、次のように設定します。 その<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>プロパティを<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>します。設定する方法を次に示します、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>と<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>XAML のプロパティ。
+3. 前のコードではからを遷移するアニメーションを示しました`1.0`に`0.0`、これにより、完全に非表示に完全に不透明からフェードする target 要素。 一度消えた後、ビューに再びフェードイン要素を設定、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>プロパティをアニメーションの`true`。 アニメーションを無限に繰り返しますするためには、次のように設定します。 その<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>プロパティを<xref:System.Windows.Media.Animation.RepeatBehavior.Forever%2A>します。 設定する方法を次に示します、<xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>と<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>XAML のプロパティ。
 
     [!code-xaml[animation_ovws2#RectangleOpacityFadeExampleXaml_4](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws2/CSharp/Window1.xaml#rectangleopacityfadeexamplexaml_4)]
 
@@ -242,7 +242,7 @@ XAML でビューとの間にフェードアウトする四角形を作成する
 
 継承するすべてのアニメーションの種類、<xref:System.Windows.Media.Animation.Timeline>クラス。 したがって、すべてのアニメーションは、タイムラインの特殊な型。 A<xref:System.Windows.Media.Animation.Timeline>時間のセグメントを定義します。 指定することができます、*タイミング動作*タイムラインの: その<xref:System.Windows.Media.Animation.Timeline.Duration%2A>、何回か繰り返されるとも進行速度になります。
 
-アニメーションがあるため、<xref:System.Windows.Media.Animation.Timeline>時間のセグメントも表します。 時間の指定したそのセグメントで進行するために、アニメーションが出力値にも計算されます (または<xref:System.Windows.Media.Animation.Timeline.Duration%2A>)。 アニメーションは、進行時、つまり "再生" 時に、関連付けられているプロパティを更新します。
+アニメーションがあるため、<xref:System.Windows.Media.Animation.Timeline>時間のセグメントも表します。 アニメーションは、時間の指定されたセグメントから進行状況に合わせても出力値を計算 (または<xref:System.Windows.Media.Animation.Timeline.Duration%2A>)。 アニメーションは、進行時、つまり "再生" 時に、関連付けられているプロパティを更新します。
 
 次の 3 つのタイミングを頻繁に使用されるプロパティは、 <xref:System.Windows.Media.Animation.Timeline.Duration%2A>、 <xref:System.Windows.Media.Animation.Timeline.AutoReverse%2A>、および<xref:System.Windows.Media.Animation.Timeline.RepeatBehavior%2A>します。
 
@@ -321,7 +321,7 @@ XAML でビューとの間にフェードアウトする四角形を作成する
 [!code-csharp[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/csharp/VS_Snippets_Wpf/animation_ovws_procedural_snip/CSharp/FillBehaviorExample.cs#fillbehaviorexamplerectangleinline)]
 [!code-vb[animation_ovws_procedural_snip#FillBehaviorExampleRectangleInline](~/samples/snippets/visualbasic/VS_Snippets_Wpf/animation_ovws_procedural_snip/visualbasic/fillbehaviorexample.vb#fillbehaviorexamplerectangleinline)]
 
-ため、その<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>は既定値から変更されていない<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>アニメーションを保持して、最終的な値は 0 で終了時にします。 そのため、<xref:System.Windows.UIElement.Opacity%2A>のアニメーションの終了後に 0 で、四角形は終了します。 設定した場合、 <xref:System.Windows.UIElement.Opacity%2A> 、別の値に四角形のコードが表示されます、効果がない、アニメーションがまだに影響を与えるため、<xref:System.Windows.UIElement.Opacity%2A>プロパティ。
+ため、その<xref:System.Windows.Media.Animation.Timeline.FillBehavior%2A>は既定値から変更されていない<xref:System.Windows.Media.Animation.FillBehavior.HoldEnd>、終了時に、アニメーションがその最終値 0 を保持します。 そのため、<xref:System.Windows.UIElement.Opacity%2A>のアニメーションの終了後に 0 で、四角形は終了します。 設定した場合、 <xref:System.Windows.UIElement.Opacity%2A> 、別の値に四角形のコードが表示されます、効果がない、アニメーションがまだに影響を与えるため、<xref:System.Windows.UIElement.Opacity%2A>プロパティ。
 
 コードでアニメーション化されたプロパティの制御を取り戻す方法の 1 つが使用するには、<xref:System.Windows.Media.Animation.Animatable.BeginAnimation%2A>メソッドに null を指定し、<xref:System.Windows.Media.Animation.AnimationTimeline>パラメーター。 詳細と例では、次を参照してください。[を設定するプロパティの後アニメーション ストーリー ボードを](how-to-set-a-property-after-animating-it-with-a-storyboard.md)します。
 
@@ -372,7 +372,7 @@ XAML でビューとの間にフェードアウトする四角形を作成する
 |[アニメーションとタイミング システムの概要](animation-and-timing-system-overview.md)|タイミング システムの使用方法について説明します、<xref:System.Windows.Media.Animation.Timeline>と<xref:System.Windows.Media.Animation.Clock>クラスで、使用するアニメーションを作成できます。|
 |[アニメーションのヒントとテクニック](animation-tips-and-tricks.md)|パフォーマンスなど、アニメーションでの問題を解決するための役に立つヒントの一覧を示します。|
 |[カスタム アニメーションの概要](custom-animations-overview.md)|アニメーション システムをキー フレーム、アニメーション クラス、またはフレームごとのコールバックで拡張する方法について説明します。|
-|From/To/By アニメーションの概要|2 つの値の間を遷移するアニメーションを作成する方法について説明します。|
+|[From/To/By アニメーションの概要](from-to-by-animations-overview.md)|2 つの値の間を遷移するアニメーションを作成する方法について説明します。|
 |[キー フレーム アニメーションの概要](key-frame-animations-overview.md)|補間メソッドを制御する機能など、複数のターゲット値を持つアニメーションを作成する方法について説明します。|
 |[イージング関数](easing-functions.md)|数式をアニメーションに適用してバウンスなどの現実的な動作を実現する方法について説明します。|
 |[パス アニメーションの概要](path-animations-overview.md)|複雑なパスに沿ってオブジェクトを移動または回転する方法について説明します。|

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 00e58d83c19c3cb6a2e1eb38942500d7f5dc5cf9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: b1f0a36d186c6d9788d43b075bf9d67c36ed1acb
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61609296"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67740570"
 ---
 # <a name="corversion-structure"></a>COR_VERSION 構造体
 共通言語ランタイムの標準の 4 つの部分のバージョン番号を保存します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef struct _COR_VERSION {  
     DWORD dwMajor;  
     DWORD dwMinor;  
@@ -47,10 +47,10 @@ typedef struct _COR_VERSION {
 |`dwSubBuild`|サブ ビルド番号。|  
   
 ## <a name="remarks"></a>Remarks  
- 1.0.3705.288 をバージョン番号には、1 はメジャー バージョン番号、マイナー バージョン番号が 0 には 3705 はビルド番号、および 288 はサブ ビルド番号。  
+ 1\.0.3705.288 をバージョン番号には、1 はメジャー バージョン番号、マイナー バージョン番号が 0 には 3705 はビルド番号、および 288 はサブ ビルド番号。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 81afb9b40269b04a59c54636c7e88c1f67189593
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 57f57d67c4f7641495feca0b9c128e6ccf456cab
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62041718"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67780203"
 ---
 # <a name="icorprofilerinfogetclassfromobject-method"></a>ICorProfilerInfo::GetClassFromObject メソッド
 取得、 `ClassID` 、指定したオブジェクトの`ObjectID`します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetClassFromObject(  
     [in]  ObjectID objectId,  
     [out] ClassID *pClassId);  
@@ -46,7 +46,7 @@ HRESULT GetClassFromObject(
  Null`pClassId`ことを示します`objectId`型をアンロードしていますがあります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   

@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 74447f52c75ae22e513c6f07950630d37bad191a
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 135938c4ed91423145ca46b743620f4236f7f818
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61790118"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742260"
 ---
 # <a name="assemblyattributesgoheres"></a>AssemblyAttributesGoHereS
 
@@ -30,7 +30,7 @@ ALink でプレースホルダーとして使用し、カスタム属性に関�
 
 ## <a name="syntax"></a>構文
 
-```
+```csharp
 internal sealed class AssemblyAttributesGoHereS
 ```
 

@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8251d21fe535f85cc6abd0a7bc6c96ab320007f0
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: a23d3c4fd8eef2e361abf1602157cb4fbb820b48
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61778041"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67773862"
 ---
 # <a name="prebindassemblyex-function"></a>PreBindAssemblyEx 関数
 アセンブリのポリシー適用後の表示名を取得します。  
@@ -30,7 +30,7 @@ ms.locfileid: "61778041"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT PreBindAssemblyEx (  
     [in]  IApplicationContext *pAppCtx,  
     [in]  IAssemblyName       *pName,  
@@ -64,7 +64,7 @@ HRESULT PreBindAssemblyEx (
  `ppNamePostPolicy`関数が HRESULT FUSION_E_REF_DEF_MISMATCH を返す場合にのみ、出力パラメーターを設定します。 それ以外の場合、これが null です。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Fusion.h  
   
