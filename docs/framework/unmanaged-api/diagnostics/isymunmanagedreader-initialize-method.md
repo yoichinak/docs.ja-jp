@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 661c27b9c21f77104b8a86163d3c92d44f8a85df
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1986ed730c6f0a1ba8a2d8e3c688e6872184da9d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61669976"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67736756"
 ---
 # <a name="isymunmanagedreaderinitialize-method"></a>ISymUnmanagedReader::Initialize メソッド
 このリーダーが、モジュールのファイル名と共に使用すると、関連付けられるメタデータ インポーターのインターフェイスで、シンボル リーダーを初期化します。  
@@ -32,7 +32,7 @@ ms.locfileid: "61669976"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Initialize (  
     [in]  IUnknown     *importer,  
     [in]  const WCHAR  *filename,  

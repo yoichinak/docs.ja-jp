@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 6fa8d42f9e849db6a02f6c62b37e04cf5dee016e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 49ea7fbe9f491028a85fae543d126fd9d4f2d940
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61789858"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741909"
 ---
 # <a name="getassemblyrefhash-method"></a>GetAssemblyRefHash メソッド
 指定されたアセンブリ ハッシュ blob を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetAssemblyRefHash(  
     mdToken FileToken,  
     const void** ppvHash,  

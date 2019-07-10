@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 589bd7b2132693c89dc10ae1a5c8d0bf52ed481e
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1e9f51799ea56cb1e5819d708a0e4a8136a94f3d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949085"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741484"
 ---
 # <a name="setassemblyprops-method"></a>SetAssemblyProps メソッド
 アセンブリ レベルのプロパティを割り当てます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetAssemblyProps(  
     mdAssembly      AssemblyID,  
     mdToken         FileToken,  

@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 0c6279c790e9b28e5f3bac93d5d0fdd411dd8c0d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1193af7b7375dfd3367c12fdb0067c9c30c614f0
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61753486"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741750"
 ---
 # <a name="importfile2-method"></a>ImportFile2 メソッド
 アセンブリとバインドされていないモジュールをインポートします。 このメソッドはのように、 [ImportFile メソッド](../../../../docs/framework/unmanaged-api/alink/importfile-method.md)がインポートされるファイルがディスクに存在しない場合でも機能します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ImportFile2(  
     LPCWSTR         pszFilename,  
     LPCWSTR         pszTargetName,  

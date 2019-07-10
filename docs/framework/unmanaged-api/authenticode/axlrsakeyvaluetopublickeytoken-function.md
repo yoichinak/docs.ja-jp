@@ -10,12 +10,12 @@ api_type:
 ms.assetid: d60f19fe-7bec-47ba-b60e-ba9ce66abf8c
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 49476a4417e5431842f8e2ba0371c53c5c9f03e9
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4f9981c4cf2e45795576024b797f93831324dbc9
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61948894"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741269"
 ---
 # <a name="axlrsakeyvaluetopublickeytoken-function"></a>\_AxlRSAKeyValueToPublicKeyToken 関数
 
@@ -23,7 +23,7 @@ Modulus および Exponent を、厳密な名前の公開キー トークンに�
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT _AxlRSAKeyValueToPublicKeyToken (  
     [in]  PCRYPT_DATA_BLOB pModulusBlob,  
     [in]  PCRYPT_DATA_BLOB pExponentBlob,  

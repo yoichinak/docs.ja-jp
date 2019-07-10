@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 5f5d44b6497e971e6d1ed030c043b91b88c070b6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26dbd7cb5f0dc3a385fe15d6c417d6fb8e1c9bc4
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61697804"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67738352"
 ---
 # <a name="iclrdebugginglibraryproviderprovidelibrary-method"></a>ICLRDebuggingLibraryProvider::ProvideLibrary メソッド
 ライブラリのプロバイダーに共通言語ランタイム (CLR) バージョン固有デバッグ ライブラリを検索しに読み込む要求を許可するコールバック インターフェイスを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT ProvideLibrary(  
      [in] const WCHAR* pwszFileName,  
      [in] DWORD dwTimestamp,  
@@ -70,7 +70,7 @@ HRESULT ProvideLibrary(
 >  Mscordbi.dll または mscordacwks.dll などのリリース済みのライブラリで重大なセキュリティ上の問題が検出された場合、shim パッチを適用できるファイルの不適切なバージョンを認識します。 Shim のパッチが適用されたバージョンのファイルの要求を発行し、すべての要求に対する応答で提供される場合は、不適切なバージョンを拒否します。 これは、ユーザーが、shim の新しいバージョンにパッチを適用する場合にのみに発生します。 未適用のバージョンは、脆弱なままです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

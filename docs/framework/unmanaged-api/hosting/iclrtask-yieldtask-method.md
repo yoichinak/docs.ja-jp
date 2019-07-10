@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bc8d936ac4fca704e7e3069209d8ff75d46b044d
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 6fde9586c1b3736b5db2c4814058dd23713dd34d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61763465"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770333"
 ---
 # <a name="iclrtaskyieldtask-method"></a>ICLRTask::YieldTask メソッド
 共通言語ランタイム (CLR) で確保、タスクを開始する要求を現在[ICLRTask](../../../../docs/framework/unmanaged-api/hosting/iclrtask-interface.md)インスタンスが表す、およびプロセッサ時間をその他のタスクを使用できるようにします。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT YieldTask ();  
 ```  
   
@@ -48,7 +48,7 @@ HRESULT YieldTask ();
  ホストは`YieldTask`他のタスクまたはプロセスのプロセッサ リソースを要求します。 このメソッドは、主に CPU 時間を断念する実行時間の長いコードを許可します。 ランタイムが、タスクを配置しようとしています。 を現在`ICLRTask`インスタンスが表す状態が、処理時間を生成することができますが、成功の保証はありません。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

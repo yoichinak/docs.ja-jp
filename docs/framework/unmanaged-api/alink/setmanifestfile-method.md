@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 8307960166cfc668a577431d688c439f0f794be2
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 825bb945e0d8662a4dadc9d688de6a677165df4a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61949044"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741469"
 ---
 # <a name="setmanifestfile-method"></a>SetManifestFile メソッド
 使用すると、指定するか、リンカーがアセンブリを作成するときに使用するマニフェスト ファイルをリセットできます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetManifestFile(  
     LPCWSTR pszFile  
 ) PURE;  

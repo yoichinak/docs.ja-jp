@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 2e9d640fb1c9dae5bb195baa504e560ba8e45821
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 4599bf310a0b819bc662b90a5a86e87ac27c37b1
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61930300"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67737021"
 ---
 # <a name="icordebugprocesswritememory-method"></a>ICorDebugProcess::WriteMemory メソッド
 このプロセスでメモリの領域にデータを書き込みます。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT WriteMemory(  
     [in]  CORDB_ADDRESS address,  
     [in]  DWORD size,  
@@ -56,7 +56,7 @@ HRESULT WriteMemory(
  `WriteMemory`メソッドは、マネージ コードの外側でのみ使用する必要があります。 このメソッドは、誤って使用すると、ランタイムを破壊できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

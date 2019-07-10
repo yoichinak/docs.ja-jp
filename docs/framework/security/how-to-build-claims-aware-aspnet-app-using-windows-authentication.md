@@ -3,12 +3,12 @@ title: '方法: Windows 認証を使用してクレーム対応 ASP.NET アプ�
 ms.date: 03/30/2017
 ms.assetid: 11c53d9d-d34a-44b4-8b5e-22e3eaeaee93
 author: BrucePerlerMS
-ms.openlocfilehash: 039fccde55dd48571e38f064f68b16480b65cb44
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: 9b58a4066538441a48bc6646f364e846a25cc8c8
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64650404"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67742502"
 ---
 # <a name="how-to-build-claims-aware-aspnet-application-using-windows-authentication"></a>方法: Windows 認証を使用してクレーム対応 ASP.NET アプリケーションをビルドする
 ## <a name="applies-to"></a>対象  
@@ -56,13 +56,13 @@ ms.locfileid: "64650404"
 ## <a name="step-1--create-a-simple-aspnet-web-forms-application"></a>手順 1 – 簡単な ASP.NET Web フォーム アプリケーションを作成する  
  この手順では、新しい ASP.NET Web フォーム アプリケーションを作成します。  
   
-#### <a name="to-create-a-simple-aspnet-application"></a>簡単な ASP.NET アプリケーションを作成するには  
+### <a name="to-create-a-simple-aspnet-application"></a>簡単な ASP.NET アプリケーションを作成するには  
   
-1. Visual Studio を起動してから、**[ファイル]**、**[新規作成]**、**[プロジェクト]** の順にクリックします。  
+1. Visual Studio を起動してから、 **[ファイル]** 、 **[新規作成]** 、 **[プロジェクト]** の順にクリックします。  
   
-2. **[新しいプロジェクト]** ウィンドウで、**[ASP.NET Web フォーム アプリケーション]** をクリックします。  
+2. **[新しいプロジェクト]** ウィンドウで、 **[ASP.NET Web フォーム アプリケーション]** をクリックします。  
   
-3. **[名前]** で、「`TestApp`」と入力し、**[OK]** を押します。  
+3. **[名前]** で、「`TestApp`」と入力し、 **[OK]** を押します。  
   
 4. **TestApp** プロジェクトが作成されたら、**ソリューション エクスプローラー**でそれをクリックします。 プロジェクトのプロパティが、**ソリューション エクスプローラー**の下の **[プロパティ]** ウィンドウに表示されます。 **[Windows 認証]** プロパティを **[有効]** に設定します。  
   
@@ -72,7 +72,7 @@ ms.locfileid: "64650404"
 ## <a name="step-2--configure-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>手順 2 – Windows 認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションを構成する  
  この手順では、構成エントリを *Web.config* 構成ファイルに追加し、アカウントのクレーム情報を表示するように *Default.aspx* ファイルを変更します。  
   
-#### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Windows 認証を使用してクレーム用の ASP.NET アプリケーションを構成するには  
+### <a name="to-configure-aspnet-application-for-claims-using-windows-authentication"></a>Windows 認証を使用してクレーム用の ASP.NET アプリケーションを構成するには  
   
 1. **TestApp** プロジェクトの *Default.aspx* ファイルで、既存のマークアップを次のものに置き換えます。  
   
@@ -136,6 +136,6 @@ ms.locfileid: "64650404"
 ## <a name="step-3--test-your-solution"></a>手順 3 – ソリューションをテストする  
  この手順では、ASP.NET Web フォーム アプリケーションをテストし、ユーザーが Windows 認証を使用してサインインするときに、クレームが表示されることを確認します。  
   
-#### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Windows 認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションをテストするには  
+### <a name="to-test-your-aspnet-web-forms-application-for-claims-using-windows-authentication"></a>Windows 認証を使用してクレーム用の ASP.NET Web フォーム アプリケーションをテストするには  
   
 1. **F5** キーを押してアプリケーションをビルドし、実行します。 *Default.aspx* が表示されます。Windows アカウント名 (ドメイン名を含む) は、ページの右上に認証ユーザーとして既に表示されています。 ページの内容には、Windows アカウントから取得されたクレームが入力されたテーブルが含まれています。

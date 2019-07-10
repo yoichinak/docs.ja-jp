@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: hoyosjs
 ms.author: juhoyosa
-ms.openlocfilehash: a2850add9acb2f7c5297ac6956e349c9277be291
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 77ef2c65157df4a033700bb8d0295875ede46554
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61965938"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67739112"
 ---
 # <a name="dacprejitdata-structure"></a>DacpReJitData 構造体
 
@@ -30,7 +30,7 @@ ms.locfileid: "61965938"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 struct MSLAYOUT DacpReJitData
 {
     enum Flags
@@ -60,7 +60,7 @@ struct MSLAYOUT DacpReJitData
 この構造は、ランタイム内に収めるし、任意のヘッダーまたはライブラリ ファイルでは公開されません。 これを使用するには、上で指定した構造を定義します。 使用して、構造体を定義する必要がありますも`ms_struct`Microsoft コンパイラを使用していない場合にパックします。
 
 ## <a name="requirements"></a>必要条件
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  
