@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: d29f5cefd22592fa8949ff5361109c09c0972b24
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 66f60b2342b6ff64f1329cbe57032291d5139384
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987143"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770591"
 ---
 # <a name="icordebugthreadsetdebugstate-method"></a>ICorDebugThread::SetDebugState メソッド
 この ICorDebugThread のデバッグ状態を記述するフラグを設定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SetDebugState (  
     [in] CorDebugThreadState state  
 );  
@@ -43,7 +43,7 @@ HRESULT SetDebugState (
  `SetDebugState` スレッドの現在のデバッグ状態を設定します。 (「現在のデバッグ状態」状態を表しますデバッグ プロセスに続く、実際の現状ではない場合。)通常この値は、THREAD_RUNNING です。 デバッガーのみ、スレッドのデバッグ状態に影響を与えることができます。 デバッグ状態は最終間で継続されるため、複数経由で THREAD_SUSPENDed 継続スレッドを保持する場合は、一度の設定し、その後、それについて心配する必要ありません。 スレッドの中断とプロセスを再開する可能性があります、デッドロックは通常はほとんどありません。 スレッドおよびプロセスの組み込みの品質は、この設計では、します。 デバッガーは、非同期的に中断し、デッドロックを中断するスレッドを再開できます。 スレッドのユーザーの状態には、USER_UNSAFE_POINT が含まれている場合、スレッドがガベージ コレクション (GC) をブロックします。 つまり、中断されたスレッドがする可能性が高いデッドロックが発生します。 これはデバッグ イベントが既にキューに登録には影響可能性があります。 したがって、デバッガーが全体のイベント キューをドレインする必要があります (呼び出して[icordebugcontroller::hasqueuedcallbacks](../../../../docs/framework/unmanaged-api/debugging/icordebugcontroller-hasqueuedcallbacks-method.md)) を中断またはスレッドを再開する前にします。 それ以外の場合は既に中断されていると確信するスレッドでイベントを取得、可能性があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

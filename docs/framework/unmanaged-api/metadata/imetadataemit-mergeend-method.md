@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 99c1decf27685f027d6baa8412bf20fdf693d161
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 6e512b7cd8869c6ede1472bbc5b6ec4c428b40ef
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67664019"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757646"
 ---
 # <a name="imetadataemitmergeend-method"></a>IMetaDataEmit::MergeEnd メソッド
 
@@ -30,7 +30,7 @@ ms.locfileid: "67664019"
 
 ## <a name="syntax"></a>構文
 
-```cpp
+```cppcpp
 HRESULT MergeEnd ();
 ```
 

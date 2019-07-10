@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7b3712b4cb66facc105a03d7bfad235f09339056
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d05bc472711838236ed18b00ce808d022d9581dc
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61985739"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67758205"
 ---
 # <a name="couninitializeee-function"></a>CoUninitializeEE 関数
 `CoUninitializeEE` 廃止され、機能はありません。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 void CoUninitializeEE (  
     BOOL fFlags  
 );  

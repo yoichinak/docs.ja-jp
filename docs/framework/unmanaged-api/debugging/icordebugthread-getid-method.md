@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8eef616d51febd1b919e0a1936406551f441b98c
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 11e21e913e4749705ba6c7f91016be21b4de1712
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61987104"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67769970"
 ---
 # <a name="icordebugthreadgetid-method"></a>ICorDebugThread::GetID メソッド
 この ICorDebugThread のアクティブな部分の現在のオペレーティング システムの識別子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetID (  
     [out] DWORD *pdwThreadId  
 );  
@@ -43,7 +43,7 @@ HRESULT GetID (
  オペレーティング システムの識別子は、プロセスの実行中に変更できます可能性があると別のスレッドのさまざまな部分の値を指定できます。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

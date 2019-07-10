@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 79626d53f3144f977459bae318a7da68cbc37986
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 99b7142a60f979210c44497ce33af3ed1ca5c105
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67422228"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67770974"
 ---
 # <a name="iassemblycachecreateassemblyscavenger-method"></a>IAssemblyCache::CreateAssemblyScavenger メソッド
 Fusion のテクノロジでは、内部使用のため予約されています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT CreateAssemblyScavenger (  
     [out] IUnknown **ppUnkReserved  
 );  

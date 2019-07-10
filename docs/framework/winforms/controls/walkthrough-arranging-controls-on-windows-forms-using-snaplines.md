@@ -7,12 +7,12 @@ helpviewer_keywords:
 - SnapLine class [Windows Forms], walkthroughs
 - Windows Forms controls, arranging
 ms.assetid: d5c9edc7-cf30-4a97-8ebe-201d569340f8
-ms.openlocfilehash: a0b78afb653d3a47fa12b856de730131e5f8448e
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: c91fecf9e786f4a8e35486e7b30e9efe36c972e5
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64606413"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67771650"
 ---
 # <a name="walkthrough-arranging-controls-on-windows-forms-using-snaplines"></a>チュートリアル: スナップ線を使用した Windows フォーム上のコントロールの配置
 フォーム上のコントロールを正確に配置することは、多くのアプリケーションで優先度の高い作業です。 Windows フォーム デザイナーでは、これを実現するさまざまなレイアウト ツールを提供します。 最も重要なの 1 つは、<xref:System.Windows.Forms.Design.Behavior.SnapLine>機能します。  
@@ -53,7 +53,7 @@ ms.locfileid: "64606413"
 ## <a name="creating-the-project"></a>プロジェクトの作成  
  最初にプロジェクトを作成し、フォームを設定します。  
   
-#### <a name="to-create-the-project"></a>プロジェクトを作成するには  
+### <a name="to-create-the-project"></a>プロジェクトを作成するには  
   
 1. "SnaplineExample"と呼ばれる Windows ベースのアプリケーション プロジェクトを作成する (**ファイル** > **新規** > **プロジェクト** >  **Visual c#** または**Visual Basic** > **クラシック デスクトップ** > **Windows フォーム アプリケーション**)。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "64606413"
 ## <a name="spacing-and-aligning-controls-using-snaplines"></a>スペーシングとスナップ線を使用してコントロールの配置  
  スナップ線は、フォーム上のコントロールを配置する、正確かつ直感的な方法を提供します。 別のコントロールまたはコントロールのセット、整列する位置の近くを選択したコントロールまたはコントロールを移動するときに表示されます。 選択内容は「スナップ」推奨の位置を過去の他のコントロールに移動するとします。  
   
-#### <a name="to-arrange-controls-using-snaplines"></a>スナップ線を使用してコントロールを配置するには  
+### <a name="to-arrange-controls-using-snaplines"></a>スナップ線を使用してコントロールを配置するには  
   
 1. <xref:System.Windows.Forms.Button> ツールボックス **から** コントロールをフォームにドラッグします。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "64606413"
 ## <a name="aligning-to-form-and-container-margins"></a>フォームやコンテナーの余白に合わせて調整  
  スナップ線を使用して、一貫した方法でコントロールをフォームとコンテナーの余白を配置するのに役立ちます。  
   
-#### <a name="to-align-controls-to-form-and-container-margins"></a>フォームとコンテナーの余白にコントロールを配置するには  
+### <a name="to-align-controls-to-form-and-container-margins"></a>フォームとコンテナーの余白にコントロールを配置するには  
   
 1. いずれかの選択、<xref:System.Windows.Forms.Button>を制御し、スナップ線が表示されるまで、フォームの右側の境界線の近くに移動します。 右罫線のスナップ線の距離は、コントロールの<xref:System.Windows.Forms.Control.Margin%2A>プロパティと、フォームの<xref:System.Windows.Forms.Control.Padding%2A>プロパティの値。  
   
@@ -107,7 +107,7 @@ ms.locfileid: "64606413"
 ## <a name="aligning-to-grouped-controls"></a>グループ化されたコントロールに合わせて調整  
  グループ化されたコントロールを配置するスナップ線を使用する内で制御としても、<xref:System.Windows.Forms.GroupBox>コントロール。  
   
-#### <a name="to-align-to-grouped-controls"></a>グループ化されたコントロールを配置するには  
+### <a name="to-align-to-grouped-controls"></a>グループ化されたコントロールを配置するには  
   
 1. フォーム上のコントロールの 2 つを選択します。 選択範囲を移動して、選択内容とその他のコントロール間に表示されるスナップ ラインに注意してください。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "64606413"
 ## <a name="using-snaplines-to-place-a-control-by-outlining-its-size"></a>スナップ線を使用して、サイズのアウトラインでコントロールを配置するには  
  スナップ線に整列させることとを最初にフォーム上に配置を制御します。  
   
-#### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>によって、サイズのアウトライン コントロールを配置するスナップ線を使用するには  
+### <a name="to-use-snaplines-to-place-a-control-by-outlining-its-size"></a>によって、サイズのアウトライン コントロールを配置するスナップ線を使用するには  
   
 1. **ツールボックス**で <xref:System.Windows.Forms.Button> コントロール アイコンをクリックします。 フォームにドラッグしないでください。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "64606413"
 ## <a name="using-snaplines-when-dragging-a-control-from-the-toolbox"></a>コントロールをツールボックスからドラッグしたときに、スナップ線を使用します。  
  スナップ線に整列させることを制御からそれらをドラッグすると、**ツールボックス**フォームにします。  
   
-#### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>ツールボックスからコントロールをドラッグするときに、スナップ線を使用するには  
+### <a name="to-use-snaplines-when-dragging-a-control-from-the-toolbox"></a>ツールボックスからコントロールをドラッグするときに、スナップ線を使用するには  
   
 1. ドラッグ、<xref:System.Windows.Forms.Button>コントロールから、**ツールボックス**フォーム上にマウス ボタンを押したままです。  
   
@@ -150,7 +150,7 @@ ms.locfileid: "64606413"
 ## <a name="resizing-controls-using-snaplines"></a>スナップ線を使用してコントロールのサイズ変更  
  スナップ線を使用するようにサイズを変更するには、コントロールを配置します。  
   
-#### <a name="to-resize-a-control-using-snaplines"></a>スナップ線を使用して、コントロールのサイズを変更するには  
+### <a name="to-resize-a-control-using-snaplines"></a>スナップ線を使用して、コントロールのサイズを変更するには  
   
 1. <xref:System.Windows.Forms.Button> ツールボックス **から** コントロールをフォームにドラッグします。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "64606413"
 ## <a name="aligning-a-label-to-a-controls-text"></a>コントロールのテキストとラベルの整列  
  一部のコントロールは、他のコントロールに表示されるテキストを整列させるためのスナップ線を提供します。  
   
-#### <a name="to-align-a-label-to-a-controls-text"></a>コントロールのテキストにラベルを配置するには  
+### <a name="to-align-a-label-to-a-controls-text"></a>コントロールのテキストにラベルを配置するには  
   
 1. <xref:System.Windows.Forms.TextBox> ツールボックス **から** コントロールをフォームにドラッグします。 ドロップすると、<xref:System.Windows.Forms.TextBox>をフォームにコントロール、スマート タグ グリフをクリックし、選択、 **textBox1 にテキストを設定**オプション。 詳細については、次を参照してください。[チュートリアル。フォーム コントロールのスマート タグを使用した Windows での一般的なタスクを実行する](performing-common-tasks-using-smart-tags-on-wf-controls.md)します。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "64606413"
 ## <a name="using-snaplines-with-keyboard-navigation"></a>キーボード ナビゲーションとスナップ線を使用します。  
  スナップ線に整列させることは、配置、キーボードの矢印キーを使用してを制御します。  
   
-#### <a name="to-use-snaplines-with-keyboard-navigation"></a>キーボード ナビゲーションとスナップ線を使用するには  
+### <a name="to-use-snaplines-with-keyboard-navigation"></a>キーボード ナビゲーションとスナップ線を使用するには  
   
 1. <xref:System.Windows.Forms.Button> ツールボックス **から** コントロールをフォームにドラッグします。 フォームの左上隅に配置します。  
   
@@ -199,7 +199,7 @@ ms.locfileid: "64606413"
 ## <a name="snaplines-and-layout-panels"></a>スナップ線とレイアウト パネル  
  レイアウト パネル内では、スナップ線が無効になります。  
   
-#### <a name="to-selectively-disable-snaplines"></a>スナップ線を無効にするには  
+### <a name="to-selectively-disable-snaplines"></a>スナップ線を無効にするには  
   
 1. <xref:System.Windows.Forms.TableLayoutPanel> ツールボックス **から** コントロールをフォームにドラッグします。  
   
@@ -214,13 +214,13 @@ ms.locfileid: "64606413"
 ## <a name="disabling-snaplines"></a>スナップ線を無効にします。  
  スナップ線は、既定で有効にします。 スナップ線を選択的に、無効にできますか、デザイン環境で無効にできます。  
   
-#### <a name="to-selectively-disable-snaplines"></a>スナップ線を無効にするには  
+### <a name="to-selectively-disable-snaplines"></a>スナップ線を無効にするには  
   
 - ALT キーを押しておよびコントロールをフォーム上に移動します。  
   
      スナップ線が表示されないと、コントロールが潜在的な配置位置にスナップいないことに注意してください。  
   
-#### <a name="to-disable-snaplines-in-the-design-environment"></a>デザイン環境のスナップ線を無効にするには  
+### <a name="to-disable-snaplines-in-the-design-environment"></a>デザイン環境のスナップ線を無効にするには  
   
 1. **ツール**メニューを開き、**オプション** ダイアログ ボックス。 Windows フォーム デザイナー ダイアログ ボックスを開きます。 詳細については、「 [全般、Windows フォーム デザイナー、オプション ダイアログ ボックス](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2010/5aazxs78(v=vs.100))です。  
   

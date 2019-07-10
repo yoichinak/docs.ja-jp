@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 7568f8ca3b92ef465ab595348f68895f389d61e4
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fc647805fcb7d8354a2540ac9424dc7155853444
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645319"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745036"
 ---
 # <a name="icordebugchainenumerateframes-method"></a>ICorDebugChain::EnumerateFrames メソッド
 最新のフレームを開始する、チェーン内のすべてのマネージ スタック フレームを含む列挙子を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT EnumerateFrames (  
     [out] ICorDebugFrameEnum **ppFrames  
 );  
@@ -45,7 +45,7 @@ HRESULT EnumerateFrames (
  `EnumerateFrames`メソッドは、管理対象のチェーンに対してのみ呼び出す必要があります。 デバッグ API では、非管理対象のチェーンに含まれているフレームを取得するメソッドが提供されません。 デバッガーは、この情報を取得するのにその他の手段を使用する必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -17,12 +17,12 @@ helpviewer_keywords:
 - Windows Presentation Foundation [WPF], about security model
 - security model [WPF], operating system
 ms.assetid: 2a39a054-3e2a-4659-bcb7-8bcea490ba31
-ms.openlocfilehash: f99a9f38d5fbb62732f157720ee544042e346469
-ms.sourcegitcommit: d6e27023aeaffc4b5a3cb4b88685018d6284ada4
+ms.openlocfilehash: 5b40302d93ce1bfc378b86210ed7bb54732d294b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67663566"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67756760"
 ---
 # <a name="wpf-security-strategy---platform-security"></a>WPF のセキュリティ方針 - プラットフォーム セキュリティ
 オペレーティング システムが含まれている、基になるプラットフォームのセキュリティ機能も活用のさまざまなセキュリティ サービスを提供しますが、Windows Presentation Foundation (WPF)、 [!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]、および[!INCLUDE[TLA2#tla_ie](../../../includes/tla2sharptla-ie-md.md)]します。 これらの層を組み合わせることで、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] に強力な多重防御のセキュリティ モデルが提供されます。このセキュリティ モデルでは、次の図に示すように、単一障害点の回避を試みます。  
@@ -140,14 +140,14 @@ ms.locfileid: "67663566"
   
  ![CAS アクセス許可セットを示す図。](./media/wpf-security-strategy-platform-security/code-access-security-permissions-relationship.png)  
   
- インターネット ゾーンのセキュリティ サンドボックスの制約は、[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] が [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] を含むシステム ライブラリからインポートする任意のコードに等しく適用されます。 これにより、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] であっても、コードはビットごとにロック ダウンされます。 残念ながら、実行できるようにするためには、[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] は、インターネット ゾーンのセキュリティ サンドボックスで有効化されたアクセス許可より多くのアクセス許可を必要とする機能を実行する必要があります。  
+ インターネット ゾーンのセキュリティ サンド ボックスの制限は、XBAP は、システム ライブラリからインポートするすべてのコードに等しく適用されます。 など[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]します。 これにより、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] であっても、コードはビットごとにロック ダウンされます。 残念ながら、実行できるようにするには、XBAP がインターネット ゾーンのセキュリティ サンド ボックスで有効になっているものよりも多くのアクセス許可を必要とする機能を実行する必要があります。  
   
- 次のページを含む [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] アプリケーションを検討してください。  
+ 次のページを含む XBAP アプリケーションを検討してください。  
   
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- この [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] を実行するために、基になる [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] コードは、呼び出し元の [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] で使用できるより多くの機能を実行する必要があります。それらは次のとおりです。  
+ 基になるこの XBAP を実行する[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]コードが呼び出し元の XBAP を使用できるよりも多くの機能を実行する必要がありますを含みます。  
   
 - 表示のウィンドウ ハンドル (HWND) を作成します。  
   
@@ -157,7 +157,7 @@ ms.locfileid: "67663566"
   
  セキュリティの観点から、セキュリティで保護されたアプリケーションからこれらの操作のいずれかに直接アクセスを許可すると、致命的な状態になります。  
   
- 幸い、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、セキュリティで保護されたアプリケーションの代わりに、これらの操作が昇格した特権で実行できるようにすることで、この状況に対応します。 すべての中に[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]のアプリケーション ドメインの制限付きのインターネット ゾーンのセキュリティのアクセス許可の操作がチェックされ、 [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]、 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] (その他のシステム ライブラリと同様に) を含むすべての可能なアクセス許可セットが付与されますアクセス許可。
+ 幸い、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] は、セキュリティで保護されたアプリケーションの代わりに、これらの操作が昇格した特権で実行できるようにすることで、この状況に対応します。 すべての中に[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]操作は、XBAP のアプリケーション ドメインの制限付きのインターネット ゾーンのセキュリティのアクセス許可と照合[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)](その他のシステム ライブラリと同様に) すべてのアクセス許可を含むアクセス許可セットが付与されます。
   
  そのためには、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] が昇格した特権を受け取る一方、それらの特権がホスト アプリケーション ドメインのインターネット ゾーンのアクセス許可セットによって制御されないようにする必要があります。  
   
@@ -166,7 +166,7 @@ ms.locfileid: "67663566"
  [!code-csharp[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/csharp/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/CSharp/Page1.xaml.cs#permission)]
  [!code-vb[WPFPlatformSecuritySnippets#Permission](~/samples/snippets/visualbasic/VS_Snippets_Wpf/WPFPlatformSecuritySnippets/VisualBasic/Page1.xaml.vb#permission)]  
   
- **Assert**実質的に無制限のアクセス許可が必要なできないように[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]インターネットによって制限されたりするゾーンのアクセス許可、[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]します。  
+ **Assert**実質的に無制限のアクセス許可が必要なできないように[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]インターネットによって制限されるゾーン、XBAP のアクセスを許可します。  
   
  プラットフォームの観点から[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]を使用して担当**Assert**の不適切な使用には正しく**Assert**特権を昇格する悪意のあるコードを有効にする可能性があります。 したがって、ことが重要にのみ呼び出し**Assert** 、必要なときに、制限がそのまま維持することを確認します。 たとえば、セキュリティで保護されたコードでは、ランダムなファイルを開くことはできませんが、フォントは使用できます。 [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] サンド ボックスのアプリケーションを呼び出してフォントの機能を使用できます**Assert**、および[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]をサンド ボックス化されたアプリケーションの代わりにそれらのフォントを含めることがわかっているファイルを読み取る。  
   
@@ -178,11 +178,11 @@ ms.locfileid: "67663566"
   
 <a name="Security_Critical_Methodology"></a>   
 ### <a name="security-critical-methodology"></a>セキュリティ クリティカルな方法  
- [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] アプリケーションでインターネット ゾーンのサンド ボックスを有効にするアクセス許可を使用する [!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)] コードは、セキュリティ監査および制御の程度を可能な限り高く保持する必要があります。 この要件を容易には、.NET Framework は、特権を昇格させるコードを管理するための新しいサポートを提供します。 具体的には、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]特権を昇格させるコードを特定し、使用してマークすることができます、 <xref:System.Security.SecurityCriticalAttribute>; 任意のコードでマークされていない<xref:System.Security.SecurityCriticalAttribute>なります*透明*この手法を使用して。 逆に、<xref:System.Security.SecurityCriticalAttribute> でマークされていないマネージド コードは特権の昇格ができなくなります。  
+ [!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)] XBAP アプリケーションをセキュリティ監査および制御の最も高いに保持する必要があります、インターネット ゾーンのサンド ボックスを有効にするアクセス許可を使用するコードです。 この要件を容易には、.NET Framework は、特権を昇格させるコードを管理するための新しいサポートを提供します。 具体的には、[!INCLUDE[TLA2#tla_clr](../../../includes/tla2sharptla-clr-md.md)]特権を昇格させるコードを特定し、使用してマークすることができます、 <xref:System.Security.SecurityCriticalAttribute>; 任意のコードでマークされていない<xref:System.Security.SecurityCriticalAttribute>なります*透明*この手法を使用して。 逆に、<xref:System.Security.SecurityCriticalAttribute> でマークされていないマネージド コードは特権の昇格ができなくなります。  
   
  セキュリティ クリティカルな方法により、組織の[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]に特権を昇格させるコード*セキュリティ クリティカルなカーネル*、透過残りの部分とします。 セキュリティ クリティカルなコードを分離できるように、[!INCLUDE[TLA2#tla_wpf](../../../includes/tla2sharptla-wpf-md.md)]標準的なセキュリティ プラクティスを上回る、セキュリティ クリティカルなカーネルに追加のセキュリティ分析およびソース コントロールにフォーカス エンジニア リング チーム (を参照してください[WPF のセキュリティ方針-セキュリティ エンジニア リング](wpf-security-strategy-security-engineering.md))。  
   
- .NET Framework により、信頼されたコードを拡張することに注意してください、[!INCLUDE[TLA2#tla_winfxwebapp](../../../includes/tla2sharptla-winfxwebapp-md.md)]でマークされている管理対象のアセンブリを記述できるようになり、インターネット ゾーンのサンド ボックス<xref:System.Security.AllowPartiallyTrustedCallersAttribute>(APTCA)、ユーザーのグローバル アセンブリ キャッシュ (GAC) に展開されているとします。 アセンブリを APTCA でマークすることは、機密性の高いセキュリティ操作です。インターネットからの悪意のあるコードなど、いずれのコードもそのアセンブリを呼び出すことができるためです。 これを実施する際は十分注意し、ベスト プラクティスを使用する必要があります。ソフトウェアをインストールするためには、ユーザーがそのソフトウェアを信頼することを選択する必要があります。  
+ .NET Framework により、信頼されたコードでマークされている管理対象のアセンブリを記述できるようになり、XBAP のインターネット ゾーンのサンド ボックスを拡張することに注意してください。 <xref:System.Security.AllowPartiallyTrustedCallersAttribute> (APTCA)、ユーザーのグローバル アセンブリ キャッシュ (GAC) に展開されているとします。 アセンブリを APTCA でマークすることは、機密性の高いセキュリティ操作です。インターネットからの悪意のあるコードなど、いずれのコードもそのアセンブリを呼び出すことができるためです。 これを実施する際は十分注意し、ベスト プラクティスを使用する必要があります。ソフトウェアをインストールするためには、ユーザーがそのソフトウェアを信頼することを選択する必要があります。  
   
 <a name="Microsoft_Internet_Explorer_Security"></a>   
 ## <a name="microsoft-internet-explorer-security"></a>Microsoft Internet Explorer のセキュリティ  
