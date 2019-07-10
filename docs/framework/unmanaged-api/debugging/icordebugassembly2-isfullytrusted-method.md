@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: bd3b977a894f8cb1fc9a866f5a43265d917db513
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: d231595ab2c7b41d1a24f654e9785b90b34ac780
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645566"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67744506"
 ---
 # <a name="icordebugassembly2isfullytrusted-method"></a>ICorDebugAssembly2::IsFullyTrusted メソッド
 かどうか、アセンブリで許可されている完全な信頼ランタイムのセキュリティ システムを示す値を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT IsFullyTrusted(  
     [out] BOOL *pbFullyTrusted  
 );  
@@ -43,7 +43,7 @@ HRESULT IsFullyTrusted(
  このメソッドは、HRESULT の CORDBG_E_NOTREADY アセンブリのセキュリティ ポリシーはまだ解決されていません、つまり、アセンブリでコードが見つからない場合はまだ実行されているを返します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 18b65eb3e733fa7970e4c0e7de09755598eaf149
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 87249dae0eff4ea4899a63c0d13e79c266df453a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61645345"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745009"
 ---
 # <a name="icordebugbreakpointenumnext-method"></a>ICorDebugBreakpointEnum::Next メソッド
 現在の位置から始まり、列挙体から ICorDebugBreakpoint インスタンスの指定した数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT Next (  
     [in] ULONG  celt,  
     [out, size_is(celt), length_is(*pceltFetched)]  
@@ -49,7 +49,7 @@ HRESULT Next (
  [out]数へのポインター`ICorDebugBreakpoint`インスタンスが実際に返されます。 この値は null になる場合`celt`は 1 つです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorDebug.idl、CorDebug.h  
   
