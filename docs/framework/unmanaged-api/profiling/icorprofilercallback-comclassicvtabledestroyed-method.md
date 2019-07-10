@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ace1ecaebe076be3576304ce0a3cc72e119c96d2
-ms.sourcegitcommit: 9b1ac36b6c80176fd4e20eb5bfcbd9d56c3264cf
+ms.openlocfilehash: 8043ae8a3d384ab0936ae96e39174a7afc80a636
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67421894"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67776213"
 ---
 # <a name="icorprofilercallbackcomclassicvtabledestroyed-method"></a>ICorProfilerCallback::COMClassicVTableDestroyed メソッド
 COM 相互運用機能の vtable が破棄されていることをプロファイラーに通知します。  
@@ -32,7 +32,7 @@ COM 相互運用機能の vtable が破棄されていることをプロファ�
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT COMClassicVTableDestroyed(  
     [in] ClassID wrappedClassId,  
     [in] REFGUID implementedIID,  

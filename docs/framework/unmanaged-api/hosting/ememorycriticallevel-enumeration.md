@@ -16,19 +16,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 4ee8705d00e1f63f69863d0bf8e7d0d9d62807e6
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 26b3761ab49f36c5f687ff2c62882667e044d299
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61968606"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67774221"
 ---
 # <a name="ememorycriticallevel-enumeration"></a>EMemoryCriticalLevel 列挙型
 特定のメモリ割り当てが要求されましたが満足することはできません、障害の影響を示す値が含まれています。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 typedef enum {  
     eTaskCritical      = 0,  
     eAppDomainCritical = 1,  
@@ -48,7 +48,7 @@ typedef enum {
  定義されているメモリの割り当て方法、 [IHostMemoryManager](../../../../docs/framework/unmanaged-api/hosting/ihostmemorymanager-interface.md)と[IHostMAlloc](../../../../docs/framework/unmanaged-api/hosting/ihostmalloc-interface.md)インターフェイスは、この型のパラメーターを受け取る。 エラーの重大度に応じて、ホストを決定できます、割り当て要求をすぐに失敗するか、満たすことができるまで待機するかどうか。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 8cb6cd8d31e01ea2f1749a6cb4d17173679f0c06
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 1d0a85607586a8cdf0a319f2e43d9815d24be21b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61984790"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772918"
 ---
 # <a name="iclrerrorreportingmanagerbegincustomdump-method"></a>ICLRErrorReportingManager::BeginCustomDump メソッド
 エラー報告用にカスタムのヒープ ダンプの構成を指定します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT BeginCustomDump (  
     [in] ECustomDumpFlavor dwFlavor,  
     [in] DWORD dwNumItems,  
@@ -69,7 +69,7 @@ HRESULT BeginCustomDump (
 >  呼び出しに失敗する`EndCustomDump`によりメモリ リークが発生します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 31bed2019eef5a37e1086624afdae3e8f2c58632
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 270fdecb6afbf252b7d0531cab0f18dded44298d
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61927232"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67777123"
 ---
 # <a name="imetadataemit2savedeltatostream-method"></a>IMetaDataEmit2::SaveDeltaToStream メソッド
 エディット コンティニュの現在のセッションからの変更を指定したストリームに保存します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT SaveDeltaToStream (  
     [in] IStream     *pIStream,   
     [in] DWORD       dwSaveFlags  
@@ -44,7 +44,7 @@ HRESULT SaveDeltaToStream (
  [in] 予約されています。 この値は 0 である必要があります。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

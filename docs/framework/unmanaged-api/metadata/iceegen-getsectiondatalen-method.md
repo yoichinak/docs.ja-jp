@@ -17,12 +17,12 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: ca01f78cf46d4f7543b949c820eb6b1971687e23
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: febf952dbfd80a37017cb165aec4a6b207052d1b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61905477"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67745947"
 ---
 # <a name="iceegengetsectiondatalen-method"></a>ICeeGen::GetSectionDataLen メソッド
 指定されたセクションの長さを取得します。  
@@ -31,7 +31,7 @@ ms.locfileid: "61905477"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetSectionDataLen (  
     [in]  HCEESECTION  section,  
     [out] ULONG        *dataLen  
@@ -49,7 +49,7 @@ HRESULT GetSectionDataLen (
  呼び出す`GetSectionDataLen`別の方法で処理されない特別なセクションの要件がある場合にのみです。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

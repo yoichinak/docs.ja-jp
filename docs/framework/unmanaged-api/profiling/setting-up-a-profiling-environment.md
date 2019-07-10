@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fefca07f-7555-4e77-be86-3c542e928312
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: cc5171b135facfbbe901b38a19fef9e9d47699b5
-ms.sourcegitcommit: 155012a8a826ee8ab6aa49b1b3a3b532e7b7d9bd
+ms.openlocfilehash: 33762e08192fae379f3cd249f50cc544e1c89b5a
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66490722"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67775743"
 ---
 # <a name="setting-up-a-profiling-environment"></a>プロファイル環境の設定
 > [!NOTE]
@@ -29,7 +29,7 @@ ms.locfileid: "66490722"
   
 - COR_PROFILER:COR_ENABLE_PROFILING では、パスを確認する場合、CLR はこの CLSID または ProgID で、必要がありますに格納されている以前のレジストリをプロファイラーに接続します。 COR_PROFILER 環境変数は文字列として定義されます。以下に 2 つの例を示します。  
   
-    ```  
+    ```cpp  
     set COR_PROFILER={32E2F4DA-1BEA-47ea-88F9-C5DAF691C94A}  
     set COR_PROFILER="MyProfiler"  
     ```  
@@ -66,7 +66,7 @@ ms.locfileid: "66490722"
 ## <a name="initializing-the-profiler"></a>プロファイラーの初期化  
  両方の環境変数のチェックに合格すると、CLR は COM `CoCreateInstance` 関数と同様の方法でプロファイルのインスタンスを作成します。 このプロファイルについては、`CoCreateInstance` の直接呼び出しによる読み込みは行われません。 そのため、スレッド処理モデルの設定が必要な `CoInitialize` の呼び出しが回避されます。 CLR を呼び出して、 [icorprofilercallback::initialize](../../../../docs/framework/unmanaged-api/profiling/icorprofilercallback-initialize-method.md)プロファイラー メソッド。 このメソッドのシグネチャは次のとおりです。  
   
-```  
+```cpp  
 HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)  
 ```  
   
@@ -75,7 +75,7 @@ HRESULT Initialize(IUnknown *pICorProfilerInfoUnk)
 ## <a name="setting-event-notifications"></a>イベント通知の設定  
  プロファイラーを呼び出して、 [icorprofilerinfo::seteventmask](../../../../docs/framework/unmanaged-api/profiling/icorprofilerinfo-seteventmask-method.md)で目的の通知のカテゴリを指定します。 たとえば、関数の Enter および Leave の通知とガベージ コレクションの通知のみを確認する場合は、次のように指定します。  
   
-```  
+```cpp  
 ICorProfilerInfo* pInfo;  
 pICorProfilerInfoUnk->QueryInterface(IID_ICorProfilerInfo, (void**)&pInfo);  
 pInfo->SetEventMask(COR_PRF_MONITOR_ENTERLEAVE | COR_PRF_MONITOR_GC)  

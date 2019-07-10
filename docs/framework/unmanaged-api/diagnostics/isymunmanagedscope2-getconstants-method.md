@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 08bc85c7a5b53c145375ca34f11ec499e5e7528f
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: bb3f5926677577bbc0bb14413c5d70150ef25152
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61761586"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778043"
 ---
 # <a name="isymunmanagedscope2getconstants-method"></a>ISymUnmanagedScope2::GetConstants メソッド
 このスコープ内で定義されているローカル定数を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetConstants(  
      [in]  ULONG32  cConstants,  
      [out] ULONG32  *pcConstants,  

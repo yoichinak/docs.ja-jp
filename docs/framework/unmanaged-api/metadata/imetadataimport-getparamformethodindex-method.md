@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: 7c6f06ff4fc7d855ea07f1f572a2b7ea948efc51
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: fdb3def9574f4442a22b370323dfdf044170542b
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61777664"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778946"
 ---
 # <a name="imetadataimportgetparamformethodindex-method"></a>IMetaDataImport::GetParamForMethodIndex メソッド
 指定した MethodDef トークンによって表されるメソッドの指定されたパラメーターを表すトークンを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetParamForMethodIndex (  
    [in]  mdMethodDef      md,  
    [in]  ULONG            ulParamSeq,  
@@ -48,7 +48,7 @@ HRESULT GetParamForMethodIndex (
  [out]要求されたパラメーターを表す ParamDef トークンへのポインター。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 028ca0b9cb917d3e6cc0242cbc8c3f4a5a19ab39
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 684d5e41e1d7cee2775aa0988d33a974315eac4e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61760104"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67772744"
 ---
 # <a name="ihostmemorymanagervirtualquery-method"></a>IHostMemoryManager::VirtualQuery メソッド
 対応する Win32 関数の論理ラッパーとして機能します。 Win32 実装`VirtualQuery`呼び出し元のプロセス仮想アドレス空間内のページの範囲に関する情報を取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT VirtualQuery (  
     [in]  void*    lpAddress,  
     [out] void*    lpBuffer,  
@@ -69,7 +69,7 @@ HRESULT VirtualQuery (
 >  オペレーティング システムの実装の`VirtualQuery`デッドロックは発生しませんし、ユーザー コードで中断されているランダムなスレッドで完了するまで実行できます。 このメソッドのホストされたバージョンを実装する場合は、注意を使用します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** MSCorEE.h  
   

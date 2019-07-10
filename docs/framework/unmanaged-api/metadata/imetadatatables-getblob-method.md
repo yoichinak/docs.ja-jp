@@ -17,19 +17,19 @@ topic_type:
 - apiref
 author: mairaw
 ms.author: mairaw
-ms.openlocfilehash: babe098b16729cfcd41b48075a49b9ae9be7dfdc
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: 83f8ae068552ba83a016b5484e3ac6641417fa99
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049805"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67781563"
 ---
 # <a name="imetadatatablesgetblob-method"></a>IMetaDataTables::GetBlob メソッド
 指定した列のインデックス位置にあるバイナリ ラージ オブジェクト (BLOB) へのポインターを取得します。  
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT GetBlob (  
     [in]  ULONG          ixBlob,  
     [out] ULONG          *pcbData,  
@@ -48,7 +48,7 @@ HRESULT GetBlob (
  [out]バイナリ データへのポインターへのポインターを取得します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** Cor.h  
   

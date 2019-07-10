@@ -16,12 +16,12 @@ topic_type:
 - apiref
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: fe99a00ca96270d1f35812d48e78cc6bd0a051ef
-ms.sourcegitcommit: 2701302a99cafbe0d86d53d540eb0fa7e9b46b36
+ms.openlocfilehash: d3693a42db8e32a4bb7a399f8c930da011130893
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64666048"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67778727"
 ---
 # <a name="strongnamecompareassemblies-function"></a>StrongNameCompareAssemblies 関数
 厳密な名前の署名に基づいて 2 つのアセンブリが異なるかどうかが判定されます。  
@@ -30,7 +30,7 @@ ms.locfileid: "64666048"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 BOOLEAN StrongNameCompareAssemblies (  
     [in]  LPCWSTR   wszAssembly1,  
     [in]  LPCWSTR   wszAssembly2,  
@@ -58,7 +58,7 @@ BOOLEAN StrongNameCompareAssemblies (
  `true` 正常に終了します。それ以外の場合、`false`します。  
   
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** StrongName.h  
   
