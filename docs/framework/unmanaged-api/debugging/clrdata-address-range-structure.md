@@ -15,12 +15,12 @@ topic_type:
 - apiref
 author: cshung
 ms.author: andrewau
-ms.openlocfilehash: 484ca79483fc4a5d8f0d1cf2cd5a961c297249e7
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: afcb4e642c9b54107423f7474771fdc28cde709e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "61961311"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67741018"
 ---
 # <a name="clrdataaddressrange-structure"></a>CLRDATA_ADDRESS_RANGE 構造体
 
@@ -30,7 +30,7 @@ ms.locfileid: "61961311"
 
 ## <a name="syntax"></a>構文
 
-```
+```cpp
 typedef struct
 {
     CLRDATA_ADDRESS startAddress;
@@ -51,7 +51,7 @@ typedef struct
 
 ## <a name="requirements"></a>必要条件
 
-**プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+**プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
 **ヘッダー:** なし  
 **ライブラリ:** なし  
 **.NET Framework のバージョン:** [!INCLUDE[net_current_v47plus](../../../../includes/net-current-v47plus.md)]  

@@ -10,12 +10,12 @@ api_type:
 - COM
 author: rpetrusha
 ms.author: ronpet
-ms.openlocfilehash: 9dbe8d4f7050b93ffb34280be6d63367ef294ae8
-ms.sourcegitcommit: 9b552addadfb57fab0b9e7852ed4f1f1b8a42f8e
+ms.openlocfilehash: ba9f9d4ee5f95def3dcd2d757517e225c826cb9e
+ms.sourcegitcommit: 7f616512044ab7795e32806578e8dc0c6a0e038f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62049714"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67757993"
 ---
 # <a name="icorprofilercallback8dynamicmethodjitcompilationfinished-method"></a>ICorProfilerCallback8::DynamicMethodJITCompilationFinished メソッド
 [.NET Framework 4.7 以降のバージョンでサポートされます]  
@@ -24,7 +24,7 @@ ms.locfileid: "62049714"
   
 ## <a name="syntax"></a>構文  
   
-```  
+```cpp  
 HRESULT DynamicMethodJITCompilationFinished(  
      [in]  FunctionID  functionId,   
      [in]  BOOL        hrStatus,   
@@ -50,7 +50,7 @@ JIT コンパイルが成功したかどうかを示す値。
 > `functionId` 値は、動的メソッドのメタデータがないため、メタデータ トークンを解決するのには使用できません。
 
 ## <a name="requirements"></a>必要条件  
- **プラットフォーム:**[システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
+ **プラットフォーム:** [システム要件](../../../../docs/framework/get-started/system-requirements.md)に関するページを参照してください。  
   
  **ヘッダー:** CorProf.idl、CorProf.h  
   
